@@ -289,3 +289,75 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **derleme + misal (saat)**; (T) ikna'î-burhânî biçim.
 - Mevzuya bağı: **KRİTİK — Fasıl I §3, §6.3**: bu ekol **'zaman = müstakil mevcut cevher'** öğretisidir (c4 p200'deki kıdem tarafının 'dehr'i ile **aynı**); **Sünnî akide zamanı mahlûk sayar** — Risale **'zaman yaratılmıştır' cümlesini bu ekolün hangi noktasında (bağımsız varlık ↔ yaratılmışlık) yazdığını açıkça belirtmeli**; Râzî'nin nihai tercihi Fasıl 3–11'de aranacak.
 - Doğan sual: Râzî bu 2. fasıldan sonra ne yapıyor: itiraz mı, üçüncü kavil mi?
+
+## c5 p33
+- OCR: orta
+- Okuma: tam
+- İçerik: **3. Fasıl: 'zamanın vücûdunu bilmenin **kesbî-istidlâlî** olduğunu söyleyenlerin dayandığı delillerin takrîri' (dört tarîk/hüccet).** **1. tarîk (Şifâ ve Necât'ta; çoğunluğun dayanağı)**: '**hareket, mesafede belirli bir hızla farz edilir ve onunla eşit hızda bir başkası; ikisi birlikte başlar ve birlikte durursa mesafeyi birlikte keser; biri başlayıp diğeri onunla başlamazsa biri ötekinden daha az kat eder; onunla yavaş bir hareket başlayıp aynı başlangıç-bitiş üzerinde birleşirlerse yavaş az, hızlı çok keser**; buna göre **hızlının alış-bırakış arasında belirli bir hızla belirli mesafeyi kat etme imkânı vardır; ikinci hızlının alış-bırakışı arasında bundan daha az imkân**; bu imkân bir öncekinin **cüzü** ⇒ **ziyade-noksan kabul eder ⇒ mevcut bir şeydir (zaman)**.' (p34)
+- Netice/hüküm: **Zamanın kesbî isbâtı (İbn Sînâ hattı; Râzî 'çoğunluğun dayanağı' diyor): iki hareketin hız/başlangıç farkından 'imkân' (zaman) çıkarımı.**
+- Delil çeşidi: **mukayese (hız-mesafe-imkân)**; (T) burhânî biçim (İbn Sînâ hattı), öncül bağımlı.
+- Mevzuya bağı: **Fasıl I §3, §6.3**: c4 p14, 200'deki 'zaman hareketin mikdârı' tartışmasının **İbn Sînâ'cı delil**; Râzî'nin itirazları p36–38'de.
+- Doğan sual: —
+
+## c5 p34
+- OCR: orta
+- Okuma: tam
+- İçerik: **1. tarîkin izahı (3 farz ve faydaları)**: **(1)** eşit hızda, aynı başlayıp aynı biten iki hareket ⇒ **eşit mesafe**; **(2)** eşit hızda, **başlangıçları farklı, bitişleri aynı** ⇒ ikincisi **daha az mesafe**; **(3)** başlangıç ve bitiş aynı, **hızları farklı** ⇒ yavaş az kat eder. **Faydaları**: **(1) 'imkân' (zaman denen şey) var**; **(2) bu imkân hareketin kendisine, hızına-yavaşlığına ve müteharrikin mikdârına 'müsâvi' (uygun)**; **(3) bu imkân müteharrikin mikdârından ve mesafenin mikdârından mugâyir bir şey**. 'Böylece maksat tamam.' **Açıklama (Râzî)**: 'iki eşit hızlı ve eşit başlayıp biten hareket varsa **mesafe mikdârında eşitlik lâzım**' (p35).
+- Netice/hüküm: 1. tarîk yapısı: **3 farz ⇒ zaman ayrı, ziyade-noksan kabul eden, mesafeden ve hareketten mugâyir.**
+- Delil çeşidi: **mukayese (üç durum)**; (T) burhânî biçim (İbn Sînâ hattı).
+- Mevzuya bağı: **Fasıl I §3**: 'zaman mesafeden ve hareketten mugâyir' **c5 p32'deki bedîhîlik ekolünün** sonucuyla **aynı hedef, farklı yol (kesbî)**.
+- Doğan sual: —
+
+## c5 p35
+- OCR: orta
+- Okuma: tam
+- İçerik: **Açıklama devam**: 'eşit hızlı, eşit alış-bırakışlı iki hareket varsa aralarında bu mesafeyi bu hızla kat etme **imkânı**; bu imkânda **bu hızla ne bu mesafeden fazla ne eksik**; yani bu imkânın **kendinde hususiyeti** var ⇒ **bu imkânın hakîkati var, bununla ihtisas ve imtiyaz kazanıyor**.' **2. farz**: 'hızları eşit, alışları farklı, bırakışları aynı iki hareket ⇒ ikinci hızlı **daha az mesafe kateder**; **amaç iki şey**: **(1)** ikinci hızlının hareket ettiği imkân **birincinin imkânının cüzü** ⇒ imkân **tatbik, ziyade-noksan kabul eder ⇒ mevcut, müsâvât ve lâmüsâvât kabul eden**; **(2)** küçük hızlı büyük hızlıyla hareket oluşta, hızlı oluşta, müteharrikin mikdârında **müşterek**, **imkânın mikdârında farklı**; 'müşterekliği sağlayan' ≠ 'ayrıştıran' ⇒ **bu imkân hareketin mâhiyetinden, yavaşlığından-hızından ve cevher mikdârından mugâyir.** **3. farz** (p36).
+- Netice/hüküm: 1. tarîkin 1.–2. farzı: imkân (zaman) tatbik ve ziyade-noksan kabul eden mevcut; hareketin mâhiyetinden mugâyir.
+- Delil çeşidi: **mukayese + müşterek/ayrıştırıcı ilkesi**; (T) burhânî biçim.
+- Mevzuya bağı: **Fasıl I §3**: 'müşterek ≠ ayrıştıran ⇒ mugâyir' kalıbı Râzî'nin kendi delillerindeki **'mefhûm ayrı ⇒ zâid'** kalıbıyla **aynı** (c4 p316–319; **tutarlılık notu: c4 p375–377 nakızı burada da uygulanabilir**).
+- Doğan sual: —
+
+## c5 p36
+- OCR: orta
+- Okuma: tam
+- İçerik: **3. farz**: 'hızlı ve yavaş hareket alış ve bırakışta aynı ise **mesafede ortaksa imkânda ayrı, imkânda ortaksa mesafede ayrı** ⇒ **imkânın mikdârı mesafenin mikdârından mugâyir**'; ⇒ 'bu üç farzla bu imkân **mikdârî mevcut**, müteharrikin mikdârından, mesafenin mikdârından, hareketten, hızlı-yavaş oluşundan **mugâyir**' — hüccetin tamamı. **İtirazlar (Râzî aktarıyor; itiraz sahibi belirtilmiyor)**: **Soru 1**: 'bu hüccet **3 şeye bina**: (1) hızlı ve yavaş hareket; (2) birlikte başlayıp bitenler; (3) biri ötekinden sonra başlayan; **bu üçünü zamanın vücûduna cezmeden sonra itikad edebiliriz**: **hızlı = eşit mesafeyi daha az zamanda kateden**; **birlikte başlamak = aynı ânda**; ân zaman tasavvurundan sonra; **kabliyet-ba'diyet zamansız tasavvur edilmez** ⇒ zamanın vücûdu ya istidlâlsiz bilinir (delil gereksiz) ya istidlâllidir ve o hâlde **devir**.' (p37)
+- Netice/hüküm: 3. farz sonu; **Soru 1: devir itirazı (hüccetin öncülleri zamanı zaten varsayıyor).**
+- Delil çeşidi: **devir itirazı**; (T) burhânî biçim (itiraz).
+- Mevzuya bağı: **KRİTİK — Fasıl I §3**: **'hızlı/yavaş tefsiri zamanı içerir ⇒ delil devir' itirazı, Râzî'nin kendi c5 p26'daki 10. hücceti ('hızlı-yavaş tefsiri zamansız olamaz') ile birlikte** okunmalı: aynı gözlem bir yerde 'bedîhîlik' delili, burada 'devir' itirazı.
+- Doğan sual: —
+
+## c5 p37
+- OCR: orta
+- Okuma: tam
+- İçerik: **Soru 1 sonu**: '**zamanın asıl vücûdu bedîhî, mâhiyeti tafsîli delille** denirse devir düşer' itirazına: '**bu delil mâhiyetini/hakîkatini göstermez, yalnız ayânda mevcut bir şey olduğunu gösterir** ⇒ devir geri.' **Soru 2**: 'sizin mezhebinizde **ziyade-noksan hükmüne mahkûm olan mevcut olmalı**'; bununla **hareketlerin evveli var** diyen delile cevap verdiniz; oysa **munkazî, cüzlerinin sebâtı olmayan** şeylerde nefsü'l-emirde ziyade-noksan hükmü verilmez; **zihinde farz edilen imtidâdlı şey hakkında** verilir; **zamanın imtidâdı ayânda yok**; ⇒ 'zamanın ayânda vücûdunu' ziyade-noksanla ispat edemeyiz; **bu hüccet mugâlata**. **Soru 3 (mu'ârazalar; 3 tane)**: **(1)** '**zamanın kendisiyle mu'âraza**: her zamanın ibtidâ ve intihâsı arasında o mikdârı alan ve daha küçüğüyle dolmayan, daha büyüğünü almayan bir **imkân**; başka bir kısa imkân ⇒ **zamanın zamanı, sonsuz**' (p38).
+- Netice/hüküm: **Soru 2: 'ziyade-noksan ⇒ mevcut' öncülü munkazî için tutmaz; Soru 3: mu'âraza başladı.**
+- Delil çeşidi: **itiraz (öncül eleştirisi)**; (T) burhânî biçim (itiraz).
+- Mevzuya bağı: **KRİTİK — Fasıl I §3 ve c4 p249–264 (tatbîk delili)**: **Râzî'nin kendi hudûs delilinde 'mazi hareketler ziyade-noksan kabul eder ⇒ mütenâhî' öncülü buradaki 'ziyade-noksan ⇒ mevcut' öncülüyle **aynı aile**; bu itiraz (munkazî şeye ziyade-noksan hükmü zihnî farzdır) **Râzî'nin tatbîk delilini de vurabilir** — **Risale tatbîki 'öncüle bağlı' işaretlerken bu itirazı kaydetmeli.**
+- Doğan sual: —
+
+## c5 p38
+- OCR: orta
+- Okuma: tam
+- İçerik: **Soru 3 mu'ârazaları devam**: **(1)** '**her zamanın başı ve sonu arasındaki imkân, o mikdârı alıp daha küçüğüyle dolmayan ve daha büyüğünü almayan bir şey; daha küçük bir imkân (zaman) başka; ⇒ zamana başka zaman, sonsuz**; 'bu vehmin işi' derseniz **harekette de aynısını söyleyin (fark yok)**.' **(2)** '**müstakbel tarafıyla mu'âraza**: **bu saatten yarına kadar** belirli hızla hareketi alan imkân var; ⇒ **yarın gelecek zaman şimdi hâzır** olur (bâtıl); 'hâzır olan yalnız o hareketlerin **vücûd imkânı**, onlara zarf olacak ayrı şey değil' derseniz: **mâzîde de aynı söylenebilir**.' **(3)** '**tâs (kadeh/bardak) iki ucu arasındaki mekân** belirli mikdârda cismi alan, daha azıyla dolmayan, daha fazlasını almayan; bu imkân **mevcut** ⇒ **ayânda kendi zâtıyla kâim boyutlar ve mekânların mevcut olması** lâzım gelir (mekân = boşluk); 'imkân = o cisimlerin nefslerinde vücûd imkânı' derseniz **zamandaki imkân için de aynısı**. **2. tarîk (kabliyet-ba'diyet)** başlıyor (p39).
+- Netice/hüküm: **3 mu'âraza: zaman-zaman teselsülü, yarın zamanı şimdi hâzır mı, mekân boyutları — hepsi 'imkân = mevcut' öncülünü **zaman ve mekânın simetrik nakzı**yla vuruyor.**
+- Delil çeşidi: **nakz (proves too much)**; (T) burhânî biçim.
+- Mevzuya bağı: **Fasıl I §3, §6.3 ve 'halâ' bahsi**: mu'âraza (3) **zaman delilinin mekân-halâ için de aynen geçerli olduğunu** gösterir; Râzî'nin **kendi nakz ilkesi (c4 p376 Nakız 6: 'mahzûr her iki takdirde kâimse delil değil')** burada hasım kalemiyle yazılıyor.
+- Doğan sual: —
+
+## c5 p39
+- OCR: orta
+- Okuma: tam
+- İçerik: **2. hüccet (kabliyet-ba'diyet yolu)**: 'kavim bu tarîki şâfî ve mürettep özetlemedi; **ben sahih ve ma'lûm vecihle takrîr ederim**' (Râzî'nin sesi): '**baba oğulun vücûdundan önce vücûd bulur; bu kabliyet ya baba ve oğul zâtları ya zâtlara zâid bir şey; birincisi bâtıl, 6 vecihle**: **(1)** her birinin zâtını bu kabliyetten **gâfil olarak** tasavvur edebiliriz; **(2)** kabliyet-ba'diyet iki zât arasında **nisbet**; nisbet ikisinden gayr; **(3)** 'kabl olan ba'de kalmaz; ba'd ise kabl olmaz' (helak/tebeddül)…; **(4)** **mâhiyette farklı şeyler 'birinin öncesinde' olmakta müşterek**: at babası çocuğundan önce, eşek babası, insan babası; mâhiyetleri farklı, kabliyette müşterek; **aynı mâhiyette şeyler kabliyette farklı olabilir (baba-oğul)** ⇒ kabliyet-ba'diyet mâhiyetten mugâyir; **(5)** kabl ba'de muzâf; kabl hükmüne mahkûm olan **kendi başına kâim, mâhiyeti başkasına nisbetle akledilmeyen bir cevher**; **muzâf mâhiyet kabûl eden şey ile mâhiyeti başkasına nisbetle akledilmeyen aynı olamaz**…' (p40)
+- Netice/hüküm: **Râzî'nin kendi takrîri (2. tarîk, 1. adım): kabliyet-ba'diyet-meiyyet zâtlara zâid mefhûmlardır (6 vecih).**
+- Delil çeşidi: **mefhûm analizi (zâtlardan mugâyir) + misal**; (T) burhânî biçim.
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §6.3 ve tutarlılık**: bu, **'mefhûm ayrı ⇒ zâid'** kalıbının **Râzî'nin kendi kalemiyle** yeni uygulamasıdır (c4 p316–319 ile aynı); **c4 p375–377'deki nakız ilkesi burada da geçerli olabilir (kabliyet mevcut zâid ⇒ kabliyetin kabliyeti?)** — Râzî **bu delili 'beyân' olarak kuruyor, mu'âraza fasılda**.
+- Doğan sual: Râzî bu 2. tarîki sonunda kabul ediyor mu, itirazlar var mı? (p40–45.)
+
+## c5 p40
+- OCR: orta
+- Okuma: tam
+- İçerik: **2. hüccet devam**: '**(5)** …kabl hükmüne mahkûm olan cevher ile mâhiyeti başkasına nisbetle akledilen ayrı ⇒ kabliyet-ba'diyet zâtlardan mugâyir; **(6) İlâh (teâlâ) bu yevmî hâdisten önce mevcuttu, bu hâdis vücûda girerken mevcut, ondan sonra baki kalacak** ⇒ **vâcibü'l-vücûd zâtı üzerine bu kabliyet, meiyyet ve ba'diyet vârid oluyor; bu mefhûmlar zâtın kendisi olsaydı zâtında tebeddül vâki olurdu (muhâl)**.' **Sonuç**: '**kabliyet-ba'diyet-meiyyet mefhûmları zâtlara ve hakîkate mugâyir emirlerdir; bu zâid mefhûm ya mahz adem ya mevcut; adem olamaz** ('o ondan önce değildir' nakîzi; 'kabliyetin ademi' adem; **ademin nakîzi sübût**) **⇒ kabliyet-ba'diyet zâid, sâbit, mevcut sıfatlardır**; bu **mevcûd** ya **sadece zihinde** (bunun gibi 'beş çifttir' gibi zihnî farz) ya **ayânda**; **birincisi bâtıl**: zihinde-sâbit ancak **hâricde vücûdu olmayan** şeylerdir; 'baba oğuldan önce' **öyle değil** ⇒ **ayânda mevcut**; sonra: ya nefsiyle kâim ya…' (p41).
+- Netice/hüküm: **Râzî'nin takrîri: kabliyet-ba'diyet-meiyyet zâid ve ayânda mevcut sıfatlardır; 6. vecih Allah'ın zâtı üzerinde bu mefhûmların tebeddül doğurmayacağını gösterir.**
+- Delil çeşidi: **mefhûm analizi + taksîm (adem/mevcut; zihin/ayân)**; (T) burhânî biçim; **F 27-B**: 'kabliyet zâid mevcut sıfat' öncülü **c1 M2 'vücûb sübûtî' çizgisiyle uyumlu**, ama **c4 p264 'izâfetler ayânda yok' hükmüyle GERİLİM** (kabliyet de izâfî).
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §6.3 ve tutarlılık**: **Râzî burada kabliyet-ba'diyet-meiyyeti 'ayânda mevcut zâid sıfat' diyor; c4 p264'te ise 'izâfetler ayânda mevcut değil, aksi teselsül' diye cevap vermişti** — **açık gerilim (Râzî'nin kendi iki hükmü)**; Risale iki hükmü **uzlaştırma yazmadan** hiçbirini ana metne almaz.
+- Doğan sual: **Râzî bu gerilimi (izâfî ↔ ayânda mevcut) çözüyor mu?** (p41–45.)
