@@ -2377,3 +2377,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **cevap (cedelî + ilke)**; (T) cedelî-burhânî; **F 27-B**: nakızlar 10 misalin hepsine 'izâfî' diye topluca cevap; **misal başına ayırt yok**.
 - Mevzuya bağı: **KRİTİK — Fasıl I §3, §6.3, c1 M2–3**: **(a)** Râzî 'izâfet/nisbet ayânda mevcut değil' diyor; **c1'de 'vücûb sübûtî ve vücûd zâid' diyor** ⇒ hepsi izâfî mi, sübûtî-i'tibârî mi? **(⊬ tutarlılık)**; **(b) Nakız 1 ('Allah'ın ilim izâfetleri sonsuz') için p254–255'teki 'nefsü'l-emirde yoksa nefy-i ilim' itirazı cevapsız kalıyor (hasım kendi cevabını 'ayânda yok' diyerek zaten öngörmüştü)** — **açık borç**; **(c) Nakız 7 (Allah'ın devamı)** ve **nakız 8 (imkânın evveli)** için cevap ayrıca yok. **Risale'ye:** tatbîk/tezâyüd delili **'öncüle bağlı ve Râzî'nin kendi kabulüyle üç açık borçlu (izâfet, devam, imkân)'** derecesiyle yazılır; **Râzî'nin 'kırk yıl düşündüm' sözü delilin Râzî için de kesin olmadığına işaret** (⊬ yorum).
 - Doğan sual: **(1)** İlim-izâfet nakzına cevap var mı? **(2)** 'Ezelî imkân / hâdislerin sıhhatinin evveli yok' nakzı nasıl kapanıyor? **(3)** 'Sübûtî' ile 'ayânda mevcut' aynı mı? (c1 M2 ↔ c4 p264) **(4)** Râzî'nin cevabındaki 'mazi te'âkub ile mevcut' iddiası ictimâ'sız mecmû' savunması p262'nin kendisi mi, ayrı delil mi?
+
+## c4 p265
+- OCR: orta
+- Okuma: tam
+- İçerik: **Hüccet 2 (hareket-mesbûkiyet)**: '**hareket bir hâlden hâle intikaldir; bunun intikal olunan hâle değil terk edilen hâle mesbûk olması zarûrîdir; hareketin hakîkati başkasına mesbûkiyeti iktizâ eder, ezelin hakîkati başkasına mesbûkiyeti nefyeder ⇒ hareket ile ezeli cem' iki nakîzin cem'i, muhâl.**' **Hüccet 3**: 'ezelde hâdislerden bir şey hâsıl oldu mu, olmadı mı? **Olmadı ⇒ hâdislere ibtidâ.** **Oldu ⇒** o hâdis başkasına mesbûk ise ezel başkasına mesbûk olurdu (muhâl); değilse **o hâdisin ilki** olur ⇒ ibtidâ.' **Hüccet 4**: 'her hâdis **evveli olmayan bir ademle** mesbûk ise bu ademler **ezelde cem' üzere** hâsıl; ezelde mevcut bir şey hâsıl mı? **Evet ⇒ sâbık (adem) ile mesbûk (vücûd) mukârin** olur (muhâl); hayır ⇒ mevcûdâtın evveli var.'
+- Netice/hüküm: **Hudûs tarafının 2.–4. hücceti: mesbûkiyet-ezel çelişkisi, ilk hâdis dilemması, ademlerin ezelde cem'i.**
+- Delil çeşidi: **taksîm (dilemma)**; (T) burhânî biçim, öncül: 'ezel = mesbûk olmayan'; F 27-B: hasım p266'da 'ezeli muayyen vakit sanıyorsunuz' diye ayırt eder.
+- Mevzuya bağı: **KRİTİK — Fasıl I §3 (hevâdis-i lâ evvele lehâ, ilk hâdis)**: Risale'nin 'ilk hâdis' dilemması buradaki **Hüccet 3**'tür; hasmın 'ezel vakit değildir' itirazı (p266) **Risale'nin dilini bağlar: 'ezelde' yerine 'hiçbir vakitten önce'** yazılmalı.
+- Doğan sual: —
+
+## c4 p266
+- OCR: orta
+- Okuma: tam
+- İçerik: **Hasım itirazları (Râzî 'فإن قيل' formülüyle, hasmın sesi)**: **(1)** '**bu üç delil bir noktaya döner: ezeli hâdislerin kıdemi için bir 'tarf' (vakit) sanıyorsunuz; orada hâdislerin ademi hâsılsa vücûdu imtinâ'; bu, ezel muayyen bir vakit-zaman olsaydı doğru; oysa bedîhî muhâl: işaret edilen her vakit muayyen ve ezelden dışında; ⇒ deliller muğalata.**' **(2) İmkân mu'ârazası**: 'delilleriniz sahihse **ezelde hâdisin imtinâ'ı** çıkar; hâlbuki **lâ yezâlde mümkin**; ezelde imtinâ' sonra imkân olsa imkâna bir ibtidâ; **muhâl (iki vech)**: mâhiyetler **imtinâ'-i zâtîden imkân-ı zâtîye inkılâp** eder; ayrıca 'ilk' farz edilen her vakitten önce sıhhat hâsıldı.' **(3)** 'bu üç delil ezel tarafında ibtidâ gerektiriyorsa **ebed tarafında âhir ve imtinâ' gerektirir**.'
+- Netice/hüküm: **Hasım: (1) 'ezel vakit değil ⇒ delil muğalata'; (2) 'imkânın ibtidâsı yok'; (3) 'ebed simetrisi'.**
+- Delil çeşidi: **itiraz (kavramsal + nakz)**; (T) cedelî-analitik.
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §6.3 (zaman kipi)**: itiraz (1) ile **c1 Mesele 7 şübhe 3 ('kâne/yekûnu')** ve **c2 p76 ('devam zamana bağlı olmak zorunda değil')** aynı zemin: **'ezelî' = 'vakit değil, mesbûk olmama'**. Risale bu tanımı yazarsa delil 'vakit farzı'na dayanmaz (Râzî'nin cevabı p269).
+- Doğan sual: —
+
+## c4 p267
+- OCR: orta
+- Okuma: tam
+- İçerik: **İtiraz (3) 'ebed simetrisi' — üç vecihle**: **(1)** 'siz dediniz hareketin hakîkati mesbûkiyeti iktizâ eder; **hareketin hakîkati mülhûkiyeti (arkasından bir şey gelmeyi) de iktizâ eder**; ebedin hakîkati mülhûkiyeti nefyeder; hareket ile ebed cem'i muhâl ⇒ hareketler ebed tarafında sona erer'; **hareketin cüzü kalırsa sükûn olurdu**, bizim kelâmımız hareket bâkî iken; **(2)** 'ebedde hâdislerden bir şey hâsıl olmasa hâdislere âhir zarûrî; hâsıl olsa arkasından başka gelir mi? Gelirse ebedden sonra şey; gelmezse o **hâdislerin âhiri** ⇒ muhâl'; **(3)** 'her hâdisten sonra sonu olmayan bir adem… mecmû ademler ebedde…'.
+- Netice/hüküm: **Hasım: ezel/ebed simetrisi; hudûs delilleri ebed tarafında sonlandırmayı da gerektirir.**
+- Delil çeşidi: **nakz (simetri)**; (T) cedelî-analitik.
+- Mevzuya bağı: **Fasıl I §3 ↔ mead (Fasıl III)**: **simetri itirazı ahiretin ebediliğini (cennet-cehennem dâimî) doğrudan ilgilendirir**; Risale'nin delili 'mesbûkiyet' kanadıyla **kurulup 'mülhûkiyet' kanadına taşınmazsa** ebediyet öğretisi korunur (Râzî'nin cevabı p270).
+- Doğan sual: Ebediyet-mead için Râzî'nin 'mülhûkiyet şart değil' cevabı (p270) Fasıl III ile tam örtüşüyor mu? (⊬ Mead cildi.)
+
+## c4 p268
+- OCR: orta
+- Okuma: tam
+- İçerik: **İtiraz (3) sonu**: 'deliller ezelde ibtidâ gerektiriyorsa ebedde de âhir; bu bâtıl ⇒ **deliller muğalata; menşei: ezelin geçmişte muayyen vakit, ebedin gelecekte muayyen vakit sanılması.**' **İtiraz (4) — deliller imtinâ'ı gösterirse vukû'unu gösteren delil de var, iki vechle**: **(1)** '**bedîhe: her hâdisin hâdis bir sebebi olmalı; sebep kadîm ise te'sîri hâdis bir şarta mevkûf** — Nitekim hudûs taraftarları 'âlem muayyen vakitte hâdis oldu çünkü Allah'ın **irâdesi âlemi o muayyen vakitte îcâda taalluk etti**' der; bu hakîkatte **Allah'ın kudretinin âlemin vücûdundaki te'sîrinin o vaktin hudûsuna mevkûf olduğunu itiraftır** ⇒ her hâdis **hâdis bir sebeple/şartla** ta'lîl olur ⇒ her hâdis bir başka hâdise mesbûk ⇒ ilk yok.' **(2)** 'her hâdisin ademi vücûdundan sâbık; bu **sebk** de bir şeydir ve hâdisten önce hâsıl ⇒ her hâdis **başka hâdise** mevkûf, ilk yok.'
+- Netice/hüküm: **Hasım (kıdem/hevâdis-i lâ evvele lehâ tarafı): 'irâde-i ilâhînin muayyen vakte taalluku' hudûs taraftarının **kendi ifadesiyle** hâdis şarta mevkûfiyeti itiraf eder.**
+- Delil çeşidi: **ilzâm (irâde-tahsis nakzı)**; (T) cedelî.
+- Mevzuya bağı: **KRİTİK — Fasıl I §8 (irâde-tahsis)**: bu **hasmın en ağır itirazlarından biri**: 'muayyen vakitte irâde ⇒ vaktin hudûsu şart ⇒ teselsül'. **Râzî cevabı p272'de başlıyor; irâde-tahsis kapanışı bu sayfaların sonuna kadar takip edilecek** (⊬ hâlâ açık).
+- Doğan sual: **Râzî 'irâde ezelî, taalluk hâdis değil/vakit tahsisi' cevabını nerede ve nasıl veriyor?** (⊬ p272–280.)
+
+## c4 p269
+- OCR: orta
+- Okuma: tam
+- İçerik: **Hasım itirazı (4)/(2) sonu ve Râzî cevapları (Râzî-sesli)**: **Cevap 1 ('ezel muayyen vakit sanılıyor' itirazına)**: '**bu delillerin takrîri onların dediğine muhtaç değil**; 3. delilde: her hâdis evveli olmayan bir ademle mesbûk; **bu ademlerin her birini mevcut farz etsek her biri kadîm; kadîmler vücûdca mukârin olmak zorunda (yoksa bazısı sonradan olur, kıdemi bozar); mukârin olunca onlarla hâdislerden bir şey hâsıl olamaz — çünkü mukârenette olanlardan biri bu hâdisin ademi; vücûdu ile ademi mukârin muhâl** ⇒ her birinin önünde ezelî bir adem farz edilirse **tümü adem ile mesbûk** hükmü zorunlu.' **Cevap 2 (imkân mu'ârazası)**: '**hâdislerin sıhhatinin bidâyeti olmadığını kabul ederiz; bu, ezelde sıhhatini gerektirmez**: **mesbûk-bi'l-adem şartıyla** mümkin bir mevcûdu alalım; bunun imkânının **evveli yok** (vakit yok ki ilk olsun ve öncesinde sıhhat hâsıl olmasın), fakat **ezelî olması mümkin değil** — ezelî mesbûk-bi'l-adem değildir; şart ile alınan şey ezelî olamaz.'
+- Netice/hüküm: **Râzî'nin hükmü: (a) hüccet 3–4 'ezel vakit' varsayımına muhtaç değil (adem-kadîm mukârenet delili); (b) imkân ezelî olabilir, hâdisin vukûu ezelî olamaz (şart mesbûkiyet).**
+- Delil çeşidi: **burhânî biçim (adem mukârenet) + ayrım (imkân/vukû')**; (T) burhânî biçim, öncül: 'ademler mevcut farz edilebilir'; **kendi tenkidim**: 'ademleri mevcut farz' hamlesi **adem şey midir?** sorusuna dayanıyor ('ma'dûm şey midir' atfı, c? ⊬); Râzî'nin kendi kelâmında ma'dûm hâl/şey ayrımı **mühim borç**.
+- Mevzuya bağı: **KRİTİK — Fasıl I §3**: **'imkân ezelî, vukû' hâdis'** ayrımı c4 p235 (Delil 5) ve p257 (nakız 8) ile buluşur: **Râzî burada cevabı veriyor: imkânın evveli yok ama şartlı mevcûdun ezelî olması imkânsız**. Risale'ye alınabilir çizgi: 'imkân ≠ vukû''.
+- Doğan sual: Delil 3'ün 'ademleri mevcut farz' hamlesi 'ma'dûm şey mi' meselesine bağlı; Râzî bu meseleyi başka yerde (⊬ 'ma'dûm şey midir') ayrıca kapatıyor mu?
+
+## c4 p270
+- OCR: orta
+- Okuma: tam
+- İçerik: **Cevap 3 (ebed simetrisine)**: '**hâdis olmanın şartı mesbûk-bi'l-adem olmasıdır; mülhûk-bi'l-adem olması şart değildir** ⇒ hâdisten önce ademin hâsıl olması **vâcib**, sonra ademin hâsıl olması vâcib değil ⇒ fark.' **Cevap 4**: 'önce geçti.' **Hüccet 5 (fâil-i muhtâr delili)**: '**hevâdisin hepsi fâil-i muhtârın fiilidir; her muhtârın fiilinin evveli var ⇒ hevâdisin hepsinin evveli var.**' **1. mukaddimenin beyânı**: hareketler hâdis; her hâdisin müessiri ya **mûcib** ya **muhtâr**; **mûcib olamaz**: 'mûcib devamıyla lâzım gelir' — felek hareketinin her farz edilen cüzü mûcib bi'z-zât ise bu cüz o mûcibin devamıyla dâim olmalı; oysa hareketin **belirli cüzü**, cismin bir hayizde iken başka hayizden gelmesi; **bu hâl kalsa sükûn olur, hareket olmaz** ⇒ mûcib olamaz; **muhtâr olmalı; fâil-i muhtâr fiilinden önce ⇒ felek hareketlerinin faili vücûdca onlardan sâbık** (metin: 'سابقاً على فعله').
+- Netice/hüküm: **Râzî'nin hükmü: hâdis olmanın şartı 'mesbûkiyet', 'mülhûkiyet' değil (ebed cevabı). Hüccet 5: mûcibden hareket cüzü sâdır olamaz ⇒ fâil-i muhtâr ⇒ evveli var.**
+- Delil çeşidi: **taksîm (mûcib/muhtâr) + ilke**; (T) burhânî biçim, öncül: 'mûcib devamıyla cüzün devamını gerektirir'.
+- Mevzuya bağı: **KRİTİK — Fasıl I §8 (irâde/fâil-i muhtâr) ↔ §3**: 'mûcib ⇒ dâim' öncülü **filozofların 'kadîm mebde' hâdis müteâkıpların illeti' cevabına** (p271) doğrudan yenik düşer (cüzler birbirine şartlı); Risale **Vâcib=muhtâr** öncülünü **bu delile yaslamamalı**, ayrı yol (irâde/ilim) kullanmalı (c3 çizgisi).
+- Doğan sual: Hüccet 5'in cevabı (p271–272) Râzî'nin kendi kapanışı mı, yoksa hasmın itirazı mı? (p271–272 itiraz; Râzî cevabı p272'de başlıyor.)
+
+## c4 p271
+- OCR: orta
+- Okuma: tam
+- İçerik: **Hüccet 5 devamı ve hasım itirazı (1)**: '**neden mûcib bi'z-zât olamasın?** 'Devam gerekir' sözünü kabul etmeyiz: **ağır cismin düşmesinin mûcibi tabiî sıkletidir; sıklet her hâlde bâkî, fakat ona bağlı düşme cüzleri bâkî değil**: **mûcib bir, îcâbı her cüz için 'öncekinin inkızâsına' şartlı** ⇒ mûcibin devamı cüzlerin devamını gerektirmez.' **Râzî'nin atfı**: '**bu kelâmı, hükemânın kadîm mebde'in mütekâkıp hâdislere illet olması mezhebini naklederken uzun ele aldık**' (⊬ hangi cilt/sayfa). **İtiraz (2)**: 'muhtâr fâil **her cüzün mü yoksa mecmû'un mu** faili? Her cüzün ise her cüzden mütekaddim; **her cüzden mütekaddim ⇒ mecmû'dan mütekaddim** neden zorunlu? Bu mukaddime sahihse bu uzun delile ihtiyaç kalmaz (adem her bir hâdisten sâbık ⇒ hepsinden sâbık); gerekmiyorsa buradaki de gerekmez. Mecmû'un faili olduğunu iddia ederseniz: **mecmû' her ferd hâsıl olunca vâcibü'l-hâsıl, sebeple vâcib olan başka sebebe iftikâr edemez.**'
+- Netice/hüküm: **Hasım (filozof): sıklet misali (mûcib bir, îcâb cüzlere şartlı); muhtâr fâilin mecmû'a mütekaddim olmasının ispatsızlığı.**
+- Delil çeşidi: **itiraz (misal + taksîm)**; (T) cedelî-analitik; **F 27-B**: 'her cüzden mütekaddim ⇒ mecmû'dan mütekaddim' öncülü **hudûs tarafının kendi delilinde de** kullanılıyor (aynı silahın iki yöne dönüşü: tekrarlanan örüntü).
+- Mevzuya bağı: **Fasıl I §8 (fâil-i muhtâr ispatı)**: Risale 'fiil muhtârdan' ifadesini **bu delile bağlarsa** öncül 'mecmû'dan mütekaddim' ve 'mûcib devam' — her ikisi hasmın cevabına açık; **derece: öncüle bağlı**.
+- Doğan sual: **'Hükemâ mezhebi: kadîm mebde' hâdis müteâkıplara illet' atfı (c4 p271) hangi ciltte tafsil ediliyor?** (Cilt 5–9'da aranacak; **grep yasak, okuyarak.**)
+
+## c4 p272
+- OCR: orta
+- Okuma: tam
+- İçerik: **İtiraz (2) sonu**: '**fâilin her cüzün fâili olduğunu kabul, mecmû'un fâili olmasını kabul etmeyiz: mecmû' her ferd hâsıl olunca vâcib-hâsıl, sebeple vâcib olan başka sebebe iftikâr etmez.**' **İtiraz (3)**: 'mecmû'un fiil-i muhtâr olduğunu kabul, **her muhtâr fiilin muhdes olması** neden? **Önceki on beş vecih**: 'müfteqır-ı fâil zamânî mesbûk-bi'l-adem olmak zorunda değil'; ayrıca muhtâr fâil ya o müessiriyette lâzım olan her şeyi taşıyordur (eser ondan tehalluf edemez) ya değil (başka müessire iftikâr).' **İtiraz (4)**: 'delil sahihse **müddete (zamana) bir ibtidâ** gerekir — muhâl: her vakit için bedîhe **kablini** zorunlu kılar, ademinin ondan önce karar bulduğunu hükmeder ⇒ delilin sonucu bedîheye ters; **bedîhenin gereğini ikrar, kapalı-şüpheli delilin gereğini ikrardan evlâdır** ⇒ sözünüz sâkıt.' **Cevap başlıyor (Râzî)**: '**mûcibden hareketin her cüzünün sudûru öncekinin inkızâsına şartlıdır**, denirse: bu, evvelce takrîr edilene döner: bu mûcibin müessir hâle gelişi…' (p273'e taşıyor).
+- Netice/hüküm: **Hasım itirazları (1–4) bitti; Râzî cevap 1'e başladı (p273).** **Müddete ibtidâ (zaman-öncesi) itirazı = hudûs-kıdem tartışmasının kalbi.**
+- Delil çeşidi: **itiraz (analitik + bedîhe)**; (T) cedelî-analitik.
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §6.3, §8**: **'her vakitten önce vakit' bedîhesi (hasım, İbn Sînâ çizgisi) ↔ Risale'nin 'zamanın kendisi mahlûk'** ifadesi: Risale **zamanın başlangıcı iddiasını bu bedîheye karşı savunmalı** (Râzî'nin zaman/dehr kapanışı ⊬); **F 27-B**: 'bedîhe delilden evlâ' ilkesi hasmın silahıdır; **Râzî 'bedîhe = vehim' cevabını nerede yazıyor?** aranacak.
+- Doğan sual: **(1)** Râzî 'zaman ibtidâsı bedîheye ters' itirazına ('vehim vs akıl') nasıl cevap veriyor? **(2)** 'Önceki on beş vecih' atfı hangi ciltte? (c4 p225–239'da 14 delil sayıldı; 12. delik OCR/numara boşluğu — **on beşe tamamlanıyor mu?** ⊬.)
