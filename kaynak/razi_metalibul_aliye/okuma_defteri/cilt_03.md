@@ -2377,3 +2377,75 @@ Biçim: cilt 1–2 ile aynı.
 - Delil çeşidi: filozof ilim delili ('bazıları') + hudûs delili; (T) analitik-öncüle bağlı; İbn Abbâs nakli **⊬ isnadsız**; Bistâmî sözü tasavvufî nakil ⊬.
 - Mevzuya bağı: **Fasıl I §8 (ilim, irâde)**: 'kâim bizzât ⇒ kendini bilir ⇒ illet ⇒ gayrını bilir' hattı Fasıl I'de zaten vardır; Râzî onu **'bazıları'** diye kendi adına almaması, **derece = aktarılan delil**; ilim bâbındaki 5 suale açıklık (c3 p144) burada da geçerli. 'En büyük isim' rivayeti Risale'ye alınmaz (isnad ⊬).
 - Doğan sual: Bistâmî sözünün devamı p265'te mi?
+
+## c3 p265
+- OCR: orta
+- Okuma: tam
+- İçerik: p264 sonundaki **Ebû Yezîd el-Bistâmî** sözü: 'tevekkülden: kendine O'ndan başka nâsır, rızkına O'ndan başka rızık veren, amelinin O'ndan başka şâhidini görmemendir' (tasavvufî nakil, ⊬). **15–16. isimler el-Celîl, Zü'l-Celâl**: 'Celîl' Kur'ân'da yok, 'Zü'l-Celâl' 55:27 ve 55:78'de var (aynı mânâ). **Ayrım**: Kebîr = zâtın kemâli; **Celîl = sıfatların kemâli**; Azîm = zât+sıfat+fiil kemâli. Celîl'in kemâli: selbî (zıd, nidd, şerîk, mekân, zamandan münezzeh) + sübûtî (tam ilim, tam kudret). 'Fe'îl' vezni fiil/mef'ûl/fâil mânâlarına gelir: (a) mü'minleri ta'zîm-ikrâm eden, (b) ta'zîm ve ikrâma müstehak, vücûdu inkâr edilmez, (c) celâl sıfatlarıyla muttasıf. Bazıları: 'Celîl, kasdedeni yücelten, kovduğunu zelîl edendir' (isimsiz nakil), 'kadri arif kalplerinde yüce' (isimsiz). **17. isim el-Azîm** (2:255): cüsse büyüklüğü değil, zât-sıfat-fiil kemâli.
+- Netice/hüküm: Kebîr/Celîl/Azîm üçlüsü: zât / sıfat / zât+sıfat+fiil kemâli (Râzî'nin ayrımı).
+- Delil çeşidi: lafzî-iştikak; (T) hitâbî.
+- Mevzuya bağı: Fasıl I/IV isim kataloğu; 'Celîl' ismi Kur'ân'da geçmez (Râzî bu sayfada açıkça yazıyor) ⇒ **esmâ tevkîfî ilkesiyle uyum: Risale bu ismi 'nassta geçen' isimlerden ayırır**; kaynak: c3 p265. Bistâmî ve isimsiz nakiller ⊬.
+- Doğan sual: Râzî'nin 99 isim listesine gönderdiği (c3 p270) 'tis'a ve tis'ûn' listesi hangi rivayet (⊬)?
+
+## c3 p266
+- OCR: orta
+- Okuma: tam
+- İçerik: **Azîm üç yönden**: (a) **zâtında**: cismin uçlarına gözün ihâta etmemesi gibi, Allah'ın kunhüne **akıl ve fehim ihâta etmez** ⇒ her azîmden azîm; (b) **sıfatlarında**: 'kavminin en çok ilim-kudret-istiğnâ sahibi' gibi, Allah'ın ilim ve kudretine **kimse münâsib değil**; (c) **fiillerinde**: 'yeryüzü krallarının en büyüğü' gibi, mülkün hakîkî mâliki. Selb / izâfe / fiil bâbından. **18–19. isimler el-Mâcid, el-Mecîd** (85:15 'zü'l-arşi'l-mecîd'; 50:1 'Kur'ân-ı Mecîd'): (1) **tam şeref**; (2) aslı **vüs'at**: cömert, çok hayır sahibi ⇒ Allah'ın çok ihsânı. **20. isim es-Sübbûh** (Kur'ân'da yok, **ümmet Allah hakkında zikrinde icmâ etmiştir**, 'sübhânallah'tan alınır); fu''ûl vezninde ilk harf fethalı (sebbûh, kuddûs) istisnâları aktarılır (dil kaidesi).
+- Netice/hüküm: 'Azîm' zât/sıfat/fiil ayrımı; 'Sübbûh' nassta yok, icmâ zikriyle.
+- Delil çeşidi: lafzî; (T) hitâbî.
+- Mevzuya bağı: **KRİTİK esmâ meselesi**: 'Sübbûh' ismi **Kur'ân'da yok, Râzî 'ümmet zikirde icmâ etti' diyor**; **Sünnî akideye göre esmâ tevkîfî — bu iddia (icmâ) ⊬ doğrulanmadı ve Risale'ye alınmaz**; ilgili not: c3 p240, 247. 'İcmâ' iddiasının kaynağı yok.
+- Doğan sual: 'Sübbûh' ismi hadiste var mı (Müslim'deki 'sübbûhun kuddûsun rabbü'l-melâiketi ve'r-rûh' hadisi — ⊬ doğrulanacak; bu satır defter kaydında **hafızadan bir işarettir, kaynak bakılmadı**).
+
+## c3 p267
+- OCR: orta
+- Okuma: tam
+- İçerik: **Tesbîh** iki vecih: (1) **Resûlullah'a mânâsı soruldu: 'Allah'ı her kötülükten uzak tutmak'** (hadis, isnad ⊬); (2) 'sebeha fi'l-arz' (yeryüzünde gidip gelmek; 73:7 'gündüz uzun bir yürüyüşün var'). Tesbîh tenzîhe alınırsa **en faziletli zikir tenzîh**: melekler geceyi gündüzü tesbîh eder (21:20), Âdem kıssasında 'seni hamdinle tesbîh ve takdîs ederiz' (2:30), 'biz saf duranlarız, biz tesbîh edenleriz' (37:165–166). **'Bazı haberler'**: dünya semâsı ehli kıyamda 'sübhâne zi'l-mülki ve'l-melekût', ikinci semâ rükûda 'sübhâne zi'l-izzeti ve'l-ceberût', üçüncü secdede 'sübhâne'l-hayyi'llezî lâ yemût' derler; Râzî bunlardan **meleklerin mârifet, muhabbet, ubûdiyet makamlarındaki derece farkı** murad edildiğini söyler. **17:44 'her şey O'nu hamdiyle tesbîh eder, ama tesbîhlerini anlamazsınız'**: bazıları **lafzî/sözlü tesbîh** demiş; delil: eğer eserlerin sanâtkâra delâleti olsaydı anlarlardı, ayrıca 'gökleri ve yeri kim yarattı derseniz Allah derler' (31:25).
+- Netice/hüküm: Tesbîh = tenzîh (Râzî); 17:44'te iki görüş: sözlü ↔ delâlet (cevap p268).
+- Delil çeşidi: nakl (âyet) + haber; (T) hitâbî; **haberin isnadı yok ⊬, Risale'ye alınmaz** (semâ ehli kıyam-rükû-secde rivayeti).
+- Mevzuya bağı: Fasıl I/IV 'tesbîh–tenzîh' bağı (c2 tenzîh hattı ile): 'tesbîh en faziletli zikirdir, mânâsı tenzîhtir' cümlesi kaynak c3 p267 ('Râzî'ye göre'). Haber Risale'ye alınmaz.
+- Doğan sual: 17:44'ün klasik tefsirdeki iki okuması (⊬ borç).
+
+## c3 p268
+- OCR: orta
+- Okuma: tam
+- İçerik: **Cevap (muhakkikler)**: 'mahlûkâtın Allah'ın **muhdesâtın sıfatlarından ve cisim nu'ûtundan münezzeh** olduğuna delâleti **mârifetin en ince bâblarındandır**; herkese ma'lûm denemez' ⇒ bu âyette tesbîhi **yaratıcının celâlet, uluvv ve kemâline delâlet** diye yorumlarlar. **Nutuk delâletinden zât delâleti üstündür (4 vecih)**: (1) nutuk yalanı kabul eder, zâtî delâlet kabul etmez; (2) nutuk vaz'î, değişir; zâtî delâlet zâtî; (3) nutuğu yalnız zâhir kulak işitir, zâtî delâleti akıl; **batın akıl kulaktan şereflidir**; (4) nutuk bâkî değil, akılî delâlet bâkî. **21. isim et-Tâhir** = noksan ve ayıptan münezzeh (33:33 'sizi tertemiz kılmak'; 9:28 'müşrikler necistir').
+- Netice/hüküm: 17:44 için **muhakkiklerin cevabı**: tesbîh = delâlet (zâtî); dört vecihle nutuk delâletine üstün.
+- Delil çeşidi: **mukayese (nutuk↔zât delâleti, 4 vecih)**; (T) cedelî-ikna'î; **'tesbîh delâlettir' yorumu sözlü tesbîhin nefyi değildir ama onun yerine konur**.
+- Mevzuya bağı: **KRİTİK**: âyetin zâhiri (mahlûkâtın **hakîkaten tesbîh etmesi**, insanın anlamaması) ile **delâlet tefsîri** gerilimi; **Risale ana metnine 'Râzî'nin muhakkikler adına cevabı' olarak dahi alınmaz, âyetin zâhir lafzı öncelenir** (17:44 lafzı ana metne konabilir, delâlet yorumu 'bazı müfessirler' notuyla). Bu, F 27-B için 'ayırt eden ölçü': zâtî delâlet ölçüsünün bu âyeti çözüp çözmediği ayrıca test edilmedi.
+- Doğan sual: Dört vecihli 'zât delâleti üstün' argümanının Râzî'nin başka eserlerdeki karşılığı (⊬).
+
+## c3 p269
+- OCR: orta
+- Okuma: tam
+- İçerik: **22. isim et-Tayyib** (hadis: 'Allah tayyibtir, ancak tayyibi kabul eder' — isnad ⊬): Tâhir = ayıptan beri; **Tayyib = tahâret + fayda** (güzel koku bir fayda); Allah hakkında: bütün ayıplardan münezzeh, bütün menfaatler O'ndan. **23–24. el-Ferd, el-Vitr** (mukâbili zevc/şef'; hadis: 'Allah vitirdir, vitri sever' — ⊬ isnad, dipnot 'vitir = ferd, hadis Allah'ın bir olduğunu ifade eder' editör). **Vitir şef'ten üstün (7 vecih)**: (1) ferdiyet Hak'ın sıfatı, zevciyet mümkinâtın sıfatı; (2) her zevc birine muhtaç, bir her adetten müstağnî; (3) ferd hem zevc hem ferdi içerir; (4) ferd yarıya bölünmez, kısmet kabul etmemek kuvvet; (5) bütün sayılar birden doğar; (6) vitir şef'e galip (şef'+vitir = vitir); (7) vahdet bütün sayı mertebelerine lâzım.
+- Netice/hüküm: Tayyib/Ferd/Vitir; **vitir şef'ten üstün** (7 vecih; **sayı-felsefesi tarzı**).
+- Delil çeşidi: lafzî + **ikna'î mukayese (sayı özellikleri)**; (T) ikna'î (yedi vecih **delil değil, tasvirdir**).
+- Mevzuya bağı: Fasıl I isimlerde 'Vitr' hadis atfı **Risale'ye alınmaz** (isnad ⊬; **bu hadis Buhârî-Müslim'de aslında vardır ama defter kaydında doğrulanmadı, kaynak bakılacak**). 7 vecihli sayı argümanı Risale'ye **alınmaz**; ders katmanına 'Râzî'nin isim yorumu örneği' olarak konabilir. Editör dipnotu Râzî'ye sayılmadı.
+- Doğan sual: —
+
+## c3 p270
+- OCR: orta
+- Okuma: tam
+- İçerik: **4. kısım: kudreti bildiren isimler (10)**: **1. el-Kâdir** (6:65 'azap göndermeye kâdirdir'; 77:23 'ne güzel kâdirleriz'); **2. el-Kadîr** (67:1; 99 isim listesinde yok ama Kur'ân'da çok). **Arapça vezinler**: 'fa''âl' (fiil çokluğu; sanatkâr adları: haddâd, bennâ, neccâr, felhâh, hayyât), 'fe'îl/fe'ûl' (sıfat 'sabit huy' gibi: kadîr, habîr, nasîr, sabûr, şekûr, gafûr).
+- Netice/hüküm: Kâdir ile Kadîr arasındaki fark **fiilin sürekliliği ve mübâlağa**dır (dil kaidesi).
+- Delil çeşidi: lafzî-dil; (T) hitâbî (dil kaidesi).
+- Mevzuya bağı: Fasıl I 'kudret' bâbı isimler: Kâdir/Kadîr farkı ders katmanı kutusu. Kaynak c3 p270–271. '99 isim listesi' atfı ⊬.
+- Doğan sual: —
+
+## c3 p271
+- OCR: orta
+- Okuma: tam
+- İçerik: **Fe'îl vezni**: fiil ara sıra mı çoğu zaman mı, tekellüfle mi tabiatla mı zuhûr ediyor ayırt etmek için; **'fiil fâilden evkedtir'**: 'semi' fe-hüve sâmi'' gibi; fe'îl yalnız fiil te'kîdi kasdedilince kullanılır ('semî', 'rahîm'): fiilin sıfatlanan tabiatında yerleşik olduğunu bildirir, bu yüzden Kur'ân'da **'Kadîr' 'Kâdir'den, 'Alîm' 'Âlim'den çok**. **3. el-Muktedir** (54:55 'mîlîk-i muktedir yanında'): 'iktidâr' vezni **kudretin kemâli**: 'fâil fiilinde dilediği gibi tasarruf eder, engel olamaz'; bazıları 'kadera/iktedera aynı' der; muhakkikler ayırır. **Kesb ↔ iktisâb**: kesb hem kendi hem başkası için, iktisâb yalnız kendisi için; 2:286 'kesbettiği lehine, iktisâb ettiği aleyhinedir': **hayırda kesb, şerde iktisâb**; gerekçe: **hayırı insan kendi ve başkası için yapar, gayreti tam olmaz; şerri yalnız nefsi için, lezzet için yapar, gayreti tam**.
+- Netice/hüküm: Muktedir = kudretin kemâli (engelsiz tasarruf); Râzî'nin kesb-iktisâb ayrımı (**kendi lugavî yorumu**).
+- Delil çeşidi: lafzî + tefsîr (2:286); (T) ikna'î; **'şerde gayret fazladır' gerekçesi psikolojik yorum, delil değil**.
+- Mevzuya bağı: **Kul fiili — dikkat**: buradaki 'kesb/iktisâb' **sözlük ayrımıdır**, Sünnî 'kesb' **kelâm terimiyle karıştırılmayacak**; Risale ana metnine alınmaz. 'Muktedir' kudret isimleri bâbında kaynak c3 p271.
+- Doğan sual: —
+
+## c3 p272
+- OCR: orta
+- Okuma: tam
+- İçerik: **şerde gayret gerekir; şer yasaklarla engellenir, bu yüzden girmesi gayret ister; hayırın önündeki engeller sürekli**. **4–5. el-Kavî, el-Metîn**: 'kuvvet' = te'sîre kâdir olmak; te'sîrden etkilenmeyen de 'kavî' (sert taş); **metânet** = 'metn' (sırt) kökünden; **Allah hakkında kuvvet = te'sîre kâdirlik, metîn = başkasından etkilenmenin imkânsızlığı** (vâcib bizzât zâtında ve bütün sıfatlarında, etkilenmez). **5. kısım: ilim isimleri**: (1) ilmin ispâtı: 31:34 'sâatin ilmi Allah'ın yanındadır', 2:255 'O'nun ilminden hiçbir şeyi ihâta edemezler', 4:166 'onu (Kur'ân'ı) ilmiyle indirdi', 35:11 'ilmiyle olmadan doğurmaz', 11:14 'Allah'ın ilmiyle indirildiğini bilin'; (2) **el-Âlim** (59:22 'gayb ve şehâdeti bilen'); (3) **el-Allâm** (5:109 'sen gayblerin allâmısın').
+- Netice/hüküm: Kavî = te'sîre kâdir; Metîn = infi'âl imkânsızlığı; ilim ispatı nasslarla (Râzî'nin nass sıralaması).
+- Delil çeşidi: lafzî + nakl; (T) hitâbî.
+- Mevzuya bağı: **Fasıl I 'ilim' isimleri ve 'infi'âl nefyi'**: Metîn'in 'vâcib etkilenmez' mânâsı c3 p263 (ganî) ile aynı öncül; 'ilim' nassları (31:34, 2:255) Fasıl III/IV'te kaynak satırı: c3 p272; âyet numaraları OCR'de bozuk, **⊬ doğrulanacak**.
+- Doğan sual: —
