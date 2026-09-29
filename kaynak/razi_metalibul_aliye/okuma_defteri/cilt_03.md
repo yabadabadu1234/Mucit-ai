@@ -2449,3 +2449,75 @@ Biçim: cilt 1–2 ile aynı.
 - Delil çeşidi: lafzî + nakl; (T) hitâbî.
 - Mevzuya bağı: **Fasıl I 'ilim' isimleri ve 'infi'âl nefyi'**: Metîn'in 'vâcib etkilenmez' mânâsı c3 p263 (ganî) ile aynı öncül; 'ilim' nassları (31:34, 2:255) Fasıl III/IV'te kaynak satırı: c3 p272; âyet numaraları OCR'de bozuk, **⊬ doğrulanacak**.
 - Doğan sual: —
+
+## c3 p273
+- OCR: orta
+- Okuma: tam
+- İçerik: **İlim isimleri devam**: 4. **el-A'lem** (17:54 'Rabbiniz sizi en iyi bilendir'); 5. **el-İlm** (55:2; 96:5 'insana bilmediğini öğretti' — lafzı anlatan âyet numaraları OCR'de karışık): **bu lafız Allah hakkında zikredilmez, çünkü bir 'dâ'et/aşağılık' vehmi verir**; 6. **el-Alîm** (67:13 'sözünüzü gizleyin ya da açığa vurun, O sinelerin özünü bilir'); 7. **el-Allâme**: **Allah hakkında caiz değil** (bu vezin 'tekellüf ve şüphe ile azdan çoğa, noksandan kemâle çıkma' için konmuştur, Allah'ta muhâl). **2. isim el-Latîf** (67:14 'yaratan bilmez mi? O Latîf ve Habîr'): 4 mânâ: (1) **çok küçük, duyulmayan** (Allah'ta muhâl ⇒ lâzımı: duyular O'na ulaşmaz ⇒ tenzîh); (2) **incelik ve gizli işleri bilen** (ilim); (3) **kullarına haberleri olmadan lütfeden** (42:19); (4) **Gazâlî'nin (r.h.) tarifi**: maslahatların hakîkat ve inceliklerini bilip müstehaklara rıfk yoluyla ulaştıran.
+- Netice/hüküm: Allah hakkında 'İlm' ve 'Allâme' lafızları **kullanılmaz**; Latîf dört mânâlı; tenzîh + ilim + fiil.
+- Delil çeşidi: lafzî + nakl; (T) hitâbî; **Gazâlî nakli ⊬** (kaynak eser belirtilmedi).
+- Mevzuya bağı: **Fasıl I/IV isim kataloğu**: **'Allah hakkında hangi lafız caiz' ilkesi** — Râzî tekellüf/noksan vehmi veren lafzı reddediyor; ders katmanında 'Allâme neden kullanılmaz' örneği; kaynak c3 p273.
+- Doğan sual: Gazâlî'nin 'el-Maksadü'l-esnâ' tarifi ile karşılaştırma (⊬ borç).
+
+## c3 p274
+- OCR: orta
+- Okuma: tam
+- İçerik: Gazâlî tarifinin devamı: **bu ilim + bu fiil birleşirse 'Latîf' tamamdır; kemâli yalnız Allah'ta**. **İlim**: gizli-aşikâr Allah'a göre eşit; **rıfk fiilleri sayılamaz**: 'gökler, yıldızlar, dört unsur, üç mevâlid' hikmetlerini sayamayız; **bir lokma örneği**: insanın alacağı bir lokmanın ıslâhında **sayısız kimse** yardımlaşmıştır (yeri ıslah eden, ekici, sulayan, biçen, temizleyen, öğüten, pişiren…) — şerhi ciltlere sığmaz. Allah **tedbîrde hakîm, îcâdda cevâd, sûret vermede musavvir, her şeyi yerine koymada adl, rıfkın inceliklerini idrâk edilmemesinde latîf**; bu isimlerin hakîkatini bilmek fiillerin hakîkatini bilmeye bağlı. **3. el-Habîr**: (1) **şeyin kunhünü bilen** (mahlûkta 'hubre' imtihanla bilgidir, Allah bundan münezzeh); (2) muhbir (semî'–mesmî' gibi). **4. eş-Şehîd** (41:53 'her şeye şâhid olması yetmez mi'; 3:18 'şehidallâhü').
+- Netice/hüküm: Latîf = ilim + rıfk; Habîr = kunh bilgisi (imtihansız); Şehîd başlıyor.
+- Delil çeşidi: **misal (lokma)** + lafzî; (T) ikna'î. **Lokma örneği, hikmet/adl/cevâd/musavvir isim ilişkilerini bir zincirde kurar**; derece: tasvir.
+- Mevzuya bağı: **Fasıl I §8 (hikmet-tedbîr)**: 'lokma' örneği **Fasıl IV/ders katmanı** için uygun (delil değil, tasvir); fiil isimleri zinciri (hakîm/cevâd/musavvir/adl/latîf) Risale'de 'fiil isimleri' kutusu. 'Dört unsur, üç mevâlid' **kadîm tabiat öğretisidir, ana metne alınmaz**.
+- Doğan sual: —
+
+## c3 p275
+- OCR: orta
+- Okuma: tam
+- İçerik: **Şehîd** (şâhid'den mübâlağa): dört vecih: (1) **âlim** (6:73 'gayb ve şehâdeti bilen'): ilim mutlaksa **Alîm**, **gayb ve bâtına** izâfe olunca **Habîr**, **zâhire** izâfe olunca **Şehîd**; (2) **hâzır, müşâhid** (2:185 'kim şehri idrak ederse orucunu tutsun'): hudûr ilimle ise 1. vecih, **görüşle ise 2. vecih**; (3) **münâzaa edilen işi ispat eden**: **Allah eşyanın hakîkatlerini beyan edip izhâr etti; tevhîdini, adlini ve celâl sıfatlarını delil koyarak açıkladı** (3:18 'Allah şehâdet etti ki O'ndan başka ilâh yoktur'); (4) **meşhûdün leh**: kullar Ona vahdâniyete şehâdet eder. **5. el-Hafîz** (2:255 'onları korumak O'nu yormaz'; 12:64; 15:9 'Kur'ân'ı biz indirdik, koruyucusu biziz'): iki mânâ: (1) **unutma ve sehvin zıddı** (ilme döner: mücmel ve mufassal ilim, sehv ve nisyanla değişmeyen); (2) **zâyi etmenin zıddı**: göklerin ve yerlerin hâfızı.
+- Netice/hüküm: Alîm/Habîr/Şehîd aynı ilmin mutlak/bâtın/zâhir izâfeleri; Hafîz ilim + koruma.
+- Delil çeşidi: lafzî; (T) hitâbî.
+- Mevzuya bağı: **Fasıl I ilim isimleri**: 'Alîm/Habîr/Şehîd' üçlüsü için kaynak c3 p275 ('Râzî'ye göre'). 15:9 Kur'ân'ın korunması **Fasıl IV (Sünnet ve Tahkik) için âyet-i delil (⊬ numara doğrulanacak)**.
+- Doğan sual: —
+
+## c3 p276
+- OCR: orta
+- Okuma: tam
+- İçerik: Hafîz'in 2. mânâsı: **ilâhî kitapları tahrîften koruyucu** (15:9). [Dipnot (editör): 'Yahudiler Tevrat'ı, Hristiyanlar İncil'i tahrif etti' — **editörün, Râzî'nin değil**.] **6. er-Rakîb** (5:117 Îsâ (a.s.): 'sen vefat ettirdiğinde sen onların üzerinde Rakîb idin'; 50:18): hiçbir şeyin gizli kalmadığı hâfız. **Hattâbî (nakil)**: âdemîlerde 'hıfzı üzerine vekil, kollayan, gafletten sakınan'. **Murâkabe**: kulun Hakk'ın kendisine muttali olduğunu bilmesi; bu ilmin devamı; **her hayrın anahtarı**: kul Allah'ın hâllerini gözettiğine, sinelerine muttali, sözlerini işittiğine, **en küçük ve en büyük şeyin** ilminden kaçmadığına yakîn edince her hâlde ceza sertliğinden korkar. **7. el-Müheymin** (59:23 'es-Selâm, el-Mü'min, el-Müheymin'): **üç sıfatın birleşimi**: (a) şeyin hâllerini bilmek, (b) maslahatını tahsile tam kudret, (c) maslahatı tahsilde devâm. **Râzî: 'Bu noktaya geldiğimizde bu türden konuşmayı kesmeyi gerektiren bir şey arız oldu'.** İki bahisle bâb kapatılıyor.
+- Netice/hüküm: Rakîb = gizli kalmayan hâfız; murâkabe = amelî sonuç; Müheymin = ilim+kudret+devâm.
+- Delil çeşidi: lafzî + nakl; (T) hitâbî; murâkabenin 'her hayrın anahtarı' hükmü **ahlâkî tespit, delil değil**.
+- Mevzuya bağı: **Fasıl IV (ahlâk/tazkiye)**: murâkabe pasajı ders katmanı için değerli (kaynak c3 p276); Hattâbî nakli ⊬. Editör dipnotu (tahrîf) Râzî'ye sayılmadı ve Risale'ye alınmaz.
+- Doğan sual: 'Kesmeyi gerektiren şey' nedir? Metinde belirtilmiyor (⊬; okunmayan/eksik cümle olabilir).
+
+## c3 p277
+- OCR: orta
+- Okuma: tam
+- İçerik: **Bâbın iki bahsi**: (1) Allah'ın kudretinin cins/nev'/sınıf/şahıs yaratmadaki te'sîri zât, sıfat, hikmet eserleri bakımından **gayr-i mütenâhî** olduğundan her nev'e ayrı isim konmuştur; **mahlûkâtın kısımlarını daha iyi bilen, hikmet eserlerine daha çok vâkıf olan, Allah'ın isimlerini daha çok bilir**: 'bu bâbın sırrı ve direği'. (2) **Rukye ve azîmetlerdeki meçhul lafızlar**: isimlerinden mi, meleklerin mi, şeytanların mı? En şereflisi ve tesirlisi Allah'ın isimleri; **muhtemelen meçhul lafızlar bu sıfatlara delâlet eder**; tesirin sebebi olabilir ki **okuyan bilmezse kalbine bir korku-dehşet gelir, nefs-i nâtıkanın 'mufârakât ve mukaddesât âlemiyle' ittisali hâsıl olur, tesir kuvvetlenir** ('vallâhü a'lem').
+- Netice/hüküm: İsim sayısının sonsuzluğu mahlûkâtın sonsuzluğuna bağlı (Râzî'nin tezi); meçhul rukye lafızlarının tesiri için **ihtimal-i felsefî izah**.
+- Delil çeşidi: (1) **taksîm + iddia (isim–mahlûk eşlemesi)**: delil verilmedi; (2) **spekülasyon ('belki', vallâhü a'lem)**; (T) ikna'î (⊬).
+- Mevzuya bağı: **KRİTİK — Sünnî akide**: (1) 'her nev'e ayrı isim' iddiası **esmâ tevkîfî ilkesiyle çelişir** (isimler nassla, mahlûk sayısıyla değil); (2) **anlamı bilinmeyen lafızlarla rukye** ve **'nefs-i nâtıka–mufârakât ittisali'** izahı felsefî spekülasyondur, **Risale'ye alınmaz**. Rukyenin şer'î ölçüsü (şirk taşımayan, anlamı bilinen) Sünnet kaynaklarından **ayrıca** çalışılacak (⊬; bu satır bir işarettir, kaynak bakılmadı).
+- Doğan sual: Bu iki bahis Râzî'nin başka eserlerinde (Sırrü'l-mektûm?) nasıl işleniyor (⊬).
+
+## c3 p278
+- OCR: boş sayfa
+- Okuma: **okunmadı (sayfa boş)**
+- İçerik: Yok.
+- Netice/hüküm: Yok.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c3 p279
+- OCR: orta (başlık kötü)
+- Okuma: tam
+- İçerik: **Bâb 'Allah'ın hakîm olması' (dipnot: 'Fasıl 18')**. **Hikmet iki şekilde tefsîr edilir**: (1) **nazarî hikmet** = eşyanın hakîkatlerini bilmek; Allah'ın ilmi ilimlerin en kâmil ve efdali ⇒ hikmeti hikmetin en efdali; (2) **amelî hikmet** = menfaat sağlayan ve zarar defeden fiil. **Fiilin maksadı nefse menfaat/zarar defi ise 'dâ'î-i şehvet'; gayre menfaat/zarar defi ise 'dâ'î-i hikmet'**. Allah şehvet, nefret, elem ve lezzetten münezzeh olduğu (delillerle) sabit ⇒ **dâ'î-i şehvet Onun hakkında muhâl**. Kalan: **dâ'î-i hikmetin sübûtu**: filozofların ve Mu'tezile'nin ayrı yolları; Râzî ikisini de zikredeceğini söylüyor.
+- Netice/hüküm: Nazarî hikmet = Allah'ın ilmi; amelî hikmet = gayrın menfaati için fiil; Allah'ta yalnız dâ'î-i hikmet mümkün (dâ'î-i şehvet muhâl).
+- Delil çeşidi: taksîm + çıkarım; (T) analitik. **Öncül: 'gayrın menfaatini kasteden fiil dâ'î-i hikmet' — Allah'ın fiilinde bir 'maksad/dâ'î' bulunduğunu öncülde varsayıyor [dava ≠ delil: bu, Râzî'nin kendi c3 dâî-sârife çerçevesindeki 'tam dâî ⇒ vâcib' (Bâb 1) ile ve Sünnî 'Allah fiillerinde illetlendirilemez' çizgisiyle gerilim taşır]**.
+- Mevzuya bağı: **Fasıl I §8 (irâde-tahsis) ve §5 (Vâcib=Fâil)**: **KRİTİK**: 'dâ'î-i hikmet' Fasıl I'in 'niçin şimdi' silahını **gaye-illetle** ilişkilendirir; Râzî'nin buradaki iki yolu (filozof, Mu'tezile) **kendi kabulü değil**; hikmet bâbının nihaî hükmü p280 sonrasına bağlı. **Sünnî ana çizgi (Allah fiillerinde ta'lîl/vücûb-ı aslah)** ayrı ihtilaf konusudur; **Risale ana metnine alınmadan önce Râzî'nin kendi tercihi bulunmalı**.
+- Doğan sual: Râzî iki yolu sonunda kabul mü ediyor, reddediyor mu (p281+)?
+
+## c3 p280
+- OCR: orta
+- Okuma: tam
+- İçerik: **Filozofların yolu**: mevcût ya **mahz hayır**, ya **hayır galip**, ya **hayır-şer eşit**, ya **hayır mağlûb**, ya **mahz şer**. **Mahz hayrı** hikmet gerektirir; **hayrı galip olan** da hikmet gerektirir ('az şer için çok hayrı terk etmek çok şerdir'); **'niçin şersiz yaratılmadı?'** itirazına cevap: 'söz, şerden ayrılması **aklen muhâl** olan hayır hakkındadır'; iki yol: (a) çok hayrı az şer korkusuyla terk etmek, (b) az şere razı olup çok hayrı tahsil etmek; **akıl sarîhen 'az şere katlanmak çok şerre katlanmaktan evlâ' der** ⇒ hayrı şerrine râcih olan **hikmette tahsîli vâcib**. **Eşit** olanı hikmet gerektirmez; **4. ve 5. kısım hikmete zıddır**. Mahlûkât hayrı galip: 'aç çok olsa da tok daha çok; hasta çok olsa da sağlam daha çok; ayıplı…' (cümle p281'e taşıyor).
+- Netice/hüküm: Filozof yolu: **hayrı râcih olan ma'lûl hikmetle vâcib-tahsîl**; **fesâd içeren hayrın aklen ayrılamaz olması** ile 'şer problemi' cevabı.
+- Delil çeşidi: **taksîm + mukayese (hayr-şer)**; (T) burhânî biçim, öncüle bağlı: **'hikmet en râcihi gerektirir' öncülü ve 'şerden ayrılması aklen muhâl' öncülü ayrıca ispat ister [dava ≠ delil]**; örnek karşılaştırmalar (aç/tok) **ampirik-ikna'î**.
+- Mevzuya bağı: **Fasıl I 'şer problemi'** (c2 p146–147: seneviyye çözümünün çıkmazı; teodise cevabı c2'de yoktu): **bu, c3'te ilk teodise cevabıdır (filozof yolu)**; Risale'de 'şer problemi' bölümü için kaynak c3 p280–281 (derece: filozof yolu, Râzî'nin kendi kabulü p281+ sonrası belli olur). **'Hayr galip olan yaratılır' öncülü 'vücûb-ı aslah' izlenimi verir; Sünnî çizgide Allah'a vâcib şey yoktur** — bu farkın tahrîri gerekir.
+- Doğan sual: Râzî kendi cevabında 'vücûb' dilini nasıl yumuşatıyor (p281+)?
