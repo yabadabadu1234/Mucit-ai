@@ -793,3 +793,147 @@ Biçim: cilt 1–2 ile aynı.
 - Delil çeşidi: **analitik-burhânî (kelâm)**; (T) burhânî biçim (**öncül: cisimler mütemâsil (kelâmî cevher-i ferd/cisim öğretisi)**; filozoflar reddeder).
 - Mevzuya bağı: **KRİTİK — Fasıl I §5.3 Tahsis burhanı**: **Fasıl I'in Tahsis burhanı bu klasik kelâm burhanının hâli**; **öncülü 'cisimler mütemâsil'** (c2 p27–28 ile aynı): **derece: öncül bağımlı (kelâm zemini)**: Fasıl I §5.3 bu bağımlılığı yazmalı; ayrıca **Râzî bu burhanı kendi mezhebi olan 'tahsis' için sunuyor**.
 - Doğan sual: —
+
+## c3 p89
+- OCR: orta
+- Okuma: tam
+- İçerik: (Kelâm Hücca 2 sonu.) Müreccih zât dışı, cisim ya cismânî ise taksîm tekrar; **cisim ve cismânî değilse** ya mûcib ya muhtâr; **mûcib olamaz**: cisim-cismânî olmayan bir şey **hiçbir cisme yakınlık/uzaklıkla ihtisâslı değil**, nisbeti hepsine eşit, cisimler bu sıfatları kabulde eşit ⇒ belirli sıfatın belirli cisimde hâsıl olması diğerlerinden evlâ olmaz ⇒ **fâil muhtârdır, mûcib illet değil**. **Not**: 'bu hüccenin ve öncekinin **mihveri evvelsiz hâdislerin bâtıllığı**'. **Hücca 3**: 'Âlemin müessiri mûcib bi'z-zât olsa ma'lûlü **bir** ya **çok**; ikisi de bâtıl. **Bir ise**: bir'in ma'lûlü bir olmak zorunda ⇒ o ma'lûlün ma'lûlü de bir … ⇒ **âlemde su damlaları, zerreler dâhil her şey birbirinin illeti-malûlü olmak zorunda** (zarûrî bâtıl); **çok olamaz**: 'vâhid'den yalnız vâhid sudûr eder' **filozoflar arasında ittifak**.
+- Netice/hüküm: **Kelâmî 3. burhan: mûcib ⇒ vâhidden yalnız vâhid ⇒ çokluk çıkmaz** (filozofun kendi ilkesine karşı ilzâm).
+- Delil çeşidi: **ilzâm (öncül hasmın: 'vâhidden vâhid')**; (T) cedelî-analitik.
+- Mevzuya bağı: **Fasıl I §8.0**: bu burhan **filozofun 'akl-ı evvel/sudûr' modelini** hedefliyor; ders katmanında **'mûcib bi'z-zât çokluğu açıklayamaz' cedelî burhanı**, derece: hasmın öncülüne bağlı.
+- Doğan sual: —
+
+## c3 p90
+- OCR: orta
+- Okuma: tam
+- İçerik: (Hücca 3 devam.) 'Ma'lûlü birden çok olamaz: ilke, filozoflarca kabul; ayrıca 'bu ma'lûlden sudûr' ve 'şu ma'lûlden sudûr' iki mefhûm; **ya illetin mukavvimi (⇒ terkîb, oysa basit farz edildi) ya hâriç (⇒ imkân + illet gerektirir, teselsül)**; biri dâhil biri hâriç ise mâhiyet mürekkeb; **basit-hak bir şey iki ma'lûle illet olamaz**.' **Filozofların itirazı (Soru 1)**: 'ma'lûl bir ise ma'lûlün ma'lûlü de bir olmak zorunda değil: bu ma'lûlün **imkânı, vücûdu, başkasıyla vücûbu** üç şey; **imkân → felek-i akşâ'nın maddesi; vücûd → sûreti; vücûb-ı bi'l-gayr → o feleği tedbir eden akıl**' (**sudûr silsilesi: 'akıl-nefs-felek'**).
+- Netice/hüküm: **Filozofun cevabı: üç i'tibâr → üç ma'lûl (sudûr modeli)**.
+- Delil çeşidi: **cedelî-analitik**; (T) cedelî (**sudûr modeli felsefî varsayım; Sünnî çizgide kabul edilmez: Allah doğrudan yaratır**).
+- Mevzuya bağı: **DİKKAT**: **sudûr/akıl-nefs-felek modeli** Risale'nin ana metnine **girmez**; **yalnız Râzî'nin hasım anlatımı** olarak kayıtta.
+- Doğan sual: —
+
+## c3 p91
+- OCR: orta
+- Okuma: tam
+- İçerik: Filozof Soru 1 sonu. **Soru 2**: 'Ma'lûl bir olup yine **tüm mümkinâtın vücûduna illet** olabilir: fâilin te'sîri **mâhiyette değil vücûddadır** (siyahlık fâille olsa, fâil kalkınca siyah siyah olmaktan çıkardı: muhâl); **vücûd, vücûd olmak bakımından tek**; ilk illetten sudûr eden **yalnız vücûd**; mâhiyetler **vücûda kabiliyetli**; vücûd her mümkine **isti'dâdı ve hakkı** ölçüsünde ulaşır ⇒ ilk illetten sudûr eden bir, **çokluk kâbillerin çokluğundan**. **Misal**: güneş aydınlatmanın illeti; ışık tek eser; ışık âleme vurunca bir kısmı denize, bir kısmı ağaca; çokluk **te'sirde değil kâbillerde**.' **Soru 3**: 'Vâhidden birden fazla sudûr neden câiz olmasın? Delil (**vâhidden vâhid**) **illetler ve ma'lûller** bâbında itiraz edildi; delil **müessire** dayanıyor: 'bu eserin sudûru mefhûmu, öteki eserin sudûru mefhûmundan ayrı' ⇒ **kâdir muhtâr için de tek eser gerekirdi (bâtıl, ittifak)** ⇒ **mugalata**.'
+- Netice/hüküm: **Filozof cevapları: (2) vücûd tek, çokluk kâbilde; (3) 'vâhidden vâhid' delili kâdiri de bağlardı ⇒ mugalata**.
+- Delil çeşidi: **cedelî-analitik**; (T) cedelî.
+- Mevzuya bağı: bkz p90.
+- Doğan sual: —
+
+## c3 p92
+- OCR: orta
+- Okuma: tam
+- İçerik: Filozofun Soru 3 sonu. **Kelâmcıların cevabı — Soru 1'e (imkân illet olamaz)**: **Vecih 1**: 'İmkân **mevcut değil**; mevcut olsa vâcib ya mümkin olurdu; vâcib olamaz (vâcib bir); imkân mümkinin sıfatı, sıfat mevsûfa muhtaç, mümkine muhtaç daha çok mümkin; mümkin ise imkânı zâid ⇒ teselsül ⇒ **imkân mevcut değil**; **ma'dûm mevcudun illeti olamaz**.' **Vecih 2**: 'İmkân ma'dûm ise illet olamaz; mevcut ise mümkinâttan; bir illeti var; o **ilk illet** ⇒ ilk illet **iki ma'lûlün (imkân ve vücûd)** illeti ⇒ farz edilenle çelişir.' **Vecih 3**: 'İmkân tek mefhûm; nev'; şeyin hükmü misli gibi: imkân felek-i akşâ'nın maddesinin illeti olsa **her mümkinin imkânı bu ma'lûlün illeti olmalı** (muhâl).'
+- Netice/hüküm: **Kelâmî 3 vecih: imkân illet olamaz (mevcut değil/teselsül/misil ilkesi)**.
+- Delil çeşidi: **analitik**; (T) analitik-cedelî.
+- Mevzuya bağı: **Fasıl I §3 'imkân'**: **Kelâmcı 'imkân mevcut değildir (i'tibârî)'**: **Fasıl I'de imkân öncülü 'mevcut/ma'dûm' tartışmasından uzak yazılmalı**.
+- Doğan sual: —
+
+## c3 p93
+- OCR: orta
+- Okuma: tam
+- İçerik: Vecih 3 sonu. **Vecih 4**: 'Birinci ma'lûlün imkânı maddenin vücûduna illet olsa, **maddenin imkânı kendi vücûduna illet olurdu**; imkân mâhiyetin lâzımı ⇒ mâhiyet kendi vücûdunu müstelzim ⇒ **vâcib li-zâtihi**: mümkin vâcib olur.' **Vecih 5**: 'Filozoflara göre **tek şey hem kâbil hem fâil olmaz**; imkân kabulden ibaret; öyleyse akl-ı evvelin imkânı felek maddesinin illeti olamaz.' **Vecih 6**: 'Felek cismi **vehmî bölünmeye kâbil ⇒ eczâdan mürekkeb**; akl-ı evvelin imkânı **tek**; felek maddesi eczânın mecmûu ise **tek şey çok şeyin illeti** olur ⇒ vâhidden çok sudûru.'
+- Netice/hüküm: **Kelâmî 3–6. vecih: imkân-illet modeli iç çelişkiler taşır**.
+- Delil çeşidi: **analitik + ilzâm**; (T) cedelî.
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c3 p94
+- OCR: orta
+- Okuma: tam
+- İçerik: **Vecih 7–11**: (7) akl-ı evvelin vücûdu felek-i akşâ'nın sûretinin illeti olamaz: vücûdlar nev' altında şahıslar ⇒ her şeyin vücûdu bu sûretin illeti olmalı; (8) 'kendi fiilinde gayre muhtaç olmayan zâtında da muhtaç değildir' ilkesine göre **bu vücûd sûretin illeti olmada mâhiyete ortak mı**: ortaksa **kâbil fâilin cüz'ü olur (muhâl)**, değilse vücûd o mâhiyetten ganî ⇒ **kendi başına kâim** (sıfat olamaz); (9) 'vücûb bi'l-gayr' akl-ı sânînin illeti: **üçüncü mefhûm mevcut değilse illet olamaz; mevcut ise mümkin ve illeti yalnız mebde-i evvel ⇒ ilk mebdeden üç mevcut sudûr eder (imkân, vücûd, vücûb bi'l-gayr)**; (10) vücûb bi'l-gayr mevcut olsa o da vâcib bi'l-gayr ⇒ **teselsül**; (11) felek yalnız madde+cismî sûret değil, nevî sûret, miktar, şekil, vaz' ...
+- Netice/hüküm: **Kelâmî 7–11: sudûr modeli çelişkileri (misil, ihtiyaç, teselsül)**.
+- Delil çeşidi: **ilzâm**; (T) cedelî.
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c3 p95
+- OCR: orta
+- Okuma: tam
+- İçerik: (Vecih 11 devam) felek on makûleden her birinden bir ve çok nev'e sahip; bunları üç cihet (imkân-vücûd-vücûb bi'l-gayr) arasında dağıtınca **vâhidden birden çok** sudûr lâzım; câiz görürlerse aynısı mebde-i evvel için niçin câiz olmasın? **Vecih 12**: 'Akl-ı evvel maddeden mücerred cevher; öyleyse zâtını ve tüm malûmâtını ta'akkul eder (illeti bilmek ma'lûlü bilmektir); ilim, malûma mâhiyette müsâvi sûret; ta'akkullar **çok** ⇒ ilk mebde'den sudûr ederse ma'lûlleri artar ⇒ **tüm takdirlerde işkâl filozoflara lâzım**'. **Soru 2 cevabı**: 'İlk illetten sudûr eden **yalnız vücûd** iddiasını kabul etmeyiz: 'illet mâhiyetin illeti olsa illet kalkınca mâhiyet dönüşürdü' — **bu size de lâzım**: vücûd için de **aynı** (illet yok olunca vücûd dönüşür); ayrıca bu mümkinin vücûdu ötekinin vücûdundan **farklı** (yoksa tek araz çok mahalde) ⇒ ilk illetten çok ma'lûl.'
+- Netice/hüküm: **Kelâmî cevap Soru 2'ye: vücûd-mâhiyet ayrımı filozofu kurtarmaz; vücûdlar da çoktur**.
+- Delil çeşidi: **ilzâm-ı cedelî**; (T) cedelî.
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c3 p96
+- OCR: orta
+- Okuma: tam
+- İçerik: Soru 2 sonu (**her mevcudun vücûdu ötekinden ayrı; tüm mevcudâtı ilk mebde'e isnâd etmek çok ma'lûl gerektirir: muhâl**). **Soru 3'e**: 'Bu kısmın bâtıl olduğunda bize **muvâfakat ettiniz**; delili yalnızca **sizin bu matlûbta itimad ettiğiniz delil** olduğu için zikrettik; bize nizâ edemezsiniz.' **Hücca 4 (kelâm, muhtâr için)**: 'Allah mûcib bi'z-zât olsa **bu hâdislerin ortadan kalkması ve yokluğu Allah'ın zâtının kalkmasını gerektirir**: hâdisler **sebebe muhtaç**; hâdisin kalkması sebebinin kalkmasıyla; o sebep de sebeplerinin kalkmasıyla … **ilk illete kadar**; eser müessirin lâzımı ise **lâzımın irtifâı melzûmun irtifâını gösterir** ⇒ hâdislerin irtifâı ilk illetin zâtının irtifâını gösterir: muhâl.'
+- Netice/hüküm: **Kelâmî 4. burhan (irtifâ): mûcib ise hâdislerin kalkması Allah'ın kalkması olurdu.**
+- Delil çeşidi: **analitik (lâzım-melzûm)**; (T) burhânî biçim (**öncül: eser müessirin lâzımıdır ⇒ mûcib bi'z-zât; muhtâr için eser lâzım değil**).
+- Mevzuya bağı: **Fasıl I §8.0**: **'eser illetin lâzımıdır' öncülü mûcib için doğru; muhtâr için değil**: bu burhan **'mûcib ⇒ hâdislerin fenâsı Allah'ın fenâsı' tenâkuzu**dur (kelâm burhanı sağlam biçimde kısa).
+- Doğan sual: —
+
+## c3 p97
+- OCR: orta
+- Okuma: tam
+- İçerik: Hücca 4 sonu: 'Hâdislerin tamamı **muhâl-i kalkış**; ⇒ ilk illetin te'sîri **vücûb değil, sıhhat ve ihtiyâr üzere**; âlemin ilâhı **fâil-i muhtârdır, mûcib bi'z-zât değil**.' **İtiraz**: 'Ma'lûlün ademi illetin ademini **gerektirmez, keşfeder**; illet önce yok olmuş olmalı (ma'lûlün ademi 'kâşif')'. **Cevap**: 'Ma'lûlün ademi illetin önce kalktığını gösteriyorsa **ilk illetin kalktığı** da bu ma'lûllerin ademinden anlaşılır ⇒ aynı muhâl; muhtâr **sıhhat/ihtiyâr üzere** ise bu eserler zâtın lâzımı değil ⇒ eserlerin kalkışı zâtın kalkışını gerektirmez. **Hücca 5**: 'Mûcib olsa **bâkî hâlde de müessire ihtiyaç** (bekâ), fâilin eserin **yokluğunda** eser bâkî ise **tekvîn-i kâin ve tahsîl-i hâsıl** lâzım' (bekâ meselesi, ayrı makâlede). **Hücca 6**: 'Mûcib olsa **kıdem-i âlem** lâzım; **çok kadîm** muhâl: kıdem = **'adem-i mesbûkiyyet'in selbi** (yoksa o hakîkat de mesbûk olurdu, teselsül); 'sübûtî sıfat'; …'
+- Netice/hüküm: **Kelâmî 5. ve 6. burhanlar başlıyor**.
+- Delil çeşidi: **analitik**; (T) burhânî biçim.
+- Mevzuya bağı: **Fasıl I §6.3 (Kıdem)**: **'kıdem selbî mi sübûtî'** tartışması burada (Râzî c1 Mesele 6 ile bağlı).
+- Doğan sual: —
+
+## c3 p98
+- OCR: orta
+- Okuma: tam
+- İçerik: Hücca 6 devam: 'Kıdem ademin selbi olduğundan **selbin selbi ⇒ sübûtî sıfat**. Kadîmler farz edilirse **kıdemde müşterek**; mukavvimâtta muhalif mi? Muhalif değilse **tam mâhiyette mütemâsil ⇒ aynı lâzımlar ⇒ birbirinin illeti-ma'lûlü (muhâl)**; muhalifse **iki kayıttan mürekkeb**, kayıtlar da kıdemde müşterek, başka i'tibârla muhtelif ⇒ **her kayıt iki kayıttan ⇒ sonsuz cüz** (muhâl: 'vâhid' kavramı çöker) ⇒ kadîmlerin çokluğu muhâl; **Allah kadîm ise âlem kadîm olamaz**.' **Sonuç**: 'Bu altı delil, âlemin müessirinin **mûcib bi'z-zât değil fâil bi'l-ihtiyâr** olduğunu gösterir.'
+- Netice/hüküm: **Kelâmî 6 delil: muhtâr sonucu**.
+- Delil çeşidi: **analitik-burhânî (kelâm)**; (T) burhânî biçim (**tekrarlayan öncüller: evvelsiz hâdisler bâtıl, cisim temâsülü, çok kadîm muhâl**).
+- Mevzuya bağı: **Fasıl I §6.2/§6.3/§8.0**: 'çok kadîm muhâl' **terkîb argümanı (Vahdâniyet ile aynı)**.
+- Doğan sual: —
+
+## c3 p99
+- OCR: orta
+- Okuma: tam
+- İçerik: **Filozofların cevapları (Râzî nakli)**: **Hücca 1'e**: 'zayıf: âlem hâdis ve evvelsiz hâdisler bâtıl kabul etsek de **ilk illet zâtıyla bir şeyi îcâb eden mûcib, o şey de fâil-i muhtâr olup âlemi ihtiyârıyla yaratabilir** ⇒ ilk illet mûcib, âlemin fâili muhtâr ⇒ **bu delil vâcibin muhtâr olduğunu göstermez**; ayrıca 'mûcib de bazı vakitte etki edebilir' — **bu kudretle de aynı**: sizce **âlem kâdirden bazı vakitte bazı vakitte değil, muhassıssız** çıktı; o ma'kûlse illette niye ma'kûl olmasın?' **Hücca 3 (kesret)'a başka**: 'Âlemin sıhhati ya evvelli ya evvelsiz; evvelliyse öncesinde zâtî sıhhat yoktu ⇒ mümteni iken mümkin: muhâl; ⇒ evvelsiz ⇒ **âlem ezelde sahih-vücûd** ⇒ **kıdem muhâl demek imkânsız** ⇒ hüccet sâkıt.' **Hücca 2 (cisim temâsülü)'ne**: 'mûcibe yüklediğiniz aynen **kâdire de lâzım**: kâdir de iki mislin birini müreccihsiz seçemez.'
+- Netice/hüküm: **Filozof cevapları: kelâm burhanlarının ilzâmları muhtâra da dönüyor**.
+- Delil çeşidi: **paralel nakz**; (T) cedelî.
+- Mevzuya bağı: **KRİTİK — Fasıl I §8.0/8.3**: **aynı 'müşterek işkâl' argümanı**: 'muhtâr için de müreccih lâzım' — **Râzî bu argümanı p100'de kendi ağzından onaylıyor**.
+- Doğan sual: —
+
+## c3 p100
+- OCR: orta
+- Okuma: tam
+- İçerik: (Filozof cevabı Hücca 2 sonu: 'ikisi de zamanlara/hayizlere eşit nisbetle; mûcib için imkânsız ise kâdir için de imkânsız; **işkâl müşterektir**'.) **Hücca 3'e**: '**En yakını: bir şeyin çok şeye illet olması mümkün**; filozofların bu ilkeyi kurmak için zikrettiği deliller **çok zayıf**; **bu, tahkik edilmiş ve itimad edilen vechidir**.' **Filozoflar bu ilkeyi kabul edince vücûd tertibi için bir yol zikrettiler; onun butlânı geçti.** **Hücca 4'e**: '**Kâdir, râcih dâî olmadan iki misilden birini seçemez** (gösterildi); **kudret ve dâî mecmûu tam mûcib**; öyleyse **mûcib diyenlere yönelttiğiniz her itiraz, muhtâr diyenlere de lâzım**.' **Hücca 5**: 'bekâda müessire ihtiyaç: ayrı makâlede (hudûs ve adem bâblarında)'. **Hücca 6**: 'Ehl-i millet Allah'ın **ezelde âlim-kâdir** olduğunda ittifak; âlim-kâdir olması **zâtının aynı değil** (ileride); öyleyse **kadîmlerin çokluğu onlara da lâzım**.' **Bâb 2 biter.**
+- Netice/hüküm: **Râzî: kelâmî muhtâr burhanlarının çoğu muhtâr sistemine de dönüyor; vâhidden çok sudûr mümkün; 'kudret+dâî mecmûu mûcib'.** (**Râzî bu bâbda filozof ve kelâmcının burhanlarını birbirine karşı zayıflatıyor; kendi çözümünü net söylemiyor**.)
+- Delil çeşidi: **cedelî (denge)**; (T) cedelî: **(T) 'kâdir-mûcib' burhanları arasında kesin hüküm yok; kelâm burhanlarına Râzî güvenmiyor**.
+- Mevzuya bağı: **KRİTİK — Fasıl I §8.0 (Fâil-i muhtâr mı mûcib mi)**: **Fasıl I'in muhtâr sonucu için Râzî'nin gözünde yüksek riskli iki bağımlılık**: (1) kelâm burhanlarının 'müşterek işkâl'e açık olması; (2) 'evvelsiz hâdisler bâtıl' öncülü. **Fasıl I §8.0'ın (T) derecesi 'kelâmî burhan, öncül bağımlı, Râzî'ye göre müşterek işkâle açık'** olarak yazılmalı; **kesin kapanış için Râzî'nin 'hudûs' bâbı (cilt 4) beklenmeli**. **Sünnî akide yönünden**: 'Allah fâil-i muhtârdır' **nass ve icmâ' ile sabit** (Allah 'diler ve yapar', vb.); **aklî burhanın zayıflığı bu akideyi sarsmaz**: Risale ana metni **nass tabanlı hükmü aklî burhanın derecesiyle karıştırmamalı** (F: İslâm'a aykırı söz olmasın).
+- Doğan sual: Râzî **muhtâr hükmünü** hangi delille kesinleştiriyor? (cilt 4 hudûs; cilt 5 tabîiyyât).
+
+## c3 p101
+- OCR: orta (başlık)
+- Okuma: tam
+- İçerik: **Üçüncü Bâb: 'Allah'ın âlim oluşu (kevnühû teâlâ âliman)'** (başlık sayfası).
+- Netice/hüküm: **Bâb 3 (ilim) başlar**.
+- Delil çeşidi: —
+- Mevzuya bağı: **Fasıl I ilim sıfatı** (varsa).
+- Doğan sual: —
+
+## c3 p102
+- OCR: boş
+- Okuma: tam (içerik yok)
+- İçerik: Yok.
+- Netice/hüküm: Yok.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c3 p103
+- OCR: orta (başlık kötü)
+- Okuma: tam
+- İçerik: **Bâb 3, Fasıl 1: 'İlmin hakîkati (nedir?)'**. 'Bu bâbı **mantık ilminin başında** istikssâ ile işledik; bazı vecihleri tekrar edeceğiz.' 'Zarûrî biliriz ki **bir şey biliriz**; ilim ya tasavvur ya tasdîk (bunda ihtilâf yok); **ilmin hakîkatinde ihtilaf**. **Tasnif**: ilim ya (1) **olumlu mefhûm**: (a) **salt özel nisbet-izâfe**, (b) **hakîkî sıfat**, (c) **hakîkî sıfat + özel nisbet**; ya (2) **selbî mefhûm** (hakîkî sıfat, selbler bâbından) — **dört kısım, fazlası yok**.'
+- Netice/hüküm: **İlmin 4 tefsiri**: nisbet / hakîkî sıfat (sûret) / hakîkî sıfat + nisbet / selb.
+- Delil çeşidi: **taksîm**; (T) analitik.
+- Mevzuya bağı: **Fasıl I ilim sıfatı**: Risale'de 'Allah âlimdir' bahsi için **tanım şeması**.
+- Doğan sual: —
+
+## c3 p104
+- OCR: orta
+- Okuma: tam
+- İçerik: **(1) Salt özel nisbet/izâfe**: 'büyük bir hekîm ve mütekellim topluluğu' — **Râzî: bu bizim seçtiğimiz ve hak olan görüş**: bir şeyi bilince akılımızla malûm arasında **özel nisbet ve izâfe** buluruz; karşısında malûm olmadıkça 'ilim' denen şey hâsıl olmaz; nisbetin hâsıl oluşu **bedîhî**. **(2) Hakîkî sıfat (malûmun sûreti âlimde)**: **cumhûr-ı filozofların** görüşü; c1'de (mantık başı) **butlânında çok delil**. **(3) Hakîkî sıfat + izâfe**: **çoğu mütekellimin** görüşü (ilim, âlimin zâtına kâim özel sıfat; malûma **taalluku** var; **sûret değil, mâhiyet**). **(4) Hakîkî selbî sıfat**: iki fırka; **ilk fırka eski mütekellimlerden**: 'ilim = cehlin yokluğu'; **bu görüş karışık, mülahhas değil**: cehil 'ilmin yokluğu' ise ilim = ilmin yokluğunun yokluğu ⇒ sâbit şey…
+- Netice/hüküm: **Râzî'nin ilim tanımı: özel nisbet ve izâfe (mâhiyeti nisbet)**; filozof (sûret) ve mütekellim (sıfat+taalluk) görüşlerini reddediyor.
+- Delil çeşidi: **kavramsal seçim + istikrâ (iç gözlem)**; (T) analitik-cedelî.
+- Mevzuya bağı: **Fasıl I ilim sıfatı ve c2 p105–109 (izâfî sıfat hudûsu)**: **Râzî 'ilim = nisbet' dediği için 'ilm-i ilâhî nisbet ⇒ malûm değişirse nisbet de değişir' (izâfî sıfat hudûsu, c2 p106) meselesini kolay kabul eder**; **Sünnî akide 'ilm-i ilâhî ezelî, değişmez, sıfat-ı zâtiyye'**: **Râzî'nin 'ilim salt nisbet' formülü (bu sayfa) Sünnî ana çizgiyle (ilim gerçek sıfat) gerilimli olabilir** ⇒ **ders ana metnine alınmaz; 'Râzî'nin tercihi' notu; Râzî'nin ilm-i ilâhî için kendi hükmü sonraki sayfalarda (ilim Bâb'ında) tekrar kontrol edilecek**.
+- Doğan sual: **Râzî ilm-i ilâhîyi de 'nisbet' mi sayıyor?** (cilt 3 Bâb 3 devam; c2 p106'daki ayrım.)
