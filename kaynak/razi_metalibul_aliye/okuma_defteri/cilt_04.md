@@ -1225,3 +1225,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: —
 - Mevzuya bağı: —
 - Doğan sual: —
+
+## c4 p137
+- OCR: orta
+- Okuma: tam
+- İçerik: **5. Makâle (kıdem tarafı): 'Hüsn-kubuh, hikmet ve abesten çıkarılan deliller' — 'birkaç vecihle'.** **1. hüccet**: '**âlemin îcâdı ihsandır; ihsan ihsanı terkten efdaldir**; Bârî âlemi **sonsuz bir müddet** îcâd etmese **sonsuz müddet efdali terk eden** ve **sonsuz müddet başkasını tercih eden** olur; bu **muhâl** ⇒ **ezelden ebede fâil.**' **2. hüccet**: '**nâfiz tasarruf, büyük mülk, yükseltme-alçaltma, yapma-bozma sahibi**, bunlardan hiçbirine sahip olmayandan **efdaldir**; Allah'ın ezelde mülk, melekût ve tasarrufu olmayıp sonra olduğunu söylersek **nâkıstan kemâle intikal** (muhâl).' **İtiraz (hudûs tarafı)**: '**1. hücceti 'ihsanı terk' ancak ihsan kendinde mümkin olsaydı**; ihsan kendinde **mümteni'** ise ezelde **nâkıslık ve ihsanı terk lâzım gelmez** (p138).'
+- Netice/hüküm: **Kıdem tarafının hikmet delili: ihsan efdal ⇒ ezelî yaratma; mülk-melekût ⇒ kemâl ezelî.**
+- Delil çeşidi: **reductio (efdal ⇒ ezelî)**; (T) burhânî biçim (kıdem tarafı). **[Delil ≠ dava: 'ihsan efdal ve Allah efdali terk etmez' öncülü, **c3 p289–304 (Râzî'nin 'Allah'a hiçbir şey vâcib değil') ile tam çelişir**; Râzî bu öncülü c3'te reddetti.]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §8**: kıdem tarafı **'vâcib-i aslah' (Mu'tezile tipi) öncülünü hudûs aleyhine kullanıyor**; **Risale bu öncülü Allah'a nisbet etmez (c3 p334–335: 'Allah'a hiçbir şey vâcib değil')**; bu delilin öncülü **Râzî'nin kendi tespitiyle çürütülmüş** olup **F 27-B: ayırt gücü öncülün reddiyle sıfırlanır**.
+- Doğan sual: —
+
+## c4 p138
+- OCR: orta
+- Okuma: tam
+- İçerik: (İtiraz devam): '**ihsan = ademden vücûda çıkarma; ancak ademle mesbûk olan için**; ezelin mesbûkiyeti nefyetmesi ⇒ **cem' muhâl**; bu cevap 2. hücceti de karşılar.' 'Nâkıslık ancak Allah **mülk ve melekûtu tahsile kâdir olmasaydı** lâzım; **ezelde kâdirdi**.' **Ayrıca her iki hüccet günlük hâdisler ve muayyen şahısların hudûsuyla nakzedilir.** **Kıdem tarafının cevapları**: **1. soruya**: '**bu cevap ancak 'ezel îcâd ve tekvîne mâni'' derseniz tamdır; bunun bâtıl olduğunu kat'î delillerle beyân ettik; ayrıca bu mâni' Allah âlemi yaratmadan yüz yıl önce zâil idi, ilzâm aynen geri döner.**' **2. soruya (mülk-melekût)**: 'ezel, kendilerince fiilin sıhhatine mâni'; bu takdirde **Allah ezelde mülk ve melekûtu tahsile temekkün etmedi; bu 'fakir, zayıf' demektir**; bu ayrıca **başka bir cihetten ayıp ve zaaf**: **ihsana kâdir olup ihsan ona hiçbir cihetle zarar vermeyen birinin ihsandan imtinâsı** ihsana kâdir olmayanın imtinâsından **ayıp ve noksanlıkta daha güçlüdür.**'
+- Netice/hüküm: Kıdem tarafı hudûs tarafının 'ihsan mümteni'' cevabını 'ezel mâni'' varsayımına bağlayıp reddediyor.
+- Delil çeşidi: **reductio**; (T) burhânî biçim (kıdem tarafı).
+- Mevzuya bağı: **Fasıl I §3, §8**: 'ezel mâni'' cevabı **c4 p70, 106'daki çürütmeyle aynı**; Risale **'ezel = evvelin nefyi, mâni' değil; imtinâ' hudûsun ezelde vukûu muhâl olması'** cümlesini yazmalı.
+- Doğan sual: —
+
+## c4 p139
+- OCR: orta
+- Okuma: tam
+- İçerik: (İhsanı terk ayıbı): '**3 kısım**: Allah **ezelde îcâda kâdir değildi**; ya **kâdirdi ama îcâd ona bir çeşit zarar getirecekti**; ya **kâdirdi ve zarardan münezzehti**: **birincisi** ⇒ Yaratıcı'nın **acizden kudrete** intikâli; **ikincisi** ⇒ **zarardan râhata** intikâl; **üçüncüsü** ⇒ **bahl ve noksanlık**: ihsana kâdir ve hiçbir zararı olmayan kişinin ihsandan imtinâsı **mahz bahl**; bunların hepsi 'hakîm ilâh' hakkında muhâl.' **3. soruya (günlük hâdisler) cevap**: 'kavme göre **her müteahhir hâdisin hudûsu, öncekinin vücûda girmesine şartlı** (günlük hâdislerin hudûsu kaidesi); dolayısıyla bu belirli şahsı ondan önce îcâd etmemekten **ayıp ve noksanlık lâzım gelmez**.' **3. hüccet**: '**âlemin vücûdunun illeti Bârî'nin vücûdu; vücûdu ezelî; âlemin vücûdunun illeti ezelî ⇒ âlem ezelî.**' **İtiraz**: 'vücûd, ifade ve tahsîl'; **cevap (kıdem tarafı)**: 'tahkiki: Bârî'den sâdır her şey müessire muhtaç; müessiriyette muteber şeylerin mecmûu kâim…' (p140).
+- Netice/hüküm: **Kıdem tarafı: 'bahl ve noksanlık' 3 kısım; 'illet = Bârî'nin ezelî vücûdu' 3. hüccet.**
+- Delil çeşidi: **reductio + taksîm**; (T) burhânî biçim (kıdem tarafı). **[Delil ≠ dava: 'ihsandan imtinâ bahldır' öncülü, Allah'a 'cömertlik borcu' yükler (vâcib-i aslah); c3 p334–335 ile çelişir.]**
+- Mevzuya bağı: **KRİTİK**: 'Allah bahil olmaz' ilkesi **Allah'ın kerem sıfatını nassla (Kerîm, Cevvâd) yazar**; **'ihsanı terk bahl ⇒ ezelî yaratma' çıkarımı vâcib-i aslah öncülüne dayandığı için alınmaz**.
+- Doğan sual: —
+
+## c4 p140
+- OCR: orta
+- Okuma: tam
+- İçerik: (3. hüccet devam): 'mecmû ezelîyse Bârî'den sâdır eserler ezelî; bu delil **1. hüccetin aynı**.' **Başka takrîr**: 'Allah âlemi îcâda **irâde etti: intifâ' dâîsi için mi, izrâr dâîsi için mi, ikisi için de değil mi**? **İkinci** (izrâr): hakîm ve rahîm'e yakışmaz; **üçüncü** (dâîsiz) muhâl ⇒ **intifâ' dâîsi**. **Bu dâî hâdis ya kadîm**: **hâdisse** hudûsunda taksîm geri; **kadîmse** ezelde **mâni' var mı yok mu**? **Varsa** zâil olmaz ('ezelî zâil olmaz' sabit); **yoksa** **ihsan dâîsi ezelde hâsıl, mâni' mefkûd** ⇒ 'kadîmlerin **âlemin vücûdunun illeti Bârî'nin vücûdudur, vücûdu ezelîdir** sözünün murâdı budur' ⇒ **âlem ezelî**. **4. hüccet**: 'âlemi belirli vakitte ihdâs etti dersek, o vakte tahsis **hikmet ve maslahat için mi değil mi**? **Birinci** bâtıl: maslahat **Hâlık'a mı mahlûka mı** döner? **Hâlık'a dönmesi muhâl, vecihlerle**:' (p141).
+- Netice/hüküm: **Kıdem tarafı: 'ihsan dâîsi ezelde ⇒ mâni' yoksa yaratma ezelî' ve 4. hüccet (maslahat).**
+- Delil çeşidi: **dilemma**; (T) burhânî biçim (kıdem tarafı). **[Delil ≠ dava: Allah'ın fiili için bir 'dâî' (ihsan) bulunması gerektiği öncülü Sünnî çizgide tartışmalı (Eş'arî: dâî gerekmez, irade tahsis eder); c3 p328'de Râzî 'tefaddul dâîsi iki şahsa eşit' diyordu.]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §8, c3 p327–328**: 'dâî = ihsan' kabulü Risale'de **kullanılmaz**; bu delil **Râzî'nin c3'te Mu'tezile'ye kullandığı silahın filozofça hâli**.
+- Doğan sual: —
+
+## c4 p141
+- OCR: orta
+- Okuma: tam
+- İçerik: (4. hüccet devam): **Maslahat Hâlık'a dönerse**: (2) '**bu ihtiyaç kadîm mi hâdis mi**? Kadîmse fiil kadîm; hâdisse 'o vakit neden ihtiyaç hâsıl oldu, öncesi-sonrası değil?' sorusu geri döner; (3) **Allah nâkıs, gayrla müstekmil**; (4) **ilâh kadîm, ezelî, vâcib li-zâtihî ⇒ hâdislerden kemâlde ekmel; ekmelin ednâ ve erzelle istikmâli muhâl.** **Maslahat mahlûka dönerse (Allah âlemi başkasına nef' için ihdâs etti) bu da bâtıl, vecihlerle**: **1. vecih**: 'îcâd mahlûka ihsansa **ihsan hâl-i ademde mi hâl-i vücûdda mı**? **Adem hâli** bâtıl: ma'dûm iken vücûd ona ulaşmaz ⇒ îcâd **ma'dûma ihsan olamaz**; **vücûd hâli** bâtıl: vücûdundan sonra vücûdunu îsâl **mevcûdun îcâdı (muhâl)**.' **İtiraz**: 'îcâd, vücûda girdikten sonra **lezzet ve sürûr çeşitlerine istidâd hâsıl** ettiği için ihsan.' **Cevap**: 'söz **îcâdın ihsan olup olmadığında**; siz **îcâdın kendisi ihsan değil, sonradan hâsıl olan ihsandır** dediniz; biz de **ilk yaratılışın ihsan olmadığını iddia ediyoruz.**'
+- Netice/hüküm: **Kıdem tarafı 4. hüccet: 'maslahat Hâlık'a dönerse noksan; mahlûka dönerse îcâd ihsan değil'.**
+- Delil çeşidi: **dilemma + reductio**; (T) burhânî biçim (kıdem tarafı). **[Delil ≠ dava: 'îcâdın ihsan olmadığı' iddiası 'ma'dûma ihsan' tartışmasına dayanır; 'ihsan = ademden vücûda' tanımı ile 'ma'dûma ihsan' problemi Mâtürîdî/Eş'arî çizgilerde farklı cevaplanır.]**
+- Mevzuya bağı: **Fasıl I §8**: 'îcâd ihsan mı?' tartışması **c3 p289–296 (nimet teorisi)** ile aynı; Risale Allah'ın halkını **nassla ('rahmet', 'nimet') yazar, teorik ihsan tanımına dayandırmaz**.
+- Doğan sual: —
+
+## c4 p142
+- OCR: orta
+- Okuma: tam
+- İçerik: **2. vecih (mahlûka ihsan bâtıl)**: '**zât şeye iştiyak duymadıkça ve ihtiyaç hissetmedikçe o şeyin îsâli ona nef' ya da ihsan olmaz**; ihsan farz edilen her şeyden **önce ihtiyaç hâsıl**; **hâzır nef' geçmiş zarara mukabele eder** ⇒ ihsan olmaktan çıkar (c3 p289–296'da tam istikssâ edildi).' **3. vecih**: 'bu dâî **ezelde hâsıl mı**? Ezelde hâsılsa **îcâd onun hâsılından önce** olurdu (muhâl); değilse **dâînin belirli vakte ihtisası, âlemin belirli vakte ihtisası gibi** ⇒ **devir ve sonu olmayana intihâ**.' '**Vakte tahsis 'belirli maslahat içerdiği için' cevabı**: **fesâdı hakkında söz istikssâ ile geçti.** **4. vecih**: '**gayre nef' îsâli ve îsâl etmemek fâile göre eşit mi**? **Eşitse** ihsan gâyesi fâili îcâda sevk edemez; **değilse fâil bu îcâdla müstekmil** (bunu iptal ettik).' (p143).
+- Netice/hüküm: **Kıdem tarafı 4. hüccet: mahlûka ihsan iddiası 2.–4. vecihle çürütülüyor (nimet teorisi, dâî hudûsu, fâilin istikmâli).**
+- Delil çeşidi: **reductio + atıf (c3)**; (T) burhânî biçim.
+- Mevzuya bağı: **Fasıl I §8**: p137–147 (Makâle 5) **Râzî'nin c3 hikmet/hüsn-kubuh bâbıyla bir kez daha ilişkili**: aynı delillerin **kıdem tarafı formu**; Risale **hikmet ve halk konusunu nassla yazar**.
+- Doğan sual: —
+
+## c4 p143
+- OCR: orta
+- Okuma: tam
+- İçerik: **5. vecih**: '**îcâd, yiyecek-içecek ve benzerlerine ihtiyaç doğurur; Hâlık ihtiyaç sahibine verirse 'şeyle istiğnâ' hâsıl olur; îcâd etmezse 'şeyden istiğnâ'** hâsıl olur; **'şeyden istiğnâ' 'şeyle istiğnâ'dan efdal**, delil: **şeyden istiğnâ Allah'ın sıfatı, şeyle istiğnâ kulların sıfatı**; Allah'ın sıfatı olan kulların sıfatından ekmeldir; ademde hâsıl olan 'şeyden istiğnâ', vücûdda hâsıl olan 'şeyle istiğnâ'; **birincisi efdal** ⇒ **îcâd, efdali kaçırır, ahses ve erzeli hâsıl eder ⇒ îcâd mahlûka ihsan olamaz.**' **6. vecih**: 'önceki beş vecihte bir şey farz edelim: insanın **istediği ve tabiatının meylettiği her şey hâzır** olsaydı (öyle değil); **dünya ehlinin hâlleri tersi**: çoğu **gam, hüzün, korku, telef, yanma, boğulma, körlük, kötürümlük**; **âhirette çoğu kâfir ve fâsık büyük azap**; ilâh bütün bu hâlleri ezelde bilir; nasıl 'ihsan için yarattı' denir?' (p144).
+- Netice/hüküm: **Kıdem tarafı 5.–6. vecih: 'şeyden istiğnâ efdal' (ademin istiğnâsı) ve 'dünya-âhiret hâlleri ihsan iddiasını çürütür'.**
+- Delil çeşidi: **mukayese (istiğnâ) + ampirik-ikna'î**; (T) ikna'î-burhânî. **[Delil ≠ dava: 'ademde istiğnâ efdal' iddiası vücûdu ahses sayıyor; bu Râzî'nin c2 p117 ('Allah kendisi ganî') ile uyumlu görünse de 'yaratılmak nakıstır' sonucu ilâhî halkı zemmetmeye götürür — **ALINMAZ**.]**
+- Mevzuya bağı: **KRİTİK — İslâmî muhafaza**: '**îcâd ahses ve erzeli hâsıl eder**' cümlesi **Allah'ın yaratmasını noksan gösterir**; **Risale'ye alınmaz, alıntılanmaz**; özette 'kıdem tarafı îcâdın ihsan olmadığını iddia eder' biçiminde geçilir.
+- Doğan sual: —
+
+## c4 p144
+- OCR: orta
+- Okuma: tam
+- İçerik: (6. vecih devam): 'çoğu dünyada **belâ, şekâvet**; ilâh ezelde bilir; **'hepsine büyük saadeti mümkin kıldı, mahrumiyet kendi kusurlarından' itirazı**: 'ilâh **yakînen biliyorsa** vücûd ve teklîfe yalnız **büyük belâ ve şekâvet** hâsıl olacaktır, **onlara hayır, nef' ve salâh murad ettiği söylenemez**'; **iki delil**: **(1)** 'onlar **Allah'ın ma'lûmunun hilâfına kâdir değil**; yoksa Allah'ın ilmini **cehle çevirmeye** kâdir olurlardı; **(2)** ribât misali: 'çölde ribât kuran, ribâtın hırsızlara ve katillere mekân olacağını yakînen bilen; **niyetim şerri defetmekti, ribât velîlere ve takvâ sahiplerine sığınak olsun diye** der; **bütün akıllılar 'ribâtın bu fesatları doğuracağını bildiğin hâlde niyetin yalan' der**; bu bâbta uzun söz geçti (c3 p317–320'de).'
+- Netice/hüküm: **Kıdem tarafı 6. vecih: 'yaratma ihsan niyetine sığmaz; ilim ⇒ kula muhâlefet imkânsız; ribât misali'.**
+- Delil çeşidi: **reductio + misal (c3 ribât misali tekrarı)**; (T) burhânî biçim/ikna'î. **[Kendi tenkidim: ribât misali c3 p317–318'de Râzî'nin Mu'tezile'ye karşı kullandığı örnekti; burada kıdem tarafı aynı örneği hudûs tarafına döndürüyor: aynı silah iki tarafta.]**
+- Mevzuya bağı: **KRİTİK**: **'ilim ⇒ kulun muhâlefete kudreti yok' öncülü (c3 p311 Mu'tezile'nin ilim-keşif delili ile çelişir, c3 p313–315 aporisiyle aynı)**; **Risale ana metnine alınmaz**; ribât misali 'Allah hakkında' kullanılmaz (c3 p318 notu).
+- Doğan sual: —
