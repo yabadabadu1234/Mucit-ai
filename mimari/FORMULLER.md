@@ -441,53 +441,54 @@ Yer: Mâlum ⊂ Nefis(kuvvet).Müdrike ; Nefis(kuvvet).Muharrike ⊬ (zaruret-is
 
 ## Mücerred (Maddî/Manevî Ayrımı — Burhan'ın Ön-Şartı)
 
-**Nakz (F 179):** Önceki `İllet(çeşit) = {mâddiye, sûriyye, fâiliye, gâiye}` formülü (bkz. eski § Burhan) yanlıştı — dört illeti EVRENSEL ve PARALEL saydı; hâlbuki mâddiye ve sûriyye yalnız madde+suretten MÜREKKEB (cismânî) mevcûda tatbik edilebilir, mücerred (gayr-i maddî) bir mevcûda hiç tatbik edilemez (zaten Vâcibü'l-Vücûd(Basitlik) bunu ispat etmişti: Vâcib'de terkip yok, dolayısıyla madde de suret de yok). Fâiliye ve Gâiye ise mücerrede de, maddîye de tatbik edilir. Bu asimetri görülmeden dördü paralel yazmak, örtük bir maddeci (materyalist) önvarsayımdır — her mevcûdun madde+suretten mürekkep olduğunu baştan kabul eder. Düzeltme, önce maddî/mücerred ayrımını bizzat ispat eder, sonra İllet(çeşit)'i buna göre şartlandırır.
+**Nakz (F 179):** Önceki `İllet(çeşit) = {mâddiye, sûriyye, fâiliye, gâiye}` formülü dört illeti EVRENSEL ve PARALEL saydı; hâlbuki mâddiye ve sûriyye yalnız madde+suretten MÜREKKEB (cismânî) mevcûda tatbik edilebilir, mücerred mevcûda hiç edilemez. Paralel yazmak örtük bir maddeci önvarsayımdı. Düzeltme: önce maddî/mücerred ayrımı kurulur, sonra İllet(çeşit) buna göre şartlandırılır (bkz. § Burhan).
+
+**Nakz (F 179, ikinci):** Bu ayrımın "boş kutu olmadığı" önce Tâirü'l-Havâ (Uçan Adam) ile ispatlanmıştı; üç düzeltme denendi ("hiç duyu yok" → adam ölür; "tek tek kapat" → kalp siniri tek başına dahi ölümcül; "sırf şüphe" → konu değişti, Uçan Adam'ın hâl iddiası bırakıldı) ve üçü de yetmedi. Sebep: burhanın kilit öncülü ispatsızdır (aşağıda). Tâirü'l-Havâ burhânî sayılmaz; ispat yükü ondan alınıp risalenin kendi zincirine (Vâcib) devredildi.
 
 ```
 Mevcûd(Maddiyet) = { maddî, mücerred }     κ = mürekkeb-min-madde-ve-suret(x)?
+  ⟺ₜ Nakzeyn: bir şey ya madde+suret bileşiğidir ya değildir
 
-Boş bir tasnif olmaması için: ∃x mücerred(x) ispatı şart — aksi hâlde "mücerred"
-kutusu adı var cismi yok bir kelime kalır.
-
-**İkinci nakz (ilk düzeltme dahi yetersizdi):** "Tek tek bir kenara koyma/kapatma" ifadesi bile fiilî bir sinir müdahalesi çağrıştırmaya devam ediyordu — kalbe giden siniri TEK BAŞINA kesmek dahi (hepsini birden kesmeye gerek kalmadan) ölümcül olabilir, çünkü kalbin otonom idaresi ona bağlıdır. Demek "çıkarma/kapatma" kelimesinin kendisi, hangi sırayla ve hangi kombinasyonla yapılırsa yapılsın, bir fizyolojik iddia taşımaya devam ediyor ve her denemede aynı itirazı doğuruyor. Kök hata, faraziyeyi hâlâ bir **fiilî müdahale** (sinire dokunma, onu kesme/kapatma) olarak tasavvur etmekti. Doğru düzeltme, bedene ve sinirlere HİÇ dokunmamaktır — faraziye yalnız şüphenin (Nakzeyn'in "P doğru mu değil mi" sualinin) kendisidir, hiçbir organa hiçbir şey yapılmaz.
-
-Burhan-ı Tâirü'l-Havâ (İbn Sînâ, "Uçan Adam" — düzeltilmiş, sırf-şüphe formuyla; Nakzeyn'in tatbikinde ne bir sinire ne bedene dokunulur):
-  Faraziye (yalnız zihnî bir şüphe, hiçbir bedenî/fizyolojik değişiklik farz edilmez):
-    Beden aynen yaşar, hiçbir siniri kesilmez, hiçbir hâli değişmez.
-    Yalnız her his h için (dış: görme,işitme,dokunma; iç: kalp-atışı-hissi,
-    sıcaklık, açlık) şu sorulur: "h'nin bana verdiği haber doğru/mevcut OLMASA
-    BİLE, yine de 'ben varım' der miydim?"  [bu, h'yi KESMEK değil, h'nin
-    HABER-DEĞERİNİ şüpheye almaktır — bedende hiçbir şey değişmez]
-  ∀ his(h): h'nin doğruluğu/varlığı şüpheye alınsa bile "ben varım" şüphesizdir
-    [şüphe ETMENİN kendisi bile bir "ben"in var olmasını gerektirir —
-     şüphe eden, şüphesiyle birlikte yok olamaz: Nakzeyn]
-  ⟹ "ben" şuuru, hiçbir h'nin doğru/mevcut olmasına BAĞLI değildir
-    [bağlı olsaydı, h şüpheliyken "ben" de şüpheli olurdu — ama olmuyor]
-  İtiraza cevap ("belki 'ben', hislerin TOPLAMının güvenilirliğine bağlıdır"):
-    bütün hislerin toplamı şüpheye alınsa dahi (hepsi birden yanlış/yok
-    olabilir farz edilse dahi) "ben varım" yine şüphesizdir — toplamın
-    şüpheye alınması da tek tek şüpheye almanın birleşiminden ibarettir
-  ∴ nefs (zât, "ben" şuuru), hiçbir bedenî hissin doğruluğuna/varlığına
-    bağlı bir hakikat değildir ⟹ bedenden mantıken ayrı, mücerreddir
-
-∴ ∃x mücerred(x)  [en az nefs/"ben" şuuru]  — Mevcûd(Maddiyet) dolu bir tasnif
+Boş-değil ispatı — ∃x mücerred(x), ruha başvurmadan, Vâcib üzerinden:
+  1) ∃! Vâcibü'l-Vücûd                                   [⊢ risale/fasil_1_vucud: Burhân-ı İmkân ∧ Burhân-ı Tahsis]
+  2) Vâcib(Basitlik) = basit                              [⊢ risale/fasil_1_vucud: mürekkeb ⟹ muhtâc ⟹ ↯]
+  3) madde+suret ≔ bir terkip çeşidi
+     ⟹ ¬mürekkeb(Vâcib) ⟹ ¬mürekkeb-min-madde-ve-suret(Vâcib)
+  ∴ mücerred(Vâcib) ⟹ ∃x mücerred(x)
+  [dairesellik yok: İsbât-ı Vâcib, ne İllet(çeşit)'i ne Mücerred'i kullanır;
+   Burhan(çeşit) o burhanları sonradan tasnif eder]
 ```
 
-[Not: bu burhan saf istidlâlîdir, sinirbilime/ampirik zemine muhtaç değildir — hiçbir fizyolojik iddia (sinir kesilmesi, ölüm) taşımaz; hiçbir organa, hiçbir sinire dokunulmaz, beden aynen yaşar. Faraziye yalnız bir ŞÜPHEdir (his doğru/mevcut mu?), bir MÜDAHALE değildir — bu ayrım gözetilmezse ("h'yi kes/kapat" dendiği her tekrarda) aynı "adam ölür" itirazı haklı olarak yeniden doğar. PLAN.md'nin "burhânîleştirme stratejisi 5"i, tam işlenişi Fasıl III madde 13'e (Ruhun bekası) aittir; burada yalnız Burhan(çeşit)'in İllet eksenini kurmaya yetecek asgarî hâliyle, erken getirilmiştir. Açık bırakılan bir tartışma: bu burhan, "ben" şuurunun bedenden AYRI bir zât olduğunu, aksi olamayacağını ispatlar; bu "zât"ın ayrıca EBEDÎ olup olmadığı (bekası) ayrı bir burhandır, Fasıl III'te işlenecektir — burhânî çekirdek yalnız mücerrediyet iddiasınadır, beka iddiasına değil]
+```
+Tâirü'l-Havâ (Uçan Adam) ⊳ Tavassut(cedelî) — tenbih; burhânî ⊬
+  öncül P: duyu-girdisi=∅ ⟹ öz-şuur(özne) kalır             ⊬ ispatsız
+    dayanak yalnız tasavvur-edilebilirlik; hâl fiilen imkânsız (iç duyu kesilirse beden ölür)
+    ampirik-yüklü: benlik-şuuru ≟ f(interosepsiyon) — bir sinirbilim çizgisi (Damasio, Seth)
+      P'nin tersini savunur; P bunun yanlışlığını ispatlamaz, varsayar
+  çıkarım Q: bilgi-bakımından-ayrı ⟹ varlık-bakımından-ayrı  ⊬ epistemik→ontolojik sıçrama [Arnauld]
+  ∴ P ⊬ ∨ Q ⊬ ⟹ ¬burhânî ; tenbih olarak kalır [İbn Sînâ'nın kendi sunuşu: tenbih — ⊬ birincil metinden yoklanmadı, F 1-K]
+  Şüphe-formu ("his doğru olmasa da 'ben varım'") ≠ Uçan Adam:
+    hissin DOĞRULUĞUNU sorar, hissin YOKLUĞUNDAKİ hâli değil — Uçan Adam yerine geçmez
+```
 
 ### Mücerred(çeşit) — İkinci Kademe
 
 ```
-Mücerred(çeşit) = { nefs, akl-melek, ma'kul-i-sırf }
+Mücerred(Vücûb) = { Vâcibü'l-Vücûd, Mümkin-Mücerred }     κ = zarurî-bizatihî(vücûd)?
+  [Vâcib "melek/nefs" kutusuna girmez: Mümkin-Mücerred'in üç kutusu yalnız mümkine aittir]
+
+Mümkin-Mücerred(çeşit) = { nefs, akl-melek, ma'kul-i-sırf }
   κ₁ = müteallik-bi'l-beden(x)?        evet → nefs           [bir bedeni tedbir/idare eden mücerred]
   ¬κ₁ ∧ κ₂ = müstakil-vücûd-hâricî(x)? evet → akl-melek       [bedenden müstağni, hâricî müstakil cevher]
   ¬κ₁ ∧ ¬κ₂                            → ma'kul-i-sırf        [yalnız zihinde, vücûd-i-zihnî: adet, küllî mefhum]
 
-Not (nominalizm beyanı, F 2-Y): "matematik gibi" mevcûdlar (sayı, küllî mefhum) burada
-  ma'kul-i-sırf dalına düşer — müstakil bir CEVHER değil, aklın bir MA'LÛMUdur (Eflatuncu
-  realizm reddedilir, Meşşâî/İbn Sînâcı çizgi benimsenir). "Ruh, melek, cin" ise nefs veya
-  akl-melek dalına düşer; cinin hangi dala düştüğü ihtilaflıdır (bazı ekoller cismânî-latif,
-  bazıları mücerred sayar) — bu ihtilaf saklanmaz, tam tahkiki Fasıl III'e bırakılır (F 2-Y)
+⊬ üç kutunun DOLU olduğu burada ispatlı değildir: nefs (Tâirü'l-Havâ burhânî olmadığından),
+  akl-melek, cin — hepsinin varlık ispatı Fasıl III'te; şimdilik yalnız taksimin kendisi (⟺ₜ) ⊢
+
+Not (nominalizm beyanı, F 2-Y): "matematik gibi" mevcûdlar (sayı, küllî mefhum) ma'kul-i-sırf
+  dalına düşer — müstakil bir CEVHER değil, aklın bir MA'LÛMUdur (Eflatuncu realizm reddedilir,
+  Meşşâî/İbn Sînâcı çizgi benimsenir). Cinin hangi dala düştüğü ihtilaflıdır (bazı ekoller
+  cismânî-latif, bazıları mücerred sayar) — saklanmaz, tam tahkiki Fasıl III'e bırakılır
 ```
 
 İzahat: `izahat/mucerred/genel.md`
@@ -662,7 +663,7 @@ Tasavvur(Menşe) = { hissî, hayalî, vehmî, aklî }
 - Metâlib, Makûlât, Cevher/Araz/Zâtî/İzafî ⊬
 - Vâcibü'l-Vücûd → `izahat/vacibul_vucud/genel.md`
 - Mâlum → `izahat/malum/genel.md`
-- Mücerred (Mevcûd(Maddiyet), Tâirü'l-Havâ, Mücerred(çeşit)) → `izahat/mucerred/genel.md`
+- Mücerred (Mevcûd(Maddiyet), Vâcib-üzerinden-boş-değil, Tâirü'l-Havâ[cedelî tenbih], Mücerred(çeşit)) → `izahat/mucerred/genel.md`
 - Burhan (Sûret, Nisbet-i-Evsat, İnnî alt-tür, İllet) → `izahat/burhan/genel.md`
 - Tasavvur(çeşit), Tasdik(çeşit), Tarif, Tavassut(çeşit), Tasavvur(Menşe), Tasdik(Vücûb/Kemiyet/Keyfiyet), Basitlik(çeşit) ⊬ — temel usul (κ+Nakzeyn+isim+dehliz) `izahat/tasnif/tefrik_ve_temyiz.md`'de
 

@@ -91,8 +91,9 @@ Kaide: her bahis üç şeyle etiketlenir — **(F)** hangi mühürlü formül ku
 ## FASIL III — El-Meâd
 
 **13. Ruhun bekası, maddeye indirgenemezliği**
-- **(T→burhânî, yükseltildi, delil değiştirilerek):** zaaf, "vahdet-i şuur" öncülünün modern zihin felsefesinde tartışmalı, ampirik-yüklü bir iddia olmasıydı. Düzeltme: İbn Sînâ'nın **Tâirü'l-Havâ** (Uçan Adam) burhanı kullanılır — sinirbilime hiç muhtaç olmayan, saf istidlâlî bir burhan: bedene dair bütün duyum zihnen çıkarılsa (tahayyülen), "ben varım" şuuru yine de kalır; çıkarılan şey kalırken kalan şey çıkarılana ayn olamaz (Nakzeyn: aynı şey hem mevcud hem madum olamaz aynı anda). Bu, Basitlik ve Bünye formüllerimizle uyumlu, ama ayrı ve müstakil bir burhandır.
-- (F) Mâlum(Menşe), Basitlik(çeşit) — destekleyici, ana burhan Tâirü'l-Havâ.
+- **(T→cedelî tenbih, NAKZ: burhânî iddiası geri alındı):** İlk taslak, "vahdet-i şuur"un yerine İbn Sînâ'nın **Tâirü'l-Havâ** (Uçan Adam) burhanını koyup "saf istidlâlî, sinirbilime muhtaç değil" diye burhânî saymıştı. Bu yanlıştı: kilit öncülü (hiç duyu almayan özne kendini bilir) ispatsızdır — hâl fiilen imkânsız (iç duyu kesilirse beden ölür), dayanağı yalnız tasavvur edilebilirlik, ve benlik şuurunu iç duyuya bağlayan sinirbilim çizgileri öncülün tersini savunur; ayrıca "bilme şeklim ayrı ⟹ varlık ayrı" çıkarımı epistemikten ontolojiğe sıçramadır (Arnauld). Üç düzeltme denendi, hiçbiri yetmedi (bkz. mimari/izahat/mucerred/genel.md). Uçan Adam cedelî tenbih olarak kalır.
+- **Mücerrediyet ayrı yoldan:** "en az bir mücerred vardır" neticesi ruha değil Vâcib'e dayanır (Vâcib basit ⟹ madde+suret bileşiği değil ⟹ mücerred, Fasıl I). Nefsin, meleğin, cinin varlığı ve nefsin bekası **burhânî bir yol aranarak** ayrı ayrı ele alınacak; bulunamazsa cedelî kalır ve öyle yazılır.
+- (F) Mâlum(Menşe), Basitlik(çeşit) — destekleyici.
 
 **14. Haşrin aklî zarureti**
 - **(T→burhânî, yükseltildi):** zaaf, "dünyada adalet yok, o yüzden ahiret makuldür" demenin bağlayıcı olmamasıydı. Düzeltme: Adalet gerçekten sabit bir sıfatsa (madde 6) ve hiçbir zaman/mahalde tahakkuk etmiyorsa, sıfat **hiç tezahür etmeyen bir isim** olarak kalır — bu, sıfatın bizatihi sübutuyla çelişir (Vâcibü'l-Vücûd madde 4'teki "muhtaçsızlık" ile aynı kalıp: tezahürsüz kalan bir sıfat, ya yoktur ya da tezahür yeri zarurîdir). Öyleyse bir tahakkuk mahalli (âhiret) zarurîdir.
@@ -134,9 +135,9 @@ Kaide: her bahis üç şeyle etiketlenir — **(F)** hangi mühürlü formül ku
 2. **İddiayı geçmişe daralt, geleceğe genişletme:** "ebediyen böyledir" (ispatsız, evrensel-gelecek iddiası) yerine "şu tarihî anda böyle vaki oldu" (tevatürle sabit, geçmiş-iddiası). → madde 12 (Kur'an i'cazı).
 3. **Sıfatın sübutundan, tezahürünün zaruretini çıkar:** bir sıfat gerçekten sabitse ve hiç tezahür etmiyorsa, ya sıfat yoktur ya tezahür yeri zarurîdir (Vâcibü'l-Vücûd madde 4'teki "muhtaçsızlık→basitlik" kalıbının tekrarı). → madde 14 (Haşr).
 4. **Silsile-i burhan:** doğrudan burhânî olmayan bir haberi, kendisi burhânî iki öncülün (nübüvvetin sıhhati + tevatürün yakîni) neticesi olarak burhânî kıl. → madde 8, 11, 15.
-5. **Sinirbilime/ampirik zemine muhtaç öncülü, saf istidlâlî bir klasik burhanla değiştir.** → madde 13 (Tâirü'l-Havâ).
+5. **Sinirbilime/ampirik zemine muhtaç öncülü, saf istidlâlî bir klasik burhanla değiştir.** → madde 13'te denendi (Tâirü'l-Havâ) ve **işlemedi**: değiştirilen burhanın kendi öncülü de ispatsız çıktı (nakz, madde 13). Strateji 5, o maddede başarıyla uygulanmış sayılmaz.
 
-**Yükseltilemeyenler (kasten, gerekçeli):** madde 16 (Kesb), madde 19 (Hüsün-kubuh) — ikisi de kendi mühürlü `Muhakeme(Lüzum)` formülümüze göre burhânî değildir, çünkü asırlarca eşit-mahir ulema arasında zihnen bağlanmamış bir ihtilaf sürmüştür; zorlamak, kendi kaidemizle çelişirdi. Madde 7'nin (b) kanadı (ferdî şerrin pozitif hikmeti) de aynı sebeple kasten cedelî bırakıldı — ve bırakılması bile ayrıca burhânî gerekçelidir (adem-i-vücdan ≠ adem-i-vücud, madde 15).
+**Yükseltilemeyenler (kasten, gerekçeli):** madde 13 (nefsin mücerrediyeti ve bekası — burhânî yol bulunana dek cedelî), madde 16 (Kesb), madde 19 (Hüsün-kubuh) — ikisi de kendi mühürlü `Muhakeme(Lüzum)` formülümüze göre burhânî değildir, çünkü asırlarca eşit-mahir ulema arasında zihnen bağlanmamış bir ihtilaf sürmüştür; zorlamak, kendi kaidemizle çelişirdi. Madde 7'nin (b) kanadı (ferdî şerrin pozitif hikmeti) de aynı sebeple kasten cedelî bırakıldı — ve bırakılması bile ayrıca burhânî gerekçelidir (adem-i-vücdan ≠ adem-i-vücud, madde 15).
 
 ## Genel not (risale-çapında kaide)
 
