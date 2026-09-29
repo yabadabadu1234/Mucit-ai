@@ -2161,3 +2161,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: —
 - Mevzuya bağı: —
 - Doğan sual: —
+
+## c4 p241
+- OCR: iyi
+- Okuma: tam
+- İçerik: **Cüz-i Râbi'in 2. kısmının başlığı: 'hudûs diyenlerin mebâhisi'** (âlemin hâdis olduğunu söyleyenlerin delilleri).
+- Netice/hüküm: **Kısım 2 başladı; kıdem tarafı bitti (p239).**
+- Delil çeşidi: —
+- Mevzuya bağı: **Fasıl I §3 (hudûs delili)**: Râzî'nin kendi tarafı burada başlıyor; p243–'ten itibaren Râzî **hem delili kurar hem itirazlara cevap verir** — 'Râzî-sesli' hükümler burada aranacak.
+- Doğan sual: —
+
+## c4 p242
+- OCR: —
+- Okuma: okunmadı (boş)
+- İçerik: metin yok.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c4 p243
+- OCR: iyi
+- Okuma: tam
+- İçerik: **1. Makâle başlığı: 'hareket ve sükûna dayalı delilin takrîri'** (hudûs tarafının ilk delil kolu).
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: Fasıl I §3: **'cisim hareket-sükûndan ayrılmaz ⇒ hâdis' delil ailesi** (mütekellimîn'in klasik yolu) başladı.
+- Doğan sual: —
+
+## c4 p244
+- OCR: —
+- Okuma: okunmadı (boş)
+- İçerik: metin yok.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c4 p245
+- OCR: orta (dipnot işaretleri hasarlı)
+- Okuma: tam
+- İçerik: **Delil (hareket-sükûn)**: '**Cisim ezelî olsaydı ezelde ya müteharrik ya sâkin olurdu; iki kısım da bâtıl ⇒ ezelî olması imtinâ'.**' **Üç mukaddime**: (1) cisim mevcutsa ya müteharrik ya sâkin; (2) ezelde müteharrik olması imtinâ'; (3) ezelde sâkin olması imtinâ'. **Birinci mukaddimenin beyânı**: her mütehayyiz muayyen bir hayizde hâsıldır; ya o hayizde **karar kılar (sâkin)** ya bir hayizden ötekine **intikal eder (müteharrik)**.
+- Netice/hüküm: **Hudûs tarafının delil yapısı: 3 mukaddime; 1. mukaddimenin dayanağı: tehayyüz ⇒ hayiz.**
+- Delil çeşidi: **taksîm (dilemma)**; (T) burhânî biçim, öncüller ispat ister (Râzî kendisi öncülleri sayıyor).
+- Mevzuya bağı: **KRİTİK — Fasıl I §3**: Risale'nin hudûs burhanı için **'cisim ⇒ mütehayyiz ⇒ hareket/sükûn'** zinciri; **her halka ayrıca ispat ister** (Râzî'nin kendi kabulü: 'üç mukaddimeye muhtacız').
+- Doğan sual: 2. ve 3. mukaddimenin ispatı nerede? (sonraki sayfalar, ⊬)
+
+## c4 p246
+- OCR: orta
+- Okuma: tam
+- İçerik: **Delil 1'e itirazlar** (Râzî 'فإن قيل' formülüyle **hasmın sesini** aktarıyor): **(İtiraz 1)** 'Cisim mevcutsa mütehayyiz olmak zorunda değil': bazıları hacmiyet ve tehayyüzü **hayûlâda hâl olan bir sıfat (sûret)** sayar; hayûlâ kendisi hacim değil. **(İtiraz 2)** 'Hayiz nedir?': **ya adem-i mahz** (ma'dûm zarf olamaz) **ya mevcut**; mevcutsa hissen işaret edilir/edilmez. **Hissen işaret edilir** ⇒ istiklâl ile ise cisimdir (cisim cisimde: **tedâhül veya sonsuz temas**), tebaiyyet ile ise **araz**dır (cisim arazda, araz cisimde: karşılıklı zarf-mazrûf, muhâl).
+- Netice/hüküm: **Hasım (mütekellim olmayan/hayûlâcı) itirazları; Râzî cevabı p248'de.**
+- Delil çeşidi: **taksîm + ilzâm**; (T) cedelî.
+- Mevzuya bağı: Fasıl I §3: **'hayiz' kavramı belirsiz; Risale hayiz/mekân tanımını Râzî'nin cevabına göre yazmalı** (p248: mekân = bu'd).
+- Doğan sual: —
+
+## c4 p247
+- OCR: orta
+- Okuma: tam
+- İçerik: **İtiraz 2 devamı**: hayiz mevcut ve **hissen işaret edilmezse** cisim (işaret edilir) onda karar kılamaz — biri ötekinden mübâyin. **İtiraz 3** ('hareket-sükûndan ayrılmazlık'): '**bu delil karşı delille muâraza edilir**': cisim hareket-sükûnu ya **birlikte** ya **muayyen biri** ya **gayr-i muayyen biri** lâzım getirir; hepsi bâtıl (birlikte: hem müteharrik hem sâkin muhâl; muayyen biri: müteharrik sâkin olamaz; **gayr-i muayyen biri**: 'her mevcut kendinde muayyendir, gayr-i muayyen mevcut olamaz' ⇒ lâzım da olamaz).
+- Netice/hüküm: **Hasım muâraza: 'cisim hareket-sükûndan biri gayr-i muayyen' lâzımı imkânsız ⇒ 'cisim hareket veya sükûndan ayrılmaz' iddiası çöker.**
+- Delil çeşidi: **taksîm (muâraza)**; (T) cedelî.
+- Mevzuya bağı: Fasıl I §3: **'gayr-i muayyen mevcut yok' ilkesi** Râzî'nin cevabıyla (p248) çatışır — 'mümkin mâhiyet vücûd-adem mecmûundan ayrılmaz' gayr-i muayyen lâzımı kabul eder; **Risale bu iki ilkeyi tutarlı yazmalı.**
+- Doğan sual: Râzî'nin cevabı 'mecmû lâzım, biri bedelen' ayrımı: gayr-i muayyen lâzımla çelişiyor mu? (kendi tenkidim: cevap **hasmın öncülüne değil, kıyasa** dayanıyor; ⊬ yeterlilik.)
+
+## c4 p248
+- OCR: orta
+- Okuma: tam
+- İçerik: **Râzî'nin cevapları** (**Râzî-sesli**): **(1. itiraza)** iki vech: (a) '**hayûlâ ve sûret bahsinde beyan ettik: cismin zâtı hayûlâ ve sûretten mürekkep olamaz; hayûlâyı ispat eden söz bâtıl**'; (b) 'hayûlâ ispat edilse bile **hacimsiz hayûlâ cisim değildir**; bizim delilimiz cisimlerin hacimli oluşunu ispatlıyor, itiraz bize varid değil'. **(2. itiraza)** '**mekân bizce bu'd (boyut/uzaklık) ibaresidir**; bahsi istikṣâ ile gelecek.' **(3. itiraza)** 'ma'lûmen zarûrî: **mümkin mâhiyet vücûd-adem mecmûundan ayrılmaz**, her birinden **bedelen** ayrılabilir; **adedin tabiatı fer-zevc'ten ayrılmaz**, tabiatı biri muayyen iktizâ etmez; bu da öyle.'
+- Netice/hüküm: **Râzî'nin hükmü: cisim hayûlâ-sûret mürekkebi değil; mekân bu'd; 'gayr-i muayyen lâzım' mümkin/adet misaliyle savunulur.**
+- Delil çeşidi: **cedelî + misal**; (T) cedelî-ikna'î; **kendi tenkidim**: 3. cevap adet misalini 'lâzım-ı gayr-i muayyen'in imkânına delil yapıyor; hasım 'mevcut gayr-i muayyen olamaz' dedi; **Râzî cevabı 'ma'nâ' düzeyinde tutuyor, vücûd düzeyinde değil** (⊬ yeterlilik).
+- Mevzuya bağı: **KRİTİK — Fasıl I §3**: **'mekân = bu'd' Râzî'nin kendi tercihi (Eş'arî ana çizgisinde 'mekân = cismin kapladığı hayiz/bu'd' tartışmalı, ⊬ Sünnî ittifak değil)**; Risale ana metinde **mekân teorisine girmez**, 'Râzî'ye göre' notu. Hayûlâ-sûret reddi c(?) 'hayûlâ ve sûret bahsi' referansı (⊬ hangi ciltte).
+- Doğan sual: 'Hayûlâ ve sûret bahsi' hangi cilt/sayfada? (Cilt 5–7'de aranacak; bulununca çapraz kontrol.) Delil 1'in 2. ve 3. mukaddimesi p249'da devam ediyor mu?
