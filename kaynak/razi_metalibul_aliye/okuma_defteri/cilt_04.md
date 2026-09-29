@@ -505,3 +505,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **şart-müessir ayrımı + hareket örnekleri**; (T) burhânî biçim (kıdem tarafı).
 - Mevzuya bağı: **Fasıl I §3**: 'hâdislerin sonsuz silsilesi ve ezelî mebde' **c2 p77–78 (Râzî'nin 'mecmû yok, her hâdis öncekine mesbûk' okuması)** ile **bağ**; kıdem tarafının **son cevabı**; c4 devamında hudûs tarafının cevabı aranacak.
 - Doğan sual: —
+
+## c4 p57
+- OCR: orta
+- Okuma: tam
+- İçerik: **Filozofların cevabı (devam; irâdî hareket)**: insan bir beldeye gitmeyi irade eder (garîbini bulup borç istemek): bu **dâî** gitmeyi gerektirir; dâî hareketin bütün cüzleriyle **baki**; **önceki adım, dâînin ikinci adımda müessir olmasının şartı**. Sonuç: bu hâdislerin **müessiri mevcut, baki, tagayyür cihetlerinden münezzeh**; fakat **her müteahhir hâdisi te'sîri önceki hâdisin takaddümüne şartlı** ⇒ **her hâdis başka hâdisle mesbûk, evvelsiz**. Filozoflar: '**hâdisât bir an kesilseydi ondan sonra hâdis hiç olmazdı**; **hâdisleri kadîm müessire isnadın tek yolu budur**; bu makûl yol **yalnız bizim mezhepte kolay, başka hiçbir mezhepte mümkün değil** ⇒ sözümüzün şerefine ve kuvvetine delil.' **Mütekellimîn ve muhakkikler**: 'inceliği ve tahkiki hakkıyla yaptınız, **fakat gâmız bahis olduğu gibi kalıyor**: kadîm müessir illet, önceki hâdis mevcutken bu hâdisin mûcidi değildi, ikinci vakitte mûcid oldu; **mûcid olma hükmü hâdis**; bu hâdis hüküm **müessire muhtaç mı**? Muhtaç değilse **bir şey müessirsiz hâdis oldu**; bir kısmında akla yatarsa tümünde de yatar ⇒ **hâdis mümkinin müessirden istiğnâsı (muhâl)**.'
+- Netice/hüküm: **Filozofların 'hâdisler silsilesi' cevabı ve mütekellimin karşı itirazı ('mûcid olma hükmü hâdis'; müessire muhtaç mı?').**
+- Delil çeşidi: **şart-müessir cevabı + reductio (hâdis hükmün müessiri)**; (T) burhânî biçim (kıdem tarafı); mütekellim itirazı cedelî-burhânî. **Bu, hudûs-kıdem tartışmasının en ince kavşağı.**
+- Mevzuya bağı: **KRİTİK — Fasıl I §3**: **hâdis-hükmün müessiri sorusu** ('mûcidiyet hâdis mi?') Risale'nin teselsül cümlesinin **doğrudan hasmı**; c2 p77–78 ('mecmû yok, her hâdis öncekine mesbûk') ile **aynı hat**.
+- Doğan sual: —
+
+## c4 p58
+- OCR: orta
+- Okuma: tam
+- İçerik: **Mütekellimin şık taksîmi**: bu **müessiriyet/mûciddiyet hükmünün hudûsunun illeti** ya **adem** ya **vücûd**. **Adem** (önceki hâdisin ademi müessir) ise **bâtıl**: mahz ademden ma'lûlün isnadı bir yerde caiz olsa **her yerde caiz**, ⇒ **mümkinâtın varlığından mevcut müessire istidlâl** mümkün olmaz. **Vücûd** ise ya **önceki hâdis** ya **onunla beraber (mukârin)** bir mevcut; **önceki hâdis** ise **her hâdisin mukteziyesi bir önceki hâdis** demek (bu kabul edilirse) **evvelsiz hâdis silsilesi** — **bütün filozoflarca 'bu tam mezhebimiz'** — **fakat bununla vâcibü'l-vücûda istidlâl edilemez** (Râzî'nin/mütekellimin bu şıkkın sonucu). **Mukârin** olursa: müessir **ya biz eser saydığımızın kendisi (devir)** ya başka mevcut ⇒ **teselsül, hepsi bir anda (muhâl)**.
+- Netice/hüküm: **5 şıktan üçü ('adem müessir', 'devir', 'teselsül') bâtıl; 'önceki hâdis müessir' filozofun kabulü ama vâcibe istidlâli kapatır.**
+- Delil çeşidi: **taksîm/reductio**; (T) burhânî biçim (mütekellim). **[Delil ≠ dava: 'önceki hâdis müessir ⇒ vâcibe istidlâl imkânsız' çıkarımı, filozofun 'ezelî mebde'in fayzanı' cevabını (p56) reddetmiyor; sadece 'ispat aracı' tartışmasına çeviriyor.]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §3**: **teselsül delilinin hangi şıkkı reddettiği ayrıca yazılmalı**; Risale'de 'silsile evvelsiz olsa da ispat aracı yok' şıkkı **açıkça ele alınmalı**.
+- Doğan sual: —
+
+## c4 p59
+- OCR: orta
+- Okuma: tam
+- İçerik: **Yeni hâdislerin 5 şıkkı**: (1) **hâdisin müessirsiz vukûu**; (2) **mevcut eserin ma'dûm müessire isnadı**; (3) **hâlde vâki eserin, önceden var müessire isnadı**; (4) **devir**; (5) **teselsül**. '**Filozof bunlardan birini iltizam ederse sâni' ispat delili ona fâsid olur; bu makamda kahredici bir sual.**' **Filozofların cevabı**: 'zikrettiğiniz **9 cevap** hakkında söz **iki yönden**: (1) hâsılı **tek harfe döner**: ya 'âlemi îcât için lâzım her şey ezelde hâsıl değildi' ya 'mümkin müreccihe muhtaç değil'. **1. cevaba**: 'sizin 'irâde belirli vakte taalluk etti' sözünüzün hâsılı: **o vakit ezelde hâzır değildi ⇒ âlem ezelde îcâd edilmedi çünkü vaktin hâzır olması hudûsun şartı**.'
+- Netice/hüküm: Mütekellimin 5 şıkkı ve **filozofun 9 cevaba karşı indirgemesi (iki tez: 'ezelde hâsıl değil' / 'müreccihsiz')**.
+- Delil çeşidi: **indirgeme (reductio)**; (T) cedelî-burhânî biçim.
+- Mevzuya bağı: **Fasıl I §3, §8**: filozofun **9 cevabı iki tezle karşılaması**, Fasıl I'in irâde-tahsis cevabının **ne zaman çürüyeceğini** gösterir: (a) 'vakit şartı hâzır değil' (yani zamanın ilk hâsılı) ve (b) 'müreccihsiz tercih'. **F 27-B**: her iki iddiayı ayırt edici ölçüyle test etmek ayrı iş.
+- Doğan sual: —
+
+## c4 p60
+- OCR: orta
+- Okuma: tam
+- İçerik: **Filozofun 9 cevabı tek tek indirgemesi**: **1. (irâde vakte taalluk)**: vakit ezelde hâzır olmadığı için hudûs o vakitte; **eksik şart**. **2. (maslahat)**: maslahat içeren vakit ezelde hâzır değildi; **eksik şart**. **3. (ilim)**: Allah'ın âlemin hâdis olacağını bildiği vakit şart ve ezelde hâzır değildi. **4. (ezelin hudûsa mâni'liği)**: **ezelin inkızâsı** hudûsun şartı, ezelde hâsıl değildi. **5. (imkân illeti)**: âlemin mümkin olması sudûrun şartı, **imkânın illeti ezelde hâsıl değildi**. **6. (muhâl makdûr değil)**: **belirli vakitte vâki, öteki vakitlerde vukûu câizken, muhassıssız ve müreccihsiz** ⇒ **müreccihsiz rüçhân iltizamı**. **7. (zaman hâdis)**: o vakitten önce hiç vakit yok; **vakit hâsıl olmadığı için takdîm imkânsız**; ezelde hâdis olmadı çünkü şartı yok. **8–9**: **müreccihsiz rüçhân**.
+- Netice/hüküm: **Filozofun tespiti: 9 cevap ya 'şart ezelde hâsıl değil' ya 'müreccihsiz rüçhân' — cevaplar illet ve şart mekanizmasına dönüyor.**
+- Delil çeşidi: **indirgeme (her cevabın şart-illet analizi)**; (T) burhânî biçim (kıdem tarafı).
+- Mevzuya bağı: **KRİTİK — Fasıl I §8**: her cevabın **eksik şart** biçimine indirilmesi, **'irâde tahsis eder' cevabının** filozofça **'şartın ezelde eksikliği' olarak okunabildiğini** gösterir; Risale'nin **şart eksikliği yerine 'irâde-ilim tahsis eder' demesi** gerekir.
+- Doğan sual: —
+
+## c4 p61
+- OCR: orta
+- Okuma: tam
+- İçerik: **Sonuç (filozof)**: 9 cevap ya '**müreccihsiz mümkin**' ya '**müessiriyette lâzım olan her şey ezelde hâsıl değildi**'. **'Mümkin müessirden müstağnî' kavli bâtıl, 2 vecihle**: (1) **bedîhî evveliyyât**, ona taʿn bedîhîlere taʿn; (2) **bir mümkinin bir tarafı müreccihsiz râcih olabiliyorsa** hâdislerin hudûsuyla ve mümkinâtın imkânıyla **müreccihe ve müessire iftikârı istidlâl edemeyiz ⇒ sâni' ispat kapısı kapanır**. **'Müessiriyette lâzım olan her şey ezelde hâsıl değildi'**: 'mecmû ezelde yoktu, sonra hâsıl oldu' derseniz: müessirsiz ise muhâl; müessirli ise **kayfiyet taksîmi geri döner**. ⇒ **bu 9 cevap o hücceti cevaplamış değil**. **'Müessiriyette lâzım olan her şey'** kapsamı: **müessirin zâtı, müessiriyet şartları, bütün mânilerin zevâli, münasip vaktin hazırlığı, muteber maslahatlar**; 9 cevap **bunlardan birinin ezelde eksik** olmasında ortak.
+- Netice/hüküm: **Filozofun kesin tezi: 9 cevap kıdem delilini cevaplamıyor.**
+- Delil çeşidi: **reductio (dilemma) + bedîhî iddiası**; (T) burhânî biçim (kıdem tarafı). **[Delil ≠ dava: 'müessiriyette lâzım her şey' kapsamı geniş tutulunca 'vaktin hâzır oluşu' da lâzım kabul ediliyor, bu da hudûs delilinde tartışma noktası.]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §8**: **Risale kıdem tarafının bu tezini açıkça kaydedecek ve cevabını vereceği yer**; F 27-B: filozofun 'dilemma'sının ayırt gücü var (9 cevabı bir kalıba koyuyor).
+- Doğan sual: Hudûs tarafının (Râzî) bu indirgemeye cevabı Kısım 2'de.
+
+## c4 p62
+- OCR: orta
+- Okuma: tam
+- İçerik: **2. makam: her cevabın zayıflığı (filozof)**. **1. cevap ('irâdenin taalluku o vakte vâcib, vâcib illetten müstağnî') bâtıl**, deliller: **1. hüccet**: irâde ihdâsı o vakte gerektiriyorsa **o vaktin hâzır olması müessiriyetin şartlarından**; o vakit **ezelde hâzırsa eser ezelde vâcib**; hâzır değilse **müessiriyette muteber şeylerden biri**, oysa 'müessiriyette lâzım her şey ezelde hâsıl' kat'î burhanla ispatlandı. **2. hüccet**: irâde **başka vakitlerde ihdâsa salih mi, yalnız o vakte mi**? Salihse nisbeti eşit ⇒ tahsis **câiz (mümkin)**, rüçhân **müreccihsiz**, bu bâtıl; müreccih isterse bahis **müreccihin iki tarafa salâhiyeti** üzerine geri döner.
+- Netice/hüküm: 1. cevaba karşı iki hüccet (vakit şart, salâhiyet taksîmi).
+- Delil çeşidi: **reductio (şart/salâhiyet taksîmi)**; (T) burhânî biçim (kıdem tarafı).
+- Mevzuya bağı: **Fasıl I §8**: p63'te devam.
+- Doğan sual: —
+
+## c4 p63
+- OCR: orta
+- Okuma: tam
+- İçerik: (2. hüccet devam): irâde **yalnız o vakte** salihse Allah **muhtâr değil, o işe mûcib bi'z-zât**: 'zâtı o irâdeyi, irâde âlemi o vakitte ihdâsı gerektirir; **mûcibin mûcibi mûcib**; zâtı âlemi o vakitte ihdâsı gerektirir, başka vakitte ihdâs imkânı yok' — bu **'ilâh fâil-i muhtârdır' sözünü zedeler**. **3. hüccet**: 'irâde âlemi o vakitte ihdâsı gerektirdi; **o vakit ezelde hâzır mı değil mi**? Hâzırsa **eser ezelde**; değilse **o vakit hâdis, Allah'ın ihdâsıyla**; Allah **o vaktin ihdâsını belirli vakte tahsis etmeden mi** irade etti, **yoksa belirli vakitte ihdâsı şartıyla mı**? Birincisi ⇒ vakit ezelde, eser kıdem; ikincisi ⇒ **vaktin başka vakte muhtaç olması ⇒ teselsül** (p64).
+- Netice/hüküm: 2. hüccet sonucu: **salâhiyet tek vakte ise mûcib bi'z-zât**; 3. hüccet: **vaktin kendisinin ihdâsı ya ezelî ya teselsül**.
+- Delil çeşidi: **reductio**; (T) burhânî biçim (kıdem tarafı). **[Delil ≠ dava: 'vaktin ihdâsı bir vakit ister' öncülü zamanı bir 'şey' sayıp başka zamana zarf yapıyor (c4 p17 ile aynı) — nizâ noktası.]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §8**: 'mûcibin mûcibi mûcib' zinciri **c3 p286'da Râzî'nin Mu'tezile'ye karşı kullandığı aynı silah**: **kıdem tarafı onu hudûs tarafına döndürüyor**.
+- Doğan sual: —
+
+## c4 p64
+- OCR: orta
+- Okuma: tam
+- İçerik: (3. hüccet devam): teselsül **bir anda** olursa **muhâl** (sonu olmayan sebep-müsebbep bir anda muhâl); **her biri öncekinden mesbûk, evvelsiz** olursa bu, **'Allah bu hâdisleri ezelden ebede îcâd eder'** demektir — **matlûb (kıdem tarafı)**. **4. hüccet**: 'irâde önceki vakitte ihdâsı gerektirmedi, o vakitte gerektirdi ⇒ **fiil vakti terk vaktinden bir hâssa ile ayrışır**; hâssa sebebiyle irâde fiili orada gerektirdi ⇒ **vakitlerin kıdemi** lâzım; hasım buna kail değil.' **5. hüccet**: 'o vakit diğer vakitlere **mâhiyetin tamamında müsâvî mi**? **Evetse** irâdenin o vakte nisbeti diğer vakitlere nisbeti gibi ⇒ **'o vakitte taalluk vâcib, diğerinde muhâl' bâtıl**; **değilse** zamanın her cüzü başka mâhiyet ⇒ **vaktin geçmesi bu hâdislerin ardışıklığı** ⇒ **'her hâdis başka hâdisle mesbûk, evvelsiz'**.' **6. hüccet (başlıyor)**: 'Allah ezelde âlemi ileride belirli vakitte ihdâs etmeyi murad etti' demek Allah'ın ezelde **ileride îcâda azmettiğini** ifade eder (devam).
+- Netice/hüküm: 3.–5. hüccet: kıdem tarafı 'vakit ihdâsı' ve 'irâde-vakit ilişkisi'ni **kıdem-i zamana** bağlıyor.
+- Delil çeşidi: **reductio + taksîm**; (T) burhânî biçim (kıdem tarafı).
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §6.3**: **zamanın hudûsu iddiası** ⇒ 'her hâdis başka hâdisle mesbûk' silsilesine bağlanıyor; **Risale'nin 'zaman hâdis' cümlesi c4 p13–18 (mütekellim cevabı) ve c4 p49 (7. cevap) ile eşleşmeli**.
+- Doğan sual: —
