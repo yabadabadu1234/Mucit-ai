@@ -865,3 +865,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **reductio (gaye/maslahat/irâde cevaplarına önceden itiraz)**; (T) burhânî biçim (kıdem tarafı).
 - Mevzuya bağı: **KRİTİK — Fasıl I §8**: Risale'nin 'irâde-tahsis' cevabına **kıdem tarafının önceden hazırladığı üç karşı çıkış: gaye, maslahat, irâde**; **irâde cevabına karşı 'o vaktin hâsılı da Allah'ın ihdâsı ise soru döner'**: bu, c4 p73 ('soru her takdirde döner ⇒ sıhhat') ile **aynı örüntü**.
 - Doğan sual: —
+
+## c4 p97
+- OCR: orta
+- Okuma: tam
+- İçerik: (4. delil sonu; kıdem tarafı): '…**uygun vakit gelince fâil o işe yöneldi**; bu, **vakitlerin ve değişimlerin Fâil-i Evvel'in ihdâsı olmadan hâsıl olduğunu** gerektirir; bu muhâl. Bu soruların iptalinin tamamı **önceden geçti, tekrarında fayda yok**.' **'Burada fâil olmasından (fâiliyet) çıkarılan vecihlerin sonu; muvaffakiyet Allah'tandır.'**
+- Netice/hüküm: **Fasıl 2 (fâiliyet vecihleri) bitti: 4 delil (izâfe, müessiriyet zâid, kâdiriyet-halk, hakîm fâil)**.
+- Delil çeşidi: —; (T) sonuç.
+- Mevzuya bağı: **Fasıl I §3, §8**: p89–97: **kıdem tarafının 4 delili ve hudûs tarafına hazır itirazları** özet olarak kaydedildi (özet için 'cilt 4 bölüm özeti' tablosuna girecek).
+- Doğan sual: —
+
+## c4 p98
+- OCR: boş
+- Okuma: tam (içerik yok)
+- İçerik: Yok.
+- Netice/hüküm: Yok.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c4 p99
+- OCR: kötü (başlık)
+- Okuma: kısmî (başlık)
+- İçerik: Başlık: '**Kudret sîgasından çıkarılan deliller**' (3. makâle/ fasıl başlığı; numara okunamadı).
+- Netice/hüküm: Yok (başlık).
+- Delil çeşidi: —
+- Mevzuya bağı: c3 Bâb 2 (kâdir/mûcib) ile bağ.
+- Doğan sual: —
+
+## c4 p100
+- OCR: boş
+- Okuma: tam (içerik yok)
+- İçerik: Yok.
+- Netice/hüküm: Yok.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c4 p101
+- OCR: orta
+- Okuma: tam
+- İçerik: **'Kudret sîgasından çıkarılan delillerde' (kıdem tarafı)**. **Filozoflar: 'kâdir = müessir olan ve eserinin ondan sudûrunu bilen'.** **Bazılarının tanımı**: 'müessir ya **müessir olur ki müessir olmaması muhâl** (mûcib), ya **müessir olur ki müessir olmaması muhâl değil** (kâdir)'; **kâdir = fiil ve terke, muhtelif dâîlere göre temekkün eden**. Bu sabit olunca: '**ittifak: Allah'ın eserlerdeki te'sîri 1. kısım (mûcib) yoluyla olsa eserlerin devâmı onun devâmıyla lâzım**; **bir şeyin başka şeyde 2. kısım (sıhhat yoluyla) te'sîri imkânsız** ⇒ 1. kısım (**vücûb yoluyla te'sîr**) — **matlûb hâsıl**.' Deliller, 'sıhhat yoluyla te'sîrin imtinâını gösteren vecihler'.
+- Netice/hüküm: **Kıdem tarafının 3. Makâle iddiası: 'sıhhat yoluyla te'sîr (kâdir = fiil-terke temekkün) imkânsız; te'sîr vücûb yoluyla'.**
+- Delil çeşidi: **taksîm (mûcib/kâdir)**; (T) burhânî biçim (kıdem tarafı).
+- Mevzuya bağı: **KRİTİK — Fasıl I §8, c3 Bâb 2 (kâdir/mûcib)**: 'kâdir = fiil ve terke temekkün' tanımı **Risale'nin muhtâr tanımı**dır; kıdem tarafı bu tanımı **üç hâl (bekâ/hudûs/adem)** üzerinden çürütmeye çalışıyor (p102–104).
+- Doğan sual: —
+
+## c4 p102
+- OCR: orta
+- Okuma: tam
+- İçerik: **1. hüccet (kâdir = fiil ve terke temekkün ⇒ bâtıl)**: 'kâdir **fiile ve terke sıhhat yoluyla temekkün** ederse **fiilin bekâsı hâlinde, hudûsu hâlinde ya ademi hâlinde** kâdir olur; **üç kısım da bâtıl** ⇒ bu tefsirle kâdiriyet iddiası bâtıl. **Bekâ hâli** imkânsız: **mevcûdun îcâdı ve tahsîl-i hâsıl (muhâl)**. **Hudûs hâli** imkânsız: bu kâdiriyet 'terk yerine fiil, fiil yerine terke temekkün'; **fiilin hudûsu hâlinde bu temekkün muhâl**, çünkü hudûs hâlinde fiil **ma'dûm olamaz** (yoksa vücûd ve ademin aynı anda hâsılı); fiilin ademi muhâl olunca **terk imkânı muhâl**. **Adem hâli** imkânsız: **ademde fiilin vücûdu muhâl**; vücûdu muhâlse **îcâdına kudret de muhâl**. ⇒ **fiil ve terke kudret bu üç hâlde imkânsız**.' **İtiraz**: 'bu, **mûcib için de** geçerli; **mûcibi de nefyetmeniz gerekir**; bu **mutlak müessirin nefyi**.'
+- Netice/hüküm: **Kıdem tarafı: 'kâdir = fiil-terke temekkün' tanımı üç hâlde (bekâ, hudûs, adem) tutmuyor.**
+- Delil çeşidi: **taksîm/reductio (kudretin hâl analizi)**; (T) burhânî biçim (kıdem tarafı). **[Delil ≠ dava: 'kudret bir hâlde (an) fiil-terk iki tarafına temekkün olmalı' öncülü, kudretin ezelî sıfat olması ve taalluku (irâde ile) tartışmasını atlıyor; kelâmcı 'kudret fiilden önce taalluk eder' cevabı p103'te.]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §8, c3 Bâb 2, c3 p20–182**: **kudretin hangi hâlde fiile kadir olduğu (kudretin taalluku)** meselesi; Risale **'kudret fiilden önce (fiil hâli değil) taalluk eder' cümlesini açıkça yazmalı**.
+- Doğan sual: —
+
+## c4 p103
+- OCR: orta
+- Okuma: tam
+- İçerik: (İtiraz devam): 'bu mûcibe de vârid, mûcibi nefyetmek gerekir; bu **mutlak müessirin nefyi**.' **Ayrıca**: 'kâdir **fiilin vücûdundan önce onu ikinci zamanda îcâda kâdirdir** denemez mi?' **Cevap 1 (kıdem tarafı)**: '**mûcib illet, ma'lûl mevcutken mevcûttur ve bunda imtinâ' yok**; **kâdir 'fiil ve terke temekkün' tefsîrinde ise fiil vücûdu hâlinde kâdir olması imkânsız**: terke temekkün ancak terk **kendinde mümkin** ise; fiilin hudûsu hâlinde fiilin ademi muhâl, çünkü hudûs hâlinde vücûd; **aynı hâlde mevcut ve ma'dûm** (muhâl) ⇒ **kâdirin fiil-terke temekkünü fiilin vücûdu hâlinde muhâl**; **mûcib müessirin eserdeki müessiriyeti eser vücûdu hâlinde muhâl değil** ⇒ fark.' **Cevap 2**: 'kâdir, fiilin ademi hâlinde **ikinci zamanda îcâda** kâdirdir' 2 ihtimal: **(a)** ademi hâlinde ademinin vaktinde îcâda kâdir; **(b)** ademi hâlinde **ikinci zamanda** îcâda kâdir; **(a) bâtıl** (vücûdun ademi hâlinde vücûdu aynıyla imtinâ'); (p104'te).
+- Netice/hüküm: **Kıdem tarafı: mûcibe vârid değil (eser mevcutken müessir mevcut olabilir); 'ikinci zamanda îcâda kâdir' cevabının iki ihtimali.**
+- Delil çeşidi: **mantıksal ayırma + taksîm**; (T) burhânî biçim (kıdem tarafı).
+- Mevzuya bağı: **Fasıl I §8**: p104'te devam.
+- Doğan sual: —
+
+## c4 p104
+- OCR: orta
+- Okuma: tam
+- İçerik: (Cevap 2 devam): '**(b)** ademi hâlinde ikinci zamanda îcâda kâdir olma da **bâtıl**: fiili ikinci zamanda **îkâ'a kudret, ikinci zamanın hâzır olmasına şartlı**; **ikinci zamanın birinci zamanda hâzır olması aklen imkânsız**; muhâle mevkuf olan muhâl ⇒ kâdirin ikinci zamanda îkâ'a kâdir olması **muhâl, aklen mümteni'**; ⇒ **kâdir 'fiil ve terke temekkün' tefsîriyle** fiilin **bekâ, hudûs veya ademi hâlinde** kâdir olamaz, hepsi bâtıl ⇒ **bu tefsîrle kâdir iddiası muhâl.**' **2. hüccet**: 'kâdir bu tefsirle ise **kâdiriyeti ezelde sabit olur ya da olmaz**; iki kısım da bâtıl. **Ezelde imkânsız**: **kâdir, ademden vücûda ihrâca güç yetiren**; **kudret, makdûrun kendinde imkânına şartlı**; fakat **ademden vücûda çıkışın hakîkati ezelde muhâl**: bu hakîkat **ademle mesbûkiyet** gerektirir, ezelin hakîkati **gayrle mesbûkiyeti nefyeder**, cem' muhâl ⇒ **hudûsun ezelde hâsılı aynıyla muhâl** ⇒ makdûr olamaz ⇒ kâdir ona kâdir olamaz. **Kâdiriyet hâdis** olsa **başka kâdiriyete muhtaç ⇒ teselsül** (devam p105).
+- Netice/hüküm: 1. hüccetin sonu ve 2. hüccet (kâdiriyet ezelî mi hâdis mi).
+- Delil çeşidi: **reductio + dilemma**; (T) burhânî biçim (kıdem tarafı). **[Delil ≠ dava: 'hudûsun ezelde muhâl olması ⇒ makdûr olamaz' öncülü hudûs delilinin mütekellim cevabını (c4 p48, 4. cevap) 'muhâl makdûr değil' ilkesini kıdem tarafı aleyhine de kullanır — simetri.]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §8**: 'kâdirin ezelde hudûsa kâdir olması' **ezelîlik/hudûs bağdaştırma sorunu** (c4 p35–40 'imkânın evveli' aporisiyle **aynı düğüm**); Risale'nin cevabı **'kudret ezelî, mekdûr hâdis; taalluk irâde ile' + 'ezelde hudûsun vukûu muhâl, imkânı değil'** olacaktır (kaynaklı).
+- Doğan sual: —
