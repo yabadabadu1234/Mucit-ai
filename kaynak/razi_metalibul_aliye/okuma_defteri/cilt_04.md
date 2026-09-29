@@ -2233,3 +2233,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **cedelî + misal**; (T) cedelî-ikna'î; **kendi tenkidim**: 3. cevap adet misalini 'lâzım-ı gayr-i muayyen'in imkânına delil yapıyor; hasım 'mevcut gayr-i muayyen olamaz' dedi; **Râzî cevabı 'ma'nâ' düzeyinde tutuyor, vücûd düzeyinde değil** (⊬ yeterlilik).
 - Mevzuya bağı: **KRİTİK — Fasıl I §3**: **'mekân = bu'd' Râzî'nin kendi tercihi (Eş'arî ana çizgisinde 'mekân = cismin kapladığı hayiz/bu'd' tartışmalı, ⊬ Sünnî ittifak değil)**; Risale ana metinde **mekân teorisine girmez**, 'Râzî'ye göre' notu. Hayûlâ-sûret reddi c(?) 'hayûlâ ve sûret bahsi' referansı (⊬ hangi ciltte).
 - Doğan sual: 'Hayûlâ ve sûret bahsi' hangi cilt/sayfada? (Cilt 5–7'de aranacak; bulununca çapraz kontrol.) Delil 1'in 2. ve 3. mukaddimesi p249'da devam ediyor mu?
+
+## c4 p249
+- OCR: orta
+- Okuma: tam
+- İçerik: **1. Makâle, 2. Fasıl: 'cismin ezelde müteharrik olmasının imtinâı' delilleri.** **Hüccet 1 (tezâyüd/tatbîk ailesi)**: '**mazi hareketler ziyâde-noksan kabul eder; ziyâde-noksan kabul eden her şey mütenâhîdir ⇒ mazi hareketler mütenâhî.**' **1. mukaddimenin on vechi**: **(1)** Zuhal 1 devir yaparken Güneş 30 devir yapar ⇒ Güneş'in devir sayısı Zuhal'inkinden 30 kat fazla; **(2)** bir yıl 12 ay, bir ay 30 gün ⇒ günler aylardan, aylar yıllardan çok; **(3)** gün+gece bir bütün, gün-gece ikiye bölünür ⇒ bütünün adedi gündüzlerin iki katı.
+- Netice/hüküm: **Hudûs tarafının delili: 'mazi sonsuz olsa ziyâde-noksan olurdu'.**
+- Delil çeşidi: **misal + ilke (tezâyüd)**; (T) burhânî biçim, öncüller ispat ister (Râzî p251–'de 2. mukaddimeyi kuruyor).
+- Mevzuya bağı: **KRİTİK — Fasıl I §3 (teselsül/hevâdis-i lâ evvele lehâ)**: **'mazi sonsuzluk imtinâ'ı' delil ailesi**; c2 p77–78'de Râzî 'sonsuz mazi' iddiasını 'mecmû' yok, her hâdis mesbûk' diye okumuştu (⊬ çapraz kontrol, p253'teki mecmû' itirazı bu okumayla aynı çizgide).
+- Doğan sual: —
+
+## c4 p250
+- OCR: orta
+- Okuma: tam
+- İçerik: **1. mukaddimenin vecihleri devamı**: **(4)** her gün mazi mecmûa 1 gün ekler ⇒ önceki mecmû sonrakinden noksan, artış-noksan hep sürer; **(5) tatbîk**: bugünden ezele mazi (bir cümle) ile Tufan'dan ezele mazi (ikinci cümle) — birincisi daha fazla; iki cümle yakın uçtan çakıştırılırsa: ya uzak uçta tefâvütsüz uzar (**fazla = noksana eşit, muhâl**) ya tefâvüt görünür (bir cümle ötekinden noksan); **(6)** her devirde bir şey hâdis olup **bâkî** kalsın: devirler sonsuzsa mecmû sonsuz sayı; filozofların mantıkî nefisleri misali: her devirde nefisler hâdis, **nefisler ademi kabul etmez** ⇒ bugünkü nefis mecmûu sonsuz; oysa Tufan zamanındaki sayı bugünkünden azdır (bedîhî).
+- Netice/hüküm: **Tatbîk (çakıştırma) delili ve filozofların 'ebedî nefis' ilzâmı burada yazıldı.**
+- Delil çeşidi: **tatbîk (reductio) + ilzâm**; (T) burhânî biçim; **F 27-B**: ayırt ediyor mu? — tatbîkin sonsuz kümeye sağladığı 'bir-bir eşleme' hasım tarafından 'fazla=noksan' diye okunur (p252–254 itirazları).
+- Mevzuya bağı: **Fasıl I §3**: **tatbîk delili kelâm literatüründe klasik**; Risale'de **'kalp çakıştırma'** olarak yazılırsa dereceyi **'öncüle bağlı'** işaretlemeli (Râzî hasım itirazlarını kendisi aktarıyor, p252–256).
+- Doğan sual: —
+
+## c4 p251
+- OCR: orta
+- Okuma: tam
+- İçerik: **Vecihler sonu**: **(7)** her devirde tek nefis hâdis olup bâkî ⇒ bugün sonsuz nefis; her devirde çok nefis olduğu biliniyorsa bugünkü sayı sonsuzun katları ⇒ devirlerin sayısı zâid-nâkıs kabul eder; **(8)** devirlerin sayısı ya şef' ya vitr; şef' ise ondan bir fazla olan vitrden noksan, vitr ise bir fazla olan şef'ten noksan; **(9)** devirlerin bir sayısı var; onun yarısı bütününden azdır; yarısı mütenâhî ⇒ katı mütenâhî, mütenâhînin katı mütenâhî; **(10)** her feleğin ayrı devirleri var: Âzam felek, sâbit yıldızlar, Zuhal… hepsi sonsuzsa toplam Âzam feleğin devirlerinden çoktur. **2. mukaddime (zâid-nâkıs ⇒ mütenâhî) takrîri**: 'bir şey ötekinden noksansa, o şey **hiçbir şey kalmayacak yere** varır, oysa ziyâde tarafta bir şey kalır; kendisine ulaşılıp tükenen her adet mütenâhî; noksan mütenâhî ise ziyâde de **mütenâhî bir adet kadar** fazla ⇒ mütenâhî.'
+- Netice/hüküm: **Hudûs tarafının 2. mukaddimesi: 'noksan adet mütenâhî, ziyâde noksan+mütenâhî ⇒ mütenâhî'.**
+- Delil çeşidi: **ilke + taksîm**; (T) burhânî biçim; **kendi tenkidim**: 2. mukaddime 'noksan olan mütenâhîdir' öncülünü **sonsuz kümelerin kendinde noksanlığı tanımlarken** kullanıyor — bu öncül **sonluya has** bir intuition olabilir (⊬ çapraz kontrol: p253–254 itirazları tam bu noktaya).
+- Mevzuya bağı: Fasıl I §3: 'şef'-vitr' vechi (8) sonsuz kümenin şef'/vitr olamayacağı iddiasıdır — **sonsuzun şef/vitr ayrımına girmemesi hasmın cevabı olacak**; Risale ana metne **bu vecihleri sıralamaz**, tatbîk ve tezâyüd çekirdeğini alır.
+- Doğan sual: 10 vecihten hangileri hasmın itirazına dayanıyor? (p252–256 itirazlarının hangi vecihe yöneldiği ayrıştırılmalı.)
+
+## c4 p252
+- OCR: orta
+- Okuma: tam
+- İçerik: **Delil 1'in tamamı ('Allah bilir'); ardından hasım itirazı (1)**: '**bu delilin mihveri feleğin hareketinin adet ve cüzleri olduğudur; bu men' olunur.**' Mukaddime: cisim mesafenin başından sonuna hareket etse bu **tek bir harekettir**, bitişik parçalardan ve ardışık cüzlerden mürekkep denemez — aksi hâlde mesafe 'lâ yetecezzâ cüz'lerden mürekkep' olurdu, bu **cevher-i ferdi nefyeden delillerle bâtıl**. Hareketin başı-sonu bizim âlemde **sükûndan başlayıp sükûna varmasından**; sükûn olmasaydı başı-sonu olmazdı. Filozofların feleği **ezelen ve ebeden tek muttasıl hareket** ⇒ adet ve cüz yok ⇒ ziyâde-noksan yok. Sonra (2) 'kabul edelim ki devirler var: hüküm **her bir devire** mi, **mecmûa** mı?' Her birine hüküm ⇒ mütenâhî, buna itiraz yok.
+- Netice/hüküm: **Hasım itirazı (hareket vâhiddir, adet yok) ve (mecmû'a hüküm verilemez) itirazı; Râzî cevabı p257'de aranacak (⊬).**
+- Delil çeşidi: **itiraz (cedelî) + taksîm**; (T) cedelî.
+- Mevzuya bağı: **KRİTİK — Fasıl I §3**: **hareketin tek-muttasıl olması itirazı 'cevher-i ferd yok' öncülüne bağlı**: Risale'nin tatbîk delili bu itirazı kapatmadan 'burhânî' yazılamaz; **Râzî'nin kendi cevabı ⊬ (sonraki sayfa)**.
+- Doğan sual: Râzî bu itirazı (hareket vâhid, sükûn olmazsa adet yok) nasıl cevaplıyor?
+
+## c4 p253
+- OCR: orta
+- Okuma: tam
+- İçerik: **İtiraz (2) devamı — mecmûa hüküm**: '**şey ancak mütenâhî ise mecmû' ve cümle diye nitelenir**; 'mazi devirlerin mecmûu şöyle' demek mazînin mütenâhî oluşunda sahih ⇒ **öncülün sıhhati matlûba bağlı ⇒ devir**.' **İkinci vech**: '**mazi devirlerin mecmûunun hiç vücûdu yoktur**: vücûd olsa ya ayânda ya zihinde; ayânda değil (mecmû hiçbir mazi/hâl/gelecek anda hâsıl olmadı, her anda tek devir var); zihinde de değil (zihin sonsuz şeyi tafsîlen hazır edemez) ⇒ **vücûdu olmayan şeye ziyâde-noksan kabul hükmü verilemez** (kabul, kabul edenin vücûduna bağlı).'
+- Netice/hüküm: **Hasmın iki itirazı: (a) 'mecmû' sonlu şeye söylenir ⇒ devir; (b) 'mecmû' vücûdsuz ⇒ hüküm yok.**
+- Delil çeşidi: **itiraz (devir + vücûd)**; (T) cedelî-analitik.
+- Mevzuya bağı: **KRİTİK — Fasıl I §3**: **'mecmû' vücûdsuz' itirazı** = c2 p77–78'de Râzî'nin kendi okuması ('mecmû yok, her hâdis öncekine mesbûk, ilk yok'); yani **Râzî bu itirazı kendi görüşüne yakın buluyor mu?** (⊬ p254'te 'Şeyh er-Reîs'in dayandığı suâl' notu: hasım = İbn Sînâ çizgisi).
+- Doğan sual: Râzî bu delili yine de kabul edip mi savunuyor yoksa bu itirazı 'kendi kabulü' mü sayıyor? (Kısım 2 boyunca izlenecek.)
+
+## c4 p254
+- OCR: orta
+- Okuma: tam
+- İçerik: **'Bu, Şeyh er-Reîs'in (İbn Sînâ) tekiyeh ettiği suâldir.'** **İtiraz (3)**: 'kabul edelim mecmû'a hüküm sahih; **ziyâde-noksan kabul eden mütenâhî** neden? İki sonsuz da sonsuza gidip hiçbiri kesilmese, biri ötekinde olmayana **müşteşil** olabilir; ne delil imkânsızlığına?' **İtiraz (4)**: 'sizin delil **nakz olunur**' — **nakız 1**: 'Allah sonsuz ma'lûmâtı bilir; her ma'lûma izâfet-i ilim ötekinden **başkadır** (birini bilmekle ötekini bilmekte şüphe mümkün ⇒ izâfetler gayr) ⇒ Allah'ın zâtında **sonsuz izâfetler** ⇒ sizin 'sonsuz imtinâ'' kaidenizi çürütür. 'İzâfetler ayânda vücûdsuz' diye kaçış: biz izâfetle ancak 'bu ma'lûmu ve şu ma'lûmu bilmesi'ni kastediyoruz; nefsü'l-emirde yoksa **ilminin bu ma'lûmlara izâfeti** nefyolur.'
+- Netice/hüküm: **Hasım nakızları başladı (bilgi izâfetleri); Allah'ın ilminin sonsuzluğu (Sünnî akide) delilin kendi lâzımı gibi sunuluyor.**
+- Delil çeşidi: **nakz (cedelî)**; (T) cedelî.
+- Mevzuya bağı: **KRİTİK — Fasıl I (§3 ↔ ilim)**: nakızların hepsi **'Allah'ın ma'lûmâtı sonsuz' kabulüne** dayanıyor; **bu kabul Sünnî akidenin gereğidir** — Risale 'sonsuz imtinâ'' iddiasını **'mevcûdât / ayânda fiilî sonsuzluk' ile sınırlamak zorunda** (ilim izâfeti ve mümkinât kudreti bu iddiadan ayrılmalı, ⊬ Râzî cevabı).
+- Doğan sual: Râzî bu 6 nakza nasıl cevap veriyor (sıfat sonsuzluğu ≠ mazi hareket sonsuzluğu)? p257+.
+
+## c4 p255
+- OCR: orta
+- Okuma: tam
+- İçerik: **Nakız 1 sonu**: 'izâfetler nefsü'l-emirde hâsıl ise soru kaçınılmaz.' **Nakız 2**: '**Allah her ma'lûmu bilir; o hâlde bir şeyi bilince o şeyi bildiğini de, bildiğini bildiğini de bilir… sonsuza dek** ⇒ tek ma'lûmda **sonsuz mertebeler**; Allah'ın ma'lûmâtı sonsuz, her ma'lûm için sonsuz ilim ⇒ **'sonsuz ilimler bir kere değil sonsuz kere'**, bu 'sonsuz adetlerin vücûda girmesi imtinâ'' iddianızı bozar.' **Ön cevap (hasım ağzından)**: 'ilmin ilmi ilmin kendisidir; ayrıca mertebeler fiilen değil **kuvveden**.' **Hasım cevabı**: 'birinci söz zayıf (ma'lûm ve ilim iki ayrı şey); ikinci söz zayıf (Allah o mertebeleri fiilen değil kuvveden bilirse **cehl (nakıslık) lâzım gelir**, ayrıca Allah **hevâdis mahalli** olur, çünkü kuvvede olan fiile çıkabilir).' **Nakız 3**: 'Allah tüm mümkinâtı îcâda muktedir; mümkinât çeşitleri sonsuz; her birinin îcâd imkânı ötekinden başka ⇒ aynı suâl.'
+- Netice/hüküm: **Nakızlar 2–3: ilim-ilim-ilim mertebeleri ve mümkinât imkânları.**
+- Delil çeşidi: **nakz**; (T) cedelî.
+- Mevzuya bağı: **Fasıl I ilim/kudret sonsuzluğu**: Sünnî akidede **ilmin sonsuzluğu ve tafsîlliği** ittifaktır; nakzın 'kuvveden bilir' kolu **cehl ve hulûl-i havâdis** ilzâmıyla kapatılıyor (Râzî-sesli reddi: kuvveden ilim kabul edilemez). **Risale'ye:** 'Allah'ın bilgisi kuvve değil fiildir' cümlesi buradan güvence alır (⊬ hangi ciltte sistematik).
+- Doğan sual: Râzî 'sonsuz mertebe ilim' nakzına cevabı 'vücûd-ı fiilî vs itibârî' ayrımıyla mı veriyor? (p257+.)
+
+## c4 p256
+- OCR: orta
+- Okuma: tam
+- İçerik: **Nakız 3 sonu.** **Nakız 4**: her şey ya vâcib, ya mümteni', ya mümkin; üçü de ma'lûm; **makdûr yalnız mümkin** ⇒ makdûrât mertebeleri ma'lûmât mertebelerinden **az**, oysa ikisi de sonsuz. **Nakız 5**: **her vahdet ikinin yarısı, üçün üçte biri, dörtün dörtte biri… sonsuza dek** ⇒ sonsuz nisbetler hâsıl. 'Nisbetler ayânda yok, zihnî i'tibâr' kaçışı: 'zihnin farzına bağlı şey nefsü'l-emirde vâcib-hâsıl olmaz; vahdetin ikinin yarısı olması **vâcib-sübût, lâzım, tebeddül edilmez**; nasıl 'yalnız zihin farzıdır' denir?' **Nakız 6**: bin'in **sonsuz kere katlanması** 500'ün sonsuz kere katlanmasından **fazla** (?): 'burada ziyâde-noksan sonsuzluk yanında hâsıl'; 'adet mertebeleri vücûdsuz i'tibârî' kaçışı: 'iki üç'ü, üç ikiyi **tekvîn eder; bu tekvîn ve tekavvüm tebeddül edilmez**; nasıl farz denir?'
+- Netice/hüküm: **Hasım 6 nakızı tamam: (1) ilim izâfetleri (2) ilim-ilim (3) kudret imkânları (4) makdûr<ma'lûm (5) vahdet nisbetleri (6) katlama serileri; hepsi 'sonsuzluk mevcut ve ziyâde-noksan kabul eder' iddiasını taşıyor.** **Râzî'nin cevabı p257+ (⊬).**
+- Delil çeşidi: **nakz (matematik + ilâhî sıfat)**; (T) cedelî-analitik; **kendi tenkidim**: Nakız 6'nın sayısal ifadesi OCR'de kısmen hasarlı ('bin' ve '500' değerleri okundu, oran iddiası kısmî); hüküm bağlanmadı.
+- Mevzuya bağı: **KRİTİK — Fasıl I §3**: Nakız 5–6 **'sonsuz nisbetlerin vücûdu' ⇒ matematiksel sonsuzun tafsîlî şeyler olarak mevcûdiyeti** ile ilgilidir; **Risale delili 'ayânda fiilî sonsuz imtinâ'' diye daraltırsa nakızlar dışta kalır**, Râzî'nin buradaki cevap kolunu (⊬) görmeden 'burhânî' işaretlenmez.
+- Doğan sual: 6 nakzın cevap ayrımı (sıfat / imkân / nisbet / katlama) Râzî'de nasıl? Cilt 4 p257+'da aranacak.
