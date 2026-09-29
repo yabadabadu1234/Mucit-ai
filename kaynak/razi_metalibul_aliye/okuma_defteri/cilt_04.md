@@ -721,3 +721,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **cevap (hareket vechi ⇒ kutup) + delil borcunu ters çevirme**; (T) cedelî.
 - Mevzuya bağı: **Fasıl I §8**: p81+'da devam.
 - Doğan sual: —
+
+## c4 p81
+- OCR: orta
+- Okuma: tam
+- İçerik: (2. nakızın cevabı devam; kıdem tarafı): 'bu takrîrle **belirli feleğin cirminin belirli hareketle ihtisası müreccihsiz rüçhân** olurdu; **feleğin zâtının bütün muhtelif hareket çeşitlerine kabil olduğunu ispat etmek sizin borcunuz**, ancak o zaman nakız vârid olur; bu mukaddime **kendiliğinden bedîhî değil**: doğudan batıya hareket batıdan doğuya harekete **zıt ve muhâlif**; bir şeyin bir sıfata kabil olması onun **zıddına** kabil olmasını gerektirmez; **mâhiyetleri muhtelif şeyler lâzımlarda eşit olmaz**; bu felek **yalnız bu hareket çeşidine kabil** olabilir; **bizim delilimiz farklı**: âlem o vakitte hâdis, ondan önce mümteni' olsa **'zâtî imtinâ'dan zâtî imkâna intikal' (muhâl)**; burada felek bir hareketten başkasına intikal etmiyor, hâsıl olan yalnız bu, 'mümkin yalnız bu, diğerleri ebediyen mümteni'' denmesi uzak değil ⇒ **iki bâb arasında fark**.' **Hudûs tarafının (itiraz)**: 'bu fark ancak bu hareketin diğer hareketlerden **mâhiyetçe farklı** olduğu ispatlanırsa; **delil: hareket bir cihetten başka cihete intikaldir**; **cisimler tam mâhiyette müsâvî**' (p82).
+- Netice/hüküm: Kıdem tarafının 2. nakıza cevabı: **delil borcu hudûs tarafında; mâhiyet farkı ihtimali**.
+- Delil çeşidi: **mâhiyet-lâzım ilkesi + delil borcu tevcihi**; (T) cedelî.
+- Mevzuya bağı: **Fasıl I §8**: kadîm feleğin hareket çeşitleri üzerine tartışma **Risale'ye alınmaz**; **'delil borcu kimde' usûl ilkesi** ders kutusu.
+- Doğan sual: —
+
+## c4 p82
+- OCR: orta
+- Okuma: tam
+- İçerik: (Hudûs tarafının itirazı devam): 'cisimler tam mâhiyette müsâvî olduğundan **bir şeye sahih olan misline sahih**; en büyük felek doğudan batıya, sabit yıldızlar feleği batıdan doğuya hareket ediyor; **cisimlerin tümü mütemâsilse bu iki felekten her biri ötekinin hareketine kabil** ⇒ ilzâm döner.' **Kıdem tarafının cevabı: 'Bu kelâm zayıf.'** **(1)** 'bu hareketlerin mâhiyetçe farklı olduğuna **delil getirmek bize lâzım değil**: biz 'âlemin belirli vakte ihtisası müreccihsiz rüçhân' dedik, siz 'aynı ilzâm harekette de lâzım' dediniz; **'felek bütün hareket çeşitlerine eşit kabil' delilini getirmezseniz ilzâmınız tamam olmaz**. **(2)** 'hareket **cinsî bir mefhum**, altında birçok tür; her tür başka türden **mukavvim bir fasılla** ayrılır; **merkezden çevreye hareket çevreden merkeze harekete mâhiyetçe muhâlif**, ikisi de bir hayyizden başka hayyize intikal olmasına rağmen.' **(3)** 'cisimlerin **tam mâhiyette müsâvî** olması zayıf bir mukaddime (p83).'
+- Netice/hüküm: Kıdem tarafı 2. nakıza cevap: **delil borcu, hareketin cinsî mefhum olması, cisim mütemâsilliği iddiasının zayıflığı**.
+- Delil çeşidi: **cedelî (delil borcu; cins-fasıl)**; (T) cedelî.
+- Mevzuya bağı: **Fasıl I §8**: p83'te devam.
+- Doğan sual: —
+
+## c4 p83
+- OCR: orta
+- Okuma: tam
+- İçerik: (Kıdem tarafı 3. cevap): 'cisimlerin tam mâhiyette müsâvî olması **zayıf mukaddime**; kabul edilse de **hükemânın mezhebi**: cisimlik **maddede hâl sûret**; her feleğin maddesi diğerinin maddesine **muhâlif**; iki felekten birinin bir hareket çeşidine kabil olması **onun bütün hareket çeşitlerine kabil olmasını gerektirmez**; bu yüzden **felekler harq ve iltiyâm kabul etmez**. **3. nakız: kevkeb yerleşimi**: 'bu ilzâm **zor ve müşkil**; söylenebilecek üç vecih': **(1)** hükemânın 'felek basit' delili **yalnız en büyük felek (cihetleri sınırlayan muhaddid)** için; **öteki felekler için basit olduklarına delil yok**; kevkebler **diğer feleklerde yerleşik**; en büyük felekte kevkeb yok; **tabiatı kevkeb yüzünden bazı cihetlerde farklılaşan feleğin basitliği delillendirilmedi; basitliği ispatlı olanda kevkeb yok** ⇒ soru zâil. **(2)** (p84).
+- Netice/hüküm: **Kıdem tarafı 3. nakıza (kevkeb yeri) 1. cevap: 'basit olan feleğe kevkeb yerleşmiş değil'.**
+- Delil çeşidi: **cedelî (kapsam sınırlaması)**; (T) cedelî. **Kadîm astronomi; Risale'ye alınmaz.**
+- Mevzuya bağı: p81–88 bloğu **kadîm kozmoloji**; **Fasıl I §8**: 'tahsis müreccihsiz olmaz' ilkesinin **cismânî örneklere uygulanmasında çıkan zorluk** için kaynak; ana metne alınmaz.
+- Doğan sual: —
+
+## c4 p84
+- OCR: orta
+- Okuma: tam
+- İçerik: **3. nakız cevabı devam**: **(2)** 'kavm 'felekte önce oyuk hâsıl, sonra kevkebler yerleşti' demiyor (bu harq-iltiyâm gerektirir); **kevkebin hâsılı feleğin hâsılıyla mukârin**; felek kevkebten önce hâsıl olmadığı için 'kevkeb burada yerleşmesi başka yerden evlâ değil' denemez; **kevkeb ile felek birlikte olduktan sonra kevkebin intikali mümteni'** (harq-iltiyâm imkânsız).' **(3)** 'feleğin cirminin **terkîbi bir nefs veya akıldan sudûr etmiş** olabilir; o şey **muhtelif irâdelere, muhtelif şartlara göre kabil**; **ilk mebde' ise mütegayyir sıfatları kabul etmez** ⇒ fark.' **4. nakız (mütemmimin iki cihetinin kalınlık-incelikte farkı)**: 'kevkeb yerleşimi cevapları buraya da; ayrıca bu soru **iki cihetin kalınlık-incelik şartlarında eşit olması** halinde tamdır; bilinen: **ince cihet kalın farz edilse teadâhül-i ecsâm**; **kalın cihet ince farz edilse halâ**; ikisi muhâl ⇒ kalınlık-incelik şartları iki cihete göre muhtelif.'
+- Netice/hüküm: 3.–4. nakıza cevaplar: **mukârin hudûs; nefs/akıl sudûru; şartların farkı**.
+- Delil çeşidi: **cedelî**; (T) cedelî. **Kadîm astronomi/fizik; Risale'ye alınmaz.**
+- Mevzuya bağı: **KRİTİK (ders katmanı için)**: **'ilk mebde' mütegayyir sıfat kabul etmez; ikincil sudûr eden nefs/akıl muhtelif irâdelere kabil' (p84 3.)** — bu, İbn Sînâcı sudûr şemasının kıdem savunması; Risale'nin **hudûs ↔ irâde-tahsis** cevabıyla **doğrudan çelişir (Allah'ın irâdesi kayıtsız)**.
+- Doğan sual: —
+
+## c4 p85
+- OCR: orta
+- Okuma: tam
+- İçerik: **5. nakız (dış bombeli yüzey ↔ iç çukur yüzey farkları)**: 'tabiat bir olsa da onun **tarafları için îcâbı şartların farkına göre farklı**; kürenin dışı yalnız **geniş bombeli yüzeyi**, içi yalnız **dar çukur yüzeyi** kabul eder; **şartlar farklıysa eser farkı uzak değil**.' **6. nakız (kalınlıktaki cüz ile yüzeydeki cüzün mâhiyetçe müşterekliği)**: 'bu soru **hükemâ mezhebinde lâzım değil**: felek cismi onlara göre **muttasıl bir, cüzlerden hiç mürekkeb değil**; nitekim **vehim ve cazibe farklarıyla** dış sebepler bilfiil cüzler doğurur; fakat bu takdirde **cüz, bütünün hâsılından sonra farz edilir**; **feleklerde harq muhâl** olduğundan feleğin derinliğindeki farazî cüz yüzeyinde bulunamaz, tersi de.'
+- Netice/hüküm: 5.–6. nakıza cevaplar (kıdem tarafı): **şart farkı; felek muttasıl tek cisim, cüz sonradan farzî**.
+- Delil çeşidi: **cedelî**; (T) cedelî. **Kadîm fizik; Risale'ye alınmaz.**
+- Mevzuya bağı: **Fasıl I §3 (cüz-i lâ yetecezzâ)**: 'muttasıl cisim, cüz farzî' görüşü **kelâmın cevher-i ferd delilinin karşısında**; c4 p86'da Râzî değerlendirmesi.
+- Doğan sual: —
+
+## c4 p86
+- OCR: orta
+- Okuma: tam
+- İçerik: **Değerlendirme (Râzî'nin yorumu: 'واعلم' cümleleri)**: '**bu cevap hükemânın usûlüne göre güzel**; ama **cüz-i lâ yetecezzâ diyen ve 'kısmete kabil her şey cüzlerden mürekkeb' diyenin** görüşüne göre **bu cevap uygun değil**; o kişi başka cevap verir: **gökler bu cüzlerin toplanmasından yapılmıştır; her cüz belirli mevziine, önceki vâzı'ın sonraki vaz'ı hazırlamasıyla** ihtisas etti; bu, **sonraki filozofların unsur cüzlerinin özel vaz' ve mevziine ihtisası hakkındaki sözünün aynıdır**.' **7. nakız (âlem dışında halî hayyizler)**: '**konuşma meşhur ve uzun**; Aristo tarafdarları **inkâr eder: âlem dışında ne halâ ne melâ vardır**; ayrı kitapta gelecek.' **8. nakız (nutfeden farklı uzuvlar)**: 'Allah'ın **bir melek** görevlendirmesi, o meleğin nutfeden bu farklı uzuvları **maslahat ve hikmete göre** şekillendirmesi, **melek fâil-i muhtâr** ⇒ soru düşer; **Aristo tarafdarları ise şekil vermeyi nutfedeki musavvire kuvvete isnad ettiler**, bu görüş **son derece uzak**, 'el-Kuvâ et-Tabîiyye' (ilm-i nefs) kitabında beyân edildi.'
+- Netice/hüküm: **Râzî'nin (kendi sesiyle) değerlendirmesi: hükemâ cevabı kendi usûllerine göre güzel, cevher-i ferd diyene uymaz; nutfe için musavvire kuvvet görüşü 'son derece uzak'.**
+- Delil çeşidi: **değer takdiri + cedelî cevap**; (T) cedelî. **Atıf: 'el-Kuvâ et-Tabîiyye' kitabı ⊬ (hangi cilt/eser).**
+- Mevzuya bağı: **Fasıl I §3**: 'melek fâil-i muhtâr' cevabı (8. nakız) **Risale'nin 'melek Allah'ın emrini yerine getirir' nass çizgisiyle uyumlu** (⊬ numara); Aristo'nun musavvire kuvveti reddi **Râzî'nin kendi görüşüdür**, doğa felsefesi; ana metne alınmaz.
+- Doğan sual: 'el-Kuvâ et-Tabîiyye' ve 'kitâb-ı müfred (halâ)' atıfları nerede (atıf haritası)?
+
+## c4 p87
+- OCR: orta
+- Okuma: tam
+- İçerik: **9. nakız (illet devam ediyorsa ma'lûl irtifâ illeti irtifâ gösterir)**: cevap: '**ya illetin irtifâını, ya illetin te'sîri için ma'lûl tarafında şart olan şeyin irtifâını gösterir; o şart, ondan önceki bir başka hâdis**.' **10. nakız (günlük hâdisler)**: cevap **önceki**: **'kadîm illet ezelî ve dâim; her muayyen hâdisin ondan sudûru, ondan önceki hâdise şartlı.'** 'Kadîm illet bu ma'lûlün illeti değildi, sonra oldu; bu **hâdis bir sıfat**, müessir ister' diye itiraz: **'bir şeyin gayrine illet olması illetin zâtına ve ma'lûlün zâtına zâid bir sıfat olamaz; olsa mümkin olur, illete muhtaç olur, illetin bu illiyete illiyeti zâid ⇒ teselsül'**; bu itirazı savuşturmak için söylenebilecek en fazla budur; **vâcibü'l-vücûd ispatı bâbında** ('bir şeyin illet olması zâid sıfat mı?') derin bahisler geçmişti.' **Râzî (kendi sesiyle, 'واعلم')**: '**filozofların 'bütün cismânî âlemin tekvîni ile günlük hâdislerin tekvîni arasında fark' hakkında verdiği bu özür, doğru ve isabetli olsa bile onlara 'ecsâmın ve göklerin, yerlerin kıdemi' delilini kullandırmaz**: 'siz o kadîm illetten hâdis ma'lûlâtın sudûrunu, her hâdisin başka hâdisle mesbûk olması ve önceki hâdisin hâsılının sonrakinin fayzanına şart olması sebebiyle **caiz gördünüz**; öyleyse **cümle-i ecsâmın hâdis olması, evveli ve mebdei olması** neden caiz olmasın…' (p88).
+- Netice/hüküm: **Râzî (kendi hükmü): filozofların 'hâdis silsilesi' özrü doğru olsa da ecsâmın kıdemine hüccet olamaz.** [c4 p12'deki 'mütekellimin delili mücerredâtı kapsamıyor' ile simetrik.]
+- Delil çeşidi: **cedelî (kendi ilzâmıyla)**; (T) cedelî-analitik. **F 27-B: bu argüman ayırt ediyor: 'her hâdis öncekine mesbûk' özrü hem günlük hâdisleri hem cismânî âlemin başlangıcını aynı şekilde meşrûlaştırır.**
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §6.3**: **Râzî'nin kıdem tarafına 'kendi özrünüz sizin delilinizi de bozar' cevabı**: Risale **'kıdem delili kesin değildir (Râzî'nin kendi tespiti: c4 p87–88)'** cümlesini yazabilir; hudûs delili de aynı aporiyle karşı karşıya (p12, p40).
+- Doğan sual: —
+
+## c4 p88
+- OCR: orta
+- Okuma: tam
+- İçerik: (Râzî'nin ilzâmı devam): '**cümle-i ecsâm hâdis, evveli var; ancak ezelde bir akıl veya nefs mevcuttu; o mücerret cevher nefsânî hâdislerin ve idrâkî tagayyürlerin mahalli idi, her biri bir başkasıyla mesbûk, evvelsiz; sonra bu ardışık tasavvurlar ve idrâkler ezelden ebede giden bir cihette belirli bir tasavvura ve tefekküre intihâ edince — ve bu tasavvurun hudûsu kadîm illetten cismânî âlemin fayzanına şart olunca — cismânî âlem kadîm illetten o vakitte hâdis oldu.** Bu ihtimal mevcutsa **'cismânî âlem kadîmdir' diyen hüccetle istidlâl edilemez**; **bu, vâki ve savuşturulması hemen hemen mümkün olmayan bir sorudur.** **Bu hüccetin takrîrinin sonu; muvaffakiyet Allah'tandır.**'
+- Netice/hüküm: **Râzî (kendi hükmü): kıdem tarafının büyük hücceti, ecsâmın kıdemini ispat etmez ('ezelî mücerret + hâdis cismânî âlem' ihtimali savuşturulamaz).** [Kıdem tarafı delillerinin Fasıl 1'deki sonucu.]
+- Delil çeşidi: **kendi ilzâmının bir alternatif model (ezelî akıl/nefs + hâdis ecsâm) ile sunulması**; (T) cedelî. **[Kendi tenkidim: bu 'alternatif model' bir nefs/akıl kadîmliğini kabul ediyor (mücerrede kıdem); Risale'nin 'mâsivâ hâdis' cümlesi mücerredâtı da kapsar; Râzî'nin bu modeli hudûs tarafının hepsini kapsayan delilinin eksikliğini gösteriyor, kendi tercihi olarak sunulmuyor (p12'deki soruyla aynı).]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §3**: **'her mâsivâ hâdis' cümlesinin mücerredâtı kapsama iddiası** (c4 p12) ve **Râzî'nin 'ezelî mücerret + hâdis cismânî âlem' alternatifi (p88)**: Risale bu boşluğu **nassla ('Allah her şeyin hâlikı, kendinden başka her şey hâdis') kapatır, aklî delil boşluğunu açıkça kaydeder**. **Kıdem tarafı delil 1 sonu.**
+- Doğan sual: Kıdem tarafının sonraki delilleri (kâdir, mürîd, hakîm, âlim…) ve hudûs tarafının delilleri (Kısım 2).
