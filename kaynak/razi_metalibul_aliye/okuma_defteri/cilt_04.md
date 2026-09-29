@@ -3025,3 +3025,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **genelleme**; (T) hitâbî-zayıf.
 - Mevzuya bağı: **Fasıl I §8**: hikmet delili için **Vecih 1–7'nin mantığı** (fayda-uygunluk-ihtiyaç mikdârı) ders katmanında; **Vecih 8 kesilir**.
 - Doğan sual: Râzî'nin 'usûl-i hikmet i'tibârları' devam ediyor; **Güneş dışında Ay, yıldızlar, unsurlar, madenler, bitki, hayvan, insan** için vecihler p337'den. **Kur'ân delilleri (Kısım 2) hangi sayfadan?**
+
+## c4 p337
+- OCR: orta
+- Okuma: tam
+- İçerik: **Vecih 8 sonu**: '**orta iklimin (4.) fazileti, mizâcın i'tidâliyle uçlara üstünlüğüdür; bütün bu hâller bu âlemin hâllerinin gök hâllerine bağlı olduğunu gösterir.**' **İtiraz (Râzî aktarıyor)**: '4. iklim en faziletli deniyor; **iki soru**: **(1)** ilâç olabilecek bitki-cisimler 4. iklimde oluşmaz; **(2)** **peygamberlerden hiçbiri bu iklimden çıkmadı.**' **Cevap 1**: 'ilâç ancak bir keyfiyetin gâlip ve Güneş kuvvetinin ona hâkim olmasıyla ilâç olur; bu i'tidâlden çıkmış iklimlerde oluşur; 4. iklim mutedil olduğundan **yalnız mutedil besleyici cisimler** oluşur.' **Cevap 2**: '**4. iklim halkının akılları kâmil, mizâçları tamam, birbirine yakındır; bu yüzden onlardan peygamber çıkmadı; sâir iklimlerde noksan gâlip olduğundan kâmil ve büyük kemâl sahibi bir insan çıkınca tefâvüt belirir ve i'câz haddine ulaşır.**' **Vecih 9 başlıyor**: 'Güneş'in tesâmüt ettiği yerler iki kısım…' (p338).
+- Netice/hüküm: **Râzî çağının iklim-mizâç teorisi; 'peygamberlik i'câz haddi kâmil insanın mizâç farkıyla belirir' açıklaması.**
+- Delil çeşidi: **tümevarım + tıp/felek nazariyesi**; (T) hitâbî-zayıf.
+- Mevzuya bağı: **KRİTİK — Fasıl II (En-Nübüvve) ile temas**: **Cevap 2 nübüvveti iklim/mizâç ile açıklıyor; Risale bunu ALMAZ: nübüvvet ilâhî ihtiyâr ve ittifâdır (En'âm 6/124 'Allah risâletini nereye koyacağını en iyi bilir'), mizâç/iklimle açıklanmaz.** **Ana metne kesin alınmaz; Râzî'nin çağının doğa felsefesi notu.**
+- Doğan sual: —
+
+## c4 p338
+- OCR: orta
+- Okuma: tam
+- İçerik: **Vecih 9**: '**Güneş'in tesâmüt ettiği yerler iki kısım: hadîz yakınlığından yanmış güney bölgeleri (halkı siyah), evc tarafında kuzey bölgeleri (mutedil).**' **El-Mecistî'ye atıf**: 'Dünya'dan yakınlık-uzaklık farkı … küçük yakınlıkla güney taraf yanmış. **Güneş sâbit yıldızlar küresinde olsaydı tabiatlar aşırı soğuktan bozulurdu; Ay küresine inseydi bu âlem tamamen yanardı**; bu yüzden **hakîm (rahîm) Allah Güneş'i yedi gezegenin ortasına koydu; tabiî mutedil hareketi ve mutedil kurbuyla tabiatlar itidâlde kalır.**' **İklim tasnifi**: 1. iklim halkı Güneş'in hadîzine yakın (sıcak, siyah); 2. iklim 'esmer'; 3.–4. iklimler mizâç bakımından mutedil; 5. iklim soğuğa yakın ama 4.'ye benzer.
+- Netice/hüküm: **Râzî: Güneş'in mevkii i'tidâlin şartı ⇒ hikmetli tedbir (Almagest'e atıfla).**
+- Delil çeşidi: **tümevarım + 'Güneş yer değişse ne olurdu' tahayyülü**; (T) hitâbî-ikna'î; **modern karşılık: Dünya-Güneş mesafesi yaşanabilir kuşak (ince ayar) — delilin mantığı korunur, modelinin ayrıntısı değil.**
+- Mevzuya bağı: **Fasıl I §8, nizâm delili**: 'Güneş yerini değiştirseydi' düşünce deneyi **modern 'yaşanabilir bölge' verisiyle** Risale'de yeniden yazılabilir; **iklim-ten rengi ilişkisi ana metne alınmaz (p335 gerekçesi).**
+- Doğan sual: —
+
+## c4 p339
+- OCR: orta
+- Okuma: tam
+- İçerik: **Vecih 9 sonu**: '6.–7. iklim halkı soğuk-rutûbetli, tenleri çok beyaz, gözleri mavi, yüzleri iri-yuvarlak; **insanların suret-şekil-renk farkları Güneş'in yakınlık-uzaklık hâllerinden; ahlâk farkları mizâç farkından**: Hindin 'müessir vehmi', Türklerde cesaret, Mağriblilerde kötü ahlâk doğuluların misli bulunmaz' (**etnik/karakter genellemesi; ana metne alınmaz, p335 gerekçesi**). **Vecih 10**: 'Güneş'in dört mevsimi feleğin dörtte birlerinde intikaliyle; **bitkilerin oluşumu, olgunlaşması ve kemâli bu dört mevsimdendir**; hayvanların oluşumuna sebep bitki; **öyleyse Güneş bu âlemin bütün havâdisinin aslı oldu.**' **Vecih 11 (Güneş'in bitkideki tesiri) başlıyor**: **(1)** Güneş baş tepesinden uzaklaşınca havada soğuk, yer yüzünü soğuk kaplar; **yerin içinde sıcaklık kuvvetlenir, madenlere elverişli buharlar oluşur; Güneş tepeye dönünce soğuk kalkar, hava mutedil olur, tohum parçaları yeryüzüne çıkar; ısınan hava Güneş kuvvetiyle ürün ve meyveyi olgunlaştırır.**
+- Netice/hüküm: **Vecih 10–11: mevsimler ve bitki gelişimi (Güneş'in nedensel rolü).** **'Güneş bu âlemin bütün havâdisinin aslıdır' ifadesi sebeb-i tabiî anlamındadır; Risale'de 'yaratıcı yalnız Allah, sebepler âdetullah' cümlesiyle çerçevelenir.**
+- Delil çeşidi: **tümevarım (fizikî sebep)**; (T) hitâbî-ikna'î; **modern karşılık: fotosentez/mevsim (doğrulanabilir).**
+- Mevzuya bağı: **Fasıl I §8 ve tevhîd-i efâl**: 'Güneş aslıdır' cümlesi **tevhîd bâbı için dikkat noktası: sebeplerin bağımsız fâil sayılması yanlış (Sünnî: sebeplere ilişkin nedenselliğin Allah'ın yaratmasıyla olması)**; Râzî **kendisi sebebi 'hikmetli tedbir' çerçevesinde** taşıyor (p338). Risale bu ayrımı **açık yazar**.
+- Doğan sual: —
+
+## c4 p340
+- OCR: orta
+- Okuma: tam
+- İçerik: **Vecih 11 devam**: **(2)** bitkide Güneş'in tesiri günlük harekete göre: 'nilüfer, ezyût (?), ayçiçeği-tipi bitkiler' Güneş yükselince büyür-çiçek açar, batınca solar; **(3)** ekinler-bitkiler ancak Güneş'in doğduğu ya da sıcaklığının ulaştığı yerlerde büyür; **(4)** bazı bitki türlerinin bazı beldelerde, bazılarında olmaması **beldelerin sıcaklık-soğukluk farkından**: hurma sıcak beldelerde, soğukta bitmez; turunç, limon, muz; 1. iklimde baharatlar; ekvatorun güneyinde kuzeyde bilinmeyen ağaç-meyveler; **hayvanlar**: fil, misk, gergedan Hindistan'da; Güneş buharları dağ diplerinde olgunlaştırınca **madenler** oluşur; **yağmur ve yüksek eserler** buhar-dumandan, Güneş kuvvetiyle.
+- Netice/hüküm: **Râzî'nin bitki-hayvan-maden coğrafyası: Güneş sıcaklığının dağılımı ⇒ tür dağılımı.** (Bitki-iklim ilişkisi doğru; maden oluşumu 'buhâr' teorisi zamanın nazariyesi.)
+- Delil çeşidi: **tümevarım**; (T) hitâbî-ikna'î.
+- Mevzuya bağı: **Fasıl I §8**: iklim-tür ilişkisi **modern biyocoğrafya ile doğrulanabilir**; ancak nizâm delili için **fayda-uygunluk** kısmı (ihtiyaç mikdârı) korunur, **maden buhâr teorisi ana metne alınmaz**.
+- Doğan sual: —
+
+## c4 p341
+- OCR: orta
+- Okuma: tam
+- İçerik: **Ay (Kamer) bölümü**: '**Ay'ın Güneş'e nisbeti cisim büyüklüğünde ve tesir kuvvetinde yoktur; ancak bu âlemde büyük bir tesir kuvveti de vardır.**' **Tahkik ehli**: '**Güneş'in tesiri sıcak-soğukta, Ay'ın tesiri rutûbet-kuruluk'ta daha zâhir; 'Güneş sıcaklık-soğukluk tesir eder' demek: yakınken sıcaklık, uzakken soğukluk verir; Ay'ın rutûbet-kuruluk için hâli de böyle.**' **Nev-i evvel (med-cezir)**: '**tecrübe sahipleri: bazı denizler Ay Güneş'ten ayrıldığı andan dolunaya kadar taşar, sonra azalır, mahakta en düşük, sonra yine artar; bazı denizlerde her gün-gece Ay'ın doğuşu-batışıyla med-cezir olur: Fars denizi, Hind denizi, Çin denizi**' (p342).
+- Netice/hüküm: **Ay'ın denizler üzerindeki tesiri (med-cezir) Râzî'nin tümevarımsal delili.** **Med-cezir Ay çekimiyle ilişkili gerçek bir olgudur (doğru); 'Ay rutûbet, Güneş sıcaklık' kuramı zamanın nazariyesi.**
+- Delil çeşidi: **tümevarım**; (T) hitâbî-ikna'î; **Med-cezir: doğrulanabilir.**
+- Mevzuya bağı: **Fasıl I §8, nizâm delili**: **med-cezir örneği modern fizikle (çekim kuvveti) birlikte Risale'de düzen delili malzemesi olabilir (padişah kararı)**; astrolojik tıp kısmı alınmaz.
+- Doğan sual: —
+
+## c4 p342
+- OCR: orta
+- Okuma: tam
+- İçerik: **Med-cezir tasviri (Râzî)**: 'Ay bir denizin doğu ufkuna gelince **deniz med'e başlar**; Ay o yerin gök ortasına gelince **med zirvede**; Ay gök ortasından inince **cezir**; batı ufkuna varınca cezir zirvede; sonra **ikinci med**, Ay yerin altındaki 'vetede' varınca ikinci med zirvede; **Dünya yuvarlak ve deniz onu çevrelediğinden Ay bir gün-gecede hepsini dolaşır; her yer için ufuk, gök ortası, batı, vetid** … **denizciler denizde şişkinlik, sert rüzgâr, şiddetli dalga görünce med başladı, azalınca cezir vakti bilirler; kıyıdakiler suyun aşağıdan yukarıya hareketini med, inişi cezir bilir.**' **Ay'ın tesirinin ikinci nev'i**: 'hayvan bedenleri Ay ışığı artarken daha kuvvetli ve sıcak, dolundan sonra zayıf ve soğuk' (p343).
+- Netice/hüküm: **Med-cezir tasviri gözleme dayanır; iki med-iki cezir (günde ~iki kez) gerçek olguyla örtüşür.** ('Dünya yuvarlak' ifadesi Râzî'de var, not.)
+- Delil çeşidi: **gözlem/tasvir**; (T) hitâbî-ikna'î (tasvirin kendisi delil değil, malzeme).
+- Mevzuya bağı: **Fasıl I §8**: **'Dünya yuvarlak, deniz onu çevreler' Râzî'nin kendi kabulü** (c4 p294 'fezâ âlemin dışında sonsuz' ile birlikte kozmoloji notu). **Bu bölüm ders katmanında 'klasik gözlem malzemesi' olarak.**
+- Doğan sual: —
+
+## c4 p343
+- OCR: orta
+- Okuma: tam
+- İçerik: **Ay'ın tesirleri (devam)**: **Nev-i sânî**: hayvan bedenleri, insanda hılt'lar Ay ışığı artarken çoğalır, deri daha nemli ve güzel; ışık azalınca hılt'lar bedenin derinliğine çekilir; **Nev-i sâlis**: **buhrân günlerinin ihtilâfı** (ay ışığı artıp azalmasına dayanır); **Nev-i râbi'**: **hayvan tüyü**, sütün mikdârı, beyin, yumurta akı: yeni ay-dolunay arasında artar, sonra azalır; hatta günün içinde Ay'ın yeryüzü üstündeki doğu çeyreğindeyken memelerde süt artar; **'bu i'tibârlar istikrâda zâhir'**; 'Ay ışığında oturan/uyuyan insanda gevşeme, tembellik, nezle, baş ağrısı; ay ışığında açıkta bırakılan et tat ve kokusunu değiştirir.' **Nev-i hâmis**: balıklar dolunaya doğru derinlerden çıkar, semirir.
+- Netice/hüküm: **Ay'ın canlılar üzerindeki tesiri iddiaları (Râzî'nin 'tecrübe sahipleri' aktarımı).** **Bu iddiaların çoğu zayıf/astrolojik-tıp geleneğidir; modern bilimle doğrulanmamış (ay ışığı-nezle, tüy uzaması, süt, beyin); ana metne ALINMAZ, delilin gücü olarak kullanılmaz.**
+- Delil çeşidi: **tümevarım (tecrübe)**; (T) hitâbî-zayıf; **kendi tenkidim: 'istikrâda zâhir' iddiası kontrolsüz; delil olarak Risale'ye yararsız, zararlı (delili zayıflatır).**
+- Mevzuya bağı: **Fasıl I §8**: hikmet delilinde **doğrulanabilir malzeme ile hurafeye kayan malzeme ayrılır**; Risale yalnız birincisini kullanır.
+- Doğan sual: —
+
+## c4 p344
+- OCR: orta
+- Okuma: tam
+- İçerik: **Ay'ın tesirleri (devam)**: **balıklar**: dolundan yeni aya kadar derinliklere girer, zayıflar; gün içinde Ay doğudan gök ortasına yükselirken semiz çıkar; **yeryüzü haşereleri** ayın ilk yarısında yuvalarından daha çok çıkar; **Nev-i sâdis**: **ağaç-bitki dikimi**: Ay ışığı artarken ve gök ortasına yaklaşırken dikilen ağaç ve ekinler güçlenir, çoğalır; ışığı azalırken tersi; reyhan, sebze, ot yeni aydan dolunaya kadar daha çok büyür; kabak, hıyar, karpuz dolunay ışığı artarken hızla büyür, ilk yarıda **maden ve kaynaklar artar, ikinci yarıda azalır** ('maden ehlince bilinir'). **'Ay'ın bu âlemde tesirinin kuvvetli oluşu üç vecih'** (p345'te).
+- Netice/hüküm: **Ay tesiri iddiaları devam (bitki dikimi, kaynak-maden, hayvan).** (**Ekim-Ay takvimi geleneksel iddiadır, bilimsel doğrulaması zayıf/yok; ana metne alınmaz.**)
+- Delil çeşidi: **tümevarım (geleneksel tecrübe)**; (T) hitâbî-zayıf.
+- Mevzuya bağı: **Fasıl I §8**: bu bölüm **hikmet delilinin en zayıf halkası**; **F 27-B: ayırt eder mi** — Ay'ın tesiri hikmetli fâil-i muhtâr'ı **mûcib-illetten ayırt etmez** (mûcib-i inâyet de aynı düzeni verir); Râzî'nin i'tibârları **fâil-i muhtâr iddiasını tek başına kurmaz**, düzen/gâye delilidir. **Risale bunu 'düzen delili, muhtâr-mûcib ayırımı ayrı öncüle bağlı' diye yazar.**
+- Doğan sual: **Râzî'nin 'hikmet i'tibârlarından fâil-i muhtâr çıkarma' halkası** (düzen ⇒ hakîm fâil ⇒ muhtâr) **hangi sayfada açıkça yazılıyor?** (p345+; bulunmazsa açık borç.)
