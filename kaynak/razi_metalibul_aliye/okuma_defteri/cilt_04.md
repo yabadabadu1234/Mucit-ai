@@ -937,3 +937,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **reductio + dilemma**; (T) burhânî biçim (kıdem tarafı). **[Delil ≠ dava: 'hudûsun ezelde muhâl olması ⇒ makdûr olamaz' öncülü hudûs delilinin mütekellim cevabını (c4 p48, 4. cevap) 'muhâl makdûr değil' ilkesini kıdem tarafı aleyhine de kullanır — simetri.]**
 - Mevzuya bağı: **KRİTİK — Fasıl I §3, §8**: 'kâdirin ezelde hudûsa kâdir olması' **ezelîlik/hudûs bağdaştırma sorunu** (c4 p35–40 'imkânın evveli' aporisiyle **aynı düğüm**); Risale'nin cevabı **'kudret ezelî, mekdûr hâdis; taalluk irâde ile' + 'ezelde hudûsun vukûu muhâl, imkânı değil'** olacaktır (kaynaklı).
 - Doğan sual: —
+
+## c4 p105
+- OCR: orta
+- Okuma: tam
+- İçerik: (2. hüccet sonu; kıdem tarafı): kâdiriyet **ya ezelî ya hâdis** olmalı; ikisinin de fesâdı ispatlandı ⇒ **kâdiriyetin sübûtu muhâl**. **İtiraz (hudûs tarafı)**: 'neden **Allah ezelde îcâda kudretle vasıflıydı, fakat ezelin kıyamı îcâda mâni'** denmesin? **Kâdirin fiile kudreti olup mânîden dolayı fiil güç olabilir**; bu **zâtî te'sîr diyenlere de lâzım** (âlemin ezelde te'sîri); **Cevap (kıdem tarafı)**: '**bu, 'fiil ve terke temekkün' kudretinin mâniyle sahih olduğu iddiası; mâni' ademi mukteziyenin ademinden değil, mâni'in vücûdundan**; o mâni' **ya ezelî** (zevâli imtinâ' ⇒ zevâl mümteni') **ya değil**…' (p106).
+- Netice/hüküm: 2. hücceti tamamlanıyor; 'ezel mâni'dir' itirazına cevap başladı.
+- Delil çeşidi: **taksîm/reductio**; (T) burhânî biçim (kıdem tarafı).
+- Mevzuya bağı: **Fasıl I §3**: 'ezel mâni'' cevabı c4 p49 (4. cevap: 'ezelin hudûsa mâni'liği') ile aynı; **p106–107'de 4 vecihle çürütülüyor**.
+- Doğan sual: —
+
+## c4 p106
+- OCR: orta
+- Okuma: tam
+- İçerik: '**Mâni' zâil oluyorsa zevâli belirli vakte ihtisaslıdır** (mevcut iken ma'dûm olan her şeyin ademi belirli vakitle ihtisaslı); **bu takdirde îcâda tam temekkün o vakitten önce hâsıl değildi**; o vakitten önce hâsıl olsaydı îcâd ezelde olurdu; **o vakitten önceki vakit mütenâhî bir müddet, ezelin dışında ve ebedde**; **ezelin bir kısmında Allah îcâda ve ihdâsa mürîd fakat âciz** kalmış olur ⇒ 'fiil mâni' kıyamıyla imtinâ' etti' sözünü **iptal eder**. **Mâni' hiç zâil olmuyorsa** **Allah ebediyen îcâd ve ihdâsa kâdir olamaz; bu 'âlemin hâlikı' olmasını iptal eder; oysa öyle değil.** **3. vecih**: 'ezel dediğiniz, **vâcib mi mümkin mi**? Vâcibse zevâli imtinâ' ⇒ îcâd temekkünü hiç hâsıl olmaz; **mümkinse ortadan kalkması mümkin**: **mâhiyeti itibariyle ortadan kalkması imtinâ' olsa vâcib olur, oysa mümkin farz edildi**; irtifâ' takdirinde **kâdir daima îcâd ve ihdâsa temekkün eder, biz bunun muhâl olduğunu farz ettik** ⇒ 'ezel mâni'dir' bâtıl'.
+- Netice/hüküm: **'Ezel mâni'' cevabına karşı 3 vecih (mâni' zâilse temekkün önce yok; zâil değilse ebedî âcizlik; ezelin vâcib/mümkin durumu).**
+- Delil çeşidi: **taksîm/reductio**; (T) burhânî biçim (kıdem tarafı).
+- Mevzuya bağı: **Fasıl I §3**: 'ezel' kavramının ontolojik durumu **c4 p70 (3.–4. vecih) ile aynı**; Risale'nin **'ezel = evvelin nefyi (mevcut bir şey değil)'** tanımı kıdem tarafının bu kollarını cevaplar (c4 p48).
+- Doğan sual: —
+
+## c4 p107
+- OCR: orta
+- Okuma: tam
+- İçerik: (Vecih 3 sonu): 'mâni'in hâsılı mümkin olduğu için **müessire muhtaç**; müessir **mûcib bi'z-zât** ise **mûcibin devamından mâni'in devamı, mâni'in devamından imtinâ'ın devamı**; **fâil-i muhtâr** ise mâni'in fiili **ezelî olmaz** ⇒ **'ezel denilen şey ezelî olmaz' (muhâl)**.' **4. vecih**: 'söylediklerinizin hâsılı **îcâda temekkün ve kudret ezelde hâsıl değil**; siz 'temekkün yokluğu mukteziyenin yokluğundan değil, mâni'in kıyamından' diyorsunuz; iki takdirde de **temekkünün hâsıl olmadığı kabulü** var, **bu matlûba yardımdır.**' **İkinci soru (mûcibe mu'ârada) düşer**: 'ma'lûlün illet-i mûcibenin devamıyla devâmı **ma'kûldür**; muhtârın kasdla îcâdı ezelde mevcut iken **ma'kûl değildir** ⇒ iki bâb arasında fark.' **3. hüccet**: '**kâdirden fiil, terk yerine ve zıddına sıhhatle sahih olduğunda: bir tarafın diğerine rüçhânı ya müreccihe mevkuf değil ya mevkuf**; **'bu, kıdem taraftarlarının kuvvetli hüccetidir, dayandıkları'**; kâdir bâbında istikssâ ile şerh edildi; başka ibareyle tekrar: **1. kısım (müreccihe mevkuf değil) bâtıl**.
+- Netice/hüküm: 2. hücceti bitirme; **3. hüccet (müreccih argümanı) başlıyor** — c3 aporisi ile aynı.
+- Delil çeşidi: **dilemma**; (T) burhânî biçim (kıdem tarafı). **F 27-B: 'ezel mâni'' cevabına karşı dört vecihin ayırt gücü: yüksek (cevabın her kolunu kesiyor).**
+- Mevzuya bağı: **KRİTİK — Fasıl I §8, c3 Bâb 1**: 'kâdir bâbında geçen hüccet' = **c3 Bâb 1 (dâî-sârife)**; cilt 4'te bu hüccetin **kıdem tarafı için 'büyük dayanak'** olarak yeniden kurulması, **c3 aporisinin cilt 4'teki devamıdır**.
+- Doğan sual: —
+
+## c4 p108
+- OCR: orta
+- Okuma: tam
+- İçerik: **1. kısım bâtıl, 2 vecihle**: (1) müreccihsiz rüçhân = **mümkinin müreccihsiz tercihi (muhâl)**; (2) 'kendimizi denedik: kalbimizde iki taraftan birine meyil hâsıl olmadıkça o taraf diğerine râcih olmaz; **iki tarafa hareket meyli eşit olduğunda insandan fiil hiç sudûr etmez, bulunduğu yerde sâkin ve mütehayyir kalır**, müreccih zâhir olana kadar; ⇒ **'câizin bir tarafı müreccihsiz râcih olur' kavli bâtıl**. **2. kısım (müreccih şart)**: '**bütün müreccihler hâsılken** (tam kudret, fütûrsuz cezmî irâde, vakit, âlet, maslahat, bütün mâniler zâil) **terk mümkin mi**? **Mümkinse** bu müreccihler hâsılken fiil bir kere, terk bir kere; **iki vakitten birinin fiile, diğerinin terke ihtisası ya müreccihe mevkuf ya değil**; mevkufsa **hâsıl olan tam müreccih olmaz, hulf**; mevkuf değilse müreccihsiz rüçhân. **Bu müreccih inzimâm edince fiil vâcib mi**? Vâcib değilse **ilk taksîm tekrar, başka müreccih ister ⇒ teselsül (muhâl)**. ⇒ **bütün müreccihler hâsılken fiil vâcibü'l-husûl; muteber kayıtlardan biri eksik olunca mümteni'**.'
+- Netice/hüküm: **Kıdem tarafının 'müreccih hüccetinin' ana çatısı: tam müreccih ⇒ fiil vâcib; eksik ⇒ mümteni'.**
+- Delil çeşidi: **dilemma + teselsül + tecrübî vicdan**; (T) burhânî biçim (kıdem tarafı). **[Delil ≠ dava: 'kalbimizde meyil eşit ⇒ fiil sudûr etmez' bir deneyim genellemesi; Allah'a şâhitten kıyas.]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §8**: c3 p137, p326–328 ('dâîsiz tercih muhâl') ile **aynı**; cilt 4 burada Râzî'nin kendi 'dâî çerçevesinin' **kıdem tarafının ağzından tam biçimini** veriyor.
+- Doğan sual: —
+
+## c4 p109
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kâdirin iki hâli**: (a) müessiriyette lâzım **her şey ezelde hâsıl**; (b) **hâsıl değil**. **(a)'da fiil sudûr vâcib, sudûr etmemesi imkânsız; (b)'de sudûr imkânsız, ademi vâcib** ⇒ **kâdir ile mûcib arasında fark kalmaz**; **fark**: kâdirde te'sîr şartları **hızlı değişir**; şartlar ma'dûm iken hâsıl olunca kâdir **vâcibü'te'sîr**, mevcut iken zâil olunca **mümteni'ü't-te'sîr**; **bu tağayyür ancak müessiriyeti zâtından ayrı şartlara mevkuf olan için ma'kûl**; **Hak Sübhânehû'nun kendinden başka her şeydeki te'sîri zâtından ayrı şartlara mevkuf olamaz** (her şeyin mebdei); **te'sîri kendi zâtı ve zâtının lâzımlarından**; zâtı ve lâzımları tağayyür kabul etmediği için **te'sîri de tağayyür kabul etmez**: 'bu bu bâbtaki **kuvvetli söz**.' **İtiraz (mütekellimîn'in iki kelâmı)**: **(1)** fiil müreccihe mevkuf, fakat **vücûb hadde ulaşmaz, 'evlâ' olur**; evlâ olduğu için zâid müreccih istemez; vücûb hadde ulaşmadığı için mûcib-kâdir farkı baki. **(2)** fiil müreccih inzimâmına mevkuf değil (iki kadeh/iki ekmek); **delil**: **kâdir-muhtâr ile illet-i mûcibe arasındaki fark darûrî bilinir** (insanın kalkıp oturması ile taşın inişi); müreccih şartı bu farkı bozar; **darûriyyâtı bozan bâtıl**.
+- Netice/hüküm: **Kıdem tarafı: tam illet ⇒ eser vâcib; Allah'ın te'sîri zâtından ayrı şarta mevkuf olamaz ⇒ te'sîri değişmez ⇒ âlem kadîm. Mütekellimin 2 cevabı aktarıldı.**
+- Delil çeşidi: **taksîm + 'zâtından ayrı şart yok' öncülü**; (T) burhânî biçim (kıdem tarafı). **[Delil ≠ dava: 'Hak'ın te'sîri zâtından ayrı şarta (irâde) mevkuf olamaz' öncülü irâdeyi zâtın dışında sayıyor; kelâm (Eş'arî/Mâtürîdî) irâdeyi zâta kâim sıfat sayar (c3 sıfat bâbı) — bu öncül kıdem tarafının cevap yerine geçen kabulü.]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §8, c3 sıfat bâbı**: 'irâde zâta kâim sıfat, zâtın lâzımı' sorusu (c3 p225–232) **bu delilin merkezi**; Risale **irâdeyi zâta kâim, ezelî ve tahsis edici sıfat** olarak yazıp **'te'sîr irâde şartına mevkuf, irâde zâtın lâzımı olduğu için değişmez, fakat taalluku (mürâd) hâdis olabilir'** cümlesini kurmalı (kaynaklı, derece: cedelî).
+- Doğan sual: —
+
+## c4 p110
+- OCR: orta
+- Okuma: tam
+- İçerik: (2. mütekellim kelâmı devam): '**insanın kalkıp oturmada muhtâr olması ile taşın tabiatla inmesi, ateşin tabiatla yükselmesi arasındaki fark darûrî**; fiilin sudûrunu müreccih inzimâmına mevkuf kılmak bu farkın sıhhatini bozar; **darûrî ilimlerin fesâdına götüren bâtıl** ⇒ **kâdir bir tarafı diğerine müreccihsiz tercih eder**' — bu **mütekellimîn'in bâbtaki hâsılı**. **Cevap (kıdem tarafı)**: **1. mezhep (evlâ, vücûb hadde ulaşmaz) bâtıl, 6 vecihle**: **(1)** iki taraftan biri diğerine eşitken **imtinâ'-vukû'**; **râcih olunca mercûh imtinâ'ya daha evlâ**; bir taraf mercûh olunca diğeri **vâcib** (iki nakîzden çıkış yok). **(2)** o rüçhân miktarı **ademi imtinâ' kılıyorsa matlûb**; kılmıyorsa: **hem mevcut hem ma'dûm farz edilsin, bu rüçhân miktarı bütünüyle hâsılken**; iki vakitten birinin vukûa ihtisası **ek kayda** mevkufsa 'önceki her şey tam müreccih' sözünü bozar; mevkuf değilse müreccihsiz tercih. **(3)** **vücûd müreccihi hâsılken adem müreccihi hâsıl olamaz**; adem olsaydı **müreccihsiz rüçhân**; imtinâ' ise vücûd vâcib ⇒ matlûb.
+- Netice/hüküm: **Kıdem tarafı 'evlâ' mezhebine 3 vecih (imtinâ'/vücûb, ek kayıt, vücûd müreccihi)**.
+- Delil çeşidi: **reductio + mantık (nakîz)**; (T) burhânî biçim (kıdem tarafı).
+- Mevzuya bağı: **Fasıl I §8**: 'evlâ' cevabı (c3 p137'de Râzî kendisi 'evlâ' yolundan bahsetmişti); **Risale bu cevabı KULLANMAZ**.
+- Doğan sual: —
+
+## c4 p111
+- OCR: orta
+- Okuma: tam
+- İçerik: **'Evlâ' mezhebine 4.–6. vecih**: **(4)** vücûd müreccihinin hâsılı **vücûd rüçhânını doğurdu**; bu vakitte adem hâsıl olsaydı **adem râcih** olurdu ⇒ vücûd rüçhânı hâsılken adem rüçhânı hâsıl (muhâl) ⇒ **vücûd rüçhânı hâsılken adem mümteni'** ⇒ vücûd vâcib ⇒ **o dâî-müreccih mûcib**. **(5)** vücûd müreccihi hâsılken vücûd rüçhânı hâsıl; **bu hâlde adem hâsıl olsa adem fâilden değil mahz ittifâk**; 'onu yaptı' sözünü zedeler; **müessirsiz hâsıl**. **(6)** **her akıllı kendinde bilir: 'fiili dilersem yaparım, terki dilersem terk ederim'**; bu, **kâdirin fiili dilediğinde, mâni' yoksa, mutlaka yapacağı** ilmini verir; **'dilersem yapmam' dediğimde, mâni' yoksa mutlaka terk eder**; dünyada 'ben fiili dilesem yapmam; dilemesem yaparım' diyen akıllı yok ⇒ **kudretin halis dâîyle mecmûu fiili gerektirir; bu iki kayıttan biri bozulunca fiil imtinâ'** ⇒ '**halis dâî sonrası fiil evlâ, vücûb hadde ulaşmaz**' kavli bâtıl.
+- Netice/hüküm: **'Evlâ' mezhebinin çürütülmesi tamamlandı (6 vecih).**
+- Delil çeşidi: **reductio + darûrî vicdan**; (T) burhânî biçim (kıdem tarafı). **[Kendi tenkidim: 6. vecih 'dilersem yaparım' cümlesi insan iradesine aittir; Allah'a genelleme (şâhide kıyas) aynı zayıflıkla.]**
+- Mevzuya bağı: **Fasıl I §8**: 6. vecih **Râzî'nin kendi c3 cebri çizgisiyle uyumlu (kudret + dâî ⇒ fiil vâcib)**; ancak **kıdem tarafı bunu 'âlemin kıdemi' için kullanıyor**; Risale'de bu ikisi **ayrıştırılmalı: 'kudret + irâde ⇒ fiil' (cebir değil) ve 'irâde ezelî, mürâd hâdis'**.
+- Doğan sual: —
+
+## c4 p112
+- OCR: orta
+- Okuma: tam
+- İçerik: **2. mezhebe (kâdir müreccihsiz tercih eder) cevap**: 'geçen kelâmlarda istikssâ ile verildi.' 'Sizin 'aksi olsa **kâdir-muhtâr ile mûcib arasında fark kalmaz**' sözünüz; söylediğiniz **fark**: **mümkinin, iki tarafı eşitken, bir tarafı müreccihsiz râcih olması**. **Bu bâtıl, 2 vecihle**: **(1)** aklın bedîhesinde bâtıl; tecvîzi **hâdis mümkinin varlığından müessire istidlâl kapısını kapatır**. **(2)** böyle olsa **rüçhân o kâdirden hâsıl olmaz, mahz ittifak** olur; bu **fiilin fâilden istiğnâsını ve sebepsiz vukûunu** gerektirir; **sübûtu aslın butlânına götüren her fer' bâtıl** ⇒ 'kâdiri mûcibden bu vecihle ayırmak, eserin müessire muhtaç olmasına taʿn'. **'Bu fark bozulursa aranızda fark nedir?'** cevap: 'şâhitte bu fark **iki vecihle** hâsıl: **(1) tabiî müessirler dâim, sürekli, tağayyürsüz** (p113).
+- Netice/hüküm: **2. mezhebin ('kâdir müreccihsiz tercih') çürütülmesi ve 'fark iki vecih'** başlangıcı.
+- Delil çeşidi: **reductio + tanım**; (T) burhânî biçim (kıdem tarafı).
+- Mevzuya bağı: **KRİTİK — Fasıl I §8**: 'müreccihsiz tercih' **kıdem tarafının en çok vurduğu nokta**; Risale bu cevaba **'irade müreccihtir, müreccihsiz değil'** (c4 p76 tashih) diyerek cevap verir.
+- Doğan sual: —
