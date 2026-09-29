@@ -1081,3 +1081,147 @@ Biçim: cilt 1–2 ile aynı.
 - Delil çeşidi: **analitik (filozof) + reddiye**; (T) analitik.
 - Mevzuya bağı: **KRİTİK**: Râzî **kendi ilim tanımıyla ('ilim = nisbet-izâfe', c3 p104) İbn Sînâ'nın mücerred-nefs delilini reddediyor; ama 'nefs-i mücerred kendini bilir' sonucu (p105) için yolu farklı kuruyor**; **Fasıl III (nefs)**: **iki yol da 'nefs kendini bilir'e varır; derece: burhânî biçim, öncül bağımlı**.
 - Doğan sual: —
+
+## c3 p121
+- OCR: orta
+- Okuma: tam
+- İçerik: İbn Sînâ Yol 1'e **Râzî'nin itirazları**: **(2)** 'Asılı kabul: **ilim, mâhiyeti bilmenin şartı mı, kendisi mi?** Şart ise doğru ama **şartın hâsıl olması şeyi hâsıl etmez**; kendisi ise fesadı gösterildi.' **(3)** 'Mücerred mâhiyetin başka mücerred mâhiyete hâzır olması ilim olsun; **şeyin zâtı kendisine hâzır** olur mu? **Bir şeyin başka şeye hâzır olması, aralarında özel bir nisbet**; nisbet **iki mânânın birbirinden ayrı** olmasına şartlı; ayrım yokken 'kendisine hâzır' demek mümkün değil.' Karşı üç vecih (hasım): **(i)** 'şeyin şeye hâzır olması' 'ona **ayrı olan** şeye hâzır olması'ndan **daha genel**; hâsı nefyetmek âmmı nefyetmez; **(ii)** her zât **şahsî mâhiyet**; şahıs (teayyün) mâhiyetten zâid ⇒ **üç şey (mâhiyet, şahsiyet, mecmû)** ⇒ ayrılık var: 'mâhiyet şahsa hâzır'; **(iii)** 'bu benim zâtım' diyerek zâtı nefsine **izâfe ederiz** ⇒ 'zât kendine hâzır' ma'kûl.
+- Netice/hüküm: **Râzî: mücerredin 'kendine hâzır' olması için ayrılık gerek; hasım 3 vechiyle kurtarmaya çalışıyor (p122'de değerlendirir).**
+- Delil çeşidi: **analitik-cedelî**; (T) analitik.
+- Mevzuya bağı: **Fasıl III (nefs kendini bilir)**: 'nefsin kendine hâzır olması' **ayrılık şartı**: ders katmanı için **'kendini bilme'nin mantıkî sorunu** (özne-nesne) notu.
+- Doğan sual: —
+
+## c3 p122
+- OCR: orta
+- Okuma: tam
+- İçerik: Hasım 3 vecih devam ('mâhiyet ve şahsiyetin mecmûu ile parçaları arasında ayrılık var ⇒ mâhiyetin o şahsa hâzır olması uzak değil'; 'zâtımız, zâtın senin' izâfeleri ⇒ **şeyin kendine izâfesi sahih**). **Râzî değerlendirmesi**: **(i) son derece zayıf**: 'hazır olmak' 'ayrıya hâzır olmak'tan âmm; öyleyse 'şey kendini **hareket ettirir, kendine etki eder, kendinin illeti olur**' de câiz olmalı (âmm-hâs ilkesi): bunlar câiz değilse bu da değil. **(ii) (i)'den iyi**: ayrılık bir yönden var, **bir yönden ayrılık izâfe için yeter**; **(iii)** insanların 'zâtım, zâtın' demesi **izâfenin sıhhatini** kuvvetlendirir. **Dördüncü itiraz** başlar: 'Şeyin kendine hâzır olması ma'kûl, ilmiyeti gerektirir; ama **bir şeye hâzır olan hakîkat başka**, 'ona kendisi hâzır olan' **başka bir hakîkat**; **bir hakîkatte hüküm, muhalif hakîkatte lâzım değil**' (p123).
+- Netice/hüküm: **Râzî hasım vechelerinden 2. ve 3.'yü makul buluyor, 1.'yi zayıf**; 4. itirazla vâcibe taşımayı reddediyor.
+- Delil çeşidi: **cedelî-değerlendirme**; (T) analitik.
+- Mevzuya bağı: 'Mâhiyet farkı ⇒ hüküm taşınmaz' ilkesi **yine hâkim**: Fasıl I ilkesi.
+- Doğan sual: —
+
+## c3 p123
+- OCR: orta
+- Okuma: tam
+- İçerik: 4. itiraz: 'Bir hakîkate ilim hükmü sabitse **ona muhalif hakîkatte** (Allah'ın zâtında) aynı hüküm lâzım gelmez.' 'İkinci vecih de **ilmin mâhiyetin hâzır olması** olduğu asla dayanır (fesâdı gösterildi); **hâzır olma nefsimize ilmi gerektirse de Allah'ın zâtının zâtına hâzır olmasından ilim lâzım gelmez**, nefislerimiz mâhiyette Allah'ın zâtına muhâlif.' **Asıl 2 (Yol 1)**: 'Kabul: zâtını bilir; **başka her şeyi bilmesi** neden lâzım? Delil: **Allah zâtı gereği ilk illet; zâtını bilince 'ilk illet olduğunu' bilir; illet olduğunu bilen malûllerini bilir**; ilk ma'lûlü bilince ikinci ma'lûlü (ma'lûlün ma'lûlü), …**tertip-i nâzil**.' Râzî: 'bu delil **ancak Allah mûcib bi'z-zât diyen** için tamamdır; **fâil-i muhtâr** diyen için yürümez.' Ardından: 'elif be'nin illeti ise **elif olması ≠ be'nin illeti olması**' (mâhiyet ↔ izâfî sıfat farkı).
+- Netice/hüküm: **İbn Sînâ Yol 1'in Asıl 2'si 'mûcib bi'z-zât' varsayımına bağlı; muhtâr için işlemez (Râzî).**
+- Delil çeşidi: **analitik**; (T) analitik-burhânî.
+- Mevzuya bağı: **KRİTİK — Fasıl I ilim sıfatı ve §8.0**: **Allah'ın ilmi için İbn Sînâ yolu (zâtını bilme ⇒ ma'lûllerini bilme) mûcib-bi'z-zât çerçevesindedir**; **Fasıl I muhtâr iddiasıyla birlikte bu yolu kullanamaz**; **ders katmanı ilim için bu yolu kullanmamalı; kast-tasavvur-lüzûm yolu (Râzî c3 p117–118) veya nass**.
+- Doğan sual: —
+
+## c3 p124
+- OCR: orta
+- Okuma: tam
+- İçerik: 'Elif ile be': **elif olmasının kendisi be'nin illeti olması mı, yoksa ondan başka (lâzımı) mı?** İlki bâtıl: 'elif elifdir' ile 'elif be'nin illetidir' arasındaki fark zarûrî; ayrıca elif belirli zâta işaret, 'illet olması' nisbî-izâfî hâl; **hakîkat-i mahsûsa nisbet-izâfe değil, nisbet-izâfeden mugâyir**; ayrıca **zâtı bilip 'be'nin illeti oluşundan gâfil kalmak** sahih. ⇒ **'kendi zâtını bilmek' 'ma'lûlünün illeti olduğunu bilmek' ile aynı değil**; 'zâtını bilen lâzımlarını bilir' dersek **matlûbu öncül yapıp sonucu ispat etmiş oluruz** (delil=dava). **Kesin**: 'zâtı ma'lûle illet olduğuna göre zâtını bilen bunu bilir' — **mugalatanın yeri burası**. Ardından: '**Bu mukaddimenin hak olmadığına deliller**' (4 vecih; ilki p125).
+- Netice/hüküm: **'Zâtını bilmek ⇒ lâzımlarını bilmek' öncülü Râzî'ce ispatsız/mugalata**.
+- Delil çeşidi: **analitik (delil=dava tespiti)**; (T) analitik-burhânî.
+- Mevzuya bağı: **Fasıl I metodu: 'dava ≠ delil'**: aynı yasak (c2 p19) **burada İbn Sînâ'ya karşı uygulanıyor**.
+- Doğan sual: —
+
+## c3 p125
+- OCR: orta
+- Okuma: tam
+- İçerik: **'Mâhiyetin ilmi lâzımlarının ilmini gerektirir' öncülüne deliller**: **(1)** 'Çok mâhiyet biliriz; her mâhiyetin diğerlerine nisbeti üç hâl: **müstelzim, münâfî, ne müstelzim ne münâfî**; bu hâller mâhiyetin **lâzımlarıdır**; bir mâhiyeti bilmek lâzımlarını bilmeyi gerektirseydi **tek mâhiyeti bilmekle sonsuz mâhiyetlerin hepsini bilmek** lâzım gelirdi (bâtıl).' **(2)** 'Cisim mâhiyetini **bedîhen** biliriz; lâzımlarından biri **kıdem ya da hudûs** (ihtilafa göre); ilim lâzımın ilmini gerektirse cismi bedîhî bilmekle **kıdem/hudûsu bedîhî bilmek** lâzım (bâtıl).' **(3)** 'Nefsimiz kâim bi'n-nefs, cismiyetten mücerred; nefsimizin kendisine hâzır olduğu iddiası doğruysa nefsi bilmek **nefsin bütün eser ve lâzımlarını bilmeyi** gerektirir: mücerred oluşu, hâdis vâcib-oluşu, bâkî oluşu (bedîhî bilmek gerekirdi) — böyle değil.'
+- Netice/hüküm: **Üç karşı örnek: ilim lâzımları getirmez.**
+- Delil çeşidi: **karşı örnek**; (T) analitik-burhânî.
+- Mevzuya bağı: **Fasıl I ilim sıfatı**: Râzî, **c3 p118'de kendi 'mâhiyet ilmi yakın lâzımın ilmini gerektirir' yolunu savunuyordu; burada İbn Sînâ'ya karşı 'lâzımlar getirmez' diyor: iç gerilim** — **çözüm: p118 'yakın lâzım (bitişik)' sınırlı; burada 'tüm lâzımlar'**; sınırın **çizilmemesi açık nokta**.
+- Doğan sual: **Râzî 'yakın lâzımın ilmi' iddiasının sınırını nerede çiziyor?** (Bâb devamı.)
+
+## c3 p126
+- OCR: orta
+- Okuma: tam
+- İçerik: **(4)** 'Ma'lûl illetin lâzımı olduğu gibi **illet de ma'lûlün lâzımı**; illeti bilmek ma'lûlü gerektirirse ma'lûlü bilmek **illeti** gerektirmeli; **zâtlarımızı ve hâllerini biliriz, bunlar yüksek illetlerin ma'lûlü**; ilim lâzımı gerektirseydi **yüksek illetleri tafsîlen bilirdik**; bilmiyoruz ⇒ ilim lâzımı gerektirmez.' **Cevap (İbn Sînâ tarafı)**: 'İlletin ilmi ma'lûlü gerektirir; **ma'lûlün ilmi illeti gerektirmez**: belirli illet **zâtı ile** belirli ma'lûlü îcâb eder; ma'lûl ise **imkânı yüzünden** illete muhtaç; imkân **belirli illete değil, bir illete** muhtaç eder; belirli illetle vâki oluşu, o illetin bulunup onu îcâb etmesindendir; ⇒ **ma'lûl belirli illeti gerektirmez**; 'bu iki sûret arasında **açık ve ma'kûl fark**'.
+- Netice/hüküm: **Karşı örnek 4'e İbn Sînâ tarafının cevabı: illet→ma'lûl lüzûmu tek yönlü.**
+- Delil çeşidi: **cedelî**; (T) analitik.
+- Mevzuya bağı: bkz p125.
+- Doğan sual: —
+
+## c3 p127
+- OCR: orta
+- Okuma: tam
+- İçerik: **İbn Sînâ'nın 2. yolu**: 'Delil: Allah **başkasını bilir**; başkasını bilen **zâtını bilir**.' **Asıl 1 (Allah başkasını bilir)**: 'Allah'ın zâtını herhangi bir malûmla beraber bilmemiz mümkündür; ilim ancak **malûmun sûretinin âlimde intıbâı** ile; **Allah'ın zâtının ilmi ile başkasının ilmi birlikte hâsıl olunca iki mâhiyet zihinde birlikte hâzır**; bu **mukârenet mümkün**; sıhhati 'zihinde hâzır olma'ya şartlı mı? Şartlıysa **hâzır olma da mukârenet** ⇒ **şart şartın kendisine şartlı: devir**; ⇒ sıhhat şartsız ⇒ **mâhiyet zihinde de hâricde de hâzır olsa mukârenet sahih**; ⇒ **Allah'ın zâtına başka ma'kûllerin mukârenetinin mümkin olması** (hâricî vücûdunda da) ⇒ **Allah'ın başkasını bilmesi sahih**.'
+- Netice/hüküm: **İbn Sînâ Yol 2 Asıl 1: sahihlik (imkân) çıkarımı: 'mukârenet mümkün ⇒ Allah âlim olabilir'.**
+- Delil çeşidi: **analitik (filozof; sûret-intıbâ' teorisi)**; (T) analitik-burhânî biçim (**öncül: ilim=sûret intıbâ'**).
+- Mevzuya bağı: Râzî bu öncülü reddediyor (c3 p104, 120); **bu yol Râzî'nin çerçevesinde geçerli değil**; ders katmanına **alınmaz**.
+- Doğan sual: —
+
+## c3 p128
+- OCR: orta
+- Okuma: tam
+- İçerik: Yol 2 devam: 'Bu mukârenet Allah'ın zâtına **sahih** ise, **Allah'ın zâtı için sahih olan her şey vâcib**: (yoksa **tagayyür câiz** olurdu, muhâl); çünkü her sıfat için zât ya **istiklâlle iktizâ eder**, ya **istiklâlle def' eder**, ya **hiçbirini**; ilk ikisi **daimî icâb/daimî selb**, üçüncü **muhâl** (zât sıfatın sübût-selbinden ayrılmaz; ikisi **münfasıl sebebe** muhtaç ⇒ vâcib mümkin) ⇒ **Allah'ın zâtı ve sıfatlarına tagayyür muhâl**; ⇒ **Allah'a sahih olan her şey hâsıldır**; **âlim olmak sahih ⇒ vâcib olarak âlimdir**.' **Asıl 2**: 'İş böyle olunca **zâtını da bilir** (herkes bir şeyi bilince onu bildiğini de bilebilir).'
+- Netice/hüküm: **'Sahih olan vâcib olur' (Vâcib'de imkân-i sıfat yoktur) prensibi**: Vâcib'de sıfatlar **ya zorunlu var ya zorunlu yok**.
+- Delil çeşidi: **analitik-burhânî**; (T) burhânî biçim (**ilginç: bu prensip c2 p106–109 'hevâdis' tartışmasıyla uyumlu ama 'izâfî sıfat hudûsu'na aykırı**).
+- Mevzuya bağı: **Fasıl I §8.0**: **'Vâcib'de sıhhat = vücûb' ilkesi (Râzî nakli, İbn Sînâ)** muhtâr çerçevesine **zıt** (muhtâr: fiili yapmamak da sahih); **Râzî bu ilkeyi 'ilim/hayat gibi sabit sıfatlar' için kabul edebilir; 'fiil' için değil**: **ders katmanında 'zâtî sıfatlar vs fiilî sıfatlar' ayrımı** (Sünnî çizgi: **sıfât-ı zâtiyye ve sıfât-ı fi'liyye**).
+- Doğan sual: —
+
+## c3 p129
+- OCR: orta
+- Okuma: tam
+- İçerik: İbn Sînâ Yol 2 sonu: 'Allah başkasını bilir ⇒ zâtını da bilir (**âlim olduğunu bilmek** hükmü, tasdîk ⇒ iki tarafın tasavvuru)'; 'imkân sabit olunca **vücûb** delille sabit ⇒ Allah **zâtını ve her şeyi bilir**'. **Kaynak (editör dipnotu)**: 'İşârât **Nemat 3** (nefs-i arz) metni: "her şeyi ta'akkul eden zâtını da ta'akkul edebilir…"'. **Râzî'nin itirazları — Sual 1**: 'Allah'ın **zâtını akledebildiğimizi** kabul etmeyiz; hükemânın mezhebi: **Allah'ın künhü beşerce ma'kûl değil**, halkça malûm olan yalnız **selbî ve izâfî sıfatlar**; **zât-ı mahsûsa min haysu hiye bilinmez** (c2 p86–96) ⇒ 'zâtını bilmek başkasını bilmekle birlikte sahih' iddiası **hatâ**.'
+- Netice/hüküm: **Yol 2'nin Asıl 1'i Râzî'nin 'zât-ı mahsûsa bilinmez' çizgisiyle çelişir.**
+- Delil çeşidi: **analitik + tutarlılık ilzâmı**; (T) analitik.
+- Mevzuya bağı: **c2 p86–96 (zât-ı mahsûsa cehli)** ile **tutarlı**; Fasıl I §2.2'ye yine destek.
+- Doğan sual: —
+
+## c3 p130
+- OCR: orta
+- Okuma: tam
+- İçerik: **Sual 2**: 'Allah'ın zâtı bilinebilir olsa bile **başkasıyla birlikte** bilinebilir mi? **Zarûrî**: zihni bir malûma yönelttiğimizde aynı anda başka malûma yönelemeyiz (mantık meselesiyle meşgulken hendese meselesine); **iki ilmi aynı anda cem'** muhâl; ya da genel olarak mümkün olsa da **burada mümkün değil**: **kuvvetli hissedilen yanında zayıf hissedilmez** (güneş karşısında kandil, gök gürlerken sivrisinek sesi); **Allah en büyük mevcut, en yüce ma'rifet; hâzır olunca başkasının ma'rifeti hâzır olamaz.** İtiraz: 'âlemin vâcibin îcâdına muhtaç olduğunu bilince ikisini birlikte biliyoruz' — **Râzî: mugalata**: 'vâcib olduğunu bilmek **sıfatlarından birini** bilmektir, **zât-ı mahsûsa'yı** değil'.
+- Netice/hüküm: **Zât ve ma'lûller birlikte bilinmez (Râzî sualı); 'vâcib olduğunu bilmek' zât ilmi değil.**
+- Delil çeşidi: **iç gözlem + istikrâ**; (T) ikna'î-analitik.
+- Mevzuya bağı: **Fasıl II/III (mükâşefe, ru'yet)**: 'ma'rifetin galebesi başka ma'rifeti örter' **tasavvufî tecrübe** ile bağlanabilir (**⊬**).
+- Doğan sual: —
+
+## c3 p131
+- OCR: orta
+- Okuma: tam
+- İçerik: **Sual 3**: 'Bu istikrâ **örneklerde** işler (cem' imkânsız görülen şeylerde); **birkaç sûrette sahih ⇒ her sûrette sahih** değil; **cem'i imkânsız olan malûmât olabilir**; sonsuz malûmâtta tecrübe **imkânsız** (sonsuzun vücûda girmesi muhâl) ⇒ istikrâ **az sûret**e dayanır.' **Sual 4**: 'Her bir malûmla cem' sahih olsa da **mecmû ile** sahih mi? **Bir tek için sabit hüküm mecmû için sabit olmayabilir.**' **Sual 5**: 'Bu **sûretlerin** birlikte olması mümkün olsa **ilim mâhiyetlerinin** birlikte olması mümkün mü? (Bu, **ilmin sûret intıbâ'ı** olduğu asla dayanır.)' **Sual 6**: 'mukârenetin imkânı **mâhiyetlerin zihnî** olmasına şartlı olabilir.'
+- Netice/hüküm: **Yol 2'ye Sual 3–6: istikrâ, mecmû, sûret, zihniyet**.
+- Delil çeşidi: **cedelî-analitik**; (T) analitik.
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c3 p132
+- OCR: orta
+- Okuma: tam
+- İçerik: Sual 6: 'Sûretin nefis cevherinde hâsıl olması mâhiyetin nefisle mukârenesi ⇒ imkân **hâsıla şartlı** olsa **imkânın vukûa şartlı** olması lâzım (muhâl)' — cevap: **mugalata**: **mukârene üç nev'**: (1) **hâlin mahalle mukârenesi**, (2) **mahallin hâle mukârenesi** (mâhiyetçe farklı; birinde mahalle hâsıl, öbüründe hâle imkânsız), (3) **iki hâlin tek mahalde mukârenesi**; **üç nev' mâhiyetçe farklı** ⇒ birinin hükmü diğerine geçmez. Allah'ın ilmi ile başka ilmin mukârenesi **(3)**; sûretlerin nefisle mukârenesi **(1)**; hâricî zâtın sûretlerle mukârenesi **(2)**; **(1)'in imkânı (2)'nin hâsıl olmasına şartlı**, bu **imkânın kendi vukûuna şartlı olması değil, başka nev'in vukûuna şartlı** ⇒ imkân-vukû' devir yok.
+- Netice/hüküm: **Yol 2'ye itirazın ilk cevabı: mukârene nevleri farklı ⇒ imkân-vukû' devri yok** (Râzî, İbn Sînâ'yı savunan cevabı yazıyor; sonra reddediyor: p133).
+- Delil çeşidi: **analitik (nev' ayrımı)**; (T) analitik.
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c3 p133
+- OCR: orta
+- Okuma: tam
+- İçerik: Râzî devam: 'Bu cevabın özü **zihnî sûretin hâricî varlıkla tam mâhiyette müsâvi olması**: zihnî hâlde sahih olan hâricî hâlde de sahih olmalı ⇒ **yanlış**: (1) zihinde mâhiyet **araz (mahalle muhtaç)**, hâricde **cevher (kâim bi'n-nefs)**; araz cevhere dönmez; ⇒ 'birinde sahih olan diğerinde sahih' değil; (2) bu, **Allah'ı bilince zihnimizdeki sûretin Allah'ın zâtıyla tam mâhiyette müsâvi olması**; (3) **semâyı idrak** sûretle **tam müsâvi** ise **zihnî sûret 'gök' olurdu (bâtıl; büyük cisim)**'. ⇒ 'mâhiyetler muhtelif ise hükümlerinde teşâbüh lâzım değil'. **Sual 7 (dört vecih)** başlar.
+- Netice/hüküm: **Zihnî sûret ↔ hâricî mâhiyet tam müsâvilik iddiası bâtıl (araz/cevher; gök örneği).**
+- Delil çeşidi: **analitik + karşı örnek**; (T) burhânî biçim.
+- Mevzuya bağı: **Kavramsal**: 'zihinde varlık' meselesi: **Fasıl I 'zihnî mefhûm/hâricî mevcut'** ayrımı için **kaynak**.
+- Doğan sual: —
+
+## c3 p134
+- OCR: orta
+- Okuma: tam
+- İçerik: Sual 7 devam: (3) **gök misali**: zihnî sûret semânın mâhiyetine tam müsâvi olsa sûret 'semâ' olurdu (bâtıl); (4) 'Allah'ın zâtına başka sûretlerin mukârenesi mümteni değil' ⇒ 'zâtın **o mahalle muhtaç olması** da sahih olmalı (misil ilkesi)' — sonuç bâtıl olduğuna göre ilke **istenen sonucu vermez**; (5) 'zihnî sûretler hâricî zâtlarla tam mâhiyette müsâvi; hâricî zâtlar ilme kâbil ise zihnî sûret de **zihinde iken âlim** olmalı' — bu lâzım gelmiyor ⇒ ilke bâtıl. **Sual 8**: 'Zât hâricde iken sûretlerle mukârene edebilse de **bundan zâtın âlim olması** lâzım gelmez: ilim bu mukârenenin kendisi değil; **ilim, sûretlerin hâsıl olmasına şartlı özel nisbet** (Râzî'nin tanımı, c3 p104): sûret bir şart, başka şartlar eksik.'
+- Netice/hüküm: **Sual 7–8: misil ilkesinin sınırı; ilim = şartlı nisbet (Râzî tanımı).**
+- Delil çeşidi: **analitik-cedelî**; (T) analitik.
+- Mevzuya bağı: **Fasıl I 'ilim sıfatı'**: Râzî **ilmi zâid nisbet olarak** tanımladığı için **'sûret hâsıl ⇒ ilim' zincirini** reddediyor: tanım-bağımlı.
+- Doğan sual: —
+
+## c3 p135
+- OCR: orta
+- Okuma: tam
+- İçerik: Sual 8 sonu (ilim nisbetinin başka şartları eksik). **Sual 9**: 'Allah'ın âlim olması sahih ise de **hüküm yetmez; muktezî gerek**: kâbil olsa da **muktezî yok** ⇒ imtinâ (kâbiliyet eksik değil, muktezî eksik); muktezî ya zât-ı mahsûsa ya başkası; zât iktizâ etmezse ve başkası salih değilse **muktezî fevt**.' **Sual 10**: 'Allah başkasını bilsin; **kendi zâtını bilmesi niçin vâcib?** Cevap: "**bir şeyi bilen, o şeyle âlim olduğunu bilebilir**; ilim ona kâim; her tasdîk iki tarafın tasavvuru gerektirir."' Râzî: '**iki vecihle** müşkil': (1) 'bu şahıs insan, at değil' hükmünde mevzû (bu şahıs) **cüz'î**, mahmûl (insan) **külli**; hâkim ikisini tasavvur etmeli ⇒ **cüz'îyi ve külliyi idrâk eden tek kuvvet** ⇒ **bu Şeyh'ce muhâl** (cüz'î idrâk **cismânî**, külli idrâk **mücerred** kuvvet ister).'
+- Netice/hüküm: **Sual 9–10: muktezî eksikliği; tasdîk için tasavvur ilkesi İbn Sînâ'nın kendi cüz'î/külli ayrımıyla çelişir.**
+- Delil çeşidi: **iç çelişki ilzâmı**; (T) analitik-cedelî.
+- Mevzuya bağı: **KRİTİK — cüz'î ilim**: **İbn Sînâ'ya göre cüz'îyi idrâk cismânî ⇒ Allah cüz'î bilemez**; Râzî bunu **tasdîk-tasavvur ilkesiyle** çelişkiye sokuyor; **Sünnî akide: Allah cüz'îyi de bilir**; bu **Râzî'nin cüz'î ilim bâbındaki (cilt 3 devam) tutumunu hazırlıyor**.
+- Doğan sual: —
+
+## c3 p136
+- OCR: orta
+- Okuma: tam
+- İçerik: Sual 10 (2. vecih): 'Bir şeyi bilen, âlim olduğunu bilmeliyse **üçüncü mertebe**de **âlim olduğunu bildiğini bilmek** de gerekir; Vâcib'de sahih olan her şey **fiilen hâsıl** ise **sonsuz mertebeler** her malûm için Vâcib'de hâsıl olur ⇒ **sonsuz ilimler**, hattâ **sonsuz illet-ma'lûl aynı anda**: muhâl.' **Yol 3 (İbn Sînâ, 'el-Mebde' ve'l-Meâd')**: 'Nefis cevheri, mücerred sûret hâsıl olmadan önce **kuvve ile âkil**; sûret hâsıl olunca **fiilen âkil**; sûret cevher olsaydı (kâim bi'n-nefs) **daha evlâ fiilen âkil** olurdu: ateşe sıcaklık hâl olunca ateş ısıtıcı olur; **sıcaklığın kendisi kâim bi'n-nefs olsa ısıtıcı olmaya daha evlâ**.'
+- Netice/hüküm: **Yol 2'ye son itiraz (sonsuz mertebe); Yol 3 (kâim bi'n-nefs sûret ⇒ âkil) başlıyor.**
+- Delil çeşidi: **reductio + analoji**; (T) analitik-cedelî.
+- Mevzuya bağı: —
+- Doğan sual: —
