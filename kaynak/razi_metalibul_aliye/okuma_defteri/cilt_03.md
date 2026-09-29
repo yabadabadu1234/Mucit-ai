@@ -2521,3 +2521,75 @@ Biçim: cilt 1–2 ile aynı.
 - Delil çeşidi: **taksîm + mukayese (hayr-şer)**; (T) burhânî biçim, öncüle bağlı: **'hikmet en râcihi gerektirir' öncülü ve 'şerden ayrılması aklen muhâl' öncülü ayrıca ispat ister [dava ≠ delil]**; örnek karşılaştırmalar (aç/tok) **ampirik-ikna'î**.
 - Mevzuya bağı: **Fasıl I 'şer problemi'** (c2 p146–147: seneviyye çözümünün çıkmazı; teodise cevabı c2'de yoktu): **bu, c3'te ilk teodise cevabıdır (filozof yolu)**; Risale'de 'şer problemi' bölümü için kaynak c3 p280–281 (derece: filozof yolu, Râzî'nin kendi kabulü p281+ sonrası belli olur). **'Hayr galip olan yaratılır' öncülü 'vücûb-ı aslah' izlenimi verir; Sünnî çizgide Allah'a vâcib şey yoktur** — bu farkın tahrîri gerekir.
 - Doğan sual: Râzî kendi cevabında 'vücûb' dilini nasıl yumuşatıyor (p281+)?
+
+## c3 p281
+- OCR: orta
+- Okuma: tam
+- İçerik: Filozof yolunun sonu: 'mahlûkâtın hepsi hikmet ve sevap üzere vâki.' Hayır **murâd-ı merdî**, şer **murâd-ı mekrûh**: hayır asıl maksat; şer **zâtı itibariyle mekrûh**, fakat matlûb-ı bizzât olan hayrın lâzımı olduğu için **arazî ve tebeî olarak murâd** (bir şair: 'ağarmış saçtan hoşlanmam, ondan ayrılmaktan da hoşlanmam' — hayat sevimli, ağarma onun lâzımı; şairin adı metinde yok, 'hakîmü'ş-şu'arâ' deniyor, ⊬). **Râzî'nin itirazı (iki vecih), 1. vecih**: 'bu müessir neden hayrı yaptı, şerri yaptı?' sorusu **ancak fâil-i muhtâr için** yöneltilir; **mûcib bi'z-zât** ise soru düşer; 'fâil bildiği hâlde' yetmez: **damdan düşüp birinin üzerine düşen ve onu öldüren akıllı-âlim adama 'neden öldürdün' denmez**, çünkü fiilinde muhtâr değil.
+- Netice/hüküm: Filozof teodisesi: **şer arazî ve tebeî murâd**; Râzî'nin 1. itirazı: **bu bahis yalnız muhtâr fâil varsayımında anlamlıdır**.
+- Delil çeşidi: taksîm + **misal (düşen adam)**; (T) cedelî (itiraz) — **muhtâr/mûcib ayrımının hikmet bahsine doğrudan yansıması**.
+- Mevzuya bağı: **Fasıl I §5/§8 ve şer problemi**: c2 p146–147'de eksik kalan teodise cevabının **ilk filozof biçimi bu ve p280**; **Râzî bunu kabul etmiyor** (itiraz başlıyor). Şiir kaydı Risale'ye alınmaz.
+- Doğan sual: Şairin kimliği (⊬).
+
+## c3 p282
+- OCR: orta
+- Okuma: tam
+- İçerik: **Filozofların Râzî'ye karşı savunması**: 'Bu bahsin maksadı, ilk mebde'in mahlûkâtının **ya mahz hayır ya hayrı galip** olduğunu göstermek, **eserlerin kemâlinden zâtın kemâline istidlâl**; bu bahis faydalı'. **Râzî'nin 2. vechi: sözünüz üç asla dayanır**: (1) **bu çok hayırlar ancak bu şerlerle tahsîl olur**; (2) **bu şerler hayırlara nispetle mercûh**; (3) **öyleyse o mercûhiyete katlanmak vâcib**. **1. asıl memnû'**: cisimler cisimlikte müsâvî; her birinin kendi hâssasına, tabîatına ihtisası **fâil-i muhtâr** yüzündendir; kâdir-i muhtâr, hâssaları **menfaat sebebi** olarak da, **zarar sebebi** olarak da yaratmaya kâdir; öyleyse bu hayırlar şerlerden arınmış olarak tahsîl edilebilir. **Örnek**: ateş yemek pişirme–gıda olgunlaştırma menfaati verirken tabîat-ı nâriyyesini korur; insanı yakacağı zaman bu tabîat ondan alınabilir.
+- Netice/hüküm: **1. asıl (hayır ancak şerle tahsîl olur) memnû'**: kâdir-i muhtâr için hâssaların menfaat/zarar sebebi olarak ayrılması mümkün.
+- Delil çeşidi: **cedelî (menʿ) + kudret argümanı**; (T) cedelî; **öncül: cisimler cisimlikte müsâvî ⇒ hâssa ihtisası fâil-i muhtârdan** (kelâmcı hudûs/ihtisas delilinin aynı öncülü; F 27-B: c3 Bâb 1–2 aporisine bağlı).
+- Mevzuya bağı: **Fasıl I §8**: 'ihtisas ⇒ muhtâr' öncülü Râzî'nin **kendi kelâm burhanı**; burada **filozofa karşı kullanılıyor (cedelî)**; dâî-tevakkuf çerçevesindeki aporisi (c3 p20–53) **ayrıca** duruyor.
+- Doğan sual: —
+
+## c3 p283
+- OCR: orta
+- Okuma: tam
+- İçerik: **Gerekçe devamı**: ateşin insanı yakması Allah'ın kudretinde ise, bu **giderilebilir şer**; **beyin zarındaki tümör** hafif müshille tabip tarafından giderilebilir; ilâh aciz ise **fakir tabip ilâhtan daha kâmil kudretli**; **büyük melik bir kavme galip gelince kalbine ihsan dâîsi düşerse öldürmekten kurtulur**: ilâh-ı âlem o dâîyi yaratmaktan aciz mi, kâdir de yapmıyor mu? **Filozofların cevabı**: bu ilzâm ancak ilâh **muhtâr** ise; mûcib bi'z-zât ise söz düşer. **Râzî'nin hâsılası**: ilâh **mûcib ise bu bahse hiç ihtiyaç yok**; **kâdir-muhtâr ise bahis bâtıl** (kâdir gerekeni yapabilir); **her iki takdirde bâtıl**. **2. asıl (mefâsid mercûh) gizli muğâlata**: insanın âfetlerden selâmetle kalması ≠ lezzet ve sürûrla kalması; **maksat ya âfetten selâmet ya lezzet-behcet**; ilki bâtıl (asl-ı ademde de hâsıl); maksat lezzet-behcet-sürûr.
+- Netice/hüküm: **Filozofun hayr-şer bahsi her iki takdirde bâtıl**: mûcib ise gerekmez, muhtâr ise şerrin giderilmesi mümkün olduğundan şer 'lâzım' değil.
+- Delil çeşidi: **reductio/taksîm (mûcib–muhtâr ikilemi) + misal (tabip, melik)**; (T) cedelî-analitik. **'Kâdir muhtâr ⇒ şerrin giderilmesi mümkün' çıkarımı 'şer neden var?' sorusunu cevapsız bırakır: Râzî burada teodiseyi çözmüyor, filozofunkini iptal ediyor.**
+- Mevzuya bağı: **Fasıl I 'şer problemi'**: **Râzî'nin filozof teodisesine cevabı: iptal**; **'tabip ilâhtan kudretli' benzetmesi Risale'ye alınmaz** (edebe ve konuya uygun değil, delil değil). Ders katmanı için 'mûcib–muhtâr ikilemi' kutusu.
+- Doğan sual: —
+
+## c3 p284
+- OCR: orta
+- Okuma: tam
+- İçerik: **2. asıl'ın iptali**: 'hayır galip' ile kastedilen (a) **âfetten selâmetin galip olması** ise, **yaratmanın maksadı selâmet olamaz** (asl-ı ademde de hâsıl) ⇒ az şerrin çok hayır için taşınması bu mânâda geçmez; (b) **lezzet-sürûrun gam-elemden râcih olması** ise **memnû'**: sürûr vakitleri az, **gam-hüzün galip**; **mal ve câh sevgisi şiddetli, talepte çoğu kez maksada erişemez, kalbi elem ve vahşette kalır; erişse lezzeti daha fazla talebe götürür, talep çile-belâ doğurur**; 'talepte mahrûm kalırsa belâ, erişirse lezzeti daha kâmil talep sebebi olur'; **düşmanların kasdı, hastalıklar, fakirlik ve ihtiyarlık korkusu = kıyısı olmayan deniz**; 'bu mekrûhât o lezzetlerden azdır diyen **mükâbere**'. **3. asıl**: 'çok hayrı az şer için terk çok şerdir': şer ya **hayrın terki** ya **elem-zarar**.
+- Netice/hüküm: **Dünyada lezzet–sürûrun elem–gamdan râcih olması Râzî'ye göre memnû'**; hayr-galip iddiası 'gizli muğâlata'.
+- Delil çeşidi: **tecrübî/ampirik-ikna'î** (hırs-talep analizi) + taksîm; (T) ikna'î-cedelî. **[Delil ≠ dava: 'lezzet ≤ elem' hükmü gözleme ve genellemeye dayanır, ispat edilmemiş; 'elem çoğunluğu' iddiası Râzî'nin cedelî mukabelesidir, kendi tezi olarak alınamaz.]**
+- Mevzuya bağı: **Fasıl I 'şer problemi' / Fasıl III (âhiret)**: bu mukabele **dünya hayatının nitelenmesi** ile ilgili; **Risale ana metnine 'dünya elemi lezzetten çoktur' hükmü ALINMAZ**; Kur'ân'ın imtihan tasviri (67:2) ayrı kaynaktan yazılır (⊬ numara doğrulanacak, satır işarettir).
+- Doğan sual: —
+
+## c3 p285
+- OCR: orta
+- Okuma: tam
+- İçerik: **3. asıl'ın iptali**: 'şer' **hayrın terki** ise 'çok hayrı az şer için terk çok hayrı terktir' **tekrar (özdeşlik)**, konu ile yüklem arasında fark kalmaz: **fâsid önerme**; şer **elem-zarar** ise bâtıl: çok hayır terk edilirse **şey asl-ı ademde kalır; lezzet de elem de hâsıl olmaz**. **Filozof yolunun sonu.** **Mu'tezile yolu (dipnot 'Fasıl 19: hikmeti Mu'tezile kavline göre'): delil**: 'hüsn hüsnü, kubuh kubhu **kendisine dönen vecihler** sebebiyle; Allah **her ihtiyaçtan ganî**; **her ma'lûmu âlim**; bu asılların mecmûundan **bir mukaddime doğar: Allah kabîhin kabîh olduğunu bilir ve ondan ganîdir; bu iki vasıfta olan kabîhi yapmaz**' ⇒ **Allah kabîhi yapmaz**. **Delil (1) ilk vecih**: 'doğru söylersen bir dinar, yalan söylersen bir dinar' — insan için doğru-yalan dışında her şeyde eşit ise **yalanı terk eder, doğruyu yapar**.
+- Netice/hüküm: Filozof teodisesinin **üç aslı da iptal** edildi; Mu'tezile yolu aktarılmaya başlandı.
+- Delil çeşidi: (1) **reductio/tanımsal**: 'terk-i hayr = şer' tekrar, 'şer=elem' ise asl-ı adem nötr (analitik); (2) Mu'tezile: **kıyas (şâhide gâib) + misal**; (T) cedelî (Râzî'nin) / hitâbî-ikna'î (Mu'tezile kıyası).
+- Mevzuya bağı: **KRİTİK — Sünnî akide**: **Mu'tezile'nin 'Allah kabîhi yapmaz (aklî hüsn-kubuh)' delili** Fasıl I'e **alınmaz**; Râzî aktarıp **rədd edecek** (p286). 'Asl-ı ademde lezzet de elem de yok' argümanı **filozof teodisesine karşı** analitik-cedelî; ana metne sadece cedel olarak.
+- Doğan sual: —
+
+## c3 p286
+- OCR: orta
+- Okuma: tam
+- İçerik: **Mu'tezile delili (devam)**: (a) **kabîhi bilmek o fiilden sarf eder** (yalan örneği: sarf sebebi 'kizb olduğunu bilmek'); Allah'a bu ilim hâsıl, o hâlde kabîhten sarf eder. (b) **Kıyası bırakıp 'darûrî ilim' iddiası**: fiilin kabîh olduğunu bilmek ondan **inkısâfı gerektirir**, ancak şehvet ve ihtiyaç dâîsi ile çatışırsa hariç; Allah'ta bu dâî muhâl ⇒ **imtinâ' vâcib**. **Râzî'nin itirazı**: 'İlim kabîh fiilin **sudûrunu imkânsız kılıyor mu, kılmıyor mu?** (1) **İmkânsız kılıyorsa Allah mûcib bi'z-zât olur**: zâtı o ilmi mûcib, ilim imtinâı mûcib, **mûcibin mûcibi mûcib** ⇒ zâtı imtinâı mûcib ⇒ **fâil-i muhtâr değil**; (2) **imkânsız kılmıyorsa** bu sarıf ile birlikte fiil **caiz**, cevaz varken 'asla olmaz, olsa muhâl olur' diye cezmetmek nasıl? **Ayrıca** sevabı ve ivazı terk kabîh olduğuna göre **fiili aklen vâcib** olur ⇒ yine mûcib bi'z-zât. **Filozoflara söylediğimiz**: mûcib bi'z-zât denirse bu bahis tamamen düşer.
+- Netice/hüküm: **Râzî Mu'tezile'nin hikmet delilini çürütüyor: delil ya mûcib bi'z-zât ya cevaz (cezm yok) sonucuna varır; ikisi de Mu'tezile'nin tezini vermez.**
+- Delil çeşidi: **reductio/ikilem**; (T) **burhânî biçimde cedelî (öncülleri Mu'tezile'nin kendi asılları)**.
+- Mevzuya bağı: **Fasıl I §8 ve F 27-B**: bu, **muhtâr-mûcib ikilemi'nin Râzî'nin elindeki en keskin biçimi**; Fasıl I'in 'hikmet ⇒ kabîhi yapmaz' türü hiçbir cümlesi olmamalı (**kontrol borcu: Fasıl I'de 'vâcib-i aslah/kabîhi yapmaz' cümlesi var mı?** ⊬ dosya okunarak bakılacak).
+- Doğan sual: Fasıl I'de 'Allah adil/zulmetmez' cümleleri hangi delille kurulmuş?
+
+## c3 p287
+- OCR: orta
+- Okuma: tam
+- İçerik: Râzî'nin kapanışı: 'Bu delil, Allah'ın kabîhi **işlemediğine, istemediğine, emretmediğine** delâlet ediyorsa, **bunu işlediğine ve istediğine delâlet eden deliller vardır: kulların bütün fiillerinin Allah'ın kazâ ve kaderiyle vâki olduğuna delâlet eden deliller; bunların şerhi istikssâ ile gelecek**. Vallâhü a'lem.'
+- Netice/hüküm: **Hikmet bâbında Râzî'nin kendi cevabı 'kazâ-kader' bâbına havale**; iki yol (filozof, Mu'tezile) reddedildi.
+- Delil çeşidi: —; (T) havale.
+- Mevzuya bağı: **Fasıl I 'şer problemi'** ve **kul fiili** (c3 p60, 73): **Râzî'nin hikmet–şer cevabı bu cilt sonrasında (kazâ-kader bâbı)**; **açık borç**: cilt 4–9'da 'kazâ ve kader' bâbı bulunacak ve okunacak. **KRİTİK**: 'Allah'ın kabîhi işlediği ve istediği' ifadesi **Râzî'nin ihtilaf içi diliyle 'kul fiilini yaratma'** anlamındadır; Sünnî ana çizgide 'şer Allah'a nisbet edilmez, halk edilir; irâde ile emir ayrı' ayrımı **korunarak** yazılmalı; **Risale ana metnine ALINMAZ** (Râzî'nin ifadesi ⊬ ayrıca çalışılacak).
+- Doğan sual: 'Kazâ ve kader' bâbı hangi ciltte (atıf haritası)?
+
+## c3 p288
+- OCR: boş sayfa (OCR başlığı yok)
+- Okuma: **okunmadı (sayfa boş)**
+- İçerik: Yok.
+- Netice/hüküm: Yok.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
