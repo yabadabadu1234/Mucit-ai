@@ -3385,3 +3385,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **nakz**; (T) burhânî biçim (nakz).
 - Mevzuya bağı: **KRİTİK — Fasıl I §3, §8, Ders katmanı 'delil derecelendirme' kutusu**: **Nakız 6 ilkesi ('mahzûr her iki takdirde kâim ise onunla bir takdir ibtâl edilmez') Risale'nin F 27-B (ölçü ayırt eder mi) ilkesinin klasik biçimidir** — **doğrudan alıntı adayı** (ders kutusu). **Hasmın karşı silahının iki yönlülüğü Risale'nin de her delilde kontrol edeceği bir sınavdır.**
 - Doğan sual: —
+
+## c4 p377
+- OCR: orta (ilk satır tamamen bozuk)
+- Okuma: kısmî (ilk satır okunamadı; Nakız 8'in başı p376'dan devam ediyor)
+- İçerik: **Nakız 8 sonu**: 'siyahın siyah olması ≠ bu vakitte hâdis olması; hudûsu zâid ise zâid de bu vakitte hâdis ⇒ teselsül.' **Nakız 9**: '**illet bir ma'lûl gerektirdi, o ma'lûl başka ma'lûl…; ilk illet 'birinci ma'lûlün illeti', 'ikinci ma'lûlün illeti' … olur; 'Elif'in illeti olma' mefhûmu ≠ 'Be'nin illetinin illeti olma' mefhûmu ≠ …; bu mefhûmlar dâhil/hâricî ⇒ taksîm.**' **Nakız 10**: '**Allah'ın akl-ı evvelle beraber mevcut olması ≠ akl-ı sânîyle, ilk-ikinci felekle beraber mevcut olması …; Allah 'her akıl ve felekten önce' (ya illetle ya rütbeyle); 'bundan önce' mefhûmu ≠ 'ondan önce'** ⇒ aynı taksîm ⇒ basit her şey mürekkeb, **Bârî mürekkeb**, te'sîr ve müessir mutlak nefyolur; bunlar bâtıl olduğuna göre **hasmın i'tibârı bâtıl.**'
+- Netice/hüküm: **Râzî'nin nakızları 10 örnekte tamam: 'mefhûm ayrı ⇒ terkîb' taksîmi Allah'ı da mürekkeb yapar ⇒ bâtıl.**
+- Delil çeşidi: **nakz (proves too much)**; (T) burhânî biçim (nakz); **F 27-B: ayırt etmez ⇒ delil değil.**
+- Mevzuya bağı: **KRİTİK — Fasıl I §6.2, c2 K2 F1, c4 p316–319**: **Nakız 10 ('Allah her şeyle beraber mevcut olması ≠ …') Râzî'nin kendi p316–319 delilinin ('ta'ayyün zâid ⇒ terkîb') Allah'a dönüşünü de açık yazıyor** — bu, aynı silahın iki yönü örüntüsünün **kendi kaleminden** kaydıdır. **Risale 'mefhûm ayrı ⇒ terkîb' kalıbını hiçbir delilde tek başına kullanmaz** (ders kutusu: 'Râzî'nin kendi nakz ilkesi').
+- Doğan sual: —
+
+## c4 p378
+- OCR: orta
+- Okuma: tam
+- İçerik: **Râzî'nin cevapları — 'vâhid'den ancak vâhid' hüccetlerine**: **Hüccet 2'ye**: '**vâhid illetten Elif sâdır, Be de sâdır ise 'Elif sâdır oldu ve Elif olmayan sâdır oldu' sadık; 'Elif sâdır olmadı' denmez**: 'Elif olmayan sâdır oldu' ile 'Elif sâdır olmadı' arası fark var (**'bi'l-imkân leyse' ≠ 'leyse bi'l-imkân'; 'bi'd-darûra leyse' ≠ 'leyse bi'd-darûra'** — mantık kâideleri, cihet farkı). **Kat'î delil**: 'bu fark olmasaydı cisim **tek sıfat** kabul ederdi (iki muhtelif sıfat kabul etse 'kabul etti ve etmedi' sadık olurdu); ayrıca 'zât ancak bir vakitte hâsıl olur' olurdu.' **Hüccet 3'e**: '**ateş tabiatı varken soğutma yok, su tabiatı varken ısıtma yok: tahalluf ile müessirlerin mâhiyet ihtilâfına istidlâl; tahalluf yoksa eser ihtilâfı tek başına müessir ihtilâfına delil olmaz; nizâ oradadır.**' **Hüccet 4'e**: 'illet ma'lûlle mâhiyette müsâvi olamaz (mütemâsiller lâzımda müsâvi ⇒ illiyet/ma'lûliyet biri ötekinden evlâ olmaz)'.
+- Netice/hüküm: **Râzî'nin hükmü: 'vâhid'den ancak vâhid' delillerinin 2, 3, 4 (ve 5, p379) cevapları: cihet farkı, nizâ noktası, mâhiyet müsâvatı.**
+- Delil çeşidi: **ilke (mantıkî cihet farkı) + nakz**; (T) burhânî biçim (Râzî cevapları).
+- Mevzuya bağı: **Fasıl I §8**: **'vâhid'den ancak vâhid' kaidesi Risale'de çürütülmüş sayılabilir mi?** Râzî **nakızlarla ve cevaplarla** çürütüyor; **ders katmanına 'Sâdır' bahsi ana metne alınmaz** (filozof sudûr teorisi ayrı); ana metin **'muhtâr, vâhid'den birden çok'** cümlesini **Râzî çizgisinde 'öncüle bağlı' yazar**.
+- Doğan sual: —
+
+## c4 p379
+- OCR: iyi
+- Okuma: tam
+- İçerik: **Hüccet 4 cevabı sonu**: '**'illet ma'lûle mâhiyette mütemâsil' diyenin sözü bâtıl.**' **Hüccet 5'e cevap**: '**mantık ilminde beyân ettik: 'hiçbir adet diğerinden evlâ değil' sözüyle nefsü'l-emirde evlâlığın olmaması kastedilirse men olunur; zihin ve hâtırdaki evlâlığın olmaması kastedilirse ancak tevakkuf ve kat'î hükmetmeme gerektirir.**' (Râzî'nin 'tevakkuf' ilkesi, c4 p284'teki aynı ilkeyle.) '**Allah en iyi bilir.**'
+- Netice/hüküm: **Râzî'nin hükmü: 'vâhid'den ancak vâhid' kaidesinin 5 hücceti de cevaplandı; kaide ispatlanmadı, ama çürütülmedi de — hasım delili 'tevakkuf' derecesinde.**
+- Delil çeşidi: **ilke (nefsü'l-emr/zihin ayrımı)**; (T) burhânî biçim.
+- Mevzuya bağı: **Fasıl I §8, ders katmanı**: **'nefsü'l-emirde evlâlık ≠ zihinde evlâlık' ayrımı (c4 p284, p379)** Râzî'nin delil-derece dilinin temel taşı; **ders kutusuna eklenir**.
+- Doğan sual: —
+
+## c4 p380
+- OCR: —
+- Okuma: okunmadı (boş)
+- İçerik: metin yok.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c4 p381
+- OCR: iyi
+- Okuma: tam
+- İçerik: **4. Fasıl başlığı**: '**'vâhid'den ancak vâhid sâdır olur' diyenlere göre Allah'tan sâdır olan ilk ma'lûl nedir?**' **Filozof anlatımı**: '**Allah kesretin bütün cihetlerinden münezzeh; vâhid'den ancak vâhid ⇒ Allah'tan ilk sâdır tek şey. Her mümkin ya cevher ya araz; ilk sâdır araz olamaz (araz cevhere muhtaç ve rütbeten müteahhir; ilk sâdır araz olsa cevherlerin illeti olur; araz cevherden sâbık, oysa cevher onun ma'lûlüne sâbık ⇒ devir)** ⇒ ilk sâdır cevher: cisim mi, cisim mâhiyeti cüzü mü, ne cisim ne cüz mü? **Cisim olamaz** (cisim hayûlâ ve sûret mürekkebi; cismin tekvîni cüzlerinin tekvîninden sonra olur); **cüz olamaz** (cüz ya hayûlâ ya sûret): (p382).
+- Netice/hüküm: **Filozofların sudûr sistemi (ilk sâdır) anlatımı başladı; Râzî aktarıyor.**
+- Delil çeşidi: **taksîm**; (T) burhânî biçim (filozof).
+- Mevzuya bağı: **Fasıl I §8**: **sudûr ('ilk akıl') teorisi ana metne ALINMAZ**; yalnız 'muhtâr fâil' ile karşıtlığı not edilir.
+- Doğan sual: —
+
+## c4 p382
+- OCR: iyi
+- Okuma: tam
+- İçerik: **Filozof anlatımı devam**: '**ilk sâdır hayûlâ olamaz (hayûlâ kâbil ve mevcut; kâbil ve fâil aynı şeyde olamaz; hayûlâlar müsâvi, biri illetse hepsi illet); sûret olamaz (sûret hayûlânın illeti olsa hayûlâdan müstağnî te'sîr eder ⇒ müstağnî vücûd ⇒ sûret sûret olmaz).**' ⇒ ilk sâdır **mücerred cevher**: harekete alet-i cismâniyeye bağlıysa **nefs**, bağlı değilse **akıl**; nefs olamaz (ilk sâdır bütün ecsâmın illeti, cismânî alete bağlı olamaz, aksi halde şey nefsinden mukaddem); ⇒ ilk sâdır **akl-ı mücerred**, '**şer' lisanında 'Rûh-ı a'zam'**: 'Rûh ve melekler saf saf durduğu gün' (Nebe 78/38) ve '**Allah'ın ilk yarattığı akıldır**' hadisi.' **Editör dipnotları (neşredenin, Râzî'nin değil)**: hadisin sübûtu ve tefsirinde zorlama; '**âhâd rivâyetlerle akâid usûlüne istidlâl yakışmaz**.' **Râzî: 'bu kavmin kelâmının en güzel vechile takrîridir; onun aleyhine itirazlar var.'**
+- Netice/hüküm: **Filozof sudûr sistemi: ilk sâdır = akl-ı mücerred (Rûh-ı a'zam). Râzî bunu 'kavmin kelâmı' olarak aktarıyor, şer' lisanıyla eşleştirme filozofların yorumu.** **Ek bilgi (benim, kaynak dışı, ⊬ doğrulama): 'ilk yaratılan akıldır' rivayetinin hadis âlimlerince çoğunlukla sahih sayılmadığı bilinir; Risale ana metne almaz.**
+- Delil çeşidi: **taksîm**; (T) burhânî biçim (filozof) + hitâbî (âyet/hadis eşleştirmesi, zayıf).
+- Mevzuya bağı: **KRİTİK — Fasıl I §8, tevhîd ve hadis metodolojisi**: **'ilk yaratılan akıl' hadisi Risale'de KULLANILMAZ**; editörün **'âhâd ile akâid usûlü'** notu Risale'nin usûlüyle **uyumlu** (ana metin akâid için mütevâtir/kat'î delile yaslanır). **Sudûr sistemi Sünnî akideyle örtüşmez: Allah'ın doğrudan yaratması (halk) ile çatışır.**
+- Doğan sual: —
+
+## c4 p383
+- OCR: orta
+- Okuma: tam
+- İçerik: **Râzî'nin itirazları (sudûr sistemine)**: **Soru 1**: '**cismin hayûlâ-sûretten terkibine bina ederek ilk sâdırın cisim olmadığını gösterdiniz; bu asıl kavmin takrîri gâyet zayıf (göstereceğiz) ⇒ kelâmınız bâtıl.** Bize göre ilk sâdırın cisim olmayışının delili: **her cisim vehmî bölünmeyi kabul eder; kabul edenin nefsinde cüzler ve ba'zlar var; bölünme ikilik ihdâsı değil bitişiklerin ayrılmasıdır**; Allah bütün cüzlerin illetiyse **vâhid'den birden çok**; bir cüzün illetiyse o cüz ikincisinin illeti... **iki muhâl**: (1) âlemin bütün zâtları birbirine ya illet ya ma'lûl; (2) **cüzler tam mâhiyette mütemâsil, biri ötekine illet olamaz** ⇒ **bu delil iyi, fakat filozofların usûlüne uymuyor.**' **Soru 2**: 'ilk ma'lûl hayûlâ olamaz mı? **'Kâbil ve fâil aynı anda' muhâl' sözünüzün delili 'iki eser (fiil ve kabul) vâhidden' — bu vâhid'den vâhid kaidesine bağlı; kaidenin ibtâli geçti; kaide sâbit olsa bile 'kabul eser' denmez (kabul eser olsa kâbil müessir olurdu, sizce muhâl).**'
+- Netice/hüküm: **Râzî'nin hükmü: sudûr sisteminin 'ilk sâdır cisim değil' delili filozofun kendi öncüllerine (hayûlâ-sûret) bağlı, **zayıf**; Râzî **kendi delilini** (bölünme + cüz mütemâsil) veriyor: 'iyi delil ama felsefî usûle uymaz'.**
+- Delil çeşidi: **itiraz + kendi delili**; (T) burhânî biçim (Râzî'nin delili), **filozof usûlüne karşı cedelî**.
+- Mevzuya bağı: **Fasıl I §8**: sudûr sisteminin **zayıflığının Râzî tarafından gösterilmesi** Risale için **kâfidir**; sudûr ayrıntısı ana metne girmez.
+- Doğan sual: —
+
+## c4 p384
+- OCR: orta
+- Okuma: tam
+- İçerik: **Soru 2 devam ve nakızlar (filozofun kendi usûlüne)**: **Nakız 1**: '**Allah bütün ma'lûmâtı bilir; ilim ma'lûmun sûretinin âlimin zâtında hâzır olmasıdır; ma'lûmâtın sûretleri Allah'ın zâtında irtisâm eder ⇒ zât o sûretlere kâbil, müessir yine kendi zâtı ⇒ tek şey hem kâbil hem fâil ⇒ bu söz nakzedilir.**' **Nakız 2**: '**müessirin müessir olması zâtından gayr bir sıfat (nisbî/izâfî hâl); müessiriyetin mûcibi o zât ⇒ tek şey bu müessiriyete nisbetle hem fâil hem kâbil.**' **Nakız 3**: '**vâcibü'l-vücûd zâtı ta'ayyün ve teşahhus etmiş; vücûb mâhiyeti bu ta'ayyünden gayr (yoksa vâcib zâtını bilen 'yalnız bu ta'ayyün' olduğunu bilirdi, bir delil gerekmezdi); ta'ayyün vücûb-i bi'z-zât'ı iktizâ edemez (vâcib bi'z-zât vâcib li-gayrihî olamaz) ⇒ 'vâcib bi'z-zât' mefhûmunun kendisi ta'ayyünü gerektirir' (p385).**' 
+- Netice/hüküm: **Râzî: filozofun 'kâbil ve fâil aynı olamaz' öncülü kendi ilim ve müessiriyet öğretisine aykırı (nakz).** (**Not: 'ilim = sûretin zâtta irtisâmı' filozof görüşüdür; Ehl-i Sünnet Allah'ın ilmini sûret irtisâmı olarak açıklamaz; Risale bu nakzı 'filozofun kendi ölçüsüyle çelişkisi' olarak alır, kabul etmez.**)
+- Delil çeşidi: **nakz (kendi ölçüsüne)**; (T) cedelî.
+- Mevzuya bağı: **Fasıl I §8, c3 (ilim)**: Nakız 1 **filozof ilim teorisini (sûret irtisâmı) kullanır**; Sünnî çizgide Allah'ın ilmi zâtî sıfat, sûret irtisâmı değil; **Risale nakzı 'ilzâmî' işaretler.**
+- Doğan sual: —
