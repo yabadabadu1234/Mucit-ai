@@ -767,7 +767,9 @@ eşit-ihtimal ⟹ TEK tahakkuk ⟹ kanun≠fail ⟹ İrade(Vâcib)
 
 Kök: ق د ر (kadr/kudret = güç yetirme).
 
-**Çoban için:** Yoktan bir şey var etmek, gücü olmayanın yapabileceği bir şey değildir. Fakat bu delilin işlemesi için önce âlemin gerçekten **sonradan** var olduğunu (ezelî olmadığını) göstermek gerekir — aksi hâlde "yaratan bir kudret" aranamaz.
+**Çoban için:** Yoktan bir şey var etmek, gücü olmayanın yapabileceği bir şey değildir.
+
+**NAKZ (F 2-Y) — bu paragrafın önceki hâli yanlıştı:** Burada önceden "Kudret'in ispatı için önce âlemin zaman içinde başladığını göstermek gerekir" yazılıydı. Bu yanlış bir bağımlılıktı. Kudret'in ispatı **iki ayrı yoldan zaten yapılmıştır ve ikisi de "âlemin bir başlangıcı var mı" sualine muhtaç değildir**: (1) §5 Burhân-ı Tahsis: tahsis eden, seçer ve hârice çıkarır ⟹ Kadîr; (2) §4 Devam-ı Hudûs: mümkin her ân Vâcib'e muhtaçtır ⟹ her ân îcad eden bir kudret. Âlem ezelî de olsaydı bu iki yol yine Kudret'i verirdi. Aşağıdaki **Hudûs Delili** bu yüzden Kudret'in *şartı* değil, **ayrı bir ek delildir** ve kendi derecesi (T) ile aşağıda yazılıdır.
 
 **Hudûs Delili (muhtasar):**
 
@@ -792,6 +794,8 @@ Kök: ق د ر (kadr/kudret = güç yetirme).
 ```
 Hudûs(âlem) ⟹ îcad-kudreti ⟹ Kudret(Vâcib)
 ```
+
+**Bu delilin kendi derecesi (dürüstlük kaydı):** 3. adım ("sonsuz geçmiş hâdis zinciri, bitirilmiş bir sonsuzdur, bu muhaldir") **tartışmalıdır**. Matematikte fiilî sonsuz kümeler (Cantor) tutarlıdır; kelâmcının cevabı, zamanın bir *küme* değil, birbiri ardınca **eklenerek** oluşan bir silsile olduğu, eklenerek oluşan bir şeyin "tamamlanmış sonsuz" olamayacağıdır. Bu cevap zamanın **akıp gittiğini** (A-teorisi) kabul etmeye bağlıdır; zamanı donmuş bir blok sayan (B-teorisi) bir muarız bu adımı kabul etmez. Bu yüzden **Hudûs Delili cedelî-yüksektir, burhânî değildir**; Kudret ise bundan bağımsız olarak §4 ve §5'ten burhânîdir. Zamanın mahiyeti §12'de ayrıca açılır.
 
 ### 8.5 Tekvin
 
@@ -834,7 +838,8 @@ Sem'(Vâcib), Basar(Vâcib) ≔ İlim'den ayrı, zâtta kâim, müstakil iki sı
 | Netice | (T) |
 | :-- | :-- |
 | Fâil-i Muhtar (mûcib bi'z-zât reddi) | burhânî |
-| Hayat, İlim (+Tesviye burhanı, +cüz'iyyat ⊳§4.2), Kudret (+Hudûs delili), Tekvin, İrade, Sem', Basar | burhânî |
+| Hayat, İlim (+Tesviye burhanı, +cüz'iyyat ⊳§4.2), Kudret (§4 ve §5'ten), Tekvin, İrade, Sem', Basar | burhânî |
+| Hudûs Delili (âlemin zamanî başlangıcı; Kudret'in şartı DEĞİL, ek delil) | cedelî-yüksek |
 | Kelâm | ⊳ Fasıl II |
 
 ## 9. Hakîm — Gaye — Şer(çeşit)
@@ -872,6 +877,269 @@ Hakîm ∧ Şer(mevcûd)?
 | 9-a: Hakîm ∧ Şer(mevcûd) çelişmez | burhânî |
 | 9-b: şu belirli şerrin müspet hikmeti | cedelî/hitâbî (kasten) |
 
+## 10. Bu Usulle Ateizm Nasıl Çürür?
+
+| Kelime | Kök | Lugat mânâsı |
+| :-- | :-- | :-- |
+| Ateizm | Yunanca *a-theos* ("ilâhsız") | "ilâh yoktur" görüşü |
+| Ilhâd | ل ح د | "yolun kıyısına, yanına eğilme" — dinden sapma |
+| Müsâdere | ص د ر | "sonucu baştan kabul edilmiş saymak" |
+
+**Önce bir ayrım.** "Ateizm" tek şey değildir. İki ayrı şeye bu ad verilir ve ikisi ayrı ayrı cevaplanır:
+
+```
+                       "Allah'a inanmıyorum" diyen
+                                  │
+             κ: "Allah YOKTUR" diye bir hüküm veriyor mu?
+                 ┌────────────────┴────────────────┐
+               evet                              hayır
+                 │                                 │
+        ┌────────▼─────────┐            ┌──────────▼──────────┐
+        │ KESİN ATEİZM     │            │ ŞÜPHE / BİLMEMEZLİK │
+        │ (bir iddiadır,   │            │ (iddia yok, sadece   │
+        │  ispat ister)    │            │  "ikna olmadım")     │
+        └──────────────────┘            └─────────────────────┘
+```
+
+**Kesin ateizm bir iddiadır ve iddia ispat ister.** "Vâcib yoktur" diyen kişi, §3'ün bütün zincirini geriye doğru **yıkmak** zorundadır. Zincir dört halkalıdır ve muarızın her halkada tek çıkış yolu vardır:
+
+| Halka | Kesin ateistin kırması gereken | Kırmak için ne demesi gerekir | Bu risale ne cevap verdi |
+| :-- | :-- | :-- | :-- |
+| 1 | Mümkinin vücûdu mâhiyetine zâiddir (§2) | "Âlemin mâhiyeti = vücûdu; âlem zâtıyla zarurîdir" | Âlem a'râz (hâl) değiştirir; zâtıyla zarurî olan hiçbir hâl değişmez. Hem "var olabilir hem olmayabilir" hem "zarurî" denemez (Nakzeyn) |
+| 2 | Mümkin, dıştan müreccihe muhtaçtır (§3, Kâfi Sebep) | "Bazı şeyler sebepsizce vardır (brute fact)" | Sebepsiz tercih = "fark yok ∧ neticede fark var" = çelişki (§0.2.4). Vakum dalgalanması bunu kırmaz (§0.4) |
+| 3 | Silsile devir ve teselsülle kapanmaz (§3, tatbik) | "Sonsuz bir zincir bitmeden de kendini taşır" | Her halka mümkinse **bütün** de mümkin kalır; sebep kümenin içinde ise devir, dışında ise Vâcib |
+| 4 | Tahsis, kör kanunla açıklanamaz (§5) | "Kanunlar kendi kendini seçti" | Kanun bir oluş tarzıdır; **neden bu kanun setinin** seçildiği sorusu kanunun kendisiyle cevaplanamaz |
+
+**Üç meşhur çıkış yolu ve neden çıkış olmadığı:**
+
+1. **"Madde kendi kendini teşkilatlandırır"** (kristal, girdap, canlı hücre). Doğrudur, madde belirli şartlarda düzen üretir — fakat bu düzeni üreten şey **kanun**dur, ve kanunun kendisi §5'in sorduğu suali doğurur: **bu kanunlar, sonsuz alternatif kanun içinden neden bunlar?** "Kör kuvvet" kelimesi bir tercih tarif etmez; tercihi yapan, kanunun *üstündedir*. Kanunu fâil yerine koymak, fiilin adını fâil sanmaktır ("yağmur yağdı" cümlesinde "yağış kanunu yağdırdı" diye fâil arayan bir kişi gibi).
+2. **"Çoklu evren (multiverse) her ihtimali deniyor, biri tutmuş."** Çoklu evren üreten bir mekanizma varsa, o mekanizma da **mümkindir** (başka bir mekanizma olabilirdi): tahsis suali bir üst kata çıkmıştır, silinmemiştir. Bu, teselsülün başka bir kılıkta tekrarıdır ve §3'ün tatbiki onu kapatır.
+3. **"Evren zaten var, açıklamaya gerek yok."** Bu, "âlem Vâcib'dir" demektir — yani kesin ateizm, ilâh'ı reddederken **âlemi ilâh yapar**. 1. halkadaki cevap onu düşürür.
+
+```
+Ateizm(kesin) ≔ ¬∃x Vâcibü'l-Vücûd(x)
+  ¬∃x Vâcib(x) ⟹ ∀x Mümkin(x)                    [Taksim-i aklî, §1]
+  ∀x Mümkin(x) ⟹ Küll(K=bütün mevcûd) Mümkin    [tatbik, §3]
+  Mümkin(K) ⟹ sebeb(K) lâzım ; sebeb(K) ∈ K ⟹ ↯ devir ; sebeb(K) ∉ K ⟹ ∃ Mümkin-olmayan
+  ↯ ¬∃x Vâcib(x) ile çelişir
+∴ Ateizm(kesin) ↯
+```
+**Okunuşu:** Kesin ateizm şudur: hiçbir x için "x Vâcibü'l-Vücûd'dur" doğru değildir. Hiçbir x Vâcib değilse, bütün x'ler mümkindir. Bütün mevcûdatın kümesi K de mümkindir. K mümkinse sebebi lâzımdır; sebep K'nin içindeyse devirdir — çelişki; dışındaysa mümkin-olmayan vardır. Bu, başlangıçtaki iddiayla çelişir.
+**Bağlamıyla:** "Hiçbir vâcib yoktur" diyen kişi, "bütün var olanlar mümkindir" demiş olur; o zaman bütün var olanların **toplamının** da bir sebebi lâzımdır; bu sebep ya toplamın içinde (döngü) ya dışındadır (mümkin olmayan = Vâcib). İkincisi kabul edilirse Vâcib'i reddeden söz kendini nakzeder.
+
+**Şüphe/bilmemezlik** ise iddia değildir, cevap beklemez; yalnız delili kendi seyriyle incelemeye davettir. Risale bu kişiye "ispatın hangi halkasında sizi ikna etmiyor?" diye sorar — çünkü yukarıdaki dört halkalı tablo, itirazın **yerini** gösterir: itiraz varsa mutlaka o dört halkadan birindedir.
+
+| Netice | (T) |
+| :-- | :-- |
+| Kesin ateizm (¬∃ Vâcib) kendi kendini nakzeder | burhânî |
+| "Kanun kendi kendini seçti", "çoklu evren", "evren brute fact" çıkışları tahsis suâlini kaldırmaz, üst kata taşır | burhânî (§3, §5'e irca edilerek) |
+| Şüphe (iddiasız ateizm) | cevap konusu değil — halka gösterilir |
+
+## 11. Mümteni Kategorisi ve "Kaldıramayacağı Taşı Yaratabilir mi?" Safsatası
+
+| Kelime | Kök | Lugat mânâsı |
+| :-- | :-- | :-- |
+| Mümteni | م ن ع | "engellenmiş; olması bizzat imkânsız" |
+| Şey' | ش ي أ | "var olabilen (mümkin) her şey" — Kur'ân'ın "her şeye kâdirdir" (Bakara 20) sözündeki "şey" |
+| Safsata | Yunanca *sophisma* | "doğru görünüşlü yanlış kıyas" |
+
+**Çoban için:** "Öyle büyük bir koyun yap ki sen bile kaldıramayasın" diyen bir çocuğa şöyle cevap verirsin: "Kaldıramayacağım koyun" diye bir koyun **yoktur**; bu iki söz birbirini yer. Bir şeyi yapamıyor olmak, o şeyin **bir şey olmadığını** gösterir — senin kuvvetsizliğini değil.
+
+```
+"Kaldıramayacağı taş" ≔ taş(x) ∧ kaldırılabilir(x,Allah) ∧ ¬kaldırılabilir(x,Allah)
+                     ↯ Nakzeyn — mefhumun kendisi çelişiktir
+∴ κ₂ = muhal(hâriçte-bulunması) ⟹ MÜMTENİ            [§1 taksimi]
+Kudret ⋉ Mümkin(şey)   ;   Mümteni ∉ şey
+∴ Kudret'in mümteniye taalluk ETMEMESİ noksan değil, "mümteni"nin tarifidir
+```
+**Okunuşu:** "Kaldıramayacağı taş" şudur: x taştır ve x Allah'ça kaldırılabilirdir ve x Allah'ça kaldırılamazdır — çelişki. O hâlde bu mefhumun hâriçte bulunması muhaldir, yani mümtenidir. Kudret, mümkin olan şeylere taalluk eder; mümteni "şey" değildir. Öyleyse Kudret'in mümteniye taalluk etmemesi eksiklik değil, mümtenînin tarifidir.
+**Bağlamıyla:** Sual, içine iki zıt hükmü aynı anda koymuş bir **kelime öbeğidir**; cevabı "evet" de "hayır" da olamaz, çünkü ortada bir "şey" yok. Sual **mânâsızdır**, derin değil.
+
+**Aynı kalıptaki kardeş sualler** (hepsi aynı kökten kesilir): "Allah kendi gibi ikinci bir Allah yaratabilir mi?" (⟹ Vâcib'i mümkin yapmak, Vâcib∩Mümkin=∅, §6.5), "Allah kendi kendini yok edebilir mi?" (⟹ Vâcib'in yokluğu muhal, Beka), "Allah daire-kare yaratabilir mi?" (⟹ mümteni bi'z-zât).
+
+**Klasik bir ayrım:** Kelâmcılar mümteniyi ikiye ayırır: **mümteni bi'z-zât** (kendi tarifi çelişkili: daire-kare, taş paradoksu) ve **mümteni bi'l-gayr** (kendinde çelişki yok, fakat başka bir hakikate aykırı: mesela Allah'ın bilmediği bir şeyin olması, çünkü İlim ezelîdir). İki tür de Kudret'e "yaptıramaz"; birinci türde sebep mefhumun kendisi, ikincisinde Vâcib'in başka bir sıfatıdır. Kızgınlık veya cüret için değil, netice için: hiçbiri Kudret'i **kısıtlamaz**.
+
+| Netice | (T) |
+| :-- | :-- |
+| "Kaldıramayacağı taş" sualinin mefhumu çelişiktir; mümteni; Kudret'i noksanlaştırmaz | burhânî |
+
+## 12. Hudûs, Zamanın Ontolojisi ve Entropi — Neyi Ne Kadar İspat Ediyoruz?
+
+Bu bahiste bir **kendi kaidemizin sınavı** var. §0.4'te "mantık kaideleri (Mebâdi) fizik kanunlarından (Kavânîn) üstündür" dedik. Şimdi sual şu: "Termodinamiğin ikinci kanunu, zamanın mutlak başlangıcının **mantıkî zarureti**ni ispatlar mı?" Kendi kaidemiz cevabı baştan verir: **hayır — fizikten mantıkî zaruret çıkmaz.** Aşağıda önce zamanı, sonra iki delili (hudûs ve entropi) kendi derecelerine yerleştiriyoruz.
+
+| Kelime | Kök | Lugat mânâsı |
+| :-- | :-- | :-- |
+| Zaman | ز م ن | "bir ölçü, uzun-kısa süre" |
+| Entropi | Yunanca *en-tropē* ("içe dönüş") | "düzenin dağılması, kullanılabilir enerjinin azalması" |
+| Hâdis | ح د ث | "sonradan olan" |
+| Kadîm | ق د م | "başı olmayan" |
+
+### 12.1 Zaman Nedir? Üç Görüş
+
+```
+                            ZAMAN NEDİR?
+        ┌───────────────────────┼───────────────────────┐
+   (a) MUTLAK KAP         (b) DEĞİŞİMİN ÖLÇÜSÜ     (c) DONMUŞ BLOK
+   Newton: âlemden        Aristo, Eş'arî, Gazâlî:   Einstein'ın bir okuması:
+   bağımsız akan bir      zaman hareketin/değişimin  geçmiş-şimdi-gelecek
+   nehir                  sayısıdır; değişim yoksa   hepsi "orada" var
+                          zaman da yoktur            (B-teorisi)
+```
+Risale **(b)**'yi benimser ve sebebini söyler: (a) kabul edilirse, âlemden **bağımsız ve ezelî** bir şey (zaman) var demek olur — bu, mümkinlerin Vâcib'e muhtaçlığını (§3) delmek anlamına gelir; Vâcib'den başka ezelî bir şey bırakmaz. (b)'de zaman, mümkinin (a'râzın) değişiminin bir sıfatıdır; yani **âlemle birlikte mümkindir**. Bu, Vâcib'in Kıdem'ini (§6.3) "zamanda çok geriye gitmek" değil, "zamanın konusu olmamak" diye okutur. **Dürüstlük kaydı:** (b) bir **tercihtir**; (c) fiziğin bazı yorumlarıyla uyumludur ve risalenin sonuçlarını kendi kendine düşürmez, yalnız Hudûs Delili'nin "tamamlanmış sonsuz" adımını (§8.4) sarsar. Bu yüzden Hudûs Delili cedelî-yüksek tutuldu.
+
+### 12.2 Hudûs Delili — Ne İspat Eder, Ne Etmez
+
+```
+Hudûs Delili (§8.4):  cisim ⟹ hâdis-a'râzdan-hâlî-değil ⟹ hâdis
+  zayıf halka:  "sonsuz geçmiş = bitirilmiş sonsuz = muhal"
+                (b) zamanı kabul eden için işler; (c) zamanı kabul eden için işlemez
+
+NE ZAMAN İŞE YARAR:  âlemin "zamanda bir başı var" iddiasını savunurken
+NE ZAMAN GEREKMEZ:   Vâcib'in varlığı (§3, §5), Kudret (§4,§5), Halk (§4)
+                     — bu neticeler zamanın başı olsa da olmasa da geçerlidir
+```
+Yani **Allah'ın varlığı ve kudreti, âlemin başı olup olmadığına bağlı değildir.** Âlem ezelî bile olsa, mümkindir (çünkü hâl değiştirir ve her ân Vâcib'e muhtaçtır, §4). Bu, felâsifenin "ezelî sudûr" itirazını (§8.0) da kapatır: âlemin ezelî olması **mümkindir**, fakat mümkin olduğu için yine Vâcib'e muhtaçtır. Bu, Hudûs Delili'ni zorla burhânî yapmaya çalışmaktan daha sağlam bir zemindir.
+
+### 12.3 Entropi (Termodinamiğin İkinci Kanunu) — Ne Söyler?
+
+**Çoban için:** Sıcak çay bardağı odada soğur; oda çayı ısıtıp çaya geri sıcaklık vermez. Enerji, kullanılabilir hâlinden kullanılamaz hâline gider. Kapalı bir sistemde bu iş hep aynı yöne akar.
+
+Klasik argüman şudur: "Evren ezelî olsaydı, bu 'kullanılabilir enerjinin tükenmesi' çoktan bitmişti (ısıl ölüm); demek evrenin bir başı var." Bu argüman **dikkate değerdir**, fakat üç sebeple mantıkî zaruret sayılamaz:
+
+| Sebep | İzah |
+| :-- | :-- |
+| 1. Kavânîn-i Tabîiyye'dir | İkinci kanun bir **âdetullah**tır (§0.4.1): zıddı aklen muhal değildir. Bir âdetten mantıkî zaruret çıkmaz. **Kendi kaidemiz (Mebâdi ≻ Kavânîn) bunu yasaklar.** |
+| 2. Modele bağlıdır | "Kapalı sistem" ve "evrenin tamamına tatbik" varsayımı ayrıca ispat ister. Kütleçekimin entropisi bilinmiyor; devirli (cyclic) kozmolojiler ve Penrose'un "konformal devirli" önerisi gibi ezelî modeller ciddi fizikçilerce ileri sürülüyor. Bunlardan hangisinin doğru olduğu **fiziğin açık sualidir**. |
+| 3. Bir önceki hal ihtiyacı | Düşük entropili bir başlangıç, "neden düşük?" sualini doğurur ("Past Hypothesis"). Bu sual **kendi başına tahsis suâlidir** (§5): sonsuz ihtimal içinden neden bu başlangıç? Yani entropi, hudûsu değil **tahsisi** işaret eder — Burhân-ı Tahsis'i güçlendirir. |
+
+**Netice:** Entropi, hudûs için **ikna edici bir destek (hitâbî/cedelî)** ve **tahsis için ek bir işaret**tir; fakat "zamanın mutlak başlangıcının mantıkî zarureti"ni ispat etmez. Böyle söylemek Mebâdi ≻ Kavânîn kaidemizi çiğnemek olurdu. **Mantıkî zaruret iddiasının tek adayı Hudûs Delili'dir ve o da cedelî-yüksektir (§12.2).**
+
+| Netice | (T) |
+| :-- | :-- |
+| Vâcib, Kudret, Halk âlemin zamanî başından bağımsız olarak sabittir | burhânî |
+| Âlemin zamanî başlangıcı (Hudûs Delili) | cedelî-yüksek (A-teorisine bağlı) |
+| Entropiden hudûs | hitâbî/cedelî destek; mantıkî zaruret DEĞİL |
+| Entropideki düşük-başlangıç problemi tahsis suâlidir | burhânî (§5'e irca) |
+
+## 13. Dinde Aklın Kullanım Usulü — Akıl Neye Hükmeder, Nereye Kadar?
+
+| Kelime | Kök | Lugat mânâsı |
+| :-- | :-- | :-- |
+| Sem'iyyât | س م ع | "işitilerek (nakl ile) bilinenler" |
+| Te'vil | أ و ل | "bir sözü asıl dönüş yerine döndürme" — zâhir mânâdan başka mânâya hamletme |
+| Kat'î | ق ط ع | "kesin, kesilmiş; başka ihtimal bırakmayan" |
+| Zannî | ظ ن ن | "galip ihtimal; karşı ihtimal payı olan" |
+| Akîde | ع ق د | "bağlanmış düğüm — kalbin bağlandığı hüküm" |
+| Fürû' | ف ر ع | "dallar" — asıl (usûl) üzerinde biten hükümler |
+
+### 13.1 Aklın Üç Hükmü ve Hükmünün Sınırı
+
+Akıl, önüne gelen her mefhuma **yalnız üç hükümden** birini verebilir: vâcib, mümkin, mümteni (§1). Bu, aklın **kendi sahasıdır**. Fakat bir şeyin mümkin olması, **fiilen vuku bulduğunu** göstermez. Aklın bu üç hükmü, vuku için iki kapı bırakır:
+
+```
+Bir hüküm (h) için:            aklî durumu            vukuu bilmenin yolu
+────────────────────           ───────────            ───────────────────
+mümteni                        muhal                  yok — hiçbir haber kabul edilmez
+vâcib                          zarurî                 akıl kendisi kesin hükmeder
+mümkin                         vukuu belirsiz         ya MÜŞAHEDE ya HABER (sem'iyyât)
+```
+Bu tablodan üç kaide çıkar:
+
+1. **Aklen muhal olan, hangi haberle gelirse gelsin kabul edilmez.** Bir haber muhale delalet ediyorsa, ya haber sahih değildir ya da **zâhir mânâ kastedilmemiştir** (te'vil). "Allah bir cisimdir" cümlesi zâhirî okunursa muhale götürür (§6.5): Vâcib'de cisim muhaldir; bu yüzden ilgili nass, Vâcib'e cisim isnadı olarak alınmaz, mecaz veya tefviz/te'vil ile okunur. Bu, aklın nassı **değiştirmesi** değil, nassın **doğru okunmasıdır**: aksi hâlde nass kendi kendini nakzederdi (çünkü aynı Kitap "Ona benzer hiçbir şey yoktur" — Şûrâ 11 — der).
+2. **Aklen mümkin olan, sahih haber gelirse kabul edilir.** Ahiret, mahşer, mîzan, melek, cin bu sınıftadır (Fasıl III): akıl "muhal değil" der; vukuu için haber gerekir.
+3. **Haber gelmişse akıl, yeni bir hüküm uydurmaz; haberin sağlamlık derecesini ölçer:** hangi haberin ne kadar sağlam olduğu ve ne kadar açık konuştuğu iki ayrı sualdir (§13.2).
+
+### 13.2 Hüküm Kuvveti: Sübût ve Delâlet — İki Eksen, Dört Hâne
+
+Bir dinî hükmün kuvveti iki ayrı sual ile ölçülür:
+
+- **Sübût** (haber sağlam mı?): kat'î (Kur'ân ve mütevatir haber) mi, zannî (âhâd haber) mi?
+- **Delâlet** (söz ne anlama geliyor?): kat'î (tek mânâ) mı, zannî (birden çok mânâya açık) mı?
+
+```
+                        DELÂLET
+                  kat'î           zannî
+              ┌───────────────┬───────────────┐
+      kat'î   │ 1. KAT'Î–KAT'Î│ 2. KAT'Î–ZANNÎ│
+SÜBÛT         │ (akîde ve     │ (mânâsında     │
+              │  kesin farz)  │  içtihad var)  │
+              ├───────────────┼───────────────┤
+      zannî   │ 3. ZANNÎ–KAT'Î│ 4. ZANNÎ–ZANNÎ │
+              │ (amel gerekir;│ (amel için     │
+              │  akîde değil) │  içtihad)      │
+              └───────────────┴───────────────┘
+```
+**İki kıstas iki defa Nakzeyn'le ikiye bölünür (sağlam / sağlam değil; tek mânâ / çok mânâ); bu yüzden dört hâne, dördüncü ihtimal bırakmaz (⟺ₜ).**
+
+### 13.3 Akîde ile Fürû' Arasındaki Usul Farkı
+
+| | Akîde (itikadî meseleler) | Fürû' (amelî meseleler) |
+| :-- | :-- | :-- |
+| Ne istenir? | **Kesin bilgi** (yakîn): "kalbin bağlanması" | **Galip zan** yeter: "amel etmek" |
+| Hangi delil? | Akıl (burhân) + kat'î–kat'î nass | Kat'î **veya** zannî delil (âhâd, kıyas, içtihad) |
+| Neden? | Yanlış bağlanılan bir düğüm, kişiyi bağlanmamış bırakır; ihtimalli bir "belki" bir **inanç** olamaz | Amelde "olabildiğince doğru" yeterlidir; bilinmeyen, hükümsüz kalmaz, en güçlü ihtimalle amel edilir |
+| Bu risalede karşılığı | Fasıl I (Vâcib ve sıfatlar) **burhânîdir**; Fasıl II–III'ün kendi dereceleri açıkça yazılır | Fasıl IV'te sıhhat tasnifi |
+
+**Ayrıntı ve açık bir ihtilaf (gizlenmez):** Âhâd haberin akîdede delil olup olmayacağı ihtilaflıdır. Cumhur (Eş'arî, Mâturîdî) âhâdın yalnız zan ifade ettiğini, dolayısıyla akîdede **tek başına** delil olamayacağını söyler; Ahmed b. Hanbel'den ve İbn Hazm'dan bunun aksini savunan görüşler nakledilir. Bu risale cumhurun çizgisini benimser (F 2-Y) ve buna bağlı olarak **her akîde hükmü için sınıf ve derece açıkça yazar**: burhânî akıl mı, mütevatir nakil mi, âhâd mı. Böylece okuyucu bu risalenin **hangi cümlesinin yakîn, hangisinin galip zan** olduğunu her yerde görür.
+
+### 13.4 Hangi Durumda Nasıl Amel Edilir? (Karar Şeması)
+
+```
+Bir dinî mesele geldi
+   │
+   ├─ akıl hükmü var mı (muhal/vâcib)?
+   │      evet → akıl hükmeder; nass bunu nakzediyorsa zâhir kastedilmemiştir (te'vil)
+   │
+   ├─ akıl "mümkin" dedi, vuku sorusu mu?
+   │      evet → sem'iyyât: sübût ve delâlet derecesine bak (§13.2)
+   │
+   │       kat'î–kat'î → itikad (bağlanılır) ve amel
+   │       diğer üç hâne → amel; itikad olarak "kat'î" denmez
+   │
+   └─ hiç delil yok mu?
+          → hüküm verilmez (ne "vardır" ne "yoktur"); bilinmiyor denir  [adem-i vücdan ≠ adem-i vücud, Fasıl III]
+```
+
+| Netice | (T) |
+| :-- | :-- |
+| Aklın üç hükmü, vukuu belirlemez; vuku için müşahede veya haber lâzımdır | burhânî |
+| Aklen muhale delalet eden nass zâhirî mânâsıyla kastedilmemiştir | burhânî (Nakzeyn) — hangi te'vilin doğru olduğu ayrı ve cedelîdir |
+| Sübût × delâlet dört hânesi ⟺ₜ | burhânî |
+| Âhâdın akîdede delil oluşu | ihtilaflı — risale cumhurdadır |
+
+## 14. Yeni Bir Teori Bu İspatları Çürütebilir mi? — Çürütülebilirlik Haritası
+
+**Dürüst cevap:** Bir teorinin bu zinciri çürütebilmesi için **hangi öncülü** kırması gerektiği önceden bellidir. Risale kendini korumaz; kırılabilecek noktaları kendisi işaretler. Yeni bir teori üç yoldan biriyle gelebilir:
+
+| Yol | Ne yapar | Bu risalenin durumu |
+| :-- | :-- | :-- |
+| **1. Evveliyyâtı çürütmek** | Ayniyet, Nakzeyn, Üçüncü Hâl, Kâfi Sebep'ten birini geçersiz kılmak | **Mümkün değil.** Teori, kendisini ifade etmek için bu kaideleri kullanır; kullanamazsa kendisi de anlamsızdır (§0.3) |
+| **2. Bir öncülün gizli kabulünü reddetmek** | Zincirin bir halkasındaki *tanımı* veya *ontolojiyi* reddetmek | Aşağıdaki tabloda **her halka için adı, yeri ve neye bağlı olduğu** yazılıdır |
+| **3. Cedelî halkalara vurmak** | Burhânî olmayan basamakları sarsmak | Bunlar zaten cedelî diye etiketli; sarsılırsa risalenin **burhânî çekirdeği** sarsılmaz |
+
+**Halka haritası (hangi öncül reddedilirse ne düşer):**
+
+| Netice | Dayandığı ilk öncül | Bu öncülü reddeden ne demeli? | Reddin bedeli |
+| :-- | :-- | :-- | :-- |
+| ∃! Vâcib (§3) | Mümkinde vücûd mâhiyete zâiddir (§2) | "Âlemin bütününde mâhiyet = vücûd" | Âlemin **a'râzını** (değişen hâllerini) zarurî saymak; değişen bir şeyin zarurî sayılması, Nakzeyn'e çarpar |
+| ∃! Vâcib (§3) | Sebepsiz tercih muhaldir (Kâfi Sebep, Nakzeyn'e irca edilmiştir) | "Bazı şeyler sebepsiz tercih edilir" | "Fark yok ∧ neticede fark var" çelişkisini kabul etmek |
+| Burhân-ı Tahsis (§5) | Kanun fâil değildir | "Kanun bir fâildir" | Fâile "seçme, bilme" gibi vasıfları zorunlu kılan tanımı değiştirmek: o zaman **kanun** zaten Fâil-i Muhtar'ın adı olur, neticeyi değiştirmez |
+| Halk sürekli (§4) | Mâhiyet=Vücûd yalnız Vâcib'e aittir | "Bir mümkin bir an Vâcib gibi olabilir" | Mümkin ile Vâcib arasındaki ayrımı silmek — yani §1'in taksimini reddetmek |
+| Hudûs Delili (§8.4, §12.2) | Tamamlanmış sonsuz muhaldir; zaman akar | B-teorisi | **Sarsılır** — ama risalenin burhânî çekirdeği bundan bağımsızdır |
+| Kanun-fizik itirazları (§0.4) | Kavânîn ≠ Mebâdi | "Fizik, mantığı değiştirebilir" | Fizik teorisinin kendisini ifade eden mantığı iptal etmek |
+
+**Sonuç:** Yeni teori, ancak bu tablodaki bir satırı **açıkça** kabul ederek zinciri kırabilir; ve her satırın "reddin bedeli" sütunu, o teorinin **kendi başına ödemesi gereken** bir çelişkidir. Bu risale "hiçbir teori çürütemez" demez; **"çürütmek için şu bedelleri ödemek gerekir"** der. Bu, burhânî iddianın gerçek anlamıdır: peşin bir *yasak* değil, açık bir *fatura*.
+
+**Bu fasıl boyunca yapılan klasik tashihler (özet):**
+
+| Klasik delil / iddia | Tashih | Yeri |
+| :-- | :-- | :-- |
+| İbn Sînâ: "Vâcib yalnız küllîyi bilir" | Halk her ân olduğu için cüz'iyyat da bilinir | §4.2 |
+| Uçan Adam (Tâirü'l-Havâ) burhân sayılması | Cedelî tenbihe indirildi | mimari/izahat/mucerred |
+| Hudûs delilinin Kudret'in şartı sayılması | Bağı koptu; ayrı ve cedelî-yüksek | §8.4, §12 |
+| Burhân-ı İmkân'ın "tek tür" sayılması | Molla Sadra'nın Sıddîkîn ayrımı beyan edildi | mimari/izahat/burhan |
+| Entropiden zaruret çıkarma | Mebâdi ≻ Kavânîn kaidesiyle yasaklandı | §12.3 |
+
 ## Fasıl I — Delil-Kuvveti Tablosu
 
 | # | Netice | (T) |
@@ -884,9 +1152,17 @@ Hakîm ∧ Şer(mevcûd)?
 | 5 | Burhân-ı Tahsis (müstakil ikinci yol) | burhânî |
 | 6 | Vücud, Vahdâniyet(×2 yol), Kıdem, Beka, Kıyâm bi-Nefsihî, Muhâlefetün li'l-Havâdis, cisim/mekân reddi | burhânî |
 | 7 | Sıfat(çeşit) ikiliği | burhânî |
-| 8 | Fâil-i Muhtar, Hayat, İlim(+Tesviye,+cüz'iyyat), Kudret(+Hudûs), Tekvin, İrade, Sem', Basar | burhânî |
+| 8 | Fâil-i Muhtar, Hayat, İlim(+Tesviye,+cüz'iyyat), Kudret(§4,§5'ten), Tekvin, İrade, Sem', Basar | burhânî |
+| 8-b | Hudûs Delili (âlemin zamanî başlangıcı) — NAKZ: önceki tabloda "burhânî" sayılan Kudret'e bağlanmıştı | cedelî-yüksek |
 | 9-a | Hakîm ∧ Şer çelişmez | burhânî |
 | 9-b | Ferdî şerrin müspet hikmeti | cedelî/hitâbî (kasten) |
+| 10 | Kesin ateizm kendini nakzeder; kanun/çoklu evren/brute-fact çıkışları tahsis suâlini üst kata taşır | burhânî |
+| 11 | "Kaldıramayacağı taş" mümteni'dir; Kudret noksanlaşmaz | burhânî |
+| 12 | Vâcib, Kudret, Halk zamanî başlangıçtan bağımsızdır | burhânî |
+| 12-b | Âlemin zamanî başlangıcı (Hudûs Delili) | cedelî-yüksek |
+| 12-c | Entropiden mantıkî zaruret | çıkmaz — hitâbî/cedelî destek |
+| 13 | Aklın üç hükmü vukuu belirlemez; sübût×delâlet dört hâne | burhânî |
+| 14 | Çürütülebilirlik haritası: her netice için reddin bedeli açık yazılı | burhânî (kayıt) |
 
 ## Ek — Tamamlayıcı Deliller (Burhânî Çekirdeğin Yerine Değil)
 
