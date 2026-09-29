@@ -1297,3 +1297,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **reductio + misal (c3 ribât misali tekrarı)**; (T) burhânî biçim/ikna'î. **[Kendi tenkidim: ribât misali c3 p317–318'de Râzî'nin Mu'tezile'ye karşı kullandığı örnekti; burada kıdem tarafı aynı örneği hudûs tarafına döndürüyor: aynı silah iki tarafta.]**
 - Mevzuya bağı: **KRİTİK**: **'ilim ⇒ kulun muhâlefete kudreti yok' öncülü (c3 p311 Mu'tezile'nin ilim-keşif delili ile çelişir, c3 p313–315 aporisiyle aynı)**; **Risale ana metnine alınmaz**; ribât misali 'Allah hakkında' kullanılmaz (c3 p318 notu).
 - Doğan sual: —
+
+## c4 p145
+- OCR: orta
+- Okuma: tam
+- İçerik: (6. vecih; 'mahrumiyet kendi kusurlarından' itirazının 3. vechi; kıdem tarafı): '**küfre salih kudret küfre muayyense** kâfirde bu kudretin yaratılması **onu küfre ilcâ** olur; **hem küfre hem imana salihse** bir tarafın diğerine rüçhânı **müreccihe mevkuf değilse müreccihsiz rüçhân (muhâl)**; **mevkufsa** müreccih **kuldan ise** taksîm geri ⇒ **teselsül**; **Allah'tan ise** **kudret + o müreccih mecmûu küfre mûcib** ⇒ **Allah kâfiri küfre ilcâ etti** ⇒ 'ona ancak hayır ve salâh murad etti' sözü bâtıl.' ⇒ **'Allah halkı kendi garazı için' veya 'onlara dönen garaz için' yarattı denemez.** **3. kısım: 'gaye ve hikmet olmadan yarattı' bâtıl**: **(1)** hikmetten hâlî fiil **sefeh**, rahîm mütekellime yakışmaz; **(2)** sefeh imtinâ' değilse **Allah'tan hiçbir şey kabîh olmaz**; **peygamberlere en büyük azap, dehrîleri cennetin en yücesine koymak, vaad ve vaîdine vüsûk olmaması, tâatinin isyanından ayrılmaması** caiz olur; bu **ilâhî hikmeti iptal** eder.
+- Netice/hüküm: **Kıdem tarafı 6. vecih: 'kudret+müreccih mecmûu küfre mûcib ⇒ Allah ilcâ eder' (aleyhî reductio); 'hikmetsiz halk sefeh'.**
+- Delil çeşidi: **dilemma + reductio**; (T) burhânî biçim (kıdem tarafı). **[Delil ≠ dava: 'kudret+müreccih mecmûu mûcib' Râzî'nin kendi c3 çizgisi (kudret+dâî ⇒ fiil vâcib); kıdem tarafı bunu 'ilcâ' olarak hudûs tarafına ilzâm ediyor: **aynı öncül Râzî'nin kul fiili görüşünü de vurur** — kendi tenkidim.]**
+- Mevzuya bağı: **KRİTİK — kul fiili**: Râzî'nin 'kudret + dâî ⇒ fiil vâcib' çizgisi (c3 p73, 303, 333, 355) **'Allah kâfiri küfre ilcâ eder' ilzâmına açık**; **Sünnî ana çizgi kesb/irâde-i cüz'iyye ile bu ilzâmdan kurtulur**; **Risale kul fiili bâbında bu ilzâma cevap yazmak zorunda**; Râzî'nin cilt 4–9'da cevabı aranacak.
+- Doğan sual: —
+
+## c4 p146
+- OCR: orta
+- Okuma: tam
+- İçerik: (Hikmetsiz halk bâtıl; devam): '**âlemi hâdis kılsa bu ihdâs ya hikmet ve maslahat için ya değil; her iki kısmın fesâdı ispatlandı** ⇒ **âlemin ondan sonra hâdis kılınması bâtıl.**' **Bu hüccetle 'irâdeyle ihdâsa mürîd olması câiz değil' de**: 'irâde hikmet ve maslahata tâbi ya da değil; iki kısım bâtıl ⇒ irâdenin sübûtu bâtıl.' **5. hüccet (dâî)**: '**âlem hâdis olsa Hâlık'ın îcâd ve tekvîne bir dâîsi olmalı**; bu dâî **ya kadîm ya hâdis**: **hâdisse** hudûsu için taksîm; **kadîmse** ya **şarta mevkuf** ya değil; şart **hâdisse devir** (tam müessir dâî ancak o şart hâdis olunca, o şart tam dâî olunca); **şart kadîm veya mevkuf değilse** iki kısımda söz aynı: **ezelde mâni' var mı**? **Varsa** vâcib-i li-zâtihîyse zevâli imtinâ'; **mümkinse** müessire muhtaç, taksîm geri, ancak **vâcib-i li-zâtihî mûcibe intihâ** ile kesilir; (p147).
+- Netice/hüküm: **Kıdem tarafı 4. hüccet sonu (maslahat/hikmet ⇒ irâde nefy) ve 5. hüccet (dâî): kadîm dâî + mâni' analizi.**
+- Delil çeşidi: **dilemma + devir**; (T) burhânî biçim (kıdem tarafı).
+- Mevzuya bağı: **KRİTİK — Fasıl I §8**: 'irâdenin hikmete tâbiliği' öncülü (irâdeyi hikmetle bağlamak) — Risale bu öncülü **'irâde hikmetle bağlanmaz, hikmet ilâhî sıfat' ilkesiyle** reddeder.
+- Doğan sual: —
+
+## c4 p147
+- OCR: orta
+- Okuma: tam
+- İçerik: (5. hüccet sonu): '**mûcibin zevâli imtinâ' ⇒ o mâni'in zevâli imtinâ'**; bu bâtıl ⇒ **îcâda kadîm dâî ezelde hâsıl, mâniler zâil ⇒ fiil vâcibü'l-husûl.**' **6. hüccet**: '**Allah'ın âlemi hâdis kılması ile kılmaması** ya **her yönden müsâvî**, ya **ihdâs mutlak efdal**, ya **terk mutlak efdal**, ya **fiil bazı vakitlerde efdal, terk bazısında efdal**. **1. kısım (müsâvî) bâtıl, 3 vecihle**: **(1)** bir tarafın müreccihsiz rüçhânı; 'caizse neden âlemin vücûdunun ademine müreccihsiz rüçhânı caiz olmasın?' **(2)** îcâd vücûd tarafını **tercih**; **istivâ hâlinde tercih muhâl**; **(3)** fiil ve terki **her cihetle eşit** olanın fiili **abes**, fâili **sefîh**, hakîm değil, fiili ihsan değil; **akıllılar Allah'ı bu sıfattan tenzîh etmede icmâ etti**. **2. kısım (fiil efdal)**: 'Allah **sonsuz müddet efdal tarafı terk etti**, sonra **efdalden ednâya intikal**' bâtıl.
+- Netice/hüküm: **Kıdem tarafı 6. hüccet: 4 kısımdan ilk ikisi çürütülüyor (müsâvî: abes; fiil efdal: efdali sonsuz terk).**
+- Delil çeşidi: **taksîm/reductio**; (T) burhânî biçim (kıdem tarafı). **[Delil ≠ dava: 'efdal' kavramı Allah'a nisbet edilerek 'efdali terk etmez' öncülü c3 p334–335 ile çelişir.]**
+- Mevzuya bağı: **KRİTİK**: **'fiil ve terk eşit olan fiil abes' öncülü** (hikmet zorunluluğu) Râzî'nin c3 hükmünü ('Allah'a hiçbir şey vâcib değil'; 'hikmet vâcib değil') **vurur**; **Risale bu öncülü 'irâde tahsis eder' cümlesiyle ve hikmet nassıyla dengeler**.
+- Doğan sual: —
+
+## c4 p148
+- OCR: orta
+- Okuma: tam
+- İçerik: (6. hüccet devam): **3. kısım (terk mutlak efdal)**: 'âlemin Hâliki **eşrefen ahasa** intikal etti (bâtıl).' **4. kısım (bazı vakitlerde terk efdal, sonra fiil efdal)**: 'bu **tebdîl zâtı gereği ise** ademin vücûda tebeddülü **zâtî** olurdu (bâtıl); **bir câ'ilin kılmasıyla** ise **ilk taksîm geri**: Hâlık 'geçmiş vakitlerde terkin, hazır vakitlerde fiilin evlâlığını **tahsis etti**'; geçmiş vakitlerde evlâ olanın ademi, o evlâlığın ademi; hazır vakitlerin ilki fiilin evlâlığı; **ilk taksîm tekrar ⇒ sonsuza gidiş**. **7. hüccet**: 'îcâd **âfetlerin kapısını açar**; bu hakîm fâile yakışmaz.' **1. vecih**: '**vücûd hâsılında vücûdun maslahatlarının zevâli korkusu ve elem korkusu**; **adem hâlinde elem yok** (elem vücûd ve hayata şartlı); vücûdda zarar hâsıl, ademde yok ⇒ **vücûd ademden şerr; adem hayır; hakîm şerri yapmaz.**' (p149).
+- Netice/hüküm: **Kıdem tarafı 6. hüccet sonu (4 kısım çürütüldü) ve 7. hüccet (îcâd âfet kapısı).**
+- Delil çeşidi: **taksîm/reductio + 'adem hayır' iddiası**; (T) burhânî biçim (kıdem tarafı). **[Delil ≠ dava: 'ademin hayır olması' sıfır-elemi hayır sayan bir değer tercihi; Kur'ân'ın hayatı nimet/imtihan olarak sunması ('ölümü ve hayatı yaratan', 67:2; ⊬) ile çelişir.]**
+- Mevzuya bağı: **KRİTİK — İslâmî muhafaza**: '**vücûd ademden şerr, adem hayırdır**' cümlesi **Allah'ın yaratmasını şerr yapar; ALINMAZ**, alıntılanmaz; özette 'kıdem tarafı îcâdı âfet kapısı sayar' biçiminde geçilir.
+- Doğan sual: —
+
+## c4 p149
+- OCR: orta
+- Okuma: tam
+- İçerik: **7. hücceti itirazlar (hudûs tarafı)**: **1.** '**şer ademden ibaret**: birini öldüren, kesici âleti kuvvetle kullanmaya kâdir; maktûlün uzvunun kesime kabil olması hayır; **hayatın zevâli** şer: bu zevâl **adem**; şer ademdir; **vücûd nasıl şer**?' **2.** 'vücûd şerr olsa da vücûdda **korku ve elem** yanı sıra **sürûr ve lezzet** de hâsıl.' **Cevap 1 (kıdem tarafı)**: '**bütün akıllıların şer, mefsedet ve belâdan murâdı elem ve gam; elem vücûdî mânâ**; bu söz **lafzî**. **Hükemâdan nakledilen bu sözü sahih bir mânâya hamledelim**: şer ya **zâtta**, ya **sıfatlarda**, ya **fiillerde**: **zâttaki şer adem**; **sıfatlarda** (körlük, sağırlık, dilsizlik) şerler **adem**: körlük 'görme kabiliyeti olan için görmenin ademi'; **fiillerdeki şer 'îlâm'**, vücûdî mânâ ⇒ **zâtta ve sıfatlarda şer ademî; fiillerde şer vücûdî mânâdır**.' (p150)
+- Netice/hüküm: 7. hücceti itirazlar ve cevap (1): **şer zâtta/sıfatta adem, fiilde vücûdî (îlâm)** (hükemâ kalıbı).
+- Delil çeşidi: **kavramsal fark + taksîm**; (T) analitik. **Şer'in ademî olması İslâm filozoflarının teodise kalıbıdır (İbn Sînâ/İbn Rüşd) — 'Ehl-i Sünnet içi' bir tartışma konusu; Risale ana metnine alınmaz (⊬).**
+- Mevzuya bağı: **Fasıl I 'şer problemi'**: c3 p280–285 filozof yolu (şer arazî/tebeî) ile **aynı hat**; burada **şerrin ademî oluşu** filozof cevabı olarak kaydedildi; Râzî'nin **kazâ-kader** cevabı hâlâ **açık borç**.
+- Doğan sual: —
+
+## c4 p150
+- OCR: orta
+- Okuma: tam
+- İçerik: (Cevap 1 sonu): 'şer zâtta ve sıfatta ademî, fiillerde vücûdî mânâ (îlâm).' **2. itiraza cevap, 3 vecihle**: **(1)** '**bu âlemin lezzetleri elemlerinden çok zayıf**; tecrübe gösterir: **en lezzetli şeyler karın ve fer' şehvetidir; 'kulunç ağrısı' ve pek çok hastalığın acısı yeme ve cimanın lezzetinden çok daha şiddetli**'; **(2)** '**ademde ne lezzet ne elem**; vücûdda çeşit çeşit elem; **elemden selâmet elemde bulunmaktan efdal**'; **(3)** '**bu âlemde lezzet sanılan şey hakikatte elem def'idir**: yeme lezzeti **açlık elemini def'** ⇒ açlık şiddetlendikçe yeme lezzetlenir.' **Bazılarının sözü**: 'Allah **katili ve maktûlü, zâlimi ve mazlûmu** yarattı, biri diğerini öldürecek; katile **'öldürürsen seni ateşle azaplandırırım'** dedi; **yaratmasaydı maktûl dünya azabından katil âhiret azabından selâmette kalırdı** ⇒ **halk şer ve âfet kapısı; hakîm sâni'e yakışmaz.**' **'Allah'ın zarar verici, hakîm olmayan, merhametli olmayan, kullarına iyilik etmeyen olduğunu iddia bâtıl, akıllıların icmâıyla**' ⇒ **kalan: 'âlemin mebdei zâtı mûcib; mâhiyet: âlemin vücûdu ona dâim ⇒ âlem dâim.'**
+- Netice/hüküm: **Kıdem tarafı: dünya lezzeti elemden zayıf, ademde elem yok; bu yüzden halk şer kapısı; kalan yol: mûcib mebde, dâim âlem.**
+- Delil çeşidi: **ampirik-ikna'î + reductio**; (T) ikna'î-burhânî biçim. **[Delil ≠ dava: 'lezzet = elem def'i' ve 'ademde elem yok, vücûd şer' hüküm genellemeleri (c3 p284 ile aynı)]**
+- Mevzuya bağı: **KRİTİK — Fasıl III (Meâd) ve İslâmî muhafaza**: 'halk şer kapısı; Allah kâtili yaratıp azap tehdit etti' cümleleri **Allah'a nisbet edilen ithamlar; ALINMAZ**; 'akıllıların icmâı: Allah zararlı/hakîm olmayan değil' kaydı **Kıdem tarafı da Allah'ın hakîm olduğunu kabul ediyor** — dolayısıyla onun sonucu ('mûcib, dâim') hakîm ilâh varsayımının **ikinci şıkkıdır**. Kaynak: c4 p150.
+- Doğan sual: —
+
+## c4 p151
+- OCR: orta
+- Okuma: tam
+- İçerik: **8. hüccet**: '**îcâd ya ihsan ya izrâr ya ikisi de değil**; **2.** 'erhamü'r-râhimîn'e yakışmaz; **3.** abes, hakîme yakışmaz; **1.** ihsan ise **ihsanı terk ya acz, ya cehil, ya bahl**; hepsi Allah'ta muhâl ⇒ **ihsan sâdır olmalı**; 'bu söz **ancak ihsana dâînin ezelî olduğunu, şartların ezelde hâsıl, mâniin zâil olduğunu beyân ederek tamdır** ⇒ fiil vâcib; bu mukaddimeler ancak önce zikrettiklerimize rücû' ile.' **'Bu, hüsn-kubuh, hikmet ve abesten çıkarılan vecihlerin sonu. Allah en iyi bilendir.'**
+- Netice/hüküm: **Makâle 5 (hüsn-kubuh/hikmet/abes) bitti: 8 hüccet; kıdem tarafının 'ihsan dâîsi ezelî ⇒ eser ezelî' zinciri.**
+- Delil çeşidi: **dilemma + atıf (önceki vecihlere)**; (T) burhânî biçim (kıdem tarafı).
+- Mevzuya bağı: **KRİTİK — Fasıl I §8**: Makâle 5 (p135–151) kıdem tarafının **vâcib-i aslah/ihsan-hikmet üzerinden kıdem argümanı**; **c3 p334–335 ('Allah'a hiçbir şey vâcib değil') bu makâlenin öncüllerini tümüyle çürütür**: Risale **Makâle 5'i 'Râzî'nin kendi c3 hükmüyle çürütülmüş kıdem delili' olarak kaydeder**.
+- Doğan sual: —
+
+## c4 p152
+- OCR: boş
+- Okuma: tam (içerik yok)
+- İçerik: Yok.
+- Netice/hüküm: Yok.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
