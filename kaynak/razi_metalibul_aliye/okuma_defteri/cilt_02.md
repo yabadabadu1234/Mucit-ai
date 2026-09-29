@@ -649,3 +649,219 @@ Biçim: cilt 1 ile aynı. OCR/okuma/içerik/netice/delil çeşidi/mevzuya bağı
 - Delil çeşidi: hasım delili; (T) analitik (fezâ'nın ademi tasavvur edilemez).
 - Mevzuya bağı: **Fasıl I 'Vâcib'in tek olması ve âlemden ayrı olması'**: bu kavil **mekân-fezâ'yı vâcib sayan** görüş; **Fasıl I 'Burhân-ı İmkân' (mümkin/vâcib)** bu kavli **halâ-fezânın da mümkin** olduğunu göstererek çürütür; **Râzî'nin cevabı p73+**. Not: Râzî **fezâyı mevcut kabul ediyor (Hücca 9, p15)**: burada 'fezâ = Allah' iddiasına nasıl cevap verecek: **fezâ mevcut ama vâcib değil**.
 - Doğan sual: Fezâ mevcut ise vâcib olabilir mi? (Râzî p73–?)
+
+## c2 p73
+- OCR: orta
+- Okuma: tam
+- İçerik: 'Allah = nihâyetsiz fezâ' kavlinin delili devam: fezâ **vâcibü'l-vücûd li-zâtihi**, geri kalan zât ve sıfatlar ona muhtaç; ilâh anlamı bu. **Üç ortak sıfat**: (1) ilâh **gayr-i mütenâhî** olmalı; fezâ öyle (sonlu olsa dışında imtiyâz olurdu ⇒ mevcut olurdu, farz-ı adem edilince…); (2) ilâh gayr-i mütenâhî iken **fasl-vasl, ictimâ-iftirâk kabul etmez**; fezâ da öyle, **ebedî aynı hâlde**; (3) **kurb**: Allah'ın kullarına yakın olduğu (Kur'ân: 'Nerede olursanız O sizinle beraberdir' [Hadîd]; 'Biz ona şah damarından yakınız' [Kāf]); 'ilâh bu fezâdır' bu sözü tahkîk eder. 'Pislikle karışır' itirazı zayıf: karışıkla te'sirlenme fezâda olmaz; **Allah da zamanda tüm hâdislerle beraber mevcut, zâtında nakıs yok**.
+- Netice/hüküm: **'Allah=fezâ' kavlinin 3 delili**: nihâyetsizlik, fasl-vasl kabul etmeme, kurb nassı.
+- Delil çeşidi: hasım delili; (T) cedelî (analoji: Allah zamanla beraber).
+- Mevzuya bağı: **Fasıl I 'Vâcib bir zâttır; âlemden ayrı'**: bu kavil **vahdet-i vücûd/pantheist-benzeri** bir iddia; Kur'ân nassı **kurb ayetlerini** delil getiriyor: **Fasıl IV nass-akıl ilişkisi için örnek** (aynı âyet iki zıt istidlâlde).
+- Doğan sual: Bu kavil sahibi kim? (Râzî 'bazı insanlar' diyor: kaynak yok).
+
+## c2 p74
+- OCR: orta
+- Okuma: tam
+- İçerik: Devam: 'Fezâ hiçbir şeye muhtaç değil; başka fezâda değil.' **Râzî'nin reddi (bizde bâtıl)**: 'Fezâ ya mahz adem ya mevcut; adem ise ilâh olamaz; **mevcutsa ölçüye, takdire ve tebîze (parçalanmaya) kabiliyetlidir**: oda duvarları arasındaki halâ şehir duvarları arasındakinden küçük ⇒ **kısmeti-tecziyeyi kabul eder ⇒ mürekkeb ⇒ mümkin ⇒ vâcib değil**: **kat'î burhan**.' 'Fezâ gayre muhtaç değil, yakın, sonsuz; ilâh da gayre muhtaç değil, yakın, sonsuz' ⇒ **iki müsbet öncülden ikinci şekil: gayr-i müntic** ('farklı mâhiyetlerin bazı lâzımlarda ortak olması aklen mümteni değil').
+- Netice/hüküm: **'Allah=fezâ' reddi: fezâ kısmet kabul eder ⇒ mürekkeb ⇒ mümkin**; hasım kıyası **mantıken müntic değil**.
+- Delil çeşidi: **analitik-burhânî** + **mantıkî şekil tenkidi (ikinci şekil, iki müsbet)**; (T) **burhânî biçim** (öncül: fezâ mevcut ve ölçülebilir: Râzî'nin p15–16 kabulü).
+- Mevzuya bağı: **Fasıl I 'imkân/terkîb' burhanı ile tam örtüşür**; **ders katmanı için hazır misal:** 'ortak lâzım ortak mâhiyet gerektirmez' (**iki müsbetten ikinci şekil hatası**). **İç tutarlılık**: Râzî kendisi 'fezâ mevcut (halâ)' diyor (Hücca 9); şimdi 'fezâ mevcut ⇒ mürekkeb ⇒ mümkin'; p38'de 'hayiz-cihet mürekkeb ⇒ mümkin' ile aynı: **tutarlı**.
+- Doğan sual: —
+
+## c2 p75
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kısım 1, Fasıl 9 (başlık: 'Allah'ın "gayr-i mütenâhî" oluşunun tefsiri')**. Lafız **zâtı, devamı-vücûdu, sıfatı** bakımından kullanılır. **'La nihâye lehû' iki tarzda**: **selb** (nihâyeti ve haddi kabul eden mâhiyet ondan **selbedilmiş**: nihâyet = mikdarın tarafı; mikdardan hâlî ise nihâyetten de hâlî) ve **udûl** (hacim ve mikdarı olan, ama mikdarı **bir kesitte bitmeyen**; ne kadar sayarsan sayacağın dışında başka şey bulursun). **Allah zâtı için 'gayr-i mütenâhî' derken selb kastedilir**: mikdar-hacim-vaz'-hayizden münezzeh. Bu, mücessimede 'udûl' anlamında (bazı/tüm cihetlerde sonsuz) aynı sözdür.
+- Netice/hüküm: **Zât bakımından 'sonsuz' = mikdarsız** (selb).
+- Delil çeşidi: **kavramsal tefrîk (lafzî)**; (T) analitik.
+- Mevzuya bağı: p43'ün aynı ayrımı (**tekrar, sistematik hâle getiriliyor**); **Fasıl I terminolojisi**: 'sonsuz' kelimesinin Vâcib için kullanıldığı her yerde **selb anlamı** yazılmalı (**ders katmanı sözlüğü**).
+- Doğan sual: —
+
+## c2 p76
+- OCR: orta
+- Okuma: tam
+- İçerik: **Devam bakımından 'gayr-i mütenâhî'** = udûl anlamı: 'Zihnimizde ne kadar sene ve sayı hayal edersek edelim bir sınıra varmaz; akıl Allah'ın **ondan önce de mevcut olduğuna** hükmeder; bu hüküm **ebedî bâkî**.' **İtiraz**: 'devamı **zaman ve müdde** olmadan akledemeyiz; Vâcib'in devamı zamana muhtaç ⇒ **gayre iftikâr ⇒ mümkin**.' **Cevap**: 'Şeyin devamı zamana bağlı olmak zorunda değil: zaman **devamlıysa** onun devamı başka zaman için değil (aksi hâlde her zaman başka zamanın zarfı ⇒ sonsuz teselsül veya hepsinin aynı anda mevcudiyeti: muhâl) ⇒ **zamansız devam kavramı akledildi**; Vâcib için de akledilir. Zaman devamlı değilse, Vâcib'in devamı başka şeyle şartlı değil.' **Sıfat bakımından**: 'sonsuz mâlûma kâdirdir' derken 'o mâdûmlar kendi başlarına ayrı ayrı sayılar' demiyoruz (**ma'dûm şey'dir** diyenler gibi) — kastedilen: Allah'ın **yaratmada hiçbir hadde takılmayıp ardından daha fazlasına kâdir kalması**. **İlim için güçlük daha büyük**: kudret müessir (mâkdûrun evvelce kendi başına mâkdûr olması gerekmez); ilim ise şeye **olduğu gibi** taalluk eder ⇒ o mâhiyetlerin kendi başlarına ilimden önce takarrurunu gerektirir: **bu, gâmız bir bahis**.
+- Netice/hüküm: **Devam = zamansız devam kavramı**; **kudret sonsuz mâkdûra 'hadde takılmayış' anlamında**; **ilmin sonsuz malûmâta taalluku** güç mesele olarak **açık bırakılıyor**.
+- Delil çeşidi: **kavramsal + cedelî cevap**; (T) analitik; **ilim meselesi açık**.
+- Mevzuya bağı: **Fasıl I §6.3 (Kıdem/Beka)** ve **Mesele 7 şübhe 3 (kâne/yekûnu)**: bu sayfa **'zamansız devam'** kavramını **Vâcib'e** uyguluyor: **Mesele 7'nin 3. şübhesine kısmî cevap** (zamana muhtaç olmadan devam). **Fasıl I'in zaman kipi borcu** ile bağlanır: 'Vâcib **zamana bağlı olmadan devamlıdır**' cümlesi yazılabilir (kaynaklı, Râzî c2 p76).
+- Doğan sual: 'İlmin sonsuz malûmâta taalluku (mâhiyetlerin ilimden önce takarrur) — **ilim sıfatı bâbında ele alınıyor mu?**
+
+## c2 p77
+- OCR: orta
+- Okuma: tam
+- İçerik: (İlim güçlüğü sonu.) **Âlemin kıdemini savunanlar**: 'geçmiş hâdisler sonsuz' der, bazıları 'gelecek hâdisler sonsuz' der. **Râzî'nin tefsiri**: 'Geçmiş hâdisler sonsuz' derken kastedilen, **o mecmûun sonsuz sayıyla vücûd bulduğu değil**: **o mecmû hiçbir yerde ve hiçbir vakitte vücûd bulmaz** — **a'yânda** (mevcut olan her an **birdir**, mecmû hâsıl olmaz), **ezhânda** (zihin sonsuz sayıyı tafsîlen hazır edemez; 'lânihâye' mânâsını tek bir şey olarak hazır eder). **Kastedilen**: 'vücûd **geçmiş tarafta**, kendinden önce başka hâdis bulunmayan bir sınıra ulaşmaz; **her hâdis başka hâdisle mesbûk, ilk yok**.' **Gelecek**: 'sonsuz' üç şekilde söylenebilir: **fiilen mütenâhî** (her an bir hâdise varılmış ve o geçmişin sonudur), **kuvveden mütenâhî**, veya **ne fiil ne kuvve gayr-i mütenâhî**…
+- Netice/hüküm: **Kıdem-i âlem savunucusunun 'sonsuz geçmiş' sözünü Râzî 'tam bir mecmû yok, ilksizlik' diye okuyor** (yani mecmû-sonsuzluk iddiasını **kendisi zaten kabul etmez** — **bu okuma, Fasıl I §3.2 teselsül delilinin yönünü etkiler**).
+- Delil çeşidi: **kavramsal tefsir**; (T) **analitik-yorum**.
+- Mevzuya bağı: **Fasıl I §3.2 Teselsül (fiilen/illiyet zinciri/evvelsiz ayrımı; p148)** ve **Mesele 7 şübhe 1 (cilt 1 p330–331)**: burada Râzî **'sonsuz geçmiş'i 'ilksiz sonsuz-zincir, mecmû yok'** diye tanımlıyor ⇒ **filozofun 'geçmişte ilksiz hâdis zinciri' iddiası, Râzî'nin okumasıyla, 'fiilen mecmû-sonsuz' iddiası değildir**: **teselsül delilinin hedefi bu mudur?** **Fasıl I'de yeniden ayrılması gereken bir nokta** (padişah kararı).
+- Doğan sual: Râzî'nin 'mecmû yok' okuması Teselsül burhanlarının (tatbîk, tezâyüf, cümle) hangisini geçersiz kılar? (Fasıl I §3.2 gözden geçirme).
+
+## c2 p78
+- OCR: orta
+- Okuma: tam
+- İçerik: (Gelecek hâdislerin sonsuzluğu, üç durum) **fiilen mütenâhî** (her an belli hâdise sonuncu), **kuvveden mütenâhî**, veya **'sonrasında başka nihâyet bulunmayan nihâyet'** bakımından **ne fiil ne kuvve** gayr-i mütenâhî: bu nihâyet **mümteniü'l-husûl**, öyleyse geçmiş mecmûun bu nihâyete ulaşması ne fiil ne kuvvedir. **Fasıl 9'un hâtimesi**: 'kadîm felsefede **ilâh = lânihâyet hakîkatidir**'; 'kastettikleri ilâhın zât, devam ve sıfatta **gayr-i mütenâhî sıfatını** taşımaksa (yukarıdaki tefsirlerle) **doğru söylemişler**; 'ilâh = **lânihâyet mânâsının kendisi**' ise **uzaklaşmışlar**: bu mânâ **zihnî i'tibârdır**, sübût ve vücûdda istiklâli yok ⇒ **vâcibü'l-vücûd olamaz**.' **Vallahu a'lem.** Fasıl 9 biter.
+- Netice/hüküm: **'İlâh = sonsuzluk mefhumu' reddi**: mefhûm zihnî, vücûdu yok.
+- Delil çeşidi: **kavramsal reddi (i'tibârî mefhûm ≠ vâcib)**; (T) analitik.
+- Mevzuya bağı: **Fasıl I 'Vâcib bir zât, mefhûm değil' kaidesi**; ders katmanında **'Vâcib mefhûmlardan biri değildir; mefhûmlar zihnîdir'** açıklaması (kaynaklı).
+- Doğan sual: —
+
+## c2 p79
+- OCR: orta (başlık kötü)
+- Okuma: tam
+- İçerik: **Kısım 1, Fasıl 10 (başlık bozuk; konu: Allah'ın ru'yeti/ru'yetullâh)**. 'Mütekellimîn arasında **çok gürültülü**; önce mukaddimeler.' **Mukaddime 1 (ru'yetin tefsiri)**: idrak **üç mertebe**: (1) **binâyı görünce bir bânîsi olduğunu bilmek**: burada malûm yalnız 'bânî olmak'; **mâhiyeti-zâtı malûm olmaz**; (2) **renk mâhiyetini göz yoluyla, sesin mâhiyetini kulak yoluyla** öğrenip gözü-kulağı kapasak yine **rengin ve sesin hakîkatini** biliriz: ilkinden daha güçlü; (3) **gözle renge bakmak, kulakla sesi duymak**: gözü kapayınca 'belirli renk mâhiyeti' şüphesiz biliniyordu; açınca **açıklık ve keşif bakımından ilkine ilâve bir hâl**: **üçüncü mertebe ikincisinden, ikincisi birincisinden kâmil**.
+- Netice/hüküm: **İdrakin 3 mertebesi**: (1) sıfat/nisbet üzerinden bilme, (2) mâhiyeti zihinde tasavvur, (3) **müşâhede**.
+- Delil çeşidi: **kavramsal tasnif (idrak mertebeleri)**; (T) analitik.
+- Mevzuya bağı: **Fasıl I 'ma'rifetullah' bahsi**: Fasıl I'de kullanılabilecek **ma'rifet derecelendirmesi** (I/II/III); **Fasıl III (Mead): ru'yet meselesi**: ru'yetin mertebesi **(3)**; kaynak için **Sünnî akaid bağı**.
+- Doğan sual: —
+
+## c2 p80
+- OCR: orta
+- Okuma: tam
+- İçerik: (3. mertebe) 'Sarîh akıl 3. mertebenin 2.den 2.nin 1.den **kâmil** olduğuna hükmeder.' **Uygulama**: 'âlemin mümkin olduğunu, her mümkinin sebebe muhtaç, devir-teselsülün bâtıl olduğunu bilince mümkinâtın **zâtı gereği vâcib mevcuda** ulaşması gerektiğini biliriz: **malûm yalnız: ona gayrının isnâd ettiği, kendinin gayre isnâd etmediği bir mevcut**: üç malûm: **mutlak vücûd, gayrın ona isnâdının vücûbu (izâfet), kendinin gayre isnâdının imtinâı (selb)**; ⇒ **mukayyed vücûd**, izâfet ve selb ifade eder, **Vâcib'in hakîkat-i mahsûsasına mugâyir**.' ⇒ **'Allah'a dair bizde hâsıl ma'rifet yalnız 1. mertebedir.'** '2. mertebe **bir kimseye hâsıl mı**? Hâsıl olmasa melekler için mi, nebîler için mi mümkin, yoksa tüm mahlûk için mi? 3. mertebe kimseye mümkün mü? **Bu, Allah'ın ru'yetinin mümkin olup olmadığının mânâsı.**' **Mukaddime 2**: 'cisimden ve mekândan münezzeh mevcudun ru'yeti **bedîhe ile muhâl mı**?' **Râzî: sahih kavil: bu tefsirle ru'yet bedîhe ile muhâl bilinmez**; 'bu hayatta Allah'ı 1. mertebede bildik ve cisimden-mekândan münezzeh olduğunu bildik; **2. mertebede bilmek mümkin mi?** (…p81).'
+- Netice/hüküm: **Râzî: ru'yetin imkânı bedîhî olarak nefyedilemez; bu dünyada Allah'a dair ma'rifetimiz 1. mertebedir.**
+- Delil çeşidi: **kavramsal + burhânî çıkarım (ma'rifet, nisbet ve selb ile)**; (T) analitik-burhânî (birinci hüküm), **ikinci hüküm 'bedîhe ile muhâl bilinmez' = ihtilaf/derece düşürme (Hücca 1 tipi)**.
+- Mevzuya bağı: **Fasıl I 'ma'rifetullah'ın sınırı'**: 'Burhân-ı İmkân sonucu **yalnız izâfî+selbî bilgi** verir; zâtın hakîkatini vermez' = **Fasıl I'in 'ne ispat edilir, ne edilmez' satırı** için **doğrudan destek** (kaynaklı; c2 p80); **çok mühim**: Fasıl I §2.2 'ayniyet' iddiasını da etkiler (Vâcib'in **hakîkat-i mahsûsası** hakkında bilgi yok).
+- Doğan sual: **Fasıl I §2.2 ile p80'in birlikte okunması**: burhanın verdiği bilgi ('mukayyed vücûd') **'hakîkat-i mahsûsa'yı** vermez ⇒ 'Vâcib'de ayniyet ispatlandı' cümlesi **iki kez** desteksiz.
+
+## c2 p81
+- OCR: orta
+- Okuma: tam
+- İçerik: Mukaddime 2 devam: 'İmkânsızlığı **bedîhî** değildir; ru'yetten kastımız **inkişâf türü**, 2. mertebeye nisbeti **rengi görmenin rengin mâhiyetini tasavvura nisbeti** gibi; bu hâlin hâsıl olabileceği/olamayacağı hükmünde akıl **tevakkuf** eder, **ancak münfasıl delille** karar verilir.' **Tahkîk**: 'Salt **istib'âd** delil ise cihetsiz-hayizsiz mevcudun ispatı da muhâl olurdu (Mu'tezile ve filozoflara göre bâtıl); delil değilse burada da delil değil: **birinde delil diğerinde değil demek çelişki**.' **Mukaddime 3**: ru'yetin **mahalli**: bu **göz-hadaka mı, nefsin cevheri mi**? Birincisi çok uzak; **şerefli idrakin mahalli nâtık nefsin cevheri** aklen daha yakın. **Ru'yeti nefyedenlerin delilleri — Delil 1**: 'Ru'yet sahih olsa **şimdi görmemiz** gerekirdi (bugün görmüyoruz ⇒ mukaddem bâtıl)': **8 şart**: (1) hâsse sağlam, (2) şey görülebilir, (3) **çok yakın olmama**, (4) **çok uzak olmama**, (5) **aşırı küçük olmama**, (6) **aşırı latîf (hava) olmama**, (7) **araya hicâb girmemesi**, (8) **mukâbele** (yahut hükmü).
+- Netice/hüküm: **Ru'yet mukaddimeleri**: (a) imkân bedîhî nefyedilemez, (b) mahalli nefs, (c) nefyeden 1. delil (8 şart).
+- Delil çeşidi: (a) **ilzâm (istib'âd çelişkisi)**; (c) **hasım delili**; (T) (a) cedelî.
+- Mevzuya bağı: **Fasıl III (Meâd) ve Fasıl IV (Sünnet)**: 'Ru'yetullâh' **ahiret hakikati**; Râzî bu ciltte **aklî imkân** düzeyinde tartışıyor; **naklî ispat** (âyet-hadis) başka yerde. **Râzî'nin 'mahal = nefs' tercihi** Fasıl III **nefs** öğretisi ile bağlanır.
+- Doğan sual: —
+
+## c2 p82
+- OCR: orta
+- Okuma: tam
+- İçerik: **Delil 1 devam**: 'Sekiz şart bir arada **görme vâcib**; yoksa yanımızda tepeler ve sesler olup duymamamız gerekirdi ⇒ **sofestâ**.' 'Ru'yet sahih olsa yalnız **ilk iki şart** (hâsse sağlam, görülebilir olma) itibar edilir, **kalan altı şart Allah hakkında itibar edilemez** (cisim-hayiz şartları) ⇒ iki şart **şimdi hâsıl** ⇒ **şimdi görmemiz gerekirdi**; görmüyoruz ⇒ **Allah zâtı gereği görülemez**.' **Delil 2**: 'Ru'yetin şartı **mukâbele**; zarûrî; bu şart ancak hayiz-cihete ihtisaslı şey için **akledilir**; Allah münezzeh ⇒ şart fevt ⇒ ru'yet muhâl.' **Delil 3**: 'Ru'yet ancak **mer'înin sûretinin gözün hadakasında intıbâ'ı** ile; şekil-sûreti olan için; Allah için muhâl.' **Delil 4**: 'Mer'î **renk ya renkli** olmalı; renkli şekilli.'
+- Netice/hüküm: **Ru'yeti nefyedenlerin 4 delili** (şart, mukâbele, intıbâ', renk).
+- Delil çeşidi: hasım delilleri; (T) **analitik biçim; öncüller fiziğe (intıbâ' teorisi, mukâbele) bağlı**.
+- Mevzuya bağı: Delillerin hepsi **'ru'yet = göz-fiziği'** öncülüne dayanıyor: Râzî'nin cevabı **ru'yetin tanımını değiştirmek** (p83–84).
+- Doğan sual: —
+
+## c2 p83
+- OCR: orta
+- Okuma: tam
+- İçerik: **Râzî: 'Bu deliller çok adî ve son derece zayıf.'** **Delil 1'e itirazlar**: **(1)** 'Sekiz şart bir arada görme vâcibdir' **kabul değil**: un ekmeğe konunca **un görülür, un küçük bitişik zerreler mecmûu**; ru'yet mecmû = her zerrenin görülmesi; **her zerrenin ru'yeti ötekinin ru'yetine mevkûf ⇒ devir**; **biri ötekine mevkûf ⇒ misil zerreler arasında tercih ⇒ tercih bilâ müreccih**; her biri kendi başına ru'yete sahih iken görmüyoruz ⇒ **görülmeye sahih olmak + diğer şartlar ⇒ görmeyi gerektirmez**. **(2)** 'Cisim-arazlar için vücûb kabul, Allah için niye?' — Allah'ın ru'yeti **cisimlerin ru'yetinden mâhiyette muhâlif** olur; **bir mâhiyette hüküm, ona muhâlif mâhiyette lâzım gelmez**. Râzî: **'bu, zâhir ve kuvvetli bir sualdir; kavmin bundan nasıl gâfil kaldığına şiddetle şaşarım.'**
+- Netice/hüküm: Delil 1 iki yerden düşer: **görme hükmünün vücûbu (un misali) ve Allah'a taşınması (mâhiyet farkı)**.
+- Delil çeşidi: **cedelî-analitik**; (T) **analitik** (misal ilginç: **cevher-i ferd/zerre öncülü**, kelâm ve felsefeye bağlı).
+- Mevzuya bağı: 'Mâhiyet farkı ⇒ hüküm taşınmaz' = **şâhitten gâibe geçiş yasağı** (Fasıl I ilkesi) — Râzî **bu ilkeyi burada nef'i delillere karşı, oysa cihet delillerinde** (p35–37 'kıyâs-ı gâib') **tutarlı kullanıyor**.
+- Doğan sual: —
+
+## c2 p84
+- OCR: orta
+- Okuma: tam
+- İçerik: Delil 1'e **3. itiraz**: 'Üçüncü mertebe (tam inkişâf) mahsûslarda **zâhir hâsse sağlam olunca vâcib**; **mücerredât-mufârakât** için **nefs-i kudsiyye cevheri** için hâsıl olur; bu hâlin hâsıl olması **bu hâlde fevt olan şartlara** bağlı olabilir ⇒ ru'yet bu yüzden **şimdi** hâsıl değil; **bu ihtimal ile delil sâkıt**.' **Delil 2 cevabı**: 'Ru'yetten kastımız **tam inkişâf, tam tecellî**; 'inkişâf mukâbele şartlı' **hayiz-ihtisaslı şey için**; hayiz-cihetten münezzeh için **mukâbele şartlı olduğunu** ispat edemezsiniz (zarûrî ilim şöyle dursun).' **Delil 3 cevabı**: 'ru'yet tam inkişâf; her hakîkatin inkişâfı **o hakîkate uygun**; şekil-sûreti-rengi olan şey için ru'yeti bunların inkişâfıyla; münezzeh şey için **inkişâfı şekilsiz-sûretsiz**: **4. delilin de cevabı**.'
+- Netice/hüküm: **Ru'yeti nefyeden 4 delil 'çok zayıf ve sâkıt'** (Râzî).
+- Delil çeşidi: **cedelî-analitik (ru'yet tanımının değiştirilmesi)**; (T) analitik; **tanım oyunu riski**: Râzî 'ru'yet = inkişâf' diyerek delilleri **konu dışı** bırakıyor; bu bir **kavram genişletmesidir**: derece notu.
+- Mevzuya bağı: **Fasıl III Meâd 'ru'yet'**: 'ru'yet' teriminin **'inkişâf'a genişletilmesi**, Sünnî akaidin 'ru'yet-i bâri (gözle ve keyfiyetsiz)' ifadesiyle **kelime düzeyinde** örtüşür mü? **Kayıt: Râzî'nin ru'yet tanımı 'keşf-i tâm'dır; klasik Eş'arî 'ru'yet-i bilâ keyf' ile ilişki ayrıca doğrulanmalı (⊬).**
+- Doğan sual: Râzî'nin 'ru'yet = inkişâf' tanımı Eş'arî geleneğindeki 'ru'yet-i basariyye' ile aynı mı, farklı mı?
+
+## c2 p85
+- OCR: orta
+- Okuma: tam (dipnotlar dahil)
+- İçerik: Râzî: 'Nefyedenlerin delilleri **gâyet zayıf ve sâkıt**.' **İspat edenler**: 'Allah mevcut, her mevcut görülebilir': bu öncülü **mevcûdâtın ahkâmı** bâbında zikrettik, **güçlü itirazlar** yönelttik: **'hiç savulamaz'**. **Râzî'nin hükmü**: 'iki fırkanın delillerinin zayıflığı bilinince bu bahis **tevakkuf mahallinde**; ancak **nebîlerin-resûllerin bu ru'yetin vukûunu haber verdiğini**, **ashâb-ı mükâşefâtın** bu ru'yete mukaddime gibi hâller haber verdiğini görüyoruz ⇒ **vukûu hakkında zan kuvvetleniyor**; eşyanın hakîkatini tamamıyla ancak Hakîm olan Allah bilir.' **Editör (Sekkā) dipnotları (Râzî'nin değil, neşredenin görüşü)**: 'ispat kısmı aklî delille sahih olmaz; **nass ru'yeti menediyor**: "Gözler O'nu idrak etmez" [En'âm 103]; büyük öncül yanlış (akıl, insanlık, şecâat var ama görülmez); **nebîlerin haberi ve mutasavvıfların rüyaları ru'yeti gerektirmez**; Tevrat'ta Mûsâ görmek istedi 'yüzümü göremezsin'; **Eş'ıyâ; Yuhannâ İncili: "Allah'ı kimse hiç görmedi"**; Hristiyanlar Mesîh'te Allah'ı gördüklerini iddia eder…; **Hz. Âişe: "Kim Muhammed'in Rabbini gördüğünü söylerse en büyük iftirayı atmıştır"**, ardından âyet; 'Kıyâmet 22–23'ün iki âyeti (**"o gün yüzler Rabbine bakıcıdır"** ve **"kâfirler Rabbinden perdelenmiştir"**) müteşâbih'; …'
+- Netice/hüküm: **Râzî: aklî delil yok, iki taraf zayıf; nübüvvet haberleri ve keşf ile vukûu için zan-ı kavî.** **Editör: ru'yeti reddeden, Râzî'ye muhâlif bir görüş** (dipnot).
+- Delil çeşidi: Râzî (T) **naklî-zannî (kuvvetli zan)**; editör notu **mezhebî/kelâmî yorum**.
+- Mevzuya bağı: **Fasıl III/IV (Meâd, Sünnet)**: **DİKKAT**: **Ehl-i Sünnet'in ana hattı ahirette mü'minlerin Allah'ı görmesini (ru'yetullâh) kabul eder**, delilleri **Kıyâme 22–23 ve mütevâtir/meşhûr hadisler**; editörün notu **bu hattın dışında bir okuma** (nüsha notu, **Râzî'nin metni değil**). **Hz. Âişe'nin sözü, bu dünyada ve Mi'râc'ta ru'yetle ilgili ihtilaf** konusudur; **âhiret ru'yetini nefyettiği şeklinde okunamaz** (⊬ kaynak-doğrulaması gerekli: hadisin senedi ve bağlamı). **Fasıl III'e bu ciltteki editör notları esas alınmaz; ru'yet bahsi ayrı, Sünnet kaynaklarından okunur** (yeni borç).
+- Doğan sual: (a) Ahiret ru'yeti için Ehl-i Sünnet kaynaklarında (Kur'ân+hadis) doğrudan delil listesi: **Fasıl III'te olmalı**; (b) Editör dipnotlarının **kimin görüşü olduğu**: Sekkā'nın kendi yorumu, tahkik notlarına Râzî'nin metniyle **karıştırılmamalı**.
+
+## c2 p86
+- OCR: kötü (başlık) / orta
+- Okuma: tam
+- İçerik: **Kısım 1, Fasıl 11 (başlık bozuk): 'Bu hayatta Allah'ın hakîkat-i mahsûsası bilinir mi? Ahirette bilinebilir mi? …'** (başlık kısmen: 'ru'yetin neticesi'). **Birinci bahis**: bu dünyada Allah'ın **hakîkat-i mahsûsasını** biliyor muyuz? **Cevap: bu ma'rifet hâsıl değil.** **Hücca 1**: 'Allah'tan bize malûm olan **ya vücûd, ya vücûdun keyfiyeti, ya izâfetler, ya selbler**; bunların ilmi **zât-ı mahsûsa'nın ilmi değildir ve ilmini gerektirmez** ⇒ hakîkati bilmiyoruz.' **Mukaddime 1**: Allah'tan yalnız **dört şey** biliriz: (1) **vücûd** (âlem hâdis, her hâdisin muhdisi var), (2) **vücûdun keyfiyeti**: vâcib li-zâtihi olduğunu (vücûdun zâtı gereği sübûtu = **o vücûdun sıfatı bilinir**), **kadîm-ezelî-bâkî-sermedî** olduğunu (o vücûdun geçmişte ve gelecekte ademden münezzeh devamı = yine **vücûdun bir sıfatı**).
+- Netice/hüküm: **Zât-ı mahsûsa'nın ilmi hâsıl değil; bilinen 4 şey: vücûd, keyfiyet, selbler, izâfetler.**
+- Delil çeşidi: **istikrâ + analitik**; (T) analitik-burhânî.
+- Mevzuya bağı: **Fasıl I 'burhan neyi ispat eder' satırı (p80'in devamı)**: **Râzî 'bilinen dört şey' listesi** Fasıl I §2.2 ve §14'e **doğrudan eklenebilir** ('Burhan Vâcib'in hakîkat-i mahsûsasını vermez; yalnız vücûd, keyfiyet, selbler, izâfetler'); ayrıca **'Vâcib'de vücûd zâtın ayniyeti' iddiasının** (Fasıl I §2.2) **burhanın verdiği bilgiyle desteklenemeyeceğini** güçlendirir.
+- Doğan sual: —
+
+## c2 p87
+- OCR: orta
+- Okuma: tam
+- İçerik: Mukaddime 1 devam: (3) **selbler**: Allah **müteheyyiz değil, mekânda değil, hâl değil, mahalde değil, renkli değil, keyfiyetli değil, mürekkeb değil, ib'âzlı değil**; (4) **izâfetler**: Allah'tan **fiil ve terkin sıhhati** (bu sıhhat özel bir izâfet), **âlim olması** (ilim âlim ile malûm arasında özel izâfet). Bu **dört tür** ma'rifet beşer akıllarında hâsıl. **Mukaddime 2**: 'Bu malûmâtın ilmi **hakîkat-i mahsûsa'nın ilmi değildir**': **vücûd**: 'Allah'ın vücûdu **zâtına kâim bir sıfattır**' (zâid); **vâcib-dâim**: vücûdun bir keyfiyetidir; **selbler**: 'cevher değil, araz değil' = **cevherlik-araz olmanın selbi**, zâtı **bu selblerin aynı değil**; **izâfetler**: iki şey arasındaki izâfet **ikisinden de gayr** ⇒ izâfetin ilmi zâtın ilmi değil. **Bu dört ilmin zâtın ilmini gerektirmediği**: 'bu dört mukaddimeyi bilince nefsimizde **"bir şey"den fazlasını bulmayız**; onun **ne olduğunu bilmeyiz**; yalnız dört sıfat türüyle mevsûf olduğunu.'
+- Netice/hüküm: **'Şey ama ne olduğu bilinmez' hükmü (zât-ı mahsûsa cehli)** — **Râzî 'vücûd Allah'ta zâid sıfattır' diyor** (c1 Mesele 3 ile **tutarlı**).
+- Delil çeşidi: **analitik**; (T) analitik-burhânî (**öncül: vücûd zâid**).
+- Mevzuya bağı: **KRİTİK**: Fasıl I §2.2 'Vâcib'de **ayniyet** §3'te ispatlanmış' cümlesi **Râzî'nin bu sayfa ve c1 Mesele 3 ile açıkça çelişir**: Râzî **Vâcib'de de vücûd zâid** ve 'zâtın ilmi hâsıl değil'. **Fasıl I §2.2 düzeltilmeli** (padişah kararı bekliyor: öneri: 'Vâcib'de vücûd zâtın lâzımıdır' ifadesi).
+- Doğan sual: **Râzî 'vücûd zâid ⇒ zât bilinmez' çıkarımının İslâm akaidiyle ilişkisi**: 'Allah'ın zâtı akılla künhüyle bilinmez' hükmü **Sünnî akaidin ittifakla kabul ettiği bir ilke** ('tefekkerû fi halkillâh ve lâ tefekkerû fillâh' hadisi, ⊬ senet doğrulaması); Fasıl I'e bu **akâid uyumu** notu eklenebilir.
+
+## c2 p88
+- OCR: orta
+- Okuma: tam
+- İçerik: Mukaddime 2 sonu: 'Bu dört mukaddimeyi bilince kendimizde yalnız **bir şey olduğunu** buluruz, **ne olduğunu** bilmeyiz; ⇒ bu ilimler zât-ı mahsûsa'nın ilmini **gerektirmez**.' **Mukaddime 3**: 'Allah'tan yalnız bu dört tür malûmâtı bildiğimiz': kişi kendi nefsine ve akıl-fehmine dönse **zarûrî** olarak bilir ki elinde **bu dört tür ilâhî ma'rifetten başkası yoktur** ⇒ **zât-ı mahsûsa'nın ilmi bizde hiç hâsıl değil.** **Hücca 2**: 'İlim ya **tasavvur** ya **tasdîk**; tasdîk iki tasavvurdan birine diğerini isbat/selb ile **hüküm**; tasavvur ancak **dört yoldan**: (1) **beş duyunun** idrak ettiği (siyah-beyaz, ses-tat); (2) **nefis vicdânları** (elem-lezzet, şehvet-nefret, ferah-gam); (3) **salt akılla** idrak (vücûd-adem, vahdet-kesret, vücûb-imtinâ'-imkân); (4) **hayâl ve aklın bu basit idraklerden terkîb ettikleri** (bin başlı insan: insan sûreti-baş sûreti duyudan, insan mânâsı akıldan; hayâl terkîb eder).
+- Netice/hüküm: **Tasavvurun dört kaynağı** (duyu, vicdân, aklî mefhûm, terkîb); **Allah'ın zât-ı mahsûsası bu dört kaynaktan hiçbirinden tasavvur edilemez** (p89'da sonuç).
+- Delil çeşidi: **istikrâ (tasavvur kaynakları)**; (T) **analitik + istikrâ**; (dört kaynak taksîmi **tam mı? hasr delili yok**; Râzî'nin kendi p66 ölçüsüyle **taksîmin tamlığı ayrıca ispat ister**).
+- Mevzuya bağı: **Fasıl I metodolojisi**: **Râzî'nin hasr eleştirisi (p66) burada kendi taksîmine de dönebilir**; ders katmanında **bu dört kaynak taksîmi 'zan-ı kavî' düzeyinde** yazılmalı.
+- Doğan sual: Tasavvur kaynaklarının dörtle sınırlı olduğu ispatlı mı? **Vahiy yoluyla bilgi bu taksîme girmiyor**: Râzî bunu 'nakil' ile ayrıca ele alacak mı?
+
+## c2 p89
+- OCR: orta
+- Okuma: tam
+- İçerik: Tasavvur kaynağı (4) sonu: akıl terkîbi = iki tasavvurdan **mukaddime**, iki mukaddimeden **kıyas**. 'Zihin ancak bu dört kısımdan biriyle tasavvur hâsıl eder; **bunlara mugâyir olanı istihzâr edemez** (iç gözlemle).' **İtiraz**: 'Allah'ın **şerîki muhâldir** diye hükmediyoruz; şerîkin mânâsını tasavvur etmeseydik hüküm veremezdik; öyleyse şerîk-i ilâh tasavvurumuz var ama dört kısmın dışında.' **Cevap**: 'Bu **aklî terkîb**: ortada **şerîk** mânâsı (iki ortaktan birinin diğerine nisbeti) ve **ilâh** mânâsı var; terkîb edilir; **muhâl** oluşu ayrıca gösterildi.' **Sonuç**: 'ilâhın hakîkati **ne duyudan, ne nefis vicdânından, ne salt aklî mefhûmlardan (vücûd-adem …), ne bunların terkîbinden**; ⇒ **zât-ı mahsûsa'nın tasavvuru hâsıl değil**.'
+- Netice/hüküm: **Hücca 2 tamam**: 'şerîk' örneği terkîb, dördüncü kısma girer.
+- Delil çeşidi: **istikrâ + cevap**; (T) **istikrâî-zannî (hasr delili yok)**.
+- Mevzuya bağı: **Fasıl I 'şirk imkânsız' kavramının tasavvuru**; ders katmanında 'muhâl olanın tasavvuru terkîbledir' notu.
+- Doğan sual: —
+
+## c2 p90
+- OCR: orta
+- Okuma: tam
+- İçerik: **Hücca 3**: 'Filozoflar **illetin mâhiyetini bilmenin ma'lûlü bilmeyi gerektirdiğini** gösterdi. Mümkinât **illetler zincirinin** ve **iftikâr derecelerinin sonunda vâcibin hakîkat-i mahsûsasına** ulaşır; bu hakîkat bir insanca ma'kûl olsa **bütün mümkinâtın tam ve gerçek illetini bilirdi**; illeti bilmek ma'lûlü bilmeyi gerektirir ⇒ o insan tüm mümkinâtı (cins, nev', sınıf, şahıs) **inen sırayla** bilirdi; **böyle değil (zarûrî)** ⇒ **zât-ı mahsûsayı bilmiyoruz**.' **Hücca 4**: 'Filozoflar: **ilim = malûma mâhiyette müsâvi bir sûretin âlimde hâsıl olması**; zâtı bilsek o sûret **Allah'ın zâtına tam mâhiyette müsâvi** olur ⇒ zât **bir nev' (altında şahıslar)** olur; **muhâl** ⇒ **ilim hâsıl olamaz**; bu öncül sahih ise **tüm mahlûkât için burhân-ı yakînî**.' **Hücca 5**: 'Külli tabiat külli kayıtla kayıtlanınca **külli kalır** (insan, âlim insan, zâhid âlim insan…); **kül ≠ cüz'î-şahsî** (zarûrî); Allah'ın zâtı **külli değil, muayyen zât ve şahsî hakîkat**'.
+- Netice/hüküm: Hücca 3–5: **illet-ma'lûl, sûret-müsâvât, külli-şahsî** öncülleriyle zât-ı mahsûsa cehli.
+- Delil çeşidi: **filozoflar öncüllerine dayalı burhân (T: öncül bağımlı)**; Hücca 4: (T) **burhânî biçim; 'ilim = müsâvi sûret' öncülü İbn Sînâ'cı, Eş'arî ve pek çok kelâmcı reddeder**.
+- Mevzuya bağı: Hücca 3 'illeti bilmek ma'lûlü bilmek' öncülü **p90'da filozoflardan alınmış**; Fasıl I'de kullanılmamış; **Fasıl I 'illiyet' bahsi** ile bağlanabilir (illet-ma'lûl eşzamanlılığı c1 p130–133); **derece: filozof öncülü**.
+- Doğan sual: —
+
+## c2 p91
+- OCR: orta
+- Okuma: tam
+- İçerik: Hücca 5 devam: (3 mukaddime): kül≠cüz'î; Allah'ın zâtı külli değil; 'bilinen her şey **külli kayıtlarla kayıtlı külli**: "mevcut" külli; "kendisi vâcibü'l-vücûd" külli; "cisim-cevher-araz değil" külli; "âlim, kâdir, hayy" külli kayıtla külli; **hepsi külli ⇒ bu külli zâtın kendisi değil ⇒ bu külli malûmâtı bilmek zât-ı mahsûsayı bilmek değil**.' **İtiraz**: 'Allah'ın **vâhid** olduğunu, hakîkatinin başkasında hâsıl olamayacağını biliyoruz; bu malûm **şirkete mâni ⇒ külli değil, o belirli zâtı olarak biliyoruz**.' **Cevap** (p92): 'Vâhid oluşu, şirket imkânsızlığını bilmek de **müşterek külli bir hüküm** (o vâhid elif olsa da doğru, be olsa da doğru); **bu malûm şirkete mâni değil; şirketi men eden ancak o zâtın kendisi (hakîkat-i mahsûsa)**.'
+- Netice/hüküm: Hücca 5: **tevhid hükmü bile külli bir hükümdür; zât-ı mahsûsayı vermez**.
+- Delil çeşidi: **analitik**; (T) analitik (**ilginç ince ayrım: vâhid olma bilgisi ≠ o vâhid'in kendisi**).
+- Mevzuya bağı: **Fasıl I §6.2 Vahdâniyet**: Râzî'ye göre **'Allah bir' bilgisi de zât-ı mahsûsayı vermez**; Fasıl I'de 'Vahdâniyet ispatlandı' cümlesi **zâtın bilindiğini ima etmemeli**.
+- Doğan sual: —
+
+## c2 p92
+- OCR: orta
+- Okuma: tam
+- İçerik: Hücca 5 sonu (tevhid külli hüküm). **Hücca 6**: 'Eskiler: **Allah gayr-i mütenâhî, beşer akılları mütenâhî; mütenâhî gayr-i mütenâhîyi kuşatamaz**.' **Ezel misali**: 'yüz bin sene, her lahza sayılsa; bu sayı **mütenâhî ve mahdûd**; ezelden çıkarsak **ezel olduğu gibi kalır**; öyleyse aklımızın vardığı her şey **mütenâhî ve ezelden hâriç**; **akıllar bu tek sıfatın (ezeliyyet) mânâsını bile idrak edemez**; sıfatı edemeyen **mevsûfu** edemez.' **Hücca 7**: 'İlim **malûm üzerinde bir tür istilâ**: bilmeyen kişi ruhen malûma göre **âciz, mağlup**; bilince **kuşatıcı**. Akıllar Hakk'ın künhüne ulaşsa **halka Hakk üzerinde bir istilâ** hâsıl olurdu; acizlik olduğu için **halk daima kahr ve ma'rifet aczinde, istilâ ve kahır Hakk'ın**: bu vâcib.'
+- Netice/hüküm: Hücca 6 (sonsuzluğu kuşatamama), Hücca 7 (ilim = istilâ: halkın aczi Hakk'ın kahrının gereği).
+- Delil çeşidi: 6: **misal + istikrâ**; 7: **kavramsal-teolojik (ilim = istilâ)**; (T) 6 **ikna'î-analitik**; 7 **hitâbî**.
+- Mevzuya bağı: **c1 p329–330 (Mesele 7 misalleri)** ile **aynı 'ezel ölçülemez' misali**: **Râzî aynı misali iki bağlamda kullanıyor** (ezelin mâhiyeti ↔ zât-ı mahsûsanın bilinemezliği).
+- Doğan sual: —
+
+## c2 p93
+- OCR: orta
+- Okuma: tam
+- İçerik: **Hücca 8**: 'Akıl **iki malûmu aynı anda** istihzâr edemez; iki malûmu bile edemeyen, **en büyük ve en yüce malûmun künhüne** nasıl ulaşır?' **Zât-ı mahsûsayı bilmenin mümkün olduğunu savunanların 4 hüccesi**: **Hücca 1**: 'Her tasdîk mevzû ve mahmûlün tasavvuruna mebnî; "hakîkati halka ma'kûl değil" diyenin **mevzûu "hakîkati", mahmûlü "ma'kûl olmayan"**; bu isnadı yapan **mevzuyu bilmeli**; öyleyse hakîkat halka **ma'kûl** ⇒ **"hakîkati bilinmez" sözü kendini nakzeder**.' **Cevap için itiraz**: 'hakîkat **bazı sıfatlarıyla** ma'kûldür'; 'öyleyse "hakîkati ma'kûl değil" derken mevzû: **hakîkat min haysu hiye** ise ma'lûm ⇒ çelişki; **bazı sıfat ve hâlleriyle** ise **ma'lûm olanı ma'lûm değil diye hükmetmiş** ⇒ yine çelişki.'
+- Netice/hüküm: Ma'rifet lehine **Hücca 1: kendi kendini nakz** delili kuruluyor.
+- Delil çeşidi: **nakz-ı zâtî (self-refutation)**; (T) analitik-burhânî görünüm; **Râzî cevap verecek (p95–96)**.
+- Mevzuya bağı: bkz p95–96.
+- Doğan sual: —
+
+## c2 p94
+- OCR: orta
+- Okuma: tam
+- İçerik: Hücca 1 sonu (tenâkuz tüm takdirlerde). **Hücca 2**: 'Her tasdîk tasavvura mebnî; Allah'a sıfatlar isnâd ederken **mevzû** ya zât **min haysu hiye** ya zât **başka sıfatlarla**: ilkinde **zât ma'lûm**; ikincisinde isnad başka sıfatlara ⇒ **teselsül** yahut zât min haysu hiye'ye varma ⇒ **zât ma'lûm**.' **Hücca 3**: 'Allah'tan bir şey biliyoruz: ya **zât min haysu hiye**, ya **sıfat min haysu hiye** (zâta isnadı olmadan), ya **zâta isnad edilen sıfat**: ilkinde zâtı biliyoruz; ikincisi bâtıl (ilmi 'ilim olarak' bilmekle 'Allah âlimdir' bilmek farklı); üçüncüsünde **sıfatın zâta kâim oluşunu bilmek iki şeyin de ilmini gerektirir** ⇒ zâtı biliyoruz.'
+- Netice/hüküm: Ma'rifet lehine Hücca 2–3: **'mevzû tasavvuru' ilkesi**.
+- Delil çeşidi: **analitik (tasavvur-tasdîk ilişkisi)**; (T) analitik-burhânî görünümlü.
+- Mevzuya bağı: **Fasıl I 'ne ispat edilir/edilmez'**: bu itirazlar Râzî'nin **kendi cehl tezine karşı** güçlü; cevapları p95–96'da.
+- Doğan sual: —
+
+## c2 p95
+- OCR: orta
+- Okuma: tam
+- İçerik: Hücca 3 sonu ve **Hücca 4**: 'Allah'ın **zât-ı kâim bi'n-nefs** olduğunu biliyoruz; bu ilmin malûmu ya **zâtın tamamı** (⇒ zâtın tamamını biliyoruz), ya **mâhiyet cüz'ü** (⇒ zât **iki cüzden mürekkeb**: mümkin), ya **mâhiyet dışı bir şey** (⇒ zât 'zât olmayan' olur: çelişki).' **CEVAPLAR**: **1–2'ye**: 'mevzû tasavvur edilmelidir' **nakz edilir**: 'tasavvur edilmeyene hüküm verilemez' önermesi de bir kaziyye; mevzuu 'tasavvur edilmeyen' ⇒ **tasavvur edilmeyen tasavvur edilmiş** olur (iki nakîzin cem'i). 'Demek ki mevzû o hâliyle tasavvur edilmiş': kastedilen **tasavvur edilmeyenin, tasavvur edilmemiş olduğu bakımından** ele alınması ⇒ ya **'tasavvur edilmeyen' olarak** (o zaman 'mevzû tasavvur edilmeli' önermesi nakz) ya **tasavvur edilen olarak** (o zaman 'hükmedilemez' önermesi yalan).
+- Netice/hüküm: **'Mevzû tasavvur edilmeli' ilkesi kendi kendini nakzeder** (self-referential): ma'rifet lehine Hücca 1–2 **düşer**.
+- Delil çeşidi: **nakz (self-reference)**; (T) **analitik**; **açık ince nokta**: Râzî'nin cevabı 'mevzuun tasavvuru **belirli bir yönden** yeterlidir' (idâfî/vecihli tasavvur) fikrini **açıkça söylemiyor**; cevap 'ilkeyi nakz' biçiminde: **hasmın ilkesini bütünüyle çürütmek yerine sınırlamak** daha isabetli olurdu (**kendi eleştirim**).
+- Mevzuya bağı: **Fasıl I 'ma'rifetin sınırı'**: bu **iç diyalog**, ders katmanında **'bilinemezlik tezi kendi kendini nakzeder mi?' itirazı ve Râzî cevabı** olarak yazılabilir (kaynaklı).
+- Doğan sual: —
+
+## c2 p96
+- OCR: orta
+- Okuma: tam
+- İçerik: **Cevap 3**: 'Zâtı biliyoruz' derken kastedilen **kendi başına müstakil, gayre muhtaç olmayan** demek: bu **selbî**; **selbler mâhiyetlerin dışındadır**. **Cevap 4** aynı. **Sonuç**: 'Bu ilmin **beşere hâsıl olmadığı** ispatlandı; **meleklere hâsıl mı?** Hâsıl değilse **melekler veya halk için mümkin mi?** Bu **tevakkuf** mahallidir.' **Râzî'nin hatimesi**: 'İlâhiyyât mebâhisi bu darboğazlara varınca **akıllar dehşete düşer, fikirler durur; ondan sonra yapılacak şey Allah'a sığınmak ve hakîkî ma'rifetlerin ifâzasını dilemektir. Tevfik Allah'tandır.**' **Fasıl 11 biter.**
+- Netice/hüküm: **Zât-ı mahsûsanın ilmi beşere hâsıl değil; melek ve ahiret durumu tevakkuf**; **ma'rifet lehine 4 hüccetin cevabı: 'zât' kelimesi selbî anlamda, terkîb/mâhiyet dışı sıfat lâzım gelmez**.
+- Delil çeşidi: **kavramsal + tevakkuf**; (T) analitik + **açık tevakkuf** (Râzî hükmü tevakkufa bağlıyor).
+- Mevzuya bağı: **Fasıl I'e güçlü ek**: 'Burhan **zât-ı mahsûsayı vermez**; bu hüküm ehl-i sünnetin '**lâ tüdrikuhu'l-ebsâr / künhü bilinmez**' çizgisiyle uyumlu; **iddia derecesi ilkesi** ile birebir. **Kalan soru**: 'zât-ı mahsûsa cehli' **ahirette ru'yet/ma'rifet** durumuyla nasıl bağlanır (Râzî 'tevakkuf' diyor).
+- Doğan sual: Râzî'nin 'zât-ı mahsûsa cehli' hükmü ile **Fasıl III (Meâd)**'daki 'ru'yet-i bâri' meselesi **arası bağ**: birlikte ele alınmalı.
