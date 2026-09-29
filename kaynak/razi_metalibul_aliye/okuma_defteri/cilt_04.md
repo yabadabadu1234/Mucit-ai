@@ -649,3 +649,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **dilemma + reductio**; (T) burhânî biçim (kıdem tarafı).
 - Mevzuya bağı: **KRİTİK — Fasıl I §3, §8**: 'kudretin te'sîri dâim ⇒ âlem kadîm' **hudûs delilinin karşısında en çıplak biçim**: Risale bunu **'te'sîr ile eserin ezelde vâki olması arasında fark (irâde)'** ile cevaplamalı; cevap c4 devamında aranacak.
 - Doğan sual: —
+
+## c4 p73
+- OCR: orta
+- Okuma: tam
+- İçerik: (6. cevaba itirazın devamı; kıdem tarafı): **2. vecih**: 'sözünüz doğru olsa **hâdisin müessirsiz hâdis olması ve mümkinin müreccihsiz tercihi** lâzım gelir: 'bu hâdisin bu vakitte hâdis olması diğer vakitlerden evlâ değil' ⇒ ihtisası müreccihledir; 'başka vakitte hâdis olsaydı **soru yine dönerdi**' ⇒ **soru her takdirde döner** ⇒ müreccih talebi bâtıl, 'müreccihsiz caiz' denmeli; bu bâtıl olduğu gibi sizin söylediğiniz de bâtıl.' **3. vecih**: 'bu talebin her takdirde dönmesini kabul etmeniz **talebin sıhhatine en güçlü delil**: 'muayyen vakit ihtisası (öncesi-sonrası mümkinken) müreccih ister' önermesi **hiçbir nakızla bozulmadı**, nakızdan salim, **bu yüzden sahih**; her takdirde dönmesi **sıhhatini gerektirir, fesâdını değil**.'
+- Netice/hüküm: **Kıdem tarafı: 'soru her takdirde döner' cevabı sorunun sıhhatini teyit eder, fesadını göstermez.**
+- Delil çeşidi: **çevirme (tu quoque) + tümevarım-ikna'î**; (T) cedelî. **[Delil ≠ dava: 'her takdirde dönen bir soru' 'sıhhat delili' olabilir, fakat aynı şekilde 'geçersiz soru tipi' de olabilir; iki okuma da ayrıca ispat ister.]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §8**: hudûs tarafının **6. cevabı ('soru her takdirde döner ⇒ bâtıl')** Risale'de **kullanılmaz** (kıdem tarafı çevirmesi güçlü); **F 27-B**: bu cevabın ayırt gücü **sıfır (iki yönü de destekler)**.
+- Doğan sual: —
+
+## c4 p74
+- OCR: orta
+- Okuma: tam
+- İçerik: **7. cevaba (zaman hâdis, önünde vakit yok) itiraz, 3 vecih**: **(1)** 'her hâdisin ademi vücûdundan öncedir' **darûrîdir**; 'ilk hâdis' farz ettiğiniz şeyden önce kabliyet olmasaydı **fıtrat 'her şeyin ademi vücûdundan önce' diye hükmetmezdi.' **(2)** 'âlemin ilâhı **âlemle mukârin mi, ondan sâbık mı**? Mukârin olursa **âlemin kıdemi veya ilâhın hudûsu (ikisi de muhâl)**; sâbık ise iki kısım: ilâh, hâdisler mevcut farz edilse **mütenâhî** olurdu (**ilâhın hudûsu**) ya da **gayr-i mütenâhî**; birincisi ilâhın hudûsunu gerektirir; kalan: **ilâh, farz edilen sonsuz hâdisler mevcut olsaydı gayr-i mütenâhî olacak kabliyetle âlemden mukaddem**; **'kabliyetten murâdımız budur'**. **(3)** 'sabit yıldızlar feleği hudûstan bugüne **bir milyon devir** yapmış farz edelim: **feleğin böyle hâdis olması mümkin miydi**? **Mümteni' ise** 'âlem mümteni'ken mümkin oldu' meselesi geri gelir (muhâl); **mümkinse** 'kabliyet-ba'diyet'ten murâdımız budur, bu lafızla ifade edilsin veya edilmesin.'
+- Netice/hüküm: **Kıdem tarafı 7. cevaba: 'kabliyet zamansız olsa da farazî sonsuz hâdisler kabliyeti' kaçınılmaz.**
+- Delil çeşidi: **reductio (ilâh mukârin/sâbık) + düşünce deneyi (milyon devir)**; (T) burhânî biçim (kıdem tarafı).
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §6.3**: 'farazî hâdisler sonsuz ⇒ ilâhın kabliyeti' argümanı **hudûs delilinin 'zamansız kabliyet'** cevabına karşı **en ciddi itiraz**; Risale bu itirazı açıkça kaydetmeli (c4 p14–18 ile birlikte). 
+- Doğan sual: —
+
+## c4 p75
+- OCR: orta
+- Okuma: tam
+- İçerik: (milyon-devir deneyi sonu): 'bu **mümkinse** 'kabliyet ve ba'diyet'ten murâdımız budur.' **8. cevaba (kâdir müreccihsiz tercih eder) itiraz**: '**kâdir**, fiil ve terke (onun yerine) temekkün eden; bu **kâdiriyetin iki tarafa nisbeti eşit**; bu miktar **fiilin belirli olarak sudûru için yeterli mi**? **Yeterliyse müreccihsiz rüçhân (muhâl)**; ayrıca **kendimizde darûrî bir vicdan buluruz: bu miktar iki taraftan birinin vukûu için yetmez; kasd, meyil, tercih sebebiyle bir taraf râcih olmadıkça rüçhân hâsıl olmaz**; ayrıca bu takdirde fiilin vukûu **bütün sebeplerden ârî mahz ittifâk** olur. **Yetmiyorsa** başka bir şey inzimâm eder ⇒ cevap **tamamen düşer**.' **'Kâdir iki makdûrundan birini müreccihsiz tercih eder'** sözündeki '**tercih eder**' mefhûmu kâdir olmaktan **zâid mi**? **Zâidse** rüçhân salt kâdiriyetten hâsıl olmadı, bu zâid mefhûmun inzimâmıyla oldu (p76).
+- Netice/hüküm: 8. cevaba itiraz: **'kâdir müreccihsiz tercih eder' sözünde 'tercih' kâdiriyetten zâid ise 'müreccihsiz' dememiz çelişir.**
+- Delil çeşidi: **analitik (mefhûm zâidliği) + darûrî vicdan**; (T) burhânî biçim (kıdem tarafı).
+- Mevzuya bağı: **KRİTİK — Fasıl I §8**: 'irâde tahsis eder' cümlesinin **çelişkiden kurtulması için 'tahsis = kâdiriyetten zâid bir mefhum (irâde/kasd)' olduğu açıkça yazılmalı**; Risale bu cümleyi **'irâde ayrı bir sıfattır ve kâdiriyeti tercih ettirir' biçiminde** kurmalı (c3 Bâb 4 ile bağ).
+- Doğan sual: —
+
+## c4 p76
+- OCR: orta
+- Okuma: tam
+- İçerik: (8. cevaba itiraz devam): **zâidse** 'müreccihsiz rüçhân' sözü **nefy ve isbâtı cem'** (çelişik): 'kâdir tercih eder' kâdiriyetten zâid isbât, 'müreccihsiz' zâid nefy. **Zâid değilse**: nisbeti eşit kâdir ve irâdesi eşit mürid, **bu istivâ üzere baki iken fiil vücûda girer, kâdir onu ne tahsis ne îkâ' ettiği hâlde** — **aklın bedîhesi reddeder**; bu 'fiil **fâilin îkâ'ı olmadan, mahz ittifâk yoluyla vâki oldu'** demektir. **Verilen misaller mahz telbîs**: iki kadehten birini seçen, elini birine uzatıp **kasdla** onu tahsis etti; nitekim 'birini kasdla seçmeyen'; **doğru misal**: kişi iki kadeh arasında tereddütte kalsın, **hiçbirini kasd etmesin, elini uzatmasın; kadehlerden biri kendiliğinden yükselip boğazına dökülsün** — **bu, 'müreccihsiz rüçhân'ın doğru misali**; verdiğiniz misaller değil.
+- Netice/hüküm: Kıdem tarafı: 'iki kadeh' misalleri kâdirin tahsisini gösterir, müreccihsiz rüçhânı değil.
+- Delil çeşidi: **misal tashihi (misalin yeniden kurulması)**; (T) burhânî biçim/cedelî. **[Kendi tenkidim: misalin tashihi güçlü; 'seçme = tahsis = irâde/kasd' okuması Râzî'nin kendi c3 çerçevesi (dâî ⇒ fiil) ile uyumlu.]**
+- Mevzuya bağı: **Fasıl I §8**: hudûs tarafının 'iki kadeh/iki ekmek' misalleri (c4 p49–50) **Risale'de 'tahsis = kasd' olarak yeniden kurulmalı**, **'müreccihsiz rüçhân' delili olarak kullanılamaz**; c3 p137 (muhtârın müreccihsiz tercihi) ile bağ.
+- Doğan sual: —
+
+## c4 p77
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kalan iki soru**: **1.** 'elini uzattı, kasdı ona yöneltti; bu kasd neden öteki kasd değil?' **Cevap (kıdem tarafı)**: 'irâde ve kasdlar **teselsülle** birbirine isnad edilmez; **zarûrî bir irâde/kasda intihâ eder**; o, **âlem-i a'lâdan belirli sebepler ve hususî isti'dâtlarla** hâsıl olur; halkın ona kayfiyet yönünden vukûfu yok.' **2.** 'kâdir müreccih inzimâm etmedikçe sudûr edemezse **kâdir ile mûcib arasında fark kalmaz**; oysa fark bedîhîdir.' **Cevap**: 'dâî ve sârifler bâbında zikrettik: **mûcib ile muhtâr arasındaki fark iki vecihten**: (1) **mûcib eserlerin sudûruna şuur sahibi değil, muhtâr eserlere şuur sahibidir**; (2) **bizden biri, kudret ve irâde iki tarafa eşit hâldeyken** fiilin sudûru **mümteni'**, bunun ilmi **darûrî**; **kuvvetli dâî ve cezmî irâde inzimâm edince kudret + cezmî dâî mecmûu fiili mûcib olur**' (p78'e taşıyor).
+- Netice/hüküm: **Kıdem tarafının kâdir/mûcib farkı: şuur ve 'kudret+dâî mecmûu' — c3 Bâb 1–2 ile aynı çerçeve.**
+- Delil çeşidi: **kavramsal fark + terim iddiası**; (T) cedelî-analitik. **[Delil ≠ dava: 'irâdelerin zarûrî bir irâdeye intihâ etmesi, âlem-i a'lâdan belirli sebepler ve isti'dâtla hâsıl olması' Farabî-İbn Sînâ nazariyesinin (akl-ı faal) unsuru; Risale'ye alınmaz.]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §8, c3 Bâb 1–2**: bu, **Râzî'nin c3'te 'mûcib ile muhtâr arasında fark yok gibi görünür' dediği** yerin filozof cevabı: **şuur + dâî mecmûu**; c3 p60 ('muhtâr görünümlü mudtarr') ile **aynı hat**.
+- Doğan sual: —
+
+## c4 p78
+- OCR: orta
+- Okuma: tam
+- İçerik: (kâdir/mûcib farkı devam): '**kudret + cezmî dâî mecmûu fiili gerektirir** (cezmî dâî tek başına değil); ancak **cezmî dâî devam ve bekâ vâcib değil, hızlı tebeddül ve zevâl kabul eder**; **tabîat-ı mûcibe ise baki ve tebeddülsüz**.' Bu **iki vecih kâdir ile mûcib arasında makûl fark**; 'kâdir nisbeti iki tarafa eşit hâlde sudûr eder' diyorsanız **bedîhe reddeder**. **Sonuç**: 'ilk mebde' **her sudûra âlim** ⇒ **kâdir, mûcib değil**; **'irâdesi bir hâlden başka hâle tebeddül etti' demek muhâl** (başka irâdeye muhtaç, aynı soru); **irâdesi dâim, mutlak, hâdis şarta mevkuf değil** ⇒ **îcâd ve ibdâ'da dâimen müessir**. **9. cevaba (kudretini izhâr) itiraz**: 'bu dâî ezelde hâsıl mı hâsıl değil mi? **Ezelde hâsılsa** ya hâdis şarta mevkuf ya değil; mevkufsa şartın hudûsunda soru döner…'
+- Netice/hüküm: **Kıdem tarafı: Allah kâdirdir (mûcib değil) ama irâdesi dâim ⇒ te'sîri dâim ⇒ âlem kadîm.**
+- Delil çeşidi: **taksîm + analitik**; (T) burhânî biçim (kıdem tarafı). **[Delil ≠ dava: 'cezmî dâî tebeddül kabul eder' (insan için) ile 'Allah'ın irâdesi tebeddül etmez' arasındaki geçiş ispatsız; Allah'ın irâdesinin ezelîliği ile eserin ezelîliği arasındaki bağ 'irâdeyle tahsis' cevabını görmezden geliyor.]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §8**: filozof **'kâdir ama te'sîri dâim'** diyor: **Fasıl I'in 'kâdir-muhtâr ⇒ hudûs' zincirinin en önemli karşı çıkışı**; Risale **'irâde ezelî, mürâd hâdis' ayrımını** açıkça yazmalı (Eş'arî klasik cevap; Râzî'nin c4 devamında bu ayrım aranacak).
+- Doğan sual: —
+
+## c4 p79
+- OCR: orta
+- Okuma: tam
+- İçerik: (9. cevaba itiraz devam): 'dâî ezelde hâsıl ve hâdis şarta mevkuf değilse **mâni ezelde var mı yok mu**? **Varsa** mâni' zâil olmalı, fiil **hep imkânsız**; **yoksa** 'tekvîne dâî ezelde mevcut, hâdis şarta mevkuf değil, mâni' de yok' ⇒ **fiil ezelde**. ⇒ **9. cevap zayıf ve düşer.** **Cevaplar üzerine söz bitti.** **Mu'ârazalara (hudûs tarafının nakizlerine) cevap, kulliyen**: 'bu nakizleri 'mümkin bir tarafı müreccihsiz râcih olmaz' önermesine yönelttiniz: **bu mukaddimenin sıhhatini kabul ediyor musunuz, inkâr mı**? **Kabul ederseniz nakızlar zâil olur (hepsi bu mukaddimeye vârid)**; **inkâr ederseniz mümkinâtın imkânı ve hâdislerin hudûsundan mevcut vâcibü'l-vücûda istidlâl imkânsız olur; bu son derece fâsit ve bâtıl.**'
+- Netice/hüküm: **Kıdem tarafı: hudûs tarafının mu'ârazaları ancak 'müreccihsiz rüçhân' ilkesini inkâr ile mümkün, bu da sâni' ispatını kapatır.**
+- Delil çeşidi: **dilemma (kabul/inkâr)**; (T) burhânî biçim (kıdem tarafı). **F 27-B: kıdem tarafının dilemması ayırt ediyor (müreccihsiz rüçhân ilkesi hem hudûs hem kıdem tarafı için ortak zemin).**
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §8**: 'müreccihsiz rüçhân muhâl' ilkesi **Fasıl I'in hem hudûs (mümkin ⇒ müessir) hem irâde-tahsis (müreccih = irâde) delillerinin ortak temeli**; **Risale bu ilkeyi açıkça yazmalı ve 'irâde tahsis eder' ile uyumunu göstermeli** (irâde = müreccih).
+- Doğan sual: —
+
+## c4 p80
+- OCR: orta
+- Okuma: tam
+- İçerik: **Tafsilî cevap: 1. nakız (feleğin yüzeyindeki noktalar mâhiyette müsâvî; iki noktanın kutup olması müreccihsiz)**: '**hareket belirli vecihle vâki olduğunda iki noktanın kutup olması zorunlu**; aklen imkânsız ki hareket bu vecihle vâki olsun da bu iki nokta kutup olmasın.' 'Öyleyse hareket **neden bu belirli vecihle** vâki oldu, diğer muhtemel vecihlerle değil?' **= 2. nakız**; cevabında **birkaç makam**: **1. makam**: 'âlemin **hâdis olduğu vakitte** hudûsunu ve **ondan önce de hudûsunun mümkin** olduğunu delillendirdik (o vakitten önce mümteni' olsa mümkine inkılâp muhâl); vakit **öncesi ve sonrası aynı imkânla** ⇒ belirli vakte ihtisası **müreccihsiz rüçhân (muhâl)**'; nakız yalnız 'bu belirli feleğin cirmi bu belirli hareketle ve zıt hareketlerle kabil' **burhân kurarsanız** vârid olur (devam).
+- Netice/hüküm: Kıdem tarafının hudûs tarafına karşı nakız cevapları başladı (1. nakız: kutup; 2. nakız: hareket vechi).
+- Delil çeşidi: **cevap (hareket vechi ⇒ kutup) + delil borcunu ters çevirme**; (T) cedelî.
+- Mevzuya bağı: **Fasıl I §8**: p81+'da devam.
+- Doğan sual: —
