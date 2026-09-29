@@ -3529,3 +3529,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **betimleyici (filozof sistemi)**; (T) betimleyici.
 - Mevzuya bağı: **KRİTİK — Fasıl I §8 ve tevhîd-i efâl**: **'akıllar/felekler illet' sudûr öğretisi tevhîd-i efâl ile çatışır**; Risale ana metni **'yaratan yalnız Allah'** cümlesini yazar; sudûr sistemi **ders katmanında 'reddedilen görüş' olarak kısa notla**.
 - Doğan sual: —
+
+## c4 p393
+- OCR: orta
+- Okuma: tam
+- İçerik: **Râzî**: 'ilk ma'lûlde imkân, vücûd ve vücûb bi'l-gayr var; üç şey üç ma'lûlün illeti' sözüne cevap verdik ve **çok vecihle imkân ve vücûdun bu mevcûdâta illet yapılamayacağını** gösterdik; buraya ulaşan bu vecihleri tefekkür etsin ki bu makâlenin zayıflığı görünsün. **Ek suâller (Râzî'den filozofa)**: **Soru 1**: '**'İmkânı zâtından, vücûdu illetinden' sözü zâtın vücûddan gayr olduğunu bildirir; bu zât ya fâile muhtaç ya müstağnî; müstağnî ⇒ zâtı gereği vâcib (muhâl); muhtaçsa fâil mebde'-i evveldir ⇒ mebde'-i evvel hem mâhiyetin hem vücûdun illeti ⇒ iki şey sâdır ⇒ kelâmınızın aslı bâtıl.**' **Soru 2**: '**imkân adem-i mahz mı mevcut sıfat mı? Adem ise felek-i aksâya illet olamaz (ma'dûm mevcuda illet değildir); mevcut ise mâhiyetin kendi imkânını gerektirmesi vücûdundan önce olur ⇒ vücûdundan önce bir şeyin sıfat kıyâmına illet olması muhâl.**' **Soru 3**: '**bu kadar kesretle yetiniyorsanız daha iyisiyle yetinin: Bârî bütün cinsî-nevî mâhiyetleri bilir; ilmi vasıtasıyla illet ⇒ doğrudan bütün mümkinâta illet, vâsıtasız — bu akla daha yakındır.**'
+- Netice/hüküm: **Râzî'nin hükmü: filozofun 'imkân+vücûd+vücûb' kesret çözümü 7 suâlle çürütülüyor (bu sayfada 1–3).**
+- Delil çeşidi: **nakz + taksîm**; (T) burhânî biçim (nakz).
+- Mevzuya bağı: **Fasıl I §8, §3**: Soru 1'in sonucu ('mebde'-i evvel hem mâhiyetin hem vücûdun illeti') **Râzî'nin kendi kabulüdür** (c4 p397 sonu açık yazılacak): Risale'de **'Allah hem vücûd hem mâhiyetin yaratıcısı'** cümlesinin kaynağı; **Soru 3'ün 'ilim yoluyla doğrudan illet' önerisi Sünnî ilim-irâde-kudret ilişkisiyle örtüşür.**
+- Doğan sual: —
+
+## c4 p394
+- OCR: orta
+- Okuma: tam
+- İçerik: **Soru 3 devam**: 'Bârî bütün mâhiyetleri bildiği için birine ilmiyle illet, öbürüne ilmiyle illet ⇒ bütün mümkinâta doğrudan illet, bu vâsıtalara ihtiyaç bırakmadan: **bu söz akla daha yakın ve salâha daha uygun**.' **Soru 4**: '**akl-ı evvelde üç cihet (imkân, vücûd, vücûb bi'l-gayr); oysa Felek-i aksâ üç şeyin toplamı değil: hayûlâ, cismî sûret, nev'î felekî sûret, cüz'iyâtı idrak edip cüz'î hareketlere mübâşir hayvânî nefs, küllîyâtı idrak eden nâtıka nefs (İbn Sînâ'nın 'el-İşârât'ında her feleğin iki nefsi vardır) ve akl-ı sânî ⇒ altı şey ⇒ altıyı üç cihete isnâd 'vâhid'den birden çok'; ayrıca felek cevheri on makûlden (araz) hâlî olmaz: mikdâr, şekil, vaz' … her makûleden bir nev' veya nev'ler; bunları üç cihete dağıtınca vâhid'den birden çok.**' (p395)
+- Netice/hüküm: **Râzî: felek-i aksânın çok bileşeni üç cihete indirgenemez.**
+- Delil çeşidi: **nakz (sayım)**; (T) burhânî biçim (nakz).
+- Mevzuya bağı: **Fasıl I §8**: sudûr sistemi iç çelişkisi; ana metne girmez.
+- Doğan sual: —
+
+## c4 p395
+- OCR: orta
+- Okuma: tam
+- İçerik: **Soru 4 sonu**: '**felek cevheri vehmî bölünmeyi kabul eder; cevher-i ferd bahsinde gösterdik ki mikdârî vehmî bölünmeyi kabul eden şeyin zâtı cüzlerden mürekkeb (Allah'ın bildiği kadar cüz) ⇒ tek cihete nasıl isnâd?** ... **'Ehl-i ahkâm (müneccimler) burçların tabiatı ışık ve renk farkına göre farklı ⇒ lâzımlar farklı ⇒ tek cihete isnâd vâhid'den çok gerektirir.**' **Soru 5**: '**sâbitler feleğinde çok kevkeb; tabiat, renk, mikdârda birbirinden farklı ⇒ İbn Sînâ: sâbitlerin tek küre olduğu bana zâhir olmadı, çok küre olabilir, her birinin akıl ve nefsi ayrı** ⇒ itiraz düşer; **ama her küredeki kevkeb cirmi felek cirminden ayrı ⇒ ilzâm yine kâim.**' **Soru 6**: '**Akl-ı fe'âl ay-altı âleme mudebbir; her sûret ve arazın illeti** dediniz; oysa onda yalnız üç cihet…' (p396).
+- Netice/hüküm: **Râzî'nin nakızları 4–5: felek bölünürlüğü ve sâbitlerin çokluğu.** (Astrolojik 'burçların tabiatı' filozof/müneccim kaynaklı; Risale'ye girmez.)
+- Delil çeşidi: **nakz (bölünme ve çokluk)**; (T) burhânî biçim (nakz).
+- Mevzuya bağı: **Fasıl I §8**: iç çelişki tartışması; ana metne girmez.
+- Doğan sual: —
+
+## c4 p396
+- OCR: orta
+- Okuma: tam
+- İçerik: **Soru 6 devam**: 'Akl-ı fe'âl bu âlemde hâdis olan her sûret ve arazın illeti; **filozof cevabı: akl-ı fe'âl vücûdun mebde'idir, vücûd tek mânâ, kesret kâbillerle**; **Râzî**: 'bunu caiz kıldınız ise **vâcib bi'z-zât için de caiz olsun: vâcibden sâdır yalnız vücûddur, tek şeydir; kesret kâbil mâhiyetlerden ⇒ bu söz akl-ı fe'âl için makbulse vâcib için evlâ.**' **Soru 7**: '**üç cihet akl-ı evvelde akıl, nefs, felek gerektirdiyse aynı üç cihet akl-ı fe'âlde de var; niçin o üç cihetten aynı üç ma'lûl sâdır olmaz — sonsuza dek?**' **Filozof cevabı**: 'akılların mâhiyetleri farklı; bir akıldaki üç cihet bu üç ma'lûlün illeti olması hepsindeki için gerekmez.' **Râzî**: '**bu güzel söz; fakat bu takdirde akılların sayısı bilinemez; ilk akıldaki üç cihete rağmen ondan yalnız bir akıl sâdır olması, ikinciden bir akıl … bin bin mertebeye kadar, sonra üç cihetin felek-nefs-akıl'a illet olduğu bir akıl; (p397).**'
+- Netice/hüküm: **Râzî: 'vücûd tek, kesret kâbillerden' cevabını filozof akl-ı fe'âl için kabul ediyorsa vâcib için de kabul etmeli; 'akıl sayısı on' iddiası ispatsız kalır.**
+- Delil çeşidi: **nakz (kendi ölçüsüyle) + ilzâm**; (T) cedelî-burhânî.
+- Mevzuya bağı: **KRİTİK — Fasıl I §8**: **Soru 6, Risale'nin 'muhtâr' ispatı için Râzî'nin kendi orta yolunu gösterir: 'vücûd tek, kesret kâbil mâhiyetlerden' — bu, Allah'ın vücûdun mebde'i, mâhiyetlerin farklı oluşuna mahal (Râzî sonunda 'mâhiyetin de müessiri Allah' der).**
+- Doğan sual: —
+
+## c4 p397
+- OCR: orta
+- Okuma: tam
+- İçerik: **Soru 7 sonu**: 'bu takdirde 'on akıl' veya 'elli akıl' iddiası **fâsit**.' '**Bu suâllerin hepsi imkân-vücûd-vücûb bi'l-gayr hakkında.**' **Filozofun ikinci sözü ('dört ilim dört mevcûdun mebdeleri') cevabı**: 'bu ilim imkânın ve vücûdun aynıysa imkân-vücûd üzerine yönelttiklerimiz bu ilme de yönelir; gayrıysa bu çok idrakin (ta'akkulün) illeti nedir bahsi tekrar.' **Râzî'nin hükmü (Râzî-sesli)**: '**filozofların vücûd tertibi hakkındaki sözü gâyet zayıf ve karmakarışıktır.**' **Tahkîk**: '**bu kelimelerin aslı 'vâhid'den ancak vâhid sâdır olur' sözüdür; bu aslın delillerinin zayıflığını gösterdik; bu asla lâzım gelen işkâllerin (yukarıdaki suâller) kurtuluşu yoktur.**' **Râzî'nin önerisi (mûcib diyenlere)**: '**mûcib diyenlerin yapması gereken şu: Allah bütün mümkinâtın vücûdunun mebde'idir: cinsleri, nev'leri ve şahıslarıyla; ilâhî kitapta geldiği gibi: 'Göklerde ve yerde kim varsa mutlaka Rahmân'a kul olarak gelir' (Meryem 19/93); Allah vücûdda müessir olduğu gibi mâhiyette de müessirdir (kâhir delillerle gösterdik: müessir vücûdda müessir olduğu gibi mâhiyetlerde de müessirdir).**' '**Mûcib diyenlerin kavillerinin tafsîlâtı burada bitti.**'
+- Netice/hüküm: **Râzî'nin hükmü: (a) filozof sudûr sistemi 'zayıf ve karmakarışık'; (b) aslî kaide ('vâhid'den vâhid') delilsiz; (c) mûcib bile olsa Allah'tan doğrudan bütün mümkinâtın (mâhiyet dahil) sudûru gerekir — ve bu, Kur'ân'ın 'herkes O'na kul' beyanıyla örtüşür.**
+- Delil çeşidi: **hüküm + ilzâm**; (T) burhânî biçim + hitâbî (âyet).
+- Mevzuya bağı: **KRİTİK — Fasıl I §8, tevhîd-i efâl**: **Râzî'nin 'mâhiyette de müessir Allah' hükmü (⊬ hangi bâbda delilleri: 'kâhir delillerle gösterdik') Risale'de 'Allah vücûd ve mâhiyetin yaratıcısı' iddiasının kaynağı**; **filozof sudûr sistemi 'reddedilen görüş' olarak kısa notta; ana metne alınmaz.**
+- Doğan sual: **'Müessir mâhiyette de müessirdir' delilleri hangi cilt/sayfada?** (⊬ Cilt 5–9'da okuyarak aranacak; c1 M3 'mâhiyet-vücûd' ile birlikte.)
+
+## c4 p398
+- OCR: —
+- Okuma: okunmadı (boş)
+- İçerik: metin yok.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c4 p399
+- OCR: orta
+- Okuma: tam
+- İçerik: **6. Fasıl başlığı**: '**âlemin iki ilâhı vardır: biri hayır biri şer diyenlere reddiye**.' **Aktarım (Râzî başkalarının görüşünü aktarıyor, kabul etmiyor)**: 'bazıları: **Allah ve İblis kardeşlerdir; Allah rahîm-kerîm-muhsin ilâh, İblis şerîr-habîs-kâsî ilâh**; bu kavil sahipleri ihtilâf etti: bir kısmı **ikisi de kadîm, ezelî, vâcibü'l-vücûd, ikisi cisim ve cismânî değil**; bir kısmı **şerîr ilâh, kerîm-rahîm ilâhın hâtırasından geçen bir fikirden doğdu**; bir kısmı **âlemin ilâhı nûr ve zulmettir: nûr rahîm ilâh ve melekler, zulmet İblis ve şeytanlar**; bu kavillerde sayılamayacak kesret.' **Râzî**: 'tevhîd ilâhının delillerini zikrettik; şimdi söyleyeceğimiz: **hayırlı-rahîm ilâh şerîr ilâhı def'e kâdir değilse şerre razı olmuş olur; şerre razı olan şerîrdir ⇒ hayır ilâh şerîr (hulf)**'; (p400).
+- Netice/hüküm: **Seneviyye/Mâniheist ikilik reddiyesi başladı (Râzî'nin kendi delili: hayır ilâh ya def'e kâdir değil ya razı).**
+- Delil çeşidi: **taksîm (dilemma)**; (T) burhânî biçim.
+- Mevzuya bağı: **Fasıl I §6.2, §8.3 (teodise)**: **c2 K2 F3 'Seneviyye' delilleriyle çakışır**; ikilik görüşünün 'Allah-İblis kardeş' biçimi **Râzî'nin rivâyetidir, Risale'de anılmaz** (küfür nakli; gereksiz).
+- Doğan sual: —
+
+## c4 p400
+- OCR: orta
+- Okuma: kısmî (sayfa OCR'de erken kesiliyor: yalnız ilk paragraf okundu)
+- İçerik: **Reddiye devam**: 'hayır ilâh şerîr ilâhı **def'e kâdir değilse** şerre razı olmuş olur; şerre razı olan şerîrdir ⇒ hayır ilâh şerîr (hulf). **Def' etti ise** şerîr ilâh **şerri yapmaktan men edilmiş, âciz**; âciz ilâhlığa yaraşmaz. **Ayrıca: 'şer yalnız o şerîrden sâdır olur' dersek ve hayır ilâh onu bir defada o şerden men etseydi, âlemde hiçbir şer ve âfet kalmazdı; oysa (âfetler var) bâtıl.**'
+- Netice/hüküm: **Râzî'nin kendi delili: iki ilâh dilemması (kudret/rıza) ⇒ ilâhlık için kudret şart, şer ilâh âciz ise ilâh olamaz.** Sayfanın kalanı okunamadı; netice çıkarılmadı.
+- Delil çeşidi: **dilemma**; (T) burhânî biçim, öncül: 'ilâh kâdir olmalı; şerre rızâ şerîrliktir'.
+- Mevzuya bağı: **Fasıl I §6.2, §8.3**: bu delil c2 p145–149'daki 'seneviyye çözümünün çıkmazı' ile **aynı aile**; Risale **tevhîd bâbında** kullanır, **teodise bâbına 'şer ilâhı yok, şer mahlûk ve imtihandır' cevabını ayrıca yazmak zorunda (⊬ açık borç: kazâ-kader bâbı).**
+- Doğan sual: —
