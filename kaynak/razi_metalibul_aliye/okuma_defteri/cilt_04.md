@@ -1585,3 +1585,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **misal + bedîhî iddiası + 'ya hep ya hiç'**; (T) ikna'î-burhânî biçim (kıdem tarafı). **[Delil ≠ dava: 'hâdis fâile iftikâr eder' ile 'hâdis maddeye iftikâr eder' arasında akıl ayrımı yapılabilir: fâile iftikâr mantıkî zorunluluk (illiyet), maddeye iftikâr gözlem genellemesi; bu ayrım (imkân-i mantıkî vs tecrübî) hudûs tarafının cevabıdır.]**
 - Mevzuya bağı: **KRİTİK — Fasıl I §3**: Risale **'mantıkî zorunluluk (hâdis ⇒ müessir) ile tecrübî genelleme (hâdis ⇒ madde) arasındaki ayrımı'** açıkça yazmalı; kıdem tarafı bu ayrımı **'ya hep ya hiç'** ile çiğniyor.
 - Doğan sual: —
+
+## c4 p177
+- OCR: orta
+- Okuma: tam
+- İçerik: (3. hüccet devam; kıdem tarafı): 'sarîh akıl hükmü **kabul edilirse her şeyde**, edilmezse hiçbirinde; **bazısında kabul, bazısında ret çelişkidir**.' **1. mukaddimenin 3. vechi**: '**mahz ademden ve sırf nefyden yaratma mümkin olsaydı bu yaratma türü, madde değişimiyle yaratmadan daha ekmel ve efdal olurdu**; efdali terk **hakîm-alîme yakışmaz**; Allah cisimlerin tamamını maddesiz yaratsaydı, gözlediğimiz bu şeylerin tekvîni **bu vecihle** olmalıydı; **hiç vâki olmadığına göre mahz ademden tekvîn muhâl.**' **Ek**: '**saray veya ev yapmak isteyen tuğla, kütük, çivi hazırlamakla uğraşmaz, sarayı bir anda îcâd edebilseydi**; mahz ademden hiçbir şeyin tekvînini **görmediğimize göre bu nefsinde muhâl-mümteni'**.' ⇒ **her muhdes sâbık maddeye muhtaç.** **2. mukaddime**: '**madde kadîm olmalı**; hâdis olsa başka maddeye ⇒ teselsül.' **3. mukaddime**: '**bu madde cisimden başkası değildir**; sûret ve arazın hâmili **cisim**; cisim **nefsiyle kâim ya mahalli var**; mahalli varsa mahal hayyize ihtisaslıysa **mahal cisim (muhâl)**; hayyize ihtisaslı değilse **hayyize ihtisaslı cismin hayyizsiz mevcutta hulûlü mümteni' (bedîhî)**.'
+- Netice/hüküm: **Kıdem tarafı 3. hüccet: 'her hâdis sâbık maddeden (bedîhî) ⇒ madde kadîm ⇒ madde cisim'; 'yoktan yaratma efdal olurdu' ekleri.**
+- Delil çeşidi: **bedîhî iddiası + reductio (efdal; saray misali)**; (T) ikna'î-burhânî biçim (kıdem tarafı). **[Delil ≠ dava: 'yoktan yaratma efdal olurdu' vâcib-i aslah öncülü (c3 p334–335 ile çelişir); 'gözlemlemediğimiz ⇒ muhâl' çıkarımı gözlem-imkân karışımı.]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §6.3**: 'yoktan yaratma muhâl' iddiasının en açık ifadesi; Risale **yoktan yaratmayı nassla (halk, 'ol') kesin, aklî imkânı 'gözlem imkân delili değil' ilkesiyle** yazacak; Râzî'nin cevabı (hudûs tarafının 8 itirazı p178–184).
+- Doğan sual: —
+
+## c4 p178
+- OCR: orta
+- Okuma: tam
+- İçerik: **Hudûs tarafının itirazları (1. suâl, 4 vecih)**: **(1)** '**şeyden şeyin hudûsu muhâl**: ilk şey baki ise ikincisi ondan hâdis olmadı; baki değilse ikincisi **ademden hâdis oldu**; ⇒ şeyden şeyin hudûsu muhâl.' **(2)** '**hareket sükûndan sonra**: bu hareket önceki harekete veya önceki sükûna isnad edilemez (hareket sükûna zıt, şey zıddından olmaz) ⇒ **mahz ademden**.' **(3)** 'mahz ademden hudûs uzak görüldüğü gibi **mütehayyiz olmayan bir şeyden cismin hudûsu da uzak** (sizce cevher-i mücerred yok/…)'. **(4)** '**bu madde tagayyürât mahalli; bu mahal hâdis** (ileride beyân); **hâdis maddeye iftikâr ederse teselsül** ⇒ bu 4 vecihle **'hâdis yalnız sâbık maddeden' sözünün fesâdı**.'
+- Netice/hüküm: **Hudûs tarafı 1. suâl: 4 vecihle 'her hâdis sâbık maddeden' bâtıl.**
+- Delil çeşidi: **reductio (şeyden şey imkânsız; hareket-sükûn)**; (T) burhânî biçim (hudûs tarafı).
+- Mevzuya bağı: **Fasıl I §3**: bu 4 vecih Risale'nin **'hâdis yoktan' cümlesinin aklî savunması**; kıdem tarafı cevapları p180–181'de.
+- Doğan sual: —
+
+## c4 p179
+- OCR: orta
+- Okuma: tam
+- İçerik: **2. suâl (hudûs tarafı)**: '**hâdisin sâbık maddeden hâdisi ma'kûl olsa bile bu mukaddime zarûrî mi nazarî mi**? **Zarûrî olamaz**: cisimlerin hudûsuna kâil **bütün Müslümanlar** onların **mahz ademden hâdis** olduğunda ittifak etti; iftikâr zarûrî olsaydı akıllar ihtilaf etmezdi; ayrıca **siz bedâhet dâvâ ederseniz hasımlarınız da eder**; **delil ise getirmediniz.**' **Üç vechine cevap**: **(1)** 'bu şahsın belki şimdi bu vecihle hâdis olduğundan **şüphe eden deliliğe mahkûm**; bu ancak **'vâki olmadı' hükmünde kat'î olduğumuzu** gösterir; **'vukû ≠ vukû cevazı'**; **imtinâ'da kat'iyet iddiası keyfî**.' **(2)** '**binanın bânîye iftikârı ile maddeye-müddete iftikârı aynı hükümde değil**: **cumhûr-i mütekellimîn binanın bânîye iftikârında kat'î, maddeye ve müddete iftikârında kat'î değil**.' **(3)** '**Allah fâil-i muhtâr, dilediğini dilediği gibi yapar**; **cisimleri ibtidâen maddesiz yaratmış, hayvan ve nebâtı sâbık maddelerden yaratmış olabilir**; 'mükellefler için daha uygun'' (p180).
+- Netice/hüküm: **Hudûs tarafı 2. suâl: 'bedâhet iddiası Müslümanların ittifakıyla çürüyor; vukû ≠ imtinâ'; Allah dilediğini yapar.'**
+- Delil çeşidi: **ittifak delili + kavramsal ayrım (vukû/cevaz)**; (T) cedelî.
+- Mevzuya bağı: **KRİTİK — Fasıl I §3**: **'bütün Müslümanların mahz ademden hâdis olduğunda ittifakı'** Risale için ana dayanak (⊬ ittifakın birincil kaynağı); Allah'ın muhtâr fâil olması ('dilediğini yapar') **Risale'de nass (⊬)**.
+- Doğan sual: —
+
+## c4 p180
+- OCR: orta
+- Okuma: tam
+- İçerik: (Cevap: kıdem tarafı 1. suâle): '**'şeyden şeyin hudûsu ma'kûl değil' itirazına**: bu mukaddimenin murâdı, **hâdisten önce bir zât olması, ondan hâdis olma isti'dâdının hâsıl olması**; bu zât **hâdis sıfatı taşımadan önce başka sıfatla vasıflı olsun olmasın**; **bu mânâ ma'kûl, aklın bedîhesi şahit**: **demirin sâbık vücûdu kılıç sûretini kabule isti'dâd**, **altının vücûdu bilezik sûretine**, **balçığın vücûdu testi sûretine**.' **Arazlarla nakız zayıf**: 'bu hüccet bedîhe hükmüne dayanır; kayfiyeti: 'bu ev toprak, tahta, taş olmaksızın **ibtidâen** hâdis oldu mu?' akıllılar **imtinâ'a kat'î, vukûunu uzak**; 'bu cisimler bir araya gelip **evin özel hey'eti** hâsıl olabilir mi?' **cevaza kat'î**; ⇒ **akılın bedîhesi iki sûret arasında fark eder** ⇒ soru düşer.' **Kıdem tarafının 2. suâle cevabı (p181)**.
+- Netice/hüküm: **Kıdem tarafı: 'hâdis sâbık isti'dâd sahibi zâttan' bedîhî; arazlar nakız değil (sûret/hey'et değişimi ≠ ibtidâî)**.
+- Delil çeşidi: **misal (kılıç-bilezik-testi) + bedîhî iddiası**; (T) ikna'î. **[Delil ≠ dava: sûretin maddeden hâdisi ile ilk yaratılışın maddeden hâdisi ayrı; 'ilk yaratılış' bedîhî değil, nassla bilinir.]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §3**: 'isti'dâd' bahsi = **Risale'de 'hâdis cismânî sûretlerin maddesi vardır, ilk yaratılış madde-önceliksizdir' ayrımı**; kıdem tarafı bu ayrımı **kaçırıyor**.
+- Doğan sual: —
+
+## c4 p181
+- OCR: orta
+- Okuma: tam
+- İçerik: (Kıdem tarafının cevapları devam): **3. itiraza (heyûlânın hacmi yok)**: '**bu ancak heyûlâ mücerret cevher, hacimsiz ve tehayyüzsüz diyene lâzım**; 'cisimlerin heyûlâsı **cüz-i lâ yetecezzâ** (kadîmlerin **hebâât** dediği)' diyene **soru düşer**: bu şato **her biri kendinde küçük cisimlerden** mürekkeb; **bir araya gelince büyük cisim hâsıl**.' **4. itiraza (heyûlâ hareket-sükûn-ictimâ'-iftirâktan ayrılmaz, bunlar hâdis)**: '**delâil-i hudûs bâbında cevap gelecek**.' **5. itiraza ('bedâhet iddiası nizâ mahallinde bâtıl')**: '**bedîhî ilimlerin varlığını ve bedîhî ilmin ancak sağlam akılların hükmettiği emirler olduğunu ispat ettik**; **bu yüksek şatonun sâbık taş, tahta, kerpiç olmadan şimdi hâdis olduğu sözü aklın reddettiği, sahibini deliliğe mahkûm ettiği** ⇒ bu mukaddime bedîhî-zarûrî.' **6. itiraza ('vukû'dan kat'îyiz ama cevazı hükmederiz')**: '**bu bâtıl**: şey câizü'l-vücûd ve câizü'l-adem ise vücûdunun da ademinin de farzı muhâl doğurmaz; (p182).
+- Netice/hüküm: **Kıdem tarafı: heyûlâ = cüz-i lâ yetecezzâ (hebâât) olursa hacim itirazı düşer; bedîhî ilim ispatı; 6. itiraz başlangıcı.**
+- Delil çeşidi: **cevaplar (cedelî)**; (T) cedelî.
+- Mevzuya bağı: **Fasıl I §3**: 'heyûlâ = cüz-i lâ yetecezzâ (hebâât)' **kelâmcı cevher-i ferd kabulünün kıdem tarafınca 'madde kadîm' savunusuna dönüşü**; Risale **'cevher-i ferd kabulü kadîm madde iddiasını gerektirmez'** ayrımını yazmalı.
+- Doğan sual: —
+
+## c4 p182
+- OCR: orta
+- Okuma: tam
+- İçerik: (6. itiraza cevap devam): '**aklın tek başına bu yerde 'iki taraftan biri, muhâl olmaksızın, vâki' diye cezmetmesi mümkin değil**; çünkü **aklın hükmü iki tarafın istivâsı**; **'iki taraftan birinin muhâl olmaksızın vukûu' hükmü rüçhânı cezmetmek**; **istivâ ile rüçhânın cem'i muhâl**; ⇒ akıl istivâyı kabul edince **rüçhân hükmü ancak munfasıl (mukaddime dışı) delille** olabilir: **sem'î delil**; o hâlde **sem'î delili bilmeyen rüçhânı bilemez**; oysa **mülhid ve muvahhid hepsi sâbık maddesiz kasrın hâsılının imtinâ'ında kat'î** ⇒ 'cevaz hükmü' savunması bâtıl.' **7. itiraza ('mütekellimîn binanın bânîye iftikârında kat'î, maddeye-müddete kat'î değil')**: '**bedîhîyyâtı nazariyâttan ayırmada mütekellimîn sözüne itibar yok**: **kuvvetli ilzamlarda muhâllere ve münkerlere iltizam adet edinmişlerdir**: **Cebriyye Mu'tezile'ye 'kâdir iki zıdda kâdirse rüçhân müreccihsiz olmaz ⇒ cebr' ilzam edince Mu'tezile bu ilzamdan korkarak 'mümkinin bir tarafı müreccihsiz râcih olur' dedi; oysa muhakkik akıllılar bu mukaddimenin bedîhî olduğunda ittifak**.' **'Bedîhîyyâtı nazariyyâttan ayırmada ölçü mütekellimîn değil, münâzara taassubunu, muhâlleri ve münkerleri iltizamı bırakan akıllılardır.'**
+- Netice/hüküm: **Kıdem tarafı: mütekellimin bedâhet ölçüsü güvenilmez (muhâl iltizam edenler); bedîhî ölçü: taassupsuz akıllılar.**
+- Delil çeşidi: **tarihsel-cedelî (kelâmcı iltizamlara işaret)**; (T) cedelî. **[Delil ≠ dava: 'kelâmcılar muhâl iltizam eder' bir eleştiridir, delil değil; ayrıca Cebriyye–Mu'tezile misali kul fiili tartışmasına işaret ediyor (c3 p333–355).]**
+- Mevzuya bağı: **Fasıl I §3, §8**: kıdem tarafı **'Mu'tezile müreccihsiz rüçhân' örneğini** kelâmcı muhâl iltizamı olarak sunuyor; **c3 p328'de Râzî'nin 'dâîsiz tercih muhâl' görüşü** bu eleştiriyle uyumlu (Râzî bu noktada kıdem tarafına yakın); Risale **'müreccihsiz tercih' yerine 'irade müreccih' ifadesini** seçmeli.
+- Doğan sual: —
+
+## c4 p183
+- OCR: orta
+- Okuma: tam
+- İçerik: (7. itiraza cevap devam): '**dünyanın bütün akılları yukarıdaki sıfatta iken 'bu yaşlı adam ana-babasız, çocukluk ve gençlik olmaksızın hâdis olabilir mi' diye sorulunca imtinâ'a kat'î**; 'bu ırmaklar bu çöle başka yerlerden akmaksızın, sular bu çölde ibtidâen hâdis olarak akıyor' diyenin sözü **bâtıl yalan veya delilik**; ⇒ **bu mukaddime bedîhîlerin en kuvvetlilerinden**. **Herkes bunu münâzara vaktinde değil, aklı sağlam iken bilir.**' **8. itiraza ('Allah fâil-i muhtâr, dilediğini yapar')**: '**'iki taraftan birine müreccih yok' demek bir tarafın vukûunun mahz ittifâk olması**; ittifâkî işler ya mümteni' ya vukûu mümkinse **dâim ve ekseri olmaz**…' **'daha uygun olduğu için' sözü zayıf**: 'hayvan, nebât ve madenlerin hudûsu adet cereyânında **maddelerin hâllerine, dört mevsime, kevâkibin hâllerinin değişimine mevkuf** olduğundan, bu hâdislerin **müessirinin tabîat mi fâil mi** olduğu şüphesi büyür; (p184).
+- Netice/hüküm: **Kıdem tarafı: 'sâbık maddesiz hâdis' inkârı aklı sağlam herkesin bedîhîsi; Allah dilediğini yapar cevabı ittifâkî hudûsa götürür.**
+- Delil çeşidi: **misal + 'ittifâk' itirazı**; (T) ikna'î-cedelî.
+- Mevzuya bağı: **KRİTİK — Fasıl I §8**: 'Allah dilediğini yapar' cevabına '**mahz ittifak**' ithamı: Risale **'irâde müreccihtir, ittifak değil' (c4 p76 tashih)** cevabını yazacak; kaynak c4 p183–184.
+- Doğan sual: —
+
+## c4 p184
+- OCR: orta
+- Okuma: tam
+- İçerik: (8. itiraza cevap sonu): 'hâdisler bu vasıtalar olmaksızın hâdis olsaydı akıl **tabîatın bunlarla alâkasının olmadığına, müessirin fâil-i muhtâr olduğuna** hükmederdi; ⇒ **bu yol mükellefler için daha uygun**' — '**ayrıca fiilleri kulların maslahatlarıyla ta'lîl etmeyi önceki fasıllarda iptal ettik. Allah en iyi bilendir.**'
+- Netice/hüküm: **Kıdem tarafı 3. hüccetin sonu: 8 itiraza cevap tamam; 'maslahat cevabı' c3 iptaline atıfla düşürülüyor.**
+- Delil çeşidi: **cedelî + atıf (c3)**; (T) cedelî.
+- Mevzuya bağı: **Fasıl I §8**: kıdem tarafı **'Allah'ın fiilini maslahatla ta'lîl bâtıl' hükmünü Râzî'nin c3'ünden iktibas ediyor**; bu, **aynı silahın iki tarafa döndüğünün sekizinci örneği (p67, 137, 144 vb.)**.
+- Doğan sual: —
