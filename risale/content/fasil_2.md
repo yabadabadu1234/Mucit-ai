@@ -697,10 +697,40 @@ Bu fasılda dayanılan kaynaklar aşağıdadır. Köşeli **[K#]** işaretleri m
 
 *Ekran görüntüsü: Yaratılış 50:2-3 — Yûsuf'un babasını mumyalatması. Bağlantı kırılırsa kanıt olarak bu görüntü kalır; kaynağın en mühim kısmı sarı ile işaretlidir.*
 
+### [K13] Râzî, el-Metâlibü'l-Âliye, cilt 8 — nübüvvetin ikinci yolu (tekmîl-i nâkısîn)
+
+- **Bağlantı:** <https://archive.org/details/MATfakhr> (erişim: 29 Eylül 2026); yerel: `kaynak/razi_metalibul_aliye/MAT08.pdf`, sayfa 103 (Sekkā neşri).
+- **Ne gösteriyor:** "İkinci kavl: Biz önce itikadlarda hakkın, amellerde doğrunun ne olduğunu biliriz; sonra halkı hak dine çağıran ve sözü halkı bâtıldan hakka çevirmede güçlü tesir eden bir insan görürsek, onun sâdık nebî ve uyulması vâcip biri olduğunu biliriz. Bu yol amele daha yakındır, şüpheleri daha azdır." Aşağıdaki iki dipnot, mucize yolunu ve editörün notunu gösterir.
+
+![Râzî, cilt 8, nübüvvetin ikinci yolu — sayfa görüntüsü](img/razi_c8_tekmil.png)
+
+*Sayfa görüntüsü (Sekkā neşri, Beyrut 1987; İnternet Arşivi nüshası). İlgili satırlar sarı ile işaretlidir.*
+
 ### Kur'ân ayetleri
 
 Kur'ân ayetlerinin metni kaynağın kendisidir ve her mushafta bulunur; kolaylık için bağlantılar: [44:29](https://quran.com/44/29); [17:88](https://quran.com/17/88); [11:13](https://quran.com/11/13); [10:38](https://quran.com/10/38); [2:23](https://quran.com/2/23); [52:34](https://quran.com/52/34); [29:48](https://quran.com/29/48); [16:103](https://quran.com/16/103); [25:4](https://quran.com/25/4); [4:82](https://quran.com/4/82); [42:51](https://quran.com/42/51); [30:2](https://quran.com/30/2); [10:92](https://quran.com/10/92); [41:9](https://quran.com/41/9).
 
+
+## 14. Râzî'nin Nübüvvet İçin İki Yolu ve İtiraz Kataloğu
+
+Fahreddin er-Râzî *el-Metâlibü'l-Âliye*'nin 8. cildinde (nübüvvet) iki ayrı yol açar [K13]:
+
+1. **Birinci yol — mucize:** mucize, Allah'ın tasdikidir. Râzî'nin burada verdiği **üç asıl**, bu fasıldaki Mucize(Rükün) bahsinin (§6) formel bir özetidir: (i) mucizeleri yaratan Allah'tır; (ii) Allah'ın mucize yaratmasında, tasdikten başka bir hikmet yoktur; (iii) Allah'a yalan **muhaldir** (yalan bir noksan sıfattır, fıtrat şahitlik eder). Üçü birlikte "mucize peygamberin doğruluğuna delildir" hükmünü **yakînî** kılar. Râzî bir örnek verir: Mûsâ'nın kavmi emirlere karşı direnince dağın başlarının üstünde durdurulması; itaate yöneldikçe dağın uzaklaşması, isyana dönerken yaklaşması, bu düzenin **kastını zaruri olarak** gösterir; "başka bir maksat olabilir" ihtimalinin **kalması**, kat'iyeti bozmaz. Bu, bu risalenin Fasıl I'de kullandığı ayrımı destekler: yakîn, **uzak bir ihtimalin lafzen kalmasıyla** çelişmez (Fasıl IV §2.4'te "âdî yakîn").
+2. **İkinci yol — tekmîl-i nâkısîn (noksanları kemâle erdirme gücü):** Râzî bu yolu mucizeden **ayırır** ve hem amele daha yakın, hem şüphesi daha az sayar. Kurulum şöyledir [K13]: (a) insanın kemâli, **hakkı zâtı için, hayrı amel için** bilmektir (nazarî ve amelî kuvvet kemâli); (b) insanlar üçe ayrılır: nâkıslar (halk), kâmil olup nâkısları tedavi edemeyenler (evliyâ), **kâmil olup nâkısları da kemâle erdirebilenler** (enbiyâ); (c) noksan ve kemâl dereceleri sınırsızdır; (d) noksanın yaygın olduğu bir âlemde, kâmil kişinin de bulunması gerekir (istikra: maden, bitki, hayvan basamakları; insanlar arasında da uç noktalar); (e) böyle biri, halkı bâtıldan hakka çevirmede **güçlü tesir** gösteriyorsa "sâdık nebî" olduğu bilinir. Râzî bu yolun, mucize yolundan **daha güçlü ve daha kâmil** olduğunu ayrıca savunur (8. cildin fihristindeki "Fasıl 5").
+
+**Bu risalenin değerlendirmesi:**
+
+| Yol | Derece | Gerekçe |
+| :-- | :-- | :-- |
+| Mucize yolu, Râzî'nin üç asılla kurduğu hâliyle | burhânî **koşullu**: (i) ve (iii) Fasıl I'den çıkar (Halk, Kudret; yalanın noksanlığı §3 ile aynı Fâil-i Muhtar bahsi); (ii) **cedelî** (Allah'ın hikmetinin yalnız tasdik olduğu) | Râzî'nin kendi "üç asıl"ının her biri ayrı derecede |
+| Tekmîl-i nâkısîn yolu | **cedelî** | Kilit öncül (d), **istikra ve kıyasa** dayanır: "alt uçta olan varsa üst uçta da olmalıdır" mantıkî zaruret değildir; (e) ise tarihî gözlemdir ve **ölçüsü ortak bir kemâl anlayışına** bağlıdır (Fasıl II §10.2). Aynı zamanda çok bağımsız *ikna'î* delilin toplamı olarak, Râzî'nin kendi ilkesine göre (Fasıl I §15.2) **destekleyici** bir delildir |
+| İki yolun birlikte tutması | cedelî-yüksek | İki yol **bağımsız** oldukları ölçüde (biri hârikuladelik, öbürü tesir/kemâl) birbirini güçlendirir; bağımsızlık kesin değildir |
+
+**Not (editör dipnotu):** Sekkā, bu bahsin sonundaki bir dipnotta Râzî'nin "her devirde bir kâmil, birkaç bin yılda bir en büyük peygamber" şeklindeki ifadesini, **Muhammed'in (s.a.v.) hâtemü'n-nebiyyîn oluşuyla çeliştiği** için reddeder; bu risale de bu ifadeyi **benimsemez**; yalnız Râzî'nin argüman yapısını (a-e) kaydeder.
+
+### 14.1 Râzî'nin İtiraz Kataloğu
+
+Râzî, mucize yoluna karşı ileri sürülen itirazları **büyük bir sistematiklikle** sıralar (8. cilt, 1. kısım, fasıllar; fihristten): nübüvvetin teklifi gerektirmesi ve teklifin reddi; **aklın (teklifi bilmede) kâfi olduğu** iddiası; **hark-ı âdetin imkânsızlığı**; mucizenin **Allah'ın fiili olduğunun bilinemeyeceği**; Allah'ın mucizeyi **tasdik için yarattığının bilinemeyeceği**; mucizeyi tasdik sayanlar için **tevatüre yöneltilen tenkit**; peygamberin **kendi peygamberliğini nasıl bildiği** (meleğin doğruluğunu şeytandan ayırmasının imkânı); peygamberlerden **sudûr eden ve nübüvvete leke sayılan fiiller**; nesih. Bu katalog, bu fasılın §6.3'teki Hume itirazı, §5'teki "akıl yeter mi" sualiyle ve Fasıl IV §10'daki itiraz tablosuyla **örtüşür**; Râzî'nin cevaplarının **içeriği bu çalışmada okunmadı** (yalnız başlıklar ve 13. fasılın birinci bölümü okundu), bu yüzden bu risaledeki cevaplar Râzî'ye **nispet edilmez**.
 
 ## Fasıl II — Delil-Kuvveti Tablosu
 
@@ -730,5 +760,8 @@ Kur'ân ayetlerinin metni kaynağın kendisidir ve her mushafta bulunur; kolayl�
 | 12 | Tecessüd ve panteizm (mümkin=Vâcib) muhaldir | burhânî |
 | 12-b | Teslis'in güçlü biçimi | cedelî |
 | 13 | Önceki kitapların aslı hak (Kur'ân ilâhî ise) | şartlı burhânî |
+| 14-a | Râzî'nin mucize yolu, üç asılla | koşullu burhânî; (ii) asıl cedelî |
+| 14-b | Râzî'nin ikinci yolu: tekmîl-i nâkısîn | cedelî; destekleyici |
+| 14-c | İki yolun birlikte tutması | cedelî-yüksek (bağımsızlık şartlı) |
 
 **Bu tablonun bir cümlelik özeti:** Fasıl II'nin **imkân** bahisleri (vahiy, mucize) burhânîdir; **vukuu** bahisleri (Muhammed'in peygamberliği) tarihî haberlere dayanan **cedelî-yüksek** bir toplamdır — ve bu risale bu farkı gizlememiştir. Bu toplamın **gerçek ağırlığı** Fasıl IV'te kurulacak tevatür ve hadis ilminin ölçüleriyle test edilir.

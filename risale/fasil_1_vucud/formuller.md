@@ -134,6 +134,10 @@ Mâhiyet(x)≠Vücûd(x) ⟹ hârice-çıkış(x) = ilave ⟹ müreccih-i-hâric
               ⟹ Mümkin(Küll) ⟹ Küll de ⋉[2]: müreccih-i hâriciye muhtaç
               ↯ — erteler, müreccih ihtiyacını gidermez
 
+3-C) KAPSAM KAYDI (Râzî, Metâlib c.1 f.7): teselsül adımı yalnız ILLET–MA'LÛL EŞZAMANLI ise işler
+    ardışık başlangıçsız zincir ⟹ toplam hiç mevcut olmaz ⟹ 'müessire muhtaç' hükmü verilemez
+    bu risale: eşzamanlılık ⟸ §Devam-ı Hudûs.A (mümkin her ân muhtaç) ⟸ Hakk-ı Vücûd ;  ispat sırası: Hakk-ı Vücûd → Devam-ı Hudûs.A → teselsül/tatbik
+
 3-B) Burhân-ı Tatbik — devir/teselsülden bağımsız üçüncü kapatma, "terkib mugalatası" itirazına zırh:
     K = bütün mümkinler kümesi.  sebeb(K) ∈ K  ∨  sebeb(K) ∉ K     [Nakzeyn]
       sebeb(K) ∈ K  ⟹  K'nin bir elemanı kendi ve K'nin sebebi  ⟹  ↯ [devir ile aynı muhal]

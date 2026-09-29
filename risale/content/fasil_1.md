@@ -354,6 +354,8 @@ Bu tatbik, hiçbir yerde "parçanın vasfı bütüne geçer" öncülünü kullan
 
 **Netice:** Üç yol da (devir, teselsül, tatbik-içi) kapandığına göre, zincir dıştan sebebe muhtaç olmayan bir noktada durmak zorundadır.
 
+**Râzî'nin kaydı — bu delilin kapsamı (yeni, F 2-Y):** Fahreddin er-Râzî *el-Metâlibü'l-Âliye*'nin 1. cildinde, 7. fasılda tam bu noktaya dikkat çeker [K3, K4]: teselsül adımı ("zincirin toplamı da mümkindir, öyleyse müessire muhtaçtır") **yalnız illetin, ma'lûl ile *birlikte* (eşzamanlı) mevcut olması hâlinde** işler. Aksi hâlde (illet, ma'lûlden önce var olup sonra yok olabiliyorsa) "başlangıçsız, ardışık bir zincir" hiçbir vakitte **topluca mevcut olmaz**; hiç mevcut olmayan bir toplam hakkında "müessire muhtaçtır" hükmü verilemez, ve hakîmlerin başlangıçsız ardışık devirleri kabul eden görüşü bu delilin önünü kapatır. Râzî bu yüzden İbn Sînâ'nın *en-Necât*'ta önce "illet ma'lûl ile beraberdir" öncülünü ispatladığını, *el-İşârât*'ta ise bu öncülü zikretmediğini not eder. **Bu risalede** o öncül **§4.1'de ispatlanmıştır**: mümkinin vücûdu ona zâid olduğu için (§2) **her ân** Vâcib'e muhtaçtır; yani sebep ile netice eşzamanlıdır. Dolayısıyla teselsül adımı, ardışık geçmiş zincirlere değil, **her ân işleyen (eşzamanlı) sebep zincirine** tatbik edilir. Doğru mantıkî sıra şudur: **§2 → §4.1 (eşzamanlılık) → §3'ün teselsül ve tatbik adımları**. Metnin şimdiki yazım sırası (§3, sonra §4) öğretim sırasıdır, ispat sırası değildir.
+
 ### 3.3 Formüller ve Okunuşları
 
 ```
@@ -1256,6 +1258,7 @@ Bir dinî mesele geldi
 | ∃! Vâcib (§3) | Mümkinde vücûd mâhiyete zâiddir (§2) | "Âlemin bütününde mâhiyet = vücûd" | Âlemin **a'râzını** (değişen hâllerini) zarurî saymak; değişen bir şeyin zarurî sayılması, Nakzeyn'e çarpar |
 | ∃! Vâcib (§3) | Sebepsiz tercih muhaldir (Kâfi Sebep, Nakzeyn'e irca edilmiştir) | "Bazı şeyler sebepsiz tercih edilir" | "Fark yok ∧ neticede fark var" çelişkisini kabul etmek |
 | Burhân-ı Tahsis (§5) | Kanun fâil değildir | "Kanun bir fâildir" | Fâile "seçme, bilme" gibi vasıfları zorunlu kılan tanımı değiştirmek: o zaman **kanun** zaten Fâil-i Muhtar'ın adı olur, neticeyi değiştirmez |
+| Burhân-ı İmkân'ın teselsül adımı (§3.2) | İllet, ma'lûl ile eşzamanlıdır (Râzî, cilt 1, fasıl 7; bu risalede §4.1'den) | "İllet ma'lûlden önce var olup sonra yok olabilir; ardışık başlangıçsız zincir toplam olarak hiç mevcut olmaz" | Mümkinin, kendisine vücûd veren şey yokken de var kalabildiğini kabul etmek; bu, §4.1'in çelişkisine (mümkin bir ân Vâcib gibi) düşürür |
 | Halk sürekli (§4) | Mâhiyet=Vücûd yalnız Vâcib'e aittir | "Bir mümkin bir an Vâcib gibi olabilir" | Mümkin ile Vâcib arasındaki ayrımı silmek — yani §1'in taksimini reddetmek |
 | Hudûs Delili (§8.4, §12.2) | Tamamlanmış sonsuz muhaldir; zaman akar | B-teorisi | **Sarsılır** — ama risalenin burhânî çekirdeği bundan bağımsızdır |
 | Kanun-fizik itirazları (§0.4) | Kavânîn ≠ Mebâdi | "Fizik, mantığı değiştirebilir" | Fizik teorisinin kendisini ifade eden mantığı iptal etmek |
@@ -1271,6 +1274,102 @@ Bir dinî mesele geldi
 | Hudûs delilinin Kudret'in şartı sayılması | Bağı koptu; ayrı ve cedelî-yüksek | §8.4, §12 |
 | Burhân-ı İmkân'ın "tek tür" sayılması | Molla Sadra'nın Sıddîkîn ayrımı beyan edildi | mimari/izahat/burhan |
 | Entropiden zaruret çıkarma | Mebâdi ≻ Kavânîn kaidesiyle yasaklandı | §12.3 |
+
+## 15. Fahreddin er-Râzî ve *el-Metâlibü'l-Âliye* — "Yüz Delil, Bin Delil" Meselesi
+
+### 15.1 Önce Bir Tashih: "Bin Delilli Eser" Diye Bir Kitap Bulunamadı
+
+Halk arasında şu menkıbe anlatılır: Râzî bir gün Nîşâbûr'da yürürken halk toplanır; yaşlı bir kadın "Bu kim?" diye sorar; "Allah'ın varlığına **bin delil** bilen Râzî" derler; kadın "Kalbinde bin şüphe olmasaydı bin delile ihtiyaç duymazdı" der; Râzî bunu duyunca "Allahım, bana yaşlı kadınların îmanı gibi bir îman ver" der. Menkıbe **rakamda birleşmez**: Arapça anlatımlarda "bin delil", bazı İngilizce anlatımlarda "yetmiş delil", Türkçede "yüz delil" geçer. **Yaptığım araştırmada bu rivayetin birincil bir kaynağı (Râzî'nin kendi eseri veya çağdaşı bir şahit) bulunamadı**; yalnız sonraki dönem metinleri, forum ve sosyal medya alıntıları buldum. Bu yüzden risale bu sözü **menkıbe** diye kaydeder, Râzî'ye nispetini yoklanmamış sayar ve "bin delilli bir kitap"ın varlığını **iddia etmez**.
+
+Menkıbenin işaret ettiği **gerçek eser** ise vardır: Râzî'nin **el-Metâlibü'l-Âliye min el-İlmi'l-İlâhî**'si. Dokuz cilttir; Râzî 603/1206'da yazmaya başlamış, 606/1209 başında bırakmıştır (ölümünden sekiz ay önce), eser **tamamlanmamıştır** (TDV İslâm Ansiklopedisi, "el-Metâlibü'l-Âliye"). Proje deposunda Ahmed Hicâzî es-Sekkā neşrinin (Beyrut 1987) taranmış nüshası ve OCR metni durur: `kaynak/razi_metalibul_aliye/` (künye ve okuma durumu orada).
+
+### 15.2 Râzî'nin Yöntem Beyanı — Bu Risalenin Kendi Yöntemine Şahit
+
+Cilt 1'in ikinci kısmının girişinde [K1, K2] Râzî iki şey söyler:
+
+1. **Delilleri çoğaltmanın kuvveti:** "Deliller kat'î de olur ikna'î de. İkna'î delillerin çoğaltılması, kat'iyet ifadesine varabilir; çünkü tek ikna'î delil zan ifade eder, ona ikinci bir delil eklenince zan kuvvetlenir; her yeni delilde zan artar ve sonunda cezm ve yakîn hâsıl olabilir." Bu, bu risalenin Fasıl II'de ve Fasıl IV §2'de kurduğu **ihtimal hesabıyla** aynı fikirdir: çok sayıda, birbirinden bağımsız zayıf delilin toplamı kuvvet kazanır. **Bu risale aynı fikri şartsız kullanmaz:** Fasıl IV §2.3'teki formülün gösterdiği gibi, deliller **bağımsız** değilse (ortak sebep q) toplam q'nun altına inmez; Râzî bağımsızlık şartını bu satırlarda açıkça yazmaz.
+2. **Kur'ân yolunun tercihi:** Râzî, filozofların ve kelâmcıların "kâmil ve kuvvetli" delillerini kabul eder, fakat der ki: bunlar **ince** oldukları için şüphe kapıları açıldı ve sorular çoğaldı; **Kur'ân'daki yol ise özünde tek yoldur: derinleşmeden men etmek, "kîl ü kâl" kapısını açmaktan sakınmak, anlayışı ve aklı yukarı ve aşağı âlemin delillerini çoğaltmaya yöneltmek.** "Taassubu bırakıp benim tecrübem gibi tecrübe eden, hakkın benim söylediğim olduğunu bilir." Bu, kullanıcının bu risale için baştan koyduğu ilkeyle ("Kur'ân sadece mahlûkattan istidlal ettirmeyi bilmez bir kitap değildir; aklen zarurî bir usul de vardır") **çelişmez, onu tamamlar**: Râzî, Kur'ân'ın deliller yığınını *bir yöntem tercihi* olarak savunur, yani "Kur'ân'ın yolu = âlem delillerini çoğaltıp insanı derin kelâm şüphelerine sokmadan yakîne taşımak."
+
+### 15.3 *el-Metâlibü'l-Âliye* Bu Risalenin Neresine Düşer? (Fihristten)
+
+Cilt konuları (Sekkā neşrinin önsözü ve fihristler; okuma durumu `kaynak/razi_metalibul_aliye/README.md`'de):
+
+| Cilt | Konu | Bu risalede karşılığı |
+| :-- | :-- | :-- |
+| 1 | Allah'ın varlığı; vâcibü'l-vücûd; imkân ve hudûs delilleri; Kur'ân'ın âlem delilleri; vâcib-vücûd-mâhiyet meseleleri | Fasıl I §1-5, §12 |
+| 2 | Tevhid ve tenzih (cisim, mekân, ittihad/hulûl, tesniye, vahdet) | Fasıl I §6, Fasıl II §12 |
+| 3 | Sıfatlar: ilim, irade, kudret, kelâm, hayat, kâdir–mûcib farkı, hüsn-kubuh | Fasıl I §8-9, Fasıl IV §9 |
+| 4 | Hudûs ve kıdem; her delil, bir sıfat/illet üzerinden; Kur'ân'dan deliller; tenâsüh, evâz | Fasıl I §8.4, §12, Fasıl III §7 |
+| 5 | Zaman ve mekân | Fasıl I §12.1 |
+| 6 | Cisim, cevher-i ferd, hayûlâ | (mimari/Madde) |
+| 7 | Ervâh (nefs) | Fasıl III §4 |
+| 8 | Nübüvvet (mucize ve ikinci yol), sihir | Fasıl II §6-7, §14 |
+| 9 | Cebr ve kader | Fasıl III §9 |
+
+### 15.4 Bu Risaleye Doğrudan Fayda: Beş Bulgu
+
+| # | Bulgu | Kaynak | Bu risalede ne değişti |
+| :-- | :-- | :-- | :-- |
+| 1 | **İllet–ma'lûl eşzamanlılığı** olmadan Burhân-ı İmkân'ın teselsül adımı tamamlanmaz | Cilt 1, fasıl 7 [K3, K4] | §3.2'de kapsam kaydı; §14 haritasına satır |
+| 2 | **Kur'ân yolu = deliller çoğaltmak**; ikna'î deliller toplamda yakîne varabilir (bağımsızlık şartı yazılmadan) | Cilt 1, 2. kısım girişi [K1, K2] | §15.2; Fasıl IV §2.3'teki şartın Râzî'nin fikrine bir *kayıt* olduğu not edildi |
+| 3 | Râzî, cilt 4'te delilleri **sıfat ve illet başlıklarına** ayırır: fâilî (makâle 2), kudret (3), irade (4), hüsn-kubh-hikmet-abes (5), ilim (6), **"illet-i mâddiyye": âlemin zâtı gereği mümkin oluşu (7)**, hareket ve hudûs (8), zaman (9), mekân (10) [K5] | Cilt 4 fihristi | Bu risalenin `Burhan(çeşit)` dehlizindeki **boş İllet-i Mâddiye köşesi** için Râzî'nin *adı geçen* bir adayı var. **Uyarı:** yalnız fihristin başlığını okudum, makâlenin içeriğini okumadım; Râzî'nin "maddî illet" kullanımı Aristo'nunkinden farklı olabilir; köşe **doldurulmuş sayılmaz**, aday olarak kayıtlıdır |
+| 4 | İmkân-ı sıfat delili (fasıl 15-17) ve **Demokritos'çu "atomların çarpışmasıyla kendi kendine düzen" itirazı**, açıkça anılıp cevaplanır (Aristo'nun hareket-i zâtiyye reddine atıfla) | Cilt 1, 1. kısım [okundu: satır 6250-6330] | §10'daki "madde kendi kendini teşkilatlandırır" cevabına klasik bir kaynak bağlandı |
+| 5 | Vâcib'in zâtı sair zâtlardan **kendi hakikatiyle** ayrılır, bir sıfatla değil; sıfatla ayrılıyorsa **devir/teselsül veya müreccihsiz tercih** doğar | Cilt 1, kısım 3, mesele 5 [okundu: satır 10445-10520] | §6.2'deki Vahdâniyet argümanının ("temayüz ⟹ terkib") Râzî'de paralel bir kuruluşu olduğu görüldü |
+
+**Okuma durumu, dürüstçe:** Dokuz cildin **fihristleri** (7 ve 9 hariç, OCR okunaksız) ve yukarıda belirtilen satır aralıkları okundu. Cildin gövdesinin **çoğu okunmadı**. Metin OCR'dır, hatalar içerir; alıntıların Türkçesi benim çevirimdir.
+
+
+## Kaynaklar ve Sayfa Görüntüleri
+
+Köşeli **[K#]** işaretleri metindeki yerleri gösterir. Râzî'nin *el-Metâlibü'l-Âliye*'sinin tam PDF ve OCR metinleri projede: `kaynak/razi_metalibul_aliye/` (dokuz cilt); çevrimiçi: <https://archive.org/details/MATfakhr>.
+
+### [K1] Râzî, el-Metâlibü'l-Âliye, cilt 1 — Kur'ân yolunun tercihi
+
+- **Bağlantı:** <https://archive.org/details/MATfakhr> (erişim: 29 Eylül 2026)
+- **Ne gösteriyor:** Kısım 2'nin girişinden: "Hakîmlerin ve kelâmcıların delilleri kuvvetli olsa da, Kur'ân'da zikredilen yol bence hakka daha yakındır; çünkü o deliller incedir, şüphe kapıları açıldı… Kur'ân'ın yolu, derinleşmeden men etmek ve delilleri çoğaltmaktır."
+
+![Râzî, el-Metâlibü'l-Âliye, cilt 1 — Kur'ân yolunun tercihi — sayfa görüntüsü](img/razi_c1_kuran_yolu.png)
+
+*Sayfa görüntüsü (Sekkā neşri, Dâru'l-Kitâbi'l-Arabî, Beyrut 1987; İnternet Arşivi nüshası). İlgili satırlar sarı ile işaretlidir. Bağlantı kırılırsa kanıt olarak bu görüntü ve `kaynak/razi_metalibul_aliye/` içindeki PDF kalır.*
+
+### [K2] Râzî, cilt 1 — ikna'î delillerin çoğaltılması yakîne varabilir
+
+- **Bağlantı:** <https://archive.org/details/MATfakhr> (erişim: 29 Eylül 2026)
+- **Ne gösteriyor:** "Deliller kat'î de olur ikna'î de. İkna'î delillerin çoğaltılması kat'iyete varabilir; tek delil zan verir, ikincisi eklenince zan kuvvetlenir… sonunda cezm ve yakîn hâsıl olur."
+
+![Râzî, cilt 1 — ikna'î delillerin çoğaltılması yakîne varabilir — sayfa görüntüsü](img/razi_c1_iknai_istikthar.png)
+
+*Sayfa görüntüsü (Sekkā neşri, Dâru'l-Kitâbi'l-Arabî, Beyrut 1987; İnternet Arşivi nüshası). İlgili satırlar sarı ile işaretlidir. Bağlantı kırılırsa kanıt olarak bu görüntü ve `kaynak/razi_metalibul_aliye/` içindeki PDF kalır.*
+
+### [K3] Râzî, cilt 1, fasıl 7 — illet ma'lûl ile birlikte olmalıdır
+
+- **Bağlantı:** <https://archive.org/details/MATfakhr> (erişim: 29 Eylül 2026)
+- **Ne gösteriyor:** "İllet-i müessire ma'lûlün vücûdu hâlinde mevcut olmak zorunda değilse, hakîmlere göre başlangıçsız ardışık teselsül batıl değildir; o zaman mümkinâtın vâcibe intihâsı gösterilemez." İbn Sînâ'nın *en-Necât*'ı ve *el-İşârât*'ı arasındaki fark.
+
+![Râzî, cilt 1, fasıl 7 — illet ma'lûl ile birlikte olmalıdır — sayfa görüntüsü](img/razi_c1_fasl7_maiyyet.png)
+
+*Sayfa görüntüsü (Sekkā neşri, Dâru'l-Kitâbi'l-Arabî, Beyrut 1987; İnternet Arşivi nüshası). İlgili satırlar sarı ile işaretlidir. Bağlantı kırılırsa kanıt olarak bu görüntü ve `kaynak/razi_metalibul_aliye/` içindeki PDF kalır.*
+
+### [K4] Râzî, cilt 1, fasıl 7 — toplam ancak eşzamanlı ise mevcuttur
+
+- **Bağlantı:** <https://archive.org/details/MATfakhr> (erişim: 29 Eylül 2026)
+- **Ne gösteriyor:** "İlk nakza cevap: her biri bir diğerinden önce, ilk olmaksızın; toplamları hiçbir vakitte mevcut olmadı… illet ma'lûl ile birlikte olmalı ki sebepler zincirleşse hepsi birlikte var olurdu, toplam mevcut olurdu ve ona müessire muhtaçlık hükmü verilebilirdi. Bu yüzden bu burhan, illetin ma'lûl hâlinde mevcut olması ispatlanmadıkça tamam olmaz."
+
+![Râzî, cilt 1, fasıl 7 — toplam ancak eşzamanlı ise mevcuttur — sayfa görüntüsü](img/razi_c1_fasl7_toplam.png)
+
+*Sayfa görüntüsü (Sekkā neşri, Dâru'l-Kitâbi'l-Arabî, Beyrut 1987; İnternet Arşivi nüshası). İlgili satırlar sarı ile işaretlidir. Bağlantı kırılırsa kanıt olarak bu görüntü ve `kaynak/razi_metalibul_aliye/` içindeki PDF kalır.*
+
+### [K5] Râzî, cilt 4 fihristi — "illet-i mâddiyye" başlığı
+
+- **Bağlantı:** <https://archive.org/details/MATfakhr> (erişim: 29 Eylül 2026)
+- **Ne gösteriyor:** Makâle 7: "İllet-i mâddiyyeden çıkarılan vecihler; yani âlemin zâtı gereği mümkinü'l-vücûd olması." Makâle 8: hareket, tağayyür ve hudûs.
+- **Not:** Yalnız fihristteki başlık okundu; makâlenin gövdesi okunmadı.
+
+![Râzî, cilt 4 fihristi — "illet-i mâddiyye" başlığı — sayfa görüntüsü](img/razi_c4_illet_maddiyye.png)
+
+*Sayfa görüntüsü (Sekkā neşri, Dâru'l-Kitâbi'l-Arabî, Beyrut 1987; İnternet Arşivi nüshası). İlgili satırlar sarı ile işaretlidir. Bağlantı kırılırsa kanıt olarak bu görüntü ve `kaynak/razi_metalibul_aliye/` içindeki PDF kalır.*
+
+
 
 ## Fasıl I — Delil-Kuvveti Tablosu
 

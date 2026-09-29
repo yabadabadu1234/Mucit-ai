@@ -144,6 +144,17 @@ Panteizm:  mümkin = Vâcib ⟹ ↯ Muhalefet                                   
 Bu tablo İslam'ın hak olduğunu İSPAT ETMEZ; yalnız eleme-süzgeci.
 ```
 
+## Râzî'nin İki Yolu (Metâlib c.8)
+
+```
+Yol-1 (mucize): (i) halk(mucize)=Allah ∧ (ii) hikmet(mucize)=tasdik [cedelî] ∧ (iii) kizb(Allah) muhal ⟹ mucize ⟹ sâdık   [koşullu burhânî]
+Yol-2 (tekmîl-i nâkısîn): kemâl=nazarî∧amelî ; insan=⟨nâkıs, kâmil-tedavisiz(evliyâ), kâmil-tedavili(enbiyâ)⟩ ; dereceler sınırsız ;
+   istikra ⟹ ∃ kâmil ; kâmil ∧ güçlü-tesir ⟹ nebî                                                           [cedelî ; destekleyici]
+İki yol bağımsız ⟹ toplam güç (Fasıl IV §2 formülü: q şartı)                                                  [cedelî-yüksek]
+Râzî'nin "her devirde kâmil, binlerce yılda bir en büyük" ifadesi: ⊬ (hâtemü'n-nebiyyîn ile çelişir; editör de reddeder)
+Râzî'nin itiraz kataloğu: başlıklar okundu ; cevapların içeriği ⊬ okunmadı
+```
+
 ## Önceki Kitaplar
 
 ```
