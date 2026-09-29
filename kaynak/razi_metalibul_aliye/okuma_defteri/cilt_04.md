@@ -3313,3 +3313,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **sınıflama**; (T) betimleyici.
 - Mevzuya bağı: **KRİTİK — Fasıl I §8, §8.3 ve Fasıl II (En-Nübüvve)**: **kavil 10–11 (teklîf ve bi'set)** Fasıl II'nin **doğrudan öncül alanıdır**: 'muhtâr fâil olsa bile teklîf ve nübüvvet ayrı ispat ister'; **kavil 12 (hayret)** Risale'nin **iddia hududu** notuna atıf. **Risale 12 kavli sayar, delilin hangi kavle karşı kurulduğunu her delilin başına yazar.**
 - Doğan sual: **Râzî her kavle 'beyyinât ve işkâller' yazacak; sıra p369'dan.** **Kavil 5 ve 7 için OCR temizliği (⊬ nüsha karşılaştırması).**
+
+## c4 p369
+- OCR: orta
+- Okuma: tam
+- İçerik: **Başlık: 'Dehriyye'ye reddiye'.** '**Felekler zâtları gereği vâcibü'l-vücûddur diyenlere: ilâhî filozoflar bir yolla, mütekellimîn başka yolla reddetti.**' **İlâhî filozofların vecihleri**: **(1)** '**iki vâcib bi'z-zât'ın vücûdunun imtinâ'ı delille sâbit; bu felekler çok ⇒ vâcib olamaz**'; **(2)** '**ecsâmın vücûdu mâhiyetlerinden gayr; vücûdu mâhiyetinden gayr olan her şey zâtı gereği mümkin**' (Râzî'nin atfı: 'Allah'ın vücûdunun mâhiyetinden gayr olamayacağı delilinde takrir ettik'); **(3)** '**her mütehayyiz bölünür, her bölünen kendinden gayr olan cüzüne muhtaç; her mütehayyiz gayre muhtaç ⇒ mümkin**' (p370).
+- Netice/hüküm: **Dehriyye reddi: filozofların 5 vechinin ilk üçü (kesret, vücûd≠mâhiyet, bölünme).**
+- Delil çeşidi: **taksîm + ilke**; (T) burhânî biçim; öncüller (vücûd zâid, iki vâcib imtinâ') Râzî'nin kendi ana hatlarıdır (c1 M3, c2 K2 F1).
+- Mevzuya bağı: **Fasıl I §2.2, §3**: 'zâtı gereği mümkin' vecihleri c1 M3 ve c4 p319 (Hüccet 9) ile **aynı aile**; Risale'de tek yerde toplanır, çapraz atıfla.
+- Doğan sual: —
+
+## c4 p370
+- OCR: orta
+- Okuma: tam
+- İçerik: **Filozofların vecihleri (devam)**: **(4)** '**her cisim hayûlâ-sûret mürekkebi; mürekkeb mümkin; hayûlâ ve sûrenin zâtları gereği vâcib olamayacağını da gösterdik**'; **(5)** '**her cisim muayyen vaz' ve şekilden ayrılmaz; bu vaz' ve şekli gerektiren kendisi değil gayridir ⇒ mümkin.**' 'Bu beş vecih filozofların **her cismin zâtı gereği mümkin** olduğuna dayanağıdır.' **Mütekellimîn**: '**her cismin hâdis olduğunu ve her hâdisin zâtı gereği mümkin olduğunu gösterdik.**' **2. mezhep (Demokritos: cüzler vâcib, kendinden hareketli) reddi — filozoflar**: **(1)** cisim vâcib bi'z-zât olamaz; **(2)** '**cisim zâtı gereği müteharrik olamaz**': beş vecih: **(a)** '**cisim mütegayyir değil, hareket tegayyürün kendisi; bâkî mütegayyirin illeti olamaz**' (p371); …
+- Netice/hüküm: **Filozof/Mütekellimîn reddi: her cisim mümkin (filozof: beş vecih; mütekellim: hudûs).** **Demokritos reddi başladı.**
+- Delil çeşidi: **taksîm + ilke**; (T) burhânî biçim; öncül bağımlı.
+- Mevzuya bağı: **Fasıl I §3, §8**: **'bâkî mütegayyirin illeti olamaz' öncülü burada filozoflara nisbet edilirken c4 p358'de Râzî'nin İbrâhîm (a.s.) tefsirinde de var; c4 p271'de filozoflar 'kadîm mebde' mütegayyir hâdislere illet' diyor** — **filozof öncüllerinin iç tutarlılığı Risale'nin işi değil; Risale bu öncülü 'öncüle bağlı' yazar.**
+- Doğan sual: —
+
+## c4 p371
+- OCR: orta
+- Okuma: tam
+- İçerik: **Demokritos reddi (devam, filozoflar)**: **(a)** 'bâkî mütegayyirin illeti olamaz ⇒ cisim (bâkî) zâtıyla hareketin illeti değil'; **(b)** '**cismiyet hareketin illeti olsaydı bütün cisimlerin hareketi tek hayize olurdu ⇒ çok cismin tek hayizde toplanması**'; **(c)** '**cisim harekete kâbil; kâbil müessir olamaz (vâhid, vâhide nisbetle kâbil ve fâil olamaz)**'; **(d)** '**cismin hareketi her cüzünün hareketine mevkûf; başkasına mevkûf vâcib bi'z-zât olamaz**.' **Vecih 3**: '**bu felekler cisimlere lâyık en kâmil sıfatlarla mevsûf; tesâdüfen oluşmaları akılca uzaktır.**' **Mütekellimîn**: 'cisimlerin hudûsu üzerine binâ edilir.' **3. mezhep (sebepsiz hudûs) reddi**: '**'Sânî'in isbâtı' mes'elesinde istikṣâ ile geçti; ayrıca her ittifâkî şey ne dâimî ne ekserîdir; biz üst ve alt âlemin hâllerinin lâzım bir tertip ve değişmez nizam üzere vâki olduğunu görürüz ⇒ tesâdüf imkânsız.**'
+- Netice/hüküm: **Filozof/mütekellim reddi: Demokritos (5 vecih) ve sebepsiz hudûs (nizâm ⇒ tesâdüf imkânsız).** **Râzî'nin 'nizâm ⇒ tesâdüf değil' cümlesi hikmet delilinin tesâdüf-ret kısmıdır.**
+- Delil çeşidi: **taksîm + ilke ('tesâdüf ne dâimî ne ekserî')**; (T) burhânî biçim (ilke) + hitâbî.
+- Mevzuya bağı: **KRİTİK — Fasıl I §3 (sebepsiz hudûs), §8 (nizâm)**: **'Tesâdüf ne dâimîdir ne ekserî, âlem nizâm üzere' cümlesi Risale'nin düzen delilinde 'tesâdüf-ret' ilkesi olarak alınır**; **derece hitâbî-ikna'î + kısmen burhânî (ilke)**.
+- Doğan sual: **'Sânî isbâtı' mes'elesi hangi ciltte?** (⊬ Cilt 5–9.)
+
+## c4 p372
+- OCR: kötü (çoğu bozuk/kalıntı)
+- Okuma: kısmî (yalnız ilk 6 satır okunabildi; kalanı okunamadı)
+- İçerik: **Dehriyye reddi sonu**: '**vücûdunun (⊬ 'onların vücûdu') tesâdüf yoluyla imtinâ'ı**; **Bu, Dehriyye tâifelerinin kavillerini ibtâl eden delillerin düğümlerine işârettir; tevfik Allah'tandır.**' Sayfanın geri kalanı OCR çöpü.
+- Netice/hüküm: **Dehriyye reddi bitti (p369–372).** Kalan metin okunmadı; **netice çıkarılmadı.**
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c4 p373
+- OCR: orta
+- Okuma: tam
+- İçerik: **Râzî**: '**hakkın kâdir-muhtâr olduğunu, mûcib bi'z-zât olmadığını gösteren vecihler, mûcib diyenlerin şüpheleriyle beraber geçti; tekrar faydasız.**' **Mûcib diyenlerin 'bir illetten birden fazla ma'lûl sâdır olamaz' vecihleri**: **Hüccet 1**: '**'Elif'in mebde'i olma mefhûmu 'Be'nin mebde'i olma mefhûmundan gayr; bu iki mefhûm illetin mâhiyetini mukavvim (dâhil) ise illet mürekkeb (muhâl); hâricî ise mâhiyete lâhik, mümkin, o mâhiyetle ma'lûl ⇒ 'o mâhiyetin birine illet olması ötekine illet olmasından gayr' bahsi tekrar ⇒ teselsül; biri dâhil biri hâricî ise mâhiyet mürekkeb ve ma'lûl vâhid (dâhil olan ma'lûl olamaz, mâhiyete rütbeten mukaddem).**' (p374).
+- Netice/hüküm: **Râzî'nin planı: mûcib-muhtâr vecihleri bir önceki bahiste geçti; şimdi 'vâhid'den ancak vâhid sâdır olur' delillerinin (mûcib tarafın bel kemiği) tartışması.**
+- Delil çeşidi: **taksîm + teselsül (filozof)**; (T) burhânî biçim (filozof), öncül bağımlı.
+- Mevzuya bağı: **KRİTİK — Fasıl I §8, §6.2**: 'vâhid'den ancak vâhid' kaidesi Risale'nin **vahdâniyet + fâil-i muhtâr** iddiasının **filozof karşıtıdır**; kaidenin cevabı **Râzî'nin nakızlarında (p375–)**.
+- Doğan sual: —
+
+## c4 p374
+- OCR: orta
+- Okuma: tam
+- İçerik: **'Vâhid'den ancak vâhid' hüccetleri (devam)**: **Hüccet 2**: '**Elif sâdır olup Be de sâdır olursa; Be, Elif değil; o hâlde 'Elif'in sudûr ettiği i'tibârla Elif sâdır olmadı' (çünkü o i'tibârla Be sâdır oldu ve Be Elif değil) ⇒ aynı i'tibârla Elif hem sâdır hem sâdır değil (muhâl).**' **Hüccet 3**: 'su tabiatı soğutmayı, ateş tabiatı ısıtmayı gerektirir; eserlerin ihtilâfı müessirlerin tabiat ihtilâfına delil; müessirlerin tegayürü için de aynı.' **Hüccet 4**: '**illet ile ma'lûl arasında müşâbehet ve münâsebet gerekir**: ilim âlimiyete illettir, harekete değil; vâhid illet iki muhtelif ma'lûl gerektirirse tek illet iki muhtelife müşâbih olur; iki muhtelife müşâbih olan kendisine muhâlif olur ⇒ vâhid kendine muhâlif (muhâl).' **Hüccet 5**: '**vâhid mûcib bir ma'lûlü aşarsa sonsuz ma'lûl gerektirir; muhâl.**' **'Bunlar bir illetin ancak bir ma'lûl gerektirdiğini diyenlerin delilleridir.'**
+- Netice/hüküm: **Mûcib tarafının 5 hücceti tamam.** 
+- Delil çeşidi: **taksîm + ilke (müşâbehet)**; (T) burhânî biçim (filozof), öncül bağımlı.
+- Mevzuya bağı: **Fasıl I §8**: **Hüccet 5 ('tek mûcib bir ma'lûl aşarsa sonsuz ma'lûl') mûcib tarafında en ilginç: kâdir-muhtârda bu sınır yoktur** (Risale muhtâr iddiasını buna dayandırabilir).
+- Doğan sual: —
+
+## c4 p375
+- OCR: orta
+- Okuma: tam
+- İçerik: **Râzî'nin nakızları (Hüccet 1'e)**: '**Hüccet 1 çok misalle nakzedilir**: **Nakız 1**: dairenin **merkez noktası** dairenin bütün noktalarına muhâzî; 'merkezin bu noktaya muhâzî olma mefhûmu ötekine muhâzî olma mefhûmundan gayr' ⇒ merkez noktası mürekkeb (aynı taksîm ⇒ 'nokta mürekkeb' lâzım); **Nakız 2**: **vahdet + vahdet ⇒ iki'nin mebde'i; başka vahdet ⇒ ikinci iki'nin mebde'i**; 'bu iki'nin mebde'i olma ≠ ötekinin' ⇒ vahdet bölünür, mürekkeb; **Nakız 3**: **her basit mâhiyet kendinden gayrının hepsini selbeder**: 'Elif'i selbetme mefhûmu ≠ Be'yi selbetme mefhûmu' ⇒ 'vâhidden ancak vâhid selb olunur' (bâtıl); **Nakız 4**: hayûlâ farklı sûretleri kabul: 'ilk sûrete kâbil' ≠ 'ikinci sûrete kâbil' ⇒ hayûlâ 'ancak bir sûret' kabul eder (bâtıl).' (p376.)
+- Netice/hüküm: **Râzî'nin hükmü: 'vâhid'den ancak vâhid' kaidesinin Hüccet 1'i 'aşırı ispat' (proves too much) nakızlarıyla çürür: aynı taksîm nokta, vahdet, selb, hayûlâ için de 'tek ma'lûl/tek selb/tek sûret' bâtıl sonucunu verir.**
+- Delil çeşidi: **nakz (proves too much / kıyâs-ı mea'l-fârik değil aynı taksîm)**; (T) burhânî biçim (nakz), **F 27-B: ayırt eder mi**: nakızlar 'aynı taksîm başka bâbda da bâtıl sonuç verir' diye taksîmin **ayırt etmediğini** gösterir — güçlü.
+- Mevzuya bağı: **KRİTİK — Fasıl I §8, c2 K2 F1**: **Râzî'nin 'aynı taksîm başka yerlerde de bâtıl sonuç verir' nakız yöntemi c2 p121–132'de kendi burhanını 'meşkûk' ilan ederken kullandığı yöntemle aynı**; **c4 p316–317 (Hüccet 7: ortak+ayrı ⇒ terkîb) ve c4 p319 (vecih 1) ile TUTARLILIK sorunu: Râzî burada 'mefhûm ayrı ⇒ terkîb' taksîmini nakzediyor, oysa kendi delillerinde (p316–319) aynı taksîmi kullanıyor.** **Bu, ana metin için 'öncüle bağlı' derecesini güçlendirir.**
+- Doğan sual: **Râzî kendi delillerindeki 'ta'ayyün zâid ⇒ terkîb' ile buradaki 'mefhûm ayrı ⇒ terkîb nakzı' arasındaki farkı nasıl açıklıyor?** (Kalan sayfalar; yoksa **tutarlılık borcu**.)
+
+## c4 p376
+- OCR: orta
+- Okuma: tam
+- İçerik: **Nakızlar (devam)**: **Nakız 5**: '**bir cisim sâkin iken sükûn zâil, hareket hâdis; siyahın beyazla, karanlığın nûrla, ekşiliğin tatlılıkla tebeddülü de böyle: 'harekete kâbil' ≠ 'sükûna kâbil'; iki mefhûm dâhil/hâricî/biri dâhil biri hâricî ⇒ taksîm ⇒ cisim tek araz kabul eder (bâtıl).**' **Nakız 6**: '**yalnız bir ma'lûl gerektiren illet: 'o illetin zâtı' ≠ 'bu ma'lûle mûcib olması' (her birini ötekinden gafil tasavvur mümkin) ⇒ mûciblik zâtın sıfatı, lâhik, mümkin; mûcib olan o zât ⇒ teselsül ⇒ ilzâm tek ma'lûl takdirinde de aynı kalır; mahzûr her iki takdirde de kâim ise onunla bir takdiri ibtâl edilemez**' (**Râzî'nin 'iki tarafa dönen delil kalkmaz' ilkesi**). **Nakız 7**: 'siyahlığın siyah olması ≠ o mahalde hâl olması ⇒ hulûl zâid; hulûlün hulûlü ⇒ teselsül'. **Nakız 8**: 'siyahın siyah olması ≠ bu vakitte hâdis olması …' (p377).
+- Netice/hüküm: **Râzî'nin nakızları: 8 örnek; Nakız 6 ('mahzûr her iki takdirde kâim ⇒ delil değil') genel ilke.**
+- Delil çeşidi: **nakz**; (T) burhânî biçim (nakz).
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §8, Ders katmanı 'delil derecelendirme' kutusu**: **Nakız 6 ilkesi ('mahzûr her iki takdirde kâim ise onunla bir takdir ibtâl edilmez') Risale'nin F 27-B (ölçü ayırt eder mi) ilkesinin klasik biçimidir** — **doğrudan alıntı adayı** (ders kutusu). **Hasmın karşı silahının iki yönlülüğü Risale'nin de her delilde kontrol edeceği bir sınavdır.**
+- Doğan sual: —
