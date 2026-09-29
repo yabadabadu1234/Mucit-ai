@@ -793,3 +793,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **kendi ilzâmının bir alternatif model (ezelî akıl/nefs + hâdis ecsâm) ile sunulması**; (T) cedelî. **[Kendi tenkidim: bu 'alternatif model' bir nefs/akıl kadîmliğini kabul ediyor (mücerrede kıdem); Risale'nin 'mâsivâ hâdis' cümlesi mücerredâtı da kapsar; Râzî'nin bu modeli hudûs tarafının hepsini kapsayan delilinin eksikliğini gösteriyor, kendi tercihi olarak sunulmuyor (p12'deki soruyla aynı).]**
 - Mevzuya bağı: **KRİTİK — Fasıl I §3**: **'her mâsivâ hâdis' cümlesinin mücerredâtı kapsama iddiası** (c4 p12) ve **Râzî'nin 'ezelî mücerret + hâdis cismânî âlem' alternatifi (p88)**: Risale bu boşluğu **nassla ('Allah her şeyin hâlikı, kendinden başka her şey hâdis') kapatır, aklî delil boşluğunu açıkça kaydeder**. **Kıdem tarafı delil 1 sonu.**
 - Doğan sual: Kıdem tarafının sonraki delilleri (kâdir, mürîd, hakîm, âlim…) ve hudûs tarafının delilleri (Kısım 2).
+
+## c4 p89
+- OCR: orta
+- Okuma: tam
+- İçerik: **Fasıl 2 (kıdem tarafı): 'İlk mebde'in fâiliyetine bina edilen diğer vecihler'.** **1. delil (izâfe)**: 'sâni' ve fâil **izâfe mekûlesinden**; sâni', masnû'a nisbetle söylenir, masnû' da sâni'e nisbetle; **iki izâfî beraber mevcuttur**. Masnû' **bilkuvve** mevcutsa sâni' **bilkuvve sâni'**, masnû' **bilfiil** mevcutsa sâni' **bilfiil sâni'**. **Âlem ezelî olmasaydı** masnû' ezelde bilfiil değil bilkuvve, dolayısıyla **sâni' ezelde bilkuvve sâni'**; sonra hâdis olunca sâni' **bilfiil** olur ⇒ **kuvveden fiile ve ademden vücûda intikâl**; bu intikâl **zâtı gereği olsa** hep bilfiil olurdu; bir **gayr onu intikâl ettirir** ⇒ **sâni' bir şeye muhtaç ⇒ lâzımlarında gayre muhtaç ⇒ mümkin**; bu vâcibü'l-vücûd için muhâl (p90).
+- Netice/hüküm: **Kıdem tarafının izâfe delili: 'sâni' izâfî; bilkuvve→bilfiil intikâli vâcibe yakışmaz ⇒ masnû' ezelî'.**
+- Delil çeşidi: **analitik (izâfe; kuvve-fiil)**; (T) burhânî biçim (kıdem tarafı). **[Delil ≠ dava: 'sâni' olmanın izâfe olduğu, izâfenin iki tarafının vücûd bakımından beraberliği' öncülü ispatsız; 'sâni'lik' Allah'ın bir zâtî hâli mi, izâfî bir nisbet mi ayrıca tartışılır (c3 sıfat bâbı).]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §6.3, §8**: 'sâni' ile masnû' beraberliği' itirazına **Risale'nin cevabı**: 'Allah'ın halk sıfatı (tekvîn) ezelî, mükevven hâdis' (c3 p237–238 havale konusu!) — **cilt 4'te bu havalenin cevabı burada aranacak**; **tekvîn ↔ mükevven** borcu bu delille doğrudan bağlı.
+- Doğan sual: —
+
+## c4 p90
+- OCR: orta
+- Okuma: tam
+- İçerik: (1. delil sonu): '**vâcibü'l-vücûd daima bilfiil sâni' olmalı ⇒ sâni' daima mevcut ⇒ iki izâfî beraber olduğundan masnû' da daima mevcut**.' **2. delil (müessiriyet zâid sıfat)**: '**'vâcibü'l-vücûd olmanın gayrine mebde' olması' mefhûmu** vâcibü'l-vücûdun **zâtından ve âlemin zâtından ayrı** bir mefhûm; öyleyse **müessirin devamıyla eserin devamı lâzım.** **1. makam (müessiriyetin zâid olması), 4 vecihle**: **(1)** vâcibü'l-vücûdun zâtını ve âlemin zâtını **akledip vâcibin âleme müessir olduğundan şüphe edebiliriz**; ma'lûm olan ma'lûm olmayandan ayrı ⇒ **vâcibin âlemdeki müessiriyeti vâcibin zâtı ve âlemin zâtı üzerine zâid**. **(2)** bir zâtın diğerine müessir olması **iki zât arasında nisbet**; nisbet ikisine mevkuf; mevkuf olan ona mugâyir. **(3)** '**vâcibü'l-vücûd âlemin vücûdunun mebdeidir**' diye **hüküm veriyoruz**; **hükümle mahkûm-un-aleyh mugâyir**. **(4)** (p91).
+- Netice/hüküm: **Kıdem tarafının 2. delili: müessiriyet zâid (nisbet) ⇒ müessirin devamı eserin devamını gerektirir.**
+- Delil çeşidi: **analitik (zâid sıfat: dört vecih)**; (T) burhânî biçim (kıdem tarafı).
+- Mevzuya bağı: **Fasıl I §3 ve c3 sıfat bâbı (p225–232, 237–238)**: 'müessiriyet zâid mi?' konusu **c3 tekvîn-mükevven ve 'zâta kâim iki sıfat' hattı** ile birleşiyor; Râzî'nin **kendi görüşü p92'de (tenkit)**.
+- Doğan sual: —
+
+## c4 p91
+- OCR: orta
+- Okuma: tam
+- İçerik: (**(4) vecih**): '**vâcibin zâtı yahut kudreti âlemin vücûdunda etki etti, önce etki etmiyorken; zât iki hâlde baki iken müessiriyet sıfatının tecceddüdü müessiriyetin müessir zâtına zâid olduğunu gösterir.**' **İtiraz**: 'müessir olmak, o eserin **hâsıl olması**' denemez mi? **Cevap**: 'bu eser, müessir onda etki ettiği için var oldu; **eserin vücûdunu 'müessirin etkisi' ile ta'lîl ettik; müessir olması eserin kendisiyse eserin vücûdunu kendisiyle ta'lîl etmiş olurduk**, eserin vücûdu bizzât iken başkasıyla ta'lîli imkânsız; bu **eserin eser olmasını nefyeder** ⇒ bâtıl.' Ayrıca '**Allah'ın âlemi îcâd etmesi ve hâlik olması Allah'ın zâtının sıfatı**; **âlemin zâtı Allah'ın zâtının sıfatı değil**' ⇒ müessiriyet zâtlara zâid mefhûm. **2. makam**: '**müessiriyet ya hâdis ya kadîm**; hâdisse muhdise muhtaç, **başka müessiriyetle ihdâs ⇒ teselsül**; kadîmse **izâfî sıfat olduğundan muzâfeynin sübûtuyla beraber**; müessiriyetin kıdemi **eserin kıdemini gerektirir**.'
+- Netice/hüküm: **Kıdem tarafı: müessiriyet zâid ve ya hâdis (teselsül) ya kadîm (eser kadîm).**
+- Delil çeşidi: **dilemma + reductio**; (T) burhânî biçim.
+- Mevzuya bağı: **KRİTİK**: **c3 p237–238 (tekvîn ≠ mükevven; hudûs kitabına havale)** bu delilin **doğrudan konusu**: kıdem tarafı 'müessiriyet (tekvîn) zâid ve ya hâdis ya kadîm' diyor; Risale'nin **'tekvîn ezelî sıfat, mükevven hâdis' (Mâtürîdî çizgi)** cevabı bu dilemmaya **'müessiriyet kadîm, eser kadîm olmaz: tekvîn/irâde ile taalluk' diyerek** cevap verir — **cilt 4 devamında Râzî'nin kendi cevabı aranacak**.
+- Doğan sual: —
+
+## c4 p92
+- OCR: orta
+- Okuma: tam
+- İçerik: **İki itiraz (hudûs tarafından)**: (1) **günlük hâdislerin mebdei olmakla çelişir**; (2) sâni'in bilfiil sâni' olması **maful ile muvakkat mı, yoksa**… **Cevap 1 (kıdem tarafı)**: 'önceki hüccette söylediğimiz: **her hâdisin hudûsu ondan önce gelen bir hâdise şartlı, evvelsiz**; **mebde' mûcib müessir, ilk-ezelî-kadîm**, ancak **tahsis ve hudûs bu peş peşe şartlarla hâsıl**.' **Cevap 2**: '**illetin zâtı mûcibe delâlet eder**: illet ile ma'lûlün zâtı hâsıl olunca aralarında **illiyet ve ma'lûliyet izâfesi hâsıl olur**; **illetin zâtı ma'lûlün zâtında müessir**; **illetin zâtı ve ma'lûlün zâtı iki husûsî izâfeyi gerektirir**.' **Râzî (kendi sesiyle, 'واعلم')**: '**bu hüccetin mihveri 'müessirin eserdeki müessiriyeti müessirin zâtına ve eserin zâtına zâid sıfattır' tezidir; bu müşkildir**: öyleyse **müessiriyet müessirin zâtına muhtaç bir sıfat olur; gayre muhtaç olan mümkin; mümkin müessire muhtaç; o müessiriyetin hâsılında müessirin müessiriyeti de zâid ⇒ teselsül (muhâl)**.'
+- Netice/hüküm: **Râzî (kendi hükmü): 'müessiriyet zâid sıfat' öncülü kendi başına teselsüle götürür; bu delilin temeli müşkil.** [c3'te 'tekvîn ≠ mükevven' tartışmasıyla aynı düğüm.]
+- Delil çeşidi: **reductio (zâid sıfat ⇒ teselsül)**; (T) burhânî biçim. **F 27-B: bu tenkit kıdem tarafının 2. delilini ayırt ediyor (öncülünü vuruyor); Râzî hudûs tarafının 'müessiriyet zâid' cevabını da vurmuş olur (c3 sıfat bâbı ile aynı düğüm).**
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §8, c3 sıfat bâbı**: 'müessiriyet zâid mi?' sorusuna **Risale bir cevap yazmak zorunda**: **Allah'ın halk/tekvîn sıfatı hakkında 'zâid sıfat mı, izâfe mi?' Râzî aporisi açık**; cilt 4'te kapanış aranacak.
+- Doğan sual: —
+
+## c4 p93
+- OCR: orta
+- Okuma: tam
+- İçerik: **Aynı delilin başka ibaresi**: '**âlem hâdis olsaydı, ancak fâilin îcâdıyla vücûda girerdi**; fâilin îcâdı ya **fâilin zâtı**, ya **mef'ûlün zâtı**, ya **üçüncü bir şey**: **(1)** fâil zâtının devamından mef'ûlün devâmı; **(2)** mef'ûlün zâtı ⇒ '**âlem kendi kendine var oldu**', bu fâile isnadı men eder; **(3)** üçüncü ⇒ **mûciddiyet fâilin zâtının sıfatı**; **hâdisse** başka îcâda muhtaç (muhâl), **kadîmse eserin kıdemi**.' **3. delil**: 'âlem hâdis olsa, belirli vakitteki hudûsu ya **sırf kâdir olması** yüzündendir ya **Allah'ın o vakitte îcâd etmesi** yüzünden. **(1) bâtıl**: Allah **o vakitten önce de kâdirdi**, o hâlde hâdisin o vakitten önce hâdis olması gerekirdi; **kâdiriyeti ezelî ⇒ eser ezelî**.' **(2)** 'âlem **bu vakitte hâdis oldu; Allah kâdir olduğu için değil, o vakitte onu yarattığı için**' ⇒ **bu nefy ve isbât mutlaka bir mugâyereti gerektirir** ⇒ (p94).
+- Netice/hüküm: 2. delilin başka ibaresi + **3. delil: 'kâdiriyet ezelî ⇒ eser ezelî; yaratma sıfatı ayrıysa hâdis sıfat'**.
+- Delil çeşidi: **reductio + dilemma**; (T) burhânî biçim (kıdem tarafı).
+- Mevzuya bağı: **KRİTİK**: 3. delil **kâdiriyet ile halk (tekvîn) sıfatlarının ayrılığı** meselesini açıyor; **c3 p237–238 ve c3 Bâb 2 (kâdir/mûcib)** ile **doğrudan bağ**.
+- Doğan sual: —
+
+## c4 p94
+- OCR: orta
+- Okuma: tam
+- İçerik: (3. delil devam): '**bu nefy ve isbâtın sıdkı mutlaka mugâyereti gerektirir**: 'Allah'ın âlemi bu belirli vakitte **hâlik** olması'ndan anlaşılan, 'kâdir olması'ndan anlaşılana **mugâyir** olmalı (yoksa nefy ve isbâtın mahalli tek şey olur, muhâl); ayrıca **hâlikiyetten anlaşılan mahlûkun zâtına da mugâyir** (âlemin sebebi Allah'ın hâlikiyeti; müessir eserden ayrı)'; ⇒ hâlikiyet kâdiriyetten ve mahlûkun zâtından ayrı bir mefhum. **Âlem sadece bu vakitte, öncesinde ve sonrasında değil hâdis olduğuna göre** Allah'ın **hâlik olması da** bu vakitte hâsıl olmuş, öncesinde ve sonrasında değil; çünkü **âlem hudûstan önce asıl ademinde baki iken müessir olma sıfatı sadık olamaz.** ⇒ '**âlem hâdis olsaydı Allah'ın âlemin hâliki olması Allah'ın zâtında hâdis bir sıfat olurdu; bu muhâl, iki vecihle**: **(1)** hâdis, mukteziye muhtaç mı? Muhtaçsa **başka hâlikiyete muhtaç ⇒ teselsül**; muhtaç değilse **âlemin o vakitte hâlikten sudûru hâlikiyet ihtiyacı olmadan olur ⇒ hâlikin nefyi**; **(2)** sıfatın hudûsu **Allah'ın zâtını hevâdisin mahalli** yapar; c2'de kat'î burhanlarla muhâl.'
+- Netice/hüküm: **Kıdem tarafı: 'hâlik olması' hâdis sıfat ⇒ Allah'ın zâtı hevâdisin mahalli (muhâl).**
+- Delil çeşidi: **reductio (hâdis sıfat ⇒ mahall-i hevâdis)**; (T) burhânî biçim (kıdem tarafı).
+- Mevzuya bağı: **KRİTİK — c2 p97–114 (hevâdis-i zât aporisi) ve c3 p237–238**: Risale **'Allah'ın halk sıfatı hâdis değil (ezelî), hâdis olan mahlûktur' (Mâtürîdî tekvîn) cevabıyla** bu delili karşılar; **Eş'arî çizgi 'tekvîn = mükevven' diyerek cevap verir**; **Ehl-i Sünnet içi ihtilaf**; cilt 4 devamında Râzî'nin tercihi aranacak.
+- Doğan sual: —
+
+## c4 p95
+- OCR: orta
+- Okuma: tam
+- İçerik: **4. delil (kıdem tarafı)**: '**âlem hâdis olsaydı fâil-i evvel ezelden beri fâil olmayan olurdu**; **fâil olmayan bir şey hikmet üzere fâil olmaz, ancak kendinden olmayan bir şeyin değişmesiyle**; bu Allah hakkında muhâl ⇒ **âlem hâdis olamaz**'. **1. makam: 'hakîm fâil, fâil değilken fâil olması ancak kendisinden olmayan bir değişimle'**: **misal**: uzun süre bizim yanımızda kendi ihtiyarıyla oturan bir adam **ihtiyarıyla kalktı**: bu tebeddül **bir hâlin değişmesiyle** olur ('gece yaklaştı', 'unuttuğu bir şeyi hatırladı', 'gâfil olduğu bir haber ulaştı'); **hiçbir hâdis onu ilk görüşünden zıddına nakletmediyse hâlinin değişmesi imkânsız**; **yetmiş yıl evinde oturup hareket etmeyen, bir maslahatla uğraşmayan adamın birden büyük gayretle işe koyulması**: 'niçin?' diye sorulunca **hiçbir sebep söylenmezse ya imkânsız ya mahz abes ve sefeh**.
+- Netice/hüküm: **Kıdem tarafının 4. delili: 'hakîm fâil sebepsiz fâil olmaz; sebep kendisinden olmayan bir değişiklik'.**
+- Delil çeşidi: **misal (oturan adam) + taksîm**; (T) ikna'î-cedelî. **[Delil ≠ dava: 'fâilin fiile geçişi kendisinden olmayan bir değişikliği gerektirir' öncülü insan fiilinden Allah'a genelleniyor (şâhide kıyas); Sünnî/Eş'arî çizgi 'irade tahsis eder' der.]**
+- Mevzuya bağı: **Fasıl I §8, c3 p288–304**: **'hakîm fâil sebepsiz fâil olmaz' hikmet argümanı**: Râzî'nin c3'te 'Allah'ın fiillerini maslahatla ta'lîl bâtıl' hükmü ile **kıdem tarafı bu silahı hudûs tarafına döndürüyor** (p73'teki aynı örüntü).
+- Doğan sual: —
+
+## c4 p96
+- OCR: orta
+- Okuma: tam
+- İçerik: (4. delil devam): 'değişim **kendisinden olsaydı** ilk soru geri dönerdi: neden bu vakitte, öncesinde değil?; **değişim kendisinden değilse** doğru: 'gün sona erdi, adam kalktı'; 'kış hücumuna yakın kış hazırlığına koyuldu'. Sonuç: **fâil olmayan bir şey ancak kendisinden olmayan bir değişimle fâil olur; fâil-i evvel hakkında muhâl**: **bütün değişimler onun tekvîni ve îcâdıyla**; 'fâil olmayandan fiili tahsile intikâl' **kendi cihetinden olmayan bir değişime muhtaç** ⇒ muhâl ⇒ **ezelden beri fâildi.** **Şu itirazlar geçmez**: **'îcâdın gayesi halka nef' îsâl; bu gaye önceden de matlûb; neden önce başlamadı?'**; **'o vakit ihdâs için daha maslahatlı'**; **'irâde ile belirlendi'** — çünkü 'ihdâs için daha maslahatlı vakit **Allah'ın ihdâsıyla mı hâdis oldu, değil mi**? Ihdâsıyla ise 'niçin onu yaptı, başkasını yapmadı' sorusu; değilse **Allah âlemi ihdâs etmeden önce vakitler mevcut, değişimler hâsıl** ⇒ Allah'ın âlem ihdâsı **iklim (sıcak-soğuk) dengesinde yolculuğa niyetlenen adam** gibi: ticaret kâr dâîsi önceden mevcut, **vaktin gelmesini bekliyordu**…
+- Netice/hüküm: **4. delilin devamı: gaye/maslahat/irâde cevapları önceden kapatılmış; Allah'ın ihdâsının zamanının 'bekleme' yorumu.**
+- Delil çeşidi: **reductio (gaye/maslahat/irâde cevaplarına önceden itiraz)**; (T) burhânî biçim (kıdem tarafı).
+- Mevzuya bağı: **KRİTİK — Fasıl I §8**: Risale'nin 'irâde-tahsis' cevabına **kıdem tarafının önceden hazırladığı üç karşı çıkış: gaye, maslahat, irâde**; **irâde cevabına karşı 'o vaktin hâsılı da Allah'ın ihdâsı ise soru döner'**: bu, c4 p73 ('soru her takdirde döner ⇒ sıhhat') ile **aynı örüntü**.
+- Doğan sual: —
