@@ -1513,3 +1513,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: —
 - Mevzuya bağı: —
 - Doğan sual: —
+
+## c4 p169
+- OCR: orta
+- Okuma: tam
+- İçerik: **7. Makâle (kıdem tarafı): 'Kâbil/maddî illetten çıkarılan vecihler — âlemin zâtı gereği mümkin olması: birkaç emir'.** **1. hüccet**: '**âlem hâdis olsaydı hudûsundan önce ya vâcib-i li-zâtihî, ya mümteni'-i li-zâtihî, ya mümkin-i li-zâtihî**: **birincisi** hâdis olmasını zedeler; **ikincisi** **zâtî imtinâ'dan zâtî imkâna intikâl (muhâl)**; **üçüncüsü** hudûstan önce **zâtı gereği mümkin**. **Bu imkân ya zâtının hususî sıfatı ya 'kâdirin onu îcâda kâdir olması'ndan ibaret**; **ikincisi bâtıl**: **kâdir mümkinâtı îcâda kâdir, muhâlleri değil**; mümkinin mümtenî'den **zâtına râci bir emirle ayrılması olmasaydı** kâdirin mümkini îcâda kâdir olması muhâli îcâda kâdir olmasından **evlâ olmazdı** ⇒ **mümkinin mümkin olması, ona râci bir sıfat.**'
+- Netice/hüküm: **Kıdem tarafının 'imkân-ı istidâdî' delili başlıyor: imkân zâta râci sıfat (kudretten ayrı).**
+- Delil çeşidi: **taksîm/analitik**; (T) burhânî biçim (kıdem tarafı).
+- Mevzuya bağı: **KRİTİK — Fasıl I §3**: bu delil Risale'nin **'mümkin' tanımı ve 'imkân sübûtî sıfat mı?'** sorusuyla doğrudan bağlı; cilt 4'te cevabı **p170–172 (hudûs tarafı 5 vecih)** ve Râzî'nin kendi hükmü (p172).
+- Doğan sual: —
+
+## c4 p170
+- OCR: orta
+- Okuma: tam
+- İçerik: (1. hüccet devam): '**bu sıfat ya selbî ya sübûtî; selbî bâtıl**: şey ya **sübûtu mümteni'**, ya **imkân-ı âmmla mümkin**; **imtinâ' ademîdir** (sübût olsaydı o sıfatla vasıflı olan sübûtu bizzât mümteni' ve vâcib-i sübût olurdu, muhâl); **imtinâ' ile imkân-ı âmm arasında vasıta olmadığından** ve imtinâ' sübûtî sıfat olmadığından **imkân-ı âmm sübûtî sıfattır** (iki nakîzden biri sübûtî olmalı). ⇒ **imkân mümkine râci, kâdirin temekkününden ayrı, sübûtî, hudûstan önce**; bu sıfat **mevcut bir mahalle** muhtaç; **bu mahal o hâdisin heyûlâsı ve maddesi**; heyûlâ = hâdis sûretin imkânı onda hâsıl olan şey; ⇒ **her hâdis heyûlâ ve maddeyle mesbûk**. Bu heyûlâ ve madde **ya mütehayyiz ya değil**: **mütehayyizse cisim**: cismin heyûlâsı cisim, heyûlâ kadîm ⇒ **cisim kadîm**. **Değilse bâtıl, 2 vecihle**: (1) **bu'd ve imtidâd bir mahalde hâl olup hayyiz ve cihette hiç hâsılı olmaması muhâl**; (2) filozoflar heyûlânın **cisimlikten hâli olamayacağını** delillendirdi ⇒ **heyûlâ kadîm ⇒ cisim kadîm.**
+- Netice/hüküm: **Kıdem tarafı: imkân sübûtî sıfat ⇒ mahal (heyûlâ/madde) ⇒ madde kadîm ⇒ cisim kadîm.**
+- Delil çeşidi: **taksîm + reductio (imkân ⇒ madde)**; (T) burhânî biçim (kıdem tarafı). **[Delil ≠ dava: 'imkân sübûtî sıfat' öncülü hudûs tarafınca reddedilir (p171); 'imkân-ı âmm sübûtî' iddiası 'imtinâ' ademîdir' üzerine kurulu.]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §3**: Risale **'imkân sübûtî mahal ister, madde ezelî' iddiasına karşı 'imkân itibârî/ademî, mahal ister değil' cevabını** yazmalı (kaynaklı: c4 p171–172).
+- Doğan sual: —
+
+## c4 p171
+- OCR: orta
+- Okuma: tam
+- İçerik: **Hudûs tarafının cevabı: 'imkân mevcut sıfat değil', 5 vecihle**: **(1)** imkân mevcut olsa **mümkinin sıfatı** olur; **sıfat mevsûfuna muhtaç**; mümkine muhtaç olan **mümkin** ⇒ **imkânın imkânı, sonsuza** (muhâl). **(2)** hâdis **vücûd imkânıyla mesbûk**; bu imkân mevcut sıfat olsa ya **hâdisin kendisinde** ya **başkasında** kâim; **birincisi** muhâl (mevcûdun ma'dûmla kıyamı: hâdis hudûstan önce ma'dûm); **ikincisi** muhâl (şeyin imkânı ona kâim sıfat, sıfat başkasında hâsıl olamaz). **(3)** mümkinin mümkin olması **mevcut olmasından önce** (zâtıyla mümkin, gayriyle mevcut; **bizzât olan bilgayr olandan önce**); imkân mevcut sıfat olsa **gayrın vücûduyla ittisâfı kendi vücûdundan önce**. **(4)** imkân = **vücûda kabiliyet**; kabiliyet mevcut sıfat ise **kabiliyetin kabiliyeti ⇒ teselsül**. **(5)** heyûlâ **zâtı gereği mümkin** ⇒ başka heyûlâya iftikâr ⇒ **sonsuz**. **Kıdem tarafının cevabı**: 'heyûlâya iftikâr yalnız **hâdis** için; **kadîmin vücûdu imkânının mahalli olması için yeter**, heyûlâya ihtiyacı yok.'
+- Netice/hüküm: **Hudûs tarafı: imkân mevcut sıfat değil (5 vecih); kıdem tarafı: iftikâr hâdis için, kadîm kendi vücûduyla yeter.**
+- Delil çeşidi: **reductio (teselsül, mevcûdun ma'dûma kıyamı)**; (T) burhânî biçim.
+- Mevzuya bağı: **KRİTİK — Fasıl I §3**: 'imkân mevcut sıfat değil' **Sünnî/Eş'arî ortak tespit**; Risale bu 5 vechi **kaynaklı** yazabilir (derece: burhânî biçim; öncüller: sıfat mevsûfa muhtaç, ma'dûma kıyam muhâl).
+- Doğan sual: —
+
+## c4 p172
+- OCR: orta
+- Okuma: tam
+- İçerik: **Karşı cevap (kıdem tarafı)**: '**imkânın mümkine sübûtu vâcib-i li-zâtihî; mümkinin vücûdu ise bu mevcut imkânla mevsûf olmasının şartı**; şart zâtı gereği vâcib olmuyorsa **onun vâcib-i li-zâtihî olması evlâ** ⇒ **heyûlâ vâcib-i li-zâtihâ**. **Bazı mütekaddimîn bunu iltizam etti**: cisimlik bir mahalde hâl olamayacağı sabit; **cisim nefsiyle kâim zât**; mümkin olsa imkânının mahalli ya zâtı ya heyûlâ; **birincisi muhâl** (mümkin li-zâtihî, gayriyle değil; zâtının vücûdu bu imkâna kabiliyetinin şartı; zâtı gereği vâcib olmayan şart vâcib olmaz) ⇒ mümkin li-zâtihî vâcib li-zâtihî (muhâl); **ikincisi muhâl**: cismiyet heyûlâya iftikâr; heyûlâ mümkinse başka heyûlâya, sonsuz; **son heyûlâ vâcib ise bu ihtimal düşer.**' **Râzî (kendi sesiyle, 'واعلم')**: '**bu şüphe kuvvetlidir, imkânın mevcut bir sıfat olduğu sabit olsaydı; oysa bu hususta söz önceden geçti (p171'deki 5 vecih).**' **2. hüccet**: '**âlem ezelde mümkin ⇒ ezelde vâcib-i husûl.** **1. makam**: 'âlem ezelde mümteni'-i li-zâtihî değildi (aksi hâlde mümteni'den mümkine intikal, çok delille muhâl); ezelde sahih-i vücûd idi.' **2. makam** (p173).
+- Netice/hüküm: **Râzî (kendi hükmü): 'imkân mevcut sıfat' öncülü çürütüldüğü için heyûlâ delili tutmaz; kıdem tarafının bu delili kuvvetli görünse de öncülü düşer.**
+- Delil çeşidi: **değer takdiri (Râzî)**; (T) burhânî biçim.
+- Mevzuya bağı: **KRİTİK — Fasıl I §3**: **Râzî kıdem tarafının 7. makâle 1. hücceti hakkında hüküm veriyor: öncül (imkân sübûtî) çürütülünce delil düşer**; Risale bu tespiti **'Râzî'ye göre imkân itibârîdir; heyûlâ delili tutmaz' diye kaydedebilir** (c4 p171–172).
+- Doğan sual: —
+
+## c4 p173
+- OCR: orta
+- Okuma: tam
+- İçerik: (2. hüccet 2. makam): '**ezelde mevcut değilse ademi ezelî olması muhâl**: **ezelî olmayan şey aklen ezelî ademe inkılab edemez**.' **Takrîr**: 'hâsıl olmayan iki kısım': **(a)** hâsıl olması mümkin: **hareketsiz cisim sonra hareketli**; **(b)** hâsıl olması **mümteni'**: '**ezelî değildi**' denen şey; bu şey ezelî olamaz, çünkü **'ezelî olmayan' = geçmişte mevcut olmayan**; '**ezelî = geçmişte mevcut olan**'; 'ezelde mevcut olmayan ezelde mevcut olsun' demek **'geçmiş zamanda ma'dûm olan şimdi geçmiş zamanda mevcut oldu'** ⇒ geçmişte tasarruf (muhâl). ⇒ **ezelde mevcut olmayan sonradan ezelde mevcut olamaz**; bu, **nakîzin in'ikâsı**: '**ezelde mevcut olması imtinâ' olmayan ezelde mevcut olmak zorunda**'.
+- Netice/hüküm: **Kıdem tarafı 2. hüccet: 'ezelde imkânı olan ezelde vâcib' (ezelî = sahih olan vâcib).**
+- Delil çeşidi: **analitik (ezelî olmayan / hâsıl olmayan ayrımı)**; (T) burhânî biçim (kıdem tarafı). **[Delil ≠ dava: 'ezelî = geçmişte mevcut' tanımı 'ezel = evvelsizlik' tanımından farklı; kıyas ikincisi hudûs tarafınca kabul edilmez.]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §6.3**: 'el-ezelî: sahih olan vâcib' (muhakkiklerin sözü) kıdem tarafının temel ilkesi; c1 Mesele 7 ('ezel ve ebed hakîkati') ile birlikte incelenecek.
+- Doğan sual: —
+
+## c4 p174
+- OCR: orta
+- Okuma: tam
+- İçerik: (2. hüccet devam): '**âlemin ezelde mevcut olması muhâl değil** diye delillendirdik; **ezelde mevcut olmasında imtinâ' olmayan her şey ezelde mevcut olmalı** ⇒ **âlem ezelde mevcut**; **muhakkiklerin 'ezelî = sıhhati sabit olan hakkında vâcibdir'** sözünün mânâsı budur.' **İtiraz**: 'bu takrîr **her hâdis sûret ve araz** için geçer ⇒ hepsi ezelî.' **Cevap**: '**iki bâb arasında fark**: **her hâdisin imkânı ondan önce gelen hâdisin vücûduna şartlı**; bu imkânlar bu husûsî şartlara bağlı olduğundan **şartsız hâsıl olmaz** ⇒ her hâdisin imkânı belirli vakitte; **her hâdis başka hâdisle mesbûk, evvelsiz**; bu bizim mezhebimizdir.' **Başka takrîr**: 'muhâlif âlemin ezelde mevcut olmasının imtinâ'ını iddia ediyor; **bu iddianın fesadına delil** getirdik; **imtinâ' iddiasının bütün delilleri bâtıl.**' **3. hüccet (başlıyor)**: 'ma'lûmlar **iki kısım: zarûrî-bedîhî ve nazarî**; nazarî olan diğer ilimlere muhtaç ⇒ **devir veya teselsül** ⇒ bedîhî ilimlerin varlığı.'
+- Netice/hüküm: 2. hüccet sonu: **fark: her hâdisin imkânı öncekine şartlı ⇒ evvelsiz silsile**; 3. hüccet başladı: **bedîhî ilimler ve sarîh akıl hükmü**.
+- Delil çeşidi: **taksîm + fark**; (T) burhânî biçim (kıdem tarafı).
+- Mevzuya bağı: **Fasıl I §3**: 'evvelsiz silsile' (c2 p77–78 ile aynı çerçeve); Risale bu silsile iddiasına **'her hâdisin vücûdu irâde ile ihtisaslı, silsile müessir olamaz'** cevabını (kaynaklı: c4 p57–59 ve Kısım 2) yazacak.
+- Doğan sual: —
+
+## c4 p175
+- OCR: orta
+- Okuma: tam
+- İçerik: (3. hüccet devam; **'sarîh akıl'**): 'nazarî ilim **önceki ilimlere muhtaç** ⇒ **devir veya teselsül (muhâl)** ⇒ **bedîhî-zarûrî ilimler vardır; kabulleri delil ve hüccete değil, kendi zâtlarına göre**. Bu bedîhî ilimlerin **ne olduğunu, nasıl olduğunu** bilmek için: **sağlam akıllara, dürüst tabiatlara sunulan önerme**, sahipleri **delile ihtiyaç duymadan ittifak ederse** o, **zarûrî bedîhî ilimdir; akıllının bu önermelerle cezmi delil ve bürhana ihtiyaç bırakmaz.**' **Bu mukaddimeyle**: '**sarîh akıl şahitlik eder: şey ancak sâbık maddeden hâdis olur ⇒ madde kadîm ⇒ madde ancak cisim** ⇒ **üç mukaddime cismin kıdemini gerektirir.**' **1. mukaddimenin beyânı (vecihlerle)**: **(a)** '**yaşlı bir insan görürsek** sarîh akıl: **şimdi yaşlılık sıfatıyla birden hâdis olmadı**; ana-babadan doğdu, cenin, çocuk, genç, şimdi yaşlı; bu hâlde **şüphe eden, 'belki şimdi birden yaşlılık sıfatıyla hâdis oldu' diyen** herkes tarafından **deliliğe, bunaklığa** mahkûm edilir.' **(b)** '**muhkem bir şato ve yüksek bina** görüp de biri **toprak, tahta, taş, kerpiç olmadan birden hâdis olabileceğini** caiz görse… (p176).
+- Netice/hüküm: **Kıdem tarafı 3. hüccet: 'sarîh akıl: her hâdis sâbık maddeden ⇒ madde kadîm ⇒ cisim kadîm'.**
+- Delil çeşidi: **bedîhî iddiası + misal (yaşlı insan, şato)**; (T) ikna'î-burhânî biçim. **[Delil ≠ dava: 'hâdis sâbık maddeden' tümevarımı, Allah'ın 'ol' emriyle yoktan yaratmasını (hâdisin ilk örneği) dışarıda bırakır; 'sarîh akıl' iddiası nizâ konusunun kendisidir.]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §6.3**: 'yoktan yaratma' hakkında **aklın sarîhine karşı nass (Kur'ân 'yaratmak', 'ol' — ⊬ numaralar)**; Risale bu 'sarîh akıl' iddiasına **'sarîh akıl gözlemlenen hâdisleri bildirir; ilk yaratılış gözlem dışı' cevabıyla** yazacak; Râzî'nin Kısım 2 cevabı aranacak.
+- Doğan sual: —
+
+## c4 p176
+- OCR: orta
+- Okuma: tam
+- İçerik: (3. hüccet, misal devam): 'şato, toprak-tahta-taş olmaksızın birden hâdis olabilir diyen **deliliğe** hükmedilir; bu tür misaller çok; **hepsi sarîh aklın şahitlik ettiğini: şey ancak sâbık maddeden hâdis olur**.' **(2)**: '**tamamen imar edilmemiş çölde birden muhkem şato, yüksek bina, akan ırmaklar, mamur bahçeler** görsek **akıl bir dizi şeye hükmeder**: **(a)** kim yaptı, bu binaları kim üstlendi? **(b)** bu ırmaklar **nereden** akıtıldı? bu taşlar, tahtalar, aletler **nereden** getirildi? 'bunlar hiç öncesinde bu cisimler olmadan kendiliğinden oluştu' diyene **delilik**; ⇒ sarîh akıl **hâdisin sâbık maddeye iftikârına** hükmeder. **(c)** 'bu bina **ne zaman** hâdis oldu?' — 'hiçbir vakitte, hiçbir zamanda' diyene delilik ⇒ sarîh akıl **hudûsun ancak vakit ve zamanda tahakkuk ettiğine** hükmeder. **'Sarîh akıl hükmü ya kabul edilir ya edilmez; kabul edilirse her şeyde kabul: nasıl hâdisin fâile iftikârına hükmedersek, madde ve müddete iftikârına da hükmetmeliyiz; kabul edilmezse…' (p177).**
+- Netice/hüküm: **Kıdem tarafı 3. hüccet: 'hâdis ⇒ fâil + madde + müddet' üçlü iftikâr; sarîh akıl tümden kabul edilmeli.**
+- Delil çeşidi: **misal + bedîhî iddiası + 'ya hep ya hiç'**; (T) ikna'î-burhânî biçim (kıdem tarafı). **[Delil ≠ dava: 'hâdis fâile iftikâr eder' ile 'hâdis maddeye iftikâr eder' arasında akıl ayrımı yapılabilir: fâile iftikâr mantıkî zorunluluk (illiyet), maddeye iftikâr gözlem genellemesi; bu ayrım (imkân-i mantıkî vs tecrübî) hudûs tarafının cevabıdır.]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §3**: Risale **'mantıkî zorunluluk (hâdis ⇒ müessir) ile tecrübî genelleme (hâdis ⇒ madde) arasındaki ayrımı'** açıkça yazmalı; kıdem tarafı bu ayrımı **'ya hep ya hiç'** ile çiğniyor.
+- Doğan sual: —
