@@ -3817,3 +3817,66 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **aktarım + hüküm**; (T) cedelî.
 - Mevzuya bağı: **KRİTİK — Fasıl III (Mead), Fasıl I §8.3**: **hayvanların haşri** Sünnî kaynaklarda **haşr-i vuhûş** (Tekvîr 81/5) ayrı bahis; Risale Fasıl III'te **Mu'tezile'nin 'vâcib' iddiasını değil 'vâki' haberini** (hadis/âyet) yazar. **Ek dikkat:** Râzî'nin **'hayvanlara ivaz'** sözü kendi hükmü değil aktarımdır.
 - Doğan sual: **Râzî'nin kendi teodise cevabı ('Ehl-i Sünnet: Allah dilediğini yapar, hikmeti bilinmeyebilir') hangi sayfada açık yazılıyor?** (p425+ kavil 10–12 ve kapanış; yoksa 'kazâ-kader' bâbı.)
+
+## c4 p425
+- OCR: iyi
+- Okuma: tam
+- İçerik: **10. Fasıl: 'âlemin fâil-i muhtâr ilâhı olduğunu isbat edip, dilediğini yaptığını, dilediğine hükmettiğini, halkın maslahat-mefsedetine iltifat etmediğini söyleyenin kavlinin hikâyesi'** (Ehl-i Sünnet/Eş'arî çizgisi; Râzî'nin kendi safı). '**Bunlar Allah'ın fiil ve hükümlerinde tahsîn-takbîhi (aklî güzel-çirkin) nefyettikleri için 'Allah âlemin ihdâsını muayyen vakte tahsis etti, çünkü o vakit mükellefler için ihdâs ve tekvîne daha salih ve daha faydalı' diyemezler.**' **Hüccet 1**: '**fiil dâîye mevkûf; bu böyle olunca bütün zararlar, fuhuşlar ve kabâhatler Allah'ın kazâ ve kaderiyle; bu böyle olunca Allah'tan fiilin sudûrunun maslahat ve menfaat gözetmeye mevkûf olması imtinâ'.**' **Hüccet 2**: '**o vaktin bu ziyâde menfaate ihtisası ya zâtı gereği, ya zâtının lâzımı gereği, ya zâtı ve lâzımı dışında bir şeyle; ilki bâtıl (vakit hâsiyeti gerektirse her hâdis ona isnâd edilir; havâdisten sâni'in isbâtı imkânsız olur)**…' (p426)
+- Netice/hüküm: **Ehl-i Sünnet çizgisinin hâl fotoğrafı: aklî hüsn-kubuh yok ⇒ Allah'ın vakit tahsisi 'maslahat'a bağlanamaz.**
+- Delil çeşidi: **taksîm + ilke**; (T) burhânî biçim, öncül: aklî hüsn-kubuh nefyi (c3'te 'kullar için muteber, Allah için bâtıl' diye çözülmüştü).
+- Mevzuya bağı: **KRİTİK — Fasıl I §8 (irâde-tahsis kapanışı)**: **Râzî burada 'kendi safının' vakit tahsisi hakkındaki hâlini yazıyor; kapanışın kendisi p426'da.**
+- Doğan sual: —
+
+## c4 p426
+- OCR: iyi
+- Okuma: tam
+- İçerik: **Hüccet 2 devam**: '**ihtisâsı gerektiren vakit-lâzımı de aynı şekilde bâtıl; üçüncüsü de bâtıl: 'bu vaktin âlemin hudûsuyla tahsisini gerektiren nedir?' sorusunu, 'bu vaktin bu hâsiyetle tahsisini gerektiren nedir?' diye geri çevirebiliriz ⇒ teselsül: ya bir defada ya biri ötekinden önce, ilk yok ⇒ evvelsiz hevâdis gerekir. Böylece aklın güzel-çirkin dediğini nefyedenlere 'Allah âlemin ihdâsını o muayyen vakte hiçbir muhassıs olmaksızın tahsis etti' demek lâzım gelir.**' **Râzî'nin hâl özeti**: '**bu mezhepler bu vecihle özetlendi; her birinde güzellikler ve kusurlar (mekâdih) ortaya çıktı.**' **'Hayret ve dehşet ehli (kavil 12) burada dedi ki: bu deliller şüpheyi giderecek, özrü kesecek, akılları kuvvet ve nûruyla dolduracak açıklık ve kuvvete ulaşmadı; her birine bir tür bulanıklık yöneliyor; rahîm-kerîm için lâyık olan bu darboğazlarda hata edeni mâzur görmektir.**' **Râzî'nin tazarru' duası (kendi sesi)**: '**Allahım! Hüccetim ihtiyacımdır; ilmim yoksunluğum; vesîlem sana olan nimetin; şefâatçim bana olan ihsânın. Bilirim ki sana ancak fazlınla yol vardır; senden ancak adâletinle kopulur. İlmim serap, kalbim korkudan harabe, kum ve toprak sayısınca müşkilât; buna rağmen sevenlerden olmayı umarım; ümidimi boşa çıkarma ey Kerîm, ey Vehhâb.**'
+- Netice/hüküm: **KRİTİK TESPİT (Râzî'nin kendi safı için): 'Hüsn-kubuh nefyi ⇒ vakit tahsisi muhassıssız' bir LÂZIM olarak Râzî'nin kalemiyle yazılıyor (lâzım = kabul zorunluluğu); Râzî bu lâzımı bu sayfada ne reddediyor ne 'zâtî tercih' diye açıklıyor.** **Hemen ardından 'hayret ehli' kavlinin bulanıklık ve mâzuriyet beyânı geliyor (kavil 12'nin sesi olarak yazıldı) ve Râzî'nin duası başlıyor.** **Yani: irâde-tahsis düğümü Râzî'nin kalemiyle KESİN KAPANMIYOR; dürüst okuma: 'lâzım kabul edilir, açıklama yok; tevakkuf ve tazarru''.**
+- Delil çeşidi: **taksîm + teselsül + dua**; (T) hitâbî (dua) + burhânî biçim (teselsül); **F 27-B**: bu lâzım hem Ehl-i Sünnet safına hem hudûs delillerinin kendisine (vakit tahsisi) dönüyor — aynı silahın iki yönü.
+- Mevzuya bağı: **KRİTİK — Fasıl I §8.3 (irâde-tahsis) ve F 2-Y ('üç şık: icra et / sual sor / imkânsızlığın delilini koy')**: **Risale §8.3 'irâde-tahsis kesin kapanışı' cümlesini Râzî'den ALAMAZ; Râzî bu düğümü kapatmıyor.** **Önerilen ifade (karar padişahın): 'Allah'ın âlemi muayyen vakte tahsisi ilâhî irâdeye bağlıdır; bu tahsisin ilmî gerekçesi beşerî akılla tam çözülmez; Râzî bu noktada 'hayret ve tevakkuf' beyân etmiştir' — bu, Risale'nin 'iddia edilen derece gizlenmez' ilkesiyle örtüşür.**
+- Doğan sual: **Fasıl I §8.3'ün kapanışı Râzî'de yok; Sünnî kelâmda klasik cevap 'irâde bir sıfat-ı tahsîs, ilme tâbi, 'lâ yus'elü ammâ yef'al'' (Enbiyâ 21/23) — bu cevap Risale'nin kendi kaynağına (Kur'ân, Eş'arî/Mâtürîdî metinleri) bağlanmalı mı? (padişah kararı)**
+
+## c4 p427
+- OCR: iyi
+- Okuma: tam
+- İçerik: **Râzî'nin duasının sonu**: '**Allahım, sen bilirsin ki söylediğim ve yazdığım her şeyle yalnız hak ve doğruya nail olmayı, cehil ve şüpheden uzak olmayı murad ettim; kerem sahibi, vücûdu feyzeden Allahım, senin fazlınla…**' '**Bu bâbın (kitabın bu kısmının) sonu.**' **Kolofon (musannıfın kaydı)**: '**bu kitap Çarşamba gecesi, Cemâziyelevvel 605 (hicrî) tarihinde tamam oldu**' ('sene: hamse ve sittemi'e', OCR'de 'خمس وستمائة' okundu; yıl **605 h.** (⊬ diğer ciltlerdeki kolofon tarihleriyle karşılaştırma: c1 Zilkade 603; c2 Rebîülevvel 605 belirsiz)). **Hamd ve salavât kaydı.** **Editör kaydı**: '**Râzî'nin el-Metâlibü'l-Âliye'sinin 4. kitabı tamam; ardından 5. kitap: zaman ve mekân araştırması.**'
+- Netice/hüküm: **Cilt 4 metni burada bitti.** **Cilt 5 (zaman ve mekân) sıradaki.**
+- Delil çeşidi: —
+- Mevzuya bağı: **Fasıl I §6.3 (zaman), c4 p280 ('zaman bâbında') ve p404 ('Mekân ve Zaman kitabı')**: Râzî'nin defalarca atıf verdiği **zaman/mekân bâbı cilt 5'te**; **c4 açık borçlarından (zamanın bedîhiliği, hayûlâ nefyi, cevher-i ferd) büyük kısmı cilt 5'te aranacak.**
+- Doğan sual: —
+
+## c4 p428
+- OCR: —
+- Okuma: okunmadı (boş)
+- İçerik: metin yok.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c4 p429
+- OCR: orta
+- Okuma: tam (fihrist; içerik değil, harita)
+- İçerik: **Cilt 4 fihristi (neşredenin)**: **Kısım 1 (kıdem diyenlerin mebâhisi)**: **Makâle 1: zorunlu mukaddimeler** (M1 âlem tefsiri; M2 hudûs tefsiri; M3 bu mes'elede insanların mezhepleri; M4 ilâhî kitapların âlemin hudûsunu isbâtı; M5 âlemin evveli var mı; M6 kıdem ve hudûs sahiplerinin delilleri); **Makâle 2**: fâiliyet ve müessiriyet hâlinden çıkarılan vecihler (Fasıl 1: kavî hüccetin hikâyesi; Fasıl 2: diğer deliller); **Makâle 3**: kudret sıfatından; **Makâle 4**: irâde sıfatından; **Makâle 5**: hüsn-kubuh, hikmet ve abesten (…).
+- Netice/hüküm: **Fihrist cilt 4'ün Kısım 1 yapısını verir.**
+- Delil çeşidi: —
+- Mevzuya bağı: **c4 p1–239 defter kayıtlarının doğrulama cetveli.**
+- Doğan sual: —
+
+## c4 p430
+- OCR: orta
+- Okuma: tam (fihrist)
+- İçerik: **Fihrist devam**: **Makâle 6: ilim sıfatından; Makâle 7: mâddî illetten (âlemin zâtı gereği mümkin oluşu); Makâle 8: hareket, değişim ve hudûstan; Makâle 9: zamandan; Makâle 10: mekândan; Makâle 11: âlemin ebedî olması vâcib mi (ve ebediliğin vâcib olmayıp ezeliliğin vâcib olup olmadığı); Makâle 12: ezelî olmanın müessirden istiğnâyı gerektirmediği.** **Kısım 2 (hudûs diyenlerin mebâhisi)**: **Makâle 1: hareket-sükûn delili (Fasıl 1 takrîr; Fasıl 2 cismin ezelde müteharrik olamayacağı; Fasıl 3 cismin ezelde sâkin olamayacağı)**; **Makâle 2: başka deliller**; **Makâle 3: âlemin ilâhının fâil-i muhtâr olduğunu gösteren vecihler**: **1. Kısım hikmetten alınan i'tibârlar (Fasıl 1 Güneş'in menfaatleri; Fasıl 2 Ay'ın menfaatleri; Fasıl 3 sâir yıldızların hâlleri; Fasıl 4 aşağı âlemde hikmet eserleri)**; **2. Kısım Kur'ân'dan istinbât edilen deliller** (Fasıl 4…).
+- Netice/hüküm: **Fihrist Kısım 1'in Makâle 6–12'sini ve Kısım 2'nin yapısını verir; defter kayıtlarıyla örtüşüyor (p241–427).**
+- Delil çeşidi: —
+- Mevzuya bağı: **Kısım 1 Makâle 3–6 (kudret, irâde, hüsn-kubuh/hikmet/abes, ilim) — c4 p1–239 aralığında okunanlar; Râzî'nin kendi hükmü orada arandı (⊬ bölüm özetinde tek tek).**
+- Doğan sual: —
+
+## c4 p431
+- OCR: orta
+- Okuma: kısmî (fihristin son sayfası; başı kesik)
+- İçerik: **Fihrist son sayfa**: '**Kur'ân-ı Mecîd'den çıkarılan deliller**'; **Fasıl 4: 'Allah'tan sâdır olan ilk şey nedir — 'vâhid'den ancak vâhid sâdır olur' diyenlere göre'**; **Fasıl 5: 'bu filozofların, ilk sâdırdan kesretin nasıl sâdır olduğu hakkındaki mezhebinin şerhi'**; **Fasıl 6: 'âlemin iki ilâhı vardır diyenlere reddiye'**; **… Fasıl 10: 'âlemin fâil-i muhtârı olduğunu isbat edip dilediğini yaptığını, dilediğine hükmettiğini söyleyenin kavlinin hikâyesi'.**
+- Netice/hüküm: **Fihrist metinle tamamen örtüşüyor: Fasıl 1 (taksîm), 2 (Dehriyye reddi), 3 ('bir illetten çok ma'lûl' hücceti ve cevapları), 4–5 (sudûr), 6 (ikilik), 7 (nefs-hayûlâ), 8 (tenâsüh), 9 (ivaz), 10 (Ehl-i Sünnet safı).**
+- Delil çeşidi: —
+- Mevzuya bağı: **Cilt 4'ün son sayfası; cilt 4 tam okundu (p1–431).**
+- Doğan sual: —
