@@ -217,3 +217,75 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **tasavvur analizi + mikdâr taksîmi**; (T) ikna'î-burhânî biçim. **['Bölünme = ayânda mevcut' öncülü, itibârî bölünmeyi (zihnî/sosyal takvim) dışlar; hudûs tarafının 'zaman ânâtlardan mürekkeb / itibârî mikdâr' cevabı (c5 p9–19) açık.]**
 - Mevzuya bağı: **KRİTİK — Fasıl I §3, §6.3**: 5. hüccet **'kadîm = evveli olmayan; hâdis = evveli olan' tanımlarını zamana bağlıyor**; Risale'nin 'hudûs = vücûdun ademle mesbûkiyeti (zamansız)' tanımıyla **doğrudan çakışma alanı**: Risale zaman-siz hudûs tanımını **öncüle bağlı yazmalı** ve bu itirazı kaydetmeli.
 - Doğan sual: —
+
+## c5 p25
+- OCR: orta
+- Okuma: tam
+- İçerik: **7. hüccet sonu ve itiraz**: 'bu müddet kısa, şu uzun' bilgisi bedîhî; 'sıfat bedîhî ise mevsûfun aslı evlâ.' **İtiraz**: 'az-çok **itibârî**, yalnız zihinde/hayâlde.' **Cevap**: 'bu zihnî farz **hâricî emre mutabıksa** matlûb hâsıl; mutabık değilse **kâzib farz**, bâtıl — 'bu taşı yâkût farz etmek' gibi; **zamanı büyük ve küçük cüzlerle bölmek bu bâbdan değil** ⇒ 'bu, farz ve i'tibârdan ibarettir' diyenin sözü bâtıl.' **8. hüccet**: '**bütün cahiller ve avam tarih yazar, senelerin peş peşe geldiğini bilir; mâzî-müstakbel-hâli bedîheleriyle ayırır; bu sıfatlar müddetin sıfatlarıdır; sıfat zarûrî ilimse mevsûf evlâ.**' '**Bu vecihler birbirine yakın; hepsi müddetin vücûdunun zarûrî ilim olduğuna delâlet eder.**' **9. hüccet**: 'iki hareketin **birlikte başlayıp birlikte bittiğini**; başkasının **önce başlayıp önce bittiğini** zarûrî biliriz; meiyyet 'aynı zamanda', takaddüm-teahhur 'zamandan biri öncekinde' (p26).
+- Netice/hüküm: **Zamanın bedîhîliği ekolü: 7.–9. hüccet (kısa/uzun, tarih ve avam, hareketlerin meiyyeti).**
+- Delil çeşidi: **tasavvur analizi + ittifak (avam)**; (T) ikna'î-burhânî biçim. **[Delil ≠ dava: 'zihnî farz hâricîye mutabık mı' sorusu nizâ mahallini kendisi.]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §6.3**: 'avam ve cahiller de bilir' argümanı **fıtrat/bedîhe delili (hitâbî)**; Risale'de derece **ikna'î** işaretlenir.
+- Doğan sual: —
+
+## c5 p26
+- OCR: orta
+- Okuma: tam
+- İçerik: **10. hüccet (bedîhî ekol)**: '**bu hareket şu hareketten yavaş (karınca yürüyüşü kuş uçuşundan) bedîhî hüküm**; ama **yavaş ve hızlı hareketi tefsir etmek ancak zaman yoluyla**: hızlı = **daha az zamanda eşit mesafeyi kateden**, ya da **eşit zamanda daha uzun mesafeyi**; ⇒ hızlı-yavaş hareket mâhiyetinin tasavvuru **zamanın tasavvurunu** içerir ⇒ zaman bilgisi bedîhî.' '**Bu on vecihle çok sayıda başka vecihe tenbih ettik; birinde bile matlûbun isbâtı için kifâyet var.**' **2. kısım (zaman hareketten ayrı bir mevcut)**: 'zamanın bedîhî bilgisi evlâ ise **bu müddet felek hareketi veya felek hareketlerinin bir sıfatı olamaz**; deliller: **1. hüccet**: **karanlık evde oturan kör**, müddetin ne kadar geçtiğini **Güneş-Ay-yıldız hareketini hesaba katmadan** yaklaşık bilir; müddeti **durmaksızın akıp giden, 'akan ırmak gibi'** bulur; feleği ma'dûm, Güneş-Ay-yıldızları ma'lûm dışı, hareketleri sükûn farz etse bile **aklı bu şeyin (müddet) geçtiğine cezmeder.**' (p27)
+- Netice/hüküm: 10. hüccet; **2. kısmın 1. hücceti: zaman feleğin hareketinden bağımsız (körün deneyi).**
+- Delil çeşidi: **tasavvur analizi + düşünce deneyi**; (T) ikna'î-burhânî biçim.
+- Mevzuya bağı: **Fasıl I §3**: 'zaman felek hareketi değildir' iddiası **c4 p200'deki kıdem tarafı 'müddet zâtında bâkî cevher' görüşünün** aklî desteği; Aristo'nun 'zaman hareketin mikdârı' tanımına **doğrudan karşı çıkış**.
+- Doğan sual: —
+
+## c5 p27
+- OCR: orta
+- Okuma: tam
+- İçerik: **1. hüccet sonu**: 'doğuştan âmâ, hiçbir yıldız ve felek görmemiş, Allah'ın bu şeyleri yarattığını işitmemiş birini farz edelim; nefesini ve gözünü durdursa bile **bu müddeti zihinde sâbit ve müstemir buluyor**; ⇒ zamanın vücûdunun ve **felek ve yıldız hareketlerinden ayrı** oluşunun bilgisi zarûrî.' **2. hüccet**: '**aslî fıtratla akıl feleğin hareketinin mukaddem cüzünün müteahhir, müteahhir cüzünün mukaddem olmasını uzak görmez**: felek doğudan batıya gidiyorsa doğu çeyreğindeki hareketi öndedir, batıdan doğuya gitseydi batı çeyreğindeki hareketi öndedir; **ama zamanın mukaddem cüzünün müteahhir olmasını akıl fıtratıyla (bedîhî) uzak görür** ⇒ **müddet hareketin kendisi veya arızası değil**.' **3. hüccet**: '**felek hareketinin bu vakitten yüz bin sene önce hâsıl olup olmadığından şüphe edebiliriz (âlemin hudûsuna kâiller yüz bin sene önce felek hareketinden şüphe edebilir)**; ama **bu saatten yüz bin sene önce bir müddetin (zaman) mevcut olup olmadığından** şüphe (p28).
+- Netice/hüküm: 1.–3. hüccet: **zaman felek hareketi değil (körün deneyi; mukaddem-müteahhir fıtratı; şüphe farkı).**
+- Delil çeşidi: **düşünce deneyi + fıtrat + şüphe asimetrisi**; (T) ikna'î-burhânî biçim.
+- Mevzuya bağı: **KRİTİK — Fasıl I §3**: 3. hüccet (**'hâdis ehli hareketten şüphe edebilir ama müddetten edemez'**) **hudûs tarafının 'zaman da hâdis' cümlesine karşı** en ilginç argüman; Risale'nin 'zaman mahlûk' cümlesinin **bu şüphe asimetrisine cevap vermesi** gerekir.
+- Doğan sual: —
+
+## c5 p28
+- OCR: orta
+- Okuma: tam
+- İçerik: **3. hüccet sonu**: 'hareketten şüphe edebiliyoruz, müddetten edemiyoruz ⇒ **müddet harekete ve bütün felekî sıfatlara mugâyir**.' **4. hüccet**: '**felekî dairelerin en büyüğü mıntıka; paralel daireler: mıntıkaya yakın olan hızlı, uzak olan yavaş**; günlük hareketler **çok ve hız-yavaşlıkça farklı**; zaman felek hareketi olsaydı **niçin bir dairenin hareketi zaman sayılıp diğerleri sayılmıyor**? **Hepsi ise** bu bir gün bir gün olmaz, **birlikte hâsıl çok gün** olur, kimse söylemez; **hiçbiri değil** ise **zaman onlardan mugâyir, hepsini takdir eden**.' '**Sarîh akıl: bu dairelerin hareketleri hep aynı zamanda vâki; bu zaman hepsinin zarfı** ⇒ **zaman harekete mugâyir**.' **5. hüccet**: 'hareket **hızlı-yavaş** vasıflanır; **zaman öyle vasıflanmaz** ('bu zaman şu zamandan yavaş' denmez); ayrıca hız-yavaşlık **zamanla** akledilir (hızlı = aynı mesafeyi daha kısa zamanda)' (p29).
+- Netice/hüküm: 4.–5. hüccet: **paralel dairelerde çok hareket, tek zaman; zaman hızlı-yavaş vasıflanmaz.**
+- Delil çeşidi: **reductio + kavramsal ayrım**; (T) burhânî biçim.
+- Mevzuya bağı: **Fasıl I §3**: 'tek zaman, çok hareket' argümanı **Aristo'nun 'zaman hareketin mikdârı' iddiasına (c5 p18–19) karşı**; sonuç (mutlak zaman) kelâmî 'dehr' cevheriyle (c4 p200) **örtüşür**.
+- Doğan sual: —
+
+## c5 p29
+- OCR: orta
+- Okuma: tam
+- İçerik: **5. hüccet sonu**: 'zamanın hızı yok; hareketin var ⇒ zaman hareket değil.' **6. hüccet**: '**sonu olmayan halâda birbirinden bağımsız çok feleği akledebiliriz; hareketleri birbirine tâbi olmayan çok hareket akledilir; ama iki zamanın birlikte hâsılını akledemeyiz ⇒ hareket zamandan ayrı.**' **7. hüccet**: 'bu hareketin bütün sıfatlarıyla **bu zamanda** hâsıl olduğunu, önceki zamanda olmadığını söyleyebiliriz; **hareketin kendisinde veya sıfatlarından birinde ya başka harekette hâsıl olduğunu söyleyemeyiz** ⇒ zaman harekete ve sıfatlarına mugâyir.' **8. hüccet ('hareketsiz zaman')**: '**Allah kıyamette felek ve bütün kevâkibi i'dâm etse, sonra bu şeyleri uzun müddet mahz ademde bırakıp iâde etse ve mahşerde halkı iâde etse**: i'dâm ile iâde arası müddet **belirli**; akıl bu müddeti **daha kısa/uzun farz edebilir**; bu farzda **bütün hareketler ma'dûm; bu farz aklen imtinâ'ı bedîhî bilinen bir farz değil, mümkin bir farz**; nitekim **milel ve edyân ehlinin cumhûru bu hususa cezmeder**; imtinâ'ı bedîhî bilinen şeye halkın büyük kalabalığı ittifak edemez.' (p30)
+- Netice/hüküm: 6.–8. hüccet: **hareketsiz zaman farz edilebilir (kıyametteki i'dâm ile iâde arası müddet); milel ehli buna cezmeder.**
+- Delil çeşidi: **düşünce deneyi (kıyamet) + ittifak**; (T) ikna'î-burhânî biçim. **[Delil ≠ dava: 'i'dâm ile iâde arası müddet' (Allah'ın fenâ ve iâdesi) Sünnî akide için **haberî** (nakil), aklî delil değil; burada kıyamet inancı **zamanın felekten bağımsızlığına dayanak** yapılıyor — Râzî'nin hasmı için 'farz' olarak kaydedildi.]**
+- Mevzuya bağı: **KRİTİK — Fasıl III (Meâd), Fasıl I §3**: **Kıyamet ve iâde (haşir) hakkındaki 'i'dâm-iâde arası müddet' cümlesi Fasıl III ile temas eder**; Râzî bu deneyi zamanın bağımsızlığına **delil** olarak sunuyor; Risale'de kıyamet için **nass**, zaman için **ayrı** yazılmalı.
+- Doğan sual: 'Ma'dûmun iâdesi' bâbı hangi ciltte?
+
+## c5 p30
+- OCR: orta
+- Okuma: tam
+- İçerik: **8. hüccet sonu**: 'bütün hareketlerin akıllardan kaldırılması imtinâ' değil ⇒ **müddet harekete ve tüm sıfatlarına mugâyir**.' **9. hüccet**: '**hareketin mâhiyeti: hareketin bir hayizden başka hayize intikâli; ikinci hayizdeki hâsıl birinci hayizdeki hâsıldan sonra; bu ba'diyet zamânî ba'diyet** ⇒ **hareketin mâhiyeti zamanın mâhiyetini tasavvurdan sonra akledilir; zaman hareketin tasavvurundan müstağnî: Allah felek ve kevâkibi ve bütün hareketleri i'dâm etse bile aklımız ve fikrimiz müddetin butlânına hükmedemez; aslî fıtrat 'i'dâm vakti ≠ vücûd vakti' der; zaman akan su gibi (seyyâl), 'kılıç ucuna atılan iplik' gibi: iplik kılıç ağzıyla parça parça karşılaşır.**' **10. hüccet**: '**felekin hudûsuna, hatta bütün ecsâmın hudûsuna kâil olanlar hudûstan önce bunun mümkin olduğunu teslim etti**; bu, **aslî fıtratlarının şahitliğidir: bir şeyin hudûsu ancak …' (p31).
+- Netice/hüküm: 9.–10. hüccet: **hareket zaman tasavvuruna bağlı; zaman hareketten müstağnî; hudûs ehli hudûstan önceki imkânı kabul ediyor.**
+- Delil çeşidi: **tasavvur analizi + mukayese (seyyâl su/kılıç-iplik misali)**; (T) ikna'î-burhânî biçim.
+- Mevzuya bağı: **Fasıl I §3, §6.3**: **10. hüccet 'hudûs ehli hudûstan önce imkân kabul ediyor ⇒ kabliyet zamansal'** (c4 p35–40 'imkânın evveli var mı' aporisi ve p269 'imkân ezelî, vukû hâdis' ile **aynı düğüm**).
+- Doğan sual: —
+
+## c5 p31
+- OCR: orta
+- Okuma: tam
+- İçerik: **10. hüccet sonu**: 'bazıları **âlem hudûstan önce mümkin** dedi; bazıları **mümteni'**; **her iki takdirde felek, kevâkib ve âlemin hudûsundan önce kabl ve ba'd akıl ettiler** ⇒ **aklın bu müddetin vücûduna cezmi bedîhî; bu kabl ve ba'd felekî hareketten başka bir şeyle hâsıl.**' **11. hüccet**: 'hareket için **bir evvel farz edersek** bu **hareket öncesi hareket gerektirmez** (şey sâkin sonra müteharrik olur); **ahir farz edersek** ardından hareket lâzım gelmez (müteharrik sonra sâkin). **Müddet için evvel farz edersek** bu farzdan **bu evvelden önce müddet** lâzım gelir: müddetin evveli ancak **ademi vücûdundan önce** olduğunda; bu kabliyet **müddetsiz akledilemez**; **son (âhir) için de aynı: müddetin bitmesi ancak ademinin vücûdundan sonra; bu ba'diyet müddetle** ⇒ **hareketin evvel ve âhiri müddetin evvel ve âhirini gerektirmez ⇒ müddet harekete ve tüm sıfatlarına mugâyir.**' **Sonuç**: '**bu kahredici burhanlarla: zaman ve müddet felekî hareketin mikdârı olamaz.**' (p32)
+- Netice/hüküm: 11. hüccet: **hareketin evveli ≠ zamanın evveli; zaman harekete mugâyir.** **Bu, bedîhîlik ekolünün 'zaman hareketten ayrı' sonucunun tamamlanması.**
+- Delil çeşidi: **asimetri argümanı (hareketin evveli imkân, zamanın evveli imkânsız)**; (T) burhânî biçim.
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §6.3**: **c4 p205–208 (kıdem tarafı 8.–9. hüccet 'zamana hâdis demek zamandan önce zaman')** ile **birebir örtüşür**; **Risale 'zaman mahlûk' cümlesini bu asimetriye karşı 'ademi vücûdundan önce kabliyet' zamansız kabliyetle (c4 p15) yazmak zorunda**.
+- Doğan sual: Râzî zamanın hudûsu için kendi hükmünü hangi fasılda veriyor?
+
+## c5 p32
+- OCR: orta
+- Okuma: tam
+- İçerik: '**'zaman, mu'addil-i nehâr (ekvatoral) feleğin hareketinin mikdârıdır' diyenin sözü de bâtıl**: bu hareketin mikdârı hareketin bir sıfatı; onu bâtıl kıldık. **Sonuç**: '**müddet, nefsiyle kâim, müstakil bir mevcûddur; felekî hareketin müddetin vücûdunda hiçbir te'sîri yoktur; te'sîri yalnız bu müddeti cüz ve ba'zlarla takdirdedir**; **misal: gece ve gündüzü 'fencân' (saat kabı) ve saat sandukalarıyla takdir etmek: bu aletlerin zamanı îcâdda te'sîri yok, gece-gündüzü saat ve cüzlere bölmekte te'sîri var; felekî hareketin te'sîri de müddeti 'sene, ay, gün, saat' cüzlerine bölmekte, müddeti tekvîn ve îcâdda değil.**' **Kapanış**: '**bu, 'müddetin vücûdunun ve felekî harekete ve tüm hâllerine mugâyir oluşunun bilgisinin zarûrî' diyenlerin mezheplerinin takrîridir.**'
+- Netice/hüküm: **2. Fasıl: zamanın bedîhîliği ekolü tamam (Muhammed b. Zekeriyyâ er-Râzî ve kavmi): zaman nefsiyle kâim müstakil mevcut; hareket yalnız takdir eder; 11 hüccet + 10 hüccet.** [Râzî bunları 'daha güzel ve kâmil' kurmuş olarak aktarıyor; **Râzî'nin kendi hükmü değil**.]
+- Delil çeşidi: **derleme + misal (saat)**; (T) ikna'î-burhânî biçim.
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §6.3**: bu ekol **'zaman = müstakil mevcut cevher'** öğretisidir (c4 p200'deki kıdem tarafının 'dehr'i ile **aynı**); **Sünnî akide zamanı mahlûk sayar** — Risale **'zaman yaratılmıştır' cümlesini bu ekolün hangi noktasında (bağımsız varlık ↔ yaratılmışlık) yazdığını açıkça belirtmeli**; Râzî'nin nihai tercihi Fasıl 3–11'de aranacak.
+- Doğan sual: Râzî bu 2. fasıldan sonra ne yapıyor: itiraz mı, üçüncü kavil mi?
