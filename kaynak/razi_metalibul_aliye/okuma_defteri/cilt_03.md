@@ -2737,3 +2737,75 @@ Biçim: cilt 1–2 ile aynı.
 - Delil çeşidi: —; (T) sonuç.
 - Mevzuya bağı: **Fasıl I 'adl' ve 'hikmet'**: Risale'de **Allah'ın adli ve hikmeti nasslarla (Adl, Hakîm isimleri; 'zulmetmez') sabit; aklî vâcib-i aslah nefyedilir**; Râzî'nin delilleri (nimet=telâfi, teklif faydasız) **ana metne ALINMAZ**, **bâb özetinde tarihî belge olarak yazılır**.
 - Doğan sual: Bâbın Sünnî ana çizgi karşılığı (Eş'arî–Mâtürîdî) ayrı kaynaktan çalışılacak (⊬).
+
+## c3 p305
+- OCR: kötü (başlık bozuk; bâbın konusu metinden: **teklîf bi-mâ lâ yutâk**)
+- Okuma: tam
+- İçerik: **Yeni bâb (Fasıl 21): 'Takat üstü şeyle teklif (teklîf mâ lâ yutâk)'**. Râzî tezi: **teklif bi-mâ lâ yutâk vâkidir** (başlığın bozuk OCR'sinden ve delil cümlesinden okunuyor: 'teklîf bi-mâ lâ yutâk vâki' olduğuna delâlet eden vecihler'). **1. hüccet**: Allah **belirli kimselerin asla iman etmeyeceğini** haber verdi: 2:6 'kâfirlere uyarsan da uyarmasan da aynıdır, iman etmezler'; 36:7 'çoğuna söz hak oldu, iman etmezler'; 111:1 Ebû Leheb; 74:11–17 ('beni ve yalnız yarattığımı bırak… onu yakında bir yokuşa süreceğim'). **Vecih 1 (haber)**: belirli şahıs hakkında 'iman etmez' haberi verilmişken **imanı sudûr ederse Allah'ın doğru haberi yalana döner; Allah'ta kizb muhâl; muhâle götüren muhâl** ⇒ imanın sudûru muhâl ⇒ ona teklif **muhâlle teklif**.
+- Netice/hüküm: Râzî'nin **1. hücceti: 'haber' vechi ile teklif-i mâ lâ yutâk vukûu**.
+- Delil çeşidi: **haber ⇒ imtinâ' (mantıksal)**; (T) cedelî-nakli (öncül: 'Allah'ın haberi ile ilmi, imanı imkânsız kılar'; **ilim ve haberin imtinâ'a delâleti ayrıca ispat ister [dava ≠ delil]; Mu'tezile ve Mâtürîdî çizgi bunu reddeder**).
+- Mevzuya bağı: **KRİTİK — kul fiili / Ehl-i Sünnet içi ihtilâf**: **Eş'arî çizgide teklif-i mâ lâ yutâk 'cevaz' (aklen câiz), vukûu ise tartışmalı; Râzî burada 'vâki' diyor; Mâtürîdî çizgi ve 2:286 'Allah kimseye gücünün üstünde yük yüklemez' ile gerilim**. **Risale ana metnine 'Allah kimseye gücünün üstünde yük yüklemez (2:286 — ⊬ numara doğrulanacak)' nassı yazılır; Râzî'nin vukû' hükmü 'Râzî'ye göre' notuyla, ihtilâf açıkça belirtilerek**. Bu bâb Fasıl I'e girmez (Fasıl IV/ders katmanı için).
+- Doğan sual: Râzî'nin 'vukû'' hükmü Eş'arî ana çizgiden mi ayrılıyor, yoksa Eş'arî içinde mi (⊬).
+
+## c3 p306
+- OCR: orta
+- Okuma: tam
+- İçerik: **Aynı delilin 5 sûreti**: (1) **haber**: yalan kabûl edilemez; (2) **ilim**: Allah ondan iman etmeyeceğini bildiyse **imanı sudûr ederse Allah'ın ilmi cehle döner**, cehle götüren muhâl; (3) **ilmin mutabakatı**: ilim ma'lûma mutabık olursa ilimdir; 'iman yok' ilmi mutabık olmak için **imanın ademi** lâzım; iman varsa iki nakîzin cem'i; (4) **iman = Allah'ı her haberinde tasdik** ('iman etmezler' haberi dahil) ⇒ **hem 'iman et' hem 'iman etmeyeceksin' tasdikine mükellef** = **nefy ve isbâtı cem'**; (5) **48:15 'Allah'ın kelâmını değiştirmek isterler; deyin ki bize uymayacaksınız, Allah daha önce böyle dedi'**: **haber verilmiş şeyi tekvîn kastı, Allah'ın sözünü değiştirmek kastı** ve yasaklanmış; buna rağmen imanla emredildi ⇒ **emir ve nehiy cem'i**. Râzî: 'Bu söz **Mu'tezile usûlünü yıkan** sözdür; onlar bunun için çok söz zorladılar; hepsini istikssâ ile anmayacağım; bâb **iki makamda**.'
+- Netice/hüküm: Haber/ilim/mutabakat/tasdik/48:15 yoluyla teklif-i mâ lâ yutâk vukûu (Râzî'nin 5 sûreti).
+- Delil çeşidi: **reductio/mantıksal**; (T) cedelî-analitik (öncül aynı).
+- Mevzuya bağı: **Fasıl I §8 ('ilim-i ezelî ⇒ irâde')** ile aynı **'ilim ⇒ vücûb' öncülü**: **ilmin ma'lûmu vâcib kılıp kılmadığı sorusu** (c3 Bâb 3'te Râzî'nin 'ilmin özel nisbet olması' görüşü ile bağlantı: p104, 156, 234). **F 27-B**: bu öncülün ayırt edici gücü hasım (Mu'tezile) tarafından tartışılıyor (p311–312'de aklî deliller).
+- Doğan sual: —
+
+## c3 p307
+- OCR: orta
+- Okuma: tam
+- İçerik: **Bâb'ın iki makamı; Makam 1: (Mu'tezile'nin ilzamı)**: 'Sem'î ve aklî deliller, **imansızlığı bilmenin ve haber vermenin imanı imtinâ' kıldığını göstermez**.' **9 sem'î delil (hasım sesi)**: (1) Kur'ân'da 'engel yok' âyetleri: **17:94 'insanlar hidâyet gelince iman etmekten ne alıkoydu?'**; **4:39 'iman etseler ne olurdu?'**; **38:75 (İblis'e) 'secde etmekten seni ne alıkoydu?'**; **20:92 (Mûsâ'nın Hârûn'a) 'onların saptığını görünce seni ne engelledi?'**; **84:20 'onlara ne oluyor iman etmiyorlar?'**; **74:49 'onlara ne oluyor, öğütten yüz çeviriyorlar?'**; **9:43 'Allah seni affetsin, niçin izin verdin?'**; **66:1**; ... **Sâhib b. Abbâd** (Mu'tezilî vezir; Râzî'nin aktardığı söz): 'imanı yasaklayıp sonra emreder mi, küfür üzere yaratıp sonra ondan nehyeder mi, sonra 'nasıl döndürülüyorsunuz' der mi…' [Dipnot editör: 'bu söz 9. cüz'de'.]
+- Netice/hüküm: Mu'tezile'nin 1. sem'î delili: Kur'ân **'engel olmadığını' söyleyen sorularla dolu**.
+- Delil çeşidi: **nakl (âyet) + istifhâm-ı inkârî**; (T) hitâbî-cedelî. (Râzî aktarıyor, kendi görüşü değil.)
+- Mevzuya bağı: p305 ile aynı ihtilâf: **Risale Kur'ân'da 'engel yok' âyetleri ana metin nassı olarak kullanabilir**; Râzî bunlara nasıl cevap veriyor **p313+'da bakılacak**. Sâhib b. Abbâd sözü **Mu'tezile tarafı**, Risale'ye alınmaz. Âyet numaraları OCR'de bozuk: **⊬ doğrulanacak**.
+- Doğan sual: Râzî bu âyetlere ne cevap veriyor (p313+)?
+
+## c3 p308
+- OCR: orta
+- Okuma: tam
+- İçerik: (Sâhib b. Abbâd sözü devam: 'küfrü yaratıp 'niçin küfredersiniz'; hakkı bâtılla karıştırtıp 'niçin karıştırıyorsunuz'; onları yoldan alıkoyup 'niçin alıkoyuyorsunuz'; onlarla iman arasına girip 'iman etseler ne olurdu'; onları doğrudan uzaklaştırıp 'nereye gidiyorsunuz'; ..). **Hâsıl**: bu âyetler açıkça **'engel yok'** der; **ilim ve haber engel olsaydı bu âyetlerin hepsi yalan olurdu**. **(2) hüccet**: 4:165 'müjdeci ve uyarıcı elçiler, elçilerden sonra insanların Allah'a karşı hücceti kalmasın diye'; 20:134 'onlardan önce bir azapla helâk etseydik 'Rabbimiz bize bir elçi gönderseydin' derlerdi'; **Allah her mazereti kaldırdığını beyan etti; ilim ve haber engel olsaydı en büyük mazeret olurdu**. **(3) hüccet**: 41:5 kâfirlerin 'kalplerimiz davet ettiğin şeye karşı örtü içinde, kulaklarımızda ağırlık var' sözü zem için nakledilmiş; **ilim ve haber engel olsaydı onlar sadık olurdu, zemmi bâtıl**.
+- Netice/hüküm: Mu'tezile'nin 2. ve 3. sem'î delili (hasım sesi).
+- Delil çeşidi: **nakl + mazeret kıyası**; (T) hitâbî-cedelî.
+- Mevzuya bağı: **Fasıl II (Nübüvvet) ve IV**: 'Allah hücceti tamamladı' (4:165) **Risale'ye ana metin nassı**; Mu'tezile'nin ondan çıkardığı **'engel yok' sonucu ihtilaf konusu**.
+- Doğan sual: —
+
+## c3 p309
+- OCR: orta
+- Okuma: tam
+- İçerik: **(4) hüccet**: 2:6 ve 36:7 **zem, zecr ve kabahat gösterimi için indi**; **engellenmişlerse zemme müstehak değil, mazurlardır**, kör görmediği, kötürüm yürümediği için mazur olduğu gibi. **(5) hüccet**: Kur'ân **kâfirlere karşı Allah ve Resûlünün hücceti olsun diye** indi, kâfirlere nübüvvet ve teklifi iptal için hüccet olsun diye değil; ilim ve haber engel olsaydı 'bu ilim ve haber en kuvvetli engel; neden muhâl ile mükellef kılıyorsun' derlerdi, **cevap verilemezdi**. **(6) hüccet**: 8:40 'ne güzel mevlâ, ne güzel nasîr': imana sevketmeden imanla mükellef kılıp terkinde azap eden **ne güzel mevlâ olmaz**. **(7) hüccet**: 2:28 'Allah'ı nasıl inkâr edersiniz, ölüydünüz sizi diriltti': **Cebriyye görüşünde bu soruya 16 vecihle susturucu cevap** (Allah küfür için kudret ve dâîyi yaratmış, istemiş, bilmiş, haber vermiş…).
+- Netice/hüküm: Mu'tezile'nin 4–7. sem'î delili (hasım sesi); 7. delil cebri görüşü **cevabının 16 vecihle mümkün olduğunu** ispatlayarak çürütmeye çalışır.
+- Delil çeşidi: **nakl + reductio**; (T) hitâbî-cedelî.
+- Mevzuya bağı: p307–308 ile aynı; **Fasıl II mucize ve hüccet**. 
+- Doğan sual: —
+
+## c3 p310
+- OCR: orta
+- Okuma: tam
+- İçerik: **(7) hüccetin 16 veçhi**: Allah kâfirlerde **küfür kudreti ve dâîsini** yarattı, küfrü **irâde etti, ilmetti, haber verdi**; bu dördü ayrı ayrı küfrün **tam sebebi**; iman için **hiçbirini yaratmadı** ⇒ 'nasıl inkâr edersiniz' sorusuna **cebri görüşte susturucu cevap** var; öyleyse **haber hak ise soru bâtıl**. **(8) hüccet**: bu övgü ve zecirler **yalnız Kur'ân'da değil bütün ilâhî kitaplarda ve peygamberlerin sünnetinde**; ilim ve haber engel olsaydı hepsi boş. **(9) hüccet**: **takat üstü teklifin olmadığını bildiren âyetler**: **2:286 'Allah kimseye gücünün yettiğinden fazlasını yüklemez'**; **22:78 'sizin için dinde bir güçlük kılmadı'**; **7:157 'onların ağırlıklarını ve üzerlerindeki zincirleri kaldırır'**; 'muhâl ile teklifin üstünde hangi güçlük ve meşakkat?' **Aklî deliller başlıyor**: **(1)** ilim ma'lûmun ademi engelse **Allah hiçbir şeye kâdir olmaz**: ilmi vukûu olan vâcib-vukû', bilinmeyen mümteni'; vâcibe ve mümteni'e kudret taalluk etmez.
+- Netice/hüküm: Mu'tezile'nin 8–9. sem'î deliline kadar sayıldı; **2:286 ve 22:78 takat üstü teklifin nefyi (ana nass)**.
+- Delil çeşidi: **nakl (nass)**; (T) hitâbî-nakli. **Hasım tarafından sunulan bu nasslar aynı zamanda Sünnî ana çizginin nasslarıdır.**
+- Mevzuya bağı: **KRİTİK**: **2:286, 22:78, 7:157 Risale ana metnine nass olarak yazılır**; Râzî'nin vukû' iddiasına karşı **nass-ı sarîh**. Râzî'nin cevabı p313+'da bakılacak. Âyet numaraları defterde bozuk OCR'den okundu: **⊬ doğrulanacak**.
+- Doğan sual: Râzî 2:286'yı nasıl te'vîl ediyor (p313+)?
+
+## c3 p311
+- OCR: orta
+- Okuma: tam
+- İçerik: **Aklî deliller (devam)**: **(1) devam**: vâcibe kudret taalluk etmez ⇒ Allah 'hiçbir şeye kâdir değil' sonucu; **hikmet-sefeh bahsi Allah'ın kâdir olmasına fer'** ⇒ bu söz kudreti zedeliyorsa bâtıl. **(2)**: **ilim şeyi olduğu gibi kuşatır**: mümkin ise ilim mümkin, vâcib ise vâcib; iman ve küfür mâhiyeti gereği **mümkin**; **ilim ve haber onu vâcib yaparsa ilim ve haber ma'lûmun hâlini değiştirmiş olur (muhâl)**. **(3)**: **ilim engelse kul hiçbir şeye kâdir olmaz** (bilinen vâcib-vukû', bilinmeyen mümteni'), hareketleri **ıztırâri hayvan hareketleri** gibi; bu **bedîhî bâtıl**: yüzüne tuğla atılan, atanı ayıplar, tuğlayı ayıplamaz; tavandan düşen tuğla ile kasıtlı atılan tuğla arasındaki fark bedîhî; **medih ve zemmin, emir-nehyin, 'niye yaptın/yapmadın'ın ıztırârî fiilde anlamsızlığı**.
+- Netice/hüküm: Mu'tezile'nin aklî delilleri: (1) kudret, (2) ilmin mahiyeti, (3) kulun kudreti ve medih-zem.
+- Delil çeşidi: **reductio + darûrî (bedîhî)**; (T) burhânî biçim (Mu'tezile'nin en güçlü delili: 'ilim ma'lûmu değiştirmez'). **[Bu deliller Sünnî ana çizgide de kabul edilir: ilim keşiftir, cebir doğurmaz.]**
+- Mevzuya bağı: **Fasıl I §8 ve ilim**: **'ilim keşfeder, vâcib kılmaz' ilkesi Sünnî akidedir (ilim-i ezelî ma'lûmu kuşatır, zorlamaz)**; Risale ilim bâbında **bu cümleyi yazar**; Râzî'nin 'ilmi özel nisbet sayma ve ma'lûmla değişme' meyli (p104, 156, 234) **bu deliller karşısında** ayrıca değerlendirilecek.
+- Doğan sual: Râzî'nin bu 3 aklî delile cevabı (p313+).
+
+## c3 p312
+- OCR: orta
+- Okuma: tam
+- İçerik: **Aklî deliller (4–8)**: **(4)** ilim adem imtinâ' gerektirirse **kâfire imanı emretmek onun ilmini i'dâm emretmek**; nasıl Allah'ın zâtını i'dâm emretmesi olmazsa **ilmini i'dâm** da olmaz; **emir vârid olduğuna göre ilim ve haber engel değil**. **(5)** iman kendi başına mümkin; Allah onu mümkin olarak bilmeli, yoksa ilim cehle döner; ilim onu vâcib yaparsa **ilim hem mümkin hem vâcib kılar** ⇒ iki nakîz. **(6)** muhâl ile emir **sefeh ve abes**; caiz olsa her sefeh câiz olur: **mûcizenin yalancıda zuhuru, va'd ve vaîdin yerine getirilmemesi** de caiz olur ⇒ nübüvvet ve teklif bâtıl. **(7)** caiz olsa **âmâya mushaf noktalamayı**, kötürüme havada uçmayı, kol-bacağı bağlı dağdan atılana 'niçin göğe uçmadın' demeyi emretmek caiz olur; akıl bunları kabul etmez. **(8)** caiz olsa **cemâdâta peygamber gönderme ve kitap indirme, meleklerin teklifi ulaştırması** caiz olur; **bu din ile istihza**.
+- Netice/hüküm: Mu'tezile'nin **8 aklî delili** (1: kudret, 2: ilmin mahiyeti, 3: kul kudreti, 4: ilmin i'dâmı, 5: ilim-mümkin, 6: sefeh ⇒ nübüvvet iptali, 7: âmâ misali, 8: cemâdât); **Makam 1 (Mu'tezile) bitti**.
+- Delil çeşidi: **reductio + darûrî + misal**; (T) burhânî biçim/cedelî; **(6) delili 'muhâl teklif sefeh, sefeh caiz olsa nübüvvet bâtıl' Sünnî ana çizgi için de ilgili**.
+- Mevzuya bağı: **Fasıl II (Nübüvvet)**: **'Allah sefeh ile tenzih edilir ⇒ muhâl ile teklif olmaz' hattı Risale'nin nübüvvet güvencesine bağlanabilir (delil: nass 2:286)**; **Râzî bu delillere cevap verecek (Makam 2, p313+)**.
+- Doğan sual: Râzî'nin cevabı: 'teklif mâ lâ yutâk câiz, vâki' mi? Hangi ölçüde?
