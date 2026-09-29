@@ -3601,3 +3601,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **dilemma**; (T) burhânî biçim, öncül: 'ilâh kâdir olmalı; şerre rızâ şerîrliktir'.
 - Mevzuya bağı: **Fasıl I §6.2, §8.3**: bu delil c2 p145–149'daki 'seneviyye çözümünün çıkmazı' ile **aynı aile**; Risale **tevhîd bâbında** kullanır, **teodise bâbına 'şer ilâhı yok, şer mahlûk ve imtihandır' cevabını ayrıca yazmak zorunda (⊬ açık borç: kazâ-kader bâbı).**
 - Doğan sual: —
+
+## c4 p401
+- OCR: orta
+- Okuma: tam
+- İçerik: **7. Fasıl başlığı**: '**âlemin hudûsunun sebebi nefsin hayûlâya âşık olmasıdır diyenin kavlinin hikâyesi**.' Râzî: '**bu mezhebin haberi ve eseri âlem ehlinden silinmişti; (bir kimse — OCR'de fâil adı 'er-Râzî' okunuyor, hangi Râzî olduğu belirsiz, sonraki sayfada Muhammed b. Zekeriyyâ er-Râzî anılıyor) onu ihya etti; insanlar dillerini salıverdi ve faydasız uzattı; ben lecâc (inat) ve ta'assuptan uzak, istikṣâ ile şerh ediyorum; kelâm birkaç mukaddimeyle tamam olur.**'
+- Netice/hüküm: **Yeni bâb: 'nefs-hayûlâ kadîm' kavlinin (kavil 7, c4 p368) tafsîli.** **Bu bölümün sahibi (ihyâ eden) OCR'de belirsiz: Muhammed b. Zekeriyyâ er-Râzî (tabip-filozof) sonraki sayfada atfediliyor; hüküm bağlanmadı (⊬).**
+- Delil çeşidi: —
+- Mevzuya bağı: **Fasıl I §8, §8.3 (irâde-tahsis şüphelerinin en güçlü biçimi)**: bu bâbın 3. mukaddimesi 'sonsuz terk sonrası fiil' şüphesidir (c2 p137, c4 p304 ile aynı aile).
+- Doğan sual: **'Er-Râzî' kimin — Muhammed b. Zekeriyyâ?** p403–404'te açık.
+
+## c4 p402
+- OCR: —
+- Okuma: okunmadı (boş)
+- İçerik: metin yok.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c4 p403
+- OCR: orta
+- Okuma: tam
+- İçerik: **1. Mukaddime (aktarım — 'derler ki')**: '**mevcut ya sırf müessir müteessir değil: Bârî; ya sırf müteessir müessir değil: hayûlâ (heyûlâ); ya hem müteessir hem müessir: nefs (ilâhın âleminden eser kabul eder, hayûlâya te'sîre güç yetirir); ya ne müessir ne müteessir: fezâ (halâ) ve dehr.**' **Bu dört kısım aklî taksîmdir; sonra delil vücûdlarına delâlet eder**: **Bârî**: 'âlemin havâdisi muhdise muhtaç; âlemin ilâhının fâil-i muhtâr olması gerektiğini gösteren deliller' ⇒ kâdir-hakîm ilâh. **Hayûlâ**: 'havâdisin hayûlâsız olmayacağı delilleri'; sonra '**Muhammed b. Zekeriyyâ (er-Râzî)** dedi: '**bu hayûlâ, vücûdca bölünmez (lâ yetecezzâ) cüzlerdir, vehmen tecezzîye kâbil; bu 'cevher-i ferd' bahsinde zikredilecek**; **bu cüzler ezelde dağınık, durmuş, sâkindi**.'
+- Netice/hüküm: **Aktarım: Muhammed b. Zekeriyyâ er-Râzî'nin 'beş kadîm' sistemi: Bârî, hayûlâ (cevher-i ferd), nefs, fezâ, dehr.** (**Kaynak notu: bu görüş Râzî'nin aktarımıdır; 'beş kadîm' şirk-i kelâmî içerir, Risale'de sadece reddiye bağlamında anılır.**)
+- Delil çeşidi: **sınıflama (aktarım)**; (T) betimleyici.
+- Mevzuya bağı: **Fasıl I §6.2 (vahdâniyet), §3**: 'beş kadîm' iddiası vahdâniyete doğrudan hasım; **her biri vâcib bi'z-zât** sayıldığı için c2 K2 F1 delillerinin **hedefi** olur; Risale bu görüşü **tek cümleyle anar**, Râzî'nin reddiyesini (sonraki sayfalar) esas alır.
+- Doğan sual: —
+
+## c4 p404
+- OCR: orta
+- Okuma: tam
+- İçerik: **Nefsin isbâtı — iki makam (aktarım)**: **(1)** nefsin bedenden gayr olduğu (filozofların delilleri meşhur); **(2) nefsin kadîm olduğu**: '**âlemin ilâhının fâil-i muhtâr olduğu, mûcib olmadığı delille sâbit ise fiili ezelî olamaz (fâil-i muhtâr kasd ile fiil eder); fiili kasdla olanın fiili hâdis, ademe mesbûk; fâil olmayıp bu vakte kadar bekleyen ilâhın bu vakitte fiile başlaması ancak, kendisinden önce onu fiile sevk eden cahil bir fâilin bulunmasıyla mümkin; bu cahil fâil nefstir ⇒ nefs kadîm.**' **Fezâ ve dehrin ezelî olduğu 'Mekân ve Zaman' kitabında** (⊬ Râzî'nin başka eseri veya bu külliyat içinde bir bâb). **Muhammed b. Zekeriyyâ er-Râzî**: '**bu beş kadîmin her biri vâcib bi'z-zât; 'vâcib bi'z-zât birden fazla olamaz' diyenlerin delillerine tâ'n etti ve hiçbirinin sahih bahse dayanamayacağını söyledi.**' **'Bu bâbda vukûf gereken mukaddimelerden biri.'**
+- Netice/hüküm: **Aktarım: 'nefs kadîm' iddiası, 'muhtâr fâilin fiili hâdis ⇒ ezelî terk ⇒ fiile sevk eden cahil nefs' zinciriyle.** **Zekeriyyâ er-Râzî'nin 'tevhîd delilleri sahih bahse dayanmaz' tâ'nı Râzî'nin kendi c2 K2 F1 'meşkûk' tespitiyle **sözde** örtüşür ama Râzî **tevhîdi savunur** (c2 K2 F2–F4, c4 p399–400).**
+- Delil çeşidi: **taksîm + ilke**; (T) burhânî biçim (aktarılan), öncül bağımlı ('muhtâr fiili ezelî olamaz' öncülü c4 p274 ile aynı).
+- Mevzuya bağı: **KRİTİK — Fasıl I §6.2, §8**: 'muhtâr fiili ezelî olamaz' öncülü **bu kavlin de dayanağı**; öncülün **Mâtürîdî tekvîn ezelî** çizgisiyle ayrışması (c3) burada **ters yönde bir kanıt**: öncül kabul edilirse 'ezelî terk sonra fiil' ⇒ nefs gibi bir sevkçi gerekir; **Risale bu öncülü 'öncüle bağlı' yazıp irâde-tahsis cevabını ayrıca kurmak zorunda** (Râzî cevabı sonraki sayfalarda ⊬).
+- Doğan sual: **'Mekân ve Zaman' kitabı bu külliyatta mı?** (⊬ Cilt 5–9'da okuyarak aranacak.)
+
+## c4 p405
+- OCR: orta
+- Okuma: tam
+- İçerik: **2. Mukaddime**: '**müessir ya tabî' ve îcâb yoluyla ya kudret ve ihtiyâr yoluyla müessir; ihtiyâr iki kısım: (a) hakîm fâil: fiili hikmet ve maslahata uygun; (b) abes ve ittifâk yoluyla fâil: çocuklar ve deliler gibi**; hakîm bir kişiden de böyle fiil sâdır olabilir: büyük bir mesele ile meşgul insan o düşünce sırasında sakalından bir tel ile oynar, yoldan bir ot koparıp oyalanır; tel ve otla oynasa da bu fiillere karşı gâfil gibidir; **fiili ve terki hikmet ve maslahat kânununa değil, ittifâk ve abes yoluna uygundur**.' (Kısa sayfa; 3. mukaddime p407'de.)
+- Netice/hüküm: **Aktarılan mukaddime: fâil-i muhtârın iki kısmı (hakîm/abes), abes hakîmden de nâdiren sâdır olabilir.**
+- Delil çeşidi: **taksîm**; (T) burhânî biçim (aktarılan), öncül bağımlı.
+- Mevzuya bağı: **Fasıl I §8, §8.3**: 'hakîm fâil ⇒ sebepsiz tahsis yapmaz' öncülü **irâde-tahsis düğümünün yeni biçimidir**; **'lâ yus'elü ammâ yef'al' (Enbiyâ 21/23) cevabı Risale'de Sünnî çizgide yazılmalı (⊬ Râzî'nin cevabı p409+).**
+- Doğan sual: —
+
+## c4 p406
+- OCR: —
+- Okuma: okunmadı (boş)
+- İçerik: metin yok.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c4 p407
+- OCR: orta
+- Okuma: tam
+- İçerik: **3. Mukaddime (aktarım — 'derler ki')**: '**delille sâbit: âlemin ilâhı mûcib bi'z-zât değil fâil-i muhtâr; muhtâr olduğuna göre fiili hâdis; fiili hâdisse ezelden o vakte kadar fiili terk etmişti; hakîm ilâhın sonsuz süre terk ettikten sonra fiile başlaması caiz değil; buna vecihler (şüpheler)**: **Şüphe 1**: 'bu vakit **bir hâsiyetle ihtisas etti mi** ki hakîm fâil o hâsiyet yüzünden onu tekvîne başlamak için seçti? **Evetse**: vaktin bu hâsiyetle ihtisası **ya o vaktin zâtı gereği, ya zâtının bir lâzımı, ya ikisi de değil**; **ilk ikisi bâtıl: o muayyen vakit o muayyen hâsiyeti gerektirirse başka havâdisi de gerektirebilir; caiz kılarsak havâdisin hudûsundan hakîm ilâhın vücûduna istidlâl edemeyiz**; **üçüncüsü de bâtıl: bu vaktin tekvîne başlamak için tahsisi hakkındaki soru o hâsiyetle tahsisinde aynen geri döner.**' (p408).
+- Netice/hüküm: **Aktarım: 'sonsuz terk sonrası fiil' şüphesinin 1. vechi (vakit hâsiyeti).**
+- Delil çeşidi: **taksîm (dilemma) + teselsül**; (T) burhânî biçim (aktarılan).
+- Mevzuya bağı: **KRİTİK — Fasıl I §8 (irâde-tahsis)**: **bu, c2 p137, c4 p268, p304 ile aynı düğümün en açık formülü: 'niçin şimdi?'**; Râzî'nin **kendi kapanışı** bu bâbın devamındaki cevapta aranacak (p409+).
+- Doğan sual: **Râzî 'niçin şimdi' sorusunu cevaplıyor mu (mürecciḥsiz rüçhân mı, irâdenin zâtî tahsisi mi)?** (p409+.)
+
+## c4 p408
+- OCR: orta
+- Okuma: tam
+- İçerik: **Şüphe 1 devam**: '**Hayır (vakit hâsiyeti yoksa)**: hakîm ilâh o vakitte tekvîne, sonsuz terkten sonra, o vakte has bir sebep olmadan başladı ⇒ **mahz abes; bu fiil hakîm fâile yakışmaz.** **Misal**: '**akıllı bir hakîm uzun yıllar bir fiilden kaçınsa, evinin köşesinde sessiz oturup o fiili tamamen bıraksa; sonra uzun devirlerden sonra bir anda sıçrayıp büyük gayret ve tam ictihâdla işe başlasa, her akıllı ona şunu der: 'Bu ısrâr-terk ile şu başlayıştan geçişe sebep ne?' 'Hiçbir sebep hâdis olmadı' derse akıllılar der: 'Bu akıllara ve hakîmlere yakışmaz: terk daha doğruysa niçin sebepsiz fiile geçtin? Fiil daha doğruysa niçin önce terk ettin?'**' '**Sebepsiz geçiş hakîm fâile yakışmaz; sefîh fâile yakışır: çocuklar ve deliler bazen sebepsiz fiilden terke, terkten fiile geçer; akıllılar bu hâlin câhil ve abes fâilden hâdis olmasını uzak görmez.**' ⇒ '**tekvîne kasdın ibtidâsı hakîm fâile yakışmaz, cahil fâile yakışır ⇒ (sonuç: nefs kadîm, cahil fâil).**'
+- Netice/hüküm: **Aktarım: sonsuz ezelî terk + sebepsiz başlayış hakîme yakışmaz; misalle güçlendirildi.**
+- Delil çeşidi: **misal + ilke ('hakîm sebepsiz geçmez')**; (T) hitâbî-ikna'î (misal), burhânî biçim (dilemma).
+- Mevzuya bağı: **KRİTİK — Fasıl I §8, §3**: **'akıllı hakîm insan misali' Allah'a kıyas (kıyâs-ı gâib alâ'ş-şâhid)**; Sünnî çizgide **'Allah'ın fiili insan fiiline kıyas edilemez, irâde-i ilâhî hikmetle mukayyet ama vakit tahsisi ilâhî ilme bağlıdır'** cevabı (⊬ Râzî'nin cevabı). **Risale bu şüpheyi 'hasmın en güçlü biçimi' diye yazar, cevabı Râzî'nin kapanışına bırakır.**
+- Doğan sual: —
