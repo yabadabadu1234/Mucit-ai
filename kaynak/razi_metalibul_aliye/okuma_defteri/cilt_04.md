@@ -2953,3 +2953,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: —
 - Mevzuya bağı: —
 - Doğan sual: —
+
+## c4 p329
+- OCR: iyi
+- Okuma: tam
+- İçerik: **3. Makâle, 1. Kısım başlığı**: '**usûl-i hikmetten alınan i'tibârlar: âlemin müdebbiri fâil-i muhtâr olmak zorunda, mûcib illet değil**.'
+- Netice/hüküm: **Hikmet/nizâm delilleri bölümü başladı (Râzî'nin 'aklî hikmet i'tibârları').**
+- Delil çeşidi: —
+- Mevzuya bağı: **Fasıl I §8 (Vâcib=Fâil-i muhtâr)**: bu bölüm **c1 p319–321 açık borcunun ve c3 'kâdir-mûcib' düğümünün** hikmet yoluyla kapanışıdır; **derece hitâbî-ikna'î, tümevarımsal.**
+- Doğan sual: —
+
+## c4 p330
+- OCR: —
+- Okuma: okunmadı (boş)
+- İçerik: metin yok.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c4 p331
+- OCR: orta
+- Okuma: tam
+- İçerik: **Güneş'in yaratılışında hikmet eserleri (Râzî: 'zâhir, şu vecihlerden')**. **Vecih 1**: 'Allah üç üst gezegenin hareketlerini, tedvîr (epicycle) çemberlerinin ve hâmil çemberlerin oranlarıyla, **Güneş'in ortalama hareketine eşit olacak biçimde takdir etti**; bu yüzden bu gezegenler tedvîrlerinin **zirvesinde Güneş'le kavuşumda, hadîzinde karşısında**; alt gezegenlerin tedvîr merkezi hareketi Güneş'in ortalama hareketine eşit; 'bâliğa hikmet' devir merkezlerindeki hareket kısımlarını tamamladı; **Güneş'in diğerlerine nisbeti sultanın kullarına nisbeti gibi** … **Güneş feleğin ortasına yerleştirilmiştir**: sultanın makamı memleketin ortasında olur (p332). (Dipnotta âyet: 'Güneş ve Ay'ı sizin için yörüngede ısrarla hizmete verdi', 14/33 okuması ⊬ OCR dipnotu.)
+- Netice/hüküm: **Râzî'nin hükmü: Güneş'in konumu ve hareket oranları hikmetli takdirdir (fâil-i muhtâr-hakîm delilinin kanıt malzemesi).**
+- Delil çeşidi: **tümevarımsal hikmet/gâye delili (istidlâl bi'n-nizâm)**; (T) hitâbî-ikna'î; **kendi tenkidim: astronomik model klasik (Batlamyus) gök cisimleri modeli; bugünkü astronomiyle bağdaşmaz.**
+- Mevzuya bağı: **Fasıl I §8, nizâm delili**: **astronomik ayrıntı (tedvîr, hâmil, 11 küre) Risale ana metnine ALINMAZ**; delilin **mantığı** (gâyeye uygun düzen ⇒ hikmetli fâil) modern bilgiyle yeniden kurulup kurulmayacağı **padişah kararı**. Râzî'nin metnindeki 'Güneş-sultan' kıyası ders katmanında **dönemin dünya tasavvuru** notuyla.
+- Doğan sual: Nizâm delilinin **modern fizik/biyolojiyle yeniden kurulması** (ince ayar vb.) Risale'ye alınacak mı? (padişah kararı)
+
+## c4 p332
+- OCR: orta
+- Okuma: tam
+- İçerik: **Vecih 1 sonu**: 'âlem **onbir küre**: **beşi Güneş'in feleği üstünde** (Merih, Müşteri, Zuhal, sâbit yıldızlar, en büyük felek); **beşi Güneş'in feleği içinde** (Zühre, Utârid, Ay, ince küre = ateş-hava, kesif küre = su-toprak); Güneş cisimler âleminin sultanı olduğu için yeri kürelerin **ortası**.' **Vecih 2**: 'Ay'ın nûru Güneş'e yakınlık-uzaklıkla artıp eksilir; birçokları diğer yıldızların nûrunun da Güneş'ten iktibâs olduğunu söyler; **Ay'ın nûru zâtî değil arızî (Güneş'ten)**; aksi hâlde **hüsûf** (ay tutulması) olmazdı; hüsûf olmasa Ay'ın gerçek yeri **paralaks** yüzünden bilinemez, sâir yıldızların gerçek yerleri de bilinemezdi; **Ay tutulması yıldızların konumunu bilmenin anahtarıdır**.' **Vecih 3**: 'Güneş çıkınca yıldızlar kuvvetli ışığıyla gizlenir ama **kuvvetleri bâkî**; bu yüzden yazın bir günü ötekinden sıcaktır: Güneş seyrinde sıcak bir yıldızla kavuşursa sıcaklık artar.' **Vecih 4**: 'geceleyin bütün hayvanlar ölü gibi; sabah nûru doğunca cesetlerde gece nûru (hayat) belirir.'
+- Netice/hüküm: **Vecih 2–4: Ay tutulması/paralaks, yıldız etkisi, gece-gündüz hayat ritmi.** (**'Yıldız kuvvetleri sıcaklığı artırır' kanaati astroloji kökenli; Risale'ye alınmaz.**)
+- Delil çeşidi: **tümevarımsal hikmet + kozmoloji**; (T) hitâbî-ikna'î.
+- Mevzuya bağı: **Fasıl I §8**: Vecih 4'ün 'gündüz-hayat, gece-fütûr' gözlemi **modern biyolojide sirkadiyen ritim** ile doğrulanabilir; **astronomik/astrolojik kısım ana metne alınmaz**.
+- Doğan sual: —
+
+## c4 p333
+- OCR: orta
+- Okuma: tam
+- İçerik: **Vecih 4 devamı**: 'Güneş'in doğuşu hayvan bedenlerine **hayat kuvvetini üfler**; nûr ne kadar tamam ise hayat kuvvetinin belirmesi o kadar kâmil; Güneş yükseldikçe insanların ve hayvanların hareketi artar, alçaldıkça azalır; **Güneş batınca korku, fütûr, noksanlık**; hayvanlar yuvalarına döner; şafak kaybolunca bedenler durur, ölü-gibi olur; sabah aynı hâller yenilenir ⇒ **Allah en büyük nûrun hâllerini öyle tedbir etti ki Güneş cisimler âleminin sultanı oldu**.' **Vecih 5 (Güneş'in hareketli olması)**: 'Güneş bir yerde durmuş olsa orası aşırı sıcak, diğer yerler aşırı soğuk olurdu; **sabah doğudan doğar, batıya vurur, yön yön dolaşır**; **kuzey-güney yönünde ise hareketi eğiktir (ekliptik meyli)**: meyil olmasa tesiri tek yörüngeye has kalırdı, diğerleri faydadan mahrum; **mevsimler**: bir yerde kış, bir yerde yaz (yakıcı), bir yerde ilkbahar-sonbahar; **meyil ve hareket hızı** ne az ne çok, **ihtiyaç mikdârı**.'
+- Netice/hüküm: **Vecih 4–5: gece-gündüz ve mevsimler (ekliptik eğikliği) faydalı düzen.**
+- Delil çeşidi: **tümevarımsal hikmet**; (T) hitâbî-ikna'î; **kendi tenkidim: 'Güneş'in hareketli olması' bugün Dünya'nın hareketi olarak bilinir; nizâm delili aynı kalır, mekanizma değişir**.
+- Mevzuya bağı: **Fasıl I §8**: mevsimlerin **Dünya ekseninin eğikliğinden** doğduğu bugünkü bilgiyle **nizâm delilinin çekirdeği korunur** (ihtiyaç mikdârı, ne az ne çok); **Risale'de yazılırsa modern bilgiyle**; Râzî'nin astronomisi ana metin değil.
+- Doğan sual: —
+
+## c4 p334
+- OCR: orta
+- Okuma: tam
+- İçerik: **Vecih 5 sonu**: 'meyil olmasa bir bölge yanmaya, öteki bölge donmaya mahkûm; **rutûbetler kuruyup ateşe döner, mevlûdât (bitki-hayvan-maden) teşekkül etmez**; meyil sayesinde her yönde bir süre kalıp tesirini tamamlar.' **Vecih 6**: 'Güneş'in **evc (uzak nokta) ve hadîz (yakın nokta)** hareketi: hadîzde Dünya'ya yaklaşır, sıcaklık artar; sıcaklık nemi çeker; **buhâr o yöne çekilir; evc tarafı açılır, deniz yerinde kalmaz; Dünya'nın bir yanı hayvanların, bilhassa insanın yaşamına elverişli olur**.' **Vecih 7**: 'Güneş'in temas ettiği yerden **çok uzak** bölgeler (iki kutup altı) **çok soğuk**; orada hayvan ve bitki olmaz; **altı ay gündüz altı ay gece**, şiddetli rüzgâr, zifiri karanlık; delil: 'Ermenî denizi' (Karadeniz/Hazar? ⊬) ve 'Şenâmî denizi' (⊬ bilinmiyor) kışın aylarca seyir edilemez.'
+- Netice/hüküm: **Vecih 6–7: yakınlık-uzaklık ve kutup bölgesi gözlemi.** (Kutup 6 ay gündüz-gece gözlemi doğru; 'deniz yerinde kalmaz, buhâr çeker' açıklaması zamanın hidrografik tahmini.)
+- Delil çeşidi: **tümevarımsal hikmet**; (T) hitâbî-ikna'î; **kendi tenkidim: Vecih 6'nın kara-deniz dağılımı açıklaması modern jeolojiyle bağdaşmaz.**
+- Mevzuya bağı: **Fasıl I §8**: kutup gündüz-gece gerçeği geçerli; **nedenselleştirmeler ana metne alınmaz**. **Coğrafî adlar (Ermenî denizi, Şenâmî denizi) tespit edilemedi (⊬).**
+- Doğan sual: —
+
+## c4 p335
+- OCR: orta
+- Okuma: tam (bazı özel adlar bozuk)
+- İçerik: **Vecih 7 sonu**; **Vecih 8**: '**istikrâ (tümevarım): insanların cisim, renk, ahlâk, tabiat ve siyerlerindeki ihtilâfın zâhir sebebi Güneş'in hareket hâllerindeki ihtilâftır**; insanlar üç kısım: **(1)** ekvatordan Yengeç dönencesi yakınına kadar yaşayanlar ('siyâhlar'); Güneş başları üzerine yılda bir-iki defa iner, **derilerini ve saçlarını karartır**; ekvatora daha yakın olanlar (Zenc, Habeş): saçları kıvırcık ve kesif, cüsseleri büyük, **ahlâkları 'vahşî'**; Yengeç'e daha yakın olanlarda siyahlık az, tabiatları ılımlı, ahlâkları yumuşak, bedenleri zayıf (Hind, Yemen, bazı Mağribliler, **bütün Araplar**); **(2)** Yengeç dönencesinden Büyük Ayı'ya kadar ('beyâzlar'): renkleri orta, bedenleri mutedil, ahlâkları güzel (Çin, Türk, Horasan, Irak, Fars, Şam) …' (p336)
+- Netice/hüküm: **Râzî çağının coğrafî-astrolojik determinizmi: renk, karakter, zekâ ve ahlâkın Güneş'in hâllerine bağlanması.** **Bu hükümler (özellikle bazı milletler için 'vahşî ahlâk', 'zekâ' hükümleri) Risale'ye ALINMAZ; İslam'ın insanlar arasında ırk-renk üstünlüğü olmadığı ilkesine (Hucurât 49/13: en üstünüz takvâca en ileri olanınızdır; veda hutbesi) aykırı biçimde okunabilir; kaynak notu olarak kaydedildi, iddia olarak taşınmaz.**
+- Delil çeşidi: **tümevarım (istikrâ) — genelleme**; (T) hitâbî-zayıf; **kendi tenkidim: örneklem klişe; modern antropoloji ve genetikle bağdaşmaz; nizâm delilinin gücünü artırmaz, zayıflatır.**
+- Mevzuya bağı: **Fasıl I §8 ve 'Râzî'nin ana metne alınmayacak içtihatları' listesi**: **Vecih 8 tümüyle ana metin dışı** (padişah kararına gerek yok, doğrudan kural: zayıf delil + ahlâkî sakınca).
+- Doğan sual: —
+
+## c4 p336
+- OCR: orta
+- Okuma: tam
+- İçerik: **Vecih 8 devam**: '**güneye meyleden (Şam, Irak…) daha zekî ve anlayışlı; doğuya meyleden nefsi güçlü, hatırlayıcı; batıya meyleden yumuşak, sır tutan; (3) Büyük Ayı'nın karşısında yaşayanlar (Slavlar, Ruslar): soğuk fazla, rutubet çok; renkleri beyaz, saçları sarı, bedenleri iri-gevşek, tabiatları soğuğa meyilli, ahlâkları 'vahşî'.**' '**Birinci ve yedinci iklimde imâr az; ikinci, altıncı, üçüncü, dokuzuncu iklimde artar; dördüncü iklim imârı süreklidir.**' **Editör dipnotu (Sekkâ, Râzî'nin değil)**: 'Slavlar ve Ruslar Yâfes oğullarından, Araplar Sâm oğullarından, Afrikalılar Hâm oğullarından' diyenler, **Nûh'la beraber gemiden mü'minlerden bir topluluğun çıktığını** unuttular … (neşredenin kanaati; **⊬ hadis/rivayet doğrulaması yapılmadı, ana metne alınmaz**). **Dipnot**: 'Müellif (Allah rahmet eylesin) Rey'denir.'
+- Netice/hüküm: **Vecih 8'in devamı: coğrafî determinizm; iklimlere göre imâr.** **Ana metne alınmaz (p335 gerekçesi).**
+- Delil çeşidi: **genelleme**; (T) hitâbî-zayıf.
+- Mevzuya bağı: **Fasıl I §8**: hikmet delili için **Vecih 1–7'nin mantığı** (fayda-uygunluk-ihtiyaç mikdârı) ders katmanında; **Vecih 8 kesilir**.
+- Doğan sual: Râzî'nin 'usûl-i hikmet i'tibârları' devam ediyor; **Güneş dışında Ay, yıldızlar, unsurlar, madenler, bitki, hayvan, insan** için vecihler p337'den. **Kur'ân delilleri (Kısım 2) hangi sayfadan?**
