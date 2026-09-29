@@ -361,3 +361,75 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **mefhûm analizi + taksîm (adem/mevcut; zihin/ayân)**; (T) burhânî biçim; **F 27-B**: 'kabliyet zâid mevcut sıfat' öncülü **c1 M2 'vücûb sübûtî' çizgisiyle uyumlu**, ama **c4 p264 'izâfetler ayânda yok' hükmüyle GERİLİM** (kabliyet de izâfî).
 - Mevzuya bağı: **KRİTİK — Fasıl I §3, §6.3 ve tutarlılık**: **Râzî burada kabliyet-ba'diyet-meiyyeti 'ayânda mevcut zâid sıfat' diyor; c4 p264'te ise 'izâfetler ayânda mevcut değil, aksi teselsül' diye cevap vermişti** — **açık gerilim (Râzî'nin kendi iki hükmü)**; Risale iki hükmü **uzlaştırma yazmadan** hiçbirini ana metne almaz.
 - Doğan sual: **Râzî bu gerilimi (izâfî ↔ ayânda mevcut) çözüyor mu?** (p41–45.)
+
+## c5 p41
+- OCR: orta
+- Okuma: tam
+- İçerik: **2. hüccet devam (Râzî'nin takrîri)**: '**bu mefhûmlar ya ma'rûz ve mevsûfsuz, kendi başına kâim ya ma'rûza/mevsûfa muhtaç**; **birincisi bedîhen bâtıl**: kabliyet-ba'diyet **nisbet ve izâfe** bâbından, **cevher olamaz**; kalan ikinci: **bu kabliyet ve ba'diyetlere arız olan şeyler** var; ama **her şey bu tür nisbet/izâfeyi kendi mâhiyeti gereği kabul etmez**: baba 'cismânî cevher' olduğu için oğuldan önce değil, 'uzun, beyaz, âlim, zâhid' olduğu için değil ⇒ **kabliyet-ba'diyetin bizzât lâhik olduğu bir emir vardır**; **bu emir hareket değil** (önceki fasıldaki çok vecih). **Ek**: 'hareketin mukaddem cüzü müteahhir akledilebilir; **zamanın mukaddem cüzü müteahhir akledilemez** ⇒ bu bizzât-ma'rûz **mevcut, seyyâl, kendi zâtında munkazî, hareketten mugâyir**; **zaman ancak budur**.' **İtirazlar (Râzî aktarıyor)**: **Soru 1**: 'kabliyet-ba'diyet mevcut sıfatlardan **değil**: 'kabliyet lâ-kabliyetin nakîzi; lâ-kabliyet adem; ademin nakîzi sübût' sözü **imkânla nakzedilir**: **imkân vücûb ve imtinâ' nefyidir; imtinâ' adem, vücûb sübût**; 'nefyin nefyi sübût' kaidesiyle imkân hem vücûd hem adem olurdu (muhâl).' (p42)
+- Netice/hüküm: 2. hüccet tamam (Râzî'nin kendi takrîri: zaman = bizzât kabliyet-ba'diyetin ma'rûzu; mevcut, seyyâl, hareketten mugâyir); **Soru 1'in 1. kolu: 'nakîzin nakîzi sübût' kaidesi imkânla çelişir.**
+- Delil çeşidi: **taksîm (arız/ma'rûz) + fark argümanı**; itiraz: **nakz (imkân örneği)**; (T) burhânî biçim.
+- Mevzuya bağı: **KRİTİK — Fasıl I §3 ve c4 p285 (imkân adem-vücûd)**: itirazın **'imkân hem vücûd hem adem olurdu'** kolu, **c4 p170–172 ('imkân sübûtî mi')** tartışmasıyla **doğrudan bağlı**; Râzî'nin kendi c4 p172 hükmü (imkân sübûtî öncülü çürütüldü) burada **onun zaman delilinin önündeki engel**.
+- Doğan sual: Râzî bu 'imkân' nakzına cevap veriyor mu? (p42+.)
+
+## c5 p42
+- OCR: orta
+- Okuma: tam
+- İçerik: **Soru 1 devam**: '**kabliyet-ba'diyetin mevcut sıfat olamayacağı 4 vecihle**: **(1)** '**sarîh akıl: her muhdes kendi ademine mesbûk; adem vücûdundan önce ⇒ kabliyet-sebk-takaddüm ademin sıfatı; ademin sıfatı mevcut olamaz (mevcut sıfatın ma'dûmda kıyamı muhâl)**'; **(2)** '**kabliyet mevcut sıfat ise o sıfat başkasına nisbetle kabl/meiyyet/ba'd olmak zorunda ⇒ teselsül**; 'kabliyet kabl olmakta zâtının aynı, zâid değil' itirazı: **kabliyet kabl idi dediğimizde mevzû kabliyet, mahmûl 'başka şeyden önce'; mahmûl mevzûdan gayr** ⇒ **kabl olması zâtının aynı olamaz**'; **(3)** '**kabliyet ve ba'diyet iki izâfe; her biri ötekine nisbetle akledilir; mütedâyifeyn izâfeler ayânda ve zihinde birlikte mevcut**; mevcut iseler **birlikte mevcut olmalı; mevsûfları da birlikte** ⇒ **kabl ve ba'd beraber mevcut** (muhâl)'; **(4)** '**muzâfların beraberliği zâid sıfat ise beraberliğin beraberliği ⇒ teselsül; zâid değilse öteki beraberlikler için de öyle**' (p43).
+- Netice/hüküm: **Soru 1 (4 vecih): kabliyet-ba'diyet mevcut sıfat olamaz (adem sıfatı; teselsül; mütedâyifeyn beraberliği; beraberliğin zâidliği).**
+- Delil çeşidi: **reductio + teselsül**; (T) burhânî biçim.
+- Mevzuya bağı: **KRİTİK — c4 p264 ('izâfetler ayânda yok') ve c5 p40**: **bu 4 vecih Râzî'nin c4 p264'teki cevabıyla (izâfetler ayânda yok; aksi teselsül) **aynı çizgi**; Râzî burada **kendi 2. hücceti (kabliyet mevcut zâid)** ile **kendi c4 p264 hükmünü** yüz yüze getiriyor (aynı ciltte iki taraf). Râzî'nin cevabı **p47–48+'da** aranacak.
+- Doğan sual: —
+
+## c5 p43
+- OCR: orta
+- Okuma: tam
+- İçerik: **Soru 2**: '**bu delil zamana zaman gerektirir: zamanın bazı cüzü ötekinden önce; bu sebk illiyet ve zâtla değil, zamanla; dünün bugünden takaddümü hareketin sâbık cüzünün lâhik cüzden takaddümü gibi**; bu takaddüm **ancak zamanla** karar bulursa zamanın başka zamanı lâzım gelir; yoksa **aynı bâbtan doğru olsun** ('zamansız takaddüm' bizim için de).' **3. hüccet (Râzî: 'bu delili zamanı isbâtedenler için ben tertip ettim')**: '**zarûrî biliriz ki bir şey var ki bazen senelere, bazen aylara, günlere, saatlere bölünüyor**; bunun bilgisi **en açık bedîhî ilimlerdendir**; 'bu şey senelerle sayılır ve ölçülür; ay günlerle…; **her aklı olan 'şu kadar senem var', 'bu yıldan geçen aylar', 'kalan aylar', 'bu günden geçen ve kalan saatler' bilir**.' (p44)
+- Netice/hüküm: Soru 2 (zamana zaman itirazı, 2. hücceti hedef alır); **3. hüccet (Râzî'nin kendi tertibi): 'bölünen şey' bedîhîsi.**
+- Delil çeşidi: **itiraz (teselsül/tu quoque) + bedîhî iddiası**; (T) burhânî biçim / ikna'î.
+- Mevzuya bağı: **Fasıl I §3**: Soru 2 **c5 p13 (mecmû içi-dışı)** ve **c4 p17** ile **aynı** düğüm; **3. hüccet Râzî'nin 'zamanı isbâtedenler için kendi tertibi'** — Râzî'nin hükmü değil, ekol için delil kurma.
+- Doğan sual: —
+
+## c5 p44
+- OCR: orta
+- Okuma: tam
+- İçerik: **3. hüccet devam**: '**bu taksîmlerin sıhhatine bedîheler hükmetti; sıhhatinden şüphe eden 'tam cinnet ve şiddetli bunaklık' ile mahkûm edilir**; **bu şey ya mahz adem ya mevcut ve sâbit**; **birincisi bâtıl**: mahz adem **cüzlere ve ba'zlara bölünemez, bölünen kısımlar 'ötekinden çok/az' diye nitelenemez**; sarîh akıl 'sene aydan uzun, ay günden uzun, gün saatten uzun' der; **ayrıca sarîh akıl bu şeyin bir kısmının mâzî, bir kısmının müstakbel olduğuna hükmeder; mâzî hâzırken geçen, müstakbel hâzır olması beklenen**; **hâzır olması/hâsıl olması hiç olmasa akıl ona mâzî ve müstakbel demezdi** ⇒ **mahz adem değil, mevcut.** **Mevcûdât iki kısım: kâr-ı vücûd (cüzleri birlikte hâsıl) ve gayr-i kâr** (p45).
+- Netice/hüküm: 3. hüccet: **zaman bölünür, mâzî-müstakbel taşır ⇒ mahz adem değil.**
+- Delil çeşidi: **bedîhî iddiası + ontolojik taksîm**; (T) ikna'î-burhânî biçim.
+- Mevzuya bağı: **Fasıl I §3**: 'zaman bölünme ⇒ mevcut' çıkarımı **c5 p24 (bedîhî ekol 6. hüccet) ile aynı**; Risale **'zaman mahlûk (yaratılmış)' derken 'zaman nefiy değil'** diyebilir (ikna'î).
+- Doğan sual: —
+
+## c5 p45
+- OCR: orta
+- Okuma: tam
+- İçerik: **3. hüccet devam**: '**kâr-ı vücûd = cüzleri birlikte hâsıl; gayr-i kâr = değil**; bölünen şey **kâr değil**: bedîhe hükmeder ki **iki cüzü birlikte mevcut olmaz**: iki sene, iki ay, iki gün, iki saat birlikte hâsıl olmaz; **hatta en küçük iki cüzü birlikte hâsıl olmaz; farz edilen her iki cüzden biri öteki'nden mukaddem; birinin hâsılında öteki hâsıl değil** (**sâfi tefekkür ve lafızların mefhûmlarını zihinde hâzır etme şartıyla**); ⇒ **müddet ve zaman denen şey mevcut, gayr-i kâr**; **oysa cisim, kem, keyf, ayn, vaz', izâfe ve sâir makûlât kâr**; ⇒ zaman **bunların hepsinden mugâyir**. **Sonra**: 'bu şey ya hareket, ya hareketin sıfatı, ya hareketten ve sıfatlarından mugâyir'; **1. bâtıl (önceki fasılda çok vecih)**; **ek**: '**hareket = ardışık hâsıllar; ardışıklık = bir şeyin ötekinin ardından zamanlarda hâsılı; bu tevâlî hareket ile zamanlar arasında izâfe; izâfe zamanların hâsılından sonra** ⇒ **hareket, mâhiyetinin karar bulmasında zamana muhtaç; zaman kendi zâtında hareketten müstağnî** (hareketsiz ve tagayyürsüz müddet farz edilebilir)' (p46).
+- Netice/hüküm: 3. hüccet: **zaman = gayr-i kâr mevcut; hareketten mugâyir (ardışıklık zamanı içerir).**
+- Delil çeşidi: **ontolojik taksîm (kâr/gayr-i kâr) + asimetri**; (T) burhânî biçim. **[Delil ≠ dava: 'hareket = ardışık hâsıllar' tanımı Râzî'nin c4 p289–290 tanımıyla **aynı**; sonuç 'ardışıklık zamanı içerir' ⇒ hareketin tanımı zamanı varsayar — Râzî burada bunu zamanın **lehine** kullanıyor.]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §3**: **Râzî'nin hareket tanımı (ardışık hasûl) hem c4'te 'cevher-i ferd yok' için hem burada 'zaman mevcut' için kullanılıyor — iki delil aynı öncüle bağlı**; öncül zayıflığı iki tarafı da etkiler (⊬).
+- Doğan sual: —
+
+## c5 p46
+- OCR: orta
+- Okuma: tam
+- İçerik: **3. hüccet sonu**: '**zaman hareketin sıfatı da olamaz**: sıfat tahakkukunda hareketin hâsılına muhtaç; zaman hareketin sıfatı olsaydı **tahakkukunda harekete muhtaç**; oysa hareket **mâhiyetinin tahakkukunda zamana muhtaç** ⇒ **devir**; ayrıca zaman **mâhiyetinin tahakkukunda hareketten müstağnî** (önceden gösterildi), hareketin sıfatı olan her şey **tahakkukunda harekete muhtaç** ⇒ **zaman hareketin sıfatı olamaz** ⇒ **zaman gayr-i kâr-ı zât mevcut; ne hareket ne sıfatı; hareketlere ve tagayyürlere bir tür zarf ve vi'â**; **bizim isbâtı hedeflediğimiz zaman ancak budur.**' **Uyarı**: '**önceki iki delilde 'zamana zaman' lâzım gelmişti; bu delilde lâzım değil**: burada **zarûrî ilmin bölünen bir şeyin hâsılı** olduğunu iddia ettik; sonra onun 'ne bu ne şu' olduğunu gösterdik; 'zamanın başka bir zarfı var' hükmünü **fıtrat vermez; akıl bedîhesi bunu reddeder** ⇒ bu suâl bu vecihte lâzım değil.' **4. hüccet** başlıyor: 'tevkît (zaman belirtme) hakîkati' (p47).
+- Netice/hüküm: 3. hüccet sonu: **zaman = gayr-i kâr mevcut zarf; 'zamanın zarfı' itirazı bu delilde vârid değil (fıtrat zarf vermez).**
+- Delil çeşidi: **devir + ayrım**; (T) burhânî biçim.
+- Mevzuya bağı: **KRİTİK — Fasıl I §3**: **'zamanın zarfı yok, fıtrat vermez' cümlesi Râzî'nin 'bedîhe' kullanımının bir örneği (c4 p274/p305 gerilimi ile aynı ailedir)**; ontolojik statü: 'zarf ve vi'â' = **c4 p200 'dehr' cevheri** ile örtüşür.
+- Doğan sual: —
+
+## c5 p47
+- OCR: orta
+- Okuma: tam
+- İçerik: **4. hüccet (tevkît)**: 'bir adam 'güneş doğunca gelirim', 'bahar gelince gelirim' der; **adamın gelişi meçhul, güneşin doğuşu ma'lûm; meçhul ma'lûmla karnedilir**; **ehl-i tahkîk: 'tevkît = müteceddid mevhûmun müteceddid ma'lûmla karnı, îhâmı gidermek için'**. **Bu mukaddimeden sonra**: '**sağlam bedîhe ve aslî fıtrat bu tevkîtin sıhhatine hükmeder; gelecek tarihler bunun üzerine: meçhul olayların bilinen gelecek vakitlerle tarifi**; mâzî tarihler de aynı.' **'Güneş doğunca gelirim' = 'Güneşin doğduğu vakitte gelirim'**: **tek bir vakit farz edilir ki hem adamın gelişi hem güneşin doğuşu onda hâsıl**; **bu vakit baki-sâbit mi seyyâl-munkazî mi**? **Baki ise şu anda hâsıl olurdu, müntazar ve müstakbel olmazdı** (bedîhe: o vakit şu an hâzır değil, müntazar); ⇒ **seyyâl**; ya **hareketin cinsinden**, ya sıfatı, ya bu ikisinden mugâyir; **birincisi bâtıl**: fıtrat bu vakti **feleğin hareketine zarf** kıldı; zarf mazrûf değil (p48).
+- Netice/hüküm: **4. hüccet: tevkît ('güneş doğunca') tek bir seyyâl vakti zarf olarak varsayar; zarf hareket değil.**
+- Delil çeşidi: **dil/örf analizi (tevkît) + taksîm**; (T) ikna'î-burhânî biçim. **[Delil ≠ dava: 'örf ehli dili' bir dil-analizi; itirazda 'iktirân/meiyyet ile tefsir' alternatifi var (p48).]**
+- Mevzuya bağı: **Fasıl I §3**: tevkît argümanı **c4 p208 ('kâne/summe' dil analizi)** ile **aynı tarz**; Risale dil-analizi delillerini **ikna'î** işaretler.
+- Doğan sual: —
+
+## c5 p48
+- OCR: orta
+- Okuma: tam
+- İçerik: **4. hüccet devam**: '**ikinci şık (vakit hareketin sıfatı) daha bâtıl: vakit feleğin hareketine zarf; feleğin hareketi bütün sıfat ve yönleriyle mazrûf; zarf hareketin sıfatı olsa aynı şey aynı şeye hem zarf hem mazrûf (muhâl)**. **Ayrıca**: 'Allah filan fiili felekler ve kevâkib hareketlerinden durduğunda yapar' diyen biri olsa bu söz **bedîhe nezdinde fesâdı ma'lûm** olmaz; zarf **felekî hareketlerden ya da hâllerinden** olsaydı bu söz **bedîhe nezdinde kat'an fâsit** olurdu (**vakitsiz hudûs bedîhen imtinâ'**). **Ayrıca felekî hareketin hâllerinden ve sıfatlarından her biri 'filan vakitte vâki oldu' veya 'filan vakitte vâki olacak'**.' ⇒ **zarf felekî hareket veya sıfatı değil; mevcut seyyâl (zaman).** **İtiraz**: 'bu, **'güneş doğunca gelirim' = 'gelişim güneşin doğuşuyla mukârin'** tefsirine karşı: **'vakit' değil 'iktirân/meiyyet'**; ayrıca bu hüccet **örf ehlinin sözüne bina**, bunun benzerine iltifat edilmez.' **Cevap 1**: 'bu **mukârenet ve meiyyet mâhiyette değil, ne** … (p49).
+- Netice/hüküm: 4. hüccet sonu (zarf hareket veya sıfatı değil); **itiraz (iktirân ile tefsir, örf) ve cevap başladı.**
+- Delil çeşidi: **reductio + dil analizi; itiraz-cevap**; (T) ikna'î-burhânî biçim.
+- Mevzuya bağı: **Fasıl I §3, §6.3**: 'Allah filan fiili felekler dururken yapar' misali **hareketsiz zamana** dair (c5 p29 kıyamet deneyi ile paralel); **Risale bu misali kullanmaz**.
+- Doğan sual: —
