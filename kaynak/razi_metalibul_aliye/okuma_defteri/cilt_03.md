@@ -2953,3 +2953,75 @@ Biçim: cilt 1–2 ile aynı.
 - Delil çeşidi: **dâî/müreccih argümanı (c3 Bâb 1 aporisi)**; (T) cedelî-analitik. **[Delil ≠ dava: 'dâî iki şahsa eşit' öncülü ispatsız varsayılıyor; Allah'ın fazlı bir dâî ile açıklanmak zorunda değil, iradenin tercihi (Sünnî çizgi: 'irade tahsis eder') — Râzî'nin kendi c3 dâî çerçevesiyle çelişmesi burada yok, fakat 'irade müreccih' cevabına yer bırakmıyor.]**
 - Mevzuya bağı: **Fasıl I §8 (irâde-tahsis)**: bu sayfa Râzî'nin **dâî-müreccih çerçevesinin en çıplak kullanımıdır**; Fasıl I §8'in 'irâde tahsis eder' cümlesiyle **Râzî'nin 'dâî olmadan tercih muhâl' cümlesi arasındaki gerilim** kaydedildi (kendi tenkidim): **Fasıl I §8 bu çerçeveden bağımsız olarak nassla ve 'irade tahsis eder' ilkesiyle yazılmalı**; **Risale'ye 'Allah'ın fiillerini maslahatla ta'lîl etmek bâtıldır' cümlesi ALINMAZ** ('hikmet nasslarda sabittir, ta'lîl-i vâcib nefyedilir' biçiminde).
 - Doğan sual: —
+
+## c3 p329
+- OCR: orta
+- Okuma: tam
+- İçerik: (p328 sonu): 'buluğ ve teklif fesat doğurmuyorsa, bilinen fiil onu men etmiyorsa küfrü bilinen kişinin yaratılmasını da men etmemeli; cevapsız kalır.' **6. hüccet**: Allah'ın fiilleri maslahata uygun olsaydı **peygamberlerin, velîlerin, salihlerin bekâsı; iblislerin ve şeytanların ölümü vâcib** olurdu; durum tersine: peygamberleri ve velîleri öldürdü, **İblis'i teklif vaktinin sonuna kadar bıraktı, halka ağvâ, dalâlet ve vesvese için musallat etti**. **Mu'tezile'nin iki cevabı**: (1) **Ebû Alî el-Cübbâî**: Allah İblis'i bıraktı çünkü küfredecek-fısk işleyecek kişiler İblis kalsa da kalmasa da bunu yapacaklardı; **artık fesat doğmadı**; (2) **Ebû Hâşim**: vesvese küfür ve fısk için rağbeti artırır, ancak **fiile zorlamaz; bu vesvese sebebiyle tâatin sevabı çok olur**, bu yüzden Allah'ın şeytanları Âdemoğullarına musallat etmesi güzel.
+- Netice/hüküm: **Râzî'nin 6. hücceti: 'maslahat ölçüsü ile Allah fiilleri (peygamberlerin ölümü, İblis'in bekâsı) uyuşmaz'**; Mu'tezile'nin iki cevabı (Cübbâî, Ebû Hâşim) aktarıldı.
+- Delil çeşidi: **reductio (maslahat ölçüsü)**; (T) cedelî. **[Delil ≠ dava: 'peygamberin bekâsı daha maslahatlı' iddiası Allah'ın hikmet ve ecel takdirini insan maslahatına indirger; 'Allah'ın hikmeti insan maslahatıyla sınırlı değil' Sünnî cevap yeri bu sayfada yok.]**
+- Mevzuya bağı: **KRİTİK**: 'Allah İblis'i bıraktı' cümlesi Risale'de **nassla (İblis'in mühlet dilemesi, 7:14–15; 15:36–38, ⊬ numaralar)** ve **imtihan** çerçevesinde yazılır; **Râzî'nin reductio'su ana metne girmez**. Cübbâî/Ebû Hâşim nakilleri **⊬**.
+- Doğan sual: —
+
+## c3 p330
+- OCR: orta
+- Okuma: tam
+- İçerik: **Râzî: bu iki cevap 'son derece zayıf'**: (1) **Cübbâî'ye**: 'şeytanların bulunması rağbette şiddetli etki eder: **şarkıcı yaratıp bazı şeyleri güzel, lezzetli, rahat diye vasfetmeye devam ettirsen** o şeye rağbet artar (darûrî)'. (2) **Ebû Hâşim'e**: 'şeytanların faydası işin **zorluğunu** artırmak, bu zorluk **tâat ölçüsünde sevabı, isyan ölçüsünde şiddetli azabı** artırır; bu ziyadeler ihtiyaç mahallinde değil, büyük azaptan sakınma **büyük ihtiyaç mahallinde**; o hâlde terk evlâ'. **Bu, sarîh aklın hükmüdür, fakat Allah hakkında muteber değil ⇒ akıl Allah'ın fiil ve hükmünde mazul.** **7. hüccet**: **isyana sevkeden hâller tâate sevkedenlerden çok**: beş zâhirî ve beş bâtınî duyu cismânî lezzetleri talebe çağırır; şehvet ve gazab; **yedi tabiî kuvvet**: toplam **19 çeşit bedenî kuvvet**, hepsi nefsi cismânî lezzetlere çağırır (Râzî bunu **74:30 'üzerinde on dokuz vardır' âyetiyle temsil eder**; editör: 'müellif bu sözü 7. cüz'de tekrarlar').
+- Netice/hüküm: Râzî Mu'tezile'nin 2 cevabını zayıf sayar; 7. hüccet: isyan dâîleri çok (19 bedenî kuvvet).
+- Delil çeşidi: **reductio + nefs psikolojisi (Aristotelesçi/tıbbî)**; (T) ikna'î-cedelî. **19 kuvvetin 74:30 âyetine tatbiki Râzî'nin işârî/temsîlî kullanımıdır; âyetin tefsiri (cehennem bekçileri) ile ilgisiz; Risale'ye alınmaz, kayda 'işârî-temsîlî' yazıldı.**
+- Mevzuya bağı: **Fasıl IV (tazkiye) ve Nefs bahsi**: 'nefsin 19 kuvveti' **kadîm tıp-psikoloji taksîmidir**; Risale ana metnine **alınmaz** (İbn Sînâ nefs şeması CLAUDE.md § 4-I'de ayrı işleniyor, karıştırılmaz). 
+- Doğan sual: —
+
+## c3 p331
+- OCR: orta
+- Okuma: tam
+- İçerik: **7. hüccet (devam)**: bu 19 kuvvetin her biri **sınırsız çeşit vesvese ve dâvet** yapar (basar kuvveti cismânî bir şey görünce nefsi ona çağırır); **nefs yaratılışın başından buluğa kadar bu cismânî kuvvet gereğince hareket eder**; çok fiil **râsih meleke** oluşturur; **nehyeden akıl kuvveti buluğ çağından sonra doğar, 19 kuvvetin beden ülkesine hâkim olmasından sonra kuvvetlenir**; **dünya ehlinin çoğu cismânîye rağbetli, rûhânîden yüz çevirmiş**; meyil yardımcıların çokluğu ile güçlenir. **Hâsıl**: isyan, lezzet, fısk-fücûra çağıran sebepler çok ve kuvvetli, tâate ve dünyadan yüz çevirmeye çağıranlar az; **buna rağmen Allah dünyaya meyilden nehyetti, âhireti emretti**; konmuş sebepler zıddı gerektirir ⇒ aklî ölçü Allah'ın fiil ve hükmünde muteber olsa **bu teklif kabîh olurdu** ⇒ akıl mazul. 'Bu delil önceki delile yakın; öteki cin şeytanları, bu **ahlâk-ı mezmûme şeytanları** hakkında.' **8. hüccet**: Allah'ın bir gayeyle fiili: o gayenin hâsıl olması Ona **hâsıl olmamasından evlâ mı**? Evlâ ise Allah zâtı gereği **başkasıyla istikmâl eden** (muhâl); değilse **eşitlik rüçhâna zıt**.
+- Netice/hüküm: 7. hüccetin devamı; 8. hüccet başladı (gaye ⇒ Allah'ın istikmâli).
+- Delil çeşidi: **reductio (nefs psikolojisi + gaye taksîmi)**; (T) cedelî. **[Delil ≠ dava: 'nefsin kuvvetleri tâatten çok isyan doğurur' ampirik-felsefî genelleme; Kur'ân'ın 'Rabbi nefs'i ilhâm eder (91:7–8)' çizgisi ayrı, ⊬ numara.]**
+- Mevzuya bağı: **Fasıl III/IV**: Risale 'nefs ahlâkı' için **nassla** yazar; Râzî'nin 19 kuvvet-isyan çokluğu argümanı **alınmaz**; **'ahlâk-ı mezmûme şeytanları' ifadesi** işârî.
+- Doğan sual: —
+
+## c3 p332
+- OCR: orta
+- Okuma: tam
+- İçerik: **8. hüccet (devam)**: 'fiil ile terk ona **eşit** ise onun fâil olmasına engel'; hasım 'vücûdu-ademi Allah'a eşit, ama **kullara daha faydalı olduğu için** Allah onu vücûda çıkarır' derse: 'kullara faydalı olması, Allah'a **eşit** mi yoksa bir yönü **râcih** mi? Eşitse fiil muhâl; bir taraf râcihse yine **kendi zâtında nâkıs, gayrıyla kâmil** olması gelir.' **9. hüccet**: Allah bir fiili **gaye için** yapsa, gaye **kadîmse fiil kadîm** (kıdem lâzım), **hâdisse başka gaye için ihdâs ⇒ teselsül (muhâl)**. **10. hüccet**: **kul fiilleri ya ıztırârî ya ittifâkî**; her iki takdirde aklî hüsn-kubuh bâtıl. **Iztırârî**: harekete salih kudret sükûna da salihse 'kudret hâsıl olunca hareket ıztırârî'; ikisine salihse bir tarafın diğerine rüçhânı **müreccih ister**; müreccih varsa o taraf **vâcib** ('dâîsiz rüçhân muhâl' — 'biz bu kısımda böyle inanıyoruz').
+- Netice/hüküm: 8–9. hüccet: 'gaye ⇒ istikmâl veya teselsül'; 10. hüccet başlıyor: **kul fiili ya ıztırârî ya ittifâkî**.
+- Delil çeşidi: **taksîm/reductio**; (T) cedelî-analitik. **(Râzî'nin 'dâîsiz rüçhân muhâl' öncülü; c3 Bâb 1'deki aporinin aynı öncülü.)**
+- Mevzuya bağı: **KRİTİK — Fasıl I §8**: burada da **dâî/müreccih öncülü** kullanılıyor; **Fasıl I §8'in nassla ve 'irade tahsis eder' ilkesiyle yazılması gerektiği** kaydı (p328) geçerli.
+- Doğan sual: —
+
+## c3 p333
+- OCR: orta
+- Okuma: tam
+- İçerik: **10. hüccet (devam)**: müreccihin **müessiri Allah** ise onun hâsılında fiil vâcib, hâsıl olmayınca mümteni' ⇒ **ıztırârî**; **kul** ise ilk taksîm geri gelir, kul kendi fiilinde başka müreccihe muhtaç ⇒ teselsül; müreccih **müessirsiz hâdis** ise veya kudret iki zıda salih olup bir tarafı **muhassıssız** vâki olduysa **ittifâkî**. 'Bu **kahredici bürhân**: kulun fiili ya ıztırârî ya ittifâkî'; **karşı taraf da bu iki takdirin aklî hüsn-kubuhla bağdaşmadığında bize muvâfık**. **11. hüccet**: 'cebir ve kader bâbında **bütün hâdislerin hâlikının Allah** olduğuna kahredici deliller kuracağız; bu takdirde Allah'tan hiçbir şeyin kabîh olmadığı kat'î; **kahredici bürhân**.' **12. hüccet**: 'vücûb'un mânâsı: fiil öyle ki **terk eden bazı vecihlerle zemme müstehak olur**; bu lâzım Allah'ta muhâl: zemm 'söz, fiil, terk' kalpte elem, tabiatın nefreti, maslahatın bozulması; hepsi Allah'ta muhâl ⇒ Allah'ın zemme müstehak olması muhâl ⇒ **vücûb mânâsı Allah'ta tahakkuk etmez**.
+- Netice/hüküm: 10–12. hüccet: **kul fiili ıztırârî ya ittifâkî (Râzî'nin cebri-ıztırârî çizgisi)**; **Allah'a vâcib mânâsı yok**.
+- Delil çeşidi: **taksîm/reductio + 'kahredici bürhân' iddiası**; (T) cedelî-burhânî biçim. **[Delil ≠ dava: 'kudret iki zıdda salihse rüçhân müreccihsiz' öncülü, irâde/tercih (Sünnî: irâde-i cüz'iyye ve kesb) ile çözülen yerde Râzî'nin dâî çerçevesi; 'kahredici' sıfatı Râzî'nin kendi derecelendirmesi (c2 yöntem bulgusu ile uyumsuz: burada tevakkuf yok).]**
+- Mevzuya bağı: **KRİTİK — kul fiili**: 'kul fiili ıztırârî/ittifâkî' **Sünnî ana çizgi değildir (kesb)**; **Risale'ye ALINMAZ**. **Not (kendi tenkidim)**: Râzî c2'de delil derecelerini açıkça yazıyordu; burada '**kahredici bürhân**' diyor: **bu, Râzî'nin kelâm içi güven ifadesidir**, F 27-B ölçüsüyle ayırt etme gücü test edilmedi.
+- Doğan sual: 'Cebir ve kader bâbı' hangi ciltte (atıf haritası).
+
+## c3 p334
+- OCR: orta
+- Okuma: tam
+- İçerik: **12. hüccet (devam)**: itiraz: 'Allah başka bir mânâda zemme müstehak olamaz mı?' **Râzî'nin cevabı, iki vecih**: **(1)** 'Allah zemme müstehak olur mu?' bahsine girmek **zemm ve medhin mefhûmuna** fer'; bizce zemm **kalbe gam veren**, medh **kalbe sürûr veren**; bunun ötesi tasavvur edilmiyor, **tasavvur yoksa tasdik muhâl**; karşı taraf **ötesinde bir eser ispat etmeli**; ispat ümitsiz: **medhe rağbetimiz sürûr ve lezzet doğurduğu, zemden nefretimiz gam ve elem doğurduğu içindir**; bu eserler Allah'ta muhâl ⇒ hüsn-kubuh mâhiyeti Allah'ta muhâl. **(2)** **ilâhiyet, nakıs ve zemme sebep olan her şeye zıttır**; ilâhiyet Allah'a vâcib-i lizâtihî, **kendi zâtı gereği her noksanlığa zıt** ⇒ Allah'ta zemm mânâsının tahakkuku **kendi zâtı gereği muhâl**; zâtı gereği vâcib olan hüküm **munfasıl bir sebeple ta'lîl edilemez** ⇒ 'Allah şu fiili yaptı/terk etti diye zemme müstehak değil' ⇒ **hangi fiili yaparsa yapsın, hangi şeyi terk ederse etsin, zemme müstehak olması muhâl ⇒ Allah'tan hiçbir şey kabîh olmaz, Allah'a hiçbir şey vâcib olmaz.**
+- Netice/hüküm: **Râzî: 'Allah'a hiçbir şey vâcib değil, Allah'tan hiçbir şey kabîh değil' — iki vecihle**.
+- Delil çeşidi: **tanım analizi (medh-zem = sürûr-gam) + ilâhiyet'in zâtı gereği noksana zıtlığı**; (T) analitik-burhânî biçim (1. vecih: 'tasavvursuz tasdik olmaz' [delil ≠ dava: hüsn-kubuh mânâsını duygusal eserlere indirgemek delil değil, tanım tercihi]); (2. vecih ise tenzîhi kullanıyor).
+- Mevzuya bağı: **KRİTİK**: **'Allah'a hiçbir şey vâcib değil' Sünnî ana çizgi ile ortak bir sonuçtur**; ama **'Allah'tan hiçbir şey kabîh olmaz' cümlesi ilâhî adl için nassla ('Allah zerre kadar zulmetmez', 4:40; ⊬ numara) ve tenzîh ile birlikte yazılmalıdır**; Risale'ye **iki cümle beraber** ('Allah'a hiçbir şey vâcib değildir; Allah zulümden münezzehtir') alınır, Râzî'nin tanım indirgemesi (medh=sürûr) **alınmaz**.
+- Doğan sual: —
+
+## c3 p335
+- OCR: orta
+- Okuma: tam
+- İçerik: (Sonuç): 'bu bâbta **kat'î söz, gubârsız**.' **13. hüccet**: 'istihkâk-ı zemm sabit hüküm; fiilin **zulüm** olmasında iki kayıt vardır; zulüm zemme müstehak kılıyorsa **ademî kayıt vücûdî hükmün illetinin cüzü** olur, bâtıl.' **14. hüccet**: **Sıdk = habere muhbirin mutabakatı; kizb = mutabakatsızlık**; her ikisi haber; haber kelâmın bir nev'i; **kelâm ardışık harflerden mürekkeb; her zamanda var olan yalnız tek harf, o kaybolunca ikincisi doğar; kelimenin hiçbir hâlde ve zamanda vücûdu yok**; tek harf haber değil, sadık-kâzib değil, hasen-kabîh olmaz; **var olmayan şey hüsn-kubuh illeti olamaz** ⇒ **kelâm sıdk veya kizb sebebiyle hasen/kabîh olamaz**.
+- Netice/hüküm: 13–14. hüccet: aklî hüsn-kubuh 'illet' yapısını (zulüm/sıdk) kurmada tutarsız.
+- Delil çeşidi: **analitik (harf ardışıklığı)**; (T) analitik-ikna'î. **[Delil ≠ dava: 'kelimenin hiçbir zamanda vücûdu yok' önermesi lafzî kelâmın (harf-ses) bir cismânî-zamanî ontolojisini varsayıyor; kelâm-ı nefsî tartışması (c3 p201–207) ile bağlantılı.]**
+- Mevzuya bağı: **Fasıl I sıfatlar (kelâm)**: 14. hüccet **kelâm-ı lafzî/harf ardışıklığı** ontolojisine dayanıyor; **'kelâm-ı nefsî kıdemi' için Râzî'nin kendi 6 aklî itirazı (c3 p201–207) ile aynı zemin**; **F 27-B ayrı test**.
+- Doğan sual: —
+
+## c3 p336
+- OCR: orta
+- Okuma: tam
+- İçerik: **14. hüccet (devam)**: itiraz: 'bu sizin için de geçerli; **siz de sıdk-kizbin hüsn-kubhu menfaat/mefsedet sebebi olması** anlamında kabul ediyorsunuz.' **Cevap**: 'sizin iddianız **sıdkın hasenlik sıfatını gerektirmesi**; sıdk **mecmû** (harflerin toplamı), bu mecmûun vücûdu yok ⇒ **sabit hakîkî sıfatı gerektiremez**; bizde ise **biz o ardışık harfleri işittik, bunlardan bazı mânâları anladık, onun üzerine bazı işleri bina ettik; kelâm yalan çıkarsa çabamızın bâtıl, ilmimizin cehil olduğu anlaşılır**; kabîhlik ancak bu ⇒ fark.' **15. hüccet**: bir insan bir başkasına 'yarın seni öldüreceğim, malını yağmalayacağım, çocuklarını esir edeceğim (zulüm ve düşmanlıkla)' dese, **hasen olan bunları terk mi fiil mi?** Terk hasense **haberin kizb olması zorunlu**; hasenin lâzımı hasen ⇒ **kizb hasen**, 'kizb kizb olduğu için kabîh' sözünü bozar; fiil hasense **zulüm, öldürme, yağma, esir etme hasen** olur, hiçbir akıllı bunu söylemez. **16. hüccet (başlıyor)**: **zâlim bir peygamberi öldürmek ister; peygamber kaçıp bir adamın evine saklanır; zâlim gelip adamdan o peygamberin yerini sorar…** (sayfa burada kesiliyor).
+- Netice/hüküm: 14–16. hüccet: aklî hüsn-kubuh 'illet' yapısı tutarsız (kizb hasen olur/zulüm hasen olur).
+- Delil çeşidi: **reductio (mecbur bir iki ihtimalli örnek)**; (T) cedelî. **[Delil ≠ dava: 15. hücette 'terk hasen ⇒ haberin kizbi hasen' çıkarımı 'hasenin lâzımı hasen' ilkesine dayanıyor; bu ilke mantıken tartışmalı (lâzımın hükmünün ayrı olabileceği).]**
+- Mevzuya bağı: **Fasıl I (adl/kizb)**: 'Allah hakkında kizb muhâl' ilkesi Sünnî ana çizgide nassla ve tenzîh ile sabit; bu hüccetler **ana metne alınmaz**. Ders katmanına 'aklî hüsn-kubuh delillerinin çeşitleri' kutusu için bu bâb özet olarak çalışılacak.
+- Doğan sual: 16. hücccetin devamı p337'de (okunacak).
