@@ -217,3 +217,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **doksografi**; (T) tarihsel. **'Bu sözler birbirini nakzeder' değerlendirmesi Râzî'nindir (OCR kısmen bozuk).**
 - Mevzuya bağı: **Fasıl I §3**: bu doksografi **kelâmcının 'cisim hâdis' hükmü için hangi rakiplere cevap borcu bulunduğunu** gösterir; **Risale ana metni bunu tarihsel kutu olarak alabilir, delil olarak değil**. Doksografi ⊬ (kaynak atıfları yok).
 - Doğan sual: —
+
+## c4 p25
+- OCR: orta
+- Okuma: tam
+- İçerik: (Halît sahipleri: Anaksagoras (Enkesâğûrs) ashâbı). 'Bu, **ilk maddenin cisim olduğunu** söyleyenlerin mezhepleridir.' **2. kavil: ilk madde cisim değil, cisimliğin içinde hâdis olduğu başka bir şey (heyûlâ)**; bunlar birkaç vecihle ayrılır: **(1)** cismin zâtı **heyûlâ + sûretten mürekkeb**: cisimlik ve hacimlik **kendi başına kâim zât değil, bir mahalde hâl**; o mahal 'olduğu gibi' i'tibar edilirse mevcut, hacimsiz, tehayyüzsüz, hayyiz ve cihetten mücerred; cisimlik onda hâl olunca mütehayyiz olur. **İki fırka**: (a) **mahal, kendi başına kâim mevcut, tehayyüzsüz, hacimsiz, hayyizde hâsıl olmayan**: **Fârâbî ve İbn Sînâ; Eflâtun ve Aristoteles'in mezhebi**; **Eflâtun'a göre heyûlâ cisimlik ve hacimlikten hâlî, kadîm-ezelî; cisimlik ve tehayyüz hâdis sıfat, evveli var**; (b) **heyûlâ ma'dûm zâtlardır** ('ma'dûm şeydir' diyenlerin kavli). **(2)** cisimler **hararet, burûdet, rutûbet, yubûsetten** doğar: bu kavlin **ümmetten kavimler ve eskilerden kavimler** sahibi var; bu keyfiyetler **ezelde mevcut, cisimlik onlarda hâdis**; basit cisimler mufredâtlarından, mürekkebler imtizâclarından.
+- Netice/hüküm: Ezelî heyûlâ kavillerinin çeşitleri (aktarım).
+- Delil çeşidi: **doksografi**; (T) tarihsel. **Kadîm doğa/metafizik; Risale'ye alınmaz.**
+- Mevzuya bağı: **Fasıl I §3, §6.3**: 'ma'dûm şeydir' kavli **c1 (ma'dûm şey mi?) ile bağ** (⊬ hangi bâb); Eflâtun/Aristo/Fârâbî/İbn Sînâ atıfları **⊬**.
+- Doğan sual: 'Ma'dûm şeydir' diyenler kimler (c1 atıf haritası)?
+
+## c4 p26
+- OCR: orta
+- Okuma: tam
+- İçerik: **3. heyûlâ kavli**: âlemin heyûlâsı **nûr ve zulmet**; ikisi kadîm, karışınca âlem oluştu. Nûr ve zulmet **cisimse** 1. kavlin bir şu'besi, **cisim değilse** ayrı bir kavil. **4. heyûlâ kavli: vahdetler** (Pisagor (Fîsâğûras) ve tâifesine nisbet): 'bu âlemdeki hiçbir mâhiyet vahdetten ayrılmaz; her mevcûdun teayyünü vardır, bu teayyünün sebebi vahdettir; sayılanlar da vahdettir (on = bir on); vahdet tüm ayn'lardan müstağnî, mâsivâ vahdete muhtaç; müstağnî muhtaçtan rütbe ve vücûdda mukaddem ⇒ **bütün mevcûdâtın ilk maddesi vahdetlerdir**'. **Vahdet işaretten mücerret ise vahdet, işaret edilirse nokta; iki nokta çizgi; iki çizgi yüzey; iki yüzey cisim; cisim, dört üçgen tabanla çevrili ise ateş; sekiz ise hava; yirmi ise su; altı kare ise küp = toprak; on iki beşgen ise felek**; unsurlar karışınca üç mevâlid. ⇒ ilk madde **vahdetler**.
+- Netice/hüküm: Nûr-zulmet ve vahdet (Pisagor) kavilleri (aktarım).
+- Delil çeşidi: **doksografi**; (T) tarihsel. **Kadîm; Risale'ye alınmaz.**
+- Mevzuya bağı: **Fasıl I §6.2 (vahdâniyet)**: 'vahdet müstağnî, mâsivâ ona muhtaç' bahsi **Râzî'nin Pisagor'a nisbet ettiği argümandır**; Risale'nin 'Allah'ın vahdeti' ile karıştırılmaz. 'Nûr-zulmet iki kadîm' **düalizm (Mecûsî/Mânevî) — Risale'nin tevhid reddiyesi**.
+- Doğan sual: —
+
+## c4 p27
+- OCR: orta
+- Okuma: tam
+- İçerik: (Pisagor kavli sonu): 'ilk madde vahdetlerdir.' Bu, **cismânî âlemin maddesiyle kadîm, sûretiyle hâdis** olduğunu söyleyenlerin **tafsilâtı**. **4. kısım (maddesi hâdis, sûreti kadîm)**: 'bedîhî olarak (bâtıl/muhâl)' (metin bozuk). **5. kısım: tevakkuf, kat' etmeme**: **Câlînûs'tan (Galen) rivayet**: hastalığında bazı talebelerine 'benden yaz: âlemin hâdis mi kadîm mi olduğunu bilmedim; nefsin mizaç mı mizaçtan başka bir şey mi olduğunu bilmedim'; **bazıları bunu ta'n saydı: 'dünyadan, girdiği gibi, eşyanın hakikatini bilmeden çıktı'**; **Râzî (kendi sesiyle, dipnotta 'Mevlânâ dedi: ben derim')**: 'Bu, adamın **insaflı ve hakikat talibi** olduğunun **en açık delillerinden**; çünkü bu meselede söz, **akılların çoğunun dağılıp kaybolduğu** güçlük ve zorluğa ulaşmıştır. Allah en iyi bilendir.'
+- Netice/hüküm: **Râzî: âlemin kıdem-hudûsu meselesi son derece zor; Galen'in tevakkufu insafla açıklanıyor.**
+- Delil çeşidi: **rivayet + Râzî'nin değer takdiri**; (T) ikna'î. **Galen rivayeti ⊬** (kaynak belirtilmemiş).
+- Mevzuya bağı: **KRİTİK — Fasıl I §3 (hudûs)**: Râzî'nin 'bu mesele akılları dağıtır' tespiti **F 27-B'ye göre 'kat'î burhan iddiası'nın sınırını çiziyor**; Risale hudûsu **nassla kesin, aklî delili 'kelâmî-burhânî biçim, öncüllere bağlı'** diye yazmalı. Ders katmanı: 'Râzî'nin tevakkuf sözü' bir **tarihî tanık** (İslâm'a aykırı bir hüküm çıkarılmaz: Râzî burada tevakkuf **savunmuyor**, güçlüğü belirtiyor; hükmünü Kısım 2'de arayacağız).
+- Doğan sual: Râzî Kısım 2'de nasıl bir kesin hüküm veriyor?
+
+## c4 p28
+- OCR: boş
+- Okuma: tam (içerik yok)
+- İçerik: Yok.
+- Netice/hüküm: Yok.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c4 p29
+- OCR: orta
+- Okuma: tam
+- İçerik: **4. mukaddime (başlık: 'İlâhî kitapların âlemin hudûsunu ispat etmesi'; içerik: ispat etmedikleri iddiası)**: '**İlâhî kitaplarda âlemin maddesiyle ve sûretiyle hâdis olduğuna sarîh delâlet yok**; Kur'ân'daki ilgili lafızlar sayılıdır:' **(1) 'Rabbü'l-âlemîn'** (1:2; Kur'ân'ın ilk cümlesi): 'Allah'ın âlemlerin Rabbi olması zâtlarını ve ayn'larını **ihdâs ettiğini gerektirmez**; rab, **terbiye eden ve maslahatlarını gözeten**; **'âlemi bu cüzlerden ihdâs edip en güzel vecihle tertip etti' diyen de onun kâdir, rab olduğunu kabul etmiştir**'. **(2) 'Halk'** (6:1 'hamd, gökleri ve yeri yaratan Allah'a'): dilde **takdir**; 3:59 'Îsâ'nın misali Âdem gibi: onu topraktan yarattı, sonra ona 'ol' dedi, oldu' ⇒ **önce halk (takdir), sonra tekvîn**; halk = Allah'ın **tekvînin şu sıfat üzere olmasının evlâ olduğunu bilmesi**.
+- Netice/hüküm: **Kıdem diyenlerin (Kısım 1) savunusu: Kur'ân lafızları zâtların yoktan varlığına sarîh delâlet etmez.** [Sesin sahibi: kıdem tarafı; **Râzî'nin kendi hükmü olarak yazılmadı**; cevap Kısım 2'de aranacak.]
+- Delil çeşidi: **lafzî-dil incelemesi (hasım savunusu)**; (T) cedelî-hitâbî. **[Delil ≠ dava: 'rab' ve 'halk' lafızlarının en dar mânâlarına indirgenip 'yoktan yaratma' mânâsı dışlanıyor; Kur'ân'ın diğer nasslarıyla birlikte okunmuyor.]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, Fasıl IV (Sünnet ve Tahkik)**: **Risale ana metninde 'âlemin tamamı Allah'ın yaratmasıyla, yoktan vardır' nass olarak yazılır; bu pasajlar kıdem tarafının nasslara itirazı olarak KAYDEDİLİR, ALINMAZ**; Ehl-i Sünnet ittifakı: **mâsivâ hâdistir**. Kısım 2'de cevabı aranacak.
+- Doğan sual: Râzî bu itirazlara nasıl cevap veriyor?
+
+## c4 p30
+- OCR: orta
+- Okuma: tam
+- İçerik: **'Halk = takdir' devam**: 3:59'da 'kün fe-yekûn' tekvîndir; âyetin zâhiri 'halkeder, sonra tekvîn eder'; tekvînden önceki halk ancak Allah'ın **tekvîni şu vasıf ve şu sûretle vâcib kılmasını bilmesi**; halk = takdir; **cüzler ezelde mevcut olsa ve Allah onları en isabetli te'lif üzere terkîb edip nazmetse bu âlem onun takdiri ve terkîbi ile vâki olur, o halde 'hâlik' olur** ⇒ 'halk' lafzı Allah'ın **zâtlarının mübdii ve mûcidi** olduğunu ifade etmez. **(3) 'Fâtır'** (35:1 'hamd, gökleri ve yeri fatreden Allah'a'): dilde **yarma** (67:3 'fütûr görüyor musun?'); 'cüzler ezelî ve sıfatlardan ârî idi, karanlıktaydı (karanlık nurun ademi); Allah ışığı yarattı, cüzlerden bir taifeyi çıkarıp âlemi terkîb etti: 'fâtır' bu mânâda'. **İbn Abbâs (nakil)**: 'Fâtır'ın ne olduğunu bilmiyordum; iki bedevî bir kuyu için ihtilaf etti, biri 'ben onu fatrettim' dedi: 'ben onu ihdâs ettim'.' 'Kuyunun fâtırı onun ihdâsı için değil şeklini/hey'etini ihdâs ettiği için' ⇒ 'fâtır' lafzı zâtların ihdâsını göstermez.
+- Netice/hüküm: 'Halk' ve 'Fâtır' için kıdem tarafı dil yorumları (hasım savunusu).
+- Delil çeşidi: **lafzî-dil (İbn Abbâs rivayeti dahil)**; (T) hitâbî. **İbn Abbâs rivayeti ⊬ (isnad).**
+- Mevzuya bağı: p29 ile aynı: **ALINMAZ**; İbn Abbâs rivayeti **kıdem tarafının delil olarak getirdiği bir rivayet, hakîkatı ⊬**.
+- Doğan sual: —
+
+## c4 p31
+- OCR: orta
+- Okuma: tam
+- İçerik: **(4) 'Allah ganîdir, siz fakirsiniz'** (47:38): 'âlem Bârî'ye **belirli sıfat ve nu'ûtların hâsılında muhtaç**; bu ihtiyaç için yeter; ayrıca zâtlar, kavme göre **zâtları mümkin, illetin vücûbuyla vâcib**; bu da ihtiyaç mânâsı için yeter.' **(5) 'Hüve'l-Evvel'** (57:3): 'evvel = sâbık fert ⇒ Allah ile birlikte ezelde başkasının olmadığını gösterir'; buna: 'evvel olmak, **her şeyden evvel olmayı gerektirmez**; ve **her şeyden evvel olması gerekse bile kavim 'âlem zâtı mümkin, illetin vücûbuyla vâcib; illet mâlûlden illiyet ve zâtla öncedir' ⇒ bu tefsîrle 'her şeyden evvel' **. **(6) 'Kün fe-yekûn'** (36:82; 16:40): 'kün = kudret ve irâdenin nefâzı'; **bu, zâtların tekvînini irâde ettiğini ispat etmez**; âyet 'Allah her tekvînini irâde ettiğini bu yolla yapar' der; 'Allah zâtların ve cisimlerin tekvînini irâde etti mi?' — **tartışma tam da bunda**.
+- Netice/hüküm: Kıdem tarafının 4–6. lafzî itirazı (hasım savunusu).
+- Delil çeşidi: **lafzî-analitik (hasım savunusu)**; (T) cedelî. **[Delil ≠ dava: 'evvel = sâbık fert' tanımı ve 'illiyet öncelikliği' 'Evvel'e getirilen zaman-üstü yorumdur; İbn Sînâ'nın 'zâtla önce' şemasını nassa yükler.]**
+- Mevzuya bağı: **Fasıl I §3, §6.3**: 'Evvel' isminin tevkîfî nass olup 'hâlik-ı mutlak' sonucu (c3 p249) ile ilişkisi; c3 p249'daki 'Evvel' delili (imkân burhanı ve kelâmcı hudûs) **bu itirazın cevabıdır**. **ALINMAZ (kıdem tarafı).**
+- Doğan sual: —
+
+## c4 p32
+- OCR: orta
+- Okuma: tam
+- İçerik: **Sonuç (kıdem tarafı)**: 'Kur'ân'da zâtların hâdis olduğuna **sarîh** delâlet eden lafız yok.' **Tevrât**: 'başlangıçta Allah gökleri ve yeri yarattı; yer harap ve boştu; karanlık engin üzerindeydi; **Allah'ın rüzgârı su yüzünde esip titredi**; Allah 'nûr olsun' dedi' (Tevrât lafzı) — **'Allah gökleri ve yeri yarattı' sözü zâtların ve cüzlerin îcâdını göstermez; 'karanlık engin üzerindeydi' = cüzlerin karanlıkta olduğu (yani onların kavli); 'Allah'ın rüzgârı esti' = Allah cüzleri hareket ettirdi, nur zâhir kıldı**'. ⇒ **'ne Kur'ân'da ne Tevrât'ta zâtların ademden sonra hâdis, mahz nefy ve selbten sonra var olduğuna sarîhen delâlet eden lafız yok'**; **bu iki kitap ilâhî kitapların en büyüğü, sarâhatten hâlî olmaları meselenin güçlüğüne vehim verir.** **İtiraz**: 'nübüvvet ilâhiyâta fer'; kıdem diyen ilâhiyâtı kadh etmek zorunda; nübüvveti nasıl?' (cevap p33'te).
+- Netice/hüküm: Kıdem tarafının 'kitaplar sarîh değil' iddiası tamam; nübüvvet itirazı başlıyor.
+- Delil çeşidi: **lafzî sükût delili (arguments from silence)**; (T) hitâbî-cedelî. **[Delil ≠ dava: 'sarîh lafız yok' sonucu, hudûs delillerini (aklî ve nakli bütünüyle: 'yoktan yaratma' nassları) görmezden gelir; Kısım 2'de cevap beklenir.]**
+- Mevzuya bağı: **KRİTİK**: **Risale 'İlâhî kitaplar âlemin yoktan yaratıldığını sarîh bildirir' iddiasını nassla (Kur'ân'daki 'ol' emri, 'yaratmak', ⊬ numaralar) çalışmalı; bu pasaj kıdem tarafının itirazıdır**, Râzî'nin cevabı p33+ ve Kısım 2'de. Tevrât lafzı editör dipnotu (p22) ile ilgili: Yahudi/Katolik çevirileri farklı.
+- Doğan sual: Râzî nübüvvet ve kıdem ilişkisine ne cevap veriyor (p33)?
