@@ -2881,3 +2881,75 @@ Biçim: cilt 1–2 ile aynı.
 - Delil çeşidi: **misal şartları + hasım cevabı**; (T) cedelî-ikna'î. **[Delil ≠ dava: (4) 'daimî azap menfaatten büyük' önermesi ve (5) 'kâfirler çok' iddiası tâlim/genelleme; ilki cennetin ebediliği-nimeti ile birlikte tartılmadı, ikincisi ampirik.]**
 - Mevzuya bağı: **KRİTİK — Fasıl III (Meâd)**: 'daimî azap menfaatten büyük' cümlesi **Risale'de 'cennet nimeti' ile birlikte tartılmadan yazılamaz**; **Risale ana metnine ALINMAZ** (Râzî'nin reductio öncülü). **'Kâfirler çoktur' hükmü ampirik, ⊬**.
 - Doğan sual: Râzî Mu'tezile'nin 1. yoluna nasıl cevap veriyor (p321+)?
+
+## c3 p321
+- OCR: orta
+- Okuma: tam
+- İçerik: (Mu'tezile'nin 1. yolunun sonu): 'Allah'ın küfredeceğini bildiği kimseye teklif **kabîh değildir**; dayandıkları yol bu.' **2. yol (Hişâm b. el-Hakem)**: 'bu işkâller ancak Allah ezelde falanın küfredeceğini bilseydi lâzım gelir; **cüz'îleri ancak vukûunda bildiğini** söylersek işkâl ortadan kalkar.' **Râzî'nin 1. yola cevabı, iki vecih**: **(1)** 'Allah mü'min ile kâfiri **eşitledi** iddiasını kabul etmeyiz': kâfir mü'minle zekâ ve berekette eşit olsaydı insaf da eşit olurdu; **farklar: fikrî kuvvet–kütlük, ilim talebindeki rağbet, meşakkate sabır, mizaç (safravî ↔ balgamî), ilim-kitap-zaman-gönül rahatlığı**; hepsi eşit farz edilse bile ilim-cehil, ikrar-inkâr, insaf-inâd tefâvütü vâki olur ⇒ **Mu'tezile'nin 'mü'min ile kâfir her hususta eşit' iddiası bâtıl, delil ve i'tibarlardan uzak.** **(2)** p322'ye taşıyor: 'vesileler gayeleri için, işler sonuçlarına göre'.
+- Netice/hüküm: **Râzî: mü'min-kâfir eşitliği iddiası bâtıl (mizaç, zekâ, fırsat farkları)**; 2. yol (Hişâm) yine reddedilir.
+- Delil çeşidi: **ampirik-cedelî (insan farkları)**; (T) ikna'î-cedelî. **[Delil ≠ dava: farkların varlığı, Allah'ın aynı fırsatı vermediği iddiasını ispat eder; fakat bu fark 'kul sorumsuzluğu' değil — Râzî bunu hasmın 'eşitlik' iddiasını çürütmek için kullanıyor.]**
+- Mevzuya bağı: Fasıl I/IV: 'Allah imtihanda herkese eşit imkân verdi' cümlesi **Mu'tezile'ye ait, Râzî reddediyor**; Risale **'imkân farkları vardır, sorumluluk gücü ölçüsündedir (2:286)' çizgisini** nassla yazar; Râzî'nin farklılık listesi **tarihî belge**. Dipnotta 'ziyade: 9. cüz'e bak' editör atfı.
+- Doğan sual: —
+
+## c3 p322
+- OCR: orta
+- Okuma: tam
+- İçerik: **(2) vecih**: 'eşit farz edilse bile **maksat kulun hayır ve saadete ulaşması**; Allah bu maksadın hâsıl olmayacağını, **zıddı daimî zarar ve şiddetli azabın** hâsıl olacağını bildi'; **örnek: kâfir fakir, kör, dünyada çeşitli mihnet ve elemlerle imtihanlı, öldüğünde ateşin en dibine nakledilir; bu hayattan ve tekliften yalnız çile, belâ ve şiddet hâsıl olur**; bunu bilen Allah'ın **onu menfaatlere arz etmesi, hâsıl olmayacağı kesin bilinen vesileyle maksadı istemektir** ⇒ aklen kabîh; **aklî hüsn-kubuh Allah'ın fiil ve hükümlerinde muteber olsa halk ve teklif kabîh olurdu; olmadığına göre akıl hüküm veremez.** **2. hüccet**: aklî tahsîn Allah'a muteber olsa **halk kabîh olurdu**: ihdâs ya menfaat/maslahat için ya değil; menfaat **Hâlık'a dönerse** ihtiyaç (muhâl) — ihtiyaç kadîmse halk vukûdan önce olurdu (mukteziyi tam, engelsiz) muhâl; hâdisse teselsül.
+- Netice/hüküm: **Râzî'nin 1. hücceti tamamlandı**: 'küfrü bilinen kula teklif akıl açısından kabîh olurdu'; 2. hüccet: 'halk kabîh olurdu' başlangıcı.
+- Delil çeşidi: **reductio (aklî tahsîn ölçüsünü çelişkiye götürme)**; (T) cedelî-analitik. **Şartlı önerme: 'aklî hüsn-kubuh Allah'a cârî olsaydı'.**
+- Mevzuya bağı: **KRİTİK — Fasıl III (Meâd)**: 'kâfirin tek nasibi çile ve azap' cümlesi Râzî'nin **karşı tarafın ölçüsünü çelişkiye götürmek için kurduğu** satırdır; **Risale'ye alınmaz**; **'halk kabîh olurdu' dili 'Allah hakkında kabîh' cümlesi içerdiği için doğrudan alıntılanmaz** (özette: 'Mu'tezile'nin ölçüsü tutarsız sonuç doğurur').
+- Doğan sual: —
+
+## c3 p323
+- OCR: orta
+- Okuma: tam
+- İçerik: **2. hüccet (devam)**: menfaat **mahlûka** dönerse bâtıl, 3 vecihle: (1) adem hâlinde **hiçbir şey muhtaç değildi ki îcâd ona ihsan olsun**; bu **devir**: mahlûk îcâdla mevcut olur, îcâd ihsan olmadıkça hâsıl olmaz, ihsan da mahlûk mevcut olmadıkça olmaz; (2) ihsan **önceki ihtiyaç ve şehvetle** ihsan olur; menfaat o zararla mukabele eder (c3 p291–296 tekrar); (3) ihsan **dünyada** ise bâtıl (belâ, şekâvet, gam, elem, hırs ve ihtiyaç gibi eziyetli ahlâk), **âhirette** ise çoğu kâfir, daimî azap. **Menfaat hiç yoksa halk abes**, akılda kabîh. **Sonuç**: aklî hüsn-kubuh Allah'a cârî olsa **halk Allah'tan kabîh olurdu**; değil ⇒ bâtıl. **3. hüccet**: aklî tahsîn muteber olsa Allah'ın **'şunu yaparsan/terkedersen sana azap ederim' demesi kabîh olurdu**; itifakla kabîh değil.
+- Netice/hüküm: 2. hüccetin devamı: menfaat Hâlık'a, mahlûka ya da hiçbirine dönmez ⇒ Mu'tezile ölçüsüyle 'halk abes'.
+- Delil çeşidi: **reductio + devir taksîmi**; (T) cedelî.
+- Mevzuya bağı: **KRİTİK — Fasıl III (Meâd) ve Fasıl I (adl)**: 'ihsan dünyada bâtıl, âhirette çoğu kâfir' iddiası ampirik ve **Kur'ân'ın 'nimet ve imtihan' ifadeleriyle çelişecek şekilde** kullanılmıştır (aklî ölçü karşıtına atıf); **ALINMAZ**. 
+- Doğan sual: —
+
+## c3 p324
+- OCR: orta
+- Okuma: tam
+- İçerik: **3. hüccetin lüzumu**: kul: 'Ey âlemlerin ilâhı, bana menfaat **sana mı, bana mı, başkasına mı** dönsün diye azap ediyorsun?' **(1) sana dönerse** ihtiyaç ve talep, muhâl; ihtiyaç olsa bile namazdaki hakir amellerden faydalanacak kadar fakir olamaz. **(2) benim menfaatim için**: 'bana fâide olsun diye emrettin, ben o faydayı kazanmadığım için **ebedî azap** ediyorsun' **çelişkili**: faydanın maksadı kişinin faydalanması, en büyük menfaati zararın defi; büyük zararı **faydayı kazanmaya sevk etmek için** vermek **çelişik**; **örnek**: efendi kölesine 'nefsin için bir dinar kazan; kazanmazsan uzuvlarını ateş makasla keserim'. **Ta'zîm istihkâkı** asıl ihtiyaçlardan değil; kusur edenin kaybı ile büyük zarar orantısızdır.
+- Netice/hüküm: 3. hüccetin devamı: aklî ölçüyle 'yaparsan azap' teklifleri her ihtimalde çelişkili.
+- Delil çeşidi: **reductio + misal (dinar)**; (T) cedelî. **[Misal delil değil tasvirdir.]**
+- Mevzuya bağı: **KRİTİK**: **'Allah ebedî azabı menfaat kazandırmak için mi verir?' türü ifadeler Fasıl III'e ALINMAZ**; Risale'de azap 'adl ve hikmet' ile, cennet 'fazl' ile ilişkilendirilir (Sünnî çizgi), **Râzî'nin aklî tahsîn ölçüsünü çürütme çabası ana metin değil**.
+- Doğan sual: —
+
+## c3 p325
+- OCR: orta
+- Okuma: tam
+- İçerik: **3. hüccet (devam)**: (3) **menfaat başkasına ise** 'kulu azap edip başkasına fayda sağlamak' **mahz zulüm** (zâlim başkasına zarar verip kendine fayda sağlar); Allah zulümden müteâlî. (4) **hiçbirine** ise **yine zulüm**; aklî tahsîn muteberliği kalmaz. **Şâhitte efendinin kölesini emrettiği fiili yapmadığında incitmesi hasendir**: 'ben o işi kendi menfaatim için emrettim, yapmadın, o menfaatten mahrum kaldım, seni cezalandırırım' — **Allah için muhâl** (ameller Ona fayda vermez); kalır: **kullara dönen menfaat için emir ve nehiy**; bu durumda **vâcibi terk ve harâmı işleme yüzünden ceza vermesi kabîh olmaz** (fark ortaya çıktı). **4. hüccet**: aklî tahsîn muteber olsa **kâfir ve âsilerin azap edilmesi kabîh olurdu**: azabın menfaati **Allah'a, kula ya başkasına** döner; üçü bâtıl: Allah nef'ten münezzeh; **halis daimî azap menfaat değil**; başkasına ise zulüm.
+- Netice/hüküm: Râzî **azabın da Mu'tezile'nin aklî ölçüsüyle kabîh olacağını** göstermeye çalışıyor (3.–4. hüccet).
+- Delil çeşidi: **reductio (dört şık)**; (T) cedelî-analitik.
+- Mevzuya bağı: **Fasıl III (Meâd) ve I (adl)**: Risale **azabın adl olduğunu nassla ('Allah zulmetmez' — 4:40, 10:44, ⊬ numaralar) yazar**; aklî kubuh reductio'su ana metne girmez; **'şâhitte efendi kölesini cezalandırabilir, Allah hakkında ilke farklı' ayrımı** ders kutusu olabilir.
+- Doğan sual: —
+
+## c3 p326
+- OCR: orta
+- Okuma: tam
+- İçerik: **4. hüccet (devam)**: 'başkasına fayda için azap zulüm; bu kişinin azabının başkalarına faydası zıddından evlâ değil'; **şâhitte efendinin kölesini te'dîbi bazı vecihlerle hasen**: efendi köle tarafından eziyet görür, kalbinde intikam sevgisi, intikamla gamdan kurtulur; te'dîb kölenin efendiye faydalı işlere devamını sağlar; **Allah gam-intikam sevgisinden, kulun edebinden fayda görmekten, kötü amelinden zarar görmekten münezzeh** ⇒ fark. **5. hüccet: üç evlâdın hikâyesi**: bir kadının üç çocuğu: **zâhid mü'min (büyüyüp öldü)**, **kâfir fâsık (büyüyüp öldü)**, **küçükken ölen çocuk**. **Mu'tezile reisi Ebû Alî el-Cübbâî**'ye sorulur: zâhid cennetin en yükseğinde, kâfir cehennemin derekâtında, çocuk **'ehl-i selâmet'**. **Soru**: 'Küçük kardeşi zâhid kardeşinin makamına gitmek isterse mümkün mü?' — Cübbâî: 'Hayır; kardeşin bu dereceye zühd ve ilmiyle ulaştı, sende yok.' — Çocuk: 'Beni buluğdan önce sen öldürdün, bana mühlet verseydin ben de çok tâat ederdim.' — Cübbâî: 'Allah der ki: **buluğa erersen küfredip ateşe müstehak olacağını bildim, maslahatını gözettim, seni buluğdan önce öldürdüm**.' — Soran: 'Kâfir kardeş de: **ey Rabbim, sen o küçüğün buluğda küfredeceğini bildiğin gibi benim durumumu da bildin; onun maslahatını gözettin, benimkini niçin gözetmedin?'** — **Cübbâî sustu, cevap veremedi.** (Soranın adı metinde yok; ⊬.)
+- Netice/hüküm: **Râzî'nin 5. hücceti: 'üç kardeş' münâzarası: Mu'tezile'nin 'vâcib-i aslah' anlayışı çelişir.**
+- Delil çeşidi: **münâzara (hikâye/misal)**; (T) cedelî. **Metnin nakli (Cübbâî cevap veremedi) ⊬** (rivayetin kaynağı belirtilmemiş; başka kaynaklarda Eş'arî ile Cübbâî arasında geçtiği söylenen meşhur anlatıya benzer, ama bu sayfada soranın adı yok).
+- Mevzuya bağı: **Fasıl I (hikmet/adl) ve Fasıl III**: 'üç kardeş' örneği **Risale'ye alınmaz** (rivayet kaynağı ⊬; çocuk-hâli meselesi ayrıca **Ehl-i Sünnet'in ehl-i fetret/sabî hükmü** başlığı altında nasslarla çalışılacak).
+- Doğan sual: Rivayetin başka kaynaklardaki nisbeti (⊬).
+
+## c3 p327
+- OCR: orta
+- Okuma: tam
+- İçerik: **Ebü'l-Hüseyn el-Basrî 'el-Kader' kitabında** bu münâzarayı naklediyor (Râzî: 'beş devirden sonra' — ifade OCR'de bozuk): 'biz bu meselede bu cevapları beğenmiyoruz; arkadaşlarımızın iki yolu var': **(a) vâcib-i aslahı gerekli görmeyenler**: Allah mü'min ve kâfire 'ben ikinizi teklif ettim, maksat sizi büyük menfaatlere arz etmek' der; zâhid güzel seçti kurtuldu, kâfir kötü seçti; çocuk 'beni niçin teklif etmedin' derse: 'tekliften **tefaddul (fazl)** hâsıl olurdu; **tefaddul edenin dilediği gibi edip etmemeye hakkı var**; bana çocuğa tefaddul etmemi ilzâm etmen lâzım değil'; **kâfir 'niçin beni öldürmedin' diyemez** (Allah çocuğu kâfir olacağını bildiği için öldürmüştür demedik). **(b) vâcib-i aslah diyenler**: 'mü'mini teklif etti çünkü iman edeceğini ve sevaba ulaşacağını bildi; onun buluğunda ve teklifinde **başkası için fesat yok**; çocuğu buluğa erdirseydi **bazı mükelleflerin fesadına** sebep olurdu'. Râzî: 'Ebü'l-Hüseyn'in 'el-Kader'de naklettiği bu kadar.'
+- Netice/hüküm: **Mu'tezile içi iki cevap (a, b)** aktarıldı (hasım sesi).
+- Delil çeşidi: **cedelî cevap**; (T) cedelî.
+- Mevzuya bağı: **KRİTİK — Ehl-i Sünnet içi**: (a) 'Allah tefaddul eder etmez, hakkı var' **Sünnî ana çizgiye yakın bir cümledir (Allah'ın fazlı)**; ama Râzî bunu **aşağıda çürütüyor (p328)**. Kaynak: c3 p327; **'el-Kader' Ebü'l-Hüseyn el-Basrî'ye nisbeti ⊬**.
+- Doğan sual: —
+
+## c3 p328
+- OCR: orta
+- Okuma: tam
+- İçerik: **'Mevlânâ ed-dâ'î ilallah (rahimehullah)' der ki** (Râzî'nin lakabı, öğrenci notu; ⊬): **bu iki cevap son derece zayıftır**. **(1)** 'tefaddul dâîsi **iki şahsa eşit**; birine ötekinden üstünlük verilirse **müreccihsiz tercih** (muhâl; 'dâîler ve sârifler' bâbında ispatlandı); **fiil dâîsiz muhâl** (Ebü'l-Hüseyn'in de sarîh sözü); **şâhitte tefaddulün ikinci kez olmaması** nedenleri var (zorluk, fakirlik korkusu, ilk fakirin akraba/dost olması); **Allah'ta dâî yalnız tefaddul, iki şahıs ona eşit ⇒ birine tahsis tamam olmaz**; 'hudûs veya kıdem ile maslahat iştimâli tahsisi gerektirmez, bu **Allah'ın fiil ve hükümlerini maslahatla ta'lîl etme kavlini bâtıl kılar; biz bu makamda ancak bunu istiyoruz**.' **(2)** cevap da 'son derece zayıf': buluğ ve teklif **zâtlarıyla fesat doğurmaz**; en fazla Allah'ın **bir insanın buluğ ve teklifte güzel bir fiili, başkasının kötü fiili seçeceğini bilmesi**; bu ilim Allah'ı fiilden men ediyorsa küfrü seçeceğini bildiği şahsı da yaratmaktan men etmeliydi; etmiyorsa …
+- Netice/hüküm: **Râzî: 'Allah'ın fiil ve hükümlerini maslahatla ta'lîl etme' iddiası bâtıl (tercih müreccihsizdir); Mu'tezile içi iki cevap zayıf.**
+- Delil çeşidi: **dâî/müreccih argümanı (c3 Bâb 1 aporisi)**; (T) cedelî-analitik. **[Delil ≠ dava: 'dâî iki şahsa eşit' öncülü ispatsız varsayılıyor; Allah'ın fazlı bir dâî ile açıklanmak zorunda değil, iradenin tercihi (Sünnî çizgi: 'irade tahsis eder') — Râzî'nin kendi c3 dâî çerçevesiyle çelişmesi burada yok, fakat 'irade müreccih' cevabına yer bırakmıyor.]**
+- Mevzuya bağı: **Fasıl I §8 (irâde-tahsis)**: bu sayfa Râzî'nin **dâî-müreccih çerçevesinin en çıplak kullanımıdır**; Fasıl I §8'in 'irâde tahsis eder' cümlesiyle **Râzî'nin 'dâî olmadan tercih muhâl' cümlesi arasındaki gerilim** kaydedildi (kendi tenkidim): **Fasıl I §8 bu çerçeveden bağımsız olarak nassla ve 'irade tahsis eder' ilkesiyle yazılmalı**; **Risale'ye 'Allah'ın fiillerini maslahatla ta'lîl etmek bâtıldır' cümlesi ALINMAZ** ('hikmet nasslarda sabittir, ta'lîl-i vâcib nefyedilir' biçiminde).
+- Doğan sual: —
