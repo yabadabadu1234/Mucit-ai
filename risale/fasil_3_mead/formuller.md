@@ -68,6 +68,7 @@ Halk ∧ Mülk ⟹ ¬∃ bağımsız-hak(mümkin ; Vâcib) ⟹ Zulüm(Vâcib,·)
 Şer(b): adem-i-vücdan ≠ adem-i-vücud ; hikmet-bilinmemesi ≠ hikmet-yokluğu
   muhtemel: imtihan | küllî-düzenin cüz'î bedeli | telâfi(ahiret) | bilinmeyen        [hepsi cedelî]
 sonsuz-azap: ceza-ölçüsü = hakkın büyüklüğü ∧ niyet ; cedelî ; ihtilaflı
+  fenâ-yı nâr: İbn Kayyım 3 görüş sayar ; İbn Teymiyye'ye nispet tartışmalı [ikincil kaynaktan yoklandı]
 ```
 
 ## Melek, Cin, Şeytan

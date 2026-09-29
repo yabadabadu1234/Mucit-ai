@@ -31,7 +31,7 @@ Bunların ortak kökü, burhanın kilit öncülünün ispatsız olmasıdır:
 - **Öncül (P):** hiç duyu almayan özne kendini bilir. Dayanağı yalnız tasavvur edilebilirliktir; bu hâl fiilen imkânsızdır. Üstelik P kısmen ampirik bir sorudur: benlik şuurunu iç duyuya (interosepsiyona) bağlayan sinirbilim çizgileri (Damasio, Seth gibi) P'nin tersini savunur. P bunların yanlış olduğunu ispatlamaz, yanlış olduğunu varsayar. "Sinirbilime gerek yok" demek bu yüzden yanlıştı.
 - **Çıkarım (Q):** "kendimi bedenimi bilmeden bilebilirim, öyleyse ben beden değilim" epistemik durumdan varlık hükmüne geçer (Arnauld'un Descartes'a itirazı, "maskeli adam" hatası): bir şeyi bilme şeklim, o şeyin ne olduğuna hüküm vermez.
 
-Sonuç, projenin kendi kaidesiyle: yanıtlanamayan öncül taşıyan delil burhânî değildir. Uçan Adam **cedelî bir tenbih** (dikkat çekme, hatırlatma) olarak kalır. İbn Sînâ'nın onu kendisi de tenbih olarak sunduğu bilgisi birincil metinden yoklanmamıştır (F 1-K), kesin sayılmaz.
+Sonuç, projenin kendi kaidesiyle: yanıtlanamayan öncül taşıyan delil burhânî değildir. Uçan Adam **cedelî bir tenbih** (dikkat çekme, hatırlatma) olarak kalır. İbn Sînâ'nın onu bir **tenbih** (uyandırma, işaret) olarak sunduğu **ikincil literatürde yoklandı** (F 1-K): Michael Marmura, Uçan Adam'ı "kesin bir ispat olarak değil, insanı kendi öz-bilgisine uyandıran bir düşünce deneyi" olarak okur; Dag Hasse ise tenbihin mantıkî statüsünün Marmura'nın varsaydığından **daha zayıf**, yani "ipucu ve yönlendirme" düzeyinde olduğunu savunur. İki yorum da onun burhân olmadığında birleşir. Birincil metin (Şifâ, en-Nefs I.1; İşârât) bu çalışmada okunmadı.
 
 ## Mücerred'in Kendi İçi
 

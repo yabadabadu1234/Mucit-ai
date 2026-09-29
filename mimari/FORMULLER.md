@@ -466,7 +466,7 @@ Tâirü'l-Havâ (Uçan Adam) ⊳ Tavassut(cedelî) — tenbih; burhânî ⊬
     ampirik-yüklü: benlik-şuuru ≟ f(interosepsiyon) — bir sinirbilim çizgisi (Damasio, Seth)
       P'nin tersini savunur; P bunun yanlışlığını ispatlamaz, varsayar
   çıkarım Q: bilgi-bakımından-ayrı ⟹ varlık-bakımından-ayrı  ⊬ epistemik→ontolojik sıçrama [Arnauld]
-  ∴ P ⊬ ∨ Q ⊬ ⟹ ¬burhânî ; tenbih olarak kalır [İbn Sînâ'nın kendi sunuşu: tenbih — ⊬ birincil metinden yoklanmadı, F 1-K]
+  ∴ P ⊬ ∨ Q ⊬ ⟹ ¬burhânî ; tenbih olarak kalır [İbn Sînâ'nın kendi sunuşu: tenbih — YOKLANDI ikincil literatürde: Marmura "düşünce deneyi, kesin ispat değil"; Hasse "tenbih daha da zayıf: ipucu" ; birincil metin okunmadı, F 1-K]
   Şüphe-formu ("his doğru olmasa da 'ben varım'") ≠ Uçan Adam:
     hissin DOĞRULUĞUNU sorar, hissin YOKLUĞUNDAKİ hâli değil — Uçan Adam yerine geçmez
 ```

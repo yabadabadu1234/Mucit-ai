@@ -103,10 +103,13 @@ Toplam (A ∧ B ∧ C): ⊬ burhânî ; = cedelî-yüksek
 
 ```
 İlmî-Gaybî-İ'câz(Rükün) = ⟨ haber(x), sıhhat(x), adem-i-vüsul(x) ⟩   ∀x hepsi birden
-  Yûnus 10:92 (Firavun'un bedeni):  adem-i-vüsul ⊬ (mumyalama çağın bilgisi; Tekvîn 50:2-3)  [cedelî-zayıf]
-  Rûm 30:2-4  (Bizans):            adem-i-vüsul: orta (siyasî tahmin) ; tarih-ayrıntısı ⊬ yoklanmadı  [cedelî]
-  Duhân 44:29 (hiyeroglif iddiası): sıhhat ⊬ ∧ adem-i-vüsul ⊬ ; kaynak zinciri YOK ; Arapça mecaz ihtimali
-                                    ⟹ delil olarak ALINMADI [F 1-K]
+  Yûnus 10:92 (Firavun'un bedeni):  adem-i-vüsul ⊬ (mumyalama çağın bilgisi; Tekvîn 50:2-3) ; Merneptah 1898 Loret/KV35 [yoklandı] ; Bucaille tuz-tezi Mısırbilimde destek görmedi (natron her mumyada)  [cedelî-zayıf]
+  Rûm 30:2-4  (Bizans):            adem-i-vüsul: orta (siyasî tahmin) ; 614 Kudüs / 622 / 627 [yoklandı] ; hangi olay kastedildi: Tabarî≠(Kudüs) tartışmalı  [cedelî]
+  Duhân 44:29 (hiyeroglif iddiası): metin BULUNDU — Piramit Metinleri, Pepi I Spell 526 = PT 553 = Faulkner Utt. 553
+                                    (Allen 2005): "gök ağlayacak, yer sarsılacak" [ritüel vaat, ağıt DEĞİL]
+                                    klasik-tefsir (Tirmizî 3255, İbn Abbâs, İbn Kesîr, Celâleyn) ayeti mü'minin amelleriyle açıklar ;
+                                    Mısır yazıtına bağlamaz ; adem-i-vüsul GÖSTERİLEMEDİ (Cahiliye şiirinde motif ⊬ doğrulanamadı)
+                                    ⟹ cedelî-zayıf ; dayanak DEĞİL, kayıt
 Toplam: bağımsızlık şartı ihlâle açık (sonradan eşleştirme) ⟹ destek ; dayanak DEĞİL
 ```
 
@@ -125,7 +128,7 @@ Mucize.var-oluş ⊥ Mucize.idrak ;  Arapça-bilmeyen: delil ↦ haber(ehl-i fen
 Sîret(çekirdek) : haber, tevatür                                                          [burhânî]
 "en güzel ahlâk" ≔ mukayese ⟹ ölçü ortaklığı gerekir                                       [cedelî]
 H₁ "dünyevî menfaat için yalan": tarihî-rivayet ile ihtimal DÜŞER ; ispat etmez            [cedelî]
-düşman-şahadeti (Herakleios–Ebû Süfyân, Buhârî Bed'ü'l-Vahy; hadis-no ⊬ yoklanmadı)        [âhâd, cedelî]
+düşman-şahadeti (Herakleios–Ebû Süfyân, Buhârî Bed'ü'l-Vahy 7 — yoklandı)        [âhâd, cedelî]
 ```
 
 ## Mukayeseli Tevhid

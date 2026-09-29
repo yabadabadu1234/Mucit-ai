@@ -416,11 +416,25 @@ Bu yüzden, üç kolun **toplamı** cedelî-yüksektir. Toplamın "burhânî" il
 
 | Örnek | Haber | Sıhhat | Adem-i vüsul | Hüküm |
 | :-- | :-- | :-- | :-- | :-- |
-| **Firavun'un bedeni** (Yûnus 10:92: "bugün seni bedeninle kurtaracağız ki arkandakilere ibret olasın") | Var | Mısır mumyaları müzelerde; Merneptah'ın mumyası 1898'de bulundu (Loret); ancak "hangi firavun" ve "boğuldu mu" hususları **ihtilaflıdır** | **Zayıf**: mumyalama bilgisi çağın bilgisiydi (Tevrat'ta da Yakûb ve Yûsuf'un mumyalanması anlatılır: Tekvîn 50:2-3; Yunan kaynaklarında da bilinirdi) | **Cedelî-zayıf**. Ayetin "bedenin korunması" olarak okunması da tek okuma değildir ("bedenen" = "cesediyle") |
-| **Bizans'ın yenilip yeniden galip gelmesi** (Rûm 30:2-4) | Var: yenilgi haberinin ardından "birkaç yıl içinde" galibiyet | İran'ın 614'te Kudüs'ü almasından sonra Heraklius'un 622 sonrası seferleriyle 627'de Ninova zaferi tarihî vakıadır | **Orta**: çağın siyasî tahmini (Mekkeli tüccarların bilgisi) ile açıklanabilir; ancak tahmin **riskli** ve iddiası açık zaman dilimlidir. (Tarihlerin ince ayrıntıları yoklanmalı ⊬ hedge) | **Cedelî** |
-| **"Gök ve yer ağlamadı"** (Duhân 44:29) — iddiaya göre Mısır hiyeroglif ağıt formüllerinde "gök ve yer ağladı" kalıbı geçerken Kur'ân bunu nefyeder | **Haber: ayette metin var** | **⊬ Yoklanamadı** | **⊬** | **Bu risaleye delil olarak ALINMAMIŞTIR.** Aşağıda gerekçe |
+| **Firavun'un bedeni** (Yûnus 10:92: "bugün seni bedeninle kurtaracağız ki arkandakilere ibret olasın") | Var | Mısır mumyaları müzelerde; Merneptah'ın mumyası 1898'de Loret tarafından KV35'te (II. Amenhotep mezarındaki mumya deposunda) bulundu (**yoklandı**); fakat "Musa'nın firavunu Merneptah'tır ve boğulmuştur" tezi Bucaille'e dayanır, Mısırbilimcilerde destek görmedi: mumyalamada zaten tuz (natron) kullanılır, cesetteki hasarı Ikram ve Dodson mezar soygununa bağlar (**yoklandı**, ikincil kaynak) | **Zayıf**: mumyalama bilgisi çağın bilgisiydi (Tevrat'ta da Yakûb ve Yûsuf'un mumyalanması anlatılır: Tekvîn 50:2-3; Yunan kaynaklarında da bilinirdi) | **Cedelî-zayıf**. Ayetin "bedenin korunması" olarak okunması da tek okuma değildir ("bedenen" = "cesediyle") |
+| **Bizans'ın yenilip yeniden galip gelmesi** (Rûm 30:2-4) | Var: yenilgi haberinin ardından "birkaç yıl içinde" galibiyet | Sâsânîlerin 614'te Kudüs'ü alması, Herakleios'un 622 seferi ve 627'deki zaferler **yoklandı**. Tabarî'nin, ayetin "yakın yer" ifadesini 614'teki Ezri'ât savaşı olarak anlattığı, bazı Müslüman kaynakların ise Kudüs'ün düşüşünü kastettiği bildirilir: **hangi olayın kastedildiği bile tartışmalıdır**. Ebû Bekir'in bu haber üzerine bahis tuttuğu rivayeti de anılır | **Orta**: çağın siyasî tahmini (Mekkeli tüccarların bilgisi) ile açıklanabilir; tahmin **riskli** ve zaman aralığı (bid' = 3-9) açıktır | **Cedelî** |
+| **"Gök ve yer ağlamadı"** (Duhân 44:29) — iddiaya göre Mısır yazıtlarında ölen kral için "gök ağlar, yer sarsılır" kalıbı geçerken Kur'ân bunu nefyeder | Ayette metin var | **Yoklandı, birincil metin bulundu** (aşağıda): Piramit Metinleri, Pepi I, Spell 526 (= Faulkner Utterance 553) | Hiyeroglifin çözümü 1822'ye kadar yapılamadı (genel bilgi); fakat ayet, **klasik tefsirde Mısır yazıtına bağlanmaz** ve "gök-yer yas tutar" motifinin başka kaynaklardan bilinmediği **gösterilemedi** | **Cedelî-zayıf**: metin gerçek, bağlantı yorumdur |
 
-**Hiyeroglif iddiası — kaynak yoklamasının dürüst sonucu (F 1-K):** İddia geniş dolaşımdadır ("Piramit Metinleri'nde firavun ölünce gök ve yerin ağladığı yazılıdır, Kur'ân bunu nefyeder"). Yaptığım yoklamada iddiayı öne süren kaynakların **hemen hepsi savunma/dinî yayın siteleridir**; iddiayı sahih bir Mısırbilim neşrinden (metin numarası, çeviri, tarih) **teyit eden bir atıf bulamadım**. Piramit Metinleri'nde gökyüzünün ve yıldızların ölen kral için sarsıldığı ve ağladığı ifadelerine benzer kalıplar **bulunduğu bildirilmektedir**, ancak (1) hangi utterance numarası, (2) hangi çeviri (Faulkner, Allen), (3) bu kalıbın hangi bağlamda (ağıt mı, ritüel mi) geçtiği doğrulanmadı. Üstelik Duhân 44:29'un **Arap kültürünün kendi içinde** bir **mecaz** olması da (büyük bir kişinin ölümünde "gök ve yer ağladı" demek, Arapça mersiyelerde bilinen bir söylemdir; klasik tefsirlerde bu yönde izah bulunur — ⊬ birincil kaynaktan yoklanmadı) adem-i vüsul şartını zayıflatır. Bu iki sebeple, **kaynak zinciri kurulamadığı için** bu delil **risaleye delil olarak yazılmamıştır**; yalnız bu kayıt olarak durur. Kaynak zinciri (metin, neşir, çeviri, tarih) tam kurulursa gelecekte yeniden değerlendirilecektir.
+**Hiyeroglif iddiası — derin yoklamanın sonucu (F 1-K):** İlk yoklamada iddiayı yalnız savunu siteleri anıyordu; bu yüzden delil dışı bırakılmıştı. İkinci, derin yoklamada **birincil metin bulundu**:
+
+- **Metin:** James P. Allen, *The Ancient Egyptian Pyramid Texts* (2005) çevirisinde, Pepi I'in mezar odasının girişindeki (vestibül) **Spell 526** (Sethe-Faulkner numarasıyla **PT 553**, Faulkner Utterance 553; eşleştirme Allen'ın konkordans tablosundan **doğrulandı**). Metin, ölen krala hitaben şöyle der: *"Gök senin için ağlayacak, yer senin için sarsılacak; Bağlayıcı çığlık atacak ve büyük bağlama direği haykıracak … sen gökyüzüne bir yıldız olarak, sabah tanrısı olarak çıkarken."* (Allen çevirisinden, Türkçeleştirilmiştir.) Başka bir yerde (Unas, Spell 151) ise düşman tanrıların, kralın **ölümü için ağlamadığı** yazılıdır ("Set ve Thoth … sizin için ağlamayan kardeşleriniz").
+- **Yani iddianın metin tabanı gerçektir:** Mısır'ın kral cenaze yazıtlarında "gök ağlar, yer sarsılır" ifadesi vardır ve hiyeroglif 7. asırda okunamıyordu (Champollion'un çözümü 1822).
+
+**Fakat bu, delilin işlemesi için yetmez; dört ayrı sebep var:**
+
+| # | Zorluk | İzah |
+| :-- | :-- | :-- |
+| 1 | **Metnin türü** | Bu ifade bir **ağıt** değil, ölen kralın göğe **yükselişini** anlatan **ritüel bir vaattir**; gök ve yerin tepkisi kralın büyüklüğüne verilen kozmik bir karşılıktır. Kur'ân'ın "ağlamadı" demesi, "Mısırlılar böyle inanırdı, biz bunu nefyediyoruz" diye **açıkça** bir yazıta atıf yapmaz |
+| 2 | **Klasik tefsir bu ayeti başka türlü açıklar** | Tirmizî'nin rivayet ettiği hadiste (Câmi' 3255, Enes'ten) mü'minin gökte iki kapısı vardır (biri rızkının indiği, biri amellerinin çıktığı); ölünce o kapılar onu özler ve ağlar; ayet bunu anlatır. İbn Abbâs, İbn Kesîr ve Celâleyn de ayeti **mü'minin amelleri ve ibadet yerleriyle** açıklar, Firavun kavminin yerde ve gökte iyilik izi bırakmadığını söyler. Hiçbir klasik açıklama ayeti Mısır yazıtlarına bağlamaz (**yoklanan tefsirlerde**; Zemahşerî'nin kendi metni ise doğrudan **okunamadı**, ⊬) |
+| 3 | **Ayetin muhatabı** | Ayet bir firavunun **ölüm formülünü** değil, Firavun'un **kavminin** (sürüklenen halkın) helâkini konu eder; Mısır'ın kral cenaze ritüeli ile birebir aynı konuyu işlediği **gösterilemez** |
+| 4 | **Adem-i vüsul şartı** | "Gök ve yerin bir ölü için yas tuttuğu" fikri, **Mısır dışında** da bulunabilecek genel bir şiir/kozmik-yas motifidir. Cahiliye şiirinde bu motifin varlığı **yoklamada doğrulanamadı** (aranmış, sonuç çıkmamıştır: ⊬); İbrânî peygamber metinlerinde yer ve göğün yas tutması geçtiğini (mesela Yeremya 4:28) kendi bilgimden hatırlıyorum ama metin **bu çalışmada okunmadı** (⊬) |
+
+**Dürüst netice:** Metin **gerçektir**; ayetin o metne bir **cevap** olduğu ise **yorumdur**, ne klasik tefsirin ne metnin kendisinin söylediği bir şeydir. Şart olan "adem-i vüsul" (Arabistan'ın bu motife başka yoldan ulaşamayacağı) **gösterilemediği** için delil **cedelî-zayıf** kalır. Bu yüzden risale bunu **delil listesine dayanak olarak koymaz**; bir **dikkat çekici rastlantı adayı** olarak kayıt altında bırakır. Bu, iddiayı yıkmak için değil, ancak yukarıdaki dördüncü şart doğrulanabilirse (yani motifin Arabistan'da bilinmediği gösterilirse) yeniden değerlendirilir.
 
 **Toplam değerlendirme (dürüst):** Elimizde sağlam bir **tek** ilmî-gaybî delil yoktur; Bizans örneği en dikkat çekicisi olup **cedelî**dir. Bu kolun asıl gücü, **birden çok bağımsız isabetin toplamında** olurdu; fakat "bağımsızlık" şartı burada **kolayca ihlâl edilir**: ayetlerin okunuşunun esnekliği (hangi ayete hangi keşfin uyduğunu **sonradan** eşleştirmek) bağımsızlığı bozar. Bu yüzden risale bu kolu **destek** olarak tutar, **dayanak** olarak koymaz.
 
@@ -428,7 +442,7 @@ Bu yüzden, üç kolun **toplamı** cedelî-yüksektir. Toplamın "burhânî" il
 | :-- | :-- |
 | Firavun'un bedeni: adem-i vüsul şartı sağlanamıyor | cedelî-zayıf |
 | Bizans zaferi haberi | cedelî |
-| Hiyeroglif iddiası | ⊬ delil olarak alınmadı (kaynak yok) |
+| Hiyeroglif iddiası (metin bulundu: Piramit Metinleri, Pepi I Spell 526 = PT 553) | cedelî-zayıf; dayanak değil, kayıt |
 | İlmî-gaybî kol toplamı | destek; dayanak değil |
 
 ## 8. Kur'ân Neden Bütün Âleme Hitap Ediyor?
@@ -471,8 +485,8 @@ Bu bahiste **iki ayrı iddia** vardır ve **karıştırılmaz**:
 
 ### 10.1 (a) Sîret: Ne Nasıl Biliniyor?
 
-- **Bilinenlerin çekirdeği (tevatürle):** Nübüvvetten önce "el-Emîn" (güvenilir) diye anıldığı; Kâbe'nin yeniden inşasında Hacerü'l-Esved meselesinde hakemliği (İbn İshâk kaynaklı siyer rivayeti — sened tartışması ayrı, fakat vakıanın hatırası **muhaliflerce da** inkâr edilmemiştir); Kur'ân'ın kendisinde onun ahlâkını öven ifade: "Sen elbette büyük bir ahlâk üzerindesin" (Kalem 68:4).
-- **Düşmanının şahadeti:** Herakleios ile Ebû Süfyân arasında geçen konuşma (Buhârî, **Bed'ü'l-Vahy** bölümünde; hadis numarası bu çalışmada yoklanmadı ⊬ F 1-K): Ebû Süfyân o sırada **hâlâ müşrik** ve Muhammed'in düşmanıdır; ona "Bu iddiayı ortaya atmadan önce onu yalanla itham eder miydiniz?" sorulur ve "Hayır" der. **Bu, düşman ağzından bir şahadettir**; fakat bir **tek rivayet**tir, kendi sened derecesi âhâddır.
+- **Bilinenlerin çekirdeği (tevatürle):** Nübüvvetten önce "el-Emîn" (güvenilir) diye anıldığı; Kâbe'nin yeniden inşasında Hacerü'l-Esved meselesinde hakemliği (İbn İshâk'ın Sîre'sinde: Velîd b. Muğîre'nin "kapıdan ilk giren kişiyi hakem alalım" teklifi, ilk girenin Muhammed olması ve kabilelerin "Bu el-Emîn, razıyız" demesi; Hacerü'l-Esved'i bir örtü üzerine koyup her kabile büyüğünün bir ucundan tutmasıyla çözüm — **ikincil kaynaklardan yoklandı**; senedin kendisi ve yaşı (25 mi 35 mi) ihtilaflıdır); Kur'ân'ın kendisinde onun ahlâkını öven ifade: "Sen elbette büyük bir ahlâk üzerindesin" (Kalem 68:4).
+- **Düşmanının şahadeti:** Herakleios ile Ebû Süfyân arasında geçen konuşma (**Buhârî, Bed'ü'l-Vahy, hadis 7**, İbn Abbâs'tan, Ebû Süfyân'ın anlatımıyla — **numara ve içerik yoklandı**): Ebû Süfyân o sırada **hâlâ müşrik** ve Muhammed'in düşmanıdır; ona "Bu iddiayı ortaya atmadan önce onu yalanla itham eder miydiniz?" sorulur ve "Hayır" der. **Bu, düşman ağzından bir şahadettir**; fakat bir **tek rivayet**tir, kendi sened derecesi âhâddır.
 
 ### 10.2 (b) "En Güzel" Hükmü: Neden Cedelî?
 
@@ -589,7 +603,7 @@ Kur'ân der: "elden geçince bir kısmı değiştirildi"          ⟹  MEVCUT me
 | 7-C | Nazm (belâgat/fesâhat/talâkat); çelişkisizlik | cedelî-yüksek / cedelî |
 | 7-D | Üç kolun toplamı ("Kur'ân insan sözü değil") | **cedelî-yüksek — burhânî DEĞİL** |
 | 7-E | İlmî-gaybî kol | cedelî-zayıf; destek |
-| 7-F | Hiyeroglif iddiası | ⊬ delil olarak alınmadı (kaynak yok) |
+| 7-F | Hiyeroglif iddiası (metin bulundu: Piramit Metinleri, Pepi I Spell 526 = PT 553) | cedelî-zayıf; dayanak değil, kayıt |
 | 8 | Kur'ân'ın hitabı evrenseldir (metin vakıası) | burhânî |
 | 9 | Arapça bilmemek mucizeyi değiştirmez; delil haber derecesine iner | burhânî (ontolojik/epistemik ayrım) |
 | 10-a | Sîret çekirdeği (tevatür) | burhânî (haber) |

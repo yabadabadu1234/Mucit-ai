@@ -26,7 +26,9 @@ akîde ∋ mütevatir ; sahîh-âhâd akîdede tek başına: cumhur ¬ ; Ahmed/�
 Denetim-araçları = { isnad, cerh-ta'dîl, turuk-i'tibâr, ilel, mevzû'ât, Sahîhayn-istidrâk }     [gözlenebilir: burhânî]
 Hadis-tenkidi ≻? Tarihî-nakil-tenkidi : araç-kıyası gözlenebilir ; "daha sağlam" ⟹ cedelî-yüksek ; ¬"belirli hadis doğrudur"
 Erken tarihleme: Motzki(isnad-cum-matn), A'zamî, Sezgin ⟷ Goldziher, Schacht   ⟹ akademik olarak AÇIK
-[F 1-K: nitelemeler literatürden; birincil metinler bu çalışmada yeniden okunmadı; Motzki atfı arama-dizininden yoklandı, tam bibliyografya ⊬]
+[F 1-K: Motzki — JNES 50 (1991) 1-21 ve Origins of Islamic Jurisprudence (Brill 2002) YOKLANDI ; Goldziher/Schacht nitelemeleri ikincil literatürden ; birincil metinler okunmadı]
+Dârekutnî el-İlzâmât ve't-Tetebbu': 78(Buhârî)+100(Müslim)+32(ortak)=210 ; başka sayımda 217 ; yapıcı ton [yoklandı]
+sıkılık-ilkesi (helâl-haram sıkı / fazîlet gevşek): Ahmed, İbn Mehdî, İbn Mübârek ; Suyûtî Tedrîb, İbn Adî el-Kâmil [ikincil yoklandı]
 ```
 
 ## Aykırı Görünen Hadis — Karar Şeması
@@ -58,8 +60,8 @@ Yöntemsel-doğalcılık ≔ çalışma-kuralı ; Metafizik-doğalcılık ≔ va
 kural → iddia ⟹ "bulamadık"⟹"yoktur" ↯ adem-i vücdan ≠ adem-i vücud                                       [burhânî]
 Usul-kusurları:
   tekrarlanamazlık: OSC(2015, Science): 100 çalışma; orijinal anlamlı %97 ; tekrar anlamlı %36              [yoklandı]
-  sahtekârlık: Piltdown (1912→1953), Hwang (2005)                                                          [tarihî olgu ; birincil ⊬ yoklanmadı]
-  erken-hüküm: soğuk füzyon (1989)                                                                          [tarihî olgu ; birincil ⊬ yoklanmadı]
+  sahtekârlık: Piltdown (1912→1953 ; fail Dawson 2016), Hwang (2005 ; Science geri çekme 2006)            [yoklandı]
+  erken-hüküm: soğuk füzyon (1989)                                                                          [yoklandı]
 ∴ bilim-insanının iddiası bilim-insanı olduğu için doğru DEĞİL ; kendi delilleriyle sınanır ; aynı ölçü bu risaleye
 ```
 
@@ -116,7 +118,8 @@ Kadın:   Bakara 2:282 gerekçe metinde ("biri şaşırırsa") ; Nisâ 4:11 her-
          Nisâ 4:7 kadına miras hakkı ; eşit-pay ≠ eşit-değer (nafaka asimetrisi izahı = cedelî)              [hüküm vahiy ; izah cedelî]
 Kölelik: kurum icat edilmedi ; kefarette azat ; zekâtta rikâb ; azat=iyilik ; tedrîc izahı ;
          "neden doğrudan yasaklamadı" ⟹ tam cevap YOK                                                    [cedelî-zayıf ; değer-itirazı AÇIK]
-Hz. Âişe: Kur'ân'da yok ; Buhârî-Müslim sahih-sened ; Hişâm b. Urve (Irak) zabıt-tenkidi ; alternatif hesap ihtilafı ;
+Hz. Âişe: Kur'ân'da yok ; Buhârî-Müslim sahih-sened ; Hişâm b. Urve (Irak): Mâlik itirazı, Ya'kūb b. Şeybe, Zehebî savunusu [yoklandı] ;
+          Esmâ hesabı: 100 yaş(İbn Kesîr)⟹Âişe zifafta 18-19 ; 91-92 yaş(Zehebî Siyer 3/380)⟹10-11 [hesap benim] ;
           tarihî haber ≠ hüküm ; âhâd ⟹ akîdede delil değil                                                [cedelî]
 Değer-itirazının temeli: Hüsn-kubuh ihtilafı (Mâturîdî zâtî ⟹ vicdan delil ; Eş'arî şer'î ⟹ vahiy ölçü)   [kapatılmadı]
 ```
