@@ -1513,3 +1513,147 @@ Biçim: cilt 1–2 ile aynı.
 - Delil çeşidi: **analitik**; (T) analitik.
 - Mevzuya bağı: **Fasıl I ilim sıfatı**: 'sonsuz mertebe' itirazının **cevabı (mertebeler fiilen değil bir ilimle kuşatılır)** ders katmanı için not.
 - Doğan sual: —
+
+## c3 p169
+- OCR: orta
+- Okuma: tam
+- İçerik: (Hücca 1 devam; 'ilmin ilmi' sonsuz mertebe itirazına cevap): 'Zât ilme **müessir**; her mertebe **ikinci mertebedeki te'sîr için şart**; **illetin şartı illet yerindedir** ⇒ soru döner'; ikinci vecih: 'her önceki mertebe sonrakini **müstelzim**; sonsuz illet-ma'lûl bâtıllığı delili **bu sûrette de aynen geçerli**' (**hasmın 1. hüccesine Râzî-hasım cevabı**: sonsuz zincir itirazı kendi içinde döner). **Hücca 2**: 'Sonsuz olan **imtiyâz** taşıyamaz (ayrılık için her ikisi öbüründen ayrı ve dışında olmalı; dışında bir şey olan **mahdûd**); her malûm başkasından ayrı olmalı; ⇒ **sonsuz malûm olamaz**.' **Hücca 3**: 'Sonsuz malûmu bilse **zâtında sonsuz sıfat** hâsıl olurdu: (1) ilim = özel nisbet; sonsuz malûm ⇒ **sonsuz mevcut nisbetler**; (nisbetlerin a'yânda vücûdu yok denemez, çünkü ilim bu nisbetlerdir).'
+- Netice/hüküm: **'Sonsuz malûmu bilmek' aleyhine 3 delil (sonsuz mertebe, imtiyâz, sonsuz sıfat).**
+- Delil çeşidi: **analitik**; (T) analitik-cedelî.
+- Mevzuya bağı: **Fasıl I ilim/sonsuz**: 'Allah sonsuz malûmu bilir' iddiasına klasik itirazlar.
+- Doğan sual: —
+
+## c3 p170
+- OCR: orta
+- Okuma: tam
+- İçerik: Hücca 3 devam: 'İlim filozoflara göre **mutâbık sûretler**; sonsuz malûm ⇒ zâtta **sonsuz sûret**; iki takdirde de **sonsuz sıfat** (nisbetler ya da sûretler). **İkinci vecih**: 'bu malûmu bilir' ile 'bilmez' nakîz değil; zâtta sıfatların **ayrılığı** (biri gaflet, öteki bilme).' **Sonsuz sıfatın muhâlliği (2 vecih)**: (1) her mevcut adet **artma-eksilmeyi kabul eder**, öyleyse mütenâhi; (2) **her malûmun kendi başına sonsuz hükmü** var (cevher-i ferd sonsuz hayizde/vakitte/sıfatla olabilir) ⇒ **her malûm için sonsuz hüküm bilmek ⇒ sonsuzun kat kat çoğaltılması (tad'îf) muhâl** (tad'îf bir şeyi başka şeye eklemek; **dışında bir şey bulunan mütenâhi**).
+- Netice/hüküm: **Sonsuz sıfat ve tad'îf itirazları.**
+- Delil çeşidi: **analitik**; (T) analitik.
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c3 p171
+- OCR: orta
+- Okuma: tam
+- İçerik: (Tad'îf sonu.) **Râzî'nin cevapları (5 şübheye)**: **1.'ye (rubûbiyet-ubûdiyet)**: 'bu, **hayiz** meselesinin ('cebr ve kader' bâbında) sonucu; **o mesele**de anlatılacak'; **2.'ye (ma'dûm malûm olamaz)**: 'bu sözü bu fasılın başında kahir delillerle **iptal ettik**'; **3.'ye (ilmin ilmi ilimden mugâyir ⇒ sonsuz illet-ma'lûl)**: 'bu, **sonsuz sebep ve müsebbepler lâzım getirir, ama onların evvelsizliğini nefyetmez**' (yani 'evvelsiz sonsuzluk' değil 'sonsuz mertebe' — ilk bâtıl delili değil); **4.'ye (sonsuz imtiyâz olmaz)**: 'her biri ötekinden ayrı; bu **her birinin malûm olmasına yeter**'; **5.'ye (sonsuz sıfat)**: 'bu taalluklar **nisbet ve izâfetlerdir**; sonsuz nisbet-izâfe **imkânsız değil: bir, ikinin yarısı, üçün üçte biri, dörtün dörtte biri; sonsuz nisbet hâsıl** ⇒ bu sözün imkânsızlığı yok.' **Bâb 3'ün son cümlesi 'Vallahu a'lem'.**
+- Netice/hüküm: **Râzî: 'Allah sonsuz malûmu bilir' iddiası itirazlara karşı korunuyor (nisbetler sonsuz olabilir).**
+- Delil çeşidi: **cedelî-analitik**; (T) analitik (**'bir sayısının nisbetleri' misali ders katmanına hazır**).
+- Mevzuya bağı: **Fasıl I ilim sıfatı (sonsuz malûm)**: cevabı **Râzî c3 p171 / c3 p149 (aynı misal)**.
+- Doğan sual: —
+
+## c3 p172
+- OCR: boş
+- Okuma: tam (içerik yok)
+- İçerik: Yok.
+- Netice/hüküm: Yok.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c3 p173
+- OCR: orta (başlık kötü)
+- Okuma: tam
+- İçerik: **Bâb 4 (dipnotta 'Fasıl 17/8'): Allah'ın mürîd olması (irâde)**. 'Bu bâbda kelâm **üç yönden**: (1) **irâdenin mânâsını araştırmak**; (2) Allah'ın bu sıfatla mevsûf olduğuna **istidlâl edenlerin delilleri**; (3) **inkâr edenlerin delilleri**.' (Dipnot: nüsha numaralandırma farkı.)
+- Netice/hüküm: **Bâb 4 = irâde (üç bahis)**.
+- Delil çeşidi: —
+- Mevzuya bağı: **KRİTİK — Fasıl I §8.0/8.3**: **irâde bâbı; c3 p5'teki 'sekiz sıfat' listesinde irâde ayrıca yok, ama Bâb 4 irâdedir (sıfat listesi Bâb başlıklarıyla uyuşmuyor: not)**; **irâde-tahsis borcunun kapanacağı yer**.
+- Doğan sual: —
+
+## c3 p174
+- OCR: çöp/boş
+- Okuma: kısmî (içerik yok)
+- İçerik: OCR anlamsız/boş.
+- Netice/hüküm: Çıkarılmadı.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c3 p175
+- OCR: orta (başlık kötü)
+- Okuma: tam
+- İçerik: **Bâb 4, Fasıl 1: 'İrâdenin hakîkati'**. **Mesele 1**: **Filozoflar**: 'Kendimizde buluruz: bir fiilde **saf ya da râcih menfaat** tasavvur edince nefsimizde **o menfaati tahsile meyil**, saf ya da râcih **mazarrat** tasavvur edince **def' ve mene meyil**; **celb-tahsil meylini irâde**, **def' ve men meylini kerâhet** diye adlandırdık. **Irâde-kerâhetten bu kastediliyorsa Allah hakkında sübûtu muhâl** (lezzet-elem, menfaat-mazarrat ona sahih değil); **başka mânâ kastediliyorsa mânâsını açıklamak gerek**.' **Mütekellimîn**: '**İrâde, mümkinin iki tarafından birini vücûb ve tekvîn olmaksızın râcih kılan sıfat**.' **Bu sıfatın varlığına iki delil**: **(1)** 'İki kadeh/iki ekmek arasında muhayyer kalan biri, ya da **aslandan kaçıp iki eşit yola varan** biri birini **müreccihsiz** seçer; **menfaat ya mazarrat def'i olmadan**: **irâde menfaat celbi olmadan hâsıl**'.
+- Netice/hüküm: **İrâdenin iki tanımı: filozof (meyl) ve mütekellim (sıfat-i müreccih); mütekellim delil 1: Buridan örneği.**
+- Delil çeşidi: **tanım + misal**; (T) cedelî.
+- Mevzuya bağı: **KRİTİK — Fasıl I §8.3**: **Fasıl I 'irâde' tanımı hangisi?** (Fasıl I yeniden okunacak; 'tahsis edici sıfat' ise **mütekellim tanımı**).
+- Doğan sual: —
+
+## c3 p176
+- OCR: orta
+- Okuma: tam
+- İçerik: **Delil 2**: '**Hasta meyvelere aşırı meyleder ama yemez, sakınır**: **tabiat meyli var, irâde yok**; **zâhid-âbid namaz-ibâdete irâde eder ama meyletmez** (zahmet var): **irâde var, tabiat meyli yok** ⇒ **irâde ≠ tabiat meyli**.' **Filozofların itirazı** ('sıhhat üzere te'sîr' müşkil, iki vecihle): **(1)** 'Bu söz **vücûb olmaksızın te'sîr eden** müessiri iddia ediyor; **kâdir bâbındaki bahisler tekrar** (müessiriyet için gerekli her şey hâzırsa eser vâcib, değilse mümteni; **sıhhat yok**).' **(2)** …(p177).
+- Netice/hüküm: **Mütekellim delil 2 (meyl ≠ irâde) ve filozof itirazı 1 (kâdir bâbının tekrarı).**
+- Delil çeşidi: **iç gözlem + tekrar**; (T) cedelî.
+- Mevzuya bağı: **Fasıl I §8.3**: **irâde ≠ meyl** ayrımı (**hasta-âbid örneği**) **ders katmanına hazır misal**; **filozof itirazı = Bâb 2 aporiasının aynısı**.
+- Doğan sual: —
+
+## c3 p177
+- OCR: orta
+- Okuma: tam
+- İçerik: (Filozof itirazı 2. vecih ve mütekellim delillerine cevap — filozof sesi.) 'İrâdenin **tercihte** müessir, **tekvînde** değil' sözü **tercih ile tekvîn farkının beyânına** muhtaç: **tercihten, mümkinin bir yanının vukûu ve o sebeple olmasını** anlarız; bu **tekvîndir**; 'tercih-tahsis' adlı, tekvînden ayrı bir mefhûm ispatı **ma'kûl değil**. **Buridan örneğine (iki kadeh/ekmek)**: (1) 'ikisinin bedene ilişkin menfaat-mazarrat bakımından **eşit** olduğunu kabul etmeyiz; **biri ona daha yakın, daha kolay, daha faydalı** hayâl edilir; aşırı iştahlı olabilir, gözü birine takılınca **rağbeti o yönde kalır**; **zihnî müreccihin hâsıl olması, bekâsı ve unutulduktan sonra hatırlanması ayrı şeylerdir**'; (2) 'birini müreccihsiz aldı diyelim: bu fiili doğuran **yeme-içme rağbetinin şiddeti**; rağbet = menfaat talebi ve mazarrat defi; **menfaat talebi olmasa hiçbirini almazdı**; aslandan kaçış da öyle.'
+- Netice/hüküm: **Filozof cevabı: 'irâde = tercih edici ayrı sıfat' iddiası tekvîn ile ayırt edilemiyor; eşit iki seçenek gerçekte eşit değil.**
+- Delil çeşidi: **analitik-cedelî**; (T) analitik-ikna'î.
+- Mevzuya bağı: **KRİTİK — Fasıl I §8.3**: **Fasıl I 'tahsis eden irâde' iddiasına karşı en direkt itiraz: 'tercih/tahsis mefhûmu tekvînden ayrı değil'**; Fasıl I'in cevabı **açık yazılmalı**: 'tahsis = mümkinin bir tarafını **belirleyen** sıfat (tekvîn = îcâd/yaratma; tahsis bunun **zamansal/mikdârî belirlemesi**)'.
+- Doğan sual: —
+
+## c3 p178
+- OCR: orta
+- Okuma: tam
+- İçerik: (Filozof cevabı devam.) '**Hasta meyveyi arzular ama yemez**: **tabiatı hâlî lezzetlere meyleder, gelecekte doğacak acılardan nefret eder**; menfaat-mazarrat mertebelerini gözetir; lezzet-menfaat râcihse yer, değilse terk; **dâî yine menfaat talebi ve mazarrat defi**; ancak lezzet **hâlî**, elem **gelecekte**. **Zâhid-âbid ibadete irâde eder**: ibadetler **hâlde acı, gelecekte fayda (nesîe)**; menfaatler yaradılışça büyük, zararlar küçük; **muâraza ve tercih**. **Netice**: '**irâde ve kerâhetten menfaat celbi ve mazarrat defi meyli dışında bir mânâ bilmiyoruz; bu Allah hakkında muhâl; öyleyse Allah için irâde isbâtı ma'kûl değil**.' **Bahis 1 biter.** (Dipnot: 'nakit nesiyeden hayırlı' bâbında anlatıldı.)
+- Netice/hüküm: **Filozof/nefy tarafı: irâde = menfaat-mazarrat meyli ⇒ Allah'a isnâd edilemez.**
+- Delil çeşidi: **indirgeme + cevap**; (T) analitik-cedelî (hasım: mütekellim tanımı).
+- Mevzuya bağı: **DİKKAT (Sünnî akide)**: 'Allah diler (mürîddir)' **nassla sabit; bu indirgeme (insan irâdesi=meyl) Allah'a taşınamaz (kıyâs-ı gâib)** — Râzî'nin bu sayfası hasım sesidir; **Risale 'irâde=sıfat-ı zâtiyye/tahsis edici' der; meyl tanımı reddedilir**.
+- Doğan sual: —
+
+## c3 p179
+- OCR: orta
+- Okuma: tam
+- İçerik: **Mesele 2: 'Allah'ın mürîd olmasında ihtilaf'**. **Ka'bî, Câhiz, Ebü'l-Hüseyn el-Basrî**: '**Allah'ın fiili irâde etmesi = fiilin kendi hakkında râcih menfaatli olduğunu bilmesi; bu 'hâcet dâîsi' (Allah'ta muhâl); başkası için ise 'ihsân dâîsi'**; Allah'ta ihsân kalır.' **Diğer mütekellimîn**: 'irâde bu ilimden **zâid sıfat**'; sonra ihtilâf: **sıfat selbî** ('fiili kahr ve ikrah olmadan yaptı') ya **icâbî**; icâbî ise **zâtı îcâb eder** ya **bir mânâ îcâb eder**; mânâ **kadîm-ezelî-mümteni-i tebeddül** (çoğu) ya **hâdis** (hâdis: **Kerrâmiyye** zâtta; **Mu'tezile'den büyük topluluk mahalsiz**; **Allah'ın zâtı dışında bir yerde hâdis olup Allah'ı mürîd kılması** hiç kimsenin kavli değil). **Delil (mütekellim)**: '**âlem hâdis, belirli bir vakitte var; daha önce ya sonra da câizdi ⇒ belirli vakte ihtisası bir muhassıs ister**; **kudret muhassıs olamaz** (kudret her vakit eşit); ⇒ **kudretten farklı bir muhassıs/müreccih**; **ilim** olamaz: ya (a) 'fiilin maslahatını bilmesi çağırır' ya (b) 'şu şeyin vâki olacağını bilmesi'…'
+- Netice/hüküm: **İrâde ihtilâfı haritası (ilme indirgeme / zâid sıfat kolları) ve mütekellimin tahsis delili başlangıcı.**
+- Delil çeşidi: **tasnif + tahsis burhanı**; (T) burhânî biçim.
+- Mevzuya bağı: **KRİTİK — Fasıl I §8.3**: **Fasıl I irâde burhanı = tahsis burhanı (aynı yapı)**: **'âlem belirli vakitte ⇒ muhassıs ⇒ kudret olamaz ⇒ ilim olamaz ⇒ irâde'**; **kaynak: Râzî c3 p179–180 ('mütekellim delili')**; Fasıl I §8.3'e **Râzî'nin kaynak numarası ve 'itirazları (p180–181)'** eklenecek. **Not**: **irâde ↔ ilim ilişkisi (Ka'bî/Ebü'l-Hüseyn: irâde=ilim) Sünnî hattın dışında; Ehl-i Sünnet irâdeyi ayrı sıfat sayar (Eş'arî çoğunluk)**.
+- Doğan sual: —
+
+## c3 p180
+- OCR: orta
+- Okuma: tam
+- İçerik: (Tahsis delili devam.) **İlim olamaz**: (a) 'fiilin maslahatını bilmesi onu çağırır' **bâtıl**: Allah'ın **fiillerini maslahat-garazla ta'lîl etmenin caiz olmadığı** delilleri bu kısmı da ibtâl eder; (b) 'vukûu bilmesi' **bâtıl**: ilim vukûa tâbi, vukû bu tahsise tâbi; tahsisi ilme bağlarsak **devir**. ⇒ **tahsis kudretle de ilimle de değil ⇒ başka sıfat** (hayat, semi', basar, kelâm da olamaz) ⇒ **irâde**. **Tesiri vücûb üzere ise mûcib bi'z-zât; sıfat (sıhhat) üzere ise matlûb (irâde: mümkinin bir tarafını vücûb ve tekvîn olmaksızın râcih kılan sıfat)**. **Râzî'nin itirazları**: (1) 'vücûb-tekvîn olmadan te'sîr eden müessir aklen muhâl (gösterdik)'; (2) '**tahsiste müessir neden kudret olmasın?** Delil: kudretin nisbeti her vakte eşit; **irâde de aynı**: irâde başka vakitte tercih için de sâlih mi, yoksa yalnız bu vakte mi? Sâlihse **irâde de müreccih ister ⇒ teselsül** (ya da kudret irâdeye muhtaç olmaz); yalnız bu vakte taalluk ediyorsa (ezelî, imtinâ'ı adem) **Allah mûcib bi'z-zât, sahih fâil değil**.'
+- Netice/hüküm: **Mütekellim tahsis delili tamam; Râzî'nin 2 itirazı: irâde de müreccih ister / irâde belirli taalluka bağlıysa mûcib.**
+- Delil çeşidi: **analitik-cedelî**; (T) analitik.
+- Mevzuya bağı: **KRİTİK — Fasıl I §8.3**: **Fasıl I 'irâde muhassıs' iddiasına Râzî'nin iki net itirazı: (i) 'irâdenin de muhassıs ihtiyacı (teselsül)'; (ii) 'irâde belirli vakte ezelen taalluk ediyorsa mûcib'**: ders katmanı için **cevap taslağı**: (i) irâde **müreccihe muhtaç mümkin değil, zâtî muhassıs sıfat** (Sünnî: irâde-i ilâhî ezelî, taalluku tenciz hâdis/i'tibârî); (ii) ezelî irâde belirli vakte taalluk eder ama **'o vakitte yaratmak' irâdenin lâzımı değil, tenciz (fiilî) taallukudur**: **Sünnî kelâmdaki irâde-taalluk (sûlûhî/tenciz) ayrımı; Râzî'nin çözümü ise bu değil**.
+- Doğan sual: **Râzî'nin kendi irâde çözümü** (cilt 4 hudûs bâbı?).
+
+## c3 p181
+- OCR: orta
+- Okuma: tam
+- İçerik: İtiraz (2) sonu: 'irâde başka vakitte de sâlih ise **müreccih ister (teselsül)**, yoksa kudret de irâdeye muhtaç olmaz'; 'yalnız bu vakte taalluk ediyorsa Allah **mûcib bi'z-zât**; bu mesele **kâdir-muhtâr bâbının fer'i; fer' aslı kaldırıyorsa bâtıl**'; ayrıca 'irâde belirli vecihle sınırlıysa **kudret de belirli vecihle sınırlı olabilir ⇒ kudret irâdeye muhtaç olmaz**'. **Mesele 3: 'İnkâr edenlerin 4 delili'**: (1) **irâde muhassıs sıfatı, müessiriyet için tam ise fiil vâcib, değilse mümteni** (Bâb 2 burhanı) ⇒ irâde isbâtı muhâl; (2) **irâde = menfaat/mazarrat meyli; Allah'ta muhâl; başka mânâ akledilmez**; (3) **irâde kadîm ya hâdis; ikisi de bâtıl**; (4) **tercihin iktizâsı ya vücûbla ya imkânla**: vücûbla ⇒ mûcib bi'z-zât; imkânla ⇒ **câiz ve eşitken tercih olmaz**.
+- Netice/hüküm: **İrâde inkârcılarının 4 delili (Bâb 2'nin tekrarı; meyl tanımı; kadîm/hâdis; iktizâ)**.
+- Delil çeşidi: **hasım delilleri**; (T) analitik-cedelî.
+- Mevzuya bağı: **Fasıl I §8.3**: dört itirazın cevabı ders katmanında tabloyla.
+- Doğan sual: —
+
+## c3 p182
+- OCR: orta
+- Okuma: tam
+- İçerik: Delil 3–4 (devam): (3) 'irâde **kadîm olsa** …; **hâdis olsa** …: ikisi bâtıl'; (4) 'iktizâ **vücûb** yoluyla ⇒ mûcib bi'z-zât; **imkân** yoluyla ⇒ **cevâz ve tesâvî ile tercih imkânsız**'. **Bu bâbın sonu, Allah bilir.** (Sayfanın alt kısmı çöp.) **Fasıl 2 (irâde delilleri) biter; Fasıl 3 cevabı burada yazılmıyor** (irâde bahsi bu ciltte hasım delillerine cevap **vermeden** kalıyor gibi: **cevaplar Bâb 4 sonunda aranacak**).
+- Netice/hüküm: **Bâb 4'te irâde: tanım (2 görüş), mütekellim delili, inkârcı delilleri; Râzî'nin kendi son hükmü bu sayfada yok (aporia)**.
+- Delil çeşidi: **hasım delilleri**; (T) analitik-cedelî.
+- Mevzuya bağı: **KRİTİK — Fasıl I §8.3**: **Râzî irâde bâbında kesin hüküm vermeden kapatıyor** (c3 p182): Fasıl I §8.3 **'Râzî'de irâde meselesi aporetik kalıyor'** notunu almalı; **cilt 4 hudûs bâbı beklenecek**.
+- Doğan sual: **Râzî irâde meselesine son cevabı nerede veriyor?** (cilt 4–6).
+
+## c3 p183
+- OCR: orta (başlık kötü)
+- Okuma: tam
+- İçerik: **Bâb 5 (dipnot: 'Fasıl 8/18'): Allah'ın lezzeti ve ibtihâcı (aklî lezzet)**. 'Lezzet **cismânî ya rûhânî**; **cismânî Allah'a muhâl** (cisim değil). **Rûhânî lezzeti filozoflar vâcibe isbat eder**; **iki iddia**: (1) Allah **zâtını sever (muhibb)**; (2) **kemâlleriyle ibtihâc eder, lezzet alır**.' **(1)**: 'bir şeyin kâmil olduğunu bilmek **o şeye muhabbeti** gerektirir; **istikrâ**: Rüstem'in şecâatini, İsfendiyâr'ın … duyunca kalbimizde **şiddetli sevgi ve büyük meyil** hâsıl olur; buna yol açan yalnız **onların kemâllerine dair i'tikâdımız**. Allah'ın ilmi **ilimlerin en fazîletlisi**, kemâli **kemâllerin en fazîletlisi**; zâtı bu kâmil ilimle bilince **tam muhabbet** hâsıl.' **(2)**: 'bilmek nasıl muhabbet gerektiriyorsa **ibtihâc ve lezzet** de gerektirir; ⇒ Allah'ta ibtihâc.'
+- Netice/hüküm: **Filozof: Allah'ın zâtına muhabbeti ve kemâliyle ibtihâcı (rûhânî lezzet).**
+- Delil çeşidi: **istikrâ (insan psikolojisi) + kıyas**; (T) ikna'î; **'insan lezzetini Allah'a taşıma' (kıyâs-ı gâib)**.
+- Mevzuya bağı: **DİKKAT (Sünnî akide)**: Allah'a **'lezzet' isnâdı nassta yok**; **Ehl-i Sünnet 'Allah zâtı ve sıfatlarıyla kâmildir; lezzet-elem isnâd edilmez'**; Râzî c2 p110–112'de **ikna edici delil olmadığını** yazdı; Risale'ye **alınmaz**; **Fasıl III (Meâd: âhirette mü'minin ru'yet lezzeti)** ayrı konu.
+- Doğan sual: —
+
+## c3 p184
+- OCR: orta
+- Okuma: tam
+- İçerik: (Filozof aklî lezzet devam.) **İki fer'**: **Fer' 1**: 'Allah'ın kendi kemâlleriyle **ibtihâcı ve lezzeti, bizden birinin ibtihâcına nisbetsiz** (ilmi ve kemâli de nisbetsiz).' **Fer' 2**: 'Şeriat dilinde **melekler**, filozof dilinde **akıllar ve nefisler** olan **mufârık mevcûdlar hep nefisleriyle ibtihâc eder, kemâlleriyle lezzet alır**; ibtihâc dereceleri **kemâl dereceleri**ne göre; **en kâmil mevcut Allah olduğundan en büyük mübtehic O**.' (p185'te devam.)
+- Netice/hüküm: **Filozof: aklî lezzet fer'leri (Allah'ın ibtihâcı en yüksek; meleklerin ibtihâcı).**
+- Delil çeşidi: **analitik + hitâbî**; (T) ikna'î.
+- Mevzuya bağı: **Fasıl III (Meâd, rûhânî lezzet)**: 'mufârık mevcûdlar (melekler) ibtihâcı' **filozofça**; **Sünnî akide: melekler Allah'a kulluk eder; 'akıllar/nefisler' felsefî terim**; **Risale'ye alınmaz**.
+- Doğan sual: —
