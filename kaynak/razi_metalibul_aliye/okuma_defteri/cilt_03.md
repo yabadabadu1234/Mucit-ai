@@ -289,3 +289,291 @@ Biçim: cilt 1–2 ile aynı.
 - Delil çeşidi: **sonuç cümlesi**; (T) ikna'î.
 - Mevzuya bağı: —
 - Doğan sual: —
+
+## c3 p33
+- OCR: orta
+- Okuma: tam
+- İçerik: **Bâb 1, Fasıl 5: 'Bu bâbın fer'leri'**. **Fer' 1**: 'her yönden menfaat olan fiil ma'kûl mü?' Bazıları: 'müteazzir: aynı türde ameli sürdüren insanda **yorgunluk** çıkar; ilk fiilde bir çeşit yorgunluk olmasa sürdürmede ağır yorgunluk çıkmazdı; menfaat fazla ise yorgunluk hissedilmez.' **Râzî**: 'Bu **cevârih (organ) fiillerinde** hak (hareket zayıflamaya sebep); **nefsânî-rûhânî fiiller** ise **tümüyle zarar yönlerinden hâlî** menfaattir; **rûhânî lezzetlerin cismânî lezzetlerden üstünlüğünün sebeplerinden biri budur**.' **Her yönden şer olan fiil** var mı? **Hak: bâtıl**: fâili ona irâde eden ve hâsıl olması onun için lezzetli olan fiil her yönden şer olamaz.
+- Netice/hüküm: **Rûhânî fiil saf menfaat olabilir; saf şer fiil olamaz.**
+- Delil çeşidi: **analitik + iç gözlem**; (T) ikna'î-analitik.
+- Mevzuya bağı: **Fasıl III (Meâd: rûhânî lezzet üstünlüğü)**: Râzî'nin gerekçesi (rûhânî lezzet zarar cihetinden hâlî) — ders katmanına **'Râzî'ye göre'** kaydıyla.
+- Doğan sual: —
+
+## c3 p34
+- OCR: orta
+- Okuma: tam
+- İçerik: **Fer' 2**: 'Tek fiilde **çok dâî yönü**: üç yön (menfaat; zararı def; menfaati def'eden şeyin def'i); hepsi bir fiilde bulunursa **her biri müstakil dâî**.' **Fer' 3**: 'Çok dâî yönü **uyumlu** mu, **çatışan** mı? **Uyumlu olursa** (her biri tek başına müstakil sebep) **işkâl**: fiil tercihi **ya hepsiyle, ya bir kısmıyla, ya hiçbiriyle**? (…p35).'
+- Netice/hüküm: **Çok dâî yönü, çoklu bağımsız sebep problemi doğuruyor.**
+- Delil çeşidi: **analitik**; (T) analitik.
+- Mevzuya bağı: **c2 p143 (tevârüd-ı kâdirayn) ile aynı yapı** (iki müstakil illet, tek eser).
+- Doğan sual: —
+
+## c3 p35
+- OCR: orta
+- Okuma: tam
+- İçerik: Fer' 3 işkâli: 'Fiil, **mümkin olduğu için** müreccih ister; **tam illet ve müstakil sebeple** eser vâcib olur; vücûb onu **başkasına isnâddan alıkoyar**; bu sebeple ile hâsıl olan eser ötekine isnâdı men eder; ikisiyle vâki ise **her birine isnâd (aynı anda hiçbirine)**: muhâl; **biriyle** vâki: **tercih bilâ müreccih**; **hiçbiriyle** vâki değil: dâîleri tam ve mâni yokken **fiil mümteni**: muhâl.' (Dipnot editör: 'insan için tercih müreccihsiz mümkün, insanın dâîleri müreccih olabilir'; '**Vâcib bi'z-zât ve fâil-i muhtâr Allah** hakkında bu bir tefri'dir'.) **Çatışan dâîler**: 'daha güçlü tesir eder; **eşitse tesâküt ederler**, olduğu gibi kalır.' **Fer' 4**: 'dâîler fiilden **önce mi hâsıl olmalı, fiil ile birlikte mi?** Kudret+dâî mecmûu **mu'idde illet** ise **önce** (mu'idde illet malûlden önce); **müessir illet** ise **fiille beraber** (müessir eserle birlikte vâcib mevcut).'
+- Netice/hüküm: **Çok bağımsız sebep işkâli** (Râzî, temânu'daki aynı yapıyla); **çatışma çözümü: kuvvetli olan; eşitse tesâküt**.
+- Delil çeşidi: **taksîm + reductio**; (T) analitik.
+- Mevzuya bağı: **c2 p143 ile paralel**: bu işkâl **iki ilâh temânu'unun insan-psikolojisi versiyonu**; Râzî **kendi temânu' savunusunu ve bu işkâli aynı yapıyla yazıyor**: tutarlı.
+- Doğan sual: Râzî bu işkâli çözüyor mu? (p36'da 'mu'idde/müessir' ayrımı yalnız zamanlama.)
+
+## c3 p36
+- OCR: orta
+- Okuma: tam
+- İçerik: Fer' 4 devam: 'müessir illet ise dâî fiil hâsıl olurken; **müessir eserle birlikte vâcib mevcut** olmalı; **mu'idde illet ise dâî fiilden önce** (mu'idde illet önce olmazsa **sebepler-müsebbepler zincirinin aynı anda teselsülü** lâzım gelir: muhâl).' **Vallahu veliyyü't-tevfîk.** **Fasıl 5 biter.**
+- Netice/hüküm: **Dâînin zamansal konumu: müessirse birlikte, mu'iddeyse önce.**
+- Delil çeşidi: **analitik**; (T) analitik.
+- Mevzuya bağı: **Fasıl I 'illet-ma'lûl eşzamanlılığı' (c1 p130–133)** ile örtüşür: müessir illet eserle beraber.
+- Doğan sual: —
+
+## c3 p37
+- OCR: orta (başlık kötü)
+- Okuma: tam
+- İçerik: **Bâb 1, Fasıl 6: 'Fâilden fiilin sudûru dâîye mütevakkıf mıdır?'** **Kim ne diyor**: **filozoflar: muhakkikîn ittifakla evet**; **Ebü'l-Hüseyn el-Basrî** (Mu'tezile, dipnot: 12. tabaka) evet; **çoğu mütekellim** hayır. (Editör dipnotu: 'Allah için dâî bulunmadığı görüşü bu **tefri'** …). **Dâîye tevakkuf yoktur diyenlerin hüccetleri**: **Hücca 1**: 'Kâdir, **her i'tikâddan hâlî** olarak bulunabilir ve bu hâlde ondan fiil sudûr edebilir ⇒ **fiilin sudûru dâîye bağlı değil**.' İki vecih: (1) insan **parmağını oynatmaya** kâdir; parmak çok parçalı, kat edilen mesafe çok parçalı; insan **bu parçaların sayısını bilmez** ⇒ **bilmediği, i'tikâd ve zan etmediği şeye kâdir**.
+- Netice/hüküm: **Fiil-dâî tevakkufu meselesi** (Râzî ilk olarak **hasım tarafın 6 delilini** sıralıyor).
+- Delil çeşidi: **mantıkî örnek (parça sayısı)**; (T) analitik-cedelî.
+- Mevzuya bağı: **KRİTİK — Fasıl I §8.3 (irâde/tahsis) ve c2 p137**: bu fasıl **fâil-i muhtârın 'dâî olmadan da fiil edebilmesi'** tartışmasıdır; **Fasıl I §8.3'ün iddiası ('eşit ihtimalde muhtâr tahsis eder') bu fasılda 'dâî tevakkufu yoktur' tarafının** (mütekellim çoğunluğu) **savunduğu görüştür**; Râzî **hangisini seçiyor** — kesin hüküm sonraki sayfalarda.
+- Doğan sual: **Râzî 'Fâil-i muhtâr dâîsiz fiil eder' mi diyor, 'dâîye tevakkuf' mu?** (p40–44; ve kâdir bâbı).
+
+## c3 p38
+- OCR: orta
+- Okuma: tam
+- İçerik: Hücca 1 (1) sonu; (2) 'İnsanlar **kulların kudretine konu cinslerin sayısında** ihtilâf etti; kâdir olan şeyi bilmeyi gerektirseydi bilmediğimiz şeyleri bilmiş olurduk.' **İkinci emir**: 'İ'tikâdlardan hâlî iken fiil sahih: aksi hâlde **kâdir olan kâdir olmazdı** (kâdir = ondan fiil sahih olan).' **Hücca 2**: 'Sâhî (dalgın) ve nâim (uyuyan)dan **dâî olmaksızın fiil** sudûr eder': sâhî **parmağı oynatmaktan gâfil** iken oynatır; **atıcı bir şeye atarken başka şeye isabet eder**: hata ile isabet onun fiilidir, dâî yok.
+- Netice/hüküm: **Hasım Hücca 1–2: dâîsiz fiil örnekleri (parça sayısı; dalgın; hata atışı)**.
+- Delil çeşidi: **misal-istikrâ**; (T) ikna'î-cedelî.
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c3 p39
+- OCR: orta
+- Okuma: tam
+- İçerik: **Uyuyan**: nefes alır (**ihtiyârî fiil**, dâîsiz: uyku i'tikâd ve zanna mâni); **bir yandan öbür yana döner, çok söz söyleyebilir**, uyanıkken olan ilim ve i'tikâd o saatte yok. **Hücca 3**: 'Bir sanatta usta olan (yazı, tambur) **çok yazı yazar, uzun süre tambur çalar**, her harften her nakırdan **gâfil**; gâfil olduğu şeyi bilmez, i'tikâd ve zan etmez; fiil var, dâî yok.' **Hücca 4 (kadeh-yol örneği, Buridan)**: 'İki **eşit kadehten** ya da iki **eşit rekat/ekmekten** birini seçen, **iki eşit yola varan kaçak** bir tarafı **müreccihsiz tercih eder**; yoksa **susuz insan iki kadehi önünde iken susuzluktan ölürdü (bâtıl)**; ⇒ fiil dâîsiz.'
+- Netice/hüküm: **Hasım Hücca 3–4: alışkanlık fiili; eşit kadeh (tercih bilâ müreccih insan örneği)**.
+- Delil çeşidi: **misal**; (T) ikna'î-cedelî; **Hücca 4 = Fasıl I §8.3'ün insan örneği**.
+- Mevzuya bağı: **KRİTİK — Fasıl I §8.3**: 'iki eşit kadeh/yol' **klasik tahsis örneği**; **c3 p20'de Râzî'nin kendi örneği tersini (kişi olduğu yerde kalır) söylemişti**: Râzî iki tarafı **karşılıklı** yazıyor; **kendi hükmü sonraki sayfalarda cevap kısmında**.
+- Doğan sual: Râzî iki eşit kadeh örneğine ne cevap veriyor? (p41+).
+
+## c3 p40
+- OCR: orta
+- Okuma: tam
+- İçerik: **Hücca 5**: 'Hareketin **yavaşlığı** ya sükûnların çokluğu (cevher-i ferd kabulüne göre) ya harekete kâim bir keyfiyet (nefyine göre); birincide yavaş hareket eden **sükûnları da** yapıyor (gâfil olduğu hâlde); ikincide **hem hareketi hem yavaşlığı** yapıyor, iki ayrı fiil türünden **gâfil**; ⇒ dâîsiz fiil.' **Hücca 6**: 'Fiilin dâîye tevakkufu **mûcib bi'z-zât ile fâil-i muhtâr arasındaki farkı** kaldırır; bu bâtıl. **Delil**: dâî hâsıl olunca fiil **zarûrî vâcib** olur, **dâî yokken mümteni**; iki hâlden başkası yok; ⇒ **hiçbir hâlde tekârrür ve ihtiyâr olmaz** ⇒ **mûcib bi'z-zât ile fâil-i muhtâr arasında fark kalmaz**; **fark ise zarûrî ilimlerdendir** (insanın kudret ve ihtiyârıyla hareket etmesi ile taşın 'ateşin yakması' gibi tabiatla olması arasındaki fark).' **Dâîye tevakkuf diyenler bu delillere kuvvetli ve açık cevaplar verdiler**: (p41'e).
+- Netice/hüküm: **Hasım Hücca 6: 'dâîye tevakkuf ⇒ ihtiyâr kalmaz' (mûcib/muhtâr farkı)** — **Fasıl I §8'in doğrudan ilgili itirazı**.
+- Delil çeşidi: **analitik**; (T) analitik-cedelî.
+- Mevzuya bağı: **KRİTİK — Fasıl I §8.0 (Fâil-i muhtâr mı mûcib mi)**: bu, **'dâî zorunluluğu ⇒ muhtâr da mûcib' itirazının klasik hâli**; Fasıl I **muhtâr'ı 'tahsis eden irâde' ile kuruyor**; Râzî'nin cevabı p41+; **Râzî'nin kendi tercihi (c2 p141, c3 p25: dâî mecburiyeti)** **mûcib'e yakın** görünüyor: **kesin hüküm cilt 3–4'ün sonunda**.
+- Doğan sual: Râzî kendi çerçevesinde 'muhtâr' ve 'mûcib' farkını nasıl kuruyor? (Tahsis borcunun kapanması buna bağlı.)
+
+## c3 p41
+- OCR: orta
+- Okuma: tam
+- İçerik: **Dâîye tevakkuf edenlerin (Râzî'nin tarafı) cevapları**. **Hücca 1'e**: 'Kâdir, fiilin sudûru sahih olan' sözünde **'kâdir olma' tek başına yeter mi?** Öyleyse **tartışılan mesele**: bizce salt kâdir olmak fiil sahihliği için **yetmez**, **dâî eklenmedikçe fiil mümteni**. Dâî eklenince sahih ise kabul, ama bu tek başına kâdir olmanın yeterliliğini göstermez ⇒ 'mugalata'. **Destekleyici**: 'Câiz = varlığı ademe, ademi varlığa bedel sahih olan; **eşit olunca muhassıs lâzım**; 'câiz iki tarafa sahih' derseniz: **zâtına bakınca, müessirden hâlî farz edilince bile** vücûdun ademe **rüchânı sahih** olmalıydı; ama **münfasıl müessirin yokluğunda rüchân sahih değil** ⇒ nasıl bu kelâm bâtıl ise sizinki de bâtıl.'
+- Netice/hüküm: **Râzî: kudret tek başına fiil için yetmez; dâî şart; 'muhtâr müreccihsiz tercih eder' itirazı 'câizin muhassıs ihtiyacı' ilkesine aykırı.**
+- Delil çeşidi: **analitik-cedelî (öncül reddi + paralellik)**; (T) analitik.
+- Mevzuya bağı: **KRİTİK — Fasıl I §8.3**: Râzî burada **dâî-tevakkuf tarafında**; Fasıl I §8.3'ün 'eşit ihtimalde muhtâr tahsis eder (müreccihsiz)' iddiası, Râzî'nin **kendi cevap ilkesiyle (câiz muhassıs ister)** doğrudan gerilimli: **Fasıl I bu iddiayı 'kelâm çoğunluğu (dâîye tevakkuf yok)' tarafında yazmış olabilir**; ders katmanında **iki görüşün bulunduğu ve Râzî'nin dâî tarafını tuttuğu** yazılmalı.
+- Doğan sual: **Allah için 'dâî' ne?** (Râzî Allah'ta dâînin ilim mi hikmet mi olduğunu söyleyecek: 'hakîm' bâbı).
+
+## c3 p42
+- OCR: orta
+- Okuma: tam
+- İçerik: **Hücca 2'ye (dalgın)**: 'Fâil parmağı oynatmaya **kasdetmedikçe** oynamaz'; 'menfaat yok ki' itirazı: 'olabilir: **aynı hâlde kalmak usandırıcı, halin değişmesi lezzetli; alışkanlık; alışkanlık gereği fiil lezzetli, terki zahmetli; kısa süreli bir tahayyül** ("bu hareketin lezzeti var") sonra **başka tahayyül** ("terk daha iyi")' — hepsi câiz ihtimaller. **Uyuyan**: (1) **hayâller görür**, hayâllerden irâde-kerâhet doğar; (2) uzun yatış **ağrı** yapar, uyku hayâle mâni değil, ağrıdan kurtulmak için döner; (3) bazı hareketler **zarûrî** (nefes). **İbn Sînâ (Şeyh Ebû Alî)** cevabı: '**Tahayyülün hâsıl olması, onu hissetmek ve zihinde kalması** üç ayrı şey; uykuda bu hâllere **şuurlu olduğumuzu hatırlamamak** ilk ikisinin yokluğunu gerektirmez.'
+- Netice/hüküm: **Sâhî/nâim örneklerine cevaplar: gizli dâî ihtimali.**
+- Delil çeşidi: **cedelî (alternatif açıklama)**; (T) cedelî; **'gizli dâî' unfalsifiable riski**: Râzî tarafı **'dâîsiz fiil yok' postülasını kurtarmak için gizli dâî varsayıyor**: (T) 'öncül olarak korunur, gözlemle ispatlanmaz'.
+- Mevzuya bağı: **Fasıl I §8.3**: dâî **gözlenemez ve 'her fiilde vardır' varsayımıyla korunuyorsa** derece: postülat.
+- Doğan sual: —
+
+## c3 p43
+- OCR: orta
+- Okuma: tam
+- İçerik: **Hücca 3'e (usta)**: 'Sürekli yazmakla parmaklarda **melekat** hâsıl olur; harfleri yazma kolaylığı; hayâllerde de aynı melekat; harfler hayâlde **art arda** gelir, hızlı olduğu için yok sanılır: **hâzır ama hızlı**'. **Hücca 4'e (iki eşit kadeh)**: 'Eşitliği kabul etmiyoruz: **bir elle almak kolay** ⇒ o taraftaki kadehi alır; **her yönden eşitse**: **Allah tarafından kalbinde zarûrî, cezmî bir dâî** hâsıl olur ve birini seçtirir.' **Hücca 5'e**: 'yavaş hareket ediş, hareketi **yavaş olarak** yaptığını bilir; iki şeyden gâfil değil.' **Hücca 6'ya**: 'Kâdir ile mûcib arasındaki farkı **başka vecihlerle**, sizinkilerden başka, **inşaallah** zikredeceğiz.'
+- Netice/hüküm: **Râzî tarafının Buridan cevabı: (a) eşitlik gerçekte yok, (b) tam eşitse Allah'tan zarûrî dâî.** **Muhtâr/mûcib farkı ertelendi.**
+- Delil çeşidi: **cedelî (cevap)**; (T) cedelî; **'Allah kalbe zarûrî cezmî dâî yaratır' = kul fiili kelâm görüşü (c2 p141 ile aynı)**.
+- Mevzuya bağı: **KRİTİK — Fasıl I §8.3**: **Buridan tipi 'eşit iki seçenek' Fasıl I'de Allah'ın âlemi belirli vakitte yaratması için kullanılıyor**; Râzî insan için **'gerçek eşitlik yok / Allah'tan dâî'** diyor; **Allah için (dâîyi yaratan yok) ne diyecek?** Bu, Fasıl I §8.3'ün **asıl aporiası**: **kapanış cilt 3 'hakîm' ve 'irâde' bâblarında; cilt 4 hudûs-tahsis**.
+- Doğan sual: Râzî **kadir-mûcib farkını** nerede veriyor? (cilt 3 'kâdir' bâbı.)
+
+## c3 p44
+- OCR: boş
+- Okuma: tam (içerik yok)
+- İçerik: Yok.
+- Netice/hüküm: Yok.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c3 p45
+- OCR: orta (başlık kötü)
+- Okuma: tam
+- İçerik: **Bâb 1, Fasıl 7 (başlık bozuk): 'Kâdirden fiilin sudûrunun dâîye tevakkuf ettiğine hüccetler'**. **Hücca 1**: 'Kâdirin fiile ve terke nisbeti **eşit**; bir tarafı **müreccihsiz** tercih ederse **eşit mümkinin bir tarafı müreccihsiz râcih olmuş**; bunun fesadı **zarûrî ilim**.' İtiraz: 'nizâ, kâdirin bir makdûrunu müreccihsiz tercih edip edemeyeceğinde; **sizin 'zarûrî' iddianız nizâ mahallinde**.' **Cevap**: 'Kâdir makdûrlarından birini müreccihsiz tercih eder' sözü **ince bir mugalata** içerir: **'müreccih' kelimesi, 'kâdir olma'ya zâid bir mefhûm mu?** Zâid ise o makdûr **bu zâid mefhûm kâdirliğe eklendiği için** râcih olmuştur; ardından 'müreccihsiz' demek **iki nakîzin cem'i** (zâid mefhûm hem var hem yok).'
+- Netice/hüküm: **Tercih bilâ müreccih ifadesi kendi içinde çelişik (Râzî'nin lafzî-analitik gerekçesi)**.
+- Delil çeşidi: **lafzî-analitik**; (T) analitik; **ilgili karşı görüş: 'tercih' = kâdirin kendi kudreti (tahsis edici irâde)** — Râzî bu sayfada **'tercih' fiilinin kâdirliğe zâid bir şey olmayabileceği** ihtimalini p46'da ele alıyor.
+- Mevzuya bağı: **KRİTİK — Fasıl I §8.3**: Fasıl I 'eşit ihtimal ⇒ **tek tahakkuk (tahsis)** ⇒ fail' zincirinde **'tahsis'in kâdirliğe zâid olup olmadığı** bu sayfada.
+- Doğan sual: —
+
+## c3 p46
+- OCR: orta
+- Okuma: tam
+- İçerik: Hücca 1 devam: 'Tercih' **kâdirliğe zâid bir mefhûm ifade etmiyorsa** lafzı atıp yalnız 'kâdir' demek gerekir; o zaman söz: 'fiil ve terke kâdir, nisbeti eşit, iki tarafı da **tahsis etmedi**; yine de bir taraf vâki oldu' — **her akıl bunun bâtıl olduğuna hükmeder**. **Hücca 2**: 'Kâdir bir süre bu fiile kâdir olup **fiil etmedi**, sonra fiil etti: **ya o vakitte etti (önce etmedi) çünkü onu o vakitte îkâ etti, ya o vakitte vâki oldu ama kâdir onu o vakitte îkâ etmedi (hiçbir sebep yok)**.' **Birinci kısım**: 'onu o vakitte îkâ etti' sözünün **kâdirliğe zâid mefhûmu** var mı? Varsa vakit **o zâid ile** hâdis ⇒ 'kâdirlik tek başına yetmez'.
+- Netice/hüküm: **Hücca 2: 'Niçin şimdi' sorusuna kâdirlik yetmez; zâid mefhûm gerekir.**
+- Delil çeşidi: **taksîm + analitik**; (T) burhânî biçim (**Fasıl I §8.3 ile aynı yapı**).
+- Mevzuya bağı: **KRİTİK — Fasıl I §8.3 (irade ispatı)**: **Fasıl I'in 'niçin şimdi ⇒ irâde/tahsis' argümanının Râzî'deki hâli: 'niçin şimdi ⇒ zâid mefhûm = dâî'**. Fasıl I sonucu (**irâde = tahsis eden sıfat**) ile Râzî sonucu (**dâî = ilim/i'tikâd ve tahsisin tâbi'i**) **isimde ayrışıyor**; Allah için **dâî = ilim**: **Fasıl I ile uzlaştırılabilir mi?** (sonraki sayfalar).
+- Doğan sual: —
+
+## c3 p47
+- OCR: orta
+- Okuma: tam
+- İçerik: Hücca 2 devam: 'Zâid mefhûm varsa fiil o vakitte **kâdirlik+zâid** ile; yoksa kâdir **çok vakitte kâdirdi**, fiil bu vakitte vâki oldu, **ona tahsis etmeden ve îcâda kast etmeden**; o hâlde vâki oluş kâdire ait olmaz, **şeyin kendi kendine hudûsu** olurdu ⇒ **kâdirin fiili değil**: iki kısımda da 'îkâ' denen şey **zâid bir mefhûm**: ne o hareket, ne kâdirlik; ⇒ **kâdirlik tek başına makdûrun hudûsuna yetmez, zâid gerekir: o da dâîdir**. **Vallahu a'lem.**'
+- Netice/hüküm: **Hücca 2 sonuç: zâid = dâî.**
+- Delil çeşidi: **analitik-burhânî görünümlü**; (T) analitik; **kritik: 'zâid mefhûm = dâî' çıkarımı** — zâid mefhûmun **dâî değil de 'tahsis edici irâde/kast'** olma ihtimalini **Râzî lafzî olarak dâîye eşitliyor**. **Bu, kelâmî bir adlandırma seçimidir**: derece notu.
+- Mevzuya bağı: **Fasıl I §8.3**: **'zâid ne?' sorusu Fasıl I'de 'irâde'; Râzî 'dâî' diyor**; **iki adlandırmanın içerik farkı**: dâî = fâilin ilmi/i'tikâdı (**bilgi hâli**); irâde = **tahsis edici sıfat**. **Allah için dâî = ilim ise irâde ilme indirgenir**: Sünnî akide (irâde ayrı sıfat) ile **gerilim**: Râzî **sıfat listesinde irâdeyi ayrı sayacak mı?** (cilt 3 devam; kritik).
+- Doğan sual: **Râzî irâdeyi ayrı sıfat mı sayıyor?** (Sekiz sıfat listesi: kâdir, âlim, hayy, semî', basîr, mütekellim, bâkî, hakîm — **irâde listede YOK** (c3 p5); **cilt 3'te irâde bâbı olup olmadığı okunacak**).
+
+## c3 p48
+- OCR: orta
+- Okuma: tam
+- İçerik: **Hücca 3**: 'İmkân ve cevâz tek meseledir: cevâz-imkân **müreccihe muhtaçlık** ise **her yerde** öyle; muhtaçlık değilse her yerde değil; **bir yerde müreccih ister, bir yerde istemez** ve iki yer arasında akılda fark bulunmuyorsa: **akıl bunu kabul etmez**.' 'Cevher bu hayizde ya da başkasında olabilir: **müreccihsiz rüchân imkânsız**; mümkinin vücûdu ve ademi caiz ⇒ müreccihsiz rüchân imkânsız; **kudret fiil ve terke salih ⇒ müreccihsiz rüchân imkânsız** (**iki bâb arasında fark yok**).' **İtiraz (hasım)**: 'Fark: zâtın müteheyyiz oluşu, **her hayizde hâsıl olmasının sahih** olmasını gerektirir; teayyünün münfasıl şeye bağlanması muhâle götürmez. **Kâdir için bu iki tarafın münfasıl şeye bağlanması muhâl** (kâdiri mûcib yapar).' ('Kâdirlik iki zıddı sahih kılar; teayyün münfasıl şeye bağlanırsa o hâsıl olunca **kâdir mûcib olur** (fiil vâcib olur)'.)
+- Netice/hüküm: **Hücca 3: 'imkân her yerde aynı: müreccih ister'**; hasmın cevabı: kâdirlik için farklı (tercih bir münfasıl şeye bağlanırsa kâdir mûcib olur).
+- Delil çeşidi: **analitik + itiraz**; (T) analitik-cedelî.
+- Mevzuya bağı: **KRİTİK**: hasmın itirazı ('münfasıl şeye bağlanırsa kâdir mûcib olur') **Fasıl I §8.0 (muhtâr/mûcib) konusunun özü**: **Râzî'nin bu itiraza cevabı 'dâî de tam mûcib mi, ihtiyârı nasıl kurtarıyor?' (p49+)**.
+- Doğan sual: —
+
+## c3 p49
+- OCR: orta
+- Okuma: tam
+- İçerik: Hücca 3'e hasım itirazına **cevap**: 'Kâdir müreccihe bağlanınca mûcib olur' sözü **bâtıl: kâdir ile mûcib farkı zarûrî ilim**: kâdir **sahih (câiz) olarak**, mûcib **vâcib olarak** te'sîr eder; ayrıca **kâdirden fiil sudûru medih-zem ve sevap-ikâbı gerektirir, mûcibden gerektirmez**. Hasım: 'cevher hayizlere bedel olarak girebilir; teayyünü münfasıl şeye bağlamak muhâl gerektirmez; **kâdir için gerektirir** (kâdir mûcibe döner)'. **Râzî'nin cevabı**: 'Bu fark **vâkî değil**: bir şeyin câiz olduğunu, iki tarafına da eşit olduğunu bilince akıl **müreccihsiz rüchânın imkânsız** olduğuna hükmeder ⇒ **müessir-i münfasıla ihtiyacın menşe'i "imkân ve cevâz" adının kendisi**; öyleyse cevâz-imkân nerede varsa **ihtiyaç orada**; **fark sâkıt**. Ayrıca: cevâz **kendi başına** müreccihe muhtaç mı, yoksa 'bâtıla götürmeme şartıyla' mı?'
+- Netice/hüküm: **Râzî: imkân ⇒ müreccih (her yerde)**; kâdir-mûcib farkı **kabul (zarûrî) ama dâîye tevakkuf bunu kaldırmaz** (iddia).
+- Delil çeşidi: **analitik**; (T) analitik-burhânî biçim (Burhân-ı İmkân'ın cevaza uygulanması).
+- Mevzuya bağı: **Fasıl I §3 (Burhân-ı İmkân) ve §8.3**: Râzî'nin 'imkân ⇒ müreccih' ilkesi **Fasıl I ile aynı**; **fark: Râzî müreccihi 'dâî' ile, kâdir-mûcib ayrımını ise 'sahihlik vs vücûb' ile kuruyor; hasım 'müreccih münfasıl ise mûcib' der**.
+- Doğan sual: **Râzî 'dâî tam ⇒ fiil vâcib' (p55) ile 'kâdir sahih te'sîr eder' (p49) uzlaşması**: p55–58 (dâî ⇒ vücûb; sonra kâdir-mûcib farkı).
+
+## c3 p50
+- OCR: orta
+- Okuma: tam
+- İçerik: 'Cevâz ancak **muhâl-fesat lâzım gelmeme** şartıyla müreccihe muhtaçtır' demek **bâtıl**: en fazla 'şu ve şu mefsedet lâzım gelmez' bilinir; **hiç mefsedet lâzım gelmediğini bilmek** ancak 'bilmemek yokluğa delil' ile olur (çok zayıf); ⇒ cevâz **ya hiçbir zaman ya her zaman** müessire muhtaç. **Hücca 4 (dâîsiz fiil muhâl)**: 'Salt kâdirlik fiil için yetseydi **dâîye hiçbir yerde tesir kalmazdı** (bâtıl)': **bir vasıf eseri istiklâlle iktizâ ediyorsa, ona eklenen başkası etkisizdir** (taş ağırlığı zaten düşürüyorsa taşın siyah-beyaz olması etkisiz).
+- Netice/hüküm: **Kudret tek başına yeterse dâî etkisiz olurdu; dâîye etkisi zarûrî ⇒ kudret tek başına yetmez.**
+- Delil çeşidi: **analitik (reductio)**; (T) burhânî biçim.
+- Mevzuya bağı: **Fasıl I §8.3**: 'salt kâdirlik yetmez' ilkesi (Râzî) — Fasıl I **irâde/tahsis** ile telafi ediyor; **isim farkı**.
+- Doğan sual: —
+
+## c3 p51
+- OCR: orta
+- Okuma: tam
+- İçerik: Hücca 4 (dâî etkisi zarûrî): 'fakîre dirhem verişimiz, fakirliğini bilmemizden; bu i'tikâd olmasaydı vermezdik.' **Hücca 5**: '(ziyarete çıkıp evde işi olduğunu hatırlayan): iki dâî eşitse **olduğu yerde kalır**; biri râcih olunca **hayâlinde** o tarafa gider'; '**iki kadehten biri ile iki ekmekten biri** arasında muhayyer bırakılan, **hangisini alacağını düşünmeden** almaz'; 'Allah, **keffâret** bâbında mükellefi üç hâl arasında muhayyer bırakır; mükellef, **hangisi kendisine daha kolay-zor** diye düşünüp tartmadan birini seçmez' ⇒ **rüchânın müreccihe tevakkufunu bilmek zarûrî**.
+- Netice/hüküm: **Hücca 5: iç gözlem ve keffâret örneği: seçim dâîye/rüchâna bağlı**.
+- Delil çeşidi: **istikrâ (iç gözlem)**; (T) ikna'î-analitik; **keffâret örneği: 'Allah muhayyer bırakır' fıkhî kayıt** (Râzî'nin kullanımı; fıkhî hüküm bu örnekle ispat edilmiyor).
+- Mevzuya bağı: **Fasıl I §8.3**: **Buridan tipi örneklerin Râzî'de iki yönde kullanımı**: hasım (c3 p39: 'eşit kadehte tercih müreccihsiz') ↔ Râzî (bu sayfa: 'düşünmeden seçmez'); **hakem: iç gözlem; ikisi de ikna'î**; **Allah'a taşıma kıyâs-ı gâib**.
+- Doğan sual: —
+
+## c3 p52
+- OCR: orta
+- Okuma: tam
+- İçerik: **Hücca 6 (dâîsiz fiil câiz olsa üç muhâl lâzım)**: (1) **Allah hiçbir fiilinden hamd ve senâya lâyık olmaz**: dâîsiz fiil câizse Allah faydalı şeyleri yaratıp da **hiçbir dâî olmadan** yaratmış olabilir; öyleyse **ihsân dâîsiyle yaratmamış** olabilir; hamd ve senâ hakkı kalmaz; ('asıl hâl, ihsân dâîsiyle yaratmamaktır'); (2) **mûcizeler sıdka delâlet etmez** (Allah onu tasdik garazıyla yaratmış olmayabilir); (3) **konuşanın sözü bir mânâya delâlet etmez** (söylemek 'anlatma' garazıyla olmayabilir). Üçü bâtıl ⇒ dâîsiz fiil bâtıl.
+- Netice/hüküm: **Râzî: dâîsiz fiil kabulü hamd, mûcize ve kelâm delâletini yıkar** — dolayısıyla **Allah'ın fiilinde dâî (ihsân) bulunmalı**.
+- Delil çeşidi: **reductio (lâzım muhâllerden)**; (T) burhânî biçim; **'lâzım muhâl' öncülleri (hamd hakkı, mûcize delâleti) Sünnî akaid açısından dikkat çekici**: Râzî **Allah'ın fiillerinde 'ihsân dâîsi' ve 'tasdik garazı' kabul ediyor**.
+- Mevzuya bağı: **KRİTİK — Fasıl II (Nübüvvet: mûcize delâleti)**: **mûcizenin sıdka delâleti 'Allah'ın tasdik garazıyla yaratması'na bağlı** (Râzî) — **Fasıl II'nin mûcize burhanı** bu öncülü (Allah'ın fiilinde gaye) **açıkça yazmalı**; **dâîsiz fiil kabul edenler (kelâm çoğunluğu) bu yolu kapatmış olur mu?** Bu, **Fasıl II için çok önemli bağ** (c3 p52). Ayrıca Fasıl I §8: **Allah'ın fiilinde gaye/hikmet** meselesi ('hakîm' bâbı).
+- Doğan sual: Fasıl II mûcize burhanı **'Allah tasdik için yaratır' öncülünü nasıl ispat ediyor?** (bkz. Fasıl II; Râzî'nin çözümü bu sayfa).
+
+## c3 p53
+- OCR: orta
+- Okuma: tam
+- İçerik: 'Hasmın **dayandığı cevap**: **dâîsiz fiil sudûru yalnız câhil için sahih; âlim için fiil ancak dâî ile**.' **Râzî: bu iki vecihle bâtıl**: (1) **ilim kudretin hakîkatini bozmaz**; salt kâdirlik fiile sahihse ilimle birlikte de sahih kalır ⇒ **âlim kâdirden de dâîsiz fiil sahih** olurdu; (2) **onlar âlim fâil için de müreccihsiz tercihi câiz gördüler**: iki kadehten biri, iki ekmekten biri; **Allah'ın âlemi belirli vakitte, ondan önce ve sonrasından ayırıp, müreccihsiz** yaratması; **her cevher-i ferdin belirli hayize, diğer hayizlerden ayırıp, müreccihsiz** tahsisi ⇒ **'âlimden dâîsiz fiil bâtıl' sözleri nakz**.
+- Netice/hüküm: **Râzî: dâîsiz-fiil tarafı (kelâm çoğunluğu) kendi içinde tutarsız: âlim fâil için de müreccihsiz tercihi kabul ediyor; bu kabul 'âlem hudûsunun vaktini müreccihsiz tahsis' ile aynı.**
+- Delil çeşidi: **nakz (tutarsızlık ilzâmı)**; (T) analitik-cedelî.
+- Mevzuya bağı: **KRİTİK — Fasıl I §8.3 (irade ispatı: eşit ihtimal ⇒ tek tahakkuk)**: **Fasıl I'in tahsis-irâde yolu, Râzî'nin burada eleştirdiği 'âlimde müreccihsiz tercih' pozisyonuna (Eş'arî çoğunluk) dayanıyor**; Râzî **bu pozisyonu tutarsız buluyor ve dâî-tevakkuf tarafını seçiyor**. Fasıl I §8.3 bu nedenle **Râzî'nin gözünde bir 'ilzâm mahalli'**. **Karar: Fasıl I §8.3 'kelâm çoğunluğunun tahsis görüşüne dayanır; Râzî bunu tutarsız bulur, dâîye tevakkuf der' diye derece notu almalı** (padişah kararı; cilt 3–4 kapanmadan hüküm yok).
+- Doğan sual: **Râzî 'Allah için dâî' meselesinin kendi çözümü: hikmet/ilim mi, zorunlu-mûcib bi'z-zât mı?** (cilt 3–4).
+
+## c3 p54
+- OCR: boş
+- Okuma: tam (içerik yok)
+- İçerik: Yok.
+- Netice/hüküm: Yok.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c3 p55
+- OCR: orta (başlık kötü)
+- Okuma: tam
+- İçerik: **Bâb 1, Fasıl 8 (başlık bozuk): 'Dâî hâsıl olunca fiil sudûru vâcib olur, cevâz zâil olur'**. Bazıları: 'dâî hâsıl olunca fiil **evlâ** olur, ama **vücûb** haddine varmaz.' **Râzî: bâtıl, vecihlerle**: **Hücca 1**: 'Dâî öncesi fiil ve terk **eşitti**; eşitlik sürerken fiil mümteni (gösterildi); râcih dâî gelince **öbür taraf mercûh** olur; **mercûh, müsâvîden daha zayıf**; müsâvîde fiil mümteni idiyse mercûhta **daha evlâ mümteni**; **bir taraf mümteni ise öbürü vâcib** ⇒ **dâî ile fiil vâcib**.' **İtiraz**: 'dâî vücûd tarafını râcih kılsa da **adem-i bâkî-müstemir** ademdir; bekâsında te'sîr yok; adem **hâlâ râcih kalır**; öyleyse ademe mercûhiyet gerekmez' — p56'da cevap.
+- Netice/hüküm: **Dâî ⇒ fiil vâcib** (Râzî'nin determinizmi: dâî tam olunca fiil zarûrî).
+- Delil çeşidi: **analitik (rüchân ⇒ vücûb)**; (T) burhânî biçim.
+- Mevzuya bağı: **c3 p25 (mülcâ) ile aynı çizgi**; **Fasıl I §8**: dâî-vücûb ilkesi **Allah'ın fiilinde dâî olsa fiil vâcib** demektir ⇒ **Allah'ın âlemi yaratması (dâî: ilim/hikmet) vâcib mi?** — Râzî'nin çözümü **hakîm bâbında**: **'mûcib bi'z-zât' sonucuna gitmemek için ayrım gerek**; **Sünnî akaid: Allah muhtâr, yaratmak O'na vâcib değildir**: **Râzî'nin yorumu ders ana metnine alınamaz**.
+- Doğan sual: **Râzî 'Allah'ın fiili dâîye tâbi ⇒ vâcib' sonucunu kabul ediyor mu?** (cilt 3 'hakîm' + cilt 4).
+
+## c3 p56
+- OCR: orta
+- Okuma: tam
+- İçerik: (İtiraz devam) 'Adem-i bâkî de râcih kalır; vücûd tarafı da râcih olur (rüchân sebebi hâsıl).' **Râzî'nin cevabı**: 'Dâî vücûdu iktizâ ettiğinde vücûd tarafı **ya râcih olur ya hiç olmaz**; hiç olmazsa **dâî değildir**; râcih olursa **adem taraf mercûh olur** (nakîzler birbirine tekâbül eder: birinin rüchânı ötekinin mercûhiyeti)'. **Hücca 2**: 'Dâî hâsıl olunca ya ademi mümteni olur (matlûbu) ya olmaz; olmazsa, **eserin vâki olduğu vakit ile olmadığı vakit ayrımı** ya **zâid bir kayda** (onunla evlâ olur) ya kaydı yok…' (p57'de devam).
+- Netice/hüküm: **Rüchân ⇒ öbür taraf mercûh (nakîz kuralı)** ⇒ dâî ⇒ vücûb.
+- Delil çeşidi: **analitik**; (T) analitik-burhânî.
+- Mevzuya bağı: bkz p55.
+- Doğan sual: —
+
+## c3 p57
+- OCR: orta
+- Okuma: tam
+- İçerik: Hücca 2 sonu: 'Vukû'un zâid bir kayda tevakkufu ⇒ o kayıt eklenmeden önce **mümteni**; 'evlâ' hükmü verirken mümteni idi: çelişki; kayda tevakkuf etmiyorsa **evlâ oluşun iki vakte nisbeti eşit** ⇒ birini seçmek **müreccihsiz rüchân**: muhâl.' **Hücca 3**: 'Kudretin nisbeti eşit iken ne muktezî ne mâni; **dâî hâsıl olunca** öbür tarafın rüchânına **mâni doğar** (bir nakîzin rüchânı öbürüne mâni); muktezî yokken mümteni olan, **muktezî yok+mâni var** iken daha mümteni ⇒ o taraf mümteni ⇒ **öbür taraf vâcib** (vukû' ile lâ-vukû' arası vasıta yok).'
+- Netice/hüküm: **Dâî tam ⇒ öbür taraf mümteni ⇒ fiil vâcib (2. ve 3. burhan)**.
+- Delil çeşidi: **analitik**; (T) burhânî biçim.
+- Mevzuya bağı: bkz p55–56.
+- Doğan sual: —
+
+## c3 p58
+- OCR: orta
+- Okuma: tam
+- İçerik: **Hücca 4**: 'Fiil dâîsi kaimken **terk hâsıl olamaz**: terk ya dâîyle (fiil dâîsi varken terk dâîsi olamaz; tesâküt ederlerse fiil dâîsi artık râcih değil) ya dâîsiz (dâîsiz rüchân bâtıl).' **Muhâlifler (dâî ⇒ vücûb demeyenler)** delilleri: **(1)** 'dâîyi çağıran kişi **o dâîyi değiştirebilir**; vücûbla olsa değiştiremezdi'; 'dâîler **çatışabilir** ve yine de biri seçilir (üç keffâret)'; **(2)** 'dâîsiz fiil muhâl dediniz; öyleyse **mûcib ile muhtâr arasında fark kalmaz** (bâtıl); ayrıca dâî vücûb gerektirirse **medih-zem, teşvik-korkutma, emir-nehiy** hüsn olmaz…' (p59).
+- Netice/hüküm: **Dâî ⇒ vücûb'e karşı 2 itiraz (dâî değişebilir; muhtâr/mûcib farkı ve teklif).**
+- Delil çeşidi: itiraz; (T) cedelî.
+- Mevzuya bağı: **Fasıl I §8.0 (muhtâr/mûcib), §8.3**: **itirazların ikincisi Fasıl I'in itirazı ile aynı**.
+- Doğan sual: —
+
+## c3 p59
+- OCR: orta
+- Okuma: tam
+- İçerik: (İtiraz 2 sonu: 'mülcâ ile muhtâr arasında fark; dâî mûcib olsa bu fark kalmaz'.) **Râzî'nin cevabı (1)**: 'dâî **değiştirilebilir** demeniz benim iddiamı kırmaz: ben **dâî hâsıl ve kayıtsız-mu'ârızsız kaldığı sürece** fiil sudûru diyorum; **değişebilmesi 'hâsıl olunca eseri vâcibdir' iddiasına dokunmaz**; **'dâîler eşitken fiil edebilir'** ise **önceki meseleye (dâîsiz fiil câiz mi) dönüş**; **'bu mesele o mesele üzerine kurulu'**. **Cevap (2)**: 'Kâdir ile mûcib arasındaki fark **iki vecihle** hâsıl: (1) **kâdir, cezmî dâî hâsıl olduğunda**, **fiili, âlim olarak (fiilin sudûru bilgisiyle)** yapar; **mûcib öyle değil**; (2) **mûcib bi't-tab' bir sıfatla tek eser verir, sıfat değişmez**; **kâdirin dâîsi hızla zâil olur, dâî zâil olunca eser zâil olur, zıddının dâîsi gelince zıddı sudûr eder** (p60).'
+- Netice/hüküm: **Râzî'ye göre kâdir-mûcib farkı: (1) bilerek; (2) dâî değişkenliği** — **ihtiyâr formülü**: 'dâî tam olunca fiil vâcib, ama dâîler değişken ve bilgiyle'.
+- Delil çeşidi: **cedelî-analitik**; (T) cedelî.
+- Mevzuya bağı: **KRİTİK — Fasıl I §8.0**: Râzî'nin **kâdir/mûcib** ayrımı **'dâîye tâbi ama bilerek ve dâî değişken'**; **Sünnî akaid 'muhtâr' tanımı ('dilerse yapar, dilemezse yapmaz') ile farklı**; **Fasıl I ana metnine Râzî'nin bu ayrımı alınmaz**, dipnot 'Râzî'nin tefsiri'.
+- Doğan sual: —
+
+## c3 p60
+- OCR: orta
+- Okuma: tam
+- İçerik: (Cevap 2 sonu): 'İnsan kendini sınasa **kayıtsız-mu'ârızsız cezmî dâî** hâsıl olunca **fiile mülcâ** olur; dâî gidince fiili terk eder.' **Bir âlimin ince sözü**: 'Biri "istersem yaparım, istersem terk ederim; fiil de terk de benden" derse: **fiili istemeyi istersem istemek hâsıl olur, terki istemeyi istersem terki isteme hâsıl olur mu?** Bu **teselsül** getirir; **akıl cezmeder ki bu dâîler, kalbine düşen bir dâîye varır; o da başka bir dâîye tâbi; o dâî kalbine düşünce fiilin fâili olursun, kalbine dâî düşmesi sen değilsin, fiilin dâî üzerine terettübü de sen değilsin; öyleyse insan muhtâr görünümlü mudtarrdır (fe'l-insânü mudtarrun fî sûreti muhtâr)**.' 'Fark **bu iki vecihten** sâbit. **Emir-nehiy, ikâb-sevap, medih-zem cevaplarını halk-ı ef'âl bâbında verdik.**'
+- Netice/hüküm: **Râzî: insan 'muhtâr görünümlü mudtarr'** — kelâmî determinizm (cebr'e yakın); cevabı 'halk-ı ef'âl' bâbında (ertelenmiş).
+- Delil çeşidi: **teselsül ilzâmı (iç gözlem)**; (T) analitik-cedelî; **kesin hüküm Râzî'nin, ama Ehl-i Sünnet'in ana çizgisi (kesb ve mes'ûliyet) ile ayrışan kelâmî içtihat**.
+- Mevzuya bağı: **KRİTİK — Fasıl IV/itikad ve Fasıl I §8**: 'insan muhtâr görünümlü mudtarr' ifadesi **Risale ana metnine ALINMAZ**; Risale **Sünnî ana çizgiyi (Allah yaratır, kul kesb eder, mes'ûldür)** yazar. **Bu, İslâm'a aykırı söz olmasın ilkesi gereği bilinçli ayrım**: Râzî'nin bu ifadesi **tarihî kelâm belgesi olarak** kayıtta kalır; ders katmanında **'Râzî Metâlib c3 p60'** atfıyla ve **'Sünnî ana çizgi ile fark'** notuyla.
+- Doğan sual: Râzî **kesb** kavramını nerede nasıl işliyor? (cilt 3–4 'halk-ı ef'âl' bâbı.)
+
+## c3 p61
+- OCR: orta
+- Okuma: tam
+- İçerik: **Bâb 1, Fasıl 9: 'Dâîlerin taksîmi' (3 vecihten)**. **Taksîm 1**: 'Kalpte hâsıl olan dâîler **iki kısım**: kulun **îkâ'ı** ile hâsıl olan, ve **Allah'ın doğrudan yaratmasıyla** hâsıl olan.' **Delil (1. kısım)**: dâîleri ve sebepleri **değiştirmeye kâdiriz**: bir işe rağbet eden, çabalayıp kalbinden o rağbeti **giderebilir** (vicdânî). **Delil (2. kısım)**: 'kalpte hâsıl olan dâîyi değiştirmeye kudretimiz **başka bir dâîye** dayanır; o dâî de bizden olsaydı **teselsül** ⇒ **kalplerin hâlleri, Allah'ın yarattığı zarûrî bir dâîye ulaşır; ona bağlı ikinci dâî; ona bağlı … sonuna kadar; her dâînin öncekine taalluku vücûb ve lüzûm üzere**.'
+- Netice/hüküm: **Dâî zincirinin başı Allah'ın yarattığı zarûrî dâî (Râzî'nin kelâmî modeli).**
+- Delil çeşidi: **teselsül nefyi**; (T) analitik-cedelî.
+- Mevzuya bağı: bkz p60: **Sünnî ana çizgi notu geçerli**; **Fasıl II (nübüvvet: teklif ve inanç)** için: Râzî'nin çerçevesinde **iman dâîsi de Allah'ın yarattığı** ⇒ ders katmanında **'Râzî'nin izahı' notuyla**.
+- Doğan sual: —
+
+## c3 p62
+- OCR: orta
+- Okuma: tam
+- İçerik: **Taksîm 2: külli ve cüz'î dâî.** **Külli dâî**: arkadaşını ziyaret etmek isteyen; evden arkadaş evine **çeşitli yollar**; ziyaret irâdesi **külli**, altında birçok cüz'î (bu yoldan, şu yoldan…). **Cüz'î dâî**: parmağı **şu ânda şu hadden şu hadde** oynatma irâdesi. **Külli dâî cüz'î fiile ancak cüz'î dâî eklenince mesdar olur**: külli dâî varken mahal çok çeşidi kabul ederse külli dâînin cüz'îlere nisbeti **eşit** ⇒ birinin diğerinden râcih olması **zâid muhassıs** ister, yoksa müreccihsiz tercih; **mahal yalnız bir çeşidi kabul ediyorsa** (arkadaşa ancak belirli yoldan gidilebilir) **külli irâde cüz'î irâdeyi îcâb eder** ('matlûbun lâzımı matlûbtur').
+- Netice/hüküm: **Külli dâî cüz'î fiili tek başına yapmaz; cüz'î dâî lâzım.**
+- Delil çeşidi: **analitik + misal**; (T) analitik.
+- Mevzuya bağı: **Fasıl I §8.3**: 'külli irâde ↔ cüz'î tahsis' ayrımı Râzî'de **cüz'î dâîyi zorunlu kılıyor** ⇒ **Allah için 'külli irâde ile belirli vakitte yaratma' cüz'î dâîyi gerektirir**: Fasıl I §8.3'ün tahsis ilkesiyle **yapısal örtüşme** (Râzî'de cüz'î dâî = tahsis).
+- Doğan sual: —
+
+## c3 p63
+- OCR: orta
+- Okuma: tam
+- İçerik: (Külli→cüz'î sonu): 'külli dâî cüz'î fiilin **yakın sebebi** değildir; **cüz'î dâîler** gerekir.' **Külli irâde birbirini izleyen cüz'î irâdelerin sebebi**: ziyarete gitme irâdesi, **ayak kaldırıp başka yere koymak** için cüz'î irâdeyi îcâb eder, **birinci adım geçince** aynı külli irâde ikinci adım irâdesinin illeti olur; **külli irâde baştan sona bâkî**; **her cüz'î irâdenin geçmesi, külli irâdenin sonraki cüz'î irâdeyi îcâbı için şart**. **Vallahu veliyyü't-tevfîk.**
+- Netice/hüküm: **Külli dâî bâkî; cüz'î dâîleri sırayla doğurur (şart: öncekinin geçmesi).**
+- Delil çeşidi: **analitik + misal**; (T) analitik.
+- Mevzuya bağı: **Fasıl I §8**: 'Allah'ın külli irâdesi ⇒ cüz'î hâdisler' modeli: **ezelî irâde/hâdis cüz'î tahsis** ilişkisinin Râzî çerçevesinde açıklaması; **(T) kelâmî model**.
+- Doğan sual: —
+
+## c3 p64
+- OCR: boş
+- Okuma: tam (içerik yok)
+- İçerik: Yok.
+- Netice/hüküm: Yok.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
