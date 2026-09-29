@@ -1657,3 +1657,219 @@ Biçim: cilt 1–2 ile aynı.
 - Delil çeşidi: **analitik + hitâbî**; (T) ikna'î.
 - Mevzuya bağı: **Fasıl III (Meâd, rûhânî lezzet)**: 'mufârık mevcûdlar (melekler) ibtihâcı' **filozofça**; **Sünnî akide: melekler Allah'a kulluk eder; 'akıllar/nefisler' felsefî terim**; **Risale'ye alınmaz**.
 - Doğan sual: —
+
+## c3 p185
+- OCR: orta
+- Okuma: tam
+- İçerik: **Bâb 6 (dipnotta 'Fasıl 9'): 'Allah'ın semî' ve basîr oluşu'**. Bu bâb **üç kısım**: (1) **semi' ve basarın mâhiyeti**; (2) Allah'a bu sıfatı **isbat eden deliller**; (3) **inkâr edenlerin delilleri**.
+- Netice/hüküm: **Bâb 6 haritası**.
+- Delil çeşidi: —
+- Mevzuya bağı: **Fasıl I sıfatlar (semî'-basîr)**: Fasıl I'de varsa **karşılaştırma**.
+- Doğan sual: —
+
+## c3 p186
+- OCR: boş
+- Okuma: tam (içerik yok)
+- İçerik: Yok.
+- Netice/hüküm: Yok.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c3 p187
+- OCR: orta
+- Okuma: tam
+- İçerik: **Bahis 1: basarın mâhiyeti**. 'Zeyd'in sûretine bakıp sûretin ilmi en kâmil vecihte hâsıl olunca **gözü kapattığımızda iki hâl arasında bedîhî fark buluruz**, hâlbuki sûretin ilmi iki anda da hâsıl ⇒ **ibsâr ilimden zâid bir hâl**. İhtilaf: bazıları '**fark, mer'înin sûret ve şeklinin hadakada intıbâ'ıdır; hadakanın o sûretten te'sîrlenmesi**'. **İntıbâ' delilleri**: (1) **güneş kursuna uzun bakıp gözünü kapatan** kişi kursu hayâlinde tam intıbâ' hâlinde görür, defetmek istese **edemez**; (2) **yeşil bahçeye uzun bakıp sonra beyaza çeviren** beyazı yeşilliğe karışık görür: hadaka yeşilden etkilenmiş, yeşil hadakadaki hâlle beyaza karışıyor; (3) **karşıdakinin gözbebeğinde yüzün sûretini görürüz**; (4) **güneşin tam kursuna bakınca hadaka zayıflar, dağılır**: hadaka mer'îden te'sîr alır.
+- Netice/hüküm: **Basar = hadakada intıbâ' (birinci görüş) — 4 delil.**
+- Delil çeşidi: **istikrâ-tecrübe (fizyoloji)**; (T) ikna'î-tecrübî (**eski optik varsayımı**).
+- Mevzuya bağı: **Kapsam dışı (optik)**; ders katmanında **'eski optik teorileri; bugünkü karşılığı ayrı'** notuyla; **Râzî'nin tavrı: basar ilimden zâid; intıbâ' şart olmayabilir (p188)**.
+- Doğan sual: —
+
+## c3 p188
+- OCR: orta
+- Okuma: tam
+- İçerik: (Delil 3–4 devam.) 'Bazıları: **iki hâl arasındaki fark, hadakanın mer'îye bakarken etkilenmesi**, ikinci hâlde olmaması.' **İkinci görüş**: '**te'sîr hâsıl, nizâ yok; ama basar kendi başına ilmî idrâkten ayrı bir hâl**. **Deliller**: (1) **âlem küresinin yarısını iki göz ile görürüz**; bu sûretin **gözde intıbâ'ı muhâl** (büyük küçüğe sığmaz) ⇒ **görme intıbâ' değil**; ayrıca 'ru'yet' hâli 'ilim' hâlinden **zarûrî** ayrıdır ⇒ fark idraklerin kendisinde; (2) **gözün te'sîri, mer'îye müsâvi bir sûretin gözde hâsıl olması ve kabul edilmesi**; bu **inkişâf ve tecellî kabîlinden değil**; ru'yet ise **inkişâf ve tecellî** ⇒ **ru'yet intıbâ'dan ayrı**.'
+- Netice/hüküm: **İkinci görüş (Râzî'nin de seçeceği): basar/ru'yet = intıbâ'dan ayrı inkişâf hâli.**
+- Delil çeşidi: **analitik + gözlem (âlem yarısını görme)**; (T) analitik-ikna'î.
+- Mevzuya bağı: **Fasıl III (ru'yet): c2 p79–85'te Râzî'nin ru'yet = inkişâf tanımı** ile **tutarlı**; burada **tanımın optik dayanağı: 'göz intıbâ'ı yetmez'**.
+- Doğan sual: —
+
+## c3 p189
+- OCR: orta
+- Okuma: tam
+- İçerik: (3.) 'Görme intıbâ' olsaydı **intıbâ' kâmil oldukça görme kâmil** olmalı; öyle değil: güneşe bakınca intıbâ' güçlenir, **görme zayıflar** ⇒ **intıbâ' ibsârdan ayrı**.' **Semâ' (işitme)**: 'ses **hakîkatini bilmek** ile **işitmek** arasında bedîhî fark.' **Bazıları**: '**fark, sesin hava dalgalanmasıyla hâdis olması, dalgalanmanın sımâh yüzüne çarpması (şiddetli hareket)**; delil: ses güçlenince kulakta **şiddetli eser**, hatta **sımâh yüzü yırtılır**; **boru sesinde beyin yırtılıyormuş gibi** hisseder ⇒ **işitmede intıbâ'-infiâl** var.' **Diğer görüş**: 'bu fark kabul; ama **iki idrak türü (ilim/semâ') arasında** fark; **semâ' bu türden ayrı**; deliller (p190).'
+- Netice/hüküm: **Semâ' = ilimden zâid idrak; hava dalgalanmasıyla bağı var ama ondan ibaret değil (ikinci görüş).**
+- Delil çeşidi: **istikrâ + analitik**; (T) ikna'î.
+- Mevzuya bağı: kapsam dışı (fizyoloji); **'basar/semi' ilimden zâid inkişâf' hükmü (Râzî'nin seçtiği)** Fasıl I sıfatlar için **dayanak**.
+- Doğan sual: —
+
+## c3 p190
+- OCR: orta
+- Okuma: tam
+- İçerik: **Semâ'nın intıbâ'dan ayrı oluşuna deliller**: (1) '**Duvarın ardından konuşan insanın sözünü tam ve kâmil işitiriz**; dalgalanmanın **tamamıyla** ulaşması muhâl (duvar engel); 'duvarda gözenek, delik var' denir; **delil: karanlık evde kapı açıksa işitme daha kâmil, kapalıysa zayıf.**' **Cevap**: 'duvar kesif cisim; konuşmadan doğan dalgalanma duvara varınca **şeklini korumaz**; hafif havadaki şekil kesif duvara varınca **bekâ edemez**; gözeneklerden geçen hava da **dış şekli korumaz** ⇒ sözün **şekil ve düzeniyle** işitilmesi **imkânsız**; işitiliyor ⇒ onların sözü bâtıl.' (2) '**Sesi işitince sağdan mı soldan mı geldiğini biliriz**; ⇒ sesi **hâdis olduğu yerde** duyarız; sımâhın içindeki çarpma yalnız olsaydı yönü bilemezdik (dokunma kuvveti gibi).'
+- Netice/hüküm: **Semâ' intıbâ'dan ayrı: (1) duvar arkası, (2) yön algısı.**
+- Delil çeşidi: **gözlem-analitik**; (T) ikna'î.
+- Mevzuya bağı: kapsam dışı.
+- Doğan sual: —
+
+## c3 p191
+- OCR: orta
+- Okuma: tam
+- İçerik: (3) 'Semâ' te'sîr olsaydı **te'sîr güçlendikçe semâ' kâmil** olmalı (bâtıl).' **Sonuç**: 'İbsâr ilimden ve gözün te'sîrinden **zâid**; semâ' ilimden ve kulağın te'sîrinden **zâid**; bunlar **ilimden daha kâmil ve güçlü bir inkişâf-tecellî**. **Bahis 2: Allah'a bu tür tecellî-inkişâf için delil var mı?** 'Bu hâl göz-kulak te'sîrinden ayrı olduğunu gösterdik; ancak **başka makamda tevakkuf ediyoruz**: bu hâlin hâsıl olması **göz-kulakta te'sîrin hâsıl olmasına şartlı olabilir**: **âletler bozuldukça idrakler bozulur, sağlamsa sağlam**. **İhtimal 2**: 'insan nefsi için şartlı olsa da **mufârıklar** için bu âletsiz de hâsıl olabilir; nasıl ki mümkinâtın vücûdu müessire şartlı ama Vâcib'in vücûdu şartlı değil'. **1. takdirde Allah'a isnâd muhâl, 2. takdirde muhâl değil ⇒ tevakkuf**; ancak '**evlâ ve ahlâk**'a dayalı mukaddime isbâtı gerektirir: **Allah en kâmil mevcut ⇒ tüm kemâl sıfatlarıyla vasıflı.**'
+- Netice/hüküm: **Semi'-basar için aklî kesin delil yok; Râzî 'evlâ ve ahlâk' (kemâl) delilini kullanıyor.**
+- Delil çeşidi: **kemâl delili + tevakkuf**; (T) ikna'î (**Râzî derecesi: evlâ/ahlâk**).
+- Mevzuya bağı: **KRİTİK — Fasıl I sıfatlar (semî'-basîr)**: **Sünnî akidede semi'-basar nass ile sabit ('O işitendir, görendir'; ⊬ âyet referansı)**; **Râzî'nin aklî delil derecesi (evlâ-ahlâk)** ders katmanına **'akıl delili zayıf, nass kat'î'** biçimde yazılır.
+- Doğan sual: —
+
+## c3 p192
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kemâl delili sonu**: 'İbsâr-semâ' **kemâl sıfatı**: bir şeyi bilip sonra görünce nefsimizde **noksandan kemâle, gizlilikten açıklığa** geçmiş gibi buluruz; bu hâl kemâlse **yokluğu noksan**; Hakk noksandan münezzeh, kemâlle vasıflı ⇒ **akl-ı evvel gereği** Allah bununla mevsûf.' **Bahis 3: inkâr edenlerin deliller**: 'Bir şeyi vücûdundan önce görmek, sözü vücûdundan önce işitmek muhâl; **iki vecih**: (1) Allah bu idrakle vasıflı olsa **sıfat değişken**: şeyi vücûdunda görür, önce görmez; sesi hâsıl olurken işitir, önce işitmez ⇒ **Allah'ın sıfatında tagayyür (muhâl)**; (2) idrak **mudrekin kendinde hâsıl olmasına şartlı**; zât bu idrâki iktizâ etse ve idrak mudreğin hâsılına mevkûf ise **zât kâfi değil, gayrin hâline mevkûf** ⇒ zât gayre bağlı ⇒ mümkin.'
+- Netice/hüküm: **Semi'-basar inkârcı delilleri: tagayyür, gayre ihtiyaç.**
+- Delil çeşidi: **hasım delilleri**; (T) analitik-cedelî.
+- Mevzuya bağı: **c2 p105–109 ve c3 p145–171** ile **aynı 'izâfî sıfat hudûsu' aporiası**; cevabı p193+.
+- Doğan sual: —
+
+## c3 p193
+- OCR: orta
+- Okuma: tam
+- İçerik: (Semi'-basar inkârcı 2. delili sonu: zât gayre bağlı ⇒ mümkin.) **Râzî: 'akla dayalı mebâhisin özeti bu.'** **Mütekellimînin bu bâbdaki iki zayıf vechi**: **Yol 1 (Eş'ariyye)**: 'Allah **hayy**; her hayy için **semi' ve basar sahih**; sahih olan her vasıf ile vasıflanmalı (**yoksa zıddıyla**); semi'in zıddı **sağırlık**, basarın zıddı **körlük**: noksan; noksan Allah'a muhâl ⇒ semî' ve basîr.' **Râzî'nin sualleri**: **S1**: 'hayy' derken kastınız 'bilmesi ve kâdir olması muhâl değil' ise doğru; **'bilmesi/kâdir olması muhâl olmayan, işitmesi/görmesi de muhâl değildir' niçin?** nizâ tam buradadır; başka mânâ kastediyorsanız açıklayın. **S2**: 'hayat zâid sıfat ve sahihliği sağlasa da **hayat sahih kılınca semi'-basar sahih** niçin? **(a)** Allah'ın hayatı bizimkinden mâhiyette farklı; bizim hayatımız **şehvet, nefret, elem, lezzet, cehil, zan** sahihliğini de gerektirir, Allah'ınki gerektirmez; **muhtelif mâhiyetler lâzımlarda eşit olmaz**; (b) …
+- Netice/hüküm: **Eş'arî'nin 'hayy ⇒ semi'-basar' yolu Râzî'ce zayıf (S1–S2a).**
+- Delil çeşidi: **hasım delili + Râzî itirazları**; (T) cedelî.
+- Mevzuya bağı: **DİKKAT (Sünnî mezhepler arası)**: Râzî **Eş'arî kelâmındaki 'hayy ⇒ semi'-basar' delilini zayıf buluyor**; **Sünnî akidede semi'-basar nassla sabit**; ders katmanında **aklî delil zayıflığı ve nass kat'iyeti** ayrımı (bkz. c3 p191).
+- Doğan sual: —
+
+## c3 p194
+- OCR: orta
+- Okuma: tam
+- İçerik: S2 (a) devam: 'Allah'ın hayatı bu sıfatların sahihliğini iktizâ etmiyor; **bu sahihliğin bizde olması Allah'ta da olmayı gerektirmez**.' **(b)** 'Hayatlar misil olsa da **sahihlik için muhassıs kâim olduğu gibi zâtın kâbil olması da itibar**; hayat sahih kılınca **belirli zât-ı mahsûsa** bu sıfata **kâbil olmayabilir**; nasıl **vücûd her sıfatı sahih kılar** ama **Allah'ta çoğu sıfat muhâl**.' **(c)** 'Sahihlik **belirli şarta bağlı**; şart Allah hakkında muhâl ⇒ imkân şartın yokluğundan yok.' **S3**: 'Sağırlık ve körlüğü **semi'-basarın zıddı** dediniz; **yokluk mânâsında ise** 'olmasa yokluk hâsıl, yokluk noksan, noksan muhâl' — **nizâ tam bu**: iki sıfat vâcib mi? yokluğu mümteni mi? **delil dâvâyı tekrar**; **vücûdî zıddiyse** delili yok. **S4**: 'Sağırlık/körlük vücûdî zıt olsa da **kâbil zât birine zorunlu sahip mi?** delil? **Cisimler kabulde eşit; hava cismi tat ve renklere kâbil, ama bunlardan birinin sahibi değil**; insanın irâde-kerâhete kâbil olması, **pazar işlerinde ne irâde ne kerâhet**.'
+- Netice/hüküm: **S2(b–c), S3, S4: Eş'arî yolunun karşı örnekleri (hava cismi, vücûd sıfatları).**
+- Delil çeşidi: **karşı örnek**; (T) analitik-cedelî.
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c3 p195
+- OCR: orta
+- Okuma: tam
+- İçerik: S3 sonu. **S5**: 'Sağırlık-körlük **noksan** derken 'noksan' nedir? Allah'ın âlemi yaratmasına **mâni** olan şey mi? Bu iki sıfatın olmaması yaratıcılığa mâni midir? Başka mânâ ise açıklanmalı.' **S6**: 'Noksanın Allah'a muhâl olduğunun delili? Kimi **bedâhet** iddia eder, kimi **semî delillere** güvenir. **Bedâhet ise başka bir yol daha yakın**: **semî' ve basîr olan kâmil, olmayan noksan; sarih akıl Allah'ı kemâl sıfatıyla vasıflamayı vâcib bilir** ⇒ semî' ve basîr; bu yol **sizin uzun yolunuzdan evlâ**.' **İcmâ'a güvenenler**: 'zayıf: **icmâ'nın hüccet oluşuna delâlet eden âyetler, Allah'ın semî' ve basîr olduğuna delâlet eden âyetlerden çok daha zayıf**; **'semî' öncüle iktifâ câizse o âyetlerle iktifâ evlâdır'**.'
+- Netice/hüküm: **Râzî: Eş'arî yolunun 'noksan Allah'a muhâl' öncülü ya bedâhet ya semî; kemâl yolu ve doğrudan âyetler daha evlâ.**
+- Delil çeşidi: **cedelî + yöntem tavsiyesi**; (T) analitik-cedelî.
+- Mevzuya bağı: **KRİTİK — Fasıl I/IV (nass-akıl)**: Râzî **'semî' deliller (âyetler) aklî yollardan evlâ' diyor**: **Risale'de semi'-basar için doğrudan nass** (⊬ âyet listesi doğrulanacak) **derece: nakli-kat'î (âyetin sübût ve delâleti)**; **Râzî'nin bu tercihi metodoloji notu olarak Fasıl IV'e**.
+- Doğan sual: —
+
+## c3 p196
+- OCR: orta
+- Okuma: tam
+- İçerik: (S6 sonu.) **Yol 2 (Mu'tezile)**: 'Allah **âfetsiz hayy**; âfetsiz hayy **hazır olan idraklere idrâk eder** ⇒ Allah işitir-görür. **Delil (küçük öncül)**: 'insan hayy ve âfetsizse idrâk etmek zorunda: **göz sağlam mer'î şartlarıyla hâzırsa görür; kulak sağlamsa sesi işitir; organlar sağlam ve sıcak taş cildine konursa hisseder**.' **Râzî'nin sualleri**: **S1**: 'Bizim hayy oluşumuz Allah'ın hayy oluşundan farklı; **zâtlarımız mâhiyette farklı; bir mâhiyette hüküm muhâlif mâhiyette lâzım gelmez**.' (S2 p197).
+- Netice/hüküm: **Mu'tezile yolu: 'âfetsiz hayy ⇒ idrâk'; Râzî S1: mâhiyet farkı.**
+- Delil çeşidi: **analitik-cedelî**; (T) analitik.
+- Mevzuya bağı: **Fasıl I sıfat**: 'mâhiyet farkı ⇒ hüküm taşınmaz' ilkesi **yine hâkim**.
+- Doğan sual: —
+
+## c3 p197
+- OCR: orta
+- Okuma: tam
+- İçerik: **S2**: 'Hayat ortak sıfat (şâhit-gâib) olsa da **hayatın idrâk mudrikliğini îcâbı Allah'ta bulunması muhâl şartlara bağlı** olabilir ⇒ o hüküm gâibte yok.' Cevap (hasım): 'şartlar Allah'ta muhâl ⇒ şart olmaktan çıkar, muktezî hâsıl ⇒ eser terettüp eder.' **Râzî**: 'bu **bâtıl**: bir şey bir şeye şart ise şart fevtinde meşrût fevt; **şartsız hâsıl olursa şart olmaz**; **melzûm bulunmadığında lâzım bulunmaz derseniz** kıyâs-ı half bozulur.' **S3**: 'hayy oluşun mudriklik gerektirmesi **hissî idrâk** için geçerli olabilir; **ibsâr ve semâ'** yalnız hayy olmakla hâsıl olmaz; **'hayy olmak semi'-basarı îcâb eder' sözü bâtıl**. **Bâb sonu, Allah bilir.** **Bâb 6 biter.**
+- Netice/hüküm: **Râzî'nin Mu'tezile yoluna 3 sualı; semi'-basar için aklî yol Râzî'ce ikna edici değil; kemâl/nass yolu.**
+- Delil çeşidi: **cedelî**; (T) cedelî.
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c3 p198
+- OCR: boş (metin yok)
+- Okuma: kısmî (görüntü doğrulanmadı; içerik yok gibi)
+- İçerik: OCR **metin vermedi**; sayfa **boş ya da görüntü ağırlıklı** olabilir. **İçerik okunmadı.**
+- Netice/hüküm: Çıkarılmadı.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: p198–200 üç ardışık boş sayfa (bâb ayracı olabilir): **görüntüden doğrulanmalı**.
+
+## c3 p199
+- OCR: boş
+- Okuma: kısmî (bkz. p198)
+- İçerik: OCR metin yok. **Okunmadı.**
+- Netice/hüküm: Çıkarılmadı.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: bkz p198.
+
+## c3 p200
+- OCR: boş
+- Okuma: kısmî (bkz. p198)
+- İçerik: OCR metin yok. **Okunmadı.**
+- Netice/hüküm: Çıkarılmadı.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: bkz p198.
+
+## c3 p201
+- OCR: orta (başlık kötü)
+- Okuma: tam
+- İçerik: **Bâb 7 (dipnot: 'Fasıl 10'): Allah'ın mütekellim oluşu (kelâm)**. **Mesele 1: kelâmın hakîkati**. 'Zarûrî biliriz ki bizde **emir, nehiy, haber, istihbâr** var. Bu mâhiyetler ya **yalnız lafızlar** ya **lafızların delâlet ettiği mânâlar**. **Lafız olamaz, 3 vecih**: (1) emir ve nehy mâhiyetine delâlet eden **sîgalar lisanlara göre farklı**; emir-nehy mâhiyeti aynı ⇒ **mugâyir**; (2) emir-nehy mâhiyeti **zâtî hakîkat**, ıstılah ve vaz'a göre değişmez; lafızlar değişir; (3) haber mânâsı için konan sîga talep mânâsı için konabilirdi ve tersi; ama **haber mâhiyetinin talebe dönüşmesi ma'kûl değil** ⇒ mugâyir.
+- Netice/hüküm: **Kelâmın mâhiyeti lafız değil, mânâdır (3 vecih).**
+- Delil çeşidi: **analitik (mâhiyet-lafız ayrımı)**; (T) analitik-burhânî.
+- Mevzuya bağı: **Fasıl IV (Sünnet ve Tahkik) ve Fasıl II (vahiy)**: 'kelâm = mânâ (nefsî) + lafız' ayrımı **Ehl-i Sünnet'in 'kelâm-ı nefsî/lafzî' ayrımının temeli**; **DİKKAT**: **Kur'ân'ın Allah kelâmı olduğu Sünnî akidenin temelidir**; Râzî'nin bu ciltteki kelâm bahsi **hassas** (aşağıda).
+- Doğan sual: —
+
+## c3 p202
+- OCR: orta
+- Okuma: tam
+- İçerik: **Talebin mâhiyeti**: 'talep = **başkasından fiilin sudûrunu irâde**; nehy = terki irâde' (bir görüş); '**talep, irâdeden ayrı mâhiyet**: **başkasından fiili irâde edip emretmeyebilir; emredip irâde etmeyebilir** (emirde fiil irâdesi dışında başka gaye varsa).' Birinci grup cevap: 'irâde ettiğinde başkasına **irâde ettiğini bildirmeyi** de isteyebilir, istemeyebilir; **emir**, ancak **irâdeyi gösteren bir fiil** yaparsa; ikinci: **'emrettiği hâlde irâde etmez'** — bu **hakîkatte emir değil, irâde ediyor izlenimi veren lafız zikridir**.' **Ek bahis**: 'talep-i nefsânî irâde olsun ya da ayrı mânâ olsun, **başkasına anlatmak için bu mânânın kalbimizde hâsıl olduğunu gösteren bir amel** gerekir; insanlar **her mânâ için belirli lafızlar vaz'etmeyi** en uygun buldu; **ses ve harflerle ifade kolay**: (1) insan **serin nesim** soluyup kalbini ferahlatır; ısınan nefes dışarı çıkar; bu **ses** doğurur, sesi **mahreçlerde** kesip **harfler** olur; harflerden çok lafız; **her mâhiyete tatbik edilebilir; sonsuz mânâ anlatılabilir**.'
+- Netice/hüküm: **Kelâm: mânâ (talep/irâde veya ayrı mânâ) + onu bildiren ses/lafız (ıstılah); 'neden lafız?' sebepleri.**
+- Delil çeşidi: **kavramsal + antropolojik-fizyolojik izah**; (T) ikna'î-analitik.
+- Mevzuya bağı: **Fasıl IV (nass-akıl)**: 'dil = ıstılah' bahsi; **DİKKAT**: **vahyin lafzı-mânâsı Sünnî akidede 'kelâmullah'** (Kur'ân'ın lafzı-mânâsı Allah'tandır); **beşerî dil ıstılahı (Râzî anlatımı) vahiy için açıklama değildir**.
+- Doğan sual: —
+
+## c3 p203
+- OCR: orta
+- Okuma: tam
+- İçerik: (Lafzın avantajları devam:) (2) sesler **hâdis olup yok olur; ihtiyaç anında var, ihtiyaç geçince yok**; diğer şeyler böyle olmaz; (3) bu seslerle ifade **tabiî iş** gibi; **kalpte hâzır mânâları bu lafızlarla anlatmak daha evlâ**. **'Mütekellim = kelâmın fâili'**; kelâmdan maksat: insanın **ıstılaha göre delâlet eden bir amel** yapması. **Mesele 2: Allah'ın mütekellim olduğunun isbatı**: 'Bu **Allah'ın kâdir-muhtâr olması ve cüz'îleri bilmesine** mütefer'.' **Talebi irâde sayanlar**: 'Allah bazı şeyleri irâde, bazısını kerih eder; **belirli cisimde ses yaratır; bu sesler ıstılah ve vaz' ile Allah'ın irâde ettiğini/kerih ettiğini gösterir; işte kelâm**.'
+- Netice/hüküm: **Kelâm-ı ilâhî = Allah'ın belirli bir cisimde yarattığı seslerle irâdesini bildirmesi (talep=irâde diyenler).**
+- Delil çeşidi: **kelâmî tanım (Mu'tezile-yönelimli)**; (T) cedelî.
+- Mevzuya bağı: **KRİTİK — Ehl-i Sünnet farkı**: 'Kelâm = Allah'ın cisimde yarattığı ses' **Mu'tezile görüşü**; **Ehl-i Sünnet: kelâm ezelî sıfat (kelâm-ı nefsî), Kur'ân kelâmullahtır**; Râzî bunu **iki kola ayırarak** anlatıyor: talep=irâde (Mu'tezile), talep ayrı mânâ (Eş'arî); p204'te kendi tercihini gösterir. **Risale Ehl-i Sünnet'in Kur'ân kelâmullah, gayr-i mahlûk hükmünü yazar**; **Râzî'nin çizgisi tarihî belge**.
+- Doğan sual: —
+
+## c3 p204
+- OCR: orta
+- Okuma: tam
+- İçerik: (Mu'tezile modeli sonu: 'kelâm budur'.) **Talebi irâdeden ayrı mânâ sayanlar (Eş'arî-yönelimli)** üç mukaddime isteyenlerdir: (1) **talep-irâde farkının ma'kûl beyânı**; (2) Allah'ın bu mânâyla vasıflandığına **delil**; (3) **'bu mânâ kadîmdir' diyenlerin iddiası**. **Râzî 3. iddiaya karşı deliller**: **Delil 1**: 'Emir-nehy **fiili ve terki ilzâm**; **Zeyd yokken** ona fiil ilzâmı **imkânsız**; **'Ey Zeyd, sana bu fiili ilzâm ettim' demek**; Zeyd ve Amr **ademken** böyle denemeyeceği **zarûrî**; **zarûrî değilse akılda hiçbir zarûrî ilim yok**.' **Delil 2**: 'Allah **haberler** verdi ('Nûh'u gönderdik', 'Âdem isyan etti'); haber verilen **habere önce**; haber ezelî olsa **ezelî olan başkasına mesbûk** (muhâl).' 'Ilimle karşı çıkarlarsa: **bu bâbda sahih mezhep Ebü'l-Hüseyn el-Basrî'nin: ilim malûm değişince değişir**.'
+- Netice/hüküm: **Râzî: kelâmın (emir/haber) kıdemine karşı deliller (ilzâm ve haber malûma mesbûk); kendi mezhebi Ebü'l-Hüseyn (ilim değişir).**
+- Delil çeşidi: **analitik-cedelî**; (T) analitik.
+- Mevzuya bağı: **KRİTİK — Ehl-i Sünnet farkı (edeb)**: **Râzî burada 'kelâm-ı nefsî kadîm (Eş'arî)' görüşünü reddediyor; bu, Râzî'nin Sünnî kelâm çizgisinden sapan bir içtihadıdır**; **Risale ana metni: Kur'ân Allah'ın kelâmıdır; kelâm sıfatı Allah'ın zâtıyla kâimdir (ezelî) — bu hüküm nass ve icmâ' ile sabit**; **Râzî'nin delilleri 'kelâm-ı ezelî emir/haber vücûddan önce mesbûk' sorusunu dile getiriyor; Sünnî cevap: 'kelâm-ı nefsî tek, emir-nehy-haber taallukları (tenciz) hâdis'** (Eş'arî cevabı).
+- Doğan sual: —
+
+## c3 p205
+- OCR: orta
+- Okuma: tam
+- İçerik: Delil 3–6: (3) 'Allah Zeyd'e sabah namazı ilzâm etti; Zeyd yapınca **ilk ilzâm bâkî mi**? Bâkîse Zeyd **borçtan çıkamaz** (milyon kez yapsa bile ilk ilzâm bâkî); bâkî değilse **yok oldu**; mütekellimîn kadîm için ademi muhâl sayıyor ⇒ bu ilzâm **kadîm olmamalı**.' (4) '**Nesh** câiz; nesh **hükmün sübûtundan sonra kaldırılması** ya süresinin bitmesi; iki takdirde de **vücûddan sonra yok oldu**; ademi sâbit olan **kadîm olamaz**' (Kur'ân Tevrat şeriatını nesh etti). (5) 'Kadîm sıfatın **taallukâtı, muteallakâtıyla zâtî lâzım-vâcib**; Allah'ın emri kadîm olsa **sahih olan her şeye taalluk** etmeli; **aklî husn-kubuh bâtıl** (bu görüşte) ⇒ her şeye emir sahih, her şeyden nehy sahih ⇒ **her şey hem emredilmiş hem nehyedilmiş**: zıtların cem'i.' (6) 'İlim malûm değişince değişir; **haber de haber verilen değişince değişir**; değişime maruz olan **kadîm olamaz**.'
+- Netice/hüküm: **Râzî: kelâmın kıdemine 6 aklî delil (ilzâm bekâsı, nesh, taalluk, haberin tagayyürü).**
+- Delil çeşidi: **analitik-burhânî**; (T) burhânî biçim (öncül: 'kadîm yok olmaz', 'haber malûma tâbi').
+- Mevzuya bağı: **KRİTİK — Ehl-i Sünnet farkı**: **nesh** (Kur'ân'ın önceki şeriatları neshi) **Râzî'nin delili olarak 'kadîm mi' sorusuna kullanılıyor**; **Sünnî cevap: emrin/nehyin taalluku hâdis, sıfat ezelî**; **Risale bu delilleri hasım olarak aktarmaz; ana metinde Sünnî çizgi**.
+- Doğan sual: —
+
+## c3 p206
+- OCR: orta
+- Okuma: tam
+- İçerik: (6. delil sonrası) 'Bu **aklî vecihler**, talep ister irâde ister başka olsun, **bu talebin ve haberin kadîm olmasının imtinâını** gösterir.' **Kelâmın kıdemine kâil olanların delilleri**: **(1)** 'Allah hayy; her hayy için mütekellim olmak sahih; sahih olan sıfata **sâhip ya da zıddıyla mevsûf olunur**; kelâmın zıddı **suskunluk (harâs)**, noksan, Allah'ta muhâl ⇒ ezelde kelâmla vasıflı.' **(2)** 'Allah'ın mütekellim olduğunda icmâ'; ya **zâtıyla mütekellim (ittifakla bâtıl)** ya **kelâmla**; kelâm hâdis ise ya zâtında (hevâdis mahalli), ya başkasında (**başkasında hâsıl kelâmla mütekellim olsa başkasında hâsıl cehille câhil olurdu**), ya mahalsiz (bâtıl); ⇒ **kelâm kadîm**.' **(3)** 'Kelâm kemâl sıfatıysa **ezelde mevsûf olmalı** (noksan); noksan sıfatsa hiçbir zaman mevsûf olamaz; **Allah bununla vasıflandığı** ittifakla ⇒ noksan değil.'
+- Netice/hüküm: **Kıdem taraftarlarının 3 delili (harâs-noksan, icmâ' + hâdis kelâm sorunu, kemâl).**
+- Delil çeşidi: **kelâmî burhan**; (T) cedelî-analitik.
+- Mevzuya bağı: **Ehl-i Sünnet çizgisi**: kıdem taraftarlarının delilleri **Eş'arî çizgisinin klasik delilleri**; **Risale bu delilleri hazırlar** ve Râzî'nin itirazlarını **derece notu** olarak taşır.
+- Doğan sual: —
+
+## c3 p207
+- OCR: orta
+- Okuma: tam
+- İçerik: (4. delil) 'Kelâm sahibi kelâmı olmayandan **daha kâmil ve efdal** (zarûrî); bizden biri mütekellim; Allah ezelde mütekellim olmasa **bizden biri vücûdunda Allah'tan ezelde daha kâmil** olurdu (muhâl).' **Râzî'nin cevapları (kendi sesi)**: **(1)** 'Suskunluğun noksan olduğunu kabul etmeyiz; **noksan olan, Zeyd'e 'namaz kıl', Amr'a 'oruç tut' demektir, Zeyd-Amr ma'dûm iken**; bir adam kendi evinde tek başına, insanlardan uzak oturup 'ey yerleşik bin, ey ayakta olan yaklaş' dese **herkes onun için sefeh ve noksan der**.' **(2)** 'İcmâ' ettiğimiz **mütekellim** ise: **belirli fiiller yaptı ve bu fiiller bazı fiilleri irâde, bazılarını kerih ettiğini gösterdi** ise doğru; ama bu **kelâm denen bir sıfatla vasıflanmayı göstermez**; **başka bir şey kastediyorsanız kabul edilmez; ittifak yalnız lafızda**.' **(3)** 'Kelâm kemâl, suskunluk noksan' ⇒ cevap: **'emir-nehiy ile meşgul olmak, memur-menhî ma'dûm iken noksan ve sefeh'**. **(4)** aynı. **'Aklî kelâmın özeti bu; lafzî ve semî delillerde çok söz var, bu kitaba lâyık değil; doğrusunu Allah bilir.'**
+- Netice/hüküm: **Râzî: kelâmın kıdemini gösteren deliller kesin değil; icmâ' yalnız lafızda; 'emir-nehy ezelde sefeh'.** (Kelâmın **hâdis/kadîm** hükmü için son söz p208+ (varsa).)
+- Delil çeşidi: **cedelî**; (T) cedelî.
+- Mevzuya bağı: **KRİTİK — Sünnî akide ve edeb**: 'Allah ezelde emir-nehy ile meşgul olsa sefeh' cümlesi **Allah'ın kelâmının ezelîliğine karşı Râzî'nin retoriğidir**; **Risale'de kullanılmaz**; **Sünnî cevap: ezelde kelâm sıfatı vardır; emir-nehy'in muhâtaba taalluku (tenciz) hâdistir; 'ezelde emretmek' taalluk-ı sulûhî ile açıklanır**. **Râzî'nin bu görüşü, Sünnî kelâm çizgisinden ayrılışı 'tarih kaydı' olarak duruyor; Risale'nin ana metni nass ve icmâ' ile Kur'ân'ın kelâmullah oluşunu esas alır**.
+- Doğan sual: **Râzî 'lafzî ve semî delillere' başka yerde döner mi?** (Kur'ân'ın mahlûk/gayr-i mahlûk meselesi cilt 3 sonu ya da başka ciltte).
+
+## c3 p208
+- OCR: boş
+- Okuma: tam (içerik yok)
+- İçerik: Yok.
+- Netice/hüküm: Yok.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
