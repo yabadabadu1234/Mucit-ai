@@ -19,6 +19,9 @@
 | ∴ | — | "öyleyse, netice olarak" |
 | ⊳ | — | "şu başlığın alt kolu" |
 | ⋉ | — | "şu kaide, buraya tatbik ediliyor" |
+| X ─sebeb→ Y | — | "X, Y'yi var eder; X, Y'nin var oluşunun illetidir" |
+
+**Parantez kaidesi:** `(...)` yalnız, hemen önündeki adı tarif edilmiş bir işlevin/yüklemin gerçek parametreleri için kullanılır (mesela `muhal(x)`, `İlim(Vâcib,x,t)`). Bir maddeye atıf (mesela "§3'e bakınız") veya kısa bir izah/hüküm kelimesi (mesela "muhal") hiçbir zaman `(...)` içine yazılmaz — bunlar köşeli parantez `[...]` içine konur.
 
 | Kelime | Kök | Lugat mânâsı |
 | :-- | :-- | :-- |
@@ -186,9 +189,21 @@ Mümkinü'l-Vücûd(Şart) = { müreccih-i hâricî }
   ⟸ ¬(tereccüh bilâ müreccih)      [Nakzeyn ihlâli]
 
 Silsile-i Esbâb(Nihayet) = { Vâcibü'l-Vücûd }
-  devir:    A≺B≺A  ⟹  A≺A                                (muhal)
-  teselsül: ∀cüz mümkin ⟹ küll mümkin ⟹ küll ⋉ (Şart)     (erteler, gidermez)
-  tatbik:   sebeb(K) ∈ K ⟹ devir  ∨  sebeb(K) ∉ Mümkin ⟹ Vâcib
+
+  devir:    A ─sebeb→ B ─sebeb→ A
+            A, B'yi var ediyor; B, A'yı var ediyor ⟹ A kendi kendini var ediyor
+            ⟹ A, kendi vücûdundan ÖNCE var olmuş olmalı
+            ↯ muhal — bir şey kendi vücûdundan önce var olamaz
+
+  teselsül: silsile = A₁ ─sebeb→ A₂ ─sebeb→ A₃ ─sebeb→ … (sonsuza)
+            ∀i: Mümkin(Aᵢ)                     [her halka tek başına mümkin]
+            Küll = bütün silsile (A₁,A₂,A₃,…)
+            cüzlerin hiçbiri Vâcib değilse Küll de bizatihi Vâcib OLAMAZ
+              [sonsuz da olsa, mümkinlerin toplamı yeni bir vücûd-kaynağı üretmez]
+            ⟹ Mümkin(Küll) ⟹ Küll de ⋉[Şart]: müreccih-i hâriciye muhtaç
+            ↯ — erteler, müreccih ihtiyacını gidermez
+
+  tatbik:   sebeb(K) ∈ K ⟹ ↯ [devir ile aynı muhal]  ∨  sebeb(K) ∉ Mümkin ⟹ Vâcib
 
 ∴  ∃! Vâcibü'l-Vücûd
 ```
@@ -218,7 +233,7 @@ Silsile-i Esbâb(Nihayet) = { Vâcibü'l-Vücûd }
     <text x="220" y="70">(tereccüh bilâ</text>
     <text x="220" y="82">müreccih)</text>
     <text x="440" y="37">devir/teselsül/tatbik denenir</text>
-    <text x="440" y="56">devir: A≺B≺A ⟹ A≺A (muhal)</text>
+    <text x="440" y="56">devir: A─sebeb→B─sebeb→A ↯ muhal</text>
     <text x="440" y="73">teselsül: küll de mümkin kalır</text>
     <text x="440" y="90">tatbik: sebep içerde→devir, dışarda→Vâcib</text>
     <text x="677" y="57">Vâcibü'l-</text>
@@ -271,7 +286,7 @@ Faraziye (deizmin iddiası): mümkin x, bir t anında Vâcib'den BAĞIMSIZ var o
 ```
 Faraziye (ibtal edilecek): ∃t, ∃mümkin(x): bağımsız(x,t)                  ["deizm"]
   bağımsız(x,t) ⟹ ¬muhtaç(x,müreccih,t) ⟹ Mâhiyet(x)=Vücûd(x)  [o an]
-  ⟹ ↯ (§2): Mâhiyet(x)≠Vücûd(x), mümkin-mâhiyetin SABİT vasfıdır
+  ⟹ ↯ [§2]: Mâhiyet(x)≠Vücûd(x), mümkin-mâhiyetin SABİT vasfıdır
 ∴ ¬∃t: bağımsız(mümkin,t)
 ∴ ∀t: muhtaç(mümkin, Vâcib, t)
 ∴ Halk : T → Vücûd   [ân değil, kesintisiz bir fonksiyon — "deizm" muhaldir]
@@ -289,7 +304,7 @@ Faraziye (ibtal edilecek): ∃t, ∃mümkin(x): bağımsız(x,t)                
 
 ```
 İbn Sînâ (iddia):  Bilgi(Vâcib, cüz'î) = ∅   [yalnız Bilgi(Vâcib,küllî) var]
-   gerekçesi: cüz'iyyatın bilinmesi ⟹ zamanla-değişen-bilgi ⟹ tagayyür(Zât) ⟹ ↯(Kıdem, §6.3)
+   gerekçesi: cüz'iyyatın bilinmesi ⟹ zamanla-değişen-bilgi ⟹ tagayyür(Zât) ⟹ ↯[Kıdem, §6.3]
 
 Reddiye (§4.1 ⋉): ∀t: Halk(mümkin, t)                      [devam-ı hudûs, §4.1'de ispatlandı]
    Halk(x,t) [bizzat yaratma fiili] ⟹ İlim(fâil,x,t) zarurîdir
@@ -338,15 +353,15 @@ Bu ayet, aklın önüne dört ve yalnız dört ihtimal koyar:
 
 ```
 İHTİMAL 1 — Sebepsiz varlık: Adem ──(fail yok)──► Vücûd
-   Hüküm: muhal (Nakzeyn ve müreccih-zarureti, §3 ⋉)
+   Hüküm: muhal [Nakzeyn ve müreccih-zarureti, §3 ⋉]
 
 İHTİMAL 2 — Kendi kendinin illeti: A, kendi var olmadan evvel A'yı var etti
-   Hüküm: muhal (devir, §3 ⋉)
+   Hüküm: muhal [devir, §3 ⋉]
 
 İHTİMAL 3 — Mümkinâtın birbirini doğurması / kör tabiat kanunları
    Hüküm: muhal — kanun bir OLUŞ TARZIdır, fail değildir; madde ise
    tahsis kabiliyetinden (seçme, bilme, gaye gütme) mahrumdur
-   (teselsül ve tatbik, §3 ⋉)
+   [teselsül ve tatbik, §3 ⋉]
 
 İHTİMAL 4 — Âlemin cinsinden olmayan, ilim ve iradesiyle dilediği
    kalıba sokan bir Fâil-i Muhtar ve Kadîr
@@ -412,8 +427,8 @@ Zaten §1-3'te (Burhân-ı İmkân) ve §5'te (Burhân-ı Tahsis) ispat edildi: 
 **Çoban için:** Vâcib'in bir "parçası" olsaydı, o parçaya (§3'teki müreccih-zarureti gereği) muhtaç olurdu — hâlbuki Vâcib hiçbir şeye muhtaç değildi.
 
 ```
-mürekkeb(x) ⟹ ictimâ-i-ecza (parçaların bir araya gelmesi)
-           ⟹ ⋉(§3, müreccih zarureti) ⟹ muhtaç(x)
+mürekkeb(x) ⟹ ictimâ-i-ecza [parçaların bir araya gelmesi]
+           ⟹ ⋉[§3, müreccih zarureti] ⟹ muhtaç(x)
            ⟹ ↯ Vâcib tarifiyle çelişki
 ∴ Vâcib parçasızdır   [bu netice müstakil bir sıfat adı DEĞİLDİR — bkz. yukarıki not]
 ```
@@ -430,7 +445,7 @@ mürekkeb(x) ⟹ ictimâ-i-ecza (parçaların bir araya gelmesi)
 ```
 ∃x≠y (ikisi de Vâcib) ⟹ temayüz (fark) lâzım
                       ⟹ fark = terkib(ortak-cins + ayırıcı-fasıl)
-                      ⟹ ↯ Basitlik (§6.1) ile çelişki
+                      ⟹ ↯ Basitlik [§6.1] ile çelişki
 ∴ Vâcibü'l-Vücûd tektir
 ```
 
@@ -470,7 +485,7 @@ Bu, §6.2'nin birinci (mantıkî) yoluna **muhtaç olmadan**, doğrudan âlemin 
 Kıdem(x) ≔ ¬∃ bidâyet(x)      [x'in bir başlangıcı yok]
 Beka(x)  ≔ ¬∃ nihâyet(x)      [x'in bir sonu yok]
 
-bidâyet∨nihâyet ⟹ tagayyür(değişim) ⟹ ⋉(§3, müreccih zarureti) ⟹ muhtaçlık ⟹ ↯
+bidâyet∨nihâyet ⟹ tagayyür(değişim) ⟹ ⋉[§3, müreccih zarureti] ⟹ muhtaçlık ⟹ ↯
 ```
 
 | Netice | (T) |
@@ -515,8 +530,8 @@ havâdis ⊂ Mümkin
 ### Netice (Sıfat Değil, Sonuç): Cisim ve Mekân Reddi
 
 ```
-Cisim(x) ⟹ terkib(madde,suret,eb'ad) ⟹ ↯ Basitlik (§6.1)
-Mekân ∈ Makûlât.İzafî.eyne ⟹ mahkûmiyet-i-kategori ⟹ hâcet ⟹ ↯ Kıyâm-bi-Nefsihî (§6.4)
+Cisim(x) ⟹ terkib(madde,suret,eb'ad) ⟹ ↯ Basitlik [§6.1]
+Mekân ∈ Makûlât.İzafî.eyne ⟹ mahkûmiyet-i-kategori ⟹ hâcet ⟹ ↯ Kıyâm-bi-Nefsihî [§6.4]
 ∴  ¬Cisim(Vâcib) ∧ ¬Mekân(Vâcib)
 ```
 
@@ -569,7 +584,7 @@ Mûcib bi'z-Zât(x)  ≔  şart-tamam(x) ⟹ eser(ânî, hep-aynı, kayıtsız-�
 Fâil-i Muhtar(x)   ≔  şart-tamam(x) olsa dahi, x dilediği ana/sûrete
                        TAHSİS ve TEHİR edebilir
 
-Vâcib(İrade, §8.3) ⟹ Fâil-i Muhtar(Vâcib)
+İrade(Vâcib) [§8.3] ⟹ Fâil-i Muhtar(Vâcib)
 ∴ ¬(Vâcib = illet-i tâmme-i mûcibe)
 ∴ âlemin O'ndan sudûru İHTİYARÎdir, MECBURÎ değildir
 ∴ âlemin ezelî olması ZARURÎ DEĞİLDİR — felâsifenin sudûr itirazı düşer
@@ -652,7 +667,7 @@ Kök: ق د ر (kadr/kudret = güç yetirme).
 3. Kaide: "hâdislerden hâlî olmayan şey, kendisi de hâdistir"
    (mâ lâ yahlû ani'l-havâdis fe-huve hâdis) — çünkü geçmişe doğru
    sonsuz sayıda hâdisin şimdiye ulaşmış olması, sonsuzun bitirilmiş
-   olmasını gerektirir; bu ise teselsülün reddiyle (§3) aynı muhaldir.
+   olmasını gerektirir; bu ise teselsülün reddiyle [§3] aynı muhaldir.
 ∴ Cisimler (âlem) hâdistir, ezelî değildir.
 ```
 
@@ -670,7 +685,7 @@ Kök: ك و ن (kevn = oluş, varlık bulma).
 KARŞILAŞTIRMA
   Kudret : bilkuvve iktidar (yapabilme) — ezelî, değişmez, tek
   Tekvin : bizzat yaratma fiilinin sıfatı — Vâcib'in Hâlıkıyeti bizatihi
-           ezelîdir (§6.3, Kıdem ⋉); mahlûkun an-be-an hudûsu, yalnız
+           ezelîdir [§6.3, Kıdem ⋉]; mahlûkun an-be-an hudûsu, yalnız
            Kudret'in "hep hazır olması" ile açıklanamaz.
 ∴ Tekvin(sıfat), Kudret'ten ayrı, müstakil bir sübûtî sıfattır.
 ```
@@ -716,7 +731,7 @@ Sem'(Vâcib), Basar(Vâcib) ≔ İlim'den ayrı, zâtta kâim, müstakil iki sı
 
 ```
 Gaye(çeşit) = { zarurî, ihtiyarî }
-  Vâcib(fiil) = ihtiyarî  ⋉ (İrade, §8.3)  ⟹  ¬abesiyet(Hakîm)
+  Vâcib(fiil) = ihtiyarî  ⋉ [İrade, §8.3]  ⟹  ¬abesiyet(Hakîm)
 
 Şer(çeşit) = { ademî, izafî }     κ = ayn-ı-vücûd-mu(şer)?
   ademî : şer = adem(hayr)                [bir hayrın yokluğu]
@@ -758,11 +773,11 @@ Hakîm ∧ Şer(mevcûd)?
 
 | Delil | Bağlandığı madde | Mahiyet | (T) |
 | :-- | :-- | :-- | :-- |
-| Nizam ve Mizan | §8 İrade/İlim | Şart(Mümkinü'l-Vücûd) ⋉ (küllî ölçek) | hitâbî/cedelî |
-| Teâvün | §8 İlim | Lime.İllet-i-Gâiye ⋉ (âlem, müşahede) | hitâbî/cedelî |
-| Esbâbın Acziyeti | §8 İlim/Kudret | "kanun≠fail" ⋉ (tek tek misal) | hitâbî/cedelî |
-| Cüz'iyattaki İntizam | §8 İlim | nizam ⋉ (en küçük ölçek) | hitâbî/cedelî |
-| İsimlerin Tecellisi | §7 İsim(Zât,Sıfat) | ⋉ (müşahede dili) | hitâbî/cedelî |
+| Nizam ve Mizan | §8 İrade/İlim | Şart(Mümkinü'l-Vücûd) ⋉ [küllî ölçek] | hitâbî/cedelî |
+| Teâvün | §8 İlim | Lime.İllet-i-Gâiye ⋉ [âlem, müşahede] | hitâbî/cedelî |
+| Esbâbın Acziyeti | §8 İlim/Kudret | "kanun≠fail" ⋉ [tek tek misal] | hitâbî/cedelî |
+| Cüz'iyattaki İntizam | §8 İlim | nizam ⋉ [en küçük ölçek] | hitâbî/cedelî |
+| İsimlerin Tecellisi | §7 İsim(Zât,Sıfat) | ⋉ [müşahede dili] | hitâbî/cedelî |
 | Fıtrat Hadisi ve Husayn Muhâveresi | §6.2, §5 | vicdanî ilzam — muhatabın kendi itirafından istidlâl (Buhârî, Cenâiz 92) | cedelî |
 | Burhân-ı İâde (İlk yaratılıştan ikinciye istidlâl, Yâsîn 78-79) | — | Meâd'e (öldükten sonra dirilmeye) mahsustur, Vücûd bahsine değil | ⊳ Fasıl III, madde 14'te tafsil edilecek |
 

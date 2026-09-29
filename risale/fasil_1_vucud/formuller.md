@@ -15,7 +15,10 @@
 ↯            çelişki (nakz noktası)
 ∵ ∴          çünkü / dolayısıyla
 ≺            öncelik (zaman/illiyet sırası, "A, B'den önce")
+X ─sebeb→ Y  X, Y'nin var oluşunun (vücûda gelişinin) illetidir; X, Y'yi var eder
 ```
+
+**Parantez kaidesi:** `(...)` yalnız, hemen önündeki adı zaten tarif edilmiş bir işlevin/yüklemin gerçek parametreleri için kullanılır (mesela `muhal(x)`, `İlim(Vâcib,x,t)`, `Sebeb(A,B)`). Bir formül maddesine atıf (mesela "2. maddeye bakınız") veya kısa bir izah/hüküm kelimesi (mesela "muhal", "çelişki") hiçbir zaman `(...)` içine yazılmaz — bunlar köşeli parantez `[...]` içine veya tire ile (`—`) ayrılmış bir ibareye konur. Bu ayrım gözetilmezse okuyucu parametre ile izahı birbirine karıştırır.
 
 ## Bünye (Rükün/Şart/Araz/Karîne)
 
@@ -77,35 +80,46 @@ Mâhiyet(x)≠Vücûd(x) ⟹ hârice-çıkış(x) = ilave ⟹ müreccih-i-hâric
     ⟸ ⋉ Hakk-ı Vücûd [mâhiyet≠vücûd ⟹ ilave ⟹ müreccih]
 
 3)  Silsile-i Esbâb(Nihayet) = { Vâcibü'l-Vücûd }
-    devir:    A≺B≺A  ⟹  A≺A            (muhal)
-    teselsül: ∀cüz mümkin ⟹ küll mümkin ⟹ küll ⋉ (2)   [erteler, gidermez]
 
-3-B) Burhân-ı Tatbik (devir/teselsülden bağımsız üçüncü kapatma — "terkib mugalatası" itirazına zırh):
+    devir:    A ─sebeb→ B ─sebeb→ A
+              A, B'yi var ediyor; B, A'yı var ediyor ⟹ A kendi kendini var ediyor
+              ⟹ A, kendi vücûdundan ÖNCE var olmuş olmalı
+              ↯ muhal — bir şey kendi vücûdundan önce var olamaz
+
+    teselsül: silsile = A₁ ─sebeb→ A₂ ─sebeb→ A₃ ─sebeb→ … (sonsuza)
+              ∀i: Mümkin(Aᵢ)                      [her halka tek başına mümkin]
+              Küll = bütün silsile (A₁,A₂,A₃,…)
+              cüzlerin hiçbiri Vâcib değilse Küll de bizatihi Vâcib OLAMAZ
+                [sonsuz da olsa, mümkinlerin toplamı yeni bir vücûd-kaynağı üretmez]
+              ⟹ Mümkin(Küll) ⟹ Küll de ⋉[2]: müreccih-i hâriciye muhtaç
+              ↯ — erteler, müreccih ihtiyacını gidermez
+
+3-B) Burhân-ı Tatbik — devir/teselsülden bağımsız üçüncü kapatma, "terkib mugalatası" itirazına zırh:
     K = bütün mümkinler kümesi.  sebeb(K) ∈ K  ∨  sebeb(K) ∉ K     [Nakzeyn]
-      sebeb(K) ∈ K  ⟹  K'nin bir elemanı kendi ve K'nin sebebi  ⟹  devir (3)
+      sebeb(K) ∈ K  ⟹  K'nin bir elemanı kendi ve K'nin sebebi  ⟹  ↯ [devir ile aynı muhal]
       sebeb(K) ∉ K  ⟹  K = bütün mümkinler ⟹ K-dışı = Mümkin-olmayan = Vâcib
     ∴ bu tatbik "parçanın vasfı bütüne geçer" öncülünü hiç kullanmaz
 
 ∴  ∃! Vâcibü'l-Vücûd                    [1,2,3,3-B'den]
 
 4)  Vâcibü'l-Vücûd(Basitlik) = { basit }     [lemma, bkz. yukarı — müstakil sıfat DEĞİL]
-    mürekkeb ⟹ ictimâʻ-i-ecza ⋉ (2) ⟹ muhtâc   [Vâcib-tarifiyle çelişki]
+    mürekkeb ⟹ ictimâʻ-i-ecza ⋉[2] ⟹ muhtâc   [Vâcib-tarifiyle çelişki]
 
 5)  |{x : x Vâcibü'l-Vücûd}| = 1     [Vahdâniyet]
-    ∃x≠y (ikisi Vâcib) ⟹ temayüz ⟹ terkib(cins,fasıl) ⟹ ¬(4)   [çelişki]
+    ∃x≠y (ikisi Vâcib) ⟹ temayüz ⟹ terkib(cins,fasıl) ⟹ ↯[4]   [çelişki]
 
 6)  Vâcibü'l-Vücûd(Zaman) = { ezelî(Kıdem), ebedî(Beka) }
-    bidâyet ∨ nihâyet ⟹ tagayyür ⟹ ⋉(2)-muhtaçlık   [Vâcib'e münâfî]
+    bidâyet ∨ nihâyet ⟹ tagayyür ⟹ ⋉[2]-muhtaçlık   [Vâcib'e münâfî]
 
     Vâcibü'l-Vücûd(Kıyam) = { bi-nefsihî }
     ⋉ Makûlât.Cevher   [en tam mertebe: mevzûsuz ∧ şartsız kıyam]
 
     Vâcibü'l-Vücûd(Muhalefet) = { li'l-havâdis }
-    ⟸ (1): Vâcib ∩ Mümkin = ∅ ; havâdis ⊂ Mümkin
+    ⟸ [1]: Vâcib ∩ Mümkin = ∅ ; havâdis ⊂ Mümkin
 
 7)  Netice (sıfat değil, sonuç): ¬Cisim(Vâcib) ∧ ¬Mekân(Vâcib)
-    Cisim(x) ⟹ terkib(madde,suret,eb'ad) ⟹ ↯(4)
-    Mekân ∈ Makûlât.İzafî.eyne ⟹ mahkûmiyet-i-kategori ⟹ hâcet ⟹ ↯(Kıyam)
+    Cisim(x) ⟹ terkib(madde,suret,eb'ad) ⟹ ↯[4]
+    Mekân ∈ Makûlât.İzafî.eyne ⟹ mahkûmiyet-i-kategori ⟹ hâcet ⟹ ↯[Kıyam]
 ```
 
 ## Devam-ı Hudûs — İstimrar-ı Halk (Deizmin ve İbn Sînâ'nın Cüz'iyyat İddiasının Reddi)
@@ -121,7 +135,7 @@ A) İstimrar-ı Halk (deizmin reddi):
 
 B) Cüz'iyyatın Bilinmesi (İbn Sînâ'nın "yalnız küllî bilgi" iddiasının reddi):
    İbn Sînâ (iddia):  Bilgi(Vâcib, cüz'î) = ∅
-     gerekçe: cüz'iyyat-bilgisi ⟹ zamanla-değişen-bilgi ⟹ tagayyür(Zât) ⟹ ↯(Kıdem)
+     gerekçe: cüz'iyyat-bilgisi ⟹ zamanla-değişen-bilgi ⟹ tagayyür(Zât) ⟹ ↯[Kıdem]
 
    Reddiye (A ⋉): ∀t: Halk(mümkin, t)
      Halk(x,t) ⟹ İlim(fâil,x,t) zarurîdir   [bir fail, yarattığını yaratırken bilmeden yaratamaz]
@@ -151,15 +165,15 @@ Sıfat(İlâhiyye) = Nefsiyye(1) ⊔ Selbiyye(5) ⊔ Sübûtiyye(7-8)
   Selbiyye  = { Kıdem, Beka, Vahdâniyet, Kıyâm-bi-Nefsihî, Muhâlefetün-li'l-Havâdis }
   Sübûtiyye = { Hayat, İlim, Sem', Basar, Kelâm, İrade, Kudret, (Tekvin) }
 ```
-[⊬ "Basitlik" bu 13'ün içinde bir isim değildir — yalnız (4)'teki ara-basamaktır]
+⊬ "Basitlik" bu 13'ün içinde bir isim değildir — yalnız Burhân-ı İmkân[4]'teki ara-basamaktır.
 
 ## Burhân-ı Tahsis (Kur'ânî Usul — Burhân-ı İmkân'a Muhtaç Olmayan Müstakil İkinci Yol)
 
 ```
 A) Dört İhtimal Taraması (Tûr 35-36):
-   İ1) Adem→Vücûd, fail yok         ↯ (2)-müreccih-zarureti
-   İ2) A, A'yı kendi var etti        ↯ devir (3)
-   İ3) mümkinât birbirini doğurur    ↯ teselsül/tatbik (3,3-B); kanun≠fail
+   İ1) Adem→Vücûd, fail yok         ↯ müreccih-zarureti [2]
+   İ2) A, A'yı kendi var etti        ↯ devir [3]
+   İ3) mümkinât birbirini doğurur    ↯ teselsül/tatbik [3,3-B]; kanun≠fail
    İ4) Fâil-i Muhtar, Âlim, Kadîr    — yalnız bu ayakta kalır
 
 B) Tahsis (Kamer 49):
@@ -184,10 +198,10 @@ Faraziye: ∃ A≠B, ikisi de ilâh.  hâdise(h): A murad(hareket,h), B murad(s�
 ## Sıfât-ı Selbiyye — Tam Liste (5)
 
 ```
-Vahdâniyet             ⊢ (5) [mantıkî] ∧ Burhân-ı Temânu' [Kur'ânî]  — iki müstakil yol
-Kıdem, Beka            ⊢ (6)
-Kıyâm-bi-Nefsihî        ⊢ (6)
-Muhâlefetün-li'l-Havâdis ⊢ (6)
+Vahdâniyet             ⊢ [5, mantıkî] ∧ Burhân-ı Temânu' [Kur'ânî]  — iki müstakil yol
+Kıdem, Beka            ⊢ [6]
+Kıyâm-bi-Nefsihî        ⊢ [6]
+Muhâlefetün-li'l-Havâdis ⊢ [6]
 ```
 
 ## Fâil-i Muhtar / Mûcib bi'z-Zât (Sübûtiyyeye Mukaddime — Sudûr İtirazının Reddi)
@@ -221,7 +235,7 @@ Kudret ≔ Hudûs(âlem) ⟹ îcad-kudreti
     cisim(x) ⟹ ¬hâlî(a'râz,x)          [her cisim dâimâ bir hâl üzere]
     hâl(araz) ⟹ hâdis(araz)             [her hâl öncekinin yerini alır]
     ¬hâlî(havâdis,x) ⟹ hâdis(x)          [kaide: mâ lâ yahlû ani'l-havâdis fe-huve hâdis]
-    ∴ hâdis(âlem) [sonsuz geçmiş-hâdis zinciri = teselsül (3) ile aynı muhal]
+    ∴ hâdis(âlem) — sonsuz geçmiş-hâdis zinciri, teselsül-burhanıyla [3] aynı yapıda muhaldir
 
 Tekvin ≔ Kudret(bilkuvve,ezelî,değişmez) ≠ Tekvin(bizzat-fiil, Hâlıkıyet)
        Kıdem(Vâcib) ⋉ ⟹ Hâlıkıyet ezelî; mahlûkun an-be-an hudûsu Kudret'in
@@ -238,7 +252,7 @@ Kelâm  ⊳ Fasıl II
 
 ```
 Gaye(çeşit) = { zarurî, ihtiyarî }
-  Vâcib(fiil)=ihtiyarî ⋉(İrade) ⟹ ¬abesiyet(Hakîm)
+  Vâcib(fiil)=ihtiyarî ⋉[İrade] ⟹ ¬abesiyet(Hakîm)
 
 Şer(çeşit) = { ademî, izafî }     κ = ayn-ı-vücûd-mu(şer)?
   ademî: şer=adem(hayr)          izafî: şer=bedel-i-cüz'î(küllî-hayr)
