@@ -2881,3 +2881,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **taksîm + ilke**; (T) burhânî biçim; öncül: 'bekâda tekvîn-i kâin muhâl' (c4 p274 ile aynı; **Mâtürîdî tekvîn ezelî çizgisi ile ayrışır**).
 - Mevzuya bağı: **KRİTİK — Fasıl I §8, c3 (tekvîn ihtilâfı)**: bu öncül üç yerde (p274, p297, p320) tekrarlandı; **Risale'nin ana metni bu öncülü 'Eş'arî çizgisi' diye işaretler**, Mâtürîdî cevabını dipnotta bırakır (⊬ karar padişahın).
 - Doğan sual: —
+
+## c4 p321
+- OCR: orta
+- Okuma: tam
+- İçerik: **Hüccet 11 devam**: '**kıdem sübûtî sıfattır**: kıdem = **bu vücûdun ademle mesbûk olmasının nefyi**; bu mesbûkiyet de mesbûk olsaydı mesbûkiyetin mesbûkiyeti zâid ⇒ teselsül ⇒ mesbûkiyet mevcut sıfat değil **ademî**; kadîm onun **nakîzi ve ref'edicisi; ademin ademi sübût** ⇒ **kıdem mefhûmu sâbit**.' **'Âlem kadîm olsa Allah'ın zâtıyla sâbit sıfat olan kıdemde müsâvi olurdu**; aralarında başka i'tibârla ihtilâf var mı? **Varsa** ikisi de **'iştirak edilen'** ve **'ihtilâf edilen'** iki şeyden mürekkeb; her iki i'tibâr ya kadîm ya hâdis ya biri kadîm biri hâdis; ikisi kadîmse **onlar da kıdemde müşterek ve başka i'tibârla ihtilâflı** ⇒ **sonsuz terkîb** (muhâl); **hâdis cüz kadîm mâhiyete cüz olamaz** ⇒ 'kıdem'e kâil olmak bâtıl kısımlara götürür; **ihtilâf yoksa** müsâvat, muhâl ⇒ **kadîm yalnız bir**, mâ sivâ muhdes' (p322).
+- Netice/hüküm: **Hüccet 11: kadîm-kıdem ortaklığı ⇒ terkîb ⇒ sonsuz teselsül; ⇒ kadîm yalnız Allah.**
+- Delil çeşidi: **taksîm + teselsül (c2 K2 F1 filozof burhanı ile aynı aile)**; (T) burhânî biçim, öncül bağımlı.
+- Mevzuya bağı: **KRİTİK — Fasıl I §6.2 ve c2 K2 F1**: Hüccet 11 **'ortak sıfat + ayrı i'tibâr ⇒ terkîb'** örüntüsünün cisim-kıdem uygulamasıdır; **c2 p121–132'de Râzî'nin 'meşkûk' dediği çizgi**; ayrıca **Sünnî sıfat öğretisi (ezelî sıfatlar) ile çatışır**: Râzî aşağıda kendisi bunu söyleyecek (p322).
+- Doğan sual: —
+
+## c4 p322
+- OCR: iyi
+- Okuma: tam
+- İçerik: **Hüccet 11 sonu ve Râzî'nin hükmü**: '**Allah kadîm olduğuna göre mâ sivâsı hâdis; BU DELİL ANCAK SIFATLARIN NEFYİ görüşüne göre dayanılabilir bir delildir.**' (Kıdem ortaklığı delili sıfatları ezelî kabul edenlere karşı işlemez.) **Bu son mes'ele bitti.** **Filozofların ayrı makamı (aktarım)**: '**bizim delillerimiz burhân-ı limm'den alınmıştır: müessire baktık, onda müessiriyette i'tibâr edilen bütün cihetler toplu ⇒ eserin ondan tehalluf etmesi imtinâ'; hudûs ehli ise cismin hâllerine baktı, bunların mütegayyir olduğunu bildi ⇒ ezelde müessirden sudûru imtinâ' ⇒ bu kelâm burhân-ı inn'dendir; malûm ki burhân-ı limm burhân-ı inn'den şerefli ve daha kuvvetlidir.**' **Râzî'nin kapanışı (tazarru' duası)**: 'bu heybetli bahis ve büyük matlûbda kelâmımızı **tazarru' ile** bitiriyoruz…' (metnin ortası OCR'de bozuk: 'cehl, hızlân ve şeytana itaat' …); '**Yâ Hannân, yâ Mennân, subhâneke, yâ Burhân: mağfiret, mağfiret, mağfiret; bizi ateş tabakalarından kurtar, cennet derecelerine ulaştır; hamd Allah'a lâyıkıyla, salât Muhammed'e, ashâbına ve âline olsun.**' (Dua metninin ilk cümlesi bozuk okundu, ⊬ tam metin.)
+- Netice/hüküm: **Râzî'nin hükmü: (a) Hüccet 11 yalnız sıfat nefyi (Mu'tezile) görüşünde işler ⇒ Ehl-i Sünnet çizgisinde KULLANILAMAZ; (b) filozofların 'limm-inn' itirazı aktarıldı, Râzî cevap yazmadı (burada); (c) Makâle 2 (hudûsu isbat eden başka deliller, 11 hüccet) burada bitti.**
+- Delil çeşidi: **hüküm (Râzî) + aktarım (filozof)**; (T) hitâbî (dua) + cedelî (limm/inn).
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §6.2, §5 (sıfatlar)**: **Risale Hüccet 11'i kullanmaz** ('kıdem ortaklığı ⇒ terkîb' sıfat-i ezelî ile çatışır); **filozofun 'limm daha şerefli' itirazı hudûs delili aileleri arasında derece tartışması** açar: Risale delilin **burhân-ı inn** olduğunu (hâdis hâllerden müessire istidlâl) **açıkça yazar**, 'limm' iddiası yalnız kıdem tarafında (⊬).
+- Doğan sual: **Filozofun 'limm daha kuvvetli' iddiasına Râzî'nin cevabı (bu kitapta) nerede?** (Kalan sayfalar ⊬.) **Dua metni OCR tamamı için nüsha karşılaştırması (⊬).**
+
+## c4 p323
+- OCR: iyi
+- Okuma: tam
+- İçerik: **3. Makâle başlığı**: '**âlemin ilâhının fâil-i muhtâr olduğunu, mûcib bi'z-zât olmadığını gösteren vecihlerin takrîri**.'
+- Netice/hüküm: **Kısım 2 Makâle 3 başladı.**
+- Delil çeşidi: —
+- Mevzuya bağı: **Fasıl I §8 (Vâcib=Fâil, muhtâr/mûcib)**: **açık borç (c1 p319–321) ve c3 dâî-sârife/kâdir-mûcib**'in **çapraz kapanış yeri**.
+- Doğan sual: —
+
+## c4 p324
+- OCR: —
+- Okuma: okunmadı (boş)
+- İçerik: metin yok.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c4 p325
+- OCR: orta
+- Okuma: tam
+- İçerik: **Râzî: 'Allah'ın kâdir olduğunu isbat bâbında çok vecih zikrettik; şimdi iki kısım**: **(1) usûl-i hikmetten alınmış i'tibârlar** — âlemin müdebbirinin **fâil-i muhtâr** olmak zorunda olduğunu, **mûcib illet olmadığını** gösterir; **(2) Kur'ân-ı Mecîd'de bu bâbda zikredilen deliller.** '**Kâdir bâbındaki aklî hikmet delilleri bu vecihlerle birleşince kesret ve kuvvette büyük bir mertebeye ulaşır.**' **Kısım 1'in mukaddimesi**: '**bu his ile bilinen ecsâm mütenâhî; her mütenâhî şekil taşır ⇒ bu ecsâm şekillidir; şekiller iki kısım.**'
+- Netice/hüküm: **Râzî'nin planı: Makâle 3 = (a) aklî hikmet i'tibârları (nizâm/gâye), (b) Kur'ân delilleri.**
+- Delil çeşidi: **plan/taksîm**; (T) —.
+- Mevzuya bağı: **KRİTİK — Fasıl I §8 ve nakil-akıl birliği**: Râzî **aklî delil ile Kur'ân delilini birleştirmeyi** açıkça plan yapıyor — Risale'nin 'akıl ve nakil birlikte' ilkesiyle **doğrudan örtüşür**; **kısım 2 (Kur'ân delilleri) okunduğunda ayrı damıtılacak.**
+- Doğan sual: **Kısım 2 (Kur'ân delilleri) hangi sayfadan başlıyor?** (p329+ izlenecek.)
+
+## c4 p326
+- OCR: iyi
+- Okuma: tam
+- İçerik: **Şekiller iki tür**: **(1)** **ittifâk yoluyla hâsıl olan şekiller** (kırık taş, kırık testi: parçanın muayyen şekli var ama **tesâdüfen**, fâil-i muhtâr fiiline bağlı değil); **(2)** **sarîh aklın 'ancak hikmetli fâilin kasdıyla hâsıl olur' diye şâhitlik ettiği şekiller** — **maslahat ve menfaate uygun şekiller**. **Misal (ibrik)**: üç parça: **geniş ağız** (su kolay girsin), **dar emzik** (ihtiyaç kadar aksın), **kulp** (insan eline alsın): 'bunları maslahata uygun bulunca **her aklın şâhitliği: bu ibriğin fâili hikmet ve maslahat gözeterek yapmıştır**; biri 'bu ibrik kendi kendine, hikmetli kasd ve âlim fâil olmadan oluştu, tıpkı kırık çömlek parçasının bu özel şekli almasında olduğu gibi' dese **fıtrat-ı selîme: bu söz bâtıl ve muhâl.**'
+- Netice/hüküm: **Râzî'nin hükmü: şekillerde 'tesâdüf' ile 'maslahata uygunluk' ayrımı; sarîh akıl maslahata uygun şekilde hikmetli fâile hükmeder.**
+- Delil çeşidi: **misal + fıtrat şâhitliği (istidlâl-i bi'l-hikme)**; (T) **hitâbî-ikna'î** (burhan değil, tümevarımsal analoji).
+- Mevzuya bağı: **KRİTİK — Fasıl I fıtrat/nizâm delili**: **ibrik misali 'düzen delili' (delîl-i inâyet/ihtirâ')'nin klasik Râzî biçimi**; Risale **'fıtrat ayrımı'** (c2 p59, p70: 'cihet ispat etmez') ile birleştirir: **fıtrat burada hikmet lehine kullanılıyor, cihet lehine değil**. **F 27-B: ayırt eder mi** — **'tesâdüf vs hikmet' ayrımı sarîh akla dayanıyor; hasmın (Epikürcü/Demokritos) 'tesâdüf uzun zamanda düzen üretir' cevabı (c4 p281) mevcut**; delil **hitâbî-ikna'î** olarak yazılır.
+- Doğan sual: —
+
+## c4 p327
+- OCR: iyi
+- Okuma: tam
+- İçerik: **Nazîr ve netice**: 'ibrikte bu üç parçanın **menfaate mutâbık ve maslahata muvâfık** olduğunu gördüğümüzde **aslî fıtrat ve fıtrî gâriz: bunun bir hakîm fâili ve âlim mukaddiri olmak zorundadır**. **Göklere, yıldızlara, dört unsurun hâllerine, yüksek eserlere, madenlere, bitkilere, hayvanlara ve bilhassa insana baktığımızda 'kahir hikmetler ve bâhir deliller'** buluruz ki **akıllar onlarda hayrete düştü, fikirler tavsifinde âciz kaldı**; **bu i'tibârların fâil-i muhtâr, hakîm, rahîm bir fâilin vücûduna delâleti ibrikten evlâdır.** '**Fâil-i muhtâr sâbit olunca âlemin hudûsu sâbit olur.**'
+- Netice/hüküm: **Râzî'nin hükmü: nizâm/hikmet delili kıyâsen ibrikten evlâ; fâil-i muhtâr ⇒ hudûs (⇒ sonuç: fâil-i muhtâr sübûtu hudûsu gerektirir).**
+- Delil çeşidi: **kıyas (tümevarımsal analoji) + ilke ('muhtâr fâilin fiili hâdis')**; (T) hitâbî-ikna'î + öncül bağımlı (muhtâr ⇒ hâdis, c4 p274 ile aynı öncül).
+- Mevzuya bağı: **KRİTİK — Fasıl I §8, §3**: **Râzî hikmet delilini hudûs delilinin BAĞIMSIZ bir kolu yapıyor** ('fâil-i muhtâr sâbit ⇒ hudûs sâbit'); **fakat 'muhtâr ⇒ hudûs' öncülü (kadîm eser muhtârdan olmaz)** Mâtürîdî çizgisiyle ayrışır (c3 tekvîn ihtilâfı). **Risale'nin ana metni hikmet delilini 'Vâcib=Fâil-i muhtâr' için alır (ders katmanı: ibrik misali), 'muhtâr ⇒ hudûs' bağını öncüle bağlı yazar.** **Padişah kararı: hikmet delilinde ibrik misali ana metin mi ders katmanı mı?**
+- Doğan sual: Râzî'nin 'usûl-i hikmet i'tibârları' listesi (göklerden insana) **hangi sayfalarda ayrıntılanıyor?** (p329+.)
+
+## c4 p328
+- OCR: —
+- Okuma: okunmadı (boş)
+- İçerik: metin yok.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
