@@ -3169,3 +3169,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **gâye/hikmet delili (teleolojik)**; (T) hitâbî-ikna'î.
 - Mevzuya bağı: **KRİTİK — Fasıl I §8, §1 (bilgi-imân ilişkisi)**: Râzî'nin son cümlesi **'hikmet bilgisi ile ikrâr tamlaşır'** Risale'nin **ders katmanı 'bilgi arttıkça delil güçlenir' ilkesi** için doğrudan alıntı olabilir. **F 27-B**: teleolojik delil mûcib-hakîm (inâyet) ile fâil-i muhtâr-hakîm'i **ayırt etmez**; Risale bunu **'düzen ⇒ hakîm fâil; muhtâr olması ayrı öncüle bağlı'** diye yazar.
 - Doğan sual: Râzî **'düzen delili ⇒ fâil-i muhtâr' halkasını** bu bâbda nerede açık yazacak? (p353+; bulunmazsa açık borç.)
+
+## c4 p353
+- OCR: iyi
+- Okuma: tam
+- İçerik: **3. Makâle, 2. Kısım başlığı**: '**Kur'ân-ı Mecîd'den istinbât edilen deliller: âlemin ilâhının kâhir, hakîm, muhtâr, rahîm olduğunun isbâtı.**'
+- Netice/hüküm: **Kur'ân delilleri bölümü başladı.**
+- Delil çeşidi: —
+- Mevzuya bağı: **Fasıl I §8 ve nakil-akıl birliği**: Râzî'nin **Kur'ân'dan istidlâl usûlü** (âyet fâsılalarına göre delil safhası) burada görülecek; **Risale'nin Kur'ân-delil metodolojisi için doğrudan kaynak** (ders katmanı).
+- Doğan sual: —
+
+## c4 p354
+- OCR: —
+- Okuma: okunmadı (boş)
+- İçerik: metin yok.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c4 p355
+- OCR: iyi
+- Okuma: tam
+- İçerik: **'Kur'ân delillerinin türleri (âlemin ilâhı kâhir, hakîm, muhtâr, rahîm).'** Râzî: '**bu bâbı et-Tefsîrü'l-Kebîr'de mübâlağa ile şerh ettik; burada icmâl ve esaslar.**' **Nev-i evvel**: '**göklerin ve yerin yaratılışıyla Allah'ın kâdir ve hakîm vücûduna istidlâl Kur'ân'da çok geçer; 'halk' takdir demektir**; göklerin cisimlerinde takdir ve tedbir çeşitleri: **on vecih, hepsi cisimlerin müsâvatına binâ**': **Vecih 1**: '**felekî ve unsurî cisimler tam mâhiyette müşterek; sıfatlarda muhalif (bu sıfatlarla felekler felek, unsurlar unsur oldu)** ⇒ bu ihtisâs zâtlar için de zâtların lâzımı için de değil ⇒ **fâil-i muhtâr yüzünden.**' **Editör dipnotu (neşredenin, Râzî'nin değil)**: 'kitabın tahkîkine sebep: Ezher Üniversitesi Arap Dili Fakültesi'nde tefsir hocası (Dr. Abdülganî Avdî er-Râcihî) Fahreddîn er-Râzî'yi çok över, 'bu söylediğim el-Metâlibü'l-Âliye'dendir' derdi; tahkik Kuveyt'te 1 Ramazan 1402 h.'de bitti.' (**neşir tarihçesi; içeriğe delil değil**).
+- Netice/hüküm: **Râzî'nin Kur'ân delilleri: 'halk = takdir'; müsâvi zâtlarda sıfat ihtisası ⇒ fâil-i muhtâr (tahsis delili).** **Râzî bu bâbı Tefsîr-i Kebîr'de genişçe işlemiş (atıf: ⊬ o kitap bu külliyatta yok).**
+- Delil çeşidi: **tahsis/tercih delili (ihtisâs ⇒ muhtâr)**; (T) burhânî biçim, öncül bağımlı (cisimler mâhiyette müsâvi — c4 p292'de gösterildi).
+- Mevzuya bağı: **KRİTİK — Fasıl I §8 ve nakil-akıl birliği**: **'Müsâvi zâtlarda ihtisâs ⇒ fâil-i muhtâr' delili irâde-tahsis bâbının pozitif yüzü**; hasmın 'mürecciḥsiz rüçhân' ilzâmına (c4 p304 İtiraz 3) karşı **Râzî'nin kendi cevabıdır**. **Tefsîr-i Kebîr atfı: kaynak envanterinde yok; ⊬.**
+- Doğan sual: Râzî'nin **mûcibin tahsis edemeyeceği öncülüne** (nisbeti eşit) filozofun cevabı (⊬ mûcibde 'mahsûs isti'dâd') nerede tartışılıyor?
+
+## c4 p356
+- OCR: orta
+- Okuma: tam
+- İçerik: **On vecih (devam)**: **Vecih 2**: 'her felek öbüründen sıfat ve mikdârda farklı ⇒ fâil-i muhtâr.' **Vecih 3**: 'felek cisimleri yıldız cisimlerinden sıfatlarda farklı.' **Vecih 4**: 'yıldız cisimleri zâtta müsâvi, sıfatta farklı.' **Vecih 5**: 'unsurlar cisimlikte müsâvi, keyfiyet ve hayizde farklı.' **Vecih 6**: 'üç mevâlîd (madenler, bitkiler, hayvanlar) cisimlikte müsâvi, sıfatta farklı.' **Vecih 7**: 'unsurlar ve mevâlîd cisimlikte müsâvi, sıfatta farklı.' **Vecih 8**: 'felek cisimleri mikdârda farklı.' **Vecih 9**: '**mevzi'leri farklı: belli bir feleğin bazı cüzleri derinliğinde/kalınlığının içinde, bazısı yüzeyinin dışında.**' **Vecih 10**: '**hareket keyfiyetinde farklı: kimisi hızlı, kimisi yavaş.**' (p357).
+- Netice/hüküm: **Ortak kalıp: 'zâtta/cisimlikte müsâvi, sıfat/mikdâr/mevki/hareketle farklı ⇒ bu ihtisâs münfasıl fâil-i muhtârdan.'** (Kalıp c4 p314–318 hüccet 5–7 ile aynı.)
+- Delil çeşidi: **tahsis delili (on örnek uygulaması)**; (T) burhânî biçim, öncül: 'cisimler zâtta müsâvi' (öncüle bağlı; hayûlâ-sûret reddi).
+- Mevzuya bağı: **Fasıl I §8**: **on vecih aynı tek delildir (kalıp: müsâvi + farklı ⇒ muhtâr)**; Risale **on ayrı delil saymaz, tek kalıp + örnekler** yazar. **Vecihlerin modelleri (felek/kevâkib) ana metne alınmaz; kalıbın modern karşılığı (aynı maddeden farklı yapılar) ders katmanında.**
+- Doğan sual: —
+
+## c4 p357
+- OCR: orta
+- Okuma: tam
+- İçerik: **Vecih 10 devam**: 'bu (hız farkı) tek feleğin içinde de var: küre dönünce yüzeyindeki her nokta da döner; **kutuplar sâkin, kuşak (mıntıka) en hızlı; kuşağa yakın noktanın hareketi uzak noktadan hızlı**; noktalar sayıca sonsuz; **aynı kürede hız-yavaşlık farklı; sâbitler küresi çok yavaş: küçük daire kutbu çevresinde otuz altı bin yılda bir devir (Râzî'nin rakamı), çevresi bir günlük devir çevresinden küçük**; noktalar ve cüzler tam müsâvi iken **her birinin kendine mahsûs hareket ve mikdârı 'Azîz ve Alîm'in takdiriyledir.**' (**Ek bilgi: modern presesyon devri yaklaşık 25.800 yıl; Râzî'nin 36.000 rakamı dönemin hesabı.**) **Nev-i sânî (İbrâhîm aleyhisselâm delili)**: '**'Rabbim dirilten ve öldürendir' (Bakara 2/258)**; **'ben de diriltir ve öldürürüm' diyene**…' (p358).
+- Netice/hüküm: **Vecih 10'un noktalar seviyesine indirilmesi (tek küre içinde hız farkı) + Nev-i sânî başladı.**
+- Delil çeşidi: **tahsis delili**; (T) burhânî biçim, öncül bağımlı; **kendi tenkidim: 'sonsuz nokta hız farkı' geometrik zorunluluktur (dönen küre); tahsis değil sonuçtur — bu vecih delil olarak zayıf (F 27-B: ayırt etmiyor: mûcib de aynı hız dağılımını verir).**
+- Mevzuya bağı: **Fasıl I §8**: **Vecih 10'un nokta-hız argümanı Risale'ye alınmaz** (zayıf); 'aynı kürede hız farkı geometrik'.
+- Doğan sual: —
+
+## c4 p358
+- OCR: orta
+- Okuma: tam
+- İçerik: **Nev-i sânî — İbrâhîm (a.s.) delili (Bakara 2/258)**: 'sâil: **'ben de diriltir ve öldürürüm'**; Râzî'nin tefsiri: 'sâil dedi ki: ihyâ ve imâteyi ilâh **eflâk, kevâkib ve tabâi' vâsıtasıyla mı** yapıyor **yoksa vâsıtasız mı**? Vâsıtasız iddia edersen delil yok; vâsıtalı ise **her birimiz de eflâk-tabâi' vâsıtasıyla diriltip öldürebiliriz** (adam zevcesine yaklaşır hayvan doğar; insan başka hayvanı alet-edevatla öldürür) ⇒ bu yolla ihyâ-imâte Allah'ın vücûduna delil olmaz.' **İbrâhîm (a.s.) cevabı**: '**bu âlemde ölüm-hayatı eflâk hareketi ve tabâi'in karışımıyla yaratsa bile, eflâkı ve tabâi'i hareket ettiren Allah'tır: zâtları için hareket edemezler (zât bâkî ve değişimden masûn; hareket = değişim; bâkî mütegayyirin illeti olamaz); muharrikleri başka felekler ise teselsül ⇒ muharrik Allah; biz tabâi' vâsıtasıyla diriltip öldürünce hayat-ölüm bizden değil (felekleri hareket ettiremeyiz).**' **'Allah Güneş'i doğudan getirir, sen batıdan getir'**: 'Güneş hareketi vâsıtasıyla getirse de Güneş'i hareket ettiren Allah; sen ettiremezsin; Allah'ın Güneş hareketiyle yaptığı fiil O'nundur, senin yaptığın senin değil.' **Râzî: 'bu tefsiri bu vecihle yaptık ki bu hüccetin zikrinde tahkîk vechi zâhir olsun.'**
+- Netice/hüküm: **Râzî'nin tefsir içtihadı: İbrâhîm (a.s.)'ın delili 'ihyâ-imâtenin vâsıtalı olması, vâsıtaların muharrikinin Allah oluşu' ile kurulur; 'bâkî mütegayyirin illeti olamaz' + teselsül reddi.**
+- Delil çeşidi: **taksîm + teselsül + ilke**; (T) burhânî biçim, öncül bağımlı; **kendi tenkidim: 'bâkî, mütegayyirin illeti olamaz' öncülü tam da filozofların reddettiği öncül (c4 p271 'kadîm mebde' hâdis müteâkıplara illet'); bu tefsir o öncülü kabul edip kurulmuş — delilin derecesi 'öncüle bağlı' yazılmalı; ayrıca âyetin muhteva anlatımı tefsir içtihadıdır, kesin âyet mânâsı değil (Allah en iyi bilir).**
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §8 ve Kur'ân-delil metodu**: **İbrâhîm (a.s.) kıssası 'muhrik-i evvel (gayr-i müteharrik muharrik)' delilinin Kur'ânî formu olarak sunuluyor**; Risale **âyeti tefsir içtihadı işaretiyle** anar; **'bâkî illet mütegayyir ma'lûl olamaz' öncülü c4 p271'deki filozof itirazına açık — derece öncüle bağlı.**
+- Doğan sual: Râzî'nin **Tefsîr-i Kebîr'deki Bakara 258 izahı** ile bu özet aynı mı? (Kaynak yok; ⊬.)
+
+## c4 p359
+- OCR: orta
+- Okuma: tam
+- İçerik: **Nev-i sâlis — Nahl sûresi delil sırası**: '**Allah delilleri Nahl'de eflâk ile başladı: 'Gökleri ve yeri hak ile yarattı; O, onların ortak koştuklarından yücedir' (16/3)**; ikinci mertebede insan: '**İnsanı nutfeden yarattı; bir de baktın ki apaçık bir hasım'** (16/4): 'nutfeden yarattı' **bedenin acâibine**, 'hasım-ı mübîn' **nefsin acâibine** işaret; üçüncü mertebede hayvan: '**Davarları da yarattı; onlarda sizin için ısınma ve faydalar var; onlardan yersiniz'** (16/5); dördüncü mertebede bitki: '**Gökten su indiren O'dur; ondan içecek ve otlatacağınız ağaç… onunla ekin, zeytin, hurma, üzüm ve bütün ürünleri bitirir; bunda düşünen bir kavim için âyet vardır'** (16/10–11); **âyetin faslı 'yetefekkerûn' (düşünürler)**: 'çünkü çeşitli nevîlerin nebâtâttan hudûsuyla kâdir-muhtâr ilâhın vücûduna istidlâl.' **Sâil (itiraz)**: '**müessir mevsim tabâi'i ve Güneş-Ay hareketleri olamaz mı?** delil bu soruya cevap olmadan tam olmaz; **bu yüzden fikir ve nazarın mecâli bâkî kaldı, âyetin fasılı 'yetefekkerûn' oldu**; Allah bu soruya iki vecihle cevap verdi.' **Vecih 1** (p360).
+- Netice/hüküm: **Râzî'nin tefsir içtihadı: Nahl 16/3–11 delil sırası (gök → insan(beden-nefs) → hayvan → bitki) ve âyet fasılasının ('yetefekkerûn') delil safhasıyla eşleşmesi.**
+- Delil çeşidi: **tefsir içtihadı + istidlâl**; (T) hitâbî-ikna'î (âyet delâleti); **kendi tenkidim: 'fâsıla ↔ akıl seviyesi' eşleşmesi Râzî'nin yorumudur; âyetin ilâhî maksadının bu olduğu kesin değil.**
+- Mevzuya bağı: **Fasıl I §8, Kur'ân-delil metodu**: **Risale Nahl 16/3–13 dizisini 'Râzî'ye göre' notuyla alabilir**; ders katmanı: **âyet fâsılalarının delilin safhasını göstermesi (Râzî yorumu)**.
+- Doğan sual: —
+
+## c4 p360
+- OCR: orta
+- Okuma: tam
+- İçerik: **Nahl delili — Allah'ın soruya cevabı (2 vecih)**: **Vecih 1**: '**aşağı âlemin değişimleri felek ve yıldız hareketlerine bağlıdır; o hareketler nasıl hâsıl oldu?** başka felek ise **teselsül**; **hakîm Hâlik'ten ise ilâhın vücûduna ikrar**: '**Geceyi, gündüzü, Güneş'i, Ay'ı sizin için râm etti; yıldızlar da O'nun emriyle râmdır; bunda akıl eden bir kavim için âyetler var**' (16/12), **fasıl 'ya'kılûn'**: 'akıllıysan teselsülün bâtıl olduğunu bil ⇒ hareketler **muharriki müteharrik olmayan bir harekete intihâ eder: kâdir-muhtâr ilâh**.' **Vecih 2**: '**yıldızların ve tabâi'in bir yaprağın ve bir tohumun bütün cüzlerine nisbeti aynı; oysa bir gül yaprağının bir yüzü kıpkırmızı, öteki simsiyah; müessir mûcib bi'z-zât olsaydı bu tefâvüt imkânsız (mûcibin te'sîri değişmez) ⇒ müessir kâdir-muhtâr**': '**Yeryüzünde sizin için türlü renklerde yarattıkları da… bunda öğüt alan bir kavim için âyet var**' (16/13), **fasıl 'yezzekkerûn'**: 'aklında yerleşen 'mûcib bi'z-zât ve tabîatın te'sîri değişmez' hükmünü hatırla; gözünle bu tefâvütü gördüğüne göre müessir mûcib tabîat değil fâil-i muhtârdır.' '**Bu cinsten bu kadar yeter; bu geniş bir denizdir; Tefsîr-i Kebîr'de istikṣâ ile zikrettik; bu nev'i isteyen o kitaba baksın.**'
+- Netice/hüküm: **Râzî'nin hükmü: Nahl 16/12 (teselsül bâtıl ⇒ muharrik-i evvel = muhtâr ilâh) ve 16/13 (yaprağın iki yüzü farklı renk ⇒ mûcib değil muhtâr).** **Fâil-i muhtâr isbâtı için iki kesin öncül: (a) teselsül imkânsız; (b) mûcibin te'sîri değişmez ⇒ tefâvüt muhtârdan.**
+- Delil çeşidi: **teselsül + tahsis/tefâvüt delili**; (T) burhânî biçim, öncül bağımlı; **F 27-B**: gül yaprağı misali **mûcib teorisinin 'mahsûs isti'dâd/kâbil farkı' (kâbilin ihtilâfı) cevabıyla çürütülebilir**: mûcibin te'sîri değişmez, fakat **mahaller** farklıysa neticeler farklı olabilir (filozofların cevabı). Râzî bunu bu sayfada cevaplamıyor; **öncüle bağlı** yazılır.
+- Mevzuya bağı: **KRİTİK — Fasıl I §8 (Vâcib=Fâil-i muhtâr ispatı: c1 p319–321 açık borcu)**: **Râzî'nin Kur'ân-destekli iki yolu (16/12 teselsül, 16/13 tefâvüt) mevcut**; Risale'nin **Vâcib=muhtâr halkası** için **aday delil**, derece **öncüle bağlı**: **(1) teselsül bâtıl (2) mûcib te'sîri değişmez + mahal farkı cevabı**. **Karar: ana metinde 'delîl-i tefâvüt' Kur'ân âyetiyle (16/13) birlikte, ders katmanında filozof cevabıyla yazılabilir.** **KIRMIZI TESPİT: Kısım 2 (Kur'ân delilleri) yalnız 3 nev' ile geçti; Râzî 'geniş deniz; Tefsîr-i Kebîr'e bak' diyor.**
+- Doğan sual: **Râzî 'muhtâr fâil, mûcib değil' ispatının kalanını nerede veriyor (p361+)?** Kısım 2 bitti mi, devam ediyor mu?
