@@ -289,3 +289,363 @@ Biçim: cilt 1 ile aynı. OCR/okuma/içerik/netice/delil çeşidi/mevzuya bağı
 - Delil çeşidi: 7: **taksîm + reductio**; (T) burhânî biçim; öncülü **'cisim ilâh olsa hareket câiz'** (İbrâhîm'in 'ufûl' istidlâline yakın, **fakat burada felek/kevâkib için Râzî 'ilâhlıktan menedenler yalnız 3 şey' diyor: bunlar Râzî'nin dilidir, nass değil**).
 - Mevzuya bağı: **Fasıl I 'cisim değil'**: **(T) burhânî biçimli 7 hüccetin çoğu 'misil ilkesi + terkîb' iskeleti**; Fasıl I §6.x **kısaltarak** bu iskeleti kullanıyorsa Râzî'nin **kendi kaydı** (2. hüccetin felek istisnası) **derece notu** olarak eklenmeli. **Hadis rivayetleri ('dünya semâsına iner') Râzî'de hasım (mücessime) aktarımı**: te'vil/ tefviz meselesi **bu ciltte işlenmiyor**; ders katmanında **atıf yapılmayacak / ⊬**.
 - Doğan sual: (a) İnzâl hadisleri (Sünnet) **kelâm zemininde tefviz-te'vil**: cilt 2'nin devamında Râzî ne diyor? (b) Bu 7 hüccetin **hangisi Fasıl I'e girsin**? (padişah kararı; öneri: (1) ve (5), çünkü **öncülleri Fasıl I'in kendi burhanına yakın** (imkân/terkîb)).
+
+## c2 p33
+- OCR: orta (başlık kötü)
+- Okuma: tam
+- İçerik: **Kısım 1, Fasıl 4 (başlık OCR'de bozuk; konu: Allah'ın 'cevher' olmaması)**. 'Cevher' **dört anlamda** kullanılır: (1) **kısmeti kabul etmeyen mütehayyiz** (cevher-i ferd; buna kâil olmayan için bahis sâkıt; kâil olan 'cevherler tam misil' der ⇒ biri kadîm-vâcib ise hepsi olurdu: muhâl); (2) **araz taaruzunu kabul eden** (vâcib tüm sıfatlarında vâcib olmalı ⇒ tagayyür imkânsız); (3) **başka bir şey ona izâfe edilince ikisinden üçüncü şey hâsıl olan** (terkîb; terkîb müteheyyiz oluşa bağlı; muhâl); (4) **İbn Sînâ**: 'cevher, a'yânda bulunduğunda **bir mevzuda olmayan mâhiyettir**' — bu tarif **ancak vücûdu mâhiyetinden gayrı olan mâhiyete** sâdıktır; İbn Sînâ: 'Allah hakkında muhâl, çünkü Allah'ın vücûdu mâhiyetinin aynıdır'.
+- Netice/hüküm: **Allah'a 'cevher' denemez** (1–3 anlamda mümteni; 4. anlamda İbn Sînâ'nın 'vücûd=mâhiyet' öncülüne bağlı). Râzî: **'bu mesele istikssâ ile geçti'**; p34: 'vücûdu mâhiyetinin aynı diyen için: "cevherliği bu kadar kastediyorsan Allah'ı ona nisbet etmek"…'.
+- Delil çeşidi: tarifin kısımlarına göre reductio; (T) **analitik-burhânî**, 4. anlamda **cedelî** (Râzî cilt 1 Mesele 3'te **kendi görüşünü 'vücûd zâid, Vâcib'de de' diye kurdu**; İbn Sînâ'ya göre yazıyor: **iç gerilim**).
+- Mevzuya bağı: **Fasıl I §2.2 'Vâcib'de ayniyet'** ve **cilt 1 Mesele 3**: burada Râzî 'İbn Sînâ'ya göre vücûd=mâhiyet' cümlesini **İbn Sînâ'nın öncülü olarak** aktarıyor; **kendi kabulünü değil**: bizim Fasıl I §2.2 iddiası bu cümleyle **desteklenemez**.
+- Doğan sual: Râzî 'cevher değildir' hükmünü **kendi vücûd-zâid görüşüyle nasıl uzlaştırıyor** (p34'ün sonu: 'mesele geçti, bahis uzun')?
+
+## c2 p34
+- OCR: kötü (kısa sayfa)
+- Okuma: kısmî
+- İçerik: 4. tefsirle ilgili son cümleler: 'vücûdu mâhiyetinin aynı diyen, cevher derken bu kadarı kastederse Allah cevherdir demek onun için **başkasına lâzım** … muhâl' (OCR kırık; anlam: bu anlamda 'cevher' demek terimsel ihtilâf). Fasıl 4 biter. **'Vallahu a'lem'**.
+- Netice/hüküm: 4. tefsirde ihtilâf **lafzî** görünüyor (OCR kırık; **hüküm çıkarılmadı**).
+- Delil çeşidi: —
+- Mevzuya bağı: bkz p33.
+- Doğan sual: OCR kırık cümle görüntüden doğrulanmalı.
+
+## c2 p35
+- OCR: kötü (başlık) / orta
+- Okuma: tam
+- İçerik: **Kısım 1, Fasıl 5 (başlık bozuk; konu: Allah'a hissî işaretle işaret edilmemesi / mekân ve cihette olmaması)**. **Hücca 1**: 'Hissî işaretle gösterilebilse ya **münkasim** ya değil; ikisi de bâtıl.' Münkasim olamaz (cisim-eczâ, reddedildi); **gayr-ı münkasim de olamaz, 3 vecih**: (1) her mütehayyizin sağı solundan gayrı ⇒ münkasim; (2) hiçbir âkil ilâhı **cevher-i ferd hacmine kadar küçük** demedi; (3) câiz olsa âlemdeki **bir zerre** ilâh olabilirdi: **bedîhen bâtıl**. **İtiraz**: 'neden "vâhid, terkîbden münezzeh, yine de **azîm**" olmasın? — 'Azîm münkasim mürekkeb olmalı' önermesi **şâhitte** doğru olsa da **gâibte** niçin?'
+- Netice/hüküm: **İşaret edilebilirlik ⇒ münkasim ya da cevher-i ferd**; ikisi de elenir.
+- Delil çeşidi: **taksîm-i akli**; (T) **analitik-burhânî**; **(2), (3) bedîhe/icmâ'-i uk. ölçüsü** ((T) ikna'î: 'hiçbir âkil demedi' bir **bedâhet delili değil, ittifâk gözlemi**).
+- Mevzuya bağı: **Fasıl I 'cisim değil'** ile aynı hat; Râzî burada **'kıyâsü'l-gâib alâ'ş-şâhid' itirazını** önceden yazıyor: bizim ders katmanında aynı itiraz (**'âlemdeki sınırı Vâcib'e taşımak'**) cevaplanmalı.
+- Doğan sual: —
+
+## c2 p36
+- OCR: orta
+- Okuma: tam
+- İçerik: İtirazın devamı: 'neden gayr-ı münkasim ama **gâyet küçük** olmasın? "Bu takdirde hakîr olur, Allah'a yakışmaz" — hissedilmeyen, işaret edilemeyen **yok gibidir**, daha hakîr olur.' **Cevap 1**: 'işarette münkasim olması **şâhide kıyâs değil**, **kat'î burhan**: bir gayr-ı münkasim noktaya işaret ettiğimizde **üstünde başka bir şey hâsıl olur mu**? Olursa üstteki alttakinden **mugâyir**; aynı olsa **tek şey aynı anda iki hayizde** olurdu: bedîhen bâtıl; câiz olsa 'bu dağ bir cevher-i ferddir, çok hayizde bulunuyor' denebilirdi (kimse demez). **Olmazsa**: işaret edilen **taksîm kabul etmez nokta, gâyet hakîr**: âkillerce bâtıl'. ⇒ **bu kıyâs değil, nefy-isbat arasında dönen taksîm**. **Kerrâmiyye'ye cevap**: (p36 son–p37): onlar **terkîbi kabul** ediyor.
+- Netice/hüküm: **Cevher-i ferd/nokta şıkkı 'aynı şey iki hayizde' ilzâmıyla kapanıyor.**
+- Delil çeşidi: **taksîm + bedâhet**; (T) **analitik**.
+- Mevzuya bağı: **Fasıl I**: 'işaret edilen ⇒ cüz'lü' argümanı **bizde yok**; kaynaklı ek olabilir.
+- Doğan sual: —
+
+## c2 p37
+- OCR: orta
+- Okuma: tam
+- İçerik: Kerrâmiyye'nin durumu: 'hissî işaretle gösterilir, **sonsuz** ya da **sonlu-fakat çok büyük**, **yine de vâhid ve kısmeti kabul etmez**' ⇒ sarih akla aykırı. **'Hissedilmeyen-işaret edilmeyen daha hakîr'** itirazına: 'hakîrlik **ancak hayiz ve mikdarı** olan şey için; **hayiz-mikdardan münezzeh** ve başkasıyla aralarında hayiz/mikdar nisbeti yoksa **hakîr-sagîr sıfatı lâzım gelmez**.' **Hücca 2 (hayiz-cihet mevcut ⇒ Allah ona muhtaç)**: 'Hayizde/cihette ihtisas olsa **o hayiz ve cihete vücûdda muhtaç** olurdu.' **Mülâzeme**: hayiz ve cihet **mevcut**; 3 vecih: (1) **fevk hayizleri, tahtânî hayizlerden mâhiyette muhtelif** (Allah fevk cihetinde, alt-sağ-sol'da olamaz diyorlar ⇒ hayizler muhtelif ⇒ mevcut; mahz adem böyle olmaz); (2) cihetler **hissî işaretle** ayrılıyor; mahz nefy kendi içinde ayrılmaz; (3) cevher-i ferd bir hayizden bir hayize intikal edince **bırakılan hayiz** …
+- Netice/hüküm: Hücca 2 kuruluyor: **cihet/hayiz mevcut** (Hücca 9 (p15–16) ile bağlı).
+- Delil çeşidi: **analitik**; (T) **öncül: hayiz-cihet vücûdu (kelâmcıların çoğu 'i'tibârî' der: p15 ile aynı tartışmalı öncül)**.
+- Mevzuya bağı: p15–16 ile **öncül bağımlılığı**: bu hüccet ancak fezâ'nın mevcut olduğu görüşünde geçerli.
+- Doğan sual: Kelâm zemininde (hayiz i'tibârî) bu hüccetin karşılığı ne olur? Râzî'nin p39'daki cevabı bu.
+
+## c2 p38
+- OCR: orta
+- Okuma: tam
+- İçerik: (3) vecih devamı ⇒ **hayiz-cihet mevcut**. **Mülâzemenin 2. adımı**: 'Hayiz ve cihet **mevcut, mekân-lı olana muhtaç olmaksızın** mevcut; hayizle ihtisaslı olan hayize **muhtaç**; hissî işaret ancak hayiz-ihtisâsıyla; ⇒ Allah hayize ihtisaslıysa **gayre muhtaç**. **Muhâl 3 vecih**: (1) gayre muhtaç ⇒ o gayrin ademi onun ademini gerektirir ⇒ **mümkin**; (2) **hayiz-cihet mürekkeb** (zirâ' ile ölçülür, ziyâde-noksan sıfatı alır ⇒ cüzlerine muhtaç ⇒ mümkin) ⇒ Allah mümkin-e muhtaç ⇒ mümkin: hulf; (3) Bârî ezelî-ebedî hayizde olsa **hayiz ezelde mevcut ⇒ Allah'tan başka kadîm** ispat edilmiş olur: **icmâ ile muhâl** ('icmâ' burada mütekellim-müslim icmâ'ı).
+- Netice/hüküm: Hücca 2: **hayizde ihtisas ⇒ hayize iftikâr ⇒ imkân**.
+- Delil çeşidi: **analitik-burhânî**; (T) **burhânî biçim; öncüller 'hayiz mevcut (felsefî)' ve (3)'te 'icmâ'** ((T) **nakli-icmâ'î**: 'Allah'tan başka kadîm yoktur' icmâ'ı; kelâmî **kabul**: ders katmanında **icmâ'ın derecesi** (T) 'naklî' yazılmalı).
+- Mevzuya bağı: **Fasıl I 'Vâcib'in tekliği (Allah'tan başka kadîm yok)'**: (3) **kadîm-vâcib özdeşliği** olmadan kurulan **icmâ'ı bağ**; cilt 1 p318'de Râzî 'kadîm ⇏ vâcib' demişti: **burada 'Allah'tan başka kadîm' icmâ'ı, o ilkeyle nasıl bağdaşıyor?** ⇒ **iç gerilim (kelâm icmâ'ı vs. Râzî'nin felsefî kabulü)**.
+- Doğan sual: Râzî'nin 'kadîm ⇏ vâcib' (cilt 1) ve 'Allah'tan başka kadîm yok — icmâ' (cilt 2)' uzlaştırması var mı?
+
+## c2 p39
+- OCR: orta
+- Okuma: tam
+- İçerik: **İtiraz**: 'Allah'ın hayiz-cihete ihtisası **hasmın kastıyla**: âlemden **mübâyin, ferd, mümtâz** olması; bu, Allah'ın zâtından **başka bir şey** gerektirmez ⇒ "muhtaç olur" sözünüz bâtıl. Âlem de hayiz-cihete ihtisaslı: bu, bazı cevherlerin bazısından ayrı olması demek.' **Cevap**: 'Hayiz-cihet a'yânda mevcut değil' sözü kat'î burhanlarla **reddedildi**. 'Munferid/mümtâz/mübâyin **lafızları müşterek**': (a) **mâhiyet ve hakîkatte muhâlefet** (nizâ yok; ama cihet gerektirmez: Allah'ın hakîkati hayiz ve cihetten muhâlif, bu muhâlefet **cihetle değildir**; yoksa teselsül); (b) **hayiz ve cihette imtiyâz** ('şurada mı burada mı' diye işaret edilebilmek): hasmın kastı bu; bu 'hayizin mevcut olması ve hayizdekinin ona muhtaç olması'nı gerektirir. 'Cisimler hayizlere muhtaç' — **bu mümteni değil**; Allah'ın **başka bir şeye muhtaç olması mümteni**: **fark**.
+- Netice/hüküm: **'Mübâyenet' lafzının iki anlamının ayrılması**: hakîkat muhâlefeti (kabul, cihetsiz) ↔ hayiz imtiyâzı (reddedilir).
+- Delil çeşidi: **lafzî-müşterek ayrımı (tefrîk)**; (T) **analitik**, iyi ayrım.
+- Mevzuya bağı: **Fasıl I 'mübâyenet' terimi** (Allah âlemden ayrı): **iki anlam ayrımı** bizde yazılı mı? Ders kitabı katmanı için **mühim tanım**: 'Allah âlemden ayrıdır' = 'hakîkat muhâlefeti', 'yeri ayrı' değil.
+- Doğan sual: —
+
+## c2 p40
+- OCR: orta
+- Okuma: tam
+- İçerik: **Hücca 3**: 'Hayize ihtisaslı olsa ya **her yönden sonsuz**, ya **bazı yönlerden sonlu bazılarından sonsuz**, ya **her yönden sonlu**; üçü de bâtıl.' (1) **Her yönden sonsuz** bâtıl: (i) sonsuz ebâd delilleri; (ii) âlem onun **zâtının içinde** olurdu ve zâtı **pislik-necâsetle karışık**; (iii) alt-üst hayizde **aynı şey** ya da **terkîb**; (iv) sonsuz ebâdı câiz görürsek **âlem cisimlerinin mütenâhî olduğuna delil** kuramayız (aynı delillerin geçerliliği kalkar). (2) **Bazı yönlerden sonlu** bâtıl: (i) sonsuz ebâd delilleri; (ii) sonlu tarafla sonsuz taraf **tam mâhiyette misil mi değil mi**? (misil ise **tenâhî ve gayr-i tenâhî aynı anda**: muhâl…)
+- Netice/hüküm: Hücca 3 (1) tamam; (2) devam eder (p41).
+- Delil çeşidi: **taksîm + reductio**; (T) **analitik; öncüller ebâdın tenâhîsi**.
+- Mevzuya bağı: **Hücca 3 (cilt 2) ⇔ Hücca 3 (p29)**: aynı 'tenâhî' öncülü iki yerde kullanılıyor; **öncül borcu**: ebâdın tenâhîsi delilleri (Râzî 'gösterdik' diyor; hangi cilt? **cilt 5–7 tabîiyyât/ilâhiyyât**).
+- Doğan sual: (a) 'Sonsuz ebâd delilleri' hangi ciltte? (b) (iii) 'Necâset ile karışık' ifadesi: Râzî'nin retorik ilzâmı, delil değil: (T) hitâbî.
+
+## c2 p41
+- OCR: orta
+- Okuma: tam
+- İçerik: Hücca 3 (2) devam: sonlu ve sonsuz iki taraf **misil** ise biri ötekine sahih olan diğerine sahih ⇒ sonlu sonsuza, sonsuz sonluya döner; ayrıca tefrik-temezzük, **nümuv-zübûl**, ziyâde-noksan ⇒ **hudûs, zâtta tagayyür**. **Misil değilse**: iki cüz mâhiyette muhtelif ⇒ **zât muhtelif cüzlerden mürekkeb** (muhâl); ayrıca sonsuz cüz sonlu cüze **bitişik** olduğundan, **bitişme yönünde sonlu** olmak zorunda ⇒ tek tabiatlı olduğundan iki yan müşâbih ⇒ nümuv-zübûl sahih ⇒ muhâl. **(3) Her yönden sonlu** bâtıl, **beş vecih**: (1) sonlu her şey **biraz fazla/eksik** olması câiz ⇒ belirli mikdar **müreccih-muhassıs (fâil-i muhtâr)** ister: Allah hakkında muhâl; (2) iki yarı: biri ötekine bir yüzüyle temas ⇒ öbür yüzüyle de sahih ⇒ tefrik/temezzük sahih; …
+- Netice/hüküm: Hücca 3 üç ihtimali de eler.
+- Delil çeşidi: **taksîm + misil ilkesi**; (T) **analitik-burhânî**; (1) **tahsis (tenâhî ⇒ mikdar tahsisi)**: Fasıl I'in **tahsis burhanının cisme uygulaması**.
+- Mevzuya bağı: **Fasıl I §5.3 Tahsis burhanı**: burada Râzî 'sonlu mikdar ⇒ muhassıs' kullanıyor; **aynı ilke**, iki yönde: âlemin mikdarı ⇒ muhassıs (Fasıl I); Allah'ın mikdarı ⇒ muhassıs olamaz ⇒ Allah mikdarsız (bu hüccet). **Sıralama**: tahsis ilkesi tek, uygulama iki (tutarlı).
+- Doğan sual: —
+
+## c2 p42
+- OCR: orta
+- Okuma: tam
+- İçerik: (3) devam: (2) sonlu ⇒ iki yarı bitişik ⇒ tefrik; **(3) 'sonlu ise fevk cihetinde de sonlu ⇒ üstünde boş hayizler; Allah orada âlem yaratsa âlem Bârî'nin üstünde, Bârî âlemin altında olurdu (ittifakla muhâl)'**; (4) sonlu ise Allah ona bitişik cisimler yaratabilir ⇒ ictimâ-iftirâk ⇒ hudûs; (5) sonlu-mahdûd ilâh câiz ise **güneş-ay ve kevâkib'in ulûhiyyetini reddetmek imkânsız**, hatta **Arş bizzat âlemin ilâhı** olabilir (ilâhlıktan alıkoyan yalnız üç şey: tenâhî, terkîb, hareket-sükûn): 'bu **uygunsuz her şey ittifakla bâtıl**'. **İtiraz**: 'siz de Allah'ın zâtında **gayr-i mütenâhî** diyorsunuz; size de lâzım.'
+- Netice/hüküm: 'Fevkinde âlem' ilzâmı ve 'güneş/Arş ilâh olabilir' ilzâmı: ikisi de **ilzâm-ı cedelî**.
+- Delil çeşidi: (3)-(5) **ilzâm**; (T) **cedelî (icmâ'a bağlı)**: 'ittifakla bâtıl' öncülü **naklî/icmâ'î**.
+- Mevzuya bağı: **Fasıl I §6.2 Vahdâniyet ve 'şirk' reddi**: (5) 'ilâhlıktan menedenler 3 şey' — Râzî'nin dili; bizde ilâhlık şartları (vücûb-ı zâtî, terkîbsizlik…) **daha genel tanım**.
+- Doğan sual: —
+
+## c2 p43
+- OCR: orta
+- Okuma: tam
+- İçerik: **Cevap (sonsuzluk iki anlamda)**: (a) **mikdar, hacim, hayiz ve cihetten münezzeh** ⇒ zâtının hadd-ı mak'ı nihayeti olamaz; (b) zâtında hacim-mikdar olup **nihayetsiz imtidâd** — 'Allah gayr-i mütenâhî' derken **(a)'yı kastediyoruz**, (b)'yi değil; öyleyse sizin ibtâl delilleri bize yöneltilemez. **Hücca 4**: 'Herhangi bir hayizde hâsıl olsa ya o belirli hayizde **vâcib olarak** ya **câiz olarak**; iki kısım bâtıl.' **Vâcib kısmı bâtıl, 5 vecihten ilki**: hacimli-hayiz-şâğil her şey cisimlerle **tam mâhiyette misil** (önceki fasıllarda takrir edildi); birinin belirli hayizde vücûbu hepsinin vücûbunu gerektirir ⇒ **çok zât aynı hayizde**: muhâl. **İkincisi**: boşlukta farz edilen hadler-cihetler **müsâvi**; 'fevk/tahtta ayrıcalık' iddiası: **fevk-taht ancak âlem yaratıldıktan sonra belirir**; boşlukta cihetlerin bedîhî ayrımı yok…
+- Netice/hüküm: **'Gayr-i mütenâhî' Allah için 'mikdarsız' demek**, mikdarlı sonsuzluk değil; Hücca 4 vücûb kolunu eler.
+- Delil çeşidi: **lafzî-müşterek tefrîk + reductio**; (T) **analitik**.
+- Mevzuya bağı: **Fasıl I 'Vâcib sonsuzdur/mutlaktır' ifadeleri**: bu terimin **iki anlamı ayrılmadan** kullanılması bizde **yanlış anlaşılma riski** taşır: kaynaklı açıklama gerekli. **'Fevk ancak yaratılıştan sonra' ilkesi** Fasıl I'de yok; **eklenebilir**.
+- Doğan sual: —
+
+## c2 p44
+- OCR: orta
+- Okuma: tam
+- İçerik: (Hücca 4, vücûb kolu, 2. vecih devam) 'Halâ-yı sırfın cüzleri **tam mâhiyette müşâbih** (halâ olmaktan başka hakîkati yok); farz edilen ihtilaf: ya **fezâ tabiatının kendisi** (o zaman müşterek olan farkın illeti olur: muhâl), ya **mahalli olan şey** (fezâ sıfat olamaz: **beğd ve imtidâd tabiatı bir zâta sıfat olamaz**), ya fezâ **cisim** olur (bu durumda mânâ 'maddede hâl olan bead'; taksîm tekrar; teselsül).' ⇒ **fezâ cüzlerinde ihtilaf imkânsız**. **3. vecih**: belirli hayizde vâcib ama oradan başka hayize **intikali mümteni** ise **zamin-i mak'ad gibi felçli, intikalden âciz**; **gâyet noksan-âciz**: 'Allah bundan çok yüce'. Dipnot: nüsha farkı ('el-âciz'den sonra ...).
+- Netice/hüküm: **Boşluğun cüzleri eşittir ⇒ 'fevkte vâcib' ayrıcalığı kurulamaz**.
+- Delil çeşidi: **analitik + retorik-ilzâm**; (T) analitik; 3. vecih **hitâbî (âcizlik ilzâmı)**.
+- Mevzuya bağı: p15–16, p37: **fezâ mevcut** öncülüne bağlı; burada 'fezâ sırf, cüzleri müşâbih' ek öncül (**Râzî'nin fezâ nazariyesi**).
+- Doğan sual: —
+
+## c2 p45
+- OCR: orta
+- Okuma: tam
+- İçerik: (3. vecih sonu) **4. vecih**: 'Belirli cihete ihtisası vâcib olan bir şey câizse, **bazı cisimlerin belirli hayizde vâcib** olup dışına çıkamaması da câiz ⇒ **cisimlerin hâdis olduğuna delil (hudûs) tüm cisimlerde işlemez**: âlemin dışında çok cisim, hayizde vâcib, intikal edemez' ⇒ **kâil hudûs-ı külli'yi kat'î hükmedemez**. **5. vecih**: belirli hayizde vâcib, diğerlerinde mümteni ⇒ o hayiz **mâhiyetçe farklı** ⇒ mevcut ⇒ **Allah vücûdda gayre muhtaç ⇒ mümkin**: hulf. **Câiz kolu (hayizde câiz olarak)** bâtıl, **birinci vecih**: hareket-sükûn sahih ⇒ zâtı hiçbirini gerektirmez ama zâtı ikisinden de hâlî olamaz ⇒ **zât her ikisine muhtaç**, her biri **münfasıl sebebe** muhtaç ⇒ Allah'ın zâtı gayre muhtaç ⇒ mümkin.
+- Netice/hüküm: **'Hareket-sükûn sahih ⇒ zât ikisine de muhtaç ⇒ mümkin'** (cisim-imkân iskeleti).
+- Delil çeşidi: **analitik-burhânî**; (T) **burhânî biçim; öncül: 'her cisimde hudûs delili tüm cisimlere' + fezâ mevcut**.
+- Mevzuya bağı: 4. vecih **Fasıl I hudûs delilinin (§3 sonrası) bu tenzîh delillerinden bağımsız kalmasını** gerektiren **çift yönlü bağımlılık**: Râzî'de hudûs delili tenzîhe öncül; burada tenzîh delili hudûs delilinin **evrenselliğini savunuyor** (devir tehlikesi? **devir değil, karşılıklı destek**; ancak sıra belirtilmeli).
+- Doğan sual: Hudûs-i külli delili ile tenzîh delili **karşılıklı bağımlı mı**, sıra var mı?
+
+## c2 p46
+- OCR: orta
+- Okuma: tam
+- İçerik: Câiz kolu **2. vecih**: hayizde bulunuşu câiz ⇒ **tahsis eden fâil-i muhtâr** ⇒ **muhdes** ⇒ zâtı hudûstan hâlî olamaz ⇒ **zât hâdis**: muhâl. ⇒ **Hayizde olması muhâl.** **Hücca 5**: 'Arz küredir; öyleyse Allah'ın hayiz-cihette olması **muhâl**.' **Arzın küre olması**: 'kamerî husûf' tecrübesi: **doğu ucundaki sakinler** husûfun **gecenin başında**, **batı ucundakiler gecenin sonunda** olduğunu söyler ⇒ doğuda gecenin başı batıda gecenin sonu ⇒ **arz küre**. **Küre ⇒ hayiz muhâl**: fevk cihet doğu sakinlerine göre **tahtı batı sakinlerine göre** olur; Bârî belirli 'fevk'te olsa **bazılarının fevkinde bazılarının altında**: 'ittifakla bâtıl'.
+- Netice/hüküm: **Cihet nisbîdir; küre arzda 'fevk' mutlak değil ⇒ mutlak-cihette-olan ilâh yok**.
+- Delil çeşidi: **tecrübî-astronomik öncül + reductio**; (T) **burhânî (gözlem öncülü sağlam)** ama **mücessimeyi ilzâm ederken 'fevk'i göreli sayması** onların 'cihet-i ulviyye'sinin **mutlak** olduğunu kabul etmeleri şartıyla; onlar 'fevk = arşa doğru' diyebilir: **Râzî bunu cevaplamıyor** (açık).
+- Mevzuya bağı: **Fasıl I 'Arz küredir' gözlemi**: Fasıl I'de kullanılmıyor; **tenzîh delili için ek**. **Zayıf halka**: 'Arşa doğru fevk' tanımı (bir sonraki sayfalarda geçebilir).
+- Doğan sual: Mücessimenin 'fevk = Arş tarafı (mutlak)' cevabı p47+'da işleniyor mu?
+
+## c2 p47
+- OCR: orta
+- Okuma: tam
+- İçerik: **Hücca 6**: 'Hayizde olsa ya **âlemde** ya **âlemin dışında**; ikisi de bâtıl.' **Âlemde** olamaz (ittifak; âlemin cüzü ve karışık olurdu). **Âlemin dışında** olamaz: **halâ ya sonlu ya sonsuz**. **Sonlu ise** şekil sahibi; şekil zâtının lâzımı değil (halâ basit tabiat; cüzünün tabiatı küllün tabiatı ⇒ şeklin illeti mâhiyet ise cüz ve küll aynı şekilde olurdu: muhâl) ⇒ **şekil fâil-i muhtârdan** ⇒ **muhdes**; halâ şekilden ayrılmaz ⇒ **halâ muhdes**; Allah kadîm; Allah **ezelde hayizde olsaydı zâtında tagayyür**: muhâl. **Sonsuz ise**: (1) sonsuz ebâd bâtıl (delil); (2) sonsuz halâda belirli hayize işaret edince **onun fevkinde başka hayiz**; Allah orada olsa **tahtta olurdu, fevkte değil** (muhâl); **'tüm sonsuz hayizlerde olsa'**: ya **tek zât hepsinde** (bir zât aynı anda çok hayizde: muhâl; ve her biri başka hayizin altında ⇒ tahtta, fevkte değil), ya **her hayizde bir cüz** (terkîb) …
+- Netice/hüküm: **Âlemin dışındaki 'fevk' halâsı ya sonlu (muhdes şekil ⇒ hâdis) ya sonsuz (ebâd delilleri)**.
+- Delil çeşidi: **taksîm + öncül zinciri (halâ-fezâ)**; (T) **burhânî biçim; öncül: halâ mevcut basit tabiat, şekil bir muhassısa muhtaç**.
+- Mevzuya bağı: **Fasıl I tahsis ilkesi 'şekil ⇒ muhassıs'**: aynı iskelet; **halâ öncülü** (p15–16, 44) yine **tartışmalı**.
+- Doğan sual: —
+
+## c2 p48
+- OCR: orta
+- Okuma: tam
+- İçerik: (Hücca 6 sonu) 'Tüm hayizlerde olması ya tek zâtın hepsinde (muhâl, tahtta-fevkte) ya cüz cüz (terkîb) … öyleyse hayizde olmak **bu bâtıl kısımlara** götürür.' **Hücca 7**: 'Hayizde olsa **hayiz mevcut veya ma'dûm**; ikisi de bâtıl.' **Mevcut** olamaz: Allah gayre muhtaç ⇒ mümkin. **Ma'dûm** olamaz: adem mahz nefy; onu **zarf**, Allah'ı **mazrûf** yapmak muhâl. **İtiraz**: 'aynısı cisimler için de geçerli; cisimlerin hayizde olmasını da nefyeder.' **Cevap 1**: 'Hayiz-cihet **mevcut** (beğd-i mücerred, fezâ-i mahz); cismin ona muhtaç olması **muhâl değil** (cisim mümkin li-zâtihi); **vâcibin gayre muhtaç olması bâtıl**: fark.'
+- Netice/hüküm: Hücca 7: **cisim ile Vâcib arasındaki fark: cisim mümkin (muhtaç olabilir), Vâcib olamaz**.
+- Delil çeşidi: **taksîm + cevabı hazır (itiraz-cevap)**; (T) analitik.
+- Mevzuya bağı: **Fasıl I 'imkân-vücûb ayrımı'** ile örtüşür: aynı gerekçeyle tenzîh.
+- Doğan sual: (a) p46 'fevk cihetinin nisbîliği' cevabı; (b) **7 hüccetin hepsi 'hayiz mevcut' öncülüne bağlı mı, hangileri bağımsız?** (özet için sayılacak).
+
+## c2 p49
+- OCR: orta
+- Okuma: tam
+- İçerik: Hücca 7 itirazına **Cevap 2**: 'Mekân ya **cismin nüfûz ettiği bead**, ya **muhît sath**; birincide cevap 1'deki fark; **ikincide** (sath) **âlemin tümü hayiz-cihette değildir**, terkîbli bir zâttır; Bârî'yi de böyle hükmederseniz **eczâdan mürekkeb cisim** dersiniz (reddedildi).' **Hücca 8**: 'Hissî işaret edilen şey bu sıfatla **asâlet ve istiklâl** ile mevsûf ise **cisim**; **tebeiyyet** ile ise **araz**; cisim olamaz (önceki fasıl), araz da olamaz (mahalle muhtaç ⇒ hayizde olması imkânsız).' **Hücca 9**: 'Hissî işaret edilen ve büyük olan her şeyde **eczâ farz edilir**: Arş'ın sağına hizâ olan kısım solüna hizâ olandan gayrı; iki taraf tek şey olsa **nefy-isbat içtimâ'ı**; iki yarı birbirine bir yüzüyle temas, öbürüyle sahih (misil) ⇒ **tefrik-temezzük** ⇒ Allah hakkında muhâl.'
+- Netice/hüküm: Hücca 8: 'cisim değil, araz değil'; Hücca 9: 'hissî işaret + azîm ⇒ eczâ ⇒ tefrik'.
+- Delil çeşidi: **taksîm (cevher/araz)**; (T) **analitik-burhânî**.
+- Mevzuya bağı: **Fasıl I'de cevher/araz taksîmi ile Vâcib'in ne cevher ne araz olması**: cevher anlamı p33'te açıldı.
+- Doğan sual: —
+
+## c2 p50
+- OCR: orta
+- Okuma: tam
+- İçerik: **Hücca 10 (Arş)**: 'Allah **Arş'ın fevkinde** olsa: ya **mümâs**, ya **sonlu uzaklıkla mübâyin**, ya **sonsuz uzaklıkla mübâyin**; üçü de bâtıl.' **Mümâs bâtıl**: Arş eczâdan mürekkeb; Arş'ın bir cüzüne temas eden şey ötekine temas edenden gayrı ⇒ **Allah da eczâdan mürekkeb**; ve 'eczâdan mürekkeb ilâh câiz ise **Arş bizzat ilâh** olabilir' ('tefrik-temezzük kabul etmez' diyerek); bu kapıyı açmak **sâni'in nefyine** varır: **sıfatın ispatı mevsûfun nefyine götürüyorsa bâtıl**. **Sonlu uzaklıkla mübâyin**: zâtı Arş'a **muhâzi, muvâzi, mukâbil** ⇒ mümâsedeki her şey aynen; ayrıca âlem üst yana **sonlu yükselse** zât-ı ilâhî Arş'a temas eder. **Sonsuz uzaklıkla mübâyin** bâtıl: âlem bir yanda zât diğer yanda ise aradaki bead **iki hadle sınırlı**; 'sonsuz' derseniz **nihâyetsiz olan iki hâsır arasında hasr edilmiş** olur: muhâl.
+- Netice/hüküm: Arş'la ilişkinin üç şekli de imkânsız; **(T) 'hasım kelâmı' — Arş'ın fevkinde olma iddiası**.
+- Delil çeşidi: **taksîm + reductio + ilzâm (Arş ilâh olur)**; (T) **cedelî-analitik**.
+- Mevzuya bağı: **Fasıl I / Fasıl IV 'istivâ' meselesi**: Râzî burada **istivâ ayetlerinin te'vili** için **aklî zemin** kuruyor; naklî ayetlerin **delil olarak nasıl karşılandığı** sonraki ciltte/kısımda; **dikkat: ayet ve hadis metinleri bu sayfada yok**, akıl yolu.
+- Doğan sual: **Nass (istivâ) hasım delili** Kısım 1'in hangi faslında ele alınıyor? (p55'ten sonra 'şübhât' fasıl 6).
+
+## c2 p51
+- OCR: orta
+- Okuma: tam
+- İçerik: Hücca 10 sonu ve **hasım itirazları**: (i) 'Allah Arş'a mümâs ya sonlu bead: **neden temas eden zât gayrı olsun?** Tek zât hem **tüm hayizlerde** hem **Arş'ın tüm cüzlerine** temas/hâziyye eder; **şâhitte cevher-i ferd bunu yapamaz**, ama **gâibi şâhide kıyas mutlak bâtıl** — **sizin (tenzîhçilerin) mezhebinizde** de kıyâsü'l-gâib bâtıl olmalı.' (ii) 'Eczâdan mürekkeb olsa **tefrik-temezzük kabul etmez, bâkî vâcib** olabilir.' (iii) 'Sonsuz mübâyenet: **Allah kadîm-ezelî; ezelde evveli yok; zâtının bizim tarafımızdaki yanı her hâdisle muktarin; ezel tarafından hâdislere sonsuz mesafede** ama ebed tarafında âlemle mukârin; **zamanda câizse, hayizde de câiz**.'
+- Netice/hüküm: Râzî **hasım itirazını kendi ağzından üç halka** olarak yazıyor (kıyâs-ı gâib meselesi bizim için de bağlayıcı: **bkz p36 cevap**).
+- Delil çeşidi: itiraz sayfası.
+- Mevzuya bağı: **Fasıl I 'gâibi şâhide kıyas' ilkesi**: Râzî'nin **kendi tenzîh hüccetlerinde de kıyas yok, kat'î burhan (taksîm)** olduğunu p36'da savundu: burada hasım aynı silahı çeviriyor: **cevabı p52'de**.
+- Doğan sual: —
+
+## c2 p52
+- OCR: orta
+- Okuma: tam
+- İçerik: **Cevap**: 'Hayizle ihtisaslı bir şeye işaret ettiğimizde **orada bir şey hâsıl**; **altı cihetin diğerlerinde de var mı?** Yoksa **ilâh cevher-i ferd** olur (bâtıl); varsa her bölünmeyen hayizdeki **aynı mı gayrı mı**? **Aynı ⇒ tek zât aynı anda çok hayizde: bedâhetle imkânsız**; ve akıl edilseydi **Arş cevher-i ferd olup çok hayizde** de denebilir ⇒ **Arş ilâh** ⇒ sâni'in nefyi (bâtıl). **'Eczâ tefrik-temezzük kabul etmez'**: cisim işgal eden cüzler **tam mâhiyette müsâvi**; ve Arş ilâh olabilir ⇒ nefy-i sâni'. **'Sonsuz mübâyenet'**: Bârî **alt cihetten sonlu-mahdûd** olmalı (yoksa âlem Bârî'nin içinde); Bârî'nin hadd-ı nihâyeti ve âlemin hadd-ı nihâyeti bulunca **aradaki bead bu iki hadle sınırlı ⇒ mütenâhî**; 'sonsuz' demek nakîzleri toplamak.
+- Netice/hüküm: Hasım itirazlarına cevaplar (üç halka).
+- Delil çeşidi: **cevap-ilzâm**; (T) **cedelî-analitik**.
+- Mevzuya bağı: 'Arş ilâh olur' ilzâmı **üç sayfada dört kez** tekrarlanıyor (p42, p50, p52): **Râzî'nin tekrar eden retorik silahı**; derecesi (T) cedelî, ilzâm.
+- Doğan sual: —
+
+## c2 p53
+- OCR: orta
+- Okuma: tam
+- İçerik: **Ezel–hayiz kıyası cevabı**: 'Ezel **belirli bir vakit ve hadd-ı mahdûd** değil, **evveliyetin nefyi**dir; o yüzden "belirli vakitle bugün arası sonsuz bead" denemez. **Burada** ise Bârî hayizde ise alt cihetten **hadd**i vardır, hadd belirli bir taraftır ⇒ aradaki bead iki tarafla sınırlı ⇒ sonsuz denemez.' **Hücca 11**: 'Bir insan onun tarafına ulaşsa **içine nüfûz edebilir mi**? Edebilirse **latîf hava/su gibi tefrik kabul eder**; edemezse **katı taş** gibi ⇒ mücessime katında ilâh **ya hava-su ya taş** (Arş'ın fevkinde sağlam **koca dağ**): 'akıldan çok uzak'.' **Hücca 12 (istikrâî-i'tibârî)**: 'Şeyde cismiyet **kuvvetli** oldukça fâil-müessir kuvvet **zayıf**; cismiyet **zayıf** oldukça fâil kuvvet **güçlü**': arz (en kesif) yalnız **eseri kabul**; su (daha az kesif) **cârî, tesir eder**; hava (daha latîf) suya göre daha etkili; **nâr** daha latîf ⇒ unsurlar içinde en etkili (pişirme-olgunlaştırma, üç mevlûd: maden-hayvan-nebat); **felekler** unsurlardan latîf ⇒ unsurlara **mezc ve terkîple** hükmeder (**çoğu eski filozofların** kavli: felekler sert değil, latîf nurlar gibi).
+- Netice/hüküm: Hücca 11 (nüfûz/katılık ilzâmı), Hücca 12 (kesâfet-te'sîr istikrâsı).
+- Delil çeşidi: 11: **ilzâm-ı retorik**; 12: **istikrâ**; (T) **hitâbî-ikna'î** (Râzî kendisi 'istikrâî-i'tibârî' diyor).
+- Mevzuya bağı: **Fasıl I 'derece' ilkesi**: Hücca 12 **eski fizik varsayımlarına** dayanıyor (felekler latîf nur); **modern fizikle uyumsuz öncül**: ders katmanında **'Râzî'nin çağının fiziğiyle kurduğu istikrâ; bugünkü karşılığı yok'** notu şart; **ispat değeri yok, tarihî kıymeti var**.
+- Doğan sual: —
+
+## c2 p54
+- OCR: orta
+- Okuma: tam
+- İçerik: Hücca 12 devam: 'kuvvetli fâil kuvvet ⇒ zayıf cismiyet': **'Hayat ancak nefesle kemâle erer'** diyenler **rûh = solunan hava** derler (bir görüşün nakli); nâr havadan latîf ⇒ unsurların en etkilisi. **Sonuç**: 'Bu istikrâ **kuvvetli zan** ifade eder ki **kemâl-i kudret ve îcâd** hâsıl olan yerde **hacim, cirim ve hayiz-cihet ihtisası** bulunmaz; bu **istikrâî** bir bahis olsa da **genel i'tibarla** Allah'ın cisimlikten ve hayizden münezzeh olduğuna delâlet eder. Vallahu a'lem.' **Kısım 1, Fasıl 5 biter** (12 hüccet).
+- Netice/hüküm: Hücca 12: **zan-ı kuvvetli**, Râzî açık yazıyor (kat'î değil).
+- Delil çeşidi: **istikrâ**; (T) **hitâbî/zannî** (Râzî'nin kendi derecesi: 'zan-ı kavî').
+- Mevzuya bağı: **'İddia edilen derece gizlenmez' ilkesi**: Râzî burada da derecesini yazıyor: **modeldir**.
+- Doğan sual: —
+
+## c2 p55
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kısım 1, Fasıl 6 (başlık OCR'de 'bozuk'): 'Mücessimenin şübheleri ve cevapları'.** 'Bu kavm birkaç kelâma dayandı.' **Şübhe 1**: 'Allah âlemi yarattığında ya **zâtında ya zâtının dışında**; ilki ittifakla bâtıl (zâtı pisliklerle karışır); ikincisi âlemin zâtının dışında, **mübâyin** olması ⇒ **hayiz-cihetle mübâyin**; üçüncü (ne zâtında ne dışında) akıl kabul etmez.' **Şübhe 2**: 'Âlem mevcut, Allah mevcut; her iki mevcuttan biri ötekine **sârî** ya da altı cihetten biriyle **mübâyin**; ikisi de olmayan **mahz adem, nefy-i sırf** = sâni'in nefyi (bâtıl); "evde yok, evin dışında da yok" gibi.'
+- Netice/hüküm: **Şübhe 1–2 = Fasıl 1'deki bedâhet ibarelerinin (p17–19) yeniden ortaya konması.**
+- Delil çeşidi: şübhe; (T) cedelî.
+- Mevzuya bağı: p17–19 ile **tekrar**; Râzî aynı cevabı (devir, bedâhet iddiası) yeniden vermeyecek, **p56'dan sonra yeni şübheler**.
+- Doğan sual: —
+
+## c2 p56
+- OCR: orta
+- Okuma: tam
+- İçerik: Şübhe 2 sonu: 'Allah âlem dışında olmazsa mahz ma'dûm olur; bâtıl ⇒ âlem dışında mevcuttur.' **Şübhe 3**: 'Müslümanlar arasında Allah'ın **cüz'îleri bildiğinde nizâ yok**; cismânî şeyleri bilen **cisim ve hayizde** olmalı: **iki kare ile çevrili kare hayal edince** iki kareyi **hayalimizde ayırt ederiz**; bu imtiyâz **hâricî vücûdda değil (hayali maduma da yapabiliriz), zihinde**; imtiyâz mâhiyet ve lâzımından değil (ikisi de aynı) ⇒ **arazlardan**; arazlardaki imtiyâz **kâbilin farklılığıyla**; iki suret tek kâbilde olsa her arız ikisine de arız ⇒ **müdrik cisim, münkasim**.' ⇒ Allah cüz'îleri idrak eder ⇒ **cisim, hayizde**. **Filozoflar**: 'cisim değil ⇒ cüz'îleri idrak edemez'; **mücessime**: 'cüz'îleri idrak eder ⇒ cisim'. **Şübhe 4**: 'Allah sıfatlarla mevsûf zât; böyle olan hayizde cisim olmalı…'
+- Netice/hüküm: **Şübhe 3 = 'cüz'î idrak ⇒ cisimlik' delili** (bu delili **filozoflar da kabul eder ama sonuç olarak Allah'tan cüz'î idrakı nefyeder**: Râzî'nin cevabı p57+).
+- Delil çeşidi: şübhe; (T) cedelî-analitik (öncül: hayalde imtiyâz ⇒ kâbil farkı).
+- Mevzuya bağı: **Fasıl I 'ilim' bahsi (Allah cüz'îleri bilir mi)**: **filozofların 'Allah cüz'îleri cüz'î olarak bilmez' iddiasına karşı Râzî'nin duruşu**: bizim Fasıl I/II'de **ilim sıfatı** bahsi ile bağlanır (takip edilecek).
+- Doğan sual: Râzî Şübhe 3'e nasıl cevap veriyor? (p57–59).
+
+## c2 p57
+- OCR: orta
+- Okuma: tam
+- İçerik: **Şübhe 4** devam: 'Allah zât-ı kâim bi'n-nefs; ma'kûl "zât olmak" ≠ ma'kûl "âlim-kâdir olmak" (zât olduğunu bilip âlim-kâdir olduğundan şüphe edebiliriz); ilim-kudret **zâta kâim sıfat**. **Sıfatla mevsûf ⇒ cisim-hayizde**: sıfatın kıyâmı aklen **sıfatın mahallinin bulunduğu cihette bulunması** demektir (tebeiyet); bunu akıldan kaldırırsan zât ile sıfat arasında fark kalmaz.' **Mu'tezile**: 'Allah hayizde olamaz ⇒ sıfatla mevsûf olamaz'; **mücessime**: 'sıfatla mevsûf ⇒ hayizde'. **Şübhe 5** (Râzî: 'Bir müşebbih ile muvahhid arasında geçen **uzun bir münâzarayı gördüm, özetleyip çok ilâve yaptım**'): 'Her iki mevcuttan biri **mücânib** (yanında/sârî) ya da **mübâyin**; şâhitte bu ya cevher olmakla, ya araz olmakla, ya **ortak** bir şeyle (vücûd yahut hudûs); cevher-araz olamaz, hudûs olamaz ⇒ illet yalnız **vücûd**; Bârî mevcut ⇒ âleme mücânib ya mübâyin olmalı.'
+- Netice/hüküm: Şübhe 4 (sıfat-mahal-cihet) ve Şübhe 5 (**illet = vücûd** kıyası) **Râzî'nin kendi ilâveleriyle**.
+- Delil çeşidi: şübhe; (T) cedelî-analitik (5: **'illet tespiti' yöntemi: taksîm-sebr**).
+- Mevzuya bağı: **Fasıl I 'vücûd müşterek mi' meselesi**: Şübhe 5'in **'vücûd tek hakîkat, şâhit-gâib'** öncülü (p59) **Râzî'nin kendi vücûd-müşterek görüşü** ile örtüşür: mücessime bu görüşü **kendi lehine** çeviriyor; **Râzî'nin cevabı p64'te** ('cumhûr-ı hükemâ' ile).
+- Doğan sual: —
+
+## c2 p58
+- OCR: orta
+- Okuma: tam
+- İçerik: Şübhe 5'in **mukaddimeleri**: (1) 'şâhitte her iki mevcuttan biri mücânib ya mübâyin' — **bu hükmün bir illeti olmalı** (ma'dûmda sahih değil; mevcutlarda sahih; imtiyâz olmadan ayrım olmazdı); (2) illet **cevher olmak değil** (cevher cevhere mücânib olamaz gibi), **araz olmak değil** (araz cihetle mübâyin olamaz); (3) illet **hudûs değil**: hudûs 'vücûd + öncesinde adem'; adem illiyete girmez ⇒ yalnız vücûd; **(ikinci vecih)** hudûsla illetlenseydi göğün hâdis olduğunu bilmeyen kişi göğün diğer varlıklara göre mücânib/mübâyin olduğunu **bilemezdi**: illetin cahili hükmü de bilmez (misâller: mevcut olmak ⇒ kıdem/hudûs taksîmi; renkli olmak ⇒ siyah/beyaz taksîmi).
+- Netice/hüküm: Şübhe 5 mukaddimeleri 1–3 (illet yalnız vücûd).
+- Delil çeşidi: **sebr-taksîm illet tespiti (bir şüphe içinde)**; (T) **cedelî-analitik**.
+- Mevzuya bağı: **Fasıl I 'sebr ve taksîm' yöntem (illet tespiti)**; bu şüphede **taksîm tam değil (ihtimal: illet 'cismiyet/mütehayyizlik' veya 'ihtiyâcın illeti imkân' vb.)**: Râzî bunu **cevapta** (p64) kullanır mı?
+- Doğan sual: —
+
+## c2 p59
+- OCR: orta
+- Okuma: tam
+- İçerik: (3) devam: 'Dehrî, göklerin-arzların kıdemine inansa da göklerin arzlara mücânib ya mübâyin olduğuna inanmaktan alıkonulmaz ⇒ hükmün illeti hudûs değil'; **(3. vecih)** 'göklerin hâdis olduğu **delille bilinen**, mücânib-mübâyin olduğu **zarûrî bilinen**; delille bilinen vasıf zarûrî bilinen vasfa asıl yapılamaz'. **(4)** 'Şâhitte illet vücûd ⇒ Bârî mevcut ⇒ hüküm Allah hakkında da sâbit'; bu mukaddime **'mevcut, şâhit ve gâibte tek hakîkat'** olmasına muhtaç. **Şübhe 6 (fıtrat)**: 'Bütün akıllılar **fıtraten** Allah'ın âlemin **fevkinde mevcut** olduğuna inanmaya **meyyâl**: dini-mezhebi ne olursa olsun **dua, tazarru', huşû'** sırasında **gözlerini yukarı diker, ellerini o yöne kaldırırlar**; fıtrat/cibilliye bırakılsaydı **yalnız fevk cihetini** kabul ederlerdi; fıtratın şahitliği ⇒ hak.' **Şübhe 7**: 'Bütün nebîlerin-resûllerin kitapları (aleyhimü's-selâm) Allah'ın **fevk cihetinde** olduğuyla doludur.' Kur'ân: **Arş üzerinde istivâ ('sarîh lafızla', dipnotta yedi sûre adı: A'râf, Yûnus, Ra'd, Tâhâ, Furkān, Secde, Hadîd)**; 'O, kullarının **fevkinde kāhirdir**' (En'âm); 'güzel söz **O'na yükselir**' (Fâtır).
+- Netice/hüküm: **Şübhe 6 = fıtrat delili; Şübhe 7 = nakil delili (nass).**
+- Delil çeşidi: 6: **fıtrî-i'tibârî**; 7: **naklî**; (T) 6 **hitâbî-ikna'î**; 7 **naklî-zâhirî**; kaynak notu: **ayet numaraları metinde yok; dipnotta sûre adları**; 'hadîs sayısız' iddiası **Râzî'nin nakli**.
+- Mevzuya bağı: **Fasıl I Ek: 'Fıtrat Hadisi ve Husayn Muhâveresi'** ve **Fasıl I fıtrat argümanı**: **mühim tespit**: Râzî **fıtrat delilinin cihet lehine de kullanılabildiğini** açıkça yazıyor (hasım Şübhe 6). Bizim Fasıl I'in fıtrat argümanı (Allah'ın varlığı için fıtrî yönelim) **aynı deliller sınıfındandır**; **(T) hitâbî-ikna'î derecesi fıtrat için yeniden tartılmalı**, çünkü **aynı yöntemle mücessime de cihet ispatlıyor**. Bu, Fasıl I'e **eklenecek bir uyarı** (padişah kararı).
+- Doğan sual: Râzî Şübhe 6'ya ne cevap veriyor? (p65–66). Fasıl I'in fıtrat delilinin **cihet sonucuna sürüklenmemesi için hangi ayrım** gerekli?
+
+## c2 p60
+- OCR: orta
+- Okuma: tam
+- İçerik: Şübhe 7 devam: 'Kur'ân'da nüzûl-tenzîl lafızları çok; **ilâ (...e)** ile gâye-intihâ gösteren âyetler sayılamaz; **cihetin nefyine delâlet eden bir lafız yok**; hak din cihet nefyi olsa **bir kere olsun** zikrederdi; cihetin ispatı **sayısız âyette** var, nefyi **hiç yok** ⇒ Allah ısrarla cihet ispat ediyor.' 'Rasûlullah'tan **sayısız rivayet**; Tevrat da bu mânâlarla dolu ⇒ **nebîler cihetin ispatında müttefik**.' 'Te'vil yapamazsınız çünkü…' (p61). **Editör dipnotu (Sekkā)**: 'Yahûdîlerin çoğu te'vil eder; **Mûsâ b. Meymûn'un Delâletü'l-Hâirîn'inden uzun alıntı**: küçüklere ve halka Allah'ın **bir** olduğu, **cisim olmadığı**, mahlûkâtına hiçbir yönden benzemediği öğretilmeli; 'cisim veya cismin hâllerinden biri' inanan kimse Rabbin **gayretini-gazabını tahrik eder**, put'a tapandan **beter** düşman olur…'
+- Netice/hüküm: **Hasım naklî delilinin genişliği (Kur'ân+sünnet+Tevrat)**; editör **Yahudi tenzîh gelenğini** gösteriyor.
+- Delil çeşidi: naklî (hasım); (T) **naklî-zâhirî**; editör notu **kaynak alıntısı** (Maimonides).
+- Mevzuya bağı: **Fasıl IV (Sünnet ve Tahkik) 'nass-akıl' ilişkisi** ve **Fasıl I/IV Kitâb-ı Mukaddes**: Maimonides alıntısı **doğrulanırsa** (Delâlet, bâb 35 civarı; ⊬ atıf numarası yok) **Fasıl IV'te Yahudi tenzîh kaynağı**. **Dikkat (İslâm'a aykırı söz olmasın):** hasım 'nass sayısız' dediği yerde **Râzî bu nasları reddetmiyor, te'vil yolunu savunuyor (p62+)**.
+- Doğan sual: Râzî'nin te'vil ile tefviz arasındaki tercihi ve **selef metodu** ile ilişkisi (cilt 2 sonrası).
+
+## c2 p61
+- OCR: orta
+- Okuma: tam
+- İçerik: Şübhe 7 sonu: 'Din tenzîh olsaydı ilâhî kitaplarda bunu **sarîh lafızla** takrîr eden ve te'kîd eden bir şey **gelirdi**; sonra kalan lafızlar te'vil edilirdi; hiçbir kitapta tenzîhe delâlet yok, hep **fevk** lafızları ⇒ **nebîlerin mezhebi bu**; sizin dediğiniz **onların dinlerine muhâlif**.' **Şübhe 8**: 'Allah'ı **görmek** (ru'yet) caiz sâbit; ru'yet **ancak râî mürâ'ya mukābil ya mukābil hükmünde** olursa; bu da ilâhın **cihette** olmasını gerektirir; **cevaz-ı ru'yet mukābeleye şartlı**.' Mücessime: 'ru'yet caiz ⇒ cihette.' **Mu'tezile**: 'cihette olamaz ⇒ ru'yet imkânsız'. **Editör dipnotu**: 'Ehl-i Kitâb çok yerde **"Allah şekildir"**, **"Yâkūb ile güreşti"**, Allah'ın **baş-el** sahibi olduğu yazıyor, ama aynı zamanda 'Allah'ın mislî yok' yazıyor'; **İbn Teymiyye, el-Cevâbü's-Sahîh**: 'Hristiyanları teslîse iten **İncil'in zâhir âyetleri (Baba-Oğul)**' (**editör parafrazı; ⊬ doğrulanmadı**); **Rahmetullah el-Hindî, İzhârü'l-Hak** atfı.
+- Netice/hüküm: **Şübhe 7–8 bitti**; editör dipnotu **Kitâb-ı Mukaddes'te teşbih/tenzîh ikilisini** işaret ediyor.
+- Delil çeşidi: 7: naklî-ilzâmî ('tenzîh sarih gelmedi'); 8: **rü'yet-mukâbele delili** (kelâm zemini): (T) **cedelî-naklî**.
+- Mevzuya bağı: **Fasıl I/IV**: 'Ru'yetullâh' bu ciltte **Şübhe 8**; cevabı **ru'yet bâbı** (cilt 3–4?).
+- Doğan sual: (a) Şübhe 8'in cevabı; (b) editör dipnotundaki İbn Teymiyye ve Hindî atıfları **⊬**: F 1-K borcu.
+
+## c2 p62
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kısım 1, Fasıl 7 (başlık bozuk): 'Şübhelere cevaplar'.** **Şübhe 1–2 cevabı**: 'Fasıl 1'de istikssâ ile geçti': "içinde ya da dışında olmayan mevcut muhâl" hükmünün bilgisi **zarûrî ya da istidlâlî**; zarûrî değil (çok vecih); istidlâlî ise delillerin sıhhati bu mukaddemenin ibtâline mevkûf ⇒ **devir**: **'bu, itimad edilen cevaptır (el-cevâbü'l-mu'temed)'**. **İbn Sînâ cevabı**: 'cezm hâsıl ama cezm eden **vehim**; vehmin gayr-i mahsûslardaki hükmü bâtıl, itibar edilmez.' Râzî: 'bu cezm **bedîhiyyâtın cezmine eşit mi**?' — (p20'deki dilemma tekrarı: eşit değilse **delil lâzım** ve vehim ayrımına gerek kalmaz…). Editör notu: 'Şübhe 4'ten sonra …(nüsha ifadesi yer değiştirmiş; Fasıl 5'ten aldık)'.
+- Netice/hüküm: **Şübhe 1–2'nin cevabı = Fasıl 1 (devir ilzâmı)**.
+- Delil çeşidi: **devir**; (T) analitik.
+- Mevzuya bağı: p19–20 ile **tekrar**; Râzî kendi 'cevab-ı mu'temed'ini işaretliyor (**dikkat: cilt 1'de aynı terim Vücûd zâid için kullanıldı**).
+- Doğan sual: —
+
+## c2 p63
+- OCR: orta
+- Okuma: tam
+- İçerik: İbn Sînâ'ya karşı dilemma tamamlanıyor: 'Cezm bedîhiyyâtla **eşitse**: bir cezmin **sâdık akıldan** ötekinin **kâzib vehimden** olduğunu bilmek **zarûrî mi nazarî mi**? Zarûrî ise **bu önermenin yalan olduğu zarûrî bilinmiş** olur (eşitlik farzıyla çelişir); nazarî ise **bedîhiyyâtın sıhhati delile, delil bedîhiyyâta mevkûf ⇒ devir**; bedîhiyyâtın sıhhati **bâtıl mukaddemeye** mevkûf ⇒ **tüm bedîhiyyâta taan**, bâtıl. ⇒ **İbn Sînâ'nın itimad ettiği cevabın bu bahsi gâmız.**' **Şübhe 3 cevabı**: 'İdrak ancak **malûmun sûretinin âlimin zâtında hâsıl olmasıyla** olur' öncülüne dayanır; **istikssâ önce**. **Şübhe 4 cevabı**: 'sıfatın mevsûfta hâsıl olması = o hayizde hâsıl olması' öncülü **bâtıl**: zâtın hayizde hâsıl olması **zâtın sıfatıdır**; sıfatın hâsıl olması 'zâtın hayizde hâsıl olmasının **tebeiyeti**' olsaydı, hayizde olmak **başka bir hayizde olmaya** mevkûf ⇒ **teselsül**. **Şübhe 5 cevabı** (birkaç vecih başlar).
+- Netice/hüküm: Şübhe 3 (öncülü reddedilmiyor, **ertelenmiş**: cüz'î ilim bâbı), Şübhe 4 (**teselsül ile**).
+- Delil çeşidi: **devir/teselsül ilzâmı**; (T) analitik-burhânî (Şübhe 4 cevabı) — **Şübhe 3 cevabı ispat değil, havale**.
+- Mevzuya bağı: **Şübhe 3 = Fasıl I ilim sıfatı**: Râzî cevabı **başka bâba havale ediyor**; bizde 'Allah cüz'îleri bilir mi'nin (T) derecesi **belirsiz kalır**: açık borç.
+- Doğan sual: Şübhe 3'ün 'istikssâ' cevabı hangi bâb/cilt?
+
+## c2 p64
+- OCR: orta
+- Okuma: tam
+- İçerik: **Şübhe 5 cevabı**: 'Mukaddime **"şâhitte her iki mevcuttan biri mücânib ya mübâyin"** kabul edilmez. **(1)** Cumhûr-ı hükemâ **akıl, felek nefisleri, nâtık nefisler, heyûlâ** gibi **mücânib/mübâyin olmayan mevcutlar** kabul etti; **(2)** cumhûr-ı Mu'tezile **mahalsiz irâdeler-kerâhâtler** ve **mahalsiz "fenâ"** (Allah'ın yarattığı cisimlerin yok oluşu) kabul etti; **(3)** **izâfetler a'yânda mevcut** (kat'î delil, 'araz kısımları' bâbında), ve **mücânib/mübâyin olamaz**: mücânib olsaydı **babanın yarısına babalığın yarısı, üçte birine üçte biri kâim** olurdu (bâtıl); mübâyin (cihetle) olsaydı **babalık kendi başına kâim cevher** olurdu (bâtıl) ⇒ **mücânib-mübâyin olmayan mevcut var ⇒ mukaddime bâtıl**. **İkinci sual**: 'kabul: şâhitte her mevcut mücânib ya mübâyin, ama şeyin bu hükmü …' (devam p65).
+- Netice/hüküm: Şübhe 5'in 1. mukaddimesine **karşı örnek (izâfet)**: **mücânib-mübâyin olmayan mevcut var**.
+- Delil çeşidi: **karşı-örnek (nakz)**; (T) **analitik-cedelî** (izâfetlerin a'yânda vücûdu **tartışmalı öncül**; Râzî onu kat'î sayıyor: **'araz kısımları' bâbı** — hangi cilt?).
+- Mevzuya bağı: **Fasıl I 'mümkin/mevcut taksîmi'**: 'izâfet mevcut' iddiası **Fasıl I'de kullanılmıyor**; bu yol **Râzî'nin felsefî özgün kabulü** (mütekellimînin çoğu izâfeti i'tibârî sayar): derece notu gerekir.
+- Doğan sual: 'Araz kısımları' bâbı (izâfetlerin vücûdu) hangi cilt/sayfa?
+
+## c2 p65
+- OCR: orta
+- Okuma: tam
+- İçerik: Şübhe 5'e **10 soru** (Râzî: 'Kerrâmiyye buna güvendiği için uzun tuttuk; en iyi hâlinde tertip edip **kahredici sorular** yönelttik'). **Soru 2** sonu: 'ya bu ya bu' bölünmeye kabiliyet demek; **kabûl-i kısmet ademî hüküm, adem illetlenmez**. Kanıt: 'kabûl'ün aslı ademî (sübûtî olsa kabul edene sıfat olur, o sıfatın da kabulü ⇒ **teselsül**); kısmeti kabul, özel bir kabul ⇒ özelliği ya mevcut sıfat (**vücûdun ademle kıyâmı** muhâl) ya ademî ⇒ ademî ⇒ **adem illetlenmez** (tesir mahz nefy'e muhâl)'. **Soru 3**: 'illet cevher/araz olmakla olsa? ('cevher mücânib olamaz, araz mübâyin olamaz ⇒ mâni olamaz' itirazı): ne kastediyorsunuz? **İki farklı hüküm** (mücânib-lik: araz olmakla; mübâyin-lik: cevher olmakla): **iki ayrı illet**; öyleyse 'cevherlik/araz olmak illet olamaz' sözünüz bâtıl.'
+- Netice/hüküm: **Şübhe 5'in 3 mukaddimesi çürütülüyor**; Soru 3: **'ya mücânib ya mübâyin' tek hüküm değil, iki hüküm**.
+- Delil çeşidi: **analitik-cedelî (illet tespiti eleştirisi)**; (T) **analitik; kabûl-i kısmet ademî öncülü** felsefî (mütekellimîn çoğu **cevher-i ferd/cisim bölünmesini** farklı okur): **derece: öncül tartışmalı**.
+- Mevzuya bağı: **Fasıl I 'illet tespiti (sebr-taksîm) yöntemi' uyarısı**: Râzî **taksîm yoluyla illet tespitinin zayıflığını** kendi hasmına karşı sergiliyor: bizim Fasıl I'de sebr-taksîm kullanılan yerlerde **'hasr delili'** (taksîmin tamlığı) **açıkça yazılmalı** (Râzî p66: 'adem-i vicdân, vicdân-ı ademi gerektirmez'; **taksîmâtın zan bile ifade etmeyeceği**).
+- Doğan sual: **Fasıl I'de sebr-taksîm kullanılan delillerin (T) derecesi** Râzî'nin bu ölçüsü ışığında yeniden tartılmalı: hangileri?
+
+## c2 p66
+- OCR: orta
+- Okuma: tam
+- İçerik: Soru 3 sonu ('mücânib-mübâyin' iki ayrı hükümdür; **'bu mustedil tek hüküm gibi gösterdi' bir mugalata**). **Soru 4**: 'Cevher-araz illet olamaz; peki **"ya hudûs ya vücûd" hasrının delili** ne? 'Yürüdük, baktık, başka kısım bulamadık' = **sebr**; mantık kitaplarında gösterdik ki **vicdân-ı ademi vicdân-ı adem gerektirmez**; ayrıca **dağınık taksîmler zan bile ifade etmez, yakîn şöyle dursun**.' **Soru 5**: 'Hasrı kabul; ama **başka illetler** var: (1) illet, **hissî işaretin mümkün olması** olabilir: 'hissî işarete konu iki şeyden birine işaret ötekinden gayrıysa' = mübâyenet-i cihet; o hâlde Allah'ın hissî işaretle gösterilebilir olduğunu ispat etmedikçe 'mücânib ya mübâyin olmalı' denemez; **bu nizâ noktasıdır ⇒ delil medlûle mevkûf ⇒ devir**.'
+- Netice/hüküm: Soru 4 (**hasr delili yok**) ve Soru 5 (**alternatif illet: işaret edilebilirlik ⇒ devir**).
+- Delil çeşidi: **analitik-cedelî**; (T) analitik-burhânî (Soru 5 sağlam: delil = dava).
+- Mevzuya bağı: **Fasıl I metot ilkesi (dava ≠ delil)**: bu, **p19'daki devir tespitinin ikinci örneği**; ders katmanında **'davayı öncüle taşıma hatası' başlıklı kutu** (kaynaklı).
+- Doğan sual: —
+
+## c2 p67
+- OCR: orta
+- Okuma: tam
+- İçerik: Soru 5 (2): 'Cevher ve araz Allah'ın zât-ı sıfatına muhâlif; muhâlefet vechi **ortak bir mefhûm**; kısmet kabûlünün illeti **bu ortak mefhûm** olabilir.' **Soru 6**: 'Hasrı kabul; **hudûs illet olmasın niye?** ("hudûs = vücûd + evvelinde adem" itirazı) — **mümkin = mâhiyeti ademe ve vücûda kabiliyetli olan**; 'mücânib-mübâyin olmaya kabiliyet' de kabiliyet; **kabiliyet sübûtî ise iki yerde de sübûtî, ademî ise iki yerde ademî** ⇒ birini diğeriyle illetlemek ya vücûdu vücûdla ya ademi ademle illetlemek: **imkânsız değil**. 'İllet cahili hükmü de bilmez' itirazına: **'müessiri bilmemek eseri bilmemeyi gerektirir' önermesi niye?** İnsanların **hastalık sebeplerini bilmemesi** sağlık-hastalık hasılını bilmemelerini gerektirmez; **dehrîlerin Allah'ın kudretini bilmemeleri** âlemin vücûdunu bilmemelerini gerektirmez; ayrıca müessiri bilmek eseri bilmeyi gerektirseydi bilmeleri **daha evlâ** gerektirirdi ⇒ 'vücûd illet olsa' **Allah'ın vücûdunu bilen herkes onun mücânib ya mübâyin olması gerektiğini bilirdi**' (…p68).
+- Netice/hüküm: Soru 5–6: **illet olarak 'ortak mefhûm' ve 'hudûs' ihtimalleri açık; 'illet cahili' delili düşüyor**.
+- Delil çeşidi: **analitik-cedelî**; (T) analitik.
+- Mevzuya bağı: 'müessiri bilmemek eseri bilmemeyi gerektirmez' = **Fasıl I hudûs-imkân delilinde 'illet bilinmiyor ⇒ ma'lûl belirsiz' çıkarımı yapılıyorsa dikkat**.
+- Doğan sual: —
+
+## c2 p68
+- OCR: orta
+- Okuma: tam
+- İçerik: Soru 6 sonu: 'Allah'ın mevcut olduğunu bilen **tenzîh ehli cumhûru** (zeki ve çok) **mücânib/mübâyin olma vücûbunu hatırlamazlar bile** ⇒ vücûd illet olsa bu **lâzım** gelirdi ⇒ bâtıl.' 'Hudûs (delille bilinen) vs. mücânib-mübâyin (zarûrî bilinen)' itirazına: 'bunu kabul etmiyoruz; birçok şeyde **eser zarûrî, istidlâl nazarî**' (kanıtlar başka yerde). **Soru 7**: 'Hüküm illeti vücûd olsa da **Allah hakkında niye sâbit**? Ancak Allah'ın vücûdu **mümkinâtın vücûduna müsâvi** olursa; bu ancak **vücûd mâhiyete zâid sıfat** dersek doğru; **Kerrâmiyye'nin çoğu bunu söylemez**.' **Soru 8**: 'İllet var ama **hüküm tehalluf eder** (kâbil değil ya da şart fevt): **hayat**, şehvet-nefret-elem-lezzet-cehl-mevt kabulünü sağlar; oysa Allah hayy olup bunların hiçbiri ona sahih değil (zâtı kabul etmiyor **veya** şartı mümteni).' **Soru 9** başlar.
+- Netice/hüküm: Soru 7 (**vücûdun müşterekliği Kerrâmiyye için problem**) ve Soru 8 (**mâni/şart: hayat örneği**).
+- Delil çeşidi: **analitik-cedelî**; (T) analitik (**Soru 8 güçlü: 'illet bulunsa da mâni olabilir'**).
+- Mevzuya bağı: **Fasıl I 'vücûd müşterek/mâhiyet zâid' (Râzî Mesele 3)** ile bağ: **Soru 7 Râzî'nin kendi görüşüne (vücûd zâid) göre hazırlanmış bir 'ilzâm-ı hasm'**; Râzî **hasmın kendi öncülünü çürütüyor, kendisi ise vücûdu zâid kabul ediyor** (**tutarlılık kontrolü: Soru 7 sadece Kerrâmiyye'nin çoğuna yöneltilmiş**; Râzî kendi görüşünde 'vücûd mâhiyete zâid' ⇒ Allah'ta da zâid ⇒ **vücûdun müşterekliği** kabul; o hâlde Soru 7'nin ilzâmı **Râzî'ye de dönmez mi?** Cevap: dönmez, çünkü Râzî 'vücûd müşterek ⇒ hüküm lâzım' önermesini **reddediyor (Soru 8 mâni)**: tutarlı).
+- Doğan sual: —
+
+## c2 p69
+- OCR: orta
+- Okuma: tam
+- İçerik: **Soru 9**: 'Delil illetin vücûd olduğunu gösterse de **karşı deliller** var: illet vücûd olsa **vücûd eşit** ⇒ **cevher mücânib/mübâyin** olmalı, **araz da**: bâtıl; 'her cevher-araz **vücûd bakımından** mümkin, ancak **mâhiyet hususiyeti mâni**' derseniz **vücûdun bir hükmün illeti olması onunla vasıflı her şeyde hükmün sıhhatini gerektirmez** (mâni ihtimali) ⇒ **Allah'ta da mâni olabilir**.' **Soru 10**: 'Deliliniz **birçok yerde işler, sonuç kat'î bâtıl**: (1) **Allah'tan başka her şey hâdis** ⇒ hudûs sıhhati ortak hüküm ⇒ illet ya hudûs ya vücûd; hudûs sıhhati hudûsla illetlenemez (rütbe olarak öncedir) ⇒ vücûd ⇒ **her mevcut hâdis olabilmeli**: bâtıl; (2) 'her iki mevcuttan biri mücânib ya mübâyin' ⇒ vücûd illetliyse Bârî'de **hareket câiz** olur (bâtıl); (3) 'her mevcut ya cisim ya cisimde kâim' ⇒ Bârî cisim ya cisimde kâim (bâtıl; **Kerrâmiyye'nin çoğu demez**).'
+- Netice/hüküm: Soru 9–10: **'vücûd illet ⇒ hüküm Vâcib'e de' çıkarımı, aynı yöntemle bâtıl sonuçlara götürür (yöntem çöker)**.
+- Delil çeşidi: **paralel örnek (nakz-ı tard)**; (T) **analitik-burhânî (sağlam)**.
+- Mevzuya bağı: **Fasıl I 'şâhitten gâibe geçiş' yasağı**: Soru 9–10 tam bu ilkenin **Râzî'nin uygulaması**: 'vücûd ortak ⇒ hüküm ortak' çıkarımı **mâni ve paralel örnekle** düşüyor: bizde **'imkân ≠ vücûb' ayrımı** ile örtüşür.
+- Doğan sual: —
+
+## c2 p70
+- OCR: orta
+- Okuma: tam
+- İçerik: Şübhe 5'in sonu (Râzî): 'Bu şübhede uzun durduk; Kerrâmiyye buna dayanıyor, "kahir hüccet" sanıyor; **biz onu tehzîb-tertip ettikten sonra** bu soruları yönelttik ki **zayıflığı görünsün**. **Vallahu a'lem.**' **Şübhe 6 (fıtrat, eli göğe kaldırma) cevabı**: 'Ellerin semâya kaldırılması **semânın bereket ve hayır indiği yer** olduğu içindir: nurlar oradan iner, su oradan yağar; insan hayrın geldiği tarafa meyleder.' **Delil**: 'göğün bir yeri bir belde halkı için fevk ise **başka belde için sağ, üçüncü belde için sol**: **güneş Yengeç burcunun başındayken ışık Mekke ve Medîne'deki kuyuların diplerine iner**, kuzey bölgelerinde böyle değil (seyahat eden avamın bilgisi).' 'Her belde halkı **kendi fevklerine** kaldırırlar; ilâh bir belde'nin fevkinde ise diğerinin fevkinde değil ⇒ eli kaldırmak **fevkte olmasını gerektirmez**; 'tüm beldelerin fevkinde' derseniz ilâh **arzı çevreleyen küre** olur (bir felek) ⇒ akıllı böyle demez.' **Şübhe 7 cevabı**: 'Halkı hakka davet **en güzel ve maslahata en yakın yolla** olmalı; sarih tenzîh **avamın aklı kaldırmaz**; bu yüzden davet **teşbih vehmi veren lafızlar** ile **mutlak tenzîhe delâlet eden kelimeleri** birlikte içerdi.'
+- Netice/hüküm: Şübhe 6: **fıtrî yönelimin sebebi 'hayır-bereket kaynağı semâ'**, cihet ispatı değil; Şübhe 7: **nassın tebliğ pedagojisi**.
+- Delil çeşidi: 6: **açıklama + astronomik gözlem ile nakz**; (T) **cedelî-ikna'î** (**Râzî fıtrî yöneliminin cihet lehine delil olmadığını gösteriyor; ama fıtratın Allah'ın varlığına delil olmasını da nakzetmiyor**); 7: **maslahat-pedagoji**: (T) **hitâbî**; **Râzî bu sayfada 'leyse kemislihî şey'un' gibi sarih tenzîh nassını zikretmiyor: hasmın 'tenzîhe delâlet eden lafız yok' iddiasına tam cevap ***bu sayfada değil***; başka yerde olabilir (açık borç)**.
+- Mevzuya bağı: **Fasıl I 'fıtrat' argümanı ve Ek (Fıtrat hadisi)**: **kritik**: Râzî'nin cevabı: fıtrî yönelim (göğe el kaldırma) bir **kaynak/bereket psikolojisiyle** açıklanabilir; bizim Fasıl I'in fıtrat argümanı **'Allah'ın varlığı için fıtrî ihtiyaç/yönelim'** ile **'cihete yönelim'** ayrımını yapmalı: **yönelim cihetten değil, kaynaktan**. **Bu, Fasıl I'e eklenmesi önerilen ayrım** (padişah kararı).
+- Doğan sual: Şübhe 7'nin **nass tarafı** (sarih tenzîh nassı: 'Şûrâ 11', İhlâs) Râzî'nin başka bir yerinde işleniyor mu? (Kısım 1'in sonu).
+
+## c2 p71
+- OCR: orta
+- Okuma: tam
+- İçerik: **Şübhe 8 (ru'yet-mukâbele) cevabı**: 'Allah'ın görülmesi câiz mi meselesi **sonra takrîr edilecek**; sahih kabul edilse de **istib'âd yeterliyse** vehim-hayâl âlemin ne içinde ne dışında bir ma'bûd'u da **uzak görür ⇒ ru'yete başvurmaya gerek yok**; yeterli değilse: **âlemde ve dışında olmayan bir mevcudu ispat ettiğimiz gibi vehim-hayâl hükmüne muhâlif**, büyük bir insan topluluğu **cihette olmayan bir şeyin ru'yetini** de ispat etti: **niye muhâl?** Delil nedir? **Muhâliflerin hiçbiri istib'âddan başka bir şey söylemedi.**' **Kısım 1, Fasıl 7 biter**: 'mekân ve cihet ispatlayanların şübhelerine cevaplar tamam. **Allahu a'lem bi-hakâiki'l-umûr**.'
+- Netice/hüküm: **Ru'yet bâbı ertelendi**; Râzî burada **ru'yet ile cihetsizliği bağdaştırma** ihtimalini **savunma hattı** olarak kuruyor.
+- Delil çeşidi: **ertelenmiş cevap + ilzâm (istib'âd)**; (T) cedelî.
+- Mevzuya bağı: **Ru'yetullâh** (Fasıl IV/Ek olmadı); **cilt 3–4'te aranacak**; **Sünnî akide zemininde ru'yet-i bâri hakkı** ilkesi **Fasıl IV Sünnet bahsi**yle bağlanır (**yeni açık başlık**).
+- Doğan sual: Ru'yet bâbı Metâlib'de nerede, Râzî'nin **cihetsiz ru'yet** izahı ne?
+
+## c2 p72
+- OCR: kötü (başlık) / orta
+- Okuma: tam
+- İçerik: **Kısım 1, Fasıl 8 (başlık bozuk): 'Allah'ın nihâyetsiz fezâ olduğunu söyleyenlerin reddi'.** 'Bazı insanlar **bu nihâyetsiz fezânın Allah** olduğunu söyledi. Sebep: bedîhe **mevcut ya bu fezâ ya fezâda hâsıl (istiklâl ile = cisim; tebeiyet ile = araz)**; sıfat ve araz **cevher-cisimlere muhtaç**, cevher-cisimler **fezâya muhtaç**; fezâ ise **kendi başına kâim, başka şeye muhtaç değil**.' 'Aklen fezânın ademini tasavvur edebilir miyiz? Fezâ kalksa **önümüzdeki yan ile arkamızdaki yan ayırt edilir mi**? Edilmezse bedîhe ile merdûd; edilirse **o fezâ mevcut** (fezâ = cihetlerin ayrımı yapılan şey) ⇒ **fezânın ademinin farzı vücûdunun farzını gerektirir: muhâl**.' 'Öyleyse fezânın ademinin farzı **zâtı gereği mümteni**…'
+- Netice/hüküm: **'Allah = fezâ' kavlinin delili** aktarılıyor (fezâ: vâcib-i zâtî iddiası).
+- Delil çeşidi: hasım delili; (T) analitik (fezâ'nın ademi tasavvur edilemez).
+- Mevzuya bağı: **Fasıl I 'Vâcib'in tek olması ve âlemden ayrı olması'**: bu kavil **mekân-fezâ'yı vâcib sayan** görüş; **Fasıl I 'Burhân-ı İmkân' (mümkin/vâcib)** bu kavli **halâ-fezânın da mümkin** olduğunu göstererek çürütür; **Râzî'nin cevabı p73+**. Not: Râzî **fezâyı mevcut kabul ediyor (Hücca 9, p15)**: burada 'fezâ = Allah' iddiasına nasıl cevap verecek: **fezâ mevcut ama vâcib değil**.
+- Doğan sual: Fezâ mevcut ise vâcib olabilir mi? (Râzî p73–?)
