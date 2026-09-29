@@ -20,6 +20,42 @@ X ─sebeb→ Y  X, Y'nin var oluşunun (vücûda gelişinin) illetidir; X, Y'yi
 
 **Parantez kaidesi:** `(...)` yalnız, hemen önündeki adı zaten tarif edilmiş bir işlevin/yüklemin gerçek parametreleri için kullanılır (mesela `muhal(x)`, `İlim(Vâcib,x,t)`, `Sebeb(A,B)`). Bir formül maddesine atıf (mesela "2. maddeye bakınız") veya kısa bir izah/hüküm kelimesi (mesela "muhal", "çelişki") hiçbir zaman `(...)` içine yazılmaz — bunlar köşeli parantez `[...]` içine veya tire ile (`—`) ayrılmış bir ibareye konur. Bu ayrım gözetilmezse okuyucu parametre ile izahı birbirine karıştırır.
 
+## Evveliyyât (Akıl Kaideleri) — İstisnasız Her Şeye Şâmil Dört Kaide
+
+```
+Ayniyet:           A ≡ A                    ∀x (x = x)
+Nakzeyn:           ¬(P ∧ ¬P)                ∀x ¬(Mevcud(x) ∧ ¬Mevcud(x))
+Üçüncü-Hâl-İmtinâ: P ∨ ¬P                   ∀x (Mevcud(x) XOR ¬Mevcud(x))
+Kâfi-Sebep:        Mümkin(x) ∧ Hudûs(x)  ⟹  ∃y (y≠x ∧ İllet(y,x))
+```
+
+[⊬ "Gayelilik" burada beşinci evveliyyât DEĞİLDİR — yalnız şuurlu/muhtar faillere hastır, istisnasız her şeye şâmil değildir; kendi yerinde (Hakîm—Gaye—Şer) işlenir]
+
+Kâfi-Sebep'in Nakzeyn'e irca'ı — "tereccüh bilâ müreccih" keyfî bir varsayım değildir:
+```
+Sebepsiz-tercih(x,H₁,H₂) ≔ Fark(H₁,H₂)=∅ ∧ Vaki(H₁)≠Vaki(H₂)
+↯ — "fark yok" ile "netice farklı" aynı anda doğru olamaz [Nakzeyn ihlâli]
+```
+
+Burhân-ı İmtinâ-ı Nakz-ı Zâtî (evveliyyâtın hiçbir keşifle çürütülemezliğinin ispatı):
+```
+∀ iddia T: T anlamlı ⟹ T ≠ ¬T                          [Ayniyet ∧ Nakzeyn]
+T ∧ ¬T kabul edilirse ⟹ patlama-ilkesi: her önerme ispatlanır ⟹ "T"nin de mânâsı kalmaz
+∴ Nakzeyn'i inkâr etmek, inkârı söylemek için dahi Nakzeyn'i doğru kabul etmeyi gerektirir
+```
+
+Tatbik — kuantum mekaniği evveliyyâtı nakzetmez (kategori hatası reddi):
+```
+Kavânîn-i Tabîiyye (yerçekimi, Schrödinger denklemi, vb.) ≔ âdetullah, zıddı aklen mümkin
+Mebâdi-i Akliyye (Ayniyet, Nakzeyn, …)                    ≔ varlığın var-olma şartı, zıddı aklen muhal
+
+Süperpozisyon: |ψ⟩=α|c⟩+β|ö⟩ ≔ ihtimal genliği (vektör toplamı), MANTIKSAL ∧ değil
+  ⟹ ölçüm ânında ya c ya ö [Nakzeyn'e dokunmaz]
+
+∴ Mebâdi-i Akliyye ≻ Kavânîn-i Tabîiyye
+  ∀ Teori Θ (kuantum dâhil): Θ vaz'olunabilmesi (P(Θ)∧¬P(Θ) ⟹ Butlân) şartına bağlıdır
+```
+
 ## Bünye (Rükün/Şart/Araz/Karîne)
 
 ```

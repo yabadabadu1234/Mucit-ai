@@ -7,8 +7,11 @@
 - Açıklamalar **"Çoban için"** satırlarında en sade misalle verilir; birden çok ihtimal varsa cümleyle değil **şema**yla gösterilir.
 - Bu fasılda **iki müstakil yol** birlikte yürür: (A) felsefî-kelâmî **Burhân-ı İmkân** (mefhumların tahkikinden hükme giden silsile-i mantık), (B) doğrudan Kur'ân'ın kendi kullandığı **Burhân-ı Tahsis** ve kardeşleri. İkisi de burhânîdir; biri diğerinin yerine geçmez, biri diğerini **tamamlar**.
 - Sıra hep aynıdır: **kelime → çoban misali → şema → formül → netice.**
+- **Bir tertip notu:** Bundan sonra bu uygulama (okuduğunuz metin) bir **şerh** — sözlü akıl yürütmeyi de taşıyan bir ders kitabı — olarak yazılacaktır; saf sembolik formüller ise ayrıca `risale/fasil_1_vucud/formuller.md`de mühürlenir. §0 bu yeni tertibin ilk örneğidir; §1-9 henüz eski (yalnız formül+şema) üsluptadır, sırayla aynı şekle getirilecektir.
 
-## 0. Mebâdî-i Mantıkiyye — Kullanılacak İşaretler
+## 0. Mebâdî-i Mantıkiyye
+
+### 0.1 Kullanılacak İşaretler
 
 | İşaret | Menşe | Bu risalede ne demek |
 | :-- | :-- | :-- |
@@ -23,11 +26,111 @@
 
 **Parantez kaidesi:** `(...)` yalnız, hemen önündeki adı tarif edilmiş bir işlevin/yüklemin gerçek parametreleri için kullanılır (mesela `muhal(x)`, `İlim(Vâcib,x,t)`). Bir maddeye atıf (mesela "§3'e bakınız") veya kısa bir izah/hüküm kelimesi (mesela "muhal") hiçbir zaman `(...)` içine yazılmaz — bunlar köşeli parantez `[...]` içine konur.
 
-| Kelime | Kök | Lugat mânâsı |
-| :-- | :-- | :-- |
-| Nakzeyn | ن ق ض (nakz = bozmak, düğüm çözmek) | "iki bozma / iki çelişki" |
+### 0.2 Akıl Kaideleri (Evveliyyât) — Bu Risalenin Üzerine Bastığı Zemin
 
-**Çoban için:** Elindeki bir koyun ya senindir ya değildir; aynı koyun için, aynı anda, aynı bakımdan "hem benim hem değil" diyemezsin. Bu risalenin **tamamı**, bu tek kaideyi tekrar tekrar kullanıyor. Buna **Nakzeyn Kanunu** (kanun-u adem-i tenakuz) denir. Bunun kendisi başka bir şeyden ispat edilmez — inkârı bile kendini nakzeder: "Nakzeyn yanlıştır" diyen kişi bile, kendi sözünün "doğru" ile "yanlış"ın aynı anda aynı şey olmadığını zaten kabul etmiş olur.
+Şimdiye kadar okunan ve bundan sonra okunacak her burhan, aslında tek bir şeyi tekrar tekrar farklı yerlere tatbik etmekten ibarettir: **aklın, hiçbir tecrübeye, hiçbir keşfe muhtaç olmadan, doğrudan kendi kendine bildiği birkaç kaide.** Bunlara kelâmda ve mantıkta **evveliyyât** (en baştan bilinenler) denir. Bir muarız çıkıp "belki bir şey aynı anda hem var hem yok olabilir" veya "sebepsiz yere yokluktan varlık çıkabilir" dediği vakit, ona verilecek cevap işte bu kaidelerdir — bu yüzden onları risalenin en başına, her burhandan önce koyuyoruz. Bu zemin sağlam kurulmazsa, ileride kurulan hiçbir bina ayakta duramaz.
+
+**Kaç tanedirler? Bir tasnif tashihi.** Klasik mantıkta "aklın dört temel ilkesi" denince dört kaide kastedilir: Ayniyet, Nakzeyn (tenakuzun butlânı), Üçüncü Hâlin İmkânsızlığı, ve Kâfi Sebep. Bazı metinlerde bunlara beşinci olarak **Gayelilik** (her nizamlı fiilin bir gayeye matuf olması) de eklenir; fakat bu, dikkatli bakılınca aynı mertebede değildir. İlk dördü, **var olan HER ŞEYE** istisnasız şamildir — bir taş için de geçerlidir, bir düşünce için de. Gayelilik ise yalnız **şuur ve irade sahibi bir fâilin fiiline** hastır; bir taşın düşmesi için "gayesi ne?" diye sorulmaz, ama bir insanın veya Hakîm bir Fâil'in fiili için sorulur. Bu yüzden Gayelilik'i burada dördüncüye eklemiyoruz — o, kendi asıl yerinde (§9, Hakîm—Gaye—Şer bahsinde) ayrıca ve gereği gibi işlenecektir. Burada yalnız, istisnasız her şeye şamil olan dört evveliyyâtı ele alıyoruz.
+
+#### 0.2.1 Ayniyet Kanunu (Mebde-i Hüviyet)
+
+Bir şey ne ise odur; kendi zâtının aynıdır, başkası değildir. Elindeki koyun koyundur — ona, aynı anda, "hayır bu attır" diyemezsin. Bu o kadar bedihîdir ki ispatı değil, yalnız hatırlatılması gerekir: bir mefhumun içini neyle doldurduysan, hüküm verirken o içerik değişmeden kalır; değişirse zaten başka bir mefhumdan bahsediyorsun demektir, aynı şeyden değil.
+
+```
+A ≡ A          ∀x (x = x)
+```
+
+#### 0.2.2 Nakzeyn Kanunu (Tenakuzun Butlânı)
+
+İki çelişik hüküm, aynı anda, aynı cihetten, aynı nisbetle, ikisi birden doğru olamaz. Elindeki taş şu an hem buradadır hem burada değildir diyemezsin — "aynı cihetten" kaydı mühimdir: taş bir bakımdan (mekânda) buradadır, başka bir bakımdan (rengiyle) da tarif edilebilir, bunda çelişki yok; çelişki, AYNI bakımdan hem-hem denildiğinde doğar. Bu risalenin **tamamı**, aslında bu tek kaideyi tekrar tekrar, farklı yerlere tatbik etmekten ibarettir.
+
+```
+¬(P ∧ ¬P)          ∀x ¬(Mevcud(x) ∧ ¬Mevcud(x))
+```
+
+Bunun kendisi başka bir şeyden ispat edilmez — inkârı bile kendini nakzeder: "Nakzeyn yanlıştır" diyen kişi bile, kendi cümlesinin "doğru" ile "yanlış"ın aynı anda aynı şey olmadığını zaten kabul etmiş olur (bu savunmanın genel şekli §0.3'te ayrıca kurulacaktır).
+
+#### 0.2.3 Üçüncü Hâlin İmkânsızlığı (İmtinâ-ı Şıkk-ı Sâlis)
+
+Birbirine çelişik iki hâl arasında üçüncü bir orta yol yoktur. Koyun ya canlıdır ya ölüdür; "ne canlı ne ölü, üçüncü bir hâl" diye bir şey olamaz. Dikkat edilsin: bu, Nakzeyn'in aynısı değil, onun **ikizi**dir — Nakzeyn "ikisi birden olamaz" der, bu kaide "ikisinin dışında üçüncüsü de olamaz" der. İkisi birlikte, bir mefhumu ikiye böldüğünüzde (κ, Nakzeyn'le tükenmişlik ⟺ₜ) hiçbir ihtimalin dışarıda kalmadığını garanti eder — bu risaledeki her taksimin (Vücûb taksimi, Sıfat çeşidi, Gaye çeşidi…) sağlamlığı buradan gelir.
+
+```
+P ∨ ¬P          ∀x (Mevcud(x) XOR ¬Mevcud(x))
+```
+
+#### 0.2.4 Kâfi Sebep Kanunu (Mebde-i İllet)
+
+Kendiliğinden zarurî olmayan (mümkin) hiçbir şey, kendi kendine varlık sahasına çıkamaz veya bir hâlden başka bir hâle geçemez; her hudûs ve her tebeddül için dıştan kâfi bir illet şarttır. Terazinin iki boş kefesi dengede durur; dışarıdan biri bir kefeye dokunmadıkça, kefelerden biri kendi kendine aşağı inmez.
+
+```
+Mümkin(x) ∧ Hudûs(x)  ⟹  ∃y (y≠x ∧ İllet(y,x))
+```
+
+**Bir itiraza cevap — bu kaide keyfî bir varsayım mıdır?** Bazı filozoflar (meşhuren Hume) nedensellik ilkesinin, Ayniyet ve Nakzeyn gibi saf mantıkî bir zaruret olmadığını, yalnız tecrübeden gelen bir alışkanlık olduğunu ileri sürmüştür — yani "sebepsiz bir şeyin vuku bulması" mantıken çelişkili değil, yalnız alışılmadıktır, denilir. Bu itiraz ciddiye alınmalı ve şöyle cevaplanmalıdır: Kâfi Sebep Kanunu, aslında Nakzeyn'in **var olma sahasına dolaylı bir tatbikinden** başka bir şey değildir, keyfî bir ilave değildir:
+
+```
+Sebepsiz-tercih(x, H₁, H₂) ≔ Fark(H₁,H₂) = ∅   [H₁ ile H₂ arasında hiçbir ayırt edici sebep yok]
+                            ∧ Vaki(H₁) ≠ Vaki(H₂)   [yine de biri gerçekleşti, öbürü değil]
+↯ — "aralarında fark yok" ile "aralarında (netice) farkı var" aynı anda doğru olamaz;
+    netice farkı da bir fark çeşididir, bu da Nakzeyn'in ihlâlidir
+```
+
+Demek, "tereccüh bilâ müreccih" (sebepsiz tercih) yalnız alışılmadık değil, doğrudan çelişkilidir: sebepsiz bir tercih, "fark yokken fark iddia etmek"tir. Bu risalenin bütün İsbât-ı Vâcib bahsi (§3) zaten bu tatbikin üzerine kuruludur; oradaki devir ve teselsül butlânları da, aynı Kâfi Sebep Kanunu'nun iki ayrı sahaya (döngüsel sebep, sonsuz zincir) tatbikinden ibarettir — burada tekrar kurulmayacak, yalnız işaret edilmiştir.
+
+### 0.3 Bu Kaideler Neden Hiçbir Keşifle Çürütülemez? (Burhân-ı İmtinâ-ı Nakz-ı Zâtî)
+
+Yukarıdaki dört kaidenin ortak bir hususiyeti vardır: hiçbiri, gelecekte yapılacak bir tecrübe veya keşifle çürütülebilecek türden değildir. Sebebi şudur — bunları çürütmeye kalkan her teşebbüs, teşebbüsün kendisinde onları zaten kullanmak zorunda kalır. Bir kimse "İleride öyle bir keşif olacak ki, Nakzeyn Kanunu çürüyecek" dese, şu adımlar zarurî olarak işler:
+
+1. Bu iddia (T) anlamlı bir hüküm olabilmesi için kendi zıddından (¬T, "çürümeyecek") ayrışmış, ondan farklı olmak zorundadır — bu, bizzat Ayniyet ve Nakzeyn'in ta kendisidir.
+2. Eğer iddia doğruysa ve Nakzeyn gerçekten çökmüşse, o vakit T ile ¬T aynı anda doğru kabul edilebilir hâle gelir; ama bu durumda "çürüdü" sözü ile "çürümedi" sözü arasındaki fark da kalkar — iddianın kendisi anlamsız bir gürültüye döner, hiçbir şey iddia etmemiş olur.
+3. Öte yandan bu iddiayı taşıyan her fizikî teori (kuantum mekaniği dâhil) bizzat riyaziyat üzerine kuruludur, riyaziyatın temelinde ise `1 ≠ 0` gibi saf mantıkî ayrımlar yatar. Nakzeyn'i iptal etmek, mantıkta "patlama ilkesi" (ex falso quodlibet) gereği, sistemden **her önermenin** aynı anda hem ispatlanabilir hem çürütülebilir olması demektir — bu durumda "kuantum mekaniği" diye bir teoriden de, onun iddia ettiği "çürüdü" hükmünden de geriye hiçbir şey kalmaz.
+
+```
+∀ iddia T: T anlamlı ⟹ T ≠ ¬T   [Ayniyet + Nakzeyn'in tatbiki]
+T ∧ ¬T kabul edilirse ⟹ (patlama ilkesi) her önerme ispatlanır ⟹ "T" sözünün de bir mânâsı kalmaz
+∴ Nakzeyn'i inkâr etmek, inkârı SÖYLEMEK için dahi Nakzeyn'i doğru kabul etmeyi gerektirir
+```
+
+**Netice:** Mantık kaidelerini inkâr etmeye kalkan her zihin, inkârını ifade edebilmek için dahi bu kaideleri doğru kabul etmek mecburiyetindedir. Bu, yalnız Nakzeyn'e mahsus değildir — "her şey görecelidir" diyenin bu hükmün kendisini mutlak sayması, "hiçbir şey bilinemez" diyenin bu bilgiyi nasıl bildiği sorusuyla çökmesi gibi, aynı aileden pek çok iddia aynı tarzda kendi kendini çürütür. Mantık kaideleri işte bu sebeple tecrübenin veya fiziğin konusu değil, **her türlü tecrübenin ve her türlü fiziğin sıhhat şartıdır** — aşağıda, bu genel kaidenin en meşhur güncel itirazına (kuantum mekaniği) nasıl tatbik edildiği gösterilecektir.
+
+### 0.4 Bir Tatbik Misali: Kuantum Mekaniği Mantığı Nakzetti mi?
+
+**Kısaca cevap: Hayır, nakzedemez de.** "Kuantum mantığı çürüttü" sözü, fizikteki matematiksel bir tasvir ile ontolojik bir hakikati birbirine karıştıran bir kategori hatasından (mugalata-i cins) ibarettir. Bu iddia yaygın olduğu için, risalenin en başında, tek tek çürütülmesi gerekir.
+
+#### 0.4.1 Kategori Hatası: Fizikî Kanun ile Aklî Kaide Ayrı Cinstir
+
+Yerçekimi, termodinamik, Schrödinger denklemi gibi kaideler, hâricî âlemde tecrübeyle tespit edilmiş **âdetullah**tır — bunların zıddı aklen muhal değildir, yalnız âdet dışıdır (bir parçacığın dalga gibi yayılması aklen imkânsız değil, alışılmadıktır). Ayniyet, Nakzeyn, Üçüncü Hâlin İmkânsızlığı ve Kâfi Sebep ise fizikî kâinatın maddesine bağlı kaideler değildir; bizzat **anlamın, idrakin ve varlığın kendisinin var olma şartı**dır. Bir elektronun iki delikten birden geçmesi fizikî bir hayret kaynağıdır, fakat "bir elektron aynı anda, aynı cihetten hem vardır hem yoktur" demek aklen muhaldir — birincisi âdetin dışına çıkar, ikincisi aklın kendisini iptal eder.
+
+**Çoban için:** Elindeki koyunun rengi yeşil olsa veya koyun uçsa, bu fizikî olarak gariptir ama aklen imkânsız değildir. Fakat o koyunun "aynı anda hem bir koyun olması hem de sıfır koyun (yokluk) olması" aklen imkânsızdır. Kuantum mekaniği, koyunun kanat çırpışını keşfetmiş olabilir; koyunun hem var hem yok olduğunu değil.
+
+#### 0.4.2 Dört İddia ve Hakikatleri
+
+| İddia | Zannedilen | Hakikat |
+| :-- | :-- | :-- |
+| **Süperpozisyon** (Schrödinger'in kedisi) | "Kedi ölçülene kadar hem canlı hem ölüdür — Nakzeyn çöktü" | `\|ψ⟩ = α\|canlı⟩ + β\|ölü⟩` ifadesindeki `+`, mantıksal VE (∧) değil, bir ihtimal genliğidir (vektör toplamı). Kedi zâtında iki zıt hükmü cem etmez; bilgimiz sınırlıdır veya sistem henüz etkileşime girmemiş bir potansiyeldir. Bilfiil ölçüldüğü an kedi ya ölüdür ya diridir — üçüncüsü yoktur, ve hiçbir dedektör "yarı canlı" bir sonuç kaydetmemiştir. |
+| **Dalga-parçacık ikiliği** | "Işık hem dalgadır hem parçacıktır — zıtlar birleşti" | Nakzeyn'in şartı "aynı cihetten"dir. Işık yayılırken dalga karakteri (girişim), maddeyle etkileşirken parçacık karakteri (fotoelektrik) gösterir — bunlar iki ayrı deney şartıdır, iki ayrı cihettir. Aynı deneyde, aynı anda, ışık hem bütünüyle dalga hem bütünüyle tekil parçacık olarak ölçülmez. |
+| **Kuantum tünelleme** | "Parçacık bariyerin hem içinde hem dışında" | Dalga fonksiyonunun genliği bariyer içinde azalarak ama sıfırlanmadan devam eder; bu, parçacığın konumu hakkında bir **ihtimal** verir. Ölçüldüğünde parçacık ya bariyerin bir yanındadır ya öbür yanında — "aynı anda ikisi birden" değil. |
+| **Vakum dalgalanmaları** | "Boşlukta parçacıklar sebepsiz, yoktan var oluyor — Kâfi Sebep çöktü" | Fizikteki "vakum," kelâmdaki mutlak adem (hiçlik) değildir; sıfır-noktası enerjisi olan, kuantum alanlarıyla dolu fizikî bir zemindir. Bir potansiyelin fiile çıkması için zaten bir zemin ve kanun mevcuttur — ortada fâilsiz, zeminsiz bir "hiçlikten fışkırma" yoktur. |
+
+**Bir ayrıntı — farklı yorumlar da Nakzeyn'e dokunmaz.** Kuantum mekaniğinin "ölçüm problemi"ne dair Kopenhag, Çoklu-Dünyalar (Everett) ve Bohm mekaniği gibi birbirinden farklı fizik-felsefesi yorumları vardır; bunlar birbirinden çok ayrı metafizik tablolar çizer, fakat **hiçbiri** "aynı anda, aynı cihetten hem X hem ¬X" demez: Kopenhag'a göre ölçümden önce netice henüz belirlenmemiştir (hangisi olacağı belirsizdir, ama "ikisi birden vaki" değildir); Everett'e göre her ihtimal kendi ayrı dalında kesin bir netice alır (aynı dalda çelişki yoktur, yalnız dallar çoğalır); Bohm'a göre netice baştan beri bellidir, yalnız bizim bilgimiz eksiktir. Üç yorum da birbirinden ayrılır, fakat üçü de Nakzeyn'e aynı derecede saygılıdır — mesele fizikte hangi yorumun doğru olduğudur, mantığın çökmesi değildir.
+
+#### 0.4.3 Netice: Akıl Kaideleri Keşfin Konusu Değil, Şartıdır
+
+```
+Mebâdi-i Akliyye  ≻  Kavânîn-i Tabîiyye
+
+∀ Teori Θ (kuantum dâhil):
+  Θ'nın vaz'olunabilmesi bizzat (P(Θ) ∧ ¬P(Θ) ⟹ Butlân) şartına bağlıdır
+  [bkz. §0.3, patlama ilkesi]
+
+∴ Mantık kaideleri tecrübî/fizikî keşiflerin konusu değildir;
+  her türlü keşfin sıhhat şartıdır (şart-ı evvelîdir)
+```
+
+| Netice | (T) |
+| :-- | :-- |
+| Akıl kaideleri (Ayniyet, Nakzeyn, Üçüncü Hâlin İmkânsızlığı, Kâfi Sebep) hiçbir keşifle çürütülemez | burhânî |
+| Kuantum mekaniğindeki "çelişki" iddiaları kategori hatasıdır; Nakzeyn'e dokunmaz | burhânî |
 
 ## 1. Taksim-i Aklî — Zihindeki Bir Mâhiyet Üç Hâlden Hangisindedir?
 
@@ -758,6 +861,7 @@ Hakîm ∧ Şer(mevcûd)?
 
 | # | Netice | (T) |
 | :-- | :-- | :-- |
+| 0 | Dört evveliyyât (Ayniyet, Nakzeyn, Üçüncü Hâlin İmkânsızlığı, Kâfi Sebep) hiçbir keşifle çürütülemez; kuantum mekaniği kategori hatasıyla iddia edilenin aksine Nakzeyn'i nakzetmez | burhânî |
 | 1 | Taksim-i aklî ⟺ₜ | burhânî |
 | 2 | Mahiyette vücûdun zâidliği / Vâcib'de ayniyeti | burhânî |
 | 3 | Müreccih, devir/teselsül/tatbik reddi, ∃!Vâcib | burhânî |
