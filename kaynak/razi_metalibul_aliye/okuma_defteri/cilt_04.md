@@ -361,3 +361,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **Râzî'nin değer takdiri**; (T) cedelî (açık bırakma).
 - Mevzuya bağı: **KRİTİK — Fasıl I §3 ve §8**: Râzî, hudûs taraftarlarının kendi içindeki **'imkân ezelî' ↔ 'âlem ezelî olamaz' aporisini** açıkça kabul ediyor; **c3 p20–182 (irâde-tahsis) borcu bu sayfada 'açık ve güçlü itiraz' olarak kayıtlı**; **F 27-B: kıdem tarafının ayırt gücü var (hudûs delilinin bu kolunu çürütüyor), hudûs tarafının cevabı Kısım 2'de aranacak**. Risale'de hudûs bâbı **'nassla kat'î, aklî delil Râzî'nin kendi ifadesiyle aporili'** diye yazılmalı.
 - Doğan sual: Kısım 2'de bu aporiye Râzî'nin kendi çözümü ne?
+
+## c4 p41
+- OCR: orta
+- Okuma: tam
+- İçerik: **5. mukaddime: 'Kıdem ashâbının ve hudûs ashâbının delillerinin zikri'**: 'önce kıdem ashâbının delillerini zikrettik, sonra hudûs ashâbının delillerini takip edeceğiz.' **Cismânî âlem mevcut, mürekkeb; her mürekkebin dört illeti vardır: fâil, kâbil, sûret, gâye**; kıdem taraftarlarının tutundukları vecihler bunlardan **hâlden çıkarılır**: fâilî illetten, kâbil illetten, sûrî illetten, gâî illetten; **çoğu fâilî illetten** (fâil olması, fâilin kâdir, mürîd, hakîm, âlim olması hâlleri). Ayrıntı makâlelerde.
+- Netice/hüküm: Cilt 4'ün delil düzeni: **önce kıdem delilleri (fâil, kâdir, mürîd, hakîm, âlim), sonra hudûs delilleri**.
+- Delil çeşidi: taksîm (dört illet); (T) analitik.
+- Mevzuya bağı: **Fasıl I §3, §8**: bu sıra **c3'te açık kalan kâdir-mûcib-irâde borçlarının** cilt 4'te hangi delil düzeniyle kapanacağını gösteriyor.
+- Doğan sual: —
+
+## c4 p42
+- OCR: boş
+- Okuma: tam (içerik yok)
+- İçerik: Yok.
+- Netice/hüküm: Yok.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c4 p43
+- OCR: orta
+- Okuma: tam
+- İçerik: **2. Makâle: 'Fâiliyet ve müessiriyet hâlinden çıkarılan vecihlerin takrîri'** (başlık).
+- Netice/hüküm: Yok (başlık).
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c4 p44
+- OCR: boş
+- Okuma: tam (içerik yok)
+- İçerik: Yok.
+- Netice/hüküm: Yok.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c4 p45
+- OCR: orta
+- Okuma: tam
+- İçerik: **Fasıl 1: 'Kıdem taraftarlarının bu bâbtaki kuvvetli hüccetinin hikâyesi'.** İddia: '**Allah'ın eşyayı mûcid ve mükevvin olması için lâzım her şey ezelde hâsıl; öyleyse eşyayı ezelde îcâd ve tekvîn etmesi lâzım.**' **1. makam (lâzım her şey ezelde hâsıl)**: eğer öyle olmasaydı, 'o mecmû ezelde hâsıl değildi, sonra hâsıl oldu' sadık olurdu; mecmûun sonradan hâsıl olması ya **müessire muhtaç** ya değil; ikincisi 'hâdisin müessirden müstağnî olması' (ittifakla bâtıl); birincisi ise **o mecmûun hudûsunda müessirin te'sîri kaydı tekrar** doğurur ⇒ **teselsül (muhâl)** ya da **'mûciddiyet ve müessiriyette lâzım olan her şey ezelde hâsıl' sonucu**.
+- Netice/hüküm: **Kıdem tarafının 'büyük dayanağı (el-umde el-kübrâ)' 1. makamı: mûciddiyetin bütün şartları ezelde hâsıl.**
+- Delil çeşidi: **teselsül taksîmi (mecmûun hudûsu müessir ister)**; (T) burhânî biçim. **[Delil ≠ dava: 'mecmû müessire muhtaç' öncülü c3 p250'deki 'mecmû' öncülünün aynısı; kıdem tarafı bu öncülü hudûs delilinin karşısına çeviriyor.]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §8**: **kıdem tarafının en güçlü delilinin (imkân-ı ezelî + bütün şartların ezelî oluşu) kurulması**; Risale'nin 'hâdis müessire muhtaç' cümlesi bu delilin **iki yönlü kullanıldığını** görmeli. 
+- Doğan sual: —
+
+## c4 p46
+- OCR: orta
+- Okuma: tam
+- İçerik: **2. makam (şartlar ezelde hâsıl ⇒ eserin sudûru vâcib)**: eser vâcib-i sudûr olmasaydı, **bütün o şartlar hâsılken bile eserin hâsılı mümkin**; mümkinin hâsıl olması farz edilirse muhâl doğmaz; **'bütün şartlar hâsılken eserin bir vakit hâsıl olup başka vakit olmaması'**: iki vakit arasında **şartlar mecmûu eşit** ⇒ ihtisas ya **zâid bir kayda** mevkuf ya değil; mevkufsa bu kayıt **müessiriyette lâzım olan şeylerden biri** olur, oysa mecmûu biz zâid kaytsız kâfi farz ettik; değilse **iki eşit tarafın birinin diğerine müreccihsiz rüçhânı (muhâl)**. Hâsıl: müessiriyette lâzım olan her şey ezelde mevcut ve eser ezelde vâcib. **'Bu, kıdem taraftarlarının bu meselede büyük dayanağıdır.'** **Cevap yolları**: cevap verme ve mu'ârazalar getirme.
+- Netice/hüküm: **Kıdem tarafının büyük delili: 'tam illet ⇒ ma'lûl vâcib; müreccihsiz tahsis muhâl'.**
+- Delil çeşidi: **reductio (müreccihsiz rüçhân)**; (T) burhânî biçim; öncüller: (a) 'tam illet ⇒ eser vâcib', (b) 'müreccihsiz rüçhân muhâl'. **[F 27-B: bu delilin ayırt gücü hudûs delilini de vuruyor; c3 aporisi ile aynı öncül.]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §8**: bu, **Fasıl I'in irâde-tahsis cevabının karşısındaki en güçlü itiraz**; kaynak: c4 p45–46; **Risale 'tam illet ⇒ eser vâcib' öncülüne cevabını (irâde tahsis eder) nassla ve mantıkla yazmak zorundadır**.
+- Doğan sual: —
+
+## c4 p47
+- OCR: orta
+- Okuma: tam
+- İçerik: **Cevap (hudûs tarafı; aktarım) — 1. vecih**: 'ezelde hâsıl olmayan lâzım-ı müessiriyet olarak **Allah'ın âlemi ihdâsa mürîd olması** vardı ve **muayyen bir vakitte ihdâs etmeyi murad ediyordu**; bu yüzden hudûs o vakte ihtisas etti. **'Irâde neden o vakte ihtisas etti?' sorusuna 6 cevap**: **1. cevap**: 'Allah'ın **irâdesi kendine mahsus hakîkatiyle** hudûsu o vakte tahsisi **gerektirdi**; o irâdenin başka vakitte ihdâsı gerektirme salâhiyeti yoktur; bu takdirde 'niçin bu vakitte taalluk etti, diğerlerinde değil' sözü düşer; **bu tahsis o irâde mâhiyetinin lâzımıdır**; 'irâde niçin o vecihle vâki oldu' sorusu düşer.' **2. cevap (p48'e taşıyor)**: 'o vakitte ihdâs **mükellefler için daha uygun (asla)**'.
+- Netice/hüküm: **Hudûs tarafının 1. cevabı: irâde hakîkati gereği tahsis eder** (Eş'arî klasik cevap; aktarım).
+- Delil çeşidi: **mâhiyet-lâzım cevabı**; (T) cedelî. **[Delil ≠ dava: 'irâdenin mâhiyeti tahsis eder' cevabı 'niçin bu mâhiyette?' sorusunu 'düşürür' ama ispat etmez; c3 p328'de Râzî bunu 'dâîsiz tercih' ile zayıflatıyor.]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §8**: Risale'nin 'irâde tahsis eder' cümlesinin **klasik gerekçesi bu 1. cevaptır**; Râzî'nin **kendi c3 aporisiyle** ilişkisi (dâî çerçevesi) **ayrıca tartışılacak**.
+- Doğan sual: Râzî bu 6 cevabın hangisini tercih ediyor (Kısım 2)?
+
+## c4 p48
+- OCR: orta
+- Okuma: tam
+- İçerik: **2. cevap**: 'o vakitte ihdâs **mükelleflerin maslahatına** daha uygun; o vaktin **belirli hâssasını bilmiyoruz**, fakat bilmememiz onun hâsılını zedelemez.' **3. cevap**: 'Allah **bütün cüz'îleri bilir**; ezelde âlemin **filan vakitte hâdis olacağını bildi**; **Allah'ın ilmi vâcibü'l-vukû', tagayyür imkânsız**; **irâde muhâllere taalluk etmez** ⇒ irâde âlemi o vakte tahsis etti.' **4. cevap**: 'irâde ezelde hudûsa **taalluk etmez**: hudûs = vücûdun ademle mesbûk olması; ezel = evvelin nefyi; **ikisinin cem'i muhâl; muhâl ne makdûr ne murâd** ⇒ ezelin hudûsa **mâni** olması hudûsun ezelde muhâl olmasıdır.' **5. cevap**: 'âlem hâdis olmadan önce **zâtı gereği mümteni'**, sonra mümkin oldu; bu yüzden irâde o vakitten önce taalluk etmedi.' **6. cevap**: '**'niçin bu vakitte taalluk etti?' sorusu bâtıl**: irâde başka vakitte taalluk etseydi aynı soru dönerdi; **her takdirde dönen soru bâtıldır**.
+- Netice/hüküm: **Hudûs tarafının 2.–6. cevabı** (aktarım).
+- Delil çeşidi: **cedelî cevaplar**; (T) cedelî. **[Delil ≠ dava: 2. cevap ('maslahat') Râzî'nin c3 p328'deki 'Allah'ın fiillerini maslahatla ta'lîl bâtıl' hükmüyle çelişir; 3. cevap (ilim) c3 p313–315 (Hişâm reddi) ve c3 p104–156 (ilim) ile bağlantılı; 5. cevap c4 p35–40'daki 'imkânın evveli var' aporisine bağlı; 6. cevap 'dönen soru bâtıl' formu (dâîsiz tercih meselesini örtmüyor).]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §8**: **Risale için hazır 6 cevap listesi (kaynaklı, derece: cedelî)**; **2. cevap (maslahat) Risale'ye alınmaz (Râzî kendi c3'te reddetti)**; 4. cevap ('ezelin hudûsa mâni'liği muhâl bir cem'i önler) **Risale'de 'muhâl makdûr değil' ilkesiyle** yazılabilir.
+- Doğan sual: —
