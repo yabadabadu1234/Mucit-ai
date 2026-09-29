@@ -289,3 +289,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **lafzî sükût delili (arguments from silence)**; (T) hitâbî-cedelî. **[Delil ≠ dava: 'sarîh lafız yok' sonucu, hudûs delillerini (aklî ve nakli bütünüyle: 'yoktan yaratma' nassları) görmezden gelir; Kısım 2'de cevap beklenir.]**
 - Mevzuya bağı: **KRİTİK**: **Risale 'İlâhî kitaplar âlemin yoktan yaratıldığını sarîh bildirir' iddiasını nassla (Kur'ân'daki 'ol' emri, 'yaratmak', ⊬ numaralar) çalışmalı; bu pasaj kıdem tarafının itirazıdır**, Râzî'nin cevabı p33+ ve Kısım 2'de. Tevrât lafzı editör dipnotu (p22) ile ilgili: Yahudi/Katolik çevirileri farklı.
 - Doğan sual: Râzî nübüvvet ve kıdem ilişkisine ne cevap veriyor (p33)?
+
+## c4 p33
+- OCR: orta
+- Okuma: tam
+- İçerik: (Nübüvvet itirazının cevabı, **kıdem tarafı**): '**Zâtlar kadîm diyen, zâtların varlığıyla ilâhın varlığını istidlâl etmez**; ilâhın varlığı ancak **zâtların sıfatlardaki ihtilâfıyla**: bazısı latîf-ulvî, bazısı kesîf-süflî; bu ihtilâf **kâdir-muhtâr sebebiyle** olmalı; **ilâh bu yolla sabit olunca nübüvvet ona fer' olur**.' **Sonuç (kıdem tarafı)**: 'peygamberlerin büyükleri (salavâtullâhi aleyhim) bu meselede **sükût etti**; bu meselenin **beşer akıllarının ulaşamayacağı güçlüğe** ulaştığına delâlet eder. Allah en iyi bilendir.'
+- Netice/hüküm: **Kıdem tarafının 4. mukaddime sonucu: 'kitaplar sarîh değil; peygamberler susmuş; mesele akılları aşar'**. [Bu, Kısım 1'in (kıdem diyenlerin) savunma sesi; Râzî'nin kendi hükmü olarak yazılmadı.]
+- Delil çeşidi: **sükût delili + nübüvvet fer'iyeti**; (T) cedelî-hitâbî. **[Delil ≠ dava: 'peygamberler sustu' iddiası nakledilen nassların ('Allah her şeyin hâlikı' türü, ⊬ numara) görmezden gelinmesine dayanır; bu, Râzî'nin Kısım 2'de cevaplayacağı bir iddiadır.]**
+- Mevzuya bağı: **KRİTİK — Fasıl II (Nübüvvet), Fasıl I §3**: Risale bu iddiaya **nassla** cevap verecek: **'Allah her şeyin hâlikıdır' (39:62; 13:16; ⊬ numaralar) ve 'ol dedi oldu'** nassları; **'peygamberler susmuş' cümlesi ALINMAZ**; ilâhiyat-nübüvvet fer'iyeti (aklî sıra) c3 p345 (devir) ile bağ.
+- Doğan sual: Râzî Kısım 2'de bu iddiaya ne cevap veriyor?
+
+## c4 p34
+- OCR: boş
+- Okuma: tam (içerik yok)
+- İçerik: Yok.
+- Netice/hüküm: Yok.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c4 p35
+- OCR: orta
+- Okuma: tam
+- İçerik: **Yeni bahis: 'Bu âlemin imkânının bir evveli var mı?'** **Âlemin kıdemini imkânsız, hudûsunu vâcib sayanlar** (hudûs taraftarları) **âlemin vücûdunun imkânı için evvel bulunup bulunmadığında ihtilâf etmişler**: (1) **evveli yoktur**; (2) **evveli vardır**. **1. kavil sahipleri**: '**imkânın evveli yoktur' sözü yalansa nakîzi doğrudur: imkânın evveli vardır**; evvelinden önce imkân yok idi, hâsıl olan ya **vücûb-ı bizzât** (kıdem lâzım) ya **imtinâ'-ı bizzât** (âlem ezelde mümteni'ken mümkin oldu) — **bâtıl**. Deliller: **1. hüccet**: **aynıyla ve zâtıyla mümteni' olan şey vücûdu ebedî kabul etmez, çünkü mâhiyetin muktezâsı değişmez**; mâhiyet vücûdu kabul etmemeyi gerektirirse ebediyen öyle, kabul etmeyi gerektirirse ebediyen öyle ⇒ âlem bir vakitte 'zâtı gereği mümteni'' sadık olsa her vakitte sadık olurdu.
+- Netice/hüküm: **Hudûs taraftarları içinde 'imkânın ezelîliği' tartışması: 1. kavil (imkânın evveli yok) ve 1. hücceti (mâhiyetin muktezâsı değişmez)**.
+- Delil çeşidi: **taksîm + mâhiyet ilkesi**; (T) analitik-burhânî biçim.
+- Mevzuya bağı: **KRİTİK — Fasıl I §3 (hudûs) ve §6.3**: bu, **hudûs-kıdem tartışmasının en ince noktası**: 'âlemin imkânı ezelî mi?' ⇒ imkân ezelîse **kudretin te'siri ezelde mümkin** ⇒ **kıdemin imtinâ' delili düşer** (Kısım 1'in kıdem tarafı için en güçlü zemin). Kaynak: c4 p35–40.
+- Doğan sual: —
+
+## c4 p36
+- OCR: orta
+- Okuma: tam
+- İçerik: (1. hüccet devam): **İtiraz**: 'bu 'mâhiyetler vücûd ve ademde muhtaç' varsayar (**ma'dûm şeydir**); biz buna kail değiliz.' **Cevap, 3 vecih**: (1) bütün akıllılar '**iki zıddın cem'i zâtı gereği mümteni'**' der ⇒ imtinâ' ebedî; 'bir'in 'ikinin iki katı olması' zâtı gereği mümteni' ⇒ ebedî; **hiçbir akıllı mümteni'âtı 'ademde şeyler' saymaz, onlar mahz ademler ve selblerdir, mâhiyetleri ve ayn'ları yok**; o hâlde âlemin 'bir vakitte zâtı gereği mümteni' olduğu' sadıksa imtinâ' ebedî kalır, **'ma'dûm şey'e kail olmasak da**. (2) **imtinâ' ve imkân ademi vasıflardır (vücûdî değil)** ⇒ mâhiyete vücûddan önce isnadları **'ma'dûm şey' sonucu doğurmaz**. (3) **Soru geçerli olsa bile** başka sûrette aynı: **Allah'ın kudretinin âlemin îcâdında te'sîre salâhiyeti ya evvelsiz ya evvelli**; bu soruyu size yöneltemezsiniz.
+- Netice/hüküm: **'İmkânın evveli yok' 1. hücceti; 'ma'dûm şeydir' itirazına 3 cevap**.
+- Delil çeşidi: **cedelî cevap + reductio (kudretin salâhiyeti)**; (T) cedelî-burhânî biçim.
+- Mevzuya bağı: **Fasıl I §3**: 'imtinâ'-imkân **ademi vasıflar**' hükmü Risale'nin 'mümkin' tanımıyla eşleşmeli; **'ma'dûm şeydir' kavli Mu'tezile'ye ait (c1'de reddedilmiş olmalı, ⊬ atıf)**.
+- Doğan sual: —
+
+## c4 p37
+- OCR: orta
+- Okuma: tam
+- İçerik: (Kudretin salâhiyeti argümanı devam): 'Allah'ın kudretinin te'sîr salâhiyeti evvelsiz mi evvelli mi? **Bu soruyu sorma hakkınız yok; çünkü 'Allah'ın kudretinin salâhiyetinin evveli vardır' = kudretin bir vakit sıhhatsiz iken sonra sıhhatli olması** (kudret kadîm) — bâtıl.' **2. hüccet**: 'âlem **ilk vakitte mümteni'**, ikinci vakitte mümkin olsa **bu imkân ya hâdis olmama cevazıyla ya hâdis olma vücûbuyla hâdis**: (a) **cevazla hâdis** ⇒ bu imkânın hudûsunun imkânı **bu imkândan önce** hâsıl (imkânın imkânı) ⇒ **şey mümkin olmadan önce mümkin idi** (muhâl); (b) **vücûbla hâdis** ⇒ **makûl değil; vakitler benzer ve eşit; bir gün önce hâdis olsaydı ezelî olmazdı**; o hâlde 'bir gün önce mümteni', tam o vakitte vâcibü'l-hudûs' **akıl dışı**; makûl kabul edilse bile **sâni'in nefyini gerektirir**: 'imkân o vakitte vücûb-ı zâtî olmadan hâdis oldu' denirse 'âlemin vücûdu o vakitte vücûb-ı zâtî ile hâdis oldu' da denir, **hâdislerin hudûsundan sâni'e iftikâr istidlâli yapılamaz**.
+- Netice/hüküm: **2. hüccet: 'imkânın kendisi hâdis olamaz' (imkânın imkânı devri) — hâdisin sâni'e delil olması da zedelenir**.
+- Delil çeşidi: **reductio (imkân-ı imkân, vakit benzerliği)**; (T) burhânî biçim. **[Delil ≠ dava: 'vakitler benzer ve eşit' öncülü, müreccih iradesi (Sünnî çizgi: irâde tahsis eder) cevabına yer bırakmaz; c3 Bâb 1 aporisinin aynı öncülü.]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §8**: 'vakitler eşit ⇒ tahsis müreccihsiz' öncülü hudûsun **kendisine** (c3 p297–298'de Mu'tezile'ye karşı kullanılan aynı silah) dönüyor: **bu, Râzî'nin sunduğu iki yönlü silahın hudûs tarafına dönüşü**; Fasıl I §8 (irâde) **buna cevap vermeli**.
+- Doğan sual: —
+
+## c4 p38
+- OCR: orta
+- Okuma: tam
+- İçerik: **3. hüccet**: 'Allah'ın, âlemi îcâd ettiği vakitten **bin sene önce** de îcâda kâdir olduğunu kabul ettik (hudûs ezelî olmaz); öyleyse **imkânın evveli olan bir vakit farz edilemez**; işaret edilen her vakitten önce imkân hâsıl idi ⇒ **bu imkânın başlangıcı yok**. **4. hüccet**: 'kudretin te'sîri bir vakitte imtinâ', sonra sıhhat olsa, bu tebeddül **bir sebeple ya sebepsiz**: sebepsiz **makûl değil**; sebeple ise (vücûd-ademden veya ademden-vücûda) **o vakitte tebeddül ya vâcib ya mümkin**; vâcibse ilk taksîme döner (müreccihsiz tahsis: akıl kabul etmez); mümkinse **o vakitten önce de hâsıl olabilirdi** ⇒ imkân o vakitten önce ⇒ zâtı mümteni' farz ettiğimizle hulf ⇒ '**imkânın evveli var**' kavli **akıl kabul etmez**'. **5. hüccet başlıyor**: 'zâtı mümteni' ebediyen mümteni', zâtı mümkin ebediyen mümkin; **bu mânâlarda tagayyür caiz olsa aklın 'câiz câizdir, muhâl muhâldir' hükmüne güveni kalmaz (devam p39)'**.
+- Netice/hüküm: 3.–5. hüccet: imkânın evveli yok (imkân ezelî).
+- Delil çeşidi: **reductio + taksîm**; (T) burhânî biçim.
+- Mevzuya bağı: **Fasıl I §3**: 3. hüccet ('bin sene önce de kâdir') **hudûs-kudret bağını** kuruyor: **kâdir-i ezelî âlemi ezelde yaratmaya kâdir olsa da yaratmadı** ⇒ **c3 p20–182'deki 'niçin şimdi' borcu** ile bağ.
+- Doğan sual: —
+
+## c4 p39
+- OCR: orta
+- Okuma: tam
+- İçerik: (5. hüccet devam): 'tagayyür caiz olsa aklın güveni kalmaz: **belki iki zıddın cem'i, muhâl iken, bir vakit vâcib olur; dörtün çift olması, vâcib iken, bir vakit mümteni' olur**; akıl mukaddimeleri ancak 'aynıyla mümteni' ebediyen mümteni', aynıyla vâcib ebediyen vâcib' üzerine kurar; buna **taʿn ve tekzîb girince aklın elinde hükmedeceği mukaddime kalmaz: sofestâîliğe giriş**.' **2. kavil (imkânın evveli var) sahipleri delil getirirler**: 'âlemin **vücûd imkânının evveli yoksa ve Allah'ın kudretinin te'sîr imkânının da evveli yoksa** âlemin **ezelden ebede** te'sîrinde imtinâ' yok ⇒ âlemin ezelde mevcut olmasında imtinâ' yok ve Allah'ın onu ezelde îcâdında imtinâ' yok ⇒ **'âlemin kadîm olması imtinâ'dır' kavli bu kaville cem'i nakîzlerin cem'i (muhâl)**: 'âlem'in evveli var; ezel evvelsiz; cem' muhâl.' **İtiraz**: 'muayyen şeyi **adem-i sebk şartıyla** bulduğumuzda, o şartla vücûdunun sıhhatinin evveli yok demek **ezelî olabilir demeyi gerektirmez**; çünkü adem-i sebk şartıyla ezelî olması mümteni'; 'vücûdunun sıhhatinin evveli yok' ile 'ezelî olabilir' demek arasında engel yok.'
+- Netice/hüküm: Hudûs taraftarlarının 2. kavli (imkânın evveli var) ve **kıdem tarafının 'nakîzlerin cem'i' itirazı**; cevap: 'adem-i sebk şartı'.
+- Delil çeşidi: **reductio (nakîzlerin cem'i) + şartlı cevap**; (T) burhânî biçim/cedelî.
+- Mevzuya bağı: **Fasıl I §3**: 'imkân ezelî ama âlem ezelî değil' cümlesi **hudûs delilinin kritik noktası**; Risale'nin **'âlem hâdistir, imkânı ezelî olsa da vücûdu Allah'ın irâdesiyle tahsis edilmiştir'** cümlesi c3 aporisine bağlı.
+- Doğan sual: —
+
+## c4 p40
+- OCR: orta
+- Okuma: tam
+- İçerik: **Râzî'nin (kendi sesiyle) değerlendirmesi**: '**Bu mu'âraza (itiraz) kuvvetli ve çok isabetli; çünkü mesele nefsinde müşkildir.** İmkânının evveli yoktur dedik ⇒ **imkân ezelde hâsıl**; ezelî olması imtinâ' dedik ⇒ **imkân ezelde hâsıl değil**; bu iki söz **zıtların cem'ini** gerektirir. **Bu mesele bu sûrette herkese zor geldi farz edilsin; iki kavlin sıdkı nasıl birleşir? Kuşkusuz son derece zor.** Allah en iyi bilendir.'
+- Netice/hüküm: **Râzî: 'imkânın evveli yok' + 'âlem ezelî olamaz' birlikte tutulunca zıtların cem'i doğuyor (itiraz kuvvetli); mesele son derece zor.**
+- Delil çeşidi: **Râzî'nin değer takdiri**; (T) cedelî (açık bırakma).
+- Mevzuya bağı: **KRİTİK — Fasıl I §3 ve §8**: Râzî, hudûs taraftarlarının kendi içindeki **'imkân ezelî' ↔ 'âlem ezelî olamaz' aporisini** açıkça kabul ediyor; **c3 p20–182 (irâde-tahsis) borcu bu sayfada 'açık ve güçlü itiraz' olarak kayıtlı**; **F 27-B: kıdem tarafının ayırt gücü var (hudûs delilinin bu kolunu çürütüyor), hudûs tarafının cevabı Kısım 2'de aranacak**. Risale'de hudûs bâbı **'nassla kat'î, aklî delil Râzî'nin kendi ifadesiyle aporili'** diye yazılmalı.
+- Doğan sual: Kısım 2'de bu aporiye Râzî'nin kendi çözümü ne?
