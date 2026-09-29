@@ -3673,3 +3673,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **misal + ilke ('hakîm sebepsiz geçmez')**; (T) hitâbî-ikna'î (misal), burhânî biçim (dilemma).
 - Mevzuya bağı: **KRİTİK — Fasıl I §8, §3**: **'akıllı hakîm insan misali' Allah'a kıyas (kıyâs-ı gâib alâ'ş-şâhid)**; Sünnî çizgide **'Allah'ın fiili insan fiiline kıyas edilemez, irâde-i ilâhî hikmetle mukayyet ama vakit tahsisi ilâhî ilme bağlıdır'** cevabı (⊬ Râzî'nin cevabı). **Risale bu şüpheyi 'hasmın en güçlü biçimi' diye yazar, cevabı Râzî'nin kapanışına bırakır.**
 - Doğan sual: —
+
+## c4 p409
+- OCR: orta
+- Okuma: tam
+- İçerik: **Şüphe 1 sonu**: '**ilk fiile başlayan kadîm, cahil bir fâildir; o fiili terk etmişken abes, cehl ve ittifâk yoluyla başladı.**' **Şüphe 2 (Muhammed b. Zekeriyyâ er-Râzî)**: '**âlemin tekvînine kasdın hakîm fâile yakışmadığına şu da delâlet eder: bu âlem elem ve hastalıklarla dolu; ademde kalmak bu elemlerden kurtuluş, bu lezzetlerin kaybı ona zarar vermezdi; tekvîn ve tahlîk ise dünya elemlerine ve âhiret azabına düşmeyi gerektirir ⇒ hikmet îcâd ve tekvînin terkini gerektirir.**' **Şüphe 3**: '**'İnsan istediğini bulur' denirse tekvîn hakîmin hikmetine yakışmaz: ihtiyaç önceden olmadan fayda bulunmaz; kulu yaratıp içine ihtiyaç ve şehveti yaratmazsa fayda yok (abes); yaratıp sonra arzuyu verirse önce bir zarar ulaştırıp sonra onu gidermekle uğraşmak gibi (abes) ⇒ herkes her istediğini bulsa da yaratma abes; bu en hakîm hâkimlerin hikmetine yakışmaz ⇒ yaratmaya başlamak hakîm-rahîm ilâha yakışmaz.**' '**Bu, Allah'ın hikmetine yaratmaya başlamanın yakışmadığını isbat için dayandıkları sözlerdir.**'
+- Netice/hüküm: **Aktarım: Zekeriyyâ er-Râzî'nin 3 şüphesi: (1) vakit tahsisi, (2) âlem elem dolu, ademde kalış daha hayırlı (teodise-pesimizm), (3) ihtiyaç-tatmin abes.**
+- Delil çeşidi: **taksîm + teodise argümanı**; (T) cedelî-hitâbî (aktarılan).
+- Mevzuya bağı: **KRİTİK — Fasıl I §8.3 (teodise), Fasıl III (Mead)**: **Şüphe 2 'yokluk yaratmaktan daha hayırlı, âhiret azabı' — Kur'ân/Sünnet imtihan öğretisi ve mead bâbında cevaplanmalı**; **Şüphe 3 'ihtiyaç-şehvet-tatmin abes' Risale'nin 'dünya imtihan yurdu' cevabıyla ele alınır**; **Râzî cevabı sonraki sayfalarda ⊬**.
+- Doğan sual: —
+
+## c4 p410
+- OCR: —
+- Okuma: okunmadı (boş)
+- İçerik: metin yok.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c4 p411
+- OCR: orta
+- Okuma: tam
+- İçerik: **4. Mukaddime (Muhammed b. Zekeriyyâ er-Râzî'nin sistemi — aktarım)**: '**âlemin hâdis olduğu, yaratmaya başlamanın Allah'ın hikmetine yakışmadığı delille sâbit ⇒ âlemi ihdâsa başlayan cahil bir fâil: nefs.**' **Takrîr**: '**nefs ezelden ebede hayûlâdan gâfildi; sonra ittifâken hayûlâya iltifat etti ve hayûlâyla karışırsa lezzetleri elde edeceğine i'tikâd etti; nefste hayûlâya tabiî-gerizî bir aşk (ışk) hâsıl oldu; her nefsin kendi bedenine aşkı kâmil ve tamdır, daha kâmili olamaz**; bu ittifâkî iltifat ve gayb idrâki üzerine gerizî aşk ⇒ **nefs hayûlâya bağlandı, terkîbinden hayvânî (öfke ve şehvet) hâsıl oldu.**' '**Hakîm ilâh bildi ki: bu bağlanma âfet, şer ve zarar kapısını açar; hayûlâ muhkem ve mükemmel, zarar cihetlerinden hâlî terkibi kabul etmez; fakat nefsi bu bağlanmadan men etmek imkânsız (aşk kuvvet ve kemâle erdi)…**' (p412)
+- Netice/hüküm: **Aktarım: nefs-hayûlâ aşkı ile âlemin hudûs mitolojisi (Muhammed b. Zekeriyyâ er-Râzî).** **Bu anlatım Kur'ân ve Sünnet'te dayanağı olmayan bir felsefî mitostur; Risale ana metne ALMAZ, ancak reddiye bağlamında kısaca anılır.**
+- Delil çeşidi: **anlatı/mit (delil değil)**; (T) hitâbî-zayıf.
+- Mevzuya bağı: **Fasıl I §8.3 (teodise)**: 'Allah'ın kudreti aşkı men edemez' unsuru **Allah'ın kudretine sınır koyma** (Sünnî akideyle çelişir); **mitin mahiyeti Râzî'nin reddiyesinde (sonraki sayfalar) aranacak.**
+- Doğan sual: —
+
+## c4 p412
+- OCR: orta
+- Okuma: tam
+- İçerik: **Sistem devam**: '**ilâh üçüncü bir şey daha bildi: nefis iyi terkib yapmaya kâdir değil; nefse bırakılsa terkibler fâsit ve çabuk bozulur ⇒ şiddetli ve çok elemler; bu üç mânâyı bilen hakîm-rahîm ilâh: en salih, fesada en uzak terkibi yapmak evlâ dedi; hayırlar çok, âfetler az olsun.** **Sonra ilâh nefsin cevherine akıl nûrunu ifâza eder; akıl nûruyla nefse anlaşılır ki bu terkibdeki âfetler hayırlarından çok; nefs hayûlâyla karışmaktan nefret eder, âlemine döner, hayûlâya iltifattan temiz.**' **Üç delile cevap (Zekeriyyâ)**: **(1)** 'hakîm fâilin terkten fiile hikmetsiz geçişi' bu sistemde **bahis dışı: cahil fâil; hakîm fâil cahilin yapmaya girişince onu en isabetli vecihte yönlendirdi (mâzur)**.
+- Netice/hüküm: **Aktarım: nefs-hayûlâ sisteminin 'hakîm ilâh mâzur' mantığı.**
+- Delil çeşidi: **anlatı**; (T) hitâbî-zayıf.
+- Mevzuya bağı: **Fasıl I §8.3**: sistemde 'ilâh en iyi yolu seçti' cümlesi Sünnî 'hikmet' yorumu ile yüzeyde benzer; **temel fark: nefsin kadîm ve bağımsız oluşu (şirk) ve Allah'ın kudretine sınır**.
+- Doğan sual: —
+
+## c4 p413
+- OCR: orta (ilk satır bozuk)
+- Okuma: tam (ilk satır hariç)
+- İçerik: **Üç delile cevap devam**: **(2)** 'tekvîn şerlerin kapısını açar' şüphesi bu mezhebe **zâildir: nefs ile beden terkibinden sakınmak gerekirdi; ama nefsin kendisi ona girişince hakîm ilâh onu en isabetli vecihte tedbir etti; bu âlemde hâsıl olan bütün hayırlar ve rahatlıklar hakîm ilâhın tedbiriyle; âfet ve elemler ise hayûlânın sâlihi tam kabul etmemesi ve nefsin cehli-aşkıyla girişmesindendir**; **(3)** 'ihtiyaç-tatmin abes' de zâil: 'ilâhın ihtiyacı yaratıp sonra giderdiği' abes olurdu (karnı yarıp sonra tedavi gibi); ama şer nefsin hayûlâya bağlanmasıyla geldi; hakîm-rahîm ilâh âfetleri gidermeye ve hayırlar ulaştırmaya çalışır: **cinnet geçirmiş bir adam başkasına zarar verirse, bir hakîm onu kurtarıp zararı gidermeye çalışırsa hamd ve senâya lâyıktır.**' **Sonra Râzî bu kelâmdan 'suâller' yöneltiyor (5 soru, p413–416).** **Soru 1**: '**nefsin cevherine hâsıl olan bu iltifat müessirsiz mi hâdis oldu, müessirle mi? Müessirsiz ⇒ hâdis müessirsiz hudûs, sânî isbâtı kapanır; müessirle ⇒ o müessir o hâtırayı niçin o vakitten önce yapmadı?**' (p414)
+- Netice/hüküm: **Aktarım tamam: nefs-hayûlâ sistemi 3 şüpheye cevap; Râzî'nin itirazları başladı (Soru 1).**
+- Delil çeşidi: **anlatı + itiraz**; (T) hitâbî-zayıf (anlatı); cedelî (itiraz).
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §8.3**: **Soru 1 ('nefsin iltifatı müessirsiz mi?') mit sisteminin ilk çatlağı**: aynı 'niçin şimdi' sorusu mitte de var — **mit sorunu çözmüyor, ertelıyor** (Râzî'nin itirazı p414).
+- Doğan sual: —
+
+## c4 p414
+- OCR: orta
+- Okuma: tam
+- İçerik: **Soru 1 devam**: '**müessirle ⇒ o müessir bu hâtırayı o vakitten önce niçin yapmadı? O vakitte bir hâsiyet var mıydı? Varsa hakîm fâil de o vakti ihdâs için bir hâsiyetle tahsis etmiş olamaz mı? Başka sebeple ise aynı caiz olur.**' **Muhammed b. Zekeriyyâ'nın cevabı**: '**bu suâl herkese lâzım: siz ilâhın âlemi belli vakitte îcâda kasd ettiğini, bundan önce sonsuz süre fiili terk ettiğini söylüyorsunuz; orada makûl gördünüzse burada da; hatta böyle abes ve sapma cahile, seven, hakîme-âlime yakışandan daha lâyık.**' **Filozoflar**: 'felek hareketleri cüz cüz hâdis; her hâdis sâbık olan mahalleri hazırlar, hâdisin sonrakini kabul etmesi için; sonsuz.' **Soru 2**: '**bu kelâm kâmil hakîmin bu şerefli âlemi ve kâmil fiilleri cahil fâilin fiiline tâbi olarak kasdettiğini gerektirir.**' **Cevap**: 'bu şerefli-kâmil fiiller zarar cihetlerinden hâlî olsaydı ibtidâyı cahil fâile isnada gerek yoktu; üç vecih hakîme isnâdı men ettiğinden ibtidâyı cahile isnad ettik; **hayır, rahmet, salâh, menfaat hakîm-rahîm fâile ⇒ Allah rahîm, ihsân edici, kullarına nâzır, şerleri onlardan defe, hayırları onlara ulaştırmaya çalışan; sonsuz hamd ve şükre lâyık.**'
+- Netice/hüküm: **Aktarım: mitin savunması: (a) 'niçin şimdi' soruları hakîm-âlim taraf için de aynı; (b) ibtidâ cahil, hayır hakîmden.**
+- Delil çeşidi: **nakz-savunma**; (T) cedelî.
+- Mevzuya bağı: **KRİTİK — Fasıl I §8 (irâde-tahsis), §8.3**: **Zekeriyyâ'nın 'bu suâl herkese lâzım: siz de ilâhın muayyen vakit kasdettiğini söylüyorsunuz' cevabı, c2 p137 ve c4 p268, p273'te Râzî'nin gördüğü 'aynı silahın iki yönü' örüntüsünün **hasım kaleminden** kaydıdır**: irâde-tahsis düğümü **Râzî'nin kendi tarafına da dönüyor**; **açık borç: kapanış sayfası Râzî'nin kendi kaleminden (⊬).**
+- Doğan sual: —
+
+## c4 p415
+- OCR: orta
+- Okuma: tam
+- İçerik: **Soru 2 cevap sonu**: 'bu takdirde Allah rahîm, nâzır, şerleri defeden, hayırları ulaştıran; sonsuz hamde lâyık.' **Soru 3**: '**bu mezhep nefislerin ve hayûlânın kıdemine muhtaç; bu bâtıl.**' **Cevap**: '**nefsin hudûsunu vâcib görenlerin delilleri zayıf; zayıflığı 'nefsin hâlleri' bâbında gösterilecek**' (⊬ hangi bâb). **Soru 4**: '**Allah nefsin hayûlâya bağlanmasının âfet ve korku kapısı açacağını bildi; niçin nefsi engellemedi?**' **Muhammed b. Zekeriyyâ**: '**bu aşk nefsin cevherine zâtî-gerizî olunca izâlesi imkânsız oldu; Bârî yalnız mümkine kâdir, mümteni'e değil; Allah bildi ki nefsi hayûlâya bağlanmaktan men etse onu bağlanmaktan vazgeçirmezdi, şerrin maddesi kesilmezdi; bu yüzden hakîm ilâh nefsi engellemeyi kasdetmedi, bağlanana kadar bıraktı, sonra terkibleri hayra en yakın, şerre-fesada en uzak vecihte yaptı; sonra nefsin cevherine akıl nûrunu ifâza etti ki akıl nûru ve bu âlemin hâllerindeki tecrübe çokluğuyla nefis bu hayûlâyla bağlanmanın hiç faydası olmadığını, şer ve korku kapısı açtığını anlasın.**'
+- Netice/hüküm: **Aktarım: 'Allah mümkine kâdir, aşk zâtî olduğundan engellemek mümteni'' cevabı.**
+- Delil çeşidi: **savunma (cedelî)**; (T) cedelî.
+- Mevzuya bağı: **KRİTİK — Fasıl I §8.3 ve kudret**: **'Allah yalnız mümkine kâdirdir' Sünnî kabuldür; hile burada 'nefsin aşkını mümteni' kılmak': Allah'ın kudreti dâimî ile kadîm-bağımsız bir nefsin zâtî aşkına sınır çekmek** (kadîm nefs kabulü şirk-i kelâmîdir; Risale reddeder).
+- Doğan sual: —
+
+## c4 p416
+- OCR: orta
+- Okuma: tam
+- İçerik: **Soru 4 cevabı sonu**: '**nefs bu mânâlara vâkıf olup büyük saâdetin nefsin âlemine dönmesinde, Bârî'yi tanıyarak mutlu olmakta ve mukaddes temiz ruhlarla musâhabette olduğunu görünce bu aşk ve meyil zâil olur; bedenden ayrılınca bu dâimî saadetlerde kalır.**' **Misal**: '**hakîm bir adamın oğlu, kalbinde bir beldeye seferi ısrarla arzu eder; hakîm bilir ki engellese vazgeçmez; hikmet gerektirir ki oğlunu o beldeye gitmeye bırakır, yanına fâzıl bir insan gönderir; o beldedeki fazîlet-kabâhati ve babasının beldesindeki hayır-saadeti ona hatırlatsın; oğul o beldeye gidip oradaki âfetleri görünce ve yol arkadaşı onlara işaret edince bu yolculuğun hata olduğunu anlar, babasının beldesine rağbeti kuvvetlenir; döndüğünde o kasabadan büyük nefret duyar.**' **Soru 5**: '**bu aşkın keyfiyeti nedir?**' **Cevap (Zekeriyyâ)**: '**bu aşkın sübûtu zarûrî ma'lûm: bütün hayvanlar tabiatları gereği hayâtı ve cismânî lezzetleri sever; bunları bulunca nihâyet mutluluk, bir kısmı kalınca nihâyet şekâvet; nefsin bu bedene sevgisi nefsi kendini unutturacak hadde ulaştı: halkın çoğunun i'tikâdı 'insan bu beden'; dünya ve âhirette bu cismânî lezzetlerden başka saâdet yok; hatta acil lezzetlerden yüz çeviren zâhidler âhirette yemek-nikâh lezzetini bulmak için yüz çevirir.**'
+- Netice/hüküm: **Aktarım: mitin son soruları: (a) akıl nûru ile nefsin dönüşü; (b) misal (babanın oğul göndermesi); (c) aşkın zarûrî oluşu; (d) zâhidlerin yalnız lezzet için zühdü (iddia).**
+- Delil çeşidi: **misal + anlatı**; (T) hitâbî-zayıf.
+- Mevzuya bağı: **KRİTİK — Fasıl III (Mead), Fasıl I §8.3**: **'zâhidler âhirette yemek-nikâh için zühd eder' iddiası Kur'ân'ın 'Allah'ın rızâsı en büyüğüdür' (Tevbe 9/72) öğretisiyle örtüşmez; Risale ana metne almaz ve mead bâbında 'rıdvân en büyük' cümlesini yazar.** **'Nefs âlemine döner, bedenden ayrılınca dâimî saâdet' sistemin ahiret tasavvuru; bedenli haşri nefyeder** — Risale'nin cismânî haşr ilkesiyle (Fasıl III) çelişir; **reddiye bağlamında not**.
+- Doğan sual: **Râzî'nin bu sistemi reddi hangi sayfada (kavil 7 reddi)?** (p417+.)
