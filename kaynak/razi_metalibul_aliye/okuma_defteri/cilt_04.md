@@ -2521,3 +2521,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **bedîhe iddiası (filozof) vs vehim iddiası (mütekellim)**; (T) hitâbî-ikna'î karşılıklı; ikisi de burhan değil, **fıtrat mahkemesi** (delil ≠ dava).
 - Mevzuya bağı: **KRİTİK — Fasıl I §3, §6.3 ve 'fıtrat/bedîhe' ayrımı (c2 p59, p70)**: hasım 'fıtratı cedelcilerin bozması' diye kendi lehine kullanıyor; mütekellim 'vehim' diyor — **iki tarafın bedîhe iddiasını Risale ana metne almaz; 'hitâbî-ikna'î' işaretler**, ders katmanında **'bedîhe mahkemesi kimin lehine?' örneği** olarak konur.
 - Doğan sual: **(1)** Râzî zaman meselesini hangi cilt/bâbda tamamlıyor? **(2)** Hüccet 6–8 (sonsuzun sonu, inkızâ, hâsıl oldu) için Râzî'nin kendi cevabı var mı, yoksa hasmın cevabı (itiraz) son söz mü? **(3)** 1. Makâle'nin 3. Fasılı ne? (p281 okunacak.)
+
+## c4 p281
+- OCR: iyi
+- Okuma: tam
+- İçerik: **1. Makâle, 3. Fasıl: 'cismin ezelde sâkin olmasının imtinâ'ı'.** **Cisimlerin kıdemine kâil iki fırka**: **(1) ezelde müteharrik diyenler**, kendi içinde iki: **(a)** âlem maddesi-sûreti-şekliyle kadîm, felekler ve kevâkib ezelen ve ebeden müteharrik — **Aristo ve tâbileri**; **(b)** ezelde **lâ yetecezzâ cüzler** vardı, ezelden ebede düzensiz hareket ediyordu, tesâdüfen çarpışıp semâlar oluştu — **Demokritos ve ashâbı**. 'Ezelî hareketin imtinâ'ı gösterilince bu iki kavil bâtıl.' **(2)** İkinci fırka: **âlem maddece kadîm, sûretçe muhdes**; âlemin maddesi küçük cüzler, **ezelde sâkin**, sonra Allah onları **hareket ettirip âlemi onlardan terkib etti** (p282: 'Aristo'dan önceki filozofların çoğunun kavli').
+- Netice/hüküm: **Kıdem mezhepleri haritası: Aristo (kadîm-müteharrik), Demokritos (cüz-i lâ yetecezzâ, tesâdüf), Aristo-öncesi (kadîm madde-sâkin, hâdis sûret).** (Tarihî atıflar Râzî'nin nakli, birincil kaynakta doğrulanmadı ⊬.)
+- Delil çeşidi: **sınıflama (taksîm)**; (T) betimleyici.
+- Mevzuya bağı: **Fasıl I §3**: hudûs tarafının hedefi **üç kıdem mezhebi**: ezelî hareket (1. Makâle 2. Fasıl, bitti), ezelî sükûn (bu fasıl). Risale ana metne **filozof adlarını değil 'kıdem' iddiasının iki kolunu** yazar; Demokritos/Aristo adları ders katmanı dipnotu.
+- Doğan sual: —
+
+## c4 p282
+- OCR: iyi
+- Okuma: tam
+- İçerik: **Râzî'nin hedefi**: 'bu makamda **bu mezhebi (ezelî sükûn) iptal ediyoruz**; iptali ile üçüncü mezheb de iptal olur' (metin bir cümle eksik). **Delil**: '**sükûn ezelî olsaydı zevâli câiz olmazdı; zevâli câiz ⇒ sükûn ezelî olamaz.**' **Uyarı**: sükûn 'hareketin ademi' ise delil sahih değil, **ezelî ademin zevâli bi'l-ittifâk câiz (yoksa cisimlerin hudûsu bâtıl olurdu)**: **iki vecih (hasım ilzâmı)**: **(1)** 'âlem hâdis ise ademi ezelî; ezelî ademin zevâli imtinâ'; o hâlde âlem vücûd bulmamalıydı; bulduğuna göre ademi ezelî değil ⇒ vücûdu ezelî'; **(2)** 'âlem hâdis ise Bârî ezelde âleme **mûcid ve müessir değildi**; bu adem ezelî ise zevâl imtinâ'; zevâl olduğuna göre mûcidiyet ademi ezelî değil ⇒ **mûcidiyetin hâsılı ezelî ⇒ âlemin kıdemi**' ⇒ '**her ezelî şeyin zevâli imtinâ'dır**' denemez. **Bu yüzden dâvâ mevcûd (vücûdî) hususlara tahsis edilir**: 'ezelde mevcut olan her şeyin zevâli imtinâ'.' **Delilin üç direği**: **(1) sükûn mevcut sıfattır; (2) her sükûnun zevâli câiz; (3) zevâli câiz olan ezelî olamaz.**
+- Netice/hüküm: **Râzî'nin hükmü: 'ezelî ⇒ zevâl imtinâ'' kaidesini yalnız vücûdî şeylere tahsis eder; ezelî ademlerin zevâli câizdir. Hasım ilzâmı (mûcidiyet ademi ezelî, sonra zevâl) Râzî'ce aktarılıyor ve kaideyi daraltıyor.**
+- Delil çeşidi: **taksîm + ilke**; (T) burhânî biçim, öncül: sükûnun vücûdî sıfat oluşu (Mesele 1'de ispat).
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §8**: **'ezelî ademin zevâli' ilzâmı hudûs tarafının kendi 'Allah ezelde âleme mûcid değildi, sonra oldu' cümlesini de ilzâm ediyor** — Risale **'Allah'ın mûcidiyeti hâdis' cümlesini yazmaz; 'ezelî irâde, muayyen vakitte taalluk' der**; Râzî'nin daralttığı kaide bunu güvenceye alır.
+- Doğan sual: —
+
+## c4 p283
+- OCR: orta (ilk satırlar bozuk)
+- Okuma: tam (bozuk ilk satırlar hariç, mânâ bütün)
+- İçerik: **Üç mesele**: **(1)** sükûn mevcut sıfat mı? **(2)** her sükûn zevâli câiz mi? **(3)** zevâli câiz olan ezelî olamaz mı? **Mesele 1**: '**mütekellimîn: öyledir; filozoflar: sükûn 'hareket edebilme şânından olan şeyden hareketin ademi'.**' **Mütekellimîn'in delilleri (Râzî: 'zayıf deliller')**: **Hüccet 1**: 'sükûn hareketin ademiyse **Bârî hareketle vasıflanmadığı için sâkin olurdu**; ayrıca hareket de…' **Cevap (Râzî'nin 'ولقائل أن يقول' itirazı)**: 'biz **sükûnu mutlak hareket ademi demiyoruz, harekete kâbil olan şeyden hareketin ademi** diyoruz ⇒ söz sâkıt.' **Hüccet 2**: 'sükûnu hareketin ademi saymak, hareketi sükûnun ademi saymaktan evlâ değil ⇒ ya her biri ötekinin ademi (ikisi 'adem-i adem' ⇒ vücûd) ya ikisi de vücûdî; birincisi bâtıl (her biri adem-i mahz ⇒ adem-i adem ⇒ mevcut sıfat, çelişki) ⇒ ikisi de vücûdî.'
+- Netice/hüküm: **Râzî: mütekellimînin 'sükûn vücûdî' delillerini 'zayıf' ilan eder ve ilkini (Bârî sâkin olurdu) kendisi çürütür.** (F 27-B: Râzî **kendi safının delilini** zayıf buluyor — c2'deki yöntem: 'kuvvetli değil/zayıf'.)
+- Delil çeşidi: **taksîm + ilzâm (zayıf)**; (T) cedelî.
+- Mevzuya bağı: **Fasıl I ders katmanı (c2 sözlük kutusu)**: **Râzî'nin 'kendi tarafının delilini zayıf ilan etmesi'nin yeni örneği** (c2 p10, 29, 54 gibi); **sözlük kutusuna 'c4 p283, 288' eklenir**. Risale ana metne **sükûnun vücûdî oluşunu değil, delilin cedelî derecesini** yazar.
+- Doğan sual: —
+
+## c4 p284
+- OCR: orta
+- Okuma: tam
+- İçerik: **Hüccet 2'ye Râzî'nin itirazı (Râzî-sesli 'ولقائل أن يقول')**: '"sükûnu hareketin ademi saymak evlâ değil" sözü **nefsü'l-emirde evlâlığın nefyi mi, bizim akıl ve fikrimizde mi?** Birincisi men' olunur (biri adem biri vücûd olabilir); ikincisi kabul, **fakat tevakkuf etmemiz ve delilsiz iki taraftan birine kat'î hükmetmememiz gerekir.**' **Dört kısım**: cisim sükûndan hareketli hâle geçtiğinde: **(1)** târi (gelen) de zâil (giden) de adem; **(2)** târi adem, zâil vücûd; **(3)** tersi; **(4)** ikisi de vücûd (metinde üç kısmı sayıp dördüncüyü zımnen). **Birinci kısım**: 'mutlak bâtıl: adem hakîkatsiz, teşahhussuz, sübûtsuz ⇒ **bir ademin ötekine tebeddülü imtinâ'**.' **'Bazıları bâtıl değil der'**: **vecih 1**: 'hâdislerin ezelde hudûsu **bizzât mümteni'** idi, lâ yezâlde **bizzât mümkin** oldu' — imtinâ' ve imkân **mevcut sıfat olamaz**' (delil p285'te).
+- Netice/hüküm: **Râzî: (a) 'sükûn ⇒ adem' de 'sükûn ⇒ vücûd' de delilsiz kat'îleştirilemez ⇒ tevakkuf; (b) 'ademden ademe tebeddül' ilk bakışta imtinâ'; bunu reddedenlerin (bazı kimseler) vechi imtinâ'-imkân tebeddülüdür.**
+- Delil çeşidi: **taksîm + itiraz**; (T) cedelî, tevakkuf içerir.
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §8 ve 'ma'dûm şey midir'**: Râzî burada **adem tebeddülünü** 'nazariyat' olarak tartışıyor; **ma'dûmun şeyliği meselesi (Mu'tezile 'ma'dûm şey' iddiası) kelâm çizgisinde ayrıca kapanmalı** (⊬ hangi cilt); Risale ana metin bu bahse **girmez**.
+- Doğan sual: **Ademden ademe tebeddül (imtinâ' → imkân) hasmın hangi ilkeye dayandığı c4 p285'te.**
+
+## c4 p285
+- OCR: orta-kötü (dipnot işaretleri yoğun)
+- Okuma: kısmî (bazı cümle sonları bozuk; imtinâ'/imkân delilinin ana hattı okundu)
+- İçerik: **'Bazıları bâtıl değil der' vecihleri (hasmın sesi)**: **Vecih 1 devamı**: imtinâ' ve imkân **mevcut sıfat olamaz**: **imtinâ'** mevcut sıfat olsa mevsûfu vücûda evlâ olur, oysa sarîh akıl 'mevcut sıfat mahz nefy/adem ile kâim olmaz' der ⇒ mevsûf mümteni'ü'l-vücûd ve vâcibü'l-vücûd olurdu (muhâl); **imkân** mevcut sıfat olsa ya vâcib (bâtıl: sıfat mevsûfa muhtaç, muhtaç mümkin), ya mümteni' (bâtıl), ya mümkin (⇒ imkânın imkânı, teselsül) ⇒ **imtinâ' imkâna tebeddül etti, ikisi de adem sıfatı.** **Vecih 2**: 'âlem ma'dûm iken Bârî için **'âlemin vücûduna âlim değildi'** sadık; mevcut olunca 'âlim oldu' sadık ⇒ **Allah'ın zâtında ilim sıfatı hâdis** (bâtıl) ⇒ bu nefy/isbâtın sıdkı **hudûs/zevâl** göstermez. **Vecih 3**: 'âlem ma'dûm iken Bârî âleme mûcid değildi, sonra mûcid oldu ⇒ **Allah'ın zâtında bir 'mûciiyet' sıfatı hâdis olur** … (p286).
+- Netice/hüküm: **Hasım vecihleri: 'ademden ademe tebeddül' mümkin; nefy→isbât geçişi zâtta yeni mevcut sıfat gerektirmez.** (Sünnî akide açısından: Allah'ın sıfatları ezelî; bu vecihler **hudûs sıfatı Allah'a nisbet etmeyi reddeden** ilzâm olarak sunuluyor.)
+- Delil çeşidi: **ilzâm (Allah'ın ilim/mûcidiyet sıfatı)**; (T) cedelî.
+- Mevzuya bağı: **KRİTİK — Fasıl I §8, c3 (ilim-irâde)**: **'âlim değildi→âlim oldu' ilzâmı hasmın irâde-tahsis nakzının kardeşi**; Risale **'Allah'ın ilmi ezelî ve değişmez, ma'lûm hâdis'** cümlesini yazmalı (c3 ilim bâbı ile). **Râzî bu ilzâmı kendi cevabıyla kapatmadı (p287'de 'bedîhiyyâta kadh' der).**
+- Doğan sual: Râzî 'Bârî âlim değildi/oldu' nefy-isbâtını Allah'a tegayyür yükletmeyen 'izâfî tagayyür' cevabıyla mı kapatıyor? (Cilt 4 kalan sayfalar ⊬.)
+
+## c4 p286
+- OCR: orta-kötü
+- Okuma: kısmî (ilk satır bozuk; vecih 3–5 ana hattı okundu)
+- İçerik: **Vecih 3 devamı**: 'zâtta hâdis sıfat teselsül'; 'mûcid olmak nefs-i vücûd-i âlemden başka bir şey değil' cevabına: '**bu sâni'in nefyini gerektirir**: 'âlem Allah'ın îcâdıyla vücûd buldu' derken îcâdı âlemin vücûduyla tefsir edersek 'âlem kendi nefsi için var' olur.' **Vecih 4**: sükûn mahalde hâsıl oldu ⇒ mahallin 'mahal olması' **zâid araz** ⇒ mahalliyetin mahalliyeti ⇒ **teselsül**; 'mahal olmak sükûnun aynıdır' cevabı: sükûnu, mahalde hâsıl olduğundan şüphe edilirken tasavvur edebiliriz ⇒ gayr; ayrıca nisbet mahsusa ⇒ gayr. **Vecih 5**: 'hasmın kelâmının mihveri: **adem teayyün, teşahhus, temyiz taşımaz**'; **men' olunur; deliller (p287)**.
+- Netice/hüküm: **Hasım vecihlerinin devamı (mûcidiyet, mahalliyet teselsülü, adem-temyiz).**
+- Delil çeşidi: **ilzâm + teselsül**; (T) cedelî.
+- Mevzuya bağı: **Fasıl I §3 (teselsül), c1 M2–3**: aynı 'nisbetin nisbeti' teselsül örüntüsü (c4 p258–260 ile) ⇒ Râzî'nin **'i'tibârî nisbet' cevabı (p264)** buraya da uygulanır mı? (⊬)
+- Doğan sual: —
+
+## c4 p287
+- OCR: orta-kötü
+- Okuma: kısmî (vecih 1–2'nin bazı cümleleri bozuk; sonuç net)
+- İçerik: **Vecih 5 — 'adem temyiz taşır' delilleri (hasım ilzâmının cevabı)**: **(1)** 'lâzımın ademi melzûmun ademine delâlet eder; melzûmun ademi lâzımın ademine değil' (bir ademin ötekinden ayrımı); **(2)** 'kastın ademi (elin mahalden ademi) öteki elin hâsıl olmasını mümkin kılar, sâir ademler öyle değil'; **(3)** 'vâcibin ademi **mümteni' bi'z-zât**, câizin ademi mümteni' değil ⇒ imtiyaz'; **(4)** '**âlemin ademi ezelde vâcib, lâ yezâlde vâcib değil** ⇒ iki adem imtiyaz ⇒ bir ademin ötekine tebeddülü akılca uzak değil.' **Râzî'nin hükmü (Râzî-sesli)**: '**bu suâllerin bazısında gumûz olsa da, biz zarûrî biliriz ki tebeddül hâsıl olurken iki mütebeddilden biri vücûdî olmalı; bu suâllerin hepsi bedîhiyyâta kadhtır.**' **Kalan üç ihtimal sahih**: **(a)** mahalde sadece **mevcut bir sıfat doğdu**, öncekinden bir şey zâil olmadı; **(b)** mahalden mevcut sıfat **zâil oldu**, yeni bir şey doğmadı; **(c)** **mevcut sıfat zâil oldu ve yeni mevcut sıfat doğdu**.
+- Netice/hüküm: **Râzî'nin hükmü: 'ademden ademe tebeddül' akıl bedîhesine aykırı; tebeddülde iki taraftan biri vücûdî olmalı. Üç ihtimal (doğum/zevâl/ikisi) açık ve muhtemel.** (Hasmın 'adem temyiz taşır' delilleri Râzî'ce aktarılıyor, kabul edilmiyor.)
+- Delil çeşidi: **bedîhe (Râzî'nin kendi hükmü) + taksîm**; (T) hitâbî-burhânî karışık; **F 27-B**: 'hepsi bedîhiyyâta kadh' hasmın vecihlerine **tek tek cevap değil**; kendi tenkidim: bedîhe iddiası burada da 'cedelî' derecede.
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §8**: **'imtinâ'dan imkâna tebeddül' meselesi (c4 p235 Delil 5, p257 nakız 8, p266 itiraz 2)** üçüncü kez geliyor: Râzî **imkânı 'vücûdî sıfat' değil adem olarak alıyor (p285'te hasım)**; Risale 'imkân-vukû'' ayrımını yazarken **imkânın mahiyeti (adem/vücûd) tartışmasına girmez**.
+- Doğan sual: Râzî 'imkân adem sıfatı mı' sorusunda **kendi hükmünü** nerede veriyor? (p285 hasım anlatımı; Râzî bu vecihi 'bedîhiyyâta kadh' sayıyor ⇒ imkân **vücûdî**?)
+
+## c4 p288
+- OCR: orta
+- Okuma: tam
+- İçerik: **Râzî: 'kesin hüküm delilsiz ⇒ cehl-i mahz'; 'sükûnu hareketin ademi saymak evlâdır' sözü 'zayıf söz'.** **Râzî'nin kendi delili — Sükûn mevcut sıfattır (Hüccet 1)**: '**cismin müteharrikken sâkin olduğunu görürüz; iki hâlde zât bâkî ⇒ iki hâlden biri vücûdî ⇒ ikisi de vücûdî**; çünkü **hareket = ilk hâsılın ikinci hayizde hâsıl olması; sükûn = ikinci hâsılın birinci hayizde hâsıl olması**; ikisi **tam mâhiyette eşit**: her ikisi hayizde hâsıl olmak; fark: **hareket, başka hayizdeki hâsıla mesbûk olma şartıyla hayizde hâsıl olmak; sükûn, aynı hayizde önceden hâsıl olma şartıyla**; mesbûkiyet **arızî vasıf**, mâhiyetin dışında; **arızî vasıflar mâhiyete dokunmaz** ⇒ biri vücûdî sıfat ise öteki de.' **İtiraz (aktarılıyor)**: 'bu, hareketin **birinci hasılın ikinci hayizde hasılı** olduğu tefsirine dayanır; bize göre bâtıl: hareket **ardışık hasûller / ardışık temaslar**…' (p289'a).
+- Netice/hüküm: **Râzî'nin hükmü: sükûn vücûdî sıfattır (hareket ile aynı mâhiyet-hayizde hâsıl olma; fark arızî mesbûkiyet). Râzî bu delilin dayanağını kendisi önce 'zayıf' saymadı; aşağıda hasım itirazı geliyor.**
+- Delil çeşidi: **kıyas + ilke (mâhiyet-arıza ayrımı)**; (T) burhânî biçim, öncül: hareket ve sükûn hayizde hâsıl olma ile tam mâhiyet paylaşır (öncül bağımlı).
+- Mevzuya bağı: **Fasıl I §3**: sükûnun vücûdiyeti **kıdem-sükûn (3. Fasıl) delilinin 1. direği**; Risale **bu bahse girmez**, 'ezelî sükûn imtinâ'' iddiasını yalnız 'her vücûdî sıfat zevâli câiz' ilkesiyle kurar.
+- Doğan sual: Râzî'nin 'sükûn = ikinci hâsıl birinci hayizde' tefsiri ile hasmın 'ardışık hasûller/temaslar' itirazı p289'da nasıl çözülüyor?
