@@ -2305,3 +2305,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **nakz (matematik + ilâhî sıfat)**; (T) cedelî-analitik; **kendi tenkidim**: Nakız 6'nın sayısal ifadesi OCR'de kısmen hasarlı ('bin' ve '500' değerleri okundu, oran iddiası kısmî); hüküm bağlanmadı.
 - Mevzuya bağı: **KRİTİK — Fasıl I §3**: Nakız 5–6 **'sonsuz nisbetlerin vücûdu' ⇒ matematiksel sonsuzun tafsîlî şeyler olarak mevcûdiyeti** ile ilgilidir; **Risale delili 'ayânda fiilî sonsuz imtinâ'' diye daraltırsa nakızlar dışta kalır**, Râzî'nin buradaki cevap kolunu (⊬) görmeden 'burhânî' işaretlenmez.
 - Doğan sual: 6 nakzın cevap ayrımı (sıfat / imkân / nisbet / katlama) Râzî'de nasıl? Cilt 4 p257+'da aranacak.
+
+## c4 p257
+- OCR: orta-kötü (Arapça satırlar kırık, kısmen okunabilir)
+- Okuma: kısmî (nakız 8'in ilk iki vechi ile nakız 9'un ayrıntıları OCR hasarından bulanık; ana iddia okundu)
+- İçerik: **Hasım nakızlarının devamı (hâlâ 'hudûs delilinin itirazı', Râzî sesi değil).** **Nakız 7**: '**Allah'ın zâtının devamı ezelden bugüne, ezelden Tufan'a olan devamdan bedîhî surette uzundur**; öyleyse sizin bütün vecihleriniz mazi hâllere bir evvel isbat ediyorsa **Allah'ın vücûduna da bir evvel isbat eder**.' **Nakız 8**: '**hâdislerin sıhhat (imkân)ı ezelden Tufan'a, ezelden bugüne olandan azdır** ⇒ bu sıhhatin de evveli olur; **(1)** o mebdeden önce **mümteni' bi'z-zât** olup sonra mümkin olmuş demektir (muhâl); **(2)** hâdisin vukûu için farz edilen her vakitten evvel de imkân hâsıldı; bir iki gün önce hâsıl olsaydı o kadar ezelî olurdu ⇒ hâdislerin sıhhatine bir 'ibtidâ' farzetmek muhâl.' **Nakız 9**: ezel tarafını ebed tarafıyla karşılaştır: bugünden ebed sonuna ve bu uçta çakıştır, ebed tarafında tefâvüt görünür veya görünmez… **'ebed tarafında nihâyet bâtıl bi'l-ittifâk'**.
+- Netice/hüküm: **Hasım: 'Allah'ın vücûdunun devamı' ve 'imkânın ezelîliği' delilin lâzımını Allah'a döndürür (nakz).**
+- Delil çeşidi: **nakz (ilzâm)**; (T) cedelî.
+- Mevzuya bağı: **KRİTİK — Fasıl I §3 ↔ §6.3 (kıdem-bekâ)**: **'Allah'ın devamı ezelden bugüne, Tufan'dan bugünden uzundur' nakzı** — Risale 'mazi hâdisin evveli var' delilini yazarken **Allah'ın zâtının 'zamandan münezzeh ezelîliği'** ayrımı zorunlu (c2 p76: 'devam zamana bağlı olmak zorunda değil').
+- Doğan sual: Râzî nakız 7'ye cevabını nerede veriyor? (p261–264'te 'nakızların hepsi izâfî' genel cevabı; **doğrudan 'devam zamansız' cevabı görünmüyor**, ⊬ ayrıca aranacak.)
+
+## c4 p258
+- OCR: orta-kötü
+- Okuma: kısmî (nakız 10'un girişi ile 1. misalin son cümleleri OCR bulanık)
+- İçerik: **Nakız 10: 'sizin delil, sonsuz mevcûdât kabulünü (teselsül) her sahada zorunlu kılar; kabul etmemek hakikatleri nefyeder.'** **On misalin ilk beşi**: **(1)** imkân mümkinin sıfatıdır; sıfat vâcib değil ⇒ mümkin ⇒ 'imkânın imkânı' zâid ⇒ teselsül; **(2)** Vâcib'in vâcib olması zâtın sıfatı, vücûb zâid… teselsül; **(3)** 'insan'ın mefhûmu ve müşterek mefhûm ⇒ ta'ayyünün ta'ayyünü zâid ⇒ teselsül; **(4)** **müessiriyet**: müessir ve eserin zâtından başka (zâtları te'sîr ma'lûm değilken bilinir); bu 'gayrilik' müessirin sıfatı; sıfat mevsûfa muhtaç ⇒ muhtaç mümkin ⇒ müessire muhtaç ⇒ müessiriyetin müessiriyeti… teselsül; **(5)** cismin siyahla mevsûfiyeti cisim ve siyahtan başka ⇒ mevsûfiyetin mevsûfiyeti… teselsül.
+- Netice/hüküm: **Hasım nakızlarının en ağırı: 'her ilişkide sonsuz teselsül; sonsuza gitmek inkâr edilirse mâhiyetlerin ve nisbetlerin hepsi inkâr olur (sofestâ)'.**
+- Delil çeşidi: **nakz (teselsül ailesi)**; (T) cedelî-analitik.
+- Mevzuya bağı: **KRİTİK — Fasıl I §3 (teselsül), c1 Mesele 2–3 (vücûb sübûtî, vücûd zâid)**: nakız 2 **'Vâcib'in vücûbu zâtın sıfatı ⇒ zâid'** Râzî'nin kendi c1 hükmüyle (vücûb sübûtî, vücûd zâid) **çakışıyor**; Râzî'nin cevabı (p264) 'izâfetler ayânda yok' — **c1'deki 'sübûtî' ile 'ayânda mevcut değil' arası fark açıklanmalı** (⊬).
+- Doğan sual: 'Sübûtî' ile 'ayânda mevcut' aynı şey mi (c1 M2)? Râzî'nin cevabı 'vücûb i'tibârî' demiyor mu? (**Kendi çelişki riski, Risale'ye alınmadan çözülmeli.**)
+
+## c4 p259
+- OCR: orta
+- Okuma: tam
+- İçerik: **Misal 5 sonu ve 6–9**: **(6)** 'zevciyet dörtün lâzımıdır': luzûm mefhûmu 'dört olmak'tan başka (fer'iyet üçe lâzım), luzûm dört-zevc arasında **nisbet**, nisbet ikisinden başka ⇒ bu luzûmun da luzûmu ⇒ teselsül; **(7)** siyahın harekete muhâlif olması siyahlıktan başka; muhâlefetin de muhâlefeti ⇒ teselsül; **(8)** 'insan olmak / vâhid olmak': insan vâhid de kesîr de olur; vâhidiyet o özel mâhiyetten başka; vahdet mâhiyeti vücûda girerken vâhid olmak zorunda ⇒ teselsül; **(9)** tahtiyet, fevkiyet, ubüvvet, benîlik, mâlikiyet, memlûkiyet gibi izâfetler arazlardır, kendi mahallerinde hâldir; 'hâl olmaları' ayrı bir izâfet ⇒ izâfetin izâfeti…
+- Netice/hüküm: **Hasım nakızları: 9 misal (imkân, vücûb, ta'ayyün, te'sîr, mevsûfiyet, luzûm, muhâlefet, vahdet, izâfet).**
+- Delil çeşidi: **nakz (teselsül)**; (T) cedelî.
+- Mevzuya bağı: Fasıl I §3: **'ilişkinin ilişkisi' teselsülü klasik 'nisbet-i i'tibâriyye' cevabıyla kapatılır** (Râzî p264); Risale teselsül burhanlarında **hangi teselsülün 'i'tibârî' olup kapanmadığını hangisinin 'fiilî illî' olduğunu** ayırmak zorunda.
+- Doğan sual: —
+
+## c4 p260
+- OCR: orta
+- Okuma: tam
+- İçerik: **Misal 9 sonu ve 10**: **(10)** 'sizce cisim hâdis; hudûsu zâtı değil (yoksa 2. zamanda da hâdis olurdu — muhâl); o hâlde hudûsun hudûsu…' teselsül. **Sonuç**: '**bu misallerde çok var, kâfi; bu mânâları ancak bu teselsüllerle ve sonsuzun vücûda girmesini kabulle isbat edebiliriz; bu asıl inkâr edilirse hakâik ve mânâlar nefyolunur, sofestâya girilir — muhâl; ⇒ sonsuzun vücûda girişini kabul zarûrî.**' **Ön itiraz**: 'bu misallerin hepsi izâfî/nisbî; izâfetler ayânda vücûdsuz, akıl ve zihnin i'tibârı' ⇒ soru düşer. **Cevap (hasım)**: '**Müessirin zâtı eserde nefsü'l-emirde müessir mi, değil mi?** Evetse nefsü'l-emirde ⇒ teselsül; hayırsa 'müessir müessir değil'…
+- Netice/hüküm: **Hasım nakızlarının sonucu: 'sonsuz mevcûdâtı kabul etmemek ⇒ hakâikin inkârı'; 'i'tibârî' kaçışına karşı dilemma.**
+- Delil çeşidi: **nakz + dilemma**; (T) cedelî.
+- Mevzuya bağı: **Fasıl I §3**: 'i'tibârî nisbet' kaçışının 'sofestâ'ya götürdüğü iddiası **Râzî'nin kendi p264 cevabıyla çatışır** ('izâfetler ayânda yok'); bu çelişkinin kapanış sayfası aranıyor (p261–264).
+- Doğan sual: Râzî p264'te bu dilemmaya ('nefsü'l-emirde müessir mi?') **doğrudan** cevap veriyor mu? (Görünen: cevap 'vâsıta ittisali bozar' argümanı, **dilemmanın ikinci şıkkına değil**, bkz. p264 kendi tenkidim.)
+
+## c4 p261
+- OCR: orta
+- Okuma: tam
+- İçerik: **Hasım dilemma sonu**: 'ikinci şıkta nefsü'l-emirde müessir ve etkilenen yoktur, zât sıfatla mevsûf değil, siyaha misil ve beyaza zıd değil ⇒ **sofestâ ve cehâlet**; öyleyse **ya sofestâ ya teselsül ve sonsuzun vücûdu** — matlûb budur.' **Ek itiraz (şef'/vitr, nısf)**: '**şef'-vitr delili gâyet zayıftır: şef' veya vitr ile nitelenen adet mütenâhî adettir; adet sonsuzsa şef'/vitr denemez; siz mütenâhî oluşunu şef'/vitre bina ediyorsunuz ⇒ devir**; 'her adedin yarısı bütününden azdır' delili de: yarısı olan adet mütenâhî adettir, mütenâhî oluşunu yarıya bina ediyorsunuz ⇒ devir.' **Cevaplar (Râzî'nin cevapları başlıyor)**: **1. suâl** (hareket vâhid, adet yok) — 3 vech: **(1)** hareketin cüzleri kimi mazi kimi müstakbel; mazi olan 'vücûd buldu ve bitti', müstakbel 'vücûd bulmadı, bulacak' ⇒ **hasiyetleri farklı** ⇒ ta'addüd.
+- Netice/hüküm: **Hasım sonuç (sofestâ veya sonsuz); Râzî cevaplarının 1. vechi: hareketin mazi/müstakbel cüzleri var.**
+- Delil çeşidi: **cedelî (devir itirazı) + taksîm (Râzî cevabı)**; (T) cedelî-burhânî.
+- Mevzuya bağı: **Fasıl I §3**: **'şef'-vitr ve nısf' vecihleri hasmın 'devir' itirazıyla zayıflatılıyor, Râzî cevabı bu iki vecihe doğrudan yok** (⊬ p262+'da yok görünüyor) ⇒ Risale bu iki vecihi **almaz**.
+- Doğan sual: Râzî 'şef'/vitr' ve 'nısf' devir itirazına cevap verdi mi? (p262–264'te **görünmedi**; cevap yok ise vecih 8–9'un kıymeti düşer; **açık borç**.)
+
+## c4 p262
+- OCR: orta
+- Okuma: tam
+- İçerik: **Râzî cevap 1 devamı**: **(2)** hareketin mâhiyeti 'bir hâlden hâle tagayyür'; terk edilen hâl ile intikal olunan hâl ayrı ⇒ **tagayyür ve ta'addüd**; **(3)** her devirde kevkebin **tulû'u, nısf-ı nehâra vusûlü, gurûbu** mütagâyir hâller ⇒ maksat hâsıl. **Cevap 2 ('mecmû' vücûdsuz')**, vecihler: **(1)** '**mecmûu'l-havâdis vücûd buldu**', '**mecmûu'l-havâdis ictimâ' sıfatıyla vücûd buldu**'dan **a'amdır**: 'şehir ahâlisinin hepsini gördüm' diyene 'ictimâ' sıfatıyla mı gördün?' sorulur; **'hepsini gördüm' ictimâ'dan a'am** ⇒ hasım **hass (ictimâ') olanı batıl kıldı, a'amı batıl sayamaz**.
+- Netice/hüküm: **Râzî cevabı: 'mecmû' vücûd buldu' önermesi 'ictimâ' sıfatıyla' önermesinden a'am; ictimâ' nefyi mecmû' nefyi değildir.**
+- Delil çeşidi: **ilke (a'am-has) + misal**; (T) burhânî biçim (a'am-has), öncül: 'mecmû' vücûd bulmuş olabilir ictimâ'sız'.
+- Mevzuya bağı: **KRİTİK — Fasıl I §3 (kalp)**: **Râzî'nin 'ictimâ'sız vücûd (te'âkub/tevâlî ile)' ayrımı** Risale'nin tatbîk delilinin **mevcût-mecmû' öncülünü savunma çizgisidir**; hasmın (İbn Sînâ) 'mecmû' yoktur' itirazına karşı **derece: burhânî biçim değil, öncül bağımlı (ictimâ'sız mecmû' vücûd bulabilir mi?)**.
+- Doğan sual: 'Mecmû' ictimâ'sız vücûd bulur' öncülünü kim reddediyor (⊬ İbn Sînâ/Hâce Tûsî'nin cevabı, kaynakta aranacak)?
+
+## c4 p263
+- OCR: orta
+- Okuma: tam
+- İçerik: **Cevap 2 sonu**: 'mecmû' iftirak-te'âkub sıfatıyla vücûd buldu' sahih ⇒ mürekkeb sadıksa cüzleri sadık; **hasım has'ı batıl ettikten sonra aynı delille a'amı batıl sayıyor — bâtıl; biz has'ın sıhhatini delillendirdik, a'ama geçtik — hak.**' **2. vech**: '**'mazi hâdisler mecmûuna hüküm vermek hiç sahih değildir' sözü kendi içinde çelişir**: **(1)** hüküm 'imtinâ'' verdi, o da mecmû'a hüküm; **(2)** 'mazi hâller sonsuzdur' önermesinin mevzûu ya her bir hâl (fasit) ya hepsi mecmû ⇒ **mecmû'a hüküm mümkün**; **(3)** hasım 'mazi hâller ezelden ebede dâim ve mütemâdi' diyor; **'ezelden ebede istimrâr'la mahkûm olan her bir hâdis değil, mecmûu** ⇒ mecmû'a hüküm verildi.
+- Netice/hüküm: **Râzî cevabı: 'mecmû'a hüküm verilemez' iddiası kendini nakzeder (3 vech).**
+- Delil çeşidi: **nakz (öz-nakz/tenâkuz)**; (T) burhânî-cedelî.
+- Mevzuya bağı: **Fasıl I §3**: 'mecmû'a hüküm verilemez' itirazı **hasmın kendi öncülünü yıkıyor**; Risale aynı çizgiyi alırsa **derece: 'cedelî-burhânî karışık' (hasmın kabulüne ilzâm)**. **F 27-B**: ilzâm hasmın **dâim istimrâr** kabulüne dayanıyor; **ayırt eder mi: evet** (kıdem tarafını mecmû'a hükümden kaçmaya zorlar).
+- Doğan sual: —
+
+## c4 p264
+- OCR: orta
+- Okuma: tam
+- İçerik: **Cevap 3 (10 nakza)**: '**bu misallerin hepsi izâfî/nisbî; izâfetler ayânda mevcût olamaz, olsa teselsül; teselsül aklen muhâl**; **ma'kûl teselsül: bitişik/muttasıl mevcûdâtın sonsuza gitmesi**.' **Delil (müessiriyet misali)**: müessiriyet müessirin ve eserin zâtından zâid **mevcut** sıfat olsa, müessir ile bitişik eseri arasında **vâsıta (müessiriyet)** olurdu; ya 'ikisi bitişik, aralarında vâsıta yok' doğru, ya 'vâsıta var' doğru — ikisi çelişir ⇒ **izâfetler ayânda mevcut değil.** İkinci şık ('bu şey şeyde te'sîr etmez') te'sîri nefyeder, bâtıl. **Sonuç**: '**nakızların hepsi izâfî ⇒ hiçbiri (ne mecmûu ne âhâdi) ayânda mevcut değil; mazi hâdisler ise ictimâ' etmese de te'âkub ve tevâlî ile vücûd buldu ⇒ fark.**' **Kapanış (Râzî-sesli, OCR kısmen bozuk)**: '**bu hüccetin takrîrinde, bu hususta (kırk yıllık) ardışık fikirlerden sonra bize yetebilecek azamî sözdür; tevfîk Allah'tandır.**'
+- Netice/hüküm: **Râzî'nin hükmü: hudûs delilinin (tezâyüd/tatbîk) itirazlara cevabı: nakızlar izâfî ⇒ ayânda yok; mazi hâdisler te'âkub ile mevcut, ictimâ' ile değil; ⇒ delil ayakta.** **Râzî'nin kendi ifadesi: 'bu delil üzerinde kırk yıl düşündükten sonra yazabildiğim azamî takrîr'** (OCR kısmî; kırk yıl ifadesi net, 'يضرنا' kelimesi bozuk: 'işimize yarayan/gücümüzün yettiği' okundu ⊬).
+- Delil çeşidi: **cevap (cedelî + ilke)**; (T) cedelî-burhânî; **F 27-B**: nakızlar 10 misalin hepsine 'izâfî' diye topluca cevap; **misal başına ayırt yok**.
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §6.3, c1 M2–3**: **(a)** Râzî 'izâfet/nisbet ayânda mevcut değil' diyor; **c1'de 'vücûb sübûtî ve vücûd zâid' diyor** ⇒ hepsi izâfî mi, sübûtî-i'tibârî mi? **(⊬ tutarlılık)**; **(b) Nakız 1 ('Allah'ın ilim izâfetleri sonsuz') için p254–255'teki 'nefsü'l-emirde yoksa nefy-i ilim' itirazı cevapsız kalıyor (hasım kendi cevabını 'ayânda yok' diyerek zaten öngörmüştü)** — **açık borç**; **(c) Nakız 7 (Allah'ın devamı)** ve **nakız 8 (imkânın evveli)** için cevap ayrıca yok. **Risale'ye:** tatbîk/tezâyüd delili **'öncüle bağlı ve Râzî'nin kendi kabulüyle üç açık borçlu (izâfet, devam, imkân)'** derecesiyle yazılır; **Râzî'nin 'kırk yıl düşündüm' sözü delilin Râzî için de kesin olmadığına işaret** (⊬ yorum).
+- Doğan sual: **(1)** İlim-izâfet nakzına cevap var mı? **(2)** 'Ezelî imkân / hâdislerin sıhhatinin evveli yok' nakzı nasıl kapanıyor? **(3)** 'Sübûtî' ile 'ayânda mevcut' aynı mı? (c1 M2 ↔ c4 p264) **(4)** Râzî'nin cevabındaki 'mazi te'âkub ile mevcut' iddiası ictimâ'sız mecmû' savunması p262'nin kendisi mi, ayrı delil mi?
