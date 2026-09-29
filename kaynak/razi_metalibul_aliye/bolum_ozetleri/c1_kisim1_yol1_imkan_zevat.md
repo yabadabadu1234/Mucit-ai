@@ -1,9 +1,9 @@
-# Bölüm Özeti — Cilt 1, Kısım 1, Yol 1: İmkân-ı Zevât ile Vâcib İsbâtı (c1 p71–176)
+# Bölüm Özeti — Cilt 1, Kısım 1, Yol 1: İmkân-ı Zevât ile Vâcib İsbâtı (c1 p71–183)
 
 ## 1. Künye ve okuma tamlığı
 
-- **Kapsam:** Sekkā neşri cilt 1, p71–176 (106 sayfa). Bölümün başı (p71 yöntem: 6 yol) ve sonu (p176 "burada imkân-ı zevâtla vâcib isbâtı bitti") metinde açıkça yazılıdır; bölüm **bütündür**.
-- **Okuma:** 106 sayfanın 106'sı OCR metninden baştan sona okundu; her sayfanın defter kaydı `okuma_defteri/cilt_01.md`'dedir. OCR kalitesi: gövde sayfalarında "iyi"; **fasıl başlıkları OCR'da bozuk**, numaralar komşu başlıklardan çıkarıldı (**görüntüyle doğrulanmadı**). Başlık sayfaları p65, p69 görüntüden doğrulanmadı.
+- **Kapsam:** Sekkā neşri cilt 1, p71–183 (113 sayfa). Bölümün başı p71 (yöntem: 6 yol). **DÜZELTME (p177–183 okununca):** p176'daki "burada bitti" cümlesi köşeli parantezli (nüsha farkı) bir ifadedir; p177–183 **Fasıl 15: cisimlerin tam mâhiyette müsâvîliği** bu yolun ekidir; yol 2 (imkân-ı sıfât) p184'te başlar. İlk yazımda bölümü p176'da bitirmiştim; **bu yanlıştı**.
+- **Okuma:** 113 sayfanın 113'ü OCR metninden baştan sona okundu; her sayfanın defter kaydı `okuma_defteri/cilt_01.md`'dedir. OCR kalitesi: gövde sayfalarında "iyi"; **fasıl başlıkları OCR'da bozuk**, numaralar komşu başlıklardan çıkarıldı (**görüntüyle doğrulanmadı**). Başlık sayfaları p65, p69 görüntüden doğrulanmadı.
 - **Defter hatası ve düzeltmesi:** İlk yazımda p74–176 fasıl numaraları bir eksik yazılmıştı; düzeltildi (`cilt_01.md`'deki düzeltme notu).
 - **Okunmayan/eksik:** Râzî'nin atıf yaptığı, bu bölümde bulunmayan yerler (Heyûlâ–Sûret bâbı, vücûd bâbı, tenâhî-i ebâd, kıdem–hudûs, tevhid) **okunmadı**; oradaki cevaplar bu bölümden çıkarılamaz. Aşağıda "havale" diye işaretlidir.
 
@@ -25,6 +25,7 @@
 | 12 | p158–163 | **Günlük hâdisler nakzı** (eşzamanlılık ↔ hudûs) |
 | 13 | p164–169 | Vâcib aleyhine 5 şüphe ve cevapları |
 | 14 | p170–176 | Âlemin mümkin oluşu: **8 yol** |
+| 15 | p177–183 | **Cisimlerin tam mâhiyette müsâvîliği** (yukarıdaki yolların ortak öncülü): Râzî 'zorunlu kılmak zor' der; 3 kısımlı taksîmle temâsülü savunur; 3 muhalif hüccet; cevaplar. **Mütekellim cevabı: fâil-i muhtâr 'lâ li-mürecciḥ' tahsis eder** (p183) |
 
 ## 3. Râzî'nin delilleri (numaralı) ve dereceleri
 
@@ -65,6 +66,8 @@
 | 10 | §14 haritası 7 satır | Râzî'de **en az 8 yeni satır**: 4. şık; illiyet nisbeti regresi (Şübhe 3,7); modal çöküş (11); tahsis-bilâ-müreccih (10,14); vâcibin zâtı zât-olmakta müsâvi (V1); mecmû-illet (Hume–Russell); tatbik–Dedekind; hâdis eser–kadîm müessir | §14'e eklenecek |
 | 11 | §15.4 bulgu 3: "illet-i mâddiyye" aday | Bu bölüm cilt 4'e girmez | Değişmedi (cilt 4 okunmadı) |
 | 12 | §15.4 bulgu 5 "cilt 1, kısım 3, mesele 5 [okundu]" gibi eski atıflar | Bunlar **kayıtlı okuma değildi** (satır aralığı okuması); F 25-B'ye göre defterle yeniden doğrulanana dek "eski okuma, defter dışı" işaretlenmeli | Not eklenmeli |
+| 13 | §5 Burhân-ı Tahsis | Yol 2 (p184+) aynı iskelet; **okunmadı**; Fasıl 15 (p182–183) ihtisas ⇒ müreccih ve irâde tahsisi | Yol 2 okununca derece ve atıf yazılacak |
+| 14 | §8.3 irâde | p183: mütekellim cevabı irâdeyi **"müreccihsiz tahsis"** diye anar; Fasıl 2–4'te ise "müreccihsiz rüchân muhâl" | **İç gerilim**: ilkeyi "mûcib sebepsiz olmaz" diye daraltmak gerekir; "irâde müreccihtir" mi "müreccihsiz tahsistir" mi — Râzî ikisini de söyler |
 
 ## 6. Kendi tenkîdim (Râzî'ye ve kendime)
 
