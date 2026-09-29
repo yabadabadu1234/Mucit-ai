@@ -2089,3 +2089,147 @@ Biçim: cilt 1–2 ile aynı.
 - Delil çeşidi: **cedelî**; (T) analitik-cedelî.
 - Mevzuya bağı: **Fasıl I sıfat kuramı**: Râzî'nin **'sıfat nefy delilleri zayıf' hükmü**; **(T) derece: cedelî**.
 - Doğan sual: **Râzî 'taalluklar malûmât' cümlesinin devamı ne?** (p233.)
+
+## c3 p233
+- OCR: orta
+- Okuma: tam
+- İçerik: (Cevapların sonu): '... **bizim görüşümüzde bu (taallukâtın) zâta zâid sıfat değil, zâtın kendisiyle ta'lîl edilir; bu delillerden hiçbiri bize yöneltilemez.**' **Makam 2**: 'Kâdiriyet = **icâd ve terk sahih olacak vecihte olmak**; âlimlik = **özel nisbet ve izâfe**; bunlar **kendi başına kâim zât değil ⇒ mümkin ⇒ sebep**; sebep zât (vasıtalı/vasıtasız) ya başkası; başkası ise zât lâzımlarında gayre muhtaç (muhâl); ⇒ **muktezî zât-ı mahsûsa**.' **Ek bahis**: 'lâzımlar vasıtasız/vasıtalı; âlimlik-kâdirlik **doğrudan zâtın aynı ile** ya da **zât bir şey îcâb edip o şey bunları** îcâb eder; **vasıta bir ya çok**; ikisi de muhtemel. **Ancak zât-ı mahsûsanın bu nisbetleri (vasıtalı ya vasıtasız) îcâb ettiğini itiraf etmek zorunda olduğumuza ve vasıta meçhul olduğuna göre, vasıtayı aradan çıkarıp zâtın doğrudan îcâbını kabul etmek daha evlâ ve ahlâktır.**' **Paralel**: 'âlemin hudûsundan fâil-i muhtâra istidlâl edince "muhtâr fâil, mûcib bi'z-zât bir illetin ma'lûlü olamaz mı?" sorulur; **vâcibi ve fâil-i muhtârı kabul etmek zorunda olduğumuza göre 'o fâil-i muhtâr o vâcibin kendisidir' demek evlâ; vasıtaları aradan çıkardık**; aynısı **Allah'ın zâtında kâim sıfatlarda** da.'
+- Netice/hüküm: **KRİTİK: 'Evlâ ve ahlâk' ilkesi (vasıtaları hazfet): Vâcib=Fâil-i muhtâr özdeşliği ve sıfatların zâtın doğrudan iktizâsı — ikisi de aynı gerekçeyle 'evlâ'.**
+- Delil çeşidi: **yöntem ilkesi (Occam tipi 'gereksiz vasıtayı hazfet')**; (T) ikna'î-analitik (**evlâ-ahlâk derecesi**).
+- Mevzuya bağı: **KRİTİK — Fasıl I §5 (Vâcib=Fâil özdeşliği ayrı halka; c1 p319–321, c3 p108–109)**: **Râzî'nin kendi ifadesi: 'Vâcib=Fâil-i muhtâr' özdeşliği (vasıtasız) ispatlı değil, 'evlâ ve ahlâk' dayanaklıdır**; Fasıl I §5 için **(T) 'evlâ ve ahlâk' derecesi ve kaynak (c3 p233)** **kesinleşti**. Bu, **önceki 'Vâcib=Fâil halkası açık ispat borcu' kaydını (c1 p320) güçlendiren yazılı kabul**.
+- Doğan sual: —
+
+## c3 p234
+- OCR: orta
+- Okuma: tam
+- İçerik: **Mânâ (ma'ânî) sıfatlarını isbat edenlerin 3 delili**: (1) 'ilim şâhitte **mânâya taalluk eden sıfat** ⇒ Allah'ta da'; (2) 'âlimlik **sonradan oldu** (şâhitte); ilim **mevcut sıfat**; hâdis olan yalnız nisbet-izâfe olamaz (cismin zâtı malûma taalluk edemez) ⇒ hâdis şey taalluk hâsıl eden bir sıfat'; (3) 'ilim malûma taalluk eden; zât taalluk etse **zât ilim olur** (bâtıl)'. **Cevaplar (Râzî)**: (1) 'şâhitte ilim **yalnız bu özel taalluk-nisbet**; ilim denince şuûr-idrâk (özel nisbet) dışında bir şey ma'kûl değil'; (2) 'bu özel nisbet **cisimde hâdis olunca ilim-şuûr-idrâk hâsıl**; zâil olunca ilim zâil; **sıfat hâsıl olup ona taalluk geldiği iddiası kabul edilmez**'; (3) 'ilim **ma'dûma taalluk eden şey** demek değil, **taallukun kendisi**; zâtın taallukla vasıflanması zâtı ilim yapmaz.' **'Bu bâbdaki sözümüzün tamamı; Allah bilir.'**
+- Netice/hüküm: **Râzî: ilim = özel nisbet (tekrar); mânâ sıfat ispatı delilleri cevaplanıyor.**
+- Delil çeşidi: **cedelî-analitik**; (T) analitik.
+- Mevzuya bağı: **DİKKAT (Sünnî akide)**: **Sıfât-ı mânâ (Eş'arî) delilleri Râzî'de 'ilim = nisbet' çerçevesinde reddediliyor**: Râzî **kendi sıfat sisteminde iki uçlu**: c3 p225 'zâta kâim iki sıfat' ↔ p234 'ilim salt nisbet'; **iç gerilim** (nisbet zâta zâid, mevcut nisbetle bağdaşabilir: **'zâid nisbet' = sıfat**). Risale **'sıfat gerçek, zâta kâim' der; Râzî'nin 'nisbet' dili kaydedilir**.
+- Doğan sual: —
+
+## c3 p235
+- OCR: orta (başlık kötü)
+- Okuma: tam
+- İçerik: **Bâb 11 (dipnot 'Fasıl 12'): 'Allah'ın sıfatlarının selb ve izâfe olarak hasrı'**. 'Filozoflar **Allah'ın sıfatlarının ya selb ya izâfe** olduğunda ittifak etti: selb: cisim, cevher, mütehayyiz değil; izâfe: cevâd, mûcid, mufaddıl. **Selb+izâfe bileşiği** için: 'ilim, âlemde **malûma mutâbık sûret**; Allah'ın malûmâtı bilmesi **mutâbık sûretler**; bunlar selb de izâfe de değil ⇒ **Allah'a hakîkî sıfat (zâta kâim) itirafı** ⇒ 'sıfatlar selb ve izâfeye münhasır' sözünü bâtıl kılar.' **Râzî**: 'Bu hasrı ispatlamanın yolu ancak **evlâ ve ahlâk**; ilim **nisbet-izâfe** kabîlinden ise ilmin isbâtı bu hasra zarar vermez.' (Dipnot: fasıl numarası.)
+- Netice/hüküm: **Filozofların 'sıfat = selb + izâfe' hasrı, kendi ilim tanımlarıyla (sûret) çelişiyor (Râzî ilzâmı); Râzî'nin ilim=nisbet tanımıyla hasr korunabilir.**
+- Delil çeşidi: **ilzâm**; (T) analitik-cedelî.
+- Mevzuya bağı: **Fasıl I 'ne ispat edilir' satırı (c2 p86–96) ile bağlı**: 'sıfat = selb+izâfe' **Râzî'nin zât-ı mahsûsa cehli tezinin filozofça hâli**.
+- Doğan sual: —
+
+## c3 p236
+- OCR: boş
+- Okuma: tam (içerik yok)
+- İçerik: Yok.
+- Netice/hüküm: Yok.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c3 p237
+- OCR: orta (başlık kötü)
+- Okuma: tam
+- İçerik: **Bâb 12 (dipnot 'Fasıl 16'): 'Tekvîn (yaratma) mükevvenin aynı mı gayrı mı?'** 'Allah bir şeyi vücûda çıkarınca **iki şey**: **mükevven** ve **Allah'ın onu yaratıp ademden vücûda çıkarması (tekvîn)**; tekvîn eserin kendisi mi, ondan ayrı mı? **Şâhitte benzeri**: tahrîk hareketin aynı mı? teshîd (siyah kılma) siyahlığın aynı mı? 'Tekvîn = mükevven' diyen 'tahrîk=hareket, teswîd=sevâd' der; 'tekvîn ≠ mükevven' diyen bu sûrette **mugâyeret**. Bu bahis **gâmız, derin**.' **Mugâyereti savunanın delili**: 'Bu şey **niçin hâdis oldu, ademden sonra niçin var oldu**? **Kâdir onu ihdâs etti, îcâd etti**; vücûdunu **muhdisin ihdâsıyla** ta'lîl ederiz; **muhdisin ihdâsı eserin vücûdunun aynı olsa** 'kâdir îcâd ettiği için var oldu' sözü '**kendi kendine var oldu**' demeye eş olurdu; **kendi kendine ise kâdirin te'sîri kalmaz, müessir ve te'sîr nefyedilir** ⇒ **îcâd, eserin nefsinde vücûdundan mugâyir**.'
+- Netice/hüküm: **Tekvîn ≠ mükevven (1. delil: ta'lîl)**.
+- Delil çeşidi: **analitik**; (T) analitik-burhânî.
+- Mevzuya bağı: **Fasıl I sıfatlar (tekvîn)**: **Mâtürîdî 'sıfat-ı tekvîn' ↔ Eş'arî 'tekvîn=mükevven' ihtilâfı**; Râzî **mugâyereti savunan delil ile başlıyor**; ders katmanı için **iki görüşün varlığı** ve **Râzî'nin mugâyeret delilinin derecesi (analitik)** yazılır; **hüküm p238'de**.
+- Doğan sual: —
+
+## c3 p238
+- OCR: orta
+- Okuma: tam
+- İçerik: (Tekvîn ≠ mükevven, 2. delil): 'Îcâd-tekvîn **kudretin kendisi değil**: kâdir çok şeye kâdir olup yaratmayabilir (**Allah çok güneş, ay yaratmaya kâdir, yaratmıyor**); öyleyse tekvîn **kudretten ve mükevvenden ayrı sıfat**.' **Mugâyereti reddedenler (tekvîn=mükevven)**: 'Tekvîn mükevvenden ayrı olsa **kadîm ya hâdis**; kadîmse **mükevvenin kıdemi**: tekvîn ancak kevn (var oluş) hâsıl olunca doğru olur ('ademde kalan şey için kâdir ona te'sîr etmedi, onu yaratmadı denir'); tekvîn kadîm olsa **mükevven kadîm ⇒ kıdem-i âlem**; **hâdisse tekvîni başka tekvîn** ister ⇒ **teselsül**.' **Râzî**: 'Bu, bu mevzudaki akıl bahislerinin özeti; **hudûs ve kıdem kitabında bu bahse döneceğiz**.'
+- Netice/hüküm: **Tekvîn-mükevven tartışması: mugâyeret (2 delil) ↔ ayniyet (kadîm/hâdis ikilemi); Râzî 'hudûs-kıdem kitabına' havale ediyor (hüküm yok).**
+- Delil çeşidi: **cedelî (denge)**; (T) cedelî.
+- Mevzuya bağı: **Fasıl I §6.3/§8**: **tekvîn meselesi (kâdir-yaratma ilişkisi) cilt 4–6 'hudûs-kıdem' kitabında**; **açık borç**.
+- Doğan sual: **'Hudûs ve kıdem kitabı' hangi cilt?** (kaynak haritası).
+
+## c3 p239
+- OCR: orta (başlık kötü)
+- Okuma: tam
+- İçerik: **Bâb 13 (dipnot 'Fasıl 17'): 'Allah'ın isimlerinin taksîmi'**. **Taksîm 1**: ism ya **zâta delâlet**, ya **zâtın bir cüz'üne**, ya **zâta hâriç bir vasfa**. **(1) zâta delâlet eden isim**: 'Allah'ın zât-ı mahsûsası min haysu hiye **halkça bilinmez** (c2 p86–96); bilinmezse **isim vazı imkânsız**: ismin maksadı iki kişinin belirli mânâyı anlatmak için **belirli lafız üzerinde ıstılah** etmesi; mânâ hem söyleyene hem dinleyene malûm olmalı; zât-ı mahsûsa kimseye malûm değil ⇒ **isim vazı muhâl**.' **Kadîm filozoflar**: 'bu hakîkatin **ismi yok**; ancak 'vâcibü'l-vücûd li-zâtihi' diye şerh edilir.'
+- Netice/hüküm: **Zâta delâlet eden isim (özel isim) vazının imkânı: zât bilinmediği için imkânsız (filozof/Râzî ilk tespit).**
+- Delil çeşidi: **analitik**; (T) analitik.
+- Mevzuya bağı: **Fasıl I 'Allah' lafzı ve isimler**: **'Allah' özel ismi (zâta delâlet)**: Sünnî akide 'Allah lafzı ism-i zât, ism-i celâl' (nassla); Râzî **bu ihtimali p240'ta savunacak: bilinmeyen zât için isim vazı Allah'ın tarafından öğretilebilir**.
+- Doğan sual: —
+
+## c3 p240
+- OCR: orta
+- Okuma: tam
+- İçerik: **Râzî'nin cevabı**: 'Bizce **zât-ı mahsûsayı bilmediğimiz** sabit; **akılca bilinmesinin imkânsız olduğu delille sabit değil**; imkânsızsa bile **Allah bazı kullarını bu ma'rifetle şereflendirebilir; o zaman isim vazı fayda verir**; **melek rûhlarına imkânsız olduğu da sabit değil**; **beşer ve melek akılları imkânsız olsa bile bu hakîkatin belirli bir ismi olabilir; Allah bazı kullarına o ismi öğretir; o ismin zikri temiz-mukaddes rûhların ona boyun eğmesine sebep olabilir; zâkirin rûhunda başka yolla hâsıl olmayan bir kuvvet oluşabilir**; bunların hepsi muhtemel.' **Taksîm (2) zâtın cüz'ü**: 'Vâcib için **muhâl** (fert, kesretten münezzeh).' **(3) zâta hâriç vasıf**: **7 kısım**: **hakîkî sıfat (izâfesiz); yalnız izâfe; yalnız selb; hakîkî+izâfe; hakîkî+selb; izâfe+selb; üçü birlikte.**
+- Netice/hüküm: **İsim vazı ihtimali: Allah öğretmişse mümkün (Râzî'nin savunması); zâtın cüz'üne isim muhâl; sıfat-isim kısımları 7.**
+- Delil çeşidi: **imkân savunusu + taksîm**; (T) ikna'î-cedelî (**'ismin zikrinin rûha etkisi' tasavvufî iddia, ⊬; delil verilmedi**).
+- Mevzuya bağı: **KRİTİK — Sünnî akide (esmâ tevkîfî)**: **Allah'ın isimleri nassla bilinir (Kur'ân, Sünnet); 'Allah' özel isimdir; isim öğretme = vahiy**; Râzî'nin bu sayfası **bu çizgiyi aklî ihtimal olarak destekliyor**. **'Ismin zikrinin rûha etkisi' cümlesi Risale'ye alınmaz (kaynaksız)**; **Fasıl I/IV'e 'isimler tevkîfîdir' notu kaynağı: c3 p240**.
+- Doğan sual: —
+
+## c3 p241
+- OCR: orta
+- Okuma: tam
+- İçerik: İsimler taksîminin devamı (**hâriç vasıf** kısımları). **'Mevcud' lafzı iki anlam taşır**: (a) vücûdu olan (zât ile kâim vücûd sıfatı), (b) vücûdu zâtının aynı olan; Râzî'nin kendi kabulü (c1 Mesele 3): vücûd zâid ama Vâcib'de zâtî. İsimlerin sıfat/izâfe/selb taksîmine yerleştirilmesi başlıyor.
+- Netice/hüküm: 'Mevcud' ismi Allah hakkında tek anlamlı değil; anlam kaydı gerekir.
+- Delil çeşidi: terimsel-analitik; (T) analitik.
+- Mevzuya bağı: **Fasıl I §2.2**: 'mevcud' lafzının iki anlamı yazılmalı; c1 M3 ve c2 p103 ile aynı hat.
+- Doğan sual: —
+
+## c3 p242
+- OCR: orta
+- Okuma: tam
+- İçerik: **'Hak' ismi**: Hak = **mevcut, sabit (vücûdu kendinden olan)**; mümkin ise **'hâlik'** (helâke mahkûm; 28:88 'her şey helâk olucudur, O'nun vechi hariç'). **'Allah'ın zâtına şey denir mi?'** tartışması: **Cehm b. Safvân karşı** (Cehm'e nisbeti Râzî'nin nakli, ⊬); deliller: **6:19 'en büyük şahit hangi şeydir? De ki Allah'**, **42:11 'O'nun benzeri gibi bir şey yoktur'**, **28:88**, **7:180 'en güzel isimler Allah'ındır'**.
+- Netice/hüküm: 'Şey' Allah hakkında **nassla** caizdir (6:19); Cehm'in nefyi Râzî'nin nakli.
+- Delil çeşidi: **nakl (âyet)** + lafzî istidlâl; (T) hitâbî-nakli.
+- Mevzuya bağı: Fasıl I/IV: isim-ıtlâk meselesinde 6:19 delili kaydedilir; **Cehm nakli doğrulanmadı ⊬**.
+- Doğan sual: Cehm nakli birincil kaynakta var mı? (⊬ borç listesine).
+
+## c3 p243
+- OCR: orta
+- Okuma: tam
+- İçerik: **'Mâhiyet' ismi**: **Firavun–Mûsâ münâzarası (26:23–24 'Rabbü'l-âlemîn nedir?' ↔ 'göklerin ve yerin Rabbi')**: 'mâ' sorusu **mâhiyeti** sorar; Mûsâ (a.s.) **'men rabbükümâ'** ile **fâili/eser yoluyla** cevap verir. Tarif üç türlü: **nefsiyle**, **cüzleriyle**, **hâriç lâzımlarla**; Allah'ın zâtı ne nefsiyle ne cüzle tarif edilebilir ⇒ **ancak eserleriyle**.
+- Netice/hüküm: Allah **eserleriyle** tanıtılır; zât-ı mahsûsa tarifi yok (c2 p80–96 ile tutarlı).
+- Delil çeşidi: **nakl (kıssa) + analitik**; (T) hitâbî + analitik.
+- Mevzuya bağı: **Fasıl I sıfat/ma'rifet**: 'Allah eserleriyle bilinir' cümlesi bu sayfada kaynaklı (Firavun–Mûsâ). Râzî'nin Mûsâ (a.s.) cevabı yorumu **Râzî'ye göre**; tefsîr geleneğiyle ayrıca karşılaştırılacak.
+- Doğan sual: Bu kıssanın klasik tefsîrlerdeki yorumu (⊬ borç).
+
+## c3 p244
+- OCR: orta
+- Okuma: tam
+- İçerik: Firavun–Mûsâ münâzarasının devamı: Firavun'un 'mâ' sorusuna karşı **Mûsâ'nın soruyu tashih edip fâile yönelmesi**; Firavun'un 'çevresindekilere: işitmiyor musunuz?' demesi; **mâhiyetin cevabı hâriç lâzımlarla verilebilir**. Allah'ın mahiyeti hakkında sorunun **kendi başına sorulabilir olduğu** ve cevabının **eser yolu** olduğu tekrar bağlanıyor.
+- Netice/hüküm: Aynı (p243); yeni delil yok.
+- Delil çeşidi: nakl + analitik; (T) hitâbî.
+- Mevzuya bağı: p243'e bağlı.
+- Doğan sual: —
+
+## c3 p245
+- OCR: orta
+- Okuma: tam
+- İçerik: **'Hakîkat' ismi**: bir şeyin **zâtî/kendine mahsus** olan yönü; Allah için 'hakîkat' = zât-ı mahsûsa. **'Zât' ismi**: 'sahip, sâhib' anlamında ('zâtü'l-mâl' gibi); Allah hakkında 'zât' **sıfatların sahibi** demektir, **mâhiyet** anlamında değil. **'Nefs' ismi**: **5:116 'senin nefsinde olanı bilmem'** (Îsâ a.s.) ve 6:12 vb. delil.
+- Netice/hüküm: 'Hakîkat/zât/nefs' isimleri **Allah hakkında lafzen caiz**, anlamları kayıtlı; 'nefs' için 5:116 nass.
+- Delil çeşidi: lafzî + nakl; (T) hitâbî.
+- Mevzuya bağı: Fasıl I/IV isim listesi: 'nefs' ıtlâkı nassla (5:116). **Ayet numaralarının doğrulanması ⊬ borçta**.
+- Doğan sual: —
+
+## c3 p246
+- OCR: orta
+- Okuma: tam
+- İçerik: **Hakikî sıfat/izâfe/selb taksîminin isimlere uygulanması sonu**: yalnız-izâfe isimleri (**Hâlık, Râzık, Rabb**), yalnız-selb isimleri (**Kuddûs, Selâm, Ganî**, 'eksiklikten münezzeh'), hakîkî sıfat isimleri (**Alîm, Kadîr, Hayy**) ayrımı. **Bir isim bazen iki üç cihete delâlet eder** (ör. 'Mâlik').
+- Netice/hüküm: İsimler **sıfat / izâfe / selb** olarak tasnif edilir; hepsi tek tür değildir.
+- Delil çeşidi: taksîm (analitik); (T) analitik.
+- Mevzuya bağı: **Fasıl I/IV isim kataloğu**: her ismin cihetine göre tasnifi; bu tasnif Risale'ye 'Râzî'nin sınıflaması' diye alınabilir (kaynak: c3 p239–246).
+- Doğan sual: Örnek isimlerin listesi editörün mü Râzî'nin mi? (p246'da Râzî; ayrıntı ⊬).
+
+## c3 p247
+- OCR: orta
+- Okuma: tam
+- İçerik: **Vücûdun keyfiyetini bildiren isimler**: **'vâcibü'l-vücûd'** (bu ismin Kur'ân'da geçmediği, filozof/kelâm ıstılahı olduğu Râzî'nin tavrından anlaşılıyor; ⊬ ayrıca), **'hodâ/hudây' (Farsça)**, **'Kavî' (51:58 'Allah rızık verendir, sahibi kuvvettir, metîndir')**, **'Kayyûm'**. **Devam isimleri**: **'Kadîm'** (36:39 'eski hurma dalı gibi'; 12:95 'eski dalâlin' – lafız ödünç), **'Ezelî'**, **'Ebedî'**, **'Bâkî'** (20:73 'Allah daha hayırlı ve bâkîdir').
+- Netice/hüküm: 'Kadîm' ismi **nass-ı sarihle değil**, 'kadîm' lafzının Kur'ân'daki başka kullanımlarından ve aklî kıdem anlamından iştikak edilir; 'Bâkî' nassla (20:73).
+- Delil çeşidi: lafzî + nakl; (T) hitâbî.
+- Mevzuya bağı: **KRİTİK — Sünnî akide (esmâ tevkîfî)**: 'Kadîm' ve 'Vâcibü'l-vücûd' **Allah'ın Kur'ân/Sünnet'teki esmâ-i hüsnâsından değildir**; kelâm ıstılahıdır; Risale **'isimler tevkîfîdir; kelâm ıstılahı ayrı tutulur'** ayrımını yazmalı (kaynak: c3 p239–240, 247–248).
+- Doğan sual: 'Kadîm' isminin tevkîfî olmadığı görüşünün Sünnî kaynaklardaki yeri (⊬ borç).
+
+## c3 p248
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kıdemin selbî mi sübûtî mi olduğu**: 'kadîm = **yokluğun sonu olmayan**' (selbî) ↔ 'kadîm = **vücûdun sübûtî bir sıfatı**'; Râzî iki yolu da aktarır. **'Es-Samed, el-Evvel, el-Âhir'** isimleri kısaca anılır (117:2; 57:3); 'Evvel' = varlığının başı yok, 'Âhir' = sonu yok.
+- Netice/hüküm: Kıdem tekil bir sıfat mı, selb mi? **Râzî iki ihtimali tartıştırır, kesin hüküm vermez** (bu sayfada).
+- Delil çeşidi: taksîm + nakl (57:3, 117:2); (T) analitik-hitâbî.
+- Mevzuya bağı: **Fasıl I §6.3 kıdem/beka**: 'kıdem selbî' okuması **c2 p76 ve c1 Mesele 6 ile aynı hatta**; 57:3 (Evvel/Âhir) nass olarak yazılır.
+- Doğan sual: Cilt 3'ün sonraki bâblarında 'kıdem' konusu yeniden açılıyor mu?
