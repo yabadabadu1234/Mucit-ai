@@ -8,6 +8,7 @@
 - Bu fasılda **iki müstakil yol** birlikte yürür: (A) felsefî-kelâmî **Burhân-ı İmkân** (mefhumların tahkikinden hükme giden silsile-i mantık), (B) doğrudan Kur'ân'ın kendi kullandığı **Burhân-ı Tahsis** ve kardeşleri. İkisi de burhânîdir; biri diğerinin yerine geçmez, biri diğerini **tamamlar**.
 - Sıra hep aynıdır: **kelime → çoban misali → şema → formül → netice.**
 - **Bir tertip notu:** Bundan sonra bu uygulama (okuduğunuz metin) bir **şerh** — sözlü akıl yürütmeyi de taşıyan bir ders kitabı — olarak yazılacaktır; saf sembolik formüller ise ayrıca `risale/fasil_1_vucud/formuller.md`de mühürlenir. §0 bu yeni tertibin ilk örneğidir; §1-9 henüz eski (yalnız formül+şema) üsluptadır, sırayla aynı şekle getirilecektir.
+- **Her formülün altında üç okunuş:** (1) formülün kendisi, (2) **Okunuşu** — sembolleri birebir Türkçe kelimelerle, sırasıyla söyleyiş (izah değil, salt telaffuz: `¬(P∧¬P)` → "değildir (p ve p değil)"), (3) **Bağlamıyla** — aynı okunuşun, o formülün konuştuğu şeyle doldurulmuş hâli (bu, şerhin kendisidir).
 
 ## 0. Mebâdî-i Mantıkiyye
 
@@ -39,6 +40,8 @@ Bir şey ne ise odur; kendi zâtının aynıdır, başkası değildir. Elindeki 
 ```
 A ≡ A          ∀x (x = x)
 ```
+**Okunuşu:** A aynıdır A. Her x için: x eşittir x.
+**Bağlamıyla:** "Bir şey" kendi kendinin aynıdır; ne ise odur.
 
 #### 0.2.2 Nakzeyn Kanunu (Tenakuzun Butlânı)
 
@@ -47,6 +50,8 @@ A ≡ A          ∀x (x = x)
 ```
 ¬(P ∧ ¬P)          ∀x ¬(Mevcud(x) ∧ ¬Mevcud(x))
 ```
+**Okunuşu:** Değildir (p ve p değil). Her x için: değildir (x mevcuttur ve x mevcut değildir).
+**Bağlamıyla:** "Bir şey" (aynı anda, aynı cihetten) (hem var hem var değil) olamaz.
 
 Bunun kendisi başka bir şeyden ispat edilmez — inkârı bile kendini nakzeder: "Nakzeyn yanlıştır" diyen kişi bile, kendi cümlesinin "doğru" ile "yanlış"ın aynı anda aynı şey olmadığını zaten kabul etmiş olur (bu savunmanın genel şekli §0.3'te ayrıca kurulacaktır).
 
@@ -57,6 +62,8 @@ Birbirine çelişik iki hâl arasında üçüncü bir orta yol yoktur. Koyun ya 
 ```
 P ∨ ¬P          ∀x (Mevcud(x) XOR ¬Mevcud(x))
 ```
+**Okunuşu:** P veya p değil. Her x için: x mevcuttur veya x mevcut değildir, ikisi birden değil.
+**Bağlamıyla:** "Bir şey" ya vardır ya yoktur; üçüncü bir orta hâli yoktur.
 
 #### 0.2.4 Kâfi Sebep Kanunu (Mebde-i İllet)
 
@@ -65,6 +72,8 @@ Kendiliğinden zarurî olmayan (mümkin) hiçbir şey, kendi kendine varlık sah
 ```
 Mümkin(x) ∧ Hudûs(x)  ⟹  ∃y (y≠x ∧ İllet(y,x))
 ```
+**Okunuşu:** x mümkindir ve x sonradan olmuştur ise, öyle bir y vardır ki: y, x'e eşit değildir ve y, x'in illetidir.
+**Bağlamıyla:** "Kendiliğinden zarurî olmayıp da sonradan ortaya çıkan bir şey" varsa, o şeyden başka, onu var eden bir sebep mutlaka vardır.
 
 **Bir itiraza cevap — bu kaide keyfî bir varsayım mıdır?** Bazı filozoflar (meşhuren Hume) nedensellik ilkesinin, Ayniyet ve Nakzeyn gibi saf mantıkî bir zaruret olmadığını, yalnız tecrübeden gelen bir alışkanlık olduğunu ileri sürmüştür — yani "sebepsiz bir şeyin vuku bulması" mantıken çelişkili değil, yalnız alışılmadıktır, denilir. Bu itiraz ciddiye alınmalı ve şöyle cevaplanmalıdır: Kâfi Sebep Kanunu, aslında Nakzeyn'in **var olma sahasına dolaylı bir tatbikinden** başka bir şey değildir, keyfî bir ilave değildir:
 
@@ -74,6 +83,8 @@ Sebepsiz-tercih(x, H₁, H₂) ≔ Fark(H₁,H₂) = ∅   [H₁ ile H₂ arası
 ↯ — "aralarında fark yok" ile "aralarında (netice) farkı var" aynı anda doğru olamaz;
     netice farkı da bir fark çeşididir, bu da Nakzeyn'in ihlâlidir
 ```
+**Okunuşu:** x'in H₁-H₂ arasındaki sebepsiz tercihi şöyledir: H₁ ile H₂'nin farkı boş kümedir, ve H₁'in vukuu H₂'nin vukuuna eşit değildir — çelişki.
+**Bağlamıyla:** "İki ihtimal" arasında (aralarında hiçbir ayırt edici sebep yokken) (biri gerçekleşip öbürünün gerçekleşmemesi) olamaz.
 
 Demek, "tereccüh bilâ müreccih" (sebepsiz tercih) yalnız alışılmadık değil, doğrudan çelişkilidir: sebepsiz bir tercih, "fark yokken fark iddia etmek"tir. Bu risalenin bütün İsbât-ı Vâcib bahsi (§3) zaten bu tatbikin üzerine kuruludur; oradaki devir ve teselsül butlânları da, aynı Kâfi Sebep Kanunu'nun iki ayrı sahaya (döngüsel sebep, sonsuz zincir) tatbikinden ibarettir — burada tekrar kurulmayacak, yalnız işaret edilmiştir.
 
@@ -90,6 +101,8 @@ Yukarıdaki dört kaidenin ortak bir hususiyeti vardır: hiçbiri, gelecekte yap
 T ∧ ¬T kabul edilirse ⟹ (patlama ilkesi) her önerme ispatlanır ⟹ "T" sözünün de bir mânâsı kalmaz
 ∴ Nakzeyn'i inkâr etmek, inkârı SÖYLEMEK için dahi Nakzeyn'i doğru kabul etmeyi gerektirir
 ```
+**Okunuşu:** Her T iddiası için: T anlamlıdır ise, T, T-değile eşit değildir. T ve T-değil kabul edilirse, öyleyse her önerme ispatlanır.
+**Bağlamıyla:** "Herhangi bir iddia" (anlamlı olabilmesi için bile) (kendi zıddından ayrışmış olmak) zorundadır.
 
 **Netice:** Mantık kaidelerini inkâr etmeye kalkan her zihin, inkârını ifade edebilmek için dahi bu kaideleri doğru kabul etmek mecburiyetindedir. Bu, yalnız Nakzeyn'e mahsus değildir — "her şey görecelidir" diyenin bu hükmün kendisini mutlak sayması, "hiçbir şey bilinemez" diyenin bu bilgiyi nasıl bildiği sorusuyla çökmesi gibi, aynı aileden pek çok iddia aynı tarzda kendi kendini çürütür. Mantık kaideleri işte bu sebeple tecrübenin veya fiziğin konusu değil, **her türlü tecrübenin ve her türlü fiziğin sıhhat şartıdır** — aşağıda, bu genel kaidenin en meşhur güncel itirazına (kuantum mekaniği) nasıl tatbik edildiği gösterilecektir.
 
@@ -126,6 +139,8 @@ Mebâdi-i Akliyye  ≻  Kavânîn-i Tabîiyye
 ∴ Mantık kaideleri tecrübî/fizikî keşiflerin konusu değildir;
   her türlü keşfin sıhhat şartıdır (şart-ı evvelîdir)
 ```
+**Okunuşu:** Akıl kaideleri, tabiat kanunlarından üstündür. Her Θ teorisi için: Θ'nın ortaya konabilmesi, "Θ doğrudur ve Θ yanlıştır ise batıldır" şartına bağlıdır.
+**Bağlamıyla:** "Herhangi bir fizik teorisi" (kuantum mekaniği dâhil), ortaya atılabilmesi için bile, (kendi içinde çelişki barındırmaması) şartına bağlıdır.
 
 | Netice | (T) |
 | :-- | :-- |
