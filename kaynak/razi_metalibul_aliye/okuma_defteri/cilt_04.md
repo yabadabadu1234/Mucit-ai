@@ -1441,3 +1441,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **cedelî + mantıkî ayrım**; (T) cedelî. **['ma'dûm şeydir' kavli Mu'tezile'ye ait; Sünnî çizgi reddeder.]**
 - Mevzuya bağı: **KRİTİK — Fasıl I §3, c3 Bâb 3**: '**ilim = sûretin zâtta hâsılı**' tanımı **Fasıl I ilim bâbının tanımıyla karşılaştırılacak** (Risale ilmi 'sûret hâsılı' mı 'özel nisbet' mi tanımlıyor? Râzî c3'te 'özel nisbet' meyli).
 - Doğan sual: —
+
+## c4 p161
+- OCR: orta
+- Okuma: tam
+- İçerik: (Hudûs tarafının itirazı sonu): 'ilim zâtta hâsıl olsa **ayn'ı değil misâl, sûret, resim** hâsıl olur (nitekim **aynaya bakınca** görüntünün misâli hâsıl, ayn'ı değil); **ma'lûm hâricde mevcut olmalıysa da her mâhiyet için hâricde külli, mücerret, nefsiyle kâim bir sûret** olabilir: **Eflâtun'a nisbet edilen 'her mâhiyetin külli, nefsiyle kâim, tagayyürden mücerret mesel (misâl)' görüşü**; bu takdirde ilim için hâricde bu mesellerin hâsılı yeter; ayrıca 'ilim Allah'la ezelde mevcut', fakat **günlük hâdisler ezelde mevcut değildi, Allah onları ezelde biliyordu**; **günlük hâdislerle cevabınız âlemin küllîsi için de bizim cevabımızdır.**' **Kıdem tarafının cevabı: 'nakız muhâllerle': 2 vecih**: **1.** '**her ma'lûm mevcut olmalı demiyoruz**; **ma'lûm ancak nefsinde, ma'lûm olduğu i'tibara uygun vâki ise ma'lûmdur**; ma'lûm **adem** ise nefsinde adem, **vücûd** ise nefsinde vücûd; yoksa ilim ma'lûma mutabık olmaz, **cehil olur**; 'Allah'ın şerîki mümteni'' bilgisinde ma'lûm 'şerîkin mümteni' olması'; **şerîk fî nefsihî mümteni'** olmalı ki ilim mutabık olsun.' (p162)
+- Netice/hüküm: **Hudûs tarafı: ilim = sûret (ayna); Eflâtun mesel; günlük hâdis. Kıdem tarafı cevabı: 'ilim ma'lûma mutabık; muhâller ma'dûm olarak bilinir'.**
+- Delil çeşidi: **cedelî (mutabakat ilkesi)**; (T) burhânî biçim. **Eflâtun meseli tarihî; Risale'ye alınmaz.**
+- Mevzuya bağı: **Fasıl I §3, §8 ve c3 Bâb 3 (ma'dûmun ilmi)**: '**ilim ma'lûma mutabıktır**' ilkesi Sünnî akideyle uyumlu; Risale ilim bâbında **'ma'dûmu ma'dûm olarak, muhâli muhâl olarak bilir' cümlesini** yazabilir (c3 p104–160 karşılaştırma borcu).
+- Doğan sual: —
+
+## c4 p162
+- OCR: orta
+- Okuma: tam
+- İçerik: (Cevap 1 devam): 'siyah, beyaz, felek, âlem nedir? ilmi ancak **siyah nefsinde siyah**, beyaz nefsinde beyaz, felek nefsinde felek, âlem nefsinde âlem ise ilimdir; yoksa **zihnî sûret hâricî emre mutabık olmaz, cehil** olur. Bu sabit olunca: **adem-i mahzda ve sırf ademde bu temeyyüzün hâsılı muhâl**; **bu mütemeyyiz ma'lûmât mevcut**: ya zihinde ya hâricde; ezelde zihinde ise ihtimali hâricde; ⇒ **ilmin kıdemi ma'lûmâtın kıdemine delâlet eder.**' **2. vecih**: '**bir şeye vücûb, imkân, imtinâ' ile hüküm zihnî i'tibârlardır, hâricde hâsılları yok, zihindedir**; oysa 'felek nedir, âlem nedir' ma'lûmâtı **hâricde mevcut**, zihnî i'tibar değil; ⇒ iki bâb farklı.' **'Ma'lûm mütemeyyiz olmalı' bedîhî**: 'şeyi bilip ondan başkasından ayırmayan **ondan gafil**; gafil olan onu bilen olamaz.'
+- Netice/hüküm: **Kıdem tarafı: 'ilim ⇒ ma'lûmun temeyyüzü ⇒ mevcut (zihinde/hâricde)'; ilmin kıdemi ma'lûmâtın kıdemini gösterir.**
+- Delil çeşidi: **analitik + mutabakat**; (T) burhânî biçim (kıdem tarafı). **[Delil ≠ dava: 'temeyyüz ⇒ mevcut' geçişi 'ma'dûm şeydir' kavlini reddettiği için hudûs tarafınca kabul edilmez (Sünnî de reddeder: temeyyüz ilimde/ilim için, hâricde değil).]**
+- Mevzuya bağı: **KRİTİK**: **Risale 'ilmin taalluku ma'dûm ma'lûma temeyyüz verir, vücûd gerektirmez' cevabını yazmalı**; c3 p104–160 'ma'dûmun ilmi' ile karşılaştırılacak.
+- Doğan sual: —
+
+## c4 p163
+- OCR: orta
+- Okuma: tam
+- İçerik: **Süt kardeş örneğine cevap**: '**nakız değil**: bu misalde ma'lûm **süt kardeş olan bir insan şahsının vücûdu**; bu miktar ma'lûm ve **diğer ma'lûmâttan mütemeyyiz**; o şahsın **kim olduğu** ise ma'lûm değil; ⇒ **ma'lûm olan miktar mütemeyyiz, mütemeyyiz olmayan ma'lûm değil.**' **'Ezelî ilim için temeyyüzün istikbalde hâsılı yeter mi' itirazına**: '**bu, açık fesat**: ilim ma'lûma **mutabık olmalı** (yoksa cehil); ilmin bir ma'lûmu diğerinden temyizi için o ma'lûm **temeyyüz etmiş olmalı**; ma'lûmun mütemeyyiz olması, ilmin bu temeyyüze taallukunun **şartı**; şart meşrûttan **öncedir**; ⇒ ma'lûmâtta temeyyüzün **ilmin bu temeyyüze taallukundan sonra** olması imkânsız.' **Hudûs tarafı: 'Allah ezelde siyahın beyazdan hâlde mütemeyyiz olduğunu bilmez, siyah ileride vücûda gelince vücûdunda mütemeyyiz olacağını bilir'**; **cevap**: 'bu işkâli def etmez: **siyah ileride vücûda gelecek** hükmü **siyaha hükümdür; belirli mâhiyete hüküm, hükmün mahkûm-un-aleyhi tasavvur etmesine şartlı** (p164).
+- Netice/hüküm: **Kıdem tarafı: temeyyüz ilmin şartı; şart meşrûttan önce; istikbalde temeyyüz yetmez.**
+- Delil çeşidi: **analitik (şart-meşrût)**; (T) burhânî biçim (kıdem tarafı).
+- Mevzuya bağı: **KRİTİK — Fasıl I §8, c3 Bâb 3**: '**Allah ezelde bilir, mâsivâ henüz yoktu**' cümlesinin kıdem tarafı itirazı; Risale bu itiraza **'ilim ma'lûmun temeyyüzünü bizzat sağlar (ilim mütemeyyiz kılar), Allah'ın ilmi zâtî ve ezelî'** ile cevap yazacak; c3 p104–160 (ilim 'özel nisbet') bu noktada kritik.
+- Doğan sual: —
+
+## c4 p164
+- OCR: orta
+- Okuma: tam
+- İçerik: (Cevap devam): 'hükümden önce tasavvur (tasdik tasavvurdan sonra); 'siyah ileride vücûda gelecek' hükmü bu mâhiyetin tasavvuruna mesbûk, **bu mâhiyetin diğerlerinden temeyyüzü ilminden sonra**; **bu temeyyüz vücûda girmesine mevkuf olsa devir** (muhâl).' **4. sual ('ademi mahzda temeyyüz muhâl mi?') cevabı, 2 vecih**: **(1)** '**bu hakîkatin öbür hakîkatten mütemeyyiz olması ancak bu hakîkatin kendinde öbür hakîkat gibi olmaması**; kendinde hakîkat olmayan şey, hakîkat olmadığı için başkasından temeyyüz edemez; **sırf selb ve mahz nefy kendinde hakîkat ve mâhiyet değil** ⇒ nefy-i mahz olması temeyyüze aykırı.' **(2)** '**adem-i mahzda temeyyüz ve ihtilaf akla yatsa bile**, biz **âlem, felek, insan ve at hakîkatlerinin mahz selb ve sırf adem olmadığını bedîhen biliyoruz**; bu hakîkatler **mütehassıl, nefsiyle kâim, mütebâyin mâhiyetler**; birbirinden **taayyün ve temeyyüzle** ayrılırlar; **bunun böyle olduğunu bilmek darûrî**.' **5. sual ('ma'dûm şeydir')**: '**bu da iki vecihle savuşturulur**' (p165).
+- Netice/hüküm: **Kıdem tarafı 4. suale cevap: adem-i mahzda temeyyüz olmaz; mâhiyetler mütehassıl darûrî.**
+- Delil çeşidi: **analitik + darûrî**; (T) burhânî biçim (kıdem tarafı).
+- Mevzuya bağı: **Fasıl I §3**: **'ma'dûm şeydir'** kavli tartışmasının bu kolu **c1 (ma'dûm şey mi? ⊬ atıf)** ile birlikte incelenecek.
+- Doğan sual: 'Ma'dûm şeydir' bâbı c1'in neresi (atıf haritası)?
+
+## c4 p165
+- OCR: orta
+- Okuma: tam
+- İçerik: **5. suale cevap (iki vecih)**: **(1)** '**'ma'dûm şeydir' diyenler 'felek hem felek olarak ademde sâbit, dağ hem dağ olarak ademde sâbit' demezler**; onu **basit mâhiyetlerde** (siyah, beyaz, cevher) söylerler.' **(2)** 'siz bu mâhiyetlerin **hâricü'z-zihn nefislerinde sâbit** olduğunu kabul ettiniz; **vücûdun mânâsı ancak budur**; delil: bu mâhiyetler nefislerinde sâbit, hakîkatlerinde mütekarrir farz edilirse **hâricü'z-zihinde mütehassıl olma bakımından müşterek, husûsiyetleriyle muhtelif**; **müşareket cihetiyle muhâlefet cihetiyle ayrı**; ⇒ 'nefsinde sâbit ve hakîkatinde mütekarrir olma' **her birinin hakîkat-i mahsûsasına zâid mânâ** olmalı ⇒ **bu mâhiyetler nefislerinde mütekarrir ise vücûd sıfatıyla vasıflanmalıdır.**' **6. suale (sûret-i zihniyye) cevap**: 'öyle olsa **istikamet ve istidâre ilminde âlim müstakim ve müstedîr olurdu (muhâl)**; ma'lûm **o mâhiyetin tamamı**; ma'lûmun mevcut olması gerektiğini gösterdik; **zihinde mi hâricde mi mevcut**: hâricde bâtıl ise **mâhiyet bütünüyle zihinde hâsıl** ⇒ ilzam geri (p166).
+- Netice/hüküm: **Kıdem tarafı: 'ma'dûm şey' iddiası vücûdu geri getirir (nefsinde sâbit = vücûd); sûret-i zihniyye ilzamı geri.**
+- Delil çeşidi: **analitik (müşareket/muhâlefet) + reductio**; (T) burhânî biçim (kıdem tarafı). **[Delil ≠ dava: 'nefsinde sâbit olmak vücûddur' (sübût-vücûd özdeşliği) ilkesi Eş'arî/Mâtürîdî çizgide kabul edilir; Mu'tezile reddeder — burada hudûs tarafı Mu'tezile tarzı olarak sunuluyor.]**
+- Mevzuya bağı: **Fasıl I §3**: 'sübût = vücûd' ilkesi **Risale'de yazılabilir (Ehl-i Sünnet ortak)**; kıdem tarafının 'ma'lûmât mevcut olmalı' argümanı **'Allah ilmi zâtî, ma'lûmât Allah'ın ilminde mevcut değil (ilmî varlık ≠ hâricî varlık)'** cevabını gerektirir.
+- Doğan sual: —
+
+## c4 p166
+- OCR: orta
+- Okuma: tam
+- İçerik: **7. suale (Eflâtun'un mesel/müsül görüşü) cevap**: 'âlim cismin cihetlerde mümtedd, hareket-sükûna kabil, şekil ve renkle vasıflı olduğunu bilirse **ma'lûm bu sıfatlarla vasıflı olan**; **Eflâtun müsülü dediğiniz şey bu sıfatlarla vasıflı mı değil mi**? **Vasıflıysa hareket ve sükûnla vasıflı cisim** (matlûb); **vasıflı değil**, bu sıfatlardan mücerret mevcutsa **o mevcut o ma'lûm değildir**; sözümüz ma'lûmun mevcut olması gerektiğinde.' **8. suale (günlük hâdislerle nakız) cevap**: '**cumhûr-i filozoflar bu tagayyürlü zamânî ilmin vücûdunu inkâr eder**, nakız onlara vârid değil; ayrıca sözümüz: **mâhiyetlerin tasavvuru bu mâhiyetlerin hâsılına mevkuf** ⇒ bu mâhiyetlerin ilminin kıdemi mâhiyetlerin kıdemi; **'bu mâhiyet yarın hâsıl olacak' hükmü hâlde o mâhiyetin hâsılına mevkuf değil, yoksa tenâkuz** ⇒ **fark.**'
+- Netice/hüküm: **Kıdem tarafı: Eflâtun mesellerine ve günlük hâdis nakızına cevap: fark, tasavvur ↔ hüküm.**
+- Delil çeşidi: **dilemma + fark**; (T) burhânî biçim (kıdem tarafı).
+- Mevzuya bağı: **Fasıl I §3**: 'ilim ezelî, mâsivâ hâdis' cümlesinin **kıdem tarafı karşıtı: 'ilmin ezelîliği ma'lûmun ezelîliği'** — c4 p158–166 bloğu Risale'nin ilim bâbında **cevap yazması gereken hüccetin tam metni**; cevap Kısım 2'de aranacak.
+- Doğan sual: —
+
+## c4 p167
+- OCR: orta
+- Okuma: tam
+- İçerik: **7. Makâle: 'Kâbil/maddî illetten çıkarılan vecihler ve âlemin zâtı gereği mümkin olması'** (başlık; kıdem tarafı).
+- Netice/hüküm: Yok (başlık).
+- Delil çeşidi: —
+- Mevzuya bağı: c4 p41 (dört illet: fâil, kâbil, sûret, gâye).
+- Doğan sual: —
+
+## c4 p168
+- OCR: boş
+- Okuma: tam (içerik yok)
+- İçerik: Yok.
+- Netice/hüküm: Yok.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
