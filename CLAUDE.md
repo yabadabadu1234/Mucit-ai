@@ -364,6 +364,7 @@
 | 23 | `FORMUL.md` mimarinin formülünü **kelimelerle** tutar; kod değişirse **aynı turda** değişir; yalnız fiilen koşan ameliye girer | 2-K |
 | 24 | En derin kod bizzat koşturulur; donanım yoksa yol aranır (emülatör, bulut, çapraz derleme); aşılamazsa engel **sayıyla** yazılır | 1-F |
 | 25 | Kaynak yoklanır (`git ls-remote` → klon → envanter); yol ve uzantı deponun envanterinden okunur | 1-K |
+| 25-B | **BÜYÜK KAYNAK OKUMA USULÜ (Râzî külliyatı ve benzeri):** kaynak **bölüm bütünlüğüyle** (fasıl/mesele/makâle baştan sona) okunur, yarım bölüm okunmuş sayılmaz; her sayfa için **okuma defterine** kayıt yazılır: okundu/okunmadı · OCR kalitesi · içerik · netice · bizim mevzuya bağı · doğan sual. Her bölüm bitince **bölüm özeti** (deliller numaralı, itirazlar ve cevaplar, damıtma, açık sualler) yazılır. `kaynak/*/OKUMA_DURUMU.md` hangi sayfaların okunduğunu, hangilerinin okunmadığını **sayıyla** gösterir. Okunmayan yerden netice çıkarılmaz; başlıktan çıkarılan cümle "başlık okundu, içerik okunmadı" diye işaretlenir. Amaç derleme değil, kaynağı bizim mevzumuza has şekilde **damıtıp ileri götürmektir**; kayıt ne kadar zenginse padişahın sualleri o kadar zengin olur | Padişah emri |
 
 ## 3-B. ÖLÇÜ VE MUHASEBE
 
