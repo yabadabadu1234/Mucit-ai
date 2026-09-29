@@ -1801,3 +1801,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **kavramsal tanım (zaman = bâkî cevher)**; (T) cedelî. **[Delil ≠ dava: 'müddet kendiliğinden cevher' iddiası ispatsız; Sünnî akide zamanı da mahlûk sayar; 'dehr' terimi hadis/nass bağlamında ayrıca (⊬).]**
 - Mevzuya bağı: **KRİTİK — Fasıl I §3, §6.3 ve F 27-B**: **kıdem tarafının 'mutlak zaman kadîm cevher' görüşü Risale'nin 'zaman mahlûk' cümlesine doğrudan karşıt**; Risale **'zaman mahlûktur' (Eş'arî/Mâtürîdî ortak) cümlesini** bu satırla yüzleştirip cevap yazacak; Aristo-zamanı eleştirisi Râzî'nin kendi c4 p14 ('zaman hareketin lâzımı' Tabîiyyât öncülü) ile birlikte incelenecek.
 - Doğan sual: 'Dehr' cevheri iddiası kimin? (⊬ atıf); Râzî cevabı Kısım 2'de mi?
+
+## c4 p201
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kıdem tarafının cevabı (9. Makâle 1. hüccetin itirazlarına)**: '**Bârî ezelde mevcut, âlem ezelde değildi ⇒ Bârî âlemden mukaddem**; âlemin hudûsundan **bin sene önce de, iki bin sene önce de mevcuttu**; **iki bin senelik takaddüm bin senelik takaddümden daha fazla mikdar**; bu fazlalık **yalnız farz ve i'tibarımızdan değil** (yalnız farz-i'tibârla hâsıl olan şey farzın değişmesiyle değişirdi); **bedîhen biliriz: âlemin evveline iki bin sene takaddümü sağlayan mikdar, bin senekinin iki katı**; **müddet ve zaman bu 'müsâvâtı ve mukârenete kabil mikdar'dan ibaret** ⇒ âlem hâdis olsa **Bârî ona mütenâhî olmayan müddetle mukaddem.**' **'Zaman parçaları birbirine müddetle değil takaddüm ediyor' itirazı**: 'bu cüz öteki cüzden müteahhirdir demek ancak **birinci cüz mevcutken**; **'ezelde müddet ve zamandan hiçbir parça hâsıl değildi' dersek âlem Bârî'den müteahhir olamaz** ⇒ fark.' **'Müessir eserden zaman değil te'sîr ve illiyetle mukaddem' itirazı**: 'bu vecihten başka takaddüm sübûtu memnû'.' (p202)
+- Netice/hüküm: **Kıdem tarafı: 'bin yıl / iki bin yıl' argümanı: müddet müsâvâtı kabul eden mikdar ⇒ Bârî'nin takaddümü müddetle.**
+- Delil çeşidi: **kavramsal mikdar argümanı**; (T) burhânî biçim/ikna'î (kıdem tarafı). **[Delil ≠ dava: 'iki bin/bin fark' zihnî farz değil gerçek mikdar iddiası; hudûs tarafı 'Allah'ın takaddümü sayılamaz, zamansız' der (c4 p199) — nizâ ontolojik.]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §6.3**: 'Allah'ın âlemden takaddümü mikdarla ölçülemez' (c4 p199 (4.–6.)) ile 'iki bin/bin' argümanı **doğrudan karşı karşıya**: Risale **'Allah'ın takaddümü zâtî (zamansız), 'bin yıl önce' ifadesi zihnî farz (vehmî zaman)'** ayrımını yazmalı; Kaynak: c4 p201.
+- Doğan sual: —
+
+## c4 p202
+- OCR: orta
+- Okuma: tam
+- İçerik: (Cevaplar devam): '**3. itiraz (zaman/hareket mâhiyeti mesbûkiyet)**: 'hareketlerin başlangıcı olduğuna dair **delilleriniz bâbında söz**.' '**4. itiraz (fânî ân)**: …' (OCR bozuk). '**5. itiraz (zaman dâim mi munkazî mi)**: **Eflâtun mezhebi: zaman zâtında ve cevherinde dâim, nisbetlerinde tebeddül eder**; **Aristo mezhebi: zâtında munkazî**; **bu iki mezhepte…**' '**6. itiraz (Bârî zamanî olamaz)**: '**Bârî ezelî, âlem hâdis olduğundan Bârî'nin âleme müddetle takaddümü kat'î**.' **2. hüccet**: '**müddet ve zaman: ya evvelsiz ve âhirsiz, ya evveli ve âhiri var, ya birine sahip**; **1. matlûb**; **2. (evveli ve âhiri var)**: '**bu takdirde müddet evvelsiz bir ademle mesbûk, âhirsiz bir ademle mülhûk**; **iki adem 'her biri adem olmakta müşterek', biri öbüründen **bu vecihten önce, öbürü bu vecihten sonra** olmakla ayrışıyor**; müşareket cihetiyle muhâlefet cihetiyle ayrı; ⇒ takaddüm ve teahhur **ademden mugâyir**; **müddet ve zaman bu emirdir**' (p203).
+- Netice/hüküm: 6 itiraza cevap; **2. hüccet başladı: 'müddet evvel ve âhir sahibi olamaz'.**
+- Delil çeşidi: **dilemma (üç şık)**; (T) burhânî biçim (kıdem tarafı). **Eflâtun/Aristo mezhepleri tarihî atıf ⊬.**
+- Mevzuya bağı: **Fasıl I §3**: 'zaman evvelsiz' iddiasının **kıdem tarafınca aşamalı ispatı (10 hüccet)**; Risale bu 10 hücceti **tek tek cevaplamak zorunda**; Kısım 2 (Râzî cevapları) aranacak.
+- Doğan sual: —
+
+## c4 p203
+- OCR: orta
+- Okuma: tam
+- İçerik: (2. hüccet devam): '**bu takaddüm ve teahhur, iki ademden birini ötekinden ayıran sebep olduğu için ikisi de ademden mugâyir**; **müddet ve zaman ancak iki misilden birinin diğerinden takaddüm ve teahhur mânâsında, kabliyet ve ba'diyet mefhûmuyla ayrılmasını sağlayan emirdir.** **Bir ademin 'evvelsiz mukaddem', ötekinin 'âhirsiz müteahhir'** vasfı taşıması ⇒ **müddet ve zaman evvelsiz ve âhirsiz hâsıl** ⇒ '**müddete evvel ve âhir isbâtı onların nefyini gerektirir (muhâl)**'.' **3. hüccet**: '**âlem hâdis olsaydı adem vakti vücûd vaktinden mütemeyyiz olmalıydı; öyleyse âlemin hudûsundan önce muhtelif vakitler hâsıl (adem vakti-vücûd vakti ayrımı)** ⇒ **mâdde ve zaman kadîm**; temeyyüz olmasa **'bir kere ma'dûm, bir kere mevcut' hükmü verilemez**; hâlbuki sarîh akıl **hâdisin ancak ademinden sonra vücûda geldiğine** şahit; bu ancak adem vaktinin vücûd vaktinden temyiziyle.' **4. hüccet**: (p204).
+- Netice/hüküm: **Kıdem tarafı 2.–3. hüccet: 'kabliyet-ba'diyet ademden mugâyir = zaman; adem/vücûd vakti temeyyüzü önceki vakitler ister'.**
+- Delil çeşidi: **analitik (müşareket/muhâlefet) + reductio**; (T) burhânî biçim (kıdem tarafı).
+- Mevzuya bağı: **Fasıl I §3**: 'adem vakti ↔ vücûd vakti' ayrımı **c4 p13–18'in altıncı kısım sebk cevabı** ile karşılaşıyor: Risale 'zamansız kabliyet' (c4 p15 düşünce deneyi) cevabını yazmalı.
+- Doğan sual: —
+
+## c4 p204
+- OCR: orta
+- Okuma: tam
+- İçerik: **4. hüccet**: '**müddet hâdis olsaydı fâilin ihdâsıyla hâdis olurdu**; Allah o müddeti **belirli vakte tahsis şartıyla mı** yoksa **şartsız mı** kasdetti? **Birincisi** muhâl: bu vakitte aynı soru, **teselsül**; teselsül **bir anda** muhâl, **her cüz öncekiyle mesbûk evvelsiz** olursa **matlûb**. **İkincisi (şartsız kasd)**: **kasd ezelî ise eserin sudûru kasdtan gecikmemeli**; **müddet ve zamanın tekvînine kasd ezelî ⇒ müddet ve zaman ezelî — matlûb.**' **5. hüccet** (OCR bozuk): '**adem ya ademdir ya vücûd (vücûd-ı mukaddem)**; **her hâdis için önce başka bir hâdis** ⇒ 'müddet ve zaman' ancak bu; **müddetin evveli yok**.' **6. hüccet**: '**her muhdes ademle mesbûk; ademin mukaddemliği ademin nefsi değil**; **ondan önceki adem ile sonraki adem müşterek (adem) ve muhalif (mukaddem-müteahhir)**; **takaddüm ve teahhur mefhûmu mahz ademe zâid, sübûtî iki sıfat**; **bir şeye zâtıyla lâhik olmalı (teselsülü kesmek için); o şey zamandır ⇒ her hâdisten önce evvelsiz bir zaman**' — matlûb.
+- Netice/hüküm: **Kıdem tarafı 4.–6. hüccet: müddetin hudûsu kasd ezelî; takaddüm-teahhur sübûtî sıfat ⇒ zaman.**
+- Delil çeşidi: **dilemma + analitik**; (T) burhânî biçim (kıdem tarafı).
+- Mevzuya bağı: **Fasıl I §3, §8**: 4. hüccet **'kasd ezelî ise eser gecikmez'** (c4 p130–132) ile aynı; Risale **'irade ezelî, taalluk hâdis; eser kasdtan gecikmez, çünkü taalluk vakitle ihtisaslı'** cevabını (Eş'arî) yazar.
+- Doğan sual: —
+
+## c4 p205
+- OCR: orta
+- Okuma: tam
+- İçerik: **Hudûs tarafının itirazı (6. hücceti)**: '**takaddümün başkasına nisbetle sübûtî sıfat olduğu kabul edilmez**: **(1)** siz şeyin ademini başkasına takaddümle vasfettiniz; ademin sıfatı mevcut olamaz (mevcûdun ma'dûma kıyamı). **(2)** takaddüm ve teahhur mevcut iki sıfat olsa bu sıfat **kendi ademinden de müteahhir** ⇒ o sıfatın başka sıfatı ⇒ **sonsuz, bir arada (muhâl)**. **(3)** takaddüm-teahhur mevcut sıfat olsa **izâfe mekûlesinden**; **iki izâfî beraber mevcut** ⇒ takaddüm ve teahhur beraber ⇒ **mukaddem ile müteahhir beraber (muhâl)**.' **Kıdem tarafının cevabı**: '**bu delilde takaddümün mevcut sıfat olmasına ihtiyaç yok**; matlûb bu mukaddimeden bağımsız: **takaddüm ve teahhur ancak hâlden hâle tebeddül, sıfattan sıfata tagayyürde akıl edilir**; **hiçbir şey hâdis olmasa, hiçbir hâl tagayyür etmese 'mâzî oldu' ve 'müstakbel' hükmü verilecek bir şey olmazdı**; **mâzî = mevcuttu sonra zâil oldu; müstakbel = hâzır olması beklenen, henüz hâzır değil**' (p206).
+- Netice/hüküm: **Hudûs tarafı 3 vechi ('takaddüm sübûtî sıfat değil'); kıdem tarafı: matlûb bu öncüle bağlı değil; takaddüm/teahhur tagayyürle akledilir.**
+- Delil çeşidi: **reductio (mevcut sıfat) + analitik**; (T) burhânî biçim.
+- Mevzuya bağı: **Fasıl I §3**: 'takaddüm sübûtî değil (itibârî)' **Risale'de kabul edilebilir**; kıdem tarafının yeni delili 'kabliyet-ba'diyet tagayyürsüz akledilmez' **c4 p199 (Bârî tagayyürden münezzeh ⇒ zamana girmez)** ile çelişkisi.
+- Doğan sual: —
+
+## c4 p206
+- OCR: orta
+- Okuma: tam
+- İçerik: (Cevap devam): '**mâzî, müstakbel ve hâl mefhûmları ancak vücûd ba'de adem veya adem ba'de vücûd bulunduğunda**; **zamanın evveli olmadan önce kabliyet-ba'diyet mânâsının hâsıl olduğu sabit ise** **hâdislerin hudûsu o ilkten önce hâsıl idi ⇒ o ilkin 'ilk' olması ile çelişir.**' **7. hüccet**: '**Allah'ın zâtına 'ezelde mevcuttu' ve 'ebedde mevcut olacak' sadık**; **'ezelde mevcuttu' mefhûmu 'ebedde mevcut olacak' mefhûmundan mütemeyyiz mi değil mi?** **Değilse bâtıl** (bedîhî: ikisi tek mefhum olurdu, iki lafızla ifade mahz ibâre fazlalığı); mütemeyyizse: 'kâne fi'l-ezel' geçmişe, 'seyekûnu' geleceğe işaret; 'kâne fi'l-müstakbel, seyekûnu fi'l-mâzî' dersek sarîh akıl fesâdına şahit ⇒ **bu iki mefhûm arasındaki mugâyeret bedîhî**; Allah'a vücûd hükmü verilir; **fakat bu mefhûmlardan biri diğeriyle beraber hâsılıyla hükümlenmez** ⇒ her mefhûm **Allah'ın zâtından ve âlemin ademinden mugâyir**; 'ezel = evvelsiz geçmiş devam, ebed = âhirsiz gelecek devam' ⇒ **müddet, dehr, sermed = bu** ⇒ '**dehrin evveli yok**' (p207).
+- Netice/hüküm: **Kıdem tarafı 7. hüccet: 'ezel' ve 'ebed' mefhûmları Allah'ın zâtından ayrı mugâyir mefhûmlar = müddet/dehr; dehrin evveli yok.**
+- Delil çeşidi: **analitik (mefhûm ayrımı)**; (T) burhânî biçim (kıdem tarafı). **[Delil ≠ dava: 'ezel' ve 'ebed' mefhûmlarının ayrılığı, bu ayrımın mevcut bir 'dehr' cevherini gerektirdiği sonucuna götürmez; itibârî/selbî ayrım yeter (Allah'ın zâtı değişmeden 'daimî' zihnî ölçü).]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §6.3**: 'ezel/ebed zâtından mugâyir mefhûm (dehr)' iddiası; Risale **'Allah'ın ezelî ve ebedî oluşu zâtının sıfatı (kıdem-bekâ), ayrı bir mevcut dehr yok'** cevabını yazmalı; c1 Mesele 6–7 ile bağlı.
+- Doğan sual: —
+
+## c4 p207
+- OCR: orta
+- Okuma: tam
+- İçerik: (7. hüccet devam): 'ezel: **mâzî tarafında evveli olmayan devam**; ebed: **müstakbel tarafında âhiri olmayan devam**; **bu iki emir Allah'ın zâtından ve âlemin ademinden mugâyir**; **müddet, dehr ve sermed bundan ibaret** ⇒ **müddetin ve dehrin evveli yok.**' **8. hüccet**: '**âlem hâdis olsaydı 'Allah âlemin ademiyle beraber mevcuttu' sadık olurdu**; **'kâne' kelimesinden anlaşılan ya yalnız Bârî'nin vücûdu ve âlemin ademi**, **ya bu ikisi özel bir şart ve keyfiyetle**; **birincisi bâtıl**: 'seyekûnu Bârî ve âlemin ademi' de bu iki şeyin hâsılını taşır; ama anlaşılan mânâ 'kâne'nin mânâsı değil; **ikincisi ⇒ 'Bârî'nin vücûdu ve âlemin ademi özel şart ve keyfiyetle' ve bu şart ve keyfiyet ezelden şimdiye dâim; müddet ve zaman bundan ibaret.**' **9. hüccet**: '**sarîh akıl şahit: bir şeyin muhdes olması 'önceki vakitte mevcut değildi, sonra mevcut oldu' demektir**; zamana **muhdes** dersek 'önceki vakitte mevcut değildi sonra mevcut oldu' ⇒ **vakit ve zaman kendi vücûdundan önce vardı (muhâl)**; bu delil **başlangıç için de sonuç için de geçerli**: müddetin evveli ve âhiri olamaz.' (p208)
+- Netice/hüküm: **Kıdem tarafı 8.–9. hüccet: 'kâne' mânâsı zaman; 'zamana hâdis' demek zamandan önce zaman.**
+- Delil çeşidi: **analitik (lafız mânâsı) + reductio**; (T) burhânî biçim (kıdem tarafı).
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §6.3**: 'zamana hâdis demek zamandan önce zaman' (**c4 p16, 63–64**'ün başka biçimi); Risale **'zaman hâdis' cümlesini 'hudûs = vücûdun ademle mesbûkiyeti, ademin zamanı yok' tanımıyla** yazacak (c4 p13–15).
+- Doğan sual: —
+
+## c4 p208
+- OCR: orta
+- Okuma: tam
+- İçerik: **Hudûs tarafının itirazı (9. hüccete)**: '**'hudûs'te akledilen 'ma'dûm idi sonra mevcut oldu'; 'önceki vakit'** tasavvuru şart değil; **delil**: sizin dediğinizde **her zaman parçasının hudûsu başka bir zamana muhtaç ⇒ sonsuz zamanlar (muhâl).**' **Kıdem tarafının cevabı**: '**'ma'dûm idi (kân) sonra (summe) mevcut oldu' sözü açıkça zamanı ispat eder**: **'kân' mâziyi gösterir; akıl mâziden ancak 'hâzır idi, sonra geçti' bir şey** tasavvur eder; **'summe' bir şeyin hâsılından sonra başka şeyin hâsılını gösterir**; bu lafızların hepsi **aklın hudûs mânâsını ancak sürekli bir müddet ve dâimî zaman farz etmeden tasavvur edemeyeceğini** gösterir.' **'Bu lafızlara takılmak mahz lafızcılık' itirazına**: 'bu bir **tenbih**: akıl hiçbir lafzı söyleyemez, hiçbir mânâya işaret edemez ki onun hudûsunu bir zamanla, sabık ademini bir zamanla ikrar etmiş olmasın; **müddetin dâim ve evvelden ebede mevcut olduğunu ikrar akılların bedâhetinde yerleşik**.' **Zamanın parçaları için 'sonsuz zaman' itirazına**: '**biz de öyle deriz: önceki parça mevcut olmasaydı sonraki parçayı hâdis-müteahhir diye hükümleyemezdik**.' **10. hüccet (başlıyor)**: 'âlem hâdis olsa **bundan önce başka bir âlem** bulunsa ve onun sonu bu âlemin başına…: iki devir…' (p209).
+- Netice/hüküm: **Kıdem tarafı 9. hüccet cevabı: 'kâne/summe' lafızları zamansız hudûsu tasavvur ettirmez; 'sonsuz zaman' itirazı kabul edilir (evvelsiz silsile).**
+- Delil çeşidi: **dil analizi + 'tenbih'**; (T) ikna'î. **[Delil ≠ dava: 'akıl lafızsız tasavvur edemez' iddiası 'zamansız kabliyet' düşünce deneyini (c4 p15) lafız-zihin ayrımıyla çürütmeye çalışıyor; hudûs tarafı tasavvurun lafızdan bağımsız olduğunu söyler.]**
+- Mevzuya bağı: **Fasıl I §3**: kıdem tarafı 'sonsuz zaman itirazını' **kabul eder ('biz de öyle deriz')** — 'zamanın her parçası önceki parçaya mesbûk' evvelsiz silsile; bu, **Fasıl I'in 'teselsül' delilinin karşı görüşü**; Risale c2 p77–78 anlam kaydı ile birlikte yazmalı.
+- Doğan sual: —
