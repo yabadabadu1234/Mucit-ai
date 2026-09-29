@@ -603,7 +603,7 @@ Kur'ân der: "elden geçince bir kısmı değiştirildi"          ⟹  MEVCUT me
 | 7-C | Nazm (belâgat/fesâhat/talâkat); çelişkisizlik | cedelî-yüksek / cedelî |
 | 7-D | Üç kolun toplamı ("Kur'ân insan sözü değil") | **cedelî-yüksek — burhânî DEĞİL** |
 | 7-E | İlmî-gaybî kol | cedelî-zayıf; destek |
-| 7-F | Hiyeroglif iddiası (metin bulundu: Piramit Metinleri, Pepi I Spell 526 = PT 553) | cedelî-zayıf; dayanak değil, kayıt |
+| 7-F | Hiyeroglif iddiası: metin gerçek (Pepi I Spell 526 = PT 553); ayet Arap deyimiyle (Keşşâf, Tabarî) açıklanır, adem-i vüsul düşer | dayanak DEĞİL |
 | 8 | Kur'ân'ın hitabı evrenseldir (metin vakıası) | burhânî |
 | 9 | Arapça bilmemek mucizeyi değiştirmez; delil haber derecesine iner | burhânî (ontolojik/epistemik ayrım) |
 | 10-a | Sîret çekirdeği (tevatür) | burhânî (haber) |
