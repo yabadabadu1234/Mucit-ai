@@ -1657,3 +1657,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **cedelî + atıf (c3)**; (T) cedelî.
 - Mevzuya bağı: **Fasıl I §8**: kıdem tarafı **'Allah'ın fiilini maslahatla ta'lîl bâtıl' hükmünü Râzî'nin c3'ünden iktibas ediyor**; bu, **aynı silahın iki tarafa döndüğünün sekizinci örneği (p67, 137, 144 vb.)**.
 - Doğan sual: —
+
+## c4 p185
+- OCR: orta
+- Okuma: tam
+- İçerik: **8. Makâle: 'Hareket, tagayyür ve hudûstan çıkarılan vecihler'** (başlık; kıdem tarafı).
+- Netice/hüküm: Yok (başlık).
+- Delil çeşidi: —
+- Mevzuya bağı: c2 p77–78 (her hâdis öncekine mesbûk).
+- Doğan sual: —
+
+## c4 p186
+- OCR: boş
+- Okuma: tam (içerik yok)
+- İçerik: Yok.
+- Netice/hüküm: Yok.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c4 p187
+- OCR: orta
+- Okuma: tam
+- İçerik: **8. Makâle, 1. hüccet (kıdem tarafı)**: '**âlem hâdis olsaydı hâdisler ilk hâdise intihâ ederdi; o ilk hâdisin ya hâdis bir sebebi vardır ya yoktur; iki kısım da bâtıl ⇒ 'hâdislerin ilk hâdise intihâsı' muhâl.** **Hâdis sebebi olmamasının imtinâ'ı, 2 vecihle**: **(1)** '**aklın bedîhesi ve nefsin fıtratı**: **her hâdisin bir sebebi olmalı**; 'ne hâdis oldu ki bu eser hâdis oldu?' derler; **'bu eser hâdis oldu, sebebi hiç yok yahut sebebi eskiden mevcuttu' diyene bütün akıllılar yalanlar: ya yalancı ya deli**; bu hüküm için **hâdis sebep lâzım** ⇒ '**hâdis hükmün hâdis sebebe iftikârı akıllarda zarûrî, nefislerde bedîhî'**.'
+- Netice/hüküm: **Kıdem tarafı 8. Makâle 1. hüccet: 'ilk hâdisin hâdis sebebi olmalı (bedîhî)'.**
+- Delil çeşidi: **bedîhî iddiası + dilemma**; (T) burhânî biçim (kıdem tarafı). **[Delil ≠ dava: 'hâdis hükmün hâdis sebebi olmalı' öncülü (illetin de hâdis olması) tartışmalı; Sünnî çizgi 'hâdisin sebebi ezelî irâde' (kadîm sebep) der.]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §8**: 'hâdisin kadîm sebebe isnadı' — **Risale'nin 'hâdisin müessiri ezelî fâil (irâde ile)' cümlesi** bu bedîhî iddiaya karşıdır; p188'de itiraz-cevap.
+- Doğan sual: —
+
+## c4 p188
+- OCR: orta
+- Okuma: tam
+- İçerik: **İtiraz (hudûs tarafı)**: 'akıllılar hâdis hükmü **eskiden var olan bir sebebe** isnad etmez mi? Bazen 'bu şimdi hâdis oldu, çünkü **eski kin ve eski düşmanlıktan**' derler.' **Cevap (kıdem tarafı)**: '**bunu diyen, eski düşmanlığın bu zararlara mûcib olduğunu, ama bu eserlerin zuhurunun şartlara mevkuf olduğunu** kabul eder: **izhâr kudreti, mânilerin zevâli**; 'eski düşmanlık bu hâlleri gerektiriyordu, bütün şartlar hâsıl, mâniler zâil idi, eser uzun müddet hâsıl olmadı, **sonra şart tağayyürü veya mâni' zevâli olmadan hâdis oldu**' bedîhî imkânsız.' ⇒ '**sahîh akıllarda karar: her hâdis hükmün hâdis bir sebebi olmalı.**' **2. vecih**: 'ilk hâdisin hâdis sebebi olmasaydı: ya **o hâdisin hiç sebebi yok** (ittifakla bâtıl) ya **sebebi var ama hâdis değil**: **bâtıl**: o şey **bu eserin ademi zamanında hâsıldı, şimdi de vücûduna mukârin** ⇒ **sarîh akıl 'sebep olamaz' hükmü verir**' (p189).
+- Netice/hüküm: **Kıdem tarafı: 'eski kin' itirazına cevap (şart/mâni' mekanizması); 2. vecih: kadîm sebep şimdiki hâdisin sebebi olamaz.**
+- Delil çeşidi: **dilemma + misal**; (T) burhânî biçim/ikna'î (kıdem tarafı).
+- Mevzuya bağı: **Fasıl I §8**: 'kadîm sebep + hâdis eser' probleminin klasik ifadesi; Risale **'kadîm sebep irâde; eserin vakti irâdenin taallukuyla belirli'** cevabını yazacak (c4 p47–50, 6 cevap ile).
+- Doğan sual: —
+
+## c4 p189
+- OCR: orta
+- Okuma: tam
+- İçerik: **Misal**: 'Zeyd bugün hummalı oldu; hummanın hudûs sebebi **semânın üstümüzde arzın altımızda olması** dersek **bedîhen bâtıl**: bu hâl, hummanın hudûsundan **çok yıl önce hâsıldı** ve hummanın hudûsunda etkisi yok' ⇒ **hâdis eserin kadîm müessire isnadı bedîhen imtinâ'.** **2. kısım (ilk hâdis hâdis sebebe muhtaç) bâtıl, 3 vecihle**: **(1)** 'bu takdirde **ilk hâdis hâdis olmaz** (hulf)'; **(2)** '**her hâdisin başka hâdisten önce isnadı** takdirinde bu **sonsuz sebepler** ya **bir anda** mevcut ya **her müteahhir öncekine isnadlı, evvelsiz**'; **birincisi bâtıl**: (a) 'sonsuz sebep-müsebbep bir anda muhâl' (önceden); (b) mecmû o vakitte hâdis, **mecmûun o belirli vakitte hudûsunun hâdis bir sebebi olmalı**; o sebep mecmûdan ayrı olmalı ama hâdis olarak mecmûa dâhil ⇒ **aynı şey mecmûun hem içinde hem dışında (muhâl)** (p190).
+- Netice/hüküm: **Kıdem tarafı: 'evvelsiz peş peşe hâdis silsilesi' tek yol; 'bir arada sonsuz' ve 'kadîm sebep' bâtıl.**
+- Delil çeşidi: **reductio (mecmû içi-dışı) + misal**; (T) burhânî biçim (kıdem tarafı).
+- Mevzuya bağı: **KRİTİK — Fasıl I §3**: 'mecmû içi-dışı' argümanı c4 p17 ve c3 p250 ile aynı; c2 p77–78 'mecmû yok' okuması bu silsile kolunun Râzî'ce **anlam kaydı**.
+- Doğan sual: —
+
+## c4 p190
+- OCR: orta
+- Okuma: tam
+- İçerik: (3. vecih): '**his gösterir ki hareketin cüzleri bir anda birlikte hâsıl olmadı; vücûda giren şahıslar bu belirli zamanda birlikte mevcut olmadı**' ⇒ '**her hâdis başka hâdise istinâd etmeli, sonsuza; sonsuz sebep ve müsebbepler bir anda hâsıl olmadığından her biri öncekine istinad etti, evvelsiz — matlûb.**' **İtiraz**: 'bu takdirde **ma'dûm mevcûdun illeti** olur.' **Cevap**: 'öyle değil: **vücûdda müessir illet kadîm, dâim mevcuttur**; bu hâdislerin her biri **kadîmin müessir olmasının şartıdır** (önceden takrîr edildi).' **2. hüccet**: '**cisim hâdis olsaydı hudûsu ya zâtının aynı ya zâid**; iki kısım bâtıl ⇒ hudûs bâtıl. **Zâtının aynı olamaz, 2 vecihle**: **(1)** '**hudûs ademden vücûda çıkış**; cisim **bekâ hâlinde hâdis değil**; hudûsu zâtının aynı olsa **hudûs ikinci zamanda hâsıl olmayınca zâtı da ikinci zamanda baki olmazdı ⇒ cisim mümteni'ü'l-bekâ (bâtıl)**' (p191).
+- Netice/hüküm: **Kıdem tarafı 8. Makâle: silsile sonucu; 2. hüccet: cismin hudûsu zâtının aynı olamaz.**
+- Delil çeşidi: **his + reductio**; (T) burhânî biçim (kıdem tarafı). **[Delil ≠ dava: 'ma'dûm illet değil' cevabı 'hâdis şart' kalıbıyla c4 p56–57'nin mütekellim itirazına (mûciddiyet hükmü hâdis) yeniden açık bırakılıyor.]**
+- Mevzuya bağı: **Fasıl I §3**: **'hudûs cismin zâtı mı zâid mi?'** Risale'de **'hudûs itibârî bir nisbet, zâid varlık değil'** cevabıyla (kaynaklı c4 p191) yazılabilir.
+- Doğan sual: —
+
+## c4 p191
+- OCR: orta
+- Okuma: tam
+- İçerik: (2. hüccet devam): '**(2) hudûsu zâtının aynı olsa âlim zâtıyla hudûsunu bilirdi; hudûsunun ilmi zarûrî, nitekim vücûdunun ilmi zarûrî**; **hudûsu zâtına zâid olamaz**: **hâdisin hudûsu da ona zâid ⇒ teselsül**.' **İtiraz**: 'cismin hudûsu zâtının aynı olsa **cisim hâdis hâdis olur (muhâl)** demek gerekir; ayrıca bu **sıfat ve arazlara da vârid**; hem de **size vârid**: cismin kıdemi (bekâsı) hakkında.' **Cevap**: **(1)** 'akılların ittifakı **ecsâm bâkî ve dâim**'; **(2)** '**pek çok kimse arazların bekâsının muhâl olduğunu iltizam etti**'; **(3)** '**cismin kıdemi zâtının aynı olsa her vakitte kadîm olur; hudûsu zâtının aynı olsa her vakitte hâdis olurdu**; bu **bâkî ve mustemir vücûda aykırı** ⇒ fark.' **3. hüccet**: '**mütekaddimîn 'hiç bir gece görmedik ki öncesinde gündüz olmasın, hiç bir gündüz ki öncesinde gece olmasın' derdi; öyle olmalı**; **mütekellimîn**: 'bu **şâhidin gâibe kıyası, mahz tahakküm, bâtıl**.' **Kıdem tarafının 2 makamı**: (1) 'delil ile kat'î-cezmî ispat değil, bu görüşün **evlâ, akrab, kabule elyak** olduğunu göstermek'; (2) 'bu yolla kat'iyeti ispat' (p192).
+- Netice/hüküm: **Kıdem tarafı 3. hüccet (mütekaddimîn: gece-gündüz sonsuz silsile) ve iki makamlı savunma planı.**
+- Delil çeşidi: **tümevarım (gece-gündüz) + mükabele**; (T) ikna'î (kıdem tarafı açıkça 'evlâ, akrab' diyor, kat'î iddiasını ikinci makama bırakıyor).
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, F 27-B**: kıdem tarafı **1. makamda kendi delilini 'evlâ ve akrab' (zan-ı kavî düzeyinde) olarak sunuyor**; Risale'de **'kıdem tarafı kat'î iddia edemez, en fazla evlâ (Râzî'nin kendi ifadesi c4 p191)'** kaydı; c2'nin derecelendirme dili ile **uyumlu**.
+- Doğan sual: —
+
+## c4 p192
+- OCR: orta
+- Okuma: tam
+- İçerik: **1. makam ('evlâ ve akrab')**: '**her şeyde asıl bekâdır**; değişim için **munfasıl delil** yoksa **bekâyla hükmetmek lâzım**' — **iki emir**: **(a)** asıl her şeyin bekâsı; **(b)** bu böyle ise matlûb lâzım. **(a) delil (vecihler)**: **1.** '**baki bekâ hâlinde müessirden müstağnî** (yoksa kâinin tekvîni), **hâdis hudûs hâlinde müessire muhtaç** (ittifak); **müessirden müstağnî olan müessire muhtaç olana nisbetle vücûdca râcih** (müstağnî râcih olmasa müsâvî veya mercûh olurdu, müessire iftikâr; oysa müstağnî farz edildi ⇒ hulf); **müessire muhtaç olan müstağnî olamaz** (hulf); **bâkînin hâdise nisbetle nefsü'l-emirde râcih olması** ⇒ **sadık zanda da böyle olmalı, zan mazNûna mutabık olmalı**. **2.** '**hâdis hudûsu için üç şeye muhtaç**: şeyin hudûsu, o zamanın hudûsu, o zamanda hâsılının hudûsu; **baki ise şeyin hudûsuna muhtaç değil, iki şeye**: o zamanın hudûsu ve o zamanda hâsılı…' (p193)
+- Netice/hüküm: **Kıdem tarafı 1. makam: 'her şeyde asıl bekâ' ilkesi ve 2 delil (bâki müessirden müstağnî; hâdis üç şeye muhtaç).**
+- Delil çeşidi: **ilke (istishâb) + analitik**; (T) cedelî-ikna'î. **[Delil ≠ dava: 'asıl bekâ' istishâb ilkesi hudûs delili karşısında 'delil hangi taraftan gelecek' usûl meselesi; kelâmcı hudûs tarafı 'delil var' der (fıtri hudûs gözlemi).]**
+- Mevzuya bağı: **Fasıl I §3**: 'istishâb: asıl bekâ' ilkesi **kıdem tarafının epistemik stratejisi**; Risale **'hudûs delil ile sabit; istishâbî bekâ hükmü delil yerine geçmez'** yazmalı.
+- Doğan sual: —
