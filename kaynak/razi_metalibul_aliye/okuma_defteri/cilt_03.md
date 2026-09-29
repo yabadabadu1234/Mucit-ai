@@ -3025,3 +3025,75 @@ Biçim: cilt 1–2 ile aynı.
 - Delil çeşidi: **reductio (mecbur bir iki ihtimalli örnek)**; (T) cedelî. **[Delil ≠ dava: 15. hücette 'terk hasen ⇒ haberin kizbi hasen' çıkarımı 'hasenin lâzımı hasen' ilkesine dayanıyor; bu ilke mantıken tartışmalı (lâzımın hükmünün ayrı olabileceği).]**
 - Mevzuya bağı: **Fasıl I (adl/kizb)**: 'Allah hakkında kizb muhâl' ilkesi Sünnî ana çizgide nassla ve tenzîh ile sabit; bu hüccetler **ana metne alınmaz**. Ders katmanına 'aklî hüsn-kubuh delillerinin çeşitleri' kutusu için bu bâb özet olarak çalışılacak.
 - Doğan sual: 16. hücccetin devamı p337'de (okunacak).
+
+## c3 p337
+- OCR: orta
+- Okuma: tam
+- İçerik: **16. hüccet (devam)**: zâlim peygamberi öldürmek ister; peygamber bir adamın evine saklanmış; adam doğruyu söylerse zâlim peygamberi öldürecek ⇒ adama **kizb vâcib, sıdk terk vâcib** ⇒ **'kizb olması kubhu gerektirmez'**. **İki itiraz**: (1) adam kizb değil **ma'ârîz (tevriye)** yolunu tutmalı ('ma'ârîzde kizbden kurtuluş vardır' sözü); (2) kizb bu hâlde vâcib olsa da **eserin illetinden tehallüfü** (illet var, eser yok) 'kizb kubhu gerektirir' sözünü zedelemez. **Râzî'nin cevabı**: (1) zâlim bütün ma'ârîz vecihlerini bilen, adam da 'ma'ârîze girersem zâlim peygamberin yanında olduğunu anlar, taleplerini artırır, öldürür' diye biliyorsa **ma'ârîzde fayda yok**; kalan iki şık: **masum peygamberin kanını heder etmeye çalışmak** ya da **kizbi iltizam**; ilki bâtıl ⇒ ikincisi. (2) 'Kubhun bazı mânilerle kizbden tehallüfü caiz olsa **her kizbde mâni ihtimali** olur; bu takdirde **Allah'ın ve Resûlünün hiçbir sözüne vüsûk kalmaz**, bütün nasslar **zannî olur, ma'lûm olmaz**.'
+- Netice/hüküm: Râzî'nin 16. hücceti: **kizb bazı hâllerde vâcib olur ⇒ kizbin kubhu 'kizb olduğu için değil'** (aklî hüsn-kubuh 'illet' yapısına itiraz).
+- Delil çeşidi: **reductio (mükemmel bir zorunluluk misali)**; (T) cedelî. **[Delil ≠ dava: 'tevriye fayda vermez' ön kabulü mücerret bir senaryoya bağlıdır; fıkhî-ahlâkî hüküm (zulmü defetmek için tevriye ve zaruret) ayrıca nasslarla çalışılır.]**
+- Mevzuya bağı: **KRİTİK**: **Risale bu senaryoyu 'kizb bazen vâcib' hükmü olarak ALMAZ**; Sünnî fıkıhta zâlimden mazlumu korumak için **tevriye ve zaruret hükümleri** vardır (⊬ ayrıca), Râzî'nin buradaki amacı **aklî hüsn-kubuh 'bizzat' tezini çürütmektir**; Fasıl IV (Sünnet ve Tahkik) için 'nasslara vüsûk zannî olmasın' cümlesi (2. cevap) **değerli bir ilkedir (nas kat'iyeti)**, kaynak c3 p337.
+- Doğan sual: —
+
+## c3 p338
+- OCR: orta
+- Okuma: tam
+- İçerik: **16 hüccetin özeti**: 'aklî hüsn-kubuh Allah'ın hüküm ve fiillerinde bâtıl, itibar edilmez.' **Ebü'l-Hasan el-Eş'arî ashâbından büyük bir cemaatin argümanı (Râzî aktarır)**: 'katil zâtı gereği kabîh olsaydı **her katil kabîh** olurdu, **kısas** da kabîh olurdu; menfaat zâtı gereği hasen olsaydı **her menfaat ve lezzet hasen** olurdu, **zinâ ve lûtiyet** hasen olurdu; böyle olmadığına göre 'hasen zâtı gereği hasen, kabîh zâtı gereği kabîh' sözü bâtıl.' **Mu'tezile'nin cevabı**: 'biz 'zâtı gereği' demiyoruz; **hasen kendine dönen vecihlerle hasen, kabîh kendine dönen vecihlerle kabîh**.' **Eş'arîler**: 'vecihlerle ta'lîl **mefhûm ve ma'kûl olmayan bir şeyle** ta'lîldir.' **Râzî: 'biz bu vecihleri mefhum olacak şekilde tefsîr edelim'**: sirke içmekten lezzet duyma: lezzeti gerektiren yalnız sirke değil, **mecmû**: evvelce yağlı tatlı yemek yenmiş, mide kuvvetli...; ilaç rağbeti: bedende belirli ahlât, başka ilaçların bulunmaması, hastalık emareleri; 'ay altı âlemde hâller, vecihler, şartlar vardır'. 
+- Netice/hüküm: **Râzî, Eş'arî ashâbından bir cemaatin 'bizzat hasen' reddine dayalı hüccetini Mu'tezile'ye karşı zayıf buluyor** (Mu'tezile 'zâtı' değil 'vecihleri' söylüyor).
+- Delil çeşidi: **taksîm + misal (sirke, ilaç)**; (T) cedelî-ikna'î.
+- Mevzuya bağı: **KRİTİK — Ehl-i Sünnet içi**: Râzî burada **kendi mezhebinden bir grubun delilini de eleştiriyor** (p339 sonuç: 'mezheplerini bilmediler'); **kendi tenkidim**: Râzî'nin **hasmı doğru temsil etme ilkesi** (Mu'tezile 'zâtı' iddia etmiyor) ders katmanı için **örnek bir usul**; Risale **hasmı temsil ederken bu ilkeyi uygular**.
+- Doğan sual: —
+
+## c3 p339
+- OCR: orta
+- Okuma: tam
+- İçerik: (Vecihlerin tefsiri devam): 'ay altı âlemde bu hâller, vecihler, şartlar vardır'; Mu'tezile: 'biz katlin kubhunun **yalnız katil olmasından** olduğunu söylemiyoruz; **mecmû**: **elem verici olması, evvelki bir cinâyet olmaksızın ve sonradan bir ivaz olmaksızın vâki olması**'; diğer hasen/kabîh şeyler için de aynı. **Râzî'nin hükmü: bu hücceti Mu'tezile'ye karşı kullananlar 'mezheplerini bilmediler, mezhebin inceliklerine ihata edemediler' (vallâhü a'lem).** [Dipnot (editör): Kâdî Abdülcebbâr'dan alıntı: 'fiillerden hiçbiri yoktur ki bir vecihle vâki olunca hasen, o vecihin hilâfına vâki olunca kabîh olmasın; bir fiile mücerred olarak hasen veya kabîh hükmünü vermek olmaz' (Şerhu'l-Usûli'l-Hamse); **editör bu notla 'müellif Mu'tezile görüşlerine âlimdir' der** — **editör dipnotudur, Râzî'nin değil; ⊬ atıf doğrulanmadı**.]
+- Netice/hüküm: **Râzî'nin usûl tespiti: Mu'tezile'nin görüşü 'vecihler mecmû' biçiminde doğru temsil edilmelidir**.
+- Delil çeşidi: **temsil düzeltmesi**; (T) cedelî.
+- Mevzuya bağı: Risale/ders katmanı: 'hasmın görüşünü doğru aktar' ilkesi için **c3 p338–339** kaynak. Editör dipnotu Râzî'ye sayılmadı.
+- Doğan sual: 'Şerhu'l-Usûli'l-Hamse' atfı (⊬).
+
+## c3 p340
+- OCR: boş sayfa
+- Okuma: **okunmadı (sayfa boş)**
+- İçerik: Yok.
+- Netice/hüküm: Yok.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c3 p341
+- OCR: kötü (başlık bozuk; dipnot 'Fasıl 23'; içerikten: **Mu'tezile'nin aklî hüsn-kubuh delilleri**)
+- Okuma: tam
+- İçerik: **Bâb (dipnot 'Fasıl 23')**: 'Bu makamda **iki tür söz**: (1) **şâhitte hüsn-kubhun darûrî olduğunu iddia** — sonra 'şâhitte sabit olunca gâibte de vâcib'; (2) **hüsn-kubhun kendilerine dönen vecihlerle olduğunu hüccet ve delille ispat**'. **Birinci makam (çoğunluğun dayandığı)**: 'sağlam akıllı biri, kendisine ihsan eden birine karşı **aklı sarîhen şükrünün ve medhinin vâcib** olduğuna, kötülük edip döveni **zemmetmenin ve kınamanın hasen** olduğuna hükmeder; **bir zâlimin elinde olan ve zâlimin öldürmeye niyetlendiği kimseyi kurtaran** insana **mazlumun sarîh aklı şükür hükmeder**; **yüzüne tuğla atılan insanın aklı, atan ile tuğla arasında fark gözetir**, atanı zemmetmeyi hasen bulur, tuğlayı zemmetmeyi değil ⇒ medh ve zemmin hüsnü **akıllarda yerleşik, kalplerde mevcut**.'
+- Netice/hüküm: Mu'tezile'nin **1. makam** delilleri (hasım sesi): darûrî hüsn-kubuh; şâhide kıyas gâibe.
+- Delil çeşidi: **darûrî/fıtrî + misal**; (T) ikna'î-fıtrî.
+- Mevzuya bağı: **Fasıl I (adl)**: Mu'tezile'nin fıtrî delili **Râzî'nin kendi 1. delili ile aynı (p289, kullar için aklî hüsn-kubuh)**; **Râzî bu delilin şâhit kısmını kabul ediyor, gâibe taşımayı reddediyor**; kaynak c3 p341.
+- Doğan sual: —
+
+## c3 p342
+- OCR: orta
+- Okuma: tam
+- İçerik: **Mu'tezile (devam)**: 'bu hükümlerin şeriatla sabit olduğu söylenemez: **Allah'a ve âhiret gününe inanmayanın aklında da** hasen-kubuh sabit; şeriattan alınsaydı **dehrî ve Berâhime'nin** akıllarında bu hükümler bulunmazdı; darûrî olarak **bütün halkın aklında** bulunduğunu bildiğimize göre şeriattan değil.' **Ayrıca**: akıllılar bazı hâlleri övüp bazılarını zemmediğinde **'bu bize ihsan etti, o bize kötülük etti'** derler ⇒ medh-zemmin hüsnünü bedîhe ile bildikleri gibi **medhin sebebinin ihsan, zemmin sebebinin kötülük** olduğunu da bedîhe ile bilirler. **2. vecih (hüsn-kubhun bedîhî olması)**: **Allah'ı ve nübüvveti inkâr eden bir dehrî**, ıssız çölde **kör bir insanı belâya düşmüş, helâke yaklaşmış** görse **kalbi ona acır, aklı ona ihsana sevk eder**; rağbeti **karşılık talebiyle değil** (adam fakir), **övgü ummasıyla değil** (adam kör, tanımaz, başkası yok), **sevap ümidiyle de değil** (dehrî, ilâhı, nübüvveti, meâdı inkâr eder); öyleyse ihsana **yalnız aklında yerleşen 'ihsan hasendir' hükmü sevk eder** ⇒ akıllar ihsanın hüsnü ve kötülüğün kubhu üzerinde müttefik.
+- Netice/hüküm: **Mu'tezile: aklî hüsn-kubuh bedîhî; dehrî çöl misali** (ihsan menfaatsiz).
+- Delil çeşidi: **fıtrî + düşünce deneyi**; (T) ikna'î-fıtrî. **Bu deney Râzî'nin kendi 1. delili ile örtüşür (kullar için).**
+- Mevzuya bağı: **Fasıl I/IV (fıtrat)**: 'insan fıtratı iyiliği bilir' cümlesi Risale'de **nassla ('nefse fücûr ve takvâyı ilhâm etti', 91:8; ⊬)** desteklenebilir; dehrî örneği **alınmaz**.
+- Doğan sual: —
+
+## c3 p343
+- OCR: orta
+- Okuma: tam
+- İçerik: **Mu'tezile 3. vecih**: 'bir insana **doğru söylersen bir dinar, yalan söylersen bir dinar** dense, ve doğru-yalanın dünya-âhiret menfaatlerinin **eşit** olduğunu, hiçbirinin fazla etkisi olmadığını bilse, o hâlde de **doğruyu hasen buluyor, yalanı kabîh buluyor** — kizbin kubhu kizb olduğu için darûrî ilim.' **2. makam: gâibe taşıma**: **'Sıdk sıdk olduğu için hasen, kizb kizb olduğu için kabîh, zulüm zulüm olduğu için kabîh'**; delil: **sıdkı sıdk diye bilen, başka itibarları bilmese de hasen olduğunu bilir; sıdk olduğunu bilmeyen diğer itibarları bilse de hasen olduğunu bilmez**; ilim vecihlerle devrân ediyor ⇒ hüsn-kubhun mukteziyesi bu vecihlerdir. **Bu, Allah'ta da kalır**: sıdkın Allah'tan hasen, kizbin kabîh olması; **hatta Allah'tan kubhun te'kîdi daha kuvvetli**: insan zulüm ve kizbi cehâlet veya ihtiyaçla yapabilir, cehâlet ve ihtiyaç bir vecihle özür; **Allah cehil, acz ve ihtiyaçtan münezzeh**, akıl Allah'tan kubhunu insandan kubhundan daha kuvvetli hükmeder.
+- Netice/hüküm: Mu'tezile'nin **gâibe taşıma delili**: illet=vecih; Allah'ta özür de yok, kubuh daha büyük.
+- Delil çeşidi: **devrân (ilim ↔ vecih) delili + tenzîh kıyası**; (T) cedelî-ikna'î. **Bu Mu'tezile'nin en kuvvetli iddialarından; 'devrân delili illiyet ispatı sayılmaz' cevabı Râzî'de p350+ beklenir.**
+- Mevzuya bağı: **Fasıl I (adl/kizb)**: Risale 'Allah kizbden ve zulümden münezzehtir' cümlesini **nassla ve tenzîhle** kurar; Mu'tezile'nin 'devrân' delilini **kullanmaz**. **F 27-B**: devrân delilinin ayırt edici gücü Râzî'nin cevabıyla birlikte ele alınacak.
+- Doğan sual: Râzî'nin devrân delili cevabı (p344+ / p350+).
+
+## c3 p344
+- OCR: orta
+- Okuma: tam
+- İçerik: (Mu'tezile'nin 1. makam ve 2. makam sonu). **Dellilerle sabit olduğunu diyenlerin delilleri (2. tür)**: **1. hüccet**: 'fiillerin hasen ve kabîh diye ayrıldığını görüyoruz; hasen/kabîh yapan bir sebep olmasa bu **tefâvüt mümkinin bir tarafının müreccihsiz tercihi** olur, **sâni' nefyini** gerektirir; şeriatın bir kısmını hasen, kalanını kabîh kıldığı da söylenemez: şeriatın hasen kıldığı ile kabîh kıldığı ya **her yönden eşittir** (bu durumda şeriat tahsisi müreccihsiz, muhâl) ya **değildir** ⇒ birinde hüsne, ötekinde kubha sebep olan bir şey var; **'hasen vecihlerle hasen' sözünün mânâsı ancak budur**.' **2. hüccet**: 'hüsn-kubuh **yalnız şeriatla** sabit olsaydı Allah'tan **hiçbir şey kabîh olmazdı**; öyle olursa **Allah'ın vaadine ve vaîdine güven kalmaz**: belki bazı kullara sevap vaat edip yapmaz…' (cümle p345'e taşıyor).
+- Netice/hüküm: Mu'tezile'nin **2. tür (ispat) delillerinin** 1. ve 2. hücceti.
+- Delil çeşidi: **reductio (müreccihsiz tercih; vaad güvenliği)**; (T) cedelî-burhânî biçim. **Not: 2. hüccet ('Allah'tan kubuh olmazsa vaade güven kalmaz') Sünnî çizgi için de önemli; Râzî'nin cevabı 'Allah kelâmının sıdkı ve nass' ile beklenir (p345+).**
+- Mevzuya bağı: **Fasıl I/II/IV (vaad-vaîd ve nübüvvet güvenliği)**: **Risale 'Allah vaadinden dönmez' cümlesini nassla (3:9, 30:6; ⊬ numaralar) yazar**; Mu'tezile'nin 2. hücceti Risale'nin bu cümlesine **destek olarak alınmaz** (aklî hüsn-kubuh öncülü).
+- Doğan sual: Râzî bu 2. hücceti nasıl cevaplıyor?
