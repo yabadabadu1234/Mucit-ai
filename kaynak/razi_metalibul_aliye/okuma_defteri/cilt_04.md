@@ -1945,3 +1945,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **taksîm/reductio**; (T) burhânî biçim (kıdem tarafı).
 - Mevzuya bağı: **KRİTİK — Fasıl I §2, §3, c2 hayyiz bâbı**: 'halâ' bahsi sonraki ciltlerde; zincirin her halkı **bir öncül ispatsız (boyut mevcut ⇒ vâcib)**; **Risale bu iddiayı 'boyut mümkin, mâsivâ mahlûk' ilkesiyle reddeder**; F 27-B: iddia **tevhide karşı olduğu için** Râzî'nin Kısım 2'de nasıl çürüttüğü aranacak.
 - Doğan sual: —
+
+## c4 p217
+- OCR: orta
+- Okuma: tam
+- İçerik: (10. Makâle zinciri devam; kıdem tarafı): '**(2)** hayyize ihtisası olmayan şeye hareket **yok**; **harekete mâni' olan şey harekete kabulün şartı olamaz**.' **3. şık**: 'boyutun harekete kabil olmasının şartı **hâl de mahal de olmayan** bir şey ise **bâtıl**: o şey **cisim veya cismânî olmamalı** ⇒ ilk bahis geri.' **Sonuç**: '**boyut zâtı gereği vâcibü'l-vücûd; harekete kabil; harekete kabil her boyut cisim ⇒ cisim vâcibü'l-vücûd li-zâtihî**; bu **iki şey ifade eder**: **(1) cisimlerin nihâyeti yoktur** (nihâyet olsa dışarıda tarafların temeyyüzü ⇒ cisim dışarıda mevcut); **(2) cisimlerin vücûdunun evveli yoktur** (evvel olsa onun öncesinde tarafların temeyyüzü ⇒ boyutlar mevcut ⇒ cisim cisimden önce mevcut, hulf).' '**Bu, mekânın mâhiyetini araştırmadan çıkarılan cisimlerin kıdemi şüphesidir.**'
+- Netice/hüküm: **Kıdem tarafı 10. Makâle sonucu: 'cisim vâcibü'l-vücûd li-zâtihî; cisimler nihâyetsiz ve evvelsiz' (uç iddia).**
+- Delil çeşidi: **taksîm/reductio zinciri**; (T) burhânî biçim (kıdem tarafı; öncüller: boyut mevcut ve vâcib). **[İslâmî muhafaza: 'cisim vâcibü'l-vücûddur, nihâyetsizdir, evvelsizdir' Tevhîd ve hudûs ilkelerine karşıt; ana metne alınmaz.]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §2, §3, §6.2**: Risale bu iddiayı **'mâsivâ mümkin, vâcib tek' (c3 p250; c2 p117–132)** ile reddeder; **kıdem tarafı 'vâcib cisim' dediği için Fasıl I'in 'Vâcib cisim değildir (c2 K1 F3)' bâbı ile bağlanır**.
+- Doğan sual: —
+
+## c4 p218
+- OCR: boş
+- Okuma: tam (içerik yok)
+- İçerik: Yok.
+- Netice/hüküm: Yok.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c4 p219
+- OCR: orta
+- Okuma: tam
+- İçerik: **11. Makâle: 'Âlemin ebedî olması gerektiğinin beyânı; sonra ebedî olması gerekince ezelî olması gerektiğinin beyânı'** (başlık; kıdem tarafı).
+- Netice/hüküm: Yok (başlık).
+- Delil çeşidi: —
+- Mevzuya bağı: **Fasıl III (Meâd)**: 'fenâ-i âlem ve iâde' tartışması.
+- Doğan sual: —
+
+## c4 p220
+- OCR: boş
+- Okuma: tam (içerik yok)
+- İçerik: Yok.
+- Netice/hüküm: Yok.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c4 p221
+- OCR: orta
+- Okuma: tam
+- İçerik: **11. Makâle (kıdem tarafı): 'âlemin ebedî olması gerekir' — vecihlerle.** **1. hüccet (kelâmî usûlden çıkarılan)**: '**âlem yok olsaydı, mevcut iken yok olması bir sebep ve mûcibe muhtaç; sebepsiz ve mûcibsiz olması aklın hilâfı**; sebeple ise **sebep kâdir ya mûcib**; **mûcib ya mevcut ya ma'dûm**; **üç kısım**: **(1)** kâdir-muhtâr âlemi **yok eder**; **(2)** âlem **tari' bir fesâd** yüzünden yok olur; **(3)** **şartının zevâli** yüzünden yok olur; **bu üç kısmın hepsi bâtıl** ⇒ '**âlemin ademi**' bâtıl.' (p222)
+- Netice/hüküm: **Kıdem tarafı 11. Makâle 1. hüccet: 'âlemin fenâsı üç yoldan (kâdirin i'dâmı, tari' fesâd, şart zevâli) bâtıl'.**
+- Delil çeşidi: **taksîm/reductio**; (T) burhânî biçim (kıdem tarafı). **['Fenâ-i âlem' inkârı Kur'ân'ın kıyamet nasslarına (⊬ numaralar) aykırıdır.]**
+- Mevzuya bağı: **KRİTİK — Fasıl III (Meâd)**: kıdem tarafının **fenâ-i âlem inkârı**; **Risale ana metnine ALINMAZ**; Fasıl III için 'iâde' konusunda kelâmın fenâ delili (⊬ hangi ciltte) ayrıca aranacak; c4 p118 (iâde) ile birlikte okunacak.
+- Doğan sual: Râzî fenâ-i âlemi nasıl savunuyor (Kısım 2)?
+
+## c4 p222
+- OCR: orta
+- Okuma: tam
+- İçerik: **(1) 'kâdir-muhtâr âlemi yok eder' bâtıl, 3 vecihle**: **(a)** '**kudret müessir sıfat; onun eseri olmalı; adem nefy-i mahz ve sırf selb; onu kudretin eseri kılmak imkânsız** ⇒ ademin kâdirin kudretiyle vukûu imkânsız.' **(b)** '**âlemin ademini gerektiren ya salt kâdir olması ya kâdir olmasından sâdır emir**; **birincisi bâtıl**: kâdiriyet ezelde hâsıldı; salt kâdiriyet vücûda mâni' olsaydı âlem hiç var olmazdı; **ikincisi**: yakın müessir o emir ⇒ **2. kısma dönüş (âlem ademi gerektiren hâdis bir fesâd ile fâni olur)**.' **İtiraz**: 'bu söz kudretin vücûddaki te'sîri için de aynen.' **Cevap**: '**bu, kudreti iki tarafa salih sayana lâzım; 'kudret + dâî mecmûu mûcib illet' diyene lâzım değil.**' **(c)** '**Allah âlemi yok etse ya mevcut iken (muhâl: mevcut iken ma'dûm) ya vücûdunun ikinci zamanında**; ikinci: ikinci zamanın i'dâmı ikinci zamanın hâsılına şartlı ⇒ muhâla mevkuf muhâl' (kâdir bâbında îcâd cihetinde geçti).'
+- Netice/hüküm: **Kıdem tarafı: 'kâdirin i'dâmı' 3 vecihle bâtıl (adem eser olmaz; kâdiriyet ezelî; hâl/zaman muhâli).**
+- Delil çeşidi: **reductio/analitik**; (T) burhânî biçim (kıdem tarafı). **[Delil ≠ dava: 'adem kudretin eseri olamaz' iddiası Râzî'nin kendi c4 p120–121 (kudret te'sîr edemez) hattı; hudûs tarafı 'kudret madumu îdam etmez, bekâyı yaratmaz (Eş'arî: ademi araz yaratmakla)' der.]**
+- Mevzuya bağı: **KRİTİK — Fasıl III (Meâd)**: 'Allah âlemi yok eder' cümlesi **Risale'de nassla (kıyamet, 'her şey helâk olucudur, 28:88'; ⊬) yazılır**; kıdem tarafının 'adem eser değil' itirazına **'yok etme = bekâ yaratmamak (Eş'arî) veya zıdd yaratma' cevabı (c4 p223 'zıd' kolu)**.
+- Doğan sual: —
+
+## c4 p223
+- OCR: orta
+- Okuma: tam
+- İçerik: **(2) 'Allah zıd-tari' bir fesâd halk ederek yok eder' bâtıl, 3 vecihle**: **(a)** '**zıtlık iki tarafta müşterek**; **öncekinin zevâlinin sonrakinin tarîsi yüzünden olması, sonrakinin öncekinin kıyamı yüzünden ref'inden daha evlâ değil**.' **(b)** '**tari' zıddın tarîsi sâbıkın zevâline şartlı**; sâbıkın zevâli tari'in tarîsiyle ta'lîl edilirse **devir (muhâl)**.' **(c)** 'bu zıd vücûd hâlinde mâni' mi, değil mi; **zıdd sâbıkın ademinden sonra hâsıl** ⇒ ademi bu zıtla ta'lîl imkânsız (müteahhir mukaddemin illeti olamaz).' **(3) 'şartın i'dâmı ile yok eder' bâtıl, 2 vecihle**: **(a)** '**bu şart baki mi değil mi**? **Bakiyse** ademi keyfiyeti geri; **baki değilse** muhâl: **'vücûda kabil her şey bekâya kabil'**; **bu 'arazlar bâkî değildir' diyenlere karşı**: 'lâ yubkâ' diyene karşı 'kim arazların hepsi bâkî der' (OCR bozuk)'; **(b)** '**şart araz mı, cevherden mugâyir mevcut mu**? **Araz ise** araz cevhere muhtaç; cevherin araza muhtaç olması **devir (muhâl)**; **cevherden mugâyir mevcutsa** baki ise adem keyfiyeti geri; baki değilse muhâl' (p224).
+- Netice/hüküm: **Kıdem tarafı: 'zıd tari'' ve 'şart zevâli' ile fenâ da bâtıl.**
+- Delil çeşidi: **reductio + devir**; (T) burhânî biçim (kıdem tarafı). **[Delil ≠ dava: 'vücûda kabil her şey bekâya kabil' ilkesi 'arazlar iki an kalmaz' (Eş'arî klasik görüşü) ile çatışır; kıdem tarafı bunu 'arazlar bekâsı' tartışmasına bağlıyor.]**
+- Mevzuya bağı: **Fasıl III (Meâd), c3 sıfat bâbı**: 'arazın bekâsı' ihtilafı **kelâmî fenâ delilinin temeli**; Risale bu ihtilafı **kaydeder, iddia etmez (⊬)**.
+- Doğan sual: —
+
+## c4 p224
+- OCR: orta
+- Okuma: tam
+- İçerik: '**bu beyânlarla sabit: âlemin cisimleri yok olsaydı ademleri ya kâdirin i'dâmıyla, ya zıddın tarîsiyle, ya şartın zevâliyle olurdu; üçü bâtıl ⇒ âlemin vücûddan sonra fenâsı bâtıl.**' **2. hüccet (cisimlerin ademi muhâl)**: '**cisimlerin zâtlarına adem sahih olsaydı ademlerinin sıhhati adem hâsıl olmadan önce hâsıl idi**; **bu sıhhat mevcut sıfat**, mahalle muhtaç; **mahalli ya cismin zâtı ya başka bir şey**; **birincisi muhâl**: bir şeyin sıhhatinin mahalli o şeyle ittisâfı mümkin olan şey; **cismin ademi imkânının mahalli cismin vücûdu olsaydı adem tarîsi hâlinde vücûdu baki kalırdı (muhâl: vücûd adem hâlinde baki kalmaz)**; **ikincisi de bâtıl**: şeyin vücûd sıhhati ve adem sıhhatinin kıyam ettiği şey onun **heyûlâsı**; cismin heyûlâsı olsa: **bu iki vecihle bâtıl**: (1) heyûlâ mütehayyizse teselsül, değilse hayyizsiz mahalde hayyiz hulûlü (muhâl); (2) 'heyûlâ farzı… delillerle sabit…' (p225).
+- Netice/hüküm: **Kıdem tarafı 11. Makâle: 'fenâ bâtıl'; 2. hüccet: 'cismin ademinin sıhhati mahalle muhtaç ⇒ heyûlâ ⇒ bâtıl'.**
+- Delil çeşidi: **reductio (imkân sübûtî sıfat ⇒ mahal ⇒ heyûlâ)**; (T) burhânî biçim (kıdem tarafı). **[Delil ≠ dava: aynı 'imkân mevcut sıfat' öncülü (c4 p170) — Râzî c4 p172'de bu öncülü **kendisi çürütmüştü**.]**
+- Mevzuya bağı: **KRİTİK — Fasıl III (Meâd)**: kıdem tarafının fenâ inkârı **c4 p170–172'de Râzî'nin çürüttüğü 'imkân sübûtî sıfat' öncülüne dayanıyor**; Risale bu bağlantıyı **kaydedecek**.
+- Doğan sual: —
