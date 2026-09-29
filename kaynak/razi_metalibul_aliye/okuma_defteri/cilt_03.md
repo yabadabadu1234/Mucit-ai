@@ -1369,3 +1369,147 @@ Biçim: cilt 1–2 ile aynı.
 - Delil çeşidi: **misal-cedelî**; (T) ikna'î-cedelî.
 - Mevzuya bağı: **Fasıl I ilim sıfatı**: **ilim tek ve ezelî; ma'lûmda değişim ilimde değişim doğurmaz**: ders katmanına **ayna misali (kaynaklı, 'teşbih sınırlı')**; **editör notu**: 'ayna misalinin sınırı' (Sekkā) — **kullanılırken dipnot**.
 - Doğan sual: —
+
+## c3 p153
+- OCR: orta
+- Okuma: tam
+- İçerik: **Birinci fırka (ilim bâkî) 4. delil**: 'İlim, âlim ile malûm arasında **özel nisbet**; malûm değişince **nisbet değişir, ilmin zâtı değişmez**: bir adamın yanında biri oturup **sağ** tarafında iken kalkıp **sol** tarafına geçse birinci adam onun **soluna** dönüşür; **izâfede tagayyür oldu, ama adam değişmedi**' (Zeyd oturuşu misali). **İkinci fırka (ilim malûm değişince değişir) delilleri**: **Delil 1**: 'Bir kişi Zeyd'in **yarın** şehre gireceğine i'tikâd etsin; **karanlık bir evde** gece-gündüz ayırt etmeden otursun; Zeyd girip gün olsun, kişi gün olduğunu bilmesin: **'yarın girecek' i'tikâdı ile 'şimdi girdi' bilgisini kazanmış olmaz**; **'olacak' ilmi 'oldu' ilminin aynı olsaydı bu sûrette hâsıl olurdu**; ⇒ **ayrı ilimler**; 'yarın girecek' ve 'gün geldi' iki ilimden **üçüncü ilim (şimdi girdi)** doğar: **yeni ilim, önceyi nakzetmez**.'
+- Netice/hüküm: **'İlim bâkî' fırkasının nisbet misali (sağ-sol); 'ilim değişir' fırkasının 1. delili: 'olacak' ≠ 'oldu' ilmi.**
+- Delil çeşidi: **misal + cedelî**; (T) ikna'î-cedelî.
+- Mevzuya bağı: **Fasıl I ilim sıfatı**: **'nisbet değişir, zât değişmez' misali** ders katmanında **kullanılabilir (kaynaklı: c3 p153)**; ancak Râzî'nin kendi eğilimi p156'da.
+- Doğan sual: —
+
+## c3 p154
+- OCR: orta
+- Okuma: tam
+- İçerik: **Delil 2**: '**Hakîkatler dönüşmez** (siyah beyaza dönmez; ilim zıddına dönmez); **'olacak' ilmi ile 'mevcut' ilminin mâhiyeti farklı** (biri diğerinin yerine kâim olamaz: vücûddan önce 'mevcuttur' i'tikâdı **cehl**, 'mevcut değil ama olacak' i'tikâdı vücûddan sonra **cehl**); ⇒ **biri ötekinin aynı olamaz**.' **Delil 3**: 'Şarta bağlı şey şartsızdan ayrı; **'olacak' ilmi şeyin şimdi mevcut olmasına şartlı değil, hatta onunla bağdaşmıyor**; 'mevcut' ilmi şeyin mevcudiyetine şartlı ⇒ **iki ilim ayrı**; 'olacak' ilmi hâlen hâsıl ve vücûdda bâkî kalmaz; 'mevcut değil' ilmi vücûdda hâsıl olmaz; **iki zıt ilim**; birini ötekinin aynı saymak **iki zıddın aynı olması**.'
+- Netice/hüküm: **'Olacak' ilmi ≠ 'oldu' ilmi (mâhiyet farkı, şart farkı, zıtlık).**
+- Delil çeşidi: **analitik**; (T) analitik-cedelî.
+- Mevzuya bağı: **Fasıl I ilim sıfatı**: bu argümanlar **ilm-i ilâhînin değişimine** götürür; **Sünnî cevap (ezelî ilim tek, olacağı ve olduğunu birlikte kuşatır)** yazılmalı.
+- Doğan sual: —
+
+## c3 p155
+- OCR: orta
+- Okuma: tam
+- İçerik: **Delil 4**: 'İlim malûma mutâbık sûret; **'olacak' ≠ 'şimdi mevcut' mâhiyet farkı** ⇒ **mutâbık sûretler de farklı** (muhtelife mutâbık muhtelif) ⇒ biri ötekinin aynı olamaz.' **İkinci fırkanın (değişir) 4 delili 'bedîhîye yakın'.** **Birinci fırkanın delillerine cevaplar**: **(1)** 'Malûmâtın çokluğuyla ilim çoğalmıyorsa değişmesiyle de değişmez' **iki yönden reddedilir**: (a) **ilim malûmâtın çokluğuyla çoğalır** (sûret ise mutâbık sûretler farklı; nisbet ise nisbetler farklı: biri diğerinden ayrı hatırlanabilir); (b) çoğalmasa bile **'değişmesiyle de değişmez' kıyâs (câmi' yok)**; **ilk kahir delil ilmin malûm değişince değişmesi gerektiğini gösterir**.'
+- Netice/hüküm: **Râzî tarafı: ilim malûm çoğalınca çoğalır, değişince değişir (sûret ya nisbet teorisi ile).**
+- Delil çeşidi: **analitik-cedelî**; (T) analitik.
+- Mevzuya bağı: **KRİTİK — Sünnî akide**: 'ilm-i ilâhînin ma'lûmâtla çoğalması/değişmesi' Sünnî akideyle **uyumsuz**: **Ehl-i Sünnet'te Allah'ın ilmi ezelî, tek, tüm malûmâtı kuşatır, değişmez**; Râzî **bu sayfada hasmın delillerine cevap veren tarafta** ve **'değişir' tarafına meylediyor**; **Risale ana metnine alınmaz; 'Râzî'nin tefsiri'**; nihâi hükmü p156–160 ve sonrası.
+- Doğan sual: **Râzî 'ilim değişir' görüşünde mi kesin?** (p156: 'el-İlm kitabında' ve 'tahakkuk').
+
+## c3 p156
+- OCR: orta
+- Okuma: tam
+- İçerik: **Cevap (2. delil: ilim = tecellî sıfatı)**: 'İlim, **inkişâf ve tecellî**'nden başka bir şey değil; bu nisbetin ötesinde **bir sıfat** olduğuna **delil yok** (el-İlm kitabında anlatıldı); ⇒ **bu nisbet değiştiyse ilim değişti**. Farz edelim ilim nisbetten ayrı bir şey ise: o şey **belirli nisbeti îcâb eder mi etmez mi**? Etmezse **ilim olmaz** (ilim inkişâf); ederse **nisbet zâil olunca lâzımı zâil, lâzımın zevâli melzûmun zevâlini gösterir** ⇒ ilim zâil.' **(3) (ilk fırkanın 3. delili)**: 'Çoğu mütekellim: **bekâ araz için mümteni**; araz **hâlen hâdis olur**; bekâ imkânsızsa **bekâ olsa şöyle olurdu** diye nasıl bilirler?' Ayrıca 'bu i'tikâd bâkî olsa da gün geldiğini bilmez ⇒ 'şimdi girdi' ilmi olmaz' ⇒ **onların örneği bizim lehimize**. **(4)** nisbet-değişim itirazı: 'önceki kelâm kanıtlar'.
+- Netice/hüküm: **Râzî tanımı ('ilim = inkişâf-nisbet') gereği nisbet değişince ilim değişir (kendi hükmü olarak yazıyor).**
+- Delil çeşidi: **analitik (tanım-bağımlı)**; (T) analitik.
+- Mevzuya bağı: **KRİTİK — Sünnî akide notu (edeb)**: Râzî'nin **ilmi salt nisbet sayıp nisbet değişince değişir hükmü** (c3 p104 + p156) **Ehl-i Sünnet'in genel çizgisinden (ilm-i ilâhî ezelî, sıfat-ı zâtiyye, değişmez) ayrılıyor**; **Risale ana metnine ALINMAZ**; ders kitabında **tarihî kelâm belgesi** ve **'Sünnî ana çizgi'** ayrımıyla; **okuyucuya 'Allah'ın ilmi ezelîdir, hiçbir şeyi bilmemek O'nun için söz konusu değildir' formülü nassla verilir**.
+- Doğan sual: —
+
+## c3 p157
+- OCR: orta
+- Okuma: tam
+- İçerik: (Cevap 3–4 sonu.) **İkinci fırka içinde ikinci grup (ilmin değişmesini iltizam edenler)**: 'Malûm zâil olunca ona dair ilim zâil, **yeni ilim hâdis olur**. **Takrîr**: zât-ı mahsûsa **malûmu iktizâ eder, o malûmun şartıyla**; malûm o vecihle vâki olunca **iktizânın şartı hâsıl**; malûm zâil olunca şart zâil, başka ilmin şartı hâsıl ⇒ **birinci ilim zâil, başka ilim hâdis**. **Bu, Ebü'l-Hüseyn el-Basrî (Mu'tezile) ve eskilerden Cehm b. Safvân ve Hişâm b. el-Hakem'in görüşü.** **Sonraki mütekellimîn 4 vecihle reddetti**: **Hücca 1**: 'bu ilim hâdis ⇒ muhdisi ve fâili gerek; fâil **ona âlim olmalı** (muhkem fiil fâilin ilmini şart kılar) ⇒ bu ilmin hâdis olması **başka ilme şartlı** ⇒ teselsül.' Râzî: 'bu hüccet **zayıf**: fâil-i muhtâr ilmi kudretle îcâd eder diye kurmuşsunuz; **biz** böyle demiyoruz: zât-ı mahsûsa ilmi **iktizâ eder, malûmun o vecihle vukûu şartıyla**'.
+- Netice/hüküm: **Ebü'l-Hüseyn, Cehm, Hişâm: ilim zâtın iktizâsı + malûm şartı; Râzî bu tarafa yakın (zayıf itirazları düşürüyor).**
+- Delil çeşidi: **cedelî**; (T) cedelî. **Atıflar (Cehm, Hişâm) Râzî'nin nakli (⊬)**.
+- Mevzuya bağı: **DİKKAT**: **Cehm b. Safvân ve Hişâm b. el-Hakem** Sünnî literatürde **sapkın kabul edilen isimler**; 'ilmin hudûsu' **onların meşhur tezi**; Sünnî ana çizgi **reddeder**; Râzî bu görüşe yakın bir noktada durduğunu p156–158'de **hasmın delillerini zayıf bulmakla** gösteriyor; **Risale bu görüşü benimsemez; Râzî'nin çizgisinin bu konuda ayrıldığı kayda geçer** (tarihî belge).
+- Doğan sual: Râzî **kendi kesin hükmünü** açıkça söylüyor mu? (Bâb sonu; el-İlm kitabı — hangi cilt?).
+
+## c3 p158
+- OCR: orta
+- Okuma: tam
+- İçerik: Hücca 1'e cevap sonu (**Allah'ın zâtı muktezî, malûm şart**; malûm zâil ⇒ ilim zâil). **Hücca 2 (sonraki mütekellimîn)**: 'İlim hâdis olsa **ya Allah'ın zâtında, ya başka zâtta, ya mahalsiz**; üçü bâtıl: zâtında ⇒ **Allah hevâdisin mahalli**; başka zâtta ⇒ 'zât bir vasıfla vâsıflı, sıfat başka zâta kâim' muhâl.' **Râzî**: 'Niçin bu ilimler **Allah'ın zâtında hâdis** olmasın? **'zâtı hevâdisin mahalli olur' deniyorsa, kastınız 'hevâdisin zâtında hâdis olması' ise bu **şeyi kendisine ilzâm** eder (c2 p104–109 ile)'. **Hücca 3 (dâî sıfat için 'kâfi/def'/değil')**: (c2 p108 'Delil 3' ile aynı) — 'kâfi değilse münfasıl sebep ⇒ imkân ⇒ bâtıl'. Râzî'nin dipnotu: **'bu üçüncü kısım Allah'ın zâtında geçerli olmaz' (editör dipnotu)**.
+- Netice/hüküm: **Râzî: hâdis ilmin zâtta hâdis olması 'hevâdis mahalli' ilzâmı ile çürütülemez (çünkü ilzâm şeyi kendisine ilzâmdır).**
+- Delil çeşidi: **cedelî**; (T) cedelî.
+- Mevzuya bağı: **c2 p104–109 (hevâdis mahalli aporiası)** ile **aynı**: Râzî **'hevâdis mahalli' itirazını kabul etmiyor**; ancak **Sünnî akide: Allah'ın zâtı hevâdisin mahalli değildir**; **Risale'de bu hüküm nassla ve icmâ'la verilir**.
+- Doğan sual: —
+
+## c3 p159
+- OCR: orta
+- Okuma: tam
+- İçerik: Hücca 3 sonu: '**bu delil güzeldir (cayyid)**' (Râzî: sıfat ya vâcib ya mümteni ya münfasıl sebebe bağlı — vâcibin sıfatı değişmez). **Hücca 4**: 'Allah ezelde âlemin **hâlen ma'dûm** olduğunu bilir; âlemi îcâd edince **mevcut** olduğunu bilir: ilk ilim zâil oldu mu? **Zâil olmadıysa** hem 'mevcut değil' hem 'mevcut' bilgisi (cehl ve zıt i'tikâdlar cem'i); **zâil olduysa**: ilk ilim kadîm (mümteni-i adem) ya hâdis; **hâdisse başka ilme mesbûk mu**? Mesbûkse **sonsuz evvelsiz hâdisler** (kelâmca bâtıl); mesbûk değilse **Allah'a cehl atfı**.' **Cehm ve Hişâm'ın cevabı**: 'Ezelde hâsıl ilim **mâhiyet-hakâik-tasavvurât ilmi**; Allah eşyayı **mâ-lâ-yezâl**de yaratınca **tasdîkât hâdis olur**: hüküm 'şu var oldu, şu yok oldu'; ⇒ işkâl zâil.'
+- Netice/hüküm: **Kelâmî 4. delil (ezelî ilim ve 'oldu' ilmi) ve Cehm/Hişâm'ın çözümü: ezelde tasavvur, sonra tasdîk hâdis.**
+- Delil çeşidi: **dilemma + kelâmî çözüm**; (T) cedelî.
+- Mevzuya bağı: **DİKKAT (Sünnî çözüm)**: **Ehl-i Sünnet çözümü: ilim tek ve ezelî; 'olacak' ve 'oldu' aynı ilmin kuşattığı iki hâl; Allah zamana tâbi değil**; **Cehm/Hişâm çözümü (tasdîkât hâdis) Sünnî değil**.
+- Doğan sual: —
+
+## c3 p160
+- OCR: orta
+- Okuma: tam
+- İçerik: (Hücca 4 tamamlanır; 'Zeyd oturuyor' ikilemi: bekâ/tagayyür, mezhepler anlatıldı.) **Filozofların Hücca 2'si (Allah cüz'îleri bilmez)**: 'Bir **kare, iki eşit kareyle yanyana** düşünülsün (şekil: iki kare arasında bir kare); Allah bunu bilse, **iki kareden her birinin diğerinden imtiyâzı** malûm; **imtiyâz mevcut olmalarına şartlı** (ma'dûm mahzda şekil-mikdar-sûret farkı olmaz); mevcudiyet **hâricî mi zihnî mi**? **Hâricî bâtıl** (hâricde ma'dûm iken hayâl edilebilir); **⇒ imtiyâz zihinde**; ⇒ **kareler sûretleri Allah'ın ilmine mahal**…' (hâlâ argüman; p161'de devam).
+- Netice/hüküm: **Filozof Hücca 2: cüz'î ilim ⇒ Allah'ın 'zihni' (mahal) ⇒ terkîb** (yeni argüman başlıyor).
+- Delil çeşidi: **analitik**; (T) analitik.
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c3 p161
+- OCR: orta
+- Okuma: tam
+- İçerik: (Filozof Hücca 2 devam: iki kare.) 'İki karenin **mahalli tek şey mi iki şey mi**? Tek olamaz: kareler tam mâhiyette ve tüm lâzımlarda müsâvi ⇒ bütün sıfat ve hâllere kabiliyette de müsâvi; tek mahalde farz edilince **imtiyâz mâhiyetle ve lâzımlarla olamaz, ârızlarla da olamaz** (her ârız birine yakışırsa öbürü de kabul eder; nisbet eşit) ⇒ **imtiyâz kalmaz**; imtiyâz var ⇒ **iki mahal, vaz' ve hayizle ayrılırlar** ⇒ **bu sûretin ve benzerlerinin müdriki cismânî olmalı**; Vâcib cisim-cismânî değil ⇒ **idrâk edemez**.' **Râzî'nin itirazı**: 'bu kelâm **idrâkin, malûmun âlimin zihninde hâzır olmasına şartlı** olduğu asla dayanır; **bu asıl birçok vecihle iptal edildi; akıllı için orada şüphe kalmaz**.' **Hücca 3 (filozof)**: 'Bir şeyin **mevcut** ya **ma'dûm** olduğuna dair ilim **malûma tâbi**; malûm mevcutsa ilim mevcudiyete, ma'dûmsa ademe taalluk eder; 'mevcut oldu çünkü ilim mevcudiyete taalluk etti' denemez; **ilim malûma mutâbık sûret; mutâbakat malûmun kendinde tahakkukuna şartlı**.'
+- Netice/hüküm: **Filozof Hücca 2–3: cüz'î ilim cismânî idrâk ister; ilim malûma tâbi (malûm önce).**
+- Delil çeşidi: **analitik (öncül: ilim=sûret)**; (T) burhânî biçim; Râzî öncülü reddediyor.
+- Mevzuya bağı: **Fasıl I ilim sıfatı**: 'ilim malûma tâbi' = **Fasıl I §8 'ilim vukûu îcâb etmez' cevabıyla uyumlu**.
+- Doğan sual: —
+
+## c3 p162
+- OCR: orta
+- Okuma: tam
+- İçerik: Hücca 3 devam: 'Bu ilimlerin hâsıl olması malûmâtın belirli vecihlerle vukûuna şartlı ise **Allah'ın zâtı bu ilimlerin hâsılına muhtaç** olur; ilimler malûmâtın vukûuna şartlı; **şartın şartı şarta şartlı** ⇒ **Allah'ın zâtı mümkinâtın tahakkukuna bağlı** ⇒ mümkinin vücûduna muhtaç **daha evlâ mümkin** ⇒ vâcib mümkin: muhâl. **Mâhiyet ve hakîkat ilmi bundan farklı**: bu ilim hakîkatler var olsa da olmasa da hâsıl ⇒ zât-ı mahsûsa yeter; **Zeyd'in bu mekânda oturduğunu bilmek** ise **Zeyd oturmadıkça mümteni** ⇒ Allah'ın zâtı bu ilimler için **yetmez** ⇒ mahzûr.' **Râzî'nin notu**: '**Bu kelâm Allah'ın (âlemde) müessir olmasını da nefyeder** (te'sîr de nisbet, gayre muhtaç); **bazı vecihlerle ayrım yapılabilir**.'
+- Netice/hüküm: **Filozof Hücca 3'ün sonucu: cüz'î ilim Allah'ı mümkine muhtaç kılar; Râzî 'aynı yargı müessiriyeti de nefyeder' cevabını veriyor.**
+- Delil çeşidi: **analitik + paralel nakz**; (T) analitik-cedelî.
+- Mevzuya bağı: **KRİTİK — Sünnî akide**: 'Allah'ın ilmi **mümkinâtın vukûuna bağlı olmaksızın** ezelî (Allah bilir, bilinen olur); filozofun 'ilim malûma tâbi ⇒ Allah mümkine muhtaç' hükmünü **kabul etmeyen çözüm**: **ilim zâtın sıfatı, malûm ilme mutâbık kılınmış değil (ilim malûma mutâbıktır, îcâb etmez, malûma muhtaç olmaz)**; Râzî **paralel nakz** ile aynı sonuca varıyor: (T) analitik.
+- Doğan sual: —
+
+## c3 p163
+- OCR: orta
+- Okuma: tam
+- İçerik: (Râzî'nin nakz notu sonu: 'müessiriyet de nisbet, ayrım yapılabilir'.) **Cüz'îleri bilen lehinde deliller**: **Hücca 1 (ihkâm)**: 'Allah muhkem, mütkın fiiller yaptı; **muhkem fiil sahibi kendi fiilini bilir** ⇒ Allah **kendi fiillerini** bilir; ihkâm ise **vücûda çıkmış cüz'î şahıslarda** görünür ⇒ **cüz'îleri bilir**.' **Hücca 2 (şahsiyet-mâhiyet)**: 'Şahsî cüz'înin **mâhiyeti ve teşahhusu** var; teşahhus ya mâhiyetin aynı (⇒ mâhiyet ilmi teşahhusu bilmek olur) ya zâid (⇒ zâid de mümkin bir mâhiyet)'; **filozoflar 'illetin ilmi ma'lûlü gerektirir' derler**; ⇒ 'Allah zâtını bilmesi, o teşahhus ve teayyünü doğuran şeyleri bilmesini gerektirir' (p164).
+- Netice/hüküm: **Cüz'î ilim lehine: (1) ihkâm; (2) teşahhusun kaynağı Allah ⇒ filozofun kendi ilkesiyle Allah teşahhusu da bilir.**
+- Delil çeşidi: **analitik + ilzâm**; (T) analitik-burhânî görünümlü.
+- Mevzuya bağı: **Fasıl I ilim sıfatı (cüz'î)**: **filozofun kendi 'illetin ilmi ma'lûlü gerektirir' ilkesiyle cüz'î ilmi ispat (ilzâm-ı hasım)**: ders katmanında 'iki yol'dan biri.
+- Doğan sual: —
+
+## c3 p164
+- OCR: orta
+- Okuma: tam
+- İçerik: (Hücca 2 sonu): '**Allah'ın zâtını bilmesi, teşahhusu ve teayyünü doğuran şeyleri de bilmesini gerektirir ⇒ teşahhusu 'o belirli' olarak bilir**; ⇒ 'illetin ilmi ma'lûlü gerektirir' sözü **onlara Allah'ın şahısları o belirli şahıslar olarak bildiğini kabul ettirir**.' **Hücca 3**: 'İlim medih-kemâl, cehil noksan; Allah en kâmil ⇒ **kemâl sıfatlarıyla vasıflanmak evlâ**.' **Hücca 4 (fıtrat)**: '**Dünya ehli, dosttan zındığa, muvahhidden mülhide**, bir bela ve imtihana düşünce **Allah'a yalvarır, kurtulmasını ister**; cüz'î ilmi en çok inkâr eden bile bu hâle düşünce dua-tazarru' eder; **fıtrat-ı aslî Allah'ın makdûrâta kâdir, sırları ve gizlileri bilen olduğuna şâhit**; fıtrat şahitliği bu **nefyî taksîmâtlardan ve gâmız mutâlibten kabule daha yakın** ⇒ **Allah cüz'îleri bilir, hâcetleri defe kâdirdir**.' Râzî: '**Zannediyorum ki İbrâhîm'in (a.s.) babasına "niçin işitmeyen, görmeyen, sana bir faydası olmayan şeye tapıyorsun" demesi babasının filozofların dininde olup Allah'ın kudretini ve cüz'îleri bilmesini inkâr etmesindendi**; bu benim bu meselede kanaatim.'
+- Netice/hüküm: **Cüz'î ilim lehine fıtrat delili (dua-tazarru') ve Râzî'nin tarihî-tefsirî tahmini.**
+- Delil çeşidi: **fıtrî-ikna'î + tefsirî tahmin**; (T) hitâbî-ikna'î; **Râzî'nin İbrâhîm (a.s.) yorumu kendi zannı (⊬); 'Meryem 42' âyeti ve bağlam kaynakla doğrulanmadı; Risale'ye alınmaz**.
+- Mevzuya bağı: **Fasıl I Ek (Fıtrat)**: **fıtrat delili ('yalvarış Allah'ın işiten-bilen-kâdir olduğuna fıtrî şahit')** — Râzî **burada fıtrat delilini cüz'î ilim için** kullanıyor, **c2 p59–70'te hasmın cihet lehine kullandığı fıtrata karşı ayrım gerekliliğini** hatırlatır: **fıtratın kaynak/yönelim/ilim-kudret şahitliği ve cihet ispatı arasındaki ayrım Ek'te yazılmalı**. **Padişah kararı bekleyen madde**.
+- Doğan sual: —
+
+## c3 p165
+- OCR: orta (başlık kötü)
+- Okuma: tam
+- İçerik: **Bâb 3, Fasıl 7: 'Allah'ın cüz'îleri vukûundan önce bilmesi (ma'dûmu bilmek)'**. 'Cüz'îleri bilir diyenler **ihtilâf etti**: **Cehm ve Hişâm**: **Allah cüz'îleri ancak vücûda girince bilir**; vücûddan önce **yalnız mâhiyetleri** bilir. **Çoğunluk (ekseriyet)**: Allah bu cüz'îleri **vücûda girmeden önce de bilir**. Bu bahis **ma'dûmun malûm olabileceği** üzerine kurulu; **deliller**: (1) 'yarın güneşin doğudan doğacağını biliriz'; yarınki doğuş şu an ma'dûm ⇒ **ma'dûmu biliriz**; (2) muhkem fiil fâilin fiili bilmesine şartlı; şart **öncedir**; fâil fiili **vücûdundan önce bilmeli** ⇒ ma'dûmun ilmi câiz; (…p166).
+- Netice/hüküm: **Cüz'îleri vukûundan önce bilme: 4 delil (ma'dûm malûm olabilir).**
+- Delil çeşidi: **analitik**; (T) analitik-burhânî biçim.
+- Mevzuya bağı: **KRİTİK — Fasıl I ilim/irâde**: 'Allah âlemi yaratmadan önce onu bilir' **irâde-tahsis zincirinin bir halkası** (ilim ⇒ irâde ⇒ tahsis); **Cehm/Hişâm görüşü (vücûddan önce bilmez) Sünnî ana çizgice reddedilir**; **Fasıl I'de 'Allah âlemi bilerek/dileyerek yarattı' önerisi bu delillerle destekli**.
+- Doğan sual: —
+
+## c3 p166
+- OCR: orta
+- Okuma: tam
+- İçerik: **Ma'dûmu bilmenin 3. ve 4. delili**: (3) **mâhiyet ilmi mevcudiyete şartlı değil**: hakîkatleri varlıklarını bilmezken de biliriz; 'şey ya mevcut ya ma'dûm' taksîminde **ademin mânâsını** tasavvur ettik ⇒ ma'dûm mâhiyet tasavvuru mümkin; (4) 'ev yapmak, gömlek dikmek isteyen **önce o işi tasavvur eder, sonra vücûda sokar**' ⇒ **ma'dûm malûm olur**. **Sonuç**: 'ilmi îcâb eden zât-ı mahsûsa; **ma'lûmâtın bir kısmına ilim iktizâsı diğerlerinden evlâ değil** ⇒ ya hiçbirini iktizâ etmez (bâtıl) ya **bilinebilecek her şeyi** bilir.' **Hasım delilleri**: **Hücca 1**: '**Allah bu cüz'îleri vukûundan önce bilseydi rubûbiyet ve ubûdiyet bâtıl olurdu**: rubûbiyet: **vukûu bilinen şey vâcib-ül vukû'**, vâcib olana kâdir kudret olmaz ⇒ Allah hiçbir şeye kâdir olmaz; ubûdiyet: aynı gerekçe **kul kâdir olmaz**; ayrıca **fiil ve terke kâdir olduğumuzu zarûrî buluruz**; 'vukûdan önce biliyor' bu kudreti engeller.'
+- Netice/hüküm: **Cebr-kader klasik itirazı (ezelî ilim ⇒ vücûb ⇒ kudret yok).**
+- Delil çeşidi: **dilemma**; (T) analitik-cedelî.
+- Mevzuya bağı: **KRİTİK — Fasıl I/IV (kader-irade)**: 'ezelî ilim ⇒ vücûb' itirazı; **Sünnî cevap: ilim malûma mutâbıktır, îcâb etmez (ilim vukûu gerektirmez; Allah kulun ne yapacağını, kulun kendi ihtiyârıyla yapacağı şekilde bilir)**; Râzî cevabı sonra.
+- Doğan sual: —
+
+## c3 p167
+- OCR: orta
+- Okuma: tam
+- İçerik: Hücca 1 sonu. **Hücca 2**: 'Şey vücûda girmeden önce **mahz adem ve nefy-i sırf**; **mahz ademde imtiyâz ve hâsseyle ihtisas olamaz**; **her malûm başkasından ayrı ve imtiyâzını doğuran sıfatlara sahip** olmalı ⇒ **ma'dûm malûm olamaz**.' Karşı: 'mâhiyetler ademde **mütekarrir** (mu'tezilî 'ma'dûm şey' görüşü) ⇒ soru zâil'. **Cevap**: 'Bu **matlûbu vermez**: 'ma'dûm şeydir' diyenler ma'dûm zâtların **mürekkeb, şekil-renk-hayiz sahibi** olduğunu söylemez; **Allah'ın zâtların bu sıfatlarla vasıflandığını vücûda girmeden bilmediğini** söylemek zorundasınız (**siz söylemiyorsunuz**); bu sıfatlar ademde yok, yine de biliyorsanız **mâhiyetleri hâsıl olmadan bilmek de câiz**.' **Hücca 3**: 'İlim özel nisbet-izâfe; **izâfe iki tarafın takarrürüne mesbûk**; ma'dûm ise vücûda **kudretin te'sîriyle** çıkar; kudretin te'sîri **âlim olmaya şartlı** ⇒ **devir**.' **Bilinebilen her şeyi bilmeyi reddedenlerin delili 1** başlar (**'ilmin ilmi' mertebeleri**).
+- Netice/hüküm: **Ma'dûmun ilmine karşı 3 hasım delili; Râzî'nin ilk cevabı (hasmın kendi kelâmına dönüş).**
+- Delil çeşidi: **cedelî**; (T) cedelî.
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c3 p168
+- OCR: orta
+- Okuma: tam
+- İçerik: '**Bilinebilecek her şeyi bilme** iddiasına **itiraz (Hücca 1)**: 'Öyle olsa Allah **kendisinin malûmu bildiğini bildiğini** bilmeli, **onun bildiğini de** … **sonsuz mertebeler** ⇒ bir malûma dair **sonsuz ilim mertebeleri**, her mertebe öncekine fer'; ⇒ **illet-ma'lûl sonsuz aynı anda**: bâtıl.' **Karşı**: 'ilmin ilmi ilimden ayrı diyorsunuz, delil ne? Ayrıca **malûm ilmin illeti değil**; sonsuz illet lâzım gelmez.' **Cevap**: **ilmin ilminin ilimden mugâyir olduğuna 3 vecih**: (1) malûm ilimden mugâyir ⇒ birine ilim ötekine ilimden mugâyir; (2) şeyi bilirken ilmi bilmekten gâfil kalabiliriz; (3) ilmin ilmi ilmin aynı olsa **üçüncü mertebe üçüncü mertebe olurdu**, tüm mertebeler fiilen hâzır olurdu (bilinen bâtıl) ⇒ **ilmin ilmi ilimden mugâyir**. **Sual 2 (malûm ilmin illeti değil)** — cevap p169'da.
+- Netice/hüküm: **'Sonsuz mertebe' itirazı ve ilmin ilminin mugâyereti (3 vecih).**
+- Delil çeşidi: **analitik**; (T) analitik.
+- Mevzuya bağı: **Fasıl I ilim sıfatı**: 'sonsuz mertebe' itirazının **cevabı (mertebeler fiilen değil bir ilimle kuşatılır)** ders katmanı için not.
+- Doğan sual: —
