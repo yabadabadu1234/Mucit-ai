@@ -2665,3 +2665,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **taksîm (dilemma)**; (T) burhânî biçim; **kendi tenkidim**: Râzî mütekellimînin uzun kelâm literatürünü 'gereksiz' sayıyor — Sünnî kelâm içi bir yöntem eleştirisi; Risale ana metne **'delil yol seçimini sadeleştirmenin' örneği** olarak alınır (ders katmanı).
 - Mevzuya bağı: **Fasıl I §3**: 'sükûn/hareket' taksîmi **c4 p245'in 'ya müteharrik ya sâkin' delilini kapatan hamle**; ezelî cisim iddiası **iki şıkta da** çürütülür ⇒ Râzî'nin 1. Makâle iki Fasıl + 3. Fasıl'ı bu delilin tam çekirdeğini oluşturuyor.
 - Doğan sual: Râzî'nin 'dört meselenin gereksizliği' iddiasının **kel**âm tarihindeki karşılığı (⊬); 'ezelî cisim tek hâl veya tebeddül' taksîmi kâinat devri/mevcut maddeyi kapsıyor mu? (p297'de devam.)
+
+## c4 p297
+- OCR: orta
+- Okuma: tam
+- İçerik: **Râzî'nin hükmü (p296'nın sonu)**: '**bu meselelerde (kümûn-zuhûr, araz intikali…) dalmak faydasız fuzûlîliktir.**' **Mesele 3'ün 3. direği: 'zevâli câiz olan her şey ezelî olamaz' — birkaç delil.** **Hüccet 1 (Eş'arîlerin dayandığı)**: '**kadîm yok olsa, yok oluşu ya mu'dimin i'dâmıyla, ya zıddın tarayışıyla, ya şartın intifâsıyla olur; üç kısım bâtıl ⇒ kadîmin yok olması bâtıl.**' **Râzî'nin atfı**: 'bu hücceti **cisimlerin var iken yok olması imtinâ' diyenin kavlinde** çok mübâlağayla takrir ettik; **tekrarında fayda yok**' (⊬ hangi cilt, 'cisimlerin ma'dûm olması' bahsi). **Hüccet 2 ('kelâm kitaplarında dayandığımız')**: '**kadîm ya vâcib bi'z-zât ya mümkin bi'z-zât**; vâcib ⇒ adem imtinâ' (vâcib = hakîkati adem kabul etmeyen); **mümkin ise bir müessiri var**: **müessir fâil-i muhtâr ise bâtıl: fâil-i muhtâr kasd vasıtasıyla fiil eder; bekâ hâlinde şeyin tekvîni için kasd muhâl; kasd tekvîne ancak ademde veya hudûs hâlinde mümkin; her iki takdirde fâil-i muhtârdan olan hâdistir; kadîm hâdis değil ⇒ kadîmin fâil-i muhtâra isnadı imtinâ'**; ikinci şık: kadîm bir kadîm illetin ma'lûlü: illet mümkinse taksîm tekrarlanır; vâcib ise te'sîri şarta mevkûf mu değil mi… (p298).
+- Netice/hüküm: **Râzî'nin hükmü (kendi kelâm çizgisi): Hüccet 2: 'kadîm ya vâcib ya mümkin; mümkin kadîm fâil-i muhtârdan olamaz (kasd bekâda muhâl); mûcib illetten olursa illet vâcib ⇒ adem imtinâ''.**
+- Delil çeşidi: **taksîm + ilke**; (T) burhânî biçim, öncül: 'kasd bekâda muhâl' (c4 p274 ile aynı öncül).
+- Mevzuya bağı: **KRİTİK — Fasıl I §8 (fâil-i muhtâr) ve c3 (Eş'arî/Mâtürîdî tekvîn ihtilâfı)**: Hüccet 2 **'kadîm mümkin fâil-i muhtârdan olamaz'** öncülüne dayanır; **Mâtürîdî 'tekvîn ezelî sıfat' çizgisiyle çatışabilir** (Allah'ın tekvîni ezelî, mükevven hâdis); Risale bu öncülü **'öncüle bağlı, Eş'arî çizgisi'** diye işaretler (⊬ karar).
+- Doğan sual: **'Cisimlerin ma'dûm olması' bahsi hangi ciltte** (Eş'arî üç sebep taksîmi, c1 M6 ile bağlantılı: mu'dim/zıd/şart)?
+
+## c4 p298
+- OCR: orta (son satırlar bozuk)
+- Okuma: tam (bozuk son satırlar hariç)
+- İçerik: **Hüccet 2 sonu**: 'illet vâcibse te'sîri şarta mevkûf değilse **illetin ademi imtinâ' ⇒ ma'lûlün ademi imtinâ'** (⇒ ezelî zâil olmaz); şarta mevkûfsa şart mümkinse taksîm tekrar, vâcibse ikisi vâcib ⇒ ma'lûl dâim ⇒ **her kadîm dâimdir; her sükûnun zevâli câiz ⇒ sükûn ezelî olamaz.** **İtirazlar (7 soru, hasım/filozof sesi, 'فإن قيل')**: **Soru 1**: '**Bârî cüz'îleri biliyor mu?** **Bilmiyorsa** cüz'î/tagayyürâtı bilmek muhâl ⇒ âlemin hâdis olması imtinâ' (hudûs, Allah'ın kasdına bağlı; kasd ilim ister: 'âlem ma'dûmdur ve mevcut olacak'). **Biliyorsa** ⇒ 'Allah ezelde âlemin vücûduna âlim değildi' sadık, vücûda girince 'âlim oldu' sadık ⇒ bu nefy-isbât **bir şeyin zevâlini ve bir şeyin hâsıl olmasını gerektirir mi?' (p299).
+- Netice/hüküm: **Yedi soruluk nakz cephesi açıldı (Soru 1: ilim; 2: kudret; 3: te'sîr; 4: sıhhat; 5: irâde; 6: nesih; 7: adem illeti).**
+- Delil çeşidi: **taksîm + nakz**; (T) cedelî.
+- Mevzuya bağı: **KRİTİK — Fasıl I §8 ve c3 (ilim/cüz'iyyât)**: Soru 1'in ilk şıkkı (Allah cüz'îleri bilmez ⇒ kasd yok ⇒ hudûs imtinâ') **filozof ilzâmıdır**; Sünnî akide **Allah cüz'îleri bilir** der (c3 ilim bâbı); Risale ana metin bu şıkkı yazmaz, **ikinci şıkkın cevabını arar**.
+- Doğan sual: —
+
+## c4 p299
+- OCR: orta
+- Okuma: tam
+- İçerik: **Soru 1 devamı (ikinci şık)**: 'nefy-isbât zâil bir şey mi hâsıl bir şey mi gerektirir? **Gerektiriyorsa**: zâil olan **kadîm** ise 'kadîmin zevâli'ni itiraf ettiniz; **hâdis** ise hâdis hakkında aynı soru ⇒ **her ilim başka ilme mesbûk, ilk yok** ⇒ 'evveli olmayan hâdisler' bâtıl deliliniz çöker. **Gerektirmiyorsa** ('ma kâne âliman bi-vücûdihî' sadakati hudûs/zevâl gerektirmez) ⇒ **'cismin sâkin iken müteharrik olması' de zevâl/hudûs gerektirmez** ⇒ delil bâtıl. **Râzî'nin hükmü (Râzî-sesli)**: '**Bu, bu delile karşı KAHREDİCİ ve KUVVETLİ bir suâldir.**' **Soru 2**: 'Bârî ezelde bu âlemi ihdâsa **kâdir miydi?** Kâdir. **Âlem hudûs bulduktan sonra** hâlâ o âlemi ihdâsa kâdir mi? Hayır (kudret, mevcudu îcâda muhâl) ⇒ 'kâdir olma' **ezelî sıfat olarak zâil oldu ⇒ ezelî zâil olur.**' **Cevap (hasmın, kudret cephesinden): 'kudret ezelî sıfat, zâil olmaz; bu âleme kâdir olmak = kudretin bu îcâda nisbeti; zâil olan yalnız izâfet (câiz)'.**
+- Netice/hüküm: **Râzî'nin hükmü: Soru 1 'kahredici, kuvvetli' — Eş'arî 'zevâli câiz ⇒ ezelî değil' delili (Hüccet 2) bu itiraz karşısında ayakta kalamıyor (Râzî cevabı p305+'da aranacak).** Soru 2 bir kudret-izâfet ayrımına gidiyor.
+- Delil çeşidi: **dilemma (nefy-isbât)**; (T) cedelî (Râzî 'kâhir' diyor: **Râzî'nin kendi derecelendirmesi: 'kahredici, kuvvetli'**).
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §8, c3 (ilim ezelî)**: 'ma kâne âliman' nefy-isbâtının **izâfî tagayyür (Allah'ta değil ma'lûmda değişim)** cevabıyla kapatılması Sünnî akideyle uyumlu; **Risale bu ayrımı ders katmanında açık yazar**: 'Allah'ın ilmi değişmez; ma'lûm değişir'. **Râzî'nin 'kâhir kavî' hükmü (p299): Eş'arî 'zevâli câiz ezelî olamaz' ilkesi hudûs delili için taşıyıcı değil** — bu ilke Risale'de **kullanılmaz** (F 27-B: ayırt etmiyor).
+- Doğan sual: **Râzî bu 'kâhir suâl'e cevabını nerede veriyor?** (p305–; bulunmazsa 'Râzî cevabı yok' yazılır.)
+
+## c4 p300
+- OCR: orta
+- Okuma: tam
+- İçerik: **Soru 2'ye cevap (hasmın 'izâfet' mazeretinin reddi)**: '**bu mazeret iki vecihle defedilir**: **(1)** sizin **delil her ezelî için genel**: ister hakîkî sıfat ister izâfî ⇒ genel delil, nakz vârid; **(2)** bu zâil olan yalnız izâfet/nisbet ise, **sükûn da yalnız izâfet ve nisbet**: siz sükûnu 'cismin muayyen hayizde dâim hâsıl olması' diye tefsir ettiniz; hayizde hâsıl olma yalnız mahsûs nisbet/izâfet ⇒ **ezelî sükûn** ile **Allah'ın kudretinin bu îcâda taalluku** aynı cinsten izâfetler; biri için 'adem imtinâ'' diğeri için câiz demek fâsit.' **Soru 3**: 'Allah bu âlemde müessir: te'sîri ya **zâtî îcâb** ya **sıhhat (kâdir-fiil-terk)**. İlk şık: Allah'ın zâtının devamı ⇒ âlemin devamı. İkinci şık: **kâdir fiil ve terke kâdirdir; terk de makdûr olmalı** ⇒ terk 'ademi asli müstemir' olamaz (iki vecih):' (p301).
+- Netice/hüküm: **Hasmın 'izâfetin zevâli câiz' mazeretine karşı: sükûn de izâfet ⇒ aynı hüküm.**
+- Delil çeşidi: **nakz (misil kıyas)**; (T) cedelî-burhânî biçim.
+- Mevzuya bağı: **Fasıl I §3, §8**: Soru 3'ün ilk şıkkı 'zâtî îcâb ⇒ âlem dâim' **mûcib iddiasının kaynağı**; ikinci şık **kâdir=fiil-terk** Sünnî kudret tarifidir; Risale kudret bâbı ile birleştirir (c3 kudret, ⊬ terk tanımı).
+- Doğan sual: —
+
+## c4 p301
+- OCR: orta
+- Okuma: tam
+- İçerik: **Soru 3 devamı**: 'terk **ademi asli müstemir** olamaz: **(1)** adem nefy-i mahz, kudret müessir sıfat ⇒ kudret ademde müessir olamaz; **(2)** ademi asli bâkî, kudretin bâkîde te'sîri yok (tahsîl-i hâsıl muhâl)' ⇒ terk = **zıd fiili**: 'ezelde Allah ya âlemi fiil eder (⇒ kıdem) ya terk eder (⇒ âlemin zıddı ezelî) ⇒ âlem vücûda ancak o zıddın zevâliyle girer ⇒ ezelî bir şeyin (zıdd) zevâli câiz ⇒ delil bâtıl.' **Soru 4**: '**âlem hâdis ise hudûsunun sıhhati ezelden hudûs vaktine kadar müstemir**; bu sıhhatin evveli olamaz (evvelce delil); âlem hâdis olunca sıhhat kalmaz (mevcudun 'mümkin olması'na hükmedilemez) ⇒ **ezelî hüküm zâil oldu**.' **Soru 5 (irâde)**: 'âlem hâdis ise Allah onu muayyen vakitte **ihdâsa ırâde etti**; ezelde **mürîd** miydi? **Değilse** irâde hâdis ⇒ başka irâdeye iftikâr ⇒ teselsül ⇒ ezelde mürîd; vakit gelip ihdâs edilince **irâde bâkî mi?**' (p302).
+- Netice/hüküm: **Hasım: 'terk = zıd fiil' ⇒ ezelî zıdd + zevâl; sıhhatin zevâli; irâde-tahsis (Soru 5).**
+- Delil çeşidi: **taksîm + nakz**; (T) cedelî.
+- Mevzuya bağı: **KRİTİK — Fasıl I §8 (irâde-tahsis)**: **Soru 3 'kâdir-terk-zıd fiil'** ve **Soru 5 'irâde ezelî/bâkî mi'** hudûs tarafının **irâde-tahsis** cephesinin doğrudan zayıf noktalarıdır; **Râzî'nin kendi kapanışı buraya bağlı** (Delil 2'nin bu yedi soru karşısında durumu).
+- Doğan sual: **'Terk = zıd fiil' ilzâmına Sünnî cevap (tercî' = irâdenin taalluku, zıd fiil değil)?** Râzî nerede?
+
+## c4 p302
+- OCR: orta
+- Okuma: tam
+- İçerik: **Soru 5 devamı (irâde)**: 'vakit gelip ihdâs edilince irâde bâkî mi? **Bâkîyse** geçmiş vakitte ihdâsa mürîd kalmış olur (bâtıl); **bâkî değilse** ezelî irâde zâil oldu ⇒ **ezelî zâil.** Hasım: 'irâdenin zâtı bâkî, **mahsûs taalluku/irâde-i mahsûsa zâil**' cevabı; **Râzî'nin cevabı: 'cevap Soru 2 için yazdığımızdır'** (yani izâfet cevabı: aynı izâfe­t çifte standart). **Soru 6**: '**Eş'arîler 'Allah'ın hükmü kadîm' dedi; sonra 'emir ve hüküm nesih kabul eder' dedi; nesih hükmün intihâsı veya zevâlidir ⇒ ezelî adem/zevâl.**' **Soru 7**: 'âlemin ademi ve kudretin âlemdeki müessiriyetinin ademi **vâcib bi'z-zât mı mümkin bi'z-zât mı**? Vâcibse zevâli imtinâ' ⇒ âlem hiç vücûd bulmazdı (hulf); mümkinse mürecciḥ var mı? **Mürecciḥ varsa ademde mürecciḥle rüçhân caiz kıldınız, vücûdda niçin caiz değil?** yoksa **mürecciḥ muhtâr mı mûcib mi**? Vücûd illeti için yaptığınız bütün taksîmler ezelî adem illeti için **aynen geri döner**.'
+- Netice/hüküm: **Hasım: (a) irâde ezelî ama vakit gelince zâil; (b) Eş'arî 'hüküm kadîm + nesih' çelişkisi; (c) adem illeti simetrisi.**
+- Delil çeşidi: **nakz (simetri)**; (T) cedelî.
+- Mevzuya bağı: **KRİTİK — Fasıl I §8, c3 (kalem/kelâm sıfatı ezelî), c3 p237 düğümü**: **Soru 6 nesih/hüküm kadîm** Eş'arî **'kelâm-ı nefsî ezelî, taalluk hâdis'** ayrımıyla cevaplanır (Sünnî kelâm klasik cevabı; ⊬ Râzî'nin cevabı burada yok); Risale kelâm sıfatı bâbında **ezelî kelâm/hâdis taalluk** ayrımını açık yazmalı.
+- Doğan sual: **Soru 6 için Râzî'nin cevabı nerede?** (p305–; ⊬.)
+
+## c4 p303
+- OCR: orta
+- Okuma: tam
+- İçerik: **Soru 7 sonu**: 'ezelî ademin zevâli imtinâ' ise **âlem kadîm olurdu; bu fâsit ⇒ ezelî zâil olur.**' **'Bu yedi soru delil üzerine nakz mesâbesindedir.'** **Şimdi delilin kendisine itirazlar**: '**kadîmin adem kabul etmediğinin delili nedir?** Kadîm ya vâcib ya mümkin: vâcibse dâim olmalı diye hüküm yok; mümkinse müessir... **âlemin vücûd sıhhati vâcib bi'z-zât ise dâim sübût ⇒ sıhhat ezelde hâsıl ⇒ delilinizle âlemin ezelde vücûdu imtinâ'; sıhhat ile imtinâ' nakîz ⇒ 'ezelde imtinâ'' fâsit.** Ama **'sıhhat vâcib-sübût ama dâim değil' denirse, 'kadîm zâtına vâcib-sübût ama dâim değil' neden denemesin?** Sıhhat mümkinse: **sıhhatin hudûsu müessire mi? Evet ⇒ müessir ademiyle eser kalkar, mümkin mümkin kalmaz (mümteni' olur), bâtıl; hayır ⇒ sıhhat ademden sonra müessirsiz vücûd buldu (gâmız suâl).**'
+- Netice/hüküm: **Hasım: 'vâcib bi'z-zât olup dâim olmayan' kaydı ⇒ 'kadîm vâcib bi'z-zât ama dâim değil' imkânı; sıhhat simetrisi.**
+- Delil çeşidi: **nakz (simetri)**; (T) cedelî; Râzî **'gâmız suâl' (belirsiz, zor) diyor** (p303 sonu/p304).
+- Mevzuya bağı: **Fasıl I §3, §6.3**: 'sıhhat vâcib-sübût ama dâim değil' — **imkânın mahiyeti** (c4 p285–287) ile bağlı; Risale bu bahsi **almaz** (F 27-B: ayırt etmiyor, bahis felsefî mantık).
+- Doğan sual: —
+
+## c4 p304
+- OCR: orta
+- Okuma: tam
+- İçerik: **Delile itirazlar devam**: **İtiraz 2**: 'mevcut mümkinin illeti gerekiyorsa **mümkin ademin de illeti gerekir** ⇒ âlemin ezelde ademi ve Allah'ın ezelde mûcidiyetinin ademi illet ister; taksîm tekrar.' **İtiraz 3**: '**âlem hâdis ise muayyen vakitte; o vakitte ihdâsı tahsis eden fâil başka vakitte ihdâsa muktedir mi?** **Değilse** mûcib ⇒ kıdem. **Câizse** tercîh mürecciḥe mevkûf mu? **Evetse** o vaktin bu mürecciḥ ile tahsisi hakkında aynı soru, **sonsuz teselsül**. **Hayırsa** 'bu vaktin bu eserle tahsisi **mürecciḥsiz rüçhân**' ⇒ **bu caizse kadîmin vücûddan sonra mürecciḥsiz yok olması da caiz olmasın mı? Akıl için iki bâbdan hiçbiri diğerinden daha imtinâ'lı değil.**' **İtiraz 4**: 'kadîm yok olsa mürecciḥ olmalı; **mürecciḥ kâhir (zorlayıcı) olabilir**; 'fâil-i muhtâr işi hâdis' önermesi ise **'müessire istinadın hudûsa şart olmadığı' hakkındaki çok vecihle muâraza olunur.**'
+- Netice/hüküm: **Hasmın nakzı: (1) adem illeti simetrisi; (2) **irâde-tahsis: mürecciḥsiz rüçhân ⇒ kadîmin mürecciḥsiz yok olması da caiz**; (3) kâhir mürecciḥ.**
+- Delil çeşidi: **nakz (simetri) + taksîm**; (T) cedelî.
+- Mevzuya bağı: **KRİTİK — Fasıl I §8 (irâde-tahsis)**: **İtiraz 3 ('vakit tahsisi mürecciḥsiz rüçhân') hudûs tarafının irâde-tahsisinin en açık ilzâmıdır**: aynı ilzâm c2 p137 (Râzî 'niçin şimdi' silahını iki yönde kullanıyor) ve c4 p268 (irâde-i ilâhînin muayyen vakte taalluku) ile birleşir — **üçüncü gelişi**; Râzî'nin kendi kapanışı **hâlâ ⊬** (Kısım 2 sonu bekleniyor). **Risale ana metin bu bâbı 'açık borç' olarak taşır.**
+- Doğan sual: **İtiraz 3'ün cevabı (tercîh: mürecciḥsiz rüçhân mı, irâdenin zâtî tercîhi mi?) Râzî'de nerede kapanıyor?** (p305–431.)
