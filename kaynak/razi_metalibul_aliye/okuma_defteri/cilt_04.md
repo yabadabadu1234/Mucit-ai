@@ -3097,3 +3097,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **tümevarım (geleneksel tecrübe)**; (T) hitâbî-zayıf.
 - Mevzuya bağı: **Fasıl I §8**: bu bölüm **hikmet delilinin en zayıf halkası**; **F 27-B: ayırt eder mi** — Ay'ın tesiri hikmetli fâil-i muhtâr'ı **mûcib-illetten ayırt etmez** (mûcib-i inâyet de aynı düzeni verir); Râzî'nin i'tibârları **fâil-i muhtâr iddiasını tek başına kurmaz**, düzen/gâye delilidir. **Risale bunu 'düzen delili, muhtâr-mûcib ayırımı ayrı öncüle bağlı' diye yazar.**
 - Doğan sual: **Râzî'nin 'hikmet i'tibârlarından fâil-i muhtâr çıkarma' halkası** (düzen ⇒ hakîm fâil ⇒ muhtâr) **hangi sayfada açıkça yazılıyor?** (p345+; bulunmazsa açık borç.)
+
+## c4 p345
+- OCR: orta
+- Okuma: tam
+- İçerik: **Ay'ın bu âlemde tesirinin kuvvetli oluşu üç vecihle**: **(1)** Ay'ın hareketleri hızlı, bu âlemin değişimleri çok; diğer yıldızların hareketi yavaş; değişimleri Ay'a isnad daha evlâ; **(2)** Ay bu âleme **en yakın** yıldız; tesirde evlâ; **(3)** Ay hızlı hareketiyle bazı yıldızların nûrlarını ötekilerle **karıştırır**; bu karışımlar bu âlemdeki havâdisin **başlangıçlarıdır**; Ay yakın mebdedir.
+- Netice/hüküm: **Râzî'nin gerekçesi: Ay'ın tesiri hız, yakınlık ve karıştırıcılık üzerinden (astrolojik nedensellik).**
+- Delil çeşidi: **kıyas/analoji**; (T) hitâbî-zayıf.
+- Mevzuya bağı: **Fasıl I §8**: astrolojik nedensellik ana metne **alınmaz**; hikmet delilinin çekirdeği (düzen, fayda) ayrı.
+- Doğan sual: —
+
+## c4 p346
+- OCR: —
+- Okuma: okunmadı (boş)
+- İçerik: metin yok.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c4 p347
+- OCR: iyi
+- Okuma: tam
+- İçerik: **3. Fasıl (hikmet delili): 'sâir yıldızların hâlleri'.** '**Yedi kürenin (yedi gezegenin menzilleri) 'Rahîm Hakîm' tarafından her gezegenin evc'e çıkıp hadîze inecek biçimde takdir edildiği acâibdendir. Yedi küreyi iki büyük küre kuşatır: altta sâbit yıldızlar küresi, üstte Felek-i A'zam; iç tarafta iki küre: hava-ateş küresi (latîf), su-toprak küresi (kesîf).** **Üstteki iki küre 'fâile', içteki iki küre 'münfaile'; yedi gezegen bir alet gibi**: evclerine çıkınca üst kürelerden kuvvet alır, hadîzlerine inince bu aşağı âleme tesirleri ulaştırır.' **Her gezegenin altı hareketi** (batıdan doğuya kendi tabiatıyla, A'zam felekle doğudan batıya, kuzeye-güneye meyil, yukarı-aşağı [evc-hadîz]…): 7×6 = 42; + sâbitlerin hareketi ⇒ 44; + A'zam felekin basit hareketi ⇒ **45 hareket türü**; tedvîr-hâmil-mümessil hareketleriyle sayısız ⇒ 'hepsi bu âlemin nizâmını hâsıl edecek vechile'.
+- Netice/hüküm: **Râzî: Batlamyus kozmolojisi içinde 'hareketlerin çokluğu ve nizâmı' hikmet delilidir.**
+- Delil çeşidi: **kozmolojik düzen delili (tümevarım/model)**; (T) hitâbî-ikna'î; **kendi tenkidim: model (küre-içi-küre, 45 hareket) bugünkü astronomiyle bağdaşmaz; delilin dayanağı model olunca delil de modelle düşer.**
+- Mevzuya bağı: **Fasıl I §8**: astronomik model **ana metne alınmaz**; 'hareketlerin çokluğu ve düzeni' **modern kozmoloji/mekanik ile yeniden** yazılırsa düzen delili malzemesi olur (padişah kararı).
+- Doğan sual: —
+
+## c4 p348
+- OCR: orta
+- Okuma: tam
+- İçerik: **Hareket sayımı**: 'sâbitlerin batıdan doğuya yavaş, zorla ters yönde hareketi + A'zam felekin basit hareketi; **toplam 45 tür**; mümessil, hâmil ve tedvîr hareketleriyle sayısız; hepsi bu âlemin nizâmına yönelik, 'en doğru ve en kâmil vecih'.' **Feleklerin hareketinde iki kavil**: **(1) (meşhur)**: **en hızlı küre Felek-i A'zam** (yaklaşık bir gün-gecede tam devir, doğudan batıya); **sâbitler küresi, mütekaddimîn'e göre 100 yılda bir derece, müteahhirîn'e göre 66 yılda bir derece**; ihtilâfın sebebi: bazıları mütekaddimîn'in **rasatta yanıldığını**, bazı muhakkikler ise **bunun uzak** olduğunu söyler (Utârid'i rasat etmek bile akılca müşkil; Utârid küçük, çok az görünür; mütekaddimîn Utârid'in hareketlerini ve eflâkını doğru tespit ettiyse sâbitlerde yanılmazlar); **fark sebebi**: sâbitler küresi ile A'zam felek arasında **ayrı bir küre** var, sâbitlerin kutbu bu kürenin bir noktasına çakışık; bu yüzden meyl-i a'zam azalır (p349).
+- Netice/hüküm: **Râzî: sâbit yıldızların yavaş hareketi (bugünkü 'presesyon' olgusu) hakkında rasat ihtilâfı aktarımı.** **Ek bilgi (benim, kaynak dışı): modern değer yaklaşık 72 yılda 1 derece; Râzî'nin nakli (100 / 66 yıl) o dönemin farklı ölçümleridir.**
+- Delil çeşidi: **betimleyici/model tartışması**; (T) hitâbî (hikmet için dolaylı malzeme).
+- Mevzuya bağı: **Fasıl I §8**: astronomi tartışması hikmet delilinin **çekirdeği değil**; ana metne **alınmaz**; ders katmanında **'rasat hatası ihtimali/yöntem' notu** olarak kalabilir.
+- Doğan sual: —
+
+## c4 p349
+- OCR: kötü (ilk satırlar tamamen bozuk)
+- Okuma: kısmî (ilk 4–5 satır okunamadı; devamı okundu)
+- İçerik: **Sâbitlerin hareketinde ayrı küre (devam)**: 'bu yüzden A'zam meyil sürekli azalır, sâbitlerin hareketi göz ve his için daha hızlı görünür.' **2. kavil**: '**bütün felek hareketleri doğudan batıya; en hızlısı Felek-i A'zam, sonra sâbitler**; **iki felek bir noktadan başlarsa ertesi gün A'zam aynı noktaya varır, sâbitler biraz geride kalır; birikince his sanki sâbitler batıdan doğuya gidiyor; oysa öyle değil.**' Bu kavil sahipleri onu birinciden evlâ sayar: **(1)** akla daha yakın: aslî muhît Felek-i A'zam, en hızlı o; içerdekiler daha yavaş (Ay küresi, ateş küresi, hava küresi, su-deniz çok yavaş, **yer en sakin**) ⇒ **muhît hareket, merkez sükûn; muhîte yakın hızlı, merkeze yakın yavaş.** (Devamı p350.)
+- Netice/hüküm: **Râzî: felek hareketi iki kavlin ikincisi (hep doğudan batıya, farklı hız) — 'muhit hızlı merkez sakin' gerekçesi.**
+- Delil çeşidi: **kozmolojik akıl yürütme**; (T) hitâbî-zayıf.
+- Mevzuya bağı: **Fasıl I §8**: astronomi tartışması **ana metin dışı**; not.
+- Doğan sual: —
+
+## c4 p350
+- OCR: orta
+- Okuma: tam
+- İçerik: **2. kavilin ikinci gerekçesi**: 'sâbitler kendi tabiatıyla doğuya giderken A'zam tarafından batıya mı hareket ettirilir? **İki hareket aynı cisimde aynı anda olursa** cisim bir anda iki mekânda olur (muhâl; bedîhî); **ya biri bir zamanda öteki başka zamanda ⇒ felek hareketleri kesilir, bekâ bulmaz (muhâl)**.' **Birinci kavil ehli cevap**: 'öyle olsa Güneş bir günde tam bir devir yapar, orta konumdan geri kalır; gölge hâlleri gecikirdi (yengeç ilk, oğlak ilk)'; olmadığına göre bu kavil bâtıl.' **Râzî'nin sonucu (Râzî-sesli)**: '**Allah Teâlâ'nın göklerin ve yıldızların yaratılışındaki hikmet acâibi, ancak eflâk ve kevâkibin tam olarak bilinmesiyle ma'lûl olur; bu müteazzir olduğundan eflâk ve kevâkib hâllerinden az bir şeyi bilmek bile beşer akılları için çoktur.**'
+- Netice/hüküm: **Râzî'nin hükmü: göklerin hikmeti ancak tam bilgiyle kavranır; beşer aklı için bu müteazzir; azı bile çoktur.** (**Bu, delilin gücü için bir alçakgönüllülük kaydıdır.**)
+- Delil çeşidi: **hüküm + kozmolojik tartışma**; (T) hitâbî.
+- Mevzuya bağı: **Fasıl I §8, ders katmanı**: Râzî'nin **'hikmetin tamamını bilemeyiz, azı bile çoktur'** cümlesi Risale'nin **iddia hududu ilkesiyle** örtüşür; **ders katmanı alıntısı olabilir.**
+- Doğan sual: —
+
+## c4 p351
+- OCR: iyi
+- Okuma: tam
+- İçerik: **4. Fasıl: 'hikmet eserleri aşağı âlemde'.** 'Aşağı âlemde i'tibâra alınacak şey ya **ümmehât (unsurlar)** ya **mevâlîd (bitki-hayvan-maden)**; mertebeleri: **(1)** yüksek eserlerin hâlleri (hava olayları); **(2)** madenler; **(3)** bitkiler …' 'Bu altı bâb istikṣâ ile bu kitapta ele alınacak, Allah takdir ederse' (**Râzî'nin planı; bu kitapta o bâblar bulunursa okunacak, ⊬**). **Unsurlar — Yer**: '**riyâzî ilimlerde sâbittir ki imâr olunan kısmı altıda biridir**; kalan su altında.'
+- Netice/hüküm: **Râzî'nin planı: aşağı âlemde unsurlar ve mevâlîd (madenler, bitkiler, hayvan).** **'Yerin altıda biri ma'mûr' bilgisi çağın coğrafyasıdır; ana metne alınmaz.**
+- Delil çeşidi: **plan/tümevarım**; (T) hitâbî.
+- Mevzuya bağı: **Fasıl I §8**: hikmet delilinin **aşağı âlem kısmı** başlıyor.
+- Doğan sual: 'Bu altı bâb' bu külliyatın hangi ciltlerinde? (Cilt 5–9'da okuyarak, ⊬.)
+
+## c4 p352
+- OCR: iyi
+- Okuma: tam
+- İçerik: **Yer'in ma'mûr altıda biri dört kısım**: **(1)** yedi deniz, **(2)** dağlar, **(3)** çöller, **(4)** imârlar (ma'mûr yerler). **'İmâr üç kısma nisbetle denizde damla gibi; ama bu üç kısım dördüncünün (ma'mûr) maslahatı için yaratılmıştır.'** **Denizler**: insan gemiyle eşyayı yerin bir yanından ötekine taşıyabilsin; **çöller**: hava hayvanların nefesi ve buharlardan kokuşur; **dünya havasının çoğu boş çöl havası olduğundan kokuşmalar giderilir**, hava hayat için elverişli olur; **dağlar**: altlarında buharları hapseder, **ilâçlar ve kaynaklar** fışkırır, imâra elverişli yerlere akar.' **Râzî'nin sonucu**: '**insan Allah'ın göklerde ve yerde hikmet eserlerine ne kadar vâkıf olursa, O'nun Hakîm ve Rahîm ilâh olduğuna ikrârı o kadar tam olur. Tevfik Allah'tandır.**'
+- Netice/hüküm: **Râzî'nin hükmü: yeryüzü coğrafyasının (deniz-çöl-dağ) ma'mûrun maslahatına yönelik oluşu; hikmet bilgisi arttıkça ikrar tamlaşır.** (**Ekolojik gâye/teleoloji; modern ekoloji ile kısmen örtüşür (dağlar-su döngüsü, çöl-atmosfer denge iddiası tartışmalı).**)
+- Delil çeşidi: **gâye/hikmet delili (teleolojik)**; (T) hitâbî-ikna'î.
+- Mevzuya bağı: **KRİTİK — Fasıl I §8, §1 (bilgi-imân ilişkisi)**: Râzî'nin son cümlesi **'hikmet bilgisi ile ikrâr tamlaşır'** Risale'nin **ders katmanı 'bilgi arttıkça delil güçlenir' ilkesi** için doğrudan alıntı olabilir. **F 27-B**: teleolojik delil mûcib-hakîm (inâyet) ile fâil-i muhtâr-hakîm'i **ayırt etmez**; Risale bunu **'düzen ⇒ hakîm fâil; muhtâr olması ayrı öncüle bağlı'** diye yazar.
+- Doğan sual: Râzî **'düzen delili ⇒ fâil-i muhtâr' halkasını** bu bâbda nerede açık yazacak? (p353+; bulunmazsa açık borç.)
