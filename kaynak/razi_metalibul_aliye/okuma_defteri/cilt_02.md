@@ -1009,3 +1009,219 @@ Biçim: cilt 1 ile aynı. OCR/okuma/içerik/netice/delil çeşidi/mevzuya bağı
 - Delil çeşidi: **cedelî (mâhiyet farkı ilkesi)**; (T) analitik.
 - Mevzuya bağı: 'Mâhiyet farkı ⇒ hüküm taşınmaz' ilkesi Râzî'de **hem lehte hem aleyhte tutarlı**: **Fasıl I ilkesi olarak yazılabilir**.
 - Doğan sual: —
+
+## c2 p113
+- OCR: orta (başlık kötü)
+- Okuma: tam
+- İçerik: **Kısım 1, Fasıl 17 (konu: Allah'a 'cevher' denir mi?)**. 'Cevher' **dört tefsir**: (1) kısmet kabul etmeyen mütehayyiz (cevher-i ferd; Allah mütehayyiz olamaz ⇒ cevher değil); (2) zıt sıfatların ardışık gelmesini kabul eden zât (tagayyür Allah'a muhâl ⇒ bu anlamda değil); (3) **vücûdu mâhiyetinden ayrı olmayan mâhiyet, a'yânda bulunduğunda mevzûda olmayan**: İbn Sînâ'ya göre Allah'ın vücûdu mâhiyetinin aynı ⇒ bu anlamda değil; **bize göre vücûd Allah'ın zâtına kâim sıfat olduğundan bu anlamda cevherdir**; (4) **mevcut ve kendisine hâl olunan mahalden ganî**: Allah **bu anlamda cevher olmaya en lâyık** (mahalden, hayizden, fâilden, tamamlayıcı sûretten ganî).
+- Netice/hüküm: **Terimsel netice: 1–2 anlamda cevher değil; 3–4. anlamda bizce cevher denebilir** (Râzî'nin vücûd-zâid görüşüne bağlı).
+- Delil çeşidi: **tanım analizi**; (T) analitik.
+- Mevzuya bağı: **c2 p33'teki cevher tefsiri ile örtüşür fakat oradaki 4. tefsire cevap burada açılıyor**; **Fasıl I 'Vâcib cevher değildir' ifadesi varsa**: Râzî'ye göre **anlama bağlıdır**; ders katmanı terim uyarısı gerekir. **DİKKAT (Sünnî terminoloji)**: Allah'a 'cevher' denmemesi **Sünnî kelâmda yerleşik**; Râzî'nin 4. tefsirle 'denebilir' demesi **terimsel; nassta geçmeyen isimlerin isnâdı meselesi (esmâ tevkîfî mi)** başka ele alınır (⊬).
+- Doğan sual: Esmâ'nın tevkîfîliği (Allah'a nassta gelmeyen adın verilmesi) Râzî'de nerede işleniyor?
+
+## c2 p114
+- OCR: orta
+- Okuma: tam
+- İçerik: **'Kâim bi'n-nefs' itirazı**: bazıları Vâcib için 'kâim bi'n-nefs' der, 'cevher' demez; **nizâ uzak/lafzî**: 'kâim bi'n-nefs' **iki yönden mecaz** (ganî anlamında; 'nefs'in hem beden-kan hem zât-hakîkat için müşterek olması). 'Cevher' kelimesi **cevherlik-sağlamlık**tan alınır; gayre ihtiyaçsızlık arttıkça bekâ ve devam artar ⇒ Allah'a **daha uygun**. **İtiraz**: 'cevher = altında bir şey olmayan cins ⇒ Allah cinse girer ⇒ cins+fasıl terkîbi ⇒ mümkin.' **Cevap**: 'Cins mâhiyetin müşterek **cüz'ü**; "mahalden ganî olmak" **ademî mefhûm** ve ademî mefhûm mâhiyetin cüz'ü olamaz ⇒ bu anlamda cevher **cins değil**.' **Fasıl 17 biter.**
+- Netice/hüküm: **Cevher lafzı terimsel; Allah'a cins-fasıl terkîbi lâzım gelmez.**
+- Delil çeşidi: **kavramsal + analitik**; (T) analitik.
+- Mevzuya bağı: **Fasıl I 'basitlik/terkîbsizlik'**: **'ademî mefhûm mâhiyet cüz'ü olamaz'** ilkesi bizde kullanılabilir (kaynaklı).
+- Doğan sual: —
+
+## c2 p115
+- OCR: kötü (çöp)
+- Okuma: kısmî (okunamadı; içerik yok gibi)
+- İçerik: OCR yalnız başlık kırıntıları veriyor: 'القسم الثاني…' benzeri; **Kısım 1'in bitişi ve Kısım 2 başlık sayfası** olması muhtemel. **İçerik okunmadı.**
+- Netice/hüküm: **Çıkarılmadı** (F 25-B: okunmayan yerden netice çıkarılmaz).
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: p115–116 görüntü doğrulaması (başlık: Kısım 2'nin adı).
+
+## c2 p116
+- OCR: kötü (çöp)
+- Okuma: kısmî (okunamadı)
+- İçerik: OCR anlamsız; başlık sayfası kalıntısı. **İçerik okunmadı.**
+- Netice/hüküm: **Çıkarılmadı**.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: bkz p115.
+
+## c2 p117
+- OCR: orta (başlık kötü)
+- Okuma: tam
+- İçerik: **Kısım 2 (tevhîd), Fasıl 1 (Allah'ın vâhid oluşunun delilleri; dipnot: yazma nüshada 'Fasıl 18' numarası; müellif bu cüzü iki kısma ayırdığını belirtir)**. 'İnsanlar vahdâniyete çeşitli deliller zikretti; biz **istikssâ ile** sayarız.' **Hücca 1 (filozoflar'ın itimadı)**: 'İki mevcut, her biri **vâcib li-zâtihi** farz edilse: **vücûb-ı zâtî mefhûmunda müşterek**; **teayyün ve teşahhusta ayrılmalı** (yoksa bu o, o bu olur ⇒ tek şey); **müşareket vechi ≠ muhâlefet vechi ⇒ her biri, ortak olduğu vücûbtan ve ayrıldığı teayyünden mürekkeb**; bu muhâl, **dört vecihle**: **(1)** mürekkeb her cüzüne muhtaç, cüz gayrı ⇒ **gayre muhtaç ⇒ mümkin ⇒ iki vâcib farzı bâtıl**.
+- Netice/hüküm: **Tevhid Hücca 1: iki vâcib ⇒ terkîb ⇒ imkân** (birinci vecih).
+- Delil çeşidi: **analitik-burhânî (taksîm + reductio)**; (T) burhânî biçim; **öncül: 'müşareket ≠ muhâlefet vechi ⇒ terkîb'** (p26'da cisim için kullanılan; **c1 Mesele 5 ile gerilim: orada 'muhâlefet zâtî, selbî ortaklık terkîb değil' idi**).
+- Mevzuya bağı: **Fasıl I §6.2 Vahdâniyet**: **filozofların 'iki vâcib ⇒ terkîb' burhanı**; Fasıl I'de bu burhan **veya iki kâdir/tevârüd** kullanılıyorsa **Râzî'nin kendi Mesele 5'i (muhâlefet zâtîdir) bu burhanın öncülünü zayıflatır** ('ortak vücûb + ayrı teayyün = terkîb' öncülü, Râzî'nin 'zâtlar zât olmakta ortak (selbî lâzım), hakîkatle ayrılır' görüşüyle **gerilimli**). **Kritik: Râzî burhanı kendisi tekrar edecek mi, yoksa Mesele 5'e göre zayıf bulacak mı** (p120+ okunacak).
+- Doğan sual: **Râzî 'müşareket-muhâlefet vechi ⇒ terkîb' öncülünü kendi 'muhâlefet zâtîdir' ilkesiyle nasıl uzlaştırıyor?** (Tevhid burhanının geçerliliği buna bağlı.)
+
+## c2 p118
+- OCR: orta
+- Okuma: tam
+- İçerik: Hücca 1, (1) sonu: iki vâcib farzı **kendini nakz** (bâtıl farz). **(2)** 'Terkîbin cüzleri **vâcib li-zâtihi** mi değil mi? Değilse: mümkin cüze muhtaç mürekkeb **mümkine muhtaç ⇒ daha çok mümkin** ⇒ vâcib mümkin: hulf; öyleyse **her cüz vâcib li-zâtihi** ⇒ cüzler **vücûb-ı zâtîde müşterek, hususiyetlerinde mübâyin ⇒ her cüz de iki cüzden mürekkeb ⇒ sonsuz cüz**; bu muhâl: 'her kesret (sonlu ya da sonsuz) **birden** oluşur; **hangisi vâhid denirse akıl onun vâhid olduğuna hükmeder, oysa bu kendi nefsinde vâhid değil** (ortak vücûbu + ayrı teayyünü var)' ⇒ hulf.' **(3)** 'Her biri iki cüzden mürekkeb: **vücûb müşterek cüz teayyünü istilzâm eder mi, teayyün vücûbu mu, yoksa biri ötekini istilzâm etmez mi?**' (p119'da).
+- Netice/hüküm: **(2) sonsuz geriye gidiş: 'birlik' kavramı çöker**.
+- Delil çeşidi: **analitik (teselsül-i terkîb)**; (T) burhânî biçim.
+- Mevzuya bağı: **Fasıl I §6.2**: 'vâcibin cüzleri de vâcib olmak zorunda' adımı **terkîb nefyinin temeli**; Fasıl I bunu yapıyorsa Râzî'yle **aynı iskelet**.
+- Doğan sual: —
+
+## c2 p119
+- OCR: orta
+- Okuma: tam
+- İçerik: **(3) üç kısım bâtıl**: (a) **vücûb teayyünü istilzâm eder**: vücûb-ı zâtî nerede ise o teayyün nerede ⇒ vâcib **yalnız o tek belirli olan**; (b) **teayyün vücûbu istilzâm eder** (teayyün vücûbun illeti): vücûb-ı zâtî **teayyünle illetlenmiş ⇒ gayre bağlı vâcib ⇒ mümkin**: çelişki; (c) **hiçbiri ötekini istilzâm etmez**: birleşmeleri **münfasıl sebep** ile ⇒ vâcib-i li-zâtihi vâcib-i bi-gayrihi. **(4)** 'Vâcib ya teayyünün **kendisi**, ya onu **îcâb eden**, ya **hiçbiri**: ilk ikisi münfasıl sebep gerektirir (mümkin) …' **Hücca 2 başlar**: 'Vâcib **çok şeye hamledilirse** ortak mefhûm; altına giren şeyler **cins** (altında nevler) veya **nev'** (altında şahıslar).' Hasr: girenler mâhiyette muhtelif ise cins, değilse nev'.
+- Netice/hüküm: **Hücca 1 dört vecihle tamam; Hücca 2 taksîmle başlıyor (cins/nev')**.
+- Delil çeşidi: **taksîm + reductio**; (T) burhânî biçim.
+- Mevzuya bağı: **Fasıl I §6.2 'vâcib tek' burhanı**: Râzî'nin 4 vecihli iskeleti **Fasıl I'e kaynak dayanağı** (**c2 p117–119**); 'teayyün vücûbu istilzâm ⇒ tek' adımı **Fasıl I'de yazılı mı?** kontrol.
+- Doğan sual: —
+
+## c2 p120
+- OCR: orta
+- Okuma: tam
+- İçerik: **Hücca 2 devam (vâcib cins olamaz)**: 3 vecih: (1) cins ⇒ **cins+fasıl terkîbi ⇒ mümkin**; (2) **fasıl nevin cinsten var oluşunun sebebidir**: fasıl varsa vâcibin vücûduna **sebep** olurdu; vâcib kendine vücûd **başka bir vücûd**, o fasılın te'sîri olarak, hâsıl edemez — diğer cinsî mâhiyetler için mümkin (kendi başlarına mevcut değil) ama **vücûb için muhâl**; (3) 'vâcib kâim bi'n-nefs, ganî ise fasıl kıvamına sebep olamaz; değilse vücûb-ı zâtî mümkin, muhtâc: çelişki'. **Vâcib nev' olamaz**: bu şahsı belirleyen ya **mâhiyetin kendisi/lâzımı** ⇒ mâhiyet nerede ise şahıs orada ⇒ **vâcib yalnız o şahıs**; **münfasıl sebep ⇒ imkân**.
+- Netice/hüküm: **Vâcib ne cins ne nev'**: tek şahıs.
+- Delil çeşidi: **analitik-burhânî**; (T) burhânî biçim.
+- Mevzuya bağı: **Fasıl I §6.2 / c1 Mesele 4 (teayyün ve mâhiyet)** ile örtüşür; **c1 Mesele 3'te 'vücûd zâid' iken 'fasıl vücûdu verir' ifadesi Râzî'nin vücûd tanımıyla **uyumlu** (mümkinde vücûd fasıldan; vâcibte olamaz).
+- Doğan sual: —
+
+## c2 p121
+- OCR: orta
+- Okuma: tam
+- İçerik: Hücca 2 sonu ('münfasıl sebep ⇒ vâcib bi-gayrihi'). **Râzî'nin itirazları (Hücca 1–2 üzerine)** — **Soru 1**: 'Bütün vecihleri **tek harfe** bina ettiniz: iki vâcib farzı **her birinde terkîb** gerektirir. Bu **kabul edilmez**: terkîb ancak **ortaklık vechi (vücûb) sübûtî mefhûm** ve **teayyün sübûtî mefhûm** ise lâzım gelir. **Vücûb ademî (selbî) mefhûm ise terkîb lâzım gelmez**: ortaklık selbî mefhûmda, ayrılık **tam mâhiyetle**.' İki mesele: (a) vücûb selbî mefhûmdur; (b) öyleyse terkîb gerekmez. **(a) delilleri**: (1) 'vücûdu mümteni olan şey için ilminin vâcib olduğu doğru'; öyleyse vücûb ademe mahmûl; ademe mahmûl olan mevcut olamaz (yoksa mevcut sıfat mahz ademle kâim). (2) 'Vücûb sübûtî olsa ya mâhiyetin tamamı, ya cüz'ü, ya hâriç…' (p122).
+- Netice/hüküm: **Râzî, 'iki vâcib ⇒ terkîb' burhanının temel öncülünü kırıyor: vücûb selbî ise ortaklık terkîb yapmaz.**
+- Delil çeşidi: **analitik-cedelî (öncül reddi)**; (T) analitik.
+- Mevzuya bağı: **KRİTİK — Fasıl I §6.2**: Fasıl I 'iki vâcib ⇒ ortak vücûb + ayrı teayyün ⇒ terkîb' burhanını (Râzî'nin Hücca 1'i, filozof burhanı) kullanıyorsa, **Râzî'nin kendi itirazı (vücûb selbî ⇒ terkîb yok)** bu burhanın **açık zaafı**dır. **c1 Mesele 5 ile uyum**: 'muhâlefet zâtî, ortak lâzım selbî' — **gerilim çözüldü: Râzî iki yerde tutarlı; burhanı zayıf buluyor.**
+- Doğan sual: Râzî tevhid için hangi delili **kendisi kat'î** buluyor? (Sonraki hüccetler.)
+
+## c2 p122
+- OCR: orta
+- Okuma: tam
+- İçerik: (a) delil (2): **vücûb sübûtî olsa mâhiyetin tamamı olamaz** (üç vecih: 'bu zât' ile 'bu zât vâcibdir' arasında bedîhî fark; vücûbu bilen o mâhiyeti bilirdi; 'vâcib değil'in nakîzi 'filan zât değil' değil); **cüz'ü olamaz** (vâcibin cüzü olsa mümkin); **hâriç sıfat olamaz** (mâhiyete muhtaç ⇒ mümkin/vâcib-bi-gayrihi; ya da vücûbun vücûbu için sonsuz teselsül; sıfat-zât karşılıklı iftikâr) ⇒ **vücûb sübûtî sıfat olamaz**. Sayfa altı çizgi çöp.
+- Netice/hüküm: **Vücûb sübûtî olamaz (bu delille)**.
+- Delil çeşidi: **taksîm + reductio**; (T) analitik-burhânî.
+- Mevzuya bağı: **c1 Mesele 2 ile gerilim**: c1'de Râzî **'vücûb sübûtî'** dedi (Mesele 2). **Burada, hasım gibi, vücûbun selbî olduğunu savunuyor**: bu bir **itiraz-i cedelî** (hasmın burhanını kırmak için 'farz edelim vücûb selbî'), **Râzî'nin kendi kabulü değil**; **Râzî'nin kesin hükmü mü, cedelî mi? Sayfalarda 'ولقائل أن يقول' (bir kimse diyebilir) formülü**: **cedelî itiraz**. **Bu farkın gözden kaçması bizde yanlış 'Râzî selbî dedi' aktarımı yaratır**: ders katmanında **'Râzî burada hasmın öncülünü sorgular; kendi kabulü c1 Mesele 2'dir'** yazılmalı.
+- Doğan sual: Râzî'nin kendi hükmü (c1 Mesele 2: sübûtî) ile bu cedelî itiraz nasıl uzlaşıyor? (p129'da cevap gelebilir.)
+
+## c2 p123
+- OCR: orta
+- Okuma: tam
+- İçerik: (a) delil devamı: (3) vücûb sübûtî olsa **diğer mevcutlarla vücûdda müşterek**, mâhiyette ayrı ⇒ vücûdu mâhiyetinin aynı; mâhiyetinin vücûdla vasfı mümkinle ise imkân, vâcible ise vücûbun vücûdu zâid ⇒ teselsül. (4) Vücûb sübûtî olsa **mümkin olurdu**: vücûb 'bi'z-zât' ve 'bi'l-gayr' diye ikiye ayrılır; ortak 'vücûb' ≠ ayıran 'bi'z-zât' ⇒ vücûb bi'z-zât **mürekkeb mâhiyet ⇒ mümkin**. (5) **Vücûb bi'z-zât'ın ma'kûlü**: ya **dış sebebe muhtaç olmamak** (selbî) ya **kendi vücûduna iktizâ etmek**: ilki açıkça selbî; ikincisinde 'iktizâ' sübûtî ve zâta zâid ise zâtın lâhikası ⇒ zât kâim bi'n-nefs olmaz ⇒ başka iktizâ ⇒ teselsül.
+- Netice/hüküm: 5 vecih: **vücûb bi'z-zât selbî mefhûm**.
+- Delil çeşidi: **analitik**; (T) analitik-cedelî.
+- Mevzuya bağı: **c1 Mesele 1 (vâcib'in üç tefsiri)** ile örtüşür: 'selbî tefsir' orada da vardı; c1 Mesele 2'de Râzî **sübûtî** dedi: **bu, sonraki sayfaların açması gereken gerilim (p124–125'te 'sübûtî' delilleri de verilecek)**.
+- Doğan sual: —
+
+## c2 p124
+- OCR: orta
+- Okuma: tam
+- İçerik: Hasım cevabı (**vücûb sübûtîdir**, 2 vecih): (1) vücûb = **vücûdun te'kîdi**; ademî olsa şey kendi selbiyle/nakîziyle te'kîd olmaz; (2) vücûbun nakîzi 'lâ-vücûb': mümteni (mahz adem) ve mümkin-i hâss'a sâdık; mümteni ademse 'lâ-vücûb' adem; mümkin-i hâss ademde de 'vâcib değil'; öyleyse lâ-vücûb adem ⇒ nakîzi **vücûb sübûtî**. **Râzî'nin cevabı (selbî tarafı)**: (1) 'vücûb te'kîd-i vücûd' derken kastınız **dış sebebe muhtaç olmamak** ise ma'kûl ve selbî; **zâtın o vücûdu iktizâsı** ise sübûtî zâid olamaz (teselsül); **üçüncü bir mefhûm** ise açıklanmalı. (2) Karşı: 'mümkin-i hâss **değil**' nakîzi 'mümkin-i hâss'; bu mümteni'ye (adem) de sâdık ⇒ 'mümkin-i hâss değil' adem olmalı ⇒ 'mümkin-i hâss' **sübûtî**…
+- Netice/hüküm: Sübûtî/selbî tartışması **karşılıklı 'nakîz argümanı'** ile berabere kalıyor.
+- Delil çeşidi: **cedelî (nakîz argümanları)**; (T) cedelî.
+- Mevzuya bağı: **Fasıl I 'vücûb sübûtî mi'**: iki yönlü delil de **eşdeğer güçte**; **Râzî'nin kendi c1 hükmü (Mesele 2: sübûtî) burada **kırılmış görünüyor**; **açık nakz adayı**: c1 Mesele 2 vs c2 p121–125. Bir sonraki sayfa çözüm getirecek mi?
+- Doğan sual: **c1 Mesele 2 (sübûtî) ile c2 (selbî cevabı) çelişkisi**: hangisi Râzî'nin son hükmü? (p125–126 ve sonrası; cilt 3 tekrar bahis?)
+
+## c2 p125
+- OCR: orta
+- Okuma: tam
+- İçerik: Nakîz argümanı devamı: 'mümkin-i hâss değil' mümteni'ye sâdık ⇒ adem; ⇒ 'mümkin-i hâss' sübûtî. **Vücûb bi'z-zât = mümkin-i hâssın ve imtinâın nefyi**; 'mümkin-i hâss' sübûtî, 'imtinâ' ademî; imtinâı ref eden ⇒ sübût; **mümkin-i hâssı ref eden ⇒ adem**: iki sonuç birbirini yiyor ⇒ hiçbiri kesin değil. **Mukaam 2 (ikinci mesele)**: vücûb selbî ise **iki vâcib farzı terkîb gerektirmez**: ortaklık selbî mefhûmda, ayrılık **tam mâhiyetle**; delil: 'bir mâhiyetin var olduğu şüphesiz: **basit ya mürekkeb**; mürekkeb basitten doğar ⇒ basit mâhiyet mevcut; **her iki basit, başka her şeyin selbinde ortaklaşır**; selbî ortaklık terkîb gerektirseydi **basit mürekkeb olurdu: muhâl**.' ⇒ selbî mefhûmda ortaklık terkîb yapmaz.
+- Netice/hüküm: **Selbî ortaklık terkîb yapmaz** (basit mâhiyetlerin ortak selbi örneği).
+- Delil çeşidi: **analitik**; (T) **burhânî biçim (güçlü)**: 'her iki basit ortak selb taşır' ⇒ öncül kesin.
+- Mevzuya bağı: **c1 Mesele 5'in cebri**: 'selbî ortaklık terkîb değil' **burada formel ispat**; **F 3-B 'terkip formül cebriyle' için hazır çekirdek**.
+- Doğan sual: —
+
+## c2 p126
+- OCR: orta
+- Okuma: tam
+- İçerik: **Soru 2**: 'Vücûb sübûtî olsun, teayyünlerin ayrı olduğunu kabul; **"her teayyün sübûtî zâid"** niye? (a) **Teayyün sübûtî zâid değildir** deliller: (1) teayyün sübûtî olsa **bir şahsınki ötekinden gayrı**; teayyünler 'teayyün' mâhiyetinde ortak, şahıslarında ayrı ⇒ **teayyünün teayyünü zâid ⇒ teselsül** ⇒ sonsuz sebep-müsebbep muhâl; ayrıca **her kesrette vâhid mevcut**; her vâhid **teayyünlü**, teayyün zâid ⇒ **vâhid vâhid olmaz** (çelişki). (**itiraz**: SEVAD mâhiyeti ile TEAYYÜN mâhiyeti birbirine eklenerek teayyün: **bâtıl**, çünkü iki külli mâhiyet birleşince **külli kalır**, şahsî olmaz.)
+- Netice/hüküm: **Teayyün zâid sübûtî olamaz** (teselsül, vâhid'in teayyünü, külli+külli=külli).
+- Delil çeşidi: **analitik-burhânî**; (T) burhânî biçim (**c1 Mesele 4 ile aynı öncül ailesi**).
+- Mevzuya bağı: **c1 Mesele 4 (mâhiyet min haysu hiye ve teayyün)**: aynı ilke.
+- Doğan sual: —
+
+## c2 p127
+- OCR: orta
+- Okuma: tam
+- İçerik: (Teayyün zâid değil, devam.) **İkinci vecih**: teayyün zâid olsa bu **tek şey değil iki şey** (şey + teayyünü), her teayyünün de teayyünü ⇒ sonsuz şey. **Üçüncü**: hasım 'bu teayyünün ötekinden ayrı olması için **bu şahsın sevâd hissesinin ötekinin hissesinden ayrı** olması lâzım' (eklenme için ayrı olma önce) ⇒ ayrılık **teayyünden önce** hâsıl olmalı ⇒ **şey, başkasının hâsılına mesbûk**: muhâl.
+- Netice/hüküm: Üç vecih: **teayyün zâid sübûtî değil**.
+- Delil çeşidi: **analitik**; (T) burhânî biçim.
+- Mevzuya bağı: bkz p126.
+- Doğan sual: —
+
+## c2 p128
+- OCR: orta
+- Okuma: tam
+- İçerik: **Dördüncü vecih**: teayyün zâid olsa **iki cüzden mürekkeb**; cüzler vâcib ise vâcib birden çok (sizin reddettiğiniz), değilse cüzlerden biri mümkin ⇒ mürekkeb daha çok mümkin ⇒ **hiçbir belirli zât vâcib olamaz**: muhâl. **Beşinci**: 'teayyünün mânâsı **"bu şey şu değil"**: **selb-i mahz**.' **Hasım**: 'teayyün sübûtî çünkü **aslî mâhiyete zâid**: (1) SEVAD ≠ BU SEVAD (SEVAD olsa BU SEVAD hâsıl olurdu: bâtıl); (2) 'SEVAD' mâhiyeti ortaklığa mâni değil, 'BU SEVAD' mâni; hakîkatte tefâvüt olmadan bu hüküm farkı olmaz…' (p129'da devam).
+- Netice/hüküm: **Teayyün: selbî (Râzî cedelî itirazı) — hasım sübûtî**.
+- Delil çeşidi: **analitik-cedelî**; (T) cedelî.
+- Mevzuya bağı: **c1 Mesele 4** (teayyün ↔ mâhiyet): aynı; **Râzî burada hasmın 'sübûtî' cevabını yazıyor; sonucu p129–130'da**.
+- Doğan sual: —
+
+## c2 p129
+- OCR: orta
+- Okuma: tam
+- İçerik: Hasmın 'teayyün sübûtî zâid' delili devam: (2) 'SEVAD' mâhiyeti ortaklığa mâni değil, 'BU SEVAD' mâni; (3) bedîhe 'bu sevad'ı 'bu' + 'sevad'dan **mürekkeb**, 'bu'nun 'sevad'dan gayrı olduğuna hükmeder ⇒ **teayyün mâhiyete zâid**. **Sübûtî oluşu (2 vecih)**: (i) 'bu sevad' **mevcuttur**, 'bu' onun cüz'ü; ma'dûm mevcudun cüz'ü olamaz ⇒ 'bu' mevcut; (ii) teayyün ademî olsa 'ötekinin teayyününün yokluğu' olurdu; öteki adem ise bu 'ademin ademi = sübût'; teayyünler tek mâhiyetin fertleri ⇒ hepsi sübût. **Râzî'nin sonucu**: 'Sizin delilleriniz teayyünün zâid sıfat olduğunu, bizimkiler tersini gösteriyor: **teâruz ve şek kaldı**; şek varken **tevhid delili meşkûk oldu**, çünkü **meşkûka mevkûf olan meşkûktur**.'
+- Netice/hüküm: **Râzî: filozofların tevhid burhanı (Hücca 1) teayyünün mâhiyeti meselesi çözülmedikçe şüphelidir.**
+- Delil çeşidi: **teâruz (delillerin dengesi)**; (T) analitik (şek-mevkûf ilkesi sağlam); burhanın **(T) derecesi Râzî'ce 'meşkûk'**.
+- Mevzuya bağı: **KRİTİK — Fasıl I §6.2**: Fasıl I filozof burhanını (ortak vücûb + teayyün ⇒ terkîb) **kat'î** sayıyorsa **Râzî onu 'meşkûk' ilan ediyor**; ders katmanında **(T) derecesi 'öncüle (teayyün zâid mi) bağlı; Râzî'ye göre teâruz'** yazılmalı. **Bu, Fasıl I için en somut düzeltme adayı**.
+- Doğan sual: Râzî **hangi tevhid delilini kat'î** buluyor? (Devam: temânu' delili p133+.)
+
+## c2 p130
+- OCR: orta
+- Okuma: tam
+- İçerik: **Soru 3**: 'Vücûb-ı vücûd sübûtî, teayyün sübûtî diyelim; ama **sizin lâzım kıldığınız kesret vâhid vâcibe de lâzım**, öyleyse istidlâl sâkıt.' **(1)** 'İlk mebde salt vücûb-ı vücûd (külli mâhiyet, kendi mefhûmuyla ortaklığa mâni değil) değildir: külli mâhiyet a'yânda yok; a'yânda **'vâcib-i vücûd olmakla vasıflı belirli zât'**; teayyün vücûb mâhiyetine zâid ve **vâcibin sıfatı**; sıfat mevsûfa muhtaç ⇒ **teayyün mümkin li-zâtihi**, vücûbla ma'lûl; **belirli zât iki cüzden (biri mümkin) mürekkeb ⇒ imkân** ⇒ **a'yânda mevcut her şey mümkin** — bu ilzâm **vâhid vâcib kavline de lâzım**.' **(2)** 'Vücûb-ı vücûd, mâhiyetin vücûdla ittisâfının arız sıfatı: vücûd-imkân-imtinâ' **cihetlerdir, mevzû ile mahmûl arasındaki râbıtanın sıfatları**; vücûb her takdirde mâhiyet-dışı sıfat ⇒ mümkin li-zâtihi, gayre ma'lûl ⇒ **bu mahzûr vâhid vâcibe de lâzım**.'
+- Netice/hüküm: **Terkîb ilzâmı vahdâniyeti savunana da dönüyor (ikiye lâzım olan bire de lâzım)**: burhan **ayırt etmiyor**.
+- Delil çeşidi: **nakz (ayırt etmeme = F 27-B tipi)**; (T) analitik; **ölçünün ayırt ettiği ispatlanmadıkça delil sayılmaz** ilkesiyle örtüşür.
+- Mevzuya bağı: **F 3-B #27-B (ölçü ayırt eder mi)**: Râzî'nin nakz'ı, **'bir delil, tevhidi ve teksiri aynı çıktıya götürüyorsa delil değildir'** ilkesinin doğrudan örneği: **Fasıl I burhan seçiminde ölçüt** olarak yazılabilir.
+- Doğan sual: —
+
+## c2 p131
+- OCR: orta
+- Okuma: tam
+- İçerik: **(2) devam**: 'Vücûb mâhiyet dışı ⇒ mümkin-mâlul: mahzûr vâhid ve çok için aynı.' **(3)** 'Bazı mâhiyetlerin **zâtı gereği başka mâhiyeti istilzâm ettiğini** zarûrî biliriz: **üç sayısı ferdiyeti, dört zevciyeti** istilzâm eder; bu istilzâmlar **vâcib li-zâtihi** (gayre değil); **bu zâtî vücûblar çok şeydir ⇒ vâcib li-zâtihi birden fazla**.' Hasım: 'bunlar kâim bi'n-nefs zât değil, **nisbî-i'tibârî hâller**; bizim kelâmımız **kâim bi'n-nefs zâtlar** hakkında.' **Cevap**: 'Tevhid taksîminizi **vücûb bi'z-zât mefhûmuna** bina ettiniz; bu mefhûm bu i'tibârî durumlarda da var (mâhiyetleri kendi başlarına vâcib, teayyünleri mümteni) ⇒ **nakz**.' **(4)** 'Sizin kelâmınız: mâhiyette terkîb olunca vâcib olamaz; **vücûb iki kısım (bi'z-zât/bi'l-gayr)**, ortak kadr 'vücûb', ayıran 'bi'z-zât' ⇒ **vücûb bi'z-zât cins+fasıldan mürekkeb**; her mürekkeb mümkin ise vücûb bi'z-zât mümkin (hulf): …
+- Netice/hüküm: **Ayırt etmeme nakzı sürüyor**: (3) zâtî vücûblar çok; (4) vücûb-ı bi'z-zât kendisi terkîbli.
+- Delil çeşidi: **nakz**; (T) analitik-cedelî.
+- Mevzuya bağı: (3) **'zâtî vücûb' kavramının kapsamı**: **Fasıl I 'vâcib li-zâtihi sadece Allah'** iddiası **kâim bi'n-nefs zât** kaydıyla yazılmalı (matematiksel zaruretler i'tibârî).
+- Doğan sual: —
+
+## c2 p132
+- OCR: orta
+- Okuma: tam
+- İçerik: (4) sonu: 'vücûb bi'z-zât iki kayıttan mürekkeb mâhiyet ⇒ eğer her mürekkeb mümkinse vücûb bi'z-zât mümkin (hulf); eğer mürekkeb mâhiyet için mümkin olmak lâzım değilse **mukaddime bâtıl**.' **Hücca 2'ye cevap**: 'vâcib çoksa cins ya da nev' olurdu' — bu **ancak vücûb-ı vücûd sübûtî ve mâhiyete dâhil** ise lâzım; **selbî olduğu gösterildi ⇒ mâhiyete dâhil olamaz ⇒ altındakilere hamli cinsin nevlere ya da nev'in şahıslara hamli kıyâsı değil**. Fasıl (Hücca 1–2 itirazları) biter.
+- Netice/hüküm: **Filozofların iki tevhid hüccesi (terkîb ve cins/nev') Râzî'ye göre 'selbî vücûb' cevabıyla düşer/şüpheli.**
+- Delil çeşidi: **cedelî-analitik**; (T) cedelî.
+- Mevzuya bağı: **Fasıl I §6.2**: **Râzî tevhid kat'iyetini terkîb burhanına bırakmıyor**; sıradaki: **temânu'**.
+- Doğan sual: Fasıl I'de filozof burhanları kullanılıyorsa (T) **'burhânî' etiketi 'cedelî-şüpheli' olarak indirilmeli mi?** (padişah kararı).
+
+## c2 p133
+- OCR: orta (başlık kötü)
+- Okuma: tam
+- İçerik: **Kısım 2, Fasıl 2 (dipnot: nüshada 'Fasıl 19'): 'Vâhid ilâhın tevhidine dair delil-i temânu'' (mutual hindrance)**. 'Çeşitli deliller zikrettiler; **en kavîsi temânu' delili**': 'İki ilâh, **tüm mümkinâta kâdir** farz edilsin; biri cismi **hareketlendirmek**, öteki **sükûnetlendirmek** istese: ya ikisi de hâsıl (⇒ cisim aynı anda hem hareketli hem sâkin: muhâl), ya biri diğerinden hâsıl (⇒ **tercih bilâ müreccih**; ve öbürü **âciz**), ya **hiçbiri** (⇒ iki ilâhın ikisi de âciz; cisim hareket-sükûndan hâlî: muhâl).' Râzî **istikssâ**: 'hiçbiri hâsıl olmazsa **her birinin murâdının önündeki mâni öteki'nin murâdının hâsıl olması**; ikisi de imkânsızsa ikisi birlikte hâsıl olmalı (mâni yoksa) ⇒ **kendi nefyi ile sübûtu** ⇒ bâtıl.' 'Arazların bâkî olmadığı ispatlanırsa başka delil: her ikisi de murâdını hâsıl edemezse **cisim hareket-sükûndan hâlî kalır: muhâl**; **arazlar bâkî ise mahzûr yok**: ikisi birbirini ref etmez, cisim **önceki halinde** kalır.'
+- Netice/hüküm: **Temânu' delili, öncülleri (mürîd ihtilâfının mümkinliği, arazın bekâsı) ile Râzî'nin 5 sorusuna girecek.**
+- Delil çeşidi: **taksîm + reductio (kelâmî)**; (T) burhânî biçim; **öncül: iki ilâhın ihtilâfının mümkinliği + araz bekâsı (kelâm meselesi)**.
+- Mevzuya bağı: **Fasıl I §6.2 Vahdâniyet 'iki kâdir/tevârüd'** ile **aynı ilke**: Fasıl I'in delili **temânu'un bir biçimi**; **Râzî'nin 5 sorusu (p134–136) Fasıl I'e yönelir**: **cevapların hazırlanması borcu**.
+- Doğan sual: —
+
+## c2 p134
+- OCR: orta
+- Okuma: tam
+- İçerik: Temânu' devam: 'Arazlar bâkî değilse ikisinin de murâdı önlenmişse cisim hareket-sükûndan hâlî kalır (muhâl); arazlar bâkî ise mahzûr yok.' **'Biri hâsıl öbürü değil' muhâl, 2 vecih**: (1) her biri **sonsuz mümkine kâdir** ⇒ kudretçe **eşit** ⇒ birinin murâdının hâsıl olması **tercih bilâ müreccih**; (2) murâdı hâsıl olmayan **âciz**, âciz ilâh olamaz. **İtiraz (Râzî)**: 'Bu delil **birinin bir şey, öbürünün zıddını murâd etmesinin mümkinliğine** dayanır: bu mümkün mü? Delil: tek başına ilâh olsa hareketi murâd edebilir; öteki tek başına sükûnu; **birlikte olunca ikisi tek başına hâlde mi kalır, kalmaz mı?** Kalırsa ihtilâf mümkin (istenen). **Kalmıyorsa** bâtıl: (1) kudret ve ilâhlıkta eşitlerken birinin irâdeden kaçınması öbürünün kaçınmasından evlâ değil ⇒ **ikisi de birbiriyle def olur** ⇒ ikisi de def olursa yine **birbirini mâni** (öncelikle söylenen).'
+- Netice/hüküm: Temânu'nun **'ihtilâf mümkin' öncülü** Râzî'nin sorusunda.
+- Delil çeşidi: **analitik (temânu' formu)**; (T) burhânî biçim; öncül sorgulanıyor.
+- Mevzuya bağı: bkz p133.
+- Doğan sual: —
+
+## c2 p135
+- OCR: orta
+- Okuma: tam
+- İçerik: Temânu' 'ihtilâf mümkin' delilinin devamı (**'birlikteyken tek başınaki hâlde kalmak' varsayımı**): (2) 'her birinin belirli fiile irâdesinin taalluku **mümkin hüküm**; ezelî; ezelî zâil olamaz ⇒ irâdeler bâtıl olmamalı'; (3) 'ikisi zıt murâd edip **ikisi de aciz kalsa, bu aciz olan daha kuvvetli** olurdu' (saçma). **Râzî'nin itirazı 1**: 'Bu kelâm **"tek başına sahih olan hüküm birlikte de sahih kalır"** öncülüne dayanır; **bâtıl**: bu tek başına murâdını hâsıl etmeye kâdir, öteki de; **birlikteyken o hâlde kalmazlar**; öyleyse **tek başına hüküm birlikte lâzım gelmez**.' **Soru 2**: 'İhtilâfın imkânını kabul etsek de **imtinâsını gösteren deliller** var: **(1)** her biri **bütün malûmâtı bilir**; vâkî olan **ya hareket ya sükûn** zarûrî; her ilâh **vâkî olanı bilir**; irâde **ilme uygun** olmalı (ilme muhâlif vukûu muhâl, muhâl irâde edilmez) ⇒ **irâdede ittifak zorunlu ⇒ ihtilâf imkânsız**.' (dipnot: iki nüsha farkı).
+- Netice/hüküm: Râzî **temânu'un 'ihtilâf mümkin' öncülüne karşı**: (a) tek başına sahih birlikte sahih kalmaz; (b) **ilim ve irâde uyumu ihtilâfı engeller** (Râzî'nin kendi çıkarımı: iki ilâhın aynı şeyi bilip aynı şeyi murâd etmesi zorunlu).
+- Delil çeşidi: **cedelî-analitik**; (T) analitik.
+- Mevzuya bağı: **Fasıl I §6.2 ve §8 (irade)**: 'iki ilâh ihtilâf edebilir' öncülü **kaldırılırsa temânu' delili çöker**; Fasıl I **bu öncülü açıkça yazmalı** ve (T) derecesini **bağımlı** bırakmalı.
+- Doğan sual: **Râzî temânu'a kendi kesin cevabını kendisi verecek mi?** (Hangi delili kat'î sayacak?)
+
+## c2 p136
+- OCR: orta
+- Okuma: tam
+- İçerik: **Soru 2 (2. ve 3. vecih)**: (2) 'Bir taraf **maslahatça evlâ** ise iki ilâh da bunu bilir ⇒ ikisi aynı tarafı irâde eder; **evlâ değilse** ikisi de **tesâvüyü** bilir; **rüchân olmadan fiil muhâl** ⇒ ikisi de tercihin muhâl olduğunu bilir ⇒ ihtilâfı irâde etmez ⇒ **hiçbir takdirde ihtilâf olamaz**.' (3) 'Muhâlefet edersem murâdımın icrâsı engellenir' bilmesi **muhâlefet irâdesini engeller**. **Soru 3**: 'Muhâlefetin cevâzı kabul; ama **söylenen muhâller muhâlefetin vukûundan lâzım gelir, imkânından değil**; imkânı gösterdiniz, **vukûunun delilini** göstermedikçe delil tamam değil.' **Soru 4**: 'Her birinin murâdını hâsıl etmekten **âciz kalması** niye olmasın? **Mâni öbürünün murâdı olsa** … **mâni yalnız bilmesi olabilir** ("muhâlefet edersem öbürü engeller"): o hâlde **muhâl lâzım gelmez**.' **Soru 5** başlar: 'biri hâsıl diğeri değil niye olmasın?…'
+- Netice/hüküm: **Temânu'un Râzî tarafından 5 soruyla (dördü bu sayfaya kadar) kuşatılması**: (1) tek başına→birlikte, (2) ilim-irâde uyumu, (3) imkân vs vukû', (4) mâni yalnız 'bilgi' olabilir.
+- Delil çeşidi: **cedelî-analitik**; (T) analitik.
+- Mevzuya bağı: **Fasıl I 'iki kâdir'**: 'imkân vs vukû'' ayrımı **klasik temânu' itirazı** (Sünnî kelâmda cevabı: 'ihtilâf ihtimâli' yeterli — **Râzî bunu kendi cevabıyla dengeleyecek**).
+- Doğan sual: Soru 5 ve Râzî'nin kendi son hükmü (p137+).

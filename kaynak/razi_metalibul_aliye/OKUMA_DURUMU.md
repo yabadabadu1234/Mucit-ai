@@ -2,12 +2,12 @@
 
 Bu dosya `araclar/durum.py` ile **okuma defterlerinden otomatik** üretilir; elle düzenlenmez.
 
-**Toplam:** 448 / 2720 sayfa okundu ve deftere yazıldı (16.5%).
+**Toplam:** 472 / 2720 sayfa okundu ve deftere yazıldı (17.4%).
 
 | Cilt | Sayfa | Okunan | % | OCR: iyi/orta/kötü | Okunan aralık (PDF sayfa indisi) | Okunmayan aralık |
 | :-- | --: | --: | --: | :-- | :-- | :-- |
 | 1 | 336 | 336 | 100 | 278/36/22 | 1–336 | — |
-| 2 | 152 | 112 | 74 | 1/101/7 | 1–112 | 113–152 |
+| 2 | 152 | 136 | 89 | 1/123/9 | 1–136 | 137–152 |
 | 3 | 363 | 0 | 0 | 0/0/0 | — | 1–363 |
 | 4 | 431 | 0 | 0 | 0/0/0 | — | 1–431 |
 | 5 | 189 | 0 | 0 | 0/0/0 | — | 1–189 |
