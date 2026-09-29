@@ -433,3 +433,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **cedelî cevaplar**; (T) cedelî. **[Delil ≠ dava: 2. cevap ('maslahat') Râzî'nin c3 p328'deki 'Allah'ın fiillerini maslahatla ta'lîl bâtıl' hükmüyle çelişir; 3. cevap (ilim) c3 p313–315 (Hişâm reddi) ve c3 p104–156 (ilim) ile bağlantılı; 5. cevap c4 p35–40'daki 'imkânın evveli var' aporisine bağlı; 6. cevap 'dönen soru bâtıl' formu (dâîsiz tercih meselesini örtmüyor).]**
 - Mevzuya bağı: **KRİTİK — Fasıl I §8**: **Risale için hazır 6 cevap listesi (kaynaklı, derece: cedelî)**; **2. cevap (maslahat) Risale'ye alınmaz (Râzî kendi c3'te reddetti)**; 4. cevap ('ezelin hudûsa mâni'liği muhâl bir cem'i önler) **Risale'de 'muhâl makdûr değil' ilkesiyle** yazılabilir.
 - Doğan sual: —
+
+## c4 p49
+- OCR: orta
+- Okuma: tam
+- İçerik: **7. cevap (hudûs tarafı; aktarım)**: '**'Niçin irâde o vakitte taalluk etti, ondan önceki vakitte etmedi?'** sorusu ancak **o vakitten önce başka vakit hâsıl olsaydı, onun önünde de başka vakit… evvelsiz** doğru olur; bu söz **zamanın kıdemini kabul etmeye bağlı**, bu da **nizâ mahallinin kendisi**; zamanın hâdis olduğuna inanan için **o ilk vakitten önce hiçbir vakit yoktur** ⇒ 'âlem hâdis olmadan önce niçin hâdis olmadı?' sorusu düşer.' **8. cevap**: 'irâdenin, âlemi bu vakitte ihdâsa taalluk salâhiyeti gibi **diğer vakitlerde ihdâsa taalluk salâhiyeti** de var; bir tarafın rüçhânı **müreccihin inzımâmına mevkuf** olsaydı **irâde müreccih hâsıl olunca o tealluk vâcib, yokken mümteni'** olurdu ⇒ **mûcib bi'z-zât ile fâil-i muhtâr arasında fark kalmaz**; bu **fark darûrî bilinir** ⇒ **kâdir-i muhtâr iki mümkin taraftan birini müreccihsiz tercih edebilir**.' **Misaller**: iki **eşit yolda** kalan yolcunun birini seçmesi; **iki eşit kadeh** arasında susuzun seçimi; aç birinin **iki ekmekten** birini alması (p50).
+- Netice/hüküm: **Hudûs tarafının 7.–8. cevabı: (7) 'zaman hâdis ise önceki vakit yok'; (8) 'kâdir-i muhtâr müreccihsiz tercih edebilir'.**
+- Delil çeşidi: **kavramsal cevap (zaman hâdis) + darûrî fark (mûcib ↔ muhtâr) + misal**; (T) cedelî-ikna'î. **[Delil ≠ dava: 7. cevap 'zaman hâdis'i baştan kabul ediyor (nizâ mahalli), yani dairesel olma riski taşır; 8. cevap 'müreccihsiz tercih' — Râzî'nin c3'te reddettiği 'dâîsiz rüçhân muhâl' öncülüne **zıt**: c3 p137–328.]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §8**: **8. cevap Fasıl I'in 'irâde tahsis eder' cümlesinin klasik gerekçesidir**; fakat **Râzî'nin kendi c3 çerçevesiyle (dâîsiz tercih muhâl) çelişir**: Fasıl I §8'in **hangi Râzî'ye dayandığı açıklanmalı** (bu aktarım mütekellim cevabıdır). 
+- Doğan sual: Râzî Kısım 2'de kendi tercihini bu dokuz cevaptan hangisine yaslıyor?
+
+## c4 p50
+- OCR: orta
+- Okuma: tam
+- İçerik: (8. cevap misalleri): susuzun iki eş kadehten, açın iki ekmekten birini seçmesi, insanın bir ekmeğin belirli bir kenarından kırmaya başlaması — 'bu üç sûreti bilen benzerlerini de bilir'. **9. cevap**: 'Allah âlemi **kudretini izhâr etmek ve onunla ilâhiyetine istidlâl edilmesi için** yarattı' — 'bu, Kur'ân'da zikredilen cevaptır': **65:12 'Allah yedi göğü ve yerden onların benzerini yarattı; emir aralarında iner; Allah'ın her şeye kâdir olduğunu ve ilmiyle her şeyi ihâta ettiğini bilesiniz diye'** ⇒ 'bunları ilâhiyetin ve kudretin kemâline istidlâl için yarattı'; **vaktin tayini lâzım değil**: yaratmaya dâî ihsan ve tefaddul; **muhsin ve mütefaddil vakit tayininde muhtâr**; 'zâid bir sebebe muhtaç değil'. 'Bu 9 vecih, mezkûr hüccete cevaplardır.' **2. makam: mu'ârazalar** (kıdem tarafının delilini hudûs tarafından bozma): 'hüccetin nihâyeti: âlemin belirli vakte ihtisası müreccihsiz rüçhân, bu **filozoflara da lâzım**'. (10 vecih p50–54'te.)
+- Netice/hüküm: 9. cevap: **gâye = kudret ve ilâhiyete istidlâl (65:12)**; mu'âraza başlangıcı.
+- Delil çeşidi: **nakl + dâî = ihsan**; (T) hitâbî-cedelî. **[Delil ≠ dava: 9. cevap 'ihsan ve tefaddul dâîsi' — Râzî c3 p328'de 'tefaddul dâîsi iki şahsa eşit ⇒ tahsis tamam olmaz' der; burada aktarıyor.]**
+- Mevzuya bağı: **Fasıl I §8**: 65:12 nassı Risale'de **hikmet ve halk gayesi olarak** kullanılır (⊬ numara); 9. cevabın 'tefaddul' dâîsi Râzî'nin c3 p327–328 eleştirisi ile **gerilim**; **Risale gayeyi nassla ('kudretini bilesiniz') verir, 'zorunluluk dâîsi' yazmaz**.
+- Doğan sual: —
+
+## c4 p51
+- OCR: orta
+- Okuma: tam
+- İçerik: **Mu'ârazalar (hudûs tarafından kıdem tarafına; 'müreccihsiz rüçhân filozofa da lâzım')**: **(1)** felek cirmi **basit** (kavme göre), bütün noktaları benzer; **iki belirli noktanın kutup olması** diğer noktalar üzerinde müreccihsiz rüçhân. **(2)** felekteki bütün farazî **medârlar eşit**; doğuya-batıya hareketle kabil olan **kuzey-güney hareketine de kabil**; **belirli bir medâr üzerinde hareket** müreccihsiz. **(3)** **kevkeb feleğin belirli bir yerine yerleşik**; felek parçaları benzer (basit) ⇒ kevkebin belirli tarafta olması müreccihsiz. **(4)** **hâric-i merkez feleğin mütemmimleri**: iki mütemmim (iç/dış), kalınlığı sonsuz farklı; mütemmim basit cisim, tabiatı tek; bir tarafta büyük kalınlık, diğerinde ince ⇒ müreccihsiz rüçhân. **(5)** felek benzer parçalı; tabiat **dışta bombeli yüzey, içte çukur yüzey** gerektirdi; bombeli-çukur birçok yönden farklı (…p52).
+- Netice/hüküm: **Hudûs tarafının mu'ârazası: felekteki tahsisler (kutup, medâr, kevkeb yeri, mütemmim, yüzey) de müreccihsiz; kıdem tarafı da 'müreccihsiz rüçhân muhâl' diyemez.**
+- Delil çeşidi: **ilzâm (kıdem tarafının kendi kozmolojisiyle)**; (T) cedelî. **[Delil ≠ dava: kadîm feleğin 'basit ve benzer parçalı' olması (Aristo–Batlamyus) kabul edilirse çalışır; modern astronomi bunu tartışır — Risale bu kadîm kozmolojiyi ana metne almaz.]**
+- Mevzuya bağı: **Fasıl I §8**: **bu ilzâm 'müreccihsiz tercih' meselesinde her iki tarafı eşitler**; **Risale'de 'irâde tahsis eder' cevabına destek olarak 'hiçbir cismânî tahsis müreccihsiz açıklanamaz' kutusu** (kaynak c4 p51–54, derece: ilzâm).
+- Doğan sual: —
+
+## c4 p52
+- OCR: kötü (satırlar bozuk)
+- Okuma: **kısmî (6. mu'âraza OCR'de bozuk; içerik kısmen okundu)**
+- İçerik: (5. mu'ârazanın devamı: bombeli yüzeyin dışta, çukurun içte olması ve farklılıkların **müreccihsiz**). **6. mu'âraza (bozuk; cümle parçaları)**: 'aynı tabiatta iki farklı yüzeyde **cüz'lerin birinin derinlikte, ötekinin yüzeyde olması müreccihsiz**'; **karşı itiraz (kıdem tarafı) cevabı**: 'cüz'ü lâ yetecezzâ meselesinde kat'î delillerle beyan ettik ki **kısmete kabil her şey, birbirinden fiilen ayrı cüzlerden mürekkeptir**; bu özür düşer.' **7. mu'âraza**: 'aklın bedîhesi **âlemin dışında sonsuz hayyizlerin** olduğuna hükmeder: **kuzey kutbuna karşı taraf güney kutbuna karşı taraftan farklıdır**; **bu itiraz 'bu fıtrat-ı vehmiyyenin hükmü, fıtrat-ı akliyyenin değil' denemez**, çünkü bu **sofestâîliği** gerektirir (p53).
+- Netice/hüküm: 6.–7. mu'âraza; 7'de **âlem dışı hayyiz** ve fıtrat-vehim ayrımı reddi.
+- Delil çeşidi: **ilzâm + fıtrat delili**; (T) cedelî. **OCR bozuk kısımlardan hüküm çıkarılmadı.**
+- Mevzuya bağı: **Fasıl I §3 (hayyiz-cihet)**: c2 hayyiz-cihet bâbı (p35–54) ile **doğrudan bağ**; 'âlem dışında hayyiz' **Râzî'nin kendi c2'deki hayyiz görüşüyle** (K1 F5 zan-ı kavî) **karşılaştırılacak**; **'fıtrat-vehim ayrımı sofestâîlik' argümanı** c2 p59, 70 (fıtrat) ile **bağ**.
+- Doğan sual: 6. mu'ârazanın tam metni (⊬ yeniden tarama).
+
+## c4 p53
+- OCR: orta
+- Okuma: tam
+- İçerik: (7. mu'âraza devam): 'sarîh fıtrattan cezmî hüküm bulursak **sıhhatine hükmetmemiz lâzım**; eğer 'bizde vehmî kuvvet var, hükmünü kabul etmek caiz değil; aklî kuvvet var, hükmünü kabul etmek lâzım; bu cezmî hüküm vehmin hükmüdür, aklın değil' desek, bu **bedîhî değil nazarîdir**; akıl hükmü ancak bu ayrımdan sonra kabul edilir, **bedîhîlerin sıhhati nazariyâtın sıhhatine mevkuf**; nazariyâtın sıhhati bedîhîlere mevkuf ⇒ **devir** ⇒ 'bu **sofestâîliği** gerektirir'; öyleyse **aslî fıtratın cezmettiği her şey hak ve sıdk**; aslî fıtrat 'kuzey kutbuna yakın taraf güneye yakın taraftan farklıdır' dedi ⇒ **âlem dışında sonsuz hayyizlerin sıhhati kat'î** ⇒ âlem küresinin **o boşluğun bir kısmında olması müreccihsiz**. **(8)** **nutfe** basit cisim mi? Basitse **musavvire kuvvet şuursuz ve idraksiz**; kalp sûretini bir cüzde, dimağ sûretini başka cüzde **müreccihsiz** hâsıl eder; basit değilse **mürekkeb**, basitlerin her biri bir uzuv doğurursa **küre** olmalı (şuursuz kuvvet basit maddede tek te'sîr); farklı şekiller olduğuna göre **müreccihsiz rüçhân**. **(9)** (p54'te).
+- Netice/hüküm: 7.–8. mu'âraza: âlem dışı hayyiz (fıtrat delili) ve nutfe (embriyoloji tabiî kuvvet).
+- Delil çeşidi: **ilzâm (devir taksîmi) + tabiî kuvvet analizi**; (T) cedelî. **Nutfe kısmı kadîm tıp/embriyoloji; Risale'ye alınmaz.**
+- Mevzuya bağı: **KRİTİK — c2 hayyiz-cihet bâbı**: 'fıtrat cihet/hayyiz ispat eder mi?' **c2 p59, 70 ayrımı (cihet ispat etmez, yönelim kaynaktan)** ile **bu satırdaki 'fıtrat cezmî hüküm sıhhatlidir'** arasında **gerilim** (c2'de Râzî fıtratın cihet ispat etmediğini savunuyordu; burada aktarılan mu'âraza fıtratı ispat sayıyor). **Kendi tenkidim**: bu, **hudûs tarafının kıdem tarafına ilzâmı**, Râzî'nin kendi hükmü değil; c2 uyarısı geçerli.
+- Doğan sual: —
+
+## c4 p54
+- OCR: orta
+- Okuma: tam
+- İçerik: **9. mu'âraza**: '**tam müessirin hâsılından eserin hâsılı lâzım olsaydı, o müessirin eserinden ayrılması imkânsız**; bu, **müessirin zâtı gereği mümkin olmasını** gerektirir (muhâl)'. **Şartiyyenin beyânı**: 'bu sûretler ve araz vücûdundan sonra **bâtıl olur**; öyleyse **lâzımların ademinden ma'lûm olan müessirlerin ademi** çıkar; lâzımın ademi melzûmun ademini gerektirir; bu müessirin zâtı ya **vâcib ya mümkin**: vâcib ise **bu sûretlerin bâtıl olmasıyla vâcibü'l-vücûd'un ademi lâzım** (muhâl, kabil-i adem vâcib olmaz); mümkin ise **onun ademi de kendi müessirinin ademiyle** olmalı, zincir **ilk illete** varır ⇒ **kendi zâtının ademi** (bâtıl)'. ⇒ **tam müessirin hâsılından eserin vücûbu lâzım değildir**. **İbn Sînâ (eş-Şeyhü'r-reîs) cevabı** (el-İşârât): 'ma'lûlün irtifâı illetin irtifâını **illet kılmaz**, fakat **illetin önce irtifâ ettiğini gösterir**; bu takdirde soru düşer.'
+- Netice/hüküm: 9. mu'âraza (hudûs tarafı): **'tam illet ⇒ ma'lûl vâcib' ilkesi, araz ve sûretlerin zevâli karşısında vâcibin ademine götürür**; İbn Sînâ cevabı aktarıldı.
+- Delil çeşidi: **reductio (zevâl ⇒ illetin zevâli ⇒ zincir)**; (T) burhânî biçim; öncül: 'lâzımın ademi melzûmun ademini gerektirir'.
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §8**: 'tam illet ⇒ ma'lûl vâcib' ilkesi **kıdem tarafının temeli**; bu mu'âraza **ilkeyi zevâl gerçeğiyle sınıyor**; İbn Sînâ cevabı **kıdem tarafının savunması**; Risale'nin 'irâde tahsis' cevabı bu **mu'âraza ile desteklenebilir** (kaynaklı).
+- Doğan sual: İbn Sînâ'nın el-İşârât atfı (⊬).
+
+## c4 p55
+- OCR: orta
+- Okuma: tam
+- İçerik: **Ebü'l-Hüseyn el-Basrî de bu cevabı 'et-Tasaffuh' kitabında zikretti** (⊬). **Râzî (kendi sesiyle; dipnot 'mevlânâ radiyallâhu anh: ve ekûl'): 'Bana uzun zaman geçti; bu cevabın hak olduğunu sanıyordum. Sonra **onun zayıf olduğu ve sorunun baki kaldığı** bana belirdi.'** **Takrîri**: 'malûlün irtifâının illetin irtifâını gerektirmediğini, önce illetin irtifâını **gösterdiğini** kabul edelim; **bu sûretler ve arazlar vücûdlarından sonra ademe gider**, zevâlleri **illetlerinin de zâil olduğuna** delâlet etmeli; **illetlerin zevâli illetlerin illetlerinin zevâline**, aşağıdan yukarıya **ilk illetin zâtının zevâline veya onun illet olmasında muteber bir kaydın zevâline** varır; iki takdirde de **vâcibü'l-vücûd li-zâtihî fâni ve adem kabul eden** olur (muhâl) ⇒ **'bütün illiyet cihetlerini toplayan tam illetin vücûdundan malûlün onunla beraber vücûdu lâzım' iddiası bâtıl ⇒ mezkûr hüccetin aslı bâtıl.'** **10. mu'âraza (başlıyor)**: 'illetin devâmından malûlün devâmı lâzımsa **malûlün devâmından malûlün malûlünün devâmı** lâzım; …'
+- Netice/hüküm: **Râzî (kendi hükmü): 'tam illet ⇒ ma'lûl beraber vâcib' hükmü, zevâl gerçeği karşısında bâtıl; İbn Sînâ'nın cevabı zayıf.** [Bu, Râzî'nin kıdem delilinin temelini kendi sesiyle çürütmesi.]
+- Delil çeşidi: **reductio + kendi tenkidi (görüş değişikliği beyânı)**; (T) burhânî biçim (öncül: 'zevâl illetin zevâlini gösterir'). **F 27-B: bu argüman ayırt ediyor (kıdem tarafının temel ilkesini vuruyor).**
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §8**: **Râzî'nin bu satırı hudûs delilinin en güçlü Râzîce kolu**: 'tam illet ⇒ ma'lûl vâcib' ilkesi **evrensel değil**; Risale'nin irâde-tahsis cevabı **bu satıra dayanabilir (kaynaklı: c4 p54–55, Râzî'nin kendi sesi)**. **Ders katmanı**: **Râzî'nin 'uzun zaman doğru sandım, sonra zayıf gördüm' cümlesi bilimsel dürüstlüğün örneği**.
+- Doğan sual: —
+
+## c4 p56
+- OCR: orta
+- Okuma: tam
+- İçerik: (10. mu'âraza): 'illetin devâmından malûlün devâmı lâzım ise malûlün malûlünün devâmı… **ilk illetin devâmından bütün mevcûdâtın devâmı** ⇒ âlemde **hiçbir tagayyür hâsıl olmazdı**; bu bâtıl.' **Filozofların cevabı**: 'mebde' **ezelî-ebedî mevcut**; **her hâdisin ondan fayzanı, önceki hâdisin inkızâsına şartlı**; bu yüzden **her hâdis başka hâdisle mesbûk, evvelsiz**; hepsinin mûcidi kadîmdir.' **Delilleri**: hareketler **tabiî, kasrî ve irâdîdir**; şart tutuyor. **Tabiî**: taşın yukarıdan aşağı düşmesi: mûcib **taşın cevherindeki sıklet**; sıklet **bütün vakitlerde baki**; her cüz hareket için te'sîri **önceki cüzün inkızâsına şartlı** (belirli hadde ulaşmadıkça sıklet ondan diğer hadde intikali gerektirmez). **Kasrî**: insan taşı yukarı atınca içine kuvvet yerleştirir; tüm parçaları mûcibdir, fakat te'sîr **belirli parçaya ulaşmaya şartlı**. **İrâdî**: insan bir beldeye gidip…
+- Netice/hüküm: **Filozofların 'her hâdis başka hâdisle mesbûk; mebde' ezelî; şart: önceki hâdisin inkızâsı' cevabı** (aktarım).
+- Delil çeşidi: **şart-müessir ayrımı + hareket örnekleri**; (T) burhânî biçim (kıdem tarafı).
+- Mevzuya bağı: **Fasıl I §3**: 'hâdislerin sonsuz silsilesi ve ezelî mebde' **c2 p77–78 (Râzî'nin 'mecmû yok, her hâdis öncekine mesbûk' okuması)** ile **bağ**; kıdem tarafının **son cevabı**; c4 devamında hudûs tarafının cevabı aranacak.
+- Doğan sual: —
