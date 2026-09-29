@@ -416,13 +416,13 @@ Bu yüzden, üç kolun **toplamı** cedelî-yüksektir. Toplamın "burhânî" il
 
 | Örnek | Haber | Sıhhat | Adem-i vüsul | Hüküm |
 | :-- | :-- | :-- | :-- | :-- |
-| **Firavun'un bedeni** (Yûnus 10:92: "bugün seni bedeninle kurtaracağız ki arkandakilere ibret olasın") | Var | Mısır mumyaları müzelerde; Merneptah'ın mumyası 1898'de Loret tarafından KV35'te (II. Amenhotep mezarındaki mumya deposunda) bulundu (**yoklandı**); fakat "Musa'nın firavunu Merneptah'tır ve boğulmuştur" tezi Bucaille'e dayanır, Mısırbilimcilerde destek görmedi: mumyalamada zaten tuz (natron) kullanılır, cesetteki hasarı Ikram ve Dodson mezar soygununa bağlar (**yoklandı**, ikincil kaynak) | **Zayıf**: mumyalama bilgisi çağın bilgisiydi (Tevrat'ta da Yakûb ve Yûsuf'un mumyalanması anlatılır: Tekvîn 50:2-3; Yunan kaynaklarında da bilinirdi) | **Cedelî-zayıf**. Ayetin "bedenin korunması" olarak okunması da tek okuma değildir ("bedenen" = "cesediyle") |
-| **Bizans'ın yenilip yeniden galip gelmesi** (Rûm 30:2-4) | Var: yenilgi haberinin ardından "birkaç yıl içinde" galibiyet | Sâsânîlerin 614'te Kudüs'ü alması, Herakleios'un 622 seferi ve 627'deki zaferler **yoklandı**. Tabarî'nin, ayetin "yakın yer" ifadesini 614'teki Ezri'ât savaşı olarak anlattığı, bazı Müslüman kaynakların ise Kudüs'ün düşüşünü kastettiği bildirilir: **hangi olayın kastedildiği bile tartışmalıdır**. Ebû Bekir'in bu haber üzerine bahis tuttuğu rivayeti de anılır | **Orta**: çağın siyasî tahmini (Mekkeli tüccarların bilgisi) ile açıklanabilir; tahmin **riskli** ve zaman aralığı (bid' = 3-9) açıktır | **Cedelî** |
+| **Firavun'un bedeni** (Yûnus 10:92: "bugün seni bedeninle kurtaracağız ki arkandakilere ibret olasın") | Var | Mısır mumyaları müzelerde; Merneptah'ın mumyası 1898'de Loret tarafından KV35'te (II. Amenhotep mezarındaki mumya deposunda) bulundu (**yoklandı**); Egypt Museum sayfasına göre mumyanın cildinin alışılmadık parlaklığı **mumyalamada yoğun kullanılan tuzdan** gelir ve mezar soyguncuları mumyaya zarar vermiştir (**yoklandı**, [K9]). Bucaille'in 1976 tarihli kitabı, Ramses II mumyasının incelenmesinden doğmuştur (Vikipedi, **yoklandı**). "Merneptah boğuldu ve Mısırbilimciler bunu reddetti" iddiası ise arama özetlerinde geçti, okuyabildiğim sayfalarda **teyit edilemedi** (⊬) | **Zayıf**: mumyalama bilgisi çağın bilgisiydi (Tevrat'ta da Yakûb ve Yûsuf'un mumyalanması anlatılır: Tekvîn 50:2-3 [K12]; Yunan kaynaklarında da bilinirdi) | **Cedelî-zayıf**. Ayetin "bedenin korunması" olarak okunması da tek okuma değildir ("bedenen" = "cesediyle") |
+| **Bizans'ın yenilip yeniden galip gelmesi** (Rûm 30:2-4) | Var: yenilgi haberinin ardından "birkaç yıl içinde" galibiyet | Sâsânîlerin 614'te Kudüs'ü alması, Herakleios'un 622 seferi ve 627'deki zaferler **yoklandı** [K10]. Tabarî'nin, ayetin "yakın yer" ifadesini 614'teki Ezri'ât savaşı olarak anlattığı, bazı Müslüman kaynakların ise Kudüs'ün düşüşünü kastettiği bildirilir: **hangi olayın kastedildiği bile tartışmalıdır**. Ebû Bekir'in bu haber üzerine bahis tuttuğu rivayeti de anılır | **Orta**: çağın siyasî tahmini (Mekkeli tüccarların bilgisi) ile açıklanabilir; tahmin **riskli** ve zaman aralığı (bid' = 3-9) açıktır | **Cedelî** |
 | **"Gök ve yer ağlamadı"** (Duhân 44:29) — iddiaya göre Mısır yazıtlarında ölen kral için "gök ağlar, yer sarsılır" kalıbı geçerken Kur'ân bunu nefyeder | Ayette metin var | **Yoklandı, birincil metin bulundu** (aşağıda): Piramit Metinleri, Pepi I, Spell 526 (= Faulkner Utterance 553) | Hiyeroglifin çözümü 1822'ye kadar yapılamadı (genel bilgi); fakat ayet, **klasik tefsirde Mısır yazıtına bağlanmaz** ve Zemahşerî (Keşşâf) ifadeyi **Arapların kendi deyimi** olarak aktarır | **Dayanak değil**: metin gerçek, bağlantı yorumdur ve Arap deyimi karşı açıklamadır |
 
 **Hiyeroglif iddiası — derin yoklamanın sonucu (F 1-K):** İlk yoklamada iddiayı yalnız savunu siteleri anıyordu; bu yüzden delil dışı bırakılmıştı. İkinci, derin yoklamada **birincil metin bulundu**:
 
-- **Metin:** James P. Allen, *The Ancient Egyptian Pyramid Texts* (2005) çevirisinde, Pepi I'in mezar odasının girişindeki (vestibül) **Spell 526** (Sethe-Faulkner numarasıyla **PT 553**, Faulkner Utterance 553; eşleştirme Allen'ın konkordans tablosundan **doğrulandı**). Metin, ölen krala hitaben şöyle der: *"Gök senin için ağlayacak, yer senin için sarsılacak; Bağlayıcı çığlık atacak ve büyük bağlama direği haykıracak … sen gökyüzüne bir yıldız olarak, sabah tanrısı olarak çıkarken."* (Allen çevirisinden, Türkçeleştirilmiştir.) Başka bir yerde (Unas, Spell 151) ise düşman tanrıların, kralın **ölümü için ağlamadığı** yazılıdır ("Set ve Thoth … sizin için ağlamayan kardeşleriniz").
+- **Metin** [K1]: James P. Allen, *The Ancient Egyptian Pyramid Texts* (2005) çevirisinde, Pepi I'in mezar odasının girişindeki (vestibül) **Spell 526** (Sethe-Faulkner numarasıyla **PT 553**, Faulkner Utterance 553; eşleştirme Allen'ın konkordans tablosundan **doğrulandı**). Metin, ölen krala hitaben şöyle der: *"Gök senin için ağlayacak, yer senin için sarsılacak; Bağlayıcı çığlık atacak ve büyük bağlama direği haykıracak … sen gökyüzüne bir yıldız olarak, sabah tanrısı olarak çıkarken."* (Allen çevirisinden, Türkçeleştirilmiştir.) Başka bir yerde (Unas, Spell 151) [K2] ise düşman tanrıların, kralın **ölümü için ağlamadığı** yazılıdır ("Set ve Thoth … sizin için ağlamayan kardeşleriniz").
 - **Yani iddianın metin tabanı gerçektir:** Mısır'ın kral cenaze yazıtlarında "gök ağlar, yer sarsılır" ifadesi vardır ve hiyeroglif 7. asırda okunamıyordu (Champollion'un çözümü 1822).
 
 **Fakat bu, delilin işlemesi için yetmez; dört ayrı sebep var:**
@@ -430,9 +430,9 @@ Bu yüzden, üç kolun **toplamı** cedelî-yüksektir. Toplamın "burhânî" il
 | # | Zorluk | İzah |
 | :-- | :-- | :-- |
 | 1 | **Metnin türü** | Bu ifade bir **ağıt** değil, ölen kralın göğe **yükselişini** anlatan **ritüel bir vaattir**; gök ve yerin tepkisi kralın büyüklüğüne verilen kozmik bir karşılıktır. Kur'ân'ın "ağlamadı" demesi, "Mısırlılar böyle inanırdı, biz bunu nefyediyoruz" diye **açıkça** bir yazıta atıf yapmaz |
-| 2 | **Klasik tefsir bu ayeti başka türlü açıklar** | Tirmizî'nin rivayet ettiği hadiste (Câmi' 3255, Enes'ten) mü'minin gökte iki kapısı vardır (biri rızkının indiği, biri amellerinin çıktığı); ölünce o kapılar onu özler ve ağlar; ayet bunu anlatır. İbn Abbâs, İbn Kesîr ve Celâleyn de ayeti **mü'minin amelleri ve ibadet yerleriyle** açıklar, Firavun kavminin yerde ve gökte iyilik izi bırakmadığını söyler. Hiçbir klasik açıklama ayeti Mısır yazıtlarına bağlamaz. **Tabarî'nin metni okundu:** İbn Abbâs'ın "kapı" açıklamasını nakleder, Mücâhid'den "yer, mü'min için kırk sabah ağlar" rivayetini aktarır, bir görüşte "göğün ağlaması, kenarlarının kızarmasıdır" der (**yoklandı**, Arapça birincil metin) |
+| 2 | **Klasik tefsir bu ayeti başka türlü açıklar** | Tirmizî'nin rivayet ettiği hadiste (Câmi' 3255, Enes'ten) mü'minin gökte iki kapısı vardır (biri rızkının indiği, biri amellerinin çıktığı); ölünce o kapılar onu özler ve ağlar; ayet bunu anlatır. **Bu hadis zayıftır:** Tirmizî'nin kendisi hadisi "garîb" der ve ravîlerinden Mûsâ b. Ubeyde ile Yezîd er-Rakâşî'nin hadiste zayıf sayıldığını yazar; ekran görüntüsündeki sınıflama da "Zayıf"tır [K5]. İbn Abbâs'tan Saîd b. Cübeyr yoluyla gelen aynı mânâdaki açıklama ise İbn Kesîr'de görülür [K6]. İbn Abbâs, İbn Kesîr ve Celâleyn de ayeti **mü'minin amelleri ve ibadet yerleriyle** açıklar, Firavun kavminin yerde ve gökte iyilik izi bırakmadığını söyler. Hiçbir klasik açıklama ayeti Mısır yazıtlarına bağlamaz. **Tabarî'nin metni okundu [K4]:** İbn Abbâs'ın "kapı" açıklamasını nakleder, Mücâhid'den "yer, mü'min için kırk sabah ağlar" rivayetini aktarır, bir görüşte "göğün ağlaması, kenarlarının kızarmasıdır" der (**yoklandı**, Arapça birincil metin) |
 | 3 | **Ayetin muhatabı** | Ayet bir firavunun **ölüm formülünü** değil, Firavun'un **kavminin** (sürüklenen halkın) helâkini konu eder; Mısır'ın kral cenaze ritüeli ile birebir aynı konuyu işlediği **gösterilemez** |
-| 4 | **Adem-i vüsul şartı — belirleyici bulgu** | **Zemahşerî'nin *Keşşâf*'ının 44:29 açıklaması okundu (Arapça birincil metin):** "Önemli bir adam ölünce Araplar, ölümün büyüklüğünü anlatmak için *'ona gök ve yer ağladı'*, *'rüzgâr ağladı'*, *'güneş karardı'* derler"; ayetteki olumsuzlamayı da bu **Arap kullanımının tersine çevrilmesi**, yani alaycı bir küçümseme sayar. Zemahşerî 6./12. asır âlimidir ve bu kullanımı **Arap dilinden** aktarır; kendisi 7. asrın bağımsız şahidi değildir, ama iddia edilen "bu motife Arapların ulaşması imkânsızdı" hükmü, **Arap dilinin kendi deyimi olduğu aktarıldığı** için taşınamaz. (Cahiliye şiirinden bağımsız bir beyit ise **aramada bulunamadı**: ⊬; İbrânî metinlerdeki benzer motif [mesela Yeremya 4:28] kendi bilgimdir, okunmadı: ⊬) |
+| 4 | **Adem-i vüsul şartı — belirleyici bulgu** | **Zemahşerî'nin *Keşşâf*'ının 44:29 açıklaması okundu (Arapça birincil metin) [K3]:** "Önemli bir adam ölünce Araplar, ölümün büyüklüğünü anlatmak için *'ona gök ve yer ağladı'*, *'rüzgâr ağladı'*, *'güneş karardı'* derler"; ayetteki olumsuzlamayı da bu **Arap kullanımının tersine çevrilmesi**, yani alaycı bir küçümseme sayar. Zemahşerî 6./12. asır âlimidir ve bu kullanımı **Arap dilinden** aktarır; kendisi 7. asrın bağımsız şahidi değildir. Dikkat: *Keşşâf*'ın gösterdiği **beyitler** (Cerîr'in "gece yıldızları ve ay sana ağlıyor" mısraı ve Hâricîlerden bir mersiye) **İslâm sonrası** şairlere aittir; yani cahiliye şiiri **şâhidi değildir**, deyimin kadîm olduğu Zemahşerî'nin aktarımına dayanır (ekran görüntüsünde görülüyor). Yine de iddia edilen "bu motife Arapların ulaşması imkânsızdı" hükmü, **Arap dilinin kendi deyimi olduğu aktarıldığı** için taşınamaz. (Cahiliye şiirinden bağımsız bir beyit ise **aramada bulunamadı**: ⊬; İbrânî metinlerde aynı motif **vardır ve yoklandı**: Yeremya 4:28, "Bunun için yer yas tutacak, yukarıdaki gökler kararacak" [K11] — yani Mısır dışında, Arabistan'a Yahudi kabileler aracılığıyla ulaşabilecek bir kaynakta da yer-gök yası motifi bulunur) |
 
 **Dürüst netice:** Metin **gerçektir**; ayetin o metne bir **cevap** olduğu ise **yorumdur**, ne klasik tefsirin ne metnin kendisinin söylediği bir şeydir. Şart olan "adem-i vüsul" (Arabistan'ın bu motife başka yoldan ulaşamayacağı), Zemahşerî'nin aktardığı Arap deyimi karşısında **fiilen düşer**: ayetin ifadesi, Arapların kendi dilinde tanıdığı bir söyleyiş kalıbıdır ve klasik tefsir onu böyle anlar. Bu yüzden delil **cedelî-zayıfın da altındadır**; risale bunu **dayanak olarak koymaz**. Metin bulundu, fakat **bulunması iddiayı güçlendirmedi, ölçüyü belirledi**: bu tür bir delilin geçerli olması için karşıt açıklamanın (Arap deyimi) elenmesi gerekir ve o eleme yapılamamıştır. Bu risale bu iddiayı, savunanlara adil olmak için bilerek **ayrıntısıyla** kaydetti; hükmü, "delil olarak kullanılmaz"dır.
 
@@ -485,8 +485,8 @@ Bu bahiste **iki ayrı iddia** vardır ve **karıştırılmaz**:
 
 ### 10.1 (a) Sîret: Ne Nasıl Biliniyor?
 
-- **Bilinenlerin çekirdeği (tevatürle):** Nübüvvetten önce "el-Emîn" (güvenilir) diye anıldığı; Kâbe'nin yeniden inşasında Hacerü'l-Esved meselesinde hakemliği (İbn İshâk'ın Sîre'sinde: Velîd b. Muğîre'nin "kapıdan ilk giren kişiyi hakem alalım" teklifi, ilk girenin Muhammed olması ve kabilelerin "Bu el-Emîn, razıyız" demesi; Hacerü'l-Esved'i bir örtü üzerine koyup her kabile büyüğünün bir ucundan tutmasıyla çözüm — **ikincil kaynaklardan yoklandı**; senedin kendisi ve yaşı (25 mi 35 mi) ihtilaflıdır); Kur'ân'ın kendisinde onun ahlâkını öven ifade: "Sen elbette büyük bir ahlâk üzerindesin" (Kalem 68:4).
-- **Düşmanının şahadeti:** Herakleios ile Ebû Süfyân arasında geçen konuşma (**Buhârî, Bed'ü'l-Vahy, hadis 7**, İbn Abbâs'tan, Ebû Süfyân'ın anlatımıyla — **numara ve içerik yoklandı**): Ebû Süfyân o sırada **hâlâ müşrik** ve Muhammed'in düşmanıdır; ona "Bu iddiayı ortaya atmadan önce onu yalanla itham eder miydiniz?" sorulur ve "Hayır" der. **Bu, düşman ağzından bir şahadettir**; fakat bir **tek rivayet**tir, kendi sened derecesi âhâddır.
+- **Bilinenlerin çekirdeği (tevatürle):** Nübüvvetten önce "el-Emîn" (güvenilir) diye anıldığı; Kâbe'nin yeniden inşasında Hacerü'l-Esved meselesinde hakemliği (İbn İshâk'ın Sîre'sinden aktarılan anlatımda [K8]: Velîd b. Muğîre'nin (başka bir kaynakta Ömer b. Mahzûm'un) "kapıdan ilk giren kişiyi hakem alalım" teklifi, ilk girenin Muhammed olması ve kabilelerin "Bu el-Emîn, razıyız" demesi; Hacerü'l-Esved'i bir örtü üzerine koyup her kabile büyüğünün bir ucundan tutmasıyla çözüm — **ikincil kaynaklardan yoklandı**; senedin kendisi ve yaşı (25 mi 35 mi) ihtilaflıdır); Kur'ân'ın kendisinde onun ahlâkını öven ifade: "Sen elbette büyük bir ahlâk üzerindesin" (Kalem 68:4).
+- **Düşmanının şahadeti:** Herakleios ile Ebû Süfyân arasında geçen konuşma (**Buhârî, Bed'ü'l-Vahy, hadis 7**, İbn Abbâs'tan, Ebû Süfyân'ın anlatımıyla — **numara ve içerik yoklandı** [K7]): Ebû Süfyân o sırada **hâlâ müşrik** ve Muhammed'in düşmanıdır; ona "Bu iddiayı ortaya atmadan önce onu yalanla itham eder miydiniz?" sorulur ve "Hayır" der. **Bu, düşman ağzından bir şahadettir**; fakat bir **tek rivayet**tir, kendi sened derecesi âhâddır.
 
 ### 10.2 (b) "En Güzel" Hükmü: Neden Cedelî?
 
@@ -583,6 +583,124 @@ Kur'ân der: "elden geçince bir kısmı değiştirildi"          ⟹  MEVCUT me
 | :-- | :-- |
 | Kur'ân ilâhi ise önceki vahiylerin aslı haktır | şartlı burhânî (öncül: Kur'ân ilâhîdir, §7) |
 | Mevcut metinlerin her satırının vahiy olup olmadığı | cedelî — tek tek sınanır |
+
+## Kaynaklar ve Ekran Görüntüleri
+
+Bu fasılda dayanılan kaynaklar aşağıdadır. Köşeli **[K#]** işaretleri metindeki yerleri gösterir. Her kaynak için **bağlantı** ve bağlantı ileride kırılırsa diye **ekran görüntüsü** verilmiştir. Ekran görüntüleri 29 Eylül 2026'da alındı; ilgili cümle sarı ile işaretlidir.
+
+### [K1] Piramit Metinleri (Allen çevirisi) — Pepi I, Spell 526
+
+- **Bağlantı:** <https://archive.org/stream/the-ancient-egyptian-pyramid-texts_202103/The%20Ancient%20Egyptian%20Pyramid%20Texts_djvu.txt> (erişim: 29 Eylül 2026)
+- **Ne gösteriyor:** "Gök senin için ağlayacak, yer sarsılacak" cümlesi; ölen krala hitap eden ritüel metin (PT 553 = Faulkner Utterance 553; eşleştirme Allen'ın konkordans tablosundan).
+
+![Piramit Metinleri (Allen çevirisi) — Pepi I, Spell 526 — ekran görüntüsü](img/pt_pepi526.png)
+
+*Ekran görüntüsü: Piramit Metinleri (Allen çevirisi) — Pepi I, Spell 526. Bağlantı kırılırsa kanıt olarak bu görüntü kalır; kaynağın en mühim kısmı sarı ile işaretlidir.*
+
+### [K2] Piramit Metinleri (Allen çevirisi) — Unas, Spell 151
+
+- **Bağlantı:** <https://archive.org/stream/the-ancient-egyptian-pyramid-texts_202103/The%20Ancient%20Egyptian%20Pyramid%20Texts_djvu.txt> (erişim: 29 Eylül 2026)
+- **Ne gösteriyor:** Düşman tanrıların kral için "ağlamadığı" ifadesi; yani aynı yazıt geleneğinde ağlama-ağlamama motifi iki yönlü geçer.
+
+![Piramit Metinleri (Allen çevirisi) — Unas, Spell 151 — ekran görüntüsü](img/pt_unas151.png)
+
+*Ekran görüntüsü: Piramit Metinleri (Allen çevirisi) — Unas, Spell 151. Bağlantı kırılırsa kanıt olarak bu görüntü kalır; kaynağın en mühim kısmı sarı ile işaretlidir.*
+
+### [K3] Zemahşerî, el-Keşşâf — Duhân 44:29
+
+- **Bağlantı:** <https://quran-tafsir.net/zamakhshary/sura44-aya29.html> (erişim: 29 Eylül 2026)
+- **Ne gösteriyor:** "Önemli bir adam ölünce Araplar 'ona gök ve yer ağladı, rüzgâr ağladı, güneş karardı' derler" cümlesi; ayetteki olumsuzlamanın bu deyimin tersi olarak alaycı okunması; şâhit olarak Cerîr'in ve bir Hâricî mersiyesinin beyitleri (ikisi de İslâm sonrası şairler).
+
+![Zemahşerî, el-Keşşâf — Duhân 44:29 — ekran görüntüsü](img/kashshaf_duhan29.png)
+
+*Ekran görüntüsü: Zemahşerî, el-Keşşâf — Duhân 44:29. Bağlantı kırılırsa kanıt olarak bu görüntü kalır; kaynağın en mühim kısmı sarı ile işaretlidir.*
+
+### [K4] Tabarî, Câmiu'l-beyân — Duhân 44:29
+
+- **Bağlantı:** <https://www.islamweb.net/ar/library/content/50/4461/%D8%A7%D9%84%D9%82%D9%88%D9%84-%D9%81%D9%8A-%D8%AA%D8%A3%D9%88%D9%8A%D9%84-%D9%82%D9%88%D9%84%D9%87-%D8%AA%D8%B9%D8%A7%D9%84%D9%89-%D9%81%D9%85%D8%A7-%D8%A8%D9%83%D8%AA-%D8%B9%D9%84%D9%8A%D9%87%D9%85-%D8%A7%D9%84%D8%B3%D9%85%D8%A7%D8%A1-%D9%88%D8%A7%D9%84%D8%A3%D8%B1%D8%B6-%D9%88%D9%85%D8%A7-%D9%83%D8%A7%D9%86%D9%88%D8%A7-%D9%85%D9%86%D8%B8%D8%B1%D9%8A%D9%86-> (erişim: 29 Eylül 2026)
+- **Ne gösteriyor:** "Göğün ağlaması, kenarlarının kızarmasıdır" görüşü; İbn Abbâs'ın "kapı" açıklaması; "yer mü'min için kırk sabah ağlar" rivayeti.
+
+![Tabarî, Câmiu'l-beyân — Duhân 44:29 — ekran görüntüsü](img/tabari_duhan29.png)
+
+*Ekran görüntüsü: Tabarî, Câmiu'l-beyân — Duhân 44:29. Bağlantı kırılırsa kanıt olarak bu görüntü kalır; kaynağın en mühim kısmı sarı ile işaretlidir.*
+
+### [K5] Tirmizî, Câmi' 3255 — sınıflama: zayıf
+
+- **Bağlantı:** <https://amrayn.com/tirmidhi:3255> (erişim: 29 Eylül 2026)
+- **Ne gösteriyor:** Enes'ten "mü'minin iki kapısı vardır… ölünce ağlarlar" hadisi ve Duhân 44:29 ile bağlantısı; Tirmizî'nin "garîb" hükmü ve iki ravinin zayıflığı; sınıflama: **Zayıf**.
+
+![Tirmizî, Câmi' 3255 — sınıflama: zayıf — ekran görüntüsü](img/tirmidhi_3255.png)
+
+*Ekran görüntüsü: Tirmizî, Câmi' 3255 — sınıflama: zayıf. Bağlantı kırılırsa kanıt olarak bu görüntü kalır; kaynağın en mühim kısmı sarı ile işaretlidir.*
+
+### [K6] İbn Kesîr, Tefsîr — Duhân 44:29
+
+- **Bağlantı:** <https://surahquran.com/tafsir-english-aya-29-sora-44.html> (erişim: 29 Eylül 2026)
+- **Ne gösteriyor:** İbn Abbâs'ın Saîd b. Cübeyr yoluyla nakledilen "gökte bir kapısı olmayan yoktur" açıklaması; Firavun kavminin yerde ve gökte iyilik izi bırakmadığı yorumu.
+
+![İbn Kesîr, Tefsîr — Duhân 44:29 — ekran görüntüsü](img/ibnkathir_duhan29.png)
+
+*Ekran görüntüsü: İbn Kesîr, Tefsîr — Duhân 44:29. Bağlantı kırılırsa kanıt olarak bu görüntü kalır; kaynağın en mühim kısmı sarı ile işaretlidir.*
+
+### [K7] Buhârî, Sahîh — Bed'ü'l-Vahy, hadis 7 (Herakleios ile Ebû Süfyân)
+
+- **Bağlantı:** <https://sunnah.com/bukhari/1/7> (erişim: 29 Eylül 2026)
+- **Ne gösteriyor:** Herakleios'un Ebû Süfyân'a "bu adama yakın olan kim?" diye sorduğu ve sorular sorduğu anlatım.
+
+![Buhârî, Sahîh — Bed'ü'l-Vahy, hadis 7 (Herakleios ile Ebû Süfyân) — ekran görüntüsü](img/bukhari_7.png)
+
+*Ekran görüntüsü: Buhârî, Sahîh — Bed'ü'l-Vahy, hadis 7 (Herakleios ile Ebû Süfyân). Bağlantı kırılırsa kanıt olarak bu görüntü kalır; kaynağın en mühim kısmı sarı ile işaretlidir.*
+
+### [K8] Kâbe'nin yeniden inşası ve hakemlik (İbn İshâk aktarımı)
+
+- **Bağlantı:** <https://islamonline.net/en/the-rebuilding-of-the-kabah/> (erişim: 29 Eylül 2026)
+- **Ne gösteriyor:** Velîd b. Muğîre'nin "kapıdan ilk giren hakem olsun" teklifi; giren kişinin Muhammed olması; "Bu güvenilirdir (el-Emîn), hükmünü kabul ederiz" sözü; örtü üzerinde çözüm.
+- **Not:** Başka bir çağdaş kaynak (Encyclopedia of Muhammad) teklifi Ömer b. Mahzûm'a atfeder: <https://www.muhammadencyclopedia.com/article/reconstruction-of-the-kabah-by-the-quraysh> — anlatımlar arasında ayrıntı farkı vardır; senedler bu çalışmada okunmadı.
+
+![Kâbe'nin yeniden inşası ve hakemlik (İbn İshâk aktarımı) — ekran görüntüsü](img/kaaba_islamonline.png)
+
+*Ekran görüntüsü: Kâbe'nin yeniden inşası ve hakemlik (İbn İshâk aktarımı). Bağlantı kırılırsa kanıt olarak bu görüntü kalır; kaynağın en mühim kısmı sarı ile işaretlidir.*
+
+### [K9] Merneptah'ın mumyası
+
+- **Bağlantı:** <https://egypt-museum.com/mummy-of-merneptah/> (erişim: 29 Eylül 2026)
+- **Ne gösteriyor:** Mumyanın 1898'de Victor Loret tarafından KV35'te bulunduğu; cildin parlaklığının mumyalamada yoğun kullanılan tuzdan geldiği; mezar soyguncularının verdiği zarar.
+
+![Merneptah'ın mumyası — ekran görüntüsü](img/merneptah_salt.png)
+
+*Ekran görüntüsü: Merneptah'ın mumyası. Bağlantı kırılırsa kanıt olarak bu görüntü kalır; kaynağın en mühim kısmı sarı ile işaretlidir.*
+
+### [K10] Rûm sûresi — Sâsânîlerin 614'te Kudüs'ü alması
+
+- **Bağlantı:** <https://en.wikipedia.org/wiki/Ar-Rum> (erişim: 29 Eylül 2026)
+- **Ne gösteriyor:** Sûrenin 602-628 Bizans–Sâsânî savaşına ve 614'teki Kudüs fethine atıf yaptığı.
+
+![Rûm sûresi — Sâsânîlerin 614'te Kudüs'ü alması — ekran görüntüsü](img/rum_wiki.png)
+
+*Ekran görüntüsü: Rûm sûresi — Sâsânîlerin 614'te Kudüs'ü alması. Bağlantı kırılırsa kanıt olarak bu görüntü kalır; kaynağın en mühim kısmı sarı ile işaretlidir.*
+
+### [K11] Yeremya 4:28 — yerin yas tutması, göklerin kararması
+
+- **Bağlantı:** <https://www.biblegateway.com/passage/?search=Jeremiah+4%3A28&version=NRSV> (erişim: 29 Eylül 2026)
+- **Ne gösteriyor:** "Bunun için yer yas tutacak, yukarıdaki gökler kararacak" (NRSVUE).
+
+![Yeremya 4:28 — yerin yas tutması, göklerin kararması — ekran görüntüsü](img/bible_jer4_28.png)
+
+*Ekran görüntüsü: Yeremya 4:28 — yerin yas tutması, göklerin kararması. Bağlantı kırılırsa kanıt olarak bu görüntü kalır; kaynağın en mühim kısmı sarı ile işaretlidir.*
+
+### [K12] Yaratılış 50:2-3 — Yûsuf'un babasını mumyalatması
+
+- **Bağlantı:** <https://www.biblegateway.com/passage/?search=Genesis+50%3A2-3&version=NRSV> (erişim: 29 Eylül 2026)
+- **Ne gösteriyor:** Mumyalamanın İsrâiloğulları geleneğinde de bilindiği (Yûnus 10:92'deki "beden" delilinde adem-i vüsul şartını zayıflatan bilgi).
+
+![Yaratılış 50:2-3 — Yûsuf'un babasını mumyalatması — ekran görüntüsü](img/bible_gen50_2.png)
+
+*Ekran görüntüsü: Yaratılış 50:2-3 — Yûsuf'un babasını mumyalatması. Bağlantı kırılırsa kanıt olarak bu görüntü kalır; kaynağın en mühim kısmı sarı ile işaretlidir.*
+
+### Kur'ân ayetleri
+
+Kur'ân ayetlerinin metni kaynağın kendisidir ve her mushafta bulunur; kolaylık için bağlantılar: [44:29](https://quran.com/44/29); [17:88](https://quran.com/17/88); [11:13](https://quran.com/11/13); [10:38](https://quran.com/10/38); [2:23](https://quran.com/2/23); [52:34](https://quran.com/52/34); [29:48](https://quran.com/29/48); [16:103](https://quran.com/16/103); [25:4](https://quran.com/25/4); [4:82](https://quran.com/4/82); [42:51](https://quran.com/42/51); [30:2](https://quran.com/30/2); [10:92](https://quran.com/10/92); [41:9](https://quran.com/41/9).
+
 
 ## Fasıl II — Delil-Kuvveti Tablosu
 

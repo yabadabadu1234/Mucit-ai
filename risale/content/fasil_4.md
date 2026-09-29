@@ -132,7 +132,7 @@ Sened tarafında, hadis âlimleri **beş şart** koştu (klasik tarif): (1) **it
 | **İ'tibâr / turuk karşılaştırması** | Aynı hadisin farklı yollardan gelen nüshaları karşılaştırılır; birinde fazlalık/eksiklik saptanır | Evet |
 | **İlel ilmi** | Görünüşte sağlam senedin içindeki gizli kusuru arar | Evet — ilel kitapları |
 | **Mevzû'ât kitapları** | Uydurma kabul edilen hadisleri topladı ve gerekçeleriyle yazdı | Evet — İbnü'l-Cevzî ve diğerleri |
-| **Sahîhayn'e itirazlar** | Sahîh sayılan iki büyük koleksiyona bile, sonraki âlimler **ilmî itirazlar** yöneltti (ör. Dârekutnî'nin *el-İlzâmât ve't-Tetebbu'* eseri: kaynaklara göre Buhârî'de 78, Müslim'de 100, ikisinde ortak 32, yani toplam 210; başka bir sayımda 217 rivayet üzerine **isnad ve metin** itirazı; tonu yapıcıdır, iki eserin genel sıhhatine değil, tek tek rivayetlerin **düzeltilmesine** yöneliktir — **yoklandı**, ikincil kaynak; makale: *Journal of Islamic Studies* 15/1) | Evet — bu, sistemin **kendini düzeltme** kabiliyetinin somut işaretidir |
+| **Sahîhayn'e itirazlar** | Sahîh sayılan iki büyük koleksiyona bile, sonraki âlimler **ilmî itirazlar** yöneltti (ör. Dârekutnî'nin iki eseri: *el-İlzâmât* [Vikipedi'ye göre 109 rivayet, senedi Sahîhayn şartlarını taşıdığı hâlde eserlere alınmamış] ve *Kitâbü't-Tetebbu'* [Vikipedi'ye göre 217 rivayet üzerine **isnad ve metin** itirazı; başka bir sayımda Buhârî'de 78, Müslim'de 100, ortak 32 = 210]; tonu yapıcıdır: Jonathan Brown'a atfen, bu iş eserlerin genel bütünlüğüne saldırı değil, **düzeltmedir** — **yoklandı** ikincil kaynakta [K7]; makale: *Journal of Islamic Studies* 15/1) | Evet — bu, sistemin **kendini düzeltme** kabiliyetinin somut işaretidir |
 
 **Bu araçların bir anlamı:** Hadis ilmi, **uydurmanın mümkün olduğunu bilerek** kurulmuştur; cerh-ta'dîl ve mevzû'ât kitapları, sistemin **hile ihtimalini kendi içinde ölçtüğünü** gösterir. "Hadis bilimi, uydurmayı hiç düşünmedi" iddiası tarihe aykırıdır.
 
@@ -141,7 +141,7 @@ Sened tarafında, hadis âlimleri **beş şart** koştu (klasik tarif): (1) **it
 Hadisin **yalnızca uzun sözlü aktarımla** saklandığı, **iki yüz yıl sonra** toplandığı itirazı sıkça yapılır. Bu iddianın **karşısında** şu bilgiler durur (literatürden, F 1-K: birincil metin bu çalışmada yeniden okunmadı, **nitelemeler literatürden**):
 
 - Erken dönemde yazılı hadis kayıtlarından söz edilir (ör. Abdullah b. Amr'ın "es-Sâdıka"sı; Hemmâm b. Münebbih'in sahîfesi — ikincisinin **el yazması neşredilmiştir**, sonradan **Müsned**'lerde de yer aldığı bildirilir). Bu, erken yazıya dair iddianın **dayanağıdır**, fakat **tek başına** "bütün hadisler erken yazıldı" demeye yetmez.
-- Modern araştırmacılardan **Harald Motzki** (Alman, gayri-Müslim), "isnad-cum-matn analizi" adlı yöntemle 'Abdürrezzâk es-San'ânî'nin **Musannef**'ini inceleyerek, birçok rivayetin **birinci hicrî asra** kadar geri gittiğini savundu ve Schacht'ın "senedler sonradan uyduruldu" tezini **kısmen çürüttüğünü** ileri sürdü. (**Yoklandı:** H. Motzki, "The Muṣannaf of ʿAbd al-Razzāq al-Ṣanʿānī as a Source of Authentic Aḥādīth of the First Century A.H.", *Journal of Near Eastern Studies* 50 (1991), s. 1-21; ve *The Origins of Islamic Jurisprudence: Meccan Fiqh before the Classical Schools*, Brill, Leiden 2002, çev. Marion H. Katz.) Motzki'nin sonuçları da **tartışmalıdır**; bu bir "kesin ispat" değil, **karşı-tezin ciddiyeti**dir.
+- Modern araştırmacılardan **Harald Motzki** (Alman, gayri-Müslim), "isnad-cum-matn analizi" adlı yöntemle 'Abdürrezzâk es-San'ânî'nin **Musannef**'ini inceleyerek, birçok rivayetin **birinci hicrî asra** kadar geri gittiğini savundu ve Schacht'ın "senedler sonradan uyduruldu" tezini **kısmen çürüttüğünü** ileri sürdü. (**Yoklandı** [K5] [K6]: H. Motzki, "The Muṣannaf of ʿAbd al-Razzāq al-Ṣanʿānī as a Source of Authentic Aḥādīth of the First Century A.H.", *Journal of Near Eastern Studies* 50 (1991), s. 1-21; ve *The Origins of Islamic Jurisprudence: Meccan Fiqh before the Classical Schools*, Brill, Leiden 2002, çev. Marion H. Katz.) Motzki'nin sonuçları da **tartışmalıdır**; bu bir "kesin ispat" değil, **karşı-tezin ciddiyeti**dir.
 - Muhammed Mustafa el-A'zamî (*Studies in Early Hadith Literature*) ve Fuat Sezgin (*GAS*) erken yazılı kaynakları savunan Müslüman/Türk akademisyenlerdir. Bunların çalışmaları da **tartışmalıdır**.
 
 **Dürüstlük kaydı:** Akademik literatür, hadislerin **erken tarihlenip tarihlenemeyeceği** hakkında **tek sesli değildir**. Bu risale "bütün hadisler sağlamdır" **demez**. Risale'nin iddiası daha dardır ve şöyledir: **hadis ilmi, kaynak tenkidi bakımından ciddî bir aygıta sahiptir; bu aygıt, itirazların ileri sürdüğünden daha sağlamdır; ama belirli her hadis ayrı ayrı sınanır.**
@@ -158,7 +158,7 @@ Bu iddia **bir karşılaştırmadır** ve karşılaştırma ancak **ölçüt** v
 | Zayıf rivayeti **elemek** | Kurumsal (tasnif, mevzû'ât) | Zayıf rivayet çoğu zaman derlenir ve **okuyucuya bırakılır** (bazı kronikçiler bunu **açıkça** yazar: "senedi verdim, hükmünü sana bıraktım") |
 | Tenkit **yazılı** ve **geniş** | Evet | Sınırlı |
 
-**Bir ek gözlem (klasik):** Hadis âlimleri, halâl-haram ve akîde konularında **çok sıkı**, fazîlet ve siyer konularında **daha gevşek** davrandığını nakleder (bu söz Ahmed b. Hanbel, Abdurrahmân b. Mehdî ve Abdullah b. Mübârek'e nispet edilir: "helâl-haram rivayet ederken sıkı davranırız, fazîlet ve benzerlerinde gevşek davranırız"; **ikincil kaynaklarda yoklandı** — Suyûtî'nin *Tedrîbü'r-râvî*'si ve İbn Adî'nin *el-Kâmil*'i kaynak gösterilir; birincil metinler okunmadı). Bu, siyer ve megâzî rivayetlerinin **aynı sıkılıkla süzülmediğini** gösterir; **bu yüzden "hadis, siyerden daha sağlam süzülmüştür" cümlesi kısmen doğrudur, ama "siyer güvenilmezdir" demek değildir.**
+**Bir ek gözlem (klasik):** Hadis âlimleri, halâl-haram ve akîde konularında **çok sıkı**, fazîlet ve siyer konularında **daha gevşek** davrandığını nakleder (bu söz Ahmed b. Hanbel, Abdurrahmân b. Mehdî ve Abdullah b. Mübârek'e nispet edilir: "helâl-haram rivayet ederken sıkı davranırız, fazîlet ve benzerlerinde gevşek davranırız"; **ikincil kaynaklarda yoklandı** [K11] — Suyûtî'nin *Tedrîbü'r-râvî*'si ve İbn Adî'nin *el-Kâmil*'i kaynak gösterilir; birincil metinler okunmadı). Bu, siyer ve megâzî rivayetlerinin **aynı sıkılıkla süzülmediğini** gösterir; **bu yüzden "hadis, siyerden daha sağlam süzülmüştür" cümlesi kısmen doğrudur, ama "siyer güvenilmezdir" demek değildir.**
 
 **Dürüst netice:** İddianın **araç kıyası** (yukarıdaki tablo) gözlemlenebilir bir farka dayanır. Fakat "daha sağlam" hükmü, **belirli bir hadisin doğru olduğunu** göstermez; sadece **aracın** daha gelişmiş olduğunu gösterir. Bu yüzden derece: **cedelî-yüksek**; "matematikî kesinlik" **denmez.**
 
@@ -275,9 +275,9 @@ Kibir, acelecilik, sahtekârlık, ferasetsizlik ve usulsüzlük: bunlar **ahlâk
 
 | Usul kusuru | Belgelenmiş örnek | Yoklama |
 | :-- | :-- | :-- |
-| **Tekrarlanamazlık (acelecilik/örneklem hatası)** | **Open Science Collaboration (2015)**: yüz psikoloji çalışması tekrarlandı; **orijinallerin %97'si** istatistiksel olarak anlamlı sonuç vermişken, **tekrarların %36'sı** anlamlı sonuç verdi; etki büyüklükleri ortalama yarıya indi | **Yoklandı** (Science, Ağustos 2015; yayın kaydı doğrulandı) |
-| **Sahtekârlık** | Piltdown adamı (1912'de sunuldu, 1953'te sahte olduğu ortaya çıktı: bir insan kafatasına orangutan çenesi eklenmişti; 2016 incelemesi failin Charles Dawson olduğunu ortaya koydu); Hwang Woo-suk'un klonlanmış insan embriyosundan kök hücre hattı türettiği iddiası: veriler uydurmaydı, *Science* makaleleri 2006'da geri çekildi | **Yoklandı** (Natural History Museum, Science, Nature haberleri) |
-| **Ferasetsizlik / erken hüküm** | Soğuk füzyon iddiası (1989, Fleischmann ve Pons): basın toplantısıyla duyuruldu; çok sayıda olumsuz tekrar, olumlu tekrarların geri çekilmesi ve deneysel hata kaynaklarının bulunması sonucu reddedildi | **Yoklandı** (ikincil kaynak) |
+| **Tekrarlanamazlık (acelecilik/örneklem hatası)** | **Open Science Collaboration (2015)**: yüz psikoloji çalışması tekrarlandı; **orijinallerin %97'si** istatistiksel olarak anlamlı sonuç vermişken, **tekrarların %36'sı** anlamlı sonuç verdi; etki büyüklükleri ortalama yarıya indi | **Yoklandı** (Science, Ağustos 2015; yayın kaydı doğrulandı) [K1] |
+| **Sahtekârlık** | Piltdown adamı (1912'de sunuldu, 1953'te sahte olduğu ortaya çıktı: bir insan kafatasına orangutan çenesi eklenmişti; 2016 incelemesi failin Charles Dawson olduğunu ortaya koydu); Hwang Woo-suk'un klonlanmış insan embriyosundan kök hücre hattı türettiği iddiası: veriler uydurmaydı, *Science* makaleleri 2006'da geri çekildi | **Yoklandı** (Natural History Museum, Science, Nature haberleri) [K2] [K3] |
+| **Ferasetsizlik / erken hüküm** | Soğuk füzyon iddiası (1989, Fleischmann ve Pons): basın toplantısıyla duyuruldu; çok sayıda olumsuz tekrar, olumlu tekrarların geri çekilmesi ve deneysel hata kaynaklarının bulunması sonucu reddedildi | **Yoklandı** (ikincil kaynak) [K4] |
 | **Dogmatik yorum** | "Bulunamadı" sonucunu "yoktur"a çevirmek (§6.2) | Mantıkî; metin üzerinden görülebilir |
 
 **Bu tablonun sınırı — adalet gereği:** Bu vakalar bilimin **kendi mekanizmasıyla** (tekrar, denetim, ifşa) **düzeltildi**; bu, **bilimin yöntemsel gücünün** de göstergesidir. Bu risale, bilimi bu vakalarla **çürütmüş sayılmaz**; söylediği daha dardır: **bilim insanının iddiası, bilim insanı olduğu için doğru değildir; iddia kendi delilleriyle sınanır.** Aynı ölçü, **bu risalenin kendi iddialarına** da uygulanır (bunun için her netice yanında derecesi yazılıdır).
@@ -430,7 +430,7 @@ Bu dört itiraz (cihad, kadın hukuku, kölelik, Hz. Âişe'nin nikâhı) tek sa
 | Sübût | Kur'ân: **kat'î** |
 | Delâlet | Tevbe 9:5 ("Haram aylar çıkınca müşrikleri bulduğunuz yerde öldürün") **tek başına** okununca sert görünür; fakat aynı sûrenin 9:1-4'ü bu hükmün **ahdi bozan** müşrikler hakkında olduğunu, 9:4'ü **ahdine sadık kalanları hariç** tuttuğunu, 9:6'sı **sığınanı güvenli yere ulaştırmayı** emreder. Yani delâlet **bağlama bağlıdır** (zannî kanat) |
 | Bağlam | Medine dönemi; Mekke müşrikleri **savaş açan** taraf; Bakara 2:190 "sizinle savaşanlarla savaşın, **aşırı gitmeyin**"; Hac 22:39 "**kendilerine savaş açılanlara** izin verildi"; Mümtehine 60:8 barış içindeki gayrimüslimlere iyilik ve adaleti yasaklamaz; Bakara 2:256 "dinde zorlama yoktur" |
-| İhtilaf | **Var.** (i) Bazı âlimler Tevbe 9:5'in barış ve müsâmaha âyetlerini **neshettiğini** (kaldırdığını) söyler; (ii) çağdaş ve klasik pek çok âlim **nesih olmadığını**, âyetlerin farklı **hâller** için olduğunu söyler; (iii) fıkıhta savaşın **illeti** (sebebi) hakkında iki çizgi nakledilir: bir çizgi "küfür", öteki "fiilî muharebe (saldırı)" der (Hanefî çizgide Serahsî'nin [ö. 483/1090] küfrün savaş sebebi **olmadığını**, küfrün kişi ile Yaratıcısı arasında bir mesele olduğunu söylediği aktarılır — **ikincil kaynakta yoklandı**, *el-Mebsût* birincil metni okunmadı; Şâfiî çizgide bunun daha geniş anlaşıldığı bildirilir, ayrıntısı yoklanmadı). Bu ihtilaf, **hükmün tek olmadığını** gösterir |
+| İhtilaf | **Var.** (i) Bazı âlimler Tevbe 9:5'in barış ve müsâmaha âyetlerini **neshettiğini** (kaldırdığını) söyler; (ii) çağdaş ve klasik pek çok âlim **nesih olmadığını**, âyetlerin farklı **hâller** için olduğunu söyler; (iii) fıkıhta savaşın **illeti** (sebebi) hakkında iki çizgi nakledilir: bir çizgi "küfür", öteki "fiilî muharebe (saldırı)" der (**Dürüst düzeltme:** Serahsî'nin *el-Mebsût*'undan ikincil bir makalede aktarılan cümle **irtidat** (dinden dönme) hakkındadır: "dinden dönmek en büyük suç olmakla birlikte, kul ile Yaratıcısı arasında bir meseledir ve cezası âhirete ertelenmiştir" — **yoklandı** (ikincil kaynak; cilt/sayfa verilmemiş) [K13]. Bunun **savaşın illeti** meselesine (küfür mü, harb mi) tatbik edildiği ve Hanefî–Şâfiî ayrımı olduğu iddiası ise arama özetlerinde dolaşıyor, fakat okuyabildiğim sayfalarda **teyit edilemedi**; bu yüzden bu ayrım burada **kesin bilgi olarak değil, ⊬ iddia olarak** kalır). Bu ihtilaf, **hükmün tek olmadığını** gösterir |
 | Değer itirazı | "Savaş asla doğru değildir" — bu bir **pasifizm** görüşüdür ve kendi savunucuları vardır; **meşru müdafaa savaşının** haklı olduğu, çoğu modern hukuk düzeninde de kabuldür (BM Şartı md. 51). Kalan mesele, **hangi savaşın meşru** olduğudur; İslâm hukukunda bu **bağlam ve ihtilaf** meselesidir |
 | Derece | Sübût burhânî-haber; hüküm **cedelî**; ihtilaf açık |
 
@@ -462,10 +462,10 @@ Bu dört itiraz (cihad, kadın hukuku, kölelik, Hz. Âişe'nin nikâhı) tek sa
 
 | Sual | Cevap |
 | :-- | :-- |
-| Sübût | **Kur'ân'da yok.** Rivayet Buhârî ve Müslim'dedir (altı yaşında akit, dokuz yaşında zifaf): **sened bakımından sahîh** sayılmıştır; kaynak zinciri **Hişâm b. Urve → babası Urve → Âişe**'dir. Hadis âlimleri, **Hişâm'ın Irak'a taşındıktan sonraki rivayetlerinde** zabıt tenkidi olduğunu kaydeder: **yoklandı** (ikincil kaynaklarda): İmam Mâlik, Hişâm'ın Iraklılar aracılığıyla nakledilen rivayetlerine itiraz eder; Ya'kūb b. Şeybe "sika, rivayetleri makbuldür, yalnız Irak'a gittikten sonra rivayet ettikleri hariç" der; Zehebî gibi âlimler ise Hişâm'ı bu itirazdan **savunur**. Bir Batılı araştırmacı (Little) ayrıca rivayetin Mâlik'in *Muvatta*'ında bulunmadığını, oysa Muvatta'nın Urve'den çok rivayet aldığını öne sürer; bu iddiaya karşı, rivayetin Hişâm dışında yollarla da geldiği savunulur — **iki taraf da birincil metinden okunmadı**. Bu tenkit, rivayeti **düşürmez**, **tartışmalı kılar** |
+| Sübût | **Kur'ân'da yok.** Rivayet Buhârî ve Müslim'dedir (altı yaşında akit, dokuz yaşında zifaf): **sened bakımından sahîh** sayılmıştır; kaynak zinciri **Hişâm b. Urve → babası Urve → Âişe**'dir. Hadis âlimleri, **Hişâm'ın Irak'a taşındıktan sonraki rivayetlerinde** zabıt tenkidi olduğunu kaydeder: **yoklandı** (ikincil kaynaklarda) [K8]: İmam Mâlik, Hişâm'ın Iraklılar aracılığıyla nakledilen rivayetlerine itiraz eder; Ya'kūb b. Şeybe "sika, rivayetleri makbuldür, yalnız Irak'a gittikten sonra rivayet ettikleri hariç" der; Zehebî gibi âlimler ise Hişâm'ı bu itirazdan **savunur**. Bir Batılı araştırmacı (Little) [K10] ayrıca rivayetin Mâlik'in *Muvatta*'ında bulunmadığını, oysa Muvatta'nın Urve'den çok rivayet aldığını öne sürer; bu iddiaya karşı, rivayetin Hişâm dışında yollarla da geldiği savunulur — **iki taraf da birincil metinden okunmadı**. Bu tenkit, rivayeti **düşürmez**, **tartışmalı kılar** |
 | Delâlet | Rivayet, **yaş sayısını** verir; hüküm koymaz. Yani bu bir **tarihî haberdir**, "dinî hüküm" değildir |
 | Bağlam | Dönemin hukukunda ve birçok toplumda (Avrupa dahil) erken yaşta nikâh yaygındı (genel tarih bilgisi ⊬ hedge). Bu bir **örf gözlemidir**, ahlâkî bir **aklama değildir** (§8: itirazı çürütmez, yalnız bağlamı verir) |
-| İhtilaf | **Var**: bazı modern araştırmacılar, kız kardeşi Esmâ'nın yaşına dayanarak Âişe'nin nikâh yaşının **daha yüksek** olduğunu ileri sürer. **Yoklanan hesap:** İbn Kesîr ve başkalarına göre Esmâ, Âişe'den on yaş büyüktü ve hicrî 73'te **100 yaşında** öldü; buna göre hicrette Âişe ≈ 17, zifafın anıldığı hicrî 2'de ≈ 18-19 yaşındadır. **Fakat** Zehebî *Siyer* 3/380'de Esmâ'nın vefatında **91-92 yaşında** olduğunu aktarır; bu sayıyla aynı hesap yapılırsa (benim hesabım) Âişe hicrî 2'de ≈ 10-11 çıkar. Yani **hesap, kullanılan yaş rivayetine göre 10-11 ile 18-19 arasında oynar**; bu ihtilafın kendisi, Esmâ'nın yaşının da rivayete dayandığını gösterir. Ana rivayeti savunanlar kendi delillerini sunar. **Bu risale, tarihî yaşın hangisi olduğuna hüküm vermez**; hükmün **iki yönden de** iman konusu olmadığını söyler |
+| İhtilaf | **Var**: bazı modern araştırmacılar, kız kardeşi Esmâ'nın yaşına dayanarak Âişe'nin nikâh yaşının **daha yüksek** olduğunu ileri sürer. **Yoklanan hesap** [K9]: İbn Kesîr ve başkalarına göre Esmâ, Âişe'den on yaş büyüktü ve hicrî 73'te **100 yaşında** öldü; buna göre hicrette Âişe ≈ 17, zifafın anıldığı hicrî 2'de ≈ 18-19 yaşındadır. **Fakat** Zehebî'ye nispetle ikincil kaynaklar **birbirini tutmuyor**: bir kaynak, Zehebî'nin *Siyer* 3/380'de Esmâ'nın vefatında **91-92 yaşında** olduğunu ve İbn Ebi'z-Zinâd'dan "Âişe'den on yaş büyüktü" rivayetini aktardığını yazar (bu sayıyla aynı hesap, benim hesabımla, Âişe hicrî 2'de ≈ 10-11 verir); Vikipedi ise aynı Zehebî'ye dayanarak "yaş farkı 13-19 yıl" der. **Zehebî'nin metni birincil olarak okunamadı**; bu yüzden hesap kesin değildir ve **10-11 ile 18-19 arasında oynar**. Bu ihtilafın kendisi, Esmâ'nın yaşının da rivayete dayandığını gösterir. Ana rivayeti savunanlar kendi delillerini sunar. **Bu risale, tarihî yaşın hangisi olduğuna hüküm vermez**; hükmün **iki yönden de** iman konusu olmadığını söyler |
 | Değer itirazı | Modern eşyanın bakışıyla **rahatsızlık** duyulması, **değer** meselesidir (§9) |
 | Derece | Sened sahih; **âhâd** rivayet (zann-ı gâlib; Fasıl I §13.3: akîdede delil olmaz); yaş tartışmalı; **cedelî** |
 
@@ -492,10 +492,141 @@ Tenakuz(p,q) ⟺ aynı-mevzû ∧ aynı-mahmûl ∧ aynı-zaman ∧ aynı-mekân
 | İddia edilen tenakuz | Hangi vahdet ayrı? | Cevap (özet) | Derece |
 | :-- | :-- | :-- | :-- |
 | "Gözler O'nu idrak edemez" (En'âm 6:103) — "Yüzler Rabbine bakar" (Kıyâme 75:22-23) | **zaman** (dünya/ahiret) ve **mefhum** (idrak etmek = kavrayıp kuşatmak, görmek = bakmak) | Klasik cevap: "idrâk" kuşatmadır; bakış ise kuşatmayı gerektirmez. Bu, Mu'tezile ile Ehl-i Sünnet arasında **ihtilaflı** bir meselenin de parçasıdır (Mu'tezile ahirette görmeyi reddeder) — çelişki iddiası **kavramsal ayrımla** kalkar, **ihtilaf** kalır | cedelî |
-| Yerin yaratılışı (Fussilet 41:9-12'de "iki gün + dört gün + iki gün" toplamı sekiz, Kur'ân'ın başka yerlerindeki "altı gün" ile çelişir mi?) | **nisbet** (dört gün, yerin yaratılışında **iki günü de içerir**) | İbn Kesîr'in tefsirinde yerin iki günde (pazar-pazartesi) yaratıldığı, 41:10'daki "dört gün"ün bu iki günü **içerdiği** (salı-çarşamba rızık ve dağların yerleştirilmesi), göğün de iki günde (perşembe-cuma) tamamlandığı ve toplamın altı gün ettiği aktarılır (**yoklandı**, ikincil aktarım); ayrıca "gün" (yevm) kelimesinin bu bağlamda 24 saatlik gün mü, safha mı olduğu **kendi başına tartışmalıdır** | cedelî |
+| Yerin yaratılışı (Fussilet 41:9-12'de "iki gün + dört gün + iki gün" toplamı sekiz, Kur'ân'ın başka yerlerindeki "altı gün" ile çelişir mi?) | **nisbet** (dört gün, yerin yaratılışında **iki günü de içerir**) | İbn Kesîr'in tefsirinde yerin iki günde (pazar-pazartesi) yaratıldığı, 41:10'daki "dört gün"ün bu iki günü **içerdiği** (salı-çarşamba rızık ve dağların yerleştirilmesi), göğün de iki günde (perşembe-cuma) tamamlandığı ve toplamın altı gün ettiği aktarılır (**yoklandı**, ikincil aktarım) [K12]; ayrıca "gün" (yevm) kelimesinin bu bağlamda 24 saatlik gün mü, safha mı olduğu **kendi başına tartışmalıdır** | cedelî |
 | "Güneş çamurlu bir pınarda batıyor" (Kehf 18:86) | **cihet** (kimin gözünden) | Âyet "**buldu**" (vecedehâ) der: Zülkarneyn'in **gördüğü/vardığı** yer bir anlatım içindedir; fiziksel bir **iddia** değil, **görüntünün** bildirimidir. Bu cevap **anlatının dili** kaidesine dayanır | cedelî |
 
 **Bu ölçünün sınırı:** Yukarıdaki cevaplar **bir çelişkinin bulunmadığını** gösterir, çelişkinin **hiçbir yerde bulunmadığını** göstermez. Bu risale **her iddia edilen tenakuzu** yazmaz; ölçü **verilir**, muarızın sunduğu her örnek **aynı ölçüyle** sınanır. Örnek ölçüyü **geçemezse** (yani bir vahdet ayrılığı gösterilemezse), **iddia doğrudur** ve Nisâ 4:82'nin çelişkisizlik iddiası o örnek için **çökmüş** olur. Bu, **yanlışlanabilir** bir iddiadır.
+
+## Kaynaklar ve Ekran Görüntüleri
+
+Köşeli **[K#]** işaretleri metindeki yerleri gösterir. Ekran görüntüleri 29 Eylül 2026'da alındı; ilgili cümle sarı ile işaretlidir; bağlantı kırılırsa kanıt olarak görüntü kalır. Bilimsel dergilerin bazıları otomatik erişimi engellediği için (CAPTCHA), o kaynaklar yalnız bağlantı olarak verilmiş, konu ikincil bir kaynağın ekran görüntüsüyle belgelenmiştir.
+
+### [K1] Tekrarlanabilirlik krizi — Open Science Collaboration (2015)
+
+- **Bağlantı:** <https://en.wikipedia.org/wiki/Replication_crisis> (erişim: 29 Eylül 2026)
+- **Ek bağlantı (ekran görüntüsü yok):** Birincil makale: <https://www.science.org/doi/10.1126/science.aac4716> (Science, 2015) ve <https://pubmed.ncbi.nlm.nih.gov/26315443/>
+- **Ne gösteriyor:** Yüz psikoloji çalışmasının tekrarı: anlamlı sonuçlu 97 orijinalin %36'sı tekrarlanabildi; etki büyüklükleri ortalama yarıya indi.
+
+![Tekrarlanabilirlik krizi — Open Science Collaboration (2015) — ekran görüntüsü](img/osc_replication_wiki.png)
+
+*Ekran görüntüsü: Tekrarlanabilirlik krizi — Open Science Collaboration (2015). Bağlantı kırılırsa kanıt olarak bu görüntü kalır; kaynağın en mühim kısmı sarı ile işaretlidir.*
+
+### [K2] Piltdown Adamı — Doğa Tarihi Müzesi
+
+- **Bağlantı:** <https://www.nhm.ac.uk/our-science/services/library/collections/piltdown-man.html> (erişim: 29 Eylül 2026)
+- **Ne gösteriyor:** 1949'daki florür testleri, 1953'te Weiner–Le Gros Clark–Oakley'nin insan kafatasına orangutan çenesi eklendiğini göstermesi; dişlerin törpülenip boyandığı.
+
+![Piltdown Adamı — Doğa Tarihi Müzesi — ekran görüntüsü](img/piltdown_nhm.png)
+
+*Ekran görüntüsü: Piltdown Adamı — Doğa Tarihi Müzesi. Bağlantı kırılırsa kanıt olarak bu görüntü kalır; kaynağın en mühim kısmı sarı ile işaretlidir.*
+
+### [K3] Hwang Woo-suk — NPR haberi (15 Aralık 2005)
+
+- **Bağlantı:** <https://www.npr.org/2005/12/15/5055385/groundbreaking-stem-cell-research-to-be-retracted> (erişim: 29 Eylül 2026)
+- **Ek bağlantı (ekran görüntüsü yok):** Dergi geri çekme notu: <https://www.science.org/doi/10.1126/science.1124926> (Science, 20 Ocak 2006)
+- **Ne gösteriyor:** Kök hücre çalışmasının geri çekileceği; kıdemli yazarın sonuçların bir kısmının uydurma olduğunu kabul etmesi.
+
+![Hwang Woo-suk — NPR haberi (15 Aralık 2005) — ekran görüntüsü](img/hwang_npr.png)
+
+*Ekran görüntüsü: Hwang Woo-suk — NPR haberi (15 Aralık 2005). Bağlantı kırılırsa kanıt olarak bu görüntü kalır; kaynağın en mühim kısmı sarı ile işaretlidir.*
+
+### [K4] Soğuk füzyon — Fleischmann ve Pons (1989)
+
+- **Bağlantı:** <https://en.wikipedia.org/wiki/Cold_fusion> (erişim: 29 Eylül 2026)
+- **Ne gösteriyor:** 1989 iddiasının medya çalkantısına yol açtığı, çoğunluğun aşırı ısıyı tekrarlayamadığı için iddiayı yanlış bulduğu.
+
+![Soğuk füzyon — Fleischmann ve Pons (1989) — ekran görüntüsü](img/coldfusion_wiki.png)
+
+*Ekran görüntüsü: Soğuk füzyon — Fleischmann ve Pons (1989). Bağlantı kırılırsa kanıt olarak bu görüntü kalır; kaynağın en mühim kısmı sarı ile işaretlidir.*
+
+### [K5] Harald Motzki — bibliyografya
+
+- **Bağlantı:** <https://en.wikipedia.org/wiki/Harald_Motzki> (erişim: 29 Eylül 2026)
+- **Ek bağlantı (ekran görüntüsü yok):** 1991 makalesi (JNES 50, s. 1-21): <https://www.taylorfrancis.com/chapters/edit/10.4324/9781315253695-15/musannaf-abd-al-razz%C4%81q-al-san-%C4%81n%C4%AB-source-authentic-ah%C4%81d%C4%ABth-first-century-harald-motzki>
+- **Ne gösteriyor:** *The Origins of Islamic Jurisprudence* (2002, Marion H. Katz ile) ve diğer eserlerin künyesi.
+
+![Harald Motzki — bibliyografya — ekran görüntüsü](img/motzki_wiki.png)
+
+*Ekran görüntüsü: Harald Motzki — bibliyografya. Bağlantı kırılırsa kanıt olarak bu görüntü kalır; kaynağın en mühim kısmı sarı ile işaretlidir.*
+
+### [K6] Musannef-i Abdürrezzâk — Motzki'nin 3.810 rivayetlik örneklemi
+
+- **Bağlantı:** <https://en.wikipedia.org/wiki/Musannaf_Abd_al-Razzaq> (erişim: 29 Eylül 2026)
+- **Ne gösteriyor:** Motzki'nin incelediği 3.810 rivayetlik örneklemin çoğunun üç hocadan (Ma'mer, İbn Cüreyc, Süfyân es-Sevrî) nakledilmiş olması; Musannef'in daha eski eserlerin derlemesi sayıldığı.
+
+![Musannef-i Abdürrezzâk — Motzki'nin 3.810 rivayetlik örneklemi — ekran görüntüsü](img/motzki_jnes1991.png)
+
+*Ekran görüntüsü: Musannef-i Abdürrezzâk — Motzki'nin 3.810 rivayetlik örneklemi. Bağlantı kırılırsa kanıt olarak bu görüntü kalır; kaynağın en mühim kısmı sarı ile işaretlidir.*
+
+### [K7] Dârekutnî — el-İlzâmât ve Kitâbü't-Tetebbu'
+
+- **Bağlantı:** <https://en.wikipedia.org/wiki/Al-Daraqutni> (erişim: 29 Eylül 2026)
+- **Ne gösteriyor:** el-İlzâmât'ın 109 rivayeti; Kitâbü't-Tetebbu''un 217 rivayeti; Jonathan Brown'a atfen, işin "iki eserin bütünlüğüne saldırı değil, düzeltme" olduğu.
+
+![Dârekutnî — el-İlzâmât ve Kitâbü't-Tetebbu' — ekran görüntüsü](img/daraqutni_ilzamat.png)
+
+*Ekran görüntüsü: Dârekutnî — el-İlzâmât ve Kitâbü't-Tetebbu'. Bağlantı kırılırsa kanıt olarak bu görüntü kalır; kaynağın en mühim kısmı sarı ile işaretlidir.*
+
+### [K8] Hişâm b. Urve
+
+- **Bağlantı:** <https://en.wikipedia.org/wiki/Hisham_ibn_Urwah> (erişim: 29 Eylül 2026)
+- **Ek bağlantı (ekran görüntüsü yok):** Karşı görüş (savunma): <https://yaqeeninstitute.org/read/paper/the-age-of-aisha-ra-rejecting-historical-revisionism-and-modernist-presumptions>
+- **Ne gösteriyor:** İmam Mâlik'in Hişâm'ın Irak'ta nakledilen rivayetlerine itirazı; Hişâm'ın Irak döneminde zayıfladığı iddiası ve Zehebî ile el-Alâî'nin savunması.
+
+![Hişâm b. Urve — ekran görüntüsü](img/hisham_urwa.png)
+
+*Ekran görüntüsü: Hişâm b. Urve. Bağlantı kırılırsa kanıt olarak bu görüntü kalır; kaynağın en mühim kısmı sarı ile işaretlidir.*
+
+### [K9] Esmâ bint Ebî Bekir — yaş farkı
+
+- **Bağlantı:** <https://en.wikipedia.org/wiki/Asma_bint_Abi_Bakr> (erişim: 29 Eylül 2026)
+- **Ne gösteriyor:** İbn Kesîr ve İbn Asâkir'in "Âişe'den on yaş büyük" rivayeti; aynı sayfada Zehebî'ye nispetle "fark 13-19 yıl" notu (ikincil kaynaklar tutmuyor).
+
+![Esmâ bint Ebî Bekir — yaş farkı — ekran görüntüsü](img/asma_age.png)
+
+*Ekran görüntüsü: Esmâ bint Ebî Bekir — yaş farkı. Bağlantı kırılırsa kanıt olarak bu görüntü kalır; kaynağın en mühim kısmı sarı ile işaretlidir.*
+
+### [K10] Little'ın Âişe rivayeti tezi — New Lines Magazine
+
+- **Bağlantı:** <https://newlinesmag.com/essays/oxford-study-sheds-light-on-muhammad-underage-wife-aisha/> (erişim: 29 Eylül 2026)
+- **Ne gösteriyor:** Evlilik yaşı hadisinin Mâlik'in *Muvatta*'ında bulunmadığı ve bunun "sükût delili" olarak kullanıldığı; bu, Fasıl IV §7.2'deki "sükût delili" eleştirisinin somut örneğidir.
+
+![Little'ın Âişe rivayeti tezi — New Lines Magazine — ekran görüntüsü](img/newlines_aisha.png)
+
+*Ekran görüntüsü: Little'ın Âişe rivayeti tezi — New Lines Magazine. Bağlantı kırılırsa kanıt olarak bu görüntü kalır; kaynağın en mühim kısmı sarı ile işaretlidir.*
+
+### [K11] "Helâl-haramda sıkı, fazîlette gevşek" — Ahmed, İbn Mehdî, İbn Mübârek
+
+- **Bağlantı:** <https://jamiat.org.za/weak-hadith-and-fadail-al-amal/> (erişim: 29 Eylül 2026)
+- **Ne gösteriyor:** Sözün üç âlime nispeti ve Suyûtî'nin *Tedrîbü'r-râvî*'sine atfı.
+
+!["Helâl-haramda sıkı, fazîlette gevşek" — Ahmed, İbn Mehdî, İbn Mübârek — ekran görüntüsü](img/ahmad_strictness.png)
+
+*Ekran görüntüsü: "Helâl-haramda sıkı, fazîlette gevşek" — Ahmed, İbn Mehdî, İbn Mübârek. Bağlantı kırılırsa kanıt olarak bu görüntü kalır; kaynağın en mühim kısmı sarı ile işaretlidir.*
+
+### [K12] İbn Kesîr — Fussilet 41:9-12
+
+- **Bağlantı:** <https://www.alim.org/quran/tafsir/ibn-kathir/surah/41/9/> (erişim: 29 Eylül 2026)
+- **Ne gösteriyor:** Yerin iki günde, "dört gün"ün (rızık ve dağlar) bu iki günü içerecek biçimde anlaşıldığı, göğün iki günde tamamlandığı açıklaması.
+
+![İbn Kesîr — Fussilet 41:9-12 — ekran görüntüsü](img/fussilat_tafsir.png)
+
+*Ekran görüntüsü: İbn Kesîr — Fussilet 41:9-12. Bağlantı kırılırsa kanıt olarak bu görüntü kalır; kaynağın en mühim kısmı sarı ile işaretlidir.*
+
+### [K13] Serahsî, el-Mebsût'tan aktarılan cümle (irtidat hakkında)
+
+- **Bağlantı:** <https://sabrangindia.in/article/apostasy-and-islam> (erişim: 29 Eylül 2026)
+- **Ne gösteriyor:** "Dinden dönmek en büyük suç olmakla birlikte kul ile Yaratıcısı arasında bir mesele olup cezası âhirete ertelenmiştir" cümlesi.
+- **Not:** Bu cümle irtidat hakkındadır; savaşın illeti (küfür/harb) meselesine tatbiki bu çalışmada teyit edilemedi.
+
+![Serahsî, el-Mebsût'tan aktarılan cümle (irtidat hakkında) — ekran görüntüsü](img/sabrangindia_sarakhsi.png)
+
+*Ekran görüntüsü: Serahsî, el-Mebsût'tan aktarılan cümle (irtidat hakkında). Bağlantı kırılırsa kanıt olarak bu görüntü kalır; kaynağın en mühim kısmı sarı ile işaretlidir.*
+
+### Kur'ân ayetleri
+
+Kur'ân ayetlerinin metni kaynağın kendisidir ve her mushafta bulunur; kolaylık için: [16:44](https://quran.com/16/44); [4:82](https://quran.com/4/82); [41:9](https://quran.com/41/9); [9:5](https://quran.com/9/5); [2:190](https://quran.com/2/190); [22:39](https://quran.com/22/39); [2:256](https://quran.com/2/256); [2:282](https://quran.com/2/282); [4:11](https://quran.com/4/11); [4:7](https://quran.com/4/7); [4:92](https://quran.com/4/92); [9:60](https://quran.com/9/60); [90:13](https://quran.com/90/13); [27:14](https://quran.com/27/14); [6:103](https://quran.com/6/103); [75:22](https://quran.com/75/22); [18:86](https://quran.com/18/86).
+
 
 ## Fasıl IV — Delil-Kuvveti Tablosu
 

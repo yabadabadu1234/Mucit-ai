@@ -93,3 +93,6 @@ Orta yol: Eş'arî.kesb | Mâturîdî.irade-i-cüz'iyye                         
 İlim-cebir itirazı: İlim ma'lûma tâbi ⟹ seçme bilginin İÇİNDE                        [cedelî-yüksek]
 İrade ≠ Rıza (şer: irade var, rıza yok)
 ```
+
+
+Kaynaklar (bağlantı + ekran görüntüsü): `risale/content/fasil_3.md` § "Kaynaklar ve Ekran Görüntüleri"; görüntüler `risale/content/img/`.

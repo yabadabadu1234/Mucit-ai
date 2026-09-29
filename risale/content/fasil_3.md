@@ -300,7 +300,7 @@ Belirli şerrin muhtemel hikmet çeşitleri (**hepsi cedelî**, hiçbiri burhân
 
 ### 7.3 Sonsuz Azap — Bir İhtilaf (Gizlenmez)
 
-"Sonlu bir ömürdeki suça sonsuz ceza adalet midir?" sualine klasik cevap: cezanın **ölçüsü**, işlenen fiilin **süresine** değil, **karşı çıkılan hakkın büyüklüğüne** ve failin **niyetine** bağlıdır (kâfirin niyetinin ebedî olduğu). Bu cevap **cedelîdir**, ve Ehl-i Sünnet içinde bile **ihtilaflıdır**: cumhur ehl-i kıbleden büyük günah sahiplerinin **ebedî** olmadığını söyler; kâfirlerin cezasının ebediliği cumhurun görüşüdür; cehennemin **fânî** olup olmayacağı konusu ayrıca tartışılmıştır: İbn Kayyım el-Cevziyye, üç görüşü sayar (cennet ve cehennem ikisi de fânî; ikisi de bâkî; cennet bâkî cehennem fânî) ve fânî olmasını destekleyen delilleri uzun uzun işler; **İbn Teymiyye'ye bu görüşün nispeti ise kendi içinde tartışmalıdır**: bir kısım âlim nispeti kabul eder, bir kısmı reddeder (İbn Teymiyye'nin "cennet ve cehennemin fenâsını söyleyenlere reddiye" adlı bir eseri de anılır; **ikincil kaynaklardan yoklandı**, birincil metinler okunmadı). Bu risale ihtilafı **kapatmaz**; yalnız "cumhur bunu böyle anlamıştır" der.
+"Sonlu bir ömürdeki suça sonsuz ceza adalet midir?" sualine klasik cevap: cezanın **ölçüsü**, işlenen fiilin **süresine** değil, **karşı çıkılan hakkın büyüklüğüne** ve failin **niyetine** bağlıdır (kâfirin niyetinin ebedî olduğu). Bu cevap **cedelîdir**, ve Ehl-i Sünnet içinde bile **ihtilaflıdır**: cumhur ehl-i kıbleden büyük günah sahiplerinin **ebedî** olmadığını söyler; kâfirlerin cezasının ebediliği cumhurun görüşüdür; cehennemin **fânî** olup olmayacağı konusu ayrıca tartışılmıştır: İbn Kayyım el-Cevziyye, üç görüşü sayar (cennet ve cehennem ikisi de fânî; ikisi de bâkî; cennet bâkî cehennem fânî) ve fânî olmasını destekleyen delilleri uzun uzun işler; **İbn Teymiyye'ye bu görüşün nispeti ise kendi içinde tartışmalıdır**: bir kısım âlim nispeti kabul eder, bir kısmı reddeder (İbn Teymiyye'nin "cennet ve cehennemin fenâsını söyleyenlere reddiye" adlı bir eseri de anılır; **ikincil kaynaklardan yoklandı**, birincil metinler okunmadı) [K1]. Bu risale ihtilafı **kapatmaz**; yalnız "cumhur bunu böyle anlamıştır" der.
 
 | Netice | (T) |
 | :-- | :-- |
@@ -454,6 +454,44 @@ Bu iki ekol, **aynı nass ve aynı mantık aletiyle**, asırlarca, **birbirinden
 | Cebr | şartlı burhânî (teklif kabulüne bağlı) |
 | Orta yolun mahiyeti (Eş'arî kesb / Mâturîdî cüz'î irade) | cedelî — kasten; ihtilaflı |
 | İlim-cebir itirazının cevabı | cedelî-yüksek |
+
+## Kaynaklar ve Ekran Görüntüleri
+
+Köşeli **[K#]** işaretleri metindeki yerleri gösterir. Ekran görüntüleri 29 Eylül 2026'da alındı; ilgili cümle sarı ile işaretlidir; bağlantı kırılırsa kanıt olarak görüntü kalır.
+
+### [K1] İbn Kayyım el-Cevziyye — cehennemin süresi üzerine literatür işareti
+
+- **Bağlantı:** <https://en.wikipedia.org/wiki/Ibn_Qayyim_al-Jawziyya> (erişim: 29 Eylül 2026)
+- **Ek bağlantı (ekran görüntüsü yok):** İbn Teymiyye'ye nispet tartışması: <https://www.academia.edu/36425100/Ibn_Taymiyyah_and_the_Perishability_of_the_Hellfire_Muhammad_ibn_Abdull%C4%81h_al_Samhar%C4%AB> (erişim engelli olabilir)
+- **Ne gösteriyor:** Vikipedi'nin "Dış bağlantılar" bölümünde *"Islamic Universalism: Ibn Qayyim al-Jawziyya's Salafi Deliberations on the Duration of Hellfire"* başlıklı bir akademik çalışmanın bulunduğu; yani konunun akademik literatürde işlendiği.
+- **Not:** Bu görüntü yalnızca literatürün **varlığını** gösterir; İbn Kayyım'ın üç görüşü sayması ve İbn Teymiyye'ye nispetin tartışmalı olması bilgisi arama özetlerinden gelir, birincil metinlerden doğrulanmadı.
+
+![İbn Kayyım el-Cevziyye — cehennemin süresi üzerine literatür işareti — ekran görüntüsü](img/ibnqayyim_wiki.png)
+
+*Ekran görüntüsü: İbn Kayyım el-Cevziyye — cehennemin süresi üzerine literatür işareti. Bağlantı kırılırsa kanıt olarak bu görüntü kalır; kaynağın en mühim kısmı sarı ile işaretlidir.*
+
+### [K2] Adamson & Benevich, "The Thought Experimental Method: Avicenna's Flying Man Argument" — Marmura'nın eleştirisi
+
+- **Bağlantı:** <https://epub.ub.uni-muenchen.de/66014/1/66014.pdf> (erişim: 29 Eylül 2026)
+- **Ne gösteriyor:** Marmura'nın Uçan Adam'a "hipotetikten kategorik hükme haksız bir sapma" eleştirisi.
+
+![Adamson & Benevich, "The Thought Experimental Method: Avicenna's Flying Man Argument" — Marmura'nın eleştirisi — ekran görüntüsü](img/adamson_marmura_swerve.png)
+
+*Ekran görüntüsü: Adamson & Benevich, "The Thought Experimental Method: Avicenna's Flying Man Argument" — Marmura'nın eleştirisi. Bağlantı kırılırsa kanıt olarak bu görüntü kalır; kaynağın en mühim kısmı sarı ile işaretlidir.*
+
+### [K3] Aynı makale — Marmura'ya göre Uçan Adam "kesin ispat değil"
+
+- **Bağlantı:** <https://epub.ub.uni-muenchen.de/66014/1/66014.pdf> (erişim: 29 Eylül 2026)
+- **Ne gösteriyor:** Marmura'dan dipnot: "kesin bir ispat olarak düşünülmemiş bir düşünce deneyi… öz-bilgimize uyandıracak".
+
+![Aynı makale — Marmura'ya göre Uçan Adam "kesin ispat değil" — ekran görüntüsü](img/adamson_marmura_tanbih.png)
+
+*Ekran görüntüsü: Aynı makale — Marmura'ya göre Uçan Adam "kesin ispat değil". Bağlantı kırılırsa kanıt olarak bu görüntü kalır; kaynağın en mühim kısmı sarı ile işaretlidir.*
+
+### Kur'ân ayetleri
+
+Kur'ân ayetlerinin metni kaynağın kendisidir ve her mushafta bulunur; kolaylık için: [17:85](https://quran.com/17/85); [30:27](https://quran.com/30/27); [36:79](https://quran.com/36/79); [75:4](https://quran.com/75/4); [4:40](https://quran.com/4/40); [55:15](https://quran.com/55/15); [18:50](https://quran.com/18/50); [6:112](https://quran.com/6/112).
+
 
 ## Fasıl III — Delil-Kuvveti Tablosu
 

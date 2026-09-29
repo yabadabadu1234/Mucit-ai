@@ -152,3 +152,6 @@ Kur'ân ilâhî ⟹ (musaddik) vahyin ASLI hak ∧ (tahrif) mevcut metnin her sa
 tahrif = { lafzî, mânevî }  — ihtilaflı, risale metin-tenkidine girmez
 ```
 [şartlı burhânî]
+
+
+Kaynaklar (bağlantı + ekran görüntüsü): `risale/content/fasil_2.md` § "Kaynaklar ve Ekran Görüntüleri"; görüntüler `risale/content/img/`.

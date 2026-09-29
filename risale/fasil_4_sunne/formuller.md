@@ -27,7 +27,7 @@ Denetim-araçları = { isnad, cerh-ta'dîl, turuk-i'tibâr, ilel, mevzû'ât, Sa
 Hadis-tenkidi ≻? Tarihî-nakil-tenkidi : araç-kıyası gözlenebilir ; "daha sağlam" ⟹ cedelî-yüksek ; ¬"belirli hadis doğrudur"
 Erken tarihleme: Motzki(isnad-cum-matn), A'zamî, Sezgin ⟷ Goldziher, Schacht   ⟹ akademik olarak AÇIK
 [F 1-K: Motzki — JNES 50 (1991) 1-21 ve Origins of Islamic Jurisprudence (Brill 2002) YOKLANDI ; Goldziher/Schacht nitelemeleri ikincil literatürden ; birincil metinler okunmadı]
-Dârekutnî el-İlzâmât ve't-Tetebbu': 78(Buhârî)+100(Müslim)+32(ortak)=210 ; başka sayımda 217 ; yapıcı ton [yoklandı]
+Dârekutnî: el-İlzâmât (109 rivayet) ∥ Kitâbü't-Tetebbu' (217; başka sayım 78+100+32=210) ; yapıcı ton [yoklandı]
 sıkılık-ilkesi (helâl-haram sıkı / fazîlet gevşek): Ahmed, İbn Mehdî, İbn Mübârek ; Suyûtî Tedrîb, İbn Adî el-Kâmil [ikincil yoklandı]
 ```
 
@@ -119,7 +119,10 @@ Kadın:   Bakara 2:282 gerekçe metinde ("biri şaşırırsa") ; Nisâ 4:11 her-
 Kölelik: kurum icat edilmedi ; kefarette azat ; zekâtta rikâb ; azat=iyilik ; tedrîc izahı ;
          "neden doğrudan yasaklamadı" ⟹ tam cevap YOK                                                    [cedelî-zayıf ; değer-itirazı AÇIK]
 Hz. Âişe: Kur'ân'da yok ; Buhârî-Müslim sahih-sened ; Hişâm b. Urve (Irak): Mâlik itirazı, Ya'kūb b. Şeybe, Zehebî savunusu [yoklandı] ;
-          Esmâ hesabı: 100 yaş(İbn Kesîr)⟹Âişe zifafta 18-19 ; 91-92 yaş(Zehebî Siyer 3/380)⟹10-11 [hesap benim] ;
+          Esmâ hesabı: 100 yaş(İbn Kesîr)⟹Âişe zifafta 18-19 ; 91-92 yaş(Zehebî'ye nispetle, bir ikincil kaynak)⟹10-11 [hesap benim] ; Vikipedi: Zehebî'ye göre fark 13-19 — ikincil kaynaklar TUTMUYOR, Zehebî birincil okunmadı ;
           tarihî haber ≠ hüküm ; âhâd ⟹ akîdede delil değil                                                [cedelî]
 Değer-itirazının temeli: Hüsn-kubuh ihtilafı (Mâturîdî zâtî ⟹ vicdan delil ; Eş'arî şer'î ⟹ vahiy ölçü)   [kapatılmadı]
 ```
+
+
+Kaynaklar (bağlantı + ekran görüntüsü): `risale/content/fasil_4.md` § "Kaynaklar ve Ekran Görüntüleri"; görüntüler `risale/content/img/`.
