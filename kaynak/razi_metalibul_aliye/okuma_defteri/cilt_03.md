@@ -1225,3 +1225,147 @@ Biçim: cilt 1–2 ile aynı.
 - Delil çeşidi: **reductio + analoji**; (T) analitik-cedelî.
 - Mevzuya bağı: —
 - Doğan sual: —
+
+## c3 p137
+- OCR: orta
+- Okuma: tam
+- İçerik: **İbn Sînâ Yol 3 özeti**: 'bu yolun tafsîlatı el-Mebde' ve'l-Meâd'da uzun; **bu delil bize 'evlâ ve ahlâk' bâbından alınmış görünüyor; ancak zayıf zan verir.**' 'İnsanların Allah'ın âlim olduğunu isbat için **anlattıkları başka yollar**: **(1)** Bârî **en kâmil mevcut**; ilim **kemâl sıfatı**, yokluğu noksan ⇒ ilimle mevsûf olmalı; bu yolla **tüm malûmâtı bildiği** de anlaşılır (cehilden tenzih). **(2)** 'Bizden biri âlim; bu ilim **Allah'tan hâdis** (vasıtalı ya vasıtasız); ma'lûle hâsıl **her kemâlin illete sübûtu evlâ** ⇒ Allah **tüm malûmâtı bilir**.' **Vallahu a'lem.**
+- Netice/hüküm: **Râzî İbn Sînâ Yol 3'ü zayıf zan sayıyor; iki basit kemâl delilini sıralıyor.**
+- Delil çeşidi: **kemâl delili + 'illette daha evlâ' ilkesi**; (T) ikna'î-analitik (**'kemâl ma'lûlde ise illette evlâ' = sadedeki ilkenin filozofça bilinen hâli**).
+- Mevzuya bağı: **KRİTİK — Fasıl I ilim sıfatı**: **Risale'nin ilim için kullanabileceği en yalın yol: kemâl delili (noksandan tenzih)**; Râzî **kendi tercihini p144'te de aynı yolla verecek** (bkz.). **Derece: ikna'î-analitik (kemâl ilkesi + 'illette evlâ')**.
+- Doğan sual: —
+
+## c3 p138
+- OCR: boş
+- Okuma: tam (içerik yok)
+- İçerik: Yok.
+- Netice/hüküm: Yok.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c3 p139
+- OCR: orta (başlık kötü)
+- Okuma: tam
+- İçerik: **Bâb 3, Fasıl 5: 'Allah'ın âlim olması üzerine fer'ler'**. **Mesele 1**: 'Allah **zâtını bilir mi**?' Bazıları: **bilmez**; delil: 'ilim, âlim ile malûm arasında **özel nisbet**; nisbet **ayrılığa şartlı**; bir şey **tek i'tibârla** kendine nisbet olamaz ⇒ **kendini bilemez**.' Karşı: (1) zâtı bilmenin **ayrılığı: âlim ≠ malûm mefhûmları**; (2) …' **Râzî'nin cevabı**: 'Bizim nefsimiz **basit mücerred değil**, terkîb cihetlerinden bir cihet taşır ⇒ nisbet ve izâfe **bir yönden** mümkin ⇒ nefsini bilir; **Allah'ın zâtı ise her terkîb cihetinden münezzeh, her yönden mücerred ⇒ nisbet ve izâfe onda muhâl ⇒ kendini bilmesi de muhâl** (p140'ta devam).
+- Netice/hüküm: **Hasım (nisbet-ayrılık) delili ve Râzî'nin ilk cevabı: Vâcib basit ⇒ nisbet imkânsız ⇒ kendini bilme (bu delille) imkânsız görünür.**
+- Delil çeşidi: **analitik**; (T) analitik-cedelî.
+- Mevzuya bağı: **KRİTİK — Allah'ın zâtını bilmesi (Sünnî akide: Allah kendini bilir)**: **Râzî'nin bu sayfadaki 'cevap'ı hasmın sesi mi kendi hükmü mü? Devamı p140'ta (Râzî 'Allah zâtını bilir' diyecek)**. **Dikkat**: **Allah'ın kendi zâtını bilmediği hükmü İslâm akidesine aykırıdır; bu, Râzî'nin hasmı aktarışıdır; Risale'ye alınmaz**.
+- Doğan sual: —
+
+## c3 p140
+- OCR: orta
+- Okuma: tam
+- İçerik: **Cevap (Râzî'nin nihâi)**: 'İlim özel nisbet; nisbet **ayrılığa şartlı**; ayrılık **âlim-malûm mefhûmları** arasında olsa **ayrılık, ilimden önce** olmalı; ilim o zâta önce hâsıl ⇒ **devir**' (hasmın delili). **Râzî: 'Allah'ın zâtını bilmesine iki vecih'**: (1) c3 p119–120'de anlatıldığı gibi: **mücerred, maddeden ganî cevher ⇒ zâtı zâtına hâzır ⇒ kendini bilir**; (2) 'bir şeyi bilen, ona âlim olduğunu bilebilir; bu, nefsini bilmeye şartlı'. **Hasmın şüphesine cevap**: 'Allah'ın zâtı **muayyen zât**; **mâhiyet + teayyün + mecmû** ayrımı ⇒ **ayrılık bu yönden hâsıl; nisbet ve izâfe için yeter.**' **Mesele 2**: 'Nefsini ta'akkul eden zât **âkil, aynı zamanda ma'kûl**; nefsini nefsine ta'akkulü **onun aynı mı?** **İbn Sînâ: Allah akıl, âkil, ma'kûl; üçü tek şey** (mücerred zât = akıl; ona mâhiyet hâsıl = ma'kûl; ona mâhiyet hâsıl = âkil).'
+- Netice/hüküm: **Râzî: Allah zâtını bilir (mücerred zât kendine hâzır; teayyün-mâhiyet ayrımı nisbete yeter).**
+- Delil çeşidi: **analitik**; (T) analitik-cedelî.
+- Mevzuya bağı: **Allah'ın kendini bilmesi**: Râzî **olumlu hükümde**; **Sünnî akideyle uyumlu**. **c3 p139 'bilmez' hükmü sadece hasım**.
+- Doğan sual: —
+
+## c3 p141
+- OCR: orta
+- Okuma: tam
+- İçerik: **İbn Sînâ'nın 'akıl-âkıl-ma'kûl tek' görüşüne Râzî'nin 3 itirazı**: (1) bu üç lafız **müteradif mi mütebâyin mi**? Müteradifse manevî fayda yok; mütebâyinse **selbî mi sübûtî mi**? Selbî bâtıl (idrâk selbî mefhûm değil, gösterildi); sübûtî ise **mütebâyin mefhûmlar, bu zâtın sıfatları** ⇒ 'üç lafız kesreti anlamda gerektirmez' sözü bâtıl; (2) idrâk **nisbî-izâfî ma'nâ ⇒ hakîkat-i mahsûsa olamaz**; (3) 'akıl olmak' ta'akkulün, 'ma'kûl olmak' âkil olmanın **fer'i**: üç mefhûm birbirinin fer'i ⇒ **tek olamaz**. **Mesele 3**: 'Mütekellimînin **tüm malûmâtı bildiği** delili': 'Allah **sonsuz malûmâtın her birini bilmeye sahih**; **âlim olmayı gerektiren zâtı**; sıhhat hepsinde, îcâb eden zât ⇒ tümünü bilir.' **Üç mukaddime**.
+- Netice/hüküm: **Râzî İbn Sînâ'nın 'akıl-âkil-ma'kûl aynı' iddiasını reddediyor; kelâmî 3 mukaddimeli delil tanıtılıyor.**
+- Delil çeşidi: **analitik**; (T) analitik-cedelî.
+- Mevzuya bağı: **Fasıl I ilim sıfatı**: kelâmî delil **'sıhhat + iktizâ ⇒ vücûb'** (tahsis burhanının ilme uygulaması).
+- Doğan sual: —
+
+## c3 p142
+- OCR: orta
+- Okuma: tam
+- İçerik: Kelâmî delil: **Mukaddime 1**: 'Allah her malûmu bilmeye **sahih**: kâdir-âlim olduğu sâbit; kâdir-âlim **hayy** olmalı; **hayy her malûmu bilmeye sahih**' (**hayat bedîhen bilmeyi mümkün kılar**). **Mukaddime 2**: 'âlim olmayı iktizâ eden **yalnız zât-ı mahsûsa**: ilim özel nisbet; nisbetler **kâim bi'n-nefs değil, gayre sıfat** ⇒ âlimlik **gayre muhtaç sıfat ⇒ mümkin ⇒ sebep**; sebep zât (vasıtalı ya vasıtasız) ya başka; başkası ise **münfasıl sebebe iftikâr (muhâl)** ⇒ **muktezî zât-ı mahsûsadır**.' **Mukaddime 3**: 'hepsine sıhhat; zât **bazısını îcâb ediyor**; nisbeti hepsine eşit ⇒ **bazısını iktizâ, ötekilerini iktizâ etmemekten evlâ değil** ⇒ **hepsini** ⇒ **tüm malûmâtı bilir**.'
+- Netice/hüküm: **Kelâmî ilim delili: sıhhat + iktizâ (tahsis eşitliği)**.
+- Delil çeşidi: **analitik-burhânî (kelâm)**; (T) burhânî biçim (**öncül: 'hayy ⇒ her malûmu bilmeye sahih'; 'rüchân müreccihsiz olmaz' (Râzî ilkesi)**).
+- Mevzuya bağı: **KRİTİK — Fasıl I ilim delili varsa buna benzer yapı**; **Râzî 'rüchân müreccihsiz olmaz' ilkesini burada kendi tahsis ilkesi olarak kullanıyor** (c3 p41–53 ile tutarlı); **c3 p112 'kâdir müreccihsiz tercih eder' hasım sesiyle gerilim yok: Râzî kendi ilkesini kullanıyor**.
+- Doğan sual: —
+
+## c3 p143
+- OCR: orta
+- Okuma: tam
+- İçerik: **Râzî'nin kelâmî delile itirazları**: **Sual 1**: 'Her malûmu bilmeye sahih' önermesini kabul etmeyiz: 'kâdir-âlim **hayy**' derken 'hayy = ilim ve kudret sahih olan'; 'her kâdir-âlim hayy' sözünün anlamı 'belirli kudret ve ilimle vasıflanmak mümkün'; **'belirli kudret-ilim ile vasıflanan başka ilimlerle de vasıflanabilir' zarûrî mi?** Zarûrîyse delile gerek yok, nazarîyse delil gerek; sunulan 'delil' **aynı öncülü başka ibareyle tekrar**. **Sual 2**: 'Zât-ı mahsûsa **sıhhati hepsine** sahihse **hepsini iktizâ etmek zorunda mı**? Zât **bazı âlimlikleri iktizâ edip bazılarını etmeyebilir**; **'bir kısmı ötekinden evlâ değil'** sözü zayıf: (a) nefsü'l-emrde evlâlık yok mu, (b) aklımızda evlâlık delili bilmiyor muyuz? **Birincisi** malum değil: **ilim malûma göre değişir**, farklı malûma farklı ilim: iktizâ **malûmun mâhiyetine** bağlı, **hakîkatler muhtelif ise hükümlerde eşitlik gerekmez**.
+- Netice/hüküm: **Kelâmî delilin iki öncülüne Râzî'nin itirazı (hayy⇒her malûm; eşit iktizâ ⇒ hepsi).**
+- Delil çeşidi: **cedelî-analitik**; (T) analitik.
+- Mevzuya bağı: **Fasıl I ilim delili**: 'sıhhat hepsine ⇒ vücûb hepsine' kelâmî çıkarımı **Râzî'ce zayıf**: **derece: kelâmî burhan, öncül bağımlı; Râzî'nin tercihi kemâl delili** (p144).
+- Doğan sual: —
+
+## c3 p144
+- OCR: orta
+- Okuma: tam
+- İçerik: Sual 2 devam: '**Ezhânımızdaki evlâlık yokluğu** kabul edilse de **bu yalnız tevakkuf verir, cezm değil**; **cezm için 'tefâvüt yok'** bâtıl: mütekellimîn **'ilim malûma taalluk eden sıfat; her malûma ilim mâhiyeti başka'** der; 'o belirli ilim mâhiyeti belirli malûma taallukunu iktizâ eder' ⇒ **bu ilimde ma'kûl ise zâtın 'bazı malûmâta taalluku vâcib, bazısına değil' olması niçin ma'kûl olmasın?' **Râzî'nin tercihi (özet)**: '**Bu bâbta en evlâ**: **Allah en kâmil mevcut; herhangi bir malûmu bilmemek noksan sıfat; sarih akıl Allah'ın noksandan tenzihini vâcib kılar ⇒ tüm malûmâtı bilir.** Bu hususta muhâliflerin **iki makamı**: (1) ilmin aslında nizâ, (2) **tüm malûmâtı bilmede nizâ**. **Birinci makamda** çeşitli şübheler…' (Şübhe 1: 'bir şeyi bilse bilmesi ya …').
+- Netice/hüküm: **Râzî'nin ilim delili tercihi: kemâl/noksandan tenzih; kelâmî 'sıhhat+iktizâ' delili tevakkufla sonuçlanır.**
+- Delil çeşidi: **kemâl delili**; (T) ikna'î-analitik (**Râzî kendi tercihini 'evlâ' diye niteliyor**).
+- Mevzuya bağı: **KRİTİK — Fasıl I ilim sıfatı derece**: **önerilen (T) 'Allah her şeyi bilir': kemâl delili (Râzî'nin evlâ dediği) + nass**; kelâmî tahsis delili **öncül bağımlı**.
+- Doğan sual: —
+
+## c3 p145
+- OCR: orta
+- Okuma: tam
+- İçerik: **Şübhe 1 (ilmi inkâr edenler; c3 p144 sonu)**: 'Allah bir şeyi bilse bilmesi **ya zâtının aynı ya gayrı**; iki kısım bâtıl.' **Aynı olamaz, 5 vecih**: (1) 'vâcibü'l-vücûd âlimdir' sözü **manâlı fayda verir**, **tagayür olmasa fark hâsıl olmazdı**; (2) 'vâcib li-zâtihi'nin **nakîzi** 'vâcib değil'; 'âlim'in nakîzi 'âlim değil'; **'âlim' vâcibi nakzetmez**, **'vâcib' âlimi nakzetmez** ⇒ mefhûmlar farklı; (3) 'vâcib âlimdir' bir **hükümdür**, şek-şübheyle doğrulanır-yalanlanır; **mahmûlü mevzûunun aynı olan kaziyye böyle olmaz**; (4) vâcib olduğunu akledip âlim olmasında şüphe edebiliriz, tersi; ⇒ mugâyir; (5) ilim **özel nisbet**; zât **kâim bi'n-nefs**; zarûrî: kâim bi'n-nefs zât nisbetten ayrı. (Editör dipnotu: 'ilmi zâtının aynı' görüşünün **bâtıl olmadığı** yönünde açıklama, satır kırık.)
+- Netice/hüküm: **Şübhe 1 (I. kol): ilim zâtın aynı olamaz (5 vecih).**
+- Delil çeşidi: **hasım delili (analitik)**; (T) analitik.
+- Mevzuya bağı: **Fasıl I ve c1 Mesele 3 ('sıfat-zât')**: Râzî'nin **'vücûd zâid' ve 'ilim zâtın lâzımı'** çizgisi; **Sünnî akide**: sıfatlar **zâtın aynı da gayrı da değil** ('lâ hiye hüve velâ hiye gayruhû') — Eş'arî formülü; ders katmanı **bu formülü** kullanır.
+- Doğan sual: —
+
+## c3 p146
+- OCR: orta
+- Okuma: tam
+- İçerik: Şübhe 1 (II. kol): 'İlim **gayrı** olamaz: ilim ya **kâim bi'n-nefs mevcut** ya **zâtına kâim sıfat**; ilki bâtıl (âlim olmak ilme sıfat; bir şeye sıfat kâim bi'n-nefs olamaz); ikincisi: **zâta muhtaç sıfat ⇒ mümkin ⇒ müessir** (müessir zâtın kendisi); bu bâtıl, **3 vecih**: (1) zât âlemin vücûdunda müessir; aynı zâtın ilim hâsılında müessir olması **aynı şeyin aynı şeye hem kâbil hem fâil** olması; (2) …; (3) **eserin müessire ihtiyacı bekâda olmaz** (tekvîn-i kâin), demek **ihtiyaç adem/hudûs hâlinde**; iki takdirde de ihtiyaçlı **hâdis**; Allah'ın ilmi kadîm ⇒ ihtiyacı yok.' **Şübhe 2**: 'İlim **kemâl sıfatı** ise zât **nâkıs, gayrıyla kemâle ermiş**; nâkıs ilâh olamaz; kemâl değilse Allah'a isnâd muhâl.'
+- Netice/hüküm: **Şübhe 1 II. kol ve Şübhe 2 (kemâl ⇒ zât nâkıs).**
+- Delil çeşidi: **hasım delili**; (T) analitik-cedelî.
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c3 p147
+- OCR: orta
+- Okuma: tam
+- İçerik: Şübhe 2 sonu ('nâkıs ilâh olamaz'). **Şübhe 3**: 'İlim özel nisbet-izâfe; nisbet **iki taraf** hâsıl olunca; **Allah'ın zâtı ilim sıfatının hâsılı için yetmez** (nisbet tek şeyle olmaz); ilim ikinci muzâfa şartlı ⇒ zât **başkasının i'tibârına muhtaç ⇒ mümkin**: muhâl.' **Şübhe 4**: 'İlim filozoflara göre **malûma mutâbık sûret**, mütekellimîne göre **belirli nisbet**; iki takdirde de **her malûmun ilmi öbür malûmun ilminden ayrı**; **Allah sonsuz malûmâtı bilse zâtında sonsuz sıfat, sonsuz hâl** hâsıl olur: muhâl (2 vecih): (1) her kesret azalma-artmayı kabul eder ⇒ mütenâhî; sonsuz kesret hâsıl olamaz; (2) ilâh kesretten mürekkeb ⇒ imkân.'
+- Netice/hüküm: **Şübhe 3 (nisbet ⇒ gayre ihtiyaç) ve Şübhe 4 (sonsuz malûm ⇒ sonsuz sıfat).**
+- Delil çeşidi: **hasım delili**; (T) analitik.
+- Mevzuya bağı: **Fasıl I ilim/sıfat**: 'sonsuz malûm ⇒ sonsuz sıfat' klasik itiraz; cevabı p149.
+- Doğan sual: —
+
+## c3 p148
+- OCR: orta
+- Okuma: tam
+- İçerik: Şübhe 4 devam: 'Kesret **ilimlerde**; ilimler sıfat; kesret sıfatlarda; **zât kesretten münezzeh, sıfatları îcâb edebilir** denemez mi?' Cevap: '**Allah = zât+sıfat mecmûu** mu, **yalnız zât** mı? **Mecmû ise** ilâh mümkin-muhtaç; **yalnız zât ise** ilâh sıfatlardan mücerred zât; **sıfatlar Allah'a zâid ve mugâyir ⇒ nefyi vâcib**.' (Şübhe 1–4 tamam.)
+- Netice/hüküm: **Şübhe 4'ün son kolu: sıfat-zât ilişkisi ikilemi (zât+sıfat mecmûu mümkin; yalnız zât sıfatsız).**
+- Delil çeşidi: **dilemma**; (T) analitik-cedelî.
+- Mevzuya bağı: **KRİTİK — Sünnî akide (sıfat-zât)**: 'sıfatlar zâtın aynı da gayrı da değil' formülünün **arka planı bu ikilem**; ders katmanında **dilemmanın çıkışı olarak** yazılabilir (kaynaklı).
+- Doğan sual: —
+
+## c3 p149
+- OCR: orta
+- Okuma: tam
+- İçerik: **Cevaplar (Râzî)**: **Şübhe 1'e**: 'Bu (aynı-gayr kısmet) **üç asıl üzerine**: **vâhidden vâhid**, **tek şey hem kâbil hem fâil olmaz**, **hâcet illeti hudûs ya imkân**; bu üç asılın **ilzâmı önceden geniş biçimde çürütüldü**, tekrarda fayda yok.' **Şübhe 2'ye**: 'Zât-ı mahsûsa **kendisi ve zâtı gereği kâmil**; **ilim sıfatıyla vasıflanması bu kemâlin lâzımlarındandır** ⇒ şübhe zâil.' **Şübhe 3'e**: 'İlmin nisbet olması ikinci muzâfa şartlı diye **ilmi nefyedersek** Allah'ın **âlemin vücûdunda müessir** olmasını da nefyetmek gerekir, **müessiriyet de nisbet-izâfe** kabîlinden.' **Şübhe 4'e**: 'Kesretten en uzak şey **vahdet**; onun da **ikinin yarısı, üçün üçte biri, dörtün dörtte biri … sonsuz nisbetler**; ⇒ **izâfât ve nisbetlerin çokluğu zâtî vahdete halel getirmez.** **Bu bâbın sonu, Allah bilir.**'
+- Netice/hüküm: **Râzî'nin nihâi cevabı: ilim zâtın kemâlinin lâzımı; izâfetler kesret yapmaz.**
+- Delil çeşidi: **analitik + paralel (müessiriyet de nisbet; vahdet de nisbet taşır)**; (T) analitik-burhânî.
+- Mevzuya bağı: **Fasıl I ilim/sıfat**: 'izâfet çokluğu zâtî vahdeti bozmaz (**bir sayısının nisbetleri örneği**)' **ders katmanı için hazır misal**; **'müessiriyet de nisbet' ⇒ irâde-tahsis borcunda izâfî sıfat hudûsu** ile bağlı (c2 p106).
+- Doğan sual: —
+
+## c3 p150
+- OCR: boş
+- Okuma: tam (içerik yok)
+- İçerik: Yok.
+- Netice/hüküm: Yok.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c3 p151
+- OCR: orta (başlık kötü)
+- Okuma: tam
+- İçerik: **Bâb 3, Fasıl 6: 'Allah'ın cüz'îleri bilmesi'**. 'Bazı kişiler filozoflardan **"Allah cüz'îleri bilmez"** dediklerini nakleder; bu nakilde **nazar var**: zâtı **muayyen zât**; o bu muayyen zâtı bilir; **cüz'î = muayyen olan**; ⇒ **cüz'îyi bilir**; ayrıca ilk illet olduğundan **akl-ı evveli** bilir; **zâhir olan: onların Allah'ın bilmesini reddettikleri: (1) değişenleri değişen olarak, (2) cismânîleri belirli mikdarlarıyla**.' **Delil (hükemâ)**: 'Allah **Zeyd'in bu mekânda oturduğunu bilse**; Zeyd kalkınca **ilmi: bâkî ise cehil** (Allah'a muhâl), **bâkî değilse tagayyür** (muhâl); **kavmin dayandığı hüccet budur**.' **Mütekellimîn iki fırka**: (a) 'ilk ilim **bâkî**'; (b) '**tagayyürü iltizam**: ilk ilim bâkî değil' (…p152).
+- Netice/hüküm: **Râzî: 'Allah cüz'îleri bilmez' nakli 'nazar götürür'; filozofların asıl itirazı 'değişen olarak' ve 'cismânîleri mikdarıyla' bilmedir; delil: kalkışta cehil/tagayyür ikilemi.**
+- Delil çeşidi: **dilemma**; (T) analitik-cedelî.
+- Mevzuya bağı: **KRİTİK — Sünnî akide ve Fasıl I ilim sıfatı**: **Allah her şeyi, cüz'îyi ve değişeni de bilir (Kur'ân: 'zerre kadar bir şey O'ndan gizli kalmaz' ⊬ âyet doğrulanacak)**; Râzî **filozof itirazını aktarıyor ve kelâmî iki cevabı verecek**; **Risale ana metni 'Allah her şeyi bilir; cüz'î-küllî ayırmaz; değişimle O'nun zâtı değişmez' der; dilemmanın cevabı: ilim malûma tâbi 'nisbet-i i'tibâriyye', ilim zâtta değişmez (kelâm cevapları)**.
+- Doğan sual: —
+
+## c3 p152
+- OCR: orta
+- Okuma: tam
+- İçerik: (Kelâm fırkaları) **Birinci fırka (ilim bâkî)**: 'Bir şeyin **var olacağını bilmek**, **var olduğunu bilmeyle aynı ilimdir**.' **Deliller**: (1) 'Allah **tek ilimle tüm malûmâtı** bilir; malûmât çoklukla ilim çoğalmıyorsa **malûmâtın değişmesiyle de ilim değişmez**'; (2) '**Ayna** misali: duvara asılı ayna, geçen herkesin sûreti yansır; **sûret sûrete** ama **ayna değişmez**; değişen geçenlerdir; **ilim de tesirlenmeye hazır sıfat, bâkî; değişen malûmât**' (editör dipnotu: 'bu Allah'ın malûmâttan etkilenmediği anlamına gelmez; teşbih yerinde değil' — editör notu); (3) 'Bir insan Zeyd'in yarın şehre gireceğine i'tikâd etse ve o i'tikâd sürse, Zeyd girince **aynı i'tikâd 'şimdi giriyor' i'tikâdı olur**' ⇒ **'olacak' ilmi 'oldu' ilminin aynı**; (4) …
+- Netice/hüküm: **Kelâmî cevap 1: ilim bâkî tek ilim; değişen malûmât (ayna, i'tikâd misalleri).**
+- Delil çeşidi: **misal-cedelî**; (T) ikna'î-cedelî.
+- Mevzuya bağı: **Fasıl I ilim sıfatı**: **ilim tek ve ezelî; ma'lûmda değişim ilimde değişim doğurmaz**: ders katmanına **ayna misali (kaynaklı, 'teşbih sınırlı')**; **editör notu**: 'ayna misalinin sınırı' (Sekkā) — **kullanılırken dipnot**.
+- Doğan sual: —
