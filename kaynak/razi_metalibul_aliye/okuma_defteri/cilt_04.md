@@ -3241,3 +3241,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **teselsül + tahsis/tefâvüt delili**; (T) burhânî biçim, öncül bağımlı; **F 27-B**: gül yaprağı misali **mûcib teorisinin 'mahsûs isti'dâd/kâbil farkı' (kâbilin ihtilâfı) cevabıyla çürütülebilir**: mûcibin te'sîri değişmez, fakat **mahaller** farklıysa neticeler farklı olabilir (filozofların cevabı). Râzî bunu bu sayfada cevaplamıyor; **öncüle bağlı** yazılır.
 - Mevzuya bağı: **KRİTİK — Fasıl I §8 (Vâcib=Fâil-i muhtâr ispatı: c1 p319–321 açık borcu)**: **Râzî'nin Kur'ân-destekli iki yolu (16/12 teselsül, 16/13 tefâvüt) mevcut**; Risale'nin **Vâcib=muhtâr halkası** için **aday delil**, derece **öncüle bağlı**: **(1) teselsül bâtıl (2) mûcib te'sîri değişmez + mahal farkı cevabı**. **Karar: ana metinde 'delîl-i tefâvüt' Kur'ân âyetiyle (16/13) birlikte, ders katmanında filozof cevabıyla yazılabilir.** **KIRMIZI TESPİT: Kısım 2 (Kur'ân delilleri) yalnız 3 nev' ile geçti; Râzî 'geniş deniz; Tefsîr-i Kebîr'e bak' diyor.**
 - Doğan sual: **Râzî 'muhtâr fâil, mûcib değil' ispatının kalanını nerede veriyor (p361+)?** Kısım 2 bitti mi, devam ediyor mu?
+
+## c4 p361
+- OCR: iyi
+- Okuma: tam
+- İçerik: **Yeni bâb başlığı**: '**âlem ehlinin fiil ve fâil hakkındaki mezheplerinin zabtı**.' (Makâle numarası başlıkta okunamadı.)
+- Netice/hüküm: **Kısım 2 (Kur'ân delilleri) bitti (p353–360); fiil-fâil mezhepleri bâbı başladı.**
+- Delil çeşidi: —
+- Mevzuya bağı: **Fasıl I §8 (Vâcib=Fâil, muhtâr/mûcib), Fasıl I §8.3 (teodise)**: **mezheplerin haritası** (mûcib, muhtâr, hikmet-maslahat, cebr) burada çıkarılıyor; c3 (hikmet, hüsn-kubuh) ile birlikte teodise kapanışının yeridir.
+- Doğan sual: —
+
+## c4 p362
+- OCR: —
+- Okuma: okunmadı (boş)
+- İçerik: metin yok.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c4 p363
+- OCR: iyi
+- Okuma: tam
+- İçerik: **1. Fasıl: 'mezheplerin taksîme göre zabtı'.** **Râzî'nin çıkışı**: '**bu unsurî âlemi gözle görürüz; hâllerinin Güneş'in baş ucundan yakınlık-uzaklığına göre değiştiğini de: Güneş hareketiyle dört mevsim, bunların sebebiyle bu âlemin hâlleri değişir; bu kadarı hissî. Sonra akıl terakki edip hisden gâib hâlleri i'tibâr eder**': '**bu cismânî âlemin ya müessiri yoktur; ya müessiri mûcib bi'z-zâttır; ya müessiri fâil-i muhtârdır ve yalnız insanların maslahatına uygun olanı yapar; ya müessiri fâil-i muhtârdır ve insanların maslahatına aldırmaz.**' **Dört kısım, ziyadesi yok**: (1) müessir yok; (2) müessir mûcib; (3) muhtâr, maslahatı gözeten; (4) muhtâr, maslahata aldırmayan.
+- Netice/hüküm: **Râzî'nin taksîmi (sınıflama): fiil-fâil mezheplerinin 4 kısmı.**
+- Delil çeşidi: **taksîm (hasr)**; (T) burhânî biçim (kısımların hasrı: ya-ya).
+- Mevzuya bağı: **KRİTİK — Fasıl I §8 ve teodise (§8.3)**: bu dörtlü, **Vâcib=Fâil ispatının kapsam haritasıdır**; Risale'nin **hasr delili yazılmış olmalı** (c2 p65–66: 'sebr-taksîmin tamlığı ayrıca ispat ister'); **Râzî'nin bu dörtlü hasrı 'ya-ya' mantıksal bir taksîmdir (iki ikili ayrım), tam.**
+- Doğan sual: —
+
+## c4 p364
+- OCR: orta
+- Okuma: tam
+- İçerik: **1. kısım — müessiri nefyedenler (üç tâife)**: **(1)** '**bu felekler ve yıldızlar zâtları ve sıfatlarıyla vâcibü'l-vücûddur; mahsûs tabâi'leri birbirine ve unsurların birbirine karışmasını gerektirir, üç mevâlîd hâdis olur**' — **hâlis Dehriyye**; **(2)** '**felek ve unsurlar ezelden ebede bölünmez cüzlerden ibaret; hareketleri tesâdüfen özel biçimde çarpıştı, felek doğdu, feleğin hareketleriyle unsurlar, sonra karışımlar, mevâlîd**' — **Demokritos (kadîmlerden)**; **(3)** '**hâdisin hiçbir sebep olmadan hudûsunu caiz görenler: felekî cisimler hâdis, fakat müessirsiz; müessirsiz özel biçimde hareket ettiler; hareketleri bu unsurî âlemdeki havâdisin sebebi oldu; bu havâdis de müessirsiz olmuş olabilir**.' **2. kısım (mûcib bi'z-zât) başlıyor.**
+- Netice/hüküm: **Müessiri nefyeden üç tâife: Dehriyye (zâtî vâcib felek), Demokritos (tesâdüf), sebepsiz hudûs iddiası.**
+- Delil çeşidi: **sınıflama**; (T) betimleyici.
+- Mevzuya bağı: **Fasıl I §3 (sebepsiz hudûs reddi), §8**: **üçüncü tâife (sebepsiz hudûs)** Risale'nin 'her hâdisin müessiri var' ilkesinin **doğrudan hasmıdır**; ilke **bedîhiyyâta yakın**, Râzî burada delil zikretmiyor (⊬ sonraki sayfalarda).
+- Doğan sual: **Sebepsiz hudûs iddiasını Râzî nasıl çürütüyor?** (p369+.)
+
+## c4 p365
+- OCR: orta
+- Okuma: tam
+- İçerik: **2. kısım — müessir mûcib bi'z-zât**: '**bu âlem cisim; her cisim zâtı ve mâhiyet cüzleri bakımından mümkin; her mümkinin müessiri gerek; bütün ecsâmın müessiri cisim olamaz; muhtâr müessir 'bizim zikrettiğimiz şüphelerle' makûl değil ⇒ müessir mûcib bi'z-zât**; bu âlem zâtı gereği mümkin, sebebinin vücûbuyla vâcib (vâcib bi-gayrihî).' '**Bu cumhûr-ı felâsifenin mezhebidir: Aristo'nun tâbileri. Bu adamın (Aristo? ⊬) seçtiği görüşü ashâbı ve müteahhir-mütekaddim tâbileri destekledi.**' **İki bahis**: **(1) mebde'-i evvel bütün mümkinâta mı mebde', yoksa tek şeye mi (o da kesrete)?** '**Felâsifeden hiçbirinin ilkini savunduğunu görmedim; ittifak: Allah bir, bir'den ancak bir sâdır olur; O ilk aklın illetidir; ilk akıl üç şeyin illeti: ikinci akıl, nefs, felek.**' **(2) 'Vâcibin cisimlerin vücûdunda mûcib bi'z-zât te'sîr edip sonra onlara sıfatları kendi ihtiyârıyla vermesi mümkin mi?'** ⇒ 'zâtlara nisbetle mûcib, sıfatlara nisbetle muhtâr' (bir orta yol). **3. kısım başlıyor**: 'fâil-i muhtâr isbâtı ve yalnız halkın maslahatına uygun fiil (âlemin ilâhı adil, kullarına nâzır, merhametli olmalı)' (p366).
+- Netice/hüküm: **Filozofların mûcib öğretisi (sudûr): Allah bir ⇒ ilk akıl ⇒ (ikinci akıl, nefs, felek).** **Râzî hasmın öncüllerini 'bizim zikrettiğimiz şüphelerle muhtâr makûl değil' diye aktarıyor.**
+- Delil çeşidi: **sınıflama + taksîm**; (T) betimleyici/burhânî biçim (filozof).
+- Mevzuya bağı: **KRİTİK — Fasıl I §8**: **filozof tezi (mûcib, vâhid-sudûr)** Risale'nin Vâcib=Fâil-i muhtâr iddiasının doğrudan karşıtı; **Râzî'nin 'muhtâr makûl değil' şüpheleri = c2 p137 / c3 irâde-tahsis şüpheleri**; Risale **muhtârı kanıtlarken bu şüphelere cevap borçlu** (⊬ Râzî'nin cevabı burada değil).
+- Doğan sual: Râzî 'muhtâr makûl değil' şüphelerini nerede cevaplıyor? (Sonraki sayfalar ⊬.) **'Bu adam' kimdir (Aristo/İbn Sînâ)?** OCR bağlamı belirsiz.
+
+## c4 p366
+- OCR: orta
+- Okuma: tam
+- İçerik: **3. kısım — fâil-i muhtâr, yalnız halkın maslahatına uygun fiil**: '**âlemin ilâhı adil, kullarına nâzır, merhametli, ihsân edici olmalı; zarar ve elemi murâd etmez.**' **Bu görüşü kuranlar âlemi âfet, hastalık, elem, yangın-boğulma, yoksulluk, ölüm, sakatlık, körlük, delilikle dolu görünce** 'ilâhın elem ve zarardan müberra oluşu ile bu âfetleri **cem'etmek** istedi ⇒ akıllar şaştı, kavillerde ihtilâf.' **Zabtı**: '**bu elemler Allah'ın yaratmasıyla mı hâsıl olmadı yoksa oldu?**' **Allah yaratmadı diyenler iki fırka**: **(a)** âlemin **iki ilâhı** var: **Allah (muhsin-rahîm), Allah (şerîr-zararlı)** — **Seneviyye/Sanevîler**; **(b)** '**nefs kadîm, hayûlâ kadîm; nefsin hayûlâya iltifâtı ⇒ şehvet ⇒ elem doğuran terkib; ilâh terkibi en salih vecihle vâki etti; rahmet ve hayır ilâhın ihsânı**'. **Allah yarattı diyenler (p367)**.
+- Netice/hüküm: **Teodise mezhep haritası: (i) Seneviyye (iki ilâh), (ii) nefs-hayûlâ kadîm (Eflâtun/Sâbiî çizgisi ⊬), (iii) Allah yarattı: iki grup.**
+- Delil çeşidi: **sınıflama (teodise)**; (T) betimleyici.
+- Mevzuya bağı: **KRİTİK — Fasıl I §8.3 (teodise)**: **c2 p146–147'de Râzî 'seneviyye çözümünün çıkmazı' göstermişti; burada mezhep haritasında yer alıyor**. **Risale teodiseyi 'kazâ-kader' bâbında kapatacak (⊬ açık borç)**.
+- Doğan sual: **Kazâ-kader/teodise cevabının yeri hangi ciltte?** (Cilt 5–9'da okuyarak.)
+
+## c4 p367
+- OCR: orta
+- Okuma: tam
+- İçerik: **Allah yarattı diyenler (devam)**: '**bu elemler Allah'ın yaratmasıyla hâsıl oldu diyenler iki fırka**: **(a)** '**bu elemlerin yaratılması Allah'tan güzeldir: bu ruhlar başka bedenlerdeydi, günah işleyip isyan ettiler; Allah onları bu bedenlere nakletti ve geçmiş günahlarına karşılık azap ulaştırdı**' — **tenâsüh ehli**; **(b)** '**güzeldir, çünkü Allah'ın onlara âhirette ulaştıracağı ivazlar için**' — **Mu'tezile**; bunlar da ikiye ayrılır: kimisi elemin hüsnünü **ivazla yetinir**, kimisi 'ivaz şart'; '**i'tibâr: ivaz zulüm olmaktan çıkarır; i'tibâr (hikmet) abes olmaktan çıkarır — muhakkiklerinin sözü.**' **4. kısım — fâil-i muhtâr, maslahat gözetmez**: '**dilediğini yapar, dilediğine hükmeder; mükellefin maslahat ve mefsedetine iltifat etmez — Cebriyye (Mücbire)**; iki fırka: **(a)** bu kâideyi **teklîf, peygamber ve resûllerin gönderilmesi, va'd-vaîd, haşr-neşr, kıyâmet inkârı** üzerine kuranlar; **(b)** '**milel-ü edyân ehlinden mücbireler: teklîf ve nübüvveti ikrar ettiler**.'
+- Netice/hüküm: **Râzî'nin mezhep haritası: tenâsüh (ceza), Mu'tezile (ivaz ve hikmet), Mücbire (a: inkârcı, b: teklîf-nübüvveti kabul eden).** **Risale açısından dikkat: Râzî 'Mücbire' etiketini (Mu'tezile'nin Ehl-i Sünnet için kullandığı tabir) 4. kısmın (b) grubuna verirken, kendi mezhebini kimin içinde saydığı bu sayfada açık değil (⊬).**
+- Delil çeşidi: **sınıflama**; (T) betimleyici.
+- Mevzuya bağı: **KRİTİK — Fasıl I §8.3, c3 (hüsn-kubuh, Allah'a vâcib yok)**: c3 sonucu **'Allah'a hiçbir şey vâcib değil' Sünnî ortak sonucu**; **'Mücbire' etiketi Risale'de KULLANILMAZ** (Ehl-i Sünnet kesb/ihtiyâr ile cebri reddeder); **4(b) grubu Ehl-i Sünnet'in kelâmî çizgisine yakın olsa da 'cebr' adı Mu'tezilî tabirdir**.
+- Doğan sual: **Râzî kendi mezhebini bu 12 kavil içinde hangisine yerleştiriyor?** (p368'de liste; devamı ⊬.)
+
+## c4 p368
+- OCR: orta
+- Okuma: tam
+- İçerik: **Özet — 12 kavil (Râzî'nin zabtı)**: **(1)** Dehriyye: felekler zâtları ve sıfatlarıyla vâcib; **(2)** Demokritos: âlemin aslı kürevî, sert, kendiliğinden hareketli cüzler; **(3)** sebepsiz hudûs caiz; **(4)** mûcib bi'z-zât müessir; ilk sâdır yalnız bir; **(5)** mûcib illet bütün mümkinâta **bir defada mümkin olan tertibe göre**; **(6)** kâdir-muhtâr ama âlemin iki ilâhı (hayır, şer) (Seneviyye); **(7)** 'nefs kadîm-hayûlâ kadîm' (kısmen bozuk: '…bi'l-hayûlâ'); **(8)** elemleri geçmiş günahlara ceza (tenâsüh); **(9)** elemler âhiret ivazları için güzel (Mu'tezile); **(10)** kâdir-muhtâr ilâhı isbat edip teklîf ve bi'seti inkâr; **(11)** Mücbire: teklîf, sevap-ikâbı isbat; **(12)** **hayret ve dehşet ehli: hiçbir şeyi kat'î hükümlememe**. '**Bu, halkın bu bâbdaki mezheplerinin zabtıdır; her kısımda beyyinâtı ve suâl-işkâlleri işaret etmek istiyoruz; tevfik Allah'tandır.**'
+- Netice/hüküm: **Râzî'nin fiil-fâil mezhepleri haritası: 12 kavil.** **Kavil (5) 'mûcib illet bütün mümkinâta bir defada' kısmen bozuk okundu; anlam: sudûr tertibi hakkında farklı bir varyant (⊬).**
+- Delil çeşidi: **sınıflama**; (T) betimleyici.
+- Mevzuya bağı: **KRİTİK — Fasıl I §8, §8.3 ve Fasıl II (En-Nübüvve)**: **kavil 10–11 (teklîf ve bi'set)** Fasıl II'nin **doğrudan öncül alanıdır**: 'muhtâr fâil olsa bile teklîf ve nübüvvet ayrı ispat ister'; **kavil 12 (hayret)** Risale'nin **iddia hududu** notuna atıf. **Risale 12 kavli sayar, delilin hangi kavle karşı kurulduğunu her delilin başına yazar.**
+- Doğan sual: **Râzî her kavle 'beyyinât ve işkâller' yazacak; sıra p369'dan.** **Kavil 5 ve 7 için OCR temizliği (⊬ nüsha karşılaştırması).**
