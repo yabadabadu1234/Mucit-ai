@@ -1081,3 +1081,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **analitik (mefhûm ayrımı) + nefy-isbât**; (T) burhânî biçim.
 - Mevzuya bağı: **KRİTİK — c3 p237–238 (tekvîn)**: '**kâdiriyet ≠ îcâd (tekvîn)**' ayrımı **Mâtürîdî tekvîn sıfatının** aklî temelidir: kıdem tarafı bu ayrımı 'kudret te'sîr edemez' sonucuna çeviriyor; Risale **'kudret ile tekvîn ayrı sıfatlar' (Mâtürîdî) veya 'tekvîn = mükevven' (Eş'arî) ihtilâfını kaydedip** cevap yazmalı.
 - Doğan sual: —
+
+## c4 p121
+- OCR: orta
+- Okuma: tam
+- İçerik: (10. hüccet devam; kıdem tarafı): '**fâiliyet ve mûciddiyet kudretten ayrı bir mefhum; eserin vücûdunda müessir fâiliyet ve mûciddiyet**; öyleyse **kâdiriyetin onda te'sîri olamaz** (aynı esere **iki müstakil sebep** toplanır, muhâl); ayrıca kâdiriyetin **te'sîr salâhiyeti hiç yok** ⇒ **kudret te'sîre salih değil**. **'Fiil ve tekvîn' denen sıfat**: eğer **fiil ve terke salihse** kudretteki **bahisler aynen orada da geçer**; eğer **yalnız vücûd tarafına muayyen ve ademe hiç salih değilse** o **mûcib bi'z-zât, fiil ve terke temekkün eden kâdir değil**.' **11. hüccet**: 'fiilin hâsılını gerektiren **ya kudret**, **ya kudretten sâdır bir eser**, **ya ne kudret ne eser**: **birincisi** bâtıl: makdûr kudretin bütün zamanında hâsıl olurdu ⇒ **kudret ezelî ⇒ makdûr ezelî**; **ikincisi**: aynı taksîm o esere geri döner ⇒ **teselsül**; **üçüncüsü**: **kudret ve bütün eserleri bu hâdisin hudûsunda müessir değil**; bu **kudretin kudret olmasına** aykırı. **İtiraz**: 'makdûr var oldu çünkü kâdir onu **yarattı ve îcâd etti**, salt kâdir olduğu için değil.' **Cevap**: '**'yarattı' mefhûmu ya kudretin kendisi, ya ondan sâdır eser, ya ondan ayrı bir şey** ⇒ bu soru vârid değil.'
+- Netice/hüküm: **Kıdem tarafı: 'fâiliyet/mûciddiyet ≠ kudret; kudret te'sîr etmez' (10.–11. hüccet).**
+- Delil çeşidi: **taksîm/reductio**; (T) burhânî biçim (kıdem tarafı).
+- Mevzuya bağı: **KRİTİK — c3 p237–238 ve Fasıl I §8**: **tekvîn/fâiliyet ↔ kudret ayrımı** kıdem tarafında 'kudret etkisiz' sonucuna çevriliyor; **Risale bu ayrımı 'kudret tekvîne zemin, tekvîn ezelî sıfat (Mâtürîdî) veya kudretin taalluku (Eş'arî)'** biçimlerinde cevaplamalı; Râzî'nin cilt 4 devamındaki tercihi aranacak.
+- Doğan sual: —
+
+## c4 p122
+- OCR: orta
+- Okuma: tam
+- İçerik: '**Bu, 'kâdir'in mütekellimîn'in tefsiriyle muhâl olduğunu takrîr eden onbir vecih.**' **Bu sabit olunca Allah'ın âlemin ve diğer eserlerinin tekvînindeki te'sîri zâtı veya zâtının lâzımı yüzünden**; **herkes 'öyle olursa müessirin kıdemiyle eserlerin, fiillerin, neticelerin kıdemi lâzım' diye ittifak etti**. **Bu yüzden mütekellimîn âlemin hudûsuna delil kurduktan sonra 'âlemde müessir mûcib bi'z-zât olsaydı kıdemiyle âlemin kıdemi lâzım gelirdi' dedi**; bu, **te'sîri zâtıyla ise devâmıyla eserin devâmı lâzım** olduğunu **kabul ettiklerini** gösterir. **Ayrıca mûcib bi'z-zât mütenâhî bir müddet eserden ayrı kalıp sonra eser hâsıl olsa**, o vakit **belirli bir irâde veya rüçhân gerektiren başka bir nevi** ile ihtisas etmeden hâsıl olsa **müessirsiz, mahz ittifâk (bâtıl)** ⇒ **mûcib bi'z-zât devâm ederse eser devâm eder**. **Bu makâlenin hâtimesi (filozofların 'kâdir = dilerse yapar, dilemezse terk eder' hakkındaki cevabı)**: 'bu, 'Allah bir kere dileyip yapar, bir kere dileyip terk eder' sözünün sıdkını gerektirmez; **2 vecih**' (p123).
+- Netice/hüküm: **Kıdem tarafı 3. Makâle sonucu: 'kâdir' (mütekellim tefsîri) muhâl; te'sîr zâtı gereği ⇒ eser kadîm; mütekellimin 'mûcib olsa kadîm' sözü bunu kabul demektir.**
+- Delil çeşidi: **sonuç + itiraf istidlâli (mütekellimin ilzamı)**; (T) burhânî biçim/cedelî (kıdem tarafı).
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §8**: 'mütekellimîn 'mûcib ise kadîm' diyerek zâtî te'sîrin devamını kabul etti' tespiti **Risale'nin 'kâdir-muhtâr ⇒ hudûs' zincirinin öncülünü kıdem tarafının nasıl kullandığını** gösteriyor; **Risale 'te'sîr zâtı gereği' ile 'irâde ile te'sîr' ayrımını açıkça yazmalı.**
+- Doğan sual: —
+
+## c4 p123
+- OCR: orta
+- Okuma: tam
+- İçerik: **Hâtimenin 1. vechi (kıdem tarafı)**: '**'dilerse yapar' şartlı önerme**; şartlı önermenin sıdkı **cüzlerinin sıdkını şart koşmaz**: **iki sâdıktan** ('insan hayvansa cisimdir'), **iki kâzibten** ('beş çiftse iki eşit parçaya bölünür'), **kâzib mukaddem ve sâdık tâlîden** ('insan eşekse hayvandır') mürekkeb sâdık şartlı olabilir; **4. kısım (mukaddem sâdık, tâlî kâzib) muhâl**, çünkü hak bâtılı gerektirmez. ⇒ '**dilerse yapar, dilerse terk eder' sıdkı 'yapmayı bir kere diledi, terki bir kere diledi' sıdkına mevkuf değil.**' **2. vecih**: '**terk hâlinde 'yapan' sadık olamaz; fiil hâlinde 'terk eden' sadık olamaz**; iki hâlde de 'kâdir' sadık ⇒ **kâdir olmanın sıdkı 'diledi' sıdkına mevkuf değil**.' 'Hak: Allah dilerse yapar, dilerse terk eder; **fakat bundan 'terki diledi, terk etti' denmez**' (p124).
+- Netice/hüküm: **Kıdem tarafı: 'dilerse yapar, dilerse terk eder' şartlı önermedir; gerçek 'diledi' hükmünü gerektirmez.**
+- Delil çeşidi: **mantık (şartlı önerme sıdkı)**; (T) burhânî biçim. **[Delil ≠ dava: şartlı önermenin sıdkı ile 'Allah'ın gerçek dilemesi' bahsi ayrı; Kur'ân'ın 'Allah dilediğini yapar' nassları (⊬ numara) kıdem tarafının bu okumasıyla çelişir.]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §8**: **'Allah dilediğini yapar' nassı Risale'nin irâde bâbında ana nass**; kıdem tarafının 'şartlı sıdk, gerçek diledi yok' okuması **Risale'ye alınmaz**; **F 27-B**: bu mantık hilesi kâdir-muhtâr farkını 'kâdir'e indirger.
+- Doğan sual: —
+
+## c4 p124
+- OCR: orta
+- Okuma: tam
+- İçerik: (Hâtime sonu): '**'terki diledi, terk etti' denmez; ancak 'terki dilerse terk eder' sadıktır; 'terki diledi' asla sadık değil, yoksa o meşîet hâdis olurdu; hâdis meşîet başka hâdis meşîete muhtaç olurdu; ilk meşîette söz aynı: her meşîet hâdis ve başka hâdis meşîetle mesbûk, evvelsiz; zâtı hevâdisin mahalli; bunların hepsi muhâl.**'
+- Netice/hüküm: **Kıdem tarafı: Allah'ın gerçek (fiilî) dilemesi hâdis olamaz; şartlı önerme sadık, 'diledi' sadık değil.**
+- Delil çeşidi: **reductio (hâdis meşîet ⇒ teselsül, mahall-i hevâdis)**; (T) burhânî biçim (kıdem tarafı).
+- Mevzuya bağı: **KRİTİK — Fasıl I §8**: '**meşîet/irâde hâdis mi, ezelî mi?**' sorusu; Risale **'irâde ezelî, mürâd hâdis; taalluku vakitle ihtisaslı' (Eş'arî klasik)** cevabını yazar; **c4 p123–124'ün 'Allah gerçek dilemesi yok' sonucu İslâm'a aykırı olduğu için ana metne girmez**.
+- Doğan sual: —
+
+## c4 p125
+- OCR: orta
+- Okuma: tam
+- İçerik: **4. Makâle: 'İrâde sıfatından çıkarılan deliller'** (başlık).
+- Netice/hüküm: Yok (başlık).
+- Delil çeşidi: —
+- Mevzuya bağı: c3 Bâb 4 (irâde) ile bağ.
+- Doğan sual: —
+
+## c4 p126
+- OCR: boş
+- Okuma: tam (içerik yok)
+- İçerik: Yok.
+- Netice/hüküm: Yok.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c4 p127
+- OCR: orta
+- Okuma: tam
+- İçerik: **'İrâde sıfatından çıkarılan deliller'** (kıdem tarafı). **Filozoflar: 'irâdeden anladığımız: bir şeyin nâfi' ve lezzetli olduğuna i'tikad ediyoruz; bu i'tikad o şeyi tahsile meyil doğuruyor; o meyil ve i'tikad, adalelerdeki kudrete (kuvve-i muharrike) inzimâm ediyor; bu şeylerin mecmûu fiili gerektiriyor.** **Bu hâller vâcibü'l-vücûd hakkında muhâl**: (1) **belirli fiilin ona nâfi' ya da zararlı olduğu tasavvuru** nef' veya zararı akledilen için; Vâcib hakkında muhâl; (2) **meyil**: nef' celbine meyil ancak nef'e mahal olan için; Vâcib hakkında muhâl. **Bu sabit olunca Allah hakkında irâdenin hâsılı muhâl.** **Mütekellimîn'in 'irâde, iki meyilden birinin diğerine müreccihsiz rüçhânını gerektirir' sözü de akıl kabul etmez; müreccihsiz rüçhân muhâl ve makûl değil** ⇒ '**akıl nezdinde 'irâde' lafzından Allah hakkında ispat edilebilir bir mânâ kalmadı; ona kail olmak bâtıl**' (p128).
+- Netice/hüküm: **Kıdem tarafı: irâde = i'tikad + meyil + kuvve-i muharrike; Allah'ta muhâl; mütekellimin 'irâde = müreccihsiz rüçhân' anlamı makûl değil.**
+- Delil çeşidi: **tanım (insanî irâde) + reductio**; (T) burhânî biçim (kıdem tarafı). **[Delil ≠ dava: 'irâde' insanî tanımla sınırlanıp Allah'a nakli reddediliyor; tenzîh ile 'sıfat-ı ilâhî olarak irâde' ayrı tanım isterse cevap verilir (c3 Bâb 4 p160–182).]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §8, c3 Bâb 4**: **Risale 'Allah'ın irâdesi' için insanî tanımdan ayrı, tenzîhli bir tanım (tahsis edici sıfat) vermeli**; kaynak c3 p160–182 ve c4 p127–128.
+- Doğan sual: —
+
+## c4 p128
+- OCR: orta
+- Okuma: tam
+- İçerik: (İrâde sıfatı devam): 'âlem hâdis olsaydı **Allah'ın kasdı ve irâdesiyle** hâdis olması lâzım; bu **muhâl** ⇒ mukaddem de muhâl. **Şartiyyenin beyânı**: 'âlem ezelden o belirli vakte kadar devamlı adem; **fâilin zâtı da ezelden o vakte kadar mevcut**; ezelde bu zâtın âlemin ademden vücûda çıkmasında eseri yoktu; **âlem o vakitte fâilin kasd ve ihtiyârı olmadan hâsıl olsaydı** o vakitte olması, öncesi ve sonrasında olmaması **müreccihsiz rüçhân (muhâl)**.' **Âlemin o vakitte kasd ve ihtiyârla hudûsunun imkânsızlığı, vecihlerle**: **1. hüccet**: 'o kasd ya kadîm ya hâdis; ikisi de bâtıl; öyleyse **kasdın varlığı bâtıl**. **Kadîm imtinâ'**: kadîm irâde = 'Allah ezelde âlemin ileride belirli vakitte ihdâsını murad etti'; bu irâde **o vakit hâzır olduğunda ihdâsa kasdın kendisi değil**; deliller: **(1)** yarın sabah belirli bir fiili yapmaya **azmeden** biri karanlık bir evde oturup **gece ile gündüzü ayırt edemiyorsa**, o vaktin geldiğini bilmeden…' (devam p129).
+- Netice/hüküm: **Kıdem tarafı 1. hüccet: 'kadîm irâde ≠ kasd; kasd hâdis olamaz'.**
+- Delil çeşidi: **reductio (irâde/kasd ayrımı) + misal**; (T) burhânî biçim (kıdem tarafı).
+- Mevzuya bağı: **KRİTİK — Fasıl I §8**: '**irâde ile kasd ayrımı**' (c4 p65 'azm ↔ kasd' ile bağlı): kıdem tarafı **ezelî irâdeyi 'azm' düzeyinde bırakıp 'kasd'ı hâdis sayıyor**; Risale **irâde/kasd/azm terimlerini açık tanımlayıp**, ezelî irâdenin **taallukla kasda dönüşmesini** Eş'arî tarzında yazmalıdır.
+- Doğan sual: —
