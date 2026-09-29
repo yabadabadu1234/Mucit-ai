@@ -1873,3 +1873,219 @@ Biçim: cilt 1–2 ile aynı.
 - Delil çeşidi: —
 - Mevzuya bağı: —
 - Doğan sual: —
+
+## c3 p209
+- OCR: orta (başlık)
+- Okuma: tam
+- İçerik: **Bâb 8: 'Allah'ın bâkî oluşu (kevnühû teâlâ bâkıyen)'** (başlık sayfası; başlık OCR'de 'kadîm ve bâkî' okunuyor).
+- Netice/hüküm: **Bâb 8 (kıdem ve bekâ) başlar**.
+- Delil çeşidi: —
+- Mevzuya bağı: **Fasıl I §6.3 (Kıdem/Beka)**: burada **sıfat mı zât mı** tartışması.
+- Doğan sual: —
+
+## c3 p210
+- OCR: boş
+- Okuma: tam (içerik yok)
+- İçerik: Yok.
+- Netice/hüküm: Yok.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c3 p211
+- OCR: orta (başlık kötü)
+- Okuma: tam
+- İçerik: **Bâb 8, Fasıl 1: 'Kıdem ve bekâ — zâtın aynı mı, sıfat mı?'** 'Bazıları: **kadîm-bâkî olması zâtının aynı**; bazıları: **iki sıfat, Allah'ın zâtına kâim**.' **Birinciler (aynı) 3 delil**: **(1)** 'kadîm = vücûdunun evveli olmayan; bâkî = vücûdu devamlı — **bu mefhûm bize ma'kûl**; Allah'ın **zât-ı mahsûsası** min haysu hiye **bize bilinmez** (c2 p86–96) ⇒ mugâyir'. **(2)** 'Kadîm-bâkî ya cisim, cevher, araz ya **bunlardan başka bir şey**; 'kadîm-bâkî' taksîm mevridi olur; **mevrid ortak**; ⇒ kadîm-bâkî zâtın kendisi değil, mugâyir.' **(3)** 'Zâtı kadîm-bâkî deyince kaziyye **fayda verir**; 'zâtın zâtı' deyince fayda vermez; **iki kaziyye birbirinin yerini tutmaz**.'
+- Netice/hüküm: **Kıdem-bekâ zâtın aynı değil, mugâyir (3 delil): (zât bilinmez; taksîm mevridi ortak; kaziyye faydası).**
+- Delil çeşidi: **analitik**; (T) analitik-burhânî.
+- Mevzuya bağı: **Fasıl I §6.3 ve c2 p86–96**: Râzî **'zât-ı mahsûsa bilinmez' ilkesini** burada **kıdem-bekânın zâtın aynı olmayışına dayanak** yapıyor (tutarlı).
+- Doğan sual: —
+
+## c3 p212
+- OCR: orta
+- Okuma: tam
+- İçerik: (Delil 3 sonu.) '**Kıdem-bekânın zâid sıfat olduğu**'na hükmeden delil (**Râzî tarafı**): 'kadîm-bâkî **sıfat**.' **Bekâyı zâid sıfat sayanlara karşı (inkâr edenler) 2 delil**: **(1)** 'Bekâ zâta kâim sıfat olsa **zât o sıfata muhtaç** ⇒ **vâcib li-zâtihi vâcib li-gayrihi** olur (muhâl)'; itiraz: 'zât-ı mahsûsa zâtı gereği başka şeyi (zâtın devamını) îcâb etse ne olur? **muhâl lâzım gelmez; ayrıca devam zâtın sıfatlarından biri**'. **(2)** 'Devam-istimrâr sıfat olsa **o sıfat da devamlı** ⇒ devamı zâid ⇒ **teselsül**; ya devamı **kendisiyle** (⇒ sıfat vâcib li-nefsihi, zâtı da sıfata bağlı; **devamı kendinden olan zâtı daha evlâ kılar**) ya **başkasıyla** (zât ise devir; başka şey ise teselsül).'
+- Netice/hüküm: **Bekâ zâid sıfat mı? Hasım delilleri (imkân, teselsül) ve cevapları (zâtın iktizâsı; devam sıfat).**
+- Delil çeşidi: **analitik**; (T) analitik.
+- Mevzuya bağı: **Fasıl I §6.3**: 'Vâcib'in kıdem ve bekâsı **zâtına muhtaçlık değil, zâtının iktizâsı**' cümlesi **ders katmanı için not**.
+- Doğan sual: —
+
+## c3 p213
+- OCR: orta
+- Okuma: tam
+- İçerik: (Delil 2 devam): 'Devamı başkasıyla ise: başka şey **zât ise devir, başka bir şey ise teselsül**; hepsi muhâl.' **Sonuç cümlesi**: '**Bu, bu bâbtaki makûl mebâhisin özetidir; Allah bilir.**' **Bâb 8 biter**; Râzî bu bâbta **açık hüküm vermeden** iki tarafı (aynı/zâid) ve itirazları aktarıyor: ilk taraf (zâid) delillerle destekli, itirazlarla (imkân, teselsül) sorgulanıyor; **cevaplar zâtın iktizâsı**.
+- Netice/hüküm: **Bekâ: zâtın aynı mı zâid mi — Râzî açık hüküm vermiyor; ilk tarafın (mugâyir) delilleri daha ayrıntılı.**
+- Delil çeşidi: **cedelî (denge)**; (T) cedelî.
+- Mevzuya bağı: **Fasıl I §6.3**: **'Kıdem-bekâ zâid sıfat mı zâtın lâzımı mı' Râzî'de tevakkuf**; Risale **'zâtın lâzımı; zâtın kendisi Allah'ın bekâsının sebebidir' dese de 'Râzî tevakkuf eder' notu**.
+- Doğan sual: —
+
+## c3 p214
+- OCR: boş
+- Okuma: tam (içerik yok)
+- İçerik: Yok.
+- Netice/hüküm: Yok.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c3 p215
+- OCR: boş
+- Okuma: kısmî (görüntü doğrulanmadı)
+- İçerik: OCR metin yok; **okunmadı**.
+- Netice/hüküm: Çıkarılmadı.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: p214–216 ardışık boş (bâb ayracı?) — görüntüden doğrulanmalı.
+
+## c3 p216
+- OCR: boş
+- Okuma: kısmî (görüntü doğrulanmadı)
+- İçerik: OCR metin yok; **okunmadı**.
+- Netice/hüküm: Çıkarılmadı.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: bkz p215.
+
+## c3 p217
+- OCR: orta (başlık yok; Bâb 9 içeriği: hayat)
+- Okuma: tam
+- İçerik: **Allah'ın 'hayy' oluşu**: 'Kastedilen: **bilmesi ve kâdir olması sahih**; kâdir-âlim olduğu delille sabit; **mevcut olan her şeyin vücûdu imtinâ' olamaz** ⇒ bilmek-kudret sahih; **hayy olmanın anlamı bu.**' **İtiraz**: 'Bu, **ademî** (imtinâ nefyi); ademin nefyi **ademdir**; hayy olma **vücûdî mefhûm, zâta sıfat**; ⇒ zâtın aynı olamaz, **zâta kâim vücûdî sıfat**.' **Diğer görüş**: '**hayat, sıfat; o sıfat sebebiyle zâta bilmek ve kudret sahih**.' **Delil**: 'o sıfat olmasa **bu sahihliğin bu zâta bulunması diğer zâtlardan evlâ olmazdı**.' **Cevap**: 'bu ancak **zâtlar mâhiyette müsâvi** ise; **zât-ı mahsûsa mâhiyette diğer zâtlardan muhalif ise** lâzım gelmez.' (Dipnot: nüsha başlığı 'Bâb 7' vs 'Fasıl 12'.)
+- Netice/hüküm: **Hayat: Râzî 'bilme-kudret sıhhati' tanımını veriyor; ademî görünen tanımın vücûdî sıfat olabileceği itirazı; 'zâtlar mâhiyette müsâvi değil' cevabı.**
+- Delil çeşidi: **kavramsal + cedelî**; (T) analitik-cedelî.
+- Mevzuya bağı: **Fasıl I sıfatlar (hayat)**: Sünnî akide **hayat sıfat-ı zâtiyye**; ders katmanında **'hayat = ilim ve kudretin sıhhatinin kaynağı'** (Râzî'nin tanımı: ⊬ bilgi olarak 'Râzî'ye göre').
+- Doğan sual: —
+
+## c3 p218
+- OCR: orta
+- Okuma: tam
+- İçerik: 'Zâtlar **bilme-kudret sıhhatinde muhtelif** olduğu gibi **hayy olma sıhhatinde** de muhtelif; farkın bir sıfatla ta'lîli gerekiyorsa **hayat sıhhatindeki fark başka sıfatla**, **teselsül**. **Farkı zât-ı mahsûsayla ta'lîl ederseniz** aynısı **âlimlik-kâdirlik sıhhatinde niçin câiz olmasın?** **Vallahu a'lem.**'
+- Netice/hüküm: **Hayat sıhhat farkı teselsülle çözülmez; 'zât-ı mahsûsa iktizâ eder' cevabı her sıfata uygulanabilir.**
+- Delil çeşidi: **analitik**; (T) analitik.
+- Mevzuya bağı: **Fasıl I sıfat kuramı**: 'sıfatlar zât-ı mahsûsanın iktizâsıdır' ilkesi **Râzî'de tutarlı** (c3 p142, 149, 218).
+- Doğan sual: —
+
+## c3 p219
+- OCR: boş
+- Okuma: tam (içerik yok)
+- İçerik: Yok.
+- Netice/hüküm: Yok.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c3 p220
+- OCR: boş
+- Okuma: kısmî (görüntü doğrulanmadı)
+- İçerik: OCR metin yok; **okunmadı**.
+- Netice/hüküm: Çıkarılmadı.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: p219–220, 222 boş sayfalar: görüntüden doğrulanmalı.
+
+## c3 p221
+- OCR: orta
+- Okuma: tam
+- İçerik: **Bâb 9 (dipnot: 'Fasıl 12 sonrası: Sıfâtın sayısı'): 'Allah'ın sıfatlarının sayısı'**. 'Mütekellimîn sıfatları **şu sekizde** hasretti: **hayy, âlim, kâdir, mürîd, semî', basîr, mütekellim, bâkî**. **'Başka sıfat isbat eder misiniz?' 'Hayır; delil yalnız bunlara delâlet etti; delili olmayan nefyedilir'**; bazen: '**delili olmayanı isbat câiz görsek bir sayı ötekinden evlâ olmaz; bilinmeyen sıfatlardan sonsuz sayı** lâzım gelir: muhâl.' **Râzî**: 'bu **iki vecih zayıf**': 'delili yok ⇒ nefy' ilkesi **ancak zan verir**; 'bir sayı ötekinden evlâ değil' ifadesi ya **zihnimizde evlâlık yoktur (tevakkuf verir, cezm değil)** ya **nefsü'l-emrde evlâlık yok** (ispat edilemez). **Vâcib: 'aklın sabit gördüğünü sabit, delil bulmadığı ve yokluğuna da delil bulmadığı şeyde tevakkuf'.** (Editör dipnotu: 'buradan kitabın sonuna kadar **tefsîrî fasıllar**; nüshada 13–22; biz **"Sıfatlar Üzerine Sözler"** bâbı altında topladık'.)
+- Netice/hüküm: **Sıfat sayısı: mütekellim hasrı 8; Râzî: delilsizlik nefyi ancak zan; 'delil yoksa tevakkuf'.**
+- Delil çeşidi: **cedelî + yöntem ilkesi**; (T) cedelî.
+- Mevzuya bağı: **KRİTİK — Fasıl I sıfatlar ve derece ilkesi**: Râzî'nin **'bilinmeyeni nefyetmek zan'** ilkesi **'iddia edilen derece gizlenmez'** ilkesiyle örtüşür; **Sünnî akide**: sıfatlar **nassla ve akılla** (Allah'ın isim ve sıfatları **tevkîfî** — nassa dayalı); **Risale sıfat listesini nasla tamamlar**; **Râzî'nin 8 sıfat listesi aklî hasr, nass listesi (99 isim vd.) ayrıdır (⊬)**.
+- Doğan sual: —
+
+## c3 p222
+- OCR: boş
+- Okuma: kısmî (görüntü doğrulanmadı)
+- İçerik: OCR metin yok; **okunmadı**.
+- Netice/hüküm: Çıkarılmadı.
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: bkz p220.
+
+## c3 p223
+- OCR: orta
+- Okuma: tam
+- İçerik: **Bâb 10 ('Sıfatlar üzerine sözler' — tefsîrî fasıl; dipnotta 'Fasıl 13'): 'Allah'ın kâdir ve âlim oluşunun anlamı'**. 'Bu meselelerin en mühimi **nizâ mahallini** araştırmaktır. **Kâdir = kendisinden fiil sahih olan**; bu sıhhat **zât-ı mahsûsanın kendisi değil** (bu sıhhat mefhûmunu bilen, zât-ı mahsûsayı bilmeyebilir). **Âlim = malûma şuûru olan**; şuûr-idrâk **âlim zâtı ile malûm arasında özel nisbet olmadan hâsıl olmaz**; **taalluk denen nisbet ve izâfelerin isbâtı zorunlu.** Öyleyse 'Allah kâdir-âlimdir' sözü, '**Allah'ın ilmi ve kudreti vardır**' anlamındaysa **inkâr edilemez**; 'âlim' **bu nisbetle vasıflı zât**, 'kâdir' **bu sıhhatle vasıflı zât** ise **bu nisbet ve izâfetlerin isbâtı Allah'ın âlim-kâdir olmasının nefyini gerektirir mi**? Başka mânâ kastedilirse (…).'
+- Netice/hüküm: **Râzî: sıfat = nisbet ve sıhhat (izâfî anlam); 'ilmi ve kudreti vardır' inkâr edilemez.**
+- Delil çeşidi: **kavramsal analiz**; (T) analitik.
+- Mevzuya bağı: **Fasıl I sıfat kuramı**: Râzî'nin **'ilim/kudret = nisbet' indirgemesi (c3 p104)**'nin özeti; **Sünnî akide 'sıfat gerçek, zâta kâim mânâ' (Eş'arî)**: **Râzî çizgisi ile fark** (bkz. c3 p104 notu).
+- Doğan sual: —
+
+## c3 p224
+- OCR: orta
+- Okuma: tam
+- İçerik: **Sıfat kuramında mezhepler**: 'ilim **âlimin zâtına kâim sıfat**, malûma **taalluku** var' diyen bir mütekellim: **üç şey: zât, sıfat, ikisi arasındaki taalluk**; 'ilim, âlimliği îcâb eden sıfat' diyenler: taalluk ilme mi âlimliğe mi (**bilmiyorum**), her hâlde **dört ya da beş şey**: zât, ilim, âlimlik, taalluk (ilme ve âlimliğe). **Bizim görüşümüz**: **iki şey: zât ve 'âlimlik' denen nisbet; nisbet zâtın aynı değil, zâta zâid, zâtta mevcut**; bu **saf ma'kûl bahis**. **Lafzî mesele**: (1) sıfatlar zâta **mugâyir midir** yoksa **'ne aynı ne gayrı'** mı? (2) sıfatlara **kadîm** denir mi? (3) **araz** denir mi? (4) zâta **kâim/hâl/mevcut** denir mi, yoksa bu lafızların hepsinden kaçınıp 'zâtla mevcut' mu denir? **Bunların hepsi lafzî, ma'nevî değil.** **Meşhur**: 'filozoflar ve **Mu'tezile sıfatı inkâr eder**; **Sıfâtiyye isbat eder**.' (Editör dipnotu: 'Mu'tezile sıfat inkâr etmez: Kur'ân'da **"Allah her şeye kâdirdir"** okurlar; **Şerhu'l-Usûli'l-Hamse**, **el-Muğnî**; Kâdî Abdülcebbâr Kur'ân'ın teşbihten tenzihine dair bâb yazdı'.)
+- Netice/hüküm: **Râzî: sıfat meselesinin lafzî kısmı (aynı/gayr, kadîm, araz, kâim/hâl) 'ma'nevî değil lafzî'; ma'nevî kısım: nisbet-zât ayrımı.**
+- Delil çeşidi: **tasnif + değerlendirme**; (T) analitik. **Editör notu Mu'tezile'yi savunuyor; Risale'ye alınmaz (editör görüşü)**.
+- Mevzuya bağı: **KRİTİK — Sünnî akide**: **'sıfatlar zâtın aynı da gayrı da değil' formülü, Râzî'nin 'lafzî mesele' değerlendirmesiyle (c3 p224) uyumlu ders katmanı cümlesi** olabilir; ancak **Eş'arî/Mâtürîdî sıfat-ı ezeliyye anlayışı 'gerçek sıfat'** (Râzî'nin 'nisbet' indirgemesi ayrı); Risale metninde **iki ayrım net yazılmalı**.
+- Doğan sual: —
+
+## c3 p225
+- OCR: orta
+- Okuma: tam
+- İçerik: **Bâb 10 (tefsîrî fasıl 2): 'Nizâ mahallinin tahkîki'**. **İki makam**: **(1)** ilim ve kudretin (anlattığımız mânâda **nisbetler ve zâta zâid şeyler**) isbâtı; **(2)** bu **ilim ve kudret denilen sıfatların vâcibü'l-vücûd li-nefsihâ mı, yoksa zâtın mı îcâb ettiği, ya da Allah'ın 'mânâ'yı îcâb ettiği** ve o mânânın bu nisbetleri gerektirdiği. **Makam 1**: 'Bu mânâda **kudret ve ilim zâtın aynı olamaz; zâta kâim iki sıfattır**; **deliller**: **(1)** 'âlim' nakîzi 'âlim değil'; 'mevcut değil' onu nakzetmez; 'mevcut' nakîzi 'mevcut değil', 'âlim değil'i nakzetmez; **âlimlik = mevcudiyet olsa nakîz nakîz olmama çelişkisi** ⇒ **mugâyir**; **(2)** 'âlem hâdis ⇒ kadîm-ezelî-vâcib müessir' delilinden sonra **onun âlim-kâdir olup olmadığı akıl tevakkufta; ayrı delil gerek**; âlimlik-kâdirlik 'mevcut-kadîm-vâcib' olmakla aynı olsa böyle olmazdı; **(3)** 'zât mevcuttur' kaziyyesi fayda vermez; 'zât âlim-kâdir' fayda verir, **ayrı hüccet ister**. (Editör dipnotu: 'Mu'tezile **sıfât-ı ma'nâ ve fiili sıfatları** inkâr etmez; **cârihalı/organ sıfatlarını** inkâr eder'.)
+- Netice/hüküm: **Râzî: ilim ve kudret zâtın aynı değil; zâta kâim iki sıfat (mugâyir) — 3 delil (nakîz, delil ihtiyacı, kaziyye faydası).**
+- Delil çeşidi: **analitik (kavram ayrımı)**; (T) analitik-burhânî.
+- Mevzuya bağı: **KRİTİK — Sünnî akide (sıfât)**: **Ehl-i Sünnet: sıfatlar zâtın aynı değil gayrı da değil; Allah'ın zâtıyla kâim, ezelî**; Râzî'nin **'mugâyir, zâta kâim iki sıfat'** ifadesi **Eş'arî hattına uygun (Râzî Eş'arî ekolünde)**; **Risale 'sıfat gerçek, zâta kâim, ezelî' der**. **Editörün Mu'tezile savunusu (dipnot) alınmaz**.
+- Doğan sual: —
+
+## c3 p226
+- OCR: orta
+- Okuma: tam
+- İçerik: (Makam 1'in delilleri devam.) **(4)** 'Âlim olduğu sabit ⇒ **ilim denen nisbet** hâsıl; **âlimlik ve zâtla malûm arasındaki nisbet o zâtın sıfatı, ona muhtaç**; nisbetler **başkasına göre söylenir**; kâim bi'n-nefs zâtlar öyle değil ⇒ mugâyir.' **(5)** 'Zâtın **kâdir olması** ile **âlim olması** farklı: kâdir âlim olabilir olmayabilir, âlim de kâdir olabilir olmayabilir; **mâhiyetleri ve hadleri farklı**; aynı zât olsalar tek şey tek şey olmaz, **iki ayrı şey** çıkar (muhâl).' **(6)** 'Âlimlik kâdirlik olsa **bilinen her şey makdûr olur**: vâcib-i li-zâtihi ve mümteni-i li-zâtihi **malûm ama makdûr değil** (ehl-i akıl ittifakı) ⇒ malûmiyet ≠ makdûriyet.' **(7)** 'Kâdirin makdûru vücûda çıkınca **aynı makdûra kâdir kalmaz** (îcâd-ı mevcut muhâl); ama **malûm kalır** ⇒ ilim ≠ kudret.'
+- Netice/hüküm: **İlim ≠ kudret ≠ vücûd (7 delil).**
+- Delil çeşidi: **analitik**; (T) analitik-burhânî.
+- Mevzuya bağı: **Fasıl I sıfatlar**: sıfatların birbirinden ayrı olduğunu **gösteren delil kümesi (kaynak: c3 p225–227)**; Risale'ye **derece: burhânî-analitik**.
+- Doğan sual: —
+
+## c3 p227
+- OCR: orta
+- Okuma: tam
+- İçerik: **(8)** 'İlim ayrı mâhiyet, kudret ayrı mâhiyet; biri diğerinin aynı ise 'ilim' ve 'kudret' **müteradif** olur (bâtıl: hadleri, hükümleri, hâssaları ayrı) ⇒ **âlim, kâdir, mevcut mefhûmları ayrı**; bu üç mânâ ya **üç kâim bi'n-nefs zât** (ittifakla bâtıl) ya **biri mevsûf, diğerleri sıfat** ⇒ matlûb.' **Sıfat inkârcılarının delilleri**: **Filozof Hücca 1**: 'Bu sıfatlar **ya vâcib li-zâtihâ ya mümkin li-zâtihâ**; ikisi bâtıl; **vâcib olamaz**: (a) vâcib bir tane; (b) sıfatlar **kendi başlarına kâim değil, zâta kâim**, kâim bi-gayrihi muhtaç ⇒ mümkin. **Mümkin olamaz**: mümkin sebep ister; sebep yalnız zât; (a) **zât hem kâbil hem fâil** (muhâl), (b) **ihtiyaç hudûs vaktinde** (bekâda değil) ⇒ sıfatlar **gayre ma'lûl ise hâdis**; hâdis olamaz.' **Hücca 2**: 'İlâh ya **fert** ya **mürekkeb**; mürekkeb olamaz (imkân); **sıfat+mevsûf mecmûu mürekkeb** ⇒ **ilâh fert-i mutlak**.'
+- Netice/hüküm: **Filozofun sıfat-nefy delilleri (vâcib/mümkin ikilemi; terkîb).**
+- Delil çeşidi: **analitik**; (T) analitik-burhânî.
+- Mevzuya bağı: **KRİTİK — Sünnî akide/Fasıl I §6.2 (terkîb)**: 'sıfat+zât ⇒ terkîb ⇒ imkân' **klasik itiraz**; **Sünnî cevap: sıfatlar zâtın aynı değil, gayrı da değil; ezelî; terkîb (cüzlere ihtiyaç) sıfat için değil**; **Râzî'nin cevabı p231–232'de**.
+- Doğan sual: —
+
+## c3 p228
+- OCR: orta
+- Okuma: tam
+- İçerik: (Filozof Hücca 1–2 devam: **mümkin olamaz: sıfatlar gayre ma'lûlse hâdis; hâdis muhâl ⇒ sıfatlar zâta ma'lûl olamaz**; **Hücca 2 sonucu: ilâh fert-i mutlaktır, sıfat+mevsûf terkîbi yoktur**.) **Mu'tezile delilleri (genel)**: **Hücca 1**: '**Allah'ın âlimliği vâcib; vâcib ta'lîl edilmez**; âlimliği câiz olsa âlim yapan fâile muhtaç ⇒ ilâh abd olur (muhâl); vâcib ta'lîl edilmez: illete ihtiyaç vücûd tarafının rüchânı içindir; rüchân vücûb üzereyse ihtiyaç kalmaz.'
+- Netice/hüküm: **Mu'tezile genel Hücca 1: âlimlik vâcib, ta'lîl edilmez.**
+- Delil çeşidi: **analitik**; (T) analitik.
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c3 p229
+- OCR: orta
+- Okuma: tam
+- İçerik: **Mu'tezile Hücca 2**: 'Kadîmler çokluğu muhâl: **kıdem sübûtî mefhûm**; kadîmler bu mefhûmda müşterek; **mukavvimde muhalifse** her biri iki kayıttan mürekkeb ⇒ **sonsuz cüz** (muhâl); **muhalif değilse** tam mâhiyette müsâvi ⇒ **zât sıfat, sıfat zât** ve **ilâhlar çokluğu**.' **Hücca 3**: 'Sıfat zâta kâim olsa **kadîm-mütegâyir çokluk** (ittifakla bâtıl).' **Hücca 4**: 'Sıfatın zâta hulûlünden anlaşılan **sıfatın o hayizde bulunması (zâtın hayizde olması)**; bu mânâ kalkarsa biri ötekine kâim olmaktan evlâ değil ⇒ **sıfata kâim zât hayizde ve cihette (muhâl)**.' **Hücca 5**: 'Allah'ın zâtı ilâhlığı **bu sıfatsız da tam mı**? Tam ise ilâh sıfatlardan ganî ve sıfatlar nefyolunur; tam değilse gayre muhtaç.'
+- Netice/hüküm: **Mu'tezile delilleri 2–5: kadîm çokluğu, hulûl-hayiz, ilâhlığın tamlığı.**
+- Delil çeşidi: **analitik**; (T) analitik-cedelî.
+- Mevzuya bağı: **Fasıl I §6.2**: 'kadîm çokluğu' itirazı **Vâhid vâcib-sıfat ilişkisi**.
+- Doğan sual: —
+
+## c3 p230
+- OCR: orta
+- Okuma: tam
+- İçerik: **Hücca 5–6 devam**: 'Zât tek başına ilâhlık için yeterli midir? Yeterliyse sıfatlar **lağv**; değilse: sıfatlar tek başına yeterli mi? Yeterliyse zât lağv; değilse ikisi birlikte **fazladan bir şey** hâsıl eder mi? Hâsıl ederse onu îcâb eden zât mı sıfat mı, yoksa mecmû mu (**teselsül**); etmezse birlikteyken **yalnızken hâsıl olmayan ilâhlık hâsıl olmaz** ⇒ **ilâhlık zât-ı mahsûsanın lâzımıdır; sıfata gerek yok**.' **İlim nefyi için özel 3 delil (Mu'tezile)**: **(1)** 'Allah ilimle âlim olsa ilmi **bizim ilmimizin aynı malûmuna aynı vecihle taalluk** eder; **iki ilim misil**; ya ikisi kadîm ya ikisi hâdis (muhâl).' (2) 'ilim ile âlim ⇒ ya **bir ilim ya sonlu çok ilim ya sonsuz ilim**; üçü bâtıl (bir ilimle: gaflet; sonlu: malûmât sonsuz; sonsuz: mevcut adet mütenâhî).' (3) 'İlimle bilse **ilmi kendi ilmi ile mi başka ilimle mi** bilir? Kendiyle ⇒ nisbet kendine muhâl; başka ⇒ devir/teselsül.' **Râzî'nin cevapları**: **1'e**: 'bu **tek şey hem kâbil hem fâil olmaz** asıl üzerine; **bâtıldır**'; **2'ye**: 'zât-ı mahsûsa vâcib-i li-aynihâ olsun, o bu âlimliği ve kâdirliği **îcâb edebilir**'.
+- Netice/hüküm: **Sıfat-nefy delilleri sonu; Râzî'nin ilk cevapları.**
+- Delil çeşidi: **analitik-cedelî**; (T) analitik.
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c3 p231
+- OCR: orta
+- Okuma: tam
+- İçerik: (İlim nefyi 2. ve 3. delil.) **Râzî'nin cevapları**: **1. Filozof Hücca 1'e**: 'Bu **tek şey hem kâbil hem fâil olamaz** asla dayanır; **bâtıl olduğunu gösterdik**.' **Hücca 2'ye**: 'Zât-ı mahsûsa **kendi ayniyle vâcib**, bu **âlimliği ve kâdirliği îcâb edebilir**.' **Mu'tezile Hücca 1'e**: 'Âlimliğin **kendi zâtı (aynı) gereği vâcib** olması **nizâ mahallidir**; **mutlak vâcib** kastedilirse: zât bir mânâyı îcâb ediyorsa ve o mânâ âlimliği îcâb ediyorsa **zât âlimliği bu vâsıtayla îcâb eder; bu âlimliğin vâcib olmasına halel getirmez**.' **Hücca 2'ye**: 'Onlar **âlimlik ve kâdirliği kabul ediyor**; bize karşı ileri sürdüklerini **onlar da âlimlik ve kâdirlik için** kabul etsin'; **Hücca 3'e**: '**'Gayr' ile 'mâhiyette farklı iki hakîkat' kastediliyorsa bu kabul (mesele bu)**; 'birinin diğerinden **zaman ya mekânla** ayrılabilir' kastediliyorsa **her iki mevcudun böyle olduğunu kim söyledi?**'
+- Netice/hüküm: **Râzî'nin sıfat-nefy delillerine cevapları (tek şey hem kâbil hem fâil; zât mânâyı îcâb eder; 'gayr' iki anlam).**
+- Delil çeşidi: **cedelî-analitik**; (T) analitik.
+- Mevzuya bağı: **Fasıl I sıfat kuramı**: **cevap şeması ders katmanı için hazır**: (i) sıfat zâta muhtaç değil zâtın iktizâsı; (ii) 'gayr' iki anlam; (iii) kadîm çokluğu terimsel.
+- Doğan sual: —
+
+## c3 p232
+- OCR: orta
+- Okuma: tam
+- İçerik: Cevaplar devam: **Mu'tezile Hücca 2'ye**: 'onlar da **âlimlik ve kâdirliği kabul ediyor**; ne dediklerse biz aynısını **âlimlik ve kâdirlik için** ileri sürer.' **Hücca 3**: 'gayr = iki muhtelif hakîkat ⇒ kabul; = biri ötekinden zaman-mekânla ayrılabilen ⇒ niçin her iki mevcut böyle olsun?' **Hücca 4 (hulûl = hayizde)**: 'lâzım gelen kelâm zaten 'ben bu hüküm için ne kastediyorsunuz?' 'evlâ değil' önermesi zayıf mukaddime (önce anlatıldı).' **Hücca 5–6**: 'zât-ı mahsûsa **mânâyı îcâb eder, mânâ âlimliği**' (aynı cevap). **İlim özel delillerine**: 'aynı malûma taalluk eden iki ilim misil' — kabul etmeyiz; '**bize karşı söylediğiniz her şey taallukâtta size lâzım**.' **Sonuç**: '**Bu delillerin hepsi zayıf; hepsi ancak 'bu taallukların sıfatlarla ya da zâta kâim mânâlarla ta'lîl edildiğini' söyleyene yönelir; biz böyle demiyoruz; bu taallukların 'malûmât' (…)**' (cümle p233'e).
+- Netice/hüküm: **Râzî sıfat-nefy delillerini zayıf buluyor; hepsi 'taalluk sıfatla ta'lîl edilir' diyene yönelir; kendisi öyle demiyor.**
+- Delil çeşidi: **cedelî**; (T) analitik-cedelî.
+- Mevzuya bağı: **Fasıl I sıfat kuramı**: Râzî'nin **'sıfat nefy delilleri zayıf' hükmü**; **(T) derece: cedelî**.
+- Doğan sual: **Râzî 'taalluklar malûmât' cümlesinin devamı ne?** (p233.)
