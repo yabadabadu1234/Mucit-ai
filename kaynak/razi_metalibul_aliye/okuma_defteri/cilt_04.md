@@ -577,3 +577,75 @@ Biçim: cilt 1–3 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **reductio + taksîm**; (T) burhânî biçim (kıdem tarafı).
 - Mevzuya bağı: **KRİTİK — Fasıl I §3, §6.3**: **zamanın hudûsu iddiası** ⇒ 'her hâdis başka hâdisle mesbûk' silsilesine bağlanıyor; **Risale'nin 'zaman hâdis' cümlesi c4 p13–18 (mütekellim cevabı) ve c4 p49 (7. cevap) ile eşleşmeli**.
 - Doğan sual: —
+
+## c4 p65
+- OCR: orta
+- Okuma: tam
+- İçerik: (6. hüccet devam; kıdem tarafı): 'Allah ezelde ileride belirli vakitte ihdâs etmeye **azmetti**; göstereceğiz ki **îcâd ve tekvîn ancak kasdla olur**; **azmin mâhiyeti kasdın mâhiyetinden farklıdır**; **bir fiile azmin aynıyla o fiile kasda inkılâbı imkânsız**; bu azmin bâtıl olup **kasdın hâdis olması** kabul edilmelidir ⇒ **'o azim âlemin belirli vakitte ihdâsına yeter' diyenin sözü fâsit.**' Bu, **1. cevabı iptal eden delillerin toplamı.** **2. cevap (maslahat) 'son derece zayıf'**: **1. hüccet**: **maslahat-ı râcihe içeren vakit ezelde hâzır mı**? Hâzırsa fiil ezelde; değilse 'müessiriyette lâzım olan her şey ezelde hâsıl' ilkesi çiğnenir (kat'î delille bâtıl). **2. hüccet**: o vaktin **ziyâde maslahata ihtisası** ihdâsın o vakte tahsisini **gerektirir mi**? Gerektirirse **ilâh mûcib bi'z-zât**, gerektirmezse (p66) devam.
+- Netice/hüküm: **Kıdem tarafı (filozof) 1. cevaba (irâde) ve 2. cevaba (maslahat) itirazları**; **azm–kasd ayrımı**: azim kasda inkılap etmez.
+- Delil çeşidi: **reductio + mâhiyet ayrımı**; (T) burhânî biçim (kıdem tarafı). **[Delil ≠ dava: 'azim ile kasd ayrı mâhiyet' ayrımı ispat edilmeden kabul ediliyor ('ilerde ispat edeceğiz' vaadi).]**
+- Mevzuya bağı: **Fasıl I §8**: 'irâde-azm-kasd' terim ayrımı **Risale'nin irade tanımında** yazılmalı; c3 Bâb 4 (irâde hakikati) ile bağ; **'azim kasda inkılap etmez' iddiası kaynağa göre incelenecek (⊬)**.
+- Doğan sual: —
+
+## c4 p66
+- OCR: orta
+- Okuma: tam
+- İçerik: (2. hüccet devam): gerektirmezse **bu takdirde belirli vakit bu tür müreccihe ihtisas etse de âlemin o vakitte hâdis olmaması imkânsız değil**; mümkin olan her şey için farz edilen vukû muhâl doğurmaz; müreccih hâsılken bir kere hâsıl, bir kere gayr-i hâsıl farz edilirse **ayrım ek bir müreccihe mevkufsa** salt maslahat ihtisası kâfi olmaz; mevkuf değilse **müreccihsiz rüçhân (muhâl)**. **3. hüccet**: vaktin bu ihtisası **zâtı/zâtının lâzımları/ne biri ne diğeri** ile olur. **Zâtı ile ise iki vecihle bâtıl**: (1) o vakit özel eseri gerektirdi, öteki vakitler gerektirmedi ⇒ **vakitler farklı mâhiyet** ⇒ **vakitler karşılıklı hâdislerden ibaret, her hâdis başka hâdisle mesbûk, evvelsiz**; (2) vaktin **zâtı gereği** belirli eseri (maslahat) gerektirmesi 'vakit belirli eserin illeti olabilir' hükmü ⇒ **neden 'vakit âlemin hudûsunun illeti' olmasın** (p67).
+- Netice/hüküm: 2.–3. hüccet (maslahat cevabına): mûcib bi'z-zât; vaktin zâtı sebep olamaz.
+- Delil çeşidi: **reductio**; (T) burhânî biçim.
+- Mevzuya bağı: **Fasıl I §8**: p67'de devam.
+- Doğan sual: —
+
+## c4 p67
+- OCR: orta
+- Okuma: tam
+- İçerik: (3. hüccet devam): '**vaktin zâtı hudûsun illeti olsun** ⇒ **sâni' nefyi**, bâtıl.' **Lâzım ile ise** (bu vaktin bir lâzım-ı zâtîsi hâssa, hâssa maslahatın illeti) aynı deliller. **Ne zâtı ne lâzımı ise** maslahat ihtisası **câizât** kısmından; 'bu vaktin âlemin hudûsuna ihtisası' için söylediklerimiz aynen geri döner. **4. hüccet**: 'bu söz **Allah'ın fiilleri ancak kulların maslahatlarına uygun** yapmasına bina; **bu aslı iptal etmek için önceden müstakssâ söz geçti**' (kıdem tarafı, **c3 p279–328 (Râzî'nin hikmet bâbı) delillerine atıf**). **5. hüccet**: 'Allah maslahat gözetse bile, **âlemi kendisinden bir lahzanın binde biri kadar önce veya sonra yaratsa** mükelleflerin maslahatından **hiçbir şey değişmez**; hatta **feleğe bir cevher-i ferd ekleme veya çıkarma** maslahatı değiştirmez'. **6. hüccet (p68)**.
+- Netice/hüküm: **Kıdem tarafı, hudûs tarafının 'maslahat' cevabını, Râzî'nin kendi c3 hikmet bâbındaki iptalini kullanarak reddediyor.**
+- Delil çeşidi: **reductio + atıf (c3)**; (T) cedelî-burhânî biçim. **[Kendi tenkidim: Râzî'nin c3 p279–328'deki 'maslahatla ta'lîl bâtıl' silahını burada kıdem tarafının ağzından da işitiyoruz; aynı silah iki tarafta — F 27-B.]**
+- Mevzuya bağı: **KRİTİK — Fasıl I §8**: 'maslahat' cevabı Risale'ye **alınmaz** (Râzî'nin kendi iptali; c4 p48'deki 2. cevap ile tutarlı işaretleme). **'Vakit farkı maslahatı değiştirmez' (5. hüccet) ders katmanı için 'iyi bir itiraz örneği'**.
+- Doğan sual: —
+
+## c4 p68
+- OCR: orta
+- Okuma: tam
+- İçerik: **6. hüccet**: 'mükelleflerden birine dönebilecek her maslahat **dünyada veya âhirette nef'**; nef' = **lezzet ve sürûr yahut elem ve gamın defi**; hepsini Allah **mükellefe îsâl etmeye kâdir**; ister âlemi o vakitte yaratsın ister başka vakitte ⇒ **hâlkın maslahat ve mefsedet hâlleri âlemin belirli vakitte hâdis olmasıyla veya olmamasıyla değişmez**. Bu beyanlar bu cevabın zayıflığını gösterir. **3. cevap (ilim) zayıf, 3 vecihle**: **1. vecih**: 'Allah'ın âlemin hâdis olacağını bildiği **vaktin hâzır olması**, âlemin hudûsunda lâzım olan şeylerden biri' ⇒ vakit ezelde hâzır mı? Hâzırsa **âlem ezelde**; değilse **'müessiriyette lâzım her şey' ilkesi çiğnenir**; bu cevabın hâsılı aynı harfe döner; **'kahredici delille' o ilke ispatlanmıştır.**
+- Netice/hüküm: 6. hüccet: maslahatın vakitten bağımsızlığı; 3. cevaba (ilim) 1. itiraz.
+- Delil çeşidi: **reductio**; (T) burhânî biçim (kıdem tarafı).
+- Mevzuya bağı: **Fasıl I §8**: 'ilim ile tahsis' cevabının filozofça çürütülüşü; c3 p313–315 ('ilim engel değil' cevaplarının zayıflığı) ile **aynı hat**.
+- Doğan sual: —
+
+## c4 p69
+- OCR: orta
+- Okuma: tam
+- İçerik: **3. cevaba 2. vecih**: '**irâdenin ilimle ta'lîli bâtıl**: **ilim ma'lûma tâbidir, ma'lûmu tâbi kılmaz**; ilim şeye olduğu gibi taalluk eder; Allah'ın ilmi âlemin belirli vakitte hudûsuna ancak **hudûs o vakitte ihtisaslı olsaydı** taalluk eder; sizin görüşünüze göre hudûs o vakte **irâde ihtisas ettiği için**; irâdeyi o ilimle ta'lîl ederseniz **devir**.' **3. vecih**: 'bu **belirli ilim hâsılken** irâde başka vakitlere ihdâsı tahsise salih mi? Salihse bu ilim **ihtisasın sebebi olamaz**; değilse ilâh **mûcib bi'z-zât**, bu sizce bâtıl, ve sübûtu takdirde âlem (kıdem) lâzım.' **4. cevaba (ezelin mâniiyeti) itiraz**: **1.** ezelin zevâli isdâr şartı ⇒ lâzım olan her şey ezelde hâsıl değil (kahredici delil); **2.** 'mümkinin müessire istinâdı ezelî ve ebedî imkânsız **değil** (ileride kahredici deliller); **hudûs hâcetin illeti, cüzü, şartı değil**' ⇒ bu söz düşer.
+- Netice/hüküm: 3. cevaba (ilim) 2.–3. itiraz; 4. cevaba (ezel) 1.–2. itiraz.
+- Delil çeşidi: **devir + reductio**; (T) burhânî biçim. **'İlim ma'lûma tâbidir' önermesi Sünnî ana çizginin ilim anlayışıyla uyumlu; kıdem tarafı onu 'irâdeyi ilimle ta'lîl devirdir' için kullanıyor.**
+- Mevzuya bağı: **KRİTİK — Fasıl I §8 (ilim-irâde)**: Risale **'ilim keşfeder, irâde tahsis eder' cümlesini yazarken 'irâdeyi ilimle ta'lîl' demekten kaçınmalı** (devir itirazı). **'Hudûs hâcetin illeti değil'** (kıdem tarafı) **Râzî'nin başka ciltlerde işleyeceği bir tez (⊬ atıf)**.
+- Doğan sual: —
+
+## c4 p70
+- OCR: orta
+- Okuma: tam
+- İçerik: (4. cevaba itirazın devamı): **3.** 'ezelin mâni' kıldığınız **bu 'ezel' vâcib mi mümkin mi**? **Vâcibse zevâli muhâl**, fiil ebediyen olmaz; **mümkinse müreccihe muhtaç**, müreccihe muhtaç olan **bu görüşe göre ezelî değil** ⇒ 'ezel' denenin ezelî olmaması gerekir ⇒ mâni' saydıkları **ezelde hâsıl değil**. **4.** 'ezel dediğiniz şey **kendinde belirli, zâtıyla mevcut bir vakit mi**? **Öyleyse işaret edilebilen vakit, ezel değil**; onda vâki her şey **evveli olan bir vakitte vâki**; mâni' hâsıl olmaz; **kendinde mevcut belirli vakit değilse** **hâricde hiç vücûdu olmayan**, yalnız vehim ve zihinde vücûdu olan bir şey; bu tür hayal ve vehimler **nefsü'l-emirde bir şeye mâni olmaz**. **5. cevaba (mümteni' iken mümkin) itiraz**: **1.** imkân, müessiriyette muteber şeylerden; ezelde yoksa 'lâzım her şey ezelde hâsıl' çiğnenir.
+- Netice/hüküm: 4. cevaba 3.–4. itiraz (ezelin mâhiyeti); 5. cevaba 1. itiraz.
+- Delil çeşidi: **taksîm (vâcib/mümkin; mevcut vakit/vehim)**; (T) burhânî biçim (kıdem tarafı). **[Delil ≠ dava: 'ezel = vehim' kolu, ezeli zamansal bir 'başlangıçsızlık' değil zihinsel yapı sayıyor; mütekellim 'ezel = evvelin nefyi' tanımıyla bu itirazı cevaplayabilir (p48, 4. cevap).]**
+- Mevzuya bağı: **Fasıl I §3, §6.3**: 'ezel' kavramının **ontolojik statüsü (mevcut vakit mi, nefy mi?)** Risale'de açıkça yazılmalı; c1 Mesele 7 ('ezel ve ebed hakîkati') ile **doğrudan bağ**.
+- Doğan sual: —
+
+## c4 p71
+- OCR: orta
+- Okuma: tam
+- İçerik: (5. cevaba 1. itiraz sonu): 'imkân ezelde hâsıl değilse müessiriyette lâzım her şey ezelde hâsıl değil; bu bâtıl.' **2. itiraz: 'zâtı gereği mümteni' olanın zâtı gereği mümkine inkılâbı imkânsız', 3 vecihle**: **(1)** mümkinin mümkin olması **mâhiyetin lâzımı mı arızı mı**? **Lâzım ise** mümkin **ebediyen mümkin** ⇒ mümteni'in mümkine inkılâbı imkânsız; **arız ise** mâhiyet o imkâna **kabil**; lâzımsa maksat hâsıl; arızsa aynı soru ⇒ **teselsül**. **(2)** bu mâhiyet, kendinden başka her şeyden **münezzeh olmayı** hâsıl eder mi eder mi? Ederse **ebediyen mümteni'**, etmezse **ebediyen mümkin**; 'bazı vakitlerde zâtı gereği mümkin, öteki vakitlerde zâtı gereği mümteni'' **aklın sarîhine aykırı**. **(3)** **mümteni'in mümkine inkılâbı caiz olsa mümkinin vâcibe, mümteni'in vâcibe inkılâbı da akla yatar**; **hâdis, vücûdundan önce mümkindi, vücûda girince vâcib oldu** denebilir ⇒ **hudûsla ve mümkinâtın imkânıyla vâcibü'l-vücûda istidlâl edilemez.**
+- Netice/hüküm: **5. cevaba karşı 3 vecih: mâhiyetin muktezâsı değişmez; inkılab caiz olursa istidlâl çöker.**
+- Delil çeşidi: **reductio + mâhiyet ilkesi**; (T) burhânî biçim (kıdem tarafı); öncül: 'mâhiyetin muktezâsı değişmez' (c4 p35–36 ile aynı).
+- Mevzuya bağı: **KRİTİK — Fasıl I §3**: **'imkân/imtinâ' inkılâbı' itirazı hudûs delilinin '5. cevap' kolunu vuruyor**; Risale **bu kolu kullanmaz** (mümteni' iken mümkin olma).
+- Doğan sual: —
+
+## c4 p72
+- OCR: orta
+- Okuma: tam
+- İçerik: **6. cevaba (soru her takdirde döner ⇒ bâtıl) itiraz**: **1. vecih**: 'Allah'ın kudretinin âlemin vücûdundaki te'sîri **belirli bir vakte ihtisaslı mı değil mi**? **İhtisaslıysa bâtıl**: belirli vakte belirli îcâdı **muhassıssız** tahsis **müreccihsiz rüçhân (muhâl)**; öyleyse **ikinci şık**: kudretin te'sîri **hiçbir vakte ihtisaslı değil, bütün vakitlerde dâim** ⇒ **âlem ebedî ve sermedî mevcût**; bu takdirde **muhâl her şıkta lâzım değil, yalnız bir şıkta lâzım**; o şık muhâl-mustelzim olduğundan **muhâl**; hak **ikinci şık: kudretin te'sîri ezelde ve ebedde sabit**.' **Hasım**: 'dâim te'sîr de bâtıl: **îcâdın ezelde vukûu muhâl**.' Râzî/kıdem tarafı: (devam p73).
+- Netice/hüküm: **6. cevaba karşı: 'dilemma'nın bir şıkkı muhâl-mustelzim, öteki âlemin kıdemi'.**
+- Delil çeşidi: **dilemma + reductio**; (T) burhânî biçim (kıdem tarafı).
+- Mevzuya bağı: **KRİTİK — Fasıl I §3, §8**: 'kudretin te'sîri dâim ⇒ âlem kadîm' **hudûs delilinin karşısında en çıplak biçim**: Risale bunu **'te'sîr ile eserin ezelde vâki olması arasında fark (irâde)'** ile cevaplamalı; cevap c4 devamında aranacak.
+- Doğan sual: —
