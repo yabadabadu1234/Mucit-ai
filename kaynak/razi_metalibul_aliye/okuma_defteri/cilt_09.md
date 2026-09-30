@@ -289,3 +289,93 @@ Biçim: cilt 1–8 ile aynı. Dipnottaki harfler neşredenin nüsha işaretlerid
 - Delil çeşidi: —
 - Mevzuya bağı: —
 - Doğan sual: —
+
+## c9 p21
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Bâb 1, Fasıl 1: 'Kulun fiil ve terkte kendi başına müstakil olmadığına delâlet eden deliller'.** **Kimin sesi: Râzî (kendi burhanları); dipnotta neşredenin Eş'arî 'a'râz' anlatımı ve Maymonides atfı.** '**Bu mes'elede burhanlarımız var. BURHAN 1: belirli fiile kâdir olanın o fiilde terk sahih mi değil mi: ikincisi ise o kudret fiili gerektirir; kudret hâsıl olunca fiil vâcib, fıkdânında imtinâ' ⇒ cebir lâzım.**' **Dipnot (neşreden)**: '**İnsan fiilleri konusunda insanlar ihtilaf etti; Eş'arîlerin çoğu (cumhûru): bu kalemi hareket ettirdiğimizde Allah dört araz yaratır ve bunlar birbirinin sebebi değil, vücûdda yan yana: 1. irâdem (kalemi hareket ettireyim); 2. kudretim; 3. insan hareketi (elin hareketi); 4. kalemin hareketi; onlara göre insan bir şey isteyip yaptığında (iddiasınca) ona irâde yaratılır, dilediği fiile kudret yaratılır, fiil yaratılır; kudret-i mahlûka ile yapar, kudretin fiilde eseri yoktur. Mu'tezile: kendisinde yaratılan kudretle yapar. Bazı Eş'arîler 'mahlûk kudretin fiilde bir te'sîri var' dedi (Allah'ın kudretiyle müşterek), çoğu bunu reddetti. Hepsine göre bu irâde, kudret, bazılarına göre fiil de bekâsız a'râzdır; Allah kalemi hareket ettirirken her ânda hareket üstüne hareket yaratır (ânlar = tek tek zamanlar); Allah her ânda tüm varlıkların şahıslarında (melek, felek…) arazları yaratır; bu 'Allah'ın fâil oluşuna hakîkî îmândır; böyle yapmadığına inanan Allah'ın fâil oluşunu inkâr etmiştir' (onlara göre).' Kitabın 'Mûsâ b. Meymûn' bu ibâreyi (Hayrânlara Kılavuz'dan) zikretti ve 'bu tür inançlar hakkında bence ve her akıl sahibi nezdinde: 'yoksa siz onu aldatıyor musunuz insanı aldatır gibi?' (Eyüb 13:9) denir' diye eleştirdi.**' (**neşredenin notu; Râzî'nin değil**).
+- Netice/hüküm: **Burhan 1 (cebr delili, tekrar): fiil ve terke kudret sahih değilse kudret fiili gerektirir ⇒ cebir; neşreden: Eş'arî 'her ân yeniden yaratma (occasionalism)' ve Maymonides eleştirisi.**
+- Delil çeşidi: **kelâmî burhan; neşredenin polemik-tarih notu**; (T) **Neşredenin dipnotu Râzî'nin değil; ⊬ Maymonides atfı doğrulanmadı; Risale ALMAZ.**
+- Mevzuya bağı: **Fasıl I §8 kader (Râzî'nin kendi burhanları)**: **Burhan 1 c8 p11–12'nin cebr delili 1'i ile aynı; aynı silah hem nübüvvet şüphesinin öncülü (c8) hem Râzî'nin kader burhanı (c9): F 27-B kaydı.**
+- Doğan sual: —
+
+## c9 p22
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî; dipnotta neşredenin devam notu.** Burhan 1 devam: '**kudret fiile ve terke sâlihse fiil tarafının terk tarafına rüçhânı ya müreccihe bağlıdır ya değil: değilse mümkinin iki tarafından birinin ötekine müreccihsiz rüçhânı: bu sâni'in nefyini gerektirir; ayrıca bu takdirde fiilin vukûu mahz tesâdüf olur: kulun dilemesi ve seçmesi anlamsız, cebir lâzım. Müreccihe bağlıysa: müreccih ya kuldan, ya başkasından, ya ne kuldan ne başkasından: kuldan olamaz, yoksa taksîm tekrar (teselsül ya cebir). Üçüncü (ne kuldan ne başkasından) bâtıl: 'hâdisin muhdis ve müessirsiz hudûsunu' câiz kılar, sâni'in nefyi ve cebir lâzım. O hâlde bu müreccih 'başkasının ihdâsıyla' hâdis olmuştur. Bu müreccih ancak fiil tarafının terk tarafına rüçhânını gerektirdiğinde müreccih olur; bu rüçhân hâsıl olunca fiil vâcib: çünkü terk tarafı fiil tarafıyla eşitken rüçhân imtinâ'; mercûhken rüçhâna daha imtinâ'; mercûh imtinâ' olunca râcih vâcib (iki nakîz arasında çıkış yok) ⇒ kuldan fiilin sudûru 'başkasının kendisinde bu müreccihi yaratmasına' bağlıdır.**' **Dipnot**: 'Eş'arîlerin 'a'râz' izâhının devamı: 'Kalem hareketli olduğu sürece Allah her ân hareket yaratır…' (p21 notunun devamı).
+- Netice/hüküm: **Burhan 1'in tam takrîri: müreccih zinciri Allah'ın yarattığı müreccihte biter; müreccih hâsıl olunca fiil vâcib; kul müstakil değil.**
+- Delil çeşidi: **taksîm + reductio (kelâmî burhan)**; (T) **Râzî derecesi: 'mutlub'; F 27-B: c4 aporiasının kader uygulaması.**
+- Mevzuya bağı: **Fasıl I §8 kader**: aynı.
+- Doğan sual: —
+
+## c9 p23
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî burhanın sonu; hasım itirazları ('فإن قيل') ve cevaplar başlıyor.** '**…müreccih başkasının fiiliyle kuldan hâsıl olunca fiilin sudûru vâcib ⇒ kudret ile dâî mecmûu fiili vâcib kılar; Allah bu ikisini yaratırsa fiil vâcib, yaratmazsa fiil imtinâ' ⇒ kul fiilde ve terkte müstakil değil.**' **İTİRAZ 1: 'bu istidlâl bedîhîlere karşıdır (reddedilir): bu takdirde kudret ve dâî hâsıl olunca fiil vâcib, kulun fiilde imkânı ve ihtiyârı yok; kulun hâli fiilin sudûru vâcib ile imtinâ' arasında dönüp durur; oysa biz vicdânen zarûrî buluruz: fiili dilersek yaparız, terki dilersek terk ederiz.**' **İTİRAZ 2 (diyelim): 'bu delil gâibde de mutarrid: Allah'ın âlemde müessir olması için vazgeçilmez her şey ezelde hâsılsa âlemin varlığını Allah'ın rüçhânı: sizce rüçhân varsa vücûb; bu takdirde Allah zâtı gereği mûcib (ihtiyârla fâil değil); ezelde hâsıl değilse hudûsu hakkında söz (teselsül değil, ezelî sıfatlarda biter, sonra aynı ilzâm).**'
+- Netice/hüküm: **Hasım itirazları: (1) bedîhî ihtiyâr vicdânı; (2) delil Allah'a da uygulanırsa Allah mûcib.**
+- Delil çeşidi: **itirazlar**; (T) —
+- Mevzuya bağı: **Fasıl I §8**: itiraz 1 'vicdânî ihtiyâr' Ehl-i Sünnet için de önemli (kulun ihtiyâr hissi); itiraz 2 c9 p15'in aynısı.
+- Doğan sual: —
+
+## c9 p24
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: hasım itirazları (İtiraz 3–4); dipnotta Kâdî Abdülcebbâr alıntısı.** '**İTİRAZ 3: 'kâdir fiile de terke de kâdirse bir tarafı diğerine müreccihsiz tercih edebilir: bakın, yırtıcıdan kaçan kişiye iki eşit yol göründüğünde birini müreccihsiz seçer; susuz kişiye iki eşit kadeh sunulduğunda biri; aç kişiye iki ekmek sunulunca biri; demek kâdir bir tarafı diğerine müreccihsiz tercîh edebilir.' İTİRAZ 4: 'diyelim fiilde dâî şart ve bu dâîyi Allah yaratır; neden dâî hâsıl olunca fiil vâcib? Neden fiil vukûa 'evlâ' olsun da vücûb haddine varmasın? Kâdirin iki zıda nisbeti eşitse birinin ötekinden bedel sudûru imtinâ' (eşitlik rüçhânın nakîzi); iki zıttan birini dâî çağırırsa o zıt vukûa evlâ olur, ama evlâlık vücûb haddine varmaz; dâî sebebiyle rüçhân hâsıl olduğundan iki eşit tarafın birinin öbürüne müreccihsiz rüçhânı lâzım gelmez; evlâlık vücûba ulaşmadığı için cebir lâzım gelmez; müessir-mûcib ile fâil-muhtâr arasında imtiyâz hâsıl. 'Eşitlik hâlinde vukû' imtinâ'sa mercûhiyette imtinâa evlâ' sözüne (p25)'.**' **Dipnot**: Kâdî Abdülcebbâr: 'ilcâ hâlinde müreccih yok: yırtıcıdan kaçarken her birinden kurtulan çok yol varsa her birini diğerinin yerine seçebilir'.
+- Netice/hüküm: **İtiraz 3 (üç misâl: kaçan, susuz, aç), İtiraz 4 (evlâlık ≠ vücûb).**
+- Delil çeşidi: **ihtiyâr temsilleri**; (T) —
+- Mevzuya bağı: **Fasıl I §8**: **İtiraz 3–4 Mu'tezile'nin klasik cevabıdır (müreccihsiz tercih, evlâlık vücûb değil). Risale cevabı: Râzî'nin p25–30 cevapları (aşağıda) ve F 27-B ile iki tarafın ortak öncülü yok kaydı.**
+- Doğan sual: —
+
+## c9 p25
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: hasım itirazının sonu; Râzî'nin cevapları ('والجواب') başlıyor.** İtiraz 4 sonu: 'bu mugalatadır: fiil ma'dûmdu ve ademi ezelden ebede sürmüştü; süregelen adem iktizâya muhtaç değil; müreccih dâî hâsıl olunca vücûdda üç yön (vücûda girişi) hâsıl; onun ademde bâkî kalması imtinâ' değil; bu kudret 'mercûh dâî (terk dâîsi)' ile ter'cih olmaz; çünkü ma'dûmun aslî ademde kalışı müreccihe muhtaç değil.' **Râzî**: '**(1. itiraza cevap)** biz vicdânen buluruz: fiili dilersek yaparız, terki dilersek terk ederiz; ama biz 'fiili dilemeyi dilersek dilemek hâsıl olur' bulmuyoruz; yoksa o dileme hakkında söz döner ve üçüncü dilemeye ihtiyaç, teselsül; bilakis kat'î ve yakînî buluruz ki kalbimizde fiil dilemesi, ondan önce başka bir dileme yüzünden değil hâsıl olur; bazen başka bir zamanda terk dilemesi hâsıl olur, o da öncesindeki başka bir dilemeden değil; ayrıca kalbimizde fiil için cezmî dileme hâsıl olunca fiil mutlaka hâsıl; terk için cezmî dileme hâsıl olunca terk hâsıl; bu hâlleri düşününce dilemenin bizde hâsıl olmasının bizden olmadığını, fiilin dilemenin hâsıl olmasına terettübü de bizden olmadığını biliriz; bu şeyler birbirine terettüb eder; başlangıç ise Allah'ın yaratmasından; demek hepsi Allah'tan; bu itibar, hepsinin Allah'tan olduğuna ve insanın ihtiyâr sûretinde MUZTARR olduğuna en güçlü delillerdendir.**' (p26).
+- Netice/hüküm: **Râzî'nin cevabı 1: vicdân 'dilersek yaparız' der ama 'dilemeyi dilemek' bulmaz; dilemenin ilk hâsıl oluşu bizden değil; 'insan ihtiyâr sûretinde muztarr'.**
+- Delil çeşidi: **vicdânî analiz (dilemenin teselsülü) + kelâmî sonuç**; (T) **Râzî derecesi: 'en güçlü delillerden'; F 27-B: vicdânî gözlemin yorumu; Mu'tezile 'ihtiyâr dileme yeteneğinin kendisidir, dilemeyi dilemek aranmaz' der (ihtiyârın tanımı ayrışması).**
+- Mevzuya bağı: **EN KRİTİK — Fasıl I §8 kader ve Ehl-i Sünnet çizgisi (KAYIT)**: **Râzî'nin kendi ifadesi: 'insan ihtiyâr sûretinde muztarr (mecbur)' — bu formül 'cebr' çizgisinin en açık ifadesidir. Ehl-i Sünnet'in ana hattı (Eş'arî 'kesb', Mâtürîdî 'kulun cüz'î ihtiyârı') kulun ihtiyârını gerçek ama yaratmayan bir sorumluluk kabul eder; Râzî'nin 'muztarr' ifadesi Risale ana metnine ALINMAZ (⊬ Mâtürîdî/Eş'arî kaynak ayrımı sayfa dışı; Risale bunu Sünnet ve kelâm kaynaklarından ayrıca yazar). Risale kader cümlesi 'kul ihtiyârla fiil işler (vicdân), fiilini ve ihtiyârını yaratan Allah'tır; teklîf ve sorumluluk kulun ihtiyârına bağlanır; nasıl birleştiği konusunda Kur'ân iki cümleyi de verir (Nisâ 4/78–79), ayrıntı kelâm ehline aittir' diye yazılır. Bu sayfa 'Râzî'nin kader burhanı' olarak ders katmanında kaynak gösterilir; 'muztarr' ifadesi 'cebr yönü' notuyla.**
+- Doğan sual: —
+
+## c9 p26
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî.** '**(2. itiraza cevap: tabîî müessirlerle ihtiyârî müessirler arasındaki fark) iki vecih: (1) tabîî müessirler dâim, sürekli, değişmez; ısıtmadaki müessir hep ısıtmayı gerektiren vecihle vasıflı kalır; soğutmada da öyle; ihtiyârî fiillerde ise harekete mûcib olan mecmû: kudret + harekete dâî: sağa hareket dâîsi hâsıl olunca sağa hareketi gerektirir; bu dâîler çabuk değişir ve tebeddül eder: kâdirin kalbine sağa hareket dâîsi hâsıl olunca mecmû sağa hareketi gerektirir; sonra bu dâî çabuk zâil olur, sola hareket dâîsi hâsıl olunca mecmû sola hareketi gerektirir. Hâsıl: tabîî işlerde şeyi ısıtmaya mûcib kılan şey kalır, değişmez; ihtiyârî işlerde ihtiyârlar çabuk tebeddül eder ve değişir. (2) tabîî müessirlerin eserlerine şuûru, ilmi, idrâki yok; ihtiyârî müessirler ilim, şuûr ve idrâk vâsıtasıyla te'sîr eder: o fiilin lezzetli/faydalıya götürdüğü tasavvur olunmadıkça yapılmaz; elem ve zarara götürdüğü tasavvur olunmadıkça terk edilmez; bu sebeple bu fiile ihtiyârî, bu fâile muhtâr denir; çünkü ancak hayır tasavvur ettiğinde yapar.**'
+- Netice/hüküm: **Râzî'nin cevabı 2: tabîî ve ihtiyârî müessir farkı = dâîlerin hızla değişmesi ve ilim-şuûr; ihtiyâr = hayır tasavvuruyla fiil.**
+- Delil çeşidi: **tanım/fark gösterimi**; (T) **Râzî'nin 'ihtiyâr' tanımı: 'hayır tasavvur edince yapmak' — bu tanımla 'cebr ve ihtiyâr' bağdaşır (ihtiyâr = dâî ve ilim aracılı); Mu'tezile 'ihtiyârın kulun kendi seçiminde' dediğinden farklı.**
+- Mevzuya bağı: **Fasıl I §8**: Risale 'ihtiyâr' terimini tanımlarken bu iki tanımı (Râzî: dâîye ve ilme bağlı; Mu'tezile: kendi kendine seçme) ayırır ve Ehl-i Sünnet kaynağıyla yazar.
+- Doğan sual: —
+
+## c9 p27
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî.** '**(3. itiraza cevap: 'söylediğiniz Allah'ın zâtı gereği mûcib olmasını gerektirir') gösterdik ki fiil dâîye ve müreccih irâdeye bağlı; sonra teemmül ettik ki kulun tüm dâîleri ve irâdeleri hâdis; bu yüzden kulların dâîleri ve irâdeleri başka müreccihe muhtaç; Allah'ın irâdesi ise ezelî-kadîmdir; bu yüzden başka irâdeye muhtaç değil; iki bâb arasındaki fark bu.** **'Diyelim bu farkı zikrettiğiniz vecihle görüldü; biz size aynı ilzâmı başka vecihle yapalım: Allah'ın irâdesi âlemin belirli vakitte ihdâsına taalluk etti; başka vakitte ihdâsına, birinci taalluk yerine, taalluk etmesi mümkün müydü, değil miydi? Mümkünse müreccihe ihtiyaç; değilse mûcib-muhtâr olamaz (muhtâr değil).'** **Cevap**: '**bu işkâl size 'ilim' yüzünden de vârid; bu miktardan Allah'ın mûcib olması lâzım gelirse ilim yüzünden de size vârid.**' **(4. itiraza cevap: 'kâdir iki mak'dûrundan birini öbürüne müreccihsiz tercih edebilir') bu muhâl; delil: (1) kâdirin iki zıda nisbeti ya eşit ya değil; eşitse rüçhân imtinâ'; yoksa rüçhân müessirsiz hâsıl olur: eşitlik rüçhânı gerektirmez; rüçhânın hâsıl olması eserin hudûsuna cezmdir ⇒ sâni'in nefyi (muhâl); nisbet biri râcihse: bu müreccihsiz rüçhân muhâl olduğunun itirafı; matlûb budur. (2) rüçhân müreccihsiz olsaydı mahz tesâdüf olurdu; …' (p28).**
+- Netice/hüküm: **Râzî'nin cevapları 3 (Allah'ın irâdesi ezelî, kulun dâîleri hâdis) ve 4 başlıyor; karşı ilzâm: 'ilim yüzünden size de vârid'.**
+- Delil çeşidi: **kelâmî ilzâm ve karşı ilzâm**; (T) **F 27-B: 'ilim yüzünden size de' karşı ilzâmı c8 p18'in (13. delil: ilim ⇒ vücûb) çekirdeğidir: aporia iki yönlü kalıyor.**
+- Mevzuya bağı: **EN KRİTİK — c4 irâde-tahsis aporiası**: **Râzî 'Allah'ın irâdesi ezelî olduğu için müreccihe muhtaç değil' cevabını veriyor; hasım 'peki başka vakitte tahsîs mümkün müydü' sorusuyla aporiayı geri getiriyor (p27); Râzî cevaba doğrudan girmiyor, 'ilim yüzünden size de' diyor: aporia kapanmadı, Râzî'nin kalemince de kapanmadı (c4 p426 ile uyumlu).**
+- Doğan sual: —
+
+## c9 p28
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî.** 4. itirazın cevabı devamı: '**(2) rüçhân müreccihsiz olsaydı mahz tesâdüf; gösterdik ki bu cebri gerektirir. (3) kendimizi denedik: dâîler çatışınca fiil güçleşir; bu, dâîler yokken fiil sudûrunun imtinâ' olduğuna delâlet eder.**' **(5. itiraza cevap: yırtıcıdan kaçan, iki yol) iki vecihle: (1) yırtıcıdan kaçan kişi iki yoldan birine gitmeyi kastetmedikçe birinde gitmesi diğerinden müreccih değildir; susuz kişi iki kadehten birini almayı kastetmedikçe eli birine uzanmaz; kaçana o yolu kastetme hâlinin kalbinde hâsıl olmamışsa orada durur, kımıldamaz; susuz kişi kadehlerden birini seçmezse bekler; demek kâdir iki yoldan birini kasıtla tahsîs etmedikçe, iki kadehten birine eli uzatmayı tahsîs etmedikçe o taraf müreccih olmaz; bu durumda bu kast o tarafa dâîdir. Kalır: 'peki kaçanın kalbinde bu yola kast, öbürüne değil, niçin hâsıl oldu? susuz kişinin kalbinde bu kadehi almak irâdesi, öbürüne değil?' Deriz: bu tam bizim delilimizle tutunduğumuz delil…' (p29).**'
+- Netice/hüküm: **Cevap 4 (müreccihsiz tercih tesâdüf ⇒ cebir; dâî çatışınca fiil güç) ve cevap 5 başlıyor: iki yol misâlinde bile önce kast (dâî) hâsıl olmalı.**
+- Delil çeşidi: **vicdânî gözlem + karşı yorum**; (T) —
+- Mevzuya bağı: **Fasıl I §8**: aynı.
+- Doğan sual: —
+
+## c9 p29
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî.** Cevap 5 devam: '**…bu tam bizim tutunduğumuz delil: gösterdik ki fiilin kâdirden sudûru kalbinde belirli dâînin hâsıl olmasına bağlı; o belirli dâînin kalpte hâsıl olması kul cihetinden başka bir dâî değil (yoksa teselsül); mutlaka Allah'tan olmalı; bu takdirde kul ne fiilde ne terkte müstakil olur. Öyleyse bizim üzerimize yönelttiğiniz şey bizim sözümüze i'tirâz değil, te'kid, takviye ve takrîrdir; bu suâl sâkıt, ancak fehmi kıt olandan sâdır olur.** **İkinci vecih: siz ya 'iki zıdda kâdir olandan biri müreccihsiz sudûr eder' ya 'kâdir iki mak'dûrundan birini ötekine müreccihsiz tercih eder' dersiniz; birincisi bâtıl: zarûrî buluruz ki çarşıda bir yere yürüyen, kalbine 'şu yönden başka yöne dönmek bir cihetten maslahat' düştüğünde iki dâî kalbinde eşitse biri öbürüne rüçhân etmez; o insan o yerde kalır, ne ilerleyebilir ne geriler; hangi yönün daha maslahatlı olduğu kalbine düşene kadar; bu rüçhân zâhir olunca o tarafa gitmek kolaylaşır; demek iki zıttan biri kuldan mürecih olmaksızın sudûr eder sözü aklın bedîhesinin reddettiği bir söz; susuz kişi iki kadehten birini seçmeden elini uzatmaz, kadeh kendi kendine kalkıp suyu ağzına dökülmez: bunun bâtıllığı bedîhî.**' (p30).
+- Netice/hüküm: **Cevap 5 sonu: iki eşit yol/kadeh örneklerinde bile önce dâî hâsıl olur; 'dâîsiz tercih' bedîhen bâtıl.**
+- Delil çeşidi: **vicdânî gözlem + kelâmî sonuç**; (T) **F 27-B: gözlem 'seçmeden önce bir kast hâsıl olur' der; Mu'tezile 'kast, kulun kendi seçimidir, ondan önce dâî yok' der; ayırt eden ortak öncül yok.**
+- Mevzuya bağı: **Fasıl I §8**: aynı.
+- Doğan sual: —
+
+## c9 p30
+- OCR: orta-iyi
+- Okuma: tam (sayfa Burhan 1'in cevaplarının ortasında biter; devamı p31'de)
+- İçerik: **Kimin sesi: Râzî.** '**'Kâdir iki mak'dûrundan birini öbürüne müreccihsiz tercih eder' sözü kendinde çelişik: bu söyleyen, kâdir iki mak'dûrdan birini ötekine tercih etmedikçe rüçhân hâsıl olmadığını kabul etti, ve o tercihin kâdir olmanın kendisinden ayrı, ona fazla bir şey olduğunu kabul etti; tercih hâsıl olmadıkça rüçhân hâsıl olmuyorsa ve tercih 'kâdir olmaktan' zâid ise bu, rüçhânın ancak müreccihle hâsıl olduğunun itirafı: 'kâdir tercih eder' sözü zâid bir müreccihin hâsıl olduğunu işâr eder; 'müreccihsiz' sözü zâid müreccihi nefyeder; iki nakîzin cem'i bâtıl. (6. itiraza cevap: 'fiil dâîyle vukûa evlâ olur ama vücûb haddine varmaz') bu bâtıl, birkaç vecihle: HÜCCET 1: gösterdik ki eşitlik hâlinde imtinâ', mercûhiyet hâlinde imtinâa daha evlâ; mercûh imtinâ' olunca râcih vâcib; 'ademde bekânın terk dâîsi yüzünden olmadığı, her şeyde asıl bekânın üzerinde olduğu' sözüne: bu muhâl; çünkü mümkin vücûdla adem arasında dönen; vücûdu vücûdu iktizâ eden şeyle ta'lîl edildiği gibi ademi de o müessirin ademiyle ta'lîl edilir; 'ademi nefsi için sürer' denirse ya mümkinin vâcib olması ya mümkinin müessire muhtaç olmaması lâzım: ikisi muhâl. HÜCCET 2: … (p31)'.**'
+- Netice/hüküm: **Cevap 5–6: 'kâdir müreccihsiz tercih eder' sözü kendi içinde çelişik; 'evlâlık ≠ vücûb' cevabı Hüccet 1 (mercûh imtinâ' ⇒ râcih vâcib; adem de müessirin ademiyle ta'lîl edilir) ile reddediliyor.**
+- Delil çeşidi: **çelişki gösterimi + reductio**; (T) **F 27-B: 'adem de ta'lîl edilir' önermesi Mu'tezile'nin 'aslî ademin sebebe muhtaç olmadığı' önermesine karşı; ayırt edici ortak öncül yok.**
+- Mevzuya bağı: **Fasıl I §8**: aynı.
+- Doğan sual: —
