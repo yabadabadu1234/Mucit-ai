@@ -17,12 +17,17 @@
 
 ## Dosyalar
 
-| Dosya | İçerik | Boyut |
-| :-- | :-- | :-- |
-| `MAT01.pdf` … `MAT09.pdf` | Cilt 1–9, taranmış sayfalar (resim PDF'i, metin katmanı yok) | 1,3–3,5 MB |
-| `MAT01_djvu.txt` … `MAT09_djvu.txt` | Aynı ciltlerin OCR metni | 0,36–0,9 MB |
+| Dosya | İçerik |
+| :-- | :-- |
+| `metin_sekka/cilt_01.txt` … `cilt_09.txt` | **Gerçek metin** (Şâmile `.bok`, Arapça); basılı sayfa işareti `[N]` |
+| `metin_sekka/fihrist_sekka.tsv`, `sayfa_sayilari.json`, `README.md` | Neşrin kendi fihristi (361 satır); eski PDF sayfa sayıları; metnin künyesi |
+| `FIHRIST_TAM.md` | Tam fihrist: Arapça + Türkçe (benim tercümem) + basılı sayfa + okuma durumu |
+| `ALAKA_SIRASI.md` | Tam fihristin bizimle alaka sırası (7 katman, 352 satır) |
+| `HARITA.md`, `OKUMA_DURUMU.md`, `OKUMA_PLANI.md`, `BURHAN_FORMULLERI.md` | Okuma haritası, durum, plan, formüller |
+| `okuma_defteri/`, `bolum_ozetleri/` | Sayfa mühürleri (eski defterler PDF/OCR sayfa numaralıdır), bölüm özetleri |
+| `araclar/oku.py`, `durum.py` | Gerçek metinden sayfa okutma; okuma durumu sayımı |
 
-**OCR kalitesi:** Gövde metni çoğunlukla okunaklıdır; dipnotlarda, fihristlerde ve noktalı satırlarda ciddî bozulma vardır (ör. cilt 7 ve 9'un fihristleri okunamaz). **Alıntı yaparken PDF sayfasına bakılmalı, OCR'a güvenilmemelidir.** Sayfa görüntüleri `risale/content/img/razi_*.png` içinde, OCR'daki konum bilgisi (`_djvu.xml`) kullanılarak işaretlenmiştir.
+**Taranmış PDF'ler ve OCR metni (`MAT01–09.pdf`, `*_djvu.txt`, `sayfa_metni/`) padişahın emriyle SİLİNDİ** (yalnız OCR'a dayanmak hataydı; gerçek metin varken OCR okunmaz). Depoya OCR ve taranmış PDF bir daha alınmaz (CLAUDE.md 3-A 25-E). Eski defter girdileri OCR'dan yazıldığı için "gerçek metinle doğrulanmadı" sayılır.
 
 ## Dokuz cilt
 

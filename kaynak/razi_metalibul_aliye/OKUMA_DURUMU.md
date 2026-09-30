@@ -16,4 +16,4 @@ Bu dosya `araclar/durum.py` ile **okuma defterlerinden otomatik** üretilir; ell
 | 8 | 201 | 167 | 83 | 2/149/2 | 1–156, 191–201 | 157–190 |
 | 9 | 395 | 221 | 56 | 5/191/10 | 1–140, 199–252, 369–395 | 141–198, 253–368 |
 
-"Okundu" = o sayfanın OCR metni baştan sona okundu ve defterde kaydı var. Başlıktan/fihristten çıkarım "okundu" sayılmaz.
+"Okundu" = o sayfanın metni baştan sona okundu ve defterde kaydı var. Başlıktan/fihristten çıkarım "okundu" sayılmaz.

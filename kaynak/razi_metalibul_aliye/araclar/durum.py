@@ -4,6 +4,7 @@ OKUMA_DURUMU.md dosyasını üretir: okunan/okunmayan sayfa aralıkları sayıyl
 import json,re,os
 d=os.path.dirname(os.path.abspath(__file__))+'/../'
 rows=[]; tot_p=tot_r=0
+SAYI=json.load(open(d+'metin_sekka/sayfa_sayilari.json',encoding='utf-8'))['pdf_sayfa_sayisi']
 def ranges(nums):
     nums=sorted(nums); out=[]
     for n in nums:
@@ -11,7 +12,7 @@ def ranges(nums):
         else: out.append([n,n])
     return ', '.join(f'{a}' if a==b else f'{a}–{b}' for a,b in out) or '—'
 for v in range(1,10):
-    P=json.load(open(d+f'sayfa_metni/cilt_0{v}.json',encoding='utf-8')); n=len(P)
+    n=SAYI[str(v)]
     f=d+f'okuma_defteri/cilt_0{v}.md'
     read=set()
     q={'iyi':0,'orta':0,'kötü':0}
@@ -28,6 +29,6 @@ f'**Toplam:** {tot_r} / {tot_p} sayfa okundu ve deftere yazıldı ({100*tot_r/to
 '| Cilt | Sayfa | Okunan | % | OCR: iyi/orta/kötü | Okunan aralık (PDF sayfa indisi) | Okunmayan aralık |','| :-- | --: | --: | --: | :-- | :-- | :-- |']
 for v,n,r,rr,ur,q in rows:
     o.append(f'| {v} | {n} | {r} | {100*r/n:.0f} | {q["iyi"]}/{q["orta"]}/{q["kötü"]} | {rr} | {ur} |')
-o.append('\n"Okundu" = o sayfanın OCR metni baştan sona okundu ve defterde kaydı var. Başlıktan/fihristten çıkarım "okundu" sayılmaz.\n')
+o.append('\n"Okundu" = o sayfanın metni baştan sona okundu ve defterde kaydı var. Başlıktan/fihristten çıkarım "okundu" sayılmaz.\n')
 open(d+'OKUMA_DURUMU.md','w',encoding='utf-8').write('\n'.join(o))
 print('\n'.join(o))
