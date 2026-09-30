@@ -397,3 +397,75 @@ Biçim: cilt 1–7 ile aynı. Dipnottaki harfler neşredenin nüsha işaretlerid
 - Delil çeşidi: **felsefî psikoloji + sudûr**; (T) filozof aktarımı; **Râzî'nin bu sayfada kendi hükmü YOK; hüküm sonraki sayfalarda (K2 F6 sonu, F7) aranacak.**
 - Mevzuya bağı: **EN KRİTİK — İSLÂM KAYDI (KIRMIZI) ve Fasıl II vahiy tanımı**: **Bu, vahyi 'nefs-mütehayyile-his-i müşterek zinciri' ile açıklayan felsefî modeldir (İbn Sînâ/Fârâbî tipi); Ehl-i Sünnet vahyi Allah'ın Cibrîl aracılığıyla peygambere ulaştırması ve peygamberin onu gerçek bir indirme olarak alması diye tanır (Necm 53/5, Tekvîr 81/19 ve Şuarâ 26/192–195 Râzî'nin kendi okumalarında da melek aracılığı vardı: c7 p426, c8 p114). Risale bu modeli ALMAZ; Fasıl II 'vahiy' tanımı Kur'ân'ın kendi ifadesiyle yazılır (melek aracılığı, indirme). Râzî'nin bu modele KENDİ tavrı henüz okunmadı (fihrist K2 F6–F7); okunmadan Râzî'ye 'filozof modelini benimsiyor' hükmü yazılmaz.**
 - Doğan sual: **Râzî K2 F6–F7 sonunda bu modeli nasıl değerlendiriyor (kabul mü, ilzâm mı, aktarım mı)?**
+
+## c8 p133
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: filozofların takrîri (Fer' 2'nin sonu ve Fer' 3, İbn Sînâ'dan); sonra 'واعلم' ile Râzî'nin KENDİ tenkidi başlıyor.** Fer' 2 sonu: '**iki engelden (2): nâtık nefs cevheri gâyet kuvvetliyse mütehayyileyi sûretlerde değişiklik yapmaktan men eder.**' **Fer' 3**: '**uyanıklıkta gayb âlemine ittisâle güç yetirmeyen nefsler, uyanıkken insanı şaşırtan, hayâli hayrette bırakan şeylerle yardım alır: kimi hızlı hızlı nefes alıp verme, kimi parlak şeye dalıp bakma (gözde titreme); bunlar hayâli şaşırtır, nefs o an bedenin tedbîrinden kopar, gaybi idrâk fırsatını yakalar. Şart: insanın zayıf akıllı olması, cin temâsıyla ilgili anlatılan her şeyi tasdîk etmesi: çocuklar, kadınlar, budalalar; onların hisleri zayıflayıp evhâmları belirli bir matlûba şiddetle çekilince nefslerine o anda gayb âlemine iltifat vâki olur; bazen bir hitâb işitir, cinden sanır; bazen sûret görür, cinlerin yardımcısı sanır; ona gaybdan söylediği şey verilir; dinleyenler bunu alıp işlerinde tedbîr kurarlar.**' '**Bu, Şeyh er-Reîs'in bu bâbda takrîr ettiğinin sonudur.**' **Râzî**: '**bu bütün fer'lerin aslı iki asıl: ASIL 1: 'peygamberlerin, velîlerin ve başkalarının müşâhede ettiği sûretler dışarıda mevcut değil; mevcut olsaydı hissi sağlam herkes idrâk ederdi; bu şartlarda idrâk hâsıl olmayabileceğini câiz görsek, yanımızda dağlar ve gökgürültüleri olup görmeyip işitmeyebilirdik; bu cehâletlere götürür.'** (p134).
+- Netice/hüküm: **İbn Sînâ'nın modeli Fer' 3: zayıf akıllıların cin temâsı algısı = nefsin bedenden kopup gayb âlemine iltifatı; Râzî bu bütün modelin iki asla dayandığını söylüyor ve Asıl 1'i aktarıyor.**
+- Delil çeşidi: **felsefî psikoloji aktarımı; sonra Râzî tenkidinin girişi**; (T) —
+- Mevzuya bağı: **KRİTİK — kimin sesi geçişi**: p127–133 (Fer' 1–3) **filozofların/İbn Sînâ'nın modelidir; Râzî'nin kendi sesi 'واعلم أن الأصل' ile bu sayfanın sonunda başlar. Ledgerde p127–132 için 'Râzî'nin kendi hükmü YOK' kaydı doğru çıktı.** **Cin ve şeytan konusunda: modelin cin temâsını 'nefs-hayâl' olarak açıklaması c7 M4 (cin-şeytan) okunurken karşılaştırılacak.**
+- Doğan sual: —
+
+## c8 p134
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî (kendi tenkidi).** Asıl 1'e cevap: '**'bu cehâletler' size (filozoflara) daha çok lâzım: eğer insanın sûretler görüp müşâhede ettiğini, onlarla konuşup seslerini işittiğini, şekillerini gördüğünü, sonra bunların dışarıda mevcut olmadığını câiz görürsek, gördüğümüz-işittiğimiz insan sûretleri, dağlar, denizler ve gökgürültüsü hakkında da hiçbirinin dışarıda vücûdu olmayıp mahz hayâl ve his-i müşterekte kaydolmuş sûretler olması câiz olur; bu sözün mahz SOFİSTLİK olduğu ma'lûm. Bilakis biz deriz ki: bu hak'tan uzaklıkta ve cehâlete dalışta ilkinden şiddetli: bizim savunduğumuz görüşte gördüğümüz her şeyin hak mevcut olduğunu cezmederiz; yalnızca yanımızda hâzır olup göremediğimiz şeyler olabileceğini câiz görmek zorundayız; bu, gördüğümüz-işittiğimiz her şeyin vücûdunda şüphe doğurmaz; sizin görüşünüzde ise gördüğümüz her sûretin, işittiğimiz her sesin vücûdunda şüphe vâki olur; bu tam cehâlet ve kâmil sofistliktir.** **Seçtiğiniz söz gâyet fâsid.**' **'Bu hâlin hâsıl olması şu hâllere bağlıdır: uyku, zayıf akıl (mecnûnlar), kâmil nefs ve kuvvetli akıl (enbiyâ ve evliyâ); bunlardan hiçbiri hâsıl olmayıp insan mu'tedil mizâçta kalırsa bu hâller olmaz; bu durumda bu şeylerin dışarıda vücûdunu kat'î biliriz' derlerse: cevap (p135).**
+- Netice/hüküm: **Râzî (kendi tenkidi, kat'î dil): filozofların 'peygamberin gördüğü sûretler dışarıda mevcut değil' asıl 1'i sofistliğe götürür; mevcudu görmemek mümkün ama görülen her şeyi şüpheye düşürmez.**
+- Delil çeşidi: **reductio (sofistlik ilzâmı) + fark: 'göremediğimiz mevcut' ≠ 'görüp mevcut olmayan'**; (T) **Râzî derecesi: 'gâyet fâsid; tam cehâlet'; F 27-B: bu ilzâm ayırt edicidir: filozofun 'dışarıda olsaydı herkes görürdü' gerekçesi (p128) 'göremediğimiz mevcut' ihtimalini reddediyor; Râzî bu ihtimali savunuyor.**
+- Mevzuya bağı: **KRİTİK — Fasıl II vahiy ve İSLÂM KAYDI (KAZANIM)**: **Râzî, filozofların 'vahiy sûretleri iç kuvvetin ürünüdür' modelinin ana gerekçesini 'sofistliğe götürür' diye çürütüyor: bu, Ehl-i Sünnet'in 'melek dışarıda gerçek bir mevcuttur, herkes görmez' okumasına Râzî'nin kendi kalemiyle verdiği destektir (aynı cümle: 'yanımızda hâzır olup göremediğimiz şeyler olabilir'). Risale Fasıl II'de vahyin gerçek melek aracılığıyla oluşunu bu argümanla (Râzî'nin filozoflara reddiyesi diye) destekleyebilir; hüküm Kur'ân ile (Necm 53/5–18, Şuarâ 26/192–195 ⊬ doğrulanacak).**
+- Doğan sual: —
+
+## c8 p135
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî.** Cevap: '**'bu hâl belirli şartlara bağlıdır' derlerse: bu yolla insanın gerçekte mevcut olmayan sûretleri hissettiği ortaya çıktığına göre bu hâlin sebeplerinin 'şunlarla sınırlı' olduğunu yakînî burhanla göstermemiz gerekir; ikinci makamda bunların hepsinin zâil olduğunu yakînî burhanla; üçüncü makamda hükmün bekâ hâlinde sebepten müstağnî olmadığını… Bu mukaddimelerin sıhhatine dair kesin burhanlar getirildikten sonra bile, hissedilen şeylerin dışarıda vücûduna cezmimiz bu gâmız nazarî mukaddimelere bağlı olur; nazarî ve gâmıza bağlı olan daha çok nazarî ve gâmız olur; bu durumda hisle elde edilen ilimler tamamen bâtıl olur ⇒ onların sözü bâtıl, sofistliği iltizâm eder.**' '**Bu filozofları bu illet ve sebepleri zikretmeye iten şey: meleklerin ve cinlerin inkârında ittifakları; biz 'el-Ervâh' kitabında (c7) bunda onların bir şüphe veya hayâlinin bile olmadığını gösterdik; bu sözlerin aslı melek ve cin nefyi olup buna delilleri olmadığı ve sofistliğe götürdüğü bilinince bu söz gâyet fâsid ve bâtıl.**' '**Bu aslın tamamı bu.**' **ASIL 2**: '**bu sözler bâtın hissin isbâtına dayalı; biz kâhir kat'î burhanla gösterdik ki tüm idrâklerle tüm idrâk edilenleri idrâk eden nâtık nefstir; bu idrâkleri dağınık kuvvetlere paylaştırmak bâtıl ve fâsid söz; (p136: bu beyânlardan sözleri gâyet zayıf ve fâsid).**'
+- Netice/hüküm: **Râzî: (Asıl 1) filozofların modeli hissin güvenilirliğini yıkar ve sofistliği gerektirir; onları bu modele iten meleklerin ve cinlerin inkârıdır; c7 'el-Ervâh'ta onların inkârda delili olmadığı gösterildi. (Asıl 2) bâtın hisler kuvvetler değil, idrâk eden nâtık nefstir (c7 M3 F14 ile bağlı); paylaştırma bâtıl.**
+- Delil çeşidi: **reductio (sofistlik) + kat'î burhan atfı (c7)**; (T) **Râzî derecesi: 'kat'î kâhir burhan' (c7 M3 F14'e atıf, henüz okunmadı ⊬).**
+- Mevzuya bağı: **KRİTİK — c7 borç bağı (F 1 ilim ve Fasıl II/III)**: **Râzî iki yerde c7'ye atıf yapıyor: (1) 'el-Ervâh'ta melek ve cin nefyinde delil olmadığı gösterildi (c7 M1 F3 şüphe ve cevabı — okunacak); (2) 'nâtık nefs tüm idrâklerin öznesidir; dağıtma bâtıl' (c7 M3 F14 — okunacak). Bu iki atıf c7'nin C1/E1 okumalarında doğrulanır; doğrulanmadan bu sayfadaki 'kat'î burhan' atfı Risale'ye kaynak olarak yazılmaz.** **İSLÂM KAYDI: melek ve cinlerin varlığını savunması Ehl-i Sünnet ile uyumlu (Risale alır; âyetler Kur'ân'dan doğrulanır).**
+- Doğan sual: —
+
+## c8 p136
+- OCR: orta (bazı satırlar düşmüş: 'الطباع التام' ve bir cümle eksik)
+- Okuma: tam (bir iki cümle OCR hasarı)
+- İçerik: **Kimin sesi: Râzî (kendi hükmü: 'hak şudur').** Asıl 2 sonu: 'sözleri gâyet zayıf ve fâsid.' '**Hak: bu bâb çok vecih ihtimal taşır.** **1.** gösterdik ki nâtık nefsler çok nev' ve farklı tâifedir; her tâifenin bir FELEKÎ RÛHU (o tâifenin vücûdunun illeti, hâllerinin ıslâhını üstlenen); bu felekî rûh, onlara nisbetle asıl, maden ve pınar gibi; ona 'tabâ'i' (tab'-ı tâm) denir; rüyalarda, uyanıklıkta ve ilhâmlar yoluyla onlara (sûretleri) gösteren şeyin o tabâ' olması imkânsız değil; o tabâ' bu şekiller şekillenmeye nâdir olarak kâdir de olabilir. **2.** melek tâifeleri ve cin tâifeleri vardır; bunlar belirli fiiller getirmeye kâdirdir; bazı fiillerde beşere zâhir olurlar, bazı fiillerde beşerden gizlenirler. **Bu söz sofistliği iltizâmdan evlâdır. Bu bâbda söylediğimiz budur.**'
+- Netice/hüküm: **Râzî (kendi hükmü, 'hak' dediği): rüya/ilhâm/vahiy benzeri sûretlerin kaynağı için iki ihtimâl: (1) her nefs tâifesinin felekî rûhu (tab'-ı tâm), (2) melek ve cin tâifeleri; ikisi de imkânsız değil, sofistlikten evlâ.**
+- Delil çeşidi: **ihtimâl sayımı (imkân delili)**; (T) **Râzî derecesi: 'imkânsız değil'; kat'î değil.**
+- Mevzuya bağı: **İSLÂM KAYDI (KIRMIZI + KAZANIM)**: **(1) 'Her nefs tâifesinin felekî rûhu (illeti ve ıslâhçısı) ve ona ilhâm/rüya yoluyla sûret göstermesi' sudûr-felek nefsi öğretisidir; Risale ALMAZ (Allah tek yaratıcı ve tedbîr edicidir; felek rûhları vasıtasıyla îcâd ve ilhâm öğretisi Ehl-i Sünnet dışı). (2) 'Melek ve cin tâifeleri vardır, bazı işlerde beşere zâhir olur, bazılarında gizlenir' Ehl-i Sünnet inancıyla uyumludur; Risale bunu Kur'ân delilleriyle yazar (ayrıntı ve isim/sınıflandırma Sünnet kaynaklarından doğrulanır); Râzî'nin bunu 'ihtimal' derecesinde yazması ilim kaydı: Risale kesinlik için nakli delile dayanır.** **Tenkid: Râzî burada kendi Fasıl II ilkesine (vahiy = melek aracılığı) 'ihtimallerden biri' derecesi veriyor; c7 p426'daki 'enbiyâ vahiyden başka söylemez' (Necm 53/5) sözüyle birlikte okunursa: ilk okuma ihtimâl, ikincisi Kur'ân ifadesi.**
+- Doğan sual: —
+
+## c8 p137
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **K2 Fasıl 7: 'Filozofların, enbiyâ ve evliyânın mûcize ve kerâmetleri getirmeye kâdir olmasının SEBEBİ hakkındaki sözünün hikâyesi'.** **Kimin sesi: filozofların takrîri; sonra Râzî'nin kendi cevabı ('واعلم أن حاصل هذا الكلام').** '**Onların sözünün hâsılı: 'nefs kitabında (c7) gösterdik ki insanın vehmî kuvveti cisimlerde te'sîre kâdir olabilir; bunun takrîrinde çok vecih zikrettik. Bu noktada dediler: nefsi bu kuvvette kâmil bir insanın vücûdu imkânsız değildir; o hâlde bu âlemin hayûlâsında dilediği gibi tasarrufa kâdir olur. Bunu destekleyen: zayıf nefsler bir araya gelince bir çeşit te'sîr kuvveti hâsıl olur: büyük bir topluluğun fikri belirli bir şeye yöneltmesi gibi; yağmur duâsı (istiskâ) namazı ve benzerlerinde müşâhede edilen gibi; bu hissedilir ise güçlü nefsin bu garîb ve bedî' şeyleri yapmaya kâdir olması imkânsız değildir.**' **Râzî**: '**bu sözün hâsılı: o nefs bir hâssayla vasıflıdır, bu yüzden bu mûcize ve kerâmetleri getirmeye kâdir. Bu bir ihtimâl olduğu gibi, diğer vecihler de aynı ihtimâldedir: bu hâlleri meleklere, cinlere, felekî ittisâllere, ya da kevâkibin fiillerine (ki onlar nâtık diri varlıklardır) veya akıl ve nefslere isnâd etmek gibi. Hepsi ihtimâlde ise bunların mûcizeyi yalnız nefsânî kuvvete isnâdda cezmetmeleri MÜREGGİHSİZ TERCÎH'tir.**' '**Bu bâbın sonu; ardından sihir konuşulacak ki mûcize ile sihir, nebî ile sâhir arasındaki fark hâsıl olsun.**'
+- Netice/hüküm: **Râzî (kendi hükmü): filozofların 'mûcize ve kerâmet nefsin vehmî kuvvetinin tasarrufudur' hükmü 'müreccihsiz tercih' (ihtimallerden birinin keyfî seçimi); meleklere, cinlere, felekî ittisâllere, kevâkib fiillerine, akıl ve nefslere isnâd da aynı derecede ihtimâl.**
+- Delil çeşidi: **ihtimâl eşitliği + 'müreccihsiz tercîh' ilzâmı (F 27-B'nin kendisi: hasım delili ayırt etmiyor)**; (T) **Râzî derecesi: filozofun hükmünü çürütür (cezmi elemiş), ama kendi alternatifini de kat'î yapmaz: 'ihtimâl'.**
+- Mevzuya bağı: **KRİTİK — Fasıl II mûcize tanımı (K1 ↔ K2 gerilimi ÇÖZÜLDÜ)**: **Râzî K2 F7'de filozofların mûcize izâhını (nefsin vehmî kuvveti) 'müreccihsiz tercih' diye reddediyor; bu, K2 F1 p107'deki 'mûcizeden kastedilen amelî kuvvetin cisimlerde tasarrufu' cümlesinin filozof modeline yaslandığını ve Râzî'nin kendi hükmü OLMADIĞINI gösterir (o cümle 'tekmîl yolunun' bir ön varsayımı olarak yazılmıştı; sayfa p107'de 'bu, ma'kûl bir sözdür' diye devam etmişti — gerilim kalır: p107 'kat'î istikrâ' dili; F7 'ihtimâl, müreccihsiz tercih' dili. Risale her ikisini de kaydeder: K1 (Allah'ın fiili, tasdîk için) esastır; K2 F7'de filozof izâhı elenmiştir.**
+- Doğan sual: **K3 başında Râzî sihri nasıl tarif ediyor ve mûcizeden nasıl ayırıyor? (p139 sonrası; okunacak.)**
+
+## c8 p138
+- OCR: —
+- Okuma: okunmadı (boş sayfa)
+- İçerik: Boş.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c8 p139
+- OCR: iyi
+- Okuma: tam (başlık sayfası)
+- İçerik: '**Bu kitabın (Nübüvvât) 3. kısmı: sihir ve kısımları hakkında söz**' (başlık sayfası).
+- Netice/hüküm: **K3 p139'da başlıyor; K2 p101–137.**
+- Delil çeşidi: —
+- Mevzuya bağı: **A5: sihir–mûcize ayrımı; K3 başı okunacak.**
+- Doğan sual: —
+
+## c8 p140
+- OCR: —
+- Okuma: okunmadı (boş sayfa)
+- İçerik: Boş.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
