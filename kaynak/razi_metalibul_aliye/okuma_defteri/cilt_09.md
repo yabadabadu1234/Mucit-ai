@@ -1748,3 +1748,111 @@ Biçim: cilt 1–8 ile aynı. Dipnottaki harfler neşredenin nüsha işaretlerid
 - Delil çeşidi: **cevap; (T) F 27-B: 'kuvvetli zan istiyoruz' cevabı Râzî'nin usûlü ile tutarlı (p214'te de 'zan yeter, aklî te'yîdle'); ancak p201–213'te âhâd'ın zanniliğini uzun uzun takrir edip burada zanla yetinmesi, Fasıl 1 sonucunun 'zannî delil yakînî meselede kullanılmaz' cevabını ('zan yeter, teyit için') kendi sınırlarına çekiyor: iç uyum sorunu yok, ama Risale için: Râzî'nin kendi ölçüsünde nass 'te'yîd edici zan'dır, bağımsız yakîn değil (Fasıl IV kaydı).**
 - Mevzuya bağı: **Fasıl IV: DOĞRUDAN (zannî delil ve te'yîd).**
 - Doğan sual: —
+
+## c9 p241
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî (hadis ve şerh).** '**Hüccet 23 (Buhârî, İmrân b. Husayn) devam: Yemen halkı: 'biz (müjdeyi) kabul ettik; dinde fakîh olmak ve bu işin başlangıcını sormak için geldik.' Resûlullah: 'Allah vardı ve ondan başka hiçbir şey yoktu; arşı su üzerindeydi; zikirde her şeyi yazdı; sonra gökleri ve yeri yarattı.' Râzî: bu haberde faydalar: (1) hayiz ve cihet mevcût bir şeydir: hissen işaret edilir, hareket edenin kasdıdır, yakınlık ve uzaklıkla vasfedilir, takdîr ve mesâha kabul eder; böyle olan mutlaka mevcût şey; öyleyse 'Allah vardı ve ondan başka hiçbir şey yoktu' hayiz ve cihetlerin ezelde mevcût olmadığına delâlet eder; o hâlde Allah ezelde hiçbir hayiz ve cihette değildi. (2) 've ondan başka şey yoktu' cisimlerin, arazların, akılların ve nefslerin hudûsuna delâlet eder; ayrıca Mu'tezile'nin 'ma'dûm şeydir' sözünün fesâdına. (3) 've zikirde her şeyi yazdı' kaza ve kader meselesindeki sözümüze delâlet eder: kul o mektûbun hilâfını yapsa Allah'ın hükmü bâtıl, haberi kizb olurdu; muhâl; muhâle götüren muhâl; öyleyse Levh-i Mahfûz'da yazılan her şey vâki'dir ve kulun onun hilâfına kudreti yoktur. HÜCCET 24: Âişe: 'Allah cennet yarattı ve ona ehl yarattı, babalarının sulbündeyken; cehennem yarattı ve ona ehl yarattı': istidlâl zâhir. HÜCCET 25: Nebi'den meşhur dua: 'Allahümme lâ mâni'a limâ a'tayt ve lâ mu'tiye limâ mena't'; kulun fiili Allah'ın halkından değil olsaydı kul Allah'ın verdiğinin çoğunu men' eder (p242).**' 
+- Netice/hüküm: **Hüccet 23–25: 'Allah vardı ve ondan başka şey yoktu' hadisi (Fasıl I'e temas: cihetten tenzih, âlemin hudûsu); 'her şeyi zikirde yazdı'; Âişe'nin 'ehli babalarının sulbünde' hadisi (tekrar); 'lâ mâni'a limâ a'tayt' duası.**
+- Delil çeşidi: **hadis + istidlâl; (T) F 27-B: Râzî'nin 'ezelde şey yoktu ⇒ cihet ve hayiz yoktu ⇒ Allah cihetten münezzeh' çıkarımı hadisin lafzından ilâve bir adımdır (cihet=şey öncülü Râzî'nin felsefesi); ortak öncül yok. İSLÂM KAYDI: bu hadis Buhârî'de İmrân b. Husayn'dan gelir (Râzî'nin nakli; ⊬ kaynak bu sayfada gösterilmiyor); 'arşı su üzerindeydi' ibaresi Kur'ân'daki (Hûd sûresi) ibâreyle aynı; Râzî'nin 'Allah cihette değildir' hükmü Risale'nin Fasıl I §6 'tenzih' bahsindeki kaydıyla (c2) birlikte yoklanacak.**
+- Mevzuya bağı: **Fasıl I (El-Vücûd: âlemin hudûsu, tenzih); Fasıl I §8.**
+- Doğan sual: **Hadisin Buhârî'deki lafzı ve şerhleri (kaynak aranacak).**
+
+## c9 p242
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî.** '**Hüccet 25 sonu: kul Allah'ın vermediğini verir, Allah'ın verdiğini men' ederdi; hadise aykırı. HÜCCET 26: Muâz b. Cebel: Nebi: 'Sana söyleyeceğin kelimeleri öğreteyim mi: Allah'ım, seni anmama, sana şükretmeme ve güzel ibâdet etmeme yardım et.' İstidlâl: bu yardım ikdâr, temkîn ve özürlerin izâlesi ise hepsini Allah yaptı, duayla istemenin faydası yok; başka bir şeyse matlûbumuz. HÜCCET 27: Muâz Nebi'ye: 'Beni cennete sokacak bir amel haber ver.' 'Allah'ın kolaylaştırdığı kimseye kolaydır.' İstidlâl: nass Allah'tan sâdır teysîrin amelde yüsrü lâzım ettiğini gösterir; amelde yüsr yoksa Allah'tan teysîr hâsıl olmamıştır; melzûmun ademi lâzımın ademini gösterir; oysa ikdâr, akıl halkı ve özürlerin izâlesi anlamındaki teysîr herkese hâsıl; o hâlde burada kastedilen başka bir şey olmalı: tâatlere dâîlerin halkı ve zıtlarından sârifelerin halkı. HÜCCET 28: 'Hiçbir kalp yoktur ki Rahmân'ın iki parmağı arasında olmasın; dilerse doğrultur, dilerse saptırır' ve 'Ey kalpleri çeviren, kalbimi dinin üzere sabit kıl' ve 'mîzân Rahmân'ın elindedir; alçaltır yükseltir'; Câbir: 'Resûlullah çokça 'Ey kalpleri çeviren, kalbimi dinin üzere sabit kıl' derdi; 'Ey Allah'ın Resûlü, sana ve getirdiğine îmân ettik, yine de bize korkar mısın?' 'Kalpler Rahmân'ın iki parmağı arasında; onları şöyle çevirir' ve işâret parmağı ile orta parmağı işaret edip hareket ettirdi.**' 
+- Netice/hüküm: **Hüccet 26–28: 'Allah'ım, yardım et', 'Allah'ın kolaylaştırdığına kolaydır', 'kalplerin iki parmak arasında' hadisi.**
+- Delil çeşidi: **hadis + istidlâl; (T) F 27-B: Hüccet 26–27'de Râzî 'i'âne/teysîr = ikdâr, temkîn, özürlerin izâlesi ise herkese hâsıl' argümanı hasmın 'lütuf' cevabını (p232) tekrar çürütme çabası: ayırt edici olan 'teysîr yüsrü lâzım eder' önermesi hadisin lafzı değil yorum. İSLÂM KAYDI: 'iki parmak arasında' hadisi Ehl-i Sünnet'te ihtilâfsız kabul edilir ve sıfat nasslarına dâir usûle göre tefsir edilir (⊬ kendi bilgim); bu sayfadaki lafzı Risale'ye ancak kaynaklı alınır ve 'Allah'ın parmakları' sıfatını cismiyyet ifade etmeyecek biçimde (tenzih kaydıyla) yazılır; Râzî'nin bu sayfadaki yorumu (dâî ilkâ'sı) ALINMAZ.**
+- Mevzuya bağı: **Fasıl I §8; Fasıl I (sıfatlar: mutashâbih sıfat nassları).**
+- Doğan sual: —
+
+## c9 p243
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî.** '**Hüccet 28 şerhi: 'Şâri'in bu haberde beyân ettiği şey aklî yakînî burhanlarla sıhhati malûmdur: uzuv fiilleri kalp dâîlerine bağlı; illet-i adem adem-i illet; kalp hâsıl-hâsıl olmama arasındaki bir mevsûf gibi; fiil dâîsi hâsıl olursa fiil hâsıl, olmazsa fiil hâsıl değil; şâri' dâînin hâsıl olmasını ve olmamasını iki parmakla ifade etti; dâînin hâsıl olması ancak Allah iledir; yoksa teselsül. Bu mana bu aklî burhanla ve rivâyet ettiğimiz haberle sâbit olduğu gibi Kur'ân nassıyla da sâbit: 'Bilin ki Allah kişi ile kalbi arasına girer' (Enfâl sûresi). Bu aklî burhanları, bu âyetleri ve özellikle bu haberi tefekkür edip nefsine dönen için mezhebimizin sıhhatinde kalbinde şüphe kalmaz; ancak bu, Allah'ın kolaylaştırdığı kimseye kolaydır.' HÜCCET 29: Ebû Hüreyre: Nebi: 'Sana arşın altından cennet hazinelerinden bir kelime öğreteyim mi: 'lâ havle ve lâ kuvvete illâ billâh'; Allah der ki: 'Kulum teslim oldu ve teslim etti.'' İstidlâl: kudret fiil ve terke nisbetle eşit; kudret bu eşitlik hâlinde kaldıkça fiil sudûru imtinâ'; dâîlerin tahsili ve sârifelerin izâlesiyle fiil tarafı terk tarafına ağır basınca fiil hâsıl olur; bu takviye 'lâ havle ve lâ kuvvete illâ billâh' sözüyle işâretlidir; îmân ancak onunla tam olduğu için 'arşın altından ve cennet hazinelerinden' dedi.**' 
+- Netice/hüküm: **Râzî: 'iki parmak' hadisinin aklî burhanlarla sıhhatini iddia ediyor; Hüccet 29: 'lâ havle ve lâ kuvvete illâ billâh' hadisi = dâî tercihi.**
+- Delil çeşidi: **hadis + istidlâl; (T) F 27-B: 'dâîlerin ilkâsı Allah iledir, yoksa teselsül' Bâb 1'in çekirdek öncülü; hadis ve âyet (Enfâl) ile 'tekit' ediliyor; ortak öncül yok.**
+- Mevzuya bağı: **Fasıl I §8; Fasıl IV.**
+- Doğan sual: —
+
+## c9 p244
+- OCR: orta ('أبو ظهمان' adı okunuyor)
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî.** '**HÜCCET 30: Ebû Tahmân (OCR), İbn Abbas'tan: 'Allah'ın ilk yarattığı kalemdir; ona 'yaz' dedi; 'Ne yazayım?' dedi; 'Kıyamet gününe kadar olacak şeyi yaz' dedi.' İstidlâl: bu mektûbun içine kul fiilleri de girer; fiilin hilâfı ilmi cehle, sıdkı kizbe çevirir; hepsi muhâl. Râzî: 'bil ki bu bâbda gelen hadisler çoktur; zikrettiğimiz bu haberlerle istidlâlin keyfiyetine vâkıf olan diğer haberlerle de tutunabilir. Allah en iyi bilendir.'**' 
+- Netice/hüküm: **Bâb 3 Fasıl 2 (30 hüccet) tamam: 30 hadisle 'kader'.**
+- Delil çeşidi: **hadis + istidlâl; (T) F 27-B: 30 hüccetin bütününün delili aynı öncüle döndü ('yazılan/bilinen/haber verilen vâcibü'l-vukû'; hilâfı ilmi cehle çevirir'); Râzî bunu 'Hüccet 10: bütün bu haberlerle tutunmanın hâsılı tek noktaya döner' diye kendisi de yazdı: bağımsız 30 delil değil, bir öncülün 30 ifadesi (kendi tenkidim). İSLÂM KAYDI: bu hadislerin (Sahîhayn, Ebû Dâvûd, Tirmizî, Muvatta) her biri Risale'de kendi kaynağından ve isnadıyla yoklanacak; Râzî'nin yorumu ALINMAZ.**
+- Mevzuya bağı: **Fasıl I §8; Fasıl IV.**
+- Doğan sual: —
+
+## c9 p245
+- OCR: iyi (yalnız başlık)
+- Okuma: tam
+- İçerik: **Bâb başlığı sayfası.** '**BÂB 4: Bu bâbda selef âlimlerinden gelen eserler (rivâyetler).**'
+- Netice/hüküm: **Bâb 3 (haber delilleri: F1 âhâd tenkidi p201–214; F2 30 hüccet p215–244) bitti; Bâb 4 başlıyor.**
+- Delil çeşidi: —
+- Mevzuya bağı: **Fasıl IV.**
+- Doğan sual: —
+
+## c9 p246
+- OCR: —
+- Okuma: tam (sayfa boş)
+- İçerik: **Sayfa boş.**
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c9 p247
+- OCR: orta; dipnot 1 editör (Barnaba İncili alıntısı)
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî; dipnot 1 neşredenin, Râzî'nin sözü değil.** '**Bâb 4'ün metni: 'Bil ki bu meselenin hâli acîbdir: halk daima onda şaşkındı; çünkü bu meselede başvurulan deliller birbiriyle tearuz ve tedâfü' hâlinde: CEBRİYYE: sözünü takrirde 'mümkinin bir müreccihe muhtaç olduğu' esasına dayandı; bu mukaddime bedîhî; böyle olunca iki zıdda kâdir olanın birini ötekine müreccihsiz tercih etmesi imtinâ'; o müreccih ondan değil, yoksa teselsül, Allah'tandır; o zaman cebir lâzım.' Dipnot (editör): 'Mesîh aleyhisselâm der ki: her insan muhtâc olduğu için fiillerini kendi menfaati için yapar; Allah muhtaç değildir; insanı hür yarattı, ona iyilik etsin diye; … (Barnaba İncili'nden nakil)'.'
+- Netice/hüküm: **Râzî: mesele mütearız delillerle çevrili; Cebriyye'nin delili 'mümkin müreccih ister' bedîhî öncüle dayanıyor. Editör dipnotu başka bir kaynaktan (Barnaba İncili) alıntı ekliyor.**
+- Delil çeşidi: **tasnif; (T) F 27-B: Râzî iki tarafın öncüllerini 'bedîhî' diye sunuyor (mümkin müreccih ister ↔ medh-zem hüsnü); bu iki bedîhî öncülün tearuzu meselenin çözülmediğinin itirafı. İSLÂM KAYDI: Barnaba İncili alıntısı editör dipnotu; Risale'ye ALINMAZ (kaynağı tartışmalı ve Râzî'nin metni değil).**
+- Mevzuya bağı: **Fasıl I §8.**
+- Doğan sual: —
+
+## c9 p248
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî.** '**Devam: KADERİYYE sözünü takrirde 'medh ve zemmin hüsnü bedîhen malûm' esasına dayandı; bedîhen biliriz ki kul fiile kâdir olmasaydı medh ve zem hasen olmazdı; bedîhînin aslı olan da bedîhî olmalı. Hâsıl: Cebriyye'nin dayanağı 'mümkin müreccih ister', Kaderiyye'nin dayanağı 'medh ve zemmin hüsnü'; ikisi de bedîhen malûm mukaddimeler; bu makamda bu iki mukaddime arasında tearuz vâki. Aklî delillerde: Cebriyye 'bu tafsîller bize malûm değil, öyleyse bizim mahlûkumuz değil' (ilim delili); Kaderiyye 'bu fiiller bizim kasdımız ve dâîlerimize göre vâki, öyleyse bizden' (kasd delili); ilim delili ile kasd delili arasında tearuz. Kemâl-nakîsa ilzâmlarında: Cebriyye tek noktaya: 'îcâda kudret kemâl sıfatı, kula lâyık değil'; Kaderiyye tek noktaya: 'kul fiilleri sefeh ve abes, îcâdları nakîse, nakîseden münezzeh ilâha lâyık değil'. Semî delillerde: Kur'ân bazen cebri bazen kaderi vehmettiren şeylerle dolu. Milel ve nihalde: bazıları mücbire, bazıları kaderiye; hiçbir ümmet bu iki tâifeden hâlî değil. Vaz'lar ve hikâyelerde de tearuz: tavla'nın vâzıı onu cebir mezhebine göre koymuş, şatrancın vâzıı kader mezhebine göre koymuş. 'Sende zâhir oldu ki bu meselede tearuz galiptir; ancak bizim mezhebimiz bir noktayla daha kuvvetli (p249).**' 
+- Netice/hüküm: **Râzî: Bâb 4'te meseledeki tearuzu sayıyor: bedîhî öncüller, aklî deliller, kemâl-nakîsa, semî deliller, milel ve nihal, vaz'lar ve hikâyeler; hepsi mütearız.**
+- Delil çeşidi: **tasnif; (T) F 27-B: Râzî'nin burada yaptığı 'tearuz bilânçosu' Risale için önemli itiraf: Bâb 1–3'ün 45 delili Râzî'nin kendi ifadesiyle mütearız öncüllerin bir tarafıdır; 'çokluk = güç' değil (kendi tenkidim ve F 27-B). Tavla-şatranç 'vaz' hikâyesi delil değil.**
+- Mevzuya bağı: **Fasıl I §8; Fasıl IV.**
+- Doğan sual: —
+
+## c9 p249
+- OCR: orta; dipnot 1 editör (Barnaba alıntısı)
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî; hikâyeler Râzî'nin nakliyle; dipnot editör.** '**Râzî: 'bizim mezhebimiz bir noktayla daha kuvvetlidir: biz 'mümkin sebebe muhtaçtır' sözünü kadh edersek sâni' isbâtı bâbı bize kapanır; bu mukaddimeyi kabul edersek kulun îcâdda müstakil olmadığını söylemek lâzım; bu meselede sözümüzün delili ile sâni' isbâtının delili tek delil olduğundan tarafımız daha kuvvetli ve kâmildir.' Hikâyeler: 1. HİKÂYE: Ali b. Ebî Tâlib'e bir adam geldi: 'Ben hayrın-şerrin, tâat ve ma'siyetin mâlikiyim'; Ali: 'Allah ile beraber mi mâliksin, Allah'sız mı?' Beraber dersen Allah'a ortak olduğunu iddia ettin; Allah'sız dersen Allah olduğunu iddia ettin.' Adam tövbe etti. 2. HİKÂYE: başka bir adam Ali'ye kazâ ve kaderi sordu: 'Derin deniz, dibi idrâk edilmez.' Adam tekrar sordu: 'Karanlık yol, girmeyiz.' Tekrar sordu: 'Lâ havle ve lâ kuvvete illâ billâhi'l-aliyyi'l-azîm; mânâsını biliyor musun?' 'Hayır.' 'Allah'ın ma'siyetinden dönüş ancak Allah'ın ismetiyle; Allah'a tâate güç ancak Allah'ın tevfîkiyle.' Râzî: bu söylediğimize işârettir: fâcirin kudreti tâat ve ma'siyete nisbetle eşit; bir tarafın ötekine ağır basması ancak Allah'tan bir müreccihledir. 3. HİKÂYE: Şam'a bir Mu'tezilî geldi; Hişâm b. Abdülmelik Ebû Ca'fer el-Bâkır'a (yazı) münâzara etmeye çağırdı … (p250).** Dipnot 1 (editör): 'Mesîh aleyhisselâm: insan hata etmeseydi ne ben ne sen Allah'ın rahmetini bilirdik; Allah insanı hata etmeye kâdir olmayacak yarat[sa]ydı bu hususta Allah'a denk olurdu … (Barnaba İncili'nden).'**' 
+- Netice/hüküm: **Râzî: mezhebinin gücü: 'mümkin sebebe muhtaçtır' öncülü sâni' isbâtının delili ile aynı; hikâyeler (Ali ve kader) başlıyor.**
+- Delil çeşidi: **kendi tenkidini/tercihini açıklama + hikâye; (T) F 27-B: 'mümkin sebebe muhtaç' öncülünü kadh eden sâni'i isbât edemez iddiası Bâb 3 F1'de (p120) 'âlemin hudûsu ile de isbât olur' cevabıyla çelişkili değil ama gerginlik var: burada 'tek delil', orada 'ayrı yol'; kendi tenkidim: Fasıl I'in delili kader delilinden ayrı kurulabilir (Risale kararı). İSLÂM KAYDI: hikâyeler (Ali ve adam) isnadsız; Ali'ye izâfe edilen sözler Risale'ye ALINMAZ; editör dipnotu Barnaba İncili alıntısıdır (ALINMAZ).**
+- Mevzuya bağı: **Fasıl I (sâni' isbâtı ile kader delilinin bağı) ve §8.**
+- Doğan sual: **Fasıl I'in sâni' delili 'imkân-sebep' mi 'hudûs' mü? İkisinin bağımsızlığı Fasıl I yazılırken netleştirilecek.**
+
+## c9 p250
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî (hikâyeler).** '**3. HİKÂYE (devam): Hişâm b. Abdülmelik Ebû Ca'fer el-Bâkır'a yazdı ki gelsin ve konuşsun; 'ben yaşlıyım, oğlum Ca'fer (es-Sâdık) benim yerime konuşsun' dedi; Ca'fer es-Sâdık geldi, Kaderî'ye 'Fâtiha'yı oku' dedi; 'iyyâke na'budu ve iyyâke nesta'în'e gelince Ca'fer es-Sâdık: 'Allah'tan neye yardım istiyorsun; sana göre fiil senden; ikdâr, temkîn ve lütufların hepsi hâsıl olmuş?' Kaderî bu tek noktadan kesildi. 4. HİKÂYE: bir Kaderî Ebû Hanîfe ile konuşmaya geldi; Ebû Hanîfe: 'Harfleri söylemeye kâdir misin?' 'Evet.' 'Say.' Saydı. 'Hâ ile Hâ'nın mahreci nerede, aralarında ne kadar? Hâ'yı çıkarmak için ne yapıyorsun? Hâ'yı çıkarmak için ne yapıyorsun?' 'Bilmiyorum.' Ebû Hanîfe: 'Bunları bilmeyen onları nasıl yaratır ve îcâd eder?' 5. HİKÂYE: bir adam Amr b. Ubeyd'e geldi: 'Sen duâsı makbul birisin; ridâm çalındı; Allah'a duâ et ridâmı bana iade etsin.' Elini kaldırdı: 'Allah'ım, sen onun çalınmasını istemedin, çalındı; Allah'ım ridâsını ona iade et.' Adam: 'Duâdan vazgeç; benim ridâmın çalınmasını istemedi, çalındı; ridâmı iade etmeyi istese onu da istemez (olmaz).' 6. HİKÂYE: Amr b. Ubeyd'e 'kimse sana cevap veremediğin bir soru yöneltti mi?' dendi; 'Evet: gemiye bindim, gemide bir Mecûsî vardı; ona 'niçin Müslüman olmuyorsun?' dedim; 'Çünkü Allah benim Müslüman olmamı istemedi; isterse olurum.' Ona: 'Allah senin Müslüman olmanı istiyor, fakat şeytanlar seni bırakmıyor' dedim. Mecûsî: 'Ben galip ortakla olurum; çünkü Allah bir şey istedi, murâdı hâsıl olmadı; şeytan istedi, hâsıl oldu; şeytan galiptir; galiple olmak mağlupla olmaktan evlâdır.' 7. HİKÂYE: es-Sâhib b. Abbâd, Üstâd Ebû İshâk el-İsferâyînî (bizim ashâbımızdan) ile yemek yerdi (p251).**' 
+- Netice/hüküm: **Hikâyeler 3–7 (Ca'fer es-Sâdık-Fâtiha, Ebû Hanîfe-harfler, Amr b. Ubeyd-ridâ ve Mecûsî).**
+- Delil çeşidi: **hikâye (isnadsız); (T) F 27-B: bu hikâyeler delil değil, mezhebî anekdotlar; 'Fâtiha 'iyyâke nesta'în' ⇒ kul kâdir değil' argümanı Mu'tezile'nin 'yardım = ikdâr' cevabını göz ardı ediyor (Ca'fer es-Sâdık'ın cevabında ikdâr ve temkin hâsıl diye çürütülüyor). İSLÂM KAYDI: Ca'fer es-Sâdık, Ebû Hanîfe ve Amr b. Ubeyd'e izâfe edilen konuşmalar isnadsız; Risale'ye ALINMAZ.**
+- Mevzuya bağı: **Fasıl I §8.**
+- Doğan sual: —
+
+## c9 p251
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî (hikâyeler); 'Kâle'd-dâî ilâ'llâh, Muhammed er-Râzî, rahmetullâhi aleyhi' üçüncü şahıs atfı (nüshacı/naşir cümlesi).** '**7. HİKÂYE (devam): Sâhib: 'Şüphesiz fiillerimin fâili benim, başkası değil' dedi ve bir lokma kaldırıp ağzına koydu: 'kaldırma ihtiyârımla, ağıza koyma ihtiyârımla, çiğneme ihtiyârımla, yutma ihtiyârımla'; çiğnerken hapşırdı, lokma düştü, bir kedi sıçrayıp lokmayı alıp yedi. 8. HİKÂYE: Sâhib ve Üstâd Ebû İshâk bir bahçede otururken Sâhib elini bir meyveye uzatıp daldan ayırdı: 'Ey Üstâd, bu meyveyi daldan kim ayırdı?' Ebû İshâk: 'Bu meyveyi bu daldan ayıran onu ona yeniden bağlamaya kâdirdir'; murâd: Mu'tezile'ye göre kâdir iki zıdda kâdir olmalı; kul ayırmaya kâdirse birleştirmeye de kâdir olmalı; birleştirmeye kâdir olmadığına göre ayırmaya da kâdir olmamalı. 9. HİKÂYE: Ebû İshâk el-İsferâyînî Sâhib b. Abbâd'ın evinde otururken el-Kâdî Abdülcebbâr el-Hemedânî girdi; Üstâd'ı görünce hemen 'Fuhşdan münezzeh olana tesbih olsun' dedi; Üstâd hemen 'Mülkünde ancak dilediği olana tesbih olsun' dedi. 'Dâî ilâ'llâh Muhammed er-Râzî — Allah ona rahmet etsin — dedi ki: Bu iki söze bakan, bu ikisinin her birinin bütün sözlerini bu noktada topladığını bilir.' 10. HİKÂYE: fukahânın çoğu: müezzin 'hayye ale's-salâh, hayye ale'l-felâh' dediğinde sünnet olan 'lâ havle ve lâ kuvvete illâ billâh' demek; sanki 'namazı ve diğer ibâdetleri edâya güç ancak Allah'ın yardımı ve tevfîkiyledir' diyor; bu bizim mezhebimizin sarîhidir. 'Bu hikâyelerle bu bâbda yetinelim.' Râzî'nin son notu: (OCR: 'bu bâb … kader ve kazâ …').**' 
+- Netice/hüküm: **Hikâyeler 7–10 (Sâhib b. Abbâd–Ebû İshâk, Abdülcebbâr; ezan cevabı) ve Bâb 4 sonu.**
+- Delil çeşidi: **hikâye; (T) F 27-B: hikâyeler delil değil; Râzî 'iki söz tüm kelâmı bu noktada toplar' diyor (kendi işaretiyle). NÜSHA/KİMLİK NOTU: 'dâî ilâ'llâh Muhammed er-Râzî, rahmetullâhi aleyhi' üçüncü şahıs atfı ve 'rahmet etsin' duası Râzî'nin kendi sözü olmayabilir; nüshacı veya naşir ilâvesi. İSLÂM KAYDI: Abdülcebbâr–Ebû İshâk sözleşmesi ('fuhşdan münezzeh' ↔ 'mülkünde dilediği'), 'lâ havle' cevabı ve ezan cevabı fıkhî sünnet olarak ayrıca yoklanacak; hikâyeler isnadsız ALINMAZ.**
+- Mevzuya bağı: **Fasıl I §8; Fasıl IV (ezanda 'lâ havle' cevabı sünnet: kaynaklı yoklanacak).**
+- Doğan sual: —
+
+## c9 p252
+- OCR: —
+- Okuma: tam (sayfa boş)
+- İçerik: **Sayfa boş.**
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
