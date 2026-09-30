@@ -469,3 +469,75 @@ Biçim: cilt 1–7 ile aynı. Dipnottaki harfler neşredenin nüsha işaretlerid
 - Delil çeşidi: —
 - Mevzuya bağı: —
 - Doğan sual: —
+
+## c8 p141
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **K3 (sihir) mukaddimesi.** **Kimin sesi: Râzî (kendi ifadesi); dipnotta neşredenin notu.** '**Biliniz ki biz bu ilimden mu'teber bir şeye sahip bir insan görmedik; bu bâbda mu'teber usûller içeren bir kitap da görmedik; ancak çok teemmül edince onda usûller ve hâsıllar elde ettik; bizden sonra gelen, bu bâbdaki fâideler ve ziyâdelerle kazanırsa, bize şükretsin: çünkü ona bu zabtedilmiş usûlleri ve ma'lûm kaideleri biz tertîb ettik.**' '**Bu bâbdaki söz bir mukaddime, bir makâle ve … misâlle tertîb edilmiştir.**' **Dipnot (neşreden)**: 'müellif bir makâleden başkasını zikretmedi.'
+- Netice/hüküm: **Râzî K3'ü sihir konusunda 'usûl derleyen ilk' olarak sunuyor; neşreden: müellif yalnız bir makâle yazmış.**
+- Delil çeşidi: **mukaddime (öz-değerlendirme)**; (T) —
+- Mevzuya bağı: **İSLÂM KAYDI**: **sihir Kur'ân'da yasak ve zararlı bir ameldir (Bakara 2/102 ⊬ sayfada geçmiyor, Kur'ân'dan doğrulanacak); Risale sihrin 'usûllerini derleme' faaliyetine kaynak göstermez; bu bölüm yalnız Râzî'nin sihir–mûcize ayrımını görmek için okunur.** **Kaynak sınırı: neşredenin 'müellif bir makâleden başkasını yazmadı' notu: K3 yarımdır; p137'de vaat edilen sihir–mûcize FARKI bu ciltte yazılmış olmayabilir (aranacak; ⊬).**
+- Doğan sual: **Râzî 'mûcize ile sihir, nebî ile sâhir arasındaki fark' (c8 p137 sonu) vaadini K3'te yerine getirmiş mi? (p149–190 okunacak; okunana kadar 'bulunamadı' yazılmaz.)**
+
+## c8 p142
+- OCR: —
+- Okuma: okunmadı (boş sayfa)
+- İçerik: Boş.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c8 p143
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Makâle: sihrin nev'leri.** **Kimin sesi: Râzî (sihir ehlinin sistemini aktarıyor/tasnif ediyor; kendi tasdîkini 'sabit oldu' diliyle yazıyor).** '**Nev' 1 (kuvvetçe en büyük, tesirce en şiddetli 'denildiğine göre'): FELEKÎ ŞEKİLLER VE KEVÂKİB İTTİSÂLLERİNE dayalı sihir.** **Takrîri: felsefî delillerle sâbit oldu ki bu âlemde hâdislerin hudûsunun mebdeleri felekî şekiller ve kevkebî ittisâllerdir; ahkâm ilminde mu'teber tecrübeler bu delillere eklenince mukaddime çok kuvvetlendi; yıldız tecrübeleri, her seyyâre için bu süflî âlemden belirli şeylerin ihtisâsına delâlet etti: her birinin belirli tadları, kokuları, şekilleri; madenlerden şu, nebâttan şu, hayvandan şu…; kevkebden belirli bir hâl istenip amele uygun fâil şeyler cem' edilince kuvvetli fâil ve kâbil madde hâsıl olur; fâil ile kâbil birleşince eser zuhûr etmek zorundadır.**' 
+- Netice/hüküm: **Sihir Nev' 1: astral nedensellik + malzeme ihtisâsı; 'fâil ile kâbil birleşince eser zorunlu' (nedensellik determinizmi).**
+- Delil çeşidi: **felsefî-astrolojik nedensellik**; (T) **⊬ 'felsefî delillerle sâbit oldu' ve 'tecrübeler kuvvetlendirdi' iddiaları sayıya bağlanmadı; kimin, hangi deney (tecrübe) olduğu belirtilmiyor.**
+- Mevzuya bağı: **İSLÂM KAYDI (KIRMIZI)**: **astral nedensellik (yıldızlar hâdislerin mebdeleri; her seyyârenin ihtisâsı) c4 p335–339 ve c7 p425 ile aynı: Risale ALMAZ; 'eser zorunlu' iddiası Allah'ın irâdesini ve mûcizenin hârik-ı âdet oluşunu bozar (nedensellik bağı Allah'ın âdeti, zorunlu değil); Risale sihrin hakîkatini ve haramlığını Kur'ân ve Sünnet'ten yazar, Râzî'nin astral açıklamasını almaz.**
+- Doğan sual: —
+
+## c8 p144
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî (tasnif/aktarım).** '**Nev' 2: VEHİM KUVVETİ VE NEFS SAFÂSINA dayalı sihir**: 'nefs ilminde gösterildi ki nâtık nefsler felekî rûhlar cinsindendir ve onlardan doğmuştur; o denizlerin damlaları, o güneşlerin mumları gibi; bir nefs bütün cihetlerden yüz çevirip tek bir maksada dönerse gücü kuvvetlenir, te'sîri şiddetlenir; bu âlemde garîb hâller ihdâsa kâdir olur; ayrıca sebep: safâ ve riyâzet hâlinde nefs, tabîatı-i tâmmı ve asıl babası olan felekî rûha çekilir.' **Nev' 3: MADEN, NEBÂT, HAYVAN İLÂÇLARININ HÂSSALARINA dayalı sihir (taşların hâssaları, taaffün yoluyla üretilen hayvanların hâssaları; Ebû Bekr b. Vahşiyye'nin kitabı; harf ve sayı hâssalarına dayalı olanlar).** **Nev' 4: AZÎMELER ve RUKÂ (okuma-üfleme formülleri)**: 'süflî rûhlar (cin ve şeytan) istiâne; bu cinsin isbâtı ve nefyi hakkında söz istiksâ ile geçti (c7); azîme ilmine dalanların çoğu buna yapışır.'
+- Netice/hüküm: **Sihir Nev' 2–4 (nefs safâsı; hâssalar; azîme ve cin-şeytandan istiâne).**
+- Delil çeşidi: **sudûr-nefs sistemi + tasnif**; (T) —
+- Mevzuya bağı: **İSLÂM KAYDI (KIRMIZI)**: **Nev' 2 'nâtık nefs felekî rûhlar cinsinden ve onlardan doğmuş; safâ ile felekî rûha çekilir' — c7 nefs bâbının (henüz okunmadı) sudûr öğretisinin sihre uygulaması; Risale ALMAZ. Nev' 4: 'cin ve şeytandan istiâne' şirke ve haram olana götürür (Cin 72/6 ⊬ sayfada geçmiyor; Kur'ân'dan doğrulanır); Risale Nev' 4'ü 'sihrin cinlerden yardım alan kısmı; haram' diye yazar. 'Cin cinsinin isbâtı c7'de istiksâ edildi' atfı c7 M1/M4 okunurken doğrulanır.**
+- Doğan sual: —
+
+## c8 p145
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî (tasnif).** '**Nev' 5: FELEKÎ RÛHLARDAN İSTİÂNEYE dayalı sihir**: 'biz gösterdik ki ehl-i ilim fırkalarının çoğu bu rûhların varlığında ve bu âlemde büyük eserleri bulunduğunda müttefik; bazıları belirli yollarla onlardan istiâne mümkündür dedi; ittisâl hâsıl olunca hârik-ı âdât kudreti hâsıl olur.' **Nev' 6: el çabukluğu, gösteri ve 'gözleri büyüleme' (hiyle) üzerine kurulu (tafsîli sonra).** **Nev' 7: HENDESEYE dayalı sihir (hafif âletlerle büyük yükleri çekme ilmi; 'boşluğun zarûretine' dayalı acâyip işler).** **Nev' 8: FÂL ve ZECR'e dayalı sihir**; alt kısımlar: (1) firâset (rûhânî ve cismânî), (2) remil, (3) a'zâ'nın çırpınması, (4) …, (5) taş atma (bazı kadınların âdeti), (6) el ayası ve ayak tabanındaki çizgi ve buruşukların okunması, ben ve lekelere bakma ilmi, (7) kuşların yuvalarından uçuş biçimi (sânih/bârih) ve seslerinden çıkarılan ilim, (8) …
+- Netice/hüküm: **Sihir Nev' 5–8 (felekî rûhlardan istiâne; hile; hendese; fâl-zecr).**
+- Delil çeşidi: **tasnif**; (T) **Nev' 6 ve 7 (hile, hendese) doğal/aldatma yollarıdır ve Râzî'nin kendi ölçüsünde 'sihir' olarak anılması Kur'ân'ın sihir kullanımıyla (Mûsâ ve sihirbazlar: göz bağlama) ilişkilidir ⊬.**
+- Mevzuya bağı: **İSLÂM KAYDI**: **Nev' 5 (felekî rûhlardan istiâne) Risale ALMAZ; Nev' 8'in çoğu (kehânet, remil, fal-zecr) Sünnet'te yasaklanan kehânet ve tıyera türleridir (⊬ hadîs kaynakları Fasıl IV'te doğrulanır); Nev' 6–7 gerçek sihir değil, aldatma-mühendislik olarak nitelenir (Kur'ân'daki 'sihirbazların gözleri büyülemesi' A'râf 7/116 ⊬ Kur'ân'dan doğrulanacak).**
+- Doğan sual: —
+
+## c8 p146
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî (tasnif sonu ve kendi hükmü).** Nev' 8'in devamı: '**kuşların insana yöneldiklerinde/döndüklerinde sesi; tefâül ilmi (zorluk ve kolaylığın bilinmesinde tüm hâdisler).**' **Nev' 9: insana aklı azaltan, re'yi zayıflatan, tabîatı kütleştiren yemek yedirmeye dayalı sihir: insan böyle olunca istenildiği gibi yönlendirilir.** **Nev' 10: yalan yayma ve türlü hile-aldatmaya dayalı sihir; kalbe korku salma yolları; korku hâkim olunca istenilen her şey yayılır.** '**Bu on kısım ana hatlarıyla ma'lûm.**' **Râzî'nin kendi hükmü**: '**'sihirbaz uçabilir, farklı şekillere bürünebilir, en kısa sürede beldeden beldeye sıçrayabilir' denmesine gelince: bu gâyet uzak (ihtimâl dışı) — cin veya diğer rûhlardan istiâneye hamledilirse başka; onda da gâyet uzak.**' '**Bu kısımlardan hiçbiri astrolojiye dayalı sihirle istiâne olmadıkça tam ve kâmil olmaz; sihirbaz bunlardan çok çeşidi cem edebilse istediği şeyde daha kuvvetli ve kâmil olur.**'
+- Netice/hüküm: **Râzî (kendi hükmü): sihirbazın uçma, şekil değiştirme, kısa sürede beldeler arasında sıçrama iddiaları 'gâyet uzak' (ihtimal dışı); cin veya başka rûhlardan istiâneye hamledilse de gâyet uzak; her kısım astrolojik sihirle tamamlanır.**
+- Delil çeşidi: **hüküm ('gâyet uzak') + tasnif**; (T) **Râzî derecesi: 'gâyet uzak'; kat'î ret değil.**
+- Mevzuya bağı: **İSLÂM KAYDI**: **Râzî'nin 'sihirbaz uçar/şekil değiştirir/ışınlanır iddiaları gâyet uzak' hükmü, sihrin fiilî gücünü sınırlayan bir kayıttır: Risale sihrin gerçek olduğunu (Bakara 2/102 ⊬) ama Allah'ın izni olmadan zarar veremeyeceğini ve mûcize olmadığını yazar; Râzî'nin 'gâyet uzak' derecesi bunun için bir destek notudur, kesin hüküm değil; sihir–mûcize FARKI bu sayfada yok.**
+- Doğan sual: —
+
+## c8 p147
+- OCR: kötü (yalnız harf parçaları)
+- Okuma: okunmadı (OCR çöp / neredeyse boş)
+- İçerik: Birkaç bozuk harf; okunabilir bir metin yok.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c8 p148
+- OCR: —
+- Okuma: okunmadı (boş sayfa)
+- İçerik: Boş.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
