@@ -613,3 +613,75 @@ Biçim: cilt 1–7 ile aynı. Dipnottaki harfler neşredenin nüsha işaretlerid
 - Delil çeşidi: **felsefî kozmoloji tasnifi**; (T) —
 - Mevzuya bağı: **İSLÂM KAYDI**: kozmoloji Risale'ye girmez; kaynak notu.
 - Doğan sual: —
+
+## c8 p41
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **K1 Fasıl 6: 'Mûcizelerin Allah'ın fiili ve halkıyla hâdis olduğunun bilinebileceğini kabul etmeyenlerin şüpheleri; bunun bilinmesi imkânsızsa mûcizeyle müddeînin sıdkına istidlâlin imkânsız oluşu'.** **Kimin sesi: mûcizeyi inkâr edenlerin/şüphe edenlerin sesi ('المنكرين'), Râzî aktarıyor; Râzî'nin kendi cevabı bu faslın gövdesinde değil.** '**Bu ihtimâli inkârcılar birkaç vecihle beyân etti. İHTİMÂL 1: 'insan ya bu belirli mizâçtan doğan bu yapıdır, ya bu bedenle ilgili mücerred bir cevherdir; maksat ikisinden birini tercih değil; itirâz her takdirde vârid. İnsan bu belirli mizâçtan doğan bedense: farklı mizâçların farklı hâlleri vardır; nebâtî ve madenî cisimlerin farklı mizâçlara göre farklı eserleri ve hâssaları olduğunu görürüz; insan mizâçlarında da aynı olması neden câiz olmasın? (Peygamber) belirli bir mizâçla bu mûcizeleri yapmaya kâdir olsun.**' (p42).
+- Netice/hüküm: **Şüphe 1 (mizâç): peygamberin mûcizeleri belirli mizâcın hâssası olabilir.**
+- Delil çeşidi: **şüphe/ihtimâl kapısı (nebâtî ve madenî cisimlerin hâssalarına kıyas)**; (T) —
+- Mevzuya bağı: **Fasıl II — mûcize burhanı halkası ('Allah'ın fiili mi?', borç)**: bu şüphenin **Râzî'nin kendi cevabı** cilt 8 K1'in sonraki fasıllarında (F13–F14) aranacak; bu sayfada yok.
+- Doğan sual: —
+
+## c8 p42
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: mûcize şüphecileri (aktarım).** Şüphe 1'in devamı: '**insan mücerred nâtık nefsse: nâtık nefslerin mâhiyette birbirinden ayrılması imtinâ' değil; o resûlün nefsi diğer nefslerin hakîkatlerinden farklı olsun, o nefs kendi belirli hakîkatiyle bu hârikaları yapsın; bu ihtimâl kâim olunca mûcizelerin yaratıcısının Allah olduğuna kat'î hüküm imtinâ'.** **İtirâz edenin mizâçların farklı olduğunu ve farklı olunca bu eserleri gerektirdiğini, nâtık nefslerin varlığını, farklı olduklarını isbâta hâcet yok; itiraz makâmında bu ihtimâlin akılda kâim olduğunu göstermek yeter.**' '**Bunu takviye eden: insanlar sıfat ve hâllerde çok farklıdır**: kimi nutkî kuvvetin hâllerine büyük rağbetli, şehvânî-gazabî hâllerden büyük nefretli; kimi tersi; nutkî kuvvete rağbet edenlerden kimi belirli ilme çok müsted, başka ilimden çok uzak…; şehvânî kuvvete rağbet edenler: kimi yemeklerde, kimi mal toplamada, kimi cömertlikte, kimi zühdde şehvet duyar (p43).'
+- Netice/hüküm: **Şüphe 1'in devamı: nefslerin mâhiyet farkı ve insanların sıfat farkları mûcizeyi 'özel nefs' hâssası yapabilir.**
+- Delil çeşidi: **şüphe/ihtimâl**; (T) —
+- Mevzuya bağı: **Fasıl II mûcize burhanı**: şüphenin 'kim olursa olsun kat'î hüküm imtinâ' formülü mûcize burhanının **ayırt edicilik** ölçüsünü (F 27-B) doğrudan sınar.
+- Doğan sual: —
+
+## c8 p43
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: mûcize şüphecileri (aktarım).** Şüphe 1'in sonu (tabiat farklılıklarının sayımı): 'yemeklerde rağbet edenler: her biri başka yemeği ister; mal toplayanlar, güzel binek ve giyim isteyenler; cömertlikte: kimi yedirmeyi sever nakdi vermeyi sevmez, kimi tersi; zühdde: kimi başkasının malından zâhid ama fücûrda ileri, kimi öldürmeye ve eziyete atılgan fakat fuhuştan uzak, kimi dilde büyük fuhuş sahibi ama katil ve mal bozmaktan uzak; insanların sıfatlardaki tafsîllerinin tamamı sonsuz; bu kısımlara tenbîh aklın bu kısımların tamamına dikkat etmesine yeter.' **Sonuç**: '**insanların bu sıfatlardaki ihtilâfı ya nefslerin cevherlerinin ihtilâfından ya da nefsler mâhiyette müsâvî olup bu eserlerin ihtilâfının mizâç ve bedenî âletlerin ihtilâfından olması; her iki takdirde de nefs cevherinde veya bedenî âletlerde/mizâcî terkîblerde diğer insanlardan farklı bir insanın hâdis olması imtinâ' değildir; o hususiyet yüzünden başkasının âciz kaldığını yapmaya kâdir olur.**' **İHTİMÂL 2**: 'muhtelif ilâçların hâssalarını farklı etkilerle müşâhede ederiz' (p44).
+- Netice/hüküm: **Şüphe 1 sonu: insan farklılığı (nefs cevheri ya da mizâç/âlet) 'özel bir insanın mûcize gücü' ihtimâlini açık bırakır.**
+- Delil çeşidi: **şüphe/ihtimâl (insan farklılığı gözlemi)**; (T) —
+- Mevzuya bağı: **Fasıl II**: aynı (Râzî'nin cevabı sonra).
+- Doğan sual: —
+
+## c8 p44
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: mûcize şüphecileri; sonra 'فإن قالوا' ile mûcize savunucularının itirazı, 'قلنا' ile yine şüphecilerin cevabı (p45'te).** **İhtimâl 2 (ilâç hâssaları)**: '**'İlâç hâssaları' bâbında (Nasr…) istiksâ edildiği gibi muhtelif ilâçların etkileri farklı; hâssalardan mıknatıs taşı; filozoflar bu bâbda uzattı, garîb-acâyip te'sîrler nakletti. Doğruluklarını bilmesek de yalanlarını da bilmiyoruz; tasdîk ve tekzîbde tevakkuf edip hepsinde ihtimâli câiz görmeliyiz. Bu ihtimâl kâim olunca, risâlet dâvâcısının kendisinde ya da başkasında kullandığı ve ona belirli fâideyi veren bir ilâç bulmuş olması neden câiz olmasın? Bu ihtimâl kâim olduğu sürece mûcizenin sıdka delâleti bozulur.**' **Mûcize savunucusunun itirazları**: '**(1) asayı yılana çevirmeyi, denizi yarmayı, dağı gölgelik yapmayı sağlayan bir ilâcı câiz görürsen, kullananı gökleri ve yerleri yaratmaya kâdir kılan bir ilâcı da câiz görmelisin; bunu câiz gören … (2) kitaplarda zikredilen hâssaların çoğu tecrübede bâtıl çıktı, yalan; (3) böyle bir ilâç olsaydı başkası da bilirdi; (4) bu ilâca vâkıf olma başkasında da varsa onun muâraza kudreti olurdu; başkasında yoksa bu ilâcın hâssasına özel bilgisi âdete aykırı bir şey ise mûcizedir ve sâhibi doğru sözlüdür.**' (p45).
+- Netice/hüküm: **Şüphe 2 (ilâç hâssaları) ve savunucuların dört itirazı.**
+- Delil çeşidi: **şüphe + karşı itiraz**; (T) —
+- Mevzuya bağı: **Fasıl II — mûcize burhanı halkası**: **(4)'teki 'muâraza' ve 'özel bilgi mûcizedir' cümlesi mûcize burhanının 'tehaddî + muâraza edilememe' şartını gösterir; şüphenin 'ilâç' kılığı bu şartla yüzleşir.**
+- Doğan sual: —
+
+## c8 p45
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: mûcize şüphecilerinin cevabı ('قلنا').** '**Birinciye cevap: mûcizelere ikrar edenler kat'an biliyor ki hiçbir peygamber mûcize yoluyla gökleri ve yerleri yaratma işini yapmaya kâdir olmadı; demek tüm takdirlerde 'mûcize getirme kudreti gökleri ve yerleri yaratma kudretini gerektirmez' hususunda ittifak vardır; bu ayrım vâcib olduğuna göre ilâçta da benzeri neden câiz olmasın? Yani mûcizeler için kudret veren bir ilâcın varlığı imtinâ' olmasın, gökleri ve yerleri yaratma kudreti veren ilâcın varlığı imtinâ' olsun. Sözün tamamı: her makâmda iki zıt uç ve benzer ortalar hâsıl olur: felekleri sökmeyi ve yıldızları saçmayı gerektiren ilâç bulunmaz; nefs ve beden kuvvetinde artış sağlayan ilâç vardır; peygamberlerin mûcizeleri ilk kısımdan mı ikinciden mi belli değil; şek kâim kalır.**' '**İkinciye cevap ('hâssaların çoğu yalan'): nasıl ki zikrettiğiniz her şeyin sıhhatine cezmedemiyorsak fesâdına da cezmedemeyiz; vâcib ihtimâlin kâim olduğunu ikrardır. Ebû Bekr Ahmed b. Vahşiyye taaffünler hakkında kitap yazdı; taaffünden doğan şeyleri ve bundan hâsıl olan acâyip eserleri iddia eder; bunların yalan olduğuna dair delil ve şüphe yok; tevakkuf gerekir.**' '**Üçüncüye cevap: belki yalnız o bu ilâcı biliyor; bu akıllarda imtinâ' değil; ya da başkası bilse de o kimsede onu kullanmaktan ya da göstermekten alıkoyan bir şey var.**' (p46).
+- Netice/hüküm: **Şüphecilerin cevabı: mûcize-kudret ve halk-kudret arasındaki ayrımın ilâçta da câiz olduğu; 'hâssaların yalan olduğuna dair delil yok, tevakkuf'; 'yalnız o biliyor' mümkün.**
+- Delil çeşidi: **ihtimâl eşitliği + tevakkuf**; (T) —
+- Mevzuya bağı: **Fasıl II — mûcize burhanı halkası ve F 27-B**: **şüphecilerin cevabı 'ihtimâlin kâim olması' ilkesine dayanır; c5 p101 'câiz olmasın' ihtimal kapısı usûlü ile aynı silah (Râzî de kullanmıştı): mûcize burhanının ayırt edicilik sayısı 'ihtimâlin kâim olduğu' iddiasına karşı nasıl kurulur? (Râzî'nin kendi cevabı sonra.)**
+- Doğan sual: —
+
+## c8 p46
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: şüphecilerin cevabı sonu; sonra İhtimâl 3 (cin ve şeytanlar).** Dördüncüye cevap: '**bir ilâcın hâssasını bilmede tek olmak her asırda görülen âdet; âdet olan bir şey mûcize olmaz.**' **İHTİMÂL 3**: '**ehl-i millet ve nihal cin ve şeytanların varlığında müttefik; beşerin âciz kaldığını yapmaya kâdir olduklarında ittifak ettiler; ayrıca ittifak etmeseler bile bu ihtimâl akılda kâim; bu doğruysa bu mûcizelerin faili cinlerden veya şeytanlardan biri olması imtinâ' değil; bu ihtimâl kâimken mûcizelerin failinin Allah olduğuna nasıl cezmedilir?** **Şaşılacak olan: insanlar cinnin çarpılmış (sar'lı) bedene girmesini câiz görüyor; cinnin sar'lının diline konuşmasını, sar'lının dilinden gaybdan haber vermesini câiz görüyorlar; o hâlde kurdun, devenin, zehirli kolun Resûlle (aleyhisselâm) konuşmasında cinnin onların karnına girip konuşmuş olmasını neden câiz görmesinler? Bu ihtimâl kâim iken bunun Allah'ın halkıyla mûcize olduğuna nasıl kat'î hükmettiler? Asanın yılana dönmesi bu bâbtan olması neden câiz olmasın? Kur'ân'ın fesâhati gibi cinlerin fesâhati ve şeytan mereddeleri de vâfî olsun; bu Kur'ân'ı kendi katlarından getirip Resûle (a.s.) bıraksınlar** (p47).'
+- Netice/hüküm: **Şüphe 3 (cin/şeytan): mûcizelerin (konuşan kurt/deve/zehirli kol, asanın yılan olması, Kur'ân'ın fesâhati) failinin cin veya şeytan olması ihtimâli.**
+- Delil çeşidi: **şüphe/ihtimâl (cin ve şeytanın varlığı üzerine ehl-i milel ittifakı)**; (T) **şüphe; mûcize-cin ayrımı için cevap gerekir.**
+- Mevzuya bağı: **KRİTİK — Fasıl II (kâhin/şair/sihirbaz/cin ayrımı, borç) ve İSLÂM KAYDI**: **Bu, Kur'ân'ın 'cinlerin/şeytanların getirdiği' şüphesidir; Kur'ân'ın kendi cevabı Şuarâ 26 (p47'de aktarılıyor). Risale Fasıl II'de bu şüpheyi ismen yazar ve iki cevabı kurar: (1) Kur'ân cevabı: içerik (Allah'a ve âhirete çağrı) şeytana isnâdı çürütür (Râzî K2 p114); (2) delil cevabı: Râzî'nin kendi kalemi K1'de (p46 sonu 'hakîkatini sonra öğrenirsin' vaadi).** **'Kur'ân'ı cinler getirdi' iddiası Kur'ân'ın kendi meydan okumasına (tehaddî; İsrâ 17/88 ⊬ doğrulanacak) karşılık cevaplanır.**
+- Doğan sual: —
+
+## c8 p47
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: şüphecilerin sonu; Râzî'nin açıklaması ('واعلم').** '**…bu Kur'ân'ı kendi katlarından getirip Resûle atmış olsunlar; bu ihtimâl kâimken mûcizenin Allah'ın fiili olduğuna kesin hüküm nasıl mümkün?**' **Râzî ('واعلم'): 'bu suâli Allah Kur'ân'da zikretti; Şuarâ sûresinde: 've innehû le-tenzîlü rabbi'l-âlemîn, nezele bihi'r-rûhu'l-emîn alâ kalbike li-tekûne mine'l-münzirîn' (26/192–194).**' '**Sonra: 've mâ tenezzelet bihi'ş-şeyâtîn, ve mâ yenbeğî lehüm ve mâ yestetî'ûn, innehüm ani's-sem'i le-me'zûlûn' (26/210–212)**; takdir: 'Kur'ân Âlemlerin Rabbi'nin indirmesidir, Rûhu'l-Emîn kalbine indirdi dedikten sonra biri 'neden şeytanların indirmesi olmasın?' der; bu yüzden 'onu şeytanlar indirmedi' buyurdu; sonra cevap: 'hel unebbi'ukum alâ men tenezzelü'ş-şeyâtîn, tenezzelü alâ kulli effâkin esîm, yülkûne's-sem'a ve ekseruhüm kâzibûn' (26/221–223); bu cevabın hakîkatini sonra öğreneceksin.** '**Kureyş kâfirleri bu suâli başka vecihle pekiştiriyordu: Arapların cumhûru nezdinde meşhur olan: her şâirin ona şiirinde yardım eden, inceliklerine eriştiren bir cini vardır; Muhammed'e (a.s.): 'bu şâirler hakkında meşhursa senin hakkında da câiz olmasın' dediler; Allah bunu bu âyetlerin sonunda 'veş-şu'arâ yettebi'uhümü'l-gâvûn' (26/224) ile cevapladı; bu cevabın hakîkatini sonraki fasıllarda öğreneceksin. Burada maksat bu suâlin meşhur ve baştan beri zikredilmiş olduğunu beyândır.**'
+- Netice/hüküm: **Râzî: 'cinler getirdi' şüphesini Kur'ân'ın kendisi Şuarâ 26'da zikretti ve cevapladı; cevabın hakîkati sonraki fasıllarda.**
+- Delil çeşidi: **Kur'ân tefsirî istidlâl (şüphenin Kur'ân'daki yeri)**; (T) **Râzî: 'cevabın hakîkati sonra' — cevap K2 F2'de (p114) verilmişti: içerik kriteri (Hakk'a çağrı) ve 26/224: kâhinlerin/şâirlerin yolu.**
+- Mevzuya bağı: **Fasıl II — cin/şeytan şüphesi ve Şuarâ 26 cevabı**: **p47'de vaat edilen 'cevabın hakîkati' K2 F2 p114'te bulundu (Râzî'nin kendi cevabı: dâvetin içeriği: Allah'a ve âhirete çağrı, şeytan yardımıyla olamaz); iki sayfa birbirine bağlandı.**
+- Doğan sual: —
+
+## c8 p48
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: mûcize savunucularının itirazı ('قالوا: هذا يمتنع من وجوه'), şüphecilerin cevabı ('قلنا'); sonra İhtimâl 4 başlıyor.** **Savunucu itirazları**: '(1) cinler ve İblisler lânetlenmiş, insanlarca lânetle anılıyor; nasıl olur da mûcizelerin failleri olurlar? (2) cin bunu yapsaydı Allah'ın mâsiyetlerini yapan bir insana yardım etmesi vâcib olurdu (iltibâs olmasın diye); yapmadığına göre bu cinin işi değil; (3) cinler bu büyük kudrete ulaşmadı; ulaşsalardı büyük şer, kendilerine lânet eden peygamberlere ve âlimlere ulaşırdı.' **Şüphecilerin cevabı**: '**(1) zayıf: şüphe ve bâtılları bekâ ettirmeye şiddetli rağbetleri yüzünden lânet ve tâ'ni yüklenip bu dâîlere yalan yoluyla yardım etmeleri uzak değil; ya da lânetlenen bir kısımdır, mûcize getirenler başkaları; (2) zayıf: bu ihtimâl kâimken mükellef mûcizenin Allah'tan sâdır olduğuna cezmederse kusur mükellefindir; tıpkı müteşâbih âyetlerin indirilmesinde söylediğimiz gibi: bu ihtimâl varken sudûru Allah'a çirkin sayılmaz; (3) zayıf: peygamberler cinlere büyük kuvvet isbâtı üzerinde ittifak etti; bunu inkâr etmek peygamberleri tekzîb olur.**' **İHTİMÂL 4**: 'ehl-i dünyanın çoğu meleklerin varlığında müttefik (p49).'
+- Netice/hüküm: **Cin şüphesi üzerine karşılıklı itiraz ve cevaplar; İhtimâl 4 (melek) başlıyor.**
+- Delil çeşidi: **itiraz-cevap (şüphecilerin bakış açısıyla)**; (T) **⊬ şüphecinin (2)'ye cevabı 'kusur mükellefindir' Allah'ın irâde ve tekliflerine dair kelâmî tartışmaya uzanıyor; Râzî'nin kendi cevabı sonra.**
+- Mevzuya bağı: **Fasıl II mûcize burhanı**: **(3)'teki 'peygamberler cinlere büyük kuvvet isbâtında ittifak etti' savunması ve şüphecinin 'bunu inkâr peygamberleri tekzîb olur' cevabı, cin gücü ihtimâlinin 'peygamberlerin kendi beyânıyla' kayıtlı olduğunu gösterir (Risale cinlerin varlığı ve sınırlı gücünü Kur'ân ve Sünnet'ten yazar; sınırı nakli delile bağlar).**
+- Doğan sual: —
