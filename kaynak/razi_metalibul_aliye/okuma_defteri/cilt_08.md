@@ -829,3 +829,75 @@ Biçim: cilt 1–7 ile aynı. Dipnottaki harfler neşredenin nüsha işaretlerid
 - Delil çeşidi: **temsil eleştirisi ve mantıkî ilke ('kıyâsü'l-gâib ale'ş-şâhid ikna edici zan bile vermez')**; (T) **'mantık ilminde gösterdik' atfı Râzî'nin kendi mantık eserine atıftır (c8 dışında; korpus dışı ⊬).**
 - Mevzuya bağı: **KRİTİK — Fasıl II mûcize burhanı ve usûl (Râzî'nin kendi ölçüsü)**: **Râzî (ya da onun aktardığı itirazcı) şâhid-gâib kıyâsının 'ikna edici zan bile vermediğini' söylüyor. Bu hüküm Risale'nin mûcize burhanı için bir sınırdır: 'melik örneği' ders katmanında ISINMA benzetmesi olur, burhan olmaz. Burhan derecesi 'Allah'a yalan muhâl' öncülüne (fıtrî, aklî: noksan sıfat) taşınır; bu öncül c3 sıfatlarına (kelâm/sıdk; noksan sıfat) bağlıdır — ledger c3 kaydı ile eşleştirilecek.**
 - Doğan sual: **Râzî K1 F8'in sonunda (p65–68) 'mûcize sıdka delâlet' delilini nasıl kuruyor? (okunacak.)**
+
+## c8 p65
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **K1 Fasıl 9: 'Âdete aykırı, dâvâya uygun, muâraza edilmeyen fiilin zuhûrunun müddeînin sıdkına delâlet ettiğinin nefyinde başka bir tür şüphelerin takrîri'.** **Kimin sesi: mûcize inkârcıları/şüphecileri (Râzî aktarıyor).** '**Şüphe 1**: sizin söylediğiniz en ileri şey: mûcize 'sözle tasdîk'in yerine geçer; diyelim öyle; ama bir adam 'filan sizin elçimdir' dese bu söz te'vîle ihtimâlli, zâhirinden delille çevrilebilir; o zaman bu sözün bu mânâyı isbâta delâleti kat'î değil zannîdir; mûcizelerin en yüksek derecesi bu sözün yerine geçmek olduğuna göre mûcizenin tasdîke delâleti zannî olması evlâdır.' **Şüphe 2**: '**fiilin âdete aykırı oluşu sıdka hiç delâlet etmez: tüm mûtâd hâller bir başlangıca varır; ezelden o ilk vakte kadar sâbit olan süregelen ademdir; o vakitte hudûsu âdete aykırıdır, fakat sıdka delâlet etmez.** Diyelim ki: 'biz fiilin âdete aykırı olmasının sıdka delâlet ettiğini iddia etmiyoruz; ek bir şartla — mûcizenin dâvâ ile varlık ve yokluk bakımından birlikte dönmesiyle — delâlet hâsıl olur' — deriz ki: akıl sahipleri bir şeyle birlikte dönmenin illiyeti kat'î olarak ifade etmediğinde ittifak etti; zannî olarak delâlet edip etmediğinde ihtilaf ettiler; biz bu matlûbu çok vecihle beyân ettik (p66).**'
+- Netice/hüküm: **Şüphe 1 (mûcize zannî delildir), Şüphe 2 (âdete aykırılık sıdka delâlet etmez; devrân şartı illiyeti kat'î vermez).**
+- Delil çeşidi: **şüphe (mantıkî)**; (T) —
+- Mevzuya bağı: **KRİTİK — Fasıl II mûcize burhanı (derece)**: **Şüphe 1: 'sözle tasdîk zannîdir (te'vîle açık); mûcize onun yerine geçtiğine göre en fazla zannî' — Risale derece hükmünde bu şüpheyle yüzleşir: mûcize burhanı kat'î mi zannî mi? Râzî'nin K2 F5 cümlesi 'burhân-ı inn, icmâlî' zannî-kat'î ayrımında ne olduğu okunacak.**
+- Doğan sual: —
+
+## c8 p66
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: şüpheciler.** Şüphe 2 sonu: 'bu yolla tutunmak câiz değil.' **Şüphe 3**: '**mûcizenin sıdka delâleti sabit olsa bile ya muâraza edilmemeye şartlıdır ya değildir; iki kısım da bâtıl.** **Şart olamaz (üç vecih)**: **1.** mûcize olmak için muâraza edilmemek ya (a) şu anda muâraza edilmemek, ya (b) ebediyen muâraza edilmemek, ya (c) iki uç arasında bir mertebede muâraza edilmemek; üçü de bâtıl: (a) şu an muâraza edilmemek mûcize olmaya yetmez: pek çok insan, hâzırûnun şu an muâraza edemeyeceği bir iş yapar ama ittifakla mûcize olmaz; (b) 'ebediyen muâraza edilmemek' şart olsa bu şart meçhul: kıyâmete kadar sonradan gelenlerden hiçbirinin buna muâraza getirmeyeceğini kim bilebilir? Şart meçhul olunca meşrût da meçhul: bütün mûcizeler meçhul olur; (c) ara mertebeler çok ve farklı; birini seçip diğerlerini kaldırmak mahz tahakküm (p67).**'
+- Netice/hüküm: **Şüphe 3: mûcizenin sıdka delâleti muâraza edilmeme şartına bağlı olamaz (şart: şu an/ebediyen/ara; hepsi bâtıl).**
+- Delil çeşidi: **taksîm + reductio (mantıkî şüphe)**; (T) —
+- Mevzuya bağı: **KRİTİK — Fasıl II mûcize burhanı (tehaddî ve muâraza edilememe şartı)**: **Bu, mûcize burhanının 'muâraza edilememe' şartına yöneltilmiş en sert mantıkî itirazdır: şart zamana göre üç şıkkın hiçbiri savunulamaz görünüyor. Risale cevabı ancak muârazanın Kur'ân'ın kendi tehaddîsinde (meydan okuma: 'şu sûre gibi bir sûre getirin', Bakara 2/23 ⊬ sayfada geçmiyor, Kur'ân'dan doğrulanacak) tarih içinde (vahyin indiği dönemde ve sonrasında) somut olarak sınanmış olmasıyla verilebilir; 'ebediyen muâraza edilmeyecek' kat'î ilim gerektirmez, 'bugüne kadar edilemedi, Allah'ın âdeti bunu izin vermez' diye yazılır. Bu cevap Risale'nin ödevidir; Râzî'nin kendi cevabı K1 F13–F14'te aranacak.**
+- Doğan sual: —
+
+## c8 p67
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: şüpheciler.** Şüphe 3'ün sonu: '**birini şart koşup kalanları iptal etmek mahz tahakküm ve bâtıl ⇒ muâraza edilmeme şartı bu üç kısma ayrılır ve hepsi bâtıl.** **2. vecih**: muâraza edenler ya yalnız hâzırûndan ya tüm âlem ehlinden ya orta derecelerden; bu üçünün ibtâli önceki vecihteki gibi. **3. vecih**: 'ademi (muâraza edilmemek) mahz nefiydir; başkasından hiçbir vecihle imtiyaz olması imtinâ'; imtiyaz olmayınca delil olması imtinâ': çünkü delilin en alt mertebesi mâsivâdan imtiyazıdır.' **Muâraza şartı olmayan kısım (delâlet muâraza edilmemeye bağlı değil) fesâdı zâhir.** **Şüphe 4**: '**mûcizenin sıdka delâleti matlûba 'münâsib' değil ⇒ bâtıl. Örnek: bir adam 'ben hendeseyi bilirim' dese; hendese mes'elelerini açıklamasını isteseler getirmez, onları şerhe girişmez; 'bu ilmi bildiğimin delili yirmi gün yemeden içmeden durduğum halde ölmemem' derse herkes 'bu delil bu matlûba münâsib değil; hendeseye vukûfunu mes'eleleri şerh ederek göstermeli' der. Burada da resûl halkı mebde'i ve me'âdı bilmeye irşâd eden, dünya ve âhiretteki maslahatları kazanma yollarına çağıran kimse (p68).**'
+- Netice/hüküm: **Şüphe 3 sonu ve Şüphe 4 (mûcize matlûba münâsib değil: hendese örneği).**
+- Delil çeşidi: **temsil şüphesi**; (T) —
+- Mevzuya bağı: **Fasıl II — 'delilin matlûba münâsebeti'**: **Şüphe 4 K2'nin 'tekmîl yolu'nun ana gerekçesini hazırlıyor: nebîliğin delili nebînin çağrısının içeriği ve etkisi olmalı, mûcize (asayı yılan yapma) matlûba yabancıdır. Râzî K2'de bu şüpheyi kendi 'tekmîl yolu' olarak benimsiyor gibi görünüyor (K2 F5 p123 'mûcizeler burhân-ı inn' kayıtlı); Risale iki burhanı birlikte yazar: mûcize (Allah'ın tasdîki) + davetin içeriği/etkisi (Kur'ân'ın kendi meydan okuması hem içerik hem üslûp hem de etkisi ile mûcizedir).**
+- Doğan sual: —
+
+## c8 p68
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: şüphecilerin sonu (Şüphe 4).** '**…bu dâvâyı bu manayı izhâr ederek beyân etmesi vâcib; 'buna delil asayı yılana çevirmemdir' demesi bu matlûba münâsib bir delil değil; iltifat edilmemeli.**' (kısa sayfa).
+- Netice/hüküm: **Şüphe 4'ün sonu.**
+- Delil çeşidi: **temsil şüphesi**; (T) —
+- Mevzuya bağı: **Fasıl II**: p67 ile birlikte.
+- Doğan sual: —
+
+## c8 p69
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **K1 Fasıl 10: 'Mûcize Allah'ın açık tasdîkinin yerine geçse bile müddeînin sâdık olması lâzım gelir mi?'.** **Kimin sesi: mûcize delâletini inkâr edenler (Râzî aktarıyor).** '**Bu mânâ vâcib değil; delili birkaç vecih: ŞÜPHE 1: cebr kavlinin sıhhatine delâlet eden deliller, tüm kul fiillerinin faili Allah olduğuna delâlet eder; bu sabit olunca tüm yalanların ve cehâletlerin yaratıcısının Allah olduğuna kat'î hükmetmek vâcib; Allah'a cehâlet ve dalâleti başlangıçta yaratmak imtinâ' değilse, kulların kalbinde aldatma, cehâlet ve şüphe vukûunu gerektiren bir söz zikretmesi imtinâ' olmaz, evlâdır; çünkü cehâlete götürebilecek bir şeyi yapmak, cehâleti baştan yapmaktan daha büyük değil.** **ŞÜPHE 2**: 'kalplerde cehâlet hâsıl olduğu şüphesiz; bu cehâletin faili ya kul ya Allah; birincisi bâtıl: ya kul cehâlet olduğunu bile bile başlangıçta kendine cehâlet tahsîlini istedi, ya bu cehâleti ilim zannettiği için tahsîline rağbet etti. **(p70)**'
+- Netice/hüküm: **F10 Şüphe 1–2: kader (cebr) öğretisi mûcize tasdîkini çürütmek için kullanılıyor: Allah cehâlet ve dalâleti yaratıyorsa yalancıyı da tasdîk edebilir.**
+- Delil çeşidi: **şüphe (cebr ⇒ Allah her şeyin, cehâletin de yaratıcısı ⇒ tasdîk yalanı da yapabilir)**; (T) —
+- Mevzuya bağı: **KRİTİK — Fasıl I §8 kader ve Fasıl II (cebr-kader ↔ mûcize)**: **Bu şüphe kader öğretisinin (kul fiillerini Allah yaratır) bedelini gösteriyor: kader kabul edilirse 'Allah yalan söylemez' hükmünün dayanağı ne olacak? c9'un Ehl-i Sünnet burhanı (c9 p388 'müreccih Allah') ile c8'in mûcize burhanı bu noktada gerilim taşır; Risale bu gerilimi açıkça yazmak zorunda: 'kader ⇒ Allah hidâyet ve dalâleti yaratır; ama Allah'a yalan (kizb) naks sıfattır, muhâl (c8 p100)' — yalan yaratmak ile yalan söylemek aynı şey değil (kulun yalanının yaratıcısı olmak ≠ Allah'ın kelâmında yalan).** Bu ayırım Râzî'nin cevabında aranacak.
+- Doğan sual: —
+
+## c8 p70
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: şüpheciler.** Şüphe 2 devam: '**(birincisi) iki yönden bâtıl: (a) akıllı kişinin kendi için cehâlet tahsîline çalışmadığı zarûrî ma'lûm; (b) bir şeyin cehâlet olduğunu bilirse bu ilimle o şey hakkında câhil olması imtinâ' ⇒ bu kısım fâsid; hak ikinci kısım: kul o inancı kendi için ilim sandığı için istedi; o hâlde bu inancı önceki cehâlet yüzünden istedi; sabıkta aynı taksîm tekrar; başka bir sebep önceyse teselsül (muhâl) ⇒ bu cehâletler yükselirken bir ilk cehâlete varır, kalbe düşmüştür; bilinir ki kul onu düşürmek kastetmedi; öyleyse kalbe düşmesi Allah'ın onu yaratmasındandır. Demek kalplerdeki tüm cehâletlerin yaratıcısı Allah; bu sabit olunca cehâleti vehmettirecek şeyi yapması evlâ.**' **ŞÜPHE 3**: '**kula ait çeşit çeşit cehâletler var; ya Allah'ın irâdesine uygun hâsıl olmuşlardır ya aykırı; ilki: Allah cehâleti irâde eder; bu takdirde yalancıyı tasdîk etmesi imtinâ' olmaz: kalplere cehâlet atmaya çalışmak; ikincisi: Allah zayıf, âciz, mağlup; böyle olan yalandan sakınmaz. Demek her iki takdirde de yalancıyı tasdîk Allah'a muhâl değil.**' **ŞÜPHE 4** başlıyor: '**yalancıyı tasdîkin Allah'a muhâl olduğunu söyleyenlerin sözünün mihveri: yalan kabîhtir…' (p71)**'
+- Netice/hüküm: **F10 Şüphe 2–3: cehâletlerin yaratıcısı Allah (teselsül ile ilk cehâlete varış), Allah cehâleti irâde eder ya da mağlup; her iki hâlde 'yalancıyı tasdîk muhâl değil'.**
+- Delil çeşidi: **dilemma + teselsül (cebr delili)**; (T) **⊬ 'teselsül ⇒ ilk cehâlet Allah'ın yaratması' zinciri c4 aporiasındaki 'müreccih zinciri ⇒ Allah' burhanının (c9 p388) cehâlete uygulanmış hâli; F 27-B: zincir 'kulun ihtiyârî ilk tercihi' ihtimâlini (Mu'tezile) elediğini iddia ediyor.**
+- Mevzuya bağı: **KRİTİK — c4/c9 ↔ Fasıl II**: **Şüphe 2–3 'kader burhanı' bedelini mûcizeye ödettirmeye çalışıyor: 'Allah cehâleti irâde eder' ⇒ 'yalancıyı tasdîk edebilir'. Risale cevabı: 'Allah'ın hâlik olması ile yalanın Allah'a nisbet edilmesi farklıdır; Allah'ın mahlûkâtta hâlik olması ile Allah'ın kelâmında sâdık olması ayrı meseledir' — bu ayrımın Râzî'nin kendi cevabında bulunup bulunmadığı okunacak.**
+- Doğan sual: —
+
+## c8 p71
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: şüpheciler (Şüphe 4); 'قد عرفت' ifadesi Râzî'nin kendi sonucuna atıf.** '**Şüphe 4: yalancıyı tasdîkin Allah'a muhâl olduğunu söyleyenlerin sözünün mihveri: yalanın kabîh olması ve bunun Allah'tan (sâdır olmasının muhâl olması); oysa gösterdik ki bu kaide aklın tahsîn ve takbîhine (güzel-çirkin bulmasına) dayanır; onun ikna edici, son derece zayıf bir söz olduğunu bildin; buna dayanan da zayıftır.**'
+- Netice/hüküm: **F10 Şüphe 4: 'yalan kabîh, Allah'tan sâdır olmaz' kaidesi aklî hüsn-kubuha dayanır; hüsn-kubuh-ı aklî ikna'î ve zayıf; dayanağı da zayıf.**
+- Delil çeşidi: **şüphe (Râzî'nin kendi hüsn-kubuh reddine yaslanan ilzâm)**; (T) **F 27-B: Bu şüphe Râzî'nin c3 sonucunu (hüsn-kubuh-ı aklî ikna'î ve zayıf) mûcize burhanına karşı kullanıyor; 'Allah'a yalan muhâl' öncülünün dayanağı 'kizb kabîh' ise çöker; c8 p100'de Râzî bu öncülü 'noksan sıfat (kemâl-noksan)' fıtrî öncülüne dayandırıyor (kabîh değil noksan); iki dayanak ayrı: cevap Râzî'nin kalemindedir.**
+- Mevzuya bağı: **KRİTİK — c3 (hüsn-kubuh) ↔ Fasıl II mûcize burhanı halkası ('Allah'a yalan muhâl')**: **Risale bu halkayı 'kizb kabîhtir (aklî hüsn-kubuh)' diye KURMAZ; 'kizb noksan sıfattır, Allah her noksandan münezzehtir (kemâl sıfatlar; c3)' diye kurar; bu, c8 p100 ile Râzî'nin kendi cevabıdır. Bu halkanın kesin öncülü (Allah'ın kemâli) c3 sıfatlar kaydında bağlanır.**
+- Doğan sual: —
+
+## c8 p72
+- OCR: —
+- Okuma: okunmadı (boş sayfa)
+- İçerik: Boş.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
