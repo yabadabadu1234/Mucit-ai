@@ -13,7 +13,7 @@ Bu dosya `araclar/durum.py` ile **okuma defterlerinden otomatik** üretilir; ell
 | 5 | 189 | 140 | 74 | 6/115/3 | 1–128, 178–189 | 129–177 |
 | 6 | 218 | 14 | 6 | 0/13/1 | 205–218 | 1–204 |
 | 7 | 435 | 14 | 3 | 0/13/0 | 422–435 | 1–421 |
-| 8 | 201 | 167 | 83 | 2/149/2 | 1–156, 191–201 | 157–190 |
+| 8 | 201 | 167 | 83 | 2/60/2 | 1–156, 191–201 | 157–190 |
 | 9 | 395 | 221 | 56 | 5/191/10 | 1–140, 199–252, 369–395 | 141–198, 253–368 |
 
 "Okundu" = o sayfanın metni baştan sona okundu ve defterde kaydı var. Başlıktan/fihristten çıkarım "okundu" sayılmaz.

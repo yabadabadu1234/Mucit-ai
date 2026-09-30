@@ -6,6 +6,6 @@ Kaynak: İnternet Arşivi `gez15_2_outlook_20170829` (Şâmile `.bok`, Access ve
 | :-- | :-- |
 | Sayfa işareti | Metinde satır başında `[N]` = neşrin **basılı** sayfa numarası. 2470/2479 satır işaretle başlar |
 | İşaretsiz sayfa | c9'da 31 sayfada işaret yok (8, 18, 20, 100, 112, 174, 200, 246, 252 …); o sayfalar komşu sayfayla bitişiktir |
-| PDF ile fark | PDF/OCR sayfa numarası basılı numaradan ön sayfa kadar fazladır (c9: PDF 395 sayfa, basılı 390); defterlerdeki sayfa numaraları PDF esaslıdır, çevrim okunarak yapılır |
+| Defter numarası | Eski defterlerdeki sayfa numaraları ölçülen noktalarda basılı numarayla aynıdır (PDF'in fazla sayfaları sondaki fihristtir); kayma ±1 olabilir (c6 sonunda 1), doğrulamada eşlenir |
 | Yorum | Metin, tahkikin dipnot numaralarını `[1]` biçiminde satır içinde taşır; dipnot metni ayrıdır |
 | Nüsha | Bu da bir tahkikli neşrin metnidir; ilgili telif notu ana README'dedir |

@@ -379,8 +379,8 @@
 | 338 | 7 | Fasıl 6: Bu akıllar ve nefisler hakkındaki sözün iki fer'inin araştırılması | 383 | okunmadı | Felekî nefs ve tılsım: İslâm kaydıyla en son, Risale'ye girmez |
 | 339 | 7 | Fasıl 7: Tılsım ashâbının yüce felekî ruhların sıfatları hakkındaki sözlerinin nakli | 387 | okunmadı | Felekî nefs ve tılsım: İslâm kaydıyla en son, Risale'ye girmez |
 | 340 | 8 | Yıldızlar yoluna dayanan sihirde i'tibar edilen küllî usûlün takriri hakkında makâle | 147 | OCR-mühürlü* | Yıldız sihri gövdesi: İslâm kaydıyla en son, Risale'ye girmez |
-| 341 | 8 | Fasıl 1: Tılsımlar | 149 | kısmen | Yıldız sihri gövdesi: İslâm kaydıyla en son, Risale'ye girmez |
-| 342 | 8 | Fasıl 2: Bu ilmin usûlüne vukûfun çok güç olduğunun beyanı | 153 | okunmadı | Yıldız sihri gövdesi: İslâm kaydıyla en son, Risale'ye girmez |
+| 341 | 8 | Fasıl 1: Tılsımlar | 149 | OCR-mühürlü* | Yıldız sihri gövdesi: İslâm kaydıyla en son, Risale'ye girmez |
+| 342 | 8 | Fasıl 2: Bu ilmin usûlüne vukûfun çok güç olduğunun beyanı | 153 | kısmen | Yıldız sihri gövdesi: İslâm kaydıyla en son, Risale'ye girmez |
 | 343 | 8 | Fasıl 3: Felekî cirimlerin tabiatlarına vukûfun hâsıl olduğu yol | 159 | okunmadı | Yıldız sihri gövdesi: İslâm kaydıyla en son, Risale'ye girmez |
 | 344 | 8 | Fasıl 4: Bu türe riâyette i'tibar edilen küllî şartlar | 161 | okunmadı | Yıldız sihri gövdesi: İslâm kaydıyla en son, Risale'ye girmez |
 | 345 | 8 | Fasıl 5: Bu babda i'tibar edilen hâllerin telhîsi | 167 | okunmadı | Yıldız sihri gövdesi: İslâm kaydıyla en son, Risale'ye girmez |
@@ -388,8 +388,8 @@
 | 347 | 8 | 1. tür: Yıldız türlerinin araştırılması | 168 | okunmadı | Yıldız sihri gövdesi: İslâm kaydıyla en son, Risale'ye girmez |
 | 348 | 8 | 2. tür: Te'sir eden felekî noktaların hâllerinin araştırılması | 173 | okunmadı | Yıldız sihri gövdesi: İslâm kaydıyla en son, Risale'ye girmez |
 | 349 | 8 | 3. tür: Tesyîrlerin kendilerine ulaştığı noktalar | 174 | okunmadı | Yıldız sihri gövdesi: İslâm kaydıyla en son, Risale'ye girmez |
-| 350 | 8 | Fasıl 5'in 2. bölümü: Alt kâbil cisimlerden bilinmesi gereken hususlar | 179 | kısmen | Yıldız sihri gövdesi: İslâm kaydıyla en son, Risale'ye girmez |
-| 351 | 8 | Fasıl 6: Bu işlerde gözetilmesi gereken başka usûllere tenbîh | 187 | OCR-mühürlü* | Yıldız sihri gövdesi: İslâm kaydıyla en son, Risale'ye girmez |
+| 350 | 8 | Fasıl 5'in 2. bölümü: Alt kâbil cisimlerden bilinmesi gereken hususlar | 179 | okunmadı | Yıldız sihri gövdesi: İslâm kaydıyla en son, Risale'ye girmez |
+| 351 | 8 | Fasıl 6: Bu işlerde gözetilmesi gereken başka usûllere tenbîh | 187 | kısmen | Yıldız sihri gövdesi: İslâm kaydıyla en son, Risale'ye girmez |
 | 352 | 8 | Burçlar ve evlerde i'tibar edilen hâllere gelince: bunda birçok şart vardır | 194 | OCR-mühürlü* | Yıldız sihri gövdesi: İslâm kaydıyla en son, Risale'ye girmez |
 
 Toplam sıralanan satır: 352 (361 − 9 cilt başlığı = 352 olmalı). Cilt başlıkları `FIHRIST_TAM.md`dedir.

@@ -1,6 +1,6 @@
 # el-Metâlibü'l-Âliye — TAM FİHRİST (Sekkā neşrinin kendi fihristi)
 
-Kaynak: `metin_sekka/fihrist_sekka.tsv` (Şâmile `.bok` tablosu `t268`; **OCR değil**). **361 başlık, 9 cilt.** Arapça başlık neşrindir; **Türkçe başlık benim tercümemdir** (Türkçe çevirinin metni depoda yoktur). `s.` = neşrin basılı sayfa numarası (satırın başladığı sayfa; işaretsiz 31 sayfa nedeniyle ±1 olabilir). **Durum:** `okunmadı` = defterde kaydı yok; `kısmen`; `OCR-mühürlü*` = eskiden OCR ile okunup mühürlendi, **gerçek metinle doğrulanmadı** (PDF sayfa = basılı + cilt farkı, yaklaşık). Sıra: umumîden hususîye, fihrist sırasıyla; girinti = seviye.
+Kaynak: `metin_sekka/fihrist_sekka.tsv` (Şâmile `.bok` tablosu `t268`; **OCR değil**). **361 başlık, 9 cilt.** Arapça başlık neşrindir; **Türkçe başlık benim tercümemdir** (Türkçe çevirinin metni depoda yoktur). `s.` = neşrin basılı sayfa numarası (satırın başladığı sayfa; işaretsiz 31 sayfa nedeniyle ±1 olabilir). **Durum:** `okunmadı` = defterde kaydı yok; `kısmen`; `OCR-mühürlü*` = eskiden OCR ile okunup mühürlendi, **gerçek metinle doğrulanmadı** (defter numaraları basılı numarayla aynıdır; kayma ±1, c6 sonunda 1 sayfa; satır satır doğrulamada eşlenir). Sıra: umumîden hususîye, fihrist sırasıyla; girinti = seviye.
 
 
 ## Cilt 1
@@ -347,8 +347,8 @@ Kaynak: `metin_sekka/fihrist_sekka.tsv` (Şâmile `.bok` tablosu `t268`; **OCR d
 | 303 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9. çeşit: Yemek yedirmeye dayanan sihir | النوع التاسع من السحر: المبني على إطعام الطعام | 146 | OCR-mühürlü* |
 | 304 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10. çeşit: Yalanları yaymaya ve hile ile aldatma türlerine dayanan sihir | النوع العاشر: السحر المبني على ترويج الأكاذيب وأنواع المكر والخداع | 146 | OCR-mühürlü* |
 | 305 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yıldızlar yoluna dayanan sihirde i'tibar edilen küllî usûlün takriri hakkında makâle | مقالة في تقرير الأصول الكلية المعتبرة في السحر المبني على طريقة النجوم | 147 | OCR-mühürlü* |
-| 306 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 1: Tılsımlar | الفصل الأول في الطلاسم | 149 | kısmen |
-| 307 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 2: Bu ilmin usûlüne vukûfun çok güç olduğunun beyanı | الفصل الثاني في بيان أن الوقوف على أصول هذا العلم عسر جدا | 153 | okunmadı |
+| 306 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 1: Tılsımlar | الفصل الأول في الطلاسم | 149 | OCR-mühürlü* |
+| 307 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 2: Bu ilmin usûlüne vukûfun çok güç olduğunun beyanı | الفصل الثاني في بيان أن الوقوف على أصول هذا العلم عسر جدا | 153 | kısmen |
 | 308 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 3: Felekî cirimlerin tabiatlarına vukûfun hâsıl olduğu yol | الفصل الثالث في الطريق الذي حصل به الوقوف على طبائع الأجرام الفلكية | 159 | okunmadı |
 | 309 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 4: Bu türe riâyette i'tibar edilen küllî şartlar | الفصل الرابع في الشرائط الكلية المعتبرة في رعاية هذا النوع | 161 | okunmadı |
 | 310 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 5: Bu babda i'tibar edilen hâllerin telhîsi | الفصل الخامس في تلخيص الأحول المعتبرة في هذا الباب | 167 | okunmadı |
@@ -356,8 +356,8 @@ Kaynak: `metin_sekka/fihrist_sekka.tsv` (Şâmile `.bok` tablosu `t268`; **OCR d
 | 312 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. tür: Yıldız türlerinin araştırılması | النوع الأول البحث عن أنواع الكواكب | 168 | okunmadı |
 | 313 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. tür: Te'sir eden felekî noktaların hâllerinin araştırılması | النوع الثاني البحث عن أحوال النقط الفلكية المؤثرة | 173 | okunmadı |
 | 314 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. tür: Tesyîrlerin kendilerine ulaştığı noktalar | والنوع الثالث: النقط التي تنتهي التسييرات إليها | 174 | okunmadı |
-| 315 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 5'in 2. bölümü: Alt kâbil cisimlerden bilinmesi gereken hususlar | القسم الثاني من الفصل الخامس في الأمور التي يجب معرفتها عن الأجسام القابلة السفلية | 179 | kısmen |
-| 316 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 6: Bu işlerde gözetilmesi gereken başka usûllere tenbîh | الفصل السادس في التنبيه على أصول أخرى يجب مراعاتها في هذه الأعمال | 187 | OCR-mühürlü* |
+| 315 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 5'in 2. bölümü: Alt kâbil cisimlerden bilinmesi gereken hususlar | القسم الثاني من الفصل الخامس في الأمور التي يجب معرفتها عن الأجسام القابلة السفلية | 179 | okunmadı |
+| 316 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 6: Bu işlerde gözetilmesi gereken başka usûllere tenbîh | الفصل السادس في التنبيه على أصول أخرى يجب مراعاتها في هذه الأعمال | 187 | kısmen |
 | 317 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Burçlar ve evlerde i'tibar edilen hâllere gelince: bunda birçok şart vardır | وأما في الأحوال المعتبرة في البروج والبيوت: ففيه وجوه من الشرائط | 194 | OCR-mühürlü* |
 
 ## Cilt 9
