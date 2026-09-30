@@ -1856,3 +1856,138 @@ Biçim: cilt 1–8 ile aynı. Dipnottaki harfler neşredenin nüsha işaretlerid
 - Delil çeşidi: —
 - Mevzuya bağı: —
 - Doğan sual: —
+
+## c9 p369
+- OCR: iyi (başlık)
+- Okuma: tam
+- İçerik: **Bâb başlığı.** 'BÂB 8: Sahâbe ve tâbiîn'den rivâyet edilen eserlerin şerhi; hasmın (Mu'tezile) kendi sözleri için tutunduğu eserler.'
+- Netice/hüküm: Bâb 8 başlıyor.
+- Delil çeşidi: —
+- Mevzuya bağı: Fasıl IV (selef eseri kullanımı) ve Fasıl I §8
+- Doğan sual: —
+
+## c9 p370
+- OCR: —
+- Okuma: tam (sayfa boş)
+- İçerik: Sayfa boş.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c9 p371
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: hasım (Mu'tezile) nakilleri; ashâbımızın (Ehl-i Sünnet) cevapları Râzî'nin nakliyle.** '(a) Ebû Bekr es-Sıddîk 'kelâle'yi sorulunca: 'Kendi re'yimle söylerim; doğruysa Allah'tandır, hataysa şeytandandır; Allah ve Resûlü ondan berîdir': hasım: hatanın Allah'tan olmadığına tasrîh. Cevap: 'Allah'tan ve Resûlü'nden değil' hüküm manasında; nazîr: 'onlar 'o Allah katındandır' derler, hâlbuki o Allah katından değil' (Âl-i İmrân sûresi). (b) Ömer, kâtibi 'Allah'ın Ömer'e gösterdiği budur' yazınca sildirip 'Ömer'in gördüğü' yazdırdı: cevap: 'Allah gösterdi' ancak nassla bilinen için doğru; bu sebeple. (c) Ömer'e hırsız getirildi; 'niçin çaldın?' 'Allah'ın kazasıyla'; eli kesti ve dövdü: 'bu çalman için, bu Allah'a iftiran için' (p372).'
+- Netice/hüküm: Sahâbe sözlerinden Mu'tezile'nin delil çıkarmaya çalıştığı üç örnek ve Ehl-i Sünnet'in te'villeri.
+- Delil çeşidi: nakil (isnadsız anekdot); (T) F 27-B: aynı sahâbî sözleri iki tarafça iki yorumla okunuyor; ayırt edici ortak öncül yok. İSLÂM KAYDI: isnadsız; Risale'ye ALINMAZ.
+- Mevzuya bağı: Fasıl IV; Fasıl I §8
+- Doğan sual: —
+
+## c9 p372
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: hasım nakli; Ehl-i Sünnet cevabı.** '(c) sonu: belki hırsızın 'kaza'dan kastı Allah'ın izni ve hükmüydü. (d) Ali: adl 'en meşhur'; 'tevhid onu vehmetmemen, adl onu itham etmemen'; ashâbımız: murâd zulmün Allah'tan muhâl oluşu, çünkü O kendi mülkünde tasarruf eder. (e) Sıffîn dönüşü Hicazlı bir şeyh: 'Şam yürüyüşümüz Allah'ın kaza ve kaderiyle miydi?' Ali: 'Evet; her vâdiye inişimiz, her tepeye çıkışımız kaza ve kaderledir'; şeyh: 'zahmetimi Allah katında sayarım'; Ali: 'Sen lâzım bir kaza, kesin bir kader sanıyorsun; öyle olsaydı sevap-ikâb, va'd-vaîd batıl olurdu … bu şeytan kardeşlerinin, putperestlerin, Rahmân'ın hasımlarının, yalancı şahitlerin sözüdür; bu ümmetin kaderiyyesi ve mecûsileridir; Allah muhayyer kıldı, sakındırdı, kolay yükledi; mağlup olarak isyan edilmedi, zorlanarak itaat edilmedi…' (p373).'
+- Netice/hüküm: Ali'ye nisbet edilen Sıffîn rivâyeti Mu'tezile'nin en güçlü nakli; Râzî'nin nakline göre 'kaza' 'emir ve irâde' diye yorumlanıyor (p373).
+- Delil çeşidi: nakil; (T) F 27-B: aynı Ali'ye hem Mu'tezile hem Ehl-i Sünnet metin izâfe ediyor (p249/p375); isnadsız. İSLÂM KAYDI: ALINMAZ.
+- Mevzuya bağı: Fasıl I §8; Fasıl IV
+- Doğan sual: —
+
+## c9 p373
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: hasım nakli.** 'Şeyh: 'o zaman hangi kazadan bahsediyorsun?' Ali: 'Allah'ın bununla emri ve irâdesi'; sonra 'Rabbin yalnız ona kulluk etmenizi kaza etti' (İsrâ sûresi) okudu; şeyh sevinerek gitti ve beyit söyledi. (f) Mücâhid: İbn Abbas Şam köylerine uzun mektup yazdı: 'Aranızda Allah'a iftira eden, haram kıldığını helâl eden ve alenen O'na nisbet eden var mı?' (g) İkrime İbn Abbas'tan: 'Kader derin bir deniz; en yakınında durun; 'Allah kulları günahlara zorladı' demeyin (zulmedersiniz), 'Allah kulların ne yapacağını bilmedi' demeyin (cahil dersiniz); Allah'ın kalbini takvâ için imtihan ettiği kişi 'azap ederse günahımla, affederse lutfuyla' der.' (h) Ali b. Abdullah b. Abbas: 'Bazıları günahlarının Allah'tan olduğunu, Allah'ın onları zorladığını iddia ediyor'; İbn Abbas: 'Biri olsa boğazını sıkıp canı çıkıncaya kadar…'. (i) Zeynelâbidîn kul fiilleri: ya yalnız Allah'ın … (p374).'
+- Netice/hüküm: Ali-İbn Abbas nakilleri; 'kaza = emir ve irâde' yorumu.
+- Delil çeşidi: nakil; (T) İbn Abbas'ın 'Allah'ın ilmini inkâr etme, cebrettiğini de deme' dengesi ('ikisini de demeyin') bir orta yol tavrı: Râzî'nin yorumuyla uyuşmaz, ama yorum bu sayfada yok. İSLÂM KAYDI: isnadsız; ALINMAZ (İbn Abbas'ın 'derin deniz' sözü kaynaklı yoklanır).
+- Mevzuya bağı: Fasıl I §8
+- Doğan sual: —
+
+## c9 p374
+- OCR: orta; dipnotlar editör (Nâşî'nin tercümesi, Kuveyt kitabı)
+- Okuma: tam
+- İçerik: **Kimin sesi: hasım nakli; dipnotlar neşredenin.** 'Zeynelâbidîn: fiiller ya Allah'ın (kulun sun'u yok) ya kulun (Allah'ın sun'u yok) ya ikisinin arasında; Allah'ınsa kuldan zem ve ikâb düşer; ortaksa levm ikisinedir; kuldansa bizim dediğimizdir. Mu'tezile'den Ebü'l-Abbâs en-Nâşî bunu nazmetti (üç ihtimal beyitleri). (j) Nefs-i Zekiyye Muhammed b. Abdullah, Vâsıl b. Atâ'dan i'tizâlı aldı; babası Abdullah: 'oğlum her şeyde kâmilsin, kaderi söylemesen'; Nefs-i Zekiyye: 'beni benden sâdır olan fiile mi, yoksa Allah'ın bana cebren yarattığı fiile mi zorluyorsun? İlkiyse mezhebim; ikincisiyse günahım ne?' Abdullah düşünüp oğlunun mezhebine geçti.' Dipnot 1: Nâşî'nin tercümesi (tabaka, eserler). Dipnot 2: Kuveyt 'İslâmî Terbiye' kitabından: 'kaderi yanlış anlayıp kötü amellerin sebebi sayanlar hatalıdır; nefis fücûr ve takvâya hazır yaratıldı; insan aklıyla ayırır; Resûl bu sözden sakındırdı' ve Câbir'den bir hadis alıntısı (isnadsız).
+- Netice/hüküm: Zeynelâbidîn üçlü ayrımı; Nefs-i Zekiyye anekdotu; editör dipnotları Râzî'nin değil.
+- Delil çeşidi: nakil + üçlü taksîm; (T) F 27-B: 'ya Allah'ın ya kulun ya ortak' üçlemesi Râzî'nin 'kesb/kudret+dâî' çözümünü dışarıda bırakan bir taksîm (dördüncü şık: kul kudreti Allah'ın yarattığı dâîyle vâcib); ayırt edici. İSLÂM KAYDI: dipnot 2'nin hadisi isnadsız, Risale'ye ALINMAZ.
+- Mevzuya bağı: Fasıl I §8
+- Doğan sual: —
+
+## c9 p375
+- OCR: orta; dipnotlar editör
+- Okuma: tam
+- İçerik: **Kimin sesi: Ehl-i Sünnet nakli (Râzî 'ashâbımız' diyerek).** ''Ashâbımız bu ekâbirden Mu'tezile'nin naklettiğinin aksini nakletti: (a) Kâdî Ebû Bekr 'el-Hidâye'de: Ömer hutbe okudu, Allah'a hamd ve senâ etti; 'Allah kime hidayet ederse onu saptıran yoktur, kimi saptırırsa ona hidayet eden yoktur' dedi; önünde Câselik (Hristiyan başpiskoposu) vardı, diliyle inkâr etti; 'ne diyor?' 'Allah hidayet eder saptırmaz diyor'; Ömer: 'Allah'ın düşmanı yalan söyledi; Allah seni yarattı, seni O saptırdı, seni cehenneme O sokacak.' (b) Şa'bî'den Ali: Kûfe minberinde 'kaderin hayrına ve şerrine îmân etmeyen bizden değildir'; beyit: 'ölüm … sakınma takdir edilenden koruyamaz'; Kâdî Ebû Bekr: bu, takdirden sakınmanın fayda vermeyeceğine tasrîhtir. (c) Ka'b b. Züheyr'in kasidesinden beyit: 'her ne takdir eden Rahmân ise yapılır'. (d) Ömer hırsıza iki ceza: 'Allah takdir etti' diyene otuz sopa, sonra el kesme: 'kesilmesi çalması için, dövülmesi Allah'a iftirası için.'' Dipnot: Kâtolik başpiskoposu notu (editör).
+- Netice/hüküm: Ehl-i Sünnet karşı nakilleri (Ömer'in 'Allah seni saptırdı' hutbesi, Ali'nin kaderin hayrı ve şerri sözü).
+- Delil çeşidi: nakil; (T) F 27-B: aynı sahâbîlere iki taraf da zıt söz izâfe ediyor (isnadsız): nakiller birbirini nakzediyor ⇒ bu sayfaların hiçbiri delil değil. İSLÂM KAYDI: ALINMAZ.
+- Mevzuya bağı: Fasıl IV (rivâyet çatışması metodu)
+- Doğan sual: —
+
+## c9 p376
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî (kapanış); sonra nâsih/naşir ilâvesi.** '(d) sonu, Lebîd'den beyit. 'Bu hikâyelerle yetinelim; ıtnâbdan sakınırız.' Nâsih notu: 'Nüshada şöyle gördüm: … bu fasılı bu yerde kenardaki hâşiyede müsannifin şiiri hoş görmemesiyle beraber gördüm, buraya yazdım' ve 'ta'sîsen bu hikâyeyi fasla yazdım'; ardından va'z niteliğinde bir nasihat metni ('Ey kullar, inatçı mürid gibi olmayın … huzurda hazır olana karşı söylemeyin; va'd ve vaîd konusunda Allah'tan korkun …') ve 'Râzî rahmetullâhi aleyhi şiir söyledi' başlığı.' Râzî'nin metni değil, nâsihin/naşirin ilâvesi.
+- Netice/hüküm: Bâb 8 sonu: Râzî yetinilmesini söylüyor; devamı nüsha ilâvesi.
+- Delil çeşidi: —; NÜSHA NOTU: bu sayfadaki nasihat ve şiir başlığı Râzî'nin kendi metni olarak alınmaz.
+- Mevzuya bağı: Fasıl IV (nüsha güvenilirliği)
+- Doğan sual: —
+
+## c9 p377
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: şiir (nâsihin nakli, 'Râzî'ye nisbet').** 'İleyke ilâhe'l-halk vecceht vechetî … sensin rüyâmda anıldığım, sensin gayrette ümidim, hayatta ve kabrimde; her talepte kolaylaştıran sensin; zenginlikte ve fakirlikte sığınağım sensin' (dua şiiri).
+- Netice/hüküm: Şiir; delil değil.
+- Delil çeşidi: —; nisbet doğrulanmadı.
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c9 p378
+- OCR: —
+- Okuma: tam (boş)
+- İçerik: Sayfa boş.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c9 p379
+- OCR: —
+- Okuma: tam (boş)
+- İçerik: Sayfa boş.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c9 p380
+- OCR: —
+- Okuma: tam (boş)
+- İçerik: Sayfa boş.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c9 p381
+- OCR: orta; dipnot 2 editör
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî (Bâb 9'un başlığı bu sayfada yok, metin ortasından başlıyor: 'Sıhhatimize aklî ve naklî deliller delâlet eder').** '**Aklî burhanlar: Burhan 1: küfre kalkan kâfir imâna temkinli değilse matlûb hâsıl; temkinliyse kudreti iki zıdda eşit; imânın mümkin olmasına rağmen küfrü imâna tercihi ya müreccihten müstağnî ya ona muhtaç; birincisi mümkinin müreccihten istiğnâsı olup muhâl; ikincisi: müreccih kuldansa taksîm döner, Allah'tansa matlûb; kâfir küfre ancak Allah o dâîyi kalbinde kuvvetlendirdiği için kalkmıştır; dâî hâsıl olunca vücûb gösterildi: kat'î ve kaçınılmaz burhan.**' Dipnot 2 (editör): 'burhan kat'î değil: müreccih Allah ile insan arasında sabit değil; insan kendisinden de müreccih olabilir; Allah ezelde insanı hür bırakmayı irâde etti (Kitâbü'l-İrşâd)…'.
+- Netice/hüküm: Bâb 9 (Allah bazen mükellefi îmândan men'): Burhan 1 = Bâb 1 P1/P2 tekrarı.
+- Delil çeşidi: aklî; (T) F 27-B: P2'ye iner ⇒ ayırt edici değil; editör dipnotu karşı görüşü (kendi sesi).
+- Mevzuya bağı: Fasıl I §8; Fasıl II (hidâyet-idlâl)
+- Doğan sual: —
+
+## c9 p382
+- OCR: orta; dipnotlar editör
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî; dipnotlar editör.** '**Burhan 2: kul hak ve îmânı kasteder, bâtıl ve küfür hâsıl olursa bu ondan değil, Allah'tandır. Burhan 3: kul bu i'tikâdın ilim olup cehl olmadığını bilmedikçe ilmi cehle bedel kasteder olamaz; ilim olduğunu ancak malûma mutâbıklığı, bunu da malûmun hâlini bilmeyle bilir (kudret ilim tahsiline bağlı olur: muhâl); bu deliller Bâb 1'de geçti, tekrar faydasız. Sem'î deliller: Allah kitabında çeşitli mâni'ler zikretti; biz bir nev'e iktifa ederiz: Allah bazen bazı mükellefleri saptırır. HÜCCET 1: 'Allah dilediğini saptırır, dilediğini hidayete erdirir'; bu âyet Kur'ân'da beş yerde: (1) İbrâhîm sûresi: 'Biz her peygamberi kavminin diliyle gönderdik ki onlara beyân etsin; Allah dilediğini saptırır, dilediğini hidayet eder' (2) Ra'd sûresi (3) Nahl sûresi (4) Fâtır sûresi (5) Müddessir sûresi ('bunun gibi Allah dilediğini saptırır')**' Dipnot: Bâb 9'da asılda yalnız bu birinci fasıl bulunur; Keşşâf notu: 'Allah ancak îmân etmeyeceğini bildiğini saptırır'.
+- Netice/hüküm: Bâb 9 F1: 'yudıllu men yeşâ' âyetleri (5 yer); aklî burhan 2–3 tekrar.
+- Delil çeşidi: aklî + nass; (T) F 27-B: 'yudıllu men yeşâ' âyeti ortak metin; ihtilaf ıdlâlin manası (halk mı, tahliye mi): p383'te Mu'tezile itirazı; İSLÂM KAYDI: âyetlerin numaraları OCR'de okunmadı; Risale âyeti kaynaklı alır, Râzî'nin 'halk' yorumunu almaz.
+- Mevzuya bağı: Fasıl I §8; Fasıl II (hidâyet)
+- Doğan sual: —
+
+## c9 p383
+- OCR: orta; dipnotlar editör
+- Okuma: tam (sayfa hücrenin ortasında biter; cilt buradan fihriste geçer)
+- İçerik: **Kimin sesi: Râzî (âyetler), hasım itirazı ('fein kîle').** '**Beş yer devam: (2) Ra'd 'kâfirler dediler ki ona Rabbinden bir âyet indirilseydi; de ki Allah dilediğini saptırır, tövbe edeni hidayet eder' (3) Nahl 'Allah dileseydi sizi tek ümmet kılardı; fakat dilediğini saptırır, dilediğini hidayet eder' (4) Fâtır 'kötü ameli kendine süslenip güzel görüneni …? Allah dilediğini saptırır' (5) Müddessir: cehennem melekleri sayısıyla iki fırkanın imtihanını zikredip 'böylece Allah dilediğini saptırır'. İtiraz: deliller bu âyetlerin murâdının küfür ve dalâl halkı olamayacağını gösterdi; te'vîl vâcib. Birinci makam: (1) aklî ve naklî deliller ileride (2) ıdlâlin cehl halkıyla tefsiri lügaten câiz değil: birini yola cebren sokmayı 'yoldan saptırdı' denmez, 'menetti ve çevirdi' denir; 'yoldan saptırdı' ancak ona şüphe varıp doğru karıştığında; (3) Allah İblis'i ve Firavun'u mudill diye vasfetti ('ve lâudıllennehüm'; 've edalle Fir'avnü kavmehû') oysa ikisi dalâlin hâlıkı değil (sayfa sonu).**' Dipnot: 'ıdlâl = tahliye ve lütuf men'i; hidâyet = tevfîk ve lütuf'.
+- Netice/hüküm: Bâb 9'un sonu (kısmî): 'ıdlâl' lügat itirazı.
+- Delil çeşidi: itiraz; (T) F 27-B: Râzî'nin cevabı bu ciltte yok (cilt burada bitiyor; ihtilaf ıdlâlin lügat manası); açık borç.
+- Mevzuya bağı: Fasıl I §8; Fasıl II (hidâyet-idlâl)
+- Doğan sual: Râzî 'idlâl' lügat itirazına nerede cevap veriyor? (c9 Bâb 5–7 veya başka eser)
