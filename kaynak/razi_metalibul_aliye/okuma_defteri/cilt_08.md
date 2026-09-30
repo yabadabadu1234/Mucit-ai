@@ -901,3 +901,75 @@ Biçim: cilt 1–7 ile aynı. Dipnottaki harfler neşredenin nüsha işaretlerid
 - Delil çeşidi: —
 - Mevzuya bağı: —
 - Doğan sual: —
+
+## c8 p73
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **K1 Fasıl 11: 'Tevâtür hakkındaki şüpheler'.** **Kimin sesi: şüpheciler (Râzî aktarıyor); dipnotta neşredenin Tevrât açıklamaları.** '**Biz bu mûcizelerden hiçbirini görmedik; ancak bir topluluktan işittik, onlar başkalarından işittik, böyle bu sırayla mûcizeleri müşâhede edenlere ulaştı. Biz böyle bir haberin tam yakîn ifade ettiğini kabul etmiyoruz; delili birkaç vecih: ŞÜPHE 1: tevâtür haberi birçok sûrette hâsıl, sizin yalan saydığınız yerlerde de; bu, tevâtürün ilim ifade etmesini zedeler.**' **Dipnot (neşreden)**: Tevrât'tan 'ebedî kanun' ifadeleri (Çıkış 31:16; Tesniye 4:40) ve 'ebed' kelimesinin Tevrât dilinde sonsuz değil uzun zaman anlamına geldiği örneği (kul âzâd etme, 50. yıl 'yübîl'), 'Tevrât şeriatı ebede kadar = Tesniye 18'deki beklenen nebînin gelişine kadar'.
+- Netice/hüküm: **F11: mûcizelerin nakli (tevâtür) yakîn ifade etmez; Şüphe 1: tevâtür yalan saydığınız yerlerde de hâsıl.**
+- Delil çeşidi: **şüphe (tevâtürün ilim ifade etmesine itiraz)**; (T) **Neşredenin Tevrât dipnotu Râzî'nin değil; Tevrât metni ve yorumu ⊬ doğrulanmadı (Risale kullanmaz).**
+- Mevzuya bağı: **KRİTİK — Fasıl II ve IV (mûcizenin nakli: tevâtür ve haber)**: **Bu fasıl, Risale Fasıl IV (Sünnet ve tahkîk: haberin derecesi) ile doğrudan bağlı: mûcizelerin bize ulaşması nakil yoluyladır; tevâtürün 'yakîn ifade etmesi' nasıl güvence altına alınır (F 27-B: tevâtürün ayırt edici şartları). Râzî'nin 'tevâtür' delilinin cevabı K1 F12–F14'te ve 'el-Mahsûl', 'el-Erba'în' eserlerine atıfla (p79) verilecek.**
+- Doğan sual: —
+
+## c8 p74
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: şüpheciler; dipnotlarda neşredenin polemik notları.** '**Birinci makâm: tevâtürün Müslümanların bâtıl olduğunda ittifak ettiği sûretlerde de hâsıl olduğunu beyân; takrîri birkaç vecihle: (1)** Yahudiler çokluklarına ve doğu-batıya dağılmalarına rağmen Mûsâ'nın (a.s.) 'şeriatım bâkîdir, asla nesh olmaz' ve 'gökler ve yer durdukça Sebt size lâzım' dediğini haber verirler; bu haber ya doğru ya yalan; doğruysa şeriatınız bâtıl (Kur'ân'ın neshi hükmü); yalansa bu tevâtür bâtıl. **(2)** Yahudiler, yanlarındaki Tevrât'ın Allah'ın Mûsâ'ya indirdiği Tevrât'ın aynısı olduğunu haber verir; Müslümanlar 'bu kitap tahrîf ve tebdîl edilmiş, Allah'ın Mûsâ'ya indirdiğinden Yahudilerin elinde hiçbir şey kalmadı' der; bu da tevâtüre tâ'ndır. **(3)** Yahudiler ve Hıristiyanlar sayıca çok ve birbirine düşman olmalarına rağmen Îsâ'nın (a.s.) asıldığı ve öldürüldüğünde ittifak etti; Müslümanlar onları bu konuda yalanlar; bu da tevâtüre tâ'ndır.' **Dipnotlar (neşreden)**: 'Müslümanlar İbrânî Tevrât'ın tevâtürüne tâ'n etmez; Uzeyr (Ezra) Bâbil'de yazdı … Musa ölümünden uzun süre sonra yazılan…; Semerî Tevrât'ıyla İbrânî Tevrât'ın karşılaştırılması; bazı eski Hıristiyan kitaplarında Mesîh'in öldürülmediği ve asılmadığı; Barnabas İncili; Georgi Zeydan ve Sale'ı oku'.
+- Netice/hüküm: **Şüphe 1'in ilk üç örneği: Yahudilerin 'şeriat bâkîdir' tevâtürü, Tevrât'ın aslîliği tevâtürü, Îsâ'nın öldürülmesi tevâtürü — hepsi Müslümanlarca bâtıl sayılan tevâtürler.**
+- Delil çeşidi: **çelişik tevâtürler (karşı örnek)**; (T) **F 27-B: 'tevâtür bâtıl olabilir' örnekleri tevâtürün şartlarının ne olduğu sorusunu doğurur (aşağıdaki kelâmcı cevapları: Buht-i Nasr, tasavvur karışması vs.).**
+- Mevzuya bağı: **İSLÂM KAYDI**: **(1) 'Îsâ'nın asılması-öldürülmesi tevâtürü' Kur'ân'ın 'onu öldürmediler, asmadılar; onlara öyle gösterildi' (Nisâ 4/157 ⊬ sayfada geçmiyor, Kur'ân'dan doğrulanacak) hükmüyle çelişir; kelâmcıların cevabı 'şibh' (p77). (2) Neşredenin dipnotları (Barnabas İncili, Zeydan, Sale) Risale kaynağı değildir.**
+- Doğan sual: —
+
+## c8 p75
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: şüpheciler (Şüphe 1'in örnekleri 4–8).** '**(4)** Hıristiyanlar sayılarının çokluğuna ve doğu-batıya dağılmalarına rağmen Îsâ'dan (a.s.) onun 'üç' (baba, kelime-oğul, rûhulkudüs) dediğini nakleder. **(5)** Acemler İslâm'ın zuhûrundan önce dinlerinin hâkim olduğu bin yıl boyunca Zerdüşt eliyle büyük mûcizelerin zuhûrunda ittifak etmişti; erimiş bakırı başına döktüler zarar vermedi; Guştâsb'ın atının ayakları kırıldı, Zerdüşt duâsıyla düzeldi; Müslümanlar onları bu konuda yalanlar. **(6)** Maniheistler Mânî'nin göğe uçtuğunu, halkın gözünden kaybolup döndüğünü haber verir; diğer fırkalar onları yalanlar. **(7)** Kerrâmiyye, Ebû Abdillâh b. Kerrâm'ın faziletleri üzerine çok kitap yazdı; ondan acâyip hâller nakletti: göğe uçmak, kısa zamanda bir beldeden başkasına gitmek, çöllerde yiyecek ve içecek göstermek; diğer insanlar bu rivayetleri yalanlar; Kerrâmiyye'nin sayısı tevâtür sınırına ulaşır. **(8)** Râfızîler Ali b. Ebî Tâlib'in (r.a.) imâmetine dair açık nass'ın tevâtürle sâbit olduğunu iddia etti; diğer fırkalar onları yalanlar. Dipnot (neşreden): 'tevâtür iddiası ve bu tevâtür doğru değil; ilkelerin…'
+- Netice/hüküm: **Şüphe 1'in örnekleri: Hıristiyan teslîs nakli, Zerdüşt mûcizeleri (Acem tevâtürü), Mânî'nin uçması, Kerrâmiyye'nin İbn Kerrâm kerâmetleri, Râfızîlerin Ali'nin imâmet nass'ı.**
+- Delil çeşidi: **çelişik tevâtürler**; (T) **⊬ örneklerin tarihî doğruluğu (Kerrâmiyye'nin sayısı; Zerdüşt'ün mûcizeleri; Mânî'nin uçması) Râzî aktarımıdır; kaynak gösterilmedi.**
+- Mevzuya bağı: **İSLÂM KAYDI ve Fasıl IV**: **'Râfızîlerin tevâtür iddiası' örneği: Ehl-i Sünnet 'imâmet nass'ı tevâtür değildir' der; bu, Sünnet kaynaklarında (Fasıl IV) doğrulanır. Şüpheciler tevâtürün geçerliliğini bu örneklerle sarsıyor; Risale tevâtürün şartlarını (kesret, tebâyün, aynı duyusal haber, ilk tabakada mutlaka müşâhede; nakil zincirinin tüm tabakalarda bu şartları taşıması) açıkça yazar (Fasıl IV'te haber usûlünden doğrulanacak).**
+- Doğan sual: —
+
+## c8 p76
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: şüpheciler (Şüphe 1'in örnekleri 9–10), sonra kelâmcı cevapları aktarımı; dipnotlarda neşredenin polemik/açıklama notları.** **(9)** Müslümanlardan ve Hıristiyanlardan sûfî cemâatler sayı çokluğuna ve doğu-batıya dağılmalarına rağmen seleflerinde ve şeyhlerinde büyük kerâmet zuhûrunu nakleder; kelâmcıların çoğu, özellikle Mu'tezile, onları yalanlar. **(10)** 'Dünya fırkalarından hiçbirini göremezsin ki şeyhlerinden ve seleflerinden çeşitli fazilet, menkıbe ve kerâmetler nakletmesin; muhalifleri bunların hepsini inkâr eder, onlardan çeşit çeşit ayıp ve rezaletler nakleder; her iki taraf da bu rivayetlerin zuhûrunu ve tevâtür derecesine ulaştığını iddia eder; bu, mütevâtir haberlerde tenâkuz ve çatışmaya yol açar.' **Kelâmcıların cevapları**: '**Yahudilerin 'Mûsâ şeriatım nesh olmaz dedi' tevâtürüne: Buht-i Nasr (Nebukadnezar) onları tamamen öldürdü, içlerinden yalnız az sayı kaldı; onlar yalan üzerinde ittifak edebilir; bu takdirde rivayetleri tevâtür dışına çıkar.**' **Dipnot**: 'sûfîler İslâm'a zarar verdi; âlimlere sûfîliği eleştiren çok kitap yazmak vâcib…; Mu'tezile'nin başka faziletleri olmasa da sûfîliği zemmi yeter…' (**neşredenin görüşü; Râzî'nin değil; Risale'ye ALINMAZ ve ledgerde çoğaltılmaz).** Dipnot 4: 'Mûsâ 'şeriatım nesh olmaz' demedi: Tevrât'ta Tesniye 18'deki peygamberlik haberi… 'dinleyeceksiniz'; Hıristiyanlar bu nassın Îsâ'yı işâret ettiğini iddia eder; nass Îsâ'yı kastetmez çünkü o İsrâiloğulları'ndan; 'kardeşlerinden' başka soy demektir; Müslümanlar bunun Muhammed (s.a.v.) olduğunu söyler: Tevrât İsmâîl soyuna bereketi ('Yaratılış 17:20' ⊬) belirtti; bereket mülk ve nübüvvet demektir.'
+- Netice/hüküm: **Şüphe 1'in son örnekleri (sûfî kerâmet tevâtürü, her fırkanın menkıbe tevâtürü); kelâmcı cevabı 1 (Buht-i Nasr).**
+- Delil çeşidi: **çelişik tevâtürler + kelâmcı cevabı aktarımı**; (T) **Neşredenin dipnotları (sûfîlik eleştirisi; Tesniye 18 yorumu) Râzî'nin değil; ⊬ Tevrât metni ve yorumu doğrulanmadı.**
+- Mevzuya bağı: **İSLÂM KAYDI**: **Neşredenin sûfîlik aleyhindeki sert hükmü Risale'ye ALINMAZ (kaynak polemiktir; Risale sûfîlik hakkında hüküm vermez; mesele Ehl-i Sünnet içinde ayrıca işlenir). Tesniye 18 nübüvvet-haber yorumu (Muhammed'e işâret) Ehl-i Sünnet kelâmında yaygın bir istidlâldir; ama Risale ancak Tevrât metnini ve tercümesini kaynağından doğrulayarak kullanır; şimdilik ⊬.**
+- Doğan sual: —
+
+## c8 p77
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: kelâmcı cevapları aktarımı; sonra şüphecilerin karşı cevabı ('ثم أجاب القائل عن هذه الأجوبة').** **Kelâmcıların diğer cevapları**: '**Yahudilerin ve Hıristiyanların Îsâ'nın öldürülüp asıldığı nakline cevap: Allah Îsâ'nın (a.s.) sûretini başka bir insanın üzerine bıraktı; bu şüphe böyle hâsıl oldu. Mecûsîlerin ve Maniheistlerin Zerdüşt ve Mânî mûcizeleri iddiasına cevap: nübüvvet Allah ma'rifetine tâbi; Zerdüşt ve Mânî âlemin iki ilâhı olduğunu isbât etti, bu küfrün en büyüğü; kâfirin elinde mûcize zuhûru imtinâ'.**' **Şüphecilerin karşı cevabı**: '**'Yahudilerin sayısı Buht-i Nasr zamanında azaldı' derseniz: bu câizse tevâtürün her nev'inde neden câiz olmasın? 'Olsaydı meşhur olurdu; büyük vak'alar meşhur olmalı' derlerse: büyük vak'aların meşhur olabileceğinde ihtilaf yok; meşhur olması vâcib diye iddia: vâcib değil. Delil birkaç vecih: (1) Muhammed'in (a.s.) mûcizeleri: parmaklarından suyun fışkırması, az yemekle çok halkı doyurma, ağacın kökünden sökülmesi, ayın yarılması, kurdun konuşması — çok büyük, çok yüce vak'alar, fakat bu vak'aları yalnız bir iki kişi rivayet etti (…). (2) 'Büyük vak'aların nakli vâcibdir' sözü zayıf. (2) namazın şiârı yirmi üç yıl açık ve zâhirdi; yine de gerektiği gibi nakledilmedi: ikâmeti çift mi tek mi okuma, besmele okunuşu ve diğer şartlar hakkında ihtilâf ettiler.**' (p78).
+- Netice/hüküm: **Kelâmcı cevapları (Îsâ'ya şibh, kâfirin elinde mûcize imtinâ'); şüphecilerin karşı cevabı: 'büyük vak'aların meşhur olması vâcib değil; hattâ Muhammed'in mûcizelerini yalnız birkaç kişi rivayet etti, namazın şartlarında ihtilaf vardı'.**
+- Delil çeşidi: **karşılıklı itiraz**; (T) **⊬ şüphecilerin 'Muhammed'in mûcizeleri yalnız bir iki kişiden rivayet edildi' iddiası Râzî aktarımıdır; Ehl-i Sünnet'in hadîs kaynaklarında bu mûcizelerin nakil dereceleri Fasıl IV'te doğrulanır (kurdun konuşması, ağacın kökünden sökülmesi, parmaklardan su ve ayın yarılması için farklı rivayet dereceleri ve tevâtür tartışmaları bilinir ⊬ sayfa dışı).**
+- Mevzuya bağı: **KRİTİK — Fasıl II ve Fasıl IV (mûcizelerin nakil derecesi)**: **Şüphecilerin 'Muhammed'in mûcizelerini az kişi nakletti' ve 'namaz gibi zâhir şiârda bile ihtilaf var' itirazları Risale'nin nakil derecelendirmesinin sınavıdır: Risale Kur'ân'ı (mütevâtir nakil) esas mûcize kabul eder; diğer mûcizelerin (âhâd/meşhûr/mütevâtir) derecelerini Fasıl IV'te sayıyla (rivayet sayısı, tabaka sayısı, kaynak) yazar; Râzî'nin bu sayfadaki iddiasını 'şüpheci iddiası, doğrulanmadı' olarak taşır.**
+- Doğan sual: —
+
+## c8 p78
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: şüphecilerin karşı cevabı devamı; dipnotta neşredenin İbn Hazm atfı.** '**(3) Acem krallarının vak'aları büyüklüklerine rağmen izleri silindi, anılmadı; Âd ve Semûd zamanında olan vak'alar silindi; Nûh'un (a.s.) ve başkasının bazı vak'aları kaldı; demek büyük vak'alar bazen silinir, bazen kalır; ikisinden birine kat'î cezm câiz değil.**' '**'Allah Îsâ'nın şibhini başka şahsa bıraktı' sözüne: Muhammed'in Muhammed olduğuna inanılan şahıs Muhammed değil, Allah'ın sûretini ve benzerliğini üzerine bıraktığı başka bir şahıs olabilirdi; halkın tüm hâllerinde de böyle; bu sofistliği gerektirir.**' '**'Zerdüşt iki ilâh kâiliydi, ona mûcize zuhûru imtinâ'' sözüne: bu söz suâlimizi kuvvetlendirir: bütün Îrânşehr — dünya memleketlerinin ortası ve yeryüzünün en şerefli yerleri — yaklaşık bin iki yüz yıl Zerdüşt dininde idi; hepsi ondan zâhir kâhir mûcizeler naklediyordu; siz de onların bu rivayetlerde yalancı olduğuna kat'î delil getirdiniz: 'kâfirdi, kâfirin elinde mûcize imtinâ'' dediniz; demek bu, mütevâtir haberlerin yalan ve bâtıl olabileceğini gösteren açık bir burhan oldu. Bizim gayretimiz tevâtür haberinin bâtıl-fâsid olabileceğini göstermekti; bu takdirde yalnız tevâtür haberine dayanmak ilim ve yakîn ifade etmez.**' '**Bu şüphenin bu vecihten takrîri bu; buradaki vecihler çok; tevâtürün sıhhatinde zikrettiğimizden fazla: onları 'el-Mahsûl' kitabında ve 'el-Erba'în fî usûli'd-dîn' kitabında zikrettik (p79).**' **Dipnot**: 'Bkz. İbn Hazm, el-Fasl, tevâtürün zaafı.'
+- Netice/hüküm: **Şüphecilerin son cevabı: (1) büyük vak'alar bazen silinir bazen kalır; (2) 'Îsâ'ya şibh' sofistlik gerektirir; (3) Zerdüşt örneği: Îrânşehr hâlkı bin iki yüz yıl mûcize naklederken siz onları yalancı saydınız ⇒ tevâtür bâtıl olabilir.**
+- Delil çeşidi: **karşı örnek + sofistlik ilzâmı**; (T) **⊬ 'Îrânşehr 1200 yıl Zerdüşt dininde idi; hepsi mûcize naklediyordu' tarihî iddiası kaynaksız; 'Îrânşehr dünyanın ortası ve en şerefli yerler' ifadesi c8 p105 'İrânşehr en faziletli' kaydı ile aynı coğrafya-üstünlük dili ⊬ (Risale ALMAZ).**
+- Mevzuya bağı: **KRİTİK — F 27-B ve Fasıl IV (tevâtür şartı)**: **Şüphecilerin bu sayfadaki 'tevâtür bâtıl olabilir' gösterimi, Risale'nin 'tevâtürün ilim ifade etmesi hangi şartlara bağlı' sorusunu zorunlu kılar; ayırt edicilik: mütevâtir haberin (a) duyusal olması, (b) tüm tabakalarda çok ve birbirine düşman/haberleşmeyen râvîlerin olması, (c) haberin ilk tabakada gözle görülmüş bir olay olması, (d) haber hakkında karşı tarafın 'kabûl'ü ile çelişmemesi. Zerdüşt örneğinde (c) ve (d) sağlanmıyor olabilir (⊬); bu inceleme Fasıl IV'te haber usûlü ile yazılır.** **Kaynak notu: Râzî bu şüphenin fazlasını 'el-Mahsûl' ve 'el-Erba'în'de yazdığını söylüyor (bu iki eser korpusta yok; okunmadı).**
+- Doğan sual: **Râzî K1 F11'in cevabını (tevâtürün ilim ifade etmesi) hangi fasılda veriyor? (F12–F14 okunacak.)**
+
+## c8 p79
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî (kapanış atfı); dipnotta neşredenin notu.** '**…isteyen bu kitaplara başvursun.**' **Dipnot**: 'el-Mahsûl: Muhassalü efkâri'l-mütekaddimîn ve'l-müteahhirîn (kelâm; tahkîk Hüseyin Âtây); el-Mahsûl (usûl-i fıkıh); bu kitap yakında basılacak.'
+- Netice/hüküm: **F11 sonu: Râzî tevâtür şüphelerinin geri kalanını 'el-Mahsûl' ve 'el-Erba'în' eserlerine havale ediyor.**
+- Delil çeşidi: —
+- Mevzuya bağı: **Kaynak sınırı**: **Râzî'nin tevâtür şüphelerine kendi CEVABI bu sayfa dizisinde (p73–79) yok; 'el-Mahsûl' ve 'el-Erba'în' korpus dışı; cevap K1 F12–F14'te aranacak; bulunamazsa 'bu ciltte kapanmadı, başka eserde' diye yazılır (okunmadan 'yok' denmez).**
+- Doğan sual: —
+
+## c8 p80
+- OCR: —
+- Okuma: okunmadı (boş sayfa)
+- İçerik: Boş.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —

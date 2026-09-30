@@ -2,7 +2,7 @@
 
 Bu dosya `araclar/durum.py` ile **okuma defterlerinden otomatik** üretilir; elle düzenlenmez.
 
-**Toplam:** 1562 / 2720 sayfa okundu ve deftere yazıldı (57.4%).
+**Toplam:** 1570 / 2720 sayfa okundu ve deftere yazıldı (57.7%).
 
 | Cilt | Sayfa | Okunan | % | OCR: iyi/orta/kötü | Okunan aralık (PDF sayfa indisi) | Okunmayan aralık |
 | :-- | --: | --: | --: | :-- | :-- | :-- |
@@ -13,7 +13,7 @@ Bu dosya `araclar/durum.py` ile **okuma defterlerinden otomatik** üretilir; ell
 | 5 | 189 | 140 | 74 | 6/115/3 | 1–128, 178–189 | 129–177 |
 | 6 | 218 | 14 | 6 | 0/13/1 | 205–218 | 1–204 |
 | 7 | 435 | 14 | 3 | 0/13/0 | 422–435 | 1–421 |
-| 8 | 201 | 100 | 50 | 1/91/1 | 41–72, 100–156, 191–201 | 1–40, 73–99, 157–190 |
+| 8 | 201 | 108 | 54 | 1/98/1 | 41–80, 100–156, 191–201 | 1–40, 81–99, 157–190 |
 | 9 | 395 | 12 | 3 | 0/11/1 | 384–395 | 1–383 |
 
 "Okundu" = o sayfanın OCR metni baştan sona okundu ve defterde kaydı var. Başlıktan/fihristten çıkarım "okundu" sayılmaz.
