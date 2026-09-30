@@ -541,3 +541,75 @@ Biçim: cilt 1–7 ile aynı. Dipnottaki harfler neşredenin nüsha işaretlerid
 - Delil çeşidi: —
 - Mevzuya bağı: —
 - Doğan sual: —
+
+## c8 p149
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **K3 Fasıl 1: 'Tılsımlar'.** **Kimin sesi: filozoflar ve Sâbiîler (Râzî 'قالت' ile aktarıyor; kendi hükmü yok).** '**Tılsım = semâvî fa''âl kuvvetlerin arzî munfa'il kuvvetlerle karıştırılması; âdete aykırı bir şeyi ihdâs veya âdete uygun bir şeyi men için.**' 'Bu, semâvî fa''âl kuvvetlerin isbâtına dayalı; iki delil: saf aklî ve kuvvetli ikna'î.' **Aklî delil**: 'bu âlemde hâdisler vardır; her hâdisin sebebi vardır; sebep ya hâdis ya kadîm; sebep hâdisse aynı soru ⇒ teselsül; teselsül iki türlü: (1) hepsi bir anda hâsıl (imtinâ' — vâcibin isbâtı burhanında gösterdik); (2) her biri başkasına mesbûk, başa varmadan — **'işte hak budur, ondan dönüş yok'** (p150).'
+- Netice/hüküm: **Filozof/Sâbiî aktarımı: tılsım tanımı ve 'hâdislerin sebepleri ezelden beri hâdis dizisidir' aklî delil girişi.**
+- Delil çeşidi: **felsefî aktarım (hâdis dizisi ⇒ ezelî hareket)**; (T) —
+- Mevzuya bağı: **KRİTİK — F 1 hudûs/kıdem (c4)**: **'Her biri başkasına mesbûk, başa varmadan teselsül = hak' cümlesi filozofların 'hevâdis-i lâ evvel' (zamanda başlangıcı olmayan hâdis dizisi) tezidir; c4 K1 kıdem tarafının çekirdeği. Burada kimin sesi: filozof/Sâbiî aktarımı; 'hak ondan dönüş yok' onların sözüdür (Râzî'nin değil); c4'te Râzî bu tezi tatbîk/tezâyüd ile reddetmişti.** İSLÂM KAYDI: tılsım/astral tasarruf Risale'ye girmez.
+- Doğan sual: —
+
+## c8 p150
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: filozof/Sâbiî aktarımı.** Hâdislerin iki ihtimâli: '**(1) vücûdda rûhânî bir mevcut hâsıl; dâimen bir ma'kûlden ötekine, bir idrâkten ötekine intikâl eder; bu ardışık idrâkler ve tasavvurlara göre bu âlemde hâdisler hâsıl olur; bu rûhânî mevcut ezelî, ebedî, sermedî olmalı ve Allah'tan başka bir şey olmalı (Allah tagayyürden münezzeh); demek bu âlemin hâllerini tedbîr eden 'yüksek rûhlar'ın varlığı sâbit; bu âlemde bir garîb şeyi ihdâs etmek bu rûhlardan istiâneyle olur.** **(2) ebedî sermedî cismânî hareket; ya müstakîm ya müstedîr; müstakîm sonsuza uzanırsa sonsuz boyut (muhâl); dönerse gidiş sonu ile dönüş başı arasında sükûn (hareketler arası sükûn) ⇒ hareket dâim ve kesintisiz olamaz ⇒ her müstakîm hareket kesilir ⇒ hareket müstedîr olmalı; bu, hâdislerin en yakın ilk mebdenin felekî cirimlerin dâirevî hareketi olduğuna delâlet eder.**'
+- Netice/hüküm: **Filozofların modeli: hâdisleri tedbîr eden ezelî rûhânî mevcut ve/veya dâirevî felekî hareket.**
+- Delil çeşidi: **felsefî kozmoloji**; (T) —
+- Mevzuya bağı: **İSLÂM KAYDI (KIRMIZI)**: **'Allah'tan başka ezelî-ebedî-sermedî rûhânî mevcutlar bu âlemi tedbîr eder' ve 'felekî hareket hâdislerin ilk mebdei' tezleri tevhid-i rubûbiyyete ve 'Allah'tan başka her şey mahlûktur' ilkesine aykırıdır; Risale ALMAZ; bu, c7 M5'in kozmolojisi ile aynı; kaynak notu.**
+- Doğan sual: —
+
+## c8 p151
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: filozoflar (aktarım).** '**Hareket müstedîr olmalı ⇒ hâdislerin en yakın ilk mebdei felekî cirimlerin dâirevî hareketi. Filozoflar: evlâ, ilk ve ikinci kısmı birleştirmek: felek cevheri beden gibi, o rûhun cevheri nefs gibi; o rûhânî cevherin dâim ta'akkulâtı bu cismânî kürelerin hareketlerini gerektirir; bunların mecmûu bu âlemdeki hâdislerin sebepleri olur.** **İkinci ihtimâl (sebep kadîm ve ezelî ise): o ezelînin hâdislerdeki te'sîri hâdis bir şarta bağlı değilse muhâl (yoksa hâdis kadîm olurdu); hâdis şarta bağlıysa şartın hudûsu hakkında aynı soru, teselsül, birinci kısımdaki her şey döner.** **Demek hâdislerin bu âlemde hudûsu, kesintisiz ve tagayyürsüz felekî dâirevî harekete bağlıdır. Sonra: felekî cirimler bâsît; bâsît kürede farz edilen cüzler tabîatça benzer; benzer sebepler benzer ma'lûller verir; o hâlde bu âlemin hâdisleri hep aynı olmalıydı; bu bâtıl ⇒ felekî cirimlerde tabîat ve mâhiyette farklı şeyler var, bunlar hareket eder; farklı hareketleri yüzünden farklı nisbetler hâsıl olur; bu nisbetler kevn ve fesâd âlemindeki farklı hâdislerin mebdeleridir; bu farklı cisimler feleklerin cevherlerinde yerleşmiş kevâkibdir.**'
+- Netice/hüküm: **Filozofların burhânı: felekî dâirevî hareket + kevâkibin farklılığı ⇒ hâdislerin mebdeleri kevkebî ittisâller.**
+- Delil çeşidi: **felsefî kozmoloji (bâsît cisim benzer sebep ⇒ benzer netice)**; (T) **⊬ 'benzer sebep benzer netice' öncülü Allah'ın irâde ve ihtiyârını dışlayan determinizmdir; c4'te Râzî bu ilkeyi 'tam illet ⇒ ma'lûl vâcib' olarak kıdem tarafına ait saymıştı.**
+- Mevzuya bağı: **İSLÂM KAYDI (KIRMIZI)**: **determinist astral nedensellik Risale'ye girmez; c4 p335–339 kaydı.**
+- Doğan sual: —
+
+## c8 p152
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: filozoflar (aktarım): 'هذا هو البرهان الذي عليه تعويل الفلاسفة'; sonra ikna'î delil ('قالوا').** '**Demek hâdislerin mebdeleri farklı kevkebî ittisâllerdir; bu, filozofların bu matlûbu isbâtta dayandığı burhandır.**' **İkna'î delil**: 'bu âlemin hâllerinin güneşin burçlar kuşağı altındaki hareketinin keyfiyetine bağlı olduğunu çok vecihle zikrettik: güneşin şimalî-cenûbî oluşu, dört mevsim, günlük doğuş-batış; bu kuvvetli istikrâ ve tam beyândır.' '**Bu beyân başka bir beyânla desteklendi: insanlar kadîm zamandan beri yıldız ilmine yapışıp ona dayandılar; her ilmin ilk insanı ve ilk bulanı bellidir, ilâhî ilim ve yıldız ilmi hâriç; bu iki ilmin hep var olduğunu görürsün; yıldız ilmi bâtıl olsaydı dünya ehlinin çok eski zamandan bu güne ona yapışmayı ittifakla sürdürmesi imtinâ' olurdu. Bunlar bu ilmin sıhhatinde zâhir beyânlardır.**'
+- Netice/hüküm: **Filozofların ikna'î delilleri: mevsim istikrâsı ve 'ittifak-ı ehl-i dünya' (yıldız ilmi hep var olmuş).**
+- Delil çeşidi: **istikrâ + icmâ' (tarihî yaygınlık) argümanı**; (T) **F 27-B: 'bütün dünya ehli ittifak etti ⇒ hak' ayırt etmez (bâtıl da yaygın olabilir; Râzî kendi c1/c4 'ehl-i dünya ittifakı' tenkidiyle uyumlu); son cümle ('bunlar bu ilmin sıhhatinde zâhir beyânlardır') Râzî'nin kendi ağzı mı, aktarımın kapanışı mı — yapıdan belli değil ⊬ (kimin sesi belirsiz).**
+- Mevzuya bağı: **İSLÂM KAYDI (KIRMIZI)**: **astroloji (ilm-i nücûm) hükümleri Risale'de Sünnet'le yasaklanan bir alandır (⊬ hadîs kaynakları Fasıl IV'te doğrulanacak); Kur'ân'ın güneş-ay-mevsim düzeninden 'âyet' (Allah'ın kudreti) olarak söz etmesi ile yıldızların hâdislere te'sîri ayrı şeydir. Risale bu delilleri ALMAZ; 'kimin sesi belirsiz' notu Râzî'ye 'astrolojiyi doğru buluyor' hükmü YAZILMAMASI için kayıttır.**
+- Doğan sual: **Râzî K3'ün geri kalanında astrolojinin sıhhati hakkında kendi hükmünü veriyor mu? (F2 'çok zor' başlığına göre şüpheci; okunacak.)**
+
+## c8 p153
+- OCR: orta
+- Okuma: tam
+- İçerik: **K3 Fasıl 2: 'Bu ilmin usûlüne vukûfun çok zor olduğunun beyânı'.** **Kimin sesi: Râzî (kendi tenkidi/tespiti).** '**Bu ilmin güçlüğü üç vecihten görünür. ASIL 1: tüm felekî nayyirâtı (parlak cirimleri) bilmemiz zor: Vecih 1: istikrâ: uzaktan küçüğü görmek imtinâ'; sâbit yıldızların en küçüğü, görme kuvvetimizin sınandığı, yerin on küsur katı; bunlar en büyük felekte olsaydı mesafe büyür, görmek imtinâ' olurdu; Utârid'in (Merkür) yerküre cüz'ünün otuz binde biri olduğu söylenir; Utârid'e eşit cirimli yıldızlar büyük felekte olsa görülmeleri kat'an imtinâ'; demek bu yıldızları görmememiz yokluklarına delâlet etmez.** Küçüklük zayıflık gerektirir denirse: bâtıl: (p154).'
+- Netice/hüküm: **Râzî: astrolojik ilmin kuruluşunda bilinmeyen nayyirât (görünmeyen küçük yıldızlar) ihtimâli var; bu ilmin usûlüne vukûf zor.**
+- Delil çeşidi: **istikrâ + ihtimâl kapısı**; (T) **Râzî'nin tavrı: astroloji için 'kesinlik yok' (üç asıl zorluk).**
+- Mevzuya bağı: **İSLÂM KAYDI ve Risale usûlü**: **Râzî burada astrolojinin kat'îliğini zayıflatıyor (bilinmeyen yıldızlar, gözlem hataları, hız); Risale bu zorlukları 'Râzî de astrolojiyi kesin bulmuyor' diye kaynak notu olarak ekleyebilir; ama astroloji ilminin Sünnet'te yasaklanması bağımsız bir hükümdür.**
+- Doğan sual: —
+
+## c8 p154
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî.** Vecih 1 devam: 'küçükler zayıftır' itirazı bâtıl: Utârid küçük olduğu hâlde büyük cirimli seyyâreler ona yakın; Râs ve Zenb (ejderha noktaları) noktadır, ahkâm ehli onlara büyük eserler verdi; 'saâdet noktası, gayb oku' da nokta; tâli' derecesinin tesyîr noktaları… **Vecih 2**: 'felekî nayyirâtın sayısı ma'lûm değil: Mecerre'nin (Samanyolu) sâbit yıldızlar felekinde küçük kevkebî cirimlerden ibaret olduğu delille sâbit; küçüklükten seçilemezler, bulanık lekeye benzer; yıldız sayısını tam bilmek imtinâ'.' **Vecih 3**: 'muhakkikler ay yüzündeki lekenin ayın yüzünde yerleşmiş küçük yıldızlardan olduğunu söyledi; bazıları güneş yüzünde…; hepsi beşer akıllarının feleklerin nayyirâtını sayıya bağlamaktan kâsır olduğuna delâlet eder.' **Vecih 4**: 'ahkâm ehli 'kebed' denen bir şey isbât etti ve ona te'sîr hâssası verdi; buna câizse başkasının isbâtı neden câiz olmasın?' **Vecih 5** başlıyor: filozoflar hepsinin tam mâhiyette müsâvî olduğunda ittifak etti… (p155).
+- Netice/hüküm: **Râzî: astroloji için 'bilinmeyen yıldız' ihtimali (küçük yıldızlar, Samanyolu, ay ve güneş lekeleri) — bu ilmin bilgisi kâmil olamaz.**
+- Delil çeşidi: **istikrâ + astronomik iddialar**; (T) **⊬ astronomik iddialar (Samanyolu küçük yıldızlar; ay lekeleri yıldızlar) Râzî devrinin kozmolojisidir; Risale bunlara hüküm bağlamaz.**
+- Mevzuya bağı: **İSLÂM KAYDI**: aynı (Risale ALMAZ; kaynak notu).
+- Doğan sual: —
+
+## c8 p155
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî.** Vecih 5 (devam): 'filozoflar hepsinin tam mâhiyette müsâvî olduğunda ittifak etti; aksi hâlde terkîb; öyleyse yıldızın bir burçtaki te'sîri diğer burçlardakiyle eşit olmalı (şeyin hükmü misli hükmüdür); bu, yıldız ilmine aykırı; 'burçların tabîatları mâhiyetlerine göre farklı' denirse filozoflarca reddedilir; ya da 'her burçta görmediğimiz küçük yıldızlar var, burç tabîatları te'sîrde farklı' denir; matlûb budur.' **Vecih 6**: 'yıldız delilleri çok vakit bozulur ve fâsid olur; sebep, bilmediğimiz yıldızlar var ve eserleri onlar yüzünden değişir.' **ASIL 2 (güçlüğü gerektiren)**: '**gözlem sonrası yıldızların yerlerini bilmek: (1) Şeyh Ebû Alî b. el-Heysem, gözlem âletlerindeki hata çeşitleri üzerine risâle yazdı; kaçınılamayan otuza yakın vecih saydı; (2) gözlemler uzun sürünce onlara dayalı amel bozulur: gözlemci hesabında 'rubû'lar ve hâmisler' denen küsurlara düştü; süre uzayınca bu kırıntılar toplanıp kalabalıklaşır, büyük fark çıkar (şu içinde bulunduğumuz zaman gibi; Hicret'ten 600'lerin başı); (3) feleğin bir dakikası yerküre kadardır (birkaç kere); hızlı at, elini kaldırıp koyarken en büyük felek üç bin mil hareket eder; astrolog usturlab alıp yıldız yerini bilmeye kalkıştığında felek ölçüsüz hareket etmiştir; hâdis olan her şeyin bilgisi ümitsiz şeyler gibi olur.**' (p156).
+- Netice/hüküm: **Râzî: astroloji için gözlem hataları ve hız (feleğin hızı vs usturlab süresi) yüzünden hâdislerin bilgisi 'ümitsiz'.**
+- Delil çeşidi: **ampirik güçlük gösterimi**; (T) **Râzî'nin tavrı: astrolojik hüküm pratiği için kat'î bilgi imkânsız.**
+- Mevzuya bağı: **İSLÂM KAYDI ve usûl**: **Râzî'nin 'astrolojik hüküm ümitsiz' tespiti (kendi kalemi) Risale için kaynak notudur: astrolojiyi Risale ALMAZ; 'Râzî de bu ilmin bilgisini imkânsız gördü' cümlesi kaynak notu olabilir.**
+- Doğan sual: —
+
+## c8 p156
+- OCR: orta
+- Okuma: tam (sayfa 3. asılda biter; devamı p157'de)
+- İçerik: **Kimin sesi: Râzî.** **ASIL 3 (güçlüğü gerektiren)**: 'her yıldızın tabîatını te'sîrine göre bilmek zor ve çetin.' **Takrîr**: 'yıldızlar ya sâbit ya seyyâre; sâbit yıldızların te'sîri seyyârelerinkinden kuvvetli; iki vecih: **Birincisi**: filozoflar cisimlerin üç mertebeye ayrıldığında ittifak etti: **1. mertebe: te'sîr etmeyen (etkilenmeyen): iki yüksek küre — En Büyük Felek ve sâbit yıldızlar feleği; bu en şerefli ve en yüksek mertebe; son mertebe: te'sîr edilen ama te'sîr etmeyen: iki alt küre: latîf küre (hava ve ateş) ve kesîf küre (su ve yer); bunlar yüksek kürelerden te'sîr kabul eder, başka şeyde te'sîrleri yoktur; orta mertebe: yüksek iki küreden te'sîri alıp iki alt küreye ileten seyyâreler (yedi küre ve yedi seyyâre); bu filozofların ittifak ettiği görüş; tafsîl 'kevâkibin sıfatları' bâbında (c7 M5?).' (p157.)
+- Netice/hüküm: **Filozofların cisim mertebeleri (etkilemeyen / ileten / etkilenen); astrolojinin bilgi güçlüğü Asıl 3 başlıyor.**
+- Delil çeşidi: **felsefî kozmoloji tasnifi**; (T) —
+- Mevzuya bağı: **İSLÂM KAYDI**: kozmoloji Risale'ye girmez; kaynak notu.
+- Doğan sual: —
