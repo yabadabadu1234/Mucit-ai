@@ -1004,8 +1004,98 @@ Biçim: cilt 1–8 ile aynı. Dipnottaki harfler neşredenin nüsha işaretlerid
 ## c9 p100
 - OCR: —
 - Okuma: tam (sayfa boş)
-- İçerik: **Sayfa boş (kâğıt sonu, Fasıl 3 başlığı p101'de). Kimin sesi: —.**
+- İçerik: **Sayfa boş (OCR metni yok; sonraki sayfada ne başladığı henüz okunmadı). Kimin sesi: —.**
 - Netice/hüküm: —
 - Delil çeşidi: —
 - Mevzuya bağı: —
+- Doğan sual: —
+
+## c9 p101
+- OCR: orta ('الفصل الثالث' başlığı okunuyor; başlığın bir kelimesi köşeli parantezde)
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî.** '**BÂB 1'in FASIL 3'ü başlığı (OCR'den): 'Kul kalplerinde îmân ve küfrün hâsıl olmasının Allah'ın halkıyla olabileceğine delâlet eden deliller'. BURHAN 1: her ilmin başka bir ilimden iktisâb edilmesi mümkin değildir, yoksa teselsül veya devr; bu iktisâbîler aklda iktisâb yoluyla hâsıl olmayan ilimlere (bedîhiyyât) intihâ eder. Bedîhiyyâtın bu kesbiyyâtı istilzâm etmesinde lâzım olan her şey ya hâsıldır ya değildir. Hâsılsa bu iktisâbîler bedîhiyyât hâsıl olunca hâsıl olmalıdır; çünkü müessir, müessiriyette muteber olan bütün cihetleri topladığında eserin tahalluf etmesi imtinâ'; bu bedîhiyyât kudret dışıysa ve nazariyyâtı istilzâm etmeleri zarûrî ve ihtiyâr dışıysa bu neticeler kudret ve ihtiyâr altına girmez. Bedîhiyyât nazariyyâtın istilzâmında muteber cihetleri toplamamışsa başka şeyler lâzım (p102).**' 
+- Netice/hüküm: **Fasıl 3 başladı; Burhan 1: bedîhiyyât ⇒ nazariyyât istilzâmı zarûrî ⇒ ilim kul kudretinde değil.**
+- Delil çeşidi: **teselsül/devr nefyi + zarûret; (T) F 27-B: 'istilzâm zarûrî' öncülü Mu'tezile'nin de kabul edebileceği bir öncüldür (nazar sonrası netice zarûrî); ayırt eden 'nazar/sevk kul fiili değil' ilâvesi; bu öncül bu sayfada yok.**
+- Mevzuya bağı: **Fasıl I §8; Fasıl II (nübüvvet: hidâyet ve iknâ' bahsi: 'ilim Allah'ın halkı' hükmünün etkisi).**
+- Doğan sual: —
+
+## c9 p102
+- OCR: orta-kötü (satır 1–2 kırık; 'المكتسبات' okunuyor)
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî.** '**Burhan 1 sonu: bedîhiyyât nazariyyâtı istilzâmında muteber cihetleri toplamamışsa lâzım olan başka şey ya bedîhî ilim ya kesbî ilim; birincisi bâtıl: tüm bedîhiyyâtın hâsıl olduğunu farz ettik; ikincisi de bâtıl: bedîhiyyâtın ilk mükteseb'i istilzâmı için lâzım olan şey kesbî olsa ilk mükteseb'den önce başka bir mükteseb lâzım gelirdi; muhâl; öyleyse bedîhiyyât kudretin dışında; bedîhiyyâtın ilk mükteseb'i istilzâmı vus'un dışında; birinci mükteseb'in ikinci mükteseb'i istilzâmı da kudretin dışında; bütün mertebelerde. Öyleyse ilim ve ma'rifetten hiçbiri kulun kudret ve ihtiyârıyla vâki değildir. BURHAN 2: ilim ya tasavvurdur ya tasdik. Tasavvur: bir şeyi idrâk edip ona hüküm vermezsek tasavvur, hüküm verirsek tasdik. Kitâb-ı tasavvurâtın iktisâbı imkânsız: (1) Bir tasavvuru iktisâba çalıştığımızda matlûbun mâhiyetine şuur var mı yok mu; varsa tasavvuru hâzır (tahsîl-i hâsıl); yoksa onu talep etmek (p103).**'
+- Netice/hüküm: **Burhan 1 tamam. Burhan 2 başlıyor: tasavvurun iktisâbı imkânsız.**
+- Delil çeşidi: **teselsül nefyi + taksîm; (T) F 27-B: 'ilk mükteseb'den önce mükteseb olamaz' doğru bir mantıksal öncül; sonucun 'kul ilim kazanmaz' olması nazar fiilinin kul fiili olmadığını kabul eder; ayırt eden ortak öncül yok.**
+- Mevzuya bağı: **Fasıl I §8.**
+- Doğan sual: —
+
+## c9 p103
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî (+ hasım itirazı).** '**Burhan 2 vecih 1 devam: talep edilen şeyin mâhiyetine şuur yoksa zihin ondan gâfil; gâfilin talebi imkânsız. İtiraz: o şeye bazı vecihlerden şuur, bazı vecihlerden şuur yok olsun; bir vecihten meşûr olduğu için talep mümkin; öbür vecihlerden şuur olmadığından akıl o şuuru tekmile çalışır. Cevap: iki vecihten biri 'meşûr', diğeri 'gayr-i meşûr' diye hükmediliyorsa iki vecih birbirinden gayr; yoksa aynı şeye 'meşûr ve gayr-i meşûr' denirdi, muhâl. Meşûr olan vecih matlûb olamaz (tahsîl-i hâsıl); gayr-i meşûr olan vecih talep edilemez (zihin ondan gâfil). İlk taksîm bu iki vecihte de faydalıdır. Vecih 2: bir mâhiyeti tanımaya çalışırsak ya nefsinden, ya ondan hâriç şeylerden, ya bu kısımların mecmûundan öğreniriz; hepsi bâtıl; öyleyse hiçbir mâhiyeti tanımanın imkânı yok. Nefsinden bilinemez: vesîle mütevessel-ileyhten önce malûm olmalı; vesîle ile mütevessel-ileyh aynı olsaydı şey malûm olmadan önce malûm olurdu; muhâl. Dâhil şeylerden bilinemez: ya bazı cüz'lerinden ya cüz'lerinin mecmûundan; birincisi bâtıl: şeyin bazı cüz'ünü bilmek onun tamamını bilmek değil; … (p104).**'
+- Netice/hüküm: **Burhan 2: (T) tasavvurun iktisâbı imkânsız: matlûba şuur varsa tahsîl-i hâsıl, yoksa talep imkânsız; tarif yollarının hiçbiri bilinmeyene ulaştırmaz.**
+- Delil çeşidi: **taksîm + reductio; (T) F 27-B: bu, Râzî'nin 'tasavvurât bedîhîdir' tezi; 'bir vecihten meşûr, bir vecihten değil' itirazına cevabı ('iki vecih birbirinden gayrdır') mantıkî bir hamle; ancak 'meşûr olan vecih tahsîl-i hâsıl, gayr-i meşûr talep edilemez' sonucu tüm tarif ve öğrenmeyi imkânsız kılar; Risale'nin kendi öğretim iddiasıyla (Fasıl IV) çelişir; Râzî kendisi aynı eserinin çoğunda tarif yapıyor: iç gerilim (kendi tenkidim).**
+- Mevzuya bağı: **Fasıl I §8; Fasıl IV (Sünnet ve't-Tahkik: öğrenme/öğretme).**
+- Doğan sual: **'Hiçbir mâhiyetin iktisâbı yok' tezinin Risale'nin öğretme iddiasıyla nasıl uzlaştığı (Râzî kendisi ilerleyen sayfalarda çözüyor mu, bilinmiyor).**
+
+## c9 p104
+- OCR: orta-kötü (birçok satır bozuk; satır 1–5 ve 12–14 kırık)
+- Okuma: kısmî (madde 'الوجه الأول' ve 'الثاني' cümleleri parçalı; içerik çıkarımı yalnız okunabilen kısımlardan)
+- İçerik: **Kimin sesi: Râzî.** '**Burhan 2 vecih 2 devam: dâhil şeylerden bilinemez: bazı cüz'ünü bilmek tamam mâhiyeti bilmek değil; ancak 'şu cüzün ilmi mâhiyet-i tâmmenin ilmi' denirse iki mahzur: (1) bir cüz'ün ilmi mâhiyetin ilmini gerektiriyorsa şeyin ilmi hâriç bir şeyle 'istifâde' edilmiş olur (üçüncü kısım); (2) bu söz ancak 'cüz'lerin mecmûunu bilmek tam mâhiyeti bilmeyi gerektirir' denirse tamamlanır; oysa bu kısmın fesâdına delil bu ihtimali de fâsid kılar. Cüz'lerin mecmûundan tanıma da muhâl: cüz'lerin mecmûu o mâhiyetin tam mâhiyeti; mecmûu cüz'lerin mecmûundan tanımak birinci kısma (şeyi nefsiyle tanımak) döner; muhâl. Hâriç lâzımlardan tanıma: sarîh akıl bir vasfın bu mâhiyetten başka mâhiyette hâsıl olmasını uzak görmez; muhtelif mâhiyetler tek lâzımda ortak olabilir; bir vasfın belirli mâhiyete mahsus ve başkasında hâsıl olmadığını bilmedikçe o vasfı bilmekle mâhiyete vasıl olamayız; bir vasfın belirli mâhiyete mahsus olduğunu bilmek o mâhiyetin tasavvuruna mevkûf; bu ancak 'şu mâhiyet ona lâzım' bilgisini verir, mâhiyetin hakîkati mechûl kalır.**' 
+- Netice/hüküm: **Burhan 2: dâhil, hâriç ve mecmû' kısımları tanımayı sağlamaz; ⇒ hiçbir mâhiyetin tasavvuru iktisâb edilemez.**
+- Delil çeşidi: **taksîm; (T) F 27-B: Râzî'nin 'tarif imkânsız' tezinin klasik gerekçesi; hâriç lâzımdan tarifin 'mahsusluk bilgisi' gerektirmesi doğru bir zorluk; ayırt edici olmayan yeri: 'bu bilgi tasavvura mevkûf' (döngü) iddiası yorum; sayfanın bazı satırları okunmadı.**
+- Mevzuya bağı: **Fasıl I §8; tarif/tasavvur meselesi (Fasıl IV: tahkik).**
+- Doğan sual: —
+
+## c9 p105
+- OCR: orta-kötü (son satır kırık; 'وهذان البرهانان' cümlesi eksik)
+- Okuma: tam (sayfa sonu cümlesi eksik: 'iki burhan … zihinde hâsıl olmuşsa … yoksa iktisâbına yol yok')
+- İçerik: **Kimin sesi: Râzî.** '**Hâriç lâzımdan tarifin devamı: 'bu vasıf o mâhiyete lâzım' bilgisi ona vâsıl olmak değil; bu kadarıyla o mâhiyetin 'hakîkati mechûl bir şey' olduğu, ona filân lâzımın lâzım olduğu bilinmiş olur. Dördüncü kısım: mâhiyeti bu kısımların mecmûundan tanıma: bâtıl; çünkü kısımlardan her birinin bu bâbta te'sîri imtinâ' olduğunu gösterdik, o hâlde bunların mürekkebi de. VECİH 3 (tasavvurların iktisâbı yok): nefslerimize döndüğümüzde bir şeyi ancak beş duyudan biriyle idrâk ettiğimiz tasavvurlar, nefsimizde bulduklarımız (elem, lezzet, ferah, gam …) veya aklın ve hayâlin bunlardan terkîb ettikleri şeyler kadar tasavvur edebildiğimizi biliriz; bu kısımların dışında bir şey tasavvur etmeye yol yok; nefsin hâllerine bakınca bedîhî bilinen mânâ. Öyleyse hiçbir tasavvur iktisâbî değil. TASDİK İÇİN: hiçbiri iktisâbî değil, vecihler: (1) her tasdik iki tasavvurdan; iki tasavvurun zihinde mücerret hudûrü tasdik hükmünü gerektirir mi gerektirmez mi; gerektiriyorsa bedîhiyyât; gerektirmiyorsa nazariyyât. Bedîhî misal: 'birin ne olduğunu ve ikinin ne olduğunu tasavvur etsek zihnin birin ikinin yarısı olduğuna cezmettiğini' … (p106).**' 
+- Netice/hüküm: **Burhan 2: tasavvurlar duyu, vicdan veya aklın terkibinden başka yolla elde edilmez; tasdik iki tasavvurdan; bedîhî ve nazarî ayrımı.**
+- Delil çeşidi: **vicdânî gözlem + taksîm; (T) F 27-B: 'beş duyu, vicdan, terkîb' dışında tasavvur yok iddiası (empirik-terkibî tasavvur nazariyesi); vahiy yoluyla gelen tasavvurlar (melek, âhiret) bu taksîme girmiyor: Râzî burada onları kapsamıyor; kendi tenkidim: Risale açısından bu taksîm vahiy haberini dışta bırakıyor.**
+- Mevzuya bağı: **Fasıl II (nübüvvet): vahyin taşıdığı tasavvurlar bu taksîmde yer bulmuyor: iç gerilim.**
+- Doğan sual: **Râzî, duyu-vicdan-terkîb dışında tasavvur yok tezini vahiyle bildirilen gaybî tasavvurlar (cennet, melek) için nasıl uzlaştırıyor? (c8 nübüvvet bahsindeki vahiy bahsi ile birlikte yoklanacak.)**
+
+## c9 p106
+- OCR: orta-kötü (sayfa başı ve dipnotlar kırık)
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî.** '**Tasdik (devam): bedîhî örnek: birin ne olduğu ve ikinin ne olduğu tasavvur edilince zihin 'bir ikinin yarısıdır' diye cezmeder; nazarî: âlemin ne olduğu ve hâdisin ne olduğu tasavvur edilse âlemin hâdis olduğunu tasdik gerekmez. Bedîhî tasdiklerden hiçbiri iktisâbî değil: iki tasavvur hâzır olsalar bu tasdiki gerektirirler; insanın bu iki tasavvuru tahsilde kudreti yok; hâzır oldukları hâlde onları o tasdike istilzâmında kudreti yok; ikisi hâzırsa tasdik vâcib; birisi hâzır değilse tasdik imtinâ'; insanın bedîhî tasdiklere kudreti yok. Nazarî tasdiklerde de kudreti yok: çünkü bedîhiyyât bu nazariyyâtı bedîhiyyâtın ardından istilzâm eder; insanın onlara kudreti yok; bedîhiyyât nazariyyâtın istilzâmında muteber şeyleri toplamamışsa imtinâ'; imtinâ'da kudret yok. Bu vecih nazarî tasdiklere mahsus değil, iktisâbların keyfiyetinde umûmî: bir ilim kendinden önceki ilimden, tasavvurî olsun tasdikî olsun. Tasdiklerin yapılabileceği tasavvurlar zihinde hâzırdır; bu tasavvurlar hâzır olunca tasdik zarûrî veya lâzım mıdır, değil midir: (p107).**' 
+- Netice/hüküm: **Burhan 2: tasdiklerin (bedîhî ve nazarî) hiçbiri kul kudretinde değil.**
+- Delil çeşidi: **taksîm + zarûret; (T) F 27-B: yukarıdaki (p101) tenkit aynen: zarûrî istilzâm kabul; nazar fiilinin kul fiili olup olmadığı burada ele alınmıyor.**
+- Mevzuya bağı: **Fasıl I §8; Fasıl II (iknâ'/hüccet).**
+- Doğan sual: —
+
+## c9 p107
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî.** '**Burhan 2 sonu: bu tasavvurlar hâzır olunca tasdik zarûrî veya lâzım ise kulun ona kudreti ve ihtiyârı yok (o tasavvurlara hiçbir kudreti yok, hâzır olduklarında tasdiki istilzâmı vus'unun dışında); öyleyse tasdik kulun kesbi ve ihtiyârıyla vâki olamaz. Tasavvurlar hâzırken tasdikin hâsıl olması zarûrî ve lâzım değilse o tasdik ilim ve yakîn değil, mucibsiz getirdiği 'taklîdî i'tikad'; bu da muhâl; insan kendini şüpheye düşürmeye çalışırsa mümkin; böyle olan ilim ve yakîn değildir. Netice: ilimler ya tasavvur ya tasdik; her biri kul kudretinden ve vus'undan hâriç; ma'ârif ve ulûm beşerin kudretinin dışında; hudûsu ancak Allah'ın halkıyladır. BURHAN 3 (kul ilimlerin hâlıkı olamaz): kul ilim ihdâsına ya ibtidâen ya başka şeyin vâsıtasıyla çalışsa ya mutlak ilim ihdâsına çalışır ya belirli 'şu şey hakkındaki ilim'e; mutlak ilme çalışırsa şu ilmin hâsıl olması ötekinden evlâ değil, çünkü ilmin mâhiyeti bir cins, altında çok nev' (şu ma'lûma ilim, öteki ma'lûma ilim), cins tabiatı bütün nev'lere eşit; cins tabiatı bazı nev'i iktizâda nâkıs değil; öyleyse bu kasd bu ilmi ötekinden (p108).**' 
+- Netice/hüküm: **Burhan 2 tamam: 'zarûrî tasdik' ya da 'taklîdî i'tikâd'; ikisi de ihtiyâr dışı. Burhan 3 başlıyor.**
+- Delil çeşidi: **taksîm + reductio; (T) F 27-B: 'zarûrî değilse taklîdî i'tikad' ikiliği, zanlı (zannî) ilim ve hatâ ile bulunan çabaya yer bırakmıyor; ortak öncül değil.**
+- Mevzuya bağı: **Fasıl I §8.**
+- Doğan sual: —
+
+## c9 p108
+- OCR: orta ('الجهل' 'العلم' okunuyor)
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî; sonra hasım itirazı ('fein kâlû').** '**Burhan 3 devam: belirli ilme çalışırsa: bir şeyin 'şöyle' olduğuna i'tikâd, mutâbıksa ilim, değilse cehl; ilim cehlden ancak mutâbakatı bilmekle ayrılır; mutâbakatı bilmek için önce o malûmun kendi nefsindeki hâlini bilmek lâzım; öyleyse kendini bir şeyi bilir kılmak ancak o şeyin hâlini evvelce bilmekle mümkin; bu, şeyin nefsine şart olmasını gerektirir; muhâl. Öyleyse insanın kendini bir şeyde âlim kılma kudreti muhâl; bu burhanla insanın kendini bir şeyde câhil kılmayacağı da belli: cehl ilimden ancak mutâbık olmamasıyla ayrılır; mutâbık olmadığını bilmek için o malûmun hâlini önceden bilmek gerekir; öyleyse cehli kendine tahsil ancak o şeyde âlimken mümkin; bu, iki zıddın birinin ötekine şart olması; muhâl. Netice: halkın kalplerinde ve akıllarında hâsıl olan ilimler ve cehâletlerin hepsi Allah'tan ve onun îcâdıyladır. İtiraz: kul ilim ve cehâletleri nefsinde ibtidâen ihdâs edemese de kendinden önceki ilimlerin vâsıtasıyla ihdâs edebilir. Cevap iki vecihten (p109).**' 
+- Netice/hüküm: **Burhan 3: kul kendini bir şeyde âlim veya câhil kılamaz (mutâbakat bilgisine önceden malik olmak gerekir).**
+- Delil çeşidi: **çelişki gösterimi; (T) F 27-B: 'mutâbakati bilmek için evvelce malûmun hâlini bilmek' öncülü, ilim tahsilinin imkânını kökten reddeder (öğrenme = bilinmeyeni bilmek); aynı öncül bilgi kuramında 'Menon paradoksu'na yakın; Râzî bu öncülü hiçbir öğrenmeyi açıklamayacak biçimde kullanıyor: kendi tenkidim.**
+- Mevzuya bağı: **Fasıl I §8; Fasıl II (iknâ').**
+- Doğan sual: —
+
+## c9 p109
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî.** '**Burhan 3'e itiraza iki cevap: (1) o cehâletler ilk cehle intihâ eder; hâlıkı Allah. (2) Bu mütekaddim ilimlerin sonuç ilimleri istilzâmı zarûrî olmalıdır; öyle mütekaddim cehâletlerin sonuç cehâletleri istilzâmı da zarûrî; her iki takdirde hepsi Allah'tan. 'Ve billâhi't-tevfîk.' BURHAN 4: insan yalnız ilim tahsilini kasd eder; cehl hâsıl olunca kastının ve ihtiyârının hilâfına vâki olur; öyleyse başkasından olmalı. İtiraz: cehl ona ilimle iştibâh etti (karıştırdı); cevap: o cehli seçmiştir, önceki bir cehle tabiî; cehâletler ilk cehle intihâ eder ki onun hâlıkı Allah. BURHAN 5: insanlar ilmin mâhiyetinde ve mahallinde şaşırdılar. Mâhiyette: kimi 'ilim ancak taallûk denilen nisbetin cerridir'; kimi 'bu nisbet ve izâfeyi gerektiren hakîkî sıfat'; kimi 'ma'lûmun mâhiyetine musâvî, âlimin zâtında hâsıl sûret'. Bu ilmin hâsıl olması benim îcâdım ve halkımla olsaydı neden yarattığımı bilirdim; çünkü tasavvur edilmeyene kasd muhâl; ne için yarattığımı bilseydim bu iştibâh kalmazdı. Mahalde: kimi 'kalp', kimi 'dimağ' (p110).**' 
+- Netice/hüküm: **Burhan 3–5: ilk cehl Allah'ın halkı; kul kasdının hilâfına cehle düşer; insanların ilmin mâhiyet ve mahalli hakkındaki hayreti kulun fâil olmadığını gösterir.**
+- Delil çeşidi: **teselsül + gözlem; (T) F 27-B: Burhan 5, Fasıl 2 Burhan 5'in ilmî mahal örneğinin tekrarıdır (aynı öncül: fâil ⇒ mâhiyet ve mahal bilgisi); yeni bağımsız delil değil.**
+- Mevzuya bağı: **Fasıl I §8.**
+- Doğan sual: —
+
+## c9 p110
+- OCR: orta-kötü (satır 1–3 ve 6–9 bozuk)
+- Okuma: kısmî (Burhan 5'in ikinci yarısı: 'bazıları nefs-i nâtıka' cümlesi OCR'de okunamadı)
+- İçerik: **Kimin sesi: Râzî.** '**Burhan 5 sonu (OCR kısmen): ilmin mahalli hakkında kimi 'kalp' kimi 'dimağ' kimi 'nefs-i nâtıka' … (okunamadı); 'ben hâlık ve mûcid olsaydım ilmi hangi mahalde îcâd ettiğimi bilirdim'. 'Bu noktada kul fiillerinin halkı meselesinde aklî delillerin sonu geldi. Ve billâhi't-tevfîk.'**' 
+- Netice/hüküm: **Bâb 1 Fasıl 3 tamam (5 burhan); aklî deliller burada bitiyor; nakil delilleri sonrakı sayfalardan başlayacak (henüz okunmadı).**
+- Delil çeşidi: **—; (T) F 27-B: kendi tenkidim: Bâb 1'de Râzî'nin 'aklî deliller' toplamı Fasıl 1: 10 burhan (Burhan 1'deki kudret+dâî ⇒ vücûb ve iki nakîz ilzâmı çekirdek); Fasıl 2: 10 burhan (imkân, mak'dûr, teavün, tafsîlî ilim, gaflet …); Fasıl 3: 5 burhan (ilim ve cehl). Öncüllerin bağımsızlığı zayıf: birkaç çekirdek öncül (kudret+dâî ⇒ vücûb; ilk sebep kulun elinde değil; tafsîlî ilim şartı) tekrar ediliyor; 'aklî delil sayısının çokluğu' delilin gücünü çoğaltmıyor (F 27-B).**
+- Mevzuya bağı: **Fasıl I §8.**
 - Doğan sual: —
