@@ -739,3 +739,93 @@ Biçim: cilt 1–8 ile aynı. Dipnottaki harfler neşredenin nüsha işaretlerid
 - Delil çeşidi: **nakz listesi (ilzâmî); (T) F 27-B: metnin okunamayan yerlerinden hüküm çıkarılmadı; okunanlar Mu'tezile'nin 'mâhiyetler ademde sâbit' öğretisine dayanıyor.**
 - Mevzuya bağı: **Fasıl II (dolaylı).**
 - Doğan sual: **PDF'den p69–70'in okunamayan satırları doğrulanacak (nakz maddeleri 2, 7, 9 ve 10'un devamı).**
+
+## c9 p71
+- OCR: kötü (ilk 6 satır büyük ölçüde okunamıyor; 'ثالثها' satırı bozuk)
+- Okuma: kısmî (Mu'tezile delilinin üç öncülünün özeti: üst satırlarda yalnız 'birincisi: o fâil cisim olmalı' ve 'üçüncüsü' okunabildi, ikincisi ve üçüncünün metni okunamadı; sonraki 'ikinci makam' satırları okunabildi)
+- İçerik: **Kimin sesi: Râzî.** '**Özet: Mu'tezile'nin 'Allah'tan başkası kâdir olamaz' delili üç mukaddimeye dayanır (birincisi: o fâil cisim olmalı; ikinci ve üçüncü OCR'de okunamıyor); 'bu mukaddemelerin hiçbiri tekarrür etmedi' (Râzî). İKİNCİ MAKAM: 'kudretle kâdir olamaz mı?' Onların 'hâsıl kudretlerin hiçbiri îcâda sâlih değil, öyleyse ortak illet lâzım, ortak yoksa' sözüne cevap: birincisi (OCR kırık); ikincisi: 'ortak hükmün ortak illeti olmalı' bâtıl; delil: Mu'tezile'ye göre zulmün ve cehlin kubhu ortak vasıf; ama zulmün kubhu 'zulüm olma' hususiyetiyle, cehlin kubhu 'cehl olma' hususiyetiyle muallel; ortak hüküm var, ortak illet yok. Üçüncüsü: 'ortak şey ancak kudret olmaktır' de nevi bir söz; kudretler iki kısım olamaz mı: cisim halkına sâlih olmayanlar (bir ortak vasıfla) ve sâlih olanlar? En fazla o vasfı bilmiyoruz; bir şeyi bilmemek o şeyin ademini bilmeyi göstermez.**'
+- Netice/hüküm: **Râzî, Mu'tezile'nin 'ortak hüküm ⇒ ortak illet' öncülünü kendi öğretileriyle (kubh) nakz ediyor.**
+- Delil çeşidi: **nakz (ilzâmî); (T) F 27-B: 'ortak illet' öncülünün reddi Mu'tezile'nin kendi öğretisine dayandığı için hasma karşı ayırt edici; okunamayan satırlar için hüküm çıkarılmadı.**
+- Mevzuya bağı: **Fasıl II: mûcizenin fâili Allah olduğuna dair Mu'tezile deliline eleştiri (devam).**
+- Doğan sual: **PDF'den p71'in ilk 6 satırı doğrulanacak.**
+
+## c9 p72
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî.** '**(4) 'Kudretin kudret olması bu hükmü gerektirdiğine göre her kudret bu hükme mâni' önermesi 'şeyin hükmü mislinin hükmüdür' öncülüne dayanır; bu mukaddimenin kusuru daha önce gösterildi. Mu'tezile'nin ikinci sözü: 'farz edilen kudret bu kudretlere muhâlif ise muhalefeti bu kudretlerin birbirine muhalefetinden şedîd değil; bu kudretler birbirine muhâlif olsa da cisim halkına sâlih değil; farz edilen kudret de sâlih olmamalı': Râzî: gâyet sâkıt, üç vecihle: (1) farz edilen kudretin bu kudretlere muhalefetinin şedîd olmadığını kabul etmiyoruz: bu kudretler birbirine muhâlif olsa da hepsi 'cisim halkına sâlih olmama'da ortak; farz edilen kudret ise cisim halkına sâlih olması bakımından bu kudretlerin tamamına muhâlif; muhalefeti bu kudretlerin birbirine muhalefetinden şedîd; siz 'öyle değil' derseniz bu tam da nizâ' yeri. (2) Kabul edelim ki muhalefeti şedîd değil; ama bu kudretlerin belirli mâhiyetleri var, biri diğerine muhâlif; imtinâ', bazısının bazısına muhâlif olması değil, o belirli mâhiyettir; o mâhiyet öteki kudretlerde yok ⇒ dediğiniz düşer.**' 
+- Netice/hüküm: **Râzî, 'kudretin muhalefeti' delilini üç vecihten ikisiyle çürütüyor (üçüncüsü p73'te).**
+- Delil çeşidi: **çürütme; (T) F 27-B: iki vecih de 'nizâ' yeri' ve 'belirli mâhiyet' diyor; ayırt edici bir delil değil, Mu'tezile'nin delilinin öncülünün reddi.**
+- Mevzuya bağı: **Fasıl II: mûcize.**
+- Doğan sual: —
+
+## c9 p73
+- OCR: orta (bir satır tekrarı OCR'den gelmiş: '...مخالفة ذاته ...' iki kez)
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî.** '**(3) Bu kelâm gereği Allah'ın zâtına da hâdislerin hepsine sahih olan her şey sahih olurdu: Allah'ın zâtı ya bu zâtlara mütemâsil ya muhâlif; mütemâsil ise hâdislere sahih olan her şey Allah'a sahih; muhâlif ise muhalefeti bu zâtların birbirine muhalefeti kadar; nasıl ki bu zâtlar birbirine muhâlif olsalar da hudûs, imkân ve tağayyürde ortak, bunların hepsi Allah'ın zâtına sahih olmalı; bu bâtıl; öyleyse sizin sözünüz de bâtıl. 'Ve billâhi't-tevfîk.' Râzî: bu, Mu'tezile'nin 'Allah'tan başkası cisim ve hayat fiiline kâdir olamaz' diye dayandıkları şeyin hikâyesi; za'fı ve sukûtu zâhir; kulu bazı hâdislere mûcid görmeyi câiz görürlerse hepsine mûcid görmeleri lâzım; bunu câiz görünce mûcize sıdka delil olmaktan çıkar. BURHAN 10: iki failin fiillerinden biri ötekinden şerefli ise şerefli fiilin fâili aşağı fiilin fâilinden şereflidir; delil: fiillerin tamamına istikrâ' (p74).**'
+- Netice/hüküm: **Burhan 9 tamam: Mu'tezile kulu bazı hâdislere mûcid görürse hepsine görmelidir; bu, mûcizeyi sıdka delil olmaktan çıkarır. Burhan 10 başlıyor.**
+- Delil çeşidi: **ilzâm; (T) F 27-B: 'bazısına mûcid ⇒ hepsine mûcid' geçişi Mu'tezile'nin 'kul yalnız kendi fiillerine mûcid' iddiasını, kudretin sınırını kabul ederek cevaplayabilir; Râzî'nin Burhan 9'u 'mûcize kulun elinde olmaz' iddiasını kul-kudretinin sınırsızlığı diye kurar; ayırt eden öncül: kudretin bazı hâdislere sahih olması hepsine sahih olmasını gerektirir (misl öncülü).**
+- Mevzuya bağı: **Fasıl II: mûcizenin sıdka delâleti için 'fâil Allah' öncülünün Râzî yoluyla ispatı.**
+- Doğan sual: **Râzî'nin kendi Burhan 9 delili 'kul kudreti sınırsız olurdu' öncülüne dayanıyor; bu öncül, mûcizenin 'Allah'ın fiili' oluşunu 'cebr' kabul etmeyen için ispat etmez. Fasıl II'de mûcizenin fâilinin Allah oluşu için cebre bağımlı olmayan delil aranmalı (açık borç, c8 summary'deki 'muhtâr-fâil' bağımlılığı ile birlikte).**
+
+## c9 p74
+- OCR: kötü (sayfa kısa; son satırlar bozuk)
+- Okuma: kısmî (Burhan 10'un ikinci yarısı OCR'de okunamıyor: 'ولو كان هذا واقعا بتخليق العبد' sonrası ve netice satırı bozuk; 'icmâ' ile bâtıl' hükmü okunabildi)
+- İçerik: **Kimin sesi: Râzî.** '**Burhan 10: fiillerin istikrâ'sında iki failin fiillerinden biri ötekinden şerefli ise fâili de şereflidir. Mahlûkâtın en şereflisi Allah'a îmândır. Bu îmân kulun halkıyla vâkî olsaydı kulun mahlûku Allah'ın bütün mahlûkâtından şerefli olurdu, yani kul Allah'tan şerefli olurdu; bu icmâ' ile bâtıl (OCR'de 'بالإجماع' okunuyor). Netice: îmân Allah'ın halkıyladır (matlûb). 'Ve billâhi't-tevfîk.'**' 
+- Netice/hüküm: **Burhan 10: îmân en şerefli fiil; kul yaratsa kul Allah'tan şerefli; öyleyse îmân kulun halkı olamaz.**
+- Delil çeşidi: **kıyas (tam istikrâ' iddiasıyla); (T) F 27-B: 'şerefli fiilin fâili şereflidir' öncülü istikrâ'ya dayanıyor, bu sayfada istikrâ' gösterilmiyor; ayırt edici değil: Mu'tezile 'fiilin şerefi fâilin şerefini gerektirmez' diyebilir; sonucun 'ma'lûlün illetten şerefli olması' Mu'tezile için îmân bakımından 'Allah kulu kâdir kıldı' cevabı ile karşılanır.**
+- Mevzuya bağı: **Fasıl I §8.**
+- Doğan sual: **PDF'den Burhan 10'un son satırları doğrulanacak.**
+
+## c9 p75
+- OCR: orta (başlık okunuyor)
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî.** '**BÂB 1'in FASIL 2'si başlığı (OCR'den): 'Kul kudretinin bir şeyin ademden vücûda çıkmasında müessir olmadığına delâlet eden delillerin takrîri'. BURHAN 1: kulun fiili mümkin; her mümkin Allah'ın kudretiyle vâki olur. Kulun fiilinin mümkin olduğunda nizâ' yok. Her mümkinin ancak Allah'ın kudretiyle vâki olmasının delili: imkân, imkân olması bakımından bütün mümkinlerde tek mefhum; imkân sebebe muhtaç kılar; ya belirli bir sebebe ya belirsiz 'herhangi bir' sebebe muhtaç kılar; ikincisi bâtıl: mübhem nefsinde hâricde vücûdu olmayan, çünkü hâricde vücûdu ve sübûtu olan her şey nefsinde müteayyin ve başkasından mümtaz; öyleyse mübhem hâricde mevcûd olamaz, mevcûd olmayan başkasının vücûduna sebep olamaz. Öyleyse imkân belirli bir sebebe ihtiyaç sebebidir (p76).**' 
+- Netice/hüküm: **Bâb 1 Fasıl 2 başladı (kul kudretinin te'sîri); Burhan 1: imkân ⇒ belirli sebep.**
+- Delil çeşidi: **metafizik ilzâm; (T) F 27-B: 'imkân bir mefhum ⇒ belirli tek sebep' geçişi tenkide açık: imkânın tek mefhum olması, her mümkinin AYNI belirli sebebe muhtaç olması sonucunu vermez (her mümkinin kendi belirli bir sebebi olabilir; bunlar zincir yaparak intihâ eder); Râzî sonuçta 'bütün mümkinlerin muhtaç olduğu tek şey' diyecek (p76); bu adım ayırt edici değil (kendi tenkidim, kaynağın öncülü olarak kaydedildi).**
+- Mevzuya bağı: **Fasıl I §1 (tevhid)/§8: 'tek müessir' iddiası ile bağı.**
+- Doğan sual: —
+
+## c9 p76
+- OCR: orta ('المؤثر' bazı yerlerde bozuk)
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî.** '**Burhan 1 sonu: imkân, bütün mümkinlerde tek şey olduğuna göre bütün mümkinler o tek ve belirli şeye muhtaç; bütün mümkinlerin muhtaç olduğu şey mümkin olmaz (yoksa şeyin nefsine ihtiyacı); öyleyse lizâtihî vâcib; bütün mümkinlerden hiçbiri Vâcibü'l-vücûdun îcâdı olmaksızın var olmaz (matlûb). Sebep sebep olması bakımından nefsinde ve zâtında müteayyin. Allah'ın mûcib veya müessir olması ya bizzat belirli zâtı ya ona zâid bir vasıf; birincisi ise matlûb hâsıl: çünkü zâtı ile onun 'başkasında müessir olması' tek şey; imkân ona nisbet edilmenin illeti; öyleyse imkân o belirli zâtın nisbetinin illeti; hiçbir mümkin o belirli zât dışında vâki olamaz. İkincisi (zâid vasıf) ise müessiriyet zâtta zâid vasıf, vasıf mevsûfa muhtaç, mübhem mi belirli mi mevsûfa taksîm döner; teselsül lâzım; bâtıl; öyleyse Vâhid-i Ehad-i Hak dışında müessir yoktur.**' 
+- Netice/hüküm: **Burhan 1: tek müessir Allah'tır (Râzî'nin metafizik burhanı: imkân ⇒ belirli sebep ⇒ vâcib ⇒ tek müessir).**
+- Delil çeşidi: **metafizik burhan (taksîm + teselsül nefyi); (T) F 27-B: yukarıdaki (p75) tenkit geçerli: 'bütün mümkinler AYNI şeye muhtaç' adımı; ayrıca 'müessir' tanımı 'başkasında etki' — kul fiillerini dışlayan sonuç için Mu'tezile 'Allah kulda kudret ve dâî yaratır' der; Râzî Burhan 1'de bu cevabı kapatmıyor.**
+- Mevzuya bağı: **Fasıl I §1 (tevhid) ve §8.**
+- Doğan sual: —
+
+## c9 p77
+- OCR: orta ('البرهان الثاني' okunuyor; sayfa başında 'الأحد' köşeli)
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî.** '**BURHAN 2: kulun mak'dûru Allah'ın mak'dûrudur; Allah'ın mak'dûru ancak Allah'ın kudretiyle hâsıl olur; öyleyse kulun mak'dûru ancak Allah'ın kudretiyle hâsıl olur. Birinci mukaddime (kulun mak'dûru Allah'a mak'dûr) için vecihler: (1) Kulun mak'dûru bir şey; her şey Allah'a mak'dûr: 'Allah her şeye kâdirdir' (Bakara sûresinden âyet; numarası OCR'de okunmuyor); öyleyse kulun mak'dûru Allah'a mak'dûr. (2) Kulun mak'dûrunun misli Allah'a mak'dûr; bu olunca kulun mak'dûru Allah'a mak'dûr olmalı: kul parmağını oynatırsa demek o cismin o hayizde hâsıl olması; Allah o cismi o hayizde hâsıl etmeye kâdir; öyleyse kulun mak'dûrunun misli Allah'a mak'dûr. İki misil tam mâhiyette müşterek; tam mâhiyette müşterek olanlar bütün levâzımda müşterek olmalı; levâzım müstakil olmayan sıfatlar, muhtaç; müessir ya mâhiyet ya mâhiyetin ötesi; mâhiyetse o mâhiyetin tamamı her ferde hâsıl; mâhiyetin ötesiyse ta'ayyün; ta'ayyün adem kaydı (varlık olsaydı başka ta'ayyüne muhtaç olur, teselsül) (p78).**' 
+- Netice/hüküm: **Burhan 2: misl öncülü ('tam mâhiyette müşterek ⇒ bütün levâzımda müşterek') üzerine kul mak'dûru Allah'a mak'dûr.**
+- Delil çeşidi: **ilzâmî/metafizik; (T) F 27-B: bu öncül p68–70'te Râzî'nin Mu'tezile'ye 'misline sahih olan sahih' önermesini nakz ederken çürüttüğü öncülün aynısı; orada onların öğretileriyle (ilzâm) nakz, burada kendi öğretisiyle kabul (p78'de 'nakızlar bize lâzım gelmez' diyor). Usûl olarak tutarlı olabilir; kaydım: aynı önerme iki yerde iki hükümle kullanılıyor.**
+- Mevzuya bağı: **Fasıl I §8.**
+- Doğan sual: —
+
+## c9 p78
+- OCR: orta-kötü (satır 12–17 kırık; alt yarı bozuk)
+- Okuma: kısmî (Burhan 2'nin 3. vechinin bir kısmı OCR'de okunamıyor; 'taalluk etmezse müreccihsiz tercih' ve 'imkân mak'dûriyetin illeti' satırları okunabildi)
+- İçerik: **Kimin sesi: Râzî.** '**Ta'ayyün adem kaydı olduğu için te'sîrde etkisi yok; ta'ayyün düşünce sadece mâhiyet kalır, bu da tam mâhiyette müşterek olanlar için hükmün müşterek olmasına götürür. Râzî: 'Mu'tezile'ye karşı zikrettiğimiz on nakz onların mezhepleri için lâzım; biz o mezhepleri söylemediğimiz için o nakızlar bize lâzım gelmez.' Öyleyse kulun mak'dûrunun misli Allah'a mak'dûr; 'şeyde sahih olan misline sahih'; öyleyse kulun mak'dûru Allah'a mak'dûr olmaya sahih; bu sahihlik hâsıl olunca Allah'ın kudretinin ona taalluku vâcib; taalluk etmese, kudretinin bazı mak'dûrâta taalluk edip bazısına taalluk etmemesi müreccihsiz tercih (p78 satırları kırık). 'Allah bazı mümkinâta kâdirdir; o bazının Allah'a mak'dûr olmaya sahih olması imkânıyla muallel; vücûb ve imtinâ' mak'dûriyete mâni'; imkân mak'dûriyete mâni' değil (aksine illet); imkân bütün mümkinâtta ortak; kudret bazısına taalluk edip bazısına taalluk etmese muhassıs lâzım; muhâl; öyleyse Allah bütün mümkinâta kâdir.**'
+- Netice/hüküm: **Burhan 2: kul mak'dûru Allah'a mak'dûr olmaya sahih; Allah bütün mümkinâta kâdir; öyleyse kul mak'dûru Allah'a mak'dûr.**
+- Delil çeşidi: **metafizik ilzâm; (T) F 27-B: Râzî 'nakızlar bize lâzım gelmez' diyor: doğru: nakızlar Mu'tezile'nin öğretisinden; fakat bu önermenin kendi öğretisiyle kabulü ayrıca 'ta'ayyün adem kaydıdır' öncülüne bağlı; bu öncül Mu'tezile'nin 'zâtlar zâtiyyette müsâvî' öğretisinde de geçtiğinden hasma karşı ayırt eden ortak öncül var. Ancak imkân mak'dûriyetin illeti olduğu önermesi p75–76'daki 'imkân' tenkidi altında kalır.**
+- Mevzuya bağı: **Fasıl I §8.**
+- Doğan sual: —
+
+## c9 p79
+- OCR: orta ('الحجة الرابعة' okunuyor)
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî.** '**Hüccet 3 sonu (p78'den): Allah bütün mümkinâta kâdir. HÜCCET 4: Allah bu cismi bu hayizden ötekine nakle kâdir; kul da kâdir; kulun mak'dûru Allah'ın mak'dûru olmasaydı kulun kudretiyle hâsıl olan intikâl, Allah'ın fiiliyle hâsıl olan intikâlden, vücûda girmeden önce mütebâyin olurdu; çünkü vücûda girmeden evvel biri için 'Allah'ın mak'dûru olmalı, kulun mak'dûru olması imkânsız', öbürü için tersi doğru olurdu; levâzım ve sıfatlardaki tebâyün hakîkat ve mâhiyetlerdeki tebâyüne mevkûf. Bu bâtıl iki vecihle: (1) ma'dûmun 'şey' olması lâzım gelir; muhâl. (2) Cismin hayizde hâsıl olmasının hakîkati ve mâhiyeti yalnız bu hulûldür; cisim ma'dûm iken bu hulûlün tahakkuku muhâl; meğer ki 'cisim ademken hayizde hâsıl ve bir hayizden ötekine intikâl eder' denir; akıllı kimse bunu söylemez; bunu câiz görürse bu hareket eden ve sâkin olanların ma'dûm olmadığından nasıl emin olunur? Bunu câiz gören akılla vedâlaşmıştır. HÜCCET 5: kulun mak'dûru olan hareket ile Allah'ın mak'dûru olan hareket (p80).**' 
+- Netice/hüküm: **Hüccet 4: kul mak'dûru Allah'ın mak'dûru değilse iki intikâl vücûddan önce mütebâyin olur; bu, 'ma'dûm şey' iddiasını gerektirir (Mu'tezile'ye ilzâm).**
+- Delil çeşidi: **reductio (ilzâmî); (T) F 27-B: 'ma'dûm şey değildir' öncülü Ehl-i Sünnet'in tabiî öncülüdür, Mu'tezile'ye karşı 'ma'dûm şey' savunucularına ilzâm; ayırt edici olması sadece bu öğretiye sahip olanlar için.**
+- Mevzuya bağı: **Fasıl I §8 (dolaylı: ma'dûm-şey tartışması cevher-i ferd/hâdis bâbıyla kesişir).**
+- Doğan sual: —
+
+## c9 p80
+- OCR: orta
+- Okuma: tam (sayfa Hüccet 6'nın sonunda biter)
+- İçerik: **Kimin sesi: Râzî.** '**Hüccet 5: kulun mak'dûru olan hareket ile Allah'ın mak'dûru olan hareket ya vücûda girmeden evvel tahakkuk ve ta'ayyün etmiştir ya etmemiştir; birincisi muhâl: mak'dûrun manası, tahakkuku ve teşekkülü kâdirin te'siriyle vâki olan şeydir; böyle olan şeyin tahakkuku kâdirin te'sîr etmesinden mütehhirdir; kâdirin te'sîrinden mütehhir olan onun kendisiyle te'sîrden mukaddem olamaz; öyleyse kulun mak'dûru ve Allah'ın mak'dûru vücûda girmeden evvel tahakkuk-ta'ayyün yoktur; imtiyaz olmayan yerde 'birisi kulun mak'dûru, öbürü Allah'ın mak'dûru' denemez; öyleyse 'kulun mak'dûru Allah'ın mak'dûru değildir' sözü bu iki bâtıl kısma varır. 'Mak'dûrâtın ademde şeyler hâsıl olduğunu' söyleyenlere: farz edelim ki ademde mümtaz şeyler tahakkuk etsin; bu takdirde mak'dûr olmaları imkânsız; çünkü mak'dûr, tahakkuku ve vukûu kâdirin te'siriyle olan; ademde tahakkuk eden şeyin tahakkukunun kâdirin te'siriyle olması denemez; öyleyse mak'dûr olan ademde tahakkuk edemez; 'bu bu matlûbun takrîrinde metin, itikadî bir kelâmdır.' HÜCCET 6: Allah kuluna fiile kudret verdi; başkasını bir şeye kâdir kılan onun üzerinde kâdir olmalı; âciz kimse başkasını kâdir kılamaz, câhil kimse başkasını âlim kılamaz. Biz (hasım) Allah'ın kulu fiile kâdir kıldığında ittifak ediyoruz; öyleyse Allah kulun mak'dûruna kâdir (p81'de devam).**' 
+- Netice/hüküm: **Hüccet 5: ma'dûm şey değildir; Hüccet 6: kudreti veren kudret sahibidir.**
+- Delil çeşidi: **reductio + tanım; (T) F 27-B: Hüccet 6 ortak öncüle ('Allah kulu kâdir kıldı') dayanır; 'kudreti veren, kudret verilen şeye kâdir olmalıdır' önermesi Mu'tezile için de kabul edilir; sonucun 'Allah kulun mak'dûruna kâdir' ve 'kul mak'dûrda müstakil değil' olması ayrı adımdır: iki kâdirin bir mak'dûrda toplanması (Mu'tezile 'muhâl' der); Râzî'nin cevabı bu sayfada yok.**
+- Mevzuya bağı: **Fasıl I §8.**
+- Doğan sual: **'İki kâdirin bir mak'dûr üzerinde toplanması muhâl' itirazına Râzî'nin cevabı (p81'den itibaren aranacak).**
