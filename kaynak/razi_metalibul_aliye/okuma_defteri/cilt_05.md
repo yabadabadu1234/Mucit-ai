@@ -721,3 +721,75 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **hasım aktarımı + cumhur cevabı; nakil (hadis/duâ — ⊬ kaynağı belirtilmemiş)**; (T) —
 - Mevzuya bağı: **İSLÂM KAYDI (KIRMIZI)**: (1) '**Dehri sebbetmeyin, çünkü Allah dehrdir**' — Râzî bu sözü hasım fırkanın delili olarak naklediyor; **hadisin senedi ve şerhi bu okuma kaynaklarında doğrulanmadı (⊬)**; **Risale bu hadisi 'Allah zamandır' diye YORUMLAMAZ; ilim ehlinin bilinen yorumunu (dehre söven aslında olayları çeviren Allah'a sövmüş olur; Allah dehr olmaz, dehri yaratan ve olayları çevirendir) Sünnet şerhlerinden ayrıca doğrulayarak yazar.** (2) '**yâ dehr, yâ sermed, yâ deyyâr...**' duâsı **hasmın aktardığı; Risale'ye alınmaz, kaynağı ⊬.** (3) **'Kudemâ-yı hamse' Muhammed b. Zekeriyyâ er-Râzî sistemi (c4 kaydı) ⇒ Risale reddeder; c4'te mitosun aklî hüsn-kubuh ile reddi zaten yazılmıştı.**
 - Doğan sual: **Cumhurun cevabı ('hâsıllar ilâhın daha kâmil olduğuna delil') zamanın Allah olmadığı, ama 'mahlûk mu kadîm mi' sorusunu çözmez; Râzî'nin kendi hükmü p76–77'deki 'en yakın: Eflâtun' ile burada 'cumhur: ilâh dehr değil' nasıl birleşiyor?** İkisi çelişmez (zaman ≠ ilâh; ama zaman kadîm cevher), ama **tevhid burhanı ile gerilim devam ediyor (p77 borç).**
+
+## c5 p81
+- OCR: orta (dipnotlar bol; hüküm paragrafı okunuyor)
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî (KENDİ hükmü).** '**Bu sözlerin (zaman = ilâh / vâcib) EN YAKINI şudur: deliller vâcibü'l-vücûd li-zâtihi'nin BİR olduğuna delâlet etti; vâcibü'l-vücûd li-zâtihi 'her cihetten vâcib' olmalı (sâbit); bu, O'nun (sübhânehû) tagayyür ve tebeddüllerin mevridi olmasına münâfî. Oysa müdde ve zaman, kabliyet ve ba'diyetin tevâruduna göre tagayyürlerin mevridi ⇒ zaman 'her cihetten vâcib' değil, zâtına göre vâcib değil, bilakis MÜMKİNÜ'L-VÜCÛD li-zâtihi. İlâh ise tagayyürlerden mukaddes, kuvvet-hâliyle (bi'l-kuvve) hiçbir şeyin lâhık olamayacağı mevcuttur.** İşte bunu söyler, buna dayanırız. Allah hidâyet edendir.' (Dipnot: nüsha kenarında 'el-Mes'ele'l-Ûlâ: ân hakkında söz' başlığı işaretli.)
+- Netice/hüküm: **Râzî: zaman vâcibü'l-vücûd li-zâtihi DEĞİL; mümkinü'l-vücûd li-zâtihi. İlâh tagayyürden münezzeh. (p77'deki iki fırkadan ilkini seçiyor.)**
+- Delil çeşidi: **c2 tevhid burhanı ('vâcib bir ve her cihetten vâcib') + tagayyür ⇒ imkân**; (T) burhânî biçim; **F 27-B: bu son adımın ayırt ediciliği: 'tagayyürün mevridi olan mümkin' ilkesi zamanı vâcibden ayırır; hasmın 'ademi farz ⇒ ba'diyet ⇒ vâcib' delilini (p60 H6, p77 H1) çürütmez, yalnız ona karşı iki büyük ilkeyi (tevhid + tagayyür) yerleştirir — çürütme p82 sonrası (aranacak).**
+- Mevzuya bağı: **KRİTİK — F 1 tevhid + İSLÂM KAYDI**: **Gerilim (p76–77) burada kısmen çözüldü: Râzî 'zaman vâcib' fırkasını REDDEDİYOR ve 'zaman mümkin' diyor** (Risale ile uyum: zaman Allah değil, Allah'a muhtaç mümkin). **Hâlâ açık: 'mümkin' ⇒ 'mahlûk' mü, 'kadîm-mümkin' mi?** p76'da Râzî zamanı 'bâkî, ezelî-ebedî cevher' saydı; **'ezelî mümkin' Ehl-i Sünnet ana hattına aykırı (mâsivâ hâdis); Risale bu kısmı almaz.** **c1 p318 'kadîm ⇏ vâcib' ile aynı kalıp.**
+- Doğan sual: **Râzî 'zaman mümkin ve ezelî' derken 'ezelî' hükmünü c4 hudûs-i âlem delilleriyle nasıl bağdaştırıyor?** Çelişki mi, yoksa 'zaman' (dehr) ile 'âlem' arasında bir ayrım mı? **Cilt 5 sonunda c4–c5 karşılaştırma tablosu yazılacak.**
+
+## c5 p82
+- OCR: —
+- Okuma: okunmadı (boş sayfa)
+- İçerik: Boş.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c5 p83
+- OCR: orta (H2 başlığı ve ilk cümleler hasarlı; H1 ve H2 gövdesi okunuyor)
+- Okuma: tam (H2'nin başı kısmî)
+- İçerik: **Fasıl 7: 'Ân hakkında sözün tahkîki'; birkaç mesele.** **Mes'ele 1: ânın vücûdunun isbâtı.** **Kimin sesi: Râzî.** '**Şu an hâzır olan bir şeyin vücûdu kabul edilmelidir; deliller:** **(1)** mâzî ve müstakbel her biri mahz adem; **hâzır da mahz adem olsa, hiçbir şeyin hâsıl olması ve vücûdu kalmazdı; bu cehâlet.** **(2)** (başlık hasarlı) '**mâzîden ma'kûl: daha önce hâzır olup geçen; müstakbelden ma'kûl: hudûrü beklenen ama henüz gelmemiş; hâzırın hudûrü imtinâ' olsa mâzî ve müstakbel olması da imtinâ' olurdu; öyle değilse hâzır hâli kabul etmek lâbüddür.**' (p84'te H3.)
+- Netice/hüküm: **Mes'ele 1 (H1–H2): 'ân-ı hâzır mevcuttur.'**
+- Delil çeşidi: **taksîm + tanım; 'hâzır yoksa mâzî-müstakbel de yok'**; (T) burhânî biçim; **⊬ 'mâzî = evvelce hâzır olan' tanımı hâzırı varsayar; H2 dairevîdir (delil ≠ dava) — Râzî bunu p84'te 'mübâlağa için' diye kendisi işaretliyor.**
+- Mevzuya bağı: **Fasıl I §3**: 'ân-ı hâzır' = **c5 p62 H8 (hâzır ancak ân), p70–72 tetâlî delilinin öncülü**; şimdi öncülün kendisi isbâtlanıyor (Râzî bunu bedîhî sayıyor).
+- Doğan sual: —
+
+## c5 p84
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî.** **H3**: '**gerçek müşâhedelerle şeyleri müşâhede ettiğimizde ve kendimizde elem ve lezzet bulduğumuzda tartışma yok; bunlar 'hâl'de müşâhede edilir; geçen ve kalmayan müşâhede edilemez; henüz gelmeyen de edilemez** ⇒ bu vicdânî ve müşâhedeler hâlde, ne mâzîde ne müstakbelde hâsıl.' **Kayıt**: '**hâlin/hâzırın mevcut olması zaruretle kabul edilmeli; bu, beyân ve burhana ihtiyaç duyulmayacak kadar zâhir ve celîl; bu delilleri mübâlağa için zikrettik.**' **Mes'ele 2: hâzır ânın bölünmemesi.** **Mukaddime**: '**bir şeyin bölünmesi 2 türlü**: (1) **bütün cüz'lerinin beraber mevcut olduğu bölünme (cisim gibi)**; (2) **bir cüz mevcutken diğerinin mevcut olması imtinâ' olan bölünme (zaman ve hareket gibi): günün başından sonuna uzanan zaman cüzlere bölünür; ama farz edilen hiçbir cüz, öbür cüz mevcutken mevcut olamaz; bu, teemmül ve lafız tasavvurlarını hazırladıktan sonra zarûrî ilimdir.**' 'Hâzır ân 2. türle **bölünmez**' (p85).
+- Netice/hüküm: **Mes'ele 1 bitti (H3 müşâhede); Mes'ele 2 başladı: iki tür bölünme ayırdı.**
+- Delil çeşidi: **müşâhede (vicdan) + tasnif**; (T) H3 ikna'î-vicdânî; **⊬ 'müşâhede hâlde' önermesi müşâhedenin 'ân'da olduğunu değil 'kısa süreli hâl'de olduğunu da gösterebilir (ân ≡ hâl mi?).**
+- Mevzuya bağı: **Fasıl I §3 ve hafıza/idrâk**: 'müşâhede hâlde' + 'bölünmeyen hâzır' ⇒ 'idrâkin süresi bir ân mı?' sorusu Risale'nin ilim bâbına (c3 idrâk) bir soru doğurur (⊬ bağlanmadı).
+- Doğan sual: Vicdanın 'şimdi' algısı **süreli** (fenomenolojik hâl); **'ân' matematik kesit mi, algı birimi mi?** Râzî ikisini aynı sayıyor (**F 27-B: ayırt etmiyor**).
+
+## c5 p85
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî; sonra Aristo mezhebi içinde açıklama.** **Mes'ele 2 sonu**: '**hâzır ân 2. tür bölünmeyle bölünmez: bu tür bölünmenin hâssası, iki cüzden birinin öbürü mevcutken mevcut olmamasıdır; hâzır ân böyle bölünse ilk yarısı vücûda girince ikincisi mevcut olmazdı, ikincisi girince ilki fâni; o zaman bu mecmûun vücûdu HİÇ olmazdı ⇒ mecmûun vücûdu olan hiçbir şey bu şekilde bölünmez.**' **Mes'ele 3: 'Ân nasıl bir itibarla fâsıl, bir itibarla vâsıl olur?'** '**Aristo ve ashâbının mezhebi: zaman muttasıl kem; muttasıl her kem fasla (ayrılmaya) kabûl eder; 'fasıl' = o şeyin bilfiil bir ucu olması; bu ucu bazen vâsıl bazen fâsıl.**' **Örnek (nokta)**: 'çizgide hâdis olan her nokta fâsıldır; sonra vâsıl olabilir ya da olmayabilir' (p86).
+- Netice/hüküm: **Mes'ele 2 sonu: hâzır ân, cüzleri birbirine göre 'mevcut değil' olan bölünmeyle bölünmez. Mes'ele 3: 'Aristo mezhebi'nin fâsıl/vâsıl ân teorisi (nokta örneği) aktarılıyor.**
+- Delil çeşidi: **tanım + reductio; Mes'ele 3 = mezhep izahı**; (T) —
+- Mevzuya bağı: **Kimin sesi kaydı**: Mes'ele 3 **Aristo mezhebinin (muttasıl zaman) içinden açıklama**; Râzî'nin kendi görüşü (munfasıl zaman, p70–74) DEĞİL; **bu, Râzî'nin 'hasmın çerçevesinde bile şu sonuç çıkar' usûlüdür (p87–88'de göreceğiz).**
+- Doğan sual: —
+
+## c5 p86
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: Aristo çerçevesi içinde açıklama (Râzî aktarıyor, kendi görüşü değil).** '**Nokta çizgide hâdis olunca, çizginin iki kısmından biri öbüründen ayrılmıyorsa bilfiil bir nokta hâdis olmuştur: bu nokta bir kısmın nihâyeti, öbür kısmın bidâyetidir ⇒ bir itibarla fâsıl (çizgi önce tek parçaydı, nokta hâdis olunca iki parça), bir itibarla vâsıl (iki kısmı bağlıyor)**; **ikinci hâl: biri çizgiyi iki yarıya kesince bu nokta iki kısmı bağlamaz** — fâsıl olup vâsıl olmayan.' **Uygulama**: '**hâzır ân mâzîyi müstakbelden fasl eder (mâzînin nihâyeti, müstakbelin bidâyeti) ⇒ fâsıl; fakat mutlaka vâsıl da: vâsıl olmasa zaman inkıtâ' bulur ve bundan sonra başka şey olmaz; bu muhâl: zaman ademe uğrasa ademi vücûdundan sonra olur = ba'diyet-i zamaniyye; ba'diyet zamaniyye zaman hâsıl olmadan olmaz; muhâl**.' (p87).
+- Netice/hüküm: **Aristo çerçevesi: ân hem fâsıl hem vâsıl; vâsıl olmasa zaman inkıtâ' ⇒ ademi zamanla ⇒ muhâl.**
+- Delil çeşidi: **taksîm + reductio ('ba'diyet-i zamaniyye' argümanı)**; (T) burhânî biçim; **⊬ 'zaman ademe uğrasa adem vücûdundan sonra olur' argümanı c5 p60 H6 ve p77 H1 ile AYNI; F 27-B: ayırt etmiyor (zaman dışındaki her şey için de 'adem ba'diyeti zamanladır')**.
+- Mevzuya bağı: **Kıdem-zaman**: 'zamanın inkıtâsı muhâl' öncülü **Risale'nin 'âlem/zaman hâdis' tezinin ana itirazıdır** (c4 K1 kıdem tarafının delili; c4 K2 hudûs tarafında cevapları vardı, bkz. c4 p200 dehr, c4 'zamanın başlangıcı' tartışması); **borç: c5'te Râzî'nin kendi cevabı yoksa c4 karşılaştırması 'itiraz Râzî'nin kalemince kapanmamıştır' diye yazılır.**
+- Doğan sual: **'Zaman ademe uğrasa adem zamandan sonra' (ba'diyet-i zamaniyye) — Râzî bunu bir yerde 'vehmî ba'diyet' (gerçek zamanın değil, dehr'in hükmü) diye cevaplıyor mu?** (c4 p200 dehr ile eşleşir; aranacak.)
+
+## c5 p87
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: Aristo çerçevesi (Mes'ele 3 sonu ve Mes'ele 4 aktarımı); sonra Râzî ('وأقول') yorum.** Mes'ele 3 sonu: '**zamanda farz edilen her ân bir itibarla fâsıl (mâzîyi müstakbelden ayırıyor), bir itibarla vâsıl (mâzîyi müstakbele bağlıyor).**' **Mes'ele 4: 'Zamanın vücûdundan sonra gelen ân ile vücûdundan önce gelen ân arasındaki fark'**: '**bu da Aristo mezhebinin zamanın muttasıl kem olması fer'lerinden**: zaman muttasıl kem; her muttasıl kem **nihâyeti olmayan bölünmelere** kabûl eder; bu bölünmeler **bilfiil hâsıl değil** (yoksa sonlu zamanda bilfiil sonsuz cüz olurdu); **zaman kendi nefsinde bir muttasıl**; bir sebep ona arız olup ayrılmasını gerektirirse bilfiil ayrılma hâsıl olur — bu ayrılma ân; ⇒ **ân zamanın vücûdundan SONRA vücûd bulan bir şeydir (zamandan müteahhir).**' **Diğer (ân zamandan mütekaddim)**: '**nokta hareket ve meyliyle çizgiyi yapar gibi, ân da seyalânıyla zamanı yapar; bu ân zamanın vücûdundan ÖNCE**.' **Râzî ('وأقول')**: '**'ân bölünmeyen bir şey, seyalânıyla zamanı yapar' sözleri ân'ın kendi başına kâim, müstakil bir şey olduğunu teslimdir; sonra seyalânıyla zamanı yapar diyorlar: bu tam olarak** (p88) …
+- Netice/hüküm: **Aristo çerçevesinin iki 'ân' teorisi: (a) ân zamandan sonra (ayrılma), (b) ân zamandan önce (seyyâl ân zamanı yapar). Râzî: (b) 'ân kendi başına kâim' demek.**
+- Delil çeşidi: **mezhep aktarımı + Râzî'nin 'iç çelişki/iltizam' yorumu**; (T) ilzâm.
+- Mevzuya bağı: **Kimin sesi kaydı**: Mes'ele 4 **Aristo mezhebi**; Râzî yorumu p88'de.
+- Doğan sual: —
+
+## c5 p88
+- OCR: orta (sayfa 2 satırla biter; sayfanın sonunda dipnot)
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî ('وأقول' yorumu sonu).** '…**bu, zamanın kendi kendine kâim cevher olduğu ve ona ardışık nisbetlerin hâsıl olduğu (Eflâtun) mezhebine DÖNÜŞTÜR ⇒ bu, müdde ve zamanın takrîrinde hak olanın Eflâtun'un dediği, Aristo'nun dediği olmadığının itirafıdır.**' (Dipnot: nüshalar 'Eflâtun'un sözüne itiraf ve Aristo'nun sözünün sukûtu' farkı.)
+- Netice/hüküm: **Râzî: Aristo mezhebinin 'seyyâl ân zamanı yapar' cümlesi Eflâtun'un mezhebini itirafa varıyor.**
+- Delil çeşidi: **iltizam (hasmın kendi öncülünden Eflâtun sonucu)**; (T) **cedelî ilzâm — F 27-B: 'ân kendi başına kâim' hükmü nokta-çizgi benzetmesinin **zorunlu** sonucu mu, yoksa **bir betimleme** mi? Ayırt etmez, çünkü Aristo 'nokta çizgiden ayrı kâim değil, çizginin ucu' der (⊬ Aristo'nun tarafı bunu karşılar: nokta 'potansiyel' bir şeydir).**
+- Mevzuya bağı: **Fasıl I §3**: Fasıl 7'nin Mesele 1–4 dizisi **Râzî'nin 'Eflâtun-yakın' tercihini (p76–77) 'ân' düzeyinde tekrar üretiyor**; **Risale bu ontolojiyi ana metne ALMAZ** ('zaman mahlûktur' cümlesi ve 'kadîm yalnız Allah' ilkesi bağlıdır), 'Râzî'nin tercihi' diye kayıt.
+- Doğan sual: **Râzî 'zaman kendi başına kâim cevher, mümkinü'l-vücûd' derken mümkinin mucidi kim ve zamanın yaratılışı (hudûs) var mı? Fasıl 7'nin sonraki mesele/fasıllarında (ân ve hudûs, zaman ve hâdis) hüküm aranacak.**
