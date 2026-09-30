@@ -1009,3 +1009,75 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **tefsir/savunma (Eflâtun'un remzî sözü) — Râzî'nin kendi hükmü: 'zâhirine tatbik ederek tâ'na etmek yakışmaz'**; (T) **⊬ 'Eflâtun'un sözü (kâh hayûlâ kâh sûret)' nakli birincil kaynaktan doğrulanmadı; Râzî'nin tefsiri (remz) onun okumasıdır, Eflâtun'un kastı olduğu sayıya bağlanmadı.**
 - Mevzuya bağı: **KRİTİK — borç listesi 'hayûlâ ve sûret'**: **Râzî burada 'mekân = hayûlâ/sûret' sözünü Eflâtun'a atfediyor ve remz diye savunuyor; c5'te 'hayûlâ ve sûret' bahsi (asıl cisim=hayûlâ+sûret tartışması, cevher-i ferd) sonraki fasıllarda aranacak (borç kapanmadı, yeri saptandı: c5 Makâle 2 devamı/c6).** **İslâmî kayıt: Eflâtun'un mekân-fezâ görüşü Râzî'ce 'muhassal ma'kûl' biri; Risale mekân felsefesi hükmü vermez.**
 - Doğan sual: **Râzî mekân için kendi tercihini nerede yazıyor? (fezâ mı, hâvî yüzey mi?)** Zamanda 'Eflâtun-yakın' hükmü vermişti (p76–77); **mekânda da aynı çizgi mi? Makâle 2 devamında aranacak.**
+
+## c5 p113
+- OCR: orta-iyi (kısa sayfa)
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî (mezhep dökümü sonu).** Fezâ diyenlerin ilk fırkası (p112 sonu) '**onun hiç vücûdu yoktur**' (mütekellimûn: fezâ mahz adem). **İkinci fırka: filozoflar**: '**burada üç boyutlu mevcut, kendi başına kâim boyutlar vardır: bunlar cisimlerin mekânlarıdır; bu, İlâhî Eflâtun'un seçtiği ve mu'teber hakîmlerin çoğunun kabul ettiği görüştür; bunlar iki fırka: (a) 'bu fezânın cisimlerden hâli kalması imkânsız değil'; (b) 'imkânsız (mümteni')'.**' **Yalnız 'hâvî yüzey' diyenler: Aristo ve tâbi'lerinin çoğunluğu — Ebû Nasr el-Fârâbî ve Ebû Alî İbn Sînâ gibi.** '**Bu, bu bâbdaki mezheplerin tafsilidir.**'
+- Netice/hüküm: **Mezhep haritası tamamlandı: (1) fezâ yok/adem (mütekellimûn); (2) fezâ mevcut kâim bi-nefsihi — cisimsiz kalabilir (a) / kalamaz (b) (Eflâtun, filozoflar); (3) hâvî yüzey (Aristo, Fârâbî, İbn Sînâ).**
+- Delil çeşidi: **tasnif**; (T) —
+- Mevzuya bağı: **F 1 §3 (c2 K1 F5 hayyiz-cihet imtinâı)**: c2'de 'Allah hayyizden ve cihetten münezzeh' hükmü **hangi mekân mezhebi olursa olsun** kalır; Risale bu hükmü **mekân teorisinden bağımsız** yazar.
+- Doğan sual: —
+
+## c5 p114
+- OCR: —
+- Okuma: okunmadı (boş sayfa)
+- İçerik: Boş.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c5 p115
+- OCR: iyi
+- Okuma: tam
+- İçerik: **Makâle 2, Fasıl 2: 'Hâlâ ve fezâ mahz adem ve nefy-i sarf diyenin sözünün ibtâli'.** **Kimin sesi: Râzî ('ندعي' = biz iddia ederiz — KENDİ iddiası; hasım: mütekellimûn).** '**Bu hâlâ olsa mevcut olurdu, cihetlerde mikdârı ve imtidâdı olurdu; mütekellimûnun dediği gibi mahz adem ve nefy-i sarf olmazdı.**' **H1**: '**bedîhen biliriz: bir zira'lık hâlânın yarısı, iki zira'lık hâlâ, üç zira'lık hâlânın üçte biri, dört zira'lık hâlânın dörtte biri; yarısı-üçte biri-dörtte biri olan şey zarûrî olarak mahz adem değil; mahz ademin yarısı, üçte biri, dörtte biri olmaz; ademe 'daha çok/az, zâid/nâkıs, mesâha, takdir' vasıfları verilemez.**' **H2**: '**fezâya hisle işâret edilebilir: 'hâlâ buradan şuraya şu kadar uzun' denir; hissî işâretin müteallakı nefy-i mahz olamaz; ayrıca 'buradan şuraya' mikdâr ve tûle işârettir ⇒ kendinde mevcut, mikdârı ve imtidâdı olan şey.**' **H3**: '**bu fezâ ve boşluk hakkında 'cisim onda hâsıl oldu, sonra ondan çıktı, başka boşluğa intikal etti' diye hüküm verilir** (p116).
+- Netice/hüküm: **Râzî (kendi iddiası): hâlâ/fezâ mahz adem değil, mevcut; H1 (ölçü: yarım/üçte bir), H2 (hissî işâret) kuruldu.**
+- Delil çeşidi: **bedîhe + reductio (adem yarım olmaz)**; (T) **Râzî'nin kendi ağzıyla, mütekellimûna karşı; dayanak 'adem ölçüsü olmaz' (zaman fasıllarındaki 'mahz ademde tagayyür imkânsız' ile aynı ilke).** **⊬ H1 'yarısı olan şey mahz adem değil': mütekellim 'fezâ ölçüsü' ile 'fezâ mevcut' arasında ayrım yapar ('ölçü cisimler arası mesâfedir, boşluğun kendisi değil'); H1 bu ayrımı elemiyor (F 27-B: ayırt etmiyor).**
+- Mevzuya bağı: **KRİTİK — kaynak notu: Râzî kelâm çizgisinden (mütekellimûn) AYRILIYOR: 'fezâ mahz adem' görüşünü reddediyor ve hâlâ mevcut diyor.** Bu, c2 p35–54 'Allah hayyizden/cihetten münezzeh' bahsindeki **hayyiz-mahz-adem itirazını** Râzî'nin kalemince yeniden okumak gerektirir: hayyiz mevcut ise 'Allah hayyizde değil' hükmü **'mevcut bir mekânda bulunmuyor'** anlamına gelir, adem değil. **Risale bu ayrıma bağlı değil; mekân ontolojisi hükmü bağlanmaz.**
+- Doğan sual: **c2'de Râzî 'hayyiz ⇒ cisim' tartışmasında (H10 ru'yet, H5 tefrik vb.) hangi mekân okumasını kullandı? c2 p47–54 tekrar okunup yazılan hüküm bu okumaya uyuyor mu?** (borç; c2 defterine bakılacak.)
+
+## c5 p116
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî (kendi iddiası, H3–H5).** **H3 sonu**: '**bu fezâ 'cisim onda hâsıl oldu, sonra ondan çıktı, başka fezâya intikal etti' diye hükmedilir; 'cismin boşluğu ve karargâhı' diye hükmedilen bu şey mahz adem ve nefy-i sarf nasıl olur? Cismin mahz ademde hâsıl olması ma'kûl değil, bir ademden başka ademe intikali de ma'kûl değil.**' **H4**: '**'hâlâ buradan şuraya' dediğimizde 'burada-şurada' onunla dışındaki hâlâ arasında müşterek fasıldır; bu yüzey için 'bu yüzey buradan şuraya' dediğimizde 'burada-şurada' bu yüzey ile ona bitişik yüzey arasındaki müşterek fasla işâret ettiği gibi; müşterek fasıl yüzeyi mevcut kılıyorsa, hâlâda da aynı şey kesinlikle hâlâyı mevcut, mikdârı ve cihetlerde imtidâdı olan kılar.**' **H5**: '**mütekellimûn bunlara 'sayıca farklı, şahıs olarak birbirinden ayrı' diye hükmeder: 'hareket cismin ilk hayyizden çıkıp ikinci hayyize girmesi'; 'birinci ile ikinci hayyiz arasında vâsıta yok, birinci ile üçüncü arasında vâsıta var' diyerek kimini muttasıl, kimini munfasıl, kimini yakın, kimini uzak; belirli hayyiz ile beşincisi arasındaki uzaklık onuncusuna uzaklıktan azdır; mahz adem olan şeye bu hâller nasıl atfedilir?**' (p117).
+- Netice/hüküm: **H3–H5: mütekellimûn kendi dilinde hayyizlere sayı/muttasıllık/yakınlık atfediyor; bu, hayyizin mahz adem olamayacağını gösterir (Râzî'nin mütekellimûna ilzâmı).**
+- Delil çeşidi: **ilzâm (hasmın kendi dilinden) + bedîhe**; (T) **F 27-B: H5 ilzâmı 'kelâmcı hayyizi 'cisimlerin farz edilen hâlleri' diye yorumlayabilir' ihtimalini elemez; dürüst kayıt: ilzâm 'dilde atfedilen hâller' ile 'ontolojik statü' arasında köprü kuruyor.**
+- Mevzuya bağı: **c2 K1 F5 (hayyiz-cihet)**: aynı ilzâm c2'de Allah için hayyiz tartışmasında **kelâmcı-cihet-nefyi** ile çakışır; **borç:** c2 defter kayıtlarına göre 'Râzî'nin c2'deki kendi hayyiz tercihi' ayrıca doğrulanacak.
+- Doğan sual: —
+
+## c5 p117
+- OCR: orta (dipnot bol; gövde okunuyor)
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî (H6) sonra mütekellimûnun cevabı (aktarım).** **H6**: '**bu hayyizler muhtelif sıfatlarla vasıflanır: kimi fevk, kimi taht, kimi yemîn, kimi yesâr; bir şeyin fevk-taht olması mahz adem değildir; fevkiyeti tahtiyetin ademi saymak öbürünü saymaktan evlâ değil; ikisi de öbürünün ademi sayılırsa her biri kendinde adem olduğu hâlde 'ademin ademi' olur ⇒ her biri mevcut; ya da her birini mevcut sıfat sayarsak, sıfatlı hayyizlerin de mevcut olması lâzım (mevcut sıfatın mahz nefye kıyâmı muhâl).**' **'Bunlar bu hayyizlerin mevcut olması gerektiğini gösteren zâhir, açık delillerdir.**' **Mütekellimûn cevabı**: '**bu hayyizler zihnin farz ettiği, aklın takdir ettiği şeylerdir; cisimlerin onlarda hâsıl olup nüfûz ettiğine hükmeder; hâricî vücûdda vücûdları hiç yoktur.**' **Delilleri**: '**vücûdları olsa ya müşâr-ı ileyh vücûd ya gayr-i müşâr; ikisi de bâtıl.**' **Müşâr olamaz**: '**müşâr-ı ileyh mevcut ya istiklâlle ya tebeiyyetle; istiklâlle ise o cisimdir; o zaman 'hayyiz' denen şey cisim; her cisim başka hayyize muhtaç ⇒ her cisim başka cisme muhtaç, nihâyetsiz — muhâl**; ayrıca bu cisme (hayyize) başka bir cisim hâsıl olunca ya biri diğerine **mümâs** (bu takdirde hayyiz/mekân/cihet = hâvî yüzey ⇒ Aristo'ya rücû') ya **nüfûz** (tedâhül-i ecsâm bâtıl)'.' (p118).
+- Netice/hüküm: **Râzî H6 (fevk/taht mahz adem değil) + mütekellimûnun karşı delili (hayyiz mevcut olsa ya müşâr ya gayr-i müşâr) başlıyor.**
+- Delil çeşidi: **ilzâm + hasım dilemması (aktarım)**; (T) H6 F 27-B: 'fevkiyet tahtiyetin ademi' okuması **zorunlu mu? (yönün göreli tanımı: mevcut cisimlerin nisbeti)**; ⊬.
+- Mevzuya bağı: **c2 K1 F5 hayyiz-cihet**: **'cihet' (fevk/taht/yemîn/yesâr) mevcut mudur?** — c2'de **'cihet göreli, Mekke/Medîne örneği' (c2 p70)** ile aynı soru; **Risale 'yönelim cihetten değil kaynaktan' ayrımı (c2 sual 3)** bu sayfadaki 'cihet mevcut mu' sorusundan **bağımsız**.
+- Doğan sual: —
+
+## c5 p118
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: mütekellimûn (aktarım), sonuç: kelâmcı hükmü.** '**Müşâr-ı ileyh mevcut istiklâlle ise cisimdir ⇒ hayyiz cisim ⇒ mümâsset ⇒ mekân = hâvî yüzey (Aristo'ya rücû'), ya da nüfûz ⇒ tedâhül-i ecsâm bâtıl ⇒ bu şık bâtıl.**' '**İkinci şık: müşâr-ı ileyh tebeiyyetle (arazî): bu 'arazî'nin mânâsı; o zaman mekân cisme hâl araz olur; ama temekkün mekânda hâl ⇒ o cevher ve o araz her biri öbüründe hâl (muhâl).**' '**Üçüncü şık: mekân mevcut, gayr-i müşâr-ı ileyh bi'l-his: bu da bâtıl: hisle şu cismin şu hayyizden ikinci hayyize intikal ettiğine işâret ederiz ⇒ intikal edilen ve edildiği hayyiz hisle işâret edilen olmalı ⇒ 'mekân mevcut ama hisle işâret edilmez' sözü bâtıl.**' '**Bu ispat: mekân ve hayyiz, kendinde mevcut bir şey DEĞİL; vehmin farz ve takdir ettiği bir şeydir; hisle işâret edilen yalnız cisimdir; bir cisim başka cisme temas edip sonra ayrılıp başka cisme temas ederse hisle işâret edilen budur; başka bir şey yoktur.**'
+- Netice/hüküm: **Mütekellimûnun 3 şıklı delili: mekân/hayyiz mevcut olsa ya cisim (mümâsset/nüfûz sorunu), ya araz (devir), ya gayr-i müşâr (hisse aykırı) ⇒ mekân vehmî; hisle işâret edilen yalnız cisim.**
+- Delil çeşidi: **taksîm + reductio (aktarım)**; (T) burhânî biçim (hasmın delili); **Râzî cevabı p119'da.**
+- Mevzuya bağı: **Kimin sesi kaydı (KRİTİK)**: **Bu sayfa Râzî'nin kendi delili DEĞİL, karşı tarafın (mütekellimûn) delili; ilk okumada 'Râzî bunu kabul ediyor' sanılabilir: p115 'ندعي' ile p117 'وأجاب المتكلمون' arasındaki ayrım yazıldı.**
+- Doğan sual: —
+
+## c5 p119
+- OCR: orta (dipnotlar; gövde okunuyor)
+- Okuma: tam
+- İçerik: **Kimin sesi: hükemâ ('قالت الحكماء'), Râzî'nin iddiasını savunan cevap; sayfa sonu 'istiksâ gelecek'.** '**'Bu hayyizler aklın farz, vehmin takdir ettiği şeylerdir; cisimlerin onlarda hâsıl olduğuna hükmeder, nefs-i emrde vücûdları yoktur' sözünüz bedîhe-i akılda reddedilir: aklın-zihnin 'bu cisimler bu hayyizlerde hâsıl' hükmü ya hâricî vücûda mutâbık ya mutâbık değil. Mutâbıksa cisim kendinde hayyizde hâsıl, hayyizin cismin zarfı olması hayyizin kendinde mevcut olmasına dayanır: mahz adem cismin zarfı olamaz, hisle işâret edilemez, küçük-büyük, uzun-kısa, yakın-uzak, muttasıl-munfasıl vasfedilemez ⇒ hayyiz kendinde mevcut olmalı. Mutâbık değilse hüküm YALAN ve BÂTIL FARZ olur, 'bu duvar yâkuttur' farzı gibi; bu bâtıl: cisim kendinde 'mütehârrik' ve 'sâkin' vasıflanır; 'mütehârrik' ancak hayyizden hayyize/cihetten cihete intikal; 'sâkin' ancak bir hayyizde uzun zaman karar kılmak.**' '**Mütekellimûnun 'boş hayyizler yalnız vehim, farz ve hayâlle hâsıl' sözü bâtıldır.**' **Taksîme cevap (müşâr ya gayr-i müşâr)**: '**bize göre mevcut, hisle işâret edilen, kendi başına kâim, müstakil bir bu'd; cisimler ona girince MÜTEMEKKİN'in boyutları o boyutlara nüfûz eder; 'bu'dün bu'dda nüfûzu muhâl' sözü mahz DAVA; bu meselede istiksâ yapacağız.**' (p120 boş.)
+- Netice/hüküm: **Hükemâ (Râzî'nin iddiasını destekleyen): 'hayyiz zihnî farz' görüşü hükmü sahih/yalan ikilemiyle çürütülür; mekân = mevcut bu'd; cismin boyutları ona nüfûz eder; 'bu'dün bu'dda nüfûzu muhâl' bir dava (delil yok).**
+- Delil çeşidi: **dilemma (mutâbakat) + tanım; 'mahz dava' ithâmı**; (T) **⊬ 'cismin kendinde mütehârrik/sâkin olması' hüküm iki anlamda ('hayyiz mevcut' ve 'cisimlerin göreli konumu') doğru; ilzâm ikinci okumayı elemiyor (F 27-B: ayırt etmiyor); 'nüfûz' cevabı davaya davadır (ikisi de 'dava', Râzî 'istiksâ' ile erteliyor).**
+- Mevzuya bağı: **KRİTİK — borç listesi (cevher-i ferd, tenâhî-i ebâd) ve İSLÂM KAYDI**: **'bu'dün bu'dda nüfûzu' (tedâhül) Râzî'nin kalemince Makâle 2'nin ilerleyen fasıllarında istiksâ edilecek; hüküm o zamana kadar bağlanmaz.** **Mekân = mevcut kâim bi-nefsihi fezâ** kavramı **kadîm-mevcut (Eflâtun) ile birleşebilir; Risale 'Allah'tan başka kadîm yok' ilkesiyle bunu ALMAZ, mekânı mahlûk sayar.**
+- Doğan sual: **Makâle 2 devamında 'tedâhül' istiksâsı ve 'mekân ezelî mi' sorusu var mı?** Aranacak.
+
+## c5 p120
+- OCR: —
+- Okuma: okunmadı (boş sayfa)
+- İçerik: Boş.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
