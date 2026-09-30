@@ -1099,3 +1099,93 @@ Biçim: cilt 1–8 ile aynı. Dipnottaki harfler neşredenin nüsha işaretlerid
 - Delil çeşidi: **—; (T) F 27-B: kendi tenkidim: Bâb 1'de Râzî'nin 'aklî deliller' toplamı Fasıl 1: 10 burhan (Burhan 1'deki kudret+dâî ⇒ vücûb ve iki nakîz ilzâmı çekirdek); Fasıl 2: 10 burhan (imkân, mak'dûr, teavün, tafsîlî ilim, gaflet …); Fasıl 3: 5 burhan (ilim ve cehl). Öncüllerin bağımsızlığı zayıf: birkaç çekirdek öncül (kudret+dâî ⇒ vücûb; ilk sebep kulun elinde değil; tafsîlî ilim şartı) tekrar ediliyor; 'aklî delil sayısının çokluğu' delilin gücünü çoğaltmıyor (F 27-B).**
 - Mevzuya bağı: **Fasıl I §8.**
 - Doğan sual: —
+
+## c9 p111
+- OCR: iyi (yalnız başlık)
+- Okuma: tam
+- İçerik: **Bâb başlığı sayfası.** '**BÂB 2: Kur'ân delillerinin takrîri: kul fiillerinin hâlıkı Allah'tır.**'
+- Netice/hüküm: **Bâb 1 (aklî deliller; 3 fasıl: 10 + 10 + 5 burhan) bitti; Bâb 2 (Kur'ân delilleri) başlıyor.**
+- Delil çeşidi: —
+- Mevzuya bağı: **Fasıl I §8 ve Fasıl IV (Sünnet ve't-Tahkik): nassın delil olarak kullanımı.**
+- Doğan sual: —
+
+## c9 p112
+- OCR: —
+- Okuma: tam (sayfa boş)
+- İçerik: **Sayfa boş.**
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c9 p113
+- OCR: orta ('الفصل الأول' başlığı; başlığın ikinci satırı 'الحلائل والقدر' okunamıyor)
+- Okuma: kısmî (üçüncü bahsin başlık satırı OCR'de okunamıyor: 'دلا تل لخن والغدر ؟')
+- İçerik: **Kimin sesi: Râzî (itirazı takrir ediyor); dipnot 1 editör (nüsha notu).** '**BÂB 2, FASIL 1 başlığı: 'Semî delillerle tutunmak bu meselede câiz midir değil midir?' Burada üç bahis var: (1) Lafzî deliller yakîn ifade etmez, bu mesele yakînîdir; öyleyse semî delillerle tutunmak câiz değil. (2) Lafzî delillerle yakînî meselelerde tutunmak câiz kabul edilse de bu meselede câiz değil. (3) (başlık okunamadı). BAHİS 1'in takrîri: lafzî delillere tutunma on şeye mevkûf, her biri zannî; zannîye mevkûf zannî; öyleyse lafzî delillere tutunma ancak zan ifade eder.** Dipnot 1 (editör): nüshalarda Bâb 2'nin fasıl ayrımlarının bulunmadığı, fasılların yalnız Es'ad Efendi nüshasında bulunduğu kaydediliyor.'
+- Netice/hüküm: **Râzî, 'lafzî deliller zannîdir' itirazını on şartla takrire başlıyor (cevabı henüz gelmedi).**
+- Delil çeşidi: **itirazın takrîri; (T) F 27-B: bu bir itiraz takrîri; sesi Râzî'nin kendisi, fakat kendi hükmü olduğu bu sayfada yazılı değil; sonraki sayfalarda cevap aranacak.**
+- Mevzuya bağı: **Fasıl IV (Sünnet ve't-Tahkik): nas delilinin yakîn/zan tasnifi: DOĞRUDAN.**
+- Doğan sual: **Râzî bu itirazı nasıl cevaplıyor? (p119'dan sonra ve Bâb 2'nin devamında aranacak.)**
+
+## c9 p114
+- OCR: orta; dipnot 3 editör
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî (itirazın takrîri); dipnot editör (Keşşâf ve Mecma'u'l-Beyân'dan 'en lâ tüşrikû' izâhı).** '**Lafzî delillere tutunmanın on şartı: (1) lügat mufredâtının, nahiv ve sarfın nakline bağlı; bu nakiller örfen yalana cesaret etmeleri imtinâ' olmayan az sayıda şahsa çıkar; böyle rivâyet zan ifade eder. (2) İştirâkin olmamasına bağlı; iştirâk olsa lafızların her biri başka mânâya delâlet edebilir. (3) Kelâmda asıl hakîkat olmasına bağlı; mecâz kullanılmıştır. (4) İzmâr ve hazfin olmamasına bağlı; Kur'ân'da hazf ve izmâr vardır; hazfın örneği: 'Deyin ki: gelin Rabbinizin size neyi haram ettiğini okuyayım: O'na hiçbir şeyi ortak koşmayın' (En'âm sûresi); bu âyette 'lâ' mahzûf, çünkü Allah bize 'ortak koşmayı' değil 'ortak koşmamayı' … (p115'te devam).** Dipnot: Zemahşerî'nin Keşşâf'ı ve Zeccâc'ın Mecma'u'l-Beyân'dan nakli ile 'en'in müfessire olduğu ve 'lâ'nın nehy için olduğu yorumları (editör aktarımı, Râzî'nin sözü değil).'
+- Netice/hüküm: **Şartlar 1–4: nakil, iştirâk, hakîkat-mecâz, izmâr-hazf.**
+- Delil çeşidi: **itirazın takrîri; (T) F 27-B: bu şartlar dil ve nass yorumunun klasik meseleleridir; ayırt edici olan 'her şartın zannî olması ⇒ sonuç zannî' geçişi (Râzî'nin usûl-i fıkıh kitaplarında bilinen tavrı; bu sayfada onun kendi hükmü olduğu belirtilmiyor).**
+- Mevzuya bağı: **Fasıl IV.**
+- Doğan sual: —
+
+## c9 p115
+- OCR: orta; dipnotlar (Keşşâf/Mecma'u'l-Beyân alıntıları) editör
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî (itirazın takrîri); dipnotlar editör.** '**Hazf örnekleri: (a) 'lâ' mahzûf: Allah bize 'ortak koşmamayı' haram etmedi, 'ortak koşmayı' haram etti; (b) 'Kıyâmet gününe yemin ederim' (Kıyâme sûresi; 'lâ uksimu' — 'lâ' mahzûf, takdir 'ukşimu'); (c) 'Helâk ettiğimiz bir kasabaya haram kılınmıştır: onlar dönmezler' (Enbiyâ sûresi; 'lâ' mahzûf, yoksa dünyaya dönmeleri vâcib olurdu ki bu icmâ' ile bâtıl; takdir 'onlar dönerler'). İzmâr örnekleri: (d) 'Onların kalplerine, anlamasınlar diye örtüler koyduk' (Kehf sûresi): takdir 'lâ yefkahûhu' çünkü örtülerin te'sîri anlamamada, anlamada değil; (e) 'Allah size beyân eder ki sapmayasınız' (Nisâ sûresi): bazıları 'li-lâ tadıllû' takdir etti. Netice: Kur'ân hazf ve izmâr içerir; hazf ve izmâr nefyi isbât, isbâtı nefy kılar.** Dipnotlar: Keşşâf'tan 'lâ uksimu' için (Zemahşerî'nin 'yemin için değil, ta'zîm için nefy' izâhı), Mecma'u'l-Beyân'dan Enbiyâ 21/95 için üç vecih; editör tefsir aktarımı.'
+- Netice/hüküm: **Şart 4: Kur'ân'da hazf ve izmâr vardır (Râzî örnek veriyor); bu yüzden 'hazf yoktur' bilgisi zannîdir.**
+- Delil çeşidi: **örneklerle itiraz; (T) F 27-B: örneklerin bazıları (lâ uksimu, Enbiyâ 21/95) tefsirlerde başka vecihler taşıyor (dipnotlarda editör bunu gösteriyor: 'lâ zâid değil' yorumları); Râzî'nin 'lâ mahzûf' takdiri tek yorum değil; ayırt edici olmayan örnekler. İSLÂM KAYDI: bu âyetlerin Risale'de 'Kur'ân zannîdir' iddiasının delili olarak kullanılması ALINMAZ; âyet numaraları OCR'de okunmuyor.**
+- Mevzuya bağı: **Fasıl IV.**
+- Doğan sual: —
+
+## c9 p116
+- OCR: orta; dipnotlar OCR'de kırık
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî (itirazın takrîri).** '**Şart 4 sonu: öyleyse hazf ve izmârın olmaması zannîdir, malûm değil. (5) Nakil ve mecâzın yokluğuna (aslında: 'nesih ve tekdîm-teahhur' değil; OCR'de 'لغنوم والد امي'; hükmü okunamadı, 'ikisinin olmaması zannîdir' denmiş). (6) Muhassıs bulunmamasına bağlı: Kur'ân ve sünnetin umûmlarının çoğu mahsus; 'Her şeyin hâlıkı' (En'âm sûresi) âyeti kul fiillerini de kapsıyorsa delil olur; bu umûmun kul fiillerinden mahsus olmadığı bilinmedikçe delil olamaz; muhassısın yokluğu zannîdir. (7) Nakilî muârızın yokluğuna: lafzî delillerde tearuz vâki olur, zan ifade eden tercihlere gidilir. (8) Aklî muârızdan selâmete: teşbîh âyetleri zâhirlerinden çıkarılmıştır çünkü kat'î aklî delillerle muârızdır; nakil ile akıl çatışınca ikisini birden tasdik iki nakîzin tasdikidir; ikisini birden tekzîb nakîzlerin ref'idir; nakli akla tercih akıl naklin aslı olduğu için aklı tenkid eder; akıl naklin aslı olduğundan aklı tenkid akıl ve nakli birlikte tenkiddir; o muhâl; geriye dördüncü kısım: kat'î aklî delillere hükmetmek ve nakilî zâhirleri te'vîle götürmek (p117).**'
+- Netice/hüküm: **Şartlar 5–8: nesih, muhassıs, nakilî muârız, aklî muârız. Aklî muârız şartında Râzî'nin usûl-i din kaidesi (akıl naklin aslıdır; çatışmada te'vîl) yazılıyor.**
+- Delil çeşidi: **itirazın takrîri; (T) F 27-B: 'akıl naklin aslıdır; çatışmada nakil te'vîl edilir' kaidesi Râzî'nin kendi usûl kaidesidir (el-Kânûn); İSLÂM KAYDI: bu kaide Risale'ye 'akıl nassa hâkimdir' diye ALINMAZ; Risale'nin usûlü nassın kat'î delâlet ve tevâtür şartlarıyla akla çatışmayacağı (nakil-akıl uyumu) hükmüne dayanır; kaide ayrıca yoklanacak. Şart 5'in OCR bozukluğundan hüküm çıkarılmadı.**
+- Mevzuya bağı: **Fasıl IV: nakil-akıl ilişkisi; Fasıl I §8.**
+- Doğan sual: **Şart 5'in içeriği PDF'den doğrulanacak.**
+
+## c9 p117
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî (itirazın takrîri).** '**Şart 8 sonu: bu hâlde nakilî delillerin gerektirdiğine hükmetmek aklî muârızın yokluğuna bağlı, bu ise zannîdir. Şart 9: nakilî delil ya metninde ve delâletinde kat'îdir ya değildir. Metinde kat'î: sıhhati tevâtürle yakînen bilinen. Delâletinde kat'î: bu tek mânâdan başkasını ihtimal etmediğine yakîn hâsıl olan. Bu şartlarla bir lafzî delil hâsıl olsaydı bütün akıllılar o mezhebin sıhhatini bilirdi. Örnek: âyetle veya haberle 'Allah kul fiillerinin hâlıkıdır' diye istidlâl etsek bu ancak o âyet ve haber kat'î tevâtürle rivâyet edilmişse ve delâleti bu mazınna başka bir vecihle râcih ya da mercûh ihtimal olmadan tam ise; aksi hâlde delâlet zannî olur. Böyle bir semî delil olsaydı bütün Müslümanlar Muhammed aleyhisselâmın dininden bu matlûbun sıhhatini zarûrî bilirdi; öyle olsa ehl-i İslâm bu meselede ihtilaf etmezdi, hâlbuki Kur'ân'ın hak olduğunda ittifak etmişlerdir; öyle olmadığı için bu âyetlerden hiçbiri bu matlûba kat'î ve yakînî delâlet etmez; her âyet, iki hasımdan birinin tutunduğu, diğer te'vîllere ihtimalli; bu te'vîllerin reddi ancak zannî tercihlerle ve iknâ' edici savunmalarla; bunların hepsi zan ifade eder.**' 
+- Netice/hüküm: **Şart 9: nassın metin ve delâlette kat'î olması gerekir; ihtilaf, nasların bu mesele için kat'î olmadığını gösterir (itirazın hükmü).**
+- Delil çeşidi: **itirazın takrîri (ihtilâf ⇒ kat'îlik yok); (T) F 27-B: 'ihtilaf varsa delâlet kat'î değil' öncülü çok genel: bu öncül tevhid gibi kat'î meselelerde de ihtilâf (ehl-i ilhâd) olduğu için ayırt edici değil; bu kendi içinde bir zayıflıktır (kendi tenkidim, Râzî sonraki cevapta bunu kullanır mı, henüz bilmiyorum).**
+- Mevzuya bağı: **Fasıl IV (tevâtür, kat'î delâlet şartları): DOĞRUDAN: Risale'nin hadis/âyet tasnifine kaynak.**
+- Doğan sual: —
+
+## c9 p118
+- OCR: orta-kötü (dipnot 1 editörün uzun tenkidi; alt satırlar OCR'de kırık)
+- Okuma: kısmî (editör dipnotunun bazı satırları OCR'de okunamıyor)
+- İçerik: **Kimin sesi: Râzî (Şart 10 ve bahis sonu); dipnot editör.** '**Şart 10: Kur'ân lafızlarının bu matlûba delâleti ya nakîzi men' eden bir delâlettir ya değildir; birincisi bâtıl: (a) lafzî deliller vaz'îdir; vaz'iyât nakîzi men' etmez; (b) bu deliller nakîzi men' etse Sahâbe ve Tâbiîn onlara vâkıf olmaya ve mânâlarını kavramaya insanların en evlâsı idiler (dil ehli); öyle olsaydı bu matlûbun sıhhatinin Muhammed aleyhisselâmın dininden olduğunu zarûrî bilirlerdi; o zaman bu meselede eskiden beri ihtilâf olmazdı; ihtilâf vâki; öyleyse bu lafızların bu matlûblara delâleti kat'î ve nakîzi men' edici değil, nakîze ihtimalli; öyle olunca lafzî delillerin delâleti zandan ibaret. On vecihle: lafzî deliller ancak zan ifade eder; bu mesele yakînî; yakînî matlûba zannî delille tutunmak kat'an bâtıl. Bu, 'yakînî meselelerde lafzî delillere tutunmak câiz değil' sözünün bahsinin takrîri. 'Ve billâhi't-tevfîk.'** Dipnot 1 (editör, Râzî'nin sözü değil): 'müellif bu hükümde sevâba isabet etmedi; Kur'ân zan ifade eder derse aklî delillere itimad vâcib olur; bu söz usûl-i dîni tamamen yıkar; nasslar delilde öncüldür, akıl onları şerh eder … aklın ifade ettiği de zan (filozofların ve din-mezheplerin ihtilâfı) … bu, dine topyekûn ta'ndır.' (OCR'den okunabilen kadarıyla).'
+- Netice/hüküm: **Râzî'nin Bahis 1 takrîri bitti: on şart ⇒ lafzî deliller zannî ⇒ yakînî meselede kullanılamaz. Editör dipnotu bu hükmü şiddetle eleştiriyor (kendi sesi olarak, 'usûl-i dîni yıkar').**
+- Delil çeşidi: **itirazın takrîri; (T) F 27-B: Râzî'nin kendisi bunu kabul edip etmediği bu sayfada yazılı değil; devamda bu bahis 'itiraz' konumunda kalıyor; editörün eleştirisi ayrı bir ses. İSLÂM KAYDI: Risale 'nassın delâleti yakîn ifade edebilir' hükmünü koruyacak (kat'î metin ve kat'î delâlet şartlarıyla); 'Kur'ân zan ifade eder' hükmü ALINMAZ.**
+- Mevzuya bağı: **Fasıl IV: DOĞRUDAN (nas-akıl-yakîn ilişkisi).**
+- Doğan sual: **Râzî bu itirazı çözmeden (sem'î delil kullanılamaz) Bâb 2'ye girmez; çözümü p119'dan sonra aranacak.**
+
+## c9 p119
+- OCR: orta-kötü (dipnot ve satırlar kırık)
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî; 'kâlû' ile Mu'tezile'nin görüşünün naklinde ve kendi eklemelerinde.** '**BAHİS 2: semî delillerle tutunmak bu tür matlûblarda câiz kabul edilse bile, kulun kendi fiillerinin mûcidi olmadığını isbât için semî delillere tutunmak câiz değildir. Râzî: 'Mu'tezile bu makamı uzun anlattı; ben onların söylediklerinin hâsılını nakledeceğim ve bahis en son gâyelere ulaşsın diye kendi indimden onlarınkinden daha kuvvetli başka vecihler ekleyeceğim.' Mu'tezile: kulun mûcid oluşunu nefyeden herkes için sâni'i, nübüvveti isbât ve Kur'ân'ın hüccet olduğunu söylemek müteazzir olur; öyleyse kulun fiillerinin mûcidi olduğunu nefyeden için matlûbu semî delillerle sahih kılmak müteazzir olur. Sâni' isbâtının beyanı üç vecihle: (1) Mu'tezile'nin dediği: sâni'i isbât yolumuz şudur: fiillerimiz hudûsları sebebiyle bize muhtaç; fiiller hâdis ise fâile ihtiyaç; bu delil fiillerimizin bize ihtiyacına dayanır; bu asla i'tikâd etmezsek sâni' isbâtı yolu bize kapanır. Bu hâsıl-ı kelâmları. Bu iki vecihle zayıf: (1) ...(p120).**' 
+- Netice/hüküm: **Bahis 2 başlıyor: Râzî, Mu'tezile'nin 'cebri kabul edenin sâni' ve nübüvveti isbâtı müteazzir olur' itirazını (kendi eklemeleriyle) takrire koyuluyor.**
+- Delil çeşidi: **itirazın takrîri; (T) F 27-B: bu itiraz Risale için kritik: 'kul fiili kulun olmazsa sâni', nübüvvet ve Kur'ân'ın hüccet oluşu nasıl isbât edilir?' — Fasıl I ve Fasıl II'nin temeline dokunuyor.**
+- Mevzuya bağı: **Fasıl I §8, Fasıl II (nübüvvet), Fasıl IV (nas): üçüne birden DOĞRUDAN.**
+- Doğan sual: **Râzî'nin cevabı (aşağıdaki sayfalar) Fasıl I–II bağımlılığını nasıl çözüyor?**
+
+## c9 p120
+- OCR: orta ('الجبرية' okunuyor; bazı satırlar kırık)
+- Okuma: tam (sayfa Cevap vecih 3'te biter)
+- İçerik: **Kimin sesi: Râzî.** '**Vecih 1'in cevabı iki vecihle: (1) Bu delilin sâni' isbâtında sahih olduğunu kabul etmiyoruz: hâdisin müessire ihtiyacı ya malûmdur ya değildir; malûmsa âlemin hâdis olduğunu bilmekten onun müessire ihtiyacı bilinir, fiillerimizin bize ihtiyacını dayanak yapmaya gerek yok; malûm değilse fiillerimizin tasavvurlarımız ve dâîlerimizden sonra vukûu onların onlarla olduğunu göstermez: o fiiller onların yanında olmuş, onunla değil ve başka bir şeyle de değil, tesadüfen hâdis olmuş olabilir; öyleyse dediğiniz sahih bir delil değil. (2) Zikrettiğiniz sahih bir delil olsa bile bir delilin butlanı medlûlün butlanını gerektirmez; medlûl başka bir delille sâbit olabilir. Vecih 2 (Mu'tezile): Cebriyye'nin mezhebi: fiil, kudret ve dâî mecmûu hâsıl olunca hâsıl olur; bu Allah'ı bizzat mûcib, ihtiyâren fâil olmayan kılar. Vecih 3 (Mu'tezile): Cebriyye'ye göre Allah'tan başka mümkinâtın hudûsunda müessir yok; o takdirde bazı insanları küfür ve mâsiyet halkıyla, bazısını îmân ve tâat halkıyla tahsîs 'muhassıssız tahsîs'; Cebriyye'ye göre akılda hüsn ve kubh yok; bazı fiilleri îcâb, bazısını nedb, bazısını tahrîmle tahsîs 'muhassıssız'; bunu câiz görenin Allah'ın gınâsına hükmetmesi lâzım (OCR kırık). Cevap 2. vecihe: 'daha önce gösterdik ki Cebriyye'nin mezhebine göre sâni'in mûcib bi'z-zât olması lâzım gelirse bunun lâzımı, 'ihtiyârlı' müessirin nefyi ve bir insanın … (p121).**' 
+- Netice/hüküm: **Râzî, Mu'tezile'nin 'sâni' isbâtı kul fiilinin kula ihtiyacına dayanır' itirazının ilk vechine iki cevap veriyor (âlemin hudûsundan isbât mümkün; tek delilin butlanı medlûlü nakzetmez).**
+- Delil çeşidi: **cevap; (T) F 27-B: 'âlemin hudûsundan sâni' isbâtı' Fasıl I'in kendi delilidir (tier D: c6); Râzî bu cevapla Fasıl I'i kul fiili tartışmasından bağımsız kurabileceğini gösteriyor: Risale için önemli tespit: Fasıl I bu bahisten bağımsız kurulabilir.**
+- Mevzuya bağı: **Fasıl I (El-Vücûd: âlemin hudûsu ⇒ sâni'), Fasıl II.**
+- Doğan sual: **Cevap vecih 2–3'ün devamı (p121) ve Râzî'nin nübüvvet için cevabı.**
