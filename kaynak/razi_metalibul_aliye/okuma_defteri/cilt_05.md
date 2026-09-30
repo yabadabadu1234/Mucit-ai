@@ -937,3 +937,75 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **kelâmî uzlaştırma (müdde-zaman ayrımı) aktarımı**; (T) —
 - Mevzuya bağı: **EN KRİTİK — Fasıl I §3 ve Risale'nin 'zaman mahlûk' cümlesi**: **Bu sayfa 'zaman hâdis'i öğreten kelâmî cümlenin (bazı insanlara göre) DOĞRULUK ŞARTINI verir: zaman = müddetin hareketle takdiri; hareket hâdis ⇒ zaman hâdis; müdde/dehr ise kadîm cevher (⊬ Allah'ın dışında 'kadîm' bir şey — Ehl-i Sünnet ana hattına aykırı).** **Risale 'zaman mahlûktur' cümlesini yazarsa 'zaman' ile 'müdde/dehr'i AYIRMAK zorundadır; Risale müddeyi kadîm cevher SAYMAZ; 'müdde' Risale'de bir lafız olarak hiç geçmez veya 'mahlûk' olarak geçer.** **Karar padişahın: Risale'nin 'zaman' lafzı Râzî'nin 'zaman' (müdde+hareket takdiri) mi, yoksa 'müdde' (cevher) mi kastediyor? Bu ayrım yazılı bir borçtur.**
 - Doğan sual: **'Zaman hâdis' diyen 'bazı insanlar' kimler? (⊬ isim yok.)** Râzî bu uzlaştırmayı onaylıyor mu, kendi tercihi olarak 'müdde kadîm mümkin' (p81) ile birleşiyor mu? — **p81 'zaman mümkin' hükmü ile Fer' 2'nin 'müdde kadîm' cümlesi Râzî'nin kalemince uzlaşır (kadîm mümkin) ama İslâm ilkesiyle uzlaşmaz.**
+
+## c5 p105
+- OCR: orta (ilk satırlar Lafız 3'ün sonu; dipnot hasarı)
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî (lafız tahlili).** **Lafız 3 sonu (VAKİT)**: 'vakit, **belirli ve vukûu ma'lûm bir hâdisin cüzü olması şartıyla** müddetin bir cüzü'. **Lafız 4: NEHÂR ve LEYL** — 'nehâr güneşin doğma müddeti, leyl batma müddeti; güneş daima yeryüzünün bir yarısında doğar, öbür yarısında batar; yer küre olduğu için her yerin nehârı başka yerin nehârı değil, her yerin leyli başka.' **Lafız 5: DEHR ve SERMED** — '**bu şeyin cevheri, hâdis ve tagayyürlerin mukârenetinden hâli olduğu hâlde ismidir; mefhûmu zamanın mefhûmuna zıt gibi olur.**' **Lafız 6: EZEL** — '**ezel, mütekaddim dehrdir, evveli yoktur; ebed müteahhir dehrdir, âhiri yoktur.**' **Bahis**: '**ezelin müsemmâsı tahakkuk eder mi?** Birincisi (tahakkuk eder) **bâtıl**: vücûdu olan her vakit te'ayyün ve mâsivâdan imtiyaz taşır; öncekinden müteahhir, sonrakinden mütekaddim; bu ezelin zıddı, ezelî denemez. **İkincisi (tahakkuk etmez) de müşkil**: ezelin müsemmâsının kendinde tahakkuku yoksa … (p106).
+- Netice/hüküm: **Lafız 4–6 tanımları; ezelin varlığı bahsinde iki şık da problemli (aporia).**
+- Delil çeşidi: **lafız tahlili + dilemma (aporia)**; (T) —
+- Mevzuya bağı: **F 1 ezel-ebed ve c1 Mesele 7 (ezel-ebed hakîkati, 3 şübhe cevapsız)**: **Râzî ezelin 'tahakkuku' aporiasını burada da YAZIYOR (mevcut denirse te'ayyün ⇒ ezelin zıddı; yok denirse müşkil); c1 Mesele 7'nin cevapsızlığıyla AYNI aporia, yine kapanmadı.** Risale 'ezel' terimini bu aporiayı bilerek kullanır (ders katmanı notu).
+- Doğan sual: —
+
+## c5 p106
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî (kendi hükmü + temsiller aktarımı).** Aporia sonu: '**ezelin müsemmâsı kendinde tahakkuk etmezse muhâl: lâ-evveliyyetin tahakkukunu ya âlemin vücûdunda ya ademinde kabul etmek lâbüddür.**' **Râzî**: '**hak olan: lâ-evveliyyetin tahakkukunu ya vücûdda ya ademde kabul etmek zarûrî; ancak hak olan, onu hakîkatiyle tasavvur etmenin beşer akıllarından ve insan fikirlerinden daha yüce oluşudur.**' **Bu fasılı, insanların müddet ve zamanın mâhiyetini fehimlere yaklaştırmak için zikrettiği DÖRT temsille bitiririz**: **(1)** '**nokta imtidâd edince hareketiyle çizgiyi yapar; aynı şekilde bölünmeyen ânlar imtidâd edip seyyâl olunca zamanı yaparlar.**' Râzî'nin **itirazı**: 'noktanın yüzeyde hareketi müşâhede edilir; **ânın hareketi ma'kûl değil**: ân hisle işâret edilen mevcut değil, ma'kûl bir şeydir; hareket etmesi nasıl ma'kûl? Etse **neyin üzerinde** (felek cirmi mi, unsurlar mı)? **bu tasavvuru ma'lûm olmayan bir şey**.' **Bu söz Aristo ashâbına yakışmaz**: zamanın ânlardan terkîbini gerektirir, onlar bunu kabul etmez; ayrıca ilk bahis yine dönüyor: **ân mevcudât-ı zevât-ı vaz' ve işâret'ten değilken nasıl hareket eder, neyin üzerinde?** **(3)** 'zamanı, kılıç ağzına atılıp çekilen bir **ipe** benzettiler (p107).
+- Netice/hüküm: **Râzî: 'lâ-evveliyyetin tahakkuku vücûdda ya ademde zarûrî'; tasavvuru beşer aklının üstünde. 1. temsil (nokta-çizgi) zorluklu; 'ân hareketi' ma'kûl değil; Aristo ashâbına yakışmaz.**
+- Delil çeşidi: **hüküm + temsil eleştirisi**; (T) **'lâ-evveliyyet ya vücûdda ya ademde' = Râzî'nin hudûs-kıdem çekirdek ifadesi; dürüst: 'tasavvuru üstün akıl' diyor; delil değil, ikrar.**
+- Mevzuya bağı: **KRİTİK — F 1 hudûs/kıdem (c4 K1–K2 çekirdek)**: **'lâ-evveliyyet ya âlemin vücûdunda ya ademinde' cümlesi Râzî'nin şu ana kadarki EN AÇIK hudûs-kıdem çerçevesidir: 'başlangıçsızlık ya şeyin var oluşunda ya yokluğunda tahakkuk eder' — c4'te iki taraf bunu 'vücûd ezelî mi, adem ezelî mi' diye tartışmıştı; Râzî burada bir tarafı SEÇMİYOR, sadece 'bir tarafın zarûrî' diyor.** **Risale Fasıl I: 'âlemin vücûdu başlangıçlıdır' (hudûs) tarafını seçer; bu cümle **Risale'nin seçimini desteklemez/çürütmez**, sadece aporiayı kabul eder. Karar: c4–c5 tablosuna 'Râzî hudûs/kıdemde seçmedi' satırı.**
+- Doğan sual: **Râzî 'ademin ezelîliği' ihtimalini ('adem başlangıçsız, sonra vücûd') nasıl ele alıyor? (c4 K2'de 'hudûs-i âlem' tam bu; c5'te bu cümleyle çakışıyor: hudûs = ademin lâ-evveliyyeti + vücûdun başlangıcı).** Kaynak sırası: c4 K2 hudûs delilleri ↔ c5 p106.
+
+## c5 p107
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: 'insanlar' temsilleri aktarımı; Râzî kapanış.** **(3) İp temsili**: '**bir ipi kılıç ağzının ucuna attılar, sonra çekerler; kılıç ağzı ipe cüz cüz temas eder, sonra ondan uzayan, süren bir şey hâsıl olur, bu sürekli yenilenme (tecaddüd) üzerine.**' (Not: metinde 'bir bölünmez cüzle' gibi hasarlı dipnot.) **(4) Su temsili**: '**hortum ağzında cüz cüz art arda gelen akan suya benzettiler.**' **Râzî kapanış**: '**müdde ve zaman ilminden elde ettiklerimizin en son noktası bu.** Allah (kullarına) yardımcı, affeden.'
+- Netice/hüküm: **Makâle 1'in (zaman, 11 fasıl) sonu; 4 temsil (nokta-çizgi, kılıç-ip, hortum-su) verildi; Râzî bunları hükmî delil saymıyor, fehme yaklaştırma araçları.**
+- Delil çeşidi: **temsil (ikna'î/didaktik)**; (T) **temsil; burhân değil.**
+- Mevzuya bağı: **Risale'ye alınmaz** (temsiller); **ders katmanı 'zaman temsilleri' kutusuna girebilir (⊬ hüküm yok).**
+- Doğan sual: —
+
+## c5 p108
+- OCR: —
+- Okuma: okunmadı (boş sayfa)
+- İçerik: Boş.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c5 p109
+- OCR: iyi
+- Okuma: tam (yalnız başlık sayfası)
+- İçerik: **'el-Makâletü's-Sâniye: mekân hakkında sözün tahkîki'** (başlık sayfası).
+- Netice/hüküm: **Makâle 2 (mekân) başlıyor.**
+- Delil çeşidi: —
+- Mevzuya bağı: **cilt 5'in ikinci makâlesi; borç listesi 'Mekân ve Zaman kitabı' (c1 atfı) şimdi c5'te bulundu (Makâle 1 zaman, Makâle 2 mekân).**
+- Doğan sual: —
+
+## c5 p110
+- OCR: —
+- Okuma: okunmadı (boş sayfa)
+- İçerik: Boş.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c5 p111
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Makâle 2, Fasıl 1: 'Mekân hakkında insanların mezheplerinin tafsili'.** **Kimin sesi: Râzî.** '**Cismin intikâl ettiğini ve hareket ettiğini müşâhede ederiz; bedîhen biliriz ki cisim bir cihetten bir cihete, bir yandan bir yana intikâl eder; insanlar intikâl edilen yeri ve edildiği yeri kâh 'hayyiz', kâh 'cihet', kâh 'muhâzât', kâh 'cenb', kâh 'câniba', kâh 'mekân' diye adlandırır.**' **Genel tarif**: '**şeyin mekânı, şeyin içinde bulunduğu, hareketle ayrıldığı, başkasının onunla birlikte sığmadığı, hareket edenlerin ona nöbetleşe geldiği şeydir; bu miktar zarûrî ma'lûm.**' **Sonra**: '**bu şey ya cismin zâtının içinden geçip sirâyet ettiği bir şeydir, ya değildir: hâvî cismin bâtın yüzeyi, muhvî cismin zâhir yüzeyine temas eder. Birincisi: mekân BU'D (uzaklık, boyut) ve FEZÂ: Eflâtun ve akıl sahiplerinin çoğunun mezhebi; ikincisi: mekân HÂVÎ YÜZEY: Aristo'nun.** **Mekân ve hayyiz hakkında muhassal ma'kûl mezhep bu ikisinden ibarettir.**' **Fezâ diyenler** 'kâh hayûlâ (madde) kâh sûret' diye adlandırırlar: **hayûlânın hâssası zâtının bâkî olması ve ardışık hâllerin ve sıfatların mevridi olmasıdır; fezâ da bekleyen, değişmeyen, cisimlerin nöbetle geldiği ve onu kabul ettiği** (p112).
+- Netice/hüküm: **Mekân mezhepleri: (1) bu'd/fezâ (Eflâtun, akıl sahiplerinin çoğu); (2) hâvî yüzey (Aristo). Muhassal ma'kûl iki mezhep.**
+- Delil çeşidi: **tasnif**; (T) —
+- Mevzuya bağı: **Fasıl I §3 (cihet/hayyiz, c2 K1 F5 hayyiz-cihet imtinâı)**: **c2'de 'Allah hayyizden/cihetten münezzeh' (12 hüccet) burada mekân mezhepleri ile bağlanır; Risale 'mekân' lafzını yalnız 'yön/hayyiz' anlamında (c2) kullanıyor: fezâ/hâvî yüzey seçimi yok.**
+- Doğan sual: **Râzî'nin kendi mekân tercihi hangisi?** (p112–'da başlıyor; hüküm henüz yok.)
+
+## c5 p112
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî.** '**Fezâ diyenler onu hayûlâ diye adlandırmalarının sebebi: hayûlânın hâssası zâtı bâkî ve sürekli hâllerin mevridi; fezâ 'vâkıf, tagayyür ve tebeddül etmez'; cisimler ona nöbetle gelir, fezâ onları kabul eder ⇒ bu vecihle hayûlâya benziyor.** **Sûret diye adlandırma**: '**cismânî cevher rûhânî-mücerred akıl cevherlerinden bu üç boyutu kabul etmesiyle ayrılır; bu boyutlar cismin mâhiyetinin sûrî cüzü gibi; fezâ bu mücerred boyutlar olduğu için sûret diye adlandırıldı.**' '**Eflâtun'dan nakledilen: kâh 'mekân hayûlâdır', kâh 'mekân sûrettir' — bunun sahih tefsiri budur.**' **Bir grup, Eflâtun'un sözünü halkın gözünde çirkin göstermek için: 'mekân ya hayûlâ ya sûrettir' diye naklettiler, sonra iptaline giriştiler: cisim bir mekândan bir mekâna geçince ya hayûlâ ve sûret (cüzleri) mecmûuyla geçmiştir — mekân nasıl hayûlâ ve sûret olur?**' **Râzî**: '**bizim lahhas ettiğimiz vechi ile: hayûlâ adı bir defa, sûret adı bir defa, yukarıda anlattığımız te'vil ve tefsire dayanarak mekâna verilmiştir; remz (işaret) kastıyla söylenen sözü zâhirine tatbik edip ona tâ'na etmeye girişmek KÂMİL AKIL SAHİPLERİNE YAKIŞMAZ (nüsha farkı: muhakkiklerin insâfından uzak).**' '**Netice: mekânın hakîkatinde mu'teber söz ya fezâ ya yüzeydir.**' **Fezâ diyenler ('ve münkirleri' — 've mü'ekkideleri' nüsha farkı ⊬) iki fırka; birincisi** (p113).
+- Netice/hüküm: **Râzî: Eflâtun'un 'mekân hayûlâ / mekân sûrettir' sözü remzdir, doğru tefsir fezâ/bu'd; Eflâtun'u tenkit edenler haksızdır; muhassal mezhep: fezâ ya hâvî yüzey.**
+- Delil çeşidi: **tefsir/savunma (Eflâtun'un remzî sözü) — Râzî'nin kendi hükmü: 'zâhirine tatbik ederek tâ'na etmek yakışmaz'**; (T) **⊬ 'Eflâtun'un sözü (kâh hayûlâ kâh sûret)' nakli birincil kaynaktan doğrulanmadı; Râzî'nin tefsiri (remz) onun okumasıdır, Eflâtun'un kastı olduğu sayıya bağlanmadı.**
+- Mevzuya bağı: **KRİTİK — borç listesi 'hayûlâ ve sûret'**: **Râzî burada 'mekân = hayûlâ/sûret' sözünü Eflâtun'a atfediyor ve remz diye savunuyor; c5'te 'hayûlâ ve sûret' bahsi (asıl cisim=hayûlâ+sûret tartışması, cevher-i ferd) sonraki fasıllarda aranacak (borç kapanmadı, yeri saptandı: c5 Makâle 2 devamı/c6).** **İslâmî kayıt: Eflâtun'un mekân-fezâ görüşü Râzî'ce 'muhassal ma'kûl' biri; Risale mekân felsefesi hükmü vermez.**
+- Doğan sual: **Râzî mekân için kendi tercihini nerede yazıyor? (fezâ mı, hâvî yüzey mi?)** Zamanda 'Eflâtun-yakın' hükmü vermişti (p76–77); **mekânda da aynı çizgi mi? Makâle 2 devamında aranacak.**
