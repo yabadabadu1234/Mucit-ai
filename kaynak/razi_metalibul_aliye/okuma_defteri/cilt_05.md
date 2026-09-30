@@ -1081,3 +1081,75 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: —
 - Mevzuya bağı: —
 - Doğan sual: —
+
+## c5 p121
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Makâle 2, Fasıl 3: 'Mekânın kendi başına kâim bir bu'd (uzaklık/boyut) olması ma'kûl mü?'.** **Kimin sesi: Aristo ve tâbi'leri (aktarım); Râzî 'insâfla' inceleyecek.** **Hüccet 1**: '**mekân bu'd ise mütemekkinin mekânda hâsıl olmasında iki bu'dün tedâhülü (iç içe geçmesi) lâzım gelir; tedâhül muhâl ⇒ mekân bu'd olamaz.**' **Şartiyye beyânı**: mütemekkin mekâna girince **iki bu'd birlikte kalır / birlikte yok olur / biri kalıp öbürü yok olur**; **2. şık (ikisi yok olur)** bâtıl: ma'dûm mütemekkin ma'dûm mekânda olurdu; **3. şık** da bâtıl (ma'dûm mütemekkin mevcut mekânda ya da tersi); **1. şık kalır: ikisi de mevcut** (p122).
+- Netice/hüküm: **Aristo hüccet 1'in şartiyyesi: mekân bu'd ise mütemekkinin girişinde iki bu'dün tedâhülü kaçınılmaz.**
+- Delil çeşidi: **taksîm + reductio**; (T) burhânî biçim (hasmın delili).
+- Mevzuya bağı: **Risale'ye doğrudan bağ yok (mekân ontolojisi); c2 hayyiz-cihet bahsinin arka planı.**
+- Doğan sual: —
+
+## c5 p122
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: Aristo (aktarım); sonra 'ولقائل أن يقول' (Râzî'nin itirazı).** Şartiyye devam: '**iki bu'd mevcut kaldığında ya ittihâd eder ya etmez; ittihâd bâtıl (mevcutsa iki, yok olup üçüncü hâsıl olursa ittihâd değil ademle hudûs; biri kalıp öbürü yok olursa da ittihâd yok) ⇒ her ikisi de nüfûz hâlinde bâkî ⇒ mekân bu'd ise tedâhül lâzım.**' **İkinci mukaddime: tedâhül muhâl; 5 vecih. Vecih 1**: 'iki bu'd bir bu'ddan **fazla**; fazla olan **daha büyük** ⇒ tedâhülde mecmû iki bu'dün bir bu'ddan büyük olması lâzım; oysa mecmû ancak nihâyetler arası ⇒ her birinin kadri ⇒ mecmû birden büyük değil (hulf).' **Râzî'nin itirazı**: '**tedâhülün imtinâını bedîhî mi sayıyorsunuz yoksa delille mi bilinir diyorsunuz? Bedîhî ise bu delilleri bırakın; bu, 'bu'd diyenlerin mezhebi bedîhen bâtıl' iddiasına dönüşür — bedîhî önermelerde akıllılar ihtilâf etmez.** **Ayrıca bu'd diyenler 'mezhebimizin sıhhati bedîhî: kadehin iki ucu arasında imtidâd eden fezâ var, su kadeh içinde o fezâda karar kılar; buna itiraz eden en celîl zarûrî ilme itiraz eder'** (p123).
+- Netice/hüküm: **Aristo'nun tedâhül delili 1. vecih; Râzî'nin ilk ilzâmı: bedîhî mi delil mi?**
+- Delil çeşidi: **reductio + Râzî'nin 'bedîhe mi burhan mı' dilemması (F 27-B usûlü)**; (T) —
+- Mevzuya bağı: **Usûl kaydı**: Râzî'nin 'bedîhe iddiasında iki taraf da bedîhe der' tenkidi c4 p274/p305 'bedîhe iki yönde' bulgusunun mekândaki karşılığı; **Risale'de 'bedîhe' iddiası derecelenir.**
+- Doğan sual: —
+
+## c5 p123
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî ('ولقائل' sonu ve 2. suâl).** Dilemma sonu: '**'tedâhülün imtinâı bedîhî' ile 'bu'd diyenlerin sıhhati bedîhî' iddiaları çatışırsa tesâkut ederler; bedîhîlik davası terk edilip istidlâle dönülür. Delille bilinir dersek: 'tedâhül eden iki bu'd bir bu'ddan fazla olmalı' sözünüz: sayıca fazlaysa KABUL (bizce tedâhül eden bu'dler adedi ikidir); mikdârca fazlaysa KABUL EDİLMEZ: 'tedâhül' mânâsı her birinin zâtının diğerinin zâtına tamamen sirâyetidir, öyle ki birine işâret ötekine işâretin aynıdır; bu, mikdârda ziyâdeyi nefyeder. Yani 'mikdârca fazla olmalı' iddiası ancak tedâhülün imtinâı gösterildikten sonra ispat edilebilir; tedâhülün imtinâını bu iddiayla ispat ederseniz devir.**' **2. suâl**: 'bu güçlük Aristo ashâbına da yöneliyor: 'mütemâssân, tarafları vaz'da (hissî işârette) birlikte olanlardır' (Şifâ'dan nakil)…' (p124).
+- Netice/hüküm: **Râzî: Aristo'nun 1. vecihi devirlidir (tedâhülün imtinâını gösteren 'mikdârca fazla' öncülü, imtinâ ispatını gerektirir).**
+- Delil çeşidi: **devir tespiti + tanım**; (T) burhânî biçim; **F 27-B: Râzî delilin ayırt etmediğini (bu'd diyenleri elemediğini) gösteriyor — kendi kuralının uygulaması.**
+- Mevzuya bağı: **Usûl bulgusu**: Râzî 'hasım delilini kendi ölçünüzle deneyin' usûlünü uyguluyor (c4 p376 ile aynı). **Ders katmanı örneği.**
+- Doğan sual: —
+
+## c5 p124
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî (2. suâl: Aristo ashâbına aynı güçlüğün yöneltilmesi).** '**Şeyh Şifâ'da: 'mütemâssân: hisle işâret her iki tarafa birlikte düşen iki şey'.** **Bir yüzey bir yüzeye temas etsin: tarafları (iki çizgi) vaz'da birlikte olmalı. Bu iki çizgi temas hâlinde bâkî mi değil mi? Bâkî değilse, iki yüzey arasında müşterek tek bir çizgi hâdis olur ⇒ bu ittisâl, temas değil; oysa hâsıl olan temas. Ayrıca 'tarafları vaz'da birliktedir' sözü tarafların temas hâlinde bâkî olmasını gerektirir. İkinci şık: bâkîler; ya biri diğerine bütünüyle nüfûz eder ya etmez. Etmezse biri öbüründen mübâyin ⇒ birine işâret ötekine işâretin aynı olmaz (fakat temas farz edilmişti: hulf). Nüfûz ederse mecmûun mikdârı bir mikdârdan fazla mı: fazlaysa nüfûz bütünüyle değil (hulf); değilse iki mikdâr var, biri öbürüne nüfûz etti, mecmû bir mikdârdan fazla olmadı; bu bu suretle ma'kûl ise bu'd-mütemekkin ve bu'd-mekânda neden câiz olmasın? Bu, kendi kanununuza karşı güçlü bir suâldir; onlar için bir özür var, cevabıyla sonra zikredilecek.**' (p125).
+- Netice/hüküm: **Râzî: Aristo tarafının temas tanımı da tedâhül güçlüğüne düşer (çizgi-çizgi temasta nüfûz); bu 'kendi kanununa güçlü suâl'; özür/cevap sonra.**
+- Delil çeşidi: **ilzâm (hasmın tanımından)**; (T) **F 27-B: ayırt ediciliği: ilzâm, 'temas'ı 'çizgilerin bütünüyle nüfûzu' okuyan bir okuma varsayar; Aristo tarafı 'temas = hisle işâretin aynı yerde birleşmesi'ni farklı yorumlar (⊬ cevabı sonra).**
+- Mevzuya bağı: **Risale'ye bağ yok (fizik); Râzî'nin 'iki taraf aynı güçlüğü taşır' usûlü (aynı silahın iki yönü) ders katmanı örneği.**
+- Doğan sual: **Aristo tarafının 'özür'ü hangi sayfada? (p125+ aranacak).**
+
+## c5 p125
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: Aristo (aktarım), sonra Râzî'nin itirazları başlıyor (p126).** **Vecih 2 (tedâhül imtinâı)**: '**müşâhede bu hissî cisimlerin tedâhülden imtinâ ettiğini gösterdi; bu imtinâ ya MÂDDE, ya BU'D, ya MÜREKKEB (mecmû) yüzünden.** **1. şık (mâdde yüzünden) iki yönden bâtıl**: (a) '**iki cismin tedâhülden imtinâsı, her birinin başka hayyizde ferd olmasını gerektirir; bu ancak zâtî hususiyeti belirli hayyiz ve cihet iktizâ eden şeyde ma'kûl; mâdde, mâdde olması bakımından imtidâdı, vaz'ı, hayyizi yok (yoksa cismin maddesi cismin kendisi olurdu — muhâl); hayyizi olmayan şey illet olamaz ⇒ tedâhül imtinâının illeti mâdde değil; cismiyet ve mikdârdır** (vaz' ve hayyiz ihtisâsı onlarda).' (b) '**tek bir muttasıl cisim (bir su) bilfiil maddeli; ayrılınca iki kısmın herbirine ayrı mâdde; tekrar birleşince maddeler bir olmalı (iki mâdde ayrı kalsa ikisindeki sûretler bilfiil ayrı, iki kısım bilfiil imtiyazlı, 'bir şey oldular' demek imkânsız).** ⇒ 'iki cisim bir cisim oldu' demek ancak her cismin maddesinin öbürünün maddesine **ÂSER'de (tamamen) mülâkî** olup ayrılığın zâil olmasıyla; bu, **maddenin tedâhül imtinâının illeti olmadığını** gösterir' (p126).
+- Netice/hüküm: **Aristo vecih 2: tedâhül imtinâının illeti mâdde değil (iki delil).**
+- Delil çeşidi: **taksîm + reductio (aktarım)**; (T) burhânî biçim (hasmın delili); **⊬ hayûlâ-sûret sisteminin öncülleri (madde imtidâdsız) bağlı.**
+- Mevzuya bağı: **KRİTİK — borç listesi 'hayûlâ ve sûret'**: **'maddenin imtidâdı/vaz'ı/hayyizi yok' öncülü, hayûlâ (madde) - sûret sisteminin çekirdeğidir; burada (b)'deki 'birleşince maddeler bir olur' ispatı için de kullanılıyor. Risale bu sistemi almaz; Râzî'nin kendi hükmü sonraki bâbda (cevher-i ferd/hayûlâ) aranacak.**
+- Doğan sual: —
+
+## c5 p126
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: Aristo (vecih 2 sonu), Râzî'nin itirazları.** Vecih 2: '**maddenin illet olmadığı; 2. şık (imtinâı mâdde+bu'd birlikte iktizâ eder) de bâtıl: mâdde te'sîrsiz; sonuç: imtinâın illeti bu'dün TABİATIDIR; bu bu'dlerin ancak bu'd olmalarıyla tedâhülden imtinâ etmeleri.**' **Râzî ('ولقائل'): bu hüccet iki yönden zayıf**: **(1)** '**tedâhülün imtinâını sadece bu KESİF cisimlerde biliyorsunuz; cisimler bu'd ve imtidâd tabiatında müsâvî, rıkkat ve kesâfette ayrıdır; müşâreket ile mübâyenet ayrı şey; kesâfetleri bu'd tabiatına zâid; imtinâ ve nüfûz-mülâkât mânii KESÂFET olabilir; o hâlde 'fezâ-i mahz' adı verilen bu'dde kesâfet yok ⇒ nüfûz imkânsız değil.**' **Sonuç: 'mâdde, bu'd, ikisi' taksîmi ihsâr etmiyor; doğru şık üçüncü: kesâfet.** **'Kesâfetle ta'lîl uzak değil: cisim ne kadar kesif olursa nüfûz edene karşı o kadar kuvvetli ve kâmil mümâne'; su parmakla, taş elle...**' (p127).
+- Netice/hüküm: **Râzî: Aristo vecih 2'nin taksîmi ihsâr etmiyor (kesâfet üçüncü şık); nüfûzdan mânii kesâfet olabilir ⇒ vecih 2 zayıf.**
+- Delil çeşidi: **taksîm eleştirisi ('ihsâr yok') + gözlem**; (T) **Râzî'nin usûlü: 'hasr delili' (c2 sual 10 bulgusu: taksîmin tamlığı ayrıca ispat ister) uygulanıyor.**
+- Mevzuya bağı: **Usûl bulgusu (c2 p65–66 'hasr delili')**: Aristo'nun taksîmini 'ihsâr yok' diye çürütmesi **c2 sebr-taksîm bulgusunun uygulaması**; Risale'nin sebr-taksîm delilleri için **'hasr delili yazılmalı'** kaydı (c2 satır 10) bir kez daha teyit.
+- Doğan sual: —
+
+## c5 p127
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî (vecih 2'ye 2. itiraz); sonra Aristo vecih 3.** İtiraz 2: '**iki yüzey temas edince her birinin tarafı bütünüyle öbürünün tarafına nüfûz etmiş olur; bu'd tabiatı nüfûz ve tedâhülden mânî olsaydı böyle olmazdı; Allah bilendir.**' **Vecih 3 (tedâhül imtinâı)**: '**mütemekkinin bu'dü fezâ bu'düne nüfûz ederse bu iki bu'd tam mâhiyette MÜSÂVÎ mâhiyettir (bu'd ve imtidâdın mâhiyeti bundan ibaret); bu tüm bu'dlerde ortak; nüfûz hâlinde iki bu'd ya kendi 'huviyyet'iyle birbirinden imtiyazını korur ya korumaz; iki şık da bâtıl.** **İmtiyaz nefs-i mâhiyet, levâzım-ı mâhiyet, avârız-ı mâhiyet ile olur; hepsi bâtıl**: nefs-i mâhiyet: mâhiyet hep aynı, müsâvâtı sağlayan imtiyaz sebebi olamaz; levâzım: tüm fertlerde ortak, imtiyaz sebebi olamaz;' (p128).
+- Netice/hüküm: **Aristo vecih 3'ün iskeleti: imtiyaz korunursa/korunmazsa iki şık; ilk şıkta imtiyaz mâhiyet/levâzım/avârız ile olamaz.**
+- Delil çeşidi: **taksîm + reductio (Aristo aktarımı)**; (T) burhânî biçim; **⊬ 'müsâvî mâhiyet fertleri ancak avârızla ayrılır' öncülü ferdî imtiyaz problemine (principium individuationis) bağlıdır.**
+- Mevzuya bağı: **Risale'ye bağ yok (fizik); 'ferdî imtiyaz' tartışması c5 p73 H4 (zaman cüzlerinin lâzım ihtilâfı) ile aynı öncüle yaslanır (kaydı: F 27-B).**
+- Doğan sual: —
+
+## c5 p128
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: Aristo (vecih 3 devamı); sayfa fasıl ortasında biter.** '**Avârız ile imtiyaz olamaz: bu iki bu'd tamamen içe içe girmiş, her biri öbürüyle mâhiyette müsâvî; bir bu'da arız farz edilen her avârız öbürüne de arız olabilir (tam mâhiyette eşitlikleri sebebiyle); her avârız ikisine ortak olur ⇒ ortak şey imtiyaz sebebi olamaz ⇒ mütemekkinin bu'dü mekânın bu'dünden imtiyaz kazansa bu ya mâhiyet ya levâzım ya avârız ile olurdu; hepsi bâtıl ⇒ imtiyaz hâsıl olmaz.**' **İkinci şık (imtiyaz kalkar): 'bu da bâtıl: imtiyaz kalkarsa gayriyet (başkalık) kalkar; her iki farklı şey mutlaka bir mefhûm ve bir şeyde imtiyaz eder ⇒ yine mâhiyet/levâzım/avârız taksîmi ⇒ hepsi bâtıl; imtiyaz kalkarsa ya iki bu'dün ademi ya ittihâdlarıyla hudûsları lâzım; hepsi bâtıl ⇒ mütemekkinin bu'dünün mekânın bu'düne nüfûzu bâtıl mezheptir.**' (Sayfa sonu; devamı p129'da, henüz okunmadı.)
+- Netice/hüküm: **Aristo vecih 3 sonucu: bu'dler tedâhül ederse imtiyaz ya korunamaz ya kalkarsa gayriyet kalkar ⇒ tedâhül bâtıl ⇒ mekân bu'd değil.**
+- Delil çeşidi: **taksîm + reductio; imtiyaz-gayriyet argümanı**; (T) burhânî biçim (hasmın delili); **Râzî cevabı p129'da.**
+- Mevzuya bağı: **Risale'ye bağ yok; ⊬ 'bu'd = müsâvî mâhiyet' öncülü.**
+- Doğan sual: **Râzî'nin vecih 3'e cevabı?** (p129 okunmadı.)
