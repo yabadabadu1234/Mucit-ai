@@ -3,22 +3,24 @@
 Biçim: cilt 1–6 ile aynı. Dipnottaki harfler neşredenin nüsha işaretleridir; Râzî'ye ait değildir. **Okuma sırası CLAUDE.md § 3-A 25-C'ye göre fihriste göre alaka sırasıdır; defter okunan sırayla dolar. İlk okunanlar cilt sonu (p422–435) ve fihristtir.** Okunmayan sayfa bu defterde yoktur.
 
 ## c7 p422
-- OCR: orta-iyi
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.422 — OTOMATİK DOĞRULANDI
 - Okuma: tam (sayfa 'melekler beşerden efdal mi' bahsinin ortasında başlıyor; başı okunmadı)
 - İçerik: **Makâle 5, Fasıl 9: 'Melekler mi efdal, beşer mi?'.** **Kimin sesi: Râzî (kendi delillerini sayıyor; 'Mutlûb 1: meleklerin zâtları beşerden efdal').** Deliller: **(1)** '**nefsler ve akıllar cisimlikten ve alâkalarından mücerred zâtlardır ⇒ bu cisimlerden ve cismânîlerden efdal; mücerredin efdaliyeti: mücerret mekân ve hayyizden ganî, cisim ve cismânî muhtaç; ganî muhtaçtan efdal.**' **(2)** '**melekler maddeden-sûretten ve vahdetlerin toplanmasından doğan kesretten münezzeh basît zâtlar; insan nefs ve bedenden mürekkeb; nefs çok kuvvete ve âlete muhtaç; beden çok cüzden mürekkeb; basît mürekkebin cüzü; mürekkebin adem sebepleri çok.**' **(3)** '**insanın terkîbi rutûbet-terkîbi, en küçük sebeple tefrik ve parçalanmaya hazır; sivrisinek onu incitir, boğaz-lokması öldürür; ilk nutfe pis, âhiri leş, arası kirli.**' Meleklerin bedenleri: '**bâkî, dâim, kırılma ve tefâvütten münezzeh semâlar**; aralarında münâsebet nasıl câiz?' **(4)** 'nâtık nefsler o âlî illetlerin zâtlarında ve kemâllerinde ma'lûlleri (nefs bâbında gösterdik); zayıf ma'lûl kâhir güçlü illetle nasıl karşılaştırılır?' (dipnot: müellifin 'Risâle fî isbâti'n-nefs ve bekâihâ ve fâideti'z-ziyâde' — Türkiye Nûr-ı Osmâniye nüshası).
 - Netice/hüküm: **Râzî (kendi hükmü): 'melekler zâtları bakımından beşerden efdal' (4 delil bu sayfada).**
 - Delil çeşidi: **mücerred-mürekkeb kıyası + Aristo/İbn Sînâ nefs-akıl sistemi (sudûr)**; (T) **F 27-B: deliller 'ganî muhtaçtan efdal' ve 'basît mürekkebden efdal' öncüllerine bağlı: ölçü ontolojik (ihtiyaç azlığı) — dînî fazilet (takva, amel) ölçüsü DEĞİL; iki ölçü karıştırılırsa Ehl-i Sünnet efdaliyet tartışmasında yanlış yerde durulur.**
 - Mevzuya bağı: **Fasıl II (nübüvvet) ve İSLÂM KAYDI**: 'melek-beşer efdaliyeti' Ehl-i Sünnet'te **ihtilâflı bir mes'ele** (⊬ sayfa dışı bilgi: çoğunluk peygamberleri meleklerden efdal sayar; ihtilâf var); Risale bu mes'elede hüküm vermez, ölçüyü ayırır: **ontolojik sadelik ≠ dînî fazilet.** Nefs bâbına atıf (Makâle 2–3) **c7 içi borç**.
 - Doğan sual: **Râzî bu bâbda enbiyâyı da meleklerden aşağı mı sayıyor? (p426–427: sözü belirsiz; ⊬)**
+- Doğrulama notu: OCR sayfası ile gerçek metin s.422 otomatik karşılaştırıldı: kelime kapsama %77, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c7 p423
-- OCR: orta-iyi
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.423 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Kimin sesi: Râzî.** (5) '**meleklerle vâcibü'l-vücûd arasında selbî sıfatlarda (istiğnâ) benzerlik daha çok ⇒ melekler efdal; gıdaya, elbiseye, nikâha muhtaç değiller; hâcet yalnız Allah'a; beşerde hâcetler sonsuz gibi.**' **Mutlûb 2: meleklerin ilimleri beşerin ilminden efdal** — 5 delil (bu sayfada 5): **(1)** melek ilmi **fiilî**, beşer ilmi **infi'âlî**; **(2)** melek ilimleri beşer ilimlerinin **feyyâz illetleri**; illet ma'lûlden ekmel; **(3)** sehv-nisyân-galatdan berî, beşerin ilmi bunlarla karışık; **(4)** melek ilmi 'mustefâd akıl' hâzır; beşerde ekseriya hâzır değil, biri gelince öbürleri gider; **(5)** her gün yeni nefsler doğuyor, hepsi hâzır nefslerle ilim ve maarifte eşitlenecek; felekî mukaddes rûhlar öyle değil; **(6)** '**rûhâniyyât-ı semâviyye mugayyebâta muhît, müstakbel ahvâli bilir; şeriat lisânında Levh-i Mahfûz'a muttali'; hikmet lisânında bu âlemin hâdislerinin illetleri; illeti bilmek ma'lûlü bilmeyi gerektirir**' (p424).
 - Netice/hüküm: **Râzî (kendi hükmü): 'meleklerin ilimleri beşerin ilimlerinden efdal' (6 delil).**
 - Delil çeşidi: **sudûr sistemi + bir şer'î ifade ('Levh-i Mahfûz'a muttali')**; (T) **(6) melek ilminin müstakbeli kapsaması iddiası hem şer'î (Levh-i Mahfûz) hem felsefî (illet⇒ma'lûl) dile bağlanmış — ikisi aynı şey değildir: şer'î dilde ilim Allah'ın izniyle verilen ilimdir, 'illet olmaktan doğan bilgi' değildir.**
 - Mevzuya bağı: **İSLÂM KAYDI (KIRMIZI)**: **'melek, âlemin hâdislerinin ILLETİDİR' cümlesi sudûr/felek nefsi öğretisidir; Risale ALMAZ (Allah tek yaratıcı; melekler O'nun emrini yerine getiren mahlûk). (6)'daki 'müstakbeli bilir' iddiası ilmü'l-gayb konusuna yaklaşır; gayb ancak Allah'a mahsustur; Risale bu iddiayı ALMAZ ve şer'î kaynaklarda doğrulanmadan 'melekler geleceği bilir' cümlesi yazmaz.**
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.423 otomatik karşılaştırıldı: kelime kapsama %81, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c7 p424
 - OCR: orta
@@ -39,13 +41,14 @@ Biçim: cilt 1–6 ile aynı. Dipnottaki harfler neşredenin nüsha işaretlerid
 - Doğan sual: —
 
 ## c7 p426
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.426 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Kimin sesi: Râzî.** (4) sonu: '**gördüğümüz gibi âlem-i ulvînin heykelleri bu âlem-i süflînin heykellerine hâkim; ulvî âlemin rûhları da süflî âlemin rûhlarına hâkim olmalı; felsefî ilimler süflî rûhların ulvî rûhların ma'lûlü olduğunu, kemâlâtlarının onların kemâlâtının ma'lûlü olduğunu gösterdi; bu rûhların onlara nisbeti küçük alevin güneş kurşuna, hakîr damlanın büyük denize nisbeti gibi.**' **(5)** 'rûhânîler süflî âlem rûhlarının mebde'i ve ma'lûlü; mebde' mebde'sinden eşref; kemâl önce mebde'de hâsıl, sonra az miktarda ma'lûle fâiz; beşer nefslerinin ölümden sonraki saâdeti de onlarla ittisâl ve nurlarından zerreyle istifâde; kemâlleri başlangıç ve âhir (mebde ve me'âd) hep o âlemden fâizdir.' **(6)** '**enbiyâ ve resûller (aleyhimüsselâm) vahiyden başka hiçbir mârifet ve ilim söylemediklerinde ittifak etti: 'ilmehû şedîdü'l-kuvâ' (Necm 53/5), Kur'ân sıfatında 'innehû le-kavlü resûlin kerîm' (Tekvîr 81/19); bu, enbiyânın kendi ilimlerinin meleklerden müstefâd olduğunu itiraftır; ayrıca düşmanlarla mücâdelede (Lût beldelerinin kalbi), maslahatlarına irşâdda (Nûh'un gemisi) melekler yardım eder.**' (p427).
 - Netice/hüküm: **Râzî (kendi hükmü): 5. ve 6. deliller: melekler beşerin mebde'i; nübüvvet ilmi (vahiy) meleklerden müstefâd.**
 - Delil çeşidi: **sudûr (mebde-me'âd) + âyet (Necm 53/5; Tekvîr 81/19)**; (T) **(6)'nın âyet kısmı Ehl-i Sünnet'in kabul ettiği vahiy inisi (Cibrîl aracılığı) ile örtüşür; (5)'in 'beşer nefsinin ölümden sonraki saâdeti ulvî rûhlarla ittisâl ve nurlarından zerre' iddiası Meâd'ı felsefî ittisâl diye okur, Risale ALMAZ.**
 - Mevzuya bağı: **KRİTİK — Fasıl II (nübüvvet: vahiy meleği) ve Fasıl III (meâd)**: **(6)'nın 'vahiy Cibrîl'den gelir' kısmı Risale Fasıl II'ye ALINABİLİR (Necm 53/5; Tekvîr 81/19 — sayfa metninde geçen âyetler, âyet hükmü Kur'ân'dan doğrulanır); (5)'in meâd okuması (rûhlar ulvî rûhlara ittisâl) Risale'ye ALINMAZ: Meâd, ölüm sonrası dirilişi ve hesabı, Kur'ân ve Sünnet'e göre yazar (Fasıl III; kaynak c7 M3 F9–11 aranacak).**
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.426 otomatik karşılaştırıldı: kelime kapsama %83, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c7 p427
 - OCR: orta
@@ -57,31 +60,34 @@ Biçim: cilt 1–6 ile aynı. Dipnottaki harfler neşredenin nüsha işaretlerid
 - Doğan sual: —
 
 ## c7 p428
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.428 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Kimin sesi: Râzî (kapanış tazarru'u).** '**'Burada bu mes'elede sözün sonu. Makâle 5 tamam.**' **Tazarru'**: '**Sen akıl ve fehimlerin alâkalarından yücesin; araz ve sîmâların münâsebetlerinden mukaddessin; Hayy-ı Kayyûm sıfatlısın; ordularının rûhânîlerinin nihâyeti yok; kullarının cismânî hâllerinin gayesi yok; bu ordulara ve askerlere ihtiyaçtan münezzehsin; ilk ve âhirde her şeyden ganîsin. Onlar, celâletli hâlleri ve güzel fiilleriyle sana ganî iken, bu zayıf zerre, ince haset (?), kibriyânın nûru doğarken nasıl (bir yer bulur)? İsim ve sıfatlarının işrâkında nasıl anılır? Bu hâli düşününce ümidim zayıflar, duam kurur. Amma hepsine rahmetle muâmele ettiğini, ihtiyaçsızken üzerlerine rahmet bulutları yağdırdığını düşününce derim: Yâ ezelîlik ve kıdemle vasfedilen, fenâ ve ademi kabul etmekten yüce! Bir kimseye o nimeti ve rahmeti hakkettiği için verdiysen dua ve nidâma bakma. Yok, rahmetten ve nimetten bir pay alan herkes senin mahz fazlınla aldıysa, ölümden önce, ölürken ve öldükten sonra bana da fazlınla muâmele et; yâ ekremelekremîn, yâ erhamerrâhimîn, yâ ilâhe'l-evvelîne ve'l-âhirîn.**'
 - Netice/hüküm: **Kapanış duâsı: Allah her şeyden ganî; kullara rahmeti ihtiyaçsız; kendisi mahz fazl umuyor (ölümden önce, ölürken, öldükten sonra).**
 - Delil çeşidi: **duâ/tazarru'**; (T) **duâ.**
 - Mevzuya bağı: **İSLÂM KAYDI (OLUMLU)**: **'her nimet mahz Allah'ın fazlıdır; kulun hakkı yoktur' ilkesi c6 p214 duâdaki 'bi-hakkı' tevessülüne karşı Râzî'nin KENDİ ağzıyla (bu sayfada) yazılmış denge unsurudur; Risale 'kulun Allah üzerinde hakkı yoktur, nimet fazldır' cümlesini bu duâ ile destekleyebilir (ders katmanı dipnotu).**
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.428 otomatik karşılaştırıldı: kelime kapsama %78, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c7 p429
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.429 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Kolofon.** '**Müellif (Allah ondan râzı olsun): 'Bu kitap Pazartesi sabahı, Recep'in 4'ünde, hicrî 605 yılında tamam oldu; hamd Allah'a çok, dâim, tayyib, mübârek. Salât yakın meleklere, sonra enbiyâ ve mürselîne, tüm sâlih kullara; özellikle Muhammed'e (a.s.) ve âline.**' (Dipnot: nüsha farkı: 've leyekun ...' 'ecma'în' arası bazı nüshalarda yok.) '**Yedinci cüz tamam oldu; ardından sekizinci cüz: 'en-Nübüvvât ve mâ yeta'allaku bihâ' (nübüvvetler ve ilgili bahisler).**'
 - Netice/hüküm: **Cilt 7 kolofonu: 4 Recep 605; cilt 8 = nübüvvât.**
 - Delil çeşidi: —
 - Mevzuya bağı: **Cilt 8 fihristiyle doğrulandı (nübüvvet K1–K3).**
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.429 otomatik karşılaştırıldı: kelime kapsama %77, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c7 p430
-- OCR: —
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.430 — OTOMATİK DOĞRULANDI
 - Okuma: okunmadı (boş sayfa)
 - İçerik: Boş.
 - Netice/hüküm: —
 - Delil çeşidi: —
 - Mevzuya bağı: —
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası boş/çok kısa; gerçek metinde bu sayfa için içerik yok (boş sayfa).
 
 ## c7 p431
 - OCR: orta (fihrist; sayfa numaraları düşmüş)

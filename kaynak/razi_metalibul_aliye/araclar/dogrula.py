@@ -5,14 +5,14 @@ Kullanım (python içinden):  from dogrula import dogrula
 'OCR: ...' satırı 'Kaynak: gerçek metin (Sekkā/Şâmile), s.N — DOĞRULANDI' olur."""
 import re,os,sys
 D=os.path.dirname(os.path.abspath(__file__))+'/../okuma_defteri/'
-def dogrula(c,p,s=None,degistir=(),ekle=None,dosya=None):
+def dogrula(c,p,s=None,degistir=(),ekle=None,dosya=None,etiket='DOĞRULANDI'):
     f=D+f'cilt_0{c}.md'; t=open(f,encoding='utf-8').read()
     m=re.search(r'(?ms)^## c%d p%d\b.*?(?=^## c\d|\Z)'%(c,p),t)
     assert m,(c,p); e=m.group(0)
     for a,b in degistir:
         assert a in e,(c,p,a[:40]); e=e.replace(a,b,1)
     s=s if s is not None else p
-    e,n=re.subn(r'(?m)^- OCR:.*$',f'- Kaynak: gerçek metin (Sekkā/Şâmile), s.{s} — DOĞRULANDI',e)
+    e,n=re.subn(r'(?m)^- OCR:.*$',f'- Kaynak: gerçek metin (Sekkā/Şâmile), s.{s} — {etiket}',e)
     if n==0 and 'DOĞRULANDI' not in e: e=e.replace('\n','\n- Kaynak: gerçek metin (Sekkā/Şâmile), s.%d — DOĞRULANDI\n'%s,1)
     if ekle: e=e.rstrip('\n')+'\n- Doğrulama notu: '+ekle+'\n\n'
     open(f,'w',encoding='utf-8').write(t[:m.start()]+e+t[m.end():])

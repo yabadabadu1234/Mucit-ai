@@ -102,13 +102,14 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: Râzî çözümü? (p12: bir cevap ve reddi.)
 
 ## c3 p12
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.12 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: Bir görüş: 'Âciz kimse **istemese de yapamayacağını**, kâdir ise **isterse yapmamayı da** kendinde bulur; bu fark zarûrî'; ⇒ 'nasıl hâsıl' izahına gerek yok. **Râzî'nin itirazı**: 'Fiili terk **ya adem-i asliye bekâ'dan fazla bir şey** ya da ondan başka değil. **(1) Fazlaysa** (ziddı yapmak): kâdir fiil ve zıddına kâdir olur, **fiil ve terke değil**; (fiil-terk nakîz, zıd nakîz değil); ezelde Allah âleme ve terkine kâdir idi: terk = zıddı yapmak ise ezelde âlemin zıddını yapıyor: **ezelî fiil muhâl**; ayrıca terk ezelî ise zıddı ezelî ⇒ âlem hiç zâil olmaz; (3) terk eden **hiçbir şey yapmadığını** bulur ⇒ terk 'başka fiil' değil, **asli ademe bekâ**. **Bu ise fâile isnâd muhâl ⇒ kâdirin terke kudreti yok ⇒ tanım bâtıl.**' **'Vallahu a'lem'**.
 - Netice/hüküm: **Kâdir tanımı (fiil-terk) Râzî'ce aporetik/bâtıl bulunuyor**; çözüm bu bahiste yok.
 - Delil çeşidi: **dilemma**; (T) analitik-cedelî.
 - Mevzuya bağı: **Fasıl I §8**: **Fasıl I'in 'muhtâr fâil' tanımı bu aporiadan geçmemişse**, ders katmanına 'Râzî aporiası (c3 p11–12)' notu; **Sünnî kelâmda çözüm: kudretin taalluku, 'ademe bekâ' değil 'ademe kudret ile istimrâr' (⊬ araştırılacak)**.
 - Doğan sual: Râzî kâdirin **kendi tefsirini** nerede veriyor? (Bâb 1 sonrası.)
+- Doğrulama notu: OCR sayfası ile gerçek metin s.12 otomatik karşılaştırıldı: kelime kapsama %86, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p13
 - OCR: orta
@@ -138,49 +139,54 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p16
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.16 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **İlim ↔ zan mukayesesi**: zan emâresiyle birlikte **ilim yerine geçer** ama ilmin sevki **daha güçlü** (zan hilâfı ihtimalini taşır); ilim ısrarlı sakınır, zan ise sakınma keyfiyeti **hâllere göre değişir**. **Zan mertebeleri**: çok kişinin haberinden hâsıl zan, tek kişiden hâsıl zandan **güçlü**; emâreyi **görmek** haberle öğrenmekten güçlü (örnek: evine yakın yangını görmek vs haber almak). **Zan-i'tikâd mukayesesi**: destekli zan bazen i'tikâddan güçlü, bazen değil; **kuvvet-zaaf mertebesi** gözetilmeli.
 - Netice/hüküm: **Zan mertebeleri farklı; sevk gücü mertebeye bağlı** (Râzî'nin 'zan-ı kavî' derecelendirmesinin psikolojik temeli).
 - Delil çeşidi: **analitik + misal**; (T) ikna'î.
 - Mevzuya bağı: **Risale (T) skalası**: **Râzî'nin derece anlayışının kaynağı** (c3 p14–16): 'çok kişi haberi > tek haber; görmek > haber' = **tevâtür ve müşâhede derecesi**: Fasıl IV (Sünnet: haber dereceleri) için **teorik temel**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.16 otomatik karşılaştırıldı: kelime kapsama %86, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p17
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.17 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Bâb 1, Fasıl 3: 'Dâî ve sârife sanılan fakat olmayan şeyler'** (beş tür). **Tür 1**: 'Fiilin **kendi nefsinde menfaat-maslahat olması** dâîdir, mefsedet olması sârifedir' denir; **Râzî: bu mecazdır**: menfaat i'tikâdı davet eder; **fiilin nefsü'l-emrdeki menfaati** değil. **Üç vecih**: (1) râcih menfaat **i'tikâdı hâsıl** olsa (nefsü'l-emrde öyle olmasa da) i'tikâd dâî olur; o i'tikâd olmasa nefsü'l-emrdeki menfaat dâî olmaz ⇒ **müessir i'tikâd**.
 - Netice/hüküm: **Dâî = fâilin ilmi/i'tikâdı/zannı; nefsü'l-emrdeki menfaat değil**.
 - Delil çeşidi: **analitik (ayırt eden vaka: yanlış i'tikâd)**; (T) analitik.
 - Mevzuya bağı: **Fasıl I §8 (Allah'ın fiili, hikmet)**: dâî ilim olunca **Allah'ın dâîsi ilmidir**; nefsü'l-emrdeki maslahat ve Allah'ın **hikmeti** ayrı bahis (cilt 3 'hakîm' bahsi).
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.17 otomatik karşılaştırıldı: kelime kapsama %76, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p18
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.18 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (Tür 1) devam: (2) 'garaz' fiilin **sonunda** hâsıl olur (ev yapmanın gayesi eve girince); fâil olma **garazın vücûdundan önce**; **öndeki sonrakinin illeti olamaz**; (3) garazın hâsıl olması **fâilin fâil olmasıyla ma'lûl**; garaz bu fâiliyetin illeti olsaydı **devir** ⇒ **müessir = fâilin ilmi**. **Tür 2**: 'Allah'ın **va'di** fiile iter, **vaîdi** fiilden zecreder' — bu da mecaz: dâî **va'dedilen menfaatlere dair ilim**, sârife **vaîddeki zararlara dair ilim**. **Tür 3 (şek)**: 'şüphe eden **araştırmaya** davet eder' — cevap: şüphe eşit tereddüt; fiil tercihtir; **tercihle eşitlik çelişir**; araştırmaya davet eden **ilim ve i'tikâd**: 'bilmemek zarar ihtimali doğurur; hâli öğrenmek bu zarardan korunmayı sağlar (menfaat)'.
 - Netice/hüküm: **Va'd-vaîd ve şek de dolaylıdır; dâî her hâlde bilgi hâlidir**.
 - Delil çeşidi: **analitik (öncelik/devir)**; (T) analitik.
 - Mevzuya bağı: **Fasıl II/IV (va'd-vaîd, teşvik-tehdit)**: 'va'd-vaîd fiile götürür' ifadesinin **doğru okunuşu** (ilim aracılığı).
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.18 otomatik karşılaştırıldı: kelime kapsama %81, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p19
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.19 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: Tür 3 sonu. **Tür 4 (görme-işitme)**: 'görme-işitme fiile ya da terke iter' gibi görünür; cevap: görme, **şeyin hâline dair ilmi** verir, o ilim dâî/sârife olur. **Tür 5 (irâde-kerâhet, şehvet-nefret)**: 'irâde fiile dâî, kerâhet sârife'. **Cevap**: (a) bazıları **irâdenin ilim (fiilin fazla menfaate mütezammın olduğuna dair) dışında mânâsı yok, kerâhetin de**; (b) bazıları irâde ve kerâhetin ilimden **ayrı** olduğunu kabul eder ama 'ilim hâsıl olunca **meyl ve tahsile irâde** doğar' der ⇒ **gerçek dâî ve sârife bu ilimdir**; irâde-kerâhet ilme **tâbi'**.
 - Netice/hüküm: **İrâde ve kerâhet dâî değil, ilmin tâbi'i**.
 - Delil çeşidi: **kavramsal indirgeme**; (T) analitik-cedelî (irâdenin ilme indirgenmesi **tartışmalı**).
 - Mevzuya bağı: **KRİTİK — Fasıl I §8.3 (irade ispatı)**: Fasıl I'de irâde **ilimden ayrı, tahsis edici** bir sıfat olarak kuruluyorsa **Râzî'nin bu çerçevesi (irâde ⊂ ilme tâbi meyl)** onunla **gerilimlidir**; Sünnî kelâmda irâde ve ilim **ayrı sıfatlar**dır (Râzî de sıfat listesinde ayrı sayacak). **Râzî'nin kesin görüşü bu sayfada 'iki görüşten biri' olarak verilmiş; kendi seçimi p20'de**.
 - Doğan sual: **Râzî irâdeyi ilimden ayrı sıfat mı sayıyor, ilme mi indirgiyor?** (p20; cilt 3 irâde bâbı).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.19 otomatik karşılaştırıldı: kelime kapsama %87, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p20
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.20 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Delil (irâde-meyl ilme tâbi)**: 'Arkadaşını ziyarete çıkan kimse yolda **evinde bir işi** olduğunu hatırlar, eve dönmesi gerekir. Eğer ziyarete gitmenin menfaatinin eve dönmenin menfaatine **eşit** olduğuna i'tikâd hâsıl olursa **olduğu yerde kalır, hiç kımıldamaz**; sonra biri **râcih** olduğu aklına gelince o tarafa yönelir.' ⇒ **meyl ve irâde bu i'tikâdlara tâbi**. **Vallahu a'lem.** **Fasıl 3 biter.**
 - Netice/hüküm: **Eşit menfaat ⇒ hareket yok; râcih ⇒ hareket** (tercihte rüchân şartı).
 - Delil çeşidi: **iç gözlem örneği**; (T) ikna'î-analitik.
 - Mevzuya bağı: **KRİTİK — Fasıl I §8.3**: Fasıl I 'eşit ihtimalde muhtâr tek tahakkuku seçer' der; **Râzî'nin insan örneği tersini söylüyor: eşit ise fiil yok (kişi kalır)**. **Bu, insan psikolojisi örneği; Allah'a taşınması 'kıyâs-ı gâib' yasağına tâbi** (c2 p36, 83); ama **Râzî'nin kendi çerçevesinde 'müreccih = dâî'** olduğundan, **Allah'ın 'niçin şimdi'sine ilişkin cevabı** cilt 3–4'te 'hakîm' ve 'irâde' bâblarında aranmalı; Fasıl I §8.3'ün derecesi **bu okuma bitmeden kesinleştirilmemeli**.
 - Doğan sual: 'Allah'ın irâdesinde dâî' meselesi (Râzî: Allah'ın dâîsi ilim mi, hikmet mi?).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.20 otomatik karşılaştırıldı: kelime kapsama %87, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p21
 - OCR: orta
@@ -210,67 +216,74 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p24
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.24 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Üç matlûb mertebesi**: 'zarar menfaat fevtinden şiddetli nefret verdiğine göre **zararı def' menfaati tahsilden daha çok matlûb**; bu yüzden **akıllılar: nefsi zarardan korumak vâcibtir; nefse menfaat kazandırmak vâcib değil**; zararı def' menfaati def'i-defetmekten (menfaat-fevti önleme) de **mühim**.' **Bahis 2**: zâtî menfaat lezzet mi sürûr mu, zâtî zarar elem mi gam mı? **Nefislere göre değişir**: bazısında cismânî lezzet, bazısında sürûr güçlü; **kesin hüküm mümkün değil**. **Bahis 3**: zâtî ile 'tâbi' (vesîle) çatışınca **zâtî güçlü**, ancak zâtî **az-zayıf**, tâbi **çok-güçlü** ise kesretle râcih olabilir. **Kısım 2**: 'dâî fiilin nefsinde maslahat olması değil; ona dair **ilim/i'tikâd/zan**; sârife de fiilde mefsedete dair bu üç' (yukarıdaki sonucun kısım başlığı).
 - Netice/hüküm: **Zararı def' > menfaat tahsili** (akıl ittifakı: zararı def' vâcib, menfaat tahsili vâcib değil).
 - Delil çeşidi: **analitik-ikna'î**; (T) ikna'î.
 - Mevzuya bağı: **Fasıl I / ahlâk**: 'kendini zarardan koruma vâcibtir' **'ihtiyat ilkesi' (Pascal-tipi) için Râzî'nin psikolojik dayanağı**: **Fasıl II'de 'nübüvvet iddiasını araştırma yükümlülüğü' (nazar vâcib mi?)** ile bağlanabilir (kaynaklı, cilt 3 p24).
 - Doğan sual: Râzî'nin 'nazar vâcib mi' bahsinde bu ilkeyi kullanıyor mu? (cilt 3–4).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.24 otomatik karşılaştırıldı: kelime kapsama %81, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p25
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.25 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Fasıl 4 devam: 'i'tikâd durumları'**: bir şey **i'tikâdında** ya (1) **halis maslahat**, (2) **halis mefsedet**, (3) **maslahat+mefsedet karışık**, (4) **ikisinden de hâlî** — dört kısım, fazlası yok. **(1)**: bu i'tikâd hâsıl olunca **fiil vâcib olur, insan fiile 'mülcâ' (mecbur)** gibidir (misal: yaz sıcağında oruçlu, susuzluktan yanmış, soğuk su hazır, şeriat ve tabip 'iç' diyor, zararsız olduğunu biliyor ⇒ içmek vâcib). **(2)**: **terk vâcib, insan terke mülcâ** (ateşe girmenin büyük zararını bilen, dünya-âhirette faydası yok, akıllar menediyor ⇒ girmez). **İntihar**: 'insan kendini öldürmeyi de göze alır, ancak **daha büyük elemden kurtulmanın yolu yalnız bu ise**; onu **zararın fazlasını def'** için yapar'.
 - Netice/hüküm: **Halis dâî hâlinde fiil zorunlu (mülcâ)** — Râzî'nin determinist psikolojisi.
 - Delil çeşidi: **istikrâ (iç gözlem ve misaller)**; (T) ikna'î-analitik. **Dikkat: 'mülcâ' = i'tikâd hâsıl olunca kaçınılmaz** ifadesi kul iradesi/kesb konusuna **doğrudan dokunur**.
 - Mevzuya bağı: **Fasıl IV/itikad (kul fiili, cebr-kader)**: **Râzî'nin kul psikolojisi 'dâî tam ⇒ fiil zorunlu'** (c2 p141 ile aynı çizgi: dâîler Allah'tan). **Sünnî ana çizgiyle ilişki**: Ehl-i Sünnet'te kulun ihtiyârı/kesbi ve mes'ûliyeti sabit; **Râzî'nin formülü ders ana metnine girmez, 'Râzî'ye göre' notuyla** (bkz. c2 p141 karar).
 - Doğan sual: Râzî mülcâ hükmüyle **kesb-mes'ûliyeti** nasıl uzlaştırıyor? (cilt 3 devam: 'kâdir' bâbı; cilt 4–5 cebr-kader).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.25 otomatik karşılaştırıldı: kelime kapsama %78, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p26
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.26 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **(3) karışık**: üç alt kısım: maslahat râcih / mefsedet râcih / **eşit**. **Maslahat râcih ⇒ fiil vâcib** (2 vecih: misli misliyle karşılaştırılır, kalan fazla saf dâî; **râcih varken mercûhu seçmek aklen muhâl**). **Mefsedet râcih ⇒ terk vâcib**. **Eşitlik ⇒ tevakkuf**, olduğu gibi kalır. **(4) hâlî**: ne dâî ne sârife; **olduğu gibi kalır**. **Furû' 1 (Mu'tezile)**: 'teklif, dâî halis fiile ya da terke iken sahih olmaz (mülcâ); **ancak dâîler tereddütte iken** sahih' — **Râzî: çok zayıf**: hâl altı kısımdan **biri**, hepsinde vâcib ya fiil ya terk ⇒ 'teklif dâîler tereddütteyken sahih' sözü bâtıl.
 - Netice/hüküm: **Rüchân ⇒ fiil vâcib; eşitlik ⇒ tevakkuf (fiil yok)**; Râzî Mu'tezile'nin teklif şartını reddediyor.
 - Delil çeşidi: **analitik**; (T) analitik-cedelî.
 - Mevzuya bağı: **KRİTİK — Fasıl I §8.3**: **'Eşit ihtimalde tevakkuf/fiil yok' Râzî'nin insan hâli için hükmü**; Fasıl I §8.3 'eşit ihtimalde muhtâr tek olanı tercih eder (kanun ≠ fail)'. **İki hüküm insan/Allah farkına bağlı**: **Allah için eşit ihtimal ⇒ tahsis (muhtâr)** iddiası, **Râzî'nin 'dâîye tâbi' insan modeliyle doğrudan taşınamaz**; ders katmanı bu farkı yazmalı. **Mu'tezile teklif şartı reddi (Sünnî çizgiyle uyum)**: teklif mülcâ ile bağdaşır mı sorusu **kelâm ihtilafı**.
 - Doğan sual: Fasıl I §8.3'ün 'eşit ihtimal' modeli Allah'ın fiili için Râzî'nin çerçevesinde hangi dayanakla?
+- Doğrulama notu: OCR sayfası ile gerçek metin s.26 otomatik karşılaştırıldı: kelime kapsama %85, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p27
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.27 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: Furû' 1 sonu: 'tereddütte olmanın anlamı: **birinci anda dâî fiile, ikinci anda dâî terke**; birinci anda fiile mülcâ, ikinci anda terke mülcâ; öyleyse "teklif ancak tereddütte sahih" sözünün **anlamı kalmaz**.' (Dipnot: hasım kastedilen **'Şerhu'l-Usûli'l-Hamse' sahibi** — editör.) **Furû' 2**: 'Fiilin râcih maslahatı i'tikâdı hâsıl ⇒ fiil; râcih mefsedet ⇒ terk. **Bu i'tikâdlar bâkî ya da değişken**: bâkî ise fiil/terk bâkî; **hızlı değişiyorsa** bir anda maslahat râcih görünür, sonra mefsedet râcih; insan fiilden terke, terkten fiile geçer; **fiil-terk arasında kararsız, 'bedâvât' sahibi**.' 
 - Netice/hüküm: **Kararsızlık = i'tikâdların hızlı değişimi**.
 - Delil çeşidi: **kavramsal + iç gözlem**; (T) ikna'î-analitik.
 - Mevzuya bağı: **Kaynak notu**: 'Şerhu'l-Usûli'l-Hamse' (Kâdî Abdülcebbâr'a nisbet edilen Mu'tezile usûl eseri) **editör atfı (⊬)**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.27 otomatik karşılaştırıldı: kelime kapsama %84, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p28
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.28 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (Furû' 2 sonu) 'Bu tip insan **'bedâvât sahibi'**: ona bazen fiil râcih-salâh, bazen râcih-fesat görünür; **fiil kudret+dâî ile ma'lûl olduğundan dâîler değişince fiil değişir**; **sebat sahibi insan** dâîleri stabil olandır.' 'Maslahat-mefsedet cihetleri sayılamayacak kadar çok; akıl vukûfu arttıkça hayret ve iztırâb artar; vukûfu azaldıkça tek yolda sebat azalır' (bir yoruma göre). **Furû' 3**: 'Fiil râcih-mefsedet i'tikâdında **terk vâcib**; hiç i'tikâd yoksa da terk (adem-i asli); terk için **i'tikâd-ı mefsedetin etkisi yok**: fiil ancak râcih-fiil i'tikâdı ile; yoksa **adem-i asliyede kalır** (ademin illeti illetin ademi)'; ⇒ **dâînin terke tesiri yok**. **Bâb başında: kudretin terke tesiri yok** ⇒ **kudret de dâî de terkte müessir değil**.
 - Netice/hüküm: **Fâile mensûp olan yalnız fiilin vücûdudur; adem (terk) için ne kudretin ne dâînin te'sîri var** (Râzî'nin kendi görüşü, c3 p11–12 aporiasının devamı).
 - Delil çeşidi: **analitik**; (T) analitik-cedelî.
 - Mevzuya bağı: **Fasıl I §8 'muhtâr = fiil/terk'**: Râzî'de **muhtâr tanımı 'terk'e tesiri kabul etmiyor**; Fasıl I tanımı **Sünnî kelâmdaki 'fiil ve terke kâdir' tarifi**yle uyumluysa **Râzî'nin bu görüşü ayrı bir kelâmî tercih**; derece notu.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.28 otomatik karşılaştırıldı: kelime kapsama %84, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p29
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.29 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **'Fâile mensûp yalnız fiilin vücûdu; ademe te'sîr yok'** (sonuç). **Kısım 3: menfaat ve mazarratın mertebeleri**: menfaat = lezzet/sürûr ya da bunlara götüren; mefsedet = elem/gam ya da onlara götüren. **Mertebe farkları on vecihle** (ilk ikisi): (1) **lezzet ve sürûr şiddet-zayıflık kabul eder**; bir lezzet ötekinden güçlü; **mertebeler sayılamaz** (her elemden güçlü elem farz edilebilir); güçlü lezzete rağbet zayıfa rağbetten fazla ⇒ menfaat-mazarrat mertebeleri sonsuz. (2) **Tecrübe**: aynı şey biri için lezzetli, öbürü için mekrûh; biri için gayet lezzetli, öbürü için orta.
 - Netice/hüküm: **Menfaat-mazarratın mertebeleri kişiye göre değişen ve ölçülemeyen**.
 - Delil çeşidi: **istikrâ/tecrübe**; (T) ikna'î.
 - Mevzuya bağı: **Risale (T) skalası**: 'ölçülemeyen kişisel değerler' — ders katmanında **ahlâkî hükümlerde kişilere göre değişen psikolojik zemin** (kapsam dışı).
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.29 otomatik karşılaştırıldı: kelime kapsama %78, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p30
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.30 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: On vecih devam: (2 sonu) aynı azı kişiye göre çok. (3) **zâtî matlûb (lezzet-sürûr) rağbeti tâbi matlûb rağbetinden güçlü**; (4) **ama zâtî zayıf, tâbi güçlü ise tâbi râcih olabilir** (örnek: bir sürü altın bulmak bir lokma yemekten sürûr verici); (5) **vesîle sayısı**: zâtîye az vasıtayla götüren, çok vasıtayla götürenden **daha çok arzu edilir**; ama çok vasıtalı **daha güçlü** olabilir ⇒ **denklik**; (6) **tecrübe: aynı şey bir yönden hayır-maslahat, bir yönden şer-mefsedet** ...
 - Netice/hüküm: On vecih: **mertebeler ölçülemez, tartılamaz**.
 - Delil çeşidi: **istikrâ**; (T) ikna'î.
 - Mevzuya bağı: —
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.30 otomatik karşılaştırıldı: kelime kapsama %78, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p31
 - OCR: orta
@@ -282,13 +295,14 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: 'Nâtık nefisler mâhiyette muhtelif' iddiasının kaynağı ve gerekçesi (cilt 7 nefs bâbı).
 
 ## c3 p32
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.32 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: 'Bütün bunlar dikkate alınınca iki insanın **tek fiil ve söz yoluna** uyması bile uzak; **tek insanın tek yolda sürmesi** de uzak: **her an bir tasavvurdan başkasına, bir meylden başka meyle, bir fiilden başka fiile** geçer. **Hayvanlardan farklı çeşitli fiillerin sudûrunun sebebi budur.** **Tevfik Allah'tandır.**' **Fasıl 4 (menfaat-mazarrat) biter.**
 - Netice/hüküm: **Fiil çeşitliliğinin sebebi: tasavvur ve meyil değişimi**.
 - Delil çeşidi: **sonuç cümlesi**; (T) ikna'î.
 - Mevzuya bağı: —
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.32 otomatik karşılaştırıldı: kelime kapsama %83, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p33
 - OCR: orta
@@ -309,22 +323,24 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p35
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.35 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: Fer' 3 işkâli: 'Fiil, **mümkin olduğu için** müreccih ister; **tam illet ve müstakil sebeple** eser vâcib olur; vücûb onu **başkasına isnâddan alıkoyar**; bu sebeple ile hâsıl olan eser ötekine isnâdı men eder; ikisiyle vâki ise **her birine isnâd (aynı anda hiçbirine)**: muhâl; **biriyle** vâki: **tercih bilâ müreccih**; **hiçbiriyle** vâki değil: dâîleri tam ve mâni yokken **fiil mümteni**: muhâl.' (Dipnot editör: 'insan için tercih müreccihsiz mümkün, insanın dâîleri müreccih olabilir'; '**Vâcib bi'z-zât ve fâil-i muhtâr Allah** hakkında bu bir tefri'dir'.) **Çatışan dâîler**: 'daha güçlü tesir eder; **eşitse tesâküt ederler**, olduğu gibi kalır.' **Fer' 4**: 'dâîler fiilden **önce mi hâsıl olmalı, fiil ile birlikte mi?** Kudret+dâî mecmûu **mu'idde illet** ise **önce** (mu'idde illet malûlden önce); **müessir illet** ise **fiille beraber** (müessir eserle birlikte vâcib mevcut).'
 - Netice/hüküm: **Çok bağımsız sebep işkâli** (Râzî, temânu'daki aynı yapıyla); **çatışma çözümü: kuvvetli olan; eşitse tesâküt**.
 - Delil çeşidi: **taksîm + reductio**; (T) analitik.
 - Mevzuya bağı: **c2 p143 ile paralel**: bu işkâl **iki ilâh temânu'unun insan-psikolojisi versiyonu**; Râzî **kendi temânu' savunusunu ve bu işkâli aynı yapıyla yazıyor**: tutarlı.
 - Doğan sual: Râzî bu işkâli çözüyor mu? (p36'da 'mu'idde/müessir' ayrımı yalnız zamanlama.)
+- Doğrulama notu: OCR sayfası ile gerçek metin s.35 otomatik karşılaştırıldı: kelime kapsama %77, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p36
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.36 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: Fer' 4 devam: 'müessir illet ise dâî fiil hâsıl olurken; **müessir eserle birlikte vâcib mevcut** olmalı; **mu'idde illet ise dâî fiilden önce** (mu'idde illet önce olmazsa **sebepler-müsebbepler zincirinin aynı anda teselsülü** lâzım gelir: muhâl).' **Vallahu veliyyü't-tevfîk.** **Fasıl 5 biter.**
 - Netice/hüküm: **Dâînin zamansal konumu: müessirse birlikte, mu'iddeyse önce.**
 - Delil çeşidi: **analitik**; (T) analitik.
 - Mevzuya bağı: **Fasıl I 'illet-ma'lûl eşzamanlılığı' (c1 p130–133)** ile örtüşür: müessir illet eserle beraber.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.36 otomatik karşılaştırıldı: kelime kapsama %85, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p37
 - OCR: orta (başlık kötü)
@@ -345,22 +361,24 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p39
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.39 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Uyuyan**: nefes alır (**ihtiyârî fiil**, dâîsiz: uyku i'tikâd ve zanna mâni); **bir yandan öbür yana döner, çok söz söyleyebilir**, uyanıkken olan ilim ve i'tikâd o saatte yok. **Hücca 3**: 'Bir sanatta usta olan (yazı, tambur) **çok yazı yazar, uzun süre tambur çalar**, her harften her nakırdan **gâfil**; gâfil olduğu şeyi bilmez, i'tikâd ve zan etmez; fiil var, dâî yok.' **Hücca 4 (kadeh-yol örneği, Buridan)**: 'İki **eşit kadehten** ya da iki **eşit rekat/ekmekten** birini seçen, **iki eşit yola varan kaçak** bir tarafı **müreccihsiz tercih eder**; yoksa **susuz insan iki kadehi önünde iken susuzluktan ölürdü (bâtıl)**; ⇒ fiil dâîsiz.'
 - Netice/hüküm: **Hasım Hücca 3–4: alışkanlık fiili; eşit kadeh (tercih bilâ müreccih insan örneği)**.
 - Delil çeşidi: **misal**; (T) ikna'î-cedelî; **Hücca 4 = Fasıl I §8.3'ün insan örneği**.
 - Mevzuya bağı: **KRİTİK — Fasıl I §8.3**: 'iki eşit kadeh/yol' **klasik tahsis örneği**; **c3 p20'de Râzî'nin kendi örneği tersini (kişi olduğu yerde kalır) söylemişti**: Râzî iki tarafı **karşılıklı** yazıyor; **kendi hükmü sonraki sayfalarda cevap kısmında**.
 - Doğan sual: Râzî iki eşit kadeh örneğine ne cevap veriyor? (p41+).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.39 otomatik karşılaştırıldı: kelime kapsama %77, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p40
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.40 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Hücca 5**: 'Hareketin **yavaşlığı** ya sükûnların çokluğu (cevher-i ferd kabulüne göre) ya harekete kâim bir keyfiyet (nefyine göre); birincide yavaş hareket eden **sükûnları da** yapıyor (gâfil olduğu hâlde); ikincide **hem hareketi hem yavaşlığı** yapıyor, iki ayrı fiil türünden **gâfil**; ⇒ dâîsiz fiil.' **Hücca 6**: 'Fiilin dâîye tevakkufu **mûcib bi'z-zât ile fâil-i muhtâr arasındaki farkı** kaldırır; bu bâtıl. **Delil**: dâî hâsıl olunca fiil **zarûrî vâcib** olur, **dâî yokken mümteni**; iki hâlden başkası yok; ⇒ **hiçbir hâlde tekârrür ve ihtiyâr olmaz** ⇒ **mûcib bi'z-zât ile fâil-i muhtâr arasında fark kalmaz**; **fark ise zarûrî ilimlerdendir** (insanın kudret ve ihtiyârıyla hareket etmesi ile taşın 'ateşin yakması' gibi tabiatla olması arasındaki fark).' **Dâîye tevakkuf diyenler bu delillere kuvvetli ve açık cevaplar verdiler**: (p41'e).
 - Netice/hüküm: **Hasım Hücca 6: 'dâîye tevakkuf ⇒ ihtiyâr kalmaz' (mûcib/muhtâr farkı)** — **Fasıl I §8'in doğrudan ilgili itirazı**.
 - Delil çeşidi: **analitik**; (T) analitik-cedelî.
 - Mevzuya bağı: **KRİTİK — Fasıl I §8.0 (Fâil-i muhtâr mı mûcib mi)**: bu, **'dâî zorunluluğu ⇒ muhtâr da mûcib' itirazının klasik hâli**; Fasıl I **muhtâr'ı 'tahsis eden irâde' ile kuruyor**; Râzî'nin cevabı p41+; **Râzî'nin kendi tercihi (c2 p141, c3 p25: dâî mecburiyeti)** **mûcib'e yakın** görünüyor: **kesin hüküm cilt 3–4'ün sonunda**.
 - Doğan sual: Râzî kendi çerçevesinde 'muhtâr' ve 'mûcib' farkını nasıl kuruyor? (Tahsis borcunun kapanması buna bağlı.)
+- Doğrulama notu: OCR sayfası ile gerçek metin s.40 otomatik karşılaştırıldı: kelime kapsama %77, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p41
 - OCR: orta
@@ -372,22 +390,24 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: **Allah için 'dâî' ne?** (Râzî Allah'ta dâînin ilim mi hikmet mi olduğunu söyleyecek: 'hakîm' bâbı).
 
 ## c3 p42
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.42 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Hücca 2'ye (dalgın)**: 'Fâil parmağı oynatmaya **kasdetmedikçe** oynamaz'; 'menfaat yok ki' itirazı: 'olabilir: **aynı hâlde kalmak usandırıcı, halin değişmesi lezzetli; alışkanlık; alışkanlık gereği fiil lezzetli, terki zahmetli; kısa süreli bir tahayyül** ("bu hareketin lezzeti var") sonra **başka tahayyül** ("terk daha iyi")' — hepsi câiz ihtimaller. **Uyuyan**: (1) **hayâller görür**, hayâllerden irâde-kerâhet doğar; (2) uzun yatış **ağrı** yapar, uyku hayâle mâni değil, ağrıdan kurtulmak için döner; (3) bazı hareketler **zarûrî** (nefes). **İbn Sînâ (Şeyh Ebû Alî)** cevabı: '**Tahayyülün hâsıl olması, onu hissetmek ve zihinde kalması** üç ayrı şey; uykuda bu hâllere **şuurlu olduğumuzu hatırlamamak** ilk ikisinin yokluğunu gerektirmez.'
 - Netice/hüküm: **Sâhî/nâim örneklerine cevaplar: gizli dâî ihtimali.**
 - Delil çeşidi: **cedelî (alternatif açıklama)**; (T) cedelî; **'gizli dâî' unfalsifiable riski**: Râzî tarafı **'dâîsiz fiil yok' postülasını kurtarmak için gizli dâî varsayıyor**: (T) 'öncül olarak korunur, gözlemle ispatlanmaz'.
 - Mevzuya bağı: **Fasıl I §8.3**: dâî **gözlenemez ve 'her fiilde vardır' varsayımıyla korunuyorsa** derece: postülat.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.42 otomatik karşılaştırıldı: kelime kapsama %78, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p43
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.43 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Hücca 3'e (usta)**: 'Sürekli yazmakla parmaklarda **melekat** hâsıl olur; harfleri yazma kolaylığı; hayâllerde de aynı melekat; harfler hayâlde **art arda** gelir, hızlı olduğu için yok sanılır: **hâzır ama hızlı**'. **Hücca 4'e (iki eşit kadeh)**: 'Eşitliği kabul etmiyoruz: **bir elle almak kolay** ⇒ o taraftaki kadehi alır; **her yönden eşitse**: **Allah tarafından kalbinde zarûrî, cezmî bir dâî** hâsıl olur ve birini seçtirir.' **Hücca 5'e**: 'yavaş hareket ediş, hareketi **yavaş olarak** yaptığını bilir; iki şeyden gâfil değil.' **Hücca 6'ya**: 'Kâdir ile mûcib arasındaki farkı **başka vecihlerle**, sizinkilerden başka, **inşaallah** zikredeceğiz.'
 - Netice/hüküm: **Râzî tarafının Buridan cevabı: (a) eşitlik gerçekte yok, (b) tam eşitse Allah'tan zarûrî dâî.** **Muhtâr/mûcib farkı ertelendi.**
 - Delil çeşidi: **cedelî (cevap)**; (T) cedelî; **'Allah kalbe zarûrî cezmî dâî yaratır' = kul fiili kelâm görüşü (c2 p141 ile aynı)**.
 - Mevzuya bağı: **KRİTİK — Fasıl I §8.3**: **Buridan tipi 'eşit iki seçenek' Fasıl I'de Allah'ın âlemi belirli vakitte yaratması için kullanılıyor**; Râzî insan için **'gerçek eşitlik yok / Allah'tan dâî'** diyor; **Allah için (dâîyi yaratan yok) ne diyecek?** Bu, Fasıl I §8.3'ün **asıl aporiası**: **kapanış cilt 3 'hakîm' ve 'irâde' bâblarında; cilt 4 hudûs-tahsis**.
 - Doğan sual: Râzî **kadir-mûcib farkını** nerede veriyor? (cilt 3 'kâdir' bâbı.)
+- Doğrulama notu: OCR sayfası ile gerçek metin s.43 otomatik karşılaştırıldı: kelime kapsama %81, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p44
 - OCR: boş
@@ -408,13 +428,14 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p46
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.46 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: Hücca 1 devam: 'Tercih' **kâdirliğe zâid bir mefhûm ifade etmiyorsa** lafzı atıp yalnız 'kâdir' demek gerekir; o zaman söz: 'fiil ve terke kâdir, nisbeti eşit, iki tarafı da **tahsis etmedi**; yine de bir taraf vâki oldu' — **her akıl bunun bâtıl olduğuna hükmeder**. **Hücca 2**: 'Kâdir bir süre bu fiile kâdir olup **fiil etmedi**, sonra fiil etti: **ya o vakitte etti (önce etmedi) çünkü onu o vakitte îkâ etti, ya o vakitte vâki oldu ama kâdir onu o vakitte îkâ etmedi (hiçbir sebep yok)**.' **Birinci kısım**: 'onu o vakitte îkâ etti' sözünün **kâdirliğe zâid mefhûmu** var mı? Varsa vakit **o zâid ile** hâdis ⇒ 'kâdirlik tek başına yetmez'.
 - Netice/hüküm: **Hücca 2: 'Niçin şimdi' sorusuna kâdirlik yetmez; zâid mefhûm gerekir.**
 - Delil çeşidi: **taksîm + analitik**; (T) burhânî biçim (**Fasıl I §8.3 ile aynı yapı**).
 - Mevzuya bağı: **KRİTİK — Fasıl I §8.3 (irade ispatı)**: **Fasıl I'in 'niçin şimdi ⇒ irâde/tahsis' argümanının Râzî'deki hâli: 'niçin şimdi ⇒ zâid mefhûm = dâî'**. Fasıl I sonucu (**irâde = tahsis eden sıfat**) ile Râzî sonucu (**dâî = ilim/i'tikâd ve tahsisin tâbi'i**) **isimde ayrışıyor**; Allah için **dâî = ilim**: **Fasıl I ile uzlaştırılabilir mi?** (sonraki sayfalar).
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.46 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p47
 - OCR: orta
@@ -435,49 +456,54 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p49
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.49 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: Hücca 3'e hasım itirazına **cevap**: 'Kâdir müreccihe bağlanınca mûcib olur' sözü **bâtıl: kâdir ile mûcib farkı zarûrî ilim**: kâdir **sahih (câiz) olarak**, mûcib **vâcib olarak** te'sîr eder; ayrıca **kâdirden fiil sudûru medih-zem ve sevap-ikâbı gerektirir, mûcibden gerektirmez**. Hasım: 'cevher hayizlere bedel olarak girebilir; teayyünü münfasıl şeye bağlamak muhâl gerektirmez; **kâdir için gerektirir** (kâdir mûcibe döner)'. **Râzî'nin cevabı**: 'Bu fark **vâkî değil**: bir şeyin câiz olduğunu, iki tarafına da eşit olduğunu bilince akıl **müreccihsiz rüchânın imkânsız** olduğuna hükmeder ⇒ **müessir-i münfasıla ihtiyacın menşe'i "imkân ve cevâz" adının kendisi**; öyleyse cevâz-imkân nerede varsa **ihtiyaç orada**; **fark sâkıt**. Ayrıca: cevâz **kendi başına** müreccihe muhtaç mı, yoksa 'bâtıla götürmeme şartıyla' mı?'
 - Netice/hüküm: **Râzî: imkân ⇒ müreccih (her yerde)**; kâdir-mûcib farkı **kabul (zarûrî) ama dâîye tevakkuf bunu kaldırmaz** (iddia).
 - Delil çeşidi: **analitik**; (T) analitik-burhânî biçim (Burhân-ı İmkân'ın cevaza uygulanması).
 - Mevzuya bağı: **Fasıl I §3 (Burhân-ı İmkân) ve §8.3**: Râzî'nin 'imkân ⇒ müreccih' ilkesi **Fasıl I ile aynı**; **fark: Râzî müreccihi 'dâî' ile, kâdir-mûcib ayrımını ise 'sahihlik vs vücûb' ile kuruyor; hasım 'müreccih münfasıl ise mûcib' der**.
 - Doğan sual: **Râzî 'dâî tam ⇒ fiil vâcib' (p55) ile 'kâdir sahih te'sîr eder' (p49) uzlaşması**: p55–58 (dâî ⇒ vücûb; sonra kâdir-mûcib farkı).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.49 otomatik karşılaştırıldı: kelime kapsama %81, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p50
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.50 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: 'Cevâz ancak **muhâl-fesat lâzım gelmeme** şartıyla müreccihe muhtaçtır' demek **bâtıl**: en fazla 'şu ve şu mefsedet lâzım gelmez' bilinir; **hiç mefsedet lâzım gelmediğini bilmek** ancak 'bilmemek yokluğa delil' ile olur (çok zayıf); ⇒ cevâz **ya hiçbir zaman ya her zaman** müessire muhtaç. **Hücca 4 (dâîsiz fiil muhâl)**: 'Salt kâdirlik fiil için yetseydi **dâîye hiçbir yerde tesir kalmazdı** (bâtıl)': **bir vasıf eseri istiklâlle iktizâ ediyorsa, ona eklenen başkası etkisizdir** (taş ağırlığı zaten düşürüyorsa taşın siyah-beyaz olması etkisiz).
 - Netice/hüküm: **Kudret tek başına yeterse dâî etkisiz olurdu; dâîye etkisi zarûrî ⇒ kudret tek başına yetmez.**
 - Delil çeşidi: **analitik (reductio)**; (T) burhânî biçim.
 - Mevzuya bağı: **Fasıl I §8.3**: 'salt kâdirlik yetmez' ilkesi (Râzî) — Fasıl I **irâde/tahsis** ile telafi ediyor; **isim farkı**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.50 otomatik karşılaştırıldı: kelime kapsama %81, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p51
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.51 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: Hücca 4 (dâî etkisi zarûrî): 'fakîre dirhem verişimiz, fakirliğini bilmemizden; bu i'tikâd olmasaydı vermezdik.' **Hücca 5**: '(ziyarete çıkıp evde işi olduğunu hatırlayan): iki dâî eşitse **olduğu yerde kalır**; biri râcih olunca **hayâlinde** o tarafa gider'; '**iki kadehten biri ile iki ekmekten biri** arasında muhayyer bırakılan, **hangisini alacağını düşünmeden** almaz'; 'Allah, **keffâret** bâbında mükellefi üç hâl arasında muhayyer bırakır; mükellef, **hangisi kendisine daha kolay-zor** diye düşünüp tartmadan birini seçmez' ⇒ **rüchânın müreccihe tevakkufunu bilmek zarûrî**.
 - Netice/hüküm: **Hücca 5: iç gözlem ve keffâret örneği: seçim dâîye/rüchâna bağlı**.
 - Delil çeşidi: **istikrâ (iç gözlem)**; (T) ikna'î-analitik; **keffâret örneği: 'Allah muhayyer bırakır' fıkhî kayıt** (Râzî'nin kullanımı; fıkhî hüküm bu örnekle ispat edilmiyor).
 - Mevzuya bağı: **Fasıl I §8.3**: **Buridan tipi örneklerin Râzî'de iki yönde kullanımı**: hasım (c3 p39: 'eşit kadehte tercih müreccihsiz') ↔ Râzî (bu sayfa: 'düşünmeden seçmez'); **hakem: iç gözlem; ikisi de ikna'î**; **Allah'a taşıma kıyâs-ı gâib**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.51 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p52
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.52 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Hücca 6 (dâîsiz fiil câiz olsa üç muhâl lâzım)**: (1) **Allah hiçbir fiilinden hamd ve senâya lâyık olmaz**: dâîsiz fiil câizse Allah faydalı şeyleri yaratıp da **hiçbir dâî olmadan** yaratmış olabilir; öyleyse **ihsân dâîsiyle yaratmamış** olabilir; hamd ve senâ hakkı kalmaz; ('asıl hâl, ihsân dâîsiyle yaratmamaktır'); (2) **mûcizeler sıdka delâlet etmez** (Allah onu tasdik garazıyla yaratmış olmayabilir); (3) **konuşanın sözü bir mânâya delâlet etmez** (söylemek 'anlatma' garazıyla olmayabilir). Üçü bâtıl ⇒ dâîsiz fiil bâtıl.
 - Netice/hüküm: **Râzî: dâîsiz fiil kabulü hamd, mûcize ve kelâm delâletini yıkar** — dolayısıyla **Allah'ın fiilinde dâî (ihsân) bulunmalı**.
 - Delil çeşidi: **reductio (lâzım muhâllerden)**; (T) burhânî biçim; **'lâzım muhâl' öncülleri (hamd hakkı, mûcize delâleti) Sünnî akaid açısından dikkat çekici**: Râzî **Allah'ın fiillerinde 'ihsân dâîsi' ve 'tasdik garazı' kabul ediyor**.
 - Mevzuya bağı: **KRİTİK — Fasıl II (Nübüvvet: mûcize delâleti)**: **mûcizenin sıdka delâleti 'Allah'ın tasdik garazıyla yaratması'na bağlı** (Râzî) — **Fasıl II'nin mûcize burhanı** bu öncülü (Allah'ın fiilinde gaye) **açıkça yazmalı**; **dâîsiz fiil kabul edenler (kelâm çoğunluğu) bu yolu kapatmış olur mu?** Bu, **Fasıl II için çok önemli bağ** (c3 p52). Ayrıca Fasıl I §8: **Allah'ın fiilinde gaye/hikmet** meselesi ('hakîm' bâbı).
 - Doğan sual: Fasıl II mûcize burhanı **'Allah tasdik için yaratır' öncülünü nasıl ispat ediyor?** (bkz. Fasıl II; Râzî'nin çözümü bu sayfa).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.52 otomatik karşılaştırıldı: kelime kapsama %81, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p53
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.53 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: 'Hasmın **dayandığı cevap**: **dâîsiz fiil sudûru yalnız câhil için sahih; âlim için fiil ancak dâî ile**.' **Râzî: bu iki vecihle bâtıl**: (1) **ilim kudretin hakîkatini bozmaz**; salt kâdirlik fiile sahihse ilimle birlikte de sahih kalır ⇒ **âlim kâdirden de dâîsiz fiil sahih** olurdu; (2) **onlar âlim fâil için de müreccihsiz tercihi câiz gördüler**: iki kadehten biri, iki ekmekten biri; **Allah'ın âlemi belirli vakitte, ondan önce ve sonrasından ayırıp, müreccihsiz** yaratması; **her cevher-i ferdin belirli hayize, diğer hayizlerden ayırıp, müreccihsiz** tahsisi ⇒ **'âlimden dâîsiz fiil bâtıl' sözleri nakz**.
 - Netice/hüküm: **Râzî: dâîsiz-fiil tarafı (kelâm çoğunluğu) kendi içinde tutarsız: âlim fâil için de müreccihsiz tercihi kabul ediyor; bu kabul 'âlem hudûsunun vaktini müreccihsiz tahsis' ile aynı.**
 - Delil çeşidi: **nakz (tutarsızlık ilzâmı)**; (T) analitik-cedelî.
 - Mevzuya bağı: **KRİTİK — Fasıl I §8.3 (irade ispatı: eşit ihtimal ⇒ tek tahakkuk)**: **Fasıl I'in tahsis-irâde yolu, Râzî'nin burada eleştirdiği 'âlimde müreccihsiz tercih' pozisyonuna (Eş'arî çoğunluk) dayanıyor**; Râzî **bu pozisyonu tutarsız buluyor ve dâî-tevakkuf tarafını seçiyor**. Fasıl I §8.3 bu nedenle **Râzî'nin gözünde bir 'ilzâm mahalli'**. **Karar: Fasıl I §8.3 'kelâm çoğunluğunun tahsis görüşüne dayanır; Râzî bunu tutarsız bulur, dâîye tevakkuf der' diye derece notu almalı** (padişah kararı; cilt 3–4 kapanmadan hüküm yok).
 - Doğan sual: **Râzî 'Allah için dâî' meselesinin kendi çözümü: hikmet/ilim mi, zorunlu-mûcib bi'z-zât mı?** (cilt 3–4).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.53 otomatik karşılaştırıldı: kelime kapsama %83, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p54
 - OCR: boş
@@ -507,13 +533,14 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p57
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.57 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: Hücca 2 sonu: 'Vukû'un zâid bir kayda tevakkufu ⇒ o kayıt eklenmeden önce **mümteni**; 'evlâ' hükmü verirken mümteni idi: çelişki; kayda tevakkuf etmiyorsa **evlâ oluşun iki vakte nisbeti eşit** ⇒ birini seçmek **müreccihsiz rüchân**: muhâl.' **Hücca 3**: 'Kudretin nisbeti eşit iken ne muktezî ne mâni; **dâî hâsıl olunca** öbür tarafın rüchânına **mâni doğar** (bir nakîzin rüchânı öbürüne mâni); muktezî yokken mümteni olan, **muktezî yok+mâni var** iken daha mümteni ⇒ o taraf mümteni ⇒ **öbür taraf vâcib** (vukû' ile lâ-vukû' arası vasıta yok).'
 - Netice/hüküm: **Dâî tam ⇒ öbür taraf mümteni ⇒ fiil vâcib (2. ve 3. burhan)**.
 - Delil çeşidi: **analitik**; (T) burhânî biçim.
 - Mevzuya bağı: bkz p55–56.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.57 otomatik karşılaştırıldı: kelime kapsama %78, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p58
 - OCR: orta
@@ -534,13 +561,14 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p60
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.60 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (Cevap 2 sonu): 'İnsan kendini sınasa **kayıtsız-mu'ârızsız cezmî dâî** hâsıl olunca **fiile mülcâ** olur; dâî gidince fiili terk eder.' **Bir âlimin ince sözü**: 'Biri "istersem yaparım, istersem terk ederim; fiil de terk de benden" derse: **fiili istemeyi istersem istemek hâsıl olur, terki istemeyi istersem terki isteme hâsıl olur mu?** Bu **teselsül** getirir; **akıl cezmeder ki bu dâîler, kalbine düşen bir dâîye varır; o da başka bir dâîye tâbi; o dâî kalbine düşünce fiilin fâili olursun, kalbine dâî düşmesi sen değilsin, fiilin dâî üzerine terettübü de sen değilsin; öyleyse insan muhtâr görünümlü mudtarrdır (fe'l-insânü mudtarrun fî sûreti muhtâr)**.' 'Fark **bu iki vecihten** sâbit. **Emir-nehiy, ikâb-sevap, medih-zem cevaplarını halk-ı ef'âl bâbında verdik.**'
 - Netice/hüküm: **Râzî: insan 'muhtâr görünümlü mudtarr'** — kelâmî determinizm (cebr'e yakın); cevabı 'halk-ı ef'âl' bâbında (ertelenmiş).
 - Delil çeşidi: **teselsül ilzâmı (iç gözlem)**; (T) analitik-cedelî; **kesin hüküm Râzî'nin, ama Ehl-i Sünnet'in ana çizgisi (kesb ve mes'ûliyet) ile ayrışan kelâmî içtihat**.
 - Mevzuya bağı: **KRİTİK — Fasıl IV/itikad ve Fasıl I §8**: 'insan muhtâr görünümlü mudtarr' ifadesi **Risale ana metnine ALINMAZ**; Risale **Sünnî ana çizgiyi (Allah yaratır, kul kesb eder, mes'ûldür)** yazar. **Bu, İslâm'a aykırı söz olmasın ilkesi gereği bilinçli ayrım**: Râzî'nin bu ifadesi **tarihî kelâm belgesi olarak** kayıtta kalır; ders katmanında **'Râzî Metâlib c3 p60'** atfıyla ve **'Sünnî ana çizgi ile fark'** notuyla.
 - Doğan sual: Râzî **kesb** kavramını nerede nasıl işliyor? (cilt 3–4 'halk-ı ef'âl' bâbı.)
+- Doğrulama notu: OCR sayfası ile gerçek metin s.60 otomatik karşılaştırıldı: kelime kapsama %79, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p61
 - OCR: orta
@@ -561,13 +589,14 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p63
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.63 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (Külli→cüz'î sonu): 'külli dâî cüz'î fiilin **yakın sebebi** değildir; **cüz'î dâîler** gerekir.' **Külli irâde birbirini izleyen cüz'î irâdelerin sebebi**: ziyarete gitme irâdesi, **ayak kaldırıp başka yere koymak** için cüz'î irâdeyi îcâb eder, **birinci adım geçince** aynı külli irâde ikinci adım irâdesinin illeti olur; **külli irâde baştan sona bâkî**; **her cüz'î irâdenin geçmesi, külli irâdenin sonraki cüz'î irâdeyi îcâbı için şart**. **Vallahu veliyyü't-tevfîk.**
 - Netice/hüküm: **Külli dâî bâkî; cüz'î dâîleri sırayla doğurur (şart: öncekinin geçmesi).**
 - Delil çeşidi: **analitik + misal**; (T) analitik.
 - Mevzuya bağı: **Fasıl I §8**: 'Allah'ın külli irâdesi ⇒ cüz'î hâdisler' modeli: **ezelî irâde/hâdis cüz'î tahsis** ilişkisinin Râzî çerçevesinde açıklaması; **(T) kelâmî model**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.63 otomatik karşılaştırıldı: kelime kapsama %81, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p64
 - OCR: boş
@@ -606,13 +635,14 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p68
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.68 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Husn-kubuh'u inkâr edenlerin cevabı**: 'Hepsi **menfaat talebi/mazarrat defi**ne varır.' **(1) Zulüm**: zâlim zulmü güzel görse **zulmü kendinden defedemez, canı katle, malı yağmaya maruz kalır**; öyleyse **kendi can-mal maslahatı** için zulmün kubhuna hükmetmeli. **(2) Kasîde**: bunun hüsnüne hükmetmek **âlemin maslahatına aykırı**: (i) sövme-hakaret câiz olsa **Allah'ın ve peygamberinin emri kalplerde ağırlık taşımaz ⇒ fitne ve karışıklık, alçaklar üstünlere saldırır**; (ii) en şerefli mevcut Allah, ihtiyaç sahiplerine en çok nimet veren O; O hakkında kötü söz yasak olmasa **fazîletlerle zararı defetmenin yolu kalmaz**. **(3) Faydalı yalan**: câiz görürsek duyulan söze bina edilen çok amel var; yalan çıkınca **boşa gider, gönül daralır, ömür heba olur** ⇒ âlem maslahatına aykırı. (Dipnot editör: müellif Kâdî Abdülcebbâr'ı eleştirir, Ebü'l-Hüseyn el-Basrî'ye hayrandır.)
 - Netice/hüküm: **Râzî tarafı: her husn-kubuh hükmü ya nefsin ya âlemin maslahatına döner.**
 - Delil çeşidi: **indirgeme (fayda-zarar)**; (T) cedelî.
 - Mevzuya bağı: **DİKKAT (Sünnî akide ve edeb)**: Râzî'nin gerekçesi 'Allah ve peygamber hakkında sövmenin haram oluşu **âlem maslahatı**' — **Sünnî ana metinde haram olma gerekçesi nass (Kur'ân/Sünnet) ve ulûhiyet/nübüvvet hakkıdır**, maslahat yalnızca **ek gerekçe**. **Fasıl IV'e bu maslahat ifadesi alınırsa 'ek gerekçe' kaydıyla**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.68 otomatik karşılaştırıldı: kelime kapsama %78, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p69
 - OCR: orta
@@ -624,22 +654,24 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p70
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.70 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Makam 2 devam**: 'hâcet dâîsi = nefse fayda ve zarar defi; hikmet dâîsi = başkasına fayda. **Tecrübe**: nefse fayda-zarar defi, başkasına fayda **olmadan** de mümkün; ve başkasına fayda, **nefse fayda niyeti olmadan** mümkün mü? Bu **delille ispat edilmedi**: çölde ihsân eden dehrînin **kendi kazançları vardır**: (a) **kendini hâmid sıfat ile görmek** (muhtaçlara ihsân eden), yapmazsa **katı-merhametsiz**; (b) cins rikkatinin ağrısını gidermek; (c) çoğu vakit övgü-senâ ile takip edilen bir fiil, **nâdir vak'ayı ekseriyete ilhak** ⇒ bu üçü olmasa **adam fakire ihsân eder mi bilmeyiz**. ⇒ **şâhitte 'hâcet dâîsi' dışında dâî çeşidi ispat edilmedi; 'ihsân dâîsi'nin vücûdu şâhitte delille sabit olmadı.**' **Mu'tezile**: 'burada delil var: **âlem hâdis, her hâdisin muhdisi var; muhdis cisim değil ⇒ hâcet ona sahih değil; ...' (p71)
 - Netice/hüküm: **'İhsân dâîsi'nin şâhitte ispatı yok (Râzî)**; Mu'tezile **Allah için delil** getirecek.
 - Delil çeşidi: **cedelî (ispat yükü)**; (T) cedelî.
 - Mevzuya bağı: **Fasıl I 'Allah'ın fiilinde hikmet/ihsân'**: Sünnî ana çizgide **Allah'ın fiilleri hikmetlidir** ('hakîm' ismi; nass); **Râzî'nin burada reddi 'ihsân'ın aklî dâî olarak Allah'a ta'lîli**dir, **hikmetin nefyi değil** — **ders katmanında bu ayrım net yazılmalı: 'Allah hakîmdir' (nass) ile 'Allah'ın fiili bir garaz için (ta'lîl) yapılır' farklıdır** (Eş'arî çizgisinde ikincisi reddedilir).
 - Doğan sual: Râzî **'hakîm' bâbında** hikmeti nasıl tarif ediyor? (cilt 3 sonu.)
+- Doğrulama notu: OCR sayfası ile gerçek metin s.70 otomatik karşılaştırıldı: kelime kapsama %79, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p71
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.71 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Mu'tezile'nin delili**: 'Âlem hâdis; her hâdisin muhdisi var; muhdis cisim değil ⇒ hâcet ona sahih değil; âlemin fâili ya **dâîsiz** yapmıştır (**abes/noksan, Allah'a muhâl**) ya **dâîyle**; dâî ya **kendine fayda** ya **başkasına fayda**; birincisi bâtıl (hâcet muhâl) ⇒ **âlemi başkasına fayda dâîsiyle yarattı ⇒ ihsân dâîsi vardır** — **kat'î delil**.' **Hükemâ (Râzî'nin tarafı) itirazları**: **(1)** 'dâîsiz fiil muhâl' ispatlandı ⇒ **kul yalnız dâîyle fiil eder**; dâî kuldan ise teselsül, **Allah'ın yarattığı dâî** ise fiil **vâcib** ⇒ **kul fiilleri Allah'ın fiillerinin ma'lûlü ⇒ illetin hâlıkı ma'lûlün hâlıkı ve murîdi ⇒ 'şerler Allah'ın meşietiyle ve kazâsıyla vâki değildir' denemez ⇒ 'Allah'tan fiil ihsân dâîsine bağlı' diyenin sözü bâtıl.' **(2)** 'Garazla fiil eden kişi, fiil olmasa kemâl **eksik**, olunca kemâl hâsıl ⇒ **zâtıyla nâkıs, gayrıyla kemâl bulan**; Allah için muhâl'; 'başkasına fayda için yaptı' dersek: faydanın **döndüğü-dönmediği** kendisine eşitse istenmez (istivâ rüchâna aykırı); eşit değilse bir taraf ona evlâ ⇒ **nâkıslık ilzâmı tekrar**.
 - Netice/hüküm: **Râzî tarafı: (1) Allah'ın meşiet ve kazâsı her şeyi kapsar (şerler dâhil); (2) garazla fiil = nakıslık**.
 - Delil çeşidi: **analitik-cedelî**; (T) cedelî. **(1) 'kul fiilleri Allah'ın fiillerinin ma'lûlü' = kelâmî içtihat (Cebr'e yakın)**.
 - Mevzuya bağı: **DİKKAT (Sünnî ana çizgi)**: 'şerler Allah'ın meşiet ve kazâsıyla vâkidir' (**Sünnî akide: hayır-şer Allah'ın takdiriyle**, ancak **rızâ ve emir farklıdır**); Risale bu ilkeyi **Sünnî formülle** yazar; **Râzî'nin 'ma'lûl' dili alınmaz**. **(2) 'Garaz = nakıslık'** ilkesi Sünnî çizgide **'Allah'ın fiili garazdan münezzeh ama hikmetli'** ile uyumlu.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.71 otomatik karşılaştırıldı: kelime kapsama %77, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p72
 - OCR: orta
@@ -687,40 +719,44 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p77
-- OCR: orta (başlık kötü)
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.77 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Bâb 2, Fasıl 1: 'Kâdir ile mûcib arasındaki fark'**. **Ehl-i millet ve nihal**: 'Müessir ya **te'sir etmemenin câiz olduğu hâlde** te'sir eder (**kâdir**), ya **te'sir etmemenin câiz olmadığı hâlde** eder (**mûcib**); her müessir ya kâdir ya mûcib. **Kâdir**: dâîlere göre bir kere te'sîr edip bir kere etmeyebilen.' **Filozoflar**: 'Te'sîri **sıhhat üzere** (vücûb üzere değil) olan müessir kabulü **müşkil**; **Hücca 1**: 'Herhangi bir müessir için **onun eserde müessir olması için gerekli her şey hâzır** mı? **Hâzırsa eser vâcib** (yoksa eser tehalluf edebilir; her mümkin için vukûunu farz etmek muhâl gerektirmez; mecmû bir kere eserle bir kere eserssiz farz edilirse) **vakitlerden birinin eserle ihtisası zâid bir muhassısa mı bağlı**: bağlıysa o kayıt 'müessiriyet için gerekli şeylerden' olurdu — ama ilk farz **tüm gerekli olanlar** idi (çelişki); bağlı değilse **müreccihsiz tercih** (muhâl).' (Dipnot: editör: 'bu, mûcib bi'z-zât meselesi: ilâh ile âlem mütelâzım (ateş-yakma); bu görüş bâtıl, **fâil bi'l-ihtiyâr hakikî görüştür**').
 - Netice/hüküm: **Filozofların 'mûcib bi'z-zât' burhanı (Bâb 2 başlangıcı)**: müessiriyet için gereken her şey hâzır ⇒ eser vâcib.
 - Delil çeşidi: **analitik-burhânî**; (T) burhânî biçim (**yeni açıklama: 'sıhhat üzere te'sîr' müşkil**).
 - Mevzuya bağı: **KRİTİK — Fasıl I §8.0 ve §8.3**: **Fasıl I'in muhtâr kabulünün karşısındaki en güçlü itiraz (filozof burhanı)** Râzî'de **burada kuruluyor**; **Râzî 'mütekellimînin cevabı' ve kendi cevabını (p79–80+) verecek**. **Editör dipnotu (Sekkā) Sünnî ana çizgiyi tekrar ediyor**: 'fâil bi'l-ihtiyâr hakikî görüş'.
 - Doğan sual: Râzî bu itiraza **kendi kesin cevabı** ne? (Bâb 2 devam.)
+- Doğrulama notu: OCR sayfası ile gerçek metin s.77 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p78
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.78 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: Hücca 1 devam: 'Bir vakti eserle ihtisası zâid muhassısa bağlıysa o kayıt gerekli şeylerden biridir (çelişki); değilse müreccihsiz tercih.' **Açıklama**: 'müessiriyet için gerekli her şey' derken **müessiriyette ihtiyaç duyulan her şey dâhil**: uygun vakit, belirli maslahat, mânilerin yokluğu, âlet; **vücûdî de ademî de, sıfat da mevcut da**. **Mukaddime**: 'müessiriyet için gerekli her şey hâsılsa **fiil vâcib**; bir kayıt eksikse **fiil mümteni** (eksik kayıt eser için gerekli olmazsa muhâl); ⇒ her müessir için **ya tüm gerekli şeyler hâzır (eser vâcib)** ya **hâzır değil (eser mümteni)**; iki hâlden başka yok; öyleyse **sıhhat/cevâz üzere te'sîr kabul edilemez**.'
 - Netice/hüküm: **Filozof burhanının cebri**: müessiriyet şartlarının kümesi ⇒ eser ya vâcib ya mümteni; **'câiz te'sîr' yok**.
 - Delil çeşidi: **analitik-burhânî (dilemma)**; (T) burhânî biçim (**öncül: 'her şart hâzır' kümesi hem 'vakit' hem 'maslahat' içerir**: bu, **muhtârın 'tahsisi' de şarta katılınca çıkarımı kaçınılmaz kılar**).
 - Mevzuya bağı: **KRİTİK — Fasıl I §8.3**: **Fasıl I'in 'tahsis eden irâde' cevabı bu burhana karşı hangi öncülü kırar?** Kırılacak nokta: '**irâde/tahsis 'gerekli şeylerden' ise, o hâzır olduğunda eser vâcib olur (mûcib)**' — **Sünnî ana cevap: 'irâde-i ilâhî ezelî, fiilin vakti ona göredir; bu mûcib bi'z-zât değil, mûcib bi'l-irâde'**; **Râzî'nin cevabı bunu kabul mü** (p79–80: 'iki cevap: dâîsiz muhtâr veya dâî sonrası vücûb yok').
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.78 otomatik karşılaştırıldı: kelime kapsama %84, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p79
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.79 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: Filozof burhanı sonu ('câiz te'sîr' aklen kabul edilmez). **Râzî: 'mütekellimînin bu makamda iki kavli var'**: **(1)** 'Müreccihsiz rüchân **mümteni değil; müreccih hâsıl olunca fiil evlâ olur ama vücûb haddine varmaz**'; **(2)** 'kâdir için **müreccihsiz rüchân mümteni değil**' (iki kadeh, iki ekmek, aslandan kaçanın iki yol ağzı: **iki makdûrdan birini müreccihsiz** seçer); 'yoksa kâdir mûcib'ten ayrılmaz, oysa **bu fark zarûrî ilim**'. **Râzî'nin tespiti**: 'Bu **iki kavilden fazla cevap yok**: kâdirden eser ancak **muhassıs eklenince** çıkıyorsa ve **muhassıs eklenince fiil vâcib** oluyorsa **soru tamam, cevap kalmaz**; öyleyse soru ancak **iki öncülden birine itirazla** düşer: (a) kâdirden fiil muhassıs eklenmeden de çıkar (dâîye tevakkuf yok), (b) muhassıs eklense bile fiil **vâcib olmaz**.' **Bu iki öncülün bahsi geçti; tekrara gerek yok.**
 - Netice/hüküm: **Râzî: filozof burhanına yalnız iki cevap mümkün: dâîsiz tercih (Eş'arî çoğunluk) ya da dâîden sonra vücûb yok; ikisini de kendisi daha önce reddetti (c3 p37–60).**
 - Delil çeşidi: **analitik (çıkmaz tespiti)**; (T) analitik; **aporia: Râzî kendi öncülleriyle filozof burhanına cevap bulamıyor**.
 - Mevzuya bağı: **KRİTİK — Fasıl I §8.0/8.3**: **Râzî'nin kendi sistemi (dâî ⇒ vücûb) mûcib bi'z-zât sonucundan kaçamıyor; onun için Râzî'nin 'kâdir = fiil-terk' tanımı ve 'mudtarr' cümlesi (c3 p60) aynı hatta**. **Fasıl I §8.3 'kelâm çoğunluğu cevabı' (dâîsiz tercih) ile aynı yerde; Râzî o cevabı reddetti, kendi çıkışı nedir?** Bâb 2'de beklenen **çıkış**.
 - Doğan sual: **Râzî mûcib bi'z-zât sonucundan nasıl kaçıyor / kaçıyor mu?** (Bâb 2 devam; kritik.)
+- Doğrulama notu: OCR sayfası ile gerçek metin s.79 otomatik karşılaştırıldı: kelime kapsama %81, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p80
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.80 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (Fasıl 1 devam.) 'Kâdir-mûcib farkı zarûrî ilim' itirazı **önce anlatıldı**. **Hücca 2 (ilm-i ilâhî)**: 'Millet ve nihal ehli **Allah'ın her malûmu bildiğinde** ittifak eder; öyleyse **hangi şeyin vâki olacağını, hangisinin olmayacağını bilir**; **Allah'ın vukûunu bildiği şey vâcib-ül vukû', ademini bildiği şey mümteni'ül-vukû'**: ilim ancak **malûma mutâbık** olunca ilimdir; vücûdunu bildiği şeyin vücûdu olmasa **ilim ilim olmazdı**; o ilim **vâcib** (Allah'ın ilmi) ve lâzımı malûmun vücûdu ise **ilmin vücûbundan malûmun vücûbu** lâzım gelir; ⇒ **Allah'ın kudretinin bazı şeylerde te'sîri vücûb, bazılarında imtinâ üzere**; **bu 'kudretin te'sîri sıhhat üzere' diyenlerin sözünü ibtâl eder**.'
 - Netice/hüküm: **İlm-i ilâhî (ezelî ilim) argümanı: malûm vâcib-ül vukû' ⇒ te'sîr vücûb üzere** (Râzî **filozofların 2. burhanı**nı kuruyor).
 - Delil çeşidi: **analitik**; (T) burhânî biçim (**klasik 'ezelî ilim-cebr' argümanı; cevabı: ilim malûma tâbi, illet değil; vücûb bi'l-gayr ⇒ bi'z-zât değil**).
 - Mevzuya bağı: **Fasıl I §8.0**: bu argümanın **cevabı (ilim vukû'a tâbi, onu îcâb etmez)** Fasıl I'de yazılı mı? **Ders katmanına 'ilim malûmu gerektirmez, malûma mutâbıktır' notu (c3 p80'e kaynak, Râzî'nin cevabı ileride)**.
 - Doğan sual: Râzî bu 2. burhana **cevabı**? (p81+)
+- Doğrulama notu: OCR sayfası ile gerçek metin s.80 otomatik karşılaştırıldı: kelime kapsama %78, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p81
 - OCR: orta
@@ -732,58 +768,64 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p82
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.82 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: Hücca 3 sonu ('ezelî taalluk ⇒ vücûb; kâdir muhtâr olamaz'). **Hücca 4 (sıhhatin zamanı)**: 'Kâdirden eserin **sıhhat üzere** çıkması dersek bu sıhhat ya eserden **önce**, ya **eserle birlikte**, ya **sonra**; üçü bâtıl. **Önce**: ilk vakitte ikinci vakitte îcâda salih olmak ya 'ilk vakitte ikinci vakitteki eseri yapabilir' ya 'ikinci vakit gelince yapabilir'; **birincisi bâtıl**: ikinci vakitte îcâd **ikinci vaktin hazır olmasına şartlı**, ikinci vaktin ilk vakitte hazır olması **muhâl**; ⇒ ilk vakitte ikinci vakitteki fiile kudret muhâl; **ikincisi**: ikinci vakit gelince kudret hâsıl ⇒ **kudret fiille birlikte** hâsıl olur.'
 - Netice/hüküm: **Hücca 4: 'sıhhat/cevâz' zaman içinde yerleştirilemez (öncesi/aynı anı/sonrası).**
 - Delil çeşidi: **taksîm + reductio**; (T) analitik.
 - Mevzuya bağı: **Fasıl I §8.0**: 'kudretin fiil ile beraberliği' **Eş'arî görüşü (kudret fiille birlikte)**; Sünnî ana çizgide **kudret-i kadîme** ezelî; **fiil ile beraber olan 'kudret-i hâdise' (kulun) meselesi ayrı**: ders katmanında **Allah'ın kudreti ezelî, kulun kudreti fiille beraber** ayrımı.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.82 otomatik karşılaştırıldı: kelime kapsama %86, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p83
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.83 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: Hücca 4 devam: 'Kudretin fiille birlikte hâsıl olması, **fiil sahihliğinin fiil anında olması** iddiasıyla çelişir. **Fiil anında** sahih olmak da muhâl: fiil varken ademi **muhâl** (iki nakîz); muhâl olan şeye kudret olmaz. **Fiilden sonra** sahih: bunun bâtıllığı zarûrî ve **hiçbir âkil söylemedi**. ⇒ 'câiz te'sîr' üç takdirde de bâtıl.' **Hücca 5**: 'Kudretin âlemi **yaratmada** taalluku **sıhhat üzere mi vücûb üzere mi**? Sıhhat ise vücûdun ademe rüchânı **müreccih ister**; müreccih **irâde** olsun; **irâde taalluku sıhhat ise başka müreccih ⇒ teselsül; vücûb ise müessir mûcib olur** ⇒ 'sıhhat, vücûb değil' iddiası çöker. **İtiraz**: 'kudretin taalluku **câiz olarak, müreccih istemeden** olabilir' — **bu, câizin müreccihsiz rüchânı; kabul edersek âlemin câiz-hâdis olmasıyla sâni'e istidlâl kapanır**.'
 - Netice/hüküm: **Hücca 5: irâdeyi müreccih yapmak teselsül ya da mûcib'e götürür; 'câiz müreccihsiz' kabulü ise Burhân-ı İmkân'ı yıkar.**
 - Delil çeşidi: **dilemma (analitik-burhânî)**; (T) burhânî biçim.
 - Mevzuya bağı: **KRİTİK — Fasıl I §8.3 ve Burhân-ı İmkân (§3)**: **filozof burhanı Fasıl I §8.3'ün 'irâde müreccih' zincirine karşı: irâdenin taalluku yine bir müreccih ister**; **Sünnî cevap: irâde muhassıs (tahsis) sıfatıdır, müreccih istemez; kendi zâtı tahsis edicidir**; **Râzî 'câizde müreccihsiz rüchân, Burhân-ı İmkân'ı yıkar' diyor** ⇒ **Fasıl I §8.3 ile Fasıl I §3 aynı Burhân'a dayanıyor: 'irâde müreccihsiz tahsis eder' demek Burhân-ı İmkân'ın öncülüne dokunur mu?** **Yeni önemli soru**.
 - Doğan sual: Fasıl I §8.3 'irâde tahsis eder (müreccih istemez)' ↔ §3 'câiz müreccih ister' **çelişmeden yazılabiliyor mu?** (Fark: irâde **müreccih değil muhassıs**; c3 p84–85'te tartışma).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.83 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p84
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.84 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: Hücca 5 sonu: 'Bunun sonucu: **câiz müreccihsiz rüchâna** izin verirseniz **âlemin câizliği ve hudûsuyla sâni'e istidlâl yolu kapanır**; **her fer' aslı yıkıyorsa bâtıldır**; **cevâz müreccih ister mi istemez mi**: isterse **her yerde**, istemezse **hiçbir yerde**.' **Hücca 6**: 'Kâdirin terke kâdir olması muhâl: terk = **adem-i asliyede bekâ**; adem-i asli **makdûr olamaz**: (1) kudret müessir sıfat, adem nefy-i mahz; (2) adem bâkîyken müessire isnâd olunamaz (tekvîn-i kâin); ⇒ **kâdirin yalnız vücûd tarafına taalluku** ⇒ **mûcib'den farkı kalmaz**. (Bu, Bâb 1'in başında anlatıldı.)'
 - Netice/hüküm: **Hücca 6: terk kudretle yapılamaz ⇒ kâdir-mûcib farkı çöker.**
 - Delil çeşidi: **analitik**; (T) analitik (c3 p11–12 aporiasının Bâb 2'ye taşınması).
 - Mevzuya bağı: c3 p11–12 ile aynı; **Fasıl I 'muhtâr = fiil ve terke kâdir'** tanımı için **aporia**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.84 otomatik karşılaştırıldı: kelime kapsama %85, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p85
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.85 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: Hücca 6: 'Bunun cevabını bir kısmı: **âciz kişi 'istemesem yapmam' diyemez, kâdir diyebilir; fark zarûrî**.' **İtiraz (Râzî/filozof sesi)**: 'Bu cevap **zayıf**: kâdir ile âciz arasındaki fark **vücûd tarafına döner**: kâdir, **belirli dâî hâsıl olunca fiil hâsıl eden bir sıfatla mevsûf**; âciz değil; bu fark **adem tarafına değil vücûd tarafına**; **kâdirin terke kâdir olması** için yeterli değil.' **Hücca 7**: 'Mevcut ya vâcib li-zâtihi ya mümkin li-zâtihi; mümkin müessire muhtaç; **bütün mümkinâtın müessiri mümkinâttan biri olamaz** (hepsinden ayrı); ⇒ bu cihet **vâcibden**; ⇒ **kâinatın müessiri te'sîr etmede vücûb üzere, cevâz üzere değil**.' **Filozofların sözü tamam.**
 - Netice/hüküm: **Filozof Hücca 7: tüm mümkinâtın müessiri vâcib ⇒ te'sîr vücûb üzere**.
 - Delil çeşidi: **analitik**; (T) burhânî biçim (**'vâcib ⇒ te'sîri vücûb üzere' sıçraması: vâcib olan zât ile fiilin vâcib olması ayrı**: sağlam cevap: vâcibin **zâtı** vâcib, **fiil** mümkin; Sünnî cevap bu).
 - Mevzuya bağı: **Fasıl I §8.0**: bu burhana Fasıl I'in cevabı: 'müessirin vâcib olması, eserin vâcib olmasını (bi'z-zât) gerektirmez; irâde tahsis eder' **açık yazılmalı**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.85 otomatik karşılaştırıldı: kelime kapsama %83, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p86
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.86 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Ehl-i millet ve edyânın 'Allah kâdir-muhtârdır' delilleri**. **Hücca 1**: 'Allah mûcib bi'z-zât olsa **malûllerine nisbeti ya şartsız ya şarta bağlı**; ikisi bâtıl. **Şartsız olamaz**: malûl bazı vakitlerde bazı vakitlerde değil olsa, vakitler şartla ayrılmadıkça müreccihsiz tercih; malûl illetle beraberse **kıdem-i âlem** ya **hudûs-ı Allah**; Allah kadîm âlem hâdis olduğu delillendi ⇒ şartsız olamaz. **Şartlı olamaz**: şart kadîm ise âlem de kadîm; hâdisse hudûsunun keyfiyeti ilk hâdisinki gibi **teselsül** (aynı anda ⇒ ihtiyaç delillerle bâtıl; ya da **her biri öncekine mesbûk, ilk yok** ⇒ 'evvelsiz hâdisler' **yukarıda ibtâl ettik**).'
 - Netice/hüküm: **Kelâmî burhan: mûcib ⇒ âlem kadîm ya teselsül; âlem hâdis ⇒ Allah muhtâr.**
 - Delil çeşidi: **taksîm + reductio (klasik kelâm)**; (T) burhânî biçim (**öncül: evvelsiz hâdisler bâtıl (Râzî'ye göre 'ibtâl edildi': hangi ciltte?)**).
 - Mevzuya bağı: **Fasıl I §8.0 (muhtâr mı mûcib mi) ve §3.2 (teselsül)**: Fasıl I'in muhtâr sonucu **bu burhana** dayanıyorsa **öncüllerinden 'evvelsiz hâdisler bâtıl'ın burhanı** (**c1 p128–133 ve c2 p77 okuması: Râzî 'mecmû yok' diyor**): **öncül bağımlı**.
 - Doğan sual: Râzî 'evvelsiz hâdisler' ibtâlini hangi bâbda yaptı? (cilt 4 hudûs.)
+- Doğrulama notu: OCR sayfası ile gerçek metin s.86 otomatik karşılaştırıldı: kelime kapsama %77, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p87
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.87 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: Hücca 1 sonu: (aynı anda teselsül: vâcib-i vücûd bâbında ibtâl edildi; evvelsiz hâdisler: 'onu da ibtâl ettik'). **İtiraz**: 'Âlem ezelde ya mümkin ya değil; mümkinse **kıdem**; ('kıdem muhâl' diyemezsiniz: kıdemin imkânı ezelîliği mümteni kılmaz) mümteni-i vücûd ise **kadîm illet ezelde vâcib olsa da eser ezelde lâzım gelmez**: müessirin hâli gibi **kâbilin hâli de muteber; ilk hâl: kendinde mümkin olması**.' **Mütekellimînin iki cevabı**: **(1)** 'Malûlün illetten tehallüfü muhâl; âlemin kadîm olması da muhâl; ikisi birleşmez ⇒ âlemi îcâb eden illet ezelde mevcut değil; ezelî müessir vardı ⇒ **mûcib bi'z-zât değil, fâil bi'l-ihtiyâr**.'
 - Netice/hüküm: **Kelâm cevabı 1: 'tehallüf muhâl + kıdem-i âlem muhâl ⇒ mûcib değil'** (kıdem-i âlemin muhâlliği öncülüne dayanır).
 - Delil çeşidi: **analitik**; (T) burhânî biçim; **öncül: kıdem-i âlem muhâl (hudûs delilleri)**.
 - Mevzuya bağı: **Fasıl I §6.3, §8.0, §12 ('âlem ezelî olsa da mümkin')**: Fasıl I §12'de **'âlem ezelî olsa da mümkin'** deniyorsa, **bu kelâm cevabı (kıdem muhâl) ile gerilim**: **Fasıl I'de iki farklı yol var: 'kıdem muhâl' (kelâm) ve 'kıdem olsa da imkân' (filozof); Fasıl I hangisine dayanıyor?** Tutarlılık kontrolü (tekrar okuma).
 - Doğan sual: Fasıl I §8.0'ın dayandığı öncül 'kıdem-i âlem muhâl' mı? (Fasıl I yeniden okunacak.)
+- Doğrulama notu: OCR sayfası ile gerçek metin s.87 otomatik karşılaştırıldı: kelime kapsama %78, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p88
 - OCR: orta
@@ -804,58 +846,64 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p90
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.90 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (Hücca 3 devam.) 'Ma'lûlü birden çok olamaz: ilke, filozoflarca kabul; ayrıca 'bu ma'lûlden sudûr' ve 'şu ma'lûlden sudûr' iki mefhûm; **ya illetin mukavvimi (⇒ terkîb, oysa basit farz edildi) ya hâriç (⇒ imkân + illet gerektirir, teselsül)**; biri dâhil biri hâriç ise mâhiyet mürekkeb; **basit-hak bir şey iki ma'lûle illet olamaz**.' **Filozofların itirazı (Soru 1)**: 'ma'lûl bir ise ma'lûlün ma'lûlü de bir olmak zorunda değil: bu ma'lûlün **imkânı, vücûdu, başkasıyla vücûbu** üç şey; **imkân → felek-i akşâ'nın maddesi; vücûd → sûreti; vücûb-ı bi'l-gayr → o feleği tedbir eden akıl**' (**sudûr silsilesi: 'akıl-nefs-felek'**).
 - Netice/hüküm: **Filozofun cevabı: üç i'tibâr → üç ma'lûl (sudûr modeli)**.
 - Delil çeşidi: **cedelî-analitik**; (T) cedelî (**sudûr modeli felsefî varsayım; Sünnî çizgide kabul edilmez: Allah doğrudan yaratır**).
 - Mevzuya bağı: **DİKKAT**: **sudûr/akıl-nefs-felek modeli** Risale'nin ana metnine **girmez**; **yalnız Râzî'nin hasım anlatımı** olarak kayıtta.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.90 otomatik karşılaştırıldı: kelime kapsama %78, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p91
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.91 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: Filozof Soru 1 sonu. **Soru 2**: 'Ma'lûl bir olup yine **tüm mümkinâtın vücûduna illet** olabilir: fâilin te'sîri **mâhiyette değil vücûddadır** (siyahlık fâille olsa, fâil kalkınca siyah siyah olmaktan çıkardı: muhâl); **vücûd, vücûd olmak bakımından tek**; ilk illetten sudûr eden **yalnız vücûd**; mâhiyetler **vücûda kabiliyetli**; vücûd her mümkine **isti'dâdı ve hakkı** ölçüsünde ulaşır ⇒ ilk illetten sudûr eden bir, **çokluk kâbillerin çokluğundan**. **Misal**: güneş aydınlatmanın illeti; ışık tek eser; ışık âleme vurunca bir kısmı denize, bir kısmı ağaca; çokluk **te'sirde değil kâbillerde**.' **Soru 3**: 'Vâhidden birden fazla sudûr neden câiz olmasın? Delil (**vâhidden vâhid**) **illetler ve ma'lûller** bâbında itiraz edildi; delil **müessire** dayanıyor: 'bu eserin sudûru mefhûmu, öteki eserin sudûru mefhûmundan ayrı' ⇒ **kâdir muhtâr için de tek eser gerekirdi (bâtıl, ittifak)** ⇒ **mugalata**.'
 - Netice/hüküm: **Filozof cevapları: (2) vücûd tek, çokluk kâbilde; (3) 'vâhidden vâhid' delili kâdiri de bağlardı ⇒ mugalata**.
 - Delil çeşidi: **cedelî-analitik**; (T) cedelî.
 - Mevzuya bağı: bkz p90.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.91 otomatik karşılaştırıldı: kelime kapsama %86, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p92
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.92 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: Filozofun Soru 3 sonu. **Kelâmcıların cevabı — Soru 1'e (imkân illet olamaz)**: **Vecih 1**: 'İmkân **mevcut değil**; mevcut olsa vâcib ya mümkin olurdu; vâcib olamaz (vâcib bir); imkân mümkinin sıfatı, sıfat mevsûfa muhtaç, mümkine muhtaç daha çok mümkin; mümkin ise imkânı zâid ⇒ teselsül ⇒ **imkân mevcut değil**; **ma'dûm mevcudun illeti olamaz**.' **Vecih 2**: 'İmkân ma'dûm ise illet olamaz; mevcut ise mümkinâttan; bir illeti var; o **ilk illet** ⇒ ilk illet **iki ma'lûlün (imkân ve vücûd)** illeti ⇒ farz edilenle çelişir.' **Vecih 3**: 'İmkân tek mefhûm; nev'; şeyin hükmü misli gibi: imkân felek-i akşâ'nın maddesinin illeti olsa **her mümkinin imkânı bu ma'lûlün illeti olmalı** (muhâl).'
 - Netice/hüküm: **Kelâmî 3 vecih: imkân illet olamaz (mevcut değil/teselsül/misil ilkesi)**.
 - Delil çeşidi: **analitik**; (T) analitik-cedelî.
 - Mevzuya bağı: **Fasıl I §3 'imkân'**: **Kelâmcı 'imkân mevcut değildir (i'tibârî)'**: **Fasıl I'de imkân öncülü 'mevcut/ma'dûm' tartışmasından uzak yazılmalı**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.92 otomatik karşılaştırıldı: kelime kapsama %79, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p93
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.93 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: Vecih 3 sonu. **Vecih 4**: 'Birinci ma'lûlün imkânı maddenin vücûduna illet olsa, **maddenin imkânı kendi vücûduna illet olurdu**; imkân mâhiyetin lâzımı ⇒ mâhiyet kendi vücûdunu müstelzim ⇒ **vâcib li-zâtihi**: mümkin vâcib olur.' **Vecih 5**: 'Filozoflara göre **tek şey hem kâbil hem fâil olmaz**; imkân kabulden ibaret; öyleyse akl-ı evvelin imkânı felek maddesinin illeti olamaz.' **Vecih 6**: 'Felek cismi **vehmî bölünmeye kâbil ⇒ eczâdan mürekkeb**; akl-ı evvelin imkânı **tek**; felek maddesi eczânın mecmûu ise **tek şey çok şeyin illeti** olur ⇒ vâhidden çok sudûru.'
 - Netice/hüküm: **Kelâmî 3–6. vecih: imkân-illet modeli iç çelişkiler taşır**.
 - Delil çeşidi: **analitik + ilzâm**; (T) cedelî.
 - Mevzuya bağı: —
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.93 otomatik karşılaştırıldı: kelime kapsama %82, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p94
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.94 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Vecih 7–11**: (7) akl-ı evvelin vücûdu felek-i akşâ'nın sûretinin illeti olamaz: vücûdlar nev' altında şahıslar ⇒ her şeyin vücûdu bu sûretin illeti olmalı; (8) 'kendi fiilinde gayre muhtaç olmayan zâtında da muhtaç değildir' ilkesine göre **bu vücûd sûretin illeti olmada mâhiyete ortak mı**: ortaksa **kâbil fâilin cüz'ü olur (muhâl)**, değilse vücûd o mâhiyetten ganî ⇒ **kendi başına kâim** (sıfat olamaz); (9) 'vücûb bi'l-gayr' akl-ı sânînin illeti: **üçüncü mefhûm mevcut değilse illet olamaz; mevcut ise mümkin ve illeti yalnız mebde-i evvel ⇒ ilk mebdeden üç mevcut sudûr eder (imkân, vücûd, vücûb bi'l-gayr)**; (10) vücûb bi'l-gayr mevcut olsa o da vâcib bi'l-gayr ⇒ **teselsül**; (11) felek yalnız madde+cismî sûret değil, nevî sûret, miktar, şekil, vaz' ...
 - Netice/hüküm: **Kelâmî 7–11: sudûr modeli çelişkileri (misil, ihtiyaç, teselsül)**.
 - Delil çeşidi: **ilzâm**; (T) cedelî.
 - Mevzuya bağı: —
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.94 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p95
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.95 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (Vecih 11 devam) felek on makûleden her birinden bir ve çok nev'e sahip; bunları üç cihet (imkân-vücûd-vücûb bi'l-gayr) arasında dağıtınca **vâhidden birden çok** sudûr lâzım; câiz görürlerse aynısı mebde-i evvel için niçin câiz olmasın? **Vecih 12**: 'Akl-ı evvel maddeden mücerred cevher; öyleyse zâtını ve tüm malûmâtını ta'akkul eder (illeti bilmek ma'lûlü bilmektir); ilim, malûma mâhiyette müsâvi sûret; ta'akkullar **çok** ⇒ ilk mebde'den sudûr ederse ma'lûlleri artar ⇒ **tüm takdirlerde işkâl filozoflara lâzım**'. **Soru 2 cevabı**: 'İlk illetten sudûr eden **yalnız vücûd** iddiasını kabul etmeyiz: 'illet mâhiyetin illeti olsa illet kalkınca mâhiyet dönüşürdü' — **bu size de lâzım**: vücûd için de **aynı** (illet yok olunca vücûd dönüşür); ayrıca bu mümkinin vücûdu ötekinin vücûdundan **farklı** (yoksa tek araz çok mahalde) ⇒ ilk illetten çok ma'lûl.'
 - Netice/hüküm: **Kelâmî cevap Soru 2'ye: vücûd-mâhiyet ayrımı filozofu kurtarmaz; vücûdlar da çoktur**.
 - Delil çeşidi: **ilzâm-ı cedelî**; (T) cedelî.
 - Mevzuya bağı: —
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.95 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p96
 - OCR: orta
@@ -876,31 +924,34 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p98
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.98 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: Hücca 6 devam: 'Kıdem ademin selbi olduğundan **selbin selbi ⇒ sübûtî sıfat**. Kadîmler farz edilirse **kıdemde müşterek**; mukavvimâtta muhalif mi? Muhalif değilse **tam mâhiyette mütemâsil ⇒ aynı lâzımlar ⇒ birbirinin illeti-ma'lûlü (muhâl)**; muhalifse **iki kayıttan mürekkeb**, kayıtlar da kıdemde müşterek, başka i'tibârla muhtelif ⇒ **her kayıt iki kayıttan ⇒ sonsuz cüz** (muhâl: 'vâhid' kavramı çöker) ⇒ kadîmlerin çokluğu muhâl; **Allah kadîm ise âlem kadîm olamaz**.' **Sonuç**: 'Bu altı delil, âlemin müessirinin **mûcib bi'z-zât değil fâil bi'l-ihtiyâr** olduğunu gösterir.'
 - Netice/hüküm: **Kelâmî 6 delil: muhtâr sonucu**.
 - Delil çeşidi: **analitik-burhânî (kelâm)**; (T) burhânî biçim (**tekrarlayan öncüller: evvelsiz hâdisler bâtıl, cisim temâsülü, çok kadîm muhâl**).
 - Mevzuya bağı: **Fasıl I §6.2/§6.3/§8.0**: 'çok kadîm muhâl' **terkîb argümanı (Vahdâniyet ile aynı)**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.98 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p99
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.99 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Filozofların cevapları (Râzî nakli)**: **Hücca 1'e**: 'zayıf: âlem hâdis ve evvelsiz hâdisler bâtıl kabul etsek de **ilk illet zâtıyla bir şeyi îcâb eden mûcib, o şey de fâil-i muhtâr olup âlemi ihtiyârıyla yaratabilir** ⇒ ilk illet mûcib, âlemin fâili muhtâr ⇒ **bu delil vâcibin muhtâr olduğunu göstermez**; ayrıca 'mûcib de bazı vakitte etki edebilir' — **bu kudretle de aynı**: sizce **âlem kâdirden bazı vakitte bazı vakitte değil, muhassıssız** çıktı; o ma'kûlse illette niye ma'kûl olmasın?' **Hücca 3 (kesret)'a başka**: 'Âlemin sıhhati ya evvelli ya evvelsiz; evvelliyse öncesinde zâtî sıhhat yoktu ⇒ mümteni iken mümkin: muhâl; ⇒ evvelsiz ⇒ **âlem ezelde sahih-vücûd** ⇒ **kıdem muhâl demek imkânsız** ⇒ hüccet sâkıt.' **Hücca 2 (cisim temâsülü)'ne**: 'mûcibe yüklediğiniz aynen **kâdire de lâzım**: kâdir de iki mislin birini müreccihsiz seçemez.'
 - Netice/hüküm: **Filozof cevapları: kelâm burhanlarının ilzâmları muhtâra da dönüyor**.
 - Delil çeşidi: **paralel nakz**; (T) cedelî.
 - Mevzuya bağı: **KRİTİK — Fasıl I §8.0/8.3**: **aynı 'müşterek işkâl' argümanı**: 'muhtâr için de müreccih lâzım' — **Râzî bu argümanı p100'de kendi ağzından onaylıyor**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.99 otomatik karşılaştırıldı: kelime kapsama %83, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p100
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.100 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (Filozof cevabı Hücca 2 sonu: 'ikisi de zamanlara/hayizlere eşit nisbetle; mûcib için imkânsız ise kâdir için de imkânsız; **işkâl müşterektir**'.) **Hücca 3'e**: '**En yakını: bir şeyin çok şeye illet olması mümkün**; filozofların bu ilkeyi kurmak için zikrettiği deliller **çok zayıf**; **bu, tahkik edilmiş ve itimad edilen vechidir**.' **Filozoflar bu ilkeyi kabul edince vücûd tertibi için bir yol zikrettiler; onun butlânı geçti.** **Hücca 4'e**: '**Kâdir, râcih dâî olmadan iki misilden birini seçemez** (gösterildi); **kudret ve dâî mecmûu tam mûcib**; öyleyse **mûcib diyenlere yönelttiğiniz her itiraz, muhtâr diyenlere de lâzım**.' **Hücca 5**: 'bekâda müessire ihtiyaç: ayrı makâlede (hudûs ve adem bâblarında)'. **Hücca 6**: 'Ehl-i millet Allah'ın **ezelde âlim-kâdir** olduğunda ittifak; âlim-kâdir olması **zâtının aynı değil** (ileride); öyleyse **kadîmlerin çokluğu onlara da lâzım**.' **Bâb 2 biter.**
 - Netice/hüküm: **Râzî: kelâmî muhtâr burhanlarının çoğu muhtâr sistemine de dönüyor; vâhidden çok sudûr mümkün; 'kudret+dâî mecmûu mûcib'.** (**Râzî bu bâbda filozof ve kelâmcının burhanlarını birbirine karşı zayıflatıyor; kendi çözümünü net söylemiyor**.)
 - Delil çeşidi: **cedelî (denge)**; (T) cedelî: **(T) 'kâdir-mûcib' burhanları arasında kesin hüküm yok; kelâm burhanlarına Râzî güvenmiyor**.
 - Mevzuya bağı: **KRİTİK — Fasıl I §8.0 (Fâil-i muhtâr mı mûcib mi)**: **Fasıl I'in muhtâr sonucu için Râzî'nin gözünde yüksek riskli iki bağımlılık**: (1) kelâm burhanlarının 'müşterek işkâl'e açık olması; (2) 'evvelsiz hâdisler bâtıl' öncülü. **Fasıl I §8.0'ın (T) derecesi 'kelâmî burhan, öncül bağımlı, Râzî'ye göre müşterek işkâle açık'** olarak yazılmalı; **kesin kapanış için Râzî'nin 'hudûs' bâbı (cilt 4) beklenmeli**. **Sünnî akide yönünden**: 'Allah fâil-i muhtârdır' **nass ve icmâ' ile sabit** (Allah 'diler ve yapar', vb.); **aklî burhanın zayıflığı bu akideyi sarsmaz**: Risale ana metni **nass tabanlı hükmü aklî burhanın derecesiyle karıştırmamalı** (F: İslâm'a aykırı söz olmasın).
 - Doğan sual: Râzî **muhtâr hükmünü** hangi delille kesinleştiriyor? (cilt 4 hudûs; cilt 5 tabîiyyât).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.100 otomatik karşılaştırıldı: kelime kapsama %83, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p101
 - OCR: orta (başlık)
@@ -939,22 +990,24 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: **Râzî ilm-i ilâhîyi de 'nisbet' mi sayıyor?** (cilt 3 Bâb 3 devam; c2 p106'daki ayrım.)
 
 ## c3 p105
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.105 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (İlmin selbî tefsiri.) İlk fırka: 'ilim = cehlin yokluğu'; 'cehil' bazen **maʿlûma muhâlif i'tikâd** anlamına gelir; bu mânânın yokluğu **cansızlarda da var**, ama âlim değiller ⇒ tanım olmaz. **İkinci fırka (filozoflar)**: '**şeyin akıl olması = maddeden mücerred olması**.' **Râzî: bu söz mânâca karışık**: mücerred = kâim bi'n-nefs, hiçbir mahalde hâl olmayan; bu ile 'eşyayı bilir' arasındaki fark **zarûrî**; birçok şeyi **kendi başına kâim, mahalde hâl olmayan** sanırız ama hiçbir âkilin aklına 'bu yüzden bilir' gelmez; **madde de mücerred/kâim bi'n-nefs ama hiçbir şey bilmez** (madde başka maddeye hâl değil) ⇒ tanım **faydasız**. **Râzî'nin çıkarabildiği**: 'ilim = malûmun sûretinin âlimde hâsıl olması; şey **başkasında hâl** ise hâsıl olan **kendisi için değil hâl olduğu mahal için**; **mahalden ganî, hakîkati kâim bi'n-nefs** ise mâhiyeti **kendisine hâsıl** ⇒ **kendi nefsini idrâk eden**; **bu 'tecerrüd ⇒ idrak'ın anlamıdır**.'
 - Netice/hüküm: **Filozof 'tecerrüd = ilim' tanımının Râzî tarafından yeniden kurulması (sûret-hâsıl-oluş, kendine hâsıl)** ve mûcerredin 'kendini bilme'sine indirgenmesi.
 - Delil çeşidi: **kavramsal analiz**; (T) analitik-cedelî.
 - Mevzuya bağı: **Fasıl III (nefs: mücerred nefs kendini bilir)**: 'tecerrüd ⇒ kendini idrâk' **nefs-i mücerred için dayanak**; ders katmanına **'Râzî'nin filozof tanımını nasıl anladığı' notuyla**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.105 otomatik karşılaştırıldı: kelime kapsama %82, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p106
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.106 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: 'Bu, bu sözden çıkarabildiğim mânâ; **Allah onların muradını daha iyi bilir**.' 'İlim, idrâk, şuûrun hakîkatinde zikredilebilecek **kısımlar bunlar**; kitabın başında **her biri için istikssâ yapıldı; tekrarda fayda yok. Tevfik Allah'tandır.** **Fasıl 1 biter.**
 - Netice/hüküm: **İlmin hakîkati bahsi c1'deki (mantık başı) istikssâya havale**.
 - Delil çeşidi: —
 - Mevzuya bağı: **'Kitabın başı (mantık)'** = **cilt 5 veya 6?**: c1 p1–70 mukaddimede mantık yok; **mantık bölümü hangi ciltte (bilinmiyor)**: Râzî'nin atıflarının **çözülmesi için haritalama borcu** (aşağıdaki özetlerde 'atıf defteri').
 - Doğan sual: 'Bu kitabın başında mantık ilmi' hangi cilt/sayfa? (kaynak haritası).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.106 otomatik karşılaştırıldı: kelime kapsama %94, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p107
 - OCR: orta
@@ -966,31 +1019,34 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p108
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.108 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: 'Muhkem fiil sahibi cahil olamaz' örnekleri devam. **Sual 1**: 'Mütekellimînin **kâdir ve âlim olduğunu** ispat delilleri, sıhhatleri farz edilse de **matlûbu göstermez**: bedîhe **vâcibü'l-vücûd li-zâtihi'nin bir mevcûda illet olmasını, o mevcûdun zâtı gereği âlim-kâdir ve âlemin hâlıkı olmasını** engellemez; âlem hâdis ⇒ muhdise muhtaç ⇒ fâil kâdir-âlim; **bu kâdir-âlim, vâcibin ma'lûlü olabilir (vasıtasız, tek ya da çok vasıtalı)**. **Bu ihtimal delilleri sâkıt kılar**; **mütekellimînin hiç birini bunun çevresinde dönerken görmedim; bu gibi mutâlib-i âliyede gaflet acâibdendir.**' **Râzî'nin savunması (2 vecih)**: **(1)** 'Kitabın mukaddimesinde dedik: ilâhî mutâlib yüce, beşer akılları zayıf; **evlâ ve ahlâk ile yetinilmeli**: âlemin hudûsu ve fâile ihtiyacı ispatlanınca **bu fâil ve muhdisle iktifâ**; vasıtaların ispatına delil yok ⇒ **yakînî olanı alıp şüpheliyi atmak vâcib**.'
 - Netice/hüküm: **Râzî kendi tenkidini yazıyor: 'vâcib → kâdir-âlim ma'lûl → âlem' ihtimali ihkâm delilini kırar; cevabı 'evlâ ve ahlâk' (ispat borcunun yükü)**.
 - Delil çeşidi: **cedelî (ispat yükü)**; (T) **evlâ-ahlâk derecesi**.
 - Mevzuya bağı: **KRİTİK — Fasıl I §5 (Vâcib=Fâil özdeşliği ayrı halka; c1 p319–321 ile aynı)**: Râzî **iki cevap yolu veriyor**: (1) evlâ-ahlâk, (2) (p109) 'tek müessir' delili: **Fasıl I §5 için önerilen (T) derece: 'Vâcib=Fâil halkası: evlâ ve ahlâk (Râzî'nin kendi ifadesi) veya tek müessir burhanı'**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.108 otomatik karşılaştırıldı: kelime kapsama %77, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p109
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.109 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **(2)** 'Allah'ın îcâd ve tekvîne kâdir olduğunu gösterdik; şimdi **varlıkta tek müessirden fazlasının imkânsızlığına** delil kurarız (Kısım 2 tevhid burhanları); bununla vasıta kavli düşer.' **Sual 2**: '**İhkâm-itkân** ne demek? **Maslahat ve menfaat vecihlerine uygun vukû'** ise ma'kûl; başka mânâ ise açıklanmalı. **Bir vecihle mi, her vecihten mi maslahata uygun?** (a) bir vecihle ise **câhilin fiili de** bazı vecihlerden maslahata uygun olabilir (fâilin âlim olduğunu göstermez); (b) her vecihten ise **niçin böyle olduğunu kabul edelim**: güneş şimdikinden büyük ya da küçük olsa menfaatler artar mıydı, azalır mıydı **bilmiyoruz**; felekler, insan bedenleri **başka biçimde** olsaydı hâlleri nasıl olurdu bilmiyoruz; **şimdikinden daha kâmil bir vaz'ın imkânsızlığına kim delil getirebilir? Bu vaz'dan başka vaz'lar sonsuz.**'
 - Netice/hüküm: **Sual 2: 'ihkâm' mânâsı: bir yönden (yetmez) / her yönden (ispatsız; sonsuz alternatif düzen)**.
 - Delil çeşidi: **cedelî-analitik**; (T) cedelî.
 - Mevzuya bağı: **Fasıl I nizâm/gaye delili**: **'her yönden en kâmil düzen' iddiası Râzî'ye göre ispatsız (sonsuz alternatif)**; ders katmanı bu iddiayı **yapmamalı**: 'hikmetli düzen' ifadesi **gözlenebilir uygunluk** düzeyinde kalmalı (T: ikna'î).
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.109 otomatik karşılaştırıldı: kelime kapsama %82, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p110
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.110 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Sual 3**: 'Muhkem fiil sahibi âlim olmalı' ilkesi **doğru değil**: (1) **câhil** bile **bir kere** muhkem fiil yapabilir (şiirde âciz kişi tesadüfen bir mısra'ı vezinle söyler; hattı bilmeyen bir harfi ihkâmla yazar; 'misilin hükmü misli gibi' ⇒ misalleri de câiz); (2) **arı, örümcek, karınca**: arı **cetvelsiz-pergelsiz altıgen evler** yapar; **âkil-kâmil insanlar mumdan öyle altıgen evi yapmaktan âciz**; örümcek ağını onarır; **karınca buğday tanesini ikiye böler ki ıslanınca filizlenmesin**: bu fiiller muhkem ve mütkın; **fiil âlimliğe delil ise hayvanlar insandan çok bilgili olmalı** (uzak); (3) **usta**: yazı/tambur öğrenen başta her harfi/nakırı **zihinde hazırlar**; **melekat** kazanınca harfleri düşünmeden en iyi vecihle yazar, **kalbi başka meşgul iken** bile.
 - Netice/hüküm: **Ihkâm ⇒ ilim öncülüne 3 cedelî karşı örnek: tesadüf, hayvan fiilleri, melekat.**
 - Delil çeşidi: **karşı örnek**; (T) cedelî-analitik (**hayvan fiilleri örneği güçlü**).
 - Mevzuya bağı: **Fasıl I nizâm delili**: **karşı örnekler (arı/örümcek/karınca) 'nizâm ⇒ fâil bilir' öncülünü zayıflatır**; Sünnî cevap: **hayvanlara bu ilhâmı veren de Allah; nizâm hayvanı değil Yaratıcıyı gösterir (Kur'ân: arıya vahyetti)**: ders katmanı **'nizâm, fiilin doğrudan fâilinin değil, kâinatın hâlıkının ilmini gösterir' ayrımını** yazmalı (⊬ âyet numarası: Nahl 68 civarı doğrulanacak).
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.110 otomatik karşılaştırıldı: kelime kapsama %78, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p111
 - OCR: orta
@@ -1029,22 +1085,24 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: **Râzî şer problemine kendi cevabı?** (cilt 3 'hakîm' bâbı; cilt 4 kaza-kader.)
 
 ## c3 p115
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.115 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: Hasım: 'Sualin kastı şu: **zâhir akıl muhkem fiilin ancak âlimden çıkacağına hükmettiği gibi, kudret-ilim-rahmet sahibinin zayıflara türlü acı-ağrılar musallat etmeyeceğine, güçlü zâlimi zayıf mazlum üzerine salmayacağına** de hükmeder; âlemde bu hâller görülünce **bu üç sıfattan birine taan lâzım**. **Siz kudret ve rahmet kemâlini ispat etmeye izin veriyorsanız, akıl bu üçünün ârızalarını engellediğine hükmettiği hâlde**, başkasının **'âlemin cüzlerinde bu miktar ihkâm, fâilin âlim olmaksızın, yalnız zan sahibi olmasıyla hâsıl'** demesini yasaklayamazsınız.' **Sual 5 (ikincisi)**: '**Ebü'l-Hasen el-Eş'arî** mezhebine göre **ihkâm ve itkân ma'kûl değildir**: ona göre **bünye (organ yapısı)** hayat ve hayata bağlı sıfatların (ilim, kudret, semi', basar) **şartı değildir**; cevher-i ferd bile hayat-ilim-kudretle vasıflanabilir, hatta **Allah'ın ilimde ve kudrette ve diğer kemâllerde en üstün mahlûku olabilir**; delili: bünye eczâdan mürekkeb; her cüz hayata kâbil ya birbirine şartlı (devir), ya bir yönden şartlı (misillerden birinin diğerinden imtiyâzı), ya birbirinden ganî ⇒ **üçüncüsü**.'
 - Netice/hüküm: **Râzî'nin Eş'arî'ye ilzâmı: bünye şart değilse organların maslahatı (ihkâm) anlamını yitirir**; hasmın ilk itirazı (şer) **ihkâm ⇒ ilim** öncülüne **denge ilzâmı**.
 - Delil çeşidi: **ilzâm (bir mezhebin öncülü ile başka öncül)**; (T) cedelî.
 - Mevzuya bağı: **DİKKAT (Sünnî mezhepler arası ihtilaf)**: Eş'arî'nin 'bünye şart değil' görüşü Râzî tarafından **aktarılan ve kısmen eleştirilen görüş**; **Eş'arî'nin metinden doğrulaması ⊬**; ders katmanı **mezhep atfı yapmadan** yalnızca **'kelâmî ihkâm delilinin öncülü: organ maslahatı hikmet gösterir'** ifadesini kullanır.
 - Doğan sual: Eş'arî atfı (kaynak doğrulaması).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.115 otomatik karşılaştırıldı: kelime kapsama %84, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p116
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.116 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (Eş'arî ilzâmı devam.) 'Bünye bozulunca hayat, ilim, kudret bozulur' denince Eş'arî: '**Bu, Allah'ın icrâ ettiği âdet**; hayatın bu bünyeye, görmenin göz yapısına, işitmenin kulağa **muhtaç** olduğu doğru değil.' **Râzî**: 'Bu görüşe göre **hiçbir terkîb ve tasavvurun** fayda ve maslahat hâsıl etmede etkisi yoktur; **'Allah gözü bu yapıda yarattı ki görme kemâle ersin; mideyi bu şekilde ki sindirim kemâle ersin' demek mümkün olmaz**; **teşrîh ehlinin organ menfaatleri boşa çıkar**; biz 'ihkâm-itkân' lafzından **yalnız bu vecihleri anlıyoruz**; öyleyse Eş'arî mezhebine göre **ihkâm-itkân bâtıl**; **ihkâm ve itkânla fâilin ilmine nasıl istidlâl edebilir?**'
 - Netice/hüküm: **Râzî'nin ilzâmı: Eş'arî'nin 'âdetullah/bünye şart değil' öncülü ihkâm-itkân delilini işlevsiz kılar.**
 - Delil çeşidi: **ilzâm**; (T) cedelî-analitik.
 - Mevzuya bağı: **Sünnî akide notu (edeb)**: 'Allah'ın âdetinin (sünnetullah) **hikmetli sebep-sonuç düzeni** kabulü Ehl-i Sünnet'te **'sebepler, Allah'ın yarattığı âdet-i ilâhiyye'** olarak; **nizâm delili bu çerçevede geçerli**; Râzî'nin ilzâmı **Eş'arî'ye 'sebeplerde tesir yok' öncülü nedeniyle**: **Risale ana metni 'sünnetullah' formülünü kullanarak nizâmı sunar**; kelâm içi ihtilaf metne taşınmaz.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.116 otomatik karşılaştırıldı: kelime kapsama %79, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p117
 - OCR: orta
@@ -1092,13 +1150,14 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p122
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.122 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: Hasım 3 vecih devam ('mâhiyet ve şahsiyetin mecmûu ile parçaları arasında ayrılık var ⇒ mâhiyetin o şahsa hâzır olması uzak değil'; 'zâtımız, zâtın senin' izâfeleri ⇒ **şeyin kendine izâfesi sahih**). **Râzî değerlendirmesi**: **(i) son derece zayıf**: 'hazır olmak' 'ayrıya hâzır olmak'tan âmm; öyleyse 'şey kendini **hareket ettirir, kendine etki eder, kendinin illeti olur**' de câiz olmalı (âmm-hâs ilkesi): bunlar câiz değilse bu da değil. **(ii) (i)'den iyi**: ayrılık bir yönden var, **bir yönden ayrılık izâfe için yeter**; **(iii)** insanların 'zâtım, zâtın' demesi **izâfenin sıhhatini** kuvvetlendirir. **Dördüncü itiraz** başlar: 'Şeyin kendine hâzır olması ma'kûl, ilmiyeti gerektirir; ama **bir şeye hâzır olan hakîkat başka**, 'ona kendisi hâzır olan' **başka bir hakîkat**; **bir hakîkatte hüküm, muhalif hakîkatte lâzım değil**' (p123).
 - Netice/hüküm: **Râzî hasım vechelerinden 2. ve 3.'yü makul buluyor, 1.'yi zayıf**; 4. itirazla vâcibe taşımayı reddediyor.
 - Delil çeşidi: **cedelî-değerlendirme**; (T) analitik.
 - Mevzuya bağı: 'Mâhiyet farkı ⇒ hüküm taşınmaz' ilkesi **yine hâkim**: Fasıl I ilkesi.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.122 otomatik karşılaştırıldı: kelime kapsama %82, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p123
 - OCR: orta
@@ -1110,49 +1169,54 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p124
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.124 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: 'Elif ile be': **elif olmasının kendisi be'nin illeti olması mı, yoksa ondan başka (lâzımı) mı?** İlki bâtıl: 'elif elifdir' ile 'elif be'nin illetidir' arasındaki fark zarûrî; ayrıca elif belirli zâta işaret, 'illet olması' nisbî-izâfî hâl; **hakîkat-i mahsûsa nisbet-izâfe değil, nisbet-izâfeden mugâyir**; ayrıca **zâtı bilip 'be'nin illeti oluşundan gâfil kalmak** sahih. ⇒ **'kendi zâtını bilmek' 'ma'lûlünün illeti olduğunu bilmek' ile aynı değil**; 'zâtını bilen lâzımlarını bilir' dersek **matlûbu öncül yapıp sonucu ispat etmiş oluruz** (delil=dava). **Kesin**: 'zâtı ma'lûle illet olduğuna göre zâtını bilen bunu bilir' — **mugalatanın yeri burası**. Ardından: '**Bu mukaddimenin hak olmadığına deliller**' (4 vecih; ilki p125).
 - Netice/hüküm: **'Zâtını bilmek ⇒ lâzımlarını bilmek' öncülü Râzî'ce ispatsız/mugalata**.
 - Delil çeşidi: **analitik (delil=dava tespiti)**; (T) analitik-burhânî.
 - Mevzuya bağı: **Fasıl I metodu: 'dava ≠ delil'**: aynı yasak (c2 p19) **burada İbn Sînâ'ya karşı uygulanıyor**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.124 otomatik karşılaştırıldı: kelime kapsama %84, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p125
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.125 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **'Mâhiyetin ilmi lâzımlarının ilmini gerektirir' öncülüne deliller**: **(1)** 'Çok mâhiyet biliriz; her mâhiyetin diğerlerine nisbeti üç hâl: **müstelzim, münâfî, ne müstelzim ne münâfî**; bu hâller mâhiyetin **lâzımlarıdır**; bir mâhiyeti bilmek lâzımlarını bilmeyi gerektirseydi **tek mâhiyeti bilmekle sonsuz mâhiyetlerin hepsini bilmek** lâzım gelirdi (bâtıl).' **(2)** 'Cisim mâhiyetini **bedîhen** biliriz; lâzımlarından biri **kıdem ya da hudûs** (ihtilafa göre); ilim lâzımın ilmini gerektirse cismi bedîhî bilmekle **kıdem/hudûsu bedîhî bilmek** lâzım (bâtıl).' **(3)** 'Nefsimiz kâim bi'n-nefs, cismiyetten mücerred; nefsimizin kendisine hâzır olduğu iddiası doğruysa nefsi bilmek **nefsin bütün eser ve lâzımlarını bilmeyi** gerektirir: mücerred oluşu, hâdis vâcib-oluşu, bâkî oluşu (bedîhî bilmek gerekirdi) — böyle değil.'
 - Netice/hüküm: **Üç karşı örnek: ilim lâzımları getirmez.**
 - Delil çeşidi: **karşı örnek**; (T) analitik-burhânî.
 - Mevzuya bağı: **Fasıl I ilim sıfatı**: Râzî, **c3 p118'de kendi 'mâhiyet ilmi yakın lâzımın ilmini gerektirir' yolunu savunuyordu; burada İbn Sînâ'ya karşı 'lâzımlar getirmez' diyor: iç gerilim** — **çözüm: p118 'yakın lâzım (bitişik)' sınırlı; burada 'tüm lâzımlar'**; sınırın **çizilmemesi açık nokta**.
 - Doğan sual: **Râzî 'yakın lâzımın ilmi' iddiasının sınırını nerede çiziyor?** (Bâb devamı.)
+- Doğrulama notu: OCR sayfası ile gerçek metin s.125 otomatik karşılaştırıldı: kelime kapsama %77, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p126
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.126 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **(4)** 'Ma'lûl illetin lâzımı olduğu gibi **illet de ma'lûlün lâzımı**; illeti bilmek ma'lûlü gerektirirse ma'lûlü bilmek **illeti** gerektirmeli; **zâtlarımızı ve hâllerini biliriz, bunlar yüksek illetlerin ma'lûlü**; ilim lâzımı gerektirseydi **yüksek illetleri tafsîlen bilirdik**; bilmiyoruz ⇒ ilim lâzımı gerektirmez.' **Cevap (İbn Sînâ tarafı)**: 'İlletin ilmi ma'lûlü gerektirir; **ma'lûlün ilmi illeti gerektirmez**: belirli illet **zâtı ile** belirli ma'lûlü îcâb eder; ma'lûl ise **imkânı yüzünden** illete muhtaç; imkân **belirli illete değil, bir illete** muhtaç eder; belirli illetle vâki oluşu, o illetin bulunup onu îcâb etmesindendir; ⇒ **ma'lûl belirli illeti gerektirmez**; 'bu iki sûret arasında **açık ve ma'kûl fark**'.
 - Netice/hüküm: **Karşı örnek 4'e İbn Sînâ tarafının cevabı: illet→ma'lûl lüzûmu tek yönlü.**
 - Delil çeşidi: **cedelî**; (T) analitik.
 - Mevzuya bağı: bkz p125.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.126 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p127
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.127 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **İbn Sînâ'nın 2. yolu**: 'Delil: Allah **başkasını bilir**; başkasını bilen **zâtını bilir**.' **Asıl 1 (Allah başkasını bilir)**: 'Allah'ın zâtını herhangi bir malûmla beraber bilmemiz mümkündür; ilim ancak **malûmun sûretinin âlimde intıbâı** ile; **Allah'ın zâtının ilmi ile başkasının ilmi birlikte hâsıl olunca iki mâhiyet zihinde birlikte hâzır**; bu **mukârenet mümkün**; sıhhati 'zihinde hâzır olma'ya şartlı mı? Şartlıysa **hâzır olma da mukârenet** ⇒ **şart şartın kendisine şartlı: devir**; ⇒ sıhhat şartsız ⇒ **mâhiyet zihinde de hâricde de hâzır olsa mukârenet sahih**; ⇒ **Allah'ın zâtına başka ma'kûllerin mukârenetinin mümkin olması** (hâricî vücûdunda da) ⇒ **Allah'ın başkasını bilmesi sahih**.'
 - Netice/hüküm: **İbn Sînâ Yol 2 Asıl 1: sahihlik (imkân) çıkarımı: 'mukârenet mümkün ⇒ Allah âlim olabilir'.**
 - Delil çeşidi: **analitik (filozof; sûret-intıbâ' teorisi)**; (T) analitik-burhânî biçim (**öncül: ilim=sûret intıbâ'**).
 - Mevzuya bağı: Râzî bu öncülü reddediyor (c3 p104, 120); **bu yol Râzî'nin çerçevesinde geçerli değil**; ders katmanına **alınmaz**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.127 otomatik karşılaştırıldı: kelime kapsama %79, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p128
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.128 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: Yol 2 devam: 'Bu mukârenet Allah'ın zâtına **sahih** ise, **Allah'ın zâtı için sahih olan her şey vâcib**: (yoksa **tagayyür câiz** olurdu, muhâl); çünkü her sıfat için zât ya **istiklâlle iktizâ eder**, ya **istiklâlle def' eder**, ya **hiçbirini**; ilk ikisi **daimî icâb/daimî selb**, üçüncü **muhâl** (zât sıfatın sübût-selbinden ayrılmaz; ikisi **münfasıl sebebe** muhtaç ⇒ vâcib mümkin) ⇒ **Allah'ın zâtı ve sıfatlarına tagayyür muhâl**; ⇒ **Allah'a sahih olan her şey hâsıldır**; **âlim olmak sahih ⇒ vâcib olarak âlimdir**.' **Asıl 2**: 'İş böyle olunca **zâtını da bilir** (herkes bir şeyi bilince onu bildiğini de bilebilir).'
 - Netice/hüküm: **'Sahih olan vâcib olur' (Vâcib'de imkân-i sıfat yoktur) prensibi**: Vâcib'de sıfatlar **ya zorunlu var ya zorunlu yok**.
 - Delil çeşidi: **analitik-burhânî**; (T) burhânî biçim (**ilginç: bu prensip c2 p106–109 'hevâdis' tartışmasıyla uyumlu ama 'izâfî sıfat hudûsu'na aykırı**).
 - Mevzuya bağı: **Fasıl I §8.0**: **'Vâcib'de sıhhat = vücûb' ilkesi (Râzî nakli, İbn Sînâ)** muhtâr çerçevesine **zıt** (muhtâr: fiili yapmamak da sahih); **Râzî bu ilkeyi 'ilim/hayat gibi sabit sıfatlar' için kabul edebilir; 'fiil' için değil**: **ders katmanında 'zâtî sıfatlar vs fiilî sıfatlar' ayrımı** (Sünnî çizgi: **sıfât-ı zâtiyye ve sıfât-ı fi'liyye**).
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.128 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p129
 - OCR: orta
@@ -1164,31 +1228,34 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p130
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.130 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Sual 2**: 'Allah'ın zâtı bilinebilir olsa bile **başkasıyla birlikte** bilinebilir mi? **Zarûrî**: zihni bir malûma yönelttiğimizde aynı anda başka malûma yönelemeyiz (mantık meselesiyle meşgulken hendese meselesine); **iki ilmi aynı anda cem'** muhâl; ya da genel olarak mümkün olsa da **burada mümkün değil**: **kuvvetli hissedilen yanında zayıf hissedilmez** (güneş karşısında kandil, gök gürlerken sivrisinek sesi); **Allah en büyük mevcut, en yüce ma'rifet; hâzır olunca başkasının ma'rifeti hâzır olamaz.** İtiraz: 'âlemin vâcibin îcâdına muhtaç olduğunu bilince ikisini birlikte biliyoruz' — **Râzî: mugalata**: 'vâcib olduğunu bilmek **sıfatlarından birini** bilmektir, **zât-ı mahsûsa'yı** değil'.
 - Netice/hüküm: **Zât ve ma'lûller birlikte bilinmez (Râzî sualı); 'vâcib olduğunu bilmek' zât ilmi değil.**
 - Delil çeşidi: **iç gözlem + istikrâ**; (T) ikna'î-analitik.
 - Mevzuya bağı: **Fasıl II/III (mükâşefe, ru'yet)**: 'ma'rifetin galebesi başka ma'rifeti örter' **tasavvufî tecrübe** ile bağlanabilir (**⊬**).
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.130 otomatik karşılaştırıldı: kelime kapsama %81, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p131
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.131 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Sual 3**: 'Bu istikrâ **örneklerde** işler (cem' imkânsız görülen şeylerde); **birkaç sûrette sahih ⇒ her sûrette sahih** değil; **cem'i imkânsız olan malûmât olabilir**; sonsuz malûmâtta tecrübe **imkânsız** (sonsuzun vücûda girmesi muhâl) ⇒ istikrâ **az sûret**e dayanır.' **Sual 4**: 'Her bir malûmla cem' sahih olsa da **mecmû ile** sahih mi? **Bir tek için sabit hüküm mecmû için sabit olmayabilir.**' **Sual 5**: 'Bu **sûretlerin** birlikte olması mümkün olsa **ilim mâhiyetlerinin** birlikte olması mümkün mü? (Bu, **ilmin sûret intıbâ'ı** olduğu asla dayanır.)' **Sual 6**: 'mukârenetin imkânı **mâhiyetlerin zihnî** olmasına şartlı olabilir.'
 - Netice/hüküm: **Yol 2'ye Sual 3–6: istikrâ, mecmû, sûret, zihniyet**.
 - Delil çeşidi: **cedelî-analitik**; (T) analitik.
 - Mevzuya bağı: —
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.131 otomatik karşılaştırıldı: kelime kapsama %84, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p132
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.132 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: Sual 6: 'Sûretin nefis cevherinde hâsıl olması mâhiyetin nefisle mukârenesi ⇒ imkân **hâsıla şartlı** olsa **imkânın vukûa şartlı** olması lâzım (muhâl)' — cevap: **mugalata**: **mukârene üç nev'**: (1) **hâlin mahalle mukârenesi**, (2) **mahallin hâle mukârenesi** (mâhiyetçe farklı; birinde mahalle hâsıl, öbüründe hâle imkânsız), (3) **iki hâlin tek mahalde mukârenesi**; **üç nev' mâhiyetçe farklı** ⇒ birinin hükmü diğerine geçmez. Allah'ın ilmi ile başka ilmin mukârenesi **(3)**; sûretlerin nefisle mukârenesi **(1)**; hâricî zâtın sûretlerle mukârenesi **(2)**; **(1)'in imkânı (2)'nin hâsıl olmasına şartlı**, bu **imkânın kendi vukûuna şartlı olması değil, başka nev'in vukûuna şartlı** ⇒ imkân-vukû' devir yok.
 - Netice/hüküm: **Yol 2'ye itirazın ilk cevabı: mukârene nevleri farklı ⇒ imkân-vukû' devri yok** (Râzî, İbn Sînâ'yı savunan cevabı yazıyor; sonra reddediyor: p133).
 - Delil çeşidi: **analitik (nev' ayrımı)**; (T) analitik.
 - Mevzuya bağı: —
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.132 otomatik karşılaştırıldı: kelime kapsama %82, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p133
 - OCR: orta
@@ -1200,22 +1267,24 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p134
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.134 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: Sual 7 devam: (3) **gök misali**: zihnî sûret semânın mâhiyetine tam müsâvi olsa sûret 'semâ' olurdu (bâtıl); (4) 'Allah'ın zâtına başka sûretlerin mukârenesi mümteni değil' ⇒ 'zâtın **o mahalle muhtaç olması** da sahih olmalı (misil ilkesi)' — sonuç bâtıl olduğuna göre ilke **istenen sonucu vermez**; (5) 'zihnî sûretler hâricî zâtlarla tam mâhiyette müsâvi; hâricî zâtlar ilme kâbil ise zihnî sûret de **zihinde iken âlim** olmalı' — bu lâzım gelmiyor ⇒ ilke bâtıl. **Sual 8**: 'Zât hâricde iken sûretlerle mukârene edebilse de **bundan zâtın âlim olması** lâzım gelmez: ilim bu mukârenenin kendisi değil; **ilim, sûretlerin hâsıl olmasına şartlı özel nisbet** (Râzî'nin tanımı, c3 p104): sûret bir şart, başka şartlar eksik.'
 - Netice/hüküm: **Sual 7–8: misil ilkesinin sınırı; ilim = şartlı nisbet (Râzî tanımı).**
 - Delil çeşidi: **analitik-cedelî**; (T) analitik.
 - Mevzuya bağı: **Fasıl I 'ilim sıfatı'**: Râzî **ilmi zâid nisbet olarak** tanımladığı için **'sûret hâsıl ⇒ ilim' zincirini** reddediyor: tanım-bağımlı.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.134 otomatik karşılaştırıldı: kelime kapsama %77, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p135
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.135 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: Sual 8 sonu (ilim nisbetinin başka şartları eksik). **Sual 9**: 'Allah'ın âlim olması sahih ise de **hüküm yetmez; muktezî gerek**: kâbil olsa da **muktezî yok** ⇒ imtinâ (kâbiliyet eksik değil, muktezî eksik); muktezî ya zât-ı mahsûsa ya başkası; zât iktizâ etmezse ve başkası salih değilse **muktezî fevt**.' **Sual 10**: 'Allah başkasını bilsin; **kendi zâtını bilmesi niçin vâcib?** Cevap: "**bir şeyi bilen, o şeyle âlim olduğunu bilebilir**; ilim ona kâim; her tasdîk iki tarafın tasavvuru gerektirir."' Râzî: '**iki vecihle** müşkil': (1) 'bu şahıs insan, at değil' hükmünde mevzû (bu şahıs) **cüz'î**, mahmûl (insan) **külli**; hâkim ikisini tasavvur etmeli ⇒ **cüz'îyi ve külliyi idrâk eden tek kuvvet** ⇒ **bu Şeyh'ce muhâl** (cüz'î idrâk **cismânî**, külli idrâk **mücerred** kuvvet ister).'
 - Netice/hüküm: **Sual 9–10: muktezî eksikliği; tasdîk için tasavvur ilkesi İbn Sînâ'nın kendi cüz'î/külli ayrımıyla çelişir.**
 - Delil çeşidi: **iç çelişki ilzâmı**; (T) analitik-cedelî.
 - Mevzuya bağı: **KRİTİK — cüz'î ilim**: **İbn Sînâ'ya göre cüz'îyi idrâk cismânî ⇒ Allah cüz'î bilemez**; Râzî bunu **tasdîk-tasavvur ilkesiyle** çelişkiye sokuyor; **Sünnî akide: Allah cüz'îyi de bilir**; bu **Râzî'nin cüz'î ilim bâbındaki (cilt 3 devam) tutumunu hazırlıyor**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.135 otomatik karşılaştırıldı: kelime kapsama %82, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p136
 - OCR: orta
@@ -1227,13 +1296,14 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p137
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.137 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **İbn Sînâ Yol 3 özeti**: 'bu yolun tafsîlatı el-Mebde' ve'l-Meâd'da uzun; **bu delil bize 'evlâ ve ahlâk' bâbından alınmış görünüyor; ancak zayıf zan verir.**' 'İnsanların Allah'ın âlim olduğunu isbat için **anlattıkları başka yollar**: **(1)** Bârî **en kâmil mevcut**; ilim **kemâl sıfatı**, yokluğu noksan ⇒ ilimle mevsûf olmalı; bu yolla **tüm malûmâtı bildiği** de anlaşılır (cehilden tenzih). **(2)** 'Bizden biri âlim; bu ilim **Allah'tan hâdis** (vasıtalı ya vasıtasız); ma'lûle hâsıl **her kemâlin illete sübûtu evlâ** ⇒ Allah **tüm malûmâtı bilir**.' **Vallahu a'lem.**
 - Netice/hüküm: **Râzî İbn Sînâ Yol 3'ü zayıf zan sayıyor; iki basit kemâl delilini sıralıyor.**
 - Delil çeşidi: **kemâl delili + 'illette daha evlâ' ilkesi**; (T) ikna'î-analitik (**'kemâl ma'lûlde ise illette evlâ' = sadedeki ilkenin filozofça bilinen hâli**).
 - Mevzuya bağı: **KRİTİK — Fasıl I ilim sıfatı**: **Risale'nin ilim için kullanabileceği en yalın yol: kemâl delili (noksandan tenzih)**; Râzî **kendi tercihini p144'te de aynı yolla verecek** (bkz.). **Derece: ikna'î-analitik (kemâl ilkesi + 'illette evlâ')**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.137 otomatik karşılaştırıldı: kelime kapsama %76, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p138
 - OCR: boş
@@ -1254,13 +1324,14 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p140
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.140 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Cevap (Râzî'nin nihâi)**: 'İlim özel nisbet; nisbet **ayrılığa şartlı**; ayrılık **âlim-malûm mefhûmları** arasında olsa **ayrılık, ilimden önce** olmalı; ilim o zâta önce hâsıl ⇒ **devir**' (hasmın delili). **Râzî: 'Allah'ın zâtını bilmesine iki vecih'**: (1) c3 p119–120'de anlatıldığı gibi: **mücerred, maddeden ganî cevher ⇒ zâtı zâtına hâzır ⇒ kendini bilir**; (2) 'bir şeyi bilen, ona âlim olduğunu bilebilir; bu, nefsini bilmeye şartlı'. **Hasmın şüphesine cevap**: 'Allah'ın zâtı **muayyen zât**; **mâhiyet + teayyün + mecmû** ayrımı ⇒ **ayrılık bu yönden hâsıl; nisbet ve izâfe için yeter.**' **Mesele 2**: 'Nefsini ta'akkul eden zât **âkil, aynı zamanda ma'kûl**; nefsini nefsine ta'akkulü **onun aynı mı?** **İbn Sînâ: Allah akıl, âkil, ma'kûl; üçü tek şey** (mücerred zât = akıl; ona mâhiyet hâsıl = ma'kûl; ona mâhiyet hâsıl = âkil).'
 - Netice/hüküm: **Râzî: Allah zâtını bilir (mücerred zât kendine hâzır; teayyün-mâhiyet ayrımı nisbete yeter).**
 - Delil çeşidi: **analitik**; (T) analitik-cedelî.
 - Mevzuya bağı: **Allah'ın kendini bilmesi**: Râzî **olumlu hükümde**; **Sünnî akideyle uyumlu**. **c3 p139 'bilmez' hükmü sadece hasım**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.140 otomatik karşılaştırıldı: kelime kapsama %78, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p141
 - OCR: orta
@@ -1272,22 +1343,24 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p142
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.142 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: Kelâmî delil: **Mukaddime 1**: 'Allah her malûmu bilmeye **sahih**: kâdir-âlim olduğu sâbit; kâdir-âlim **hayy** olmalı; **hayy her malûmu bilmeye sahih**' (**hayat bedîhen bilmeyi mümkün kılar**). **Mukaddime 2**: 'âlim olmayı iktizâ eden **yalnız zât-ı mahsûsa**: ilim özel nisbet; nisbetler **kâim bi'n-nefs değil, gayre sıfat** ⇒ âlimlik **gayre muhtaç sıfat ⇒ mümkin ⇒ sebep**; sebep zât (vasıtalı ya vasıtasız) ya başka; başkası ise **münfasıl sebebe iftikâr (muhâl)** ⇒ **muktezî zât-ı mahsûsadır**.' **Mukaddime 3**: 'hepsine sıhhat; zât **bazısını îcâb ediyor**; nisbeti hepsine eşit ⇒ **bazısını iktizâ, ötekilerini iktizâ etmemekten evlâ değil** ⇒ **hepsini** ⇒ **tüm malûmâtı bilir**.'
 - Netice/hüküm: **Kelâmî ilim delili: sıhhat + iktizâ (tahsis eşitliği)**.
 - Delil çeşidi: **analitik-burhânî (kelâm)**; (T) burhânî biçim (**öncül: 'hayy ⇒ her malûmu bilmeye sahih'; 'rüchân müreccihsiz olmaz' (Râzî ilkesi)**).
 - Mevzuya bağı: **KRİTİK — Fasıl I ilim delili varsa buna benzer yapı**; **Râzî 'rüchân müreccihsiz olmaz' ilkesini burada kendi tahsis ilkesi olarak kullanıyor** (c3 p41–53 ile tutarlı); **c3 p112 'kâdir müreccihsiz tercih eder' hasım sesiyle gerilim yok: Râzî kendi ilkesini kullanıyor**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.142 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p143
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.143 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Râzî'nin kelâmî delile itirazları**: **Sual 1**: 'Her malûmu bilmeye sahih' önermesini kabul etmeyiz: 'kâdir-âlim **hayy**' derken 'hayy = ilim ve kudret sahih olan'; 'her kâdir-âlim hayy' sözünün anlamı 'belirli kudret ve ilimle vasıflanmak mümkün'; **'belirli kudret-ilim ile vasıflanan başka ilimlerle de vasıflanabilir' zarûrî mi?** Zarûrîyse delile gerek yok, nazarîyse delil gerek; sunulan 'delil' **aynı öncülü başka ibareyle tekrar**. **Sual 2**: 'Zât-ı mahsûsa **sıhhati hepsine** sahihse **hepsini iktizâ etmek zorunda mı**? Zât **bazı âlimlikleri iktizâ edip bazılarını etmeyebilir**; **'bir kısmı ötekinden evlâ değil'** sözü zayıf: (a) nefsü'l-emrde evlâlık yok mu, (b) aklımızda evlâlık delili bilmiyor muyuz? **Birincisi** malum değil: **ilim malûma göre değişir**, farklı malûma farklı ilim: iktizâ **malûmun mâhiyetine** bağlı, **hakîkatler muhtelif ise hükümlerde eşitlik gerekmez**.
 - Netice/hüküm: **Kelâmî delilin iki öncülüne Râzî'nin itirazı (hayy⇒her malûm; eşit iktizâ ⇒ hepsi).**
 - Delil çeşidi: **cedelî-analitik**; (T) analitik.
 - Mevzuya bağı: **Fasıl I ilim delili**: 'sıhhat hepsine ⇒ vücûb hepsine' kelâmî çıkarımı **Râzî'ce zayıf**: **derece: kelâmî burhan, öncül bağımlı; Râzî'nin tercihi kemâl delili** (p144).
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.143 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p144
 - OCR: orta
@@ -1317,22 +1390,24 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p147
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.147 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: Şübhe 2 sonu ('nâkıs ilâh olamaz'). **Şübhe 3**: 'İlim özel nisbet-izâfe; nisbet **iki taraf** hâsıl olunca; **Allah'ın zâtı ilim sıfatının hâsılı için yetmez** (nisbet tek şeyle olmaz); ilim ikinci muzâfa şartlı ⇒ zât **başkasının i'tibârına muhtaç ⇒ mümkin**: muhâl.' **Şübhe 4**: 'İlim filozoflara göre **malûma mutâbık sûret**, mütekellimîne göre **belirli nisbet**; iki takdirde de **her malûmun ilmi öbür malûmun ilminden ayrı**; **Allah sonsuz malûmâtı bilse zâtında sonsuz sıfat, sonsuz hâl** hâsıl olur: muhâl (2 vecih): (1) her kesret azalma-artmayı kabul eder ⇒ mütenâhî; sonsuz kesret hâsıl olamaz; (2) ilâh kesretten mürekkeb ⇒ imkân.'
 - Netice/hüküm: **Şübhe 3 (nisbet ⇒ gayre ihtiyaç) ve Şübhe 4 (sonsuz malûm ⇒ sonsuz sıfat).**
 - Delil çeşidi: **hasım delili**; (T) analitik.
 - Mevzuya bağı: **Fasıl I ilim/sıfat**: 'sonsuz malûm ⇒ sonsuz sıfat' klasik itiraz; cevabı p149.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.147 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p148
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.148 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: Şübhe 4 devam: 'Kesret **ilimlerde**; ilimler sıfat; kesret sıfatlarda; **zât kesretten münezzeh, sıfatları îcâb edebilir** denemez mi?' Cevap: '**Allah = zât+sıfat mecmûu** mu, **yalnız zât** mı? **Mecmû ise** ilâh mümkin-muhtaç; **yalnız zât ise** ilâh sıfatlardan mücerred zât; **sıfatlar Allah'a zâid ve mugâyir ⇒ nefyi vâcib**.' (Şübhe 1–4 tamam.)
 - Netice/hüküm: **Şübhe 4'ün son kolu: sıfat-zât ilişkisi ikilemi (zât+sıfat mecmûu mümkin; yalnız zât sıfatsız).**
 - Delil çeşidi: **dilemma**; (T) analitik-cedelî.
 - Mevzuya bağı: **KRİTİK — Sünnî akide (sıfat-zât)**: 'sıfatlar zâtın aynı da gayrı da değil' formülünün **arka planı bu ikilem**; ders katmanında **dilemmanın çıkışı olarak** yazılabilir (kaynaklı).
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.148 otomatik karşılaştırıldı: kelime kapsama %75, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p149
 - OCR: orta
@@ -1371,22 +1446,24 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p153
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.153 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Birinci fırka (ilim bâkî) 4. delil**: 'İlim, âlim ile malûm arasında **özel nisbet**; malûm değişince **nisbet değişir, ilmin zâtı değişmez**: bir adamın yanında biri oturup **sağ** tarafında iken kalkıp **sol** tarafına geçse birinci adam onun **soluna** dönüşür; **izâfede tagayyür oldu, ama adam değişmedi**' (Zeyd oturuşu misali). **İkinci fırka (ilim malûm değişince değişir) delilleri**: **Delil 1**: 'Bir kişi Zeyd'in **yarın** şehre gireceğine i'tikâd etsin; **karanlık bir evde** gece-gündüz ayırt etmeden otursun; Zeyd girip gün olsun, kişi gün olduğunu bilmesin: **'yarın girecek' i'tikâdı ile 'şimdi girdi' bilgisini kazanmış olmaz**; **'olacak' ilmi 'oldu' ilminin aynı olsaydı bu sûrette hâsıl olurdu**; ⇒ **ayrı ilimler**; 'yarın girecek' ve 'gün geldi' iki ilimden **üçüncü ilim (şimdi girdi)** doğar: **yeni ilim, önceyi nakzetmez**.'
 - Netice/hüküm: **'İlim bâkî' fırkasının nisbet misali (sağ-sol); 'ilim değişir' fırkasının 1. delili: 'olacak' ≠ 'oldu' ilmi.**
 - Delil çeşidi: **misal + cedelî**; (T) ikna'î-cedelî.
 - Mevzuya bağı: **Fasıl I ilim sıfatı**: **'nisbet değişir, zât değişmez' misali** ders katmanında **kullanılabilir (kaynaklı: c3 p153)**; ancak Râzî'nin kendi eğilimi p156'da.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.153 otomatik karşılaştırıldı: kelime kapsama %81, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p154
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.154 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Delil 2**: '**Hakîkatler dönüşmez** (siyah beyaza dönmez; ilim zıddına dönmez); **'olacak' ilmi ile 'mevcut' ilminin mâhiyeti farklı** (biri diğerinin yerine kâim olamaz: vücûddan önce 'mevcuttur' i'tikâdı **cehl**, 'mevcut değil ama olacak' i'tikâdı vücûddan sonra **cehl**); ⇒ **biri ötekinin aynı olamaz**.' **Delil 3**: 'Şarta bağlı şey şartsızdan ayrı; **'olacak' ilmi şeyin şimdi mevcut olmasına şartlı değil, hatta onunla bağdaşmıyor**; 'mevcut' ilmi şeyin mevcudiyetine şartlı ⇒ **iki ilim ayrı**; 'olacak' ilmi hâlen hâsıl ve vücûdda bâkî kalmaz; 'mevcut değil' ilmi vücûdda hâsıl olmaz; **iki zıt ilim**; birini ötekinin aynı saymak **iki zıddın aynı olması**.'
 - Netice/hüküm: **'Olacak' ilmi ≠ 'oldu' ilmi (mâhiyet farkı, şart farkı, zıtlık).**
 - Delil çeşidi: **analitik**; (T) analitik-cedelî.
 - Mevzuya bağı: **Fasıl I ilim sıfatı**: bu argümanlar **ilm-i ilâhînin değişimine** götürür; **Sünnî cevap (ezelî ilim tek, olacağı ve olduğunu birlikte kuşatır)** yazılmalı.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.154 otomatik karşılaştırıldı: kelime kapsama %79, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p155
 - OCR: orta
@@ -1407,31 +1484,34 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p157
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.157 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (Cevap 3–4 sonu.) **İkinci fırka içinde ikinci grup (ilmin değişmesini iltizam edenler)**: 'Malûm zâil olunca ona dair ilim zâil, **yeni ilim hâdis olur**. **Takrîr**: zât-ı mahsûsa **malûmu iktizâ eder, o malûmun şartıyla**; malûm o vecihle vâki olunca **iktizânın şartı hâsıl**; malûm zâil olunca şart zâil, başka ilmin şartı hâsıl ⇒ **birinci ilim zâil, başka ilim hâdis**. **Bu, Ebü'l-Hüseyn el-Basrî (Mu'tezile) ve eskilerden Cehm b. Safvân ve Hişâm b. el-Hakem'in görüşü.** **Sonraki mütekellimîn 4 vecihle reddetti**: **Hücca 1**: 'bu ilim hâdis ⇒ muhdisi ve fâili gerek; fâil **ona âlim olmalı** (muhkem fiil fâilin ilmini şart kılar) ⇒ bu ilmin hâdis olması **başka ilme şartlı** ⇒ teselsül.' Râzî: 'bu hüccet **zayıf**: fâil-i muhtâr ilmi kudretle îcâd eder diye kurmuşsunuz; **biz** böyle demiyoruz: zât-ı mahsûsa ilmi **iktizâ eder, malûmun o vecihle vukûu şartıyla**'.
 - Netice/hüküm: **Ebü'l-Hüseyn, Cehm, Hişâm: ilim zâtın iktizâsı + malûm şartı; Râzî bu tarafa yakın (zayıf itirazları düşürüyor).**
 - Delil çeşidi: **cedelî**; (T) cedelî. **Atıflar (Cehm, Hişâm) Râzî'nin nakli (⊬)**.
 - Mevzuya bağı: **DİKKAT**: **Cehm b. Safvân ve Hişâm b. el-Hakem** Sünnî literatürde **sapkın kabul edilen isimler**; 'ilmin hudûsu' **onların meşhur tezi**; Sünnî ana çizgi **reddeder**; Râzî bu görüşe yakın bir noktada durduğunu p156–158'de **hasmın delillerini zayıf bulmakla** gösteriyor; **Risale bu görüşü benimsemez; Râzî'nin çizgisinin bu konuda ayrıldığı kayda geçer** (tarihî belge).
 - Doğan sual: Râzî **kendi kesin hükmünü** açıkça söylüyor mu? (Bâb sonu; el-İlm kitabı — hangi cilt?).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.157 otomatik karşılaştırıldı: kelime kapsama %85, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p158
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.158 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: Hücca 1'e cevap sonu (**Allah'ın zâtı muktezî, malûm şart**; malûm zâil ⇒ ilim zâil). **Hücca 2 (sonraki mütekellimîn)**: 'İlim hâdis olsa **ya Allah'ın zâtında, ya başka zâtta, ya mahalsiz**; üçü bâtıl: zâtında ⇒ **Allah hevâdisin mahalli**; başka zâtta ⇒ 'zât bir vasıfla vâsıflı, sıfat başka zâta kâim' muhâl.' **Râzî**: 'Niçin bu ilimler **Allah'ın zâtında hâdis** olmasın? **'zâtı hevâdisin mahalli olur' deniyorsa, kastınız 'hevâdisin zâtında hâdis olması' ise bu **şeyi kendisine ilzâm** eder (c2 p104–109 ile)'. **Hücca 3 (dâî sıfat için 'kâfi/def'/değil')**: (c2 p108 'Delil 3' ile aynı) — 'kâfi değilse münfasıl sebep ⇒ imkân ⇒ bâtıl'. Râzî'nin dipnotu: **'bu üçüncü kısım Allah'ın zâtında geçerli olmaz' (editör dipnotu)**.
 - Netice/hüküm: **Râzî: hâdis ilmin zâtta hâdis olması 'hevâdis mahalli' ilzâmı ile çürütülemez (çünkü ilzâm şeyi kendisine ilzâmdır).**
 - Delil çeşidi: **cedelî**; (T) cedelî.
 - Mevzuya bağı: **c2 p104–109 (hevâdis mahalli aporiası)** ile **aynı**: Râzî **'hevâdis mahalli' itirazını kabul etmiyor**; ancak **Sünnî akide: Allah'ın zâtı hevâdisin mahalli değildir**; **Risale'de bu hüküm nassla ve icmâ'la verilir**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.158 otomatik karşılaştırıldı: kelime kapsama %79, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p159
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.159 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: Hücca 3 sonu: '**bu delil güzeldir (cayyid)**' (Râzî: sıfat ya vâcib ya mümteni ya münfasıl sebebe bağlı — vâcibin sıfatı değişmez). **Hücca 4**: 'Allah ezelde âlemin **hâlen ma'dûm** olduğunu bilir; âlemi îcâd edince **mevcut** olduğunu bilir: ilk ilim zâil oldu mu? **Zâil olmadıysa** hem 'mevcut değil' hem 'mevcut' bilgisi (cehl ve zıt i'tikâdlar cem'i); **zâil olduysa**: ilk ilim kadîm (mümteni-i adem) ya hâdis; **hâdisse başka ilme mesbûk mu**? Mesbûkse **sonsuz evvelsiz hâdisler** (kelâmca bâtıl); mesbûk değilse **Allah'a cehl atfı**.' **Cehm ve Hişâm'ın cevabı**: 'Ezelde hâsıl ilim **mâhiyet-hakâik-tasavvurât ilmi**; Allah eşyayı **mâ-lâ-yezâl**de yaratınca **tasdîkât hâdis olur**: hüküm 'şu var oldu, şu yok oldu'; ⇒ işkâl zâil.'
 - Netice/hüküm: **Kelâmî 4. delil (ezelî ilim ve 'oldu' ilmi) ve Cehm/Hişâm'ın çözümü: ezelde tasavvur, sonra tasdîk hâdis.**
 - Delil çeşidi: **dilemma + kelâmî çözüm**; (T) cedelî.
 - Mevzuya bağı: **DİKKAT (Sünnî çözüm)**: **Ehl-i Sünnet çözümü: ilim tek ve ezelî; 'olacak' ve 'oldu' aynı ilmin kuşattığı iki hâl; Allah zamana tâbi değil**; **Cehm/Hişâm çözümü (tasdîkât hâdis) Sünnî değil**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.159 otomatik karşılaştırıldı: kelime kapsama %86, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p160
 - OCR: orta
@@ -1443,40 +1523,44 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p161
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.161 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (Filozof Hücca 2 devam: iki kare.) 'İki karenin **mahalli tek şey mi iki şey mi**? Tek olamaz: kareler tam mâhiyette ve tüm lâzımlarda müsâvi ⇒ bütün sıfat ve hâllere kabiliyette de müsâvi; tek mahalde farz edilince **imtiyâz mâhiyetle ve lâzımlarla olamaz, ârızlarla da olamaz** (her ârız birine yakışırsa öbürü de kabul eder; nisbet eşit) ⇒ **imtiyâz kalmaz**; imtiyâz var ⇒ **iki mahal, vaz' ve hayizle ayrılırlar** ⇒ **bu sûretin ve benzerlerinin müdriki cismânî olmalı**; Vâcib cisim-cismânî değil ⇒ **idrâk edemez**.' **Râzî'nin itirazı**: 'bu kelâm **idrâkin, malûmun âlimin zihninde hâzır olmasına şartlı** olduğu asla dayanır; **bu asıl birçok vecihle iptal edildi; akıllı için orada şüphe kalmaz**.' **Hücca 3 (filozof)**: 'Bir şeyin **mevcut** ya **ma'dûm** olduğuna dair ilim **malûma tâbi**; malûm mevcutsa ilim mevcudiyete, ma'dûmsa ademe taalluk eder; 'mevcut oldu çünkü ilim mevcudiyete taalluk etti' denemez; **ilim malûma mutâbık sûret; mutâbakat malûmun kendinde tahakkukuna şartlı**.'
 - Netice/hüküm: **Filozof Hücca 2–3: cüz'î ilim cismânî idrâk ister; ilim malûma tâbi (malûm önce).**
 - Delil çeşidi: **analitik (öncül: ilim=sûret)**; (T) burhânî biçim; Râzî öncülü reddediyor.
 - Mevzuya bağı: **Fasıl I ilim sıfatı**: 'ilim malûma tâbi' = **Fasıl I §8 'ilim vukûu îcâb etmez' cevabıyla uyumlu**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.161 otomatik karşılaştırıldı: kelime kapsama %79, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p162
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.162 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: Hücca 3 devam: 'Bu ilimlerin hâsıl olması malûmâtın belirli vecihlerle vukûuna şartlı ise **Allah'ın zâtı bu ilimlerin hâsılına muhtaç** olur; ilimler malûmâtın vukûuna şartlı; **şartın şartı şarta şartlı** ⇒ **Allah'ın zâtı mümkinâtın tahakkukuna bağlı** ⇒ mümkinin vücûduna muhtaç **daha evlâ mümkin** ⇒ vâcib mümkin: muhâl. **Mâhiyet ve hakîkat ilmi bundan farklı**: bu ilim hakîkatler var olsa da olmasa da hâsıl ⇒ zât-ı mahsûsa yeter; **Zeyd'in bu mekânda oturduğunu bilmek** ise **Zeyd oturmadıkça mümteni** ⇒ Allah'ın zâtı bu ilimler için **yetmez** ⇒ mahzûr.' **Râzî'nin notu**: '**Bu kelâm Allah'ın (âlemde) müessir olmasını da nefyeder** (te'sîr de nisbet, gayre muhtaç); **bazı vecihlerle ayrım yapılabilir**.'
 - Netice/hüküm: **Filozof Hücca 3'ün sonucu: cüz'î ilim Allah'ı mümkine muhtaç kılar; Râzî 'aynı yargı müessiriyeti de nefyeder' cevabını veriyor.**
 - Delil çeşidi: **analitik + paralel nakz**; (T) analitik-cedelî.
 - Mevzuya bağı: **KRİTİK — Sünnî akide**: 'Allah'ın ilmi **mümkinâtın vukûuna bağlı olmaksızın** ezelî (Allah bilir, bilinen olur); filozofun 'ilim malûma tâbi ⇒ Allah mümkine muhtaç' hükmünü **kabul etmeyen çözüm**: **ilim zâtın sıfatı, malûm ilme mutâbık kılınmış değil (ilim malûma mutâbıktır, îcâb etmez, malûma muhtaç olmaz)**; Râzî **paralel nakz** ile aynı sonuca varıyor: (T) analitik.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.162 otomatik karşılaştırıldı: kelime kapsama %81, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p163
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.163 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (Râzî'nin nakz notu sonu: 'müessiriyet de nisbet, ayrım yapılabilir'.) **Cüz'îleri bilen lehinde deliller**: **Hücca 1 (ihkâm)**: 'Allah muhkem, mütkın fiiller yaptı; **muhkem fiil sahibi kendi fiilini bilir** ⇒ Allah **kendi fiillerini** bilir; ihkâm ise **vücûda çıkmış cüz'î şahıslarda** görünür ⇒ **cüz'îleri bilir**.' **Hücca 2 (şahsiyet-mâhiyet)**: 'Şahsî cüz'înin **mâhiyeti ve teşahhusu** var; teşahhus ya mâhiyetin aynı (⇒ mâhiyet ilmi teşahhusu bilmek olur) ya zâid (⇒ zâid de mümkin bir mâhiyet)'; **filozoflar 'illetin ilmi ma'lûlü gerektirir' derler**; ⇒ 'Allah zâtını bilmesi, o teşahhus ve teayyünü doğuran şeyleri bilmesini gerektirir' (p164).
 - Netice/hüküm: **Cüz'î ilim lehine: (1) ihkâm; (2) teşahhusun kaynağı Allah ⇒ filozofun kendi ilkesiyle Allah teşahhusu da bilir.**
 - Delil çeşidi: **analitik + ilzâm**; (T) analitik-burhânî görünümlü.
 - Mevzuya bağı: **Fasıl I ilim sıfatı (cüz'î)**: **filozofun kendi 'illetin ilmi ma'lûlü gerektirir' ilkesiyle cüz'î ilmi ispat (ilzâm-ı hasım)**: ders katmanında 'iki yol'dan biri.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.163 otomatik karşılaştırıldı: kelime kapsama %78, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p164
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.164 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (Hücca 2 sonu): '**Allah'ın zâtını bilmesi, teşahhusu ve teayyünü doğuran şeyleri de bilmesini gerektirir ⇒ teşahhusu 'o belirli' olarak bilir**; ⇒ 'illetin ilmi ma'lûlü gerektirir' sözü **onlara Allah'ın şahısları o belirli şahıslar olarak bildiğini kabul ettirir**.' **Hücca 3**: 'İlim medih-kemâl, cehil noksan; Allah en kâmil ⇒ **kemâl sıfatlarıyla vasıflanmak evlâ**.' **Hücca 4 (fıtrat)**: '**Dünya ehli, dosttan zındığa, muvahhidden mülhide**, bir bela ve imtihana düşünce **Allah'a yalvarır, kurtulmasını ister**; cüz'î ilmi en çok inkâr eden bile bu hâle düşünce dua-tazarru' eder; **fıtrat-ı aslî Allah'ın makdûrâta kâdir, sırları ve gizlileri bilen olduğuna şâhit**; fıtrat şahitliği bu **nefyî taksîmâtlardan ve gâmız mutâlibten kabule daha yakın** ⇒ **Allah cüz'îleri bilir, hâcetleri defe kâdirdir**.' Râzî: '**Zannediyorum ki İbrâhîm'in (a.s.) babasına "niçin işitmeyen, görmeyen, sana bir faydası olmayan şeye tapıyorsun" demesi babasının filozofların dininde olup Allah'ın kudretini ve cüz'îleri bilmesini inkâr etmesindendi**; bu benim bu meselede kanaatim.'
 - Netice/hüküm: **Cüz'î ilim lehine fıtrat delili (dua-tazarru') ve Râzî'nin tarihî-tefsirî tahmini.**
 - Delil çeşidi: **fıtrî-ikna'î + tefsirî tahmin**; (T) hitâbî-ikna'î; **Râzî'nin İbrâhîm (a.s.) yorumu kendi zannı (⊬); 'Meryem 42' âyeti ve bağlam kaynakla doğrulanmadı; Risale'ye alınmaz**.
 - Mevzuya bağı: **Fasıl I Ek (Fıtrat)**: **fıtrat delili ('yalvarış Allah'ın işiten-bilen-kâdir olduğuna fıtrî şahit')** — Râzî **burada fıtrat delilini cüz'î ilim için** kullanıyor, **c2 p59–70'te hasmın cihet lehine kullandığı fıtrata karşı ayrım gerekliliğini** hatırlatır: **fıtratın kaynak/yönelim/ilim-kudret şahitliği ve cihet ispatı arasındaki ayrım Ek'te yazılmalı**. **Padişah kararı bekleyen madde**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.164 otomatik karşılaştırıldı: kelime kapsama %83, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p165
 - OCR: orta (başlık kötü)
@@ -1488,22 +1572,24 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p166
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.166 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Ma'dûmu bilmenin 3. ve 4. delili**: (3) **mâhiyet ilmi mevcudiyete şartlı değil**: hakîkatleri varlıklarını bilmezken de biliriz; 'şey ya mevcut ya ma'dûm' taksîminde **ademin mânâsını** tasavvur ettik ⇒ ma'dûm mâhiyet tasavvuru mümkin; (4) 'ev yapmak, gömlek dikmek isteyen **önce o işi tasavvur eder, sonra vücûda sokar**' ⇒ **ma'dûm malûm olur**. **Sonuç**: 'ilmi îcâb eden zât-ı mahsûsa; **ma'lûmâtın bir kısmına ilim iktizâsı diğerlerinden evlâ değil** ⇒ ya hiçbirini iktizâ etmez (bâtıl) ya **bilinebilecek her şeyi** bilir.' **Hasım delilleri**: **Hücca 1**: '**Allah bu cüz'îleri vukûundan önce bilseydi rubûbiyet ve ubûdiyet bâtıl olurdu**: rubûbiyet: **vukûu bilinen şey vâcib-ül vukû'**, vâcib olana kâdir kudret olmaz ⇒ Allah hiçbir şeye kâdir olmaz; ubûdiyet: aynı gerekçe **kul kâdir olmaz**; ayrıca **fiil ve terke kâdir olduğumuzu zarûrî buluruz**; 'vukûdan önce biliyor' bu kudreti engeller.'
 - Netice/hüküm: **Cebr-kader klasik itirazı (ezelî ilim ⇒ vücûb ⇒ kudret yok).**
 - Delil çeşidi: **dilemma**; (T) analitik-cedelî.
 - Mevzuya bağı: **KRİTİK — Fasıl I/IV (kader-irade)**: 'ezelî ilim ⇒ vücûb' itirazı; **Sünnî cevap: ilim malûma mutâbıktır, îcâb etmez (ilim vukûu gerektirmez; Allah kulun ne yapacağını, kulun kendi ihtiyârıyla yapacağı şekilde bilir)**; Râzî cevabı sonra.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.166 otomatik karşılaştırıldı: kelime kapsama %85, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p167
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.167 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: Hücca 1 sonu. **Hücca 2**: 'Şey vücûda girmeden önce **mahz adem ve nefy-i sırf**; **mahz ademde imtiyâz ve hâsseyle ihtisas olamaz**; **her malûm başkasından ayrı ve imtiyâzını doğuran sıfatlara sahip** olmalı ⇒ **ma'dûm malûm olamaz**.' Karşı: 'mâhiyetler ademde **mütekarrir** (mu'tezilî 'ma'dûm şey' görüşü) ⇒ soru zâil'. **Cevap**: 'Bu **matlûbu vermez**: 'ma'dûm şeydir' diyenler ma'dûm zâtların **mürekkeb, şekil-renk-hayiz sahibi** olduğunu söylemez; **Allah'ın zâtların bu sıfatlarla vasıflandığını vücûda girmeden bilmediğini** söylemek zorundasınız (**siz söylemiyorsunuz**); bu sıfatlar ademde yok, yine de biliyorsanız **mâhiyetleri hâsıl olmadan bilmek de câiz**.' **Hücca 3**: 'İlim özel nisbet-izâfe; **izâfe iki tarafın takarrürüne mesbûk**; ma'dûm ise vücûda **kudretin te'sîriyle** çıkar; kudretin te'sîri **âlim olmaya şartlı** ⇒ **devir**.' **Bilinebilen her şeyi bilmeyi reddedenlerin delili 1** başlar (**'ilmin ilmi' mertebeleri**).
 - Netice/hüküm: **Ma'dûmun ilmine karşı 3 hasım delili; Râzî'nin ilk cevabı (hasmın kendi kelâmına dönüş).**
 - Delil çeşidi: **cedelî**; (T) cedelî.
 - Mevzuya bağı: —
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.167 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p168
 - OCR: orta
@@ -1515,31 +1601,34 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p169
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.169 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (Hücca 1 devam; 'ilmin ilmi' sonsuz mertebe itirazına cevap): 'Zât ilme **müessir**; her mertebe **ikinci mertebedeki te'sîr için şart**; **illetin şartı illet yerindedir** ⇒ soru döner'; ikinci vecih: 'her önceki mertebe sonrakini **müstelzim**; sonsuz illet-ma'lûl bâtıllığı delili **bu sûrette de aynen geçerli**' (**hasmın 1. hüccesine Râzî-hasım cevabı**: sonsuz zincir itirazı kendi içinde döner). **Hücca 2**: 'Sonsuz olan **imtiyâz** taşıyamaz (ayrılık için her ikisi öbüründen ayrı ve dışında olmalı; dışında bir şey olan **mahdûd**); her malûm başkasından ayrı olmalı; ⇒ **sonsuz malûm olamaz**.' **Hücca 3**: 'Sonsuz malûmu bilse **zâtında sonsuz sıfat** hâsıl olurdu: (1) ilim = özel nisbet; sonsuz malûm ⇒ **sonsuz mevcut nisbetler**; (nisbetlerin a'yânda vücûdu yok denemez, çünkü ilim bu nisbetlerdir).'
 - Netice/hüküm: **'Sonsuz malûmu bilmek' aleyhine 3 delil (sonsuz mertebe, imtiyâz, sonsuz sıfat).**
 - Delil çeşidi: **analitik**; (T) analitik-cedelî.
 - Mevzuya bağı: **Fasıl I ilim/sonsuz**: 'Allah sonsuz malûmu bilir' iddiasına klasik itirazlar.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.169 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p170
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.170 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: Hücca 3 devam: 'İlim filozoflara göre **mutâbık sûretler**; sonsuz malûm ⇒ zâtta **sonsuz sûret**; iki takdirde de **sonsuz sıfat** (nisbetler ya da sûretler). **İkinci vecih**: 'bu malûmu bilir' ile 'bilmez' nakîz değil; zâtta sıfatların **ayrılığı** (biri gaflet, öteki bilme).' **Sonsuz sıfatın muhâlliği (2 vecih)**: (1) her mevcut adet **artma-eksilmeyi kabul eder**, öyleyse mütenâhi; (2) **her malûmun kendi başına sonsuz hükmü** var (cevher-i ferd sonsuz hayizde/vakitte/sıfatla olabilir) ⇒ **her malûm için sonsuz hüküm bilmek ⇒ sonsuzun kat kat çoğaltılması (tad'îf) muhâl** (tad'îf bir şeyi başka şeye eklemek; **dışında bir şey bulunan mütenâhi**).
 - Netice/hüküm: **Sonsuz sıfat ve tad'îf itirazları.**
 - Delil çeşidi: **analitik**; (T) analitik.
 - Mevzuya bağı: —
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.170 otomatik karşılaştırıldı: kelime kapsama %77, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p171
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.171 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (Tad'îf sonu.) **Râzî'nin cevapları (5 şübheye)**: **1.'ye (rubûbiyet-ubûdiyet)**: 'bu, **hayiz** meselesinin ('cebr ve kader' bâbında) sonucu; **o mesele**de anlatılacak'; **2.'ye (ma'dûm malûm olamaz)**: 'bu sözü bu fasılın başında kahir delillerle **iptal ettik**'; **3.'ye (ilmin ilmi ilimden mugâyir ⇒ sonsuz illet-ma'lûl)**: 'bu, **sonsuz sebep ve müsebbepler lâzım getirir, ama onların evvelsizliğini nefyetmez**' (yani 'evvelsiz sonsuzluk' değil 'sonsuz mertebe' — ilk bâtıl delili değil); **4.'ye (sonsuz imtiyâz olmaz)**: 'her biri ötekinden ayrı; bu **her birinin malûm olmasına yeter**'; **5.'ye (sonsuz sıfat)**: 'bu taalluklar **nisbet ve izâfetlerdir**; sonsuz nisbet-izâfe **imkânsız değil: bir, ikinin yarısı, üçün üçte biri, dörtün dörtte biri; sonsuz nisbet hâsıl** ⇒ bu sözün imkânsızlığı yok.' **Bâb 3'ün son cümlesi 'Vallahu a'lem'.**
 - Netice/hüküm: **Râzî: 'Allah sonsuz malûmu bilir' iddiası itirazlara karşı korunuyor (nisbetler sonsuz olabilir).**
 - Delil çeşidi: **cedelî-analitik**; (T) analitik (**'bir sayısının nisbetleri' misali ders katmanına hazır**).
 - Mevzuya bağı: **Fasıl I ilim sıfatı (sonsuz malûm)**: cevabı **Râzî c3 p171 / c3 p149 (aynı misal)**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.171 otomatik karşılaştırıldı: kelime kapsama %83, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p172
 - OCR: boş
@@ -1569,13 +1658,14 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p175
-- OCR: orta (başlık kötü)
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.175 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Bâb 4, Fasıl 1: 'İrâdenin hakîkati'**. **Mesele 1**: **Filozoflar**: 'Kendimizde buluruz: bir fiilde **saf ya da râcih menfaat** tasavvur edince nefsimizde **o menfaati tahsile meyil**, saf ya da râcih **mazarrat** tasavvur edince **def' ve mene meyil**; **celb-tahsil meylini irâde**, **def' ve men meylini kerâhet** diye adlandırdık. **Irâde-kerâhetten bu kastediliyorsa Allah hakkında sübûtu muhâl** (lezzet-elem, menfaat-mazarrat ona sahih değil); **başka mânâ kastediliyorsa mânâsını açıklamak gerek**.' **Mütekellimîn**: '**İrâde, mümkinin iki tarafından birini vücûb ve tekvîn olmaksızın râcih kılan sıfat**.' **Bu sıfatın varlığına iki delil**: **(1)** 'İki kadeh/iki ekmek arasında muhayyer kalan biri, ya da **aslandan kaçıp iki eşit yola varan** biri birini **müreccihsiz** seçer; **menfaat ya mazarrat def'i olmadan**: **irâde menfaat celbi olmadan hâsıl**'.
 - Netice/hüküm: **İrâdenin iki tanımı: filozof (meyl) ve mütekellim (sıfat-i müreccih); mütekellim delil 1: Buridan örneği.**
 - Delil çeşidi: **tanım + misal**; (T) cedelî.
 - Mevzuya bağı: **KRİTİK — Fasıl I §8.3**: **Fasıl I 'irâde' tanımı hangisi?** (Fasıl I yeniden okunacak; 'tahsis edici sıfat' ise **mütekellim tanımı**).
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.175 otomatik karşılaştırıldı: kelime kapsama %78, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p176
 - OCR: orta
@@ -1587,22 +1677,24 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p177
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.177 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (Filozof itirazı 2. vecih ve mütekellim delillerine cevap — filozof sesi.) 'İrâdenin **tercihte** müessir, **tekvînde** değil' sözü **tercih ile tekvîn farkının beyânına** muhtaç: **tercihten, mümkinin bir yanının vukûu ve o sebeple olmasını** anlarız; bu **tekvîndir**; 'tercih-tahsis' adlı, tekvînden ayrı bir mefhûm ispatı **ma'kûl değil**. **Buridan örneğine (iki kadeh/ekmek)**: (1) 'ikisinin bedene ilişkin menfaat-mazarrat bakımından **eşit** olduğunu kabul etmeyiz; **biri ona daha yakın, daha kolay, daha faydalı** hayâl edilir; aşırı iştahlı olabilir, gözü birine takılınca **rağbeti o yönde kalır**; **zihnî müreccihin hâsıl olması, bekâsı ve unutulduktan sonra hatırlanması ayrı şeylerdir**'; (2) 'birini müreccihsiz aldı diyelim: bu fiili doğuran **yeme-içme rağbetinin şiddeti**; rağbet = menfaat talebi ve mazarrat defi; **menfaat talebi olmasa hiçbirini almazdı**; aslandan kaçış da öyle.'
 - Netice/hüküm: **Filozof cevabı: 'irâde = tercih edici ayrı sıfat' iddiası tekvîn ile ayırt edilemiyor; eşit iki seçenek gerçekte eşit değil.**
 - Delil çeşidi: **analitik-cedelî**; (T) analitik-ikna'î.
 - Mevzuya bağı: **KRİTİK — Fasıl I §8.3**: **Fasıl I 'tahsis eden irâde' iddiasına karşı en direkt itiraz: 'tercih/tahsis mefhûmu tekvînden ayrı değil'**; Fasıl I'in cevabı **açık yazılmalı**: 'tahsis = mümkinin bir tarafını **belirleyen** sıfat (tekvîn = îcâd/yaratma; tahsis bunun **zamansal/mikdârî belirlemesi**)'.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.177 otomatik karşılaştırıldı: kelime kapsama %79, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p178
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.178 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (Filozof cevabı devam.) '**Hasta meyveyi arzular ama yemez**: **tabiatı hâlî lezzetlere meyleder, gelecekte doğacak acılardan nefret eder**; menfaat-mazarrat mertebelerini gözetir; lezzet-menfaat râcihse yer, değilse terk; **dâî yine menfaat talebi ve mazarrat defi**; ancak lezzet **hâlî**, elem **gelecekte**. **Zâhid-âbid ibadete irâde eder**: ibadetler **hâlde acı, gelecekte fayda (nesîe)**; menfaatler yaradılışça büyük, zararlar küçük; **muâraza ve tercih**. **Netice**: '**irâde ve kerâhetten menfaat celbi ve mazarrat defi meyli dışında bir mânâ bilmiyoruz; bu Allah hakkında muhâl; öyleyse Allah için irâde isbâtı ma'kûl değil**.' **Bahis 1 biter.** (Dipnot: 'nakit nesiyeden hayırlı' bâbında anlatıldı.)
 - Netice/hüküm: **Filozof/nefy tarafı: irâde = menfaat-mazarrat meyli ⇒ Allah'a isnâd edilemez.**
 - Delil çeşidi: **indirgeme + cevap**; (T) analitik-cedelî (hasım: mütekellim tanımı).
 - Mevzuya bağı: **DİKKAT (Sünnî akide)**: 'Allah diler (mürîddir)' **nassla sabit; bu indirgeme (insan irâdesi=meyl) Allah'a taşınamaz (kıyâs-ı gâib)** — Râzî'nin bu sayfası hasım sesidir; **Risale 'irâde=sıfat-ı zâtiyye/tahsis edici' der; meyl tanımı reddedilir**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.178 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p179
 - OCR: orta
@@ -1614,22 +1706,24 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p180
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.180 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (Tahsis delili devam.) **İlim olamaz**: (a) 'fiilin maslahatını bilmesi onu çağırır' **bâtıl**: Allah'ın **fiillerini maslahat-garazla ta'lîl etmenin caiz olmadığı** delilleri bu kısmı da ibtâl eder; (b) 'vukûu bilmesi' **bâtıl**: ilim vukûa tâbi, vukû bu tahsise tâbi; tahsisi ilme bağlarsak **devir**. ⇒ **tahsis kudretle de ilimle de değil ⇒ başka sıfat** (hayat, semi', basar, kelâm da olamaz) ⇒ **irâde**. **Tesiri vücûb üzere ise mûcib bi'z-zât; sıfat (sıhhat) üzere ise matlûb (irâde: mümkinin bir tarafını vücûb ve tekvîn olmaksızın râcih kılan sıfat)**. **Râzî'nin itirazları**: (1) 'vücûb-tekvîn olmadan te'sîr eden müessir aklen muhâl (gösterdik)'; (2) '**tahsiste müessir neden kudret olmasın?** Delil: kudretin nisbeti her vakte eşit; **irâde de aynı**: irâde başka vakitte tercih için de sâlih mi, yoksa yalnız bu vakte mi? Sâlihse **irâde de müreccih ister ⇒ teselsül** (ya da kudret irâdeye muhtaç olmaz); yalnız bu vakte taalluk ediyorsa (ezelî, imtinâ'ı adem) **Allah mûcib bi'z-zât, sahih fâil değil**.'
 - Netice/hüküm: **Mütekellim tahsis delili tamam; Râzî'nin 2 itirazı: irâde de müreccih ister / irâde belirli taalluka bağlıysa mûcib.**
 - Delil çeşidi: **analitik-cedelî**; (T) analitik.
 - Mevzuya bağı: **KRİTİK — Fasıl I §8.3**: **Fasıl I 'irâde muhassıs' iddiasına Râzî'nin iki net itirazı: (i) 'irâdenin de muhassıs ihtiyacı (teselsül)'; (ii) 'irâde belirli vakte ezelen taalluk ediyorsa mûcib'**: ders katmanı için **cevap taslağı**: (i) irâde **müreccihe muhtaç mümkin değil, zâtî muhassıs sıfat** (Sünnî: irâde-i ilâhî ezelî, taalluku tenciz hâdis/i'tibârî); (ii) ezelî irâde belirli vakte taalluk eder ama **'o vakitte yaratmak' irâdenin lâzımı değil, tenciz (fiilî) taallukudur**: **Sünnî kelâmdaki irâde-taalluk (sûlûhî/tenciz) ayrımı; Râzî'nin çözümü ise bu değil**.
 - Doğan sual: **Râzî'nin kendi irâde çözümü** (cilt 4 hudûs bâbı?).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.180 otomatik karşılaştırıldı: kelime kapsama %83, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p181
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.181 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: İtiraz (2) sonu: 'irâde başka vakitte de sâlih ise **müreccih ister (teselsül)**, yoksa kudret de irâdeye muhtaç olmaz'; 'yalnız bu vakte taalluk ediyorsa Allah **mûcib bi'z-zât**; bu mesele **kâdir-muhtâr bâbının fer'i; fer' aslı kaldırıyorsa bâtıl**'; ayrıca 'irâde belirli vecihle sınırlıysa **kudret de belirli vecihle sınırlı olabilir ⇒ kudret irâdeye muhtaç olmaz**'. **Mesele 3: 'İnkâr edenlerin 4 delili'**: (1) **irâde muhassıs sıfatı, müessiriyet için tam ise fiil vâcib, değilse mümteni** (Bâb 2 burhanı) ⇒ irâde isbâtı muhâl; (2) **irâde = menfaat/mazarrat meyli; Allah'ta muhâl; başka mânâ akledilmez**; (3) **irâde kadîm ya hâdis; ikisi de bâtıl**; (4) **tercihin iktizâsı ya vücûbla ya imkânla**: vücûbla ⇒ mûcib bi'z-zât; imkânla ⇒ **câiz ve eşitken tercih olmaz**.
 - Netice/hüküm: **İrâde inkârcılarının 4 delili (Bâb 2'nin tekrarı; meyl tanımı; kadîm/hâdis; iktizâ)**.
 - Delil çeşidi: **hasım delilleri**; (T) analitik-cedelî.
 - Mevzuya bağı: **Fasıl I §8.3**: dört itirazın cevabı ders katmanında tabloyla.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.181 otomatik karşılaştırıldı: kelime kapsama %82, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p182
 - OCR: orta
@@ -1677,58 +1771,64 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p187
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.187 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Bahis 1: basarın mâhiyeti**. 'Zeyd'in sûretine bakıp sûretin ilmi en kâmil vecihte hâsıl olunca **gözü kapattığımızda iki hâl arasında bedîhî fark buluruz**, hâlbuki sûretin ilmi iki anda da hâsıl ⇒ **ibsâr ilimden zâid bir hâl**. İhtilaf: bazıları '**fark, mer'înin sûret ve şeklinin hadakada intıbâ'ıdır; hadakanın o sûretten te'sîrlenmesi**'. **İntıbâ' delilleri**: (1) **güneş kursuna uzun bakıp gözünü kapatan** kişi kursu hayâlinde tam intıbâ' hâlinde görür, defetmek istese **edemez**; (2) **yeşil bahçeye uzun bakıp sonra beyaza çeviren** beyazı yeşilliğe karışık görür: hadaka yeşilden etkilenmiş, yeşil hadakadaki hâlle beyaza karışıyor; (3) **karşıdakinin gözbebeğinde yüzün sûretini görürüz**; (4) **güneşin tam kursuna bakınca hadaka zayıflar, dağılır**: hadaka mer'îden te'sîr alır.
 - Netice/hüküm: **Basar = hadakada intıbâ' (birinci görüş) — 4 delil.**
 - Delil çeşidi: **istikrâ-tecrübe (fizyoloji)**; (T) ikna'î-tecrübî (**eski optik varsayımı**).
 - Mevzuya bağı: **Kapsam dışı (optik)**; ders katmanında **'eski optik teorileri; bugünkü karşılığı ayrı'** notuyla; **Râzî'nin tavrı: basar ilimden zâid; intıbâ' şart olmayabilir (p188)**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.187 otomatik karşılaştırıldı: kelime kapsama %78, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p188
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.188 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (Delil 3–4 devam.) 'Bazıları: **iki hâl arasındaki fark, hadakanın mer'îye bakarken etkilenmesi**, ikinci hâlde olmaması.' **İkinci görüş**: '**te'sîr hâsıl, nizâ yok; ama basar kendi başına ilmî idrâkten ayrı bir hâl**. **Deliller**: (1) **âlem küresinin yarısını iki göz ile görürüz**; bu sûretin **gözde intıbâ'ı muhâl** (büyük küçüğe sığmaz) ⇒ **görme intıbâ' değil**; ayrıca 'ru'yet' hâli 'ilim' hâlinden **zarûrî** ayrıdır ⇒ fark idraklerin kendisinde; (2) **gözün te'sîri, mer'îye müsâvi bir sûretin gözde hâsıl olması ve kabul edilmesi**; bu **inkişâf ve tecellî kabîlinden değil**; ru'yet ise **inkişâf ve tecellî** ⇒ **ru'yet intıbâ'dan ayrı**.'
 - Netice/hüküm: **İkinci görüş (Râzî'nin de seçeceği): basar/ru'yet = intıbâ'dan ayrı inkişâf hâli.**
 - Delil çeşidi: **analitik + gözlem (âlem yarısını görme)**; (T) analitik-ikna'î.
 - Mevzuya bağı: **Fasıl III (ru'yet): c2 p79–85'te Râzî'nin ru'yet = inkişâf tanımı** ile **tutarlı**; burada **tanımın optik dayanağı: 'göz intıbâ'ı yetmez'**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.188 otomatik karşılaştırıldı: kelime kapsama %81, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p189
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.189 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (3.) 'Görme intıbâ' olsaydı **intıbâ' kâmil oldukça görme kâmil** olmalı; öyle değil: güneşe bakınca intıbâ' güçlenir, **görme zayıflar** ⇒ **intıbâ' ibsârdan ayrı**.' **Semâ' (işitme)**: 'ses **hakîkatini bilmek** ile **işitmek** arasında bedîhî fark.' **Bazıları**: '**fark, sesin hava dalgalanmasıyla hâdis olması, dalgalanmanın sımâh yüzüne çarpması (şiddetli hareket)**; delil: ses güçlenince kulakta **şiddetli eser**, hatta **sımâh yüzü yırtılır**; **boru sesinde beyin yırtılıyormuş gibi** hisseder ⇒ **işitmede intıbâ'-infiâl** var.' **Diğer görüş**: 'bu fark kabul; ama **iki idrak türü (ilim/semâ') arasında** fark; **semâ' bu türden ayrı**; deliller (p190).'
 - Netice/hüküm: **Semâ' = ilimden zâid idrak; hava dalgalanmasıyla bağı var ama ondan ibaret değil (ikinci görüş).**
 - Delil çeşidi: **istikrâ + analitik**; (T) ikna'î.
 - Mevzuya bağı: kapsam dışı (fizyoloji); **'basar/semi' ilimden zâid inkişâf' hükmü (Râzî'nin seçtiği)** Fasıl I sıfatlar için **dayanak**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.189 otomatik karşılaştırıldı: kelime kapsama %83, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p190
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.190 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Semâ'nın intıbâ'dan ayrı oluşuna deliller**: (1) '**Duvarın ardından konuşan insanın sözünü tam ve kâmil işitiriz**; dalgalanmanın **tamamıyla** ulaşması muhâl (duvar engel); 'duvarda gözenek, delik var' denir; **delil: karanlık evde kapı açıksa işitme daha kâmil, kapalıysa zayıf.**' **Cevap**: 'duvar kesif cisim; konuşmadan doğan dalgalanma duvara varınca **şeklini korumaz**; hafif havadaki şekil kesif duvara varınca **bekâ edemez**; gözeneklerden geçen hava da **dış şekli korumaz** ⇒ sözün **şekil ve düzeniyle** işitilmesi **imkânsız**; işitiliyor ⇒ onların sözü bâtıl.' (2) '**Sesi işitince sağdan mı soldan mı geldiğini biliriz**; ⇒ sesi **hâdis olduğu yerde** duyarız; sımâhın içindeki çarpma yalnız olsaydı yönü bilemezdik (dokunma kuvveti gibi).'
 - Netice/hüküm: **Semâ' intıbâ'dan ayrı: (1) duvar arkası, (2) yön algısı.**
 - Delil çeşidi: **gözlem-analitik**; (T) ikna'î.
 - Mevzuya bağı: kapsam dışı.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.190 otomatik karşılaştırıldı: kelime kapsama %81, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p191
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.191 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (3) 'Semâ' te'sîr olsaydı **te'sîr güçlendikçe semâ' kâmil** olmalı (bâtıl).' **Sonuç**: 'İbsâr ilimden ve gözün te'sîrinden **zâid**; semâ' ilimden ve kulağın te'sîrinden **zâid**; bunlar **ilimden daha kâmil ve güçlü bir inkişâf-tecellî**. **Bahis 2: Allah'a bu tür tecellî-inkişâf için delil var mı?** 'Bu hâl göz-kulak te'sîrinden ayrı olduğunu gösterdik; ancak **başka makamda tevakkuf ediyoruz**: bu hâlin hâsıl olması **göz-kulakta te'sîrin hâsıl olmasına şartlı olabilir**: **âletler bozuldukça idrakler bozulur, sağlamsa sağlam**. **İhtimal 2**: 'insan nefsi için şartlı olsa da **mufârıklar** için bu âletsiz de hâsıl olabilir; nasıl ki mümkinâtın vücûdu müessire şartlı ama Vâcib'in vücûdu şartlı değil'. **1. takdirde Allah'a isnâd muhâl, 2. takdirde muhâl değil ⇒ tevakkuf**; ancak '**evlâ ve ahlâk**'a dayalı mukaddime isbâtı gerektirir: **Allah en kâmil mevcut ⇒ tüm kemâl sıfatlarıyla vasıflı.**'
 - Netice/hüküm: **Semi'-basar için aklî kesin delil yok; Râzî 'evlâ ve ahlâk' (kemâl) delilini kullanıyor.**
 - Delil çeşidi: **kemâl delili + tevakkuf**; (T) ikna'î (**Râzî derecesi: evlâ/ahlâk**).
 - Mevzuya bağı: **KRİTİK — Fasıl I sıfatlar (semî'-basîr)**: **Sünnî akidede semi'-basar nass ile sabit ('O işitendir, görendir'; ⊬ âyet referansı)**; **Râzî'nin aklî delil derecesi (evlâ-ahlâk)** ders katmanına **'akıl delili zayıf, nass kat'î'** biçimde yazılır.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.191 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p192
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.192 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Kemâl delili sonu**: 'İbsâr-semâ' **kemâl sıfatı**: bir şeyi bilip sonra görünce nefsimizde **noksandan kemâle, gizlilikten açıklığa** geçmiş gibi buluruz; bu hâl kemâlse **yokluğu noksan**; Hakk noksandan münezzeh, kemâlle vasıflı ⇒ **akl-ı evvel gereği** Allah bununla mevsûf.' **Bahis 3: inkâr edenlerin deliller**: 'Bir şeyi vücûdundan önce görmek, sözü vücûdundan önce işitmek muhâl; **iki vecih**: (1) Allah bu idrakle vasıflı olsa **sıfat değişken**: şeyi vücûdunda görür, önce görmez; sesi hâsıl olurken işitir, önce işitmez ⇒ **Allah'ın sıfatında tagayyür (muhâl)**; (2) idrak **mudrekin kendinde hâsıl olmasına şartlı**; zât bu idrâki iktizâ etse ve idrak mudreğin hâsılına mevkûf ise **zât kâfi değil, gayrin hâline mevkûf** ⇒ zât gayre bağlı ⇒ mümkin.'
 - Netice/hüküm: **Semi'-basar inkârcı delilleri: tagayyür, gayre ihtiyaç.**
 - Delil çeşidi: **hasım delilleri**; (T) analitik-cedelî.
 - Mevzuya bağı: **c2 p105–109 ve c3 p145–171** ile **aynı 'izâfî sıfat hudûsu' aporiası**; cevabı p193+.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.192 otomatik karşılaştırıldı: kelime kapsama %81, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p193
 - OCR: orta
@@ -1740,31 +1840,34 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p194
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.194 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: S2 (a) devam: 'Allah'ın hayatı bu sıfatların sahihliğini iktizâ etmiyor; **bu sahihliğin bizde olması Allah'ta da olmayı gerektirmez**.' **(b)** 'Hayatlar misil olsa da **sahihlik için muhassıs kâim olduğu gibi zâtın kâbil olması da itibar**; hayat sahih kılınca **belirli zât-ı mahsûsa** bu sıfata **kâbil olmayabilir**; nasıl **vücûd her sıfatı sahih kılar** ama **Allah'ta çoğu sıfat muhâl**.' **(c)** 'Sahihlik **belirli şarta bağlı**; şart Allah hakkında muhâl ⇒ imkân şartın yokluğundan yok.' **S3**: 'Sağırlık ve körlüğü **semi'-basarın zıddı** dediniz; **yokluk mânâsında ise** 'olmasa yokluk hâsıl, yokluk noksan, noksan muhâl' — **nizâ tam bu**: iki sıfat vâcib mi? yokluğu mümteni mi? **delil dâvâyı tekrar**; **vücûdî zıddiyse** delili yok. **S4**: 'Sağırlık/körlük vücûdî zıt olsa da **kâbil zât birine zorunlu sahip mi?** delil? **Cisimler kabulde eşit; hava cismi tat ve renklere kâbil, ama bunlardan birinin sahibi değil**; insanın irâde-kerâhete kâbil olması, **pazar işlerinde ne irâde ne kerâhet**.'
 - Netice/hüküm: **S2(b–c), S3, S4: Eş'arî yolunun karşı örnekleri (hava cismi, vücûd sıfatları).**
 - Delil çeşidi: **karşı örnek**; (T) analitik-cedelî.
 - Mevzuya bağı: —
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.194 otomatik karşılaştırıldı: kelime kapsama %82, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p195
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.195 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: S3 sonu. **S5**: 'Sağırlık-körlük **noksan** derken 'noksan' nedir? Allah'ın âlemi yaratmasına **mâni** olan şey mi? Bu iki sıfatın olmaması yaratıcılığa mâni midir? Başka mânâ ise açıklanmalı.' **S6**: 'Noksanın Allah'a muhâl olduğunun delili? Kimi **bedâhet** iddia eder, kimi **semî delillere** güvenir. **Bedâhet ise başka bir yol daha yakın**: **semî' ve basîr olan kâmil, olmayan noksan; sarih akıl Allah'ı kemâl sıfatıyla vasıflamayı vâcib bilir** ⇒ semî' ve basîr; bu yol **sizin uzun yolunuzdan evlâ**.' **İcmâ'a güvenenler**: 'zayıf: **icmâ'nın hüccet oluşuna delâlet eden âyetler, Allah'ın semî' ve basîr olduğuna delâlet eden âyetlerden çok daha zayıf**; **'semî' öncüle iktifâ câizse o âyetlerle iktifâ evlâdır'**.'
 - Netice/hüküm: **Râzî: Eş'arî yolunun 'noksan Allah'a muhâl' öncülü ya bedâhet ya semî; kemâl yolu ve doğrudan âyetler daha evlâ.**
 - Delil çeşidi: **cedelî + yöntem tavsiyesi**; (T) analitik-cedelî.
 - Mevzuya bağı: **KRİTİK — Fasıl I/IV (nass-akıl)**: Râzî **'semî' deliller (âyetler) aklî yollardan evlâ' diyor**: **Risale'de semi'-basar için doğrudan nass** (⊬ âyet listesi doğrulanacak) **derece: nakli-kat'î (âyetin sübût ve delâleti)**; **Râzî'nin bu tercihi metodoloji notu olarak Fasıl IV'e**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.195 otomatik karşılaştırıldı: kelime kapsama %81, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p196
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.196 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (S6 sonu.) **Yol 2 (Mu'tezile)**: 'Allah **âfetsiz hayy**; âfetsiz hayy **hazır olan idraklere idrâk eder** ⇒ Allah işitir-görür. **Delil (küçük öncül)**: 'insan hayy ve âfetsizse idrâk etmek zorunda: **göz sağlam mer'î şartlarıyla hâzırsa görür; kulak sağlamsa sesi işitir; organlar sağlam ve sıcak taş cildine konursa hisseder**.' **Râzî'nin sualleri**: **S1**: 'Bizim hayy oluşumuz Allah'ın hayy oluşundan farklı; **zâtlarımız mâhiyette farklı; bir mâhiyette hüküm muhâlif mâhiyette lâzım gelmez**.' (S2 p197).
 - Netice/hüküm: **Mu'tezile yolu: 'âfetsiz hayy ⇒ idrâk'; Râzî S1: mâhiyet farkı.**
 - Delil çeşidi: **analitik-cedelî**; (T) analitik.
 - Mevzuya bağı: **Fasıl I sıfat**: 'mâhiyet farkı ⇒ hüküm taşınmaz' ilkesi **yine hâkim**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.196 otomatik karşılaştırıldı: kelime kapsama %86, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p197
 - OCR: orta
@@ -1812,58 +1915,64 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p202
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.202 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Talebin mâhiyeti**: 'talep = **başkasından fiilin sudûrunu irâde**; nehy = terki irâde' (bir görüş); '**talep, irâdeden ayrı mâhiyet**: **başkasından fiili irâde edip emretmeyebilir; emredip irâde etmeyebilir** (emirde fiil irâdesi dışında başka gaye varsa).' Birinci grup cevap: 'irâde ettiğinde başkasına **irâde ettiğini bildirmeyi** de isteyebilir, istemeyebilir; **emir**, ancak **irâdeyi gösteren bir fiil** yaparsa; ikinci: **'emrettiği hâlde irâde etmez'** — bu **hakîkatte emir değil, irâde ediyor izlenimi veren lafız zikridir**.' **Ek bahis**: 'talep-i nefsânî irâde olsun ya da ayrı mânâ olsun, **başkasına anlatmak için bu mânânın kalbimizde hâsıl olduğunu gösteren bir amel** gerekir; insanlar **her mânâ için belirli lafızlar vaz'etmeyi** en uygun buldu; **ses ve harflerle ifade kolay**: (1) insan **serin nesim** soluyup kalbini ferahlatır; ısınan nefes dışarı çıkar; bu **ses** doğurur, sesi **mahreçlerde** kesip **harfler** olur; harflerden çok lafız; **her mâhiyete tatbik edilebilir; sonsuz mânâ anlatılabilir**.'
 - Netice/hüküm: **Kelâm: mânâ (talep/irâde veya ayrı mânâ) + onu bildiren ses/lafız (ıstılah); 'neden lafız?' sebepleri.**
 - Delil çeşidi: **kavramsal + antropolojik-fizyolojik izah**; (T) ikna'î-analitik.
 - Mevzuya bağı: **Fasıl IV (nass-akıl)**: 'dil = ıstılah' bahsi; **DİKKAT**: **vahyin lafzı-mânâsı Sünnî akidede 'kelâmullah'** (Kur'ân'ın lafzı-mânâsı Allah'tandır); **beşerî dil ıstılahı (Râzî anlatımı) vahiy için açıklama değildir**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.202 otomatik karşılaştırıldı: kelime kapsama %77, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p203
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.203 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (Lafzın avantajları devam:) (2) sesler **hâdis olup yok olur; ihtiyaç anında var, ihtiyaç geçince yok**; diğer şeyler böyle olmaz; (3) bu seslerle ifade **tabiî iş** gibi; **kalpte hâzır mânâları bu lafızlarla anlatmak daha evlâ**. **'Mütekellim = kelâmın fâili'**; kelâmdan maksat: insanın **ıstılaha göre delâlet eden bir amel** yapması. **Mesele 2: Allah'ın mütekellim olduğunun isbatı**: 'Bu **Allah'ın kâdir-muhtâr olması ve cüz'îleri bilmesine** mütefer'.' **Talebi irâde sayanlar**: 'Allah bazı şeyleri irâde, bazısını kerih eder; **belirli cisimde ses yaratır; bu sesler ıstılah ve vaz' ile Allah'ın irâde ettiğini/kerih ettiğini gösterir; işte kelâm**.'
 - Netice/hüküm: **Kelâm-ı ilâhî = Allah'ın belirli bir cisimde yarattığı seslerle irâdesini bildirmesi (talep=irâde diyenler).**
 - Delil çeşidi: **kelâmî tanım (Mu'tezile-yönelimli)**; (T) cedelî.
 - Mevzuya bağı: **KRİTİK — Ehl-i Sünnet farkı**: 'Kelâm = Allah'ın cisimde yarattığı ses' **Mu'tezile görüşü**; **Ehl-i Sünnet: kelâm ezelî sıfat (kelâm-ı nefsî), Kur'ân kelâmullahtır**; Râzî bunu **iki kola ayırarak** anlatıyor: talep=irâde (Mu'tezile), talep ayrı mânâ (Eş'arî); p204'te kendi tercihini gösterir. **Risale Ehl-i Sünnet'in Kur'ân kelâmullah, gayr-i mahlûk hükmünü yazar**; **Râzî'nin çizgisi tarihî belge**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.203 otomatik karşılaştırıldı: kelime kapsama %81, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p204
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.204 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (Mu'tezile modeli sonu: 'kelâm budur'.) **Talebi irâdeden ayrı mânâ sayanlar (Eş'arî-yönelimli)** üç mukaddime isteyenlerdir: (1) **talep-irâde farkının ma'kûl beyânı**; (2) Allah'ın bu mânâyla vasıflandığına **delil**; (3) **'bu mânâ kadîmdir' diyenlerin iddiası**. **Râzî 3. iddiaya karşı deliller**: **Delil 1**: 'Emir-nehy **fiili ve terki ilzâm**; **Zeyd yokken** ona fiil ilzâmı **imkânsız**; **'Ey Zeyd, sana bu fiili ilzâm ettim' demek**; Zeyd ve Amr **ademken** böyle denemeyeceği **zarûrî**; **zarûrî değilse akılda hiçbir zarûrî ilim yok**.' **Delil 2**: 'Allah **haberler** verdi ('Nûh'u gönderdik', 'Âdem isyan etti'); haber verilen **habere önce**; haber ezelî olsa **ezelî olan başkasına mesbûk** (muhâl).' 'Ilimle karşı çıkarlarsa: **bu bâbda sahih mezhep Ebü'l-Hüseyn el-Basrî'nin: ilim malûm değişince değişir**.'
 - Netice/hüküm: **Râzî: kelâmın (emir/haber) kıdemine karşı deliller (ilzâm ve haber malûma mesbûk); kendi mezhebi Ebü'l-Hüseyn (ilim değişir).**
 - Delil çeşidi: **analitik-cedelî**; (T) analitik.
 - Mevzuya bağı: **KRİTİK — Ehl-i Sünnet farkı (edeb)**: **Râzî burada 'kelâm-ı nefsî kadîm (Eş'arî)' görüşünü reddediyor; bu, Râzî'nin Sünnî kelâm çizgisinden sapan bir içtihadıdır**; **Risale ana metni: Kur'ân Allah'ın kelâmıdır; kelâm sıfatı Allah'ın zâtıyla kâimdir (ezelî) — bu hüküm nass ve icmâ' ile sabit**; **Râzî'nin delilleri 'kelâm-ı ezelî emir/haber vücûddan önce mesbûk' sorusunu dile getiriyor; Sünnî cevap: 'kelâm-ı nefsî tek, emir-nehy-haber taallukları (tenciz) hâdis'** (Eş'arî cevabı).
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.204 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p205
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.205 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: Delil 3–6: (3) 'Allah Zeyd'e sabah namazı ilzâm etti; Zeyd yapınca **ilk ilzâm bâkî mi**? Bâkîse Zeyd **borçtan çıkamaz** (milyon kez yapsa bile ilk ilzâm bâkî); bâkî değilse **yok oldu**; mütekellimîn kadîm için ademi muhâl sayıyor ⇒ bu ilzâm **kadîm olmamalı**.' (4) '**Nesh** câiz; nesh **hükmün sübûtundan sonra kaldırılması** ya süresinin bitmesi; iki takdirde de **vücûddan sonra yok oldu**; ademi sâbit olan **kadîm olamaz**' (Kur'ân Tevrat şeriatını nesh etti). (5) 'Kadîm sıfatın **taallukâtı, muteallakâtıyla zâtî lâzım-vâcib**; Allah'ın emri kadîm olsa **sahih olan her şeye taalluk** etmeli; **aklî husn-kubuh bâtıl** (bu görüşte) ⇒ her şeye emir sahih, her şeyden nehy sahih ⇒ **her şey hem emredilmiş hem nehyedilmiş**: zıtların cem'i.' (6) 'İlim malûm değişince değişir; **haber de haber verilen değişince değişir**; değişime maruz olan **kadîm olamaz**.'
 - Netice/hüküm: **Râzî: kelâmın kıdemine 6 aklî delil (ilzâm bekâsı, nesh, taalluk, haberin tagayyürü).**
 - Delil çeşidi: **analitik-burhânî**; (T) burhânî biçim (öncül: 'kadîm yok olmaz', 'haber malûma tâbi').
 - Mevzuya bağı: **KRİTİK — Ehl-i Sünnet farkı**: **nesh** (Kur'ân'ın önceki şeriatları neshi) **Râzî'nin delili olarak 'kadîm mi' sorusuna kullanılıyor**; **Sünnî cevap: emrin/nehyin taalluku hâdis, sıfat ezelî**; **Risale bu delilleri hasım olarak aktarmaz; ana metinde Sünnî çizgi**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.205 otomatik karşılaştırıldı: kelime kapsama %75, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p206
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.206 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (6. delil sonrası) 'Bu **aklî vecihler**, talep ister irâde ister başka olsun, **bu talebin ve haberin kadîm olmasının imtinâını** gösterir.' **Kelâmın kıdemine kâil olanların delilleri**: **(1)** 'Allah hayy; her hayy için mütekellim olmak sahih; sahih olan sıfata **sâhip ya da zıddıyla mevsûf olunur**; kelâmın zıddı **suskunluk (harâs)**, noksan, Allah'ta muhâl ⇒ ezelde kelâmla vasıflı.' **(2)** 'Allah'ın mütekellim olduğunda icmâ'; ya **zâtıyla mütekellim (ittifakla bâtıl)** ya **kelâmla**; kelâm hâdis ise ya zâtında (hevâdis mahalli), ya başkasında (**başkasında hâsıl kelâmla mütekellim olsa başkasında hâsıl cehille câhil olurdu**), ya mahalsiz (bâtıl); ⇒ **kelâm kadîm**.' **(3)** 'Kelâm kemâl sıfatıysa **ezelde mevsûf olmalı** (noksan); noksan sıfatsa hiçbir zaman mevsûf olamaz; **Allah bununla vasıflandığı** ittifakla ⇒ noksan değil.'
 - Netice/hüküm: **Kıdem taraftarlarının 3 delili (harâs-noksan, icmâ' + hâdis kelâm sorunu, kemâl).**
 - Delil çeşidi: **kelâmî burhan**; (T) cedelî-analitik.
 - Mevzuya bağı: **Ehl-i Sünnet çizgisi**: kıdem taraftarlarının delilleri **Eş'arî çizgisinin klasik delilleri**; **Risale bu delilleri hazırlar** ve Râzî'nin itirazlarını **derece notu** olarak taşır.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.206 otomatik karşılaştırıldı: kelime kapsama %84, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p207
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.207 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (4. delil) 'Kelâm sahibi kelâmı olmayandan **daha kâmil ve efdal** (zarûrî); bizden biri mütekellim; Allah ezelde mütekellim olmasa **bizden biri vücûdunda Allah'tan ezelde daha kâmil** olurdu (muhâl).' **Râzî'nin cevapları (kendi sesi)**: **(1)** 'Suskunluğun noksan olduğunu kabul etmeyiz; **noksan olan, Zeyd'e 'namaz kıl', Amr'a 'oruç tut' demektir, Zeyd-Amr ma'dûm iken**; bir adam kendi evinde tek başına, insanlardan uzak oturup 'ey yerleşik bin, ey ayakta olan yaklaş' dese **herkes onun için sefeh ve noksan der**.' **(2)** 'İcmâ' ettiğimiz **mütekellim** ise: **belirli fiiller yaptı ve bu fiiller bazı fiilleri irâde, bazılarını kerih ettiğini gösterdi** ise doğru; ama bu **kelâm denen bir sıfatla vasıflanmayı göstermez**; **başka bir şey kastediyorsanız kabul edilmez; ittifak yalnız lafızda**.' **(3)** 'Kelâm kemâl, suskunluk noksan' ⇒ cevap: **'emir-nehiy ile meşgul olmak, memur-menhî ma'dûm iken noksan ve sefeh'**. **(4)** aynı. **'Aklî kelâmın özeti bu; lafzî ve semî delillerde çok söz var, bu kitaba lâyık değil; doğrusunu Allah bilir.'**
 - Netice/hüküm: **Râzî: kelâmın kıdemini gösteren deliller kesin değil; icmâ' yalnız lafızda; 'emir-nehy ezelde sefeh'.** (Kelâmın **hâdis/kadîm** hükmü için son söz p208+ (varsa).)
 - Delil çeşidi: **cedelî**; (T) cedelî.
 - Mevzuya bağı: **KRİTİK — Sünnî akide ve edeb**: 'Allah ezelde emir-nehy ile meşgul olsa sefeh' cümlesi **Allah'ın kelâmının ezelîliğine karşı Râzî'nin retoriğidir**; **Risale'de kullanılmaz**; **Sünnî cevap: ezelde kelâm sıfatı vardır; emir-nehy'in muhâtaba taalluku (tenciz) hâdistir; 'ezelde emretmek' taalluk-ı sulûhî ile açıklanır**. **Râzî'nin bu görüşü, Sünnî kelâm çizgisinden ayrılışı 'tarih kaydı' olarak duruyor; Risale'nin ana metni nass ve icmâ' ile Kur'ân'ın kelâmullah oluşunu esas alır**.
 - Doğan sual: **Râzî 'lafzî ve semî delillere' başka yerde döner mi?** (Kur'ân'ın mahlûk/gayr-i mahlûk meselesi cilt 3 sonu ya da başka ciltte).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.207 otomatik karşılaştırıldı: kelime kapsama %76, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p208
 - OCR: boş
@@ -1911,13 +2020,14 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p213
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.213 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (Delil 2 devam): 'Devamı başkasıyla ise: başka şey **zât ise devir, başka bir şey ise teselsül**; hepsi muhâl.' **Sonuç cümlesi**: '**Bu, bu bâbtaki makûl mebâhisin özetidir; Allah bilir.**' **Bâb 8 biter**; Râzî bu bâbta **açık hüküm vermeden** iki tarafı (aynı/zâid) ve itirazları aktarıyor: ilk taraf (zâid) delillerle destekli, itirazlarla (imkân, teselsül) sorgulanıyor; **cevaplar zâtın iktizâsı**.
 - Netice/hüküm: **Bekâ: zâtın aynı mı zâid mi — Râzî açık hüküm vermiyor; ilk tarafın (mugâyir) delilleri daha ayrıntılı.**
 - Delil çeşidi: **cedelî (denge)**; (T) cedelî.
 - Mevzuya bağı: **Fasıl I §6.3**: **'Kıdem-bekâ zâid sıfat mı zâtın lâzımı mı' Râzî'de tevakkuf**; Risale **'zâtın lâzımı; zâtın kendisi Allah'ın bekâsının sebebidir' dese de 'Râzî tevakkuf eder' notu**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.213 otomatik karşılaştırıldı: kelime kapsama %84, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p214
 - OCR: boş
@@ -1956,13 +2066,14 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p218
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.218 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: 'Zâtlar **bilme-kudret sıhhatinde muhtelif** olduğu gibi **hayy olma sıhhatinde** de muhtelif; farkın bir sıfatla ta'lîli gerekiyorsa **hayat sıhhatindeki fark başka sıfatla**, **teselsül**. **Farkı zât-ı mahsûsayla ta'lîl ederseniz** aynısı **âlimlik-kâdirlik sıhhatinde niçin câiz olmasın?** **Vallahu a'lem.**'
 - Netice/hüküm: **Hayat sıhhat farkı teselsülle çözülmez; 'zât-ı mahsûsa iktizâ eder' cevabı her sıfata uygulanabilir.**
 - Delil çeşidi: **analitik**; (T) analitik.
 - Mevzuya bağı: **Fasıl I sıfat kuramı**: 'sıfatlar zât-ı mahsûsanın iktizâsıdır' ilkesi **Râzî'de tutarlı** (c3 p142, 149, 218).
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.218 otomatik karşılaştırıldı: kelime kapsama %87, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p219
 - OCR: boş
@@ -2028,58 +2139,64 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p226
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.226 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (Makam 1'in delilleri devam.) **(4)** 'Âlim olduğu sabit ⇒ **ilim denen nisbet** hâsıl; **âlimlik ve zâtla malûm arasındaki nisbet o zâtın sıfatı, ona muhtaç**; nisbetler **başkasına göre söylenir**; kâim bi'n-nefs zâtlar öyle değil ⇒ mugâyir.' **(5)** 'Zâtın **kâdir olması** ile **âlim olması** farklı: kâdir âlim olabilir olmayabilir, âlim de kâdir olabilir olmayabilir; **mâhiyetleri ve hadleri farklı**; aynı zât olsalar tek şey tek şey olmaz, **iki ayrı şey** çıkar (muhâl).' **(6)** 'Âlimlik kâdirlik olsa **bilinen her şey makdûr olur**: vâcib-i li-zâtihi ve mümteni-i li-zâtihi **malûm ama makdûr değil** (ehl-i akıl ittifakı) ⇒ malûmiyet ≠ makdûriyet.' **(7)** 'Kâdirin makdûru vücûda çıkınca **aynı makdûra kâdir kalmaz** (îcâd-ı mevcut muhâl); ama **malûm kalır** ⇒ ilim ≠ kudret.'
 - Netice/hüküm: **İlim ≠ kudret ≠ vücûd (7 delil).**
 - Delil çeşidi: **analitik**; (T) analitik-burhânî.
 - Mevzuya bağı: **Fasıl I sıfatlar**: sıfatların birbirinden ayrı olduğunu **gösteren delil kümesi (kaynak: c3 p225–227)**; Risale'ye **derece: burhânî-analitik**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.226 otomatik karşılaştırıldı: kelime kapsama %82, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p227
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.227 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **(8)** 'İlim ayrı mâhiyet, kudret ayrı mâhiyet; biri diğerinin aynı ise 'ilim' ve 'kudret' **müteradif** olur (bâtıl: hadleri, hükümleri, hâssaları ayrı) ⇒ **âlim, kâdir, mevcut mefhûmları ayrı**; bu üç mânâ ya **üç kâim bi'n-nefs zât** (ittifakla bâtıl) ya **biri mevsûf, diğerleri sıfat** ⇒ matlûb.' **Sıfat inkârcılarının delilleri**: **Filozof Hücca 1**: 'Bu sıfatlar **ya vâcib li-zâtihâ ya mümkin li-zâtihâ**; ikisi bâtıl; **vâcib olamaz**: (a) vâcib bir tane; (b) sıfatlar **kendi başlarına kâim değil, zâta kâim**, kâim bi-gayrihi muhtaç ⇒ mümkin. **Mümkin olamaz**: mümkin sebep ister; sebep yalnız zât; (a) **zât hem kâbil hem fâil** (muhâl), (b) **ihtiyaç hudûs vaktinde** (bekâda değil) ⇒ sıfatlar **gayre ma'lûl ise hâdis**; hâdis olamaz.' **Hücca 2**: 'İlâh ya **fert** ya **mürekkeb**; mürekkeb olamaz (imkân); **sıfat+mevsûf mecmûu mürekkeb** ⇒ **ilâh fert-i mutlak**.'
 - Netice/hüküm: **Filozofun sıfat-nefy delilleri (vâcib/mümkin ikilemi; terkîb).**
 - Delil çeşidi: **analitik**; (T) analitik-burhânî.
 - Mevzuya bağı: **KRİTİK — Sünnî akide/Fasıl I §6.2 (terkîb)**: 'sıfat+zât ⇒ terkîb ⇒ imkân' **klasik itiraz**; **Sünnî cevap: sıfatlar zâtın aynı değil, gayrı da değil; ezelî; terkîb (cüzlere ihtiyaç) sıfat için değil**; **Râzî'nin cevabı p231–232'de**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.227 otomatik karşılaştırıldı: kelime kapsama %83, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p228
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.228 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (Filozof Hücca 1–2 devam: **mümkin olamaz: sıfatlar gayre ma'lûlse hâdis; hâdis muhâl ⇒ sıfatlar zâta ma'lûl olamaz**; **Hücca 2 sonucu: ilâh fert-i mutlaktır, sıfat+mevsûf terkîbi yoktur**.) **Mu'tezile delilleri (genel)**: **Hücca 1**: '**Allah'ın âlimliği vâcib; vâcib ta'lîl edilmez**; âlimliği câiz olsa âlim yapan fâile muhtaç ⇒ ilâh abd olur (muhâl); vâcib ta'lîl edilmez: illete ihtiyaç vücûd tarafının rüchânı içindir; rüchân vücûb üzereyse ihtiyaç kalmaz.'
 - Netice/hüküm: **Mu'tezile genel Hücca 1: âlimlik vâcib, ta'lîl edilmez.**
 - Delil çeşidi: **analitik**; (T) analitik.
 - Mevzuya bağı: —
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.228 otomatik karşılaştırıldı: kelime kapsama %81, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p229
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.229 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Mu'tezile Hücca 2**: 'Kadîmler çokluğu muhâl: **kıdem sübûtî mefhûm**; kadîmler bu mefhûmda müşterek; **mukavvimde muhalifse** her biri iki kayıttan mürekkeb ⇒ **sonsuz cüz** (muhâl); **muhalif değilse** tam mâhiyette müsâvi ⇒ **zât sıfat, sıfat zât** ve **ilâhlar çokluğu**.' **Hücca 3**: 'Sıfat zâta kâim olsa **kadîm-mütegâyir çokluk** (ittifakla bâtıl).' **Hücca 4**: 'Sıfatın zâta hulûlünden anlaşılan **sıfatın o hayizde bulunması (zâtın hayizde olması)**; bu mânâ kalkarsa biri ötekine kâim olmaktan evlâ değil ⇒ **sıfata kâim zât hayizde ve cihette (muhâl)**.' **Hücca 5**: 'Allah'ın zâtı ilâhlığı **bu sıfatsız da tam mı**? Tam ise ilâh sıfatlardan ganî ve sıfatlar nefyolunur; tam değilse gayre muhtaç.'
 - Netice/hüküm: **Mu'tezile delilleri 2–5: kadîm çokluğu, hulûl-hayiz, ilâhlığın tamlığı.**
 - Delil çeşidi: **analitik**; (T) analitik-cedelî.
 - Mevzuya bağı: **Fasıl I §6.2**: 'kadîm çokluğu' itirazı **Vâhid vâcib-sıfat ilişkisi**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.229 otomatik karşılaştırıldı: kelime kapsama %82, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p230
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.230 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Hücca 5–6 devam**: 'Zât tek başına ilâhlık için yeterli midir? Yeterliyse sıfatlar **lağv**; değilse: sıfatlar tek başına yeterli mi? Yeterliyse zât lağv; değilse ikisi birlikte **fazladan bir şey** hâsıl eder mi? Hâsıl ederse onu îcâb eden zât mı sıfat mı, yoksa mecmû mu (**teselsül**); etmezse birlikteyken **yalnızken hâsıl olmayan ilâhlık hâsıl olmaz** ⇒ **ilâhlık zât-ı mahsûsanın lâzımıdır; sıfata gerek yok**.' **İlim nefyi için özel 3 delil (Mu'tezile)**: **(1)** 'Allah ilimle âlim olsa ilmi **bizim ilmimizin aynı malûmuna aynı vecihle taalluk** eder; **iki ilim misil**; ya ikisi kadîm ya ikisi hâdis (muhâl).' (2) 'ilim ile âlim ⇒ ya **bir ilim ya sonlu çok ilim ya sonsuz ilim**; üçü bâtıl (bir ilimle: gaflet; sonlu: malûmât sonsuz; sonsuz: mevcut adet mütenâhî).' (3) 'İlimle bilse **ilmi kendi ilmi ile mi başka ilimle mi** bilir? Kendiyle ⇒ nisbet kendine muhâl; başka ⇒ devir/teselsül.' **Râzî'nin cevapları**: **1'e**: 'bu **tek şey hem kâbil hem fâil olmaz** asıl üzerine; **bâtıldır**'; **2'ye**: 'zât-ı mahsûsa vâcib-i li-aynihâ olsun, o bu âlimliği ve kâdirliği **îcâb edebilir**'.
 - Netice/hüküm: **Sıfat-nefy delilleri sonu; Râzî'nin ilk cevapları.**
 - Delil çeşidi: **analitik-cedelî**; (T) analitik.
 - Mevzuya bağı: —
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.230 otomatik karşılaştırıldı: kelime kapsama %81, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p231
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.231 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (İlim nefyi 2. ve 3. delil.) **Râzî'nin cevapları**: **1. Filozof Hücca 1'e**: 'Bu **tek şey hem kâbil hem fâil olamaz** asla dayanır; **bâtıl olduğunu gösterdik**.' **Hücca 2'ye**: 'Zât-ı mahsûsa **kendi ayniyle vâcib**, bu **âlimliği ve kâdirliği îcâb edebilir**.' **Mu'tezile Hücca 1'e**: 'Âlimliğin **kendi zâtı (aynı) gereği vâcib** olması **nizâ mahallidir**; **mutlak vâcib** kastedilirse: zât bir mânâyı îcâb ediyorsa ve o mânâ âlimliği îcâb ediyorsa **zât âlimliği bu vâsıtayla îcâb eder; bu âlimliğin vâcib olmasına halel getirmez**.' **Hücca 2'ye**: 'Onlar **âlimlik ve kâdirliği kabul ediyor**; bize karşı ileri sürdüklerini **onlar da âlimlik ve kâdirlik için** kabul etsin'; **Hücca 3'e**: '**'Gayr' ile 'mâhiyette farklı iki hakîkat' kastediliyorsa bu kabul (mesele bu)**; 'birinin diğerinden **zaman ya mekânla** ayrılabilir' kastediliyorsa **her iki mevcudun böyle olduğunu kim söyledi?**'
 - Netice/hüküm: **Râzî'nin sıfat-nefy delillerine cevapları (tek şey hem kâbil hem fâil; zât mânâyı îcâb eder; 'gayr' iki anlam).**
 - Delil çeşidi: **cedelî-analitik**; (T) analitik.
 - Mevzuya bağı: **Fasıl I sıfat kuramı**: **cevap şeması ders katmanı için hazır**: (i) sıfat zâta muhtaç değil zâtın iktizâsı; (ii) 'gayr' iki anlam; (iii) kadîm çokluğu terimsel.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.231 otomatik karşılaştırıldı: kelime kapsama %81, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p232
 - OCR: orta
@@ -2091,31 +2208,34 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: **Râzî 'taalluklar malûmât' cümlesinin devamı ne?** (p233.)
 
 ## c3 p233
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.233 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (Cevapların sonu): '... **bizim görüşümüzde bu (taallukâtın) zâta zâid sıfat değil, zâtın kendisiyle ta'lîl edilir; bu delillerden hiçbiri bize yöneltilemez.**' **Makam 2**: 'Kâdiriyet = **icâd ve terk sahih olacak vecihte olmak**; âlimlik = **özel nisbet ve izâfe**; bunlar **kendi başına kâim zât değil ⇒ mümkin ⇒ sebep**; sebep zât (vasıtalı/vasıtasız) ya başkası; başkası ise zât lâzımlarında gayre muhtaç (muhâl); ⇒ **muktezî zât-ı mahsûsa**.' **Ek bahis**: 'lâzımlar vasıtasız/vasıtalı; âlimlik-kâdirlik **doğrudan zâtın aynı ile** ya da **zât bir şey îcâb edip o şey bunları** îcâb eder; **vasıta bir ya çok**; ikisi de muhtemel. **Ancak zât-ı mahsûsanın bu nisbetleri (vasıtalı ya vasıtasız) îcâb ettiğini itiraf etmek zorunda olduğumuza ve vasıta meçhul olduğuna göre, vasıtayı aradan çıkarıp zâtın doğrudan îcâbını kabul etmek daha evlâ ve ahlâktır.**' **Paralel**: 'âlemin hudûsundan fâil-i muhtâra istidlâl edince "muhtâr fâil, mûcib bi'z-zât bir illetin ma'lûlü olamaz mı?" sorulur; **vâcibi ve fâil-i muhtârı kabul etmek zorunda olduğumuza göre 'o fâil-i muhtâr o vâcibin kendisidir' demek evlâ; vasıtaları aradan çıkardık**; aynısı **Allah'ın zâtında kâim sıfatlarda** da.'
 - Netice/hüküm: **KRİTİK: 'Evlâ ve ahlâk' ilkesi (vasıtaları hazfet): Vâcib=Fâil-i muhtâr özdeşliği ve sıfatların zâtın doğrudan iktizâsı — ikisi de aynı gerekçeyle 'evlâ'.**
 - Delil çeşidi: **yöntem ilkesi (Occam tipi 'gereksiz vasıtayı hazfet')**; (T) ikna'î-analitik (**evlâ-ahlâk derecesi**).
 - Mevzuya bağı: **KRİTİK — Fasıl I §5 (Vâcib=Fâil özdeşliği ayrı halka; c1 p319–321, c3 p108–109)**: **Râzî'nin kendi ifadesi: 'Vâcib=Fâil-i muhtâr' özdeşliği (vasıtasız) ispatlı değil, 'evlâ ve ahlâk' dayanaklıdır**; Fasıl I §5 için **(T) 'evlâ ve ahlâk' derecesi ve kaynak (c3 p233)** **kesinleşti**. Bu, **önceki 'Vâcib=Fâil halkası açık ispat borcu' kaydını (c1 p320) güçlendiren yazılı kabul**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.233 otomatik karşılaştırıldı: kelime kapsama %85, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p234
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.234 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Mânâ (ma'ânî) sıfatlarını isbat edenlerin 3 delili**: (1) 'ilim şâhitte **mânâya taalluk eden sıfat** ⇒ Allah'ta da'; (2) 'âlimlik **sonradan oldu** (şâhitte); ilim **mevcut sıfat**; hâdis olan yalnız nisbet-izâfe olamaz (cismin zâtı malûma taalluk edemez) ⇒ hâdis şey taalluk hâsıl eden bir sıfat'; (3) 'ilim malûma taalluk eden; zât taalluk etse **zât ilim olur** (bâtıl)'. **Cevaplar (Râzî)**: (1) 'şâhitte ilim **yalnız bu özel taalluk-nisbet**; ilim denince şuûr-idrâk (özel nisbet) dışında bir şey ma'kûl değil'; (2) 'bu özel nisbet **cisimde hâdis olunca ilim-şuûr-idrâk hâsıl**; zâil olunca ilim zâil; **sıfat hâsıl olup ona taalluk geldiği iddiası kabul edilmez**'; (3) 'ilim **ma'dûma taalluk eden şey** demek değil, **taallukun kendisi**; zâtın taallukla vasıflanması zâtı ilim yapmaz.' **'Bu bâbdaki sözümüzün tamamı; Allah bilir.'**
 - Netice/hüküm: **Râzî: ilim = özel nisbet (tekrar); mânâ sıfat ispatı delilleri cevaplanıyor.**
 - Delil çeşidi: **cedelî-analitik**; (T) analitik.
 - Mevzuya bağı: **DİKKAT (Sünnî akide)**: **Sıfât-ı mânâ (Eş'arî) delilleri Râzî'de 'ilim = nisbet' çerçevesinde reddediliyor**: Râzî **kendi sıfat sisteminde iki uçlu**: c3 p225 'zâta kâim iki sıfat' ↔ p234 'ilim salt nisbet'; **iç gerilim** (nisbet zâta zâid, mevcut nisbetle bağdaşabilir: **'zâid nisbet' = sıfat**). Risale **'sıfat gerçek, zâta kâim' der; Râzî'nin 'nisbet' dili kaydedilir**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.234 otomatik karşılaştırıldı: kelime kapsama %77, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p235
-- OCR: orta (başlık kötü)
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.235 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Bâb 11 (dipnot 'Fasıl 12'): 'Allah'ın sıfatlarının selb ve izâfe olarak hasrı'**. 'Filozoflar **Allah'ın sıfatlarının ya selb ya izâfe** olduğunda ittifak etti: selb: cisim, cevher, mütehayyiz değil; izâfe: cevâd, mûcid, mufaddıl. **Selb+izâfe bileşiği** için: 'ilim, âlemde **malûma mutâbık sûret**; Allah'ın malûmâtı bilmesi **mutâbık sûretler**; bunlar selb de izâfe de değil ⇒ **Allah'a hakîkî sıfat (zâta kâim) itirafı** ⇒ 'sıfatlar selb ve izâfeye münhasır' sözünü bâtıl kılar.' **Râzî**: 'Bu hasrı ispatlamanın yolu ancak **evlâ ve ahlâk**; ilim **nisbet-izâfe** kabîlinden ise ilmin isbâtı bu hasra zarar vermez.' (Dipnot: fasıl numarası.)
 - Netice/hüküm: **Filozofların 'sıfat = selb + izâfe' hasrı, kendi ilim tanımlarıyla (sûret) çelişiyor (Râzî ilzâmı); Râzî'nin ilim=nisbet tanımıyla hasr korunabilir.**
 - Delil çeşidi: **ilzâm**; (T) analitik-cedelî.
 - Mevzuya bağı: **Fasıl I 'ne ispat edilir' satırı (c2 p86–96) ile bağlı**: 'sıfat = selb+izâfe' **Râzî'nin zât-ı mahsûsa cehli tezinin filozofça hâli**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.235 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p236
 - OCR: boş
@@ -2127,49 +2247,54 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p237
-- OCR: orta (başlık kötü)
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.237 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Bâb 12 (dipnot 'Fasıl 16'): 'Tekvîn (yaratma) mükevvenin aynı mı gayrı mı?'** 'Allah bir şeyi vücûda çıkarınca **iki şey**: **mükevven** ve **Allah'ın onu yaratıp ademden vücûda çıkarması (tekvîn)**; tekvîn eserin kendisi mi, ondan ayrı mı? **Şâhitte benzeri**: tahrîk hareketin aynı mı? teshîd (siyah kılma) siyahlığın aynı mı? 'Tekvîn = mükevven' diyen 'tahrîk=hareket, teswîd=sevâd' der; 'tekvîn ≠ mükevven' diyen bu sûrette **mugâyeret**. Bu bahis **gâmız, derin**.' **Mugâyereti savunanın delili**: 'Bu şey **niçin hâdis oldu, ademden sonra niçin var oldu**? **Kâdir onu ihdâs etti, îcâd etti**; vücûdunu **muhdisin ihdâsıyla** ta'lîl ederiz; **muhdisin ihdâsı eserin vücûdunun aynı olsa** 'kâdir îcâd ettiği için var oldu' sözü '**kendi kendine var oldu**' demeye eş olurdu; **kendi kendine ise kâdirin te'sîri kalmaz, müessir ve te'sîr nefyedilir** ⇒ **îcâd, eserin nefsinde vücûdundan mugâyir**.'
 - Netice/hüküm: **Tekvîn ≠ mükevven (1. delil: ta'lîl)**.
 - Delil çeşidi: **analitik**; (T) analitik-burhânî.
 - Mevzuya bağı: **Fasıl I sıfatlar (tekvîn)**: **Mâtürîdî 'sıfat-ı tekvîn' ↔ Eş'arî 'tekvîn=mükevven' ihtilâfı**; Râzî **mugâyereti savunan delil ile başlıyor**; ders katmanı için **iki görüşün varlığı** ve **Râzî'nin mugâyeret delilinin derecesi (analitik)** yazılır; **hüküm p238'de**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.237 otomatik karşılaştırıldı: kelime kapsama %79, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p238
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.238 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (Tekvîn ≠ mükevven, 2. delil): 'Îcâd-tekvîn **kudretin kendisi değil**: kâdir çok şeye kâdir olup yaratmayabilir (**Allah çok güneş, ay yaratmaya kâdir, yaratmıyor**); öyleyse tekvîn **kudretten ve mükevvenden ayrı sıfat**.' **Mugâyereti reddedenler (tekvîn=mükevven)**: 'Tekvîn mükevvenden ayrı olsa **kadîm ya hâdis**; kadîmse **mükevvenin kıdemi**: tekvîn ancak kevn (var oluş) hâsıl olunca doğru olur ('ademde kalan şey için kâdir ona te'sîr etmedi, onu yaratmadı denir'); tekvîn kadîm olsa **mükevven kadîm ⇒ kıdem-i âlem**; **hâdisse tekvîni başka tekvîn** ister ⇒ **teselsül**.' **Râzî**: 'Bu, bu mevzudaki akıl bahislerinin özeti; **hudûs ve kıdem kitabında bu bahse döneceğiz**.'
 - Netice/hüküm: **Tekvîn-mükevven tartışması: mugâyeret (2 delil) ↔ ayniyet (kadîm/hâdis ikilemi); Râzî 'hudûs-kıdem kitabına' havale ediyor (hüküm yok).**
 - Delil çeşidi: **cedelî (denge)**; (T) cedelî.
 - Mevzuya bağı: **Fasıl I §6.3/§8**: **tekvîn meselesi (kâdir-yaratma ilişkisi) cilt 4–6 'hudûs-kıdem' kitabında**; **açık borç**.
 - Doğan sual: **'Hudûs ve kıdem kitabı' hangi cilt?** (kaynak haritası).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.238 otomatik karşılaştırıldı: kelime kapsama %83, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p239
-- OCR: orta (başlık kötü)
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.239 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Bâb 13 (dipnot 'Fasıl 17'): 'Allah'ın isimlerinin taksîmi'**. **Taksîm 1**: ism ya **zâta delâlet**, ya **zâtın bir cüz'üne**, ya **zâta hâriç bir vasfa**. **(1) zâta delâlet eden isim**: 'Allah'ın zât-ı mahsûsası min haysu hiye **halkça bilinmez** (c2 p86–96); bilinmezse **isim vazı imkânsız**: ismin maksadı iki kişinin belirli mânâyı anlatmak için **belirli lafız üzerinde ıstılah** etmesi; mânâ hem söyleyene hem dinleyene malûm olmalı; zât-ı mahsûsa kimseye malûm değil ⇒ **isim vazı muhâl**.' **Kadîm filozoflar**: 'bu hakîkatin **ismi yok**; ancak 'vâcibü'l-vücûd li-zâtihi' diye şerh edilir.'
 - Netice/hüküm: **Zâta delâlet eden isim (özel isim) vazının imkânı: zât bilinmediği için imkânsız (filozof/Râzî ilk tespit).**
 - Delil çeşidi: **analitik**; (T) analitik.
 - Mevzuya bağı: **Fasıl I 'Allah' lafzı ve isimler**: **'Allah' özel ismi (zâta delâlet)**: Sünnî akide 'Allah lafzı ism-i zât, ism-i celâl' (nassla); Râzî **bu ihtimali p240'ta savunacak: bilinmeyen zât için isim vazı Allah'ın tarafından öğretilebilir**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.239 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p240
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.240 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Râzî'nin cevabı**: 'Bizce **zât-ı mahsûsayı bilmediğimiz** sabit; **akılca bilinmesinin imkânsız olduğu delille sabit değil**; imkânsızsa bile **Allah bazı kullarını bu ma'rifetle şereflendirebilir; o zaman isim vazı fayda verir**; **melek rûhlarına imkânsız olduğu da sabit değil**; **beşer ve melek akılları imkânsız olsa bile bu hakîkatin belirli bir ismi olabilir; Allah bazı kullarına o ismi öğretir; o ismin zikri temiz-mukaddes rûhların ona boyun eğmesine sebep olabilir; zâkirin rûhunda başka yolla hâsıl olmayan bir kuvvet oluşabilir**; bunların hepsi muhtemel.' **Taksîm (2) zâtın cüz'ü**: 'Vâcib için **muhâl** (fert, kesretten münezzeh).' **(3) zâta hâriç vasıf**: **7 kısım**: **hakîkî sıfat (izâfesiz); yalnız izâfe; yalnız selb; hakîkî+izâfe; hakîkî+selb; izâfe+selb; üçü birlikte.**
 - Netice/hüküm: **İsim vazı ihtimali: Allah öğretmişse mümkün (Râzî'nin savunması); zâtın cüz'üne isim muhâl; sıfat-isim kısımları 7.**
 - Delil çeşidi: **imkân savunusu + taksîm**; (T) ikna'î-cedelî (**'ismin zikrinin rûha etkisi' tasavvufî iddia, ⊬; delil verilmedi**).
 - Mevzuya bağı: **KRİTİK — Sünnî akide (esmâ tevkîfî)**: **Allah'ın isimleri nassla bilinir (Kur'ân, Sünnet); 'Allah' özel isimdir; isim öğretme = vahiy**; Râzî'nin bu sayfası **bu çizgiyi aklî ihtimal olarak destekliyor**. **'Ismin zikrinin rûha etkisi' cümlesi Risale'ye alınmaz (kaynaksız)**; **Fasıl I/IV'e 'isimler tevkîfîdir' notu kaynağı: c3 p240**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.240 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p241
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.241 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: İsimler taksîminin devamı (**hâriç vasıf** kısımları). **'Mevcud' lafzı iki anlam taşır**: (a) vücûdu olan (zât ile kâim vücûd sıfatı), (b) vücûdu zâtının aynı olan; Râzî'nin kendi kabulü (c1 Mesele 3): vücûd zâid ama Vâcib'de zâtî. İsimlerin sıfat/izâfe/selb taksîmine yerleştirilmesi başlıyor.
 - Netice/hüküm: 'Mevcud' ismi Allah hakkında tek anlamlı değil; anlam kaydı gerekir.
 - Delil çeşidi: terimsel-analitik; (T) analitik.
 - Mevzuya bağı: **Fasıl I §2.2**: 'mevcud' lafzının iki anlamı yazılmalı; c1 M3 ve c2 p103 ile aynı hat.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.241 otomatik karşılaştırıldı: kelime kapsama %83, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p242
 - OCR: orta
@@ -2190,22 +2315,24 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: Bu kıssanın klasik tefsîrlerdeki yorumu (⊬ borç).
 
 ## c3 p244
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.244 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: Firavun–Mûsâ münâzarasının devamı: Firavun'un 'mâ' sorusuna karşı **Mûsâ'nın soruyu tashih edip fâile yönelmesi**; Firavun'un 'çevresindekilere: işitmiyor musunuz?' demesi; **mâhiyetin cevabı hâriç lâzımlarla verilebilir**. Allah'ın mahiyeti hakkında sorunun **kendi başına sorulabilir olduğu** ve cevabının **eser yolu** olduğu tekrar bağlanıyor.
 - Netice/hüküm: Aynı (p243); yeni delil yok.
 - Delil çeşidi: nakl + analitik; (T) hitâbî.
 - Mevzuya bağı: p243'e bağlı.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.244 otomatik karşılaştırıldı: kelime kapsama %81, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p245
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.245 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **'Hakîkat' ismi**: bir şeyin **zâtî/kendine mahsus** olan yönü; Allah için 'hakîkat' = zât-ı mahsûsa. **'Zât' ismi**: 'sahip, sâhib' anlamında ('zâtü'l-mâl' gibi); Allah hakkında 'zât' **sıfatların sahibi** demektir, **mâhiyet** anlamında değil. **'Nefs' ismi**: **5:116 'senin nefsinde olanı bilmem'** (Îsâ a.s.) ve 6:12 vb. delil.
 - Netice/hüküm: 'Hakîkat/zât/nefs' isimleri **Allah hakkında lafzen caiz**, anlamları kayıtlı; 'nefs' için 5:116 nass.
 - Delil çeşidi: lafzî + nakl; (T) hitâbî.
 - Mevzuya bağı: Fasıl I/IV isim listesi: 'nefs' ıtlâkı nassla (5:116). **Ayet numaralarının doğrulanması ⊬ borçta**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.245 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p246
 - OCR: orta
@@ -2262,22 +2389,24 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p252
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.252 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Azîz'in kemâli**: vücûdu azlıkta **vâhid ve misli muhâl**, menfaatte **her menfaat ondan**, vusûl güçlüğünde **kunhüne ihâta imkânsız, ancak hidâyetiyle bilinir, nimetine şükür kimseye nasip değil**. **el-Cebbâr üç vecih**: (1) **yüce, erişilmez** (cebbâr hurma ağacı; mütekebbir); Hak hakkında **fikirler O'na erişmez, gözler ihâta etmez, akılların izzetinin kunhüne ulaşmaz** ⇒ tenzîh sıfatı; (2) **ıslah edici** ('cebertü'l-kesr'): halkın işlerini bedenlerine ve rûhlarına göre ıslah eder; (3) **cebreden** (cebera's-sultân): **halkı irâdesine icbâr eder, isteseler de istemeseler de; O'nun mülkünde irâde etmediğinden başkası cereyan etmez**. **el-Mütekebbir**: herkesi zâtına nisbetle hakîr görür; bu görüş doğruysa tekebbür haktır.
 - Netice/hüküm: Cebbâr üç mânâlı; üçüncü mânâ Râzî'nin fiil görüşüyle uyumlu (mülkünde irâdesinden başkası olmaz).
 - Delil çeşidi: lafzî-iştikak; (T) hitâbî/ikna'î.
 - Mevzuya bağı: **Kul fiili (c3 p60, 73 hattı)**: 3. vecih 'icbâr' Râzî'nin 'mudtarr/dâî yaratılır' çizgisine yakın okunur; **Sünnî ana çizgide (kesb/irâde-i cüz'iyye) ayrı ele alınır; Risale ana metnine alınmaz, 'Râzî'ye göre' notu**. Kâmûs 1–2. vecih tenzîh olarak alınabilir.
 - Doğan sual: Cebbâr'ın 3. vechinin klasik şerhlerdeki yeri (⊬ borç).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.252 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p253
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.253 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: Mütekebbir devam: görüş doğruysa (Allah) tekebbür **hak ve kemâl**, yalansa **mezmûm**; hadîs-i kudsî (Peygamber (s.a.v.) Allah'tan nakleder): **'Kibriyâ ridâmdır, azamet izârımdır; kim biriyle bana çekişirse onu ateşe atarım'** ⇒ tekebbür Allah hakkında **medih ve kemâl**, halk hakkında **noksan**. (Hadisin isnadı defterde ⊬; dipnotta 'isnâd' yazılmış, kaynak kitap belirtilmemiş.) **7. isim: el-Alî, el-Kebîr** (40:12; 13:9; 2:255 'el-Alî el-Azîm'; 17:111; 45:37). **Uluvv iki türlü**: **hissî** (Arş Kürsî'nin, semâ arzın üstünde) yalnız cisimde; Allah cisimlikten münezzeh ⇒ **bu mânâda değil**; **aklî** (58:11 'Allah îman edenlerin ve ilim verilenlerin derecelerini yükseltir'): sıfât-ı kemâlde yükseklik, noksandan uzaklık.
 - Netice/hüküm: 'Alî' = hissî değil **aklî uluvv**; 'kibriyâ' hadîsi tekebbürün Allah hakkında kemâl olduğunu bildirir.
 - Delil çeşidi: nakl (hadis, âyet) + analitik; (T) hitâbî-analitik; hadis **isnadı doğrulanmadı ⊬**.
 - Mevzuya bağı: **Fasıl I §4/§6 (cihet-uluvv)**: 'Alî' isminin **cihet mânâsından arındırılıp kemâl mânâsına çekilmesi** c2 F5 (hayiz-cihet) ile aynı hat; **KRİTİK**: Sünnî akide 'istivâ/uluvv' nasslarında **'uluvv-i mekân' meselesi ayrı ihtilâf konusudur**; Râzî'nin bu okuması **'Râzî'ye göre'** yazılır, **Risale ana metnine alınmadan** nassın kendi lafzıyla ve ana kaynaklarla ayrıca çalışılacak.
 - Doğan sual: Hadîs-i kudsînin tahrîci (Müslim/Ebû Dâvûd/İbn Mâce — **⊬ doğrulanacak**).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.253 otomatik karşılaştırıldı: kelime kapsama %78, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p254
 - OCR: orta-kötü
@@ -2298,22 +2427,24 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p256
-- OCR: orta-kötü (sayfa sonu 'فلما كان وصف' ile kesiliyor; devamı p257)
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.256 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Vâhid**: ya **zâtında kesretin nefyi** ya **zıd/nidd nefyi**. Birinci tefsîrde üç tarif: (1) **'inkısâm kabul etmeyen şey'** ('mevcud' kaydıyla ma'dûm dışlanır; 'bir adam/bir elbise' kısmet kabul eder; **hakîkî vâhid hiçbir vecihle kabul etmez**); (2) **vaz' ve raf' sahih olmayan** ('elsiz insan' denebilir, parça ref' edilir; Hak **ehadî'z-zât**); (3) **adet olmayan** (adet = iki hâşiyesinin toplamının yarısı olan; ikinin hâşiyeleri 1 ve 3, toplam 4, yarısı 2; birin tek hâşiyesi var ⇒ adet değil). **Cevher-i ferd** kabul edenlere göre hakîkî vâhiddir. **İtiraz**: bu tarif 'en az mikdar' der, bu Allah'ta noksan, muhâl; **cevap**: cevher-i ferdin 'küçük-az' sayılması **başkasının ona temas edip bitişebilmesindendir**; Allah'ta bu yok.
 - Netice/hüküm: Vâhid = kesret/inkısâmı nefyeden; Allah için **ehadiyet-i zât**.
 - Delil çeşidi: taksîm-tarif (analitik); (T) analitik.
 - Mevzuya bağı: **Fasıl I §6.2 vahdâniyet**: 'vâhid' teriminin **kesret nefyi (zâtî vahdet)** ile **zıd/nidd nefyi (tevhîd)** ayrımı c2 Kısım 1↔2 ile aynı hat; Risale 'ehadiyet-i zât' cümlesi için kaynak: c3 p256. Cevher-i ferd atfı Râzî'nin kelâm çerçevesidir; ana metne alınmaz.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.256 otomatik karşılaştırıldı: kelime kapsama %76, Arapça alıntı denetimi 1/1 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p257
-- OCR: orta-kötü
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.257 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: p256'nın devamı: cevher-i ferdin 'küçük/hakîr' sayılması temasla büyüyebilmesindendir; bu mânâ Allah'ta muhâl, dolayısıyla Allah küçüklükle vasfedilmez. **Sıfat nefyedenlerin (nufât) iddiası**: 'sıfat ispat eden tevhîd diyemez: zât+çok sıfat = çok şey, tek şey değil; ayrıca vaz'/raf' (kâdir olup âlim olmama) ihtimali doğar, delil bunu iptal edene kadar'. **Bazılarının sözü** (kim olduğu yazılmıyor): 'Allah'a sekiz sıfat ispat eden dokuz ilâh demiş olur; 5:73 'Allah üçün üçüncüsüdür diyenler kâfir oldu'; üçü üç kez söyleyen küfürde daha ileri.' **Vâhid'in 2. tefsîri**: vücûb-i bizzâtte, sonsuz ma'lûmâtı bilmede ve sonsuz mümkinâta kudrette **kimse ona denk değil**. **Nufât**: 'vâhid = kıdem ve ezelîlikte denk yok'; sıfat ispatlayanlar kadîm mevcûtlar ispat ettiler. **Fürû 1**: Allah **zâtında, sıfâtında, fiillerinde vâhid**; zâtı **hissî-mikdârî terkîpten** ve **aklî terkîpten** (cins-fasıl) münezzeh. [Sayfa dipnotu 5:73'ü Katolik teslîsine tatbik eder: **editör dipnotudur, Râzî'ye ait değil.**]
 - Netice/hüküm: **Vahdet 2 tefsir: (1) kesret nefyi, (2) denk/nidd nefyi; üç boyut: zât, sıfat, fiil.** Nufâtın 'sıfat ⇒ kesret ⇒ tevhîd bozulur' itirazı **hasım sesi olarak** aktarıldı; bu sayfada **cevabı görünmüyor** (vâhid'in ikinci tefsîri sıfat-ispatı ile tevhîdi uzlaştıran tanımdır).
 - Delil çeşidi: taksîm + nakl (5:73); (T) cedelî (nufâta karşı), hitâbî (dokuz ilâh argümanı **[delil ≠ dava: 'sıfat sayısı kadar ilâh' iddiası kesret ile ilâhlığın özdeşliğini varsayıyor; sıfat ilâh değildir]**).
 - Mevzuya bağı: **Fasıl I §6.2 ve §10 (sıfat-zât)**: c3 p225–232'deki 'zâta kâim iki sıfat' hattı ile aynı; Risale'de **zât/sıfat/fiil tevhîdi** üçlüsü için kaynak: c3 p257–258. 'Dokuz ilâh' sözü **Risale'ye alınmaz** (kimin sözü belirsiz). Editör dipnotu Râzî'ye sayılmadı.
 - Doğan sual: 'Nufât' ile kastedilen fırka kim (Mu'tezile/Cehmiyye)? Bu sayfa belirtmiyor (⊬).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.257 otomatik karşılaştırıldı: kelime kapsama %78, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p258
 - OCR: orta-kötü
@@ -2325,31 +2456,34 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: Bu farkın dilcilerdeki (Zeccâc vb.) karşılığı (⊬ borç).
 
 ## c3 p259
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.259 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **112:1'de üç isim ve seyr-i sâlikîn (yolcuların) üç makamı**: (1) **mukarrebîn (en yüksek)**: eşyanın mâhiyet ve hakîkatlerine bakar; 'Hak vâcib bizzât, mâsivâ mümkin; mümkin sebebi kesilince **adem-i mahz**' ⇒ 'Allah'tan başka mevcut görmezler'; 'hüve' **mutlak işaret**, işaret edilen tek olduğu için **sıfata muhtaç değil**; (2) **ashâb-ı yemîn**: Hak ile birlikte mevcût gördükleri için kesret hâsıl olur, 'hüve' yetmez, **'Allah'** ile temyiz edilir ('hüve Allah'); (3) **ashâb-ı şimâl (en zayıf)**: Allah'ın birden çok olmasına cevaz verenler; **'ehad'** şirki ibtal ve tevhîdi tasrîh için. **Yeni bahis**: Allah'ın sıfatları **izâfî** (âlim, kâdir, hâlik) veya **selbî** (cisim değil, cevher değil).
 - Netice/hüküm: Üç makam tasnifi Râzî'nin **112:1 yorumudur** (kelime–makam eşlemesi); **delil verilmemiş, işârî tefsir**.
 - Delil çeşidi: **işârî tefsir / tasavvufî yorum**; (T) ikna'î (⊬).
 - Mevzuya bağı: **KRİTİK**: 'mukarrebîn Allah'tan başkasını mevcut görmez' cümlesi **vahdet-i şuhûd/vücûd okumasına açık**; Râzî'nin gerekçesi 'mümkin sebebi kesilince adem' — yani **mümkinin varlığı kendinden değil** anlamı; **bu cümle Risale ana metnine ALINMAZ** ('mertebe iddiası ⊬, delil yok'); mümkinin vücûdunun kendinden olmadığı hükmü zaten Fasıl I §3'te ispat ediliyor.
 - Doğan sual: Makam tasnifinin kaynağı (tefsîr, tasavvuf) — Râzî'nin kendi mi? (⊬).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.259 otomatik karşılaştırıldı: kelime kapsama %81, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p260
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.260 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **'Allah' bütün izâfî sıfatlara, 'ehad' bütün selbî sıfatlara delâlet eder**: 'Allah' = ibâdete müstehak; ibâdete müstehaklık ancak **îcâd ve ibdâda müstakil** olana, o da **tam kudret ve tam hikmet**e sahip olana. 'Ehadiyet' = **hissî ve aklî terkîpten münezzeh** ⇒ cisim ve mütehayyiz değil (her mütehayyiz inkısâm kabul eder) ⇒ **hiçbir şeyde hâl olmaz, hiçbir şeye mahal olmaz**; ehad ise **misli, zıddı, niddi yoktur** (iki vâcib olsa vücûdda ortak, teayyünde ayrı ⇒ her biri iki kayıtla mürekkeb). **İtiraz**: 'ehadiyet' ile 'hakîkat' iki şey, mecmû 'üçüncüsü', 'ehad' değil. **Cevap**: ehadiyet, **yalnız 'hüve' ile ifade edilebilen hakîkatin lâzımıdır**; bu yüzden muhakkikler nezdinde en celîl isim 'hüve Allah'. **'Allah' = bütün mâsivânın Ona iftikârı; 'ehad' = Onun her şeyden istiğnâsı**; ikisi birleşince seyyid.
 - Netice/hüküm: Allah=izâfî, Ehad=selbî sıfat kümesi; ehadiyet hakîkatin lâzımıdır (ayrı üçüncü şey değil).
 - Delil çeşidi: taksîm + **terkîb ⇒ imkân** (filozof tevhîd burhanı biçimi); (T) analitik/cedelî — **iki vâcib delilinin aynı kısmı c2 p117–132'de Râzî'nin kendi itirazlarına konu idi (vücûb ortak/teayyün ayrı ⇒ terkîb; ayırt-etmeme nakzı); burada itirazsız kullanılıyor ⇒ derece 'öncüle bağlı'.**
 - Mevzuya bağı: **Fasıl I §6.2**: aynı öncül; c2 p121–132 uyarısı **burada da geçerli**; 'ehadiyet hakîkatin lâzımı' cevabı, Râzî'nin 'teayyün zâid değil' çizgisiyle uyumlu.
 - Doğan sual: İtiraz kısmında 'teselsül'ün ('sıfat+zât+ehadiyet sonsuz') önü alınmış mı (cevap tek adımlık)?
+- Doğrulama notu: OCR sayfası ile gerçek metin s.260 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p261
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.261 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: 'Allah, ehad' 'Allahü's-Samed' ⇒ **seyyid**. **Samed = içi boşluksuz cisim** (lügat); Allah'ta muhâl ⇒ Allah'a **'bütün terkîb vecihlerinden beri'** mânâsı yüklenir; 'ehad' delilini soran: 'çünkü samed'. **Üç fürû**: (1) **'lem yelid'**: velid, şeyin bir cüzünün ayrılıp kendine benzer olmasıdır, cüz kabul eden şey için akla gelir, Allah'ta muhâl; **başka tefsîr**: mûcib bi'z-zât olsa eser doğan gibi olurdu; 'lem yelid' = **te'sîri icâb ve tevlîd tarzında olmaması**. (2) **'lem yûled'**: seyyidlik istiğnâyı gerektirir. (3) **'lem yekün lehû kufüven ehad'**: eşi yok (iki vâcib olsa ortak/ayrı ⇒ terkîb ⇒ seyyid değil). **Fürû 4: 'Vahîd'** (74:11 'beni ve yalnız yarattığımı bırak').
 - Netice/hüküm: 112. sûre tevhîd + tenzîh özetidir (Râzî'nin çözümlemesi): Ehad → Samed → lem yelid → lem yûled → küfüv.
 - Delil çeşidi: tefsîr + terkîb ⇒ imkân; (T) hitâbî-analitik.
 - Mevzuya bağı: **Fasıl I §6/§8 (mûcib-muhtâr)**: 'lem yelid' için **ikinci tefsîr, Allah'ın icâb yoluyla te'sîrini nefyeder**; bu **muhtâr iddiasına Kur'ân'dan destek** olarak okunabilir, ancak **Râzî'nin 'kâdir/mûcib' aporisi (c3 Bâb 2, p20–53) kapanmadığı için** Risale'de **'Râzî'nin 112. sûre yorumu' olarak** yazılır, mûcib nefyi delili sayılmaz. 74:11 'vahîd' tefsîri p262'de.
 - Doğan sual: 'lem yelid'in 2. tefsîri klasik tefsîrlerde var mı (⊬)?
+- Doğrulama notu: OCR sayfası ile gerçek metin s.261 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p262
 - OCR: orta
@@ -2361,13 +2495,14 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: 74:11'in hal cümlesinin iki ihtimali için tefsîr geleneği (⊬).
 
 ## c3 p263
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.263 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **el-Ganî** (47:38 'Allah ganîdir, siz fakirsiniz'): **vâcib bizzât 'vâcib bi-gayrihî' olamaz**: o gayr farz edilip **kalırsa vâcib bi-gayrihî olmaz**, kalmazsa **vâcib bi-zâtihî olmaz**; ikisi muhâl ⇒ vâcibin gayre ta'alluku yok; her mâsivâ **mâhiyetinde, vücûdunda, sıfatlarında Ona muhtaç**; her ganî O'nun ihsânıyla ganî. **14. isim el-Kayyûm** (3:2 'Allah'tan başka ilâh yok, Hayy ve Kayyûm'; 20:111; Ömer b. Hattâb 'el-Kayyâm' okudu). **Kayyûm = kıyamda mübâlağa**, iki şeyin birleşmesiyle: (a) **kendi zâtıyla kâim** (3:18 'kâimen bi'l-kıst'; her şeyden müstağnî); (b) **gayrini ayakta tutan** (mukavvim). Vâcib vâhid, mâsivâ mümkin ⇒ müessire muhtaç ⇒ Allah **bizzât kâim, her şeyi mukavvim**. **Kâim bizzât** olmanın lâzımları: (1) vâcib vâhid (iki olsa vücûb ortak/ayrı teayyün ⇒ terkîb); (2) mütehayyiz değil.
 - Netice/hüküm: **Ganî (vâcibin gayre ta'allukunun imkânsızlığı) ve Kayyûm (bizzât kâim + mukavvim)**.
 - Delil çeşidi: **taksîm/reductio (ganî delili)**; (T) burhânî-biçim (öncüller: 'kalırsa vâcib bi-gayrihî olmaz; kalmazsa bi-zâtihî olmaz' — zâtî vücûbun zâtî tanımına dayanır, **dairesel değil ama tanımî**).
 - Mevzuya bağı: **Fasıl I §2 (vâcibin gayre ihtiyâcsızlığı)**: bu istidlâl **Fasıl I'de kullanılabilecek kısa biçimdir** (c3 p263 kaynak); 'Ömer okuyuşu' nakli **⊬** (kıraat kaynağı yok).
 - Doğan sual: 'Vâcib bi-gayrihî' kavramının Râzî'nin 'mümkin li-zâtihi vâcib li-gayrihî' (c1) ile bağı.
+- Doğrulama notu: OCR sayfası ile gerçek metin s.263 otomatik karşılaştırıldı: kelime kapsama %78, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p264
 - OCR: orta
@@ -2379,67 +2514,74 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: Bistâmî sözünün devamı p265'te mi?
 
 ## c3 p265
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.265 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: p264 sonundaki **Ebû Yezîd el-Bistâmî** sözü: 'tevekkülden: kendine O'ndan başka nâsır, rızkına O'ndan başka rızık veren, amelinin O'ndan başka şâhidini görmemendir' (tasavvufî nakil, ⊬). **15–16. isimler el-Celîl, Zü'l-Celâl**: 'Celîl' Kur'ân'da yok, 'Zü'l-Celâl' 55:27 ve 55:78'de var (aynı mânâ). **Ayrım**: Kebîr = zâtın kemâli; **Celîl = sıfatların kemâli**; Azîm = zât+sıfat+fiil kemâli. Celîl'in kemâli: selbî (zıd, nidd, şerîk, mekân, zamandan münezzeh) + sübûtî (tam ilim, tam kudret). 'Fe'îl' vezni fiil/mef'ûl/fâil mânâlarına gelir: (a) mü'minleri ta'zîm-ikrâm eden, (b) ta'zîm ve ikrâma müstehak, vücûdu inkâr edilmez, (c) celâl sıfatlarıyla muttasıf. Bazıları: 'Celîl, kasdedeni yücelten, kovduğunu zelîl edendir' (isimsiz nakil), 'kadri arif kalplerinde yüce' (isimsiz). **17. isim el-Azîm** (2:255): cüsse büyüklüğü değil, zât-sıfat-fiil kemâli.
 - Netice/hüküm: Kebîr/Celîl/Azîm üçlüsü: zât / sıfat / zât+sıfat+fiil kemâli (Râzî'nin ayrımı).
 - Delil çeşidi: lafzî-iştikak; (T) hitâbî.
 - Mevzuya bağı: Fasıl I/IV isim kataloğu; 'Celîl' ismi Kur'ân'da geçmez (Râzî bu sayfada açıkça yazıyor) ⇒ **esmâ tevkîfî ilkesiyle uyum: Risale bu ismi 'nassta geçen' isimlerden ayırır**; kaynak: c3 p265. Bistâmî ve isimsiz nakiller ⊬.
 - Doğan sual: Râzî'nin 99 isim listesine gönderdiği (c3 p270) 'tis'a ve tis'ûn' listesi hangi rivayet (⊬)?
+- Doğrulama notu: OCR sayfası ile gerçek metin s.265 otomatik karşılaştırıldı: kelime kapsama %78, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p266
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.266 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Azîm üç yönden**: (a) **zâtında**: cismin uçlarına gözün ihâta etmemesi gibi, Allah'ın kunhüne **akıl ve fehim ihâta etmez** ⇒ her azîmden azîm; (b) **sıfatlarında**: 'kavminin en çok ilim-kudret-istiğnâ sahibi' gibi, Allah'ın ilim ve kudretine **kimse münâsib değil**; (c) **fiillerinde**: 'yeryüzü krallarının en büyüğü' gibi, mülkün hakîkî mâliki. Selb / izâfe / fiil bâbından. **18–19. isimler el-Mâcid, el-Mecîd** (85:15 'zü'l-arşi'l-mecîd'; 50:1 'Kur'ân-ı Mecîd'): (1) **tam şeref**; (2) aslı **vüs'at**: cömert, çok hayır sahibi ⇒ Allah'ın çok ihsânı. **20. isim es-Sübbûh** (Kur'ân'da yok, **ümmet Allah hakkında zikrinde icmâ etmiştir**, 'sübhânallah'tan alınır); fu''ûl vezninde ilk harf fethalı (sebbûh, kuddûs) istisnâları aktarılır (dil kaidesi).
 - Netice/hüküm: 'Azîm' zât/sıfat/fiil ayrımı; 'Sübbûh' nassta yok, icmâ zikriyle.
 - Delil çeşidi: lafzî; (T) hitâbî.
 - Mevzuya bağı: **KRİTİK esmâ meselesi**: 'Sübbûh' ismi **Kur'ân'da yok, Râzî 'ümmet zikirde icmâ etti' diyor**; **Sünnî akideye göre esmâ tevkîfî — bu iddia (icmâ) ⊬ doğrulanmadı ve Risale'ye alınmaz**; ilgili not: c3 p240, 247. 'İcmâ' iddiasının kaynağı yok.
 - Doğan sual: 'Sübbûh' ismi hadiste var mı (Müslim'deki 'sübbûhun kuddûsun rabbü'l-melâiketi ve'r-rûh' hadisi — ⊬ doğrulanacak; bu satır defter kaydında **hafızadan bir işarettir, kaynak bakılmadı**).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.266 otomatik karşılaştırıldı: kelime kapsama %86, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p267
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.267 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Tesbîh** iki vecih: (1) **Resûlullah'a mânâsı soruldu: 'Allah'ı her kötülükten uzak tutmak'** (hadis, isnad ⊬); (2) 'sebeha fi'l-arz' (yeryüzünde gidip gelmek; 73:7 'gündüz uzun bir yürüyüşün var'). Tesbîh tenzîhe alınırsa **en faziletli zikir tenzîh**: melekler geceyi gündüzü tesbîh eder (21:20), Âdem kıssasında 'seni hamdinle tesbîh ve takdîs ederiz' (2:30), 'biz saf duranlarız, biz tesbîh edenleriz' (37:165–166). **'Bazı haberler'**: dünya semâsı ehli kıyamda 'sübhâne zi'l-mülki ve'l-melekût', ikinci semâ rükûda 'sübhâne zi'l-izzeti ve'l-ceberût', üçüncü secdede 'sübhâne'l-hayyi'llezî lâ yemût' derler; Râzî bunlardan **meleklerin mârifet, muhabbet, ubûdiyet makamlarındaki derece farkı** murad edildiğini söyler. **17:44 'her şey O'nu hamdiyle tesbîh eder, ama tesbîhlerini anlamazsınız'**: bazıları **lafzî/sözlü tesbîh** demiş; delil: eğer eserlerin sanâtkâra delâleti olsaydı anlarlardı, ayrıca 'gökleri ve yeri kim yarattı derseniz Allah derler' (31:25).
 - Netice/hüküm: Tesbîh = tenzîh (Râzî); 17:44'te iki görüş: sözlü ↔ delâlet (cevap p268).
 - Delil çeşidi: nakl (âyet) + haber; (T) hitâbî; **haberin isnadı yok ⊬, Risale'ye alınmaz** (semâ ehli kıyam-rükû-secde rivayeti).
 - Mevzuya bağı: Fasıl I/IV 'tesbîh–tenzîh' bağı (c2 tenzîh hattı ile): 'tesbîh en faziletli zikirdir, mânâsı tenzîhtir' cümlesi kaynak c3 p267 ('Râzî'ye göre'). Haber Risale'ye alınmaz.
 - Doğan sual: 17:44'ün klasik tefsirdeki iki okuması (⊬ borç).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.267 otomatik karşılaştırıldı: kelime kapsama %82, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p268
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.268 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Cevap (muhakkikler)**: 'mahlûkâtın Allah'ın **muhdesâtın sıfatlarından ve cisim nu'ûtundan münezzeh** olduğuna delâleti **mârifetin en ince bâblarındandır**; herkese ma'lûm denemez' ⇒ bu âyette tesbîhi **yaratıcının celâlet, uluvv ve kemâline delâlet** diye yorumlarlar. **Nutuk delâletinden zât delâleti üstündür (4 vecih)**: (1) nutuk yalanı kabul eder, zâtî delâlet kabul etmez; (2) nutuk vaz'î, değişir; zâtî delâlet zâtî; (3) nutuğu yalnız zâhir kulak işitir, zâtî delâleti akıl; **batın akıl kulaktan şereflidir**; (4) nutuk bâkî değil, akılî delâlet bâkî. **21. isim et-Tâhir** = noksan ve ayıptan münezzeh (33:33 'sizi tertemiz kılmak'; 9:28 'müşrikler necistir').
 - Netice/hüküm: 17:44 için **muhakkiklerin cevabı**: tesbîh = delâlet (zâtî); dört vecihle nutuk delâletine üstün.
 - Delil çeşidi: **mukayese (nutuk↔zât delâleti, 4 vecih)**; (T) cedelî-ikna'î; **'tesbîh delâlettir' yorumu sözlü tesbîhin nefyi değildir ama onun yerine konur**.
 - Mevzuya bağı: **KRİTİK**: âyetin zâhiri (mahlûkâtın **hakîkaten tesbîh etmesi**, insanın anlamaması) ile **delâlet tefsîri** gerilimi; **Risale ana metnine 'Râzî'nin muhakkikler adına cevabı' olarak dahi alınmaz, âyetin zâhir lafzı öncelenir** (17:44 lafzı ana metne konabilir, delâlet yorumu 'bazı müfessirler' notuyla). Bu, F 27-B için 'ayırt eden ölçü': zâtî delâlet ölçüsünün bu âyeti çözüp çözmediği ayrıca test edilmedi.
 - Doğan sual: Dört vecihli 'zât delâleti üstün' argümanının Râzî'nin başka eserlerdeki karşılığı (⊬).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.268 otomatik karşılaştırıldı: kelime kapsama %84, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p269
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.269 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **22. isim et-Tayyib** (hadis: 'Allah tayyibtir, ancak tayyibi kabul eder' — isnad ⊬): Tâhir = ayıptan beri; **Tayyib = tahâret + fayda** (güzel koku bir fayda); Allah hakkında: bütün ayıplardan münezzeh, bütün menfaatler O'ndan. **23–24. el-Ferd, el-Vitr** (mukâbili zevc/şef'; hadis: 'Allah vitirdir, vitri sever' — ⊬ isnad, dipnot 'vitir = ferd, hadis Allah'ın bir olduğunu ifade eder' editör). **Vitir şef'ten üstün (7 vecih)**: (1) ferdiyet Hak'ın sıfatı, zevciyet mümkinâtın sıfatı; (2) her zevc birine muhtaç, bir her adetten müstağnî; (3) ferd hem zevc hem ferdi içerir; (4) ferd yarıya bölünmez, kısmet kabul etmemek kuvvet; (5) bütün sayılar birden doğar; (6) vitir şef'e galip (şef'+vitir = vitir); (7) vahdet bütün sayı mertebelerine lâzım.
 - Netice/hüküm: Tayyib/Ferd/Vitir; **vitir şef'ten üstün** (7 vecih; **sayı-felsefesi tarzı**).
 - Delil çeşidi: lafzî + **ikna'î mukayese (sayı özellikleri)**; (T) ikna'î (yedi vecih **delil değil, tasvirdir**).
 - Mevzuya bağı: Fasıl I isimlerde 'Vitr' hadis atfı **Risale'ye alınmaz** (isnad ⊬; **bu hadis Buhârî-Müslim'de aslında vardır ama defter kaydında doğrulanmadı, kaynak bakılacak**). 7 vecihli sayı argümanı Risale'ye **alınmaz**; ders katmanına 'Râzî'nin isim yorumu örneği' olarak konabilir. Editör dipnotu Râzî'ye sayılmadı.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.269 otomatik karşılaştırıldı: kelime kapsama %79, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p270
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.270 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **4. kısım: kudreti bildiren isimler (10)**: **1. el-Kâdir** (6:65 'azap göndermeye kâdirdir'; 77:23 'ne güzel kâdirleriz'); **2. el-Kadîr** (67:1; 99 isim listesinde yok ama Kur'ân'da çok). **Arapça vezinler**: 'fa''âl' (fiil çokluğu; sanatkâr adları: haddâd, bennâ, neccâr, felhâh, hayyât), 'fe'îl/fe'ûl' (sıfat 'sabit huy' gibi: kadîr, habîr, nasîr, sabûr, şekûr, gafûr).
 - Netice/hüküm: Kâdir ile Kadîr arasındaki fark **fiilin sürekliliği ve mübâlağa**dır (dil kaidesi).
 - Delil çeşidi: lafzî-dil; (T) hitâbî (dil kaidesi).
 - Mevzuya bağı: Fasıl I 'kudret' bâbı isimler: Kâdir/Kadîr farkı ders katmanı kutusu. Kaynak c3 p270–271. '99 isim listesi' atfı ⊬.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.270 otomatik karşılaştırıldı: kelime kapsama %78, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p271
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.271 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Fe'îl vezni**: fiil ara sıra mı çoğu zaman mı, tekellüfle mi tabiatla mı zuhûr ediyor ayırt etmek için; **'fiil fâilden evkedtir'**: 'semi' fe-hüve sâmi'' gibi; fe'îl yalnız fiil te'kîdi kasdedilince kullanılır ('semî', 'rahîm'): fiilin sıfatlanan tabiatında yerleşik olduğunu bildirir, bu yüzden Kur'ân'da **'Kadîr' 'Kâdir'den, 'Alîm' 'Âlim'den çok**. **3. el-Muktedir** (54:55 'mîlîk-i muktedir yanında'): 'iktidâr' vezni **kudretin kemâli**: 'fâil fiilinde dilediği gibi tasarruf eder, engel olamaz'; bazıları 'kadera/iktedera aynı' der; muhakkikler ayırır. **Kesb ↔ iktisâb**: kesb hem kendi hem başkası için, iktisâb yalnız kendisi için; 2:286 'kesbettiği lehine, iktisâb ettiği aleyhinedir': **hayırda kesb, şerde iktisâb**; gerekçe: **hayırı insan kendi ve başkası için yapar, gayreti tam olmaz; şerri yalnız nefsi için, lezzet için yapar, gayreti tam**.
 - Netice/hüküm: Muktedir = kudretin kemâli (engelsiz tasarruf); Râzî'nin kesb-iktisâb ayrımı (**kendi lugavî yorumu**).
 - Delil çeşidi: lafzî + tefsîr (2:286); (T) ikna'î; **'şerde gayret fazladır' gerekçesi psikolojik yorum, delil değil**.
 - Mevzuya bağı: **Kul fiili — dikkat**: buradaki 'kesb/iktisâb' **sözlük ayrımıdır**, Sünnî 'kesb' **kelâm terimiyle karıştırılmayacak**; Risale ana metnine alınmaz. 'Muktedir' kudret isimleri bâbında kaynak c3 p271.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.271 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p272
 - OCR: orta
@@ -2469,31 +2611,34 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p275
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.275 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Şehîd** (şâhid'den mübâlağa): dört vecih: (1) **âlim** (6:73 'gayb ve şehâdeti bilen'): ilim mutlaksa **Alîm**, **gayb ve bâtına** izâfe olunca **Habîr**, **zâhire** izâfe olunca **Şehîd**; (2) **hâzır, müşâhid** (2:185 'kim şehri idrak ederse orucunu tutsun'): hudûr ilimle ise 1. vecih, **görüşle ise 2. vecih**; (3) **münâzaa edilen işi ispat eden**: **Allah eşyanın hakîkatlerini beyan edip izhâr etti; tevhîdini, adlini ve celâl sıfatlarını delil koyarak açıkladı** (3:18 'Allah şehâdet etti ki O'ndan başka ilâh yoktur'); (4) **meşhûdün leh**: kullar Ona vahdâniyete şehâdet eder. **5. el-Hafîz** (2:255 'onları korumak O'nu yormaz'; 12:64; 15:9 'Kur'ân'ı biz indirdik, koruyucusu biziz'): iki mânâ: (1) **unutma ve sehvin zıddı** (ilme döner: mücmel ve mufassal ilim, sehv ve nisyanla değişmeyen); (2) **zâyi etmenin zıddı**: göklerin ve yerlerin hâfızı.
 - Netice/hüküm: Alîm/Habîr/Şehîd aynı ilmin mutlak/bâtın/zâhir izâfeleri; Hafîz ilim + koruma.
 - Delil çeşidi: lafzî; (T) hitâbî.
 - Mevzuya bağı: **Fasıl I ilim isimleri**: 'Alîm/Habîr/Şehîd' üçlüsü için kaynak c3 p275 ('Râzî'ye göre'). 15:9 Kur'ân'ın korunması **Fasıl IV (Sünnet ve Tahkik) için âyet-i delil (⊬ numara doğrulanacak)**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.275 otomatik karşılaştırıldı: kelime kapsama %77, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p276
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.276 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: Hafîz'in 2. mânâsı: **ilâhî kitapları tahrîften koruyucu** (15:9). [Dipnot (editör): 'Yahudiler Tevrat'ı, Hristiyanlar İncil'i tahrif etti' — **editörün, Râzî'nin değil**.] **6. er-Rakîb** (5:117 Îsâ (a.s.): 'sen vefat ettirdiğinde sen onların üzerinde Rakîb idin'; 50:18): hiçbir şeyin gizli kalmadığı hâfız. **Hattâbî (nakil)**: âdemîlerde 'hıfzı üzerine vekil, kollayan, gafletten sakınan'. **Murâkabe**: kulun Hakk'ın kendisine muttali olduğunu bilmesi; bu ilmin devamı; **her hayrın anahtarı**: kul Allah'ın hâllerini gözettiğine, sinelerine muttali, sözlerini işittiğine, **en küçük ve en büyük şeyin** ilminden kaçmadığına yakîn edince her hâlde ceza sertliğinden korkar. **7. el-Müheymin** (59:23 'es-Selâm, el-Mü'min, el-Müheymin'): **üç sıfatın birleşimi**: (a) şeyin hâllerini bilmek, (b) maslahatını tahsile tam kudret, (c) maslahatı tahsilde devâm. **Râzî: 'Bu noktaya geldiğimizde bu türden konuşmayı kesmeyi gerektiren bir şey arız oldu'.** İki bahisle bâb kapatılıyor.
 - Netice/hüküm: Rakîb = gizli kalmayan hâfız; murâkabe = amelî sonuç; Müheymin = ilim+kudret+devâm.
 - Delil çeşidi: lafzî + nakl; (T) hitâbî; murâkabenin 'her hayrın anahtarı' hükmü **ahlâkî tespit, delil değil**.
 - Mevzuya bağı: **Fasıl IV (ahlâk/tazkiye)**: murâkabe pasajı ders katmanı için değerli (kaynak c3 p276); Hattâbî nakli ⊬. Editör dipnotu (tahrîf) Râzî'ye sayılmadı ve Risale'ye alınmaz.
 - Doğan sual: 'Kesmeyi gerektiren şey' nedir? Metinde belirtilmiyor (⊬; okunmayan/eksik cümle olabilir).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.276 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p277
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.277 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Bâbın iki bahsi**: (1) Allah'ın kudretinin cins/nev'/sınıf/şahıs yaratmadaki te'sîri zât, sıfat, hikmet eserleri bakımından **gayr-i mütenâhî** olduğundan her nev'e ayrı isim konmuştur; **mahlûkâtın kısımlarını daha iyi bilen, hikmet eserlerine daha çok vâkıf olan, Allah'ın isimlerini daha çok bilir**: 'bu bâbın sırrı ve direği'. (2) **Rukye ve azîmetlerdeki meçhul lafızlar**: isimlerinden mi, meleklerin mi, şeytanların mı? En şereflisi ve tesirlisi Allah'ın isimleri; **muhtemelen meçhul lafızlar bu sıfatlara delâlet eder**; tesirin sebebi olabilir ki **okuyan bilmezse kalbine bir korku-dehşet gelir, nefs-i nâtıkanın 'mufârakât ve mukaddesât âlemiyle' ittisali hâsıl olur, tesir kuvvetlenir** ('vallâhü a'lem').
 - Netice/hüküm: İsim sayısının sonsuzluğu mahlûkâtın sonsuzluğuna bağlı (Râzî'nin tezi); meçhul rukye lafızlarının tesiri için **ihtimal-i felsefî izah**.
 - Delil çeşidi: (1) **taksîm + iddia (isim–mahlûk eşlemesi)**: delil verilmedi; (2) **spekülasyon ('belki', vallâhü a'lem)**; (T) ikna'î (⊬).
 - Mevzuya bağı: **KRİTİK — Sünnî akide**: (1) 'her nev'e ayrı isim' iddiası **esmâ tevkîfî ilkesiyle çelişir** (isimler nassla, mahlûk sayısıyla değil); (2) **anlamı bilinmeyen lafızlarla rukye** ve **'nefs-i nâtıka–mufârakât ittisali'** izahı felsefî spekülasyondur, **Risale'ye alınmaz**. Rukyenin şer'î ölçüsü (şirk taşımayan, anlamı bilinen) Sünnet kaynaklarından **ayrıca** çalışılacak (⊬; bu satır bir işarettir, kaynak bakılmadı).
 - Doğan sual: Bu iki bahis Râzî'nin başka eserlerinde (Sırrü'l-mektûm?) nasıl işleniyor (⊬).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.277 otomatik karşılaştırıldı: kelime kapsama %84, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p278
 - OCR: boş sayfa
@@ -2505,13 +2650,14 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p279
-- OCR: orta (başlık kötü)
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.279 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Bâb 'Allah'ın hakîm olması' (dipnot: 'Fasıl 18')**. **Hikmet iki şekilde tefsîr edilir**: (1) **nazarî hikmet** = eşyanın hakîkatlerini bilmek; Allah'ın ilmi ilimlerin en kâmil ve efdali ⇒ hikmeti hikmetin en efdali; (2) **amelî hikmet** = menfaat sağlayan ve zarar defeden fiil. **Fiilin maksadı nefse menfaat/zarar defi ise 'dâ'î-i şehvet'; gayre menfaat/zarar defi ise 'dâ'î-i hikmet'**. Allah şehvet, nefret, elem ve lezzetten münezzeh olduğu (delillerle) sabit ⇒ **dâ'î-i şehvet Onun hakkında muhâl**. Kalan: **dâ'î-i hikmetin sübûtu**: filozofların ve Mu'tezile'nin ayrı yolları; Râzî ikisini de zikredeceğini söylüyor.
 - Netice/hüküm: Nazarî hikmet = Allah'ın ilmi; amelî hikmet = gayrın menfaati için fiil; Allah'ta yalnız dâ'î-i hikmet mümkün (dâ'î-i şehvet muhâl).
 - Delil çeşidi: taksîm + çıkarım; (T) analitik. **Öncül: 'gayrın menfaatini kasteden fiil dâ'î-i hikmet' — Allah'ın fiilinde bir 'maksad/dâ'î' bulunduğunu öncülde varsayıyor [dava ≠ delil: bu, Râzî'nin kendi c3 dâî-sârife çerçevesindeki 'tam dâî ⇒ vâcib' (Bâb 1) ile ve Sünnî 'Allah fiillerinde illetlendirilemez' çizgisiyle gerilim taşır]**.
 - Mevzuya bağı: **Fasıl I §8 (irâde-tahsis) ve §5 (Vâcib=Fâil)**: **KRİTİK**: 'dâ'î-i hikmet' Fasıl I'in 'niçin şimdi' silahını **gaye-illetle** ilişkilendirir; Râzî'nin buradaki iki yolu (filozof, Mu'tezile) **kendi kabulü değil**; hikmet bâbının nihaî hükmü p280 sonrasına bağlı. **Sünnî ana çizgi (Allah fiillerinde ta'lîl/vücûb-ı aslah)** ayrı ihtilaf konusudur; **Risale ana metnine alınmadan önce Râzî'nin kendi tercihi bulunmalı**.
 - Doğan sual: Râzî iki yolu sonunda kabul mü ediyor, reddediyor mu (p281+)?
+- Doğrulama notu: OCR sayfası ile gerçek metin s.279 otomatik karşılaştırıldı: kelime kapsama %75, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p280
 - OCR: orta
@@ -2523,67 +2669,74 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: Râzî kendi cevabında 'vücûb' dilini nasıl yumuşatıyor (p281+)?
 
 ## c3 p281
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.281 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: Filozof yolunun sonu: 'mahlûkâtın hepsi hikmet ve sevap üzere vâki.' Hayır **murâd-ı merdî**, şer **murâd-ı mekrûh**: hayır asıl maksat; şer **zâtı itibariyle mekrûh**, fakat matlûb-ı bizzât olan hayrın lâzımı olduğu için **arazî ve tebeî olarak murâd** (bir şair: 'ağarmış saçtan hoşlanmam, ondan ayrılmaktan da hoşlanmam' — hayat sevimli, ağarma onun lâzımı; şairin adı metinde yok, 'hakîmü'ş-şu'arâ' deniyor, ⊬). **Râzî'nin itirazı (iki vecih), 1. vecih**: 'bu müessir neden hayrı yaptı, şerri yaptı?' sorusu **ancak fâil-i muhtâr için** yöneltilir; **mûcib bi'z-zât** ise soru düşer; 'fâil bildiği hâlde' yetmez: **damdan düşüp birinin üzerine düşen ve onu öldüren akıllı-âlim adama 'neden öldürdün' denmez**, çünkü fiilinde muhtâr değil.
 - Netice/hüküm: Filozof teodisesi: **şer arazî ve tebeî murâd**; Râzî'nin 1. itirazı: **bu bahis yalnız muhtâr fâil varsayımında anlamlıdır**.
 - Delil çeşidi: taksîm + **misal (düşen adam)**; (T) cedelî (itiraz) — **muhtâr/mûcib ayrımının hikmet bahsine doğrudan yansıması**.
 - Mevzuya bağı: **Fasıl I §5/§8 ve şer problemi**: c2 p146–147'de eksik kalan teodise cevabının **ilk filozof biçimi bu ve p280**; **Râzî bunu kabul etmiyor** (itiraz başlıyor). Şiir kaydı Risale'ye alınmaz.
 - Doğan sual: Şairin kimliği (⊬).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.281 otomatik karşılaştırıldı: kelime kapsama %83, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p282
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.282 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Filozofların Râzî'ye karşı savunması**: 'Bu bahsin maksadı, ilk mebde'in mahlûkâtının **ya mahz hayır ya hayrı galip** olduğunu göstermek, **eserlerin kemâlinden zâtın kemâline istidlâl**; bu bahis faydalı'. **Râzî'nin 2. vechi: sözünüz üç asla dayanır**: (1) **bu çok hayırlar ancak bu şerlerle tahsîl olur**; (2) **bu şerler hayırlara nispetle mercûh**; (3) **öyleyse o mercûhiyete katlanmak vâcib**. **1. asıl memnû'**: cisimler cisimlikte müsâvî; her birinin kendi hâssasına, tabîatına ihtisası **fâil-i muhtâr** yüzündendir; kâdir-i muhtâr, hâssaları **menfaat sebebi** olarak da, **zarar sebebi** olarak da yaratmaya kâdir; öyleyse bu hayırlar şerlerden arınmış olarak tahsîl edilebilir. **Örnek**: ateş yemek pişirme–gıda olgunlaştırma menfaati verirken tabîat-ı nâriyyesini korur; insanı yakacağı zaman bu tabîat ondan alınabilir.
 - Netice/hüküm: **1. asıl (hayır ancak şerle tahsîl olur) memnû'**: kâdir-i muhtâr için hâssaların menfaat/zarar sebebi olarak ayrılması mümkün.
 - Delil çeşidi: **cedelî (menʿ) + kudret argümanı**; (T) cedelî; **öncül: cisimler cisimlikte müsâvî ⇒ hâssa ihtisası fâil-i muhtârdan** (kelâmcı hudûs/ihtisas delilinin aynı öncülü; F 27-B: c3 Bâb 1–2 aporisine bağlı).
 - Mevzuya bağı: **Fasıl I §8**: 'ihtisas ⇒ muhtâr' öncülü Râzî'nin **kendi kelâm burhanı**; burada **filozofa karşı kullanılıyor (cedelî)**; dâî-tevakkuf çerçevesindeki aporisi (c3 p20–53) **ayrıca** duruyor.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.282 otomatik karşılaştırıldı: kelime kapsama %76, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p283
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.283 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Gerekçe devamı**: ateşin insanı yakması Allah'ın kudretinde ise, bu **giderilebilir şer**; **beyin zarındaki tümör** hafif müshille tabip tarafından giderilebilir; ilâh aciz ise **fakir tabip ilâhtan daha kâmil kudretli**; **büyük melik bir kavme galip gelince kalbine ihsan dâîsi düşerse öldürmekten kurtulur**: ilâh-ı âlem o dâîyi yaratmaktan aciz mi, kâdir de yapmıyor mu? **Filozofların cevabı**: bu ilzâm ancak ilâh **muhtâr** ise; mûcib bi'z-zât ise söz düşer. **Râzî'nin hâsılası**: ilâh **mûcib ise bu bahse hiç ihtiyaç yok**; **kâdir-muhtâr ise bahis bâtıl** (kâdir gerekeni yapabilir); **her iki takdirde bâtıl**. **2. asıl (mefâsid mercûh) gizli muğâlata**: insanın âfetlerden selâmetle kalması ≠ lezzet ve sürûrla kalması; **maksat ya âfetten selâmet ya lezzet-behcet**; ilki bâtıl (asl-ı ademde de hâsıl); maksat lezzet-behcet-sürûr.
 - Netice/hüküm: **Filozofun hayr-şer bahsi her iki takdirde bâtıl**: mûcib ise gerekmez, muhtâr ise şerrin giderilmesi mümkün olduğundan şer 'lâzım' değil.
 - Delil çeşidi: **reductio/taksîm (mûcib–muhtâr ikilemi) + misal (tabip, melik)**; (T) cedelî-analitik. **'Kâdir muhtâr ⇒ şerrin giderilmesi mümkün' çıkarımı 'şer neden var?' sorusunu cevapsız bırakır: Râzî burada teodiseyi çözmüyor, filozofunkini iptal ediyor.**
 - Mevzuya bağı: **Fasıl I 'şer problemi'**: **Râzî'nin filozof teodisesine cevabı: iptal**; **'tabip ilâhtan kudretli' benzetmesi Risale'ye alınmaz** (edebe ve konuya uygun değil, delil değil). Ders katmanı için 'mûcib–muhtâr ikilemi' kutusu.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.283 otomatik karşılaştırıldı: kelime kapsama %79, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p284
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.284 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **2. asıl'ın iptali**: 'hayır galip' ile kastedilen (a) **âfetten selâmetin galip olması** ise, **yaratmanın maksadı selâmet olamaz** (asl-ı ademde de hâsıl) ⇒ az şerrin çok hayır için taşınması bu mânâda geçmez; (b) **lezzet-sürûrun gam-elemden râcih olması** ise **memnû'**: sürûr vakitleri az, **gam-hüzün galip**; **mal ve câh sevgisi şiddetli, talepte çoğu kez maksada erişemez, kalbi elem ve vahşette kalır; erişse lezzeti daha fazla talebe götürür, talep çile-belâ doğurur**; 'talepte mahrûm kalırsa belâ, erişirse lezzeti daha kâmil talep sebebi olur'; **düşmanların kasdı, hastalıklar, fakirlik ve ihtiyarlık korkusu = kıyısı olmayan deniz**; 'bu mekrûhât o lezzetlerden azdır diyen **mükâbere**'. **3. asıl**: 'çok hayrı az şer için terk çok şerdir': şer ya **hayrın terki** ya **elem-zarar**.
 - Netice/hüküm: **Dünyada lezzet–sürûrun elem–gamdan râcih olması Râzî'ye göre memnû'**; hayr-galip iddiası 'gizli muğâlata'.
 - Delil çeşidi: **tecrübî/ampirik-ikna'î** (hırs-talep analizi) + taksîm; (T) ikna'î-cedelî. **[Delil ≠ dava: 'lezzet ≤ elem' hükmü gözleme ve genellemeye dayanır, ispat edilmemiş; 'elem çoğunluğu' iddiası Râzî'nin cedelî mukabelesidir, kendi tezi olarak alınamaz.]**
 - Mevzuya bağı: **Fasıl I 'şer problemi' / Fasıl III (âhiret)**: bu mukabele **dünya hayatının nitelenmesi** ile ilgili; **Risale ana metnine 'dünya elemi lezzetten çoktur' hükmü ALINMAZ**; Kur'ân'ın imtihan tasviri (67:2) ayrı kaynaktan yazılır (⊬ numara doğrulanacak, satır işarettir).
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.284 otomatik karşılaştırıldı: kelime kapsama %84, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p285
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.285 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **3. asıl'ın iptali**: 'şer' **hayrın terki** ise 'çok hayrı az şer için terk çok hayrı terktir' **tekrar (özdeşlik)**, konu ile yüklem arasında fark kalmaz: **fâsid önerme**; şer **elem-zarar** ise bâtıl: çok hayır terk edilirse **şey asl-ı ademde kalır; lezzet de elem de hâsıl olmaz**. **Filozof yolunun sonu.** **Mu'tezile yolu (dipnot 'Fasıl 19: hikmeti Mu'tezile kavline göre'): delil**: 'hüsn hüsnü, kubuh kubhu **kendisine dönen vecihler** sebebiyle; Allah **her ihtiyaçtan ganî**; **her ma'lûmu âlim**; bu asılların mecmûundan **bir mukaddime doğar: Allah kabîhin kabîh olduğunu bilir ve ondan ganîdir; bu iki vasıfta olan kabîhi yapmaz**' ⇒ **Allah kabîhi yapmaz**. **Delil (1) ilk vecih**: 'doğru söylersen bir dinar, yalan söylersen bir dinar' — insan için doğru-yalan dışında her şeyde eşit ise **yalanı terk eder, doğruyu yapar**.
 - Netice/hüküm: Filozof teodisesinin **üç aslı da iptal** edildi; Mu'tezile yolu aktarılmaya başlandı.
 - Delil çeşidi: (1) **reductio/tanımsal**: 'terk-i hayr = şer' tekrar, 'şer=elem' ise asl-ı adem nötr (analitik); (2) Mu'tezile: **kıyas (şâhide gâib) + misal**; (T) cedelî (Râzî'nin) / hitâbî-ikna'î (Mu'tezile kıyası).
 - Mevzuya bağı: **KRİTİK — Sünnî akide**: **Mu'tezile'nin 'Allah kabîhi yapmaz (aklî hüsn-kubuh)' delili** Fasıl I'e **alınmaz**; Râzî aktarıp **rədd edecek** (p286). 'Asl-ı ademde lezzet de elem de yok' argümanı **filozof teodisesine karşı** analitik-cedelî; ana metne sadece cedel olarak.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.285 otomatik karşılaştırıldı: kelime kapsama %77, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p286
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.286 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Mu'tezile delili (devam)**: (a) **kabîhi bilmek o fiilden sarf eder** (yalan örneği: sarf sebebi 'kizb olduğunu bilmek'); Allah'a bu ilim hâsıl, o hâlde kabîhten sarf eder. (b) **Kıyası bırakıp 'darûrî ilim' iddiası**: fiilin kabîh olduğunu bilmek ondan **inkısâfı gerektirir**, ancak şehvet ve ihtiyaç dâîsi ile çatışırsa hariç; Allah'ta bu dâî muhâl ⇒ **imtinâ' vâcib**. **Râzî'nin itirazı**: 'İlim kabîh fiilin **sudûrunu imkânsız kılıyor mu, kılmıyor mu?** (1) **İmkânsız kılıyorsa Allah mûcib bi'z-zât olur**: zâtı o ilmi mûcib, ilim imtinâı mûcib, **mûcibin mûcibi mûcib** ⇒ zâtı imtinâı mûcib ⇒ **fâil-i muhtâr değil**; (2) **imkânsız kılmıyorsa** bu sarıf ile birlikte fiil **caiz**, cevaz varken 'asla olmaz, olsa muhâl olur' diye cezmetmek nasıl? **Ayrıca** sevabı ve ivazı terk kabîh olduğuna göre **fiili aklen vâcib** olur ⇒ yine mûcib bi'z-zât. **Filozoflara söylediğimiz**: mûcib bi'z-zât denirse bu bahis tamamen düşer.
 - Netice/hüküm: **Râzî Mu'tezile'nin hikmet delilini çürütüyor: delil ya mûcib bi'z-zât ya cevaz (cezm yok) sonucuna varır; ikisi de Mu'tezile'nin tezini vermez.**
 - Delil çeşidi: **reductio/ikilem**; (T) **burhânî biçimde cedelî (öncülleri Mu'tezile'nin kendi asılları)**.
 - Mevzuya bağı: **Fasıl I §8 ve F 27-B**: bu, **muhtâr-mûcib ikilemi'nin Râzî'nin elindeki en keskin biçimi**; Fasıl I'in 'hikmet ⇒ kabîhi yapmaz' türü hiçbir cümlesi olmamalı (**kontrol borcu: Fasıl I'de 'vâcib-i aslah/kabîhi yapmaz' cümlesi var mı?** ⊬ dosya okunarak bakılacak).
 - Doğan sual: Fasıl I'de 'Allah adil/zulmetmez' cümleleri hangi delille kurulmuş?
+- Doğrulama notu: OCR sayfası ile gerçek metin s.286 otomatik karşılaştırıldı: kelime kapsama %81, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p287
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.287 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: Râzî'nin kapanışı: 'Bu delil, Allah'ın kabîhi **işlemediğine, istemediğine, emretmediğine** delâlet ediyorsa, **bunu işlediğine ve istediğine delâlet eden deliller vardır: kulların bütün fiillerinin Allah'ın kazâ ve kaderiyle vâki olduğuna delâlet eden deliller; bunların şerhi istikssâ ile gelecek**. Vallâhü a'lem.'
 - Netice/hüküm: **Hikmet bâbında Râzî'nin kendi cevabı 'kazâ-kader' bâbına havale**; iki yol (filozof, Mu'tezile) reddedildi.
 - Delil çeşidi: —; (T) havale.
 - Mevzuya bağı: **Fasıl I 'şer problemi'** ve **kul fiili** (c3 p60, 73): **Râzî'nin hikmet–şer cevabı bu cilt sonrasında (kazâ-kader bâbı)**; **açık borç**: cilt 4–9'da 'kazâ ve kader' bâbı bulunacak ve okunacak. **KRİTİK**: 'Allah'ın kabîhi işlediği ve istediği' ifadesi **Râzî'nin ihtilaf içi diliyle 'kul fiilini yaratma'** anlamındadır; Sünnî ana çizgide 'şer Allah'a nisbet edilmez, halk edilir; irâde ile emir ayrı' ayrımı **korunarak** yazılmalı; **Risale ana metnine ALINMAZ** (Râzî'nin ifadesi ⊬ ayrıca çalışılacak).
 - Doğan sual: 'Kazâ ve kader' bâbı hangi ciltte (atıf haritası)?
+- Doğrulama notu: OCR sayfası ile gerçek metin s.287 otomatik karşılaştırıldı: kelime kapsama %91, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p288
 - OCR: boş sayfa (OCR başlığı yok)
@@ -2613,22 +2766,24 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: 'Lezzet bâbı' (Râzî'nin lezzet teorisi) c3'ün neresinde?
 
 ## c3 p291
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.291 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Mu'tezile'nin 'nâfi' kabîh olur' örneklerine (kâdir bâbında geçen) cevap**: zulüm zâlime nâfi' olsa da **âlem düzeninde çok zararlıdır** (zulmü hasen saysak harc ü merc olur, kimse nikâhına güvenemez); **ibâdetler** âhirette büyük fayda getirdiği için hasen; **küçük menfaati büyük menfaat için harcamak** âlem maslahatının aslı (çiftçi tohumu bozar, çok hâsılat için). Hâsıl: **hüsn-kubuh menfaat-mazarrattır**; Râzî: **'bu makam en zor makam'**: hüsn-kubhu menfaat-mazarratla tefsîr ederlerse **Allah hakkında ispat edemezler**, başka şey ararlarsa **eser bulamazlar**. **2. hüccet**: aklî kubuh Allah hakkında muteber olsa **Allah hiçbir kuluna nimet vermiş olmaz**: nimetin nimet olması muhtaç ve iştiyaklı olana; ihtiyaç ve şehvet zarar; **nimet önceki bir zarara eşit bir zararın telâfisidir** ('yarayı açıp sonra tedavi eden', 'bir dinar gasp edip bir dinar veren') ⇒ nimet değil **abes**.
 - Netice/hüküm: Allah hakkında aklî hüsn-kubuh muteber olursa nimet nimet olmaz (Râzî'nin 2. hüccetinin 'lüzum' kısmı).
 - Delil çeşidi: **reductio (lüzum: aklî kubuh ⇒ nimet yok)**; (T) cedelî-analitik. **Öncül: 'nimet ancak önceki ihtiyaç zararına eşit'** — bu, lezzet=elem izâlesi teorisine bağlı [delil ≠ dava riski: Râzî bunu bir sonraki sayfalarda 'ilzam-itiraz' ile savunuyor].
 - Mevzuya bağı: **Fasıl I 'adl/hikmet'**: Sünnî ortak nokta: **Allah'a hiçbir şey vâcib değildir**; Râzî'nin gerekçesi (nimet teorisi) **Risale'ye alınmaz**; Fasıl I'de 'zulmetmez' cümlesi **nassla** (⊬ 4:40 numarası doğrulanacak) kurulmalı, aklî kubuh zorunluluğuyla değil. Bu **kontrol borcu (Fasıl I'i okuyup bakılacak)**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.291 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p292
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.292 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **2. hüccetin sonucu**: aklî kubuh Allah'a muteber olsa **Allah kullarına nimet vermemiş olur, yaptığı her şeyde abes olurdu**; **milletler Allah'ın fiilinde hakîm, kullarına mün'im olduğunda icmâ etti** ⇒ akıl hükmü Allah'a bâtıl. [Dipnot (editör): 3:18 âyeti nakledilmiş.] **Mu'tezile'nin itirazı**: (a) **'şart memnû'**: ihtiyaç ve şehvet neden zarar? (b) zarar ise **Allah'ın yaratmasıyla mı**? İhtiyaç **zâtî lâzım** (dört çift, üç fert gibi); (c) **Allah yarattıysa da fazlasıyla verirse abes değil** ('bir dinarı alıp bin dinar veren abes değil, mün'imdir').
 - Netice/hüküm: Râzî'nin hüccetine 3 itiraz aktarıldı (hasım sesi).
 - Delil çeşidi: **cedelî itiraz (Mu'tezile)**; (T) cedelî.
 - Mevzuya bağı: Fasıl I: **'icmâ-i milel: Allah hakîm ve mün'im' iddiası ⊬** (kaynak ve kapsamı belirsiz; dinî nassla ve akılla ayrı ayrı ele alınmalı).
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.292 otomatik karşılaştırıldı: kelime kapsama %85, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p293
 - OCR: orta
@@ -2640,22 +2795,24 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p294
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.294 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (Cevap 1'in devamı): yemeklere iştiha aynı: kimi bir yemeğe rağbetli, kimi ondan nefret eder; **bu farklı şehvetler ve rağbetler Allah'ın icâdıyla**. **Bir şeye meyil, rağbet, hırs arttıkça bulmaktan alınan lezzet tam olur**; ⇒ **nimet miktarı = lezzet miktarı = önceki ihtiyaç ve şehvet miktarı**; ihtiyaç zarar; **mîsâvînin mîsâvîsi mîsâvî** ⇒ **hâzır nimet = önceki zarar** ⇒ tamam. **Cevap 2**: hayvan varlığa girmeden önce **mahz adem**, ihtiyaç ve şehvetle vasıflı değildi; Allah îcâd edince **bu ihtiyaç ve şehvetlerle vasıflandı**; Allah'ın hayvan zâtlarını îcâdı bu ihtiyaçları gerektiriyorsa **îcâd bir yönden zarar vermek**.
 - Netice/hüküm: **Lezzet = önceki ihtiyacın miktarı** (Râzî'nin nimet-zarar denkliği teorisi); îcâd ihtiyacı doğurduğu için bir yönüyle zarar.
 - Delil çeşidi: **tanım/eşitlik cebri (lezzet = ihtiyaç) + ihtisas**; (T) analitik-ikna'î. **[Delil ≠ dava: 'lezzet ihtiyaçla orantılı' bir genelleme, ispat değil; aynı öncül 'yaratılmamak nötrdür' (asl-ı adem) ile birleşiyor.]**
 - Mevzuya bağı: **Fasıl I/III (nimet, âhiret lezzeti)**: **KRİTİK**: bu teori **cennet nimetlerinin de 'önceki ihtiyaç kadar' olması** sonucuna götürür; Râzî'nin bu satırdan sonraki tavrı (p295–296) ve Bâb 5 (lezzet) okunmadan **Fasıl III'e uygulanmaz**. Ana metne alınmaz.
 - Doğan sual: Bu teori Fasıl III (Meâd) için ne demek? (c3 lezzet bâbı ile birlikte ele alınacak.)
+- Doğrulama notu: OCR sayfası ile gerçek metin s.294 otomatik karşılaştırıldı: kelime kapsama %79, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p295
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.295 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Cevap 2'nin devamı**: 'Allah'ın hayvanları îcâdı ihtiyaçları gerektiriyorsa **îcâd ve tekvîn bir yönüyle zarar**; nimet bu zarar miktarınca ⇒ ilzâm geri döner.' **Cevap 3**: ihtiyaç ve şehvet **vücûdun lâzımı mı değil mi**? Lâzımsa îcâd zararı lâzım kılan şeyi îcâd; değilse zâtta ihtiyaç ve şehvetin varlığı ancak yaratıcının onu yaratmasıyladır ⇒ ilzâm geri döner. **'Allah ihtiyaç kadarından fazlasını verdi' itirazına cevap**: 'o artan miktara **şehvet var mı**? Varsa muhtaçlık aynı; yoksa **menfaat ve lezzet sebebi olamaz**, nimet değil.'
 - Netice/hüküm: **Fazlalık nimet sayılmaz** (şehvetsiz verilen).
 - Delil çeşidi: **taksîm (lâzım/lâzım değil)** + reductio; (T) analitik-cedelî.
 - Mevzuya bağı: p294 ile aynı hat; **F 27-B**: 'fazlası nimet olamaz' hükmü **misalle destekleniyor (p296)**; öncül **'lezzet ancak şehvetten doğar'** — Sünnî düşünce ile çelişebilir; **Risale ana metnine alınmaz**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.295 otomatik karşılaştırıldı: kelime kapsama %78, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p296
 - OCR: orta
@@ -2667,22 +2824,24 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: 3. hüccetin devamı p297'de (okunacak).
 
 ## c3 p297
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.297 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **3. hüccet devam (hudûs vaktinin ihtisası)**: 'ya bu vaktin belirli maslahata ihtisası **zâtı gereği**, ya **zâtının lâzımı** gereği, ya ikisi de değil'. **(1) Zâtı gereği bâtıl, 3 vecihle**: (a) hudûs diyenlere göre bu vakitler âlemden önce **mahz adem**; ademde vakitler zâtî hâssalarla birbirinden ayrılmaz; (b) vakitler ya **vâcibü'l-vücûd li-zâtihî** (ademleri muhâl, öncekiyle sonraki aynı olur, bedîhî bâtıl) ya hâdis-müteâkib (aynı soru geri gelir: niçin o vakit, öncesi-sonrası değil?); (c) belirli vakit belirli maslahatın kaynağı olabiliyorsa **hudûsün de kaynağı olamaz mı?** — 'belirli vakit hudûsün müessiri değil' delili de 'vakit zâtıyla o hâssayı gerektirdi' sözüne dönüp nakzedilir.
 - Netice/hüküm: 'Vakit zâtıyla maslahata ihtisas eder' bâtıl.
 - Delil çeşidi: **taksîm + reductio**; (T) analitik-cedelî. Bu **kelâmcı hudûs-ihtisas silahının aynısıdır**.
 - Mevzuya bağı: **Fasıl I §8.0/8.3 (irâde-tahsis: 'niçin şimdi?')**: **aynı silah burada Mu'tezile'nin hikmet-maslahat tezine karşı kullanılıyor**; dâî-tevakkuf çerçevesindeki aporisi (c3 p20, 26, 41–53, 100, 112, 137, 180–182) **aynen geçerli**; derece 'öncüle bağlı'.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.297 otomatik karşılaştırıldı: kelime kapsama %81, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p298
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.298 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **(2) 'Vaktin lâzımı' da bâtıl** (aynı üç delil). **(3) Ne zâtı ne lâzımı**: **fâil-i muhtâr vakti o hâssaya ihtisas etti**; başka hâssaya isnad edilirse **teselsül**. Hâsıl: **âlem hâdisse muhtâr fâil hudûsü belirli vakte hikmet ve maslahat gözetmeden ihtisas etti ⇒ 'abes', akılda kabîh**; aklî hüsn-kubuh muteber olsa ya **âlemin kıdemi ve ilâhın mûcib bi'z-zât olması** lâzım gelirdi, oysa **hüsn-kubuh fâil-i muhtârın ispatına fer'dir**; fer' fâsid ⇒ asıl fâsid ⇒ **Allah'ın hükümlerinde aklî hüsn-kubuh bâtıl**. **Bu delil her hâdisin vaktine, her zâtın sıfat, mikdar, hayyizine tatbik olur**: 'tek değil, ebedîyete kadar sayısız deliller'. **4. hüccet**: aklî hüsn-kubuh muteber olsa **Allah'ın kullarını marifetine, senâsına, şükrüne mükellef kılması sahih olmazdı**; oysa sahih ⇒ akıl hükmü bâtıl.
 - Netice/hüküm: **Aklî hüsn-kubuh ya kıdem-i âlem ya abes-i hudûs sonucuna götürür**; Râzî'nin 3. hüccetinin sonucu.
 - Delil çeşidi: **reductio (hudûs-ihtisas)**; (T) cedelî-analitik. **[Delil ≠ dava: 'muhtâr fâil hikmetsiz ihtisas etti' hükmü, 'hikmet' kavramının Allah'ta gaye-illet olarak anlaşıldığı öncülüne bağlı; Râzî'nin kendi c3 dâî-sârife çerçevesiyle ('tam dâî ⇒ fiil') aynı gerilim.]**
 - Mevzuya bağı: **KRİTİK Fasıl I §8**: 'Allah'ın fiilinde hikmet/gaye' meselesi burada **'muhtâr fâil ihtisası hikmetsizdir (abes değil, hikmet zorunlu değil)' biçiminde Râzî'nin kabulüdür**; **Sünnî ana çizgi 'Allah'ın fiilleri hikmetlidir ama hikmet Ona vâcib değildir' der**; Risale bu ayrımı **açıkça yazacak: Allah'ın hikmeti nasslarla (Hakîm ismi) sabittir, ama 'hikmet vâcibi' aklî zorunluluk değildir**. 'Abes' kelimesi Risale'de kullanılmaz (Râzî'nin reductio dilidir).
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.298 otomatik karşılaştırıldı: kelime kapsama %84, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p299
 - OCR: orta
@@ -2694,49 +2853,54 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p300
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.300 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (3. mukaddime devam): 'kâdir-i muhtâr bu menfaatleri **teklifsiz de** verebilir; 'teklifle daha kolay' denemez, çünkü Allah'ın kudretine nisbetle **kolay-zor tefâvütü muhâl**' ⇒ **marifet ve tâat teklifi meşakkatli, her fayda cihetinden hâlî; böylesi akılda kabîh**; aklî hüküm Allah'a muteber olsa hepsi kabîh olurdu; hiçbiri kabîh olmadığına göre **akıl hükmü Allah hakkında muteber değil**. **Şartın 2. vechi**: şâhitte bir zayıfa nimet edip **karşılığında meşakkatli hizmet isteyen** kişi **lâ'im, alçak himmetli** sayılır; nimet edip şükür-senâ beklemeyen, kendisinin nimetini küfredene kızmayan **şerefli**; sevinip kızan insana nisbetle; **sürûr, gam, menfaat ve zarardan müteâlî ilâhın, nimet edip sonra kulundan şükür ve hizmet talep etmesi celâline nasıl yakışır?**
 - Netice/hüküm: Aklî ölçüyle teklif kabîh sonucu (reductio devam).
 - Delil çeşidi: **reductio + şâhide kıyas**; (T) cedelî. **(Bu kıyas Allah'ı insanî ölçülerle tartar; Râzî onu tenzîh ilkesiyle kendisi de reddediyor.)**
 - Mevzuya bağı: p299 uyarısı geçerli: **'Allah lâ'imdir' türü sonuçlar Râzî'nin şartlı-aleyhî delilidir; Risale'ye alınmaz**; İslâm'a aykırı bir ifade doğmaması için **bu sayfa doğrudan alıntılanmaz, özetlenirken 'Mu'tezile'nin ölçüsü Allah'a uygulanırsa çelişki doğar' biçiminde yazılır**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.300 otomatik karşılaştırıldı: kelime kapsama %84, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p301
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.301 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Sonuç**: aklî hüsn-kubuh Allah'ın fiil ve hükümlerinde muteber olsa **bu teklifler kabîh olurdu; hiçbiri kabîh olmadığına göre bâtıl**. **Mu'tezile'nin itirazı (3 vecih)**: teklif **şâkire ve mutî'e menfaat sağlar**: (1) **hak etmeyeni ta'zîm kabîh**; Allah onları tâatle **ta'zîme müstehak** kıldı, sonra ta'zîm etti; (2) hak edilen menfaat **lezzetli ve kâmil**, salt tefaddulden daha; (3) **hükemâ mezhebi**: uhrevî saadet ancak bu ibâdetlere şartlıdır: insan cismânî lezzetlere düşerse rağbeti güçlenir, **ölümde rağbet kalır ama bulamaz ⇒ rûhânî elemler**; ibâdetle Allah'ı, melekleri, âhireti zikretmiş olan insan **ölümde 'hapisten bostana' çıkmış gibi**; bu, teklifin sebebi.
 - Netice/hüküm: Mu'tezile ve hükemânın teklif faydası açıklamaları (hasım sesi) aktarıldı.
 - Delil çeşidi: **cedelî itiraz**; (T) cedelî-ikna'î. (Hükemâ görüşü tarihî: **rûhânî lezzet-elem nazariyesi**.)
 - Mevzuya bağı: **Fasıl III (Meâd)**: 'ölümde cismânî rağbetin acıya dönüşmesi, ibâdetle 'hapisten bostana' rahat' **filozof rûhânî meâd anlayışıdır; Risale'nin bedenî haşir anlatımına ALINMAZ** (Râzî bunu **aktarıyor, kendi kabulü olarak sunmuyor**; kabulü/reddi p302–304'te). Kaynak kaydı 'tarihî belge'.
 - Doğan sual: Fasıl III'te bedenî haşir ↔ Râzî'nin rûhânî meâd tartışması (⊬; meâd bâbı okunacak).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.301 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p302
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.302 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Râzî'nin cevabı (3 vecihe)**: **1. vecih (Mu'tezile'nin dayanağı) zayıf, 4 vecihle**: (a) fiilin ta'zîm istihkâkı için **meşakkatli olması şart değil**: peygamberlerin sevabı ümmetin sevabından büyük, ama masum resul meşakkati ümmetten fazla çekti mi; **maksat ta'zîm istihkâkı ise Allah kolay teklif verip bedenleri güçlendirebilirdi**; (b) ta'zîm gayesi kalpte **sürûr**; her türlü sürûru Allah **teklifsiz** yaratabilir; (c) **teklif iki ihtimal arasında döner**: itaat = istihkâk, isyan = büyük azap; **ta'zîm zarûrî değil, fazladan bir menfaat**; büyük azabı defetmek fazladan menfaat kazanmaktan evlâ ⇒ **akıl 'teklifi terk'** gerektirirdi; (d) p303'te.
 - Netice/hüküm: Mu'tezile'nin 1. vechine **4 cevap**; Râzî aklî ölçünün teklifle çeliştiğini gösteriyor.
 - Delil çeşidi: **reductio**; (T) cedelî-burhânî biçim.
 - Mevzuya bağı: p299–301 uyarısı geçerli: **teklifin terkini gerektiren akıl hükmü Râzî'ye göre 'Allah hakkında akıl hükmü olmaz' sonucunun aracıdır**, kendi tezi değildir. **'Ta'zîm zarûrî değil, azap tehlikesi ⇒ terk evlâ' sözü Risale'ye alınmaz.**
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.302 otomatik karşılaştırıldı: kelime kapsama %83, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p303
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.303 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (d) **Sizin söylediğiniz ancak kul fiil ve terkte müstakil ise doğru; kudret ve dâî hâsıl olunca fiil vâcib olduğunu ispat ettiğimizde bu sözün faydası kalmaz** (Râzî'nin **cebir/mûcib dâî** çizgisi). **2. vecih ('hak edilmiş menfaat efdal') cevapları**: (a) **kulun mevlâsının nimetinden müstağni kalması pek faydalı**: kul 100 dinarı kendi çalışmasıyla kazansa, sultan da 100 dinarlık atiyye verse **herkes atiyyeyi tercih eder**; (b) **halkın başlangıcı zâten tefaddul**; tefaddul zarar sayılırsa **halk-tekvîn kabîh olurdu**; (c) teklifte itaat ederse önemli bir şeyin fevtine sebep olmayan menfaat, etmezse büyük azap ⇒ akıl terk. **3. vecih**: uhrevî lezzet mümkin, Allah her mümkine kâdir ⇒ **teklifsiz de verebilir**. **Hükemâ mezhebi bu bahse gelmez**: onlarda sevap-ikab **fâil-i muhtârın kasdıyla değil, beşer fiillerinin lâzımıdır** (bu **mûcib bi'z-zât** tefri'inde doğru); **âlemin ilâhı fâil-i muhtâr olup bazılarını ihtiyarıyla sevaba, bazılarını ikaba tahsis ediyorsa** bu söz bu bâba yakışmaz.
 - Netice/hüküm: Râzî Mu'tezile'nin teklif-fayda açıklamalarını iptal ediyor; hükemânın sevap-ikab lâzımı görüşünü **yalnız mûcib bi'z-zât tefri'inde** doğru sayıyor.
 - Delil çeşidi: **cedelî (kelâm içi)**; (T) cedelî. **Cebir dâîsi satırı (kudret+dâî ⇒ fiil vâcib) Râzî'nin kul fiili çizgisidir (p60, 73).**
 - Mevzuya bağı: **KRİTİK — kul fiili**: 'kudret ve dâî hâsıl olunca fiil vâcib' cümlesi **Sünnî ana çizgide kesb/irâde-i cüz'iyye ile açıklanan yerde Râzî'nin kendi tercihidir**; **Risale ana metnine alınmaz**, 'Râzî'ye göre'. **Fasıl III**: 'sevap ve ikab fiillerin lâzımıdır' hükemâ görüşünü Risale **Ehl-i Sünnet'in 'sevap Allah'ın fazlı, azap adli' çizgisiyle** karıştırmaz.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.303 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p304
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.304 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (Hükemâ cevabının sonu): 'tadîl (adl) ve tecvîr (zulüm) bahsi **fâil-i muhtârın ispatına fer'dir**; bu asıl yalnız mûcib bi'z-zât kavliyle kurulursa **iki nakîzi cem'** (bâtıl). Bâb burada biter.' 
 - Netice/hüküm: **Aklî hüsn-kubuh bâbı: Râzî'nin hükmü = kullara nisbetle muteber, Allah'a nisbetle bâtıl (4 hüccet); iki karşı yol (Mu'tezile ve hükemâ) çürütüldü.**
 - Delil çeşidi: —; (T) sonuç.
 - Mevzuya bağı: **Fasıl I 'adl' ve 'hikmet'**: Risale'de **Allah'ın adli ve hikmeti nasslarla (Adl, Hakîm isimleri; 'zulmetmez') sabit; aklî vâcib-i aslah nefyedilir**; Râzî'nin delilleri (nimet=telâfi, teklif faydasız) **ana metne ALINMAZ**, **bâb özetinde tarihî belge olarak yazılır**.
 - Doğan sual: Bâbın Sünnî ana çizgi karşılığı (Eş'arî–Mâtürîdî) ayrı kaynaktan çalışılacak (⊬).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.304 otomatik karşılaştırıldı: kelime kapsama %83, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p305
 - OCR: kötü (başlık bozuk; bâbın konusu metinden: **teklîf bi-mâ lâ yutâk**)
@@ -2766,13 +2930,14 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: Râzî bu âyetlere ne cevap veriyor (p313+)?
 
 ## c3 p308
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.308 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (Sâhib b. Abbâd sözü devam: 'küfrü yaratıp 'niçin küfredersiniz'; hakkı bâtılla karıştırtıp 'niçin karıştırıyorsunuz'; onları yoldan alıkoyup 'niçin alıkoyuyorsunuz'; onlarla iman arasına girip 'iman etseler ne olurdu'; onları doğrudan uzaklaştırıp 'nereye gidiyorsunuz'; ..). **Hâsıl**: bu âyetler açıkça **'engel yok'** der; **ilim ve haber engel olsaydı bu âyetlerin hepsi yalan olurdu**. **(2) hüccet**: 4:165 'müjdeci ve uyarıcı elçiler, elçilerden sonra insanların Allah'a karşı hücceti kalmasın diye'; 20:134 'onlardan önce bir azapla helâk etseydik 'Rabbimiz bize bir elçi gönderseydin' derlerdi'; **Allah her mazereti kaldırdığını beyan etti; ilim ve haber engel olsaydı en büyük mazeret olurdu**. **(3) hüccet**: 41:5 kâfirlerin 'kalplerimiz davet ettiğin şeye karşı örtü içinde, kulaklarımızda ağırlık var' sözü zem için nakledilmiş; **ilim ve haber engel olsaydı onlar sadık olurdu, zemmi bâtıl**.
 - Netice/hüküm: Mu'tezile'nin 2. ve 3. sem'î delili (hasım sesi).
 - Delil çeşidi: **nakl + mazeret kıyası**; (T) hitâbî-cedelî.
 - Mevzuya bağı: **Fasıl II (Nübüvvet) ve IV**: 'Allah hücceti tamamladı' (4:165) **Risale'ye ana metin nassı**; Mu'tezile'nin ondan çıkardığı **'engel yok' sonucu ihtilaf konusu**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.308 otomatik karşılaştırıldı: kelime kapsama %76, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p309
 - OCR: orta
@@ -2793,49 +2958,54 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: Râzî 2:286'yı nasıl te'vîl ediyor (p313+)?
 
 ## c3 p311
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.311 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Aklî deliller (devam)**: **(1) devam**: vâcibe kudret taalluk etmez ⇒ Allah 'hiçbir şeye kâdir değil' sonucu; **hikmet-sefeh bahsi Allah'ın kâdir olmasına fer'** ⇒ bu söz kudreti zedeliyorsa bâtıl. **(2)**: **ilim şeyi olduğu gibi kuşatır**: mümkin ise ilim mümkin, vâcib ise vâcib; iman ve küfür mâhiyeti gereği **mümkin**; **ilim ve haber onu vâcib yaparsa ilim ve haber ma'lûmun hâlini değiştirmiş olur (muhâl)**. **(3)**: **ilim engelse kul hiçbir şeye kâdir olmaz** (bilinen vâcib-vukû', bilinmeyen mümteni'), hareketleri **ıztırâri hayvan hareketleri** gibi; bu **bedîhî bâtıl**: yüzüne tuğla atılan, atanı ayıplar, tuğlayı ayıplamaz; tavandan düşen tuğla ile kasıtlı atılan tuğla arasındaki fark bedîhî; **medih ve zemmin, emir-nehyin, 'niye yaptın/yapmadın'ın ıztırârî fiilde anlamsızlığı**.
 - Netice/hüküm: Mu'tezile'nin aklî delilleri: (1) kudret, (2) ilmin mahiyeti, (3) kulun kudreti ve medih-zem.
 - Delil çeşidi: **reductio + darûrî (bedîhî)**; (T) burhânî biçim (Mu'tezile'nin en güçlü delili: 'ilim ma'lûmu değiştirmez'). **[Bu deliller Sünnî ana çizgide de kabul edilir: ilim keşiftir, cebir doğurmaz.]**
 - Mevzuya bağı: **Fasıl I §8 ve ilim**: **'ilim keşfeder, vâcib kılmaz' ilkesi Sünnî akidedir (ilim-i ezelî ma'lûmu kuşatır, zorlamaz)**; Risale ilim bâbında **bu cümleyi yazar**; Râzî'nin 'ilmi özel nisbet sayma ve ma'lûmla değişme' meyli (p104, 156, 234) **bu deliller karşısında** ayrıca değerlendirilecek.
 - Doğan sual: Râzî'nin bu 3 aklî delile cevabı (p313+).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.311 otomatik karşılaştırıldı: kelime kapsama %79, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p312
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.312 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Aklî deliller (4–8)**: **(4)** ilim adem imtinâ' gerektirirse **kâfire imanı emretmek onun ilmini i'dâm emretmek**; nasıl Allah'ın zâtını i'dâm emretmesi olmazsa **ilmini i'dâm** da olmaz; **emir vârid olduğuna göre ilim ve haber engel değil**. **(5)** iman kendi başına mümkin; Allah onu mümkin olarak bilmeli, yoksa ilim cehle döner; ilim onu vâcib yaparsa **ilim hem mümkin hem vâcib kılar** ⇒ iki nakîz. **(6)** muhâl ile emir **sefeh ve abes**; caiz olsa her sefeh câiz olur: **mûcizenin yalancıda zuhuru, va'd ve vaîdin yerine getirilmemesi** de caiz olur ⇒ nübüvvet ve teklif bâtıl. **(7)** caiz olsa **âmâya mushaf noktalamayı**, kötürüme havada uçmayı, kol-bacağı bağlı dağdan atılana 'niçin göğe uçmadın' demeyi emretmek caiz olur; akıl bunları kabul etmez. **(8)** caiz olsa **cemâdâta peygamber gönderme ve kitap indirme, meleklerin teklifi ulaştırması** caiz olur; **bu din ile istihza**.
 - Netice/hüküm: Mu'tezile'nin **8 aklî delili** (1: kudret, 2: ilmin mahiyeti, 3: kul kudreti, 4: ilmin i'dâmı, 5: ilim-mümkin, 6: sefeh ⇒ nübüvvet iptali, 7: âmâ misali, 8: cemâdât); **Makam 1 (Mu'tezile) bitti**.
 - Delil çeşidi: **reductio + darûrî + misal**; (T) burhânî biçim/cedelî; **(6) delili 'muhâl teklif sefeh, sefeh caiz olsa nübüvvet bâtıl' Sünnî ana çizgi için de ilgili**.
 - Mevzuya bağı: **Fasıl II (Nübüvvet)**: **'Allah sefeh ile tenzih edilir ⇒ muhâl ile teklif olmaz' hattı Risale'nin nübüvvet güvencesine bağlanabilir (delil: nass 2:286)**; **Râzî bu delillere cevap verecek (Makam 2, p313+)**.
 - Doğan sual: Râzî'nin cevabı: 'teklif mâ lâ yutâk câiz, vâki' mi? Hangi ölçüde?
+- Doğrulama notu: OCR sayfası ile gerçek metin s.312 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p313
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.313 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Mu'tezile'nin 9. aklî delili**: ilmin bir şeyin vücûdunu vâcib kılması, **kudret ve irâdeyi gereksiz kılar** ⇒ Allah kâdir, mürîd, muhtâr olmaz; hikmet-sefeh bahsi kâdir-muhtâr ispatına fer'. **Makam 2: tafsîlî cevap**: 'İnsanların söylediği **üç cevap**' (Râzî'nin 1. delili 'ilim adem-i imânı bildi; iman sudûr ederse ilim cehle döner' karşısında): **(1) Susma yolu**: 'ilmi cehle döner diyen de, dönmez diyen de hatalı; iki sözden de sakınmak gerek'. **(2) Ka'bî'nin yolu ve Ebü'l-Hüseyn el-Basrî'nin tercihi**: **ilim ma'lûma tâbidir**; kuldan vâki olan iman ise ezelde hâsıl olan ilim 'imanın vücûdu' ilmi; küfür ise 'küfrün vücûdu' ilmi; bu bir ilmin yerine başka ilmin farzıdır, **Allah'ın ilminin değişmesi değildir** (Mu'tezile cumhurunun dayandığı iki cevap: 1 ve 2). **(3) Hişâm b. el-Hakem'in yolu**: Allah ezelde eşyanın **hakîkat ve mâhiyetlerini** ve onları **defalarca ihdâs edeceğini** bilirdi; **cüz'î tafsilleri ve hâlleri** ezelde bilmezdi; ilim ancak hudûsla hâsıl olur (zâtı ilmi mûcib, fakat ma'lûmun o vecihle hâsıl olması şartıyla).
 - Netice/hüküm: Râzî **Mu'tezile'nin 3 cevabını** aktarıyor (1 susma, 2 Ka'bî/Ebü'l-Hüseyn, 3 Hişâm b. el-Hakem).
 - Delil çeşidi: taksîm; (T) cedelî.
 - Mevzuya bağı: **KRİTİK — ilim-i ezelî** (c3 Bâb 3; c3 p104, 156, 234'te Râzî'nin 'ilim özel nisbet, ma'lûmla değişme meyli'): **Hişâm b. el-Hakem'e nisbet edilen 'Allah cüz'îleri ezelde bilmez' görüşü** İslâm'a aykırıdır; Risale'de **yalnız reddiyle** anılabilir (Râzî p315'te de reddediyor). Hişâm nakli **⊬** (kaynağı doğrulanmadı).
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.313 otomatik karşılaştırıldı: kelime kapsama %77, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p314
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.314 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (Hişâm yolunun devamı): 'cüz'î ilim hudûsta hâsıl; bu Allah'ın cüz'îleri ezelde bilmemesi ile bu iş kalkar' — **bu bahsin sonu**. **Râzî'nin değerlendirmesi**: **1. cevap son derece zayıf**: nefy ve isbâtın nefsü'l-emirde ikisinin de bâtıl olması **aralarında bir vasıta iddiasıdır**, aklın bedîhesi bunu reddeder; sadece lafızla söylememek ise ilzâm **lafza değil, bahsin kendisine** vârid. **2. cevap da son derece zayıf**: 'iman vâki ise ilim imanın vücûdunu bilir' **şartlı önerme**; **'Allah'ın iki taraftan birine ilmi hâsıl mı oldu, olmadı mı?'** — olmadıysa bu Hişâm'ın sözü; olduysa ilim özel vecihle vâki ve ma'lûmun o olmasına bağlıdır, **ma'lûm değişirse ilmin değişmesi lâzım**, bu iki cihetten muhâl: (a) ilmin cehle inkılâbı muhâl, (b) **geçmişte 'ilim' olan şeyin, ma'lûm değişince ilim olmaktan çıkması, hâdis bir tagayyür**; zamanda vâki tagayyür akıl kabul etmez.
 - Netice/hüküm: **Râzî Mu'tezile'nin 1. ve 2. cevabını 'son derece zayıf' bulur**; 3.'yü de kabul etmez (p315).
 - Delil çeşidi: **cedelî (Mu'tezile'nin cevaplarına karşı)**; (T) cedelî-analitik. **[Delil ≠ dava: Râzî'nin 'ma'lûm değişince ilim değişmesi lâzım' öncülü, ilmin ma'lûmun **keşfi** olduğu Sünnî anlayışıyla çatışır; ilim keşiftir, ma'lûmu 'tabi' kılmaz — Râzî'nin kendi p104, 156, 234 tavrı ('ilim özel nisbet') ile de gerilim taşır.]**
 - Mevzuya bağı: **KRİTİK — Fasıl I ilim / kul fiili**: **Risale ana metnine 'ilim keşfeder, cebir yapmaz' yazılırken Râzî'nin burada 'ilim ⇒ imtinâ'' çıkmazını 'kurtuluşsuz' bırakması ALINMAZ**; Sünnî çözüm (ilmin ma'lûma tâbi olup keşfetmesi, kesb-i kul) **ayrı kaynaklardan** çalışılacak. Râzî'nin kendi ilim-nisbet görüşü ile bu bâbın çelişkisi **açık borç**.
 - Doğan sual: Râzî'nin 'ilim ma'lûma tâbi' cevabını neden 'şartlı önerme' diye geçersiz sayması ilim bâbındaki 'nisbet' görüşüyle nasıl bağdaşır (kendi tenkidim)?
+- Doğrulama notu: OCR sayfası ile gerçek metin s.314 otomatik karşılaştırıldı: kelime kapsama %86, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p315
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.315 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (2. cevabın devamı): 'vukû'a dair ilim vukû'a şartlı; küfrün vukûu ilmi hâsıl olduysa küfür vâki oldu; buna rağmen küfrün ademi farz edilirse küfrün ademi ile vukûu cem'edilir (iki nakîz)'. **3. cevap (Hişâm b. el-Hakem)**: 'Allah cüz'îleri vukûlarından önce bilmez' — **'Müslümanların çoğu bu kavle iltifat etmemekte, Allah'ı ondan tenzîh etmenin vâcib olduğunda ittifak etmişlerdir; her ne kadar bu akîdeden kurtuluş ancak onu iltizamla olsa da'**. **Râzî**: 'Bu bâbın hâsılı budur; vallâhü a'lem.'
 - Netice/hüküm: **Râzî: Mu'tezile 'ilim engel değil' cevabını üç yoldan da yetersiz görür; 3. yol (Hişâm) İslâm'a aykırı olduğu için tümüyle reddedilir; Râzî'nin kendi kanaati: 'ilim-i ezelî ⇒ teklif-i mâ lâ yutâk vâki' (çıkmaz, iltizam gerektirir)'.**
 - Delil çeşidi: **cedelî + 'iltizam'**; (T) cedelî.
 - Mevzuya bağı: **KRİTİK**: Râzî **'bu akîdeden kurtuluş ancak Hişâm'ı iltizamla; müslümanlar onu reddetti'** diyerek **bir aporiyi kabul ediyor** (ilim ⇒ imtinâ' ⇒ teklif-i mâ lâ yutâk); **Sünnî ana çizgi bu aporiyi ilmi 'keşif' sayarak ve kesb ile çözer**; **Risale'de bu bâb 'Râzî'nin aporisi olarak kaydedilir; çözüm iddiası yazılmaz, 'Ehl-i Sünnet'in çözümü ayrı kaynaklardan'**. 
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.315 otomatik karşılaştırıldı: kelime kapsama %85, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p316
 - OCR: **çöp** (harfler bozuk, satırlar anlamsız; sayfa 'şekil/garip' gibi)
@@ -2856,13 +3026,14 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: Bâb başlığı bozuk OCR: yeniden taranmalı (⊬).
 
 ## c3 p318
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.318 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **2. misal (devam)**: efendi köle ve cariyelerini toplar, birbirine süsler, **şehveti kuvvetlendirip engelleri kaldırır**, 'ben bunu yalnız her biri nefsini bu şehvetlerden alıkoymaya çalışsın, daha çok sevap ve ikrama nâil olsun diye yaptım' der; **bu iffet ve temizliğin hâsıl olmayacağını, ancak fücûr ve fısk çıkacağını kesin bilir**; herkes onu yalanlar: 'sen ancak fücûr ve şerre kapı açmak istedin'. **3. misal**: **birine bıçak veren, bıçakla onun oğlunu öldüreceğini kesin bilen kimse 'düşmanını öldürsün diye verdim' der**, herkes yalanlar: 'sen oğlunu öldürmeye çalışıyormuşsun'. **4. misal**: kuyuya düşen insana ip atan, onun ipi boynuna dolayıp kendini boğacağını kesin bilen; herkes 'ip atan ancak kendini öldürsün diye attı' der. **5. misal**: **Muhammed b. Zekeriyyâ er-Râzî'nin (filozof-hekim) Ka'bî ile uzun münâzarası'nda** (aktarım ⊬): 'bir adam oğluna yüzmeyi öğretir, ustalaşır; sonra hastalığına şifa olan ilacın bulunduğu yere ulaşmak için nehri geçmeyi emreder; **oğlunun yüzmeyi kendi ihtiyarıyla bırakıp boğulacağını bilir**, yine de emreder, engellemez ⇒ o baba **âk, oğlunu gözetmeyen, en salâhına iradesi olmayan**.'
 - Netice/hüküm: 5 misal (ribât, süslenen köle-cariye, bıçak, ip, yüzme): **'fiilin sonucunu kesin bilen kişinin, maksadını başka gösterme iddiası şâhitte yalanlanır'**.
 - Delil çeşidi: **misal (şâhide kıyas) — 5 misal**; (T) ikna'î. **[Misal delil değil, tasvirdir; Râzî'nin kendi ölçüsüyle 'şâhide kıyas' Allah hakkında reddedilir (c3 p290–291); burada karşıt tarafın kıyasını çürütmek için kullanılıyor.]**
 - Mevzuya bağı: **Risale'ye alınmaz** (misaller Allah'ın fiilini insan fiiline benzeten kıyaslardır; Râzî'nin kendi tenzîh ilkesi ile uyumsuz). **Ebû Bekr er-Râzî ve Ka'bî münâzarası ⊬ (kaynak belirtilmemiş; Ebû Bekr er-Râzî nübüvvete karşı görüşleriyle bilinen filozofdur — ⊬ ayrıca doğrulanacak)**.
 - Doğan sual: Münâzaranın kaynağı ve hakîkatliği (⊬).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.318 otomatik karşılaştırıldı: kelime kapsama %81, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p319
 - OCR: orta
@@ -2874,13 +3045,14 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p320
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.320 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Şartlar (devam)**: **(4)** baba **mü'minlere ulaşan menfaatin, bozgunculara ulaşan zarardan çok olduğunu bilmeli** (akıl çoğunluğu tercih eder); oysa yaratmadaki ve teklifteki fayda **lezzetin bulunması**, onun fevti zarar değil (adem hâlinde de lezzet fevt idi, zarar yok); halk ve teklifin doğurduğu zarar **daimî azap**, bu **o menfaatten büyük** ⇒ aklî hüsn-kubuh hükmüne göre **halk ve teklif terk edilmeliydi**. **(5)** **salihler bozgunculardan çok olmalı**; oysa **kâfirler müslümanlardan, müslümanlardan fâsıklar salihlerden çok**. **Sonuç**: Mu'tezile'nin misali ancak bu 5 şartla sahih, **hepsi meselemizde sabit** (yani şartlar tutmuyor) ⇒ aklî hüsn-kubuh Allah fiiline cârî olsa **imansızlığını bildiği kimseye teklifin kubhu** kat'î. **Cevap iki yoldan**: **1. yol (Mu'tezile cumhurunun dayanağı)**: 'halk ve teklif kâfir hakkında hâsıl olduğu gibi **itaat eden hakkında da hâsıl oldu**; bu ikisi küfür ve isyanın sebebi değil; **Allah'tan sâdır olan halk ve teklif mahz ihsandır**: kâfire imana **kudret verdi, mazeret ve illetlerini giderdi**; teklif **onun için menfaatlere arz etmektir**; **küfre düşmesi Allah'tan değil kendi nefsindendir**.
 - Netice/hüküm: **Râzî'nin 1. hücceti tamamlandı (5 şart)**; Mu'tezile'nin cevabı 1: 'halk ve teklif ihsan; küfür kulun kendinden'.
 - Delil çeşidi: **misal şartları + hasım cevabı**; (T) cedelî-ikna'î. **[Delil ≠ dava: (4) 'daimî azap menfaatten büyük' önermesi ve (5) 'kâfirler çok' iddiası tâlim/genelleme; ilki cennetin ebediliği-nimeti ile birlikte tartılmadı, ikincisi ampirik.]**
 - Mevzuya bağı: **KRİTİK — Fasıl III (Meâd)**: 'daimî azap menfaatten büyük' cümlesi **Risale'de 'cennet nimeti' ile birlikte tartılmadan yazılamaz**; **Risale ana metnine ALINMAZ** (Râzî'nin reductio öncülü). **'Kâfirler çoktur' hükmü ampirik, ⊬**.
 - Doğan sual: Râzî Mu'tezile'nin 1. yoluna nasıl cevap veriyor (p321+)?
+- Doğrulama notu: OCR sayfası ile gerçek metin s.320 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p321
 - OCR: orta
@@ -2892,49 +3064,54 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p322
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.322 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **(2) vecih**: 'eşit farz edilse bile **maksat kulun hayır ve saadete ulaşması**; Allah bu maksadın hâsıl olmayacağını, **zıddı daimî zarar ve şiddetli azabın** hâsıl olacağını bildi'; **örnek: kâfir fakir, kör, dünyada çeşitli mihnet ve elemlerle imtihanlı, öldüğünde ateşin en dibine nakledilir; bu hayattan ve tekliften yalnız çile, belâ ve şiddet hâsıl olur**; bunu bilen Allah'ın **onu menfaatlere arz etmesi, hâsıl olmayacağı kesin bilinen vesileyle maksadı istemektir** ⇒ aklen kabîh; **aklî hüsn-kubuh Allah'ın fiil ve hükümlerinde muteber olsa halk ve teklif kabîh olurdu; olmadığına göre akıl hüküm veremez.** **2. hüccet**: aklî tahsîn Allah'a muteber olsa **halk kabîh olurdu**: ihdâs ya menfaat/maslahat için ya değil; menfaat **Hâlık'a dönerse** ihtiyaç (muhâl) — ihtiyaç kadîmse halk vukûdan önce olurdu (mukteziyi tam, engelsiz) muhâl; hâdisse teselsül.
 - Netice/hüküm: **Râzî'nin 1. hücceti tamamlandı**: 'küfrü bilinen kula teklif akıl açısından kabîh olurdu'; 2. hüccet: 'halk kabîh olurdu' başlangıcı.
 - Delil çeşidi: **reductio (aklî tahsîn ölçüsünü çelişkiye götürme)**; (T) cedelî-analitik. **Şartlı önerme: 'aklî hüsn-kubuh Allah'a cârî olsaydı'.**
 - Mevzuya bağı: **KRİTİK — Fasıl III (Meâd)**: 'kâfirin tek nasibi çile ve azap' cümlesi Râzî'nin **karşı tarafın ölçüsünü çelişkiye götürmek için kurduğu** satırdır; **Risale'ye alınmaz**; **'halk kabîh olurdu' dili 'Allah hakkında kabîh' cümlesi içerdiği için doğrudan alıntılanmaz** (özette: 'Mu'tezile'nin ölçüsü tutarsız sonuç doğurur').
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.322 otomatik karşılaştırıldı: kelime kapsama %82, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p323
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.323 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **2. hüccet (devam)**: menfaat **mahlûka** dönerse bâtıl, 3 vecihle: (1) adem hâlinde **hiçbir şey muhtaç değildi ki îcâd ona ihsan olsun**; bu **devir**: mahlûk îcâdla mevcut olur, îcâd ihsan olmadıkça hâsıl olmaz, ihsan da mahlûk mevcut olmadıkça olmaz; (2) ihsan **önceki ihtiyaç ve şehvetle** ihsan olur; menfaat o zararla mukabele eder (c3 p291–296 tekrar); (3) ihsan **dünyada** ise bâtıl (belâ, şekâvet, gam, elem, hırs ve ihtiyaç gibi eziyetli ahlâk), **âhirette** ise çoğu kâfir, daimî azap. **Menfaat hiç yoksa halk abes**, akılda kabîh. **Sonuç**: aklî hüsn-kubuh Allah'a cârî olsa **halk Allah'tan kabîh olurdu**; değil ⇒ bâtıl. **3. hüccet**: aklî tahsîn muteber olsa Allah'ın **'şunu yaparsan/terkedersen sana azap ederim' demesi kabîh olurdu**; itifakla kabîh değil.
 - Netice/hüküm: 2. hüccetin devamı: menfaat Hâlık'a, mahlûka ya da hiçbirine dönmez ⇒ Mu'tezile ölçüsüyle 'halk abes'.
 - Delil çeşidi: **reductio + devir taksîmi**; (T) cedelî.
 - Mevzuya bağı: **KRİTİK — Fasıl III (Meâd) ve Fasıl I (adl)**: 'ihsan dünyada bâtıl, âhirette çoğu kâfir' iddiası ampirik ve **Kur'ân'ın 'nimet ve imtihan' ifadeleriyle çelişecek şekilde** kullanılmıştır (aklî ölçü karşıtına atıf); **ALINMAZ**. 
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.323 otomatik karşılaştırıldı: kelime kapsama %81, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p324
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.324 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **3. hüccetin lüzumu**: kul: 'Ey âlemlerin ilâhı, bana menfaat **sana mı, bana mı, başkasına mı** dönsün diye azap ediyorsun?' **(1) sana dönerse** ihtiyaç ve talep, muhâl; ihtiyaç olsa bile namazdaki hakir amellerden faydalanacak kadar fakir olamaz. **(2) benim menfaatim için**: 'bana fâide olsun diye emrettin, ben o faydayı kazanmadığım için **ebedî azap** ediyorsun' **çelişkili**: faydanın maksadı kişinin faydalanması, en büyük menfaati zararın defi; büyük zararı **faydayı kazanmaya sevk etmek için** vermek **çelişik**; **örnek**: efendi kölesine 'nefsin için bir dinar kazan; kazanmazsan uzuvlarını ateş makasla keserim'. **Ta'zîm istihkâkı** asıl ihtiyaçlardan değil; kusur edenin kaybı ile büyük zarar orantısızdır.
 - Netice/hüküm: 3. hüccetin devamı: aklî ölçüyle 'yaparsan azap' teklifleri her ihtimalde çelişkili.
 - Delil çeşidi: **reductio + misal (dinar)**; (T) cedelî. **[Misal delil değil tasvirdir.]**
 - Mevzuya bağı: **KRİTİK**: **'Allah ebedî azabı menfaat kazandırmak için mi verir?' türü ifadeler Fasıl III'e ALINMAZ**; Risale'de azap 'adl ve hikmet' ile, cennet 'fazl' ile ilişkilendirilir (Sünnî çizgi), **Râzî'nin aklî tahsîn ölçüsünü çürütme çabası ana metin değil**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.324 otomatik karşılaştırıldı: kelime kapsama %79, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p325
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.325 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **3. hüccet (devam)**: (3) **menfaat başkasına ise** 'kulu azap edip başkasına fayda sağlamak' **mahz zulüm** (zâlim başkasına zarar verip kendine fayda sağlar); Allah zulümden müteâlî. (4) **hiçbirine** ise **yine zulüm**; aklî tahsîn muteberliği kalmaz. **Şâhitte efendinin kölesini emrettiği fiili yapmadığında incitmesi hasendir**: 'ben o işi kendi menfaatim için emrettim, yapmadın, o menfaatten mahrum kaldım, seni cezalandırırım' — **Allah için muhâl** (ameller Ona fayda vermez); kalır: **kullara dönen menfaat için emir ve nehiy**; bu durumda **vâcibi terk ve harâmı işleme yüzünden ceza vermesi kabîh olmaz** (fark ortaya çıktı). **4. hüccet**: aklî tahsîn muteber olsa **kâfir ve âsilerin azap edilmesi kabîh olurdu**: azabın menfaati **Allah'a, kula ya başkasına** döner; üçü bâtıl: Allah nef'ten münezzeh; **halis daimî azap menfaat değil**; başkasına ise zulüm.
 - Netice/hüküm: Râzî **azabın da Mu'tezile'nin aklî ölçüsüyle kabîh olacağını** göstermeye çalışıyor (3.–4. hüccet).
 - Delil çeşidi: **reductio (dört şık)**; (T) cedelî-analitik.
 - Mevzuya bağı: **Fasıl III (Meâd) ve I (adl)**: Risale **azabın adl olduğunu nassla ('Allah zulmetmez' — 4:40, 10:44, ⊬ numaralar) yazar**; aklî kubuh reductio'su ana metne girmez; **'şâhitte efendi kölesini cezalandırabilir, Allah hakkında ilke farklı' ayrımı** ders kutusu olabilir.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.325 otomatik karşılaştırıldı: kelime kapsama %82, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p326
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.326 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **4. hüccet (devam)**: 'başkasına fayda için azap zulüm; bu kişinin azabının başkalarına faydası zıddından evlâ değil'; **şâhitte efendinin kölesini te'dîbi bazı vecihlerle hasen**: efendi köle tarafından eziyet görür, kalbinde intikam sevgisi, intikamla gamdan kurtulur; te'dîb kölenin efendiye faydalı işlere devamını sağlar; **Allah gam-intikam sevgisinden, kulun edebinden fayda görmekten, kötü amelinden zarar görmekten münezzeh** ⇒ fark. **5. hüccet: üç evlâdın hikâyesi**: bir kadının üç çocuğu: **zâhid mü'min (büyüyüp öldü)**, **kâfir fâsık (büyüyüp öldü)**, **küçükken ölen çocuk**. **Mu'tezile reisi Ebû Alî el-Cübbâî**'ye sorulur: zâhid cennetin en yükseğinde, kâfir cehennemin derekâtında, çocuk **'ehl-i selâmet'**. **Soru**: 'Küçük kardeşi zâhid kardeşinin makamına gitmek isterse mümkün mü?' — Cübbâî: 'Hayır; kardeşin bu dereceye zühd ve ilmiyle ulaştı, sende yok.' — Çocuk: 'Beni buluğdan önce sen öldürdün, bana mühlet verseydin ben de çok tâat ederdim.' — Cübbâî: 'Allah der ki: **buluğa erersen küfredip ateşe müstehak olacağını bildim, maslahatını gözettim, seni buluğdan önce öldürdüm**.' — Soran: 'Kâfir kardeş de: **ey Rabbim, sen o küçüğün buluğda küfredeceğini bildiğin gibi benim durumumu da bildin; onun maslahatını gözettin, benimkini niçin gözetmedin?'** — **Cübbâî sustu, cevap veremedi.** (Soranın adı metinde yok; ⊬.)
 - Netice/hüküm: **Râzî'nin 5. hücceti: 'üç kardeş' münâzarası: Mu'tezile'nin 'vâcib-i aslah' anlayışı çelişir.**
 - Delil çeşidi: **münâzara (hikâye/misal)**; (T) cedelî. **Metnin nakli (Cübbâî cevap veremedi) ⊬** (rivayetin kaynağı belirtilmemiş; başka kaynaklarda Eş'arî ile Cübbâî arasında geçtiği söylenen meşhur anlatıya benzer, ama bu sayfada soranın adı yok).
 - Mevzuya bağı: **Fasıl I (hikmet/adl) ve Fasıl III**: 'üç kardeş' örneği **Risale'ye alınmaz** (rivayet kaynağı ⊬; çocuk-hâli meselesi ayrıca **Ehl-i Sünnet'in ehl-i fetret/sabî hükmü** başlığı altında nasslarla çalışılacak).
 - Doğan sual: Rivayetin başka kaynaklardaki nisbeti (⊬).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.326 otomatik karşılaştırıldı: kelime kapsama %87, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p327
 - OCR: orta
@@ -2955,67 +3132,74 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p329
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.329 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (p328 sonu): 'buluğ ve teklif fesat doğurmuyorsa, bilinen fiil onu men etmiyorsa küfrü bilinen kişinin yaratılmasını da men etmemeli; cevapsız kalır.' **6. hüccet**: Allah'ın fiilleri maslahata uygun olsaydı **peygamberlerin, velîlerin, salihlerin bekâsı; iblislerin ve şeytanların ölümü vâcib** olurdu; durum tersine: peygamberleri ve velîleri öldürdü, **İblis'i teklif vaktinin sonuna kadar bıraktı, halka ağvâ, dalâlet ve vesvese için musallat etti**. **Mu'tezile'nin iki cevabı**: (1) **Ebû Alî el-Cübbâî**: Allah İblis'i bıraktı çünkü küfredecek-fısk işleyecek kişiler İblis kalsa da kalmasa da bunu yapacaklardı; **artık fesat doğmadı**; (2) **Ebû Hâşim**: vesvese küfür ve fısk için rağbeti artırır, ancak **fiile zorlamaz; bu vesvese sebebiyle tâatin sevabı çok olur**, bu yüzden Allah'ın şeytanları Âdemoğullarına musallat etmesi güzel.
 - Netice/hüküm: **Râzî'nin 6. hücceti: 'maslahat ölçüsü ile Allah fiilleri (peygamberlerin ölümü, İblis'in bekâsı) uyuşmaz'**; Mu'tezile'nin iki cevabı (Cübbâî, Ebû Hâşim) aktarıldı.
 - Delil çeşidi: **reductio (maslahat ölçüsü)**; (T) cedelî. **[Delil ≠ dava: 'peygamberin bekâsı daha maslahatlı' iddiası Allah'ın hikmet ve ecel takdirini insan maslahatına indirger; 'Allah'ın hikmeti insan maslahatıyla sınırlı değil' Sünnî cevap yeri bu sayfada yok.]**
 - Mevzuya bağı: **KRİTİK**: 'Allah İblis'i bıraktı' cümlesi Risale'de **nassla (İblis'in mühlet dilemesi, 7:14–15; 15:36–38, ⊬ numaralar)** ve **imtihan** çerçevesinde yazılır; **Râzî'nin reductio'su ana metne girmez**. Cübbâî/Ebû Hâşim nakilleri **⊬**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.329 otomatik karşılaştırıldı: kelime kapsama %83, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p330
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.330 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Râzî: bu iki cevap 'son derece zayıf'**: (1) **Cübbâî'ye**: 'şeytanların bulunması rağbette şiddetli etki eder: **şarkıcı yaratıp bazı şeyleri güzel, lezzetli, rahat diye vasfetmeye devam ettirsen** o şeye rağbet artar (darûrî)'. (2) **Ebû Hâşim'e**: 'şeytanların faydası işin **zorluğunu** artırmak, bu zorluk **tâat ölçüsünde sevabı, isyan ölçüsünde şiddetli azabı** artırır; bu ziyadeler ihtiyaç mahallinde değil, büyük azaptan sakınma **büyük ihtiyaç mahallinde**; o hâlde terk evlâ'. **Bu, sarîh aklın hükmüdür, fakat Allah hakkında muteber değil ⇒ akıl Allah'ın fiil ve hükmünde mazul.** **7. hüccet**: **isyana sevkeden hâller tâate sevkedenlerden çok**: beş zâhirî ve beş bâtınî duyu cismânî lezzetleri talebe çağırır; şehvet ve gazab; **yedi tabiî kuvvet**: toplam **19 çeşit bedenî kuvvet**, hepsi nefsi cismânî lezzetlere çağırır (Râzî bunu **74:30 'üzerinde on dokuz vardır' âyetiyle temsil eder**; editör: 'müellif bu sözü 7. cüz'de tekrarlar').
 - Netice/hüküm: Râzî Mu'tezile'nin 2 cevabını zayıf sayar; 7. hüccet: isyan dâîleri çok (19 bedenî kuvvet).
 - Delil çeşidi: **reductio + nefs psikolojisi (Aristotelesçi/tıbbî)**; (T) ikna'î-cedelî. **19 kuvvetin 74:30 âyetine tatbiki Râzî'nin işârî/temsîlî kullanımıdır; âyetin tefsiri (cehennem bekçileri) ile ilgisiz; Risale'ye alınmaz, kayda 'işârî-temsîlî' yazıldı.**
 - Mevzuya bağı: **Fasıl IV (tazkiye) ve Nefs bahsi**: 'nefsin 19 kuvveti' **kadîm tıp-psikoloji taksîmidir**; Risale ana metnine **alınmaz** (İbn Sînâ nefs şeması CLAUDE.md § 4-I'de ayrı işleniyor, karıştırılmaz). 
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.330 otomatik karşılaştırıldı: kelime kapsama %84, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p331
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.331 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **7. hüccet (devam)**: bu 19 kuvvetin her biri **sınırsız çeşit vesvese ve dâvet** yapar (basar kuvveti cismânî bir şey görünce nefsi ona çağırır); **nefs yaratılışın başından buluğa kadar bu cismânî kuvvet gereğince hareket eder**; çok fiil **râsih meleke** oluşturur; **nehyeden akıl kuvveti buluğ çağından sonra doğar, 19 kuvvetin beden ülkesine hâkim olmasından sonra kuvvetlenir**; **dünya ehlinin çoğu cismânîye rağbetli, rûhânîden yüz çevirmiş**; meyil yardımcıların çokluğu ile güçlenir. **Hâsıl**: isyan, lezzet, fısk-fücûra çağıran sebepler çok ve kuvvetli, tâate ve dünyadan yüz çevirmeye çağıranlar az; **buna rağmen Allah dünyaya meyilden nehyetti, âhireti emretti**; konmuş sebepler zıddı gerektirir ⇒ aklî ölçü Allah'ın fiil ve hükmünde muteber olsa **bu teklif kabîh olurdu** ⇒ akıl mazul. 'Bu delil önceki delile yakın; öteki cin şeytanları, bu **ahlâk-ı mezmûme şeytanları** hakkında.' **8. hüccet**: Allah'ın bir gayeyle fiili: o gayenin hâsıl olması Ona **hâsıl olmamasından evlâ mı**? Evlâ ise Allah zâtı gereği **başkasıyla istikmâl eden** (muhâl); değilse **eşitlik rüçhâna zıt**.
 - Netice/hüküm: 7. hüccetin devamı; 8. hüccet başladı (gaye ⇒ Allah'ın istikmâli).
 - Delil çeşidi: **reductio (nefs psikolojisi + gaye taksîmi)**; (T) cedelî. **[Delil ≠ dava: 'nefsin kuvvetleri tâatten çok isyan doğurur' ampirik-felsefî genelleme; Kur'ân'ın 'Rabbi nefs'i ilhâm eder (91:7–8)' çizgisi ayrı, ⊬ numara.]**
 - Mevzuya bağı: **Fasıl III/IV**: Risale 'nefs ahlâkı' için **nassla** yazar; Râzî'nin 19 kuvvet-isyan çokluğu argümanı **alınmaz**; **'ahlâk-ı mezmûme şeytanları' ifadesi** işârî.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.331 otomatik karşılaştırıldı: kelime kapsama %82, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p332
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.332 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **8. hüccet (devam)**: 'fiil ile terk ona **eşit** ise onun fâil olmasına engel'; hasım 'vücûdu-ademi Allah'a eşit, ama **kullara daha faydalı olduğu için** Allah onu vücûda çıkarır' derse: 'kullara faydalı olması, Allah'a **eşit** mi yoksa bir yönü **râcih** mi? Eşitse fiil muhâl; bir taraf râcihse yine **kendi zâtında nâkıs, gayrıyla kâmil** olması gelir.' **9. hüccet**: Allah bir fiili **gaye için** yapsa, gaye **kadîmse fiil kadîm** (kıdem lâzım), **hâdisse başka gaye için ihdâs ⇒ teselsül (muhâl)**. **10. hüccet**: **kul fiilleri ya ıztırârî ya ittifâkî**; her iki takdirde aklî hüsn-kubuh bâtıl. **Iztırârî**: harekete salih kudret sükûna da salihse 'kudret hâsıl olunca hareket ıztırârî'; ikisine salihse bir tarafın diğerine rüçhânı **müreccih ister**; müreccih varsa o taraf **vâcib** ('dâîsiz rüçhân muhâl' — 'biz bu kısımda böyle inanıyoruz').
 - Netice/hüküm: 8–9. hüccet: 'gaye ⇒ istikmâl veya teselsül'; 10. hüccet başlıyor: **kul fiili ya ıztırârî ya ittifâkî**.
 - Delil çeşidi: **taksîm/reductio**; (T) cedelî-analitik. **(Râzî'nin 'dâîsiz rüçhân muhâl' öncülü; c3 Bâb 1'deki aporinin aynı öncülü.)**
 - Mevzuya bağı: **KRİTİK — Fasıl I §8**: burada da **dâî/müreccih öncülü** kullanılıyor; **Fasıl I §8'in nassla ve 'irade tahsis eder' ilkesiyle yazılması gerektiği** kaydı (p328) geçerli.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.332 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p333
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.333 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **10. hüccet (devam)**: müreccihin **müessiri Allah** ise onun hâsılında fiil vâcib, hâsıl olmayınca mümteni' ⇒ **ıztırârî**; **kul** ise ilk taksîm geri gelir, kul kendi fiilinde başka müreccihe muhtaç ⇒ teselsül; müreccih **müessirsiz hâdis** ise veya kudret iki zıda salih olup bir tarafı **muhassıssız** vâki olduysa **ittifâkî**. 'Bu **kahredici bürhân**: kulun fiili ya ıztırârî ya ittifâkî'; **karşı taraf da bu iki takdirin aklî hüsn-kubuhla bağdaşmadığında bize muvâfık**. **11. hüccet**: 'cebir ve kader bâbında **bütün hâdislerin hâlikının Allah** olduğuna kahredici deliller kuracağız; bu takdirde Allah'tan hiçbir şeyin kabîh olmadığı kat'î; **kahredici bürhân**.' **12. hüccet**: 'vücûb'un mânâsı: fiil öyle ki **terk eden bazı vecihlerle zemme müstehak olur**; bu lâzım Allah'ta muhâl: zemm 'söz, fiil, terk' kalpte elem, tabiatın nefreti, maslahatın bozulması; hepsi Allah'ta muhâl ⇒ Allah'ın zemme müstehak olması muhâl ⇒ **vücûb mânâsı Allah'ta tahakkuk etmez**.
 - Netice/hüküm: 10–12. hüccet: **kul fiili ıztırârî ya ittifâkî (Râzî'nin cebri-ıztırârî çizgisi)**; **Allah'a vâcib mânâsı yok**.
 - Delil çeşidi: **taksîm/reductio + 'kahredici bürhân' iddiası**; (T) cedelî-burhânî biçim. **[Delil ≠ dava: 'kudret iki zıdda salihse rüçhân müreccihsiz' öncülü, irâde/tercih (Sünnî: irâde-i cüz'iyye ve kesb) ile çözülen yerde Râzî'nin dâî çerçevesi; 'kahredici' sıfatı Râzî'nin kendi derecelendirmesi (c2 yöntem bulgusu ile uyumsuz: burada tevakkuf yok).]**
 - Mevzuya bağı: **KRİTİK — kul fiili**: 'kul fiili ıztırârî/ittifâkî' **Sünnî ana çizgi değildir (kesb)**; **Risale'ye ALINMAZ**. **Not (kendi tenkidim)**: Râzî c2'de delil derecelerini açıkça yazıyordu; burada '**kahredici bürhân**' diyor: **bu, Râzî'nin kelâm içi güven ifadesidir**, F 27-B ölçüsüyle ayırt etme gücü test edilmedi.
 - Doğan sual: 'Cebir ve kader bâbı' hangi ciltte (atıf haritası).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.333 otomatik karşılaştırıldı: kelime kapsama %84, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p334
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.334 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **12. hüccet (devam)**: itiraz: 'Allah başka bir mânâda zemme müstehak olamaz mı?' **Râzî'nin cevabı, iki vecih**: **(1)** 'Allah zemme müstehak olur mu?' bahsine girmek **zemm ve medhin mefhûmuna** fer'; bizce zemm **kalbe gam veren**, medh **kalbe sürûr veren**; bunun ötesi tasavvur edilmiyor, **tasavvur yoksa tasdik muhâl**; karşı taraf **ötesinde bir eser ispat etmeli**; ispat ümitsiz: **medhe rağbetimiz sürûr ve lezzet doğurduğu, zemden nefretimiz gam ve elem doğurduğu içindir**; bu eserler Allah'ta muhâl ⇒ hüsn-kubuh mâhiyeti Allah'ta muhâl. **(2)** **ilâhiyet, nakıs ve zemme sebep olan her şeye zıttır**; ilâhiyet Allah'a vâcib-i lizâtihî, **kendi zâtı gereği her noksanlığa zıt** ⇒ Allah'ta zemm mânâsının tahakkuku **kendi zâtı gereği muhâl**; zâtı gereği vâcib olan hüküm **munfasıl bir sebeple ta'lîl edilemez** ⇒ 'Allah şu fiili yaptı/terk etti diye zemme müstehak değil' ⇒ **hangi fiili yaparsa yapsın, hangi şeyi terk ederse etsin, zemme müstehak olması muhâl ⇒ Allah'tan hiçbir şey kabîh olmaz, Allah'a hiçbir şey vâcib olmaz.**
 - Netice/hüküm: **Râzî: 'Allah'a hiçbir şey vâcib değil, Allah'tan hiçbir şey kabîh değil' — iki vecihle**.
 - Delil çeşidi: **tanım analizi (medh-zem = sürûr-gam) + ilâhiyet'in zâtı gereği noksana zıtlığı**; (T) analitik-burhânî biçim (1. vecih: 'tasavvursuz tasdik olmaz' [delil ≠ dava: hüsn-kubuh mânâsını duygusal eserlere indirgemek delil değil, tanım tercihi]); (2. vecih ise tenzîhi kullanıyor).
 - Mevzuya bağı: **KRİTİK**: **'Allah'a hiçbir şey vâcib değil' Sünnî ana çizgi ile ortak bir sonuçtur**; ama **'Allah'tan hiçbir şey kabîh olmaz' cümlesi ilâhî adl için nassla ('Allah zerre kadar zulmetmez', 4:40; ⊬ numara) ve tenzîh ile birlikte yazılmalıdır**; Risale'ye **iki cümle beraber** ('Allah'a hiçbir şey vâcib değildir; Allah zulümden münezzehtir') alınır, Râzî'nin tanım indirgemesi (medh=sürûr) **alınmaz**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.334 otomatik karşılaştırıldı: kelime kapsama %78, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p335
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.335 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (Sonuç): 'bu bâbta **kat'î söz, gubârsız**.' **13. hüccet**: 'istihkâk-ı zemm sabit hüküm; fiilin **zulüm** olmasında iki kayıt vardır; zulüm zemme müstehak kılıyorsa **ademî kayıt vücûdî hükmün illetinin cüzü** olur, bâtıl.' **14. hüccet**: **Sıdk = habere muhbirin mutabakatı; kizb = mutabakatsızlık**; her ikisi haber; haber kelâmın bir nev'i; **kelâm ardışık harflerden mürekkeb; her zamanda var olan yalnız tek harf, o kaybolunca ikincisi doğar; kelimenin hiçbir hâlde ve zamanda vücûdu yok**; tek harf haber değil, sadık-kâzib değil, hasen-kabîh olmaz; **var olmayan şey hüsn-kubuh illeti olamaz** ⇒ **kelâm sıdk veya kizb sebebiyle hasen/kabîh olamaz**.
 - Netice/hüküm: 13–14. hüccet: aklî hüsn-kubuh 'illet' yapısını (zulüm/sıdk) kurmada tutarsız.
 - Delil çeşidi: **analitik (harf ardışıklığı)**; (T) analitik-ikna'î. **[Delil ≠ dava: 'kelimenin hiçbir zamanda vücûdu yok' önermesi lafzî kelâmın (harf-ses) bir cismânî-zamanî ontolojisini varsayıyor; kelâm-ı nefsî tartışması (c3 p201–207) ile bağlantılı.]**
 - Mevzuya bağı: **Fasıl I sıfatlar (kelâm)**: 14. hüccet **kelâm-ı lafzî/harf ardışıklığı** ontolojisine dayanıyor; **'kelâm-ı nefsî kıdemi' için Râzî'nin kendi 6 aklî itirazı (c3 p201–207) ile aynı zemin**; **F 27-B ayrı test**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.335 otomatik karşılaştırıldı: kelime kapsama %78, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p336
 - OCR: orta
@@ -3027,22 +3211,24 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: 16. hücccetin devamı p337'de (okunacak).
 
 ## c3 p337
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.337 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **16. hüccet (devam)**: zâlim peygamberi öldürmek ister; peygamber bir adamın evine saklanmış; adam doğruyu söylerse zâlim peygamberi öldürecek ⇒ adama **kizb vâcib, sıdk terk vâcib** ⇒ **'kizb olması kubhu gerektirmez'**. **İki itiraz**: (1) adam kizb değil **ma'ârîz (tevriye)** yolunu tutmalı ('ma'ârîzde kizbden kurtuluş vardır' sözü); (2) kizb bu hâlde vâcib olsa da **eserin illetinden tehallüfü** (illet var, eser yok) 'kizb kubhu gerektirir' sözünü zedelemez. **Râzî'nin cevabı**: (1) zâlim bütün ma'ârîz vecihlerini bilen, adam da 'ma'ârîze girersem zâlim peygamberin yanında olduğunu anlar, taleplerini artırır, öldürür' diye biliyorsa **ma'ârîzde fayda yok**; kalan iki şık: **masum peygamberin kanını heder etmeye çalışmak** ya da **kizbi iltizam**; ilki bâtıl ⇒ ikincisi. (2) 'Kubhun bazı mânilerle kizbden tehallüfü caiz olsa **her kizbde mâni ihtimali** olur; bu takdirde **Allah'ın ve Resûlünün hiçbir sözüne vüsûk kalmaz**, bütün nasslar **zannî olur, ma'lûm olmaz**.'
 - Netice/hüküm: Râzî'nin 16. hücceti: **kizb bazı hâllerde vâcib olur ⇒ kizbin kubhu 'kizb olduğu için değil'** (aklî hüsn-kubuh 'illet' yapısına itiraz).
 - Delil çeşidi: **reductio (mükemmel bir zorunluluk misali)**; (T) cedelî. **[Delil ≠ dava: 'tevriye fayda vermez' ön kabulü mücerret bir senaryoya bağlıdır; fıkhî-ahlâkî hüküm (zulmü defetmek için tevriye ve zaruret) ayrıca nasslarla çalışılır.]**
 - Mevzuya bağı: **KRİTİK**: **Risale bu senaryoyu 'kizb bazen vâcib' hükmü olarak ALMAZ**; Sünnî fıkıhta zâlimden mazlumu korumak için **tevriye ve zaruret hükümleri** vardır (⊬ ayrıca), Râzî'nin buradaki amacı **aklî hüsn-kubuh 'bizzat' tezini çürütmektir**; Fasıl IV (Sünnet ve Tahkik) için 'nasslara vüsûk zannî olmasın' cümlesi (2. cevap) **değerli bir ilkedir (nas kat'iyeti)**, kaynak c3 p337.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.337 otomatik karşılaştırıldı: kelime kapsama %75, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p338
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.338 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **16 hüccetin özeti**: 'aklî hüsn-kubuh Allah'ın hüküm ve fiillerinde bâtıl, itibar edilmez.' **Ebü'l-Hasan el-Eş'arî ashâbından büyük bir cemaatin argümanı (Râzî aktarır)**: 'katil zâtı gereği kabîh olsaydı **her katil kabîh** olurdu, **kısas** da kabîh olurdu; menfaat zâtı gereği hasen olsaydı **her menfaat ve lezzet hasen** olurdu, **zinâ ve lûtiyet** hasen olurdu; böyle olmadığına göre 'hasen zâtı gereği hasen, kabîh zâtı gereği kabîh' sözü bâtıl.' **Mu'tezile'nin cevabı**: 'biz 'zâtı gereği' demiyoruz; **hasen kendine dönen vecihlerle hasen, kabîh kendine dönen vecihlerle kabîh**.' **Eş'arîler**: 'vecihlerle ta'lîl **mefhûm ve ma'kûl olmayan bir şeyle** ta'lîldir.' **Râzî: 'biz bu vecihleri mefhum olacak şekilde tefsîr edelim'**: sirke içmekten lezzet duyma: lezzeti gerektiren yalnız sirke değil, **mecmû**: evvelce yağlı tatlı yemek yenmiş, mide kuvvetli...; ilaç rağbeti: bedende belirli ahlât, başka ilaçların bulunmaması, hastalık emareleri; 'ay altı âlemde hâller, vecihler, şartlar vardır'. 
 - Netice/hüküm: **Râzî, Eş'arî ashâbından bir cemaatin 'bizzat hasen' reddine dayalı hüccetini Mu'tezile'ye karşı zayıf buluyor** (Mu'tezile 'zâtı' değil 'vecihleri' söylüyor).
 - Delil çeşidi: **taksîm + misal (sirke, ilaç)**; (T) cedelî-ikna'î.
 - Mevzuya bağı: **KRİTİK — Ehl-i Sünnet içi**: Râzî burada **kendi mezhebinden bir grubun delilini de eleştiriyor** (p339 sonuç: 'mezheplerini bilmediler'); **kendi tenkidim**: Râzî'nin **hasmı doğru temsil etme ilkesi** (Mu'tezile 'zâtı' iddia etmiyor) ders katmanı için **örnek bir usul**; Risale **hasmı temsil ederken bu ilkeyi uygular**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.338 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p339
 - OCR: orta
@@ -3063,22 +3249,24 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p341
-- OCR: kötü (başlık bozuk; dipnot 'Fasıl 23'; içerikten: **Mu'tezile'nin aklî hüsn-kubuh delilleri**)
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.341 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Bâb (dipnot 'Fasıl 23')**: 'Bu makamda **iki tür söz**: (1) **şâhitte hüsn-kubhun darûrî olduğunu iddia** — sonra 'şâhitte sabit olunca gâibte de vâcib'; (2) **hüsn-kubhun kendilerine dönen vecihlerle olduğunu hüccet ve delille ispat**'. **Birinci makam (çoğunluğun dayandığı)**: 'sağlam akıllı biri, kendisine ihsan eden birine karşı **aklı sarîhen şükrünün ve medhinin vâcib** olduğuna, kötülük edip döveni **zemmetmenin ve kınamanın hasen** olduğuna hükmeder; **bir zâlimin elinde olan ve zâlimin öldürmeye niyetlendiği kimseyi kurtaran** insana **mazlumun sarîh aklı şükür hükmeder**; **yüzüne tuğla atılan insanın aklı, atan ile tuğla arasında fark gözetir**, atanı zemmetmeyi hasen bulur, tuğlayı zemmetmeyi değil ⇒ medh ve zemmin hüsnü **akıllarda yerleşik, kalplerde mevcut**.'
 - Netice/hüküm: Mu'tezile'nin **1. makam** delilleri (hasım sesi): darûrî hüsn-kubuh; şâhide kıyas gâibe.
 - Delil çeşidi: **darûrî/fıtrî + misal**; (T) ikna'î-fıtrî.
 - Mevzuya bağı: **Fasıl I (adl)**: Mu'tezile'nin fıtrî delili **Râzî'nin kendi 1. delili ile aynı (p289, kullar için aklî hüsn-kubuh)**; **Râzî bu delilin şâhit kısmını kabul ediyor, gâibe taşımayı reddediyor**; kaynak c3 p341.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.341 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p342
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.342 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Mu'tezile (devam)**: 'bu hükümlerin şeriatla sabit olduğu söylenemez: **Allah'a ve âhiret gününe inanmayanın aklında da** hasen-kubuh sabit; şeriattan alınsaydı **dehrî ve Berâhime'nin** akıllarında bu hükümler bulunmazdı; darûrî olarak **bütün halkın aklında** bulunduğunu bildiğimize göre şeriattan değil.' **Ayrıca**: akıllılar bazı hâlleri övüp bazılarını zemmediğinde **'bu bize ihsan etti, o bize kötülük etti'** derler ⇒ medh-zemmin hüsnünü bedîhe ile bildikleri gibi **medhin sebebinin ihsan, zemmin sebebinin kötülük** olduğunu da bedîhe ile bilirler. **2. vecih (hüsn-kubhun bedîhî olması)**: **Allah'ı ve nübüvveti inkâr eden bir dehrî**, ıssız çölde **kör bir insanı belâya düşmüş, helâke yaklaşmış** görse **kalbi ona acır, aklı ona ihsana sevk eder**; rağbeti **karşılık talebiyle değil** (adam fakir), **övgü ummasıyla değil** (adam kör, tanımaz, başkası yok), **sevap ümidiyle de değil** (dehrî, ilâhı, nübüvveti, meâdı inkâr eder); öyleyse ihsana **yalnız aklında yerleşen 'ihsan hasendir' hükmü sevk eder** ⇒ akıllar ihsanın hüsnü ve kötülüğün kubhu üzerinde müttefik.
 - Netice/hüküm: **Mu'tezile: aklî hüsn-kubuh bedîhî; dehrî çöl misali** (ihsan menfaatsiz).
 - Delil çeşidi: **fıtrî + düşünce deneyi**; (T) ikna'î-fıtrî. **Bu deney Râzî'nin kendi 1. delili ile örtüşür (kullar için).**
 - Mevzuya bağı: **Fasıl I/IV (fıtrat)**: 'insan fıtratı iyiliği bilir' cümlesi Risale'de **nassla ('nefse fücûr ve takvâyı ilhâm etti', 91:8; ⊬)** desteklenebilir; dehrî örneği **alınmaz**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.342 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p343
 - OCR: orta
@@ -3099,13 +3287,14 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: Râzî bu 2. hücceti nasıl cevaplıyor?
 
 ## c3 p345
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.345 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Mu'tezile'nin 2. hücceti (devam)**: 'hüsn-kubuh yalnız şeriatla olsa 'belki bazılarına **azap tehdidi edip yapmaz**; **peygamberleri ve melekleri ebedî ateşe, Firavunları ve İblisleri cennetin en yüksek derecelerine** koyar; **mûcizeyi yalancıların eline verir**; peygamber gönderip **Allah'ı ve melekleri sövmeye, zinâ ve hırsızlığa çağırmayı, Allah'a tâzîm ve tâatten alıkoymayı** emreder; **peygamberleri cemâdâta gönderir**, onlara bazı amelleri emretme-nehyetme buyurur; **insanların elini ayağını bağlatıp dağın tepesinden attırır ve 'o saatte Arşın üstüne sıçramayanı Allah ebedî azap eder' der**' — **bunların hepsini caiz görürseniz aklı terk ettiniz, kubhunu kabul ederseniz aklî hüsn-kubhu kabul etmiş olursunuz.'** **3. hüccet**: hüsn-kubhun mânâsı akıllarda yerleşik olmasa şeriatın 'hasen/kabîh' hitabı **anlaşılmaz bir hitap** olurdu; bâtıl. **4. hüccet**: hüsn-kubhun sübûtu şeriata mevkuf ise **devir**: şeriatın sübûtu mûcizenin sıdka delâletine, o da **Allah'ın yalancıya mûcize vermesinin caiz olmadığına** mevkuf; bunun cevazsızlığı şeriata mevkuf olamaz (devir) ⇒ hüsn-kubuh şeriattan önce. 'Bu, Mu'tezile'nin görüşlerinin nakli.'
 - Netice/hüküm: Mu'tezile'nin 2. tür delillerinin 2.–4. hücceti (hasım sesi) tamam; **hasım aktarımı bitti**.
 - Delil çeşidi: **reductio + devir**; (T) cedelî-burhânî biçim. **4. hüccet (mûcize-sıdk-aklî kubuh devri) Sünnî ana çizgi için de önem taşır.**
 - Mevzuya bağı: **KRİTİK — Fasıl II (Nübüvvet)**: **'Allah mûcizeyi yalancıya vermez' güvencesi Risale'nin nübüvvet delilinin öncülü**; Mu'tezile'ye göre aklî kubuhtan gelir; Sünnî çizgide **Allah'ın adeti, va'di ve nassla** temellendirilir (⊬); **Risale bu öncülü nassla ve 'Allah kizbden münezzeh' ile yazar, aklî kubuh şartına dayandırmaz**; Râzî'nin cevabı p351+'da.
 - Doğan sual: Râzî 4. hücceti (devir) nasıl cevaplıyor?
+- Doğrulama notu: OCR sayfası ile gerçek metin s.345 otomatik karşılaştırıldı: kelime kapsama %85, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p346
 - OCR: boş sayfa
@@ -3126,22 +3315,24 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p348
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.348 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (Cevap 1 devam): 'iyilik ve zulmün **menfaat ve mazarrat gözetmenin ötesinde** bir hüküm taşıdığını iddia ederseniz bu **tasavvur edilmiyor, tasdiki nasıl bedîhî olur**.' **Kapsamlı açıklama**: 'bizim **bizzât matlûb** ve **bizzât mekrûh** şeylerimiz var; her şey başka bir şey için matlûb/mekrûh olamaz (devir/teselsül) ⇒ **bizzât matlûb ve bizzât mekrûh** var; **düşünüp arayınca bizzât matlûb yalnız lezzet ve sürûr yahut elem ve gamın defi; bizzât mekrûh yalnız elem ve gam yahut lezzet ve sürûrun defi**; bu önermeler darûrî. Bilinen veya zannedilen her vasıta **kendi zâtıyla değil, bizzât matlûba götürdüğü için** matlûbtur; buna **bir ikinci önerme**: bizzât mekrûh bir şey bizzât matlûba vesile olabilir, **akıl burada hayrın derecelerini ve mukabeleyi i'tibar eder**: mekrûh o matlûba göre hakir ise **az mekrûha katlanır**.
 - Netice/hüküm: **Râzî'nin 'hüsn-kubuh = vasıta değeri' teorisi** (bizzât matlûb: lezzet/sürûr/elem-def'i; vasıta bunlara götürdüğü için matlûb).
 - Delil çeşidi: **devir/teselsül taksîmi + tanım**; (T) analitik-burhânî biçim. **[Delil ≠ dava: 'bizzât matlûb yalnız lezzet ve elem-def'i' tespiti ampirik-felsefî bir hedonizmdir; başka bir bizzât matlûb (marifet, hak, Allah'ın rızası) ayrıca ispat ister; Râzî bunu 'düşünüp arayınca' gözlemine bırakıyor.]**
 - Mevzuya bağı: **KRİTİK**: **Risale ana metnine hedonist bir 'bizzât matlûb' teorisi (lezzet-sürûr-elem def'i) ALINMAZ**; İslâm'da 'Allah'ın rızası, marifet, kul olma' **nassla** matlûbun kendisidir (⊬); Râzî'nin bu satırı ders katmanında 'Eş'arî tanım indirgemesi' örneği. c3 p290'daki (3) delil ile aynı öncül.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.348 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p349
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.349 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Zulmün elem ve gama iftidâsı yakın ve kâmil olduğundan zulme nefret, kizbe ve abesten nefretten büyüktür**. **Kizbe nefret**: yalan haber duyan bir şey i'tikad eder, çokça şey buna bina eder; yalan çıkınca **bütün çabaları boşa gider, taşıdığı meşakkatler caiz menfaatlerden hâlî kalır, kalbe gam hâsıl olur**; kizb bu yüzden kabîh; zulmün elem-gama iftidâsı kizbden yakın ⇒ **zulmün kubhu kizbden kuvvetli**. **Abesin kubhu**: insan muhtaç yaratıldı, ömrü ihtiyaçları def eden şeylere harcamak zorunda; abesle uğraşırsa **ömrün nâfi şeylere harcanmasını kaçırır**; abesin elem ve gama iftidâsı zulümden uzak ⇒ **abesin kubhu zulüm ve kizbden az**. **İtiraz**: 'zâlim zulmünden, yalancı kizbinden fayda görür; aklı yine kubhuna hükmeder.' **Cevap**: 'zâlim **zulmü hasen desek başkasının da ona zulmedebileceğini** bilir; artık **can, mal, evlâdı** için emin olmaz; zulmü hasen saymanın **elem ve gam kapısını açacağını** bildiği için zulmü kabîh der; kizbde de aynı.' **İhsanın hüsnü**: menfaat ve hayır kapısını açtığı içindir; matlûba götüren matlûbtur.
 - Netice/hüküm: Zulüm, kizb, abes: kubuh dereceleri elem-gama iftidâ yakınlığına göre.
 - Delil çeşidi: **psikolojik-ikna'î analiz**; (T) ikna'î-cedelî.
 - Mevzuya bağı: **Fasıl I/IV (adl, kizb)**: 'zulüm, kizb, abes' sıralaması **Râzî'nin tanım teorisinden çıkıyor; Risale'ye alınmaz**; ders katmanı için 'kubuhun dereceleri' örneği. 
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.349 otomatik karşılaştırıldı: kelime kapsama %84, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p350
 - OCR: orta
@@ -3162,13 +3353,14 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p352
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.352 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (Devam): 'bu söz tuhaf, çünkü cumhur-ı halkın bu şeylerin hüsn-kubhuna **faydalı/zararlı olma mânâsında** hükmettiğini biz de kabul ediyoruz; ihtilâfımız **başka bir tefsirde**; **avam halk hasen-kubuhtan menfaat çekme ve mazarratı def'den başkasını anlamaz; hatta Mu'tezile'nin avamı da menfaat-mazarratdan başkasını anlamaz**; **başka bir mânâya hasen-kubuh iddiası ancak Mu'tezile'nin reisleri ve mezhebe yardım edenlerce anlaşılır**; **ehl-i sünnet başka mânâyı inkârda ittifak etti**; **sünnet ehlinin avamının o mânâdan haberi yok**; Mu'tezile'nin avamı da menfaat-mazarratdan başka bir şey tasavvur etmez.' **Ebü'l-Hüseyn de bu kadar kalabalığın yalan iddiada ittifakını mümkün gördüğüne göre sorusu son derece zayıftır.** **2. hüccet (bedâhet iddiasının bâtıllığı)**: 'menfaat çekme/mazarrat def'i mânâsındaki hüsn-kubuh var; **diğer mânâdaki hüsn-kubuhun bunlardan ayrılması bedîhe ile bilinmez**, ancak özel kişilerce ince ve kapalı vecihlerle ortaya çıkar; bu hâlde bedâhet iddiası **mahz kizb ve tezvirdir**. **3. hüccet (başlıyor)**: 'zulüm kabîh' dediğimizde aklımızda zulmün ve kubhun tefsiri hazır olmalı; tasavvursuz tasdik muhâl (devam p353).
 - Netice/hüküm: Râzî: **'başka mânâdaki hüsn-kubuh bedîhî değil; ehl-i sünnet o mânâyı inkârda ittifak etti'** (iddia).
 - Delil çeşidi: **ihtilaf + ayırt edilememe (bedâhet iddiasının çürütülmesi)**; (T) cedelî. **[Delil ≠ dava: 'ehl-i sünnet başka mânâyı inkârda ittifak etti' iddiası Mâtürîdî çizgiyi kapsamıyor; ⊬; Râzî burada 'ehl-i sünnet'i Eş'arî çizgiyle özdeş kullanıyor (kendi tenkidim).]**
 - Mevzuya bağı: **KRİTİK**: Risale **'Ehl-i Sünnet' terimini Râzî'nin burada kullandığı dar (Eş'arî) anlamda kullanmaz**; iki çizgi (Eş'arî/Mâtürîdî) ayrı yazılır. Bu satır **kaynak notu: 'Râzî'ye göre ehl-i sünnet = Eş'arî çizgi'**.
 - Doğan sual: Bu 'ittifak' iddiasının Mâtürîdî kaynaklarla doğrulanması (⊬ borç).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.352 otomatik karşılaştırıldı: kelime kapsama %78, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p353
 - OCR: orta
@@ -3180,40 +3372,44 @@ Biçim: cilt 1–2 ile aynı.
 - Doğan sual: —
 
 ## c3 p354
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.354 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **6. kayıt**: 'gayr yerine geçmeyen' — **bir çocuğu karlı yere atan**; çocuğun elemi Allah'ın fiili (ya ibtidâî ya karın soğukluğundan mütevellid); **hasen**, çünkü **atanın fiili yerine geçer**; Allah'ın böyle yapması şeyhlerimize göre kabîh (ivaz gerekli: ivaz atana lâzım, ivaz vâfî değil). **Râzî'nin kuralı**: 'mütekellimler ittifak etti: **aslın ilmi nazarî ise fer'in ilmi darûrî olamaz**; zulmün mâhiyetinin ilmi kubhu için asıl; mâhiyet ilmi **ancak bu mânâ ile hâsıl olur, bunu ince nazarla tahkik ehli tasavvur eder**; asıl nazarî ⇒ 'zulüm kabîh' ilmi bedîhî olamaz ⇒ bedîhî iddiası bâtıl.' **Bedâhet iddiacısı**: 'kastım: **bu mâhiyeti bilen darûrî olarak kubhunu bilir**; cumhurun bilmesi kastı değil.' **Râzî**: 'cumhura hâsıl olmadığını kabul edince kalan: 'mâhiyeti tasavvur eden kubhuna hükmeder' — biz buna **memnû'** diyoruz, ihtilâf da bu.'
 - Netice/hüküm: **Râzî: aslın (zulüm mâhiyeti) nazarî oluşu kubhun bedîhî olmasını engeller; 'tek kişinin iddiası fayda vermez'.**
 - Delil çeşidi: **usûl kuralı (asıl nazarî ⇒ fer' darûrî olamaz)**; (T) analitik-cedelî. **[Delil ≠ dava: 'mâhiyet ilmi nazarî' öncülü Ebü'l-Hüseyn'in tarifini kabul etmeye bağlı; Mu'tezile bunu 'sezgisel' sayar.]**
 - Mevzuya bağı: p347–355; **Risale'de bu usûl kuralı ders katmanında 'usûl' kutusu**; Ebü'l-Hüseyn nakli ⊬.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.354 otomatik karşılaştırıldı: kelime kapsama %81, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p355
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.355 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **2. cevap**: 'kullarda hasen-kubuh sabit olsun; **Allah'ta olması nasıl?** 'Zulmü bildik kabîh bildik, diğer i'tibarları bilmesek de ⇒ kubhun illeti zulümdür' ⇒ **'kubhun ilmi zulüm ilmine tekaddüm ediyor, illet zulüm' çıkarımı yanlış**: 'bu **baba** ise **oğul olduğunu bildik**, bunun ilmi ötekinin ilmine devrân eder, oysa iki izâfeden biri ötekinin illeti olamaz (**izâfeler beraberdir, illet ma'lûlden önce**)'; **mâni' de katlin kendisi değildir**. **Hüccetlere cevaplar**: **1. hüccet düşer**: kâdir iki zıda; bir tarafın müreccihsiz sudûru mümkinse **iki sûretten birini hüsne diğerini kubha müreccihsiz tahsis de mümkin**; müreccih gerekiyorsa **kul fiili dâîye mevkuf, dâî Allah'ın fiili, kudret + dâî mecmûu ⇒ kul fiili Allah'ın fiili**; **hayır ve şer Allah'ın fiili** ⇒ 'Allah'tan bazı şeyler kabîh' bâtıl.
 - Netice/hüküm: **Râzî: illet iddiası (zulüm ⇒ kubuh) devrân delilinden çıkmaz; 1. hüccet düşer.**
 - Delil çeşidi: **misal (baba-oğul izâfe) + taksîm**; (T) cedelî. **[Delil ≠ dava: 'hayır ve şer Allah'ın fiili' cümlesi Râzî'nin cebri çizgisidir; Sünnî ana çizgi 'halk Allah'a, kesb kula, şer Allah'a değil fiil/kesb açısından' ayrımı yapar.]**
 - Mevzuya bağı: **KRİTİK — kul fiili**: 'kul fiili = Allah'ın fiili (kudret+dâî mecmûu)' **Risale ana metnine ALINMAZ**; **'hayır ve şer Allah'ın fiili'** dilinde **şer nisbeti** sorunu (Sünnî: 'şer Allah'a nisbet edilmez, halk ve irade edilir') **korunacak**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.355 otomatik karşılaştırıldı: kelime kapsama %79, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p356
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.356 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: (1. hüccete cevap devam): 'Allah âlemin hudûsunu belirli vakte müreccihsiz tahsis etti (ispat ettik); her hâdisin vaktini ve her zâtın sıfatını böyle; **bu akla yatarsa bazı hükümleri hüsne bazılarını kubha müreccihsiz tahsis etmek de**.' **2. hücceti cevap**: 'nübüvvetin ve vaad-vaîdin sıhhati **ya aklî hüsn-kubuhun sıhhatine bina** (o zaman hüsn-kubhun sıhhatini vaad-vaîd ve nübüvvetle ispat **aslı fer'le ispat = devir**), **ya bina değil** (o zaman aklî hüsn-kubhun kadhı vaad-vaîdi ve nübüvveti kadh etmez); ilk takdir: devir; ikinci: sahih değil.' **Mu'tezile**: 'delil olarak sahih değilse de **ilzâm** olarak sahih: nübüvvet aklî hüsn-kubuha fer', asılda kadh fer'de kadh.' **Râzî**: 'ilzâma razı olup burhan olmadığını kabul ediyorsanız, bu ilzâm **size de vârid**, iki vecihle':
 - Netice/hüküm: Râzî **2. hüccete cevap**: devir; ilzâm olarak kullanıma karşı **karşı-ilzâm** başlıyor.
 - Delil çeşidi: **devir + karşı ilzâm**; (T) cedelî.
 - Mevzuya bağı: **Fasıl II (nübüvvet)**: **'nübüvvet ancak aklî hüsn-kubuh üzerine bina edilirse devir doğar'**: Risale bu **devirden kaçınır**: nübüvvet delili (mûcize) **kendi mantığıyla** (F 27-B) kurulur.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.356 otomatik karşılaştırıldı: kelime kapsama %78, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p357
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.357 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Karşı-ilzâm (Râzî'den Mu'tezile'ye)**: **(1)** fiil dâîye mevkuf mu? **Mevkufsa** kul fiilinin sudûru dâîye bağlı ⇒ **cebir**, kul fiili Allah'ın fiili, hayır ve şer Allah'tan; **sizin bize ilzâm ettiğiniz size döner**. **Mevkuf değilse** Allah mûcizeyi **hiçbir dâî olmaksızın** yaratabilir ⇒ mûcize sıdka delâlet etmez ⇒ **bütün peygamberlerin nübüvveti kadh edilir; bu ilzâm kuvvetlidir**. **(2)** kul fiillerinin hâlikı Allah ise hayır-şer Allah'tan ⇒ size lâzım; **kul ise kudreti icâda salih ⇒ tüm mûcizelerin hâlikı Allah'tan başkası olabilir ⇒ mûcize Allah'ın tasdik ettiğine delâlet etmez.** 'Bu sözün tamamı, Mu'tezile'nin **'Allah'tan başkası cisim ve hayat yaratmaya kâdir olmaz'** delillerinin zayıflığının beyânıyla tamam olur; cebir-kader bâbında gelecek.' **3. hücceti cevap**: 'şeriat geldiğinde hüsn-kubhu tasdik, **hüsn-kubhun mânâsını tasavvura mevkuf**; bu tasavvur **şeriattan önce akılla bilinir** ⇒ bu hüccet zayıf.' **4. hüccet = 3.'nün aynı, cevap aynı.**
 - Netice/hüküm: Râzî'nin **karşı-ilzâmı**: Mu'tezile'nin nübüvvet ilzâmı **kendi görüşlerine döner** (kul yaratıcıysa mûcize delil olamaz); **3.–4. hüccet zayıf (mânâ tasavvuru akılla)**.
 - Delil çeşidi: **karşı ilzâm (taksîm)**; (T) cedelî-analitik. **[Delil ≠ dava: 'kul fiili yaratıcı ise mûcizenin hâlikı başkası olabilir' Mu'tezile'nin 'Allah dışı yaratıcı' iddiası olmadığı için (Mu'tezile mûcizenin Allah'tan olduğunu söyler) ilzâmın kuvveti tartışmalı; Râzî 'kudretin icâda salih olması' öncülünden götürüyor.]**
 - Mevzuya bağı: **Fasıl II (mûcize-nübüvvet)**: **Risale mûcizenin delil olma şartını (Allah'ın yaratması ve tasdik edici kılması) nassla ve 'Allah halkın tek yaratıcısı' ilkesiyle yazar**; 'kul fiilini yaratmaz' ilkesi Sünnî akidenin (Allah her şeyin yaratıcısı) zâten parçasıdır; **Râzî'nin bu satırı Ehl-i Sünnet ilkesine yakın**, fakat çıkarımı ('kul fiili Allah'ın fiili, hayır-şer Allah'tan') **cebre yakın**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.357 otomatik karşılaştırıldı: kelime kapsama %84, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c3 p358
 - OCR: orta

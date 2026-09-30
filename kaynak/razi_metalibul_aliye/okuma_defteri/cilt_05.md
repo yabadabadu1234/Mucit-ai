@@ -75,31 +75,34 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Doğan sual: —
 
 ## c5 p9
-- OCR: iyi
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.9 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **1. Makâle (zaman): 11 fasıl (dipnot: 'وفيها فصول هي أحد عشر فصلا'); 1. Fasıl: 'zamanın nefyini söyleyenlerin delillerinin takrîri'.** **İnsanlar zaman hakkında iki kavilde: (1) vücûdunu inkâr edenler; (2) vücûdunu isbât edenler.** **İnkâr edenler**: '**mevcûdat iki kısım: (a) bekâsı efrâdı ve ahâdinin tevâlîsi sebebiyle olanlar** (her biri ademden sonra vücûd buldu, sonra yok oldu; bu mefhûm mevcûdâta **zâid bir mevcût** gerektirmez); **(b) bekâsı aynıyla dâim ve müstemir olanlar** (bu mefhûm da zâid mevcût gerektirmez).' **Deliller**: **1. hüccet**: 'zaman ve müddet denen şey **mevcut ise ya müstemir ya munkazî**; **müstemir ise** (bâtıl) bugün Tufan günü olurdu (ve bugün hâdis olan hâdis Tufan gününde hâdis olurdu); **ayrıca müstemir vücûd 'daha önce vardı, sonra da baki kalacak' diye sadık olur; bu mefhûm zamanı gerektirirse zamanın başka müddete muhtaç olması ⇒ teselsül'** (p10).
 - Netice/hüküm: **Zamanın nefyi ekolü (aktarım): zaman ayrı bir mevcut değil, mevcûdâtın tevâlî ve devam mefhûmlarından ibaret.**
 - Delil çeşidi: **dilemma (müstemir/munkazî) + teselsül**; (T) burhânî biçim (aktarılan), öncül bağımlı.
 - Mevzuya bağı: **KRİTİK — Fasıl I §3, §6.3 (zaman)**: c4'ün kıdem tarafı 'zaman evvelsiz' hücceti (c4 p195–210) **burada zıt kutuptan (zamanın nefyi)** ele alınıyor; Râzî'nin kendi zaman hükmü Fasıl 2–11'de aranacak.
 - Doğan sual: Râzî kendi kavlini hangi fasılda veriyor?
+- Doğrulama notu: OCR sayfası ile gerçek metin s.9 otomatik karşılaştırıldı: kelime kapsama %76, Arapça alıntı denetimi 1/1 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p10
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.10 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **1. hüccet devam**: '**munkazî ise cüzleri ardışık ve tevâlî**; her cüz için 'şimdi hâdis oldu, ne önce ne sonra' sadık; 'şimdi hâdis oldu / önce hâdisti / sonra hâdis olacak' hükmü başka bir zarf gerektirirse zamana başka zaman ⇒ **sonsuz** (muhâl).' **2. hüccet**: '**zamanın farz edilen cüzlerinin birlikte hâsıl olmayacağını zarûrî biliriz; hâsılları ancak ta'âkub ve inkızâ ile akledilir**; bu cüzlerden birinin **huzûru ve hâsılı var mı yok mu**? **Varsa** o cüz hâzır iken **bölünmez** (bölünse önce yarısı sonra yarısı olur, hâzır hâzır olmazdı: hulf); **hepsi bölünmez ânâtsa** zaman **bölünmez ânâtlardan mürekkeb**; (p11).
 - Netice/hüküm: 1. hüccet sonu; 2. hüccet: ânât bölünmezse **cevher-i ferd**'e gidiş.
 - Delil çeşidi: **reductio + taksîm**; (T) burhânî biçim (aktarılan).
 - Mevzuya bağı: **Fasıl I §3**: 'zaman ânâtlardan mürekkeb ⇒ cevher-i ferd' bağı, c4 p252 ('hareket vâhid, cevher-i ferd yok') ve c4 p289–290 (ardışık hasûl) ile **aynı düğüm**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.10 otomatik karşılaştırıldı: kelime kapsama %82, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p11
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.11 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **2. hüccet devam**: 'zaman **bölünmez ânâtlardan** mürekkebse cisim de **cüz-i lâ yetecezzâdan**: hareketin bir ânda kat ettiği mesafe bölünseydi hareket ânın yarısında yarısına vâki olurdu; ân bölünmez farz edilmişti ⇒ hulf; bu yüzden **zamanın hâzır, bölünmez şeylerden mürekkeb oluşu cevher-i ferd isbâtına gider — bâtıl (Râzî'nin kabulü) ⇒ zaman mevcut denemez**.' **'Cüzlerin hiç huzûru yok' ise zamanın **tamamen nefyi**: mâzî = hâzırken geçen; müstakbel = hâzır olması beklenen; ikisi de 'hâzır olmak'a bağlı; hâzır imtinâ' ise mâzî ve müstakbel de muhâl ⇒ vücûdu nefyedilir.' **3. hüccet**: 'zaman **hâdis mi kadîm mi**? **Hâdisse** ademi vücûdundan önce; **bu kabliyet zamanla olamaz** (bu söz zamanın kendi ademi hakkında); ademde zaman yoktur, **kabliyet-takaddüm zamansız hâsıl** ⇒ kabliyetin zamana bağlı olmadığı sabit. **Kadîm ise**: (a) bâtıl: zamanın vücûdu ancak kabliyât ve ba'diyâtın tevâlîsiyle; tevâlî = tagayyür; tagayyürün mâhiyeti mesbûkiyet; ezelin mâhiyeti mesbûkiyeti nefyeder; cem' muhâl.' (p12)
 - Netice/hüküm: 2. hüccet sonu (iki şık); 3. hüccet: zaman hâdisse kabliyet zamansız; kadîmse tevâlî ile çelişir.
 - Delil çeşidi: **dilemma + reductio**; (T) burhânî biçim (aktarılan).
 - Mevzuya bağı: **KRİTİK — Fasıl I §3, §6.3**: 3. hüccet **c4 p15–18 ('altıncı kısım sebk') ile aynı** düşünce (zamansız kabliyet); Risale'nin 'hudûs = vücûdun ademle mesbûkiyeti (zamansız)' cümlesinin **karşı kutuptan desteği**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.11 otomatik karşılaştırıldı: kelime kapsama %88, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p12
 - OCR: orta
@@ -111,13 +114,14 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Doğan sual: —
 
 ## c5 p13
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.13 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **4. hüccet devam**: 'dünkü sonsuz günlerin mecmûu bugünkü sonsuz günlerin mecmûundan mukaddem; bu takaddüm ancak **başka zamanla (zarf)**; zarf mazrûftan **hâricî** olmalı; fakat dünün her günü mecmûun **içinde** ⇒ zarf bir gün olarak **hem içinde hem dışında (muhâl)**.' **5. hüccet**: '**Bârî'nin (subhânehû) yevmî hâdislere takaddümü zarûrî; zâtı bu takaddümden ayrılamaz; bu takaddüm zamana mevkuf mu**? **Mevkufsa** vâcibü'l-vücûd zâtı **zamana muhtaç** ⇒ **mümkin** (hulf); **mevkuf değilse** Bârî'nin takaddümü zamansız akledilir; (p14).
 - Netice/hüküm: 4. hüccet sonu (**mecmû içi-dışı**); 5. hüccet: **Bârî'nin takaddümü zamanla mı**?
 - Delil çeşidi: **reductio (içerik-dışarı) + dilemma**; (T) burhânî biçim (aktarılan).
 - Mevzuya bağı: **Fasıl I §3, §6.3**: c4 p17 ('sonsuz zarf, mecmû içi-dışı') ve p18 ('kabliyet zamana muhtaç olsa Allah mümkin') ile **tam paralel**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.13 otomatik karşılaştırıldı: kelime kapsama %78, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p14
 - OCR: orta
@@ -129,13 +133,14 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Doğan sual: —
 
 ## c5 p15
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.15 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **7. hüccet devam**: 'müddet mümkin ⇒ **ademinin vukû farzı muhâl doğurmaz**; oysa bu ba'diyet ancak zamanla akledildiğinden **zamanın adem farzı vücûd farzını gerektirir (muhâl) ⇒ zamanın ademi farzı zâtı gereği muhâl ⇒ zaman zâtı gereği vâcib**; **mümkin (cüzleri hâdis) ve vâcib (adem farzı muhâl) iki i'tibârla ikisi de** — bu muhâl ⇒ **kabliyât-ba'diyât zamanın vücûduna mevkuf değil.**' **8. hüccet**: '**hükemâ dedi: muhdesin sâbık ademi ve lâhik vücûdu var; ademden sonra vücûdunun bu 'ba'diyeti' bir 'sebeb-i münfasıl'dan olamaz (bu ba'diyet zâtî lâzım, hâdis mahsûs kılınmış)**; **ne diye 'kabliyet ve ba'diyet ancak müddet-zaman denilen mugâyir bir şey sebebiyle' diyorlar? [Râzî'nin/nüsha varyantı 've ekûl' (⊬ ses): bu, bu fazılların 'hâdisin ademden sonra oluşu münfasıl sebebe bağlı değildir' itirafıdır].**' (p16)
 - Netice/hüküm: 7. hüccet sonu (zaman hem mümkin hem vâcib ⇒ çelişik); 8. hüccet: hükemânın kendi itirafına ilzâm.
 - Delil çeşidi: **reductio (mümkin/vâcib) + ilzâm**; (T) burhânî biçim/cedelî. **F 27-B:** 7. hüccet (zaman ya mümkin ya vâcib, ikisi de muhâl) ayırt gücü var.
 - Mevzuya bağı: **Fasıl I §3**: 'zamanın adem farzı vücûd farzını gerektirir' argümanı c4 p207–208 (kıdem tarafı 9. hüccet) ile **aynı düğümün simetrik yorumu**.
 - Doğan sual: 8. hüccetteki 've ekûl' kimin sesi? (nüsha: 'فأقول' / 'قال مولانا')
+- Doğrulama notu: OCR sayfası ile gerçek metin s.15 otomatik karşılaştırıldı: kelime kapsama %76, Arapça alıntı denetimi 1/1 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p16
 - OCR: orta
@@ -156,22 +161,24 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Doğan sual: —
 
 ## c5 p18
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.18 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **10. hüccet sonu**: '**zaman hareketin lâhikalarından olmasa da olamaz**: zaman ve müddet ancak **peş peşe kabliyât ve ba'diyât** bulunduğunda; **kabliyetin ba'diyetten, ba'diyetin kabliyetten sonra gelmesi ancak tagayyür ve tebeddül**; bu, zamanın mâhiyetinin **ancak tagayyür ve hareketle** karar bulmasını gerektirir ⇒ **iki kısım da bâtıl ⇒ zamanın vücûdu bâtıl.**' **11. hüccet**: 'zaman mevcut ise **hareketin mikdârı mı değil mi**? İkisi de bâtıl. **Hareketin mikdârı olamaz**: zaman hareketin mikdârı ise **hareketin imtidâdının mikdârı**; **hareketin imtidâdı ayânda mevcut değil** (ayânda hâsıl olan **muayyen cevherin muayyen hayizde hâsılı**; **hâsılların ardışıklığı ayânda hâsıl değil**) ⇒ hareket imtidâdının mikdârı da mevcut değil (ma'dûmun sıfatı mevcut olmaz).' **Zamanın mikdâr-ı hareket dışında başka bir şey olması da bâtıl**: 'burada **Aristo ve ashâbıyla** konuşuyoruz; onlar **zamanın hareket mikdârından başka olmadığı** konusunda ittifak etti' (p19).
 - Netice/hüküm: 10.–11. hüccet: **zaman ne harekete lâhika ne mikdârı; ayânda mevcut değil.**
 - Delil çeşidi: **taksîm + ontolojik analiz**; (T) burhânî biçim (aktarılan). **[Delil ≠ dava: 'hareketin imtidâdı ayânda yok' öncülü ardışık hasûl anlayışına (c4 p289–290) dayanır — **Râzî'nin kendi hareket tanımıyla uyumlu**.]**
 - Mevzuya bağı: **Fasıl I §3**: Aristo'nun 'zaman = hareketin mikdârı' tanımı **c4 p14, 200'deki kıdem tarafı tartışmasının kaynağı**; Râzî'nin kendi tercihi **Makâle 1'de aranacak**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.18 otomatik karşılaştırıldı: kelime kapsama %82, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p19
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.19 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **12. hüccet**: '**aklın bedîhesi: her muhdesin ademi vücûdundan sâbık**; bunu inkâr eden **en açık bedîhî ilme** nizâ etmiş olur. **Sebk ademin sıfatı; ma'dûmun sıfatı mevcut olmaz, ma'dûmdur**; ⇒ sebk-takaddüm-teahhur **ayânda yok**; mahz adem **mevcut bir mahalle ihtiyaç duymaz**; ⇒ bu sebk-takaddüm-teahhur bir mevcuda muhtaç değil; **zamanın hakîkati ancak bu sebk ve takaddümün arız olduğu şey** ⇒ zaman ve müddet **mevcut olmak zorunda değil.**' **Kapanış (Râzî'nin kendi ifadesi)**: '**zamanın vücûdunun mânâsı 'bazı mevcûdâtın aynıyla dâim vücûdu ve bazılarının hâdis, ardışık olması'ndan ibarettir diyenler için istinbât ettiğimiz bu on iki delilin toplamı; hepsi güzel, kuvvetli, ma'lûm** (hasene, kaviyye). Tevfik Allah'tandır.'
 - Netice/hüküm: **Zamanın nefyi ekolü için Râzî'nin 'istinbât ettiği' 12 delil bitti; Râzî bunları 'güzel ve kuvvetli' diye niteliyor (derece dili).** **Bu, Râzî'nin kendi hükmü değil; iki taraf için delil derleme aşaması (p9: 'zamanı nefyedenler; isbât edenler').**
 - Delil çeşidi: **derleme**; (T) burhânî biçim/cedelî karışık. **F 27-B:** 1. hüccet (müstemir/munkazî) ve 12. hüccet (sebk ademin sıfatı) ayırt gücü yüksek; 9. (kem) ve 2. (cevher-i ferd) hüccetleri kelâmî öncüllere bağlı.
 - Mevzuya bağı: **KRİTİK — Fasıl I §3, §6.3**: **zamanın nefyi ekolü c4'ün 'kıdem tarafının zaman hüccetlerine' (c4 p195–210) cevap veren simetrik cephe**: Risale 'zaman mahlûktur' derken **hangi zaman kavramına (mevcut cevher / itibârî mikdâr) atıf yaptığını açık yazmalı**; Râzî'nin nihai hükmü bekleniyor.
 - Doğan sual: Râzî zaman hakkında kendi kavlini hangi fasılda yazıyor?
+- Doğrulama notu: OCR sayfası ile gerçek metin s.19 otomatik karşılaştırıldı: kelime kapsama %76, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p20
 - OCR: —
@@ -192,13 +199,14 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Doğan sual: —
 
 ## c5 p22
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.22 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **1. hüccet sonu**: 'bu hükmü **feleğin veya kevkebin hareket ettiğini bilmeye mevkuf değil**; bu i'tibârlar zamanın vücûdunu bilmenin **bedîhî-evvelî, beyân ve burhandan müstağnî** olduğuna delâlet eder.' **2. hüccet**: '**akla işaret edilen her şey, mevcut ya ma'dûm, ya hudûs hâlinde ya devam hâlinde i'tibar edilir**: **hudûs hâlinde** akıl **hayyiz ve zaman** isbât eder (onu hudûsuna zarf kılar; 'filan zamanda hâdis oldu'); **devam hâlinde** dâimlikten ancak **'eski zamanlarda mevcuttu, şimdiki zamanda da mevcut'** anlaşılır; **zaman ve müddet i'tibârını akıldan kaldırırsak akıl hudûs ve devam mânâsını tasavvurdan âciz kalır**; bu iki mânâ bedîhî tasavvur olduğundan, **tasavvurları ancak zamanın vücûdunu ikrarla karar buluyorsa** zamanın vücûdu **bedîhî-evvelî ilimdendir**.' **Ek**: '**mütekellimîn 'araz iki zaman kalmaz; bâkî iki zaman ve fazlası vücûdu devam eden'** dedi; hudûs ve bekâ mânâsını ancak **müddet ve zaman** sebebiyle akıl ettiler.'
 - Netice/hüküm: 2. hüccet: **hudûs ve devam mânâları zaman i'tibârını içerir.** **Kendi-tenkidi: mütekellimin kendi 'araz iki an kalmaz' sözü bile zaman i'tibârı taşıyor (Râzî'nin ikilemi).**
 - Delil çeşidi: **tasavvur analizi + ilzâm (mütekellim)**; (T) cedelî-burhânî biçim.
 - Mevzuya bağı: **KRİTİK — Fasıl I §3, §6.3**: c4 p207–208 (kıdem tarafı 8.–9. hüccet: 'kâne/summe') ile **aynı** tasavvur argümanı; **c4 p280'de hudûs tarafı 'vehim ve hayâl' cevabı verecekti — Râzî'nin kendisi burada zaman lehine güçlü argüman kuruyor; nihai hükmü bekleniyor.**
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.22 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p23
 - OCR: orta
@@ -219,49 +227,54 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Doğan sual: —
 
 ## c5 p25
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.25 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **7. hüccet sonu ve itiraz**: 'bu müddet kısa, şu uzun' bilgisi bedîhî; 'sıfat bedîhî ise mevsûfun aslı evlâ.' **İtiraz**: 'az-çok **itibârî**, yalnız zihinde/hayâlde.' **Cevap**: 'bu zihnî farz **hâricî emre mutabıksa** matlûb hâsıl; mutabık değilse **kâzib farz**, bâtıl — 'bu taşı yâkût farz etmek' gibi; **zamanı büyük ve küçük cüzlerle bölmek bu bâbdan değil** ⇒ 'bu, farz ve i'tibârdan ibarettir' diyenin sözü bâtıl.' **8. hüccet**: '**bütün cahiller ve avam tarih yazar, senelerin peş peşe geldiğini bilir; mâzî-müstakbel-hâli bedîheleriyle ayırır; bu sıfatlar müddetin sıfatlarıdır; sıfat zarûrî ilimse mevsûf evlâ.**' '**Bu vecihler birbirine yakın; hepsi müddetin vücûdunun zarûrî ilim olduğuna delâlet eder.**' **9. hüccet**: 'iki hareketin **birlikte başlayıp birlikte bittiğini**; başkasının **önce başlayıp önce bittiğini** zarûrî biliriz; meiyyet 'aynı zamanda', takaddüm-teahhur 'zamandan biri öncekinde' (p26).
 - Netice/hüküm: **Zamanın bedîhîliği ekolü: 7.–9. hüccet (kısa/uzun, tarih ve avam, hareketlerin meiyyeti).**
 - Delil çeşidi: **tasavvur analizi + ittifak (avam)**; (T) ikna'î-burhânî biçim. **[Delil ≠ dava: 'zihnî farz hâricîye mutabık mı' sorusu nizâ mahallini kendisi.]**
 - Mevzuya bağı: **KRİTİK — Fasıl I §3, §6.3**: 'avam ve cahiller de bilir' argümanı **fıtrat/bedîhe delili (hitâbî)**; Risale'de derece **ikna'î** işaretlenir.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.25 otomatik karşılaştırıldı: kelime kapsama %77, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p26
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.26 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **10. hüccet (bedîhî ekol)**: '**bu hareket şu hareketten yavaş (karınca yürüyüşü kuş uçuşundan) bedîhî hüküm**; ama **yavaş ve hızlı hareketi tefsir etmek ancak zaman yoluyla**: hızlı = **daha az zamanda eşit mesafeyi kateden**, ya da **eşit zamanda daha uzun mesafeyi**; ⇒ hızlı-yavaş hareket mâhiyetinin tasavvuru **zamanın tasavvurunu** içerir ⇒ zaman bilgisi bedîhî.' '**Bu on vecihle çok sayıda başka vecihe tenbih ettik; birinde bile matlûbun isbâtı için kifâyet var.**' **2. kısım (zaman hareketten ayrı bir mevcut)**: 'zamanın bedîhî bilgisi evlâ ise **bu müddet felek hareketi veya felek hareketlerinin bir sıfatı olamaz**; deliller: **1. hüccet**: **karanlık evde oturan kör**, müddetin ne kadar geçtiğini **Güneş-Ay-yıldız hareketini hesaba katmadan** yaklaşık bilir; müddeti **durmaksızın akıp giden, 'akan ırmak gibi'** bulur; feleği ma'dûm, Güneş-Ay-yıldızları ma'lûm dışı, hareketleri sükûn farz etse bile **aklı bu şeyin (müddet) geçtiğine cezmeder.**' (p27)
 - Netice/hüküm: 10. hüccet; **2. kısmın 1. hücceti: zaman feleğin hareketinden bağımsız (körün deneyi).**
 - Delil çeşidi: **tasavvur analizi + düşünce deneyi**; (T) ikna'î-burhânî biçim.
 - Mevzuya bağı: **Fasıl I §3**: 'zaman felek hareketi değildir' iddiası **c4 p200'deki kıdem tarafı 'müddet zâtında bâkî cevher' görüşünün** aklî desteği; Aristo'nun 'zaman hareketin mikdârı' tanımına **doğrudan karşı çıkış**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.26 otomatik karşılaştırıldı: kelime kapsama %77, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p27
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.27 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **1. hüccet sonu**: 'doğuştan âmâ, hiçbir yıldız ve felek görmemiş, Allah'ın bu şeyleri yarattığını işitmemiş birini farz edelim; nefesini ve gözünü durdursa bile **bu müddeti zihinde sâbit ve müstemir buluyor**; ⇒ zamanın vücûdunun ve **felek ve yıldız hareketlerinden ayrı** oluşunun bilgisi zarûrî.' **2. hüccet**: '**aslî fıtratla akıl feleğin hareketinin mukaddem cüzünün müteahhir, müteahhir cüzünün mukaddem olmasını uzak görmez**: felek doğudan batıya gidiyorsa doğu çeyreğindeki hareketi öndedir, batıdan doğuya gitseydi batı çeyreğindeki hareketi öndedir; **ama zamanın mukaddem cüzünün müteahhir olmasını akıl fıtratıyla (bedîhî) uzak görür** ⇒ **müddet hareketin kendisi veya arızası değil**.' **3. hüccet**: '**felek hareketinin bu vakitten yüz bin sene önce hâsıl olup olmadığından şüphe edebiliriz (âlemin hudûsuna kâiller yüz bin sene önce felek hareketinden şüphe edebilir)**; ama **bu saatten yüz bin sene önce bir müddetin (zaman) mevcut olup olmadığından** şüphe (p28).
 - Netice/hüküm: 1.–3. hüccet: **zaman felek hareketi değil (körün deneyi; mukaddem-müteahhir fıtratı; şüphe farkı).**
 - Delil çeşidi: **düşünce deneyi + fıtrat + şüphe asimetrisi**; (T) ikna'î-burhânî biçim.
 - Mevzuya bağı: **KRİTİK — Fasıl I §3**: 3. hüccet (**'hâdis ehli hareketten şüphe edebilir ama müddetten edemez'**) **hudûs tarafının 'zaman da hâdis' cümlesine karşı** en ilginç argüman; Risale'nin 'zaman mahlûk' cümlesinin **bu şüphe asimetrisine cevap vermesi** gerekir.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.27 otomatik karşılaştırıldı: kelime kapsama %82, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p28
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.28 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **3. hüccet sonu**: 'hareketten şüphe edebiliyoruz, müddetten edemiyoruz ⇒ **müddet harekete ve bütün felekî sıfatlara mugâyir**.' **4. hüccet**: '**felekî dairelerin en büyüğü mıntıka; paralel daireler: mıntıkaya yakın olan hızlı, uzak olan yavaş**; günlük hareketler **çok ve hız-yavaşlıkça farklı**; zaman felek hareketi olsaydı **niçin bir dairenin hareketi zaman sayılıp diğerleri sayılmıyor**? **Hepsi ise** bu bir gün bir gün olmaz, **birlikte hâsıl çok gün** olur, kimse söylemez; **hiçbiri değil** ise **zaman onlardan mugâyir, hepsini takdir eden**.' '**Sarîh akıl: bu dairelerin hareketleri hep aynı zamanda vâki; bu zaman hepsinin zarfı** ⇒ **zaman harekete mugâyir**.' **5. hüccet**: 'hareket **hızlı-yavaş** vasıflanır; **zaman öyle vasıflanmaz** ('bu zaman şu zamandan yavaş' denmez); ayrıca hız-yavaşlık **zamanla** akledilir (hızlı = aynı mesafeyi daha kısa zamanda)' (p29).
 - Netice/hüküm: 4.–5. hüccet: **paralel dairelerde çok hareket, tek zaman; zaman hızlı-yavaş vasıflanmaz.**
 - Delil çeşidi: **reductio + kavramsal ayrım**; (T) burhânî biçim.
 - Mevzuya bağı: **Fasıl I §3**: 'tek zaman, çok hareket' argümanı **Aristo'nun 'zaman hareketin mikdârı' iddiasına (c5 p18–19) karşı**; sonuç (mutlak zaman) kelâmî 'dehr' cevheriyle (c4 p200) **örtüşür**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.28 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p29
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.29 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **5. hüccet sonu**: 'zamanın hızı yok; hareketin var ⇒ zaman hareket değil.' **6. hüccet**: '**sonu olmayan halâda birbirinden bağımsız çok feleği akledebiliriz; hareketleri birbirine tâbi olmayan çok hareket akledilir; ama iki zamanın birlikte hâsılını akledemeyiz ⇒ hareket zamandan ayrı.**' **7. hüccet**: 'bu hareketin bütün sıfatlarıyla **bu zamanda** hâsıl olduğunu, önceki zamanda olmadığını söyleyebiliriz; **hareketin kendisinde veya sıfatlarından birinde ya başka harekette hâsıl olduğunu söyleyemeyiz** ⇒ zaman harekete ve sıfatlarına mugâyir.' **8. hüccet ('hareketsiz zaman')**: '**Allah kıyamette felek ve bütün kevâkibi i'dâm etse, sonra bu şeyleri uzun müddet mahz ademde bırakıp iâde etse ve mahşerde halkı iâde etse**: i'dâm ile iâde arası müddet **belirli**; akıl bu müddeti **daha kısa/uzun farz edebilir**; bu farzda **bütün hareketler ma'dûm; bu farz aklen imtinâ'ı bedîhî bilinen bir farz değil, mümkin bir farz**; nitekim **milel ve edyân ehlinin cumhûru bu hususa cezmeder**; imtinâ'ı bedîhî bilinen şeye halkın büyük kalabalığı ittifak edemez.' (p30)
 - Netice/hüküm: 6.–8. hüccet: **hareketsiz zaman farz edilebilir (kıyametteki i'dâm ile iâde arası müddet); milel ehli buna cezmeder.**
 - Delil çeşidi: **düşünce deneyi (kıyamet) + ittifak**; (T) ikna'î-burhânî biçim. **[Delil ≠ dava: 'i'dâm ile iâde arası müddet' (Allah'ın fenâ ve iâdesi) Sünnî akide için **haberî** (nakil), aklî delil değil; burada kıyamet inancı **zamanın felekten bağımsızlığına dayanak** yapılıyor — Râzî'nin hasmı için 'farz' olarak kaydedildi.]**
 - Mevzuya bağı: **KRİTİK — Fasıl III (Meâd), Fasıl I §3**: **Kıyamet ve iâde (haşir) hakkındaki 'i'dâm-iâde arası müddet' cümlesi Fasıl III ile temas eder**; Râzî bu deneyi zamanın bağımsızlığına **delil** olarak sunuyor; Risale'de kıyamet için **nass**, zaman için **ayrı** yazılmalı.
 - Doğan sual: 'Ma'dûmun iâdesi' bâbı hangi ciltte?
+- Doğrulama notu: OCR sayfası ile gerçek metin s.29 otomatik karşılaştırıldı: kelime kapsama %78, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p30
 - OCR: orta
@@ -273,22 +286,24 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Doğan sual: —
 
 ## c5 p31
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.31 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **10. hüccet sonu**: 'bazıları **âlem hudûstan önce mümkin** dedi; bazıları **mümteni'**; **her iki takdirde felek, kevâkib ve âlemin hudûsundan önce kabl ve ba'd akıl ettiler** ⇒ **aklın bu müddetin vücûduna cezmi bedîhî; bu kabl ve ba'd felekî hareketten başka bir şeyle hâsıl.**' **11. hüccet**: 'hareket için **bir evvel farz edersek** bu **hareket öncesi hareket gerektirmez** (şey sâkin sonra müteharrik olur); **ahir farz edersek** ardından hareket lâzım gelmez (müteharrik sonra sâkin). **Müddet için evvel farz edersek** bu farzdan **bu evvelden önce müddet** lâzım gelir: müddetin evveli ancak **ademi vücûdundan önce** olduğunda; bu kabliyet **müddetsiz akledilemez**; **son (âhir) için de aynı: müddetin bitmesi ancak ademinin vücûdundan sonra; bu ba'diyet müddetle** ⇒ **hareketin evvel ve âhiri müddetin evvel ve âhirini gerektirmez ⇒ müddet harekete ve tüm sıfatlarına mugâyir.**' **Sonuç**: '**bu kahredici burhanlarla: zaman ve müddet felekî hareketin mikdârı olamaz.**' (p32)
 - Netice/hüküm: 11. hüccet: **hareketin evveli ≠ zamanın evveli; zaman harekete mugâyir.** **Bu, bedîhîlik ekolünün 'zaman hareketten ayrı' sonucunun tamamlanması.**
 - Delil çeşidi: **asimetri argümanı (hareketin evveli imkân, zamanın evveli imkânsız)**; (T) burhânî biçim.
 - Mevzuya bağı: **KRİTİK — Fasıl I §3, §6.3**: **c4 p205–208 (kıdem tarafı 8.–9. hüccet 'zamana hâdis demek zamandan önce zaman')** ile **birebir örtüşür**; **Risale 'zaman mahlûk' cümlesini bu asimetriye karşı 'ademi vücûdundan önce kabliyet' zamansız kabliyetle (c4 p15) yazmak zorunda**.
 - Doğan sual: Râzî zamanın hudûsu için kendi hükmünü hangi fasılda veriyor?
+- Doğrulama notu: OCR sayfası ile gerçek metin s.31 otomatik karşılaştırıldı: kelime kapsama %82, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p32
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.32 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: '**'zaman, mu'addil-i nehâr (ekvatoral) feleğin hareketinin mikdârıdır' diyenin sözü de bâtıl**: bu hareketin mikdârı hareketin bir sıfatı; onu bâtıl kıldık. **Sonuç**: '**müddet, nefsiyle kâim, müstakil bir mevcûddur; felekî hareketin müddetin vücûdunda hiçbir te'sîri yoktur; te'sîri yalnız bu müddeti cüz ve ba'zlarla takdirdedir**; **misal: gece ve gündüzü 'fencân' (saat kabı) ve saat sandukalarıyla takdir etmek: bu aletlerin zamanı îcâdda te'sîri yok, gece-gündüzü saat ve cüzlere bölmekte te'sîri var; felekî hareketin te'sîri de müddeti 'sene, ay, gün, saat' cüzlerine bölmekte, müddeti tekvîn ve îcâdda değil.**' **Kapanış**: '**bu, 'müddetin vücûdunun ve felekî harekete ve tüm hâllerine mugâyir oluşunun bilgisinin zarûrî' diyenlerin mezheplerinin takrîridir.**'
 - Netice/hüküm: **2. Fasıl: zamanın bedîhîliği ekolü tamam (Muhammed b. Zekeriyyâ er-Râzî ve kavmi): zaman nefsiyle kâim müstakil mevcut; hareket yalnız takdir eder; 11 hüccet + 10 hüccet.** [Râzî bunları 'daha güzel ve kâmil' kurmuş olarak aktarıyor; **Râzî'nin kendi hükmü değil**.]
 - Delil çeşidi: **derleme + misal (saat)**; (T) ikna'î-burhânî biçim.
 - Mevzuya bağı: **KRİTİK — Fasıl I §3, §6.3**: bu ekol **'zaman = müstakil mevcut cevher'** öğretisidir (c4 p200'deki kıdem tarafının 'dehr'i ile **aynı**); **Sünnî akide zamanı mahlûk sayar** — Risale **'zaman yaratılmıştır' cümlesini bu ekolün hangi noktasında (bağımsız varlık ↔ yaratılmışlık) yazdığını açıkça belirtmeli**; Râzî'nin nihai tercihi Fasıl 3–11'de aranacak.
 - Doğan sual: Râzî bu 2. fasıldan sonra ne yapıyor: itiraz mı, üçüncü kavil mi?
+- Doğrulama notu: OCR sayfası ile gerçek metin s.32 otomatik karşılaştırıldı: kelime kapsama %75, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p33
 - OCR: orta
@@ -300,49 +315,54 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Doğan sual: —
 
 ## c5 p34
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.34 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **1. tarîkin izahı (3 farz ve faydaları)**: **(1)** eşit hızda, aynı başlayıp aynı biten iki hareket ⇒ **eşit mesafe**; **(2)** eşit hızda, **başlangıçları farklı, bitişleri aynı** ⇒ ikincisi **daha az mesafe**; **(3)** başlangıç ve bitiş aynı, **hızları farklı** ⇒ yavaş az kat eder. **Faydaları**: **(1) 'imkân' (zaman denen şey) var**; **(2) bu imkân hareketin kendisine, hızına-yavaşlığına ve müteharrikin mikdârına 'müsâvi' (uygun)**; **(3) bu imkân müteharrikin mikdârından ve mesafenin mikdârından mugâyir bir şey**. 'Böylece maksat tamam.' **Açıklama (Râzî)**: 'iki eşit hızlı ve eşit başlayıp biten hareket varsa **mesafe mikdârında eşitlik lâzım**' (p35).
 - Netice/hüküm: 1. tarîk yapısı: **3 farz ⇒ zaman ayrı, ziyade-noksan kabul eden, mesafeden ve hareketten mugâyir.**
 - Delil çeşidi: **mukayese (üç durum)**; (T) burhânî biçim (İbn Sînâ hattı).
 - Mevzuya bağı: **Fasıl I §3**: 'zaman mesafeden ve hareketten mugâyir' **c5 p32'deki bedîhîlik ekolünün** sonucuyla **aynı hedef, farklı yol (kesbî)**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.34 otomatik karşılaştırıldı: kelime kapsama %77, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p35
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.35 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Açıklama devam**: 'eşit hızlı, eşit alış-bırakışlı iki hareket varsa aralarında bu mesafeyi bu hızla kat etme **imkânı**; bu imkânda **bu hızla ne bu mesafeden fazla ne eksik**; yani bu imkânın **kendinde hususiyeti** var ⇒ **bu imkânın hakîkati var, bununla ihtisas ve imtiyaz kazanıyor**.' **2. farz**: 'hızları eşit, alışları farklı, bırakışları aynı iki hareket ⇒ ikinci hızlı **daha az mesafe kateder**; **amaç iki şey**: **(1)** ikinci hızlının hareket ettiği imkân **birincinin imkânının cüzü** ⇒ imkân **tatbik, ziyade-noksan kabul eder ⇒ mevcut, müsâvât ve lâmüsâvât kabul eden**; **(2)** küçük hızlı büyük hızlıyla hareket oluşta, hızlı oluşta, müteharrikin mikdârında **müşterek**, **imkânın mikdârında farklı**; 'müşterekliği sağlayan' ≠ 'ayrıştıran' ⇒ **bu imkân hareketin mâhiyetinden, yavaşlığından-hızından ve cevher mikdârından mugâyir.** **3. farz** (p36).
 - Netice/hüküm: 1. tarîkin 1.–2. farzı: imkân (zaman) tatbik ve ziyade-noksan kabul eden mevcut; hareketin mâhiyetinden mugâyir.
 - Delil çeşidi: **mukayese + müşterek/ayrıştırıcı ilkesi**; (T) burhânî biçim.
 - Mevzuya bağı: **Fasıl I §3**: 'müşterek ≠ ayrıştıran ⇒ mugâyir' kalıbı Râzî'nin kendi delillerindeki **'mefhûm ayrı ⇒ zâid'** kalıbıyla **aynı** (c4 p316–319; **tutarlılık notu: c4 p375–377 nakızı burada da uygulanabilir**).
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.35 otomatik karşılaştırıldı: kelime kapsama %75, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p36
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.36 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **3. farz**: 'hızlı ve yavaş hareket alış ve bırakışta aynı ise **mesafede ortaksa imkânda ayrı, imkânda ortaksa mesafede ayrı** ⇒ **imkânın mikdârı mesafenin mikdârından mugâyir**'; ⇒ 'bu üç farzla bu imkân **mikdârî mevcut**, müteharrikin mikdârından, mesafenin mikdârından, hareketten, hızlı-yavaş oluşundan **mugâyir**' — hüccetin tamamı. **İtirazlar (Râzî aktarıyor; itiraz sahibi belirtilmiyor)**: **Soru 1**: 'bu hüccet **3 şeye bina**: (1) hızlı ve yavaş hareket; (2) birlikte başlayıp bitenler; (3) biri ötekinden sonra başlayan; **bu üçünü zamanın vücûduna cezmeden sonra itikad edebiliriz**: **hızlı = eşit mesafeyi daha az zamanda kateden**; **birlikte başlamak = aynı ânda**; ân zaman tasavvurundan sonra; **kabliyet-ba'diyet zamansız tasavvur edilmez** ⇒ zamanın vücûdu ya istidlâlsiz bilinir (delil gereksiz) ya istidlâllidir ve o hâlde **devir**.' (p37)
 - Netice/hüküm: 3. farz sonu; **Soru 1: devir itirazı (hüccetin öncülleri zamanı zaten varsayıyor).**
 - Delil çeşidi: **devir itirazı**; (T) burhânî biçim (itiraz).
 - Mevzuya bağı: **KRİTİK — Fasıl I §3**: **'hızlı/yavaş tefsiri zamanı içerir ⇒ delil devir' itirazı, Râzî'nin kendi c5 p26'daki 10. hücceti ('hızlı-yavaş tefsiri zamansız olamaz') ile birlikte** okunmalı: aynı gözlem bir yerde 'bedîhîlik' delili, burada 'devir' itirazı.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.36 otomatik karşılaştırıldı: kelime kapsama %78, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p37
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.37 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Soru 1 sonu**: '**zamanın asıl vücûdu bedîhî, mâhiyeti tafsîli delille** denirse devir düşer' itirazına: '**bu delil mâhiyetini/hakîkatini göstermez, yalnız ayânda mevcut bir şey olduğunu gösterir** ⇒ devir geri.' **Soru 2**: 'sizin mezhebinizde **ziyade-noksan hükmüne mahkûm olan mevcut olmalı**'; bununla **hareketlerin evveli var** diyen delile cevap verdiniz; oysa **munkazî, cüzlerinin sebâtı olmayan** şeylerde nefsü'l-emirde ziyade-noksan hükmü verilmez; **zihinde farz edilen imtidâdlı şey hakkında** verilir; **zamanın imtidâdı ayânda yok**; ⇒ 'zamanın ayânda vücûdunu' ziyade-noksanla ispat edemeyiz; **bu hüccet mugâlata**. **Soru 3 (mu'ârazalar; 3 tane)**: **(1)** '**zamanın kendisiyle mu'âraza**: her zamanın ibtidâ ve intihâsı arasında o mikdârı alan ve daha küçüğüyle dolmayan, daha büyüğünü almayan bir **imkân**; başka bir kısa imkân ⇒ **zamanın zamanı, sonsuz**' (p38).
 - Netice/hüküm: **Soru 2: 'ziyade-noksan ⇒ mevcut' öncülü munkazî için tutmaz; Soru 3: mu'âraza başladı.**
 - Delil çeşidi: **itiraz (öncül eleştirisi)**; (T) burhânî biçim (itiraz).
 - Mevzuya bağı: **KRİTİK — Fasıl I §3 ve c4 p249–264 (tatbîk delili)**: **Râzî'nin kendi hudûs delilinde 'mazi hareketler ziyade-noksan kabul eder ⇒ mütenâhî' öncülü buradaki 'ziyade-noksan ⇒ mevcut' öncülüyle **aynı aile**; bu itiraz (munkazî şeye ziyade-noksan hükmü zihnî farzdır) **Râzî'nin tatbîk delilini de vurabilir** — **Risale tatbîki 'öncüle bağlı' işaretlerken bu itirazı kaydetmeli.**
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.37 otomatik karşılaştırıldı: kelime kapsama %78, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p38
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.38 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Soru 3 mu'ârazaları devam**: **(1)** '**her zamanın başı ve sonu arasındaki imkân, o mikdârı alıp daha küçüğüyle dolmayan ve daha büyüğünü almayan bir şey; daha küçük bir imkân (zaman) başka; ⇒ zamana başka zaman, sonsuz**; 'bu vehmin işi' derseniz **harekette de aynısını söyleyin (fark yok)**.' **(2)** '**müstakbel tarafıyla mu'âraza**: **bu saatten yarına kadar** belirli hızla hareketi alan imkân var; ⇒ **yarın gelecek zaman şimdi hâzır** olur (bâtıl); 'hâzır olan yalnız o hareketlerin **vücûd imkânı**, onlara zarf olacak ayrı şey değil' derseniz: **mâzîde de aynı söylenebilir**.' **(3)** '**tâs (kadeh/bardak) iki ucu arasındaki mekân** belirli mikdârda cismi alan, daha azıyla dolmayan, daha fazlasını almayan; bu imkân **mevcut** ⇒ **ayânda kendi zâtıyla kâim boyutlar ve mekânların mevcut olması** lâzım gelir (mekân = boşluk); 'imkân = o cisimlerin nefslerinde vücûd imkânı' derseniz **zamandaki imkân için de aynısı**. **2. tarîk (kabliyet-ba'diyet)** başlıyor (p39).
 - Netice/hüküm: **3 mu'âraza: zaman-zaman teselsülü, yarın zamanı şimdi hâzır mı, mekân boyutları — hepsi 'imkân = mevcut' öncülünü **zaman ve mekânın simetrik nakzı**yla vuruyor.**
 - Delil çeşidi: **nakz (proves too much)**; (T) burhânî biçim.
 - Mevzuya bağı: **Fasıl I §3, §6.3 ve 'halâ' bahsi**: mu'âraza (3) **zaman delilinin mekân-halâ için de aynen geçerli olduğunu** gösterir; Râzî'nin **kendi nakz ilkesi (c4 p376 Nakız 6: 'mahzûr her iki takdirde kâimse delil değil')** burada hasım kalemiyle yazılıyor.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.38 otomatik karşılaştırıldı: kelime kapsama %79, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p39
 - OCR: orta
@@ -363,22 +383,24 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Doğan sual: **Râzî bu gerilimi (izâfî ↔ ayânda mevcut) çözüyor mu?** (p41–45.)
 
 ## c5 p41
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.41 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **2. hüccet devam (Râzî'nin takrîri)**: '**bu mefhûmlar ya ma'rûz ve mevsûfsuz, kendi başına kâim ya ma'rûza/mevsûfa muhtaç**; **birincisi bedîhen bâtıl**: kabliyet-ba'diyet **nisbet ve izâfe** bâbından, **cevher olamaz**; kalan ikinci: **bu kabliyet ve ba'diyetlere arız olan şeyler** var; ama **her şey bu tür nisbet/izâfeyi kendi mâhiyeti gereği kabul etmez**: baba 'cismânî cevher' olduğu için oğuldan önce değil, 'uzun, beyaz, âlim, zâhid' olduğu için değil ⇒ **kabliyet-ba'diyetin bizzât lâhik olduğu bir emir vardır**; **bu emir hareket değil** (önceki fasıldaki çok vecih). **Ek**: 'hareketin mukaddem cüzü müteahhir akledilebilir; **zamanın mukaddem cüzü müteahhir akledilemez** ⇒ bu bizzât-ma'rûz **mevcut, seyyâl, kendi zâtında munkazî, hareketten mugâyir**; **zaman ancak budur**.' **İtirazlar (Râzî aktarıyor)**: **Soru 1**: 'kabliyet-ba'diyet mevcut sıfatlardan **değil**: 'kabliyet lâ-kabliyetin nakîzi; lâ-kabliyet adem; ademin nakîzi sübût' sözü **imkânla nakzedilir**: **imkân vücûb ve imtinâ' nefyidir; imtinâ' adem, vücûb sübût**; 'nefyin nefyi sübût' kaidesiyle imkân hem vücûd hem adem olurdu (muhâl).' (p42)
 - Netice/hüküm: 2. hüccet tamam (Râzî'nin kendi takrîri: zaman = bizzât kabliyet-ba'diyetin ma'rûzu; mevcut, seyyâl, hareketten mugâyir); **Soru 1'in 1. kolu: 'nakîzin nakîzi sübût' kaidesi imkânla çelişir.**
 - Delil çeşidi: **taksîm (arız/ma'rûz) + fark argümanı**; itiraz: **nakz (imkân örneği)**; (T) burhânî biçim.
 - Mevzuya bağı: **KRİTİK — Fasıl I §3 ve c4 p285 (imkân adem-vücûd)**: itirazın **'imkân hem vücûd hem adem olurdu'** kolu, **c4 p170–172 ('imkân sübûtî mi')** tartışmasıyla **doğrudan bağlı**; Râzî'nin kendi c4 p172 hükmü (imkân sübûtî öncülü çürütüldü) burada **onun zaman delilinin önündeki engel**.
 - Doğan sual: Râzî bu 'imkân' nakzına cevap veriyor mu? (p42+.)
+- Doğrulama notu: OCR sayfası ile gerçek metin s.41 otomatik karşılaştırıldı: kelime kapsama %85, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p42
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.42 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Soru 1 devam**: '**kabliyet-ba'diyetin mevcut sıfat olamayacağı 4 vecihle**: **(1)** '**sarîh akıl: her muhdes kendi ademine mesbûk; adem vücûdundan önce ⇒ kabliyet-sebk-takaddüm ademin sıfatı; ademin sıfatı mevcut olamaz (mevcut sıfatın ma'dûmda kıyamı muhâl)**'; **(2)** '**kabliyet mevcut sıfat ise o sıfat başkasına nisbetle kabl/meiyyet/ba'd olmak zorunda ⇒ teselsül**; 'kabliyet kabl olmakta zâtının aynı, zâid değil' itirazı: **kabliyet kabl idi dediğimizde mevzû kabliyet, mahmûl 'başka şeyden önce'; mahmûl mevzûdan gayr** ⇒ **kabl olması zâtının aynı olamaz**'; **(3)** '**kabliyet ve ba'diyet iki izâfe; her biri ötekine nisbetle akledilir; mütedâyifeyn izâfeler ayânda ve zihinde birlikte mevcut**; mevcut iseler **birlikte mevcut olmalı; mevsûfları da birlikte** ⇒ **kabl ve ba'd beraber mevcut** (muhâl)'; **(4)** '**muzâfların beraberliği zâid sıfat ise beraberliğin beraberliği ⇒ teselsül; zâid değilse öteki beraberlikler için de öyle**' (p43).
 - Netice/hüküm: **Soru 1 (4 vecih): kabliyet-ba'diyet mevcut sıfat olamaz (adem sıfatı; teselsül; mütedâyifeyn beraberliği; beraberliğin zâidliği).**
 - Delil çeşidi: **reductio + teselsül**; (T) burhânî biçim.
 - Mevzuya bağı: **KRİTİK — c4 p264 ('izâfetler ayânda yok') ve c5 p40**: **bu 4 vecih Râzî'nin c4 p264'teki cevabıyla (izâfetler ayânda yok; aksi teselsül) **aynı çizgi**; Râzî burada **kendi 2. hücceti (kabliyet mevcut zâid)** ile **kendi c4 p264 hükmünü** yüz yüze getiriyor (aynı ciltte iki taraf). Râzî'nin cevabı **p47–48+'da** aranacak.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.42 otomatik karşılaştırıldı: kelime kapsama %82, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p43
 - OCR: orta
@@ -390,40 +412,44 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Doğan sual: —
 
 ## c5 p44
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.44 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **3. hüccet devam**: '**bu taksîmlerin sıhhatine bedîheler hükmetti; sıhhatinden şüphe eden 'tam cinnet ve şiddetli bunaklık' ile mahkûm edilir**; **bu şey ya mahz adem ya mevcut ve sâbit**; **birincisi bâtıl**: mahz adem **cüzlere ve ba'zlara bölünemez, bölünen kısımlar 'ötekinden çok/az' diye nitelenemez**; sarîh akıl 'sene aydan uzun, ay günden uzun, gün saatten uzun' der; **ayrıca sarîh akıl bu şeyin bir kısmının mâzî, bir kısmının müstakbel olduğuna hükmeder; mâzî hâzırken geçen, müstakbel hâzır olması beklenen**; **hâzır olması/hâsıl olması hiç olmasa akıl ona mâzî ve müstakbel demezdi** ⇒ **mahz adem değil, mevcut.** **Mevcûdât iki kısım: kâr-ı vücûd (cüzleri birlikte hâsıl) ve gayr-i kâr** (p45).
 - Netice/hüküm: 3. hüccet: **zaman bölünür, mâzî-müstakbel taşır ⇒ mahz adem değil.**
 - Delil çeşidi: **bedîhî iddiası + ontolojik taksîm**; (T) ikna'î-burhânî biçim.
 - Mevzuya bağı: **Fasıl I §3**: 'zaman bölünme ⇒ mevcut' çıkarımı **c5 p24 (bedîhî ekol 6. hüccet) ile aynı**; Risale **'zaman mahlûk (yaratılmış)' derken 'zaman nefiy değil'** diyebilir (ikna'î).
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.44 otomatik karşılaştırıldı: kelime kapsama %86, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p45
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.45 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **3. hüccet devam**: '**kâr-ı vücûd = cüzleri birlikte hâsıl; gayr-i kâr = değil**; bölünen şey **kâr değil**: bedîhe hükmeder ki **iki cüzü birlikte mevcut olmaz**: iki sene, iki ay, iki gün, iki saat birlikte hâsıl olmaz; **hatta en küçük iki cüzü birlikte hâsıl olmaz; farz edilen her iki cüzden biri öteki'nden mukaddem; birinin hâsılında öteki hâsıl değil** (**sâfi tefekkür ve lafızların mefhûmlarını zihinde hâzır etme şartıyla**); ⇒ **müddet ve zaman denen şey mevcut, gayr-i kâr**; **oysa cisim, kem, keyf, ayn, vaz', izâfe ve sâir makûlât kâr**; ⇒ zaman **bunların hepsinden mugâyir**. **Sonra**: 'bu şey ya hareket, ya hareketin sıfatı, ya hareketten ve sıfatlarından mugâyir'; **1. bâtıl (önceki fasılda çok vecih)**; **ek**: '**hareket = ardışık hâsıllar; ardışıklık = bir şeyin ötekinin ardından zamanlarda hâsılı; bu tevâlî hareket ile zamanlar arasında izâfe; izâfe zamanların hâsılından sonra** ⇒ **hareket, mâhiyetinin karar bulmasında zamana muhtaç; zaman kendi zâtında hareketten müstağnî** (hareketsiz ve tagayyürsüz müddet farz edilebilir)' (p46).
 - Netice/hüküm: 3. hüccet: **zaman = gayr-i kâr mevcut; hareketten mugâyir (ardışıklık zamanı içerir).**
 - Delil çeşidi: **ontolojik taksîm (kâr/gayr-i kâr) + asimetri**; (T) burhânî biçim. **[Delil ≠ dava: 'hareket = ardışık hâsıllar' tanımı Râzî'nin c4 p289–290 tanımıyla **aynı**; sonuç 'ardışıklık zamanı içerir' ⇒ hareketin tanımı zamanı varsayar — Râzî burada bunu zamanın **lehine** kullanıyor.]**
 - Mevzuya bağı: **KRİTİK — Fasıl I §3**: **Râzî'nin hareket tanımı (ardışık hasûl) hem c4'te 'cevher-i ferd yok' için hem burada 'zaman mevcut' için kullanılıyor — iki delil aynı öncüle bağlı**; öncül zayıflığı iki tarafı da etkiler (⊬).
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.45 otomatik karşılaştırıldı: kelime kapsama %84, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p46
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.46 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **3. hüccet sonu**: '**zaman hareketin sıfatı da olamaz**: sıfat tahakkukunda hareketin hâsılına muhtaç; zaman hareketin sıfatı olsaydı **tahakkukunda harekete muhtaç**; oysa hareket **mâhiyetinin tahakkukunda zamana muhtaç** ⇒ **devir**; ayrıca zaman **mâhiyetinin tahakkukunda hareketten müstağnî** (önceden gösterildi), hareketin sıfatı olan her şey **tahakkukunda harekete muhtaç** ⇒ **zaman hareketin sıfatı olamaz** ⇒ **zaman gayr-i kâr-ı zât mevcut; ne hareket ne sıfatı; hareketlere ve tagayyürlere bir tür zarf ve vi'â**; **bizim isbâtı hedeflediğimiz zaman ancak budur.**' **Uyarı**: '**önceki iki delilde 'zamana zaman' lâzım gelmişti; bu delilde lâzım değil**: burada **zarûrî ilmin bölünen bir şeyin hâsılı** olduğunu iddia ettik; sonra onun 'ne bu ne şu' olduğunu gösterdik; 'zamanın başka bir zarfı var' hükmünü **fıtrat vermez; akıl bedîhesi bunu reddeder** ⇒ bu suâl bu vecihte lâzım değil.' **4. hüccet** başlıyor: 'tevkît (zaman belirtme) hakîkati' (p47).
 - Netice/hüküm: 3. hüccet sonu: **zaman = gayr-i kâr mevcut zarf; 'zamanın zarfı' itirazı bu delilde vârid değil (fıtrat zarf vermez).**
 - Delil çeşidi: **devir + ayrım**; (T) burhânî biçim.
 - Mevzuya bağı: **KRİTİK — Fasıl I §3**: **'zamanın zarfı yok, fıtrat vermez' cümlesi Râzî'nin 'bedîhe' kullanımının bir örneği (c4 p274/p305 gerilimi ile aynı ailedir)**; ontolojik statü: 'zarf ve vi'â' = **c4 p200 'dehr' cevheri** ile örtüşür.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.46 otomatik karşılaştırıldı: kelime kapsama %85, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p47
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.47 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **4. hüccet (tevkît)**: 'bir adam 'güneş doğunca gelirim', 'bahar gelince gelirim' der; **adamın gelişi meçhul, güneşin doğuşu ma'lûm; meçhul ma'lûmla karnedilir**; **ehl-i tahkîk: 'tevkît = müteceddid mevhûmun müteceddid ma'lûmla karnı, îhâmı gidermek için'**. **Bu mukaddimeden sonra**: '**sağlam bedîhe ve aslî fıtrat bu tevkîtin sıhhatine hükmeder; gelecek tarihler bunun üzerine: meçhul olayların bilinen gelecek vakitlerle tarifi**; mâzî tarihler de aynı.' **'Güneş doğunca gelirim' = 'Güneşin doğduğu vakitte gelirim'**: **tek bir vakit farz edilir ki hem adamın gelişi hem güneşin doğuşu onda hâsıl**; **bu vakit baki-sâbit mi seyyâl-munkazî mi**? **Baki ise şu anda hâsıl olurdu, müntazar ve müstakbel olmazdı** (bedîhe: o vakit şu an hâzır değil, müntazar); ⇒ **seyyâl**; ya **hareketin cinsinden**, ya sıfatı, ya bu ikisinden mugâyir; **birincisi bâtıl**: fıtrat bu vakti **feleğin hareketine zarf** kıldı; zarf mazrûf değil (p48).
 - Netice/hüküm: **4. hüccet: tevkît ('güneş doğunca') tek bir seyyâl vakti zarf olarak varsayar; zarf hareket değil.**
 - Delil çeşidi: **dil/örf analizi (tevkît) + taksîm**; (T) ikna'î-burhânî biçim. **[Delil ≠ dava: 'örf ehli dili' bir dil-analizi; itirazda 'iktirân/meiyyet ile tefsir' alternatifi var (p48).]**
 - Mevzuya bağı: **Fasıl I §3**: tevkît argümanı **c4 p208 ('kâne/summe' dil analizi)** ile **aynı tarz**; Risale dil-analizi delillerini **ikna'î** işaretler.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.47 otomatik karşılaştırıldı: kelime kapsama %83, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p48
 - OCR: orta
@@ -435,22 +461,24 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Doğan sual: —
 
 ## c5 p49
-- OCR: orta (kısmî harf hasarı; hüküm cümleleri okunuyor)
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.49 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Kimin sesi: Râzî.** 1. itirazın (iktirân/meiyyet) cevabının sonu: 'mukârenet ve meiyyetin mânâsı ancak **ikisinin tek vakitte ve tek zamanda hâsıl olması**dır; o hâlde söylediğimiz her şey buna döner.' **2. suâle (örf ehline bina, benzerine iltifat edilmez) cevap**: 'münâzaralar ancak **zarûrî ilimlerin tertibidir**, meçhulü **nazarîlerden** elde etmek için; bu, **bedîhî önermelerin sıhhatini kabul etmekle** tamamlanır. Bu meseleyi teemmül edince: **bu tevkîtin sıhhatini bütün selîm akıllar hükmeder**; sonra teemmül edince: **bu bedîhî mukaddime zamanın vücûdunu, ispat ettiğimiz yolla gerektirir**. Bu söz bu matlubu ispatta **en zâhir delillerden ve en kuvvetli burhanlardandır.**'
 - Netice/hüküm: 4. hüccet (tevkît) **Râzî'nin kendi ağzıyla 'en zâhir delil, en kuvvetli burhan' derecesinde**; dayanağı 'tevkîtin sıhhati bütün selîm akıllarca hükmedilir' önermesi.
 - Delil çeşidi: **bedîhe iddiası (selîm akıllar ittifakı) + dil analizi**; (T) Râzî derecesi 'en kuvvetli', **ama dayanak dil-örf bedîhesi**. **⊬: 'bütün selîm akıllar' iddiası sayıyla doğrulanmadı; c4 p274 vs p305'te 'bedîhe' iki yönde kullanıldı (aynı silahın iki yönü).**
 - Mevzuya bağı: **Fasıl I §3**: Risale zamanın **kendi başına mevcut olduğu** hükmünü almayacak (bkz. c5 p32, p52); ama **'tevkît ⇒ seyyâl bir vakit var' dil delili** Risale'de 'zaman mahlûk/ölçüdür' cümlesinin **karşı delili** olarak açıkça yazılmalı.
 - Doğan sual: Râzî tevkît delilini 'en kuvvetli' saydı; oysa 'iktirân ile tefsir' alternatifi (p48) cevabı **'mukârenet de tek vakit ister'** ile verildi — bu cevap **vakti önceden kabul ediyor mu (petitio)?** Ayırt eder mi (F 27-B): 'iktirân' tefsiri altında vakit **zihnî izâfet** olarak da okunabilir.
+- Doğrulama notu: OCR sayfası ile gerçek metin s.49 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p50
-- OCR: —
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.50 — OTOMATİK DOĞRULANDI
 - Okuma: okunmadı (boş sayfa)
 - İçerik: Boş.
 - Netice/hüküm: —
 - Delil çeşidi: —
 - Mevzuya bağı: —
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası boş/çok kısa; gerçek metinde bu sayfa için içerik yok (boş sayfa).
 
 ## c5 p51
 - OCR: orta (dipnotlarda nüsha farkı işaretleri okunuyor; gövde tam)
@@ -471,13 +499,14 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Doğan sual: Öncül '**kabl/ba'd teâkübi ancak zamanla hâsıl olur**' — **mâhiyet-tanım mı, ispat mı?** Aristo'nun tarafı bunu 'zaman zaten hareketin kabl-ba'd'ıdır' diye okur ⇒ **dönüş** tehlikesi (F 27-B: bu öncül Aristo'yu **ayırt ediyor mu**?).
 
 ## c5 p53
-- OCR: orta-iyi (dipnot farkları var; hüküm cümleleri net)
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.53 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Kimin sesi: Râzî.** Bu hâlde ya **her harekete ayrı zaman**, ya **hepsine tek bir zaman**, ya **hiçbirine zaman yok**. **1. şık (her harekete ayrı zaman) 2 yönden bâtıl**: (a) o zaman bu **tek saat tek saat olmaz, üst âlem ve alt âlemdeki hareketler kadar sâat olur**; oysa **bu sâatin tek sâat olduğu zarûrî ma'lûm**. (b) Bu zamanlar **beraber bulunuyorsa 'beraberlikleri'** onları **kuşatan başka bir zamanla** olmalı ⇒ **teselsül**; teselsül câiz farz edilse bile **muhâl lâzım**: beraberliği sağlayan şey **hepsini kuşatmalı**, kuşatan zaman **olmamalı** (bütün zamanları o mecmûya hasrettik); ama kabl-ba'd-meiyyeti gerektiren şey zamandır ⇒ **hâriç zaman olmalı ve olmamalı** ⇒ **çelişki**. **2. şık (bütün hareketlere kâim tek zaman) 3 yönden muhâl**: (a) **tek arazın çok mahâlde hulûlü muhâl**; (b) bir hareket **yok olunca mikdârı yok olur**, bâkî ikinci hareketin mikdârı da **mevcut** kalır; mikdâr hepsine **tek** olsa **tek şey hem mevcut hem ma'dûm** ⇒ muhâl; (c) **farklı hareketlerin mikdârları farklıdır**; hepsinin mikdârı **tek şey** olsa **tek şeyin aynı şahısta farklı hakîkatleri** olurdu ⇒ muhâl. **3. şık**: zaman **hiçbir harekete arız değil; hepsinden mübâyin** (p54).
 - Netice/hüküm: **Hareketin mikdârı olan zaman 'arız olarak hareketlere kâim' olamaz; 1. ve 2. şık 5 delille çürütüldü; kalan: zaman mübâyin bir mevcut.**
 - Delil çeşidi: **taksîm + çok yönlü reductio; teselsül kullanılıyor**; (T) burhânî biçim; **⊬ 'bu sâatin tek sâat olduğu zarûrî' önermesi bedîhe iddiasıdır**.
 - Mevzuya bağı: **Fasıl I §3 (teselsül), §6.3**: 1(b) **'kuşatan zaman' delili c5 p33–40 'zamana zaman' itirazı ile aynı desen**; **Risale burada 'teselsül' kullanan delili derecelendirmeli** (c2 p77–78: Râzî teselsül okuması).
 - Doğan sual: 2(b) — **'arazın bir kısmı yok olunca aynı araz yok olur'** öncülü Aristo'nun **'zaman = hareketlerin toplam ölçüsü'** okumasını **çürütür mü, yoksa yalnız 'tek araz' okumasını mı**? Aristo mikdârı **hareketlerin cinsi** olarak alırsa (kalıcı ölçü kategorisi) 2(b)-(c) **ayırt etmez** (F 27-B kontrolü gerekir).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.53 otomatik karşılaştırıldı: kelime kapsama %77, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p54
 - OCR: orta (bir iki satırda kayma; İbn Sînâ nakli okunuyor)
@@ -489,22 +518,24 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Doğan sual: **İbn Sînâ'nın 'muvâfât-muvâzât ile ölçmek' cevabı p55–56'da nasıl çürütülüyor?** (bir sonraki sayfa okunup ayırt edilecek).
 
 ## c5 p55
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.55 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Kimin sesi: İbn Sînâ (Şifâ nakli), sonra Râzî ('وأقول').** Şifâ devam: **'ikinci fark için: bir şeyin zâtı başka şeyin tabiatına muallak olunca o şeyin tabiatının ondan hâli olmaması gerekmez. Biz zaman hakkında burhanla ancak şunu gösterdik: zaman harekete muallak ve ona bir hey'et; hareket hakkında: her hareket zamanla mukaddardır. Bundan çıkmaz: her harekete ona has zaman muallak; ne de 'bir şeyi mukaddar eden ona arızdır' ki her harekete zâtına arız aynı zaman olsun. Bilakis ibtidâ-intihâsı olmayan hareketlere zaman muallak olmaz. Evet zamanın vücûdu, ona vücûd bağlanmaya elverişli bir harekete muallak bulunursa, diğer bütün hareketler onunla mukaddar olur; bu hareket, devamı sahih (istimrâr), fiilen uçları hâsıl olmayan hareket olmalı.' Şeyh ısrar edip uzatıyor: '**zamanın vücûdu tek harekete muallak, onu ölçer, diğer bütün hareketleri de ölçer; bir cisimdeki mevcut mikdâr gibi: onu ve muhâzî/muvâzîsini ölçer**.' — bu Şeyh'in nassı.** **Râzî ('وأقول')**: 'bu uzatmanın **hâsılı tek noktaya döner**: **zaman 'belirli bir hareketin mikdârı' denilemez mi? sonra o hareket ibtidâen o mikdârla mukaddar olur, o hareketin o mikdârla mukaddar olması vâsıtasıyla diğer hareketler de o zamanla mukaddar olur**' — bu uzun sözlerin hâsılı bu.' **Râzî**: '**biz o delili bu suâl yöneltilmeyecek şekilde tahrîr ettik**: hareketin zamana iftikârı **belirli bir hareket olmasından değil, sırf hareket olmasından**; bu mânâ **bütün hareketlerde ortak** ⇒ iktizâ cihetinin **hepsinde eşit** olması lâzım, hiç tefâvüt yok; öyle iken 'o zaman bazı hareketlere hâsıl olup diğerlerine olmadı' denemez.' (p56).
 - Netice/hüküm: **İbn Sînâ'nın Şifâ cevabı = 'zaman tek bir belirleyici harekete muallak, o hareket diğerlerini ölçer'; Râzî bunu tek noktaya indirdi ve delilini 'sırf hareket olmak' ile ona **vârid olmayacak** biçimde kurduğunu söyledi.**
 - Delil çeşidi: **hasım cevabının nakli + indirgeme (Râzî'nin tahriri)**; (T) burhânî biçim; **kendi delilinin ayırt ediciliğini açıkça sınıyor (F 27-B klasik örneği).**
 - Mevzuya bağı: **KRİTİK — F 27-B**: Râzî burada **'delilimi hasmın cevabına karşı ayırt edici hâle getirdim'** diyor — Risale'nin 'ayırt eder mi' ölçüsünün **klasik emsali** (c4 p376 ile aynı aile). **⊬ Ayırt ettiği sayıyla gösterilmedi**, yalnız kurgu tashihi.
 - Doğan sual: İbn Sînâ'nın **'kendi başına mikdâr farkı: tek hareket ölçer, diğerleri onunla ölçülür'** sözü ile Râzî'nin 'iktizâ eşit' sözü **aynı düzlemde mi?** İbn Sînâ **iktizâyı değil, sonra vâsıtalı ölçmeyi** söylüyor; Râzî'nin cevabı **'iktizâ eşitse tahsis muhâl'** — ama İbn Sînâ **tahsisi harekette değil, hareketin sahih istimrâr vasfında** arıyor (Şifâ metni: 'devamı sahih, uçları fiilen olmayan hareket'). **Râzî bu vasfı tartıyor mu?** (p56 devamı).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.55 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p56
-- OCR: orta (dipnot işaretleri fazla; gövde okunuyor; sayfa 'مغالطة محضة' ile bitiyor, gövde devamı p57'de olabilir)
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.56 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Kimin sesi: Râzî.** 'Şeyh'in sözünü nakletmekten gayemiz: **delili onun sözü tesir etmeyecek ve ona zarar vermeyecek biçimde tahrîr ettiğimizi göstermek.** Sonra **bu sözün başka bir yönden de illetli olduğunu** gösteririz: **'hareketin mikdârı' ma'kûlen 'hareketin imtidâdının mikdârı'dır**; aksi hâlde 'hareketin mikdârı' **belirli bir mefhûm** vermez. **Bir şeyin vücûdunun imtidâdından anlaşılan ancak bekâsı, istimrârı, devamıdır.** **Bir şeyin vücûdunun devamı, ondan mübâyin bir mevcut olup başka bir şeyde hâsıl olması zarûrî olarak imkânsız**: insanlar bir şeyin bekâsının **vücûduna zâid bir sıfat olup olmadığında** ihtilâf ettiler (bazısı zâid sıfat olmadığını, bazısı zâid olduğunu söyledi), fakat **her iki taraf da 'bu sıfat o şeyde hâsıldır, başka şeyde hâsıl olması imtinâ'** dedi; **akıllılar arasında 'bir şeyin vücûdunun devamı onda değil başkasında olur' diyebilecek biri yok.** Bu sabitse **bu devamın mikdârı ancak bu devamın keyfiyetlerinden bir keyfiyettir** ⇒ mübâyin olamaz. **Özet**: zamanı hareketin mikdârı diye tefsir edersek **akıl bedîhesi her hareketin mikdârının o harekete kâim olması gerektiğine hükmeder**; tek bir mikdârın onlardan birine kâim olup **diğerlerinin kendi mikdârlarından hâli** olması imtinâ'. **Şeyh'in 'cisimdeki mikdâr muhâzî cisimleri de ölçer' sözü: bu 'muğâlata-i mahza' (saf mugalata).**
 - Netice/hüküm: **Râzî: İbn Sînâ'nın 'tek bir harekete kâim zaman diğerlerini ölçer' örneği 'saf mugalata'; hareketin mikdârı = hareketin imtidâd mikdârı ⇒ o harekete kâim olmak zorunda.**
 - Delil çeşidi: **mefhûm tahlili + bedîhe iddiası**; (T) **burhânî biçim; öncül 'bir şeyin devamı ondan mübâyin olamaz' bedîhe iddiasıdır ⊬**. **Delil ≠ dava**: 'mikdâr = imtidâd mikdârı' tanımı Aristo tarafında **kabul edilmiş olmalı**; edilmezse (zaman = 'ölçü **birimi**') **öncül dava olur**.
 - Mevzuya bağı: **KRİTİK — Fasıl I §3, Risale'nin 'zaman mahlûk' cümlesi**: **Râzî Aristo/İbn Sînâ tanımını çürütürken zamanı mübâyin bir mevcuda (c5 p32 bedîhî okulu, c4 p200 dehr) yaklaştırıyor**; yalnız **1. şık ve 2. şık** çürüdü, **'zaman = müstakil mevcut cevher' (p51 görüş 5) bu çürütmeden tek başına çıkmaz** — Risale bu **aradaki boşluğu** yazmalı: **'Aristo tanımı çürüdü' ⇏ 'zaman vâcib/kadîm cevherdir'**. **İbn Sînâ nakli lafzıyla verildi; Râzî 'muğâlata' hükmünü **kendi ağzıyla** yazdı.
 - Doğan sual: **Râzî'nin kendi sonuçlandırması ne?** (3. şık: zaman mübâyin mevcut; **mahlûk mu, kadîm mi, dehr mi?** — sonraki hüccetler ve fasıllarda aranacak, **hüküm bağlanmadı**).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.56 otomatik karşılaştırıldı: kelime kapsama %86, Arapça alıntı denetimi 1/1 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p57
 - OCR: orta (bazı satırlarda harf kayması; itiraz-cevap yapısı okunuyor)
@@ -516,13 +547,14 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Doğan sual: Bu 2. cevabın **ayırt ediciliği**: Aristo'nun tarafı 'imtidâd dâvâmdır' öncülünü kabul etmeyebilir (mikdâr = **ölçü birimi**, dâvâm değil) ⇒ ilzâm **öncüle bağlı**. F 27-B sayısı yazılmalı.
 
 ## c5 p58
-- OCR: orta (birkaç kelimede hasar; hüccet iskeleti net)
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.58 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Kimin sesi: Râzî; hasım itiraz + cevap içinde.** **Hüccet 2**: 'hareketin imtidâdı **ayânda mevcut değildir**' ⇒ 'imtidâdın mikdârı **ayânda mevcut olamaz**'. Beyân: hareket = **art arda hâsıl olan hâsıllar, art arda hayyizlerde**; **bedîhen** bu hâsılların **mecmûunun ayânda vücûdu yok**; mevcut olan yalnız **bir ân'da bir hâsıl**, sonra o çöker ve benzeri ondan sonra hâsıl olur ⇒ **imtidâdın ayânda vücûdu yok.** **İtiraz**: 'hareket = **cismin mebde' ile müntehâ arasında mütavassıt olması**, öyle ki **farz edilen hiçbir ânda hâli öncekine ve sonrakine benzemez**; bu hâl **bâkî ve müstemirrdir** ⇒ imtidâd **ayânda mevcut.**' **Cevap**: 'ayânda hâsıl olan **bu belirli hayyizdeki hâsıl, sonra öbür belirli hayyizdeki hâsıl**, böylece art arda; bu, imtidâdın ayânda hâsıl **olmadığına** delildir.' Sonra: 'imtidâdın mikdârı **imtidâdın sıfatlarından**; **mevsûf ayânda imtinâ' ise sıfat imtinâya evlâ** ⇒ mikdâr-ı hareket ayânda mevcut olamaz. **Şeyh delillerle zamanın ayânda mevcut olduğunu gösterdi ⇒ zaman 'mikdâr-ı hareket' değildir.'** **Hüccet 3**: zaman hareketin mikdârı ise **hareketin sıfatı** olur; her sıfat mevsûfa muhtaç ⇒ zaman harekete muhtaç; **hareket zamana muhtaç** (her hareket hâlden hâle intikâl; **intikâl edilen hâlin zamanı, intikâl edilen hâlin zamanından farklı olmalı**) ⇒ **mâhiyet-i hareket zaman takarrür etmeden takarrür etmez** ⇒ **devir** (p59).
 - Netice/hüküm: **H2: hareketin imtidâdı ayânda yok ⇒ mikdârı da yok ⇒ zaman (ayânda mevcut, İbn Sînâ delilleriyle) hareketin mikdârı değil. H3: zaman hareketin sıfatı ⇒ devir.**
 - Delil çeşidi: **mefhûm analizi + reductio (devir)**; (T) burhânî biçim; **⊬ H2'nin ana öncülü 'mecmû ayânda mevcut değil' = c5 p37 'ziyade-noksan ⇒ mevcut' itirazının tersine dayanır; Râzî'nin kendi tatbîk delili (c4) ayânda gayr-i mütenâhî mecmû kabul etmez, tutarlı.**
 - Mevzuya bağı: **KRİTİK — c4 tatbîk/tezâyüd**: 'art arda hâsıllar mecmûu ayânda yok' ilkesi **hudûs-i âlem delilinde (c4 Kısım 2 hareket-sükûn) Râzî'nin kendi öncülü**; burada zamanın imtidâdını nefyetmek için **aynı ilke** kullanılıyor ⇒ **tutarlılık kaydı**: ilke doğruysa **geçmiş zaman da ayânda mecmû olarak yok**, zaman ise 'ayânda mevcut' diye ispatlanıyor — **iki hüküm (H2: imtidâd yok; zaman mevcut) arasında ilişki açıklanmalı** (zaman **imtidâd değil ân/seyyâl** mi?).
 - Doğan sual: **Zaman 'ayânda mevcut' ise neyin mevcut olduğu nedir — ân mı, seyyâl imtidâd mı?** H2 imtidâdı nefyediyor; p47–48'de 'seyyâl vakit' isbât edilmişti. **Râzî ikisini nasıl bağlıyor?** (sonraki sayfalarda ara).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.58 otomatik karşılaştırıldı: kelime kapsama %83, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p59
 - OCR: orta (dipnotlarda hasar; H3 sonu ve H4 net)
@@ -534,13 +566,14 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Doğan sual: H4 'bu gün bir hareketin sıfatı olsa kendinde hâsıl' — **'bu gün' Aristo'da 'hareketin ölçüsüne verilen ad'**; **ad ile mikdâr aynı şey mi?** (H4 **ayırt ediyor mu**?).
 
 ## c5 p60
-- OCR: orta (bazı kelime bozuk; H6 ve H7 omurgası net)
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.60 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Kimin sesi: Râzî.** H5 tâli (b): 'felek, güneş, ayın ve hareketlerinin **ademini** farz etsek, bu ademin **vücûdlarından sonra olması** lâzım (**ba'diyet-i zamaniyye**); bu **bedîhî**; **ze­hin, bütün hareketlerin ademini farz ettiği hâlde, zamanın vücûdunu ikrardan kurtulamaz**.' **Hüccet 6**: '**zaman zâtı gereği vâcibü'l-vücûddür**; bu, **hareketle muallak olmasına ve hareketin sıfatlarından bir sıfat olmasına manidir.** **Birincinin beyânı**: zamanın vâcibü'l-vücûd olmasa ademi **tari' olabilir** ⇒ ademi vücûdundan **sonra** olur; bu **ba'diyet zamanî**; ⇒ **zaman mevcut; ademi farzı 'o'** olarak **muhâl** (ademi farzı vücûdunu gerektirir ⇒ **nakîzeynin cem'i muhâl**) ⇒ **zaman vâcibü'l-vücûd li-zâtihi.** **Bu sabitse**: zaman harekete sıfat/mikdâr olsa **harekete muhtaç ⇒ muhtaç mümkin ⇒ vâcib mümkin olur (muhâl)**; ayrıca **vâcibin muhtaç olduğu şey daha çok vâcib olmaya evlâ ⇒ hareket zâtıyla vâcib ⇒ mahalden ve mevzudan müstağnî ⇒ muhâl.**' **Hüccet 7**: 'akıl bedîhesi '**cisim şu sâatten şu sâate kadar hareket etti**' sıhhatine hükmettiği gibi '**cisim şu sâatten şu sâate kadar sâkin oldu**' sıhhatine de hükmeder ⇒ **zamanın hareketle ve sükûnla nisbeti eşit** ⇒ 'zaman mikdâr-ı hareket' denemez. 'Sükûn ancak farz yoluyla zamanla mukaddar olur' itirazı bâtıl (p61).
 - Netice/hüküm: **H5 sonu: hareket ademi farz edilse ba'diyet-i zamaniyye ⇒ zaman kalır. H6: zaman zâtı gereği vâcibü'l-vücûd. H7: zamanın hareket ve sükûnla nisbeti eşit.**
 - Delil çeşidi: **reductio (nakîzeynin cem'i) + ilzâm**; (T) **H6 'burhânî biçim' ama öncülü ('ademi farz ⇒ ba'diyet-i zamaniyye') zamanın var olduğunu önceden koyar (delil ≠ dava)**. **⊬ p57 ile çelişki riski.**
 - Mevzuya bağı: **KRİTİK — TEVHİD KAYDI (Fasıl I §6.2)**: **Râzî bu satırda 'zaman zâtı gereği vâcibü'l-vücûd' hükmünü bir HÜCCETİN KENDİ öncülü olarak kuruyor. p57 (2)'de 'zaman = Vâcib/Sebeb-i Evvel' lâzımı BÂTIL denmişti. İkisi arasındaki fark: p57'de ilzâm (itirazcının 'dâvâm' öncülü altında), p60'ta Râzî'nin 'ademi farz ⇒ ba'diyet' öncülü altında.** **Bu bir çelişki kaydıdır; Risale'ye BU HÜCCET ALINMAZ**: **Vâcib teaddüd etmez (c2 K2 F1); Vâcib'in yanına 'zaman-vâcib' konamaz.** **Ayrıca F 27-B**: aynı 'ademi farz ⇒ ba'diyet ⇒ vâcib' burhanı **her 'ba'diyeti taşıyan şey'e uygulanabilir (hareket, cisim, hatta 'yokluk')** ⇒ **ayırt etmiyor** (c4 p376 nakız ilkesi).
 - Doğan sual: **Râzî bu hüccetle 'zaman kadîm-vâcib' mi diyor, yoksa yalnız Aristo tarafına ilzâm mı ediyor?** 'ilzâm' okumasını destekleyen: hüccetlerin hepsi 'Aristo tanımı bâtıldır' başlığı altında. **Râzî'nin kendi zaman hükmü hâlâ açık (p56 sonu).**
+- Doğrulama notu: OCR sayfası ile gerçek metin s.60 otomatik karşılaştırıldı: kelime kapsama %81, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p61
 - OCR: orta
@@ -552,13 +585,14 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Doğan sual: Cevap 3 'tahakküm' ithamı: **Râzî'nin kendi H2–H5 öncülleri (aklın sarîhi) de aynı 'aklın hükmü' kaynağına dayanıyor**; **iki taraf aynı kapıyı kullanırken 'tahakküm' kime düşer?** (c4 'aynı silahın iki yönü').
 
 ## c5 p62
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.62 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Kimin sesi: Râzî; İbn Sînâ nakli (H9'da).** H8 devam: '**mâzî ve müstakbel ma'dûm, ma'dûm mevcut olmaz**' + '**mâzî = daha önce hâzır olan sonra geçen; müstakbel = hudûrü beklenen henüz gelmemiş; hâzır ancak ân'; ân bölünmez ⇒ mâzî-müstakbel 'hâzır olan ve mâzî olan ânlar'dan ibaret ⇒ zaman ardışık ânlardan terkîb (cevher-i ferd-i zamânî); bu **kavme göre muhâl**** ⇒ mikdâr-ı hareket mevcut olsa 3 kısımdan biri; hepsi bâtıl ⇒ **mikdâr-ı imtidâd-ı hareketin ayânda vücûdu yok**.' **Hüccet 9**: 'bu hareketin bu zamanda hâsıl olduğuna hükmettiğimiz gibi **bu cismin bu zamanda hulûl ettiğine de hükmederiz**; 'hareket bu zamanda hâsıl oldu' ile 'cisim bu zamanda hâsıl oldu' sözleri arasında **akılda tefâvüt yok** ⇒ zamanın cisme nisbeti hareketeki gibi ⇒ **zaman mikdâr-ı hareket olamaz**.' **Şeyh cevap verdi**: '**'cisim zamandadır' ancak 'cisim harekettedir, hareket zamandadır' mânâsında**; Uyûnü'l-Hikme'de nas, Şifâ'da da.' **Râzî**: '**bu son derece zayıf: zaman hareketin mikdârı olunca hareketteki mevcut araz; hareket cisimdeki mevcut araz ⇒ zaman cisimde mevcut çıkar; ama 'cisim zamanda mevcut' mânâsı buradan çıkmaz; bahis 'cisim zamanda mevcut' sözünün mânâsı; bir söz ötekinden nerede?**' (p63).
 - Netice/hüküm: **H8 sonu: mikdâr-ı imtidâd ayânda yok (mâzî-müstakbel ma'dûm; hâl ân; zaman ânlardan terkîb muhâl). H9: 'cisim zamanda' ile 'hareket zamanda' arasında akılda fark yok; İbn Sînâ cevabı (Uyûn/Şifâ) 'son derece zayıf'.**
 - Delil çeşidi: **taksîm + reductio; hasım cevabının nakli + zayıflık hükmü**; (T) burhânî biçim; **H8 'zaman ânlardan terkîb muhâl (kavme göre)' kavme-bağlı öncüldür ⊬**.
 - Mevzuya bağı: **KRİTİK — cevher-i ferd, tenâhî-i ebâd borç listesi**: H8'de **'zaman ânlardan terkîb muhâl'** öncülü **cevher-i ferd bâbının (c5'te aranan) öncülüyle bağlı**; borç: **'Mekân ve Zaman kitabı' / hayûlâ-sûret / cevher-i ferd yerini bulunca H8 öncülü doğrulanacak**. **Râzî kendi delilini ('kavme göre muhâl') 'kavme göre' diye işaretliyor (dürüst derecelendirme)**.
 - Doğan sual: **'Kavme göre muhâl' hangi kavim?** (filozofların zamanı sürekli sayması); Eş'arî kelâmı **zamanı ânlardan/atomlardan terkîb** ile kurar (cevher-i ferd) ⇒ H8 **Eş'arî yolunda ayırt etmez**. Râzî burada **hangi yolda konuşuyor?**
+- Doğrulama notu: OCR sayfası ile gerçek metin s.62 otomatik karşılaştırıldı: kelime kapsama %78, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p63
 - OCR: orta
@@ -579,112 +613,124 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Doğan sual: **H12 başlığı p63'ten düştü (OCR)**; hüccet sayımı 14 ⇒ hüccet numarası **doğrulanamadı**, gövdeden 12 olarak yazıldı (**⊬**).
 
 ## c5 p65
-- OCR: orta (dipnot işaretleri bol; hüccet iskeleti net)
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.65 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Kimin sesi: Râzî; sonra hasım (zaman = mikdâr-ı hareket-i felek diyenler) hüccetleri ve Râzî cevapları.** **H14 sonu**: 'bir şeyin mikdârı ya zâtı ya zâtında hâsıl sıfat; mikdârın kendi içinde hâsıl olması da devirle muhâl' ⇒ hareket ne kendinde ne kendi mikdârında hâsıl; her hareket zamanda hâsıl ⇒ **zaman ne hareket ne mikdârı.** **H15**: '**zaman hareketin irtifâıyla irtifâ etmez; mikdâr-ı hareket olan her şey hareketin irtifâıyla irtifâ eder ⇒ zaman mikdâr-ı hareket değil.** 'Bu kadar delille iktifâ edelim.' **Hasmın 1. hüccet**: zaman = kabliyât-ba'diyât teâkübini hâsıl eden mânâ; bu ancak **tagayyür (= hareket)** ile ⇒ zaman harekete muallak. **Cevap**: '**zamanın harekete muallak olduğu iddiası mücerred yalan bir vehm, fâsid hayal**; 3 delil: (1) **Allah 'âlemden önce mevcuttu, şimdi âlemle beraber, âlem fena bulduktan sonra bâkî olacak'**; 'kâne/kâin/yekûnü' hâl ve sıfat **değişimini işmâr eder ise de Allah hakkında ne zâtınca ne sıfatlarınca değişim hâsıl olmaz** ⇒ zaman tagayyürü **istilzâm etmez**. (2) '**hevâdisin ezelde ma'dûm olduğunu söyleriz; bu ezelî ademlere zamanî hükümler verilir**; oysa **mahz ademde tagayyür imkânsız**.' (3) (p66'da).
 - Netice/hüküm: **H14–15 Aristo tanımını çürütmeyi bitirdi (15 hüccet); hasmın 1. hüccetine cevap: zaman-hareket muallakiyeti 'vehm'.**
 - Delil çeşidi: **reductio + kelâmî örnek (Allah 'kâne/kâin')**; (T) burhânî biçim; H15 **'zaman hareketin irtifâıyla irtifâ etmez' öncülü zamanın ayrı varlığını yine varsayar (delil ≠ dava)**.
 - Mevzuya bağı: **KRİTİK — c1 Mesele 7 şübhe 3 ('kâne/yekûnu')**: **p63 H10 ile aynı nokta; burada Râzî 'kâne/kâin/yekûnü' ifadelerinin Allah hakkında tagayyür ifade etmediğini KENDİ ağzıyla söylüyor ⇒ c1 şübhe 3'ün Râzî'nin kendi cevabı sayılabilir (⊬ tam cevap mı, ilzâm mı?).** **(2) 'ezelî ademlere zamanî hüküm' = c4 hudûs bahsi 'ademin zamanî mesbûkiyeti' ile aynı aile.**
 - Doğan sual: **'Zaman tagayyürsüz de hâsıl' ⇒ dehr mi? Zaman = Allah'ın devamı mı?** Risale dili: **'zamansız devam' (c2 p76)**; bu cevap Fasıl I zaman dili borcunu **kapatmaz, yaklaştırır**.
+- Doğrulama notu: OCR sayfası ile gerçek metin s.65 otomatik karşılaştırıldı: kelime kapsama %76, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p66
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.66 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Kimin sesi: Râzî (3. delil), sonra hasmın 2. hüccetinin aktarımı, sonra Râzî'nin cevabı.** Cevap 3: '**kabliyet, meiyyet, ba'diyetin ayânda vücûdu yok; zihnin i'tibâr ettiği ve aklın tasavvur ettiği nisbetlerdir.**' **Hasmın 2. hüccet** (imkân delilinden): '**zaman musâvât ve mufâvat (eşitlik/farklılık) kabul eder; böyle olan her şey kemdir ⇒ zaman kemdir.** Her kem ya **kâr-ı zât** ya değil; birincisi bâtıl (yoksa hâzır vakit mâzî ve müstakbelin aynı olurdu); ⇒ **gayr-i kâr-ı zât kem** ⇒ **cüzleri tegayyür ve mürûr üzere** ⇒ **maddesi olmalı; zaman maddesinin sıfatı ⇒ her muhdes için mâdde şart ⇒ zamanın maddesi ya cismin maddesi ya cismin sıfatı**: ilki bâtıl (zaman mesafenin maddesinin mikdârı olsa, eşit mesafede farklı zaman olur; mütehârrikin maddesinin mikdârı olsa zaman büyüdükçe mütehârrik büyür — saçma) ⇒ **zaman cisimde hâl bir hey'etin mikdârı; hey'et kâr ya değil; kâr olan hey'etin mikdârı kâr olmalı; bu mikdâr gayr-i kâr ⇒ gayr-i kâr hey'etin mikdârı = hareket ⇒ zaman mikdâr-ı harekettir.**' **Cevap**: '**mûsâvât-mufâvat kabul eden her şey bizzat kem değildir; kem bi'z-zât ancak musâvâtı zâtı gereği (başkası için değil) kabul edendir**; sizin ispatladığınız zamanın **kendi zâtından** musâvâtı kabul ettiği değil.' Zaman **kendi başına müstakil, kâim hakîkat** olabilir, sonra hareketlere **nisbetler ve izâfetler** arız olur, bu nisbetlerle musâvâtı kabul eder' (p67).
 - Netice/hüküm: **Hasmın 'kem ⇒ mâdde ⇒ hey'et ⇒ hareket' zinciri: 'zaman kem bi'z-zât' öncülü (mübâşir musâvât) kabul edilmiyor.**
 - Delil çeşidi: **hasım delilinin nakli + öncül reddi (izâfî musâvât)**; (T) Râzî cevabı **mümkün alternatifi gösteriyor (zaman müstakil hakîkat + izâfetlerle musâvât)** — **çürütme değil, öncülü ayırma; F 27-B: hasmın zinciri 'zaman müstakil değil' varsayarsa dâire.**
 - Mevzuya bağı: **Fasıl I §3**: 'müstakil zaman + izâfetle musâvât' **c5 p32 bedîhî okulunun** zeminidir; **Risale zaman ontolojisini KAPALI bırakır; 'zaman hareket değildir' hükmü Râzî'ce güçlü, 'zaman müstakil mevcut' hükmü ise ayrı ispat ister.**
 - Doğan sual: Hasmın zincirinde **'her muhdesin maddesi' öncülü (Aristo tabiiyâtı)** — **Risale bu öncülü almaz; Râzî'nin cevabı bunu da reddediyor mu?** (p67'de değil; ⊬).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.66 otomatik karşılaştırıldı: kelime kapsama %81, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p67
-- OCR: orta (birkaç satır hasarlı; mânâ okunuyor)
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.67 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Kimin sesi: Râzî; hasmın 3. hüccetinin aktarımı ve cevabı.** Cevap 2'nin sonu: '**bu hayalin mâddesini kesen şey**: **Allah'ın zâtının bin sene devamının yüz sene devamından daha uzun olduğunu zarûrî biliriz; inkâr edene iltifat edilmez** ⇒ **dâvâmın musâvât ve lâmusâvât kabul etmesi zâtın cisim/mütehârrik olmasını gerektirmez; burada da öyle.**' **Hasmın 3. hüccet**: '**zamanın harekete lâhik olduğunun delili: hareket şuuru arttıkça zaman şuuru artar**; hüzünlü mürûr-ı zamanı uzun bulur, tarab içinde kısa bulur (birincisi hareketleri idrâk eder, ikincisi gâfil); **uyuyan Ashâb-ı Kehf gibi: hareket şuuru yoksa zaman şuuru yok.**' **Cevap**: '**uyuyan zamanı hissetmez çünkü uyku mutlak şuura mânidir; hareketi hissetmemesi zamanı hissetmemeyi iktizâ ettiği için değil**; sonra: **bu tersinden evlâ**: karanlık evde oturan **kör, hiçbir hareketi hissetmez, ama müddetin ve zamanın mürûrunu hisseder.**' (p68 boş).
 - Netice/hüküm: **Hasmın 3. hüccet (şuur ↔ zaman) reddedildi: uyku şuura mânidir; hareketsiz de zaman şuuru vardır (kör karanlık evde).**
 - Delil çeşidi: **zihnî deney + psikolojik gözlem**; (T) ikna'î (**⊬ Râzî'nin 'Allah'ın devamı bin sene > yüz sene' örneği İslâm aklına uygun bir dilde 'zâtın devamı' ifadesi kullanıyor; Risale bunu 'zamansız devam' diliyle çelişkili bulursa örnek dışarıda kalır — bkz. c2 p76**).
 - Mevzuya bağı: **İslâmî kayıt**: 'Allah'ın zâtının bin sene devamı yüz senelikten uzundur' cümlesi **Risale'ye ALINMAZ** (Allah'a zamana bağlı ölçü isnâdı; Ehl-i Sünnet 'Allah zamandan münezzeh' ilkesine ters düşebilir). **Râzî'nin tümü burada ilzâm biçiminde: itirazcının 'dâvâm ⇒ ölçülebilir ⇒ cisim' öncülünü kırmak.** Kaynak notu olarak kalır, ana metne girmez.
 - Doğan sual: **Allah'ın zâtı için 'devam uzun-kısa' ifadesi Râzî'nin kendi kelâmında da problemli; c1/c2'deki 'zamansız devam' ile nasıl uzlaşır?** (⊬; borç).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.67 otomatik karşılaştırıldı: kelime kapsama %83, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p68
-- OCR: —
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.68 — OTOMATİK DOĞRULANDI
 - Okuma: okunmadı (boş sayfa)
 - İçerik: Boş.
 - Netice/hüküm: —
 - Delil çeşidi: —
 - Mevzuya bağı: —
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası boş/çok kısa; gerçek metinde bu sayfa için içerik yok (boş sayfa).
 
 ## c5 p69
-- OCR: orta (sayfa başındaki çizgi/harf çöpü satırları okunmadı; Fasıl başlığı ve gövde okundu)
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.69 — OTOMATİK DOĞRULANDI
 - Okuma: tam (başlık satırları hasarlı)
 - İçerik: **Fasıl 5: 'Zamanın muttasıl kem olduğu sözünün tahkîki ve bunun hak olmadığının beyânı'.** **Kimin sesi: hasım (muttasıl-kem diyenler), Râzî aktarıyor.** Hüccet: '**zaman musâvât ve mufâvat kabul eder; bu kem; kem ya muttasıl ya munfasıl; zaman munfasıl kem olamaz: her munfasıl kem birimlerden terkîb; zaman munfasıl olsa ardışık ânlardan ve peş peşe dufa'lardan terkîb olur; bu durumda hareket de birbirini izleyen, her biri bölünmeyen şeylerden terkîb olur** (bir ânda vâki hareket bölünürse ilk yarısı ikinciden önce vâki olurdu, o ân ikiye bölünürdü; oysa ân bölünmez varsayıldı); **hareket bölünmez parçalardan terkîb olsa cisim 'cüz-i lâyetecezzâ'dan terkîb olur** (mesafenin bir ânda katedilen bölümü bölünmezse hareketin cüz-i lâyetecezzâsı; bölünürse ...)' (p70).
 - Netice/hüküm: **Hasmın 'muttasıl kem' hüccetinin ilk yarısı: munfasıl zaman ⇒ ânlardan terkîb ⇒ hareket ve cisim bölünmez parçalardan terkîb.**
 - Delil çeşidi: **taksîm + reductio (Zeno türü)**; (T) burhânî biçim (**hasmın delili**).
 - Mevzuya bağı: **KRİTİK — borç listesi 'cevher-i ferd, tenâhî-i ebâd'**: bu, **Aristo/filozof sürekliliği (muttasıl zaman-hareket-cisim) ile Eş'arî atomculuğu (cevher-i ferd, ân-ı zamanî) çatışmasının ana yeridir; p62 H8'de 'ânlardan terkîb kavme göre muhâl' denen öncül burada asıl tartışılıyor.** Risale hâlâ **cevher-i ferd hükmü vermez**; Râzî'nin cevabı p70–72'de.
 - Doğan sual: Hasmın 'bölünen ân → ân bölünür' argümanı Zeno-vârî; **'bir ânda hareket vâki olur' öncülü (ân'da hareket) Aristo'nun kendi öncülü mü?** (Aristo ân'da hareket kabul etmez).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.69 otomatik karşılaştırıldı: kelime kapsama %79, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p70
-- OCR: orta (dipnotlarda hasar; gövde okunuyor)
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.70 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Kimin sesi: hasım (sonu), Râzî.** Hasım hüccetin sonu: 'zaman ânlardan terkîb olsa mesafe cüz-i lâyetecezzâdan terkîb olur; **bu hükemâ katında meşhur bâtıl** ⇒ zaman munfasıl kem değil ⇒ **muttasıl kem**; bu, kavmin takrîri.' **Râzî**: '**biz zamanın muttasıl kem olmasının imtinâ'ına dair deliller ve hasmın hüccetine cevap zikrederiz.**' **Râzî H1**: '**bu hâzır ân, mâzînin nihâyeti ve müstakbelin bidâyeti, ikiye bölünüp biri diğerinden önce olamaz** (ilk yarısı hâzırken ikincisi hâsıl olmaz, ikincisi gelince ilki fânî); **bölünüp biri diğerine vâcib-mütekaddim olan her şey hâzır olamaz; tersine: her hâzır bölünmez** ⇒ **hâzır ân bölünmez**; ⇒ **ademi (fena olması) dufa'tan (bir anda) olmalı, tedrîcî olsa bölünür; adem dufa'tan ise, ademinin ilk ânı vücûduna muttasıl** ⇒ **iki ân birbirini izledi** ⇒ aynı soru ikinci ân için ⇒ **ânların tetâlîsi kat'î** ⇒ **matlûb.**' (p71).
 - Netice/hüküm: **Râzî H1 (tetâlî-i ânât): hâzır ân bölünmez; ademi dufa'tan ⇒ ardışık ân ⇒ zaman ânlardan oluşur.**
 - Delil çeşidi: **reductio + taksîm (dufa'/tedrîc)**; (T) burhânî biçim; **⊬ 'hâzır bölünmez' öncülü 'hâzır' kavramının tanımına yaslanır — c5 p62'deki 'hâzır ancak ân' öncülüyle aynı.**
 - Mevzuya bağı: **KRİTİK — cevher-i ferd, ânlar**: **Râzî burada 'zamanın ânlardan terkîbi'ni KENDİ delili olarak kuruyor; p62 H8'de aynı fikri 'kavme göre muhâl' diye filozof öncülü olarak yazmıştı: tutarlı okuma ⇒ H8 filozofa ilzâm, H1 (p70) Râzî'nin kendi hükmü.** **c4 p200 'dehr' ile birlikte: zaman = ardışık ânlar, imtidâd zihnî (p58 H2 ile uyumlu).** Risale bu hükmü **ders katmanında 'Râzî'ye göre' notuyla** taşır, ana metne almaz (cevher-i ferd bâbı okunmadı).
 - Doğan sual: **Filozof burada 'hâzır ân sabit, hareket bölünmez ân'da hareket yok (Aristo)' der ⇒ Râzî bunu (p71 itirazında) 3. şıkla karşılıyor mu?** (p71).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.70 otomatik karşılaştırıldı: kelime kapsama %81, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p71
-- OCR: orta (bazı kelimeler bozuk; itiraz-cevap yapısı okunuyor)
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.71 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Kimin sesi: itirazcı ('فإن قيل'), Râzî cevap.** '**Adem ya dufa'tan ya tedrîcen** dediniz; **3. şık: ânın ademi kendinden sonraki bütün zamanda vâki olur**; '**bizim mesele ânın ademi değil, ademinin ilki**; ademin ilki sonraki bütün zamanda hâsıl olmaz' denemez.' **Cevap**: '**'ademin ilki' ile ne kastediyorsunuz?** Ademin bir ilki olması **kabul**; **fakat ademin ilkinin vücûdu olması neden câiz olmasın?** yani **o ânın hâsıl olması ve sübûtu, ademinin ilk zamanının kendisi** ⇒ bu takdirde ânların tetâlîsi lâzım gelmez.' 'Yok, ademin ilki **onda ma'dûm olduğu ilk zaman** kastediliyorsa **bu ihtilaf konusu**; ademin ilki olduğunu **ispat edecek delil = tetâlî-i ânât'a bina edilir ⇒ devir.**' **Râzî'nin cevabı**: '**biz iddia ederiz ki ânın ademi için bir 'ilk' olmalı ki o ân onda ma'dûm olsun: bu ân mevcuttu, sonra ma'dûm oldu; ademi 'lem yekûn'dan sonra hâdis; bu ademin bir ilki vardır**; ve ademin o ilkte hâsıl olması lâbüddür; yoksa henüz vücûttan ademe intikâl etmemiştir; oysa intikâl vâki farz edildi ⇒ **mevcut ân ma'dûm olunca önce olmalı ...**' (p72).
 - Netice/hüküm: **İtiraz ('ademin ilki = vücûdu, tetâlî lâzım gelmez') ve Râzî cevabı: 'ân mevcuttu sonra ma'dûm oldu; ademin bir ilki vardır ve ademi o ilkte hâsıldır' — devir suçlamasına karşı savunma.**
 - Delil çeşidi: **itiraz-cevap; devir kontrolü**; (T) **ihtilâflı öncül (ademin ilki) — Râzî delil ≠ dava sınırında: 'ademin ilki var' öncülü ânların tetâlîsini varsayabilir; Râzî 'ma'dûm oldu' hâdiseden çıkarıyor.**
 - Mevzuya bağı: **c4 'hudûs delilinde adem-i sâbık'** ile aynı zemin; **F 27-B**: bu cevap **ayırt ediyor mu?** İtirazcının 'ademin ilki = vücûdu' okuması **zaman sürekli iken de tutarlı**; Râzî 'hâdis ademin ilki' ile **hudûsu önceden varsayıyor** olabilir (kısırdöngü kontrolü).
 - Doğan sual: **İtirazcının okuması (ademin ilki = vücûdun son ânı) ile Râzî'nin 'ademin ilki vardır' ayırdı: sürekli zamanda 'son ân yok / ilk adem ânı yok' (açık aralık) — Râzî bu matematiksel okumayı hiç ele almıyor (⊬).**
+- Doğrulama notu: OCR sayfası ile gerçek metin s.71 otomatik karşılaştırıldı: kelime kapsama %79, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p72
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.72 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Kimin sesi: Râzî (kendi delilleri).** H1 cevap sonu: 'ademin ilki (ilk hâsıl anı) sabit ⇒ hüccet **red kabul etmez**.' **H2 (tetâlî-i ânât hak)**: '**hâzır ân bölünmez; bu ân ma'dûm olunca ardından başka bir şey hâsıl oldu mu?** Hâsıl olduysa **o da hâzır ⇒ bölünmez** ⇒ **ânlar tetâlî**; hâsıl olmadıysa ⇒ **zaman inkıtâ' bulur ve ademe varır; bâtıl (zaman munkatı' değil).** **Bu delil önceki delilden farkı**: önceki 'ânın ademi bir başka ânda vâki olmalı, ona bitişik' dedi; **bu delil ilk ânın nasıl ma'dûm olduğuna hiç girmiyor: ilk ânın sona ermesinden sonra başka bir ân hâzır olmalı.**' **H3**: '**zamanın bir kısmı mâzî, bir kısmı müstakbel; ikisi ma'dûm; hâzır ân zamanın iki kısmını (mâzî-müstakbel) birbirine bağlarsa, iki ma'dûmdan biri diğer ma'dûma mevcut bir uçla bağlanmış olur — akıldan uzak**; 'zaman **ardışık ânlardan ve peş peşe dufa'lardan terkîb**' dersek **iş zâil** (mevcut olanın ma'dûmla ilgisi yok, ancak birincinin zevâlinden sonra hâsıl olmakla).' **H4** başlıyor: 'zamanda farz edilen her iki cüzden biri ...' (p73).
 - Netice/hüküm: **H2, H3: Râzî zamanı ardışık ânlardan (munfasıl) okuyor: 'ân-sonrası ân' ve 'mâzî-müstakbel ma'dûm, bağ ân'.**
 - Delil çeşidi: **taksîm + reductio (H2); istib'âd (uzak bulma) — H3**; (T) H2 burhânî biçim; **H3 istib'âd = ikna'î ('akıldan uzak' bir hüküm, ispat değil)**.
 - Mevzuya bağı: **Fasıl I §3**: Râzî **'zaman munfasıl/ânlı'** yönünü seçiyor (**⊬ kesin mi: hüccet 4 ve sonrası okunmadı, karşı itirazlar var**); **Risale bu cevher-i ferd-i zamânî hükmünü ana metne ALMAZ**, 'Râzî'ye göre' notuyla. **H2'nin 'zaman munkatı' değil' öncülü: 'zaman ebedî' (ezelî-ebedî zaman) ⇒ c4 hudûs (zamanın başlangıcı) ile bağlantılı: bu öncül Risale'nin 'âlem hâdis' tezini zaman ekseninde ZORLAR ⇒ c4 ile karşılaştırma borcu.**
 - Doğan sual: **'Zaman munkatı' değil' (H2) öncülü ile Râzî'nin kendi hudûs delili (âlem-zaman başlangıcı) nasıl bağdaşıyor?** Râzî hudûsu **zamanın başlangıcı** olarak mı, **zaman-dışı ademden hudûs** olarak mı okuyor? (Sonraki fasıllarda aranacak.)
+- Doğrulama notu: OCR sayfası ile gerçek metin s.72 otomatik karşılaştırıldı: kelime kapsama %78, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p73
-- OCR: orta (dipnot hasarı; gövde okunuyor)
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.73 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Kimin sesi: Râzî (kendi delilleri).** **H4 (tetâlî-i ânât)**: 'zamanda farz edilen her iki cüzden biri öbüründen **mütekaddim** olmalı; bu ilklik **başkası sebebiyle** olamaz (teselsül/devir) ⇒ mütekaddim hükmü verilen cüz **zâtı gereği** mütekaddim, mütee'hhir cüz **zâtı gereği** mütee'hhir ⇒ her iki cüzün **zâtını lâzım olan bir lâzımı var, öbür cüzde imtinâ'** ⇒ **lâzımların ihtilâfı mâhiyetlerin ihtilâfına delâlet eder** ⇒ zamanda farz edilen cüzler **hakîkat ve mâhiyette farklı** ⇒ **ittisâlin mânâsı tevâlî ve teâkübdür; her biri kendinde öbüründen munfasıl** ⇒ ânların tetâlîsi bu.' Sonuç: '**zaman kem-i munfasıl, ardışık ânlardan ve peş peşe dufa'lardan mürekkeb.**' **H5**: '**akıl ma'dûm (mâzî) veya müstakbel diye hükmettiği her şeyin mecmûu ya da cüzleri 'hâzır oldu/olacak' diye hükmedilmeli (hâzır olmamış olan mutlak adem; mutlak ademe mâzî denmez)** ⇒ mâzî-müstakbel zaman ya mecmûuyla hâzır (muhâl) ya **her cüzüyle hâzır** (p74).
 - Netice/hüküm: **H4: zamanın cüzleri mâhiyet olarak ayrı ⇒ zaman munfasıl kem. H5 başlıyor: mâzî ve müstakbel her cüzüyle hâzır olmuş/olacak.**
 - Delil çeşidi: **lâzım-melzûm çıkarımı + reductio (teselsül/devir)**; (T) burhânî biçim; **⊬ 'lâzımların ihtilâfı mâhiyetlerin ihtilâfına delâlet eder' önermesi zaman cüzlerinin 'aynı cinsten farklı fertler' olma ihtimalini (ferdî ihtilâf) elemez ⇒ H4 bu ihtimale karşı AYIRT ETMİYOR (F 27-B: ayırt eden delil değil).**
 - Mevzuya bağı: **Fasıl I §3**: H4'ün öncülü ('mütekaddim li-zâtihi') **zaman cüzünün 'öncelik'inin zâtî olduğunu** varsayar; **Risale bu öncüle bağlı hükmü almaz.**
 - Doğan sual: **H4 delil mi, dava mı?** 'Cüzler zâtı gereği mütekaddim/müteahhir' ⇒ zamanın cüz cüz oluşunu önceden koyar (**delil ≠ dava**).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.73 otomatik karşılaştırıldı: kelime kapsama %83, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p74
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.74 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Kimin sesi: Râzî.** H5 devam: 'mecmûuyla hâzır muhâl; **her cüzüyle hâzır; her hâzır = bölünmeyen ân** ⇒ **mâzî ve müstakbel zaman bölünmeyen hudûrlardan, bölünmeyen ânlardan terkîb**.' **Kayıt**: '**hareket bâbında ortaya çıkacak: hareket ister eyn (yer) ister keyf (nitelik) olsun, birbirini izleyen bölünmeyen şeylerden terkîb olur; bu sabit olunca zaman da bölünmeyen ânlardan mürekkeb olmalı; hareketin böyle olduğunu kuran her delil zamanın da böyle olduğunu gösterir.**' **Hasmın 'zaman ânlardan terkîb olsa cisim cüz-i lâyetecezzâdan terkîb olur' delili**: '**bu HAK söz, üzerinde gubâr yok; ancak biz cüz-i lâyetecezzânın isbâtının bâtıl olduğunu KABUL ETMİYORUZ; istiksâ yerinde gelecek.**' (Dipnot: nüshalarda 'istiksâ geçti' farkı.)
 - Netice/hüküm: **Râzî: zaman ânlardan terkîb; bunun lâzımı 'cisim cüz-i lâyetecezzâdan' olması hakdır, ve cüz-i lâyetecezzâyı Râzî KABUL EDİYOR.**
 - Delil çeşidi: **hareket bâbına havale + hasmın öncülünü kabul (bâtıl lâzımı kabul)**; (T) **Râzî kendi hükmünü yazdı: cevher-i ferd (cüz-i lâyetecezzâ) doğru; ⊬ isbât bâbı (hareket ve cevher-i ferd bâbı) henüz okunmadı.**
 - Mevzuya bağı: **KRİTİK — borç listesi 'cevher-i ferd, tenâhî-i ebâd'**: **Râzî'nin cevher-i ferd/ân atomculuğu hükmü ilk kez BU cildin kendi ağzıyla yazıldı (c5 p74). İslâm ilim geleneğinde bu, kelâmcıların (Eş'arî ekolü) ana hattıdır; Risale bunu 'Râzî'nin kelâmî tercihi' diye yazar, hüküm bağlamaz.** Delil: hareket bâbı (c5 devamı).
 - Doğan sual: **Hareket bâbı ('birbirini izleyen bölünmeyenler') Râzî'nin kendi isbâtı ile nerede? Hangi sayfada? Bu borç o bâba kadar açık.**
+- Doğrulama notu: OCR sayfası ile gerçek metin s.74 otomatik karşılaştırıldı: kelime kapsama %85, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p75
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.75 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Fasıl 6: 'Zamanın mâhiyeti hakkında diğer mezheplerin ve sözlerin taharrîsi'.** **Kimin sesi: Râzî.** 'Zaman = felek hareketi diyenin fesâdına delilleri **mübâlağa ile** anlattık; zaman = mikdâr-ı hareket-i felek diyenin fesâdını **akıl sahibi için şüphe bırakmayacak şekilde** açığa çıkardık. **Ebü'l-Berekât'ın 'zaman = mikdâr-ı vücûd' sözü: mübhem ve mücmel**; en iyi yorum: **zaman = vücûdun imtidâdının mikdârı**. **Bu murâdsa bâtıl: vücûdun imtidâdı = şeyin bekâsı, dâvâmı, istimrârı; bu bekâ ya bâkînin zâtından zâid değildir ya zâiddir ve o şeye kâim sıfattır; ayrıca her şeyin bekâsı başka şeyin bekâsından farklı** ⇒ zaman bu olsaydı **bu tek sâatte toplanan zamanların sayısı bu sâatte bâkî şeylerin sayısı kadar olurdu**; oysa çok zamanların aynı anda toplanmasının muhâl olduğunu gösterdik.' (p76).
 - Netice/hüküm: **Ebü'l-Berekât'ın 'zaman = mikdâr-ı vücûd' görüşü Râzî'ce 'mübhem ve (yorumlanırsa) bâtıl'.**
 - Delil çeşidi: **yorum + reductio (çok zaman aynı anda)**; (T) burhânî biçim; **⊬ 'Ebü'l-Berekât' görüşü Râzî'nin aktardığı hâliyle; kendi eserinden (el-Mu'teber) doğrulanmadı.**
 - Mevzuya bağı: Risale'ye doğrudan bağ yok; **c5 p57 (H1 cevap 2) 'dâvâm ⇒ illetin dâvâmı' ile aynı zemin.**
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.75 otomatik karşılaştırıldı: kelime kapsama %81, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p76
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.76 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Kimin sesi: Râzî, müteahhirûnun itirazı aktarımı, sonra Râzî'nin KENDİ hükmü.** '**Kudemâ hükemânın sözü: zaman kendi başına kâim, müstakil bir cevher.** **Müteahhirûn ibtâl etti: zaman seyyâl ve mütecaddidü'l-vücûd; böyle olan şey kendi kendine kâim müstakil cevher olamaz** — bu, bu mezhebi ibtâlde en son ilzâm.' **Râzî cevap**: '**zamanın zâtında ve mâhiyetinde seyyâl, mütebeddil, munkazî olduğunu kabul etmiyoruz. Zamanın bâkî, ezelî, ebedî bir cevher olması neden câiz olmasın? Ancak hevâdis hâdis olunca bu ardışık hâdisler ona mukârin olur; o vakit değişme ve tebeddül o cevherin bu hâdislere NİSBETLERİNDE olur; özet: seyalân ve tebeddül zamanın zâtında ve cevherinde değil, mütecaddid hâdislere nisbetindedir.**' **Delil**: '**Vâcibü'l-vücûd li-zâtihi'nin zâtı her şeye nisbetle ya ondan önce ya onunla ya ondan sonradır; mütegayyirâtın değişmesiyle 'kabliyet, meiyyet, ba'diyet' denilen bu nisbetler Vâcib'in zâtında değişir; bu nisbet ve izâfetlerin değişmesi onun zâtında ve hakîkî sıfatlarında tebeddül gerektirmez; öyleyse aynı mânâ zamanın zâtında neden ma'kûl olmasın?**' Sonuç: '**müteahhirûnun kudemâ mezhebini ibtâl için zikrettiği hüccet zayıf ve sâkıttır. Bence bu söz, zamanın mâhiyeti ve hakîkati hakkında zikredilen sözlerin EN YAKINIDIR ve İmâm Eflâtun'un mezhebidir.**'
 - Netice/hüküm: **Râzî'nin kendi hükmü: 'zaman bâkî, ezelî-ebedî cevher; seyalân yalnız nisbetlerde' görüşü zamanın mâhiyeti hakkında sözlerin 'en yakını' (Eflâtun); müteahhirûnun ibtâli zayıf.**
 - Delil çeşidi: **mukayese (Vâcib'in nisbetleri ile) + öncül reddi**; (T) **Râzî derecesi: 'en yakın' (kat'î değil); dayanak: Vâcib'in kabl/ma'a/ba'd nisbetleri örneği (analoji).**
 - Mevzuya bağı: **EN KRİTİK — Fasıl I §3, §6.3, hudûs/kıdem ve İSLÂM KAYDI**: Râzî burada **zamanı 'bâkî, ezelî-ebedî cevher' saymayı 'en yakın' buluyor; 'Vâcib'in zâtı her şeye nisbetle ya önce ya onunla ya sonradır' analojisi bu cevherin Vâcib'e benzemesini destekler.** **Risale'nin 'zaman mahlûktur' cümlesi ile bu görüş AÇIKÇA ÇATIŞIR.** **İslâm ilkesi (Risale'nin değişmezi): Allah'tan başka her şey mahlûktur, kadîm yalnız Allah'tır (Hadîd 57/3 'el-Evvel'; tevhid).** **Karar: bu hüküm Risale'ye ALINMAZ; 'Râzî'nin zaman hakkındaki tercihi, ehl-i sünnet ana hattının (zamanın mahlûk olduğu) dışındadır' notuyla kaynak olarak kalır; cevabı ayrıca verilmeli: Râzî'nin 'en yakın' derecesi, 'zaman ≠ hareket' kısmında sağlam; 'zaman kadîm cevher' kısmında ise Râzî kendi tevhid burhanı (c2 K2 F1: vâcib teaddüd etmez) ile çatışıyor — p77'de bu çatışmanın nasıl çözüldüğü aranacak.**
 - Doğan sual: **Râzî kendi c2 tevhid burhanı ('iki kadîm-vâcib olmaz') ile 'zaman ezelî cevher' hükmünü nasıl bağdaştırıyor? (p77: 'mümkin bi'z-zât vâcib bi'ğayrihî' şıkkı bunu çözecek mi?)** ⊬ 'en yakın' Râzî'nin final hükmü mü, cedelî tercih mi — sonraki fasıllarda **başka bir hüküm çıkıp çıkmadığı aranacak.**
+- Doğrulama notu: OCR sayfası ile gerçek metin s.76 otomatik karşılaştırıldı: kelime kapsama %83, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p77
 - OCR: orta
@@ -696,22 +742,24 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Doğan sual: **Râzî burada kendi kelâmî hudûs-i âlem hükmünü (c4 K2) ve 'zaman ezelî cevher' hükmünü nasıl birleştiriyor?** İkisi çelişir: zaman ezelî ise 'âlem hâdis' zamanla mı ölçülür, zamanla ölçülmez mi? Bu **açık borç: c4 K2 hudûs ↔ c5 zaman kıdemi** — cilt 5 sonunda toplu karşılaştırma yazılacak.
 
 ## c5 p78
-- OCR: orta (dipnot hasarı; iskelet net)
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.78 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Kimin sesi: 'zaman vâcibdir' diyenlerin hüccetleri (Râzî aktarıyor, kendi iddiası olarak sunmuyor).** H2 sonu: 'bu, vâcibü'l-vücûd'un hâssalarındandır; **vâcibin bundan yüce, eseri bundan kâmil bir sıfatı yok.**' **H3**: 'zâtı gereği vâcib bir şey isbât edince **onun ezelen-ebeden dâim mevcut** olduğunu ma'kul etmedikçe vâcib olduğunu kabul edemeyiz; devamın mânâsı 'ilki ve sonu olmayan' ⇒ **hiçbir şeye 'vâcib' hükmünü ancak müdde ve zaman sebebiyle veririz; bu, başkasının vâcibiyetinin sebebi olduğuna göre kendisinin vâcib olması evlâdır.**' **H4**: '**müdde ve zamanın dışındaki her şeyin dâvâmı ancak müdde ve zamanın dâvâmıyla ma'kul; müdde-zamanın dâvâmı ise başka şeyin dâvâmından müstağnî ⇒ vücûdu her şeyden müstağnî, her şey vücûdda ona muhtaç ⇒ zamandan başka zâtı gereği vâcib mevcut yok; en azından o da zâtı gereği vâcib.**' **Râzî'nin uyarısı**: '**'zaman mevcut vâcibü'l-vücûd' diyenler iki fırka**: (a) **mübâlağa/ifrât: 'zaman âlemin ilâhı, bütün mümkinlerin müdebbiridir' diyenler**; hüccetleri: 'müdde ve zamandan gayrı her şeyin dâvâmı müddet dâvâmıyla; müddet dâvâmı her şeyden müstağnî' ⇒ ...' (p79).
 - Netice/hüküm: **H3–H4 (aktarım): 'her şeyin dâvâmı müdde/zamana bağlı, müdde bağımsız ⇒ zâtı gereği vâcib zamandır'; iki fırkadan ilki 'zaman = âlemin ilâhı, müdebbir' diyor.**
 - Delil çeşidi: **hasım hüccet aktarımı**; (T) H3'ün 'dâvâm ⇒ zaman' öncülü **zamanı devamın ölçüsü/zarfı** saymakla **zaten kurulmuş** ⇒ dâirevî.
 - Mevzuya bağı: **İSLÂM KAYDI**: 'zaman âlemin ilâhı ve müdebbiridir' görüşü **Risale'de 'bâtıl-şirk kaydı' olarak yazılır: Allah'tan başka ilâh yok; zaman ilâh değil, mahlûktur.** **Bu, Râzî'nin kendi hükmü değil, aktarılan mezheptir (kimin sesi: hasım/mezhep sahibi).** H4'ün 'dâvâm ancak zamanla' öncülü **c5 p57 H1'in cevap 2'si ('dâvâm ⇒ illetin dâvâmı') ile Râzî'ce yanıtlanmış** (mümkinin dâvâmı illetiyle).
 - Doğan sual: **Bu iki fırkanın sahipleri kimler? (⊬ isim verilmiyor; Râzî 'bir topluluk' diyor.)**
+- Doğrulama notu: OCR sayfası ile gerçek metin s.78 otomatik karşılaştırıldı: kelime kapsama %82, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p79
-- OCR: orta (bazı kelime hasarı; mânâ okunuyor)
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.79 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Kimin sesi: 'zaman ilâhtır' diyen fırkanın hüccetinin sonu ve **'tevhid, cihet, isim' bağlamaları** (aktarım).** '**müdde her şeyin ona muhtaç olması, onun her şeyden müstağnî olması ⇒ müdde 'yalnız zâtı gereği vâcib'**'; **'sarîh akıl müddenin ve zamanın tek olduğuna şâhit: bu sâatin tek sâat olduğunu bilirim ⇒ tevhîd-i vâcib bedîhî'; 'zaman bir tarafa/cihete has değil ⇒ âlemin ilâhının cihet ve hayyizden müstağnî, cisim ve cismânîden münezzeh olduğunu sarîh akıl bu itibarla ilân eder'; 'akıllarda ve şeriatlarda sabit: O el-Evvel, el-Âhir, ez-Zâhir, el-Bâtın; bu sıfatlar ancak müddeye lâyık'** (her mevcut farz edilse müdde ondan önce ve sonra; zâhir-bâtın: müdde-zamanın varlığının bilgisi en zâhir ilimlerden, mâhiyetinin bilgisi en gizli; 'en yakından yakın, en uzaktan uzak').' **'Bu, hakîkatiyle vâcibü'l-vücûd li-zâtihi, ilmi bedîhî; fıtrat müdde-zamanın rafını akılda ...'** (p80).
 - Netice/hüküm: **Aktarılan fırka Kur'ân'daki isimleri (el-Evvel, el-Âhir, ez-Zâhir, el-Bâtın; Hadîd 57/3) zamana/müddeye uyduruyor.**
 - Delil çeşidi: **hasım aktarımı; isim-sıfat kıyası**; (T) **ikna'î (isim kıyası; zaman = 'Evvel' iddiası naklî dayanağı yanlış yere çeviriyor).**
 - Mevzuya bağı: **İSLÂM KAYDI (KIRMIZI)**: 'el-Evvel, el-Âhir, ez-Zâhir, el-Bâtın' isimleri **Allah'ın zâtına ait** (Hadîd 57/3); **bunları zamana/müddeye uygulamak Risale'nin tevhid ilkesine aykırıdır; bu satırlar Râzî'nin nakli, Râzî'nin hükmü değildir; Risale bu satırları ders katmanında 'reddedilen mezheb' olarak yazar, ana metne almaz.** **Ayrıca: 'sarîh akıl zaman tek' = sâatin tek olması bedîhesi (c5 p53 H1 (a) ile aynı öncül).**
 - Doğan sual: **Bu fırkanın kendi 'Allah = müdde' iddiasını Râzî nasıl cevaplıyor? (p80–81'de aranacak.)**
+- Doğrulama notu: OCR sayfası ile gerçek metin s.79 otomatik karşılaştırıldı: kelime kapsama %81, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p80
 - OCR: orta (son satırlar hasarlı; sayfa fasıl ortasında biter)
@@ -732,13 +780,14 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Doğan sual: **Râzî 'zaman mümkin ve ezelî' derken 'ezelî' hükmünü c4 hudûs-i âlem delilleriyle nasıl bağdaştırıyor?** Çelişki mi, yoksa 'zaman' (dehr) ile 'âlem' arasında bir ayrım mı? **Cilt 5 sonunda c4–c5 karşılaştırma tablosu yazılacak.**
 
 ## c5 p82
-- OCR: —
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.82 — OTOMATİK DOĞRULANDI
 - Okuma: okunmadı (boş sayfa)
 - İçerik: Boş.
 - Netice/hüküm: —
 - Delil çeşidi: —
 - Mevzuya bağı: —
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası boş/çok kısa; gerçek metinde bu sayfa için içerik yok (boş sayfa).
 
 ## c5 p83
 - OCR: orta (H2 başlığı ve ilk cümleler hasarlı; H1 ve H2 gövdesi okunuyor)
@@ -750,22 +799,24 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Doğan sual: —
 
 ## c5 p84
-- OCR: orta-iyi
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.84 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Kimin sesi: Râzî.** **H3**: '**gerçek müşâhedelerle şeyleri müşâhede ettiğimizde ve kendimizde elem ve lezzet bulduğumuzda tartışma yok; bunlar 'hâl'de müşâhede edilir; geçen ve kalmayan müşâhede edilemez; henüz gelmeyen de edilemez** ⇒ bu vicdânî ve müşâhedeler hâlde, ne mâzîde ne müstakbelde hâsıl.' **Kayıt**: '**hâlin/hâzırın mevcut olması zaruretle kabul edilmeli; bu, beyân ve burhana ihtiyaç duyulmayacak kadar zâhir ve celîl; bu delilleri mübâlağa için zikrettik.**' **Mes'ele 2: hâzır ânın bölünmemesi.** **Mukaddime**: '**bir şeyin bölünmesi 2 türlü**: (1) **bütün cüz'lerinin beraber mevcut olduğu bölünme (cisim gibi)**; (2) **bir cüz mevcutken diğerinin mevcut olması imtinâ' olan bölünme (zaman ve hareket gibi): günün başından sonuna uzanan zaman cüzlere bölünür; ama farz edilen hiçbir cüz, öbür cüz mevcutken mevcut olamaz; bu, teemmül ve lafız tasavvurlarını hazırladıktan sonra zarûrî ilimdir.**' 'Hâzır ân 2. türle **bölünmez**' (p85).
 - Netice/hüküm: **Mes'ele 1 bitti (H3 müşâhede); Mes'ele 2 başladı: iki tür bölünme ayırdı.**
 - Delil çeşidi: **müşâhede (vicdan) + tasnif**; (T) H3 ikna'î-vicdânî; **⊬ 'müşâhede hâlde' önermesi müşâhedenin 'ân'da olduğunu değil 'kısa süreli hâl'de olduğunu da gösterebilir (ân ≡ hâl mi?).**
 - Mevzuya bağı: **Fasıl I §3 ve hafıza/idrâk**: 'müşâhede hâlde' + 'bölünmeyen hâzır' ⇒ 'idrâkin süresi bir ân mı?' sorusu Risale'nin ilim bâbına (c3 idrâk) bir soru doğurur (⊬ bağlanmadı).
 - Doğan sual: Vicdanın 'şimdi' algısı **süreli** (fenomenolojik hâl); **'ân' matematik kesit mi, algı birimi mi?** Râzî ikisini aynı sayıyor (**F 27-B: ayırt etmiyor**).
+- Doğrulama notu: OCR sayfası ile gerçek metin s.84 otomatik karşılaştırıldı: kelime kapsama %86, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p85
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.85 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Kimin sesi: Râzî; sonra Aristo mezhebi içinde açıklama.** **Mes'ele 2 sonu**: '**hâzır ân 2. tür bölünmeyle bölünmez: bu tür bölünmenin hâssası, iki cüzden birinin öbürü mevcutken mevcut olmamasıdır; hâzır ân böyle bölünse ilk yarısı vücûda girince ikincisi mevcut olmazdı, ikincisi girince ilki fâni; o zaman bu mecmûun vücûdu HİÇ olmazdı ⇒ mecmûun vücûdu olan hiçbir şey bu şekilde bölünmez.**' **Mes'ele 3: 'Ân nasıl bir itibarla fâsıl, bir itibarla vâsıl olur?'** '**Aristo ve ashâbının mezhebi: zaman muttasıl kem; muttasıl her kem fasla (ayrılmaya) kabûl eder; 'fasıl' = o şeyin bilfiil bir ucu olması; bu ucu bazen vâsıl bazen fâsıl.**' **Örnek (nokta)**: 'çizgide hâdis olan her nokta fâsıldır; sonra vâsıl olabilir ya da olmayabilir' (p86).
 - Netice/hüküm: **Mes'ele 2 sonu: hâzır ân, cüzleri birbirine göre 'mevcut değil' olan bölünmeyle bölünmez. Mes'ele 3: 'Aristo mezhebi'nin fâsıl/vâsıl ân teorisi (nokta örneği) aktarılıyor.**
 - Delil çeşidi: **tanım + reductio; Mes'ele 3 = mezhep izahı**; (T) —
 - Mevzuya bağı: **Kimin sesi kaydı**: Mes'ele 3 **Aristo mezhebinin (muttasıl zaman) içinden açıklama**; Râzî'nin kendi görüşü (munfasıl zaman, p70–74) DEĞİL; **bu, Râzî'nin 'hasmın çerçevesinde bile şu sonuç çıkar' usûlüdür (p87–88'de göreceğiz).**
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.85 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p86
 - OCR: orta
@@ -795,49 +846,54 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Doğan sual: **Râzî 'zaman kendi başına kâim cevher, mümkinü'l-vücûd' derken mümkinin mucidi kim ve zamanın yaratılışı (hudûs) var mı? Fasıl 7'nin sonraki mesele/fasıllarında (ân ve hudûs, zaman ve hâdis) hüküm aranacak.**
 
 ## c5 p89
-- OCR: orta (dipnot işaretleri ve birkaç kelime hasarlı; gövde okunuyor)
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.89 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Fasıl 8: 'Dehr ve sermedin tahkîki ve ikisinin zamandan farkı'.** **Kimin sesi: İbn Sînâ aktarımı, sonra Râzî'nin 2 sorusu.** '**Şeyh er-Reîs çoğu kitabında: tagayyür hâllerinin mütegayyirlerle i'tibârı = ZAMAN; sâbit şeylerin hâllerinin mütegayyir şeylerle i'tibârı = DEHR; sâbit şeylerin hâllerinin i'tibârı = SERMED.** Bunu kitaplarında gördük, daha fazla beyân ve şerh bulamadık.' **Râzî iki soru**: **(1) Şeyh 'dehr ve sermed' dediği şeyin bu belirli nisbetlerin kendisi mi, yoksa bu nisbetleri iktizâ eden başka bir şey mi olduğunu beyân etmedi. Birincisi ise zaman için de 'zaman ancak bu kabliyet-ba'diyet-meiyyetin kendisidir' demeliydiniz; nasıl oluyor da 'zaman nisbetleri iktizâ eden mevcut' diyor da 'dehr mevcut' demiyor? İkincisi (belirli bir mevcut) ise cevher mi araz mı, cevherse cismânî mi rûhânî-mücerred mi, arazsa hangi cins?** '(p90'a).
 - Netice/hüküm: **Aristo–İbn Sînâ dehr/sermed tanımı: nisbet i'tibârı. Râzî iki suâl kurdu: nisbetin kendisi mi, iktizâ eden mevcut mu?**
 - Delil çeşidi: **hasım tanımının nakli + ayırt edicilik suâli (F 27-B örneği: 'zaman ile dehr arasındaki fark ne, ayırt ediyor mu?')**; (T) —
 - Mevzuya bağı: **Fasıl I §3, dehr**: **c4 p200 'dehr'** ve **c5 p32 'dehr, ezel, sermed'** ile aynı kavramın **İbn Sînâ tarafı**; **Risale'nin 'ezel/ebed' dili (c1 Mesele 7 ezel-ebed hakîkati) için terim sözlüğü**: zaman/dehr/sermed **nisbet dilidir**; ontoloji açık. **Risale dili 'zamansız devam' (c2 p76)**.
 - Doğan sual: **İbn Sînâ dehr ve sermedin ontolojik statüsü hakkında Şifâ/İşârât'ta daha fazla mı diyor?** (⊬ kaynak korpusta yok.)
+- Doğrulama notu: OCR sayfası ile gerçek metin s.89 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p90
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.90 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Kimin sesi: Râzî.** **1. suâl devam (belirli mevcut ise): 'bu sözler ancak bu yolla ma'lûm-mefhûm olur.'** **2. suâl**: 'sâbitin mütegayyire nisbeti dehirdir dedin; **bu dehr kendi nefsinde sâbit-müstekar mı, mütegayyir-seyyâl mı?** **Sâbitse: sâbitin, mütegayyir nisbetlerin hâsıl olmasına sebep yapılması câiz mi? Câizse 'bazı mütegayyirlerin bazısına nisbetinin hâsıl olmasını iktizâ eden zâtında sâbit bir şeydir' demek neden câiz olmasın — Eflâtun'un dediği gibi?** Câiz değilse sâbit dehri **sâbit ile mütegayyir arasındaki nisbetlerin sebebi** nasıl yaptınız? Nisbetler **mütegayyir**; sâbit mütegayyir nisbetlere sebep olamaz ⇒ dehr **mütegayyirin hâsıl olmasına** sebep olamaz. **Mütegayyir ise**: mütegayyir zâtında sâbit şeylerle nisbetin sebebi olur mu? Olabilirse **zaman bu iş için yeterli olmaz mı, dehri isbâta ne hâcet?** Olamazsa mütegayyir dehri nasıl sebep yaptınız?' (p91).
 - Netice/hüküm: **Râzî'nin dilemması: dehr sâbitse Eflâtun'un yoluna girer; mütegayyirse zaman yeter. İki şıkta da İbn Sînâ'nın dehri fazladır ya da Eflâtun'a döner.**
 - Delil çeşidi: **dilemma (2 şık × 2 şık) + ayırt edicilik**; (T) burhânî biçim; **⊬ 'sâbitten mütegayyir nisbet çıkmaz' öncülü İbn Sînâ'nın 'sâbit illet ⇒ mütegayyir ma'lûl' sudûr öğretisine karşı; Râzî burada kendi kelâmî hudûs delilinin (c4 K2 sâbit kadîm-fâil-muhtâr ⇒ hâdis nisbet) mantığını kullanıyor — aynı silah, iki yön kontrolü: c4'te irâde-tahsis aporiası var.**
 - Mevzuya bağı: **KRİTİK — F 1 irâde-tahsis ve hudûs**: 'sâbit ⇒ mütegayyir (hâdis) neden sudûr eder' sorusu **c4'ün ana aporiasıdır (p426 kapanış yok)**; burada Râzî bu soruyu İbn Sînâ'ya yöneltirken **kendi cevabını da (Eflâtun'un sâbit sebebi) 'câiz' sayarak** açık bırakıyor: **aynı sual c4'te Râzî'ye de dönmüştü**; borç: **c4 aporiası burada çözülmüş sayılmaz.**
 - Doğan sual: **Sâbit dehr hâdis nisbetlerin sebebi olabilir mi? Râzî 'câizse' diyor, ispat etmiyor ⇒ c4 aporiası ile bağ: Fasıl I §8 irâde-tahsis cümlesi bu sayfadan destek almaz.**
+- Doğrulama notu: OCR sayfası ile gerçek metin s.90 otomatik karşılaştırıldı: kelime kapsama %79, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p91
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.91 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Kimin sesi: İbn Sînâ'dan nakil (Uyûnü'l-Hikme), Râzî yorum ve kendi hükmü.** '**Şeyh, Uyûnü'l-Hikme'de: 'Dehr kendi zâtında sermeddendir; zamana kıyasla dehirdir'.**' **Râzî ('وأقول')**: '**mânâsı: dehr kendi zâtında sâbit, mütegayyir olmayan bir şey; zamana (kendi zâtında mütegayyir mevcut) nisbet edilince 'dehr' adını alır** ⇒ **dehrin kendi nefsinde ve zâtında sâbit olduğunu tasrîh, buna rağmen bu mütegayyir nisbetleri iktizâ eder** ⇒ **bir şeyin zâtında sâbit olup yine de mütegayyir hâllerin belirli mikdârlarla takdirini iktizâ edebileceğini itiraf; bu, Eflâtun'un mezhebinin AYNISI: zaman kendi başına kâim, müstakil cevher; bu farklı hâlleri takdir eder.**' **Ayrıca: Aristo mezhebinin nasırları, zamanla ilgili sıkıntılı bahislerin hiçbirine, Eflâtun'un sözüne dönmedikçe giremez.** **Râzî'nin hükmü**: '**müdde ve zamanda bizce en yakını Eflâtun'un mezhebidir: kendi başına kâim, müstakil mevcut; zâtının mevcûdâta (tagayyürden berî) nisbetini i'tibâr edersek 'sermed'; hareketlerin ve tagayyürlerin hâsıl olmasından öncesine nisbetini i'tibâr edersek 'dehr-i dâhir'; mütegayyirlerin ona mukârin, onunla birlikte hâsıl olmasına nisbetini i'tibâr edersek 'ZAMAN'.**'
 - Netice/hüküm: **Râzî: İbn Sînâ'nın 'dehr kendi zâtında sâbit' sözü Eflâtun'un mezhebini itiraftır; Râzî'nin tercihi: bir kâim mevcut (müdde), üç i'tibâr: sermed / dehr / zaman.**
 - Delil çeşidi: **hasmın kendi sözünden ilzâm (itiraf yorumu)**; (T) **Râzî derecesi 'en yakın' (p76 ile aynı ifade)**; **⊬ 'itiraf' yorumu: İbn Sînâ 'dehr' derken zâtında sâbit bir şeyin 'sudûr fâili' olmasını kastediyor, zamanı 'kâim cevher' değil; iki mânâ aynı mı, Râzî ayırt etmiyor (F 27-B).**
 - Mevzuya bağı: **EN KRİTİK — Fasıl I §3, §6.3 ve İSLÂM KAYDI**: Râzî'nin **kendi 'müdde' ontolojisi (zaman-dehr-sermed = tek kâim mevcudun üç i'tibârı)** burada **açık yazıldı; c4 p200 'dehr' ile birleşince kaynağın tercihi tam**. **Risale'ye ALINMAZ (Allah'tan başka her şey mahlûktur; 'ezelî-ebedî kâim müdde' tezi Ehl-i Sünnet ana hattı dışında; Râzî bunu 'en yakın' derecesinde tutuyor, kat'î demiyor).** **Kayıt: 'Râzî'nin kendi kelâmında zaman (müdde) mümkin bi'z-zât (p81) — 'kadîm mümkin' Risale'ye girmez.**
 - Doğan sual: **Râzî 'müdde mümkin' derken onun 'mahlûk' (halk) olup olmadığını hiç söylemiyor; c5 devamında (zaman ve hudûs) bu sual aranacak; bulunamazsa 'Râzî bu cildin bu bâbında müdde'nin yaratılmışlığını ele almadı' diye yazılır.**
+- Doğrulama notu: OCR sayfası ile gerçek metin s.91 otomatik karşılaştırıldı: kelime kapsama %84, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p92
-- OCR: —
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.92 — OTOMATİK DOĞRULANDI
 - Okuma: okunmadı (boş sayfa)
 - İçerik: Boş.
 - Netice/hüküm: —
 - Delil çeşidi: —
 - Mevzuya bağı: —
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası boş/çok kısa; gerçek metinde bu sayfa için içerik yok (boş sayfa).
 
 ## c5 p93
-- OCR: orta-iyi
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.93 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Fasıl 9: 'Mâzî, hâl ve müstakbelin nihâyetinin şerhi; on husus'.** **Kimin sesi: Râzî.** **Hâssa 1**: 'insanlardan kimi **mâzî hâlden, hâl müstakbelden önce**; kimi **müstakbel hâlden, hâl mâzîden önce** dedi. **Her iki söz bir i'tibârla doğru, bir i'tibârla hatâ.**' **Mukaddime**: '**mâzî iki vecihle i'tibâr edilir: (1) mâzî olduğuna hükmedilen ŞEY (mâhiyet); (2) sırf 'mâzî olma' VASFI**; iki mefhûm **farklı**.' Mâzî/hâl/müstakbel **mâhiyeti** i'tibâr edilirse **önce mâzî, sonra hâl, sonra müstakbel** (vücûda önce giren mâzî) (p94).
 - Netice/hüküm: **H1: 'mâzî-hâl-müstakbel sırası' mâhiyet i'tibârıyla mâzî önce; vasıf i'tibârıyla ters.**
 - Delil çeşidi: **mefhûm ayrımı (mâhiyet/vasıf)**; (T) burhânî biçim (tanım analizi).
 - Mevzuya bağı: **Fasıl I zaman dili (c1 Mesele 7 'kâne/yekûnu')**: 'vasıf' i'tibârı **kâne/kâin/yekûnü** kiplerinin **mefhûm düzeyinde ayrımı**; Risale dilinde 'vardı/vardır/olacak' kipleri **vasıf**tır, Allah'ın zâtına nisbeti ayrıca.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.93 otomatik karşılaştırıldı: kelime kapsama %78, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p94
 - OCR: orta
@@ -867,22 +923,24 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Doğan sual: **Suâl 1'in cevabı p97'de mi? Cevap 'tekaddüm iki zamanın ilişkisi' mi, 'zaman-dışı' bir izâfet mi?** (⊬ bekliyor).
 
 ## c5 p97
-- OCR: orta (başındaki satır p96 Suâl 1'in devamı; dipnot çöpü var)
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.97 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Kimin sesi: hasım suâli (Suâl 1 sonu, 2, 3), Râzî cevap.** Suâl 1 sonu: 'meiyyeti gerektiren şey aynı zamanda tekaddümü gerektiremez; çünkü meiyyet tekaddümü nefyeder; **her ikisi de tekaddüm hâsıl etmez ⇒ bir şeyin 'zamanca başkasından mütekaddim' diye hükmedilmesi sahih olmaz.**' **Râzî'nin cevabı**: '**zamanca tekaddümün hâsıl olması yalnız zihinlerdedir: oğul hâsıl olunca zihin babanın ondan önce mevcut olduğunu i'tibâr eder; zamanî tekaddüm bu i'tibârdan hâsıl olur.**' **Suâl 2**: 'tekaddüm ve teahhur **mütedâyifân (izâfî çift)**; mütekaddim müteahhirle beraber; meiyyet tekaddümü nefyeder ⇒ tekaddüm tekaddümü nefyeder (bâtıl)'. **Cevap**: '**babanın zâtı oğulun zâtından mütekaddim; babanın 'mütekaddim olması' oğulun 'müteahhir olması' ile mukârin; i'tibâr farklı olunca tenâfî kalkar.**' **Suâl 3**: '**ma'dûm, vücûda girmeden önce 'sî-yûcedu (var olacak)' diye vasfedilir; mevcut olunca bu vasıf zâil olur; bu vasıf ma'dûm iken hâsıl olduktan sonra yok olmuştur ⇒ mevcut vasıf ⇒ vücûda girmeden önce hâsıl ⇒ mevcut sıfatın ma'dûm mevsûfa kıyâmı (muhâl)**; ayrıca **mâzî olma vasfı da bu mâhiyetten farklı mevcut vasıf ⇒ mahz ma'dûma mevcut sıfat kıyâmı (muhâl)**' (p98).
 - Netice/hüküm: **Râzî: zamanca tekaddüm zihnî i'tibârdır (Suâl 1); tekaddüm-teahhur iki i'tibârla çelişmez (Suâl 2).**
 - Delil çeşidi: **aporia çözümü (i'tibâr farkı)**; (T) **Râzî'nin cevabı 'zihnî i'tibâr' derken zamanı ayânda kabul ettiği (p47 'seyyâl vakit', p58 H2) hükümle gerilim taşır: 'zaman mevcut, tekaddümü zihnî' ayrımı ayırt eder mi (F 27-B)? İki hüküm (zaman ayânda mevcut; tekaddüm-i zamanî zihnî) birlikte mümkün, ama 'kabliyet ayânda mevcut' (c5 p40) hükmü ile ÇELİŞİR: p40'ta kabliyet-ba'diyet delilinde 'ayânda mevcut' deniyordu (kaydı: p40 notu).**
 - Mevzuya bağı: **KRİTİK — c5 içi çelişki kaydı**: c5 p40 'kabliyet ayânda mevcut' ↔ c5 p66 'kabl/meiyyet/ba'diyetin ayânda vücûdu yok, zihnî nisbetler' ↔ c5 p97 'zamanca tekaddüm yalnız zihinlerde'. **Üç yerde iki hüküm; p66 ve p97 aynı yönde. p40'ın hasım sesi mi Râzî'nin sesi mi olduğu ayrıca doğrulanmalı (defter p40 'kimin sesi' alanına bak).**
 - Doğan sual: **c5 p40'ın sesi kimindi?** (Deftere geri dönülüp kontrol edilecek; cilt 5 sonunda tutarlılık tablosuna girecek.)
+- Doğrulama notu: OCR sayfası ile gerçek metin s.97 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p98
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.98 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Kimin sesi: hasım suâli sonu, sonra bir 'kimileri' cevabı, Râzî'nin itirazı ve KENDİ hükmü.** Suâl 3 sonu: 'bu vasıf ancak şeye ma'dûm olduktan sonra hâsıl olur ⇒ mevcut sıfatın mahz ma'dûma kıyâmı ⇒ muhâl.' **Cevap**: '**bazıları: 'sî-yûced' veya 'kâne mevcûden' diye hükmedilen şey AKILDA hâzır zihnî sûrettir; o mevcuttur, ma'dûm değil.**' **İtiraz ('ولقائل أن يقول')**: '**zihnî sûret hâzır; hâzır, hâzır olmak bakımından ne mâzî ne müstakbeldir. Mâzî-müstakbel hükmü verilen ya mevcut-hâzır olmalı (o zaman mâzî-müstakbel olmaz) ya hâzır olmayıp hâlde ma'dûm olmalı; mâzî ve müstakbel olma vasıfları hâlde mevcut ⇒ mevcut sıfatın mahz ma'dûma kıyâmı (muhâl).**' **Râzî'nin hükmü**: '**en yakını şudur: 'mâzî olma' ve 'müstakbel olma' iki MEVCUT sıfat DEĞİLDİR. Allah bilendir.**'
 - Netice/hüküm: **Râzî: mâzî ve müstakbel olma, mevcut sıfat değil (izâfî/i'tibârî).**
 - Delil çeşidi: **dilemma + i'tibârî sıfat**; (T) **Râzî derecesi 'en yakın'**; **F 27-B: 'mevcut olmayan sıfat' cevabı 'sıfat ma'dûma kaim olamaz' problemini 'sıfat yok' diyerek çözer; ayırt ediciliği: aynı cevap 'zaman mevcuttur' hükmü ile bağdaşır (zaman zâtı mevcut, kipler izâfî).**
 - Mevzuya bağı: **Fasıl I zaman dili (c1 Mesele 7 'kâne/yekûnu')**: **Râzî'nin 'kâne/yekûnu' vasıfları mevcut sıfat değil, i'tibârî nisbet' hükmü Fasıl I zaman dili borcunun (c1 sual 4) İÇ-DİL cevabıdır: Allah hakkında 'kâne' demek O'nda değişiklik yapmaz (p65 ile aynı çizgi).** **Ana metne 'ders katmanı dipnotu' olarak (c1 sual 4 çözümüne katkı; karar padişahın).**
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.98 otomatik karşılaştırıldı: kelime kapsama %80, Arapça alıntı denetimi 1/1 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p99
 - OCR: orta (bazı satırlar birleşmiş, H2 başlığı düşmüş; gövde okunuyor)
@@ -894,13 +952,14 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Doğan sual: **Râzî'nin 'zaman hâdis mi kadîm mi' sorusundaki KENDİ hükmü var mı, yoksa bu fasıl salt aktarım mı?** (p100–101 okundu: hüküm YOK; yalnız Aristo yolu için zaafı; ⊬ tam cevap).
 
 ## c5 p100
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.100 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Kimin sesi: filozofların (a) grubu H3, Râzî, sonra kıdem tarafının iki fırkası.** **H3**: '**'kâne' ve 'sekûnu' lafızları mutlaka geçmiş bir müddete ve gelecek bir müddete işâret eder; 'bu ibârenin darlığındandır' diyenin sözü fâsit; bilakis aklın ademini farz edememesindendir, fehm de ademi takdir etmeyi ifâde edemez.**' **Diğer fırka (hüccetle kıdemi isbât edenler)**: '**Kıdem ve hudûs kitabında bunların zikrettiği ve dayandığı vecihleri anlattık; tekrarında fayda yok.**' (**Not: 'Kitâbü'l-kıdem ve'l-hudûs' = c4 (Kısım 1 kıdem delilleri) — atıf, ⊬ c4 ile birebir eşleşme sayfa düzeyinde yapılmadı.**) **'Dehrin kıdemini söyleyenler iki fırka'**: '**(1) müddet kendi başına kâim cevher, vücûdu harekete bağlı değil; ⇒ dehrin kıdeminden hareketin kıdemi lâzım gelmez; dehr zâtında sâbit; hareket, tagayyür ve hâdis onunla mukârin olmasa orada yalnız tek dâvâm ve tek istimrâr olur; beşer akılları o dâvâmın keyfiyetini tasavvurdan aciz: bulduğumuz iki şey: (a) hâdislerin teâkübine göre dâvâm — hâdisin ardından hâdis, vaktin ardından vakit — bu ancak kabliyât ile ba'diyâtın tagayyürüyle tahakkuk eder; tagayyür şaibelerinden hâli dâvâmı akıl anlayamaz; (b) 'bulduğumuz her dâvâm belirli bir vakitte ma'kûldür; böyle olan sonlu ve mahduttur; nihâyeti olmayan akılda tasavvur edilemez.**' (p101).
 - Netice/hüküm: **Filozofların zamansal kıdem iddiası + 'dehr kâim cevher' fırkasının açıklaması: dehrin dâvâmı akılca kavranamaz (tagayyürsüz dâvâm), bu 'zaman seyyâl' zannını doğurur.**
 - Delil çeşidi: **hasım aktarımı + kavramsal ihtiyat ('aklın kavrayamayışı')**; (T) —
 - Mevzuya bağı: **Fasıl I §6.3 (zamansız devam) ve c2 p76**: '**tagayyürsüz dâvâmı akıl anlayamaz**' cümlesi **c2 p76 'devam zamana bağlı olmak zorunda değil' ile aynı zeminde**; **Risale'nin 'Allah'ın kıdemi zamansız devamdır, aklımız bunu tasavvurda aciz' dili için Râzî'den destek kaydı (ders katmanı).**
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.100 otomatik karşılaştırıldı: kelime kapsama %82, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p101
 - OCR: orta
@@ -912,13 +971,14 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Doğan sual: **Fasıl 10'un gövdesinde kelâmcıların hudûs delilleri neden yok?** (p99 başlığı 'kelâmcılar hudûsu üzerinde ittifak etti' — gövde aktarım bitti; cilt 5 sonunda **c4 K2 ile eşleştirilecek**.)
 
 ## c5 p102
-- OCR: —
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.102 — OTOMATİK DOĞRULANDI
 - Okuma: okunmadı (boş sayfa)
 - İçerik: Boş.
 - Netice/hüküm: —
 - Delil çeşidi: —
 - Mevzuya bağı: —
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası boş/çok kısa; gerçek metinde bu sayfa için içerik yok (boş sayfa).
 
 ## c5 p103
 - OCR: orta-iyi
@@ -966,49 +1026,54 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Doğan sual: —
 
 ## c5 p108
-- OCR: —
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.108 — OTOMATİK DOĞRULANDI
 - Okuma: okunmadı (boş sayfa)
 - İçerik: Boş.
 - Netice/hüküm: —
 - Delil çeşidi: —
 - Mevzuya bağı: —
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası boş/çok kısa; gerçek metinde bu sayfa için içerik yok (boş sayfa).
 
 ## c5 p109
-- OCR: iyi
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.109 — OTOMATİK DOĞRULANDI
 - Okuma: tam (yalnız başlık sayfası)
 - İçerik: **'el-Makâletü's-Sâniye: mekân hakkında sözün tahkîki'** (başlık sayfası).
 - Netice/hüküm: **Makâle 2 (mekân) başlıyor.**
 - Delil çeşidi: —
 - Mevzuya bağı: **cilt 5'in ikinci makâlesi; borç listesi 'Mekân ve Zaman kitabı' (c1 atfı) şimdi c5'te bulundu (Makâle 1 zaman, Makâle 2 mekân).**
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.109 otomatik karşılaştırıldı: kelime kapsama %86, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p110
-- OCR: —
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.110 — OTOMATİK DOĞRULANDI
 - Okuma: okunmadı (boş sayfa)
 - İçerik: Boş.
 - Netice/hüküm: —
 - Delil çeşidi: —
 - Mevzuya bağı: —
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası boş/çok kısa; gerçek metinde bu sayfa için içerik yok (boş sayfa).
 
 ## c5 p111
-- OCR: orta-iyi
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.111 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Makâle 2, Fasıl 1: 'Mekân hakkında insanların mezheplerinin tafsili'.** **Kimin sesi: Râzî.** '**Cismin intikâl ettiğini ve hareket ettiğini müşâhede ederiz; bedîhen biliriz ki cisim bir cihetten bir cihete, bir yandan bir yana intikâl eder; insanlar intikâl edilen yeri ve edildiği yeri kâh 'hayyiz', kâh 'cihet', kâh 'muhâzât', kâh 'cenb', kâh 'câniba', kâh 'mekân' diye adlandırır.**' **Genel tarif**: '**şeyin mekânı, şeyin içinde bulunduğu, hareketle ayrıldığı, başkasının onunla birlikte sığmadığı, hareket edenlerin ona nöbetleşe geldiği şeydir; bu miktar zarûrî ma'lûm.**' **Sonra**: '**bu şey ya cismin zâtının içinden geçip sirâyet ettiği bir şeydir, ya değildir: hâvî cismin bâtın yüzeyi, muhvî cismin zâhir yüzeyine temas eder. Birincisi: mekân BU'D (uzaklık, boyut) ve FEZÂ: Eflâtun ve akıl sahiplerinin çoğunun mezhebi; ikincisi: mekân HÂVÎ YÜZEY: Aristo'nun.** **Mekân ve hayyiz hakkında muhassal ma'kûl mezhep bu ikisinden ibarettir.**' **Fezâ diyenler** 'kâh hayûlâ (madde) kâh sûret' diye adlandırırlar: **hayûlânın hâssası zâtının bâkî olması ve ardışık hâllerin ve sıfatların mevridi olmasıdır; fezâ da bekleyen, değişmeyen, cisimlerin nöbetle geldiği ve onu kabul ettiği** (p112).
 - Netice/hüküm: **Mekân mezhepleri: (1) bu'd/fezâ (Eflâtun, akıl sahiplerinin çoğu); (2) hâvî yüzey (Aristo). Muhassal ma'kûl iki mezhep.**
 - Delil çeşidi: **tasnif**; (T) —
 - Mevzuya bağı: **Fasıl I §3 (cihet/hayyiz, c2 K1 F5 hayyiz-cihet imtinâı)**: **c2'de 'Allah hayyizden/cihetten münezzeh' (12 hüccet) burada mekân mezhepleri ile bağlanır; Risale 'mekân' lafzını yalnız 'yön/hayyiz' anlamında (c2) kullanıyor: fezâ/hâvî yüzey seçimi yok.**
 - Doğan sual: **Râzî'nin kendi mekân tercihi hangisi?** (p112–'da başlıyor; hüküm henüz yok.)
+- Doğrulama notu: OCR sayfası ile gerçek metin s.111 otomatik karşılaştırıldı: kelime kapsama %84, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p112
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.112 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Kimin sesi: Râzî.** '**Fezâ diyenler onu hayûlâ diye adlandırmalarının sebebi: hayûlânın hâssası zâtı bâkî ve sürekli hâllerin mevridi; fezâ 'vâkıf, tagayyür ve tebeddül etmez'; cisimler ona nöbetle gelir, fezâ onları kabul eder ⇒ bu vecihle hayûlâya benziyor.** **Sûret diye adlandırma**: '**cismânî cevher rûhânî-mücerred akıl cevherlerinden bu üç boyutu kabul etmesiyle ayrılır; bu boyutlar cismin mâhiyetinin sûrî cüzü gibi; fezâ bu mücerred boyutlar olduğu için sûret diye adlandırıldı.**' '**Eflâtun'dan nakledilen: kâh 'mekân hayûlâdır', kâh 'mekân sûrettir' — bunun sahih tefsiri budur.**' **Bir grup, Eflâtun'un sözünü halkın gözünde çirkin göstermek için: 'mekân ya hayûlâ ya sûrettir' diye naklettiler, sonra iptaline giriştiler: cisim bir mekândan bir mekâna geçince ya hayûlâ ve sûret (cüzleri) mecmûuyla geçmiştir — mekân nasıl hayûlâ ve sûret olur?**' **Râzî**: '**bizim lahhas ettiğimiz vechi ile: hayûlâ adı bir defa, sûret adı bir defa, yukarıda anlattığımız te'vil ve tefsire dayanarak mekâna verilmiştir; remz (işaret) kastıyla söylenen sözü zâhirine tatbik edip ona tâ'na etmeye girişmek KÂMİL AKIL SAHİPLERİNE YAKIŞMAZ (nüsha farkı: muhakkiklerin insâfından uzak).**' '**Netice: mekânın hakîkatinde mu'teber söz ya fezâ ya yüzeydir.**' **Fezâ diyenler ('ve münkirleri' — 've mü'ekkideleri' nüsha farkı ⊬) iki fırka; birincisi** (p113).
 - Netice/hüküm: **Râzî: Eflâtun'un 'mekân hayûlâ / mekân sûrettir' sözü remzdir, doğru tefsir fezâ/bu'd; Eflâtun'u tenkit edenler haksızdır; muhassal mezhep: fezâ ya hâvî yüzey.**
 - Delil çeşidi: **tefsir/savunma (Eflâtun'un remzî sözü) — Râzî'nin kendi hükmü: 'zâhirine tatbik ederek tâ'na etmek yakışmaz'**; (T) **⊬ 'Eflâtun'un sözü (kâh hayûlâ kâh sûret)' nakli birincil kaynaktan doğrulanmadı; Râzî'nin tefsiri (remz) onun okumasıdır, Eflâtun'un kastı olduğu sayıya bağlanmadı.**
 - Mevzuya bağı: **KRİTİK — borç listesi 'hayûlâ ve sûret'**: **Râzî burada 'mekân = hayûlâ/sûret' sözünü Eflâtun'a atfediyor ve remz diye savunuyor; c5'te 'hayûlâ ve sûret' bahsi (asıl cisim=hayûlâ+sûret tartışması, cevher-i ferd) sonraki fasıllarda aranacak (borç kapanmadı, yeri saptandı: c5 Makâle 2 devamı/c6).** **İslâmî kayıt: Eflâtun'un mekân-fezâ görüşü Râzî'ce 'muhassal ma'kûl' biri; Risale mekân felsefesi hükmü vermez.**
 - Doğan sual: **Râzî mekân için kendi tercihini nerede yazıyor? (fezâ mı, hâvî yüzey mi?)** Zamanda 'Eflâtun-yakın' hükmü vermişti (p76–77); **mekânda da aynı çizgi mi? Makâle 2 devamında aranacak.**
+- Doğrulama notu: OCR sayfası ile gerçek metin s.112 otomatik karşılaştırıldı: kelime kapsama %78, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p113
 - OCR: orta-iyi (kısa sayfa)
@@ -1020,13 +1085,14 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Doğan sual: —
 
 ## c5 p114
-- OCR: —
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.114 — OTOMATİK DOĞRULANDI
 - Okuma: okunmadı (boş sayfa)
 - İçerik: Boş.
 - Netice/hüküm: —
 - Delil çeşidi: —
 - Mevzuya bağı: —
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası boş/çok kısa; gerçek metinde bu sayfa için içerik yok (boş sayfa).
 
 ## c5 p115
 - OCR: iyi
@@ -1038,49 +1104,54 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Doğan sual: **c2'de Râzî 'hayyiz ⇒ cisim' tartışmasında (H10 ru'yet, H5 tefrik vb.) hangi mekân okumasını kullandı? c2 p47–54 tekrar okunup yazılan hüküm bu okumaya uyuyor mu?** (borç; c2 defterine bakılacak.)
 
 ## c5 p116
-- OCR: orta-iyi
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.116 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Kimin sesi: Râzî (kendi iddiası, H3–H5).** **H3 sonu**: '**bu fezâ 'cisim onda hâsıl oldu, sonra ondan çıktı, başka fezâya intikal etti' diye hükmedilir; 'cismin boşluğu ve karargâhı' diye hükmedilen bu şey mahz adem ve nefy-i sarf nasıl olur? Cismin mahz ademde hâsıl olması ma'kûl değil, bir ademden başka ademe intikali de ma'kûl değil.**' **H4**: '**'hâlâ buradan şuraya' dediğimizde 'burada-şurada' onunla dışındaki hâlâ arasında müşterek fasıldır; bu yüzey için 'bu yüzey buradan şuraya' dediğimizde 'burada-şurada' bu yüzey ile ona bitişik yüzey arasındaki müşterek fasla işâret ettiği gibi; müşterek fasıl yüzeyi mevcut kılıyorsa, hâlâda da aynı şey kesinlikle hâlâyı mevcut, mikdârı ve cihetlerde imtidâdı olan kılar.**' **H5**: '**mütekellimûn bunlara 'sayıca farklı, şahıs olarak birbirinden ayrı' diye hükmeder: 'hareket cismin ilk hayyizden çıkıp ikinci hayyize girmesi'; 'birinci ile ikinci hayyiz arasında vâsıta yok, birinci ile üçüncü arasında vâsıta var' diyerek kimini muttasıl, kimini munfasıl, kimini yakın, kimini uzak; belirli hayyiz ile beşincisi arasındaki uzaklık onuncusuna uzaklıktan azdır; mahz adem olan şeye bu hâller nasıl atfedilir?**' (p117).
 - Netice/hüküm: **H3–H5: mütekellimûn kendi dilinde hayyizlere sayı/muttasıllık/yakınlık atfediyor; bu, hayyizin mahz adem olamayacağını gösterir (Râzî'nin mütekellimûna ilzâmı).**
 - Delil çeşidi: **ilzâm (hasmın kendi dilinden) + bedîhe**; (T) **F 27-B: H5 ilzâmı 'kelâmcı hayyizi 'cisimlerin farz edilen hâlleri' diye yorumlayabilir' ihtimalini elemez; dürüst kayıt: ilzâm 'dilde atfedilen hâller' ile 'ontolojik statü' arasında köprü kuruyor.**
 - Mevzuya bağı: **c2 K1 F5 (hayyiz-cihet)**: aynı ilzâm c2'de Allah için hayyiz tartışmasında **kelâmcı-cihet-nefyi** ile çakışır; **borç:** c2 defter kayıtlarına göre 'Râzî'nin c2'deki kendi hayyiz tercihi' ayrıca doğrulanacak.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.116 otomatik karşılaştırıldı: kelime kapsama %81, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p117
-- OCR: orta (dipnot bol; gövde okunuyor)
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.117 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Kimin sesi: Râzî (H6) sonra mütekellimûnun cevabı (aktarım).** **H6**: '**bu hayyizler muhtelif sıfatlarla vasıflanır: kimi fevk, kimi taht, kimi yemîn, kimi yesâr; bir şeyin fevk-taht olması mahz adem değildir; fevkiyeti tahtiyetin ademi saymak öbürünü saymaktan evlâ değil; ikisi de öbürünün ademi sayılırsa her biri kendinde adem olduğu hâlde 'ademin ademi' olur ⇒ her biri mevcut; ya da her birini mevcut sıfat sayarsak, sıfatlı hayyizlerin de mevcut olması lâzım (mevcut sıfatın mahz nefye kıyâmı muhâl).**' **'Bunlar bu hayyizlerin mevcut olması gerektiğini gösteren zâhir, açık delillerdir.**' **Mütekellimûn cevabı**: '**bu hayyizler zihnin farz ettiği, aklın takdir ettiği şeylerdir; cisimlerin onlarda hâsıl olup nüfûz ettiğine hükmeder; hâricî vücûdda vücûdları hiç yoktur.**' **Delilleri**: '**vücûdları olsa ya müşâr-ı ileyh vücûd ya gayr-i müşâr; ikisi de bâtıl.**' **Müşâr olamaz**: '**müşâr-ı ileyh mevcut ya istiklâlle ya tebeiyyetle; istiklâlle ise o cisimdir; o zaman 'hayyiz' denen şey cisim; her cisim başka hayyize muhtaç ⇒ her cisim başka cisme muhtaç, nihâyetsiz — muhâl**; ayrıca bu cisme (hayyize) başka bir cisim hâsıl olunca ya biri diğerine **mümâs** (bu takdirde hayyiz/mekân/cihet = hâvî yüzey ⇒ Aristo'ya rücû') ya **nüfûz** (tedâhül-i ecsâm bâtıl)'.' (p118).
 - Netice/hüküm: **Râzî H6 (fevk/taht mahz adem değil) + mütekellimûnun karşı delili (hayyiz mevcut olsa ya müşâr ya gayr-i müşâr) başlıyor.**
 - Delil çeşidi: **ilzâm + hasım dilemması (aktarım)**; (T) H6 F 27-B: 'fevkiyet tahtiyetin ademi' okuması **zorunlu mu? (yönün göreli tanımı: mevcut cisimlerin nisbeti)**; ⊬.
 - Mevzuya bağı: **c2 K1 F5 hayyiz-cihet**: **'cihet' (fevk/taht/yemîn/yesâr) mevcut mudur?** — c2'de **'cihet göreli, Mekke/Medîne örneği' (c2 p70)** ile aynı soru; **Risale 'yönelim cihetten değil kaynaktan' ayrımı (c2 sual 3)** bu sayfadaki 'cihet mevcut mu' sorusundan **bağımsız**.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.117 otomatik karşılaştırıldı: kelime kapsama %79, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p118
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.118 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Kimin sesi: mütekellimûn (aktarım), sonuç: kelâmcı hükmü.** '**Müşâr-ı ileyh mevcut istiklâlle ise cisimdir ⇒ hayyiz cisim ⇒ mümâsset ⇒ mekân = hâvî yüzey (Aristo'ya rücû'), ya da nüfûz ⇒ tedâhül-i ecsâm bâtıl ⇒ bu şık bâtıl.**' '**İkinci şık: müşâr-ı ileyh tebeiyyetle (arazî): bu 'arazî'nin mânâsı; o zaman mekân cisme hâl araz olur; ama temekkün mekânda hâl ⇒ o cevher ve o araz her biri öbüründe hâl (muhâl).**' '**Üçüncü şık: mekân mevcut, gayr-i müşâr-ı ileyh bi'l-his: bu da bâtıl: hisle şu cismin şu hayyizden ikinci hayyize intikal ettiğine işâret ederiz ⇒ intikal edilen ve edildiği hayyiz hisle işâret edilen olmalı ⇒ 'mekân mevcut ama hisle işâret edilmez' sözü bâtıl.**' '**Bu ispat: mekân ve hayyiz, kendinde mevcut bir şey DEĞİL; vehmin farz ve takdir ettiği bir şeydir; hisle işâret edilen yalnız cisimdir; bir cisim başka cisme temas edip sonra ayrılıp başka cisme temas ederse hisle işâret edilen budur; başka bir şey yoktur.**'
 - Netice/hüküm: **Mütekellimûnun 3 şıklı delili: mekân/hayyiz mevcut olsa ya cisim (mümâsset/nüfûz sorunu), ya araz (devir), ya gayr-i müşâr (hisse aykırı) ⇒ mekân vehmî; hisle işâret edilen yalnız cisim.**
 - Delil çeşidi: **taksîm + reductio (aktarım)**; (T) burhânî biçim (hasmın delili); **Râzî cevabı p119'da.**
 - Mevzuya bağı: **Kimin sesi kaydı (KRİTİK)**: **Bu sayfa Râzî'nin kendi delili DEĞİL, karşı tarafın (mütekellimûn) delili; ilk okumada 'Râzî bunu kabul ediyor' sanılabilir: p115 'ندعي' ile p117 'وأجاب المتكلمون' arasındaki ayrım yazıldı.**
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.118 otomatik karşılaştırıldı: kelime kapsama %78, Arapça alıntı denetimi 1/1 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p119
-- OCR: orta (dipnotlar; gövde okunuyor)
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.119 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Kimin sesi: hükemâ ('قالت الحكماء'), Râzî'nin iddiasını savunan cevap; sayfa sonu 'istiksâ gelecek'.** '**'Bu hayyizler aklın farz, vehmin takdir ettiği şeylerdir; cisimlerin onlarda hâsıl olduğuna hükmeder, nefs-i emrde vücûdları yoktur' sözünüz bedîhe-i akılda reddedilir: aklın-zihnin 'bu cisimler bu hayyizlerde hâsıl' hükmü ya hâricî vücûda mutâbık ya mutâbık değil. Mutâbıksa cisim kendinde hayyizde hâsıl, hayyizin cismin zarfı olması hayyizin kendinde mevcut olmasına dayanır: mahz adem cismin zarfı olamaz, hisle işâret edilemez, küçük-büyük, uzun-kısa, yakın-uzak, muttasıl-munfasıl vasfedilemez ⇒ hayyiz kendinde mevcut olmalı. Mutâbık değilse hüküm YALAN ve BÂTIL FARZ olur, 'bu duvar yâkuttur' farzı gibi; bu bâtıl: cisim kendinde 'mütehârrik' ve 'sâkin' vasıflanır; 'mütehârrik' ancak hayyizden hayyize/cihetten cihete intikal; 'sâkin' ancak bir hayyizde uzun zaman karar kılmak.**' '**Mütekellimûnun 'boş hayyizler yalnız vehim, farz ve hayâlle hâsıl' sözü bâtıldır.**' **Taksîme cevap (müşâr ya gayr-i müşâr)**: '**bize göre mevcut, hisle işâret edilen, kendi başına kâim, müstakil bir bu'd; cisimler ona girince MÜTEMEKKİN'in boyutları o boyutlara nüfûz eder; 'bu'dün bu'dda nüfûzu muhâl' sözü mahz DAVA; bu meselede istiksâ yapacağız.**' (p120 boş.)
 - Netice/hüküm: **Hükemâ (Râzî'nin iddiasını destekleyen): 'hayyiz zihnî farz' görüşü hükmü sahih/yalan ikilemiyle çürütülür; mekân = mevcut bu'd; cismin boyutları ona nüfûz eder; 'bu'dün bu'dda nüfûzu muhâl' bir dava (delil yok).**
 - Delil çeşidi: **dilemma (mutâbakat) + tanım; 'mahz dava' ithâmı**; (T) **⊬ 'cismin kendinde mütehârrik/sâkin olması' hüküm iki anlamda ('hayyiz mevcut' ve 'cisimlerin göreli konumu') doğru; ilzâm ikinci okumayı elemiyor (F 27-B: ayırt etmiyor); 'nüfûz' cevabı davaya davadır (ikisi de 'dava', Râzî 'istiksâ' ile erteliyor).**
 - Mevzuya bağı: **KRİTİK — borç listesi (cevher-i ferd, tenâhî-i ebâd) ve İSLÂM KAYDI**: **'bu'dün bu'dda nüfûzu' (tedâhül) Râzî'nin kalemince Makâle 2'nin ilerleyen fasıllarında istiksâ edilecek; hüküm o zamana kadar bağlanmaz.** **Mekân = mevcut kâim bi-nefsihi fezâ** kavramı **kadîm-mevcut (Eflâtun) ile birleşebilir; Risale 'Allah'tan başka kadîm yok' ilkesiyle bunu ALMAZ, mekânı mahlûk sayar.**
 - Doğan sual: **Makâle 2 devamında 'tedâhül' istiksâsı ve 'mekân ezelî mi' sorusu var mı?** Aranacak.
+- Doğrulama notu: OCR sayfası ile gerçek metin s.119 otomatik karşılaştırıldı: kelime kapsama %85, Arapça alıntı denetimi 1/1 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p120
-- OCR: —
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.120 — OTOMATİK DOĞRULANDI
 - Okuma: okunmadı (boş sayfa)
 - İçerik: Boş.
 - Netice/hüküm: —
 - Delil çeşidi: —
 - Mevzuya bağı: —
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası boş/çok kısa; gerçek metinde bu sayfa için içerik yok (boş sayfa).
 
 ## c5 p121
 - OCR: orta-iyi
@@ -1092,13 +1163,14 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Doğan sual: —
 
 ## c5 p122
-- OCR: orta-iyi
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.122 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Kimin sesi: Aristo (aktarım); sonra 'ولقائل أن يقول' (Râzî'nin itirazı).** Şartiyye devam: '**iki bu'd mevcut kaldığında ya ittihâd eder ya etmez; ittihâd bâtıl (mevcutsa iki, yok olup üçüncü hâsıl olursa ittihâd değil ademle hudûs; biri kalıp öbürü yok olursa da ittihâd yok) ⇒ her ikisi de nüfûz hâlinde bâkî ⇒ mekân bu'd ise tedâhül lâzım.**' **İkinci mukaddime: tedâhül muhâl; 5 vecih. Vecih 1**: 'iki bu'd bir bu'ddan **fazla**; fazla olan **daha büyük** ⇒ tedâhülde mecmû iki bu'dün bir bu'ddan büyük olması lâzım; oysa mecmû ancak nihâyetler arası ⇒ her birinin kadri ⇒ mecmû birden büyük değil (hulf).' **Râzî'nin itirazı**: '**tedâhülün imtinâını bedîhî mi sayıyorsunuz yoksa delille mi bilinir diyorsunuz? Bedîhî ise bu delilleri bırakın; bu, 'bu'd diyenlerin mezhebi bedîhen bâtıl' iddiasına dönüşür — bedîhî önermelerde akıllılar ihtilâf etmez.** **Ayrıca bu'd diyenler 'mezhebimizin sıhhati bedîhî: kadehin iki ucu arasında imtidâd eden fezâ var, su kadeh içinde o fezâda karar kılar; buna itiraz eden en celîl zarûrî ilme itiraz eder'** (p123).
 - Netice/hüküm: **Aristo'nun tedâhül delili 1. vecih; Râzî'nin ilk ilzâmı: bedîhî mi delil mi?**
 - Delil çeşidi: **reductio + Râzî'nin 'bedîhe mi burhan mı' dilemması (F 27-B usûlü)**; (T) —
 - Mevzuya bağı: **Usûl kaydı**: Râzî'nin 'bedîhe iddiasında iki taraf da bedîhe der' tenkidi c4 p274/p305 'bedîhe iki yönde' bulgusunun mekândaki karşılığı; **Risale'de 'bedîhe' iddiası derecelenir.**
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.122 otomatik karşılaştırıldı: kelime kapsama %79, Arapça alıntı denetimi 1/1 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p123
 - OCR: orta-iyi
@@ -1110,31 +1182,34 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Doğan sual: —
 
 ## c5 p124
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.124 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Kimin sesi: Râzî (2. suâl: Aristo ashâbına aynı güçlüğün yöneltilmesi).** '**Şeyh Şifâ'da: 'mütemâssân: hisle işâret her iki tarafa birlikte düşen iki şey'.** **Bir yüzey bir yüzeye temas etsin: tarafları (iki çizgi) vaz'da birlikte olmalı. Bu iki çizgi temas hâlinde bâkî mi değil mi? Bâkî değilse, iki yüzey arasında müşterek tek bir çizgi hâdis olur ⇒ bu ittisâl, temas değil; oysa hâsıl olan temas. Ayrıca 'tarafları vaz'da birliktedir' sözü tarafların temas hâlinde bâkî olmasını gerektirir. İkinci şık: bâkîler; ya biri diğerine bütünüyle nüfûz eder ya etmez. Etmezse biri öbüründen mübâyin ⇒ birine işâret ötekine işâretin aynı olmaz (fakat temas farz edilmişti: hulf). Nüfûz ederse mecmûun mikdârı bir mikdârdan fazla mı: fazlaysa nüfûz bütünüyle değil (hulf); değilse iki mikdâr var, biri öbürüne nüfûz etti, mecmû bir mikdârdan fazla olmadı; bu bu suretle ma'kûl ise bu'd-mütemekkin ve bu'd-mekânda neden câiz olmasın? Bu, kendi kanununuza karşı güçlü bir suâldir; onlar için bir özür var, cevabıyla sonra zikredilecek.**' (p125).
 - Netice/hüküm: **Râzî: Aristo tarafının temas tanımı da tedâhül güçlüğüne düşer (çizgi-çizgi temasta nüfûz); bu 'kendi kanununa güçlü suâl'; özür/cevap sonra.**
 - Delil çeşidi: **ilzâm (hasmın tanımından)**; (T) **F 27-B: ayırt ediciliği: ilzâm, 'temas'ı 'çizgilerin bütünüyle nüfûzu' okuyan bir okuma varsayar; Aristo tarafı 'temas = hisle işâretin aynı yerde birleşmesi'ni farklı yorumlar (⊬ cevabı sonra).**
 - Mevzuya bağı: **Risale'ye bağ yok (fizik); Râzî'nin 'iki taraf aynı güçlüğü taşır' usûlü (aynı silahın iki yönü) ders katmanı örneği.**
 - Doğan sual: **Aristo tarafının 'özür'ü hangi sayfada? (p125+ aranacak).**
+- Doğrulama notu: OCR sayfası ile gerçek metin s.124 otomatik karşılaştırıldı: kelime kapsama %84, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p125
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.125 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Kimin sesi: Aristo (aktarım), sonra Râzî'nin itirazları başlıyor (p126).** **Vecih 2 (tedâhül imtinâı)**: '**müşâhede bu hissî cisimlerin tedâhülden imtinâ ettiğini gösterdi; bu imtinâ ya MÂDDE, ya BU'D, ya MÜREKKEB (mecmû) yüzünden.** **1. şık (mâdde yüzünden) iki yönden bâtıl**: (a) '**iki cismin tedâhülden imtinâsı, her birinin başka hayyizde ferd olmasını gerektirir; bu ancak zâtî hususiyeti belirli hayyiz ve cihet iktizâ eden şeyde ma'kûl; mâdde, mâdde olması bakımından imtidâdı, vaz'ı, hayyizi yok (yoksa cismin maddesi cismin kendisi olurdu — muhâl); hayyizi olmayan şey illet olamaz ⇒ tedâhül imtinâının illeti mâdde değil; cismiyet ve mikdârdır** (vaz' ve hayyiz ihtisâsı onlarda).' (b) '**tek bir muttasıl cisim (bir su) bilfiil maddeli; ayrılınca iki kısmın herbirine ayrı mâdde; tekrar birleşince maddeler bir olmalı (iki mâdde ayrı kalsa ikisindeki sûretler bilfiil ayrı, iki kısım bilfiil imtiyazlı, 'bir şey oldular' demek imkânsız).** ⇒ 'iki cisim bir cisim oldu' demek ancak her cismin maddesinin öbürünün maddesine **ÂSER'de (tamamen) mülâkî** olup ayrılığın zâil olmasıyla; bu, **maddenin tedâhül imtinâının illeti olmadığını** gösterir' (p126).
 - Netice/hüküm: **Aristo vecih 2: tedâhül imtinâının illeti mâdde değil (iki delil).**
 - Delil çeşidi: **taksîm + reductio (aktarım)**; (T) burhânî biçim (hasmın delili); **⊬ hayûlâ-sûret sisteminin öncülleri (madde imtidâdsız) bağlı.**
 - Mevzuya bağı: **KRİTİK — borç listesi 'hayûlâ ve sûret'**: **'maddenin imtidâdı/vaz'ı/hayyizi yok' öncülü, hayûlâ (madde) - sûret sisteminin çekirdeğidir; burada (b)'deki 'birleşince maddeler bir olur' ispatı için de kullanılıyor. Risale bu sistemi almaz; Râzî'nin kendi hükmü sonraki bâbda (cevher-i ferd/hayûlâ) aranacak.**
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.125 otomatik karşılaştırıldı: kelime kapsama %79, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p126
-- OCR: orta
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.126 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Kimin sesi: Aristo (vecih 2 sonu), Râzî'nin itirazları.** Vecih 2: '**maddenin illet olmadığı; 2. şık (imtinâı mâdde+bu'd birlikte iktizâ eder) de bâtıl: mâdde te'sîrsiz; sonuç: imtinâın illeti bu'dün TABİATIDIR; bu bu'dlerin ancak bu'd olmalarıyla tedâhülden imtinâ etmeleri.**' **Râzî ('ولقائل'): bu hüccet iki yönden zayıf**: **(1)** '**tedâhülün imtinâını sadece bu KESİF cisimlerde biliyorsunuz; cisimler bu'd ve imtidâd tabiatında müsâvî, rıkkat ve kesâfette ayrıdır; müşâreket ile mübâyenet ayrı şey; kesâfetleri bu'd tabiatına zâid; imtinâ ve nüfûz-mülâkât mânii KESÂFET olabilir; o hâlde 'fezâ-i mahz' adı verilen bu'dde kesâfet yok ⇒ nüfûz imkânsız değil.**' **Sonuç: 'mâdde, bu'd, ikisi' taksîmi ihsâr etmiyor; doğru şık üçüncü: kesâfet.** **'Kesâfetle ta'lîl uzak değil: cisim ne kadar kesif olursa nüfûz edene karşı o kadar kuvvetli ve kâmil mümâne'; su parmakla, taş elle...**' (p127).
 - Netice/hüküm: **Râzî: Aristo vecih 2'nin taksîmi ihsâr etmiyor (kesâfet üçüncü şık); nüfûzdan mânii kesâfet olabilir ⇒ vecih 2 zayıf.**
 - Delil çeşidi: **taksîm eleştirisi ('ihsâr yok') + gözlem**; (T) **Râzî'nin usûlü: 'hasr delili' (c2 sual 10 bulgusu: taksîmin tamlığı ayrıca ispat ister) uygulanıyor.**
 - Mevzuya bağı: **Usûl bulgusu (c2 p65–66 'hasr delili')**: Aristo'nun taksîmini 'ihsâr yok' diye çürütmesi **c2 sebr-taksîm bulgusunun uygulaması**; Risale'nin sebr-taksîm delilleri için **'hasr delili yazılmalı'** kaydı (c2 satır 10) bir kez daha teyit.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.126 otomatik karşılaştırıldı: kelime kapsama %88, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p127
 - OCR: orta
@@ -1155,22 +1230,24 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Doğan sual: **Râzî'nin vecih 3'e cevabı?** (p129 okunmadı.)
 
 ## c5 p178
-- OCR: —
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.178 — OTOMATİK DOĞRULANDI
 - Okuma: okunmadı (boş sayfa)
 - İçerik: Boş.
 - Netice/hüküm: —
 - Delil çeşidi: —
 - Mevzuya bağı: —
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası boş/çok kısa; gerçek metinde bu sayfa için içerik yok (boş sayfa).
 
 ## c5 p179
-- OCR: orta-iyi
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.179 — OTOMATİK DOĞRULANDI
 - Okuma: tam
 - İçerik: **Makâle 2, Fasıl 7: 'Hâlâ (boşluk/fezâ) görüşünün fer'leri'.** **Kimin sesi: Râzî — hem kudemâ nakli hem ehl-i tahkîk nakli.** **Fer' 1**: '**kudemâ cumhuru hâlânın adem kabul etmediğinde ittifak etti; 2 delil.** **1.**: mümkin her şey için vukû' farzından muhâl lâzım gelmez; hâlâ ma'dûm farz edilsin: bu farzda **yemîn ile yesâr, fevk ile taht imtiyazı kalır mı?** **Kalmaz demek bedîhen bâtıl** (böyle bir hâl ve farz aklın kabul etmediği, hayâlin tasavvur etmediği); ⇒ **bu boş boyutlar, ademi farz edilince vücûdu farz edilmesi lâzım gelen şeylerdir; ademi farzı muhâl** (p180).
 - Netice/hüküm: **Kudemâ delili 1: hâlâ ma'dûm farz edilince yön imtiyazı kalır ⇒ ademi farz muhâl ⇒ hâlâ vâcibü'l-vücûd li-zâtihi (kudemâ hükmü, Râzî nakil).**
 - Delil çeşidi: **farz + bedîhe (yön imtiyazı)**; (T) burhânî biçim (kudemâ); **F 27-B: 'ademi farz ⇒ imtiyaz' zamandaki 'ademi farz ⇒ ba'diyet' delili (c5 p60 H6, p77 H1) ile aynı kalıp ⇒ ayırt etmiyor.**
 - Mevzuya bağı: **KRİTİK — F 1 tevhid (vâcib bir)**: **kudemâ 'hâlâ vâcibü'l-vücûd' der ⇒ ikinci vâcib; Râzî ehl-i tahkîk tarafında (p180) hâlâyı MÜMKİN sayıyor (zamanda p81 ile paralel: zaman mümkin, fezâ mümkin)**. Risale: 'vâcib bir' (c2 K2 F1) ilkesi mekâna da uygulanır: mekân vâcib değil.
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası ile gerçek metin s.179 otomatik karşılaştırıldı: kelime kapsama %78, Arapça alıntı denetimi 0/0 bulundu, girdide OCR sorunu işareti yok (defter numarası ile gerçek sayfa farkı +0). SINIR: bu ölçü elle bakılan 140 sayfada içerik düzeltmesi gereken 16 sayfanın 13'ünü yakaladı; geçen sayfaların yaklaşık %5'inde hata kalabilir; özet yeniden okunmadı.
 
 ## c5 p180
 - OCR: orta
@@ -1227,13 +1304,14 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Doğan sual: —
 
 ## c5 p186
-- OCR: —
+- Kaynak: gerçek metin (Sekkā/Şâmile), s.186 — OTOMATİK DOĞRULANDI
 - Okuma: okunmadı (boş sayfa)
 - İçerik: Boş.
 - Netice/hüküm: —
 - Delil çeşidi: —
 - Mevzuya bağı: —
 - Doğan sual: —
+- Doğrulama notu: OCR sayfası boş/çok kısa; gerçek metinde bu sayfa için içerik yok (boş sayfa).
 
 ## c5 p187
 - OCR: orta (fihrist; sayfa numaraları düşmüş)
