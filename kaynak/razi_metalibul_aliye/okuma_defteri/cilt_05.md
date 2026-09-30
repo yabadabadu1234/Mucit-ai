@@ -793,3 +793,75 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **iltizam (hasmın kendi öncülünden Eflâtun sonucu)**; (T) **cedelî ilzâm — F 27-B: 'ân kendi başına kâim' hükmü nokta-çizgi benzetmesinin **zorunlu** sonucu mu, yoksa **bir betimleme** mi? Ayırt etmez, çünkü Aristo 'nokta çizgiden ayrı kâim değil, çizginin ucu' der (⊬ Aristo'nun tarafı bunu karşılar: nokta 'potansiyel' bir şeydir).**
 - Mevzuya bağı: **Fasıl I §3**: Fasıl 7'nin Mesele 1–4 dizisi **Râzî'nin 'Eflâtun-yakın' tercihini (p76–77) 'ân' düzeyinde tekrar üretiyor**; **Risale bu ontolojiyi ana metne ALMAZ** ('zaman mahlûktur' cümlesi ve 'kadîm yalnız Allah' ilkesi bağlıdır), 'Râzî'nin tercihi' diye kayıt.
 - Doğan sual: **Râzî 'zaman kendi başına kâim cevher, mümkinü'l-vücûd' derken mümkinin mucidi kim ve zamanın yaratılışı (hudûs) var mı? Fasıl 7'nin sonraki mesele/fasıllarında (ân ve hudûs, zaman ve hâdis) hüküm aranacak.**
+
+## c5 p89
+- OCR: orta (dipnot işaretleri ve birkaç kelime hasarlı; gövde okunuyor)
+- Okuma: tam
+- İçerik: **Fasıl 8: 'Dehr ve sermedin tahkîki ve ikisinin zamandan farkı'.** **Kimin sesi: İbn Sînâ aktarımı, sonra Râzî'nin 2 sorusu.** '**Şeyh er-Reîs çoğu kitabında: tagayyür hâllerinin mütegayyirlerle i'tibârı = ZAMAN; sâbit şeylerin hâllerinin mütegayyir şeylerle i'tibârı = DEHR; sâbit şeylerin hâllerinin i'tibârı = SERMED.** Bunu kitaplarında gördük, daha fazla beyân ve şerh bulamadık.' **Râzî iki soru**: **(1) Şeyh 'dehr ve sermed' dediği şeyin bu belirli nisbetlerin kendisi mi, yoksa bu nisbetleri iktizâ eden başka bir şey mi olduğunu beyân etmedi. Birincisi ise zaman için de 'zaman ancak bu kabliyet-ba'diyet-meiyyetin kendisidir' demeliydiniz; nasıl oluyor da 'zaman nisbetleri iktizâ eden mevcut' diyor da 'dehr mevcut' demiyor? İkincisi (belirli bir mevcut) ise cevher mi araz mı, cevherse cismânî mi rûhânî-mücerred mi, arazsa hangi cins?** '(p90'a).
+- Netice/hüküm: **Aristo–İbn Sînâ dehr/sermed tanımı: nisbet i'tibârı. Râzî iki suâl kurdu: nisbetin kendisi mi, iktizâ eden mevcut mu?**
+- Delil çeşidi: **hasım tanımının nakli + ayırt edicilik suâli (F 27-B örneği: 'zaman ile dehr arasındaki fark ne, ayırt ediyor mu?')**; (T) —
+- Mevzuya bağı: **Fasıl I §3, dehr**: **c4 p200 'dehr'** ve **c5 p32 'dehr, ezel, sermed'** ile aynı kavramın **İbn Sînâ tarafı**; **Risale'nin 'ezel/ebed' dili (c1 Mesele 7 ezel-ebed hakîkati) için terim sözlüğü**: zaman/dehr/sermed **nisbet dilidir**; ontoloji açık. **Risale dili 'zamansız devam' (c2 p76)**.
+- Doğan sual: **İbn Sînâ dehr ve sermedin ontolojik statüsü hakkında Şifâ/İşârât'ta daha fazla mı diyor?** (⊬ kaynak korpusta yok.)
+
+## c5 p90
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî.** **1. suâl devam (belirli mevcut ise): 'bu sözler ancak bu yolla ma'lûm-mefhûm olur.'** **2. suâl**: 'sâbitin mütegayyire nisbeti dehirdir dedin; **bu dehr kendi nefsinde sâbit-müstekar mı, mütegayyir-seyyâl mı?** **Sâbitse: sâbitin, mütegayyir nisbetlerin hâsıl olmasına sebep yapılması câiz mi? Câizse 'bazı mütegayyirlerin bazısına nisbetinin hâsıl olmasını iktizâ eden zâtında sâbit bir şeydir' demek neden câiz olmasın — Eflâtun'un dediği gibi?** Câiz değilse sâbit dehri **sâbit ile mütegayyir arasındaki nisbetlerin sebebi** nasıl yaptınız? Nisbetler **mütegayyir**; sâbit mütegayyir nisbetlere sebep olamaz ⇒ dehr **mütegayyirin hâsıl olmasına** sebep olamaz. **Mütegayyir ise**: mütegayyir zâtında sâbit şeylerle nisbetin sebebi olur mu? Olabilirse **zaman bu iş için yeterli olmaz mı, dehri isbâta ne hâcet?** Olamazsa mütegayyir dehri nasıl sebep yaptınız?' (p91).
+- Netice/hüküm: **Râzî'nin dilemması: dehr sâbitse Eflâtun'un yoluna girer; mütegayyirse zaman yeter. İki şıkta da İbn Sînâ'nın dehri fazladır ya da Eflâtun'a döner.**
+- Delil çeşidi: **dilemma (2 şık × 2 şık) + ayırt edicilik**; (T) burhânî biçim; **⊬ 'sâbitten mütegayyir nisbet çıkmaz' öncülü İbn Sînâ'nın 'sâbit illet ⇒ mütegayyir ma'lûl' sudûr öğretisine karşı; Râzî burada kendi kelâmî hudûs delilinin (c4 K2 sâbit kadîm-fâil-muhtâr ⇒ hâdis nisbet) mantığını kullanıyor — aynı silah, iki yön kontrolü: c4'te irâde-tahsis aporiası var.**
+- Mevzuya bağı: **KRİTİK — F 1 irâde-tahsis ve hudûs**: 'sâbit ⇒ mütegayyir (hâdis) neden sudûr eder' sorusu **c4'ün ana aporiasıdır (p426 kapanış yok)**; burada Râzî bu soruyu İbn Sînâ'ya yöneltirken **kendi cevabını da (Eflâtun'un sâbit sebebi) 'câiz' sayarak** açık bırakıyor: **aynı sual c4'te Râzî'ye de dönmüştü**; borç: **c4 aporiası burada çözülmüş sayılmaz.**
+- Doğan sual: **Sâbit dehr hâdis nisbetlerin sebebi olabilir mi? Râzî 'câizse' diyor, ispat etmiyor ⇒ c4 aporiası ile bağ: Fasıl I §8 irâde-tahsis cümlesi bu sayfadan destek almaz.**
+
+## c5 p91
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: İbn Sînâ'dan nakil (Uyûnü'l-Hikme), Râzî yorum ve kendi hükmü.** '**Şeyh, Uyûnü'l-Hikme'de: 'Dehr kendi zâtında sermeddendir; zamana kıyasla dehirdir'.**' **Râzî ('وأقول')**: '**mânâsı: dehr kendi zâtında sâbit, mütegayyir olmayan bir şey; zamana (kendi zâtında mütegayyir mevcut) nisbet edilince 'dehr' adını alır** ⇒ **dehrin kendi nefsinde ve zâtında sâbit olduğunu tasrîh, buna rağmen bu mütegayyir nisbetleri iktizâ eder** ⇒ **bir şeyin zâtında sâbit olup yine de mütegayyir hâllerin belirli mikdârlarla takdirini iktizâ edebileceğini itiraf; bu, Eflâtun'un mezhebinin AYNISI: zaman kendi başına kâim, müstakil cevher; bu farklı hâlleri takdir eder.**' **Ayrıca: Aristo mezhebinin nasırları, zamanla ilgili sıkıntılı bahislerin hiçbirine, Eflâtun'un sözüne dönmedikçe giremez.** **Râzî'nin hükmü**: '**müdde ve zamanda bizce en yakını Eflâtun'un mezhebidir: kendi başına kâim, müstakil mevcut; zâtının mevcûdâta (tagayyürden berî) nisbetini i'tibâr edersek 'sermed'; hareketlerin ve tagayyürlerin hâsıl olmasından öncesine nisbetini i'tibâr edersek 'dehr-i dâhir'; mütegayyirlerin ona mukârin, onunla birlikte hâsıl olmasına nisbetini i'tibâr edersek 'ZAMAN'.**'
+- Netice/hüküm: **Râzî: İbn Sînâ'nın 'dehr kendi zâtında sâbit' sözü Eflâtun'un mezhebini itiraftır; Râzî'nin tercihi: bir kâim mevcut (müdde), üç i'tibâr: sermed / dehr / zaman.**
+- Delil çeşidi: **hasmın kendi sözünden ilzâm (itiraf yorumu)**; (T) **Râzî derecesi 'en yakın' (p76 ile aynı ifade)**; **⊬ 'itiraf' yorumu: İbn Sînâ 'dehr' derken zâtında sâbit bir şeyin 'sudûr fâili' olmasını kastediyor, zamanı 'kâim cevher' değil; iki mânâ aynı mı, Râzî ayırt etmiyor (F 27-B).**
+- Mevzuya bağı: **EN KRİTİK — Fasıl I §3, §6.3 ve İSLÂM KAYDI**: Râzî'nin **kendi 'müdde' ontolojisi (zaman-dehr-sermed = tek kâim mevcudun üç i'tibârı)** burada **açık yazıldı; c4 p200 'dehr' ile birleşince kaynağın tercihi tam**. **Risale'ye ALINMAZ (Allah'tan başka her şey mahlûktur; 'ezelî-ebedî kâim müdde' tezi Ehl-i Sünnet ana hattı dışında; Râzî bunu 'en yakın' derecesinde tutuyor, kat'î demiyor).** **Kayıt: 'Râzî'nin kendi kelâmında zaman (müdde) mümkin bi'z-zât (p81) — 'kadîm mümkin' Risale'ye girmez.**
+- Doğan sual: **Râzî 'müdde mümkin' derken onun 'mahlûk' (halk) olup olmadığını hiç söylemiyor; c5 devamında (zaman ve hudûs) bu sual aranacak; bulunamazsa 'Râzî bu cildin bu bâbında müdde'nin yaratılmışlığını ele almadı' diye yazılır.**
+
+## c5 p92
+- OCR: —
+- Okuma: okunmadı (boş sayfa)
+- İçerik: Boş.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c5 p93
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Fasıl 9: 'Mâzî, hâl ve müstakbelin nihâyetinin şerhi; on husus'.** **Kimin sesi: Râzî.** **Hâssa 1**: 'insanlardan kimi **mâzî hâlden, hâl müstakbelden önce**; kimi **müstakbel hâlden, hâl mâzîden önce** dedi. **Her iki söz bir i'tibârla doğru, bir i'tibârla hatâ.**' **Mukaddime**: '**mâzî iki vecihle i'tibâr edilir: (1) mâzî olduğuna hükmedilen ŞEY (mâhiyet); (2) sırf 'mâzî olma' VASFI**; iki mefhûm **farklı**.' Mâzî/hâl/müstakbel **mâhiyeti** i'tibâr edilirse **önce mâzî, sonra hâl, sonra müstakbel** (vücûda önce giren mâzî) (p94).
+- Netice/hüküm: **H1: 'mâzî-hâl-müstakbel sırası' mâhiyet i'tibârıyla mâzî önce; vasıf i'tibârıyla ters.**
+- Delil çeşidi: **mefhûm ayrımı (mâhiyet/vasıf)**; (T) burhânî biçim (tanım analizi).
+- Mevzuya bağı: **Fasıl I zaman dili (c1 Mesele 7 'kâne/yekûnu')**: 'vasıf' i'tibârı **kâne/kâin/yekûnü** kiplerinin **mefhûm düzeyinde ayrımı**; Risale dilinde 'vardı/vardır/olacak' kipleri **vasıf**tır, Allah'ın zâtına nisbeti ayrıca.
+- Doğan sual: —
+
+## c5 p94
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî.** H1 sonu: '**vasıf (mâzî/hâzır/müstakbel olma) i'tibâr edilirse: en önce 'müstakbel olma' vasfı, sonra 'hâzır olma', sonra 'mâzî olma'**: 'henüz vücûda gelmemiş, gelecek olan şey müstakbeldir; hâsıl olunca hâzır; geçince mâzî.' **Hâssa 2**: '**müstakbel önce hâl olur, sonra mâzî; mâzî ise hâl de müstakbel de OLMAZ; hâl mâzî olabilir ama müstakbel olamaz; müstakbel önce hâl, sonra mâzî.**' **Hâssa 3**: '**mâzî her vakit kendisinden önceki hâlinden daha uzak olur; müstakbel her vakit daha yakın olur; ilim bedîhî**'; **bir şair (medhinde) bu mânâyı nazmetti** (beyit: 'fe-lâ zâle me'tîhi akrabe min kadî ve evvele mâ şâme ebde'a min emsi' — OCR hasarlı ⊬). **Hâssa 4**: '**mâzîde daha önce olan, sonra olandan mâzîden daha uzaktır; müstakbelde tersi (daha önce olan hâle daha yakın).**' **Hâssa 5** başlıyor: 'hâl ile müstakbel arasındaki münâsebet hâl ile mâzî arasından daha şiddetli' (p95).
+- Netice/hüküm: **H2–H4 (aktarım; Râzî'nin kendi tasnifi): zaman kiplerinin geçiş kuralları.**
+- Delil çeşidi: **tanım analizi + gözlem (bedîhe)**; (T) burhânî biçim (tanımdan çıkan).
+- Mevzuya bağı: **Fasıl I zaman dili**: Risale'de kip geçişleri sıradan dil bilgisidir; ana metne girmez, **terim sözlüğü kutusu**.
+- Doğan sual: —
+
+## c5 p95
+- OCR: orta (birkaç satırda kayma; H8 ve H9 okunuyor; H9'un cümlesi p96'ya taşıyor)
+- Okuma: tam (H9 sonu p96'da)
+- İçerik: **Kimin sesi: Râzî; H8'de 'kavim' (hükemâ) sözü, İbn Sînâ hutbesinden alıntı.** **H5**: '**hâl ile müstakbel arasındaki münâsebet daha güçlü: hâl bilfiil mevcut; müstakbel bilfiil değil ama bilkuvve mevcut; mâzî ise NE bilfiil NE bilkuvve mevcut** — **bilhassa 'ma'dûmun iâdesi muhâl' dersek**; **Arap dili ehli müzâri' fiilini hâl ve istikbal arasında ortak kıldı; hâl-mâzî arasında ortaklık koymadı.**' **H6**: '**zâtî ve illiyet cihetiyle mütekaddim asla müteahhir olmaz; zamanca mütekaddim aynen müteahhir olabilir (baba oğuldan zamanca önce, ölümünden sonra da kalırsa zamanca ondan sonra olur); zamanca müteahhir öncekinden mütekaddim olamaz.**' **H7**: '**illiyet ile zaman tekaddümü ASLA birleşmez: tam illetten ma'lûlun tehalüfü imtinâ' ⇒ tehalüf olan yerde illet tam değildir; tabîî tekaddüm ile zamanî tekaddüm birleşebilir (bir ikiden hem tabîî hem zamanca önce)**.' **H8**: '**hükemâ: zaman mütehârrik, sükûn etmez; mekân sâkin, hareket etmez; hareket sükûndan eşref ⇒ zaman mekândan eşref; Şeyh meşhur hutbesinde: 'mekân vücûdda zamanın ardından gelir, ta'rîfte zamanın illetlerinin evvelidir'.**' **H9** başlıyor: 'mekân ile zaman arasındaki fark: zamanın bir cüzünde …' (p96).
+- Netice/hüküm: **H5–H8: kip münâsebetleri, illiyet-zaman tekaddümü ayrımı, 'tam illet ⇒ ma'lûl tehalüf etmez'.**
+- Delil çeşidi: **tanım analizi + bedîhe; H8 = hükemâ değer hükmü ('hareket sükûndan eşref') — ikna'î**; (T) H7 burhânî biçim.
+- Mevzuya bağı: **KRİTİK — borç listesi 'ma'dûmun iâdesi' + F 1 c4 irâde-tahsis**: (1) **H5'te 'ma'dûmun iâdesi muhâl dersek' şartı bir KOŞULLUDUR ('bilhassa… dersek'); Râzî bunu kendi hükmü olarak bağlamıyor; Fasıl III (Meâd) için 'ma'dûmun iâdesi' Râzî'nin kendi kalemince ayrı bâbda (cilt 5–9'da) aranacak borç; Risale bu koşulludan hüküm çıkarmaz.** (2) **H7 'tam illet ⇒ ma'lûl tehalüf etmez' = c4 Kısım 1 'tam illet ⇒ ma'lûl vâcib' ilkesi (F 27-B: ilke burada tanım olarak yazılıyor); c4'te bu ilke kıdem tarafının çekirdeği idi ve irâde-tahsis aporiasına yol açıyordu.** Risale Fasıl I §8 'irâde' cümlesinin bu ilkeyle ilişkisi c4'te yazıldı; burada yeni bir şey eklenmedi.
+- Doğan sual: **H8 'zaman mekândan eşref (hareket sükûndan eşref)' hükmü değer hükmüdür; Râzî aktarıyor, kendi hükmü mü, yoksa sadece hükemâ aktarımı mı? (⊬ 'kavim' dedi, onayı yazmadı).**
+
+## c5 p96
+- OCR: orta
+- Okuma: tam (H9 cümlesinin ilk yarısı p95 sonunda, ikinci yarısı burada; **OCR'de araya bir satır düşmüş olabilir ⊬**)
+- İçerik: **Kimin sesi: Râzî (H9–H10) ve sonra başka soruların girişi.** **H9**: 'mekân ile zaman arasındaki fark: **[zamanın/mekânın] bir cüzünde sonsuz hâdisin hâsıl olması** …' (cümle **eksik**, OCR parçalanmış; hüküm bağlanmadı). **H10**: '**hareket hem mekâna hem zamana bağlı: hareket bir hayyizden başka hayyize intikaldir; cismin ilk hayyizde hâsıl olduğu vakit ikinci hayyizdeki vaktinden farklı olmalı; hareketin mâhiyeti mekân ve zamana şiddetle muallak; hangisi daha kadîm? Zamana muallakiyeti daha kadîm sanırım: her hareket türü zamana bağlı (keyfiyetteki hareket mekânsızdır, zamansız olmaz)** ⇒ hareketin zamana ta'alluku mekâna ta'allukundan şiddetli.' **Bu bâbın bahislerinden bazı SUÂLLER kaldı: 1. Suâl**: '**zamanca mütekaddim, bir zamanda mevcut olup ondan sonraki müteahhir o zamanda mevcut olmayan, sonra başka bir zaman gelip ikisi birden hâsıl olan şeydir; kimse diyebilir: 'zamanî mütekaddim' hükmü verilen şey bu zamanî tekaddümle ya BİRİNCİ zamanda (müteahhirin olmadığı zaman) mı ya İKİNCİ zamanda (müteahhirle birlikte hâsıl olduğu zaman) mı muttasıf olur? Birincisi muhâl: tekaddüm izâfîdir; öbürü yokken o onun mütekaddimi olamaz. İkincisi de muhâl: müteahhirin hâsıl olduğu zamanda mütekaddim onunla beraber hâsıl ⇒ meiyyet' (p97).
+- Netice/hüküm: **H10: hareketin zamana ta'alluku mekâna ta'allukundan şiddetli (keyfiyet hareketi mekânsızdır). Bab sonu Suâl 1: zamanî tekaddümün 'hangi zamanda' muttasıf olduğu aporiası (izâfî ⇒ birincide olmaz; ikincide meiyyet).**
+- Delil çeşidi: **tanım analizi + aporia (suâl)**; (T) H10 burhânî biçim; **Suâl 1 = aporia (cevap p97'de aranacak)**.
+- Mevzuya bağı: **Fasıl I zaman/tekaddüm**: Suâl 1'in çözümü **'kimin sesi'** ile: bu suâl Râzî'nin kendi suâlidir ('فلقائل أن يقول' formülü — **hasım/itirazcı sesi olabilir, dikkat**); cevap görülmeden hüküm yok.
+- Doğan sual: **Suâl 1'in cevabı p97'de mi? Cevap 'tekaddüm iki zamanın ilişkisi' mi, 'zaman-dışı' bir izâfet mi?** (⊬ bekliyor).
