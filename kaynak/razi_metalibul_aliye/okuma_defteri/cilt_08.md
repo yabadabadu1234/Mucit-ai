@@ -1315,3 +1315,84 @@ Biçim: cilt 1–7 ile aynı. Dipnottaki harfler neşredenin nüsha işaretlerid
 - Delil çeşidi: **reductio (teklîfin abes oluşu)**; (T) —
 - Mevzuya bağı: **KRİTİK — Fasıl I §8 ve Fasıl II (teklîf)**: Bu, Risale'nin en ağır itirazı: 'cebr + teklîf' çelişkisi. **Ehl-i Sünnet cevabı: 'kesb' teorisi (kul kudret ve ihtiyârla fiili kazanır; teklîf bu kesbe taalluk eder; sorumluluk ve emir anlamlıdır);** Risale bu cevabı c9 (kelâmî burhan) ve c8 p118 'ikisine icmâlen îmân' ile birlikte kurar; Râzî'nin kendi cevabı c9 ve c8 K1 F15 üçüncü aslında ('hüsn-kubuh batıl') bulunur mu — okunacak.
 - Doğan sual: —
+
+## c8 p20
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: cebr temelli inkârcılar (aktarım); Râzî açıklaması.** Mukaddime 1 sonu: 'cebir hak.' Mukaddime 2 sonu: 'cebir hak ⇒ teklîfin bâtıllığı hak.' **MUKADDİME 3**: '**teklîfin bâtıllığı hak ise nübüvvetin bâtıllığı hak: enbiyâ kendi sarîh dilleriyle ve fasih beyânlarıyla, gönderilmelerinde fâide ve gayenin ancak teklîfleri tebliğ olduğunu, bu maksat olmasa gönderilmelerinde hiçbir fâide bulunmayacağını söylerler; bu sabit olunca ve teklîfin bâtıl olduğu sabit olunca onların gönderilmesi bâtıl olur.**' '**Nübüvvetin nefyindeki bu şüpheyi Allah Kur'ân'da defalarca hikâye etti: 'Müşrik olanlar diyecek ki: Allah dileseydi ne biz ne babalarımız şirk koşardık ne de bir şeyi haram kılardık; onlardan öncekiler de böyle yalanladılar, azabımızı tadana dek' (En'âm 6/148).**'
+- Netice/hüküm: **F2 sonu: cebr ⇒ teklîf bâtıl ⇒ nübüvvet bâtıl zinciri tamam; Râzî: bu şüpheyi Kur'ân En'âm 6/148'de hikâye etti (müşriklerin 'Allah dileseydi' sözü).**
+- Delil çeşidi: **şüphe zinciri; Kur'ân hikâyesi (En'âm 6/148)**; (T) **⊬ âyetin Kur'ân'daki bağlamı (müşriklerin kader bahânesi) Risale'de cevabın parçası: âyet aynı şüpheyi 'yalanlama' olarak niteliyor; âyet Kur'ân'dan doğrulanacak.**
+- Mevzuya bağı: **KRİTİK — Fasıl I §8 kader ve Fasıl II (teklîf)**: **Kur'ân müşriklerin 'Allah dileseydi şirk koşmazdık' kader-bahânesini kendisi kaydediyor ve reddediyor (Râzî bunu zikretti); Risale kader cümlesinde 'kader teklîf ve sorumluluğu düşürmez; müşriklerin kaderi bahâne etmesi Kur'ân'da reddedilmiştir' diye yazar (âyet doğrulanacak).**
+- Doğan sual: —
+
+## c8 p21
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **K1 Fasıl 3: 'Cebir meselesine bina edilmeksizin teklîf inkârcılarının şüpheleri'.** **Kimin sesi: teklîf/nübüvvet inkârcıları (Râzî aktarıyor).** '**Bu fırka şüpheleri birkaç vecihle zikretti. ŞÜPHE 1: aklın tahsîn ve takbîhi ya mu'teberdir ya değil; iki takdirde de teklîf ve nübüvvet bâtıl. (Mu'teber ise teklîfin bâtıllığı birkaç hüccetle:)** **HÜCCET 1: bu teklîfler ya fâide ve maslahat içerir ya içermez; iki kısım bâtıl: fâide içerdiği söylenemez: fâide ya ma'bûda ya âbide ya üçüncüye döner. Ma'bûda dönemez: (1) O'nun nef' ve zarardan yüce olduğu delille sâbit; (2) muhtaç kâmil kudretli olmaz; vaad-vaîdine güven kalmaz; (3) beşer gâyet zayıf; bu ibâdetler az fiil, zayıf hareketler; ilâh zayıflıkta bu aşağılık hareketlerden fayda görecek dereceye varsa gâyet zayıf-âciz: muhâl (p22).**'
+- Netice/hüküm: **Şüphe 1 (hüsn-kubuh mu'teber ise): teklîfte fâide ya Allah'a, ya kula, ya üçüncüye; Allah'a olamaz.**
+- Delil çeşidi: **dilemma (hüsn-kubuh mu'teber takdiri)**; (T) —
+- Mevzuya bağı: **Fasıl II ve c3 (hikmet, hüsn-kubuh): teklîfin hikmeti: Risale 'Allah'ın hikmeti O'na vâcib değil, teklîf ibtilâ ve ibâdet olarak (Zâriyât 51/56 ⊬ sayfada geçmiyor)' diye yazar.**
+- Doğan sual: —
+
+## c8 p22
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: inkârcılar.** Hüccet 1 devam: '**fâide âbide dönemez, iki vecihle: (1) tüm fâideler menfaat celbi ve zarar defi; Allah bunların hepsini bu teklîflerin vâsıtası olmadan gerçekleştirmeye kâdir; kudretinin bu maksatları elde etmesinin durumu insanın birkaç hareketi yapıp yapmamasıyla değişmez; kudreti ve hikmeti bu aşağılık fiillerle değişiyorsa gâyet zayıf; öyleyse menfaat ulaştırma ve zarar defini bu teklîflere bağlamak mahz abes. (2) bu menfaatler ya dünyada ya âhirette: dünyada olamaz (dünyada teklîf zahmet ve meşakkat); âhirette de uzak: Allah onları vâsıtasız cennete koyup ateşten kurtarmaya kâdir.** **Mu'tezile: teklîfin güzelliği vechi: 'tefazzul ile ta'zîm çirkin; Allah kula ta'zîme istihkâk kazandırmak isteyince onu teklîf etti ki teklîfi yerine getirdiğinde ta'zîme istihkâk hâsıl olsun.' Bu zayıftır, birkaç yönden: (p23).**'
+- Netice/hüküm: **Hüccet 1'in ikinci ayağı (menfaat kula döner mi) ve Mu'tezile'nin 'istihkâk' cevabı (aktarım).**
+- Delil çeşidi: **dilemma + Mu'tezile cevabı aktarımı**; (T) —
+- Mevzuya bağı: **Fasıl II ve c3**: aynı.
+- Doğan sual: —
+
+## c8 p23
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: inkârcılar (Mu'tezile cevabına itirazlar).** '**(1) ta'zîm, kalpte sürûr ya da bedende lezzet gerektiren fiil ya da söz ya da fiil/söz terkidir; gösterdik ki Allah bunları vâsıtasız da vermeye kâdir. (2) ta'zîme istihkâk kolay fiillerle de hâsıl olur: mârifetten sonra şehâdet kelimesini söylemek kolay bir iştir ama büyük sevap gerektirir; teklîfin maksadı bu istihkâk olsaydı hikmet gereği bedenlerimizi kuvvetlendirmeye mübâlağa etmek vâcib olurdu ki iş kolaylaşsın. (3) teklîf yüzünden tâatte bu büyük istihkâk, isyanda şiddetli dâimî ıkâb; sağlam akıllar fâidesi fazla olan işe ihtiyaç duyulduğunu, zararı en büyük olan işin en büyük şekillerle terk edilmesi vâcib olduğunu hükmeder.**' '**Fâide üçüncü kişiye dönmez: (1) ona fâide hâsıl olacaksa Allah onu bu teklîflerin vâsıtası olmadan da verir; teklîflerin ara vâsıta olması abes; (2) bu, Allah'ın bir kula zarar ve belâ verip diğer kula menfaat ulaştırmasıdır: mahz zulüm.** (p24).**' 
+- Netice/hüküm: **Hüccet 1'in devamı: Mu'tezile'nin 'istihkâk' cevabı ve 'üçüncü kişiye fâide' seçeneği çürütülüyor (şüphecilerce).**
+- Delil çeşidi: **reductio (şüphe)**; (T) —
+- Mevzuya bağı: **Fasıl II ve III (teklîf, sevap-ıkâb)**: 'kolay şehâdet kelimesi büyük sevap' itirazı Risale'nin Fasıl III (meâd: sevap ve ıkâb ölçüsü) için bir soru işaretidir: cevap Allah'ın fazlı ve adaleti (Kur'ân) ile.
+- Doğan sual: —
+
+## c8 p24
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: inkârcılar.** '**…birine zarar verip diğerine menfaat vermek öbürüne verip birine vermekten evlâ değil ⇒ 'teklîf ancak hikmet ve maslahat vechinden güzeldir' denemez. İkinci kısım: 'Allah'tan fâide ve hikmet olmaksızın güzel'; bu da bâtıl: bu kısımda 'hüsn-kubuh aklî mu'teber' takdirinde konuşuyoruz; akılda hikmet ve fâidesiz başkasına zarar, elem ve zahmet vermek çirkin ⇒ bâtıl.** **HÜCCET 2**: '**hüsn-kubuh mu'teber olduğunda teklîf çirkin olmalı: ya Allah bu teklîflerde fâide ve menfaat sahibidir, ya O bütün menfaatlerden münezzeh olup bu fiilleri o kula dönen fâideler için, ya üçüncüye dönen fâideler için, ya da hiç fâide için teklîf etti; dört kısım bâtıl. (1) fâide Allah'a: önceki vechle bâtıl. (2) menfaat kullara: bu bâtıl: teklîflerin îcâbı terklerine ıkâb terettüp etmesi; mânâ şu olur: 'ey kul, kendine şu maslahatı elde et; kendin için elde etmezsen ebediyyen azâb ederim'; kul der ki: 'ey âlemlerin ilâhı, bu hüküm çelişik: senin bu teklîfte kendi menfaatimden başka maksadın yoksa maksat benim hâllerimi gözetmek; o hâlde terk ettiğimde azâb etmen hâllerimi gözetmene çelişir' (p25)'.**
+- Netice/hüküm: **Hüccet 2: teklîf hikmetli/hikmetsiz her takdirde çirkin; 'menfaat kula ise terkte ıkâb çelişik'.**
+- Delil çeşidi: **dilemma (şüphe)**; (T) —
+- Mevzuya bağı: **Fasıl II ve III**: aynı.
+- Doğan sual: —
+
+## c8 p25
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: inkârcılar.** '**Misâl: efendi kölesine 'bugün kendin için bir dirhem kazanmaya gayret et' der; köle kusur eder; efendi onun uzuvlarını ateşten makaslarla keser. Köle der: 'ey efendi, o dirhem kendin için miydi yoksa bütün tamahlardan berî olup yalnız benim maslahatım için mi emrettin?' Birincisi ise bu ıkâb güzeldir, çünkü senin matlûbunu kaçırdım; ikincisiyse bu fiil bâtıldır: çünkü 'o dirhemi kendim için ve menfaati bana dönsün diye emrettin; onu elde etmede kusur edince yalnız kendim için menfaat elde etmede kusur ettim; insana kendi maslahatını elde etmede kusur ettiği için azâb vermek akılda çirkin: maslahatına riâyet vâcib değilse dirhemi elde etmek için onu teklîf etmek vâcib değil; vâcibse onun için en önemli şey ıkâbı gidermek; öyleyse ona ıkâb ulaştırmak, kendi hakkında kusur ettiği için…' **Şâhid-gâib farkı**: 'efendi köleyi bir iş için emrederse ve o kusur ederse muâhaze ve azâbı hak eder; çünkü efendi o işten bir menfaat isteyecekti ve kusurdan menfaati kaçtı; Allah hakkında ise kulun teklîflere terkine ıkâb çirkindir; şâhid-gâib farkı ortaya çıktı.**' **3. ve 4. kısım (üçüncü kişiye/hiç fâideye) birinci vecihte bâtıl.**
+- Netice/hüküm: **Hüccet 2 (efendi-köle misâli): kul yararına teklîfin ıkâbla desteklenmesi çelişik; şâhid-gâib farkı: efendi menfaat kaçırdığı için ıkâb edebilir, Allah'ın menfaati yok.**
+- Delil çeşidi: **temsil (şüphe)**; (T) **temsil; Risale'de teklîf için benzetme kullanılırsa 'şâhid-gâib kıyâsı zayıftır' (c8 p64) kaydı düşülür.**
+- Mevzuya bağı: **Fasıl II ve III**: **Bu misâl Risale'nin 'Allah'ın kula teklîfi ve ıkâbı' cümlesine karşı ağır bir itirazdır: cevap: teklîf ve ceza Allah'ın hikmeti ve adâleti iken kula zulüm olmadığı, kulun kendi tercihiyle sorumlu olduğu (Kur'ân) — c9 (kader ve teklîf) ile birlikte yazılır.**
+- Doğan sual: —
+
+## c8 p26
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: inkârcılar.** '**HÜCCET 3: teklîf güzel olsaydı ya önceki nimetler yüzünden, ya sonraki nimetler (sevap) yüzünden, ya ikisi de değil; hepsi bâtıl. Birincinin bâtıllığı: (1) zayıf bir insana az nimet ulaştıran, sonra onu ağır işlerle teklîf eden kimseyi herkes zemmeder: 'az bir şey verdi, sonra ona azâb ediyor ve ağır teklîflerle yüklüyor'. Biz bu kısımda hüsn-kubuh mu'teber takdirinde konuşuyoruz; burada çirkinliği artıran bir şey var: âlemin ilâhı tüm âlemlerden ganî; kulu ağır fiillerle teklîf etmesi, kendisi için fâide olmadığı hâlde ve kula zarar verdiği hâlde, gâyet çirkin. (2) kula ulaştırdığı her nimetten önce kulda o nimete ihtiyaç ve şehvet yaratmış; bu zarardır; nimeti verince önceki zarar hâsıl nimetle karşılaşır; bu 'nimet' olmaz; muhtaç olduğu her şeyi verse bile kulda bir deniz kadar ihtiyaç hâsıl etmişken ona bir damla verilmesi şükür gerektirmez. (3) zayıfa nimet verip sonra onu nefsiyle bırakan, o nimet karşılığında ağır iş teklîf etmeyen kimse, nimetten sonra ağır teklîflerle devam edenden daha çok övgü ve cömertlik ehli; ekremü'l-ekremîn olan Allah, cûd ve kereminin lâyıkı olarak kulla nasıl daha aşağı yolla muâmele eder?**' (p27).
+- Netice/hüküm: **Hüccet 3 (sâbık nimet yüzünden teklîf): 3 vecihle bâtıl; 'ihtiyaç yaratıp sonra nimet vermek nimet sayılmaz'.**
+- Delil çeşidi: **hüsn-kubuh takdirli şüphe**; (T) **⊬ 'Allah ihtiyaç yaratıp nimet veriyor, bu nimet sayılmaz' iddiası şüpheci mantığıdır; Ehl-i Sünnet: nimet Allah'ın fazlıdır; kulun hakkı yoktur (c7 p428 duâ ile aynı çizgi).**
+- Mevzuya bağı: **Fasıl II ve III (nimet, teklîf, şükür)**: **Risale'nin 'nimet-şükür' cümleleri için bu şüphe cevabı: Allah'ın nimeti mahz fazldır; kulun hakkı yoktur; şükür kulun görevi olarak Kur'ân'dan yazılır.**
+- Doğan sual: —
+
+## c8 p27
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: inkârcılar.** '**Ekremü'l-ekremîn nasıl aşağı yolla muâmele eder?** **İkinci kısım (sonraki nimet/sevap için teklîf): bu da imtinâ', iki vecihle: (1) kâfir ve fâsıkların hâllerinden onların bu teklîfle ancak şiddetli azâba ve büyük acılara hak kazanacaklarını bildi; o hâlde 'sevap için teklîf' denemez; (2) onlara sevap isteseydi dünya zahmet ve acılarından onları boşaltıp hak olanın bu olduğuna dair açık deliller izhâr etmesi vâcib olurdu; oysa öyle yapmadı; onları çok şeye muhtaç kıldı; bu ihtiyaçların onları mâsiyete sevk edeceğini bildi; sonra şehvetleri ve şüpheleri üzerlerine musallat etti, insan ve cin şeytanları musallat etti; zayıf, aklı az, kudreti zayıf kula bu muâmeleyi yapıp 'ona hayır ve rahmete kavuşmayı diledim' diyen kimseye akıllar 'ancak ona kötülük ve eziyet kastetti' diye seslenir. Bu bahisler hüsn-kubuh'a bina.** **HÜCCET 4**: 'Allah hepsini cennette yaratmaya, hayırlara ve derecelere ulaştırmaya, âfet ve korku menzillerinden korumaya kâdirdi; onlara hayır istese öyle yaratırdı; yapmadı, şehvetleri ve şüpheleri musallat etti, âlemi şeytanlarla doldurdu; ona hayır istemediğini biliriz; bu böyle iken 'onları maslahatı kazanmak için teklîf etti' denemez. Birinci söz (gayesiz teklîf) abes; abes akılda çirkin; biz hüsn-kubuh mu'teber olsun diye konuşuyoruz.**' (p28).
+- Netice/hüküm: **Hüccet 3'ün ikinci kısmı ve Hüccet 4: Allah'ın hayır isteseydi herkesi cennette yaratacağı; imtihanın (şehvet-şüphe-şeytan) hayır olmadığı.**
+- Delil çeşidi: **hüsn-kubuh mu'teber takdirli şüphe**; (T) —
+- Mevzuya bağı: **Fasıl I §8 ve Fasıl III (imtihan, teodise)**: **Şüphe Hüccet 4 'kötülük/teodise' (c2 p146–147 şer problemi) ile aynı: Allah kâdirken şeytana ve şehvete musallat kılma; Risale'nin cevabı: 'dünya imtihan yurdu; hayır ve şerrin bir arada bulunması Allah'ın hikmetiyle; ayrıntı ancak kelâm ehline' (Râzî K2 p118 'dalmama').**
+- Doğan sual: —
+
+## c8 p28
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: inkârcılar (Şüphe 1'in sonu).** '**Demek hüsn-kubuh Allah'ın fiil ve hükümlerinde mu'teber olduğunda teklîfin ve enbiyâ-resûlleri göndermenin fesâdına cezmetmek vâcib. İkinci kısım (hüsn-kubuh bâtıl ve i'tibârsız): bu takdirde teklîfin ve bi'setin fesâdı daha zâhir: çünkü bu takdirde yalancının eliyle mûcize göstermesi imtinâ' değil; resûlleri fuhuş, yalan, Allah'a ve meleklere sövmeyle göndermesi imtinâ' değil; resûlleri cansızlara göndermesi de imtinâ' değil; Allah'ın vaadine ve vaîdine güven hâsıl olmaz; bunların hepsi teklîf ve bi'setin fesâdını gerektirir. Demek teklîf ve enbiyâ-resûl göndermek sahih olsaydı ya hüsn-kubuh mu'teber olduğunda ya olmadığında sahih olurdu; ikisinde de bâtıl olduğu sâbit oldu.**'
+- Netice/hüküm: **Şüphe 1'in sonucu: hüsn-kubuh mu'teber olsa da olmasa da teklîf ve bi'set bâtıl.**
+- Delil çeşidi: **dilemma (iki uçlu şüphe)**; (T) **F 27-B: bu şüphenin ikinci ayağı ('hüsn-kubuh bâtılsa Allah'tan her şey câiz, yalan ve mûcize yalancıya da') Râzî'nin kendi kelâmî tercihinin (Eş'arî: hüsn-kubuh şer'î) bedelidir; Râzî cevabı: c8 p100 'Allah'a yalan muhâl (noksan sıfat)' ve p93–99 üç asıl.**
+- Mevzuya bağı: **EN KRİTİK — Fasıl II ve c3 (hüsn-kubuh)**: **Bu, Risale'nin kelâm çerçevesine yönelmiş 'iki uçlu' itirazdır: Risale hüsn-kubuh-ı aklîyi kabul etmezse Allah'a 'yalan muhâl' hükmünü nasıl kuruyor? Râzî'nin cevabı: yalan hüsn-kubuh değil 'noksan sıfat' (kemâl ve noksan aklî/fıtrî; c8 p100); Risale bu cevabı c3 sıfatlar (kemâl sıfatlar, Allah her noksandan münezzeh) ile birlikte yazar.**
+- Doğan sual: —
