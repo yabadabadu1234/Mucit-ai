@@ -1396,3 +1396,111 @@ Biçim: cilt 1–7 ile aynı. Dipnottaki harfler neşredenin nüsha işaretlerid
 - Delil çeşidi: **dilemma (iki uçlu şüphe)**; (T) **F 27-B: bu şüphenin ikinci ayağı ('hüsn-kubuh bâtılsa Allah'tan her şey câiz, yalan ve mûcize yalancıya da') Râzî'nin kendi kelâmî tercihinin (Eş'arî: hüsn-kubuh şer'î) bedelidir; Râzî cevabı: c8 p100 'Allah'a yalan muhâl (noksan sıfat)' ve p93–99 üç asıl.**
 - Mevzuya bağı: **EN KRİTİK — Fasıl II ve c3 (hüsn-kubuh)**: **Bu, Risale'nin kelâm çerçevesine yönelmiş 'iki uçlu' itirazdır: Risale hüsn-kubuh-ı aklîyi kabul etmezse Allah'a 'yalan muhâl' hükmünü nasıl kuruyor? Râzî'nin cevabı: yalan hüsn-kubuh değil 'noksan sıfat' (kemâl ve noksan aklî/fıtrî; c8 p100); Risale bu cevabı c3 sıfatlar (kemâl sıfatlar, Allah her noksandan münezzeh) ile birlikte yazar.**
 - Doğan sual: —
+
+## c8 p29
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **K1 Fasıl 4: 'Aklın teklîfi bilmeye yeter olduğuna dayanan nübüvvet inkârcılarının şüphelerinin takrîri; bunun bi'seti düşürdüğü'.** **Kimin sesi: inkârcılar (Râzî aktarıyor).** '**Bi'setin sıhhati ya hüsn-kubuh-ı aklîyi kabûlle ya bu asıl ibtâl edilerek hâsıl olur; iki kısım bâtıl. Birincinin fesâdı birkaç vecihle: VECİH 1: fiiller üç kısım: akıl güzel dediği, doğru, hükmü kabûl edilmesi vâcib; akıl çirkin ve yasak dediği, hükmü kabûl edilmesi vâcib; üçüncü: akıl tevakkuf etti, ne güzel ne çirkin dedi: bu kısım iki: terki mümkün ya mümteni'; terki kolayca mümkünse terki vâcib: çünkü ondan ayrılmak mümkün, güzel mi çirkin mi bilinmiyor; ona atılmak ihtiyaçsız bir işe atılmaktır; zarar ihtimâli varken akıl bunun terki ve sakınılmasını hükmeder; korku ona lâzım; ona atılmak ihtiyaçsız zarar korkusunu iltizâmdır.** (p30).'
+- Netice/hüküm: **Şüphe (akıl yeter) Vecih 1: fiiller üçe ayrılır; akıl hepsinde hükmeder; tevakkuf edilenlerde terk vâcib.**
+- Delil çeşidi: **taksîm + hüsn-kubuh mu'teber takdiri**; (T) —
+- Mevzuya bağı: **Fasıl II ve c3 (hüsn-kubuh)**: 'akıl yeter, nübüvvet fâidesiz' itirazı Risale'de 'akıl Allah'ı bulur (kısmen) ama teklîfin ayrıntısı, âhiretin hâli ve ibâdet biçimi vahiyle bilinir' cümlesine yol açar; kaynak notu: Râzî bu şüpheyi F15'te üç asılla cevaplıyor (c8 p93–99).
+- Doğan sual: —
+
+## c8 p30
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: inkârcılar; Mu'tezile cevapları aktarımı ('لم لا يجوز أن يقال' ve 'قلنا' = inkârcıların cevabı).** '**İkinci kısım (terki mümkün değil): burada aklın hükmü 'cevaz'dır: akıl bilir ki âlemin ilâhı hakîm ve rahîmdir; kullarını güç ve takatlerinin üstünde teklîf etmez; kulun ayrılmaya kâdir olmadığı bir fiilden ayrılmayı emretse taatine ölçüsüz teklîf etmiş olurdu ve bu akılda çirkin. Demek aklın hükmü tüm fiil kısımlarında hâsıl; akıl Allah'ı, vâcib-câiz-haramı bilmede yeterliyse bi'sette fâide yok.** **Mu'tezile'nin cevabı: 'enbiyâ ve resûllerin bi'seti güzeldir: (1) aklın bildiğini te'kid; (2) bazı şeylerde yalnız akılla vukûf edilemeyen menfaat ve maslahatlar var; enbiyâ onları öğretir; (3) halkın akılları noksan, Allah'ı ve ibâdetlerinin keyfiyetini bilmekte kâsır; hikmet irşâd; (4) Allah bu şer'î ibâdetleri akılî vâciplerde 'lutuf' olsun diye emretti.' — bu Mu'tezile'nin sözü.** **İnkârcı cevabı ('قلنا')**: 'birincisi zayıf: akıl hüsn-kubuh ve maslahat-mefsedet vecihlerini bilmede yeterliyse asıl maksat hâsıldır; te'kid mertebeleri zabtedilemez; nebîyle beraber melek topluluğu gelseydi te'kid daha çok olurdu…' (p31).'
+- Netice/hüküm: **Şüphe (akıl yeter) sürüyor; Mu'tezile'nin 4 cevabı (te'kid, akılla bilinemeyen maslahat, akıl noksanlığı, şer'î ibâdetler aklî vâciplerde lutuf) aktarıldı ve inkârcılar cevaplıyor.**
+- Delil çeşidi: **itiraz-cevap**; (T) —
+- Mevzuya bağı: **Fasıl II ve c3**: 'lutuf' teorisi Mu'tezile'nindir; Risale almaz; Ehl-i Sünnet cevabı: nübüvvet Allah'ın fazlıdır; vahiy akılla bilinemeyenleri bildirir.
+- Doğan sual: —
+
+## c8 p31
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: inkârcılar (cevaplara cevap).** '**…te'kîd mertebeleri zabtedilemez; nebîyle beraber melek topluluğu olsa te'kid artardı; ma'sûm ordular olsa daha da; asıl maksat hâsıl olunca bu fazlalıklara ihtiyaç yok. Te'kîdden maksat mefsedeti en uzak yolla defetmekse enbiyâ 'bize uymaktan yüz çeviren en büyük ıkâba hak kazanır' der: bi'set en büyük mefsedet (dâimî azâba hak kazanma) sebebi olur; bu çelişik. (2. cevaba) 'bi'setin maksadı eşyadaki menfaatlere tenbih': o menfaatler elde edilmesi zarûrî ise herkesçe bilinir (hayat onlarsız olmaz); zarûrî değilse kaçırılması zarar doğurmaz ⇒ kaçınılması vâcib. (4. cevaba) 'bu şer'î ibâdetler aklî vâciplerde lutuf': iki vecihle bâtıl: (1) 'birinci fiilin ikincisinde lutuf olması' birinci fiilin failini ikinciye çağırması; bu hâl vicdânî ve zarûrîdir; biz namaz ve oruçla emânet iadesine ve zulmü terke çağrıldığımızı vicdânen bulmuyoruz; bu ilim zarûrî olurdu; yok. (2) şer'î ibâdetlerin vücûbu aklî vâciplerde lutuf içinse mükellef emâneti iade edip zulmü terk edince hiçbir ibâdet vâcib olmaz; çünkü matlûb hâsıl olduktan sonra lutuf îcâbı abes; bu onlarca bâtıl. (p32).**'
+- Netice/hüküm: **İnkârcıların cevabı: Mu'tezile'nin lutuf teorisi vicdânî tecrübeye aykırı (namaz emâneti iade ettirmiyor).**
+- Delil çeşidi: **reductio (vicdânî gözlem)**; (T) —
+- Mevzuya bağı: **Fasıl II ve IV (ibâdetin hikmeti)**: Risale 'ibâdetin hikmeti' bâbında lutuf teorisini almaz.
+- Doğan sual: —
+
+## c8 p32
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: inkârcılar (Hüccet 2 ve 3).** '**HÜCCET 2: matlûb ya duyulara gâib şeylerin ma'rifeti ya duyulara hâzır şeylerin: gâib: akıl Allah'ın zâtını, sıfatlarını, fiillerini, hükümlerini bilmede yeter: enbiyânın nübüvvetini bilmek ilâhiyâtı bilmeye fer'; ilâhiyâtı nübüvvete fer' etsek devir (bâtıl). Dünya geçim ve maslahatlarının ma'rifeti enbiyâ bi'setine bağlı değil: Allah'a, resûlüne ve âhiret gününe inanmayanı görürüz ki bu maslahatları en güzel biçimde elde etmeye çalışıyor; parlak akıllar ve derin hâtırlar bu matlûbları elde etmede yeter. İbâdetlerin keyfiyeti de akılla bilinir: Allah için ihlâsı en kâmil ve tam olan amel kabûle daha yakın; dünya garazlarından bir garaz karışan amel kabûl mahalli değil; ayrıca akıl dünyanın fâni, âhiretin bâkî olduğuna şehâdet edince dünya sevgisini azaltmak, âhiret sevgisini artırmaya çalışmak vâcib hükmünü verir; bu asıllar halkın aslî matlûbları; akıl hepsinde vâfî ⇒ dünya, âhiret ve din mühimlerinin hepsinin ma'rifetine akıl vâfî.** **HÜCCET 3: nebîlerin nübüvvetini ve teklîflerin Allah'tan halka ulaştığını bilmek ancak akılla Allah'ı zâtı, sıfatları, fiilleri ve hükümleriyle bilmeden sonra tamamlanır; akıl bu âlî şerefli matlûblarda vâfî ise dünya ve âhiret maslahatlarını bilmede de vâfî…' (p33).**'
+- Netice/hüküm: **Şüphe (akıl yeter) Hüccet 2–3: akıl gâibi (ilâhiyyât), maslahatı, ibâdet keyfiyetini ve âhiret-dünya tercihini bilmede yeter; nübüvvet bilgisi de akıl bilgisine dayanır.**
+- Delil çeşidi: **taksîm + devir iddiası**; (T) **⊬ 'akıl ibâdetin keyfiyetini bilir' iddiası Ehl-i Sünnet'te reddedilir: ibâdetin şekli (rekât, vakit, ölçü) vahiyle bilinir; akıl ihlâs ilkesini bulur, ölçüyü değil.**
+- Mevzuya bağı: **KRİTİK — Fasıl II ve IV ('akıl yeter mi?' borç)**: **Risale cevabı: (1) akıl Allah'ın varlığını ve bazı sıfatlarını bulur (Fasıl I); (2) ibâdetin biçimi, âhiretin hâli, teklîfin ayrıntısı vahiyle bilinir (Fasıl II–IV); (3) akıl-nakil çatışması yok, Allah'ın izniyle akıl vahyi teyid eder.** **Bu şüphenin Râzî'nin kendi cevabı: 3 asıl (p93–99), özellikle Asıl 3 (hüsn-kubuh batıl) ve K2 F1 (tekmîl yolu: nebî kâmil ve tekmîl edici).**
+- Doğan sual: —
+
+## c8 p33
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: inkârcılar.** Hüccet 3 devam: '**…vâfî ise dünya ve âhiret maslahatlarını ve ibâdetlerin keyfiyetini bilmede de vâfî; vâfînin âlî şerefli mühimleri bilmede vâfî olması aşağı, adî mühimleri bilmede evlâ. Demek nebîlerin nübüvvetinin ma'rifeti bu âlî matlûblarda aklın hükmünü kabûle fer'; o zaman enbiyâ ve resûllerin hükmü aklın hükmüne uygunsa aklın hükmü ganîdir; aksine ise fer' asılla çelişir; asıl ile fer' çeliştiğinde asla rüçhân vermek fer'e rüçhândan evlâ ⇒ aklın hükmü her takdirde râcih olmalı. Bu söz hüsn-kubuh-ı aklî mu'teber olduğu takdirde; mu'teber değilse bi'set ve nübüvvetin fesâdı daha lâzım ve zâhir (önceki yolda gösterdiğimiz gibi).**'
+- Netice/hüküm: **Şüphe (akıl yeter) sonucu: enbiyâ hükmü akla uygunsa gereksiz, aykırıysa akıl râcih; hüsn-kubuh mu'teber değilse fesâd daha lâzım.**
+- Delil çeşidi: **dilemma (akıl-nakil çatışması)**; (T) —
+- Mevzuya bağı: **Fasıl II ve IV**: 'aklın rüçhânı' itirazı Risale'de 'akıl vahyin doğruluğunun bilinmesinde ve müteşâbih te'vilinde kullanılır; vahyin hükmü aklın 'muhâl'ine (imkânsız) aykırı olamaz, aklın bilemediği alan geniştir' ilkesiyle cevaplanır (Râzî'nin usûlü: 'akıl imkânı bilir, vukûu naklî bilinir').
+- Doğan sual: —
+
+## c8 p34
+- OCR: —
+- Okuma: okunmadı (boş sayfa)
+- İçerik: Boş.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c8 p35
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **K1 Fasıl 5: 'Âdetlerin yarılmasının (harkulâde) imkânsız olduğunu söyleyenlerin şüpheleri'.** **Kimin sesi: Râzî (mezhep dökümü); dipnotta neşredenin İbn Teymiyye alıntısı.** '**Bu tür şüphelerin takrîrine girmeden halkın mezheplerine tenbih lâzım: Ebû'l-Hasan el-Eş'arî (rahmetullahi aleyh) âdetlerin yarılmasını her yönden câiz gördü; beyânı birkaç mes'elede: MES'ELE 1: ona göre hayât, ilim, kudret, şehvet ve nefretin kabûlü yapı ve terkîbin hâsıl olmasına bağlı değil; cevher-i ferd bu sıfatları kabul eder; bu takdirde bir cevherin her çeşit ilimle vasfedilmesi, her çeşit kudretle vasfedilmesi (en kâmil ve kuvvetli kâdir olması) imtinâ' değil; mu'tedil mizâçla vasıflı insanın ölü cansız olması da imtinâ' değil.**' **Dipnot (neşreden)**: İbn Teymiyye (ö. 728 h.) 'en-Nübüvvât' kitabında: 'bir tâife der ki: âdet yalnız nebî için yarılır; sihirbazların, kâhinlerin hârikalarını ve sâlihlerin kerâmetlerini yalanladı; bu, Mu'tezile'nin çoğunun, İbn Hazm'ın ve başkalarının yoludur; bu tâifenin sözü haktır; sihirbaz-kâhin fiilleri ve sâlihlerin kerâmetleri hârika olan şeylerden değil' …
+- Netice/hüküm: **Râzî'nin harkulâde mezhepleri: Eş'arî her yönden câiz görür (mes'ele 1: cevher-i ferd her sıfatı kabûl eder; mu'tedil mizâçlı insan cansız olabilir).** **Neşredenin dipnotu: İbn Teymiyye'nin 'âdet yalnız nebî için yarılır' görüşü (Râzî'nin değil).**
+- Delil çeşidi: **mezhep aktarımı (Eş'arî)**; (T) **Neşredenin İbn Teymiyye alıntısı: ⊬ tam metni ve sayfası doğrulanmadı; kerâmet ihtilafı Ehl-i Sünnet içi; Risale ALMAZ.**
+- Mevzuya bağı: **Fasıl II ve İSLÂM KAYDI**: **Eş'arî kelâm çizgisi: âdet-i ilâhî (nedensellik zorunlu değil, Allah'ın âdeti); Risale bu çizgiyi 'sebep-sonuç bağı Allah'ın âdetidir, zorunlu değildir; mûcize bu âdetin Allah tarafından değiştirilmesidir' diye yazar. Kerâmet isbâtı/nefyi Ehl-i Sünnet içinde ihtilaflı (dipnot); Risale ayrı bir bâbda 'kerâmet' derecesini yazar (⊬ Sünnet kaynaklarından).**
+- Doğan sual: —
+
+## c8 p36
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî (mezhep dökümü).** Mes'ele 2: '**cumhur: sekiz şart hâsıl olunca görmek vâcib: (1) gözbebeği âfet ve ayıplardan sâlim; (2) şey görülmeye sâlih; (3) görülen göze gâyet yakın olmayacak; (4) gâyet uzak olmayacak; (5) gâyet latîf olmayacak; (6) örtü ve perde olmayacak; (7) gâyet küçük olmayacak; (8) görene mukâbil ya da mukâbil hükmünde olacak. Bu şartlar tamamsa filozoflar ve Mu'tezile görmenin vâcib olduğunda ittifak etti; şartlardan biri eksikse görme imtinâ'. Ebû'l-Hasan el-Eş'arî'nin mezhebi: bu şeyler hâsıl olunca görme hâsıl olmayabilir; yokken hâsıl olabilir; o zaman yanımızda büyük dağlar ve yüksek sesler hâzır olup görmememiz ve işitmememiz imtinâ' değil; doğuda olan âmâ'nın batıdaki sivrisineği görmesi de imtinâ' değil.**' **Mes'ele 3**: 'ona göre dağların altın olması, vâdî sularının kan olması, insanın anne-babasız hâdis olması câiz; toplamda tüm te'sîrleri, tabîatları ve kuvvetleri inkâr eder. **Filozoflar harkulâdeyi inkârda ittifak etti, ancak şu mes'elelerde bunu ikrar etmeye mecbur: (1) 'tenâsülsüz tevellüdle insan hudûsunu' câiz gördüler (p37).**'
+- Netice/hüküm: **Eş'arî: görmenin sekiz şartı olsa bile görme vâcib değil (nedensellik yok); filozoflar harkulâdeyi inkâr eder ama teveüllüd-i insan kabûlüyle harkı ikrara yaklaşır.**
+- Delil çeşidi: **mezhep aktarımı**; (T) —
+- Mevzuya bağı: **KRİTİK — Fasıl II ve F 27-B (Râzî'nin 'Zeyd' cevabıyla bağı)**: Eş'arî'nin 'şartlar tam olsa da görme vâcib değil' tezi c8 p97–98 Asıl 2 (Zeyd) ile birlikte okunur: Râzî ihtimâlin zarûrî ilmi düşürmediğini savunur; ama Eş'arî'nin sofistliğe yol açtığı itirazı (c8 p134) Râzî'nin kendi ağzıyla filozof modeline yöneltilmiştir: iki taraf (Eş'arî ve filozof) aynı 'sofistlik' ilzâmına açık: **kendi mezhebine (Eş'arî) yönelen ilzâmın cevabı** Risale'nin kelâm çerçevesi için not.
+- Doğan sual: —
+
+## c8 p37
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî (mezhep dökümü sonu), sonra harkulâdeyi men edenlerin delili.** '**Filozofların mes'ele 1: tenâsülsüz teveüllüd: insan bedeni dört unsurun belirli mikdârlarından teveüllüd etti; bu mikdârlar belirli müddette karıştı; bu karışımdan mu'tedil bir mizâç keyfiyeti hâsıl oldu; beden böyle hâsıl olunca bedeni tedbir eden nefs hâdis olmalı; bu insan olur. Dört unsurdan belirli parçaların bu ma'lûm mikdârlara ulaşması ve karışması imtinâ' değil; karışınca o mizâç tekevvün eder; mizâç tekevvün edince o nefs hâdis olur; mümkine bağlı mümkin ⇒ belirli insanın teveüllüdle hudûsu mümkin ⇒ filozoflara göre harkulâde lâzım.** **Mes'ele 2**: 'kevn ve fesâd âleminin hayûlâsı ortak; belirli cismin hayûlâsının belirli sûrete ihtisâsı felekî şeklin o maddeyi o sûreti kabûle müsteid kılmasından; felekî şekiller zabtedilemez ve bilinemez; bu takdirde hârikaların hiçbir türü yok ki mümkin olmasın.' **Mu'tezile**: sözleri bu bâbda muztarib: kâh harkulâdeyi câiz kâh men ederler; iki bâb arasında bilinen kanun yok.' **Harkulâdeyi men edenlerin iki vechi**: **(1)** 'ilimler ikiye ayrılır: bedîhî ve kesbî; kesbîler bedîhîlere fer'; her kesbî bedîhîyi zedelerse fâsid: bedîhî ilmin hakîkati: ilk anda, cezmle, insanın kendini şüpheye düşürmeye kâdir olmadan nefste hâsıl olan ilim.' (p38).
+- Netice/hüküm: **Filozofların harkı ikrarı (teveüllüd, felekî şekiller); Mu'tezile'nin muztaribliği; harkulâdeyi men edenlerin 1. deliline giriş.**
+- Delil çeşidi: **mezhep aktarımı + hasım delil**; (T) **neşredenin dipnotu yok bu sayfada.**
+- Mevzuya bağı: **Fasıl II**: 'filozofların harkı ikrarı' Risale'ye ALINMAZ.
+- Doğan sual: —
+
+## c8 p38
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: harkulâdeyi (âdetlerin yarılmasını) men edenler (Râzî aktarıyor).** '**…bedîhî ilim: ilk anda cezmle nefste hâsıl olan ilim; genç bir insan görsek onun annesinin rahminde cenin olduğunu, rahimden ayrılınca çocuk olduğunu, sonra genç olduğunu kat'î biliriz; biri 'öyle olmadı, bu öncüller ve sebepler olmadan şimdi genç olarak hâdis oldu' dese, onun yalancı olduğuna kat'î hükmederiz; bu cezm başlangıçta, önceki bir delilden ve kıyâstan istifâde edilmeksizin hâsıl olduğundan onun bedîhî cezm ve evvelî ilim olduğunu biliriz. Öyleyse bu tecvîz bir fer' olarak asılda kadh yapar; bâtıl. Örnekler: biri deniz ve vâdî sularının taze kana, dağların halis altına dönmesini câiz görse her akıllı ona cünûn hükmeder; biri evindeki eşeğin mantık ve hendesenin inceliklerine vâkıf, ders veren bir hakîme dönmesini, evdeki hamamböcekleri ve solucanların hakîm-fâzıl insanlara dönmesini câiz görse (eve dönünce eşeği Batlamyus'un yerinde Câmi'u'l-Mecistî okuturken bulsa); biri boş bir mağarada yüksek saraylar, binalar, akan nehirler câiz görse — hepsi cünûn; demek akılların bedîhesi bu hâllerin asıl mecrâlarında sürmesini gerektirir; bu mecrâlardan çıkışı tecvîz bedîhî ilimlere kadh yapar ⇒ bâtıl.**' (p39).
+- Netice/hüküm: **Harkulâde imtinâ' delili 1: harkı câiz görmek bedîhî ilimlere (cenin-çocuk-genç zinciri, eşek-hakîm örneği) kadhtır.**
+- Delil çeşidi: **bedîhe iddiası + ilzâm (örnekler)**; (T) **Râzî'nin kendi cevabı c8 p97–98 Asıl 2 (Zeyd): 'ihtimâlin câizliği bedîhî cezmi düşürmez'; F 27-B: bu itiraz ile cevabın çekirdeği aynı önermeye bakıyor (câizlik-cezm birlikteliği).**
+- Mevzuya bağı: **KRİTİK — Fasıl II mûcize burhanı (harkulâde mümkün mü?)**: **Bu itiraz mûcize burhanının en temel öncülünü ('âdet yarılabilir') vurur; Râzî'nin cevabı: 'ihtimâl ile cezm birlikte olur' (Asıl 2) + 'muhtâr fâil her şeye kâdir' (Asıl 1). Risale cevabı: 'sebep-sonuç bağı Allah'ın âdetidir; zorunluluğu bedîhî değil, tecrübîdir; mûcize bu âdetin Allah tarafından bozulmasıdır; bu, aklen imkânsız değil, vukûu nakille bilinir'.**
+- Doğan sual: —
+
+## c8 p39
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: harkulâdeyi men edenler.** Örnek 3 sonu: '**mağarada yüksek saraylar, akan nehirler, insan eli ve tahta-kerpiç-çivi olmadan: her akıllı cünûn hükmü verir; öyleyse akılların bedîhesi bu hâllerin asıl mecrâları ve alışılmış âdetleri üzerinde sürmesini gerektirir; bu mecrâlardan çıkışı tecvîz bedîhî ilimlere kadhtır ⇒ bâtıl.** **VECİH 2: 'her cismin belirli sıfatına ihtisâsı ya o ihtisâs vâcib olduğundan, ya vâcib olmasa da başkasından evlâ olduğundan, ya ne vücûb ne evlâlık hâsıl: vücûb varsa muhâl; evlâlık varsa ya zâtından (zevâli imtinâ') ya başka sıfattan: sıfat için ikincide birincideki gibi: her sıfatın evlâlığı önceki sıfata bağlı, başlangıçsız ⇒ âlemin kıdemi; bu 'nübüvvet'i bâtıl eder. Üçüncü kısım: her cismin belirli sıfatına ihtisâsı muhtâr fâilin onu müreccihsiz o sıfata tahsîsinden: bunu câiz görüyorsanız o mûcizeyi de müreccihsiz yaratmayı câiz görün; bu 'mûcizeyi tasdîk için yarattı' sözümüzü zedeler; o zaman mûcize sıdka delil olmaktan çıkar.**' (p40).
+- Netice/hüküm: **Harkulâde imtinâ' delili 2: cismin sıfatına ihtisâsı için vücûb/evlâlık/müreccihsiz tahsîs üç şık; her biri ya harkı imkânsız kılar ya mûcizenin tasdîke delâletini zedeler.**
+- Delil çeşidi: **dilemma**; (T) **F 27-B: c4 irâde-tahsis aporiasının mûcizeye üçüncü uygulaması (c8 p56, p57 ile aynı).**
+- Mevzuya bağı: **KRİTİK — c4 aporia ↔ Fasıl II**: **Bu, 'irâde-tahsis aporiasının' nübüvvet bâbındaki ilk kaydıdır; p56'da aynı silah 'tasdîk gayesi' halkasına, burada 'harkın mümkünlüğü' halkasına uygulanıyor. Risale bu iki yerin aynı aporiaya yaslandığını tek cümleyle yazar.**
+- Doğan sual: —
+
+## c8 p40
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: harkulâdeyi men edenler (Vecih 2'nin sonu).** '**…ya vücûb ya evlâlık üzerine ise âdetin yarılması (harkulâde) imtinâ' ⇒ mûcizeler bâtıl; ne vücûb ne evlâlık üzerine ise bu, mûcizenin sıdka delil olmasında kadh. Allah bilendir.**' (kısa sayfa; dipnot: nüsha farkı).
+- Netice/hüküm: **F5'in sonu: harkulâde imtinâ' şüphesinin iki delili tamam.**
+- Delil çeşidi: **dilemma**; (T) —
+- Mevzuya bağı: **Fasıl II mûcize burhanı**: p97–99 (Asıl 1–3) bu iki delilin cevabı; çapraz kayıt: F5 harkulâde şüphesi ↔ K1 F15 Asıl 2 (ihtimâl ile cezm).
+- Doğan sual: —
