@@ -325,3 +325,75 @@ Biçim: cilt 1–7 ile aynı. Dipnottaki harfler neşredenin nüsha işaretlerid
 - Delil çeşidi: **tasnif (aklî/vaz'î şeriat) + faydalı gerekçe (âdet kırma)**; (T) **Râzî derecesi: gerekçe (hikmet) düzeyi, burhân değil; F 27-B: 'nesih fâidesi' cevabı k1 p100'deki 'hükümler aklî hüsn-kubuha bağlı değil, Allah dilediğini yapar' cevabı ile birlikte iki katmanlı: (a) mutlak irâde, (b) hikmet cihetinden bir gerekçe.**
 - Mevzuya bağı: **Fasıl II ve IV (nesih, şeriat)**: **'Aklî esaslar (tevhîd, ta'zîm, şefkat) nesih kabul etmez; vaz'î hükümler nesih alır' ayrımı Risale'nin nesih bâbı için kaynaktır (âyet Âl-i İmrân 3/64 ve A'râf 7/157 Kur'ân'dan doğrulanır). 'Hikmet: âdet kırma' gerekçesi Râzî'nin yorumu; Risale bunu 'hikmet' diye anar, nesih için burhân olarak yazmaz.** **Neşredenin dipnotları (Tevrât alıntısı) Râzî'nin değil.**
 - Doğan sual: **'Tıbb ve kıtâl' şüphesinin tam metni p125–126'da; cevabın hükmü okunacak.**
+
+## c8 p125
+- OCR: orta (kısa sayfa; üstte gövde parçası, altta neşredenin dipnotu)
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî (gövde parçası: 'orta yol'); dipnotta neşredenin notu.** Gövde: '**…cumhûr nezdinde (orta yola gitmek gerekir).**' **Dipnot (neşreden)**: '**mahz tenzîhle konuşmak ilimde râsih olanlar içindir; teşbîh vehmi veren (müteşâbih) lafızlar hakkında: avâmın kalpleri bunu zâhirinden çevirir, telaffuz etmek güzel olsa da; müteşâbihin te'vîlini ilimde râsih olanlar bilir, avâm değil. 'Nesûllâhe fe-nesiyehüm' (Tevbe 9/67) zâhirine hamledilir mi? Hamledilmez. Avâm Allah'ın bir şeyi unuttuğuna inanır mı? İnanmaz. 'Allah'ın unutması var' denilebilir mi, temsil ve teşbîh olmadan? Denemez.**'
+- Netice/hüküm: **Teşbîh lafızları hakkında Râzî'nin cevabı 'orta yol' olarak başlıyor; neşreden 'müteşâbih te'vîlini ilimde râsih olanlar bilir' ilkesini ve 'nesiyehüm' örneğini not ediyor (Râzî'nin değil).**
+- Delil çeşidi: **dipnot açıklaması**; (T) —
+- Mevzuya bağı: **F 1 tenzîh (Âl-i İmrân 3/7 'râsih' ilkesi; c2 teşbîh lafızları)**: **Risale 'müteşâbih lafızlar zâhirine hamledilmez; Allah'a naks isnâd etmez' ilkesini bu dipnotla değil c2 ile Kur'ân'dan (âyet doğrulamasıyla) yazar; dipnot kaynak değil, okuma yardımcısı.**
+- Doğan sual: —
+
+## c8 p126
+- OCR: —
+- Okuma: okunmadı (boş sayfa)
+- İçerik: Boş.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c8 p127
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **K2 Fasıl 6 (fihristte F6; bir nüshada 16. fasıl): 'Filozofların yolunun (mûcizelerin enbiyâdan zuhûru keyfiyeti) takrîri'.** **Kimin sesi: filozofların tarafı (Râzî aktarıyor; bu sayfada Râzî'nin kendi hükmü yok).** '**Bildik ki insanın iki kuvveti var: nazarî kuvvet (mufârakât âleminden ma'kûlâtın sûretleri onda kaydolur) ve amelî kuvvet (cismâniyât âleminde tasarrufa kâdir kılar).** **Âkıl-şâir kuvvetten sâdır olan mûcize: gaybdan haber getirmek; amelî kuvvetten sâdır olan mûcize: hârik-ı âdet garîb fiiller getirmek.**' **Filozofların takrîri**: '**(1) hisler, dış sûretleri his-i müşterekte ortaya çıkarır; (2) mütehayyile sûretleri birbirine terkîb eder; bir sûret terkîb edildiğinde o sûret his-i müşterekte kaydolabilir (p128).**'
+- Netice/hüküm: **Filozofların modeli: nazarî kuvvet ⇒ gayb haberi; amelî kuvvet ⇒ hârik-ı âdet fiiller; sûretler iç kuvvetlerle (mütehayyile, his-i müşterek) oluşur.**
+- Delil çeşidi: **felsefî nefs/duyu psikolojisi (Aristo-İbn Sînâ)**; (T) **filozof aktarımı.**
+- Mevzuya bağı: **İSLÂM KAYDI (KIRMIZI) ve Fasıl II mûcize/vahiy**: **Bu, mûcizeyi ve gayb haberini 'insan nefsinin iç kuvvetleri' diye açıklayan felsefî nübüvvet teorisidir; Ehl-i Sünnet vahyi Allah'ın Cibrîl aracılığıyla peygambere indirmesi, mûcizeyi Allah'ın peygamber eliyle yaratması olarak okur. Risale bu modeli ALMAZ; kaynak notu ve 'reddedilen model' olarak yazılır (c7 p426 Necm 53/5 melek aracılığı ile Râzî'nin kendi ifadesi de vahyi melekten müstefâd sayıyor; felsefî model ile iç gerilim).**
+- Doğan sual: —
+
+## c8 p128
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: filozofların takrîri (Râzî aktarıyor).** '**Ortaya çıkan sûret his-i müşterekte kaydolunca müşâhede olur; çünkü sûret dışarıdan gelmediği hâlde his-i müşterekte kaydoldu; mütehayyile'den inen sûretler de öyle. His-i müşterek aynaya benzer: aynada her yönden kaydolan sûret görülür; his-i müşterekte kaydolan sûre de öyle hissedilir.**' '**Ebrârın (iyi insanların), kâhinlerin, uyuyanların, mecnûnların gördüğü sûretler dışarıda mevcut değildir: mevcut olsaydı hissi sağlam herkes görürdü — çünkü his sağlam, görülen şey görülebilir durumda, yakın-uzak, latîf-küçük ve mukâbele şartları oluşunca idrâk ve ibsâr vâcibdir; bu şartlarda idrâk hâsıl olmayabilirse yanımızda büyük dağların ve korkunç seslerin olup görmemeleri câiz olurdu; bunu câiz görmek büyük cehâletlere götürür.** **Demek ki bu sûretler dışarıda yok; his-i müşterekte gelişi içeriden: mütehayyile bu sûretleri terkîb eder, his-i müşterek'e iner, görülür. Bu hâl hep olmalıydı, ama iki şey engeller: (1) his-i müşterek dışarıdan alınan sûretlerle meşgul; (2) âkıl kuvvet mütehayyile üzerinde hâkim ve terkîbi engeller.**'
+- Netice/hüküm: **Filozofların modeli: rüya, kehânet, delilik sûretleri dışarıda değil; mütehayyile terkîbidir; iki engel: dış sûretlerin meşguliyeti ve akıl kuvvetinin denetimi.**
+- Delil çeşidi: **felsefî gerekçe ('dışarıda olsaydı sağlam hisli herkes görürdü')**; (T) **F 27-B: bu gerekçe 'görülen her şey herkesçe görülür' varsayar; peygamberin gördüğü melek-sûret hâdisesi (Cibrîl'in insan sûretinde gelmesi, bazen yalnız peygamberin görmesi) bu gerekçeyi çürütmeye açıktır — model 'melek dışarıda gerçek ama her gözle görülmez' ihtimalini elemiyor (bu ihtimal sayfa metninde ele alınmıyor).**
+- Mevzuya bağı: **İSLÂM KAYDI (KIRMIZI)**: **'Peygamberin gördüğü sûretler dışarıda mevcut değil, iç kuvvetin ürünü' iddiası vahyi Cibrîl'in gerçek inişini nefyeden filozof modelidir; Risale ALMAZ. (Kaynak: burada Râzî'nin kendi hükmü YOK; aktarım.) Kehânet, sihir, delilikle aynı psikolojik çerçeveye konulmuş olması, vahyi 'sıradan hayâl' düzeyine indirir; Risale Fasıl II'de peygamber ≠ kâhin ≠ mecnûn ayrımını (c8 p114 Şuarâ okuması) esas alır.**
+- Doğan sual: —
+
+## c8 p129
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: filozofların takrîri.** '**İki meşgul edici birlikte ya da biri ortadan kalkarsa o telvîh (görüntü) ve teşbîh (sûret) hâsıl olur: uyku vaktinde zâhir his kalkar; his-i müşterek levhası dış nakışlardan boşalır; mütehayyilenin terkîb ettiği sûretleri kabule hazır olur; sûretler iner, hissedilir olur. Hastalıkta nefs bedeni tedbîrle meşgul olur; mütehayyileyi terkîbden alıkoyamaz; mütehayyile kuvvetlenir, his-i müşterek'in dış sûretleri kabulünü engeller; bu sûretler ona gelir; müşâhede olur. Korku hâlinde görünen korkunç sûretler de böyle: nefse hâkim korku mütehayyileyi terbiyeden alıkoyar; şehvet gibi başka kuvvetler akıl zayıf nefse hâkim olup şehveti şiddetlendirir, aklı yener; mütehayyile o meşhûnun sûretini kurar; his-i müşterek levhasında kaydolur.**' **Fer' 1: doğru ve yalan rüyaların sebebi.** '**Mütehayyilenin terkîb ettiği sûretler bazen yalan, bazen doğru olur. Yalan olan 3 yolla: (1) insan bir şeyi hissetti, o sûret hayâl hazînesinde kaldı; uyku vaktinde his-i müşterek'te kaydolur (p130).**
+- Netice/hüküm: **Filozofların modeli: rüya, hastalık ve korku halindeki görüntüler; 'yalan rüya' 1. yolu (his izleri).**
+- Delil çeşidi: **felsefî psikoloji açıklaması**; (T) filozof aktarımı.
+- Mevzuya bağı: **Fasıl II — rüya-vahiy ayrımı (kaynak notu)**: **Ehl-i Sünnet'te rüya sınıflaması (sâdıka/kâzibe) Sünnet'te ayrı işlenir (⊬ sayfa dışı: hadîs kaynakları Risale'de Fasıl IV'te doğrulanır); Râzî'nin 'filozof modeli' Risale'ye girmez.**
+- Doğan sual: —
+
+## c8 p130
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: filozofların takrîri.** '**Yalan rüya (2): düşünce kuvveti bir sûret attığında o sûret hayâlde kaydolur, uyku vaktinde his-i müşterek'e geçer; insan bir beldeden başka beldeye gitmeyi düşünse, ya da bir şeyin ümidi/korkusu hâtırına gelse, uykuda o hâlleri görür. (3) ruhun düşünce kuvvetini kuşatan mizâcı değişirse düşünce kuvvetinin fiilleri de değişir: sıcağa meyilli olan uykuda ateşleri, yangını, dumanı; rutûbete meyilli olan yağmurları; kuruluğa meyilli olan toprağı ve karanlık renkleri görür. Bu üç tür 'edğâs-ı ahlâm' (karmakarışık rüyalar) kabîlindendir, i'tibâra alınmaz.**' **Doğru rüya**: '**sebebini takrîr: (1) bu süflî âlemde vâki olan her şey — olmuş, olacak, mevcut — Allah'ın ilminde, akıl meleklerinin ve semâvî nefslerin ilminde bulunur. (2) nâtık nefsin tabîatı, bu mebdelerle ittisâl etmek ve o mebdelerde nakşedilmiş sûretlerle nakşolmaktır; bu hâlin hâsıl olmayışı o mebdelerin bahîllik etmesinden değil, nâtık nefsin bu sûretlere kâbil olmamasından değil, nefsin beden tedbîrine istiğrâkının onu bu genel ittisâlden alıkoymasındandır.**' (p131).
+- Netice/hüküm: **Filozofların modeli: yalan rüya (3 tür, i'tibârsız); doğru rüya = nâtık nefsin semâvî mebdelerle ittisâli.**
+- Delil çeşidi: **felsefî psikoloji + sudûr metafiziği**; (T) filozof aktarımı; **⊬ 'Allah'ın ilminde, akıl meleklerinin ve semâvî nefslerin ilminde bulunur' cümlesi Allah ilmini yaratıkların ilmiyle yan yana sayar (sudûr modeli); Risale ALMAZ.**
+- Mevzuya bağı: **İSLÂM KAYDI (KIRMIZI)**: **'Geleceğin bilgisi semâvî nefslerde bulunur; nâtık nefs onlarla ittisâl ederek gayb bilgisi alır' iddiası ilmü'l-gayb'ın Allah'a has oluşunu bozar (c8 p118 'mefâtîhu'l-gayb lâ ya'lemuhâ illâ hüve' — Râzî'nin kendi ifadesiyle çelişir); Risale ALMAZ.**
+- Doğan sual: —
+
+## c8 p131
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: filozofların takrîri; dipnotta neşredenin nüsha notu.** '**Nefsin beden tedbîrinden bir an fark ettiğinde tabîatıyla o mebdelerle ittisâl eder; o mebdelerde hâzır olan sûretlerden bir kısmı nefse kaydolur — kendi nefsine en lâyık olanlar: o insanın, arkadaşlarının, şehir ve iklim ahâlisinin hâlleri; insanın himmeti ma'kûlât ilimlerine çekiliyorsa ona onlarla ilgili şeyler belirir; himmeti halkın maslahatlarındaysa onu görür. Sonra bu sûretler nâtık nefsin cevherinde kaydolunca, tabîatı işleri taklit etmek olan mütehayyile, kaydolan sûretleri onlara uygun cüz'î sûretlerle hikâye etmeye girişir; bu sûretler his-i müşterek'e kaydolup müşâhede olur: rüyanın sebebi budur. Mütehayyilenin ürettiği bu sûretler bazen o manalara son derece münâsib olup tabîre ihtiyaç bırakmaz; bazen bazı yönlerden münâsib olur ve tabîre ihtiyaç duyar; tabîrin fâidesi tahlîli ters yönde yapmaktır — tabîr eden hayâlde hâzır sûretlerden bu manalara döner. Üçüncü kısım: sûretlerin bu manalara hiç münâsib olmaması: iki sebeple: (1) bu garîb hayâlin ortaya çıkışı edgâs-ı ahlâm'ın üç sebebinden biri; (2) mütehayyile o mana için bir sûret, o sûret için ikinci sûret, ikincisi için üçüncü … kurdu; bu intikallerde ileri gitti ve sonunda nefsin idrâk ettiği manaya hiç uymayan bir sûrete ulaştı; bu kısım da edgâs-ı ahlâm'a girer (p132).**' **Dipnot (neşreden)**: 'bir nüshanın bu bölümdeki ekindeki bilgi ve 'Kur'ân-ı Azîm bu yolun en kâmil ve efdal yol olduğuna delâlet eder' başlığı nüshaya göre farklı yerde; sağlam olan (ط ع ل) nüshalarıdır.'
+- Netice/hüküm: **Filozofların modeli: doğru rüya = nefsin mebdelerle ittisâli + mütehayyilenin cüz'î sûretlerle hikâyesi; tabîr = bu sûretlerden manalara dönüş.**
+- Delil çeşidi: **felsefî psikoloji**; (T) filozof aktarımı.
+- Mevzuya bağı: **İSLÂM KAYDI**: aynı (Risale ALMAZ). **Kaynak notu: neşredenin nüsha dipnotu, bu bölümün yerinin nüshalara göre değiştiğini gösteriyor (⊬ metin tesbîti PDF'den).**
+- Doğan sual: —
+
+## c8 p132
+- OCR: orta
+- Okuma: tam (sayfa fasıl ortasında biter; devamı p133'te)
+- İçerik: **Kimin sesi: filozofların takrîri (Râzî aktarıyor).** Rüya bahsinin sonu: 'bu sebeple kâzip ve şâirin rüyasına güvenilmez: çünkü mütehayyileleri yalan-bâtıl intikallere alışmıştır.' **Fer' 2: gaybdan haber verme keyfiyeti.** '**Nâtık nefs kâmil kuvvetliyse, âlî ve süflî cihetlere ulaşmada vâfîyse, beden tedbîriyle meşguliyeti onu mufârik mebdelerle ittisâlden alıkoymayacak kadar güçlüyse, düşünce kuvveti de his-i müşterek levhasını dış hislerden koparmaya kâdirse, bu nefse uyanıklık hâlinde uyuyanlara olan gibi mufârik mebdelerle ittisâl vâki olması uzak değildir. O zaman bu mufârikâttan bazılarından bu âlemin vak'alarına delâlet eden sûretler nâtık nefsin cevherinde kaydolur; mütehayyile kuvvetinden dolayı ona münâsib bir sûret terkîb eder; bu sûret his-i müşterek levhasına iner, müşâhede olur. Bu hâlde o insan nazmedilmiş bir kelâmı bir hâtiften işitebilir; en kâmil ve celîl sûrette bir manzara görebilir ve o sûret ona hâlleri ve bağlı olduğu kimselerin hâllerini bildirerek hitâb eder. Bu hissedilen sûret nefsin idrâk ettiği manalara tam uyuyorsa bu VAHY-i SARÎH; hayâlî sûret akıl manasına bazı yönlerden muhâlifse te'vîle muhtaç VAHY.**' **'Mütehayyileyi bu değişiklikten çeviren iki şey: (1) …**' (p133).
+- Netice/hüküm: **Filozofların modeli: vahy = uyanıklıkta nefsin mebdelerle ittisâli + mütehayyilenin sûret terkîbi; 'vahy-i sarîh' ile 'te'vîle muhtaç vahy' ayrımı.**
+- Delil çeşidi: **felsefî psikoloji + sudûr**; (T) filozof aktarımı; **Râzî'nin bu sayfada kendi hükmü YOK; hüküm sonraki sayfalarda (K2 F6 sonu, F7) aranacak.**
+- Mevzuya bağı: **EN KRİTİK — İSLÂM KAYDI (KIRMIZI) ve Fasıl II vahiy tanımı**: **Bu, vahyi 'nefs-mütehayyile-his-i müşterek zinciri' ile açıklayan felsefî modeldir (İbn Sînâ/Fârâbî tipi); Ehl-i Sünnet vahyi Allah'ın Cibrîl aracılığıyla peygambere ulaştırması ve peygamberin onu gerçek bir indirme olarak alması diye tanır (Necm 53/5, Tekvîr 81/19 ve Şuarâ 26/192–195 Râzî'nin kendi okumalarında da melek aracılığı vardı: c7 p426, c8 p114). Risale bu modeli ALMAZ; Fasıl II 'vahiy' tanımı Kur'ân'ın kendi ifadesiyle yazılır (melek aracılığı, indirme). Râzî'nin bu modele KENDİ tavrı henüz okunmadı (fihrist K2 F6–F7); okunmadan Râzî'ye 'filozof modelini benimsiyor' hükmü yazılmaz.**
+- Doğan sual: **Râzî K2 F6–F7 sonunda bu modeli nasıl değerlendiriyor (kabul mü, ilzâm mı, aktarım mı)?**
