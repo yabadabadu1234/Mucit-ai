@@ -1153,3 +1153,111 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **taksîm + reductio; imtiyaz-gayriyet argümanı**; (T) burhânî biçim (hasmın delili); **Râzî cevabı p129'da.**
 - Mevzuya bağı: **Risale'ye bağ yok; ⊬ 'bu'd = müsâvî mâhiyet' öncülü.**
 - Doğan sual: **Râzî'nin vecih 3'e cevabı?** (p129 okunmadı.)
+
+## c5 p178
+- OCR: —
+- Okuma: okunmadı (boş sayfa)
+- İçerik: Boş.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c5 p179
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Makâle 2, Fasıl 7: 'Hâlâ (boşluk/fezâ) görüşünün fer'leri'.** **Kimin sesi: Râzî — hem kudemâ nakli hem ehl-i tahkîk nakli.** **Fer' 1**: '**kudemâ cumhuru hâlânın adem kabul etmediğinde ittifak etti; 2 delil.** **1.**: mümkin her şey için vukû' farzından muhâl lâzım gelmez; hâlâ ma'dûm farz edilsin: bu farzda **yemîn ile yesâr, fevk ile taht imtiyazı kalır mı?** **Kalmaz demek bedîhen bâtıl** (böyle bir hâl ve farz aklın kabul etmediği, hayâlin tasavvur etmediği); ⇒ **bu boş boyutlar, ademi farz edilince vücûdu farz edilmesi lâzım gelen şeylerdir; ademi farzı muhâl** (p180).
+- Netice/hüküm: **Kudemâ delili 1: hâlâ ma'dûm farz edilince yön imtiyazı kalır ⇒ ademi farz muhâl ⇒ hâlâ vâcibü'l-vücûd li-zâtihi (kudemâ hükmü, Râzî nakil).**
+- Delil çeşidi: **farz + bedîhe (yön imtiyazı)**; (T) burhânî biçim (kudemâ); **F 27-B: 'ademi farz ⇒ imtiyaz' zamandaki 'ademi farz ⇒ ba'diyet' delili (c5 p60 H6, p77 H1) ile aynı kalıp ⇒ ayırt etmiyor.**
+- Mevzuya bağı: **KRİTİK — F 1 tevhid (vâcib bir)**: **kudemâ 'hâlâ vâcibü'l-vücûd' der ⇒ ikinci vâcib; Râzî ehl-i tahkîk tarafında (p180) hâlâyı MÜMKİN sayıyor (zamanda p81 ile paralel: zaman mümkin, fezâ mümkin)**. Risale: 'vâcib bir' (c2 K2 F1) ilkesi mekâna da uygulanır: mekân vâcib değil.
+- Doğan sual: —
+
+## c5 p180
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: kudemâ (H2), sonra 'ehl-i tahkîk' (Râzî'nin tarafı), sonra Fer' 2.** **H2 (kudemâ)**: 'akıl **dağların ve denizlerin yerlerinden zevâlini ve nefslerinde ademini kabul eder**; ama bu boş yerlerin ve boşluğun ademini kabul etmez ⇒ hâlâ vâcib.' **Ehl-i tahkîk**: '**bu boyutlar zâtları gereği mümkinü'l-vücûddur; öyle olan her şey kendi başına adem kabul eder.**' **Beyân**: (1) (metin düşmüş; ⊬), (2) '**bu hâlâ bölünür: 'buradan şuraya bir zira', başka yere binlerce zira' denir; bölünen ⇒ mümkin ⇒ adem kabul eder.**' **Fer' 2**: '**âlemin hâdis olduğunu söyleyenler mutlaka şunu ikrar etmek zorunda: âlemin hudûsundan önce bu fezâ 'müteşâbih' fezâydı: bir tarafı fevk, öbür tarafı taht değildi; fevkiyet ve tahtiyet ancak başka bir cismin hâsıl olmasıyla ma'kûl; hiçbir cisim yokken fezâ cüzlerinin fevkiyet-tahtiyetle ihtilâfı imtinâ' ⇒ hâlleri bütünüyle müteşâbih.**'
+- Netice/hüküm: **Ehl-i tahkîk (Râzî tarafı): fezâ mümkinü'l-vücûd li-zâtihi, bölünür ⇒ adem kabul eder. Fer' 2: hudûs diyenler, âlemden önce fezâyı 'müteşâbih' kabul etmeli.**
+- Delil çeşidi: **mümkin-bölünür kıyası (imkân delili)**; (T) burhânî biçim; **⊬ 'bölünür ⇒ mümkin' öncülü (c2 K1 'terkîb ⇒ imkân' ile aynı, c2 sual 9).**
+- Mevzuya bağı: **KRİTİK — F 1 hudûs (c4 K2) ve İSLÂM KAYDI**: **'âlemin hudûsundan ÖNCE fezâ vardı (müteşâbih)' cümlesi, hudûs diyenlerin 'âlemden önce mekân' kabûlünü Râzî'nin kendi ağzıyla yazdığı yerdir; bu, 'âlemden önce hiçbir şey yoktu, mekân da yaratılmıştır' okumasından (Ehl-i Sünnet ana hattı: mekân ve zaman mahlûktur) farklıdır. Risale 'fezâ âlemden önce vardı' cümlesini ALMAZ; mekân mahlûktur.**
+- Doğan sual: **Râzî hudûs diyenlere 'âlemden önce fezâ' kabûlünü ilzâm ediyor; kendi hudûs delillerinde (c4 K2) bu ilzâma cevap var mı? c4 defter/özet kontrolü: c4 p200 dehr ve 'vehmî ba'diyet' cevabıyla eşleştirilecek.**
+
+## c5 p181
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî.** **Fer' 3**: '**hâlâ-fezâyı isbât edenler, bunun âlemin DIŞINDA NİHÂYETSİZ olduğunda ittifak etti; Aristo ve ashâbı bunun muhâl olduğunu söyledi.** Öncekiler: 'hâlâ nihâyetli olsa, dışında bir tarafın öbür taraftan, cânibin cânibten imtiyazı kalmazdı — muhâl'; Aristo: 'nihâyetsiz boyutlar muhâl'. **İstiksâ sonra.**' **Fer' 4 (İLÂH-I ÂLEM MEKÂNA MUHTASS OLAMAZ)**: '**mekân, hayyiz, cihet hakkında geçenlerden: âlemin ilâhı hiçbir mekâna muhtass olmaktan imtinâ eder; 3 vecih. (1)** İlâhın bir hayyiz ve cihette hâsıl olması vâcib olsa, **ilâhın vücûdu o hayyize muhtaç** olur; hâlânın cisimsiz kalması ma'kûl olduğundan, **ilâhın zâtı o hayyize muhtaç, hayyiz vâcibü'l-vücûd ve ganî** olur; muhâl. **(2)** Bu fezâda hâsıl olsa: fezânın **bütün cânibinde mi, belirli cânibinde mi**? Birincisi muhâl (bölünmüş, mürekkeb; zâtı bütün hâdis ve mümkinlerle **mükâlât/karışım**); ikincisi muhâl: fezâ müteşâbih, ezelde bir cânibi fevk, öbürü taht değildi ⇒ zâtının belirli bir cânibde hâsıl olması, **mümkinin bir tarafını müreccihsiz rüçhân** (p182).
+- Netice/hüküm: **Râzî: âlemin ilâhı hayyize/cihete/mekâna muhtass olamaz (vecih 1, 2).**
+- Delil çeşidi: **reductio (imkân/ihtiyaç + müreccihsiz rüçhân)**; (T) burhânî biçim; **F 27-B: 'müreccihsiz rüçhân' öncülü c4 'müreccihsiz rüçhân muhâl' ilkesi (irâde-tahsis aporiasının çekirdeği) kullanılıyor; kelâmî 'muhtâr tahsis edebilir' cevabına (c4) açık kapı kalıyor.**
+- Mevzuya bağı: **F 1 tenzîh (§3)**: **c2 K1 F5 (12 hüccet: Allah cihet/hayyiz imtinâı) ile aynı hüküm, mekân teorisinden **sonuç** olarak yeniden türetildi; Risale bunu 'Allah mekândan ve cihetten münezzehtir' cümlesine c2 ile birlikte bağlar (ders katmanı: iki yoldan aynı sonuç).** **Dikkat: Râzî burada 'hâlâ cisimsiz kalabilir' öncülünü **kabul edilmiş** gibi kullanıyor (Aristo/mütekellim reddi c5 p115–120 tartışması).**
+- Doğan sual: —
+
+## c5 p182
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî (Fer' 4 sonu), sonra 'bazı insanlar' (Fer' 5, 6).** Fer' 4 vecih 2 sonu: 'zâtının fezânın belirli bir cânibinde hâsıl olması, mümkinin iki tarafından birini müreccihsiz tercih ⇒ muhâl.' **Vecih 3**: '**mekân, cihet, hayyiz ya bu'ddur ya yüzey. Bu'd ise Allah'ın zâtı o bu'de muhtaç, bu'd Allah'ın zâtından ganî ⇒ zikredilen muhâller. Yüzey (hâvî yüzey) ise âlemin dışında ne hâlâ ne mele ne hayyiz ne cihet kalır; o zaman zâtının orada hâsıl olması imtinâ'; kalır ki 'ilâh bir hayyiz ve cihette olsaydı, âlemin içinde hâsıl olur, hudûdu olan, mütenâhî bir cisim olur ve âlemin küresi onu kuşatırdı; muhâl.**' **Fer' 5**: '**bazı insanlar 'latîf ile kesîf arasındaki imtiyaz hâlânın karışmasıyla hâsıl olur' dedi: bir cismi oluşturan cüzler hâlânın cüzleriyle karışırsa o cisim latîf; karışmazsa kesîf; ne kadar çok karışırsa o kadar latîf; toprak hâlâ karışmadığı için gâyet kesîf; su karıştığı için latîf; hava suyun karışımından daha çok; ateş, sonra felekler.**' **Fer' 6**: '**bazı insanlar: hâlâda cisimleri çeken bir kuvvet vardır; bu yüzden cisim aşağı iner (hâvî nâzil olur)…**' (p183).
+- Netice/hüküm: **Fer' 4 tamam (3 vecih: Allah mekâna muhtass olamaz). Fer' 5–6: hâlâ karışımıyla latîf-kesîf; hâlânın câzibe kuvveti (bazı insanların görüşü).**
+- Delil çeşidi: **reductio (Fer' 4); görüş aktarımı (Fer' 5–6)**; (T) Fer' 4 burhânî biçim.
+- Mevzuya bağı: **F 1 tenzîh: Fer' 4 vecih 3 = c2 K1 F5'in 'hayyiz = bu'd ya da yüzey' şıkları (Allah her iki şıkta da mekâna muhtass olamaz)**; **Risale: 'Allah hiçbir yerde değildir; cihete/mekâna nisbet edilemez' cümlesi c2 ile birlikte bu üç vecihe dayanır.** Fer' 5–6 Risale'ye alınmaz (fizik).
+- Doğan sual: —
+
+## c5 p183
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî (Fer' 6 reddi + kapanış), sonra nakledilen hutbe.** **Fer' 6 reddi**: '**bu söz bâtıl: hâlâda cismi kendine çeken kuvvet olsaydı, cisim ona ulaşınca onu kendinde tutması, ayrılmasına izin vermemesi gerekirdi; öyle olmadığı için bu söz bâtıl.**' **'Zaman ve mekân hakkındaki sözümüzün sonu burada olsun.'** **Sonra 'Emîrü'l-mü'minîn Ali b. Ebî Tâlib (radiyallâhu anh)'ın bir tahmîdinden' alıntı (dipnot: nüsha farkı 'demiş ki: Yâ men lâ yahlû...')**: '**Ondan hiçbir şey hâli değildir ki mekânlarla idrak edilsin; onun için bir benzer şekil yoktur ki keyfiyetle vasfedilsin; ondan hiçbir şey gâib değildir ki hayseriyetle bilinsin; mâ ihdes'in sıfatlarından mübâyin; icâd ettiği zâtların tasarrufundan idrak edilmekten imtinâ'…; mekânlar onu kuşatmaz, ölçüler celâline ulaşamaz; evhâma kuşatılması, fehimlere istiğrâk edilmesi, zihinlere temsil edilmesi imtinâ'; vâhid, adedden değil; dâim, müddetle değil; kâim, direkle değil; hiss değil ki cinsler onunla denk olsun; şekil değil ki şekiller onunla çarpışsın; eşya gibi değil ki sıfatlar ona vâki olsun; akıllar idrâkinin dalgalarında dalâlette, evhâm ezeliyetini zikretmekte hayrette…; dehr onu yaratmamış, sıfat onu kuşatmamış…**' (p184).
+- Netice/hüküm: **Fer' 6 (hâlâ câzibe) bâtıl; Makâle 2'nin ve kitabın konu kısmı bitti; Râzî tenzîh hutbesi nakletti.**
+- Delil çeşidi: **reductio (Fer' 6); nakil (hutbe)**; (T) —
+- Mevzuya bağı: **KAYNAK NOTU (F 1 tenzîh, Fasıl IV Sünnet kaynağı kaydı)**: hutbe **Ali b. Ebî Tâlib'e nisbet edilen bir tevhid metnidir; Râzî'nin nakli; isnadı ve hangi kaynaktan (Nehcü'l-Belâga vb.) geldiği bu metinde YOK ⊬; Risale bu metni Sünnet kaynaklarında isnadıyla doğrulamadan 'hadis/Sünnet' diye kullanmaz; ders katmanında 'Râzî'nin naklettiği tevhid metni' notuyla anılabilir.** İçeriği c2 tenzîh hükümleriyle (mekân-cihet-cisim-benzerlik nefyi) uyumludur; 'dehr onu yaratmamış' cümlesi c5 p76–81 zaman-cevher tartışmasına Râzî'nin kendi sonunda **karşı** durur.
+- Doğan sual: **Hutbenin isnadı ve tam metni? (⊬)**
+
+## c5 p184
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: hutbenin sonu; sonra Râzî'nin (mü'ellifin) tazarru' duâsı.** Hutbe sonu: '**boyunlar ona boyun eğmiş; sebepler onun karşısında itaat etmiş; cinsler rubûbiyetine şahit; kudretine âciz; kıdemine şahit; zevâl bekâsına; ona nisbet edilen bir hadd yok; ona darb edilen misâl yok; ondan gizlenen bir şey yok; mahlûkların misallerinden ve sıfatlarından yücedir.**' **Duâ (Râzî): 'Yâ İlâhe'l-âlemîn! Kitâbında zikrettin: 'De ki: gökte ve yerde olanlar kimindir? De ki: Allah'ındır' (En'âm 6/12); bu bâhir burhan ve kâhir delil sabit oldu: mekân ve mekânîler sana boyun eğmiş, fakr ve tazarru' ile itiraf eder. Sonra buyurdun: 'Gece ve gündüzde sükûn bulan şey O'nundur' (En'âm 6/13); bu gizli sır ve ma'lûm asılla açıkladın ki zaman ve zamânîler senin halk, takdir, ibdâ' ve tedbirinin altındadır; mekân-mekânîler ve zaman-zamânîler senin mecd ve azametinin şahitleridir, vâcibü'l-vücûdluğunu ve kıdemini itiraf eder. Zaman hareketiyle senin hareketlerden münezzeh olduğuna, mekân sükûnuyla senin sükûnlardan yüce olduğuna delil oldu; kıdem künhünde zıdlar ve emsâl lâhıklarından yücesin; fert, ferdler gibi değil; vâhid, vâhidler gibi değil; kevn ve fesâd âleminin alâkalarından yücesin.**' (Duâ: 'ey kuvveti kılıç…'; 'kabirdeki çürümüş kemikleri dirilten': meâd atfı; 'kendi rahmetinden bana mahrumlardan ve reddedilenlerden olmayacağım cennetler ver; cesedime ve rûhuma fazlından bir damla döksün; ya erhamerrâhimîn'). Salavât.
+- Netice/hüküm: **Râzî'nin tazarru': zaman ve mekân, Allah'ın halk ve takdiri altında; vâcibü'l-vücûdluğuna ve kıdemine şahit; zaman hareketle, mekân sükûnla O'nun hareket ve sükûndan münezzeh olduğuna delil.**
+- Delil çeşidi: **duâ/tazarru' (En'âm 6/12–13 tefsiri)**; (T) **duâ; burhân değil; ancak tefsirî iddia: 'zaman ve mekân Allah'ın halkı altında' (En'âm 6/13 'mâ sekene fi'l-leyli ve'n-nehâr').**
+- Mevzuya bağı: **EN KRİTİK — Risale'nin 'zaman mahlûktur' cümlesi (F 1 §3, §6.3) ve İSLÂM KAYDI**: **Râzî, zaman-mekân bahsini bitirirken KENDİ duâsında 'zaman ve zamânîler senin halk ve takdirinin altındadır' diyor (En'âm 6/12–13'e dayanarak). Bu, bâbın gövdesindeki 'müdde kâim cevher/en yakın Eflâtun' (p76–77, p91) ile GERİLİM taşır ve Risale'nin 'zaman mahlûk' cümlesi için Râzî'den KENDİ ağzıyla yazılmış destek verir: gövde 'ezelî cevher' derken, sonuç duâsında 'senin halkın altında'. Kaynak kaydı: gövde ile duâ arasındaki gerilim yazıldı; hüküm: Risale 'zaman ve mekân Allah'ın yaratmasıdır' cümlesini Kur'ân (En'âm 6/13) ve Râzî'nin duâsıyla yazar, 'müdde ezelî cevher' cümlesini almaz.**
+- Doğan sual: **Gövde (p76–91) ile duâ (p184) Râzî'nin kalemince nasıl uzlaşır?** ('müdde'nin de Allah'ın halkı olduğu kelâmî uzlaştırma olabilir; ⊬ Râzî bunu yazmadı.) Cilt 5 tutarlılık tablosuna girecek.
+
+## c5 p185
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kolofon.** '**Kitabın müellifi (Allah rûhunu takdis etsin) bu yazının sonunda: 'Bu kitap Cumartesi gecesi, Cemâziyelevvel'in 17'sinde, hicrî 605 yılında tamam oldu; hamd Allah'a, hakkı olduğu gibi.'**' **'el-Metâlibü'l-Âliye mine'l-İlmi'l-İlâhî'nin beşinci cüzü tamam oldu; ardından altıncı cüz gelir: 'fi'l-hayûlâ'** (hayûlâ hakkında).' (Dipnot: nüsha varyantları.)
+- Netice/hüküm: **Cilt 5 kolofonu: 605 h.; ardından cilt 6 = hayûlâ (madde) bahsi.**
+- Delil çeşidi: —
+- Mevzuya bağı: **Cilt sırası doğrulandı: c6 ilk cüzü 'hayûlâ' olarak duyuruluyor (c6 fihristi cevher-i ferd bahsi ile başlıyor; yani 'hayûlâ' cüz başlığı geniş anlamda).**
+- Doğan sual: —
+
+## c5 p186
+- OCR: —
+- Okuma: okunmadı (boş sayfa)
+- İçerik: Boş.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c5 p187
+- OCR: orta (fihrist; sayfa numaraları düşmüş)
+- Okuma: tam
+- İçerik: **Cilt 5 fihristi.** **Makâle 1: zaman**: F1 zamanın nefyini söyleyenlerin delilleri; F2 'zaman ve müddetin vücûdunu bilmek bedîhî-evvelî, hüccet ve delile ihtiyaç yok' diyenler; F3 'zamanın vücûdunu bilmek kesbî-istidlâlî' diyenlerin delilleri; F4 zamanın mâhiyeti; F5 'zaman kem-i muttasıl' sözünün tahkîki ve bunun hak olmadığı; F6 zamanın mâhiyeti hakkında diğer mezhepler. (Sayfa numaraları OCR'de düşmüş.)
+- Netice/hüküm: Fihrist p9–107 ile eşleşir; gövdeye göre **F7 = ân, F8 = dehr ve sermed, F9 = mâzî-hâl-müstakbel (10 husus) [ve F10/11: hâdis-kadîm, lafızlar]**; fihristle gövde arasında **F10–11 başlıkları p188'de kısmî**.
+- Delil çeşidi: —
+- Mevzuya bağı: **Fihristten çıkan tek sonuç: fasıl haritası (sayfa numarası yok).**
+- Doğan sual: —
+
+## c5 p188
+- OCR: orta-kötü (fihrist; satır kayması)
+- Okuma: kısmî
+- İçerik: **Cilt 5 fihristi devam.** F7 ân hakkında sözün tahkîki; F8 dehr ve sermed; F9 mâzî-hâl-müstakbelin havâssı (ve zikredilen lafızların tefsiri: müdde, zaman, vakit, sermed, ezel, ebed, nehâr, leyl). **Makâle 2: mekân**: F1 insanların mezhepleri; F2 hâlâ ve fezânın 'mahz adem' diyenin sözünün ibtâli; F3 mekânın kendi başına kâim bu'd olması ma'kûl mü; F4 'mekân bu'd' diyenin dayandığı vecihlerin takrîri; F5–F7 başlıkları düşmüş (OCR).
+- Netice/hüküm: **Mekân makâlesi: F4 'bu'd diyenlerin delilleri' p129 civarında başlar (fihrist sırasına göre); F5–F6 başlıkları okunmadı (OCR); F7 = hâlâ fer'leri (p179–183).**
+- Delil çeşidi: —
+- Mevzuya bağı: **Fihristten çıkan tek sonuç: fasıl haritası; okunmayan c5 p129–177 mekân makâlesinin ortası (F4–F6).**
+- Doğan sual: **c5 F5–F6 başlıkları neler? (gövde okunarak anlaşılacak; alaka sırasında düşük.)**
+
+## c5 p189
+- OCR: kötü (çöp satırlar)
+- Okuma: okunmadı (OCR çöp; yalnız 'الفصل السادس / السابع / فهرس المواضيع' başlık parçaları okunuyor)
+- İçerik: Fihristin son sayfası; başlıklar kısmî: F6, F7 (başlıkları düşmüş); 'fihrist-i mevzû'ât'.
+- Netice/hüküm: **Netice çıkarılmadı.**
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
