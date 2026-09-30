@@ -1234,3 +1234,84 @@ Biçim: cilt 1–7 ile aynı. Dipnottaki harfler neşredenin nüsha işaretlerid
 - Delil çeşidi: —
 - Mevzuya bağı: —
 - Doğan sual: —
+
+## c8 p11
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **K1 Fasıl 2: 'Teklîfin nefyine dayanarak nübüvvetleri inkâr edenlerin şüphelerinin hikâyesi'.** **Kimin sesi: teklîf/nübüvvet inkârcıları (Râzî aktarıyor, delilleri 'kelâmcıların cebr delilleri' olarak sayıyor); dipnotta neşredenin kitap düzeni notu.** '**Teklîfi inkâr edenler iki fırka: biri bu inkârı cebre bina eder; biri cebre değil başka yollara.** **1. fırka: 'cebir hak ⇒ teklîfin inkârı hak ⇒ nübüvvetin inkârı hak'; üç mukaddime.** **MUKADDİME 1: cebrin hak olduğu — takrîri ayrı kitapta (kitâb-ı müfred, 'seyeti' = gelecek) istiksâ ile gelecek; şimdi kısaca vecihler:** **VECİH 1**: fiile kâdir olan ya terke de kâdir ya değil; kâdir ise fiil tarafının terk tarafına rüçhânı ya bir müreccihe bağlı ya değil; bağlıysa o müreccih kuldan ise aynı taksîm tekrar (teselsül), başkasından ise cebir lâzım; müreccih olmadan tercih hâsıl olursa (12).' **Dipnot**: 'bu, El-Cebr ve'l-Kader'in (c9) El-Metâlibü'l-Âliye'nin cüzlerinden olduğunu gösterir; tertîbi nübüvvâtı içeren 8. cüzden sonra gelir; çünkü 'seyeti' diye ifade etti.'
+- Netice/hüküm: **F2: teklîf/nübüvvet inkârı cebre bina ediliyor: 3 mukaddime (cebir hak; cebir ⇒ teklîf bâtıl; teklîf bâtıl ⇒ nübüvvet bâtıl); Vecih 1 başlıyor.**
+- Delil çeşidi: **şüphe zinciri (cebr ⇒ teklîf ⇒ nübüvvet)**; (T) —
+- Mevzuya bağı: **KRİTİK — Fasıl I §8 kader ve Fasıl II (cebr ↔ nübüvvet zinciri)**: Risale'nin kader cümlesi bu zincire açıkça cevap vermelidir: 'kader (Allah'ın her şeyin yaratıcısı olması) teklîfi ve nübüvveti düşürmez' — Râzî'nin kendi cevabı bu şüphenin F14–F15 cevaplarında ve c9'da; **c8 p118'de 'ikisine icmâlen îmân, dalma' ile birlikte okunur.** **Kitap düzeni: neşredenin notuna göre c9 (cebr ve kader) c8'den sonra gelir.**
+- Doğan sual: —
+
+## c8 p12
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: cebr taraftarları (aktarım).** Vecih 1 devam: '**…müreccih olmadan tercih olursa (1) mümkinin iki tarafından birinin ötekine müreccihsiz rüçhânı: bu, âlemin sânii'nin varlığına muhdesâtın hudûsu ve mümkinlerin imkânı ile yapılan istidlâli engeller; sâni' bâtıl olunca teklîf ve nübüvvetin bâtıllığı daha lâzım; (2) fiil tarafının terk tarafına rüçhânı mahz tesâdüf; tesâdüfle olan şeyde vukû', terkten evlâ değil: vukû' bulmuşsa fâil o fiili dilese de dilemese de vâki olmuştur; vukû' bulmamışsa fâil dilese de dilemese de vâki olmaz: bu mahz cebirdir ⇒ rüçhân müreccihe bağlıysa cebr lâzım; bağlı değilse cebir daha lâzım ⇒ cebr her takdirde lâzım. Fiile kâdir olan terke de kâdirse böyle; fiile kâdir olan terke kâdir değilse cebir daha zâhir.**' **VECİH 2**: '**fiile kâdir olanın terke hiç kudreti yoktur; öyleyse kudret fiili gerektirir ⇒ cebr lâzım. Çünkü terk aslî ademdir; adem kâdirin mak'dûru olamaz: kudret müessir sıfat, adem mahz nefy (13)…**'
+- Netice/hüküm: **Cebr delili 1 (müreccih zinciri) ve 2 (terk ademdir, mak'dûr değil).**
+- Delil çeşidi: **taksîm + reductio (kelâmî cebr delili)**; (T) **F 27-B: Delil 1'in çekirdeği c4'ün 'müreccihsiz rüçhân muhâl' ilkesi; Mu'tezile 'muhtârın müreccihsiz tercihi' savunur (c2 p137); Râzî c9'da bu delili 'kat'î burhan' sayıyor (c9 p388).**
+- Mevzuya bağı: **Fasıl I §8 kader/irâde ve c4 aporia**: burada cebr taraftarlarının (Râzî'nin kendi tarafının) argümanı **hasım şüphesinin öncülü** olarak kullanılıyor: yani aynı delil hem kader burhanı hem nübüvvet itirazı öncülü.
+- Doğan sual: —
+
+## c8 p13
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: cebr taraftarları (aktarım).** Vecih 2 sonu: 'adem mahz nefy; onu kudretin eseri yapmak imtinâ'; şeyin bekâsı hâlinde başkasıyla vâki olması imtinâ' (tahsîl-i hâsıl); demek bâkî ademde iki vecih var, her biri mak'dûr olmayı men eder ⇒ terk mak'dûr olamaz ⇒ kâdir fiile kâdir, terke değil ⇒ kudret fiili gerektirir ⇒ cebr.' **VECİH 3**: 'fiile kudret ya dâîlerin eşit olduğu hâlde ya bir tarafın rüçhânı hâlinde hâsıl olur; iki kısım bâtıl: eşitlikte rüçhân çelişik; rüçhân hâlinde raci' vâcib, mercûh mümteni'; vâcib ve mümteni'e kudret yok. 'Eşitlik hâlinde ikinci zamanda tercîhi îkâ' edebilir' denirse: bâtıl iki vecihle…' **(p14).**
+- Netice/hüküm: **Cebr delili 2 sonu ve 3 (dâîlerin eşitliği/rüçhânı).**
+- Delil çeşidi: **taksîm + reductio**; (T) —
+- Mevzuya bağı: **Fasıl I §8**: aynı; kelâm bilgisi: dâî (güdü) tartışması c3/c4 'irâde' bâbı ile bağlanır.
+- Doğan sual: —
+
+## c8 p14
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: cebr taraftarları.** Vecih 3 devam: '**(1) ikinci zamanda tercîhi îkâ' etme: ikinci zaman geldiğinde o zamanda tercîh mümkün mü — ya dâîlerin eşitliği ya bir tarafın rüçhânı hâsıl; taksîm döner. (2) …ikinci zamanda fiilin vukûu ve ilk zamandaki îkâ' ayrı; îkâ' (yapma eylemi) fiilden ayrı bir şey; o îkâ' bu fâilin kudretiyle vâki değilse ona bağlı fiil bu kâdirle vâki değil; vâki ise kudret ondan önce; sonra aynı söz; her îkâ' başka bir îkâ'a mesbûk, nihâyetsiz teselsül; kâdirin kudreti eserden nihâyetsiz zaman önce ⇒ muhâl.** **VECİH 4**: 'fiil ve terke imkân: ya fiil hâlinde, ya öncesi, ya sonrası; üç kısım bâtıl (fiil hâlinde terk çelişik; öncesi: ilk zamanda ikinci zaman imtinâ'; sonrası: bedîhî).**'
+- Netice/hüküm: **Cebr delili 3'ün devamı ve 4 (fiilin zamanına göre kudretin imkânsızlığı).**
+- Delil çeşidi: **zaman-kudret analizi (kelâmî)**; (T) **⊬ 'kudretin fiille birlikte olması' (Eş'arî 'kudret ma'a'l-fi'l') delil çıkarımı bu deliller için ana öncül; hasım (Mu'tezile) 'kudret kabl el-fi'l' der.**
+- Mevzuya bağı: **Fasıl I §8**: kudretin fiille ilişkisi (kesb) Risale'nin kader cümlesi için ders katmanı bilgisi (ispat katmanında c9).
+- Doğan sual: —
+
+## c8 p15
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: cebr taraftarları.** Vecih 4 sonu: '**demek fiile kudret — fiil ve terkten imkân hâsıl olması manasıyla — fiilden önce, fiil ile birlikte, fiil sonrası imtinâ'; öyleyse bu kudretin sübûtu muhâl.**' **VECİH 5**: '**fiil-terk tarafına eşit tam imkân hâsıl olsa, ona müreccih dâî eşlik etmezse fiilin sudûru imtinâ'; müreccih dâî eşlik ederse o kudret, o müreccih dâî ve muâraz olmadan fiili gerektirir; bir takdirde imtinâ', öbürü vücûb; kudret ne mümteni'e ne vâcibe; o hâlde fiile imkân hiç hâsıl olmaz. Bu beş vecih 'kudretin hâli ve mak'dûrdaki te'sîrinin keyfiyeti' bahsinden alındı.**' **VECİH 6**: '**kul kendi fiillerinin tafsîlini bilmiyor: parmağını oynatsa kaç cevher-i ferd oynattığını, kaç hayyizde oynattığını bilmez; belirli sayının fazla ve eksik olmayıp vukûu ancak kasıtla olur; kasıt ilme şartlı; ilim yoksa kasıt yok ⇒ kulun îkâ'ıyla vâki, îcâdıyla mevcut olması imtinâ'.**' **VECİH 7**: '**kulun kudreti bazı mümkinleri îcâda sâlihse hepsini îcâda sâlih olurdu: mak'dûriyeti sahih kılan imkândır; imkân tüm mümkinlerde tek mefhûm…' (p16).**
+- Netice/hüküm: **Cebr delilleri 5, 6 (kul fiil tafsîlini bilmiyor: cevher-i ferd sayısı), 7 (imkân tüm mümkinlerde ortak).**
+- Delil çeşidi: **kelâmî burhan**; (T) **⊬ Delil 6 cevher-i ferd atomculuğuna dayanır (c5 p74, c6 p213 kaydı: Râzî cevher-i ferdi kabul ediyor); delil o tercihin sonucunu taşır.**
+- Mevzuya bağı: **Fasıl I §8**: Delil 7, Râzî'nin kendi Asıl 1'i (c8 p94) ile aynı öncüle (imkân tek mefhûm) dayanır: aynı öncül hem nübüvvet cevabında hem cebr şüphesinde: F 27-B: iki yönde kullanılan silah (kayıt).
+- Doğan sual: —
+
+## c8 p16
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: cebr taraftarları.** Vecih 7 sonu: '**…kulun tüm mümkinleri îcâda kâdir olması bâtıl; yoksa kendini ve kudretini yaratmaya kâdir olurdu; o hâlde hiçbir mümkini îcâda kâdir olamaz.** **VECİH 8**: kulun mak'dûru Allah'ın da mak'dûru; kulun mak'dûru Allah'ın mak'dûruna misil; misiller câiz olanlarda eşit; Allah'ın kâdir oluşunu gerektiren belirli zâtıdır; zât bir misle kâdirlik gerektirse ikinci misle de gerektirir ⇒ kulun mak'dûru Allah'ın mak'dûru; o hâlde kulun kudretiyle vukûu muhâl: iki sebepten biri tam müstakil iktizâ ederse öbürünün te'sîri mevcudun îcâdı olur (muhâl); biriyle vâki olsa müreccihsiz rüçhân; o hâlde Allah'ın kudretiyle vukûu evlâ ⇒ kul mûcid olamaz. **VECİH 9**: kul bir cismi hareket ettirmek istese, Allah sükûn ettirmek istese: iki murâd bir arada (muhâl) ya ikisi de imtinâ' (yine muhâl: mânîler birbirinin vukûu; illetsiz ma'lûl olmaz); biri vâki olsa (müreccih…) ⇒ kudret eşitliği ⇒ müreccihsiz rüçhân. **VECİH 10**: Allah kuldan îmânı istese, kul küfrü istese: kulunki vâki olup Allah'ınki olmazsa kul kudrette Allah'tan kâmil olur (muhâl). **VECİH 11**: Allah kuldan îmânı istese, onun îmân etmeyeceğini bilse: zıtların birleşmesini istemiş olur; bu irâde imtinâ'.**' (p17).
+- Netice/hüküm: **Cebr delilleri 7 sonu, 8 (temânu'), 9 (iki murâd), 10 (kudret kâmilliği), 11 (irâde ve ilim çatışması).**
+- Delil çeşidi: **kelâmî burhan**; (T) **F 27-B: 8 (temânu') burada kulun kudretine karşı kullanılıyor; c2'de tevhide, c8 p95'te Asıl 1'e; aynı silah üç yerde (tevhid, mûcize, kader).**
+- Mevzuya bağı: **Fasıl I §8, §6.2**: **temânu' ilkesinin kula uygulanması (kulun mak'dûru Allah'a da mak'dûr ⇒ ikinci müessir olamaz) Ehl-i Sünnet kader anlayışının çekirdeği; Risale kader cümlesinde 'kulun kesbi' (kul yaratmaz, kazanır) kavramını bu delil zincirine dayandırır — Risale kesb'i tanımlarken F 27-B'yi uygular.**
+- Doğan sual: —
+
+## c8 p17
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: cebr taraftarları.** Vecih 9 sonu: '(hareket ve sükûn parçalanmaz; kudret kuvvet-za'fa kâbil ⇒ iki kudretin eşitliği ⇒ rüçhân bilâ mürecceh ⇒ muhâl).' Vecih 10–11 aktarıldı. **VECİH 12**: '**kulun fiili kendi îcâdıyla vâki olsaydı onun murâdının aynısı olurdu; herkes ancak hakkı, sıdkı ve doğruyu ister; öyleyse herkeste sıdk, hak ve doğru hâsıl olmalıydı; öyle değil, çoğu cehâlet ve dalâlette ⇒ hepsi Allah'ın kazâ ve kaderiyle; bu cebri gerektirir.**' '**Bu on iki (metinde 'dokuz/yedi' nüsha farkı) vecih kelâmcıların cebr ehli delillerindendir.**'
+- Netice/hüküm: **Cebr delili 12 (kul hak isterken dalâlet: demek her şey Allah'ın kaderi); 1–12 kelâmcıların (cebr/kader ehli) delilleri olarak işaretleniyor (metin 'التسعة/السبعة' farkı ⊬).**
+- Delil çeşidi: **kelâmî burhan**; (T) **⊬ 12. delil 'herkes ancak hak ister' öncülü doğru değil (insan bilerek kötü de isteyebilir); F 27-B: ayırt etmiyor.**
+- Mevzuya bağı: **Fasıl I §8**: aynı.
+- Doğan sual: —
+
+## c8 p18
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: cebr taraftarları (filozof/başka kaynak aktarımı: 13–15).** **VECİH 13**: '**Allah cüz'îleri bilir; Allah'ın vukûunu bildiği şey vâcibü'l-vukû', ademini bildiği mümteni'ü'l-vukû'; çünkü vukû' ilmi ademü'l-vukû'a çelişir; nakîzeynin cem'i muhâl; vukû' ilmi hâsıl olunca ondan çelişiği lâ-vukû' imtinâ'; imtinâ'a kudret yok. Bu delil başka biçimde: Allah ya cüz'îleri bilir ya bilmez; bilirse cebr lâzım; cebr sâbit olunca teklîf ve nübüvvet bâtıl; bilmezse teklîf ve nübüvvetin bâtıllığı daha lâzım.** **VECİH 14**: 'Allah kâfirlerin küfrünü haber verdi; o küfür vâki olmasa Allah'ın haberi yalan olurdu; muhâle götüren muhâl; demek küfrün onlardan sudûru vâcib ⇒ cebr.' **VECİH 15**: 'öncüller ya vâcib, ya mümteni', ya mümkin; vâcib ve mümteni'e kudret yok; mümkin ya mâzîde, hâlde, ya müstakbelde; mâzî ve hâlde bir taraf vâki; vâkie kudret yok; müstakbelde: 'yarın yağmur yağacak' ya da 'yağmayacak': iki çelişikten biri kesinlikle vâcib (yoksa önerme nefy ve isbâttan hâli kalır: muhâl); vâcib ya belirli biri ya belirsiz; belirsiz muhâl (belirli olmayanın mevcut olması imtinâ') (p19).**
+- Netice/hüküm: **Cebr delilleri 13–15: ilm ⇒ vukû' vâcib; haber ⇒ vukû' vâcib; müstakbel önermelerinde çelişiklerden biri belirli vâcib (mantıkî cebr).**
+- Delil çeşidi: **mantıkî/kelâmî cebr delilleri (ilm, haber, müstakbel önerme)**; (T) **F 27-B: 13 ve 14 'ilim ve haber ma'lûmu vâcib kılar' öncülü kelâmın klasik cevabına açık: ilim keşf eder, îcâb etmez; ayırt etmiyor; Risale bu cevabı yazmak zorundadır ('ilim tâbi'dir, mûcib değil').**
+- Mevzuya bağı: **KRİTİK — Fasıl I §8 (Allah'ın ilmi ve kader) ve c3 ilim**: **13. delil c3 'cüz'î ilim' bâbıyla doğrudan bağlı (borç: c3 p104–160 çapraz kontrol); Risale kader cümlesinde 'Allah'ın ilmi olayları zorunlu kılmaz; ilim keşfeder' ilkesini c3 sonuçlarıyla yazar.**
+- Doğan sual: —
+
+## c8 p19
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: cebr taraftarları (Vecih 15 sonu); MUKADDİME 2.** Vecih 15: 'belirsiz olan muhâl ⇒ vâcib olan belirli biri ⇒ o vâkidir; vâkie kudret yok; demek her önerme için kudret yok.' '**Bu on beş vecihle cebrin hak olduğu sabit; bu babın tamamı 9. kitapta (c9) gelecek (inşaallah).**' (dipnot: 'bu, Cebr ve Kader / Kazâ ve Kader kitabının Metâlibü'l-Âliye'nin cüzlerinden olduğunu gösterir') **MUKADDİME 2: cebr hak olursa teklîfin bâtıllığı hak: '**kul fiile ve terke kâdir olmadıkça emri abestir: fiili gerektiren şey varsa o fiil hâsıl ve vâcib, kul isterse de istemese de; terki gerektiren varsa o terk hâsıl; o hâlde 'yap' ya da 'yapma' diyen, 'yap ey yapmayan' der gibi olur; câiz olsaydı boyunun uzunluğu-kısalığı, renginin emredilmesi, gökleri, Arş'ı ve Kürsî'yi yaratmasının emredilmesi de câiz olurdu, oysa hiçbirine kudreti yok; ayrıca körlere Mushaf'ı noktalamak, felçlilere göklere uçmak için resûl göndermek câiz olurdu; bunların hepsinin fesâdı zâhir.**' (Mukaddime 3 p20'de.)
+- Netice/hüküm: **Cebr ⇒ teklîf bâtıl (Mukaddime 2): 'kâdir olmayana emir abes; körlere Mushaf noktalatmak gibi'.**
+- Delil çeşidi: **reductio (teklîfin abes oluşu)**; (T) —
+- Mevzuya bağı: **KRİTİK — Fasıl I §8 ve Fasıl II (teklîf)**: Bu, Risale'nin en ağır itirazı: 'cebr + teklîf' çelişkisi. **Ehl-i Sünnet cevabı: 'kesb' teorisi (kul kudret ve ihtiyârla fiili kazanır; teklîf bu kesbe taalluk eder; sorumluluk ve emir anlamlıdır);** Risale bu cevabı c9 (kelâmî burhan) ve c8 p118 'ikisine icmâlen îmân' ile birlikte kurar; Râzî'nin kendi cevabı c9 ve c8 K1 F15 üçüncü aslında ('hüsn-kubuh batıl') bulunur mu — okunacak.
+- Doğan sual: —
