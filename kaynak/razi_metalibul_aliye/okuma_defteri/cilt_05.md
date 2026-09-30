@@ -865,3 +865,75 @@ Biçim: cilt 1–4 ile aynı. Dipnottaki harfler (س، ز، ط، ت، م) neşre
 - Delil çeşidi: **tanım analizi + aporia (suâl)**; (T) H10 burhânî biçim; **Suâl 1 = aporia (cevap p97'de aranacak)**.
 - Mevzuya bağı: **Fasıl I zaman/tekaddüm**: Suâl 1'in çözümü **'kimin sesi'** ile: bu suâl Râzî'nin kendi suâlidir ('فلقائل أن يقول' formülü — **hasım/itirazcı sesi olabilir, dikkat**); cevap görülmeden hüküm yok.
 - Doğan sual: **Suâl 1'in cevabı p97'de mi? Cevap 'tekaddüm iki zamanın ilişkisi' mi, 'zaman-dışı' bir izâfet mi?** (⊬ bekliyor).
+
+## c5 p97
+- OCR: orta (başındaki satır p96 Suâl 1'in devamı; dipnot çöpü var)
+- Okuma: tam
+- İçerik: **Kimin sesi: hasım suâli (Suâl 1 sonu, 2, 3), Râzî cevap.** Suâl 1 sonu: 'meiyyeti gerektiren şey aynı zamanda tekaddümü gerektiremez; çünkü meiyyet tekaddümü nefyeder; **her ikisi de tekaddüm hâsıl etmez ⇒ bir şeyin 'zamanca başkasından mütekaddim' diye hükmedilmesi sahih olmaz.**' **Râzî'nin cevabı**: '**zamanca tekaddümün hâsıl olması yalnız zihinlerdedir: oğul hâsıl olunca zihin babanın ondan önce mevcut olduğunu i'tibâr eder; zamanî tekaddüm bu i'tibârdan hâsıl olur.**' **Suâl 2**: 'tekaddüm ve teahhur **mütedâyifân (izâfî çift)**; mütekaddim müteahhirle beraber; meiyyet tekaddümü nefyeder ⇒ tekaddüm tekaddümü nefyeder (bâtıl)'. **Cevap**: '**babanın zâtı oğulun zâtından mütekaddim; babanın 'mütekaddim olması' oğulun 'müteahhir olması' ile mukârin; i'tibâr farklı olunca tenâfî kalkar.**' **Suâl 3**: '**ma'dûm, vücûda girmeden önce 'sî-yûcedu (var olacak)' diye vasfedilir; mevcut olunca bu vasıf zâil olur; bu vasıf ma'dûm iken hâsıl olduktan sonra yok olmuştur ⇒ mevcut vasıf ⇒ vücûda girmeden önce hâsıl ⇒ mevcut sıfatın ma'dûm mevsûfa kıyâmı (muhâl)**; ayrıca **mâzî olma vasfı da bu mâhiyetten farklı mevcut vasıf ⇒ mahz ma'dûma mevcut sıfat kıyâmı (muhâl)**' (p98).
+- Netice/hüküm: **Râzî: zamanca tekaddüm zihnî i'tibârdır (Suâl 1); tekaddüm-teahhur iki i'tibârla çelişmez (Suâl 2).**
+- Delil çeşidi: **aporia çözümü (i'tibâr farkı)**; (T) **Râzî'nin cevabı 'zihnî i'tibâr' derken zamanı ayânda kabul ettiği (p47 'seyyâl vakit', p58 H2) hükümle gerilim taşır: 'zaman mevcut, tekaddümü zihnî' ayrımı ayırt eder mi (F 27-B)? İki hüküm (zaman ayânda mevcut; tekaddüm-i zamanî zihnî) birlikte mümkün, ama 'kabliyet ayânda mevcut' (c5 p40) hükmü ile ÇELİŞİR: p40'ta kabliyet-ba'diyet delilinde 'ayânda mevcut' deniyordu (kaydı: p40 notu).**
+- Mevzuya bağı: **KRİTİK — c5 içi çelişki kaydı**: c5 p40 'kabliyet ayânda mevcut' ↔ c5 p66 'kabl/meiyyet/ba'diyetin ayânda vücûdu yok, zihnî nisbetler' ↔ c5 p97 'zamanca tekaddüm yalnız zihinlerde'. **Üç yerde iki hüküm; p66 ve p97 aynı yönde. p40'ın hasım sesi mi Râzî'nin sesi mi olduğu ayrıca doğrulanmalı (defter p40 'kimin sesi' alanına bak).**
+- Doğan sual: **c5 p40'ın sesi kimindi?** (Deftere geri dönülüp kontrol edilecek; cilt 5 sonunda tutarlılık tablosuna girecek.)
+
+## c5 p98
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: hasım suâli sonu, sonra bir 'kimileri' cevabı, Râzî'nin itirazı ve KENDİ hükmü.** Suâl 3 sonu: 'bu vasıf ancak şeye ma'dûm olduktan sonra hâsıl olur ⇒ mevcut sıfatın mahz ma'dûma kıyâmı ⇒ muhâl.' **Cevap**: '**bazıları: 'sî-yûced' veya 'kâne mevcûden' diye hükmedilen şey AKILDA hâzır zihnî sûrettir; o mevcuttur, ma'dûm değil.**' **İtiraz ('ولقائل أن يقول')**: '**zihnî sûret hâzır; hâzır, hâzır olmak bakımından ne mâzî ne müstakbeldir. Mâzî-müstakbel hükmü verilen ya mevcut-hâzır olmalı (o zaman mâzî-müstakbel olmaz) ya hâzır olmayıp hâlde ma'dûm olmalı; mâzî ve müstakbel olma vasıfları hâlde mevcut ⇒ mevcut sıfatın mahz ma'dûma kıyâmı (muhâl).**' **Râzî'nin hükmü**: '**en yakını şudur: 'mâzî olma' ve 'müstakbel olma' iki MEVCUT sıfat DEĞİLDİR. Allah bilendir.**'
+- Netice/hüküm: **Râzî: mâzî ve müstakbel olma, mevcut sıfat değil (izâfî/i'tibârî).**
+- Delil çeşidi: **dilemma + i'tibârî sıfat**; (T) **Râzî derecesi 'en yakın'**; **F 27-B: 'mevcut olmayan sıfat' cevabı 'sıfat ma'dûma kaim olamaz' problemini 'sıfat yok' diyerek çözer; ayırt ediciliği: aynı cevap 'zaman mevcuttur' hükmü ile bağdaşır (zaman zâtı mevcut, kipler izâfî).**
+- Mevzuya bağı: **Fasıl I zaman dili (c1 Mesele 7 'kâne/yekûnu')**: **Râzî'nin 'kâne/yekûnu' vasıfları mevcut sıfat değil, i'tibârî nisbet' hükmü Fasıl I zaman dili borcunun (c1 sual 4) İÇ-DİL cevabıdır: Allah hakkında 'kâne' demek O'nda değişiklik yapmaz (p65 ile aynı çizgi).** **Ana metne 'ders katmanı dipnotu' olarak (c1 sual 4 çözümüne katkı; karar padişahın).**
+- Doğan sual: —
+
+## c5 p99
+- OCR: orta (bazı satırlar birleşmiş, H2 başlığı düşmüş; gövde okunuyor)
+- Okuma: tam (H2'nin başı kısmî)
+- İçerik: **Fasıl 10: 'Zamanın hâdis mi kadîm mi olduğu'.** **Kimin sesi: Râzî aktarımı (filozoflar/kelâmcılar).** '**Filozoflar dehr ve müddetin kıdemi üzerinde ittifak etti; kelâmcılar hudûsu üzerinde. Öncekiler iki fırka: (a) 'zarûrî ilim: dehrin ademi kabul etmediği; akıl ademini/refini tasavvur edemez'; (b) 'kıdemini hüccet ve delille isbât edenler.**' **(a) grubunun 3 delili**: **H1**: '**bir şeyin önce ma'dûm olup sonra hâdis olduğunu i'tikat ettiğimizde mutlaka 'müstemir bir müddet' isbât etmiş oluruz; müddetin zâtı ancak bu seyyâl-mütehârrik dâvâmdır ⇒ ademini tasavvur ancak vücûdunu farz ederek mümkün ⇒ ademi aklen zâtı gereği muhâl.**' **H2** (başlık düşmüş): '**vücûdunun ademe sebkatı … ancak müddet ve zamanla**' ⇒ (cümle kısmî) (p100).
+- Netice/hüküm: **Filozofların 'müddetin kıdemi zarûrî' delilleri H1–H2 aktarıldı (Râzî'nin kendi hükmü değil).**
+- Delil çeşidi: **hasım aktarımı; 'ademi tasavvur edilemez' bedîhe iddiası**; (T) **⊬ 'tasavvur edilemez' = 'muhâl' geçişi (tasavvur imkânsızlığı ≠ vücûd zarureti); F 27-B: delil ayırt etmez (her ma'dûm için 'evvelce ademi' zaman ister).**
+- Mevzuya bağı: **KRİTİK — F 1 hudûs/kıdem ve İSLÂM KAYDI**: bu **c4 Kısım 1'in kıdem tarafı 'zaman kıdemi' delilinin (c4 p200 dehr) aynısı**. Risale'nin 'zaman mahlûk' cümlesine **karşı delil**; Râzî burada **yalnız aktarıyor**, **kendi hükmü p101'de 'Aristo yolu zayıftır' ile yalnız bir kanatta yazılı.**
+- Doğan sual: **Râzî'nin 'zaman hâdis mi kadîm mi' sorusundaki KENDİ hükmü var mı, yoksa bu fasıl salt aktarım mı?** (p100–101 okundu: hüküm YOK; yalnız Aristo yolu için zaafı; ⊬ tam cevap).
+
+## c5 p100
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: filozofların (a) grubu H3, Râzî, sonra kıdem tarafının iki fırkası.** **H3**: '**'kâne' ve 'sekûnu' lafızları mutlaka geçmiş bir müddete ve gelecek bir müddete işâret eder; 'bu ibârenin darlığındandır' diyenin sözü fâsit; bilakis aklın ademini farz edememesindendir, fehm de ademi takdir etmeyi ifâde edemez.**' **Diğer fırka (hüccetle kıdemi isbât edenler)**: '**Kıdem ve hudûs kitabında bunların zikrettiği ve dayandığı vecihleri anlattık; tekrarında fayda yok.**' (**Not: 'Kitâbü'l-kıdem ve'l-hudûs' = c4 (Kısım 1 kıdem delilleri) — atıf, ⊬ c4 ile birebir eşleşme sayfa düzeyinde yapılmadı.**) **'Dehrin kıdemini söyleyenler iki fırka'**: '**(1) müddet kendi başına kâim cevher, vücûdu harekete bağlı değil; ⇒ dehrin kıdeminden hareketin kıdemi lâzım gelmez; dehr zâtında sâbit; hareket, tagayyür ve hâdis onunla mukârin olmasa orada yalnız tek dâvâm ve tek istimrâr olur; beşer akılları o dâvâmın keyfiyetini tasavvurdan aciz: bulduğumuz iki şey: (a) hâdislerin teâkübine göre dâvâm — hâdisin ardından hâdis, vaktin ardından vakit — bu ancak kabliyât ile ba'diyâtın tagayyürüyle tahakkuk eder; tagayyür şaibelerinden hâli dâvâmı akıl anlayamaz; (b) 'bulduğumuz her dâvâm belirli bir vakitte ma'kûldür; böyle olan sonlu ve mahduttur; nihâyeti olmayan akılda tasavvur edilemez.**' (p101).
+- Netice/hüküm: **Filozofların zamansal kıdem iddiası + 'dehr kâim cevher' fırkasının açıklaması: dehrin dâvâmı akılca kavranamaz (tagayyürsüz dâvâm), bu 'zaman seyyâl' zannını doğurur.**
+- Delil çeşidi: **hasım aktarımı + kavramsal ihtiyat ('aklın kavrayamayışı')**; (T) —
+- Mevzuya bağı: **Fasıl I §6.3 (zamansız devam) ve c2 p76**: '**tagayyürsüz dâvâmı akıl anlayamaz**' cümlesi **c2 p76 'devam zamana bağlı olmak zorunda değil' ile aynı zeminde**; **Risale'nin 'Allah'ın kıdemi zamansız devamdır, aklımız bunu tasavvurda aciz' dili için Râzî'den destek kaydı (ders katmanı).**
+- Doğan sual: —
+
+## c5 p101
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî.** 'Dehr kâim cevher' fırkasının sonu: '**bu iki hâdis (a, b) yüzünden 'müddet ve zaman cevheri zâtında seyyâl-mütegayyir' zannedilir; oysa tagayyür ancak mâhiyetinin dışındaki hâllerde ve zâtına arız izâfetlerdedir (hâdislere mukârenet sebebiyle).**' **'Zaman harekete lâhik' diyenler**: '**müddetin kıdeminden hareketin kıdemine, hareketin kıdeminden cisimlerin kıdemine istidlâl ederler; bu Aristo ashâbının yolu; Râzî'ye göre 2 yönden zayıf**: (1) **kâhir kat'î burhanlarla gösterdik: müddet ve zamanın hareketin mikdârı ve lâhikası olduğu söylenemez; bu öncül çürüyünce bütün söz çürür.** (2) **farz edelim zaman mikdâr-ı harekettir; ama hareket bir sıfattan sıfata tagayyürdür (eyn→eyn veya keyf→keyf olsun): 'cismânî alâkalardan mücerred bir mevcut hâsıl olsun; zâtında mütegayyir sıfatlar veya sürekli halden hâle intikal eden ta'akkulât hâsıl olsun; zaman bu rûhânî sıfatlardaki hareketin mikdârı olur' denmesi neden câiz olmasın? Bu takdirde müddet ve zamanın kıdeminden cismin ve eyn-vaz'daki hareketin kıdemi lâzım gelmez.**' (p102 boş.)
+- Netice/hüküm: **Râzî: Aristo'nun 'zaman kıdemi ⇒ hareket kıdemi ⇒ cisim kıdemi' yolu zayıf (iki yönden: öncül çürütüldü; rûhânî mücerrette hareket mümkün).**
+- Delil çeşidi: **iki yönlü öncül reddi (biri burhan, biri ihtimal)**; (T) **(2) 'câiz olmasın' = ihtimal kapısı açmak; Râzî'nin dürüst derecesi: çürütme değil, kanıtı zayıflatma.**
+- Mevzuya bağı: **KRİTİK — F 1 hudûs (c4 K1 kıdem tarafı) ve İSLÂM KAYDI**: **c4 K1 'zaman kıdemi ⇒ hareket ⇒ cisim' zincirine Râzî'nin kendi cevabı: zincir kırık (öncül 1) + alternatif (rûhânî mücerret); bu, Risale'nin 'âlem hâdis' tezini destekleyen bir kırma; Risale bunu 'Râzî'nin bu zincire itirazı' diye yazar.** **Fakat aynı fasılda Râzî'nin KENDİ hükmü 'zaman hâdis' YAZILMADI; dehr/müddet kıdemi ihtimali açık bırakıldı (⊬).** **Kelâmcıların 'zaman hâdis' delilleri bu fasılda yok; p99 başlığı iki tarafı vaat ediyor ama gövde yalnız filozofları anlatıyor (⊬ eksik/OCR?).**
+- Doğan sual: **Fasıl 10'un gövdesinde kelâmcıların hudûs delilleri neden yok?** (p99 başlığı 'kelâmcılar hudûsu üzerinde ittifak etti' — gövde aktarım bitti; cilt 5 sonunda **c4 K2 ile eşleştirilecek**.)
+
+## c5 p102
+- OCR: —
+- Okuma: okunmadı (boş sayfa)
+- İçerik: Boş.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c5 p103
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Fasıl 11 (Makâle 1'in sonu): 'Bu bâbın sonu: lemha, vakit, sâat, hîn, ecel… lafızlarının farkları'.** **Kimin sesi: Râzî.** '**Bu lafızların mefhûmları arasındaki farkı açıklamak, akliyâttaki ince, gizli bahislere dayanır.**' **Lafız 1: MÜDDET** — '**zâtında ve cevherinde mevcut, bâkî, dâim, müstemir; akıl onu ancak hâzır ânların tevâlî ve teâkübiyle idrâk eder; bu teâkübin birbirini medd etmesi (uzatması) gibi olduğu için 'müdde' denir.**' **Lafız 2: ZAMAN** — '**zamanın zâtında ve vücûdunda hareketten müstağnî mevcut olduğunu gösterdik; hareket olsa da olmasa da hâsıl; hareketin müddet ve zamanın vücûduna te'sîri yoktur, te'sîri takdir ve tahdîdindedir; tıpkı sâatlerin/âletlerin günü cüz'lere bölüp tahdid etmesi gibi (âlet günün vücûdunu yapmaz, cüz'lerini takdîr eder); felek hareketi müddetin îcâdında te'sîr etmez, ancak takdirinde; müddet başka hareketlerle değil, felekî hareketle takdir edilir: çünkü en süratli ve ihtilâflardan en uzak hareket.**' (p104.)
+- Netice/hüküm: **Râzî'nin lafız tahlili: müdde = zâtı mevcut, bâkî; zaman = aynı şeyin hareketle takdiri; hareketin müddete tesiri takdirdedir, îcâdda değil.**
+- Delil çeşidi: **tanım/lafız tahlili (Râzî'nin kendi tercihi, p76–77 ve p91 ile uyumlu)**; (T) —
+- Mevzuya bağı: **Fasıl I §3 ve İSLÂM KAYDI**: 'hareket zamanın îcâdında değil takdirinde' hükmü Risale'nin 'zaman hareket değildir' kısmına destek (c5 p46–57); **'müddet zâtında mevcut-bâkî-dâim' tezi Risale'ye ALINMAZ (yukarıdaki kayıtlar).**
+- Doğan sual: —
+
+## c5 p104
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî (Lafız 2 sonu, 2 fer'), 'bazı insanlar' (Fer' 2), Râzî'nin kendi Lafız 3'ü.** Lafız 2 sonu: 'zaman ve hareket **biri diğeriyle takdir edilir, farklı iki vechten**: **zaman zarf, hareket mazrûf**; kimi zaman 'bu kile beş menn' denir (önce kilenin 5 menni aldığını bilince), kimi zaman 'bu kile ancak beş menn alır' (bilindiğinde ki bu kile beş menn); burada da: 'bu zaman **gulve (bir ok atımı) kadar** zaman' (zamanın kadri meçhul, hareketin kadri ma'lûm), 'bir sâat yolu' (zaman ma'lûm, hareketin kadri meçhul).' **Fer' 2**: '**bazı insanlar 'müdde'yi bu mevcudun cevherine, 'zamanı' hareketle takdir edilen müddete isim yaptı; buna götüren şey öncekilerin sözlerinde 'müdde ve dehrin evveli yok' geçmesi, sonra 'zaman hâdistir' demeleri: bu kimse tenâkuzu gidermek için 'müdde ve dehr bu şeyin zâtına ve cevherine iki isim, o KADÎM; zaman ise müddetin hareketle takdir edilmişken adı, hareket HÂDİS olduğu için müddetin hareketle takdiri hâdis ⇒ 'zaman hâdistir ve evveli vardır' sözü doğru'.**' **Lafız 3: VAKİT** — '**bilinen bir hâdisin vukûuyla diğerlerinden ayrılan müfred cüz; 'Şevval hilâli doğunca gelirim' gibi; müddet …**' (p105).
+- Netice/hüküm: **Fer' 2 (bazı insanların çözümü): 'müdde ve dehr = kadîm cevher; zaman = müddetin hareketle takdiri = hâdis (hareket hâdis olduğu için).' Râzî bunu 'bazı insanlar' diye aktarıyor; kendi ağzıyla onaylamıyor.**
+- Delil çeşidi: **kelâmî uzlaştırma (müdde-zaman ayrımı) aktarımı**; (T) —
+- Mevzuya bağı: **EN KRİTİK — Fasıl I §3 ve Risale'nin 'zaman mahlûk' cümlesi**: **Bu sayfa 'zaman hâdis'i öğreten kelâmî cümlenin (bazı insanlara göre) DOĞRULUK ŞARTINI verir: zaman = müddetin hareketle takdiri; hareket hâdis ⇒ zaman hâdis; müdde/dehr ise kadîm cevher (⊬ Allah'ın dışında 'kadîm' bir şey — Ehl-i Sünnet ana hattına aykırı).** **Risale 'zaman mahlûktur' cümlesini yazarsa 'zaman' ile 'müdde/dehr'i AYIRMAK zorundadır; Risale müddeyi kadîm cevher SAYMAZ; 'müdde' Risale'de bir lafız olarak hiç geçmez veya 'mahlûk' olarak geçer.** **Karar padişahın: Risale'nin 'zaman' lafzı Râzî'nin 'zaman' (müdde+hareket takdiri) mi, yoksa 'müdde' (cevher) mi kastediyor? Bu ayrım yazılı bir borçtur.**
+- Doğan sual: **'Zaman hâdis' diyen 'bazı insanlar' kimler? (⊬ isim yok.)** Râzî bu uzlaştırmayı onaylıyor mu, kendi tercihi olarak 'müdde kadîm mümkin' (p81) ile birleşiyor mu? — **p81 'zaman mümkin' hükmü ile Fer' 2'nin 'müdde kadîm' cümlesi Râzî'nin kalemince uzlaşır (kadîm mümkin) ama İslâm ilkesiyle uzlaşmaz.**
