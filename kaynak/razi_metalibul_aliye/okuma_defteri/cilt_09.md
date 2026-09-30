@@ -379,3 +379,93 @@ Biçim: cilt 1–8 ile aynı. Dipnottaki harfler neşredenin nüsha işaretlerid
 - Delil çeşidi: **çelişki gösterimi + reductio**; (T) **F 27-B: 'adem de ta'lîl edilir' önermesi Mu'tezile'nin 'aslî ademin sebebe muhtaç olmadığı' önermesine karşı; ayırt edici ortak öncül yok.**
 - Mevzuya bağı: **Fasıl I §8**: aynı.
 - Doğan sual: —
+
+## c9 p31
+- OCR: orta (aşırı bozuk satırlar var; 'vâcib' kelimesi köşeli parantezde soru işaretiyle: 'vâcibân???')
+- Okuma: tam (sayfa Hüccet 3'ün sonunda biter)
+- İçerik: **Kimin sesi: Râzî.** '**HÜCCET 2 (devam): rüçhân miktarı hâsıl olunca ya vücûd vâcib olur (matlûb) ya adem olabilir farz edilir; mümkinin vukûu farz edilince muhâl lâzım gelmez; o hâlde aynı rüçhân miktarında bir vakitte vücûd, öbüründe adem olur; iki vakit arasında fark, eser birinde hâsıl öbüründe hâsıl değil; bunu bir kayda bağlamazsanız 'müreccihsiz tercih' olur; kayda bağlarsanız müreccih 'önceki şey + kayıt' mecmûu olur, yani önceki şey 'tam müreccih' değildi, oysa onu tam müreccih farz etmiştik: hulf; ayrıca mecmû için de aynı taksîm döner ⇒ teselsül. HÜCCET 3: rüçhân-ı vücûd hâsıl iken ademi hâsıl farz etsek, adem hâsıl olduğunda adem râcih olur; böylece aynı anda vücûd ademden, adem vücûddan râcih: muhâl.** Dipnotlarda nüsha sigla'ları (rط ع ل …) editörün nüsha farkı kaydıdır, Râzî'nin sözü değil.'
+- Netice/hüküm: **Hüccet 2–3: 'rüçhân var ama vücûb yok' ihtimali ya müreccihsiz tercih ya teselsül ya çelişki doğurur.**
+- Delil çeşidi: **reductio + taksîm; (T) F 27-B: 'mümkinin vukûu farz edilince muhâl lâzım gelmez' öncülü ile 'adem hâlinde adem râcih olur' öncülü, Mu'tezile'nin 'evlâ olan, vâcib olan değildir' öncülüne karşı ayırt edici değil.**
+- Mevzuya bağı: **Fasıl I §8** (irâde-tahsis): aynı.
+- Doğan sual: —
+
+## c9 p32
+- OCR: orta ('ترجيح' 'ترجبح' gibi bozulmalar; anlam korunuyor)
+- Okuma: tam (sayfa Hüccet 5'in ortasında biter)
+- İçerik: **Kimin sesi: Râzî (+ hasım itirazı 'lâ yukâl' ile nakledilip cevaplanıyor).** '**HÜCCET 4: kulun vücûd tarafını tercihi hâsıl olsun; sonra bu tercihin bekâsında adem hâsıl olduğunu farz edersek o adem ne tercihiyle ne bekâsıyla hâsıl olmuştur; başka bir tercih varsa kulun tercihinin rüçhân iktizâsında eseri olmadığı, rüçhânda müessirin başkası olduğu itiraf edilmiş olur; tercih hiç müreccihsiz vâkî oldu denirse ademin 'salt tesâdüfle' râcih olduğu söylenmiş olur; tesâdüf sözü ise cebri gerektirir (evvelce defalarca gösterildiği üzere) ve tesiri, müessiri, bütün eserleri nefyeder. Hasım itirazı: kul vücûd tarafını tercih etti, tercih kalırsa ve başka bir müreccihin tercihiyle çarpışmazsa fiil vâkî olur; çarpışırsa fiil hudûdundan çıkar. Cevap: tercih kalıp engelden hâlî iken eser terettüp etmek vâcib ise matlûb hâsıl; vâcib değilse aynı tercih miktarıyla bazen vücûd bazen adem terettüp eder, bu da salt tesâdüf: tesîr ve müessiri nefyeder, cebri de gerektirir. HÜCCET 5 başlığı: 'terk terktir'; kâdir fiili dilediğinde mâni yoksa mutlaka hâsıl olur, terki dilediğinde mâni yoksa mutlaka terk eder; dünyada 'fiili dilesem yapmam, yapmamayı dilesem yaparım' diyen akıllı görmüyoruz (p33'e geçer).**'
+- Netice/hüküm: **Hüccet 4: tercihin bekâsında adem tesâdüfe kalırsa tesâdüf ⇒ cebir ve tesirin nefyi; Hüccet 5 başlıyor.**
+- Delil çeşidi: **reductio; (T) 'tesâdüf ⇒ cebr' öncülü Râzî'nin evvelce defalarca gösterdiği diye anılıyor; bu sayfada yeniden gösterilmiyor ⇒ karşı taraf için ayırt edici değil (F 27-B); Hüccet 5 zarûrî gözlem dayanağı.**
+- Mevzuya bağı: **Fasıl I §8**: aynı.
+- Doğan sual: **'Tesâdüf ⇒ cebir' önermesinin evvelce gösterildiği yer bu ciltte hangi sayfa? (okunmadı; c9 p1–30'da mukaddime olarak geçmişti, kesin yer işaretlenmedi).**
+
+## c9 p33
+- OCR: orta ('الرححان' gibi bozuk yerler; Burhan 2 metni okunur)
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî.** '**HÜCCET 5 sonu: akıllıların hepsi zarûrî bilir ki kâdir fiili irâde eder ve mâni' yoksa fiili yapar, terki irâde eder ve mâni' yoksa terk eder; terk irâdesinde fiilin, fiil irâdesinde terkin hâsıl olması, hiçbir akıllının cevaz vermediği şeydir. Bu beş vecihle: rüçhân hâsıl olunca vücûb lâzım; bu, hasmın zikrettiği ihtimali bâtıl eder. 'Ve billâhi't-tevfîk' (Râzî'nin duâsı, kalıp cümle). BURHAN 2: her mevcûd ya lizâtihî vâcibü'l-vücûddur (Allah) ya değildir (geri kalan hepsi); bu ikinci kısmın hakîkati ademe de vücûda da kâbildir: ademe kâbil, çünkü olmasa lizâtihî vâcib olurdu, oysa öyle olmadığı farz edildi; vücûda kâbil, çünkü onu mevcûd farz ettik. Böyle her şey müessire muhtaç; bütün mümkinlerin muhtaç olduğu şey mümkin olamaz (yoksa nefsine muhtaç olurdu); öyleyse bütün mümkinler ihtiyaç silsilesinde vâcibü'l-vücûda ulaşır.** Köşeli parantez içindeki 'vâcib' ve 'nefsine' kelimeleri OCR'de silik, editör tamamlaması.'
+- Netice/hüküm: **Hüccet 5 zarûrî gözleme dayanıyor; Burhan 2 mümkin ⇒ müessir ⇒ Vâcib'e intihâ.**
+- Delil çeşidi: **Hüccet 5: zarûrî/vicdânî gözlem; Burhan 2: bedîhî sınıflama (vâcib/mümkin) + teselsül nefyi. (T) F 27-B: Burhan 2'nin öncülleri Mu'tezile'yle de müşterek (mümkin müessire muhtaç); ayırt eden, p34'te gelen 'kul müstakil mi' adımı.**
+- Mevzuya bağı: **Fasıl I §1 (vâcibü'l-vücûd/mümkin sınıflaması) ve §8**: Burhan 2'nin kısmı Fasıl I'in vücûb-imkân burhanının aynısı; fark, bunun kul fiillerine uygulanması.
+- Doğan sual: —
+
+## c9 p34
+- OCR: orta
+- Okuma: tam (Burhan 2 biter)
+- İçerik: **Kimin sesi: Râzî + hasım itirazı ('fein kîle').** '**Kul fiillerinin mümkinâttan bir kısım olduğu için vâcibü'l-vücûda intihâsı kat'î olmalı. İtiraz (hasım, Mu'tezile): bizce kulun fiili kulda kâim kudret ve dâî ile vâkî olur; o kudret ve dâî ancak vâcibü'l-vücûdun îcâdıyla hâdis oldu; fiil bu yolla Allah'a isnad edilir, bu isnad kul kudretiyle vukûunu engellemez. Râzî'nin cevabı: kudret ve dâî yokken fiil imkânsız, ikisi bulununca fiil vâcibtir; öyleyse kul fiilde müstakil olmaz. Kudret şart: âciz fiil yapmaz; dâî şart: Burhan 1'de gösterildi ki dâîden hâlî kâdirden fiil sudûru imtinâ'; kudret + dâî mecmûu hâsıl olunca fiilin tarafında rüçhân, rüçhân hâsıl olunca vücûb (Burhan 1'in çok delilleri). Sonuç: kudret + dâî fikdanında fiil imtinâ', hudûsunda vâcib; Allah o mecmûu yaratırsa fiil vâcib, yaratmazsa fiil ma'dûm; o hâlde kul tekvîn ve îcâdda müstakil değil.** 'Ve billâhi't-tevfîk'.'
+- Netice/hüküm: **Burhan 2: Mu'tezile'nin 'kudret ve dâî Allah'tandır ama fiil kulundur' savunması Râzî'ye göre kulu 'müstakil' bırakmaz; Râzî'nin kendi ifadesiyle netice 'kulun tekvîn ve îcâdda müstakil olmaması'dır (kulun kesbi, ihtiyârı bu sayfada anılmıyor).**
+- Delil çeşidi: **kelâmî ilzâm; (T) F 27-B: bu sayfanın ayırıcı önermesi 'kudret+dâî ⇒ fiil vâcib' (Burhan 1'in neticesi); Mu'tezile bunu reddediyor, ayırt eden ortak öncül yok. Neticenin cebr'e mi Eş'arî kesbe mi vardığı bu sayfada ayırt edilmiyor.**
+- Mevzuya bağı: **Fasıl I §8 ve Fasıl II'nin muhtâr-fâil bağımlılığı**: Fasıl II'nin 'mûcize Allah fiili' öncülü bu neticeden bağımsız kurulabilir mi, hâlâ açık.
+- Doğan sual: **Fasıl II mûcize burhanı, Fasıl I'de kul fiilinin vâcib olduğu neticesiyle çelişmeden, hangi kısmıyla Allah fiili öncülüne dayanıyor? (Râzî'nin ifadesi: bu 'tesâdüf ⇒ cebir' silsilesi; Eş'arî kesb vs 'muztarr' — İSLÂM KAYDI: Risale'ye 'kul muztarr' hükmü olarak alınmaz, çünkü şer'î mükellefiyet ve sevap-ikâb bahsi ihtiyâr ister; bu bahis Râzî'nin kendi kaydıyla ayrıca ele alınacak.)**
+
+## c9 p35
+- OCR: orta ('البرهان' başlığı ve 'الاختلاف' okunuyor; satır başlarında noktalama gürültüsü)
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî.** '**BURHAN 3: kulların fiilleri Allah'ın takdiriyledir. Bu burhanın mukaddimelerine girmeden önce insanların sıfat ve fiillerdeki ihtilâfının SEBEPLERİ araştırılıyor: sebepler ya insanın zâtına dâhil (iç) ya ona hâriç (dış). İç sebepler üç kısım. Birincisi: nâtık nefslerin mâhiyetlerindeki ihtilâf ve hakîkatlerinin beyânı: kimi nefs zât ve cevherce zekî, kimi mankafa; kimi zâtça merhametli, kimi katı; kimi cismânî lezzetlere tabiatça meyilli, rûhânî saâdet talebinden nâfir; kimi bunun tersi, dünya bütün parçalarıyla ona arz edilse yakîn ilimlerden ve fâzıl ahlâktan bir şey kazanmanın sevincini duymaz. Delil: insan dünya maslahatlarında saçı bölecek kadar ince, ilimlerde aşırı ahmak olabilir ve bunun tersi; iki insandan biri bir ilimde çok zekî başka ilimde ahmak, öteki bunun zıddı (manṭıkta güçlü, riyâziyâtta zayıf).** '
+- Netice/hüküm: **Başlangıç: insanlar arasındaki sıfat/amel ihtilâfının bir sebebi, nefslerin zâtî/cevherî mâhiyet farkıdır (Râzî'nin gözlem ve istikrâ'sı).**
+- Delil çeşidi: **istikrâ' (gözlem); (T) F 27-B: bu sayfada henüz bir ilzâm yok, sebepler sayılıyor.**
+- Mevzuya bağı: **Fasıl I §8 (kader bahsi) — dolaylı**: ihtilâfın sebepleri bilinince kulun fiilinin sebepler zincirine bağlı olduğu iddiasına hazırlık.
+- Doğan sual: **Nefslerin cevher farkı iddiası (zâtî zekâ/kabalık farkı) Risale'de nübüvvet ve insanın mesûliyeti bahsinde nereye konur? (ileride)**
+
+## c9 p36
+- OCR: orta ('الصلوات' 'وسلامه' köşeli parantezde; hadis metni bozuk okunuyor)
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî (+ iki hadis olarak kaydedilen söz).** '**Nefs farkının zâtî, garîzî, cevherî olduğu ve zâil olamayacağı istikrâ'yla görülür. Râzî bu manaya işaret olarak 'insanlar altın ve gümüş madenleri gibi madenlerdir' ve 'ruhlar toplanmış ordulardır' sözlerini, 'aleyhi's-salâtü ve's-selâm' kaydıyla Peygamber'e nisbet ediyor (bu iki cümle bu sayfada senedsiz, kaynaksız; ⊬ hadis olarak sahihliği burada yoklanmadı). Hatipler ve şâirler bu manalarla medh ve zemm eder: 'filân kerîm sahîh nefsli, filânın nefsi lüzûm ve alçak'; hatta bu ihtilâfın çoğu cibillî garîzîdir; alçak nefsin alçaklığını bütün âlemler izâle etmek istese izâle olmaz. Kastedilen 'alçaklık fiilleri' değil, çünkü onlar tekellüfle değişir; kastedilen nefsânî ahlâk ve garîzî melekelerdir. İç sebep 2: mizâcların ihtilâfı: hararetli mizâçlı, hele dimağ mizâçlı: çok öfkeli, fikri karışık; soğuk dimağlı: mankafa, fikri noksan; kuru dimağlı: fikirleri zayıf (nefs sûretlerini kolay kabul etmez); yaş dimağlı: fikri tamamlanmaz (sûretler dimağdan örtülür ve gider). İç sebep 3 başlıyor: uzuvların şekillerinin ihtilâfı.** 
+- Netice/hüküm: **Râzî'nin gözlemine göre insanın ahlâkî meleke farkı garîzî ve kalıcı, fiil farkı tekellüfle değişir; mizâç farkı fikir ve öfkeye tesir eder.**
+- Delil çeşidi: **istikrâ' + hadis nakli (senedsiz); (T) F 27-B: 'mizâç ⇒ fikir gücü' Galenos-îbn Sînâ tıbbına dayanan önerme, modern hüküm değil, ayırt edilmeden alınmaz.**
+- Mevzuya bağı: **Fasıl I §8**: dolaylı.
+- Doğan sual: **İki hadis sözü Sünen/Sahîh'lerde hangi ravi/tarik ile? (Risale'ye alınacaksa Fasıl IV Sünnet ve't-Tahkik yöntemiyle isnad denetlenecek; şimdilik ALINMAZ.)**
+
+## c9 p37
+- OCR: orta ('الفراسة' 'الغراسة' bozuk; anlam sağlam)
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî.** '**İç sebep 3 (devam): baş önünün büyüklüğü tahayyül kuvvetine, baş arkasının büyüklüğü hıfz kuvvetine, baş şeklinin güzelliği fikir ve siyâsî düzene delâlet eder; Râzî ahlâk, firâset ve tıp kitaplarının bu söylenenlerin sıhhatine 'nâtık' olduğunu söylüyor. Netice: bu üç iç sebebin mertebe farkı, idrâk kuvvetlerinin hâllerinin farkını ve muharrik kuvvetlerin hâllerinin (cömertlik-cimrilik, katılık-yumuşaklık, ahmaklık-zekâ) farkını gerektirir. DIŞ sebepler de üç: (1) ülfet ve âdet: nâtık nefs fıtratın başında akîde ve ahlâktan hâlî yaratılmıştır; sözüne i'tibâr ettiği bir kimseden bir şey işitmek o inancı güzel bilme i'tikâdını gerektirir; ve gerektiren, i'tikâdı te'kîdli eserli kılar. Çocuk ilk ömründe 'filân mezhep hak, güzel, sahîh, arzulanır; zıddı arzulanmaz' diye işitse, o tasavvurların nefsinde vücûbu sâbit olur; çocukların nefsleri bütün tasavvurlardan hâlî olduğu için bu istimâ' o i'tikâdı gerektirir; âmil engelden hâlî bulununca eser mutlaka hâsıl olur.**' 
+- Netice/hüküm: **Râzî: iç ve dış sebepler kulun akîde ve ahlâk ihtilâfını 'gerektirir'; çocukluk telkini bâtıl veya hak mezhep fark etmeksizin te'sirli.**
+- Delil çeşidi: **istikrâ' + sebep-netice; (T) F 27-B: baş şekli-fikir gücü iddiası fizyonomi (firâset) iddiasıdır; İSLÂM KAYDI: Kur'ân ve Sünnet'te fıtrat-tebliğ ve taklit-i âbâ' ayrı ele alınır (fıtrat üzere doğuş hadisi, 'babalarımızı bu yolda bulduk' âyetleri), fakat 'baş büyüklüğü ⇒ hıfz' hükmü Risale'ye ALINMAZ.**
+- Mevzuya bağı: **Fasıl I §8; Fasıl II (nübüvvet) için de: peygamberlerin çağrısının kabulü/reddi bahsinde 'ülfet-âdet' engeli**.
+- Doğan sual: **Ülfet-âdet iddiası (çocukluk telkini) ile 'fıtrat' hadisinin ilişkisi Fasıl IV'de nasıl yazılır? (ileride)**
+
+## c9 p38
+- OCR: orta-kötü (sağ kenar satırlar ve dipnot sigla'ları bozuk; 'الكيف' 'الكم' okunuyor)
+- Okuma: tam (bazı satır sonları OCR'de kırık: 'ور كان' 'أقل ر' eksik; bu yerlerden hüküm çıkarılmadı)
+- İçerik: **Kimin sesi: Râzî.** '**(1) ülfet ve âdet sonu: aynı tahsin ömür boyu tekrarlanırsa mûcib tekrarlanır, bu inancı kuvvet bakımından en son gayeye ulaştırır: ülfet ve âdet akîde ve ahlâkın te'kîdini gerektirir. (2) Dış sebep 2: o mezhebin takrîri dünyada riyâset ve akranlara üstünlük sağlarsa bu da kalbin o akîde ve ahlâka meylini gerektirir; çünkü nefsler câh ve mal, lezzet ve sürûru sevmeye ve bunlara vesile olan her şeyi sevmeye yaratılmıştır. (3) Dış sebep 3: insan nazar ve istidlâl sanatını icrâ ederse, icrâsı çok olanın hakka vukûfu kolay; fakat tefâvüt kemiyette (mukaddimeyi hazır tutma) ve keyfiyette (mukaddimelerden netîceye intikalin kolaylığı) olup şiddet ve zayıflıkta ayrılır; bu yüzden insanların yakînî ma'rifetleri ve fâzıl ahlâkı kabulde istidâdı ihtilâfı 'gayri mazbût' bir ihtilâf. Ayrıca nazar sahibi fikrinin ürünü olan bir görüşe âşık olur ve sevgi onu, o görüşün fesâdına delâlet eden bir hüccet dinlese bile anlamamaya götürür.**' 
+- Netice/hüküm: **Dış sebepler: ülfet-âdet, riyâset ve mal sevgisi, nazar sanatının çokluğu ve kendi ürünü fikre muhabbet; hepsi 'gerektirici' diye kaydediliyor.**
+- Delil çeşidi: **istikrâ' + psikolojik gözlem; (T) F 27-B: bunlar cebrî bir netice için 'sebepler' diye sıralanıyor; henüz cebri gösteren öncül gelmedi.**
+- Mevzuya bağı: **Fasıl I §8; Fasıl II: mûcizeye karşı inatçıların kabulsüzlüğünde (riyâset sevgisi, kendi görüşüne muhabbet) bir insan-psikolojisi zemini.**
+- Doğan sual: —
+
+## c9 p39
+- OCR: kötü (ilk 4 satır büyük ölçüde okunamıyor; 'حبك الشيء يعمي ويصم' vecizesi okunuyor)
+- Okuma: kısmî (üst satırlar OCR'de bozuk; sayfanın ilk kısmında sadece sevgi/körlük bağlantısı çıkarılabildi, geri kalanı tam)
+- İçerik: **Kimin sesi: Râzî (+ 'kîle' ile bir ata sözü).** '**Nazar sahibi görüşüne âşık olur; bu sevgi öyle bir dereceye varır ki o görüşün fesâdına delâlet eden hüccet işitse anlamaz, keyfiyetine vukûf bulamaz: 'sevdiğin şey seni kör ve sağır eder' (Râzî'nin nakli, 'kîle', kaynak yok, ⊬). Bu sevgi mertebeleri gayri mazbût olduğu için insanların akîde ve ahlâk farkı bu sebeple de gayri mazbût. Netice: altı sebebin her biri sayısız nev' altında, ve bunların ihtilâfı insanların akâid ve ef'âl ihtilâfını gerektirir. MUKADDİME 2 (hayvanlarda fiil sudûru): her hayvan bir fiil işlerse, fiilinin terkinden hayırlı olduğuna i'tikâd ettiğinde işler; bu i'tikâd yoksa iktidâmı imtinâ'; bu yüzden fâil denen mü'essir 'muhtâr' diye adlanır (muhtâr, 'tâlib' olandır ve talep ancak itikâd ve tahayyülüne göre). MUKADDİME 3: her hayvanın bizzat matlûbu lezzet ve sürûrdur, bizzat kaçtığı elem ve gam; bunlar dışındakiler 'bi'l-garaz' matlûb; insan fiili lezzet tahsili veya elemin izâlesi ise gâyesi zâtının aynıdır, ikisine vesile ise gâyesi ondan başka; her fiil için 'bir gâye' vardır diye teselsül ya devr lâzım gelir (bu yüzden her fiilde 'ondan başka bir gâye' denemez).**'
+- Netice/hüküm: **Mukaddime 2–3: hayvanın fiili 'hayır' i'tikâdıyla olur (muhtâr = tâlib); bizzat matlûb lezzet, bizzat mehrûb elem; gâye silsilesi bir yerde bizzat matlûba dayanır.**
+- Delil çeşidi: **mukaddimeler (tanım + teselsül nefyi); (T) F 27-B: 'her fiil hayır i'tikâdıyla olur' önermesi Mu'tezile'ye karşı da müşterek; ayırt eden 'i'tikâdın kulun elinde olmadığı' önermesi henüz gelmedi.**
+- Mevzuya bağı: **Fasıl I §8**: fiil ⇒ i'tikâd ⇒ tercih zinciri.
+- Doğan sual: —
+
+## c9 p40
+- OCR: orta-kötü ('الإجماع' 'الإجباع' okunuyor; bazı satırlarda noktalama gürültüsü)
+- Okuma: tam (sayfa Mukaddime 4'ün 'ikinci mertebe' anlatımında biter; p41'e geçer)
+- İçerik: **Kimin sesi: Râzî.** '**MUKADDİME 4: sağlam bünye ve sıhhatli mizâç fiilin (sudûr) kuvvesidir; terk dâîsi eklenir ve mâni' yoksa terk hâsıl olur; uzuvlar sağlam kalır; 'hayyin kâdir olması'nın anlamı budur. Tasavvur edilen şey, ona lezzetli meyl ve şevk terettüp ederse, o şeyin husûlü matlûb olur; sonra ona 'mefdî'nin (ona götüren şeyin) mutlaka tahsil edilmesi gerektiğine cezm eden talep terettüp eder: 'icmâ'-ı câzim' ve tam şevk; sonra bu icmâ' ve şevk hâsıl olunca uzuvlar hareket eder. Böylece fiile en yakın dört mertebe: (4) uzuvları hareket ettiren kuvve-i muharrike (sıhhatli mizâç ve bünye dengesi), ondan önce (3) fiile cezmî icmâ', ondan önce (2)... başlangıçta lezzetli meyl (1). Birinci mertebe kudret ve uzuv sağlığı (fiil-i ihtiyârî için lâzım; hasta ve zemin gibi âciz ne fiil ne terk yapar); ikinci mertebe (cezmî icmâ') için 'bu da lâzım' diye başlıyor, sayfa 'المرتبة الثانية' ve delil başlangıcında kesiliyor.**' 
+- Netice/hüküm: **Mukaddime 4: fiil dört mertebeye bağlı (meyl-şevk-cezmî icmâ'-kuvve-i muharrike); kudret ve uzuv sağlığı fiil-i ihtiyârî için lâzım; ikinci mertebe bahsi p41'de devam edecek.**
+- Delil çeşidi: **tanım + tasnif; (T) F 27-B: bu sayfada henüz ilzâm yok; mertebe silsilesi sonraki sayfada Burhan 3'ün asıl öncüllerine bağlanacak.**
+- Mevzuya bağı: **Fasıl I §8**: fiilin sebepleri zinciri ('ihtiyâr' tanımı).
+- Doğan sual: **Mertebe silsilesinin başında 'tasavvur' ve 'meyl' hâsıl eden ilk sebep kulun elinde mi? (p41'den itibaren Râzî'nin cevabı beklenir.)**
