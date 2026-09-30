@@ -919,3 +919,93 @@ Biçim: cilt 1–8 ile aynı. Dipnottaki harfler neşredenin nüsha işaretlerid
 - Delil çeşidi: **gözlem (insanların ihtilâfı) + reductio; (T) F 27-B: 'ihtilâf ⇒ bilgisizlik ⇒ îcâd yok' geçişi; Mu'tezile 'ihtilâf bu meselenin nazarî mâhiyeti hakkında, kudretin vücûdu hakkında değil; fiili yapmak için mâhiyeti nazarî bilmek şart değil' der; ayırt edici öncül yok. Kendi tenkidim: bu geçiş, bir şeyi yapan insanın 'nasıl yaptığını nazarî olarak' bilmesini şart koşuyor; konuşan insan konuşuyor da dil biliminin mâhiyetini bilmiyor: Râzî bunu kendi p89'da 'bilmiyorlar ⇒ mûcid değiller' diye kullanıyor: ölçü sorunlu.**
 - Mevzuya bağı: **Fasıl I §8.**
 - Doğan sual: —
+
+## c9 p91
+- OCR: orta ('البرهان السادس' okunuyor)
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî (+ hasım itirazı 'fein kîle').** '**Burhan 5 sonu: bir şeyi tahsile kasd ancak zihinde tasavvuru hâsıl olunca mümkin (zarûrî). İtiraz: hayvan ve haşerat, îcâdın hakîkatini bazı vecihlerden tasavvur etmiş olabilir (bu mâhiyetin kemâl-i tasavvuru olmasa da). Cevap: îcâd ve tekvînin mâhiyeti çoğu beşer ve çoğu hayvan ve haşerat indinde tasavvur edilmemiştir; tasavvur edilmeyene kasd muhâl; kasd, tasavvura ve mâhiyetin şuuruna mevkûf. BURHAN 6: kuldan bazı mümkinlerin îcâdı sahih olsa hepsinin îcâdı sahih olurdu. Lüzûmun beyânı, vecihlerle: (1) Kul bazı mümkinâtın îcâdına kâdir olsa o bazının mak'dûr olması onun mümkinü'l-vücûd olmasından; imkânı kaldırsak vücûb veya imtinâ' kalır; ikisi de mak'dûriyeti muhâl kılar; muhâl kılan şey mak'dûriyetin sıhhatini ifâde etmez; başka bir tesiri yok; öyleyse imkân kalır; imkân bütün mümkinlerde ortak; öyleyse bütün mümkinler kul mak'dûru olmalı (p92).**' 
+- Netice/hüküm: **Burhan 5 tamam. Burhan 6 başlıyor: 'bazısına kâdir ⇒ hepsine kâdir'.**
+- Delil çeşidi: **mefhûm-ı müşterek ⇒ hüküm-ı müşterek; (T) F 27-B: imkânın tek mefhum olması, kudretin her mümkine taalluk etmesini gerektirmez (kudretin taalluku kudretin kendi sınırına bağlı olabilir); p75'teki tenkit aynen geçerli: kaynağın öncülü.**
+- Mevzuya bağı: **Fasıl I §8.**
+- Doğan sual: —
+
+## c9 p92
+- OCR: orta ('المعدوم شيء' okunuyor)
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî.** '**Burhan 6 vecih 2: kul bazı mümkinâtı îcâda kâdir olsa kudretinin te'sîri ancak vücûd vermede olurdu; çünkü çok kitabımızda gösterdik ki mümkinâtın vücûdu mâhiyetlerinden zâid; kâdirin te'sîri mâhiyetlerin oluşturulmasında olamaz: bir şey, mümkinü'l-vücûd olmadıkça kâdirin ona tesîri tasavvur edilemez; kâdirin tesîri onun nefsinde mümkinü'l-vücûd olmasından sonra; onun nefsinde mümkinü'l-vücûd olması, belirli mâhiyetinin karar bulmasını takrir eder (imkân onun sıfatı, sıfat rütbece mevsûftan sonra); kâdirin tesîri mâhiyetin takarrurundan iki mertebe sonra; kâdirin tesîri mâhiyette olsaydı mâhiyetin takarrurü kâdirin tesîrinden sonra olurdu; şeyden iki mertebe önce olan ondan sonra olmuş olur: muhâl. Öyleyse kâdirin tesîri mâhiyetin mâhiyet kılınmasında değil, mevcûd kılınmasındadır. Râzî: 'bu güzel ve zengin bir sözdür; ancak ondan 'ma'dûm şeydir' kokusu alınıyor.' Bu takdirde vücûd tek mefhum bütün mümkinlerde; tefâvüt yok; 'bir şeye kâdir olan onun misline kâdirdir' bedîhî olarak bir mûcid bazısına kâdir ise hepsine kâdir. Vecih 3: Mu'tezile meşâyihinin mezhebi: ma'dûm şeydir; kâdirin tesîri yalnız vücûd vermede; vücûd tüm mümkinlerde ortak mefhum; bir şeye kâdir misline kâdir; öyleyse bazısına kâdir hepsine kâdir olmalı (p93).**' 
+- Netice/hüküm: **Burhan 6: Râzî, Mu'tezile meşâyihine 'ma'dûm şey ⇒ kâdirin tesîri yalnız vücûd vermede ⇒ bazısına kâdir hepsine kâdir olur' ilzâmını yapıyor; kendi sözünü 'güzel ama ma'dûm şey kokusu var' diye tenkit ediyor.**
+- Delil çeşidi: **ilzâm; (T) F 27-B: 'mâhiyetten iki mertebe sonra' ifadesi rütbe/mertebe felsefesine dayanır; ortak öncül Mu'tezile meşâyihinde var ('ma'dûm şey'); Ebü'l-Hüseyn'e yönelmez.**
+- Mevzuya bağı: **Fasıl I §8; ma'dûm-şey tartışması ile Fasıl I'in 'âlemin hudûsu' bahsi (tier D) bağlantısı.**
+- Doğan sual: —
+
+## c9 p93
+- OCR: orta ('الإعادة' 'الاعادة' okunuyor)
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî; sonra hasım itirazı ('fein kîle').** '**Burhan 6 sonu: kulun her mümkine kâdir olması imtinâ': (1) hasım da kabul eder; (2) zarûrî biliriz ki şimdi cisim halkına âciziz; bir mümkine kâdir olan misline âciz olamaz; (3) kendimiz için kudret ve hayat halkına kâdir olurduk: muhâl: halk ancak hayy-kâdirden; hayy olan kâdir; öyleyse ona tekrar hayat ve kudret halkı imtinâ' (iki misilin bir arada olması muhâl). Öyleyse kul bazı mümkinâtı îcâda kâdir olsa hepsine kâdir olurdu; hepsine kâdir değil ⇒ hiçbirine kâdir değil. BURHAN 7: hasımlar (Mu'tezile) kulun fiilini ademinden sonra îcâd etmeye (iâde) kâdir olmadığında ittifak ederler; kâdir olsa iâdeye de kâdir olurdu; çünkü iâdede hâsıl olan ibtidâda hâsıl olanın aynıdır; şeyin mâhiyeti vakitlerin değişmesiyle değişmez; kudret ibtidâ vaktinde tekvîne sâlih ise iâde vaktinde de sâlih; oysa iâdeye sâlih olmadığında ittifak; ibtidâya sâlih olamaz. İtiraz (hasım): iâde-i ma'dûm câiz olduğunu kabul etmiyoruz (p94).**' 
+- Netice/hüküm: **Burhan 6 tamam. Burhan 7 başlıyor: iâdeye kudret ⇒ ibtidâya kudret.**
+- Delil çeşidi: **ilzâm + kıyas; (T) F 27-B: 'kul fiilinin iâdesine kâdir değildir' ortak öncül (Râzî ittifâk iddia ediyor; kaynak bu sayfada yok).**
+- Mevzuya bağı: **Fasıl I §8; Fasıl III (meâd): iâde-i ma'dûm bahsi burada Râzî için 'cevaz' olarak geçiyor (bu sayfa değil, p95): Fasıl III için işaret.**
+- Doğan sual: —
+
+## c9 p94
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: hasım (itiraz), Râzî'nin nakliyle.** '**İtiraz: (1) iâde-i ma'dûm, ister Allah ister kul hakkında olsun, câiz değildir: fânî olan hiçbir şeyi, hiçbir hükmünü bırakmaz; sonra hâsıl olan başka şey ilkinin gayrıdır, aynı olamaz. (2) İâde câiz kabul edilse bile ibtidâya kâdir iâdeye kâdir olmalı mı: ibtidâ ile iâde bir şeyle ayrılır; o ayrım bir tarafta şart, öbür tarafta mâni' olabilir. Fark: kul iâdeye kâdir olsa ya ibtidâda kullandığı aynı kudretle ya başka kudretle; ikisi bâtıl: aynı kudret, her vakitte belirli cinsten tek fiile taalluk eder; aynı vakitte, aynı mahalde, aynı cinsten birden fazla mak'dûra taalluk ederse sayı sayıdan evlâ olmaz, sonsuz mak'dûra taalluk câiz olur; bâtıl, çünkü kâdir ile ekdar arasında tefâvüt kalmaz; başka kudretle: iki kudret bir mak'dûra taalluk ederse iki kâdirin birinin mak'dûru olur, muhâl. Öyleyse kul iâdeye kâdir olsa ya böyle ya böyle; ikisi de muhâl; bu özür ibtidâ îcâdında yok; öyleyse ibtidâya kâdir olması iâdeye kâdir olmasını gerektirmez.**' 
+- Netice/hüküm: **Hasım cevabı: iâde ile ibtidâ farkı (aynı kudret veya başka kudret; ikisi muhâl).**
+- Delil çeşidi: **ilzâm (Mu'tezile usûllerine dayalı: tek kudret tek mak'dûr; iki kâdir bir mak'dûr olmaz); (T) F 27-B: bu fark Mu'tezile'nin kendi kâideleriyle kuruluyor, hasma göre ayırt edici.**
+- Mevzuya bağı: **Fasıl I §8; Fasıl III için iâde-i ma'dûm cevazı.**
+- Doğan sual: —
+
+## c9 p95
+- OCR: orta-kötü (köşeli parantez içindeki cümle OCR'de çift; 'فاسد' 'فساد' karışık)
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî (hasım farkına cevap, sonra Burhan 7'nin sonu).** '**Râzî: hasmın bu farkı 'kıyâs-ı fâsid': sıhhatli ise cem' bâtıl olur; fâsid ise asılda hükmü men' eder ve 'kul iâdeye kâdirdir' deriz; bu kıyas fârikın zuhuru ile asılda hükmün men'i arasında dâirdir. Ayrıca hasım bu delili 'kul kendi fiilinin iâdesine kâdir değildir' üzerine kuruyor; biz bunu men' edip 'kuldan fiilin iâdesi câizdir' dersek delilleri kalmaz. CEVAP: iâdenin câiz olduğu şöyle: vücûdun cevazı mâhiyetin levâzımındandır; bir hâlde îcâdın câiz olduğu sâbit olunca bütün hâllerde bu devam etmeli. 'Ma'dûm nefy-i mahz; ona bu belirli hüküm nasıl verilir' itirazı: 'ona hüküm verilmez' sözünüz de ona hükümdür (imtinâ'a hükümdür); ademi bu hükme mâni' olmayan şeyin, bizim zikrettiğimiz hükme de mâni' olmaması câiz değil mi? 'İâde ibtidâdan bir şeyle ayrılır' sözüne: o ayrımın vasfı da ibtidâ olmalı, teselsül; o vasıf adem-i mahz ise muktezîye girmez. Farkı ise onların fâsid usûllerine bina ediyorlar: iki kâdir arasında bir mak'dûr imtinâ'; tek kudretin aynı vakit, mahal ve cinsten yalnız tek mak'dûra taalluku; bu usûllerin hepsi bizce fâsid. 'Bu farkın fesâdı sâbit olsa hükmü men' eder, kul iâdeye kâdirdir deriz' sözüne: buna yol yok, çünkü ümmet, kulun kendi fiilinin iâdesine kâdir olmadığına icmâ' etti; iâdeye kâdir demek icmâ'a muhâlefet. 'Ve billâhi't-tevfîk.'**' 
+- Netice/hüküm: **Burhan 7: Râzî iâdenin cevazını 'vücûdun cevazı mâhiyetin levâzımıdır' diyerek savunuyor; 'kul iâdeye kâdir değildir' hükmünü icmâ' ile alıyor.**
+- Delil çeşidi: **kıyâs + icmâ' iddiası; (T) F 27-B: icmâ' iddiası bu sayfada isnadsız (kaynak gösterilmiyor); 'vücûdun cevazı mâhiyet levâzımıdır' öncülü Râzî'nin kendi görüşü, Mu'tezile 'ma'dûm şey' diyerek de kabul eder ama Ehl-i Sünnet'in 'ma'dûm şey değil' anlayışıyla birlikte vücûdun mâhiyetten zâid olduğu p92'de belirtildi, mâhiyet sâbit mi meselesi çift anlamlı. İSLÂM KAYDI: iâde-i ma'dûm cevazı (meâd bahsi için) ayrıca yoklanacak; 'icmâ'' iddiası Risale'de kaynak gösterilmeden alınmaz.**
+- Mevzuya bağı: **Fasıl III (meâd): 'iâde-i ma'dûm câizdir' önermesinin bu delildeki yeri; Fasıl I §8.**
+- Doğan sual: **Râzî'nin 'iâde-i ma'dûm câizdir' savunusunun Fasıl III'ün ana metnine (bedenin iâdesi) girip girmeyeceği; c7'nin nefs bâbında bu bahsin nasıl geçtiği (tier C'de aranacak).**
+
+## c9 p96
+- OCR: orta
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî.** '**BURHAN 8: kul kendi fiilinin mûcidi olsa ya yalnız îcâdına kasteder ya belirli vakitte îcâdına kasteder. Birincisi bâtıl: mutlak îcâda kasteder de belirli vakitle takyîd etmezse fiilin bazı vakitte vukûu ötekinden evlâ olmaz; ya hep vakitlerde hâsıl olur ya hiçbirinde; hepsi muhâl. İkincisi de bâtıl: mesafenin başından sonuna hareket, art arda gelen hâsıl olmalar (hayizlerde) demek; bu hâsıl olmaların her biri bölünmez; hareketin mâhiyeti bölünmeyen, art arda gelen hâsıl olmalardan başka değilse, bu hareketin îcâdına kasd bu bölünmeyen hâsıl olmaları bu bölünmeyen hayizlerde îcâda kasd; mâhiyeti bilmeden kasd muhâl; öyleyse hareketi tekvîne kâsid, bölünmeyen, ardışık hâsıl olmaların bölünmeyen bitişik hayizlerde vücûda girdiğini zarûrî bilmeli; bu ilmin çoğu kişide olmadığı malûm. Öyleyse hareketi îcâd eden kul değildir.** BURHAN 9 başlığı (p97).'
+- Netice/hüküm: **Burhan 8: kul hareketin mâhiyetini (bölünmeyen ardışık hâsıl olmalar) bilmiyor ⇒ hareketi îcâd etmiyor.**
+- Delil çeşidi: **ilzâm (cevher-i ferd/ânât tasavvuruna dayalı); (T) F 27-B: bu delil, kelâmî atomcu 'hayiz ve ân' tasavvuruna dayanır; sürekli hareket tasavvuruyla düşer; Burhan 4–5'teki 'tafsîlî ilim şart' öncülüne bağımlı: iki burhan aynı öncüle dayanır.**
+- Mevzuya bağı: **Fasıl I §8; tier D (cevher-i ferd).**
+- Doğan sual: —
+
+## c9 p97
+- OCR: orta ('الحكماء' 'القوى السماوية' okunuyor)
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî.** '**BURHAN 9: kul kudreti fiilin hudûsunda te'sîr etseydi bu te'sîr ya o kudretin mahallinin ortaklığıyla ya mahalsiz olurdu; ikisi bâtıl. Mahal ortaklığıyla olamaz: mahalin kabiliyetten başka yeri yok (bu sıfatların onda hâsıl olması imtinâ' değil, hâsıl olmaması da imtinâ' değil); mahali müessirin cüzü yapsak kâbili mûcidin cüzü yapmış oluruz; muhâl; çünkü bu kâbiliyetin tabîatı 'imkân-ı hâss' tabîatı, mûcidiyetin tabîatı 'vücûb' tabîatı; imkân-ı hâss vücûba münâfî; münâfînin cüzü öbür münâfînin cüzü olması aklen muhâl. Mahalsiz olamaz: şeyin vücûdu onun başkasına müessir oluşunun cüzü; bu kudret müessiriyetinde o mahalden müstağnî olsaydı vücûdunda da müstağnî olurdu; mürekkeb bir şeyden müstağnî ise basit cüzlerinden her biri de ondan müstağnî; muhâl. Öyleyse kudret fiilin vücûdunda müessir olsa te'sîr ya mahalle ortaklık ya değil; ikisi bâtıl; kudret fiilin hudûsunda müessir değil. Râzî: 'bu, hükemâ'nın felekî kuvvelerin mevcûdda müessir olmadığına delilleridir.' 'Ve billâhi't-tevfîk.' BURHAN 10 başlığı: 'kulun fiili kulun îcâdıyla hâdis olsa kulun murâd ettiğinden başkası vâki olmaması lâzım gelirdi; lâzım bâtıl' (p98).**' 
+- Netice/hüküm: **Burhan 9: kudret hâdis olmada müessir olamaz (mahalle ortak veya mahalsiz); Râzî bunu 'hükemâ'nın delili' diye adlandırıyor.**
+- Delil çeşidi: **felsefî burhan (hükemâ'dan); (T) F 27-B: 'imkân-ı hâss ile vücûb münâfî; münâfînin cüzü münâfînin cüzü olamaz' önermesi Mu'tezile'ye karşı kabul; ama 'mahal kâbil, mûcid vâcib' ayrımı kelâmî kudret anlayışına özgü, ortak öncül yok; kaynak: Râzî felsefî delili kendi adına kabul ediyor (kimin sesi: hükemâ delili, Râzî'nin kabulüyle).**
+- Mevzuya bağı: **Fasıl I §8; Râzî'nin metodolojisi (felsefî delillerin kelâmda kullanımı).**
+- Doğan sual: —
+
+## c9 p98
+- OCR: orta ('أمير المؤمنين علي' okunuyor)
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî (+ hasım itirazı 'fein kîle').** '**BURHAN 10: kulun fiili kulun îcâdıyla hâdis olsa kulun murâd ettiğinden başkası vâki olmazdı; lâzım bâtıl. Şartlının beyânı: kul muhtelif fiillere kâdir olduğuna göre bazısının rüçhânı ancak kendi kasdıyla olur; öyleyse yalnız kasdettiği ve murâd ettiği vâki olur. Böyle olmadığının beyânı: kul hak ilmi ve doğru i'tikâdı kasd eder, ona hâsıl olmaz; cehl ve bâtıl hâsıl olur; îmânı kasd eder, küfür hâsıl olur; insan bir satır yazsa bütün dünya hilelerini kullansa da bütün hissî keyfiyetlerde ilkine benzeyen ikinci satırı yazamaz. Öyleyse fiili onun îcâdıyla olsaydı ancak kasdettiği vâki olurdu; bu böyle değil; fiili onun îcâdıyla değil. Râzî: 'bu delili Emîrü'l-Mü'minîn Ali b. Ebî Tâlib (r.a.)'nin şu sözünden aldım: 'Rabbimi azîmetlerin nakzıyla ve himmetlerin bozulmasıyla tanıdım.'' İtiraz (hasım): bu belirli i'tikâd hâsıl oldu çünkü ilim, hak ve doğru olduğunu zannetti; bu sebeple seçti ve ona râzı oldu; cehl olduğunu bilse râzı olmazdı, ama ilim olduğuna i'tikâd edince seçti. Cevap: iki vecihle bâtıl: (1) Bu i'tikâdı tahsile kasdetti çünkü bu i'tikâdın ilim olduğuna i'tikâd etmişti; önceki cehl olmasaydı bu ikinci cehle râzı olmazdı; o birinci cehl nasıl hâsıl oldu? Başka bir cehl önce ise teselsül; kendisi ibtidâen cehli seçip ona râzı olduysa muhâl; öyleyse cehâletler ilk cehle intihâ eder ki onu Allah kulda ibtidâen halketti: matlûb. (2) İnsaflı kişi bilir ki kulun cehli (p99).**'
+- Netice/hüküm: **Burhan 10: kulun kasdı ile vukû' arasındaki uyumsuzluk (kasdedilen hâsıl olmaz) ⇒ fiil kulun îcâdı değil; cehâletin hâsıl olması kulun ihtiyârıyla değil.**
+- Delil çeşidi: **gözlem + nakil (Ali sözü, ⊬ isnad bu sayfada yok) + teselsül; (T) F 27-B: 'kastedilen hâsıl olmuyor' gözlemi 'kastedilen bazen hâsıl olmuyor' ile 'kudretin sınırı' olarak da yorumlanabilir; Mu'tezile 'kudretin sınırları var' diyerek fiilin bir kısmını kul kudretiyle, bir kısmını sınırlı kabul eder; ayırt edici değil. İSLÂM KAYDI: Ali (r.a.) sözü isnadsız; cehâletin ilkini Allah'ın kulda halk etmesi hükmü Risale'ye 'kulun ihtiyârı yoktur, cehle mesûl değildir' diye ALINMAZ: mesûliyet nassı (Fasıl IV) ayrı.**
+- Mevzuya bağı: **Fasıl I §8; Fasıl II (nübüvvet: ilk cehl / hidâyet ve idlâl bahsi).**
+- Doğan sual: —
+
+## c9 p99
+- OCR: orta
+- Okuma: tam (Fasıl 2 biter; sayfanın son satırı Fasıl 2 sonunda 've billâhi't-tevfîk')
+- İçerik: **Kimin sesi: Râzî.** '**Cevap vecih 2: insaflı kişi bilir ki kulun bu cehlin hâsıl olmasında hiçbir ihtiyârı yok: zihninde bu cehli mûcib mukaddimeler tertip etmedikçe kalbinde bu cehl hâsıl olmaz; sonra o mukaddimeler hakkında da aynı söz; öyleyse bu cehâletler kalbine kendi sa'yi olmadan ve o ilk cehlin kalbinde hâsıl olmasını talep etmeksizin vâki olan ilk cehle çıkar; o ilk cehlin ondan lâzım gelen diğer cehâletlere ulaşması da onun sa'yiyle ve ihtiyârıyla değildir. Netice: bütün cehâletler kulda ıztırâr yoluyla hâsıl olur, ihtiyâr yoluyla değil. 'Ve billâhi't-tevfîk.'**' 
+- Netice/hüküm: **Bâb 1 Fasıl 2 tamam: 10 burhan (imkân burhanı, mak'dûr burhanı [8 hüccet], teavün, tafsîlî ilim, gaflet, bazısı-hepsi, iâde, kasd-ı vakit, mahal, kasd-vukû').**
+- Delil çeşidi: **teselsül + gözlem; (T) F 27-B: 'ilk cehli kulun elinde değil' öncülü Râzî'nin Burhan 3'teki 'ilk tasavvur' öncülüyle aynı; iki delil tek öncüle dayanır (bağımsız değil): kendi tenkidim.**
+- Mevzuya bağı: **Fasıl I §8.**
+- Doğan sual: —
+
+## c9 p100
+- OCR: —
+- Okuma: tam (sayfa boş)
+- İçerik: **Sayfa boş (kâğıt sonu, Fasıl 3 başlığı p101'de). Kimin sesi: —.**
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
