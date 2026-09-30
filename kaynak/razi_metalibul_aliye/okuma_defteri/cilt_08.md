@@ -1144,3 +1144,93 @@ Biçim: cilt 1–7 ile aynı. Dipnottaki harfler neşredenin nüsha işaretlerid
 - Delil çeşidi: **üç asıllı kelâmî burhan + tarihî/zarûrî ilim misâli (Mûsâ ve dağ)**; (T) **Râzî derecesi: 'şüphe ve şüphe bırakmayacak biçimde zâhir' (kat'îlik dili); F 27-B: (1) 'dağ misâli' Kur'ân'daki bir olay (Bakara 2/63, 93; A'râf 7/171 ⊬ sayfada âyet geçmiyor) — o kavim müşâhede etti, bizim için nakil (tevâtür sorunu p73–79'da çözülmedi!): yani zarûrî ilim şâhitler için; bizim için mûcizeye tevâtür yoluyla aynı derecede zarûrî ilim hâsıl olup olmadığı Râzî'nin metninde ele alınmamış (tevâtür şüphesi 'el-Mahsûl'e havale). (2) 'Allah hikmeti tasdîkten başka yok' halkası Asıl 3 ile (hüsn-kubuh batıl) kuruluyor, çelişki: Asıl 3 Allah'ın fiillerinde hikmeti ve gayeyi bağlayıcı saymayı reddediyor; ama 'tasdîk hikmeti' yine bir gaye. Râzî bunu 'gaye vâcib değil ama zarûrî ilimle biliniyor' diye çözüyor (Zeyd/dağ misâli): bu çözüm 'zarûrî ilim' iddiasının delilinin kendisi olmadığını gösteriyor.**
 - Mevzuya bağı: **EN KRİTİK — Fasıl II mûcize burhanı (KAPANIŞ ve DERECE)**: **Râzî'nin kendi mûcize burhanı: (1) Allah'tan başka mûcid yok (kudret-tevhîdi; c2, c3'e dayanır); (2) 'ihtimâl ile yakîn birlikte' (zarûrî ilim; misâl: dağ, Zeyd); (3) hüsn-kubuh batıl ⇒ Allah mûcizeyi tasdîk için yarattığı zarûrî bilinir; (4) 'Allah'a yalan muhâl (naks)' (p100) ⇒ tasdîk gerçek. Bu zincirin en zayıf halkası: (2)'nin 'zarûrî ilim' iddiası ve tevâtür bağı; Risale bu zinciri KOPYALAMAZ: mûcize burhanını (a) Kur'ân'ın kendi mûcizesi (tehaddî + muâraza edilemeyiş; tarih içinde sınanmış), (b) davetin içeriği ve etkisi (Râzî K2 p114 kaynağı), (c) Allah'ın tasdîkine dair fıtrî/zarûrî ilim (Râzî'nin Asıl 2) olarak yazar ve derecelerini ayrı yazar. Râzî'nin cevabındaki 'Fasıl I'e bağlılık' (muhtâr fâil, kudret) ilk cümleye girer.**
 - Doğan sual: **Râzî'nin tevâtür şüphelerine (p73–79) kendi cevabı K1 içinde yok; 'el-Mahsûl' ve 'el-Erba'în'e havale. Bu boşluk (mûcizelerin bize ulaşması) Fasıl IV'te Sünnet ve haber usûlüyle doldurulacak.**
+
+## c8 p1
+- OCR: çöp (kapak; dağınık harf ve süsleme)
+- Okuma: **okunmadı (OCR çöp; yalnız kırık başlık parçaları: '…fi'n-nübüvvât ve mâ yeta'allaku bihâ' — 'nübüvvetler ve bununla ilgili olanlar')**
+- İçerik: Kapak; okunabilir tek anlamlı parça cüz başlığı: 'nübüvvetler ve ilgili bahisler'. Netice çıkarılmadı.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c8 p2
+- OCR: çöp
+- Okuma: okunmadı (OCR çöp)
+- İçerik: Bozuk harfler; okunabilir metin yok.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c8 p3
+- OCR: —
+- Okuma: okunmadı (boş sayfa)
+- İçerik: Boş.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c8 p4
+- OCR: kötü (künye; dağınık kelimeler)
+- Okuma: kısmî
+- İçerik: Künye/kapak metni: kırık satırlar ('Beyrut' gibi yayın bilgisi parçaları, 'el-Metâlibü'l-Âliye' ve cilt bilgisi); anlamlı cümle çıkarılamadı.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c8 p5
+- OCR: iyi
+- Okuma: tam (başlık sayfası)
+- İçerik: '**Nübüvvât kitabının 1. kısmı: Nübüvvetin mûcizeler yoluyla takrîri**' (başlık sayfası).
+- Netice/hüküm: **K1 = mûcize yolu (p5–100); K2 = tekmîl yolu (p101–137); K3 = sihir (p139–...).**
+- Delil çeşidi: —
+- Mevzuya bağı: **Fasıl II — cilt 8'in bölüm haritası doğrulandı.**
+- Doğan sual: —
+
+## c8 p6
+- OCR: —
+- Okuma: okunmadı (boş sayfa)
+- İçerik: Boş.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
+
+## c8 p7
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **K1 Fasıl 1: 'İnsanların bu bâbdaki mezheplerinin tafsili'.** **Kimin sesi: Râzî (kendi tasnifi); dipnotta neşredenin nüsha notu.** '**Bilin ki nübüvvetleri inkâr edenler fırkalardır: 1. fırka: 'âlemin ilâhı zâtı gereği mûcibtir, ihtiyârla fâil değil'; her kim O'nun muhtâr fâil olduğunu ve cüz'îleri bildiğini inkâr ederse nübüvvetlerin isbâtı kapısı ona kapanmış olur; ona ait yol filozofların yoludur.' **2. fırka**: 'âlemin ilâhının muhtâr fâil olduğunu kabul edip emir, nehiy ve teklîfi inkâr edenler: teklîf bâtıl ise asıl bâtıl; asıl bâtıl olunca fer' (nübüvvet) evlâ bâtıl; çünkü enbiyâ ancak teklîfleri takrîr etmek için geldi.' **3. fırka**: 'âlemin ilâhının kullarına bazı şeyleri emredip bazılarından nehyettiğini kabul edip, akıl tek başına bu teklîflerin ma'rifetinde yeter diyenler; o zaman enbiyâ'nın gönderilmesinde fâide yok.' (p8'e).**' **Dipnot**: 'nüshalarda başlık: 'Nübüvvâtla ilgili el-Metâlibü'l-Âliye'nin 8. kitabı; sözü kısımlara göre tertîb; 1. kısım fasıllarla; 1. fasıl insanların mezhepleri'.'
+- Netice/hüküm: **Râzî'nin nübüvvet inkârı haritası (başlangıç): 1. fırka mûcib bi'z-zât (filozof), 2. fırka teklîf inkârı, 3. fırka akıl yeter.**
+- Delil çeşidi: **tasnif**; (T) —
+- Mevzuya bağı: **Fasıl II — itirazcıların haritası; Fasıl I ile bağ: 1. fırka Fasıl I'deki 'muhtâr fâil' sonucuna karşı çıkanlar.**
+- Doğan sual: —
+
+## c8 p8
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî (kendi tasnifi).** '**4. fırka**: 'nebîlerin nübüvvetini bilmeye ancak mûcizeler vâsıtasıyla yol var; mûcizeler nebîlerin sıdkına hiç delâlet etmez; nübüvvete delâlet eden tek şey mûcize olduğuna göre ve mûcizenin delâlet etmediği sâbit olduğuna göre nübüvvet sözünün fesâdı lâzım gelir.' **Bu sözü söyleyenler mûcizeye tâ'nda çok vecih zikretti**: (1) mûcize yokluğunu iddia edenler: âdetlerin yarılması akılda imtinâ'; (2) âdetlerin yarılmasının mümkünlüğünü kabul edip 'bu hârika fiillerin faili Allah'tır' diyecek delil bulunmadığını söyleyenler; (3) 'Allah'tır' dese bile bu mûcizenin nübüvvet dâvâcısının sıdkına delâlet etmediğini söyleyenler; (4) 'mûcize Allah'ın müddeîyi tasdîk ettiğine delâlet etse bile Allah'ın tasdîki onun sâdık olduğuna delâlet etmez; delil: cebr hak ⇒ tüm kabâhatın faili Allah ⇒ 'şu fiil çirkin, Allah'tan imtinâ'' denemez ⇒ yalancıyı tasdîk Allah'a çirkin değil'; (5) 'mûcizeler sıdka delâlet etse bile biz mûcizeleri müşâhede etmedik; en fazla insanlar geçmiş zamanlarda vâki olduğunu haber verdi; haber yakîn ifade etmez, ancak zan; bu mesele yakîn meselesi; isbâtı zan ifade eden yola bina edilirse bâtıl ve fâsid olur. Bu beş fırka nübüvvetlere mûcizeye tâ'nla tâ'n eden fırkalardır.**' **'Nübüvvetlere tâ'n edenlerin 5. fırkası: 'nakledilen…' (cümle p9'a).**
+- Netice/hüküm: **Râzî'nin haritası: 4. fırka mûcize burhanına 5 alt fırka ile itiraz (mûcizenin yokluğu, faili, sıdka delâleti, kaderle 'tasdîk yalanı da yapar', tevâtürün yakîn vermeyişi).**
+- Delil çeşidi: **tasnif**; (T) —
+- Mevzuya bağı: **KRİTİK — Fasıl II mûcize burhanının itiraz haritası (BU HARİTA c8 p41–99 şüphelerinin tam eşleşmesi)**: 5 alt fırka ⇒ F5 (harkulâde imtinâ'), F6 (Allah'ın fiili mi), F7 (tasdîk için mi), F9–F10 (sıdka delâlet), F10 (cebr ile tasdîk-i kâzib), F11 (tevâtür); Risale Fasıl II'nin 'itirazlar' bölümü bu haritayı kullanır.
+- Doğan sual: —
+
+## c8 p9
+- OCR: orta-iyi
+- Okuma: tam
+- İçerik: **Kimin sesi: Râzî (tasnif sonu).** '**…haber yakîn ifade etmez, ancak zan; bu meselenin yakîn meselesi olması yüzünden isbâtını zan ifade eden yola bina etmek bâtıl-fâsid: bu beş fırka nübüvvetlere mûcizeye tâ'nla tâ'n eder.** **5. fırka (nübüvvete tâ'n edenlerin): 'nakledilen … (cümle kısmî; dipnot: 'mûcize yolundan başka bir yola itiraz')' ; 6. fırka**: '**'Allah resûl göndermek isteseydi resûlün meleklerden olması ve art arda kâhir mûcizeler zuhûr etmesi vâcib olurdu' diyenler; bu sözü Allah Kur'ân'da defalarca hikâye etti.**' '**Bu, nübüvvetleri inkâr eden fırkaların zabtına işârettir. Âlemin ilâhının muhtâr fâil olduğu, zâtı gereği mûcib olmadığı bahsi geçti (istiksâ ile); tekrarında fâide yok. Diğer mezhepler için her birine ayrı fasıl açarız.**'
+- Netice/hüküm: **Râzî'nin haritası sonu: 5. fırka (mûcize dışı yola itiraz; metin kısmî) ve 6. fırka (melek resûl, art arda mûcizeler).** **'Muhtâr fâil bahsi geçti (c1–c4)'.**
+- Delil çeşidi: **tasnif**; (T) —
+- Mevzuya bağı: **Fasıl II ↔ Fasıl I**: **Râzî nübüvvet bâbının 'muhtâr fâil' sonucuna dayandığını açıkça yazıyor ('geçti, tekrarında fâide yok') — Risale bu atfı 'c1–c4'e (Fasıl I kaynakları) bağlar; ancak c4'te irâde-tahsis aporiası kapanmadığı için 'geçti' ifadesi Râzî'nin kendi inancıdır, aporiayı kapatmış anlamına gelmez (bkz. c8 p56).**
+- Doğan sual: —
+
+## c8 p10
+- OCR: —
+- Okuma: okunmadı (boş sayfa)
+- İçerik: Boş.
+- Netice/hüküm: —
+- Delil çeşidi: —
+- Mevzuya bağı: —
+- Doğan sual: —
