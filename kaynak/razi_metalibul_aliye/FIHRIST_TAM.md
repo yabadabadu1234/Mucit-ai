@@ -1,16 +1,16 @@
 # el-Metâlibü'l-Âliye — TAM FİHRİST (Sekkā neşrinin kendi fihristi)
 
-Kaynak: `metin_sekka/fihrist_sekka.tsv` (Şâmile `.bok` tablosu `t268`; **OCR değil**). **361 başlık, 9 cilt.** Arapça başlık neşrindir; **Türkçe başlık benim tercümemdir** (Türkçe çevirinin metni depoda yoktur). `s.` = neşrin basılı sayfa numarası (satırın başladığı sayfa; işaretsiz 31 sayfa nedeniyle ±1 olabilir). **Durum:** `okunmadı` = defterde kaydı yok; `kısmen`; `OCR-mühürlü*` = eskiden OCR ile okunup mühürlendi, **gerçek metinle doğrulanmadı** (defter numaraları basılı numarayla aynıdır; kayma ±1, c6 sonunda 1 sayfa; satır satır doğrulamada eşlenir). Sıra: umumîden hususîye, fihrist sırasıyla; girinti = seviye.
+Kaynak: `metin_sekka/fihrist_sekka.tsv` (Şâmile `.bok` tablosu `t268`; **OCR değil**). **361 başlık, 9 cilt.** Arapça başlık neşrindir; **Türkçe başlık benim tercümemdir** (Türkçe çevirinin metni depoda yoktur). `s.` = neşrin basılı sayfa numarası (başlığın gerçek metinde bulunduğu sayfa; 361 başlıktan 361 tanesi metinde bulundu, 5 tanesinin fihristteki sayfası 1–2 sayfa farklıydı ve metne göre düzeltildi). **Durum:** `okunmadı` = defterde kaydı yok; `kısmen`; `DOĞRULANDI` = defter girdisi gerçek metinle karşılaştırıldı; `OCR-mühürlü*` = eskiden OCR ile okunup mühürlendi, **henüz gerçek metinle doğrulanmadı** (defter numaraları basılı numarayla aynıdır; kayma ±1, c6 sonunda 1 sayfa; satır satır doğrulamada eşlenir). Sıra: umumîden hususîye, fihrist sırasıyla; girinti = seviye.
 
 
 ## Cilt 1
 
 | # | Bölüm | Arapça | s. | Durum |
 | --: | :-- | :-- | --: | :-- |
-| 1 | el-Metâlibü'l-Âliye, 1. cilt | المطالب العالية 1 | 33 | OCR-mühürlü* |
+| 1 | el-Metâlibü'l-Âliye, 1. cilt | المطالب العالية 1 | 31 | OCR-mühürlü* |
 | 2 | &nbsp;&nbsp;Takdim (neşredenin girişi) | تقديم | 33 | OCR-mühürlü* |
 | 3 | &nbsp;&nbsp;&nbsp;&nbsp;Mukaddime (dört fasıl) | المقدّمة وفيها أربعة فصول | 35 | OCR-mühürlü* |
-| 4 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 1: Bu ilmin mutlak surette ilimlerin en şereflisi olduğunun beyanı | الفصل الأول في بيان أن هذا العلم أشرف العلوم على الإطلاق | 37 | OCR-mühürlü* |
+| 4 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 1: Bu ilmin mutlak surette ilimlerin en şereflisi olduğunun beyanı | الفصل الأول في بيان أن هذا العلم أشرف العلوم على الإطلاق | 35 | OCR-mühürlü* |
 | 5 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 2: Beşerî akılların bu ilimde cezm ve yakîne ulaşma yolunun olup olmadığı | الفصل الثاني في انه هل للعقول البشرية سبيل إلى تحصيل الجزم واليقين في هذا العلم | 41 | OCR-mühürlü* |
 | 6 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 3: Bu kutsal marifetlerin tahsil yolunun bir mi, birden çok mu olduğu | الفصل الثالث في أن تحصيل هذه المعارف المقدسة. هل الطريق إليه واحد، أم أكثر من واحد؟ | 53 | OCR-mühürlü* |
 | 7 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 4: Bu ilmin ölçülerinin (ma'kıdlarının) zaptı | الفصل الرابع في ضبط معاقد هذا العلم | 60 | OCR-mühürlü* |
@@ -57,9 +57,9 @@ Kaynak: `metin_sekka/fihrist_sekka.tsv` (Şâmile `.bok` tablosu `t268`; **OCR d
 
 | # | Bölüm | Arapça | s. | Durum |
 | --: | :-- | :-- | --: | :-- |
-| 46 | el-Metâlibü'l-Âliye, 2. cilt | المطالب العالية 2 | 5 | OCR-mühürlü* |
+| 46 | el-Metâlibü'l-Âliye, 2. cilt | المطالب العالية 2 | 3 | OCR-mühürlü* |
 | 47 | &nbsp;&nbsp;Tamhîd (giriş) | تمهيد | 5 | OCR-mühürlü* |
-| 48 | &nbsp;&nbsp;&nbsp;&nbsp;1. Kısım: Allah'ın tahayyüzden ve cihetten münezzeh olduğunun beyanı | القسم الأوّل في بيان كونه سبحانه وتعالى منزّها عن التّحيّز والجهة | 7 | OCR-mühürlü* |
+| 48 | &nbsp;&nbsp;&nbsp;&nbsp;1. Kısım: Allah'ın tahayyüzden ve cihetten münezzeh olduğunun beyanı | القسم الأوّل في بيان كونه سبحانه وتعالى منزّها عن التّحيّز والجهة | 5 | OCR-mühürlü* |
 | 49 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 1: Cisim olmayan ve cisme hâl olmayan bir mevcûdun ispatının, akıl bedîhesinde imkânsız olmadığının beyanı | الفصل الأول في بيان أن اثبات موجود ليس بجسم ولا حال في الجسم: ليس بممتنع الوجود في بديهة العقل | 9 | OCR-mühürlü* |
 | 50 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 2: Her mevcûdun nazîr ve benzerinin bulunmasının gerekmediğinin; nazîr ve benzerin nefyinden o şeyin nefyinin lâzım gelmediğinin beyanı | الفصل الثاني في بيان أنه لا يجب أن يكون لكل موجود نظير وشبيه. وانه ليس يلزم من نفي النظير والشبيه نفي ذلك الشيء | 23 | OCR-mühürlü* |
 | 51 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 3: Allah'ın cisim olmasının imkânsız olduğuna delillerin ikamesi | الفصل الثالث في إقامة الدلائل على أنه تعالى يمتنع أن يكون جسما | 25 | OCR-mühürlü* |
@@ -114,7 +114,7 @@ Kaynak: `metin_sekka/fihrist_sekka.tsv` (Şâmile `.bok` tablosu `t268`; **OCR d
 | 95 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 1: İrâdenin hakîkatinin araştırılması | الفصل الأول في البحث عن حقيقة الإرادة | 175 | OCR-mühürlü* |
 | 96 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 2: Lezzet ve elem | الفصل الثاني في اللذة والألم | 183 | OCR-mühürlü* |
 | 97 | &nbsp;&nbsp;&nbsp;&nbsp;Bâb 5: Allah'ın semî' ve basîr oluşu | الباب الخامس في كونه تعالى سميعا بصيرا | 185 | OCR-mühürlü* |
-| 98 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sem' ve basarın mâhiyetinin araştırılması | البحث عن ماهية السمع والبصر | 187 | OCR-mühürlü* |
+| 98 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sem' ve basarın mâhiyetinin araştırılması | البحث عن ماهية السمع والبصر | 185 | OCR-mühürlü* |
 | 99 | &nbsp;&nbsp;&nbsp;&nbsp;Bâb 6: Allah'ın mütekellim oluşu | الباب السّادس في كونه تعالى متكلما | 199 | OCR-mühürlü* |
 | 100 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mesele 1: Kelâmın hakîkatinin araştırılması | المسألة الأولى في البحث عن حقيقة الكلام: | 201 | OCR-mühürlü* |
 | 101 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mesele 2: Allah'ın mütekellim olduğunun ispatı | المسألة الثانية: في إثبات كونه تعالى متكلما | 203 | OCR-mühürlü* |
@@ -181,7 +181,7 @@ Kaynak: `metin_sekka/fihrist_sekka.tsv` (Şâmile `.bok` tablosu `t268`; **OCR d
 
 | # | Bölüm | Arapça | s. | Durum |
 | --: | :-- | :-- | --: | :-- |
-| 155 | el-Metâlibü'l-Âliye, 5. cilt | المطالب العالية 5 | 5 | OCR-mühürlü* |
+| 155 | el-Metâlibü'l-Âliye, 5. cilt | المطالب العالية 5 | 7 | OCR-mühürlü* |
 | 156 | &nbsp;&nbsp;Makâle 1: Zaman hakkında kelâm | المقالة الأولى في الكلام في الزمان | 5 | OCR-mühürlü* |
 | 157 | &nbsp;&nbsp;&nbsp;&nbsp;Fasıl 1: Zamanın nefyini söyleyenlerin delillerinin takriri | الفصل الأول في تقرير دلائل القائلين بنفي الزمان | 9 | OCR-mühürlü* |
 | 158 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 2: Müddet ve zamanın mevcut olduğunun ilminin bedîhî, evvelî olup delile muhtaç olmadığını söyleyenin sözünün takriri | الفصل الثاني في تقرير قول من يقول: العلم بكون المدة والزمان موجودان: علم بديهي أولي. لا يحتاج فيه الى الحجة والدليل | 21 | OCR-mühürlü* |
@@ -198,7 +198,7 @@ Kaynak: `metin_sekka/fihrist_sekka.tsv` (Şâmile `.bok` tablosu `t268`; **OCR d
 | 169 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 8: Dehr ve sermed'de kelâmın tahkiki; aralarındaki ve zamandan farkları | الفصل الثامن في تحقيق الكلام في الدهر والسرمد. والفرق بينهما وبين الزمان | 89 | OCR-mühürlü* |
 | 170 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 9: Mâzi, hâl ve müstakbelin on husûsiyetinin şerhi | الفصل التاسع في شرح خواص الماضي والحاضر والمستقبل وهي أمور عشرة | 93 | OCR-mühürlü* |
 | 171 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 10: Zamanın muhdes mi, kadîm mi olduğu | الفصل العاشر في أن الزمان محدث أو قديم | 99 | OCR-mühürlü* |
-| 172 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 11: Bu babda geçen lafızların tefsiri | الفصل الحادي عشر في تفسير الألفاظ المذكورة في هذا الباب | 102 | OCR-mühürlü* |
+| 172 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 11: Bu babda geçen lafızların tefsiri | الفصل الحادي عشر في تفسير الألفاظ المذكورة في هذا الباب | 103 | OCR-mühürlü* |
 | 173 | &nbsp;&nbsp;&nbsp;&nbsp;Makâle 2: Mekân hakkında sözün tahkiki | المقالة الثانية في تحقيق القول في المكان | 109 | OCR-mühürlü* |
 | 174 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 1: İnsanların mekân hakkındaki mezheplerinin ayrıntısı | الفصل الأول في تفصيل مذاهب الناس فيه | 111 | OCR-mühürlü* |
 | 175 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 2: "Halâ ve fezâ, mahz ademdir, sırf nefiydir" diyenin sözünün ibtâli | الفصل الثاني في ابطال قول من يقول: الخلاء والفضاء عدم محض ونفي صرف | 115 | OCR-mühürlü* |
@@ -251,7 +251,7 @@ Kaynak: `metin_sekka/fihrist_sekka.tsv` (Şâmile `.bok` tablosu `t268`; **OCR d
 
 | # | Bölüm | Arapça | s. | Durum |
 | --: | :-- | :-- | --: | :-- |
-| 215 | el-Metâlibü'l-Âliye, 7. cilt | المطالب العالية 7 | 5 | okunmadı |
+| 215 | el-Metâlibü'l-Âliye, 7. cilt | المطالب العالية 7 | 3 | okunmadı |
 | 216 | &nbsp;&nbsp;Makâle 1: Mukaddimeler | المقالة الأولى في المقدمات | 5 | okunmadı |
 | 217 | &nbsp;&nbsp;&nbsp;&nbsp;Fasıl 1: İnsanların bunlar hakkındaki mezheplerinin ayrıntısı | الفصل الأول في تفصيل مذاهب الناس فيها | 7 | okunmadı |
 | 218 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 2: Ervâhın taksiminde başka bir şerhin zikri | الفصل الثاني في ذكر شرح اخر في تقسيم الأرواح | 13 | okunmadı |
@@ -308,31 +308,31 @@ Kaynak: `metin_sekka/fihrist_sekka.tsv` (Şâmile `.bok` tablosu `t268`; **OCR d
 
 | # | Bölüm | Arapça | s. | Durum |
 | --: | :-- | :-- | --: | :-- |
-| 267 | el-Metâlibü'l-Âliye, 8. cilt | المطالب العالية 8 | 5 | OCR-mühürlü* |
+| 267 | el-Metâlibü'l-Âliye, 8. cilt | المطالب العالية 8 | 7 | OCR-mühürlü* |
 | 268 | &nbsp;&nbsp;Nübüvvetler kitabının 1. Kısmı: Nübüvvetin mûcizeler yoluyla takriri | القسم الأول من كتاب النبوات في تقرير القول بالنبوة عن طريق المعجزات | 5 | OCR-mühürlü* |
 | 269 | &nbsp;&nbsp;&nbsp;&nbsp;Fasıl 1: İnsanların bu babdaki mezheplerinin şerhi | الفصل الاول في شرح مذاهب الناس في هذا الباب | 7 | OCR-mühürlü* |
 | 270 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 2: Teklîfin nefyine dayanarak nübüvvetleri inkâr edenlerin şüphelerinin hikâyesi | الفصل الثاني في حكاية شبهات من أنكر النبوات بناء على نفي التكليف | 11 | OCR-mühürlü* |
 | 271 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 3: Cebr meselesine dayanmadan teklîfi inkâr edenlerin şüphelerinin takriri | الفصل الثالث في تقرير شبهات من ينكر التكليف لا بالبناء على مسألة الجبر | 21 | OCR-mühürlü* |
 | 272 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 4: "Akıl teklîfi bilmeye kâfidir, bu da bi'set ve risâlet demeyi düşürür" diyerek nübüvvetleri inkâr edenlerin şüphelerinin takriri | الفصل الرابع في تقرير شبهات المنكرين للنبوات بالبناء على أن العقل كاف في معرفة التكليف وذلك يوجب سقوط القول بالبعثة والرسالة | 29 | OCR-mühürlü* |
-| 273 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 5: "Harikulâdeliklerin (hark-ı âdât) vukûu muhâldir" diyenlerin şüphelerinin hikâyesi | الفصل الخامس في حكاية شبهات من يقول: القول بخرق العادات محال | 35 | OCR-mühürlü* |
-| 274 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 6: Mûcizelerin Allah'ın fiili ve yaratmasıyla vâki olduğunun bilinemeyeceğini; bu bilgi imkânsız olunca da iddia sahibinin sıdkına delil getirilemeyeceğini söyleyenlerin şüphelerinin beyanı | الفصل السادس في شبهات القائلين بأن المعجزات لا يمكن أن يعلم أنها حدثت بفعل الله وبتخليقه. وبيان أنه متى تعذر العلم بذلك امتنع الاستدلال بها على صدق المدعي | 41 | OCR-mühürlü* |
-| 275 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 7: Mûcizelerin yaratıcısının Allah Teâlâ olduğu sabit olsa bile, bunun, Allah'ın onları risâlet iddiasında bulunanı tasdik için yarattığına delâlet etmediğini söyleyenlerin şüphelerinin hikâyesi | الفصل السابع في حكاية شبهات القائلين بأن على تقدير أن يثبت أن خالق المعجزات هو الله سبحانه وتعالى إلا أن ذلك لا يدل على أنه تعالى انما خلقها لأجل تصديق المدعي للرسالة | 55 | OCR-mühürlü* |
-| 276 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 8: Mûcizenin zuhûruyla iddia sahibinin sıdkına istidlâl edenlerin delillerinin hikâyesi | الفصل الثامن في حكاية دلائل من استدل بظهور المعجز على صدق المدعي | 61 | OCR-mühürlü* |
-| 277 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 9: Başka bir şüphe türünün takriri: Harikulâde, dâvâya uygun ve muâraza edilmeyen fiilin zuhûru iddia sahibinin sıdkına delâlet etmez | الفصل التاسع في تقرير نوع اخر من الشبهات في بيان انّ ظهور الفعل الخارق للعادة الموافق للدعوى مع عدم المعارضة: لا يدل على صدق المدعي | 65 | OCR-mühürlü* |
-| 278 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 10: Mûcize, Allah'ın sarâhaten tasdik etmesi yerine geçse, bundan iddia sahibinin sâdık olmasının lâzım gelip gelmediği | الفصل العاشر في أن بتقدير أن يكون المعجز قائما مقام ما اذا صدقه الله تعالى على سبيل التصريح. فهل يلزم من هذا كون المدعي صادقا؟ | 69 | OCR-mühürlü* |
-| 279 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 11: Tevâtüre taan | الفصل الحادي عشر في الطعن في التواتر | 73 | OCR-mühürlü* |
-| 280 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 12: "Allah halka bir resûl gönderseydi o resûlün melekten olması gerekirdi" diyenin şüphesinin takriri | الفصل الثاني عشر في تقرير شبهة من يقول: ان الله تعالى لو أرسل رسولا الى الخلق لوجب أن يكون ذلك الرسول من الملائكة | 81 | OCR-mühürlü* |
-| 281 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 13: Resûle, kendisinin Allah katından resûl olduğunu bildiren yolun araştırılması | الفصل الثالث عشر في البحث عن الطريق الذي يعرّف الرسول كونه رسولا من عند الله عز وجل | 85 | OCR-mühürlü* |
-| 282 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 14: Enbiyâdan, nübüvvetlerinin sıhhatine leke getiren amellerin zuhûruna dayanan şüpheler | الفصل الرابع عشر في الشبهات المبنية على أنه ظهر على الأنبياء أعمال تقدح في صحة نبوتهم | 87 | OCR-mühürlü* |
-| 283 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 15: Bu şüphelerin cevaplarına işaret | الفصل الخامس عشر في الاشارة الى أجوبة هذه الشبهات | 93 | OCR-mühürlü* |
-| 284 | &nbsp;&nbsp;&nbsp;&nbsp;2. Kısım: Nübüvvetin başka bir yolla takriri: Nebînin nâkısları tekmîle kudreti | القسم الثاني في تقرير القول بالنبوة عن طريق اخر وهو قدرة النبي على تكميل الناقصين | 101 | OCR-mühürlü* |
-| 285 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 1: Bu yolun, önceki yoldan temyizi | الفصل الأول في تمييز هذا الطريق عن الطريق المتقدم | 103 | OCR-mühürlü* |
-| 286 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 2: Kur'ân-ı Azîm'in bu yolun, nübüvvetin ispatında en kâmil ve en efdal yol olduğuna delâlet ettiği | الفصل الثاني في أن القرآن العظيم يدل على أن هذا الطريق هو الطريق الأكمل الأفضل في اثبات النبوة | 109 | OCR-mühürlü* |
-| 287 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 3: Allah'a bu davetin sıfatı | الفصل الثالث في صفة هذه الدعوة الى الله تعالى | 115 | OCR-mühürlü* |
-| 288 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 4: Muhammed aleyhisselâmın bütün nebî ve resûllerden efdal olduğunun beyanı | الفصل الرابع في بيان أن محمدا عليه الصلاة والسلام أفضل من جميع الأنبياء والرسل | 121 | OCR-mühürlü* |
-| 289 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 5: Nübüvvetin bu yolla ispatının, mûcizelerle ispatından daha kuvvetli ve kâmil olduğunun beyanı | الفصل الخامس في بيان أن اثبات النبوة بهذا الطريق أقوى وأكمل من اثباتها بالمعجزات | 123 | OCR-mühürlü* |
-| 290 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 6: Filozofların, mûcizelerin enbiyâ aleyhimüsselâm üzerinde nasıl zuhûr ettiğine dair yollarının takriri | الفصل السادس في تقرير طريقة الفلاسفة في كيفية ظهور المعجزات على الأنبياء عليهم السلام | 127 | OCR-mühürlü* |
-| 291 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 7: Enbiyâ ve evliyânın mûcize ve kerâmetleri getirmeye kâdir olmalarının sebebi hakkında filozofların sözünün hikâyesi | الفصل السابع في حكاية قول الفلاسفة في السبب الذي لأجله يقدر الأنبياء والأولياء على الاتيان بالمعجزات والكرامات | 137 | OCR-mühürlü* |
+| 273 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 5: "Harikulâdeliklerin (hark-ı âdât) vukûu muhâldir" diyenlerin şüphelerinin hikâyesi | الفصل الخامس في حكاية شبهات من يقول: القول بخرق العادات محال | 35 | kısmen doğrulandı; OCR-mühürlü* |
+| 274 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 6: Mûcizelerin Allah'ın fiili ve yaratmasıyla vâki olduğunun bilinemeyeceğini; bu bilgi imkânsız olunca da iddia sahibinin sıdkına delil getirilemeyeceğini söyleyenlerin şüphelerinin beyanı | الفصل السادس في شبهات القائلين بأن المعجزات لا يمكن أن يعلم أنها حدثت بفعل الله وبتخليقه. وبيان أنه متى تعذر العلم بذلك امتنع الاستدلال بها على صدق المدعي | 41 | DOĞRULANDI |
+| 275 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 7: Mûcizelerin yaratıcısının Allah Teâlâ olduğu sabit olsa bile, bunun, Allah'ın onları risâlet iddiasında bulunanı tasdik için yarattığına delâlet etmediğini söyleyenlerin şüphelerinin hikâyesi | الفصل السابع في حكاية شبهات القائلين بأن على تقدير أن يثبت أن خالق المعجزات هو الله سبحانه وتعالى إلا أن ذلك لا يدل على أنه تعالى انما خلقها لأجل تصديق المدعي للرسالة | 55 | DOĞRULANDI |
+| 276 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 8: Mûcizenin zuhûruyla iddia sahibinin sıdkına istidlâl edenlerin delillerinin hikâyesi | الفصل الثامن في حكاية دلائل من استدل بظهور المعجز على صدق المدعي | 61 | DOĞRULANDI |
+| 277 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 9: Başka bir şüphe türünün takriri: Harikulâde, dâvâya uygun ve muâraza edilmeyen fiilin zuhûru iddia sahibinin sıdkına delâlet etmez | الفصل التاسع في تقرير نوع اخر من الشبهات في بيان انّ ظهور الفعل الخارق للعادة الموافق للدعوى مع عدم المعارضة: لا يدل على صدق المدعي | 65 | DOĞRULANDI |
+| 278 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 10: Mûcize, Allah'ın sarâhaten tasdik etmesi yerine geçse, bundan iddia sahibinin sâdık olmasının lâzım gelip gelmediği | الفصل العاشر في أن بتقدير أن يكون المعجز قائما مقام ما اذا صدقه الله تعالى على سبيل التصريح. فهل يلزم من هذا كون المدعي صادقا؟ | 69 | DOĞRULANDI |
+| 279 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 11: Tevâtüre taan | الفصل الحادي عشر في الطعن في التواتر | 73 | DOĞRULANDI |
+| 280 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 12: "Allah halka bir resûl gönderseydi o resûlün melekten olması gerekirdi" diyenin şüphesinin takriri | الفصل الثاني عشر في تقرير شبهة من يقول: ان الله تعالى لو أرسل رسولا الى الخلق لوجب أن يكون ذلك الرسول من الملائكة | 81 | DOĞRULANDI |
+| 281 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 13: Resûle, kendisinin Allah katından resûl olduğunu bildiren yolun araştırılması | الفصل الثالث عشر في البحث عن الطريق الذي يعرّف الرسول كونه رسولا من عند الله عز وجل | 85 | DOĞRULANDI |
+| 282 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 14: Enbiyâdan, nübüvvetlerinin sıhhatine leke getiren amellerin zuhûruna dayanan şüpheler | الفصل الرابع عشر في الشبهات المبنية على أنه ظهر على الأنبياء أعمال تقدح في صحة نبوتهم | 87 | DOĞRULANDI |
+| 283 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 15: Bu şüphelerin cevaplarına işaret | الفصل الخامس عشر في الاشارة الى أجوبة هذه الشبهات | 93 | kısmen doğrulandı; OCR-mühürlü* |
+| 284 | &nbsp;&nbsp;&nbsp;&nbsp;2. Kısım: Nübüvvetin başka bir yolla takriri: Nebînin nâkısları tekmîle kudreti | القسم الثاني في تقرير القول بالنبوة عن طريق اخر وهو قدرة النبي على تكميل الناقصين | 101 | DOĞRULANDI |
+| 285 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 1: Bu yolun, önceki yoldan temyizi | الفصل الأول في تمييز هذا الطريق عن الطريق المتقدم | 103 | DOĞRULANDI |
+| 286 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 2: Kur'ân-ı Azîm'in bu yolun, nübüvvetin ispatında en kâmil ve en efdal yol olduğuna delâlet ettiği | الفصل الثاني في أن القرآن العظيم يدل على أن هذا الطريق هو الطريق الأكمل الأفضل في اثبات النبوة | 109 | DOĞRULANDI |
+| 287 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 3: Allah'a bu davetin sıfatı | الفصل الثالث في صفة هذه الدعوة الى الله تعالى | 115 | DOĞRULANDI |
+| 288 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 4: Muhammed aleyhisselâmın bütün nebî ve resûllerden efdal olduğunun beyanı | الفصل الرابع في بيان أن محمدا عليه الصلاة والسلام أفضل من جميع الأنبياء والرسل | 121 | DOĞRULANDI |
+| 289 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 5: Nübüvvetin bu yolla ispatının, mûcizelerle ispatından daha kuvvetli ve kâmil olduğunun beyanı | الفصل الخامس في بيان أن اثبات النبوة بهذا الطريق أقوى وأكمل من اثباتها بالمعجزات | 123 | DOĞRULANDI |
+| 290 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 6: Filozofların, mûcizelerin enbiyâ aleyhimüsselâm üzerinde nasıl zuhûr ettiğine dair yollarının takriri | الفصل السادس في تقرير طريقة الفلاسفة في كيفية ظهور المعجزات على الأنبياء عليهم السلام | 127 | DOĞRULANDI |
+| 291 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 7: Enbiyâ ve evliyânın mûcize ve kerâmetleri getirmeye kâdir olmalarının sebebi hakkında filozofların sözünün hikâyesi | الفصل السابع في حكاية قول الفلاسفة في السبب الذي لأجله يقدر الأنبياء والأولياء على الاتيان بالمعجزات والكرامات | 137 | kısmen doğrulandı; OCR-mühürlü* |
 | 292 | &nbsp;&nbsp;&nbsp;&nbsp;Bu kitabın 3. Kısmı: Sihir ve kısımları hakkında kelâm | القسم الثالث من هذا الكتاب في الكلام في السحر وأقسامه | 139 | OCR-mühürlü* |
 | 293 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tamhîd | تمهيد | 141 | OCR-mühürlü* |
 | 294 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sihir çeşitlerinin beyanında mukaddime | مقدمة في بيان أنواع السحر | 143 | OCR-mühürlü* |
@@ -366,7 +366,7 @@ Kaynak: `metin_sekka/fihrist_sekka.tsv` (Şâmile `.bok` tablosu `t268`; **OCR d
 | --: | :-- | :-- | --: | :-- |
 | 318 | el-Metâlibü'l-Âliye, 9. cilt | المطالب العالية 9 | 5 | OCR-mühürlü* |
 | 319 | &nbsp;&nbsp;Müellifin mukaddimesi | مقدمة المؤلف | 5 | OCR-mühürlü* |
-| 320 | &nbsp;&nbsp;&nbsp;&nbsp;Ef'âlin halkı (kulların fiillerinin yaratılması) | خلق الأفعال | 7 | OCR-mühürlü* |
+| 320 | &nbsp;&nbsp;&nbsp;&nbsp;Ef'âlin halkı (kulların fiillerinin yaratılması) | خلق الأفعال | 6 | OCR-mühürlü* |
 | 321 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mukaddime: İnsanların bu babdaki mezheplerinin ayrıntısı | المقدمة في بيان تفاصيل مذاهب الناس في هذا الباب | 9 | OCR-mühürlü* |
 | 322 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bâb 1: Kulların bütün fiillerinin Allah'ın takdiriyle olduğuna, kulun fiilde ve terkte müstakil olmadığına aklî delillerin takriri | الباب الأول في تقرير الدلائل العقلية على أن أفعال العباد كلها بتقدير الله، وأن العبد غير مستقل بالفعل والترك | 19 | OCR-mühürlü* |
 | 323 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fasıl 1: Kulun fiilde ve terkte kendi başına müstakil olmadığına delâlet eden deliller; bu meselede burhanlarımız vardır | الفصل الأول في الدلائل الدالة على أن العبد غير مستقل بنفسه بالفعل والترك ولنا في هذه المسألة براهين: | 21 | OCR-mühürlü* |

@@ -1,6 +1,6 @@
 # el-Metâlibü'l-Âliye — TAM FİHRİSTİN BİZİMLE ALAKA SIRASI (en alakalıdan en alakasıza)
 
-**Ölçü** (CLAUDE.md 3-A 25-C): İslâm İspat Risalesi'nin dört faslı (Fasıl I El-Vücûd, II En-Nübüvve, III El-Meâd, IV Es-Sünne ve't-Tahkik) ve projenin mimarî mevzuu. **Kapsam:** fihristin 361 satırından cilt başlıkları (9) dışındaki **352 satırın hepsi**; üst başlık, ilk çocuğunun katmanına ve sırasına bağlanır ve çocuklarından önce gelir; `okunmadı` da `OCR-mühürlü*` de sırada yerini alır, sıra **alakaya** göredir, okuma durumuna göre değildir. Durum sütunu ayrıdır; `OCR-mühürlü*` = eski OCR okuması, gerçek metinle doğrulanmadı.
+**Ölçü** (CLAUDE.md 3-A 25-C): İslâm İspat Risalesi'nin dört faslı (Fasıl I El-Vücûd, II En-Nübüvve, III El-Meâd, IV Es-Sünne ve't-Tahkik) ve projenin mimarî mevzuu. **Kapsam:** fihristin 361 satırından cilt başlıkları (9) dışındaki **352 satırın hepsi**; üst başlık, ilk çocuğunun katmanına ve sırasına bağlanır ve çocuklarından önce gelir; `okunmadı` da `OCR-mühürlü*` de sırada yerini alır, sıra **alakaya** göredir, okuma durumuna göre değildir. Durum sütunu ayrıdır; `DOĞRULANDI` = gerçek metinle karşılaştırıldı; `OCR-mühürlü*` = eski OCR okuması, henüz doğrulanmadı.
 
 **Gerekçenin adı ve öz-tenkit:** Katmanları ve sırayı **ben kurdum**; padişahın eski hükmü (25-C) yalnız ölçüyü verir. Fasıl II'yi Fasıl I'in önüne koymam, o fasılın açık borçlarının (mûcize burhanının halkaları) ve okuma kotasının bu yönde olmasındandır; mutlak alaka hükmü değil, **tertip tercihidir**. Karar padişahındır.
 
@@ -9,37 +9,37 @@
 
 | Sıra | Cilt | Bölüm | s. | Durum | Alaka gerekçesi |
 | --: | --: | :-- | --: | :-- | :-- |
-| 1 | 8 | 2. Kısım: Nübüvvetin başka bir yolla takriri: Nebînin nâkısları tekmîle kudreti | 101 | OCR-mühürlü* | Kısım 2: nâkısı tekmîl yolu — Risale Fasıl II çekirdeği; Muhammed a.s. efdal; Râzî'nin derece hükmü |
-| 2 | 8 | Fasıl 1: Bu yolun, önceki yoldan temyizi | 103 | OCR-mühürlü* | Kısım 2: nâkısı tekmîl yolu — Risale Fasıl II çekirdeği; Muhammed a.s. efdal; Râzî'nin derece hükmü |
-| 3 | 8 | Fasıl 2: Kur'ân-ı Azîm'in bu yolun, nübüvvetin ispatında en kâmil ve en efdal yol olduğuna delâlet ettiği | 109 | OCR-mühürlü* | Kısım 2: nâkısı tekmîl yolu — Risale Fasıl II çekirdeği; Muhammed a.s. efdal; Râzî'nin derece hükmü |
-| 4 | 8 | Fasıl 3: Allah'a bu davetin sıfatı | 115 | OCR-mühürlü* | Kısım 2: nâkısı tekmîl yolu — Risale Fasıl II çekirdeği; Muhammed a.s. efdal; Râzî'nin derece hükmü |
-| 5 | 8 | Fasıl 4: Muhammed aleyhisselâmın bütün nebî ve resûllerden efdal olduğunun beyanı | 121 | OCR-mühürlü* | Kısım 2: nâkısı tekmîl yolu — Risale Fasıl II çekirdeği; Muhammed a.s. efdal; Râzî'nin derece hükmü |
-| 6 | 8 | Fasıl 5: Nübüvvetin bu yolla ispatının, mûcizelerle ispatından daha kuvvetli ve kâmil olduğunun beyanı | 123 | OCR-mühürlü* | Kısım 2: nâkısı tekmîl yolu — Risale Fasıl II çekirdeği; Muhammed a.s. efdal; Râzî'nin derece hükmü |
-| 7 | 8 | Fasıl 6: Filozofların, mûcizelerin enbiyâ aleyhimüsselâm üzerinde nasıl zuhûr ettiğine dair yollarının takriri | 127 | OCR-mühürlü* | Kısım 2: nâkısı tekmîl yolu — Risale Fasıl II çekirdeği; Muhammed a.s. efdal; Râzî'nin derece hükmü |
-| 8 | 8 | Fasıl 7: Enbiyâ ve evliyânın mûcize ve kerâmetleri getirmeye kâdir olmalarının sebebi hakkında filozofların sözünün hikâyesi | 137 | OCR-mühürlü* | Kısım 2: nâkısı tekmîl yolu — Risale Fasıl II çekirdeği; Muhammed a.s. efdal; Râzî'nin derece hükmü |
-| 9 | 8 | Fasıl 6: Mûcizelerin Allah'ın fiili ve yaratmasıyla vâki olduğunun bilinemeyeceğini; bu bilgi imkânsız olunca da iddia sahibinin sıdkına delil getirilemeyeceğini söyleyenlerin şüphelerinin beyanı | 41 | OCR-mühürlü* | Mûcize burhanının halkaları (Allah'ın fiili, tasdîk kastı, sıdka delâlet, muârazasızlık) — Fasıl II borcu |
-| 10 | 8 | Fasıl 7: Mûcizelerin yaratıcısının Allah Teâlâ olduğu sabit olsa bile, bunun, Allah'ın onları risâlet iddiasında bulunanı tasdik için yarattığına delâlet etmediğini söyleyenlerin şüphelerinin hikâyesi | 55 | OCR-mühürlü* | Mûcize burhanının halkaları (Allah'ın fiili, tasdîk kastı, sıdka delâlet, muârazasızlık) — Fasıl II borcu |
-| 11 | 8 | Fasıl 8: Mûcizenin zuhûruyla iddia sahibinin sıdkına istidlâl edenlerin delillerinin hikâyesi | 61 | OCR-mühürlü* | Mûcize burhanının halkaları (Allah'ın fiili, tasdîk kastı, sıdka delâlet, muârazasızlık) — Fasıl II borcu |
-| 12 | 8 | Fasıl 9: Başka bir şüphe türünün takriri: Harikulâde, dâvâya uygun ve muâraza edilmeyen fiilin zuhûru iddia sahibinin sıdkına delâlet etmez | 65 | OCR-mühürlü* | Mûcize burhanının halkaları (Allah'ın fiili, tasdîk kastı, sıdka delâlet, muârazasızlık) — Fasıl II borcu |
-| 13 | 8 | Fasıl 10: Mûcize, Allah'ın sarâhaten tasdik etmesi yerine geçse, bundan iddia sahibinin sâdık olmasının lâzım gelip gelmediği | 69 | OCR-mühürlü* | Mûcize burhanının halkaları (Allah'ın fiili, tasdîk kastı, sıdka delâlet, muârazasızlık) — Fasıl II borcu |
-| 14 | 8 | Fasıl 13: Resûle, kendisinin Allah katından resûl olduğunu bildiren yolun araştırılması | 85 | OCR-mühürlü* | Resûlün bilinme yolu, ismet, enbiyâdan zâhir fiillere şüpheler |
-| 15 | 8 | Fasıl 14: Enbiyâdan, nübüvvetlerinin sıhhatine leke getiren amellerin zuhûruna dayanan şüpheler | 87 | OCR-mühürlü* | Resûlün bilinme yolu, ismet, enbiyâdan zâhir fiillere şüpheler |
-| 16 | 8 | Fasıl 15: Bu şüphelerin cevaplarına işaret | 93 | OCR-mühürlü* | Resûlün bilinme yolu, ismet, enbiyâdan zâhir fiillere şüpheler |
+| 1 | 8 | 2. Kısım: Nübüvvetin başka bir yolla takriri: Nebînin nâkısları tekmîle kudreti | 101 | DOĞRULANDI | Kısım 2: nâkısı tekmîl yolu — Risale Fasıl II çekirdeği; Muhammed a.s. efdal; Râzî'nin derece hükmü |
+| 2 | 8 | Fasıl 1: Bu yolun, önceki yoldan temyizi | 103 | DOĞRULANDI | Kısım 2: nâkısı tekmîl yolu — Risale Fasıl II çekirdeği; Muhammed a.s. efdal; Râzî'nin derece hükmü |
+| 3 | 8 | Fasıl 2: Kur'ân-ı Azîm'in bu yolun, nübüvvetin ispatında en kâmil ve en efdal yol olduğuna delâlet ettiği | 109 | DOĞRULANDI | Kısım 2: nâkısı tekmîl yolu — Risale Fasıl II çekirdeği; Muhammed a.s. efdal; Râzî'nin derece hükmü |
+| 4 | 8 | Fasıl 3: Allah'a bu davetin sıfatı | 115 | DOĞRULANDI | Kısım 2: nâkısı tekmîl yolu — Risale Fasıl II çekirdeği; Muhammed a.s. efdal; Râzî'nin derece hükmü |
+| 5 | 8 | Fasıl 4: Muhammed aleyhisselâmın bütün nebî ve resûllerden efdal olduğunun beyanı | 121 | DOĞRULANDI | Kısım 2: nâkısı tekmîl yolu — Risale Fasıl II çekirdeği; Muhammed a.s. efdal; Râzî'nin derece hükmü |
+| 6 | 8 | Fasıl 5: Nübüvvetin bu yolla ispatının, mûcizelerle ispatından daha kuvvetli ve kâmil olduğunun beyanı | 123 | DOĞRULANDI | Kısım 2: nâkısı tekmîl yolu — Risale Fasıl II çekirdeği; Muhammed a.s. efdal; Râzî'nin derece hükmü |
+| 7 | 8 | Fasıl 6: Filozofların, mûcizelerin enbiyâ aleyhimüsselâm üzerinde nasıl zuhûr ettiğine dair yollarının takriri | 127 | DOĞRULANDI | Kısım 2: nâkısı tekmîl yolu — Risale Fasıl II çekirdeği; Muhammed a.s. efdal; Râzî'nin derece hükmü |
+| 8 | 8 | Fasıl 7: Enbiyâ ve evliyânın mûcize ve kerâmetleri getirmeye kâdir olmalarının sebebi hakkında filozofların sözünün hikâyesi | 137 | kısmen doğrulandı; OCR-mühürlü* | Kısım 2: nâkısı tekmîl yolu — Risale Fasıl II çekirdeği; Muhammed a.s. efdal; Râzî'nin derece hükmü |
+| 9 | 8 | Fasıl 6: Mûcizelerin Allah'ın fiili ve yaratmasıyla vâki olduğunun bilinemeyeceğini; bu bilgi imkânsız olunca da iddia sahibinin sıdkına delil getirilemeyeceğini söyleyenlerin şüphelerinin beyanı | 41 | DOĞRULANDI | Mûcize burhanının halkaları (Allah'ın fiili, tasdîk kastı, sıdka delâlet, muârazasızlık) — Fasıl II borcu |
+| 10 | 8 | Fasıl 7: Mûcizelerin yaratıcısının Allah Teâlâ olduğu sabit olsa bile, bunun, Allah'ın onları risâlet iddiasında bulunanı tasdik için yarattığına delâlet etmediğini söyleyenlerin şüphelerinin hikâyesi | 55 | DOĞRULANDI | Mûcize burhanının halkaları (Allah'ın fiili, tasdîk kastı, sıdka delâlet, muârazasızlık) — Fasıl II borcu |
+| 11 | 8 | Fasıl 8: Mûcizenin zuhûruyla iddia sahibinin sıdkına istidlâl edenlerin delillerinin hikâyesi | 61 | DOĞRULANDI | Mûcize burhanının halkaları (Allah'ın fiili, tasdîk kastı, sıdka delâlet, muârazasızlık) — Fasıl II borcu |
+| 12 | 8 | Fasıl 9: Başka bir şüphe türünün takriri: Harikulâde, dâvâya uygun ve muâraza edilmeyen fiilin zuhûru iddia sahibinin sıdkına delâlet etmez | 65 | DOĞRULANDI | Mûcize burhanının halkaları (Allah'ın fiili, tasdîk kastı, sıdka delâlet, muârazasızlık) — Fasıl II borcu |
+| 13 | 8 | Fasıl 10: Mûcize, Allah'ın sarâhaten tasdik etmesi yerine geçse, bundan iddia sahibinin sâdık olmasının lâzım gelip gelmediği | 69 | DOĞRULANDI | Mûcize burhanının halkaları (Allah'ın fiili, tasdîk kastı, sıdka delâlet, muârazasızlık) — Fasıl II borcu |
+| 14 | 8 | Fasıl 13: Resûle, kendisinin Allah katından resûl olduğunu bildiren yolun araştırılması | 85 | DOĞRULANDI | Resûlün bilinme yolu, ismet, enbiyâdan zâhir fiillere şüpheler |
+| 15 | 8 | Fasıl 14: Enbiyâdan, nübüvvetlerinin sıhhatine leke getiren amellerin zuhûruna dayanan şüpheler | 87 | DOĞRULANDI | Resûlün bilinme yolu, ismet, enbiyâdan zâhir fiillere şüpheler |
+| 16 | 8 | Fasıl 15: Bu şüphelerin cevaplarına işaret | 93 | kısmen doğrulandı; OCR-mühürlü* | Resûlün bilinme yolu, ismet, enbiyâdan zâhir fiillere şüpheler |
 | 17 | 8 | Nübüvvetler kitabının 1. Kısmı: Nübüvvetin mûcizeler yoluyla takriri | 5 | OCR-mühürlü* | Nübüvvet ve teklîf karşıtı şüpheler; karşı görüşü anlamak |
 | 18 | 8 | Fasıl 1: İnsanların bu babdaki mezheplerinin şerhi | 7 | OCR-mühürlü* | Nübüvvet ve teklîf karşıtı şüpheler; karşı görüşü anlamak |
 | 19 | 8 | Fasıl 2: Teklîfin nefyine dayanarak nübüvvetleri inkâr edenlerin şüphelerinin hikâyesi | 11 | OCR-mühürlü* | Nübüvvet ve teklîf karşıtı şüpheler; karşı görüşü anlamak |
 | 20 | 8 | Fasıl 3: Cebr meselesine dayanmadan teklîfi inkâr edenlerin şüphelerinin takriri | 21 | OCR-mühürlü* | Nübüvvet ve teklîf karşıtı şüpheler; karşı görüşü anlamak |
 | 21 | 8 | Fasıl 4: "Akıl teklîfi bilmeye kâfidir, bu da bi'set ve risâlet demeyi düşürür" diyerek nübüvvetleri inkâr edenlerin şüphelerinin takriri | 29 | OCR-mühürlü* | Nübüvvet ve teklîf karşıtı şüpheler; karşı görüşü anlamak |
-| 22 | 8 | Fasıl 5: "Harikulâdeliklerin (hark-ı âdât) vukûu muhâldir" diyenlerin şüphelerinin hikâyesi | 35 | OCR-mühürlü* | Nübüvvet ve teklîf karşıtı şüpheler; karşı görüşü anlamak |
-| 23 | 8 | Fasıl 11: Tevâtüre taan | 73 | OCR-mühürlü* | Nübüvvet ve teklîf karşıtı şüpheler; karşı görüşü anlamak |
-| 24 | 8 | Fasıl 12: "Allah halka bir resûl gönderseydi o resûlün melekten olması gerekirdi" diyenin şüphesinin takriri | 81 | OCR-mühürlü* | Nübüvvet ve teklîf karşıtı şüpheler; karşı görüşü anlamak |
+| 22 | 8 | Fasıl 5: "Harikulâdeliklerin (hark-ı âdât) vukûu muhâldir" diyenlerin şüphelerinin hikâyesi | 35 | kısmen doğrulandı; OCR-mühürlü* | Nübüvvet ve teklîf karşıtı şüpheler; karşı görüşü anlamak |
+| 23 | 8 | Fasıl 11: Tevâtüre taan | 73 | DOĞRULANDI | Nübüvvet ve teklîf karşıtı şüpheler; karşı görüşü anlamak |
+| 24 | 8 | Fasıl 12: "Allah halka bir resûl gönderseydi o resûlün melekten olması gerekirdi" diyenin şüphesinin takriri | 81 | DOĞRULANDI | Nübüvvet ve teklîf karşıtı şüpheler; karşı görüşü anlamak |
 
 ## Katman 2 — Fasıl I §8 ve Fasıl IV: Kader, irâde, haber usulü
 
 | Sıra | Cilt | Bölüm | s. | Durum | Alaka gerekçesi |
 | --: | --: | :-- | --: | :-- | :-- |
 | 25 | 9 | Müellifin mukaddimesi | 5 | OCR-mühürlü* | Cebr-kader mezheplerinin ayrıntısı: bâbın zemini |
-| 26 | 9 | Ef'âlin halkı (kulların fiillerinin yaratılması) | 7 | OCR-mühürlü* | Cebr-kader mezheplerinin ayrıntısı: bâbın zemini |
+| 26 | 9 | Ef'âlin halkı (kulların fiillerinin yaratılması) | 6 | OCR-mühürlü* | Cebr-kader mezheplerinin ayrıntısı: bâbın zemini |
 | 27 | 9 | Mukaddime: İnsanların bu babdaki mezheplerinin ayrıntısı | 9 | OCR-mühürlü* | Cebr-kader mezheplerinin ayrıntısı: bâbın zemini |
 | 28 | 9 | Bâb 1: Kulların bütün fiillerinin Allah'ın takdiriyle olduğuna, kulun fiilde ve terkte müstakil olmadığına aklî delillerin takriri | 19 | OCR-mühürlü* | 25 aklî burhan: kulun fiili Allah'ın takdiriyle — Fasıl I §8 (kader/irâde) |
 | 29 | 9 | Fasıl 1: Kulun fiilde ve terkte kendi başına müstakil olmadığına delâlet eden deliller; bu meselede burhanlarımız vardır | 21 | OCR-mühürlü* | 25 aklî burhan: kulun fiili Allah'ın takdiriyle — Fasıl I §8 (kader/irâde) |
@@ -143,7 +143,7 @@
 | --: | --: | :-- | --: | :-- | :-- |
 | 118 | 1 | Takdim (neşredenin girişi) | 33 | OCR-mühürlü* | Vücûd ispatı, vâcib, sıfat-ı îcâbiyye: Risale Fasıl I (El-Vücûd) |
 | 119 | 1 | Mukaddime (dört fasıl) | 35 | OCR-mühürlü* | Vücûd ispatı, vâcib, sıfat-ı îcâbiyye: Risale Fasıl I (El-Vücûd) |
-| 120 | 1 | Fasıl 1: Bu ilmin mutlak surette ilimlerin en şereflisi olduğunun beyanı | 37 | OCR-mühürlü* | Vücûd ispatı, vâcib, sıfat-ı îcâbiyye: Risale Fasıl I (El-Vücûd) |
+| 120 | 1 | Fasıl 1: Bu ilmin mutlak surette ilimlerin en şereflisi olduğunun beyanı | 35 | OCR-mühürlü* | Vücûd ispatı, vâcib, sıfat-ı îcâbiyye: Risale Fasıl I (El-Vücûd) |
 | 121 | 1 | Fasıl 2: Beşerî akılların bu ilimde cezm ve yakîne ulaşma yolunun olup olmadığı | 41 | OCR-mühürlü* | Vücûd ispatı, vâcib, sıfat-ı îcâbiyye: Risale Fasıl I (El-Vücûd) |
 | 122 | 1 | Fasıl 3: Bu kutsal marifetlerin tahsil yolunun bir mi, birden çok mu olduğu | 53 | OCR-mühürlü* | Vücûd ispatı, vâcib, sıfat-ı îcâbiyye: Risale Fasıl I (El-Vücûd) |
 | 123 | 1 | Fasıl 4: Bu ilmin ölçülerinin (ma'kıdlarının) zaptı | 60 | OCR-mühürlü* | Vücûd ispatı, vâcib, sıfat-ı îcâbiyye: Risale Fasıl I (El-Vücûd) |
@@ -239,7 +239,7 @@
 | 213 | 3 | Fasıl 1: İrâdenin hakîkatinin araştırılması | 175 | OCR-mühürlü* | Kâdir-mûcib, ilim, irâde, kelâm, bekâ, hayat, sıfatlar, hakîm — Fasıl I sıfat kanadı |
 | 214 | 3 | Fasıl 2: Lezzet ve elem | 183 | OCR-mühürlü* | Kâdir-mûcib, ilim, irâde, kelâm, bekâ, hayat, sıfatlar, hakîm — Fasıl I sıfat kanadı |
 | 215 | 3 | Bâb 5: Allah'ın semî' ve basîr oluşu | 185 | OCR-mühürlü* | Kâdir-mûcib, ilim, irâde, kelâm, bekâ, hayat, sıfatlar, hakîm — Fasıl I sıfat kanadı |
-| 216 | 3 | Sem' ve basarın mâhiyetinin araştırılması | 187 | OCR-mühürlü* | Kâdir-mûcib, ilim, irâde, kelâm, bekâ, hayat, sıfatlar, hakîm — Fasıl I sıfat kanadı |
+| 216 | 3 | Sem' ve basarın mâhiyetinin araştırılması | 185 | OCR-mühürlü* | Kâdir-mûcib, ilim, irâde, kelâm, bekâ, hayat, sıfatlar, hakîm — Fasıl I sıfat kanadı |
 | 217 | 3 | Bâb 6: Allah'ın mütekellim oluşu | 199 | OCR-mühürlü* | Kâdir-mûcib, ilim, irâde, kelâm, bekâ, hayat, sıfatlar, hakîm — Fasıl I sıfat kanadı |
 | 218 | 3 | Mesele 1: Kelâmın hakîkatinin araştırılması | 201 | OCR-mühürlü* | Kâdir-mûcib, ilim, irâde, kelâm, bekâ, hayat, sıfatlar, hakîm — Fasıl I sıfat kanadı |
 | 219 | 3 | Mesele 2: Allah'ın mütekellim olduğunun ispatı | 203 | OCR-mühürlü* | Kâdir-mûcib, ilim, irâde, kelâm, bekâ, hayat, sıfatlar, hakîm — Fasıl I sıfat kanadı |
@@ -254,7 +254,7 @@
 | 228 | 3 | Fasıl 5: Allah'ın isimlerinin taksimi | 239 | OCR-mühürlü* | Kâdir-mûcib, ilim, irâde, kelâm, bekâ, hayat, sıfatlar, hakîm — Fasıl I sıfat kanadı |
 | 229 | 3 | Fasıl 6: Allah'ın hakîm oluşunun ispatı | 279 | OCR-mühürlü* | Kâdir-mûcib, ilim, irâde, kelâm, bekâ, hayat, sıfatlar, hakîm — Fasıl I sıfat kanadı |
 | 230 | 2 | Tamhîd (giriş) | 5 | OCR-mühürlü* | Tenzih: cisim, cihet, hulûl, ittihad, elem-lezzet — Fasıl I tenzih kanadı |
-| 231 | 2 | 1. Kısım: Allah'ın tahayyüzden ve cihetten münezzeh olduğunun beyanı | 7 | OCR-mühürlü* | Tenzih: cisim, cihet, hulûl, ittihad, elem-lezzet — Fasıl I tenzih kanadı |
+| 231 | 2 | 1. Kısım: Allah'ın tahayyüzden ve cihetten münezzeh olduğunun beyanı | 5 | OCR-mühürlü* | Tenzih: cisim, cihet, hulûl, ittihad, elem-lezzet — Fasıl I tenzih kanadı |
 | 232 | 2 | Fasıl 1: Cisim olmayan ve cisme hâl olmayan bir mevcûdun ispatının, akıl bedîhesinde imkânsız olmadığının beyanı | 9 | OCR-mühürlü* | Tenzih: cisim, cihet, hulûl, ittihad, elem-lezzet — Fasıl I tenzih kanadı |
 | 233 | 2 | Fasıl 2: Her mevcûdun nazîr ve benzerinin bulunmasının gerekmediğinin; nazîr ve benzerin nefyinden o şeyin nefyinin lâzım gelmediğinin beyanı | 23 | OCR-mühürlü* | Tenzih: cisim, cihet, hulûl, ittihad, elem-lezzet — Fasıl I tenzih kanadı |
 | 234 | 2 | Fasıl 3: Allah'ın cisim olmasının imkânsız olduğuna delillerin ikamesi | 25 | OCR-mühürlü* | Tenzih: cisim, cihet, hulûl, ittihad, elem-lezzet — Fasıl I tenzih kanadı |
@@ -327,7 +327,7 @@
 | 296 | 5 | Fasıl 8: Dehr ve sermed'de kelâmın tahkiki; aralarındaki ve zamandan farkları | 89 | OCR-mühürlü* | Zamanın varlığı, mâhiyeti, ân, dehr-sermed |
 | 297 | 5 | Fasıl 9: Mâzi, hâl ve müstakbelin on husûsiyetinin şerhi | 93 | OCR-mühürlü* | Zamanın varlığı, mâhiyeti, ân, dehr-sermed |
 | 298 | 5 | Fasıl 10: Zamanın muhdes mi, kadîm mi olduğu | 99 | OCR-mühürlü* | Zamanın varlığı, mâhiyeti, ân, dehr-sermed |
-| 299 | 5 | Fasıl 11: Bu babda geçen lafızların tefsiri | 102 | OCR-mühürlü* | Zamanın varlığı, mâhiyeti, ân, dehr-sermed |
+| 299 | 5 | Fasıl 11: Bu babda geçen lafızların tefsiri | 103 | OCR-mühürlü* | Zamanın varlığı, mâhiyeti, ân, dehr-sermed |
 | 300 | 5 | Makâle 2: Mekân hakkında sözün tahkiki | 109 | OCR-mühürlü* | Mekân, halâ, bu'd |
 | 301 | 5 | Fasıl 1: İnsanların mekân hakkındaki mezheplerinin ayrıntısı | 111 | OCR-mühürlü* | Mekân, halâ, bu'd |
 | 302 | 5 | Fasıl 2: "Halâ ve fezâ, mahz ademdir, sırf nefiydir" diyenin sözünün ibtâli | 115 | OCR-mühürlü* | Mekân, halâ, bu'd |
