@@ -1,7 +1,9 @@
 from __future__ import annotations
 
+import functools
 import itertools
 import math
+import operator
 import sys
 from dataclasses import dataclass, field
 from typing import (Any, Callable, Dict, FrozenSet, Iterable, Iterator,
@@ -8318,6 +8320,427 @@ def sahalar_uzayinda_ara(fg, n: int, x0_listesi: Sequence[np.ndarray],
     en_iyi["analitik_kapanis"] = saha_analitik_kapanis(fg, kaide, theta, z_son, olcek)
     en_iyi["sadakat"] = saha_sadakati(kaide, theta, x0_listesi)
     return {"siralama": sonuclar, "en_iyi": en_iyi, "kaide_denetimi": kaideler}
+
+
+class SDugum:
+    __slots__ = ()
+    __array_ufunc__ = None
+
+    def _alanlar(self) -> tuple:
+        return tuple(getattr(self, a) for a in self.__slots__)
+
+    def __eq__(self, obur: object) -> bool:
+        return type(self) is type(obur) and self._alanlar() == obur._alanlar()
+
+    def __hash__(self) -> int:
+        return hash((type(self).__name__, self._alanlar()))
+
+    def __repr__(self) -> str:
+        return s_yaz(self)
+
+    def __add__(self, o):
+        return s_topla(self, o)
+
+    def __radd__(self, o):
+        return s_topla(o, self)
+
+    def __sub__(self, o):
+        return s_topla(self, s_carp(-1, o))
+
+    def __rsub__(self, o):
+        return s_topla(o, s_carp(-1, self))
+
+    def __mul__(self, o):
+        return s_carp(self, o)
+
+    def __rmul__(self, o):
+        return s_carp(o, self)
+
+    def __neg__(self):
+        return s_carp(-1, self)
+
+    def __pow__(self, o):
+        return s_us(self, o)
+
+    def __truediv__(self, o):
+        return s_carp(self, s_us(o, -1))
+
+    def __rtruediv__(self, o):
+        return s_carp(o, s_us(self, -1))
+
+
+class SSabit(SDugum):
+    __slots__ = ("deger",)
+
+    def __init__(self, deger) -> None:
+        self.deger = deger
+
+
+class SSimge(SDugum):
+    __slots__ = ("ad",)
+
+    def __init__(self, ad: str) -> None:
+        self.ad = str(ad)
+
+
+class SIslem(SDugum):
+    __slots__ = ("op", "args")
+
+    def __init__(self, op: str, args: Tuple[SDugum, ...]) -> None:
+        self.op, self.args = op, tuple(args)
+
+
+class SToplam(SDugum):
+    __slots__ = ("indis", "ust", "govde")
+
+    def __init__(self, indis: str, ust: SDugum, govde: SDugum) -> None:
+        self.indis, self.ust, self.govde = str(indis), ust, govde
+
+
+class SEleman(SDugum):
+    __slots__ = ("tensor", "indisler")
+
+    def __init__(self, tensor: str, indisler: Sequence[SDugum]) -> None:
+        self.tensor = str(tensor)
+        self.indisler = tuple(_sd(i) for i in indisler)
+
+
+class SKronecker(SDugum):
+    __slots__ = ("sol", "sag")
+
+    def __init__(self, sol: Sequence[SDugum], sag: Sequence[SDugum]) -> None:
+        self.sol = tuple(_sd(i) for i in sol)
+        self.sag = tuple(_sd(i) for i in sag)
+
+
+def _sd(x) -> SDugum:
+    if isinstance(x, SDugum):
+        return x
+    if isinstance(x, (int, float, np.integer, np.floating)):
+        return SSabit(x.item() if isinstance(x, np.generic) else x)
+    raise TypeError("sembolik düğüme çevrilemeyen değer: %r" % (x,))
+
+
+def s_topla(*args) -> SDugum:
+    duz: List[SDugum] = []
+    sabit = 0
+    for a in args:
+        a = _sd(a)
+        alt = a.args if isinstance(a, SIslem) and a.op == "+" else (a,)
+        for t in alt:
+            if isinstance(t, SSabit):
+                sabit = sabit + t.deger
+            else:
+                duz.append(t)
+    if sabit != 0 or not duz:
+        duz.append(SSabit(sabit))
+    return duz[0] if len(duz) == 1 else SIslem("+", tuple(duz))
+
+
+def s_carp(*args) -> SDugum:
+    duz: List[SDugum] = []
+    sabit = 1
+    for a in args:
+        a = _sd(a)
+        alt = a.args if isinstance(a, SIslem) and a.op == "*" else (a,)
+        for t in alt:
+            if isinstance(t, SSabit):
+                sabit = sabit * t.deger
+            else:
+                duz.append(t)
+    if sabit == 0:
+        return SSabit(0)
+    if not duz:
+        return SSabit(sabit)
+    if sabit != 1:
+        duz.insert(0, SSabit(sabit))
+    return duz[0] if len(duz) == 1 else SIslem("*", tuple(duz))
+
+
+def s_us(a, b) -> SDugum:
+    a, b = _sd(a), _sd(b)
+    if isinstance(b, SSabit):
+        if b.deger == 0:
+            return SSabit(1)
+        if b.deger == 1:
+            return a
+        if isinstance(a, SSabit) and (a.deger != 0 or b.deger > 0):
+            return SSabit(a.deger ** b.deger)
+    return SIslem("pow", (a, b))
+
+
+_S_BIRLI = {"cos": math.cos, "sin": math.sin, "exp": math.exp, "log": math.log}
+
+_S_BIRLI_NP = {"cos": np.cos, "sin": np.sin, "exp": np.exp, "log": np.log}
+
+
+def s_islem1(op: str, a) -> SDugum:
+    a = _sd(a)
+    if op not in _S_BIRLI:
+        raise ValueError("bilinmeyen birli işlem: %r" % (op,))
+    if isinstance(a, SSabit) and (op != "log" or a.deger > 0):
+        return SSabit(_S_BIRLI[op](a.deger))
+    return SIslem(op, (a,))
+
+
+def s_yaz(d: SDugum) -> str:
+    if isinstance(d, SSabit):
+        return repr(d.deger)
+    if isinstance(d, SSimge):
+        return d.ad
+    if isinstance(d, SIslem):
+        if d.op == "+":
+            return "(" + " + ".join(s_yaz(a) for a in d.args) + ")"
+        if d.op == "*":
+            return "(" + " * ".join(s_yaz(a) for a in d.args) + ")"
+        if d.op == "pow":
+            return "(%s ^ %s)" % (s_yaz(d.args[0]), s_yaz(d.args[1]))
+        return "%s(%s)" % (d.op, s_yaz(d.args[0]))
+    if isinstance(d, SToplam):
+        return "Σ_{%s<%s} %s" % (d.indis, s_yaz(d.ust), s_yaz(d.govde))
+    if isinstance(d, SEleman):
+        return "%s[%s]" % (d.tensor, ", ".join(s_yaz(i) for i in d.indisler))
+    if isinstance(d, SKronecker):
+        return "δ(%s ; %s)" % (", ".join(s_yaz(i) for i in d.sol),
+                              ", ".join(s_yaz(i) for i in d.sag))
+    return object.__repr__(d)
+
+
+def _tamsayi(v) -> int:
+    a = np.asarray(v)
+    if a.ndim != 0:
+        raise DenetimHatasi("indis ya da boyut skaler olmalı: şekil %s" % (a.shape,))
+    f = float(a)
+    if f != int(f):
+        raise DenetimHatasi("indis ya da boyut tamsayı olmalı: %r" % (f,))
+    return int(f)
+
+
+class SimgeliTensor:
+    __slots__ = ("sekil", "elemanlar", "indis_adlari", "govde", "rutbe")
+
+    def __init__(self, sekil: Tuple[SDugum, ...], elemanlar: Optional[np.ndarray],
+                 indis_adlari: Tuple[str, ...], govde: Optional[SDugum],
+                 rutbe: int) -> None:
+        self.sekil = tuple(sekil)
+        self.elemanlar = elemanlar
+        self.indis_adlari = tuple(indis_adlari)
+        self.govde = govde
+        self.rutbe = int(rutbe)
+
+    @staticmethod
+    def acik(elemanlar, rutbe: int = 1) -> "SimgeliTensor":
+        arr = np.array(elemanlar, dtype=object)
+        ob = np.empty(arr.shape, dtype=object)
+        for i, x in enumerate(arr.flat):
+            ob.flat[i] = _sd(x)
+        return SimgeliTensor(tuple(SSabit(n) for n in arr.shape), ob, (), None, rutbe)
+
+    @staticmethod
+    def jenerik(sekil: Sequence, indis_adlari: Sequence[str], govde,
+                rutbe: int = 1) -> "SimgeliTensor":
+        return SimgeliTensor(tuple(_sd(e) for e in sekil), None,
+                             tuple(indis_adlari), _sd(govde), rutbe)
+
+
+class SDepo:
+    __slots__ = ("kayit",)
+
+    def __init__(self) -> None:
+        self.kayit: Dict[str, Tuple[Any, int]] = {}
+
+    def bagla(self, ad: str, deger, rutbe: int = 0) -> "SDepo":
+        if isinstance(deger, SimgeliTensor):
+            self.kayit[str(ad)] = (deger, deger.rutbe)
+        else:
+            self.kayit[str(ad)] = (np.asarray(deger), int(rutbe))
+        return self
+
+
+class SDegerlendirici:
+    __slots__ = ("depo", "baglar", "_onb", "_yolda")
+
+    def __init__(self, depo: SDepo, baglar: Optional[Dict[str, int]] = None) -> None:
+        self.depo = depo
+        self.baglar = dict(baglar or {})
+        self._onb: Dict[str, Any] = {}
+        self._yolda: Set[str] = set()
+
+    def referans(self, ad: str, ust: Optional[int]):
+        if ad not in self.depo.kayit:
+            raise CekirdekHatasi("bağlanmamış simge: %s" % ad)
+        deger, rutbe = self.depo.kayit[ad]
+        if ust is not None and rutbe >= ust:
+            raise DenetimHatasi(
+                "rütbe %d tensör, rütbesi %d olan '%s' simgesine referans veremez"
+                % (ust, rutbe, ad))
+        if ad in self._onb:
+            return self._onb[ad]
+        if ad in self._yolda:
+            raise CekirdekHatasi("döngüsel referans: %s" % ad)
+        self._yolda.add(ad)
+        sonuc = (self.tensor(deger, dict(self.baglar))
+                 if isinstance(deger, SimgeliTensor) else deger)
+        self._yolda.discard(ad)
+        self._onb[ad] = sonuc
+        return sonuc
+
+    def ev(self, d: SDugum, env: Dict[str, Any], ust: Optional[int]):
+        if isinstance(d, SSabit):
+            return d.deger
+        if isinstance(d, SSimge):
+            if d.ad in env:
+                return env[d.ad]
+            return self.referans(d.ad, ust)
+        if isinstance(d, SIslem):
+            v = [self.ev(a, env, ust) for a in d.args]
+            if d.op == "+":
+                return functools.reduce(operator.add, v)
+            if d.op == "*":
+                return functools.reduce(operator.mul, v)
+            if d.op == "pow":
+                a, b = v
+                if (isinstance(a, (int, np.integer)) and isinstance(b, (int, np.integer))
+                        and b >= 0):
+                    return int(a) ** int(b)
+                return np.power(np.asarray(a), np.asarray(b))
+            return _S_BIRLI_NP[d.op](np.asarray(v[0]))
+        if isinstance(d, SToplam):
+            n = _tamsayi(self.ev(d.ust, env, ust))
+            e2 = dict(env)
+            toplam = 0
+            for i in range(n):
+                e2[d.indis] = i
+                toplam = toplam + self.ev(d.govde, e2, ust)
+            return toplam
+        if isinstance(d, SEleman):
+            T = np.asarray(self.referans(d.tensor, ust))
+            ix = tuple(_tamsayi(self.ev(i, env, ust)) for i in d.indisler)
+            return T[ix]
+        if isinstance(d, SKronecker):
+            a = [_tamsayi(self.ev(x, env, ust)) for x in d.sol]
+            b = [_tamsayi(self.ev(x, env, ust)) for x in d.sag]
+            return 1 if a == b else 0
+        raise CekirdekHatasi("değerlendirilemeyen düğüm: %r" % (d,))
+
+    def tensor(self, st: SimgeliTensor, env: Dict[str, Any]) -> np.ndarray:
+        sekil = tuple(_tamsayi(self.ev(e, env, st.rutbe)) for e in st.sekil)
+        hucre = []
+        for ix in itertools.product(*[range(n) for n in sekil]):
+            if st.elemanlar is not None:
+                hucre.append(self.ev(st.elemanlar[ix], env, st.rutbe))
+            else:
+                e2 = dict(env)
+                e2.update(zip(st.indis_adlari, ix))
+                hucre.append(self.ev(st.govde, e2, st.rutbe))
+        if not hucre:
+            return np.zeros(sekil)
+        bs = np.broadcast_arrays(*[np.asarray(h) for h in hucre])
+        return np.stack(bs).reshape(sekil + bs[0].shape)
+
+
+def simgeli_degerlendir(st: SimgeliTensor, depo: SDepo,
+                        baglar: Optional[Dict[str, int]] = None) -> np.ndarray:
+    ev = SDegerlendirici(depo, baglar)
+    return ev.tensor(st, dict(ev.baglar))
+
+
+def ifade_degerlendir(d: SDugum, depo: SDepo,
+                      baglar: Optional[Dict[str, int]] = None,
+                      rutbe: Optional[int] = None):
+    ev = SDegerlendirici(depo, baglar)
+    return ev.ev(d, dict(ev.baglar), rutbe)
+
+
+def turev(d: SDugum, ad: str,
+          hedef: Optional[Sequence[SDugum]] = None) -> SDugum:
+    if isinstance(d, SSabit):
+        return SSabit(0)
+    if isinstance(d, SSimge):
+        return SSabit(1 if (hedef is None and d.ad == ad) else 0)
+    if isinstance(d, SEleman):
+        if hedef is not None and d.tensor == ad:
+            return SKronecker(d.indisler, tuple(_sd(h) for h in hedef))
+        return SSabit(0)
+    if isinstance(d, SKronecker):
+        return SSabit(0)
+    if isinstance(d, SToplam):
+        dg = turev(d.govde, ad, hedef)
+        return SSabit(0) if dg == SSabit(0) else SToplam(d.indis, d.ust, dg)
+    if isinstance(d, SIslem):
+        a = d.args
+        if d.op == "+":
+            return s_topla(*[turev(x, ad, hedef) for x in a])
+        if d.op == "*":
+            return s_topla(*[s_carp(*(a[:i] + (turev(a[i], ad, hedef),) + a[i + 1:]))
+                             for i in range(len(a))])
+        if d.op == "pow":
+            taban, us = a
+            if isinstance(us, SSabit):
+                return s_carp(us, s_us(taban, SSabit(us.deger - 1)),
+                              turev(taban, ad, hedef))
+            return s_carp(d, s_topla(
+                s_carp(turev(us, ad, hedef), s_islem1("log", taban)),
+                s_carp(us, turev(taban, ad, hedef), s_us(taban, -1))))
+        if d.op == "cos":
+            return s_carp(-1, s_islem1("sin", a[0]), turev(a[0], ad, hedef))
+        if d.op == "sin":
+            return s_carp(s_islem1("cos", a[0]), turev(a[0], ad, hedef))
+        if d.op == "exp":
+            return s_carp(d, turev(a[0], ad, hedef))
+        if d.op == "log":
+            return s_carp(turev(a[0], ad, hedef), s_us(a[0], -1))
+    raise CekirdekHatasi("türevi alınamayan düğüm: %r" % (d,))
+
+
+def turev_tensor(st: SimgeliTensor, ad: str,
+                 hedef: Optional[Sequence[SDugum]] = None) -> SimgeliTensor:
+    if st.elemanlar is not None:
+        ob = np.empty(st.elemanlar.shape, dtype=object)
+        for i, x in enumerate(st.elemanlar.flat):
+            ob.flat[i] = turev(x, ad, hedef)
+        return SimgeliTensor(st.sekil, ob, (), None, st.rutbe)
+    return SimgeliTensor(st.sekil, None, st.indis_adlari,
+                         turev(st.govde, ad, hedef), st.rutbe)
+
+
+def jacobian_tensoru(st: SimgeliTensor, ad: str,
+                     hedef_sekil: Sequence) -> SimgeliTensor:
+    if st.elemanlar is not None:
+        raise DenetimHatasi("Jacobian tensörü yalnız jenerik tensörden kurulur")
+    adlar = tuple("_j%d" % k for k in range(len(hedef_sekil)))
+    govde = turev(st.govde, ad, tuple(SSimge(a) for a in adlar))
+    return SimgeliTensor(st.sekil + tuple(_sd(e) for e in hedef_sekil), None,
+                         st.indis_adlari + adlar, govde, st.rutbe)
+
+
+def kaide_birlesme_kusuru(C: str = "C", boyut: str = "d",
+                          rutbe: int = 1) -> SimgeliTensor:
+    d = SSimge(boyut)
+    a, b, c, k, e = (SSimge(x) for x in ("a", "b", "c", "k", "e"))
+    sol = SToplam("e", d, s_carp(SEleman(C, (k, e, c)), SEleman(C, (e, a, b))))
+    sag = SToplam("e", d, s_carp(SEleman(C, (k, a, e)), SEleman(C, (e, b, c))))
+    return SimgeliTensor.jenerik((d, d, d, d), ("a", "b", "c", "k"),
+                                 s_topla(sol, s_carp(-1, sag)), rutbe)
+
+
+def kaide_degisme_kusuru(C: str = "C", boyut: str = "d",
+                         rutbe: int = 1) -> SimgeliTensor:
+    d = SSimge(boyut)
+    a, b, k = SSimge("a"), SSimge("b"), SSimge("k")
+    return SimgeliTensor.jenerik(
+        (d, d, d), ("a", "b", "k"),
+        s_topla(SEleman(C, (k, a, b)), s_carp(-1, SEleman(C, (k, b, a)))), rutbe)
+
+
+def kaide_birim_kusuru(C: str = "C", E: str = "E", boyut: str = "d",
+                       rutbe: int = 1) -> SimgeliTensor:
+    d = SSimge(boyut)
+    a, b, k = SSimge("a"), SSimge("b"), SSimge("k")
+    carpim_ae = SToplam("b", d, s_carp(SEleman(C, (k, a, b)), SEleman(E, (b,))))
+    return SimgeliTensor.jenerik(
+        (d, d), ("a", "k"),
+        s_topla(carpim_ae, s_carp(-1, SKronecker((k,), (a,)))), rutbe)
 
 
 SABIT: Tuple[int, ...] = tuple(range(10))
