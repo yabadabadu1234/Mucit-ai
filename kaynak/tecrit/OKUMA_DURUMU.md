@@ -10,8 +10,8 @@ Kaynak: arXiv LaTeX e-print (gerçek metin; OCR/PDF yok). Tercüme: Claude, Tür
 | 2605.09985 | Prospective Compression in Human Abstraction Learning | 1445 | tamam | tamam (`tercume.md`) | LLM istem/kod metinleri çevrilmedi (özetlendi) |
 | 2605.15733 | Structure Abstraction … Hippocampal-Entorhinal World Model | 877 | tamam | tamam (`tercume.md`) | şekil resimleri yok, kaynakça çevrilmedi |
 | 2602.00929 | Learning Abstractions for Hierarchical Planning (TheoryCoder-2) | 926 | tamam | tamam (`tercume.md`) | LLM istem/kod ham metni çevrilmedi (özetlendi) |
-| 2607.09128 | Elusive but Coverable (complete abstract interpretations) | 1115 | okunmadı | yok | sırada |
+| 2607.09128 | Elusive but Coverable (complete abstract interpretations) | 1115 | tamam | tamam (`tercume.md`) | kaynakça çevrilmedi; kaynak yazım kusurları not edildi |
 | 2602.16612 | Causal and Compositional Abstraction | 2587 | okunmadı | yok | sırada |
 | 2609.04086 | A Non-Formulable Theorem | 2823 | okunmadı | yok | sırada |
 
-Toplam: 9 makale; okunup çevrilen 6; okunmayan 3.
+Toplam: 9 makale; okunup çevrilen 7; okunmayan 2.
