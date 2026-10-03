@@ -12,6 +12,6 @@ Kaynak: arXiv LaTeX e-print (gerçek metin; OCR/PDF yok). Tercüme: Claude, Tür
 | 2602.00929 | Learning Abstractions for Hierarchical Planning (TheoryCoder-2) | 926 | tamam | tamam (`tercume.md`) | LLM istem/kod ham metni çevrilmedi (özetlendi) |
 | 2607.09128 | Elusive but Coverable (complete abstract interpretations) | 1115 | tamam | tamam (`tercume.md`) | kaynakça çevrilmedi; kaynak yazım kusurları not edildi |
 | 2602.16612 | Causal and Compositional Abstraction | 2587 | tamam | tamam (`tercume_01..07.md`) | şekiller yok (işaretli), kaynakça çevrilmedi, `\st{}` alt bölüm çevrilmedi |
-| 2609.04086 | A Non-Formulable Theorem | 2823 | okunmadı | yok | sırada |
+| 2609.04086 | A Non-Formulable Theorem | 2823 | tamam | tamam (`tercume_01..08.md`) | kaynakça çevrilmedi; makalenin atıf yaptığı önceki Buono çalışmaları okunmadı |
 
-Toplam: 9 makale; okunup çevrilen 8; okunmayan 1.
+Toplam: 9 makale; okunup çevrilen 9; okunmayan 0.
