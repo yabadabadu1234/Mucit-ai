@@ -1,0 +1,224 @@
+
+\begin{figure*}[htbp]
+    \centering
+    \vspace{-0.2 cm}
+    \includegraphics[width=1\textwidth]{Figures/Results/analysis-flat.png}
+    \caption{\textbf{Analysis of HPC and MEC embeddings.} (A) UMAP visualization of HPC and MEC embeddings grouped by periodicity class. Each object completes two full rotations. (B) UMAP visualization of HPC and MEC embeddings grouped by object category. (C) Classification accuracy of object categories using HPC and MEC embeddings. (D) Alignment between inference and generation embeddings for an individual object.}
+    \label{fig:results:rotation}
+    \vspace{-0.2 cm}
+\end{figure*}
+
+\section{Analysis of Structure Abstraction}
+\label{sec:analysis}
+As detailed in Section~\ref{sec:results}, our model achieves strong one-step and autoregressive predictions, alongside robust structural generalization across contexts in both complex human-object interactions (SSv2) and diverse OOD datasets. 
+To uncover the representations driving these capabilities and validate the model's capacity to extract abstract structures from sequential data, we evaluate our SSv2-pretrained model on an OOD 3D object dataset rendered from OmniObject3D, featuring controlled transitions in rotation, translation, and scaling. We specifically analyze how hierarchical processing between HPC and MEC embeddings facilitates the emergence of shared structural representations.
+Finally, we extend this analysis to demonstrate that such structural abstraction readily generalizes to robotic simulated environments.
+
+\subsection{Qualitative Analysis}
+By visualizing both HPC and MEC latent spaces of 3D rotating objects, we demonstrate the model's ability to dissociate specific object content from underlying abstract dynamics.
+\vspace{-0.2cm}
+\paragraph{Periodic shared structures.}
+\label{sec:analysis:periodic-reuse}
+We first identify objects with periodic rotation patterns and categorize them into three periodicity classes based on visual similarity: period 1 ($360^{\circ}$), $\frac{1}{2}$ ($180^{\circ}$), and $\frac{1}{4}$ ($90^{\circ}$).
+Through dimensional reduction analysis using UMAP~\citep{mcinnes2018umap}, we observe that these periodicity classes exhibit distinctive low-dimensional trajectories in the embedding space (Fig.~\ref{fig:results:rotation}(A)). The object with period 1 forms a complete circular trajectory, while the object with period $\frac{1}{2}$ forms two overlapping circular trajectories. The object with period $\frac{1}{4}$, with three white sides and one brown side, reuses the latent transition structure for consecutive similar visual transitions, forming two overlapping small circular trajectories, with the remaining distinct transitions forming a larger half-period circular trajectory.
+Both HPC and MEC embeddings exhibit similar periodicity patterns, but MEC representations form more clearly defined shared rotation features. To verify this, we perform multi-class analyses as follows.
+\vspace{-0.2cm}
+\paragraph{In-class shared structures.}
+\label{sec:analysis:in-class-reuse}
+To analyze in-class shared structures, we examine three object categories: pumpkins, red apples, and yellow apples, each containing multiple instances. We process rotation sequences of each object using our model to extract HPC and MEC embeddings, and visualize these representations with UMAP. The results (Fig.~\ref{fig:results:rotation}(B)) demonstrate that while both HPC and MEC exhibit inter-category separation, $\boldsymbol{p}^{\text{inf}}$ additionally shows clear intra-category differentiation. Specifically, for different in-class objects, $\boldsymbol{p}^{\text{inf}}$ forms separated circular trajectories, reflecting object-wise features. In contrast, $\boldsymbol{g}^{\text{inf}}$ and $\boldsymbol{g}^{\text{gen}}$ trajectories substantially overlap, capturing the in-class shared rotational features. These shared structures propagate through the generation flow, shape the manifold of $\boldsymbol{p}^{\text{gen}}$, making rotational features more salient in the high-dimensional space. 
+Furthermore, while the global manifolds of $\boldsymbol{p}^{\text{inf}}$ and $\boldsymbol{p}^{\text{gen}}$ naturally exhibit differences, UMAP projections of individual objects' inference and generation embeddings maintain high consistency in both HPC and MEC (Fig.~\ref{fig:results:rotation}(D)).
+
+\subsection{Quantitative Analysis}
+We also conduct some quantitative experiments to demonstrate that HPC binds more specific content information, while MEC encodes more generalizable abstract structures. 
+
+\vspace{-0.2cm}
+\paragraph{Quantification of in-class structural sharing.} 
+To quantify that the MEC abstracts in-class shared structures while the HPC holds more identity features (stated in Section ~\ref{sec:analysis:in-class-reuse}), we train separate lightweight decoders to classify object categories from HPC and MEC embeddings.  Test objects are excluded during training, so higher test accuracy indicates greater structural consistency within object classes. Our results show that after training convergence, the test accuracy on $\boldsymbol{p}^{\text{inf}}$ is consistently lower than $\boldsymbol{g}^{\text{inf}}$ and $\boldsymbol{g}^{\text{gen}}$, indicating that HPC embeddings encode more content-specific details. In contrast, MEC embeddings better capture in-class shared structures, enhancing generalization to novel instances (Fig.~\ref{fig:results:rotation}(C)).
+
+\vspace{-0.2cm}
+\paragraph{Transition decoding experiment.} 
+\label{sec:analysis:quant-transition-decode}
+We use 3D-object transition sequences containing different transformations of rotation, translation, and scaling. Each sequence features an object with randomized category, initial position, orientation, and size. We feed these sequences to our model for zero-shot generalization and train transition decoders of a uniform hidden size on the resulting latents to predict the transition type. This allows us to measure the abstraction and transition semantics of the latent representations.
+From the results shown in Table~\ref{tab:embedding_comparison}, we can find that the latent transition ($z$) achieves the highest accuracy in decoding transition types, followed by state transitions in the MEC space ($\Delta g^{inf}$). While it is more difficult to abstract transition information from the HPC space ($\Delta p^{inf}$), because it contains more specific details. These results demonstrate that the MEC extracts more content-free structures that are highly effective and semantically meaningful.
+
+\begin{table}[htbp]
+\centering
+\caption{Decoding accuracy across different embeddings.}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Embedding} & $\boldsymbol{p}^{\text{inf}}$ & $\boldsymbol{g}^{\text{inf}}$ & $\Delta \boldsymbol{p}^{\text{inf}}$ & $\Delta \boldsymbol{g}^{\text{inf}}$ & $\boldsymbol{z}$ \\
+\midrule
+Accuracy $\uparrow$ & $0.3330 \pm 0.0163$ & $0.3486 \pm 0.0156$ & $0.8386 \pm 0.0263$ & $0.8868 \pm 0.0212$ & $\mathbf{0.9064 \pm 0.0145}$ \\
+\bottomrule
+\end{tabular}}
+\label{tab:embedding_comparison}
+\vspace{-0.4cm}
+\end{table}
+
+\begin{figure*}[htbp]
+    \centering
+    \vspace{-0.2 cm}
+    \includegraphics[width=1\textwidth]{Figures/Results/prediction.png}
+    \caption{\textbf{Evaluation on one-step and autoregressive prediction.} (A) One-step prediction evaluated on the SSv2 test dataset. (B) Autoregressive prediction with and without the visual feedback on the SSv2 test dataset. (C) One-step prediction on an out-of-distribution dataset, COIL-100. }
+    \label{fig:results:next-step}
+    \vspace{-0.4 cm}
+\end{figure*}
+
+\vspace{-0.2cm}
+\paragraph{Generalization to robotic dynamics.} To further validate our findings in complex environments, we analyze sequences of the same action (e.g., "opening the upper cabinet" in Franka Kitchen) performed under varying contexts (e.g., different object positions or microwave states). We then compute the cosine similarity of the state transitions within the HPC space ($\Delta \boldsymbol{p}$), the MEC space ($\Delta \boldsymbol{g}$), and the latent transition space ($\boldsymbol{z}$). The results are shown in Table~\ref{tab:cosine_similarity}. We can see that latent transition trajectories exhibit the highest similarity, and the MEC space exhibits higher structural alignment than the HPC space. These results suggest that the model can effectively extract content-independent structures from robotic simulated environments.
+
+\begin{table}[htbp]
+\centering
+\caption{Sequence similarity of latent temporal differences.}
+\label{tab:cosine_similarity}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lccccc}
+\toprule
+Transitions & $\boldsymbol{z}$ & $\Delta \boldsymbol{g}^{\text{inf}}$ & $\Delta \boldsymbol{g}^{\text{gen}}$ & $\Delta \boldsymbol{p}^{\text{inf}}$ & $\Delta \boldsymbol{p}^{\text{gen}}$ \\
+\midrule
+Cos Sim $\uparrow$ & $\mathbf{0.235 \pm 0.021}$ & $0.146 \pm 0.063$ & $0.152 \pm 0.057$ & $0.024 \pm 0.061$ & $0.114 \pm 0.056$ \\
+\bottomrule
+\end{tabular}}
+\vspace{-0.4cm}
+\end{table}
+
+\section{Episodic Synthesis and Structural Generalization}
+\label{sec:results}
+Having established the model's capacity for structural abstraction, we demonstrate that these latent structures serve a dual purpose: facilitating the synthesis of episodic memories and enabling robust structural generalization. Specifically, our framework leverages these abstract structures to transfer across novel entities. By decoupling the underlying transitions from specific sensory content, the model can generate analogous movements for entirely different objects or scenes, effectively demonstrating zero-shot transfer.
+
+\subsection{One-step and Autoregressive Predictions}
+\label{sec:results:autoregressive}
+For one-step prediction, the model successfully extracts latent transition from the input video and generates frames that match the dynamics of the ground-truth sequence (Fig.~\ref{fig:results:next-step}(A)). 
+For autoregressive prediction, the model generates the entire sequence by applying a sequence of latent transitions to the initial frame (Fig.~\ref{fig:results:next-step}(B)). We find that the model maintains good consistency even when generating longer sequences, although the generation quality gradually decreases over time. This corresponds to the accumulating path integration errors in MEC.
+Similar to biological systems, the model can correct compound errors by receiving visual feedback from the sensory input. We test the model's performance after introducing visual feedback at the fourth rollout step and observe improved generation quality, with more accurate details in the subsequent frames (Fig.~\ref{fig:results:next-step}(B)). We conduct an additional ablation study to examine the role of latent transitions in governing transition dynamics, discussed in Appendix~\ref{appendix:ablation}.
+\vspace{-0.3cm}
+\paragraph{Generalization to out-of-distribution datasets.}
+\label{sec:results:generalization}
+To evaluate whether the model could effectively extract and utilize latent transitions to generate OOD scenes, we assess the model on unseen 3D object transition datasets. Our results show that the model successfully identifies fundamental rotational transformations as latent transitions and generates sequences that closely approximate the ground truth (Fig.~\ref{fig:results:next-step}(C)).
+We further evaluate the model on simulated benchmarks with significant distributional shifts from human videos, potentially limiting generalization to virtual domains. Full results are provided in Appendix~\ref{appendix:additional_results}.  Our findings show the model performs more robustly in the more naturalistic environments like Franka Kitchen, but less effectively in artificial environments like Push-T.
+
+
+\begin{figure*}[htbp]
+    \vspace{-0.2cm}
+    \centering
+    \includegraphics[width=1.0\textwidth]{Figures/Results/action-transfer.png}
+    \caption{\textbf{Structural generalization.} (A) One-step latent transition transfer across different scenes on SSv2. (B)(C) One-step \& autoregressive  prediction by transferring the sequential latent transitions. (D)(E) Autoregressive reuse of latent transitions on SSv2. (F)(G) Autoregressive reuse of latent transitions on rotation and scaling dynamics across object categories.}
+    \label{fig:results:transfer}
+    \vspace{-0.4 cm}
+\end{figure*}
+
+\subsection{Structural Generalization Across Contexts}
+\label{sec:results:transfer}
+ To validate our model's ability to reuse latent transitions, we conduct evaluations using both naturalistic human activity data and simulated datasets.
+
+The results of one-step latent transition reuse are shown in Fig.~\ref{fig:results:transfer}(A). We extract the latent transition from the purple-highlighted image pairs, which capture hand movements such as disappearing or grabbing objects. We then apply the same latent transition to different scenes and generate subsequent frames. The generated frames successfully mimic the dynamics of the original image pairs.
+
+To further investigate the latent transition transferability, we conduct experiments applying latent transition sequences extracted from one video to frames containing different contexts. Using apple rotation as a case study, we extract latent transitions from a sequence featuring a yellow apple and apply them to generate the rotation of a ripe red apple. Our results reveal that while the texture features in the generated sequence correspond to the ripe red apple, the rotational dynamics align with the yellow apple from which the latent transitions are derived (Fig.~\ref{fig:results:transfer}(B)).
+When implementing autoregressive prediction using only the extracted latent transitions and the initial frame, we observe that the generated sequence maintains alignment with the rotational dynamics of the source sequence. However, the texture features progressively deviate, becoming more luminous than the ground truth sequence (Fig.~\ref{fig:results:transfer}(C)). 
+We also present two examples to illustrate sequential latent transition reuse in human activity scenarios in Fig.~\ref{fig:results:transfer}(D,E). The resulting image sequence captures the dynamics from the source scenario while preserving the content information of the new scene.
+Fig.~\ref{fig:results:transfer}(F, G) demonstrates two additional cases: rotation and scaling dynamics transfer across object categories.
+
+\vspace{-0.2cm}
+\subsection{Baseline Comparison}
+\label{sec:results:baseline}
+We compare our model against state-of-the-art latent action models, LAPA~\citep{yeLatentActionPretraining2024}, Moto~\citep{chenMotoLatentMotion2024}, and AdaWorld LAM~\citep{gaoAdaWorldLearningAdaptable2025b}, which align to extract and reuse latent transitions from observation-only videos without ground-truth action labels.
+We use two standard metrics: Structural Similarity Index (SSIM)~\citep{wang2004image} for local structural consistency and Learned Perceptual Image Patch Similarity (LPIPS)~\citep{zhang2018unreasonable} for perceptual similarity. As shown in Table~\ref{tab:metrics_comparison}, our model achieves lower LPIPS scores in both one-step and autoregressive prediction, indicating closer visual similarity with ground-truth dynamics and more effective extraction of latent transitions. 
+On the Franka Kitchen dataset, both Moto and AdaWorld LAM struggle to predict meaningful dynamics, frequently degenerating into static predictions that are almost identical to the preceding frames. Conversely, our model maintains robust performance across both in-domain and OOD datasets.
+We attribute this to our HPC-MEC inspired architecture: unlike baselines that learn latent transitions in an entangled unified space, our hierarchical model learns them within a more structured space, yielding abstract latent transitions that significantly mitigate autoregressive compounding errors and enhance OOD resilience.
+\vspace{-0.2cm}
+
+
+\begin{table}[htbp]
+\centering
+\caption{Quantitative comparison of SSIM and LPIPS across models and downstream datasets. Each model performs an 8-step sequence generation. * indicates out-of-distribution datasets.}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{cccccc}
+\toprule
+\multirow{2}{*}{\textbf{Dataset}} & \multirow{2}{*}{\textbf{Model}} & \multicolumn{2}{c}{\textbf{SSIM} $\uparrow$} & \multicolumn{2}{c}{\textbf{LPIPS} $\downarrow$} \\
+\cmidrule(lr){3-4} \cmidrule(lr){5-6}
+& & one-step & autoregression & one-step & autoregression \\
+\midrule
+\multirow{4}{*}{SSv2} 
+  & LAPA & $0.744_{\pm 0.022}$ & $0.659_{\pm 0.027}$ & $0.357_{\pm 0.017}$ & $0.448_{\pm 0.017}$ \\
+  & Moto & $0.668_{\pm 0.027}$ & $0.566_{\pm 0.029}$ & $0.301_{\pm 0.022}$ & $0.480_{\pm 0.012}$ \\
+  & AdaWorld(LAM) & $\mathbf{0.763_{\pm 0.023}}$ & $0.654_{\pm 0.018}$ & $0.295_{\pm 0.026}$ & $0.448_{\pm 0.022}$ \\
+  & VQ-VAE ablation & $0.717_{\pm 0.023}$ & $0.677_{\pm 0.031}$ & $0.313_{\pm 0.013}$ & $0.378_{\pm 0.017}$ \\
+  & Our model & $0.752_{\pm 0.019}$ & $\mathbf{0.687_{\pm 0.018}}$ & $\mathbf{0.274_{\pm 0.026}}$ & $\mathbf{0.356_{\pm 0.015}}$ \\
+\midrule
+\multirow{4}{*}{COIL-100*} 
+  & LAPA & $0.589_{\pm 0.038}$ & $0.682_{\pm 0.020}$ & $0.301_{\pm 0.021}$ & $0.385_{\pm 0.016}$ \\
+  & Moto & $0.700_{\pm 0.031}$ & $0.642_{\pm 0.043}$ & $0.352_{\pm 0.041}$ & $0.473_{\pm 0.031}$ \\
+  & AdaWorld(LAM) & $0.778_{\pm 0.039}$ & $0.715_{\pm 0.042}$ & $0.312_{\pm 0.048}$ & $0.415_{\pm 0.060}$ \\
+  & Our model & $\mathbf{0.837_{\pm 0.021}}$ & $\mathbf{0.814_{\pm 0.032}}$ & $\mathbf{0.226_{\pm 0.034}}$ & $\mathbf{0.270_{\pm 0.031}}$ \\
+\midrule
+\multirow{4}{*}{Franka Kitchen*} 
+  & LAPA & $0.690_{\pm 0.002}$ & $0.532_{\pm 0.003}$ & $0.389_{\pm 0.001}$ & $0.529_{\pm 0.001}$ \\
+  & Moto(failed) & - &- & - & - \\
+  & AdaWorld(LAM)(failed) & - & - & - & - \\
+  & VQ-VAE ablation & $0.576_{\pm 0.037}$ & $0.523_{\pm 0.038}$ & $0.385_{\pm 0.018}$ & $0.445_{\pm 0.022}$ \\
+  & Our model & $\mathbf{0.705_{\pm 0.004}}$ & $\mathbf{0.551_{\pm 0.005}}$ & $\mathbf{0.253_{\pm 0.003}}$ & $\mathbf{0.426_{\pm 0.003}}$ \\
+\bottomrule
+\end{tabular}}
+\label{tab:metrics_comparison}
+\vspace{-0.4cm}
+\end{table}
+
+\begin{table*}[htbp]
+\centering
+\vspace{-0.1 cm}
+\caption{Quantitative comparison of ablation models on the OOD structure reuse task.}
+\scalebox{0.85}{
+\begin{tabular}{ccccccc}
+\toprule
+\multirow{2}{*}{\textbf{Model}} & \multicolumn{2}{c}{$\mathbf{R}$ $\uparrow$} & \multicolumn{2}{c}{\textbf{SSIM} $\uparrow$} & \multicolumn{2}{c}{\textbf{LPIPS} $\downarrow$} \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7}
+& one-step & autoregression & one-step & autoregression & one-step & autoregression \\
+\midrule
+  Our model w/ unified latent space & $2.054_{\pm 0.521}$ & $1.542_{\pm 0.246}$ & $0.901_{\pm 0.007}$ & $0.886_{\pm 0.008}$ & $0.126_{\pm 0.008}$ & $0.179_{\pm 0.008}$ \\
+  Our model w/o CANN & $2.403_{\pm 0.553}$ & $1.859_{\pm 0.396}$ & $0.894_{\pm 0.022}$ & $0.888_{\pm 0.009}$ & $0.149_{\pm 0.009}$ & $0.177_{\pm 0.010}$ \\
+  VQ-VAE ablation & $2.035_{\pm 0.229}$ & $1.796_{\pm 0.173}$ & $0.892_{\pm 0.009}$ & $0.883_{\pm 0.009}$ & $0.158_{\pm 0.009}$ & $0.177_{\pm 0.009}$ \\
+  Our model & $\mathbf{3.201_{\pm 0.435}}$ & $\mathbf{2.482_{\pm 0.460}}$ & $\mathbf{0.902_{\pm 0.010}}$ & $\mathbf{0.891_{\pm 0.009}}$ & $\mathbf{0.120_{\pm 0.008}}$ & $\mathbf{0.156_{\pm 0.008}}$ \\
+\bottomrule
+\end{tabular}}
+\label{tab:ablation}
+\vspace{-0.2 cm}
+\end{table*}
+
+\begin{table*}[htbp]
+\centering
+\caption{Quantitative comparison of action decoding accuracy using latent transitions from different models.}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Model} & \textbf{AdaWorld(LAM)} & \textbf{LAPA} & \textbf{Moto} & \textbf{VQ-VAE ablation} & \textbf{Our model w/o CANN} & \textbf{Our model} \\
+\midrule
+Accuracy $\uparrow$  & $0.6395 \pm 0.0192$ & $0.8259 \pm 0.0155$ & $0.7190 \pm 0.0120$ & $0.8523 \pm 0.0247$ & $0.8768 \pm 0.0117$ & $\mathbf{0.9064 \pm 0.0145}$\\
+\bottomrule
+\end{tabular}}
+\label{tab:action_decoding}
+\vspace{-0.5 cm}
+\end{table*}
+
+\vspace{-0.08cm}
+\subsection{Ablation Study}
+\label{sec:results:ablation}
+To isolate the components driving our performance, we evaluate ablated variants on the OOD structure reuse task (Table~\ref{tab:ablation}). Successful reuse requires generated frames to align with the target sequence rather than the source sequence used to extract the latent transition. We quantify this by defining a similarity ratio using features from a pretrained DINOv2 encoder $E$. This ratio $R = \mathbb{E} \left[ \frac{\text{cos}(E(\mathbf{o}_t^{\text{gen}}), E(\mathbf{o}_t^{\text{content}}))}{\text{cos}(E(\mathbf{o}_t^{\text{gen}}), E(\mathbf{o}_t^{\text{action}}))} \right]$ measures whether the generated object is closer to the target content or the source content. A higher R indicates stronger alignment with the content sequence and thus better latent transition reuse. 
+We demonstrate the effectiveness of each core component using three different ablated variants:
+
+\vspace{-0.2cm}
+\paragraph{Hierarchical HPC–MEC separation.}
+We construct a unified space variant by removing the MEC layer to test the necessity of our disentangled architecture (denoted as "Our model w/ unified latent space"). By coupling the inverse model and CANN module directly to the single, high-dimensional HPC layer, the inverse model infers $\boldsymbol{z_t}$ from consecutive HPC embeddings ($\boldsymbol{p}_{t}^{\text{inf}}$, $\boldsymbol{p}_{t+1}^{\text{inf}}$). Consequently, the CANN's path integration operates on these content-entangled states. This variant exhibits significant "texture leakage" from the source video, indicating that hierarchical separation is essential to isolate pure dynamics and prevent latent transitions from entangling with object-specific content.
+
+\vspace{-0.2cm}
+\paragraph{CANN-based MEC dynamics.}
+We ablate the MEC's internal dynamics by replacing our CANN module with a standard MLP of equivalent capacity ("Our model w/o CANN"). This variant performs "state-to-state" prediction, directly computing the next state from the concatenated current state and latent transition: $\boldsymbol{g}_{t+1}^{\text{gen}} = \text{MLP} ([\boldsymbol{g}_{t}^{\text{gen}}, \boldsymbol{z_t}])$. In contrast, our CANN module predicts the relative transition $\Delta \boldsymbol{g}_{t}$ (Section~\ref{methods:inverse_model}). This transition-centric design is crucial: it relieves $\boldsymbol{z_t}$ from full state reconstruction, forcing it to encode purely content-independent dynamics. Consequently, the MLP modification fails completely in OOD transfer tasks, demonstrating the absolute necessity of the CANN structure for generalizing learned dynamics to novel scenes.
+
+\vspace{-0.2cm}
+\paragraph{Structure not from the pretrained encoder.}
+To confirm our abstract structures are driven by the HPC-MEC module rather than merely inherited from the visual encoder, we evaluate a "VQ-VAE ablation" lacking the hierarchical architecture entirely. This variant uses the identical pretrained VQ-VAE, an inverse model inferring $\boldsymbol{z_t}$ directly from consecutive embeddings ($\boldsymbol{s}_t^{\text{inf}}, \boldsymbol{s}_{t+1}^{\text{inf}}$), and an MLP forward model predicting $\boldsymbol{s}_{t+1}^{\text{gen}} = \text{MLP}([\boldsymbol{s}_t^{\text{gen}}, \boldsymbol{z_t}])$. Without the HPC-MEC's structural abstraction, this variant retains excessive source information, yielding inferior transfer predictions (Table~\ref{tab:ablation}). This confirms that the robust extraction of content-free abstractions is fundamentally driven by our hierarchical design rather than the pretrained encoder.
+
+\subsection{Latent Transition Decoding}
+To evaluate the quality of latent transitions against baselines and ablations, we revisit the OOD 3D-object transition task (Section~\ref{sec:analysis:quant-transition-decode}). Briefly, this involves sequences where diverse unseen objects undergo a single transformation (rotation, translation, or scaling). Following LAPO~\citep{lapo}, we train an MLP probe to classify these transformation types directly from the latent transitions produced by each model. 
+As shown in Table~\ref{tab:action_decoding}, our model significantly outperforms all baselines and ablations. These results demonstrate that learning latent transitions in MEC space via the hierarchical model captures more abstract semantics than unified-space architectures (e.g., all baselines and the VQ-VAE ablation),  which are prone to interference from content details. Moreover, the performance gap between our full model and the "w/o CANN" ablation highlights the critical role of the CANN module in suppressing content-specific details and yielding transitions that better reflect the underlying dynamics. This is consistent with our earlier finding in Section~\ref{sec:analysis:quant-transition-decode} that structured MEC-space transitions are more semantically decodable than HPC-space ones.
+

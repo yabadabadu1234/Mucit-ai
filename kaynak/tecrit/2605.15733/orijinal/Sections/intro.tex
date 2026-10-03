@@ -1,0 +1,32 @@
+\section{Introduction}
+\label{Introduction}
+The hippocampal-entorhinal circuit has traditionally been studied in the context of spatial memory and navigation~\citep{keefe1978hippocampus, hafting2005microstructure}. 
+Recently emerging research demonstrates that this circuit extends beyond physical space navigation to encode abstract conceptual spaces, supporting diverse high-level cognitive tasks~\citep{behrens2018cognitive}.
+This neural architecture provides cognitive scaffolds for understanding abstract relationships by factorizing content and structure representations~\citep{lerousseau2024space}. Substantial experimental and theoretical evidence~\citep{manns2006evolution, TolmanEichenbaumMachineUnifying2020} supports a functional division: the hippocampus (HPC) binds content-specific information from individual experiences~\citep{eichenbaum2017integration}, while the medial entorhinal cortex (MEC) encodes abstract structures~\citep{julian2018human, bao2019grid}. This separation enables structural generalization, allowing the system to bind extracted structural representations flexibly with novel contexts~\citep{doi:10.1073/pnas.0802631105}.
+
+Grid cells within the MEC are fundamental to constructing these abstract structures~\citep{behrens2018cognitive}. Characterized by their periodic hexagonal firing patterns at various spatial scales~\citep{giocomo2011computational}, grid cells with the same spacing are organized into modules that function as continuous attractor neural networks (CANNs)~\citep{amari1977dynamics, ben1995theory, wu2008dynamics}. Furthermore, when receiving velocity inputs, grid cells drive network activity across this attractor manifold, enabling path integration in abstract spaces~\citep{burak2009accurate,gardnerToroidalTopologyPopulation2022} and facilitating mental simulation and planning.
+
+The synergy between the HPC and MEC enables the binding of context-specific content to abstract relational structures \citep{TolmanEichenbaumMachineUnifying2020, chandraEpisodicAssociativeMemory2025}. By performing path integration within the MEC to predict subsequent states, this circuit effectively serves as a biological implementation of a world model \citep{haWorldModels2018, lecunPathAutonomousMachine}.
+Within this framework, the abstract structures maintained by the MEC parallel the concept of latent actions in policy learning \citep{bruceGenieGenerativeInteractive2024, lapo}, where transitions are encoded into compact representations based on their underlying dynamics.
+
+Despite these conceptual alignments, existing cognitive map models in neuroscience often struggle to scale, failing to demonstrate how such abstract structures can be extracted directly from high-dimensional, real-world visual scenes. To bridge this gap, we develop a brain-inspired world model that abstracts the principal functions of the HPC-MEC circuit to learn complex transition dynamics from raw video sequences. Our research addresses two fundamental questions:
+
+\begin{itemize}
+\vspace{-0.2 cm}
+\item \textit{How can a model simultaneously learn representations of concrete sensory content and extract abstract structures from sequences without prior supervision?}
+\item \textit{How can these extracted structures be leveraged to facilitate robust structural generalization across diverse objects and environments?}
+\vspace{-0.2 cm}
+\end{itemize}
+
+In this work, we propose a hierarchical world model inspired by the HPC-MEC circuit capable of concurrently inferring abstract structures and learning a meaningful latent space from real-world sequences. 
+The model comprises two components: an inverse model that extracts abstract latent transitions from sequences (Section~\ref{methods:inverse_model}), and an HPC-MEC-inspired hierarchical world model that extracts abstract structures from sequences while learning to predict the next frame through velocity-driven path integration (Section~\ref{methods:hippocampal_entorhinal_circuit}).
+Our model demonstrates robust capabilities of flexibly reusing abstract structures across different environments and objects. Furthermore, it exhibits effective predictive performance in real-world human activity scenarios and generalizes to previously unseen environments (Section~\ref{sec:results}).
+
+The key contributions of this work are as follows:
+\begin{itemize}
+    \vspace{-0.2 cm}
+    \item \textbf{Self-supervised learning of HPC-MEC world model for structure abstraction:} We introduce a self-supervised framework that jointly infers abstract structures and learns a HPC-MEC-inspired world model. The input consists solely of observation sequences, without requiring explicit priors on the dynamics.
+    \item \textbf{Analysis of structure abstraction:} We use primitive transformation dynamics as a controllable example to show that the model decouples appearance from dynamics, demonstrating periodicity and in-class structure sharing.
+     \item \textbf{Structure generalization across different contexts:} We propose a brain-inspired hierarchical world model that learns to extract shared structures from similar transition dynamics and flexibly reuses abstract structures across varied environments and object categories. This transfer capacity is enabled by the integration of abstract structures encoded in the MEC with content details stored in the HPC. Our model also shows generalization capabilities to out-of-distribution datasets.
+    \vspace{-0.2 cm}
+\end{itemize}

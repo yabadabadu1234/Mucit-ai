@@ -1,0 +1,31 @@
+\section{Related works}
+\label{related_works}
+\paragraph{Cognitive map models.} 
+Cognitive map models typically attribute structural abstraction to MEC, sensory binding to HPC, and sensory prediction to their interaction. 
+The Tolman-Eichenbaum Machine (TEM)~\citep{TolmanEichenbaumMachineUnifying2020} extends beyond spatial domains by using recurrent networks to form cognitive maps that predict observations from predefined actions, though it requires re-learning abstract maps across environments. 
+Clone-structured cognitive graphs (CSCG)~\citep{georgeClonestructuredGraphRepresentations2021} offer graph-based Markovian representations of structural relationships without prior constraints, but remain limited to discrete domains. 
+Vector-HaSH~\citep{chandraEpisodicAssociativeMemory2025} generates velocity inputs from hippocampal states to drive grid cells forming episodic memories, but its velocity vectors are learned by memorizing the whole sequence.
+All these works lack the critical step of inferring shared abstract structure from sequences in continuous and real-world environments.
+
+\paragraph{Abstract velocity extraction.} In neuroscience, \cite{iyerflexible} employs an inverse model to extract abstract velocities from high-dimensional observations and maps them to low-dimensional grid cell velocity inputs. However, this approach significantly simplifies the complex representation learning in HPC-MEC circuits, focusing only on simple artificial stimuli.
+
+\begin{figure*}[htbp]
+    \vspace{-0.2 cm}
+    \centering
+    \includegraphics[width=1\textwidth]{Figures/methods/Model.png}
+    \caption{\textbf{Overview of the model architecture.} (A) Video clips are passed through the visual encoder to obtain observation embeddings $\boldsymbol{s}$, which are encoded through the HPC to produce HPC embeddings $\boldsymbol{p}$, and then passed to the MEC to generate MEC embeddings $\boldsymbol{g}$. Finally, the generative pathway decodes them into the observation. The multi-scale VAE is fixed during training.
+    (B) The latent transition $\boldsymbol{z}_t$ operates on the MEC embedding $\boldsymbol{g}_t$ at time $t$ using continuous attractor dynamics to generate the next MEC embedding $\boldsymbol{g}_{t+1}$.
+    (C) The inverse model is used to infer latent transitions from the MEC embeddings $\boldsymbol{g}$.}
+    \label{fig:methods:models}
+    \vspace{-0.2 cm}
+\end{figure*}
+
+\paragraph{Infer latent transitions from the observations.}
+World models~\citep{haWorldModels2018,lecunPathAutonomousMachine} are generative models that predict future observations based on past observations and actions. When ground-truth actions are unavailable, inverse and forward dynamics models are commonly employed to infer actions and predict future states from observation-only demonstrations~\citep{bruceGenieGenerativeInteractive2024, yeBECOMEPROFICIENTPLAYER2023, lapo}.
+% However, the state-action interaction mechanisms in these models often lack interpretability. Common approaches include concatenating latent actions with corresponding frames~\citep{lapo, cuiDynaMoInDomainDynamics2024, yeBECOMEPROFICIENTPLAYER2023}, implementing cross-attention mechanisms~\citep{yeLatentActionPretraining2024, chenIGORImageGOalRepresentations2024}, or using additive embeddings~\citep{bruceGenieGenerativeInteractive2024, chenMotoLatentMotion2024}. Our approach implements state-action interaction through grid cell path integration, ensuring that latent actions function explicitly as velocity terms acting on current states.
+Genie~\citep{bruceGenieGenerativeInteractive2024}, FICC~\citep{yeBECOMEPROFICIENTPLAYER2023}, and LAPO~\citep{lapo} primarily target 2D gaming environments, while
+LAPA~\citep{yeLatentActionPretraining2024}, Moto~\citep{chenMotoLatentMotion2024}, IGOR~\citep{chenIGORImageGOalRepresentations2024}, and UniVLA~\citep{bu2025univla} focus on latent action extraction from real-world settings for pretraining policy models.
+% Although LAPA, Moto, IGOR, and UniVLA extract latent actions using VQ-VAE objectives, they are not explicitly designed for interpretable state-action interaction and focus primarily on utilizing latent actions for control. Our approach implements state-action interaction through grid cell path integration, ensuring that latent transitions function explicitly as velocities acting on current states. 
+AdaWorld~\citep{gaoAdaWorldLearningAdaptable2025b} achieves latent action transfer but relies on a large-scale pretrained video diffusion model. While their framework utilizes AdaLN~\citep{peebles2023scalable} for state-action interactions, our model leverages biologically-grounded CANN dynamics to achieve this integration. 
+% Furthermore, we adopt a hierarchical architecture to emulate the functional HPC-MEC coupling mechanism.
+% providing a more principled basis for structural abstraction.

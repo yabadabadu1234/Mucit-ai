@@ -1,0 +1,109 @@
+\section{Methods}
+\label{methods}
+The model is mainly separated into two parts: the HPC-MEC coupling model (Fig.~\ref{fig:methods:models}(A, B)) and the inverse model (Fig.~\ref{fig:methods:models}(C)). 
+First, we use the pretrained multi-scale VQ-VAE~\citep{tianVisualAutoregressiveModeling2024} to extract observation embeddings from video sequences. 
+The HPC-MEC coupling model hierarchically extracts abstract structures and performs next-state prediction via velocity-driven path integration (Fig.~\ref{fig:methods:models}(B)). The inverse model is employed to infer latent transitions from the MEC embeddings, which encapsulate the underlying abstract structures.
+% The HPC-MEC coupling model contains two pathways: The visual inference pathway first encodes the content information of the observation in the HPC, then the HPC embeddings are passed to the MEC to form the structured and compressed latent representations. 
+% The MEC performs the path integration, and the generative pathway decodes the next MEC embeddings to the next observation. 
+Finally, the decoder of VQ-VAE reconstructs the next frame from the generated observation embedding. The overall process is illustrated in Fig.~\ref{fig:methods:models}.
+
+\begin{figure*}[!htbp]
+    \vspace{-0.2 cm}
+    \centering
+    \includegraphics[width=\textwidth]{Figures/methods/Prob-Graph.png}
+    \caption{\textbf{Overview of the HPC-MEC coupling model.} (A) The graphical model of the HPC-MEC coupling model. The visual inference flow (solid pink arrow) models the encoding process of $\boldsymbol{s}_{1:T}^{\text{inf}} \rightarrow \boldsymbol{p}_{1:T}^{\text{inf}} \rightarrow \boldsymbol{g}_{1:T}^{\text{inf}}$. The temporal dependence (dashed pink arrow) ensures the continuity and consistency of the representations. The generation flow (solid blue arrow) models the transition dynamic and the decoding process of $\boldsymbol{g}_{2:T}^{\text{gen}} \rightarrow \boldsymbol{p}_{2:T}^{\text{gen}} \rightarrow \boldsymbol{s}_{2:T}^{\text{gen}}$.  The visual feedback (dashed purple arrow) can correct the accumulated path integration error. (B) The mechanism of velocity-like abstractions operating in the CANN-inspired MEC latent space.}
+    \label{fig:methods:prob_graph}
+    \vspace{-0.2 cm}
+\end{figure*}
+
+\subsection{The HPC-MEC-inspired Hierarchical World Model}
+\label{methods:hippocampal_entorhinal_circuit}
+The HPC-MEC coupling model is a hierarchical encoder-decoder architecture comprising two principal information flows: the visual inference flow and the generation flow.
+Rather than functioning solely as a reconstruction-based encoder–decoder, the model performs path integration by applying latent transitions to its MEC embeddings, enabling it to generate subsequent observations and thus serves as a world model.
+The graphical model of the HPC-MEC coupling model is illustrated in Fig.~\ref{fig:methods:prob_graph}(A).
+\vspace{-0.2 cm}
+\paragraph{The visual inference flow.}
+% The visual inference pathway models the encoding process of $\boldsymbol{s}_{1:T}^{\text{inf}} \rightarrow \boldsymbol{p}_{1:T}^{\text{inf}} \rightarrow \boldsymbol{g}_{1:T}^{\text{inf}}$. 
+Input video frames $\boldsymbol{o}_{1:T}$ are processed by the VQ-VAE encoder to obtain observation embeddings $\boldsymbol{s}_{1:T}^{\text{inf}}$ (see Appendix~\ref{appendix:VQVAE} for details).
+$\boldsymbol{s}_{1:T}^{\text{inf}}$ are then encoded into higher-dimensional HPC embeddings $\boldsymbol{p}_{1:T}^{\text{inf}}$ that capture the content information.
+Finally, the MEC compresses $\boldsymbol{p}_{1:T}^{\text{inf}}$ into lower-dimensional MEC embeddings $\boldsymbol{g}_{1:T}^{\text{inf}}$.
+Both the HPC and MEC use spatial-temporal Transformer encoders with temporal causal masking ~\citep{yeLatentActionPretraining2024} to capture time dependencies.
+\vspace{-0.2 cm}
+\paragraph{The generation flow.}
+% The generation pathway mainly consists of the transition dynamic and the decoding process of $\boldsymbol{g}_{2:T}^{\text{gen}} \rightarrow \boldsymbol{p}_{2:T}^{\text{gen}} \rightarrow \boldsymbol{s}_{2:T}^{\text{gen}}$. 
+%%%%%%%%%%%%%%%%%%%%%%%%
+% The transition dynamic of the MEC is implemented as multiple CANNs~\citep{yoon2013specific} capable of performing path integration and generating the next MEC embedding $\boldsymbol{g}_{t+1}^{\text{gen}}$ from the previous $\boldsymbol{g}_{t}^{\text{gen}}$ with the latent transition $\boldsymbol{z}_t$.
+The transition dynamic of the MEC is implemented as CANN-inspired template matching~\citep{wu2008dynamics, yoon2013specific} capable of performing path integration.
+A Continuous Attractor Neural Network (CANN) is a specific type of recurrent neural network designed to maintain a stable, continuous representation of information in its activity pattern. 
+The CANN maintains the current structural state as a stable, localized "bump" of neural activity within its metric space. 
+This inherent geometric regularity is what makes them well-suited for path integration of grid cells~\citep{burak2009accurate, gardnerToroidalTopologyPopulation2022}.
+The key is that the network's translation-invariant geometric structure facilitates flexible state transitions through operators (see Appendix~\ref{appendix:path_integration} for mathematical details). In our model, the inferred latent transition $\boldsymbol{z}_t$ serves as precisely such an operator. The latent transition controllably shifts the activity bump along the network's metric axes.
+To simplify the CANN dynamics, each dimension of the MEC embedding $\boldsymbol{g}_t$ is represented by the bump center of a one-dimensional CANN: $\boldsymbol{g}_t = [g_{t}^1, g_{t}^2, \ldots, g_{t}^n]$, where $n$ is the number of CANNs and $g_{t}^i$ is the bump center of the $i$-th CANN at time $t$ (Fig.~\ref{fig:methods:prob_graph}(B)).
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% The latent transition $\boldsymbol{z}_t$ is inferred from the motion embedding $\boldsymbol{g}_{t}^{\text{inf}}$ and $\boldsymbol{g}_{t+1}^{\text{inf}}$ using the inverse model (see Sec.~\ref{methods:inverse_model}).
+Then $\boldsymbol{z}_t$ is transformed into a concrete velocity term through its integration with the MEC embedding $\boldsymbol{g}_t$. Specifically, the model first maps the concatenation of $\boldsymbol{z}_t$ and $\boldsymbol{g}_{t}^{\text{gen}}$ to produce a displacement vector $\Delta \boldsymbol{g}_{t}^{\text{gen}}$, which serves as a direct velocity input to the CANN dynamics. The path integration dynamic can be simplified as the following equation at one discrete time step:
+\begin{equation}\label{eq:forward}
+    \boldsymbol{g}_{t+1}^{\text{gen}} = \boldsymbol{g}_{t}^{\text{gen}} \oplus \Delta \boldsymbol{g}_{t}^{\text{gen}} = \boldsymbol{g}_{t}^{\text{gen}} \oplus f_{\text{forward}}(\boldsymbol{z}_t, \boldsymbol{g}_t^{\text{gen}}),
+\end{equation}
+where $\oplus$ represents the phase shift operator and $f_{\text{forward}}$ is implemented as a MLP. This update rule allows each dimension of $\boldsymbol{g}_t$ to shift according to the corresponding velocity component, collectively forming the next MEC embedding $\boldsymbol{g}_{t+1}$.
+Given that the dimensionality of latent transition $\boldsymbol{z}_t$ is smaller than that of $\boldsymbol{g}_t$, $f_{\text{forward}}$ serves as a transformation that combines the latent transition with its corresponding MEC embedding to generate a displacement vector $\Delta \boldsymbol{g}_{t}^{\text{gen}}$. Through this mechanism, the model can transform latent transitions into concrete dynamics to predict future states.
+
+% The generation pathway decodes the predicted MEC embeddings into the HPC embeddings and then to the observation embeddings, with MLPs implementing the decoding transformations between layers.
+\paragraph{The visual feedback.}
+This model enables autoregressive prediction by providing an initial observation and a sequence of latent transitions. Analogous to grid cells in the MEC performing path integration using velocity inputs, our model composes latent transitions to predict future states. However, solely relying on path integration inevitably accumulates errors over time. The visual inference flow addresses this by providing feedback to correct the accumulated errors. 
+% When visual input is accessible, the model recalibrates its path integration state using the inferred MEC embedding $\boldsymbol{g}_{t}^{\text{inf}}$ from the real observation, then uses this adjusted state to predict the subsequent state (Fig.~\ref{fig:methods:prob_graph}(A)), reducing error accumulation and improving prediction accuracy.
+Specifically, when visual input is available, the model corrects the current state using the inferred MEC embedding $\boldsymbol{g}_t^{\text{inf}}$ from the observation to predict the next state: 
+\begin{equation}
+    \begin{aligned}
+    \boldsymbol{g}^{\text{gen}}_{t+1} = \boldsymbol{g}^{\text{inf}}_{t} \oplus f_{\text{forward}}(\boldsymbol{z}_t, \boldsymbol{g}^{\text{inf}}_{t}).
+    \end{aligned}
+\end{equation}
+
+% \vspace{-0.2 cm}
+\paragraph{The hierarchical separation of abstract structures.}
+In contrast to earlier world models~\citep{lapo,yeLatentActionPretraining2024,chenMotoLatentMotion2024} that integrate transition dynamics and reconstruction within a single latent space, our HPC-MEC coupling model distinctly encodes content-rich dynamics and underlying abstract structures.
+The MEC focuses on learning abstract structures of transition dynamics, whereas the HPC maintains richer contextual information for reconstruction. 
+% For example, in object rotation sequences, the HPC encodes object-specific details as distinct latent trajectories, while the MEC compresses them into an abstract space where similar rotation dynamics share common features (Fig.~\ref{fig:methods:prob_graph}(B)). 
+This separation promotes feature reuse and efficient representation: the MEC captures shared dynamics across objects, while the HPC retains the time-dependent episodic memory. As a result, the model generalizes transition patterns across visual contexts without conflating appearance with abstract dynamics.
+
+\subsection{Inferring Latent Transitions}
+\label{methods:inverse_model}
+Rather than directly mapping from the high-dimensional observation space, the inverse model infers the latent transition $\boldsymbol{z}_t$ from consecutive MEC embeddings $\boldsymbol{g}_{t}^{\text{inf}}$ and $\boldsymbol{g}_{t+1}^{\text{inf}}$. 
+% Specifically, it first processes the $\boldsymbol{s}_{t}^{\text{inf}}$ and $\boldsymbol{s}_{t+1}^{\text{inf}}$ through the visual inference pathway to obtain the corresponding MEC embeddings $\boldsymbol{g}_{t}^{\text{inf}}$ and $\boldsymbol{g}_{t+1}^{\text{inf}}$.
+In the absence of self-motion, transitions between embeddings serve as a practical proxy for learning latent transitions. We build on this by framing latent transitions as movements on a cognitive map. Our task is thus to learn these abstract latent transitions from state differences to derive an abstract cognitive map. The transitions between MEC embeddings capture the most salient and noise-free dynamics, which the inverse model then distills into a low-dimensional latent transition space:
+\begin{equation}
+    \boldsymbol{z}_t = f_{\text{inverse}}(\Delta \boldsymbol{g}_{t}^{\text{inf}})= f_{\text{inverse}}(\boldsymbol{g}_{t+1}^{\text{inf}} \ominus \boldsymbol{g}_{t}^{\text{inf}}),
+\end{equation}
+where $\ominus$ represents the phase difference operator and $f_{\text{inverse}}$ is implemented as a MLP. By operating on the difference between sequential MEC embeddings, $\boldsymbol{z}_t$ captures only the low-dimensional transition dynamics while excluding redundant visual features already encoded in the HPC. 
+
+Therefore, the inverse dynamics model $f_{\text{inverse}}$ compresses $\Delta \boldsymbol{g}_{t}^{\text{inf}}$ into $\boldsymbol{z}_t$, and the forward dynamics model $f_{\text{forward}}$ utilizes $\boldsymbol{z}_t$ alongside $\boldsymbol{g}_{t}^{\text{gen}}$ to predict $\Delta \boldsymbol{g}_{t}^{\text{gen}}$ to derive the next MEC embedding $\boldsymbol{g}_{t+1}^{\text{gen}}$ (Equation~\ref{eq:forward}). In this way, the model operates akin to a transition $\Delta \boldsymbol{g}_{t}$ autoencoder optimized via a path integration task, which further encourages latent transition $\boldsymbol{z}_t$ to capture compressed abstract structures.
+
+\subsection{Training Stages}
+\label{methods:training_phases}
+We train the inverse model and the HPC-MEC coupling model in a self-supervised learning paradigm. Our input consists solely of video sequences, thereby eliminating the need for any prior constraints on the underlying dynamics. 
+We employ an alignment loss, adapted from~\cite{TolmanEichenbaumMachineUnifying2020}, to enforce consistency between sensory input and self-motion cues, mimicking the stable spatial coding of the HPC-MEC system.
+We divide the training process into three stages:
+\begin{enumerate}
+     \item \textbf{Training the visual inference flow and the decoding process of the generation flow:} This stage trains the model to reconstruct observation embeddings to form meaningful HPC embeddings $\boldsymbol{p}_{1:T}^{\text{inf}}$ and MEC embeddings $\boldsymbol{g}_{1:T}^{\text{inf}}$. The training objective combines reconstruction, alignment, and regularization losses:
+    \begin{equation}
+    \begin{aligned}
+        \mathcal{L}_{\text{phase1}} & = \mathcal{L}_{\text{reconstruction}}(\boldsymbol{s}_{1:T}^{\text{inf}}, \boldsymbol{s}_{1:T}^{\text{rec}}) \\
+        & + \mathcal{L}_{\text{alignment}}(\boldsymbol{p}_{1:T}^{\text{inf}}, \boldsymbol{p}_{1:T}^{\text{rec}}) \\
+        & + \mathcal{L}_{\text{regularization}}(\boldsymbol{p}_{1:T}^{\text{inf}}, \boldsymbol{g}_{1:T}^{\text{inf}}),
+    \end{aligned}
+    \end{equation}
+    where $\boldsymbol{s}_{1:T}^{\text{rec}}$ and $\boldsymbol{p}_{1:T}^{\text{rec}}$ are the reconstructed observations and HPC embeddings from $\boldsymbol{g}_{1:T}^{\text{inf}}$ respectively. The reconstruction loss and the alignment loss are measured using MSE. The regularization loss encourages the model to learn a structured latent space by minimizing the covariance and variance of the embeddings~\citep{bardes2022vicreg}.
+    \item \textbf{Training the inverse model and the transition dynamics of the generation flow:} Using the meaningful embeddings obtained in stage 1, we train the inverse model to infer latent transitions $\boldsymbol{z}$ from consecutive MEC embeddings $\boldsymbol{g}^{\text{inf}}$. Simultaneously, we train the transition dynamics to predict the generated MEC embedding $\boldsymbol{g}^{\text{gen}}$. We focus on one-step prediction to avoid accumulated errors from multi-step path integration and prevent the model from learning shortcuts that bypass latent transitions. The training objective extends phase 1 with additional alignment and transition losses:
+    \begin{equation}
+    \begin{aligned}
+        \mathcal{L}_{\text{phase2}} & = \mathcal{L}_{\text{phase1}} \\
+        & + \mathcal{L}_{\text{alignment}}(\boldsymbol{g}_{2:T}^{\text{inf}}, \boldsymbol{g}_{2:T}^{\text{gen}}) \\
+        & + \mathcal{L}(f_{\text{fwd}}(\boldsymbol{z}_{1:T-1}, \boldsymbol{g}_{1:T-1}^{\text{inf}}), \Delta \boldsymbol{g}_{1:T-1}^{\text{inf}}).
+    \end{aligned}
+    \end{equation}
+    % The alignment loss measures the MSE between inferred and generated MEC embeddings, while the transition loss combines the MSE between inferred and generated transition dynamics with a cosine similarity term to ensure accurate direction learning.
+    \item \textbf{Jointly finetuning the HPC-MEC coupling model and the inverse model:} In this final stage, we jointly finetune all model parameters using the phase 2 loss function. Unlike phase 2, the model now learns to autoregressively generate rollouts by performing path integration and forward prediction, using only the $\boldsymbol{g}_{1}^{\text{inf}}$ and the latent transition sequence from the inverse model. The MEC embeddings learn to capture dynamics-relevant abstract structures at this stage. Detailed descriptions of model training in different stages are discussed in Appendix~\ref{appendix:loss_function}.
+\end{enumerate}
+
+\subsection{Experimental Setup.}
+We evaluate our model using three types of datasets. The model is trained on Something-Something v2 (SSv2) dataset~\citep{DBLP:journals/corr/GoyalKMMWKHFYMH17}, a large-scale human activity video dataset including complex interactions with objects without explicit action labels. Several simulated datasets are used to evaluate the out-of-distribution capability of our model, including 3D object transition datasets (COIL-100~\citep{nene1996columbia}, MIRO~\citep{kanezaki2018rotationnet},  \textit{OmniObject3D}~\citep{wu2023omniobject3d}) and simulated environments (Franka Kitchen~\citep{gupta2019relay}, Block Pushing~\citep{florence2022implicit}, Push-T~\citep{chi2023diffusion}, and LIBERO Goal~\citep{liu2023libero}.)

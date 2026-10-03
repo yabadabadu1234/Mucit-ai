@@ -1,0 +1,1792 @@
+\documentclass[runningheads]{llncs}
+
+\newif\ifanonymous
+%\anonymoustrue  % <-- set to \anonymoustrue for submission
+\anonymousfalse  % <-- set to \anonymousfalse for camera-ready
+
+% --- packages (keep minimal) ---
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{latexsym, amsfonts, yfonts, bbm}
+\usepackage{stmaryrd}
+\usepackage{enumerate}
+\usepackage{mathrsfs}
+\usepackage{amsmath}
+% --- Make theorem-like envs share one consecutive counter (LNCS) ---
+\makeatletter
+\let\c@lemma\c@theorem
+\let\thelemma\thetheorem
+
+% (Optional) also unify these if you use them:
+\@ifundefined{c@definition}{}{\let\c@definition\c@theorem \let\thedefinition\thetheorem}
+\@ifundefined{c@proposition}{}{\let\c@proposition\c@theorem \let\theproposition\thetheorem}
+\@ifundefined{c@corollary}{}{\let\c@corollary\c@theorem \let\thecorollary\thetheorem}
+\@ifundefined{c@remark}{}{\let\c@remark\c@theorem \let\theremark\thetheorem}
+\@ifundefined{c@example}{}{\let\c@example\c@theorem \let\theexample\thetheorem}
+\makeatother
+
+% --- Hyperlinks (keep modest for LNCS) ---
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+  urlcolor=blue,
+  pdfauthor={},
+  pdftitle={}
+}
+
+%%%% Macro
+\def\ok#1{\mbox{\raisebox{0ex}[1ex][1ex]{$#1$}}}
+
+\def\ie{\emph{i.e.}}
+\def\re{c.e.}
+\def\Imp{\tt Imp}
+\def\Comm{C}
+\def\P{\it P}
+\def\Exp{\mathit{e}}
+\def\Aexp{\mathit{a}}
+\def\Bexp{\mathit{b}}
+\def\PBexp{\it t}
+\newcommand{\BexpArg}[1]{\it #1}
+%\DeclareMathOperator{\AexpS}{AExp}
+%\DeclareMathOperator{\BexpS}{BExp}
+%\DeclareMathOperator{\PBexpS}{PBExp}
+%\DeclareMathOperator{\ExpS}{Exp}
+%\DeclareMathOperator{\IImp}{ICmd}
+%\DeclareMathOperator{\Imp}{Cmd}
+%\DeclareMathOperator{\undf}{\mathit{undef}}
+%\DeclareMathOperator{\terminates}{\textbf{terminates}}
+%\DeclareMathOperator{\inputv}{\textbf{input}}
+%\DeclareMathOperator{\States}{States}
+%\DeclareMathOperator{\State}{State}
+%%\DeclareMathOperator{\Store}{Store}
+%\DeclareMathOperator{\Store}{\mathbb{S}}
+%\DeclareMathOperator{\cc}{\textbf{c}}
+%\DeclareMathOperator{\true}{\textbf{t}}
+%\DeclareMathOperator{\false}{\textbf{f}}
+%\DeclareMathOperator{\Abs}{Abs}
+%%\DeclareMathOperator{\Abs}{\mbox{\it uco}}
+%\DeclareMathOperator{\Ax}{\textit{Ax}}
+%%\DeclareMathOperator{\min}{\text{min}}
+
+\usepackage{thcomp}
+\newcommand{\myqed}{\textsc{Q.E.D.}}
+%\newcommand{\comment}[1]{}
+\newcommand{\Cross}{\mathbin{\tikz [x=1.4ex,y=1.4ex,line width=.2ex] \draw (0,0) -- (1,1) (0,1) -- (1,0);}}%
+\def\wpre{\wp^{\text{ce}}}
+\def\wprec{\wp^{\text{dec}}}
+\def\grasseb#1{{\llparenthesis\hspace*{0.2ex} #1 \hspace*{0.2ex}\rrparenthesis}}
+\def\grasse#1{{\llbracket #1 \rrbracket}}
+\newcommand{\qedright}{\tag*{$\Box$}}
+%%% distances
+\newcommand{\dist}{1cm} %distanza
+\newcommand{\dista}{0.6cm} %1/2 distanza
+\newcommand{\distb}{0.3cm} %distanza
+\newcommand{\li}{\ar@{-}} %linea
+\newcommand{\lp}{\ar@{.}} %linea-puntini
+\newcommand{\fp}{\ar@{.>}} %freccia-puntini
+\newcommand{\lab}{0.25cm} %label
+\newcommand{\lmab}{0.1cm} %label
+\def\assume{\textit{assume}}
+\def\Tp#1#2{\mbox{\raisebox{0ex}[1ex][1ex]{$T_{#1}^{#2}$}}}
+\def\ccS#1{\mbox{\raisebox{0ex}[1ex][1ex]{${\cal S}^{#1}$}}}
+\newcommand{\irule}[2]{\frac{\textstyle\rule[-
+1.3ex]{0cm}{3ex}#1}{\textstyle\rule[-.5ex]{0cm}{3ex}#2}}
+
+\newcommand*{\bfrac}[2]{\genfrac{}{}{0pt}{}{#1}{#2}}
+
+\def\afrac#1#2{\mbox{$\frac{\begin{array}{c} #1 \end{array}}
+                           {\begin{array}{c} #2 \end{array}}$}}
+
+\def\imp{\hbox{${\tt \ :\!-\ }$}}
+\def\lop#1#2#3{\mathrel{\mathop{#1}\limits_{#2}^{#3}}}
+\def\bbbp{{\mathbb{P}}} 
+\def\bbbI{{{\mathbb{I}}}} 
+\def\bbbe{{{\mathbb{E}}}} 
+\def\bbba{{{\mathbb{A}}}}
+\def\bbbb{{{\mathbb{B}}}}
+\def\bbbz{{\mathbb{Z}}}
+\def\bbbn{{\mathbb{N}}}
+%\def\nat{{\mathbb{N}}}
+\def\bbbc{{\mathbb{C}}}
+\def\bbbf{{\mathbb{F}}}
+\def\bbbX{{\mathbb{X}}}
+%\def\bZ{{\mathbb{Z}}}
+\def\DBM{{\text{DBM}}}
+
+\def\dovetl{{\tt dovetail}}
+
+\newcommand{\PC}{\mathsf{PC}}
+\newcommand{\Ix}{\mathsf{Ix}}
+\newcommand{\Forc}{\mathsf{Forc}}
+
+\newcommand{\Interp}{\mathsf{U}}
+\newcommand{\Spec}{\mathsf{Spec}}
+\def\index{{\mathcal{I}}}
+
+\newcommand{\ccL}{\mathscr{L}}
+\newcommand{\ccD}{\mathscr{D}}
+\newcommand{\ccF}{\mathscr{F}}
+\newcommand{\ccB}{\mathscr{B}}
+\newcommand{\Int}{\ensuremath{\mathsf{Int}}}
+\newcommand{\Zone}{\ensuremath{\mathsf{Zone}}}
+\newcommand{\Oct}{\ensuremath{\mathsf{Oct}}}
+\newcommand{\octt}{\ensuremath{\mathsf{oct}}}
+\newcommand{\Sign}{\ensuremath{\mathsf{Sign}}}
+\newcommand{\sema}{\mathfrak{S}}
+\newcommand{\bm}{\ensuremath{{\boldsymbol{m}}}}
+\newcommand{\Null}{\ensuremath{\mathsf{Null}}}
+
+\newcommand{\bZ}{\mathbb{Z}}
+\newcommand{\nint}{\mathbb{Z}}
+%\newcommand{\nat}{\mathbb{N}}
+\newcommand{\reW}{\mathbb{W}}
+\newcommand{\raz}{\mathbb{Q}}
+\newcommand{\scl}{\mathbb{S}}
+\newcommand{\pol}{\mathbb{P}}
+\newcommand{\val}{\mathbb{V}}
+\newcommand{\typ}{\mathbb{T}}
+\newcommand{\tT}{\mathbb{T}}
+\newcommand{\Domain}{\mathbb{D}}
+\newcommand{\Domaini}[1]{\mathbb{D}_{\mbox{\tiny $#1$}}}
+\newcommand{\Rei}[2]{\Re_{\mbox{\tiny $#1$,$(#2)$}}}
+\newcommand{\Xx}{{\tt X}}
+%\def\Imp{\ensuremath{\mathsf{Imp}}}
+\def\assign{\ensuremath{\mathsf{Assign}}}
+\def\ImpND{\mbox{\sc nd-Imp}}
+\def\fL{{\mathfrak{L}}}
+\def\ef{{\mathcal{F}}}
+\def\eg{{\mathcal{G}}}
+\def\ed{{\mathcal{D}}}
+\newcommand{\NF}{{\mathcal{T}}}
+\newcommand{\pfunction}[3]{\ok{\varphi^{#2\, #3}_{#1}}}
+%\newcommand{\ptfunction}[5]{\ok{\lbag\varphi^{#2 #3}_{#1}(#4)\rbag^{#5}}}
+\newcommand{\ptfunction}[5]{\ok{[\varphi^{#2 #3}_{#1}(#4)]^{#5}}}
+\newcommand{\auco}[2]{\ok{\rho^{#1}_{#2}}}
+\newcommand{\rauco}[2]{\ok{r^{#1}_{\!#2}}}
+\newcommand{\compl}[1]{\ok{\overline{#1}}}
+\newcommand{\all}{\Sigma^{\infty}}
+\newcommand{\trans}{\Sigma^{\propto}}
+\newcommand*{\disj}[1]   {{\bigcurlyvee_{}^{}(#1)}}
+\newcommand{\NInte}[3]{\scl\mbox{\small $(#1,#2\rightsquigarrow\!\!\![\!] #3)$}}
+\newcommand{\modu}{\ \mbox{\tt mod}\ }
+\newcommand{\Mirr}{\mbox{\it Mirr}}
+\newcommand{\Ang}{\mbox{\it Ang}}
+\newcommand{\Dem}{\mbox{\it Dem}}
+\newcommand{\Inf}{\mbox{\it Inf}}
+\newcommand{\uco}{\ensuremath{\mathrm{uco}}}
+\newcommand{\lco}{\mbox{\it lco}}
+\newcommand{\id}{\ensuremath{\mathit{I}}}
+\newcommand{\iid}{\mbox{\tt\tiny id}}
+\newcommand{\op}{\mbox{\tiny\it op}}
+\newcommand{\zero}{\mbox{\it IsZero}}
+\newcommand{\Var}{\ensuremath{\mathit{Var}}}
+\newcommand{\vars}{\ensuremath{\mathit{vars}}}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\la}{\leftarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\La}{\Leftarrow}
+\newcommand{\Lra}{\Leftrightarrow}
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\pref}{\preccurlyeq}
+\newcommand{\ov}{\compl}
+\newcommand{\ovr}{\overrightarrow}
+\newcommand{\aden}{\blacktriangleright}
+\newcommand{\den}{\tt i/o}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\taug}[1]{\tau^{\dot{#1}}}
+\newcommand{\filt}[2]{{\uparrow\!}_{#1}(#2)}
+%\newcommand{\filter}[1]{{\uparrow\!}(#1)}
+\newcommand{\filtc}[2]{{\Uparrow\!}_{#1}(#2)}
+\newcommand{\undist}[2]{\Upsilon_{\mbox{\tiny $#1$}}^{\mbox{\tiny $#2$}}}
+\newcommand{\Secr}[2]{\mbox{\it Secr}_{\mbox{\tiny $#1$}}^{#2}}
+%\def\defi{\mbox{\raisebox{0ex}[1ex][1ex]{$\stackrel{\mbox{\tiny def}}{\; =\;}$}}}
+\def\defi{\triangleq}
+\newcommand{\range}{\textit{rng}}
+\newcommand{\dom}{\textit{dom}}
+%\newcommand{\undf}{\textit{undef}}
+
+\def\quest{\in^{?}\!}
+
+%\newcommand{\gn}[1]{\mathfrak{g}(#1)}
+\newcommand{\gn}{\textit{gn}}
+\newcommand{\mfg}{\mathfrak{g}}
+
+\DeclareMathOperator{\Abs}{Abs}
+
+\newcommand{\integer}{\mathbb{Z}}
+%\newcommand{\boolean}{\mathbb{B}}
+\newcommand{\shell}{\text{Shell}}
+
+\newcommand{\da}{\downarrow\!}
+\newcommand{\core}[2]{\cC_{#1}^{#2}}
+\newcommand{\refi}[2]{\cR_{#1}^{#2}}
+\newcommand{\incore}[2]{\cU\cC_{#1}^{#2}}
+\newcommand{\inrefi}[2]{\cU\cR_{#1}^{#2}}
+
+\def\gras#1#2{\mbox{\raisebox{0ex}[1ex][1ex]{$[\![#1]\!]^{#2}$}}}
+
+\def\dpower#1#2{\mbox{\raisebox{0ex}[1ex][1ex]{$#1^{\downarrow #2}$}}}
+
+%\newcommand{\ud}{\mbox{\raisebox{0ex}[1ex][1ex]{$\:\stackrel{\rm def}{=}\:$}}}
+\newcommand{\ud}{\ok{\:\triangleq\:}}
+
+\def\fun#1{\mbox{\raisebox{0ex}[1ex][1ex]{$   \mathrel{\rightarrow^{#1}}$}}}
+\def\wfun#1{\mbox{\raisebox{0ex}[1ex][1ex]{$
+   \mathrel{\leadsto^{#1}}$}}}
+  
+\def\ok#1{\mbox{\raisebox{0ex}[1ex][1ex]{$#1$}}}
+
+\def\smallromani{\renewcommand{\theenumi}{\roman{enumi}}
+        \renewcommand{\labelenumi}{(\theenumi)}}
+
+%\newcommand{\comment} [1]{}
+\newcommand{\cci}[2]{\cS_{\mbox{\tiny $\grass{#1}$}}^{\mbox{\tiny $#2$}}}
+
+\def\predC{\mathscr{C}}
+\def\lfp{{\sf lfp\/}}
+\def\gfp{{\sf gfp\/}}
+%\def\Sign{{\it Sign\/}}
+\def\Par{{\it Par\/}}
+\def\Con{{\it Con\/}}
+\def\etal{{\it et al.\ }}
+\def\comp{\hbox{\;\footnotesize$\circ$\normalsize}}
+\def\equivdef{
+\mathrel{\mathop{\equiv}\limits^{\mbox{\tiny def}}}}
+
+\def\rarr#1{\mbox{\raisebox{0ex}[1ex][1ex]{$
+  \mathrel{\mathop{
+\hspace*{1pt}\longrightarrow\hspace*{1pt}}\limits^{\,_{\mbox{\tiny 
+\hspace*{-2.2pt}#1}}}}$}}} 
+
+%\def\grasse#1#2{[\![#1]\!]^{#2}}
+%\def\grass#1{[\![#1]\!]}
+\def\grass#1{\llbracket#1\rrbracket}
+
+\def\defemb#1#2{\expandafter\def\csname #1\endcsname
+                              {\relax\ifmmode #2\else\hbox{$#2$}\fi}}
+ 
+\def\2c-math#1#2{{\par\medskip\noindent ${#1}$
+                      \par\smallskip
+                        \noindent\hspace*{\fill} ${#2}$}
+                           \\[10pt]}
+\def\cAA{\ensuremath{A}}
+                           
+\defemb{aF}{{\cal F}^\cAA}
+\defemb{sF}{{\cal F}^{\star}}
+\def\cA{\mathcal{A}}
+%\defemb{cA}{{\cal A}}
+\defemb{cB}{{\cal B}}
+\defemb{cC}{{\cal C}}
+\defemb{cD}{{\cal D}}
+\defemb{cE}{{\cal E}}
+\defemb{cF}{{\cal F}}
+\defemb{cG}{{\cal G}}
+\defemb{cH}{{\cal H}}
+\defemb{cI}{{\cal I}}
+\defemb{cJ}{{\cal J}}
+\defemb{cK}{{\cal K}}
+\defemb{cL}{{\cal L}}
+\defemb{cM}{{\cal M}}
+\defemb{cN}{{\cal N}}
+\defemb{cO}{{\cal O}}
+\defemb{cP}{{\cal P}}
+\defemb{cQ}{{\cal Q}}
+\defemb{cR}{{\cal R}}
+\defemb{cS}{{\cal S}}
+\defemb{cT}{{\cal T}}
+\defemb{cU}{{\cal U}}
+\defemb{cV}{{\cal V}}
+\defemb{cW}{{\cal W}}
+\defemb{cY}{{\cal Y}}
+\defemb{cX}{{\cal X}}
+\defemb{cZ}{{\cal Z}}
+\defemb{cHys}{{\cH_{\cY}^{\cS}}}
+\defemb{cHy}{{\cH_{\cY}}}
+\defemb{ld}{\dashv}
+\defemb{rd}{\vdash}
+\defemb{cGH}{{\cal GH}}
+\defemb{cGWP}{{\cal GWP}}
+\defemb{tL}{{\tt L}}
+\defemb{tH}{{\tt H}}
+\defemb{tT}{{\tt T}}
+\defemb{tS}{{\tt S}}
+
+\def\grasseA#1{{\llbracket #1 \rrbracket}^{\alpha}}
+\def\grasseA#1{{\llparenthesis\, #1\, \rrparenthesis}^{\alpha}}
+
+
+% smart sets
+%\newcommand{\sset}[2]{\left\{~#1  \left |
+%                               \begin{array}{l}#2\end{array}
+%                          \right.     \right\}}
+                          
+\newcommand{\sset}[2]{\{#1  ~|~ #2\}}
+                          
+
+\newcommand{\ssetf}[2]{\left\{#1  \left |
+                               \begin{array}{l}#2\end{array}
+                          \right.     \right\}}
+ 
+\newcommand{\subq}[2]{\left[~#1  \left|
+                               \begin{array}{l}#2\end{array}
+                          \right.     \right]}
+\newcommand{\dsset}[2]{\left\{~\begin{array}{l}#1\end{array} \left|
+                               \begin{array}{l}#2\end{array}
+                      \right.  \right\}}
+ 
+\newcommand{\soset}[1]{\left\{~#1 \right\}}
+ 
+\newcommand{\set}[1]{\left\{
+                         \begin{array}{l}#1
+                         \end{array}
+                     \right\}}
+\newcommand{\setn}[1]{\{#1\}^\nat}
+\newcommand{\setg}[2]{\{#1\}^{#2}}
+\newcommand{\setfn}[2]{\left\{\ds\frac{#1}{#2}\right\}^n}
+\newcommand{\setx}[1]{\{#1\}^x}
+\newcommand{\setfx}[2]{\left\{\ds\frac{#1}{#2}\right\}^x}
+\newcommand{\pof}[2]{\left (\ds\frac{#1}{#2}\right )}
+\newcommand{\cpre}{\varphi_{\omega}}
+\newcommand{\infs}{\Sigma^{\omega}}
+\newcommand{\fins}{\Sigma^{+}}
+\newcommand{\conc}[1]{\tau^{\dot{#1}\:\frown}}
+%\newcommand{\secrecy}[2]{\mbox{$\tuple{#1,#2}$\em -secrecy}}
+\newcommand{\defsecrecy}[2]{\mbox{$\tuple{#1,#2}$\it -NSecrecy}}
+\newcommand{\abssecrecy}[2]{\mbox{$\tuple{#1,#2}$\it -AbsSecrecy}}
+\newcommand{\gsecrecy}[3]{\mbox{$\tuple{#1,#2,#3}$\it -Secrecy}}
+%\newcommand{\secret}[2]{\mbox{$\tuple{#1,#2}$\em -secret}}
+\newcommand{\defsecret}[2]{\mbox{$\tuple{#1,#2}$\it -NSecret}}
+\newcommand{\abssecret}[2]{\mbox{$\tuple{#1,#2}$\it -AbsSecret}}
+\newcommand{\gsecret}[3]{\mbox{$\tuple{#1,#2,#3}$\it -Secret}}
+\newcommand{\dsecr}[3]{\mbox{\small $[#1]$}#2\mbox{\small $(#3)$}}
+\newcommand{\asecr}[3]{\mbox{\small $(#1)$}#2\mbox{\small $(#3)$}}
+\newcommand{\gsecr}[4]{\mbox{\small $(#1)$}#2\mbox{\small $(#3\rightsquigarrow\!\!\![\!] #4)$}}
+\newcommand{\gnsecr}[4]{\mbox{\small $(#1)$}#2\mbox{\small $(#3\Rightarrow #4)$}}
+\newcommand{\dker}[1]{\cK_{\mbox{\tiny $\;\; P,[#1]$}}}
+\newcommand{\aker}[1]{\cK_{\mbox{\tiny $\;\; P,(#1)$}}}
+\newcommand{\gker}[2]{\cK_{\mbox{\tiny $\;\; P,(#1),#2$}}}
+
+\newcommand{\irr}{\mbox{\tt Irr}}
+\newcommand{\irri}[2]{\mbox{\tt Irr}_{\mbox{\tiny $#1$}}^{\mbox{\tiny $#2$}}}
+%\newcommand{\nat}{\mathbb{N}}
+\newcommand{\nat}{\omega}
+
+\def\tuple#1{\langle #1 \rangle}
+\def\floor#1{\lfloor #1 \rfloor}
+\def\ceil#1{\lceil #1 \rceil}
+\def\bu{\downarrow}
+\def\td{\uparrow}
+\def\dcup{\mathrel{\mathop{\cup}\limits^{\cdot}}}
+\def\ll{[\![}
+\def\rr{]\!]}
+\def\mcomment#1{ \mbox{\hfill\small    [~  #1 ~] }}
+\def\loplus#1#2{\mathrel{\mathop{\oplus}\limits_{#1}^{#2}}}
+\def\lotimes#1#2{\mathrel{\mathop{\otimes}\limits_{#1}^{#2}}}
+\def\lsqcup#1#2{\mathrel{\mathop{\sqcup}\limits_{#1}^{#2}}}
+\def\lsqcap#1#2{\mathrel{\mathop{\sqcap}\limits_{#1}^{#2}}}
+\def\lsqcups#1#2{\mathrel{\mathop{\sqcup_S}\limits_{#1}^{#2}}}
+\def\bcup#1#2{\displaystyle{\bigcup_{#1}^{#2}}}
+\def\lcup#1#2{\mathrel{\mathop{\cup}\limits_{#1}^{#2}}}
+\def\luplus#1#2{\mathrel{\mathop{\uplus}\limits_{#1}^{#2}}}
+\def\lcap#1#2{\mathrel{\mathop{\cap}\limits_{#1}^{#2}}}
+\def\lbigcup#1#2{\mathrel{\mathop{\bigcup}\limits_{#1}^{#2}}}
+\def\lsum#1#2{\mathrel{\mathop{\sum}\limits_{#1}^{#2}}}
+\def\lvee#1#2{\mathrel{\mathop{\vee}\limits_{#1}^{#2}}}
+\def\lwedge#1#2{\mathrel{\mathop{\wedge}\limits_{#1}^{#2}}}
+\def\lbiguplus#1#2{\mathrel{\mathop{\biguplus}\limits_{#1}^{#2}}}
+\def\band#1#2{\mathrel{\mathop{\bigwedge}\limits_{#1}^{#2}}}
+\def\bwedge#1{ \displaystyle{ \bigwedge_{#1} } }
+\def\share{\leftrightarrow}
+
+\newcommand{\lgfp}[3]{\mbox{\it #1}^{\mbox{\tiny {$#2$}}}_{\mbox{\tiny
+{$#3$}}}} 
+
+\makeatletter
+\newcommand{\pto}{}% just for safety
+\newcommand{\pgets}{}% just for safety
+\DeclareRobustCommand{\pto}{\mathrel{\mathpalette\p@to@gets\to}}
+\DeclareRobustCommand{\pgets}{\mathrel{\mathpalette\p@to@gets\gets}}
+\newcommand{\p@to@gets}[2]{%
+  \ooalign{\hidewidth$\m@th#1\mapstochar\mkern5mu$\hidewidth\cr$\m@th#1\to$\cr}%
+}
+\makeatother
+\newcommand{\ptor}{\stackrel{\scriptscriptstyle \mathrm{r}}{\pto}}
+\newcommand{\ttor}{\stackrel{\scriptscriptstyle \mathrm{r}}{\rightarrow}}
+\newcommand{\prf}{\mathbb{N}\stackrel{\scriptscriptstyle \mathrm{r}}{\pto} \mathbb{N}}
+\newcommand{\trf}{\mathbb{N}\stackrel{\scriptscriptstyle \mathrm{r}}{\rightarrow} \mathbb{N}}
+\newcommand{\defined}{{\downarrow}}
+
+\newcommand{\code}[1]{\ensuremath{\mathtt{#1}}}
+\newcommand{\semantica}[1]{\ensuremath{\ll {#1} \rr}}
+\newcommand{\semanticaND}[1]{\ensuremath{\mathcal{F}\ll \code{#1} \rr}}
+
+\newcommand{\semanticaConv}[1]{\ensuremath{\ll \code{#1} \rr}^{c}}
+
+\newcommand{\refFig}[1]{Figure~\ref{fig:#1}}
+\newcommand{\reffig}[1]{\refFig{#1}}
+\newcommand{\AxminA}{{\textit{Ax}^{^{\!\min}}_{A}}}
+\newcommand{\AxmaxA}{{\textit{Ax}^{^{\!\max}}_{A}}}
+
+%\newcommand{\TODO}[1]{\emph{\underline{TODO:}#1}}
+
+% \TODO[who]{what}
+%
+\makeatletter
+\newcommand{\TODO}{\@ifnextchar[{\@TODO}{\@@TODO}}
+\long\def\@TODO[#1]#2{\bgroup\color{red}\ifmmode\else\itshape\fi TODO[#1]: #2\egroup}
+\long\def\@@TODO#1{\bgroup\color{red}\ifmmode\else\itshape\fi TODO: #1\egroup}
+\makeatother
+
+
+\begin{document}
+
+\title{Elusive but Coverable: The Recursion-Theoretic Structure of Complete Abstract Interpretations
+%The complexity of complete and incomplete abstract interpretations
+}
+%\title{Gödel Numbering and Witnessing (In)Completeness in Abstract Interpretation}
+%\title{The recursive structure of (in)complete abstract interpretations}
+\titlerunning{The Recursion-Theoretic Structure of Complete Abstract Interpretations}
+
+\ifanonymous
+  \author{Anonymous Authors}
+  \authorrunning{Anonymous Authors}
+  \institute{Anonymous Institution}
+\else
+  \author{Nicklas Carpenter \and Roberto Giacobazzi}
+  \authorrunning{}
+  \institute{
+    University of Arizona\\
+    \email{$\{$npcarpenter\,|\,giacobazzi$\}@$arizona.edu}
+  }
+\fi 
+
+\maketitle
+
+\begin{abstract}
+We study local completeness and incompleteness of abstract interpretations from a recursion-theoretic perspective. Local completeness weakens global completeness and captures the absence of precision loss for a specific precondition: abstract computation yields exactly what is obtained by abstracting the corresponding concrete computation. This enables compositional reasoning and rules out false positives in verification.
+We characterize the distinction between static and dynamic program analysis in terms of uniformly decidable operations and observe that the latter is uniformly decidable only for trivial abstractions. We then prove that the class of programs inducing a predicate transformer that is locally complete for a given non-trivial abstract domain is elusive in a precise recursion-theoretic sense: it is a productive set, hence not computably enumerable, and, under mild hypotheses, the same holds for its complement. In particular, the first class lies in $\Pi^0_2$
+and the second in $\Sigma^0_2$.
+% We study local completeness and incompleteness of abstract interpretations from a recursion-theoretic perspective. Local completeness captures the absence of precision loss for a specific precondition: abstract computation yields exactly what is obtained by abstracting the corresponding concrete computation. This enables compositional reasoning and rules out false positives in verification. 
+% We characterize the distinction between static and dynamic program analysis in terms of uniformly decidable operations and observe that the latter is uniformly decidable only for trivial abstractions. We then prove that the class of programs inducing a predicate transformer that is locally complete for a given non trivial abstract domain is a productive set, hence not computably enumerable and, under mild hypothesis, the same holds for its complement. In particular the first class is in $\Pi^0_2$ and the second in $\Sigma^0_2$. 
+Unlike the usual examples of $\Pi^0_2$ properties, we show that the classes of locally complete programs admit decidable coverings. This makes it possible to construct, via program transformation, an effective enumeration of a representative subset of programs that entirely covers this class --- capturing from the outside a class that eludes enumeration from within.
+\keywords{Abstract interpretation \and completeness \and program analysis \and program verification \and computability theory}
+\end{abstract}
+
+\section{Introduction}
+
+In any theory, the study of limit cases is a powerful means of exposing its conceptual structure. They mark the boundary between possibility and impossibility, distinguish essential assumptions from accidental ones, and provide idealized reference points for understanding more practical instances. Complete abstract interpretations play this role within abstract interpretation. 
+
+\smallskip
+
+Abstract interpretation is a general theory for specifying approximate semantics of programming languages \cite{CC77}, including program analysis, program logics, and program transformations as special cases. 
+This is achieved by designing an approximate (abstract) interpreter from the semantics of a given computational system (e.g., a programming language) and an abstraction of its state space. The abstraction, specified by the so called {\em abstract domain\/}, later denoted $\cAA$, plays a key role in the abstract interpretation construction. It specifies precisely what information has to be retained and what can be abstracted away, with the specific goal that interpreting in the simplified abstract domain yet keeps as much information as possible to achieve our goals, e.g., proving program correctness. 
+
+\smallskip
+
+By construction, abstract interpretation is sound \cite{CC77}, meaning that if the approximate abstract interpretation of a program is correct with respect to a specification then also its concrete semantics satisfies the specification.
+The converse is rare and corresponds to the limit, and ideal, situation where no loss of precision is cumulated in the abstract interpretation with respect to what can be obtained by abstracting the concrete computation. When this happens we have {\em completeness} \cite{CC79,GRS00}. 
+%
+Completeness clarifies which aspects of a computation can be abstracted away while preserving the ability to reason precisely about its properties.
+In program verification, program analysis and program logics completeness guarantees the absence of false positives, therefore making it possible to have a perfect matching between concrete and approximate correctness proofs. It is about three decades that completeness has been studied as a field by its own \cite{GR97b}. 
+%Completeness plays indeed a central role in many aspects of programming languages. 
+It has been extensively studied in the context of abstraction refinement for program analysis \cite{GRS00,GQ01,BruniGGR22}, information flow security by (abstract) non-interference \cite{GMadj10}, code protection \cite{G08}, semantic properties of abstract interpreters, such as extensionality and referential transparency \cite{BruniGGGP20}, in the combination of correctness and incorrectness logics of programs \cite{BruniGGR21,BruniGGR23}, in the coordination of inductive and co-inductive-{\em up-to\/} techniques for proving properties of greatest fixed point computations \cite{BGGP18} and, recently, in the context of the design of {\em best correct approximations} (bca) of predicate transformers \cite{GiacobazziR25}.
+
+\subsection{The problem}
+On one side standard computability is a theory of sets and functions indexed on programs enjoying all beautiful properties such as extensionality and referential transparency \cite{odifreddi}. On the other side 
+it has been proved that abstract interpretation is inherently intensional in nature \cite{BruniGGGP20}, i.e., its quality strictly depends upon the way the code is written. This is indeed a direct consequence of the lack of compositionality \cite{GiacobazziR25} which is guaranteed only when we can suppress intermediate abstractions in the composition of abstract functions, as it happens when the outer function is complete {\em locally\/} to the output of the inner one. It is precisely completeness in this localized version that plays a central role in reconciling computability theory with abstract interpretation. 
+
+\smallskip
+
+Local completeness is a weaker form of completeness introduced in \cite{BruniGGR21} and further developed in \cite{BruniGGR23,BruniGGR22} in the contexts of LCL (Local Completeness Logic), combining correctness and incorrectness logic, and AIR (Abstract Interpretation Refinement), generalizing CEGAR-style refinement to arbitrary abstract domains.
+%
+Unlike global completeness, traditionally studied in the literature (e.g., see \cite{GRS00}), which requires completeness with respect to all possible inputs, local completeness requires completeness only for a fixed input property. When it holds along a computation trace in the intermediate junctions of post/pre conditions, it guarantees that no loss of precision is propagated along that trace. This localized perspective has proved particularly useful for analyzing the precision of abstract interpreters defined inductively over the syntax of programs.
+%
+Contrary to global completeness studied in \cite{GiacobazziLR15}, local completeness does not have a recursion-theoretic characterization. Our contribution, which is primarily theoretical in nature, wants to fill this gap.
+
+\subsection{Main contribution}
+%
+%Our contributions are threefold and are primarily theoretical in nature. 
+%First, we analyze decidable abstract domains as uniform transformations, showing that uniformity precisely distinguishes static from dynamic program analysis. Second, we characterize, in the arithmetical hierarchy, both the set of programs whose abstract semantics is locally complete and the set of programs whose abstract semantics is locally incomplete; in particular, we prove that, except under very restrictive hypotheses, neither local completeness nor local incompleteness is computably enumerable as a property of programs. Third, we show that incompleteness can always be achieved by simple regular program transformations and we provide an effective enumeration of a representative class of programs covering all possible locally complete behaviors. 
+
+%\smallskip
+
+We first analyze decidable abstract domains as uniform transformations. 
+For decidable abstract domains, whose elements represent decidable program properties as commonly used in program analysis and verification, we show that uniformity precisely separates dynamic from static program analysis. Here, uniformity is the ability to compute effectively the abstract property associated with a concrete set from any program enumerating that set, independently of how the set is generated or used. This establishes the boundary between merely abstracting the result of an interpreter and performing abstract interpretation.
+
+\smallskip
+
+In this context we study the complexity in the arithmetical hierarchy of the classes of all programs admitting an abstract semantics which is locally complete for a given input property $I$ in a fixed abstract domain $\cAA$. We prove that when $\cAA$ is not trivial, i.e., it is not the identical abstraction or the abstraction which collapses all properties into a single {\em don’t know} value,
+this class, later denoted $\bbbc(\cAA,I)$, is bi-productive, i.e., it is productive as well as its complement, the latter under mild hypothesis. Only when $I=\varnothing$ the complement class $\compl{\bbbc(\cAA,I)}$, called the {\em incompleteness class}, is computably enumerable. In particular we prove that for continuous abstract domains and input property $I\neq\varnothing$ the classes $\bbbc(\cAA,I)$ and $\compl{\bbbc(\cAA,I)}$ are respectively in $\Pi^0_2$ and $\Sigma^0_2$ in the arithmetic hierarchy. 
+
+\smallskip
+
+The above results show the intrinsic difficulties associated with completeness and incompleteness persist even in their weaker---local, formulation. Since productive sets are by definition not computably enumerable, neither local completeness nor local incompleteness admits an effective enumeration that fulfills respectively $\bbbc(\cAA,I)$ and $\compl{\bbbc(\cAA,I)}$. Actually these results show that these two classes are recursively inseparable, namely no decidable set $C$ that contains all elements of $\bbbc(\cAA,I)$ while excluding all elements of $\compl{\bbbc(\cAA,I)}$; that is, no computable yes/no procedure can perfectly separate the positive cases in $\bbbc(\cAA,I)$ from the negative cases in $\compl{\bbbc(\cAA,I)}$.
+While productivity rules out any effective enumeration of these classes as sets of programs, we prove that $\bbbc(\cAA,I)$ admits a computably enumerable (and hence also a decidable) covering. The idea here is that we do not try to enumerate exactly all and only the programs in $\bbbc(\cAA,I)$. Instead, we provide a fix-point characterization in terms of effective program transformations\footnote{We use the term {\em program transformation\/} in a non-standard sense: we allow a transformation to modify not only the syntactic form of a program, but also its semantics.} of a representative family of programs whose semantic behavior covers the entire class. The covering is allowed to miss many programs, as long as it still contains enough representatives to capture all relevant behaviors in $\bbbc(\cAA,I)$. The proof follows the structure of similar proofs in abstract computational complexity (e.g., see \cite{Blum67}): here to be cancelled by an effective program transformation are the cases of incompleteness.
+
+
+\subsection{Related works}
+
+The most related paper is \cite{GiacobazziLR15} where the authors firstly analyzed the problem of completeness from the perspective of the programs for which an abstract domain is complete instead of the abstract domains that induce completeness for a given program, as previously extensively done in the literature. This naturally leads to the notion of completeness class. We extend their approach to the weaker case of local completeness and we prove that local and global completeness share the same complexity in the arithmetic hierarchy. Moreover we characterize a {\re} (computably enumerable) covering of the class of local complete programs for a non trivial abstract domain and prove the complexity of transformations mapping arbitrary programs to the complement class of locally incomplete programs. The covering provides the very first characterization of completeness in fix-point form, while the transformation making programs locally incomplete  provides an effective lower bound to code obfuscating transformations.
+
+In \cite{DMonniaux23} the author presents an important practice-oriented (and personal) account of completeness in static analysis by abstract interpretation, distinguishing the completeness of an abstract domain from the completeness of the method used to compute invariants. The author affirms that completeness matters because incompleteness methods may be hard to control and unpredictable: for example, widening can fail to find invariants that exist in the chosen abstract domain, and small or seemingly irrelevant program changes may alter the analysis outcome. The author concludes that complete methods, when available, provide robustness, unique well-defined results, better testability, and clearer complexity questions. 
+%
+With respect to \cite{DMonniaux23} we consider only imprecise transfer functions and the lack of compositionality due to combinations of abstractions as possible sources of incompleteness. Interestingly the productivity of $\bbbc(\cAA,I)$ is consistent with the undecidability of the existence of suitable invariants. This connection opens interesting future developments on the expressivity of abstract domains to represent program invariants.
+
+In \cite{GiacobazziM16} the authors studied semantic transformations that minimally modify a semantic function to make it globally complete for a fixed abstract domain. These results can be seen as a model-based attempt to cover the class of all predicate transformers that are globally complete. The limit of that approach is in its pure model-based nature: it transforms the semantics to achieve completeness, not the code that computes that semantics. 
+We instead attack the problem from a recursion-theoretic perspective, namely by means of program transformations. By characterizing effective program transformations that remove local incompleteness we are able to precisely identify a computably enumerable covering of $\bbbc(\cAA,I)$, hence achieving local completeness by code repair.
+
+\section{Preliminaries}
+%
+In this section we introduce some mathematical notation and background in recursion theory and abstract interpretation. For the first the reader can refer to \cite{odifreddi,soare,rogers}. For the latter see \cite{CC77,CC79,Cousotbook}.
+
+\subsection{Sets and functions}
+Throughout this work, $\nat$ will denote the set of all natural numbers and $\aleph_0$ its cardinality. 
+Given two sets $S$ and $T$, $\wp(S)$ denotes the powerset of $S$, $S \smallsetminus T$ denotes the set-difference between $S$ and $T$, 
+$\compl{S}$ denotes the complement of $S$ with respect to the relevant universe of 
+discourse, and $S \subsetneq T$ denotes strict inclusion. We use exponents to
+represent the repeated Cartesian product of a set with itself, so
+\(S \times S = S^2 \) and \(S^{n+1} = S^n \times S\) for all \(n \geq 2\).
+
+A function \(f\) is introduced $f:S\ra T$ if \(f\) is a total function from \(S\)
+to \(T\) or $f: S\pto T$ if it is a partial function. For any \(x \in S\), we write
+$f(x){\downarrow}$ to signify that \(f\) is defined for the particular \(x\) and
+$f(x){\uparrow}$ to signify that $f(x)$ is not defined. The domain and range of $f$ are, respectively, the sets
+\[\dom(f) \ud \sset{x \in S }{ f(x){\downarrow}}~~\mbox{and}~~\range(f)\ud\sset{f(x)}{x \in S\cap \dom(f)}.\] 
+Given a set $X\subseteq S$, the image of \(f\) on \(X\) is
+\[\ok f(X) \ud \{f(x)~|~x\in X\cap \dom(f)\}.\]
+Two partial functions $f,g: S\pto T$ are extensionally equivalent, denoted $f\cong g$, if $\dom(f)=\dom(g)$ and \(f(x) = g(x)\) for all \(x \in \dom(f) = \dom(g)\).
+
+Occasionally, we define functions using $\lambda$-notation $\lambda x \st f(x)$; 
+often, this notation is used when we want to emphasize the arguments of the function.
+For any two functions $f : S \pto T$ and $g : T \pto U$, $g \circ f : S \pto U$, we write
+\((\fcomp{f}{g})(x)\) to denote the composition of \(f\) and \(g\) where
+\((\fcomp{f}{g})(x)\defined\) when both $g(x)\defined$ and $f(g(x))\defined$; otherwise,
+$(f \circ g)(x){\uparrow}$. 
+
+\subsection{Basic Order Theory}
+
+A set $L$ endowed with a partial order relation $\leq$ is called a poset and 
+is denoted $\tuple{L,\leq}$. A \emph{chain} of the poset $\tuple{L,\leq}$ is a 
+sequence of elements in $L$ totally-ordered under the relation \(\leq\).
+A poset $\tuple{L,\leq}$ is a \emph{lattice} whenever binary least upper bounds (lubs)
+$x \vee y$ and greatest lower bounds (glbs) $x \wedge y$ exist for all  $x,y \in L$. 
+A lattice $\tuple{L,\leq}$ is \emph{complete} if every subset $X \subseteq L$ (including
+the empty set) has a unique lub $\bigvee X$ and glb $\bigwedge X$. We write $\tuple{L, 
+\leq, \vee, \wedge, \top, \bot}$ to denote the complete lattice $L$ with partial order
+$\leq$, lub $\vee$, glb $\wedge$, greatest element (top) $\top$, and least element
+(bottom) $\bot$. A poset $\tuple{L,\leq}$ is an $\omega$-cpo if $L$ contains the lubs of all $\omega$-chains---chains that can be indexed by the natural numbers.
+
+If $\tuple{L,\leq}$ is a poset and $f,g:S \ra L$, then \(f\) and \(g\) can be
+ordered with respect to the poset; we write $f \sqsubseteq g$ if
+$f(x) \leq g(x)$ for all $x \in S$. If $L$ is a (complete) lattice 
+then $\tuple{S\ra L,\sqsubseteq}$ is a (complete) lattice; the operators
+$\sqcup$ and $\sqcap$ are used to denote, respectively, the lub or glb of \(L\)
+or any of its chains or subsets. A function $f : L_1 \ra L_2$ between complete lattices is additive (co-additive) 
+if for all $Y \subseteq L_1$, $f(\vee_{L_1} Y ) = \vee_{L_2} f(Y)$ ($f(\wedge_{L_1} Y ) = \wedge_{L_2} f(Y ))$. Also, $f$ is continuous (co-continuous) when $f$ preserves lubs (glbs) of chains in $L_1$. Recall that any monotone function $f:L \ra L$ on a complete lattice $L$ 
+always has least and greatest fix-points, denoted $\lfp(f)$ and $\gfp(f)$
+respectively. If $f:L \ra L$ is continuous then  
+$\lfp(f)=\bigvee_{n\in\nat}f^n(\bot)$ where \(f^n\) is defined inductively so that 
+$f^0(x)\ud x$ and $f^{n+1}(x)\ud f(f^n(x))$ for all \(n \in \nat\). 
+
+\subsection{Basic recursion theory}\label{comp-sec}
+
+\subsubsection{Computable functions.}
+%In the following we recall the basic notions of computability. More details are in \cite{soare}. 
+Partial computable functions are (possibly partially-defined) functions that can
+be computed by a Turing Machine. We assume a surjective enumeration
+$\ccL$, also called a {\em programming system\/}, of partial computable functions
+of $n$ arguments and $m$ outputs for any $n,m\in\nat$. For any $e\in\nat$, the
+function $\pfunction{e}{n}{m}$ denotes a partial computable function of index $e$ taking $n$ arguments and producing $m$ outputs. Here, $e$ represents the code of a unique Turing machine that computes $\pfunction{e}{n}{m}$.
+Following standard convention, we assume the partial functions $\pfunction{e}{n}{m}$ are defined over the infinite denumerable domains $\Domain^n$ and $\Domain^m$
+(i.e., for all $n\in\omega:\,|\Domain^n|=\aleph_0$) where \(\Domain\) includes
+a representation of all natural numbers and the programming system $\ccL$ (i.e.,
+$\nat \subseteq \Domain$ and $\ccL\subseteq\Domain$). Under the convention, the
+partial computable functions are $\pfunction{e}{n}{m}: \Domain^n \pto \Domain^m$,
+for all $e\in\ccL$ and all $n,m\in\nat$. In practice, we omit $n$ and/or $m$ when
+the number of arguments and outputs of function is irrelevant or clear from context. 
+
+A programming system $\ccL$ is considered {\em acceptable\/} if 
+it is {\em universal\/}; that is, if it includes a partial computable function $\Interp:\ccL\times\Domain\pto\Domain$ such that if $\{\psi_i\}_{i\in\omega}$ is an enumeration of all partial computable functions then $\Interp(i,x)=\psi_{i}(x)$, and 
+there exists a total computable function $t:\omega\ra\ccL$ such that $\varphi_{t(i)}=\psi_{i}$.
+Because acceptable enumerations are isomorphic by Rogers' isomorphism, we can identify the index $e\in \ccL$ as the corresponding program in the given programming system $\ccL$, which is usually a programming language. Hence 
+$\pfunction{e}{}{}$ is the function (semantics) computed by the program $e\in\ccL$.
+A set of programs $S\subseteq\ccL$ is an {\em extensional property\/} of $\ccL$ if 
+$e\in S~\wedge~\pfunction{e}{}{}\cong\pfunction{i}{}{}~\Ra~i\in S$. Two sets $A,B\subseteq\ccL$ are extensionally equivalent if 
+$\sset{\pfunction{e}{}{}}{e\in A}=\sset{\pfunction{e}{}{}}{e\in B}$. $A$ is a {\em covering\/} (a.k.a, representation) of 
+$B$ when $A$ and $B$ are extensionally equivalent and $A\subsetneq B$. 
+
+%\smallskip
+
+%+++ Acceptable indexes
+%By G\"odel numbering we can associate a unique natural number with any program specified in some formalism for recursive functions, e.g., Turing Machines or programming languages. 
+%
+%Since
+%$\Imp$ is a Turing complete language, we have that $\index \ud \lambda n\in \nat.\; \varphi_{\gn^{-1}(n)}$ provides an acceptable numbering for all partial recursive functions, called standard enumeration. By assuming this standard enumeration $\index$ we often denote simply by $\varphi_n$ the partial recursive function corresponding to the program $\gn^{-1}(n)$. 
+%%
+%Recall that a numbering system $\index: \nat \ra (\cup_{n\in \nat_+}\Store_n \pto \Store_n) $ of partial recursive functions is 
+%acceptable if  provides an enumeration of all (and only) partial recursive functions in $\cup_{n\in \nat_+}\Store_n \pto \Store_n$ such that:  for all $n\in\nat$ and $P\in \Imp_n$:
+%\begin{enumerate}
+%\item There exists an index $i\in\nat$ such that for all $\rho \in \Store_n$:
+%$$\index(i)(\gn(P),\rho) = \varphi_P(\rho).$$ In the following we denote 
+%$\Interp:\Imp_n\times\Store_n\ra\Store_n$ any implementation in $\Imp_{n+1}$ of the function 
+%$\lambda \tuple{P,\rho}.\, \varphi_{\gn^{-1}(i)}(\gn(P),\rho)$.
+%
+%\item There exists a total recursive function $s:\Store_{n+1}\ra\nat$ such that for 
+%all $\tuple{z_1,...,z_n}\in \Store_n$ and $\tuple{y_1,...,y_m}\in \Store_m$:
+%$$\index(s(\gn(P),z_1,\ldots,z_n))(y_1,\ldots,y_m) = \varphi_P(z_1,\ldots,z_n,y_1,\ldots,y_m).$$
+%%Given $\rho\in\Store$ we denote $\rho_{x_1,\ldots,x_n}$ its restriction to the variables $x_1,\ldots,x_n$.
+%In the following we denote $\Spec:\Imp_{n+m}\times\Store_n\ra\Imp_m$ any implementation in $\Imp_{n+1}$ of the function $\lambda \tuple{P,\rho}.\, \gn^{-1}(s(\gn(P),\rho))$.
+%\end{enumerate}
+%$\Interp$ defined in (1) above is called an {\em enumeration} and $\Spec$ defined in (2)  
+%is called a {\em parametrisation} or s-m-n Theorem.
+%$\Interp$ and $\Spec$ are, respectively, called interpreters and specialisers.
+%The first Futamura projection \cite{JGS93} states that for any program $P\in\Imp$,
+%$\grasse{P} = \grasse{\grasse{\Spec}(\Interp,\gn(P))}$ (where $n=1$ in (2)).
+
+%Let $\ccD=\cup_{n\in\nat}\Domain^n$. 
+
+\subsubsection{Computability.}
+A set $S\subseteq \Domain$ is computably enumerable (\re) if there exists a partial computable function $\pfunction{e}{}{}$ such that $S=\dom(\pfunction{e}{}{})$. It is known that $S$ is {\re} iff $S = \pfunction{e}{}{}(\Domain)\ud\range(\pfunction{e}{}{})$ for some total computable function $\pfunction{e}{}{}$.
+For a partial computable function $\pfunction{e}{}{}$ we denote $W_e = \dom(\pfunction{e}{}{})$. $S\subseteq \Domain$ is {\em decidable} if and only if $S$ and $\compl{S}$ are \re.
+The set of all {\re} sets in $\Domain$ is $\wpre(\Domain)\ud \sset{W_e \in \wp(\Domain)}{e\in\ccL}$. 
+It is known \cite[Union Theorem~1.9, Chapter~II]{soare} 
+that $\tuple{\wpre(\Domain),\subseteq}$ is 
+a distributive lattice with $\varnothing$ and $\Domain$ as, respectively, bottom and top elements and that
+the set of decidable sets $\wprec(\Domain) \ud \sset{S\in \wp(\Domain)}{
+S, \compl{S}\in \wpre(\Domain)}$
+is a Boolean algebra $\ok{\tuple{\wprec(\Domain),\subseteq}}$. 
+A sequence $\ok{\{V_e\}_{e\in\nat}\subseteq\wpre(\Domain)}$ is {\em uniformly {\re}} if there exists a total computable function $f:\nat\ra\nat$ such that $V_e=W_{f(e)}$. Such sequence $\{W_{f(e)}\}_{e\in\nat}$ is uniformly decidable if the set $\sset{(x,e)}{x\in W_{f(e)}}$ is decidable.
+
+\smallskip
+
+It is known that for any $n\in\nat$ there exists a primitive computable predicate $\NF$ of $n+2$ arguments such that 
+for each $e\in\ccL$ and $x\in\Domain$: $\pfunction{e}{n}{}(x){\downarrow} \Leftrightarrow \exists t.\NF(e,x,t)$ \cite{kleene38}. Here $\NF(e,x,t)$ may represent the primitive computable predicate which holds true if the program $e\in\ccL$ has terminated its computation in $t$-steps in some model of computation for the programming system $\ccL$, yet returning the value $\pfunction{e}{n}{}(x)$. 
+% Given a partial computable function $\pfunction{e}{}{}$ and $n\in\nat$ we denote:
+% \[
+% \ptfunction{e}{}{}{x}{n} =
+% \left\{
+% \begin{array}{ll}
+% \pfunction{e}{}{}(x) & \mbox{if $\exists t\leq n.\NF(e,x,t)$}\\
+% \uparrow & \mbox{otherwise}
+% \end{array}\right.
+% \]
+Given $e\in\ccL$ ant $t\in\omega$ we denote by $\dovetl(e,t)\subsetneq\Domain$ the 
+set of all inputs $x\in \Domain$ determined in $t$-steps of the dovetail procedure such that $\pfunction{e}{}{}(x){\downarrow}$. It is known that if $e\in\ccL$ then $W_e=\cup_{t\in\omega}\dovetl(e,t)$.
+
+\smallskip
+
+%We define $\wpre(\ccD)\ud \cup_{n\in \nat} \wpre(\Domain^n)$ and $\wprec(\ccD) \ud \cup_{n\in \nat} \wprec(\Domain^n)$.
+Not all elements in $\wp(\Domain)$ are \re: 
+both $\wpre(\Domain)$ and $\wprec(\Domain)$ are denumerable and $\wprec(\Domain)\subsetneq\wpre(\Domain)\subsetneq\wp(\Domain)$.
+A set $S\in\wp(\Domain)$ is {\em creative\/} if it is {\re} and its complement $\compl{S}=\Domain\smallsetminus S$ is {\em productive\/} \cite{Post44,Myhill55}, i.e., there exists a total computable function $\pfunction{e}{}{}:\ccL\ra\Domain$ such that
+$\forall x\in\ccL. \, W_x\subseteq \compl{S}~\Rightarrow~\pfunction{e}{}{}(x)\in\compl{S}\smallsetminus W_x$.
+It is clear that all productive sets are not {\re}. It is also known that, while the complement of a creative set is always productive, the complement of a productive set may be productive, e.g., $\sset{e\in \ccL}{\mbox{$W_e\in\wprec(\Domain)$}}$ \cite{Dekker55}. It is also known that creative sets are {\em complete\/} in $\wpre(\Domain)$, i.e., $S\in \wp(\Domain)$ is creative iff $S\in\wpre(\Domain)$ and
+for any $A\in\wpre(\Domain)$, $A\preceq_f S$. Here for $A\in \wp(\Domain)$ and $S\in \wp(\Domain)$, $A\preceq_f S$ denotes {\em many-to-one reducibility}, i.e., the existence of a total computable function $f:\Domain \ra \Domain$ such that for all $x\in \Domain$: $x\in A~\Leftrightarrow~f(x)\in S$. It is known that if $S$ is productive and $S\preceq_f X$ then also $X$ is productive. It is known that $\ok{K\ud\sset{e}{\pfunction{e}{}{}(e){\downarrow}}\in\wpre(\Domain)}$ is creative and therefore
+$\ok{\compl{K}}$ is productive.
+
+\smallskip
+
+The Kleene arithmetical hierarchy is particularly important to compare properties of programs. 
+We denote by $\Sigma^0_0=\Pi^0_0=\Delta_0$ the set of all decidable sets, i.e., $\Sigma^0_0=\Pi^0_0=\Delta_0 = \wprec(\Domain)$. 
+For $n\geq 1$ we define when a set $A\in \wp(\Domain)$ is arithmetical as follows:
+\begin{itemize}
+\item $A\in\Sigma^0_n$ if there exists a decidable predicate $R(x,y_1,\ldots,y_n)\subseteq \Domain^{n+1}$:
+\begin{align*}
+x\in A~\Lra~\exists y_1,\forall y_2\ldots Q y_n.\;& R(x,y_1,\ldots,y_n)\\
+&\mbox{where $Q=\exists$ if $n\in 2\nat+1$, and $Q=\forall$ if $n\in 2\nat$.}
+\end{align*}
+\item $A\in\Pi^0_n$ if there exists a decidable predicate $R(x,y_1,\ldots,y_n)\subseteq \Domain^{n+1}$:
+\begin{align*}
+x\in A~\Lra~\forall y_1,\exists y_2\ldots Q y_n.\;& R(x,y_1,\ldots,y_n)~\\
+&\mbox{where $Q=\forall$ if $n\in 2\nat+1$, and $Q=\exists$ if $n\in 2\nat$.}
+\end{align*}
+\item $A\in\Delta_n$ if $A\in\Sigma^0_n\cap\Pi^0_n$.
+\end{itemize}
+We know $A\in\Sigma^0_n~\Lra~\compl{A}\in\Pi^0_n$, 
+$A\in\Sigma^0_n\cup\Pi^0_n\Rightarrow\forall m>n.\; A\in\Delta_{m}=\Sigma^0_m\cap\Pi^0_m$, 
+%$\Sigma^0_n\cup\Pi^0_n\subset\Delta_{n+1}=\Sigma^0_{n+1}\cap\Pi^0_{n+1}$,
+$B\preceq_f A~\wedge~ A\in\Sigma^0_n\Rightarrow B\in\Sigma^0_n$, and
+ $\ok{R\in\Sigma^0_{n>0}}~ \Ra~ \sset{x}{\exists y.\;R(x,y)}\in\Sigma^0_n$ \cite{rogers}.
+
+%\smallskip
+\subsubsection{Program semantics.}
+Although in the following $\ccL$ can be any acceptable programming system, we sometimes consider $\ccL=\Imp$, where $\Imp$ is a simple {\tt while}-programming language with arithmetic ${\tt Exp}$ and Boolean ${\tt BExp}$ expressions (see \cite{winskel}), whose syntax is as follows: 
+%
+  \begin{align*}
+%   \AexpS \ni \Aexp  ::= &\; v\in\integer\mid x\in \Var\mid  \Aexp+\Aexp\mid \Aexp-\Aexp\mid \Aexp*\Aexp \\
+   {\tt Exp} \ni a  ::= &\; v\in\Domain\mid x\in \Var\mid  f(a)\mid W \\
+   {\tt BExp} \ni b ::= &\; {\tt true}\mid {\tt false} \mid a =a \mid a > a\mid b\wedge b\mid\neg b\mid R\\
+    {\Imp}\ni p ::= &\;{\tt skip}\mid x:=\Aexp\mid p;p\mid 
+    {\tt if} ~b~ {\tt then} ~p~ {\tt else} ~p \mid 
+    {\tt while} ~b~ \{ ~p~\}
+   \end{align*}
+where $f$ ranges over partial computable functions, $R$ ranges over decidable predicates and
+$W$ ranges over arbitrary decidable sets of elements in $\Domain$. 
+In this case $\Domain$ contains basic values (e.g., integers in $\integer$, booleans in $\{{\tt true, false}\}$, finite sets, etc.). Let $\scl$ denotes the set of all stores $\sigma:\Var\ra\Domain$, i.e., total computable functions that assign values in $\Domain$ to finite vectors of variables in $\Var$. When $S\subseteq\scl$ is a set of stores then a predicate transformer semantics of a program $p\in\Imp$ can be inductively defined as usual as follows $\grasse{p}: \wp(\scl)\ra \wp(\scl)$ where:
+%{\small
+\begin{align*}
+\grasse{{\tt skip}}S &\defi S\\
+\grasse{x:=\Aexp}S &\defi \{\ \sigma[x\mapsto \grasse{\Aexp}\sigma] \mid \sigma \in S\ \}\\
+\grasse{p_1 ; p_2 } S &\defi \grasse{p_2}(\grasse{p_1}S)\\
+\grasse{{\tt if}\ \Bexp\ {\tt then}\ p_1\ {\tt else}\ p_2}S &\defi  \grasse{p_1}(\grasse{\Bexp}S) \cup \grasse{p_2}(\grasse{\neg\Bexp}S)\\
+%\grasse{\textbf{if}\ \PBexp\ \textbf{then}\ \Comm}S &\defi  \grasse{\Comm}\grasse{\PBexp}S\\
+\grasse{{\tt while}\ \Bexp\  \{\ p\ \} }S &\defi \grasse{\neg \Bexp}\big(\lfp (\lambda T.\: S \cup \grasse{p}(\grasse{\Bexp}T))\big).
+\end{align*}
+In this case
+$\grasse{b}S=\sset{\sigma\in S}{\sigma\models b}$, where $\sigma\models b$ holds when the store $\sigma$ viewed as a substitution satisfies $b$, and $\grasse{a}S=\sset{\grasseb{a}\sigma}{\sigma\in S}$, where $\grasseb{a}\sigma\in\Domain$ is the value that the expression $a$ can take with store $\sigma$. We assume the total computable functions ${\tt input}:\Var\times\Domain\ra\scl$ and ${\tt out}:\Var\times\scl\ra\Domain$ such that 
+${\tt input}(x,v)$ builds the input store mapping $x$ to $v$ and
+${\tt out}(x,\sigma) = \sigma(x)$, where $x$ is some output vector of variables. We assume that the output vector of variables belongs to the set of free variables of the program $e$, devoted $FV(e)$, and it will be omitted when this is obvious by the context or not relevant.
+For any $e\in\Imp$, we have then $\pfunction{e}{}{}\ud \lambda x.\,{\tt out}(FV(e),\grasse{e}(\{{\tt input}(FV(e),x)\}))$. 
+
+\subsection{Abstract interpretation} \label{cc-sec}
+
+\subsubsection{Abstract domains.}
+In standard Galois connection based abstract interpretation~\cite{CC77,CC79}, 
+abstract domains (also called abstractions) are specified by Galois connections/insertions
+(GCs/GIs for short). 
+Concrete and abstract domains are usually complete lattices, resp.\ $\tuple{C,\leq_C}$ and
+$\tuple{A,\leq_A}$,
+which are related by abstraction and concretization maps
+$\alpha:C\ra A$ and $\gamma:A \ra C$ that give
+rise to a GC $(\alpha,C,A,\gamma)$ ($\tuple{\alpha,\gamma}$ for short), that is,
+for all $a\in A$ and $c\in C$,
+$\alpha(c) \leq_A a \Lra c \leq_C \gamma(a)$. 
+A GC is a GI when $\alpha\circ\gamma=\lambda x.x$. In the following we assume GIs only.
+Let us recall some basic properties of a GI
+$(\alpha,C,A,\gamma)$: (1)~$\alpha$ is additive and  $\gamma$ is co-additive;  
+(2)~$\gamma\circ \alpha: C\ra C$ is an upper closure operator, namely, it is 
+a monotone, idempotent and increasing (i.e., $x \leq \gamma(\alpha(x))$) function; (3) if $\mu:C\ra C$ is an upper closure operator
+then $(\mu,C,\mu(C),\lambda x.x)$ is a GI. 
+If $\alpha:C\ra A$ is an additive function then it induces a GC $(\alpha,C,A,\alpha^+)$ 
+where the concretization $\alpha^+:A \ra C$ is defined as right-adjoint of $\alpha$, i.e., 
+$\alpha^+(a) \defi \vee_C \{c\in C  ~|~ \alpha(c) \leq_A a\}$. Dually, 
+if $\gamma:C\ra A$ is a co-additive function then $(\gamma^-,C,A,\gamma)$ is a GC where
+$\gamma^- \defi \lambda c. \wedge_A \{a\in A  ~|~ c \leq_C \gamma(a)\}$ is the left-adjoint of $\gamma$. 
+
+\smallskip
+
+We use $\Abs(C)$ to denote all the possible abstractions of a concrete domain $C$, where
+$A\in \Abs(C)$ means that $A$ is an abstract domain of $C$ defined by some GI which is left unspecified, 
+and $\auco{}{\cAA}$ is its corresponding upper closure operator.
+%while the notations $A_{\alpha}\in \Abs(C)$ and $A_{\alpha,\gamma}\in \Abs(C)$ are used to
+%emphasize the underlying abstraction and concretization maps $\alpha$ and $\gamma$. 
+If $A_1,A_2\in \Abs(C)$ then $A_1$ is equivalent to $A_2$, denoted by $A_1\sim A_2$, when 
+$\gamma_{A_1}(A_1) = \gamma_{A_2}(A_2)$. The quotient  $\Abs(C)_{/\sim}$ is
+called the lattice of abstractions because it turns out to be a complete lattice when $C$ is a cpo \cite{ran99}
+w.r.t.\ the relative precision ordering: 
+$A_1 \sqsubseteq A_2$ iff for any $c\in C$, $\gamma_{A_1}(\alpha_{A_1}(c)) \leq_C  \gamma_{A_2}(\alpha_{A_2}(c))$. 
+$\Abs(C)_{/\sim}$ is indeed isomorphic to the lattice of upper closure operators $\uco(C)$ on the concrete lattice $\tuple{C,\leq_C}$.
+Thus, $A_1 \sqsubseteq A_2$ means that $A_1$ is a more precise abstraction than $A_2$, or, equivalently, that $A_2$ abstracts $A_1$.  
+An abstract domain 
+$A\in \Abs(C)$ is called {\em trivial\/} when 
+$A$ is either the least or the greatest abstract domain in $\tuple{\Abs(C)_{/\sim},\sqsubseteq}$, respectively $\auco{}{\cAA} = \lambda x.x$ (called the identical abstraction) or $\auco{}{\cAA} =
+\lambda x.\top_C$, called the top abstraction and denoted $\cAA=\top$. We say that $\cAA$ is continuous when $\auco{}{\cAA}$ is continuous.
+
+%A lub $\sqcup_{i} A_i$ in the lattice of abstractions is therefore the most precise domain 
+%in $\Abs(C)_{/\sim}$ which abstracts all the $A_i$'s, while  the glb $\sqcap_{i} A_i$ is the most abstract (i.e., less precise) domain in $\Abs(C)_{/\sim}$ which is more precise than all the $A_i$'s (this is known as reduced product of the $A_i$'s).  
+
+\subsubsection{Soundness and Completeness.}
+Let $f:C\ra C$ be a
+concrete monotone function---for simplicity 
+we consider unary functions---and let
+ $\ok{f^\sharp:A \ra A}$ be a corresponding monotone abstract function
+ defined on  $\cAA\in \Abs(C)$ with GI $\tuple{\alpha,\gamma}$.
+$\ok{f^\sharp}$ is a correct (or sound) approximation of $f$ on $A$
+when $\ok{\alpha \circ f \sqsubseteq f^\sharp\circ \alpha}$ holds. 
+If $\ok{f^\sharp}$ is correct for $f$ then it is fix-point correct, that is, 
+$\alpha(\lfp(f)) \leq_A  \lfp(\ok{f^\sharp})$ holds. 
+The abstract function
+$\ok{f^A \ud \alpha \circ f \circ \gamma: A\rightarrow A}$ 
+is called the {\em best
+correct approximation\/} (bca for short) of $f$ on $A$, because it turns out that any abstract
+function
+$\ok{f^\sharp}$ is a correct approximation of $f$ iff $\ok{f^A \sqsubseteq f^\sharp}$.
+Hence,
+$\ok{f^A}$ plays the role of the 
+best possible correct approximation of $f$ on the abstract domain $A$ \cite{CC79}. The tuple $\tuple{f,\cAA,\ok{f^\sharp}}$ fully defines an abstract interpretation. It is 
+(globally) complete when  
+$\ok{\alpha \circ f = f^\sharp \circ \alpha}$
+\cite{CC79,GRS00}. When $\ok{f^\sharp}$ is an abstract transfer function on $A$ used by some static program analysis, completeness intuitively encodes an optimal precision for $\ok{f^\sharp}$, meaning 
+that the abstract behavior of $\ok{f^\sharp}$ on $A$ 
+exactly matches the abstraction in $A$ of the concrete behavior of $f$.  
+If $\ok{f^\sharp}$ is complete for $f$ then
+least fix-point completeness holds (also called fix-point transfer), i.e.,
+$\alpha(\lfp(f)) =  \lfp(\ok{f^\sharp})$ holds. 
+It turns out  that completeness $\ok{\alpha \circ f = f^\sharp \circ \alpha}$  holds  
+iff $\ok{\alpha\circ f = (\alpha\circ f\circ\gamma)\circ \alpha = f^A \circ \alpha}$ holds.  
+This corresponds precisely to ask that the following equation holds for all $x\in C$:
+\begin{equation}\label{basic-completeness}
+\auco{}{\cAA}(f(\auco{}{\cAA}(x)))=\auco{}{\cAA}(f(x)).
+\end{equation}
+When (\ref{basic-completeness}) holds only for a subset $S$ of the input domain, i.e., for all $x\in S\subseteq C$, then $\tuple{f,\cAA,\ok{f^\sharp}}$ is {\em locally complete} w.r.t.\ $S$ \cite{BruniGGR21}. Of course local completeness is in general a weaker property than completeness. 
+Let us recall that function composition preserves completeness, that is, if $f$ and $g$ are complete on $A$ then $f\circ g$ is complete on $A$.
+It has been recently proved that local completeness plays a key role in guaranteeing that the composition of bca's is still a bca \cite{GiacobazziR25}, i.e., 
+$f_1^{\cAA}\comp f_2^{\cAA} = (f_1\comp f_2)^{\cAA}$.
+In both cases, the possibility of
+defining a complete approximation $\ok{f^\sharp}$ of $f$ on some $A\in \Abs(C)$ 
+only depends upon the concrete function $f$ and on the abstraction $A$, that is, 
+$\ok{f^A}$ is the only possible option as complete approximation of $f$. Therefore 
+if $\ok{f^\sharp}$ is complete this implies that $\ok{f^\sharp=f^\cAA}$ while 
+if $\ok{f^\cAA}$ is not complete then no abstract interpretation $\ok{f^\sharp}$ exists which can be complete.
+%
+% An abstract function $\ok{f^\sharp}:A\rightarrow A$ is a forward complete (f-complete for short) approximation of $f$ on $A$  
+% when  
+% $\ok{f \circ \gamma = \gamma \circ f^\sharp}$
+% holds. The intuition here is that forward completeness for $\ok{f^\sharp}$  means 
+% that $\ok{f^\sharp}$ acts on abstract values precisely as $f$ does, 
+% up to the encoding of abstract values provided by the concretization map.   
+% If $\ok{f^\sharp}$ is f-complete for $f$ then
+% fix-point completeness holds for greatest fix-points, that is,
+% $\alpha(\gfp(f)) =  \gfp(\ok{f^\sharp})$ holds.
+% Here,  the f-completeness  $\ok{f \circ \gamma = \gamma \circ f^\sharp}$ equation holds
+% iff $f \circ \gamma = \gamma \circ \alpha \circ f \circ \gamma = \gamma \circ f^A$ holds,
+% so that also in this case the chance of
+% defining a f-complete approximation $\ok{f^\sharp}$  
+% only depends on the concrete function $f$ and on the abstraction $A_{\alpha,\gamma}$ and
+% $\ok{f^A}$ is the only possible f-complete approximation of $f$. 
+%
+
+\section{Abstract interpretation in standard recursion theory}\label{AbsIntRec}
+
+Standard recursion theory is a theory of sets (properties) and functions indexed on elements of a programming system, i.e., programs. In the following we consider abstract interpretation in the context of partial computable functions. In this case $\cAA\in\Abs(\wpre(\Domain))$, meaning that we are only interested in abstractions of properties of programs, i.e., of properties $W_e\in \wpre(\Domain)$ for some $e\in\ccL$. 
+When abstract interpretation is applied to program analysis or automated program verification, 
+the abstraction is intended to associate with each program under inspection a decidable approximation of its often undecidable semantics. 
+This is because the analysis of programs requires decidable answers to undecidable questions such as
+those expressed as extensional properties of programs and concerning their dynamic behavior. 
+
+The notion of decidable abstract interpretation has been studied in \cite{CGR18} for the comparison of the difficulty in analyzing and verifying programs. The notion of decidable abstraction in \cite{CGR18} specifies an abstract domain as a collection of recursive sets (properties) such that the relation of sub-set inclusion is decidable. We follow \cite{CGR18} and define $\cAA$ {\em decidable\/} when for all $e\in\ccL$, $\auco{}{\cAA}(W_e)$ is decidable. Note that among the trivial abstractions only $\cAA=\{\Domain\}$, i.e., $\auco{}{\cAA}=\lambda x.\Domain$, is decidable. $\auco{}{\cAA} = \lambda x.x$ is indeed clearly not decidable.
+It is also worth noting that decidability does not imply that $\{\auco{}{\cAA}(W_e)\}_{e\in\ccL}$ is uniformly decidable. This would require that we can decide whether $x\in\auco{}{\cAA}(W_e)$ uniformly on both $x\in\Domain$ and $e\in\ccL$.
+Next result proves that the set $\sset{(x,i)}{x\in\auco{}{\cAA}(W_i)}$ is decidable if and only if $\auco{}{\cAA}=\lambda x.\Domain$, i.e., $\cAA$ is the only trivial decidable abstraction.
+
+\begin{theorem}\label{non-uniformrec}
+    $\{\auco{}{\cAA}(W_e)\}_{e\in\ccL}$ is uniformly decidable if and only if $\auco{}{\cAA}=\lambda x.\Domain$.
+\end{theorem}
+
+\begin{proof}
+    Assume $\{\auco{}{\cAA}(W_e)\}_{e\in\ccL}$ is uniformly decidable and $\auco{}{\cAA}\neq\lambda x.\Domain$. This means that $\sset{(x,i)}{x\in\auco{}{\cAA}(W_i)}$ is decidable and there exists $i\in\ccL$ and $\dot{x}\in\Domain$ such that $\dot{x}\not\in \auco{}{\cAA}(W_i)$. Consider the set $S_{\dot{x}}\ud\sset{i}{\dot{x}\not\in \auco{}{\cAA}(W_i)}\subseteq\ccL$. It is clear that $S_{\dot{x}}$ is an extensional property because if $e\in S_{\dot{x}}$ then $\dot{x}\not\in \auco{}{\cAA}(W_e)$ and if $\pfunction{e}{}{}\cong\pfunction{j}{}{}$ then $W_e=W_j$, therefore $\dot{x}\not\in \auco{}{\cAA}(W_j)$, i.e., $j\in S_{\dot{x}}$. By Rice's theorem $S_{\dot{x}}$ is decidable if and only if $S_{\dot{x}}=\varnothing$ or $S_{\dot{x}}=\ccL$, but none of these hold because: (1) 
+    the program $*$ in Fig.~\ref{simple-code} is such that $W_*=\varnothing$ therefore because $\varnothing\subseteq W_i$ then by monotonicity $\auco{}{\cAA}(W_*)\subseteq \auco{}{\cAA}(W_i)$ which implies that
+    $\dot{x}\not\in \auco{}{\cAA}(W_*)$ and therefore $*\in S_{\dot{x}}$, and (2) the program $p$ in Fig.~\ref{simple-code} is such that $W_p=\{\dot{x}\}$ which implies that $\dot{x}\in \auco{}{\cAA}(W_p)$, hence $p\not\in S_{\dot{x}}$. \myqed
+    \begin{figure}[t]
+    \begin{minipage}{6cm}
+    \begin{center}
+    \begin{align*}
+    &1:~{\tt input}(x);\\
+    &2:~{\tt while}\ {\tt true}\ \{ {\tt skip}\}.\\
+    \end{align*}
+    \end{center}
+    \end{minipage}
+    \begin{minipage}{6cm}
+    \begin{center}
+    \begin{align*}
+    &1:~{\tt input}(x);\\
+    &2:~{\tt if}\ x =\dot{x}\ {\tt then}\ {\tt skip}\\
+    &3:~\qquad{\tt else}\ {\tt while}\ {\tt true}\ \{ {\tt skip}\}.
+    \end{align*}
+    \end{center}
+    \end{minipage}
+        \caption{The computable functions $\pfunction{*}{}{}$ and \pfunction{p}{}{}
+        such that $W_*=\varnothing$ and $W_p=\{\dot{x}\}.$}\label{simple-code}
+    \end{figure}
+\end{proof}
+
+We introduce the notion of a uniform closure operator as the effective counterpart of an upper closure operator: a transformation on program indices that realizes, at the level of programs, the closure induced by an abstract domain on the underlying semantic objects.
+
+\begin{definition}
+Let $r$ be a total computable function. $r$ is a uniform closure operator if for every index~$i\in\ccL$:
+\begin{enumerate}
+  \item $W_i \subseteq W_j ~\Rightarrow~W_{r(i)}\subseteq W_{r(j)}$,
+  \item $W_i \subseteq W_{r(i)}$,
+  \item $W_{r(i)}= W_{r(r(i))}$
+\end{enumerate}
+$r$ is decidable if for every index~$i\in\ccL$ we have that $W_{r(i)}$ is decidable.
+%$r$ is uniformly decidable if for every $x\in\Domain$ and $i\in\ccL$: $x\in W_{r(i)}$ is decidable from the pair $(i,x)$.
+\end{definition}
+
+The following proposition proves that continuous and decidable abstract domains induce decidable uniform closure operators on $\ccL$.
+
+\begin{proposition}
+    Let $\cAA$ be decidable and continuous. Then $\{\auco{}{\cAA}(W_i)\}_{i\in\ccL}$ is a uniformly {\re} sequence and there exists a decidable uniform closure operator
+    $r$ such that $\auco{}{\cAA}(W_i)=W_{r(i)}$ for all $i\in\ccL$.
+\end{proposition}
+
+\begin{proof}
+    By continuity of $\auco{}{\cAA}$ we have that 
+    \[
+    \begin{array}{lll}
+    \exists t.\; x\in\auco{}{\cAA}(\dovetl(i,t)) &\Leftrightarrow& x\in\cup_{t\in\omega}\auco{}{\cAA}(\dovetl(i,t))\\[1ex]
+    &\Leftrightarrow& x\in\auco{}{\cAA}(\cup_{t\in\omega}\dovetl(i,t))\\[1ex]
+    &\Leftrightarrow& x\in\auco{}{\cAA}(W_i).
+    \end{array}
+    \]
+    Therefore we can define the following partial computable function:
+    \[
+    \pfunction{p}{}{}(i,x)=\left\{
+    \begin{array}{cl}
+       x &\mbox{if $\exists t.\, x\in\auco{}{\cAA}(\dovetl(i,t))$}\\[1ex]
+       \uparrow & \mbox{otherwise}
+    \end{array}\right .
+    \]
+    By the s-m-n theorem there exists a total computable function $g$ such that $\ok{\pfunction{g(p,i)}{}{}(x)=\pfunction{p}{}{}(i,x)}$. We set $\ok{r\ud\lambda i.\; g(p,i)}$. It is clear by continuity of $\auco{}{\cAA}$ that for all $i\in\ccL$: $W_{r(i)}=\sset{x}{\pfunction{p}{}{}(i,x){\downarrow}}=\sset{x}{\exists t.\; x\in\auco{}{\cAA}(\dovetl(i,t))}=\auco{}{\cAA}(W_i)$. Therefore by $\auco{}{\cAA}$ monotonicity, idempotency and extensivity we have $W_i\subseteq W_j~\Ra~\auco{}{\cAA}(W_i)\subseteq \auco{}{\cAA}(W_j)~\Leftrightarrow~W_{r(i)}\subseteq W_{r(j)}$, $W_i\subseteq \auco{}{\cAA}(W_i)=W_{r(i)}$ and 
+    $W_{r(r(i))}=\auco{}{\cAA}(W_{r(i)})=\auco{}{\cAA}(\auco{}{\cAA}(W_{i}))=\auco{}{\cAA}(W_{i})=W_{r(i)}$.
+    Decidability follows because all $W_{r(i)}$ are decidable. \myqed
+\end{proof}
+
+Uniformity plays a key role in viewing abstract interpretation within computability theory  because it expresses the fact that the abstraction function, in our case expressed by the closure operator $\auco{}{A}$, is itself defined by an algorithm (or a finite set of algorithms) that act uniformly and continuously over any input {\re} property. This is the case when $\auco{}{A}$ does not only encode the closure operation induced by a Galois insertion $\tuple{\alpha,\gamma}$, i.e., when $\auco{}{A}=\gamma\alpha$, but also the algorithm that computes the abstraction, i.e., that transforms a {\re} property $W_i$ into its abstraction $\auco{}{A}(W_i)$. In this sense, the hypothesis of continuity precisely corresponds to the effective computability of the abstraction operation. As observed above in Theorem~\ref{non-uniformrec}, if $r_{\cAA}$ is a decidable uniform closure operator associated with a decidable abstract domain $\cAA$, the uniform {\re} sequence $\{W_{r_{\cAA}(i)}\}_{i\in\ccL}$ cannot be uniformly decidable unless $r_{\cAA}$ maps any program $i\in\ccL$ into an always terminating program, i.e., $W_{r_{\cAA}(i)}=\Domain$, e.g., $r_{\cAA}(i)={\tt skip}$.
+
+\smallskip
+
+\begin{example}
+    Consider the non trivial interval abstract domain $\mathsf{Int}$ \cite{CC77}, whose elements represent any property $S\in\wpre(\integer)$ of the integer values that a program variable $x$ may assume during the computation by the least interval $\mathsf{Int}(S)=[a,b]$ such that $S\subseteq [a,b]$, where $a\leq b$, $a\in\integer\cup\{-\infty\}$ and $b\in\integer\cup\{+\infty\}$, meaning that $x\in[a,b]$. This forms a well known decidable abstract domain enjoying a GI. We can associate with the corresponding decidable closure operator $\auco{}{\mathsf{Int}}$ a uniform program transformation ${\tt int}:\ccL\ra\ccL$ as follows:
+    \[
+    \pfunction{p}{}{}(i,x)=\left\{
+    \begin{array}{ll}
+      x & \mbox{if $\exists z,y\in W_i.\, z\leq x\leq y$}\\
+      \uparrow & \mbox{otherwise}
+    \end{array}
+    \right .
+    \]
+    where by s-m-n theorem $\pfunction{{\tt int}(p,i)}{}{}(x)=\pfunction{p}{}{}(i,x)$. It is immediate to prove that for all $W_i\in\wpre(\integer)$, $\auco{}{\mathsf{Int}}(W_i)=W_{{\tt int}(p,i)}$, hence ${\tt int}$ is a uniform closure operator.
+\end{example}
+
+It is important to observe that the construction of the set $W_{{\tt int}(p,i)}$ corresponds precisely to dynamically checking the computed bounds of the program $i$. This is indeed achieved by sand-boxing, by the program transformation ${\tt int}$, the code of $i$ within $p$, as common practice in dynamic program analysis. This is the case of Daikon, a well-known tool for dynamic detection of approximate program invariants. Daikon infers likely invariants from executions, and these invariants can then be used for documentation, testing, or static checking \cite{Ernst-Daikon}.
+
+It is obvious by Rice's theorem that the above uniform closure ${\tt int}$ is decidable but not uniformly decidable, i.e., the set $\sset{(x,i)}{x\in W_{{\tt int}(p,i)}}$ is in general not decidable (because for $x\in\Domain$ the set $\sset{i}{x\in W_{{\tt int}(p,i)}}$ is extensional). It is worth noting that if we replace $\auco{}{\cAA}(W_i)$ with any upper approximations of $W_i$ as induced by a decidable abstract interpretation defined on $\cAA$ (e.g., by employing widening operations on intervals \cite{CC77}) we cannot have as result a uniform closure operator. Denote the decidable abstract semantics defined by a terminating abstract interpretation on an abstract domain $\cAA$ as $\ok{\grasse{\cdot}^\cAA:\ccL\times\cAA\ra\cAA}$. It is clear that the set $\ok{\sset{(x,i)}{x\in\gamma(\grasse{i}^\cAA(\top_A))}}$ is now decidable, but any total computable function $s$ obtainable by s-m-n theorem and mapping $i\in\ccL$ into the index $s(i)$ such that $\ok{W_{s(i)}=\gamma(\grasse{i}^\cAA(\top_A))}$ cannot be in general a uniform closure. This is because by monotonicity this would imply that the abstract semantics $\ok{\grasse{i}^\cAA}$ induces an extensional equivalence relation on $\ccL$ and we know that this holds for trivial abstractions only \cite{BruniGGGP20}.
+Consequently, a uniform closure operator can only arise from an upper closure operator $\auco{}{\cAA}$, namely uniformity is an intrinsic property of the abstract domain, not of any decidable abstract semantics that can be constructed over it. 
+
+\smallskip
+
+Because of these observations, throughout the following discussion, the decidable set $\auco{}{\cAA}(W_i)$, that corresponds to an element of the abstract domain $\cAA$, is always considered relative to a fixed and known property $W_i$. $W_i$ can be a decidable specification for some pre/post condition property or an intermediate property of the computation. The index $i$ will therefore only denote any known program representing that property.
+
+
+\section{Classes of completeness and incompleteness}
+
+In this section, we characterize the computational properties of the sets of programs
+for which, given fixed abstract domain $\cAA$, the corresponding bca is locally complete. This naturally recalls the stronger notion of (global) completeness class firstly introduced in \cite{GiacobazziLR15} and corresponding to the class of all programs for which a given abstract domain $\cAA$ is globally complete: 
+\[
+\bbbc(\cAA) \defi \sset{e\in\ccL}{\forall i\in\ccL.\, 
+\auco{}{A}(\pfunction{e}{}{}(W_i)) = \auco{}{A}(\pfunction{e}{}{}(\auco{}{A}(W_i)))}.
+\]
+It is worth noting that $\bbbc(\cAA)$, and hence also $\compl{\bbbc(\cAA)}$, are extensional properties of programs in $\ccL$, namely:
+$e\in \bbbc(\cAA)~\wedge~\pfunction{e}{}{}\cong\pfunction{i}{}{}~\Rightarrow~i\in\bbbc(\cAA)$.
+In \cite{GiacobazziLR15} Giacobazzi et al., proved that for a programming system $\ccL$ defined in terms of a simple imperative programming language {\em \`a la} $\Imp$ ::
+\begin{itemize}
+    \item $|\bbbc(\cAA)| = \aleph_0$;
+    \item $\bbbc(\cAA)$ is decidable if and only if $A$ is trivial\footnote{Clearly when $A$ is trivial $\bbbc(\cAA)=\ccL$ and $\compl{\bbbc(\cAA)}=\varnothing$.};
+    \item $A$ not trivial $\Rightarrow$ $\bbbc(\cAA)$ and $\compl{\bbbc(\cAA)}$ are productive sets, hence non {\re}.
+\end{itemize}
+By the fundamental isomorphism theorem \cite{Rogers58}, between any two acceptable programming systems there is an effective, one-to-one, and onto translation, hence because $\Imp$ is an acceptable programming system, any acceptable programming system satisfies the above three properties. In particular if $*\in\ccL$ and ${\tt id}\in\ccL$ denote respectively a program such that for all $x\in\Domain:\,\pfunction{*}{}{}(x){\uparrow}$ and $\pfunction{*}{}{}(x)=x$ (e.g., see Fig.~\ref{simple-code}), then $*,{\tt id}\in \bbbc(\cAA)$. 
+
+Things are more complicated when we move from global completeness to the weaker notion of local completeness. 
+We introduce the notion of local completeness class as the set of all programs for which its bca is locally complete with respect a fixed input {\re} property $W_i$.
+
+\begin{definition}
+    Let $\cAA$ be an abstract domain and $i\in \ccL$. The local completeness class of $\cAA$ with respect to $i$ is
+    \[
+\bbbc(\cAA,i) \defi \sset{e\in\ccL}{
+\auco{}{A}(\pfunction{e}{}{}(W_i)) = \auco{}{A}(\pfunction{e}{}{}(\auco{}{A}(W_i)))}.
+\]
+\end{definition}
+The local completeness class above naturally extends to sets of inputs as follows: let $S\subseteq\ccL$ then the local completeness class of $\cAA$ with respect to $S$ is
+\[
+\bbbc(\cAA,S)=\bigcap_{i\in S}\bbbc(\cAA,i).
+\]
+It is immediate to observe that if $S\subseteq R~\Rightarrow~\bbbc(\cAA,R)\subseteq\bbbc(\cAA,S)$, and for any $S\subseteq\ccL$: $\bbbc(\cAA)\subseteq\bbbc(\cAA,S)$, and $\bbbc(\cAA)=\bbbc(\cAA,\ccL)$.
+
+\begin{proposition}\label{basic-prop}
+Let $\cAA\in\Abs(\wpre(\ccD))$ be an abstract domain and
+$S\subseteq\ccL$.
+\begin{enumerate}[(i)]
+\item 
+$\bbbc(\cAA,S)$ is an extensional property;
+\item
+for all $S\subseteq\ccL$: $|\bbbc(\cAA,S)|=\aleph_0$.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+Extensionality in {\em (i)} is obvious.
+{\em (ii)} $|\bbbc(\cAA,i)|=\aleph_0$ follows by extensionality in {\em (i)} and 
+a straightforward padding argument because $\bbbc(\cAA)\neq\varnothing$ and hence, for any $S\subseteq\ccL$ also $\bbbc(\cAA,S)\neq\varnothing$. Indeed for any  
+$W_i\in\wpre(\Domain)$: ${\tt id}\in\bbbc(\cAA)$ and ${\tt id}\in\bbbc(\cAA,i)$, where $\pfunction{{\tt id}}{}{}=\lambda x.\; x$. \myqed
+\end{proof}
+
+The proof of the following theorem follows the structure of the proof of a similar result for the global completeness case in \cite{GiacobazziLR15} and immediately extends that result to the case of local completeness.
+
+\begin{theorem}\label{Decidable-C}
+    Let $\cAA$ be an abstract domain and $i\in\ccL$ such that $W_i\neq\auco{}{A}(W_i)$.
+    Then $\bbbc(\cAA,i)$ is decidable if and only if $\cAA=\top$.
+\end{theorem}
+
+\begin{proof}
+    Being $\bbbc(\cAA,i)$ extensional, by Rice's theorem $\bbbc(\cAA,i)$ is decidable if and only $\bbbc(\cAA,i)=\varnothing$ or $\bbbc(\cAA,i)=\ccL$. Of course $\bbbc(\cAA,i)\neq\varnothing$, therefore it can only be $\bbbc(\cAA,i)=\ccL$. Moreover $W_i\neq\auco{}{A}(W_i)$ implies that $\cAA$ is trivial if and only if $\cAA=\top$. It is obvious that when $\cAA=\top$ then $\bbbc(\cAA,i)=\ccL$. Assume $\cAA\neq\top$ and $\bbbc(\cAA,i)=\ccL$. Then there exists $W_o\in\wpre(\Domain)$ such that $\auco{}{A}(W_o)\subsetneq\Domain$. Let $b\in\Domain\setminus\auco{}{A}(W_o)$ and $a\in \auco{}{A}(W_i)\setminus W_i$. We can define a partial computable function $\pfunction{e}{}{}$ computable by a program $e\in\ccL$ as follows:
+    $$\pfunction{e}{}{}(x)\ud \left\{
+    \begin{array}{ll}
+       b & \mbox{if $x=a$}\\
+       \uparrow &\mbox{otherwise}
+    \end{array}
+    \right .
+    $$
+    In this case $\pfunction{e}{}{}(W_i)=\varnothing$ and 
+    $\pfunction{e}{}{}(\auco{}{A}(W_i))=\{b\}$. Note that 
+    $\auco{}{A}(\varnothing)\neq \auco{}{A}(\{b\})$. This because 
+    otherwise by $\auco{}{A}$ monotonicity: $\{b\}\subseteq \auco{}{A}(\{b\})=\auco{}{A}(\varnothing)\subseteq \auco{}{A}(W_o)$ would imply that 
+    $b\in \auco{}{A}(W_o)$, which is a contradiction. Therefore $e\not\in\ccL$. \myqed
+\end{proof}
+
+An immediate consequence of this result is that, similar to the case of global completeness, for any input $W_i$ that is not precisely represented in the abstract domain, i.e., such that $W_i\neq\auco{}{A}(W_i)$, $\bbbc(\cAA,i)$ and its complement $\compl{\bbbc(\cAA,i)}$ are decidable if and only if $\cAA=\top$. Moreover, because $\bbbc(\cAA,i)$ is extensional, 
+there always exist infinitely many 
+programs for which the given abstraction is locally incomplete.  
+In view of this observation, because an abstract interpretation is (locally) complete if and only if the corresponding bca is complete (see \cite{GRS00}[Lemma 3.1]), any abstract interpretation built on an abstraction $\cAA$ is locally complete for all programs if and only if $\cAA=\top$.
+
+\medskip 
+
+Theorem~\ref{Decidable-C} implies that when $W_i\neq\auco{}{A}(W_i)$ and $\cAA\neq\top$ (which implies that $\cAA$ is not trivial) both $\bbbc(\cAA,i)$ and $\compl{\bbbc(\cAA,i)}$ cannot be acceptable programming systems. On one side its is obvious that $*,{\tt id}\in \bbbc(\cAA,i)$. On the other side Theorem~\ref{Decidable-C} proved that any program 
+$e\in\ccL$ such that
+\begin{equation}\label{incomplete-prog}
+    \pfunction{e}{}{}(x)\ud \left\{
+    \begin{array}{ll}
+       b & \mbox{if $x=a$}\\
+       \uparrow &\mbox{otherwise}
+    \end{array}
+    \right .
+\end{equation}
+with $a\in \auco{}{A}(W_i)\setminus W_i$ and $b\in\Domain\setminus\auco{}{A}(W_o)$, we have $e\in\compl{\bbbc(\cAA,i)}$. 
+Consider the following total computable function:
+\begin{equation}\label{selection}
+\pfunction{s}{}{}(a,b,c,x)\ud \left\{
+    \begin{array}{ll}
+       b & \mbox{if $x=a$}\\
+       c &\mbox{otherwise}
+    \end{array}
+    \right .
+\end{equation}
+%if $W_i\neq\varnothing$ it is 
+When $a,b,c$ are fixed as above, by the s-m-n theorem we have that there exists a total computable function $g$ such that $\pfunction{g(s,a,b,c)}{}{}(x)\cong\pfunction{s}{}{}(a,b,c,x)$.
+It is immediate to prove by the same argument above that 
+if $c\in W_o$ (i.e., $W_o\neq\varnothing$) then 
+$g(s,a,b,c)\in\compl{\bbbc(\cAA,i)}$. 
+This implies that both $\bbbc(\cAA,i)$ and $\compl{\bbbc(\cAA,i)}$ do not satisfy the axioms of Wagner's Uniform Reflexive Structures (URS) \cite{Wagner69} that model the essential properties of acceptable g{\"o}delizations, hence of acceptable programming systems. In particular for $\compl{\bbbc(\cAA,i)}$ we have that $*\not\in \compl{\bbbc(\cAA,i)}$ hence $\compl{\bbbc(\cAA,i)}$ violates Axiom 1 of URS requiring that the always undefined function has to be represented in any URS. Moreover for $\bbbc(\cAA,i)$ we have that if $a\in \auco{}{A}(W_i)\setminus W_i$, $b\in\Domain\setminus\auco{}{A}(W_o)$ and $c\in W_o$ then $g(s,a,b,c)\not\in \bbbc(\cAA,i)$ hence $\bbbc(\cAA,i)$ violates Axiom 2 of URS requiring that the function $\lambda a,b,c.\,g(s,a,b,c)$ performing selection for all $a,b,c\neq *$ has to be represented in any URS. For exactly the same reasons also $\compl{\bbbc(\cAA)}$ and $\bbbc(\cAA)$ cannot be acceptable programming systems. This observation implies that no matter if global or local completeness is concerned, neither completeness nor incompleteness classes can be considered as acceptable programming systems (hence languages) for partial computable functions, this independently from the equational theory used to specify the function in \ref{selection}, unless for the cases of $\bbbc(\cAA,i)$ and $\bbbc(\cAA)$ only, $\cAA$ is  trivial, i.e., $\bbbc(\cAA,i)=\bbbc(\cAA)=\ccL$.
+
+
+
+\subsection{The hardness of local completeness}
+As in the case of global completeness, we can go beyond and prove that $\bbbc(\cAA,i)$ is indeed a bi-productive set under some hypothesis on $i\in\ccL$ and $\cAA$.
+
+\begin{theorem}\label{productivity}
+    Let $\cAA$ be an abstract domain and $i\in\ccL$ such that $\cAA\neq\top$, $W_i\neq\auco{}{A}(W_i)$ (i.e., $\cAA$ is not trivial), and $W_i\neq\varnothing$. Then $\bbbc(\cAA,i)$ is a bi-productive set.
+\end{theorem}
+\begin{proof}
+    To prove that $\bbbc(\cAA,i)$ is a bi-productive set we prove that $\compl{K}\preceq \bbbc(\cAA,i)$ and $\compl{K}\preceq \compl{\bbbc(\cAA,i)}$. As above, because $W_i\neq\auco{}{A}(W_i)$ and $\cAA\neq\top$ there exist $a\in \auco{}{A}(W_i)\setminus W_i$ and $W_o\in\wpre(\Domain)$ such that $b\in\Domain\setminus\auco{}{A}(W_o)$.
+    
+    For the case $\compl{K}\preceq \bbbc(\cAA,i)$ we can define a partial computable function $\pfunction{e}{}{}$ computable by a simple dovetail argument by a program $e\in\ccL$ as follows:
+    $$\pfunction{e}{}{}(x,y)\ud \left\{
+    \begin{array}{ll}
+       b & \mbox{if  $x\in K~\wedge~y=a$}\\
+       \uparrow &\mbox{otherwise}
+    \end{array}
+    \right .
+    $$
+    By the b-m-n theorem, there exists a total computable function $s:\ccL\rightarrow\ccL$ such that for any $x\in\ccL$ and $y\in\Domain$, 
+    $\pfunction{e}{}{}(x,y)=\pfunction{s(e,x)}{}{}(y)$. We prove that $K\preceq_{s}\compl{\bbbc(\cAA,i)}$.
+    \begin{itemize}
+        \item 
+        If $x\in K$ then $\pfunction{s(e,x)}{}{}(y)=b\Leftrightarrow y=a$. Because $\pfunction{s(e,x)}{}{}(W_i)=\varnothing$ then by monotonicity $\auco{}{A}(\varnothing)\subseteq\auco{}{A}(\{b\})$. Assume $\auco{}{A}(\varnothing)=\auco{}{A}(\{b\})$, then
+        \[
+        \{b\}\subseteq\auco{}{A}(\{b\})=\auco{}{A}(\varnothing)
+        \subseteq \auco{}{A}(W_o)
+        \]
+        which implies $b\in \auco{}{A}(W_o)$ which is absurd. Therefore $s(e,x)\in \compl{\bbbc(\cAA,i)}$.\\
+        \item 
+        If $x\not\in K$ then for all $y\in\Domain$:
+        $\pfunction{s(e,x)}{}{}(y){\uparrow}$, hence $s(e,x)\in \bbbc(\cAA,i)$.
+    \end{itemize}
+
+    For the case $\compl{K}\preceq \compl{\bbbc(\cAA,i)}$ we define, by a similar dovetail argument, a partial computable function $\pfunction{e}{}{}$ as follows:
+    $$\pfunction{e}{}{}(x,y)\ud \left\{
+    \begin{array}{ll}
+       b & \mbox{if  $x\in K~\vee~y=a$}\\
+       \uparrow &\mbox{otherwise}
+    \end{array}
+    \right .
+    $$
+    Again by the s-m-n theorem, there exists $s:\ccL\rightarrow\ccL$ a total computable function such that for any $x\in\ccL$ and $y\in\Domain$, 
+    $\pfunction{e}{}{}(x,y)=\pfunction{s(e,x)}{}{}(y)$. We prove that $K\preceq_{s}\bbbc(\cAA,i)$. 
+    \begin{itemize}
+        \item 
+        If $x\in K$ then 
+        for all $y\in\Domain$:
+        $\pfunction{s(e,x)}{}{}(y)=b$. Therefore, because $W_i\neq\varnothing$: $\pfunction{s(e,x)}{}{}(W_i)=\{b\}=\pfunction{s(e,x)}{}{}(\auco{}{A}(W_i))$ again implies that $s(e,x)\in \bbbc(\cAA,i)$.\\
+        \item 
+        If $x\not\in K$ then $\pfunction{s(e,x)}{}{}(y){\downarrow}\Leftrightarrow y=a$. Because $a\not\in W_i$ then $\pfunction{s(e,x)}{}{}(W_i)=\varnothing$ and $\ok{\pfunction{s(e,x)}{}{}(\auco{}{A}(W_i))=\{b\}}$ which implies that $s(e,x)\in \compl{\bbbc(\cAA,i)}$ by the same argument above.
+    \end{itemize} \myqed
+\end{proof}
+It is worth noting that the productivity of $\bbbc(\cAA,i)$ does not require $W_i\neq\varnothing$, which is instead required in the proof of case $\ok{\compl{\bbbc(\cAA,i)}}$. This is because if $\auco{}{A}(\varnothing)\in\wprec(\Domain)$ (e.g., when $\cAA$ is decidable) and $W_i=\varnothing$ the set $\ok{\compl{\bbbc(\cAA,i)}}$ is indeed {\re}. 
+
+\begin{proposition}
+    Let $W_i=\varnothing$ and $\auco{}{A}(\varnothing)\neq\varnothing$. If $\auco{}{A}(\varnothing)\in\wprec(\Domain)$ then $\compl{\bbbc(\cAA,i)}$ is a creative set.
+\end{proposition}
+
+\begin{proof}
+    By Theorem~\ref{productivity} $K\preceq \compl{\bbbc(\cAA,i)}$, it is therefore sufficient to prove that $\compl{\bbbc(\cAA,i)}$ is {\re}. Given any $W_j\in\wpre(\Domain)$ we first prove that:
+    \begin{equation}\label{usefuleq}
+        \auco{}{A}(W_j)\neq\auco{}{A}(\varnothing)~\Leftrightarrow~W_j\not\subseteq\auco{}{A}(\varnothing)
+    \end{equation}
+    ($\Leftarrow$) Assume $W_j\not\subseteq \auco{}{A}(\varnothing)$ then let $c\in W_j\setminus \auco{}{A}(\varnothing)$. By $\auco{}{A}$ extensivity $c\in\auco{}{A}(W_j)$ and $c\not\in\auco{}{A}(\varnothing)$ hence $\auco{}{A}(\varnothing)\subset \auco{}{A}(W_j)$ which implies $\auco{}{A}(W_j)\neq\auco{}{A}(\varnothing)$. \\
+    ($\Rightarrow$) Assume $W_j\subseteq \auco{}{A}(\varnothing)$ then by monotonicity and idempotency we have $\auco{}{A}(W_j)\subseteq\auco{}{A}(\varnothing)$. Because $\varnothing\subseteq W_j$ then by monotonicity $\auco{}{A}(\varnothing)\subseteq \auco{}{A}(W_j)$, which implies that $\auco{}{A}(\varnothing)=\auco{}{A}(W_j)$. 
+
+    We consider the following partial computable function
+    \[
+    \pfunction{q}{}{}(a,b,y)\ud\left\{
+    \begin{array}{ll}
+        1 & \mbox{of $\exists z\in W_b.~\pfunction{a}{}{}(z){\downarrow}~\wedge~y=\pfunction{a}{}{}(z)$}\\
+        \uparrow &\mbox{otherwise}
+    \end{array} \right.
+    \]
+    If $e\in\ccL$ and $\auco{}{A}(\varnothing)=W_w\in\wprec(\Domain)$ for some index $w\in\ccL$, by the s-m-n theorem there exists a total computable function $s:\ccL\ra\ccL$ such that 
+    $\pfunction{q}{}{}(e,w,y)=\pfunction{s(q,e,w)}{}{}(y)$ and by definition:
+    \[
+    \begin{array}{lll}
+    W_{s(q,e,w)} &= & \sset{y}{\pfunction{s(q,e,w)}{}{}(y){\downarrow}}\\[1ex]
+    &=& \sset{y}{\exists z\in W_w.\, \pfunction{e}{}{}(z){\downarrow}~\wedge~y=\pfunction{e}{}{}(z)}\\
+    &=& \pfunction{e}{}{}(W_w).
+    \end{array}
+    \]
+    Therefore whenever $W_i=\varnothing$ by (\ref{usefuleq}) we have $\compl{\bbbc(\cAA,i)}=\sset{e}{W_{s(q,e,w)}\not\subseteq W_w}$, which is a clearly {\re} set because $\auco{}{A}(\varnothing)=W_w\in\wprec(\Domain)$. \myqed
+\end{proof}
+
+%%%%
+
+\subsection{$\bbbc(\cAA,i)$ and $\compl{\bbbc(\cAA,i)}$ in the arithmetical hierarchy}
+%In the previous sections we formalized the abstraction as a generic upper closure operator defined on the domain of {\re} sets. This is justified by the assumption that the concrete properties we express and we want to approximate by an abstract interpretation are properties of programs, i.e., they represent the concrete semantics of a program which can be its (strongest) post-condition or the output of another program. 
+
+Although abstract interpretation theory (\cite{CC79}) is defined independently from the assumption of dealing with {\re} properties, this assumption is implicit in most of these works for the obvious reason that when applied to program analysis and verification, properties concern the semantics of programs, which are by definition {\re} sets. With this assumption we were able to prove that when the input property does not represent non-terminating computations, i.e., $W_i\neq\varnothing$ and $\cAA$ is not trivial then $\bbbc(\cAA,i)$ is bi-productive. This gives a lower bound in the arithmetic hierarchy for $\bbbc(\cAA,i)$ and its complement $\compl{\bbbc(\cAA,i)}$. In particular if we consider the predicate:
+\[
+\predC(e,i) \iff \auco{}{A}(\pfunction{e}{}{}(\auco{}{A}(W_i))) = \auco{}{A}(\pfunction{e}{}{}(W_i))
+\]
+then clearly $\predC(e,i)$ sits at level $\geq 2$ in the arithmetical hierarchy, i.e., $\predC(e,i)\in \Sigma_{n}^0\cup\Pi_{n}^0$ with $n\geq 2$. Instead, when $W_i=\varnothing$ we proved that $\compl{\bbbc(\cAA,i)}$ is a creative set, i.e., $\compl{\bbbc(\cAA,i)}$ is {\re} and $\bbbc(\cAA,i)$ is productive (co-{re}). This means that when $W_i=\varnothing$ then $\compl{\bbbc(\cAA,i)}\in\Sigma_1^0$ and $\bbbc(\cAA,i)\in\Pi_1^0$.
+
+In order to prove more properties about local completeness classes, such as a tightest inclusion in the arithmetic hierarchy or the possibility of having a {\re} representation of the productive set $\bbbc(\cAA,i)$, 
+we need more structure on the construction of the abstraction function, such that the fact that $\sset{\auco{}{\cAA}(W_i)}{i\in\ccL}$ is a uniformly {\re} sequence of recursive sets, as proved in Section \ref{AbsIntRec}.
+
+% \begin{theorem}
+% Let $\cAA$ be an abstract domain induced by a decidable Galois insertion $\tuple{\alpha,\gamma}$ and $\grasse{\cdot}:\ccL\ra\Domain\ra\Domain$ be a concrete semantics such that for any $e\in\ccL$: $\grasse{e}=\varphi_e$ is a partial computable function and $\ok{\grasse{\cdot}^\cAA:\ccL\ra\cAA\ra\cAA}$ be a sound abstract interpretation of $\grasse{\cdot}$ such that for any $e\in\ccL$: $\ok{\grasse{e}^A}$ is a total computable function. Then $r_{\cAA}$ such that for any $i\in\ccL$: $\ok{W_{r_{\cAA}(i)}=\gamma(\grasse{i}^\cAA\alpha(\Domain))}$ is a uniformly decidable closure operator.
+% \end{theorem}
+
+% \begin{proof}
+%     \TODO[Gicao]{I think this theorem is wrong! Use the abstract interpreter $\grasse{\cdot}^\cAA$ and s-m-n
+%     By the s-m-n theorem, let $h(e,i)$ be a total computable function such that
+% \[
+%   W_{h(e,i)} \;=\; \pfunction{e}{}{}(W_{i})
+%   \;=\; \sset{\pfunction{e}{}{}(x)}{x \in W_{i} \;\land\; \pfunction{e}{}{}(x){\downarrow}}.
+% \]   } \myqed
+% \end{proof}
+
+Assume $\cAA$ be decidable and continuous with decidable corresponding uniform closure $r_{\cAA}$ and 
+$h:\ccL\ra\ccL$ a total computable function such that 
+    \[
+     W_{h(e,i)} \;=\; \pfunction{e}{}{}(W_{i})
+        \;=\; \sset{\pfunction{e}{}{}(x)}{x \in W_{i} \;\land\; \pfunction{e}{}{}(x){\downarrow}}.
+    \]
+In this case:
+\[
+  \predC_\cAA(e,i) \;\iff\; W_{r_{\cAA}(h(e,\,r_{\cAA}(i)))} \subseteq W_{r_{\cAA}(h(e,\,i)))}.
+\]
+It is clear that given a fixed index $i\in\ccL$:
+\begin{align*}
+  \bbbc(\cAA,i) \;&=\; \sset{e}{\predC(e,i)},\\[1ex]
+\compl{\bbbc(\cAA,i)} \;&=\; \sset{e}{\neg\predC(e,i)},\\[1ex]
+  \bbbc(\cAA) \;&=\; \sset{e}{\forall i.\; \predC(e,i)}, \\[1ex]
+  \compl{\bbbc(\cAA)} \;&=\; \sset{e}{\exists i.\; \neg\predC(e,i)}.
+\end{align*}
+
+\begin{lemma}\label{hierarchy}
+    If $\cAA$ is decidable and continuous then $\predC_\cAA(e,i) \in \Pi^0_2$.
+\end{lemma}
+
+\begin{proof}
+The inclusion $W_{r_{\cAA}(h(e,\,r_{\cAA}(i)))} \subseteq W_{r_{\cAA}(h(e,\,i)))}$ corresponds to:
+\[
+  \predC_\cAA(e,i) \;\iff\;
+  \forall x.\,\bigl(\pfunction{r_{\cAA}(h(e,r_{\cAA}(i)))}{}{}(x){\downarrow}
+  \;\Ra\;
+  \pfunction{r_{\cAA}(h(e,i))}{}{}(x){\downarrow}\bigr).
+\]
+By replacing convergence with Kleene's $\NF$-predicate we have:
+\[
+  \predC(e,i) \;\iff\;
+  \forall x.\,\Bigl(
+    \bigl(\forall s.\;\neg \NF\bigl(r_{\cAA}(h(e,r_{\cAA}(i))),\, x,\, s\bigr)\bigr)
+    \;\lor\;
+    \bigl(\exists t.\; \NF\bigl(r_{\cAA}(h(e,i)),\, x,\, t\bigr)\bigr)
+  \Bigr).
+\]
+Then we obtain a prenex form as follows:
+\[
+  \predC(e,i) \;\iff\;
+  \forall x.\;\forall s.\;\exists t.\;
+  \Bigl(\neg \NF\bigl(r_{\cAA}(h(e,r_{\cAA}(i))),\, x,\, s\bigr)
+  \;\lor\;
+  \NF\bigl(r_{\cAA}(h(e,i)),\, x,\, t\bigr)\Bigr).
+\]
+By collapsing the two adjacent universal quantifiers via the pairing function we have:
+\[
+  \predC(e,i) \;\iff\;
+  \forall \langle x, s \rangle.\;\exists t.\;
+  R(e,\, i,\, x,\, s,\, t)
+\]
+where $R$ is a decidable predicate.  This proves that $\predC(e,i) \in \Pi^0_2$. \myqed
+\end{proof}
+
+It is worth noting that the properties of decidability, continuity and non triviality are shared by the abstract domains of most of the Galois-connection based abstract interpretations \cite{CGR18}.
+The proof of the following theorem is therefore immediate by Lemma \ref{hierarchy} and it places all the non-trivial completeness and incompleteness classes into the arithmetic hierarchy.
+
+\begin{theorem}
+    If $\cAA$ is decidable, continuous and not trivial such that $W_i\neq\varnothing$ then $\bbbc(\cAA,i)\in\Pi^0_2$, $\bbbc(\cAA)\in\Pi^0_2$, $\compl{\bbbc(\cAA,i)}\in\Sigma^0_2$, and $\compl{\bbbc(\cAA)}\in\Sigma^0_2$.
+\end{theorem}
+
+
+%%%%%%%
+
+% \section{Separability}
+% \begin{definition}
+% Let $\PC$ denote the class of partial computable functions, and let
+% \[
+% A=\Ix(\mathcal C)=\{e\in\mathbb N \mid \varphi_e\in\mathcal C\}
+% \]
+% be an extensional index set.
+
+% For a finite partial function $\sigma$, write $\sigma\subseteq f$ when $f$ extends
+% the finite graph $\sigma$.
+
+% Define the positive and negative finite-forcing sets of $\mathcal C$ by
+% \[
+% \Forc^{+}(\mathcal C)
+% =
+% \{\sigma \text{ finite partial} \mid
+% \forall g\in\PC\,(\sigma\subseteq g \Rightarrow g\in\mathcal C)\},
+% \]
+% \[
+% \Forc^{-}(\mathcal C)
+% =
+% \{\sigma \text{ finite partial} \mid
+% \forall g\in\PC\,(\sigma\subseteq g \Rightarrow g\notin\mathcal C)\}.
+% \]
+% \end{definition}
+
+% \begin{remark}
+% The sets $\Forc^{+}(\mathcal C)$ and $\Forc^{-}(\mathcal C)$ are disjoint.
+% Indeed, no finite partial behavior can force both membership and non-membership
+% in $\mathcal C$.
+% \end{remark}
+
+% \begin{theorem}\label{thm:biproductive-no-effective-finite-basis}
+% Let $A=\Ix(\mathcal C)$ be extensional. If $A$ is bi-productive, then neither
+% $\Forc^{+}(\mathcal C)$ nor $\Forc^{-}(\mathcal C)$ contains a c.e.\ basis that
+% generates the corresponding semantic side. More explicitly:
+% \begin{enumerate}
+% \item there is no c.e.\ set $W$ of finite partial functions such that, for every $e$,
+% \[
+% e\in A
+% \iff
+% \exists \sigma\in W\;(\sigma\subseteq\varphi_e);
+% \]
+% \item there is no c.e.\ set $V$ of finite partial functions such that, for every $e$,
+% \[
+% e\notin A
+% \iff
+% \exists \sigma\in V\;(\sigma\subseteq\varphi_e).
+% \]
+% \end{enumerate}
+% \end{theorem}
+
+% \begin{proof}
+% Assume first that there exists a c.e.\ set $W$ of finite partial functions such that
+% \[
+% e\in A
+% \iff
+% \exists \sigma\in W\;(\sigma\subseteq\varphi_e).
+% \]
+% Then membership in $A$ is semidecidable: enumerate $W$, and in parallel test whether
+% some enumerated finite partial function $\sigma$ is contained in $\varphi_e$.
+% Hence $A$ would be c.e.
+
+% But every productive set is non-c.e., so bi-productivity of $A$ rules this out.
+% Therefore no such c.e.\ basis $W$ exists.
+
+% The argument for $\compl A$ is symmetric. If there existed a c.e.\ set $V$ of finite
+% partial functions such that
+% \[
+% e\notin A
+% \iff
+% \exists \sigma\in V\;(\sigma\subseteq\varphi_e),
+% \]
+% then $\compl A$ would be c.e., contradicting the fact that $\compl A$ is productive. \myqed
+% \end{proof}
+
+\section{Computable coverings and program transformations}
+
+The interesting consequence of decidable abstract domains---as those employed in static program analysis, is that it is possible to algorithmically extract a {\re} (and therefore also a decidable) covering of the productive set $\bbbc(\cAA,i)$. In general, this cannot be achieved for \(\compl{\bbbc(\cAA,i)}\). The reason is that, for every program \(e \in \ccL\), there may be a potentially infinite family of effective transformations mapping $e$ to programs $f(e)$ such that \(f(e) \in \compl{\bbbc(\cAA,i)}\). Moreover, different choices of $f(e)$ may compute different functions $\pfunction{f(e)}{}{}$, so there is no canonical effective transformation that uniformly represents all such cases. We show that there exists a transformation that employs a constant growth in program size and minimal computational complexity.
+
+\subsection{Computable coverings of $\bbbc(\cAA,i)$}
+For $\bbbc(\cAA,i)$ it is possible to algorithmically ``cancel'' the outputs causing incompleteness from any partial computable function, yet obtaining an effective enumeration of a set of programs that represents all partial computable functions computable by programs in $\bbbc(\cAA,i)$.  
+This is obtained by removing from the range of $\pfunction{e}{}{}$ all those outputs of $e$ that, coming from the approximation of $W_i$ according to $\auco{}{\cAA}$, namely from $\auco{}{\cAA}(W_i)$, end up outside the approximation of the range of $e$ on input $W_i$, i.e., 
+outside $\auco{}{\cAA}(\pfunction{e}{}{}(W_i))$.
+We prove that this program transformation is effective, therefore producing a {\re} cover for $\bbbc(\cAA,i)$.
+
+\begin{theorem}\label{covering}
+    If $\cAA$ is decidable and continuous then $\bbbc(\cAA,i)$ admits a {\re} covering, i.e., there exists $\cC_i\subseteq \bbbc(\cAA,i)$ such that $\cC_i$ is {\re} and $\cC_i$ and $\bbbc(\cAA,i)$ are extensionally equivalent.
+\end{theorem}
+
+\begin{proof}
+    For any $i,e\in\ccL$ by the s-m-n theorem we have that there exists a total computable function $h:\ccL\ra\ccL$ such that
+    \[
+     W_{h(e,i)} \;=\; \pfunction{e}{}{}(W_{i})
+        \;=\; \sset{\pfunction{e}{}{}(x)}{x \in W_{i} \;\land\; \pfunction{e}{}{}(x){\downarrow}}.
+    \] 
+    Fix $i\in\ccL$ and assume that $\auco{}{A}$ is a decidable closure operator, i.e., 
+    $\auco{}{\cAA}(W_i)$ is a fixed decidable set. Define the partial computable function
+    \begin{equation}\label{covering-function}
+    \pfunction{q}{}{}(e,x)=\left\{
+    \begin{array}{cl}
+       \pfunction{e}{}{}(x) &\mbox{if $x\not\in \auco{}{A}(W_{i})$}\\[1ex]
+       \pfunction{e}{}{}(x) &\mbox{if $x\in \auco{}{A}(W_{i})~\wedge~\pfunction{e}{}{}(x){\downarrow}~\wedge~\pfunction{e}{}{}(x)\in \auco{}{A}(W_{h(e,i)})$}\\[1ex]
+       \uparrow & \mbox{otherwise}
+    \end{array}\right .
+    \end{equation}
+    Because when $i\in\ccL$ is fixed $\auco{}{A}(W_{i})$ is decidable and $\auco{}{A}$ is monotone and extensive, then the function $\pfunction{q}{}{}$ is computable by the program $q$ in Fig.~\ref{code1}. In Fig.~\ref{code1} we abuse notation and denote with $e(x)$ the code of $e\in\ccL$ specialized for the input $x$.
+    \begin{figure}[t]
+    \begin{align*}
+    &1:~{\tt input}(e,x);\\
+    &2:~{\tt if}\ x \notin \auco{}{A}(W_i)\ {\tt then}\ e(x)\\
+    &3:~\qquad\! {\tt else}\ n := e(x);\\
+    &4:~\qquad\qquad W := \varnothing;\ t := 0;\\
+    &5:~\qquad\qquad {\tt while}\ n \notin W\ \{\\
+    &6:~\qquad\qquad\qquad t := t + 1;\\
+    &7:~\qquad\qquad\qquad W := \dovetl(h(e,i),t);\\
+    &8:~\qquad\qquad\qquad W := \auco{}{\mathcal{A}}(W)\\
+    &9:~\qquad\qquad \};\ e(x).
+    \end{align*}
+    \caption{An implementation of $\pfunction{q}{}{}$.}\label{code1}
+    \end{figure}
+    Because $\auco{}{A}$ is monotone and for all $t\in\omega$:
+    $\dovetl(h(e,i),t)\subseteq W_{h(e,i)}$ and $\dovetl(h(e,i),t)\subseteq \dovetl(h(e,i),t+1)$
+    then for all $t\in\omega$
+    $$\auco{}{\cAA}(\dovetl(h(e,i),t))\subseteq \auco{}{\cAA}(\dovetl(h(e,i),t+1))\subseteq \auco{}{A}(W_{h(e,i)}).$$ 
+    When $\pfunction{e}{}{}(x){\downarrow}$ and $n=\pfunction{e}{}{}(x)$ (i.e., we can proceed with program line 4 in Fig.~\ref{code1}), by $\auco{}{\cAA}$ continuity and $\dovetl$ definition, we have that the {\tt while}-loop at line 5 in Fig.~\ref{code1} terminates if and only if: 
+    \[
+    \begin{array}{lll}
+    \exists t.\; n\in\auco{}{\cAA}(\dovetl(h(e,i),t)) &\Leftrightarrow&\pfunction{e}{}{}(x)\in\cup_{t\in\omega}\auco{}{\cAA}(\dovetl(h(e,i),t))\\[1ex]
+    &\Leftrightarrow&\pfunction{e}{}{}(x)\in\auco{}{\cAA}(\cup_{t\in\omega}\dovetl(h(e,i),t))\\[1ex]
+    &\Leftrightarrow&\pfunction{e}{}{}(x)\in\auco{}{\cAA}(\pfunction{e}{}{}(W_i)).
+    \end{array}
+    \]
+    Therefore if $\pfunction{e}{}{}(x)\in\auco{}{\cAA}(\pfunction{e}{}{}(W_i))$ then we have
+    $\pfunction{q}{}{}(e,x)=\pfunction{e}{}{}(x)$.\\
+    If instead for all $t\in\omega: n\not\in\auco{}{\cAA}(\dovetl(h(e,i),t))$ then $\pfunction{q}{}{}(e,x){\uparrow}$.
+    Note that when $\pfunction{q}{}{}(e,x){\downarrow}~\Ra\pfunction{e}{}{}(x){\downarrow}$. The reversal does not hold because $\pfunction{q}{}{}(e,x)$ cancels (being undefined) all the outputs that may generate incompleteness. 
+    
+    By the s-m-n theorem there exists a total computable function $g:\ccL\ra\ccL$ such that for any $e\in\ccL$: $\pfunction{q}{}{}(e,x)=\pfunction{g(q,e)}{}{}(x)$. We set $\cC_i\ud \sset{g(q,e)}{e\in\ccL}$. $\cC_i$ is clearly {\re} being the range of a total computable function. We prove the following two facts: (1) $\cC_i\subseteq \bbbc(\cAA,i)$ and (2) $\sset{\pfunction{e}{}{}}{e\in\cC_i}=\sset{\pfunction{e}{}{}}{e\in\bbbc(\cAA,i)}$.
+    \begin{enumerate}
+        % \item We prove that for all $e\in\ccL$: $g(q,e)\in \bbbc(\cAA,i)$, namely:
+        % \[
+        % \auco{}{A}(\pfunction{e}{}{}(W_i)) = \auco{}{A}(\pfunction{e}{}{}(\auco{}{A}(W_i)))
+        % \]
+        
+        % If $x\in W_i\subseteq \auco{}{A}(W_i)$ then whenever $\pfunction{e}{}{}(x){\downarrow}$ we have:
+        % \[
+        % \pfunction{e}{}{}(x)\in\pfunction{e}{}{}(W_i)=W_{h(e,i)}\subseteq \auco{}{A}(W_{h(e,i)})=\auco{}{\cAA}(\pfunction{e}{}{}(W_i))
+        % \]
+        % hence by $\pfunction{g(q,e)}{}{}$ definition we have $\pfunction{g(q,e)}{}{}(x)=\pfunction{e}{}{}(x)$, which implies that $\pfunction{g(q,e)}{}{}(W_i)=\pfunction{e}{}{}(W_i)$ and therefore: 
+        % $\auco{}{\cAA}(\pfunction{g(q,e)}{}{}(W_i))=\auco{}{\cAA}(\pfunction{e}{}{}(W_i))$, meaning that $x$ does not produce incompleteness. \\
+        % If $x\in \auco{}{\cAA}(W_i)$ the only incompleteness can be generated if  $\pfunction{g(q,e)}{}{}(x){\downarrow}$. This happens if and only if $\pfunction{e}{}{}(x){\downarrow}$ and $\pfunction{e}{}{}(x)\in \auco{}{\cAA}(W_{h(e,i)})$, and in this case 
+        % $\pfunction{g(q,e)}{}{}(x)=\pfunction{e}{}{}(x)$. Therefore $\pfunction{g(q,e)}{}{}(\auco{}{\cAA}(W_{i}))\subseteq \auco{}{\cAA}(W_{h(e,i)})=\auco{}{\cAA}(\pfunction{e}{}{}(W_i))$ which implies completeness by monotonicity and idempotence of closure operators.
+    
+        \item We prove that for all $e\in\ccL$: $g(q,e)\in \bbbc(\cAA,i)$, namely:
+        \[
+            \auco{}{A}(\pfunction{g(q,e)}{}{}(W_i)) 
+                = \auco{}{A}(\pfunction{g(q,e)}{}{}(\auco{}{A}(W_i))).
+        \]
+        If \(x \in \auco{}{A}(W_i)\), then either \(\varphi_{g(q,e)}(x) = \varphi_e(x)\) and \(\varphi_e(x) \in 
+        \auco{}{A}(W_{h(e,i)})\) or \(\pfunction{g(q,e)}{}{}(x)\!\uparrow\). Consequently,
+        \begin{align*}
+            \pfunction{g(q,e)}{}{}(\auco{}{A}(W_i))
+                &= \{\varphi_e(x) \;\vert\; x \in \auco{}{A}(W_i) 
+                    \land \varphi_e(x) \in \auco{}{A}(W_{h(e,i)})\} \\
+            &= \varphi_e(\auco{}{A}(W_i)) \cap \auco{}{A}(W_{h(e,i)}) \\
+            &= \varphi_e(\auco{}{A}(W_i)) \cap \auco{}{A}(\varphi_e(W_i)).
+        \end{align*}
+        By monotonicity of \(\auco{}{A}\): \(\varphi_e(W_i) \subseteq
+        \auco{}{A}(\varphi_e(W_i))\). Additionally, \(W_i \subseteq \auco{}{A}(W_i)\)
+        implies \(\varphi_e(W_i) \subseteq \varphi_e(\auco{}{A}(W_i))\). It then holds
+        that
+        \[
+            \varphi_e(W_i) 
+                \subseteq \varphi_e(\auco{}{A}(W_i)) \cap \auco{}{A}(\varphi_e(W_i))
+                \subseteq \auco{}{A}(\varphi_e(W_i)).
+        \]
+        Again, since \(\auco{}{A}\) is monotonic, order is preserved if \(\auco{}{A}\)
+        is applied term-wise:
+        \[
+            \auco{}{A}(\varphi_e(W_i)) 
+                \subseteq \auco{}{A}\big(\varphi_e(\auco{}{A}(W_i))
+                    \cap \auco{}{A}(\varphi_e(W_i))\big)
+                \subseteq \auco{}{A}(\auco{}{A}(\varphi_e(W_i))).
+        \]
+        Substituting equivalent terms and eliminating, by idempotence of \(\auco{}{A}\),
+        the extra \(\auco{}{A}\) on the right, we obtain
+        \[
+            \auco{}{A}(\varphi_{g(q,e)}(W_i)) 
+                \subseteq \auco{}{A}(\varphi_{g(q,e)}(\auco{}{A}(W_i)))
+                \subseteq \auco{}{A}(\varphi_{g(q,e)}(W_i))
+        \]
+        which implies
+        \[
+            \auco{}{A}(\pfunction{g(q,e)}{}{}(W_i)) 
+                = \auco{}{A}(\pfunction{g(q,e)}{}{}(\auco{}{A}(W_i))).
+        \]
+        \color{black}
+        \item By definition $\cC_i$ covers $\bbbc(\cAA,i)$ if $e\in\bbbc(\cAA,i)~\Ra~\pfunction{g(q,e)}{}{}\cong\pfunction{e}{}{}$. If $x\not\in \auco{}{\cAA}(W_{i})$ then by definition
+        $\pfunction{g(q,e)}{}{}\cong\pfunction{e}{}{}$ (line 2 in Fig.~\ref{code1}). If instead $x\in \auco{}{\cAA}(W_{i})$ then if $\pfunction{e}{}{}(x){\downarrow}$ then because $e\in\bbbc(\cAA,i)$ by $\auco{}{\cAA}$ extensivity we have:
+        \[
+        \pfunction{e}{}{}(x)\in\pfunction{e}{}{}(\auco{}{\cAA}(W_{i}))
+        \subseteq \auco{}{\cAA}(\pfunction{e}{}{}(\auco{}{\cAA}(W_{i})))=
+        \auco{}{\cAA}(\pfunction{e}{}{}(W_{i}))
+        \]
+        and therefore by definition of $\pfunction{g(q,e)}{}{}$ (the loop at line 5--8 in Fig.~\ref{code1} terminates) we have $\pfunction{g(q,e)}{}{}(x)=\pfunction{e}{}{}(x)$ (line 9 in Fig.~\ref{code1}). If instead $\pfunction{e}{}{}(x){\uparrow}$ then clearly 
+        $\pfunction{g(q,e)}{}{}(x){\uparrow}$ and again $\pfunction{g(q,e)}{}{}\cong\pfunction{e}{}{}$.
+    \end{enumerate}
+    \myqed
+\end{proof}
+
+The theorem above says that the local completeness class $\bbbc(\cAA,i)$, when it is not straightforward, admits a {\re} cover when $\cAA$ is a decidable and continuous abstract domain. $\cC_i$ is a family of programs that fully represent the functions computed by the programs in $\bbbc(\cAA,i)$ and these programs can be effectively build by the total computable function $\lambda e.\,g(q,e):\ccL\ra\ccL$ that transforms any, possibly incomplete, program $e$ into a complete one $g(q,e)$ by canceling those outputs that produce incompleteness. Here decidability plays a key role because it allows us to decide whether any concrete state $x$ belongs to the abstract input property $\auco{}{\cAA}(W_i)$. Without this assumption the function $\pfunction{g(q,e)}{}{}$ is not computable and hence the map $e\mapsto g(q,e)$ does not exist.
+
+\begin{example}
+    It is easy to see how the program transformation $g$ in Theorem~\ref{covering} removes the sources of incompleteness. For example for the interval abstract domain with $W_i=\{0,10\}$ and $W_o=\{100\}$, for any program $e$ implementing the archetypal incomplete function (\ref{incomplete-prog}) used in Theorem~\ref{Decidable-C}, e.g.,
+    the program 
+     \begin{align*}
+    &1:~{\tt input}(x);\\
+    &2:~{\tt if}\ x = 7\ {\tt then}\ 100\\
+    &3:~\qquad\! {\tt else}\ {\tt while}\ {\tt true}\ \{{\tt skip}\}.
+    \end{align*}
+    we have that $\pfunction{g(q,e)}{}{}=\pfunction{*}{}{}$ and $*\in\bbbc(\cAA,i)$. In this case this is due to the non termination of the {\tt while}-loop between lines 5--8 in Fig.~\ref{code1}, because $W_{h(e,i)}=\pfunction{e}{}{}(\{0,10\})=\varnothing$ and $\auco{}{{\tt Int}}(\varnothing)=\varnothing$.
+\end{example}
+
+Interestingly, Theorem \ref{covering} gives also the very first fix-point characterization of local completeness: $\bbbc(\cAA,i)=\sset{e}{\pfunction{e}{}{}\cong\pfunction{g(q,e)}{}{}}$. This immediately implies that $\bbbc(\cAA,i)\neq\varnothing$, $|\bbbc(\cAA,i)|=\aleph_0$, and  $\bbbc(\cAA,i)\in\Pi^0_2$. 
+
+\smallskip
+
+Because it is known that every {\re} set of indexes of partial computable functions $S$ admits a decidable subset $B\subseteq S$ which covers $S$ \cite{odifreddi}, and this set $B$ can be effectively enumerated, then the following corollary follows immediately.
+
+\begin{corollary}
+    In the hypothesis of Theorem~\ref{covering}, $\bbbc(\cAA,i)$ has a recursive cover.
+\end{corollary}
+
+%%%%
+
+\subsection{Making programs incomplete by regular translations}
+
+We cannot in general build a {\re} cover for $\compl{\bbbc(\cAA,i)}$. However
+Theorem \ref{Decidable-C} shows that 
+incompleteness can occur in even the simplest of programs. We show that
+every non-trivial abstraction is incomplete for some program as simple as a decider of a regular 
+language---the simplest in Chomsky's hierarchy. 
+
+To ensure a program is computationally as simple as a regular language decider, it sufficient to
+construct the program in those very terms. In particular, we will construct a program from the
+standard model for deciding regular languages, the deterministic finite automata (DFA). 
+%The remainder of this section describes this adaptation and then uses the resultant construct to prove the existence of incomplete yet computationally simple programs.
+%
+We use a standard formulation of DFAs. A DFA is a 5-tuple \(\langle S,Q,F,q_0,\delta\rangle\)
+where \( S\) is a finite alphabet of symbols, \(Q\) a finite set of states, \(F \subseteq Q\) a
+subset of states designated as `accepting', \(q_0 \in Q\) the start state, and 
+\(\delta: (Q \times  S) \to Q\) the function that defines the state transition rules
+A DFA can be defined by its characteristic function \(M:  S^* \to \{0,1\}\) where \( S^*\) is
+the set of finite-length strings comprised of symbols in \( S\) with typical elements $\sigma$. The characteristic function and
+the 5-tuple can be connected operationally via the helper function \(\hat{\delta}: ( S^* \times Q) \to Q\) defined recursively as usual:
+\[
+    \begin{cases}
+        \hat{\delta}(\varepsilon, q) = q,\\
+        \hat{\delta}(x \cdot \sigma, q) = \hat{\delta}(\sigma, \delta(x, q))
+    \end{cases}
+\]
+so that \(M\) can be defined
+\[
+    M(\sigma) \defeq \begin{cases}
+        1 & \hat{\delta}(\sigma, q_0) \in F,\\
+        0 & \hat{\delta}(\sigma, q_0) \notin F.
+    \end{cases}
+\]
+It is known that the set of regular languages is exactly the set of all languages \(L\subseteq S^*\) for which there exists
+a DFA \(M\) such that for any string \(\sigma\), we have \(\sigma \in L\) if and only if \(M(\sigma) = 1\).
+
+Let \(S\) be an alphabet of symbols used for encoding and \(\tau: \Domain \to  S^*\) a linear time string
+encoding for $\Domain$, then a function \(f_M: \Domain^3 \to \Domain\) is a {\em regular function\/} if, for some DFA \(M\), it can be defined 
+\[
+    f_{M}(a,e,x) = \begin{cases}
+        a & M(\tau(x)) = 1,\\
+        e & M(\tau(x)) = 0
+    \end{cases}
+\]
+%where \(a\) and \(e\) are statically-defined values in $\Domain$. 
+A regular program is any program that implements a regular function.
+
+%
+In our context and from the construction of Theorem \ref{Decidable-C} we can define the following partial computable function as implemented in Fig. \ref{code3}:
+\[
+\pfunction{p}{}{}(a,b,e,x)=\left\{
+\begin{array}{cl}
+b & \mbox{if $x=a$}\\
+\pfunction{e}{}{}(x) &\mbox{otherwise}
+\end{array}\right .
+\]
+By the s-m-n theorem there exists a total computable function $g$ such that for fixed $a,b\in\Domain$ and $e\in\ccL$, $\pfunction{p}{}{}(a,b,e,x) = \pfunction{g(p,a,b,e)}{}{}(x)$. By what proved in Theorem \ref{Decidable-C} it is immediate to see that when $\cAA$ is not straightforward and $W_o\in\wpre(\Domain)$ such that $b\in\Domain\setminus\auco{}{A}(W_o)$ and $a\in \auco{}{A}(W_i)\setminus W_i$, then for all $e\in\ccL$ we have that $g(p,a,b,e)\in \compl{\bbbc(\cAA,i)}$. 
+\begin{figure}[t]
+    \begin{align*}
+    &1:~{\tt input}(a,b,e,x);\\
+    &2:~{\tt if}\ x = a\ {\tt then}\ b\\
+    &3:~\qquad\qquad {\tt else}\ e(x).
+    \end{align*}
+    \caption{An implementation of $\pfunction{p}{}{}$.}\label{code3}
+    \end{figure}
+It is immediate to note that there exists a DFA $M_{L}$ that recognizes the regular language  $L=\{\tau(a)\}$ or more in general $L=\tau(R)$ for any regular language $R\subseteq \auco{}{\cAA}(W_i)\setminus W_i$, such that 
+$\pfunction{g(p,a,b,e)}{}{}(x)= f_{M_{L}}(b,\pfunction{e}{}{}(x),x)$. The function $g$ mapping $e$ into $g(p,a,b,e)$ can therefore be implemented as a regular program, returning a transformed program whose running time has a minimal linear overhead over the complexity of $e$.
+
+% \begin{theorem}\label{productivity}
+% Every non-trivial program has a regular program for which it is incomplete. 
+% \end{theorem}
+% \begin{proof}
+% Given \(A\) is non-trivial, there must be some \(S \subseteq \stor \) and
+% some \(b,c \in \stor\) such that \(b \in \stor \setminus \gamma\alpha(S)\) and
+% \(c \in \gamma\alpha(S) \setminus S\). Let \(M_b\) be a decider for the language
+% \( S_b = {\tau(b)}\) and the regular function \(\Psi: \stor \to \stor\) be
+% defined 
+% \[
+% \Psi(s) \defeq \begin{cases}
+%     b & M(\tau(s)) = 1 \\
+%     s & M(\tau(s)) = 0
+% \end{cases}
+% \]
+% With this we can define the semantics of some regular program \(Q\) to
+% be
+% \[\densem{Q}T \defeq \dset{\Psi(t)}{t \in T}\]
+% so that \(\densem{Q}S = S\) and 
+% \(\densem{Q}\gamma\alpha(S) = (\gamma\alpha(S) \setminus \{c\}) \cup \{b\}\).
+% Since \(S\) is a subset of  \(\gamma\alpha(S)\) and 
+% \(c\) is in \(\gamma\alpha(S)\) but not in \(S\), we can conclude that \(S\) is
+% a \emph{strict} subset of \(\gamma\alpha(S)\) (i.e.
+% \(S \subset \gamma\alpha(S)\)). Similarly, since \(b\) is in
+% \(\densem{Q}\gamma\alpha(S)\) but not in \(\densem{Q}S\), then \(\densem{Q}S\)
+% is a strict subset of \(\densem{Q}\gamma\alpha(S)\). 
+
+% Now assume \(\alpha(\densem{Q}S) = \alpha(\densem{Q}\gamma\alpha(S))\). Note
+% that \(\alpha(\densem{Q}S) = \alpha(S)\) and 
+% \[
+% \alpha(\densem{Q}\gamma\alpha(S)) 
+%     = \alpha((\{\gamma\alpha(S) \setminus \{c\}) \cup \{b\}) 
+% \]
+% By
+% additivity of \(\alpha\),
+% \begin{align*}
+% \alpha(\densem{Q}S) = \alpha(\densem{Q}\gamma\alpha(S))
+%     & \implies \alpha(S) = \alpha((\gamma\alpha(S) \setminus \{c\}) \cup \{b\}) \\
+% &\implies \alpha(S) = \alpha(\gamma\alpha(S) \setminus \{c\})
+%     \sqcup_A \alpha(\{b\})\\
+% &\implies \{b\} \subseteq (\gamma\alpha(S) \setminus \{c\})\\
+% &\implies b \in \gamma\alpha(S)
+% \end{align*}
+% which is a contradiction. Hence, \(\alpha(\densem{Q}S) \neq \alpha(\densem{Q}\gamma\alpha(S))\).
+% Therefore, the abstraction is not complete for \(Q\). \myqed
+% \end{proof}
+
+%%%%
+
+\section{Conclusion}
+
+We studied local completeness of abstract interpretations in the standard computability context. In particular we analyzed the complexity of the classes of programs having a locally complete and incomplete abstract interpretation. We first reconciled abstract interpretation with standard computability theory by defining the notion of uniform closure operators as computable program transformations acting as semantic approximations of {\re} sets, and proved that any Galois connection-based abstract domain naturally induces a uniform closure. We then observed, via a simple application of Rice's theorem, that no such closures can correspond to a uniformly decidable abstraction unless the abstraction is trivial. This provides a precise computability-theoretic account of the familiar distinction between the static and dynamic use of abstractions.
+
+Upon these bases we proved that the classes of locally complete and incomplete abstract interpretations are in general recursively inseparable being both productive sets. Moreover, although a {\re} covering cannot in general be obtained for the incompleteness case, it can be effectively constructed for the completeness case. This result opens a promising direction for future work on the effective identification of representative code blocks for which a given abstraction is complete/precise. In particular, our covering function provides an elegant fix-point characterization of the classes of locally complete programs, paving the road to systematic code repair strategies to improve the precision of abstract interpretations by program transformation. In particular, because local completeness is essential to make abstract interpreters compositional, this result can be used to solve the problem of decomposing a program $p$ into suitable subprograms $p_1,\ldots,p_n$ such that the composition of their abstract interpretations minimizes incompleteness, as suggested in \cite{GiacobazziR25}. Such blocks could guide targeted refinements toward the portions of code responsible for imprecision, enabling more precise analyses without requiring a global refinement of the abstract domain. We believe that a similar construction can be used to obtain a covering for the class of partially complete abstract interpretations as introduced in \cite{CDG22}. In this case the program transformation can be used to compress the imprecision of the analysis below some given error bound.
+
+Interestingly, the program transformation that provides a fix-point characterization of the covering for the class of locally complete programs in Theorem \ref{covering} has a clear correspondence with the {\em Relax\/} rule of LCL \cite{BruniGGR21}, a logic guaranteeing local completeness. The {\em Relax\/} rule is a key rule in LCL to ensure that pre/post conditions remain inside specific bounds in order to prove local completeness. This rule constrains the under-approximating post-condition to have the same abstraction as the strongest post-condition, which is needed for preserving local completeness, in a similar way as played by the condition $x\in \auco{}{A}(W_{i})~\wedge~\pfunction{e}{}{}(x){\downarrow}~\wedge~\pfunction{e}{}{}(x)\in \auco{}{A}(W_{h(e,i)})$ in (\ref{covering-function}).
+An interesting open question is then whether LCL is sound and complete for the {\re} covering $\cC_i$ of $\bbbc(\cAA,i)$.
+Other open questions remain such as the role of $\bbbc(\cAA,i)$ and $\compl{\bbbc(\cAA,i)}$ respectively in $\ok{\Pi^0_2}$ and $\ok{\Sigma^0_2}$. In this case we believe that $\bbbc(\cAA,i)$ is not $\ok{\Pi^0_2}$-hard.
+
+
+
+% \paragraph{Acknowledgements.}
+% This work was partially supported by the Air Force Office of Scientific Research under award number FA9550-23-1-0544.
+
+\bibliographystyle{splncs04}
+%\bibliography{Biblio}
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\providecommand{\doi}[1]{https://doi.org/#1}
+
+\bibitem{Blum67}
+Blum, M.: A machine-independent theory of the complexity of recursive
+  functions. J. {ACM}  \textbf{14}(2),  322--336 (1967).
+  \doi{10.1145/321386.321395}
+
+\bibitem{BGGP18}
+Bonchi, F., Ganty, P., Giacobazzi, R., Pavlovic, D.: Sound up-to techniques and
+  complete abstract domains. In: Proc. of the 33rd Annual ACM/IEEE Symposium on
+  Logic in Computer Science, LICS '18. p. 175–184. Association for Computing
+  Machinery (2018)
+
+\bibitem{BruniGGGP20}
+Bruni, R., Giacobazzi, R., Gori, R., Garcia{-}Contreras, I., Pavlovic, D.:
+  Abstract extensionality: on the properties of incomplete abstract
+  interpretations. Proc. {ACM} Program. Lang.  \textbf{4}({POPL}),  28:1--28:28
+  (2020). \doi{10.1145/3371096}
+
+\bibitem{BruniGGR21}
+Bruni, R., Giacobazzi, R., Gori, R., Ranzato, F.: A logic for locally complete
+  abstract interpretations. In: 36th Annual {ACM/IEEE} Symposium on Logic in
+  Computer Science, {LICS} 2021, Rome, Italy, June 29 - July 2, 2021. pp.
+  1--13. {IEEE} (2021). \doi{10.1109/LICS52264.2021.9470608}
+
+\bibitem{BruniGGR22}
+Bruni, R., Giacobazzi, R., Gori, R., Ranzato, F.: Abstract interpretation
+  repair. In: Jhala, R., Dillig, I. (eds.) {PLDI} '22: 43rd {ACM} {SIGPLAN}
+  International Conference on Programming Language Design and Implementation,
+  San Diego, CA, USA, June 13 - 17, 2022. pp. 426--441. {ACM} (2022).
+  \doi{10.1145/3519939.3523453}
+
+\bibitem{BruniGGR23}
+Bruni, R., Giacobazzi, R., Gori, R., Ranzato, F.: A correctness and
+  incorrectness program logic. J. {ACM}  \textbf{70}(2),  15:1--15:45 (2023).
+  \doi{10.1145/3582267}
+
+\bibitem{CDG22}
+Campion, M., Dalla~Preda, M., Giacobazzi, R.: Partial (in)completeness in
+  abstract interpretation: limiting the imprecision in program analysis
+  \textbf{6}(POPL) (2022). \doi{10.1145/3498721}
+
+\bibitem{CC77}
+Cousot, P., Cousot, R.: Abstract interpretation: A unified lattice model for
+  static analysis of programs by construction or approximation of fixpoints.
+  In: Conference Record of the 4th ACM Symposium on Principles of Programming
+  Languages {\rm ({\em POPL~'77\/})}. pp. 238--252. ACM Press (1977)
+
+\bibitem{CC79}
+Cousot, P., Cousot, R.: Systematic design of program analysis frameworks. In:
+  Conference Record of the 6th ACM Symposium on Principles of Programming
+  Languages {\rm ({\em POPL~'79\/})}. pp. 269--282. ACM Press (1979)
+
+\bibitem{CGR18}
+Cousot, P., Giacobazzi, R., Ranzato, F.: Program analysis is harder than
+  verification: {A} computability perspective. In: Computer Aided Verification
+  - 30th International Conference, {CAV} 2018, Held as Part of the Federated
+  Logic Conference, FloC 2018, Oxford, UK, July 14-17, 2018, Proceedings, Part
+  {II}. pp. 75--95 (2018). \doi{10.1007/978-3-319-96142-2\_8}
+
+\bibitem{Cousotbook}
+Cousot, P.: Principles of Abstract Interpretation. MIT Press (2021)
+
+\bibitem{Dekker55}
+Dekker, J.C.E.: Productive sets. Trans.\ of the American Mathematical Society
+  \textbf{78},  129--149 (1955)
+
+\bibitem{Ernst-Daikon}
+Ernst, M.D., Perkins, J.H., Guo, P.J., McCamant, S., Pacheco, C., Tschantz,
+  M.S., Xiao, C.: The {Daikon} system for dynamic detection of likely
+  invariants. Science of Computer Programming  \textbf{69}(1--3),  35--45
+  (2007)
+
+\bibitem{G08}
+Giacobazzi, R.: Hiding information in completeness holes -- {N}ew perspectives
+  in code obfuscation and watermarking. In: Proc.\ of the 6th IEEE
+  International Conferences on Software Engineering and Formal Methods
+  (SEFM~'08). pp. 7--20. IEEE Press. (2008)
+
+\bibitem{GMadj10}
+Giacobazzi, R., Mastroeni, I.: Adjoining classified and unclassified
+  information by abstract interpretation. Journal of Computer Security
+  \textbf{18}(5),  751 -- 797 (2010)
+
+\bibitem{GQ01}
+Giacobazzi, R., Quintarelli, E.: Incompleteness, counterexamples and
+  refinements in abstract model-checking. In: Cousot, P. (ed.) Proc.\ of The
+  8th Internat.\ Static Analysis Symp.\ (SAS'01). Lecture Notes in Computer
+  Science, vol.~2126, pp. 356--373. Springer-Verlag (2001)
+
+\bibitem{GR97b}
+Giacobazzi, R., Ranzato, F.: Completeness in abstract interpretation: {A}
+  domain perspective. In: Johnson, M. (ed.) Proc.\ of the 6th Internat.\ Conf.\
+  on Algebraic Methodology and Software Technology {\rm ({\em AMAST~'97\/})}.
+  Lecture Notes in Computer Science, vol.~1349, pp. 231--245. Springer-Verlag
+  (1997)
+
+\bibitem{GRS00}
+Giacobazzi, R., Ranzato, F., Scozzari, F.: Making abstract interpretation
+  complete. Journal of the {ACM}  \textbf{47}(2),  361--416 (2000)
+
+\bibitem{GiacobazziLR15}
+Giacobazzi, R., Logozzo, F., Ranzato, F.: Analyzing program analyses. In:
+  Proceedings of the 42nd Annual {ACM} {SIGPLAN-SIGACT} Symposium on Principles
+  of Programming Languages, {POPL} 2015, Mumbai, India, January 15-17, 2015.
+  pp. 261--273 (2015). \doi{10.1145/2676726.2676987}
+
+\bibitem{GiacobazziM16}
+Giacobazzi, R., Mastroeni, I.: Making abstract models complete. Mathematical
+  Structures in Computer Science  \textbf{26}(4),  658--701 (2016).
+  \doi{10.1017/S0960129514000358}
+
+\bibitem{GiacobazziR25}
+Giacobazzi, R., Ranzato, F.: The best of abstract interpretations. Proc. {ACM}
+  Program. Lang.  \textbf{9}({POPL}),  1355--1385 (2025). \doi{10.1145/3704882}
+
+\bibitem{Rogers58}
+Hartley~Rogers, J.: G\"odel numberings of partial recursive functions. The
+  Journal of Symbolic Logic  \textbf{23}(3),  331--341 (1958)
+
+\bibitem{kleene38}
+Kleene, S.: On notations for ordinal numbers. Journal of Symbolic Logic
+  \textbf{3},  150--155 (1938)
+
+\bibitem{DMonniaux23}
+Monniaux, D.: Completeness in static analysis by abstract interpretation: {A}
+  personal point of view. In: Arceri, V., Cortesi, A., Ferrara, P., Olliaro, M.
+  (eds.) Challenges of Software Verification, pp. 93--108. Intelligent Systems
+  Reference Library, Springer (2023). \doi{10.1007/978-981-19-9601-6\_6}
+
+\bibitem{Myhill55}
+Myhill, J.: Creative sets. Zeitschrift f{\"u}r Mathematische Logik und
+  Grundilagen der Mathematik  \textbf{1},  97--108 (1955)
+
+\bibitem{odifreddi}
+Odifreddi, P.: Classical Recursion Theory. Studies in logic and the foundations
+  of mathematics, Elsevier (1999)
+
+\bibitem{Post44}
+Post, E.: Recursively enumerable sets of positive integers and their decision
+  problems. Bulletin of the American Mathematical Society  \textbf{50},
+  284--316 (1944)
+
+\bibitem{ran99}
+Ranzato, F.: Closures on {C}{P}{O}s form complete lattices. Inform.\ and
+  Comput.  \textbf{152}(2),  236--249 (1999)
+
+\bibitem{rogers}
+Rogers, H.: Theory of Recursive Functions and Effective Computability. The MIT
+  press (1992)
+
+\bibitem{soare}
+Soare, R.I.: Recursively Enumerable Sets and Degrees. Springer-Verlag (1980)
+
+\bibitem{Wagner69}
+Wagner, E.G.: Uniformly reflexive structures: On the nature of gödelizations
+  and relative computability. Transactions of the American Mathematical Society
+   \textbf{144},  1--41 (1969)
+
+\bibitem{winskel}
+Winskel, G.: The Formal Semantics of Programming Languages: an Introduction.
+  MIT press (1993)
+
+\end{thebibliography}
+\end{document}

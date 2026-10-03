@@ -1,0 +1,1076 @@
+%%%%%%%% ICML 2026 EXAMPLE LATEX SUBMISSION FILE %%%%%%%%%%%%%%%%%
+
+\documentclass{article}
+
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{booktabs}
+
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage[table]{xcolor}
+\usepackage{wrapfig}
+
+\usepackage[most]{tcolorbox}
+\usepackage{listings}
+
+\usepackage{xurl}
+\usepackage{hyperref}
+
+\newtcolorbox[
+  auto counter,
+]{mybox}[2][]{
+  enhanced,
+  breakable,
+  skin first=enhanced,
+  skin middle=enhanced,
+  skin last=enhanced,
+  coltitle=white,
+  fonttitle=\bfseries\footnotesize,
+  left=1pt,
+  right=1pt,
+  top=1pt,
+  bottom=1pt,
+  boxsep=1pt,
+  before skip=3pt,
+  after skip=3pt,
+  title=Box \thetcbcounter: #2, #1
+}
+
+
+
+
+
+
+
+% hyperref makes hyperlinks in the resulting PDF.
+% If your build breaks (sometimes temporarily if a hyperlink spans a page)
+% please comment out the following usepackage line and replace
+% \usepackage{icml2026} with \usepackage[nohyperref]{icml2026} above.
+\usepackage{hyperref}
+
+
+% Attempt to make hyperref and algorithmic work together better:
+\newcommand{\theHalgorithm}{\arabic{algorithm}}
+
+% Use the following line for the initial blind version submitted for review:
+% \usepackage{icml2026}
+
+% For preprint, use
+\usepackage[preprint]{icml2026}
+
+% If accepted, instead use the following line for the camera-ready submission:
+% \usepackage[accepted]{icml2026}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{amsthm}
+
+
+% if you use cleveref..
+\usepackage[capitalize,noabbrev]{cleveref}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% THEOREMS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Assumption}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+% Todonotes is useful during development; simply uncomment the next line
+%    and comment out the line below the next line to turn off comments
+%\usepackage[disable,textsize=tiny]{todonotes}
+\usepackage[textsize=tiny]{todonotes}
+
+% The \icmltitle you define below is probably too long as a header.
+% Therefore, a short form for the running title is supplied here:
+\icmltitlerunning{Learning Abstractions for Hierarchical Planning in Program-Synthesis Agents}
+
+\begin{document}
+
+\twocolumn[
+  \icmltitle{Learning Abstractions for 
+  Hierarchical Planning in Program-Synthesis Agents}
+
+  % It is OKAY to include author information, even for blind submissions: the
+  % style file will automatically remove it for you unless you've provided
+  % the [accepted] option to the icml2026 package.
+
+  % List of affiliations: The first argument should be a (short) identifier you
+  % will use later to specify author affiliations Academic affiliations
+  % should list Department, University, City, Region, Country Industry
+  % affiliations should list Company, City, Region, Country
+
+  % You can specify symbols, otherwise they are numbered in order. Ideally, you
+  % should not use this facility. Affiliations will be numbered in order of
+  % appearance and this is the preferred way.
+  \icmlsetsymbol{equal}{*}
+
+  \begin{icmlauthorlist}
+    \icmlauthor{Zergham Ahmed}{harvard}
+    \icmlauthor{Kazuki Irie}{harvard}
+    \icmlauthor{Joshua B. Tenenbaum}{mit}
+    \icmlauthor{Christopher J. Bates}{ihmc}
+    \icmlauthor{Samuel J. Gershman}{harvard,kempner}
+    %\icmlauthor{}{sch}
+    %\icmlauthor{}{sch}
+  \end{icmlauthorlist}
+
+  \icmlaffiliation{harvard}{Harvard University}
+  \icmlaffiliation{mit}{MIT}
+  \icmlaffiliation{ihmc}{Institute for Human and Machine Cognition}
+  \icmlaffiliation{kempner}{Kempner Institute for the Study of Natural and Artificial Intelligence at Harvard University, Cambridge, MA, USA}
+
+  \icmlcorrespondingauthor{Zergham Ahmed}{zerghamahmed@g.harvard.edu}
+  % You may provide any keywords that you find helpful for describing your
+  % paper; these are used to populate the "keywords" metadata in the PDF but
+  % will not be shown in the document
+  \icmlkeywords{Machine Learning, ICML}
+
+  \vskip 0.3in
+]
+
+% this must go after the closing bracket ] following \twocolumn[ ...
+
+% This command actually creates the footnote in the first column listing the
+% affiliations and the copyright notice. The command takes one argument, which
+% is text to display at the start of the footnote. The \icmlEqualContribution
+% command is standard text for equal contribution. Remove it (just {}) if you
+% do not need this facility.
+
+% Use ONE of the following lines. DO NOT remove the command.
+% If you have no special notice, KEEP empty braces:
+\printAffiliationsAndNotice{}  % no special notice (required even if empty)
+% Or, if applicable, use the standard equal contribution text:
+% \printAffiliationsAndNotice{\icmlEqualContribution}
+
+\begin{abstract}
+Humans learn abstractions and use them to plan efficiently to quickly generalize across tasks---an ability that remains challenging for state-of-the-art large language model (LLM) agents and deep reinforcement learning (RL) systems.
+Inspired by the cognitive science of how people form abstractions and intuitive theories of their world knowledge, Theory-Based RL (TBRL) systems, such as TheoryCoder, exhibit strong generalization through effective use of abstractions. However, they heavily rely on human-provided abstractions and sidestep the abstraction-learning problem.
+We introduce TheoryCoder-2, a new TBRL agent that leverages LLMs' in-context learning ability to actively learn reusable abstractions rather than relying on hand-specified ones, by synthesizing abstractions from experience and integrating them into a hierarchical planning process.
+We conduct experiments on diverse environments, including BabyAI, Minihack and VGDL games like Sokoban.
+We find that TheoryCoder-2 is significantly more sample-efficient than baseline LLM agents augmented with classical planning domain construction, reasoning-based planning, and prior program-synthesis agents such as WorldCoder. TheoryCoder-2 is able to solve complex tasks that the baselines fail, while only requiring minimal human prompts, unlike prior TBRL systems.\looseness=-1
+
+\end{abstract}
+
+\section{Introduction}
+\label{introduction}
+
+A hallmark of human intelligence is the ability to plan hierarchically by combining abstract representations with a low-level world model \citep{koedinger1990abstract,balaguer2016neural,tomov2020discovery,correa2023humans}. At an early age, infants understand abstract predicates like containment and support \citep{casasola2002infant}; these representations form the foundation of later skill development that enables humans to predict, manipulate, and plan in complex domains. For example, a representation of containment is essential for constructing an abstract plan to pour juice into a cup, which can then be combined with a low-level model of biomechanics and physics to construct a concrete plan grounded in the physical world.
+
+Despite impressive progress, modern artificial intelligence (AI) systems still struggle to achieve comparable fluency with abstract planning. Taking inspiration from cognitive science \citep{gopnik1997words,gerstenberg17,lake2017building}, recent work on ``theory-based reinforcement learning'' (TBRL) systems have sought to close this gap by endowing AI agents with human-like world models (``theories'') that are object-oriented, relational, and causal \citep{tsividis2021human,tang2024worldcoder}. The most advanced system of this kind, TheoryCoder \citep{ahmed2025synthesizing}, learns a low-level world model which is then combined with high-level abstractions to support hierarchical planning. The performance and sample efficiency of TheoryCoder on complex video games dramatically outstrips both deep reinforcement learning (RL) and large language model (LLM) agents. TheoryCoder uses language models as a key component of its architecture, to translate past experience into inferred world models.  By harnessing LLMs in this way, TheoryCoder leverages their associative memory and analogical retrieval capabilities. As a result, it achieves much higher robustness and computational efficiency than either pure LLM agents or traditional hierarchical planners on their own. Subsequently, TheoryCoder constructs symbolic models for hierarchical plannings as opposed to using them as end-to-end agents.
+
+The main limitation of TheoryCoder is its reliance on hand-coded abstractions, which substantially limits its scope of application. For example, in order to tackle any new domain, a human would first need to think about the abstractions relevant to it and then write code for them. Without abstract plans, TheoryCoder would need to rely on largely random actions in order to build its low-level world model, which would diminish the efficiency that was afforded by the abstractions and their transferability. Here we address this core limitation by implementing automated learning of abstract concepts.
+Our approach allows the agent not only to construct and manipulate abstractions, but also
+to transfer them to new domains and ground them effectively and instantaneously, with no domain adaptation required.  This enables the system to learn a capacity for hierarchical planning that {\em generalizes}, and thereby rapidly solves complex, novel tasks in a way that emulates key algorithmic aspects of human learning and abstraction \citep{tomov2020discovery}.
+The resulting method, TheoryCoder-2, is a TBRL agent capable of synthesizing high-level abstractions in the form of ``planning domain definition language'' (PDDL; \citet{ghallab1998pddl}) operators, while requiring minimal human guidance in the form of initial prompts and examples.
+
+We conduct experiments on a few closely related video game description language (VGDL) games \citep{schaul2013video}, including Sokoban, as well as BabyAI \citep{babyai_iclr19} and {Minihack \citep{samvelyan2021minihack} environments}. We compare our method to several baselines based on LLMs augmented with classical planning domain construction \citep{liu2023llm+, guan2023leveraging, smirnov2024generating} and reasoning-based planning \citep{yao2023react, wei2022chain, yao2023tree}, as well as previously proposed program-synthesis agents such as WorldCoder \citep{tang2024worldcoder}.\looseness=-1
+
+We demonstrate that TheoryCoder-2 achieves substantial improvements in both sample-efficiency and generalization over the baselines: it can successfully solve complex versions of the tasks that the baselines struggle with.
+Overall, this represents a significant improvement in the applicability and generality of the TBRL approach, towards the long-term goal of building AI systems that learn and think like humans.\looseness=-1
+
+\section{Background}
+\label{sec:background}
+
+\subsection{Theory-based Reinforcement Learning}
+
+Theory-Based Reinforcement Learning (TBRL) is a paradigm in which an agent uses an explicit, program-like model of its environment and search algorithms to plan and solve problems. Unlike traditional model-based RL methods, which either encode dynamics of the environment as tabular transition models \citep{sutton90,kaelbling1996reinforcement,kaelbling1998planning} or approximate them with deep neural networks \citep{Schmidhuber90diff,schmidhuber2015learning,pascanu2017learning,Weber17,ha2018recurrent,HafnerLB020}, TBRL systems represent the causal interactions between objects directly in the form of symbolic programs that describe how the environment works. TBRL is inspired by the cognitive theory in the sense that these programs are the \textit{theories} corresponding to the abstract intuitive theories of the world that people learn and use for planning and problem solving.
+These systems are able to solve problems without having to rely on random exploration, since they try to uncover the causal relationships that have not been captured by their model. We provide a more concrete and formal description in the next Sec.~\ref{sec:tc}.
+
+The earliest concrete TBRL system, EMPA (``Exploring, Modeling, and Planning Agent''; \citet{tsividis2021human}), represented the environment using a  domain-specific language, VGDL \citep{schaul2013video}, and employed Bayesian inference to generate them. EMPA was computationally slow due to the cost of inference; and VGDL itself was limiting, since it only allows expressing pairwise collision rules, making it difficult to scale beyond simple Atari-style domains.
+
+
+More recently, TheoryCoder \citep{ahmed2025synthesizing} instantiated a more general version of TBRL by representing theories as Python programs---a general-purpose programming language, unlike VGDL---synthesized using large language models (LLMs; \citet{gpt3}). LLMs enable fast approximate inference in TheoryCoder, thereby making it faster than EMPA. Like EMPA, TheoryCoder interacts with environments to collect state transitions to guide program synthesis. Unlike EMPA, TheoryCoder has a bi-level world model to support efficient planning and rapid transfer learning, both of which were demonstrated in the complex puzzle game, Baba is You \citep{hempuli2019baba,cloos2024baba}, among others.
+Further technical details of TheoryCoder are provided in the next Sec.~\ref{sec:tc}.
+
+Despite these promising results, TheoryCoder is still limited in that it i) is only applicable to environments that can be encoded through object-oriented coordinate-based representations, and ii) heavily relies on hand-engineered abstractions, limiting scalability.
+
+The main technical contribution of our method (Sec.~\ref{sec:method}) is to address the latter, by enabling the TBRL system to learn abstractions automatically in a few-shot manner. This capability allows TBRL agents to expand its repertoire of theories in entirely new domains, capturing the human ability of gradually growing a library of reusable structured concepts, without manual intervention. We show our approach substantially improves computational efficiency (in terms of tokens used) over the baselines of existing LLM-based agents, and accelerates learning speed, making it a stronger step toward scalable, human-like abstraction learning and problem solving through TBRL.
+
+
+\subsection{TheoryCoder}
+\label{sec:tc}
+
+Here we describe the mathematical details of TheoryCoder \citep{ahmed2025synthesizing}, which we directly build on.
+The problem is formulated as follows. The environment is modeled by a transition function 
+$T: \mathcal{S} \times \mathcal{A} \rightarrow \mathcal{S}$ over state space $\mathcal{S}$ and action space $\mathcal{A}$. 
+Let $K$ denote a positive integer.
+The agent’s objective is to find a plan $\pi = (a_1, \ldots, a_N)$ with $a_i \in \mathcal{A}$ for all $i$ from $1$ to $N$, that minimizes cumulative cost 
+$\sum_{n=1}^N c(s_n, a_n)$, where $c(s,a) = K$ for non-goal states and $c(s^\ast,a) = 0$ at the goal state $s^\ast$.
+Thus, an optimal plan corresponds to the shortest action sequence from the start state to the goal.
+
+
+\textbf{System overview.} TheoryCoder is an agent consisting of five components: an LLM, two planners (for high-level and low-level planning, respectively) and a set of PDDL program files representing a library of abstract states and actions (which are used by the high-level planner), as well as a Python program file representing the world model which approximates the transition function of the environment (which is used by the low-level planner). The LLM and planner components are pre-specified when defining the system, and remain fixed. Essentially, learning in TheoryCoder consists of synthesizing these program files (using the LLM) while interacting with the environment; planning consists in executing the classic PDDL planning system and search algorithms using these program files.
+The complementary roles of these program files are further described below.
+
+
+\textbf{High-level abstractions.} 
+The PDDL program files in TheoryCoder contain the agent's current library of high-level abstract domain theories.
+
+To be more specific about their structure, these PDDL program files consist of a ``domain'' file and a ``problem'' file. The domain file specifies abstract actions (called ``operators'', e.g., ``open door'') and their preconditions/effects, as well as abstract states (e.g., ``door unlocked'') which are represented by Boolean predicates that capture task-relevant features. The problem file specifies the initial state and goal conditions for a particular task. Together, these files are taken as input by a classical planner (we use Fast Downward~\citep{helmert2006fast}), which outputs a plan (a sequence of operators, i.e., high-level actions) that achieves the goal from the initial state, if one exists.
+In the original TheoryCoder, these PDDL files are assumed to be given by the human engineer. Similarly, EMPA depended on a set of VGDL abstractions that it was provided. This dependency on human engineered abstractions is the limitation we address.
+
+\textbf{Low-level dynamics world model.} TheoryCoder maintains an additional low-level world model in the form of a Python program $\hat{T}$ , which represents the environment’s transition function (world model). Its goal is to fully predict the effects of low-level actions in the raw state space. The low-level world model is initialized as an empty function, which predicts no changes in state as a result of any action.  When the agent first begins a new task, it is allowed a small amount of random exploration in the low-level action space (e.g. ``up'', ``down'', ``left'', ``right''), which generates an initial set of observations.  Prediction errors accumulate since the world model is empty. This prediction error (in the form of actions and their state predictions) are sent in a prompt to the LLM along with the current world model. The role of the LLM is to revise the world model until these prediction errors are fixed (up to a given budget). As more tasks are encountered within a domain, the world model will accumulate prediction errors and the LLM will be prompted to fix these errors. 
+
+\textbf{Bi-level planning.} Once the PDDL domain and problem files are generated, the high-level planner \citep[Fast Downward;][]{helmert2006fast} generates a symbolic plan in terms of abstract operators. The low-level planner (in this case breadth-first search) uses the learned transition function $\hat{T}$ to map each operator to a sequence of primitive actions. A bridging ``checker'' function ensures consistency by verifying that the low-level states indeed satisfy the intended high-level predicate effects. This is done through Python boolean predicate classifiers which are also learned by our system.
+This hierarchical framing mirrors how humans plan: abstract operators (e.g., ``open door'') and predicates (e.g., ``door unlocked'') guide planning at the symbolic level, while grounding them requires concrete motor actions (e.g., ``up'', ``left'', etc.).
+
+\section{Method: TheoryCoder-2}
+\label{sec:method}
+
+We extend TheoryCoder by enabling it to autonomously learn abstractions (i.e., synthesize the PDDL files) and grow a library of abstract concepts/skills through a sequence of episodes interacting with various environments. We refer to this improved TBRL system as TheoryCoder-2.
+Here we describe the details of the abstraction learning process of TheoryCoder-2 via LLM in-context learning (Sec.~\ref{sec:abstraction_learning}) and the overall idea of gradually growing the library of abstractions through a curriculum (Sec.~\ref{sec:curriculum}). An algorithmic description is presented in Algorithm \ref{alg:theorycoder_algo}. 
+
+\begin{algorithm}[t]
+  \caption{TheoryCoder-2}
+  \label{alg:theorycoder_algo}
+  \begin{algorithmic}[1]
+    \STATE \textbf{Input:} LLM, initial state $s_0$, action space $\mathcal{A}$, few-shot examples $FS$
+    \STATE \textbf{Output:} Low-level plan $\pi = \langle a_1, a_2, \dots, a_N \rangle$
+
+    \STATE $D, \mathcal{P} \gets \text{LLM}(s_0, FS)$ 
+
+    \STATE $\mathcal{R}_p \gets \emptyset,\; \mathcal{R}_a \gets \emptyset$ 
+
+    \STATE $\mathcal{R}_{\text{random}} \gets$ Generate transitions with random actions
+
+    \STATE $\hat{T} \gets \text{LLM}(s_0, \mathcal{A}, \mathcal{R}_{\text{random}}, D, \mathcal{P})$ 
+
+    \STATE $\mathcal{G} \gets \text{LLM}(s_0, FS, D, \mathcal{P})$ 
+
+    \STATE $\Pi_H \gets \text{Fast-Downward}(D, \mathcal{P})$ 
+
+    \FOR{each grounded operator $\underline{\omega_k} \in \Pi_H$} 
+      \STATE $\pi_k \gets \mathrm{BFS}(s_0, \hat{T}, \underline{\omega_k})$ 
+
+      \STATE Store $(s, a, s', \underline{\omega_k})$ for all transitions in $\pi_k$ in $\mathcal{R}_p$
+
+      \STATE $\pi \gets \pi \cup \pi_k$ 
+
+      \FOR{each $a \in \pi_k$} 
+        \STATE Store $(s, a, s', \underline{\omega_k})$ in $\mathcal{R}_a$
+      \ENDFOR
+    \ENDFOR
+
+    \IF{$\text{EFF}(\underline{\omega_{K-1}})$ holds in $s'$ after executing $\pi$}
+      \STATE \textbf{return} $\pi$
+    \ELSE
+      \IF{$\mathcal{R}_p \neq \mathcal{R}_a$} 
+        \STATE $\hat{T} \gets \text{LLM}(\hat{T}, \mathcal{R}_p, \mathcal{R}_a)$ 
+      \ELSE
+        \STATE $\Pi_E \gets \text{Exploration}(s_0, D)$ 
+        \STATE \textbf{goto} Line 8 
+      \ENDIF
+    \ENDIF
+  \end{algorithmic}
+\end{algorithm}
+
+\subsection{Learning Abstractions}
+\label{sec:abstraction_learning}
+
+Unlike the original TheoryCoder, which relied on hand-engineered PDDL files defining abstract operators and predicates, TheoryCoder-2 leverages LLMs' in-context learning ability to synthesize such files on its own.
+In this process, the only system input we need to hand-engineer is the \textit{initial prompt}---a natural language description of the final goal of the environment and very simple examples illustrating what it means to learn abstract operators (e.g., \textit{eat} with the precondition \textit{not eaten} and the effect \textit{eaten}) based on a toy problem; the corresponding example can be found in Box \ref{box:few_shot_example_2_prompt} and the complete initial prompt in Box \ref{box:generate_pddl_files_prompt} in the Appendix.
+
+These examples are designed to be minimal; they are unrelated to the actual environment the agent interacts with, serving only as templates for how abstractions can be represented. 
+They are crucial for guiding the LLM to synthesize abstractions at the appropriate level---neither too granular nor too coarse (a challenge for current LLMs when given full autonomy).
+
+\subsection{Reusing and Growing the Library of Abstractions}
+\label{sec:curriculum}
+
+Our experiments tested the ability of TheoryCoder-2 to build up a library of reusable abstract concepts through a sequence of ``episodes'' interacting with different environments. 
+To do this, we designed episodes containing one or more environments, grouped together by similarity, and ordered by difficulty. We also constructed ablations by shuffling the ordering of the curriculum. 
+
+Within each episode, once the agent has learned the operators (zero-shot), it then learns a Python world model exactly as in the original TheoryCoder (Sec.~\ref{sec:tc}). Unlike TheoryCoder, it also learns Python functions to ground predicates' semantics in a given environment. (Previously, these were provided along with the PDDL abstractions.) 
+
+That is, the agent learns the predicate classifiers by generating Python programs. These classifiers operate on the raw state and return a Boolean indicating whether the predicate is true.
+
+From the second environment onward within an episode, agents attempt to reuse any previously-learned abstractions and add to them as necessary.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.85\linewidth]{comparison_overview.pdf}
+    \caption{Comparison of agent–environment interaction between methods. WorldCoder and LLM + P both fall under the LLM + Planner category.}
+    \label{fig:agents}
+\end{figure}
+
+\section{Experiments}
+
+Our experiments aim to answer the following set of questions: Can TheoryCoder-2 successfully learn abstract states and actions?
+Are learned abstractions reusable across different environments? Does reuse improve sample efficiency on new problems? How well does the resulting system perform on challenging tasks that are nontrivial for existing LLM agents?
+
+To answer these questions, we evaluate various properties of TheoryCoder-2 and other agents in the VGDL-based Labyrinth and Maze, as well as Sokoban (Sec.~\ref{sec:exp1}), BabyAI  environments, and finally Minihack (Sec.~\ref{sec:exp3}).
+
+\textbf{Evaluation metrics.} We use the following metrics to evaluate agents:
+\textit{token cost} (the number of tokens consumed by each agent measures sample efficiency),  \textit{compute time} (Wall-clock compute time measures the practical runtime of each agent), and \textit{solution rate} (the proportion of tasks (game levels) successfully solved on the first attempt measures agent performance).
+
+We compare TheoryCoder-2 against the following baselines, including variation of TheoryCoder-2 in which we ablate certain components.
+All of these agents use LLMs in some capacity (either the non-reasoning model 4o or the reasoning model o4-mini).
+
+\textbf{LLM + \textbf{$\pi$}.} A reasoning-only model that generates plans directly in terms of primitive actions, without explicit abstractions or an executable world model. Here, we test o4-mini \citep{openai_o4mini_system_card_2025}, with high, medium, and low reasoning effort (when not indicated, we use the `high' variant). Additionally, we test GPT-4o, a non-reasoning model.
+
+\textbf{LLM + P} \citep{liu2023llm+}. Uses an LLM to generate PDDL domain and problem files for each task given the current observation and a few-shot prompt. A planner produces a plan, which an LLM then converts into a sequence of actions that are executable in the environment. We use o4-mini with high reasoning effort as the PDDL synthesizer model, since lower-effort modes struggled even on the earlier levels—likely because LLMs are less reliable at producing PDDL than Python code.
+
+\textbf{WorldCoder} \citep{tang2024worldcoder}.The agent synthesizes a Python program representing the transition function. This program is used by a low-level planner to generate actions. Just as for TheoryCoder-2, we use GPT-4o as the synthesizer and BFS as the planner. WorldCoder differs from TheoryCoder-2 in that planning and world modeling is not done hierarchically. WorldCoder is more similar to LLM + P in that aspect, as LLM + P is also modeling the world at a low-level only.
+
+\textbf{TheoryCoder-2.} Our full system, which synthesizes PDDL operators using GPT-4o for high-level planning, along with Python versions of the predicates and a Python transition function for low-level dynamics, enabling grounded abstraction learning and reuse across environments.
+TheoryCoder-2 is different from the other agents since it models the world hierarchically by synthesizing high level abstractions in PDDL and a low-level Python transition model. It uses the PDDL operators for high-level planning and the low-level model for low-level planning.
+
+\textbf{Oracle}.~Uses hand-engineered abstractions, serving as a reference to compare the quality of abstractions learned by TheoryCoder-2. We also evaluate two ablated variations:
+
+\textbf{TC - P.} Removes the executable abstractions and Python world model. The LLM directly outputs abstractions and high-level plans, and then is prompted to convert its high level plan into actions. It is a form of chain-of-thought prompting \citep{wei2022chain}, encouraging the LLM to think at a high level first and then output a low level plan. 
+
+\textbf{TC - C.} Removes curriculum learning. It starts each episode with blank abstractions and transition function. It has to synthesize all the abstractions and a transition function  for the current level.\looseness=-1
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=0.80\linewidth]{curriculum}
+    
+    \caption{An illustration of the curriculum used in our experiments. A curriculum is a sequence of episodes in which each episode contains one or more environments/games. The sequence of the first episode (Labyrinth) and the second one (Maze, and Sokoban) is studied in Experiment 1 (Sec.~\ref{sec:exp1}), while the entire sequence is used in Experiment 2 (Sec.~\ref{sec:exp3}). In experiment 3 (Minihack), we use a separate curriculum. The blue arrows indicate the abstractions that TheoryCoder-2 learned.}
+    \label{fig:curriculum}
+
+\end{figure*}
+
+
+
+\subsection{Evaluating Abstraction Learning and Reuse in Simple Environments}
+\label{sec:exp1}
+
+The goal of this experiment is to evaluate the feasibility of abstraction learning and its reusability in our agent. Here we evaluate the agents using \textbf{Labyrinth}, \textbf{Maze}, and \textbf{Sokoban}. The first segment of Figure \ref{fig:curriculum} illustrates this setting.
+These tasks are navigation-style VGDL games that primarily involve learning and reusing abstractions to ``move to'' a certain position.
+
+Results in the top part of Table \ref{tab:tokens} show the token cost and whether the agents successfully solved each of the problems.
+First, we observe that TheoryCoder-2 is able to learn the key abstraction $\mathtt{move\_to}$ and solve the task. (Note the LLM named this operator $\mathtt{moveontop}$ and the corresponding code for the abstraction is shown in Box \ref{box:abstraction} below.)
+
+Second, we observe that TheoryCoder-2 was able to reuse this operator in two new environments, Maze and Sokoban.
+In terms of efficiency, the simple LLM + $\pi$ baseline is the most efficient agent on these simple environments, while the second best is TheoryCoder-2 outperforming the two advanced LLM agents, LLM + P and WorldCoder. Finally, we note that all systems were able to solve these simple problems.
+
+
+\begin{mybox}[boxrule=0pt, parbox=false, opacityframe=1, colframe=black, label=box:abstraction]{Example of a learned abstraction}
+\begin{lstlisting}[basicstyle=\ttfamily\small, breaklines=true]
+(:action moveontop
+    :parameters (?obj1 - object ?obj2 - object)
+    :precondition (not (ontop ?obj1 ?obj2))
+    :effect (ontop ?obj1 ?obj2)
+)
+\end{lstlisting}
+\end{mybox}
+
+\begin{table*}[t]
+\caption{Token cost across models (lower is better). Cells are highlighted in\colorbox{blue!10}{blue}if the corresponding agent \textbf{failed} to solve the task.}
+\label{tab:tokens}
+\centering
+\footnotesize
+\setlength{\tabcolsep}{0.2em}      
+\renewcommand{\arraystretch}{1.1} 
+\begin{tabular}{lrrrrrr}
+\toprule
+ & \multicolumn{3}{c}{\textbf{TheoryCoder-2}} & \multicolumn{3}{c}{\textbf{Baselines}} \\
+\cmidrule(r){2-4} \cmidrule(r){5-7} 
+\textbf{Task (Game)} &
+\makecell[c]{\textbf{Full}} &
+\makecell[c]{\textbf{TC - P}} &
+\makecell[c]{\textbf{TC - C}} &
+\makecell[c]{\textbf{LLM + $\pi$}} &
+\makecell[c]{\textbf{LLM + P}} &
+\makecell[c]{\textbf{WorldCoder}} \\
+\midrule
+
+Labyrinth               & 21,378   & 24,510 & 21,378 & 5,173   & 28,931 & 56,360 \\
+Maze                    & 19,737   & 23,186 & 21,236 & 3,518   & 24,396 & 56,085 \\
+Sokoban                 & 7,171    & 10,373 & 8,441 & 2,608   & 25,919 & 19,684 \\ 
+
+\midrule
+
+\multicolumn{7}{l}{\textbf{BabyAI}} \\
+BabyAI (Pickup)         & 8,588    & 6,660  & 8,588 & 2,405   & 20,589 & 18,013 \\
+BabyAI (Unlock)         & 33,116   & 41,734 & 33,116 & 5,705   & 50,071 & 97,938 \\
+BabyAI (Combine Skills 1) & 1,961    & 54,277 & 44,725 & \cellcolor{blue!10} 40,960 & \cellcolor{blue!10} 41,515 & \cellcolor{blue!10} 119,330 \\
+BabyAI (Combined Skills 2) & \cellcolor{blue!10}2,528   & \cellcolor{blue!10} 53,376    & \cellcolor{blue!10} 45,175 & \cellcolor{blue!10} 49,973     & \cellcolor{blue!10} 59,003     & \cellcolor{blue!10} 120,200 \\
+BabyAI (Combined Skills 3) & 2,454   & 53,064    & 45,017 &  29,791     & \cellcolor{blue!10} 55,078     & \cellcolor{blue!10} 120,375 \\
+
+\midrule
+
+\multicolumn{7}{l}{\textbf{Minihack}} \\
+Minihack-5x5       & 5,163 & 7,671 & 5,163 & 1,115 & 12,595 & 8,144 \\
+Minihack-15x15     & 0 & 9,815 & 4,837 & 1,402 & 12,124 & 0 \\
+Minihack-Traps  & 0 & \cellcolor{blue!10} 14,326 & 5,007 & 9,110  & \cellcolor{blue!10} 29,712 & 0 \\
+Minihack-Monster  & 0 & \cellcolor{blue!10} 21,189 & 6,125 & 1,290  & \cellcolor{blue!10} 30,940 & 0 \\
+Minihack-WoD       & 19,433 & 21,932 & 19,433 & 4,176 & \cellcolor{blue!10} 52,434 & \cellcolor{blue!10} 62,165 \\
+
+\midrule
+\textbf{Total for All Tasks} & \textbf{121,529} & 267,180 & 268,241 & 157,206 & 443,307 & 437,719\\
+\bottomrule
+\end{tabular}
+
+\end{table*}
+
+
+
+\subsection{Transferring abstractions to harder problems}
+\label{sec:exp3}
+
+The purpose of this experiment is to test whether TheoryCoder-2 can gradually learn new abstractions and reuse them in new environments, and whether that yields sample efficiency. 
+
+We first evaluate our agent on the curriculum of Sec.~\ref{sec:exp1}; we add three \textbf{BabyAI} levels in sequence: \textit{Pickup} (single key), \textit{Unlock} (key + door), and the \textit{Boss} level. The two first environments are named after the abstract skills needed to solve the corresponding task, and the last one is a multi-room task requiring both picking-up and unlocking skills. For the Boss level, we generate three instantiations with different layouts (based on three different seeds) in order to increase the diversity of final combined-skill environments. Figure \ref{fig:curriculum} provides an illustration of this curriculum.
+ 
+Table \ref{tab:tokens} (middle) shows the results. While all the agents solve the simple \textit{Pickup} and \textit{Unlock} environments, many of them fail in the complex Boss level: more specifically, all agents failed in ``Combined Skills 2'', while only TheoryCoder-2 succeeded at both ``Combined Skills 1'' and ``3''.
+TheoryCoder-2 successfully learns abstractions ($\mathtt{Pickup}$ and $\mathtt{Unlock}$) from the two first levels and then composes them to solve the more complex Boss level tasks that require using both of them.
+
+\begin{figure}[t]
+     \centering
+\includegraphics[width=0.85\linewidth]{compute_time.png}
+    \caption{Success rate as a function of compute time, averaged across all games. The TC Family represents TheoryCoder-2 and its variants. TheoryCoder and its ablations are able to solve more tasks with less compute time than the reasoning models that use high reasoning effort. LLM + $\pi$ is shown with three different reasoning efforts.}
+\label{fig:compute_time}
+\end{figure}
+
+In terms of sample efficiency, TheoryCoder-2 allocates high computation for the first and the second levels to learn the abstractions; but its token consumption dramatically drops on the Boss level (from about 8500 and 33000 to around 2000), as it no longer needs to learn any new abstractions if it reuses those learned in the previous level. Furthermore, it shows that TheoryCoder-2 is able to compose these primitive abstractions to solve different variations of the Boss levels that have different win conditions.
+
+Finally, we evaluate our abstraction learning method in five \textbf{Minihack} environments. The bottom part of Table \ref{tab:tokens} illustrates the effectiveness of abstraction transfer. TheoryCoder-2 learns an abstract skill of \texttt{move\_to} in \texttt{Minihack-5x5} and then reuses it to solve the next three environments. As a result, there is 0 token consumption for \texttt{Minihack-15x15}, \texttt{Minihack-Traps}, and \texttt{Minihack-Monster}.
+WorldCoder also exhibits this trend, but failed at the hardest task, \texttt{Minihack-WoD}.
+In the \texttt{Minihack-WoD} environment, TheoryCoder-2 learns the \texttt{attack} abstraction, which allows it to shoot a wand to kill an enemy. This abstraction demonstrates how compact operators that encompass multiple concepts can be learned: picking up the wand, aiming it at the enemy and shooting it. The Minihack experiments demonstrate the effectiveness of zero-shot transfer of the abstractions as well as the ability to learn single compact abstractions that encompass different actions.\looseness=-1
+
+
+Notably, even when the curriculum or planners is removed, TheoryCoder-2 is capable of solving the task; that is, both components significantly contribute to improving the sample efficiency but not to the performance. In Table \ref{tab:tokens}, we see that even when curriculum learning is removed and abstraction files are initialized with blank files, TheoryCoder-2 remains more compute efficient than the other world modeling approaches: WorldCoder and LLM + P. By contrast, WorldCoder is very costly, consuming more tokens than the raw LLM approach. On the more difficult environments, we also observed that the PDDL programs generated by LLM + P frequently contained errors, leading to invalid or unsolvable plans.
+
+We further compare the  runtime of these agents. Fig.~\ref{fig:compute_time} shows the success rate averaged over all  games in the curriculum and the average compute time.
+We observe that the fastest agents are the low-effort LLM + $\pi$ baseline and the full TheoryCoder-2 with curriculum and planner. Notably, even when curriculum learning is removed and TheoryCoder-2 is initialized with blank files, it remains faster at synthesizing abstractions and solving levels than the o4-mini variants.
+
+\section{Discussion}
+\label{sec:discussion}
+
+\textbf{Results summary.} The results highlight several key advantages of TheoryCoder-2 over the baselines. As shown in Fig.~\ref{fig:compute_time}, TheoryCoder-2 and its ablations achieve the highest success rate. This stems from the use of grounded abstractions, which reduce the likelihood of planning errors compared to reasoning-only LLMs. While LLM + $\pi$ with high reasoning effort sometimes achieve comparable solution rates, it does so at a higher token cost and much more compute time cost, making it impractical for scalable or real-time use. On the BabyAI Boss level, o4-mini with high reasoning effort often required around 3 minutes to return an answer. In contrast, TheoryCoder-2 invests compute in simpler levels to learn reusable components of hierarchical world models, which then accelerate learning and planning in harder environments. Moreover, by generating symbolic abstractions, our agents can run highly efficient classical planning algorithms. The result is efficiency gains in both token cost and runtime: symbolic planners typically terminate within a second in the domains we explored here.\looseness=-1
+
+With the TC-P ablation, which both generated abstractions and planned in natural language instead of code, we observed qualitative differences compared to the full model. For example, o4-mini with high reasoning effort produced abstractions at a different level of granularity than our system, often interleaving high-level operators with unnecessary low-level details. Thus, more strictly enforcing clean separation of function between levels of the world model via code specifications may have more general benefits for producing systematic thinking in LLM agents.
+
+Our results suggest that the mixing in of low-level detail may be why TC-P takes longer to map out plans, whereas TheoryCoder-2 invests just enough compute up front to synthesize an appropriate world model. Once this model captures the ``right'' abstractions, it can serve as an adaptive compute resource, allowing the agent to flexibly balance fast, reactive reasoning with slower, more deliberate planning depending on the situation.
+
+
+Overall, we found TheoryCoder-2's learned abstractions to be of similar quality to the Oracle, the hand-designed abstractions. While there is no systematic way to quantitatively evaluate the quality of the abstractions learned (e.g., one could measure the string length of programs and ask how compressed a particular abstraction is), qualitatively, we find that they yield similar performance to the Oracle in Fig. \ref{fig:compute_time} and have similar preconditions and effects.
+
+\textbf{Limitations and future directions.} Despite the significant advances, TheoryCoder-2 still has limitations, which we plan to address in future work. 
+First, our approach assumes access to an object-oriented, text-based state representation. While vision-language models have shown mixed results for planning, they may serve as perception modules for extracting such representations in simple environments. Scaling to more complex settings will require robust methods for object discovery, tracking, and attribute inference. Second, extending beyond discrete domains to continuous ones introduces new challenges (e.g., predicting continuous trajectories or collision dynamics). 
+Third, we noticed issues related to brittleness when learning the predicate classifiers, which are critical for linking high and low levels of representation in the planner. In particular, we noticed that certain symbolic state representations led to issues. For example, in BabyAI, we originally represented open doors as "open\_door" and closed doors as "closed\_door". In this case, our method synthesized predicate functions that made incorrect assumptions - for instance that open doors would be removed from the state dictionary. When we instead represented doors as an object with boolean attributes for closed and locked, our method consistently produced correct predicate classifiers. 
+
+Finally, we note that while LLMs could generate adequate abstractions given only an initial observation for all the environments we used here, more challenging or less familiar environments will likely require additional mechanisms to support trial-and-error learning for the PDDL representations. This will be a focus of future work.
+
+\section{Related Work}
+\label{sec:related_work}
+
+\textbf{LLMs for Planning and Synthesizing Policies.} Many recent works have explored how LLMs can be used for planning \citep{yao2023react, hao2023reasoning, zhao2024large, liu2023reason,wang2023voyager}. A common approach is to provide the LLM with a text-based description of the environment state as input and then query it to produce an action. After executing the action, the resulting text-based state is fed back into the model, creating an interactive loop. Vision-language models have also been applied in a similar manner \citep{waytowich2024atari, paglieri2024balrog, ruoss2025lmact, cloos2024baba}, except that they are prompted with images of the environment state rather than text-based descriptions.
+
+Despite these advances, many frontier LLMs still struggle with spatial reasoning and are prone to hallucinations. To mitigate these issues, some approaches augment LLM agents with external modules or tools \citep{cao2025large}, fine-tune models on trajectory data \citep{gaven2024sac}, incorporate memory modules, or prompting techniques  enabling the agent to better structure its reasoning over time. We compared TheoryCoder-2 with agents that use the LLM as the implicit planner \citep{yao2023react, wei2022chain, yao2023tree}. While such methods can enhance reasoning, they often suffer from high compute costs, as reasoning models take considerable time to generate answers \citep{hassid2025don}.
+
+\textbf{Program Synthesis.} Several works have used program synthesis to build explicit world models of the environment \citep{tang2024worldcoder, ahmed2025synthesizing, piriyakulkij2025poe, liu2025interactive}, demonstrating improved reasoning capabilities \citep{gupta2023visual} compared to standard large language models. EMPA \citep{tsividis2021human} also uses program synthesis, though it represented the environment in VGDL rather than a general-purpose programming language. \citet{wong2024learning} showed that LLMs can be used to learn operators for simple language-instruction domains. \citet{liu2023llm+} used LLMs to generate PDDL files and showed that in-context learning examples are important for quality generation. Other work has investigated using vision-language models to learn predicates \citep{liang2025visualpredicator}, but these methods relied on labeled images to guide object identification, limiting their autonomy. In contrast, our approach targets the end-to-end problem of generating both the goals and the abstractions needed for hierarchical planning (assuming access to a text-based observation of the environment's frame). 
+
+\textbf{Abstraction Learning in RL.}
+While our focus is on program-synthesis agents and directly comparable LLM-based agents, abstraction learning and hierarchical planning have also been a longstanding research topic in general reinforcement learning. Key concepts introduced in the options framework \citep{sutton1999between,bacon2017option}, Feudal RL \citep{DayanH92,VezhnevetsOSHJS17}, and sub-goal generation \citep{schmidhuber1992subgoalplanning,bakker2004hierarchical} remain central in modern deep RL research, including in the offline imitation learning setting \citep{shiarlis18taco,kipf2019compile,lu2021ompn,gopalakrishnan2023unsupervised}.
+Similarly, many recent methods have pushed the sample efficiency of purely neural network model-based RL \citep{schrittwieser2020mastering, hafner2023mastering}, matching human learners' efficiency in certain domains \citep{YeLKAG21}.
+However, in general, deep RL methods still remain much less sample efficient, and have lower generalization abilities,
+compared to neurosymbolic and program synthesis-based agents as have been reported by prior work \citep{tang2024worldcoder,tsividis2021human}.
+Here, our contribution was to push the current limitation of such a neurosymbolic approach.
+
+\section{Conclusion}
+\label{conclusion}
+We expanded the scope and efficiency of TBRL by enabling abstraction induction and reuse---a critical step towards making TBRL free of human engineering.
+We experimentally demonstrated that a novel TBRL system, TheoryCoder-2, is capable of gradually learning reusable abstractions, yielding both improved sample efficiency and solution rates over several baseline LLM agents based on LLMs.
+Future work will extend TBRL further to make it applicable to environments beyond those with object-oriented, text-based state representations.
+
+\section*{Software and Data}
+
+Our code is available at:\\
+\url{https://github.com/ZerghamAhmed/TheoryCoder}.
+
+\section*{Impact Statement}
+
+This paper presents work whose goal is to advance the field of Machine
+Learning. There are many potential societal consequences of our work, none
+which we feel must be specifically highlighted here.
+
+\section*{Acknowledgements}
+
+This work was supported by the Kempner Institute for the Study of Natural and Artificial Intelligence, a Polymath Award from the Schmidt Sciences, and the Department of Defense MURI program under ARO grant W911NF-231-0277.
+
+
+% In the unusual situation where you want a paper to appear in the
+% references without citing it in the main text, use \nocite
+% \nocite{langley00}
+
+\bibliography{icml2026_conference}
+\bibliographystyle{icml2026}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% APPENDIX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\appendix
+\onecolumn
+
+\section{Language Model Prompts}
+\label{app:prompts}
+Here we provide all the prompts used in our experiments, as follows:
+
+\begin{itemize}
+\item Box \ref{box:generate_pddl_files_prompt}: Prompt used to Generate PDDL Files 
+\item Box \ref{box:few_shot_example_1_prompt}: An example of an in-context example for PDDL generation
+\item Box \ref{box:few_shot_example_2_prompt}: Another example of an in-context example for PDDL generation
+\item Box \ref{box:few_shot_example_3_prompt}: One more example of an in-context example for PDDL generation
+
+\item Box \ref{box:gen_python_predicate_prompt}: Prompt to generate Python predicates 
+
+\item Box \ref{box:transfer_abstraction_prompt}: Prompt for abstraction transfer  (to generate only the problem file)
+\item Box \ref{box:gen_low_level_world_model_prompt}: Prompt to generate low-level world model
+\item Domain descriptions for Labythinth and Maze (Box \ref{box:maze_and_labyrinth_domain_description}), Sokoban (Box \ref{box:sokoban_domain_description}), BabyAI (Box \ref{box:babyai_domain_description}) and Minihack (Box \ref{box:minihack_domain_description} and \ref{box:minihack_wod_description})
+\end{itemize}
+
+\begin{mybox}[boxrule=0pt, parbox=false, opacityframe=1, colframe=black, label=box:generate_pddl_files_prompt]{Generate PDDL Files Prompt}
+\begin{lstlisting}[basicstyle=\ttfamily\small, breaklines=true]
+You are an agent playing a 2D grid game, whose raw state is shown below.
+
+Can you give me a minimal PDDL domain and problem file for this setup that will allow the agent to win the game? Think in terms of the most minimal abstract files you can.
+
+Each object in your PDDL problem file is named using ONLY the keys of the raw state dictionary.
+
+
+DO NOT PROPOSE PREDICATES THAT IMPLY SPATIAL RELATIONS LIKE FROM OR TO!!!!!
+
+Domain Description:
+
+{domain_description)
+
+
+In your PDDL problem file do not represent configuration attributes when writing objects 
+for example for unopened_black_jar you can represent it as black_jar. See example 2 and example 3!!!!!!!
+
+Feel free to propose multiple operators, and predicates at once. Also you may have two goals in the problem file.
+
+The raw state dictionary keys are considered traversable.
+
+Return your code blocks with
+```pddl ```
+markup tags so I can easily extract it.
+
+Do NOT use symbols like "-" for the predicate names. For example, the predicate "avatar-at" should NOT be proposed since it has a "-".
+Please use all LOWERCASE for the operator names as well!!!!!!!!!!
+
+Do not name your PDDL DOMAIN FILE DO NOT name predicates:
+if, else, in, def, or any other typical python name
+
+predicate names should exactly be one word no underscores in it either
+
+Few shot example of what a nice abstraction domain and problem file should look like:
+
+{few_shot_PDDL_file_examples}
+
+Raw state of game (generate the files for this):
+
+{raw_state}
+
+YOUR CURRENT DOMAIN FILE YOU HAVE SYNTHESIZED:
+
+{current_domain}
+
+\end{lstlisting}
+\end{mybox}
+
+\begin{mybox}[boxrule=0pt, parbox=false, opacityframe=1, colframe=black, label=box:few_shot_example_1_prompt]{Few Shot PDDL Example 1}
+\begin{lstlisting}[basicstyle=\ttfamily\small, breaklines=true]
+state is 'table': [3, 4], 'mug', [4, 4]
+
+(define (domain toy-domain)
+  (:requirements :strips :typing)
+  
+  (:types
+    object
+  )
+
+  (:predicates
+    (ontop ?x - object ?y - object)
+  )
+
+  (:action placeontopof
+    :parameters (?obj1 - object ?obj2 - object)
+    :precondition (not (ontop ?obj1 ?obj2))
+    :effect (ontop ?obj1 ?obj2)
+  )
+)
+
+(define (problem toy-problem)
+  (:domain toy-domain)
+
+  (:objects
+    table mug - object
+  )
+
+  (:init
+    ;; Initially nothing is on top of anything
+    (not (ontop mug table))
+  )
+
+  (:goal
+  ; mug will overlap with table 'table': [4, 4], 'mug', [4, 4]
+    (ontop mug table) 
+  )
+)
+
+\end{lstlisting}
+\end{mybox}
+
+\begin{mybox}[boxrule=0pt, parbox=false, opacityframe=1, colframe=black, label=box:few_shot_example_2_prompt]{Few Shot PDDL Example 2}
+\begin{lstlisting}[basicstyle=\ttfamily\small, breaklines=true]
+state is 'agent': [3, 4], 'apple': [5, 4], 'vines': [4,4], 'axe'[1,4], 'unopened_black_jar: [0,1]'
+
+(define (domain toy-domain)
+  (:requirements :strips :typing)
+  
+  (:types
+    object
+  )
+
+  (:predicates
+    (eaten ?x - object ?y - object)
+  )
+
+  (:action eat
+    :parameters (?obj1 - object ?obj2 - object)
+    :precondition (not (eaten ?obj1 ?obj2))
+    :effect (eaten ?obj1 ?obj2)
+  )
+)
+
+(define (problem toy-problem)
+  (:domain toy-domain)
+
+  (:objects
+    agent apple black_jar - object
+  )
+
+  (:init
+    (not (eaten agent apple))
+  )
+
+  (:goal
+    (eaten agent apple)
+  )
+)
+
+
+\end{lstlisting}
+\end{mybox}
+
+\begin{mybox}[boxrule=0pt, parbox=false, opacityframe=1, colframe=black, label=box:few_shot_example_3_prompt]{Few Shot PDDL Example 3}
+\begin{lstlisting}[basicstyle=\ttfamily\small, breaklines=true]
+
+BEGIN EXAMPLE 3
+
+state is 'agent': [6, 3], 'blocked_gold_window': [4,4], 'unblocked_silver_window': [1,4]
+
+(define (domain toy-domain)
+  (:requirements :strips :typing)
+  
+  (:types
+    object
+  )
+
+  (:predicates
+    (unblocked ?x - object)
+  )
+
+  (:action clear
+    :parameters (?x - object)
+    :precondition (not (unblocked ?x))
+    :effect (unblocked ?x)
+  )
+)
+
+(define (problem toy-problem)
+  (:domain toy-domain)
+
+  (:objects
+    agent apple gold_window - object
+  )
+
+  (:init
+    ; the end goal is to eat the apple
+    (not (unblocked gold_window))
+  )
+
+  (:goal
+    (unblocked gold_window)
+  )
+)
+
+
+\end{lstlisting}
+\end{mybox}
+
+\begin{mybox}[boxrule=0pt, parbox=false, opacityframe=1, colframe=black, label=box:gen_python_predicate_prompt]{Python Predicate Generate Prompt}
+\begin{lstlisting}[basicstyle=\ttfamily\small, breaklines=true]
+You are a software engineer that must write python predicates. These python predicates have to be python versions of the PDDL operators that are functions which take the states and arguments and returns either True or False. You will need to write Python predicates for all the predicates you see in the domain file. The problem file, and Raw State is also given to help guide you. 
+
+Return your code blocks with
+```python ```
+markup tags so I can easily extract it.
+
+BEGIN EXAMPLE
+
+predicate: isLeftOfop(arg1, arg2)
+
+def isLeftOf(state, arg1, arg2):
+    """
+    Returns True if arg1 is to the left of arg2, based on their x-coordinates.
+
+    Parameters:
+    - state: dict with keys as object names and values as [x, y] positions
+    - arg1: object name (e.g., 'book')
+    - arg2: object name (e.g., 'lamp')
+
+    Returns:
+    - bool: True if arg1's x-coordinate is less than arg2's, False otherwise
+    """
+    pos1 = state.get(arg1)
+    pos2 = state.get(arg2)
+    if pos1 is None or pos2 is None:
+        return False
+    return pos1[0] < pos2[0]
+
+END EXAMPLE
+
+Make sure that you always have state as one of the arguments!
+
+Only synthesize the predicate you see in the domain file and make sure
+to give it the same name!
+
+Domain File:
+
+{domain_file}
+
+Problem File:
+
+{problem_file}
+
+Raw State:
+
+{raw_state}
+
+Current Python Low Level World Model:
+
+{world_model}
+
+Game Description:
+
+{game_description}
+\end{lstlisting}
+\end{mybox}
+
+\begin{mybox}[boxrule=0pt, parbox=false, opacityframe=1, colframe=black, label=box:transfer_abstraction_prompt]{Transfer Abstraction (Generate Only Problem File)}
+\begin{lstlisting}[basicstyle=\ttfamily\small, breaklines=true]
+You are an agent playing a 2D grid game, whose raw state is shown below.
+
+Can you give me a PDDL problem file for this given PDDL domain file that will allow the agent to win the game? 
+Each object in your PDDL problem file is named using ONLY the keys of the raw state dictionary.
+
+You are allowed to specify multiple goals in your problem file! Please think about the preconditions and effects carefully.
+
+MAKE SURE TO DOUBLE CHECK AT THE END THAT YOU SPECIFIED MULTIPLE :GOALS IN THE PROBLEM FILE
+JUST BECAUSE YOU HAVE ONE MISSION DOESN'T MEAN YOU WILL USE THAT MISSION AS THE SINGLE GOAL
+
+for example you would maybe need to do a subgoal in order to achieve the mission!! DO NOT JUST ASSUME ONE GOAL in problem file 
+
+Return your code blocks with
+```pddl ```
+markup tags so I can easily extract it.
+
+{few_shot_PDDL_file_examples}
+
+Domain file you need to use (generate the problem file for this):
+
+{domain_file}
+
+Raw state of game (generate the problem file for this):
+
+{raw_state}
+
+MISSION:
+
+{mission}
+
+
+Domain Description:
+
+{domain_description}
+\end{lstlisting}
+\end{mybox}
+
+\begin{mybox}[boxrule=0pt, parbox=false, opacityframe=1, colframe=black, label=box:gen_low_level_world_model_prompt]{Generate Low level World Model}
+\begin{lstlisting}[basicstyle=\ttfamily\small, breaklines=true]
+You are an AI agent that must come up with a transition model of the game you are playing. 
+
+A BFS low-level planner that will use your synthesized transition model to find the low-level actions that will allow you to win levels of the game.
+
+You are also given state transition after executing random actions that will help as well.
+Note that if there is no change returned after doing that action, it means that moving was prevented somehow such as by an obstacle. 
+
+DESCRIPTION OF DOMAIN:
+
+{domain_description}
+
+CURRENT STATE:
+
+{current_state}
+
+ACTION SPACE:
+
+{actions_set}
+
+Replay Buffer (last {num_random_actions} transitions):
+
+{errors_from_world_model}
+
+UTILS:
+
+{utils}
+
+
+RESPONSE FORMAT:
+
+- Make sure you use .get() to access the dictionary to avoid key errors!
+For example:
+avatar_pos = new_state.get('avatar') to get avatar pos 
+cake_pos = new_state.get('cake') to get cake pos
+
+
+```python
+
+# make sure to include these import statements
+from utils import directions
+
+def transition_model(state, action):
+
+
+    Return State
+
+```
+
+\end{lstlisting}
+\end{mybox}
+
+\begin{mybox}[boxrule=0pt, parbox=false, opacityframe=1, colframe=black, label=box:sokoban_domain_description]{Sokoban Domain Description}
+\begin{lstlisting}[basicstyle=\ttfamily\small, breaklines=true]
+In this domain, you have to push the boxes into the holes to win. If you push the box into the hole, the box will disappear.
+\end{lstlisting}
+\end{mybox}
+% \end{tcolorbox}
+
+% \begin{tcolorbox}[colback=gray!10, colframe=black, title=BabyAI Domain Description]
+\begin{mybox}[boxrule=0pt, parbox=false, opacityframe=1, colframe=black, label=box:babyai_domain_description]{BabyAI Domain Description}
+\begin{lstlisting}[basicstyle=\ttfamily\small, breaklines=true]
+The agent needs to navigate the maze to win. If the agent is facing a key, it can pick it up.
+The agent can also unlock doors in which case the door will become 
+open_COLORNAME_door in the state.
+
+For this environment the state key `agent_carrying` is a list of object names the agent currently holds (e.g., `['red_key']`).
+When a door is unlocked it will turn from locked_ to open_ (e.g., 'locked_blue_door' -> 'open_blue_door').
+When a closed door is opened it will turn from closed_ to open_ (e.g., 'closed_blue_door' -> 'open_blue_door').
+
+You can toggle any closed doors to open them and locked ones when you have their COLOR_key
+
+You cannot move forward through closed_ doors unless they are _open 
+So you will need to toggle them 
+so closed_ doors are essentially similar to grey walls in that they block you
+
+In the game you cannot overlap with any objects, to pickup the key you need to be adjacent to it and facing it.
+\end{lstlisting}
+
+\end{mybox}
+
+\begin{mybox}[boxrule=0pt, parbox=false, opacityframe=1, colframe=black, label=box:maze_and_labyrinth_domain_description]{Maze and Labyrinth Domain Description}
+\begin{lstlisting}[basicstyle=\ttfamily\small, breaklines=true]
+In this domain, you control the avatar and need to reach the goal.
+If you touch a trap you will die.
+\end{lstlisting}
+
+\end{mybox}
+
+\begin{mybox}[boxrule=0pt, parbox=false, opacityframe=1, colframe=black, label=box:minihack_domain_description]{Minihack Navigation Levels Description}
+\begin{lstlisting}[basicstyle=\ttfamily\small, breaklines=true]
+In this domain, move the agent to the downstair case.
+
+\end{lstlisting}
+\end{mybox}
+
+\begin{mybox}[boxrule=0pt, parbox=false, opacityframe=1, colframe=black, label=box:minihack_wod_description]{Minihack Wand Of Death Description}
+\begin{lstlisting}[basicstyle=\ttfamily\small, breaklines=true]
+Kill the minotaur to win. 
+To use the wand you zap, then select_f and finally shoot in the direction you want.
+You need to be about 5 squares away from the minotaur to kill it with the zap.
+It's good to sequence your actions by zapping, selecting f and then pointing to the correct direction.
+In order to shoot_ in a particular direction, you must always first zap, then select_f and then shoot in that direction - all as one action sequence.
+\end{lstlisting}
+
+\end{mybox}
+
+\section{Results and Outputs}
+
+Here we provide some of the results and outputs for TheoryCoder-2's learned abstractions and low-level world model. Additionally, we provide the hand-designed oracle abstractions. Notably, the  the learned and hand-designed abstractions are similar in their preconditions and effects.
+
+\begin{itemize}
+\item Box \ref{box:hand_designed}: human hand-designed abstractions for BabyAI
+\item Box \ref{box:tc2_babyai_abstractions}: TheoryCoder-2's learned abstractions for BabyAI
+\item Box \ref{box:tc2_babyai_lowlevel_wm}: TheoryCoder-2's learned Low\_level world model for BabyAI
+\end{itemize}
+
+
+\begin{mybox}[boxrule=0pt, parbox=false, opacityframe=1, colframe=black, label=box:hand_designed]{Human Hand-Designed Abstractions for BabyAI}
+\begin{lstlisting}[basicstyle=\ttfamily\small, breaklines=true]
+ (:action pickup
+    :parameters (?key - object)
+    :precondition (not (holding ?key))
+    :effect (holding ?key)
+  )
+
+  (:action unlock
+    :parameters (?door - object ?key - object)
+    :precondition (and (holding ?key) (not (unlocked ?door))
+    (unlocks ?key ?door))
+    :effect (unlocked ?door)
+  )
+\end{lstlisting}
+
+\end{mybox}
+
+\begin{mybox}[boxrule=0pt, parbox=false, opacityframe=1, colframe=black, label=box:tc2_babyai_abstractions]{TheoryCoder-2's Learned Abstractions for BabyAI}
+\begin{lstlisting}[basicstyle=\ttfamily\small, breaklines=true]
+(:action pickup
+    :parameters (?agent - object ?item - object)
+    :precondition (not (holding ?agent ?item))
+    :effect (holding ?agent ?item)
+  )
+
+(:action unlock
+    :parameters (?agent - object ?door - object ?key - object)
+    :precondition (and (holding ?agent ?key) (not (unlocked ?door)))
+    :effect (unlocked ?door)
+  )
+\end{lstlisting}
+
+\end{mybox}
+
+\begin{mybox}[boxrule=0pt, parbox=false, opacityframe=1, colframe=black, label=box:tc2_babyai_lowlevel_wm]{TheoryCoder-2's Learned Low-level world model for BabyAI}
+\begin{lstlisting}[basicstyle=\ttfamily\small, breaklines=true]
+from utils import directions
+
+def transition_model(state, action):
+    # Copy the current state to avoid modifying the original state
+    new_state = state.copy()
+    
+    # Get agent position, direction, and carrying status
+    agent_pos = new_state.get('red_agent')[0]
+    agent_direction = new_state.get('agent_direction')
+    agent_carrying = new_state.get('agent_carrying', [])
+    
+    # Define movement based on current direction
+    def move_forward(pos, direction):
+        return [pos[0] + direction[0], pos[1] + direction[1]]
+    
+    # Action: 'left'
+    if action == 'left':
+        # Rotate direction counter-clockwise
+        if agent_direction == [0, 1]:  # Facing up
+            new_state['agent_direction'] = [-1, 0]  # Facing left
+        elif agent_direction == [-1, 0]:  # Facing left
+            new_state['agent_direction'] = [0, -1]  # Facing down
+        elif agent_direction == [0, -1]:  # Facing down
+            new_state['agent_direction'] = [1, 0]  # Facing right
+        elif agent_direction == [1, 0]:  # Facing right
+            new_state['agent_direction'] = [0, 1]  # Facing up
+    
+    # Action: 'right'
+    elif action == 'right':
+        # Rotate direction clockwise
+        if agent_direction == [0, 1]:  # Facing up
+            new_state['agent_direction'] = [1, 0]  # Facing right
+        elif agent_direction == [1, 0]:  # Facing right
+            new_state['agent_direction'] = [0, -1]  # Facing down
+        elif agent_direction == [0, -1]:  # Facing down
+            new_state['agent_direction'] = [-1, 0]  # Facing left
+        elif agent_direction == [-1, 0]:  # Facing left
+            new_state['agent_direction'] = [0, 1]  # Facing up
+    
+    # Action: 'forward'
+    elif action == 'forward':
+        new_pos = move_forward(agent_pos, agent_direction)
+        if new_pos not in new_state.get('grey_wall', []):
+            for door_type in ['locked_', 'closed_']:
+                for key in new_state.keys():
+                    if key.startswith(door_type) and new_pos in new_state[key]:
+                        return new_state  # Movement blocked by a closed or locked door
+            new_state['red_agent'] = [new_pos]
+
+    # Action: 'pickup'
+    elif action == 'pickup':
+        target_pos = move_forward(agent_pos, agent_direction)
+        for key, positions in new_state.items():
+            if 'key' in key and target_pos in positions:
+                new_state['agent_carrying'].append(key)
+                positions.remove(target_pos)
+                break
+    
+    # Action: 'toggle'
+    elif action == 'toggle':
+        target_pos = move_forward(agent_pos, agent_direction)
+        for door_type in ['closed_', 'locked_']:
+            for key, positions in new_state.items():
+                if key.startswith(door_type) and target_pos in positions:
+                    color = key.split('_')[1]
+                    if door_type == 'closed_' or f'{color}_key' in agent_carrying:
+                        new_state[f'open_{color}_door'] = positions
+                        del new_state[key]
+                    break
+    
+    # Action: 'drop'
+    elif action == 'drop':
+        if agent_carrying:
+            dropped_key = agent_carrying.pop()
+            new_state['agent_carrying'] = agent_carrying
+            new_state[dropped_key] = [move_forward(agent_pos, agent_direction)]
+    
+    return new_state
+\end{lstlisting}
+
+\end{mybox}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
+% This document was modified from the file originally made available by
+% Pat Langley and Andrea Danyluk for ICML-2K. This version was created
+% by Iain Murray in 2018, and modified by Alexandre Bouchard in
+% 2019 and 2021 and by Csaba Szepesvari, Gang Niu and Sivan Sabato in 2022.
+% Modified again in 2023 and 2024 by Sivan Sabato and Jonathan Scarlett.
+% Previous contributors include Dan Roy, Lise Getoor and Tobias
+% Scheffer, which was slightly modified from the 2010 version by
+% Thorsten Joachims & Johannes Fuernkranz, slightly modified from the
+% 2009 version by Kiri Wagstaff and Sam Roweis's 2008 version, which is
+% slightly modified from Prasad Tadepalli's 2007 version which is a
+% lightly changed version of the previous year's version by Andrew
+% Moore, which was in turn edited from those of Kristian Kersting and
+% Codrina Lauth. Alex Smola contributed to the algorithmic style files.

@@ -1,0 +1,232 @@
+We study the complexity of learning a single reusable abstraction (helper)
+that maximizes compression utility over a corpus of programs. We show that
+even a highly restricted version of this problem is NP-complete.
+
+\par\noindent
+\paragraph{High-level intuition.}
+The restricted setting removes almost all sources of complexity usually
+associated with library learning. Programs have no internal structure:
+each program is just a flat tuple of symbols, and a helper can only specify
+that certain coordinates must take fixed values. Thus, learning a helper
+reduces to selecting a subset of positions that agree across many programs.
+
+Despite this extreme simplification, the problem remains hard. The reason is
+that the learner must jointly choose (i) which positions to constrain, and
+(ii) which programs will satisfy those constraints. These two choices
+interact combinatorially: constraining more positions makes matches rarer,
+while relaxing constraints increases coverage. This trade-off mirrors dense
+substructure problems such as biclique detection.
+
+The general version of library learning adds further complexity. Programs
+are no longer flat tuples but trees, so a helper must identify a reusable
+subtree rather than fixed positions. Variables (or \emph{holes}) allow parts
+of the helper to vary across occurrences, so the same pattern can match
+many different concrete subprograms (e.g., the same structure with different
+inputs)~\cite{dechter2013bootstrap,ellis2023dreamcoder,cao2023babble,bowers2023top}. This increases flexibility but also enlarges the search
+space. Moreover, matching is no longer exact: a helper may apply at many
+different locations inside a program, and one must search for all places
+where the pattern fits~\cite{bowers2023top}. The result below shows that even before these
+additional layers, the core combinatorial problem is already NP-hard.
+
+\par\noindent
+\paragraph{Syntax and programs.}
+Let $\Sigma$ be a finite set of symbols, and let $f$ be a fixed $n$-ary
+constructor. Every program is defined as
+\[
+p \equiv f(c_1, \dots, c_n),
+\]
+where each $c_i \in \Sigma$. The arity $n$ is fixed and identical for all
+programs.
+
+\par\noindent
+\paragraph{Corpus.}
+We are given a corpus
+\[
+\mathcal C \equiv \{p^{(1)}, \dots, p^{(N)}\},
+\]
+where each program is written as
+\[
+p^{(j)} \equiv f(c_1^{(j)}, \dots, c_n^{(j)}).
+\]
+
+\par\noindent
+\paragraph{Helpers (abstractions).}
+A reference tuple $(a_1, \dots, a_n) \in \Sigma^n$ is part of the input.
+A helper is defined by a subset of positions
+\[
+S \subseteq \{1, \dots, n\}.
+\]
+
+A program $p^{(j)}$ matches $S$ if
+\[
+\forall i \in S,\quad c_i^{(j)} = a_i.
+\]
+
+Let
+\[
+\mathrm{occ}(S) = \#\{ j : p^{(j)} \text{ matches } S \}, 
+\]  the number of corpus programs consistent with the helper.
+
+Define the utility
+\[
+U(S) = |S| \cdot \mathrm{occ}(S).
+\]
+
+\par\noindent
+\paragraph{Example.}
+Let $\Sigma = \{A, B, X, Y\}$ and consider programs of arity $3$:
+\[
+\begin{array}{c|ccc}
+ & 1 & 2 & 3 \\
+\hline
+p^{(1)} & A & A & X \\
+p^{(2)} & A & A & Y \\
+p^{(3)} & A & B & X \\
+\end{array}
+\]
+Fix the reference tuple $(A, A, X)$.
+
+If $S = \{1,2\}$, then $p^{(1)}$ and $p^{(2)}$ match, so
+$\mathrm{occ}=2$ and $U=4$.
+If $S = \{1\}$, all programs match, so $U=3$.
+
+\par\noindent
+\paragraph{Decision problem.}
+\begin{quote}
+\textsc{Best-Single-Helper} \\
+\textbf{Input:} A corpus $\mathcal C$, a reference tuple $(a_1,\dots,a_n)$, and an integer $\omega$. \\
+\textbf{Question:} Does there exist $S \subseteq \{1,\dots,n\}$ such that
+\[
+U(S) \ge \omega \, ?
+\]
+\end{quote}
+
+\begin{proposition}
+\textsc{Best-Single-Helper} is NP-complete.
+\end{proposition}
+
+\begin{proof}
+
+\par\noindent
+\paragraph{Membership in NP.}
+Given a subset $S$, we can compute $\mathrm{occ}(S)$ by scanning all programs
+and checking the constraint at each position, which takes time $O(Nn)$.
+Thus $U(S)$ can be computed in polynomial time.
+
+\par\noindent
+\paragraph{High-level idea of the reduction.}
+We reduce from \textsc{Maximum-Edge-Biclique}: given a bipartite graph,
+find subsets $S \subseteq L$ and $T \subseteq R$ such that all edges between
+them exist, maximizing $|S|\cdot |T|$. The decision version asks whether
+there exists such a biclique with $|S|\cdot|T| \ge k$ , which is known to be NP-complete \citep{peeters2003maximum}.
+
+Positions will correspond to vertices in $L$, and programs to vertices in $R$.
+Selecting positions enforces that only programs adjacent to all those vertices
+can match, yielding a biclique structure.
+
+\par\noindent
+\paragraph{Reduction.}
+Let $G = (L \cup R, E)$ be a bipartite graph with
+\[
+L = \{u_1, \dots, u_n\}, \quad R = \{v_1, \dots, v_m\},
+\]
+and let $k$ be the target.
+
+Set $M \equiv n + 1$.
+
+\par\noindent
+\paragraph{Construction.}
+We construct a corpus $\mathcal C$ of size $mM$.
+Let $\Sigma$ contain symbols $a_1, \dots, a_n$ and fresh symbols
+$b_{ij\ell}$.
+
+For each $v_j \in R$ and each $\ell \in \{1,\dots,M\}$, define
+\[
+p^{(j,\ell)} \equiv f(c_1^{(j,\ell)}, \dots, c_n^{(j,\ell)}),
+\]
+where
+\[
+c_i^{(j,\ell)} =
+\begin{cases}
+a_i & \text{if } (u_i, v_j) \in E, \\
+b_{ij\ell} & \text{otherwise}.
+\end{cases}
+\]
+
+Set $\omega \equiv Mk$.
+
+This construction is polynomial in the size of $G$.
+
+\par\noindent
+\paragraph{Example (matrix view of the construction).} Consider a bipartite graph with 
+
+\[ 
+L = \{u_1, u_2\}, \quad R = \{v_1, v_2\}, 
+\] 
+
+and edges 
+
+\[ 
+(u_1,v_1), (u_2,v_1), (u_1,v_2). 
+\]
+
+Thus, $(u_2, v_2) \notin E$. Let $M = 3$. The construction builds a corpus of programs of arity $2$. We can represent it as: 
+
+\[ 
+\begin{array}{c|cc} & i=1 & i=2 \\ \hline p^{(1,1)} & a_1 & a_2 \\ p^{(1,2)} & a_1 & a_2 \\ p^{(1,3)} & a_1 & a_2 \\ \hline p^{(2,1)} & a_1 & b_{2,2,1} \\ p^{(2,2)} & a_1 & b_{2,2,2} \\ p^{(2,3)} & a_1 & b_{2,2,3} \\ \end{array} 
+\]
+
+\par\noindent
+\paragraph{Forward direction (good biclique $\Rightarrow$good helper).}
+Suppose there exists a biclique $S \subseteq L$, $T \subseteq R$
+such that $|S|\cdot|T| \ge k$.
+Let $S$ also denote the corresponding set of indices. For any $v_j \in T$ and any $i \in S$, we have $(u_i,v_j)\in E$,
+so $c_i^{(j,\ell)} = a_i$ for all $\ell$.
+Thus all $M$ programs associated with $v_j$ match $S$.
+
+Therefore
+
+\[
+\mathrm{occ}(S) \ge M|T|, \quad
+U(S) \ge M|S||T| \ge Mk = \omega.
+\]
+
+\par\noindent
+\paragraph{Reverse direction (good helper$\Rightarrow$good biclique).}
+Suppose there exists $S \subseteq \{1,\dots,n\}$ such that
+\[
+U(S) \ge Mk.
+\]
+
+Define
+\[
+S' = \{u_i : i \in S\}.
+\]
+
+A program $p^{(j,\ell)}$ matches $S$ if and only if for all $i \in S$,
+we have $(u_i,v_j)\in E$. Therefore: If $v_j$ is adjacent to all vertices in $S'$, then all $M$ programs
+  $p^{(j,\ell)}$ match $S$; Otherwise, if $v_j$ is missing an edge to some $u_i \in S'$, then for that $i$,
+  $c_i^{(j,\ell)} \neq a_i$, so none of the programs $p^{(j,\ell)}$ match $S$.
+
+Let
+\[
+T = \{v_j \in R : (u_i,v_j)\in E \ \forall u_i \in S'\}.
+\]
+Then
+\[
+\mathrm{occ}(S) = M|T|.
+\]
+
+Hence
+\[
+U(S) = |S|\cdot \mathrm{occ}(S) = M|S||T| \ge Mk,
+\]
+which implies $|S||T| \ge k$.
+Thus $(S',T)$ forms a biclique of size at least $k$.
+
+\par\noindent
+\paragraph{Conclusion.}
+We have shown a polynomial-time reduction from
+\textsc{Maximum-Edge-Biclique}, and the problem is in NP,
+so \textsc{Best-Single-Helper} is NP-complete.
+\end{proof}

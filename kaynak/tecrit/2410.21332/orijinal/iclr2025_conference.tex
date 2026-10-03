@@ -1,0 +1,1223 @@
+\documentclass{article} % For LaTeX2e
+\usepackage[T1]{fontenc}
+\usepackage{newtxtext}  % Instead of times or ptm
+\usepackage{iclr2025_conference,times}
+\PassOptionsToPackage{numbers, compress}{natbib}
+\usepackage{booktabs} % For better table lines
+\usepackage{enumitem,amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{amsmath}
+\usepackage{multirow} % For better table lines
+% to avoid loading the natbib package, add option nonatbib:
+%    \usepackage[nonatbib]{neurips_2022}
+\usepackage[ruled,vlined]{algorithm2e}
+%\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{xcolor}         % colors
+\usepackage{amsthm}
+\usepackage{thmtools,thm-restate}
+
+\declaretheoremstyle[
+  spaceabove=6pt, spacebelow=6pt,
+  headfont=\normalfont\bfseries,
+  notefont=\mdseries, notebraces={[}{]},
+  bodyfont=\normalfont,
+  postheadspace=1em,
+]{mystyle}
+%qed=\qedsymbol
+
+\declaretheoremstyle[
+    spaceabove=-6pt, 
+    spacebelow=6pt, 
+    headfont=\normalfont\bfseries, 
+    bodyfont = \normalfont,
+    postheadspace=1em, 
+    qed=$\square$, 
+    headpunct={:}]{myProofstyle} %<---- change this name
+\declaretheorem[name={Proof}, style=myProofstyle, unnumbered]{Proof}
+
+\declaretheorem[style=mystyle]{styledtheorem}
+\declaretheorem[thmbox=L]{boxtheorem L}
+\declaretheorem[thmbox=M]{boxtheorem M}
+\declaretheorem[thmbox=S]{boxtheorem S}
+\declaretheorem{theorem}
+\declaretheorem[thmbox=L]{definition}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem{lem}{Lemma}
+
+\newcommand{\A}[1]{\mathit{A}_{#1}}
+\newcommand{\B}[1]{\mathit{B}_{#1}} % notation for the belief set
+\newcommand{\zero}{\emptyset}
+\newcommand{\Pro}[1]{P_{\A{#1}}}
+\newcommand{\mc}[1]{\mathcal{#1}}
+\usepackage[ruled,vlined]{algorithm2e}
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{xcolor}         % colors
+
+% Optional math commands from https://github.com/goodfeli/dlbook_notation.
+\input{math_commands.tex}
+
+\usepackage{hyperref}
+\usepackage{url}
+
+\title{Building, Reusing, and Generalizing Abstract Representations from Concrete Sequences}
+
+% Authors must not appear in the submitted version. They should be hidden
+% as long as the \iclrfinalcopy macro remains commented out below.
+% Non-anonymous submissions will be rejected without review.
+
+\author{Shuchen Wu \\
+Helmholtz Munich \\
+Max Planck Institute for Biological Cybernetics \\
+\texttt{shuchen.wu@tuebingen.mpg.de} \\
+\And
+Mirko Thalmann \\
+Institute for Human-Centered AI \\
+Helmholtz Munich\\
+\texttt{mirko.thalmann@helmholtz-munich.de} 
+\And
+Peter Dayan \\
+Department of Computational Neuroscience \\
+Max Planck Institute for Biological Cybernetics \\
+\texttt{dayan@tuebingen.mpg.de} 
+\And
+Zeynep Akata \\
+Helmholtz Munich \\
+Technical University of Munich \\
+\texttt{zeynep.akata@helmholtz-munich.de} 
+\AND
+Eric Schulz \\
+Institute for Human-Centered AI\\
+Helmholtz Munich \\
+\texttt{eric.schulz@helmholtz-munich.de}
+}
+% Antiquus S.~Hippocampus, Natalia Cerebro \& Amelie P. Amygdale
+% \thanks{ Use footnote for providing further information
+% about author (webpage, alternative address)---\emph{not} for acknowledging
+% funding agencies.  Funding acknowledgements go at the end of the paper.} \\
+% Department of Computer Science\\
+% Cranberry-Lemon University\\
+% Pittsburgh, PA 15213, USA \\
+% \texttt{\{hippo,brain,jen\}@cs.cranberry-lemon.edu} \\
+% \And
+
+% The \author macro works with any number of authors. There are two commands
+% used to separate the names and addresses of multiple authors: \And and \AND.
+%
+% Using \And between authors leaves it to \LaTeX{} to determine where to break
+% the lines. Using \AND forces a linebreak at that point. So, if \LaTeX{}
+% puts 3 of 4 authors names on the first line, and the last on the second
+% line, try using \AND instead of \And before the third author name.
+\newcommand{\fix}{\marginpar{FIX}}
+\newcommand{\new}{\marginpar{NEW}}
+
+\newcommand{\zeynep}[1]{\textcolor{orange}{Zeynep: #1}}
+\newcommand{\peter}[1]{\textcolor{purple}{Peter: #1}}
+
+\iclrfinalcopy % Uncomment for camera-ready version, but NOT for submission.
+%%%%%%%%%%%%%%%% Changes to the manuscript %%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%% Since September 20th 2024 %%%%%%%%%%%%%%%
+% named chunks and variables in the generative model as objects and categories to make the generative model more intuitively resembling naturalistic sequences and the inverse recognition model less trite (Peter, Zeynep)
+% made the introduction more streamlined (Eric, Peter, Zeynep)
+% added more clarifications and examples on what are chunks and variables in the introduction, generative model and learning section (Zeynep)
+% added discussion differentiating this work with adaptive grammar and PCFG in the related work section (Peter, Zeynep)
+%%%%%%%%%%%%%%%% Since September 23rd 2024 %%%%%%%%%%%%%%%
+% removed category from model description 
+% added abstraction and transfer definition at intro and abstract (Zeynep)
+
+
+%%%%%%%%%%%%%%%% Decision to be made %%%%%%%%%%%%%%%
+% Where should LLM come into the manuscript?
+
+
+%%%%%%%%%%%%%%%% Since Sep 20th 2024 %%%%%%%%%%%%%%%
+% [ ] add reference: https://arxiv.org/pdf/2409.05771 (Mirko)
+% [ ] add ref on memory mistakes recalling from the same category 
+% [x] add ref chunking as compression (Mirko)
+% [x] present tense everything (Zeynep)
+% [x] expand on the interpretation and implications of the findings (Mirko)
+% [x] go over Peter's comments
+% [x] go over Mirko's new comments
+% % coding
+% [ ] go back to the code
+% [x] reiterate LLM results
+% % plotting 
+% [x] improve LLM figure, change bar plot, add significance level to emphasize transfer dis
+% % model comparison
+% [ ] with PCFG and adaptor grammar (I would need more time for this)
+
+
+
+
+\begin{document}
+
+
+\maketitle
+
+\begin{abstract}
+Humans excel at learning abstract patterns across different sequences, filtering out irrelevant details, and transferring these generalized concepts to new sequences.
+In contrast, many sequence learning
+models lack the ability to abstract, which leads to memory
+inefficiency and poor transfer. We introduce a non-parametric hierarchical variable learning model (HVM) that learns chunks from sequences and abstracts contextually similar chunks as variables. HVM efficiently organizes memory while uncovering abstractions, leading to compact sequence representations.  When learning on language datasets such as babyLM, HVM learns a more efficient dictionary than standard compression algorithms such as Lempel-Ziv. In a sequence recall task requiring the acquisition and transfer of variables embedded in sequences, we demonstrate HVM's sequence likelihood correlates with human recall times. In contrast, large language models (LLMs) struggle to transfer abstract variables as effectively as humans. From HVM's adjustable layer of abstraction, we demonstrate that the model realizes a precise trade-off between compression and generalization. Our work offers a cognitive model that captures the learning and transfer of abstract representations in human cognition and differentiates itself from LLMs.
+\end{abstract}
+
+
+
+\section{Introduction}
+%Abstraction is a vital topic studied in cognitive science and computer science. 
+Abstraction plays a key role in intelligence \citep{konidaris_necessity_2019}. Philosophers traditionally view abstract ideas as formed by identifying commonalities across experiences, distilled from concrete impressions grounded in perception \citep{Kant:1998, Fichte2005, Stern1977}. Psychologists suggest that abstraction arises from personal experiences, such as forming the concept of ``whiteness'' by observing various white objects \citep{yee_abstraction_2019, barsalou_1999}. Abstract concepts are thought to build on concrete concepts and on top of the previously learned abstractions, thereby varying in complexity \citep{cuccio_peircean_2018, van_oers_contextualisation_2001, CollinsQuillian1969, Piaget1964}. The ability to abstract, which is often seen as a human-specific trait, enables reasoning, generalization, and problem-solving in novel contexts \citep{ohlsson_abstraction_1997, DEHAENE2022751, duncker_problem-solving_1945}.
+
+%\peter{this needs to be in the first paragraph - it's why abstraction is key.}
+We hypothesize that the world contains patterns across scales of time and abstraction. Intelligent agents-facing sequences with nested hierarchical structures- need to model these structures to store, process, and interact in such environments. As a rational strategy, intelligent agents shall characterize the temporal structure via chunking and characterize the abstract structure via identifying  different items that play similar roles. To explore these operations, we design a generative model that produces sequences nested with hierarchical structure and propose an approximate recognition model that conjunctively learns to chunk and abstract.
+
+We go beyond previous proposals that introduce chunking as a mechanism for learning to compose complex structures from elementary perceptual units \citep{Gobet2001, Miller1956TheInformation, wu_learning_2022} and propose a cognitive model that combines chunking and abstraction in one single system. The model uses abstraction in two key ways: first, by identifying shared features to facilitate efficient pattern retrieval%, such as recognizing patterns from learned animals when fur is observed
+; and second, by categorizing different sequential items that appear in the same context, much like a variable in a computer program. %— for example, using the category "animal" to represent a cat, dog, or squirrel. 
+These paired mechanisms enable the model to parse sequences into chunks and form abstract patterns based on both concrete and previously learned abstractions, allowing for compact representations while revealing recurring patterns at the level of abstract categories. Consequentially,  increasingly complex abstract patterns can be discovered layer by layer.%, with controllably varying degrees of detail.
+% [ ] come up with a better example, I can't think of any atm. 
+
+We first demonstrate the benefits of abstraction in memory efficiency and sequence parsing by comparing our algorithm with previous chunking models and other dictionary-based compression methods. Then, we show that the model exhibits human-like signatures of abstraction in a memory experiment requiring the transfer of abstract concepts. In the same experiment, we contrast the model's generalization behavior with large language models (LLMs). Additionally, we demonstrate the connection between abstraction level and abstract concept transfer by varying the level of abstraction as a parameter in the model. Our work offers a cognitive model that captures the learning and transfer of abstract representations in human cognition and differentiates itself from the behavior of artificial agents. %which have demonstrated rudimentary reasoning abilities \citep{wei2022emergent} in recent years
+
+%\zeynep{in the abstract you talked about "transfer". this concept doesn't appear again in the introduction. it also doesn't get defined in the abstract. I have a feeling though that this could be interesting. could you explain what you mean by transfer?}
+
+
+%We gather evidence from the developmental literature with the goal of making a cognitive model that learns abstraction grounded in the feature of human learning and development.
+
+%We relate the level of abstraction to the Rate-Distortion theory and the model's generalization performance. In a sequence memory recall task that demands transferring variables, we show that the sequence log likelihood parsed by HVM correlates with human sequence recall time.  
+
+%also enables the model to exert properties analogous to human abstraction concept formation during development. Namely, more abstract concepts emerges from concrete patterns in a graded fashion. 
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[height = 0.15\textheight, width = \textwidth]{generative_model.png}
+    \caption{Generative Model. The inventory is initialized with a set of atomic units, which randomly combine into objects. Some objects are randomly selected to become categories. Categories of existing objects have similar interaction properties. The dashed arrow points from those objects to their corresponding categories. These categories further combine with existing objects. An observational sequence is composed of objects randomly sampled from the existing inventory. Categories are latent and never explicitly observed but are manifested in one of the denoting objects.}
+    \label{fig:generativemodel}
+\end{figure}
+
+\section{Generating sequences with objects that contain hierarchical abstract structures}
+% Make an assumption about the sequential perceptual data to contain a nested hierarchical structure
+
+% many natural systems have hierachical structures in how their units interact. Learning about these structures is beneficial for compression and prediction.
+\textcolor{black}{Hierarchical structures have been long presumed to characterize natural sequences — such as molecules composed of chemical elements or the hierarchical nature of language \citep{abler_particulate_1989, Sportiche2013, von1999humboldt}. To study models respect hierarchical structure, we take a standard approach starting from a conformative generative model \citep{teh_hierarchical_2006,milan_forget-me-not_nodate}.
+We design a probabilistic generative model that generates sequences by sampling objects from an inventory which contains a hierarchical structure.} %  —such as molecules composed of chemical elements or the hierarchical nature of language
+
+The generative model creates an inventory of recurring objects over $d$ iterations of expansion. As illustrated in Figure \ref{fig:generativemodel}, the inventory starts with a set of atomic units $\mathbb{A}$. 
+On each iteration, a novel object or category is created equiprobably. A new category (graded node) is created by pointing to a random selection of objects from the inventory up to the moment (objects are treated disjunctively). A new object is created by concatenating a random selection of pre-existing objects or categories from the existing inventory. After the inventory has been expanded up to the $d$-th iteration, the independent occurrence probability in the sequence is sampled from a flat Dirichlet distribution $f(p(c_1),...,p(c_{|\mathbb{A}|});\alpha_1,...,\alpha_{|\mathbb{A}|}) = \frac{1}{\mathbf{B}(\mathbf{a})}\prod_{i = 1}^{|\mathbb{A}|} P(c_i)^{\alpha_i - 1}$, $\alpha_i = 1 \forall i $ and assigned to each object in the inventory. Similarly, a probability is sampled from a flat Dirichlet to assign the occurrence probability of the objects within each category. More details can be found in the Appendix \ref{code:HVMgenerativemodel}. 
+
+To create an observational sequence, objects are randomly drawn from the inventory one after another with the assigned probability until they reach the desired sequence length. If the sampled object contains an embedded category, one of the objects corresponding to the category is sampled. This process is repeated recursively until all categories are replaced by specific objects, resulting in a sequence of discrete atomic units.
+
+% maybe I should define what is a variable here already
+%Analogous to elements that belong to the same functional groups have similar interaction properties in chemistry (such as halogens (including fluorine (F), chlorine (Cl), bromine (Br), iodine (I), and astatine (At)) reacts with hydrogen. In this case, grouping the different elements as a halogen concept is helpful for the learning agent to detect patterns such as the hydrogen halide compound.
+
+%Observation sequences are randomly sampled from an inventory of items randomly created by the generative model, starting with an elementary atomic unit set $\mathbb{A}$ (5 elements, for example, as illustrated in Figure \ref{fig:generativemodel}). 
+
+% Alternatively, a new category These items are treated disjunctively -- that is, a variable inside a chunk has to be replaced by exactly one of its underlying items. The items in a variable, therefore, interact in similar ways, by being contained in the same position in the same chunk surround, resembling  constituents sharing similar interaction properties emerging at independent time points from self-diversifying systems \citep{abler_particulate_1989}. 
+
+\section{Learning abstractions from sequences}
+%Being an abstraction of several chunks denotes having common elements that are shared amongst the several chunks. This definition is consistent with the origination of abstraction from sensorimotor correlate, and the level of abstraction varying degree and detail. 
+
+% chunks and variables occur as a new definition for now: 
+
+%We hypothesize that the utility of learning abstraction is out of environmental necessity. That is, perceptual sequences contain categories of objects that interact with other objects in a similar fashion. An agent benefits greatly by uncovering objects from perceptual observations. Uncovering these abstract concepts as categories then naturally helps the learning agent acquire higher-order patterns and relations that explain more observations. 
+%\peter{you need to tie the recognition model more closely to the generative model.} 
+ 
+We ask what computational principles could help an agent discover objects and categories from such observational sequences without supervision. We propose that two mechanisms suggested by the cognitive literature are vital: chunk proposal and variable discovery. Chunking concatenates learned objects and forms new ones; variable discovery groups chunks with similar interaction properties into a category. We build on top of the hierarchical chunking model (HCM) \citep{wu_learning_2022}, which learns a belief set $\mathbb{B}$ of a chunk dictionary $\mathbb{C}$ from discrete sequences. We expand the model so that it can also learn variables while improving the memory efficiency of the model. 
+By identifying stably recurring entities as chunks and grouping similar entities into categories as variables, the agent can learn a structured inventory of identifiable patterns and use these patterns as entities to parse the sequence, leading to a more compressed factorization of perceptual sequences. 
+
+HVM learns a belief set $\mathbb{B}$ that contains both a dictionary of chunks $\mathbb{C}$ and variables $\mathbb{V}$. The variables are proposed as abstract entities based on the transition and marginal counts. As shown in Figure \ref{fig:hvm}a, each variable $v \in \mathbb{V}$ denotes a set of chunks $E(v) = \{c_j\}$, $c_j \in \mathbb{C}$. The model also learns the probability of each chunk that a variable denotes $\forall v \in \mathbb{V}$, $\sum_j P(v \rightarrow c_j) = 1$, $c_j \in \mathbb{C}$.
+
+%fundamental characteristic in grammar acquisition and application \citep{CHOMSKY201333}
+
+%On top of the existing functionalities of HCM, we introduce two implementations of abstraction notions that make the algorithm more effective while expanding its capability to uncover a hierarchy of variables. 
+
+%The model enables an emergence of representation structure, which grows with practice while parsing through a sequence and emulates the human chunk learning process. By extending the hierarchical chunking model to include a component that learns abstraction, we get to study the relation between abstraction and chunking. 
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width = \textwidth]{hvm.png}
+    \caption{HVM builds up a representation graph and a parsing graph. a. A representation graph contains the learned chunks (nodes with solid colors) $\mathbb{C}$ and the contained variables (nodes with gradient colors) $\mathbb{V}$. Black arrows denote concatenation. Gray and dashed arrows point from chunks of the same category to the variable node that denotes this category. b. Abstraction organizes memory in a parsing graph. Nodes shaded by gray are abstract chunks being the common prefix intersection of its children. During parsing, to allocate to the matching chunk in $\mathbb{C}$, the model starts searching from the root of the parsing tree and traverses to the deepest node consistent with the upcoming sequence content. c. Upon completing each sequence parse, HVM updates counts on chunk frequencies and transitions and proposes inventory expansions, enabling a layer-wise discovery of recurring patterns per iteration, from specific to the more abstract. d. HVM proposes variables amongst correlated consecutive chunk pairs. e. Chunk proposal. }
+    \label{fig:hvm}
+\end{figure}
+
+\paragraph{Parsing the sequence one chunk at a time}
+A fundamental feature of the model is to parse sequences in chunks as the basic cognitive units \citep{Miller1956TheInformation}. 
+Along with each parse $t$, the transition counts between the previous $c_L$ and next chunks $c_R$ are recursively updated: $T_{ij}(t+1) = T_{ij}(t) + [i = c_L][j = c_{R}]$
+($[ \cdot ] = 1$ if the argument is true and 0 otherwise) and along with the identification frequency of each parsed chunk $M_{i}(t+1) = M_{i}(t) + [i = c]$. When modeling human behavior, each entry of $M$ and
+$T$ multiplies with a memory decay parameter $\theta$ per parsing
+step. The probability of observing a sequence of parsed chunks
+$c_1,c_2,..., c_{N}$ then becomes $P(c_1,c_2,..., c_{N}) =
+\prod_{c_i \in \mathbb{C}} P_{\mathbb{C}}(c_i)$. 
+
+% Note that the chunks identified can contain variables inside as well. In such cases, the chunk is identified when the upcoming sequence matches with any of its instantiated denotement of variables. 
+
+To parse a sequence, HCM iteratively chooses the biggest chunk amongst its learned dictionary $\mathbb{C}$ consistent with the upcoming sequence. The end of a previous parse initiates the next parse. As the dictionary size $|\mathbb{C}|$ increases, searching for the biggest consistent chunk becomes computationally expensive \citep{schreiber2023biologicallyplausible}. 
+In HVM, we introduce one notion of abstraction as finding \textit{commonalities amongst memory items} to organize memory structure and speed up chunk retrieval during parsing. Memory items in the learned dictionary are organized into a hierarchical parsing graph that connects chunks with their common prefixes. Hence, all children chunks are different except for sharing a common prefix from the parent. The parsing graph arranges the chunks in $\mathbb{C}$ into a prefix Trie structure (Figure \ref{fig:hvm}b), reflecting the cue-based, content-addressable nature of memory retrieval \citep{Cunnings2018,dotlacil_parsing_2021, Anderson1974}. This design reduces search time to retrieve a chunk as arranged in the parsing graph, commonly used in predictive text or auto-complete dictionaries to speed up search steps \citep{Fredkin60}.
+At every parsing step, HVM identifies the deepest chunk in the parsing graph that is consistent with the upcoming sequence. The end of the previous parse initiates the next parse. The search process would take the time complexity of $O(D)$, scaling with the depth $D$ of the tree compared to HCM time complexity of $O(|\mathbb{C}|)$ scaling with the size of $\mathbb{C}$. The appendix shows a guarantee to reduce the number of parsing steps for chunk retrieval \ref{SI:PSS}. 
+
+\paragraph{Learning chunks} 
+% add probability estimation for chunks and variables
+From parsed sequences, the model estimates the occurrence probability of chunk via the entries of $M$ as $P_{\mathbb{C}}(c_i) = \frac{M_{i}}{\sum_{c_j \in \mathbb{C}}M_{j}}$.
+The model starts with the null hypothesis $\mathcal{H}_0$ that all consecutively parsed chunks $c_L$ and $c_R$ are statistically independent $P(c_L,c_R) = P(c_L)P(c_R)$.  If a significant correlation is found between consecutively parsed chunk pairs (with $p = 0.05$), the null hypothesis is rejected, and the pair is concatenated into a new chunk, $c_L \oplus c_R$, which is then added to the dictionary $\mathbb{C}$ as a new entry. Upon creating each new chunk, an edge from the left parent chunk (sharing the same prefix) connects to the newly created chunk in the parsing graph. When no parent chunk can be found, an ancestor node is created in the parsing graph, usually the sequence's atomic units. We prove in the SI section \ref{SI:recognition} that under restricted conditions in which the sub-objects constituting the object in the ground truth are parsed faithfully by the model as sub-chunks, then these sub-chunks will be eventually proposed to concatenate into one chunk. 
+%  \peter{don't you have to worry about Bonferroni correction?} That is a good idea, we can divide the threshold via the number of pairs to reduce the number of false positives.  
+
+%Hence, every non-ancestral chunk has only one parent in the parsing graph but can have multiple children.
+
+% \paragraph{Two Notions of Abstraction}
+% HVM extends HCM by learning two types of abstraction: abstraction as chunks that include variable components, and abstraction as a memory organization system. The former is manifested in a representation graph that includes all the chunks and the variables that nest the chunks; the latter is a hierarchical memory organization system manifested in a parsing graph. 
+
+\paragraph{Learning variables}
+% [ ] add probability 
+A variable denotes distinct observations appearing in the same context (here defined as distinct chunks sharing preceding and succeeding chunks). Given consistent parsing of subchunks as object combination components in the generative model, the true chunks that belong to the same category will necessarily appear in the preadjacency and postadjacency entries (more explanation in SI \ref{SI:recognition}). HVM proposes variables amongst the significantly correlated chunks ($p \leq 0.05$) in the transition matrix consistent with this structure. For example, consider the case that the sequence includes A-ABC, A-DC, and  ABC-ED, DC-ED. This suggests that ABC and DC play similar roles relative to A (coming after) and ED (before). Therefore, ABC and ED can be proposed as a new variable V to represent the abstract property that captures the distinct entities. V denotes ABC and DC, and the model identifies V if either ABC or DC is identified during parsing, as illustrated in Figure \ref{fig:hvm}d and Figure \ref{fig:ccce} in SI. 
+
+Among the correlated consecutive chunk pairs, the model identifies all eligible transitions by intersecting the post-adjacency columns with the pre-adjacency rows, proposing a set of chunks $E(v) = {c_1, c_2, ..., c_j}$ represented by a new variable $v$. This variable proposal is accepted if the set of chunks that satisfy the condition $T_{min} \leq |E(v)| \leq T_{max}$ and $\sum_{c_i} M(c_i) \geq freq_T$.
+A variable denotes a set of chunks $E(v)$ and is identified if any of the chunks that it denotes is parsed (Figure \ref{fig:hvm}c). Together, the common preceding chunk, in conjunction with the newly proposed variable, followed by the common succeeding chunk, is concatenated and proposed as a novel chunk $c_L \oplus v \oplus c_R$ to add to the inventory $\mathbb{C}$. An edge that connects $c_L$ to the new chunk $c_L \oplus v \oplus c_R$ to be added to the parsing graph, as illustrated in Figure \ref{fig:hvm}d. %This process introduces chunks with embedded variables and takes the computational complexity of $O(PQ)$, where $P$ and $Q$ are the numbers of unique entries of the adjacency and postadjaency chunks amongst the correlated consecutive chunk pairs. 
+Two variables are merged into one if they share the same preceding and succeeding chunks. During parsing, a chunk is consistent with the sequence if any of its included variables contain a denoting chunk that is consistent with the sequence. Upon identifying a chunk during parsing, the marginal and transition count for both the chunk and the immediate variables that the chunk belongs to is incremented.
+% % T_{min} T_{max} freq_T parameters 
+
+\paragraph{Representation cleaning} Upon completion of each sequence parsing, the model uses correlations to propose new variables and chunks. It then uses the expanded inventory for the next parse. Unused variables and chunks are deleted upon the completion of each parsing iteration. 
+% how to show there shall never be a loop?
+
+% \paragraph{Proposing Variables}
+% Based on $M$ and $T$, HVM proposes variables as abstract entities. A variable tries to capture distinct observations appearing in the same context. It is based on the observation that when several chunks have common interaction properties with other chunks, they usually occur in a similar context ---- proceeded by the same chunk (common cause) and succeeded by the same chunk (common effect). 
+% A variable, by definition, denotes several chunks and is identified if any of its denoteing chunks is identified (Figure \ref{fig:?}.
+% Based on this observation, this mechanism intersects every eligible transition column of post-adjacency and rows of preadjacency. And proposes a new variable $v$ as denoteing the set of chunks $E(v) = \{c_1, c_2, ..., c_j\}$ in the intersection. Together, the cause chunk, in conjunction with the newly proposed variable, followed by the effect, will be proposed to concatenate together as a novel chunk $c_L \oplus v \oplus c_R$ to add to $\mathbb{C}$. An edge that connects from $c_L$ to the new chunk $c_L \oplus v \oplus c_R$ is added to the parsing graph.%The introduction of variables in this learning algorithm enables the parsing of sequences in abstract entities as embedded in a chunk while also introducing a tolerance of variability in chunks that contain variables. 
+
+% In the case that the same cause and effect has been observed to combine with another variable, the denoteing chunks of this variable will be absorbed into the denoteing chunk of the previously established variable. In this way, the model enforces the constraint that the same cause and effect sandwiches the same variable.
+
+% The model exerts several properties:
+% 1. abstract concepts are able to be acquired only when some structure of concrete patterns have been acquired. More data is needed to discover higher order variable patterns. 
+% 2. Abstraction speeds up memory retrieval, compared to not having abstraction
+% 3. Only with learning variables, can the learning agent learn longer patterns that spans a wider part of the sequence. 
+\section{Results}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width = 1.\textwidth]{modelcomparison.png}
+    \caption{a. The effect of hierarchical memory structure on parsing search steps. b. Comparison between models in terms of sequence length after parsing. GT denotes the ground truth sequence length by the generative model. c. Model comparison based on sequence likelihood. d. Model comparison based on coding efficiency. Example model comparison with sequence length $|S| = 1000$, nested hierarchy depth $d = 30$, atomic set of size $|A| = 10$.}
+    \label{fig:modelcomparison}
+\end{figure}
+
+\subsection{Model evaluation}
+HVM is an approximate inverse of the generative model, as
+in practice, learning the ground truth hierarchical patterns that generate observed data is a nonidentifiable problem \citep{Post1946, Greibach1968}. Therefore, we use a set of measures for model evaluation, focusing on parsing search steps, sequence length, sequence negative log-likelihood, and encoding efficiency.
+We trained models on sequences generated by the hierarchical generative model until convergence. For each iteration, the models parse the entire sequence using the dictionary updated from the previous iteration and propose novel chunks/abstractions upon completing the parse. While HVM learns both chunks and variables per iteration, HCM learns only chunks and no variables. Previous research has related human memory in specific tasks to lossy compression \citep{Nassar2018}, with abstraction playing a crucial role in successful learning and transfer in sequence memory recall tasks. For reference, we also compared the models with LZ78, an off-the-shelf compression algorithm underlying compression schemes such as GIF and PNG, which also parses sequences into chunks and builds a dictionary to compress sequence data \citep{lempelziv78}. Comparisons are shown in Figure \ref{fig:hvm}. 
+
+% parsing length 
+\textbf{Organizing chunks in a parsing graph based on common prefix reduces parsing search steps} We compared HVM with HCM, which does not organize memory into a hierarchical parsing graph. Figure \ref{fig:modelcomparison} a. shows that organizing chunks in a parsing graph dramatically reduces the average number of parsing search steps, i.e., the number of search steps needed for the model to locate the biggest chunk per parse. This search step now scales with the depth of the prefix tree compared to the size of the inventory in HCM. More discussions can be found in \ref{SI:PSS}. 
+
+% Explanatory Volume 
+\textbf{Discovering bigger recurring patterns}
+We compared HVM with its counterpart, HCM, which does not learn variables at the end of the learning iteration. Figure \ref{fig:modelcomparison} b compares sequence length $|W|$ after parsing. HVM transforms the sequence $|S|$ into a code with a much smaller size $|W|$ compared to HCM and LZ78 and is on par with the ground truth (GT). Learning variables that denote distinct chunks occurring in similar contexts helps HVM to learn bigger patterns underlying the sequence on the description level of these variables. 
+
+% Sequence Complexity 
+\textbf{Parsing sequences with higher likelihood}  Figure \ref{fig:modelcomparison} c compares the negative log likelihood ($-\log P(S) = \prod_{c_i \in \mathbb{C}} P(c_i)$) of the parsed sequence upon convergence. HVM parses sequences more efficiently, as variables recur more frequently in sequences than their representing chunks, and therefore, the model that learns variables parses the sequence with higher likelihood.  % The information content of a variable is less than any of the chunks that this variable denotes.
+
+\textbf{Encoding more efficiently}
+In many applications, the size of the dictionary affects compression efficiency \citep{Navarro2007,Ferragina2005}.  We compare the encoding efficiency, i.e., the ratio between the dictionary size (number of entries) and the original sequence length $S$. Figure \ref{fig:modelcomparison}d shows the relation between the ratio and the sequence length. To encode a sequence of the same length, LZ78 creates a bigger dictionary than HVM and HCM. Models that harness the embedded hierarchical structure in sequences encode sequences more efficiently and learn a smaller dictionary to encode the same sequence length. 
+% % [x] combine with Figure 4 
+% \begin{figure}
+%     \centering
+%     \includegraphics[width = 0.5\textwidth]{coding_efficiency.png}
+%     \caption{Comparing the coding efficiency of LZ78, HCM and HVM. X axis is the sequence length to encode, and y axis is the average sequential length per dictionary unit entry.}
+%     \label{fig:codingefficiency}
+% \end{figure}
+\subsection{Learning from real-world sequential data}
+\begin{table}[ht!]
+    \centering
+    \resizebox{\textwidth}{!}{
+    \begin{tabular}{|l|l|ccc|}
+        \toprule
+        \textbf{Data Domain} & \textbf{Model} & \textbf{Compression Ratio} & \textbf{NLL} & \textbf{Coding Efficiency} \\
+        \midrule
+        \multirow{3}{*}{CHILDES \citep{MacWhinney2000}} 
+        & LZ78        & 0.38          & 2837.50           & 0.34                     \\
+        & HCM         & 0.51          & 2783.71           & 0.05                     \\
+        & HVM         & 0.36          & 1953.01           & 0.06                     \\
+        \midrule
+        \multirow{3}{*}{BNC \citep{BNC2007}} 
+        & LZ78        & 0.39          & 3136.67           & 0.37                     \\
+        & HCM         & 0.65          & 3591.60           & 0.06                    \\
+        & HVM         & 0.50          & 3108.33          & 0.08                     \\
+        \midrule
+        \multirow{3}{*}{Gutenberg \citep{Gerlach2020}} 
+        & LZ78        & 0.39         & 3156.61           & 0.37                     \\
+        & HCM         & 0.69          & 3770.36           & 0.06                     \\
+        & HVM         & 0.54          & 3252.84           & 0.12                     \\
+        \midrule
+        \multirow{3}{*}{Open Subtitles \citep{Lison2016}} 
+        & LZ78        & 0.41         & 3395.09           & 0.39                     \\
+        & HCM         & 0.74          & 4151.89           & 0.07                     \\
+        & HVM         & 0.63          & 3764.48           & 0.07                     \\
+        \bottomrule
+    \end{tabular}}
+    \caption{Model comparison on alternative sequences. NLL stands for negative log-likelihood.}
+    \label{tab:extended_model_comparison}
+\end{table}
+%Our goal was to show that our generative model enjoys an inductive bias that captures the hierarchical nature of sequential data across various domains. 
+Going beyond artificially generated sequences, we evaluate HVM, HCM, and LZ78 in text domains from the BabyLM language dataset, which contain text snippets from a collection of data domains such as conversational child-directed speech, narrative stories, and other linguistically rich environments \cite{warstadt2023papersbabylmchallenge}. For each data domain, we took random snippets of 1000 characters and calculated evaluation metrics, including compression ratio (the number of tokens before compression divided by the number of tokens after compression), sequence complexity (negative log-likelihood), and compression efficiency (the length of the compressed sequence divided by the number of dictionary entries). 
+
+As shown in table \ref{tab:extended_model_comparison}, LZ78 performs well in terms of compression efficiency, which is expected given its design purpose. However, the HVM model exhibits notable advantages when considering alternative evaluation metrics. Specifically, for text across the four data domains analyzed, cognitive models that incorporate the hierarchical structure of data outperform traditional compression methods in terms of encoding efficiency. This is because LZ78, which does not make strong assumptions about sequence structure, tends to create redundant entries in its dictionary. While this redundancy reduces the sequence length after compression, it introduces many infrequently used entries. In some data domains, HVM outperforms LZ78 in compression ratio and negative log-likelihood as well. Amongst all domains, HVM compresses the sequence further and parses the sequence with lower complexity than HCM.
+
+% As shown in table \ref{tab:extended_model_comparison}, . In some data domains, HVM outperforms LZ78 in compression ratio, and negative log likelihood as well. 
+
+
+\subsection{HVM resembles human sequence memorization and transfer}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=1\linewidth]{human_experiment.png}
+    \caption{a. A sequence memory task that demands transferring a variable x from the training to the test block. b., c., d., e.,  Complexity (negative log-likelihood) progression of HVM correlates with human memory recall time in the training (b., c.) and the transfer block (d., e.). Memory decay parameter $\theta = 0.996$. Marker size increases with trial number.}% R-squared goodness of fit regressing the hierarchical chunking model (HCM), the hierarchical variable model (HVM), and the associative learning model (AL) on different large language model agents' sequence likelihood on instructions from the memory experiment. }
+    \label{fig:humanexperiment}
+\end{figure}
+We take the relation between transfer to learning abstractions to the setting of a memory experiment that demands learning and transferring variables \citep{wu_thalmann_schulz_2023}. 
+We ask whether HVM resembles aspects of human learning while enjoying the advantage of learning an interpretable dictionary. 
+
+In the experiment, 112 participants were instructed to recall a sequence of presented colors from memory (Figure \ref{fig:humanexperiment} a). Participants were randomly assigned to a variable group and a control group. During the training block (40 trials), the control group was instructed to remember a fixed sequence BADF DCBF FEDB for each trial (each letter denotes a distinct color). In contrast, the variable group was instructed to remember sequences overlapping in 9 of the 12 colors: BXDF DXBF FXDB. A variable X, however, appeared at serial positions 2, 6, and 10, which could be occupied with the letters A, C, or E with equal probability for each trial. After the training block, both groups were then tested on the transfer block. The transfer sequence overlapped with the training sequence only at the variable positions: DXBF FXDB BXFD. The time participants took to recall the entire sequence for each trial was recorded. Previous studies suggest human recall time relates logarithmically to the perceptual predictability of the sequence \citep{Carpenter1995,Anderson89,SMITH2013302,ELMAN1990179}. We compare human recall time to the model's negative log-probability (likelihood) evaluated on the instruction sequence given.
+%to relate the model with human sequence recall. 
+% mirkothalmann: what do you mean with that term exactly? it seems to be the main motivation why we focused on RTs. maybe explain a bit I also wonder if we should more explicitly contrast with the previous paper where we used generative accuracy of the model and compared it to recall accuracy, and in particular, what this new way of looking at the data offers as compared with the previous one
+
+To simulate the sequence likelihood for trial $n$, we used the instruction sequences up to trial $n-1$. This allowed the HVM to learn in an online manner, i.e. abstractions and chunks were proposed upon each parsing completion. For comparison purposes, we also simulated HCM with the same parameter setting, and an associative learning model (AL) that updates first order transitions between atomic sequential units. 
+The sequence likelihood was evaluated as $-\log P(S) = -\log P(c_1) \prod_{i = 2, ..., n} P(c_i|c_{i-1})$. $c_1, c_2, ..., c_n$ are the units used to parse the sequence (chunks for HCM and HVM and atomic units for the associative learning (AL) model).  
+
+Figure \ref{fig:humanexperiment} shows the relation between model sequence likelihood and human recall time during the training (b, c) and the transfer block (d, e). The size of the dot represents the trial number, and the shape of the dot represents the group (the triangle being the variable group, the circle is the control group). Figure \ref{fig:humanexperiment}b and d show the R-squared goodness-of-fit regressing the various models' sequence likelihoods onto human subjects' sequence recall times. 
+The sequence negative log-likelihood from the HVM correlates with human recall time during the training ($R = 0.86, p \leq 0.001$) and transfer blocks ($R = 0.7, p \leq 0.001$). The latter suggests that HVM can generate behavior that resembles that of human knowledge transfer in the memorization of novel sequences with embedded variables. 
+
+
+%\subsection{Sequence Complexity}
+%As HVM learns a dictionary of chunks which contains abstract concepts from sequences, and parses a sequence using the entries from the dictionary, we can compare the complexity of sequence as parsed by HVM with other sequence compression methods. In this case, sequences are a sequence coming from the generative model with $d$ random combinations,
+
+%The complexity of a sequence is evaluated as the information content/code length of the sequence after it is represented by the entries in the dictionary. $\log P(S) = \prod_{c_i, i = 1, 2, ...} -\log (P(c_i))$.
+
+%We compare the sequence complexity parsed by different learning models including HVM, HCM (its counterpart without abstraction) and LZW (Lempel Ziff Welch typically used in GIF). In all cases, we noticed that the methods that takes account of the nested hierarchical structure in data parses the same sequence with much higher negative log likelihood than alternative models. THe negative log likelihood is calculated from the sequence factorization by the number of chunks/entries in the lz dictionary. Thereby, an entry with low probability will translate to a higher negative log likelihood. 
+
+% We also compared the number of bits needed to encode the sequence after using each method as a compression scheme. Treating all algorithms as a file encoding process, we compare the unencoded length, the encoded length as by lzw, hcm, and hvm. This directly corresponds to the number of bits needed to encode the same sequence. Assuming that each symbol in the dictionary demands 12 bits to encode (as commonly used in LZW), we are essentially comparing the sequence length after being translated into the encoded sequence. To be complete, we also included the uncompressed sequence encoding length. We observed that HVM, and the counterpart without variables, compress more sequences than the alternative which does not make assumptions about the source data distribution. 
+
+% LZW usually encodes 8 bit sequences using 12 bits symbols. THe first 8 bits out of the 12 bit symbols are reserved for the dictionary of existing characters, and the following 4 bits are reserved for the new symbols encountered. 
+
+ % LZ-compression method: universal compression scheme that does not know about the source distribution, and is asymptotically optimal. LZ parses the sequence incrementally.   the source sequence into phrases such that each phrase is the shortest phrase not seen earlier (incremental parsing)
+
+% The idea of the compression algorithm is the following: as the input data is being processed, a dictionary keeps a correspondence between the longest encountered words and a list of code values. The words are replaced by their corresponding codes and so the input file is compressed. Therefore, the efficiency of the algorithm increases as the number of long, repetitive words in the input data increases.
+
+\subsection{Comparing abstraction learning and transfer in LLMs}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=1\linewidth]{llm.png}
+    \caption{Comparison between human, variations of cognitive models, and AI models on the transfer block of the memory recall experiment. Bar plot shows the average human sequence recall time, and the sequence negative log-likelihood evaluated by the various cognitive and large language models. }
+    \label{fig:llm}
+\end{figure}
+\textcolor{black}{In recent years, large language models (LLMs) have demonstrated their emergent abilities \citep{wei2022emergent}, raising the concern that their intelligence will soon exceed that of humans, while at the same time, LLMs exert severe limitations in a set of tasks that demands abstract thought \citep{Fleuret2011,OdouardMitchell2022}. Given the critical role that abstraction plays in reasoning and generalization, it becomes increasingly important to delineate the aspects of LLM that most significantly deviate from human cognition, and find out what features inside a cognitive model would provide a missing behavioral aspect inside LLMs. The missing feature will inform the limitations of LLM’s computational component that is predictive of its ability to generalize and transfer. Specifically, we ask whether LLMs abstract similarly to humans and how their behavior compares to cognitive models incorporating abstraction. To explore this question, we conduct the same sequence recall experiment on LLMs.}
+
+We adapt the instructions from the human experiment into prompts for in-context learning in LLMs. The LLMs are tasked with predicting the next subsequent tokens based on the context of previously seen instruction sequences. The specific prompt is taken from the instruction given to the human participants: ``Please remember the following sequence: BADFDCBFFEDB, ..., BCDFDCBFFADB.'' We then calculate the conditional probability of the next token, $z_i$, given the instruction sequence history up until the current token $P(z_i|prompt)$. After obtaining this probability, the subsequent token in the instruction is added to the prompt, and the LLM's conditional probability for the following token is updated accordingly.
+Using this prompt-chaining method, we can calculate LLM's negative log-likelihood for the next tokenized instruction sequence: $-\log P(S) = -\log P(z_1|prompt)\prod_{i = 2, ..., n} P(z_i|prompt_{i-1})$, analogous to the cognitive models. We apply this approach to evaluate the token prediction likelihood in four large language models: GPT-2 \citep{radford_language_2019} and three variations of the Llama 2 model \citep{touvron2023llama} and two variations of the Llama 3 model.
+
+% We compared the log likelihood having seen the structure of the training sequence, and we compare it to the models that learn hierarchical structures. 
+
+Shown in Figure \ref{fig:llm} are the transfer behavior across humans, LLMs, and various cognitive models for comparison. Supplementary section \ref{sup:llm} also shows the R-square value regressing model negative log-likelihoods on human recall time. For humans, the group trained on sequences with embedded variables recalls transfer sequences faster than the group trained on control sequences. Relating sequence recall time with sequence negative log-likelihood, the cognitive models HCM and HVM, on average, exhibit lower sequence negative log-likelihood after learning from a training block that shares variables with the transfer block. In contrast, the associative learning model and all variants of large language models do not differentiate between training sequences that share variables with the transfer block and those from a training block without transferrable variables. 
+% [ ] report R values in text, but just show transfer plots 
+%while HVM correlates well with human sequence transfer, it does not align with LLM behavior during transfer tasks. Instead, LLM transfer behavior is better explained by the associative learning model. This difference likely arises because LLMs are optimized to predict associations between sequence parts. As a result, the autoregressive LLMs link the training instruction sequence to the new transfer sequence without reusing abstract variables, as humans or HVM would. The explicit variable reuse in HVM sets it apart from LLMs, which is reflected in their distinct correlational structures.
+
+%The model that resembles LLM's transfer the least is HCM, which does not learn any variables and is primed to reuse chunks to explain instruction. Upon seeing the transfer instruction sequences, HCM will construct novel chunks from scratch, as previously learned chunks are not useful for parsing the transfer instructions. The explicit reuse structure of the model is very distinct from LLMs as reflected on their correlation. 
+% HVM's resemblance to LLM's transfer behavior is intriguing. While HVM learns the explicit variables, the variables will be reused as a component to parse the transfer instruction sequence. The variable reuse is helping HVM with the transfer, which may indicate that the variable's abstract representation may also be represented in the LLM. The strategy of associating abstract representation of prompt instructions may contribute to HVM's resemblance to LLM. 
+
+
+
+% \subsection{Grammar learning and overgeneralization: Passing the Wug test}
+% We show the model exerts behavior similar to children's grammar acquisition. Specifically, we show two aspects of grammar learning that this model replicates. 
+
+% One aspect is \textit{overgeneralization}: applying a rule in situations when an exception rather than the rule is called for. Children and language learners alike overgeneralize as a natural part of learning a new language. Examples include: 
+% “I hurted myself.” (overgeneralization of the past tense -ed rule)
+% and “My friend told me he saw sheep on his way to school.” (overgeneralization of the plural + -s rule). Usually, limitations and exceptions to the rules and are developed later than rule acquisition \citep{gleason2009development}. 
+
+% We train HVM on natural language utterance examples and then exposed hvm on what is similar to a Wug test, which tests the productive knowledge of language morphology that can be generalized to new words \citep{BerkoGleason1958}. For example, when the child/model has learned about the new word as a noun gulch, if the child can generalize the plural form of* gulch is* gulches, we have evidence that he actually knows, albeit unconsciously, one of those rules which transforms nouns into its plural form. In a way, the test is analogous to testing the child the plural form of a word after showing the child with an imaginary object named wug and showing that the model can similarly learn about and internalize abstract linguistic rules. \citep{TOMASELLO1993451}
+
+% The other aspect is acquiring and transferring grammatical categories. Even very young children are able to produce correct plurals, past tenses, and possessives of words that they have never heard before, showing that they have internalized abstract linguistic rules. We evaluate the acquisition of plural formation and other rules of grammar, after exposing the model on sentences with intact grammatical structure, we test if the model can transfer the knowledge about grammar to new observations of deliberately constructed non-sense sets of word. 
+% paper: verb-argument structure and plural morphology 
+
+% agent 
+% patient
+% definitive article
+% plural morphology
+
+% \subsection{Higher levels of abstraction trades off with distortion while transfer  more flexibly}
+\subsection{Abstraction, distortion, and generalization}
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=1\textwidth]{RD.png}
+    \caption{a. New chunks or variables are created from previously learned ones, adding increasingly nested structures to the representation graph. b. As the allowable distortion increases (moving right on the x-axis), the required rate to encode the data in terms of chunks decreases (moving down on the y-axis). Introducing variables enables a more compressed sequence, which trades off with higher representational complexity introduced by the variables embedded inside the chunks. c. Abstraction and transfer: The higher the abstraction layer, the higher the likelihood (lower negative log-likelihood) that HVM parses novel sequences.}
+\label{fig:RD}
+\end{figure}
+With a model that can learn interpretable abstraction, we can delve into the relationship between learning layers of abstraction, compression, and uncertainty.
+HVM updates its dictionary each iteration by proposing chunks and variables, which are used to parse the sequence for the next iteration. New chunks or variables are created from previously learned ones, adding increasingly nested structures to the representation graph.
+This feature affords a controlled assessment of the relation between the level of abstraction, the amount of distortion that abstract representation introduces, and its relation to transfer and generalization to novel sequences.
+We measure nestedness using the representation complexity
+$RC(\mathbb{V}) = \sum_{v \in \mathbb{V}} \sum_{ u\in \mathbb{E}(v)} -\log P(u|v)$, which is closely related to the encoding cost of the representation graph \ref{sup:encoding_cost}. We also measured the uncertainty carried by the embedded variables in the chunks via entropy formulated as $\sum_{c \in \mathbb{C}} P(c) \sum_{v \in V(c)} \sum_{u\in E(v)}-P(u|v)\log P(u|v)$.
+Figure \ref{fig:RD}a shows the relation between the three factors as a consequence of increasing abstraction learning iterations. As the representation graph becomes increasingly nested, the newly learned chunks explain a longer part of the sequence, and these chunks embed more uncertain variables. This trade-off between compression and uncertainty reflects rate-distortion theory specifying that the best possible compression of a signal $X$ contains a lower bound on quality loss specified by the Rate-Distortion Function (R(D)): $R(D) = \inf_Q R_Q \text{s.t.} \mathbb{E}[d(X, \hat{X})]\leq D$ \citep{Shannon1959, Cover2012}. Taking representation complexity as a distortion function, as the level of abstraction increases, HVM learns patterns that span and predict longer parts of the sequence while more distortion and uncertainty are introduced. This observation on distortion with the level of abstraction resonates with previous findings relating mental errors with learning more abstract representations in humans \citep{lynn_abstract_2020}.
+
+\textbf{Higher levels of abstraction implies more flexible transfer}
+If learning higher abstraction layers implies more distortion, what would be the benefit apart from compression? We suggest that the other side of the coin lies in generalization and demonstrates the effect of abstraction on model transfer. We trained HVMs with increasing abstraction layers and evaluated the models' transfer likelihood upon parsing a novel sequence. As shown in Figure \ref{fig:RD}b, the higher the abstraction layer, the higher the likelihood (lower negative log-likelihood) that HVM parses the transfer sequence.
+To compare, we also evaluated the transfer performance of the chunking model (HCM) with an increasing level of abstraction iteration. While the transfer performance for HCM improves with more layers of chunk learning, it converges at a higher negative log-likelihood. Learning an increasing abstract representation by the HVM enables it to compress novel transfer sequences in a more succinct way. Furthermore, the more abstraction layers are acquired, the higher the relative advantage for HVM that learns abstraction holds over the HCM that does not learn variables.
+% [ ] highlight? why RD is important
+% [x] cite RD thoery cogsci
+% % this will be helpful here
+% If we were to assign a binary code to distinguish all the chunks and variables learned inside the representation graph, then this coding length is lower bounded by the information content: $-\log(c)$, $c \in \mathbb{B}$.
+% By definition,
+% \begin{equation}
+%     -\log P(v) = -\log \sum_{c \in \mathbb{C}} P(c).
+% \end{equation}
+% The information content of a variable is less than any of the chunks that this variable denotes. % since $P(v) \geq P(c)$, $ \forall c \in \mathbbm{E}_v$, and that $-\log(x)$ is a monotonically decreasing function, therefore $-\log(P(v)) \leq -\log(P(c))$.
+% If the agent just encodes a variable, and does not specify any chunks this variable is pointing to, then it saves the encoding length needed for any of the chunks $\sum_{u \in \mathbb{E}(v)} -\log P(u)$.
+%We build our work on our previous model HCM, which extracts hierarchically structured patterns as repeated chunks from sequences. HCM learns a set of chunks and stores them in a belief set $\mathbb{B}$. It uses the learned chunks to parse the sequences.
+% variability yet allows the discovery of chunks on a concept level, and thereby extend the expressiveness of learning chunking. This specific aspect of representation learning is further elaborated in the appendix. 
+\section{Related Work}
+% differentiates our approach to abstraction from other modeling approaches to abstraction 
+Previous modeling work on abstraction can be divided into two categories. The first is cognitive models, which characterize abstraction as searching for commonalities in explicitly symbolic systems \citep{lu_probabilistic_2021}; these models apply to explain human problem solving, finding problem solutions based on its conceptual analogies with the previously-solved problems \citep{HofstadterMitchell1994}. These models describe knowledge using symbolic, explicit graphs but do not address how the representation arises from perceptual data. Other models similar in taste include the recent wake-sleep Bayesian models such as DreamCoder \cite{ellis2021dreamcoder}. Our work proposes a mechanism for learning explicit abstraction from sequences. HVM starts learning with an empty dictionary and does not assume program primitives. Additionally, the inference/recognition in the HVM is sufficiently simple and can be simple without extensive machinery.
+
+The second model category implements abstraction in implicit connectionist systems. Works on meta-learning models and LLMs suggest their ability to generalize across contexts and solve problems in a way similar to humans in some tasks \citep{wei2022emergent, Binz2023} while failing short on other abstract reasoning tasks \citep{Fleuret2011}. Meanwhile, abstraction has been argued to be implicitly present in artificial neural networks \citep{yee_abstraction_2019,Kozma18, JohnstonFusi2023,Ito2022} and biological neural activities  \citep{bernardi2020geometry,goudar2023schema}, albeit challenging to interpret \citep{fan2021}. Relative to this approach, our work provides a reductionist cognitive model that explicitly specifies the minimal components needed to learn interpretable abstract structures. 
+
+% Without explicitly representing abstract structure, abilities like transfer and analogy mapping can emerge from neural network agents. 
+%Signatures of increasingly abstract representations at deeper layers of neural networks have been observed \citep{Kozma18}.
+%, alternative neurosymbolic models tried to bridge modular structure with neural network models \citep{sinha2023survey}
+\textcolor{black}{Besides cognitive models, our work relates to and differentiates from other sequence learning approaches. Our generative mechanism relies on chunk-based recursive generation and inventory growth rather than formal grammar rules \citep{Jelinek1992,Johnson2006}, Zipfian distributions \citep{teh_hierarchical_2006}, abruptly changing statistics \citep{milan_forget-me-not_nodate}, or sequences from a stochastic chain \cite{willems_context-tree_1995}. We suggest that the perceptual sequence contains nested hierarchical structures, with chunks as a central generative force. 
+}
+% difference between PCFG and adaptor grammar from the generative model 
+%Assigning occurrence probabilities from a Dirichlet distribution is another distinguishing factor, as standard PCFGs typically involve predefined rule probabilities. % difference between PCFG and adaptor grammar in HVM 
+%which can lead to significant memory and computational overhead. Hence, it has been primarily applied to simple sequences. % \peter{I think reviewers will require you to compare on your sequences.}
+
+% talk about dreamcoder, bayesian wake-sleep algorithms, 
+\textcolor{black}{
+The hierarchical nature of HVM shares with models including topics models and Helmholtz Machine; however, it differs from topics models \cite{blei2003latent, teh_hdp_2006} aiming at sequences rather than ‘bags of words’. The Helmholtz Machine also contains hierarchical generative and recognition components, but its focus is similarly not on sequences, and its sequential extension \cite{hinton1995helmholtz} did not work well partly because a lack of iterative processing that HVM employs. 
+Finally, the goal of HVM as a computational cognitive model differs from neural models such as CSCG \citep{george_clone-structured_2021} which has an implementation level focus \cite{marr1982vision}. However, we encourage future work to investigate the neural underpinnings of abstraction.}
+
+\section{Discussion}
+% model feature limitation
+Our work has limitations. One is that variables are only proposed to be embedded between chunks and cannot come at the beginning or end of sequences, restricting the location of discoverable variables. 
+\textcolor{black}{Secondly, representation learned later in iteration depends on those earlier acquired. However, this aspect aligns with the order and curriculum dependency of human learning. Children demand a simple-to-complex curriculum and utter more complex compounds later in their development \citep{Friedmann2021,Snow1972,Fernald1989}. There is a limit to HVM's expressivity: it won't be able to capture a pattern of two chunks being a variable number of chunks apart.} 
+Sometimes, the variable structure can be arbitrarily nested depending on the representations learned up until that moment. Future work may look at optimizing the structure during learning. Finally, our work focused on the cognitive resemblance of HVM and has yet to explicitly optimize the model for computational efficiency, leaving space for future work. 
+
+Our work opens up future directions both in cognitive science and machine learning. Previously, grammar learning \citep{CHOMSKY201333}, chunk learning \citep{Gobet2001}, and statistical/associative learning \citep{SAFFRAN199927} were studied as distinct characteristics of human sequence learning. We propose via HVM that the three components can be treated as finding invariant recurring chunks from sequences via statistical/associative learning, resulting in learning grammar-like structures. Our work suggests a normative origin of concrete and abstract chunk learning as a learning agent uncovers the underlying entities that constitute perceptual sequences. \textcolor{black}{Future work can relate this model to developing concepts or compare the model with human behavior and LLMs on more nested datasets.} 
+\textcolor{black}{Meanwhile, the close tie between abstraction and generalization also urges future hypothesis-driven research regarding preconditions for learning abstract concepts to acquire more complex representations. This can help to illuminate the emergence of abstract representation through excessive training and its relation to the generalizability of connectionist models \citep{power2022grokking, miller2024grokking}. Finally, our work can act in the tokenization role to fuse with transformers or SSM to extract interpretable representations from complex sequence data while enjoying the power of history-dependent sequence prediction.}
+
+%This relates to the 'Groking' phenomenon when training neural network models on abstract tasks (such as arithmetic or algorithmic binary operations), even when the model learns very well on the training set, the performance does not transfer to the task until after an excessive amount of training on the training data \citep{power2022grokking, miller2024grokking}. Our experiment on the interpretable abstraction learning model suggests that the transfer effect may come from an emergence of highly abstract representations during the excessive training process, which does not bring a noticeable performance change evaluated on the training set but does reflect on the test data that demand the application of abstract representations. 
+
+% \section{Conclusion}
+% We propose a hierarchical variable learning model (HVM) that builds up entities of recurring abstract and concrete patterns from nested hierarchical structured sequences, utilizing chunking and abstraction. %We show the model's resemblance to human sequence learning and transfer and highlight the relation between abstraction and generalization. %Our work is relevant for cognitive science and the AI community in understanding the learning of abstraction in humans and machines. 
+
+\section{Reproducibility Statement}% according to the regulation, this section can go beyond the 9th page, 
+Detailed information about the HVM algorithm, proof, generative model, test and experimental details and results can be found in the supplementary information section. The code used for the algorithm and experiments is available under this \href{https://github.com/swu32/HVM}{link}.
+
+
+% \section{Author Contributions}
+% S.W. conceptualized the paper, developed the algorithm, and evaluation methods and
+% programmed the model and experiments.
+% P.D. suggested the comparison and discussion in relation to compression and models of compression. E.S. suggested the LLM experiments and the evaluation of language sequences.
+% • I wrote the entire initial paper. PD, and ES provided extensive suggestions and
+% editing. MT, and ZA provided additional suggestions and editing.
+
+% \subsubsection*{Acknowledgments}
+% Use unnumbered third level headings for the acknowledgments. All
+% acknowledgments, including those to funding agencies, go at the end of the paper.
+
+
+
+\bibliography{iclr2025_conference}
+\bibliographystyle{iclr2025_conference}
+
+\appendix
+\section{Appendix / supplemental material}
+\subsection{Set up}
+An observational sequence $S$ is made up of discrete, integer valued, size-one elementary observational unit coming from an atomic alphabet set $\mathbb{A}$.  One example of such an observational sequence $S$ is: $$ 010021002112000... $$
+
+An example belief set that contains only concrete chunks can be $\mathbb{B} = \{0,1,21,211,12,2112\}$. 
+
+Using the belief set to parse the sequence $S$ results in the following partition. \underline{0} \underline{1} \underline{0} \underline{0} \underline{21} \underline{0} \underline{0} \underline{2112} \underline{0} \underline{0} \underline{0}.
+
+Another example belief set $\mathbb{B}$ that contains chunks $\mathbb{C} = \{21v,0100,000\}$ with embedded variables $\mathbb{V} = \{v\}$. The denoting set of $E(v) = \{00, 12\}$. Then the sequence $S$ is parsed as  \underline{0100} \underline{$21v$} \underline{$21v$} \underline{000}.
+
+\begin{definition}[Completeness]
+We say that a belief set is \emph{complete} if at any point during the sequence parsing process, the upcoming observations can be explained by at least one chunk in the belief set. 
+\end{definition}
+In this work, the learning mechanism guarantees that the belief set is complete. 
+
+\begin{definition}[Parsing Length $|W|$]
+A parsing length $|W|$ of a sequence is the length of the sequence measured in chunks. 
+\end{definition}
+
+\subsection{Generative Model}
+\begin{algorithm}[H]
+\SetAlgoLined
+\KwIn{A set of atomic elements $\mathbb{A}$; the number of combinations $d$; sequence length $l$}
+\KwOut{$seq$, a sequence made of concrete observational units}
+$cg \leftarrow$ initialize representation graph\;
+
+\For{$i \leftarrow 1$ \KwTo $d$}{
+$RAND \leftarrow$ random number between $0$ and $1$\;
+
+\If{$RAND > 0.5$}{ \tcp{Object Creation}
+$B \leftarrow$ $cg$.objectsAndCategories\;
+
+$n_{combo} \leftarrow$ random.choice$([2,3,4,5])$\;
+
+$samples \leftarrow$ random.sample($B$, k=$n_{combo}$)\;
+
+\While{any of the first and last element in $samples$ are categories}{
+
+$samples \leftarrow$ random.sample($B$, k=$n_{combo}$)\;
+}
+$newobject \leftarrow$ concatenate($samples$)\;
+
+$cg$.addChunk($newobject$)\;
+
+}\Else{ \tcp{Category Creation}
+$B \leftarrow$ $cg$.objects\;
+
+$n_{combo} \leftarrow$ random.choice$([2,3,4,5])$\;
+
+$samples \leftarrow$ $n_{combo}$ random.sample($B$, k=$n_{combo}$)\;
+
+$newcategory \leftarrow$ create a new category denoting $samples$\;
+
+$cg$.addVariable($newcategory$)\;}}
+$cg$.assignProbabilitiesToObjects()\;
+
+$sampled seq \leftarrow cg$.sampleObjectAndSpecifyVariables($l$)\;
+
+$seq \leftarrow$ convert $sampledseq$ to sequence\;
+
+\caption{Pseudocode to generate sequences with nested abstract hierarchies.} %chunks and variables are referred to as objects and categories in the main text.
+\end{algorithm}\label{code:HVMgenerativemodel}
+
+% After the inventory has been expanded up to the $d$-th iteration, an occurrence probability sampled from a flat Dirichlet distribution $f(x_1,...,x_K;\alpha_1,...,\alpha_K) = \frac{1}{\mathbf{B}(\mathbf{a})}\prod_{i = 1}^K x_i^{\alpha_i - 1}$ is assigned to each chunk in the inventory. $K = |\mathbb{A}|$. 
+
+A new object is created by concatenating a random selection of pre-existing objects or categories from the existing inventory. After the inventory has been expanded up to the $d$-th iteration, objects are assigned with an independent occurrence probability sampled from a flat Dirichlet distribution $f(p(c_1),...,p(c_{|\mathbb{A}|});\alpha_1,...,\alpha_{|\mathbb{A}|}) = \frac{1}{\mathbf{B}(\mathbf{a})}\prod_{i = 1}^{|\mathbb{A}|} P(c_i)^{\alpha_i - 1}$, $\alpha_i = 1 \forall i $. Where the beta function when expressed using gamma function is: $\mathbf{B}(\mathbf{a}) = \frac{\prod_{i = 1}^{|\mathbb{A}|} \Gamma(\alpha_i)}{\Gamma(\sum_i^{|\mathbb{A}|}\alpha_i)}$, and $\mathbf{a} = (\alpha_1, .., \alpha_{|\mathbb{A}|})$. The parameters $(\alpha_1, .., \alpha_{|\mathbb{A}|})$ are identically set to one. 
+
+Similarly, a probability is sampled from a flat Dirichlet to assign the independent occurrence probability of the set of object $E(v)$ that each category $v$ denotes. $\forall v \in \mathbb{V}$, $f(p(c_1),...,p(c_{|E(v)|});\alpha_1,...,\alpha_{|E(v)|}) = \frac{1}{\mathbf{B}(\mathbf{a})}\prod_{i = 1}^{|E(v)|} P(c_i)^{\alpha_i - 1}$, $\alpha_i = 1 \forall i $. This procedure is done for each created category. 
+
+Intuitively, objects represent recurring observations of specific entities, such as molecules composed of chemical elements. Categories, on the other hand, represent broader categories of entities that share common properties, such as chemical elements belonging to the same class (e.g., noble gases or alkali metals). The observation sequence forms a nested hierarchy, where entities and their categories frequently interact and combine with others.
+
+\subsection{Approximate Recognition Inverse}
+\label{SI:recognition}
+\begin{theorem}
+If the left entity $c_L$ and the right $c_R$ (which can be either a chunk or a variable) of a ground truth variable $v$ in addition to its denoting chunks $c_1, c_2, ..., c_m$ has been learned, and every parsing of $c_L$, $c_R$, and $c_1, c_2, ..., c_m$ is consistent with the constitution of the sequence by the its way of generation, then $c_1, c_2, ..., c_m$ will be necessarily proposed by \textit{the common adjacency and common preadjacency} criterion into a novel variable $v'$ and the true denoting entities will be a subset of the denoting set $E(v')$, $\{c_1, c_2, ..., c_m\} \in E(v')$. 
+\end{theorem}
+\begin{proof}
+By definition, $\{c_1, c_2, ..., c_m\}$ is in the adjacency $Adj(c_L)$ entries of $c_L$ and the preadjacency entries of $c_R$, $Preadj(c_R)$. 
+And therefore, $\{c_1, c_2, ..., c_m\} \in Adj(c_L) \cap Preadj(c_R)$ and hence will be included in the set of denoting entities for a new variable.
+\end{proof}
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[height = 0.25\textheight]{ccce.png}
+    \caption{Common adjacency and preadjacency structure to identify a variable.}
+    \label{fig:ccce}
+\end{figure}
+
+
+\begin{theorem}
+In an infinitely long sequence, a chunk $c$ in the generative model is made up by concatinating the entities $\{c_1, c_2, ..., c_n\}$, and these entities $\{c_1, c_2, ..., c_n\}$ are parsed in an identical way as how the generative model samples $c$, then HVM will eventually learn to chunk $c'$ including all the entities in $\{c_1, c_2, ..., c_n\}$. 
+\end{theorem}
+\begin{proof}
+By contradiction. If any of the entities are not included in the learned chunks, a correlation will still exist in the transition entries between subparts that compose $c$, which will be resolved by the next chunk proposal iteration. 
+\end{proof}
+
+In practice, identifying the ground truth representation graph is much more complicated, as the representations learned by HVM can be mapped to a context-sensitive grammar \ref{SI:csg}, which is more complex and undecidable than context-free grammar. Learning the correct chunks that exactly match the generative model relates to the non-identifiability problem that multiple grammars can generate the same set of observed data \citep{Post1946, Greibach1968} - inferring the exact grammar from positive examples is undecidable. The sequence length comparable to the ground truth is possible to obtain. Instead of comparing the model with the specific chunks of the ground truth, we use a set of evaluation measures to evaluate the model's performance.
+% Also is the case for deciding if two grammar classes are equivalent. Our formulation of the generative model can be shown to be equivalent to context-sensitive grammar \ref{SI:csg}. No general algorithm can take any finite set of examples and produce a grammar that will generate all and only those examples. Because of undecidability, heuristic and approximate methods are often used in practice in the linguistics grammar induction literature and formal language theory. These methods aim to find solutions that are good enough rather than exact ones. As the optimality of the ground truth cannot be guaranteed due to the common source of this problem with grammar induction, our approach restricts and simplifies the structures of patterns that are feasible for the HVM. Since there is a theoretical limit to what can be achieved when inferring grammatical structures from data. Our approach to HVM uses approximate, heuristic, and probabilistic methods to tackle this problem by imposing parsimonious computational characteristics that have been pronouncedly observed in the cognitive science learning literature. Instead of comparing the model with the specific chunks of the ground truth, we use a set of evaluation measures to evaluate the model's performance.
+
+\begin{algorithm}
+\SetAlgoLined
+\KwIn{Learning sequences $seq$; representation graph $cg$; boolean flag for chunk learning $threshold\_chunk$; boolean flag for variable learning $abstraction$}
+\KwOut{$cg$, $chunk\_record$}
+$cg \leftarrow$ initialize representation graph\;
+\tcp{Initialize chunk record}
+$chunk\_record \leftarrow \{\}$\; 
+
+$t \leftarrow 0$\;
+
+\While{not $seq\_over$}{
+    $current\_chunks, cg, seq, chunk\_record \leftarrow identify\_latest\_chunks(cg, seq)$\;
+    
+    $cg \leftarrow learning\_and\_update(current\_chunk, chunk\_record, cg, threshold\_chunk=True)$ \;
+    
+    \If{$abstraction$}{
+    $cg \leftarrow abstraction\_update(current\_chunks, cg)$\;
+    }
+    
+    $cg.forget()$\; 
+    \tcp{multiply all frequency record by $\theta$}
+}
+\caption{HVM (online version, for learning sequences from human experiments)}
+\end{algorithm}
+
+
+\subsection{Parsing Search Steps} 
+\label{SI:PSS}
+HCM retrieves learned chunks to match them with the upcoming sequence, parsing the largest chunk that aligns with the sequence. However, as the dictionary size $|\mathbb{C}|$ grows, the number of search steps increases, leading to inefficiency. To address this, HVM organizes the chunks in $\mathbb{C}$ within a parsing graph, harnessing shared nodes across multiple chunks to speed up the chunk identification process.
+
+\begin{definition}[Parsing Graph (PG)]
+Parsing graph is a graph for chunk identification. The nodes inside such a graph are the chunks $\mathbb{C}$. Each parent node is the overlap of all of its children. 
+\end{definition} 
+
+% A parsing graph contains three building blocks: abstractions, branches and leaves. The abstractions identify the splitting feature into its intended abstraction categories; the branches depart from a node and identify the different subsets of data produced by the partitioning operation; and the leaves, at the end of a path, identify a final subset of data and associate a concrete chunk identification with the current graph. The parsing graph is a decision tree on which chunk in the current sequence should be identified. One example parsing graph is shown in Figure \ref{fig:parsingex}.
+To parse a chunk, the model traverses the memory tree structure to find the path up to the deepest node inside the tree consistent with the upcoming sequence. Pseudocode \ref{code:TreeTraversal} describes this process. 
+
+\begin{algorithm}[H]
+\SetAlgoLined
+\KwIn{$rootNode$, the root node of the tree; $sequence$, the sequence to be matched}
+\KwOut{$path$, the path to the leaf consistent with the sequence, if found}
+$path \leftarrow$ an empty list\;
+\If{not $rootNode$}{\Return $null$\;}
+\Else{\Return \Call{TraverseTree}($rootNode$, $sequence$, $path$)\;}
+\SetKwFunction{FTraverseTree}{TraverseTree}
+\SetKwProg{Fn}{Function}{:}{}
+\Fn{\FTraverseTree{$node$, $sequence$, $path$}}{
+    $path$.append($node$)\;
+    \If{\Call{IsConsistent}{$node$, $sequence$}}{
+        \If{$node$.isLeaf()}{
+            \Return $path$\;
+        }
+        \ForAll{$child$ in $node$.children}{
+            $result \leftarrow$ \Call{TraverseTree}{$child$, $sequence$, $path$.copy()}\;
+            \If{$result$}{
+                \Return $result$\;
+            }
+        }
+    }
+    \Return $null$\;
+}
+\caption{Pseudocode for traversing a tree to find a path consistent with an upcoming sequence}
+\end{algorithm}\label{code:TreeTraversal}
+
+\begin{definition}[Parsing Search Steps]
+Parsing search step refer to the number of search comparison made in the parsing graph to find the deepest chunk in the tree consistent with the upcoming sequence.
+%Parsing length can be related to recall time, or time needed to access the memory until the best parse for the sequence can be found. 
+\end{definition}
+
+\paragraph{Example}
+Shown in Figure \ref{fig:parsingex}, when the sequence upcoming is 123, one starts from the ancestors of the graph and check whether 1 or 2 is at the beginning of the sequence, identifies 1, and proceeds into the subtree which stems from 1. The leaves are contains 12 and 13. Then HVM checks whether 12 is in the sequence or 13, thereby identifying 12. 
+
+The mechanism to identify the biggest concrete chunk that can be used to parse the sequence involves the following steps:
+\begin{itemize}
+    \item Search from the top of the tree (nodes with no parents)
+    \item Find the node in the next layer consistent with sequence
+    \item Go to the children of the node until the node contains no more children (leaf node) or none of the node's children is consistent with the sequence
+\end{itemize}
+
+As illustrated in Figure \ref{fig:parsingex}, the parsing search steps of chunk 12 is: $PSS(12) = 2 + 2 = |A| + |R(A)|$
+For chunk 221: $ PSS(221) = 2 + 2 + 3 $
+For 21: $PSS(21) = 2 + 2$
+% this term can be related to the average recall time, or identification time, given a particular storage system and a particular sequence. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width = 0.7\textwidth]{parsing.png}
+    \caption{Example process when parsing a chunk using parsing graph. Gray region denotes chunk overlaps, which are the non-leaf nodes inside the parsing graph being the common prefix of their children. }
+    \label{fig:parsingex}
+\end{figure}
+\paragraph{The advantage of memory abstraction}
+\begin{theorem}[Guarantee on fewer search steps]
+Identifying a chunk in a tree-structured memory takes fewer search steps than without.
+\end{theorem}
+\begin{proof} The hierarchically structured memory system reduces the searching step to the number of branches on the path that leads to the identified chunk, which is a subset of all nodes in the tree. 
+\end{proof}
+% Since a tree with $n$ nodes will always have $n-1$ branches. To allocate matching chunks, HVM searches through a subtree. The parsing step equals the total number of branches, which is less than $n-1$ in any subtree.
+
+\paragraph{Expected parsing search steps}
+For a chunk $c$ that occur with probability $P(c)$, the parsing search steps is denoted as $PSS(c)$. 
+
+As an example, three chunks $c_1$, $c_2$, and $c_3$ composes a sequence and they are parsed with probability $P(c_1)$, $P(c_2)$, and $P(c_3)$ in a sequence. 
+
+Without the hierarchical memory structure, the average parsing search steps to identify chunks in the sequence is:
+\[PSS(c_1)P(c_1) + PSS(c_2)P(c_2) + PSS(c_3)P(c_3)\]
+
+With the prefix Trie, the number of times needed to check whether a chunk matches a certain abstraction branch requires a number of parsing steps:
+\begin{equation}
+    PSS(c) = N_{children}(Pa(c))
+\end{equation}
+$Pa(c)$ denotes the parent of chunk $c$ in $PG$, $N_{children}(Pa(c))$ is the number of children that chunk $c$'s parent contain.  
+An abstract chunk $a$ in such a parsing graph can be the prefix intersection of three chunks $c_1$, $c_2$, and $c_3$, $a = c_1 \cap c_2 \cap c_3$.
+Parsing abstraction summarizes all the subordinate chunks that underlies such abstraction. Therefore the abstraction node is more likely to be parsed compared to individual chunks. 
+\[P(a) = (P(c_1) + P(c_2) + P(c_3))\]
+Additionally, abstraction can be used as an anchor to find the subsequent denoting chunks. $P(c_1|a)$, $P(c_2|a)$ and $P(c_3|a)$. The expected parsing search steps to identify chunks for such sequence $S$ becomes:
+\begin{align*}
+\mathbb{E}_{S}(PSS) = &\ PL(c_1 \cap c_2 \cap c_3)(P(c_1) + P(c_2) + P(c_3)) \\
+& + PL(c_1 - a)P(c_1|a)  + PL(c_2 - a)P(c_2|a) + PL(c_3 - a)P(c_3|a)
+\end{align*}
+
+% Depending on the conditional probability, this is becoming bigger than having no abstraction.
+
+Generalizing this formula to any parsing graph, the expected parsing search steps given the parsing graph's internal abstraction and concrete chunks would be
+\begin{equation}
+    EPSS(PG) = \sum_{c \in \mathbb{C}}P(c) \sum_{path(c)} len(N_{children}(PA(c)))
+\end{equation}
+$path(c)$ is the path starting with the root node of the graph that leads to the identification of the chunk node c. Since $P(c)_{c_i \in path(c)} = P(a)\prod_{c_i \in path(c)} P(c_i|pa(c_i))$, one can also give a lower and upper bound on the number of parsing search steps needed to arrive at a random chunk in the parsing graph:
+\begin{equation}
+    EPSS(PG) = \sum_{v\in \mathbb{C}} P(v|PA(v)) PSS(v - PA(v)) 
+\end{equation}
+$PSS(a - b)$ denotes the subgraph that starts from $b$ which reaches $a$. 
+If $v$ is inside the ancestor nodes, then $ancestor(v) = \varnothing$, and therefore $P(v|ancestor(v)) = P(v)$. 
+
+The expected parsing search steps for a representation graph can be calculated by averaging out the expected parsing search steps for each sub graph inside the parsing graph. The lower bound is the number of steps that leads to the shallowest node, and the upper bound is the number of steps that leads to the deepest leaf node. 
+\begin{equation}
+\arg\min_{c \in \mathbb{C}} \sum_{u \in path(c)} len(n_{children}(PA(c))) \leq \mathbb{E}_{c\in \mathbb{C}}(c) \leq \arg\max_{c \in \mathbb{C}} \sum_{u \in path(c)} len(n_{children}(PA(c)))    
+\end{equation}
+
+% Note that $n_{children}(PA(c))$ is a parsing length imposed by the current algorithm: HVM needs to search through all possible explanations on a certain abstraction level until it arrives at the identified abstraction in a parsing graph. This search process scales with the number of siblings, and has the computational cost of $O(n)$, $n$ is the number of siblings. On average, the parsing takes about $O(dn)$, which is a searching speed that scales with the width of the branches and the depth of the graph. In the future, if this search process can be reduced to $O(1)$ via hash implementation or parallel implementation, it will reduce the computation speed even further. 
+
+% From the prospective of expectation of parsing gain, to have abstraction holding an advantage over having no abstraction, the following condition should hold:
+% \[PL(a)(P(c_1) + P(c_2) + P(c_3)) + PL(c_1 - a)P(c_1|a) + PL(c_2 - a)P(c_2|a) + PL(c_3 - a)P(c_3|a) \leq  \\
+% PL(c_1) P(c_1) + PL(c_2)P(c_2) + PL(c_3) P(c_3)
+% \]
+    
+% We here calculate the gain of description length from abstracting $c_1,..., c_n$ into $a$. Say the set of chunks being abstracted by $a$ is in the set $C_a$. Then the gain of description length would be 
+% \begin{equation}
+%     Gain = PL(a)\left[\sum_{c \in C_a} P(c_i)\right] + \sum_{c \in C_a} P(c_i|a)PL(c_i - a) - \sum_{c_i \in C_a} P(c_i)PL(c_i)
+% \end{equation}
+% From a single chunk's prospective, if the parent of $c_i$ contains a lot of children, then the parsing will take a long time. Whereas if $c_i$ have just a couple of siblings, then parsing through the chunk takes less time. So from a single chunk's prospective, the smaller the number of siblings it has, the less time it takes to locate a particular chunk. Yet the extreme case of having only one chunk that contain no siblings would imply, that the child have a lot of children, if the total number of concrete chunks are the same. This is also not a preferred scenario, as parsing chunks at the subsequent stages after the current abstract chunk will end up taking some time that scales with the number of its children. 
+
+% To summarize, the parsing process identifies the maximum emerging a chunk from the currently learned representation resembles the decision process in decision trees. Learning abstractions in the parsing tree reduces the amout of computational process during searching. 
+
+
+% The above equation is equivalent to:
+% \[
+% \sum_{c_i \in C_a}P(c_i)(|a| - |c_i|) + P(c_i|a)(|c_i| - |a|)\\
+% = \sum_{c_i \in C_a}(|c_i| - |a|)(P(c_i|a) - P(c_i))
+% \]
+
+% $a = \bigcap_{C_a}$. This stands for the intersection over all chunks in the abstraction set. 
+
+% Gain is positive when $P(c_i|a)\geq P(c_i)$. We are benefiting from abstraction when the conditional probability of chunks given abstraction is more than the probability of individual chunks. The average parsing length becomes longer for the sequence.
+\subsection{Encoding Cost}
+\label{sup:encoding_cost}
+
+%= \sum_{v \in \mathbb{V}} H (v) = \sum_{v \in \mathbb{V}} \sum_{ c\in \mathbb{E}(v)} - P(u|v)\log P(u|v) $. \\
+
+A representation graph $RG$ specifies a distribution of observation instances encoded in a compositional manner. One can the minimal encoding cost to distinguish all the variables.
+
+\begin{equation}\label{eq:complexity}
+    RC(G) = \sum_{v \in G} \sum_{ u\in E(v)} -\log P(u|v) + \sum_{v \in G} -\log P(v) + \sum_{c \in G}    -\log P(c)   
+\end{equation}
+% $E(v)$ is the set of denoting chunks for variable $v$.
+
+The more ambiguous a variable is, the less resources needed to encode the variable; the smaller the variable graph is, the less edges it has, the bigger the probabilities of parsing and variable identification, the smaller the encoding cost. Every time when a new edge points from a pre-existing variable to a new variable, the encoding resource expands by an amount determined by the conditional probability. 
+
+% % TODO: formulate, a comparison graph with only variables but no edges between variables whatsoever, the encoding complexity needed. 
+% We can also compare the graph $G$ with a null graph that do not connect the variables by the graph edges $\hat{G}$. $\hat{G}$ contains the same number of variables, but there are no edges whatsoever. The encoding cost for $\hat{G}$ would be the occurrence probability for each variable, separately:  
+% \begin{equation}\label{eq:complexity}
+%     EC(\hat{G}) = 
+% \end{equation}
+
+
+\paragraph{Example}
+Representation graphs with different nested structure translates to different encoding cost. In Figure \ref{fig:variabledemo}, three graphs contains an increasing abstraction specificity. In graph 1, the variable 'world' is split into two variables: animals and plants. Each of these variables do not denote a specific observation, but serves as a placeholder for any instances of specific observation that fits into that particular category. 
+\begin{figure}
+    \centering
+    \includegraphics[width = \linewidth]{abstraction_levels.png}
+    \caption{An increasing level of abstractions}
+    \label{fig:variabledemo}
+\end{figure}
+The encoding cost for such a graph, given the specified observational probability on the edges would be:
+\begin{equation}
+    EC(g1) = -\log(P(World)) -\log(P(Plants|World))  -\log(P(Animal|World)) = -2\log(0.5)
+\end{equation}
+
+Since once the variable $World$ has been identified, one only need to distinguish the subcategories inside the variable $World$, and the minimal code length to distinguish one subcategory (animals) from another (plants) would be the conditional probability: $P(Plants|World)$.
+
+Whereas if $g1$ does not contain a nested structure, one would need to encode the variable world separately from the variable animal and variable plants, in this way, the alternative encoding length without an edge connecting the sub categories with the main category would be:
+\begin{equation}
+    EC(\hat{g1}) = -\log(P(World)) -\log(P(Plants))  -\log(P(Animals)) = -2\log(0.5)
+\end{equation}
+% it turns out we can characterize the informaiton content reduced to organize variable into subcategories of variables, and evaluate which one is the case with higher or lower information content, and ask do participants learn the subcategories first then the general categories or the other way around---their rationality to orgainze infomration efficiently (maybe with baby data). 
+
+For $g2$, the case is slightly different: the variable category that denotes animals is further split into the category of mammals and reptiles. Thereby, extra encoding costs are needed. 
+
+\begin{equation}
+\begin{split}
+EC(g2) & = -\log(P(World)) -\log(P(Plants|World))  -\log(P(Animals|World))  \\ 
+&  - \log(P(Mammals|Animals)) - \log(P(Reptiles|Animals))  \\
+&= -4\log(0.5)    
+\end{split}
+\end{equation}
+
+If each of these categories are encoded separately and each variable is not pointed to other variables, the information content to encode a variable graph without edges in the case of $\hat{g2}$ would be:
+
+\begin{equation}
+\begin{split}
+EC(\hat{g2}) & = -\log(P(World)) -\log(P(Plants)) \\
+            & = -\log(P(Animals)) - \log(P(Mammals)) - \log(P(Reptiles)) \\
+       & = -6\log(0.5)
+\end{split}
+\end{equation}
+Since $P(Mammals) = P(mammals|animals)P(animals)$. 
+
+This difference is more pronounced going from $g2$ to $g3$:
+\begin{equation}
+\begin{split}
+EC(g3) & = -\log(P(World)) -\log(P(Plants|World))  -\log(P(Animals|World))  \\ 
+&  - \log(P(Mammals|Animals)) - \log(P(Reptiles|Animals))  \\
+&  - \log(P(Fungi|Plants)) - \log(P(Flowers|Plants)) \\
+&  = -6\log(0.5)    
+\end{split}
+\end{equation}
+Whereas for $\hat{g3}$, not encoding variables in a nested structure would result in an encoding cost of 
+\begin{equation}
+\begin{split}
+EC(\hat{g3}) & = EC(\hat{g2}) +  - \log(P(Fungi)) - \log(P(Flowers))\\
+       & = -10\log(0.5)
+\end{split}
+\end{equation}
+These examples illustrate organizing variables into a nested recursive structure saves encoding cost.
+
+\subsection{Alternative formation as learning a context sensitive grammar}
+\label{SI:csg}
+HVM learns a 5-tuple from the sequences $\mathit{G} = \{\mathbb{A}, \mathbb{C}, \mathbb{V}, \mathbb{R}, \mathbb{P}\}$. 
+A set of atomic units $\mathbb{A} = \{a_l\}$\\
+A set of chunks $\mathbb{C} = \{c_k\}$, $k = 1, 2, ..., $, each chunk $c_k$ is a sequence of atomic units and variables.  The model uses chunks from $\mathbb{C}$ to parse the observation sequence. Assume a random variable $C$ as the chunk being parsed, taking a value $c$ from $\mathbb{C}$, $c \in \mathbb{C}$, $c \sim P$. $P$ is the parsing probability.  $\sum_{c\in \mathbb{C}} P(C = c) = 1$\\
+A set of variables  $\mathbb{V} = \{v_i\}$, $i = 1, 2, ..., $\\
+A set of rules $\mathbb{R} = \{E(v_1), E(v_2), ..., E(v_n)\}$ that each specifies the set of chunks $E(v) = \{c_j\}$ denoting each variable $v \in \mathbb{V}$. Probabilities on variable denoting $\forall i$, $\sum_j P(v_i \rightarrow c_j) = 1$\\
+
+\subsection{Rate-Distortion Theory}
+Rate-distortion theory specifies that the best possible compression of a signal $X$ contains a lower bound on quality loss specified by the Rate-Distortion Function (R(D)): $R(D) = \inf_Q R_Q \text{s.t.} \mathbb{E}[d(X, \hat{X})]\leq D$ \citep{Shannon1959, Cover2012}. According to the $RD$ theory, the minimum $R$ (the amount of compression) at which information can be transmitted over a communication channel for a given level of information loss D is specified by the \textbf{Rate-Distortion Function $(R(D))$}: $R(D) = \min_{p(\hat{x}|x): E[d(X, \hat{X})] \leq D} I(X; \hat{X})$. The mutual information quantifies how much information needs to be preserved during compression to achieve this fidelity, and the function minimizes this quantity while satisfying the distortion constraint. Written in another way,$R(D) = \inf_Q R_Q \text{ s.t.} E[d(X, \hat{X})]\leq D$. $Q$ represents the encoding function that maps from $x$ to $\hat{x}$. RD is agnostic to the choice of the distortion function, and in this case we use the representation complexity, which measures the nestedness of the variables learned by HVM. 
+
+\subsection{Parsing Probability}
+% peter said that a discrete process is a greedy version of a stochastic process, and therefore is bounded by the optimal case in the probabilistic setting
+A sequence $S$ is parsed by the chunks in $\mathbb{C}$ to obtain a distribution of chunk parsing probability $P_{\mathbb{C}}$. This distribution on the support set of chunks has shapes dependent on the parsing mechanism. HVM employs a greedy strategy and chooses the deepest consistent chunk in the memory tree to parse a segment of the upcoming sequence. Other parsing strategies will result in alternative distributions for $P_{\mathbb{C}}$, in addition to the transition probability $P_{\mathbb{C}}(c_i|c_j)$. 
+
+Define the set $\mathit{H}_{\mathbb{C}}(S)$ as the set of all distributions results in any parsing method using the chunks in $\mathbb{C}$ to parse a sequence $S$, and any parsing probability $P \in \mathit{H}_{\mathbb{C}}(S)$. Hence each evaluation measure on the representation is bounded by the optimal and the most unfortunate parsing occasions. 
+Taking the predictive power measure as an example: 
+\begin{equation}
+    \arg\min_{P \in \mathit{H}_{\mathbb{C}}(S)}\mathbb{E}_{P}|c|\leq \mathbb{E}_{P_{HVM}}|c| \leq  \arg\max_{P \in \mathit{H}_{\mathbb{C}}(S)}\mathbb{E}_{P}|c|
+\end{equation}
+The measured value is bounded by the expected value from the best parsing distribution and the worst parsing distribution.
+
+% Max likelihood estimate of the true transition between chunk i and chunk j is: $$\hat{A}_{ij} = \frac{n_{ij}}{\sum_k n_{ik}}$$ 
+% Updating the maximum likelihood of the transition probability boils down to the following recursive rule:
+% $$n_{ij}(t+1) = n_{ij}(t) + [i = x_t][j = x_{t+1}]$$
+% The Iverson bracket $[ \cdot ] = 1$ if the argument is true and 0 otherwise.  
+\subsection{Uncertainty}
+% Yet identifying a variable is different from identifying a chunk. This issue is more pronounced when the agent tries to use its knowledge representation graph to generate imagination. While having imagined a chunk, the sequential items that belong to a chunk is determined with certainty 1, whereas when a variable is being imagined, the generated subsequent sequence contains an inherent uncertainty on what the next several subsequent item will be, since any chunk, given this variable, contains a nondeterministic probability. 
+
+% This uncertainty will also translate to error, or mistakes, in some cases, because to recall one sequence, an agent needs to employ imagination. When it comes to a variable representation, a recall with an incorrect sampling in the variable representation is going to result in a slight mistake. But this mistake is going to be within the range of variables than within the range of everything else.
+Variables introduce uncertainty. 
+Without variables, the chunks inside $\mathbb{E}_{v}$ needs to be encoded as distinct chunks, consuming an encoding cost of $\sum_{c \in \mathbb{E}_v} -\log P(c)$. 
+
+We have the ground truth set of sequential observational units $gt$. Let's say in a recall task, the agent learns a variable chunk to describe the ground truth, the variable denotes to three concrete chunks $c_1$, $c_2$ and $c_3$. The accuracy when $c_1$ is being sampled will be $D(gt, c_1)$, when $D$ is a distance function evaluating the agreement between the ground truth chunk $gt$ and $c_1$. Then one can evaluate the expected accuracy within a variable:
+\begin{equation}
+    \mathbb{E}(gt, v) = \sum_{c\in \mathbb{E}_v}{P(c|v)D(gt,c)}
+\end{equation}
+$P(c|v)$ is the probability of sampling chunk $c$ given that the variable $v$ is identified. 
+
+Compared to chunks without variables, recalling chunks with embedded variables introduces variability, and brings down recall accuracy.
+But this strategy is especially suited when encoding resources is limited. Then, it is better when the resources are assigned to the more probable chunks that are predictive of a bigger sequence, while the varying entities that occur with lower probability can be denoted as a variable that serves as a placeholder. 
+
+% TODO: formulate the entropy, the uncertainty associated with one variable, and the conditional entropy of one variable given its ancestral variable/descendent variable is known. 
+\begin{equation}
+    Uncertainty(G) = \sum_{c \in \mathbb{C}} P(c) \sum_{ v\in C} H(v) 
+\end{equation}
+And $H(v) = -\sum_{c \in E(v)}P(c)\log{P(c)}$. 
+
+% \subsection{Sequence Encoding Cost/Shannon Entropy}
+% It assesses the unpredictability of information content in a sequence. 
+% $$EncodingCost(S) = \sum_{c \in \mathbb{C}}-P(c)\log P(c)$$
+
+% It's typically calculated by determining the frequency of each chunk in the sequence and using these frequencies to compute the shannon entropy of the sequence.
+% % \textbf{Storage Cost:} $\sum_{c \in \mathbb{C}}-\log P(c)$ % The lower bound of encoding bits needed to store all chunks.
+
+\subsection{Other evaluation measures}
+% Other evaluation measures that are sometimes used include the following: \\
+\textbf{Explanatory Volume:} $\frac{|S|}{|W|}$ The length of the original sequence (in atomic units) divided by the length of the parsed sequence (in units of chunks), i.e., The average size of the sequence that the current representation graph can explain at each parsing step. \\ % can expand it to specify all the variables inside each chunk and all the chunks inside each variable...
+\textbf{Sequence Negative Log Likelihood:} The lower bound of information content needed to encode the sequence $S$, as $S$ is parsed into chunks $(c_1, c_2, ..., c_n)$, $-\log P(S) = -\log (\prod_{c_i \in \mathbb{C}} P(c_i))$.  \\
+\textbf{Representation Entropy:} The uncertainty contained within each chunk parse $\sum_{c \in \mathbb{C}} P(c) \sum_{v \in V(c)} \sum_{u\in E(v)}-P(u|v)\log P(u|v)$\\
+% \textbf{n chunks:} Number of chunks learned.  \\
+% \textbf{n variables:} Number of variables learned. \\
+
+
+%\subsection{Learning Grammars of Brain Activities}
+% HVM can be used to discover patterns manifested both on a concrete and abstract grammatical level. One application domain is on sequences that contain such properties. We show that this algorithm can unveil the structure of brain network interactions, which is hierarchically structured and has interaction properties that resemble a network structure \citep{Alves2019}.
+
+% We used a developmental data set collected by \citep{Richardson2018} \citep{Abraham2014} with its corresponding IRB approval, which contains the BOLD activity of 155 participants while watching the silent movie ``Partly Cloudy''. The BOLD signal was extracted from functional brain regions defined by the MSDL Atlas \citep{Varoquaux2011}, with confounds excluded and transformed into a sequence of maximally activating brain regions, which usually correlates with the degree of activation involved in a task, conveying task-specific functionality.
+
+
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=1\linewidth]{fMRI.png}
+%     \caption{a. Experiment Design. b., c.  Complexity progression of HVM correlates with human reaction time in training (left) and transfer block (right). Marker size increases with trial number. }
+%     \label{fig:fMRI}
+% \end{figure}
+% We then ran HVM on the extracted sequence of functional brain regions. HVM learns chunks and variables that share similar functional properties. When evaluating this dataset, it reveals some interesting structures that reflect network connectivities and interactions.
+
+% Figure~\ref{fig:fMRI} shows examples of learned meta-chunks. We see a pattern in which the dorsal PCC maximally activates, followed by L IPS or L aud, followed by dorsal PCC again. Dorsal PCC might be involved in contextual memory aspects when processing auditory information with personal or emotional significance or internally directed thought when an individual is at rest and not focused. This reflects the signature of cross-network coordination. The dorsal PCC can help coordinate attention switching between internal mental states and external sensory demands, such as toggling attention based on the salience of auditory information (processed by the L aud) and its spatial attributes (processed by the L IPS). Then, after the activation of either of these two regions, dorsal PCC takes over, showing possible facilitation of information integration in memory and attention processes with information from LIPS and L aud. For example, when the auditory information must be contextualized with past experiences or when navigating in an environment using auditory cues.
+
+% Another chunk comprises the Striate Cortex (also known as the primary visual cortex or V1), followed by a variable that is either the Left Intraparietal Sulcus (L IPS) or the Right Intraparietal Sulcus (R IPS). Being the primary area responsible for processing visual information, the striate receives input directly from the retinal ganglion cells via the optic nerve and lateral geniculate nucleus of the thalamus, critical for the primary processing of visual stimuli, including orientation, spatial frequency, and color properties of visual inputs. The left and right is Intraparietal Sulcus (IPS), which is involved in spatial attention, eye movements, and hand-eye coordination, such as directing attention to spatial attention. As discovered by HVM, the variable chunk reflects the flow of information from basic visual processing in V1 to more complex spatial and cognitive processing on either side of the IPS, giving a plausible way of interpreting the organization and functional structures in the brain.
+
+
+% \subsubsection{Perplexity}
+% A closely related concept is the perplexity of the sequence parsed by chunks in the belief set. 
+
+% \begin{equation}
+% \text{Perplexity} = 2^{-\frac{1}{N} \sum_{i=1}N \log_2 P(c_i)}     = 2^{-\frac{1}{N} \log_2 \prod_{i=1}_N P(c_i)}
+% \end{equation}
+
+% $P(c_i)$ is the probability of parsing the chunk $c_i$.
+% $N$ is the total number of chunks used to parse the sequence (usually in the test set). 
+% The expression calculates the average negative log probability (in base 2) per word and then takes the exponent of the result in base 2.
+
+% Perplexity evaluates how "confused" the model is in predicting a sample, with a lower perplexity indicating a model that predicts the data with higher certainty.
+
+% \subsection{Explanability /Predictive Power}
+
+% \textbf{Explanability} The explanability of data is characterized as the average volume of data explainable by the chunks in the representation graph $\mathbb{B}$ (which serves as hypothesized patterns in the upcoming sequence). Given a sequence of length $n$. Each time chunk $c$ is being parsed, it can explain $\frac{|c|}{n}$ amount of data. 
+
+% During parsing, the sequence is tiled by $\mathbb{C}$. The \textbf{Expected Predictive Power(EPP)}, for a learned model is: 
+% \begin{equation}
+%     E = \sum_{c\in \mathbb{C}}|c|P(c) = \mathbb{E}|c|
+% \end{equation}
+
+% Given a random sequence with length $L$, after being parsed by chunks, it shall has length $C_L$. 
+
+% If $C_L$ is parsed by chunks $c_1$, $c_2$,... $c_n$, then $L = \sum_{i = 1, 2, ..., c_L} |c_i|$
+% Amid the parsing sequence, on average $c_i$ is going to occur $nP(c_i)$ number of times for $n$ chunk parses. 
+
+% For $n$ chunk parses, the expected number of sequence length is going to be $L = \sum_{i = 1, 2, ..., c_n} |c_i|P(c_i)n$
+% The fraction $\frac{L}{n}$ is the ratio between explaining sequence length versus the number of parses. 
+% $\frac{L}{n} = \sum_{i = 1, 2, ..., c_n} |c_i|P(c_i)$.
+
+% For a sequence of length $l$, it will on average take $\frac{l}{ec}$ parses, which is $\frac{l}{\sum_{i = 1, 2, ..., c_n} |c_i|P(c_i)} = \frac{l}{\mathbb{E}_B|c_i|}$. For each parse of sequence into chunk $c$, the amount of encoding resource is $-\log(p(c))$. The average encoding resource per parse is $\mathbb{E}-\log(p(c))$. 
+
+% For a sequence of length $l$, the average number of $\frac{l}{ec}$ parses will lead to $\frac{l}{ec}\mathbb{E}-\log(p(c))$ number of encoding resource, which is equal to $\frac{l\mathbb{E}_B-\log(p(c))}{\mathbb{E}_B|c_i|}$. 
+
+% Per unit sequential length, the average demanded encoding resource shall be 
+
+% \begin{equation}
+%     er = \frac{\mathbb{E}_B-\log(p(c))}{\mathbb{E}_B|c_i|}
+% \end{equation}
+% Bigger chunks drives this value lower, and smaller entropy drives this value lower. A small average demanded encoding resource translates to using shorter code length to encode longer chunks. If learning is to minimize the average demanded encoding length per sequential unit, then what we care about, is how $er$ changes with the set of chunks. As the rearrangement of the representation should lead to a decreasing $er$. If it does not lead to a decreasing $er$, it means the representation is no longer helpful. 
+
+% \subsection{}
+
+% Representation complexity:
+% \begin{equation}\label{eq:complexity}
+%     RC(G) = \sum_{v \in G} \sum_{ u\in E(v)} -\log P(u|v)  
+% \end{equation}
+
+% $$PredictivePower(G) = \sum_{c \in \mathbb{C}} P(c)|c|$$
+
+% $$StorageCost(G) = \sum_{c \in \mathbb{C}}-P(c)\log P(c)$$
+
+% $$Uncertainty(G) = \sum_{c \in \mathbb{C}} P(c) \sum_{v \in V(c)} \sum_{u\in E(v)}-P(u|v)\log P(u|v)$$
+
+
+% Then we formation a loss function
+% $$Loss(G) = -PredictivePower + \alpha Storage + \beta EncodingCost + \gamma Uncertainty$$
+
+
+% \section{LZW Sequence Encoding Length}
+% This method assesses the sequence's complexity based on the number and size of different patterns (or substrings) that appear in the sequence. It involves calculating the minimum number of unique substrings needed to reconstruct the original sequence.
+
+% The encoding process of LZ78 includes building the dictionary and outputting a code, for each new substring added to the dictionary, LZ78 outputs the index of the longest existing substring that matches the beginning of the new substring followed by the next character. The output code consists of the index $\log_2(index)$ of the dictionary and the additional character. The total encoding length $L$ to encode a sequence is calculated by summing the bits for each code emitted during compression.
+% \begin{equation}
+% L = \sum_{i = 1}^m\lceil (\log_2(d_i) \rceil + c)    
+% \end{equation}
+% $m$ is the total number of entries in the encoded sequences, $d_i$ represents the bits required to encode the dictionary index (the amount of unique entries in the dictionary), and $c$ represents the bits required to encode the additional character. 
+
+% To encode a sequence $S$ of sequence length $|S|$, the encoding length by LZ78 is upper bounded by: 
+% \begin{equation}
+%     L \leq \sum_{i = 1}^m(\lceil \log_2(|S|) \rceil + c_i)  =m(\lceil \log_2(|S|) \rceil + c_i)  \propto m
+% \end{equation}
+% Proportional to $m$, the length of the sequence when broken down by the entries in the dictionary.
+
+% \begin{figure}
+%     \centering
+%     \includegraphics[width = \textwidth]{coding_efficiency.png}
+%     \caption{Comparing the coding efficiency of LZ78, HCM and HVM. X axis is the sequence length to encode, and y axis is the average sequential length per dictionary unit entry.}
+%     \label{fig:codingefficiency}
+% \end{figure}
+
+% The size of coding dictionary for LZ78 is initialized with an overhead. The dictionary increases in size as the encoding sequence becomes longer but gradually converges. In Figure \ref{fig:codingefficiency} y axis measures the coding efficiency by dividing the sequence length by the number of entries in the dictionary. To encode a sequence of the same length, LZ78 is creating a more overcomplete dictionary compared to the chunking models.  
+
+
+
+% \subsection{Error Detection}
+% Every existing item in the dictionary will guide the model to parse sequences in a particular greedy way. This will, in turn, lead to the formation of more chunks and symbols based on the existing representations. 
+
+% Consider Refactorization: throw away not-so-useful items,  
+
+% \section{Equivalence Classes of Models}
+% There can be a class of models that differ in their complexities to describe the same data-generating structure. A simple data-generating structure can be described in an arbitrarily complex way. 
+
+% % similar issues should also exist in program induction and learning Markov models. 
+
+% \subsection{Experimental Instruction}
+% "
+% Thank you for choosing us, and welcome to our Kitty Says game.
+% This game is meant to strengthen and enhance your memory. It is a mental exercise. Apart from the bonus, we hope your brain becomes healthier after this mental workout!
+% In order to participate, you MUST meet the following criteria:
+% You are a fluent speaker of English.
+% You have not previously participated in this experiment. 
+% Keyboard finger position:
+% Only the letters A, S, D, J, K, L are valid key presses in this task. 
+% Place your hands on the keyboard as shown below. Use one finger for each key. For example, use your left ring finger for A, left middle finger for S, left index finger for D, your right index finger for J, right middle finger for K, and right ring finger for L. 
+% Once you have comfortably positioned your fingers, please do not change them during the task. 
+% Keys and colors:
+% Below, you can see the colors that will be displayed by Kitty in the experiment. 
+% To select the leftmost color you can press A, to select the color next to it you can press S, and so forth. 
+% How one trial works: 
+% On each trial, Kitty will show you a sequence of colors by lighting up the color one after another. 
+% After Kitty is finished with showing you the colors, we ask you to remember the color sequence by pressing the key corresponding to the colors sequentially. 
+% After you are finished with recalling the sequence, you will see a score on how well you have done in this particular trial. 
+% Your compensation will be calculated based on your score at the end of each trial, and also how fast you are remembering the sequences. "
+
+
+% % \label{SI:humanexp}
+
+% % \begin{figure}[ht!]
+% %     \centering
+% %     \includegraphics[height = 0.25\textheight]{expa.png}
+% %     \caption{Illustration of the memory experiment}
+% %     \label{fig:llmhuman}
+% % \end{figure}
+% % \begin{figure}[ht!]
+% %     \centering
+% %     \includegraphics[height = 0.25\textheight]{expb.png}
+% %     \caption{Experiment screenshot }
+% %     \label{fig:llmhuman}
+% % \end{figure}
+
+% \subsection{Training specification for LLMs}
+% \label{SI:compute}
+% Because the prompt is constantly updated with the newly presented instruction, each separate prompt is sent to evaluate the model's prediction probability. To obtain the experimental results, in context prompting demanded 15 hours of computing time on a free version of google collab for GPT2. Llama 7B's prompting took 3 hours on a computing cluster with an A100 core,  Llama 13B took 8 hours on the same specification, whereas Llama 70B took 12 hours on 4 A100 cores.}
+\subsection{Regressing LLM on human data}
+\label{sup:llm}
+We also regressed the negative log likelihood (NLL) of all LLMs against human sequence recall time and presented the resulting R-squared values in Figure \ref{fig:llmhuman}. During the training block, the NLL of LLMs shows a stronger correlation with human recall times compared to alternative models. However, when it comes to human transfer, the cognitive models demonstrate a much stronger correlation than the LLMs, with HVM aligning most closely to human transfer performance.
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width = \textwidth]{llmhuman.png}
+    \caption{Regressing all models' sequence likelihood on human sequence recall time.}
+    \label{fig:llmhuman}
+\end{figure}
+
+
+
+
+% % Complexity and Entropy % go to SI?
+% Variable learning is reflected in the measure of representation complexity and representation entropy. The former measures the amount of encoding resources needed to encode the variables. Higher representation complexity implies more refined and nested definition of variables.
+% During learning, the representation complexity first expands and then converges, an indicator that the representation graph at first grows an excessive amount of variables but then gradually converges on its structure with fewer and fewer novel variables being discovered. 
+
+%With regard to representation entropy, it is interesting to note that at an early stage of learning, there is a spike of entropy in the learned representation, presumably because of the proliferation of variable proposals. The representation entropy converges as learning proceeds. It is as if the model encounters a stage of proliferation of hypothesis and then gradually locates to a set of stable set of chunks to parse the training sequences. 
+
+% More explicit measures of learning progress are the number of chunks and the number of variables. We see, at first, a steep increase in the number of variables followed by a stable convergence. The step increase in variables also corresponds to a steep increase in the number of chunks. 
+
+% Storage Cost 
+%The discovery of additional chunks also induces additional storage costs for the model. Since HVM stores not only all of the concrete chunks discovered but also the variables and HCM does not spend any additional storage cost on storing variables, which are nodes that are used to organize chunks, HVM subsequently costs more storage compared to HCM. 
+
+%To summarize, comparing HVM and HCM suggests that abstraction as a variable proposal helps a learning agent to acquire relations and patterns that span a longer part of the perceptual sequence and consequentially reduces the likelihood of parsing perceptual sequences. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+
+
+
+
+
+% \section{Default Notation}
+
+% In an attempt to encourage standardized notation, we have included the
+% notation file from the textbook, \textit{Deep Learning}
+% \citep{goodfellow2016deep} available at
+% \url{https://github.com/goodfeli/dlbook_notation/}.  Use of this style
+% is not required and can be disabled by commenting out
+% \texttt{math\_commands.tex}.
+
+
+% \centerline{\bf Numbers and Arrays}
+% \bgroup
+% \def\arraystretch{1.5}
+% \begin{tabular}{p{1in}p{3.25in}}
+% $\displaystyle a$ & A scalar (integer or real)\\
+% $\displaystyle \va$ & A vector\\
+% $\displaystyle \mA$ & A matrix\\
+% $\displaystyle \tA$ & A tensor\\
+% $\displaystyle \mI_n$ & Identity matrix with $n$ rows and $n$ columns\\
+% $\displaystyle \mI$ & Identity matrix with dimensionality implied by context\\
+% $\displaystyle \ve^{(i)}$ & Standard basis vector $[0,\dots,0,1,0,\dots,0]$ with a 1 at position $i$\\
+% $\displaystyle \text{diag}(\va)$ & A square, diagonal matrix with diagonal entries given by $\va$\\
+% $\displaystyle \ra$ & A scalar random variable\\
+% $\displaystyle \rva$ & A vector-valued random variable\\
+% $\displaystyle \rmA$ & A matrix-valued random variable\\
+% \end{tabular}
+% \egroup
+% \vspace{0.25cm}
+
+% \centerline{\bf Sets and Graphs}
+% \bgroup
+% \def\arraystretch{1.5}
+
+% \begin{tabular}{p{1.25in}p{3.25in}}
+% $\displaystyle \sA$ & A set\\
+% $\displaystyle \R$ & The set of real numbers \\
+% $\displaystyle \{0, 1\}$ & The set containing 0 and 1 \\
+% $\displaystyle \{0, 1, \dots, n \}$ & The set of all integers between $0$ and $n$\\
+% $\displaystyle [a, b]$ & The real interval including $a$ and $b$\\
+% $\displaystyle (a, b]$ & The real interval excluding $a$ but including $b$\\
+% $\displaystyle \sA \backslash \sB$ & Set subtraction, i.e., the set containing the elements of $\sA$ that are not in $\sB$\\
+% $\displaystyle \gG$ & A graph\\
+% $\displaystyle \parents_\gG(\ervx_i)$ & The parents of $\ervx_i$ in $\gG$
+% \end{tabular}
+% \vspace{0.25cm}
+
+
+% \centerline{\bf Indexing}
+% \bgroup
+% \def\arraystretch{1.5}
+
+% \begin{tabular}{p{1.25in}p{3.25in}}
+% $\displaystyle \eva_i$ & Element $i$ of vector $\va$, with indexing starting at 1 \\
+% $\displaystyle \eva_{-i}$ & All elements of vector $\va$ except for element $i$ \\
+% $\displaystyle \emA_{i,j}$ & Element $i, j$ of matrix $\mA$ \\
+% $\displaystyle \mA_{i, :}$ & Row $i$ of matrix $\mA$ \\
+% $\displaystyle \mA_{:, i}$ & Column $i$ of matrix $\mA$ \\
+% $\displaystyle \etA_{i, j, k}$ & Element $(i, j, k)$ of a 3-D tensor $\tA$\\
+% $\displaystyle \tA_{:, :, i}$ & 2-D slice of a 3-D tensor\\
+% $\displaystyle \erva_i$ & Element $i$ of the random vector $\rva$ \\
+% \end{tabular}
+% \egroup
+% \vspace{0.25cm}
+% 
+
+
+% \section{Preparing PostScript or PDF files}
+
+% Please prepare PostScript or PDF files with paper size ``US Letter'', and
+% not, for example, ``A4''. The -t
+% letter option on dvips will produce US Letter files.
+
+% Consider directly generating PDF files using \verb+pdflatex+
+% (especially if you are a MiKTeX user).
+% PDF figures must be substituted for EPS figures, however.
+
+% Otherwise, please generate your PostScript and PDF files with the following commands:
+% \begin{verbatim}
+% dvips mypaper.dvi -t letter -Ppdf -G0 -o mypaper.ps
+% ps2pdf mypaper.ps mypaper.pdf
+% \end{verbatim}
+
+\end{document}

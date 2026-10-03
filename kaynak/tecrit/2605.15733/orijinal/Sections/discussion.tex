@@ -1,0 +1,14 @@
+\section{Discussion and limitations}
+\label{sec:discussion}
+Our finding shows how abstract structures can be effectively extracted from real-world video sequences while maintaining meaningful hierarchical latent spaces. 
+The combination of the inverse model with the HPC-MEC-inspired world model enables efficient extracting abstract structures from specific contents, facilitating robust transfer capabilities.
+Our analysis of the HPC and MEC representations further highlights the potential for neuro-inspired models to encode and reuse abstract structures from real-world transition dynamics.
+The capability of our model to reuse these latent transitions across diverse contexts underscores the critical role of structural generalization.
+
+
+\vspace{-0.2cm}
+\paragraph{Limitations.} 
+Our model has several limitations. First, it is susceptible to autoregressive compounding errors, which could potentially be mitigated by incorporating a memory bank. Second, performance degrades on benchmarks that exhibit substantial distributional drift from the training data (human videos).
+Additionally, coordinating multiple independent entities remains a major challenge. Future work will explore hierarchical HPC-MEC structures or object-centric representations to tackle this problem.
+% The current model abstracts complex real-world dynamics into latent actions without explicitly disentangling task-relevant features from background information. A critical future challenge lies in extracting content-independent latent actions relevant to tasks.
+% Language, inherently containing content-independent information, presents a promising direction for improvement. Incorporating language instructions into learning abstract latent actions could enhance the extraction of task-relevant representations. Recent work has demonstrated the integration of language instructions with VQ-VAE architectures for extracting task-relevant latent actions~\cite{bu2025univla}. In future research, we aim to extend this approach to more complex domains, particularly action planning.

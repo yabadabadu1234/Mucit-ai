@@ -1,0 +1,425 @@
+\newpage
+\section{Model details}
+\label{appendix:model_details}
+\subsection{Model design motivation}
+Our model is a brain-inspired framework guided by neuroscience and implemented with state-of-the-art deep learning modules. 
+
+The hierarchical separation of a content pathway (HPC) from a structure pathway (MEC) is directly inspired by established theories in computational neuroscience. Using a latent transition space learned via an inverse dynamics model is a common and effective framework adopted by many baselines in this field for learning from unlabeled video. Our work builds upon this solid foundation.
+Within this framework, our component choices are deliberate. The MEC's path integration role is implemented using a Continuous Attractor Neural Network (CANN), a classic computational model of grid cells~\citep{gardnerToroidalTopologyPopulation2022,mcnaughtonPathIntegrationNeural2006a,fuhsSpinGlassModel2006a,burgessOscillatoryInterferenceModel2007a}. latent transitions are inferred via an inverse dynamics model, a standard approach rooted in theories of the cerebellum~\citep{wolpertInternalModelsCerebellum1998}. 
+
+Finally, we choose specific state-of-the-art implementations for these functional roles to ensure high performance. The pretrained visual multi-scale VQ-VAE~\citep{tianVisualAutoregressiveModeling2024} provides a stable and high-quality visual representation, analogous to processed input from the visual cortex. The spatial-temporal Transformer~\citep{bruceGenieGenerativeInteractive2024,yeLatentActionPretraining2024} models complex dependencies across space and time, exactly what is required to integrate the content and structure signals to predict future states. 
+
+\subsection{Model parameter}
+We provide the model parameters (Table~\ref{tab:model_parameters}) used in our experiments. 
+
+\begin{table}[!htbp]
+\caption{Model parameters}
+\label{tab:model_parameters}
+\begin{center}
+\scalebox{0.8}{
+\begin{tabular}{ll}
+\multicolumn{1}{c}{\bf COMPONENT/PARAMETER} & \multicolumn{1}{c}{\bf VALUE}
+\\ \hline \\
+\multicolumn{2}{l}{\bf Input parameters} \\
+Input Channels & 3 \\
+Input Image Height & 256 \\
+Input Image Width & 256 \\
+VQ-VAE Encoder Depth & 16 \\
+VQ-VAE Encoder Feature Map Channels & 32 \\
+VQ-VAE Encoder Feature Map Heights & 16 \\
+VQ-VAE Encoder Feature Map Widths & 16 \\
+Patch Size & 4 \\
+Patch Height & 4 \\
+Patch Width & 4 \\
+\\
+\multicolumn{2}{l}{\bf HPC Model} \\
+HPC Hidden Size (total) & 8192 \\
+Per-patch Hidden Dimension & 512 \\
+Spatial Transformer Depth & 4 \\
+Temporal Transformer Depth & 4 \\
+\\
+\multicolumn{2}{l}{\bf MEC Model} \\
+MEC Hidden Size (total) & 4096 \\
+Per-patch Hidden Dimension & 256 \\
+Spatial Transformer Depth & 4 \\
+Temporal Transformer Depth & 4 \\
+\\
+\multicolumn{2}{l}{\bf Inverse World Model} \\
+Transition Dimension & 2048 \\
+Per-patch Transition Dimension & 128 \\
+$f_{\text{inverse}}$ Residual Blocks & 2 \\
+$f_{\text{forward}}$ Residual Blocks & 4 \\
+\end{tabular}}
+\end{center}
+\end{table}
+
+\subsection{Pretrained encoder details}
+\label{appendix:VQVAE}
+We use the pretrained multi-scale VQ-VAE (depth=16) from the VAR model to extract visual features. The feature map we use, $\hat{f}$, is the sum of outputs from the multi-scale vector quantization layers. This feature map is fed directly into our model. This design is intentional: it simulates how the HPC-MEC circuit receives pre-processed information from the visual cortex, and it frames the task as a prediction problem entirely within the latent space (akin to JEPA~\citep{lecunPathAutonomousMachine}), meaning our model does not perform pixel-level reconstruction.
+
+\subsection{CANN Dynamics and Path Integration}
+\label{appendix:path_integration}
+
+Inspired by the role of grid cells in the MEC, we model transition dynamics using a continuous attractor neural network (CANN). 
+ CANN is a specific type of recurrent neural network designed to maintain a stable, continuous representation of information in its activity pattern. Unlike classical attractor networks that store discrete, unstructured patterns, CANNs are distinguished by their ability to encode structured patterns organized by metric relationships. This geometric structure allows a CANN to maintain a system's state as a stable, localized "activity bump". Path integration is achieved by using the inferred latent transition as a velocity operator that controllably shifts this bump along the network's metric axes. This ability to maintain a stable state and systematically transform it via a velocity input is what allows the CANN to integrate a path and predict the next state's structure.
+ 
+In our model, the MEC embeddings $\boldsymbol{g}$ represent abstract structures in high-dimensional space~\citep{klukas2020efficient}. When multiple one-dimensional CANNs are combined, their joint state space forms an $N$-dimensional continuous manifold~\citep{burgess2014controlling}. This modular representation enables the decomposition of spatial dynamics, where each module is driven by latent transition inputs. 
+
+We formalize the CANN dynamics implemented in our MEC module for encoding abstract representations and performing path integration. Specifically, we draw connections between the classical differential equation-based formulation of CANNs and our discrete-time, learnable implementation.
+
+The canonical dynamics of a one-dimensional CANN are described by the following first-order differential equation:
+\begin{equation} \label{eq:cann_classic}
+\tau \frac{d\mathbf{u}(t)}{dt} = -\mathbf{u}(t) + \mathbf{W}_r \mathbf{r}(t) + \mathbf{W}_{\text{in}} \mathbf{v}(t),
+\end{equation}
+where:
+\begin{itemize}
+    \item $\mathbf{u}(t)$ is the hidden state of the network;
+    \item $\mathbf{r}(t)$ is the instantaneous neural firing rate, which is derived from the hidden state using a non-linear activation function $\mathbf{r}(t)=H(\mathbf{u}(t))$;
+    \item $\mathbf{v}(t)$ is the external motion input (e.g., velocity);
+    \item $\mathbf{W}_r$ and $\mathbf{W}_{\text{in}}$ are the recurrent and input weight matrices, respectively;
+    \item $\tau$ is a time constant.
+\end{itemize}
+
+This formulation supports both self-sustaining activity through recurrent feedback and perturbation by external motion cues.
+To enable numerical modeling, Equation~\eqref{eq:cann_classic} is discretized using forward Euler integration:
+\begin{equation} \label{eq:cann_discrete}
+\mathbf{u}_{t+1} = (1 - \alpha)\mathbf{u}_t + \alpha \left( \mathbf{W}_r \mathbf{r}_t + \mathbf{W}_{\text{in}} \mathbf{v}_t \right),
+\end{equation}
+where $\alpha = \Delta t / \tau$.
+
+For simplicity, we omit the explicit modeling of Gaussian bump profiles and instead use a nonlinear function to extract bump centers: $\mathbf{g}(t) = \sigma(\mathbf{r}(t))$. Rather than explicitly designing $\mathbf{W}_r$, we learn the continuous attractor dynamics through a temporal attention mechanism and impose structural regularity using a second-order temporal smoothing loss on $\mathbf{g}$. This loss penalizes high acceleration in the latent space and is given by:
+\begin{equation} \label{eq:smooth_loss}
+\mathcal{L}_{\text{smooth}} = \frac{1}{B(T - 2)} \sum_{b=1}^{B} \sum_{t=1}^{T-2} \left\| \mathbf{g}_{b,t+2} - 2\mathbf{g}_{b,t+1} + \mathbf{g}_{b,t} \right\|^2,
+\end{equation}
+where $B$ is the batch size and $T$ is the sequence length. The temporal attention with causal masking integrates the historical information into the current state, encouraging low curvature in the grid trajectory, reflecting the physical intuition that continuous movement through space should induce smooth changes in internal state. 
+
+Focusing on the evolution of bump centers rather than firing rates, we implement the path integration update as:
+\begin{equation} \label{eq:path_integration}
+\mathbf{g}_{t+1} = \mathbf{g}_t \oplus f(\mathbf{g}_t, \mathbf{z}_t),
+\end{equation}
+where $\mathbf{z}_t$ denotes the latent transition and $f(\cdot)$ is a learnable function that models the dynamics induced by $\mathbf{z}_t$. The recurrent dynamics of $\mathbf{g}$ are embedded within the temporal attention structure to maintain continuity over time and to preserve the attractor manifold structure.
+
+
+\subsection{Sensitivity analysis}
+For the number of CANN modules (MEC dimension), our current model uses 4096 modules (256 per visual patch). Reducing this to 2048 still allows the model to encode scene-specific dynamics, but with a noticeable loss of detail and increased blurriness in the generated images. A further reduction to 1024 exacerbates this issue and leads to convergence difficulties during training.
+
+Regarding the latent transition dimension, we currently use a dimension of 2048. We find that the model can still predict the next frame with a dimension of 1024, though the generation quality is compromised. Compressing the latent transition dimension further makes convergence very difficult, often causing the model to learn a trivial solution where it simply outputs the previous frame as its prediction.
+
+\subsection{Visual feedback details}
+Since path integration alone accumulates errors over time, the visual inference pathway provides corrective feedback to mitigate this drift. Specifically, in the absence of visual feedback, the model predicts the next state via path integration based on the current prediction $\boldsymbol{g}^{gen}_t$: 
+\begin{equation}
+    \begin{aligned}
+        \boldsymbol{g}^{gen}_{t+1} = \boldsymbol{g}^{gen}_{t} \oplus f_{\text{forward}}(\boldsymbol{z}_t, \boldsymbol{g}^{gen}_{t})
+    \end{aligned}
+\end{equation}
+When visual input is available, the model corrects the current state using the inferred MEC embedding $\boldsymbol{g}_t^{inf}$ from the observation to predict the next state: 
+\begin{equation}
+    \begin{aligned}
+    \boldsymbol{g}^{gen}_{t+1} = \boldsymbol{g}^{inf}_{t} \oplus f_{\text{forward}}(\boldsymbol{z}_t, \boldsymbol{g}^{inf}_{t})
+    \end{aligned}
+\end{equation}
+This update does not introduce instability because $\boldsymbol{g}_t^{inf}$ and $\boldsymbol{g}_t^{gen}$ lie in the same latent space. The alignment loss $\mathcal{L}_{\text{alignment}}(\boldsymbol{g}_{2:T}^{\text{inf}}, \boldsymbol{g}_{2:T}^{\text{gen}})$ not only trains the inverse model but also ensures that replacing $\boldsymbol{g}_t^{gen}$ with $\boldsymbol{g}_t^{inf}$ during feedback remains stable. Moreover, visual feedback is used only after the model has been sufficiently trained, at which point the two embeddings are well aligned. As a result, even though the model is not trained on long sequences, the correction mechanism allows it to autoregressively generate accurate predictions over time.
+
+\newpage
+\section{Model training details}
+\label{appendix:model_training_details}
+\subsection{Loss functions}
+\label{appendix:loss_function}
+We elaborate on the loss functions designed for each training phase in detail:
+\begin{itemize}
+    \item \textbf{The reconstruction loss:} We include losses between observation embeddings and three different generative model predictions to accelerate learning. The reconstructed observation embeddings $\boldsymbol{s}^{\text{recon}}$ can be generated directly from the inferred $\boldsymbol{p}^{\text{inf}}$ or $\boldsymbol{g}^{\text{inf}}$ embeddings, while $\boldsymbol{s}^{\text{gen}}$ is generated from the generative pathway. 
+    In phase 1, we use $\boldsymbol{p}_{1:T}^{\text{inf}} \rightarrow \boldsymbol{s}_{1:T}^{\text{recon}}$ and $\boldsymbol{g}_{1:T}^{\text{inf}} \rightarrow \boldsymbol{p}_{1:T}^{\text{inf}} \rightarrow \boldsymbol{s}_{1:T}^{\text{recon}}$ to compute the reconstruction loss. In phases 2 and 3, the transition dynamics of the model predict the next generated observation embeddings $\boldsymbol{g}_{2:T}^{\text{gen}} \rightarrow \boldsymbol{p}_{2:T}^{\text{gen}} \rightarrow \boldsymbol{s}_{2:T}^{\text{gen}}$, and we use $\boldsymbol{s}_{2:T}^{\text{gen}}$ to compute the reconstruction loss.
+    
+    \item \textbf{The alignment loss:} The $\mathcal{L}_{\text{alignment}}$ is used to align the latent representations from inference and generation. This loss is inspired by TEM~\citep{TolmanEichenbaumMachineUnifying2020}, where the inferred HPC embeddings $\boldsymbol{p}^{\text{inf}}$ are aligned with the generated HPC embeddings $\boldsymbol{p}^{\text{gen}}$, and the inferred MEC embeddings $\boldsymbol{g}^{\text{inf}}$ are aligned with the generated MEC embeddings $\boldsymbol{g}^{\text{gen}}$.
+    
+    \item \textbf{The transition loss:} The $\mathcal{L}_{\text{transition}}$ constrains the predicted displacement vector $\Delta \boldsymbol{g}_t^{\text{gen}} = f_{\text{forward}}(\boldsymbol{z}_t, \boldsymbol{g}_t^{\text{gen}})$ to be close to the true displacement vector $\Delta \boldsymbol{g}_t^{\text{inf}}$ at time step $t$. The transition loss is computed as the mean squared error (MSE) between the predicted and true displacement vectors. Cosine similarity is also used to ensure the predicted displacement vector aligns with the true displacement vector.
+    To prevent the model from falling into a local minimum during training, where the $\boldsymbol{g}$ alignment loss might make the predicted $\boldsymbol{g}_{t+1}^{\text{gen}}$ closer to $\boldsymbol{g}_{t}^{\text{inf}}$ rather than $\boldsymbol{g}_{t+1}^{\text{inf}}$, we add an extra contrastive loss term that constrains the distance between predicted $\boldsymbol{g}_{t+1}^{\text{gen}}$ and $\boldsymbol{g}_{t}^{\text{inf}}$. This is implemented using cosine similarity. The overall form of the loss is:
+    \begin{equation}
+        \begin{aligned}
+            \mathcal{L}_{\text{transition}} = \text{MSE}(\Delta \boldsymbol{g}_{1:T-1}^{\text{gen}}, \Delta \boldsymbol{g}_{1:T-1}^{\text{inf}}) &+ \alpha \cdot \left( 1 - \text{CosSim}(\Delta \boldsymbol{g}_{1:T-1}^{\text{gen}}, \Delta \boldsymbol{g}_{1:T-1}^{\text{inf}}) \right)\\
+            &+ \beta \cdot \text{CosSim}(\boldsymbol{g}_{1:T}^{\text{gen}}, \boldsymbol{g}_{0:T-1}^{\text{inf}}),
+        \end{aligned}
+    \end{equation}
+    where $\alpha$ and $\beta$ are hyperparameters that control the relative importance of the cosine similarity terms. 
+
+    \item \textbf{The regularization loss:} To prevent collapse, we utilize the VICReg objectives~\citep{bardes2022vicreg} to regularize $\boldsymbol{p}_t^{\text{inf}}$ and $\boldsymbol{g}_t^{\text{inf}}$. The variance loss encourages the model to maintain a certain level of variance across batches in the latent space, while the covariance loss penalizes the model for having high covariance between different dimensions of the latent space. The overall form of the regularization loss is:
+    \begin{align}
+        \mathcal{L}_{\text{var}}(Z, \gamma) &= \frac{1}{TD} \sum_{t=0}^{T} \sum_{j=0}^{D} \max\left(0, \gamma - \sqrt{\text{Var}(Z_{:,t,j}) + \varepsilon} \right) \\
+        \mathcal{L}_{\text{variance}} &= \mathcal{L}_{\text{var}}(\boldsymbol{g}^{\text{inf}}, \gamma=0.5) + \mathcal{L}_{\text{var}}(\boldsymbol{p}^{\text{inf}}, \gamma=0.5) \\
+        \mathcal{L}_{\text{cov}}(Z) &= \frac{1}{D(D-1)} \sum_{i \neq j} (\text{Cov}(Z)_{ij})^2 \\
+        \mathcal{L}_{\text{covariance}} &= \mathcal{L}_{\text{cov}}(\boldsymbol{g}^{\text{inf}}) + \mathcal{L}_{\text{cov}}(\boldsymbol{p}^{\text{inf}}) \\
+        \mathcal{L}_{\text{regularization}} &= \phi \cdot \mathcal{L}_{\text{variance}} + \psi \cdot \mathcal{L}_{\text{covariance}} + \omega \cdot \mathcal{L}_{\text{smooth}}
+    \end{align}
+    where $\phi$, $\psi$ and $\omega$ are hyperparameters that control the relative importance of the variance, covariance and smooth(Eq. \ref{eq:smooth_loss}) losses, respectively.
+
+\end{itemize}
+
+\subsection{Training hyperparameters}
+We provide the training hyperparameters (Table~\ref{tab:training_hyperparameters}) used in our experiments. 
+
+\begin{table}[h]
+\caption{Training hyperparameters}
+\label{tab:training_hyperparameters}
+\begin{center}
+\begin{tabular}{llc}
+\multicolumn{1}{c}{\bf PHASE} & \multicolumn{1}{c}{\bf PARAMETER} & \multicolumn{1}{c}{\bf VALUE}
+\\ \hline \\
+\multicolumn{3}{l}{\bf Fixed parameters} \\
+& Learning Rate & 1e-4 \\
+& Optimizer & AdamW \\
+& Weight Decay & 1e-4 \\
+& Betas & (0.9, 0.999) \\
+& Gradient Clipping & 0.1 \\
+& lr\_scheduler & CosineAnnealingLR \\
+& Epochs & 10 \\
+\\
+\multicolumn{3}{l}{\bf Stage 1} \\
+& Batch Size & 32 \\
+& Sequence Length & 8 \\
+& $\mathcal{L}_{\text{recon}}^{\boldsymbol{p}^{\text{inf}}\rightarrow \boldsymbol{s}^{\text{rec}}}$ Weight & 5.0 \\
+& $\mathcal{L}_{\text{recon}}^{\boldsymbol{g}^{\text{inf}}\rightarrow \boldsymbol{s}^{\text{rec}}}$ Weight & 5.0 \\
+& $\mathcal{L}_{\text{alignment}}^{\boldsymbol{p}}$ Weight & 0.22 \\
+& $\phi$ (variance loss) & 0.01 \\
+& $\psi$ (covariance loss) & 0.01 \\
+& $\omega$ (smooth loss) & 0.01 \\
+\\
+\multicolumn{3}{l}{\bf Stage 2/3} \\
+& Batch Size & 224/32 \\
+& Sequence Length & 2/8 \\
+& $\mathcal{L}_{\text{recon}}^{\boldsymbol{p}^{\text{inf}}\rightarrow \boldsymbol{s}^{\text{rec}}}$ Weight & 5.0 \\
+& $\mathcal{L}_{\text{recon}}^{\boldsymbol{g}^{\text{inf}}\rightarrow \boldsymbol{s}^{\text{rec}}}$ Weight & 5.0 \\
+& $\mathcal{L}_{\text{gen}}^{\boldsymbol{g}^{\text{gen}}\rightarrow \boldsymbol{s}^{\text{gen}}}$ Weight & 3.0 \\
+& $\mathcal{L}_{\text{alignment}}^{\boldsymbol{p}}$ Weight & 1.0 \\
+& $\mathcal{L}_{\text{alignment}}^{\boldsymbol{g}}$ Weight & 5.0 \\
+& $\alpha$ (transition loss) & 1 \\
+& $\beta$ (contrastive loss) & 1 \\
+& $\phi$ (variance loss) & 0.05 \\
+& $\psi$ (covariance loss) & 0.05 \\
+\end{tabular}
+\end{center}
+\end{table}
+
+
+\subsection{Compute requirements}
+The model is trained on a large dataset (SSv2, 220,000 videos), with training requiring 6-8 hours (10 epochs, parallel training using 3 A100 GPUs). Inference time is very fast due to the relatively small size of the spatial-temporal Transformer and multi-scale VQ-VAE, resulting in minimal overhead. So far, increasing model size has not led to significant time increases. 
+
+\newpage
+\section{Dataset details}
+\label{appendix:dataset}
+We aim to learn abstract latent transitions from real-world videos. Unlike 2D games or robot demonstrations, real-world human videos exhibit diverse transitions without explicit action labels. We investigate whether pre-training on large-scale human video datasets enables our model to learn versatile latent transitions that generalize to unseen data.
+We use the following datasets.
+\subsection{Something-Something V2}
+Something-Something V2(SSv2)~\citep{DBLP:journals/corr/GoyalKMMWKHFYMH17} contains 220,847 video clips of humans performing actions with everyday objects. We use these large-scale real-world human videos to train our model and maintain the same train/validation/test splits as established in~\cite{DBLP:journals/corr/GoyalKMMWKHFYMH17}.
+
+\subsection{3D objects primitive transformation datasets}
+\textbf{Rotation datasets} \\
+We use three different rotation datasets to evaluate and analyse the model. COIL-100~\citep{nene1996columbia} contains images of 100 objects viewed from different angles. MIRO~\citep{kanezaki2018rotationnet} is another dataset of 3D object rotations along a different axis. 
+
+We also create a synthetic dataset of 3D object rotation containing 5911 objects of 216 daily categories with 72 different views per object. We use Blender to render meshes from the OmniObject3D ~\citep{wu2023omniobject3d}, a dataset of high-quality real-scanned meshes, to create 3D rotation objects. Each object mesh is initialized at 0° and then rotated 360° around the vertical axis in 5° increments, yielding 72 rendered views per object. Our dataset covers 216 categories with a long-tailed distribution, incorporating most daily object realms. We include all raw scans provided on the official website, where the number of categories and objects may slightly differ from those reported in the original OmniObject3D paper. The rendering code is adapted from the implementation provided by ~\cite{deitke2023objaverse}.
+
+\textbf{Primitive transformation datasets} \\
+We construct a new dataset using OmniObject3D with sequences containing different primitive transformations (rotation, horizontal/vertical translation, and scaling). Each sequence features an object where the category, initial position, orientation, and size are randomized.
+
+\subsection{Simulated benchmarks}
+We also evaluate our model on simulated benchmarks to investigate whether the model trained on real-world data can transfer to virtual environments. We use four different simulated datasets: Franka Kitchen~\citep{gupta2019relay}, Block Pushing~\citep{florence2022implicit}, Push-T~\citep{chi2023diffusion}, and LIBERO Goal~\citep{liu2023libero}.
+
+\subsection{Sequence construction from the 3D objects rotation datasets}
+Since the model takes image sequences as input rather than single object views, we need to construct sequences using images from the 3D object rotation datasets. We use three 3D object rotation datasets. Here, we describe how to construct sequences from different object views in these datasets.
+
+Each sequence consists of frames of a single object. Between any two adjacent frames, the second frame is a rotated version of the first. The transition here corresponds to the rotation angle: a positive value indicates clockwise rotation, while a negative value indicates counterclockwise rotation. Therefore, we construct a sequence by defining an initial frame and a sequence of rotation transitions; the corresponding images are retrieved from the rotation datasets.
+
+Here are some experiments' sequence construction settings:
+\begin{itemize}
+
+\item In Section~\ref{sec:results:autoregressive} Fig.~\ref{fig:results:next-step}(C), the relative rotation transitions are fixed at $5^{\circ}$, objects in COIL-100 are rotated clockwise around the vertical axis by $5^{\circ}$ per frame. 
+
+\item In Section~\ref{sec:results:transfer}, we use different fixed parameters: Fig.~\ref{fig:results:transfer}(B), (C), and (F) use rotation angles of $30^{\circ}$, $20^{\circ}$, and $30^{\circ}$ per step respectively; Fig.~\ref{fig:results:transfer}(G) uses fixed scaling of $0.85$ per step.
+
+\item In Section~\ref{sec:results:baseline} Table~\ref{tab:metrics_comparison}, the relative rotation transitions are randomly sampled from $-90^{\circ}$ to $90^{\circ}$.
+
+\item In Section~\ref{sec:results:ablation} Table~\ref{tab:ablation}, the relative rotation transitions are randomly sampled from $-30^{\circ}$ to $30^{\circ}$.
+\end{itemize}
+
+\newpage
+\section{Baseline additional results}
+\subsection{Compute and wall-clock time comparison}
+\begin{table*}[!htbp]
+\vspace{-0.2cm}
+\centering
+\caption{Quantitative comparison of Inference FPS and Average time per batch across different models.}
+\scalebox{0.8}{
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Model} & \textbf{LAPA} & \textbf{Moto} & \textbf{AdaWorld(LAM)} & \textbf{Our model} \\
+\midrule
+Inference FPS & 205.33 & 55.22 & 35.60 & 84.00 \\
+Average time per batch (s) & 0.623 & 2.318 & 3.595 & 1.523 \\
+\bottomrule
+\end{tabular}}
+\vspace{-0.2 cm}
+\end{table*}
+We run a set of experiments on a single NVIDIA A100 GPU to fairly compare the inference throughput. We use a consistent batch size of 16 and a sequence length of 8, averaging the results over 100 batches to calculate the Inference FPS (higher is better) and Average Time per Batch (lower is better).
+
+Our HPC-MEC module adds almost no computational overhead. The reason for this high efficiency is that our module operates entirely in the latent space between the VQ-VAE encoder and decoder. Also, our full model's inference speed is faster than Moto and AdaWorld(LAM). We believe this analysis shows that our model's advantages are achieved without incurring an unreasonable computational penalty.
+
+\newpage
+\section{Ablation study additional results}
+\label{appendix:ablation}
+\subsection{latent transition validity experiment}
+We conduct another ablation study to examine the role of latent transitions in governing transition dynamics. Recall that the transition dynamics in our model are defined as:
+\begin{equation} \label{eq:transition_dynamics}
+\mathbf{g}_{t+1} = \mathbf{g}_t \oplus f_{\text{forward}}(\mathbf{z}_t, \mathbf{g}_t),
+\end{equation}
+where $\mathbf{z}_t$ denotes the latent transition, and $f_{\text{forward}}$ integrates content information into $\mathbf{z}_t$ to generate the displacement vector $\Delta \mathbf{g}_t$.
+Our ablation study focuses on two aspects: the latent transition and content binding. First, we disrupt the input to the inverse model by setting it to zero, and then perform both one-step and autoregressive predictions (Fig.~\ref{fig:appendix:ablation_action}(A, B)). We observe that in the one-step prediction, the model collapses to simply copying the previous frame, while in the autoregressive setting, only the first frame is retained, and the sequence shows no meaningful transitions.
+Second, we impair the content binding by allowing $\mathbf{z}_t$ to be combined only with a zero input to produce $\Delta \mathbf{g}_t$ (Fig.~\ref{fig:appendix:ablation_action}(C, D)). In this case, one-step prediction generally preserves the overall transition dynamics, but the generated details are degraded; by comparison, autoregressive prediction yields even poorer results. These findings indicate that the latent transition primarily drives the main transitions, whereas content binding is essential for reconstructing detailed, scene-specific information.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\textwidth]{Figures/appendix/appendix-ablation-action.png}
+    \caption{\textbf{latent transition validity experiment.} (A) The inverse model receives zero inputs, resulting in meaningless latent transitions for one-step prediction. (B) Meaningless latent transition for autoregression. (C) $f_{\text{forward}}$ combines latent transitions with meaningless content information and performs one-step prediction. (D) Meaningless content information binds to latent transitions and performs autoregression.}
+    \label{fig:appendix:ablation_action}
+    \vspace{-0.1 cm}
+\end{figure}
+
+\newpage
+\section{Additional results}
+\label{appendix:additional_results}
+
+\subsection{Prediction results}
+\subsubsection{One-step prediction in out-of-distribution rotation datasets}
+We provide more visualizations of the model's prediction on several rotation datasets. The results are shown in Fig.~\ref{fig:appendix:prediction-roation}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]{Figures/appendix/appendix-rotation.png}
+    \caption{\textbf{One-step prediction in rotation datasets.} (A, B) One-step prediction evaluated on the COIL-100 dataset. (C, D) One-step prediction evaluated on the MIRO dataset.}
+    \label{fig:appendix:prediction-roation}
+    \vspace{-0.1 cm}
+\end{figure}
+
+\newpage
+\subsubsection{One-step prediction in out-of-distribution simulated environments}
+We provide one-step prediction results on simulated benchmarks with substantial distributional shifts from human videos in Fig.~\ref{fig:appendix:prediction-one-simu}. The model performs robustly in the more naturalistic Franka Kitchen~\citep{gupta2019relay}, but less effectively in artificial environments like Push-T~\citep{chi2023diffusion} and Block Pushing~\citep{florence2022implicit}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]{Figures/appendix/prediction-one-simu.png}
+    \caption{\textbf{One-step prediction in simulated environments.} (A) One-step prediction evaluated in Franka Kitchen. (B) LIBERO Goal. (C) Block Pushing. (D) Push-T.}
+    \label{fig:appendix:prediction-one-simu}
+    \vspace{-0.1 cm}
+\end{figure}
+
+\newpage
+\subsection{latent transition reuse results}
+\subsubsection{One-step and autoregressive reuse of latent transitions on unseen 3D rotation dataset}
+We present additional results on OOD 3D rotation dataset to validate robustness in Fig.~\ref{fig:appendix:reuse-one-auto-omni}. Here we examine cubic objects, where latent transitions from a source sequence effectively transform frames of a different object, aligning well with the source's rotational dynamics. 
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\textwidth]{Figures/appendix/reuse-one-auto-omni.png}
+    \caption{\textbf{latent transition transfer on OmniRotation.} (A, B) Two examples demonstrating one-step and autoregressive reuse of latent transitions for cubic objects in the OmniRotation dataset. }
+    \label{fig:appendix:reuse-one-auto-omni}
+    \vspace{-0.1 cm}
+\end{figure}
+
+\subsubsection{One-step and autoregressive reuse of latent transitions on unseen artificial environment Franka Kitchen}
+In Section~\ref{sec:analysis}, we demonstrate the model's ability to extract shared latent transitions from sequences of the same action performed under varying contexts in artificial environments. Here, we provide results of one-step and autoregressive reuse of latent transitions in Franka Kitchen (Fig.~\ref{fig:appendix:kitchen-transfer}). We observe that the model can effectively transfer latent transitions across different scenes in different contexts, even in such out-of-distribution environments compared to the training dataset.
+
+Additionally, these results suggest that the model can extract content-independent structures from artificial environments, and we believe it has the potential to perform well in generation and reuse tasks with an improved decoder.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]{Figures/appendix/appendix-kitchen-transfer.png}
+    \caption{\textbf{latent transition transfer in artificial environments.} (A) One-step prediction by transferring the sequential latent transitions in Franka Kitchen. (B) Autoregressive prediction by transferring the sequential latent transitions in Franka Kitchen.}
+    \label{fig:appendix:kitchen-transfer}
+    \vspace{-0.1 cm}
+\end{figure}
+
+\newpage
+\subsection{Visualization of baseline comparison}
+\label{appendix:baseline}
+We provide additional visualization of one-step prediction using LAPA, Moto, AdaWorld(LAM), and our model. The results are shown in Fig.~\ref{fig:appendix:compare}. LAPA optimizes directly at the pixel level, resulting in more reliable generation of local details. In contrast, our model is optimized in the latent representation space, enabling it to better preserve overall generation quality even under large action-induced variations. In such scenarios, LAPA’s generation quality tends to deteriorate, whereas our model remains robust. Moto and AdaWorld(LAM) all fail to generalize at the Franka Kitchen dataset.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.75\textwidth]{Figures/appendix/appendix-compare.png}
+    \caption{\textbf{Comparison of generation quality between baselines and our model.} (A) Visualization of one-step prediction on the SSv2 dataset. (B) Visualization of one-step prediction on the Franka Kitchen dataset.}
+    \label{fig:appendix:compare}
+    \vspace{-0.1 cm}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.4\textwidth]{Figures/appendix/appendix-baseline-transfer-A.png}
+    \caption{\textbf{Comparison of latent transition transfer between baselines and our model.} One-step latent transition transfer across different scenes on SSv2, using the same examples as in Fig.~\ref{fig:results:transfer}(A).}
+    \label{fig:appendix:baseline-transfer-A}
+    \vspace{-0.1 cm}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Figures/appendix/appendix-baseline-transfer-B.png}
+    \caption{\textbf{Comparison of latent transition transfer between baselines and our model.}  One-step \& autoregressive prediction by transferring the sequential latent transitions, using the same examples as in Fig.~\ref{fig:results:transfer}(B, C).}
+    \label{fig:appendix:baseline-transfer-B}
+    \vspace{-0.1 cm}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\textwidth]{Figures/appendix/appendix-baseline-transfer-D.png}
+    \caption{\textbf{Comparison of latent transition transfer between baselines and our model.} (A)(B)Autoregressive reuse of latent transitions on SSv2, using the same examples as in Fig.~\ref{fig:results:transfer}(D, E). (C)(D)Autoregressive reuse of latent transitions on
+rotation and scaling dynamics across object categories, using the same examples as in Fig.~\ref{fig:results:transfer}(F, G).}
+    \label{fig:appendix:baseline-transfer-D}
+    \vspace{-0.1 cm}
+\end{figure}
+
+\newpage
+\section{Learned latent space details}
+\label{appendix:rotation_analysis}
+\subsection{Dimensionality reduction experiment}
+In Section~\ref{sec:analysis:periodic-reuse} Fig.~\ref{fig:results:rotation}(A, D), each UMAP visualization shows the embeddings of a single object. In Fig.~\ref{fig:results:rotation}(B), each UMAP figure includes embeddings of 10 pumpkins, 7 red apples, and 3 yellow apples. 
+In Fig.~\ref{fig:results:rotation}(A, B, D), the transition is fixed at $5^{\circ}$ per step. The objects rotate clockwise around the vertical axis; the sequences in (A) complete two full rotations, while those in (B, D) complete one full rotation each.
+
+\subsection{Category classification decoder}
+
+In the decoder in-class structural sharing experiment illustrated in Fig.~\ref{fig:results:rotation}(C), we construct a subset of 500 objects from the 3D object rotation dataset rendered from OmniObject3D ~\citep{wu2023omniobject3d} by randomly selecting 50 categories and then randomly sampling 10 objects from each category. Then we repeat the experiment five times using this subset. In each run, we split the objects in each category into 80\% for training and 20\% for testing, ensuring that no object appears in both sets. The training and test samples are the per-timestep embeddings extracted from sequences of these training and testing objects.
+
+Each object is used to construct one rotation sequence. Specifically, we initialize the object at a random view and apply a fixed transition of $5^\circ$ per step, meaning the object is rotated clockwise around the vertical axis by $5^\circ$ at each timestep, until a full $360^\circ$ rotation is completed. This results in a 72-frame sequence per object. The sequence is passed through our Hippocampal-Entorhinal-Inspired Coupling Model to extract the $\mathbf{p}$ and $\mathbf{g}$ embeddings, which serve as inputs for training the decoder.
+
+The decoder is adapted from the simple latent transition decoder used in \cite{yeLatentActionPretraining2024}. It is an MLP consisting of two hidden layers with 128 units and ReLU activations. It is trained using the AdamW optimizer with PyTorch's default parameters. We use cross-entropy loss, a batch size of 128, and train for 30 epochs.
+
+Fig.~\ref{fig:results:rotation}(C) reports the average training and test accuracy over the five runs, with the shaded area indicating the standard error.
+
+
+\subsection{Latent transition decoding details}
+We construct a new dataset using OmniObject3D with sequences containing different transformations (rotation, horizontal/vertical translation, and scaling). Each sequence features an object where the category, initial position, orientation, and size are randomized. We use this dataset to decode the transformation type from the latent transition.
+
+We use the action decoding paradigm commonly used in latent transition decoding~\citep{lapo}. First, we use the model to extract the latent transition representation from the video sequence, and then feed the latent transition into the decoder (MLP) to decode the transformation type $a_t$, which represents the type of the current transition at time $t$. For each tested model, we train a latent transition decoder following LAPO~\citep{lapo}. Each decoder is implemented as a fully connected network with hidden sizes of 128 and 128. 
+
+\subsection{Transition composition analysis}
+We also provide a transition composition analysis here. We quantitatively test for transition compositionality by decomposing a diagonal movement (move right-down 45°) into the sum of its constituent horizontal and vertical translations. Using the pumpkins and apples dataset (from Fig.~\ref{fig:results:transfer}(B)), we compare frames generated from the original diagonal latent transition with those generated from the vector sum of the horizontal and vertical latent transition embeddings. Fig.~\ref{fig:appendix:composition} shows that frames driven by compositional latent transitions produce reasonable results comparable to real latent transitions. The results in Table~\ref{tab:appendix:action-composition} demonstrate strong visual and quantitative similarity:
+
+\begin{table}[htbp]
+\centering
+\caption{Transition composition results comparing real latent transitions with composed latent transitions.}
+\label{tab:appendix:action-composition}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Transition type} & \textbf{SSIM} $\uparrow$ & \textbf{LPIPS} $\downarrow$ \\
+\midrule
+Real latent transition & $0.946 \pm 0.021$ & $0.076 \pm 0.032$ \\
+Latent transition $A + B$ & $0.944 \pm 0.023$ & $0.073 \pm 0.032$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The metrics are statistically comparable (t-test: SSIM p=0.417, LPIPS p=0.402, n=160), providing strong evidence that our latent transition space supports linear composition through its path integration dynamics.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\textwidth]{Figures/appendix/appendix-composition.png}
+    \caption{\textbf{Transition composition results.} (A) One-step prediction frames driven by real latent transitions. (B) One-step prediction frames driven by compositional latent transitions obtained through the summation of rightward and downward latent transitions extracted from the corresponding sequences. }
+    \label{fig:appendix:composition}
+    \vspace{-0.1 cm}
+\end{figure}
