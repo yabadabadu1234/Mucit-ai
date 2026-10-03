@@ -6,12 +6,12 @@ Kaynak: arXiv LaTeX e-print (gerçek metin; OCR/PDF yok). Tercüme: Claude, Tür
 | :-- | :-- | --: | :-- | :-- | :-- |
 | 2602.15725 | Recursive Concept Evolution | 427 | tamam | tamam (`tercume.md`) | kaynakça çevrilmedi |
 | 2512.18471 | The Urysohn Ladder | 1001 | tamam | tamam (`tercume.md`) | şekil içi TikZ etiketleri özetlendi |
-| 2410.21332 | Building, Reusing, Generalizing Abstract Representations | 705 | okunmadı | yok | sırada |
-| 2605.09985 | Prospective Compression in Human Abstraction Learning | 1445 | okunmadı | yok | sırada |
+| 2410.21332 | Building, Reusing, Generalizing Abstract Representations | 705 | tamam | tamam (`tercume.md`) | kaynakça/png şekiller yok |
+| 2605.09985 | Prospective Compression in Human Abstraction Learning | 1445 | tamam | tamam (`tercume.md`) | LLM istem/kod metinleri çevrilmedi (özetlendi) |
 | 2605.15733 | Structure Abstraction … Hippocampal-Entorhinal World Model | 877 | okunmadı | yok | sırada |
 | 2602.00929 | Learning Abstractions for Hierarchical Planning (TheoryCoder-2) | 926 | okunmadı | yok | sırada |
 | 2607.09128 | Elusive but Coverable (complete abstract interpretations) | 1115 | okunmadı | yok | sırada |
 | 2602.16612 | Causal and Compositional Abstraction | 2587 | okunmadı | yok | sırada |
 | 2609.04086 | A Non-Formulable Theorem | 2823 | okunmadı | yok | sırada |
 
-Toplam: 9 makale; okunup çevrilen 2; okunmayan 7.
+Toplam: 9 makale; okunup çevrilen 4; okunmayan 5.
