@@ -1,9 +1,7 @@
 from __future__ import annotations
 
-import functools
 import itertools
 import math
-import operator
 import sys
 from dataclasses import dataclass, field
 from typing import (Any, Callable, Dict, FrozenSet, Iterable, Iterator,
@@ -7926,12 +7924,11 @@ def kaide_imzasi_uret(dizi: Sequence[int], n: int) -> str:
     return "K" + "-".join("%x" % (int(v) & 0xF) for v in imza)
 
 
-_S_HARFLER = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+_D_HARFLER = "abcdefghijklmnopqrstuvwxy"
 
 
-class SDugum:
+class Ifade:
     __slots__ = ()
-    __array_ufunc__ = None
 
     def _alanlar(self) -> tuple:
         return tuple(getattr(self, a) for a in self.__slots__)
@@ -7943,667 +7940,91 @@ class SDugum:
         return hash((type(self).__name__, self._alanlar()))
 
     def __repr__(self) -> str:
-        return s_yaz(self)
-
-    def __add__(self, o):
-        return s_topla(self, o)
-
-    def __radd__(self, o):
-        return s_topla(o, self)
-
-    def __sub__(self, o):
-        return s_topla(self, s_carp(-1, o))
-
-    def __rsub__(self, o):
-        return s_topla(o, s_carp(-1, self))
-
-    def __mul__(self, o):
-        return s_carp(self, o)
-
-    def __rmul__(self, o):
-        return s_carp(o, self)
-
-    def __neg__(self):
-        return s_carp(-1, self)
-
-    def __pow__(self, o):
-        return s_us(self, o)
-
-    def __truediv__(self, o):
-        return s_carp(self, s_ters(o))
-
-    def __rtruediv__(self, o):
-        return s_carp(o, s_ters(self))
+        return ifade_yaz(self)
 
 
-class SSabit(SDugum):
-    __slots__ = ("deger",)
-
-    def __init__(self, deger) -> None:
-        self.deger = deger
-
-
-class SSimge(SDugum):
+class Simge(Ifade):
     __slots__ = ("ad",)
 
     def __init__(self, ad: str) -> None:
         self.ad = str(ad)
 
 
-class SIslem(SDugum):
-    __slots__ = ("op", "args")
+class Isle(Ifade):
+    __slots__ = ("islem", "args")
 
-    def __init__(self, op: str, args: Tuple[SDugum, ...]) -> None:
-        self.op, self.args = op, tuple(args)
-
-
-class SToplam(SDugum):
-    __slots__ = ("indis", "ust", "govde")
-
-    def __init__(self, indis: str, ust: SDugum, govde: SDugum) -> None:
-        self.indis, self.ust, self.govde = str(indis), ust, govde
+    def __init__(self, islem: str, args: Sequence[Ifade] = ()) -> None:
+        self.islem = str(islem)
+        self.args = tuple(args)
+        for a in self.args:
+            if not isinstance(a, Ifade):
+                raise TypeError("işle argümanı ifade olmalı: %r" % (a,))
 
 
-class SEleman(SDugum):
-    __slots__ = ("tensor", "indisler")
+class Kanun:
+    __slots__ = ("sol", "sag", "ad")
 
-    def __init__(self, tensor: str, indisler: Sequence[SDugum]) -> None:
-        self.tensor = str(tensor)
-        self.indisler = tuple(_sd(i) for i in indisler)
-
-
-class SKronecker(SDugum):
-    __slots__ = ("sol", "sag")
-
-    def __init__(self, sol: Sequence[SDugum], sag: Sequence[SDugum]) -> None:
-        self.sol = tuple(_sd(i) for i in sol)
-        self.sag = tuple(_sd(i) for i in sag)
+    def __init__(self, sol: Ifade, sag: Ifade, ad: str = "") -> None:
+        self.sol, self.sag, self.ad = sol, sag, str(ad)
 
 
-class SFonk(SDugum):
-    __slots__ = ("aile", "i", "k", "arg")
-
-    def __init__(self, aile: str, i: int, k: int, arg: SDugum) -> None:
-        self.aile, self.i, self.k, self.arg = str(aile), int(i), int(k), _sd(arg)
-
-
-def _sd(x) -> SDugum:
-    if isinstance(x, SDugum):
-        return x
-    if isinstance(x, (int, float, np.integer, np.floating)):
-        return SSabit(x.item() if isinstance(x, np.generic) else x)
-    raise TypeError("sembolik düğüme çevrilemeyen değer: %r" % (x,))
-
-
-def s_topla(*args) -> SDugum:
-    duz: List[SDugum] = []
-    sabit = 0
-    for a in args:
-        a = _sd(a)
-        alt = a.args if isinstance(a, SIslem) and a.op == "+" else (a,)
-        for t in alt:
-            if isinstance(t, SSabit):
-                sabit = sabit + t.deger
-            else:
-                duz.append(t)
-    if sabit != 0 or not duz:
-        duz.append(SSabit(sabit))
-    return duz[0] if len(duz) == 1 else SIslem("+", tuple(duz))
-
-
-def s_carp(*args) -> SDugum:
-    duz: List[SDugum] = []
-    sabit = 1
-    for a in args:
-        a = _sd(a)
-        alt = a.args if isinstance(a, SIslem) and a.op == "*" else (a,)
-        for t in alt:
-            if isinstance(t, SSabit):
-                sabit = sabit * t.deger
-            else:
-                duz.append(t)
-    if sabit == 0:
-        return SSabit(0)
-    if not duz:
-        return SSabit(sabit)
-    if sabit != 1:
-        duz.insert(0, SSabit(sabit))
-    return duz[0] if len(duz) == 1 else SIslem("*", tuple(duz))
-
-
-def s_ters(a) -> SDugum:
-    a = _sd(a)
-    if isinstance(a, SSabit):
-        if a.deger == 0:
-            raise CekirdekHatasi("sıfırın tersi yoktur")
-        return SSabit(1 / a.deger)
-    if isinstance(a, SIslem) and a.op == "ters":
-        return a.args[0]
-    return SIslem("ters", (a,))
-
-
-def s_us(a, n) -> SDugum:
-    a, n = _sd(a), _sd(n)
-    if not isinstance(n, SSabit) or n.deger != int(n.deger):
-        raise CekirdekHatasi(
-            "tamsayı olmayan üs, işlem ailesinden türetilmelidir: %r" % (n,))
-    n = int(n.deger)
-    if n == 0:
-        return SSabit(1)
-    if n < 0:
-        return s_ters(s_us(a, -n))
-    return s_carp(*([a] * n))
-
-
-def s_fonk(aile: str, i: int, k: int, arg) -> SDugum:
-    return SFonk(aile, i, k, arg)
-
-
-def s_yaz(d: SDugum) -> str:
-    if isinstance(d, SSabit):
-        return repr(d.deger)
-    if isinstance(d, SSimge):
+def ifade_yaz(d: Ifade) -> str:
+    if isinstance(d, Simge):
         return d.ad
-    if isinstance(d, SIslem):
-        if d.op == "+":
-            return "(" + " + ".join(s_yaz(a) for a in d.args) + ")"
-        if d.op == "*":
-            return "(" + " * ".join(s_yaz(a) for a in d.args) + ")"
-        return "%s(%s)" % (d.op, ", ".join(s_yaz(a) for a in d.args))
-    if isinstance(d, SToplam):
-        return "Σ_{%s<%s} %s" % (d.indis, s_yaz(d.ust), s_yaz(d.govde))
-    if isinstance(d, SEleman):
-        return "%s[%s]" % (d.tensor, ", ".join(s_yaz(i) for i in d.indisler))
-    if isinstance(d, SKronecker):
-        return "δ(%s ; %s)" % (", ".join(s_yaz(i) for i in d.sol),
-                              ", ".join(s_yaz(i) for i in d.sag))
-    if isinstance(d, SFonk):
-        return "%s[%d,%d](%s)" % (d.aile, d.i, d.k, s_yaz(d.arg))
-    return object.__repr__(d)
+    return "%s(%s)" % (d.islem, ", ".join(ifade_yaz(a) for a in d.args))
 
 
-def s_simge_ikame(d: SDugum, esle: Dict[str, SDugum]) -> SDugum:
-    if isinstance(d, SSabit):
-        return d
-    if isinstance(d, SSimge):
-        return esle.get(d.ad, d)
-    if isinstance(d, SIslem):
-        return SIslem(d.op, tuple(s_simge_ikame(a, esle) for a in d.args))
-    if isinstance(d, SToplam):
-        e2 = {k: v for k, v in esle.items() if k != d.indis}
-        return SToplam(d.indis, s_simge_ikame(d.ust, esle),
-                       s_simge_ikame(d.govde, e2))
-    if isinstance(d, SEleman):
-        return SEleman(d.tensor, tuple(s_simge_ikame(i, esle) for i in d.indisler))
-    if isinstance(d, SKronecker):
-        return SKronecker(tuple(s_simge_ikame(i, esle) for i in d.sol),
-                          tuple(s_simge_ikame(i, esle) for i in d.sag))
-    if isinstance(d, SFonk):
-        return SFonk(d.aile, d.i, d.k, s_simge_ikame(d.arg, esle))
-    raise CekirdekHatasi("simge ikamesi yapılamayan düğüm: %r" % (d,))
+class Dunya:
+    __slots__ = ("d", "islemler")
+
+    def __init__(self, d: int, islemler: Dict[str, np.ndarray]) -> None:
+        self.d = int(d)
+        self.islemler = {str(k): np.asarray(v, float) for k, v in islemler.items()}
+
+    def ekle(self, ad: str, tensor: np.ndarray) -> "Dunya":
+        yeni = dict(self.islemler)
+        yeni[str(ad)] = np.asarray(tensor, float)
+        return Dunya(self.d, yeni)
 
 
-def _poli(d: SDugum) -> Dict[tuple, Any]:
-    if isinstance(d, SSabit):
-        return {(): d.deger} if d.deger != 0 else {}
-    if isinstance(d, SIslem) and d.op == "+":
-        sonuc: Dict[tuple, Any] = {}
-        for a in d.args:
-            for m, c in _poli(a).items():
-                sonuc[m] = sonuc.get(m, 0) + c
-        return {m: c for m, c in sonuc.items() if c != 0}
-    if isinstance(d, SIslem) and d.op == "*":
-        sonuc = {(): 1}
-        for a in d.args:
-            sonuc = _poli_carp(sonuc, _poli(a))
-        return sonuc
-    atom = _atom_sadelestir(d)
-    if isinstance(atom, SSabit):
-        return {(): atom.deger} if atom.deger != 0 else {}
-    return {((atom, 1),): 1}
+def _daralt(T: np.ndarray, args: Sequence[np.ndarray]) -> np.ndarray:
+    n = len(args)
+    if n == 0:
+        return T
+    if n > len(_D_HARFLER):
+        raise DenetimHatasi("işlem arisi aşıldı: %d" % n)
+    girdi = ",".join("..." + _D_HARFLER[i] for i in range(n))
+    return np.einsum("%s,%sz->...z" % (girdi, _D_HARFLER[:n]), *args, T)
 
 
-def _poli_carp(p: Dict[tuple, Any], q: Dict[tuple, Any]) -> Dict[tuple, Any]:
-    sonuc: Dict[tuple, Any] = {}
-    for m1, c1 in p.items():
-        for m2, c2 in q.items():
-            guc: Dict[SDugum, int] = {}
-            for a, u in m1 + m2:
-                guc[a] = guc.get(a, 0) + u
-            m = tuple(sorted(guc.items(), key=lambda au: repr(au[0])))
-            sonuc[m] = sonuc.get(m, 0) + c1 * c2
-    return {m: c for m, c in sonuc.items() if c != 0}
+def degerlendir_dunyada(d: Ifade, dunya: Dunya,
+                        atama: Dict[str, np.ndarray]) -> np.ndarray:
+    if isinstance(d, Simge):
+        if d.ad in atama:
+            return atama[d.ad]
+        raise CekirdekHatasi("atanmamış değişken: %s" % d.ad)
+    if d.islem not in dunya.islemler:
+        raise CekirdekHatasi("dünyada türetilmemiş işlem: %s" % d.islem)
+    T = dunya.islemler[d.islem]
+    if len(d.args) != T.ndim - 1:
+        raise DenetimHatasi("%s işleminin arisi %d, verilen argüman %d"
+                            % (d.islem, T.ndim - 1, len(d.args)))
+    return _daralt(T, [degerlendir_dunyada(a, dunya, atama) for a in d.args])
 
 
-def _atom_sadelestir(d: SDugum) -> SDugum:
-    if isinstance(d, SToplam):
-        govde = s_sadelestir(d.govde)
-        return SSabit(0) if govde == SSabit(0) else SToplam(d.indis, d.ust, govde)
-    if isinstance(d, SFonk):
-        return SFonk(d.aile, d.i, d.k, s_sadelestir(d.arg))
-    if isinstance(d, SIslem) and d.op == "ters":
-        return s_ters(s_sadelestir(d.args[0]))
-    return d
+def serbest_degiskenler(d: Ifade, islem_adlari: Set[str]) -> Set[str]:
+    sonuc: Set[str] = set()
 
-
-def _poli_dugum(p: Dict[tuple, Any]) -> SDugum:
-    if not p:
-        return SSabit(0)
-    terimler = []
-    sirali = sorted(p.items(),
-                    key=lambda kv: (sum(u for _, u in kv[0]), repr(kv[0])))
-    for m, c in sirali:
-        carpanlar: List[SDugum] = []
-        for atom, us in m:
-            carpanlar.extend([atom] * us)
-        terimler.append(s_carp(c, *carpanlar))
-    return s_topla(*terimler)
-
-
-def s_sadelestir(d: SDugum) -> SDugum:
-    return _poli_dugum(_poli(d))
-
-
-def s_esit(a: SDugum, b: SDugum) -> bool:
-    return s_sadelestir(a) == s_sadelestir(b)
-
-
-def _tamsayi(v) -> int:
-    a = np.asarray(v)
-    if a.ndim != 0:
-        raise DenetimHatasi("indis ya da boyut skaler olmalı: şekil %s" % (a.shape,))
-    f = float(a)
-    if f != int(f):
-        raise DenetimHatasi("indis ya da boyut tamsayı olmalı: %r" % (f,))
-    return int(f)
-
-
-class SimgeliTensor:
-    __slots__ = ("sekil", "elemanlar", "indis_adlari", "govde", "rutbe")
-
-    def __init__(self, sekil: Tuple[SDugum, ...], elemanlar: Optional[np.ndarray],
-                 indis_adlari: Tuple[str, ...], govde: Optional[SDugum],
-                 rutbe: int) -> None:
-        self.sekil = tuple(sekil)
-        self.elemanlar = elemanlar
-        self.indis_adlari = tuple(indis_adlari)
-        self.govde = govde
-        self.rutbe = int(rutbe)
-
-    @staticmethod
-    def acik(elemanlar, rutbe: int = 1) -> "SimgeliTensor":
-        arr = np.array(elemanlar, dtype=object)
-        ob = np.empty(arr.shape, dtype=object)
-        for i, x in enumerate(arr.flat):
-            ob.flat[i] = _sd(x)
-        return SimgeliTensor(tuple(SSabit(n) for n in arr.shape), ob, (), None, rutbe)
-
-    @staticmethod
-    def jenerik(sekil: Sequence, indis_adlari: Sequence[str], govde,
-                rutbe: int = 1) -> "SimgeliTensor":
-        return SimgeliTensor(tuple(_sd(e) for e in sekil), None,
-                             tuple(indis_adlari), _sd(govde), rutbe)
-
-
-class IslemAilesi:
-    __slots__ = ("ad", "A")
-
-    def __init__(self, ad: str, A: np.ndarray) -> None:
-        self.ad = str(ad)
-        self.A = np.asarray(A, float)
-
-    def matris(self, t) -> np.ndarray:
-        t = np.asarray(t, float)
-        d = self.A.shape[0]
-        eps = np.finfo(float).eps
-        olcek = (float(np.max(np.abs(t))) * float(np.max(np.sum(np.abs(self.A), axis=1)))
-                 if t.size else 0.0)
-        s = int(np.ceil(np.log2(olcek))) + 1 if olcek > 1.0 else 0
-        ta = (t / 2.0 ** s)[..., None, None] * self.A
-        M = np.broadcast_to(np.eye(d), ta.shape).copy()
-        terim = M.copy()
-        n = 1
-        while True:
-            terim = terim @ ta / n
-            M = M + terim
-            if float(np.max(np.abs(terim))) <= eps * max(1.0, float(np.max(np.abs(M)))):
-                break
-            n += 1
-            if n > 400:
-                raise CekirdekHatasi("üstel seri yakınsamadı")
-        for _ in range(s):
-            M = M @ M
-        return M
-
-    def deger(self, t, i: int, k: int) -> np.ndarray:
-        return self.matris(t)[..., i, k]
-
-
-class SDepo:
-    __slots__ = ("kayit", "aileler")
-
-    def __init__(self) -> None:
-        self.kayit: Dict[str, Tuple[Any, int]] = {}
-        self.aileler: Dict[str, IslemAilesi] = {}
-
-    def bagla(self, ad: str, deger, rutbe: int = 0) -> "SDepo":
-        if isinstance(deger, SimgeliTensor):
-            self.kayit[str(ad)] = (deger, deger.rutbe)
+    def yur(x: Ifade) -> None:
+        if isinstance(x, Simge):
+            if x.ad not in islem_adlari:
+                sonuc.add(x.ad)
         else:
-            self.kayit[str(ad)] = (np.asarray(deger), int(rutbe))
-        return self
+            for a in x.args:
+                yur(a)
 
-    def aile_ekle(self, aile: IslemAilesi) -> "SDepo":
-        self.aileler[aile.ad] = aile
-        return self
-
-
-def _depo_kopya(depo: SDepo) -> SDepo:
-    d2 = SDepo()
-    d2.kayit = dict(depo.kayit)
-    d2.aileler = dict(depo.aileler)
-    return d2
-
-
-def _terimler(d: SDugum, sayac) -> Optional[List[tuple]]:
-    if isinstance(d, SSabit):
-        return [(d.deger, [], [])]
-    if isinstance(d, (SEleman, SKronecker)):
-        return [(1, [], [d])]
-    if isinstance(d, SIslem) and d.op == "+":
-        sonuc: List[tuple] = []
-        for a in d.args:
-            t = _terimler(a, sayac)
-            if t is None:
-                return None
-            sonuc.extend(t)
-        return sonuc
-    if isinstance(d, SIslem) and d.op == "*":
-        sonuc = [(1, [], [])]
-        for a in d.args:
-            t = _terimler(a, sayac)
-            if t is None:
-                return None
-            sonuc = [(k1 * k2, s1 + s2, f1 + f2)
-                     for (k1, s1, f1) in sonuc for (k2, s2, f2) in t]
-        return sonuc
-    if isinstance(d, SToplam):
-        yeni = "%s~%d" % (d.indis, next(sayac))
-        govde = s_simge_ikame(d.govde, {d.indis: SSimge(yeni)})
-        t = _terimler(govde, sayac)
-        if t is None:
-            return None
-        return [(k, [(yeni, d.ust)] + s, f) for (k, s, f) in t]
-    return None
-
-
-class SDegerlendirici:
-    __slots__ = ("depo", "baglar", "_onb", "_yolda")
-
-    def __init__(self, depo: SDepo, baglar: Optional[Dict[str, int]] = None) -> None:
-        self.depo = depo
-        self.baglar = dict(baglar or {})
-        self._onb: Dict[str, Any] = {}
-        self._yolda: Set[str] = set()
-
-    def referans(self, ad: str, ust: Optional[int]):
-        if ad not in self.depo.kayit:
-            raise CekirdekHatasi("bağlanmamış simge: %s" % ad)
-        deger, rutbe = self.depo.kayit[ad]
-        if ust is not None and rutbe >= ust:
-            raise DenetimHatasi(
-                "rütbe %d tensör, rütbesi %d olan '%s' simgesine referans veremez"
-                % (ust, rutbe, ad))
-        if ad in self._onb:
-            return self._onb[ad]
-        if ad in self._yolda:
-            raise CekirdekHatasi("döngüsel referans: %s" % ad)
-        self._yolda.add(ad)
-        sonuc = (self.tensor(deger, dict(self.baglar))
-                 if isinstance(deger, SimgeliTensor) else deger)
-        self._yolda.discard(ad)
-        self._onb[ad] = sonuc
-        return sonuc
-
-    def ev(self, d: SDugum, env: Dict[str, Any], ust: Optional[int]):
-        if isinstance(d, SSabit):
-            return d.deger
-        if isinstance(d, SSimge):
-            if d.ad in env:
-                return env[d.ad]
-            return self.referans(d.ad, ust)
-        if isinstance(d, SIslem):
-            v = [self.ev(a, env, ust) for a in d.args]
-            if d.op == "+":
-                return functools.reduce(operator.add, v)
-            if d.op == "*":
-                return functools.reduce(operator.mul, v)
-            if d.op == "ters":
-                return np.divide(1.0, np.asarray(v[0], float))
-            raise CekirdekHatasi("taban işlemi değil: %s" % d.op)
-        if isinstance(d, SFonk):
-            aile = self.depo.aileler.get(d.aile)
-            if aile is None:
-                raise CekirdekHatasi("türetilmemiş işlem ailesi: %s" % d.aile)
-            return aile.deger(self.ev(d.arg, env, ust), d.i, d.k)
-        if isinstance(d, SToplam):
-            n = _tamsayi(self.ev(d.ust, env, ust))
-            e2 = dict(env)
-            toplam = 0
-            for i in range(n):
-                e2[d.indis] = i
-                toplam = toplam + self.ev(d.govde, e2, ust)
-            return toplam
-        if isinstance(d, SEleman):
-            T = np.asarray(self.referans(d.tensor, ust))
-            ix = tuple(_tamsayi(self.ev(i, env, ust)) for i in d.indisler)
-            return T[ix]
-        if isinstance(d, SKronecker):
-            a = [_tamsayi(self.ev(x, env, ust)) for x in d.sol]
-            b = [_tamsayi(self.ev(x, env, ust)) for x in d.sag]
-            return 1 if a == b else 0
-        raise CekirdekHatasi("değerlendirilemeyen düğüm: %r" % (d,))
-
-    def _einsum(self, st: SimgeliTensor, env: Dict[str, Any]) -> Optional[np.ndarray]:
-        terimler = _terimler(st.govde, itertools.count())
-        if terimler is None:
-            return None
-        sekil = tuple(_tamsayi(self.ev(e, env, st.rutbe)) for e in st.sekil)
-        boyut = dict(zip(st.indis_adlari, sekil))
-        sonuc = None
-        for kat, toplamlar, faktorler in terimler:
-            ek = dict(boyut)
-            for ad, ust in toplamlar:
-                ek[ad] = _tamsayi(self.ev(ust, env, st.rutbe))
-            harf: Dict[str, str] = {}
-
-            def h(ad: str) -> str:
-                if ad not in harf:
-                    if len(harf) >= len(_S_HARFLER):
-                        raise DenetimHatasi("einsum için indis sayısı aşıldı")
-                    harf[ad] = _S_HARFLER[len(harf)]
-                return harf[ad]
-
-            girdi: List[str] = []
-            operand: List[np.ndarray] = []
-            for f in faktorler:
-                if isinstance(f, SEleman):
-                    if not all(isinstance(i, SSimge) and i.ad in ek for i in f.indisler):
-                        return None
-                    T = np.asarray(self.referans(f.tensor, st.rutbe))
-                    if T.ndim != len(f.indisler):
-                        return None
-                    operand.append(T)
-                    girdi.append("".join(h(i.ad) for i in f.indisler))
-                else:
-                    if len(f.sol) != len(f.sag):
-                        return None
-                    for a, b in zip(f.sol, f.sag):
-                        if not (isinstance(a, SSimge) and isinstance(b, SSimge)
-                                and a.ad in ek and b.ad in ek):
-                            return None
-                        operand.append(np.eye(ek[a.ad], ek[b.ad]))
-                        girdi.append(h(a.ad) + h(b.ad))
-            for ad in st.indis_adlari:
-                if ad not in harf:
-                    operand.append(np.ones(ek[ad]))
-                    girdi.append(h(ad))
-            carp = 1
-            for ad, _ust in toplamlar:
-                if ad not in harf:
-                    carp = carp * ek[ad]
-            cikis = "".join(harf[a] for a in st.indis_adlari)
-            if operand:
-                v = np.einsum(",".join(girdi) + "->" + cikis, *operand)
-            else:
-                v = np.ones(sekil)
-            terim = kat * carp * v
-            sonuc = terim if sonuc is None else sonuc + terim
-        if sonuc is None:
-            return np.zeros(sekil)
-        return np.broadcast_to(sonuc, sekil).copy()
-
-    def tensor(self, st: SimgeliTensor, env: Dict[str, Any]) -> np.ndarray:
-        if st.elemanlar is None:
-            hizli = self._einsum(st, env)
-            if hizli is not None:
-                return hizli
-        sekil = tuple(_tamsayi(self.ev(e, env, st.rutbe)) for e in st.sekil)
-        hucre = []
-        for ix in itertools.product(*[range(n) for n in sekil]):
-            if st.elemanlar is not None:
-                hucre.append(self.ev(st.elemanlar[ix], env, st.rutbe))
-            else:
-                e2 = dict(env)
-                e2.update(zip(st.indis_adlari, ix))
-                hucre.append(self.ev(st.govde, e2, st.rutbe))
-        if not hucre:
-            return np.zeros(sekil)
-        bs = np.broadcast_arrays(*[np.asarray(h) for h in hucre])
-        return np.stack(bs).reshape(sekil + bs[0].shape)
-
-
-def simgeli_degerlendir(st: SimgeliTensor, depo: SDepo,
-                        baglar: Optional[Dict[str, int]] = None) -> np.ndarray:
-    ev = SDegerlendirici(depo, baglar)
-    return ev.tensor(st, dict(ev.baglar))
-
-
-def ifade_degerlendir(d: SDugum, depo: SDepo,
-                      baglar: Optional[Dict[str, int]] = None,
-                      rutbe: Optional[int] = None):
-    ev = SDegerlendirici(depo, baglar)
-    return ev.ev(d, dict(ev.baglar), rutbe)
-
-
-def _turev(d: SDugum, ad: str, hedef: Optional[Sequence[SDugum]],
-           depo: Optional[SDepo]) -> SDugum:
-    if isinstance(d, SSabit):
-        return SSabit(0)
-    if isinstance(d, SSimge):
-        return SSabit(1 if (hedef is None and d.ad == ad) else 0)
-    if isinstance(d, SEleman):
-        if hedef is not None and d.tensor == ad:
-            return SKronecker(d.indisler, tuple(_sd(h) for h in hedef))
-        return SSabit(0)
-    if isinstance(d, SKronecker):
-        return SSabit(0)
-    if isinstance(d, SToplam):
-        dg = _turev(d.govde, ad, hedef, depo)
-        return SSabit(0) if dg == SSabit(0) else SToplam(d.indis, d.ust, dg)
-    if isinstance(d, SFonk):
-        if depo is None or d.aile not in depo.aileler:
-            raise CekirdekHatasi("türetilmemiş işlem ailesinin türevi alınamaz: %s" % d.aile)
-        zincir = _turev(d.arg, ad, hedef, depo)
-        if zincir == SSabit(0):
-            return SSabit(0)
-        A = depo.aileler[d.aile].A
-        bilesen = s_topla(*[s_carp(float(A[d.i, j]), SFonk(d.aile, j, d.k, d.arg))
-                            for j in range(A.shape[0])])
-        return s_carp(bilesen, zincir)
-    if isinstance(d, SIslem):
-        a = d.args
-        if d.op == "+":
-            return s_topla(*[_turev(x, ad, hedef, depo) for x in a])
-        if d.op == "*":
-            return s_topla(*[
-                s_carp(*(a[:i] + (_turev(a[i], ad, hedef, depo),) + a[i + 1:]))
-                for i in range(len(a))])
-        if d.op == "ters":
-            return s_carp(-1, s_ters(a[0]), s_ters(a[0]), _turev(a[0], ad, hedef, depo))
-    raise CekirdekHatasi("türevi alınamayan düğüm: %r" % (d,))
-
-
-def turev(d: SDugum, ad: str, hedef: Optional[Sequence[SDugum]] = None,
-          depo: Optional[SDepo] = None) -> SDugum:
-    return s_sadelestir(_turev(d, ad, hedef, depo))
-
-
-def turev_tensor(st: SimgeliTensor, ad: str,
-                 hedef: Optional[Sequence[SDugum]] = None,
-                 depo: Optional[SDepo] = None) -> SimgeliTensor:
-    if st.elemanlar is not None:
-        ob = np.empty(st.elemanlar.shape, dtype=object)
-        for i, x in enumerate(st.elemanlar.flat):
-            ob.flat[i] = turev(x, ad, hedef, depo)
-        return SimgeliTensor(st.sekil, ob, (), None, st.rutbe)
-    return SimgeliTensor(st.sekil, None, st.indis_adlari,
-                         turev(st.govde, ad, hedef, depo), st.rutbe)
-
-
-def jacobian_tensoru(st: SimgeliTensor, ad: str, hedef_sekil: Sequence,
-                     depo: Optional[SDepo] = None) -> SimgeliTensor:
-    if st.elemanlar is not None:
-        raise DenetimHatasi("Jacobian tensörü yalnız jenerik tensörden kurulur")
-    adlar = tuple("_j%d" % k for k in range(len(hedef_sekil)))
-    govde = turev(st.govde, ad, tuple(SSimge(a) for a in adlar), depo)
-    return SimgeliTensor(st.sekil + tuple(_sd(e) for e in hedef_sekil), None,
-                         st.indis_adlari + adlar, govde, st.rutbe)
-
-
-def kaide_birlesme_kusuru(C: str = "C", boyut: str = "d",
-                          rutbe: int = 1) -> SimgeliTensor:
-    d = SSimge(boyut)
-    a, b, c, k, e = (SSimge(x) for x in ("a", "b", "c", "k", "e"))
-    sol = SToplam("e", d, s_carp(SEleman(C, (k, e, c)), SEleman(C, (e, a, b))))
-    sag = SToplam("e", d, s_carp(SEleman(C, (k, a, e)), SEleman(C, (e, b, c))))
-    return SimgeliTensor.jenerik((d, d, d, d), ("a", "b", "c", "k"),
-                                 s_topla(sol, s_carp(-1, sag)), rutbe)
-
-
-def kaide_degisme_kusuru(C: str = "C", boyut: str = "d",
-                         rutbe: int = 1) -> SimgeliTensor:
-    d = SSimge(boyut)
-    a, b, k = SSimge("a"), SSimge("b"), SSimge("k")
-    return SimgeliTensor.jenerik(
-        (d, d, d), ("a", "b", "k"),
-        s_topla(SEleman(C, (k, a, b)), s_carp(-1, SEleman(C, (k, b, a)))), rutbe)
-
-
-def kaide_birim_kusuru(C: str = "C", E: str = "E", boyut: str = "d",
-                       rutbe: int = 1) -> SimgeliTensor:
-    d = SSimge(boyut)
-    a, b, k = SSimge("a"), SSimge("b"), SSimge("k")
-    carpim_ae = SToplam("b", d, s_carp(SEleman(C, (k, a, b)), SEleman(E, (b,))))
-    return SimgeliTensor.jenerik(
-        (d, d), ("a", "k"),
-        s_topla(carpim_ae, s_carp(-1, SKronecker((k,), (a,)))), rutbe)
-
-
-def kanun_antisimetri(A: str = "A", boyut: str = "d",
-                      rutbe: int = 1) -> SimgeliTensor:
-    d = SSimge(boyut)
-    i, j = SSimge("i"), SSimge("j")
-    return SimgeliTensor.jenerik(
-        (d, d), ("i", "j"),
-        s_topla(SEleman(A, (i, j)), SEleman(A, (j, i))), rutbe)
-
-
-def kanun_sabitle(A: str, indisler: Sequence[int], deger: float,
-                  rutbe: int = 1) -> SimgeliTensor:
-    return SimgeliTensor.jenerik(
-        (), (), s_topla(SEleman(A, tuple(SSabit(int(i)) for i in indisler)),
-                        SSabit(-float(deger))), rutbe)
+    yur(d)
+    return sonuc
 
 
 def tohum_noktalari(boyut: int, sayi: int, yaricap: float) -> np.ndarray:
@@ -8616,48 +8037,199 @@ def tohum_noktalari(boyut: int, sayi: int, yaricap: float) -> np.ndarray:
     return float(yaricap) * (2.0 * nokta - 1.0)
 
 
-def cozum_manifoldu(rezidular: Sequence[SimgeliTensor],
-                    bilinmeyenler: Sequence[Tuple[str, Tuple[int, ...]]],
-                    depo: SDepo, baglar: Optional[Dict[str, int]] = None,
-                    tohum: Optional[np.ndarray] = None, tohum_sayisi: int = 8,
-                    yaricap: float = 1.0, adim: float = 0.5, k: int = 3,
-                    azami_iterasyon: int = 100, azami_hucre: int = 100000,
-                    eksenler: Optional[Sequence[int]] = None) -> Dict[str, Any]:
-    baglar = dict(baglar or {})
-    sekiller = [(ad, tuple(int(n) for n in s)) for ad, s in bilinmeyenler]
-    boylar = [int(np.prod(s)) for _, s in sekiller]
+def ornek_noktalari(d: int, ek_nokta: int) -> np.ndarray:
+    taban = np.eye(int(d))
+    if int(ek_nokta) <= 0:
+        return taban
+    return np.vstack([taban, tohum_noktalari(int(d), int(ek_nokta), 1.0)])
+
+
+def kanun_kusuru(kanun: Kanun, dunya: Dunya,
+                 ek_nokta: Optional[int] = None) -> np.ndarray:
+    adlar = set(dunya.islemler)
+    degiskenler = sorted(serbest_degiskenler(kanun.sol, adlar)
+                         | serbest_degiskenler(kanun.sag, adlar))
+    ek = dunya.d if ek_nokta is None else int(ek_nokta)
+    S = ornek_noktalari(dunya.d, ek)
+    v = len(degiskenler)
+    atama: Dict[str, np.ndarray] = {}
+    for j, ad in enumerate(degiskenler):
+        sekil = [1] * v + [dunya.d]
+        sekil[j] = S.shape[0]
+        atama[ad] = S.reshape(sekil)
+    sol = degerlendir_dunyada(kanun.sol, dunya, atama)
+    sag = degerlendir_dunyada(kanun.sag, dunya, atama)
+    sol, sag = np.broadcast_arrays(sol, sag)
+    return (sol - sag).reshape(-1)
+
+
+def birlesme_kanunu(f: str) -> Kanun:
+    a, b, c = Simge("a"), Simge("b"), Simge("c")
+    return Kanun(Isle(f, [Isle(f, [a, b]), c]), Isle(f, [a, Isle(f, [b, c])]),
+                 "birlesme(%s)" % f)
+
+
+def degisme_kanunu(f: str) -> Kanun:
+    a, b = Simge("a"), Simge("b")
+    return Kanun(Isle(f, [a, b]), Isle(f, [b, a]), "degisme(%s)" % f)
+
+
+def tekguc_kanunu(f: str) -> Kanun:
+    a = Simge("a")
+    return Kanun(Isle(f, [a, a]), a, "tekguc(%s)" % f)
+
+
+def birim_kanunlari(f: str, e: str) -> List[Kanun]:
+    a = Simge("a")
+    return [Kanun(Isle(f, [Isle(e), a]), a, "sol_birim(%s,%s)" % (f, e)),
+            Kanun(Isle(f, [a, Isle(e)]), a, "sag_birim(%s,%s)" % (f, e))]
+
+
+def dagilma_kanunlari(g: str, f: str) -> List[Kanun]:
+    a, b, c = Simge("a"), Simge("b"), Simge("c")
+    sol = Kanun(Isle(g, [a, Isle(f, [b, c])]),
+                Isle(f, [Isle(g, [a, b]), Isle(g, [a, c])]),
+                "sol_dagilma(%s,%s)" % (g, f))
+    sag = Kanun(Isle(g, [Isle(f, [b, c]), a]),
+                Isle(f, [Isle(g, [b, a]), Isle(g, [c, a])]),
+                "sag_dagilma(%s,%s)" % (g, f))
+    return [sol, sag]
+
+
+def ters_kanunlari(f: str, e: str, t: str) -> List[Kanun]:
+    a = Simge("a")
+    return [Kanun(Isle(f, [a, Isle(t, [a])]), Isle(e), "sag_ters(%s,%s,%s)" % (f, e, t)),
+            Kanun(Isle(f, [Isle(t, [a]), a]), Isle(e), "sol_ters(%s,%s,%s)" % (f, e, t))]
+
+
+def birim_bul(dunya: Dunya, f: str) -> Tuple[np.ndarray, float]:
+    T = dunya.islemler[f]
+    d = dunya.d
+    if T.ndim != 3:
+        raise DenetimHatasi("birim yalnız ikili işlemde aranır")
+    A_sol = np.transpose(T, (1, 2, 0)).reshape(d * d, d)
+    A_sag = np.transpose(T, (0, 2, 1)).reshape(d * d, d)
+    A = np.vstack([A_sol, A_sag])
+    b = np.concatenate([np.eye(d).reshape(-1), np.eye(d).reshape(-1)])
+    e = np.linalg.lstsq(A, b, rcond=None)[0]
+    return e, float(np.linalg.norm(A @ e - b))
+
+
+def ozellik_olc(dunya: Dunya, f: str,
+                ek_nokta: Optional[int] = None) -> Dict[str, Any]:
+    eps = np.finfo(float).eps
+    T = dunya.islemler[f]
+    tol = float(np.sqrt(eps) * (1.0 + float(np.max(np.abs(T)))))
+
+    def olc(kn: Kanun) -> float:
+        return float(np.max(np.abs(kanun_kusuru(kn, dunya, ek_nokta))))
+
+    e, r = birim_bul(dunya, f)
+    return {"tol": tol, "birlesme": olc(birlesme_kanunu(f)),
+            "degisme": olc(degisme_kanunu(f)), "tekguc": olc(tekguc_kanunu(f)),
+            "birim_vektoru": e, "birim_rezidusu": r}
+
+
+def ozellik_bayraklari(olcum: Dict[str, Any],
+                       birim_ad: Optional[str] = None) -> Dict[str, Any]:
+    tol = olcum["tol"]
+    return {"birlesme": bool(olcum["birlesme"] <= tol),
+            "degisme": bool(olcum["degisme"] <= tol),
+            "tekguc": bool(olcum["tekguc"] <= tol),
+            "birim": birim_ad if olcum["birim_rezidusu"] <= tol else None}
+
+
+def _duz(x: Ifade, f: str) -> List[Ifade]:
+    if isinstance(x, Isle) and x.islem == f and len(x.args) == 2:
+        return _duz(x.args[0], f) + _duz(x.args[1], f)
+    return [x]
+
+
+def s_sadelestir(d: Ifade, ozellikler: Dict[str, Dict[str, Any]]) -> Ifade:
+    if isinstance(d, Simge):
+        return d
+    args = tuple(s_sadelestir(a, ozellikler) for a in d.args)
+    oz = ozellikler.get(d.islem)
+    if oz is None or len(args) != 2 or not oz.get("birlesme"):
+        return Isle(d.islem, args)
+    terimler: List[Ifade] = []
+    for a in args:
+        terimler.extend(_duz(a, d.islem))
+    birim = oz.get("birim")
+    if birim is not None:
+        terimler = [t for t in terimler if t != Isle(birim)]
+    if oz.get("degisme"):
+        terimler.sort(key=repr)
+    if oz.get("tekguc"):
+        tekil: List[Ifade] = []
+        for t in terimler:
+            if not tekil or tekil[-1] != t:
+                tekil.append(t)
+        terimler = tekil
+    if not terimler:
+        if birim is None:
+            raise CekirdekHatasi("%s işleminin birimi türetilmemiş, boş terim kümesi" % d.islem)
+        return Isle(birim)
+    sonuc = terimler[0]
+    for t in terimler[1:]:
+        sonuc = Isle(d.islem, [sonuc, t])
+    return sonuc
+
+
+def s_esit(a: Ifade, b: Ifade, ozellikler: Dict[str, Dict[str, Any]]) -> bool:
+    return s_sadelestir(a, ozellikler) == s_sadelestir(b, ozellikler)
+
+
+def dunya_turet(kanunlar: Sequence[Kanun],
+                islemler: Sequence[Tuple[str, int]], d: int,
+                sabit: Optional[Dunya] = None,
+                tohum: Optional[np.ndarray] = None, tohum_sayisi: int = 8,
+                yaricap: float = 1.0, adim: float = 0.5, k: int = 3,
+                azami_iterasyon: int = 100, azami_hucre: int = 100000,
+                eksenler: Optional[Sequence[int]] = None,
+                ek_nokta: Optional[int] = None) -> Dict[str, Any]:
+    d = int(d)
+    sekiller = [(str(ad), (d,) * (int(ar) + 1)) for ad, ar in islemler]
+    boylar = [d ** len(s) for _, s in sekiller]
     kesim = np.concatenate([[0], np.cumsum(boylar)]).astype(int)
     m = int(kesim[-1])
-    jak = [[jacobian_tensoru(r, ad, s, depo) for ad, s in sekiller] for r in rezidular]
     eps = np.finfo(float).eps
+    tabanlar = dict(sabit.islemler) if sabit is not None else {}
 
-    def degerle(x: np.ndarray):
-        d2 = _depo_kopya(depo)
+    def kur(x: np.ndarray) -> Dunya:
+        yeni = dict(tabanlar)
         for (ad, s), b, e in zip(sekiller, kesim[:-1], kesim[1:]):
-            d2.bagla(ad, x[b:e].reshape(s))
-        ev = SDegerlendirici(d2, baglar)
-        r = np.concatenate([np.asarray(ev.tensor(t, dict(baglar))).reshape(-1)
-                            for t in rezidular])
-        J = np.vstack([
-            np.hstack([np.asarray(ev.tensor(jt, dict(baglar))).reshape(-1, bo)
-                       for jt, bo in zip(satir, boylar)])
-            for satir in jak])
-        return r, J
+            yeni[ad] = x[b:e].reshape(s)
+        return Dunya(d, yeni)
+
+    def rezidu(x: np.ndarray) -> np.ndarray:
+        w = kur(x)
+        return np.concatenate([kanun_kusuru(kn, w, ek_nokta) for kn in kanunlar])
+
+    def jacobian(x: np.ndarray) -> np.ndarray:
+        cizgiler = []
+        for j in range(m):
+            h = eps ** (1.0 / 3.0) * (1.0 + abs(float(x[j])))
+            xa, xb = x.copy(), x.copy()
+            xa[j] += h
+            xb[j] -= h
+            cizgiler.append((rezidu(xa) - rezidu(xb)) / (2.0 * h))
+        return np.stack(cizgiler, axis=1)
 
     def newton(x0: np.ndarray):
         x = np.asarray(x0, float).copy()
-        r, J = degerle(x)
+        r = rezidu(x)
         nr = float(np.linalg.norm(r))
         for _ in range(int(azami_iterasyon)):
             tol = np.sqrt(eps) * (1.0 + float(np.linalg.norm(x)))
             if nr <= tol:
                 break
-            dx = np.linalg.lstsq(J, -r, rcond=None)[0]
+            dx = np.linalg.lstsq(jacobian(x), -r, rcond=None)[0]
             t = 1.0
             kabul = False
             while t >= eps:
                 xn = x + t * dx
-                rn, Jn = degerle(xn)
+                rn = rezidu(xn)
                 nn = float(np.linalg.norm(rn))
                 if nn < nr:
                     kabul = True
@@ -8665,9 +8237,9 @@ def cozum_manifoldu(rezidular: Sequence[SimgeliTensor],
                 t *= 0.5
             if not kabul:
                 break
-            x, r, J, nr = xn, rn, Jn, nn
+            x, r, nr = xn, rn, nn
         tol = np.sqrt(eps) * (1.0 + float(np.linalg.norm(x)))
-        return x, r, J, nr, bool(nr <= tol)
+        return x, nr, bool(nr <= tol)
 
     if tohum is not None:
         baslar = [np.asarray(tohum, float).reshape(-1)]
@@ -8675,12 +8247,13 @@ def cozum_manifoldu(rezidular: Sequence[SimgeliTensor],
         baslar = list(tohum_noktalari(m, tohum_sayisi, yaricap))
     en_iyi = None
     for i, b in enumerate(baslar):
-        x, r, J, nr, tamam = newton(b)
-        if en_iyi is None or nr < en_iyi[3]:
-            en_iyi = (x, r, J, nr, tamam, i)
+        x, nr, tamam = newton(b)
+        if en_iyi is None or nr < en_iyi[1]:
+            en_iyi = (x, nr, tamam, i)
         if tamam:
             break
-    x, r, J, nr, tamam, ti = en_iyi
+    x, nr, tamam, ti = en_iyi
+    J = jacobian(x)
     _U, S, Vt = np.linalg.svd(J)
     esik = max(J.shape) * eps * (float(S[0]) if S.size else 0.0)
     rank = int(np.sum(S > esik))
@@ -8699,34 +8272,15 @@ def cozum_manifoldu(rezidular: Sequence[SimgeliTensor],
     if tamam:
         for ix in itertools.product(range(kk), repeat=len(sec)):
             b = x + sum((z[i] * D[a] for i, a in zip(ix, sec)), np.zeros(m))
-            xg, _rg, _jg, ng, tg = newton(b)
+            xg, ng, tg = newton(b)
             izgara[ix] = xg
             maske[ix] = tg
             alan[ix] = ng
-    return {"durum": "MÜMKÜN" if tamam else "MEÇHUL", "x": x,
-            "rezidu_normu": nr, "rank": rank, "eksen_sayisi": n, "D": D,
-            "izgara": izgara, "maske": maske, "rezidu_alani": alan,
-            "tohum_indeksi": ti, "bilinmeyen_sayisi": m,
-            "kesim": kesim, "sekiller": sekiller}
-
-
-def islem_ailesi_turet(depo: SDepo, ad: str, boyut: int,
-                       kanunlar: Sequence[SimgeliTensor],
-                       bilinmeyen: str = "A", **ayar) -> Dict[str, Any]:
-    sonuc = cozum_manifoldu(kanunlar, [(bilinmeyen, (int(boyut), int(boyut)))],
-                            depo, **ayar)
-    sonuc["aile"] = None
-    if sonuc["durum"] == "MÜMKÜN":
-        depo.aile_ekle(IslemAilesi(ad, sonuc["x"].reshape(int(boyut), int(boyut))))
-        sonuc["aile"] = ad
-    return sonuc
-
-
-def islem_turet(depo: SDepo, kanunlar: Sequence[SimgeliTensor],
-                bilinmeyenler: Sequence[Tuple[str, Tuple[int, ...]]],
-                baglar: Optional[Dict[str, int]] = None,
-                **ayar) -> Dict[str, Any]:
-    return cozum_manifoldu(kanunlar, bilinmeyenler, depo, baglar, **ayar)
+    return {"durum": "MÜMKÜN" if tamam else "MEÇHUL",
+            "dunya": kur(x) if tamam else None, "x": x, "rezidu_normu": nr,
+            "rank": rank, "eksen_sayisi": n, "D": D, "izgara": izgara,
+            "maske": maske, "rezidu_alani": alan, "tohum_indeksi": ti,
+            "bilinmeyen_sayisi": m}
 
 
 SABIT: Tuple[int, ...] = tuple(range(10))
