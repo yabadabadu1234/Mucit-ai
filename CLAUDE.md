@@ -575,6 +575,7 @@
 | 182 | **KİTABIN KAPANIŞ ÖLÇÜSÜ (durma kaidesi):** Her mevzuda, tevcih edilebilecek **ilave suâl vesveseye dönüşünceye kadar** devam edilir. Mevzu **kendi içinde kapalı** ve dıştan gelecek **taarruz türlerine müdafaalı** olarak cevaplanıncaya dek durulmaz. Kapanış kitabın kendi usulüyle ölçülür (`kitap/KAPANIS_DEFTERI.md`) | Padişah emri |
 | 183 | **KİTAP USULLERİ SIRASI (Kısım I):** (1) **bütünlüklü tasnif usulü** -- bir küme seçilir, ona bir suâl tevcih edilir, o suâlin verebileceği bütün cevaplar listelenip dallandırılır; suâller öyle sorulur ki **iki suâlin altına aynı eleman girmez** · (2) **malûmatın katiyet dereceleri** (burhan seviyesine çıkar/çıkmaz hesabı) · (3) **bir şeyin hangi usullerle ispatlanabilir olduğu** (eserden müessire, haberin sıdkı, vâcib–mümkin ayrımı ve benzerleri) | Padişah emri |
 | 184 | **PADİŞAH "1" DEDİYSE "10" DENİR:** Kitap müzakeresinde padişahın verdiği her başlık, usul ve misal, **daima ondan ötesine** götürülür: komşu usuller, eksik halkalar, itirazlar ve kapanış testi aynı turda çıkarılır | Padişah emri |
+| 185 | **KİTABIN MUHATABI VE SEVİYESİ:** Kitap **yüksek lisans seviyesinde, tek kitap** olarak yazılır (iki ayrı kitap yapılmaz; isteyen daraltır). Okuma bilen ve aklını çalıştıran **herkes** okuyabilmelidir (ortaokuldan profesöre). Dil **gayet sarihtir.** **Birinci muhatap gayrimüslim okuyucudur:** maksat okuyan gayrimüslimin Müslüman olması ve Müslüman okuyucunun îmânının sağlamlaşmasıdır | Padişah emri |
 
 ---
 

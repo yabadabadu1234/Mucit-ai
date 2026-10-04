@@ -34,5 +34,8 @@
 | 22 | M | Şer problemi ve duygusal itiraz | "Bu kadar acı varken…" | Kısım V, Bâb 23 | AÇIK |
 | 23 | M | Bilinemezcilik | "Bu konular aklın dışındadır" | Kısım I Bâb 3, 4 | AÇIK |
 | 24 | M | Ahlâkî itiraz (hükümlere) | "Bu hüküm adil değil" | Kısım V, Bâb 22–23 | AÇIK |
+| 25 | M | Muhatabın kabul etmediği kaynakla delil getirmek (musâdere) | "Kur'ân'ı delil gösteriyorsun, ben onu kabul etmiyorum" | Giriş Bâb 0.3, Kısım I Bâb 5, Kısım V Bâb 19–20 | AÇIK |
+| 26 | M | Çifte standart: "aynı ölçüyü kendi dininize de uygulayın" | "Bu delil benim dinimi de ispatlar" | Kısım I Bâb 4.3, 5; Kısım V Bâb 20 | AÇIK |
+| 27 | M | Muhatabın tabiî başlangıç noktasının yanlış seçilmesi | "Allah'ı kabul ediyorum, neden vücûd ispatıyla başlıyorsunuz?" | Giriş Bâb 0.2–0.3 | AÇIK |
 
-**Sayım:** 24 hücre, 24 açık, 0 cevap yazıldı, 0 sınır ilan edildi. Vesveseden sayılan suâl: 0.
+**Sayım:** 27 hücre, 27 açık, 0 cevap yazıldı, 0 sınır ilan edildi. Vesveseden sayılan suâl: 0.
