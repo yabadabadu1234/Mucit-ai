@@ -69,3 +69,13 @@ TDV İslâm Ansiklopedisi "Sebr ve Taksim" (islamansiklopedisi.org.tr/sebr-ve-ta
 
 - **B10 (benim akıl yürütmem):** Dördü de B1'i aşmaz; yük sırasıyla **kabul · üreteç · "suâl" tarifi · amaç**'a kayar. Eleme yok; fakat kendi başına hasr veren bir usul de yok. Bu dosya yeni bir tasnif iddia etmez.
 - **B11:** U16, 3-I 187'nin "geriye sarma"sı ile ve kitabın müsellemât fikriyle (V.0.3.5) akrabadır; padişahın aradığı şeye en yakın olan budur. Kaynak okunmadan hüküm yazılmaz.
+
+## 9. Padişahın hükmü (3-I 211) ve yeni aday
+- Padişah: ikili nefy **kesin** hasr verir; aranan **kesin** hasr veren başka usul; yarı hasr aranmaz. U16–U19 için "hiçbiri doğru usul değil"; yalnız bunlara kalırsa sıra **U18 > U17 > U19 > U16**.
+
+| # | Usul | Hasrı nasıl kurar | Yük | Kaynak |
+| :-- | :-- | :-- | :-- | :-- |
+| U20 | **Suâl = alt küme (karakteristik fonksiyon)** | Bir kümenin (`X`) elemanlarına sorulabilecek **her evet/hayır suâli** bir alt kümedir; bütün suâller `𝒫(X)` = `Ω^X`tir. Çok şıklı her suâl (bir bölme) de alt kümelerle üretilir | `X`in kendisi: küme zaten seçilidir (3-I 183 (1)) | **Benim akıl yürütmem**; matematikte bilinen olgu (kuvvet kümesi, alt-nesne sınıflayıcısı Ω); kaynak yoklanmadı |
+
+- **B12 (benim akıl yürütmem):** U20 eleme değildir, sayma da değildir; kesindir (her suâl bir alt kümedir). Fakat (a) **mümkün her suâlin** hasrıdır, **sorulması gerekenlerin** değil; (b) `X`in elemanlarının üyeliği kesin tanımlı olmalıdır; (c) sonsuz `X`te listelenemez, yalnız "dışarıda suâl yoktur" denir; (d) U20, çelişmezlik ilkesine dayanır: ikili nefyin **üzerine kurulur**, ondan bağımsız değildir.
+- **B13:** B1'in düzeltilmesi: verili olarak `X`in kendisi de yeter (bu, tanım·kanun·kaynak sayımına dördüncü bir kalem olarak **eklenmez**; B1 tamlık iddiası taşımıyordu). Kalan suâl: hasredilecek olan **mümkün suâller** mi, **sorulması gerekenler** mi?
