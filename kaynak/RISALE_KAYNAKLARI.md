@@ -84,7 +84,8 @@ Esas: ham klasik metin avından çok, kitabın ne dediğini anlatan Türkçe/İn
 | razi_tafsir_kebir_fatiha_en | Râzî, Fâtiha tefsiri | en | |
 | razi_muhassal_atay_ar_nesir | Muhassal, Atay neşri | **ar (tercüme değil)** | OCR bozuk; okumaya esas alınmaz. Türkçe Muhassal tercümesi **elde yok** |
 | razi_muhassal/ocr_yeni | Muhassal için iyileştirilmiş OCR deneyi | ar | arka plan bölme + Otsu + tessdata_best: tanınan oran %35,6 → %41,5 (sayfa denemesinde ~2 kat, kitapta 5,9 puan) |
-| maturidi_kitabut_tevhid_tr | Kitâbü't-Tevhîd Türkçe | tr | iki dosya: Ar-Tr ikili sayfa ~%20 (kötü), diğeri ~%51 |
+| maturidi_kitabut_tevhid_ar_tr_nesir | Mâtürîdî Kitâbü't-Tevhîd, Arapça neşir taraması | ar | OCR ~%20, okumaya esas olmaz |
+| temimi_kitabut_tevhid_sadi_serhi_tr | Muhammed et-Temîmî Kitâbü't-Tevhîd, Sa'dî şerhi | tr | DÜZELTME: Mâtürîdî sanılmıştı, fihrist okununca farklı eser çıktı |
 | maturidi_tevilat_tercume_tr | Te'vîlâtü'l-Kur'ân Tercümesi, 17 cilt | tr | OCR, cilt 8 ~%91 |
 | maturidi_kitab_tawhid_en | Kitâb at-Tawhîd | en | |
 | abdulcebbar_usul_hamse_tr | Şerhu'l-Usûli'l-Hamse (Çelebi/Aydın) | tr | OCR %76–80 |
@@ -104,7 +105,13 @@ Esas: ham klasik metin avından çok, kitabın ne dediğini anlatan Türkçe/İn
 
 Engeller (sayıyla): `.gov.tr` (YEK) ve github.com ağ politikasıyla kapalı; `access-restricted` arşiv öğeleri (Gazâlî Kitaplığı, Marmura Şifâ, van den Bergh, Inati İşârât, Najat) HTTP 401 verdi, aşılmadı. `ibn_rushd_felsefe_savunusu_makale` bağlantısı 404.
 
-Hâlâ tercümesi/çalışması elde olmayanlar: Muhassal Türkçe, Mi'yârü'l-İlm tam, Şerhu'l-Mevâkıf, İşârât ve Şifâ Türkçe (yalnız YEK'te), Gelenbevî ve Hocazâde'nin asıl eserleri, Gazâlî İktisâd Türkçe, İbn Rüşd Faslü'l-Makâl/Keşf Türkçe, Sırrı Paşa Arâü'l-Milel, Filibeli, Aynî, İzmirlî, Kuşçu, Fenârî tam tercüme, Taşköprîzâde Felsefe Risâleleri, Sadrâ Meşâir İngilizce.
+**Bulunan (içindekiler okununca):** `ibn_kemal_risaleler/kemalpasazadetehafuthasiyesiarslan` dosyası A. Arslan'ın Hocazâde Tehâfüt'ü ve Kemalpaşazâde Hâşiyesi'nin **Türkçe çevirisidir** (Gazâlî Tehâfüt'ünün ilk 15 meselesi, 537 s.); bu yüzden Hocazâde'nin Tehâfüt'ü kısmen elimizdedir. `gelenbevi_hayati_ve_eserleri` dosya adının aksine vücûd-ı zihnî makalesidir.
+
+Hâlâ tercümesi/çalışması elde olmayanlar: Muhassal Türkçe, Mi'yârü'l-İlm tam, Şerhu'l-Mevâkıf Türkçe, İşârât ve Şifâ Türkçe (yalnız YEK'te), Gelenbevî'nin asıl eserleri, Gazâlî İktisâd Türkçe, İbn Rüşd Faslü'l-Makâl/Keşf Türkçe, Sırrı Paşa Arâü'l-Milel, Filibeli, Aynî, İzmirlî, Kuşçu, Fenârî tam tercüme, Taşköprîzâde Felsefe Risâleleri, Sadrâ Meşâir İngilizce.
+
+### İçindekiler mühürleri ve alâka sırası (4 Ekim 2026)
+
+Her `kaynak/<klasör>/FIHRIST_MUHUR.md` o klasörün **içindekiler** mührüdür. Eserlerin alâka sırası `FIHRIST_ALAKA_SIRASI.md` içindedir (5 katman). Okunamayan içindekiler orada ayrıca sayılmıştır.
 
 ## 3. Hâlâ bulunamayanlar
 
