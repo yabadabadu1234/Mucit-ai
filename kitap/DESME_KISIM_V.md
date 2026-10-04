@@ -33,15 +33,15 @@
 | No | Cümle | Cins |
 | :-- | :-- | :-- |
 | V.0.A.1 | Ağacın **birinci düzeyi** (ilk reddedilen halka) bağlaç mantığından çıkar; **aklî hasırdır** (V.0.1.3–4) | K |
-| V.0.A.2 | **İkinci düzey** (ret fiili: idrak · hüküm · irade) insan fiilinin bilme, hükmetme, isteme basamaklarından çıkar; reddin bir **süreç** olması sebebiyle süreçsel küme usulü uygundur (I.1.11.5), fakat üçlünün hasırlığı **sayımdır**, zannîdir | Z |
+| V.0.A.2 | **İkinci düzey** (ret fiili: tasavvur · tasdik · irade; eski adı idrak · hüküm · irade) insan fiilinin bilme, hükmetme, isteme basamaklarından çıkar; reddin bir **süreç** olması sebebiyle süreçsel küme usulü uygundur (I.1.11.5), fakat üçlünün hasırlığı **sayımdır**, zannîdir | Z |
 | V.0.A.3 | **İkiz testi bulgusu 1:** aynı hücrede (H1 · idrak) bulunan iki kişi şunlardır: Allah mefhumunu **hiç düşünmemiş** kişi ve Allah'ı **sakallı ihtiyar** diye tasavvur edip reddeden kişi; ikincisi **yanlış tasavvur**dur ve cevabı ilkinden başkadır | İt |
 | V.0.A.4 | **Bulgu 2:** aynı hücrede (H1 · hüküm) bulunan iki kişi **cezmen nefyeden** (ateist) ve **tevakkuf eden** (bilinemezci) kişilerdir; reddin katiyet derecesi (I.3.1) cevabı değiştirir | İt |
 | V.0.A.5 | **Bulgu 3:** aynı halkada **hükmünü kendisi vermiş** kişi ile **hükmü devralmış** kişi (aile, cemaat, ideoloji, çevre, otorite) aynı fiilde görünür; delilsiz devralınmış hüküm **zevâl kabul eder** (I.3.2.3), cevabı ayrıdır | İt |
 | V.0.A.6 | Üç bulgu **tâdil 1. kademesi**dir (I.1.13.5): ana nizam kalır, hücreler alt dallara ayrılır | K |
 | V.0.A.7 | Muhafaza kaidesi tutar: 20 hücre **yerinde kalır**, hiçbiri silinmez, yalnız alt dallanır (I.1.13.9) | K |
 | V.0.A.8 | Alt dallanma her halkanın **kendi bâbında** yazılır (V.1.2, V.2.2, …); alt dalların hasırlığı **istikrâî**dir ve öyle işaretlenir | Z |
-| V.0.A.9 | **Öneri (S11, padişaha):** ret fiillerini **tasavvur** (mefhuma ulaşmamak veya yanlış ulaşmak), **tasdik** (hüküm: kendi tarttı · devraldı; reddin katiyeti: cezm · zan · şek) ve **irade** olarak yeniden adlandırmak; ilim tasavvur ve tasdikten ibarettir (aklî bölme), irade üçüncü basamaktır | Z |
-| V.0.A.10 | Kemalist gayrimüslim, ağaçta **ilk reddettiği halkaya** göre yer alır; hükmü çoğunlukla **devralınmış** koldadır (V.0.A.5); toplumsal ve siyasî itirazları V.5.7'de tartılır | M |
+| V.0.A.9 | **S11 KABUL EDİLDİ (3-I 197):** ret fiilleri **tasavvur** (mefhuma ulaşmamak veya yanlış ulaşmak) · **tasdik** (kendi tarttı: cezm, zan, şek · devraldı) · **irade**; ilim tasavvur ve tasdikten ibarettir (aklî bölme), irade üçüncü basamaktır. Yaprak sayısı 6×4 = **24** + 2 = **26** hücre | K |
+| V.0.A.10 | Hangi gayrimüslim olursa olsun kişi ağaçta **ilk reddettiği halkaya** göre yer alır; ad veya mensubiyet yaprak değildir (3-I 198) | K |
 
 ### V.0.2 İspat yükü
 
@@ -508,7 +508,7 @@
 | V.5.6.4 | Her çatışma iddiası **tek tek** gösterilir; "Kur'ân bilime uygundur" **genel** cümlesi kurulmaz | K |
 | V.5.6.5 | Kur'ân'ın bilimsel açıklamalarla **örtüştüğü** iddiası **zan** düzeyinde kalır; mucize sayılması için **muâraza** ve **iddiaya uygunluk** şartı ayrıca aranır | Z |
 
-### V.5.7 Toplumsal ve siyasî itirazlar (Kemalist gayrimüslim kolu dâhil)
+### V.5.7 Toplumsal ve siyasî itirazlar (yalnız dinle ilgili oldukları ölçüde)
 
 | No | Cümle | Cins |
 | :-- | :-- | :-- |
@@ -521,10 +521,10 @@
 | V.5.7.7 | **Cevap:** bu itiraz **müdde'ye hücumdur** (I.6.3.9); dinin hükmü ile mensuplarının fiilleri **ayrı** şeydir | C |
 | V.5.7.8 | **İtiraz:** din bir **Arap** dinidir veya **ulusal kimliğe** aykırıdır | İt |
 | V.5.7.9 | **Cevap:** doğru bir iddia hangi coğrafyadan geldiğiyle çürütülmez (genetik safsata); mensubiyet meselesi **delil** meselesinden ayrılır | C |
-| V.5.7.10 | Kemalist gayrimüslimin **hükmü çoğunlukla devralınmıştır** (V.0.A.10); cevap ideolojinin **kaynak tenkidiyle** değil, **delilin kendisiyle** verilir; mensubiyet ile çürütme safsatadır (3-I 194) | K |
+| V.5.7.10 | Bu itirazları taşıyan kişinin hükmü **devralınmışsa** (V.0.A.5) cevap kişinin **mensubiyetinin tenkidiyle** değil **delilin kendisiyle** verilir; mensubiyet ile çürütme safsatadır. Belirli bir ideolojiye mahsus itirazlar bu kitabın konusu değildir, **ayrı kitaba** kalır (3-I 198) | K |
 | V.5.7.11 | Bu itirazlar **sayılır**; hepsi ayrı ayrı cevaplanmadan bu bölüm kapanmaz | K |
 
-**Tenkit (V.5):** (1) V.5.1, V.5.2.4 ve V.5.3'ün bütünü **kemâl ilkesi** ve **H4 ispatına** bağlıdır; H4 zayıfsa H5'in **büyük kısmı** zayıflar. (2) V.5.2.4 adâlet delili **tartışmalıdır** (Allah'a vâcib yok kaidesi ile gerilim); yaprak Z'dir. (3) V.5.7'nin itirazları **gerçek bir muhatap kitlesi** (Türkçe okuyan, Kemalist kimlikli) için yazılıyor; padişahın "Kemalist gayrimüslim" tarifi benim okumamdan **farklıysa** bâb yeniden kurulur.
+**Tenkit (V.5):** (1) V.5.1, V.5.2.4 ve V.5.3'ün bütünü **kemâl ilkesi** ve **H4 ispatına** bağlıdır; H4 zayıfsa H5'in **büyük kısmı** zayıflar. (2) V.5.2.4 adâlet delili **tartışmalıdır** (Allah'a vâcib yok kaidesi ile gerilim); yaprak Z'dir. (3) V.5.7 yalnız **dinle ilgili** toplumsal itirazları tartar; belirli bir ideolojinin tamamı kitabın dışındadır (3-I 198).
 
 ---
 
@@ -578,5 +578,5 @@
 2. **Kaynak doğrulaması (Açık İş 2):** Taslak yapraklar **hiçbir kaynak bölümü okunarak** yazılmadı; her bâbın başında ilgili bölümler baştan sona okunacak (3-A 25-B).
 3. **Zayıf halkalar:** V.1.3.a.3 (sonsuz hâdis dizisi), V.1.3.b.4 (yeter sebep), V.2.2.5 (kemâl ilkesi), V.3.4.9 (kâzibe mucize), V.5.2.4 (adâlet gerekçesi). Bu beş halka kitabın **sırtını** taşıyor; hepsi **ya ayrı delille desteklenecek ya zayıf işaretiyle** gidecek.
 4. **Kelâm çizgisi (Açık İş 3):** Kitap Ehl-i sünnet kelâmının ortak çekirdeğiyle yazılıyor; Mu'tezile ve Şia farkları **ilan edilmeli**.
-5. **S11 (padişaha):** ret fiilleri (tasavvur · tasdik · irade) önerisi ve alt dallanma (V.0.A.9).
+5. **S11 kapandı (3-I 197):** ret fiilleri tasavvur · tasdik · irade.
 6. **Yaprak sayısı:** her bölümün yaprak sayısı **bu defterden sayılarak** yazılacak (elle saymadım).
