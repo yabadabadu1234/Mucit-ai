@@ -32,3 +32,17 @@ Hiçbiri üç şartı birden taşımıyor. **B+ en yakınıdır**, tek açık ya
 | 3. Gaye | **Suâlin şartı değil, soranın fiilinin şartı** | Gaye hedefle aynıysa 1'dir (tekrar); ayrıysa (cevabın neye yarayacağı) suâlin mahiyetine girmez. 3-I 212'de maksat suâl kümesinin dışında tutuldu; gaye şart olursa bu ayrım bozulur |
 
 **Neticem:** 1 ve 2 doğru ve gerekli, birbirinin yüzü; 3 suâlin rüknü değil. Üçü birlikte **kâfi değil** (mâni' değil). Onarım teklifi: "hedef **ilimdir** ve boşluk **cevapla** kapanır." Karar padişahın.
+
+## NAKZ (3-I 214): gaye şarttır; arzu ayrı değildir
+Yukarıdaki sınamada "gaye suâlin şartı değil" ve "arzu da mevcut–hedef boşluğudur, tarif mâni' değil" demiştim. **Padişah nakzetti ve haklıdır:** arzu gayeyi tetikler, suâl gayeden doğar ("ev almak istersin, nasıl alırım dersin"). Benim hatam: gayeyi sorunun dışında bir sebep saydım; oysa **gaye, sayısız bilinmeyenden hangisinin boşluk sayılacağını seçen şeydir** (hedefin kaynağı). Gaye hedefle aynı şey değil, hedefi doğurandır; tekrar değildir. 3-I 212 ile çatışma da düştü: mümkün her suâl = mümkün her gayenin doğurabileceği suâller; fiilî gaye girince **sorulması gerekenler** seçilir.
+
+## Teklif C (benim; kat'î yapısı aşağıda): ihtimal kümesinin şuurda hazır olması
+Padişahın telifi: **şuur açısından boşluk = teaddüd.** Boşluğun mahiyetini bölen **iki nefy–isbât suâli** (sâilin şuuru açısından): (a) **bilinen ihtimal var mı?** (b) **bilinmeyen ihtimal var mı?**
+| (a) bilinen | (b) bilinmeyen | Hücre | Misal |
+| :-- | :-- | :-- | :-- |
+| var | yok | **KAPALI boşluk:** ihtimaller şuurda hazır, hangisi olduğu meçhul | "Ali geldi mi?" "hangisi?" |
+| yok | var | **AÇIK boşluk:** ihtimallerin kendisi şuurda yok | "Ali kim?" "X nedir?" |
+| var | var | **KARMA boşluk:** bir kısmı hazır, bir kısmı meçhul; nispet = bilinen : bilinmeyen | "Ali nerede?" |
+| yok | yok | boşluk yok, **suâl yok** | |
+**Kutuplar:** kapalı ve açık (zıt köşeler); her suâl bunların nispeti. **Bağlar:** kapalı ≈ tasdik, açık ≈ tasavvur (fihrist S2); "bilinmeyen ihtimal" ≈ 3-I 188'in "diğer" kolu.
+**Zayıf yanlar (dürüst):** (1) "bilinmeyen ihtimal yok" **şuurun kabulüdür** (kapalı dünya varsayımı); sâil yanılabilir. (2) Nispetin **ölçüsü** tanımlı değil (ihtimal sonsuzsa). (3) Bu, boşluğun **biçimini** bölüyor, **neyle ilgili** olduğunu değil; konu ayrı bir ekseni gerektirir ve o eksen de kat'î bölünmelidir. (4) "Bilinen" = şuurun tasavvur edebildiği, demek lâzım.
