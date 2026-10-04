@@ -185,3 +185,4 @@ Padişahın üç usulü (CLAUDE.md 3-I 183) bâb 1, 3, 4 olarak durur; komşu us
 | S19 | **İnanılacak şey neye göre ne olur?** ("iddia" hasır değildir, 3-I 207) | **Kat'î ağaç (Ağaç K)** kuruldu: her düğüm nefy–isbât (V.6.2.76–96); sekiz cihet sayımı, M1 listesi, Bâb 4.1 tür sayımı ve zamanın üçlü bölümü **tamlığı kat'î olmadığı için dondu**; karar padişahın |
 | S20 | **memba–kanal–malumat–muhatap** (3-I 204) tasnifinin tamlığı istikrâîdir; yeni yasak (3-I 207) karşısında durumu | Padişaha sorulur |
 | S21 | Ağaç K'nın berraklık tarifleri: "itibarla sabit", "uzayda yer tutar", "vâkıaya uygun"; hükümsüz kolun dolu olup olmadığı (iddia olmayan inanılacak şey) | Padişaha sorulur |
+| S22 | **Suâl kümesinin hasrı:** her tasnif hangi verilide (tanım, kanun veya teorem, kaynak) duracak; ayırıcılığın amacı ne olacak | Araştırma yapıldı (`DESTEK/HASR_USULLERI_ARASTIRMA.md`); karar padişahın |

@@ -665,6 +665,11 @@
 | V.6.2.94 | **Dondurulanlar (tamlığı kat'î olmayan):** Kısım I Bâb 4.1 tür sayımı, sekiz cihet sayımı, zamanın üçlü bölümü, M1 listesi; **memba–kanal–malumat–muhatap** (3-I 204) padişahın tasnifidir, tamlığı istikrâîdir, durumu padişaha sorulur | Z |
 | V.6.2.95 | Ağaç K'nın kat'iyyeti: her düğüm bir önerme ile onun nakîzıdır (üçüncü şıkkın imkânsızlığı); kat'îliğin şartı **suâllerin berraklığıdır**: "itibarla sabit", "uzayda yer tutar", "vâkıaya uygun" tarifleri yazılmadan ağaç kapalı sayılmaz | K |
 | V.6.2.96 | Ağaç K **yerleştirme yapmaz**: Allah, melek, kitap, âhiret, kader, farz ve haram hangi yaprağa girer sorusu ayrı iştir; hasr yeterlilik demek değildir | K |
+| V.6.2.97 | **Araştırma (3-I 208, `DESTEK/HASR_USULLERI_ARASTIRMA.md`):** kat'î hasrın kaynağı yalnız ikili suâl değildir; bulunan usuller: tanım, tümevarımsal tanım ve kapanış maddesi, kanun ve teorem, tam değişmez (Yoneda), Şâri'in kendi hasrı; hepsinin dayanağı **bir verilidir** | K |
+| V.6.2.98 | Toplam bir fonksiyonun lifleri her zaman hâsırdır; zor olan suâlin her şeye tatbik edilebilir (toplam) oluşu ve **ayırıcılık**tır | K |
+| V.6.2.99 | İki tamlık ayrılır: **kapsayıcılık** (hasr) ve **ayırıcılık** (ikiz testi); suâl kümesinin tamlığı ikincisidir ve **amaca göredir** | Z |
+| V.6.2.100 | "İnanması farz olanlar" kümesinin sınırı aklen çıkarılamaz; **Şâri'in kendi hasrına** dayanır; muhatap için öncül olamaz (3-I 187) ve **H4'e dayalı** işaretlenir | Z |
+| V.6.2.101 | Râzî'de "dördüncü şık" itirazı iki yerde görülür (c1 teselsül şıkları, özetten; c9 Bâb 8 Zeynelâbidîn üçlemesi ve kesb, okunan sayfadan): sayarak kurulan şık listesi delil tartışmasında çökmüştür | Z |
 
 ### V.6.3 Her hüküm için bâb şablonu
 
