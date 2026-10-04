@@ -572,6 +572,9 @@
 | 179 | **İÇTİHAD İÇTİHADI NAKZETMEZ.** Yeni hüküm eskisini sessizce silmez; silecekse **nakz açıkça yazılır** ve nakzın kendisi de kaydedilir | 2-Y |
 | 180 | **HER MESAJDA HEM KENDİMİ HEM PADİŞAHI TENKİT EDERİM**; padişahın her sözü doğru değildir, yoklanır | 2-Ø |
 | 181 | **KİTAP MÜZAKERESİ:** Padişahın yazdığı eser bir **üniversite ders kitabıdır**. Müzakerede çıkan her başlık, cevaptan **evvel**, `kitap/KITAP_FIHRISTI.md`de kitabın bir **kısmı/bâbı** olarak mühürlenir. Fihrist **kaynakların değil kitabın** fihristidir; umumîden hususîye kurulur; tasnif usulü bu dosyanın usulüdür (tablo, hüküm ve ferman atfı) | Padişah emri |
+| 182 | **KİTABIN KAPANIŞ ÖLÇÜSÜ (durma kaidesi):** Her mevzuda, tevcih edilebilecek **ilave suâl vesveseye dönüşünceye kadar** devam edilir. Mevzu **kendi içinde kapalı** ve dıştan gelecek **taarruz türlerine müdafaalı** olarak cevaplanıncaya dek durulmaz. Kapanış kitabın kendi usulüyle ölçülür (`kitap/KAPANIS_DEFTERI.md`) | Padişah emri |
+| 183 | **KİTAP USULLERİ SIRASI (Kısım I):** (1) **bütünlüklü tasnif usulü** -- bir küme seçilir, ona bir suâl tevcih edilir, o suâlin verebileceği bütün cevaplar listelenip dallandırılır; suâller öyle sorulur ki **iki suâlin altına aynı eleman girmez** · (2) **malûmatın katiyet dereceleri** (burhan seviyesine çıkar/çıkmaz hesabı) · (3) **bir şeyin hangi usullerle ispatlanabilir olduğu** (eserden müessire, haberin sıdkı, vâcib–mümkin ayrımı ve benzerleri) | Padişah emri |
+| 184 | **PADİŞAH "1" DEDİYSE "10" DENİR:** Kitap müzakeresinde padişahın verdiği her başlık, usul ve misal, **daima ondan ötesine** götürülür: komşu usuller, eksik halkalar, itirazlar ve kapanış testi aynı turda çıkarılır | Padişah emri |
 
 ---
 
