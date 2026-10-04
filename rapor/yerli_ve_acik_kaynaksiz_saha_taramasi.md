@@ -38,3 +38,13 @@
 
 ## Kaynaklar
 [openInjMoldSim](https://github.com/krebeljk/openInjMoldSim) · [Marlim3](https://github.com/petrobras/marlim3) · [OpenSTREAM](https://github.com/OpenSTREAM-solvers/openstream) · [Grazer ve GasModels.jl](https://github.com/lanl-ansi/GasModels.jl) · [pandapipes vs SIMONE](https://www.sciencedirect.com/science/article/pii/S2949821X26001195) · [SDT Orhun](https://www.sdt.com.tr/tr/cozumlerimiz/simulasyon-sistemleri-ve-bilisim-teknolojileri/milli-sismik-veri-islem-yazilimi) · [ZEKİ](https://www.trthaber.com/foto-galeri/iste-milli-yazilim-zekinin-gozunden-sakarya-gaz-sahasi/51518.html) · [python-gearbox](https://github.com/efirvida/python-gearbox) · [Birom](http://www.birom.com.tr/savunma.php) · [MESYS ISO 16281](https://www.mesys.ch/doc/FlyerRollingBearingAnalysis.pdf) · [OS-WeldSim](https://www.researchgate.net/publication/394288280_OS-WeldSim_an_open-source_framework_for_finite_element-based_welding_simulation) · [ASME-PVDE](https://github.com/ry4ngch/ASME-PVDE)
+
+---
+## Ek (simülasyon dışı tarama, 4 Ekim 2026)
+| Saha | Açık kaynak | Yerli | Not |
+| :-- | :-- | :-- | :-- |
+| **Çip tasarım araçları (EDA), özellikle sign-off (DRC/LVS/zamanlama/güç) ve analog/RF** | OpenROAD, Yosys (sentez, yerleştirme-yönlendirme); sign-off ve analog/RF **eşdeğer değil** (kaynaklar: Smart Silicon, arXiv 2511.15564) | EDA aracı olarak yerli çözücü **bulamadım** (çıkan "CAEeda" bir mühendislik analiz aracı, çip EDA'sı değil) | Cadence/Synopsys oligopol; ABD 2025'te Çin'e EDA satışını lisansa bağladı, iki ay sonra kaldırdı ([CNBC](https://www.cnbc.com/2025/07/03/us-lifts-chip-software-curbs-on-china-amid-trade-truce-synopsys-says-.html)). Türkiye'de TÜBİTAK BİLGEM Çakıl/YONCA, HIT-30 çip çağrısı (5 milyar $ hedef) devlet talebini gösteriyor |
+| **Karma tamsayılı doğrusal programlama (MILP) çözücüsü** | HiGHS ve SCIP var; zor örneklerde ticarilerden yaklaşık 10–20 kat yavaş ([HiGHS tartışması](https://github.com/ERGO-Code/HiGHS/discussions/1683)) | yerli çözücü **bulamadım** | Gurobi ~10–50 bin $/yıl; savunma lojistiği, enerji, üretim planlamada kullanılıyor |
+| Seyrüsefer (GNSS/INS) süzgeç yazılımı | KF-GINS, NaveGo, INSLIB (DO-178 testli), OpenIMU | — | **Elendi**: açık kaynak bol |
+
+Not: EDA'da yerli yokluğu "aramada çıkmadı"dır; devlet içi (BİLGEM/ASELSAN) kapalı araçlar bu aramaya görünmez.
