@@ -46,3 +46,14 @@ Padişahın telifi: **şuur açısından boşluk = teaddüd.** Boşluğun mahiye
 | yok | yok | boşluk yok, **suâl yok** | |
 **Kutuplar:** kapalı ve açık (zıt köşeler); her suâl bunların nispeti. **Bağlar:** kapalı ≈ tasdik, açık ≈ tasavvur (fihrist S2); "bilinmeyen ihtimal" ≈ 3-I 188'in "diğer" kolu.
 **Zayıf yanlar (dürüst):** (1) "bilinmeyen ihtimal yok" **şuurun kabulüdür** (kapalı dünya varsayımı); sâil yanılabilir. (2) Nispetin **ölçüsü** tanımlı değil (ihtimal sonsuzsa). (3) Bu, boşluğun **biçimini** bölüyor, **neyle ilgili** olduğunu değil; konu ayrı bir ekseni gerektirir ve o eksen de kat'î bölünmelidir. (4) "Bilinen" = şuurun tasavvur edebildiği, demek lâzım.
+
+## 3-I 215: bilinen–bilinmeyen ayrımı alındı; altı bölünecek
+**Padişah:** "Bu bilinen bilinmeyen ayrımı güzel, bunu alalım, bunun altını bölmeye devam edelim. Ama hala direk mevzuya dalamayız, başka bir sual daha lazım." **"Başka sual"in kastı söylenmedi** (S25); iki okuma: (a) bu ağacın bir alt seviyesi için ayrı bir esas suâl (tasnif usulünde her seviye bir esas suâldir, 3-I 183 (1)); (b) mevzuya geçmeden evvel ayrı bir suâl.
+**Teklif (benim, (a) okumasıyla; her biri nefy–isbât):**
+| Hücre | Yeni esas suâl (sâilin şuuru açısından) | Cevaplar |
+| :-- | :-- | :-- |
+| KAPALI (ihtimaller hazır) | **Şuur ihtimallerden birine cezm ediyor mu?** evet → cezm var, boşluk **sınama/delil** boşluğu. hayır → **bir ihtimale meyil var mı?** | cezm var (tahkik) · meyil var (zan) · meyil yok, eşit (şek) |
+| AÇIK (ihtimallerin kendisi yok) | **Cevabın cinsi şuurda var mı?** | cins biliniyor (cinsi bilinen açık) · cins de meçhul (tam açık) |
+| KARMA | iki hücrenin terkibi; nispet = bilinen : bilinmeyen | |
+**Notlar:** kapalının alt dalları fihrist Kısım I Bâb 3'teki yakînin şartlarından (cezm, mütâbakat, zevâl kabul etmeme) şuura açık olanlarla örtüşür. "Cinsi bilinen açık" dalının cinsleri **sayılamaz** (istikrâî olur, 3-I 207); cinsin kendisi de bir suâldir, yani yapı **özyinelemelidir**: cinse dair boşluğun kendi bilinen–bilinmeyen ayrımı vardır.
+
