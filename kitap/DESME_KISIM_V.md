@@ -588,7 +588,7 @@
 | V.6.2.17 | **Padişahın üst bölmesi (3-I 203, 204):** asıl·itikadî kümesi inanması farz olanlar ve inanması haram olanlardır; ne farz ne haram inançlar **vardır** ve kümenin dışındadır | K |
 | V.6.2.18 | "3.sü olmaz" sözünü ben "üçüncü kol yoktur" diye yanlış okumuştum; padişahın kastı **Teklif 3'ün (aklî/nakilî) olmaz** olduğudur (3-I 204) | K |
 | V.6.2.19 | İki ayrı küme karıştırılmaz: **önermeler** (bu tasnif) ve **kişi hâlleri** (muhatap ağacı, V.0.A); muhatabın çeşidi ispat usulünü değiştirir, önermenin tasnifini değiştirmez | K |
-| V.6.2.20 | **Haram olan, farz olanın reddidir:** her farz inanç p için ¬p ve p ile bağdaşmayan her q'yu tasdik etmek haramdır; haram kolun içi tek tek doldurulamaz fakat **farz kolun bölümüne göre bölünür** | Z |
+| V.6.2.20 | **Haram olanın farzla bağı (3-I 205 ile düzeltildi):** haram olan inanç farz olanın **tek zıddı değildir**; farz bir suâlin cevap uzayındaki **birçok ihtimalden birinin** seçimiyse haram, seçilmeyen **bütün cevaplardır**; haram kolun bölümü farz kolun bölümünden **suâl suâl** türer | Z |
 | V.6.2.21 | Haram kolun ikinci ekseni **ret fiilidir** (tasavvur, tasdik, irade); bu eksen muhatap ağacında (V.0.A) kuruludur; yani haram kolun bölümü = halka × ret fiili | K |
 | V.6.2.22 | Asıl haram inançların **hepsinin** bir farz inancın karşıtı olduğu iddiası kaynaktan yoklanmamıştır; bağımsız bir haram inanç bulunursa V.6.2.20 düşer | Z |
 | V.6.2.23 | **Mısıroğlu delili (padişahın aktarımı):** Mecelle'deki mefsedeti defetme kaidesi ve kelime-i tevhidde nefyin isbâttan önce zikri, haramın da tasnif edilebileceğine dayanak gösterilmiştir; kaynağı yoklanmamıştır | Z |
@@ -612,10 +612,21 @@
 | V.6.2.41 | (b) ve (c) tek hücrede kalır: B₁·malumat·hüküm; V.6.2.5'teki ikizlik kalkar | K |
 | V.6.2.42 | Birim **önermedir**: kader (B₁·memba'da ilim ve irade, B₁·malumat·gayb'da olay) ve peygamberler (B₁·muhatap, B₂·memba) iki önermeye bölünür | K |
 | V.6.2.43 | **İlk dolum (kaynaktan yoklanmamış):** B₁: memba, kanal, malumat·gayb, malumat·hüküm, muhatap (5 dolu), malumat·şehâdet (şüpheli); B₂: memba, kanal, muhatap (3); B₃: kanal (1); **9 dolu, 1 şüpheli**; sayı listeye bağlıdır, mühürlenmez | Z |
-| V.6.2.44 | Haram kol, dolu her hücrenin **reddidir**; haram hücre sayısı farz hücre sayısına eşittir ve ret fiili (V.0.A) ile çarpılır | Z |
+| V.6.2.44 | Haram hücre sayısı farz hücre sayısından **küçük değildir** ve her suâlin cevap uzayının büyüklüğüne bağlıdır (Σ(|Aᵢ|−1)); ret fiili (V.0.A) ile çarpılır; önceki "haram hücre sayısı farz hücre sayısına eşittir" hükmü **nakzedildi** (3-I 205) | Z |
 | V.6.2.45 | Hadis yeri: içerik olarak B₂·malumat; sıhhati B₃·kanal | K |
-| V.6.2.46 | Açık: cinlerin varlığına ve Hz. Peygamber'in risâletinin cinleri kapsamasına inanmak asıl·itikadî midir | Z |
+| V.6.2.46 | **Cinlerin varlığına ve risâletin cinleri kapsamasına inanmak asıl·itikadîdir** (3-I 205, S18 kapandı); B₁·malumat·gayb ve B₂·muhatap hücrelerini doldurur; delili Kur'ân'a dayalıdır [H4'e dayalı], muhatap için cinlerin varlığı kanalın ispatından **sonra** gelir | K |
 | V.6.2.47 | Açık: B₁·malumat·şehâdet hücresinde farz bir inanç var mıdır | Z |
+| V.6.2.48 | **Birim (suâl, cevap) çiftidir:** her farz inanç bir suâlin doğru cevabıdır; haram inanç aynı suâlin yanlış cevabıdır | K |
+| V.6.2.49 | Cevap uzayı **aklî hasırla** kurulursa (nefy–isbât) "diğer" kolu bulunmaz (3-I 188); sayarak kurulursa **Z** işaretlenir | K |
+| V.6.2.50 | Deşmenin gerekçesi: yanlış cevapların listesi **ispatın kendisidir**; doğru cevabı ispatlamak için öbürleri tek tek reddedilir (sibr ve taksim) | Z |
+| V.6.2.51 | Misal (yoklanmamış): "âlemin yaratıcısı kaç?" cevap uzayı {yok, bir, çok}; farz: bir; haram: yok ve çok (çokun alt kolları ayrıca bölünür) | M |
+| V.6.2.52 | Tevakkuf ve şek bir cevap değil **kişi hâlidir** (V.0.A); cevap uzayına girmez | K |
+| V.6.2.53 | **Sıradaki iş (3-I 205): inanılabilecek şeylerin mahiyet çeşitlerinin tasnifi**; buradan öteye geçmenin şartıdır | K |
+| V.6.2.54 | Mahiyet iki ayrı suâle ayrılır: inanılan şeyin **kendisi ne** (mevzu çeşidi) ve inanılan **iddia ne** (iddia çeşidi); ikincisi Kısım I Bâb 4.1'de kuruludur, ikinci bir tertip yolu açılmaz, **terkip** edilir | K |
+| V.6.2.55 | **Teklif M1 (mevzu çeşidi):** vâcib zât · mümkin zât (şehâdet âleminin zâtları, gayb âleminin zâtları) · sıfat · fiil ve olay · nisbet · söz (haber) · itibârî (hüküm); cisim–mücerred ayrımı kelâmda ihtilaflı olduğundan yapılmaz | Z |
+| V.6.2.56 | **Teklif M2 (iddia çeşidi):** varlık · sıfat ve fiil · geçmiş vâkıa · gelecek ve gayb · hüküm ve değer · tecrübî kanun · imkân ve vukû' (Kısım I Bâb 4.1) | K |
+| V.6.2.57 | M1 ve M2 iki eksendir; bağımsızlıkları denenmemiştir (hüküm iddiası itibârîyi gerektirir, bağımlı olabilir) | Z |
+| V.6.2.58 | Çeşitler **listelenmeden** sayı mühürlenmez | K |
 
 ### V.6.3 Her hüküm için bâb şablonu
 
