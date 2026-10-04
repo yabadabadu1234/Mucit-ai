@@ -1,45 +1,94 @@
 # KİTAP FİHRİSTİ -- ÜNİVERSİTE DERS KİTABI (MÜZAKERE TASLAĞI)
 
-| Kaide | Hüküm |
-| :-- | :-- |
-| Mahiyet | Kitabın fihristidir; **kaynakların değil**. Her bâb müzakerede çıktıkça buraya mühürlenir (CLAUDE.md 3-I 181) |
-| Tertip | Umumîden hususîye: usul → hayat felsefeleri → din mefhumu → bir dinin doğru olabilmesi → İslâm'ın doğruluğu → hâtime |
-| Atıf sütunu | **P** = padişahın müzakerede verdiği başlık (1. müzakere) · **T** = teklifim, padişah hükmü bekliyor |
-| Durum | **Taslak.** Aşağıdaki açık suâller karara bağlanınca sabitlenir |
-| **Muhatap ve seviye (3-I 185)** | Yüksek lisans seviyesi, **tek kitap**; ortaokuldan profesöre herkes okur; dil sarih; **birinci muhatap gayrimüslim**; maksat: gayrimüslim Müslüman olsun, Müslümanın îmânı sağlamlaşsın | P |
-| **Katmanlı yazım (teklif)** | Her bâb üç katman: **ana metin** (herkes), **derinlik** (ileri okuyucu: formal gösterim, kaynak tartışması), **ek notlar**. Kapanış ölçüsü önce **ana metinde** aranır; derinlik katmanı sonra eklenir | T |
-| **Delil sırası kaidesi (teklif)** | Muhatabın **kabul etmediği kaynak** (Kur'ân, hadis) o noktada **öncül yapılmaz**; önce aklî ve tarihî yoldan, ortak öncüllerle (müsellemât) ilerlenir; naklî delil ispat edildikten **sonra** kullanılır | T |
-| **Durma kaidesi (3-I 182)** | Suâl vesveseye dönüşünceye kadar; mevzu kendi içinde kapalı ve taarruz türlerine müdafaalı oluncaya dek durulmaz. Ölçü: `KAPANIS_DEFTERI.md` | P |
-| **Kapsam kararı (2. müzakere)** | **Birinci baskının ana metni yalnız KISIM I ve KISIM V'tir** (padişah: "en vurucudan süse doğru; 1 ve 5. kısımlar bize yeter"). Kısım II, III, IV, VI **sonraki baskıya ertelendi**, silinmedi; başlıkları aşağıda durur | P |
-| Bâb şablonu | Her bâb: amaç · kavramlar · metin · itirazlar ve cevaplar · tartışma soruları · okuma listesi (ders kitabı usulü) |
+| Kaide | Hüküm | Atıf |
+| :-- | :-- | :-- |
+| Mahiyet | Kitabın fihristidir; **kaynakların değil**. Her bâb müzakerede çıktıkça buraya mühürlenir | 3-I 181 |
+| İskelet sırası | Giriş → Kısım I (usul) → Kısım V (gövde); Kısım II, III, IV, VI ertelendi. Başlıklar umumîden hususîye | P |
+| **Ehemmiyet ve yazım sırası** | **İskelet sırası ehemmiyet sırası değildir:** gövde (Kısım V) önce yazılır; Giriş ve Kısım I'in metni **gövde bitince** usulen yazılır | 3-I 189 |
+| Muhatap ve seviye | **Gayrimüslim profesör**; en yüksek perde; kafası çalışan genç de öğrenir. Üç katman (genel · lisansüstü · profesör) vardır, **şimdilik yalnız profesör katmanı yazılır** | 3-I 186 |
+| **Nakz kaydı** | 185'in "ortaokuldan profesöre" ve "yüksek lisans" kanatları nakzedildi; "dil sarih", "birinci muhatap gayrimüslim", "maksat" kanatları bâkî | 3-I 179, 186 |
+| Delil sırası | Muhatabın kabul etmediği şey delil gösterilmez; **Kur'ân ispatın öncülü olamaz**; kabul etmesi gereken aklî kaideyi reddedene neden kabul etmesi gerektiği gösterilir, **geriden sarılır** | 3-I 187 |
+| "Diğer" kolu | Öyle bir kolun bulunmadığı **ispat edilir**; sayılamayacak çokluk **temel saike göre** tasnif edilir; tasnif usulünün temel taşı | 3-I 188 |
+| Durma kaidesi | Suâl vesveseye dönüşünceye, mevzu kapalı ve müdafaalı oluncaya dek; üç şart birleşince kapanış **teklif edilir, hükmü padişahındır** | 3-I 182, 190 |
+| Hakem (teklif) | Muhatabın **kendi meslekî ölçüsü** hakemdir: tarihçiye kaynak tenkidi, fizikçiye ölçüm, filozofa tutarlılık. Muhatap kendi ölçüsüyle ilzam edilir | T |
+| Bâb şablonu (K3) | Her bâb: halkanın iddiası · ret kolları · delil taksimi (her delilin öncülleri ve katiyet işareti) · ilzam ve geriye sarma · taarruz hücreleri · kapanış hükmü | T |
 
 ---
 
-## GİRİŞ -- MUHATAP VE OKUMA YOLU [ANA METİN]
+## GİRİŞ -- MUHATAP, ÖNERME VE OKUMA YOLU [ANA METİN -- metni gövdeden sonra]
 
 | Bâb | Başlık | Atıf |
 | :-- | :-- | :-- |
-| 0 | **Okuyucu kimdir, nereden başlar.** (0.1) kitabın maksadı ve muhatabı (3-I 185) · (0.2) **muhatap tasnifi** (bâb 1 usulüyle kurulmuş **tek suâllü ağaç**, aşağıda) · (0.3) her yaprak için **başlangıç noktası:** hangi bâbtan okumaya başlanır · (0.4) Müslüman okuyucu için okuma yolu (îmânı sağlamlaştırma: itirazlar ve kapanış defteri) · (0.5) katmanlı okuma: ana metin, derinlik, ek notlar · (0.6) dil ilkeleri: terim ilk geçtiği yerde tanımlanır, Arapça karşılığı parantezde, her bâb özetle başlar | P, T |
+| 0 | (0.1) kitabın maksadı ve muhatabı · (0.2) **önermenin yapısı ve muhatap ağacı** (aşağıda) · (0.3) her hücre için başlangıç noktası · (0.4) **ortak zemin ve hakem:** muhatabın reddedemeyeceği öncüller ve meslekî ölçüsü · (0.5) Müslüman okuyucu için yol (îmânın sağlamlaşması) · (0.6) katmanlar | P, T |
 
-**Muhatap ağacı (0.2) -- aynı sırayla, her suâl bir öncekinin cevabına bağlıdır, yapraklar kümeyi bir kere örter:**
+**Kitabın tek önermesi:** *"Kur'ân, âlemlerin Rabbi olan Allah'ın, Muhammed (sav) vasıtasıyla insanlara bildirdiği doğru kelâmdır."*
 
-| Suâl | Cevap | Yaprak (muhatap) | Başlangıç |
-| :-- | :-- | :-- | :-- |
-| S-A. Âlemin aşkın bir yaratıcısı var mı? | yok | **A1 yokluk iddiası** (maddeci, ateist) | Bâb 19 (vücûd) |
-| | bilinemez | **A2 bilinemezci** | Bâb 3, 4 (katiyet ve ispat), sonra 19 |
-| | soruyu hiç sormamış | **A3 kayıtsız** | Kitabın girişi; hayat sorusu (ertelenen Kısım II'nin özü bir sayfaya iner) |
-| | var | S-B'ye | |
-| S-B. O tek mi? | çok | **B1 çok tanrıcı** | Bâb 19 (tevhid) |
-| | her şey ilâhın kendisi | **B2 bütüncü (panteist)** | Bâb 19 (tenzih), 2 (tanım) |
-| | tek | S-C'ye | |
-| S-C. Bu tek yaratıcı insana vahiy gönderir mi, göndermiş mi? | gönderemez/göndermedi | **C1 aklı yeterli sayan (deist)** | Bâb 20 (nübüvvetin imkânı) |
-| | gönderdi | S-D'ye | |
-| S-D. Vahiy zincirinin sonu kim? | başka bir vahiy kendi yolunu son sayar | **D1 Ehl-i kitap ve başka vahiy iddiaları** | Bâb 20 (Hz. Muhammed'in nübüvveti), 22 (kaynağın korunması) |
-| | Hz. Muhammed | **D2 Müslüman** | Bâb 23 (itirazlar), 24 (delil haritası) |
+**Önermenin parçaları = ispat zincirinin halkaları** (aklî hasır: önerme bu parçalardan ibarettir, başka parça yoktur):
 
-*Tenkit:* S-C ve S-D'nin yaprakları **istikrâîdir** (bilinen vahiy iddiaları sayılmıştır); S5'in 3. şıkkı gereği **zannî** işaretlidir. Aklî hasır yalnız S-A'da kurulmuştur ("var / yok / bilinemez" + "hiç sormamış" tutum kolu).
+| Halka | Önermenin parçası | Reddi şu demektir |
+| :-- | :-- | :-- |
+| H0 | (örtük zemin) bilgi ve aklî kaideler mümkündür | Ortak zemini reddetmek |
+| H1 | **özne:** âlemlerin Rabbi, yani bir Vâcib vardır | Allah'ın varlığını reddetmek |
+| H2 | **öznenin kimliği:** O tektir ve kemâl sahibidir (sıfatlar) | Tekliği ve kemâli reddetmek |
+| H3 | **nisbet:** O insanlara bildirir (vahiy mümkin ve vâkidir) | Vahyi reddetmek |
+| H4 | **mef'ûl:** bu bildirim Kur'ân'dır, aracı Muhammed (sav)'dir | Bu iddiayı bu bildirim saymamak |
+| H5 | **yüklem:** bu bildirim doğrudur | İçeriğin doğruluğunu reddetmek |
 
-## KISIM I -- USUL: İLİM, DELİL VE İSPAT [ANA METİN]
+**Muhatap ağacı** (her suâl bir öncekinin cevabına bağlı; her kişi tek yaprağa girer):
+
+| Suâl | Cevaplar (aklî hasır) | Neden kapalı |
+| :-- | :-- | :-- |
+| **S1.** Önermenin hangi parçasını **ilk** reddediyorsun? | H0 · H1 · H2 · H3 · H4 · H5 · **hiçbirini** | Zincirin **ilk** reddedilen halkası tektir; hiçbirini reddetmeyen kabul edendir. "Ret"e **tevakkuf** (cezmen kabul etmemek) dâhildir |
+| **S2.** (ret edene) Ret **hangi fiilde** gerçekleşiyor? | **idrak** (delile ulaşmamış, bilmiyor, ilgisiz) · **hüküm** (ulaştı, tarttı, yanlış tarttı; yahut hükmü kendi vermedi, devraldı) · **irade** (doğru tarttı, fakat istemiyor: kibir, çıkar, hevâ, aidiyet korkusu) | Kabul ancak **bilme, hükmetme, isteme** fiillerinden oluşur; reddin üç fiilden dışında yeri yoktur. Taklit, hükmü başkasından almaktır; **hüküm** koluna girer |
+| **S3.** (kabul edene) Kabul sarsılmaz mı? | **şüpheli** · **sağlam** | Nefy–isbât |
+
+Yaprak sayısı: 6 halka × 3 fiil = **18 yaprak** + 2 (Müslüman: şüpheli, sağlam) = **20 hücre** (`KAPANIS_DEFTERI.md` Kısım B).
+
+**İsimler hücre değil, misaldir** (yapı yeni bir iddiayı kendiliğinden bir hücreye koyar; sayılmayan iddia ağacı bozmaz):
+
+| Misal | Hücre | Başlangıç |
+| :-- | :-- | :-- |
+| maddeci, ateist; bilinemezci (hükmü tehir eden) | H1 · hüküm | V.1 |
+| soruyu hiç sormamış, kayıtsız | H1 · idrak | V.1 |
+| çok tanrıcı, bütüncü (panteist), Teslis'i kabul eden | H2 · hüküm | V.2 |
+| deist (Tanrı vardır ama vahiy yoktur) | H3 · hüküm | V.3 |
+| Ehl-i kitap; başka bir vahyi son sayan; Kur'ân'ı insan sözü sayan; Muhammed'i samimi fakat yanılmış sayan | H4 · hüküm | V.4 |
+| Kur'ân'ı bilmeden reddeden | H4 · idrak | V.4 |
+| hükümleri hayatına uymadığı için reddeden | H5 · irade | V.5 |
+| şüphe taşıyan Müslüman | S3 · şüpheli | V.7 |
+
+---
+
+## KISIM V -- İSLÂM'IN DOĞRULUĞU [GÖVDE -- ÖNCE YAZILIR]
+
+**Yapı kaidesi:** Her halka bir bâbtır; her bâb o halkayı reddeden **bütün üç fiil kolunu** cevaplar. Yani kitabın gövdesi muhatap ağacının kendisidir; ağaç kapalı olduğundan gövde de kapalıdır.
+
+| Bâb | Başlık ve alt başlıklar | Atıf |
+| :-- | :-- | :-- |
+| V.0 | **Önermenin tahlili ve ortak zemin.** (0.1) önermenin yapısı, altı halka, kapalılık · (0.2) ispat yükü kimdedir · (0.3) **ortak zemin ve hakem** (evveliyyât, müşâhedât, matematik, muhatabın meslekî ölçüsü) · (0.4) **geriye sarma** ve duracağı yer: (a) ortak zemine varıldı, (b) muhatap evveliyyâtı reddediyor → **ilzam** (reddi kendini çürütür); sofistlerin üç sınıfı (inâdiyye, indiyye, lâedriyye) ve her birine karşı usul · (0.5) Kur'ân'ın ispatta **ne zaman** kaynak olabileceği: **ancak H4 ispatlandıktan sonra** (V.5'ten itibaren) | P |
+| V.1 | **H1 -- Allah'ın varlığı.** (1.1) iddia: bir Vâcib vardır · (1.2) ret kolları (idrak, hüküm, irade) · (1.3) **delil taksimi:** (a) hudûs (âlem hâdis, hâdisin muhdisi) · (b) imkân–vücûb (mümkinler zinciri, teselsülün ve devrin butlânı) · (c) nizam ve inâye, ihtirâ' · (d) fıtrat (**tenbih**; delil değil, işaret) · (e) bilinç, ahlâk ve anlamlılık (kümülatif, zannî işaretli) · (1.4) çağdaş itirazlar: kozmoloji, kuantum, çoklu evren, "Tanrı'nın sebebi" itirazı, Hume ve Kant eleştirisi · (1.5) **neticenin hududu:** yalnız "bir Vâcib var"; fazlası bu bâbın iddiası değildir · (1.6) her delilin katiyet işareti | P, T |
+| V.2 | **H2 -- O kimdir: tekliği ve kemâli.** (2.1) **tevhid:** iki Vâcib imkânsızlığı, basitlik · (2.2) **sıfatlar:** hayat, ilim, kudret, irade, kelâm (kelâm sıfatı H3'e köprü) · (2.3) tenzih: cisim, mekân, hulûl, ittihâd · (2.4) **öteki ilâh tasavvurlarının tahlili:** çok tanrıcılık, düalizm, bütüncülük, Teslis, uzak tanrı; her biri aklî kaideyle ve **kendi kaynaklarıyla ilzam** edilerek · (2.5) adâlet, rahmet, hikmet (H5'e köprü) | P |
+| V.3 | **H3 -- Allah'ın insana bildirmesi.** (3.1) **imkân:** kâmil bir Fâilin bildirmesinin aklen imkânı · (3.2) **hikmet ve ihtiyaç:** insanın gayesi; aklın yetmediği alanlar · (3.3) **vukû':** peygamberlik iddiaları ve sıdk ölçütleri · (3.4) **mu'cize:** imkân (illiyet ve âdet tartışması), tanım ve şartlar (harikulâde · iddiaya uygun · muâraza edilemez), kâzibe verilemeyeceği · (3.5) haber olarak vahiy, tevâtür · (3.6) itirazlar: deist, psikolojik indirgeme, Hume, çoğulculuk | P |
+| V.4 | **H4 -- Bu bildirim Kur'ân'dır.** (4.1) **metnin kimliği ve korunması:** yazı, tevâtür, kıraatler, tahrif iddiası · (4.2) **i'câz:** dil, meydan okuma, muâraza edilemezlik, ilim ve gayb haberleri · (4.3) **davet sahibi:** "yalancı, aklî dengesi bozuk, sâdık" taksimi (aklî hasır), hayat ve ahlâk, çıkar ve iktidar itirazı · (4.4) **kaynak itirazları:** "Yahudi–Hıristiyan kaynak", "kendisi yazdı", "cin", "şiir ve kâhinlik" · (4.5) **önceki kitaplar ve vahiy zinciri:** tasdîk, tashîh, müjde, nesih; Ehl-i kitap kendi kaynaklarıyla ilzam · (4.6) iki vahiy iddiası çatıştığında **ölçüt** · (4.7) tarihî delil taksimi | P |
+| V.5 | **H5 -- Bildirimin doğruluğu.** (5.1) **sıdk-ı kelâm:** bildiren yalan söylemez (sıfattan habere) · (5.2) **meâd:** imkân (aklî), vukû' (haber), adâlet gerekçesi, nefsin bekâsı · (5.3) hükümlerin hikmeti ve adâleti · (5.4) **şer ve imtihan** · (5.5) **iç tutarlılık:** tenâkuz iddiaları (gerçek, görünürde, lafzî) · (5.6) bilimle münasebet | P |
+| V.6 | **Açıklama ve tahkik (Fasıl IV).** (6.1) Kur'ân'ın açıklayıcısı: peygamber ve sünnet · (6.2) nakil usulü: isnad, tevâtür, haber-i vâhid · (6.3) sünnetin hüccet oluşu · (6.4) ictihâd ve makâsıd · (6.5) itirazlar: hadis tenkidi, "Kur'ân yeter" | P |
+| V.7 | **Müslüman okuyucu: şüphenin teşhisi ve tedavisi.** (7.1) şüpheyi zincirde yerine koymak (hangi halka, hangi fiil) · (7.2) şüphe ile vesvese ayrımı · (7.3) îmânın derinleşmesi: tasdîkten iz'âna · (7.4) tasdîk ve amel | P |
+| V.8 | **Hâtime.** (8.1) delil haritası: halka × usul × katiyet · (8.2) kapanış defteri raporu: hücre sayıları · (8.3) açık suâller | P, T |
+
+**Halka × delil usulü × elimizdeki dayanak** (dayanak yalnız **içindekiler düzeyindedir**, içerik okunmamıştır):
+
+| Bâb | Delil usulleri (Kısım I Bâb 4.2 taksiminden) | Dayanak (`kaynak/` klasörleri) |
+| :-- | :-- | :-- |
+| V.1 | burhân-ı innî, imkân–vücûb, hudûs, teselsülün butlânı, inâye ve ihtirâ', kümülatif | Mâtürîdî Kitâbü't-Tevhîd (Arapça, İngilizce) · Râzî Mebâhis (Kitab I, III) · Mevâkıf (Mevkıf 2, 5) · İbn Sînâ Şifâ İlâhiyyât (1, 6, 8) · Gazâlî ve İbn Rüşd Tehâfüt (1–5) · İbn Rüşd Keşf (Bâb 1) · Craig/Copan Kelâm kozmolojik delili |
+| V.2 | burhân-ı temânu', hulf, tenzih tahlili, ilzam | Mevâkıf (5) · Erba'în (M5–M19) · Râzî Esâsü't-Takdîs · Tehâfüt (6–12) · Arslan çevirisi (Hocazâde ve Kemalpaşazâde, 6–12) |
+| V.3 | imkân ispatı, hikmet, haber, mu'cize (şartlar), sıdk ölçütü | Râzî Metâlib (Nübüvvât) · İbn Sînâ Şifâ İlâhiyyât (10) · Gazâlî Tehâfüt (17, illiyet) · Muğnî (15) · Hızır Bey Bâb 2 · İbn Rüşd Keşf (bi'set) |
+| V.4 | tarih ve haber (tevâtür), i'câz (hulf ve muâraza), sibr ve taksim, ilzam | Muğnî (16) · Metâlib c8 · Hızır Bey Bâb 2 · Harputlu (Ziyâü'l-Kulûb) · Te'vîlât (nübüvvet konulu başlıklar) |
+| V.5 | haber, imkân ispatı, adâlet burhanı, tutarlılık denetimi | Meâlim (8–9) · Erba'în (M28–M37) · Tehâfüt (18–20) · İbn Rüşd (18–20) · Izutsu (3, 9) · Te'vîlât (ahiret ve imân başlıkları) |
+| V.6 | nakil usulü, haber-i vâhid, ictihâd | Şâtıbî Muvâfakât · Meâlim (10) · Sadrâ İksîrü'l-Ârifîn (dört asıl) |
+
+---
+
+## KISIM I -- USUL: İLİM, DELİL VE İSPAT [ANA METİN -- iskelet sabit, metni gövdeden sonra yazılır (3-I 189)]
 
 Padişahın üç usulü (CLAUDE.md 3-I 183) bâb 1, 3, 4 olarak durur; komşu usuller (**T**) padişahın "1 dediysem 10 de" hükmü (3-I 184) gereği aynı turda eklendi.
 
@@ -51,8 +100,9 @@ Padişahın üç usulü (CLAUDE.md 3-I 183) bâb 1, 3, 4 olarak durur; komşu us
 | 4 | **Bir şeyin hangi usullerle ispatlanabilir olduğu.** (4.1) **iddia türleri taksimi:** varlık iddiası (zorunlu, mümkin) · sıfat ve fiil iddiası · geçmiş vâkıa · gelecek ve gayb · hüküm ve değer · tecrübî kanun · **imkân iddiası ile vukû' iddiası** (aklen mümkün olmak ile fiilen olmuş olmak ayrı davadır) · (4.2) **ispat usulleri taksimi:** eserden müessire (**burhân-ı innî**, delil) · müessirden esere (**burhân-ı limmî**) · vâcib–mümkin (imkân–vücûb) · hudûs · teselsül ve devrin butlânı · hulf (olmayana ergi) · sibr ve taksim · istikrâ ve temsil · **haber** (tevâtür, âhâd, sıdk ölçütleri) · hads, tecrübe, müşâhede · en iyi açıklamaya çıkarım · kümülatif delil · nass ve delâlet · (4.3) **iddia × usul matrisi:** hangi iddia hangi usulle hangi katiyette ispatlanır; boş ve zayıf hücreler ilan edilir · (4.4) her usulün **şartı, hududu ve bilinen safsatası** · (4.5) **"haberin sadık olduğunu ispat"** bâbçığı: isnat, tevâtür, kasd-ı kizb imkânsızlığı, kâzibin delil olarak mucize uyduramaması, gerçek kaynağın tahrifsizliği | P |
 | 5 | **Müdafaa usulü (itiraz ve cevap).** (5.1) **argümanın altı bileşeni:** kaynak · öncül · sûret · netice · usul · muhatap; (5.2) **dıştan gelecek her taarruz bu altı bileşenden birine vurur** (kapalı taksim): her bileşenin taarruz türleri; (5.3) cevap usulleri: hall, nakz-ı cevap, mene' karşısında delil, kabul ve tahdit ("buraya kadar ispatlıdır, ötesi iddia değildir"); (5.4) **cevabın cevabı:** itiraz–cevap zinciri ne zaman biter; (5.5) kapalı ve müdafaalı olmanın şartı: **taarruz matrisinin her hücresi** ya cevaplanmış ya sınırı ilan edilmiştir | P |
 | 6 | **Safsata ve usul hataları.** Sûrî ve mâddî mugâlata; kısır döngü, mesele-i musâdere, teselsül, sorites, kategori hatası, genetik safsata (kaynağı tenkitle sonucu çürütme), ikili yanılgı, "eş-anlamlı kayması" | T |
-| 7 | **Usullerin birleşmesi ve çatışması.** Ta'ârud ve tercîh; akıl ile nakil çatıştığında kaide (aklî katî olan nakli te'vil eder; naklî katî olan zannî aklı bırakır); delil sırası; hangi usul hangisinin hakemidir | T |
+| 7 | **Usullerin birleşmesi ve çatışması.** Ta'ârud ve tercîh; akıl ile nakil çatıştığında kaide (aklî katî olan nakli te'vil eder; naklî katî olan zannî aklı bırakır); delil sırası; hangi usul hangisinin hakemidir · **geriye sarma (3-I 187):** reddedilen öncülün öncülüne inilir, muhatabın kabul ettiği zemine varılınca durulur; evveliyyâtı bile reddedene **ilzam** (reddi kendi reddini çürütür) · **hakem:** muhatabın meslekî ölçüsü (tarihçi için kaynak tenkidi, fizikçi için ölçüm, filozof için tutarlılık) **[T]** | T |
 | 8 | **Kapanış usulü.** Kitabın kendi tamlığı kitabın kendi usulleriyle ölçülür: ağaç kapalı mı (bâb 1), her öncül katiyet derecesiyle işaretli mi (bâb 3), ispat usulü matrisi dolu mu (bâb 4), taarruz matrisi dolu mu (bâb 5); **vesvese testi:** bir suâl vesveseden sayılır ancak cevabı ağaçtaki hiçbir yaprağı, katiyet işaretini ya da matris hücresini **değiştirmiyorsa** · kapanış defteri: `kitap/KAPANIS_DEFTERI.md` | P, T |
+
 
 ## KISIM II -- HAYATA DAİR FELSEFELER [ERTELENDİ -- sonraki baskı]
 
@@ -83,16 +133,6 @@ Padişahın üç usulü (CLAUDE.md 3-I 183) bâb 1, 3, 4 olarak durur; komşu us
 | 17 | Birden çok dinin birden doğruluğu: çelişme meselesi; dışlayıcılık, kapsayıcılık, çoğulculuk | T |
 | 18 | **Doğru bir din için ölçüt kataloğu:** kaynağın sıhhati, tahrifsizlik, tevhid ve akılla uyum, ahlâkî bütünlük, tarihî ve nübüvvet delilleri, meâd hükmü | P |
 
-## KISIM V -- İSLÂM'IN DOĞRULUĞU [ANA METİN]
-
-| Bâb | Başlık | Atıf |
-| :-- | :-- | :-- |
-| 19 | Vücûd: Allah'ın varlığı, birliği ve sıfatları | P |
-| 20 | Nübüvvet: peygamberliğin imkânı; Hz. Muhammed'in nübüvvetinin delilleri (Kur'ân'ın i'câzı, hayatı ve ahlâkı, haber ve müjdeler, önceki kitaplarla münasebet) | P |
-| 21 | Meâd: nefsin bekâsı, ba's, adâlet ve cezâ, kabir ve âhiret | P |
-| 22 | Sünnet ve tahkik: Kur'ân ve hadisin nakli ve korunması, haber-i vâhid, ictihâd, makâsıd; îmân ve amel bütünlüğü | P |
-| 23 | İtirazlar ve cevaplar: şer problemi, bilim–din, iddia edilen tenâkuzlar, başka dinlerin ve felsefelerin itirazları (her itiraz üç hudut tasnifinden geçer: çelişki, kısır döngü, imkânsızlık) | T |
-
 ## KISIM VI -- HÂTİME [ERTELENDİ -- sonraki baskı]
 
 | Bâb | Başlık | Atıf |
@@ -110,18 +150,17 @@ Padişahın üç usulü (CLAUDE.md 3-I 183) bâb 1, 3, 4 olarak durur; komşu us
 
 ---
 
-## AÇIK SUÂLLER (padişah karar verecek)
+## AÇIK SUÂLLER
 
-| # | Suâl | Şıklar |
+| # | Suâl | Durum |
 | :-- | :-- | :-- |
-| S1 | ~~**Usulün yeri.**~~ **Kapandı (3. müzakere):** padişah "anlatılacak ilk usul" dedi; usul başta |
-| S1-eski | (kayıt) Usulün yeri: Padişah usulü en sona koydu; fakat ispat usulsüz kurulamaz | (1) Kısım I'de başta, bütün usuller bir yerde · (2) padişahın sırası: sonda · (3) ikiye bölünür: genel ilim ve delil bilgisi başta (Bâb 1–2, 4), usul çeşitleri (Bâb 3) Kısım IV'ten önce |
-| S2 | ~~**Kısım II'nin kapsamı.**~~ **Kapandı:** Kısım II ertelendi |
-| S2-eski | (kayıt) Kısım II'nin kapsamı: Hayat felsefeleri yalnız Batı ve Doğu sistemlerini mi, İslâm düşüncesinin kendi karşı görüşlerini (Bâb 7) de mi kapsasın | (1) ikisi birlikte · (2) yalnız genel sistemler, Bâb 7 Kısım V'e atılır |
-| S3 | ~~**Okuyucu.**~~ **Kapandı (4. müzakere, 3-I 185):** yüksek lisans seviyesi, tek kitap, herkes okur, birinci muhatap gayrimüslim |
-| S3-eski | (kayıt) Okuyucu: Lisans mı, yüksek lisans mı; Müslüman olmayan okuyucu muhatap mı | (1) lisans, Müslüman okuyucu · (2) lisans, her okuyucu (tanımlar ve usul daha ayrıntılı) · (3) yüksek lisans |
-| S4 | **Ertelenen kısımlardan ne kadarı ana metne asgarî girsin.** Kısım V'in dayandığı iki şey Kısım III ve IV'te: din için çalışır bir tanım (Bâb 9–13) ve doğru bir din için ölçüt kataloğu (Bâb 18). İkisi olmazsa ispat ölçüsüz kalır | (1) hiçbiri: Kısım V doğrudan başlar · (2) **Kısım V'in başına kısa bir "Mukaddime" (tanım ve ölçüt, yaklaşık iki bâb büyüklüğünde)** · (3) Kısım IV'ün tamamı geri alınır |
-| S5 | **Taksimde "diğer" kolu** (Bâb 1.4) | (1) yasak: her taksim aklî hasırla bitirilir · (2) serbest ama **ispatlı boş** · (3) istikrâî taksimde serbest ve **zannî işaretli** (**tavsiyem**: 3, çünkü aklî hasır her konuda kurulamaz, kurulamayan yerde dürüst işaret gerekir) |
-| S6 | **Vesvese testinin işleyişi** (Bâb 8) | (1) üç şart birlikte: ağaç kapalı + defter dolu + ardışık üç turda yeni hücre yok · (2) yalnız defter dolu · (3) padişah her turda kendisi hükmeder (**tavsiyem**: 1) |
-| S7 | **Muhatap ağacının yeri** (Bâb 0) | (1) Kitabın başında tek bir giriş bâbı (**tavsiyem**) · (2) Kısım I'in içinde Bâb 1'in misâli olarak · (3) yalnız ekte |
-| S8 | **"Ana metin / derinlik / ek" katmanlaması** | (1) her bâbta üç katman, **ana metin önce bitirilir** (**tavsiyem**) · (2) iki ayrı baskı katmanı (kısa ve uzun) · (3) katmansız tek akış |
+| S1 | Usulün yeri | **Kapandı:** usul iskelette başta; metni gövdeden sonra (3-I 189) |
+| S2 | Kısım II'nin kapsamı | **Kapandı:** Kısım II ertelendi |
+| S3 | Okuyucu | **Kapandı ve nakzedildi:** gayrimüslim profesör (3-I 186) |
+| S4 | Kısa mukaddime | **Kapandı:** mukaddimeye takılmak yok; gövde bitince usulen yazılır |
+| S5 | "Diğer" kolu | **Kapandı:** taksimden taksime değişir; kol bulunmadığı ispat edilir (3-I 188) |
+| S6 | Vesvese testi | **Kapandı:** üç şart birlikte olunca **teklif edilir**, hükmü padişahındır (3-I 190) |
+| S7 | Giriş bâbı | **Kapandı:** kalır |
+| S8 | Katmanlar | **Kapandı:** üç katman var, şimdilik yalnız profesör katmanı |
+| S9 | **Kitabın yazılacağı dil.** Gayrimüslim profesör çoğunlukla Türkçe okumaz | (1) asıl metin Türkçe, İngilizce ve diğer çeviriler sonra · (2) doğrudan İngilizce (terimler Arapçasıyla) · (3) Türkçe ve İngilizce eşzamanlı, paralel (**tavsiyem: 1**, çünkü düşünce Türkçede olgunlaşır, çeviri düzeltme turudur; fakat terim cetveli baştan iki dilli tutulur) |
+| S10 | **Hakem kaidesi (teklif):** muhatabın meslekî ölçüsü hakemdir; muhatap kendi ölçüsüyle ilzam edilir | (1) kabul · (2) yalnız aklî kaideler hakem · (3) hakem muhatabın **ilan ettiği** ölçüdür (tarihçi kendi ilan ettiği yöntemi) |
