@@ -43,6 +43,28 @@
 | V.0.A.9 | **S11 KABUL EDİLDİ (3-I 197):** ret fiilleri **tasavvur** (mefhuma ulaşmamak veya yanlış ulaşmak) · **tasdik** (kendi tarttı: cezm, zan, şek · devraldı) · **irade**; ilim tasavvur ve tasdikten ibarettir (aklî bölme), irade üçüncü basamaktır. Yaprak sayısı 6×4 = **24** + 2 = **26** hücre | K |
 | V.0.A.10 | Hangi gayrimüslim olursa olsun kişi ağaçta **ilk reddettiği halkaya** göre yer alır; ad veya mensubiyet yaprak değildir (3-I 198) | K |
 
+### V.0.B İspat adımı ile dinin hücreleri (3-I 201)
+
+| No | Cümle | Cins |
+| :-- | :-- | :-- |
+| V.0.B.1 | Dinin çekirdeği **iki suâlle dört hücredir**: asıl · füru, itikadî · amelî (V.6.2) | T |
+| V.0.B.2 | **Asıl·itikadî:** îmânın altı esası (Allah, melekler, kitaplar, peygamberler, âhiret, kader) ve İslâm'ın beş şartının farz olduğuna inanmak | T |
+| V.0.B.3 | **Asıl·amelî:** İslâm'ın beş şartını yerine getirmek (şehâdet, namaz, zekât, oruç, hac) | T |
+| V.0.B.4 | **Füru·itikadî:** asıl olmayan her farz ve haramın sübûtuna inanmak | T |
+| V.0.B.5 | **Füru·amelî:** asıl olmayan her farzı yapmak ve haramı terk etmek | T |
+| V.0.B.6 | İtikadî hücrelerde ispat borcu, önermenin **doğruluğu ve sübûtudur**; inkâr tasdikin reddidir | K |
+| V.0.B.7 | Amelî hücrelerde ispat borcu, emrin **gerçekten emredildiği** (sübût) ve **haklı olduğudur**; terk iradeye düşer | K |
+| V.0.B.8 | **H1 (V.1) Allah'ın varlığı** → asıl·itikadî (Allah) | K |
+| V.0.B.9 | **H2 (V.2) tevhid ve kemâl** → asıl·itikadî (Allah; kaderin ilim ve irade yönü) | K |
+| V.0.B.10 | **H3 (V.3) vahiy** → asıl·itikadî (peygamberler, kitaplar, vahyi taşıyan melek) | K |
+| V.0.B.11 | **H4 (V.4) Kur'ân** → asıl·itikadî (kitaplar, Muhammed (sav)) ve **öteki üç hücrenin sübût kaynağı**: her hükmün sübûtu Kur'ân'a ve onun açıklamasına dayanır | K |
+| V.0.B.12 | **H5 (V.5) bildirimin doğruluğu** → asıl·itikadî (âhiret, hesap) ve bildirenin sadâkati | K |
+| V.0.B.13 | **V.6 asıl bâbları** → asıl·itikadî (beş şartın farziyeti) ve asıl·amelî (beş şartın doğruluğu) | K |
+| V.0.B.14 | **V.6 füru tablosu** → füru·itikadî (sübût sütunu) ve füru·amelî (hikmet sütunu) | K |
+| V.0.B.15 | **V.7 sünnet** → asıl·amelî ve füru hücrelerinin **nakil kanalı** (kılış, miktar gibi keyfiyetin sübûtu) | K |
+| V.0.B.16 | **V.8 Müslüman okuyucu** → dört hücrenin her birinde tasdik ve irade yapraklarını (V.0.A) cevaplar | K |
+| V.0.B.17 | H0 (ortak zemin) hiçbir hücrenin içeriği değildir; **bütün hücrelerin ispat zeminidir** | K |
+
 ### V.0.2 İspat yükü
 
 | No | Cümle | Cins |
@@ -544,21 +566,21 @@
 | V.6.1.7 | Dolayısıyla "farz olana inanmayan îmândan çıkar" cümlesi **inkâr** için doğrudur, **terk** için doğru değildir; kitap ikisini ayırır | K |
 | V.6.1.8 | Çekirdek, kitabın ispat borcunun **alt sınırıdır**: bunlar ispatlanmadan İslâm'ı kabul eden kişiye "kabul ettin" denemez | K |
 
-### V.6.2 Taksim (S13, ikinci teklif: asıl–füru; padişah hükmüne tâbi)
+### V.6.2 Taksim (3-I 201: iki suâl, dört hücre)
 
 | No | Cümle | Cins |
 | :-- | :-- | :-- |
-| V.6.2.1 | Çekirdek önce **asıl** (dinin sayılı esasları) ve **füru** (asıl olmayan her farz ve haram) diye ayrılır; suâl: "bu inanç veya hüküm dinin sayılı esasları arasında mı?" (nefy–isbât) | K |
-| V.6.2.2 | Bu kitapta **asıl**, kelâmdaki usûl–furû' (itikadî–amelî) ayrımı **değildir**; kitabın kendi tarifidir (I.2.1.4): îmânın altı esası ve İslâm'ın amelî direkleri | T |
-| V.6.2.3 | Asıl'ın sayısı **kaynak metinde verilmiştir**, bizim bulduğumuz değildir; bu yüzden füru ("asıl olmayan") nefy–isbâtla kapanır, **fakat asıl listesinin doğruluğu kaynağa bağlıdır** | Z |
-| V.6.2.4 | Asıl iki parçadır; suâl: "kalbin tasdiki mi, kalp dışı fiil mi?" | K |
-| V.6.2.5 | **İtikadî asıl:** îmânın altı esası; **V.1–V.5'te** ispatlanır; şehâdet bunun içindedir (Allah ve resul); **melekler ve kader için yaprak eksiktir** | K |
-| V.6.2.6 | **Amelî asıl:** İslâm'ın dört amelî direği (namaz, zekât, oruç, hac); şehâdet burada **ayrıca sayılmaz**, çünkü çifte sayım mütebâyin şartını bozar | K |
-| V.6.2.7 | **Füru:** asıl olmayan her farz ve haram; suâl: "hükmü düşürmeye kul yetkili mi?" Hayır: **Allah hakkı**. Evet: **kul hakkı** | K |
-| V.6.2.8 | "Farzın ve haramın sübûtuna inanmak şarttır" cümlesi bir **içerik kolu değil bir fiildir**: füru'nun **tasdik** koludur (V.0.A.9); asıl ve füru aynı fiil ağacından geçer | K |
-| V.6.2.9 | Her hükmün ayrı tasdikini ayrı bir "asıl" saymak çapraz esas olurdu (I.1.6.1) | K |
-| V.6.2.10 | Karma hüküm (hırsızlık: had Allah hakkı, mal kul hakkı) iki hakkı da taşır; **iki satıra** yazılır, bâb tek kalır | K |
-| V.6.2.11 | İki eksen (asıl–füru ve itikadî–amelî) **ayrı eksenlerdir**; asıl içinde ikisi de görünür, ama üstteki bölme asıl–füru'dur | K |
+| V.6.2.1 | Suâl 1: "Bu inanç veya hüküm dinin **sayılı esasları** arasında mı?" Evet: **asıl**. Hayır: **füru** (nefy–isbât) | K |
+| V.6.2.2 | **Asıl'ın sayısı kaynak metinde verilmiştir** (îmân altı, İslâm beş); füru "asıl olmayan" diye nefy–isbâtla kapanır, fakat asıl listesinin doğruluğu kaynağa bağlıdır | Z |
+| V.6.2.3 | Suâl 2 (asılda ve füruda aynen): "Bu bir **tasdik** midir, bir **iradî fiil** midir?" (**itikadî** · **amelî**) | K |
+| V.6.2.4 | **Amelî**, iradî fiilin hepsidir: kalbin ve uzuvların fiili; yalnız beden fiili sayılırsa itikadînin karşılığı olmaz (S14) | K |
+| V.6.2.5 | **Asıl·itikadî:** îmânın altı esası ve İslâm'ın beş şartının farz olduğuna inanmak; altı esas **V.1–V.5'te** ispatlanır; melekler ve kader için yaprak eksiktir | K |
+| V.6.2.6 | **Asıl·amelî:** İslâm'ın **beş** şartı: şehâdet (ikrâr), namaz, zekât, oruç, hac; her biri ayrı bâb | K |
+| V.6.2.7 | Şehâdet **çifte sayım değildir**: tasdiki asıl·itikadî'dedir (Allah ve resul), **ikrârı** asıl·amelî'dedir; fiilleri ayrıdır | K |
+| V.6.2.8 | **Füru·itikadî:** asıl olmayan her farz ve haramın dinden olduğuna inanmak (sübûtuna tasdik); inkârı îmânı götürür | K |
+| V.6.2.9 | **Füru·amelî:** asıl olmayan her farzı yapmak ve haramı terk etmek; terki, inkâr eşlik etmedikçe îmânı götürmez | K |
+| V.6.2.10 | "Farzın ve haramın sübûtuna inanmak şarttır" cümlesi **füru·itikadî** hücresidir; "namaz" ise **iki hücrededir**: farziyetine inanmak asıl·itikadî, kılmak asıl·amelî | K |
+| V.6.2.11 | **Füru'nun altına inilmez**: hakkın sahibine (Allah hakkı, kul hakkı) ve konuya göre bölmek bu kitabın değil başka kitabın konusudur (3-I 201) | K |
 
 ### V.6.3 Her hüküm için bâb şablonu
 
@@ -575,7 +597,7 @@
 | V.6.3.9 | Hüküm bâbı üç fiildeki (tasavvur, tasdik, irade) ret kollarını cevaplar | K |
 
 | V.6.3.10 | Hükümler **tablo satırı** olarak yazılır: hüküm · sübût · delâlet · bağlandığı ilke · ta'abbüdî kısım | K |
-| V.6.3.11 | **Amelî asılın dört direği** (namaz, zekât, oruç, hac) her biri ayrı **bâbtır**; füru'da ayrı bâb yalnız kitabın karşılaştığı ciddi bir itiraz o hükme özelse açılır (hadler, miras, örtünme gibi) | K |
+| V.6.3.11 | **Amelî asılın beş şartı** (şehâdet, namaz, zekât, oruç, hac) her biri ayrı **bâbtır**; füru'da ayrı bâb yalnız kitabın karşılaştığı ciddi bir itiraz o hükme özelse açılır (hadler, miras, örtünme gibi) | K |
 | V.6.3.12 | Aynı gerekçeyi paylaşan hükümler (rıza, zarar, mülkiyet, israf) **ilke bâbında** toplu temellendirilir; hüküm satırı ilkeye bağlanır | K |
 | V.6.3.13 | İbadetlerin ortak gerekçesi **tek bâbta** yazılır: kâmil bir Rabbe kulluk (V.2), şeklin vahiyle bilinebilmesi (V.3.2.4); her ibadetin keyfiyeti satırda **ta'abbüdî** işaretlenir | K |
 | V.6.3.14 | Bu toplulaştırmanın **hududu**: hükmün hikmeti ilkeye indirgenemiyorsa ilkeye bağlanmış gibi gösterilmez | K |
@@ -598,7 +620,7 @@
 | V.6.5.2 | Her hükmün öteki hükümlerle bağı (din, can, akıl, nesil, mal gibi korunan değerler) gösterilir | K |
 | V.6.5.3 | Korunan değerlerin beş olması **sayımdır**, zannîdir; hasır diye sunulmaz | Z |
 
-**Tenkit (V.6):** (0) Bölme asıl–füru olarak budandı (S13, ikinci teklif): itikadî asıl zaten V.1–V.5'tir, V.6 yalnız amelî asıl (4 direk) ve füru'dur; asıl–füru adı kelâmdaki usûl–furû'dan **farklı anlamda** kullanıldığı için tarifi baştan yazılır; fakat **melekler ve kader için yaprak eksiktir** (V.6.2.9). (1) Bu bâb kitabın **en büyük** bâbıdır ve hükümlerin listesi **şu an elimde yoktur**; sayısını uydurmam. (2) V.6.1.6 terk–inkâr ayrımı Ehl-i sünnet kelâmına göredir; Hâricî ve Mu'tezile'nin amel–îmân ilişkisi farklıdır, kitap çizgisini ilan etmelidir. (3) "Her hükmün hikmeti aklen gösterilir" iddiası **yapılmaz**: ta'abbüdî kısım ilan edilir (V.6.3.5); bu, "hikmeti bilinmeyen hükmün doğruluğu ancak H4'ten gelir" demektir ve profesörün H4'ü kabul etmediği durumda o hükmün doğruluğu için **aklî delil yetmez**: bunu saklamak ispatı sahte kılar. (4) V.6.2.6 karma hükümler mütebâyin şartını **zorlar**; asıl hak sahibi kaidesi bir uzlaşmadır.
+**Tenkit (V.6):** (0) Çekirdek dört hücreye bölündü (3-I 201): asıl·itikadî (V.1–V.5), asıl·amelî (beş şart, V.6), füru·itikadî ve füru·amelî (V.6 tablosu); füru'nun altına inilmez. "Asıl" kelâmdaki usûl–furû'dan **farklı anlamda** kullanıldığı için tarifi baştan yazılır; ilk iki taslağımda şehâdeti ve amelî asılı **yanlış** sayıp bölmüştüm; fakat **melekler ve kader için yaprak eksiktir** (V.6.2.9). (1) Bu bâb kitabın **en büyük** bâbıdır ve hükümlerin listesi **şu an elimde yoktur**; sayısını uydurmam. (2) V.6.1.6 terk–inkâr ayrımı Ehl-i sünnet kelâmına göredir; Hâricî ve Mu'tezile'nin amel–îmân ilişkisi farklıdır, kitap çizgisini ilan etmelidir. (3) "Her hükmün hikmeti aklen gösterilir" iddiası **yapılmaz**: ta'abbüdî kısım ilan edilir (V.6.3.5); bu, "hikmeti bilinmeyen hükmün doğruluğu ancak H4'ten gelir" demektir ve profesörün H4'ü kabul etmediği durumda o hükmün doğruluğu için **aklî delil yetmez**: bunu saklamak ispatı sahte kılar. (4) V.6.2.6 karma hükümler mütebâyin şartını **zorlar**; asıl hak sahibi kaidesi bir uzlaşmadır.
 
 ---
 
