@@ -32,3 +32,15 @@ Ağaç K'nın her düğümü bir nefy–isbât suâlidir; **düğümlerin tamlı
 
 ## 5. Kaynaklar (arama özetleri)
 TDV İslâm Ansiklopedisi "Sebr ve Taksim" (islamansiklopedisi.org.tr/sebr-ve-taksim) · dergipark "Kur'ân Yorumunda Sebr ve Taksim Yöntemi" · SEP "Kant's Theory of Judgment" ve PhilPapers (Reich) · math3ma "The Yoneda Embedding" · Wikipedia "Jaina seven-valued logic" · Humanities LibreTexts "Inductive Definitions".
+
+## 6. Padişahın arkadaşının getirdiği üç "yeni nesil" bölme (bulanık · kaba küme · K-ortalamalar)
+**Dürüstlük kaydı:** Metin padişahın aktarımıdır; atıfları (Medium, ResearchGate, StuDocu, YouTube) açılıp okunmadı; kaynak sağlamlığı yoklanmadı. Aşağıdaki hüküm **benim akıl yürütmemdir**, padişahın sözü değildir (F 2-A 33-B).
+
+| # | Usul | Tamlığı nereden alır | Kat'î mi (3-I 207) | Suâl kümesinin hasrını verir mi |
+| :-- | :-- | :-- | :-- | :-- |
+| U10 | Bulanık bölme (Zadeh) | Üyelik derecelerinin toplamının 1 olması **şartı**; küme önceden verilidir | Hayır: derece ölçülen/keyfî bir fonksiyondur; aklî hasır değil | Hayır; elemanları dağıtır, **hangi suâlin sorulacağını** hasretmez |
+| U11 | Kaba küme (Pawlak) | Bir denklik ilişkisine göre alt yaklaşım · sınır · dış: üçü nefy–isbâttan **kat'î** hasırdır | **Evet, verilen bilgi düzeyine göre** | Hayır; verili küme ve verili kavram ister (B1); yalnız "bilinemeyen"i **kapalı bir kol** yapar |
+| U12 | K-ortalamalar / kümeleme | Algoritma her noktayı bir kümeye koyar (hâsır) | Hayır: `k` ve mesafe seçimi keyfî, istikrâî | Hayır; ikiz testi (mütebâyin) garanti etmez |
+
+- **B6:** Üçü de B1'i değiştirmez: hepsi **verili bir kümeyi** bölür; hangi suâllerin sorulacağını vermez. U10 ve U12 3-I 207 yasağına takılır.
+- **B7:** U11'in tek faydası: tamlığın **bir bilgi düzeyine göre** tanımlanması, B3'teki "ayırıcılık amaca göredir" ile aynı hükümdür; yeni bir hasr usulü değildir. Alt/üst yaklaşım dışını eleme yine elemedir.
