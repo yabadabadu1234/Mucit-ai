@@ -20,3 +20,15 @@
 
 ## Hüküm (benim)
 Hiçbiri üç şartı birden taşımıyor. **B+ en yakınıdır**, tek açık yarası suâl tarifidir. Karar padişahın.
+
+## Padişahın daha evvel yaptığı tarif ve sınaması
+**Padişahın sözü (yeri bilinmiyor):** "Daha evvel suali şöyle sınıflandırmışım: **mevcut ve hedef arasında boşluk olmalı, teaddüd-i ihtimal olmalı, gaye olmalı.**" Depoda ilgili görünen üç dosya (`docs/zabit/kudret/Nefsi_Mu_drike_O_zerk_Hedef_ve_Strateji_Tes_ekku_lu_.md`, `…Sorgu_Nizamnamesi.md`, `…Paradigma_Denetim_Nizamnamesi.md`) baştan sona okundu; bu üç şart orada **bulunmadı** (ilki özerk gaye, ikisi kod denetim soruları).
+
+**Sınama (benim; tarif olarak mâni' ve câmi' testi):**
+| Şart | Gerekli mi | Yeter mi / not |
+| :-- | :-- | :-- |
+| 1. Mevcut–hedef boşluğu | Evet: boşluk yoksa suâl yok | Tek başına **mâni' değil**: arzu, ihtiyaç ve karar problemi de mevcut–hedef boşluğudur ("ev istiyorum"). Suâli ayıran, hedefin **ilim** olması ve boşluğun **cevapla** kapanmasıdır; bu şart tarifte yok |
+| 2. Teaddüd-i ihtimal | Evet, ama ihtimal **soranın nazarındadır** (cevabı tek olan "2+2?" de soranın nazarında çok ihtimallidir) | 1'in içeriğidir: boşluk, hedefin hangi ihtimal olduğunun bilinmemesidir. İki ayrı şart değil, aynı şartın iki yüzü olması muhtemel |
+| 3. Gaye | **Suâlin şartı değil, soranın fiilinin şartı** | Gaye hedefle aynıysa 1'dir (tekrar); ayrıysa (cevabın neye yarayacağı) suâlin mahiyetine girmez. 3-I 212'de maksat suâl kümesinin dışında tutuldu; gaye şart olursa bu ayrım bozulur |
+
+**Neticem:** 1 ve 2 doğru ve gerekli, birbirinin yüzü; 3 suâlin rüknü değil. Üçü birlikte **kâfi değil** (mâni' değil). Onarım teklifi: "hedef **ilimdir** ve boşluk **cevapla** kapanır." Karar padişahın.
