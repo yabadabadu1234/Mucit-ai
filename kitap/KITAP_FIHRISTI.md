@@ -6,11 +6,12 @@
 | Tertip | Umumîden hususîye: usul → hayat felsefeleri → din mefhumu → bir dinin doğru olabilmesi → İslâm'ın doğruluğu → hâtime |
 | Atıf sütunu | **P** = padişahın müzakerede verdiği başlık (1. müzakere) · **T** = teklifim, padişah hükmü bekliyor |
 | Durum | **Taslak.** Aşağıdaki açık suâller karara bağlanınca sabitlenir |
+| **Kapsam kararı (2. müzakere)** | **Birinci baskının ana metni yalnız KISIM I ve KISIM V'tir** (padişah: "en vurucudan süse doğru; 1 ve 5. kısımlar bize yeter"). Kısım II, III, IV, VI **sonraki baskıya ertelendi**, silinmedi; başlıkları aşağıda durur | P |
 | Bâb şablonu | Her bâb: amaç · kavramlar · metin · itirazlar ve cevaplar · tartışma soruları · okuma listesi (ders kitabı usulü) |
 
 ---
 
-## KISIM I -- USUL: İLİM, DELİL VE İSPAT
+## KISIM I -- USUL: İLİM, DELİL VE İSPAT [ANA METİN]
 
 | Bâb | Başlık | Atıf |
 | :-- | :-- | :-- |
@@ -19,7 +20,7 @@
 | 3 | **Kullanılabilecek usuller:** (a) aklî-burhânî · (b) tarihî-naklî · (c) tecrübî-müşâhede · (d) ihtimal ve en iyi açıklamaya çıkarım · (e) kümülatif delil · (f) bâtınî tecrübe (şahit, delil değil); her usulün **hududu ve hangi iddia türüne uyduğu** | P |
 | 4 | Usul tenkidi: kategori hatası, ölçüyü yanlış yere koymak, "ispat" ile "ikna" farkı, ispat yükü | T |
 
-## KISIM II -- HAYATA DAİR FELSEFELER
+## KISIM II -- HAYATA DAİR FELSEFELER [ERTELENDİ -- sonraki baskı]
 
 | Bâb | Başlık | Atıf |
 | :-- | :-- | :-- |
@@ -28,7 +29,7 @@
 | 7 | İslâm düşüncesinin kendi tasnifi: dehrîler, tabîiyyûn, düalistler, sofistler, sümeniyye, mücessime, felsefeciler, kelâmcılar, sûfîler | T |
 | 8 | Karşılaştırma ölçütleri: iç tutarlılık · kapsam · gaye ve ahlâk temeli · ölümle yüzleşme · hayata uygulanabilirlik | T |
 
-## KISIM III -- DİN MEFHUMU
+## KISIM III -- DİN MEFHUMU [ERTELENDİ -- sonraki baskı]
 
 | Bâb | Başlık | Atıf |
 | :-- | :-- | :-- |
@@ -38,7 +39,7 @@
 | 12 | Din hakkında çeşitli anlayışlar: cevherci · işlevci · fenomenolojik · psikolojik ve sosyolojik indirgemeler · aile benzerliği | P |
 | 13 | Tanım farklarının sonuçları: ortak çekirdek var mı; ilâhî–beşerî, vahye dayalı–tabiî din ayrımı | P |
 
-## KISIM IV -- BİR DİNİN DOĞRU OLABİLECEĞİ
+## KISIM IV -- BİR DİNİN DOĞRU OLABİLECEĞİ [ERTELENDİ -- sonraki baskı]
 
 | Bâb | Başlık | Atıf |
 | :-- | :-- | :-- |
@@ -48,7 +49,7 @@
 | 17 | Birden çok dinin birden doğruluğu: çelişme meselesi; dışlayıcılık, kapsayıcılık, çoğulculuk | T |
 | 18 | **Doğru bir din için ölçüt kataloğu:** kaynağın sıhhati, tahrifsizlik, tevhid ve akılla uyum, ahlâkî bütünlük, tarihî ve nübüvvet delilleri, meâd hükmü | P |
 
-## KISIM V -- İSLÂM'IN DOĞRULUĞU
+## KISIM V -- İSLÂM'IN DOĞRULUĞU [ANA METİN]
 
 | Bâb | Başlık | Atıf |
 | :-- | :-- | :-- |
@@ -58,7 +59,7 @@
 | 22 | Sünnet ve tahkik: Kur'ân ve hadisin nakli ve korunması, haber-i vâhid, ictihâd, makâsıd; îmân ve amel bütünlüğü | P |
 | 23 | İtirazlar ve cevaplar: şer problemi, bilim–din, iddia edilen tenâkuzlar, başka dinlerin ve felsefelerin itirazları (her itiraz üç hudut tasnifinden geçer: çelişki, kısır döngü, imkânsızlık) | T |
 
-## KISIM VI -- HÂTİME
+## KISIM VI -- HÂTİME [ERTELENDİ -- sonraki baskı]
 
 | Bâb | Başlık | Atıf |
 | :-- | :-- | :-- |
@@ -80,5 +81,7 @@
 | # | Suâl | Şıklar |
 | :-- | :-- | :-- |
 | S1 | **Usulün yeri.** Padişah usulü en sona koydu; fakat ispat usulsüz kurulamaz | (1) Kısım I'de başta, bütün usuller bir yerde · (2) padişahın sırası: sonda · (3) ikiye bölünür: genel ilim ve delil bilgisi başta (Bâb 1–2, 4), usul çeşitleri (Bâb 3) Kısım IV'ten önce |
-| S2 | **Kısım II'nin kapsamı.** Hayat felsefeleri yalnız Batı ve Doğu sistemlerini mi, İslâm düşüncesinin kendi karşı görüşlerini (Bâb 7) de mi kapsasın | (1) ikisi birlikte · (2) yalnız genel sistemler, Bâb 7 Kısım V'e atılır |
+| S2 | ~~**Kısım II'nin kapsamı.**~~ **Kapandı:** Kısım II ertelendi |
+| S2-eski | (kayıt) Kısım II'nin kapsamı: Hayat felsefeleri yalnız Batı ve Doğu sistemlerini mi, İslâm düşüncesinin kendi karşı görüşlerini (Bâb 7) de mi kapsasın | (1) ikisi birlikte · (2) yalnız genel sistemler, Bâb 7 Kısım V'e atılır |
 | S3 | **Okuyucu.** Lisans mı, yüksek lisans mı; Müslüman olmayan okuyucu muhatap mı | (1) lisans, Müslüman okuyucu · (2) lisans, her okuyucu (tanımlar ve usul daha ayrıntılı) · (3) yüksek lisans |
+| S4 | **Ertelenen kısımlardan ne kadarı ana metne asgarî girsin.** Kısım V'in dayandığı iki şey Kısım III ve IV'te: din için çalışır bir tanım (Bâb 9–13) ve doğru bir din için ölçüt kataloğu (Bâb 18). İkisi olmazsa ispat ölçüsüz kalır | (1) hiçbiri: Kısım V doğrudan başlar · (2) **Kısım V'in başına kısa bir "Mukaddime" (tanım ve ölçüt, yaklaşık iki bâb büyüklüğünde)** · (3) Kısım IV'ün tamamı geri alınır |
