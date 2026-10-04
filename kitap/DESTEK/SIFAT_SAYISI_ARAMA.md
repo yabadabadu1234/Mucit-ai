@@ -22,3 +22,22 @@ Mısıroğlu'nun cümlesinin yeri (hangi sohbet, kaç dakika) ve rivayetin ilk k
 - Arama özeti (genel, videoyla ilgisiz): Şâfî, Kâfî, Hannân, Mennân, Hüdâ gibi isimler 99 listesinin dışında kullanılıyor.
 - Hafızadan (kaynak yoklanmadı): "Ente'ş-Şâfî, lâ şifâe illâ şifâüke" duası Buhârî ve Müslim'de geçer; yani Tirmizî listesindeki 99'un dışında hadiste geçen bir isim vardır.
 - Açık: "3000" sayısının videoda geçip geçmediği; hangi kaynaktan söylendiği.
+
+## Ek 2: padişahın "kendimiz çıkarabiliriz" listesi
+**Padişahın aktarımı:** "Şâfî" ismi **yalnız** Buhârî–Müslim'deki dua hadisinde geçiyor (padişah başka kaynak bulamadı). Padişahın bir ilahiden çıkardığı isimler: **Sübhân, A'lâ, Şâfî, Kâfî, Hannân, Mennân, Münîr, Hû, Dâim, Devrân, Settâr, Deyyân.** Padişah: "ayet ve hadislerden neler çıkar kim bilir."
+
+**Benim durumlandırmam (hafızadan veya arama özetinden; hiçbiri kaynak sayfasından yoklanmadı):**
+| İsim | Nassta geçtiği iddiası | Durum |
+| :-- | :-- | :-- |
+| Şâfî | Hadis (Buhârî, Müslim; "ente'ş-Şâfî") | hafızadan |
+| Hannân, Mennân | Hadis (arama özeti: hadislerde geçer; Enes duası, Ebû Dâvûd/Nesâî) | arama özeti + hafıza |
+| Settâr | Hadiste **Sittîr** (Nesâî, Ebû Dâvûd, Ahmed; arama özeti); "Settâr" kalıbı nassta mı bilinmiyor | arama özeti |
+| Deyyân | Hadis (Abdullah b. Üneys hadisi) | hafızadan |
+| Kâfî | Zümer 39:36 "e leyse'llâhu bi kâfin abdeh" | hafızadan |
+| A'lâ | A'lâ 87:1, Leyl 92:20 "Rabbike'l-A'lâ" | hafızadan |
+| Sübhân | Kur'ân'da "Sübhâne" tesbih kalıbı; hadiste "Sübbûh" (arama özeti: Ebû Hüreyre listesi dışında anılan); "Sübhân" isim olarak bilinmiyor | belirsiz |
+| Münîr | Kur'ân'da kitap ve Peygamber için sıfat ("kitâbin münîr", "sirâcen münîran"); Allah için "Nûr" | hafızadan; **şüpheli** |
+| Hû | Kur'ân'da "hüve" zamiri; isim sayılması tasavvufta | belirsiz |
+| Dâim, Devrân | Nassta geçtiği bilinmiyor | bilinmiyor |
+
+**Usul kaydı (arama özeti):** Selef ve muhaddisler: esmâ **tevkîfîdir**, naslarla sınırlıdır; nassta olmayan isim lügat, akıl ve şeriat bakımından sahih olsa da Esmâ-i Hüsnâ'dan sayılmaz. Gazzâlî'ye göre ise nassta Allah'a izâfe edilenler 99'la sınırlı değildir ve nasla sabit olmanın yanında aklî çıkarımla da isim verilebilir. **İlahi bir nass değildir.**
