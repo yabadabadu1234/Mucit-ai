@@ -329,6 +329,7 @@
 | 116 | Çıkarımda özerk gaye koşturmak (özerklik **yalnız tâlimdedir**) | 2-Ħ |
 | 117 | Kalbi şimdi inşa etmek yahut kalbe bir vazife uydurmak | 2-Ł |
 | 118 | Mantık yürütmeyi (usul seferini) tek başıma makineye vidalamak -- **karar beklemektedir** | 2-Đ, 2-D |
+| 119 | **Tamlığı kat'î (aklî hasır: nefy–isbât) olmayan tasnif yapmak;** sayarak (istikrâî) tasnif kurmak | 3-I 207 |
 
 ---
 
@@ -597,6 +598,7 @@
 | 204 | **FARZ KOLUN BÖLÜMÜ: MEMBA · KANAL · MALUMAT · MUHATAP (NAKZ 3-I 179: Claude'un "3.sü olmaz = üçüncü kol yoktur" okuması ve Teklif 3 tavsiyesi nakzedildi):** (1) Padişahın "3.sü olmaz" sözü **Teklif 3'ü** (aklî/nakilî) kastediyordu; ne farz ne haram olan inançlar **vardır** ve kümenin dışındadır; **inanması farz · inanması haram** ikilisi kalır. (2) İnanması farz olanın bölümünde **memba, kanal, malumat ve muhatap ayrımı kâfi gelecektir:** **memba** Allah · **kanal** melekler ve vahyi alma usulleri · **malumat** gayb, şehâdet ve hüküm (malumatlar) · **muhatap** Hz. Peygamber. (3) Hadisler buraya sığmaz: hadislerin sıhhati diğer muhatapları işin içine katar; bu yüzden **muhatap insanlık ve cinler** olur ve **insanlık kendi içinde yine küçük küçük memba–kanal–muhatap ağlarına bölünür** | Padişah emri |
 | 205 | **HARAM FARZIN TEK ZIDDI DEĞİLDİR · S18 · İNANILABİLECEK ŞEYLERİN MAHİYET ÇEŞİTLERİ (NAKZ 3-I 179: Claude'un "haram = farzın reddi; haram hücre sayısı = farz hücre sayısı" hükmü nakzedildi):** (1) İnanması haram olan **tamamen farzın zıddı olmayabilir:** farz olan iki zıttan birinin değil **üç, dört veya daha çok ihtimalden birinin** seçimiyse haram olan yalnız zıddı olmaz; **farzın tek bir zıddı yoktur.** Padişah "fazla deşmeye gerek var mı bilmem, neticede mantık bunu gerektiriyor" dedi. (2) **S18 kapandı:** cinlerin varlığına ve risâletin cinleri kapsamasına inanmak **asıl·itikadîdir**; Kur'ân-ı Kerîm'de insanların ve cinlerin kulluk için yaratıldığı ve cinlerin Peygamber'den Kur'ân dinlediği bildirilir [H4'e dayalı]. (3) **Buradan öteye gidebilmek için inanılabilecek şeylerin mahiyetlerinin çeşitleri tasnif edilecektir** | Padişah emri |
 | 206 | **M2 AYRI EKSEN DEĞİLDİR; SORU: İNANILAN ŞEY KAÇ CİHETTEN TASNİF EDİLİR (NAKZ 3-I 179: Claude'un M1/M2 "iki eksen" teklifi nakzedildi):** "İnanılan şeyin kendisi ne?" diye sorulduğunda cevap **iddiadır**; iddia türü (M2) ayrı bir eksen değildir. Sorulacak suâl: **inanılan şey neye göre ne olur, yani kaç cihetten tasnif edilebilir** | Padişah emri |
+| 207 | **"İDDİA" İSNADI NAKZEDİLDİ; İSTİKRÂÎ TASNİF YASAKTIR (NAKZ 3-I 179: 206'nın "cevap iddiadır, M2 ayrı eksen değil" kanadı):** (1) Padişah "inanılacak şey iddiadır" **demedi**: "iddia", "inanılacak şeyin kendisi ne?" suâline verilebilecek **bir cevaptır**, padişah onu **hasretmedi**; iddia olmayan bir inanılacak şey de olabilir. Claude'un isnadı ve "iddia neyin hakkında?" diye kurulan suâller yanlıştı. (2) Claude'un sekiz cihetli tablosu, **"iddia" kelimesi görülmeden "inanılacak şey" diye okunursa kıymetlidir**; fakat tamlığı **istikrâîdir**. (3) Padişah **tamlığı kat'î** tasnif arıyor; **bundan sonra tamlığı kat'î (aklî hasır) olmayan bütün tasniflerin yapılması yasaktır** | Padişah emri |
 
 ---
 
