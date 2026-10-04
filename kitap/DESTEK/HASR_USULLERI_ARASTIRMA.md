@@ -56,3 +56,16 @@ TDV İslâm Ansiklopedisi "Sebr ve Taksim" (islamansiklopedisi.org.tr/sebr-ve-ta
 
 - **B8:** "Yol haritası" kısmı da B1'i doğrular ama aksini iddia eder: Aristoteles'in on kategorisi **sayarak bulunmuştur** (Kant'ın itirazı tam budur: bir ilkeden türetilmemiş); "hasrdır" denemez, 3-I 207'ye takılır. "Değişkenler sınırlı olduğu için suâller hasrolur" cümlesi sınırlılığı **verili** alır. "Kaynağın dışına taşmayan suâller" ise suâlleri kaynağa bağlar; bu 3-I 209'daki farz inanç kümesi için doğrudur, muhatap için öncül olamaz (3-I 187).
 - **B9 (benim akıl yürütmem):** Bütün hasr usullerinde yük bir **verili**ye (tanım · kanun · kaynak · boyut listesi) kayıyor; U13 bunu en açık gösterir. Açık borç aynen kalıyor: hangi verili, hangi tasnifin altında duracak.
+
+## 8. Hasr adımı için eleme dışı usul (3-I 210: padişah A şıkkını seçti)
+**Dürüstlük kaydı:** U16 kaynaktan okunmadı (arama özeti, bkz. §2 ve önceki turun özeti); U17–U19 **benim önerimdir**, kaynak yok. Bu liste **tasnif değildir**, tamlık iddiası yoktur (3-I 207).
+
+| # | Usul | Hasrı nasıl sabit kılar (eleme olmadan) | Yükü nereye atar | Ne zaman çöker |
+| :-- | :-- | :-- | :-- | :-- |
+| U16 | Hasmın kabulü · ittifak · hükmün başka mahalde bulunması (sebr ve taksim literatüründen, arama özeti) | Şık listesinin tam olduğu **muhatap/ulema tarafından kabul edilir** | Kabule | Muhatap kabul etmezse; 3-I 187(2) geriye sarma ile kabul edilen zemine inilir |
+| U17 | Üretim ve kapanış (U4'ün suâllere tatbiki) | Suâller bir **üreteçten** doğar: temel suâl + "cevabın doğurduğu suâl" kuralı; başka suâl yoktur çünkü tanım budur | Üretece ve kurala | Kapanış maddesi tanım gereği konmuşsa tanımın doğruluğu ayrıca ispat ister |
+| U18 | Üreteç ve indirgeme | Her kabul edilir suâlin listedeki üreteçlere **indirgendiği gösterilir** (taban fikri) | "Kabul edilir suâl"in tarifine | Tarif verilmemişse indirgeme hedefsizdir |
+| U19 | Amaç tarafından hasr (U8'in sıkılaştırılması) | Amacın (ispat adımı hücresi) ayırdığı sınıflar bellidir; suâl ailesi **bu sınıfları ayırıyorsa tamdır** (sınanabilir) | Amaca | Amaç verilmemişse |
+
+- **B10 (benim akıl yürütmem):** Dördü de B1'i aşmaz; yük sırasıyla **kabul · üreteç · "suâl" tarifi · amaç**'a kayar. Eleme yok; fakat kendi başına hasr veren bir usul de yok. Bu dosya yeni bir tasnif iddia etmez.
+- **B11:** U16, 3-I 187'nin "geriye sarma"sı ile ve kitabın müsellemât fikriyle (V.0.3.5) akrabadır; padişahın aradığı şeye en yakın olan budur. Kaynak okunmadan hüküm yazılmaz.
