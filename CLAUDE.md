@@ -571,6 +571,7 @@
 | 178 | **MÜŞAHEDENİN ARC VASFI İMHA EDİLİR.** Kalacak kanadın taşıyıcısı açık sualdir ve teklif sunulmuştur: münasebet vasıfları (ihtilaf · teşabüh · hareket · sükûn · teferruk · ittisal · adet · tenasüb · bu'd) **Bargmann ve münasebet haritasında hâlihazırda ölçülenlerle terkip edilsin** (ferman 3-B: cebrî ispat), ışık vasıfları (levn · huşunet · meles · zıl · şeffafiyet · kesafet) kesilsin. Ölçü mevcuttur: 3 kanal AUC 0.8981, 22 kanal 0.8686 | 2-Œ, 1-N-C, 3 |
 | 179 | **İÇTİHAD İÇTİHADI NAKZETMEZ.** Yeni hüküm eskisini sessizce silmez; silecekse **nakz açıkça yazılır** ve nakzın kendisi de kaydedilir | 2-Y |
 | 180 | **HER MESAJDA HEM KENDİMİ HEM PADİŞAHI TENKİT EDERİM**; padişahın her sözü doğru değildir, yoklanır | 2-Ø |
+| 181 | **KİTAP MÜZAKERESİ:** Padişahın yazdığı eser bir **üniversite ders kitabıdır**. Müzakerede çıkan her başlık, cevaptan **evvel**, `kitap/KITAP_FIHRISTI.md`de kitabın bir **kısmı/bâbı** olarak mühürlenir. Fihrist **kaynakların değil kitabın** fihristidir; umumîden hususîye kurulur; tasnif usulü bu dosyanın usulüdür (tablo, hüküm ve ferman atfı) | Padişah emri |
 
 ---
 
