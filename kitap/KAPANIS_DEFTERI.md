@@ -2,12 +2,12 @@
 
 | Kaide | Hüküm |
 | :-- | :-- |
-| Esas | Kitabın kapanışı **iki matrisle** ölçülür. **Kısım A:** argümanın altı bileşenine vuran taarruz matrisi (27 hücre). **Kısım B:** muhatap ağacının halka × fiil matrisi (20 hücre). Toplam **47 hücre** |
+| Esas | Kitabın kapanışı **iki matrisle** ölçülür. **Kısım A:** argümanın altı bileşenine vuran taarruz matrisi (28 hücre). **Kısım B:** muhatap ağacının halka × fiil matrisi (20 hücre). Toplam **47 hücre** |
 | Hücre | Her hücre kitapta bir bâbta **cevaplanmış** ya da **sınırı ilan edilmiş** olmalıdır; aksi hâlde açıktır |
 | Durum | **AÇIK** · **CEVAP YAZILDI** (bâb atfıyla) · **SINIR İLAN EDİLDİ** (kabul edilen hudut yazıldı) |
 | Vesvese | Bir suâl bu defterin hiçbir hücresini, ağacın hiçbir yaprağını ve hiçbir katiyet işaretini değiştirmiyorsa vesveseden sayılır; sayısı kütüğe yazılır |
 | Hasır farkı | **Kısım B aklî hasırdır** (önermenin parçaları × bilme-hükmetme-isteme; kapalılık yapıdan gelir, yakînî). **Kısım A istikrâîdir** (bileşenlere göre sayım, taarruz türleri taranarak bulundu; zannî). Yeni taarruz çıkarsa A'ya hücre eklenir; kapalılık iddiası hücre sayısıyla birlikte yazılır |
-| Kapanış teklifi | Üç şart birlikte olunca (47 hücrenin tamamı AÇIK değil · yeni suâl vesveseye döndü · her bâb kapanış hükmünü taşıyor) kapanış **teklif edilir; hükmü padişahındır** (3-I 190) |
+| Kapanış teklifi | Üç şart birlikte olunca (48 hücrenin tamamı AÇIK değil · yeni suâl vesveseye döndü · her bâb kapanış hükmünü taşıyor) kapanış **teklif edilir; hükmü padişahındır** (3-I 190) |
 | Cevap yerleri | Kitabın yeni iskeletine göredir: gövde Kısım V (V.0–V.8), usul Kısım I (Bâb 1–8), giriş Bâb 0. Cevap yerleri **plandır**; metin yazılmadıkça hücre AÇIK kalır |
 
 ## KISIM A -- TAARRUZ MATRİSİ (bileşen × taarruz türü)
@@ -43,6 +43,7 @@ Bileşenler: **K** kaynak · **Ö** öncül · **S** sûret (çıkarım) · **N*
 | 25 | M | Muhatabın kabul etmediği kaynakla delil getirmek (musâdere) | "Kur'ân'ı delil gösteriyorsun, ben onu kabul etmiyorum" | Giriş 0.4, V.0.5 | AÇIK |
 | 26 | M | Çifte standart | "Bu delil benim dinimi de ispatlar" | V.2.4, V.4.5, V.4.6, Kısım I 4.3 | AÇIK |
 | 27 | M | Muhatabın tabiî başlangıç noktasının yanlış seçilmesi | "Allah'ı kabul ediyorum, neden vücûd ispatıyla başlıyorsunuz?" | Giriş 0.2-0.3 (ağaç) | AÇIK |
+| 28 | M | Toplumsal ve siyasî itiraz (Kemalist gayrimüslim kolu dâhil) | "Din geri kalmışlığın sebebidir; devlet işine karışamaz; dincilerin yaptığı ortada" | V.5.7, Kısım I 6 (genetik safsata) | AÇIK |
 
 ## KISIM B -- MUHATAP MATRİSİ (halka × fiil; aklî hasır)
 
@@ -73,6 +74,6 @@ Fiiller: **idrak** (delile ulaşmamış) · **hüküm** (ulaştı, yanlış tart
 
 ## SAYIM
 
-**Kısım A: 27 hücre** (27 açık). **Kısım B: 20 hücre** (20 açık). **Toplam: 47 hücre, 47 açık, 0 cevap yazıldı, 0 sınır ilan edildi.** Vesveseden sayılan suâl: 0.
+**Kısım A: 28 hücre** (28 açık). **Kısım B: 20 hücre** (20 açık). **Toplam: 48 hücre, 48 açık, 0 cevap yazıldı, 0 sınır ilan edildi.** Vesveseden sayılan suâl: 0.
 
 **Tenkit:** (1) Kısım A'nın taarruz türleri benim taramamdır, istikrâîdir; kapalılığı zannîdir. (2) Kısım B'nin kapalılığı yapıdandır, fakat "fiil" üçlüsünün (idrak, hüküm, irade) bölmesinin mütebâyin olduğu (bir kişinin reddi iki fiilde birden yer almaz) ayrıca savunulmalıdır; bir kişi birden çok fiilde reddedebilir, bu durumda **ilk** ret fiili sayılır (S2 kaidesi). (3) Cevap yerleri plandır; bâb yazılınca hücre kapanır.
