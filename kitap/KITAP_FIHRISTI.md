@@ -24,7 +24,7 @@
 | :-- | :-- | :-- |
 | 0 | (0.1) kitabın maksadı ve muhatabı · (0.2) **önermenin yapısı ve muhatap ağacı** (aşağıda) · (0.3) her hücre için başlangıç noktası · (0.4) **ortak zemin ve hakem (akıl):** muhatabın reddedemeyeceği öncüller; meslek ölçülerinin aklî aslına indirgenmesi · (0.5) Müslüman okuyucu için yol (îmânın sağlamlaşması) · (0.6) katmanlar | P, T |
 
-**Kitabın tek önermesi:** *"Kur'ân, âlemlerin Rabbi olan Allah'ın, Muhammed (sav) vasıtasıyla insanlara bildirdiği doğru kelâmdır."*
+**Kitabın önermesi (3-I 200):** *"Kur'ân, âlemlerin Rabbi olan Allah'ın, Muhammed (sav) vasıtasıyla insanlara bildirdiği doğru kelâmdır; ve bu kelâmın bildirdiği, dinden olduğu zaruri olarak bilinen bütün farzlar ve haramlar doğrudur."* Esas gaye ikinci yarıdır: çekirdeğin (farz ve haramların) her biri ispatlanır.
 
 **Önermenin parçaları = ispat zincirinin halkaları** (aklî hasır: önerme bu parçalardan ibarettir, başka parça yoktur):
 
@@ -35,17 +35,18 @@
 | H2 | **öznenin kimliği:** O tektir ve kemâl sahibidir (sıfatlar) | Tekliği ve kemâli reddetmek |
 | H3 | **nisbet:** O insanlara bildirir (vahiy mümkin ve vâkidir) | Vahyi reddetmek |
 | H4 | **mef'ûl:** bu bildirim Kur'ân'dır, aracı Muhammed (sav)'dir | Bu iddiayı bu bildirim saymamak |
-| H5 | **yüklem:** bu bildirim doğrudur | İçeriğin doğruluğunu reddetmek |
+| H5 | **yüklem:** bu bildirim (haber olarak) doğrudur | Bildirenin sadâkatini, meâdı veya iç tutarlılığı reddetmek |
+| H6 | **ikinci yüklem (çekirdek):** bu bildirimin farz ve haramlarından **her biri** doğrudur (hikmetli ve âdildir) | Bir farzı veya haramı doğru saymamak: inkâr, yahut adaletsiz ve akla aykırı saymak |
 
 **Muhatap ağacı** (her suâl bir öncekinin cevabına bağlı; her kişi tek yaprağa girer):
 
 | Suâl | Cevaplar (aklî hasır) | Neden kapalı |
 | :-- | :-- | :-- |
-| **S1.** Önermenin hangi parçasını **ilk** reddediyorsun? | H0 · H1 · H2 · H3 · H4 · H5 · **hiçbirini** | Zincirin **ilk** reddedilen halkası tektir; hiçbirini reddetmeyen kabul edendir. "Ret"e **tevakkuf** (cezmen kabul etmemek) dâhildir |
+| **S1.** Önermenin hangi parçasını **ilk** reddediyorsun? | H0 · H1 · H2 · H3 · H4 · H5 · H6 · **hiçbirini** | Zincirin **ilk** reddedilen halkası tektir; hiçbirini reddetmeyen kabul edendir. "Ret"e **tevakkuf** (cezmen kabul etmemek) dâhildir |
 | **S2.** (ret edene) Ret **hangi fiilde** gerçekleşiyor? | **tasavvur** (mefhuma ulaşmamış, ilgisiz, yahut yanlış tasavvur etmiş) · **tasdik** (hüküm verdi: kendi tarttı → cezm, zan, şek; yahut hükmü devraldı) · **irade** (doğru tarttı, fakat istemiyor: kibir, çıkar, hevâ, aidiyet korkusu) | İlim tasavvur ve tasdikten ibarettir (aklî bölme); irade üçüncü basamaktır. Taklit, hükmü devralmak olarak **tasdik** koluna girer (3-I 197) |
 | **S3.** (kabul edene) Kabul sarsılmaz mı? | **şüpheli** · **sağlam** | Nefy–isbât |
 
-Yaprak sayısı: 6 halka × 4 (tasavvur · tasdik-kendi tarttı · tasdik-devraldı · irade) = **24 yaprak** + 2 (Müslüman: şüpheli, sağlam) = **26 hücre** (`KAPANIS_DEFTERI.md` Kısım B).
+Yaprak sayısı: 7 halka × 4 (tasavvur · tasdik-kendi tarttı · tasdik-devraldı · irade) = **28 yaprak** + 2 (Müslüman: şüpheli, sağlam) = **30 hücre** (`KAPANIS_DEFTERI.md` Kısım B).
 
 **İsimler hücre değil, misaldir** (yapı yeni bir iddiayı kendiliğinden bir hücreye koyar; sayılmayan iddia ağacı bozmaz):
 
@@ -58,8 +59,9 @@ Yaprak sayısı: 6 halka × 4 (tasavvur · tasdik-kendi tarttı · tasdik-devral
 | Ehl-i kitap; başka bir vahyi son sayan; Kur'ân'ı insan sözü sayan; Muhammed'i samimi fakat yanılmış sayan | H4 · tasdik | V.4 |
 | Kur'ân'ı bilmeden reddeden | H4 · tasavvur | V.4 |
 | hükmünü ailesinden, çevresinden, okulundan devralmış, kendisi bakmamış | her halkada · tasdik (devraldı) | ilgili halkanın bâbı |
-| hükümleri hayatına uymadığı için reddeden | H5 · irade | V.5 |
-| şüphe taşıyan Müslüman | S3 · şüpheli | V.7 |
+| hükmün doğru olduğunu görüp ağır geldiği için reddeden | H6 · irade | V.6 |
+| bir farzı veya haramı adaletsiz ya da çağa aykırı bulan | H6 · tasdik (kendi tarttı) | V.6 |
+| şüphe taşıyan Müslüman | S3 · şüpheli | V.8 |
 
 ---
 
@@ -69,15 +71,16 @@ Yaprak sayısı: 6 halka × 4 (tasavvur · tasdik-kendi tarttı · tasdik-devral
 
 | Bâb | Başlık ve alt başlıklar | Atıf |
 | :-- | :-- | :-- |
-| V.0 | **Önermenin tahlili ve ortak zemin.** (0.1) önermenin yapısı, altı halka, kapalılık · (0.2) ispat yükü kimdedir · (0.3) **ortak zemin ve hakem** (evveliyyât, müşâhedât, matematik; hakem akıldır, meslek ölçüleri aklî aslına indirgenir) · (0.4) **geriye sarma** ve duracağı yer: (a) ortak zemine varıldı, (b) muhatap evveliyyâtı reddediyor → **ilzam** (reddi kendini çürütür); sofistlerin üç sınıfı (inâdiyye, indiyye, lâedriyye) ve her birine karşı usul · (0.5) Kur'ân'ın ispatta **ne zaman** kaynak olabileceği: **ancak H4 ispatlandıktan sonra** (V.5'ten itibaren) | P |
+| V.0 | **Önermenin tahlili ve ortak zemin.** (0.1) önermenin yapısı, yedi halka, kapalılık · (0.2) ispat yükü kimdedir · (0.3) **ortak zemin ve hakem** (evveliyyât, müşâhedât, matematik; hakem akıldır, meslek ölçüleri aklî aslına indirgenir) · (0.4) **geriye sarma** ve duracağı yer: (a) ortak zemine varıldı, (b) muhatap evveliyyâtı reddediyor → **ilzam** (reddi kendini çürütür); sofistlerin üç sınıfı (inâdiyye, indiyye, lâedriyye) ve her birine karşı usul · (0.5) Kur'ân'ın ispatta **ne zaman** kaynak olabileceği: **ancak H4 ispatlandıktan sonra** (V.5'ten itibaren) | P |
 | V.1 | **H1 -- Allah'ın varlığı.** (1.1) iddia: bir Vâcib vardır · (1.2) ret kolları (tasavvur, tasdik, irade) · (1.3) **delil taksimi:** (a) hudûs (âlem hâdis, hâdisin muhdisi) · (b) imkân–vücûb (mümkinler zinciri, teselsülün ve devrin butlânı) · (c) nizam ve inâye, ihtirâ' · (d) fıtrat (**tenbih**; delil değil, işaret) · (e) bilinç, ahlâk ve anlamlılık (kümülatif, zannî işaretli) · (1.4) çağdaş itirazlar: kozmoloji, kuantum, çoklu evren, "Tanrı'nın sebebi" itirazı, Hume ve Kant eleştirisi · (1.5) **neticenin hududu:** yalnız "bir Vâcib var"; fazlası bu bâbın iddiası değildir · (1.6) her delilin katiyet işareti | P, T |
 | V.2 | **H2 -- O kimdir: tekliği ve kemâli.** (2.1) **tevhid:** iki Vâcib imkânsızlığı, basitlik · (2.2) **sıfatlar:** hayat, ilim, kudret, irade, kelâm (kelâm sıfatı H3'e köprü) · (2.3) tenzih: cisim, mekân, hulûl, ittihâd · (2.4) **öteki ilâh tasavvurlarının tahlili:** çok tanrıcılık, düalizm, bütüncülük, Teslis, uzak tanrı; her biri aklî kaideyle ve **kendi kaynaklarıyla ilzam** edilerek · (2.5) adâlet, rahmet, hikmet (H5'e köprü) | P |
 | V.3 | **H3 -- Allah'ın insana bildirmesi.** (3.1) **imkân:** kâmil bir Fâilin bildirmesinin aklen imkânı · (3.2) **hikmet ve ihtiyaç:** insanın gayesi; aklın yetmediği alanlar · (3.3) **vukû':** peygamberlik iddiaları ve sıdk ölçütleri · (3.4) **mu'cize:** imkân (illiyet ve âdet tartışması), tanım ve şartlar (harikulâde · iddiaya uygun · muâraza edilemez), kâzibe verilemeyeceği · (3.5) haber olarak vahiy, tevâtür · (3.6) itirazlar: deist, psikolojik indirgeme, Hume, çoğulculuk | P |
 | V.4 | **H4 -- Bu bildirim Kur'ân'dır.** (4.1) **metnin kimliği ve korunması:** yazı, tevâtür, kıraatler, tahrif iddiası · (4.2) **i'câz:** dil, meydan okuma, muâraza edilemezlik, ilim ve gayb haberleri · (4.3) **davet sahibi:** "yalancı, aklî dengesi bozuk, sâdık" taksimi (aklî hasır), hayat ve ahlâk, çıkar ve iktidar itirazı · (4.4) **kaynak itirazları:** "Yahudi–Hıristiyan kaynak", "kendisi yazdı", "cin", "şiir ve kâhinlik" · (4.5) **önceki kitaplar ve vahiy zinciri:** tasdîk, tashîh, müjde, nesih; Ehl-i kitap kendi kaynaklarıyla ilzam · (4.6) iki vahiy iddiası çatıştığında **ölçüt** · (4.7) tarihî delil taksimi | P |
-| V.5 | **H5 -- Bildirimin doğruluğu.** (5.1) **sıdk-ı kelâm:** bildiren yalan söylemez (sıfattan habere) · (5.2) **meâd:** imkân (aklî), vukû' (haber), adâlet gerekçesi, nefsin bekâsı · (5.3) hükümlerin hikmeti ve adâleti · (5.4) **şer ve imtihan** · (5.5) **iç tutarlılık:** tenâkuz iddiaları (gerçek, görünürde, lafzî) · (5.6) bilimle münasebet · (5.7) **toplumsal ve siyasî itirazlar** (yalnız dinle ilgili oldukları ölçüde: laiklik, dinin siyasetle ilişkisi, mensupların fiilleri) | P |
-| V.6 | **Açıklama ve tahkik (Fasıl IV).** (6.1) Kur'ân'ın açıklayıcısı: peygamber ve sünnet · (6.2) nakil usulü: isnad, tevâtür, haber-i vâhid · (6.3) sünnetin hüccet oluşu · (6.4) ictihâd ve makâsıd · (6.5) itirazlar: hadis tenkidi, "Kur'ân yeter" | P |
-| V.7 | **Müslüman okuyucu: şüphenin teşhisi ve tedavisi.** (7.1) şüpheyi zincirde yerine koymak (hangi halka, hangi fiil) · (7.2) şüphe ile vesvese ayrımı · (7.3) îmânın derinleşmesi: tasdîkten iz'âna · (7.4) tasdîk ve amel | P |
-| V.8 | **Hâtime.** (8.1) delil haritası: halka × usul × katiyet · (8.2) kapanış defteri raporu: hücre sayıları · (8.3) açık suâller | P, T |
+| V.5 | **H5 -- Bildirimin doğruluğu.** (5.1) **sıdk-ı kelâm:** bildiren yalan söylemez (sıfattan habere) · (5.2) **meâd:** imkân (aklî), vukû' (haber), adâlet gerekçesi, nefsin bekâsı · (5.3) hükümlerin hikmeti ve adâletinin **genel ilkesi** (her hükmün ayrı ayrı doğruluğu V.6'dadır) · (5.4) **şer ve imtihan** · (5.5) **iç tutarlılık:** tenâkuz iddiaları (gerçek, görünürde, lafzî) · (5.6) bilimle münasebet · (5.7) **toplumsal ve siyasî itirazlar** (yalnız dinle ilgili oldukları ölçüde: laiklik, dinin siyasetle ilişkisi, mensupların fiilleri) | P |
+| V.6 | **H6 -- Her farz ve haramın doğruluğu (çekirdek; 3-I 200).** (6.1) **çekirdeğin tarifi:** dinden olduğu zaruri olarak bilinen, sübûtu ve delâleti kat'î hükümler; farzın **inkârı** ile **terki** ayrıdır (inkâr tasdikin reddidir; terk iradeye düşer) · (6.2) **taksim (hükmün hak sahibine göre):** Allah'ın hakkı · kulun hakkı · ortak hak; konuya göre: Allah'la kul arası, kulun kendisiyle, başka insanlarla, öteki varlıklarla · (6.3) **her hüküm için bâb şablonu:** hüküm nedir · sübût ve delâlet nasıl ispatlanır · hikmet ve adâlet · itirazlar ve ilzam · katiyet işareti · (6.4) **hüküm listesi:** fıkıh kaynağından tek tek (kaynak seçimi **S12**) · (6.5) hükümler arası iç tutarlılık | 3-I 200 |
+| V.7 | **Açıklama ve tahkik (Fasıl IV).** (7.1) Kur'ân'ın açıklayıcısı: peygamber ve sünnet · (7.2) nakil usulü: isnad, tevâtür, haber-i vâhid · (7.3) sünnetin hüccet oluşu · (7.4) ictihâd ve makâsıd · (7.5) itirazlar: hadis tenkidi, "Kur'ân yeter" | P |
+| V.8 | **Müslüman okuyucu: şüphenin teşhisi ve tedavisi.** (8.1) şüpheyi zincirde yerine koymak (hangi halka, hangi fiil) · (8.2) şüphe ile vesvese ayrımı · (8.3) îmânın derinleşmesi: tasdîkten iz'âna · (8.4) tasdîk ve amel | P |
+| V.9 | **Hâtime.** (9.1) delil haritası: halka × usul × katiyet · (9.2) kapanış defteri raporu: hücre sayıları · (9.3) açık suâller | P, T |
 
 **Halka × delil usulü × elimizdeki dayanak** (dayanak yalnız **içindekiler düzeyindedir**, içerik okunmamıştır):
 
@@ -88,7 +91,8 @@ Yaprak sayısı: 6 halka × 4 (tasavvur · tasdik-kendi tarttı · tasdik-devral
 | V.3 | imkân ispatı, hikmet, haber, mu'cize (şartlar), sıdk ölçütü | Râzî Metâlib (Nübüvvât) · İbn Sînâ Şifâ İlâhiyyât (10) · Gazâlî Tehâfüt (17, illiyet) · Muğnî (15) · Hızır Bey Bâb 2 · İbn Rüşd Keşf (bi'set) |
 | V.4 | tarih ve haber (tevâtür), i'câz (hulf ve muâraza), sibr ve taksim, ilzam | Muğnî (16) · Metâlib c8 · Hızır Bey Bâb 2 · Harputlu (Ziyâü'l-Kulûb) · Te'vîlât (nübüvvet konulu başlıklar) |
 | V.5 | haber, imkân ispatı, adâlet burhanı, tutarlılık denetimi | Meâlim (8–9) · Erba'în (M28–M37) · Tehâfüt (18–20) · İbn Rüşd (18–20) · Izutsu (3, 9) · Te'vîlât (ahiret ve imân başlıkları) |
-| V.6 | nakil usulü, haber-i vâhid, ictihâd | Şâtıbî Muvâfakât · Meâlim (10) · Sadrâ İksîrü'l-Ârifîn (dört asıl) |
+| V.6 | sübût (haber, tevâtür) · delâlet · hikmet ve adâlet burhanı · ilzam | **Açık sual S12:** hüküm listesi hangi fıkıh kaynağından çıkarılacak (şimdilik kaynak seçilmedi) |
+| V.7 | nakil usulü, haber-i vâhid, ictihâd | Şâtıbî Muvâfakât · Meâlim (10) · Sadrâ İksîrü'l-Ârifîn (dört asıl) |
 
 ---
 
@@ -169,3 +173,4 @@ Padişahın üç usulü (CLAUDE.md 3-I 183) bâb 1, 3, 4 olarak durur; komşu us
 | S9 | Kitabın yazılacağı dil | **Kapandı:** Türkçe; terim cetveli de yalnız Türkçe (3-I 193). Benim "asıl Türkçe, çeviri sonra, iki dilli cetvel" teklifimin cetvel kanadı nakzedildi |
 | S10 | Hakem kaidesi | **Kapandı, teklifim nakzedildi:** hakem akıldır; meslek ölçüleri aklî aslına indirgenir (3-I 191) |
 | S11 | Ret fiillerinin yeniden adlandırılması | **Kapandı (kabul, 3-I 197):** tasavvur · tasdik (kendi tarttı: cezm, zan, şek · devraldı) · irade; 6 halka × 4 = 24 + 2 = **26 hücre** |
+| S12 | **Çekirdek hüküm listesinin kaynağı.** V.6'nın her hüküm bâbı, fıkıhtan çıkarılan listeye dayanır; liste benim ezberimden yazılmaz | (1) dört mezhebin **ortak ve kat'î** hükümleri (tavsiyem: "dinden olduğu zaruri bilinen" tarifi zaten mezhepler arası ortaklığı gerektirir) · (2) tek mezhebin ilmihali esas · (3) padişahın vereceği bir liste |

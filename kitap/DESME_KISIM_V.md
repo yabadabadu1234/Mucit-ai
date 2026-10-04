@@ -19,12 +19,12 @@
 
 | No | Cümle | Cins |
 | :-- | :-- | :-- |
-| V.0.1.1 | Kitabın tek önermesi şudur: "Kur'ân, âlemlerin Rabbi olan Allah'ın, Muhammed (sav) vasıtasıyla insanlara bildirdiği doğru kelâmdır" | İ |
-| V.0.1.2 | Bu önerme bir **bağlaç birleşimidir** (özne var ∧ özne tek ve kâmil ∧ özne bildirir ∧ bildirilen Kur'ân ve aracı Muhammed ∧ bildirilen doğrudur) | T |
+| V.0.1.1 | Kitabın önermesi şudur: "Kur'ân, âlemlerin Rabbi olan Allah'ın, Muhammed (sav) vasıtasıyla insanlara bildirdiği doğru kelâmdır; ve bu kelâmın bildirdiği, dinden olduğu zaruri olarak bilinen bütün farzlar ve haramlar doğrudur" (3-I 200) | İ |
+| V.0.1.2 | Bu önerme bir **bağlaç birleşimidir** (özne var ∧ özne tek ve kâmil ∧ özne bildirir ∧ bildirilen Kur'ân ve aracı Muhammed ∧ bildirilen doğrudur ∧ bildirilen farz ve haramların her biri doğrudur) | T |
 | V.0.1.3 | Bir bağlaç birleşimi yanlışsa **en az bir kanadı yanlıştır** (aklî hasır) | K |
 | V.0.1.4 | Dolayısıyla önermeyi reddeden herkes **bir kanadı** reddeder; birden çok kanadı reddedenin **ilk** reddettiği kanat tektir | K |
 | V.0.1.5 | Hiçbir kanadı reddetmeyen önermeyi kabul etmiştir | K |
-| V.0.1.6 | Kanatlar zincir halkalarıdır: **H1** Allah vardır · **H2** O tek ve kâmildir · **H3** O insana bildirir · **H4** bu bildirim Kur'ân'dır, aracı Muhammed (sav)'dir · **H5** bu bildirim doğrudur; bunların altında örtük **H0**: bilgi ve akıl mümkündür | T |
+| V.0.1.6 | Kanatlar zincir halkalarıdır: **H1** Allah vardır · **H2** O tek ve kâmildir · **H3** O insana bildirir · **H4** bu bildirim Kur'ân'dır, aracı Muhammed (sav)'dir · **H5** bu bildirim (haber olarak) doğrudur · **H6** bildirilen farz ve haramların her biri doğrudur; bunların altında örtük **H0**: bilgi ve akıl mümkündür | T |
 | V.0.1.7 | Her halka kendinden **öncekini öncül alabilir**, sonrakini öncül alamaz | K |
 | V.0.1.8 | Bu yüzden ispat sırası H0 → H1 → H2 → H3 → H4 → H5'tir; sıra **mantıkî öncelikten** gelir, tercihten gelmez | K |
 
@@ -473,6 +473,7 @@
 | V.5.3.4 | Hükmün kendisine yönelik itirazda önce **adâlet ölçüsünün** neden hakem olduğu gösterilir; ölçü muhatabın zihnî kabulüne dayanıyorsa **kaynağı ayrıca** sorgulanır | K |
 | V.5.3.5 | Hüküm hikmetinin **aklen çıkarılabilir** olması şart değildir; kaynağın doğruluğu (H4) ispatlanmışsa hikmetini bilmemek hükmü çürütmez | K |
 | V.5.3.6 | Beşinci yaprak **H4'e dayalıdır** | K |
+| V.5.3.7 | Her **hükmün ayrı ayrı** hikmeti ve adâleti **V.6'da** yazılır; bu bölüm yalnız genel ilkedir | K |
 
 ### V.5.4 Şer ve imtihan
 
@@ -528,47 +529,111 @@
 
 ---
 
-## V.6 AÇIKLAMA VE TAHKİK (SÜNNET)
+## V.6 H6: HER FARZ VE HARAMIN DOĞRULUĞU (ÇEKİRDEK, 3-I 200)
+
+### V.6.1 Çekirdeğin tarifi
 
 | No | Cümle | Cins |
 | :-- | :-- | :-- |
-| V.6.1 | **H4 ve H5 ispatlanmışsa** peygamber, metnin **açıklayıcısıdır**; bu cümle H4'e dayalıdır | K |
-| V.6.2 | Sünnetin **nakli** haberdir: isnad, tevâtür, haber-i vâhid (I.4.5, I.3.6) | K |
-| V.6.3 | Tevâtür derecesine çıkan sünnet **yakînî**, âhâd sünnet **zannîdir** | K |
-| V.6.4 | **İtiraz:** sünnet güvenilmezdir | İt |
-| V.6.5 | **Cevap:** itiraz **hangi nakil zincirinin** güvenilmez olduğunu göstermelidir; toptan reddetmek **aceleci genellemedir** (I.6.3.13) | C |
-| V.6.6 | **İtiraz:** "Kur'ân yeter" | İt |
-| V.6.7 | **Cevap:** metnin **kendisi**, açıklama gerektiren yerlere sahip olduğundan açıklama gerekir; **sınırlama kendi içinden çıkarılmalıdır** (H4'e dayalı) | C |
-| V.6.8 | **İctihad** metnin hükmünden **yeni durumlara** zannî çıkarımdır; netice **zannî** ve işaretlidir | K |
-| V.6.9 | **Makâsıd** (hükümlerin gayeleri) ictihada yön verir; makâsıdın kaynağı H5'te gösterilen hikmettir | K |
-| V.6.10 | Bu bâb **Fasıl IV**'ün karşılığıdır; **içeriği kaynak okunduktan** sonra deşilir | Z |
+| V.6.1.1 | Bu bâbın iddiası: **dinden olduğu zaruri olarak bilinen her farz ve haram doğrudur** | İ |
+| V.6.1.2 | **Zaruriyyât-ı dîn:** dinden olduğu hem âlimin hem avamın bildiği, kat'î delille sabit hükümlerdir | T |
+| V.6.1.3 | Çekirdek, **sübûtu ve delâleti** birlikte kat'î olan hükümlerdir | T |
+| V.6.1.4 | İctihada dayanan zannî hükümler çekirdek değildir; onların hududu V.7.8'de çizilir | K |
+| V.6.1.5 | Bir farzın veya haramın **inkârı**, hükmün dinden olduğunu ya da doğruluğunu reddetmektir; bu **tasdikin reddidir** | T |
+| V.6.1.6 | Bir farzın **terki**, hükmü tasdik edip yerine getirmemektir; bu **iradeye** düşer, tasdiki bozmaz (Ehl-i sünnet çizgisi; Açık İş 3) | K |
+| V.6.1.7 | Dolayısıyla "farz olana inanmayan îmândan çıkar" cümlesi **inkâr** için doğrudur, **terk** için doğru değildir; kitap ikisini ayırır | K |
+| V.6.1.8 | Çekirdek, kitabın ispat borcunun **alt sınırıdır**: bunlar ispatlanmadan İslâm'ı kabul eden kişiye "kabul ettin" denemez | K |
+
+### V.6.2 Taksim
+
+| No | Cümle | Cins |
+| :-- | :-- | :-- |
+| V.6.2.1 | Her hükmün bir **hak sahibi** vardır: Allah'ın hakkı, kulun hakkı veya ikisinin ortak hakkı | T |
+| V.6.2.2 | Konuya göre hükümler **Allah'la kul arası** (ibadet ve itikat) olabilir | K |
+| V.6.2.3 | Konuya göre hükümler **kulun kendisiyle** ilgili olabilir (yeme, içme, giyim, nefsin korunması) | K |
+| V.6.2.4 | Konuya göre hükümler **başka insanlarla** ilgili olabilir (aile, mal, can, adalet, ceza, ahde vefa) | K |
+| V.6.2.5 | Konuya göre hükümler **öteki varlıklarla** ilgili olabilir (hayvan, çevre) | K |
+| V.6.2.6 | Karma hüküm (meselâ zinâ: Allah hakkı, nesil, aile) **asıl hak sahibine** göre yerleşir, öteki bâblara atıf yazılır | K |
+| V.6.2.7 | İlk bölme (hak sahibi) nefy–isbâta dayanır; konu bölmesi **sayımdır**, zannîdir | Z |
+| V.6.2.8 | Yeni bir hüküm sınıfa girmezse tâdil işler (I.1.13) | K |
+
+### V.6.3 Her hüküm için bâb şablonu
+
+| No | Cümle | Cins |
+| :-- | :-- | :-- |
+| V.6.3.1 | Hükmün ne söylediği tanımlanır | T |
+| V.6.3.2 | Hükmün **sübûtu** kat'îdir: kimden geldiği ve kaç kanaldan nakledildiği gösterilir (V.4, I.4.5) | B |
+| V.6.3.3 | Hükmün **delâleti** kat'îdir: metin başka türlü anlaşılamaz | B |
+| V.6.3.4 | Hükmün **hikmeti**: neyi koruduğu ve ne kazandırdığı, aklen çıkarılabilen kısmıyla yazılır | K |
+| V.6.3.5 | Hikmeti aklen çıkarılamayan kısım (ta'abbüdî) **ilan edilir**, saklanmaz | K |
+| V.6.3.6 | Hükmün **adâleti**: muhataba, başkasına ve topluma yükü tartılır; adâlet ölçüsü hakem olarak akla indirilir | K |
+| V.6.3.7 | İtirazlar hücre hücre yazılır ve ilzam edilir (V.0.4) | K |
+| V.6.3.8 | Her hükmün katiyet işareti yazılır; zannî kalan kısım saklanmaz | K |
+| V.6.3.9 | Hüküm bâbı üç fiildeki (tasavvur, tasdik, irade) ret kollarını cevaplar | K |
+
+### V.6.4 Hüküm listesi
+
+| No | Cümle | Cins |
+| :-- | :-- | :-- |
+| V.6.4.1 | Liste **fıkıh kaynağından** çıkarılır, benim ezberimden yazılmaz | K |
+| V.6.4.2 | Liste **dört mezhebin ortak ve kat'î hükümleri** esasıyla kurulur (tavsiye; S12) | Z |
+| V.6.4.3 | Listenin her maddesi bir bâb açar | K |
+| V.6.4.4 | Liste **henüz yazılmadı**; kaynak seçimi padişaha sorulur (S12) | K |
+| V.6.4.5 | Kaç hüküm olduğu, hangi hak sahibi altında durduğu bâblar yazıldıkça **sayılır** | K |
+
+### V.6.5 Hükümler arası iç tutarlılık
+
+| No | Cümle | Cins |
+| :-- | :-- | :-- |
+| V.6.5.1 | Çekirdek hükümler birbiriyle çelişmez | İ |
+| V.6.5.2 | Her hükmün öteki hükümlerle bağı (din, can, akıl, nesil, mal gibi korunan değerler) gösterilir | K |
+| V.6.5.3 | Korunan değerlerin beş olması **sayımdır**, zannîdir; hasır diye sunulmaz | Z |
+
+**Tenkit (V.6):** (1) Bu bâb kitabın **en büyük** bâbıdır ve hükümlerin listesi **şu an elimde yoktur**; sayısını uydurmam. (2) V.6.1.6 terk–inkâr ayrımı Ehl-i sünnet kelâmına göredir; Hâricî ve Mu'tezile'nin amel–îmân ilişkisi farklıdır, kitap çizgisini ilan etmelidir. (3) "Her hükmün hikmeti aklen gösterilir" iddiası **yapılmaz**: ta'abbüdî kısım ilan edilir (V.6.3.5); bu, "hikmeti bilinmeyen hükmün doğruluğu ancak H4'ten gelir" demektir ve profesörün H4'ü kabul etmediği durumda o hükmün doğruluğu için **aklî delil yetmez**: bunu saklamak ispatı sahte kılar. (4) V.6.2.6 karma hükümler mütebâyin şartını **zorlar**; asıl hak sahibi kaidesi bir uzlaşmadır.
 
 ---
 
-## V.7 MÜSLÜMAN OKUYUCU
+## V.7 AÇIKLAMA VE TAHKİK (SÜNNET)
 
 | No | Cümle | Cins |
 | :-- | :-- | :-- |
-| V.7.1 | Müslüman okuyucunun şüphesi **zincirde yerine konur**: hangi halka, hangi fiil (tasavvur · tasdik · irade) | K |
-| V.7.2 | **Şüphe** ile **vesvese** ayrılır: şüphe hükmü **değiştirebilecek** delil içerir, vesvese **içermez** (I.8.6) | K |
-| V.7.3 | Şüphe bir **delil** taşıyorsa ilgili bâbın **itiraz matrisine** girer ve cevaplanır | K |
-| V.7.4 | Vesveseye **delil değil**, teşhis verilir: vesvese tanımı gereği **hiçbir yaprağı değiştirmez** | K |
-| V.7.5 | **Îmânın derinleşmesi:** tasdîkten **iz'âna** geçmek; tasdîk delille, iz'ân **delilin kişide yerleşmesiyle** olur | K |
-| V.7.6 | **Tasdîk ve amel** ayrıdır; delil **tasdîke** yönelir, amel iradeye bağlıdır (V.0.A.2) | K |
-| V.7.7 | Müslüman okuyucu için kitapta **ilan edilir**: hangi yaprak yakînî, hangisi zannî; **zannî yaprağı yakînî gösterip îmânı onun üzerine kurmak** **yasaktır** | K |
-| V.7.8 | Zannî yapraklarda **sükûn**, **delilin zayıf olduğunun** açıkça bilinmesinden doğar; sahte kesinlik sükûn vermez | K |
+| V.7.1 | **H4 ve H5 ispatlanmışsa** peygamber, metnin **açıklayıcısıdır**; bu cümle H4'e dayalıdır | K |
+| V.7.2 | Sünnetin **nakli** haberdir: isnad, tevâtür, haber-i vâhid (I.4.5, I.3.6) | K |
+| V.7.3 | Tevâtür derecesine çıkan sünnet **yakînî**, âhâd sünnet **zannîdir** | K |
+| V.7.4 | **İtiraz:** sünnet güvenilmezdir | İt |
+| V.7.5 | **Cevap:** itiraz **hangi nakil zincirinin** güvenilmez olduğunu göstermelidir; toptan reddetmek **aceleci genellemedir** (I.6.3.13) | C |
+| V.7.6 | **İtiraz:** "Kur'ân yeter" | İt |
+| V.7.7 | **Cevap:** metnin **kendisi**, açıklama gerektiren yerlere sahip olduğundan açıklama gerekir; **sınırlama kendi içinden çıkarılmalıdır** (H4'e dayalı) | C |
+| V.7.8 | **İctihad** metnin hükmünden **yeni durumlara** zannî çıkarımdır; netice **zannî** ve işaretlidir | K |
+| V.7.9 | **Makâsıd** (hükümlerin gayeleri) ictihada yön verir; makâsıdın kaynağı H5'te gösterilen hikmettir | K |
+| V.7.10 | Bu bâb **Fasıl IV**'ün karşılığıdır; **içeriği kaynak okunduktan** sonra deşilir | Z |
 
 ---
 
-## V.8 HÂTİME
+## V.8 MÜSLÜMAN OKUYUCU
 
 | No | Cümle | Cins |
 | :-- | :-- | :-- |
-| V.8.1 | **Delil haritası:** her halka için hangi delil, hangi usul, hangi katiyet işaretiyle durduğu tek tabloda gösterilir | K |
-| V.8.2 | Tabloda **zayıf halkalar** (V.1.3.a.3, V.1.3.b.4, V.2.2.5, V.3.4.9, V.5.2.4) ayrıca **adıyla** yazılır | K |
-| V.8.3 | **Kapanış defteri raporu:** 48 hücre, kaçı cevaplandı, kaçı sınırlandı, kaçı açık | K |
-| V.8.4 | **Açık suâller** listesi: hangi sorular **cevapsız** kaldı | K |
-| V.8.5 | Kitap kapanışı **padişaha teklif edilir**, hükmü padişahındır (3-I 190) | K |
+| V.8.1 | Müslüman okuyucunun şüphesi **zincirde yerine konur**: hangi halka, hangi fiil (tasavvur · tasdik · irade) | K |
+| V.8.2 | **Şüphe** ile **vesvese** ayrılır: şüphe hükmü **değiştirebilecek** delil içerir, vesvese **içermez** (I.8.6) | K |
+| V.8.3 | Şüphe bir **delil** taşıyorsa ilgili bâbın **itiraz matrisine** girer ve cevaplanır | K |
+| V.8.4 | Vesveseye **delil değil**, teşhis verilir: vesvese tanımı gereği **hiçbir yaprağı değiştirmez** | K |
+| V.8.5 | **Îmânın derinleşmesi:** tasdîkten **iz'âna** geçmek; tasdîk delille, iz'ân **delilin kişide yerleşmesiyle** olur | K |
+| V.8.6 | **Tasdîk ve amel** ayrıdır; delil **tasdîke** yönelir, amel iradeye bağlıdır (V.0.A.2) | K |
+| V.8.7 | Müslüman okuyucu için kitapta **ilan edilir**: hangi yaprak yakînî, hangisi zannî; **zannî yaprağı yakînî gösterip îmânı onun üzerine kurmak** **yasaktır** | K |
+| V.8.8 | Zannî yapraklarda **sükûn**, **delilin zayıf olduğunun** açıkça bilinmesinden doğar; sahte kesinlik sükûn vermez | K |
+
+---
+
+## V.9 HÂTİME
+
+| No | Cümle | Cins |
+| :-- | :-- | :-- |
+| V.9.1 | **Delil haritası:** her halka için hangi delil, hangi usul, hangi katiyet işaretiyle durduğu tek tabloda gösterilir | K |
+| V.9.2 | Tabloda **zayıf halkalar** (V.1.3.a.3, V.1.3.b.4, V.2.2.5, V.3.4.9, V.5.2.4) ayrıca **adıyla** yazılır | K |
+| V.9.3 | **Kapanış defteri raporu:** 58 hücre, kaçı cevaplandı, kaçı sınırlandı, kaçı açık | K |
+| V.9.4 | **Açık suâller** listesi: hangi sorular **cevapsız** kaldı | K |
+| V.9.5 | Kitap kapanışı **padişaha teklif edilir**, hükmü padişahındır (3-I 190) | K |
 
 ---
 

@@ -2,13 +2,13 @@
 
 | Kaide | Hüküm |
 | :-- | :-- |
-| Esas | Kitabın kapanışı **iki matrisle** ölçülür. **Kısım A:** argümanın altı bileşenine vuran taarruz matrisi (28 hücre). **Kısım B:** muhatap ağacının halka × fiil matrisi (26 hücre). Toplam **54 hücre** |
+| Esas | Kitabın kapanışı **iki matrisle** ölçülür. **Kısım A:** argümanın altı bileşenine vuran taarruz matrisi (28 hücre). **Kısım B:** muhatap ağacının halka × fiil matrisi (30 hücre). Toplam **58 hücre** |
 | Hücre | Her hücre kitapta bir bâbta **cevaplanmış** ya da **sınırı ilan edilmiş** olmalıdır; aksi hâlde açıktır |
 | Durum | **AÇIK** · **CEVAP YAZILDI** (bâb atfıyla) · **SINIR İLAN EDİLDİ** (kabul edilen hudut yazıldı) |
 | Vesvese | Bir suâl bu defterin hiçbir hücresini, ağacın hiçbir yaprağını ve hiçbir katiyet işaretini değiştirmiyorsa vesveseden sayılır; sayısı kütüğe yazılır |
 | Hasır farkı | **Kısım B aklî hasırdır** (önermenin parçaları × tasavvur-tasdik-irade; kapalılık yapıdan gelir, yakînî). **Kısım A istikrâîdir** (bileşenlere göre sayım, taarruz türleri taranarak bulundu; zannî). Yeni taarruz çıkarsa A'ya hücre eklenir; kapalılık iddiası hücre sayısıyla birlikte yazılır |
-| Kapanış teklifi | Üç şart birlikte olunca (54 hücrenin tamamı AÇIK değil · yeni suâl vesveseye döndü · her bâb kapanış hükmünü taşıyor) kapanış **teklif edilir; hükmü padişahındır** (3-I 190) |
-| Cevap yerleri | Kitabın yeni iskeletine göredir: gövde Kısım V (V.0–V.8), usul Kısım I (Bâb 1–8), giriş Bâb 0. Cevap yerleri **plandır**; metin yazılmadıkça hücre AÇIK kalır |
+| Kapanış teklifi | Üç şart birlikte olunca (58 hücrenin tamamı AÇIK değil · yeni suâl vesveseye döndü · her bâb kapanış hükmünü taşıyor) kapanış **teklif edilir; hükmü padişahındır** (3-I 190) |
+| Cevap yerleri | Kitabın yeni iskeletine göredir: gövde Kısım V (V.0–V.9), usul Kısım I (Bâb 1–8), giriş Bâb 0. Cevap yerleri **plandır**; metin yazılmadıkça hücre AÇIK kalır |
 
 ## KISIM A -- TAARRUZ MATRİSİ (bileşen × taarruz türü)
 
@@ -17,7 +17,7 @@ Bileşenler: **K** kaynak · **Ö** öncül · **S** sûret (çıkarım) · **N*
 | # | Bileşen | Taarruz türü | Misal | Cevap yeri | Durum |
 | :-- | :-- | :-- | :-- | :-- | :-- |
 | 1 | K | Kaynağın tahrifi ve isnat itirazı | "Kitap sonradan değiştirildi" | V.4.1, V.4.5 | AÇIK |
-| 2 | K | Kaynağın güvenilirliği ve tevâtür reddi | "Nakledenler yanılabilir" | V.6.2, Kısım I 4.5 | AÇIK |
+| 2 | K | Kaynağın güvenilirliği ve tevâtür reddi | "Nakledenler yanılabilir" | V.7.2, Kısım I 4.5 | AÇIK |
 | 3 | K | Tarihsel eleştiri ve çeviri/anlam itirazı | "Metin kendi çağını yansıtır" | V.4.1, V.4.4 | AÇIK |
 | 4 | Ö | Öncülün reddi (mene') | "Her hâdisin muhdisi vardır'ı kabul etmiyorum" | V.1.3, Kısım I 3, 5 | AÇIK |
 | 5 | Ö | Öncülün katiyet derecesini düşürme | "Bu yakînî değil, zannîdir" | V.1.6, Kısım I 3 | AÇIK |
@@ -39,15 +39,15 @@ Bileşenler: **K** kaynak · **Ö** öncül · **S** sûret (çıkarım) · **N*
 | 21 | M | İspat yükü kaydırma | "İddia sahibi ispatlasın; ben yokluğu iddia etmiyorum" | V.0.2, Kısım I 3.9 | AÇIK |
 | 22 | M | Şer problemi ve duygusal itiraz | "Bu kadar acı varken…" | V.5.4 | AÇIK |
 | 23 | M | Bilinemezcilik | "Bu konular aklın dışındadır" | V.0.3, V.1 (hüküm kolu), Kısım I 3, 4 | AÇIK |
-| 24 | M | Ahlâkî itiraz (hükümlere) | "Bu hüküm adil değil" | V.5.3 | AÇIK |
+| 24 | M | Ahlâkî itiraz (hükümlere) | "Bu hüküm adil değil" | V.6.3 | AÇIK |
 | 25 | M | Muhatabın kabul etmediği kaynakla delil getirmek (musâdere) | "Kur'ân'ı delil gösteriyorsun, ben onu kabul etmiyorum" | Giriş 0.4, V.0.5 | AÇIK |
 | 26 | M | Çifte standart | "Bu delil benim dinimi de ispatlar" | V.2.4, V.4.5, V.4.6, Kısım I 4.3 | AÇIK |
 | 27 | M | Muhatabın tabiî başlangıç noktasının yanlış seçilmesi | "Allah'ı kabul ediyorum, neden vücûd ispatıyla başlıyorsunuz?" | Giriş 0.2-0.3 (ağaç) | AÇIK |
 | 28 | M | Toplumsal ve siyasî itiraz (yalnız dinle ilgili oldukları ölçüde) | "Din geri kalmışlığın sebebidir; devlet işine karışamaz; dincilerin yaptığı ortada" | V.5.7, Kısım I 6 (genetik safsata) | AÇIK |
 
-## KISIM B -- MUHATAP MATRİSİ (halka × fiil; 3-I 197)
+## KISIM B -- MUHATAP MATRİSİ (halka × fiil; 3-I 197, 200)
 
-Fiiller: **tasavvur** (mefhuma ulaşmamış veya yanlış ulaşmış) · **tasdik · kendi tarttı** (cezm, zan, şek) · **tasdik · devraldı** · **irade** (doğru tarttı, istemiyor). **Birinci düzey (halka) aklî hasırdır; fiil düzeyi ve alt dallar zannîdir.**
+Fiiller: **tasavvur** (mefhuma ulaşmamış veya yanlış ulaşmış) · **tasdik · kendi tarttı** (cezm, zan, şek) · **tasdik · devraldı** · **irade** (doğru tarttı, istemiyor). **Birinci düzey (halka) aklî hasırdır; fiil düzeyi ve alt dallar zannîdir.** H6, kitabın çekirdeğidir.
 
 | # | Halka | Fiil | Misal itiraz (o hücrenin insanından) | Cevap bâbı | Durum |
 | :-- | :-- | :-- | :-- | :-- | :-- |
@@ -55,31 +55,35 @@ Fiiller: **tasavvur** (mefhuma ulaşmamış veya yanlış ulaşmış) · **tasdi
 | B2 | H0 ortak zemin | tasdik · kendi tarttı | "Evveliyyât da bir kabuldür; hiçbir şey bilinemez (cezm)" | V.0.4(b) (ilzam, üç sofist sınıfı) | AÇIK |
 | B3 | H0 ortak zemin | tasdik · devraldı | "Bana öğretilen şüpheciliği tekrar ediyorum, bakmadım" | V.0.4(b), V.0.A.5 | AÇIK |
 | B4 | H0 ortak zemin | irade | "Mantık dediğin şey sonucu beğenmediğimde bana yük" | V.0.4(b), V.0.2 | AÇIK |
-| B5 | H1 Allah'ın varlığı | tasavvur | "Bu soruyu hiç sormadım; ya da Allah'ı gökteki ihtiyar sanıp reddediyorum" | V.1.1-1.2 (mefhumun tanımı, soruyu ilgilendirici yapmak) | AÇIK |
+| B5 | H1 Allah'ın varlığı | tasavvur | "Bu soruyu hiç sormadım; ya da Allah'ı gökteki ihtiyar sanıp reddediyorum" | V.1.1-1.2 | AÇIK |
 | B6 | H1 Allah'ın varlığı | tasdik · kendi tarttı | "Âlem ezelîdir / tesadüfen var / kuantum boşluktan (cezm); bilinemez (şek)" | V.1.3, V.1.4 | AÇIK |
 | B7 | H1 Allah'ın varlığı | tasdik · devraldı | "Çevrem ateistti, delile bakmadım" | V.1.2, V.0.A.5 | AÇIK |
-| B8 | H1 Allah'ın varlığı | irade | "Varsa hesap vardır; olmasını istemiyorum" | V.1.2, V.7.6 | AÇIK |
+| B8 | H1 Allah'ın varlığı | irade | "Varsa hesap vardır; olmasını istemiyorum" | V.1.2, V.8.6 | AÇIK |
 | B9 | H2 kimlik: tevhid ve kemâl | tasavvur | "Tek mi çok mu olduğunu hiç düşünmedim" | V.2.1 | AÇIK |
 | B10 | H2 kimlik: tevhid ve kemâl | tasdik · kendi tarttı | "Teslis / çok tanrı / bütüncülük / düalizm doğrudur" | V.2.1, V.2.3 (kendi kaynaklarıyla ilzam) | AÇIK |
 | B11 | H2 kimlik: tevhid ve kemâl | tasdik · devraldı | "Ailem öyle öğretti, ben bakmadım" | V.2.3.8, V.0.A.5 | AÇIK |
-| B12 | H2 kimlik: tevhid ve kemâl | irade | "Aracısız tek bir Rab'be teslimiyet istemiyorum" | V.2.4, V.7.6 | AÇIK |
+| B12 | H2 kimlik: tevhid ve kemâl | irade | "Aracısız tek bir Rab'be teslimiyet istemiyorum" | V.2.4, V.8.6 | AÇIK |
 | B13 | H3 bildirme (vahiy) | tasavvur | "Vahiy diye bir imkân olduğunu bilmiyordum; vahyi hep karikatürüyle tanıdım" | V.3.1-3.2 | AÇIK |
 | B14 | H3 bildirme (vahiy) | tasdik · kendi tarttı | "Tanrı vardır ama konuşmaz (deist); vahiy psikolojik" | V.3.1, V.3.6 | AÇIK |
 | B15 | H3 bildirme (vahiy) | tasdik · devraldı | "Okulda vahyin mümkün olmadığı söylendi, kabul ettim" | V.3.6, V.0.A.5 | AÇIK |
-| B16 | H3 bildirme (vahiy) | irade | "Bir peygambere tâbi olmak özgürlüğümü bağlar" | V.3.2, V.7.6 | AÇIK |
-| B17 | H4 bu bildirim Kur'ân | tasavvur | "Kur'ân'ı hiç okumadım, reddediyorum" | V.4.1-4.2 (metne ulaştırmak) | AÇIK |
+| B16 | H3 bildirme (vahiy) | irade | "Bir peygambere tâbi olmak özgürlüğümü bağlar" | V.3.2, V.8.6 | AÇIK |
+| B17 | H4 bu bildirim Kur'ân | tasavvur | "Kur'ân'ı hiç okumadım, reddediyorum" | V.4.1-4.2 | AÇIK |
 | B18 | H4 bu bildirim Kur'ân | tasdik · kendi tarttı | "Başka vahiy son; Kur'ân insan sözü; Muhammed samimi ama yanılmış" | V.4.2-4.7 | AÇIK |
 | B19 | H4 bu bildirim Kur'ân | tasdik · devraldı | "Cemaatim/çevrem Kur'ân hakkında böyle diyor, bakmadım" | V.4.4-4.5, V.0.A.5 | AÇIK |
-| B20 | H4 bu bildirim Kur'ân | irade | "Doğru olsa bile ailemin/cemaatimin dinini bırakamam" | V.4.5, V.7.6 | AÇIK |
-| B21 | H5 doğruluk | tasavvur | "İçeriğinin ne söylediğini bilmiyorum" | V.5.1-5.3 | AÇIK |
-| B22 | H5 doğruluk | tasdik · kendi tarttı | "İçinde çelişki / bilime aykırılık / adaletsizlik var" | V.5.3, V.5.5, V.5.6, V.5.7 | AÇIK |
-| B23 | H5 doğruluk | tasdik · devraldı | "Toplumda din böyle bilinir, böyle sanıyorum" | V.5.7, V.0.A.5 | AÇIK |
-| B24 | H5 doğruluk | irade | "Hükümleri hayatıma uymuyor" | V.5.3, V.7.6 | AÇIK |
-| B25 | Müslüman: S3 | şüpheli | "Bazı delilleri zayıf buluyorum, şüphem var" | V.7.1-7.3 | AÇIK |
-| B26 | Müslüman: S3 | sağlam | "Sarsılmaz inandım" (sağlamlığın muhasebesi: tasdîkten iz'âna) | V.7.5 | AÇIK |
+| B20 | H4 bu bildirim Kur'ân | irade | "Doğru olsa bile ailemin/cemaatimin dinini bırakamam" | V.4.5, V.8.6 | AÇIK |
+| B21 | H5 bildirimin doğruluğu (genel) | tasavvur | "Bu kitabın ne söylediğini bilmiyorum" | V.5.1-5.2 | AÇIK |
+| B22 | H5 bildirimin doğruluğu (genel) | tasdik · kendi tarttı | "İçinde çelişki / bilime aykırılık var" | V.5.5, V.5.6 | AÇIK |
+| B23 | H5 bildirimin doğruluğu (genel) | tasdik · devraldı | "Toplumda din böyle bilinir, böyle sanıyorum" | V.5.7, V.0.A.5 | AÇIK |
+| B24 | H5 bildirimin doğruluğu (genel) | irade | "Hesap ve ahiret fikri hayatımı bağlıyor" | V.5.2, V.8.6 | AÇIK |
+| B25 | H6 her farz ve haram (çekirdek) | tasavvur | "Bu farzın/haramın ne olduğunu, neden konduğunu bilmiyorum" | V.6.3, V.6.1 | AÇIK |
+| B26 | H6 her farz ve haram (çekirdek) | tasdik · kendi tarttı | "Bu hüküm adil değil / akla aykırı / çağa uymuyor" | V.6.3, V.5.7 | AÇIK |
+| B27 | H6 her farz ve haram (çekirdek) | tasdik · devraldı | "Çevrem bu hükmün geri olduğunu söylüyor, kendim bakmadım" | V.6.3, V.0.A.5 | AÇIK |
+| B28 | H6 her farz ve haram (çekirdek) | irade | "Hükmün doğru olduğunu görüyorum, ama bana ağır geliyor" | V.6.1 (terk ≠ inkâr), V.8.6 | AÇIK |
+| B29 | Müslüman: S3 | şüpheli | "Bazı delilleri zayıf buluyorum, şüphem var" | V.8.1-8.3 | AÇIK |
+| B30 | Müslüman: S3 | sağlam | "Sarsılmaz inandım" (sağlamlığın muhasebesi: tasdîkten iz'âna) | V.8.5 | AÇIK |
 
 ## SAYIM
 
-**Kısım A: 28 hücre** (28 açık). **Kısım B: 26 hücre** (26 açık). **Toplam: 54 hücre, 54 açık, 0 cevap yazıldı, 0 sınır ilan edildi.** Vesveseden sayılan suâl: 0.
+**Kısım A: 28 hücre** (28 açık). **Kısım B: 30 hücre** (30 açık). **Toplam: 58 hücre, 58 açık, 0 cevap yazıldı, 0 sınır ilan edildi.** Vesveseden sayılan suâl: 0.
 
-**Tenkit:** (1) Kısım A'nın taarruz türleri benim taramamdır, istikrâîdir; kapalılığı zannîdir. (2) Kısım B'de **yalnız halka düzeyi aklî hasırdır** (bağlaç mantığı). Fiil düzeyi (tasavvur · tasdik · irade) ve tasdiğin alt dalları sayıma dayanır; **zannîdir** ve öyle işaretlenir; bir kişi birden çok fiilde reddediyorsa **ilk** ret fiili sayılır. (3) Cevap yerleri plandır; bâb yazılınca hücre kapanır.
+**Tenkit:** (1) Kısım A'nın taarruz türleri benim taramamdır, istikrâîdir; kapalılığı zannîdir. (2) Kısım B'de **yalnız halka düzeyi aklî hasırdır** (bağlaç mantığı). Fiil düzeyi ve tasdiğin alt dalları sayıma dayanır; **zannîdir**; bir kişi birden çok fiilde reddediyorsa **ilk** ret fiili sayılır. (3) H6 hücrelerinin cevap bâbı, hüküm listesi (S12) gelmeden **yazılamaz**; bu yüzden H6'nın dört hücresi, liste gelene kadar yalnız şablonla durur. (4) Cevap yerleri plandır; bâb yazılınca hücre kapanır.
