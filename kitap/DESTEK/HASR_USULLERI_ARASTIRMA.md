@@ -44,3 +44,15 @@ TDV İslâm Ansiklopedisi "Sebr ve Taksim" (islamansiklopedisi.org.tr/sebr-ve-ta
 
 - **B6:** Üçü de B1'i değiştirmez: hepsi **verili bir kümeyi** bölür; hangi suâllerin sorulacağını vermez. U10 ve U12 3-I 207 yasağına takılır.
 - **B7:** U11'in tek faydası: tamlığın **bir bilgi düzeyine göre** tanımlanması, B3'teki "ayırıcılık amaca göredir" ile aynı hükümdür; yeni bir hasr usulü değildir. Alt/üst yaklaşım dışını eleme yine elemedir.
+
+## 7. Arkadaşın ikinci metni: Kartezyen çarpım · ikili karar ağacı · kategori okları
+**Dürüstlük kaydı:** Metin padişahın aktarımıdır; atıfları (Stanford Encyclopedia kategori teorisi maddesi dâhil) açılıp okunmadı. Aşağıdaki hükümler **benim akıl yürütmemdir**, padişahın sözü değildir (F 2-A 33-B). Kant'ın Aristoteles kategorilerine itirazı **hafızadandır**, kaynağı yoklanmadı.
+
+| # | Usul | Tamlığı nereden alır | Neden suâl kümesini hasretmez |
+| :-- | :-- | :-- | :-- |
+| U13 | Kartezyen çarpım (nitelik matrisi) | Çarpanların tamlığından | **Boyutların hangileri olacağı** hasredilmedi; aynı borç bir kat yukarı taştı. Örnekteki "Akıl/Nakil/Hiss" üçlüsü istikrâîdir (dördüncü şık itirazı açık); "var/yok" ise aklî hasırdır. Hücrelerin boş çıkması (bağımsızlık şartı) ayrıca yoklanır. Sekiz cihet tablosunun (V.6.2.59–75) yapısı **aynısıdır** ve padişah onu istikrâî diye dondurmuştu |
+| U14 | İkili karar ağacı | Her düğümde nefy–isbât | Bu zaten U1 ve Ağaç K'dır. Hangi suâlin hangi düğümde soruleceği serbesttir; yaprak sayısı o seçime bağlıdır. "Tam ortadan ikiye" şartı da yanlıştır (bölme eşit olmak zorunda değil). Ağaç verilen bir elemanı **yerleştirir**, sorulabilecek bütün suâlleri hasretmez (B2) |
+| U15 | Kategori okları (yapısal hasr) | "Ok sayısı sonlu ve nettir" | Sonluluk ve netlik **varsayılmıştır**; ok kümesi verili olmalıdır (B1). Özü U6 (Yoneda) ile aynıdır |
+
+- **B8:** "Yol haritası" kısmı da B1'i doğrular ama aksini iddia eder: Aristoteles'in on kategorisi **sayarak bulunmuştur** (Kant'ın itirazı tam budur: bir ilkeden türetilmemiş); "hasrdır" denemez, 3-I 207'ye takılır. "Değişkenler sınırlı olduğu için suâller hasrolur" cümlesi sınırlılığı **verili** alır. "Kaynağın dışına taşmayan suâller" ise suâlleri kaynağa bağlar; bu 3-I 209'daki farz inanç kümesi için doğrudur, muhatap için öncül olamaz (3-I 187).
+- **B9 (benim akıl yürütmem):** Bütün hasr usullerinde yük bir **verili**ye (tanım · kanun · kaynak · boyut listesi) kayıyor; U13 bunu en açık gösterir. Açık borç aynen kalıyor: hangi verili, hangi tasnifin altında duracak.
