@@ -72,6 +72,40 @@ Kullanıcı kararı: telif sorun değildir (kişisel araştırma, yeniden neşir
 | 9 | Attas (Prolegomena, Islam and Secularism) | `attas` | İngilizce OCR |
 | 9 | Izutsu, God and Man in the Koran | `izutsu_god_and_man` | İngilizce OCR |
 
+## 2-B. Tercüme, yeni neşir ve çağdaş çalışmalar (4 Ekim 2026; padişahın "malumat daha kıymetli" tevcihi)
+
+Esas: ham klasik metin avından çok, kitabın ne dediğini anlatan Türkçe/İngilizce tercüme ve çalışma. Her klasörde `KUNYE.md` vardır (kaynak URL, tür, sayfa/karakter). Makale PDF'leri metin katmanından çıkarıldı (OCR değil); arşiv öğeleri OCR'dır ve kaliteleri aşağıda ölçülen oranla yazılıdır.
+
+| Klasör | Ne | Dil | Not |
+| :-- | :-- | :-- | :-- |
+| razi_mealimu_usulid_din_tr | Râzî, Meâlimü Usûli'd-Dîn (L. Aydın) | tr | OCR, tanınan kelime ~%69 |
+| razi_esasut_takdis_tr | Râzî, Esâsü't-Takdîs (Allah'ın Aşkınlığı) | tr | OCR ~%77 |
+| razi_tefsir_kebir_tr_akcag | Mefâtîhu'l-Gayb Türkçe (Akçağ) | tr | OCR ~%79, 33 MB |
+| razi_tafsir_kebir_fatiha_en | Râzî, Fâtiha tefsiri | en | |
+| razi_muhassal_atay_ar_nesir | Muhassal, Atay neşri | **ar (tercüme değil)** | OCR bozuk; okumaya esas alınmaz. Türkçe Muhassal tercümesi **elde yok** |
+| razi_muhassal/ocr_yeni | Muhassal için iyileştirilmiş OCR deneyi | ar | arka plan bölme + Otsu + tessdata_best: tanınan oran %35,6 → %41,5 (sayfa denemesinde ~2 kat, kitapta 5,9 puan) |
+| maturidi_kitabut_tevhid_tr | Kitâbü't-Tevhîd Türkçe | tr | iki dosya: Ar-Tr ikili sayfa ~%20 (kötü), diğeri ~%51 |
+| maturidi_tevilat_tercume_tr | Te'vîlâtü'l-Kur'ân Tercümesi, 17 cilt | tr | OCR, cilt 8 ~%91 |
+| maturidi_kitab_tawhid_en | Kitâb at-Tawhîd | en | |
+| abdulcebbar_usul_hamse_tr | Şerhu'l-Usûli'l-Hamse (Çelebi/Aydın) | tr | OCR %76–80 |
+| gazali_makasid_tr | Makâsıdü'l-Felâsife | tr | OCR ~%72 |
+| gazali_incoherence_marmura_en | Tehâfüt, Marmura | en | yalnız Tehâfüt tutuldu |
+| averroes_incoherence_of_incoherence_en | Tehâfütü't-Tehâfüt | en | |
+| curcani_tarifat_tr | Ta'rîfât Türkçe | tr | OCR ~%63 |
+| ibn_sina_metaphysics_of_healing_en | Şifâ, İlâhiyyât | en | |
+| taftazani_serhul_akaid_elder_en | Şerhu'l-Akâid, Elder | en | |
+| tusi_serhul_isarat_9th_namat_en | Tûsî, İşârât 9. nemat | en | |
+| sadra_ariflerin_iksiri_tr / sadra_ve_ilahi_hikmet_nasr_tr / sadra_mukhtar_ali_en | Sadrâ: Ariflerin İksiri, Nasr, Mukhtar Ali | tr, tr, en | PDF metin katmanı |
+| hocazade_tehafut_ve_gelenegi, gazali_tehafut_tercume_incelemesi | Tehâfüt geleneği, Hocazâde, Tehâfüt tercüme incelemesi | tr | makale |
+| taskoprizade_mudafaa_risalesi, kemalpasazade_isbat_i_vacib | Taşköprîzâde, Kemalpaşazâde | tr | makale |
+| sirri_pasa_serhul_akaid_tercumesi, serhul_akaid_hasiyelerinde_kelam | Sırrı Paşa tercümesi, Akâid hâşiyeleri | tr | makale |
+| gelenbevi_hayati_ve_eserleri, harputlu_ishak_efendi, fenari_aynul_ayan | Gelenbevî, Harputlu (256 s. tez, Ziyâü'l-Kulûb dâhil), Fenârî | tr | makale/tez |
+| gazali_miyar_el_ilm_tr_yek | Mi'yârü'l-İlm Türkçe | tr | yalnız 6 sayfalık alıntı |
+
+Engeller (sayıyla): `.gov.tr` (YEK) ve github.com ağ politikasıyla kapalı; `access-restricted` arşiv öğeleri (Gazâlî Kitaplığı, Marmura Şifâ, van den Bergh, Inati İşârât, Najat) HTTP 401 verdi, aşılmadı. `ibn_rushd_felsefe_savunusu_makale` bağlantısı 404.
+
+Hâlâ tercümesi/çalışması elde olmayanlar: Muhassal Türkçe, Mi'yârü'l-İlm tam, Şerhu'l-Mevâkıf, İşârât ve Şifâ Türkçe (yalnız YEK'te), Gelenbevî ve Hocazâde'nin asıl eserleri, Gazâlî İktisâd Türkçe, İbn Rüşd Faslü'l-Makâl/Keşf Türkçe, Sırrı Paşa Arâü'l-Milel, Filibeli, Aynî, İzmirlî, Kuşçu, Fenârî tam tercüme, Taşköprîzâde Felsefe Risâleleri, Sadrâ Meşâir İngilizce.
+
 ## 3. Hâlâ bulunamayanlar
 
 archive.org'da ad yoklamasıyla çıkmadı veya çıkan kayıt başka eserdi:
