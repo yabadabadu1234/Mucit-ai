@@ -622,11 +622,28 @@
 | V.6.2.51 | Misal (yoklanmamış): "âlemin yaratıcısı kaç?" cevap uzayı {yok, bir, çok}; farz: bir; haram: yok ve çok (çokun alt kolları ayrıca bölünür) | M |
 | V.6.2.52 | Tevakkuf ve şek bir cevap değil **kişi hâlidir** (V.0.A); cevap uzayına girmez | K |
 | V.6.2.53 | **Sıradaki iş (3-I 205): inanılabilecek şeylerin mahiyet çeşitlerinin tasnifi**; buradan öteye geçmenin şartıdır | K |
-| V.6.2.54 | Mahiyet iki ayrı suâle ayrılır: inanılan şeyin **kendisi ne** (mevzu çeşidi) ve inanılan **iddia ne** (iddia çeşidi); ikincisi Kısım I Bâb 4.1'de kuruludur, ikinci bir tertip yolu açılmaz, **terkip** edilir | K |
-| V.6.2.55 | **Teklif M1 (mevzu çeşidi):** vâcib zât · mümkin zât (şehâdet âleminin zâtları, gayb âleminin zâtları) · sıfat · fiil ve olay · nisbet · söz (haber) · itibârî (hüküm); cisim–mücerred ayrımı kelâmda ihtilaflı olduğundan yapılmaz | Z |
-| V.6.2.56 | **Teklif M2 (iddia çeşidi):** varlık · sıfat ve fiil · geçmiş vâkıa · gelecek ve gayb · hüküm ve değer · tecrübî kanun · imkân ve vukû' (Kısım I Bâb 4.1) | K |
-| V.6.2.57 | M1 ve M2 iki eksendir; bağımsızlıkları denenmemiştir (hüküm iddiası itibârîyi gerektirir, bağımlı olabilir) | Z |
+| V.6.2.54 | **[NAKZ 3-I 206]** İnanılan şey bir **iddiadır**; "inanılan şeyin kendisi ne?" suâlinin cevabı "iddia"dır, M2 ayrı eksen değildir; sorulacak suâl: **inanılan şey neye göre ne olur, kaç cihetten tasnif edilir** | K |
+| V.6.2.55 | M1 (mevzu çeşidi) **birinci cihet** olarak kalır: vâcib zât · mümkin zât (şehâdet âleminin zâtları, gayb âleminin zâtları) · sıfat · fiil ve olay · nisbet · söz (haber) · itibârî (hüküm); cisim–mücerred ayrımı kelâmda ihtilaflı olduğundan yapılmaz | Z |
+| V.6.2.56 | Kısım I Bâb 4.1'in iddia türleri (varlık · sıfat ve fiil · geçmiş vâkıa · gelecek ve gayb · hüküm ve değer · tecrübî kanun · imkân ve vukû') **yüklemin türüdür** ve **ikinci cihet** olarak kalır; ayrı eksen değildir | Z |
+| V.6.2.57 | Cihetlerin bağımsızlığı denenmemiştir (V.6.2.71) | Z |
 | V.6.2.58 | Çeşitler **listelenmeden** sayı mühürlenmez | K |
+| V.6.2.59 | Cihetler **zâtî** ve **izâfî** diye ikiye ayrılır: zâtî cihet inanılan şeyin kendisine ait vasıftır; izâfî cihet onun bir başkasına nispetidir (mükellefe, bildirim bağına, delile) | Z |
+| V.6.2.60 | Farz–haram (3-I 203), memba–kanal–malumat–muhatap (3-I 204) ve aklî–nakilî (reddedildi, 3-I 204) **izâfî cihetlerdir**; "inanılan şeyin kendisi" suâli zâtî cihetleri sorar | Z |
+| V.6.2.61 | Birim **basit önermedir**: mürekkep iddia ("Allah vardır ve birdir") önce basit önermelere ayrılır; aksi hâlde bir iddia iki hücreye düşer | K |
+| V.6.2.62 | **Zâtî cihet 1 — mevzu:** iddia neyin hakkındadır (V.6.2.55) | Z |
+| V.6.2.63 | **Zâtî cihet 2 — mahmûl:** iddia ne söylüyor (V.6.2.56) | Z |
+| V.6.2.64 | **Zâtî cihet 3 — yapı:** basit (hamlî) · şartlı muttasıl · şartlı munfasıl | Z |
+| V.6.2.65 | **Zâtî cihet 4 — keyfiyet:** müspet · menfî | K |
+| V.6.2.66 | **Zâtî cihet 5 — kemmiyet:** şahsî · cüz'î · küllî | K |
+| V.6.2.67 | **Zâtî cihet 6 — cihet (kip):** zarûrî · mümkin (vâkî) · mümteni | K |
+| V.6.2.68 | **Zâtî cihet 7 — zaman:** zamansız · geçmiş · hâl · gelecek | Z |
+| V.6.2.69 | **Zâtî cihet 8 — doğruluk:** doğru · yanlış; mümteni olan yanlıştır, zarûrî olan doğrudur, mümkin olan ikisinden biri olabilir | K |
+| V.6.2.70 | Sekiz cihetin hâsırlığı önermenin çözümlenişinden gelir (parçalar: mevzu, mahmûl; nisbetin vasıfları: yapı, keyfiyet, kemmiyet, cihet, zaman; doğruluk) ve **istikrâîdir**; klasik mantığın kaziyye taksimi (yapı, keyfiyet, kemmiyet, cihet) kaynaktan yoklanmadı | Z |
+| V.6.2.71 | Cihetler **bağımsız değildir** (zarûrî olan zamansızdır; hüküm iddiası itibârî mevzuyu gerektirir); bağımlılar ağaç, bağımsızlar çarpım kurar | Z |
+| V.6.2.72 | Cihet sayısı **sekizdir (geçici)**; hücre sayısı listelenmeden mühürlenmez | Z |
+| V.6.2.73 | Misal (yoklanmamış): "Allah vardır" = (vâcib zât, varlık, basit, müspet, şahsî, zarûrî, zamansız, doğru) | M |
+| V.6.2.74 | Misal (yoklanmamış): "Allah'ın oğlu vardır" = (vâcib zât, nisbet, basit, müspet, şahsî, mümteni, zamansız, yanlış); haram kolun bir parçası buna benzer yanlış iddialardır | M |
+| V.6.2.75 | Misal (yoklanmamış): "Kıyamet kopacak" = (olay [gayb], varlık ve vukû', basit, müspet, şahsî, mümkin [vâkî], gelecek, doğru) | M |
 
 ### V.6.3 Her hüküm için bâb şablonu
 
