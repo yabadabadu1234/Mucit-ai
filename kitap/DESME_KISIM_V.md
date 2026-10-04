@@ -585,6 +585,20 @@
 | V.6.2.14 | **Teklif 8 (taksim değil, derece): icmâlî mi, tafsîlî mi inanmak?** Her esasa kaç ayrıntıya kadar inanmak farz olduğunu söyler; melek ve kader yapraklarının derinliğini belirler; hücre kesmez, ispat borcunun **derinliğini** ölçer | K |
 | V.6.2.15 | **Tavsiye:** birinci eksen Teklif 6 (ispat sırasından türediği için seçilmiş değil, bulunmuştur); ikinci eksen Teklif 3 (hangi öncüllerin Kur'ân'sız kurulacağını gösterir); üçüncü olarak Teklif 8 derece cetveli; birim önerme olur, unsur olmaz (kusurlar buradan giderilir) | Z |
 | V.6.2.16 | Birinci ve ikinci eksenin **bağımsızlığı** (kartezyen çarpım şartı, I.1.10) denenmemiştir; hüküm sübûtu yalnız nakilî olduğu için bir hücre boş kalır; **karar bekler** (S15) | Z |
+| V.6.2.17 | **Padişahın üst bölmesi (3-I 203):** asıl·itikadî kümesi inanması farz olanlar ve inanması haram olanlardır; "3.sü olmaz" | K |
+| V.6.2.18 | "Üçüncü kol yoktur" cümlesi **kümenin tanımı** olarak okunur: inanması ne farz ne haram olan önerme (dünyevî bilgiler gibi) vardır, fakat kümenin dışındadır; başka okuma hâsırı kırar (S17) | Z |
+| V.6.2.19 | İki ayrı küme karıştırılmaz: **önermeler** (bu tasnif) ve **kişi hâlleri** (muhatap ağacı, V.0.A); muhatabın çeşidi ispat usulünü değiştirir, önermenin tasnifini değiştirmez | K |
+| V.6.2.20 | **Haram olan, farz olanın reddidir:** her farz inanç p için ¬p ve p ile bağdaşmayan her q'yu tasdik etmek haramdır; haram kolun içi tek tek doldurulamaz fakat **farz kolun bölümüne göre bölünür** | Z |
+| V.6.2.21 | Haram kolun ikinci ekseni **ret fiilidir** (tasavvur, tasdik, irade); bu eksen muhatap ağacında (V.0.A) kuruludur; yani haram kolun bölümü = halka × ret fiili | K |
+| V.6.2.22 | Asıl haram inançların **hepsinin** bir farz inancın karşıtı olduğu iddiası kaynaktan yoklanmamıştır; bağımsız bir haram inanç bulunursa V.6.2.20 düşer | Z |
+| V.6.2.23 | **Mısıroğlu delili (padişahın aktarımı):** Mecelle'deki mefsedeti defetme kaidesi ve kelime-i tevhidde nefyin isbâttan önce zikri, haramın da tasnif edilebileceğine dayanak gösterilmiştir; kaynağı yoklanmamıştır | Z |
+| V.6.2.24 | Mecelle kaidesi **fiillerde maslahat–mefsedet tercihi** kaidesidir; inanç tasnifine uygulanması kıyastır, aklî burhan değildir | K |
+| V.6.2.25 | Kelime-i tevhidin cümle sırası **bağlaç ve istisnâ sırasıdır**, mantıkî öncelik göstermez; nefy ve isbât birlikte hasrı kurar | K |
+| V.6.2.26 | Öncelik iki ayrı sıradır: **ispatta farz önce gelir** (haram, farzın reddi olarak onun bölümünden türer); **kişinin ödevinde nefy önce gelir**; padişahın "farza öncelik" sözü ile Mısıroğlu'nun "nefye öncelik" sözü bu iki sırada çatışmaz | Z |
+| V.6.2.27 | **Farz kolun bölümü (teklif, Ağaç A):** esas = "bu önermenin ispatı **hangi halkada tamamlanır**" (V.0.1.7); hücreler: Allah (H1–H2) · kanal: nübüvvet, vahiy, kitap (H3–H4) · gayb haberleri: melek, âhiret, kader (H5) · hükümler: farz ve haramın sübûtu ile beş şartın farziyeti (H6) | Z |
+| V.6.2.28 | Esasın mütebâyin ve hâsır olması **tanımdan** gelir (her önermenin ispatının tamamlandığı bir **ilk** halka vardır); bedeli: birim **önerme** olur, unsur olmaz (âhiretin imkânı H2'de, vukû'u H5'te) | K |
+| V.6.2.29 | Bu tasnif ispat adımı ile içerik arasındaki eşlemeyi kendiliğinden verir: kitabın bâbları hücrelerdir | K |
+| V.6.2.30 | **Kümedekiler önce listelenmeden hücre sayısı mühürlenmez** (3-I 203); liste kaynaktan çıkarılır (S12'ye bağlı) | K |
 
 ### V.6.3 Her hüküm için bâb şablonu
 

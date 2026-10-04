@@ -3,7 +3,7 @@
 | Kaide | Hüküm | Atıf |
 | :-- | :-- | :-- |
 | Mahiyet | Kitabın fihristidir; **kaynakların değil**. Her bâb müzakerede çıktıkça buraya mühürlenir | 3-I 181 |
-| **Mevzu** | Kitabın mevzuu **yalnız asıl·itikadîdir**: altı îmân esasına, İslâm şartlarının farz olduğuna ve bir farz ya da haramın dinde sabit olduğuna inanmak. Asıl·amelî ve füru kitabın dışındadır. Asıl·itikadî bölünecektir (S15) | 3-I 202 |
+| **Mevzu** | Kitabın mevzuu **yalnız asıl·itikadîdir**: altı îmân esasına, İslâm şartlarının farz olduğuna ve bir farz ya da haramın dinde sabit olduğuna inanmak. Asıl·amelî ve füru kitabın dışındadır. Asıl·itikadî bölünecektir: üstte **inanması farz · inanması haram** (S15) | 3-I 202, 203 |
 | İskelet sırası | Giriş → Kısım I (usul) → Kısım V (gövde); Kısım II, III, IV, VI ertelendi. Başlıklar umumîden hususîye | P |
 | **Ehemmiyet ve yazım sırası** | **Usul gövdedendir:** Kısım I (usul) ile Kısım V (ispat) **birlikte** yazılır, iskelet sırasıyla (önce usul). **Yalnız Mukaddime ve Giriş** gövde bitince usulen yazılır. (Önceki "usul metni gövdeden sonra" yazımım padişahın sözünü çarpıtmıştı; nakz 3-I 195) | 3-I 189, 195 |
 | Muhatap ve seviye | **Gayrimüslim "profesör"** (mecaz: en yüksek ilmî seviye; fiilen padişahın kendi başlangıç ve bitiş hâli). Muhatabın başlangıcı: padişahın yazılan şeyi aklî zaruretle önceden bilip bilmediği; bilinenler sonraya ertelenir, **hangisinin bilindiğini padişah söyler**. Üç katman vardır, **şimdilik yalnız bu katman yazılır** | 3-I 186, 192 |
@@ -178,5 +178,6 @@ Padişahın üç usulü (CLAUDE.md 3-I 183) bâb 1, 3, 4 olarak durur; komşu us
 | S13 | H6'nın budanması: farz içinde ne var? | **Kapandı, nakzedildi (3-I 202):** 201'in dört hücresi nakzedildi; mevzu yalnız asıl·itikadî |
 | S14 | "Amelî" nedir? | **Düştü (3-I 202):** amelî kitabın mevzuu değildir |
 
-| S15 | **Asıl·itikadîyi nasıl bölelim?** | Sekiz teklif sınandı (DESME_KISIM_V V.6.2.6–V.6.2.14); tavsiye: birinci eksen **bildirimin yapısı** (bildiren · vasıta · bildirilen), ikinci eksen **delilin kaynağı** (aklî · nakilî), üçüncü olarak icmâlî–tafsîlî derece; birim önerme; karar padişahın |
+| S15 | **Asıl·itikadîyi nasıl bölelim?** | Sekiz teklif sınandı (DESME_KISIM_V V.6.2.6–V.6.2.14); tavsiye: birinci eksen **bildirimin yapısı** (bildiren · vasıta · bildirilen), ikinci eksen **delilin kaynağı** (aklî · nakilî), üçüncü olarak icmâlî–tafsîlî derece; birim önerme; karar padişahın | **3-I 203 ile:** üst bölme inanması farz · inanması haram; haram, farzın reddi olarak farz kolun bölümünden türer; farz kol için "ispatı hangi halkada tamamlanır" esası teklif edildi (DESME_KISIM_V V.6.2.17–30)
 | S16 | **200–202 gerilimi:** mevzu asıl·itikadî ise V.6.3'ün hüküm bâbları (hikmet, adâlet) kitapta kalır mı? | (1) mevzu = sübûta inandırmak; hikmet ve adâlet yaprakları yalnız **itiraz cevabı** olarak kalır · (2) her hükmün doğruluğu (hikmet dâhil) ispat edilir; 202 yalnız bölme sahasını söyler · (3) padişahın hükmü |
+| S17 | **"3.sü olmaz" nedir?** | (1) kümenin tanımı: küme yalnız inanması farz veya haram olanlardır, "ne farz ne haram" önermeler kümenin dışındadır (tavsiye) · (2) bölmede üçüncü kol gerçekten yoktur: o zaman ne farz ne haram önerme **yoktur** demek gerekir, ki doğru değildir · (3) padişahın hükmü. Ayrıca Mısıroğlu delilinin kaynağı (Mecelle maddesi, kelime-i tevhid) yoklanacak |
