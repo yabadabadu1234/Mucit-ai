@@ -15,3 +15,10 @@ Kadir Mısıroğlu'nun "3000 sıfat-ı ilâhiye var" dediği (padişah: en az yi
 
 ## Açık
 Mısıroğlu'nun cümlesinin yeri (hangi sohbet, kaç dakika) ve rivayetin ilk kaynağı yoklanmadı.
+
+## Ek: padişahın verdiği video (youtube.com/watch?v=L-VHgzvHrlk, 7:20 sonrası)
+**Okunamadı.** WebFetch YouTube'dan Google "sorry" (bot doğrulaması) sayfasına yönlendirildi; `youtube-transcript-api` "IpBlocked" verdi (bulut IP'si engelli). Engeli aşma yoluna girilmedi. **Videoda ne söylendiği bilinmiyor**; aşağıdaki, padişahın aktardığı cümleden ibarettir.
+- Padişahın aktarımı: Mısıroğlu 7:20'den sonra bir **misal** veriyor: **"Şâfî" ismi 99 ismin içinde yok.** (Videodan doğrulanmadı.)
+- Arama özeti (genel, videoyla ilgisiz): Şâfî, Kâfî, Hannân, Mennân, Hüdâ gibi isimler 99 listesinin dışında kullanılıyor.
+- Hafızadan (kaynak yoklanmadı): "Ente'ş-Şâfî, lâ şifâe illâ şifâüke" duası Buhârî ve Müslim'de geçer; yani Tirmizî listesindeki 99'un dışında hadiste geçen bir isim vardır.
+- Açık: "3000" sayısının videoda geçip geçmediği; hangi kaynaktan söylendiği.
