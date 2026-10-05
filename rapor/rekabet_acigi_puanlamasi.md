@@ -28,3 +28,26 @@ Matematiksel yöntemler ve bilgisayar programları "kendi başına" patent konus
 - **Çizelgeleme:** job-shop kıyas kümeleri + sonlu kapasiteli kural tabanlı çizelge ile "sonsuz kapasite" taban çizgisinin karşılaştırması; eksik olan kısıtlar açıkça yazılır.
 - **1B/2B kesim:** gerçek atölye parça listeleri benzeri sentetik kümeler + yerli programların (Yedikare vb.) aynı kümelerde çıktısı.
 - Her aday için önceden eşik: ortanca iyileşme ≥ X puan, yoksa dur.
+
+---
+## Ek (5 Ekim 2026, ikinci tur): yapıştırılan "verimsiz sektörler" listesinin yoklanması
+Listede (15 sektör) çoğu çözüm "blokzincir, NFT, pazaryeri" türü; matematik ve kıyas verisi olanlar yoklandı:
+
+| Aday | Rakip açığı (kanıt) | Fark kolaylığı | Tek başına test | Alıcı | Not |
+| :-- | :-: | :-: | :-: | :-: | :-- |
+| **Kaynak kısıtlı proje çizelgeleme (RCPSP): inşaat** | **4–5.** PSPLIB J30 kümesinde optimale göre gecikme: MS Project %5,18; Primavera %9,45; Spider %2,24 ([PlanningPlanet test raporu](https://planningplanet.com/forums/planning-scheduling-programming-discussion/531539/test-report-comparison-resource-leveling-en)) — **forum testi, hakemli değil**; J30 küçük bir küme | 4 (açık kaynak CP-SAT ve metasezgiseller; PSPLIB'de bilinen optimumlar) | **5** (PSPLIB açık) | 3–4 (inşaat planlamacıları; Primavera/MSP'ye bağlılık güçlü, dosya tabanlı eklenti mümkün) | Aynı çekirdek küçük imalatçı çizelgelemeye de uygulanır |
+| Ağır ekipman kiralama atıl kapasite | 3. Filo kullanım oranı tipik %55–70, hedef %65–85 ([Quipli](https://www.quipli.com/resources/calculators/general-and-heavy-equipment-rental-utilization/)); mevcut araçlar çoğunlukla izleme, optimizasyon değil | 3 | 1 (açık veri yok) | 3 | Sentetik veriye mahkûm |
+| Boş konteyner konumlandırma | 3. Yıllık 15–20 milyar $; maliyetin ~%33'ü şirket verimsizliği ([BCG](https://www.bcg.com/publications/2015/transportation-travel-logistics-think-outside-your-boxes-solving-global-container-repositioning-puzzle), [Loadstar](https://theloadstar.com/empty-container-repositioning-costs-shipping-industry-20bn-year/)) | 2 | 2 | 1 (armatörler çok büyük, kapalı) | |
+| Son kilometre teslimat | 2. Amazon son kilometre veri seti açık (6.112 rota) ([LMRRC](https://github.com/donato-maragno/Amazon-LMRRC)); hedef şoför davranışını tahmin | 3 | 4 | 3 | Rakipler çok, VRP açık kaynak güçlü |
+
+### Listedeki rakamların yoklaması
+- "Projelerin %80'inden fazlası bütçeyi aşar": McKinsey'e göre **mega projelerin %98'i %30'dan fazla aşıyor** ve milyar dolar üstü mega projelerde ortalama aşım ~%80; liste bu rakamı bütün projelere yaymış ([McKinsey](https://www.mckinsey.com/capabilities/operations/our-insights/megaprojects-the-good-the-bad-and-the-better)).
+- "Konteynerlerin %20'si boş": BCG bölgeye göre %14–29 (ABD %15, Avrupa %29, Çin %25); başka bir kaynak "her üçüncü konteyner boş" diyor; **tek bir sayı yok**.
+- "Yaş sebze-meyve %30–40 yolda ziyan": doğrulamadım.
+- "E-ticarette %20–40 iade": doğrulamadım.
+- Blokzincir/NFT çözümleri: bu ölçütlere (rakip açığı, test edilebilirlik) uymuyor; matematik içermiyor.
+
+### Güncel sıralama
+1. **Kaynak kısıtlı çizelgeleme çekirdeği** (inşaat ve küçük imalatçı): rakip açığı belgeli, kıyas verisi açık, rakibin gelişmiş yöntemi var ama kapalı ve eski.
+2. **Çok levhalı gerçek şekilli nesting çekirdeği**.
+3. 1B/2B kesim (kanıtı kolay, açığı küçük).
