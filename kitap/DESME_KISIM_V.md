@@ -690,6 +690,11 @@
 | V.6.2.119 | **K2, K5, K7 aynı ailedendir (başka yuvarlaklarla ilişki):** kuşatılmak ile yapışık olmak aynı anda doğru olabilir (iç teğet); bu yüzden ayrı eksenlerdir, fakat **tek eksen** olarak da okunabilir; karar padişahın | Z |
 | V.6.2.120 | **Tenzih kaydı:** K2, K5, K7 yer ve yapışıklık dilidir; yuvarlak yalnız **temsildir**. Vâcib için mekân ve cisim isnat edilmez (V.2.1.7–8); bu eksenlerin Vâcib'e cevabı "uygulanamaz (tenzih)"dir, bir yere yerleştirme değildir | K |
 | V.6.2.121 | **Dondurulanlar (V.6.2.94):** 207'nin yasağı bu kümede kalktığı için sekiz cihet, zamanın üçlü bölümü ve M1 listesi **yasak kapsamından çıktı**; çözülüp çözülmeyeceği (yeni eksenlerle ilişkisi) padişaha sorulur | Z |
+| V.6.2.122 | **Padişahın tenkidi (hüküm değil, gözlem):** "Ama bu model bile garanti değil, tek boyutta daire yoktu, iç yoktu, 2 boyutta çıktı. Belki 10 boyutta farklı şekiller ortaya çıkar kimbilir. Keşke 3'ten fazla boyutu resmetmenin bir yolu olsaydı." | Z |
+| V.6.2.123 | Claude okuması: yuvarlak temsili **boyuta bağlıdır**; eksen kümesinin açık oluşu (V.6.2.115) bunun sonucudur, çünkü yeni boyut yeni ilişki türü doğurabilir | Z |
+| V.6.2.124 | Claude gözlemi: düzlemde iki top için üç ilişki vardır: **ayrık · kısmen örtüşür · biri diğerinin içinde** (nefy–isbât: kesişim boş mu; değilse biri diğerini kapsıyor mu). K2 ve K5 bu üçlüyü kapsamaz: **kısmen örtüşen** için değer yoktur | Z |
+| V.6.2.125 | Claude gözlemi: **çember** (yalnız sınır) ile **top** (iç dâhil) ayrı nesnelerdir. "Tek boyutta daire yoktu, iç yoktu" cümlesi çemberi kastediyorsa doğrudur; topu kastediyorsa tek boyutta aralık vardır ve içi vardır. "Yuvarlak"ın hangisi olduğu padişahça söylenmedi | Z |
+| V.6.2.126 | Claude gözlemi (hafızadan, yoklanmadı): üç boyutta iki çember ne içindedir ne kesişir ne yapışıktır, yine de birbirine **geçmiş** olabilir; düzlemde bu ilişki yoktur. Padişahın "10 boyutta farklı şekiller" sezgisini destekler | Z |
 
 ### V.6.3 Her hüküm için bâb şablonu
 
