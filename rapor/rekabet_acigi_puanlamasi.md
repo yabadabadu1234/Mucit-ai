@@ -51,3 +51,22 @@ Listede (15 sektör) çoğu çözüm "blokzincir, NFT, pazaryeri" türü; matema
 1. **Kaynak kısıtlı çizelgeleme çekirdeği** (inşaat ve küçük imalatçı): rakip açığı belgeli, kıyas verisi açık, rakibin gelişmiş yöntemi var ama kapalı ve eski.
 2. **Çok levhalı gerçek şekilli nesting çekirdeği**.
 3. 1B/2B kesim (kanıtı kolay, açığı küçük).
+
+---
+## Ek (5 Ekim 2026, üçüncü tur): Türk Telekom kapısı ve fiber ağ tasarımı
+**Soru:** fiber zaten büyük ölçüde döşendiyse tasarım ihtiyacı sürer mi?
+- Fiber hane kapsaması 34,4 milyon, fiber abone 14,4 milyon: **7,3 milyonu FTTC (kabine kadar fiber), 7,1 milyonu FTTH/B (eve/binaya fiber)**; fiber ağ ~550 bin km; 2026 ilk çeyrek yatırım 17 milyar TL (%70,3 artış) ([BT Günlüğü](https://www.btgunlugu.com/turk-telekom-2026-ilk-ceyrek-5g-fiber-buyume/)). Yani kabinden eve geçiş (FTTC→FTTH) hâlâ yapılacak büyük iş.
+- 2026 CAPEX yoğunluğu %33–34; sabit hat CAPEX'i (fiber erişim+çekirdek) toplamın %51'i; **yönetim 2026'yı 5G ve imtiyaz yenilemesi çakışması yüzünden istisnai yıl olarak anıyor, yatırım yoğunluğunun sonraki yıllarda normalleşmesi bekleniyor** ([Investing.com özeti](https://www.investing.com/news/transcripts/earnings-call-transcript-turk-telekom-posts-solid-q2-2026-growth-as-capex-rises-93CH-4843224)) → talep tepe yapmış olabilir.
+- Hane sayısı uyumsuzluğu: TÜİK 2025'te 26,98 milyon hane halkı; Türk Telekom "34,4 milyon hane kapsaması" diyor; fark tanım farkı olabilir (bağımsız bölüm vb.), **çözülmedi**.
+
+**Rakip araçlar:** Esri ArcGIS, Bentley OpenComms, IQGeo Comsof (otomatik fiber planlama), Nokia Broadband Easy ("fiber varlığı toplam sahip olma maliyetini %10'dan fazla, açılımı %20'den fazla hızlandırır" — satıcı iddiası, elle tasarıma göre) ([Telecoms.com](https://www.telecoms.com/fibre/nokia-launches-tool-to-automate-fibre-deployment-planning)). Otomatik planlamanın elle tasarıma göre "%10'a kadar" maliyet tasarrufu iddiası var ([IQGeo](https://www.iqgeo.com/products/comsof-fiber)). **Optimuma göre açık belgelenmemiş.**
+
+**Test verisi:** SNDlib: 22 ağ, 830 örnek, çözümleri ve dual sınırlarıyla ([SNDlib](https://optimization-online.org/wp-content/uploads/2007/08/1746.pdf)); ancak bu omurga/aktarım ağı tasarımı, son kilometre FTTH değil.
+
+**Yeniden puan (benim yargım):**
+| Aday | Rakip açığı | Fark atma | Tek başına test | Alıcı kapısı |
+| :-- | :-: | :-: | :-: | :-: |
+| Fiber ağ tasarımı (FTTH) | 2–3 (rakip araçlar var, açık belgesiz) | 2–3 | 3 (OSM ile sentetik) | 4 (TT kapısı) |
+| RCPSP çizelgeleme çekirdeği | 4 (J30'da %5–9, forum testi) | 4 | 5 | 3–4 |
+
+**Gözlem:** Fiber kazı/döşeme işleri de bir **kaynak kısıtlı çizelgeleme** problemidir (ekip, ekipman, mahalle bağımlılıkları). Aynı çekirdek hem inşaata hem Türk Telekom'un yayılım programına satılabilir.
