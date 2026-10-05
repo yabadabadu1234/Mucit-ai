@@ -704,6 +704,16 @@
 | V.6.2.133 | İcmâlî–tafsîlî derece kaynakta vardır (Teklif 8, V.6.2.14 ile örtüşür): îmân bilinen şeyde icmâlen, ayrıntısı bilinen şeyde tafsîlen farzdır | Z |
 | V.6.2.134 | Hükmüm: fıkıh **liste kaynağı** (S12) ve **sınır çizici** olarak alınır; inanılanları fıkıh sınıflarına **bölmek** kategori hatasıdır. Ayrıntı: `DESTEK/FIKIH_TASNIFI_IMANA_UYAR_MI.md` | Z |
 | V.6.2.135 | Muhatap ağacında **ikrar** ekseni yoktur: kalbiyle tasdik edip ikrar etmeyenin yeri açıktır | Z |
+| V.6.2.136 | **Padişah (3-I 229):** ayırmayı bıraktı. Suâl: Allah, melekler, kitaplar, peygamberler, kaza ve kader, âhiret günü, bunların detayları, cinler, vesaire **nasıl listelenecek** | Z |
+| V.6.2.137 | Okuma: Şerhu'l-Akâid (OCR İngilizce, Arapçayla doğrulanmadı) **baştan sona** okundu; Nesefî'nin matni her bölümün başında bütün hâlinde basılıdır (satır 1228–1234) | Z |
+| V.6.2.138 | Matn 18 grupta 91 maddeye dökülmüştür: `DESTEK/LISTE_NESEFI_AKAID_MATNI.md`; maddeler mürekkeptir, basit önermeye bölme yapılmadı (V.6.2.61) | Z |
+| V.6.2.139 | Padişahın saydıkları matında karşılık bulur: Allah (3–7), kaza ve kader (8–9), âhiret (10, 18), elçiler, melekler, kitaplar (13); **cinler matında yoktur**, yalnız şerhte geçer (satır 1962, 7429, 7597) | Z |
+| V.6.2.140 | İslâm şartlarının farz olduğuna inanmak (3-I 202 (2)) ve bir farz ya da haramın sabit olduğuna inanmak matında **yoktur**; kaynağı fıkıhtır (S12) | Z |
+| V.6.2.141 | Matnin bir kısmı füru adayıdır: hilâfet ve imamet (bölüm 15), namaz, mesh, nebîz (bölüm 16), müctehid (bölüm 18); Teftâzânî bölüm 17'de bunların bir kısmının fıkıh ayrıntısı olduğunu kendisi kabul eder (satır 8478–8492). Mevzuya girip girmediği 3-I 202'ye göre tartılır | Z |
+| V.6.2.142 | Kaynağın kendi kaidesi: itikadda zan hesaba katılmaz (satır 7472–7476); bu yüzden peygamber sayısı sınırlanmaz (satır 7463). Listede **"sayılmaz"** hücreleri bundan doğar | Z |
+| V.6.2.143 | **Düzeltme (3-I 179):** V.6.2.130–134'teki "fıkıh sınıfları inanılanları bölmez" hükmüm **dardı.** Çevirmen dipnotunda Sanûsî farz (îcâb) örneğini "Allah'a ve elçilerine îmân", haram (tahrîm) örneğini "Allah'a ortak koşmak" verir (satır 1398–1404). Üst bölme (farz · haram) fıkıh diliyle örtüşür; alt bölme (rükün, şart, bâb düzeni) örtüşmez | Z |
+| V.6.2.144 | Teftâzânî hükümleri **asliye ve itikadiye** ile **fer'iye ve amelîye** diye ayırır (satır 1381–1384); 3-I 202'deki asıl·itikadî eksenine kaynaktan karşılık | Z |
+| V.6.2.145 | **Önerilen yöntem (Claude, teyitsiz):** (1) iskelet Nesefî matni, her madde basit önermelere bölünür; (2) her maddede sınır testi: kat'î sübût ve delâlet; (3) matında olmayanlar (cinler gibi) nasslardan tamamlanır [H4'e dayalı]; (4) 202 (2) ve (3) için fıkıh veya ilmihal listesi (S12); (5) icmâlî–tafsîlî katman | Z |
 
 ### V.6.3 Her hüküm için bâb şablonu
 

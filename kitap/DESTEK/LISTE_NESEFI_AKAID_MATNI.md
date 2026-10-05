@@ -187,7 +187,7 @@
 | 91 | İnsanlardan elçiler, meleklerden elçilerden; meleklerden elçiler insanların geneline; insanların geneli meleklerin geneline faziletlidir. |
 
 ## Sayım
-Toplam **91 madde**. Dağılım: Allah ve sıfatları 3–7: 21 · kader 8–9: 10 · âhiret 10 ve 18: 11 · elçiler, melekler, kitaplar 13: 9.
+Toplam **91 madde**. Dağılım (bölüm başlıklarına göre): Allah ve sıfatları 3–7: 18 · kaza ve kader 8–9: 10 · âhiret 10 ve 18: 11 · elçiler, melekler, kitaplar 13: 9.
 
 ## Mevzu dışı adayı (Claude okuması, padişahın sözü değil; karar padişahın)
 - Bölüm 15 (hilâfet ve imamet) ve 16 (namaz, mesh, nebîz) ile 18'in müctehid maddesi: Teftâzânî bölüm 16'da sıralamayla ilgili "hiçbir amelî mesele buna bağlı değildir" der (satır 7962–7966) ve bölüm 17'de bunların bir kısmının fıkıh ayrıntısı olduğunu kendisi kabul eder (satır 8478–8492).

@@ -33,3 +33,10 @@
 - Ağaçta (S3: şüpheli · sağlam) kalbiyle tasdik edip dille ikrar etmeyenin (ikinci görüşe göre mü'min) yeri.
 - Altı esasın sayım yeri (Âmentü) okunmadı; "şart" teriminin o sayımdaki kullanımı yoklanmadı.
 - Okuma OCR İngilizce çevirisidir, Arapçayla doğrulanmadı.
+
+## Ek (3-I 229 turu): kitabın tamamı okununca çıkanlar
+Şerhu'l-Akâid baştan sona okundu (`kaynak/taftazani_serhul_akaid_elder_en/OKUMA_DURUMU.md`). Önceki hükmümü **düzeltir** (3-I 179):
+1. **Teftâzânî'nin kendi ayrımı:** şer'î hükümlerin bir kısmı amelîdir ve fer'î denir, bir kısmı îmân esaslarına bağlıdır ve **asliye ve itikadiye** denir (bölüm 1, satır 1381–1384). Bu, 3-I 202'deki asıl·itikadî eksenine kaynaktan karşılıktır.
+2. **Şer'î hükmün beşli dili inanca da uygulanır:** çevirmen dipnotunda (Sanûsî'den) **farz (îcâb)** örneği "Allah'a ve elçilerine îmân ve beş şart", **haram (tahrîm)** örneği "Allah'a ortak koşmak, zinâ"dır (satır 1398–1404); "Müslümanların bütün fiilleri bu beş başlıktan birine girer" (satır 1409). Yani üst bölme (inanması farz · inanması haram) fıkıh diliyle örtüşür. Önceki cevabımdaki "teklîfî hüküm fiillere mahsustur, kısmen uyar" ifadesi bu bakımdan **fazla dardı**; doğrusu: üst bölme örtüşür, **alt bölme** (rükün, şart; fıkıh bâb düzeni) örtüşmez.
+3. **Kaynağın sınır kaidesi:** itikadda zan hesaba katılmaz, bu yüzden peygamber sayısı sınırlanmaz (satır 7463–7476).
+4. **Ebû Hanîfe'nin "farz geldikçe îmân arttı" açıklaması** ve icmâlî–tafsîlî derece okundu (bölüm 13); farz ile inanma bağı kaynaktan görülüyor.
