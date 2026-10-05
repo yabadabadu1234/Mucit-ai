@@ -57,3 +57,12 @@ Padişahın telifi: **şuur açısından boşluk = teaddüd.** Boşluğun mahiye
 | KARMA | iki hücrenin terkibi; nispet = bilinen : bilinmeyen | |
 **Notlar:** kapalının alt dalları fihrist Kısım I Bâb 3'teki yakînin şartlarından (cezm, mütâbakat, zevâl kabul etmeme) şuura açık olanlarla örtüşür. "Cinsi bilinen açık" dalının cinsleri **sayılamaz** (istikrâî olur, 3-I 207); cinsin kendisi de bir suâldir, yani yapı **özyinelemelidir**: cinse dair boşluğun kendi bilinen–bilinmeyen ayrımı vardır.
 
+## 3-I 216: ne–mı tezi ve karşı misal araması
+**Padişahın tezi:** bütün suâller ya "ne" suâli ya "mı/mi" suâlidir; "başka sual var mı?"
+**Benim cevabım (kat'î kısım):** 215'teki iki nefy–isbât suâlinden (bilinen ihtimal var mı / bilinmeyen ihtimal var mı) **dört hücre** çıkar: (var, yok) = **mı**; (yok, var) = **ne**; (var, var) = karma, **iki kutbun terkibi**; (yok, yok) = boşluk yok, **suâl yok**. Üçüncü bir kutup bu iki premisten çıkmaz. **Premis:** suâl = şuurdaki boşluk; boşluk = ihtimal kümesi (3-I 214). Karşı misal ancak bu premisleri çürütürse geçerlidir; misal saymak ispat değildir.
+**Tutmayan yerler:**
+1. **"Hepsi ne" lafzen tutmaz:** kim, kaç, hangi "ne+" değildir. "Ne" **anlamca** okunmalı (kim = ne kişi, kaç = ne kadar sayı).
+2. **"Hangisi?" ve "A mı B mi?":** dilde soru sözcüğü, şuurda **kapalı** (aday kümesi hazır) → **mı kutbuna** gider. Sınıflama sözcüğe göre değil, **boşluğun biçimine** göredir.
+3. **Mı kalıbı taşıyıp boşluğu olmayanlar** (istifham-ı mecâzî: "Bu da mı?") suâl değildir (3-I 214: boşluk şuurda yoksa suâl yok).
+**Terkibin somut karşılığı (benim gözlemim):** nerede, ne zaman, ne kadar, nasıl, niçin, kim gibi sözcükler **"ne"nin cinsi çözülmüş hâlidir**: kim = ne + ("şahıs mı?" zaten cevaplandı). Nispet = çözülmüş mı sayısı : kalan ne. **Zayıf yan:** cinsleri dil sayar, sayarak hasredemeyiz (3-I 207); cinsin kendisi de bir suâldir (özyineleme).
+
