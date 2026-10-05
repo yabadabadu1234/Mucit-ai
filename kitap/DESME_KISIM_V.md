@@ -695,6 +695,15 @@
 | V.6.2.124 | Claude gözlemi: düzlemde iki top için üç ilişki vardır: **ayrık · kısmen örtüşür · biri diğerinin içinde** (nefy–isbât: kesişim boş mu; değilse biri diğerini kapsıyor mu). K2 ve K5 bu üçlüyü kapsamaz: **kısmen örtüşen** için değer yoktur | Z |
 | V.6.2.125 | Claude gözlemi: **çember** (yalnız sınır) ile **top** (iç dâhil) ayrı nesnelerdir. "Tek boyutta daire yoktu, iç yoktu" cümlesi çemberi kastediyorsa doğrudur; topu kastediyorsa tek boyutta aralık vardır ve içi vardır. "Yuvarlak"ın hangisi olduğu padişahça söylenmedi | Z |
 | V.6.2.126 | Claude gözlemi (hafızadan, yoklanmadı): üç boyutta iki çember ne içindedir ne kesişir ne yapışıktır, yine de birbirine **geçmiş** olabilir; düzlemde bu ilişki yoktur. Padişahın "10 boyutta farklı şekiller" sezgisini destekler | Z |
+| V.6.2.127 | **Padişahın suâli:** inanması farz ve haramlar fıkıhtaki gibi (şart iman, rükün iman; alt başlıkları fıkıhtaki gibi) tasnif edilse imâna uyar mı | Z |
+| V.6.2.128 | Okuma (Şerhu'l-Akâid Bölüm 13, OCR İngilizce, Arapçayla doğrulanmadı): îmân tasdik ve ikrardır (Nesefî); cumhur muhakkiklere (Mâtürîdî) göre tasdik kalple, **ikrar dünya hükümleri için şarttır** | Z |
+| V.6.2.129 | Aynı bölüm: amel Mu'tezile'ye göre îmânın aslî unsuru, Şâfiî mektebine göre kemâl rüknü, Teftâzânî'ye göre dışarıdadır; **îmân amelin sıhhat şartıdır** | Z |
+| V.6.2.130 | Rükün, şart ve mâni' dili **îmânın kendisi** (mü'min olmak, kişi hâli) için yerindedir; **inanılan şeyler** (Allah, melek…) îmânın mef'ûlüdür ve bu dille bölünmez | Z |
+| V.6.2.131 | "Şart iman, rükün iman" halk dilinde altı esasın sayımıdır; kelâmdaki rükün ve şart farklı yapıyı gösterir: **terim ortaklığı, yapı ortaklığı değil** (altı esasın sayım yeri okunmadı) | Z |
+| V.6.2.132 | Fıkıhın teklîfî hükmü (farz, vâcib, …) Hanefî çizgide delil katiyyetine dayanır (hafızadan); bu **sınır çizer** (V.6.1.3), kümeyi parçalamaz | Z |
+| V.6.2.133 | İcmâlî–tafsîlî derece kaynakta vardır (Teklif 8, V.6.2.14 ile örtüşür): îmân bilinen şeyde icmâlen, ayrıntısı bilinen şeyde tafsîlen farzdır | Z |
+| V.6.2.134 | Hükmüm: fıkıh **liste kaynağı** (S12) ve **sınır çizici** olarak alınır; inanılanları fıkıh sınıflarına **bölmek** kategori hatasıdır. Ayrıntı: `DESTEK/FIKIH_TASNIFI_IMANA_UYAR_MI.md` | Z |
+| V.6.2.135 | Muhatap ağacında **ikrar** ekseni yoktur: kalbiyle tasdik edip ikrar etmeyenin yeri açıktır | Z |
 
 ### V.6.3 Her hüküm için bâb şablonu
 
