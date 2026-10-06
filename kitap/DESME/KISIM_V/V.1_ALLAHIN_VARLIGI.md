@@ -104,7 +104,7 @@
 | V.1.4.15 | **İtiraz (ispat yükü):** "Yokluğu iddia etmiyorum" | İt |
 | V.1.4.16 | **Cevap:** V.0.2.2–3 | C |
 
-#### V.1.4.17–V.1.4.90 Rastgelelik itirazı (padişahın isteği; deşme taslağı)
+#### V.1.4.17–V.1.4.103 Rastgelelik itirazı (padişahın isteği; deşme taslağı)
 
 | No | Cümle | Cins |
 | :-- | :-- | :-- |
@@ -182,6 +182,19 @@
 | V.1.4.88 | Sınır (G2): düşük öncül sıfır, imkânsız demek değildir; hasım “küresel tarihî çıkarımı da bırakıyorum” diyerek tutarlı kalabilir; bu hâlde delil onu çürütmez, yalnız itiraz kaynağını elinden alır | Z |
 | V.1.4.89 | Hüküm: G1 daraltılmış hâliyle kapandı; G2 **kapanmadı**, nakze indi: hasmın kendi ölçüsüyle çıplak evren düşük öncüllüdür; bu burhan değil ilzamdır | K |
 | V.1.4.90 | Veritabanı: `Q03.c2/U27` (zan-ı gâlib) eklendi; sebep ilkesinin üç kanadı birlikte kaldırılınca Q02.c1, Q02.c2 ve Q03.c2 artık İSPATSIZ değil **zan-ı gâlib** kalır ve F01 (katı ateizm) ÇÜRÜMEDİ yerine zan-ı gâlibe çürütülmüş görünür; `yokluk-egilim` veya `kureselleme` ailesi de düşerse yine İSPATSIZ olur | K |
+| V.1.4.91 | Deneme (çıkarımı bırakan hasım): akıl yürütme **Claude’undur**, Pruss’un değil (DESTEK/PRUSS_G2_IKILEM.md) | K |
+| V.1.4.92 | Cezmî nefy (“Allah yoktur”, “evren çıplak olgudur”) bir hükümdür ve gerekçe ister; gerekçesiz bırakılırsa cezmî nefy değil tevakkuftur | K |
+| V.1.4.93 | Yokluk hükmünün desteği ya tecrübeden gelir (bulunamama; iç açıklamaların başarı sicilinden istikrâ) ya akıldan gelir (imkânsızlık delili; sadelik tercihi); bu sayım hasır olarak ileri sürülür, tamlığı gösterilmedi | K |
+| V.1.4.94 | Bulamama: hasım yerelde “açıklamayı bulamamak yok demek değildir” kuralını kabul eder; küreselde tersini yaparsa ilkesizdir, çünkü bulamamanın gerekçesi erişim sınırlılığıdır ve evrenin dışına erişim yerelden daha azdır | C |
+| V.1.4.95 | İstikrâ: “parçaların hepsi iç açıklamayla açıklandı, öyleyse bütün dışarıya muhtaç değil” geçişi, hasmın bize karşı terkip safsatası diye reddettiği geçişin aynısıdır; ikisini birden savunamaz | C |
+| V.1.4.96 | Sadelik: açıklamasız hipotez her açıklayıcıdan sadedir (Pruss s.8); yerelde uygulansa her olay çıplak sayılır ve ilmî yöntem yıkılır; yalnız küresele uygulanması ilkesizdir | C |
+| V.1.4.97 | İmkânsızlık delili: Vâcib kavramının çelişkili olduğu iddiası Q01 hücrelerinde çürütüldü | C |
+| V.1.4.98 | İkilem: cezmî nefyin dört desteği de düştüğünden cezmî nefy (katı ateizm) savunulamaz; geriye yalnız **tevakkuf** kalır | K |
+| V.1.4.99 | Sınır 1: tevakkuf (“bilmiyorum, delil görmedim”) çürütülmez; ona karşı yapılabilen şey delil sunmaktır (V.1.2.4) ve bu bir kapanış değildir | Z |
+| V.1.4.100 | Sınır 2: dört desteğin hasırı sayımla kurulmuştur; yeni bir destek türü bulunursa ikilem açılır (G7) | Z |
+| V.1.4.101 | Sınır 3: iki öncül müsellemdir (hasmın kabulü kadar): yerel bulamama kuralı ve terkip itirazı; bunları kabul etmeyen hasım bu ikilemle kuşatılmaz | Z |
+| V.1.4.102 | Veritabanı: `Q02.c2/U27` (zan-ı gâlib, Q01.c1’e dayanır, Q03’e ve sebep ilkesine dayanmaz); sebep ilkesi, `yokluk-egilim` ve `kureselleme` ailesi birlikte düşse de Q02.c1 ve Q02.c2 zan-ı gâlib kalır; `destek-hasir`, `muhatap-kabulu` veya `sadelik` düşerse İSPATSIZ olur | K |
+| V.1.4.103 | Dürüst hüküm: bu kol **burhan seviyesinde kapanmadı**; hedefi daralttı: cezmî nefyi eledi, tevakkufu eleyemedi; katiyet zan-ı gâlib | K |
 
 ### V.1.5 Neticenin hududu
 

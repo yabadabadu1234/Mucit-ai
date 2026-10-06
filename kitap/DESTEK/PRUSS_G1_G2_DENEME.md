@@ -53,3 +53,5 @@ Yani Pruss çizgisi sebep ilkesine bağımlılığı kaldırmıyor, fakat ilke r
 
 - Pruss'un makalesi **burhan değildir**, fakat sebep ilkesine karşı kitabın elindeki **en güçlü biçimsel ilzamdır**; üç zayıf nokta kaldı: `k_yoktan_sanssiz` (vakum ayrımı), `p_esdegerlik_kureselleme` (hasım küresel tarihî çıkarımdan vazgeçebilir), `p_sebepsiz_sans_yok` (eski G1 öncülü, Tanım 2'ye bağlı hâlde).
 - Burhana çıkarmak için gereken: "çıkarım yöntemini bırakan hasım" kolunun kapatılması. Bu kolun kapanıp kapanmayacağı **bilinmiyor**; denenecek yol: bu hasmın itiraz yapabilmek için kullandığı en az bir çıkarımı (cümlesinin bir şeyi göstermesi) bırakamayacağını göstermek (ilzam, U26). Henüz yazılmadı.
+
+**Güncelleme:** "çıkarımı bırakan hasım" kolu ayrıca denendi: `PRUSS_G2_IKILEM.md` (cezmî nefy elendi, tevakkuf kaldı; zan-ı gâlib).

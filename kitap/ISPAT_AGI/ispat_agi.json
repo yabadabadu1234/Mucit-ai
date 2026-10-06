@@ -1330,6 +1330,51 @@
    "aile": "kureselleme",
    "zayif": 1,
    "not_": "Pruss, b.3.2, s.12-13 (sadelik küresel sapkın hipotezleri elemez); hasım küresel tarihî çıkarımdan vazgeçerek tutarlı kalabilir (V.1.4.88)"
+  },
+  {
+   "id": "k_iddia_gerekce",
+   "metin": "Bir hükmü cezmen (kesin olarak) ileri süren, o hükmün gerekçesini göstermekle yükümlüdür; gerekçesiz hüküm cezmî iddia değil tevakkuftur.",
+   "tur": "mantik",
+   "kat": "yakîn",
+   "aile": "",
+   "zayif": 0,
+   "not_": "V.0.2.2; sebepsizlik veya yokluk iddiası da iddiadır"
+  },
+  {
+   "id": "k_destek_hasir",
+   "metin": "Bir yokluk hükmünün desteği ya tecrübeden gelir (açıklamanın bulunamaması veya iç açıklamaların başarı sicilinden istikrâ) ya akıldan gelir (imkânsızlık delili veya sadelik tercihi); başka kaynak yoktur.",
+   "tur": "mantik",
+   "kat": "zan-ı gâlib",
+   "aile": "destek-hasir",
+   "zayif": 1,
+   "not_": "kaynak türlerinin sayımı hasır olarak ileri sürülmüştür; tamlığı gösterilmedi (G7)"
+  },
+  {
+   "id": "s_kaza_kurali",
+   "metin": "Açıklamayı bulamamak açıklama yoktur demek değildir (uçak kazası araştırmacısı örneği); hasım bunu yerel olaylarda kabul eder.",
+   "tur": "musahede",
+   "kat": "zan-ı gâlib",
+   "aile": "muhatap-kabulu",
+   "zayif": 1,
+   "not_": "Pruss, s.1 (Rescher 1995); müsellemdir, muhatabın kabulü kadardır (U27)"
+  },
+  {
+   "id": "s_parca_butun",
+   "metin": "Parçalardan bütüne geçiş geçerli değildir: parçaların her biri için doğru olan bütün için doğru olmak zorunda değildir (hasmın terkip safsatası itirazı).",
+   "tur": "musahede",
+   "kat": "zan-ı gâlib",
+   "aile": "muhatap-kabulu",
+   "zayif": 1,
+   "not_": "V.1.3.b.7; hasmın kendi itirazıdır; müsellemdir (U27)"
+  },
+  {
+   "id": "p_sadelik_orantisiz",
+   "metin": "Sadelik ölçüsü açıklamasız hipotezi her açıklayıcı hipotezden daha sade bulur; yerelde de uygulansaydı her olayı çıplak sayardı ve ilmî yöntemi yıkardı; öyleyse yalnız küresel olaya uygulanması ilkesizdir.",
+   "tur": "turetilmis",
+   "kat": "zan-ı gâlib",
+   "aile": "sadelik",
+   "zayif": 1,
+   "not_": "Pruss, s.8 (çıplak açıklamasız hipotezler daha sadedir)"
   }
  ],
  "soru": [
@@ -1995,7 +2040,7 @@
     "sebep-ilkesi-varlik",
     "terkip"
    ],
-   "yol": "231",
+   "yol": "232",
    "yol_altkume": 126,
    "asgari_yollar": [
     [
@@ -2021,7 +2066,7 @@
    "durum": "KAT’Î-ŞARTLI",
    "kat": 3,
    "en_iyi": "Q02.c2/U08#alt",
-   "ispat_say": 7,
+   "ispat_say": 8,
    "W": [
     "k_butunun_dis_muhtac",
     "k_tercihsiz_hal"
@@ -2030,8 +2075,8 @@
     "sebep-ilkesi-hal",
     "terkip"
    ],
-   "yol": "232",
-   "yol_altkume": 63,
+   "yol": "233",
+   "yol_altkume": 127,
    "asgari_yollar": [
     [
      "U01",
@@ -5556,6 +5601,40 @@
    "durum": "TENBİH",
    "W": [],
    "fam": [],
+   "yol": "1"
+  },
+  {
+   "id": "Q02.c2/U27",
+   "hucre": "Q02.c2",
+   "usul": "U27",
+   "tur": "direct",
+   "ozet": "Cezmî nefyin gerekçesi ya bulamamaktır (hasmın yerelde reddettiği kural), ya iç açıklamaların başarı sicilinden bütüne geçiştir (hasmın terkip itirazının tersine yürüyen aynı geçiş), ya sadeliktir (yerelde her olayı çıplak sayardı), ya imkânsızlık delilidir (Q01’de çürüdü); hiçbiri kalmadığından cezmî nefy savunulamaz ve geriye yalnız tevakkuf kalır.",
+   "tag": null,
+   "hudut": "",
+   "sarti": null,
+   "kismi": "",
+   "prem": [
+    "k_iddia_gerekce",
+    "k_destek_hasir",
+    "s_kaza_kurali",
+    "s_parca_butun",
+    "p_sadelik_orantisiz",
+    "H:Q01.c1"
+   ],
+   "katman": 2,
+   "kat": 2,
+   "durum": "ZAN-I GÂLİB",
+   "W": [
+    "k_destek_hasir",
+    "p_sadelik_orantisiz",
+    "s_kaza_kurali",
+    "s_parca_butun"
+   ],
+   "fam": [
+    "destek-hasir",
+    "muhatap-kabulu",
+    "sadelik"
+   ],
    "yol": "1"
   },
   {
@@ -9534,7 +9613,7 @@
     "sebep-ilkesi-hal",
     "terkip"
    ],
-   "yol": "180"
+   "yol": "181"
   },
   {
    "id": "Q02.c2/U08#dislama",
@@ -14665,8 +14744,8 @@
     "Aklî–metafizik hüküm haberle ispat edilmez; muhatap haberi ve vahyi kabul etmeden onu öncül yapmak kısırdöngüdür (F 3-I 187; V.0.5)."
    ],
    "U12": [
-    "YAPILAMAZ",
-    "Müşâhede edilemeyen şeyi (gayb, Vâcib) doğrudan ispat edemez; bu hücrede öncül de sağlamıyor (I.4.3.5)."
+    "ÖNCÜL",
+    "Müşâhede öncülleri: s_kaza_kurali, s_parca_butun"
    ],
    "U13": [
     "YAPILAMAZ",
@@ -14682,7 +14761,7 @@
    ],
    "U16": [
     "KOMBİNE",
-    "7 ispat; ayrıntı kombinasyon tablosundadır."
+    "8 ispat; ayrıntı kombinasyon tablosundadır."
    ],
    "U17": [
     "YAPILMADI",
@@ -14725,8 +14804,8 @@
     "Karşı iddia kendi ifadesiyle kendini çürütmüyor; ilzamın şartı bu hükümde yok (Claude hükmü, yoklanmadı)."
    ],
    "U27": [
-    "YAPILMADI",
-    "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
+    "KULLANILDI",
+    "Q02.c2/U27"
    ],
    "U28": [
     "YAPILMADI",
@@ -36577,16 +36656,18 @@
    [
     32,
     [
-     "U31"
+     "U27"
     ],
     1,
     0,
-    "yakîn",
-    "KAT’Î-ŞARTLI",
-    "ortak zayıf halka: sebep-ilkesi-varlik, terkip",
+    "zan-ı gâlib",
+    "ZAN-I GÂLİB",
+    "ortak zayıf halka: destek-hasir, muhatap-kabulu, sadelik",
     [
-     "k_butunun_dis_muhtac",
-     "k_tercihsiz"
+     "k_destek_hasir",
+     "p_sadelik_orantisiz",
+     "s_kaza_kurali",
+     "s_parca_butun"
     ],
     0,
     0,
@@ -36596,16 +36677,15 @@
     33,
     [
      "U01",
-     "U31"
+     "U27"
     ],
     2,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
-    "ortak zayıf halka: terkip",
+    "ortak zayıf halka: sebep-ilkesi-hal, terkip",
     [
      "k_butunun_dis_muhtac",
-     "k_tercihsiz",
      "k_tercihsiz_hal"
     ],
     0,
@@ -36616,7 +36696,7 @@
     34,
     [
      "U03",
-     "U31"
+     "U27"
     ],
     2,
     0,
@@ -36636,7 +36716,7 @@
     [
      "U01",
      "U03",
-     "U31"
+     "U27"
     ],
     3,
     0,
@@ -36656,19 +36736,17 @@
     36,
     [
      "U04",
-     "U31"
+     "U27"
     ],
     2,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
-    "ortak zayıf halka: sebep-ilkesi-varlik",
+    "ortak zayıf halka: sebep-ilkesi-varlik, sonsuz-gecmis",
     [
-     "k_butunun_dis_muhtac",
      "k_hadis_muhdis",
      "k_hudus_cisim",
-     "k_sonsuz_hadis",
-     "k_tercihsiz"
+     "k_sonsuz_hadis"
     ],
     0,
     0,
@@ -36679,7 +36757,7 @@
     [
      "U01",
      "U04",
-     "U31"
+     "U27"
     ],
     3,
     0,
@@ -36691,7 +36769,6 @@
      "k_hadis_muhdis",
      "k_hudus_cisim",
      "k_sonsuz_hadis",
-     "k_tercihsiz",
      "k_tercihsiz_hal"
     ],
     1,
@@ -36703,7 +36780,7 @@
     [
      "U03",
      "U04",
-     "U31"
+     "U27"
     ],
     3,
     0,
@@ -36727,7 +36804,7 @@
      "U01",
      "U03",
      "U04",
-     "U31"
+     "U27"
     ],
     4,
     0,
@@ -36750,16 +36827,15 @@
     40,
     [
      "U08",
-     "U31"
+     "U27"
     ],
     3,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
-    "ortak zayıf halka: terkip",
+    "ortak zayıf halka: sebep-ilkesi-hal, terkip",
     [
      "k_butunun_dis_muhtac",
-     "k_tercihsiz",
      "k_tercihsiz_hal"
     ],
     0,
@@ -36771,16 +36847,15 @@
     [
      "U01",
      "U08",
-     "U31"
+     "U27"
     ],
     4,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
-    "ortak zayıf halka: terkip",
+    "ortak zayıf halka: sebep-ilkesi-hal, terkip",
     [
      "k_butunun_dis_muhtac",
-     "k_tercihsiz",
      "k_tercihsiz_hal"
     ],
     0,
@@ -36792,7 +36867,7 @@
     [
      "U03",
      "U08",
-     "U31"
+     "U27"
     ],
     4,
     0,
@@ -36814,7 +36889,7 @@
      "U01",
      "U03",
      "U08",
-     "U31"
+     "U27"
     ],
     5,
     0,
@@ -36835,7 +36910,7 @@
     [
      "U04",
      "U08",
-     "U31"
+     "U27"
     ],
     4,
     0,
@@ -36847,7 +36922,6 @@
      "k_hadis_muhdis",
      "k_hudus_cisim",
      "k_sonsuz_hadis",
-     "k_tercihsiz",
      "k_tercihsiz_hal"
     ],
     1,
@@ -36860,7 +36934,7 @@
      "U01",
      "U04",
      "U08",
-     "U31"
+     "U27"
     ],
     5,
     0,
@@ -36872,7 +36946,6 @@
      "k_hadis_muhdis",
      "k_hudus_cisim",
      "k_sonsuz_hadis",
-     "k_tercihsiz",
      "k_tercihsiz_hal"
     ],
     1,
@@ -36885,7 +36958,7 @@
      "U03",
      "U04",
      "U08",
-     "U31"
+     "U27"
     ],
     5,
     0,
@@ -36911,7 +36984,7 @@
      "U03",
      "U04",
      "U08",
-     "U31"
+     "U27"
     ],
     6,
     0,
@@ -36934,16 +37007,18 @@
     48,
     [
      "U14",
-     "U31"
+     "U27"
     ],
     2,
     0,
-    "yakîn",
-    "KAT’Î-ŞARTLI",
-    "ortak zayıf halka: sebep-ilkesi-varlik, terkip",
+    "zan-ı gâlib",
+    "ZAN-I GÂLİB",
+    "ortak zayıf halka: destek-hasir, muhatap-kabulu, sadelik",
     [
-     "k_butunun_dis_muhtac",
-     "k_tercihsiz"
+     "k_destek_hasir",
+     "p_sadelik_orantisiz",
+     "s_kaza_kurali",
+     "s_parca_butun"
     ],
     0,
     0,
@@ -36954,16 +37029,15 @@
     [
      "U01",
      "U14",
-     "U31"
+     "U27"
     ],
     3,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
-    "ortak zayıf halka: terkip",
+    "ortak zayıf halka: sebep-ilkesi-hal, terkip",
     [
      "k_butunun_dis_muhtac",
-     "k_tercihsiz",
      "k_tercihsiz_hal"
     ],
     0,
@@ -36975,7 +37049,7 @@
     [
      "U03",
      "U14",
-     "U31"
+     "U27"
     ],
     3,
     0,
@@ -36996,7 +37070,7 @@
      "U01",
      "U03",
      "U14",
-     "U31"
+     "U27"
     ],
     4,
     0,
@@ -37017,19 +37091,17 @@
     [
      "U04",
      "U14",
-     "U31"
+     "U27"
     ],
     3,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
-    "ortak zayıf halka: sebep-ilkesi-varlik",
+    "ortak zayıf halka: sebep-ilkesi-varlik, sonsuz-gecmis",
     [
-     "k_butunun_dis_muhtac",
      "k_hadis_muhdis",
      "k_hudus_cisim",
-     "k_sonsuz_hadis",
-     "k_tercihsiz"
+     "k_sonsuz_hadis"
     ],
     0,
     0,
@@ -37041,7 +37113,7 @@
      "U01",
      "U04",
      "U14",
-     "U31"
+     "U27"
     ],
     4,
     0,
@@ -37053,7 +37125,6 @@
      "k_hadis_muhdis",
      "k_hudus_cisim",
      "k_sonsuz_hadis",
-     "k_tercihsiz",
      "k_tercihsiz_hal"
     ],
     1,
@@ -37066,7 +37137,7 @@
      "U03",
      "U04",
      "U14",
-     "U31"
+     "U27"
     ],
     4,
     0,
@@ -37091,7 +37162,7 @@
      "U03",
      "U04",
      "U14",
-     "U31"
+     "U27"
     ],
     5,
     0,
@@ -37115,16 +37186,15 @@
     [
      "U08",
      "U14",
-     "U31"
+     "U27"
     ],
     4,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
-    "ortak zayıf halka: terkip",
+    "ortak zayıf halka: sebep-ilkesi-hal, terkip",
     [
      "k_butunun_dis_muhtac",
-     "k_tercihsiz",
      "k_tercihsiz_hal"
     ],
     0,
@@ -37137,16 +37207,15 @@
      "U01",
      "U08",
      "U14",
-     "U31"
+     "U27"
     ],
     5,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
-    "ortak zayıf halka: terkip",
+    "ortak zayıf halka: sebep-ilkesi-hal, terkip",
     [
      "k_butunun_dis_muhtac",
-     "k_tercihsiz",
      "k_tercihsiz_hal"
     ],
     0,
@@ -37159,7 +37228,7 @@
      "U03",
      "U08",
      "U14",
-     "U31"
+     "U27"
     ],
     5,
     0,
@@ -37182,7 +37251,7 @@
      "U03",
      "U08",
      "U14",
-     "U31"
+     "U27"
     ],
     6,
     0,
@@ -37204,7 +37273,7 @@
      "U04",
      "U08",
      "U14",
-     "U31"
+     "U27"
     ],
     5,
     0,
@@ -37216,7 +37285,6 @@
      "k_hadis_muhdis",
      "k_hudus_cisim",
      "k_sonsuz_hadis",
-     "k_tercihsiz",
      "k_tercihsiz_hal"
     ],
     1,
@@ -37230,7 +37298,7 @@
      "U04",
      "U08",
      "U14",
-     "U31"
+     "U27"
     ],
     6,
     0,
@@ -37242,7 +37310,6 @@
      "k_hadis_muhdis",
      "k_hudus_cisim",
      "k_sonsuz_hadis",
-     "k_tercihsiz",
      "k_tercihsiz_hal"
     ],
     1,
@@ -37256,7 +37323,7 @@
      "U04",
      "U08",
      "U14",
-     "U31"
+     "U27"
     ],
     6,
     0,
@@ -37283,9 +37350,1497 @@
      "U04",
      "U08",
      "U14",
+     "U27"
+    ],
+    7,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "hiçbir tek zayıf aile hepsini düşürmez",
+    [
+     "k_butunun_dis_muhtac",
+     "k_hadis_muhdis",
+     "k_hudus_cisim",
+     "k_sonsuz_hadis",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
+    0
+   ],
+   [
+    64,
+    [
+     "U31"
+    ],
+    1,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-varlik, terkip",
+    [
+     "k_butunun_dis_muhtac",
+     "k_tercihsiz"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    65,
+    [
+     "U01",
+     "U31"
+    ],
+    2,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: terkip",
+    [
+     "k_butunun_dis_muhtac",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    66,
+    [
+     "U03",
+     "U31"
+    ],
+    2,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-varlik, terkip",
+    [
+     "k_butunun_dis_muhtac",
+     "k_tercihsiz"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    67,
+    [
+     "U01",
+     "U03",
+     "U31"
+    ],
+    3,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: terkip",
+    [
+     "k_butunun_dis_muhtac",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    68,
+    [
+     "U04",
+     "U31"
+    ],
+    2,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-varlik",
+    [
+     "k_butunun_dis_muhtac",
+     "k_hadis_muhdis",
+     "k_hudus_cisim",
+     "k_sonsuz_hadis",
+     "k_tercihsiz"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    69,
+    [
+     "U01",
+     "U04",
+     "U31"
+    ],
+    3,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "hiçbir tek zayıf aile hepsini düşürmez",
+    [
+     "k_butunun_dis_muhtac",
+     "k_hadis_muhdis",
+     "k_hudus_cisim",
+     "k_sonsuz_hadis",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
+    0
+   ],
+   [
+    70,
+    [
+     "U03",
+     "U04",
+     "U31"
+    ],
+    3,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-varlik",
+    [
+     "k_butunun_dis_muhtac",
+     "k_hadis_muhdis",
+     "k_hudus_cisim",
+     "k_sonsuz_hadis",
+     "k_tercihsiz"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    71,
+    [
+     "U01",
+     "U03",
+     "U04",
+     "U31"
+    ],
+    4,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "hiçbir tek zayıf aile hepsini düşürmez",
+    [
+     "k_butunun_dis_muhtac",
+     "k_hadis_muhdis",
+     "k_hudus_cisim",
+     "k_sonsuz_hadis",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
+    0
+   ],
+   [
+    72,
+    [
+     "U08",
+     "U31"
+    ],
+    3,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: terkip",
+    [
+     "k_butunun_dis_muhtac",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    73,
+    [
+     "U01",
+     "U08",
+     "U31"
+    ],
+    4,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: terkip",
+    [
+     "k_butunun_dis_muhtac",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    74,
+    [
+     "U03",
+     "U08",
+     "U31"
+    ],
+    4,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: terkip",
+    [
+     "k_butunun_dis_muhtac",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    75,
+    [
+     "U01",
+     "U03",
+     "U08",
+     "U31"
+    ],
+    5,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: terkip",
+    [
+     "k_butunun_dis_muhtac",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    76,
+    [
+     "U04",
+     "U08",
+     "U31"
+    ],
+    4,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "hiçbir tek zayıf aile hepsini düşürmez",
+    [
+     "k_butunun_dis_muhtac",
+     "k_hadis_muhdis",
+     "k_hudus_cisim",
+     "k_sonsuz_hadis",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
+    0
+   ],
+   [
+    77,
+    [
+     "U01",
+     "U04",
+     "U08",
+     "U31"
+    ],
+    5,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "hiçbir tek zayıf aile hepsini düşürmez",
+    [
+     "k_butunun_dis_muhtac",
+     "k_hadis_muhdis",
+     "k_hudus_cisim",
+     "k_sonsuz_hadis",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
+    0
+   ],
+   [
+    78,
+    [
+     "U03",
+     "U04",
+     "U08",
+     "U31"
+    ],
+    5,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "hiçbir tek zayıf aile hepsini düşürmez",
+    [
+     "k_butunun_dis_muhtac",
+     "k_hadis_muhdis",
+     "k_hudus_cisim",
+     "k_sonsuz_hadis",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
+    0
+   ],
+   [
+    79,
+    [
+     "U01",
+     "U03",
+     "U04",
+     "U08",
+     "U31"
+    ],
+    6,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "hiçbir tek zayıf aile hepsini düşürmez",
+    [
+     "k_butunun_dis_muhtac",
+     "k_hadis_muhdis",
+     "k_hudus_cisim",
+     "k_sonsuz_hadis",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
+    0
+   ],
+   [
+    80,
+    [
+     "U14",
+     "U31"
+    ],
+    2,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-varlik, terkip",
+    [
+     "k_butunun_dis_muhtac",
+     "k_tercihsiz"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    81,
+    [
+     "U01",
+     "U14",
+     "U31"
+    ],
+    3,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: terkip",
+    [
+     "k_butunun_dis_muhtac",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    82,
+    [
+     "U03",
+     "U14",
+     "U31"
+    ],
+    3,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-varlik, terkip",
+    [
+     "k_butunun_dis_muhtac",
+     "k_tercihsiz"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    83,
+    [
+     "U01",
+     "U03",
+     "U14",
+     "U31"
+    ],
+    4,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: terkip",
+    [
+     "k_butunun_dis_muhtac",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    84,
+    [
+     "U04",
+     "U14",
+     "U31"
+    ],
+    3,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-varlik",
+    [
+     "k_butunun_dis_muhtac",
+     "k_hadis_muhdis",
+     "k_hudus_cisim",
+     "k_sonsuz_hadis",
+     "k_tercihsiz"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    85,
+    [
+     "U01",
+     "U04",
+     "U14",
+     "U31"
+    ],
+    4,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "hiçbir tek zayıf aile hepsini düşürmez",
+    [
+     "k_butunun_dis_muhtac",
+     "k_hadis_muhdis",
+     "k_hudus_cisim",
+     "k_sonsuz_hadis",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
+    0
+   ],
+   [
+    86,
+    [
+     "U03",
+     "U04",
+     "U14",
+     "U31"
+    ],
+    4,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-varlik",
+    [
+     "k_butunun_dis_muhtac",
+     "k_hadis_muhdis",
+     "k_hudus_cisim",
+     "k_sonsuz_hadis",
+     "k_tercihsiz"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    87,
+    [
+     "U01",
+     "U03",
+     "U04",
+     "U14",
+     "U31"
+    ],
+    5,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "hiçbir tek zayıf aile hepsini düşürmez",
+    [
+     "k_butunun_dis_muhtac",
+     "k_hadis_muhdis",
+     "k_hudus_cisim",
+     "k_sonsuz_hadis",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
+    0
+   ],
+   [
+    88,
+    [
+     "U08",
+     "U14",
+     "U31"
+    ],
+    4,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: terkip",
+    [
+     "k_butunun_dis_muhtac",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    89,
+    [
+     "U01",
+     "U08",
+     "U14",
+     "U31"
+    ],
+    5,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: terkip",
+    [
+     "k_butunun_dis_muhtac",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    90,
+    [
+     "U03",
+     "U08",
+     "U14",
+     "U31"
+    ],
+    5,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: terkip",
+    [
+     "k_butunun_dis_muhtac",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    91,
+    [
+     "U01",
+     "U03",
+     "U08",
+     "U14",
+     "U31"
+    ],
+    6,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: terkip",
+    [
+     "k_butunun_dis_muhtac",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    92,
+    [
+     "U04",
+     "U08",
+     "U14",
+     "U31"
+    ],
+    5,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "hiçbir tek zayıf aile hepsini düşürmez",
+    [
+     "k_butunun_dis_muhtac",
+     "k_hadis_muhdis",
+     "k_hudus_cisim",
+     "k_sonsuz_hadis",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
+    0
+   ],
+   [
+    93,
+    [
+     "U01",
+     "U04",
+     "U08",
+     "U14",
+     "U31"
+    ],
+    6,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "hiçbir tek zayıf aile hepsini düşürmez",
+    [
+     "k_butunun_dis_muhtac",
+     "k_hadis_muhdis",
+     "k_hudus_cisim",
+     "k_sonsuz_hadis",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
+    0
+   ],
+   [
+    94,
+    [
+     "U03",
+     "U04",
+     "U08",
+     "U14",
+     "U31"
+    ],
+    6,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "hiçbir tek zayıf aile hepsini düşürmez",
+    [
+     "k_butunun_dis_muhtac",
+     "k_hadis_muhdis",
+     "k_hudus_cisim",
+     "k_sonsuz_hadis",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
+    0
+   ],
+   [
+    95,
+    [
+     "U01",
+     "U03",
+     "U04",
+     "U08",
+     "U14",
      "U31"
     ],
     7,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "hiçbir tek zayıf aile hepsini düşürmez",
+    [
+     "k_butunun_dis_muhtac",
+     "k_hadis_muhdis",
+     "k_hudus_cisim",
+     "k_sonsuz_hadis",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
+    0
+   ],
+   [
+    96,
+    [
+     "U27",
+     "U31"
+    ],
+    2,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-varlik, terkip",
+    [
+     "k_butunun_dis_muhtac",
+     "k_tercihsiz"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    97,
+    [
+     "U01",
+     "U27",
+     "U31"
+    ],
+    3,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: terkip",
+    [
+     "k_butunun_dis_muhtac",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    98,
+    [
+     "U03",
+     "U27",
+     "U31"
+    ],
+    3,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-varlik, terkip",
+    [
+     "k_butunun_dis_muhtac",
+     "k_tercihsiz"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    99,
+    [
+     "U01",
+     "U03",
+     "U27",
+     "U31"
+    ],
+    4,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: terkip",
+    [
+     "k_butunun_dis_muhtac",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    100,
+    [
+     "U04",
+     "U27",
+     "U31"
+    ],
+    3,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-varlik",
+    [
+     "k_butunun_dis_muhtac",
+     "k_hadis_muhdis",
+     "k_hudus_cisim",
+     "k_sonsuz_hadis",
+     "k_tercihsiz"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    101,
+    [
+     "U01",
+     "U04",
+     "U27",
+     "U31"
+    ],
+    4,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "hiçbir tek zayıf aile hepsini düşürmez",
+    [
+     "k_butunun_dis_muhtac",
+     "k_hadis_muhdis",
+     "k_hudus_cisim",
+     "k_sonsuz_hadis",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
+    0
+   ],
+   [
+    102,
+    [
+     "U03",
+     "U04",
+     "U27",
+     "U31"
+    ],
+    4,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-varlik",
+    [
+     "k_butunun_dis_muhtac",
+     "k_hadis_muhdis",
+     "k_hudus_cisim",
+     "k_sonsuz_hadis",
+     "k_tercihsiz"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    103,
+    [
+     "U01",
+     "U03",
+     "U04",
+     "U27",
+     "U31"
+    ],
+    5,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "hiçbir tek zayıf aile hepsini düşürmez",
+    [
+     "k_butunun_dis_muhtac",
+     "k_hadis_muhdis",
+     "k_hudus_cisim",
+     "k_sonsuz_hadis",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
+    0
+   ],
+   [
+    104,
+    [
+     "U08",
+     "U27",
+     "U31"
+    ],
+    4,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: terkip",
+    [
+     "k_butunun_dis_muhtac",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    105,
+    [
+     "U01",
+     "U08",
+     "U27",
+     "U31"
+    ],
+    5,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: terkip",
+    [
+     "k_butunun_dis_muhtac",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    106,
+    [
+     "U03",
+     "U08",
+     "U27",
+     "U31"
+    ],
+    5,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: terkip",
+    [
+     "k_butunun_dis_muhtac",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    107,
+    [
+     "U01",
+     "U03",
+     "U08",
+     "U27",
+     "U31"
+    ],
+    6,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: terkip",
+    [
+     "k_butunun_dis_muhtac",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    108,
+    [
+     "U04",
+     "U08",
+     "U27",
+     "U31"
+    ],
+    5,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "hiçbir tek zayıf aile hepsini düşürmez",
+    [
+     "k_butunun_dis_muhtac",
+     "k_hadis_muhdis",
+     "k_hudus_cisim",
+     "k_sonsuz_hadis",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
+    0
+   ],
+   [
+    109,
+    [
+     "U01",
+     "U04",
+     "U08",
+     "U27",
+     "U31"
+    ],
+    6,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "hiçbir tek zayıf aile hepsini düşürmez",
+    [
+     "k_butunun_dis_muhtac",
+     "k_hadis_muhdis",
+     "k_hudus_cisim",
+     "k_sonsuz_hadis",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
+    0
+   ],
+   [
+    110,
+    [
+     "U03",
+     "U04",
+     "U08",
+     "U27",
+     "U31"
+    ],
+    6,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "hiçbir tek zayıf aile hepsini düşürmez",
+    [
+     "k_butunun_dis_muhtac",
+     "k_hadis_muhdis",
+     "k_hudus_cisim",
+     "k_sonsuz_hadis",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
+    0
+   ],
+   [
+    111,
+    [
+     "U01",
+     "U03",
+     "U04",
+     "U08",
+     "U27",
+     "U31"
+    ],
+    7,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "hiçbir tek zayıf aile hepsini düşürmez",
+    [
+     "k_butunun_dis_muhtac",
+     "k_hadis_muhdis",
+     "k_hudus_cisim",
+     "k_sonsuz_hadis",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
+    0
+   ],
+   [
+    112,
+    [
+     "U14",
+     "U27",
+     "U31"
+    ],
+    3,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-varlik, terkip",
+    [
+     "k_butunun_dis_muhtac",
+     "k_tercihsiz"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    113,
+    [
+     "U01",
+     "U14",
+     "U27",
+     "U31"
+    ],
+    4,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: terkip",
+    [
+     "k_butunun_dis_muhtac",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    114,
+    [
+     "U03",
+     "U14",
+     "U27",
+     "U31"
+    ],
+    4,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-varlik, terkip",
+    [
+     "k_butunun_dis_muhtac",
+     "k_tercihsiz"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    115,
+    [
+     "U01",
+     "U03",
+     "U14",
+     "U27",
+     "U31"
+    ],
+    5,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: terkip",
+    [
+     "k_butunun_dis_muhtac",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    116,
+    [
+     "U04",
+     "U14",
+     "U27",
+     "U31"
+    ],
+    4,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-varlik",
+    [
+     "k_butunun_dis_muhtac",
+     "k_hadis_muhdis",
+     "k_hudus_cisim",
+     "k_sonsuz_hadis",
+     "k_tercihsiz"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    117,
+    [
+     "U01",
+     "U04",
+     "U14",
+     "U27",
+     "U31"
+    ],
+    5,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "hiçbir tek zayıf aile hepsini düşürmez",
+    [
+     "k_butunun_dis_muhtac",
+     "k_hadis_muhdis",
+     "k_hudus_cisim",
+     "k_sonsuz_hadis",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
+    0
+   ],
+   [
+    118,
+    [
+     "U03",
+     "U04",
+     "U14",
+     "U27",
+     "U31"
+    ],
+    5,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-varlik",
+    [
+     "k_butunun_dis_muhtac",
+     "k_hadis_muhdis",
+     "k_hudus_cisim",
+     "k_sonsuz_hadis",
+     "k_tercihsiz"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    119,
+    [
+     "U01",
+     "U03",
+     "U04",
+     "U14",
+     "U27",
+     "U31"
+    ],
+    6,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "hiçbir tek zayıf aile hepsini düşürmez",
+    [
+     "k_butunun_dis_muhtac",
+     "k_hadis_muhdis",
+     "k_hudus_cisim",
+     "k_sonsuz_hadis",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
+    0
+   ],
+   [
+    120,
+    [
+     "U08",
+     "U14",
+     "U27",
+     "U31"
+    ],
+    5,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: terkip",
+    [
+     "k_butunun_dis_muhtac",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    121,
+    [
+     "U01",
+     "U08",
+     "U14",
+     "U27",
+     "U31"
+    ],
+    6,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: terkip",
+    [
+     "k_butunun_dis_muhtac",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    122,
+    [
+     "U03",
+     "U08",
+     "U14",
+     "U27",
+     "U31"
+    ],
+    6,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: terkip",
+    [
+     "k_butunun_dis_muhtac",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    123,
+    [
+     "U01",
+     "U03",
+     "U08",
+     "U14",
+     "U27",
+     "U31"
+    ],
+    7,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: terkip",
+    [
+     "k_butunun_dis_muhtac",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    124,
+    [
+     "U04",
+     "U08",
+     "U14",
+     "U27",
+     "U31"
+    ],
+    6,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "hiçbir tek zayıf aile hepsini düşürmez",
+    [
+     "k_butunun_dis_muhtac",
+     "k_hadis_muhdis",
+     "k_hudus_cisim",
+     "k_sonsuz_hadis",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
+    0
+   ],
+   [
+    125,
+    [
+     "U01",
+     "U04",
+     "U08",
+     "U14",
+     "U27",
+     "U31"
+    ],
+    7,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "hiçbir tek zayıf aile hepsini düşürmez",
+    [
+     "k_butunun_dis_muhtac",
+     "k_hadis_muhdis",
+     "k_hudus_cisim",
+     "k_sonsuz_hadis",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
+    0
+   ],
+   [
+    126,
+    [
+     "U03",
+     "U04",
+     "U08",
+     "U14",
+     "U27",
+     "U31"
+    ],
+    7,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "hiçbir tek zayıf aile hepsini düşürmez",
+    [
+     "k_butunun_dis_muhtac",
+     "k_hadis_muhdis",
+     "k_hudus_cisim",
+     "k_sonsuz_hadis",
+     "k_tercihsiz",
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
+    0
+   ],
+   [
+    127,
+    [
+     "U01",
+     "U03",
+     "U04",
+     "U08",
+     "U14",
+     "U27",
+     "U31"
+    ],
+    8,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -50300,6 +51855,14 @@
   {
    "hucre": "Q02.c2",
    "tur": "hic-olmasaydi",
+   "sonuc": "Cezmî nefyin gerekçesi ya bulamamaktır (hasmın yerelde reddettiği kural), ya iç açıklamaların başarı sicilinden bütüne geçiştir (hasmın terkip itirazının tersine yürüyen aynı geçiş), ya sadeliktir (yerelde her olayı çıplak sayardı), ya imkânsızlık delilidir (Q01’de çürüdü); hiçbiri kalmadığından cezmî nefy savunulamaz ve geriye yalnız tevakkuf kalır.",
+   "usul": "U27",
+   "ispat": "Q02.c2/U27",
+   "not_": "ZAN-I GÂLİB"
+  },
+  {
+   "hucre": "Q02.c2",
+   "tur": "hic-olmasaydi",
    "sonuc": "Alt suâlin bütün hücreleri ayrı ayrı çürütüldüğünden bu hücre çürür.",
    "usul": "U08",
    "ispat": "Q02.c2/U08#alt",
@@ -51391,6 +52954,17 @@
   },
   {
    "tur": "aile",
+   "ad": "destek-hasir",
+   "onermeler": [
+    "k_destek_hasir"
+   ],
+   "hucre_say": 0,
+   "hucreler": [],
+   "felsefe_say": 0,
+   "felsefeler": []
+  },
+  {
+   "tur": "aile",
    "ad": "ibadet-tanimi",
    "onermeler": [
     "k_muhtac_ibadet"
@@ -51731,9 +53305,54 @@
   },
   {
    "tur": "aile",
+   "ad": "muhatap-kabulu",
+   "onermeler": [
+    "s_kaza_kurali",
+    "s_parca_butun"
+   ],
+   "hucre_say": 0,
+   "hucreler": [],
+   "felsefe_say": 0,
+   "felsefeler": []
+  },
+  {
+   "tur": "onerme",
+   "ad": "s_kaza_kurali",
+   "onermeler": [
+    "s_kaza_kurali"
+   ],
+   "hucre_say": 0,
+   "hucreler": [],
+   "felsefe_say": 0,
+   "felsefeler": []
+  },
+  {
+   "tur": "onerme",
+   "ad": "s_parca_butun",
+   "onermeler": [
+    "s_parca_butun"
+   ],
+   "hucre_say": 0,
+   "hucreler": [],
+   "felsefe_say": 0,
+   "felsefeler": []
+  },
+  {
+   "tur": "aile",
    "ad": "ozdes",
    "onermeler": [
     "k_ozdes"
+   ],
+   "hucre_say": 0,
+   "hucreler": [],
+   "felsefe_say": 0,
+   "felsefeler": []
+  },
+  {
+   "tur": "aile",
+   "ad": "sadelik",
+   "onermeler": [
+    "p_sadelik_orantisiz"
    ],
    "hucre_say": 0,
    "hucreler": [],
@@ -52362,8 +53981,8 @@
   },
   {
    "ad": "Kombinasyon satırı",
-   "deger": 1127,
-   "beklenen": 1127,
+   "deger": 1191,
+   "beklenen": 1191,
    "tamam": true,
    "aciklama": "Her hücre için kullanılan usullerin bütün boş olmayan alt kümeleri yazıldı (2ⁿ−1)."
   },
@@ -52372,18 +53991,18 @@
    "deger": true,
    "beklenen": true,
    "tamam": true,
-   "aciklama": "Ölçü ayırt eder: zayıf öncül kaldırıldığında bağlı hücrelerin durumu düşer (F 3-B 27-B). Etkisiz aileler (başka ispatla ayakta): apriori-ret, ihkam, k_zorunluluk_dicto, kureselleme, ozdes, sebep-ilkesi-bilgi, sebep-ilkesi-varlik, sebepsiz-sans, yokluk-egilim, zaman, zat-vucud"
+   "aciklama": "Ölçü ayırt eder: zayıf öncül kaldırıldığında bağlı hücrelerin durumu düşer (F 3-B 27-B). Etkisiz aileler (başka ispatla ayakta): apriori-ret, destek-hasir, ihkam, k_zorunluluk_dicto, kureselleme, muhatap-kabulu, ozdes, sadelik, sebep-ilkesi-bilgi, sebep-ilkesi-varlik, sebepsiz-sans, yokluk-egilim, zaman, zat-vucud"
   },
   {
    "ad": "Etkisiz çıkan zayıf aile sayısı (bilgi)",
-   "deger": 11,
+   "deger": 14,
    "beklenen": null,
    "tamam": true,
-   "aciklama": "apriori-ret, ihkam, k_zorunluluk_dicto, kureselleme, ozdes, sebep-ilkesi-bilgi, sebep-ilkesi-varlik, sebepsiz-sans, yokluk-egilim, zaman, zat-vucud"
+   "aciklama": "apriori-ret, destek-hasir, ihkam, k_zorunluluk_dicto, kureselleme, muhatap-kabulu, ozdes, sadelik, sebep-ilkesi-bilgi, sebep-ilkesi-varlik, sebepsiz-sans, yokluk-egilim, zaman, zat-vucud"
   },
   {
    "ad": "YAPILMADI (usul şartı mümkün, kayıt yazılmamış açık iş) sayısı",
-   "deger": 582,
+   "deger": 581,
    "beklenen": null,
    "tamam": true,
    "aciklama": "Açık iş olarak sayılır; gizlenmez."
@@ -52398,11 +54017,11 @@
    "İHTİLAFLI": 6
   },
   "matris": {
-   "YAPILAMAZ": 1984,
-   "KULLANILDI": 309,
+   "YAPILAMAZ": 1983,
+   "KULLANILDI": 310,
    "KOMBİNE": 87,
-   "YAPILMADI": 582,
-   "ÖNCÜL": 36,
+   "YAPILMADI": 581,
+   "ÖNCÜL": 37,
    "HUDUT": 54,
    "SINIFLANMADI": 429,
    "AÇIK": 7
@@ -52415,17 +54034,17 @@
    "UYUMLU": 1
   },
   "ispat": {
-   "direct": 161,
+   "direct": 162,
    "sibr": 25,
    "dislama": 152,
    "alt": 1
   },
-  "ispat_toplam": 339,
-  "kombinasyon": 1127,
+  "ispat_toplam": 340,
+  "kombinasyon": 1191,
   "usul": 32,
   "soru": 33,
   "hucre_say": 109,
   "felsefe_say": 42,
-  "onerme": 76
+  "onerme": 81
  }
 }

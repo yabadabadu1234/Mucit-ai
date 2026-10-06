@@ -50,6 +50,8 @@ P('Q02.c1', 'U31', ['m_ben', 't_vacib', 't_mumkin', 'k_tercihsiz', 'k_muhtac_mum
 P('Q02.c1', 'U14', ['m_tahsis', 'k_tercihsiz_hal'], 'Bilinen bütün eserlerin müessiri bulunmuştur; tarama tam olmadığından netice zannîdir.')
 P('Q02.c1', 'U32', ['m_bilinc'], 'İnsandaki mutlak varlığa yönelme eğilimi delil sayılmaz; muhatabı aramaya sevk eder.')
 
+P('Q02.c2', 'U27', ['k_iddia_gerekce', 'k_destek_hasir', 's_kaza_kurali', 's_parca_butun', 'p_sadelik_orantisiz', 'H:Q01.c1'],
+  'Cezmî nefyin gerekçesi ya bulamamaktır (hasmın yerelde reddettiği kural), ya iç açıklamaların başarı sicilinden bütüne geçiştir (hasmın terkip itirazının tersine yürüyen aynı geçiş), ya sadeliktir (yerelde her olayı çıplak sayardı), ya imkânsızlık delilidir (Q01’de çürüdü); hiçbiri kalmadığından cezmî nefy savunulamaz ve geriye yalnız tevakkuf kalır.')
 P('Q03.c1', 'U12', ['m_mumkin', 'm_degisim', 'k_degisen_vacib_degil'], 'Âlemde değişen ve başka türlü olabilen şeylerin bulunduğu müşâhede edilir.')
 P('Q03.c1', 'U26', ['m_ben', 'e_celismezlik'], '“Varlık kuruntudur” diyen, kuruntu eden bir varlığı kabul eder.')
 P('Q03.c1', 'U07', ['m_ben', 'e_celismezlik'], 'Hiçbir şey yoksa bu cümleyi söyleyen de yoktur.')
