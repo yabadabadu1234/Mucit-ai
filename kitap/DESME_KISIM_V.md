@@ -71,8 +71,10 @@ Bu dosya **dizindir**. Eskiden tek dosya olan deşmenin bütün yaprakları **si
 | [V.Kc2_MATURIDI_KUL_FIILLERI_TENKIT](DESME/KISIM_V/V.Kc2_MATURIDI_KUL_FIILLERI_TENKIT.md) | V.K.T2.1–12 (Claude tenkidi, kat'î hasr denemesi, açık iş S48; 3-I 241, 242) | 12 | 8.6 KB |
 | [V.Kd_MATURIDI_KUL_FIILLERI_DELILLER_MUTEZILE](DESME/KISIM_V/V.Kd_MATURIDI_KUL_FIILLERI_DELILLER_MUTEZILE.md) | V.K.3.74–88, V.K.4.1–24 (Mâtürîdî: kul fiilleri aklî delillerin devamı, Mu'tezile'nin emir–nehiy delili ve üç sebebe cevap; 3-I 241, 242) | 39 | 20.2 KB |
 | [V.Ke_MATURIDI_KABI_KUL_FIILLERI_TENKIT](DESME/KISIM_V/V.Ke_MATURIDI_KABI_KUL_FIILLERI_TENKIT.md) | V.K.5.1–41, V.K.T3.1–14 (Mâtürîdî: Kâ'bî'nin kul fiilleri görüşü ve tenkidi I; Claude tenkidi; 3-I 241, 242) | 55 | 31.8 KB |
+| [V.Kf_MATURIDI_KABI_KUL_FIILLERI_II](DESME/KISIM_V/V.Kf_MATURIDI_KABI_KUL_FIILLERI_II.md) | V.K.5.42–99 (Mâtürîdî: Kâ'bî'nin kul fiilleri görüşü ve tenkidi II: hüve istisnası, Sâffât 37/96, Ra'd 13/16 teşbihi, kamış örneği; 3-I 241, 242) | 58 | 30.2 KB |
+| [V.Kg_MATURIDI_KABI_III_NAKLI_DELIL_TENKIT](DESME/KISIM_V/V.Kg_MATURIDI_KABI_III_NAKLI_DELIL_TENKIT.md) | V.K.5.100–121, V.K.6.1–20, V.K.T4.1–21 (Mâtürîdî: Kâ'bî III, naklî delil s.491; Claude tenkidi; 3-I 241, 242) | 63 | 34.1 KB |
 | [V.TOPLU_TENKIT_ACIK_ISLER](DESME/KISIM_V/V.TOPLU_TENKIT_ACIK_ISLER.md) | TOPLU | 0 | 1.2 KB |
 
-**Toplam yaprak: 2779.** Cinse göre: K 1146 · Z 808 · C 590 · B 59 · İt 80 · T 29 · İ 52 · M 14 · H 1
+**Toplam yaprak: 2900.** Cinse göre: K 1186 · Z 830 · C 629 · B 59 · İt 80 · T 29 · İ 72 · M 14 · H 1
 
-Not (3-I 241): V.1.3.M (285), V.2.6–V.2.39 (943), V.3.M (107), V.4.M (83), V.4.N (96), V.4.O (70) ve V.5.8–V.5.12 (66), V.K (269) ve V.M (73) yaprakları Mâtürîdî'den alınmıştır; V.F ve V.M satırlarının cinsi 3. sütundadır (namzet önerisi). V.1 dosyası 40 KB'ı aşınca V.1.4.17 ve sonrası **silinmeden** V.1.4b dosyasına taşınmıştır (3-I 238).
+Not (3-I 241): V.1.3.M (285), V.2.6–V.2.39 (943), V.3.M (107), V.4.M (83), V.4.N (96), V.4.O (70) ve V.5.8–V.5.12 (66), V.K (390) ve V.M (73) yaprakları Mâtürîdî'den alınmıştır; V.F ve V.M satırlarının cinsi 3. sütundadır (namzet önerisi). V.1 dosyası 40 KB'ı aşınca V.1.4.17 ve sonrası **silinmeden** V.1.4b dosyasına taşınmıştır (3-I 238).
