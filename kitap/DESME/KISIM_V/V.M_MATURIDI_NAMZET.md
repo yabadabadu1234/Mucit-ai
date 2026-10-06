@@ -34,19 +34,19 @@ Kaynak: padişahın verdiği altı fotoğraftaki basılı İçindekiler (Kitâb�
 | V.M.26 | [8. Hikmet ve İlim Sahibi Bir Yaratıcıyı İnkâr Edenlere Cevap] (151) | Z | V.2.2.1 (ilim), V.2.4.1 (hikmet); V.1.3.c (nizam) | okundu |
 | V.M.27 | [9.] Mesele [Azîz ve Celîl Olan Allah'ın İsimleri Hakkında] (158) | Z | V.2.5; `SIFAT_SAYISI_ARAMA.md` (isim sayısı mevzuu tehir edilmişti, 3-I 213) | okundu |
 | V.M.28 | [10.] Mesele [Arş Konusunun Açıklanması] (162) | Z | V.2.1.8 (mekân); **yapraklar V.2.16 (3-I 242)** | okundu |
-| V.M.29 | [11.] Mesele [Allah'ın Görülmesi] (178) | Z | V.2 (açık: kitabın mevzuuna girer mi; padişaha sorulur) | okunmadı |
-| V.M.30 | [12.] Mesele [Mu'tezile'ye Göre Ma'dûmun Şey Oluşu ve Bunun Tenkidi] (193) | Z | V.1.3.M (yokluk ve şey; "ezelî mümkin ma'dûm olarak şeydir" iddiası ile ilgili olabilir) | okunmadı |
-| V.M.31 | [13.] Mesele [Allah'ı Niteleyip İsimlendirmek Benzeşmeyi Gerektirmez] (204) | Z | V.2.7.15–19 (ispat ve teşbih) | okunmadı |
-| V.M.32 | [14. Allah Kâinatı Niçin Yaratmıştır?] (210) | Z | V.5.3, V.5.4 (hikmet, şer); V.2.4.1 | okunmadı |
-| V.M.33 | [15. Emir ile Nehyin Hikmeti] (216) | Z | V.5.3 (hükümlerin hikmeti), V.6.3 | okunmadı |
-| V.M.34 | [16.] Mesele [Tevhit Konusunda Rabbin Tanınması] (219) | Z | V.2.1; V.8 (iz'ân) | okunmadı |
-| V.M.35 | [17.] Mesele ["Şey" ve "Cisim" Kelimelerinin Allah'a Nispet Edilişi] (223) | Z | V.2.1.7 | okunmadı |
-| V.M.36 | [18. Allah Teâlâ'nın Mekânla Nitelendirilemeyeceği] (224) | Z | V.2.1.8 | okunmadı |
-| V.M.37 | [19.] Mesele ["Mahiyet, Keyfiyet" ve "Kurb" Kavramlarının Allah'a Nispet Edilmesi] (227) | Z | V.2.1.7–8 | okunmadı |
-| V.M.38 | [20. Zararlı Nesneleri Yaratmanın Hikmeti] (229) | Z | V.5.4 (şer ve imtihan) | okunmadı |
-| V.M.39 | Mesele [İnsanların Kâinat Hakkındaki Farklı Görüşleri] (233) | Z | Kısım II Bâb 6–7 (felsefe çeşitleri; İslâm düşüncesinin kendi tasnifi) | okunmadı |
-| V.M.40 | [1. Seneviyye'nin Tenkidi] (239) | Z | V.2.3.3, V.2.8 (Mâtürîdî'nin ikinci ele alışı) | okunmadı |
-| V.M.41 | [2. Tabiatçıların Eleştirilmesi] (244) | Z | Kısım II Bâb 6 (maddeci ve tabiatçı); V.1.2.3 (ateist) | okunmadı |
+| V.M.29 | [11.] Mesele [Allah'ın Görülmesi] (178) | Z | V.2 (açık: kitabın mevzuuna girer mi; padişaha sorulur); **yapraklar V.2.17 (71)** | okundu |
+| V.M.30 | [12.] Mesele [Mu'tezile'ye Göre Ma'dûmun Şey Oluşu ve Bunun Tenkidi] (193) | Z | V.1.3.M (yokluk ve şey); **yapraklar V.2.18 (42)**; ezelî mümkin kolunun üçüncü yüzü (V.2.18.41) | okundu |
+| V.M.31 | [13.] Mesele [Allah'ı Niteleyip İsimlendirmek Benzeşmeyi Gerektirmez] (204) | Z | V.2.7.15–19 (ispat ve teşbih); **yapraklar V.2.19 (40)** | okundu |
+| V.M.32 | [14. Allah Kâinatı Niçin Yaratmıştır?] (210) | Z | V.5.3, V.5.4 (hikmet, şer); V.2.4.1; **yapraklar V.5.8 (21) ve V.5.10 (12)** | okundu |
+| V.M.33 | [15. Emir ile Nehyin Hikmeti] (216) | Z | V.5.3 (hükümlerin hikmeti), V.6.3; **yapraklar V.5.9 (17)** | okundu |
+| V.M.34 | [16.] Mesele [Tevhit Konusunda Rabbin Tanınması] (219) | Z | V.2.1; V.8 (iz'ân); **yapraklar V.2.20** | okundu |
+| V.M.35 | [17.] Mesele ["Şey" ve "Cisim" Kelimelerinin Allah'a Nispet Edilişi] (223) | Z | V.2.1.7; **yapraklar V.2.21** | okundu |
+| V.M.36 | [18. Allah Teâlâ'nın Mekânla Nitelendirilemeyeceği] (224) | Z | V.2.1.8; **yapraklar V.2.22** | okundu |
+| V.M.37 | [19.] Mesele ["Mahiyet, Keyfiyet" ve "Kurb" Kavramlarının Allah'a Nispet Edilmesi] (227) | Z | V.2.1.7–8; **yapraklar V.2.23** | okundu |
+| V.M.38 | [20. Zararlı Nesneleri Yaratmanın Hikmeti] (229) | Z | V.5.4 (şer ve imtihan); **yapraklar V.5.11–V.5.12** | okundu |
+| V.M.39 | Mesele [İnsanların Kâinat Hakkındaki Farklı Görüşleri] (233) | Z | Kısım II Bâb 6–7 (felsefe çeşitleri; İslâm düşüncesinin kendi tasnifi); **yapraklar V.2.25** (Kısım II dayanağı) | okundu |
+| V.M.40 | [1. Seneviyye'nin Tenkidi] (239) | Z | V.2.3.3, V.2.8 (Mâtürîdî'nin ikinci ele alışı); **yapraklar V.2.26** | okundu |
+| V.M.41 | [2. Tabiatçıların Eleştirilmesi] (244) | Z | Kısım II Bâb 6 (maddeci ve tabiatçı); V.1.2.3 (ateist); **yapraklar V.2.27** | okundu |
 | V.M.42 | Mesele [Tevhit Yöntemleri Hakkında] (249) | Z | Kısım I Bâb 4 (ispat usulleri); V.1.3 (delil taksimi) | okunmadı |
 | V.M.43 | [1. Muhammed b. Şebîb'in Allah'ın Varlığı ve Sıfatları Hakkındaki Görüşleri] (256) | Z | V.1.3, V.2.2 | okunmadı |
 | V.M.44 | [2.] Mesele [Tefekkür Yoluyla Bilgi Edinme Hakkında Savunma] (278) | Z | I.3.15.42–52 (istidlâl); V.0.3 | okunmadı |

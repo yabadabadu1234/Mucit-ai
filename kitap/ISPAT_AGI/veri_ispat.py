@@ -232,3 +232,17 @@ P('Q10.irade.c1', 'U17', ['m_cok', 'm_tahsis', 'k_tabi_tek_tur', 'k_irade_cuzi']
   'Âlemde çokluk ve çeşitlilik vardır; tabiatıyla iş yapan tek türde iş yapar; çeşitli fiil ihtiyarlı ve iradeli fâile işaret eder (Mâtürîdî, ilâhî fiillerin ihtiyarîliği).')
 P('Q04.c2', 'U07', ['k_gizleme_gucu', 'k_aciz_vacib_degil', 'k_bilgisiz_vacib_degil', 't_vacib'],
   'İki ilâhtan biri diğerinden gizli fiil işleyebiliyorsa diğeri bilgisizdir, işleyemiyorsa kendisi güçte sınırlıdır; her iki hâlde biri noksandır ve vâcib olamaz (Mâtürîdî, gizleme argümanı).')
+
+# 3-I 242: Mâtürîdî okuması (Niteleme ve benzeşme: V.2.19) — mutlak sıfatsızlık iddiasına ilzam
+for sid in ('hayat', 'ilim', 'kudret', 'irade'):
+    P('Q10.' + sid + '.c3', 'U26', ['k_nefy_nisbet', 'e_celismezlik'],
+      'Hiçbir sıfat nisbet edilemez diyen, “sıfatsızlık” hükmünü nisbet etmiş olur; mutlak nisbetsizlik iddiası kendini çürütür (Mâtürîdî, niteleme ve benzeşme).',
+      kismi='Yalnız mutlak sıfatsızlık (hiçbir anlam nisbet etmeme) iddiasını kapsar; yalnız olumsuz (selbî) sıfatlarla yetinen hasmı kapsamaz')
+
+# 3-I 242: Mâtürîdî okuması — düalizme karşı iki kısmî ispat (Seneviyye tenkidi: V.2.26, V.5.11)
+P('Q04.c2', 'U26', ['k_karisik_ozne_guvensiz', 'e_celismezlik'],
+  'Nefsi iki zıt cevherin karışımı sayan düalist, kendi hükmünün (düalizmin) doğruluğuna güvenemeyeceği bir öznedir; öğretisini doğru saymak kendi öncülüne aykırıdır (Mâtürîdî, Seneviyye tenkidi).',
+  kismi='Yalnız insan nefsini iki zıt cevherin karışımı sayan düalizmi kapsar; iki ezelî ilkeyi nefsin yapısına bağlamayan düalizmi kapsamaz')
+P('Q04.c2', 'U27', ['m_karma_hayir_ser', 'k_dualizm_dagilim'],
+  'Gözlenen her nesnede hayır ve şer birlikte bulunur; her nesneyi yalnız hayır veya yalnız şer ilkesine bağlayan düalizm bu birlikteliği ayrışık iki ilkeyle açıklayamaz (Mâtürîdî, V.2.8.13 ve V.5.11).',
+  kismi='Yalnız her nesneyi ya hayır ya şer ilkesinden sayan düalizmi kapsar; iki ilkenin her nesnede işbirliğini kabul eden düalizm V.2.6.17–19 (gizleme) argümanına düşer')

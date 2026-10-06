@@ -26,9 +26,18 @@
 | Hikmet ve ilim sahibi bir yaratıcıyı inkâr edenlere cevap (151–157) | 5310–5597 | **okundu** | orta | dipnot 49–50 okundu |
 | Allah'ın isimleri (158–161) | 5598–5745 | **okundu** | orta | dipnot 51–55 okundu |
 | Arş konusunun açıklanması (162–177) | 5746–6456 | **okundu** (3-I 242: "49–162 arasında okumadığın varsa tamamla") | orta; tercüman dipnotları (Dehriyye, Seneviyye, Nâbiga, Süyûtî atfı) ve ayet atıfları okundu; ayet metinleri OCR'da yer yer bozuk, düzeltilmedi | görüş sayımı, mekân nefyi, istivâ te'villeri, Kâ'bî'ye ilzam, yön ve yakınlık okundu; **bir sonraki okuma OCR satır 6457'den ("Allah'ın Görülmesi", s.178)** başlar |
+| Allah'ın görülmesi (178–192) | 6457–7138 | **okundu** (3-I 242) | orta; ayet metinleri OCR'da yer yer bozuk, düzeltilmedi; dipnotlar (hâşiye ve tercüman notları) okundu | rü'yet–idrak ayrımı, dokuz delil, Kâ'bî'ye yedi cevap, Mûsâ kıssası okundu; **bir sonraki okuma OCR satır 7139'dan (Ma'dûm, s.193)** başlar |
+| Ma'dûmun şey oluşu ve Mu'tezile tenkidi (193–203) | 7139–7595 | **okundu** (3-I 242) | orta; ayet metinleri OCR'da yer yer bozuk | Mâtürîdî'nin Mu'tezile'ye nisbetleri ve ilzamları (aktarım; Mu'tezile kitapları okunmadı); kader kısmı V.K namzedi; **bir sonraki okuma OCR satır 7596'dan (Niteleme ve benzeşme, s.204)** |
+| Niteleme ve benzeşme (204–209) | 7596–7831 | **okundu** (3-I 242) | orta | Bâtıniyye aktarımı, mutlak isim teşbih doğurmaz delili; yapraklar V.2.19 |
+| Allah kâinatı niçin yaratmıştır (210–215) | 7832–8053 | **okundu** (3-I 242) | orta | sekiz görüş (a–h); yapraklar V.5.8 |
+| Emir ile nehyin hikmeti (216–218) | 8054–8187 | **okundu** (3-I 242) | orta | yapraklar V.5.9 |
+| Tevhit konusunda rabbin tanınması (219–222) | 8188–8333 | **okundu** (3-I 242) | orta | yapraklar V.2.20 |
+| Şey ve cisim (223) · Mekân (224–226) · Mahiyet, keyfiyet, kurb (227–228) | 8334–8617 | **okundu** (3-I 242) | orta | yapraklar V.2.21–V.2.23 |
+| Zararlı nesneleri yaratmanın hikmeti (229–232) | 8618–8728 | **okundu** (3-I 242) | orta | yapraklar V.5.11–V.5.12 |
+| İnsanların kâinat hakkındaki farklı görüşleri (233–238) · Seneviyye'nin tenkidi (239–243) · Tabiatçıların eleştirilmesi (244–248) | 8729–9289 | **okundu** (3-I 242) | orta; Mâtürîdî'nin Seneviyye, tabiatçı ve heyûlâ aktarımı; sıkışık tercüme yerleri "Claude okuması" diye işaretli | yapraklar V.2.25–V.2.28; **bir sonraki okuma OCR satır 9290'dan (Tevhid yöntemleri, s.249)** başlar |
 | Dördüncü Bölüm (s.617–712) | 23874–27791 | **okunmaz** | -- | padişah emri |
 
-**Sayı:** okunan basılı sayfa **49–177 = 129 sayfa** (fihrist aralığına göre; sayfa sayfa doğrulanmadı). Okunmayan: s.178–616 (439 sayfa) ve s.713–758 (46 sayfa); okunmaz: s.617–712 (96 sayfa).
+**Sayı:** okunan basılı sayfa **49–248 = 200 sayfa** (fihrist aralığına göre; sayfa sayfa doğrulanmadı). Okunmayan: s.249–616 (368 sayfa) ve s.713–758 (46 sayfa); okunmaz: s.617–712 (96 sayfa).
 
 **Yoklanan şeyler (3-A 25-D):** bölüm başlıkları OCR'da bulundu ve fihristle eşleşti (ör. "Âlemin Ezeliliğini Savunanların Görüşleri" ve "Seneviyye'nin Âlemin Ezelîliği ve Diğer Konular Hakkındaki Görüşleri" aynen). OCR sayfa numarası fihrist numarasıyla örtüşmez; bu yüzden OCR sayfa numarasına dayanılmadı.
 

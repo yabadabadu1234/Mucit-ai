@@ -35,19 +35,19 @@ Umumîden hususîye. **Sayfa numaraları padişahın fotoğrafladığı basılı
 | İlâhiyyât | [8. Hikmet ve İlim Sahibi Bir Yaratıcıyı İnkâr Edenlere Cevap] | 151–157 | **okundu** | yüksek |
 | İlâhiyyât | [9.] Mesele [Azîz ve Celîl Olan Allah'ın İsimleri Hakkında] | 158–161 | **okundu** | orta (S35) |
 | İlâhiyyât | [10.] Mesele [Arş Konusunun Açıklanması] | 162–177 | **okundu** (3-I 242: bütünü okundu, OCR satır 5746–6456; yapraklar V.2.16, 97 yaprak) | orta |
-| İlâhiyyât | [11.] Mesele [Allah'ın Görülmesi] | 178–192 | okunmadı | orta |
-| İlâhiyyât | [12.] Mesele [Mu'tezile'ye Göre Ma'dûmun Şey Oluşu ve Bunun Tenkidi] | 193–203 | okunmadı | orta |
-| İlâhiyyât | [13.] Mesele [Allah'ı Niteleyip İsimlendirmek Benzeşmeyi Gerektirmez] | 204–209 | okunmadı | orta |
-| İlâhiyyât | [14. Allah Kâinatı Niçin Yaratmıştır?] | 210–215 | okunmadı | yüksek (V.5, hikmet) |
-| İlâhiyyât | [15. Emir ile Nehyin Hikmeti] | 216–218 | okunmadı | yüksek (V.5.3) |
-| İlâhiyyât | [16.] Mesele [Tevhit Konusunda Rabbin Tanınması] | 219–222 | okunmadı | yüksek |
-| İlâhiyyât | [17.] Mesele ["Şey" ve "Cisim" Kelimelerinin Allah'a Nispet Edilişi] | 223 | okunmadı | orta |
-| İlâhiyyât | [18. Allah Teâlâ'nın Mekânla Nitelendirilemeyeceği] | 224–226 | okunmadı | orta |
-| İlâhiyyât | [19.] Mesele ["Mahiyet, Keyfiyet" ve "Kurb" Kavramlarının Allah'a Nispet Edilmesi] | 227–228 | okunmadı | orta |
-| İlâhiyyât | [20. Zararlı Nesneleri Yaratmanın Hikmeti] | 229–232 | okunmadı | yüksek (V.5.4 şer) |
-| İlâhiyyât | Mesele [İnsanların Kâinat Hakkındaki Farklı Görüşleri] | 233–238 | okunmadı | yüksek (Kısım II) |
-| İlâhiyyât | [1. Seneviyye'nin Tenkidi] | 239–243 | okunmadı | yüksek |
-| İlâhiyyât | [2. Tabiatçıların Eleştirilmesi] | 244–248 | okunmadı | yüksek |
+| İlâhiyyât | [11.] Mesele [Allah'ın Görülmesi] | 178–192 | **okundu** (3-I 242; OCR satır 6457–7138; yapraklar V.2.17, 71 yaprak) | orta |
+| İlâhiyyât | [12.] Mesele [Mu'tezile'ye Göre Ma'dûmun Şey Oluşu ve Bunun Tenkidi] | 193–203 | **okundu** (3-I 242; OCR satır 7139–7595; yapraklar V.2.18, 42 yaprak) | orta |
+| İlâhiyyât | [13.] Mesele [Allah'ı Niteleyip İsimlendirmek Benzeşmeyi Gerektirmez] | 204–209 | **okundu** (3-I 242; OCR satır 7596–7831; yapraklar V.2.19, 40 yaprak) | orta |
+| İlâhiyyât | [14. Allah Kâinatı Niçin Yaratmıştır?] | 210–215 | **okundu** (3-I 242; OCR satır 7832–8053; yapraklar V.5.8) | yüksek (V.5, hikmet) |
+| İlâhiyyât | [15. Emir ile Nehyin Hikmeti] | 216–218 | **okundu** (3-I 242; OCR satır 8054–8187; yapraklar V.5.9) | yüksek (V.5.3) |
+| İlâhiyyât | [16.] Mesele [Tevhit Konusunda Rabbin Tanınması] | 219–222 | **okundu** (3-I 242; OCR satır 8188–8333; yapraklar V.2.20) | yüksek |
+| İlâhiyyât | [17.] Mesele ["Şey" ve "Cisim" Kelimelerinin Allah'a Nispet Edilişi] | 223 | **okundu** (3-I 242; OCR satır 8334–8406; yapraklar V.2.21) | orta |
+| İlâhiyyât | [18. Allah Teâlâ'nın Mekânla Nitelendirilemeyeceği] | 224–226 | **okundu** (3-I 242; OCR satır 8407–8511; yapraklar V.2.22) | orta |
+| İlâhiyyât | [19.] Mesele ["Mahiyet, Keyfiyet" ve "Kurb" Kavramlarının Allah'a Nispet Edilmesi] | 227–228 | **okundu** (3-I 242; OCR satır 8512–8617; yapraklar V.2.23) | orta |
+| İlâhiyyât | [20. Zararlı Nesneleri Yaratmanın Hikmeti] | 229–232 | **okundu** (3-I 242; OCR satır 8618–8728; yapraklar V.5.11–V.5.12) | yüksek (V.5.4 şer) |
+| İlâhiyyât | Mesele [İnsanların Kâinat Hakkındaki Farklı Görüşleri] | 233–238 | **okundu** (3-I 242; OCR satır 8729–8951; yapraklar V.2.25) | yüksek (Kısım II) |
+| İlâhiyyât | [1. Seneviyye'nin Tenkidi] | 239–243 | **okundu** (3-I 242; OCR satır 8952–9151; yapraklar V.2.26) | yüksek |
+| İlâhiyyât | [2. Tabiatçıların Eleştirilmesi] | 244–248 | **okundu** (3-I 242; OCR satır 9152–9289; yapraklar V.2.27; tenkit V.2.28) | yüksek |
 | İlâhiyyât | Mesele [Tevhit Yöntemleri Hakkında] | 249–255 | okunmadı | **yüksek (usul)** |
 | İlâhiyyât | [1. Muhammed b. Şebîb'in Allah'ın Varlığı ve Sıfatları Hakkındaki Görüşleri] | 256–277 | okunmadı | yüksek |
 | İlâhiyyât | [2.] Mesele [Tefekkür Yoluyla Bilgi Edinme Hakkında Savunma] | 278–281 | okunmadı | **yüksek (usul)** |

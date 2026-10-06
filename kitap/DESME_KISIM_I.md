@@ -30,9 +30,9 @@ Bu dosya **dizindir**. Eskiden tek dosya olan deşmenin bütün yaprakları **si
 | [I.7_BIRLESME_VE_CATISMA](DESME/KISIM_I/I.7_BIRLESME_VE_CATISMA.md) | I.7 | 59 | 11.8 KB |
 | [I.8_KAPANIS_USULU](DESME/KISIM_I/I.8_KAPANIS_USULU.md) | I.8 | 9 | 1.0 KB |
 | [I.9_DAGITIM_SAYIM_TENKIT](DESME/KISIM_I/I.9_DAGITIM_SAYIM_TENKIT.md) | I.9, SAYIM, TENKİT | 14 | 3.5 KB |
-| [I.10_LAFIZ_MANA_YORUM_USULU](DESME/KISIM_I/I.10_LAFIZ_MANA_YORUM_USULU.md) | I.10 (Mâtürîdî Arş bölümünden çıkarılan lafız, anlam ve yorum usulü; 3-I 242) | 29 | 6.0 KB |
+| [I.10_LAFIZ_MANA_YORUM_USULU](DESME/KISIM_I/I.10_LAFIZ_MANA_YORUM_USULU.md) | I.10 (Mâtürîdî Arş bölümünden çıkarılan lafız, anlam ve yorum usulü; 3-I 242) | 51 | 10.5 KB |
 
-**Toplam yaprak: 767.** Cinse göre (I.9 dosyasının 14 yaprağı hariç, o dosyanın biçimi farklıdır): K 473 · T 141 · H 48 · Z 47 · M 16 · B 4 · C 24
+**Toplam yaprak: 789.** Cinse göre (I.9 dosyasının 14 yaprağı hariç, o dosyanın biçimi farklıdır): K 489 · T 141 · H 48 · Z 53 · M 16 · B 4 · C 24
 
 Not (3-I 242): I.3.15.63 nakzedildi (S40; eski metin kendi yaprağında yazılı), I.3.15.64 ve iki "-b" yaprağı (I.3.15.26-b, I.3.15.30-b) eklendi; I.10 yeni fasıldır.
 
