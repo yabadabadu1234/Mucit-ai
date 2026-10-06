@@ -104,7 +104,7 @@
 | V.1.4.15 | **İtiraz (ispat yükü):** "Yokluğu iddia etmiyorum" | İt |
 | V.1.4.16 | **Cevap:** V.0.2.2–3 | C |
 
-#### V.1.4.17–V.1.4.75 Rastgelelik itirazı (padişahın isteği; deşme taslağı)
+#### V.1.4.17–V.1.4.90 Rastgelelik itirazı (padişahın isteği; deşme taslağı)
 
 | No | Cümle | Cins |
 | :-- | :-- | :-- |
@@ -167,6 +167,21 @@
 | V.1.4.73 | Teklif (çıkarım, Pruss söylemiyor; yoklanacak): G1’i teoreme çevirmek: sebepsiz hipotez dar aralık `[a,b]` verirse “neden `[a,b]`” sorusunun cevabı bir **kanun**dur; kanun açıklamadır; böylece (c) şıkkı sebepsizliğe değil kanunlu rastgeleliğe iner | K |
 | V.1.4.74 | Teklif (çıkarım; yoklanacak): G2’yi teoreme çevirmek için “düşük öncül” yolunun kendi gerekçesini istediği veya kendini yıktığı gösterilmelidir; gösterilmedikçe bu yol ilzam olarak kalır | K |
 | V.1.4.75 | Veritabanı: Pruss’un öncülleri dört öncül olarak kaydedildi (`m_frekans_sans`, `t_bayes_aralik`, `p_sebepsiz_sans_yok`, `p_apriori_ret`); yeni ispat `Q00.c2/U07#2` **zan-ı gâlib** çıkıyor, çünkü iki öncül zayıf (G1, G2); kitabın katiyet işareti **yakîne çıkarılmadı** | K |
+| V.1.4.76 | Deneme: Pruss’un iki boşluğu (G1, G2) kapatılmaya çalışıldı; akıl yürütme **Claude’undur**, Pruss’un değil (DESTEK/PRUSS_G1_G2_DENEME.md) | K |
+| V.1.4.77 | Şans bir sürecin eğilimidir; sonuçlara dar bir olasılık aralığı veren hipotez bir eğilim ileri sürer ve olasılıkçı açıklama sunar; hiçbir eğilim ileri sürmeyen hipotez **açıklamasızdır** (Pruss’un kendi tanımları, s.1-2) | T |
+| V.1.4.78 | Önsav (G1, tahlilî): açıklamasız hipotez altında önemsiz olmayan bir sonuç olayının olasılığı tam aralık `[0,1]`’dir; çünkü dar aralık veren hipotez bir eğilim ileri sürmüş olurdu | B |
+| V.1.4.79 | Üç hasım tipi: (i) çıplak şans eğilim ileri sürer, yani açıklama sunar; (ii) çıplak düzenlilik (Hume’cu) eğilim değil desen ileri sürer; (iii) çıplak varlık hiçbir şey ileri sürmez | K |
+| V.1.4.80 | Çıplak düzenlilik: her sonlu başlangıç parçası her limit sıklıkla bağdaşır; bu yüzden “limit sıklık `[a,b]`’dedir” hipotezi sonlu gözleme olasılık vermez; sonlu gözlemden limite geçmek için gereken temsil edicilik varsayımı bir eğilim ileri sürmektir | K |
+| V.1.4.81 | Rastgelelik itirazını savunan çıplak şansı savunur; çıplak şans açıklamadır; Pruss’un yerel ilkesi ona **dokunmaz** ve kuantum itirazı ilkeyi çürütmez | C |
+| V.1.4.82 | Sınır: G1’in kapanması iddiayı **daraltır**: yalnız şanssız hipotezleri eler; çıplak şans ve onun *kendi değerinin* açıklaması bu delille elenmez; Vâcib için gereken küresel adımdır | K |
+| V.1.4.83 | Küresel adım: yokluk bir süreç ve düzenek değildir; süreç olmayan yerde eğilim ve şans yoktur; öyleyse “mümkinler bütünü müreccihsizdir” hipotezi şanssızdır ve aralığı `[0,1]` kalır (V.1.4.38’in biçimsel hâli) | K |
+| V.1.4.84 | Boşluk: “yokluk eğilim taşımaz” öncülü fizik vakumunun “hiçbir şey” olmadığı ayrımına (V.1.4.29) dayanır; vakumu “hiçbir şey” sayan hasım bu öncülü reddeder | Z |
+| V.1.4.85 | G2 denemesi: düşük öncül yolunun gerekçesi “aksi hâlde ayırt edilemeyen hipotezler arasında seçim keyfî olurdu”dur; bu gerekçe küresel sebepsiz hipotezler (beş dakikalık evren, bir dakikalık geriye ışık konisi) için de aynen geçerlidir (Pruss s.12-13) | K |
+| V.1.4.86 | Eşdeğerlik: hasım düşük öncül yolunu yerel olaylarda kabul edip küresel olaylarda reddedemez; reddederse kendi gerekçesini terk eder, kabul ederse çıplak evrene düşük öncül vermiş olur | K |
+| V.1.4.87 | Nakz: itirazını Büyük Patlama’ya ve kuantuma dayandıran hasım küresel ve yerel bilimsel çıkarımı kabul etmiştir; bu çıkarımı temelsiz bırakan sebepsiz hipotezlere düşük öncül vermek zorundadır (muhatabın kabulü kadar) | K |
+| V.1.4.88 | Sınır (G2): düşük öncül sıfır, imkânsız demek değildir; hasım “küresel tarihî çıkarımı da bırakıyorum” diyerek tutarlı kalabilir; bu hâlde delil onu çürütmez, yalnız itiraz kaynağını elinden alır | Z |
+| V.1.4.89 | Hüküm: G1 daraltılmış hâliyle kapandı; G2 **kapanmadı**, nakze indi: hasmın kendi ölçüsüyle çıplak evren düşük öncüllüdür; bu burhan değil ilzamdır | K |
+| V.1.4.90 | Veritabanı: `Q03.c2/U27` (zan-ı gâlib) eklendi; sebep ilkesinin üç kanadı birlikte kaldırılınca Q02.c1, Q02.c2 ve Q03.c2 artık İSPATSIZ değil **zan-ı gâlib** kalır ve F01 (katı ateizm) ÇÜRÜMEDİ yerine zan-ı gâlibe çürütülmüş görünür; `yokluk-egilim` veya `kureselleme` ailesi de düşerse yine İSPATSIZ olur | K |
 
 ### V.1.5 Neticenin hududu
 

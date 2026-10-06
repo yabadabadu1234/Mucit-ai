@@ -57,6 +57,8 @@ P('Q03.c2', 'U03', ['m_tahsis', 'k_tercihsiz', 'k_butunun_dis_muhtac', 'k_terkip
   'Bütünün müreccihi yoksa tahsis tercihsiz tercih olur; tercihsiz tercih imkânsızdır.')
 P('Q03.c2', 'U07', ['k_tercihsiz_hal', 'k_butunun_dis_muhtac', 'm_tahsis'], 'Sebepsiz bütün kabul edilirse belirli hâl açıklanamaz.')
 P('Q03.c2', 'U26', ['k_sebepsiz_bagimsiz'], 'Sebepsiz olgu savunusu kendi gerekçesini ister.')
+P('Q03.c2', 'U27', ['m_frekans_sans', 't_sans_egilim', 'k_yoktan_sanssiz', 't_bayes_aralik', 'p_esdegerlik_kureselleme'],
+  'Mümkinler bütününün müreccihsiz olması yokluktan varlık demektir; orada süreç ve eğilim yoktur; olasılığı [0,1] kalır; hasım düşük öncül yolunu yerelde kabul ediyorsa küreselde de vermek zorundadır; öyleyse kendi ölçüsüyle çıplak evren düşük öncüllüdür.')
 P('Q03.c2', 'U17', ['k_sebepsiz_bilgi', 'm_tahsis'], 'Sebepsiz olgu kabul edilirse hiçbir ilmî açıklamanın temeli kalmaz.')
 P('Q03.c3', 'U05', ['k_muhtac_mumkin', 'k_butunun_dis_muhtac', 'e_celismezlik'],
   'Hiçbir halka varlığı kendi başına kazandırmıyorsa bütün zincir de kazandıramaz.', tag=None, hd='Eşzamanlı zâtî zincir için işler.')

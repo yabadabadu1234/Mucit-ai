@@ -187,3 +187,5 @@ Padişahın kanaati: "burhan seviyesinde ispatlanacak". Ölçümüz: veritabanı
 - **G6 (sapkın hipotezler):** bilim düşmanı zorunlu varlık sadelikle elenir; sadelik **zan** verir.
 
 Dürüst hüküm: bu makale, sebep ilkesine karşı **kuvvetli bir ilzam** ve **biçimsel bir teorem zinciri** verir; zinciri **burhan** yapmak için G1 ve G2'nin kapatılması gerekir. Bu iş açıktır ve kapatılabilir olup olmadığı **bilinmiyor.**
+
+**Güncelleme:** G1 ve G2 için deneme yapıldı; sonuç `PRUSS_G1_G2_DENEME.md`dedir (G1 daraltılmış hâliyle kapandı, G2 kapanmadı).
