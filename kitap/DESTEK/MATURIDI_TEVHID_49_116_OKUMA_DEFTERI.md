@@ -1,0 +1,84 @@
+# MÂTÜRÎDÎ, KİTÂBÜ'T-TEVHÎD, basılı s.49–115 -- OKUMA DEFTERİ VE BÖLÜM ÖZETİ (3-I 241)
+
+**Dürüstlük kaydı.** Kaynak: archive.org OCR, Türkçe tercüme (Bekir Topaloğlu, İSAM). Arapça asıl ve gerçek metin (Şâmile/tahkikli neşir) **okunmadı ve yoklanmadı** (3-A 25-E); okumadan önce yoklama yapmadığım kusurdur (`kaynak/maturidi_kitabu_tevhid/INDIRME_NOTU.md`). OCR sayfa numarası basılı numarayla örtüşmediğinden bölüm içi sayfa yeri yazılmadı. Padişah (3-I 241): seçmece yapılmaz, azamî istifade edilir, **kopyalanmaz; formül ve şemayla daha az sayfada ifade edilir.** Alınanlar: `DESME/KISIM_I/` (I.3.15 · 63 yaprak, I.4.14 · 17, I.6.7 · 7, I.7.9 · 14) ve `DESME/KISIM_V/` (V.1.3.M · 117, V.2.6–V.2.8 · 78, V.M · 73). Okuma sırası padişahın tayinidir: önce s.103–116, sonra usul ve ilâhiyyât başı.
+
+## 1. Bölüm defteri
+
+| Bölüm (basılı s.) | İçerik | Netice | Mevzuya bağı | Doğan suâl |
+| :-- | :-- | :-- | :-- | :-- |
+| Dinî delile dayanarak bilmenin gerekliliği (49) | taklit; çokluk delil değil; burhan sunan kaynak durumu değiştirir; aynı delil iki zıt iddiada bulunamaz | taklit mâzur görülmez; burhan taklidi bitirir | I.3.2.3, I.6.3.10, V.0.2 | "bu delil bu zatta gerçekleşmiştir" hükmü H4'e dayalı (I.3.15.6) |
+| Nakil ve aklın esas oluşu (51) | nakil kaçınılmaz; akıl: evren fenâ için yaratılmadı → hikmet → çekişme toplumu yok eder → asıl (din) gerekli → yaratıcı-müdebbir → kılavuz (peygamber) ve belge | hikmetten nübüvvetin gerekliliği | V.3.2 (hikmet ve ihtiyaç) | "hikmet" öncülü kemâl ilkesi (V.2.2.5, zayıf) |
+| Bilgi edinme yolları (57) | ilham, zihinde sübût, kura, kehânet bilgi vasıtası değil | ölçüt: çelişen iddialarda ayırt etmeyen yöntem vasıta değil | I.3.15.17–21 | ilhamın ayırt etmediği ispatlı mı |
+| Duyu (58); haber (59); mütevâtir (61); haber-i vâhid (62) | inkârcıya ilzam ("inkâr ettiğini biliyor musun", "ne diyorsun"); toplam sıdk; râvi ve muhteva incelemesi | duyu ve haber istidlâlsiz reddedilemez | I.3.15.23–41, I.7.9 | haber-i vâhidin katiyeti (I.4.2.B.3) ile uyumu |
+| İstidlâl (62) ve başka cevaplar (67) | istidlâlin gereklilik sebepleri (uzak, küçük, haber türü, mûcize–sihir); retorsion; "bunu ne ile bildin" | istidlâli reddeden istidlâl eder | I.3.15.42–61 | niyet isnadı (I.3.15.55), şiddet önerisi (S40) |
+| Cevherlerin yaratılmışlığı (73) ve araz (75) | ihtiyaç, zıtların birleşmesi, hareket–sükûn, parça–bütün, bekâ–kıdem paritesi (yemek, hesap, mazi) | ayn ve cisim hâdis | V.1.3.M.A–B | "kadîm müstağnidir" ve "fiilî sonsuz imkânsız" öncülleri |
+| Âlemin yaratıcısı (85) | tahsis, ihtiyaç, kendine sebep ikilemi, nizam | yaratıcı vardır | V.1.3.M.C | hâl kanadı yalnız değişeni çürütür |
+| Kâinatın yaratıcısı birdir (88) | nakil, mûcize, temânu', gizleme/bilgi, nizam, mukayese | yaratıcı tektir | V.2.1, V.2.6 | sayı argümanı "âlem sonsuz olamaz"a bağlı |
+| Teşbihin nefyi (95) | benzer ve zıt = çokluk ve fenâ; cisim ve araz nefyi; isim ve sıfat teşbih doğurmaz | tenzih | V.2.1.6–9, V.2.7 | zıddı olmayan şeyin fenâ bulmaması ispatı |
+| Duyulur âlem duyu ötesine delil (99) | üç görüş; asıl–fer' tersine çevrilmiş; yazı yazana delâlet eder, keyfiyetine değil | eser müessirin varlığına delâlet eder | I.4.14, V.1.3.M.D | şâhid–gâib iki tarafı da kapsar |
+| Âlemin ezelîliğini savunanların görüşleri (103) | altı görüş; tasavvur ölçüsü; parçadan bütüne çevirme; simetri; illet ve fâil; icad = yok iken var etmek | ezelîlik delilleri cevaplanmış | V.1.3.M.E, I.7.9, I.6.7 | "icad" tanımı ve "kıdem = istiğna" tanım tartışması |
+| Seneviyye (110) | karışma hâdis; nur ve zulmet acz; hayır–şer ilkesi çelişir | düalizm çürütülür | V.2.8, I.7.9.11–14 | Seneviyye'nin kendi kaynağı (V.2.3.8) |
+
+## 2. Şema: Mâtürîdî'de "âlem hâdistir" çıkarımının dayanak öncülleri (Claude tahlili)
+
+```
+          ÂLEM HÂDİSTİR (Mâtürîdî)
+ ┌───────────┬───────────┬──────────┬──────────┬───────────┬────────────┐
+ Yol 1       Yol 2       Yol 3      Yol 4      Yol 5       Yol 6
+ ihtiyaç     hareket-    tahsis     parça →    bekâ-kıdem  kendine
+ ve istiğna  sükûn,araz  (hâl)      bütün      paritesi,   sebep
+                                               mazi, sayı  ikilemi
+   │           │           │          │          │          │
+ D1:kıdem=   D2:araz     D4:hâl      D5:şâhid-  D2':fiilî    (geçerli;
+ müstağni    hâdis ve    ilkesi      gâib       sonsuz       yalnız
+ (tanım)     cisim       (yalnız     (zannî;    imkânsız     "kendini
+ [zayıf]     sebkat      değişeni)   iki taraf  (metafizik)  var etti"
+             edemez                  kullanır)  [zayıf]      kolunu)
+             [D2'ye bağlı]
+```
+
+| Dayanak | İçerik | Statü | Hangi ezelî kolu çürütür |
+| :-- | :-- | :-- | :-- |
+| D1 | kadîm başkasından müstağnidir | tanım tartışması | ezelî ve muhtaç (ezelî mümkin); filozofların "vâcib bi-ğayrihi"sini baştan dışlar |
+| D2 | arazlar hâdis; cisim onlara sebkat edemez | D2'ye (fiilî sonsuz) bağlı | ezelî ve değişen |
+| D2' | tamamlanmış sonsuz imkânsız ("başlangıçsız mazi son bulamaz"; sayıda başlangıç şart) | metafizik; matematik teoremi değil | ezelî ve değişen |
+| D3 | icad = yok iken var etmek | tanım tartışması | ezelî fâil ve ezelî eser |
+| D4 | eşit imkânlı hâller arasında tercih müreccih ister | hâl ilkesi (evvelî ilan, S36) | ezelî ve değişen; değişmeyen kapsanmaz |
+| D5 | gözlenen terkiplerden tabiatın tamamına | zannî | iki tarafı da destekler |
+| D6 | kendine sebep ikilemi | **biçimsel olarak geçerli** | yalnız "kendini var etti" kolu |
+
+## 3. Damıtma: padişahın iki sorusuna (S38) Mâtürîdî'den cevap
+
+1. **"Yok kendini var edemez"** Mâtürîdî'de de aynen vardır (D6: var olmadan önce mevcut olan kendini icat edemez; yok fâil olamaz). Biçimsel olarak geçerlidir ve kitap onu `Q03.c5` ile aynı sayıda kapatır.
+2. **"Ezelden 2026'ya varılamaz"** padişahın misali Mâtürîdî'nin "başlangıçsız (kadîm) bir mazinin son bulması imkânsızdır" cümlesidir (D2'). Yani padişahın misali **klasik bir delilin** kendi ifadesidir; sezgisi yanlış değildir, kelâm geleneğinde de aynı yerde durur. Fakat Mâtürîdî'nin kendisi bu delile **tek başına** güvenmez; yemek örneği (şart zinciri), hesap (başlangıçsız artış yok) ve "araz için öncelik belirlenmemiştir" yapraklarıyla yedekler. Yedeklerin hepsi (V.1.3.M.31–32'de ayrıntı) bir **başlangıç anı** varsayar veya zâtî sıralı seriye (V.1.4.123) indirgenir; bu yüzden fiilî sonsuz iddiası bütün biçimlerinde **metafizik** kalır.
+3. **Kök zayıf halka (ezelî mümkin) Mâtürîdî'de de kapanmaz, yeniden adlandırılır:** D1 (kıdem = istiğna) ve D3 (icad = yok iken var etmek) **tanım hamleleridir**. Bunlar "ezelî ve açıklamasız mümkin" kolunu **tanımla** dışlar; kitabın V.1.4.126'daki kök zayıf halkası aynı yerdedir. Bu, Mâtürîdî'nin **hatası** değil, kelâm ile felsefe ayrılığının tam merkezidir (Gazzâlî–filozoflar).
+4. **Yeni (Mâtürîdî'den): sudûr itirazı.** "Tek özellikli (tab'an işleyen) bir illetten çeşitli ve zıt özellikli bir âlem çıkmaz" (V.1.3.M.96–97) ezelî fâil kabul edip eseri ezelî sayana karşı **ayrı** bir delildir; veritabanında karşılığı yoktur (açık iş).
+
+## 4. Bizde olan / olmayan (kümeler)
+
+| Küme | Mâtürîdî | Bizde karşılık | Durum |
+| :-- | :-- | :-- | :-- |
+| Taklit ve çokluk | s.49 | I.3.2.3, I.6.3.10 | var; **taklit–burhan ayrımı kaidesi** (I.3.15.4–5) yeni |
+| İlham ve kehânet reddi | s.57 | -- | **yok**, I.3.15.17–21 eklendi |
+| Duyu inkârcısına ilzam | s.58 | I.7.3.7 (genel) | örnekler yeni (I.3.15.26, I.3.15.53–54) |
+| "Ne diyorsun" testi (haber) | s.59 | -- | **yok**, I.3.15.30 eklendi |
+| Haber-i vâhid işlemi ve duyuda yanılma paritesi | s.62 | I.4.2.B.3 | kısmen; parite (I.3.15.40) yeni |
+| İstidlâl retorsion ve "ne ile bildin" | s.64, s.70 | I.7.3.6 | örnekler yeni |
+| Şâhid–gâib | s.99 | I.4.2.A.9 (temsil) | **yeni** (I.4.14) |
+| Parçadan bütüne çevirme ilzamı | s.103 | V.1.4.95 | kısmen (I.7.9.5–6) |
+| Hudûs: ihtiyaç, zıtlar, hareket–sükûn | s.73–85 | V.1.3.a | yeni ayrıntı (V.1.3.M) |
+| Bekâ–kıdem paritesi, yemek, hesap, mazi | s.77–79 | V.1.3.a.3 | **yeni** (V.1.3.M.24–32) |
+| Tahsis (hâl) delili | s.85 | V.1.4.32 (hâl kanadı) | klasik ifade yeni (V.1.3.M.54–56) |
+| Sudûr itirazı | s.103 | -- | **yok** (açık iş) |
+| Tevhid: bilgi/gizleme argümanı | s.88 | V.2.1.2–5 | **yeni** (V.2.6.17–20) |
+| Sayı argümanı | s.88 | -- | yeni; fiilî sonsuza bağlı (V.2.6.6) |
+| Düalizm aktarımı | s.110 | V.2.3.3 | yeni (V.2.8; kaynak: Mâtürîdî aktarımı) |
+
+## 5. Açık suâller
+
+| # | Suâl |
+| :-- | :-- |
+| S38 | Fiilî sonsuzun imkânsızlığı kitapta ne olarak yazılacak (evvelî ilan, ispat borcu, zannî delil) |
+| S39 | Kazâ ve kader bâbı (okuma planında; altı îmân esasının biri) |
+| S40 | Mâtürîdî'nin inatçıya muamele önerisi usul olarak alınmasın mı |
+| (okuma) | s.116 ve sonrası (cisim, şey, sıfatlar …) okuma planına göre sırada; padişah "ilâhiyyât 73–347" dedi, **okuma devam edecek** |

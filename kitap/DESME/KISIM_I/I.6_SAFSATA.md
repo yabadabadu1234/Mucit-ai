@@ -73,4 +73,16 @@
 | I.6.6.6 | **Claude çıkarımı (Fârâbî s.3'ten):** zorunlu olmayan kesini (belirli vakitte kesin) zorunlu kesin sayıp burhân saymak hatadır | H |
 | I.6.6.7 | **Claude çıkarımı (Fârâbî s.18–19'dan):** bilgide önce gelen ile varlıkta önce gelen aynı sanılırsa delil sırası yanlış kurulur | H |
 
+### I.6.7 Mâtürîdî'den safsata adayları (3-I 241; İlâhiyyât, âlemin yaratılmışlığı ve ezelîliği bölümleri, basılı s.73–115; yaprakların hepsi Mâtürîdî'nin hasma yönelttiği itirazdır, kitabın hükmü değildir; Claude yoklaması aşağıda)
+
+| No | Cümle | Cins |
+| :-- | :-- | :-- |
+| I.6.7.1 | **Mâtürîdî'nin itirazı:** "vâhimede (tasavvurda) canlandırılamayan şey akıl dışıdır" diyerek duyu ve tasavvur ölçüsüyle aklın konusunu reddetmek, bilinme yöntemi duyu olmayan bir şeyi duyuyla bilmek istemektir; sesi görme duyusuyla, rengi işitme duyusuyla ayırt etmek isteyene benzer (âlemin ezelîliğini savunanların görüşleri) | H |
+| I.6.7.2 | Bu hata I.6.3.7'nin (kategori hatası: bir cinse mahsus ölçü başka cinse uygulanır) özel biçimidir; ilacı: konunun hangi yolla (duyu, haber, akıl) bilinebileceğinin baştan yazılmasıdır (I.4.2.0) | K |
+| I.6.7.3 | **Mâtürîdî'nin itirazı:** "yoktan bir şeyin meydana getirildiği bilinmemektedir" diyen, mevcudu duyu çerçevesine hapseder; oysa "şu mümkündür, bu mümkün değildir" hükmü de, itirazcının kabul ettiği atomların yok olmadan ayrışımı da duyu dışındadır (Araz veya sıfat) | H |
+| I.6.7.4 | **Mâtürîdî'nin itirazı:** yaratıcıya "illet" adını vermek yanlıştır; illet tab'an (gayri iradî) gerektirir, fâil ise irade ve hikmetle işler; iki ayrı mefhumun aynı terimle kullanılması lafız hatasıdır (I.6.4.1) | H |
+| I.6.7.5 | **Mâtürîdî'nin itirazı:** her yaşlıya, her doğana, her mekâna gelene süreklilik (ezelîlik) hissinin düşünülebilmesi, bu kişilerin ezelde nitelenebileceğini kanıtlamaz; duyguyu delil saymak hatadır | H |
+| I.6.7.6 | **Mâtürîdî'nin itirazı:** bekâ ile kıdemi aynı saymak hatadır; bekâ gelecek zaman birimlerinde var olmaktır, kıdem öncesizliktir; ikisi ayrı statülerdir | H |
+| I.6.7.7 | **Claude yoklaması:** I.6.7.6'daki ayrım doğrudur (gelecekte sonsuz devam, geçmişte sonsuz devam demek değildir); fakat Mâtürîdî'nin bu ayrımdan geçmişte sonsuzun imkânsızlığını çıkarması ayrı bir iddiadır ve **fiilî sonsuzun imkânsızlığına** dayanır (V.1.3.M) | Z |
+
 ---

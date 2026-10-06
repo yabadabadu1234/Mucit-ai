@@ -110,4 +110,72 @@
 | I.3.14.2 | Çevirmenlere göre Fârâbî'de mantığın esası dördüncü bölüm olan Burhân'dır; mantığın ilk üç bölümü Burhân'a giriş ve hazırlıktır; son dört bölüm bir yandan Burhân'a alet hizmeti görür, diğer yandan burhâna dayalı kesin bilgi ile zan, mugalata, ikna ve hayâle dayalı kesinlikten uzak görüşleri ayırt etmeye yarar (Önsöz) | K |
 | I.3.14.3 | Çevirmenlere göre Burhân kesin ve zorunlu bilginin ilke ve kurallarını verir; felsefenin ideal yöntemini oluşturur (Önsöz) | K |
 
+### I.3.15 Mâtürîdî, Kitâbü't-Tevhîd: taklit, bilgi yolları ve bilgi yollarını inkâr edene karşı (3-I 241; Mukaddime, basılı s.49–72; OCR'dan Türkçe tercüme, Arapça asıl okunmadı; yaprak sonundaki bölüm adı kaynak yerini gösterir, bölüm içi sayfa numarası yazılmadı çünkü OCR sayfa numarası basılı numarayla örtüşmez)
+
+| No | Cümle | Cins |
+| :-- | :-- | :-- |
+| I.3.15.1 | Mâtürîdî: insanlar mezhep ve dinlerde ayrıldığı hâlde her biri kendi yolunun hak, ötekinin bâtıl olduğunda ittifak eder ve hepsi yollarından yürünmesi gereken geçmiş büyüklerinin bulunduğunu kabul eder (Dinî delile dayanarak bilmenin gerekliliği) | K |
+| I.3.15.2 | Körü körüne başkasına uymak (taklit) mâzur görülemez, çünkü kendisi gibi bir başkası tam aksi bir kanaate de uyabilir | K |
+| I.3.15.3 | İki taraf arasındaki fark yalnız bağlı grupların sayısı olabilir; sayı delil değildir (I.6.3.10 ile aynı hüküm) | K |
+| I.3.15.4 | Bir görüşün kaynağını oluşturan kişi iddiasının doğruluğunu kanıtlayan, akla hitap eden ve inatçı olmayanı kabule mecbur eden bir burhan sunuyorsa durum değişir | K |
+| I.3.15.5 | Aynı mertebedeki burhan iki zıt iddiada birden bulunamaz; bulunsaydı aklın hüccetleri tenâkuza düşerdi | K |
+| I.3.15.6 | **Claude tenkidi:** I.3.15.4–5, "bu delillerin bir zatta gerçekleştiği" hükmüne varır; bu hüküm H3–H4 ispatını varsayar ve Kur'ân öncül olamayacağından (3-I 187) bu paragraf kitapta yalnız **şartlı** alınır: burhan gösterilmişse taklit biter; burhan gösterilmedikçe taklit mâzur görülmez | Z |
+| I.3.15.7 | Dinin öğrenilmesinde başvurulacak vasıtalar ikidir: nakil ve akıl (Nakil ile aklın dinin tanınması için esas teşkil etmesi) | K |
+| I.3.15.8 | Nakil ve haber hiçbir topluluğun uygulamaktan ve başkalarına tavsiye etmekten müstağni kalamayacağı yöntemdir; nesnelerin gerçekliğini reddeden sofistler dâhil herkes ona başvurur | K |
+| I.3.15.9 | Hükümdarların yönetimi, hikmet ve risâlet iddiasında bulunanlar ve sanatları yöneten kişiler de haber yöntemine dayanır (yaygın kullanımdan temsil, zannî) | Z |
+| I.3.15.10 | Akıl vasıtası: evrenin yalnız fenâ bulmak için vücut bulması hikmete uygun değildir | K |
+| I.3.15.11 | İnsanlar çeşitli arzulara ve farklı tabiatlara sahiptir; kendi yaratılışlarıyla baş başa bırakılsalar menfaat, üstünlük ve hükümranlıkta çekişir, bunu nefret ve kanlı mücadele izler ve toplumlar birbirini yok eder | K |
+| I.3.15.12 | Evrenin var oluş amacı bu çöküşe bağlı olsaydı hikmeti boşa giderdi; öyleyse insanları uzlaştıracak bir asıl (din) aramak gereklidir | K |
+| I.3.15.13 | Dinin bilinmesinde önce gelen mesele insanların bir yaratıcısı ve yöneticisinin bulunduğu ve onların hâllerini ve bekâlarına vesile olanı bildiği şuurudur | K |
+| I.3.15.14 | Yaratıcı insan türünü ihtiyaçlara bağlı kılıp bilgisizlik ve nefsânî baskılarla baş başa bırakmamış; kendilerine kılavuzluk edecek ve lüzumlu bilgiyi verecek birini görevlendirmiş olmalıdır | K |
+| I.3.15.15 | Yaratıcı bu görevliye öyle bir belge ve kanıt verir ki insanlar onu kendilerine imam yapmak ve dirliklerini ona bağlamak gibi özel bir lütfa mazhar kılındığını anlasınlar | K |
+| I.3.15.16 | **Claude tenkidi:** I.3.15.10–15 "yaratıcı hikmetlidir ve insanı kılavuzsuz bırakmaz" öncülüne dayanır; bu öncül V.2.2.5 kemâl ilkesi ile V.2.4.1 hikmet yaprağıdır ve zayıf işaretlidir; zincir kaidesi (I.3.5.5) gereği bu yapraklar H3'ün (V.3.2 hikmet ve ihtiyaç) **cevher adayı** olarak alınır, katiyetleri o ilkenin katiyetini aşmaz | Z |
+| I.3.15.17 | İlham ve kişinin zihninde meşruiyeti sübût bulan şey bilgi vasıtası değildir: dinler arasında tezat ve tenâkuz noktaları açıktır ve her din sâliki kendini haklı sayar (Bilgi edinme yolları) | K |
+| I.3.15.18 | Bilgi vasıtası olan bir şey bu işlevi yürütseydi yanlışa bizzat doğrunun şeklini giydirmiş olurdu | K |
+| I.3.15.19 | İki ayrı grubun her biri görüşünü ortaya koyarken öbüründen farklı bir delile sahip değilse ilhama dayanan bu yöntem ayrılığı bertaraf edemez | K |
+| I.3.15.20 | Akıl sahibinin aciz kaldığı yerde gerçeğin kura ile belirlenmesi tutarsızdır; tesadüfe bağlı sonuca rıza göstermesi için kimseye zor kullanılamaz | K |
+| I.3.15.21 | İz sürüp tahmine dayanarak nesep tesbit eden (kâhin türünden) kimsenin durumu da kuradan farklı değildir; ikisi de doğruyu bulma vasıtası değildir | K |
+| I.3.15.22 | Nesne ve olayların gerçekliklerinin bilinmesine götüren yollar idrak (duyu), haberler ve istidlâldir; bu sayım istikrâîdir | Z |
+| I.3.15.23 | Duyu bilgisi, zıddı olan bilgisizliğin söz konusu olamayacağı bilginin temel vasıtasıdır (Duyuların idrakı) | K |
+| I.3.15.24 | Hayvanlar bile varlığını sürdürmeye ve mahvetmeye vesile olan şeyleri farkeder ve haz ve elemi hisseder; duyu bilgisini inkâr eden bu gerçeği inkâr etmiş olur | K |
+| I.3.15.25 | Duyu bilgisini inkâr eden kişiyle fikrî tartışma yapılmaz: münazara bir şeyin zihnî veya hâricî varlığı üzerinde yürür, o ise inkârını da kendi mevcudiyetini de kabul etmemektedir | K |
+| I.3.15.26 | **İlzam:** "İnkâr etmekte olduğunu biliyor musun?" Hayır derse inkâr durumu ortadan kalkar; evet derse hiç olmazsa inkâr durumu diye bir şeyi kabul etmiş ve duyu bilgisini reddedişini çürütmüş olur | C |
+| I.3.15.27 | Haberler iki nevidir (mütevâtir ve haber-i vâhid); ikisini de inkâr eden önceki gruba (duyu inkârcısına) katılır, çünkü kendi inkârı da bir haberdir (Haberler) | K |
+| I.3.15.28 | Haberin tümünü reddeden kendi soyunu, adını, insanlık cevherini ve her şeye ait isimleri de bilemez; duyu ötesi hiçbir bilgiye ve yaşantısına vesile olanın bilgisine ulaşamaz | K |
+| I.3.15.29 | Akılların tek başına kavrayamadığı iyilik ve kötülüklerin duyu ve haber yoluyla öğrenilmesi ancak algılayanların konuşması ve diğerlerinin dinlemesiyle mümkün olur | K |
+| I.3.15.30 | **İlzam:** haberi inkâr edene "Ne diyorsun?" denir; aynı inkâr cümlesini tekrar ederse haber niteliği taşıyan talebi kabul etmiştir (kendi sözünü tekrar etmiştir), tekrar etmezse hiçbir şey söylememiş durumuna düşer | C |
+| I.3.15.31 | Haberlerin bilgi vasıtalarından olması aklî bir zorunluluk olarak ortaya çıktığına göre peygamberlerin getirdiği haberlerin benimsenmesinin lüzumu da, doğruluklarını kanıtlayan mûcizeleri bulunması sebebiyle, sabit olur; bu yaprak **H3'ün ispatına dayalıdır**, kitapta öncül değildir | Z |
+| I.3.15.32 | Mütevâtir haber: yanılması ve yalan söylemesi muhtemel kişilerin dilinden gelse de bir haberin yalan olmasına hiçbir şekilde ihtimal verilmiyorsa, masumiyeti açık birinden bizzat duyulmuş söz gibi sayılır (Mütevâtir haber) | K |
+| I.3.15.33 | Tek tek râvilerden hiçbirinin masumiyetine delil bulunmasa da tamamının naklettiği haber bu dereceye ulaşınca yalan söyleyemeyeceği sabit olur, tek tek her biri hakkında aksini söylemek teoride mümkün olsa da | K |
+| I.3.15.34 | **Claude tenkidi:** I.3.15.33'te toplamın sıdkından "her birinin doğruluğunun ortaya çıkması"na geçilir; mantıken yalnız **toplamın ortak hükmünün** doğruluğu çıkar, tek tek râvinin her sözünün doğruluğu çıkmaz; fark I.4.5.3–7 şartları ve kasd-ı kizb imkânsızlığıyla yazılır | Z |
+| I.3.15.35 | İctihad yoluyla varılan fikir birliğinde (icmâ) da durum aynıdır: her müctehidin yanılması ihtimal dâhilinde olsa da icmâ gerçekleşir; Mâtürîdî bunu Allah'ın lutfuna bağlar | Z |
+| I.3.15.36 | I.3.15.35 **kelâmî bir gerekçedir ve muhatap nazarında ispatsızdır**; kitapta öncül değil, Müslüman okuyucu için malumat olarak yazılır (I.7.3.2, I.7.7.9) | K |
+| I.3.15.37 | Haber-i vâhid ilim gerektirmede ve peygamberden gelen bir hak olduğuna şehâdet etmede mütevâtir derecesine ulaşmaz (Haber-i vâhid) | K |
+| I.3.15.38 | Haber-i vâhid hakkında iki alternatif vardır: onunla amel etmek veya hiç dikkate almamak | K |
+| I.3.15.39 | Seçim, râvilerin durumlarının iyiden iyiye incelenmesine ve haberin muhtevasından çıkacak sonucun kesinlikle sabit olan nas çerçevesinde olabilirliğinin belirlenmesine bağlıdır | K |
+| I.3.15.40 | Bu yöntemde yanılma ihtimali vardır; fakat bilgi edinme yollarının en üstünü olan algıda da duyuların zayıflığı, nesnenin uzaklığı veya küçüklüğü sebebiyle yanılma ihtimaline rağmen sonuca güvenilir | K |
+| I.3.15.41 | Haber-i vâhidi terk etmekte veya onunla amel etmekte kişi kapsayıcı bir aydınlığa ulaşamaz; bu yüzden râvilerin hâlleri incelenir ve muhteva kesin delille karşılaştırılır | K |
+| I.3.15.42 | İstidlâlin gerekliliği birkaç esasa dayanır: biri, duyu ve haber yoluyla bilgi edinirken de istidlâle zarurî ihtiyaçtır (İstidlâl) | K |
+| I.3.15.43 | İstidlâl gereklidir: duyulardan uzak bulunan veya hacimsiz ya da çok küçük hacimli nesnelerde | K |
+| I.3.15.44 | İstidlâl gereklidir: gelen haberin yanılma ihtimali bulunan veya bulunmayan türe dâhil olduğunu belirlemek için | K |
+| I.3.15.45 | İstidlâl gereklidir: peygamberlerin mûcizeleri ile sihirbazın göz bağcılığını ayırt etmek ve mûcizeyi tam tanımak için; yani gösterilen fevkalâdelikte düşünülebilecek beşerî yeteneklerin hesaba katılması ve gösterenlerin genel davranışlarının göz önünde bulundurulması gerekir | K |
+| I.3.15.46 | Mâtürîdî Allah'ın istidlâli çeşitli âyetlerle emrettiğini de ekler (Fussılet 41/53–54; Gâşiye 88/17–20; Bakara 2/164; Zâriyât 51/20–21); bu yaprak **[malumat; öncül değildir]** | K |
+| I.3.15.47 | Akıl yürütmeyi inkâr edenin elinde onu reddetmek için akıl yürütmekten başka kanıt yoktur; kendisini bertaraf etmenin yolu yine kendisidir (retorsion; s.64) | C |
+| I.3.15.48 | Kâinatta mevcut hikmetlerin ve evrende yaratıcıyı kanıtlayan veya kendi kendine oluşumu gösteren, yaratılmış mı ezelî mi olduğunu belgeleyen hususların bilinmesi istidlâlden başka yöntemle mümkün değildir | K |
+| I.3.15.49 | Fevkalâde durumların ortaya çıkışı ve şüphelerin üşüşüp gelişi hâlinde herkesin sığındığı şey tefekkür ve istidlâldir | K |
+| I.3.15.50 | Renkler karıştığında göze, sesler karıştığında kulağa başvurulduğu gibi karışan her şeyin ayırt edilmesi algılanmasını sağlayan duyuyla yapılır; istidlâl de bunun gibidir (temsil) | Z |
+| I.3.15.51 | Meşrûluk ve gayrimeşrûluk, iyi ve kötü fiiller gibi hususlarda duyu ve haber irdelendikten sonra elde edilebilecek nihaî bilgi akıl çerçevesindedir | K |
+| I.3.15.52 | Aklın güzel bulduğu tabiatın istemediği, çirkin gördüğü onun nefret etmediği bir şey olabilir; isabetli olanın hangisi olduğu her konuda akıl yürütmek ve tefekkürle açığa çıkarılır | K |
+| I.3.15.53 | Bilgi yollarını inkâr edenlere cevap (Başka cevaplar): duyu aldanmalarını (görme bozukluğu, uyku, nesnenin uzaklığı veya küçüklüğü) sayan kişi, bunlar kalkınca gerçeğe ulaşıldığını bilerek konuştuğundan duyu bilgisinin varlığını kabul etmiştir | C |
+| I.3.15.54 | Gerçek bir bilgisizlik (agnostisizm) söz konusu olsaydı kişi ateşe dalar, denize atlar, gıdadan geri durabilirdi; hayatını sürdürmesi duyu bilgisini fiilen kabul ettiğini gösterir | C |
+| I.3.15.55 | **Claude tenkidi:** Mâtürîdî I.3.15.54'ü "kişiyi bu sözlere iten faktör zevkine ve arzularına düşkünlüktür" diye niyet isnadıyla bitirir; kitap muhataba niyet isnat etmez (V.1.4.152); I.3.15.54'ün **pragmatik tutarsızlık ilzamı** olan kısmı alınır, niyet isnadı alınmaz | Z |
+| I.3.15.56 | Haberi duyu bilgisi yanında reddedenlere cevap: lezzet ve zarar bilgisi haber olmadan elde edilemezdi; haber yoluyla gelen birçok bilginin vâkıaya uygunluğu zamanla ortaya çıkmıştır; yalan karışma ihtimali haberin tümden atılmasını gerektirmez | C |
+| I.3.15.57 | Duyu ve haber yöntemlerinden hiçbiri açıklayıcı bir delil olmadan öbürüne oranla tercihe şayan değildir | K |
+| I.3.15.58 | İstidlâli reddedene hakkında duyusal bilgi bulunmayan her bilinen şey için "Bunu ne ile bildin?" diye sorulur; "haberle" derse haberin vâkıaya uygunluğunu nasıl bildiği sorulur (geriye sarma) | C |
+| I.3.15.59 | İstidlâlin yasaklanması için ne bir haber ne de duyu bilgisi vardır; istidlâli reddeden bu reddini yine istidlâle dayanarak yapar | C |
+| I.3.15.60 | Bir kez algılanan şeyin (insan, ateş) yeniden tanınması önceki bilgi ve algılarla istidlâl yoluyla olur; istidlâl olmasa hiçbir şey tanınamaz ve insanî ilişki kurulamazdı | K |
+| I.3.15.61 | Öğretici ve yol gösterici de, kim olduğunu bildirecek bir delil olmadan tanınamaz; delil ancak öğreticinin önce haber vermesiyle bulunur ve bu haber de istidlâl gerektirir | K |
+| I.3.15.62 | Mâtürîdî inatçı inkârcıya karşı önce mizah yöntemini, sonra eziyet ve elem verecek biçimde dövmeyi önerir; bu bir akıl yürütme değil ceza önerisidir | K |
+| I.3.15.63 | **Claude önerisi (S40; padişaha sorulur):** kitap I.3.15.62'yi usul olarak almaz; Mâtürîdî'den alınan, ilzam kısımlarıdır (I.3.15.26, I.3.15.30, I.3.15.47, I.3.15.58–59) | Z |
+
 ---

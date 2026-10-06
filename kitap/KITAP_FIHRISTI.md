@@ -86,17 +86,41 @@ Yaprak sayısı: 7 halka × 4 (tasavvur · tasdik-kendi tarttı · tasdik-devral
 | V.İ | **İspat ağı veritabanı (3-I 237):** Allah hakkında sorulabilecek bütün suâller (33 suâl, 109 hücre, 42 felsefe), her hücrede her usul (32 usul × 109 hücre = 3488 satırlık matris), her hücrenin usul kombinasyonları ve zayıf halkalar; HTML sunumu kitapta link olarak durur: `kitap/ISPAT_AGI/ispat_agi.html`; kaynak ve ölçüler `DESTEK/ISPAT_AGI_VERITABANI.md`; HTML sunumu harita biçimindedir (3-I 238) | 3-I 233, 237, 238 |
 | V.F | **Fârâbî'den namzet kullanım yerleri** (18 satır; hangi bâbın hangi yaprağına girecekleri; hepsi Claude önerisi): `DESME_KISIM_V.md` V.F | 3-I 236 |
 
-**Halka × delil usulü × elimizdeki dayanak** (dayanak yalnız **içindekiler düzeyindedir**, içerik okunmamıştır):
+**Halka × delil usulü × elimizdeki dayanak** (dayanak yalnız **içindekiler düzeyindedir**, içerik okunmamıştır; **istisna:** Mâtürîdî Kitâbü't-Tevhîd'in basılı s.49–115 aralığı okundu, 3-I 241; Fârâbî Burhân s.1–24 okundu, 3-I 235):
 
 | Bâb | Delil usulleri (Kısım I Bâb 4.2 taksiminden) | Dayanak (`kaynak/` klasörleri) |
 | :-- | :-- | :-- |
-| V.1 | burhân-ı innî, imkân–vücûb, hudûs, teselsülün butlânı, inâye ve ihtirâ', kümülatif | Mâtürîdî Kitâbü't-Tevhîd (Arapça, İngilizce) · Râzî Mebâhis (Kitab I, III) · Mevâkıf (Mevkıf 2, 5) · İbn Sînâ Şifâ İlâhiyyât (1, 6, 8) · Gazâlî ve İbn Rüşd Tehâfüt (1–5) · İbn Rüşd Keşf (Bâb 1) · Craig/Copan Kelâm kozmolojik delili |
+| V.1 | burhân-ı innî, imkân–vücûb, hudûs, teselsülün butlânı, inâye ve ihtirâ', kümülatif | Mâtürîdî Kitâbü't-Tevhîd (Türkçe tercüme İSAM; **s.49–115 okundu**, `kaynak/maturidi_kitabu_tevhid/`; sonraki bölümler okuma planında) · Râzî Mebâhis (Kitab I, III) · Mevâkıf (Mevkıf 2, 5) · İbn Sînâ Şifâ İlâhiyyât (1, 6, 8) · Gazâlî ve İbn Rüşd Tehâfüt (1–5) · İbn Rüşd Keşf (Bâb 1) · Craig/Copan Kelâm kozmolojik delili |
 | V.2 | burhân-ı temânu', hulf, tenzih tahlili, ilzam | Mevâkıf (5) · Erba'în (M5–M19) · Râzî Esâsü't-Takdîs · Tehâfüt (6–12) · Arslan çevirisi (Hocazâde ve Kemalpaşazâde, 6–12) |
 | V.3 | imkân ispatı, hikmet, haber, mu'cize (şartlar), sıdk ölçütü | Râzî Metâlib (Nübüvvât) · İbn Sînâ Şifâ İlâhiyyât (10) · Gazâlî Tehâfüt (17, illiyet) · Muğnî (15) · Hızır Bey Bâb 2 · İbn Rüşd Keşf (bi'set) |
 | V.4 | tarih ve haber (tevâtür), i'câz (hulf ve muâraza), sibr ve taksim, ilzam | Muğnî (16) · Metâlib c8 · Hızır Bey Bâb 2 · Harputlu (Ziyâü'l-Kulûb) · Te'vîlât (nübüvvet konulu başlıklar) |
 | V.5 | haber, imkân ispatı, adâlet burhanı, tutarlılık denetimi | Meâlim (8–9) · Erba'în (M28–M37) · Tehâfüt (18–20) · İbn Rüşd (18–20) · Izutsu (3, 9) · Te'vîlât (ahiret ve imân başlıkları) |
 | V.6 | sübût (haber, tevâtür) · delâlet · hikmet ve adâlet burhanı · ilzam | **Açık sual S12:** hüküm listesi hangi fıkıh kaynağından çıkarılacak (şimdilik kaynak seçilmedi) |
 | V.7 | nakil usulü, haber-i vâhid, ictihâd | Şâtıbî Muvâfakât · Meâlim (10) · Sadrâ İksîrü'l-Ârifîn (dört asıl) |
+
+---
+
+## MÂTÜRÎDÎ KİTÂBÜ'T-TEVHÎD'İN FİHRİSTİNDEN KİTABIN FİHRİSTİNE KATKI (3-I 241; hepsi Claude önerisi; padişah "fihristimize buradan oldukça fazla katkı yapabiliriz" dedi)
+
+Mâtürîdî temel kaynaktır (padişah); kitap **kopyalanmaz**, aynı malumat formül ve şemayla daha az sayfada ifade edilir. Tablo her başlığı değil **bâb düzeyinde** katkıyı gösterir; başlık başlık eşleme `DESME/KISIM_V/V.M_MATURIDI_NAMZET.md` (73 satır) ve okuma haritası `kaynak/maturidi_kitabu_tevhid/HARITA.md`'dedir.
+
+| Bizim bâb | Mâtürîdî'den fihriste katkı (basılı s.) | Durum |
+| :-- | :-- | :-- |
+| Kısım I (usul) Bâb 3–4, 7 | Taklit ve çokluk (49); nakil ve akıl (51); bilgi yolları: duyu (58), haber: mütevâtir (61), haber-i vâhid (62), istidlâl (62); bilgi yollarını inkâr edenlere cevap (67); tevhid yöntemleri (249); tefekkür yoluyla bilgi edinme savunması (278); duyulur âlemin duyu ötesi için delil olması (99) | s.49–73 ve s.99–102 **okundu**; s.249, s.278 okunmadı. Yapraklar: I.3.15, I.4.14, I.6.7, I.7.9 |
+| V.0.4 (ilzam, sofistler) | Sofistlerin görüşleri ve tenkidi (307) | okunmadı |
+| V.1 H1 (hudûs, yaratıcı) | Cevherlerin yaratılmışlığı (73); araz veya sıfat (75); âlemin yaratıcısı (85); âlemin ezelîliğini savunanların görüşleri (103); Dehriyye tenkidi (288); Muhammed b. Şebîb'in cisimlerin yaratılmışlığı istidlâli (282) | s.73–115 **okundu** (V.1.3.M, 117 yaprak); s.282, s.288 okunmadı |
+| V.2 H2 (tevhid, tenzih, sıfat) | Kâinatın yaratıcısı birdir (88); teşbihin nefyi (95); cisim (116), şey (119), sıfatlar (125), tekvin (128), kelâm sıfatı (140), ilâhî fiillerin ihtiyarî oluşu (150), isimler (158), arş (162), görülme (178), ma'dûm (193), niteleme ve teşbih (204), mekân (224), mahiyet-keyfiyet-kurb (227) | s.88–98 **okundu** (V.2.6–V.2.7); s.116–248 okunmadı |
+| V.2.3 (öteki ilâh tasavvurları) | Seneviyye (110, 239, 313): Menâniyye (313), Deysâniyye (323), Merkayûniyye (335), Mecûsîler (338); Sümeniyye (306); Tabiatçılar (244); Dehriyye (288); Hıristiyanlar ve Mesih (409, 413) | s.110–115 **okundu** (V.2.8); gerisi okunmadı; **bu tasavvurların kendi kaynakları** (V.2.3.8) ayrıca aranır, Mâtürîdî aktarımdır |
+| V.3 H3 (vahiy, nübüvvet) | Nübüvvetin ispatı ve gerekliği (347); Verrâk (363, 374); İbnü'r-Râvendî (377) | okunmadı |
+| V.4 H4 (Kur'ân) | Hz. Muhammed'in nübüvvetinin ispatına kısa bakış (371); Hz. Peygamber'in nübüvvetinin ispatı (393) | okunmadı |
+| V.5 H5 (hikmet, şer) | Hikmet ve sefeh (421); Allah kâinatı niçin yaratmıştır (210); emir ile nehyin hikmeti (216); zararlı nesneleri yaratmanın hikmeti (229) | okunmadı |
+| **Yeni bâb namzedi** (S39) | **Kazâ ve kader** (421–616): hikmet ve sefeh; kulların fiilleri ve fâillerinin belirlenmesi; kudret ve istitâat; ecel; rızık; irade; kazâ ve kader | altı îmân esasının biri; mevcut fihristte karşılığı yok; okunmadı |
+| Giriş / V.6.1 / V.9 | Îmân ve İslâm: îmânda ikrar ve tasdikin rolü (713), îmân tasdik midir mârifet mi (724), ircâ (726), îmânın yaratılmışlığı (732), îmânda istisna (737), İslâm ve îmân (745) | padişah: "ya kitabın başı için tanıtım ya da sonunda"; karar padişahın; okunmadı |
+| Kısım II (ertelendi) | İnsanların kâinat hakkındaki farklı görüşleri (233); Seneviyye, Tabiatçılar, Dehriyye, Sümeniyye, Sofistler, Mecûsîler, Hıristiyanlar: **İslâm düşüncesinin kendi tasnifi** (Kısım II Bâb 7'deki liste Mâtürîdî'nin başlıklarıyla doğrulanır) | okunmadı |
+| Kitap dışı | Büyük günahlar ve bunları işleyenlerin durumu (617–712) | **okunmaz** (padişah) |
+| Ek B | Mâtürîdî'nin hayatı, çevresi, ilmî şahsiyeti, eserleri (21–40) | okunmadı |
+
+**Sıra gözlemi (Claude):** Mâtürîdî'nin bâb sırası (usul → âlemin hudûsu → yaratıcı → tevhid → teşbihin nefyi → sıfatlar → nübüvvet → kader → îmân) bizim H0 → H1 → H2 → H3 → H4 zincirimizle örtüşür; kader ve îmân–İslâm bölümleri bizim iskelette karşılıksızdır.
 
 ---
 
@@ -203,3 +227,8 @@ Padişahın üç usulü (CLAUDE.md 3-I 183) bâb 1, 3, 4 olarak durur; komşu us
 | S32 | **Burhân yalnız zorunlu kesin için mi tanımlanacak?** H4–H5'in vukû' hükümleri (belirli vakitte kesin) burhân sayılmaz, "zorunlu olmayan yakîn" diye adlandırılır mı (Fârâbî s.3, s.7) | Padişaha sorulur (`DESTEK/FARABI_BURHAN_1_24_OKUMA_DEFTERI.md`, `DESME_KISIM_I.md` I.9.3, I.9.15.1) |
 | S33 | Fârâbî s.25–35 (tanım bölümünün devamı) ve dipnotlar okunsun mu | Padişaha sorulur (3-I 230); okuma yapılmadı |
 | S34 | Arapça sayfalarla ve gerçek metinle doğrulama (3-A 25-E): OCR çevirisinin anlamı şüpheli yerleri (yakîne yakın tarifi, 5. sınıf 3. kip) | Padişaha sorulur |
+| S36 | **Hâl kanadı önermesi klasik ilkeden geniştir** (V.1.4.45): daraltılsın mı | Padişaha sorulur |
+| S37 | **İlkeye dayanmayan başka usul** (3-I 240): ters sıra (önce vahyin kaynağı) · nizam ve haber · kümülatif ağ · şartlı bırakma | Padişaha sorulur (`DESTEK/ISPAT_YONU_ALTERNATIFLERI.md`) |
+| S38 | **Fiilî sonsuzun imkânsızlığı kitapta nasıl yazılacak?** (padişahın "ezelden 2026'ya varılamaz" misali; Mâtürîdî'de "başlangıçsız mazi son bulamaz" biçimi): evvelî ilanı mı, ispat borcu mu, zannî delil mi | Padişaha sorulur (`DESTEK/SONSUZ_GECMIS_MESAFE_ARGUMANI.md`; V.1.3.M.31–32, V.1.3.M.109–117) |
+| S39 | **Kazâ ve kader bâbı:** altı îmân esasının biri olarak yeni bâb mı (V.2.9 ya da V.1–V.5 dışı), yoksa V.6'nın hükümlerinden biri mi; Mâtürîdî Üçüncü Bölüm (421–616) okunsun mu (okuma planında var) | Padişaha sorulur |
+| S40 | **Mâtürîdî inatçı inkârcıya mizah, sonra dövme ve eziyet önerir** (I.3.15.62): kitap bunu usul olarak almasın, yalnız ilzam kısımlarını alsın (Claude önerisi) | Padişaha sorulur |

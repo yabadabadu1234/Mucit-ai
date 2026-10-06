@@ -20,8 +20,10 @@ Bu dosya **dizindir**. Eskiden tek dosya olan deşmenin bütün yaprakları **si
 | Dosya | Yapraklar | Yaprak sayısı | Hacim |
 | :-- | :-- | :-- | :-- |
 | [V.0_ONERMENIN_TAHLILI](DESME/KISIM_V/V.0_ONERMENIN_TAHLILI.md) | V.0 | 60 | 9.9 KB |
-| [V.1_ALLAHIN_VARLIGI](DESME/KISIM_V/V.1_ALLAHIN_VARLIGI.md) | V.1 | 235 | 48.3 KB |
-| [V.2_TEVHID_KEMAL_SIFATLAR](DESME/KISIM_V/V.2_TEVHID_KEMAL_SIFATLAR.md) | V.2 | 59 | 9.8 KB |
+| [V.1_ALLAHIN_VARLIGI](DESME/KISIM_V/V.1_ALLAHIN_VARLIGI.md) | V.1.1–V.1.4.16, V.1.5–V.1.6 (V.1.3.a.1–25 dâhil) | 85 | 13.8 KB |
+| [V.1.3m_MATURIDI_ILAHIYYAT](DESME/KISIM_V/V.1.3m_MATURIDI_ILAHIYYAT.md) | V.1.3.M.1–117 (Mâtürîdî: hudûs, yaratıcı, ezelîliğin tenkidi; 3-I 241) | 117 | 35.7 KB |
+| [V.1.4b_RASTGELELIK_SEBEP_ILKESI](DESME/KISIM_V/V.1.4b_RASTGELELIK_SEBEP_ILKESI.md) | V.1.4.17–V.1.4.166 (V.1'den taşındı, 3-I 238) | 150 | 35.2 KB |
+| [V.2_TEVHID_KEMAL_SIFATLAR](DESME/KISIM_V/V.2_TEVHID_KEMAL_SIFATLAR.md) | V.2 (V.2.6–V.2.8 Mâtürîdî, 3-I 241) | 137 | 34.1 KB |
 | [V.3_VAHIY](DESME/KISIM_V/V.3_VAHIY.md) | V.3 | 66 | 10.0 KB |
 | [V.4_KURAN](DESME/KISIM_V/V.4_KURAN.md) | V.4 | 51 | 7.3 KB |
 | [V.5_BILDIRIMIN_DOGRULUGU](DESME/KISIM_V/V.5_BILDIRIMIN_DOGRULUGU.md) | V.5 | 47 | 6.8 KB |
@@ -37,6 +39,9 @@ Bu dosya **dizindir**. Eskiden tek dosya olan deşmenin bütün yaprakları **si
 | [V.8_MUSLUMAN_OKUYUCU](DESME/KISIM_V/V.8_MUSLUMAN_OKUYUCU.md) | V.8 | 8 | 1.2 KB |
 | [V.9_HATIME](DESME/KISIM_V/V.9_HATIME.md) | V.9 | 5 | 0.7 KB |
 | [V.F_FARABI_NAMZET](DESME/KISIM_V/V.F_FARABI_NAMZET.md) | V.F | 18 | 3.2 KB |
+| [V.M_MATURIDI_NAMZET](DESME/KISIM_V/V.M_MATURIDI_NAMZET.md) | V.M (Mâtürîdî fihristinden namzet başlıklar; 3-I 241) | 73 | 11.0 KB |
 | [V.TOPLU_TENKIT_ACIK_ISLER](DESME/KISIM_V/V.TOPLU_TENKIT_ACIK_ISLER.md) | TOPLU | 0 | 1.2 KB |
 
-**Toplam yaprak: 772.** Cinse göre: K 360 · Z 195 · C 67 · B 55 · İt 45 · T 22 · İ 14 · M 13 · H 1
+**Toplam yaprak: 1040.** Cinse göre: K 474 · Z 313 · C 94 · B 59 · İt 49 · T 23 · İ 14 · M 13 · H 1
+
+Not (3-I 241): V.1.3.M (117), V.2.6–V.2.8 (78) ve V.M (73) yaprakları Mâtürîdî'den alınmıştır; V.F ve V.M satırlarının cinsi 3. sütundadır (namzet önerisi). V.1 dosyası 40 KB'ı aşınca V.1.4.17 ve sonrası **silinmeden** V.1.4b dosyasına taşınmıştır (3-I 238).
