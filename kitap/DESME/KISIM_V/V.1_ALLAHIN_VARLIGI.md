@@ -104,7 +104,7 @@
 | V.1.4.15 | **İtiraz (ispat yükü):** "Yokluğu iddia etmiyorum" | İt |
 | V.1.4.16 | **Cevap:** V.0.2.2–3 | C |
 
-#### V.1.4.17–V.1.4.40 Rastgelelik itirazı (padişahın isteği; deşme taslağı)
+#### V.1.4.17–V.1.4.50 Rastgelelik itirazı (padişahın isteği; deşme taslağı)
 
 | No | Cümle | Cins |
 | :-- | :-- | :-- |
@@ -132,6 +132,16 @@
 | V.1.4.38 | **Örnekleyici cevabı:** “rastgele” bir hâl, bir ihtimal uzayı ve bir dağılım demektir; yoktan var olmak için ne uzay ne dağılım vardır, çünkü uzay ve dağılım zaten var olan şeydir (V.1.4.29) | C |
 | V.1.4.39 | **Maliyet cevabı:** sebepsiz var olma serbest olsaydı, hiçbir şeyin kendiliğinden ortaya çıkmayışı açıklanamazdı; çıkışı sınırlayan her kayıt bir sebep kanunudur; bu çıkarım **zan-ı gâlib** düzeyindedir | Z |
 | V.1.4.40 | Muhataba söylenecek dürüst hüküm: bu halka çürütülmez, **daraltılır**; çürütülmeyen kısım ilke olarak açıkça yazılır ve reddedenin ödediği bedel gösterilir | K |
+| V.1.4.41 | **Araştırma bulgusu (tâlî kaynak, Güldü 2022):** kelâmda “müreccihsiz tercih imkânsızdır” iki anlamda kullanılır; ontolojik anlamı, Sadrüşşerîa’ya göre, “**mûcidsiz icâd muhaldir**”dir (DESTEK/SEBEP_ILKESI_ARASTIRMA.md, B1) | K |
+| V.1.4.42 | Bu anlamda ilke “her seçimin ayrı bir sebebi vardır” demez; “varlığa çıkan şeyin bir var edicisi vardır” der | K |
+| V.1.4.43 | Kelâmcılar eşit iki şıktan birini seçen **iradeyi** müreccih sayar ve iradenin kendi tercihi için ikinci müreccih aramaz (aksi hâlde teselsül doğar) | K |
+| V.1.4.44 | Okunan kaynakta, **fâilsiz kör bir hâl seçiminin** imkânsızlığına ayrı delil **yoktur**; bu nokta açıktır | Z |
+| V.1.4.45 | Kitaptaki hâl kanadı önermesi klasik ilkeden **geniştir** (çıkarım); sıfat ispatlarındaki yükü bu genişlikten gelir; daraltılıp daraltılmayacağı padişahın kararındadır (S36) | K |
+| V.1.4.46 | Pruss’a göre PSR olasılıkçı açıklamayla bağdaşır: açıklama mantıksal gerektirme olmak zorunda değildir (**yalnız arama özetinden bilinir, kaynak okunmadı**) | Z |
+| V.1.4.47 | PSR’nin gerekçe tipleri üçtür: kendiliğinden aşikârlık, bilimsel yöntem, retorsion; hiçbiri ilkenin burhanı değildir (**kısmen okunmuş Stanford maddesinden özet**) | Z |
+| V.1.4.48 | Evveliyyâtı inkâr eden hasma burhan değil **tenbih ve ilzam** yapılır; bu kitapta çürütmenin biçimi budur (Kısım I usulleri) | K |
+| V.1.4.49 | Sınır: ilzam, yalnız yoktan varlığı sebepsiz sayan **yerel** inkârcıyı tam kuşatmaz; retorsion küllî sebepsizlik savunana vurur (V.1.4.31) | Z |
+| V.1.4.50 | Açık iş: “kendiliğinden var olma” iddiasına karşı kısa burhan-ı hulf denemesi, üç soruyla: neden şimdi, neden bu, hangi ihtimal uzayından (V.1.4.38) | K |
 
 ### V.1.5 Neticenin hududu
 
