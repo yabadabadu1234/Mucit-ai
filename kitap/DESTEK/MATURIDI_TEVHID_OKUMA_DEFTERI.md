@@ -133,6 +133,25 @@
 | Zararlı nesnelerin hikmeti | s.229–232 | V.5.4 | kısmen; V.5.11–V.5.12 |
 | Kâinat görüşleri tasnifi, düalizmin bilgi öncülü | s.233–248 | V.2.3, V.2.8 | kısmen; V.2.25–V.2.28 |
 
+### 3e. s.249–312 damıtması (3-I 242: "1 okuyup 10 yeni üret")
+
+**Okunan:** tevhid yöntemleri (249–255), Muhammed b. Şebîb (256–277), tefekkür savunması (278–281), İbn Şebîb'in cisimlerin yaratılmışlığı istidlâli (282–287), Dehriyye tenkidi (288–305), Sümeniyye (306), Sofistler (307–312). **Yazılan:** V.2.29–V.2.31 (82 yaprak), I.3.16–I.3.17 (92), V.1.3.M.145–285 (141). **Okunmayan:** s.313'ten sonrası.
+
+| # | Okunandan türeyen yeni şey | Nerede |
+| :-- | :-- | :-- |
+| 1 | Kâr–zarar matrisi burhan değil karar teorisi tavsiyesidir; (b) hâlinde kâr hasmın kendi önkabulüne göredir | I.3.16.40 |
+| 2 | "Terk de bir karardır": tefekkürü terk etmenin salimliği hükmü kendi icrasıyla çürür (retorsion) | I.3.16.37 |
+| 3 | Terk tarafsızlık değil sınanmamış tasdiktir; tevakkuf huzur değil açık sorudur | I.3.16.38–39 |
+| 4 | Sofistlere iki bağımsız retorsion yolu: kendi iddiası bir bilgi iddiasıdır; "yanlışlığı ortaya çıktı" cümlesi bir ölçütü varsayar (hata düzeltme argümanı) | I.3.17.40, I.3.17.43; DB `k_hata_olcut` |
+| 5 | Sofist ile şüpheci ayrı yazılır; retorsion şüpheciyi bağlamaz | I.3.17.41, I.3.17.46 |
+| 6 | Rüya asimetrisi (uyanık iki hâli bilir, uyuyan yalnız birini) ve onun döngüsellik sınırı; üç ölçütün birlikte verilmesi | I.3.17.44–45 |
+| 7 | "Nasıl işler?" (açık) ile "niçin yaratıldı?" (kapalı) ayrımı | I.3.17.50 |
+| 8 | Sebep ile delil ayrımı: yalnız sebeplerle oluşmuş sözün doğruluğu delilsizdir (belirlenimciliğe karşı) | V.1.3.M.267–268 |
+| 9 | Cebir–irade ölçütü (kaçınabiliyorsa irade) ve sınırı; kader bâbının ilk kaidesi | V.1.3.M.270 |
+| 10 | İki zıt ezelî ilkenin birleşmesine sebep hâsrı (tab' · irade · başka varlık) ve dördüncü kol olarak sebepsizlik | V.2.31.2; DB `k_birlesme_sebep` |
+| 11 | Dairevî hareket ilzamında dizi–halka karışıklığı; hacim argümanının başlangıç öncülü gözlemsiz; hatırlamamak yokluğa delil değil | V.1.3.M.282–284 |
+| 12 | İki katmanlı aktarım uyarısı: Aristo ← İbn Şebîb ← Mâtürîdî; Aristo'ya "kendi söylediği" diye cümle yazılmaz | V.1.3.M.261 |
+
 ## 5. Açık suâller
 
 | # | Suâl |
@@ -140,4 +159,4 @@
 | S38 | **Kapandı (3-I 242):** üç hâl de beyan edilir (V.1.3.a.26–38) |
 | S39 | **Kapandı (3-I 242):** kazâ ve kader bâbı olacak (`V.K`; etiket Claude'un çıkarımı); s.421–616 okuma planında |
 | S40 | **Kapandı, nakz (3-I 242):** dövme ve eziyet alınmaz, mizah usulü gereksiz; hâtimede hikmetli kıssa **namzet** (padişah "belki") |
-| (okuma) | s.249'dan (Tevhid yöntemleri, OCR satır 9290) itibaren okuma sürer: tevhid yöntemleri, Muhammed b. Şebîb, tefekkür savunması, Dehriyye (s.288), Sofistler (s.307), Menâniyye … Mecûsîler (s.346'ya kadar); padişah "ilâhiyyât 73–347" dedi |
+| (okuma) | s.313'ten (Menâniyye, OCR satır 11753) itibaren okuma sürer: Menâniyye, Deysâniyye, Merkayûniyye, Mecûsîler (s.346'ya kadar); padişah "ilâhiyyât 73–347" dedi |

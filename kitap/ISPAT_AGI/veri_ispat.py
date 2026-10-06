@@ -246,3 +246,17 @@ P('Q04.c2', 'U26', ['k_karisik_ozne_guvensiz', 'e_celismezlik'],
 P('Q04.c2', 'U27', ['m_karma_hayir_ser', 'k_dualizm_dagilim'],
   'Gözlenen her nesnede hayır ve şer birlikte bulunur; her nesneyi yalnız hayır veya yalnız şer ilkesine bağlayan düalizm bu birlikteliği ayrışık iki ilkeyle açıklayamaz (Mâtürîdî, V.2.8.13 ve V.5.11).',
   kismi='Yalnız her nesneyi ya hayır ya şer ilkesinden sayan düalizmi kapsar; iki ilkenin her nesnede işbirliğini kabul eden düalizm V.2.6.17–19 (gizleme) argümanına düşer')
+
+# 3-I 242: Mâtürîdî okuması (Sofistler, düalizmin birleşme hâsrı, hacim argümanı)
+P('Q18.c2', 'U26', ['k_hata_olcut', 'e_celismezlik'],
+  'Sofistin “yanlışlığı ortaya çıktı” örnekleri yanlışı doğrudan ayırt eden bir ölçütün bulunduğunu varsayar; ölçüt yoksa yanlışlık tespit edilemezdi (hata düzeltme argümanı, Mâtürîdî’nin Sofistler bölümü).',
+  kismi='Yalnız mutlak “hakikat yoktur” iddiasını hata kavramı üzerinden kapsar; iddiasını gevşetip yalnız bilinemezlik diyen şüpheciyi kapsamaz (I.3.17.41)')
+P('Q04.c2', 'U08', ['k_birlesme_sebep', 'k_tabii_birlesme', 'k_irade_birlesme_acz', 'k_baska_birlesme_hadis'],
+  'İki zıt ezelî ilkenin ayrılık ve birleşmesinin sebebi tabiatları, iradeleri veya başka bir varlıktır; üç kol ayrı ayrı iki ilkeyi vâcib olmaktan çıkarır (Mâtürîdî, tevhid yöntemleri).',
+  kismi='Sebep hasırı sebep ilkesinin hâl kanadına bağlıdır (sebepsiz birleşme kolu); irade kolu yalnız iradeyle birleştiklerini söyleyeni kapsar; ilkelerin ayrılık ve birleşme hâllerini bilmeyip hüküm vermeyen düalisti kapsamaz (V.2.29.21)')
+P('Q04.c2', 'U27', ['k_nur_zulmet_sifat', 'k_bilgisiz_vacib_degil', 'k_aciz_vacib_degil'],
+  'Düalistin kendi öğretisinde nur geleceğini bilememiş ve tuzağa düşmüş, zulmet nura kötülükten alıkonmuştur; bilgisiz ve âciz vâcib olamaz (Mâtürîdî, nur–zulmet ilzamı).',
+  hd='Yalnız düalistin öğretisini Mâtürîdî’nin aktardığı biçimde benimseyeni bağlar; öğretinin kendi kaynakları okunmadı.')
+P('Q13.c1', 'U04', ['m_hacim_farki', 'k_hacim_baslangic', 'k_tercihsiz_hal'],
+  'Cisimlerin farklı hacimleri en küçük hacimle başlayıp sonradan büyümeyi gösterir; öncesiz değişmeyen yapı eşit hacim verirdi (Mâtürîdî, Dehriyye tenkidi).',
+  kismi='Argümanın “en küçük hacimle başlama” öncülü gözlemle desteklenmemiştir ve zayıf aile hacim-baslangic ile sebep-ilkesi-hal’e bağlıdır; hücreyi tek başına taşımaz')

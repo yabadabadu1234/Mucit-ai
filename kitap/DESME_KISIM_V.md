@@ -24,7 +24,7 @@ Bu dosya **dizindir**. Eskiden tek dosya olan deşmenin bütün yaprakları **si
 | [V.1.3m_MATURIDI_ILAHIYYAT](DESME/KISIM_V/V.1.3m_MATURIDI_ILAHIYYAT.md) | V.1.3.M.1–117 (Mâtürîdî: hudûs, yaratıcı, ezelîliğin tenkidi; 3-I 241) | 117 | 35.7 KB |
 | [V.1.3n_MATURIDI_HIKMET_INKAR](DESME/KISIM_V/V.1.3n_MATURIDI_HIKMET_INKAR.md) | V.1.3.M.118–144 (Mâtürîdî: hikmet ve ilim sahibi yaratıcıyı inkâr edenlere cevap; 3-I 241) | 27 | 12.3 KB |
 | [V.1.3o_MATURIDI_CISIMLER_DEHRIYYE_SUMENIYYE](DESME/KISIM_V/V.1.3o_MATURIDI_CISIMLER_DEHRIYYE_SUMENIYYE.md) | V.1.3.M.145–236 (Mâtürîdî: İbn Şebîb'in cisimlerin hudûsu delili, düalist ilzamı, Dehriyye, tabiatçılar, münecciler, heyûlâ; 3-I 241, 242) | 92 | 29.1 KB |
-| [V.1.3p_MATURIDI_HEYULA_SUMENIYYE_TENKIT](DESME/KISIM_V/V.1.3p_MATURIDI_HEYULA_SUMENIYYE_TENKIT.md) | V.1.3.M.237–281 (Mâtürîdî: Aristo'nun heyûlâsı, Nâzzâm'ın itirazı, hareket noktası, Sümeniyye; Claude tenkidi; 3-I 241, 242) | 45 | 20.8 KB |
+| [V.1.3p_MATURIDI_HEYULA_SUMENIYYE_TENKIT](DESME/KISIM_V/V.1.3p_MATURIDI_HEYULA_SUMENIYYE_TENKIT.md) | V.1.3.M.237–285 (Mâtürîdî: Aristo'nun heyûlâsı, Nâzzâm'ın itirazı, hareket noktası, Sümeniyye; Claude tenkidi; 3-I 241, 242) | 49 | 22.8 KB |
 | [V.1.4b_RASTGELELIK_SEBEP_ILKESI](DESME/KISIM_V/V.1.4b_RASTGELELIK_SEBEP_ILKESI.md) | V.1.4.17–V.1.4.166 (V.1'den taşındı, 3-I 238) | 150 | 35.2 KB |
 | [V.2_TEVHID_KEMAL_SIFATLAR](DESME/KISIM_V/V.2_TEVHID_KEMAL_SIFATLAR.md) | V.2 (V.2.6–V.2.8 Mâtürîdî, 3-I 241) | 137 | 34.1 KB |
 | [V.2m_MATURIDI_SIFAT_TEKVIN](DESME/KISIM_V/V.2m_MATURIDI_SIFAT_TEKVIN.md) | V.2.9–V.2.11 (Mâtürîdî: cisim ve şey, sıfatlar, tekvin; 3-I 241) | 83 | 24.2 KB |
@@ -56,6 +56,6 @@ Bu dosya **dizindir**. Eskiden tek dosya olan deşmenin bütün yaprakları **si
 | [V.M_MATURIDI_NAMZET](DESME/KISIM_V/V.M_MATURIDI_NAMZET.md) | V.M (Mâtürîdî fihristinden namzet başlıklar; 3-I 241) | 73 | 11.0 KB |
 | [V.TOPLU_TENKIT_ACIK_ISLER](DESME/KISIM_V/V.TOPLU_TENKIT_ACIK_ISLER.md) | TOPLU | 0 | 1.2 KB |
 
-**Toplam yaprak: 1899.** Cinse göre: K 873 · Z 527 · C 325 · B 59 · İt 58 · T 28 · İ 14 · M 14 · H 1
+**Toplam yaprak: 1903.** Cinse göre: K 873 · Z 531 · C 325 · B 59 · İt 58 · T 28 · İ 14 · M 14 · H 1
 
-Not (3-I 241): V.1.3.M (281), V.2.6–V.2.30 (692) ve V.5.8–V.5.12 (66) ve V.M (73) yaprakları Mâtürîdî'den alınmıştır; V.F ve V.M satırlarının cinsi 3. sütundadır (namzet önerisi). V.1 dosyası 40 KB'ı aşınca V.1.4.17 ve sonrası **silinmeden** V.1.4b dosyasına taşınmıştır (3-I 238).
+Not (3-I 241): V.1.3.M (285), V.2.6–V.2.30 (692) ve V.5.8–V.5.12 (66) ve V.M (73) yaprakları Mâtürîdî'den alınmıştır; V.F ve V.M satırlarının cinsi 3. sütundadır (namzet önerisi). V.1 dosyası 40 KB'ı aşınca V.1.4.17 ve sonrası **silinmeden** V.1.4b dosyasına taşınmıştır (3-I 238).

@@ -47,13 +47,13 @@ Kaynak: padişahın verdiği altı fotoğraftaki basılı İçindekiler (Kitâb�
 | V.M.39 | Mesele [İnsanların Kâinat Hakkındaki Farklı Görüşleri] (233) | Z | Kısım II Bâb 6–7 (felsefe çeşitleri; İslâm düşüncesinin kendi tasnifi); **yapraklar V.2.25** (Kısım II dayanağı) | okundu |
 | V.M.40 | [1. Seneviyye'nin Tenkidi] (239) | Z | V.2.3.3, V.2.8 (Mâtürîdî'nin ikinci ele alışı); **yapraklar V.2.26** | okundu |
 | V.M.41 | [2. Tabiatçıların Eleştirilmesi] (244) | Z | Kısım II Bâb 6 (maddeci ve tabiatçı); V.1.2.3 (ateist); **yapraklar V.2.27** | okundu |
-| V.M.42 | Mesele [Tevhit Yöntemleri Hakkında] (249) | Z | Kısım I Bâb 4 (ispat usulleri); V.1.3 (delil taksimi) | okunmadı |
-| V.M.43 | [1. Muhammed b. Şebîb'in Allah'ın Varlığı ve Sıfatları Hakkındaki Görüşleri] (256) | Z | V.1.3, V.2.2 | okunmadı |
-| V.M.44 | [2.] Mesele [Tefekkür Yoluyla Bilgi Edinme Hakkında Savunma] (278) | Z | I.3.15.42–52 (istidlâl); V.0.3 | okunmadı |
-| V.M.45 | [3. Muhammed b. Şebîb'in Cisimlerin Yaratılmışlığı Hakkında İstidlâli] (282) | Z | V.1.3.a, V.1.3.M | okunmadı |
-| V.M.46 | [4. Dehriyye'ye Ait Görüşlerin Tenkidi] (288) | Z | Kısım II Bâb 7 (dehrîler); V.1.3.a (başlangıçsız zaman); **V.1.4.126'ya doğrudan ilgili** | okunmadı |
-| V.M.47 | [5.] Mesele [Sümeniyye'nin Görüşleri ve Tenkidi] (306) | Z | Kısım II Bâb 7 | okunmadı |
-| V.M.48 | [6.] Mesele [Sofistlerin Görüşleri ve Tenkidi] (307) | Z | V.0.4 (inâdiyye, indiyye, lâedriyye); I.7.3.8 | okunmadı |
+| V.M.42 | Mesele [Tevhit Yöntemleri Hakkında] (249) | Z | Kısım I Bâb 4 (ispat usulleri); V.1.3 (delil taksimi); **yapraklar V.2.29** (üçlü hâsr, Dehriyye'nin üç ayrılık noktası) | okundu |
+| V.M.43 | [1. Muhammed b. Şebîb'in Allah'ın Varlığı ve Sıfatları Hakkındaki Görüşleri] (256) | Z | V.1.3, V.2.2; **yapraklar V.2.30–V.2.31** (soru–cevap; Mâtürîdî'nin dört kabulü; Claude tenkidi) | okundu |
+| V.M.44 | [2.] Mesele [Tefekkür Yoluyla Bilgi Edinme Hakkında Savunma] (278) | Z | I.3.15.42–52 (istidlâl); V.0.3; **yapraklar I.3.16** (42) | okundu |
+| V.M.45 | [3. Muhammed b. Şebîb'in Cisimlerin Yaratılmışlığı Hakkında İstidlâli] (282) | Z | V.1.3.a, V.1.3.M; **yapraklar V.1.3.M.145–179** | okundu |
+| V.M.46 | [4. Dehriyye'ye Ait Görüşlerin Tenkidi] (288) | Z | Kısım II Bâb 7 (dehrîler); V.1.3.a (başlangıçsız zaman); **V.1.4.126'ya doğrudan ilgili**; **yapraklar V.1.3.M.180–252 ve V.1.3.M.237–285** | okundu |
+| V.M.47 | [5.] Mesele [Sümeniyye'nin Görüşleri ve Tenkidi] (306) | Z | Kısım II Bâb 7; **yapraklar V.1.3.M.253–260** | okundu |
+| V.M.48 | [6.] Mesele [Sofistlerin Görüşleri ve Tenkidi] (307) | Z | V.0.4 (inâdiyye, indiyye, lâedriyye); I.7.3.8; **yapraklar I.3.17** (50) | okundu |
 | V.M.49 | [7.] Mesele: Seneviyye'ye Ait Görüşlerin Mahiyeti (313) | Z | V.2.3.3 | okunmadı |
 | V.M.50 | [7.1 Menâniyye'nin Görüşleri ve Tenkidi] (313) | Z | V.2.3.3 (düalizm: Mani) | okunmadı |
 | V.M.51 | [7.2 Deysâniyye'nin Görüşleri ve Tenkidi] (323) | Z | V.2.3.3 | okunmadı |
