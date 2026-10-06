@@ -33,6 +33,8 @@ Bu dosya **dizindir**. Eskiden tek dosya olan deşmenin bütün yaprakları **si
 | [V.2r_MATURIDI_NITELEME_TESBIH](DESME/KISIM_V/V.2r_MATURIDI_NITELEME_TESBIH.md) | V.2.19 (Mâtürîdî: Allah'ı niteleyip isimlendirmek benzeşmeyi gerektirmez; Bâtıniyye aktarımı; 3-I 241, 242) | 40 | 14.6 KB |
 | [V.2s_MATURIDI_NEFS_SEY_MEKAN_KEYFIYET](DESME/KISIM_V/V.2s_MATURIDI_NEFS_SEY_MEKAN_KEYFIYET.md) | V.2.20–V.2.24 (Mâtürîdî: rabbin tanınması, şey ve cisim, mekân, mahiyet–keyfiyet–kurb; 3-I 241, 242) | 51 | 21.6 KB |
 | [V.2t_MATURIDI_KAINAT_GORUSLERI_SENEVIYYE_TABIATCI](DESME/KISIM_V/V.2t_MATURIDI_KAINAT_GORUSLERI_SENEVIYYE_TABIATCI.md) | V.2.25–V.2.28 (Mâtürîdî: kâinat görüşleri, Seneviyye ve tabiatçıların tenkidi; Kısım II bağlantısı; 3-I 241, 242) | 74 | 32.6 KB |
+| [V.2u_MATURIDI_TEVHID_YONTEMLERI](DESME/KISIM_V/V.2u_MATURIDI_TEVHID_YONTEMLERI.md) | V.2.29 (Mâtürîdî: tevhid yöntemleri, Dehriyye'nin üç ayrılık noktası, üçlü hâsr; 3-I 241, 242) | 22 | 10.9 KB |
+| [V.2v_MATURIDI_IBN_SEBIB_TENKIT](DESME/KISIM_V/V.2v_MATURIDI_IBN_SEBIB_TENKIT.md) | V.2.30–V.2.31 (Mâtürîdî: Muhammed b. Şebîb ile soru–cevap; Claude tenkidi; 3-I 241, 242) | 60 | 32.6 KB |
 | [V.3_VAHIY](DESME/KISIM_V/V.3_VAHIY.md) | V.3 | 66 | 10.0 KB |
 | [V.4_KURAN](DESME/KISIM_V/V.4_KURAN.md) | V.4 | 51 | 7.3 KB |
 | [V.5_BILDIRIMIN_DOGRULUGU](DESME/KISIM_V/V.5_BILDIRIMIN_DOGRULUGU.md) | V.5 | 47 | 6.8 KB |
@@ -52,6 +54,6 @@ Bu dosya **dizindir**. Eskiden tek dosya olan deşmenin bütün yaprakları **si
 | [V.M_MATURIDI_NAMZET](DESME/KISIM_V/V.M_MATURIDI_NAMZET.md) | V.M (Mâtürîdî fihristinden namzet başlıklar; 3-I 241) | 73 | 11.0 KB |
 | [V.TOPLU_TENKIT_ACIK_ISLER](DESME/KISIM_V/V.TOPLU_TENKIT_ACIK_ISLER.md) | TOPLU | 0 | 1.2 KB |
 
-**Toplam yaprak: 1680.** Cinse göre: K 805 · Z 483 · C 222 · B 59 · İt 54 · T 28 · İ 14 · M 14 · H 1
+**Toplam yaprak: 1762.** Cinse göre: K 831 · Z 502 · C 259 · B 59 · İt 54 · T 28 · İ 14 · M 14 · H 1
 
-Not (3-I 241): V.1.3.M (144), V.2.6–V.2.28 (610) ve V.5.8–V.5.12 (66) ve V.M (73) yaprakları Mâtürîdî'den alınmıştır; V.F ve V.M satırlarının cinsi 3. sütundadır (namzet önerisi). V.1 dosyası 40 KB'ı aşınca V.1.4.17 ve sonrası **silinmeden** V.1.4b dosyasına taşınmıştır (3-I 238).
+Not (3-I 241): V.1.3.M (144), V.2.6–V.2.30 (692) ve V.5.8–V.5.12 (66) ve V.M (73) yaprakları Mâtürîdî'den alınmıştır; V.F ve V.M satırlarının cinsi 3. sütundadır (namzet önerisi). V.1 dosyası 40 KB'ı aşınca V.1.4.17 ve sonrası **silinmeden** V.1.4b dosyasına taşınmıştır (3-I 238).
