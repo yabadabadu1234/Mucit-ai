@@ -54,11 +54,11 @@ Kaynak: padişahın verdiği altı fotoğraftaki basılı İçindekiler (Kitâb�
 | V.M.46 | [4. Dehriyye'ye Ait Görüşlerin Tenkidi] (288) | Z | Kısım II Bâb 7 (dehrîler); V.1.3.a (başlangıçsız zaman); **V.1.4.126'ya doğrudan ilgili**; **yapraklar V.1.3.M.180–252 ve V.1.3.M.237–285** | okundu |
 | V.M.47 | [5.] Mesele [Sümeniyye'nin Görüşleri ve Tenkidi] (306) | Z | Kısım II Bâb 7; **yapraklar V.1.3.M.253–260** | okundu |
 | V.M.48 | [6.] Mesele [Sofistlerin Görüşleri ve Tenkidi] (307) | Z | V.0.4 (inâdiyye, indiyye, lâedriyye); I.7.3.8; **yapraklar I.3.17** (50) | okundu |
-| V.M.49 | [7.] Mesele: Seneviyye'ye Ait Görüşlerin Mahiyeti (313) | Z | V.2.3.3 | okunmadı |
-| V.M.50 | [7.1 Menâniyye'nin Görüşleri ve Tenkidi] (313) | Z | V.2.3.3 (düalizm: Mani) | okunmadı |
-| V.M.51 | [7.2 Deysâniyye'nin Görüşleri ve Tenkidi] (323) | Z | V.2.3.3 | okunmadı |
-| V.M.52 | [7.3 Merkayûniyye'nin Görüşleri ve Tenkidi] (335) | Z | V.2.3.3 | okunmadı |
-| V.M.53 | [7.4 Mecûsîler'in Görüşleri ve Tenkidi] (338) | Z | V.2.3.3 | okunmadı |
+| V.M.49 | [7.] Mesele: Seneviyye'ye Ait Görüşlerin Mahiyeti (313) | Z | V.2.3.3; **yapraklar V.2.32–V.2.33** | okundu |
+| V.M.50 | [7.1 Menâniyye'nin Görüşleri ve Tenkidi] (313) | Z | V.2.3.3 (düalizm: Mani); **yapraklar V.2.32** (59) | okundu |
+| V.M.51 | [7.2 Deysâniyye'nin Görüşleri ve Tenkidi] (323) | Z | V.2.3.3; **yapraklar V.2.33** (67; yaratmanın hikmeti ve tek yaratıcı dâhil) | okundu |
+| V.M.52 | [7.3 Merkayûniyye'nin Görüşleri ve Tenkidi] (335) | Z | V.2.3.3; **yapraklar V.2.34** (16) | okundu |
+| V.M.53 | [7.4 Mecûsîler'in Görüşleri ve Tenkidi] (338) | Z | V.2.3.3; **yapraklar V.2.35–V.2.36** | okundu |
 | V.M.54 | Mesele [Nübüvvetin İspatı ve Gerekliği] (347) | Z | V.3.1–V.3.3 (imkân, hikmet ve ihtiyaç, vukû'); I.3.15.10–16 | okunmadı |
 | V.M.55 | [1. Verrâk'ın Nübüvvet Konusundaki Görüşleri ve Tenkidi] (363) | Z | V.3.6 (itirazlar: deist) | okunmadı |
 | V.M.56 | [2. Hz. Muhammed'in Nübüvvetinin İspatına Kısa Bir Bakış] (371) | Z | V.4.3 (davet sahibi) | okunmadı |

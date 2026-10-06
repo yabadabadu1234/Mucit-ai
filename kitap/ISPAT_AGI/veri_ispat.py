@@ -260,3 +260,11 @@ P('Q04.c2', 'U27', ['k_nur_zulmet_sifat', 'k_bilgisiz_vacib_degil', 'k_aciz_vaci
 P('Q13.c1', 'U04', ['m_hacim_farki', 'k_hacim_baslangic', 'k_tercihsiz_hal'],
   'Cisimlerin farklı hacimleri en küçük hacimle başlayıp sonradan büyümeyi gösterir; öncesiz değişmeyen yapı eşit hacim verirdi (Mâtürîdî, Dehriyye tenkidi).',
   kismi='Argümanın “en küçük hacimle başlama” öncülü gözlemle desteklenmemiştir ve zayıf aile hacim-baslangic ile sebep-ilkesi-hal’e bağlıdır; hücreyi tek başına taşımaz')
+
+# 3-I 242: Mâtürîdî okuması (Menâniyye, Deysâniyye)
+P('Q04.c2', 'U07', ['k_zitlik_ayri_ilke', 'k_hasir_cevap_uzayi'],
+  'Hayır–şer zıtlığı iki ezelî ilke gerektiriyorsa dört tabiat ve altı yön için de ilke gerekirdi; ilke sınırsız çoğalır ve düalizmin kendi gerekçesi sayıyı iki ile durduramaz (Mâtürîdî, Deysâniyye tenkidi).',
+  kismi='Yalnız her zıtlığın ayrı ilke istediğini kabul eden düalisti bağlar; ilkeyi yalnız ahlâkî zıtlıkla sınırlayan düalist için gerekçenin sorulması gerekir (V.2.36.8); zayıf aile zitlik-ilke')
+P('Q04.c2', 'U27', ['k_sinir_ilke_tek_yon', 'k_sinirli_mumkin', 'k_muhtac_mumkin'],
+  'Menâniyye modelinde her ilke temas yönünde sınırlıdır; sınırlı olan sınırını kendinden alamaz ve mümkindir; mümkin vâcib olamaz (Mâtürîdî, Menâniyye tenkidi).',
+  hd='Yalnız her ilkenin bir yönde sınırlı olduğunu kabul eden düalisti bağlar; ışın modeli sınırın bir yönde sonsuzlukla bağdaştığını gösterir ve ilzam yalnız sınırın müreccih istemesi ilkesine dayanır (V.2.36.2)')

@@ -1663,6 +1663,24 @@
    "aile": "hacim-baslangic",
    "zayif": 1,
    "not_": "V.1.3.M.200 (Mâtürîdî’nin argümanı); “en küçük hacimle başlama” öncülü gözlemle desteklenmemiştir ve eşit yapıdan farklı hacmin çıkması ayrıca bir tahsis (k_tercihsiz_hal) ister"
+  },
+  {
+   "id": "k_zitlik_ayri_ilke",
+   "metin": "Her zıtlığın ayrı bir ezelî ilke gerektirdiği ilkesi kabul edilirse zıt tabiatlar ve zıt yönler için de ayrı ilkeler gerekir ve ilke sayısı sınırsız çoğalır; bu, Vâcib sayısı sorusunu çözmez, çoğaltır.",
+   "tur": "turetilmis",
+   "kat": "zan-ı gâlib",
+   "aile": "zitlik-ilke",
+   "zayif": 1,
+   "not_": "V.2.33.16–18 (dörtlü, altılı, beşli sistem ilzamı); V.2.36.8: hasım ilkeyi yalnız ahlâkî zıtlıkla sınırlarsa ilzam düşer ve sınırlamanın gerekçesi sorulur"
+  },
+  {
+   "id": "k_sinir_ilke_tek_yon",
+   "metin": "Düalist öğretiye göre iki ezelî ilkeden her biri birleştiği yönde sınırlı, öteki yönlerde sınırsızdır.",
+   "tur": "turetilmis",
+   "kat": "zan-ı gâlib",
+   "aile": "hasim-ogretisi",
+   "zayif": 1,
+   "not_": "Menâniyye modeli (V.2.32.2), Mâtürîdî’nin aktarımıdır; kendi kitapları okunmadı (V.2.3.8)"
   }
  ],
  "soru": [
@@ -2545,7 +2563,7 @@
    "fam": [
     "kemal"
    ],
-   "yol": "126",
+   "yol": "217",
    "yol_altkume": 3,
    "asgari_yollar": [
     [
@@ -2566,14 +2584,14 @@
    "durum": "KAT’Î-ŞARTLI",
    "kat": 3,
    "en_iyi": "Q04.c2/U27",
-   "ispat_say": 11,
+   "ispat_say": 13,
    "W": [
     "k_kemal"
    ],
    "fam": [
     "kemal"
    ],
-   "yol": "7",
+   "yol": "8",
    "yol_altkume": 62,
    "asgari_yollar": [
     [
@@ -2603,7 +2621,7 @@
    "fam": [
     "kemal"
    ],
-   "yol": "7",
+   "yol": "8",
    "yol_altkume": 7,
    "asgari_yollar": [
     [
@@ -2633,7 +2651,7 @@
    "fam": [
     "kemal"
    ],
-   "yol": "7",
+   "yol": "8",
    "yol_altkume": 7,
    "asgari_yollar": [
     [
@@ -2776,7 +2794,7 @@
    "fam": [
     "zihni-parca"
    ],
-   "yol": "249",
+   "yol": "324",
    "yol_altkume": 7,
    "asgari_yollar": [
     [
@@ -3074,7 +3092,7 @@
    "fam": [
     "sebep-ilkesi-hal"
    ],
-   "yol": "25",
+   "yol": "29",
    "yol_altkume": 31,
    "asgari_yollar": [
     [
@@ -3166,7 +3184,7 @@
    "fam": [
     "sebep-ilkesi-hal"
    ],
-   "yol": "83",
+   "yol": "99",
    "yol_altkume": 15,
    "asgari_yollar": [
     [
@@ -6583,7 +6601,7 @@
    "fam": [
     "kemal"
    ],
-   "yol": "5"
+   "yol": "6"
   },
   {
    "id": "Q04.c4/U07",
@@ -6609,7 +6627,7 @@
    "fam": [
     "kemal"
    ],
-   "yol": "5"
+   "yol": "6"
   },
   {
    "id": "Q05.c1/U07",
@@ -6786,7 +6804,7 @@
     "kemal",
     "zihni-parca"
    ],
-   "yol": "245"
+   "yol": "320"
   },
   {
    "id": "Q06.c1/U07",
@@ -7095,7 +7113,7 @@
     "sebep-ilkesi-hal",
     "sebep-ilkesi-varlik"
    ],
-   "yol": "10"
+   "yol": "12"
   },
   {
    "id": "Q09.c1/U04",
@@ -7130,7 +7148,7 @@
     "sebep-ilkesi-hal",
     "sebep-ilkesi-varlik"
    ],
-   "yol": "10"
+   "yol": "12"
   },
   {
    "id": "Q09.c2/U07",
@@ -9902,6 +9920,59 @@
    "yol": "1"
   },
   {
+   "id": "Q04.c2/U07#3",
+   "hucre": "Q04.c2",
+   "usul": "U07",
+   "tur": "direct",
+   "ozet": "Hayır–şer zıtlığı iki ezelî ilke gerektiriyorsa dört tabiat ve altı yön için de ilke gerekirdi; ilke sınırsız çoğalır ve düalizmin kendi gerekçesi sayıyı iki ile durduramaz (Mâtürîdî, Deysâniyye tenkidi).",
+   "tag": null,
+   "hudut": "",
+   "sarti": null,
+   "kismi": "Yalnız her zıtlığın ayrı ilke istediğini kabul eden düalisti bağlar; ilkeyi yalnız ahlâkî zıtlıkla sınırlayan düalist için gerekçenin sorulması gerekir (V.2.36.8); zayıf aile zitlik-ilke",
+   "prem": [
+    "k_zitlik_ayri_ilke",
+    "k_hasir_cevap_uzayi"
+   ],
+   "katman": 1,
+   "kat": 2,
+   "durum": "ZAN-I GÂLİB",
+   "W": [
+    "k_zitlik_ayri_ilke"
+   ],
+   "fam": [
+    "zitlik-ilke"
+   ],
+   "yol": "1"
+  },
+  {
+   "id": "Q04.c2/U27#4",
+   "hucre": "Q04.c2",
+   "usul": "U27",
+   "tur": "direct",
+   "ozet": "Menâniyye modelinde her ilke temas yönünde sınırlıdır; sınırlı olan sınırını kendinden alamaz ve mümkindir; mümkin vâcib olamaz (Mâtürîdî, Menâniyye tenkidi).",
+   "tag": null,
+   "hudut": "Yalnız her ilkenin bir yönde sınırlı olduğunu kabul eden düalisti bağlar; ışın modeli sınırın bir yönde sonsuzlukla bağdaştığını gösterir ve ilzam yalnız sınırın müreccih istemesi ilkesine dayanır (V.2.36.2)",
+   "sarti": null,
+   "kismi": "",
+   "prem": [
+    "k_sinir_ilke_tek_yon",
+    "k_sinirli_mumkin",
+    "k_muhtac_mumkin"
+   ],
+   "katman": 1,
+   "kat": 2,
+   "durum": "ZAN-I GÂLİB",
+   "W": [
+    "k_sinir_ilke_tek_yon",
+    "k_sinirli_mumkin"
+   ],
+   "fam": [
+    "hasim-ogretisi",
+    "sebep-ilkesi-hal"
+   ],
+   "yol": "1"
+  },
+  {
    "id": "Q18.c1/U08#sibr",
    "hucre": "Q18.c1",
    "usul": "U08",
@@ -10796,7 +10867,7 @@
    "fam": [
     "kemal"
    ],
-   "yol": "125"
+   "yol": "216"
   },
   {
    "id": "Q04.c2/U08#dislama",
@@ -11277,7 +11348,7 @@
     "sebep-ilkesi-varlik",
     "sonsuz-gecmis"
    ],
-   "yol": "80"
+   "yol": "96"
   },
   {
    "id": "Q09.c1/U08#dislama",
@@ -16771,7 +16842,7 @@
    ],
    "U07": [
     "KULLANILDI",
-    "Q04.c2/U07, Q04.c2/U07#2"
+    "Q04.c2/U07, Q04.c2/U07#2, Q04.c2/U07#3"
    ],
    "U08": [
     "KULLANILDI",
@@ -16807,7 +16878,7 @@
    ],
    "U16": [
     "KOMBİNE",
-    "11 ispat; ayrıntı kombinasyon tablosundadır."
+    "13 ispat; ayrıntı kombinasyon tablosundadır."
    ],
    "U17": [
     "KULLANILDI",
@@ -16851,7 +16922,7 @@
    ],
    "U27": [
     "KULLANILDI",
-    "Q04.c2/U27, Q04.c2/U27#2, Q04.c2/U27#3"
+    "Q04.c2/U27, Q04.c2/U27#2, Q04.c2/U27#3, Q04.c2/U27#4"
    ],
    "U28": [
     "KULLANILDI",
@@ -16863,7 +16934,7 @@
    ],
    "U30": [
     "HUDUT",
-    "Zayıf halkalar: k_kemal; kısmî kapsam: 4"
+    "Zayıf halkalar: k_kemal; kısmî kapsam: 5"
    ],
    "U31": [
     "YAPILAMAZ",
@@ -43089,8 +43160,8 @@
     [
      "U07"
     ],
+    3,
     2,
-    1,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
     "ortak zayıf halka: gizleme-gucu",
@@ -43126,8 +43197,8 @@
      "U07",
      "U08"
     ],
-    5,
-    2,
+    6,
+    3,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
     "hiçbir tek zayıf aile hepsini düşürmez",
@@ -43164,8 +43235,8 @@
      "U07",
      "U17"
     ],
-    3,
-    1,
+    4,
+    2,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
     "hiçbir tek zayıf aile hepsini düşürmez",
@@ -43204,8 +43275,8 @@
      "U08",
      "U17"
     ],
-    6,
-    2,
+    7,
+    3,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
     "hiçbir tek zayıf aile hepsini düşürmez",
@@ -43240,8 +43311,8 @@
      "U07",
      "U26"
     ],
+    4,
     3,
-    2,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
     "ortak zayıf halka: gizleme-gucu",
@@ -43279,8 +43350,8 @@
      "U08",
      "U26"
     ],
-    6,
-    3,
+    7,
+    4,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
     "hiçbir tek zayıf aile hepsini düşürmez",
@@ -43319,8 +43390,8 @@
      "U17",
      "U26"
     ],
-    4,
-    2,
+    5,
+    3,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
     "hiçbir tek zayıf aile hepsini düşürmez",
@@ -43361,8 +43432,8 @@
      "U17",
      "U26"
     ],
-    7,
-    3,
+    8,
+    4,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
     "hiçbir tek zayıf aile hepsini düşürmez",
@@ -43381,7 +43452,7 @@
     [
      "U27"
     ],
-    3,
+    4,
     1,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -43399,8 +43470,8 @@
      "U07",
      "U27"
     ],
-    5,
-    2,
+    7,
+    3,
     "yakîn",
     "KAT’Î-ŞARTLI",
     "ortak zayıf halka: kemal",
@@ -43417,7 +43488,7 @@
      "U08",
      "U27"
     ],
-    6,
+    7,
     2,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -43436,8 +43507,8 @@
      "U08",
      "U27"
     ],
-    8,
-    3,
+    10,
+    4,
     "yakîn",
     "KAT’Î-ŞARTLI",
     "ortak zayıf halka: kemal",
@@ -43454,7 +43525,7 @@
      "U17",
      "U27"
     ],
-    4,
+    5,
     1,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -43473,8 +43544,8 @@
      "U17",
      "U27"
     ],
-    6,
-    2,
+    8,
+    3,
     "yakîn",
     "KAT’Î-ŞARTLI",
     "ortak zayıf halka: kemal",
@@ -43492,7 +43563,7 @@
      "U17",
      "U27"
     ],
-    7,
+    8,
     2,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -43512,8 +43583,8 @@
      "U17",
      "U27"
     ],
-    9,
-    3,
+    11,
+    4,
     "yakîn",
     "KAT’Î-ŞARTLI",
     "ortak zayıf halka: kemal",
@@ -43530,7 +43601,7 @@
      "U26",
      "U27"
     ],
-    4,
+    5,
     2,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -43549,8 +43620,8 @@
      "U26",
      "U27"
     ],
-    6,
-    3,
+    8,
+    4,
     "yakîn",
     "KAT’Î-ŞARTLI",
     "ortak zayıf halka: kemal",
@@ -43568,7 +43639,7 @@
      "U26",
      "U27"
     ],
-    7,
+    8,
     3,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -43588,8 +43659,8 @@
      "U26",
      "U27"
     ],
-    9,
-    4,
+    11,
+    5,
     "yakîn",
     "KAT’Î-ŞARTLI",
     "ortak zayıf halka: kemal",
@@ -43607,7 +43678,7 @@
      "U26",
      "U27"
     ],
-    5,
+    6,
     2,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -43627,8 +43698,8 @@
      "U26",
      "U27"
     ],
-    7,
-    3,
+    9,
+    4,
     "yakîn",
     "KAT’Î-ŞARTLI",
     "ortak zayıf halka: kemal",
@@ -43647,7 +43718,7 @@
      "U26",
      "U27"
     ],
-    8,
+    9,
     3,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -43668,8 +43739,8 @@
      "U26",
      "U27"
     ],
-    10,
-    4,
+    12,
+    5,
     "yakîn",
     "KAT’Î-ŞARTLI",
     "ortak zayıf halka: kemal",
@@ -43703,8 +43774,8 @@
      "U07",
      "U28"
     ],
-    3,
-    1,
+    4,
+    2,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
     "hiçbir tek zayıf aile hepsini düşürmez",
@@ -43743,8 +43814,8 @@
      "U08",
      "U28"
     ],
-    6,
-    2,
+    7,
+    3,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
     "hiçbir tek zayıf aile hepsini düşürmez",
@@ -43784,8 +43855,8 @@
      "U17",
      "U28"
     ],
-    4,
-    1,
+    5,
+    2,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
     "hiçbir tek zayıf aile hepsini düşürmez",
@@ -43827,8 +43898,8 @@
      "U17",
      "U28"
     ],
-    7,
-    2,
+    8,
+    3,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
     "hiçbir tek zayıf aile hepsini düşürmez",
@@ -43867,8 +43938,8 @@
      "U26",
      "U28"
     ],
-    4,
-    2,
+    5,
+    3,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
     "hiçbir tek zayıf aile hepsini düşürmez",
@@ -43909,8 +43980,8 @@
      "U26",
      "U28"
     ],
-    7,
-    3,
+    8,
+    4,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
     "hiçbir tek zayıf aile hepsini düşürmez",
@@ -43952,8 +44023,8 @@
      "U26",
      "U28"
     ],
-    5,
-    2,
+    6,
+    3,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
     "hiçbir tek zayıf aile hepsini düşürmez",
@@ -43997,8 +44068,8 @@
      "U26",
      "U28"
     ],
-    8,
-    3,
+    9,
+    4,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
     "hiçbir tek zayıf aile hepsini düşürmez",
@@ -44018,7 +44089,7 @@
      "U27",
      "U28"
     ],
-    4,
+    5,
     1,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -44037,8 +44108,8 @@
      "U27",
      "U28"
     ],
-    6,
-    2,
+    8,
+    3,
     "yakîn",
     "KAT’Î-ŞARTLI",
     "ortak zayıf halka: kemal",
@@ -44056,7 +44127,7 @@
      "U27",
      "U28"
     ],
-    7,
+    8,
     2,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -44076,8 +44147,8 @@
      "U27",
      "U28"
     ],
-    9,
-    3,
+    11,
+    4,
     "yakîn",
     "KAT’Î-ŞARTLI",
     "ortak zayıf halka: kemal",
@@ -44095,7 +44166,7 @@
      "U27",
      "U28"
     ],
-    5,
+    6,
     1,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -44115,8 +44186,8 @@
      "U27",
      "U28"
     ],
-    7,
-    2,
+    9,
+    3,
     "yakîn",
     "KAT’Î-ŞARTLI",
     "ortak zayıf halka: kemal",
@@ -44135,7 +44206,7 @@
      "U27",
      "U28"
     ],
-    8,
+    9,
     2,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -44156,8 +44227,8 @@
      "U27",
      "U28"
     ],
-    10,
-    3,
+    12,
+    4,
     "yakîn",
     "KAT’Î-ŞARTLI",
     "ortak zayıf halka: kemal",
@@ -44175,7 +44246,7 @@
      "U27",
      "U28"
     ],
-    5,
+    6,
     2,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -44195,8 +44266,8 @@
      "U27",
      "U28"
     ],
-    7,
-    3,
+    9,
+    4,
     "yakîn",
     "KAT’Î-ŞARTLI",
     "ortak zayıf halka: kemal",
@@ -44215,7 +44286,7 @@
      "U27",
      "U28"
     ],
-    8,
+    9,
     3,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -44236,8 +44307,8 @@
      "U27",
      "U28"
     ],
-    10,
-    4,
+    12,
+    5,
     "yakîn",
     "KAT’Î-ŞARTLI",
     "ortak zayıf halka: kemal",
@@ -44256,7 +44327,7 @@
      "U27",
      "U28"
     ],
-    6,
+    7,
     2,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -44277,8 +44348,8 @@
      "U27",
      "U28"
     ],
-    8,
-    3,
+    10,
+    4,
     "yakîn",
     "KAT’Î-ŞARTLI",
     "ortak zayıf halka: kemal",
@@ -44298,7 +44369,7 @@
      "U27",
      "U28"
     ],
-    9,
+    10,
     3,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -44320,8 +44391,8 @@
      "U27",
      "U28"
     ],
-    11,
-    4,
+    13,
+    5,
     "yakîn",
     "KAT’Î-ŞARTLI",
     "ortak zayıf halka: kemal",
@@ -57436,6 +57507,22 @@
    "not_": "ZAN-I GÂLİB"
   },
   {
+   "hucre": "Q04.c2",
+   "tur": "aksi-dogru-olsaydi",
+   "sonuc": "Hayır–şer zıtlığı iki ezelî ilke gerektiriyorsa dört tabiat ve altı yön için de ilke gerekirdi; ilke sınırsız çoğalır ve düalizmin kendi gerekçesi sayıyı iki ile durduramaz (Mâtürîdî, Deysâniyye tenkidi).",
+   "usul": "U07",
+   "ispat": "Q04.c2/U07#3",
+   "not_": "ZAN-I GÂLİB"
+  },
+  {
+   "hucre": "Q04.c2",
+   "tur": "aksi-dogru-olsaydi",
+   "sonuc": "Menâniyye modelinde her ilke temas yönünde sınırlıdır; sınırlı olan sınırını kendinden alamaz ve mümkindir; mümkin vâcib olamaz (Mâtürîdî, Menâniyye tenkidi).",
+   "usul": "U27",
+   "ispat": "Q04.c2/U27#4",
+   "not_": "ZAN-I GÂLİB"
+  },
+  {
    "hucre": "Q04.c3",
    "tur": "aksi-dogru-olsaydi",
    "sonuc": "Üç veya daha fazla vâcib içinden herhangi ikisi “iki vâcib” durumudur; o hâl yukarıda çürüdü.",
@@ -58506,7 +58593,30 @@
    "tur": "aile",
    "ad": "hasim-ogretisi",
    "onermeler": [
+    "k_nur_zulmet_sifat",
+    "k_sinir_ilke_tek_yon"
+   ],
+   "hucre_say": 0,
+   "hucreler": [],
+   "felsefe_say": 0,
+   "felsefeler": []
+  },
+  {
+   "tur": "onerme",
+   "ad": "k_nur_zulmet_sifat",
+   "onermeler": [
     "k_nur_zulmet_sifat"
+   ],
+   "hucre_say": 0,
+   "hucreler": [],
+   "felsefe_say": 0,
+   "felsefeler": []
+  },
+  {
+   "tur": "onerme",
+   "ad": "k_sinir_ilke_tek_yon",
+   "onermeler": [
+    "k_sinir_ilke_tek_yon"
    ],
    "hucre_say": 0,
    "hucreler": [],
@@ -59749,6 +59859,17 @@
    "hucreler": [],
    "felsefe_say": 0,
    "felsefeler": []
+  },
+  {
+   "tur": "aile",
+   "ad": "zitlik-ilke",
+   "onermeler": [
+    "k_zitlik_ayri_ilke"
+   ],
+   "hucre_say": 0,
+   "hucreler": [],
+   "felsefe_say": 0,
+   "felsefeler": []
   }
  ],
  "kontrol": [
@@ -59806,14 +59927,14 @@
    "deger": true,
    "beklenen": true,
    "tamam": true,
-   "aciklama": "Ölçü ayırt eder: zayıf öncül kaldırıldığında bağlı hücrelerin durumu düşer (F 3-B 27-B). Etkisiz aileler (başka ispatla ayakta): alem-parca, apriori-ret, curie, destek-hasir, gizleme-gucu, hacim-baslangic, hasim-ogretisi, ihkam, istisna, k_zorunluluk_dicto, karma-hayir-ser, kureselleme, mekan, mekan-degisim, muhatap-kabulu, ozdes, sadelik, sebep-ilkesi-bilgi, sebep-ilkesi-varlik, sebepsiz-sans, sudur-cesitlilik, tekduzelik, temanu, yokluk-egilim, zaman, zat-vucud"
+   "aciklama": "Ölçü ayırt eder: zayıf öncül kaldırıldığında bağlı hücrelerin durumu düşer (F 3-B 27-B). Etkisiz aileler (başka ispatla ayakta): alem-parca, apriori-ret, curie, destek-hasir, gizleme-gucu, hacim-baslangic, hasim-ogretisi, ihkam, istisna, k_zorunluluk_dicto, karma-hayir-ser, kureselleme, mekan, mekan-degisim, muhatap-kabulu, ozdes, sadelik, sebep-ilkesi-bilgi, sebep-ilkesi-varlik, sebepsiz-sans, sudur-cesitlilik, tekduzelik, temanu, yokluk-egilim, zaman, zat-vucud, zitlik-ilke"
   },
   {
    "ad": "Etkisiz çıkan zayıf aile sayısı (bilgi)",
-   "deger": 26,
+   "deger": 27,
    "beklenen": null,
    "tamam": true,
-   "aciklama": "alem-parca, apriori-ret, curie, destek-hasir, gizleme-gucu, hacim-baslangic, hasim-ogretisi, ihkam, istisna, k_zorunluluk_dicto, karma-hayir-ser, kureselleme, mekan, mekan-degisim, muhatap-kabulu, ozdes, sadelik, sebep-ilkesi-bilgi, sebep-ilkesi-varlik, sebepsiz-sans, sudur-cesitlilik, tekduzelik, temanu, yokluk-egilim, zaman, zat-vucud"
+   "aciklama": "alem-parca, apriori-ret, curie, destek-hasir, gizleme-gucu, hacim-baslangic, hasim-ogretisi, ihkam, istisna, k_zorunluluk_dicto, karma-hayir-ser, kureselleme, mekan, mekan-degisim, muhatap-kabulu, ozdes, sadelik, sebep-ilkesi-bilgi, sebep-ilkesi-varlik, sebepsiz-sans, sudur-cesitlilik, tekduzelik, temanu, yokluk-egilim, zaman, zat-vucud, zitlik-ilke"
   },
   {
    "ad": "YAPILMADI (usul şartı mümkün, kayıt yazılmamış açık iş) sayısı",
@@ -59849,17 +59970,17 @@
    "UYUMLU": 1
   },
   "ispat": {
-   "direct": 183,
+   "direct": 185,
    "sibr": 25,
    "dislama": 154,
    "alt": 1
   },
-  "ispat_toplam": 363,
+  "ispat_toplam": 365,
   "kombinasyon": 1389,
   "usul": 32,
   "soru": 33,
   "hucre_say": 109,
   "felsefe_say": 42,
-  "onerme": 113
+  "onerme": 115
  }
 }

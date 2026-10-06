@@ -39,10 +39,11 @@
 | Muhammed b. Şebîb'in Allah'ın varlığı ve sıfatları hakkındaki görüşleri (256–277) | 9571–10413 | **okundu** (3-I 242) | orta | soru–cevap; İbn Şebîb aktarımı; yapraklar V.2.30–V.2.31 |
 | Tefekkür yoluyla bilgi edinme hakkında savunma (278–281) | 10414–10583 | **okundu** (3-I 242) | orta | tercüman dipnotu: ara bahis; yapraklar I.3.16 |
 | İbn Şebîb'in cisimlerin yaratılmışlığı istidlâli (282–287) · Dehriyye tenkidi (288–305) · Sümeniyye (306) | 10594–11543 | **okundu** (3-I 242) | orta; Aristo ve kategori aktarımı OCR'da yer yer sıkışık, "Claude okuması" diye işaretli | yapraklar V.1.3.M.145–281 (V.1.3o, V.1.3p) |
-| Sofistlerin görüşleri ve tenkidi (307–312) | 11545–11751 | **okundu** (3-I 242) | orta | yapraklar I.3.17; **bir sonraki okuma OCR satır 11753'ten (Menâniyye, s.313)** |
+| Sofistlerin görüşleri ve tenkidi (307–312) | 11545–11751 | **okundu** (3-I 242) | orta | yapraklar I.3.17; (Menâniyye bölümü sonradan okundu, aşağıda) |
+| Seneviyye'ye ait görüşlerin mahiyeti: Menâniyye (313–322) · Deysâniyye (323–334) · Merkayûniyye ve Sâbiîler (335–337) · Mecûsîler (338–346) | 11753–12934 | **okundu** (3-I 242) | orta; ayet atıfı yok; tercüman dipnotları (Deysân, Ca'fer b. Harb, Merkayûniyye, Sâbiîler, dipnot 210) okundu | Mâtürîdî'nin aktarımları ve ilzamları; yapraklar V.2.32–V.2.36 (V.2w, V.2x); **ilâhiyyât bölümü bitti; bir sonraki okuma OCR satır 12944'ten (Nübüvvet, s.347)** |
 | Dördüncü Bölüm (s.617–712) | 23874–27791 | **okunmaz** | -- | padişah emri |
 
-**Sayı:** okunan basılı sayfa **49–312 = 264 sayfa** (fihrist aralığına göre; sayfa sayfa doğrulanmadı). Okunmayan: s.313–616 (304 sayfa) ve s.713–758 (46 sayfa); okunmaz: s.617–712 (96 sayfa).
+**Sayı:** okunan basılı sayfa **49–346 = 298 sayfa** (fihrist aralığına göre; sayfa sayfa doğrulanmadı). Okunmayan: s.347–616 (270 sayfa) ve s.713–758 (46 sayfa); okunmaz: s.617–712 (96 sayfa).
 
 **Yoklanan şeyler (3-A 25-D):** bölüm başlıkları OCR'da bulundu ve fihristle eşleşti (ör. "Âlemin Ezeliliğini Savunanların Görüşleri" ve "Seneviyye'nin Âlemin Ezelîliği ve Diğer Konular Hakkındaki Görüşleri" aynen). OCR sayfa numarası fihrist numarasıyla örtüşmez; bu yüzden OCR sayfa numarasına dayanılmadı.
 

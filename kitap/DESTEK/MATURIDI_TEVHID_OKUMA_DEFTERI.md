@@ -152,6 +152,25 @@
 | 11 | Dairevî hareket ilzamında dizi–halka karışıklığı; hacim argümanının başlangıç öncülü gözlemsiz; hatırlamamak yokluğa delil değil | V.1.3.M.282–284 |
 | 12 | İki katmanlı aktarım uyarısı: Aristo ← İbn Şebîb ← Mâtürîdî; Aristo'ya "kendi söylediği" diye cümle yazılmaz | V.1.3.M.261 |
 
+### 3f. s.313–346 damıtması (Menâniyye, Deysâniyye, Merkayûniyye, Sâbiîler, Mecûsîler)
+
+**Okunan ve yazılan:** V.2.32–V.2.36 (190 yaprak: V.2w, V.2x). **Hasımların kendi kitapları okunmadı**; dört katmanlı aktarım uyarısı V.2.36.1'dedir.
+
+| # | Okunandan türeyen yeni şey | Nerede |
+| :-- | :-- | :-- |
+| 1 | "Bir yönden sonlu" ilzamı yarım doğru (ışın) modeline karşı geçerli değildir; asıl güç sınırın müreccih istemesindedir | V.2.36.2; DB `k_sinir_ilke_tek_yon`, `k_sinirli_mumkin` |
+| 2 | Birleşmenin sebebi hâsrı (iki biçim aynı hâsra bağlanır: iki ilkeden biri · ikisi birlikte · üçüncü varlık · sebepsiz) | V.2.36.4; DB `k_birlesme_sebep` |
+| 3 | "Niçin şimdi?" tahsis sorusu ezelî oluş iddiasına | V.2.36.5 |
+| 4 | Hayır–şer iki anlamlı sözcük: ahlâkî ve kemâlî eksenler ayrı | V.2.36.6 |
+| 5 | Zulmetin bilmesi ilzamı yalnız Mâtürîdî'nin aktardığı tasavvura bağlı; tercüman dipnotundaki tasavvur tersidir | V.2.36.7 |
+| 6 | Dörtlü–altılı–beşli sistem ilzamı: ilkenin genelleştirilmesi (reductio) ve daraltma gerekçesinin sorulması | V.2.36.8; DB `k_zitlik_ayri_ilke` |
+| 7 | "Bilen daha kâmildir ⇒ yaratmak daha isabetlidir" sıçraması | V.2.36.9 |
+| 8 | Usul ilkesi: tasavvur edilememe imkânsızlık değildir (iki yönlü kullanım) | V.2.36.10 |
+| 9 | Duyu özürlüsü kıyasının sınırı | V.2.36.11 |
+| 10 | Mecûsî anlatımının Zurvancı akımla benzerliği (hafızadan, yoklanmadı) | V.2.36.12 |
+| 11 | Bilgi–güç dörtlüsü ilzam kalıbının Müslümana da yöneltilebilirliği (simetri sorusu; V.K açık suâli) | V.2.36.13 |
+| 12 | Düalizme karşı yedi ilzam ailesi haritası; DB'de eksik kollar | V.2.36.16 |
+
 ## 5. Açık suâller
 
 | # | Suâl |
@@ -159,4 +178,4 @@
 | S38 | **Kapandı (3-I 242):** üç hâl de beyan edilir (V.1.3.a.26–38) |
 | S39 | **Kapandı (3-I 242):** kazâ ve kader bâbı olacak (`V.K`; etiket Claude'un çıkarımı); s.421–616 okuma planında |
 | S40 | **Kapandı, nakz (3-I 242):** dövme ve eziyet alınmaz, mizah usulü gereksiz; hâtimede hikmetli kıssa **namzet** (padişah "belki") |
-| (okuma) | s.313'ten (Menâniyye, OCR satır 11753) itibaren okuma sürer: Menâniyye, Deysâniyye, Merkayûniyye, Mecûsîler (s.346'ya kadar); padişah "ilâhiyyât 73–347" dedi |
+| (okuma) | İlâhiyyât (s.73–346) bitti; sıra nübüvvet s.347–420 (OCR satır 12944'ten), sonra kaza–kader s.421–616 (OCR ~16091'den), sonra îmân s.713–758 (OCR ~27792'den); s.617–712 okunmaz |

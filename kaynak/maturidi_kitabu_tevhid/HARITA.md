@@ -55,11 +55,11 @@ Umumîden hususîye. **Sayfa numaraları padişahın fotoğrafladığı basılı
 | İlâhiyyât | [4. Dehriyye'ye Ait Görüşlerin Tenkidi] | 288–305 | **okundu** (3-I 242; OCR satır 10821–11467; yapraklar V.1.3.M.180–252) | **yüksek (Kısım II, V.1)** |
 | İlâhiyyât | [5.] Mesele [Sümeniyye'nin Görüşleri ve Tenkidi] | 306 | **okundu** (3-I 242; OCR satır 11479–11543; yapraklar V.1.3.M.253–260) | orta |
 | İlâhiyyât | [6.] Mesele [Sofistlerin Görüşleri ve Tenkidi] | 307–312 | **okundu** (3-I 242; OCR satır 11545–11751; yapraklar I.3.17) | **yüksek (V.0.4)** |
-| İlâhiyyât | [7.] Mesele: Seneviyye'ye Ait Görüşlerin Mahiyeti | 313 | okunmadı (OCR satır 11753–11813'ün ilk satırları görüldü; bölüm okunmadı, yaprak yazılmadı) | orta |
-| İlâhiyyât | [7.1 Menâniyye'nin Görüşleri ve Tenkidi] | 313–322 | okunmadı | orta |
-| İlâhiyyât | [7.2 Deysâniyye'nin Görüşleri ve Tenkidi] | 323–334 | okunmadı | orta |
-| İlâhiyyât | [7.3 Merkayûniyye'nin Görüşleri ve Tenkidi] | 335–337 | okunmadı | orta |
-| İlâhiyyât | [7.4 Mecûsîler'in Görüşleri ve Tenkidi] | 338–346 | okunmadı | orta |
+| İlâhiyyât | [7.] Mesele: Seneviyye'ye Ait Görüşlerin Mahiyeti | 313 | **okundu** (3-I 242; OCR satır 11753–11758, alt başlıklarla birlikte) | orta |
+| İlâhiyyât | [7.1 Menâniyye'nin Görüşleri ve Tenkidi] | 313–322 | **okundu** (3-I 242; OCR satır 11759–12139; yapraklar V.2.32) | orta |
+| İlâhiyyât | [7.2 Deysâniyye'nin Görüşleri ve Tenkidi] | 323–334 | **okundu** (3-I 242; OCR satır 12140–12602; yapraklar V.2.33) | orta |
+| İlâhiyyât | [7.3 Merkayûniyye'nin Görüşleri ve Tenkidi] | 335–337 | **okundu** (3-I 242; OCR satır 12603–12714; yapraklar V.2.34) | orta |
+| İlâhiyyât | [7.4 Mecûsîler'in Görüşleri ve Tenkidi] | 338–346 | **okundu** (3-I 242; OCR satır 12715–12934; yapraklar V.2.35–V.2.36) | orta |
 | **İKİNCİ BÖLÜM** | [NÜBÜVVET KONULARI] · Mesele [Nübüvvetin İspatı ve Gerekliği] | 347–362 | okunmadı | **yüksek (V.3)** |
 | Nübüvvet | [1. Verrâk'ın Nübüvvet Konusundaki Görüşleri ve Tenkidi] | 363–370 | okunmadı | yüksek |
 | Nübüvvet | [2. Hz. Muhammed'in Nübüvvetinin İspatına Kısa Bir Bakış] | 371–373 | okunmadı | **en yüksek (V.4)** |
