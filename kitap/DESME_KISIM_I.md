@@ -261,6 +261,21 @@
 | I.2.7.14 | Meâd, ahiret, hesap | T |
 | I.2.7.15 | Sünnet, hadis | T |
 
+
+### I.2.8 Tam ve eksik tasavvur; tanımın terkibi (Fârâbî s.1, s.24)
+
+| No | Cümle | Cins |
+| :-- | :-- | :-- |
+| I.2.8.1 | Tam tasavvur, bir şeyin ona özgü bir tarzda zâtını ifade eden şeyle, yani tanımının delâlet ettiği şeyle tasavvurudur (s.1) | T |
+| I.2.8.2 | Tasavvurların en eksiği, bir şeye delâlet eden tekil lafızların oluşturduğu tasavvurdur; en tamı tanımların oluşturduğu tasavvurdur (s.24) | K |
+| I.2.8.3 | Fârâbî tasavvurlar bahsine geçer; tasavvur sınıflarının hangisinin daha tam, hangisinin daha eksik olduğu ve tasavvur sınıflarının kendileri dolayısıyla meydana geldiği durumlar önceki bahislerde sıralanmıştır (s.24) | K |
+| I.2.8.4 | Tanımlar ve tanımlanan şeyler: tanımlananlar ya insan, güneş, ay gibi lafızların delâlet ettiği şeylerdir ya da terkibi tam bir söz terkibi biçiminde olmayan bir sözün delâlet ettiği şeylerdir (s.24) | T |
+| I.2.8.5 | Tanımlar burhânları oluşturan şeyler derecesinde birden fazla şeyden oluşturulur; fakat tanımların terkip tarzı burhânların terkip tarzından farklıdır (s.24) | K |
+| I.2.8.6 | Tanımın parçalarının terkibi, parçalarının bir kısmının hüküm, diğerinin hakkında hüküm verilen (mahkûm aleyh) olacağı bir yapıda değildir; tanımın bütünü tam bir sözün parçası yapılmaya elverişlidir (s.24) | K |
+| I.2.8.7 | Tanımlar en az iki parçadan terkip edilirler (s.24) | K |
+| I.2.8.8 | Tanım parçalarının bütünü içinde tanımlanana yüklem olabilenler ve olamayanlar vardır (misal: dairenin tanımında "şekil" daireye yüklem olur; "bir parça" yüklem olamaz, çünkü dairenin bir parça olduğu doğru değildir; doğru olan daireyi bir parçanın çevrelediğidir; bu yüzden "parça" faslın parçasıdır) (s.24) | K |
+| I.2.8.9 | Tanımlanana yüklem olamayan şey tanımın tam parçası değil, parçasının parçasıdır (s.24) | K |
+
 ---
 
 ## I.3 MALÛMATIN KATİYET DERECELERİ
@@ -353,6 +368,115 @@
 | I.3.7.4 | Muhatabın ikna olmaması delilin **geçersiz** olduğunu göstermez; muhatabın **hangi öncülü** reddettiği gösterilir | K |
 | I.3.7.5 | Muhatap öncülü gerekçesiz reddediyorsa ret **ilzam** edilir; gerekçeyle reddediyorsa gerekçe tartılır | K |
 | I.3.7.6 | İspat yükü **iddia sahibinde** değil, **reddedilen öncülü yakînî gösteren tarafta** değil: **her iki tarafın kendi iddiasındadır** (yokluk iddiası da iddiadır) | K |
+
+
+### I.3.8 Bilgi, tasdik, tam ve eksik; tasdikin tanımı ve doğruluk (Fârâbî s.1–2)
+
+| No | Cümle | Cins |
+| :-- | :-- | :-- |
+| I.3.8.1 | Bilgiler tasavvur ve tasdik olmak üzere iki sınıftır (s.1) | K |
+| I.3.8.2 | Tasavvurun da tasdikin de her biri ya tamdır ya eksiktir (s.1) | K |
+| I.3.8.3 | Tam bilgiye ulaştıran şeyler eksik bilgiye ulaştıranlardan başkadır; bu yüzden ikisi ayrı ayrı anlatılır (s.1) | K |
+| I.3.8.4 | Tam tasdik, kesin (yakîn) tasdiktir (s.1) | T |
+| I.3.8.5 | Tasdik, insanın, bir hükümle hükümde bulunulan şeyin zihin dışındaki varlığının zihinde inanıldığı şekilde olduğuna inanmasıdır (s.1) | T |
+| I.3.8.6 | Doğru, şeyin zihin dışında zihinde inanıldığı şekilde bulunmasıdır (s.1) | T |
+| I.3.8.7 | Tasdik doğru olana da yanlış olana da ilişkin olabilir (s.1) | K |
+| I.3.8.8 | Yanlış tasdikte yakîn asla meydana gelmez; yakîn ancak doğru olana ilişkin tasdikte mümkündür (s.2) | K |
+
+### I.3.9 Tasdikin üç derecesi ve muânid ölçütü (Fârâbî s.2)
+
+| No | Cümle | Cins |
+| :-- | :-- | :-- |
+| I.3.9.1 | Tasdikin bir kısmı yakîndir, bir kısmı yakîne yakındır, bir kısmı nefsin bir şeyde sükûn bulmasıdır; sonuncusu yakînden en uzaktır (s.2) | K |
+| I.3.9.2 | Yakîn, tasdik edilen şeyin dış varlığının inanılandan farklı olması mümkün olmadığı gibi bu inancın başka türlü olması da mümkün olmadığı tasdiktir (s.2) | T |
+| I.3.9.3 | Yakînde kişinin ilk inancı hakkında herhangi bir inanç alındığında bu inanç onun nezdinde ilk inançtan başka olmaz ve sonsuza kadar böyle devam eder (s.2) | K |
+| I.3.9.4 | Yakîn olmayan, tasdik edilen şeyin dış varlığının inanılandan farklı olmasının mümkün veya imkânsız olmadığı tasdiktir (s.2) | T |
+| I.3.9.5 | Yakîne yakın olanın muânidi ya farkına varılmaz; ya farkına varılır ve ya dile getirilemeyecek kadar gizlidir ya da inâdı açıklanmıştır (s.2; OCR çevirisi, anlam Arapçayla yoklanacak) | T |
+| I.3.9.6 | Nefsin sükûnu, muânidi farkına varılan ve bu muânidin dile getirilmesi mümkün olan şeyin tasdikidir (s.2) | T |
+| I.3.9.7 | Nefsin sükûnu, muânidin gücüne ve zayıflığına bağlı olarak derecelenir (s.2) | K |
+| I.3.9.8 | Yakîne yakın tasdik cedelî (diyalektik) tasdiktir; nefsin sükûn bulması hatabî (belâğî) tasdiktir (s.2) | K |
+| I.3.9.9 | Yakîne yakın tasdikle tasdik edilenler meşhûrlar ve onlar gibi işlev görenler, meşhûr öncüllerden kurulan kıyasların gereği ve araştırılan tikellerin bütününü içine aldığından emin olunamayan tümevarımın gereğidir (s.2) | T |
+| I.3.9.10 | Nefsin sükûn bulduğu şeyler makbûller, makbûl öncüllerden kurulan kıyasın gereği ve mümkün öncüllerden kurulan kıyasın gereğidir; bazen başkaları da olur (s.2) | T |
+| I.3.9.11 | **Claude çıkarımı (teyitsiz): iki ölçek vardır.** Bizim ölçek (yakîn, zan-ı gâlib, zan, şek, vehim; I.3.1) **hükme bağlılığın derecesini** ölçer; Fârâbî'nin ölçeği (yakîn, yakîne yakın = cedelî, nefsin sükûnu = hatabî) **muânidin durumunu** ölçer. İkisinin birbirine çevrilip çevrilemeyeceği yoklanmadı; çevrilemiyorsa ikisi ayrı eksen olarak kitapta yan yana durur | Z |
+
+### I.3.10 Tanıklık: meşhûr ve makbûl; bilaraz kesinlik (Fârâbî s.2–3)
+
+| No | Cümle | Cins |
+| :-- | :-- | :-- |
+| I.3.10.1 | Meşhûr ve makbûlün tümüne ilişkin tasdik tamamıyla tanıklıktan neşet eder (s.2) | K |
+| I.3.10.2 | Meşhûr, herkesin, çoğunluğun veya çoğunluğa yakın bir topluluğun tanıklık ettiği şeydir (s.2) | T |
+| I.3.10.3 | Makbûl, tek bir kişinin, bir kişi nezdinde makbul görülen bir topluluğun veya yalnız bir topluluğun tanıklık ettiği şeydir (s.2) | T |
+| I.3.10.4 | Ne meşhûr ne makbûl kesinlik oluşturur (s.2) | K |
+| I.3.10.5 | Herkesin veya çoğunluğun tanıklığının üzerinde uzlaştığı şeye duyulan güven, bir kişinin veya az bir topluluğun tanıklığına duyulan güvenden daha güçlü ve daha çoktur (s.2) | K |
+| I.3.10.6 | Tanıklıklarla ilgili sözlerde gerçekten doğru şeyler bulunabilir; böylece onlarda kesinlik bilaraz (arazî) bulunabilir (s.3) | K |
+| I.3.10.7 | Çoğu insan tanıklıkların kesinliği bilaraz değil bizzat oluşturduğunu zanneder (s.3) | H |
+| I.3.10.8 | Başka bir kesim, tanıklıkların kesinlik oluşturmadığını fark etmiş fakat kesinliğin meydana geldiği tanıklıklarda, özellikle nefsin sükûn bulduğu tanıklıklarda, kesinliğin ilâhî bir emirle olduğunu zannetmiştir (Fârâbî görüşü aktarır; "zannetmişlerdir" der) (s.3) | Z |
+
+### I.3.11 Zorunlu ve zorunlu olmayan kesinlik (Fârâbî s.3, s.7)
+
+| No | Cümle | Cins |
+| :-- | :-- | :-- |
+| I.3.11.1 | Kesinliğin bir kısmı zorunludur, bir kısmı zorunlu değildir (s.3) | K |
+| I.3.11.2 | Zorunlu kesinlik, dış varlığında olduğu durumun hilafına olması mümkün olmayan şey hakkında, o şeyin inanılan durumun hilafına olmasının asla ve hiçbir zaman mümkün olmadığına inanmaktır (s.3) | T |
+| I.3.11.3 | Zorunlu olmayan kesinlik, yalnız belirli bir vakitte kesin olandır (s.3) | T |
+| I.3.11.4 | Zorunlunun değişmesi ve yanlış olması mümkün olmaz; zihinde sürekli aynı durumda bulunur, ya yalnız olumlama ya yalnız olumsuzlama olarak (s.3) | K |
+| I.3.11.5 | Zorunlu olmayanın değişmesi ve zihinde bir eksiklik olmaksızın yanlış olması mümkündür (s.3) | K |
+| I.3.11.6 | Zorunlu kesinlik ancak varlığı sürekli olan şeylerde mümkündür (misal: bütün parçadan büyüktür) (s.3) | K |
+| I.3.11.7 | Zorunlu olmayan kesinlik ancak varlığı değişip bir halden başka bir hale geçen şeylerde olur (misal: senin ayakta olman, Zeyd'in evde bulunması) (s.3) | K |
+| I.3.11.8 | Zorunlunun mukabili varlığı imkânsız olandır, yani imkânsız yanlıştır; zorunlu olmayan kesinin mukabili mümkün yanlıştır (s.3) | T |
+| I.3.11.9 | Yanlışın bir kısmı imkânsızdır, bir kısmı imkânsız değildir (s.3) | K |
+| I.3.11.10 | Zorunlu kesin ile zorunlu varlık gereklilikte birbirine döndürülebilir (yen'akis) (s.3) | K |
+| I.3.11.11 | "Bilgi" adı kesin olmayana veya zorunlu olmayan kesine değil, zorunlu kesine söylenir; buna "kesin bilgi" denir (s.7) | K |
+| I.3.11.12 | Fârâbî zorunlu olmayan kesini inceleme dışı bırakır ve zorunlu kesini inceler (s.3) | K |
+| I.3.11.13 | **Claude çıkarımı (teyitsiz): kesinlik kipi her halkaya yazılır.** Fârâbî burhânı yalnız **zorunlu kesin** için tanımlar; zorunlu olmayan kesin (belirli vakitte kesin, tarihî vâkıa) onun burhân tanımının dışındadır. Bizim H1–H3 (Vâcib, tevhid, bildirmenin imkânı) zorunlu hükümler; H4–H5'in vukû' kanadı (Kur'ân'ın bu bildirim olması, Muhammed'in peygamberliğinin olması) **belirli vakitte kesin** olandır. Bu yüzden her halkanın yanına 'zorunlu / zorunlu olmayan kesin' işareti yazılmalıdır; padişaha açık suâl (S32) | Z |
+
+### I.3.12 Kıyasla ve kıyassız elde edilen zorunlu kesin (Fârâbî s.3–4)
+
+| No | Cümle | Cins |
+| :-- | :-- | :-- |
+| I.3.12.1 | Zorunlu kesin bazen kıyasla bazen kıyassız elde edilir (s.3) | K |
+| I.3.12.2 | Kıyasla elde edilen zorunlu kesin ya bizzat ya bilaraz elde edilir (s.3) | K |
+| I.3.12.3 | Bilarazın misali: "İnsan yürüyendir; yürüyen canlıdır; o halde insan canlıdır"; Fârâbî bunu inceleme dışı bırakır (s.4) | M |
+| I.3.12.4 | Bizzat elde edilen zorunlu kesin, zorunlu kesinlikle bilinen iki öncülden meydana gelir (s.4) | K |
+| I.3.12.5 | Bu iki öncül ya başlangıçta kıyassız elde edilmiştir ya da tahlil yoluyla kıyassız elde edilenlere irca edilir (s.4) | K |
+| I.3.12.6 | Kesinlikle bilinen öncüller tümel veya tikeldir; Fârâbî yalnız tümelleri inceler, çünkü ilimlerde çoğu tümel kullanılır ve tümelleri incelemek tikelleri de kapsar (s.4) | K |
+
+### I.3.13 İlk ilkeler: doğal ve tecrübî öncüller (Fârâbî s.5–6)
+
+| No | Cümle | Cins |
+| :-- | :-- | :-- |
+| I.3.13.1 | Kendileri hakkında zorunlu kesinliğin kıyassız meydana geldiği tümel öncüller iki sınıftır: doğal olarak elde edilenler ve tecrübeyle elde edilenler (s.5) | K |
+| I.3.13.2 | Doğal öncüller, nereden ve nasıl elde edildiği bilinmeksizin, bilmediğimiz idrak edilmeksizin, bilgisini elde etme isteği ve araştırması olmaksızın elde edilen öncüllerdir (s.5) | T |
+| I.3.13.3 | Nefislerimizi başlangıcımızdan itibaren bunlarla birlikte yaratılmış buluruz; sanki doğuştandır ve bunlardan yoksun kalamayız (s.5) | K |
+| I.3.13.4 | Bunlara insana ait doğal ilk öncüller ve ilk ilkeler denir (s.5) | T |
+| I.3.13.5 | Fârâbî'ye göre bu öncüllerin nasıl oluştuğunu bilmemize bu kitapta gerek yoktur (s.5) | K |
+| I.3.13.6 | Elde ediliş yönünü bilmemek kesinliği ortadan kaldırmaz, eksiltmez ve bu öncüllerden kıyas düzenlemeyi engellemez (s.5) | K |
+| I.3.13.7 | İlk bilgilerin elde ediliş yönü meselesi ilimlerdeki ve felsefedeki matluplardan biridir (s.5) | K |
+| I.3.13.8 | Bu öncüllerin gerçekleşme yönüne dair kesinliğe ancak böylesi öncüllerden kurulu kıyaslarla ulaşılır (s.5) | K |
+| I.3.13.9 | Regres argümanı: bu öncüller nereden bilindikleri bilinmedikçe kullanılamazsa ve gerçekleşme yönleri ancak bu öncüllerle bilinirse ve bu yönün açıklanmasında kullanılamazlarsa hiçbir şeyin bilgisine ulaşılamaz (s.5) | K |
+| I.3.13.10 | Bu öncüllerin elde ediliş yönlerinin Mantıkta incelenmesini gerekli görenler yanılmıştır (s.5) | K |
+| I.3.13.11 | Mantıkta bu öncüller hakkında bilinmesi gereken şey, sınıflarının belirtilmesi, betimlenmesi ve sayımı, kıyasın parçaları olarak kullanılma yönü ve diğer bilgilerin onların seviyesine nasıl çıkacağıdır (s.5) | K |
+| I.3.13.12 | Bu öncüllerin gerçekleşme yönleri hakkında insanların görüşleri farklıdır; onları kullanırken nereden ve nasıl elde edildiklerini bilmemiz gerekmez (s.5) | K |
+| I.3.13.13 | Tümel öncüllerin büyük kısmının dış dünyadaki varlıkları duyulurdur; bir topluluk bu yüzden onların duyulardan meydana geldiğini söylemiştir (s.5) | K |
+| I.3.13.14 | Tek başına duyu bu öncüllerin meydana gelişinde yeterli değildir: duyularla yalnız sınırlı sayıda varlık duyumsanır, bu durumda öncüller tikel olurdu; oysa tümel olarak meydana geldiklerini ve duyumsananı duyumsanmayanı kapsayan genel hüküm verdiğimizi görürüz (s.6) | K |
+| I.3.13.15 | Nefis duyulurlarda duyumsadığımızdan daha fazla bir fiile sahiptir; Fârâbî bunun açıklamasını bu yerde zor bulup erteler (s.6) | K |
+| I.3.13.16 | Duyulurların nasıl idrak edildiği ve nefsin idrakinin tikelleri duyumsamaksızın mümkün olup olmadığı sorusu bu yerde açık bırakılır (s.6) | K |
+| I.3.13.17 | Tecrübeyle meydana gelen öncüller, tikellerini az veya çok duyumsamaya yönelik bir kasıtla kesinliğin kendileri hakkında meydana geldiği tümel öncüllerdir (s.6) | T |
+| I.3.13.18 | Tecrübe, zorunlu kesinlik oluşana kadar tümel öncülün yükleminin tikellerin tümünde veya çoğunda bulunup bulunmadığının izinin sürülmesidir (s.6) | T |
+| I.3.13.19 | Tecrübe tümevarıma benzer; tümevarımda tümel hükme dair zorunlu kesinlik meydana gelmezken tecrübede meydana gelir (s.6) | K |
+| I.3.13.20 | İnsanların çoğu tecrübe ve tümevarım isimlerini birbirinin yerine kullanır; Fârâbî isimlerin kullanımını önemsemez, anlamları ayırır (s.6) | K |
+| I.3.13.21 | Nefis incelediğiyle yetinmez; incelemeden sonra hem incelediğini hem incelemediğini kapsayan genel bir hüküm verir; bu hükmün nereden oluştuğu ertelenir (s.6) | K |
+| I.3.13.22 | Bu hükmün nereden oluştuğunu bilmenin kesinliğe faydası, bilmemenin öncüllere ilişkin kesinliğe zararı yoktur ve bilmemek öncüllerin kullanılmasını engellemez (s.6) | K |
+| I.3.13.23 | Bu öncüllere kesinliğin ilkleri (evâilü'l-yakîn) denir (s.6) | T |
+| I.3.13.24 | **Claude çıkarımı (teyitsiz): ilk ilkelerin kaynağı savunması.** I.3.13'teki regres argümanı (kaynağı bilinmeden kullanılamıyorsa ve kaynak ancak onlarla biliniyorsa hiçbir şeyin bilgisine ulaşılamaz) V.0.3'teki ortak zemin ve I.3.3.7'deki 'evveliyyât ispat edilmez, gösterilir' hükmünün klasik bir gerekçesidir; 'duyu yetmez' argümanı (I.3.13, s.6) duyuculuğu dile getiren muhatap yaprağına cevap adayıdır | Z |
+
+### I.3.14 Burhânın mantıktaki yeri (çevirmenlerin Önsözü; Fârâbî'nin sözü değildir)
+
+| No | Cümle | Cins |
+| :-- | :-- | :-- |
+| I.3.14.1 | Çevirmenlere göre Fârâbî mantığı sekiz bölüme ayırır: Mekûlât, İbâre, Kıyas, Burhân, Cedel, Sofistik (hikmet-i mümevvehe), Hitâbet, Şiir; her bölüm bir kitaba karşılık gelir (İhsâü'l-ulûm'a atıfla) (Önsöz) | K |
+| I.3.14.2 | Çevirmenlere göre Fârâbî'de mantığın esası dördüncü bölüm olan Burhân'dır; mantığın ilk üç bölümü Burhân'a giriş ve hazırlıktır; son dört bölüm bir yandan Burhân'a alet hizmeti görür, diğer yandan burhâna dayalı kesin bilgi ile zan, mugalata, ikna ve hayâle dayalı kesinlikten uzak görüşleri ayırt etmeye yarar (Önsöz) | K |
+| I.3.14.3 | Çevirmenlere göre Burhân kesin ve zorunlu bilginin ilke ve kurallarını verir; felsefenin ideal yöntemini oluşturur (Önsöz) | K |
 
 ---
 
@@ -455,6 +579,224 @@
 | I.4.5.8 | Kâzibin **mu'cize uyduramayacağı**, mu'cizenin tanımındaki üç şarttan (harikulâde · iddiaya uygun · muâraza edilemez) çıkar | B |
 | I.4.5.9 | Haberin **isnadı** kopuksa haber kaynağına bağlanamaz ve katiyeti düşer | K |
 | I.4.5.10 | Haber, **tahrif edilmemiş kaynaktan** geldiği gösterilmedikçe sıhhatli sayılmaz | K |
+
+
+### I.4.6 Kesin bilginin üç kısmı ve burhânın üç çeşidi: enne, lime, mutlak (Fârâbî s.7)
+
+| No | Cümle | Cins |
+| :-- | :-- | :-- |
+| I.4.6.1 | "Bilgi" adı genel olarak iki anlamda kullanılır: tasdik ve tasavvur (s.7) | T |
+| I.4.6.2 | Kesin bilgi üç kısımdır (s.7) | K |
+| I.4.6.3 | Birincisi bir şeyin yalnız varlığına ilişkin kesinliktir; buna varlık bilgisi (ilmü enne'ş-şey) denir (s.7) | T |
+| I.4.6.4 | İkincisi bir şeyin yalnız varlık sebebine ilişkin kesinliktir; buna niçin varolduğunun bilgisi (ilmü lime'ş-şey) denir (s.7) | T |
+| I.4.6.5 | Üçüncüsü hem varlığa hem varlık sebebine ilişkin kesinliktir (s.7) | T |
+| I.4.6.6 | Kesin ilkelerden talep edilen şeyler (matlûbât) ancak bu üç talep tarzından biriyle öğrenilir; talep esnasında bu üç bilgi tarzından biri amaçlanır (s.7) | K |
+| I.4.6.7 | Bir nesnenin yalnız sebebi bilinmek istendiğinde nesnenin varlığına ilişkin bilgi önceden bizde olmalıdır (s.7) | K |
+| I.4.6.8 | Üç kısım içinde kesin bilgi adına en layık olan, varlığa ve sebebe ilişkin kesinliğin birlikte bulunduğu kısımdır (s.7) | K |
+| I.4.6.9 | Zorunlu kesinlikle kesinlenen öncüllerden kurulan kıyaslar üç kısma ayrılır: bizâtihi yalnız varlığı veren, bizâtihi yalnız sebebi veren, bizâtihi hem varlığı hem sebebi veren (s.7) | K |
+| I.4.6.10 | Yalnızca şeyin varlık sebebine vakıf olmak için kurulan kıyas, ancak ilklerin bilindiği yolla ya da yalnız varlık bilgisini veren bir kıyasla daha önce varlığı bilinen şey hakkında olabilir (s.7) | K |
+| I.4.6.11 | Zorunlu kesinlikle kesinlenen öncüllerden kurulan ve bu üç kısımdan birini veren kıyas burhân diye adlandırılır; burhân üç çeşittir (s.7) | T |
+| I.4.6.12 | Birinci burhân varlık burhânıdır (burhânü enne'ş-şey); ikincisi bir şeyin niçin varolduğunun burhânıdır (burhânü lime'ş-şey); üçüncüsü ikisini birleştiren burhândır ve mutlak olarak burhân adı verilir (s.7) | T |
+| I.4.6.13 | Hem varlığa hem sebebe ilişkin kesinlik mutlak olarak burhânî bilgi diye adlandırılır (s.7) | T |
+| I.4.6.14 | Mutlak burhân, bilaraz değil bizâtihi bir şeyin hem varlığını hem varlık sebebini veren kesin kıyastır (s.7) | T |
+| I.4.6.15 | Her burhân kendisinden elde edilen bilginin sebebidir; fakat her burhân şeyin varlık sebebinin bilgisini vermez (s.7) | K |
+| I.4.6.16 | **Claude çıkarımı (teyitsiz): Vâcibü'l-vücûdun 'niçin'i yoktur.** Fârâbî'nin üçlüsünde (enne, lime, mutlak) yalnız varlığı veren burhân 'delil'dir; bir şeyin sebebi yoksa onun 'lime' burhânı kurulamaz. Vâcib'in sebebi olmadığından onun ispatı Fârâbî'nin ölçüsüyle ancak 'enne' (yalnız varlık) olabilir. Bu sayfalar vâcibü'l-vücûd ispatından söz etmez; bu cümle Claude'un çıkarımıdır ve padişahın 'bir yerden bir yere gibi gözükmüyor' sorusuna cevap adayıdır; 'sıddîkîn' adının bu üçlüde yeri aranmalıdır | Z |
+| I.4.6.17 | **Claude çıkarımı (teyitsiz): 'burhân-ı innî' tanım ihtilafı.** Bizim I.4.2.A.1 burhân-ı inniyi 'eserden müessire geçiş' diye yönle tanımlar; Fârâbî burhânü enne'yi 'yalnız varlık veren' diye **verdiği bilgiyle** tanımlar. I.2.5'in ölçüsüne göre bu **kapsam farkı** olabilir; yoklanmadan iki tanım yan yana konmaz | Z |
+| I.4.6.18 | **Claude çıkarımı (teyitsiz): 'kaç usul' sorusuna kısmî cevap.** Bu 24 sayfa ispat usullerinin (kaynağa veya yöne göre) sayısını vermez; burhânı **verdiği bilgiye** (varlık, sebep, ikisi), **önceliğe** (önce–sonra dört sınıf), **sebebe** (dört sebep × dört ikili) ve **terkibe** (39 kip) göre sınıflar. Bunlar bizim 5 kümelik usul tasnifinin (S31) kaynak ekseninde değil, **mantık ekseninde**dir; yeni bir eksen adayıdır | Z |
+
+### I.4.7 Dört sebep ve sebebin hâlleri (Fârâbî s.8–9, s.21)
+
+| No | Cümle | Cins |
+| :-- | :-- | :-- |
+| I.4.7.1 | Sebepler dörttür: maddî (şeyin maddesi ve onunla sayılanlar), sûrî (tanımı ve tanımın parçaları ve onlarla sayılanlar), fâil (ve onunla sayılanlar), gâî (gâye ve onunla sayılanlar) (s.8) | T |
+| I.4.7.2 | Bu sebeplerden her biri ya yakındır ya uzaktır; ya bizzattır ya bilarazdır; ya daha geneldir ya daha özeldir; ya bilkuvvedir ya bilfiildir (s.8) | K |
+| I.4.7.3 | Bilaraz sebebin bilgisini veren kıyas burhâna girmez; ancak bilaraz burhân diye adlandırılabilir (s.8) | K |
+| I.4.7.4 | Bilaraz sebep dışındaki sebep sınıflarını veren kıyasların tümü burhândır (s.8) | K |
+| I.4.7.5 | Bilfiil, zâtî, yakın ve daha özel sebebi veren burhân, burhân adını diğerlerinden daha çok hak eder (s.8) | K |
+| I.4.7.6 | Sebepleri veren burhânlarla birincil amaçla talep edilen şeyler (el-matlûbât) bunlardan ibarettir (s.8) | K |
+| I.4.7.7 | Bu sebeplerden her biri kıyasın parçaları içinde orta terimin yerine yerleştirilir (s.8) | K |
+| I.4.7.8 | Orta terimi sebep sınıflarından biri olan kıyasın verdiği sonuç bilgisi, onun sebepleri içinden yalnız o sebebin bilgisidir (s.8) | K |
+| I.4.7.9 | Burhânlarla bilinenler ya tümel ya tikeldir; tümelleri sonuç veren burhânın incelenmesi tikelleri sonuç verenleri de kapsar (s.8) | K |
+| I.4.7.10 | Tümel sonuç veren burhânların öncülleri tümel olmalıdır (s.8) | K |
+| I.4.7.11 | Sonuçlarının varlığı zorunlu olan burhânların öncülleri de varlığı zorunlu öncüllerdir (s.8) | K |
+| I.4.7.12 | Zorunlu öncüllerin bir kısmı yüklemli, bir kısmı şartlıdır (vaz'î); meseleler de böyledir (s.8) | K |
+| I.4.7.13 | Zorunlu yüklemli öncüller yüklemleri konuları için zorunlu olanlardır; zorunlu şartlı öncüller, önbitişenin (mukaddem) gereklerinin zorunlu gerekler olduğu öncüllerdir (s.8) | T |
+| I.4.7.14 | Her şartlı meselenin yüklemli yapılması mümkündür; yüklemli ya da şartlı alınsın aralarında fark yoktur (s.8–9) | K |
+| I.4.7.15 | Varlığı talep edilen şeyin ya mutlak olarak varlığı ya bir durumda varlığı talep edilir (s.9) | K |
+| I.4.7.16 | Mutlak olarak varlığı talep edilen şey, tekil bir lafzın veya tekilin yerine geçen bir lafzın delâlet ettiği şeydir; bu yalnız şartlı kıyasla açıklanabilir (s.9) | K |
+| I.4.7.17 | Bir durumda varlığı talep edilen şey hem yüklemli hem şartlı kıyasla açıklanabilir (s.9) | K |
+| I.4.7.18 | Mutlak olarak varlığı talep edilip yüklemli kıyasla açıklanan şeyin yerine onu açıklayan bir söz konur ve böylece açıklanır (s.9) | K |
+| I.4.7.19 | Burada zorunlulukla kastedilen zâtî zorunluluktur; her zorunluluğun zâtî olmadığı zannedilir, bu yüzden zâtîliğin anlatılması gerekir (s.9) | K |
+| I.4.7.20 | Şartlıda zâtî gerekler, yüklemlide zâtî yüklemler söz konusudur (s.9) | K |
+
+### I.4.8 Burhân öncülleri: zâtî yüklem, zâtî araz, ilk yüklem, cinse özellik (Fârâbî s.9–13)
+
+| No | Cümle | Cins |
+| :-- | :-- | :-- |
+| I.4.8.1 | Zâtî yüklemler iki sınıftır (s.9) | K |
+| I.4.8.2 | Birinci sınıf, konularının cevheri ve doğası bu yüklemlerin onlara yüklenmesi olan yüklemlerdir (misal: "Her insan canlıdır") (s.9) | T |
+| I.4.8.3 | İkinci sınıf, cevheri ve doğası konularında bulunmak olan yüklemlerdir; bunlara zâtî arazlar denir (misal: hareket ve durağanlığın doğal cisimlerdeki varlığı) (s.9) | T |
+| I.4.8.4 | Birinci sınıftaki yüklem ya tanımdır ya tanımın parçalarıdır (s.9) | K |
+| I.4.8.5 | Tanımın parçaları yakın cins, uzak cins veya cins benzeridir; yakın fasıl, uzak fasıl veya fasıl benzeridir (s.9) | T |
+| I.4.8.6 | Misaller: yakın cins "Daire düz şekildir"; uzak cins "Daire şekildir" veya "büyüklüktür"; cins benzeri "İnsan et ve kemik sahibidir"; yakın fasıl "Daireyi tek bir çizgi çevreler"; uzak fasıl "Daireyi çizgi çevreler"; fasıl benzeri "Kalp, doğuştan gelen sıcaklığın kaynağıdır" (s.9) | M |
+| I.4.8.7 | Zâtî arazların bir sınıfı, konuları tanımlarının parçası olarak (cins olarak değil, fasıl yerine) alınan yüklemlerdir (misal: insandaki "gülen") (s.10) | T |
+| I.4.8.8 | Zâtî arazların diğer sınıfı, konularının cinsleri tanımlarında kullanılan yüklemlerdir (misal: "Çift sayıyla çarpılan her tek sayının yekûnu çifttir") (s.10) | T |
+| I.4.8.9 | Konularına tümel yüklenen her zâtî sınıf ya ilktir ya ilk değildir (s.10) | K |
+| I.4.8.10 | İlk yüklem, konusunun cinsine tümel olarak yüklenmesi mümkün olmayan yüklemdir (misal: üçgenin açılarının iki dik açıya eşitliği; çokgenin cinsine yüklenemez) (s.10) | T |
+| I.4.8.11 | İlk olmayan yüklem, konusunun cinsi için tümel olarak var olan yüklemdir (misal: açıların iki dik açıya eşitliğinin ikizkenara yüklenmesi) (s.10) | T |
+| I.4.8.12 | İlk yüklemin bazısı konuya özgüdür, bazısı özgü değildir (özgü olmayanın misali: paralellik) (s.10) | K |
+| I.4.8.13 | Yakın fasıl bazen konuya özgü olabilir; cinsin cinsi, cinsin kurucu faslı ve bunun üstü ilk değildir; kurucu faslın cinsi her ne kadar onun cinsi ve cinsinin cinsi olmasa da ilk yüklem olabilir (s.10) | K |
+| I.4.8.14 | Zâtî olup daimî surette konuya özgü bulunan, tanımdır; son fasıllar da böyledir (s.10) | K |
+| I.4.8.15 | Konunun kendisinin tanımın parçası olarak alındığı zâtî arazlar o konuya özgüdür (misal: gülen) (s.11) | K |
+| I.4.8.16 | Tanımında konusunun cinsi ya da cinsinin cinsi alınan zâtî araz daima konuya özgü olmak zorunda değildir (misal: çiftle çarpılan çift sayı) (s.11) | K |
+| I.4.8.17 | Zâtî gerekler (levâzım) zâtî yüklemlerin yolunu izler; zâtî yüklemler gerek olarak da var olabilir ve gerekler yüklem olarak da alınabilir (s.11) | K |
+| I.4.8.18 | Tanımında konusunun cinsi alınan ilk yüklem o cinsten daha özel olmalıdır; aksi hâlde bu yüklem cinsin altındaki şeylerin bazısı için ilk olmaz (s.11) | K |
+| I.4.8.19 | Bir araz bir yönden cins için, bir yönden cinsin türleri için zâtî söylenir; cins için zâtî olan durumda cinsin kendisi, türleri için zâtî olan durumda türlerinin cinsi tanımında alınır (misal: sayıda tek ve çift) (s.11) | K |
+| I.4.8.20 | Zâtî arazlar mütekabil olabilir (sayı için tek ve çift; çizgi için doğruluk ve eğrilik) veya olmayabilir (sayı için cisim ve çift) (s.11) | K |
+| I.4.8.21 | Mütekabil zâtî arazların bazısı bir cins için ilktir, bazısı ilk değildir (s.11) | K |
+| I.4.8.22 | Mütekabil ilk olanlar, cinsin cinsinin kendileriyle tam taksim edilemediği zâtîlerdir (misal: çift ve tek; "Her nicelik ya çifttir ya tektir" denemez; çizgi nicelik olmakla çift ya da tek değildir) (s.12) | K |
+| I.4.8.23 | Bir cins için ilk olmayan mütekabil zâtîler cinsin ve cinsinin cinsinin tam taksimine elverir (misal: eşit ve eşit-olmayan; her nicelik ya eşittir ya eşit değildir) (s.12) | K |
+| I.4.8.24 | Orantılı–orantısız ve ortak–farklı çiftlerinin de böyle olduğu zannedilir (s.12) | Z |
+| I.4.8.25 | Zâtî mütekabil arazların bir kısmı bir cinse özeldir; bir kısmı o cinse ve başkalarına geneldir (s.12) | K |
+| I.4.8.26 | Genel iki sınıftır: canlılığın insan ve at için genel olması gibi; varlığın ya da şeyin tüm cinsler için genel olması gibi (s.12) | K |
+| I.4.8.27 | Mütekabillerin bazısı canlılık tarzı genelliğe sahip genel için ilk özeldir (tek–çift sayı için; eşit–eşit olmayan nicelik için) (s.12) | K |
+| I.4.8.28 | Mütekabillerin bazısı varlık ya da şey tarzı genelliğe sahip genel için ilktir (misal: her mevcut ya bilfiildir ya bilkuvve; bir şey hakkında ya olumlama ya olumsuzlama doğrudur) (s.12) | K |
+| I.4.8.29 | İlk tümel öncülün yüklemi bir cinse özel araz ve konusu o cinsin türleri ise öncül bu cinse özel ve onunla ilişkilidir (s.12) | K |
+| I.4.8.30 | Konuları o cinsin altındaki türler, yüklemleri o cinsin kendisi veya o cinsin türlerinden başka türler olan öncüller de bu cinse özel öncüllerdir (s.12) | K |
+| I.4.8.31 | Yükleri bir cins için ilk olmayan arazlar, konuları o cinsin türleri olan öncüller bu cinse özel olmaz (s.12) | K |
+| I.4.8.32 | Burhânların öncüllerinin bir kısmı bir cinse özel, bir kısmı geneldir (s.12) | K |
+| I.4.8.33 | Orta terim olarak alınan sebepler, zorunlu olarak iki tarafın veya iki taraftan birinin tanımı ya da tanımının parçası olurlar; ya da iki tarafın tanımlarında yakın veya uzak bir ortaklığa sahip olurlar (s.13) | K |
+
+### I.4.9 Burhânî ve burhânî olmayan terkipler: 8 sınıf, 39 kip (Fârâbî s.13–18)
+
+| No | Cümle | Cins |
+| :-- | :-- | :-- |
+| I.4.9.1 | Bir şey bir şeyin tanımında dört yönde alınır: insanın tanımında canlı gibi (cins), insanın tanımında düşünen gibi (fasıl), gülenin tanımında insan gibi, çift ve tekin tanımında sayı gibi (s.13) | K |
+| I.4.9.2 | "Bir şey bir şeyin cinsidir" demekle, yüklenmesi canlının insana yüklenmesi gibi olan kastedilir; "bir şey bir şeyin faslıdır" demekle yüklenmesi düşünenin insana yüklenmesi gibi olan kastedilir (s.13) | T |
+| I.4.9.3 | Faslın parçasının şeye veya şeyin ona yüklenmesi mümkünse o parça fasıl gibi işlev görür (misal: "Daire, kendisini tek bir çizginin çevrelediği şekildir") (s.13) | K |
+| I.4.9.4 | "Bir şey bir şeyin tanımındadır" demekle gülenin tanımında alınan insan gibi olan, "bir şeyin tanımında bir şeyin cinsi vardır" demekle çiftin ve tekin tanımında alınan sayı gibi olan kastedilir (s.13) | T |
+| I.4.9.5 | Terkip sınıfları sekizdir; kip sayıları sırasıyla 8, 4, 6, 5, 4, 4, 4, 4'tür; toplam 39 kiptir (s.13–17) | K |
+| I.4.9.6 | Birinci sınıf, ilkin ortaya nispeti ile ortanın sona nispetinin aynı olduğu terkip sınıfıdır; ikinci sınıf, ilkin ve ortanın sona nispetinin tek bir nispet olduğu sınıftır (s.14–15) | T |
+| I.4.9.7 | Olumsuzları sonuç veren burhânlara ait parçaların nispetleri birinci veya ikinci şekilde terkip edilmiş olmalıdır (s.18) | K |
+| I.4.9.8 | Hem varlığı hem sebebi veren burhânların çoğu yalnız tümel olumlu sonuç verir ve birinci şekilde olumlulardan bileşir (s.18) | K |
+| I.4.9.9 | Şartlılarda kurulan burhânların parçalarının nispetleri yüklemlilerde kurulanlarınki ile aynıdır; şartlılardaki sebepler bunların istisna edilen öncülleridir (s.18) | K |
+| I.4.9.10 | **Claude çıkarımı (teyitsiz): hiperkenar türleri.** 39 terkip kipi ve 'varlık / sebep / ikisi' etiketi, ispat ağı hiperkenarlarının (3-I 233) **türü** olarak kullanılabilir; ama bu terkipler tanım–cins–fasıl nispetleri üzerinedir (zâtî araz ispatı) ve Allah'ın varlığı gibi bir hükme doğrudan uygulandığı yoktur; uygulama alanı yoklanmadan hiperkenar şemasına konmaz | Z |
+
+#### I.4.9-K Terkip kipleri (39)
+
+| No | Cümle | Cins |
+| :-- | :-- | :-- |
+| I.4.9.K1 | Sınıf 1 kip 1 (s.14): "A, B'nin tanımıdır; B, C'nin tanımıdır" → ya A, C'nin tanımıdır ya parçaların tanımı onun tanımıdır; C'nin iki tanımı varsa biri diğerinin açıklamasında alınır; misal: Her insan düşünen canlıdır; her düşünen canlı iki ayaklı yürüyendir; o halde insan iki ayaklı yürüyen canlıdır | K |
+| I.4.9.K2 | Sınıf 1 kip 2 (s.14): "A, B'nin cinsidir; B, C'nin cinsidir" → A, C'nin cinsidir (cinsin cinsi); misal: Her insan canlıdır; her canlı cisimdir; o halde her insan cisimdir | K |
+| I.4.9.K3 | Sınıf 1 kip 3 (s.14): "A, B'nin faslıdır; B, C'nin faslıdır" → A, C'nin faslıdır (faslın faslı); misal: Her insan düşünendir; her düşünen idrak edendir; o halde her insan idrak edendir | K |
+| I.4.9.K4 | Sınıf 1 kip 4 (s.14): "A'nın tanımı B'dir; B'nin tanımı C'dir" → birinci kipin aksidir; A'nın kendi tanımının parçalarına ait tanımların bütünü için varlığını sonuç verir; misal: Duyumsayan ve iki ayağıyla hareket eden her cisim iki ayaklı yürüyen canlıdır; her iki ayaklı yürüyen canlı insandır | K |
+| I.4.9.K5 | Sınıf 1 kip 5 (s.14): "A'nın faslı B'dir; B'nin faslı C'dir" → faslın faslı için şeyin varlığını sonuç verir; sebebi vermez, yalnız varlığı verir [varlık]; misal: Bir organdan daha fazlasıyla idrak eden her şey duyumsayandır; her duyumsayan canlıdır; o halde ... canlıdır | K |
+| I.4.9.K6 | Sınıf 1 kip 6 (s.14): "A'nın tanımında B vardır; B'nin tanımında C vardır" → A'nın kendi tanımının parçasına yüklenmesini sonuç verir; ancak özel zâtî arazlarda olur; misal: Her insan şaşırandır; her şaşıran gülendir | K |
+| I.4.9.K7 | Sınıf 1 kip 7 (s.14): "A'nın tanımında B'nin cinsi vardır; B'nin tanımında C'nin cinsi vardır" → B ve C'nin cinsleri arasındaki nispet önceki nispetlerden biri değilse burhân olmaz; burhân olacaksa B'nin cinsi C'nin cinsi için zâtî olmalı veya tersi; daima zâtî aräzı sonuç verir; sonuç ilk veya ilk olmayan, özel veya özel olmayan olabilir; misal: (örnek verilmemiş) | K |
+| I.4.9.K8 | Sınıf 1 kip 8 (s.14): "A, B'nin tanımındadır; B, C'nin tanımındadır" → altıncının aksidir; sebebi vermez, yalnız varlığı verir [varlık]; misal: altıncı kipin örneğinin aksi | K |
+| I.4.9.K9 | Sınıf 2 kip 1 (s.15): "A ve B, C'nin tanımlarıdır" → A, C'nin tanımıdır | K |
+| I.4.9.K10 | Sınıf 2 kip 2 (s.15): "A ve B, C'nin iki faslıdır" → A, C'nin faslıdır; ya daha geneldir ya eşittir | K |
+| I.4.9.K11 | Sınıf 2 kip 3 (s.15): "A ve B'nin tanımlarında C vardır" → sonucun konusuna özgü yüklemi sonuç verir; sebebi vermeyip yalnız varlığı verir (sebep verecekse A ve B'den her birinin diğerine girdisi olmalı, bu da birinci sınıfın altıncı kipine döner) [varlık] | K |
+| I.4.9.K12 | Sınıf 2 kip 4 (s.15): "A ve B'nin tanımlarında C'nin cinsi vardır" → ilk ve özel olanı ve ilk ve özel olmayanı sonuç verir; tüm burhân kipleri (illet burhânı ve varlık burhânı) bundan oluşturulabilir; ilimlerdeki burhânların çoğu bu kipe döner [illet ve varlık] | K |
+| I.4.9.K13 | Sınıf 3 kip 1 (s.15): "A, B'nin tanımıdır; B, C'nin cinsidir" → C'nin cinsinin tanımının C için mevcut olduğunu sonuç verir; misal: Her insan canlıdır; her canlı duyumsayan ve beslenen cisimdir | K |
+| I.4.9.K14 | Sınıf 3 kip 2 (s.15): "A, B'nin tanımıdır; B, C'nin faslıdır" → C'nin faslının tanımının C için mevcut olduğunu sonuç verir; misal: Her insan düşünendir; her düşünen teemmül ve bir kıyasla idrak edendir; her insan teemmül ve bir kıyasla idrak edendir | K |
+| I.4.9.K15 | Sınıf 3 kip 3 (s.15): "A, B'nin tanımıdır; B'nin tanımı C'dir" → yalnız varlığı verir; ancak muhtelif tanımları olan şeyler hakkında düzenlenir; şeyin iki tanımından birinin diğeri için varolduğu açığa çıkar [varlık]; misal: Her iki ayaklı yürüyen canlı insandır; her insan düşünen canlıdır | K |
+| I.4.9.K16 | Sınıf 3 kip 4 (s.15): "A, B'nin tanımıdır; B'nin tanımının parçası C'dir" → muhtelif tanımları bulunması mümkün olan şeyler hakkında düzenlenir; B'nin tek tanımı varsa tanımın bütününün varlığı o bütünün parçalarının bir kısmı için olduğu sonucu çıkar ki saçmadır [varlık]; misal: düşünen canlının varlığının düşünen için olduğunun açığa çıkması (saçma) | K |
+| I.4.9.K17 | Sınıf 3 kip 5 (s.15): "A, B'nin tanımıdır; B'nin tanımının parçası C'nin cinsidir" → burhândır; hem varlığı hem sebebi sonuç verir, bazen yalnız varlığı verir [varlık ve sebep]; misal: Her çift sayıyla çarpılan sayı çift sayıdır; her çift sayı iki eşit kısma bölünür | K |
+| I.4.9.K18 | Sınıf 3 kip 6 (s.15): "A, B'nin tanımıdır; B'nin faslı C'dir" → dördüncü kipin durumundadır; yalnız varlığı verir [varlık] | K |
+| I.4.9.K19 | Sınıf 4 kip 1 (s.16): "A, B'nin cinsidir; B, C'nin tanımıdır" → ancak A, C'nin tanımında açıkça belirtilmediğinde kullanılır; C'nin tanımının cinsini sonuç verir; misal: Her insan düşünen canlıdır; her düşünen canlı cisimdir; o halde her insan cisimdir | K |
+| I.4.9.K20 | Sınıf 4 kip 2 (s.16): "A, B'nin cinsidir; B, C'nin faslıdır" → C'nin faslının cinsini sonuç verir; misal: Her canlı duyumsayandır; her duyumsayan idrak edendir; o halde her canlı idrak edendir | K |
+| I.4.9.K21 | Sınıf 4 kip 3 (s.16): "A, B'nin cinsidir; B'nin tanımı C'dir" → yalnız varlığı veren burhândır; şeyin cinsinin varlığını ancak onun tanımı için sonuç verir; cins tanımda açıkça belirtilmeyen bir cins olmalıdır [varlık]; misal: Her düşünen canlı insandır; her insan cisimdir; o halde her düşünen canlı cisimdir | K |
+| I.4.9.K22 | Sınıf 4 kip 4 (s.16): "A, B'nin cinsidir; B'nin tanımının parçası C'dir" → yalnız varlığı veren burhândır; şeyin tanımının parçası (sebeplerinden biri) sonuçta konu olarak bulunur [varlık]; misal: Her insan gülendir; her gülen tebessüm sahibidir | K |
+| I.4.9.K23 | Sınıf 4 kip 5 (s.16): "A, B'nin cinsidir; B'nin tanımının parçası C'nin cinsidir" → illet burhânı ve varlık burhânı olur [illet ve varlık]; misal: Çift sayıyla çarpılan her sayı çifttir; her çift nitelik sahibidir | K |
+| I.4.9.K24 | Sınıf 5 kip 1 (s.16): "A, B'nin faslıdır; B, C'nin cinsidir" → varlığı ve sebebi veren tam burhândır; C'nin cinsinin faslını sonuç verir [varlık ve sebep]; misal: Her insan canlıdır; her canlı duyumsayandır; o halde her insan duyumsayandır | K |
+| I.4.9.K25 | Sınıf 5 kip 2 (s.16): "A, B'nin faslıdır; B'nin tanımı C'dir" → ancak B'nin iki farklı tanımı olduğunda düzenlenir; tek tanımı olursa hiçbir şey sonuç vermez; iki tanım olduğunda iki tanımdan birinin parçasının varlığını diğer tanımın bütünü için sonuç verir; yalnız varlığı verir [varlık]; misal: (tek tanım: ) Her düşünen canlı insandır; her insan düşünendir; her düşünen canlı düşünendir. (iki tanım: ) Her iki ayaklı yürüyen canlı insandır; her insan düşünendir; her iki ayaklı yürüyen canlı düşünendir | K |
+| I.4.9.K26 | Sınıf 5 kip 3 (s.16): "A, B'nin faslıdır; B'nin tanımının parçası C'dir" → (çeviride bu kip için ayrı hüküm verilmemiştir: "faslın terkiplerinin ikisi diğerleriyle birlikte düşer" denmiştir) | K |
+| I.4.9.K27 | Sınıf 5 kip 4 (s.16): "A, B'nin faslıdır; B'nin tanımının parçası C'nin parçasıdır" → bazen şeyin nedenini bazen yalnız varlığını verir; C'nin zâtî arazını sonuç verir [varlık veya sebep]; misal: Birbirine nispeti sayının sayıya nispeti gibi olan çizgiler ortaktır; ortak olanları tek bir miktar ölçer; o halde bu çizgileri tek bir miktar ölçer | K |
+| I.4.9.K28 | Sınıf 6 kip 1 (s.17): "A'nın tanımı B'dir; B, C'nin cinsidir" → A, C'nin de cinsidir; orta terim bir şeyin cinsinin tanımıdır; misal: Her daire düz bir yüzeydir; her düz yüzey düzdür | K |
+| I.4.9.K29 | Sınıf 6 kip 2 (s.17): "A'nın tanımı B'dir; B, C'nin faslıdır" → şeyin faslını sonuç verir; misal: Her dairede bir nokta vardır ki ondan çevreye çıkan çizgiler eşittir; böyle nokta merkezdir; o halde her dairede bir merkez vardır | K |
+| I.4.9.K30 | Sınıf 6 kip 3 (s.17): "A'nın tanımı B'dir; B'nin tanımında C vardır" → örneği nadiren bulunur | K |
+| I.4.9.K31 | Sınıf 6 kip 4 (s.17): "A'nın tanımı B'dir; B'nin tanımının parçası C'nin cinsidir" → örneği nadiren bulunur (üçüncü kip gibi) | K |
+| I.4.9.K32 | Sınıf 7 kip 1 (s.17): "A'nın tanımında B vardır; B, C'nin cinsidir" → C'nin cinsine özel olanı sonuç verir; misal: Her insan canlıdır; her canlı şevk sahibidir; o halde her insan şevk sahibidir | K |
+| I.4.9.K33 | Sınıf 7 kip 2 (s.17): "A'nın tanımında B vardır; B, C'nin faslıdır" → şeyin faslına özgü olanı sonuç verir; misal: Her insan düşünendir; her düşünen görüş sahibidir | K |
+| I.4.9.K34 | Sınıf 7 kip 3 (s.17): "A'nın tanımında B vardır; B'nin tanımı C'dir" → şeye özgü olanı sonuç verir; misal: Her düşünen canlı insandır; her insan gülendir | K |
+| I.4.9.K35 | Sınıf 7 kip 4 (s.17): "A'nın tanımında B vardır; B'nin tanımının parçası C'nin cinsidir" → (sonuç ayrıca yazılmamış); misal: Her insan iki ayaklıdır; her iki ayaklı yürüyendir | K |
+| I.4.9.K36 | Sınıf 8 kip 1 (s.17): "A'nın tanımının parçası B'nin cinsidir; B, C'nin tanımıdır" → zâtî arazları sonuç verir; misal: Her iki dik açı düz bir çizgi üzerinde dik olarak bulunan düz bir çizginin iki yanından çıkan iki eşit açıdır; bunlar dikey çizginin iki tarafından çıkar; o halde her iki dik açı dikey çizginin iki yanından çıkar | K |
+| I.4.9.K37 | Sınıf 8 kip 2 (s.17): "A'nın tanımının parçası B'nin cinsidir; B, C'nin cinsidir" → zâtî arazları sonuç verir; misal: Her ikizkenar üçgendir; her üçgenin üç açısı iki dik açıya eşittir; her ikizkenarın üç açısı iki dik açıya eşittir | K |
+| I.4.9.K38 | Sınıf 8 kip 3 (s.17): "A'nın tanımının parçası B'nin cinsidir; B, C'nin faslıdır" → zâtî arazları sonuç verir; misal: Her üçgeni üç doğru çizgi çevreler; üç doğru çizginin çevrelediği şey doğru açılara sahiptir | K |
+| I.4.9.K39 | Sınıf 8 kip 4 (s.17): "A'nın tanımının parçası B'nin cinsidir; B'nin tanımı C'dir" → zâtî arazları sonuç verir; misal: Her üç doğru çizginin çevrelediği şekil üçgendir; her üçgenin üç açısı iki dik açıya eşittir | K |
+
+### I.4.10 Önce gelen ve sonra gelen (Fârâbî s.18–20)
+
+| No | Cümle | Cins |
+| :-- | :-- | :-- |
+| I.4.10.1 | Önce gelen ve sonra gelen pek çok şekilde söylenir; bir kısmı bilgi hakkında, bir kısmı varlık hakkında söylenir; her biri ya zaman ya doğa bakımındandır (s.18) | K |
+| I.4.10.2 | Bilgide zaman bakımından önce gelen, bir zamanda bilinen şeyin ikinci şeyi bilme zamanından önce olmasıdır (s.18) | T |
+| I.4.10.3 | Bilgide önce gelen, şeye ilişkin bilginin diğer bir şeyin bilgisinden elde edilmeksizin meydana gelmesi hâlinde de söylenir (s.18) | T |
+| I.4.10.4 | Bir şeyin bilgisiyle diğer bir şeyin bilgisi elde edildiğinde kendisine dayanılan bilgiye bilgi bakımından daha önce denir (s.18) | T |
+| I.4.10.5 | Duyuyla algılanma bakımından dış dünyadaki tikeller önce, tümeller sonra gelir; genellik bakımından daha eksik olan her şey bu açıdan bilgice daha öncedir (s.18) | K |
+| I.4.10.6 | Duyuların dışındaki bir şeyle algılanmaları ve bilgilerinin meşhûr ve açık olması bakımından tümeller bilgide önce, dış dünyadaki varlıklar sonra gelir; tümellerin sınıfları arasında tümellik bakımından daha fazla olan önce gelir (s.18) | K |
+| I.4.10.7 | Varlıkta önce gelen, biri diğerinin sebebi olan iki şeyden biridir; sebep çeşidi değişmez (s.18) | K |
+| I.4.10.8 | İnsanların çoğu, bir şeyin ortadan kalkmasıyla diğerinin ortadan kalktığı, ama birincinin mevcudiyetinin ikincinin mevcudiyetini gerektirmediği ve ikincinin ortadan kalkmasıyla birincinin ortadan kalkmadığı şey hakkında bunun diğerinden önce geldiğini söylemeyi âdet edinmiştir (s.18) | K |
+| I.4.10.9 | Bir şey bilindiğinde diğerinin bilinmesi gerekmiyor, diğeri bilindiğinde birincinin bilinmiş olması gerekiyorsa birincisi daha bilinirdir, yani bilgice önce gelir (s.18) | K |
+| I.4.10.10 | Burhânın parçaları bilgide zaman bakımından sonuçtan önce gelir; varlık sebebinin şeyi öncelemesi bakımından da önce gelir; sonucun bilinmesi parçaların bilgisiyle olduğu için bilgide önce gelir; tümellerin dış varlıkları öncelemesi cihetiyle zihinle bilinme bakımından önce gelir, ama bu önceleme sonuca kıyasla değildir (s.19) | K |
+| I.4.10.11 | İlk öncüllerden oluşan burhânların parçaları, daha önceki başka bir şeyin bilgisi dolayısıyla bilinmiş olmayıp kendiliklerinden bilindikleri için de önce gelir (s.19) | K |
+| I.4.10.12 | Bir şeyde varlıkta önce gelme ile bilgide önce gelme bazen birleşir, bazen birleşmez; bilgide önce varlıkta sonra, bilgide sonra varlıkta önce de birleşebilir (s.19) | K |
+| I.4.10.13 | Önce gelmenin iki yönünün birden kendilerinde toplanması gerekenler, hem varlığı hem sebebi veren burhânların öncülleridir (s.19) | K |
+| I.4.10.14 | Önce gelen ve sonra gelen dört sınıftır (s.20) | K |
+| I.4.10.15 | Birinci sınıf birbirine döndürülendir; burada ikisinden her biri diğeriyle iki tarzda açıklanabilir: yalnız varlık burhânıyla ve sebep burhânıyla (s.20) | T |
+| I.4.10.16 | İkinci sınıf, sonra gelenin önce geleni gerektirmesi ama önce gelenin sonra geleni gerektirmemesidir (misal: duman ve ateş; duman varsa ateş vardır, ateş varsa duman gerekmez); burada yalnız önce gelen sonra gelenle ispatlanabilir (s.20) | T |
+| I.4.10.17 | Üçüncü sınıf, önce gelenin sonra geleni gerektirmesi ama sonra gelenin önce geleni gerektirmemesidir; burada sonra gelen daima önce gelenle açıklanır (s.20) | T |
+| I.4.10.18 | Dördüncü sınıf, önce gelen varsayıldığında sonra gelenin mevcut olmasının ve sonra gelen mevcut olduğunda önce gelene tâbi olmasının gerekmediği, sonra gelenin başka sebeplerle de mevcut olabileceği hâldir; burada ikisinden birinin diğeriyle ispatı mümkün değildir (s.20) | T |
+
+### I.4.11 Yalnız varlık veren burhânlar: delil (Fârâbî s.19–20)
+
+| No | Cümle | Cins |
+| :-- | :-- | :-- |
+| I.4.11.1 | Yalnız varlık verenler iki sınıftır (s.19) | K |
+| I.4.11.2 | Birinci sınıf, varlıkta önce gelen şeyleri varlıkta sonra gelenlere dayanarak sonuç verir; varlıkta sonra gelen bilgide zaman bakımından önce olmalıdır (s.19) | T |
+| I.4.11.3 | Birinci sınıfta orta terim, nesne için mevcut bir şey olarak alınır ve sebebi, varlığı açık hâle gelmiş bu şeydir (s.19) | K |
+| I.4.11.4 | Misal: Ay'ın ışığı azar azar artar; ışığı azar azar artanın şekli yuvarlaktır; o halde Ay yuvarlaktır; burada Ay'ın yuvarlaklığı ışığın artmasının sebebidir, bizim açımızdan bilgide ve duyulurda önce gelen ise ışığın artmasıdır (s.19) | M |
+| I.4.11.5 | Önce gelenin sonra gelen sebebiyle açıklanması ancak sonra gelenin bizzat tek bir önce geleni izlemesi ve bununla birlikte yüklemde ona döndürülebilmesi hâlinde mümkündür (s.19) | K |
+| I.4.11.6 | Sonra gelen ona ve başkasına tâbi olduğunda önce gelenin varlığı sonra gelenle açığa çıkmaz (misal: yıldızların cevherinin ateş cinsinden olduğunu parıldamalarıyla, Mars'ın kuru-sıcak olduğunu kırmızı rengiyle, ısıtan ve kurutan olmasıyla açıklamak) (s.19) | H |
+| I.4.11.7 | Orta terimler bazen büyük tarafa tâbi olup bazen olmadığından önce gelen şeylerin sonra gelenlerle açıklanması bu durumda mümkün olmaz (s.20) | K |
+| I.4.11.8 | Yalnız varlık veren burhânların ikinci sınıfı, sonra gelenin sonra gelenle tanıtıldığı sınıftır: iki şey kendileri dışındaki bir şeye tâbidir, her biri bu şeyden sonra gelme bakımından aynı mertebededir (s.20) | T |
+| I.4.11.9 | İkinci sınıfta iki sonra gelenden birinin bir konu için varlığı, diğerinin orta terim olarak alınmasıyla açık hâle getirilir (misal: Yer hareket etmez, çünkü kendisine doğru hareket edeceği bir mekânı yoktur; duvar solumaz, çünkü canlı değildir) (s.20) | M |
+| I.4.11.10 | Yalnız varlığı veren burhânlar "delil" diye adlandırılır; bu ad daha ziyade önce gelenin sonra gelenle bilindiği burhânlara özgüdür; burhânda orta terim olarak alınan sonra gelen de "delil" diye adlandırılır (s.20) | T |
+| I.4.11.11 | Bu sınıfın parçalarının birbirine nispeti, hem varlığı hem sebebi veren sınıfın nispetlerinden biridir (s.20) | K |
+
+### I.4.12 Yalnız sebep veren burhânlar ve "niçin" sorusu (Fârâbî s.21–23)
+
+| No | Cümle | Cins |
+| :-- | :-- | :-- |
+| I.4.12.1 | Yalnız sebepleri veren burhânlar, yalnız daha önceden varlığını bildiğimiz şeylerde söz konusudur (s.21) | K |
+| I.4.12.2 | Bu varlık bilgisi ya bizzat, ya duyuyla ya da delil diye adlandırılan burhânlarla olur; geriye sebeplerini bilmemiz kalır (s.21) | K |
+| I.4.12.3 | Şeylerin sebepleri bazen duyulardan, bazen delillerden, bazen burhânlardan meydana gelir (s.21) | K |
+| I.4.12.4 | İnsan için beyaz saçlı olmak, kellik gibi, zâtî sebepleri bilinmek istenen çoğu şeyin mevcut oldukları nesneler için varlığının zorunlu olmadığı hâlde zâtî olduğu düşünülür; bunlardaki zorunluluk yalnız sebeplerinin o şeylere nispetidir; her zâtî olan şey o nesne için zorunlu değildir (s.21) | K |
+| I.4.12.5 | İlk sebeplerin cinsleri dört olup her biri bir şeyin niçin olduğu sorusunun cevabında bulunur (s.21) | K |
+| I.4.12.6 | "Niçin" sorusu ancak varlığının bilgisi bizde daha önceden meydana gelmiş şey hakkında sorulabilir (misal: "İnsan niçin ölür?" ancak insanın ölen olduğu bilindiğinde sorulur) (s.21) | K |
+| I.4.12.7 | "İnsan niçin ölür?" sorusunun dört cevabı: "Çünkü zıtlardan mürekkeptir" (madde); "Çünkü düşünen ölümlü canlıdır" (süret); "Çünkü onun için en iyi olan ölmektir" (gâye); "Çünkü muhafaza edeni veya fâili değişkendir" (fâil) (s.21) | M |
+| I.4.12.8 | Madde ve fâil sebebi varsayıldığında onunla varolan şeyin varlığı zorunlu olarak gerekmez; gâye ve süret sebebi varsayıldığında onunla varolan şeyin varlığı zorunlu olarak gerekir, çünkü bu iki sebep kendileriyle varolan şeylerin varlığına eşlik eder (s.21) | K |
+| I.4.12.9 | Bazı sebepler verildiğinde, sebep oldukları şeylere nasıl sebep oldukları ilk başta açık değildir (misal: asma yaprağını kışın döker, çünkü geniş yapraklıdır; bu zâtî sebeptir ama nasıl sebep olduğu açık değildir); böyle şeylerde sebebe ilişkin soruya hâlâ yer kalır (s.21) | K |
+| I.4.12.10 | Yakın sebep verilince (misal: yaprağın ağaç üzerinde tutunmasına sebep olan nem geniş yapraklılarda daha çabuk yayılır) sebebin nasıl sebep olduğu bilinmeye daha yakın olur (s.22) | M |
+| I.4.12.11 | Misaller: Ebâ Hurşiş'in "Sicilya'da zurna yoktur; çünkü üzüm ağaçları yoktur"; Aratos'un "Güneydeki yıldızlar kuzeydekilerden daha hızlı kaybolur; çünkü kuzey kutbundan uzaktır" ve "Ay burçlar dairesinin ortasından geçmesi sebebiyle tutulur" sözleri uzak sebeplerdir (s.22) | M |
+| I.4.12.12 | Burhânların orta terimleri uzak sebepler olduğu sürece bu burhânlar neredeyse deliller (yalnız varlık bildiren burhânlar) arasına girer (s.22) | K |
+| I.4.12.13 | Sebebi verilen her şeyde yakın sebeplerin ortaya konulması araştırılmalı, yalnız uzak sebeplerle yetinilmemelidir (misal: Ay tutulmasında yalnız burçlar dairesi değil, Ay Güneş'in karşısından geçerken Dünya'nın Ay ile Güneş arasına girip ışınları engellemesi eklenir) (s.22) | K |
+| I.4.12.14 | Bazen tek bir şeyin sebep çeşitlerinin çokluğu kadar çok sebebi olabilir; bazen çok şeyin sebebi tek olabilir (s.22) | K |
+| I.4.12.15 | Tek olan sebepler cins, tür veya tenâsüp bakımından tek olabilir (s.22) | K |
+| I.4.12.16 | Sebeplerinin cinsi tek olanın misali yankı ve gök kuşağıdır (ikisinin sebebinin cinsi yansımadır: sesin yansıması, ışığın yansıması); sebeplerinin türü tek olanın misali gök kuşağı ve aynada görülendir (ikisi de göze yansımayla görülür; biri sisten, diğeri parlak madenden) (s.22) | M |
+| I.4.12.17 | Sebepleri tek olan şeylerin bir kısmı diğer bir kısmının sebebi olabilir; daha uzak sebep hepsinin sebebi olabilir; bazen bir kısmı diğerleri için sebep olmaz (s.22) | K |
+| I.4.12.18 | Misal: ay sonunda Nil'in suyunun bollaşması, havanın nemlenmesi ve kış gibi olması; bütünün sebebi Ay ışığının kaybolması, bu da Ay'ın Güneş'e yakınlığıdır; bu zincirde her halka bir sonrakinin sebebidir (s.22–23) | M |
+| I.4.12.19 | Çoğu zaman bir şeyin yakın sebebi verilir ama o şeyin niçin olduğuna ilişkin soru sürer (misal: ikizkenarın açılarının iki dik açıya eşit olması; yakın sebep üçgen olmasıdır; ama soru, "düz bir çizgi üzerinde dik olan düz çizginin iki yanındaki iki açı iki dik açıya denktir" açıklamasına kadar sürer) (s.23) | K |
+| I.4.12.20 | Sebebi bilinmek istenen hiçbir şeyde "niçin olduğu" sorusunun sürdüğü bir cevapla yetinilmemelidir (s.23) | K |
+
+### I.4.13 Zorunlu olmayanda çoğunlukla varolan (Fârâbî s.23)
+
+| No | Cümle | Cins |
+| :-- | :-- | :-- |
+| I.4.13.1 | Varlığı mutlak veya bir şeyde zorunlu olmayan şey iki sınıftır: çoğu zaman varolan veya çoğu konu için varolan (veya ikisini birden), ve daha az ya da eşit olarak varolan (s.23) | K |
+| I.4.13.2 | İkincinin iki kısmını kesinlikle hiçbir ilim incelemez; çoğunlukla varolanı pek çok ilim inceler (s.23) | K |
+| I.4.13.3 | Çoğunlukla varolan nitelikteki öncüllerin sonuçları ve onları bizzat sonuç veren kıyasların öncülleri de bu niteliktedir; pek çok disiplinde zorunlularla birlikte düşünülür ve onlar gibi işlev görür; bunlarda yalnız zâtîliğin gerçekleşmesi ve ilimlerde kullanılmaları gerekir (s.23) | K |
 
 ---
 
@@ -570,6 +912,19 @@
 | I.6.5.3 | **Konu değiştirme**: itiraz cevaplanmayıp başka mevzuya geçilir | H |
 | I.6.5.4 | Retorik hata argümanın değil **ikna biçiminin** hatasıdır; ilacı iddiayı çıplak argümana indirmektir | K |
 
+
+### I.6.6 Fârâbî'den türeyen safsata adayları (3-I 236; hepsi Claude çıkarımı)
+
+| No | Cümle | Cins |
+| :-- | :-- | :-- |
+| I.6.6.1 | **Claude çıkarımı (Fârâbî s.2'den):** karşı iddiayı (muânidi) hiç görmediği için yakîn sanmak bir hatadır; yakîne yakın ile nefsin sükûnu yakîn değildir | H |
+| I.6.6.2 | **Claude çıkarımı (Fârâbî s.22'den):** uzak sebeple yetinip orta terimi burhân saymak hatadır; bu burhân neredeyse yalnız varlık bildiren delildir | H |
+| I.6.6.3 | **Claude çıkarımı (Fârâbî s.19'dan):** eserin tek bir müessire özgü ve ona döndürülebilir olduğu gösterilmeden eserden müessire delili sunmak hatadır (yıldızın ateşten olduğunu parıldamasından, Mars'ın kuru-sıcak olduğunu kırmızılığından çıkarmak gibi) | H |
+| I.6.6.4 | **Claude çıkarımı (Fârâbî s.3'ten):** tanıklığın kesinliği bilaraz iken onu bizzat sanmak hatadır | H |
+| I.6.6.5 | **Claude çıkarımı (Fârâbî s.12'den):** bir cinse özel öncülle başka cinse hüküm vermek hatadır; I.6.3.7 (kategori hatası) bunun kaynağıdır | H |
+| I.6.6.6 | **Claude çıkarımı (Fârâbî s.3'ten):** zorunlu olmayan kesini (belirli vakitte kesin) zorunlu kesin sayıp burhân saymak hatadır | H |
+| I.6.6.7 | **Claude çıkarımı (Fârâbî s.18–19'dan):** bilgide önce gelen ile varlıkta önce gelen aynı sanılırsa delil sırası yanlış kurulur | H |
+
 ---
 
 ## I.7 USULLERİN BİRLEŞMESİ VE ÇATIŞMASI
@@ -627,6 +982,16 @@
 | I.7.5.2 | Hangi usul hangisinin hakemidir: **aklî usuller** nakil ve tecrübenin sıhhatini yoklar | K |
 | I.7.5.3 | Tecrübe aklî öncülü **yoklar** fakat aklî öncülü **yerine koyamaz** | K |
 
+
+### I.7.6 Fârâbî ve Aristo mantığı: sabiteler, regres, öncelik (3-I 236)
+
+| No | Cümle | Cins |
+| :-- | :-- | :-- |
+| I.7.6.1 | **Padişah (3-I 236):** Aristo mantığı tümden yanlış da değil tümden doğru da değildir; aklın değişmez sabitelerini belirten kısımlarının kabulünde mahzur yoktur | K |
+| I.7.6.2 | **Claude çıkarımı (Fârâbî s.5'ten):** ilk ilkeyi reddedene karşı geriye sarma, regres argümanıyla durur: ilk ilkenin kaynağı ancak ilk ilkelerle bilinebildiğinden kaynağı sormak muhatabı ilzam eder (I.3.13) | Z |
+| I.7.6.3 | **Claude çıkarımı (Fârâbî s.18–20'den):** delil sırası kurulurken hangi önceliğin (bilgide mi varlıkta mı) esas alındığı yazılır (I.4.10) | Z |
+| I.7.6.4 | **Claude notu:** 187 ve 191'in indirgeme şartı padişahın 3-I 236 sözüyle kaldırılmadı; Fârâbî ölçüleri aklî aslıyla yazılır | Z |
+
 ---
 
 ## I.8 KAPANIŞ USULÜ
@@ -645,350 +1010,27 @@
 
 ---
 
-## I.9 BURHÂN TEORİSİ (Fârâbî, Kitâbü'l-Burhân s.1–24'ten bizde olmayanlar; 3-I 235)
+## I.9 -- (DAĞITILDI; NAKZ 3-I 236)
 
-| Kaide | Hüküm |
+Bu bâb 3-I 235 turunda Fârâbî'den alınanların toplu yeri idi; padişah (3-I 236) usullerin **Kısım I'e fasıl fasıl** eklenmesini istedi, bu yüzden yaprakların hepsi aşağıdaki yerlere **taşındı** (hiçbiri silinmedi; toplam 265 yaprak = 205 Fârâbî cümlesi + 39 kip + 3 Önsöz + 7 Claude tenkidi (eski I.9) + 7 yeni I.6.6 + 4 yeni I.7.6):
+
+| Eski | Yeni |
 | :-- | :-- |
-| Kaynak | Fârâbî, Kitâbü'l-Burhân, Türker–Alper çevirisi (OCR), basılı s. 1–24; OCR; Arapçayla ve gerçek metinle **doğrulanmadı** (3-A 25-E); yaprak cinsi **Fârâbî'nin sözü** olduğunu gösterir, kitabın hükmü olması **padişahın karar**ına bağlıdır |
-| Yer | Bâb 3 (katiyet dereceleri) ile Bâb 4 (ispat usulleri) arasında bir bâb; numara sırası bozulmasın diye 9 yazıldı; yerini padişah belirler |
-| Kapsam | Padişah (3-I 235): seçmece yapılmaz, bizde olmayan hepsi alındı; bizde olan karşılıklar `DESTEK/FARABI_BURHAN_1_24_OKUMA_DEFTERI.md` tablosunda |
-
-
-### I.9.1 Bilgi, tasavvur, tasdik, tam ve eksik
-
-| No | Cümle | Cins |
-| :-- | :-- | :-- |
-| I.9.1.1 | Bilgiler tasavvur ve tasdik olmak üzere iki sınıftır (s.1) | K |
-| I.9.1.2 | Tasavvurun da tasdikin de her biri ya tamdır ya eksiktir (s.1) | K |
-| I.9.1.3 | Tam bilgiye ulaştıran şeyler eksik bilgiye ulaştıranlardan başkadır; bu yüzden ikisi ayrı ayrı anlatılır (s.1) | K |
-| I.9.1.4 | Tam tasdik, kesin (yakîn) tasdiktir (s.1) | T |
-| I.9.1.5 | Tam tasavvur, bir şeyin ona özgü bir tarzda zâtını ifade eden şeyle, yani tanımının delâlet ettiği şeyle tasavvurudur (s.1) | T |
-| I.9.1.6 | Tasavvurların en eksiği, bir şeye delâlet eden tekil lafızların oluşturduğu tasavvurdur; en tamı tanımların oluşturduğu tasavvurdur (s.24) | K |
-| I.9.1.7 | Tasdik, insanın, bir hükümle hükümde bulunulan şeyin zihin dışındaki varlığının zihinde inanıldığı şekilde olduğuna inanmasıdır (s.1) | T |
-| I.9.1.8 | Doğru, şeyin zihin dışında zihinde inanıldığı şekilde bulunmasıdır (s.1) | T |
-| I.9.1.9 | Tasdik doğru olana da yanlış olana da ilişkin olabilir (s.1) | K |
-| I.9.1.10 | Yanlış tasdikte yakîn asla meydana gelmez; yakîn ancak doğru olana ilişkin tasdikte mümkündür (s.2) | K |
-
-### I.9.2 Tasdikin üç derecesi ve muânid ölçütü
-
-| No | Cümle | Cins |
-| :-- | :-- | :-- |
-| I.9.2.1 | Tasdikin bir kısmı yakîndir, bir kısmı yakîne yakındır, bir kısmı nefsin bir şeyde sükûn bulmasıdır; sonuncusu yakînden en uzaktır (s.2) | K |
-| I.9.2.2 | Yakîn, tasdik edilen şeyin dış varlığının inanılandan farklı olması mümkün olmadığı gibi bu inancın başka türlü olması da mümkün olmadığı tasdiktir (s.2) | T |
-| I.9.2.3 | Yakînde kişinin ilk inancı hakkında herhangi bir inanç alındığında bu inanç onun nezdinde ilk inançtan başka olmaz ve sonsuza kadar böyle devam eder (s.2) | K |
-| I.9.2.4 | Yakîn olmayan, tasdik edilen şeyin dış varlığının inanılandan farklı olmasının mümkün veya imkânsız olmadığı tasdiktir (s.2) | T |
-| I.9.2.5 | Yakîne yakın olanın muânidi ya farkına varılmaz; ya farkına varılır ve ya dile getirilemeyecek kadar gizlidir ya da inâdı açıklanmıştır (s.2; OCR çevirisi, anlam Arapçayla yoklanacak) | T |
-| I.9.2.6 | Nefsin sükûnu, muânidi farkına varılan ve bu muânidin dile getirilmesi mümkün olan şeyin tasdikidir (s.2) | T |
-| I.9.2.7 | Nefsin sükûnu, muânidin gücüne ve zayıflığına bağlı olarak derecelenir (s.2) | K |
-| I.9.2.8 | Yakîne yakın tasdik cedelî (diyalektik) tasdiktir; nefsin sükûn bulması hatabî (belâğî) tasdiktir (s.2) | K |
-| I.9.2.9 | Yakîne yakın tasdikle tasdik edilenler meşhûrlar ve onlar gibi işlev görenler, meşhûr öncüllerden kurulan kıyasların gereği ve araştırılan tikellerin bütününü içine aldığından emin olunamayan tümevarımın gereğidir (s.2) | T |
-| I.9.2.10 | Nefsin sükûn bulduğu şeyler makbûller, makbûl öncüllerden kurulan kıyasın gereği ve mümkün öncüllerden kurulan kıyasın gereğidir; bazen başkaları da olur (s.2) | T |
-| I.9.2.11 | Meşhûr ve makbûlün tümüne ilişkin tasdik tamamıyla tanıklıktan neşet eder (s.2) | K |
-| I.9.2.12 | Meşhûr, herkesin, çoğunluğun veya çoğunluğa yakın bir topluluğun tanıklık ettiği şeydir (s.2) | T |
-| I.9.2.13 | Makbûl, tek bir kişinin, bir kişi nezdinde makbul görülen bir topluluğun veya yalnız bir topluluğun tanıklık ettiği şeydir (s.2) | T |
-| I.9.2.14 | Ne meşhûr ne makbûl kesinlik oluşturur (s.2) | K |
-| I.9.2.15 | Herkesin veya çoğunluğun tanıklığının üzerinde uzlaştığı şeye duyulan güven, bir kişinin veya az bir topluluğun tanıklığına duyulan güvenden daha güçlü ve daha çoktur (s.2) | K |
-| I.9.2.16 | Tanıklıklarla ilgili sözlerde gerçekten doğru şeyler bulunabilir; böylece onlarda kesinlik bilaraz (arazî) bulunabilir (s.3) | K |
-| I.9.2.17 | Çoğu insan tanıklıkların kesinliği bilaraz değil bizzat oluşturduğunu zanneder (s.3) | H |
-| I.9.2.18 | Başka bir kesim, tanıklıkların kesinlik oluşturmadığını fark etmiş fakat kesinliğin meydana geldiği tanıklıklarda, özellikle nefsin sükûn bulduğu tanıklıklarda, kesinliğin ilâhî bir emirle olduğunu zannetmiştir (Fârâbî görüşü aktarır; "zannetmişlerdir" der) (s.3) | Z |
-
-### I.9.3 Zorunlu ve zorunlu olmayan kesinlik
-
-| No | Cümle | Cins |
-| :-- | :-- | :-- |
-| I.9.3.1 | Kesinliğin bir kısmı zorunludur, bir kısmı zorunlu değildir (s.3) | K |
-| I.9.3.2 | Zorunlu kesinlik, dış varlığında olduğu durumun hilafına olması mümkün olmayan şey hakkında, o şeyin inanılan durumun hilafına olmasının asla ve hiçbir zaman mümkün olmadığına inanmaktır (s.3) | T |
-| I.9.3.3 | Zorunlu olmayan kesinlik, yalnız belirli bir vakitte kesin olandır (s.3) | T |
-| I.9.3.4 | Zorunlunun değişmesi ve yanlış olması mümkün olmaz; zihinde sürekli aynı durumda bulunur, ya yalnız olumlama ya yalnız olumsuzlama olarak (s.3) | K |
-| I.9.3.5 | Zorunlu olmayanın değişmesi ve zihinde bir eksiklik olmaksızın yanlış olması mümkündür (s.3) | K |
-| I.9.3.6 | Zorunlu kesinlik ancak varlığı sürekli olan şeylerde mümkündür (misal: bütün parçadan büyüktür) (s.3) | K |
-| I.9.3.7 | Zorunlu olmayan kesinlik ancak varlığı değişip bir halden başka bir hale geçen şeylerde olur (misal: senin ayakta olman, Zeyd'in evde bulunması) (s.3) | K |
-| I.9.3.8 | Zorunlunun mukabili varlığı imkânsız olandır, yani imkânsız yanlıştır; zorunlu olmayan kesinin mukabili mümkün yanlıştır (s.3) | T |
-| I.9.3.9 | Yanlışın bir kısmı imkânsızdır, bir kısmı imkânsız değildir (s.3) | K |
-| I.9.3.10 | Zorunlu kesin ile zorunlu varlık gereklilikte birbirine döndürülebilir (yen'akis) (s.3) | K |
-| I.9.3.11 | "Bilgi" adı kesin olmayana veya zorunlu olmayan kesine değil, zorunlu kesine söylenir; buna "kesin bilgi" denir (s.7) | K |
-| I.9.3.12 | Fârâbî zorunlu olmayan kesini inceleme dışı bırakır ve zorunlu kesini inceler (s.3) | K |
-
-### I.9.4 Kıyasla ve kıyassız elde edilen zorunlu kesin
-
-| No | Cümle | Cins |
-| :-- | :-- | :-- |
-| I.9.4.1 | Zorunlu kesin bazen kıyasla bazen kıyassız elde edilir (s.3) | K |
-| I.9.4.2 | Kıyasla elde edilen zorunlu kesin ya bizzat ya bilaraz elde edilir (s.3) | K |
-| I.9.4.3 | Bilarazın misali: "İnsan yürüyendir; yürüyen canlıdır; o halde insan canlıdır"; Fârâbî bunu inceleme dışı bırakır (s.4) | M |
-| I.9.4.4 | Bizzat elde edilen zorunlu kesin, zorunlu kesinlikle bilinen iki öncülden meydana gelir (s.4) | K |
-| I.9.4.5 | Bu iki öncül ya başlangıçta kıyassız elde edilmiştir ya da tahlil yoluyla kıyassız elde edilenlere irca edilir (s.4) | K |
-| I.9.4.6 | Kesinlikle bilinen öncüller tümel veya tikeldir; Fârâbî yalnız tümelleri inceler, çünkü ilimlerde çoğu tümel kullanılır ve tümelleri incelemek tikelleri de kapsar (s.4) | K |
-
-### I.9.5 İlk ilkeler: doğal öncüller, tecrübî öncüller
-
-| No | Cümle | Cins |
-| :-- | :-- | :-- |
-| I.9.5.1 | Kendileri hakkında zorunlu kesinliğin kıyassız meydana geldiği tümel öncüller iki sınıftır: doğal olarak elde edilenler ve tecrübeyle elde edilenler (s.5) | K |
-| I.9.5.2 | Doğal öncüller, nereden ve nasıl elde edildiği bilinmeksizin, bilmediğimiz idrak edilmeksizin, bilgisini elde etme isteği ve araştırması olmaksızın elde edilen öncüllerdir (s.5) | T |
-| I.9.5.3 | Nefislerimizi başlangıcımızdan itibaren bunlarla birlikte yaratılmış buluruz; sanki doğuştandır ve bunlardan yoksun kalamayız (s.5) | K |
-| I.9.5.4 | Bunlara insana ait doğal ilk öncüller ve ilk ilkeler denir (s.5) | T |
-| I.9.5.5 | Fârâbî'ye göre bu öncüllerin nasıl oluştuğunu bilmemize bu kitapta gerek yoktur (s.5) | K |
-| I.9.5.6 | Elde ediliş yönünü bilmemek kesinliği ortadan kaldırmaz, eksiltmez ve bu öncüllerden kıyas düzenlemeyi engellemez (s.5) | K |
-| I.9.5.7 | İlk bilgilerin elde ediliş yönü meselesi ilimlerdeki ve felsefedeki matluplardan biridir (s.5) | K |
-| I.9.5.8 | Bu öncüllerin gerçekleşme yönüne dair kesinliğe ancak böylesi öncüllerden kurulu kıyaslarla ulaşılır (s.5) | K |
-| I.9.5.9 | Regres argümanı: bu öncüller nereden bilindikleri bilinmedikçe kullanılamazsa ve gerçekleşme yönleri ancak bu öncüllerle bilinirse ve bu yönün açıklanmasında kullanılamazlarsa hiçbir şeyin bilgisine ulaşılamaz (s.5) | K |
-| I.9.5.10 | Bu öncüllerin elde ediliş yönlerinin Mantıkta incelenmesini gerekli görenler yanılmıştır (s.5) | K |
-| I.9.5.11 | Mantıkta bu öncüller hakkında bilinmesi gereken şey, sınıflarının belirtilmesi, betimlenmesi ve sayımı, kıyasın parçaları olarak kullanılma yönü ve diğer bilgilerin onların seviyesine nasıl çıkacağıdır (s.5) | K |
-| I.9.5.12 | Bu öncüllerin gerçekleşme yönleri hakkında insanların görüşleri farklıdır; onları kullanırken nereden ve nasıl elde edildiklerini bilmemiz gerekmez (s.5) | K |
-| I.9.5.13 | Tümel öncüllerin büyük kısmının dış dünyadaki varlıkları duyulurdur; bir topluluk bu yüzden onların duyulardan meydana geldiğini söylemiştir (s.5) | K |
-| I.9.5.14 | Tek başına duyu bu öncüllerin meydana gelişinde yeterli değildir: duyularla yalnız sınırlı sayıda varlık duyumsanır, bu durumda öncüller tikel olurdu; oysa tümel olarak meydana geldiklerini ve duyumsananı duyumsanmayanı kapsayan genel hüküm verdiğimizi görürüz (s.6) | K |
-| I.9.5.15 | Nefis duyulurlarda duyumsadığımızdan daha fazla bir fiile sahiptir; Fârâbî bunun açıklamasını bu yerde zor bulup erteler (s.6) | K |
-| I.9.5.16 | Duyulurların nasıl idrak edildiği ve nefsin idrakinin tikelleri duyumsamaksızın mümkün olup olmadığı sorusu bu yerde açık bırakılır (s.6) | K |
-| I.9.5.17 | Tecrübeyle meydana gelen öncüller, tikellerini az veya çok duyumsamaya yönelik bir kasıtla kesinliğin kendileri hakkında meydana geldiği tümel öncüllerdir (s.6) | T |
-| I.9.5.18 | Tecrübe, zorunlu kesinlik oluşana kadar tümel öncülün yükleminin tikellerin tümünde veya çoğunda bulunup bulunmadığının izinin sürülmesidir (s.6) | T |
-| I.9.5.19 | Tecrübe tümevarıma benzer; tümevarımda tümel hükme dair zorunlu kesinlik meydana gelmezken tecrübede meydana gelir (s.6) | K |
-| I.9.5.20 | İnsanların çoğu tecrübe ve tümevarım isimlerini birbirinin yerine kullanır; Fârâbî isimlerin kullanımını önemsemez, anlamları ayırır (s.6) | K |
-| I.9.5.21 | Nefis incelediğiyle yetinmez; incelemeden sonra hem incelediğini hem incelemediğini kapsayan genel bir hüküm verir; bu hükmün nereden oluştuğu ertelenir (s.6) | K |
-| I.9.5.22 | Bu hükmün nereden oluştuğunu bilmenin kesinliğe faydası, bilmemenin öncüllere ilişkin kesinliğe zararı yoktur ve bilmemek öncüllerin kullanılmasını engellemez (s.6) | K |
-| I.9.5.23 | Bu öncüllere kesinliğin ilkleri (evâilü'l-yakîn) denir (s.6) | T |
-
-### I.9.6 Kesin bilgi, burhânın üç çeşidi
-
-| No | Cümle | Cins |
-| :-- | :-- | :-- |
-| I.9.6.1 | "Bilgi" adı genel olarak iki anlamda kullanılır: tasdik ve tasavvur (s.7) | T |
-| I.9.6.2 | Kesin bilgi üç kısımdır (s.7) | K |
-| I.9.6.3 | Birincisi bir şeyin yalnız varlığına ilişkin kesinliktir; buna varlık bilgisi (ilmü enne'ş-şey) denir (s.7) | T |
-| I.9.6.4 | İkincisi bir şeyin yalnız varlık sebebine ilişkin kesinliktir; buna niçin varolduğunun bilgisi (ilmü lime'ş-şey) denir (s.7) | T |
-| I.9.6.5 | Üçüncüsü hem varlığa hem varlık sebebine ilişkin kesinliktir (s.7) | T |
-| I.9.6.6 | Kesin ilkelerden talep edilen şeyler (matlûbât) ancak bu üç talep tarzından biriyle öğrenilir; talep esnasında bu üç bilgi tarzından biri amaçlanır (s.7) | K |
-| I.9.6.7 | Bir nesnenin yalnız sebebi bilinmek istendiğinde nesnenin varlığına ilişkin bilgi önceden bizde olmalıdır (s.7) | K |
-| I.9.6.8 | Üç kısım içinde kesin bilgi adına en layık olan, varlığa ve sebebe ilişkin kesinliğin birlikte bulunduğu kısımdır (s.7) | K |
-| I.9.6.9 | Zorunlu kesinlikle kesinlenen öncüllerden kurulan kıyaslar üç kısma ayrılır: bizâtihi yalnız varlığı veren, bizâtihi yalnız sebebi veren, bizâtihi hem varlığı hem sebebi veren (s.7) | K |
-| I.9.6.10 | Yalnızca şeyin varlık sebebine vakıf olmak için kurulan kıyas, ancak ilklerin bilindiği yolla ya da yalnız varlık bilgisini veren bir kıyasla daha önce varlığı bilinen şey hakkında olabilir (s.7) | K |
-| I.9.6.11 | Zorunlu kesinlikle kesinlenen öncüllerden kurulan ve bu üç kısımdan birini veren kıyas burhân diye adlandırılır; burhân üç çeşittir (s.7) | T |
-| I.9.6.12 | Birinci burhân varlık burhânıdır (burhânü enne'ş-şey); ikincisi bir şeyin niçin varolduğunun burhânıdır (burhânü lime'ş-şey); üçüncüsü ikisini birleştiren burhândır ve mutlak olarak burhân adı verilir (s.7) | T |
-| I.9.6.13 | Hem varlığa hem sebebe ilişkin kesinlik mutlak olarak burhânî bilgi diye adlandırılır (s.7) | T |
-| I.9.6.14 | Mutlak burhân, bilaraz değil bizâtihi bir şeyin hem varlığını hem varlık sebebini veren kesin kıyastır (s.7) | T |
-| I.9.6.15 | Her burhân kendisinden elde edilen bilginin sebebidir; fakat her burhân şeyin varlık sebebinin bilgisini vermez (s.7) | K |
-
-### I.9.7 Dört sebep ve sebebin hâlleri
-
-| No | Cümle | Cins |
-| :-- | :-- | :-- |
-| I.9.7.1 | Sebepler dörttür: maddî (şeyin maddesi ve onunla sayılanlar), sûrî (tanımı ve tanımın parçaları ve onlarla sayılanlar), fâil (ve onunla sayılanlar), gâî (gâye ve onunla sayılanlar) (s.8) | T |
-| I.9.7.2 | Bu sebeplerden her biri ya yakındır ya uzaktır; ya bizzattır ya bilarazdır; ya daha geneldir ya daha özeldir; ya bilkuvvedir ya bilfiildir (s.8) | K |
-| I.9.7.3 | Bilaraz sebebin bilgisini veren kıyas burhâna girmez; ancak bilaraz burhân diye adlandırılabilir (s.8) | K |
-| I.9.7.4 | Bilaraz sebep dışındaki sebep sınıflarını veren kıyasların tümü burhândır (s.8) | K |
-| I.9.7.5 | Bilfiil, zâtî, yakın ve daha özel sebebi veren burhân, burhân adını diğerlerinden daha çok hak eder (s.8) | K |
-| I.9.7.6 | Sebepleri veren burhânlarla birincil amaçla talep edilen şeyler (el-matlûbât) bunlardan ibarettir (s.8) | K |
-| I.9.7.7 | Bu sebeplerden her biri kıyasın parçaları içinde orta terimin yerine yerleştirilir (s.8) | K |
-| I.9.7.8 | Orta terimi sebep sınıflarından biri olan kıyasın verdiği sonuç bilgisi, onun sebepleri içinden yalnız o sebebin bilgisidir (s.8) | K |
-| I.9.7.9 | Burhânlarla bilinenler ya tümel ya tikeldir; tümelleri sonuç veren burhânın incelenmesi tikelleri sonuç verenleri de kapsar (s.8) | K |
-| I.9.7.10 | Tümel sonuç veren burhânların öncülleri tümel olmalıdır (s.8) | K |
-| I.9.7.11 | Sonuçlarının varlığı zorunlu olan burhânların öncülleri de varlığı zorunlu öncüllerdir (s.8) | K |
-| I.9.7.12 | Zorunlu öncüllerin bir kısmı yüklemli, bir kısmı şartlıdır (vaz'î); meseleler de böyledir (s.8) | K |
-| I.9.7.13 | Zorunlu yüklemli öncüller yüklemleri konuları için zorunlu olanlardır; zorunlu şartlı öncüller, önbitişenin (mukaddem) gereklerinin zorunlu gerekler olduğu öncüllerdir (s.8) | T |
-| I.9.7.14 | Her şartlı meselenin yüklemli yapılması mümkündür; yüklemli ya da şartlı alınsın aralarında fark yoktur (s.8–9) | K |
-| I.9.7.15 | Varlığı talep edilen şeyin ya mutlak olarak varlığı ya bir durumda varlığı talep edilir (s.9) | K |
-| I.9.7.16 | Mutlak olarak varlığı talep edilen şey, tekil bir lafzın veya tekilin yerine geçen bir lafzın delâlet ettiği şeydir; bu yalnız şartlı kıyasla açıklanabilir (s.9) | K |
-| I.9.7.17 | Bir durumda varlığı talep edilen şey hem yüklemli hem şartlı kıyasla açıklanabilir (s.9) | K |
-| I.9.7.18 | Mutlak olarak varlığı talep edilip yüklemli kıyasla açıklanan şeyin yerine onu açıklayan bir söz konur ve böylece açıklanır (s.9) | K |
-| I.9.7.19 | Burada zorunlulukla kastedilen zâtî zorunluluktur; her zorunluluğun zâtî olmadığı zannedilir, bu yüzden zâtîliğin anlatılması gerekir (s.9) | K |
-| I.9.7.20 | Şartlıda zâtî gerekler, yüklemlide zâtî yüklemler söz konusudur (s.9) | K |
-
-### I.9.8 Zâtî yüklemler, zâtî arazlar, ilk yüklem ve cinse özellik
-
-| No | Cümle | Cins |
-| :-- | :-- | :-- |
-| I.9.8.1 | Zâtî yüklemler iki sınıftır (s.9) | K |
-| I.9.8.2 | Birinci sınıf, konularının cevheri ve doğası bu yüklemlerin onlara yüklenmesi olan yüklemlerdir (misal: "Her insan canlıdır") (s.9) | T |
-| I.9.8.3 | İkinci sınıf, cevheri ve doğası konularında bulunmak olan yüklemlerdir; bunlara zâtî arazlar denir (misal: hareket ve durağanlığın doğal cisimlerdeki varlığı) (s.9) | T |
-| I.9.8.4 | Birinci sınıftaki yüklem ya tanımdır ya tanımın parçalarıdır (s.9) | K |
-| I.9.8.5 | Tanımın parçaları yakın cins, uzak cins veya cins benzeridir; yakın fasıl, uzak fasıl veya fasıl benzeridir (s.9) | T |
-| I.9.8.6 | Misaller: yakın cins "Daire düz şekildir"; uzak cins "Daire şekildir" veya "büyüklüktür"; cins benzeri "İnsan et ve kemik sahibidir"; yakın fasıl "Daireyi tek bir çizgi çevreler"; uzak fasıl "Daireyi çizgi çevreler"; fasıl benzeri "Kalp, doğuştan gelen sıcaklığın kaynağıdır" (s.9) | M |
-| I.9.8.7 | Zâtî arazların bir sınıfı, konuları tanımlarının parçası olarak (cins olarak değil, fasıl yerine) alınan yüklemlerdir (misal: insandaki "gülen") (s.10) | T |
-| I.9.8.8 | Zâtî arazların diğer sınıfı, konularının cinsleri tanımlarında kullanılan yüklemlerdir (misal: "Çift sayıyla çarpılan her tek sayının yekûnu çifttir") (s.10) | T |
-| I.9.8.9 | Konularına tümel yüklenen her zâtî sınıf ya ilktir ya ilk değildir (s.10) | K |
-| I.9.8.10 | İlk yüklem, konusunun cinsine tümel olarak yüklenmesi mümkün olmayan yüklemdir (misal: üçgenin açılarının iki dik açıya eşitliği; çokgenin cinsine yüklenemez) (s.10) | T |
-| I.9.8.11 | İlk olmayan yüklem, konusunun cinsi için tümel olarak var olan yüklemdir (misal: açıların iki dik açıya eşitliğinin ikizkenara yüklenmesi) (s.10) | T |
-| I.9.8.12 | İlk yüklemin bazısı konuya özgüdür, bazısı özgü değildir (özgü olmayanın misali: paralellik) (s.10) | K |
-| I.9.8.13 | Yakın fasıl bazen konuya özgü olabilir; cinsin cinsi, cinsin kurucu faslı ve bunun üstü ilk değildir; kurucu faslın cinsi her ne kadar onun cinsi ve cinsinin cinsi olmasa da ilk yüklem olabilir (s.10) | K |
-| I.9.8.14 | Zâtî olup daimî surette konuya özgü bulunan, tanımdır; son fasıllar da böyledir (s.10) | K |
-| I.9.8.15 | Konunun kendisinin tanımın parçası olarak alındığı zâtî arazlar o konuya özgüdür (misal: gülen) (s.11) | K |
-| I.9.8.16 | Tanımında konusunun cinsi ya da cinsinin cinsi alınan zâtî araz daima konuya özgü olmak zorunda değildir (misal: çiftle çarpılan çift sayı) (s.11) | K |
-| I.9.8.17 | Zâtî gerekler (levâzım) zâtî yüklemlerin yolunu izler; zâtî yüklemler gerek olarak da var olabilir ve gerekler yüklem olarak da alınabilir (s.11) | K |
-| I.9.8.18 | Tanımında konusunun cinsi alınan ilk yüklem o cinsten daha özel olmalıdır; aksi hâlde bu yüklem cinsin altındaki şeylerin bazısı için ilk olmaz (s.11) | K |
-| I.9.8.19 | Bir araz bir yönden cins için, bir yönden cinsin türleri için zâtî söylenir; cins için zâtî olan durumda cinsin kendisi, türleri için zâtî olan durumda türlerinin cinsi tanımında alınır (misal: sayıda tek ve çift) (s.11) | K |
-| I.9.8.20 | Zâtî arazlar mütekabil olabilir (sayı için tek ve çift; çizgi için doğruluk ve eğrilik) veya olmayabilir (sayı için cisim ve çift) (s.11) | K |
-| I.9.8.21 | Mütekabil zâtî arazların bazısı bir cins için ilktir, bazısı ilk değildir (s.11) | K |
-| I.9.8.22 | Mütekabil ilk olanlar, cinsin cinsinin kendileriyle tam taksim edilemediği zâtîlerdir (misal: çift ve tek; "Her nicelik ya çifttir ya tektir" denemez; çizgi nicelik olmakla çift ya da tek değildir) (s.12) | K |
-| I.9.8.23 | Bir cins için ilk olmayan mütekabil zâtîler cinsin ve cinsinin cinsinin tam taksimine elverir (misal: eşit ve eşit-olmayan; her nicelik ya eşittir ya eşit değildir) (s.12) | K |
-| I.9.8.24 | Orantılı–orantısız ve ortak–farklı çiftlerinin de böyle olduğu zannedilir (s.12) | Z |
-| I.9.8.25 | Zâtî mütekabil arazların bir kısmı bir cinse özeldir; bir kısmı o cinse ve başkalarına geneldir (s.12) | K |
-| I.9.8.26 | Genel iki sınıftır: canlılığın insan ve at için genel olması gibi; varlığın ya da şeyin tüm cinsler için genel olması gibi (s.12) | K |
-| I.9.8.27 | Mütekabillerin bazısı canlılık tarzı genelliğe sahip genel için ilk özeldir (tek–çift sayı için; eşit–eşit olmayan nicelik için) (s.12) | K |
-| I.9.8.28 | Mütekabillerin bazısı varlık ya da şey tarzı genelliğe sahip genel için ilktir (misal: her mevcut ya bilfiildir ya bilkuvve; bir şey hakkında ya olumlama ya olumsuzlama doğrudur) (s.12) | K |
-| I.9.8.29 | İlk tümel öncülün yüklemi bir cinse özel araz ve konusu o cinsin türleri ise öncül bu cinse özel ve onunla ilişkilidir (s.12) | K |
-| I.9.8.30 | Konuları o cinsin altındaki türler, yüklemleri o cinsin kendisi veya o cinsin türlerinden başka türler olan öncüller de bu cinse özel öncüllerdir (s.12) | K |
-| I.9.8.31 | Yükleri bir cins için ilk olmayan arazlar, konuları o cinsin türleri olan öncüller bu cinse özel olmaz (s.12) | K |
-| I.9.8.32 | Burhânların öncüllerinin bir kısmı bir cinse özel, bir kısmı geneldir (s.12) | K |
-| I.9.8.33 | Orta terim olarak alınan sebepler, zorunlu olarak iki tarafın veya iki taraftan birinin tanımı ya da tanımının parçası olurlar; ya da iki tarafın tanımlarında yakın veya uzak bir ortaklığa sahip olurlar (s.13) | K |
-
-### I.9.9 Burhânî olan ve burhânî olmayan terkipler (genel)
-
-| No | Cümle | Cins |
-| :-- | :-- | :-- |
-| I.9.9.1 | Bir şey bir şeyin tanımında dört yönde alınır: insanın tanımında canlı gibi (cins), insanın tanımında düşünen gibi (fasıl), gülenin tanımında insan gibi, çift ve tekin tanımında sayı gibi (s.13) | K |
-| I.9.9.2 | "Bir şey bir şeyin cinsidir" demekle, yüklenmesi canlının insana yüklenmesi gibi olan kastedilir; "bir şey bir şeyin faslıdır" demekle yüklenmesi düşünenin insana yüklenmesi gibi olan kastedilir (s.13) | T |
-| I.9.9.3 | Faslın parçasının şeye veya şeyin ona yüklenmesi mümkünse o parça fasıl gibi işlev görür (misal: "Daire, kendisini tek bir çizginin çevrelediği şekildir") (s.13) | K |
-| I.9.9.4 | "Bir şey bir şeyin tanımındadır" demekle gülenin tanımında alınan insan gibi olan, "bir şeyin tanımında bir şeyin cinsi vardır" demekle çiftin ve tekin tanımında alınan sayı gibi olan kastedilir (s.13) | T |
-| I.9.9.5 | Terkip sınıfları sekizdir; kip sayıları sırasıyla 8, 4, 6, 5, 4, 4, 4, 4'tür; toplam 39 kiptir (s.13–17) | K |
-| I.9.9.6 | Birinci sınıf, ilkin ortaya nispeti ile ortanın sona nispetinin aynı olduğu terkip sınıfıdır; ikinci sınıf, ilkin ve ortanın sona nispetinin tek bir nispet olduğu sınıftır (s.14–15) | T |
-| I.9.9.7 | Olumsuzları sonuç veren burhânlara ait parçaların nispetleri birinci veya ikinci şekilde terkip edilmiş olmalıdır (s.18) | K |
-| I.9.9.8 | Hem varlığı hem sebebi veren burhânların çoğu yalnız tümel olumlu sonuç verir ve birinci şekilde olumlulardan bileşir (s.18) | K |
-| I.9.9.9 | Şartlılarda kurulan burhânların parçalarının nispetleri yüklemlilerde kurulanlarınki ile aynıdır; şartlılardaki sebepler bunların istisna edilen öncülleridir (s.18) | K |
-
-#### I.9.9-K Terkip kipleri (39)
-
-| No | Cümle | Cins |
-| :-- | :-- | :-- |
-| I.9.9.K1 | Sınıf 1 kip 1 (s.14): "A, B'nin tanımıdır; B, C'nin tanımıdır" → ya A, C'nin tanımıdır ya parçaların tanımı onun tanımıdır; C'nin iki tanımı varsa biri diğerinin açıklamasında alınır; misal: Her insan düşünen canlıdır; her düşünen canlı iki ayaklı yürüyendir; o halde insan iki ayaklı yürüyen canlıdır | K |
-| I.9.9.K2 | Sınıf 1 kip 2 (s.14): "A, B'nin cinsidir; B, C'nin cinsidir" → A, C'nin cinsidir (cinsin cinsi); misal: Her insan canlıdır; her canlı cisimdir; o halde her insan cisimdir | K |
-| I.9.9.K3 | Sınıf 1 kip 3 (s.14): "A, B'nin faslıdır; B, C'nin faslıdır" → A, C'nin faslıdır (faslın faslı); misal: Her insan düşünendir; her düşünen idrak edendir; o halde her insan idrak edendir | K |
-| I.9.9.K4 | Sınıf 1 kip 4 (s.14): "A'nın tanımı B'dir; B'nin tanımı C'dir" → birinci kipin aksidir; A'nın kendi tanımının parçalarına ait tanımların bütünü için varlığını sonuç verir; misal: Duyumsayan ve iki ayağıyla hareket eden her cisim iki ayaklı yürüyen canlıdır; her iki ayaklı yürüyen canlı insandır | K |
-| I.9.9.K5 | Sınıf 1 kip 5 (s.14): "A'nın faslı B'dir; B'nin faslı C'dir" → faslın faslı için şeyin varlığını sonuç verir; sebebi vermez, yalnız varlığı verir [varlık]; misal: Bir organdan daha fazlasıyla idrak eden her şey duyumsayandır; her duyumsayan canlıdır; o halde ... canlıdır | K |
-| I.9.9.K6 | Sınıf 1 kip 6 (s.14): "A'nın tanımında B vardır; B'nin tanımında C vardır" → A'nın kendi tanımının parçasına yüklenmesini sonuç verir; ancak özel zâtî arazlarda olur; misal: Her insan şaşırandır; her şaşıran gülendir | K |
-| I.9.9.K7 | Sınıf 1 kip 7 (s.14): "A'nın tanımında B'nin cinsi vardır; B'nin tanımında C'nin cinsi vardır" → B ve C'nin cinsleri arasındaki nispet önceki nispetlerden biri değilse burhân olmaz; burhân olacaksa B'nin cinsi C'nin cinsi için zâtî olmalı veya tersi; daima zâtî arazı sonuç verir; sonuç ilk veya ilk olmayan, özel veya özel olmayan olabilir; misal: (örnek verilmemiş) | K |
-| I.9.9.K8 | Sınıf 1 kip 8 (s.14): "A, B'nin tanımındadır; B, C'nin tanımındadır" → altıncının aksidir; sebebi vermez, yalnız varlığı verir [varlık]; misal: altıncı kipin örneğinin aksi | K |
-| I.9.9.K9 | Sınıf 2 kip 1 (s.15): "A ve B, C'nin tanımlarıdır" → A, C'nin tanımıdır | K |
-| I.9.9.K10 | Sınıf 2 kip 2 (s.15): "A ve B, C'nin iki faslıdır" → A, C'nin faslıdır; ya daha geneldir ya eşittir | K |
-| I.9.9.K11 | Sınıf 2 kip 3 (s.15): "A ve B'nin tanımlarında C vardır" → sonucun konusuna özgü yüklemi sonuç verir; sebebi vermeyip yalnız varlığı verir (sebep verecekse A ve B'den her birinin diğerine girdisi olmalı, bu da birinci sınıfın altıncı kipine döner) [varlık] | K |
-| I.9.9.K12 | Sınıf 2 kip 4 (s.15): "A ve B'nin tanımlarında C'nin cinsi vardır" → ilk ve özel olanı ve ilk ve özel olmayanı sonuç verir; tüm burhân kipleri (illet burhânı ve varlık burhânı) bundan oluşturulabilir; ilimlerdeki burhânların çoğu bu kipe döner [illet ve varlık] | K |
-| I.9.9.K13 | Sınıf 3 kip 1 (s.15): "A, B'nin tanımıdır; B, C'nin cinsidir" → C'nin cinsinin tanımının C için mevcut olduğunu sonuç verir; misal: Her insan canlıdır; her canlı duyumsayan ve beslenen cisimdir | K |
-| I.9.9.K14 | Sınıf 3 kip 2 (s.15): "A, B'nin tanımıdır; B, C'nin faslıdır" → C'nin faslının tanımının C için mevcut olduğunu sonuç verir; misal: Her insan düşünendir; her düşünen teemmül ve bir kıyasla idrak edendir; her insan teemmül ve bir kıyasla idrak edendir | K |
-| I.9.9.K15 | Sınıf 3 kip 3 (s.15): "A, B'nin tanımıdır; B'nin tanımı C'dir" → yalnız varlığı verir; ancak muhtelif tanımları olan şeyler hakkında düzenlenir; şeyin iki tanımından birinin diğeri için varolduğu açığa çıkar [varlık]; misal: Her iki ayaklı yürüyen canlı insandır; her insan düşünen canlıdır | K |
-| I.9.9.K16 | Sınıf 3 kip 4 (s.15): "A, B'nin tanımıdır; B'nin tanımının parçası C'dir" → muhtelif tanımları bulunması mümkün olan şeyler hakkında düzenlenir; B'nin tek tanımı varsa tanımın bütününün varlığı o bütünün parçalarının bir kısmı için olduğu sonucu çıkar ki saçmadır [varlık]; misal: düşünen canlının varlığının düşünen için olduğunun açığa çıkması (saçma) | K |
-| I.9.9.K17 | Sınıf 3 kip 5 (s.15): "A, B'nin tanımıdır; B'nin tanımının parçası C'nin cinsidir" → burhândır; hem varlığı hem sebebi sonuç verir, bazen yalnız varlığı verir [varlık ve sebep]; misal: Her çift sayıyla çarpılan sayı çift sayıdır; her çift sayı iki eşit kısma bölünür | K |
-| I.9.9.K18 | Sınıf 3 kip 6 (s.15): "A, B'nin tanımıdır; B'nin faslı C'dir" → dördüncü kipin durumundadır; yalnız varlığı verir [varlık] | K |
-| I.9.9.K19 | Sınıf 4 kip 1 (s.16): "A, B'nin cinsidir; B, C'nin tanımıdır" → ancak A, C'nin tanımında açıkça belirtilmediğinde kullanılır; C'nin tanımının cinsini sonuç verir; misal: Her insan düşünen canlıdır; her düşünen canlı cisimdir; o halde her insan cisimdir | K |
-| I.9.9.K20 | Sınıf 4 kip 2 (s.16): "A, B'nin cinsidir; B, C'nin faslıdır" → C'nin faslının cinsini sonuç verir; misal: Her canlı duyumsayandır; her duyumsayan idrak edendir; o halde her canlı idrak edendir | K |
-| I.9.9.K21 | Sınıf 4 kip 3 (s.16): "A, B'nin cinsidir; B'nin tanımı C'dir" → yalnız varlığı veren burhândır; şeyin cinsinin varlığını ancak onun tanımı için sonuç verir; cins tanımda açıkça belirtilmeyen bir cins olmalıdır [varlık]; misal: Her düşünen canlı insandır; her insan cisimdir; o halde her düşünen canlı cisimdir | K |
-| I.9.9.K22 | Sınıf 4 kip 4 (s.16): "A, B'nin cinsidir; B'nin tanımının parçası C'dir" → yalnız varlığı veren burhândır; şeyin tanımının parçası (sebeplerinden biri) sonuçta konu olarak bulunur [varlık]; misal: Her insan gülendir; her gülen tebessüm sahibidir | K |
-| I.9.9.K23 | Sınıf 4 kip 5 (s.16): "A, B'nin cinsidir; B'nin tanımının parçası C'nin cinsidir" → illet burhânı ve varlık burhânı olur [illet ve varlık]; misal: Çift sayıyla çarpılan her sayı çifttir; her çift nitelik sahibidir | K |
-| I.9.9.K24 | Sınıf 5 kip 1 (s.16): "A, B'nin faslıdır; B, C'nin cinsidir" → varlığı ve sebebi veren tam burhândır; C'nin cinsinin faslını sonuç verir [varlık ve sebep]; misal: Her insan canlıdır; her canlı duyumsayandır; o halde her insan duyumsayandır | K |
-| I.9.9.K25 | Sınıf 5 kip 2 (s.16): "A, B'nin faslıdır; B'nin tanımı C'dir" → ancak B'nin iki farklı tanımı olduğunda düzenlenir; tek tanımı olursa hiçbir şey sonuç vermez; iki tanım olduğunda iki tanımdan birinin parçasının varlığını diğer tanımın bütünü için sonuç verir; yalnız varlığı verir [varlık]; misal: (tek tanım: ) Her düşünen canlı insandır; her insan düşünendir; her düşünen canlı düşünendir. (iki tanım: ) Her iki ayaklı yürüyen canlı insandır; her insan düşünendir; her iki ayaklı yürüyen canlı düşünendir | K |
-| I.9.9.K26 | Sınıf 5 kip 3 (s.16): "A, B'nin faslıdır; B'nin tanımının parçası C'dir" → (çeviride bu kip için ayrı hüküm verilmemiştir: "faslın terkiplerinin ikisi diğerleriyle birlikte düşer" denmiştir) | K |
-| I.9.9.K27 | Sınıf 5 kip 4 (s.16): "A, B'nin faslıdır; B'nin tanımının parçası C'nin parçasıdır" → bazen şeyin nedenini bazen yalnız varlığını verir; C'nin zâtî arazını sonuç verir [varlık veya sebep]; misal: Birbirine nispeti sayının sayıya nispeti gibi olan çizgiler ortaktır; ortak olanları tek bir miktar ölçer; o halde bu çizgileri tek bir miktar ölçer | K |
-| I.9.9.K28 | Sınıf 6 kip 1 (s.17): "A'nın tanımı B'dir; B, C'nin cinsidir" → A, C'nin de cinsidir; orta terim bir şeyin cinsinin tanımıdır; misal: Her daire düz bir yüzeydir; her düz yüzey düzdür | K |
-| I.9.9.K29 | Sınıf 6 kip 2 (s.17): "A'nın tanımı B'dir; B, C'nin faslıdır" → şeyin faslını sonuç verir; misal: Her dairede bir nokta vardır ki ondan çevreye çıkan çizgiler eşittir; böyle nokta merkezdir; o halde her dairede bir merkez vardır | K |
-| I.9.9.K30 | Sınıf 6 kip 3 (s.17): "A'nın tanımı B'dir; B'nin tanımında C vardır" → örneği nadiren bulunur | K |
-| I.9.9.K31 | Sınıf 6 kip 4 (s.17): "A'nın tanımı B'dir; B'nin tanımının parçası C'nin cinsidir" → örneği nadiren bulunur (üçüncü kip gibi) | K |
-| I.9.9.K32 | Sınıf 7 kip 1 (s.17): "A'nın tanımında B vardır; B, C'nin cinsidir" → C'nin cinsine özel olanı sonuç verir; misal: Her insan canlıdır; her canlı şevk sahibidir; o halde her insan şevk sahibidir | K |
-| I.9.9.K33 | Sınıf 7 kip 2 (s.17): "A'nın tanımında B vardır; B, C'nin faslıdır" → şeyin faslına özgü olanı sonuç verir; misal: Her insan düşünendir; her düşünen görüş sahibidir | K |
-| I.9.9.K34 | Sınıf 7 kip 3 (s.17): "A'nın tanımında B vardır; B'nin tanımı C'dir" → şeye özgü olanı sonuç verir; misal: Her düşünen canlı insandır; her insan gülendir | K |
-| I.9.9.K35 | Sınıf 7 kip 4 (s.17): "A'nın tanımında B vardır; B'nin tanımının parçası C'nin cinsidir" → (sonuç ayrıca yazılmamış); misal: Her insan iki ayaklıdır; her iki ayaklı yürüyendir | K |
-| I.9.9.K36 | Sınıf 8 kip 1 (s.17): "A'nın tanımının parçası B'nin cinsidir; B, C'nin tanımıdır" → zâtî arazları sonuç verir; misal: Her iki dik açı düz bir çizgi üzerinde dik olarak bulunan düz bir çizginin iki yanından çıkan iki eşit açıdır; bunlar dikey çizginin iki tarafından çıkar; o halde her iki dik açı dikey çizginin iki yanından çıkar | K |
-| I.9.9.K37 | Sınıf 8 kip 2 (s.17): "A'nın tanımının parçası B'nin cinsidir; B, C'nin cinsidir" → zâtî arazları sonuç verir; misal: Her ikizkenar üçgendir; her üçgenin üç açısı iki dik açıya eşittir; her ikizkenarın üç açısı iki dik açıya eşittir | K |
-| I.9.9.K38 | Sınıf 8 kip 3 (s.17): "A'nın tanımının parçası B'nin cinsidir; B, C'nin faslıdır" → zâtî arazları sonuç verir; misal: Her üçgeni üç doğru çizgi çevreler; üç doğru çizginin çevrelediği şey doğru açılara sahiptir | K |
-| I.9.9.K39 | Sınıf 8 kip 4 (s.17): "A'nın tanımının parçası B'nin cinsidir; B'nin tanımı C'dir" → zâtî arazları sonuç verir; misal: Her üç doğru çizginin çevrelediği şekil üçgendir; her üçgenin üç açısı iki dik açıya eşittir | K |
-
-### I.9.10 Önce gelen ve sonra gelen
-
-| No | Cümle | Cins |
-| :-- | :-- | :-- |
-| I.9.10.1 | Önce gelen ve sonra gelen pek çok şekilde söylenir; bir kısmı bilgi hakkında, bir kısmı varlık hakkında söylenir; her biri ya zaman ya doğa bakımındandır (s.18) | K |
-| I.9.10.2 | Bilgide zaman bakımından önce gelen, bir zamanda bilinen şeyin ikinci şeyi bilme zamanından önce olmasıdır (s.18) | T |
-| I.9.10.3 | Bilgide önce gelen, şeye ilişkin bilginin diğer bir şeyin bilgisinden elde edilmeksizin meydana gelmesi hâlinde de söylenir (s.18) | T |
-| I.9.10.4 | Bir şeyin bilgisiyle diğer bir şeyin bilgisi elde edildiğinde kendisine dayanılan bilgiye bilgi bakımından daha önce denir (s.18) | T |
-| I.9.10.5 | Duyuyla algılanma bakımından dış dünyadaki tikeller önce, tümeller sonra gelir; genellik bakımından daha eksik olan her şey bu açıdan bilgice daha öncedir (s.18) | K |
-| I.9.10.6 | Duyuların dışındaki bir şeyle algılanmaları ve bilgilerinin meşhûr ve açık olması bakımından tümeller bilgide önce, dış dünyadaki varlıklar sonra gelir; tümellerin sınıfları arasında tümellik bakımından daha fazla olan önce gelir (s.18) | K |
-| I.9.10.7 | Varlıkta önce gelen, biri diğerinin sebebi olan iki şeyden biridir; sebep çeşidi değişmez (s.18) | K |
-| I.9.10.8 | İnsanların çoğu, bir şeyin ortadan kalkmasıyla diğerinin ortadan kalktığı, ama birincinin mevcudiyetinin ikincinin mevcudiyetini gerektirmediği ve ikincinin ortadan kalkmasıyla birincinin ortadan kalkmadığı şey hakkında bunun diğerinden önce geldiğini söylemeyi âdet edinmiştir (s.18) | K |
-| I.9.10.9 | Bir şey bilindiğinde diğerinin bilinmesi gerekmiyor, diğeri bilindiğinde birincinin bilinmiş olması gerekiyorsa birincisi daha bilinirdir, yani bilgice önce gelir (s.18) | K |
-| I.9.10.10 | Burhânın parçaları bilgide zaman bakımından sonuçtan önce gelir; varlık sebebinin şeyi öncelemesi bakımından da önce gelir; sonucun bilinmesi parçaların bilgisiyle olduğu için bilgide önce gelir; tümellerin dış varlıkları öncelemesi cihetiyle zihinle bilinme bakımından önce gelir, ama bu önceleme sonuca kıyasla değildir (s.19) | K |
-| I.9.10.11 | İlk öncüllerden oluşan burhânların parçaları, daha önceki başka bir şeyin bilgisi dolayısıyla bilinmiş olmayıp kendiliklerinden bilindikleri için de önce gelir (s.19) | K |
-| I.9.10.12 | Bir şeyde varlıkta önce gelme ile bilgide önce gelme bazen birleşir, bazen birleşmez; bilgide önce varlıkta sonra, bilgide sonra varlıkta önce de birleşebilir (s.19) | K |
-| I.9.10.13 | Önce gelmenin iki yönünün birden kendilerinde toplanması gerekenler, hem varlığı hem sebebi veren burhânların öncülleridir (s.19) | K |
-| I.9.10.14 | Önce gelen ve sonra gelen dört sınıftır (s.20) | K |
-| I.9.10.15 | Birinci sınıf birbirine döndürülendir; burada ikisinden her biri diğeriyle iki tarzda açıklanabilir: yalnız varlık burhânıyla ve sebep burhânıyla (s.20) | T |
-| I.9.10.16 | İkinci sınıf, sonra gelenin önce geleni gerektirmesi ama önce gelenin sonra geleni gerektirmemesidir (misal: duman ve ateş; duman varsa ateş vardır, ateş varsa duman gerekmez); burada yalnız önce gelen sonra gelenle ispatlanabilir (s.20) | T |
-| I.9.10.17 | Üçüncü sınıf, önce gelenin sonra geleni gerektirmesi ama sonra gelenin önce geleni gerektirmemesidir; burada sonra gelen daima önce gelenle açıklanır (s.20) | T |
-| I.9.10.18 | Dördüncü sınıf, önce gelen varsayıldığında sonra gelenin mevcut olmasının ve sonra gelen mevcut olduğunda önce gelene tâbi olmasının gerekmediği, sonra gelenin başka sebeplerle de mevcut olabileceği hâldir; burada ikisinden birinin diğeriyle ispatı mümkün değildir (s.20) | T |
-
-### I.9.11 Yalnız varlık veren burhânlar (delil)
-
-| No | Cümle | Cins |
-| :-- | :-- | :-- |
-| I.9.11.1 | Yalnız varlık verenler iki sınıftır (s.19) | K |
-| I.9.11.2 | Birinci sınıf, varlıkta önce gelen şeyleri varlıkta sonra gelenlere dayanarak sonuç verir; varlıkta sonra gelen bilgide zaman bakımından önce olmalıdır (s.19) | T |
-| I.9.11.3 | Birinci sınıfta orta terim, nesne için mevcut bir şey olarak alınır ve sebebi, varlığı açık hâle gelmiş bu şeydir (s.19) | K |
-| I.9.11.4 | Misal: Ay'ın ışığı azar azar artar; ışığı azar azar artanın şekli yuvarlaktır; o halde Ay yuvarlaktır; burada Ay'ın yuvarlaklığı ışığın artmasının sebebidir, bizim açımızdan bilgide ve duyulurda önce gelen ise ışığın artmasıdır (s.19) | M |
-| I.9.11.5 | Önce gelenin sonra gelen sebebiyle açıklanması ancak sonra gelenin bizzat tek bir önce geleni izlemesi ve bununla birlikte yüklemde ona döndürülebilmesi hâlinde mümkündür (s.19) | K |
-| I.9.11.6 | Sonra gelen ona ve başkasına tâbi olduğunda önce gelenin varlığı sonra gelenle açığa çıkmaz (misal: yıldızların cevherinin ateş cinsinden olduğunu parıldamalarıyla, Mars'ın kuru-sıcak olduğunu kırmızı rengiyle, ısıtan ve kurutan olmasıyla açıklamak) (s.19) | H |
-| I.9.11.7 | Orta terimler bazen büyük tarafa tâbi olup bazen olmadığından önce gelen şeylerin sonra gelenlerle açıklanması bu durumda mümkün olmaz (s.20) | K |
-| I.9.11.8 | Yalnız varlık veren burhânların ikinci sınıfı, sonra gelenin sonra gelenle tanıtıldığı sınıftır: iki şey kendileri dışındaki bir şeye tâbidir, her biri bu şeyden sonra gelme bakımından aynı mertebededir (s.20) | T |
-| I.9.11.9 | İkinci sınıfta iki sonra gelenden birinin bir konu için varlığı, diğerinin orta terim olarak alınmasıyla açık hâle getirilir (misal: Yer hareket etmez, çünkü kendisine doğru hareket edeceği bir mekânı yoktur; duvar solumaz, çünkü canlı değildir) (s.20) | M |
-| I.9.11.10 | Yalnız varlığı veren burhânlar "delil" diye adlandırılır; bu ad daha ziyade önce gelenin sonra gelenle bilindiği burhânlara özgüdür; burhânda orta terim olarak alınan sonra gelen de "delil" diye adlandırılır (s.20) | T |
-| I.9.11.11 | Bu sınıfın parçalarının birbirine nispeti, hem varlığı hem sebebi veren sınıfın nispetlerinden biridir (s.20) | K |
-
-### I.9.12 Yalnız sebep veren burhânlar ve "niçin" sorusu
-
-| No | Cümle | Cins |
-| :-- | :-- | :-- |
-| I.9.12.1 | Yalnız sebepleri veren burhânlar, yalnız daha önceden varlığını bildiğimiz şeylerde söz konusudur (s.21) | K |
-| I.9.12.2 | Bu varlık bilgisi ya bizzat, ya duyuyla ya da delil diye adlandırılan burhânlarla olur; geriye sebeplerini bilmemiz kalır (s.21) | K |
-| I.9.12.3 | Şeylerin sebepleri bazen duyulardan, bazen delillerden, bazen burhânlardan meydana gelir (s.21) | K |
-| I.9.12.4 | İnsan için beyaz saçlı olmak, kellik gibi, zâtî sebepleri bilinmek istenen çoğu şeyin mevcut oldukları nesneler için varlığının zorunlu olmadığı hâlde zâtî olduğu düşünülür; bunlardaki zorunluluk yalnız sebeplerinin o şeylere nispetidir; her zâtî olan şey o nesne için zorunlu değildir (s.21) | K |
-| I.9.12.5 | İlk sebeplerin cinsleri dört olup her biri bir şeyin niçin olduğu sorusunun cevabında bulunur (s.21) | K |
-| I.9.12.6 | "Niçin" sorusu ancak varlığının bilgisi bizde daha önceden meydana gelmiş şey hakkında sorulabilir (misal: "İnsan niçin ölür?" ancak insanın ölen olduğu bilindiğinde sorulur) (s.21) | K |
-| I.9.12.7 | "İnsan niçin ölür?" sorusunun dört cevabı: "Çünkü zıtlardan mürekkeptir" (madde); "Çünkü düşünen ölümlü canlıdır" (süret); "Çünkü onun için en iyi olan ölmektir" (gâye); "Çünkü muhafaza edeni veya fâili değişkendir" (fâil) (s.21) | M |
-| I.9.12.8 | Madde ve fâil sebebi varsayıldığında onunla varolan şeyin varlığı zorunlu olarak gerekmez; gâye ve süret sebebi varsayıldığında onunla varolan şeyin varlığı zorunlu olarak gerekir, çünkü bu iki sebep kendileriyle varolan şeylerin varlığına eşlik eder (s.21) | K |
-| I.9.12.9 | Bazı sebepler verildiğinde, sebep oldukları şeylere nasıl sebep oldukları ilk başta açık değildir (misal: asma yaprağını kışın döker, çünkü geniş yapraklıdır; bu zâtî sebeptir ama nasıl sebep olduğu açık değildir); böyle şeylerde sebebe ilişkin soruya hâlâ yer kalır (s.21) | K |
-| I.9.12.10 | Yakın sebep verilince (misal: yaprağın ağaç üzerinde tutunmasına sebep olan nem geniş yapraklılarda daha çabuk yayılır) sebebin nasıl sebep olduğu bilinmeye daha yakın olur (s.22) | M |
-| I.9.12.11 | Misaller: Ebâ Hurşiş'in "Sicilya'da zurna yoktur; çünkü üzüm ağaçları yoktur"; Aratos'un "Güneydeki yıldızlar kuzeydekilerden daha hızlı kaybolur; çünkü kuzey kutbundan uzaktır" ve "Ay burçlar dairesinin ortasından geçmesi sebebiyle tutulur" sözleri uzak sebeplerdir (s.22) | M |
-| I.9.12.12 | Burhânların orta terimleri uzak sebepler olduğu sürece bu burhânlar neredeyse deliller (yalnız varlık bildiren burhânlar) arasına girer (s.22) | K |
-| I.9.12.13 | Sebebi verilen her şeyde yakın sebeplerin ortaya konulması araştırılmalı, yalnız uzak sebeplerle yetinilmemelidir (misal: Ay tutulmasında yalnız burçlar dairesi değil, Ay Güneş'in karşısından geçerken Dünya'nın Ay ile Güneş arasına girip ışınları engellemesi eklenir) (s.22) | K |
-| I.9.12.14 | Bazen tek bir şeyin sebep çeşitlerinin çokluğu kadar çok sebebi olabilir; bazen çok şeyin sebebi tek olabilir (s.22) | K |
-| I.9.12.15 | Tek olan sebepler cins, tür veya tenâsüp bakımından tek olabilir (s.22) | K |
-| I.9.12.16 | Sebeplerinin cinsi tek olanın misali yankı ve gök kuşağıdır (ikisinin sebebinin cinsi yansımadır: sesin yansıması, ışığın yansıması); sebeplerinin türü tek olanın misali gök kuşağı ve aynada görülendir (ikisi de göze yansımayla görülür; biri sisten, diğeri parlak madenden) (s.22) | M |
-| I.9.12.17 | Sebepleri tek olan şeylerin bir kısmı diğer bir kısmının sebebi olabilir; daha uzak sebep hepsinin sebebi olabilir; bazen bir kısmı diğerleri için sebep olmaz (s.22) | K |
-| I.9.12.18 | Misal: ay sonunda Nil'in suyunun bollaşması, havanın nemlenmesi ve kış gibi olması; bütünün sebebi Ay ışığının kaybolması, bu da Ay'ın Güneş'e yakınlığıdır; bu zincirde her halka bir sonrakinin sebebidir (s.22–23) | M |
-| I.9.12.19 | Çoğu zaman bir şeyin yakın sebebi verilir ama o şeyin niçin olduğuna ilişkin soru sürer (misal: ikizkenarın açılarının iki dik açıya eşit olması; yakın sebep üçgen olmasıdır; ama soru, "düz bir çizgi üzerinde dik olan düz çizginin iki yanındaki iki açı iki dik açıya denktir" açıklamasına kadar sürer) (s.23) | K |
-| I.9.12.20 | Sebebi bilinmek istenen hiçbir şeyde "niçin olduğu" sorusunun sürdüğü bir cevapla yetinilmemelidir (s.23) | K |
-| I.9.12.21 | Varlığı mutlak veya bir şeyde zorunlu olmayan şey iki sınıftır: çoğu zaman varolan veya çoğu konu için varolan (veya ikisini birden), ve daha az ya da eşit olarak varolan (s.23) | K |
-| I.9.12.22 | İkincinin iki kısmını kesinlikle hiçbir ilim incelemez; çoğunlukla varolanı pek çok ilim inceler (s.23) | K |
-| I.9.12.23 | Çoğunlukla varolan nitelikteki öncüllerin sonuçları ve onları bizzat sonuç veren kıyasların öncülleri de bu niteliktedir; pek çok disiplinde zorunlularla birlikte düşünülür ve onlar gibi işlev görür; bunlarda yalnız zâtîliğin gerçekleşmesi ve ilimlerde kullanılmaları gerekir (s.23) | K |
-
-### I.9.13 Tanım ve terkip (s.24)
-
-| No | Cümle | Cins |
-| :-- | :-- | :-- |
-| I.9.13.1 | Fârâbî tasavvurlar bahsine geçer; tasavvur sınıflarının hangisinin daha tam, hangisinin daha eksik olduğu ve tasavvur sınıflarının kendileri dolayısıyla meydana geldiği durumlar önceki bahislerde sıralanmıştır (s.24) | K |
-| I.9.13.2 | Tanımlar ve tanımlanan şeyler: tanımlananlar ya insan, güneş, ay gibi lafızların delâlet ettiği şeylerdir ya da terkibi tam bir söz terkibi biçiminde olmayan bir sözün delâlet ettiği şeylerdir (s.24) | T |
-| I.9.13.3 | Tanımlar burhânları oluşturan şeyler derecesinde birden fazla şeyden oluşturulur; fakat tanımların terkip tarzı burhânların terkip tarzından farklıdır (s.24) | K |
-| I.9.13.4 | Tanımın parçalarının terkibi, parçalarının bir kısmının hüküm, diğerinin hakkında hüküm verilen (mahkûm aleyh) olacağı bir yapıda değildir; tanımın bütünü tam bir sözün parçası yapılmaya elverişlidir (s.24) | K |
-| I.9.13.5 | Tanımlar en az iki parçadan terkip edilirler (s.24) | K |
-| I.9.13.6 | Tanım parçalarının bütünü içinde tanımlanana yüklem olabilenler ve olamayanlar vardır (misal: dairenin tanımında "şekil" daireye yüklem olur; "bir parça" yüklem olamaz, çünkü dairenin bir parça olduğu doğru değildir; doğru olan daireyi bir parçanın çevrelediğidir; bu yüzden "parça" faslın parçasıdır) (s.24) | K |
-| I.9.13.7 | Tanımlanana yüklem olamayan şey tanımın tam parçası değil, parçasının parçasıdır (s.24) | K |
-
-### I.9.14 Çevirmenlerin Önsözü (Fârâbî'nin sözü değildir; s. numarasız)
-
-| No | Cümle | Cins |
-| :-- | :-- | :-- |
-| I.9.14.1 | Çevirmenlere göre Fârâbî mantığı sekiz bölüme ayırır: Mekûlât, İbâre, Kıyas, Burhân, Cedel, Sofistik (hikmet-i mümevvehe), Hitâbet, Şiir; her bölüm bir kitaba karşılık gelir (İhsâü'l-ulûm'a atıfla) (Önsöz) | K |
-| I.9.14.2 | Çevirmenlere göre Fârâbî'de mantığın esası dördüncü bölüm olan Burhân'dır; mantığın ilk üç bölümü Burhân'a giriş ve hazırlıktır; son dört bölüm bir yandan Burhân'a alet hizmeti görür, diğer yandan burhâna dayalı kesin bilgi ile zan, mugalata, ikna ve hayâle dayalı kesinlikten uzak görüşleri ayırt etmeye yarar (Önsöz) | K |
-| I.9.14.3 | Çevirmenlere göre Burhân kesin ve zorunlu bilginin ilke ve kurallarını verir; felsefenin ideal yöntemini oluşturur (Önsöz) | K |
-
-### I.9.15 Bu bâbın Claude tenkitleri (bu yapraklar Fârâbî'nin değil Claude'un sözüdür; hepsi Z)
-
-| No | Cümle | Cins |
-| :-- | :-- | :-- |
-| I.9.15.1 | **Claude çıkarımı (teyitsiz): kesinlik kipi her halkaya yazılır.** Fârâbî burhânı yalnız **zorunlu kesin** için tanımlar; zorunlu olmayan kesin (belirli vakitte kesin, tarihî vâkıa) onun burhân tanımının dışındadır. Bizim H1–H3 (Vâcib, tevhid, bildirmenin imkânı) zorunlu hükümler; H4–H5'in vukû' kanadı (Kur'ân'ın bu bildirim olması, Muhammed'in peygamberliğinin olması) **belirli vakitte kesin** olandır. Bu yüzden her halkanın yanına 'zorunlu / zorunlu olmayan kesin' işareti yazılmalıdır; padişaha açık suâl (S32) | Z |
-| I.9.15.2 | **Claude çıkarımı (teyitsiz): Vâcibü'l-vücûdun 'niçin'i yoktur.** Fârâbî'nin üçlüsünde (enne, lime, mutlak) yalnız varlığı veren burhân 'delil'dir; bir şeyin sebebi yoksa onun 'lime' burhânı kurulamaz. Vâcib'in sebebi olmadığından onun ispatı Fârâbî'nin ölçüsüyle ancak 'enne' (yalnız varlık) olabilir. Bu sayfalar vâcibü'l-vücûd ispatından söz etmez; bu cümle Claude'un çıkarımıdır ve padişahın 'bir yerden bir yere gibi gözükmüyor' sorusuna cevap adayıdır; 'sıddîkîn' adının bu üçlüde yeri aranmalıdır | Z |
-| I.9.15.3 | **Claude çıkarımı (teyitsiz): 'burhân-ı innî' tanım ihtilafı.** Bizim I.4.2.A.1 burhân-ı inniyi 'eserden müessire geçiş' diye yönle tanımlar; Fârâbî burhânü enne'yi 'yalnız varlık veren' diye **verdiği bilgiyle** tanımlar. I.2.5'in ölçüsüne göre bu **kapsam farkı** olabilir; yoklanmadan iki tanım yan yana konmaz | Z |
-| I.9.15.4 | **Claude çıkarımı (teyitsiz): ilk ilkelerin kaynağı savunması.** I.9.5'teki regres argümanı (kaynağı bilinmeden kullanılamıyorsa ve kaynak ancak onlarla biliniyorsa hiçbir şeyin bilgisine ulaşılamaz) V.0.3'teki ortak zemin ve I.3.3.7'deki 'evveliyyât ispat edilmez, gösterilir' hükmünün klasik bir gerekçesidir; 'duyu yetmez' argümanı (I.9.5, s.6) duyuculuğu dile getiren muhatap yaprağına cevap adayıdır | Z |
-| I.9.15.5 | **Claude çıkarımı (teyitsiz): iki ölçek vardır.** Bizim ölçek (yakîn, zan-ı gâlib, zan, şek, vehim; I.3.1) **hükme bağlılığın derecesini** ölçer; Fârâbî'nin ölçeği (yakîn, yakîne yakın = cedelî, nefsin sükûnu = hatabî) **muânidin durumunu** ölçer. İkisinin birbirine çevrilip çevrilemeyeceği yoklanmadı; çevrilemiyorsa ikisi ayrı eksen olarak kitapta yan yana durur | Z |
-| I.9.15.6 | **Claude çıkarımı (teyitsiz): hiperkenar türleri.** 39 terkip kipi ve 'varlık / sebep / ikisi' etiketi, ispat ağı hiperkenarlarının (3-I 233) **türü** olarak kullanılabilir; ama bu terkipler tanım–cins–fasıl nispetleri üzerinedir (zâtî araz ispatı) ve Allah'ın varlığı gibi bir hükme doğrudan uygulandığı yoktur; uygulama alanı yoklanmadan hiperkenar şemasına konmaz | Z |
-| I.9.15.7 | **Claude çıkarımı (teyitsiz): 'kaç usul' sorusuna kısmî cevap.** Bu 24 sayfa ispat usullerinin (kaynağa veya yöne göre) sayısını vermez; burhânı **verdiği bilgiye** (varlık, sebep, ikisi), **önceliğe** (önce–sonra dört sınıf), **sebebe** (dört sebep × dört ikili) ve **terkibe** (39 kip) göre sınıflar. Bunlar bizim 5 kümelik usul tasnifinin (S31) kaynak ekseninde değil, **mantık ekseninde**dir; yeni bir eksen adayıdır | Z |
-
-**Yaprak sayısı (betikle sayıldı): 254** (I.9.1–I.9.14: 208; kipler: 39; tenkitler: 7).
+| I.9.1 | I.3.8 (tasdik) · I.2.8 (tam ve eksik tasavvur) |
+| I.9.2 | I.3.9 (derece, muânid) · I.3.10 (tanıklık) |
+| I.9.3 | I.3.11 |
+| I.9.4 | I.3.12 |
+| I.9.5 | I.3.13 |
+| I.9.6 | I.4.6 |
+| I.9.7 | I.4.7 |
+| I.9.8 | I.4.8 |
+| I.9.9 | I.4.9 (+ I.4.9-K kipler) |
+| I.9.10 | I.4.10 |
+| I.9.11 | I.4.11 |
+| I.9.12 | I.4.12 · I.4.13 |
+| I.9.13 | I.2.8 |
+| I.9.14 | I.3.14 |
+| I.9.15 (Claude tenkitleri) | ilgili fasılların sonuna dağıldı (I.3.9, I.3.11, I.3.13, I.4.6, I.4.9) |
 
 ---
 
@@ -1005,4 +1047,4 @@ Yaprak sayıları (cins sütunundan sayıldı, sayımın doğruluğu aşağıdak
 5. Yaprakları **ben** yazdım; kaynakları baştan sona okuyarak **doğrulama** her bâbın yazımından önce yapılacak.
 6. **I.1.10–I.1.13 başka bir yapay zekânın metninden alındı** (`DESTEK/`). Metin üç yerde kendi usulünü çiğniyor: çapraz esas (I.1.11.8), ispatsız hasır iddiası (I.1.11.7), ispatsız "her çelişki bir eksendir" (I.1.12.10). Bu üçü **Z** işaretlendi, kitaba cümle olarak girmez; yalnız işaretiyle girer.
 7. Metnin en değerli bulgusu **I.1.13.3**: doygunluk testi zannîdir; "diğer kolu yok" iddiasını **yakînî** yapabilen tek yol aklî hasırdır. Bu, padişahın I.1.4.4 hedefinin (öyle bir kol bırakmayacak tasnif) hangi şartla ulaşılabilir olduğunu söyler: **saik tasnifi, ancak aklî hasırla kurulursa kapalıdır.**
-8. **I.9 Fârâbî'den alınanlar (3-I 235):** 254 yaprağın 244'ü (205 cümle + 39 kip) Fârâbî'nin (OCR Türkçe çeviri) sözüdür, çevirinin anlamı Arapçayla **doğrulanmadı**; 7'si Claude'un tenkididir ve **Z**dir; 3'ü çevirmenlerin Önsözü'dür. Yaprak testi (I.1.8.3) bütün yapraklara **uygulanmadı**: terkip kipi yaprakları tek cümle fakat çok parçalıdır (şema, sonuç, misal); kitap metnine girerken bölünecektir.
+8. **Fârâbî'den alınanlar (3-I 235; 3-I 236'da I.2.8, I.3.8–I.3.14, I.4.6–I.4.13, I.6.6, I.7.6'ya dağıtıldı):** 254 yaprağın 244'ü (205 cümle + 39 kip) Fârâbî'nin (OCR Türkçe çeviri) sözüdür, çevirinin anlamı Arapçayla **doğrulanmadı**; 7'si Claude'un tenkididir ve **Z**dir; 3'ü çevirmenlerin Önsözü'dür. Yaprak testi (I.1.8.3) bütün yapraklara **uygulanmadı**: terkip kipi yaprakları tek cümle fakat çok parçalıdır (şema, sonuç, misal); kitap metnine girerken bölünecektir.

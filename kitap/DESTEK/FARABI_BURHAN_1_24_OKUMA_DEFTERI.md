@@ -1,6 +1,6 @@
 # FÂRÂBÎ, KİTÂBÜ'L-BURHÂN s.1–24 -- OKUMA DEFTERİ VE BÖLÜM ÖZETİ (3-I 235)
 
-**Dürüstlük kaydı.** Kaynak: archive.org OCR, Türkçe çeviri (Ömer Türker, Ömer Mahir Alper). Arapça sayfalar okunmadı. Gerçek metinle ve Arapçayla doğrulanmadı (3-A 25-E); anlamı şüpheli yerler **işaretli**. Padişah (3-I 235): s.24'e kadar, seçmece yapılmaz, bizde olmayan hepsi alınır. Alınanlar `DESME_KISIM_I.md` I.9'da (254 yaprak); burada okuma kaydı, bizdeki karşılık tablosu ve açık suâller vardır.
+**Dürüstlük kaydı.** Kaynak: archive.org OCR, Türkçe çeviri (Ömer Türker, Ömer Mahir Alper). Arapça sayfalar okunmadı. Gerçek metinle ve Arapçayla doğrulanmadı (3-A 25-E); anlamı şüpheli yerler **işaretli**. Padişah (3-I 235): s.24'e kadar, seçmece yapılmaz, bizde olmayan hepsi alınır. Alınanlar `DESME_KISIM_I.md`'de **fasıl fasıl** (I.2.8, I.3.8–I.3.14, I.4.6–I.4.13, I.6.6, I.7.6; toplam 265 yaprak; 3-I 236'da eski I.9 dağıtıldı); burada okuma kaydı, bizdeki karşılık tablosu ve açık suâller vardır.
 
 ## 1. Sayfa defteri (basılı sayfa; OCR iyi, sayfa sonu gürültüsü hariç)
 
