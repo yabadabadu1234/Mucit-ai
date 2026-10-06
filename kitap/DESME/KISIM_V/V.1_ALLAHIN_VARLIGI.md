@@ -236,7 +236,7 @@
 | V.1.4.142 | Veritabanı: `Q03.c2/U14` (simetri kırılması, zan) eklendi; `k_sebep_istemez` düzeltildi; ölçüm değişimi yukarıdadır | K |
 | V.1.4.143 | Dürüst hüküm: burhan gelmedi; “ezelî mümkin açıklamasız var olabilir mi” sorusu, kesinlik ölçeğinin evvelî seviyesinde bir iddiaya (tereccuh bilâ müreccih muhaldir) bağlı kalıyor; kitap onu ilke olarak açıkça yazmalıdır | K |
 
-#### V.1.4.144–V.1.4.159 Vahiy malumatı **[öncül değildir]** (padişahın isteği, 3-I 239)
+#### V.1.4.144–V.1.4.163 Vahiy malumatı **ve dairesellik tespiti** **[öncül değildir]** (padişahın isteği, 3-I 239)
 
 | No | Cümle | Cins |
 | :-- | :-- | :-- |
@@ -256,6 +256,10 @@
 | V.1.4.157 | Bu hadis ilkeye delil değil, Müslüman için **vesvese devâsıdır**: sebep sorusunu Yaratıcı’ya taşıyan zincirde durmak ve sığınmak; kitabın V.1.4.8 cevabıyla (Vâcib’de sebep sorusu tanımına aykırıdır) aynı yöndedir (çıkarım **Claude’undur**); muhatap nazarında ispatsız bildirimdir | K |
 | V.1.4.158 | Araştırma sınırı: “sebepsiz var olma imkânsızdır” ilkesini biçimsel koyan veya kuantum rastgeleliğine değinen bir ayet veya hadis **bulunamadı**; en yakını Tûr 52/35’tir; bu hüküm tefsir ve hadis külliyatı **okunarak** değil ayet metni ve tek bir hadis aranarak verilmiştir (kitap okumak için padişaha sorulur, 3-I 230) | Z |
 | V.1.4.159 | Karar (3-I 239): ilke şimdilik evvelî ilan edilir; yaklaşma usulü Kısım I I.7.7’de yazılır; katiyet işareti yükseltilmez | K |
+| V.1.4.160 | Padişahın tespiti (3-I 240): evvelî farz edilip Kur’ân ispatlanır, sonra Kur’ân’da “bu ilke doğrudur” denmesi kısırdöngüdür; bu yüzden V.1.4.144–159 bloğu teyit olarak kullanılmaz | K |
+| V.1.4.161 | Ölçüm: ilkeyle ilgili 13 zayıf aile kaldırılınca 109 hücreden 46’sı İSPATSIZ olur; Vâcib’in varlığı (Q02.c1) ve ilim, irade, kudret, hayat, kemâl, ibadet hücreleri İSPATSIZ’dır; KAT’Î kalan 37 hücre “Vâcib ise” diye tanımdan türeyen şartlı hücrelerdir | K |
+| V.1.4.162 | Nizam delili ilimli ve iradeli bir fâilin varlığına işaret eder (Q16.c3, zan-ı gâlib, ilkeden bağımsız ölçüldü); fâilin Vâcib olduğu ayrı bir köprü ister (`k_fail_vacib`), köprü varlık ilkesine dayanır; veritabanında bu köprü önceki sürümde gizliydi ve açıkça eklendi | K |
+| V.1.4.163 | Aranan başka usul: ilkeye dayanmayan yoldan Vâcib’in varlığı ve sıfatları; şıklar (ters sıra, nizam ve haber, kümülatif ağ, şartlı bırakma) DESTEK/ISPAT_YONU_ALTERNATIFLERI.md’de sunuldu; karar padişahındır (S37) | K |
 
 ### V.1.5 Neticenin hududu
 

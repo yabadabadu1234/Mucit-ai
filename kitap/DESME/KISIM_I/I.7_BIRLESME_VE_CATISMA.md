@@ -79,4 +79,13 @@
 | I.7.7.8 | Sınır: evvelî ilanı bir iddiadır ve muhatap için delil değildir; evveliyyât sayımının kendisi tartışmalıdır (V.0 tenkit) | Z |
 | I.7.7.9 | Vahiy malumatı bu usulün dışında yazılır: delil değil bildirilen bilgi olarak, muhatap nazarında ispatlı veya ispatsız işaretiyle (V.1.4.144–159; 3-I 239) | K |
 
+### I.7.8 Dairesellik kaidesi (padişah kararı 3-I 240; üçüncü yaprak Claude çıkarımı)
+
+| No | Cümle | Cins |
+| :-- | :-- | :-- |
+| I.7.8.1 | **Dairesellik kaidesi (padişah, 3-I 240):** bir ilke farz veya evvelî ilan edilerek kurulan zincirin sonunda vahiy o ilkeyi doğru diye teyit ederse bu teyit delil sayılmaz; kısırdöngüdür | K |
+| I.7.8.2 | Farz edilen ilkeyle kurulan zincir şartlı kalır ve şart açıkça yazılır; vahyin teyidi yalnız Müslüman okuyucuya malumat olarak, öncül dışı bir blokta yazılır | K |
+| I.7.8.3 | İlke, vahyin doğruluğunu kuran zincirin dışında kurulabiliyorsa daire yoktur: vahyin doğruluğu ilkeye dayanmıyorsa vahyin ilkeyi bildirmesi haber olarak kullanılabilir (H4’e dayalı; Claude çıkarımı) | K |
+| I.7.8.4 | Hangi zincirin ilkeye dayanmadığı ölçülür (veritabanı: ilke ailelerini kaldırınca hangi hücre ayakta kalır); bu ölçü ispat değil bağımlılık haritasıdır | Z |
+
 ---

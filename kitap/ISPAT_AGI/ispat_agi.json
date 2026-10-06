@@ -1447,6 +1447,15 @@
    "aile": "curie",
    "zayif": 1,
    "not_": "Pierre Curie 1894, hafızadan, yoklanmadı; yerel tecrübedir, kendiliğinden kırılma örnekleri kırıcı olarak düzenek ve dalgalanma gösterir; bütüne taşınması tekdüzelik köprüsüne bağlıdır"
+  },
+  {
+   "id": "k_fail_vacib",
+   "metin": "Nizamı kuran ilimli ve iradeli fâil, mümkin olsaydı kendi varlığı için bir müreccih isterdi ve müreccihler zinciri bir Vâcib’de kapanırdı; öyleyse bu fâil Vâcib’dir veya Vâcib’e dayanır.",
+   "tur": "turetilmis",
+   "kat": "zan-ı gâlib",
+   "aile": "sebep-ilkesi-varlik",
+   "zayif": 1,
+   "not_": "nizam delili yalnız ilimli ve iradeli bir fâile işaret eder; fâilin Vâcib olması bu köprüyle gelir ve köprü varlık ilkesine dayanır (ISPAT_YONU_ALTERNATIFLERI.md); köprü önceki sürümde yazılmamıştı"
   }
  ],
  "soru": [
@@ -3372,12 +3381,14 @@
    "en_iyi": "Q15.c1/U17",
    "ispat_say": 3,
    "W": [
+    "k_fail_vacib",
     "k_muhtac_ibadet",
     "k_tercihsiz_hal"
    ],
    "fam": [
     "ibadet-tanimi",
-    "sebep-ilkesi-hal"
+    "sebep-ilkesi-hal",
+    "sebep-ilkesi-varlik"
    ],
    "yol": "34",
    "yol_altkume": 6,
@@ -3405,12 +3416,14 @@
    "en_iyi": "Q15.c2/U07",
    "ispat_say": 3,
    "W": [
+    "k_fail_vacib",
     "k_muhtac_ibadet",
     "k_tercihsiz_hal"
    ],
    "fam": [
     "ibadet-tanimi",
-    "sebep-ilkesi-hal"
+    "sebep-ilkesi-hal",
+    "sebep-ilkesi-varlik"
    ],
    "yol": "6",
    "yol_altkume": 7,
@@ -3443,12 +3456,14 @@
    "en_iyi": "Q15.c3/U08#dislama",
    "ispat_say": 3,
    "W": [
+    "k_fail_vacib",
     "k_muhtac_ibadet",
     "k_tercihsiz_hal"
    ],
    "fam": [
     "ibadet-tanimi",
-    "sebep-ilkesi-hal"
+    "sebep-ilkesi-hal",
+    "sebep-ilkesi-varlik"
    ],
    "yol": "8",
    "yol_altkume": 7,
@@ -4635,10 +4650,12 @@
    "en_iyi": "Q10.hikmet.c1/U25",
    "ispat_say": 2,
    "W": [
+    "k_fail_vacib",
     "k_gaye"
    ],
    "fam": [
-    "kemal"
+    "kemal",
+    "sebep-ilkesi-varlik"
    ],
    "yol": "2",
    "yol_altkume": 3,
@@ -6216,13 +6233,18 @@
    "kismi": "",
    "prem": [
     "m_nizam",
-    "m_ihkam"
+    "m_ihkam",
+    "k_fail_vacib"
    ],
    "katman": 1,
    "kat": 2,
    "durum": "ZAN-I GÂLİB",
-   "W": [],
-   "fam": [],
+   "W": [
+    "k_fail_vacib"
+   ],
+   "fam": [
+    "sebep-ilkesi-varlik"
+   ],
    "yol": "1"
   },
   {
@@ -7083,16 +7105,19 @@
    "prem": [
     "m_nizam",
     "m_ihkam",
-    "k_ihkam_ilim"
+    "k_ihkam_ilim",
+    "k_fail_vacib"
    ],
    "katman": 1,
    "kat": 2,
    "durum": "ZAN-I GÂLİB",
    "W": [
+    "k_fail_vacib",
     "k_ihkam_ilim"
    ],
    "fam": [
-    "ihkam"
+    "ihkam",
+    "sebep-ilkesi-varlik"
    ],
    "yol": "1"
   },
@@ -7162,16 +7187,19 @@
    "kismi": "",
    "prem": [
     "m_ihkam",
-    "k_ihkam_ilim"
+    "k_ihkam_ilim",
+    "k_fail_vacib"
    ],
    "katman": 1,
    "kat": 2,
    "durum": "ZAN-I GÂLİB",
    "W": [
+    "k_fail_vacib",
     "k_ihkam_ilim"
    ],
    "fam": [
-    "ihkam"
+    "ihkam",
+    "sebep-ilkesi-varlik"
    ],
    "yol": "1"
   },
@@ -7486,16 +7514,19 @@
    "prem": [
     "k_kemal",
     "m_bilinc",
-    "m_ihkam"
+    "m_ihkam",
+    "k_fail_vacib"
    ],
    "katman": 1,
    "kat": 1,
    "durum": "ZANNÎ",
    "W": [
+    "k_fail_vacib",
     "k_kemal"
    ],
    "fam": [
-    "kemal"
+    "kemal",
+    "sebep-ilkesi-varlik"
    ],
    "yol": "1"
   },
@@ -7511,16 +7542,19 @@
    "kismi": "",
    "prem": [
     "k_kemal",
-    "m_bilinc"
+    "m_bilinc",
+    "k_fail_vacib"
    ],
    "katman": 1,
    "kat": 2,
    "durum": "ZAN-I GÂLİB",
    "W": [
+    "k_fail_vacib",
     "k_kemal"
    ],
    "fam": [
-    "kemal"
+    "kemal",
+    "sebep-ilkesi-varlik"
    ],
    "yol": "1"
   },
@@ -7611,12 +7645,14 @@
    "kat": 2,
    "durum": "ZAN-I GÂLİB",
    "W": [
+    "k_fail_vacib",
     "k_muhtac_ibadet",
     "k_tercihsiz_hal"
    ],
    "fam": [
     "ibadet-tanimi",
-    "sebep-ilkesi-hal"
+    "sebep-ilkesi-hal",
+    "sebep-ilkesi-varlik"
    ],
    "yol": "2"
   },
@@ -7659,12 +7695,14 @@
    "kat": 2,
    "durum": "ZAN-I GÂLİB",
    "W": [
+    "k_fail_vacib",
     "k_muhtac_ibadet",
     "k_tercihsiz_hal"
    ],
    "fam": [
     "ibadet-tanimi",
-    "sebep-ilkesi-hal"
+    "sebep-ilkesi-hal",
+    "sebep-ilkesi-varlik"
    ],
    "yol": "2"
   },
@@ -8599,10 +8637,12 @@
    "kat": 2,
    "durum": "ZAN-I GÂLİB",
    "W": [
+    "k_fail_vacib",
     "k_ihkam_ilim"
    ],
    "fam": [
-    "ihkam"
+    "ihkam",
+    "sebep-ilkesi-varlik"
    ],
    "yol": "1"
   },
@@ -8643,16 +8683,19 @@
    "kismi": "",
    "prem": [
     "m_ihkam",
-    "k_ihkam_ilim"
+    "k_ihkam_ilim",
+    "k_fail_vacib"
    ],
    "katman": 1,
    "kat": 2,
    "durum": "ZAN-I GÂLİB",
    "W": [
+    "k_fail_vacib",
     "k_ihkam_ilim"
    ],
    "fam": [
-    "ihkam"
+    "ihkam",
+    "sebep-ilkesi-varlik"
    ],
    "yol": "1"
   },
@@ -8955,17 +8998,20 @@
    "prem": [
     "k_gaye",
     "k_kemal",
-    "m_ihkam"
+    "m_ihkam",
+    "k_fail_vacib"
    ],
    "katman": 1,
    "kat": 2,
    "durum": "ZAN-I GÂLİB",
    "W": [
+    "k_fail_vacib",
     "k_gaye",
     "k_kemal"
    ],
    "fam": [
-    "kemal"
+    "kemal",
+    "sebep-ilkesi-varlik"
    ],
    "yol": "1"
   },
@@ -8984,16 +9030,19 @@
    "kismi": "",
    "prem": [
     "k_gaye",
-    "m_ihkam"
+    "m_ihkam",
+    "k_fail_vacib"
    ],
    "katman": 1,
    "kat": 2,
    "durum": "ZAN-I GÂLİB",
    "W": [
+    "k_fail_vacib",
     "k_gaye"
    ],
    "fam": [
-    "kemal"
+    "kemal",
+    "sebep-ilkesi-varlik"
    ],
    "yol": "1"
   },
@@ -10102,8 +10151,12 @@
    "katman": 2,
    "kat": 2,
    "durum": "ZAN-I GÂLİB",
-   "W": [],
-   "fam": [],
+   "W": [
+    "k_fail_vacib"
+   ],
+   "fam": [
+    "sebep-ilkesi-varlik"
+   ],
    "yol": "1"
   },
   {
@@ -10123,8 +10176,12 @@
    "katman": 2,
    "kat": 2,
    "durum": "ZAN-I GÂLİB",
-   "W": [],
-   "fam": [],
+   "W": [
+    "k_fail_vacib"
+   ],
+   "fam": [
+    "sebep-ilkesi-varlik"
+   ],
    "yol": "1"
   },
   {
@@ -10144,8 +10201,12 @@
    "katman": 2,
    "kat": 2,
    "durum": "ZAN-I GÂLİB",
-   "W": [],
-   "fam": [],
+   "W": [
+    "k_fail_vacib"
+   ],
+   "fam": [
+    "sebep-ilkesi-varlik"
+   ],
    "yol": "1"
   },
   {
@@ -10165,8 +10226,12 @@
    "katman": 2,
    "kat": 2,
    "durum": "ZAN-I GÂLİB",
-   "W": [],
-   "fam": [],
+   "W": [
+    "k_fail_vacib"
+   ],
+   "fam": [
+    "sebep-ilkesi-varlik"
+   ],
    "yol": "1"
   },
   {
@@ -10186,8 +10251,12 @@
    "katman": 2,
    "kat": 2,
    "durum": "ZAN-I GÂLİB",
-   "W": [],
-   "fam": [],
+   "W": [
+    "k_fail_vacib"
+   ],
+   "fam": [
+    "sebep-ilkesi-varlik"
+   ],
    "yol": "1"
   },
   {
@@ -10207,8 +10276,12 @@
    "katman": 2,
    "kat": 2,
    "durum": "ZAN-I GÂLİB",
-   "W": [],
-   "fam": [],
+   "W": [
+    "k_fail_vacib"
+   ],
+   "fam": [
+    "sebep-ilkesi-varlik"
+   ],
    "yol": "1"
   },
   {
@@ -10638,10 +10711,12 @@
    "kat": 2,
    "durum": "ZAN-I GÂLİB",
    "W": [
+    "k_fail_vacib",
     "k_ihkam_ilim"
    ],
    "fam": [
-    "ihkam"
+    "ihkam",
+    "sebep-ilkesi-varlik"
    ],
    "yol": "1"
   },
@@ -10741,10 +10816,12 @@
    "kat": 2,
    "durum": "ZAN-I GÂLİB",
    "W": [
+    "k_fail_vacib",
     "k_ihkam_ilim"
    ],
    "fam": [
-    "ihkam"
+    "ihkam",
+    "sebep-ilkesi-varlik"
    ],
    "yol": "1"
   },
@@ -10844,10 +10921,12 @@
    "kat": 2,
    "durum": "ZAN-I GÂLİB",
    "W": [
+    "k_fail_vacib",
     "k_ihkam_ilim"
    ],
    "fam": [
-    "ihkam"
+    "ihkam",
+    "sebep-ilkesi-varlik"
    ],
    "yol": "1"
   },
@@ -10898,10 +10977,12 @@
    "kat": 2,
    "durum": "ZAN-I GÂLİB",
    "W": [
+    "k_fail_vacib",
     "k_ihkam_ilim"
    ],
    "fam": [
-    "ihkam"
+    "ihkam",
+    "sebep-ilkesi-varlik"
    ],
    "yol": "1"
   },
@@ -10923,10 +11004,12 @@
    "kat": 2,
    "durum": "ZAN-I GÂLİB",
    "W": [
+    "k_fail_vacib",
     "k_ihkam_ilim"
    ],
    "fam": [
-    "ihkam"
+    "ihkam",
+    "sebep-ilkesi-varlik"
    ],
    "yol": "1"
   },
@@ -10973,10 +11056,12 @@
    "kat": 2,
    "durum": "ZAN-I GÂLİB",
    "W": [
+    "k_fail_vacib",
     "k_ihkam_ilim"
    ],
    "fam": [
-    "ihkam"
+    "ihkam",
+    "sebep-ilkesi-varlik"
    ],
    "yol": "1"
   },
@@ -10998,10 +11083,12 @@
    "kat": 2,
    "durum": "ZAN-I GÂLİB",
    "W": [
+    "k_fail_vacib",
     "k_ihkam_ilim"
    ],
    "fam": [
-    "ihkam"
+    "ihkam",
+    "sebep-ilkesi-varlik"
    ],
    "yol": "1"
   },
@@ -11048,10 +11135,12 @@
    "kat": 2,
    "durum": "ZAN-I GÂLİB",
    "W": [
+    "k_fail_vacib",
     "k_ihkam_ilim"
    ],
    "fam": [
-    "ihkam"
+    "ihkam",
+    "sebep-ilkesi-varlik"
    ],
    "yol": "1"
   },
@@ -11073,10 +11162,12 @@
    "kat": 2,
    "durum": "ZAN-I GÂLİB",
    "W": [
+    "k_fail_vacib",
     "k_ihkam_ilim"
    ],
    "fam": [
-    "ihkam"
+    "ihkam",
+    "sebep-ilkesi-varlik"
    ],
    "yol": "1"
   },
@@ -11489,10 +11580,12 @@
    "kat": 1,
    "durum": "ZANNÎ",
    "W": [
+    "k_fail_vacib",
     "k_kemal"
    ],
    "fam": [
-    "kemal"
+    "kemal",
+    "sebep-ilkesi-varlik"
    ],
    "yol": "1"
   },
@@ -11514,10 +11607,12 @@
    "kat": 2,
    "durum": "ZAN-I GÂLİB",
    "W": [
+    "k_fail_vacib",
     "k_kemal"
    ],
    "fam": [
-    "kemal"
+    "kemal",
+    "sebep-ilkesi-varlik"
    ],
    "yol": "1"
   },
@@ -11589,10 +11684,12 @@
    "kat": 1,
    "durum": "ZANNÎ",
    "W": [
+    "k_fail_vacib",
     "k_kemal"
    ],
    "fam": [
-    "kemal"
+    "kemal",
+    "sebep-ilkesi-varlik"
    ],
    "yol": "1"
   },
@@ -11614,10 +11711,12 @@
    "kat": 2,
    "durum": "ZAN-I GÂLİB",
    "W": [
+    "k_fail_vacib",
     "k_kemal"
    ],
    "fam": [
-    "kemal"
+    "kemal",
+    "sebep-ilkesi-varlik"
    ],
    "yol": "1"
   },
@@ -11642,6 +11741,7 @@
    "durum": "ZAN-I GÂLİB",
    "W": [
     "k_beka_muhtac",
+    "k_fail_vacib",
     "k_muhtac_ibadet",
     "k_tercihsiz",
     "k_tercihsiz_hal"
@@ -11671,12 +11771,14 @@
    "kat": 2,
    "durum": "ZAN-I GÂLİB",
    "W": [
+    "k_fail_vacib",
     "k_muhtac_ibadet",
     "k_tercihsiz_hal"
    ],
    "fam": [
     "ibadet-tanimi",
-    "sebep-ilkesi-hal"
+    "sebep-ilkesi-hal",
+    "sebep-ilkesi-varlik"
    ],
    "yol": "2"
   },
@@ -11698,12 +11800,14 @@
    "kat": 2,
    "durum": "ZAN-I GÂLİB",
    "W": [
+    "k_fail_vacib",
     "k_muhtac_ibadet",
     "k_tercihsiz_hal"
    ],
    "fam": [
     "ibadet-tanimi",
-    "sebep-ilkesi-hal"
+    "sebep-ilkesi-hal",
+    "sebep-ilkesi-varlik"
    ],
    "yol": "2"
   },
@@ -11725,12 +11829,14 @@
    "kat": 2,
    "durum": "ZAN-I GÂLİB",
    "W": [
+    "k_fail_vacib",
     "k_muhtac_ibadet",
     "k_tercihsiz_hal"
    ],
    "fam": [
     "ibadet-tanimi",
-    "sebep-ilkesi-hal"
+    "sebep-ilkesi-hal",
+    "sebep-ilkesi-varlik"
    ],
    "yol": "2"
   },
@@ -11752,12 +11858,14 @@
    "kat": 2,
    "durum": "ZAN-I GÂLİB",
    "W": [
+    "k_fail_vacib",
     "k_muhtac_ibadet",
     "k_tercihsiz_hal"
    ],
    "fam": [
     "ibadet-tanimi",
-    "sebep-ilkesi-hal"
+    "sebep-ilkesi-hal",
+    "sebep-ilkesi-varlik"
    ],
    "yol": "2"
   },
@@ -11779,12 +11887,14 @@
    "kat": 2,
    "durum": "ZAN-I GÂLİB",
    "W": [
+    "k_fail_vacib",
     "k_muhtac_ibadet",
     "k_tercihsiz_hal"
    ],
    "fam": [
     "ibadet-tanimi",
-    "sebep-ilkesi-hal"
+    "sebep-ilkesi-hal",
+    "sebep-ilkesi-varlik"
    ],
    "yol": "2"
   },
@@ -11806,12 +11916,14 @@
    "kat": 2,
    "durum": "ZAN-I GÂLİB",
    "W": [
+    "k_fail_vacib",
     "k_muhtac_ibadet",
     "k_tercihsiz_hal"
    ],
    "fam": [
     "ibadet-tanimi",
-    "sebep-ilkesi-hal"
+    "sebep-ilkesi-hal",
+    "sebep-ilkesi-varlik"
    ],
    "yol": "2"
   },
@@ -12518,12 +12630,14 @@
    "kat": 2,
    "durum": "ZAN-I GÂLİB",
    "W": [
+    "k_fail_vacib",
     "k_ihkam_ilim",
     "k_tercihsiz_hal"
    ],
    "fam": [
     "ihkam",
-    "sebep-ilkesi-hal"
+    "sebep-ilkesi-hal",
+    "sebep-ilkesi-varlik"
    ],
    "yol": "1"
   },
@@ -12671,10 +12785,12 @@
    "kat": 2,
    "durum": "ZAN-I GÂLİB",
    "W": [
+    "k_fail_vacib",
     "k_ihkam_ilim"
    ],
    "fam": [
-    "ihkam"
+    "ihkam",
+    "sebep-ilkesi-varlik"
    ],
    "yol": "1"
   },
@@ -12721,10 +12837,12 @@
    "kat": 2,
    "durum": "ZAN-I GÂLİB",
    "W": [
+    "k_fail_vacib",
     "k_ihkam_ilim"
    ],
    "fam": [
-    "ihkam"
+    "ihkam",
+    "sebep-ilkesi-varlik"
    ],
    "yol": "1"
   },
@@ -12746,10 +12864,12 @@
    "kat": 2,
    "durum": "ZAN-I GÂLİB",
    "W": [
+    "k_fail_vacib",
     "k_ihkam_ilim"
    ],
    "fam": [
-    "ihkam"
+    "ihkam",
+    "sebep-ilkesi-varlik"
    ],
    "yol": "1"
   },
@@ -12796,10 +12916,12 @@
    "kat": 2,
    "durum": "ZAN-I GÂLİB",
    "W": [
+    "k_fail_vacib",
     "k_ihkam_ilim"
    ],
    "fam": [
-    "ihkam"
+    "ihkam",
+    "sebep-ilkesi-varlik"
    ],
    "yol": "1"
   },
@@ -20707,7 +20829,7 @@
    ],
    "U30": [
     "HUDUT",
-    "Zayıf halkalar: k_muhtac_ibadet, k_tercihsiz_hal; kısmî kapsam: 0"
+    "Zayıf halkalar: k_fail_vacib, k_muhtac_ibadet, k_tercihsiz_hal; kısmî kapsam: 0"
    ],
    "U31": [
     "YAPILAMAZ",
@@ -20837,7 +20959,7 @@
    ],
    "U30": [
     "HUDUT",
-    "Zayıf halkalar: k_muhtac_ibadet, k_tercihsiz_hal; kısmî kapsam: 0"
+    "Zayıf halkalar: k_fail_vacib, k_muhtac_ibadet, k_tercihsiz_hal; kısmî kapsam: 0"
    ],
    "U31": [
     "YAPILAMAZ",
@@ -20967,7 +21089,7 @@
    ],
    "U30": [
     "HUDUT",
-    "Zayıf halkalar: k_muhtac_ibadet, k_tercihsiz_hal; kısmî kapsam: 0"
+    "Zayıf halkalar: k_fail_vacib, k_muhtac_ibadet, k_tercihsiz_hal; kısmî kapsam: 0"
    ],
    "U31": [
     "YAPILAMAZ",
@@ -26297,7 +26419,7 @@
    ],
    "U30": [
     "HUDUT",
-    "Zayıf halkalar: k_gaye; kısmî kapsam: 0"
+    "Zayıf halkalar: k_fail_vacib, k_gaye; kısmî kapsam: 0"
    ],
    "U31": [
     "YAPILAMAZ",
@@ -42220,8 +42342,10 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "tek delil",
-    [],
+    "ortak zayıf halka: sebep-ilkesi-varlik",
+    [
+     "k_fail_vacib"
+    ],
     0,
     0,
     0
@@ -42273,6 +42397,7 @@
     "hiçbir tek zayıf aile hepsini düşürmez",
     [
      "k_cokluk_terkip",
+     "k_fail_vacib",
      "k_ozdes"
     ],
     0,
@@ -42292,6 +42417,7 @@
     "hiçbir tek zayıf aile hepsini düşürmez",
     [
      "k_cokluk_terkip",
+     "k_fail_vacib",
      "k_ozdes"
     ],
     0,
@@ -42307,8 +42433,10 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "tek delil",
-    [],
+    "ortak zayıf halka: sebep-ilkesi-varlik",
+    [
+     "k_fail_vacib"
+    ],
     0,
     0,
     0
@@ -42323,8 +42451,10 @@
     1,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "tek delil",
-    [],
+    "ortak zayıf halka: sebep-ilkesi-varlik",
+    [
+     "k_fail_vacib"
+    ],
     0,
     0,
     0
@@ -42342,6 +42472,7 @@
     "hiçbir tek zayıf aile hepsini düşürmez",
     [
      "k_cokluk_terkip",
+     "k_fail_vacib",
      "k_ozdes"
     ],
     0,
@@ -42362,6 +42493,7 @@
     "hiçbir tek zayıf aile hepsini düşürmez",
     [
      "k_cokluk_terkip",
+     "k_fail_vacib",
      "k_ozdes"
     ],
     0,
@@ -42564,6 +42696,7 @@
     "hiçbir tek zayıf aile hepsini düşürmez",
     [
      "k_cokluk_terkip",
+     "k_fail_vacib",
      "k_ozdes"
     ],
     0,
@@ -42584,6 +42717,7 @@
     "hiçbir tek zayıf aile hepsini düşürmez",
     [
      "k_cokluk_terkip",
+     "k_fail_vacib",
      "k_ozdes"
     ],
     0,
@@ -42602,7 +42736,8 @@
     "ZAN-I GÂLİB",
     "hiçbir tek zayıf aile hepsini düşürmez",
     [
-     "k_cokluk_terkip"
+     "k_cokluk_terkip",
+     "k_fail_vacib"
     ],
     0,
     0,
@@ -42621,7 +42756,8 @@
     "ZAN-I GÂLİB",
     "hiçbir tek zayıf aile hepsini düşürmez",
     [
-     "k_cokluk_terkip"
+     "k_cokluk_terkip",
+     "k_fail_vacib"
     ],
     0,
     0,
@@ -42641,6 +42777,7 @@
     "hiçbir tek zayıf aile hepsini düşürmez",
     [
      "k_cokluk_terkip",
+     "k_fail_vacib",
      "k_ozdes"
     ],
     0,
@@ -42662,6 +42799,7 @@
     "hiçbir tek zayıf aile hepsini düşürmez",
     [
      "k_cokluk_terkip",
+     "k_fail_vacib",
      "k_ozdes"
     ],
     0,
@@ -42852,8 +42990,10 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "tek delil",
-    [],
+    "ortak zayıf halka: sebep-ilkesi-varlik",
+    [
+     "k_fail_vacib"
+    ],
     0,
     0,
     0
@@ -42885,8 +43025,10 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "tek delil",
-    [],
+    "ortak zayıf halka: sebep-ilkesi-varlik",
+    [
+     "k_fail_vacib"
+    ],
     0,
     0,
     0
@@ -42919,8 +43061,10 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "hiçbir tek zayıf aile hepsini düşürmez",
-    [],
+    "ortak zayıf halka: sebep-ilkesi-varlik",
+    [
+     "k_fail_vacib"
+    ],
     0,
     0,
     0
@@ -42972,8 +43116,10 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "tek delil",
-    [],
+    "ortak zayıf halka: sebep-ilkesi-varlik",
+    [
+     "k_fail_vacib"
+    ],
     0,
     0,
     0
@@ -43005,8 +43151,10 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "tek delil",
-    [],
+    "ortak zayıf halka: sebep-ilkesi-varlik",
+    [
+     "k_fail_vacib"
+    ],
     0,
     0,
     0
@@ -43039,8 +43187,10 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "hiçbir tek zayıf aile hepsini düşürmez",
-    [],
+    "ortak zayıf halka: sebep-ilkesi-varlik",
+    [
+     "k_fail_vacib"
+    ],
     0,
     0,
     0
@@ -44053,8 +44203,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ihkam",
+    "ortak zayıf halka: ihkam, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_ihkam_ilim"
     ],
     0,
@@ -44071,8 +44222,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ihkam",
+    "ortak zayıf halka: ihkam, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_ihkam_ilim"
     ],
     0,
@@ -44089,8 +44241,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ihkam",
+    "ortak zayıf halka: ihkam, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_ihkam_ilim"
     ],
     0,
@@ -44108,8 +44261,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ihkam",
+    "ortak zayıf halka: ihkam, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_ihkam_ilim"
     ],
     0,
@@ -44493,8 +44647,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ihkam",
+    "ortak zayıf halka: ihkam, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_ihkam_ilim"
     ],
     0,
@@ -44511,8 +44666,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ihkam",
+    "ortak zayıf halka: ihkam, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_ihkam_ilim"
     ],
     0,
@@ -44782,8 +44938,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ihkam",
+    "ortak zayıf halka: ihkam, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_ihkam_ilim"
     ],
     0,
@@ -45096,6 +45253,7 @@
     "ZAN-I GÂLİB",
     "hiçbir tek zayıf aile hepsini düşürmez",
     [
+     "k_fail_vacib",
      "k_gaye",
      "k_ihkam_ilim",
      "k_kemal"
@@ -45396,8 +45554,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ihkam",
+    "ortak zayıf halka: ihkam, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_ihkam_ilim"
     ],
     0,
@@ -45414,8 +45573,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ihkam",
+    "ortak zayıf halka: ihkam, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_ihkam_ilim"
     ],
     0,
@@ -45469,8 +45629,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ihkam",
+    "ortak zayıf halka: ihkam, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_ihkam_ilim"
     ],
     0,
@@ -45488,8 +45649,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ihkam",
+    "ortak zayıf halka: ihkam, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_ihkam_ilim"
     ],
     0,
@@ -45563,8 +45725,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ihkam",
+    "ortak zayıf halka: ihkam, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_ihkam_ilim"
     ],
     0,
@@ -45598,8 +45761,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ihkam",
+    "ortak zayıf halka: ihkam, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_ihkam_ilim"
     ],
     0,
@@ -45634,8 +45798,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ihkam",
+    "ortak zayıf halka: ihkam, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_ihkam_ilim"
     ],
     0,
@@ -45689,8 +45854,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ihkam",
+    "ortak zayıf halka: ihkam, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_ihkam_ilim"
     ],
     0,
@@ -45724,8 +45890,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ihkam",
+    "ortak zayıf halka: ihkam, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_ihkam_ilim"
     ],
     0,
@@ -45760,8 +45927,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ihkam",
+    "ortak zayıf halka: ihkam, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_ihkam_ilim"
     ],
     0,
@@ -45851,8 +46019,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ihkam",
+    "ortak zayıf halka: ihkam, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_ihkam_ilim"
     ],
     0,
@@ -45887,8 +46056,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ihkam",
+    "ortak zayıf halka: ihkam, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_ihkam_ilim"
     ],
     0,
@@ -45942,8 +46112,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ihkam",
+    "ortak zayıf halka: ihkam, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_ihkam_ilim"
     ],
     0,
@@ -45977,8 +46148,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ihkam",
+    "ortak zayıf halka: ihkam, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_ihkam_ilim"
     ],
     0,
@@ -46013,8 +46185,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ihkam",
+    "ortak zayıf halka: ihkam, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_ihkam_ilim"
     ],
     0,
@@ -47147,8 +47320,9 @@
     0,
     "zan",
     "ZANNÎ",
-    "ortak zayıf halka: kemal",
+    "ortak zayıf halka: kemal, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_kemal"
     ],
     0,
@@ -47219,8 +47393,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: kemal",
+    "ortak zayıf halka: kemal, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_kemal"
     ],
     0,
@@ -47292,8 +47467,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: kemal",
+    "ortak zayıf halka: kemal, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_kemal"
     ],
     0,
@@ -47421,8 +47597,9 @@
     0,
     "zan",
     "ZANNÎ",
-    "ortak zayıf halka: kemal",
+    "ortak zayıf halka: kemal, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_kemal"
     ],
     0,
@@ -47493,8 +47670,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: kemal",
+    "ortak zayıf halka: kemal, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_kemal"
     ],
     0,
@@ -47566,8 +47744,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: kemal",
+    "ortak zayıf halka: kemal, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_kemal"
     ],
     0,
@@ -47695,8 +47874,9 @@
     0,
     "zan",
     "ZANNÎ",
-    "ortak zayıf halka: kemal",
+    "ortak zayıf halka: kemal, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_kemal"
     ],
     0,
@@ -47767,8 +47947,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: kemal",
+    "ortak zayıf halka: kemal, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_kemal"
     ],
     0,
@@ -47840,8 +48021,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: kemal",
+    "ortak zayıf halka: kemal, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_kemal"
     ],
     0,
@@ -47920,6 +48102,7 @@
     "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal, sebep-ilkesi-varlik",
     [
      "k_beka_muhtac",
+     "k_fail_vacib",
      "k_muhtac_ibadet",
      "k_tercihsiz",
      "k_tercihsiz_hal"
@@ -47937,8 +48120,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal",
+    "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_muhtac_ibadet",
      "k_tercihsiz_hal"
     ],
@@ -47956,9 +48140,10 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal",
+    "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal, sebep-ilkesi-varlik",
     [
      "k_beka_muhtac",
+     "k_fail_vacib",
      "k_muhtac_ibadet",
      "k_tercihsiz",
      "k_tercihsiz_hal"
@@ -47995,6 +48180,7 @@
     "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal, sebep-ilkesi-varlik",
     [
      "k_beka_muhtac",
+     "k_fail_vacib",
      "k_muhtac_ibadet",
      "k_tercihsiz",
      "k_tercihsiz_hal"
@@ -48013,8 +48199,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal",
+    "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_muhtac_ibadet",
      "k_tercihsiz_hal"
     ],
@@ -48033,9 +48220,10 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal",
+    "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal, sebep-ilkesi-varlik",
     [
      "k_beka_muhtac",
+     "k_fail_vacib",
      "k_muhtac_ibadet",
      "k_tercihsiz",
      "k_tercihsiz_hal"
@@ -48055,8 +48243,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal",
+    "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_muhtac_ibadet",
      "k_tercihsiz_hal"
     ],
@@ -48073,8 +48262,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal",
+    "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_muhtac_ibadet",
      "k_tercihsiz_hal"
     ],
@@ -48092,8 +48282,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal",
+    "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_muhtac_ibadet",
      "k_tercihsiz_hal"
     ],
@@ -48110,8 +48301,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal",
+    "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_muhtac_ibadet",
      "k_tercihsiz_hal"
     ],
@@ -48129,8 +48321,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal",
+    "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_muhtac_ibadet",
      "k_tercihsiz_hal"
     ],
@@ -48148,8 +48341,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal",
+    "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_muhtac_ibadet",
      "k_tercihsiz_hal"
     ],
@@ -48168,8 +48362,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal",
+    "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_muhtac_ibadet",
      "k_tercihsiz_hal"
     ],
@@ -48208,8 +48403,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal",
+    "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_muhtac_ibadet",
      "k_tercihsiz_hal"
     ],
@@ -48227,9 +48423,10 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal",
+    "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal, sebep-ilkesi-varlik",
     [
      "k_beka_muhtac",
+     "k_fail_vacib",
      "k_muhtac_ibadet",
      "k_tercihsiz",
      "k_tercihsiz_hal"
@@ -48247,8 +48444,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal",
+    "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_muhtac_ibadet",
      "k_tercihsiz_hal"
     ],
@@ -48266,9 +48464,10 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal",
+    "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal, sebep-ilkesi-varlik",
     [
      "k_beka_muhtac",
+     "k_fail_vacib",
      "k_muhtac_ibadet",
      "k_tercihsiz",
      "k_tercihsiz_hal"
@@ -48287,8 +48486,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal",
+    "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_muhtac_ibadet",
      "k_tercihsiz_hal"
     ],
@@ -48307,9 +48507,10 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal",
+    "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal, sebep-ilkesi-varlik",
     [
      "k_beka_muhtac",
+     "k_fail_vacib",
      "k_muhtac_ibadet",
      "k_tercihsiz",
      "k_tercihsiz_hal"
@@ -48347,8 +48548,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal",
+    "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_muhtac_ibadet",
      "k_tercihsiz_hal"
     ],
@@ -48368,6 +48570,7 @@
     "ZAN-I GÂLİB",
     "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal",
     [
+     "k_fail_vacib",
      "k_muhtac_ibadet",
      "k_tercihsiz_hal"
     ],
@@ -48384,8 +48587,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal",
+    "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_muhtac_ibadet",
      "k_tercihsiz_hal"
     ],
@@ -48405,6 +48609,7 @@
     "ZAN-I GÂLİB",
     "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal",
     [
+     "k_fail_vacib",
      "k_muhtac_ibadet",
      "k_tercihsiz_hal"
     ],
@@ -48422,8 +48627,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal",
+    "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_muhtac_ibadet",
      "k_tercihsiz_hal"
     ],
@@ -48444,6 +48650,7 @@
     "ZAN-I GÂLİB",
     "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal",
     [
+     "k_fail_vacib",
      "k_muhtac_ibadet",
      "k_tercihsiz_hal"
     ],
@@ -48500,6 +48707,7 @@
     "ZAN-I GÂLİB",
     "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal",
     [
+     "k_fail_vacib",
      "k_muhtac_ibadet",
      "k_tercihsiz_hal"
     ],
@@ -48520,6 +48728,7 @@
     "ZAN-I GÂLİB",
     "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal",
     [
+     "k_fail_vacib",
      "k_muhtac_ibadet",
      "k_tercihsiz_hal"
     ],
@@ -48539,6 +48748,7 @@
     "ZAN-I GÂLİB",
     "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal",
     [
+     "k_fail_vacib",
      "k_muhtac_ibadet",
      "k_tercihsiz_hal"
     ],
@@ -48559,6 +48769,7 @@
     "ZAN-I GÂLİB",
     "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal",
     [
+     "k_fail_vacib",
      "k_muhtac_ibadet",
      "k_tercihsiz_hal"
     ],
@@ -48579,6 +48790,7 @@
     "ZAN-I GÂLİB",
     "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal",
     [
+     "k_fail_vacib",
      "k_muhtac_ibadet",
      "k_tercihsiz_hal"
     ],
@@ -48600,6 +48812,7 @@
     "ZAN-I GÂLİB",
     "ortak zayıf halka: ibadet-tanimi, sebep-ilkesi-hal",
     [
+     "k_fail_vacib",
      "k_muhtac_ibadet",
      "k_tercihsiz_hal"
     ],
@@ -50335,8 +50548,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ihkam, sebep-ilkesi-hal",
+    "ortak zayıf halka: ihkam, sebep-ilkesi-hal, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_ihkam_ilim",
      "k_tercihsiz_hal"
     ],
@@ -50533,8 +50747,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ihkam",
+    "ortak zayıf halka: ihkam, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_ihkam_ilim"
     ],
     0,
@@ -50624,8 +50839,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ihkam",
+    "ortak zayıf halka: ihkam, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_ihkam_ilim"
     ],
     0,
@@ -50659,8 +50875,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ihkam",
+    "ortak zayıf halka: ihkam, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_ihkam_ilim"
     ],
     0,
@@ -50695,8 +50912,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ihkam",
+    "ortak zayıf halka: ihkam, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_ihkam_ilim"
     ],
     0,
@@ -50750,8 +50968,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ihkam",
+    "ortak zayıf halka: ihkam, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_ihkam_ilim"
     ],
     0,
@@ -50785,8 +51004,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ihkam",
+    "ortak zayıf halka: ihkam, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_ihkam_ilim"
     ],
     0,
@@ -50821,8 +51041,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: ihkam",
+    "ortak zayıf halka: ihkam, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_ihkam_ilim"
     ],
     0,
@@ -51770,8 +51991,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: kemal",
+    "ortak zayıf halka: kemal, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_gaye",
      "k_kemal"
     ],
@@ -51788,8 +52010,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: kemal",
+    "ortak zayıf halka: kemal, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_gaye"
     ],
     1,
@@ -51806,8 +52029,9 @@
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: kemal",
+    "ortak zayıf halka: kemal, sebep-ilkesi-varlik",
     [
+     "k_fail_vacib",
      "k_gaye",
      "k_kemal"
     ],
@@ -52919,6 +53143,7 @@
      "durum": "ZAN-I GÂLİB",
      "kat": 2,
      "W": [
+      "k_fail_vacib",
       "k_muhtac_ibadet",
       "k_tercihsiz_hal"
      ]
@@ -53145,6 +53370,7 @@
      "durum": "ZAN-I GÂLİB",
      "kat": 2,
      "W": [
+      "k_fail_vacib",
       "k_muhtac_ibadet",
       "k_tercihsiz_hal"
      ]
@@ -53804,6 +54030,7 @@
      "durum": "ZAN-I GÂLİB",
      "kat": 2,
      "W": [
+      "k_fail_vacib",
       "k_muhtac_ibadet",
       "k_tercihsiz_hal"
      ]
@@ -56278,6 +56505,7 @@
    "ad": "sebep-ilkesi-varlik",
    "onermeler": [
     "k_beka_muhtac",
+    "k_fail_vacib",
     "k_hadis_muhdis",
     "k_tercihsiz"
    ],
@@ -56313,6 +56541,17 @@
    "ad": "k_beka_muhtac",
    "onermeler": [
     "k_beka_muhtac"
+   ],
+   "hucre_say": 0,
+   "hucreler": [],
+   "felsefe_say": 0,
+   "felsefeler": []
+  },
+  {
+   "tur": "onerme",
+   "ad": "k_fail_vacib",
+   "onermeler": [
+    "k_fail_vacib"
    ],
    "hucre_say": 0,
    "hucreler": [],
@@ -56662,6 +56901,6 @@
   "soru": 33,
   "hucre_say": 109,
   "felsefe_say": 42,
-  "onerme": 89
+  "onerme": 90
  }
 }

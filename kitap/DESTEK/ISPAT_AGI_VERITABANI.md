@@ -11,7 +11,7 @@
 | Dosya | İş |
 | :-- | :-- |
 | `veri_usul.py` | 35 usul kaydı: tanım, nasıl yapılır, şart, hudut, safsata, katiyet tavanı, misal |
-| `veri_onerme.py` | 89 önerme (evveliyyât, müşâhede, tanım, mantık, türetilmiş); zayıf halkalar `zayif` ve `aile` ile işaretli |
+| `veri_onerme.py` | 90 önerme (evveliyyât, müşâhede, tanım, mantık, türetilmiş); zayıf halkalar `zayif` ve `aile` ile işaretli |
 | `veri_soru.py` | 33 suâl (Q18 zemin, Q00 sebep ilkesi, Q01–Q09, Q11–Q17, 15 sıfat suâli Q10.*), 109 hücre, 42 felsefe, 25 "olmasaydı" kaydı, **sıfat tasnifi** (6 zâtî, 8 sübûtî, 4 fiilî) |
 | `veri_ispat.py` | Elle yazılmış 165 doğrudan ispat kaydı (hücre, usul, öncül listesi, özet) |
 | `kural.py` | Bir usulün bir hücrede **neden yapılamayacağını** söyleyen kurallar |
@@ -43,7 +43,7 @@ Yeniden kurmak: `python3 insa.py` (kontroller kırmızıysa çıktıda KIRMIZI g
 
 | Ölçü | Değer |
 | :-- | :-- |
-| Suâl · hücre · önerme · usul (kabul edilmiş) · felsefe | 33 · 109 · 89 · 32 · 42 |
+| Suâl · hücre · önerme · usul (kabul edilmiş) · felsefe | 33 · 109 · 90 · 32 · 42 |
 | İspat kaydı (doğrudan · sibr · dışlama · alt suâl) | 165 · 25 · 152 · 1 = 343 |
 | Hücre durumu | KAT'Î 37 · KAT'Î-ŞARTLI 45 · ZAN-I GÂLİB 21 · İHTİLAFLI 6 (ispatsız DOĞRU/YANLIŞ hücre yok) |
 | Matris (3488 satır) | YAPILAMAZ 1970 · KULLANILDI 312 · YAPILMADI 580 · SINIFLANMADI 429 · KOMBİNE 87 · HUDUT 66 · ÖNCÜL 37 · AÇIK 7 |
@@ -85,3 +85,7 @@ Harita bir **canvas**tır; dünya alanı yaklaşık 18 000 × 12 800 birimdir. H
 ## Düzeltme kaydı (G11)
 
 `k_sebep_istemez` öncülünün eski metni "her mümkin sebep ister" yönünü yakîn öncül olarak gizlice taşıyordu ve 15 sıfat hücresinin çürütmesi buna dayanıyordu; bu sürümde yalnız Vâcib için bırakıldı, mümkin yönü zayıf işaretli `k_tercihsiz_hal` olarak açıkça eklendi. Hücre durumu KAT'Î 49 → 37, KAT'Î-ŞARTLI 33 → 45. Bu sürümden önce yazılan yukarıdaki "Dürüstlük notları" sayıları (28 hücre, 14 kemâl vb.) o tarihe aittir; güncel ölçüm `ispat_agi.json` içindedir. Ayrıntı: `PRUSS_G11_EZELI_MUMKIN.md`.
+
+## Düzeltme kaydı (3-I 240)
+
+Nizam delili (`U17`, `U25`) yalnız ilimli ve iradeli bir fâile işaret eder; hücre metni "Vâcib" dediği hâlde fâil–Vâcib köprüsü yazılı değildi. `k_fail_vacib` açıkça eklendi (8 ispat, varlık ilkesi ailesine). İlke farz edildiğinde sayılar değişmedi; ilkesiz harita `ISPAT_YONU_ALTERNATIFLERI.md`dedir.

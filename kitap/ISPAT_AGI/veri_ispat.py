@@ -77,7 +77,7 @@ P('Q03.c5', 'U06', ['k_kendi_kendine', 'e_celismezlik'], 'Kendi varlığına seb
 P('Q03.c5', 'U28', ['k_kendi_kendine', 't_mumkin'], 'Mümkinin tanımı varlığını zâtından almamaktır; kendi sebebi olması tanıma aykırıdır.')
 P('Q03.c5', 'U07', ['k_kendi_kendine', 'e_celismezlik'], 'Kendi kendine sebep olan hem önce hem sonra olmalıdır.')
 
-P('Q04.c1', 'U17', ['m_nizam', 'm_ihkam'], 'Nizamdaki birlik tek Vâcib’i en iyi açıklar; ikincisi gerekli olmayan hipotezdir.')
+P('Q04.c1', 'U17', ['m_nizam', 'm_ihkam', 'k_fail_vacib'], 'Nizamdaki birlik tek Vâcib’i en iyi açıklar; ikincisi gerekli olmayan hipotezdir.')
 P('Q04.c2', 'U28', ['t_vacib', 'k_cokluk_terkip', 'k_basit_vacib'], 'İki vâcibi ayıran bir fark varsa her birinde ortak ve ayırıcı iki mâna bulunur; bu terkiptir.',
   tag=('enne', 'suret'))
 P('Q04.c2', 'U07', ['t_vacib', 'k_aciz_vacib_degil', 'k_kudret_fiil', 'k_irade_cuzi'],
@@ -126,11 +126,11 @@ P('Q09.c3', 'U03', ['k_beka_muhtac', 'm_mumkin', 'k_tercihsiz'], 'Mümkin âlemi
 P('Q09.c3', 'U27', ['k_kemal', 'k_gaye'], 'Yaratıp bırakmak, fiilin gâyesinden ve yaratıcının kemâlinden vazgeçmektir.')
 P('Q09.c4', 'U03', ['m_mumkin', 'k_tercihsiz', 'k_beka_muhtac', 'H:Q02.c1'], 'Mümkin her an müreccihe muhtaç olduğundan Vâcib her an var edip ayakta tutar.', tag=('enne', 'fail'))
 P('Q09.c4', 'U07', ['m_tahsis', 'k_irade_cuzi', 'k_tercihsiz_hal'], 'Belirli hâlin seçilmesi iradeli fâilin işidir; zorunlu sebep belirli hâli seçemez.', tag=('enne', 'fail'))
-P('Q09.c4', 'U17', ['m_nizam', 'm_ihkam', 'k_ihkam_ilim'], 'Muhkem eser ilimli ve iradeli bir fâile işaret eder.', tag=('enne', 'gaye'))
+P('Q09.c4', 'U17', ['m_nizam', 'm_ihkam', 'k_ihkam_ilim', 'k_fail_vacib'], 'Muhkem eser ilimli ve iradeli bir fâile işaret eder.', tag=('enne', 'gaye'))
 
 P('Q11.c1', 'U07', ['m_tahsis', 'k_irade_ilim', 'k_irade_cuzi', 'H:Q09.c4'], 'Âlemi ihtiyarla var eden âlemi bilmek zorundadır.')
 P('Q11.c2', 'U07', ['m_tahsis', 'k_irade_cuzi', 'k_irade_ilim', 'H:Q09.c4'], 'İrade belirliye taalluk eder; belirliyi bilmeden iradeden söz edilemez.')
-P('Q11.c3', 'U17', ['m_ihkam', 'k_ihkam_ilim'], 'Muhkem ve ayrıntılı eser ilmin kuşatıcı olduğunu gösterir.')
+P('Q11.c3', 'U17', ['m_ihkam', 'k_ihkam_ilim', 'k_fail_vacib'], 'Muhkem ve ayrıntılı eser ilmin kuşatıcı olduğunu gösterir.')
 P('Q11.c3', 'U07', ['k_irade_ilim', 'k_irade_cuzi', 'H:Q10.irade.c1'], 'Her cüz’î hâl iradeye konu olduğundan her cüz’î bilinir.')
 P('Q11.c4', 'U07', ['k_ilim_degisim', 't_vacib', 'k_zaman_vacib_degil', 'H:Q09.c4'], 'Geleceği sonradan öğrenen değişir; değişen vâcib olamaz.')
 
@@ -147,9 +147,9 @@ P('Q13.c1', 'U07', ['k_sonsuz_hadis', 'm_degisim', 'k_hudus_cisim'], 'Âlem ezel
 P('Q13.c2', 'U07', ['m_degisim', 'k_degisen_vacib_degil', 'H:Q06.c1'], 'Âlem değişir; değişen vâcib olamaz.')
 
 P('Q14.c1', 'U07', ['k_sinirli_mumkin', 'k_muhtac_mumkin', 't_vacib'], 'Kemâli sınırlı olsaydı sınırı bir müreccihle belirlenir ve Vâcib muhtaç olurdu.')
-P('Q14.c1', 'U09', ['k_kemal', 'm_bilinc', 'm_ihkam'], 'Şâhidde (insanda) bulunan kemâl, onu verende eksik olamaz.',
+P('Q14.c1', 'U09', ['k_kemal', 'm_bilinc', 'm_ihkam', 'k_fail_vacib'], 'Şâhidde (insanda) bulunan kemâl, onu verende eksik olamaz.',
   hd='Gâib–şâhid yalnız kemâl için işler, noksan için işlemez.')
-P('Q14.c1', 'U17', ['k_kemal', 'm_bilinc'], 'Bilinç ve anlam arayışı kemâli veren kaynağın mahrum olmadığını en iyi açıklar.')
+P('Q14.c1', 'U17', ['k_kemal', 'm_bilinc', 'k_fail_vacib'], 'Bilinç ve anlam arayışı kemâli veren kaynağın mahrum olmadığını en iyi açıklar.')
 P('Q14.c2', 'U07', ['k_sinirli_mumkin', 'k_muhtac_mumkin', 't_vacib'], 'Sabit sınır da bir müreccihle belirlenir.')
 P('Q14.c3', 'U07', ['k_degisen_vacib_degil', 't_vacib'], 'Gelişen şey bir hâlini yitirir; vâcib olamaz.')
 P('Q14.c3', 'U07', ['k_aciz_vacib_degil', 't_vacib'], 'Sonradan kemâl kazanan önceden aciz kalmıştır.')
@@ -187,7 +187,7 @@ P('Q10.gina.c3', 'U07', ['t_vacib', 'k_muhtac_mumkin'], 'Gınâ imkânsız olsay
 P('Q10.hayat.c1', 'U07', ['k_aciz_vacib_hayat', 'H:Q10.ilim.c1', 'H:Q10.kudret.c1'], 'İlim ve kudret sahibi olan hayydır.')
 P('Q10.hayat.c3', 'U07', ['k_aciz_vacib_hayat', 'H:Q10.ilim.c1'], 'İlim sahibi için hayat imkânsız olamaz.')
 P('Q10.ilim.c1', 'U07', ['k_irade_ilim', 'H:Q10.irade.c1'], 'İrade murad edilenin bilinmesini gerektirir.')
-P('Q10.ilim.c1', 'U17', ['m_ihkam', 'k_ihkam_ilim'], 'Muhkem eser ilme işaret eder.')
+P('Q10.ilim.c1', 'U17', ['m_ihkam', 'k_ihkam_ilim', 'k_fail_vacib'], 'Muhkem eser ilme işaret eder.')
 P('Q10.ilim.c3', 'U07', ['k_irade_ilim', 'H:Q10.irade.c1'], 'İradeli fâil bilmeyen olamaz.')
 P('Q10.kudret.c1', 'U07', ['k_kudret_fiil', 'H:Q09.c4'], 'Var etme fiili kudretsiz olmaz.')
 P('Q10.kudret.c1', 'U24', ['k_kudret_fiil', 'H:Q09.c4'], 'Fâilden fiile geçilir.', tag=('enne', 'fail'))
@@ -200,8 +200,8 @@ for sid in ('semi', 'basar', 'kelam'):
       hd='Yalnız noksandan münezzehliği kapsar; zâid sıfat mı zâtın aynı mı sorusu kelâm içi ihtilaftır.')
 P('Q10.tekvin.c3', 'U07', ['k_kudret_fiil', 'H:Q09.c4', 'H:Q10.kudret.c1'], 'Var etme imkânsız olsaydı Vâcib âlemi var edemezdi.',
   hd='Zâid sıfat mı kudret ve iradeye dönüş mü sorusu kelâm içi ihtilaftır.')
-P('Q10.hikmet.c1', 'U17', ['k_gaye', 'k_kemal', 'm_ihkam'], 'Gâyesiz fiil kemâle ters düşer; eser gâyeli görünür.')
-P('Q10.hikmet.c1', 'U25', ['k_gaye', 'm_ihkam'], 'Gâyeye uygun düzen gâî sebebe işaret eder.', tag=('enne', 'gaye'))
+P('Q10.hikmet.c1', 'U17', ['k_gaye', 'k_kemal', 'm_ihkam', 'k_fail_vacib'], 'Gâyesiz fiil kemâle ters düşer; eser gâyeli görünür.')
+P('Q10.hikmet.c1', 'U25', ['k_gaye', 'm_ihkam', 'k_fail_vacib'], 'Gâyeye uygun düzen gâî sebebe işaret eder.', tag=('enne', 'gaye'))
 P('Q10.hikmet.c3', 'U07', ['k_gaye', 'k_kemal'], 'Gâyesiz olmak kemâle ters düşer.')
 P('Q10.adalet.c1', 'U07', ['k_zulum_noksan', 'H:Q14.c1'], 'Zulüm noksandan doğar; Vâcib noksandan münezzehtir.')
 P('Q10.adalet.c3', 'U07', ['k_zulum_noksan', 'H:Q14.c1'], 'Adâlet imkânsız olsaydı zulüm mümkin olurdu.')
