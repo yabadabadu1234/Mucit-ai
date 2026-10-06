@@ -104,7 +104,7 @@
 | V.1.4.15 | **İtiraz (ispat yükü):** "Yokluğu iddia etmiyorum" | İt |
 | V.1.4.16 | **Cevap:** V.0.2.2–3 | C |
 
-#### V.1.4.17–V.1.4.115 Rastgelelik itirazı (padişahın isteği; deşme taslağı)
+#### V.1.4.17–V.1.4.129 Rastgelelik itirazı (padişahın isteği; deşme taslağı)
 
 | No | Cümle | Cins |
 | :-- | :-- | :-- |
@@ -207,6 +207,20 @@
 | V.1.4.113 | Sınır (G9): çıkarımsız kolun sayımı (duyu, akıl, haber) klasik üçlüdür; dördüncü bir çıkarımsız kaynak (ilham, iç tecrübe) gösterilirse güvenilirliği gösterilmelidir; gösterilmedikçe cezmî nefye destek olmaz | Z |
 | V.1.4.114 | Veritabanı: `Q02.c2/U08` (zan-ı gâlib) ikinci bağımsız yol; eski sayım yolunun ailelerinden veya yeni ikilem yolunun ailelerinden biri düşse zemin zan-ı gâlib kalır, ikisi birden düşerse İSPATSIZ olur | K |
 | V.1.4.115 | Dürüst hüküm: G7 sayımdan ikileme çevrildi ve sayıma bağımlılık yalnız çıkarımsız kolun (duyu, akıl, haber) üçlüsüne indi; burhan değil, zan-ı gâlib | K |
+| V.1.4.116 | Deneme (G10): “bütün istisnadır” ilkesinin çelişkili olduğu gösterilmeye çalışıldı; akıl yürütme **Claude’undur** (DESTEK/PRUSS_G10_ISTISNA.md) | K |
+| V.1.4.117 | Sonuç: **çelişki türetilemedi**; ilke tutarlı bir iddiadır (Hume ve Russell çizgisi); çelişkili olduğunu göstermek küresel sebep ilkesinin kendisini ispatlamaya eşdeğerdir ve okunan kaynaklarda bu ispat yoktur | Z |
+| V.1.4.118 | Yol 1 (kapanış tesadüfü): “her parça içeriden açıklanmıştır” kapanışı kendi başına açıklamasız kalır; bu çelişki değil bedeldir ve olasılık argümanına yaslandığından zan-ı gâliptir | Z |
+| V.1.4.119 | Yol 2 (mümkin–vâcib): bütün vâcibse Q13.c2 çürütülmüştür; bütün mümkinse müreccihsiz varlığı “tercihsiz tercih”tir ki bu sebep ilkesinin kendisidir (kısırdöngü) | Z |
+| V.1.4.120 | Yol 3 (kendine uygulama): ilke bütünün her doğrusunun açıklamasız olduğunu söylemez, yalnız bütünün varlığı için söyler; kendine uygulanınca çelişki doğmaz | Z |
+| V.1.4.121 | Başarılı kısmî sonuç (yapı hasırı): parçalardan oluşan bir bütünde var edici açıklama ilişkisi ya temellidir (açıklanmamış en az bir parça vardır) ya temelsizdir (sonsuz geriye gider veya döner); üçüncü hâl yoktur | K |
+| V.1.4.122 | “Bütün açıklamasız ve her parça içeriden açıklanmış” biçimi açıklanmamış parçayı dışlar; öyleyse temelsizdir: ya sonsuz geriye gider ya döner | K |
+| V.1.4.123 | Devir çelişmezlik evveliyyâtıyla çürür (Q03.c4, kat’î); sonsuz geriye gidiş hudûs ve zâtî zincir delilleriyle çürür (Q03.c3, iki bağımsız zayıf aileden biriyle ayakta); bu çürütmeler sebep ilkesine dayanmaz | C |
+| V.1.4.124 | Sonuç: istisna ilkesi bağımsız bir hipotez değildir; “her parça içeriden açıklanmış” biçimi sonsuz geçmiş ve devir hipotezlerine iner ve kitabın mevcut çürütmesine tâbidir | K |
+| V.1.4.125 | Kalan biçimler açıklanmamış parçalı olanlardır: (i) sebepsiz hâdis (Q00.c2, zan-ı gâlib) ve (ii) ezelî mümkinin çıplak varlığı (kadîm mümkin, Q13.c3, İHTİLAFLI) | K |
+| V.1.4.126 | Kök zayıf halka: ezelî bir mümkinin açıklamasız var olup olamayacağı; bu ancak imkân delilinin köprüsüyle (tercihsiz tercih, varlık kanadı) çürür; Gazzâlî ile filozofların münakaşasının merkezidir (Güldü 2022, s.585-586) | Z |
+| V.1.4.127 | Veritabanı: `Q03.c2/U08` **kısmî** ispat olarak kaydedildi (yalnız “her parça içeriden açıklanmış” biçimini kapsar, açıklanmamış parçalı kolları kapsamaz); hücre durumunu değiştirmez, kombinasyon tablosunda kısmî sayılır | K |
+| V.1.4.128 | Ölçüm: Q03.c3, `sonsuz-gecmis` ve `terkip` ailelerinden her biri tek başına düşse ayakta kalır, ikisi birden düşerse İSPATSIZ olur; Q03.c4 (devir) zayıf halka taşımaz | K |
+| V.1.4.129 | Dürüst hüküm: burhan bu yoldan gelmedi; yol kök zayıf halkayı tek bir noktaya (ezelî mümkinin çıplak varlığı) indirdi | K |
 
 ### V.1.5 Neticenin hududu
 

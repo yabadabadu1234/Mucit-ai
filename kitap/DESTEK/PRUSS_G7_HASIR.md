@@ -59,3 +59,5 @@ Yani cezmî nefyin çürütülmesi artık **iki ayrı zayıf aile kümesine** da
 ## 6. Hüküm
 
 Padişahın "burhan seviyesinde ispatlanacak" kanaati dört denemeden sonra şu noktada: rastgelelik itirazı çözüldü (çıplak şans açıklamadır); cezmî nefy için **iki ayrı yol** elenmiştir; sayım bağımlılığı çıkarımsız kolun üçlüsüne indi. **Burhana ulaşılmadı.** Burhan için kalan iş: `k_tekduzelik_aciklama` ve `k_istisna_delilsiz` öncüllerinin zayıflığını ortadan kaldırmak, yani "bütün istisnadır" ilkesinin **imkânsız** (çelişkili) olduğunu göstermek; bunun yapılıp yapılamayacağı **bilinmiyor.** Denenecek yol: istisna ilkesinin kendi uygulanışında çelişkiye düştüğünü (açıklanmışlığı parçalara veren şeyin kendisi parçası olmayan bir bütün açıklaması gerektirdiği) göstermek.
+
+**Güncelleme:** son açık iş (istisna ilkesinin çelişkililiği) denendi: `PRUSS_G10_ISTISNA.md` (çelişki türetilemedi; kök zayıf halka ezelî mümkinin çıplak varlığına indi).

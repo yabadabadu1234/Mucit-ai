@@ -11,9 +11,9 @@
 | Dosya | İş |
 | :-- | :-- |
 | `veri_usul.py` | 35 usul kaydı: tanım, nasıl yapılır, şart, hudut, safsata, katiyet tavanı, misal |
-| `veri_onerme.py` | 86 önerme (evveliyyât, müşâhede, tanım, mantık, türetilmiş); zayıf halkalar `zayif` ve `aile` ile işaretli |
+| `veri_onerme.py` | 88 önerme (evveliyyât, müşâhede, tanım, mantık, türetilmiş); zayıf halkalar `zayif` ve `aile` ile işaretli |
 | `veri_soru.py` | 33 suâl (Q18 zemin, Q00 sebep ilkesi, Q01–Q09, Q11–Q17, 15 sıfat suâli Q10.*), 109 hücre, 42 felsefe, 25 "olmasaydı" kaydı, **sıfat tasnifi** (6 zâtî, 8 sübûtî, 4 fiilî) |
-| `veri_ispat.py` | Elle yazılmış 163 doğrudan ispat kaydı (hücre, usul, öncül listesi, özet) |
+| `veri_ispat.py` | Elle yazılmış 164 doğrudan ispat kaydı (hücre, usul, öncül listesi, özet) |
 | `kural.py` | Bir usulün bir hücrede **neden yapılamayacağını** söyleyen kurallar |
 | `motor.py` | Katmanlı hesap, türetilmiş ispatlar, kombinasyon, matris, felsefe durumu |
 | `insa.py` | Kontroller, SQLite, JSON, HTML üretimi |
@@ -43,11 +43,11 @@ Yeniden kurmak: `python3 insa.py` (kontroller kırmızıysa çıktıda KIRMIZI g
 
 | Ölçü | Değer |
 | :-- | :-- |
-| Suâl · hücre · önerme · usul (kabul edilmiş) · felsefe | 33 · 109 · 86 · 32 · 42 |
-| İspat kaydı (doğrudan · sibr · dışlama · alt suâl) | 163 · 25 · 152 · 1 = 341 |
+| Suâl · hücre · önerme · usul (kabul edilmiş) · felsefe | 33 · 109 · 88 · 32 · 42 |
+| İspat kaydı (doğrudan · sibr · dışlama · alt suâl) | 164 · 25 · 152 · 1 = 342 |
 | Hücre durumu | KAT'Î 49 · KAT'Î-ŞARTLI 33 · ZAN-I GÂLİB 21 · İHTİLAFLI 6 (ispatsız DOĞRU/YANLIŞ hücre yok) |
-| Matris (3488 satır) | YAPILAMAZ 1983 · KULLANILDI 310 · YAPILMADI 581 · SINIFLANMADI 429 · KOMBİNE 87 · HUDUT 54 · ÖNCÜL 37 · AÇIK 7 |
-| Kombinasyon satırı (usul alt kümesi) | 1191 |
+| Matris (3488 satır) | YAPILAMAZ 1982 · KULLANILDI 311 · YAPILMADI 581 · SINIFLANMADI 429 · KOMBİNE 87 · HUDUT 54 · ÖNCÜL 37 · AÇIK 7 |
+| Kombinasyon satırı (usul alt kümesi) | 1223 |
 | Türetme ağacı sayısı | hücre başına 1 ile 230 arası (en çok Q17.c1: 230, Q02.c2: 192, Q02.c1: 191) |
 | “Olmasaydı” satırı | 134: hücre doğru olmasaydı 25 · hiç var olmasaydı 15 · aksi doğru olsaydı 94 |
 | Felsefe | ÇÜRÜTÜLDÜ kat'î 23 · kat'î fakat şartlı 14 · zannî 3 · İHTİLAFLI 1 · UYUMLU 1 · **koşulsuz ÇÜRÜMEDİ 0** |

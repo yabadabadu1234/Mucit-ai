@@ -64,6 +64,9 @@ P('Q03.c2', 'U26', ['k_sebepsiz_bagimsiz'], 'Sebepsiz olgu savunusu kendi gerek�
 P('Q03.c2', 'U27', ['m_frekans_sans', 't_sans_egilim', 'k_yoktan_sanssiz', 't_bayes_aralik', 'p_esdegerlik_kureselleme'],
   'Mümkinler bütününün müreccihsiz olması yokluktan varlık demektir; orada süreç ve eğilim yoktur; olasılığı [0,1] kalır; hasım düşük öncül yolunu yerelde kabul ediyorsa küreselde de vermek zorundadır; öyleyse kendi ölçüsüyle çıplak evren düşük öncüllüdür.')
 P('Q03.c2', 'U17', ['k_sebepsiz_bilgi', 'm_tahsis'], 'Sebepsiz olgu kabul edilirse hiçbir ilmî açıklamanın temeli kalmaz.')
+P('Q03.c2', 'U08', ['k_aciklama_temelli', 'k_istisna_yapi', 'H:Q03.c3', 'H:Q03.c4'],
+  'Bütün açıklamasız fakat her parça içeriden açıklanmışsa açıklama ilişkisi temelsizdir; temelsiz ilişki ya sonsuz geriye gider (Q03.c3) ya devirdir (Q03.c4); ikisi de çürütüldü.',
+  kismi='yalnız “her parça içeriden açıklanmıştır” istisna biçimini kapsar; açıklanmamış bir parçanın bulunduğu kolları (sebepsiz hâdis ve ezelî mümkinin çıplak varlığı) kapsamaz')
 P('Q03.c3', 'U05', ['k_muhtac_mumkin', 'k_butunun_dis_muhtac', 'e_celismezlik'],
   'Hiçbir halka varlığı kendi başına kazandırmıyorsa bütün zincir de kazandıramaz.', tag=None, hd='Eşzamanlı zâtî zincir için işler.')
 P('Q03.c3', 'U07', ['k_sonsuz_hadis', 'm_degisim'], 'Geçmişte sonsuz hâdis dizisi olsaydı bugüne ulaşan hâl hiç gelmezdi.')
