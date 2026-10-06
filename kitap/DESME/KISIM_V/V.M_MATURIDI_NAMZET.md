@@ -24,16 +24,16 @@ Kaynak: padişahın verdiği altı fotoğraftaki basılı İçindekiler (Kitâb�
 | V.M.16 | [3.] Mesele [Duyulur Âlemin Duyu Ötesi İçin Delil Teşkil Etmesi] (99) | Z | I.4.14 (şâhid–gâib); V.1.3.M.D | okundu |
 | V.M.17 | [4. Âlemin Ezelîliğini Savunanların Görüşleri] (103) | Z | V.1.3.M.E; V.1.4.126 (ezelî mümkin, kök zayıf halka); I.7.9, I.6.7 | okundu |
 | V.M.18 | [4.1 Seneviyye'nin Âlemin Ezelîliği ve Diğer Konular Hakkındaki Görüşleri] (110) | Z | V.2.3.3 (düalizm); V.2.8 | okundu |
-| V.M.19 | [5.] Mesele [Allah'a Cisim Kavramının Nisbet Edilmesi] (116) | Z | V.2.1.7 (tenzih: cisim) | **okunmadı** |
-| V.M.20 | [6. Allah'a Şey Kavramının Nisbet Edilmesi] (119) | Z | V.2.1.7; V.2.3.5 (şey ve mevcut; "ma'dûm şey midir") | okunmadı |
-| V.M.21 | [7.] Mesele [Allah Teâlâ'nın Sıfatları Hakkında] (125) | Z | V.2.2; V.2.5 (sıfat tasnifi, S35: sayımın kaynağı) | okunmadı |
-| V.M.22 | [7.1 Tekvin] (128) | Z | V.2.5.27 (tekvîn sıfatı); V.1.3.M.103–106 (ezelî tekvin, hâdis mükevven) | okunmadı |
-| V.M.23 | [7.2.] Mesele [Kâ'bî'nin Zâtî Sıfatlarla Fiilî Sıfatlar Hakkındaki Görüşleri ve Tenkidi] (134) | Z | V.2.5.10 (fiil sıfatları) | okunmadı |
-| V.M.24 | [7.3 Kelâm Sıfatı] (140) | Z | V.2.2.6 (kelâm; H3 köprüsü) | okunmadı |
-| V.M.25 | [7.4.] Mesele [İlâhî Fiillerin İhtiyarî Olduğu Hakkında] (150) | Z | V.2.2.3 (irade ve tahsis); V.1.3.M.95–101 (illet ve fâil) | okunmadı |
-| V.M.26 | [8. Hikmet ve İlim Sahibi Bir Yaratıcıyı İnkâr Edenlere Cevap] (151) | Z | V.2.2.1 (ilim), V.2.4.1 (hikmet); V.1.3.c (nizam) | okunmadı |
-| V.M.27 | [9.] Mesele [Azîz ve Celîl Olan Allah'ın İsimleri Hakkında] (158) | Z | V.2.5; `SIFAT_SAYISI_ARAMA.md` (isim sayısı mevzuu tehir edilmişti, 3-I 213) | okunmadı |
-| V.M.28 | [10.] Mesele [Arş Konusunun Açıklanması] (162) | Z | V.2.1.8 (mekân) | okunmadı |
+| V.M.19 | [5.] Mesele [Allah'a Cisim Kavramının Nisbet Edilmesi] (116) | Z | V.2.1.7 (tenzih: cisim) | okundu |
+| V.M.20 | [6. Allah'a Şey Kavramının Nisbet Edilmesi] (119) | Z | V.2.1.7; V.2.3.5 (şey ve mevcut; "ma'dûm şey midir") | okundu |
+| V.M.21 | [7.] Mesele [Allah Teâlâ'nın Sıfatları Hakkında] (125) | Z | V.2.2; V.2.5 (sıfat tasnifi, S35: sayımın kaynağı) | okundu |
+| V.M.22 | [7.1 Tekvin] (128) | Z | V.2.5.27 (tekvîn sıfatı); V.1.3.M.103–106 (ezelî tekvin, hâdis mükevven) | okundu |
+| V.M.23 | [7.2.] Mesele [Kâ'bî'nin Zâtî Sıfatlarla Fiilî Sıfatlar Hakkındaki Görüşleri ve Tenkidi] (134) | Z | V.2.5.10 (fiil sıfatları) | okundu |
+| V.M.24 | [7.3 Kelâm Sıfatı] (140) | Z | V.2.2.6 (kelâm; H3 köprüsü) | okundu |
+| V.M.25 | [7.4.] Mesele [İlâhî Fiillerin İhtiyarî Olduğu Hakkında] (150) | Z | V.2.2.3 (irade ve tahsis); V.1.3.M.95–101 (illet ve fâil) | okundu |
+| V.M.26 | [8. Hikmet ve İlim Sahibi Bir Yaratıcıyı İnkâr Edenlere Cevap] (151) | Z | V.2.2.1 (ilim), V.2.4.1 (hikmet); V.1.3.c (nizam) | okundu |
+| V.M.27 | [9.] Mesele [Azîz ve Celîl Olan Allah'ın İsimleri Hakkında] (158) | Z | V.2.5; `SIFAT_SAYISI_ARAMA.md` (isim sayısı mevzuu tehir edilmişti, 3-I 213) | okundu |
+| V.M.28 | [10.] Mesele [Arş Konusunun Açıklanması] (162) | Z | V.2.1.8 (mekân) | kısmen (yalnız başı) |
 | V.M.29 | [11.] Mesele [Allah'ın Görülmesi] (178) | Z | V.2 (açık: kitabın mevzuuna girer mi, S39) | okunmadı |
 | V.M.30 | [12.] Mesele [Mu'tezile'ye Göre Ma'dûmun Şey Oluşu ve Bunun Tenkidi] (193) | Z | V.1.3.M (yokluk ve şey; "ezelî mümkin ma'dûm olarak şeydir" iddiası ile ilgili olabilir) | okunmadı |
 | V.M.31 | [13.] Mesele [Allah'ı Niteleyip İsimlendirmek Benzeşmeyi Gerektirmez] (204) | Z | V.2.7.15–19 (ispat ve teşbih) | okunmadı |

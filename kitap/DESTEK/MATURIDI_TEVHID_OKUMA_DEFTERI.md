@@ -1,6 +1,6 @@
-# MÂTÜRÎDÎ, KİTÂBÜ'T-TEVHÎD, basılı s.49–115 -- OKUMA DEFTERİ VE BÖLÜM ÖZETİ (3-I 241)
+# MÂTÜRÎDÎ, KİTÂBÜ'T-TEVHÎD, basılı s.49–161 (+ Arş'ın başı) -- OKUMA DEFTERİ VE BÖLÜM ÖZETİ (3-I 241)
 
-**Dürüstlük kaydı.** Kaynak: archive.org OCR, Türkçe tercüme (Bekir Topaloğlu, İSAM). Arapça asıl ve gerçek metin (Şâmile/tahkikli neşir) **okunmadı ve yoklanmadı** (3-A 25-E); okumadan önce yoklama yapmadığım kusurdur (`kaynak/maturidi_kitabu_tevhid/INDIRME_NOTU.md`). OCR sayfa numarası basılı numarayla örtüşmediğinden bölüm içi sayfa yeri yazılmadı. Padişah (3-I 241): seçmece yapılmaz, azamî istifade edilir, **kopyalanmaz; formül ve şemayla daha az sayfada ifade edilir.** Alınanlar: `DESME/KISIM_I/` (I.3.15 · 63 yaprak, I.4.14 · 17, I.6.7 · 7, I.7.9 · 14) ve `DESME/KISIM_V/` (V.1.3.M · 117, V.2.6–V.2.8 · 78, V.M · 73). Okuma sırası padişahın tayinidir: önce s.103–116, sonra usul ve ilâhiyyât başı.
+**Dürüstlük kaydı.** Kaynak: archive.org OCR, Türkçe tercüme (Bekir Topaloğlu, İSAM). Arapça asıl ve gerçek metin (Şâmile/tahkikli neşir) **okunmadı ve yoklanmadı** (3-A 25-E); okumadan önce yoklama yapmadığım kusurdur (`kaynak/maturidi_kitabu_tevhid/INDIRME_NOTU.md`). OCR sayfa numarası basılı numarayla örtüşmediğinden bölüm içi sayfa yeri yazılmadı. Padişah (3-I 241): seçmece yapılmaz, azamî istifade edilir, **kopyalanmaz; formül ve şemayla daha az sayfada ifade edilir.** Alınanlar: `DESME/KISIM_I/` (I.3.15 · 63 yaprak, I.4.14 · 17, I.6.7 · 7, I.7.9 · 14) ve `DESME/KISIM_V/` (V.1.3.M · 144 yaprak: V.1.3m ve V.1.3n; V.2.6–V.2.15 · 235: V.2, V.2m, V.2n; V.M · 73). Okuma sırası padişahın tayinidir: önce s.103–116, sonra usul ve ilâhiyyât başı.
 
 ## 1. Bölüm defteri
 
@@ -18,6 +18,13 @@
 | Duyulur âlem duyu ötesine delil (99) | üç görüş; asıl–fer' tersine çevrilmiş; yazı yazana delâlet eder, keyfiyetine değil | eser müessirin varlığına delâlet eder | I.4.14, V.1.3.M.D | şâhid–gâib iki tarafı da kapsar |
 | Âlemin ezelîliğini savunanların görüşleri (103) | altı görüş; tasavvur ölçüsü; parçadan bütüne çevirme; simetri; illet ve fâil; icad = yok iken var etmek | ezelîlik delilleri cevaplanmış | V.1.3.M.E, I.7.9, I.6.7 | "icad" tanımı ve "kıdem = istiğna" tanım tartışması |
 | Seneviyye (110) | karışma hâdis; nur ve zulmet acz; hayır–şer ilkesi çelişir | düalizm çürütülür | V.2.8, I.7.9.11–14 | Seneviyye'nin kendi kaynağı (V.2.3.8) |
+| Cisim ve şey kavramlarının Allah'a nisbeti (116–124) | iki kullanım; nas gerekir; "şey" ispat ismi; "cisimlere benzemeyen cisim" itirazı ve nakzı | cisim Allah'a denmez, şey denir | V.2.9 | isimlendirmede nas kaidesi H4'e dayalı |
+| Sıfatlar (125) | fiil irade ile: çeşitlilik, hikmet, bozup düzeltme, hiçten yaratma; tab'ilik = cebir ve zaaf | fiil iradîdir | V.2.10, V.2.2.3 | sudûr itirazı gözlemden (zan) |
+| Tekvin (128–133) | ezelî tekvin, hâdis mükevven; "neden sonradan" dilemması; "zamanında" kaydı | fiil ezelî, eser hâdis | V.2.11 | tahsis cevabıdır, ezelî mümküne dokunmaz |
+| Kâ'bî'nin zâtî–fiilî sıfat görüşü (134) ve kelâm sıfatı (140) | sıfat ayrımının tutarsızlığı; hâdis sıfat; kelâm acz–sükût dilemması | kelâm içi ihtilâf | V.2.12–V.2.13 | yalnız ortak çekirdek iddia edilir (V.2.1.10) |
+| İlâhî fiillerin ihtiyarîliği (150) | ihtiyarın ihtiyarı → sonsuz silsile; yaratıklar sonlu | irade ezelî | V.2.14 | "yaratıklar sonlu" = fiilî sonsuz iddiası |
+| Hikmet ve ilim sahibi yaratıcıyı inkâr edenlere cevap (151) | kendine sebep ikilemi (+ "yok da edebilirdi"); ihtiyaç ve arzu gıdadan doğmaz; **"kendi başına var olan müstağnidir, ihtiyaç ona dönüşmez"**; temel madde taksimi; heyûlâ ve Karmatîler | ezelî temel madde yaratıcıyı gerektirir | V.1.3.M.118–144 | D1'in somut biçimi; "adlandırma farkı" ilzamı |
+| Allah'ın isimleri (158) | üç kısım (mânâca farklı, zâta râci, sıfattan türemiş); ilim yokken Allah'ın hâli dilemması | sıfatlar ezelîdir | V.2.15 | isim sayısı mevzuu (tehir edilmiş) bu bölümde yok |
 
 ## 2. Şema: Mâtürîdî'de "âlem hâdistir" çıkarımının dayanak öncülleri (Claude tahlili)
 
@@ -54,6 +61,13 @@
 3. **Kök zayıf halka (ezelî mümkin) Mâtürîdî'de de kapanmaz, yeniden adlandırılır:** D1 (kıdem = istiğna) ve D3 (icad = yok iken var etmek) **tanım hamleleridir**. Bunlar "ezelî ve açıklamasız mümkin" kolunu **tanımla** dışlar; kitabın V.1.4.126'daki kök zayıf halkası aynı yerdedir. Bu, Mâtürîdî'nin **hatası** değil, kelâm ile felsefe ayrılığının tam merkezidir (Gazzâlî–filozoflar).
 4. **Yeni (Mâtürîdî'den): sudûr itirazı.** "Tek özellikli (tab'an işleyen) bir illetten çeşitli ve zıt özellikli bir âlem çıkmaz" (V.1.3.M.96–97) ezelî fâil kabul edip eseri ezelî sayana karşı **ayrı** bir delildir; veritabanında karşılığı yoktur (açık iş).
 
+## 3b. Damıtma (s.116–161): kök zayıf halka açısından yeni olanlar
+
+1. **"Kendi başına var olan müstağnidir; ihtiyaç ona dönüşmez"** (V.1.3.M.128) D1'in somut biçimidir ve **ezelî + açıklamasız + muhtaç** kombinasyonunu çelişkili gösterir: ihtiyaç bir dış şeye bağımlılıktır, yani açıklamalıdır. Bu imkân–vücûb delilinin aklî çekirdeğidir. Geriye **ezelî + açıklamalı** (vâcib bi-ğayrihi) kalır ve onu Mâtürîdî'nin ayrı delilleri (iradeli fâil, sudûr itirazı, "icad = yok iken var etmek") hedefler. Zayıf noktası: ihtiyaç gözlemi parçalara aittir; bütüne geçiş terkiptir (V.1.3.M.130).
+2. **"Adlandırma farkı" ilzamı** (V.1.3.M.144): hasmın "asıl"ı yaratıp yönetme gücüne sahipse isim dışında Allah'tan farkı kalmaz; gücü yoksa onu yaratıp yöneten başkası vardır. Bu ilzam ezelî mümkine de yöneltilebilir.
+3. **"Neden sonradan" dilemması** (V.2.11.5–7): fiilin ezelde değil sonradan mümkün olması ya zâttan ya dış sebepten gelir; zâttan ise ebediyen böyle olurdu, dıştan ise Allah'ın dışında etkileyici vardır. Mâtürîdî: fiil ve tekvin ezelî, mükevven hâdis. Bu filozofların hudûs itirazına cevaptır; tahsisin (irade) kabulüne dayanır.
+4. **Her yerde fiilî sonsuz öncülü** (V.2.6.4–6, V.2.14.4–5, V.1.3.M.27–32): sayı argümanı, ihtiyarın ihtiyarı silsilesi, mazi, hesap. Hepsi aynı metafizik iddiaya (S38) bağlanır; bu yüzden **fiilî sonsuz iddiası Mâtürîdî'de en çok kullanılan öncüldür** ve kitapta tek yerde (V.1.3.a.16) ispat borcu olarak yazılıp diğer yerlere atıf yapılır.
+
 ## 4. Bizde olan / olmayan (kümeler)
 
 | Küme | Mâtürîdî | Bizde karşılık | Durum |
@@ -81,4 +95,4 @@
 | S38 | Fiilî sonsuzun imkânsızlığı kitapta ne olarak yazılacak (evvelî ilan, ispat borcu, zannî delil) |
 | S39 | Kazâ ve kader bâbı (okuma planında; altı îmân esasının biri) |
 | S40 | Mâtürîdî'nin inatçıya muamele önerisi usul olarak alınmasın mı |
-| (okuma) | s.116 ve sonrası (cisim, şey, sıfatlar …) okuma planına göre sırada; padişah "ilâhiyyât 73–347" dedi, **okuma devam edecek** |
+| (okuma) | s.162'den (arş) itibaren okuma sürecek: arş, görülme, ma'dûm, niteleme, hikmet, Seneviyye, Tabiatçılar, Dehriyye (s.288), Sofistler (s.307), Menâniyye … Mecûsîler (s.346'ya kadar); padişah "ilâhiyyât 73–347" dedi |

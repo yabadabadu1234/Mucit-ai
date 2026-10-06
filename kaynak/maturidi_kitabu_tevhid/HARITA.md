@@ -25,16 +25,16 @@ Umumîden hususîye. **Sayfa numaraları padişahın fotoğrafladığı basılı
 | İlâhiyyât | [3.] Mesele [Duyulur Âlemin Duyu Ötesi İçin Delil Teşkil Etmesi] | 99–102 | **okundu** | yüksek |
 | İlâhiyyât | **[4. Âlemin Ezelîliğini Savunanların Görüşleri]** | 103–109 | **okundu (evvelâ; padişah)** | **en yüksek** |
 | İlâhiyyât | [4.1 Seneviyye'nin Âlemin Ezelîliği ve Diğer Konular Hakkındaki Görüşleri] | 110–115 | **okundu** | yüksek |
-| İlâhiyyât | [5.] Mesele [Allah'a Cisim Kavramının Nisbet Edilmesi] | 116–118 | okunmadı | yüksek |
-| İlâhiyyât | [6. Allah'a Şey Kavramının Nisbet Edilmesi] | 119–124 | okunmadı | yüksek |
-| İlâhiyyât | [7.] Mesele [Allah Teâlâ'nın Sıfatları Hakkında] | 125–127 | okunmadı | yüksek (V.2.5) |
-| İlâhiyyât | [7.1 Tekvin] | 128–133 | okunmadı | yüksek |
-| İlâhiyyât | [7.2.] Mesele [Kâ'bî'nin Zâtî Sıfatlarla Fiilî Sıfatlar Hakkındaki Görüşleri ve Tenkidi] | 134–139 | okunmadı | orta |
-| İlâhiyyât | [7.3 Kelâm Sıfatı] | 140–149 | okunmadı | yüksek (H3 köprüsü) |
-| İlâhiyyât | [7.4.] Mesele [İlâhî Fiillerin İhtiyarî Olduğu Hakkında] | 150 | okunmadı | yüksek |
-| İlâhiyyât | [8. Hikmet ve İlim Sahibi Bir Yaratıcıyı İnkâr Edenlere Cevap] | 151–157 | okunmadı | yüksek |
-| İlâhiyyât | [9.] Mesele [Azîz ve Celîl Olan Allah'ın İsimleri Hakkında] | 158–161 | okunmadı | orta (S35) |
-| İlâhiyyât | [10.] Mesele [Arş Konusunun Açıklanması] | 162–177 | okunmadı | orta |
+| İlâhiyyât | [5.] Mesele [Allah'a Cisim Kavramının Nisbet Edilmesi] | 116–118 | **okundu** | yüksek |
+| İlâhiyyât | [6. Allah'a Şey Kavramının Nisbet Edilmesi] | 119–124 | **okundu** | yüksek |
+| İlâhiyyât | [7.] Mesele [Allah Teâlâ'nın Sıfatları Hakkında] | 125–127 | **okundu** | yüksek (V.2.5) |
+| İlâhiyyât | [7.1 Tekvin] | 128–133 | **okundu** | yüksek |
+| İlâhiyyât | [7.2.] Mesele [Kâ'bî'nin Zâtî Sıfatlarla Fiilî Sıfatlar Hakkındaki Görüşleri ve Tenkidi] | 134–139 | **okundu** | orta |
+| İlâhiyyât | [7.3 Kelâm Sıfatı] | 140–149 | **okundu** | yüksek (H3 köprüsü) |
+| İlâhiyyât | [7.4.] Mesele [İlâhî Fiillerin İhtiyarî Olduğu Hakkında] | 150 | **okundu** | yüksek |
+| İlâhiyyât | [8. Hikmet ve İlim Sahibi Bir Yaratıcıyı İnkâr Edenlere Cevap] | 151–157 | **okundu** | yüksek |
+| İlâhiyyât | [9.] Mesele [Azîz ve Celîl Olan Allah'ın İsimleri Hakkında] | 158–161 | **okundu** | orta (S35) |
+| İlâhiyyât | [10.] Mesele [Arş Konusunun Açıklanması] | 162–177 | **kısmen** (yalnız başı: Arş hakkında görüş sayımı okundu, OCR satır 5745–5793; devamı okunmadı) | orta |
 | İlâhiyyât | [11.] Mesele [Allah'ın Görülmesi] | 178–192 | okunmadı | orta |
 | İlâhiyyât | [12.] Mesele [Mu'tezile'ye Göre Ma'dûmun Şey Oluşu ve Bunun Tenkidi] | 193–203 | okunmadı | orta |
 | İlâhiyyât | [13.] Mesele [Allah'ı Niteleyip İsimlendirmek Benzeşmeyi Gerektirmez] | 204–209 | okunmadı | orta |
