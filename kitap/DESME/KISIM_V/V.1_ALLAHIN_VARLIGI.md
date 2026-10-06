@@ -236,6 +236,27 @@
 | V.1.4.142 | Veritabanı: `Q03.c2/U14` (simetri kırılması, zan) eklendi; `k_sebep_istemez` düzeltildi; ölçüm değişimi yukarıdadır | K |
 | V.1.4.143 | Dürüst hüküm: burhan gelmedi; “ezelî mümkin açıklamasız var olabilir mi” sorusu, kesinlik ölçeğinin evvelî seviyesinde bir iddiaya (tereccuh bilâ müreccih muhaldir) bağlı kalıyor; kitap onu ilke olarak açıkça yazmalıdır | K |
 
+#### V.1.4.144–V.1.4.159 Vahiy malumatı **[öncül değildir]** (padişahın isteği, 3-I 239)
+
+| No | Cümle | Cins |
+| :-- | :-- | :-- |
+| V.1.4.144 | **[malumat; öncül değildir]** Bu bloktaki yapraklar delil değil bildirilen malumattır; H4 ispatlanmadan Kur’ân ve hadis öncül olamaz (I.7.3.2); muhatabın nazarında sıhhati aklî delille ispatlanmadığından **ispatsız bildirimdir** (I.7.2.1); Müslüman okuyucu için bildirilen bilgidir (padişah, 3-I 239) | K |
+| V.1.4.145 | Tûr 52/35: «أَمْ خُلِقُوا مِنْ غَيْرِ شَىْءٍ أَمْ هُمُ الْخَالِقُونَ» (Diyanet: “Onlar, yaratan olmaksızın mı yaratıldılar yoksa yaratanlar kendileri midir?”; Arapça metin ve meal bir kaynaktan yoklandı) | K |
+| V.1.4.146 | Ayetin sorduğu iki şık kitabın Q03.c2 (“mümkinler bütünü müreccihsizdir”) ve Q03.c5 (“kendi kendinin müreccihidir”) hücreleridir; üçüncü şık (Yaratıcı) ayette soru olarak bırakılmıştır (eşleme **Claude’undur**) | K |
+| V.1.4.147 | Muhatap nazarında: ayetin kaynağı ispatsızdır; fakat ayetin içerdiği akıl yürütme (iki şıkkın reddi) kitabın Q03 hücrelerinde vahiysiz, aklî olarak ayrıca yazılmıştır; yani muhatap nazarında ispatlanmaya açık olan içeriktir, kaynak değildir | K |
+| V.1.4.148 | Çare tipi: Kur’ân bu ilkeyi ispat etmez, **soruyla gösterir** (“mı … yoksa … mı”); bu, kitabın tenbih usulüyle aynı biçimdir (I.3.13, I.7.3.6; çıkarım **Claude’undur**) | K |
+| V.1.4.149 | Tûr 52/36: «أَمْ خَلَقُوا السَّمَاوَاتِ وَالْأَرْضَ ۚ بَل لَّا يُوقِنُونَ» (Diyanet: “Yoksa gökleri ve yeri kendileri mi yarattılar? Hayır, Allah’a kesin olarak inanmıyorlar”); ayet reddi bir yakîn eksikliğine bağlar | K |
+| V.1.4.150 | İbrâhîm 14/10: «أَفِى اللَّهِ شَكٌّ فَاطِرِ السَّمَاوَاتِ وَالْأَرْضِ» (Diyanet: “Gökleri ve yeri yaratan Allah’tan mı şüphe ediyorsunuz?”); peygamberlerin kavmine sorusudur ve konu edilen şey şüphenin yerindeliğidir; kitap bundan evvelîlik çıkarmaz | K |
+| V.1.4.151 | Rûm 30/30: «فِطْرَتَ اللَّهِ الَّتِي فَطَرَ النَّاسَ عَلَيْهَا»; Müslüman okuyucu için bildirilen bilgi: Allah’ın insanlara yaratılışta verdiği fıtrat vardır; fıtratın içeriğinin Yaratıcı’ya yönelik ilk kabul olarak anlaşılması tefsir yorumudur (hafızadan, yoklanmadı); kitapta delil değil tenbihtir (V.1.3.d) | K |
+| V.1.4.152 | Neml 27/14: Diyanet: “Gönülleri kesin olarak kabul ettiği halde, haksızlık ve büyüklenmelerinden ötürü onları bile bile inkar ettiler”; Müslüman okuyucu için bildirilen bilgidir; **kitap hiçbir muhatabın içinden bildiğini iddia etmez ve muhataba isnat etmez** (§ 2-A 33-B) | K |
+| V.1.4.153 | Câsiye 45/24: dehrîlerin sözü (“hayat ancak dünya hayatımızdır … bizi ancak zamanın geçişi yokluğa sürükler”) ve hükmü: “Onların bu hususta bir bilgisi yoktur, sadece böyle sanırlar” (Diyanet); Kur’ân bu mevkıfı bilgi değil zan diye niteler; kitabın F03 (ezelî madde) kaydıyla örtüşür ve muhatap nazarında ispatsız bildirimdir | K |
+| V.1.4.154 | Lokman 31/25 ve Zümer 39/38: “Gökleri ve yeri kim yarattı diye sorsan ‘Allah’ derler”; Kur’ân o dönemin muhataplarının sebepsizliği değil bir yaratıcıyı kabul ettiğini bildirir; bu tarihî haberdir ve bugünün muhatabına isnat edilmez | K |
+| V.1.4.155 | Ra’d 13/16 ve Zümer 39/62: “Allah her şeyin yaratanıdır”; Müslüman okuyucu için bildirilen bilgi: Allah dışındaki her şey mahluktur; kitabın V.1.1.5 sınırıyla aynı yöndedir (çıkarım **Claude’undur**) | K |
+| V.1.4.156 | Hadis (Ebû Hüreyre): “Sizden birinize şeytan gelir, ‘Şunu kim yarattı? Şunu kim yarattı?’ der; sonunda ‘Rabbini kim yarattı?’ der; bu raddeye gelen Allah’a sığınsın ve vazgeçsin” (Buhârî, Bed’ü’l-halk, 3276; Diyanet Hadislerle İslam sitesinde yoklandı; Müslim’deki paralelini yoklamadım) | K |
+| V.1.4.157 | Bu hadis ilkeye delil değil, Müslüman için **vesvese devâsıdır**: sebep sorusunu Yaratıcı’ya taşıyan zincirde durmak ve sığınmak; kitabın V.1.4.8 cevabıyla (Vâcib’de sebep sorusu tanımına aykırıdır) aynı yöndedir (çıkarım **Claude’undur**); muhatap nazarında ispatsız bildirimdir | K |
+| V.1.4.158 | Araştırma sınırı: “sebepsiz var olma imkânsızdır” ilkesini biçimsel koyan veya kuantum rastgeleliğine değinen bir ayet veya hadis **bulunamadı**; en yakını Tûr 52/35’tir; bu hüküm tefsir ve hadis külliyatı **okunarak** değil ayet metni ve tek bir hadis aranarak verilmiştir (kitap okumak için padişaha sorulur, 3-I 230) | Z |
+| V.1.4.159 | Karar (3-I 239): ilke şimdilik evvelî ilan edilir; yaklaşma usulü Kısım I I.7.7’de yazılır; katiyet işareti yükseltilmez | K |
+
 ### V.1.5 Neticenin hududu
 
 | No | Cümle | Cins |

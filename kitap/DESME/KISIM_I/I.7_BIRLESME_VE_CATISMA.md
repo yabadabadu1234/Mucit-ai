@@ -65,4 +65,18 @@
 | I.7.6.3 | **Claude çıkarımı (Fârâbî s.18–20'den):** delil sırası kurulurken hangi önceliğin (bilgide mi varlıkta mı) esas alındığı yazılır (I.4.10) | Z |
 | I.7.6.4 | **Claude notu:** 187 ve 191'in indirgeme şartı padişahın 3-I 236 sözüyle kaldırılmadı; Fârâbî ölçüleri aklî aslıyla yazılır | Z |
 
+### I.7.7 Evvelî ilan edilen ilkeye yaklaşma usulü (padişah kararı 3-I 239; adımlar Claude kurgusu)
+
+| No | Cümle | Cins |
+| :-- | :-- | :-- |
+| I.7.7.1 | Evvelî ilan edilen ilke ispatlanmaz; ilan açıkça yazılır ve katiyet işareti yükseltilmez (I.3.3.7, I.3.13.22; padişah, 3-I 239) | K |
+| I.7.7.2 | **Adım 1, tenbih:** ilke, reddi hissedilecek bir biçimde gösterilir (eşit kefe, uçak kazası araştırmacısı); tenbih delil değildir (U32) | K |
+| I.7.7.3 | **Adım 2, ilzam:** yalnız reddin kendini çürüttüğü kişiye uygulanır (savunusunda gerekçe getirerek her şeyin sebepsiz olabileceğini söyleyen); yerel inkârcıyı kuşatmaz | K |
+| I.7.7.4 | **Adım 3, nakz:** muhatabın kendi kabulleriyle çelişki gösterilir; netice muhatabın kabulü kadar bağlayıcıdır ve kabul etmeyeni kuşatmaz (I.5.3.2) | K |
+| I.7.7.5 | **Adım 4, geriye sarma:** ret sürerse öncülün öncülüne inilir ve muhatabın kabul ettiği zemine varınca durulur (I.7.3.4–5) | K |
+| I.7.7.6 | **Adım 5, durma:** ilzamın ötesinde cevap yoktur; inat sürerse tartışma ilzamla biter ve bu açıkça yazılır; çözülmeyen çatışmada tevakkuf edilir (I.7.3.9, I.7.1.5) | K |
+| I.7.7.7 | Evvelî sınaması (Claude önerisi): reddeden ilkeyi pratiğinde yaşıyor mu; kitabın ölçüsü yakînin başka türlü olamaması ve ondan yoksun kalınamamasıdır (I.3.9.3, I.3.13.3) | K |
+| I.7.7.8 | Sınır: evvelî ilanı bir iddiadır ve muhatap için delil değildir; evveliyyât sayımının kendisi tartışmalıdır (V.0 tenkit) | Z |
+| I.7.7.9 | Vahiy malumatı bu usulün dışında yazılır: delil değil bildirilen bilgi olarak, muhatap nazarında ispatlı veya ispatsız işaretiyle (V.1.4.144–159; 3-I 239) | K |
+
 ---

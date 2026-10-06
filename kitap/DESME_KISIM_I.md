@@ -27,8 +27,8 @@ Bu dosya **dizindir**. Eskiden tek dosya olan deşmenin bütün yaprakları **si
 | [I.4d_FARABI_ONCE_SONRA_DELIL_NICIN](DESME/KISIM_I/I.4d_FARABI_ONCE_SONRA_DELIL_NICIN.md) | I.4.10–I.4.13 | 52 | 11.7 KB |
 | [I.5_MUDAFAA_USULU](DESME/KISIM_I/I.5_MUDAFAA_USULU.md) | I.5 | 23 | 2.9 KB |
 | [I.6_SAFSATA](DESME/KISIM_I/I.6_SAFSATA.md) | I.6 | 40 | 5.2 KB |
-| [I.7_BIRLESME_VE_CATISMA](DESME/KISIM_I/I.7_BIRLESME_VE_CATISMA.md) | I.7 | 32 | 4.4 KB |
+| [I.7_BIRLESME_VE_CATISMA](DESME/KISIM_I/I.7_BIRLESME_VE_CATISMA.md) | I.7 | 41 | 6.1 KB |
 | [I.8_KAPANIS_USULU](DESME/KISIM_I/I.8_KAPANIS_USULU.md) | I.8 | 9 | 1.0 KB |
 | [I.9_DAGITIM_SAYIM_TENKIT](DESME/KISIM_I/I.9_DAGITIM_SAYIM_TENKIT.md) | I.9, SAYIM, TENKİT | 14 | 3.5 KB |
 
-**Toplam yaprak: 621.** Cinse göre: K 380 · T 140 · H 43 · Z 23 · M 16 · B 4 · C 1.
+**Toplam yaprak: 630.** Cinse göre (I.9 dosyasının 14 yaprağı hariç, o dosyanın biçimi farklıdır): K 388 · T 140 · H 43 · Z 24 · M 16 · B 4 · C 1
