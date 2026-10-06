@@ -39,6 +39,21 @@
 | V.1.3.a.8 | Muhdis hâdis olamaz (teselsül); öyleyse **kadîmdir** ve varlığı kendindendir | B |
 | V.1.3.a.9 | Netice: âlemi var eden bir **Vâcib** vardır | İ |
 | V.1.3.a.10 | Katiyet: yakînî öncüller + **tartışmalı bir halka** (V.1.3.a.3); halka çürütülmedikçe netice yakînî, çürütülürse zannî | Z |
+| V.1.3.a.11 | **Padişahın misali (3-I 240 sonrası, S38):** ezelden 2026’ya gidilirse arada sonsuz yıl vardır, 2026’ya varılamaz; “şu kadar var” demek başlangıcı kabul etmektir, kendiyle çelişkidir | K |
+| V.1.3.a.12 | Misal, geçmişin bir üyesi olarak **bugünden sonsuz uzaklıkta bir “ezel noktası”** varsayar; böyle bir noktadan bugüne gerçekten varılamaz; fakat başlangıçsızlık iddiası böyle bir nokta ileri sürmez (**Claude tenkididir**, padişahın sözü değil) | C |
+| V.1.3.a.13 | Başlangıçsız geçmiş `{…, −2, −1, 0}` (sıra tipi ω*) tutarlı bir yapıdır: ilk eleman yoktur ve **her olay bugünden sonlu uzaklıktadır**; sonsuz olan olayların sayısıdır, hiçbir olayın uzaklığı değildir | C |
+| V.1.3.a.14 | Bu yüzden misal başlangıçlı bir yapıyı (sonsuz uzaktaki ilk nokta) çürütür, **başlangıçsız yapıyı çürütmez**; V.1.3.a.3’ün dayanağı olarak tek başına yetmez | K |
+| V.1.3.a.15 | “Şu kadar var dediğin anda sonu var demiş olursun” itirazı: sonlu uzaklık başlangıç iddiası değildir; başlangıçsız yapıda her olay sonlu uzaktadır ve başlangıç yoktur, çelişki doğmaz | C |
+| V.1.3.a.16 | Çürütmeye yarayan kalan iddia **tamamlanmış (fiilî) sonsuzun imkânsızlığıdır**; bu bir **metafizik** önermedir, matematik teoremi değildir: tatbikteki “parça bütüne eşit” sonuç matematikte sonsuz kümenin tanımıdır (Dedekind) ve çelişki değildir; bu yüzden V.1.3.a.3’teki “Hilbert otelindeki çelişkiler” ifadesi **çelişki değil paradoksal görünüş** diye düzeltilmelidir | K |
+| V.1.3.a.17 | Fiilî sonsuzun imkânsızlığını savunan çizgiler: Aristo, Philoponus, Gazzâlî (tatbik, tazâyüf), Kant’ın birinci antinomisinin tezi (**hafızadan, yoklanmadı**) | Z |
+| V.1.3.a.18 | Fizik desteği: Borde–Guth–Vilenkin teoremi ve entropi argümanı belirli geçmiş-sonsuz modelleri dışlar, bütün modelleri dışlamaz; zan-ı gâlib verir (**hafızadan, yoklanmadı**) | Z |
+| V.1.3.a.19 | Hudûs delilinin geçmişte sonsuz hâdis dizisi halkası bu yüzden **zayıf kalır**; veritabanında `sonsuz-gecmis` ailesi (DESTEK/SONSUZ_GECMIS_MESAFE_ARGUMANI.md) | Z |
+| V.1.3.a.20 | **İtiraz (kâfir):** “aynı mantıkla Vâcib’in ezelîliği de açıklanamaz; niçin onu hariç tutuyorsun?” (vesvese hadisi biçimi, V.1.4.156) | İt |
+| V.1.3.a.21 | **Cevap 1:** Vâcib’in kıdemi ardışık olaylar dizisi değildir; değişmez ve ardışıklık taşımaz; tatbik ve mesafe argümanı olaylar dizisine mahsustur | C |
+| V.1.3.a.22 | **Cevap 2:** hariç tutma ölçütü sınanabilir ve âleme de uygulanır: değişen, yokluğu mümkün olan mümkindir; âlem değişir, öyleyse mümkindir (`Q13.c2` çürütüldü); âlem ölçütü geçemez | C |
+| V.1.3.a.23 | **Cevap 3:** kitap Vâcib’in neden zorunlu olduğunu **sorar ve cevaplar** (`Q12.c1` KAT’Î: zâtı gereği) ve “neden sorusu anlamsızdır” cevabını çürütür (`Q12.c4`); bu “cevap aramayın” demenin tersidir | C |
+| V.1.3.a.24 | Dogma ile evvelî ilanının farkı: dogma soruyu yasaklar ve gerekçesiz bırakır; evvelî ilanı soruyu cevaplar, ilkeyi açıkça yazar, katiyet işaretini yükseltmez, tenbih, ilzam, nakz ve geriye sarma ile yaklaşır ve bağımlılığı sayıyla ölçer (I.7.7) | K |
+| V.1.3.a.25 | Sınır (dürüst): bu fark dışarıdan bakana yeterince görünmeyebilir; ilkeye dayanan ve dayanmayan hücreler ayrı sayıyla yazıldığı sürece dogmadan ayrılırız; ölçüm bozulursa fark da bozulur | Z |
 
 #### V.1.3.b İmkân–vücûb delili
 
@@ -260,6 +275,9 @@
 | V.1.4.161 | Ölçüm: ilkeyle ilgili 13 zayıf aile kaldırılınca 109 hücreden 46’sı İSPATSIZ olur; Vâcib’in varlığı (Q02.c1) ve ilim, irade, kudret, hayat, kemâl, ibadet hücreleri İSPATSIZ’dır; KAT’Î kalan 37 hücre “Vâcib ise” diye tanımdan türeyen şartlı hücrelerdir | K |
 | V.1.4.162 | Nizam delili ilimli ve iradeli bir fâilin varlığına işaret eder (Q16.c3, zan-ı gâlib, ilkeden bağımsız ölçüldü); fâilin Vâcib olduğu ayrı bir köprü ister (`k_fail_vacib`), köprü varlık ilkesine dayanır; veritabanında bu köprü önceki sürümde gizliydi ve açıkça eklendi | K |
 | V.1.4.163 | Aranan başka usul: ilkeye dayanmayan yoldan Vâcib’in varlığı ve sıfatları; şıklar (ters sıra, nizam ve haber, kümülatif ağ, şartlı bırakma) DESTEK/ISPAT_YONU_ALTERNATIFLERI.md’de sunuldu; karar padişahındır (S37) | K |
+| V.1.4.164 | “Yok kendini var edemez” **biçimsel olarak gösterilir**: kendine sebep olan için ya sebep olmadan önce de var olması gerekir (var ve yok çelişkisi) ya açıklama ilişkisi kendine döner; iki kol da çelişkidir (`Q03.c5` KAT’Î) | K |
+| V.1.4.165 | Fakat hasmın iddiası “yok kendini var etti” değil, “var olmaya başladı ve **sebebi yoktur**”dur; ikinci cümlede sebep olarak yokluk yoktur, sebep yoktur; bunu çelişkiye götürmek için “her başlayanın sebebi vardır” ilkesi gerekir; aşikârlık birinci cümleye aittir, ikincisine değil | K |
+| V.1.4.166 | Padişahın tespiti: mesele yalnız “mümkin de ezelîdir” diyenleri çürütmektir; bu tespit doğrudur ve kök zayıf halkayı doğru adlandırır (V.1.4.126); geçmiş-sonsuzluk yolu bu halkanın yalnız **değişen** kolunu zayıfça kapatır, **değişmeyen** ezelî mümkin kolunu kapatamaz (olay dizisi yoktur) | K |
 
 ### V.1.5 Neticenin hududu
 
