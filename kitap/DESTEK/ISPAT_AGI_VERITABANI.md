@@ -1,8 +1,10 @@
-# İSPAT AĞI VERİTABANI -- İLK SÜRÜM (3-I 237)
+# İSPAT AĞI VERİTABANI (3-I 237, 238)
 
 **Padişahın sözü (yalnız bu kadar, 3-I 237):** veritabanını oluşturmaya başla; Allah hakkında ispatlanacaklar (Vâcib bir varlığın olup olamayacağı, kesin olup olmadığı, sayısı, zâtî sıfatları, neden zorunlu olduğu, her birinin olmaması hâlinde olacaklar, ispatlar yapılınca çürüyen ve çürümeyen felsefeler); çürümeyen felsefe bırakmayacak şekilde suâl ve ihtimaller genişletilecek; önce ispat usulleri öğretilecek, sonra listedeki teçhizatın kullanıldığı gösterilecek, her ispatta azamî kombinasyon yapılacak, hiçbir teçhizat seçilip bırakılmayacak, her kombinasyon veritabanında net görünecek.
 
-**Claude çıkarımları (padişahın sözü değil):** teçhizat = Kısım I usul listesi (U01–U32; U33–U35 kabul edilmemiş adaylardır, matrise girmez) · azamî kombinasyon = bir hücrede kullanılan usullerin bütün boş olmayan alt kümeleri · "olmaması hâlinde olacaklar" = hücre doğru olmasaydı çıkacak imkânsız sonuç.
+**Padişahın teyidi (3-I 238):** teçhizat = Kısım I usul listesi (U01–U32; U33–U35 kabul edilmemiş adaylardır, matrise girmez) · "olmaması hâlinde olacaklar" üç okumadır ve üçü de kabul: hücre doğru olmasaydı çıkacak imkânsız sonuç, **hiç var olmasaydı**, ispatlananlardan herhangi birinin aksi (bütün münhasır ihtimaller) doğru olsaydı · azamî kombinasyon = A-B ile de, C-D ile de, B-C ve A-D ile de ispat: **kaç yoldan ispat oluyorsa hepsi görünür**; yalnız veritabanı içindir, kitaba sığmaz.
+
+**Claude çıkarımı (padişahın sözü değil):** "yol" iki ölçüyle sayılır: (1) bir hücrenin kullandığı usullerin alt kümeleri, (2) dayanılan hücrelerin ispatları üzerinden **türetme ağacı** (her ispat, öncülü olan hücrenin her ispatıyla ayrı ayrı sayılır).
 
 ## Dosyalar (`kitap/ISPAT_AGI/`)
 
@@ -10,13 +12,14 @@
 | :-- | :-- |
 | `veri_usul.py` | 35 usul kaydı: tanım, nasıl yapılır, şart, hudut, safsata, katiyet tavanı, misal |
 | `veri_onerme.py` | 68 önerme (evveliyyât, müşâhede, tanım, mantık, türetilmiş); zayıf halkalar `zayif` ve `aile` ile işaretli |
-| `veri_soru.py` | 33 suâl (Q18 zemin, Q00 sebep ilkesi, Q01–Q09, Q11–Q17, 15 sıfat suâli Q10.*), 109 hücre, 42 felsefe, 25 "olmasaydı" kaydı |
+| `veri_soru.py` | 33 suâl (Q18 zemin, Q00 sebep ilkesi, Q01–Q09, Q11–Q17, 15 sıfat suâli Q10.*), 109 hücre, 42 felsefe, 25 "olmasaydı" kaydı, **sıfat tasnifi** (6 zâtî, 8 sübûtî, 4 fiilî) |
 | `veri_ispat.py` | Elle yazılmış 159 doğrudan ispat kaydı (hücre, usul, öncül listesi, özet) |
 | `kural.py` | Bir usulün bir hücrede **neden yapılamayacağını** söyleyen kurallar |
 | `motor.py` | Katmanlı hesap, türetilmiş ispatlar, kombinasyon, matris, felsefe durumu |
 | `insa.py` | Kontroller, SQLite, JSON, HTML üretimi |
 | `sablon.html` | HTML şablonu |
-| `ispat_agi.sqlite` · `ispat_agi.json` · `ispat_agi.html` | Üretilen veritabanı ve sunum (kitaba link) |
+| `harita.js` | HTML’deki ağ haritası (canvas, pan ve zoom, görünen kısmı çizer) |
+| `ispat_agi.sqlite` · `ispat_agi.json` · `ispat_agi.html` | Üretilen veritabanı ve sunum (kitaba link); elle yazılmaz, `insa.py` üretir |
 
 Yeniden kurmak: `python3 insa.py` (kontroller kırmızıysa çıktıda KIRMIZI görünür).
 
@@ -36,16 +39,22 @@ Yeniden kurmak: `python3 insa.py` (kontroller kırmızıysa çıktıda KIRMIZI g
 9. **Felsefe durumu** elle yazılmaz: felsefenin iddia ettiği yanlış hücrelerden en güçlü çürütmenin katiyetinden okunur. Hiçbiri çürütülmemişse `ÇÜRÜMEDİ`; yalnız İHTİLAFLI hücre tutuyorsa `İHTİLAFLI (iddia edilmez)`; doğru cevapla uyumluysa `UYUMLU`.
 10. **Zayıf halka düşerse (ne_olur):** her zayıf aile ve öncül için ağ yeniden hesaplanır; düşen hücreler ve durumu değişen felsefeler yazılır.
 
-## Sayılar (ilk sürüm)
+## Sayılar
 
 | Ölçü | Değer |
 | :-- | :-- |
 | Suâl · hücre · önerme · usul (kabul edilmiş) · felsefe | 33 · 109 · 68 · 32 · 42 |
-| İspat kaydı (doğrudan · sibr · dışlama · alt suâl) | 159 · 22 · 140 · 1 = 322 |
-| Hücre durumu | KAT'Î 49 · KAT'Î-ŞARTLI 33 · ZAN-I GÂLİB 21 · İHTİLAFLI 6 (hiç ispatsız DOĞRU/YANLIŞ hücre yok) |
-| Matris (3488 satır) | YAPILAMAZ 2002 · KULLANILDI 297 · YAPILMADI 585 · SINIFLANMADI 429 · KOMBİNE 78 · HUDUT 54 · ÖNCÜL 36 · AÇIK 7 |
-| Kombinasyon satırı | 1085 (yeterli 937, asgarî 202) |
+| İspat kaydı (doğrudan · sibr · dışlama · alt suâl) | 159 · 25 · 152 · 1 = 337 |
+| Hücre durumu | KAT'Î 49 · KAT'Î-ŞARTLI 33 · ZAN-I GÂLİB 21 · İHTİLAFLI 6 (ispatsız DOĞRU/YANLIŞ hücre yok) |
+| Matris (3488 satır) | YAPILAMAZ 1984 · KULLANILDI 308 · YAPILMADI 583 · SINIFLANMADI 429 · KOMBİNE 87 · HUDUT 54 · ÖNCÜL 36 · AÇIK 7 |
+| Kombinasyon satırı (usul alt kümesi) | 1111 (yeterli 958, asgarî 209) |
+| Türetme ağacı sayısı | hücre başına 1 ile 230 arası (en çok Q17.c1: 230, Q02.c2: 192, Q02.c1: 191) |
+| “Olmasaydı” satırı | 134: hücre doğru olmasaydı 25 · hiç var olmasaydı 15 · aksi doğru olsaydı 94 |
 | Felsefe | ÇÜRÜTÜLDÜ kat'î 23 · kat'î fakat şartlı 14 · zannî 3 · İHTİLAFLI 1 · UYUMLU 1 · **koşulsuz ÇÜRÜMEDİ 0** |
+
+## Sıfat tasnifi (padişahın sorusu, 3-I 238)
+
+Padişahın saydığı altı zâtî sıfat (vücûd, kıdem, bekâ, vahdâniyyet, kıyâm bi-nefsihî, muhâlefetün li'l-havâdis) tasnifin birinci sınıfıdır. Sübûtî sıfatlar Mâtürîdî sayımında **sekizdir** (hayat, ilim, semi', basar, kudret, irade, kelâm, tekvîn); Eş'arî sayımında tekvîn kudret ve iradeye döndüğü için yedidir. Padişahın altı sübûtî sayımında semi' ve basar yoktu. Hikmet, adâlet, rahmet ve sıdk **fiil sıfatları**dır ve sübûtî sayıya girmez; veritabanı bu dördünü kitabın V.2.4 ve V.5 köprüsü için açmıştır. Veritabanındaki "15 sıfat suâli" sıfat sayısı değil suâl sayısıdır: üç zâtî (kıdem, bekâ, gınâ) + sekiz sübûtî + dört fiilî; vücûd, vahdâniyyet ve muhâlefet ayrı suâllerde durur (Q02, Q04+Q05, Q06–Q08). Sayımlar ve mezhep notları (Senûsî yirmi sayımı, Mu'tezile, Cehmiyye, Selefiyye) **hafızadandır, yoklanmadı**; HTML'de "Sıfat tasnifi" sekmesi ve kitapta `V.2.5` yaprakları bunu gösterir.
 
 ## Dürüstlük notları (F 2-A 32, 5)
 
@@ -53,8 +62,8 @@ Yeniden kurmak: `python3 insa.py` (kontroller kırmızıysa çıktıda KIRMIZI g
 2. **"Kat'î-şartlı" kat'î değildir.** Vâcib'in varlığı (Q02.c1) dâhil **bütün** ispat yolları en az **sebep-ilkesi** ailesine (tercihsiz tercih, hâdisin muhdisi) dayanır; Q02.c1'in hiçbir alt kümesi bu aileden bağımsız değildir (kombinasyon tablosunda "ortak zayıf halka: sebep-ilkesi"). Bu ilkeyi kabul etmeyen muhatap için ağ şunu verir: Q02.c1 düşer; **F01 (katı ateizm) ÇÜRÜMEDİ olur**, F02 ve F08 zanna iner, diğer yedi felsefe (F23, F25, F26, F29, F30, F31, F32) zan-ı gâlibe iner (Zayıf halkalar sayfası).
 3. **Çürümeyen felsefe bırakmama hedefi bu sürümde koşulludur.** Listelenen 42 felsefeden koşulsuz `ÇÜRÜMEDİ` olan yoktur (hepsi en az bir yanlış hücreye bağlıdır ve o hücre bir ispatla çürütülmüştür); fakat bu, yukarıdaki zayıf halkalar kabul edilmeden doğru değildir. Ayrıca felsefe listesi **istikrâîdir** (sayarak kurulmuştur): hücreler aklî hasırla kapalıdır, yeni bir felsefe mevcut hücrelerden birine düşer, ama bu düşüşü her yeni felsefe için ayrıca yoklamak lâzımdır.
 4. **Kısmî çürütmeler:** Q09.c2 (zorunlu sudûr) ve Q16.c1 (tesadüf) için gerçek, tam kapsamlı bir ispat yazılmadı; Q09.c2 yalnız Q13.c1'e (âlemin hudûsu, zayıf halkalı) ve Q09.c4'ün ispatına bağlanarak çürür; Q16.c1 yalnız zan-ı gâlib düzeyindedir. Sudûrcu felsefecilerin akıllar silsilesi cevabı yoklanmadı.
-5. **İHTİLAFLI hücreler (6):** Q05.c4, Q13.c3 ve dört sıfat (semi', basar, kelâm, tekvîn) hücresi kelâm içi ihtilaflıdır; kitap onları ne iddia eder ne çürütür; veritabanı onlara doğru hükmü vermez (I9). F33 (Mu'tezile) bu yüzden `İHTİLAFLI`.
-6. **Açık iş:** 585 hücre × usul çifti `YAPILMADI`dır (usulün şartı mümkün, kayıt yazılmamış); çoğu U03, U28, U17, U01 (isbat usulleri) ve U02, U09, U27, U29'un 15 sıfat hücresindeki karşılıklarıdır. Bunlar **sayılır ve gizlenmez**, ispat kaydı yazıldıkça düşer. Ayrıca 429 `SINIFLANMADI` hücre–Fârâbî sınıfı çifti vardır (ispatlar enne/lime ve dört sebep sınıflarına yalnız bir kısmında etiketli).
+5. **İHTİLAFLI hücreler (6 çıplak, +1 ispatlı):** Q05.c4, Q13.c3 ve dört sıfat (semi', basar, kelâm, tekvîn) hücresi kelâm içi ihtilaflıdır; hikmet hücresi de ihtilaflı işaretlidir fakat zan-ı gâlib düzeyinde bir ispat kaydı vardır; kitap onları ne iddia eder ne çürütür; veritabanı onlara doğru hükmü vermez (I9). F33 (Mu'tezile) bu yüzden `İHTİLAFLI`.
+6. **Açık iş:** 583 hücre × usul çifti `YAPILMADI`dır (usulün şartı mümkün, kayıt yazılmamış); çoğu U03, U28, U17, U01 (isbat usulleri) ve U02, U09, U27, U29'un 15 sıfat hücresindeki karşılıklarıdır. Bunlar **sayılır ve gizlenmez**, ispat kaydı yazıldıkça düşer. Ayrıca 429 `SINIFLANMADI` hücre–Fârâbî sınıfı çifti vardır (ispatlar enne/lime ve dört sebep sınıflarına yalnız bir kısmında etiketli).
 7. **`YAPILAMAZ` kuralları Claude'un hükmüdür** (özellikle U26 ilzam ve U27/U29 için "kayıtlı felsefe yok"); `kural.py`de yazılıdır, yoklanabilir.
 8. **Felsefe eşlemeleri yaklaşıktır:** F05, F16, F17, F30, F31 (Budizm, Teslis, Spinoza/Advaita, Vedânta, Tao) kendi kaynaklarından okunmadan eşlenmiştir; hücrelerdeki not "kaynak okunmadan ilzam yazılmaz" der.
 9. **İkinci bir motor yoktur:** türetmeler yalnız `motor.py`dedir (F 2-B 42 ruhu); veri dosyalarında hesap yoktur.
@@ -62,8 +71,13 @@ Yeniden kurmak: `python3 insa.py` (kontroller kırmızıysa çıktıda KIRMIZI g
 
 ## Ölçü sağlığı (F 3-B 27-B)
 
-`insa.py` her kuruluşta şunları sayar ve hepsi tamam çıkmıştır: bulunamayan kimlik 0 · zemine bağlanamayan ispat 0 · `kapsam_cerhi` atfı eksik hücre 0 · ispatsız veya yalnız kısmî DOĞRU/YANLIŞ hücre 0 · İHTİLAFLI hücreye hasırla doğru hükmü 0 · matris satırı 3488 = 109 × 32 · kombinasyon 1085 = Σ(2ⁿ−1). **Ayırt testi:** bir zayıf aile kaldırıldığında bağlı hücrelerin durumu fiilen düşer (sebep-ilkesi 28 hücre, kemâl 11, ibadet tanımı 4, terkip 1); etkisiz çıkan beş aile (ihkam, özdeşlik, zaman, zât–vücûd, zorunluluk de dicto) başka ispatlarla ayaktadır ve bu da sayılıdır.
+`insa.py` her kuruluşta şunları sayar ve hepsi tamam çıkmıştır: bulunamayan kimlik 0 · zemine bağlanamayan ispat 0 · `kapsam_cerhi` atfı eksik hücre 0 · ispatsız veya yalnız kısmî DOĞRU/YANLIŞ hücre 0 · İHTİLAFLI hücreye hasırla doğru hükmü 0 · matris satırı 3488 = 109 × 32 · kombinasyon 1111 = Σ(2ⁿ−1). **Ayırt testi:** bir zayıf aile kaldırıldığında bağlı hücrelerin durumu fiilen düşer (sebep-ilkesi 28 hücre, kemâl 14, ibadet tanımı 4, terkip 1); etkisiz çıkan beş aile (ihkam, özdeşlik, zaman, zât–vücûd, zorunluluk de dicto) başka ispatlarla ayaktadır ve bu da sayılıdır.
 
 ## Padişaha sorulacak tetabuk (3-A 13)
 
 Fihrist S35'tedir.
+
+
+## Harita (HTML, 3-I 238)
+
+Harita bir **canvas**tır; dünya alanı yaklaşık 18 000 × 12 800 birimdir. Her karede yalnız görünen alan çizilir: düğümler 400 birimlik ızgaradan sorgulanır, kenarlar yalnız görünen ispat düğümlerinden çıkar ve ekran uzunluğunun %90'ını aşanlar (varsayılan modda) çizilmez. Yakınlaştıkça kıta → hücre → ispat → öncül metni açılır. Bir düğüme tıklanınca **odak** açılır: dayanakları mavi, türevleri turuncu oklarla gösterilir (derinlik 1, 2, 3 veya hepsi), gerisi söner. Ağ düzeni: solda öncül kıtası (tür sütunları), sağda her suâl bir kıta, kıtada hücre kareleri, altında ispat daireleri (renk = usul grubu, kesik çizgi = türetilmiş, ortası boş = kısmî). Hücre sayfasında "kaç yoldan ispat oluyor" ve "olmaması hâlinde olacaklar" kutuları ağ haritasına bağlanır.

@@ -65,6 +65,22 @@ svg text{font:11px "IBM Plex Sans",sans-serif;fill:var(--ink)}
 .kirmizi{color:var(--yanlis);font-weight:600}.tamam{color:var(--dogru);font-weight:600}
 .cubuk{display:flex;height:10px;border-radius:5px;overflow:hidden;background:var(--chip);margin:4px 0}
 .cubuk i{display:block;height:100%}
+
+.harita-kap{position:relative;height:74vh;min-height:420px;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--bg)}
+canvas.harita{display:block;cursor:grab;touch-action:none}
+canvas.mini{position:absolute;left:10px;bottom:30px;border:1px solid var(--line);border-radius:4px;box-shadow:0 1px 3px var(--shadow);cursor:pointer}
+.ipucu{position:absolute;pointer-events:none;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:5px;padding:3px 8px;font-size:12px;box-shadow:0 1px 3px var(--shadow);max-width:280px}
+.harita-panel{position:absolute;right:10px;top:10px;width:min(340px,calc(100% - 20px));max-height:calc(100% - 20px);overflow:auto;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 14px;box-shadow:0 2px 8px var(--shadow);display:none}
+.harita-panel.acik{display:block}
+.harita-bar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px;align-items:center}
+.harita-bar button{font:500 13px "IBM Plex Sans",sans-serif;padding:6px 10px;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:6px;cursor:pointer}
+.harita-bar select{width:auto;margin:0}
+.harita-ara{flex:1 1 260px;margin:0!important;width:auto!important}
+.harita-sonuc{display:flex;flex-direction:column;align-items:flex-start;gap:4px;background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:8px 10px;margin-bottom:8px}
+.harita-sonuc[hidden],.ipucu[hidden]{display:none}
+.harita-lej{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:8px;font-size:12px;color:var(--soft)}
+.harita-lej i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px}
+.yol-say{font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -91,7 +107,7 @@ function durumChip(d){return h('span',{class:'chip '+dcls(d)},d)}
 function hukumChip(x){return h('span',{class:'chip c-'+x},x)}
 
 const sayfalar={};
-const sekmeler=[['usul','Usuller (öğretim)'],['hucre','Suâller ve hücreler'],['ag','Bağımlılık ağı'],['felsefe','Felsefeler'],['zayif','Zayıf halkalar'],['kontrol','Kontrol']];
+const sekmeler=[['usul','Usuller (öğretim)'],['hucre','Suâller ve hücreler'],['ag','Bağımlılık ağı'],['felsefe','Felsefeler'],['sifat','Sıfat tasnifi'],['zayif','Zayıf halkalar'],['kontrol','Kontrol']];
 let aktif='usul';
 
 function baslat(){
@@ -105,7 +121,7 @@ function baslat(){
     nav.append(h('button',{role:'tab','aria-selected':k===aktif?'true':'false','data-k':k,onclick:()=>git(k)},ad));
     const d=h('section',{class:'sayfa'+(k===aktif?' acik':''),id:'s-'+k});sf.append(d);sayfalar[k]=d;
   });
-  usulSayfasi();hucreSayfasi();agSayfasi();felsefeSayfasi();zayifSayfasi();kontrolSayfasi();
+  usulSayfasi();hucreSayfasi();agSayfasi();felsefeSayfasi();sifatSayfasi();zayifSayfasi();kontrolSayfasi();
   const hs=location.hash.replace('#','');if(HUCRE[hs])hucreyeGit(hs);
 }
 function git(k){aktif=k;document.querySelectorAll('nav button').forEach(b=>b.setAttribute('aria-selected',b.dataset.k===k?'true':'false'));document.querySelectorAll('.sayfa').forEach(s=>s.classList.toggle('acik',s.id==='s-'+k));window.scrollTo({top:0})}
@@ -182,7 +198,7 @@ function detay(id){
       p.usul==='U31'||p.usul==='U32'?h('p',{class:'not'},'Bu usul “taslak-namzet”tir; kitaba mühürlenmemiştir.'):null));
   });
   kap.append(kutu);
-  kap.append(matrisKutusu(id),kombKutusu(id),olumsuzKutusu(id),felsefeKutusu(id));
+  kap.append(yolKutusu(id),matrisKutusu(id),kombKutusu(id),olumsuzKutusu(id),felsefeKutusu(id));
 }
 function matrisKutusu(id){
   const m=D.matris[id];const sayac={};
@@ -210,41 +226,38 @@ function kombKutusu(id){
   return kutu;
 }
 function olumsuzKutusu(id){
-  const o=D.olumsuz.filter(x=>x.hucre===id);
+  const o=D.olmasaydi.filter(x=>x.hucre===id);
   if(!o.length)return h('div');
-  return h('div',{class:'kutu',style:'margin-top:12px'},h('h3',{style:'margin-top:0'},'Bu hücre doğru olmasaydı ne olurdu?'),h('ul',null,o.map(x=>h('li',null,x.sonuc+' ',h('span',{class:'chip'},x.tur),' ',h('span',{class:'chip'},x.usul)))));
+  const ad={'dogru-olmasaydi':'Bu hücre doğru olmasaydı','aksi-dogru-olsaydi':'Bu (yanlış) hücre doğru olsaydı','hic-olmasaydi':'Vâcib hiç var olmasaydı'};
+  const g={};o.forEach(x=>(g[x.tur]=g[x.tur]||[]).push(x));
+  return h('div',{class:'kutu',style:'margin-top:12px'},h('h3',{style:'margin-top:0'},'Olmaması hâlinde olacaklar'),
+    Object.entries(g).map(([t,l])=>h('div',null,h('div',{class:'soru-b'},ad[t]),h('ul',null,l.map(x=>h('li',null,x.sonuc+' ',h('span',{class:'chip'},x.usul),' ',x.ispat?h('span',{class:'chip'},x.not_):null))))));
+}
+function yolKutusu(id){
+  const x=HUCRE[id];
+  if(!x.ispat_say)return h('div');
+  return h('div',{class:'kutu',style:'margin-top:12px'},h('h3',{style:'margin-top:0'},'Kaç yoldan ispat oluyor'),
+    h('p',{class:'yol-say'},h('b',null,Number(x.yol).toLocaleString('tr')),' türetme ağacı (her ispat, dayandığı hücrelerin her ispatıyla ayrı ayrı sayılır) · ',h('b',null,x.yol_altkume),' usul alt kümesi · ',h('b',null,x.asgari_yollar.length),' asgarî yol'),
+    x.asgari_yollar.length?h('p',{class:'not'},'Asgarî yollar (hiçbir alt kümesi aynı hâle ulaşmayan kümeler): '+x.asgari_yollar.map(a=>a.join(' + ')).join(' · ')):null,
+    h('p',null,h('button',{class:'lnk',onclick:()=>agaGit('h:'+id)},'bu hücreyi ağ haritasında göster ›')));
+}
+function sifatSayfasi(){
+  const r=sayfalar.sifat;
+  r.append(h('h2',null,'Sıfat tasnifi'),
+    h('p',{class:'alt'},'Zâtî sıfatlar altı, sübûtî sıfatlar sekiz (Mâtürîdî sayımı; Eş’arî sayımında tekvîn kudret ve iradeye döndüğü için yedi). Hikmet, adâlet, rahmet ve sıdk, kitabın köprü hücreleridir ve sübûtî sıfat sayılmaz; fiil sıfatları sınıfındadır. Sayımlar ve mezhep notları hafızadandır, kaynak yoklanmadı.'));
+  ['zâtî','subûtî','fiilî'].forEach(sn=>{
+    const l=D.sifat.filter(t=>t.sinif===sn);
+    r.append(h('h3',null,{'zâtî':'Zâtî sıfatlar ('+l.length+')','subûtî':'Sübûtî sıfatlar ('+l.length+')','fiilî':'Fiil sıfatları, kitabın köprü hücreleri ('+l.length+')'}[sn]));
+    r.append(h('div',{class:'tab-kap kutu'},h('table',null,h('thead',null,h('tr',null,['No','Sıfat','Hücreler','Mezhep notu'].map(t=>h('th',null,t)))),
+      h('tbody',null,l.map(t=>h('tr',null,h('td',null,t.sira),h('td',null,h('b',null,t.ad)),
+        h('td',null,t.hucreler.map(c=>h('div',null,h('button',{class:'lnk',onclick:()=>hucreyeGit(c.hucre)},c.hucre),' ',hukumChip(c.hukum),' ',durumChip(c.durum)))),
+        h('td',{class:'not'},t.mezhep)))))));
+  });
 }
 function felsefeKutusu(id){
   const f=D.felsefe.filter(x=>x.hucreler.includes(id));
   if(!f.length)return h('div');
   return h('div',{class:'kutu',style:'margin-top:12px'},h('h3',{style:'margin-top:0'},'Bu hücreye bağlı felsefeler'),h('ul',null,f.map(x=>h('li',null,x.id+' · '+x.ad+' ',durumChip(x.durum)))));
-}
-
-function agSayfasi(){
-  const r=sayfalar.ag;
-  r.append(h('h2',null,'Hücreler arası bağımlılık ağı'),h('p',{class:'alt'},'Her ok, bir ispatın başka bir hücrenin sonucuna dayandığını gösterir. Sütunlar ispatın kurulabildiği katmandır: sol sütundaki hücre hiçbir başka hücreye dayanmaz, sağdaki soldakilere dayanır. Çember yoktur; çemberli ispat atanamaz. Bir düğüme tıklayınca hücre açılır.'));
-  const kat={};D.ispat.forEach(p=>{if(p.katman){kat[p.hucre]=Math.min(kat[p.hucre]||99,p.katman)}});
-  const kenar=[];D.ispat.forEach(p=>{p.prem.forEach(pr=>{if(pr.startsWith('H:')||pr.startsWith('D:'))kenar.push([pr.slice(2),p.hucre])})});
-  const tekil={};kenar.forEach(k=>tekil[k[0]+'>'+k[1]]=k);
-  const ks=Object.values(tekil);
-  const sut={};D.hucre.forEach(x=>{const k=kat[x.id]||0;(sut[k]=sut[k]||[]).push(x)});
-  const anah=Object.keys(sut).map(Number).sort((a,b)=>a-b);
-  const W=200,Hh=15,pos={};let maxY=0;
-  anah.forEach((k,i)=>{sut[k].forEach((x,j)=>{pos[x.id]=[i*W+10,j*Hh+30];maxY=Math.max(maxY,j*Hh+30)})});
-  const ns='http://www.w3.org/2000/svg';
-  const svg=document.createElementNS(ns,'svg');svg.setAttribute('width',anah.length*W+20);svg.setAttribute('height',maxY+30);
-  const kenarlar=document.createElementNS(ns,'g');svg.append(kenarlar);
-  ks.forEach(([a,b])=>{if(!pos[a]||!pos[b])return;const p=document.createElementNS(ns,'path');const x1=pos[a][0]+150,y1=pos[a][1]-4,x2=pos[b][0],y2=pos[b][1]-4;p.setAttribute('d','M'+x1+','+y1+' C'+(x1+40)+','+y1+' '+(x2-40)+','+y2+' '+x2+','+y2);p.setAttribute('fill','none');p.setAttribute('stroke','var(--line)');p.setAttribute('stroke-width','1');p.dataset.a=a;p.dataset.b=b;kenarlar.append(p)});
-  anah.forEach((k,i)=>{const t=document.createElementNS(ns,'text');t.setAttribute('x',i*W+10);t.setAttribute('y',14);t.setAttribute('font-weight','600');t.textContent=k?'Katman '+k:'Kökü yok';svg.append(t)});
-  D.hucre.forEach(x=>{const [px,py]=pos[x.id];const g=document.createElementNS(ns,'g');g.style.cursor='pointer';
-    const rect=document.createElementNS(ns,'rect');rect.setAttribute('x',px);rect.setAttribute('y',py-10);rect.setAttribute('width',150);rect.setAttribute('height',13);rect.setAttribute('rx',3);
-    rect.setAttribute('fill',x.hukum==='DOĞRU'?'var(--dogru-bg)':(x.hukum==='YANLIŞ'?'var(--yanlis-bg)':'var(--ihtilaf-bg)'));g.append(rect);
-    const t=document.createElementNS(ns,'text');t.setAttribute('x',px+3);t.setAttribute('y',py);t.textContent=x.id;g.append(t);
-    g.addEventListener('click',()=>hucreyeGit(x.id));
-    g.addEventListener('mouseenter',()=>{kenarlar.querySelectorAll('path').forEach(p=>{const on=p.dataset.a===x.id||p.dataset.b===x.id;p.setAttribute('stroke',on?'var(--accent)':'var(--line)');p.setAttribute('stroke-width',on?'2':'1');p.style.opacity=on?'1':'.35'})});
-    g.addEventListener('mouseleave',()=>{kenarlar.querySelectorAll('path').forEach(p=>{p.setAttribute('stroke','var(--line)');p.setAttribute('stroke-width','1');p.style.opacity='1'})});
-    svg.append(g)});
-  r.append(h('div',{class:'kutu ag-kap'},svg));
 }
 
 function felsefeSayfasi(){
@@ -280,6 +293,7 @@ function kontrolSayfasi(){
   const m={};Object.values(D.matris).forEach(x=>Object.values(x).forEach(v=>m[v[0]]=(m[v[0]]||0)+1));
   r.append(h('h3',null,'Matris özeti (bütün hücreler × usuller)'),h('p',null,Object.entries(m).map(([k,v])=>k+': '+v).join(' · ')));
 }
+/*__HARITA__*/
 baslat();
 </script>
 </body>

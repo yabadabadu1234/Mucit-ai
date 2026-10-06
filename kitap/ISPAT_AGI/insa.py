@@ -6,7 +6,7 @@ from collections import Counter, defaultdict
 import motor
 from motor import USUL, HUCRE, SORU, KABUL_USUL, RANK
 from veri_onerme import ONERMELER
-from veri_soru import SORULAR, HUCRELER, FELSEFELER, OLUMSUZ
+from veri_soru import SORULAR, HUCRELER, FELSEFELER, OLUMSUZ, SIFAT_TASNIFI
 from veri_ispat import ISPATLAR
 
 DIZIN = os.path.dirname(os.path.abspath(__file__))
@@ -99,6 +99,18 @@ def ne_olur_hesapla(proofs, ozet, fd):
     return sonuc
 
 
+def sifat_tasnifi_hazirla(ozet):
+    sonuc = []
+    for t in SIFAT_TASNIFI:
+        hucreler = []
+        for sid in t['sorular']:
+            for h in HUCRELER:
+                if h['soru'] == sid and h['hukum'] != 'YANLIŞ':
+                    hucreler.append(dict(hucre=h['id'], hukum=h['hukum'], durum=ozet[h['id']]['durum']))
+        sonuc.append(dict(t, hucreler=hucreler))
+    return sonuc
+
+
 def insa():
     proofs = motor.ispatlari_hazirla()
     proofs_by_id = {p['id']: p for p in proofs}
@@ -118,6 +130,9 @@ def insa():
         matrisler += motor.matris(h['id'], ozet, atanan, hucre_atanan, proofs_by_id, felsefe_say[h['id']])
         kombiler += motor.kombinasyonlar(h['id'], hucre_atanan.get(h['id'], []), atanan)
     ne_olur = ne_olur_hesapla(proofs, ozet, fd)
+    yol, hucre_yol = motor.yollari_say(proofs_by_id, atanan, hucre_atanan)
+    olmasaydi = motor.olmasaydi_satirlari(proofs_by_id, atanan)
+    sifat = sifat_tasnifi_hazirla(ozet)
 
     kontrol('Kimliği bulunamayan öncül, usul, hücre, felsefe bağı', len(eksik), 0, 'Her kayıt var olan bir kimliğe bağlıdır.')
     kontrol('Zemine bağlanamayan (çember veya eksik dayanaklı) ispat', len(bagsiz), 0, 'Her ispat kendinden evvelki katmanlardaki ispatlara dayanır; kendi kendini destekleyen ispat atanamaz.')
@@ -142,7 +157,11 @@ def insa():
     kontrol('YAPILMADI (usul şartı mümkün, kayıt yazılmamış açık iş) sayısı', ceviri['YAPILMADI'], None, 'Açık iş olarak sayılır; gizlenmez.')
 
     return dict(proofs=proofs, atanan=atanan, hucre_atanan=hucre_atanan, ozet=ozet, fd=fd, matrisler=matrisler, kombiler=kombiler, ne_olur=ne_olur,
-                bagsiz=bagsiz, felsefe_say=felsefe_say)
+                bagsiz=bagsiz, felsefe_say=felsefe_say, yol=yol, hucre_yol=hucre_yol, olmasaydi=olmasaydi, sifat=sifat)
+
+
+def altkume_say(s, hucre):
+    return sum(1 for k in s['kombiler'] if k['hucre'] == hucre and k['kat'] in ('yakîn', 'zan-ı gâlib', 'zan'))
 
 
 def sqlite_yaz(s, yol):
@@ -153,9 +172,9 @@ def sqlite_yaz(s, yol):
     CREATE TABLE usul(id TEXT PRIMARY KEY, ad TEXT, grup TEXT, tur TEXT, atif TEXT, tanim TEXT, nasil TEXT, sart TEXT, hudut TEXT, safsata TEXT, tavan TEXT, mevki TEXT, ornek TEXT);
     CREATE TABLE onerme(id TEXT PRIMARY KEY, metin TEXT, tur TEXT, kat TEXT, aile TEXT, zayif INTEGER, not_ TEXT);
     CREATE TABLE soru(id TEXT PRIMARY KEY, ad TEXT, metin TEXT, hasir TEXT, hasir_notu TEXT, grup TEXT, atif TEXT, ust_hucre TEXT);
-    CREATE TABLE hucre(id TEXT PRIMARY KEY, soru TEXT, ad TEXT, metin TEXT, hukum TEXT, tur TEXT, alt_soru TEXT, not_ TEXT, durum TEXT, kat INTEGER, en_iyi TEXT, ispat_say INTEGER, zayiflar TEXT);
+    CREATE TABLE hucre(id TEXT PRIMARY KEY, soru TEXT, ad TEXT, metin TEXT, hukum TEXT, tur TEXT, alt_soru TEXT, not_ TEXT, durum TEXT, kat INTEGER, en_iyi TEXT, ispat_say INTEGER, zayiflar TEXT, yol_turetme TEXT, yol_altkume INTEGER);
     CREATE TABLE hucre_kapsam(hucre TEXT, kapsam_cerhi TEXT);
-    CREATE TABLE ispat(id TEXT PRIMARY KEY, hucre TEXT, usul TEXT, tur TEXT, ozet TEXT, tag TEXT, hudut TEXT, sarti TEXT, kismi TEXT, katman INTEGER, kat INTEGER, durum TEXT, zayiflar TEXT, aileler TEXT);
+    CREATE TABLE ispat(id TEXT PRIMARY KEY, hucre TEXT, usul TEXT, tur TEXT, ozet TEXT, tag TEXT, hudut TEXT, sarti TEXT, kismi TEXT, katman INTEGER, kat INTEGER, durum TEXT, zayiflar TEXT, aileler TEXT, yol_turetme TEXT);
     CREATE TABLE ispat_oncul(ispat TEXT, sira INTEGER, oncul TEXT, cins TEXT);
     CREATE TABLE matris(hucre TEXT, usul TEXT, durum TEXT, sebep TEXT);
     CREATE TABLE kombinasyon(hucre TEXT, maske INTEGER, usuller TEXT, boyut INTEGER, ispat_say INTEGER, kismi_say INTEGER, kat TEXT, durum TEXT, bagimlilik TEXT, zayiflar TEXT, yeterli INTEGER, asgari INTEGER, azami INTEGER);
@@ -163,6 +182,8 @@ def sqlite_yaz(s, yol):
     CREATE TABLE felsefe_hucre(felsefe TEXT, hucre TEXT, hukum TEXT, durum TEXT);
     CREATE TABLE olumsuz(hucre TEXT, sonuc TEXT, tur TEXT, usul TEXT);
     CREATE TABLE ne_olur(tur TEXT, ad TEXT, onermeler TEXT, hucre_say INTEGER, hucreler TEXT, felsefe_say INTEGER, felsefeler TEXT);
+    CREATE TABLE olmasaydi(hucre TEXT, tur TEXT, sonuc TEXT, usul TEXT, ispat TEXT, not_ TEXT);
+    CREATE TABLE sifat_tasnifi(sinif TEXT, sira INTEGER, ad TEXT, sorular TEXT, hucreler TEXT, mezhep TEXT);
     CREATE TABLE kontrol(ad TEXT, deger INTEGER, beklenen INTEGER, tamam INTEGER, aciklama TEXT);
     ''')
     j = lambda x: json.dumps(x, ensure_ascii=False)
@@ -174,13 +195,13 @@ def sqlite_yaz(s, yol):
         c.execute('INSERT INTO soru VALUES(?,?,?,?,?,?,?,?)', (q['id'], q['ad'], q['metin'], q['hasir'], q['hasir_notu'], q['grup'], q['atif'], q['ust_hucre']))
     for h in HUCRELER:
         o = s['ozet'][h['id']]
-        c.execute('INSERT INTO hucre VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)', (h['id'], h['soru'], h['ad'], h['metin'], h['hukum'], h['tur'], h['alt_soru'], h['not_'], o['durum'], o['kat'], o['en_iyi'], o['ispat_say'], j(o['W'])))
+        c.execute('INSERT INTO hucre VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)', (h['id'], h['soru'], h['ad'], h['metin'], h['hukum'], h['tur'], h['alt_soru'], h['not_'], o['durum'], o['kat'], o['en_iyi'], o['ispat_say'], j(o['W']), str(s['hucre_yol'][h['id']]), altkume_say(s, h['id'])))
         for k in h['kapsam_cerhi']:
             c.execute('INSERT INTO hucre_kapsam VALUES(?,?)', (h['id'], k))
     for p in s['proofs']:
         a = s['atanan'].get(p['id'])
-        c.execute('INSERT INTO ispat VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)', (p['id'], p['hucre'], p['usul'], p['tur'], p['ozet'], j(p['tag']), p['hudut'], p['sarti'] or '', p['kismi'],
-                  a['katman'] if a else None, a['kat'] if a else None, motor.durum_adi(a['kat'], a['W']) if a else 'BAĞSIZ', j(sorted(a['W'])) if a else '[]', j(sorted(a['fam'])) if a else '[]'))
+        c.execute('INSERT INTO ispat VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)', (p['id'], p['hucre'], p['usul'], p['tur'], p['ozet'], j(p['tag']), p['hudut'], p['sarti'] or '', p['kismi'],
+                  a['katman'] if a else None, a['kat'] if a else None, motor.durum_adi(a['kat'], a['W']) if a else 'BAĞSIZ', j(sorted(a['W'])) if a else '[]', j(sorted(a['fam'])) if a else '[]', str(s['yol'].get(p['id'], 0))))
         for i, pr in enumerate(p['prem']):
             cins = {'H:': 'hucre-H', 'D:': 'hucre-D', 'P:': 'ispat'}.get(pr[:2], 'onerme')
             c.execute('INSERT INTO ispat_oncul VALUES(?,?,?,?)', (p['id'], i + 1, pr[2:] if cins != 'onerme' else pr, cins))
@@ -197,6 +218,10 @@ def sqlite_yaz(s, yol):
         c.execute('INSERT INTO olumsuz VALUES(?,?,?,?)', (o['hucre'], o['sonuc'], o['tur'], o['usul']))
     for n in s['ne_olur']:
         c.execute('INSERT INTO ne_olur VALUES(?,?,?,?,?,?,?)', (n['tur'], n['ad'], j(n['onermeler']), n['hucre_say'], j(n['hucreler']), n['felsefe_say'], j(n['felsefeler'])))
+    for o in s['olmasaydi']:
+        c.execute('INSERT INTO olmasaydi VALUES(?,?,?,?,?,?)', (o['hucre'], o['tur'], o['sonuc'], o['usul'], o['ispat'], o['not_']))
+    for t in s['sifat']:
+        c.execute('INSERT INTO sifat_tasnifi VALUES(?,?,?,?,?,?)', (t['sinif'], t['sira'], t['ad'], j(t['sorular']), j(t['hucreler']), t['mezhep']))
     for k in KONTROLLER:
         c.execute('INSERT INTO kontrol VALUES(?,?,?,?,?)', (k['ad'], k['deger'], k['beklenen'], int(k['tamam']), k['aciklama']))
     c.commit()
@@ -209,11 +234,14 @@ def veri_paketi(s):
         a = s['atanan'].get(p['id'])
         ispat.append(dict(id=p['id'], hucre=p['hucre'], usul=p['usul'], tur=p['tur'], ozet=p['ozet'], tag=p['tag'], hudut=p['hudut'], sarti=p['sarti'], kismi=p['kismi'],
                           prem=p['prem'], katman=a['katman'] if a else None, kat=a['kat'] if a else None,
-                          durum=motor.durum_adi(a['kat'], a['W']) if a else 'BAĞSIZ', W=sorted(a['W']) if a else [], fam=sorted(a['fam']) if a else []))
+                          durum=motor.durum_adi(a['kat'], a['W']) if a else 'BAĞSIZ', W=sorted(a['W']) if a else [], fam=sorted(a['fam']) if a else [],
+                          yol=str(s['yol'].get(p['id'], 0))))
     hucre = []
     for h in HUCRELER:
         o = s['ozet'][h['id']]
-        hucre.append(dict(h, durum=o['durum'], kat=o['kat'], en_iyi=o['en_iyi'], ispat_say=o['ispat_say'], W=o['W'], fam=o['fam']))
+        asg = [k['usuller'] for k in s['kombiler'] if k['hucre'] == h['id'] and k['asgari']]
+        hucre.append(dict(h, durum=o['durum'], kat=o['kat'], en_iyi=o['en_iyi'], ispat_say=o['ispat_say'], W=o['W'], fam=o['fam'],
+                          yol=str(s['hucre_yol'][h['id']]), yol_altkume=altkume_say(s, h['id']), asgari_yollar=asg))
     matris = defaultdict(dict)
     for m in s['matrisler']:
         matris[m['hucre']][m['usul']] = [m['durum'], m['sebep']]
@@ -226,7 +254,7 @@ def veri_paketi(s):
         felsefe.append(dict(f, durum=d['durum'], kalan=d['kalan'], satirlar=d['satirlar']))
     return dict(
         usul=motor.USULLER, onerme=list(ONERMELER.values()), soru=SORULAR, hucre=hucre, ispat=ispat, matris=matris, komb=komb, felsefe=felsefe,
-        olumsuz=OLUMSUZ, ne_olur=s['ne_olur'], kontrol=KONTROLLER, sifat_say=len([q for q in SORULAR if q['id'].startswith('Q10.')]))
+        olumsuz=OLUMSUZ, olmasaydi=s['olmasaydi'], sifat=s['sifat'], ne_olur=s['ne_olur'], kontrol=KONTROLLER, sifat_say=len([q for q in SORULAR if q['id'].startswith('Q10.')]))
 
 
 def ozet_say(s):
@@ -247,6 +275,8 @@ def main():
         json.dump(paket, f, ensure_ascii=False, indent=1)
     with open(os.path.join(DIZIN, 'sablon.html'), encoding='utf-8') as f:
         sablon = f.read()
+    with open(os.path.join(DIZIN, 'harita.js'), encoding='utf-8') as f:
+        sablon = sablon.replace('/*__HARITA__*/', f.read())
     veri = json.dumps(paket, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
     with open(os.path.join(DIZIN, 'ispat_agi.html'), 'w', encoding='utf-8') as f:
         f.write(sablon.replace('__VERI__', veri))

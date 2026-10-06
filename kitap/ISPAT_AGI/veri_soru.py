@@ -3,10 +3,12 @@ HUCRELER = []
 FELSEFELER = []
 OLUMSUZ = []
 
+IHTILAFLI_SIFAT = ('semi', 'basar', 'kelam', 'tekvin', 'hikmet')
+
 SIFATLAR = [
-    ('kidem', 'kıdem (ezelîlik)', 'selbî', ''),
-    ('beka', 'bekâ (yokluğun gelmemesi)', 'selbî', ''),
-    ('gina', 'gınâ (kıyam bi-nefsih: kendiyle kâim, hiçbir şeye muhtaç olmama)', 'selbî', ''),
+    ('kidem', 'kıdem (ezelîlik)', 'zâtî', ''),
+    ('beka', 'bekâ (yokluğun gelmemesi)', 'zâtî', ''),
+    ('gina', 'gınâ (kıyam bi-nefsih: kendiyle kâim, hiçbir şeye muhtaç olmama)', 'zâtî', ''),
     ('hayat', 'hayat', 'subûtî', ''),
     ('ilim', 'ilim', 'subûtî', ''),
     ('kudret', 'kudret', 'subûtî', ''),
@@ -164,7 +166,7 @@ H('Q17.c3', 'Q17', 'bilinemez', 'Vâcib’in varlığı hiçbir derecede bilinem
 for sid, ad, grup, ihtilaf in SIFATLAR:
     S('Q10.' + sid, 'Sıfat: ' + ad, 'Vâcib ‘' + ad + '’ sıfatına sahip midir?', 'aklî',
       'Bir sıfat Vâcib için ya zorunludur ya mümkindir ya imkânsızdır (kip hasırı, aklî).', 'sıfat', 'V.2.2' + ('; ' + ihtilaf if ihtilaf else ''))
-    H('Q10.' + sid + '.c1', 'Q10.' + sid, 'zorunlu', 'Vâcib ‘' + ad + '’ sıfatına zorunlu olarak sahiptir.', 'İHTİLAFLI' if ihtilaf else 'DOĞRU', 'sifat', not_=ihtilaf)
+    H('Q10.' + sid + '.c1', 'Q10.' + sid, 'zorunlu', 'Vâcib ‘' + ad + '’ sıfatına zorunlu olarak sahiptir.', 'İHTİLAFLI' if sid in IHTILAFLI_SIFAT else 'DOĞRU', 'sifat', not_=ihtilaf)
     H('Q10.' + sid + '.c2', 'Q10.' + sid, 'mümkin', 'Vâcib için ‘' + ad + '’ sıfatı mümkindir (olabilir de olmayabilir de).', 'YANLIŞ', 'sifat')
     H('Q10.' + sid + '.c3', 'Q10.' + sid, 'imkânsız', 'Vâcib için ‘' + ad + '’ sıfatı imkânsızdır (Vâcib bu sıfata sahip olamaz).', 'YANLIŞ', 'sifat')
 
@@ -236,3 +238,25 @@ O('Q16.c3', 'Nizamın sebebi kasıt değilse tesadüf veya zorunluluktur; ikisi 
 O('Q17.c1', 'Vâcib’in varlığı yakînen bilinemeseydi hiçbir burhân bu alana ulaşamazdı; bu hâlde bilinemezcilik ilzamla karşılaşırdı.', 'KISMEN', 'U26')
 O('Q18.c1', 'Aklın evveliyyâtı geçerli olmasaydı hiçbir ret veya delil ifade edilemezdi.', 'ÇELİŞKİ', 'U26')
 O('Q00.c1', 'Sebep ilkesi geçerli olmasaydı hiçbir hâdisin neden her yerde ve her zaman ortaya çıkmadığı açıklanamazdı.', 'MALİYET', 'U07')
+
+
+SIFAT_TASNIFI = [
+    dict(sinif='zâtî', sira=1, ad='Vücûd', sorular=['Q02'], mezhep='Senûsî sayımında “nefsiyye” sıfatı diye ayrı tutulur; kelâmcıların çoğu varlığı sıfat saymaz (hafızadan, yoklanmadı).'),
+    dict(sinif='zâtî', sira=2, ad='Kıdem', sorular=['Q10.kidem'], mezhep='Senûsî sayımında “selbiyye”.'),
+    dict(sinif='zâtî', sira=3, ad='Bekâ', sorular=['Q10.beka'], mezhep='Senûsî sayımında “selbiyye”.'),
+    dict(sinif='zâtî', sira=4, ad='Vahdâniyyet', sorular=['Q04', 'Q05'], mezhep='Senûsî sayımında “selbiyye”; tevhidin üç kanadı (zâtta, sıfatta, fiilde) bazı kelâm kitaplarında ayrı anılır.'),
+    dict(sinif='zâtî', sira=5, ad='Kıyâm bi-nefsihî (gınâ)', sorular=['Q10.gina', 'Q12'], mezhep='Senûsî sayımında “selbiyye”.'),
+    dict(sinif='zâtî', sira=6, ad='Muhâlefetün li’l-havâdis', sorular=['Q06', 'Q07', 'Q08'], mezhep='Senûsî sayımında “selbiyye”; kitabın tenzih hücreleri (âlemden ayrılık, cisim ve mekân değil, hulûl ve ittihâd yok) bunun açılımıdır.'),
+    dict(sinif='subûtî', sira=1, ad='Hayat', sorular=['Q10.hayat'], mezhep='Mâtürîdî ve Eş’arî ortak.'),
+    dict(sinif='subûtî', sira=2, ad='İlim', sorular=['Q10.ilim'], mezhep='Mâtürîdî ve Eş’arî ortak; Mu’tezile zâtın aynı sayar.'),
+    dict(sinif='subûtî', sira=3, ad='Semi’', sorular=['Q10.semi'], mezhep='Ortak sayılır; Mu’tezile ilme döndürür (V.2.1.10).'),
+    dict(sinif='subûtî', sira=4, ad='Basar', sorular=['Q10.basar'], mezhep='Ortak sayılır; Mu’tezile ilme döndürür (V.2.1.10).'),
+    dict(sinif='subûtî', sira=5, ad='Kudret', sorular=['Q10.kudret'], mezhep='Ortak.'),
+    dict(sinif='subûtî', sira=6, ad='İrade', sorular=['Q10.irade'], mezhep='Ortak.'),
+    dict(sinif='subûtî', sira=7, ad='Kelâm', sorular=['Q10.kelam'], mezhep='Ortak sayılır; kelâm-ı nefsî ve lafzî ayrımı ihtilaflıdır (V.3.1.6).'),
+    dict(sinif='subûtî', sira=8, ad='Tekvîn', sorular=['Q10.tekvin'], mezhep='Mâtürîdî ayrı sıfat sayar (sekiz); Eş’arî kudret ve iradeye döndürür (yedi). Bu yüzden toplam 8 veya 7 çıkar.'),
+    dict(sinif='fiilî', sira=1, ad='Hikmet', sorular=['Q10.hikmet'], mezhep='Sübûtî sayıya girmez; fiil sıfatıdır. Mâtürîdî’de tekvîne, Eş’arî’de kudret ve iradeye döner (hafızadan). Kitap bu dört hücreyi V.2.4 ve V.5 köprüsü için açtı.'),
+    dict(sinif='fiilî', sira=2, ad='Adâlet', sorular=['Q10.adalet'], mezhep='Aynı; insanî mânâyla müşterek lafız ayrımı gerekir (V.2.4.2).'),
+    dict(sinif='fiilî', sira=3, ad='Rahmet', sorular=['Q10.rahmet'], mezhep='Aynı.'),
+    dict(sinif='fiilî', sira=4, ad='Sıdk', sorular=['Q10.sidk'], mezhep='Aynı; H5’in köprüsü (V.5.1).'),
+]

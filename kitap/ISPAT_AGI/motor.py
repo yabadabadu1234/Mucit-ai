@@ -309,3 +309,52 @@ def tagli(tag):
     sonuc.append({'enne': 'U19', 'lime': 'U20', 'mutlak': 'U21'}[f])
     sonuc.append({'madde': 'U22', 'suret': 'U23', 'fail': 'U24', 'gaye': 'U25'}[o])
     return sonuc
+
+
+def yollari_say(proofs_by_id, atanan, hucre_atanan):
+    sirali = sorted(atanan.values(), key=lambda a: a['katman'])
+    yol = {}
+    for a in sirali:
+        p = proofs_by_id[a['id']]
+        carpim = 1
+        for pr in p['prem']:
+            if pr[:2] == 'P:':
+                carpim *= yol.get(pr[2:], 0)
+            elif pr[:2] in ('H:', 'D:'):
+                toplam = 0
+                for x in hucre_atanan.get(pr[2:], []):
+                    b = atanan[x]
+                    if b['kismi'] or b['kat'] < 1 or b['katman'] >= a['katman']:
+                        continue
+                    if pr[0] == 'D' and b['tur'] not in ('direct', 'alt'):
+                        continue
+                    if p['sarti'] and b['kat'] < RANK[p['sarti']]:
+                        continue
+                    toplam += yol.get(x, 0)
+                carpim *= toplam
+        yol[a['id']] = carpim
+    hucre_yol = {}
+    for h in HUCRELER:
+        t = 0
+        for i in hucre_atanan.get(h['id'], []):
+            a = atanan[i]
+            if not a['kismi'] and a['kat'] >= 1:
+                t += yol.get(i, 0)
+        hucre_yol[h['id']] = t
+    return yol, hucre_yol
+
+
+def olmasaydi_satirlari(proofs_by_id, atanan):
+    satirlar = []
+    for o in OLUMSUZ:
+        satirlar.append(dict(hucre=o['hucre'], tur='dogru-olmasaydi', sonuc=o['sonuc'], usul=o['usul'], ispat='', not_=o['tur']))
+    for h in HUCRELER:
+        if h['hukum'] != 'YANLIŞ':
+            continue
+        tur = 'hic-olmasaydi' if (h['id'] == 'Q02.c2' or h['soru'] == 'Q03') else 'aksi-dogru-olsaydi'
+        for pid, a in atanan.items():
+            p = proofs_by_id[pid]
+            if p['hucre'] != h['id'] or p['tur'] not in ('direct', 'alt'):
+                continue
+            satirlar.append(dict(hucre=h['id'], tur=tur, sonuc=p['ozet'], usul=p['usul'], ispat=pid, not_=durum_adi(a['kat'], a['W'])))
+    return satirlar
