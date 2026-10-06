@@ -1267,6 +1267,42 @@
    "aile": "",
    "zayif": 0,
    "not_": ""
+  },
+  {
+   "id": "m_frekans_sans",
+   "metin": "Gözlenen sıklıktan eğilime (şansa) çıkarım ilmî uygulamanın dayandığı çıkarımdır (örnek: 1000 bağımsız atışta yaklaşık 750 yazı gelince paranın yazı şansı yaklaşık 3/4 sayılır); dayanağı büyük sayılar kanunudur.",
+   "tur": "musahede",
+   "kat": "zan-ı gâlib",
+   "aile": "",
+   "zayif": 0,
+   "not_": "Pruss, PSR and Probability, b.2.1; çıkarımın geçerliliği tecrübî uygulamadır, muhatabın kendi kabulüdür"
+  },
+  {
+   "id": "t_bayes_aralik",
+   "metin": "Sebepsiz (açıklamasız) hipotez N altında gözlem dizisi E’nin olasılığı [0,1] aralığıysa, açıklayıcı hipotez H’nin sonsal olasılığı P(H|E) en az [ (1/2)^n / P(N) , 1 ] aralığını kapsar; P(N) sıfırdan büyük ve sonsuz küçük değilse n büyüdükçe alt sınır 0’a gider (Bayesçi ıraksama).",
+   "tur": "mantik",
+   "kat": "yakîn",
+   "aile": "",
+   "zayif": 0,
+   "not_": "Pruss, b.2.2, s.5-6; P(E|H)=(1/2)^n, üst uç 1, alt uç ≤ (1/2)^n / P(N); koşul olarak P(E|N)=[0,1] varsayılır (p_sebepsiz_sans_yok)"
+  },
+  {
+   "id": "p_sebepsiz_sans_yok",
+   "metin": "Sebepsiz (açıklamasız) hipotez altında hiçbir sonucun olasılığı tanımlı değildir: ya kesin bir sayı çıkar ve açıklayıcı bir şans hipotezinden ayırt edilemez, ya hiç olasılık çıkmaz, ya da en fazla tam aralık [0,1] çıkar; açıklama olmayan yerde şans da yoktur.",
+   "tur": "turetilmis",
+   "kat": "zan-ı gâlib",
+   "aile": "sebepsiz-sans",
+   "zayif": 1,
+   "not_": "Pruss, b.2.3, s.7-8; üçlü hasır (a)(b)(c) klasik ve aralıklı olasılık çerçevesi içindedir; (c) şıkkının yalnız [0,1] vermesi gösterilmemiş, ileri sürülmüştür (G1)"
+  },
+  {
+   "id": "p_apriori_ret",
+   "metin": "Deneyle reddedilemeyen ve öncülü keyfî olmadan düşük tutulamayan hipotez a priori reddedilir: sebepsiz hipotezler imkânsızdır (yerel sebep ilkesi).",
+   "tur": "turetilmis",
+   "kat": "zan-ı gâlib",
+   "aile": "apriori-ret",
+   "zayif": 1,
+   "not_": "Pruss, b.2.3, s.8-10; hasmın “bilim yapılabilsin diye düşük öncül” yolu Pruss’ça tatmin edici bulunmaz fakat kapatılmış değildir (G2)"
   }
  ],
  "soru": [
@@ -1757,7 +1793,7 @@
    "fam": [
     "sebep-ilkesi-bilgi"
    ],
-   "yol": "7",
+   "yol": "9",
    "yol_altkume": 15,
    "asgari_yollar": [
     [
@@ -1784,30 +1820,18 @@
    "durum": "ZAN-I GÂLİB",
    "kat": 2,
    "en_iyi": "Q00.c2/U26",
-   "ispat_say": 6,
+   "ispat_say": 7,
    "W": [
     "k_sebepsiz_bagimsiz"
    ],
    "fam": [
     "sebep-ilkesi-bilgi"
    ],
-   "yol": "8",
+   "yol": "9",
    "yol_altkume": 63,
    "asgari_yollar": [
     [
      "U07"
-    ],
-    [
-     "U08"
-    ],
-    [
-     "U13"
-    ],
-    [
-     "U17"
-    ],
-    [
-     "U26"
     ]
    ]
   },
@@ -5082,6 +5106,35 @@
    ],
    "fam": [
     "sebep-ilkesi-bilgi"
+   ],
+   "yol": "1"
+  },
+  {
+   "id": "Q00.c2/U07#2",
+   "hucre": "Q00.c2",
+   "usul": "U07",
+   "tur": "direct",
+   "ozet": "Sebepsiz hâdis kabul edilirse sıklıktan şansa çıkarım delil getirmez (Bayesçi ıraksama); ilmî çıkarım temelsiz kalır; bu yüzden sebepsiz hâdis a priori reddedilir.",
+   "tag": null,
+   "hudut": "",
+   "sarti": null,
+   "kismi": "",
+   "prem": [
+    "m_frekans_sans",
+    "p_sebepsiz_sans_yok",
+    "t_bayes_aralik",
+    "p_apriori_ret"
+   ],
+   "katman": 1,
+   "kat": 2,
+   "durum": "ZAN-I GÂLİB",
+   "W": [
+    "p_apriori_ret",
+    "p_sebepsiz_sans_yok"
+   ],
+   "fam": [
+    "apriori-ret",
+    "sebepsiz-sans"
    ],
    "yol": "1"
   },
@@ -9014,7 +9067,7 @@
    "fam": [
     "sebep-ilkesi-bilgi"
    ],
-   "yol": "4"
+   "yol": "6"
   },
   {
    "id": "Q00.c2/U08#dislama",
@@ -13756,7 +13809,7 @@
    ],
    "U07": [
     "KULLANILDI",
-    "Q00.c2/U07"
+    "Q00.c2/U07, Q00.c2/U07#2"
    ],
    "U08": [
     "KULLANILDI",
@@ -13776,7 +13829,7 @@
    ],
    "U12": [
     "ÖNCÜL",
-    "Müşâhede öncülleri: m_nizam"
+    "Müşâhede öncülleri: m_frekans_sans, m_nizam"
    ],
    "U13": [
     "KULLANILDI",
@@ -13792,7 +13845,7 @@
    ],
    "U16": [
     "KOMBİNE",
-    "6 ispat; ayrıntı kombinasyon tablosundadır."
+    "7 ispat; ayrıntı kombinasyon tablosundadır."
    ],
    "U17": [
     "KULLANILDI",
@@ -28783,13 +28836,15 @@
     [
      "U07"
     ],
-    1,
+    2,
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: sebep-ilkesi-bilgi",
+    "hiçbir tek zayıf aile hepsini düşürmez",
     [
-     "k_sebepsiz_bilgi"
+     "k_sebepsiz_bilgi",
+     "p_apriori_ret",
+     "p_sebepsiz_sans_yok"
     ],
     1,
     1,
@@ -28808,8 +28863,8 @@
     [
      "k_sebepsiz_bilgi"
     ],
-    1,
-    1,
+    0,
+    0,
     0
    ],
    [
@@ -28818,13 +28873,15 @@
      "U07",
      "U08"
     ],
-    2,
+    3,
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: sebep-ilkesi-bilgi",
+    "hiçbir tek zayıf aile hepsini düşürmez",
     [
-     "k_sebepsiz_bilgi"
+     "k_sebepsiz_bilgi",
+     "p_apriori_ret",
+     "p_sebepsiz_sans_yok"
     ],
     1,
     0,
@@ -28843,8 +28900,8 @@
     [
      "k_sebepsiz_bilgi"
     ],
-    1,
-    1,
+    0,
+    0,
     0
    ],
    [
@@ -28853,13 +28910,15 @@
      "U07",
      "U13"
     ],
-    2,
+    3,
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: sebep-ilkesi-bilgi",
+    "hiçbir tek zayıf aile hepsini düşürmez",
     [
-     "k_sebepsiz_bilgi"
+     "k_sebepsiz_bilgi",
+     "p_apriori_ret",
+     "p_sebepsiz_sans_yok"
     ],
     1,
     0,
@@ -28879,7 +28938,7 @@
     [
      "k_sebepsiz_bilgi"
     ],
-    1,
+    0,
     0,
     0
    ],
@@ -28890,13 +28949,15 @@
      "U08",
      "U13"
     ],
-    3,
+    4,
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: sebep-ilkesi-bilgi",
+    "hiçbir tek zayıf aile hepsini düşürmez",
     [
-     "k_sebepsiz_bilgi"
+     "k_sebepsiz_bilgi",
+     "p_apriori_ret",
+     "p_sebepsiz_sans_yok"
     ],
     1,
     0,
@@ -28923,13 +28984,15 @@
      "U07",
      "U14"
     ],
-    2,
+    3,
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: sebep-ilkesi-bilgi",
+    "hiçbir tek zayıf aile hepsini düşürmez",
     [
-     "k_sebepsiz_bilgi"
+     "k_sebepsiz_bilgi",
+     "p_apriori_ret",
+     "p_sebepsiz_sans_yok"
     ],
     1,
     0,
@@ -28949,7 +29012,7 @@
     [
      "k_sebepsiz_bilgi"
     ],
-    1,
+    0,
     0,
     0
    ],
@@ -28960,13 +29023,15 @@
      "U08",
      "U14"
     ],
-    3,
+    4,
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: sebep-ilkesi-bilgi",
+    "hiçbir tek zayıf aile hepsini düşürmez",
     [
-     "k_sebepsiz_bilgi"
+     "k_sebepsiz_bilgi",
+     "p_apriori_ret",
+     "p_sebepsiz_sans_yok"
     ],
     1,
     0,
@@ -28986,7 +29051,7 @@
     [
      "k_sebepsiz_bilgi"
     ],
-    1,
+    0,
     0,
     0
    ],
@@ -28997,13 +29062,15 @@
      "U13",
      "U14"
     ],
-    3,
+    4,
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: sebep-ilkesi-bilgi",
+    "hiçbir tek zayıf aile hepsini düşürmez",
     [
-     "k_sebepsiz_bilgi"
+     "k_sebepsiz_bilgi",
+     "p_apriori_ret",
+     "p_sebepsiz_sans_yok"
     ],
     1,
     0,
@@ -29024,7 +29091,7 @@
     [
      "k_sebepsiz_bilgi"
     ],
-    1,
+    0,
     0,
     0
    ],
@@ -29036,13 +29103,15 @@
      "U13",
      "U14"
     ],
-    4,
+    5,
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: sebep-ilkesi-bilgi",
+    "hiçbir tek zayıf aile hepsini düşürmez",
     [
-     "k_sebepsiz_bilgi"
+     "k_sebepsiz_bilgi",
+     "p_apriori_ret",
+     "p_sebepsiz_sans_yok"
     ],
     1,
     0,
@@ -29061,8 +29130,8 @@
     [
      "k_sebepsiz_bilgi"
     ],
-    1,
-    1,
+    0,
+    0,
     0
    ],
    [
@@ -29071,13 +29140,15 @@
      "U07",
      "U17"
     ],
-    2,
+    3,
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: sebep-ilkesi-bilgi",
+    "hiçbir tek zayıf aile hepsini düşürmez",
     [
-     "k_sebepsiz_bilgi"
+     "k_sebepsiz_bilgi",
+     "p_apriori_ret",
+     "p_sebepsiz_sans_yok"
     ],
     1,
     0,
@@ -29097,7 +29168,7 @@
     [
      "k_sebepsiz_bilgi"
     ],
-    1,
+    0,
     0,
     0
    ],
@@ -29108,13 +29179,15 @@
      "U08",
      "U17"
     ],
-    3,
+    4,
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: sebep-ilkesi-bilgi",
+    "hiçbir tek zayıf aile hepsini düşürmez",
     [
-     "k_sebepsiz_bilgi"
+     "k_sebepsiz_bilgi",
+     "p_apriori_ret",
+     "p_sebepsiz_sans_yok"
     ],
     1,
     0,
@@ -29134,7 +29207,7 @@
     [
      "k_sebepsiz_bilgi"
     ],
-    1,
+    0,
     0,
     0
    ],
@@ -29145,13 +29218,15 @@
      "U13",
      "U17"
     ],
-    3,
+    4,
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: sebep-ilkesi-bilgi",
+    "hiçbir tek zayıf aile hepsini düşürmez",
     [
-     "k_sebepsiz_bilgi"
+     "k_sebepsiz_bilgi",
+     "p_apriori_ret",
+     "p_sebepsiz_sans_yok"
     ],
     1,
     0,
@@ -29172,7 +29247,7 @@
     [
      "k_sebepsiz_bilgi"
     ],
-    1,
+    0,
     0,
     0
    ],
@@ -29184,13 +29259,15 @@
      "U13",
      "U17"
     ],
-    4,
+    5,
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: sebep-ilkesi-bilgi",
+    "hiçbir tek zayıf aile hepsini düşürmez",
     [
-     "k_sebepsiz_bilgi"
+     "k_sebepsiz_bilgi",
+     "p_apriori_ret",
+     "p_sebepsiz_sans_yok"
     ],
     1,
     0,
@@ -29210,7 +29287,7 @@
     [
      "k_sebepsiz_bilgi"
     ],
-    1,
+    0,
     0,
     0
    ],
@@ -29221,13 +29298,15 @@
      "U14",
      "U17"
     ],
-    3,
+    4,
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: sebep-ilkesi-bilgi",
+    "hiçbir tek zayıf aile hepsini düşürmez",
     [
-     "k_sebepsiz_bilgi"
+     "k_sebepsiz_bilgi",
+     "p_apriori_ret",
+     "p_sebepsiz_sans_yok"
     ],
     1,
     0,
@@ -29248,7 +29327,7 @@
     [
      "k_sebepsiz_bilgi"
     ],
-    1,
+    0,
     0,
     0
    ],
@@ -29260,13 +29339,15 @@
      "U14",
      "U17"
     ],
-    4,
+    5,
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: sebep-ilkesi-bilgi",
+    "hiçbir tek zayıf aile hepsini düşürmez",
     [
-     "k_sebepsiz_bilgi"
+     "k_sebepsiz_bilgi",
+     "p_apriori_ret",
+     "p_sebepsiz_sans_yok"
     ],
     1,
     0,
@@ -29287,7 +29368,7 @@
     [
      "k_sebepsiz_bilgi"
     ],
-    1,
+    0,
     0,
     0
    ],
@@ -29299,13 +29380,15 @@
      "U14",
      "U17"
     ],
-    4,
+    5,
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: sebep-ilkesi-bilgi",
+    "hiçbir tek zayıf aile hepsini düşürmez",
     [
-     "k_sebepsiz_bilgi"
+     "k_sebepsiz_bilgi",
+     "p_apriori_ret",
+     "p_sebepsiz_sans_yok"
     ],
     1,
     0,
@@ -29327,7 +29410,7 @@
     [
      "k_sebepsiz_bilgi"
     ],
-    1,
+    0,
     0,
     0
    ],
@@ -29340,13 +29423,15 @@
      "U14",
      "U17"
     ],
-    5,
+    6,
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: sebep-ilkesi-bilgi",
+    "hiçbir tek zayıf aile hepsini düşürmez",
     [
-     "k_sebepsiz_bilgi"
+     "k_sebepsiz_bilgi",
+     "p_apriori_ret",
+     "p_sebepsiz_sans_yok"
     ],
     1,
     0,
@@ -29365,8 +29450,8 @@
     [
      "k_sebepsiz_bagimsiz"
     ],
-    1,
-    1,
+    0,
+    0,
     0
    ],
    [
@@ -29375,14 +29460,16 @@
      "U07",
      "U26"
     ],
-    2,
+    3,
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: sebep-ilkesi-bilgi",
+    "hiçbir tek zayıf aile hepsini düşürmez",
     [
      "k_sebepsiz_bagimsiz",
-     "k_sebepsiz_bilgi"
+     "k_sebepsiz_bilgi",
+     "p_apriori_ret",
+     "p_sebepsiz_sans_yok"
     ],
     1,
     0,
@@ -29403,7 +29490,7 @@
      "k_sebepsiz_bagimsiz",
      "k_sebepsiz_bilgi"
     ],
-    1,
+    0,
     0,
     0
    ],
@@ -29414,14 +29501,16 @@
      "U08",
      "U26"
     ],
-    3,
+    4,
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: sebep-ilkesi-bilgi",
+    "hiçbir tek zayıf aile hepsini düşürmez",
     [
      "k_sebepsiz_bagimsiz",
-     "k_sebepsiz_bilgi"
+     "k_sebepsiz_bilgi",
+     "p_apriori_ret",
+     "p_sebepsiz_sans_yok"
     ],
     1,
     0,
@@ -29442,7 +29531,7 @@
      "k_sebepsiz_bagimsiz",
      "k_sebepsiz_bilgi"
     ],
-    1,
+    0,
     0,
     0
    ],
@@ -29453,14 +29542,16 @@
      "U13",
      "U26"
     ],
-    3,
+    4,
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: sebep-ilkesi-bilgi",
+    "hiçbir tek zayıf aile hepsini düşürmez",
     [
      "k_sebepsiz_bagimsiz",
-     "k_sebepsiz_bilgi"
+     "k_sebepsiz_bilgi",
+     "p_apriori_ret",
+     "p_sebepsiz_sans_yok"
     ],
     1,
     0,
@@ -29482,7 +29573,7 @@
      "k_sebepsiz_bagimsiz",
      "k_sebepsiz_bilgi"
     ],
-    1,
+    0,
     0,
     0
    ],
@@ -29494,14 +29585,16 @@
      "U13",
      "U26"
     ],
-    4,
+    5,
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: sebep-ilkesi-bilgi",
+    "hiçbir tek zayıf aile hepsini düşürmez",
     [
      "k_sebepsiz_bagimsiz",
-     "k_sebepsiz_bilgi"
+     "k_sebepsiz_bilgi",
+     "p_apriori_ret",
+     "p_sebepsiz_sans_yok"
     ],
     1,
     0,
@@ -29521,7 +29614,7 @@
     [
      "k_sebepsiz_bagimsiz"
     ],
-    1,
+    0,
     0,
     0
    ],
@@ -29532,14 +29625,16 @@
      "U14",
      "U26"
     ],
-    3,
+    4,
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: sebep-ilkesi-bilgi",
+    "hiçbir tek zayıf aile hepsini düşürmez",
     [
      "k_sebepsiz_bagimsiz",
-     "k_sebepsiz_bilgi"
+     "k_sebepsiz_bilgi",
+     "p_apriori_ret",
+     "p_sebepsiz_sans_yok"
     ],
     1,
     0,
@@ -29561,7 +29656,7 @@
      "k_sebepsiz_bagimsiz",
      "k_sebepsiz_bilgi"
     ],
-    1,
+    0,
     0,
     0
    ],
@@ -29573,14 +29668,16 @@
      "U14",
      "U26"
     ],
-    4,
+    5,
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: sebep-ilkesi-bilgi",
+    "hiçbir tek zayıf aile hepsini düşürmez",
     [
      "k_sebepsiz_bagimsiz",
-     "k_sebepsiz_bilgi"
+     "k_sebepsiz_bilgi",
+     "p_apriori_ret",
+     "p_sebepsiz_sans_yok"
     ],
     1,
     0,
@@ -29602,7 +29699,7 @@
      "k_sebepsiz_bagimsiz",
      "k_sebepsiz_bilgi"
     ],
-    1,
+    0,
     0,
     0
    ],
@@ -29614,14 +29711,16 @@
      "U14",
      "U26"
     ],
-    4,
+    5,
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: sebep-ilkesi-bilgi",
+    "hiçbir tek zayıf aile hepsini düşürmez",
     [
      "k_sebepsiz_bagimsiz",
-     "k_sebepsiz_bilgi"
+     "k_sebepsiz_bilgi",
+     "p_apriori_ret",
+     "p_sebepsiz_sans_yok"
     ],
     1,
     0,
@@ -29644,7 +29743,7 @@
      "k_sebepsiz_bagimsiz",
      "k_sebepsiz_bilgi"
     ],
-    1,
+    0,
     0,
     0
    ],
@@ -29657,14 +29756,16 @@
      "U14",
      "U26"
     ],
-    5,
+    6,
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: sebep-ilkesi-bilgi",
+    "hiçbir tek zayıf aile hepsini düşürmez",
     [
      "k_sebepsiz_bagimsiz",
-     "k_sebepsiz_bilgi"
+     "k_sebepsiz_bilgi",
+     "p_apriori_ret",
+     "p_sebepsiz_sans_yok"
     ],
     1,
     0,
@@ -29685,7 +29786,7 @@
      "k_sebepsiz_bagimsiz",
      "k_sebepsiz_bilgi"
     ],
-    1,
+    0,
     0,
     0
    ],
@@ -29696,14 +29797,16 @@
      "U17",
      "U26"
     ],
-    3,
+    4,
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: sebep-ilkesi-bilgi",
+    "hiçbir tek zayıf aile hepsini düşürmez",
     [
      "k_sebepsiz_bagimsiz",
-     "k_sebepsiz_bilgi"
+     "k_sebepsiz_bilgi",
+     "p_apriori_ret",
+     "p_sebepsiz_sans_yok"
     ],
     1,
     0,
@@ -29725,7 +29828,7 @@
      "k_sebepsiz_bagimsiz",
      "k_sebepsiz_bilgi"
     ],
-    1,
+    0,
     0,
     0
    ],
@@ -29737,14 +29840,16 @@
      "U17",
      "U26"
     ],
-    4,
+    5,
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: sebep-ilkesi-bilgi",
+    "hiçbir tek zayıf aile hepsini düşürmez",
     [
      "k_sebepsiz_bagimsiz",
-     "k_sebepsiz_bilgi"
+     "k_sebepsiz_bilgi",
+     "p_apriori_ret",
+     "p_sebepsiz_sans_yok"
     ],
     1,
     0,
@@ -29766,7 +29871,7 @@
      "k_sebepsiz_bagimsiz",
      "k_sebepsiz_bilgi"
     ],
-    1,
+    0,
     0,
     0
    ],
@@ -29778,14 +29883,16 @@
      "U17",
      "U26"
     ],
-    4,
+    5,
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: sebep-ilkesi-bilgi",
+    "hiçbir tek zayıf aile hepsini düşürmez",
     [
      "k_sebepsiz_bagimsiz",
-     "k_sebepsiz_bilgi"
+     "k_sebepsiz_bilgi",
+     "p_apriori_ret",
+     "p_sebepsiz_sans_yok"
     ],
     1,
     0,
@@ -29808,7 +29915,7 @@
      "k_sebepsiz_bagimsiz",
      "k_sebepsiz_bilgi"
     ],
-    1,
+    0,
     0,
     0
    ],
@@ -29821,14 +29928,16 @@
      "U17",
      "U26"
     ],
-    5,
+    6,
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: sebep-ilkesi-bilgi",
+    "hiçbir tek zayıf aile hepsini düşürmez",
     [
      "k_sebepsiz_bagimsiz",
-     "k_sebepsiz_bilgi"
+     "k_sebepsiz_bilgi",
+     "p_apriori_ret",
+     "p_sebepsiz_sans_yok"
     ],
     1,
     0,
@@ -29850,7 +29959,7 @@
      "k_sebepsiz_bagimsiz",
      "k_sebepsiz_bilgi"
     ],
-    1,
+    0,
     0,
     0
    ],
@@ -29862,14 +29971,16 @@
      "U17",
      "U26"
     ],
-    4,
+    5,
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: sebep-ilkesi-bilgi",
+    "hiçbir tek zayıf aile hepsini düşürmez",
     [
      "k_sebepsiz_bagimsiz",
-     "k_sebepsiz_bilgi"
+     "k_sebepsiz_bilgi",
+     "p_apriori_ret",
+     "p_sebepsiz_sans_yok"
     ],
     1,
     0,
@@ -29892,7 +30003,7 @@
      "k_sebepsiz_bagimsiz",
      "k_sebepsiz_bilgi"
     ],
-    1,
+    0,
     0,
     0
    ],
@@ -29905,14 +30016,16 @@
      "U17",
      "U26"
     ],
-    5,
+    6,
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: sebep-ilkesi-bilgi",
+    "hiçbir tek zayıf aile hepsini düşürmez",
     [
      "k_sebepsiz_bagimsiz",
-     "k_sebepsiz_bilgi"
+     "k_sebepsiz_bilgi",
+     "p_apriori_ret",
+     "p_sebepsiz_sans_yok"
     ],
     1,
     0,
@@ -29935,7 +30048,7 @@
      "k_sebepsiz_bagimsiz",
      "k_sebepsiz_bilgi"
     ],
-    1,
+    0,
     0,
     0
    ],
@@ -29948,14 +30061,16 @@
      "U17",
      "U26"
     ],
-    5,
+    6,
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: sebep-ilkesi-bilgi",
+    "hiçbir tek zayıf aile hepsini düşürmez",
     [
      "k_sebepsiz_bagimsiz",
-     "k_sebepsiz_bilgi"
+     "k_sebepsiz_bilgi",
+     "p_apriori_ret",
+     "p_sebepsiz_sans_yok"
     ],
     1,
     0,
@@ -29979,7 +30094,7 @@
      "k_sebepsiz_bagimsiz",
      "k_sebepsiz_bilgi"
     ],
-    1,
+    0,
     0,
     0
    ],
@@ -29993,14 +30108,16 @@
      "U17",
      "U26"
     ],
-    6,
+    7,
     0,
     "zan-ı gâlib",
     "ZAN-I GÂLİB",
-    "ortak zayıf halka: sebep-ilkesi-bilgi",
+    "hiçbir tek zayıf aile hepsini düşürmez",
     [
      "k_sebepsiz_bagimsiz",
-     "k_sebepsiz_bilgi"
+     "k_sebepsiz_bilgi",
+     "p_apriori_ret",
+     "p_sebepsiz_sans_yok"
     ],
     1,
     0,
@@ -49724,6 +49841,14 @@
    "not_": "ZAN-I GÂLİB"
   },
   {
+   "hucre": "Q00.c2",
+   "tur": "aksi-dogru-olsaydi",
+   "sonuc": "Sebepsiz hâdis kabul edilirse sıklıktan şansa çıkarım delil getirmez (Bayesçi ıraksama); ilmî çıkarım temelsiz kalır; bu yüzden sebepsiz hâdis a priori reddedilir.",
+   "usul": "U07",
+   "ispat": "Q00.c2/U07#2",
+   "not_": "ZAN-I GÂLİB"
+  },
+  {
    "hucre": "Q00.c3",
    "tur": "aksi-dogru-olsaydi",
    "sonuc": "İlkenin doğruluğunun bilinemeyeceğini söyleyen bunu bildiğini iddia eder.",
@@ -50854,6 +50979,17 @@
  "ne_olur": [
   {
    "tur": "aile",
+   "ad": "apriori-ret",
+   "onermeler": [
+    "p_apriori_ret"
+   ],
+   "hucre_say": 0,
+   "hucreler": [],
+   "felsefe_say": 0,
+   "felsefeler": []
+  },
+  {
+   "tur": "aile",
    "ad": "ibadet-tanimi",
    "onermeler": [
     "k_muhtac_ibadet"
@@ -51199,28 +51335,10 @@
     "k_sebepsiz_bagimsiz",
     "k_sebepsiz_bilgi"
    ],
-   "hucre_say": 2,
-   "hucreler": [
-    {
-     "hucre": "Q00.c1",
-     "once": "ZAN-I GÂLİB",
-     "sonra": "ZANNÎ"
-    },
-    {
-     "hucre": "Q00.c2",
-     "once": "ZAN-I GÂLİB",
-     "sonra": "ZANNÎ"
-    }
-   ],
-   "felsefe_say": 1,
-   "felsefeler": [
-    {
-     "felsefe": "F08",
-     "ad": "Kuantum sebepsizliğine dayanan sebepsiz hâdis savunusu",
-     "once": "ZANNÎ ÇÜRÜTÜLDÜ (zan-ı gâlib)",
-     "sonra": "ZANNÎ ÇÜRÜTÜLDÜ (zan)"
-    }
-   ]
+   "hucre_say": 0,
+   "hucreler": [],
+   "felsefe_say": 0,
+   "felsefeler": []
   },
   {
    "tur": "onerme",
@@ -51566,6 +51684,17 @@
   },
   {
    "tur": "aile",
+   "ad": "sebepsiz-sans",
+   "onermeler": [
+    "p_sebepsiz_sans_yok"
+   ],
+   "hucre_say": 0,
+   "hucreler": [],
+   "felsefe_say": 0,
+   "felsefeler": []
+  },
+  {
+   "tur": "aile",
    "ad": "sonsuz-gecmis",
    "onermeler": [
     "k_hudus_cisim",
@@ -51820,14 +51949,14 @@
    "deger": true,
    "beklenen": true,
    "tamam": true,
-   "aciklama": "Ölçü ayırt eder: zayıf öncül kaldırıldığında bağlı hücrelerin durumu düşer (F 3-B 27-B). Etkisiz aileler (başka ispatla ayakta): ihkam, k_zorunluluk_dicto, ozdes, sebep-ilkesi-varlik, zaman, zat-vucud"
+   "aciklama": "Ölçü ayırt eder: zayıf öncül kaldırıldığında bağlı hücrelerin durumu düşer (F 3-B 27-B). Etkisiz aileler (başka ispatla ayakta): apriori-ret, ihkam, k_zorunluluk_dicto, ozdes, sebep-ilkesi-bilgi, sebep-ilkesi-varlik, sebepsiz-sans, zaman, zat-vucud"
   },
   {
    "ad": "Etkisiz çıkan zayıf aile sayısı (bilgi)",
-   "deger": 6,
+   "deger": 9,
    "beklenen": null,
    "tamam": true,
-   "aciklama": "ihkam, k_zorunluluk_dicto, ozdes, sebep-ilkesi-varlik, zaman, zat-vucud"
+   "aciklama": "apriori-ret, ihkam, k_zorunluluk_dicto, ozdes, sebep-ilkesi-bilgi, sebep-ilkesi-varlik, sebepsiz-sans, zaman, zat-vucud"
   },
   {
    "ad": "YAPILMADI (usul şartı mümkün, kayıt yazılmamış açık iş) sayısı",
@@ -51863,17 +51992,17 @@
    "UYUMLU": 1
   },
   "ispat": {
-   "direct": 159,
+   "direct": 160,
    "sibr": 25,
    "dislama": 152,
    "alt": 1
   },
-  "ispat_toplam": 337,
+  "ispat_toplam": 338,
   "kombinasyon": 1111,
   "usul": 32,
   "soru": 33,
   "hucre_say": 109,
   "felsefe_say": 42,
-  "onerme": 69
+  "onerme": 73
  }
 }

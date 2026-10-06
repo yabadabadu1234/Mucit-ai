@@ -12,9 +12,10 @@ Padişahın isteği: "ikimiz bilmiyoruz nasıl çürüyeceğini, araştır" (zay
 
 | Kaynak | Ne öğrenildi | Durum |
 | :-- | :-- | :-- |
-| Alexander Pruss, *The Principle of Sufficient Reason: A Reassessment* (2006) ve makaleleri | PSR olasılıkçı açıklamayla bağdaşır (açıklama mantıksal gerektirme olmak zorunda değil); frekanstan şansa çıkarım, bilimsel yöntem ve "tipik olarak olgular açıklanabilir, PSR yanlışsa bu dev bir tesadüf olur" tarzı gerekçeler | Yalnız arama sonucu özeti; kitap ve makaleler **okunmadı**, sayfa gösterilemez |
+| Alexander Pruss, *The Principle of Sufficient Reason: A Reassessment* (2006) | PSR olasılıkçı açıklamayla bağdaşır; "tipik olarak olgular açıklanabilir, PSR yanlışsa bu dev bir tesadüf olur" tarzı gerekçe | Yalnız arama sonucu özeti; **kitap okunmadı** |
+| Alexander Pruss, *The Principle of Sufficient Reason and Probability* | **Padişahın yüklediği PDF baştan sona okundu** (17 sayfa); formüller, teoremler ve boşluklar `PRUSS_PSR_OLASILIK.md`de | Tâlî kaynak (çağdaş makale) |
 | Stanford Ansiklopedisi, Cosmological Argument | Kuvvetli PSR'ye itirazlar (kuantum, brute fact, modal çöküş, van Inwagen) ve temellendirmeler (kendiliğinden aşikârlık, bilimsel yöntem, retorsion, zayıflatılmış ve kısıtlanmış PSR) | Sayfanın **ilk 100 000 karakteri** özetlendi, kalan 85 460 karakter **okunmadı**; özet küçük bir modelden geldi |
-| Pruss sayfaları (alexanderpruss.com) | -- | Sunucu 503 verdi, **hiç okunamadı** |
+| Pruss sayfaları (alexanderpruss.com) | -- | Sunucu 503 verdi, **okunamadı** (makale padişahın PDF'inden okundu) |
 
 ## 3. Bulgular
 
@@ -30,7 +31,7 @@ Padişahın isteği: "ikimiz bilmiyoruz nasıl çürüyeceğini, araştır" (zay
 
 ## 4. Ne bulunamadı
 
-- İlkenin **kısa bir burhanı** (öncülleri evveliyyâta inen) bulunamadı. Okunan tek kaynak (B1-B2) ilkeyi kullanır ve anlamını belirler, ispatlamaz.
+- İlkenin **kısa bir burhanı** (öncülleri evveliyyâta inen) bulunamadı. Makale (B1-B2) ilkeyi kullanır ve anlamını belirler, ispatlamaz. Pruss makalesi (yüklenen PDF) ilke için **biçimsel bir ilzam ve teorem zinciri** verir; zayıf iki öncülü (G1, G2) ispatsızdır, bu yüzden veritabanında **zan-ı gâlib** çıkar.
 - Çağdaş PSR savunmalarının öncül ve adımları **okunmadı**, yalnız türleri biliniyor (B5).
 - Padişah: "hak geldi batıl zail oldu denemezdi eğer çürütülemez bir şüphe olsaydı". Bu söz **çürütmenin var olduğu** kanaatidir; hangi yoldan olduğunu söylemez. Not (çıkarım, padişahın sözü değil): bu cümle Müslüman okuyucu için bir güvence olarak kullanılabilir fakat gayrimüslim muhataba öncül yapılamaz (3-I 187); ayrıca "çürütme vardır" ile "bizim öncül kümemizden çürütme çıkar" ayrı iddialardır.
 
@@ -38,4 +39,5 @@ Padişahın isteği: "ikimiz bilmiyoruz nasıl çürüyeceğini, araştır" (zay
 
 1. `k_tercihsiz_hal` önermesini klasik ilkeye daraltmak (tahsis = fâilin iradesi) mı, geniş bırakıp zayıf mı saymak mı: padişahın kararı (S36).
 2. Yoktan var olma için kısa burhan-ı hulf denemesi: "kendiliğinden var olma" iddiası **(i)** neden şimdi, **(ii)** neden bu, **(iii)** hangi ihtimal uzayından sorularına cevap veremez (V.1.4.38); bu üç öncül ayrı ayrı yoklanacak.
-3. Pruss'un kendi metinleri ve Stanford maddesinin kalanı okunacak (3-A 25-B; kitap okumak için padişaha sorulur, 3-I 230).
+3. Pruss'un 2006 tarihli kitabı ve Stanford maddesinin kalanı okunacak (3-A 25-B; kitap okumak için padişaha sorulur, 3-I 230).
+4. **Pruss makalesinin boşlukları G1–G6** (`PRUSS_PSR_OLASILIK.md` b.9) kapatılmaya çalışılacak; özellikle G1 ve G2.

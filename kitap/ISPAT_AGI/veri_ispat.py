@@ -24,6 +24,8 @@ P('Q00.c1', 'U13', ['m_nizam', 'k_sebepsiz_bilgi'], 'Kontrollü ve tekrarlı gö
 P('Q00.c1', 'U14', ['m_degisim'], 'Taranan hâdislerin hiçbiri sebepsiz çıkmadı; tarama tam değildir.')
 P('Q00.c2', 'U26', ['k_sebepsiz_bagimsiz'], 'Sebepsizliği savunan bir gerekçe getirir; gerekçe getirmek açıklama aramaktır.')
 P('Q00.c2', 'U07', ['k_sebepsiz_bilgi', 'm_nizam'], 'Sebepsiz hâdis mümkün olsaydı hâdislerin neden her yerde ve her zaman ortaya çıkmadığı açıklanamazdı.')
+P('Q00.c2', 'U07', ['m_frekans_sans', 'p_sebepsiz_sans_yok', 't_bayes_aralik', 'p_apriori_ret'],
+  'Sebepsiz hâdis kabul edilirse sıklıktan şansa çıkarım delil getirmez (Bayesçi ıraksama); ilmî çıkarım temelsiz kalır; bu yüzden sebepsiz hâdis a priori reddedilir.')
 P('Q00.c3', 'U26', ['k_bilinemez_bilgi'], 'İlkenin doğruluğunun bilinemeyeceğini söyleyen bunu bildiğini iddia eder.')
 P('Q00.c3', 'U29', ['k_yalniz_duyu_kendini_yikar', 'e_celismezlik'],
   'Zorunlu bağ görülmez itirazı, bilginin yalnız duyudan geldiği öncülüne dayanır; bu öncül kendini yıkar.')

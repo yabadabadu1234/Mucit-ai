@@ -104,7 +104,7 @@
 | V.1.4.15 | **İtiraz (ispat yükü):** "Yokluğu iddia etmiyorum" | İt |
 | V.1.4.16 | **Cevap:** V.0.2.2–3 | C |
 
-#### V.1.4.17–V.1.4.50 Rastgelelik itirazı (padişahın isteği; deşme taslağı)
+#### V.1.4.17–V.1.4.75 Rastgelelik itirazı (padişahın isteği; deşme taslağı)
 
 | No | Cümle | Cins |
 | :-- | :-- | :-- |
@@ -142,6 +142,31 @@
 | V.1.4.48 | Evveliyyâtı inkâr eden hasma burhan değil **tenbih ve ilzam** yapılır; bu kitapta çürütmenin biçimi budur (Kısım I usulleri) | K |
 | V.1.4.49 | Sınır: ilzam, yalnız yoktan varlığı sebepsiz sayan **yerel** inkârcıyı tam kuşatmaz; retorsion küllî sebepsizlik savunana vurur (V.1.4.31) | Z |
 | V.1.4.50 | Açık iş: “kendiliğinden var olma” iddiasına karşı kısa burhan-ı hulf denemesi, üç soruyla: neden şimdi, neden bu, hangi ihtimal uzayından (V.1.4.38) | K |
+| V.1.4.51 | **Kaynak:** Pruss, “The Principle of Sufficient Reason and Probability” (17 sayfa; padişahın yüklediği PDF **baştan sona okundu**; formüller DESTEK/PRUSS_PSR_OLASILIK.md; çağdaş tâlî kaynaktır) | K |
+| V.1.4.52 | **PSR (Pruss):** zorunlu olarak her mümkin doğru önermenin bir açıklaması vardır | T |
+| V.1.4.53 | Pruss’a göre PSR belirsizlikçi olgularla bağdaşır: açıklama belirleyici olmak zorunda değildir; olasılıkçı ve düşük olasılıklı açıklama da açıklamadır (kitabın V.1.4.27’siyle aynı yol) | K |
+| V.1.4.54 | Rescher’in misali: uçak kazasını araştıranlar açıklamayı bulamadıklarından “açıklama yoktur” sonucunu çıkarmaz; V.1.4.26’nın bağımsız teyididir | K |
+| V.1.4.55 | Sıklıktan şansa çıkarım ilmî uygulamanın temelidir: 1000 bağımsız atışta yaklaşık 750 yazı gelince yazı şansı yaklaşık 3/4 sayılır | K |
+| V.1.4.56 | Büyük sayılar kanunu: Cp hipotezi altında çok sayıda bağımsız ve aynı dağılımlı şanslı denemede sıklığın p’ye yakın olması muhtemeldir, p’den uzak olması muhtemel değildir | B |
+| V.1.4.57 | Sebepsiz hipotez altında olasılık tanımlı değilse hiçbir sıklığın beklenip beklenmemesi söylenemez; Pruss Teorem 2: bağımsız doyurulmuş ölçülemez olaylarda “gerçekleşen sayısı J kümesindedir” olayı da doyurulmuş ölçülemezdir (J boş olmayan öz altküme; Seçim Aksiyomu altında) | K |
+| V.1.4.58 | Bayes: `P(H|E) = P(E|H)P(H) / (P(E|H)P(H) + P(E|N)P(N))`; `P(E|H)=(1/2)^n`, `P(E|N)=[0,1]` ise `P(H|E) ⊇ [(1/2)^n / P(N), 1]`; `P(N)` sıfırdan büyük ve sonsuz küçük değilse `n` büyüdükçe alt sınır 0’a gider (Bayesçi ıraksama) | B |
+| V.1.4.59 | Sebepsiz hipotez için üç şık: (a) kesin sayı: açıklayıcı bir şans hipotezinden ayırt edilemez; (b) hiç olasılık: doyurulmuş ölçülemez; (c) aralık: en fazla `[0,1]`; “en fazla `[0,1]`” kısmı **ileri sürülmüştür, gösterilmemiştir** (G1) | Z |
+| V.1.4.60 | Pruss’un hükmü: sebepsiz hipotez deneyle reddedilemez ve öncülü keyfî olmadan düşük tutulamaz; öyleyse a priori reddedilmelidir (yerel sebep ilkesi) | Z |
+| V.1.4.61 | Pruss’un kendi itirazı: düşük öncül de kabul edilebilir (bilim yapılabilsin diye; deneyle ayırt edilemeyen `F = Gm₁m₂/r² + 10⁻¹⁰⁰` hipotezine verilen düşük öncül gibi) | İt |
+| V.1.4.62 | Pruss bu itirazı “tatmin edici değil ama iki tatminsiz durumdansa biri iyidir” diye karşılar; bu bir tercih gerekçesidir, çürütme değildir: hasmın “düşük öncül” yolu kapanmış değildir (G2) | Z |
+| V.1.4.63 | Ters çevirme: “gözlem hipotez üzerinde olasılıksızsa hipotezi zayıflatır” kabul edilirse hem E hem değili E hipotezi zayıflatır; bu ancak hipotez imkânsızsa çelişkisizdir | K |
+| V.1.4.64 | Yerelden küresele: yerel ilke ceviz dünyasına (sonlu geçmiş, tek ve değişmeyen ceviz) uygulanınca cevizin açıklaması cevizin dışına çıkar; dışarıda mümkin yoksa açıklama zorunlu bir varlık veya zorunlu bir ilkedir; S5 gereği bu zorunluluk gerçek dünyada da geçerlidir | K |
+| V.1.4.65 | Boşluk (G5): bu adım S5’e, ceviz dünyasının mümkünlüğüne ve ilkenin metafizik zorunlu sayılmasına dayanır; sonuç “zorunlu varlık **veya** zorunlu ilke”dir; “Vâcib” sonucu bu makaleden tek başına **çıkmaz** | Z |
+| V.1.4.66 | van Inwagen itirazı: bütün mümkin doğruların bağlacının açıklaması ya mümkin (kendini açıklar) ya zorunlu olur (zorunlu mümkini açıklayamaz, VIP); Pruss açıklamanın gerektirmeyi zorunlu kılmadığını (olasılıkçı açıklama) hatırlatır, mesele yalnız VIP’e iner | K |
+| V.1.4.67 | Zimmerman’ın önerisi: yerellik evren büyüklüğüne göre alınırsa ceviz tek başına iken açıklama ister, çok şeyin biri iken istemez; Pruss bunu makul bulmaz | K |
+| V.1.4.68 | Küresel olasılıklar: başlangıç anı olmayan fakat sonlu geçmişli evren (zaman aralığı `{t : t > 0}`) yerel ilkeye girmez; Russell’ın beş dakikalık evreni ve bir dakikalık geriye ışık konisi hipotezi şans ve sadelikle Büyük Patlama hipotezinden ayrılamaz | K |
+| V.1.4.69 | Pruss’a göre PSR’ye uyan sapkın hipotezler (bilim düşmanı zorunlu varlık) sadelikle elenir ve kanonik bilim sever hipotez mükemmel varlıktır; bu sadelik argümanıdır, **zan** düzeyindedir ve V.2’ye aittir | Z |
+| V.1.4.70 | Pruss’un hükmü: **açıklama olmayan yerde şans da yoktur**; şans yoksa keyfî olmayan olasılık zordur; bu yüzden yerel değil küresel sebep ilkesi gerekir | K |
+| V.1.4.71 | Pruss şansın klasik olasılık aksiyomlarına bağlı olmayabileceğini ekler; bu durumda da ana hüküm sürer: şans doğurmayan hipotezler a priori reddedilmelidir | K |
+| V.1.4.72 | Boşluk (G3): üç şık klasik ve aralıklı olasılık çerçevesi içinde hasırdır; çerçeve dışı hasım bu hasırla kuşatılmaz | Z |
+| V.1.4.73 | Teklif (çıkarım, Pruss söylemiyor; yoklanacak): G1’i teoreme çevirmek: sebepsiz hipotez dar aralık `[a,b]` verirse “neden `[a,b]`” sorusunun cevabı bir **kanun**dur; kanun açıklamadır; böylece (c) şıkkı sebepsizliğe değil kanunlu rastgeleliğe iner | K |
+| V.1.4.74 | Teklif (çıkarım; yoklanacak): G2’yi teoreme çevirmek için “düşük öncül” yolunun kendi gerekçesini istediği veya kendini yıktığı gösterilmelidir; gösterilmedikçe bu yol ilzam olarak kalır | K |
+| V.1.4.75 | Veritabanı: Pruss’un öncülleri dört öncül olarak kaydedildi (`m_frekans_sans`, `t_bayes_aralik`, `p_sebepsiz_sans_yok`, `p_apriori_ret`); yeni ispat `Q00.c2/U07#2` **zan-ı gâlib** çıkıyor, çünkü iki öncül zayıf (G1, G2); kitabın katiyet işareti **yakîne çıkarılmadı** | K |
 
 ### V.1.5 Neticenin hududu
 
