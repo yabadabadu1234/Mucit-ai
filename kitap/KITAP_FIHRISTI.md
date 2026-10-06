@@ -82,7 +82,7 @@ Yaprak sayısı: 7 halka × 4 (tasavvur · tasdik-kendi tarttı · tasdik-devral
 | V.7 | **Açıklama ve tahkik (Fasıl IV).** (7.1) Kur'ân'ın açıklayıcısı: peygamber ve sünnet · (7.2) nakil usulü: isnad, tevâtür, haber-i vâhid · (7.3) sünnetin hüccet oluşu · (7.4) ictihâd ve makâsıd · (7.5) itirazlar: hadis tenkidi, "Kur'ân yeter" | P |
 | V.8 | **Müslüman okuyucu: şüphenin teşhisi ve tedavisi.** (8.1) şüpheyi zincirde yerine koymak (hangi halka, hangi fiil) · (8.2) şüphe ile vesvese ayrımı · (8.3) îmânın derinleşmesi: tasdîkten iz'âna · (8.4) tasdîk ve amel | P |
 | V.9 | **Hâtime.** (9.1) delil haritası: halka × usul × katiyet · (9.2) kapanış defteri raporu: hücre sayıları · (9.3) açık suâller | P, T |
-| V.F | **Fârâbî'den namzet kullanım yerleri** (17 satır; hangi bâbın hangi yaprağına girecekleri; hepsi Claude önerisi): `DESME_KISIM_V.md` V.F | 3-I 236 |
+| V.F | **Fârâbî'den namzet kullanım yerleri** (18 satır; hangi bâbın hangi yaprağına girecekleri; hepsi Claude önerisi): `DESME_KISIM_V.md` V.F | 3-I 236 |
 
 **Halka × delil usulü × elimizdeki dayanak** (dayanak yalnız **içindekiler düzeyindedir**, içerik okunmamıştır):
 
