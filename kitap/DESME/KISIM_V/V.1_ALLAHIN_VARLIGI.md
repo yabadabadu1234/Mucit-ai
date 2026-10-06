@@ -104,6 +104,26 @@
 | V.1.4.15 | **İtiraz (ispat yükü):** "Yokluğu iddia etmiyorum" | İt |
 | V.1.4.16 | **Cevap:** V.0.2.2–3 | C |
 
+#### V.1.4.17–V.1.4.31 Rastgelelik itirazı (padişahın isteği; deşme taslağı)
+
+| No | Cümle | Cins |
+| :-- | :-- | :-- |
+| V.1.4.17 | **İtiraz (rastgelelik):** her şeyin bir sebebi olmak zorunda değildir, dünyada bazı şeyler gerçekten rastgeledir; dünyadan sebep misali verilse karşı taraf rastgelelik misali verir (padişahın aktarımı) | İt |
+| V.1.4.18 | Padişahın misali: bir sınıfa girecek iki matematik hocasından hangisinin geleceği tamamen rastgele seçilmiş olabilir | M |
+| V.1.4.19 | **Dünyadan verilen misal delil değildir:** sebep örnekleri de rastgelelik örnekleri de tümevarımdır ve yakîn vermez (I.4.2.C.3); bu yüzden cevap misal yarışına girmez, aklî hasıra dayanır | K |
+| V.1.4.20 | **“Rastgele” üç şeyden birini kastedebilir (aklî hasır):** (a) sebep vardır fakat bilinmiyor, (b) sebepler vardır fakat birbirinden bağımsız zincirlerin kesişmesidir (rastlantı), (c) olay hiçbir sebep olmadan olur | K |
+| V.1.4.21 | (a) bilgisizliktir; bilgisizlikten sebepsizlik çıkmaz (V.0.2.3) | C |
+| V.1.4.22 | (b) sebepsizlik değildir: iki hocanın her biri kendi sebep zincirinden gelir; kesişmeleri “ittifak”tır, ikisinin de sebepleri vardır | C |
+| V.1.4.23 | Hoca misalinde “seçilmiş” kelimesi bir seçen mekanizma (kura, program, müdür kararı, hastalık) bildirir; rastgele seçim de bir **işleyiş** ister (zar, çekiliş) ve o işleyiş bir sebeptir | C |
+| V.1.4.24 | Hoca misalinde asıl iddia “hangisi” sorusunun cevabının bize öngörülemez oluşudur; hocanın, sınıfın, zamanın var olması sebepsiz değildir | C |
+| V.1.4.25 | Yalnız (c) bu kitabın hudûs ve imkân delillerine karşı gelir; (c) için delil gerekir, çünkü sebepsizlik iddiası da iddiadır ve yükü iddia sahibindedir (V.0.2.2) | K |
+| V.1.4.26 | Misaller (c)’yi gösteremez: sebebi bilinmeyen bir olay ile sebebi olmayan bir olay dışarıdan **ayırt edilemez**; “sebebini bulamadım”dan “sebebi yoktur”a geçmek bilgisizlikten yokluğa geçmektir (I.6.3) | C |
+| V.1.4.27 | **Kanunlu rastgelelik sebepsiz değildir:** rastgele denen olayların dağılımı kararlıdır (zar için altı yüz, kuantum için Born kuralı); keyfî bir dağılımın neden başka değil bu olduğu sorusu sorulur ve cevabı kanundur | C |
+| V.1.4.28 | Hudûs ve imkân delilleri “her olayın belirleyici bir sebebi vardır” demez; “yokken var olan şeyin bir muhdisi vardır” ve “mümkinler bütününün müreccihi vardır” der; sistem içindeki hangi-hâl sorusundan başka bir sorudur | K |
+| V.1.4.29 | Sistem içinde gerçek bir belirsizlik (kuantum) kabul edilse de, belirsizliğin işlediği sistem, kanunları ve enerji mevcuttur; bu mevcudiyetin kendisi yoktan var olmuş olamaz (V.1.4.4) | C |
+| V.1.4.30 | **Zayıf halka açıkça yazılır:** “tercihsiz tercih imkânsızdır” (V.1.3.b.4) ilkesi, eşit imkânlı iki hâlden birinin sebepsiz gerçekleşebileceğini savunan hasma karşı **ispat değil ilkedir**; ilke reddedilirse imkân–vücûb delilinin katiyeti düşer (veritabanında sebep-ilkesi ailesi: 28 hücre ve 10 felsefe etkilenir) | Z |
+| V.1.4.31 | İlzam (kısmî): sebepsizliği savunan, savunusunda **gerekçe** getirir; gerekçe getirmek açıklama aramaktır; kendi cümlesi sebepsiz olay olarak kabul edilebilseydi onu ciddiye almak için de bir sebep kalmazdı | C |
+
 ### V.1.5 Neticenin hududu
 
 | No | Cümle | Cins |
