@@ -104,7 +104,7 @@
 | V.1.4.15 | **İtiraz (ispat yükü):** "Yokluğu iddia etmiyorum" | İt |
 | V.1.4.16 | **Cevap:** V.0.2.2–3 | C |
 
-#### V.1.4.17–V.1.4.31 Rastgelelik itirazı (padişahın isteği; deşme taslağı)
+#### V.1.4.17–V.1.4.40 Rastgelelik itirazı (padişahın isteği; deşme taslağı)
 
 | No | Cümle | Cins |
 | :-- | :-- | :-- |
@@ -121,8 +121,17 @@
 | V.1.4.27 | **Kanunlu rastgelelik sebepsiz değildir:** rastgele denen olayların dağılımı kararlıdır (zar için altı yüz, kuantum için Born kuralı); keyfî bir dağılımın neden başka değil bu olduğu sorusu sorulur ve cevabı kanundur | C |
 | V.1.4.28 | Hudûs ve imkân delilleri “her olayın belirleyici bir sebebi vardır” demez; “yokken var olan şeyin bir muhdisi vardır” ve “mümkinler bütününün müreccihi vardır” der; sistem içindeki hangi-hâl sorusundan başka bir sorudur | K |
 | V.1.4.29 | Sistem içinde gerçek bir belirsizlik (kuantum) kabul edilse de, belirsizliğin işlediği sistem, kanunları ve enerji mevcuttur; bu mevcudiyetin kendisi yoktan var olmuş olamaz (V.1.4.4) | C |
-| V.1.4.30 | **Zayıf halka açıkça yazılır:** “tercihsiz tercih imkânsızdır” (V.1.3.b.4) ilkesi, eşit imkânlı iki hâlden birinin sebepsiz gerçekleşebileceğini savunan hasma karşı **ispat değil ilkedir**; ilke reddedilirse imkân–vücûb delilinin katiyeti düşer (veritabanında sebep-ilkesi ailesi: 28 hücre ve 10 felsefe etkilenir) | Z |
+| V.1.4.30 | **Zayıf halka açıkça yazılır:** “tercihsiz tercih imkânsızdır” (V.1.3.b.4) ilkesi, eşit imkânlı iki hâlden birinin sebepsiz gerçekleşebileceğini savunan hasma karşı **ispat değil ilkedir**; ilke reddedilirse imkân–vücûb delilinin katiyeti düşer (veritabanında sebep-ilkesi ailesinin bütünü: 28 hücre ve 10 felsefe etkilenir; aile üçe ayrıldı, V.1.4.32) | Z |
 | V.1.4.31 | İlzam (kısmî): sebepsizliği savunan, savunusunda **gerekçe** getirir; gerekçe getirmek açıklama aramaktır; kendi cümlesi sebepsiz olay olarak kabul edilebilseydi onu ciddiye almak için de bir sebep kalmazdı | C |
+| V.1.4.32 | Zayıf halka tek parça değildir; veritabanında üç kanada ayrıldı: **varlık kanadı** (yokken var olan şey müreccih ister), **hâl kanadı** (eşit imkânlı hâllerden yalnız birinin gerçekleşmesi müreccih ister), **bilgi kanadı** (sebepsizlik kabul edilirse ilmî açıklamanın temeli kalmaz) | K |
+| V.1.4.33 | Rastgelelik misalleri (hoca, zar, kura, kuantum ölçümü) yalnız **hâl kanadına** dokunur; varlık kanadına dokunmaz, çünkü hiçbiri yokken var olma misali değildir | C |
+| V.1.4.34 | Ölçüm: hâl kanadı tek başına kaldırılınca 18 hücre kat’î-şartlıdan zan-ı gâlibe iner (Q11 ve Q14 hücreleri ile Q10 sıfat suâllerinin “zorunlu” ve “imkânsız” hücreleri); Vâcib’in varlığı (Q02.c1) ve Q03.c2 **inmez**, çünkü bu hücreler varlık kanadına dayanan bağımsız ispatlarla da ayaktadır | C |
+| V.1.4.35 | Ölçüm: varlık ve hâl kanadı **birlikte** kaldırılırsa Q02.c1, Q02.c2 ve Q03.c2 kat’î-şartlıdan zan-ı gâlibe iner, çürümez; bilgi kanadı da kaldırılırsa bu üç hücre ispatsız kalır | Z |
+| V.1.4.36 | Bu ölçüm bir bağımsızlık ölçümüdür, ilkenin ispatı değildir: “iki kanadı da reddeden hasma karşı delil durur” denmez | K |
+| V.1.4.37 | İlk ilke ispatlanmaz; ispatı kalmayan ilkeye karşı yapılabilen şey **maliyet göstermektir**: ilkeyi reddeden, her açıklamanın ve her ispatın temelini birlikte reddeder (bilgi kanadı) | K |
+| V.1.4.38 | **Örnekleyici cevabı:** “rastgele” bir hâl, bir ihtimal uzayı ve bir dağılım demektir; yoktan var olmak için ne uzay ne dağılım vardır, çünkü uzay ve dağılım zaten var olan şeydir (V.1.4.29) | C |
+| V.1.4.39 | **Maliyet cevabı:** sebepsiz var olma serbest olsaydı, hiçbir şeyin kendiliğinden ortaya çıkmayışı açıklanamazdı; çıkışı sınırlayan her kayıt bir sebep kanunudur; bu çıkarım **zan-ı gâlib** düzeyindedir | Z |
+| V.1.4.40 | Muhataba söylenecek dürüst hüküm: bu halka çürütülmez, **daraltılır**; çürütülmeyen kısım ilke olarak açıkça yazılır ve reddedenin ödediği bedel gösterilir | K |
 
 ### V.1.5 Neticenin hududu
 

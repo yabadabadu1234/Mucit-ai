@@ -39,13 +39,13 @@ P('Q01.c3', 'U07', ['H:Q02.c1', 'k_vuku_imkan'], 'Zorunlu bir varlık mevcutsa z
 P('Q02.c1', 'U03', ['m_mumkin', 'm_tahsis', 't_mumkin', 't_vacib', 'k_tercihsiz', 'k_butunun_dis_muhtac', 'H:Q03.c3', 'H:Q03.c4', 'H:Q03.c5'],
   'Mümkinlerin varlığı yokluklarına tercih edilmiştir; tercih bir müreccih ister; müreccih mümkinler zincirinde bulunamadığından bütünün dışındaki Vâcib vardır.',
   tag=('enne', 'fail'))
-P('Q02.c1', 'U01', ['m_tahsis', 'k_tercihsiz', 'H:Q03.c2', 'H:Q03.c3', 'H:Q03.c4'],
+P('Q02.c1', 'U01', ['m_tahsis', 'k_tercihsiz_hal', 'H:Q03.c2', 'H:Q03.c3', 'H:Q03.c4'],
   'Âlemdeki belirli hâl (tahsis) bir eserdir; müessiri mümkinler içinde bulunamaz.', tag=('enne', 'fail'))
 P('Q02.c1', 'U04', ['m_degisim', 't_alem', 'k_hudus_cisim', 'k_cisim_parcali', 'k_sonsuz_hadis', 'k_hadis_muhdis', 'H:Q03.c4', 'H:Q03.c5'],
   'Âlem hâdistir; hâdisin muhdisi vardır; muhdis âlemden ve hâdis olamaz; öyleyse kadîmdir.', tag=('enne', 'fail'))
 P('Q02.c1', 'U31', ['m_ben', 't_vacib', 't_mumkin', 'k_tercihsiz', 'k_muhtac_mumkin', 'H:Q03.c3', 'H:Q03.c4', 'H:Q03.c5'],
   'Düşünenin kendi varlığından başlanır; varlık mümkin ve vâcibe taksim edilir; mümkinin müreccihi zincirde kapanmaz.', tag=('enne', 'suret'))
-P('Q02.c1', 'U14', ['m_tahsis', 'k_tercihsiz'], 'Bilinen bütün eserlerin müessiri bulunmuştur; tarama tam olmadığından netice zannîdir.')
+P('Q02.c1', 'U14', ['m_tahsis', 'k_tercihsiz_hal'], 'Bilinen bütün eserlerin müessiri bulunmuştur; tarama tam olmadığından netice zannîdir.')
 P('Q02.c1', 'U32', ['m_bilinc'], 'İnsandaki mutlak varlığa yönelme eğilimi delil sayılmaz; muhatabı aramaya sevk eder.')
 
 P('Q03.c1', 'U12', ['m_mumkin', 'm_degisim', 'k_degisen_vacib_degil'], 'Âlemde değişen ve başka türlü olabilen şeylerin bulunduğu müşâhede edilir.')
@@ -53,7 +53,7 @@ P('Q03.c1', 'U26', ['m_ben', 'e_celismezlik'], '“Varlık kuruntudur” diyen, 
 P('Q03.c1', 'U07', ['m_ben', 'e_celismezlik'], 'Hiçbir şey yoksa bu cümleyi söyleyen de yoktur.')
 P('Q03.c2', 'U03', ['m_tahsis', 'k_tercihsiz', 'k_butunun_dis_muhtac', 'k_terkip'],
   'Bütünün müreccihi yoksa tahsis tercihsiz tercih olur; tercihsiz tercih imkânsızdır.')
-P('Q03.c2', 'U07', ['k_tercihsiz', 'k_butunun_dis_muhtac', 'm_tahsis'], 'Sebepsiz bütün kabul edilirse belirli hâl açıklanamaz.')
+P('Q03.c2', 'U07', ['k_tercihsiz_hal', 'k_butunun_dis_muhtac', 'm_tahsis'], 'Sebepsiz bütün kabul edilirse belirli hâl açıklanamaz.')
 P('Q03.c2', 'U26', ['k_sebepsiz_bagimsiz'], 'Sebepsiz olgu savunusu kendi gerekçesini ister.')
 P('Q03.c2', 'U17', ['k_sebepsiz_bilgi', 'm_tahsis'], 'Sebepsiz olgu kabul edilirse hiçbir ilmî açıklamanın temeli kalmaz.')
 P('Q03.c3', 'U05', ['k_muhtac_mumkin', 'k_butunun_dis_muhtac', 'e_celismezlik'],
@@ -113,7 +113,7 @@ P('Q09.c2', 'U07', ['H:Q13.c1', 'k_zorunlu_sonuc'], 'Zorunlu sebebin sonucu ezel
 P('Q09.c3', 'U03', ['k_beka_muhtac', 'm_mumkin', 'k_tercihsiz'], 'Mümkin âlemin devamı da her an müreccihe muhtaçtır.')
 P('Q09.c3', 'U27', ['k_kemal', 'k_gaye'], 'Yaratıp bırakmak, fiilin gâyesinden ve yaratıcının kemâlinden vazgeçmektir.')
 P('Q09.c4', 'U03', ['m_mumkin', 'k_tercihsiz', 'k_beka_muhtac', 'H:Q02.c1'], 'Mümkin her an müreccihe muhtaç olduğundan Vâcib her an var edip ayakta tutar.', tag=('enne', 'fail'))
-P('Q09.c4', 'U07', ['m_tahsis', 'k_irade_cuzi', 'k_tercihsiz'], 'Belirli hâlin seçilmesi iradeli fâilin işidir; zorunlu sebep belirli hâli seçemez.', tag=('enne', 'fail'))
+P('Q09.c4', 'U07', ['m_tahsis', 'k_irade_cuzi', 'k_tercihsiz_hal'], 'Belirli hâlin seçilmesi iradeli fâilin işidir; zorunlu sebep belirli hâli seçemez.', tag=('enne', 'fail'))
 P('Q09.c4', 'U17', ['m_nizam', 'm_ihkam', 'k_ihkam_ilim'], 'Muhkem eser ilimli ve iradeli bir fâile işaret eder.', tag=('enne', 'gaye'))
 
 P('Q11.c1', 'U07', ['m_tahsis', 'k_irade_ilim', 'k_irade_cuzi', 'H:Q09.c4'], 'Âlemi ihtiyarla var eden âlemi bilmek zorundadır.')
@@ -150,7 +150,7 @@ P('Q15.c4', 'U28', ['k_muhtac_ibadet', 'H:Q09.c4'], 'İbadetin tanımı varlığ
 P('Q15.c4', 'U07', ['k_muhtac_ibadet', 'H:Q09.c4', 'm_bilinc'], 'Bağlılık duygusu ve anlam arayışı boş değildir; muhatabı vardır.')
 
 P('Q16.c1', 'U17', ['m_nizam', 'm_ihkam', 'k_ihkam_ilim'], 'İnce ayar ve muhkemlik rastlantıdan çok kasda işaret eder.')
-P('Q16.c1', 'U07', ['k_tercihsiz', 'm_nizam'], 'Çoklu evren de belirli bir çokluk mekanizması ister; çokluğun kendisi de tercihtir.',
+P('Q16.c1', 'U07', ['k_tercihsiz_hal', 'm_nizam'], 'Çoklu evren de belirli bir çokluk mekanizması ister; çokluğun kendisi de tercihtir.',
   kismi='Çoklu evrenin kendi sebebine dair sorusu sebep ilkesine bağlıdır; ilke kabul edilmezse delil işlemez')
 P('Q16.c2', 'U07', ['m_degisim', 'k_degisen_vacib_degil', 'm_tahsis'], 'Madde zâtından zorunlu olsaydı başka türlü olamaz ve değişmezdi.')
 P('Q16.c3', 'U17', ['m_nizam', 'm_ihkam', 'k_ihkam_ilim'], 'Muhkem nizamın en iyi açıklaması ilim ve iradeli bir fâilin kasdıdır.', tag=('enne', 'gaye'))
@@ -181,7 +181,7 @@ P('Q10.kudret.c1', 'U07', ['k_kudret_fiil', 'H:Q09.c4'], 'Var etme fiili kudrets
 P('Q10.kudret.c1', 'U24', ['k_kudret_fiil', 'H:Q09.c4'], 'Fâilden fiile geçilir.', tag=('enne', 'fail'))
 P('Q10.kudret.c3', 'U07', ['k_kudret_fiil', 'H:Q09.c4'], 'Kudret imkânsız olsaydı var etme fiili olmazdı.')
 P('Q10.irade.c1', 'U07', ['k_irade_cuzi', 'H:Q09.c4'], 'Belirli hâlin seçilmesi iradeyi gerektirir.')
-P('Q10.irade.c1', 'U03', ['m_tahsis', 'k_irade_cuzi', 'k_tercihsiz'], 'Mümkin hâller arasından birini seçen tahsis iradeyle olur.')
+P('Q10.irade.c1', 'U03', ['m_tahsis', 'k_irade_cuzi', 'k_tercihsiz_hal'], 'Mümkin hâller arasından birini seçen tahsis iradeyle olur.')
 P('Q10.irade.c3', 'U07', ['k_irade_cuzi', 'H:Q09.c4'], 'İrade imkânsız olsaydı ihtiyarlı fâillik de imkânsız olurdu.')
 for sid in ('semi', 'basar', 'kelam'):
     P('Q10.' + sid + '.c3', 'U07', ['k_kemal', 'H:Q14.c1'], 'Bu sıfatın imkânsızlığı bir noksandır; Vâcib noksandan münezzehtir.',
