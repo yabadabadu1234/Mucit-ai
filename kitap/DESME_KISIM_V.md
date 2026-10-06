@@ -76,10 +76,14 @@ Bu dosya **dizindir**. Eskiden tek dosya olan deşmenin bütün yaprakları **si
 | [V.Kh_MATURIDI_ISTITAAT_I](DESME/KISIM_V/V.Kh_MATURIDI_ISTITAAT_I.md) | V.K.7.1–45, V.K.T5.1–12 (Mâtürîdî: istitâat I: iki kudret, nakil ve akıl delilleri, Mu'tezile'ye ilzam, kudret fiille beraberdir; Claude tenkidi; 3-I 241, 242) | 57 | 30.6 KB |
 | [V.Ki_MATURIDI_ISTITAAT_II_KABI](DESME/KISIM_V/V.Ki_MATURIDI_ISTITAAT_II_KABI.md) | V.K.7.46–52, V.K.8.1–23, V.K.9.1–23, V.K.T6.1–12 (Mâtürîdî: istitâat II: kudretin taat ve mâsiyete elverişliliği, teklîf-i mâ lâ yutâk, Kâ'bî'nin görüşü I; Claude tenkidi; 3-I 241, 242) | 65 | 35.2 KB |
 | [V.Kj_MATURIDI_KABI_ISTITAAT_III](DESME/KISIM_V/V.Kj_MATURIDI_KABI_ISTITAAT_III.md) | V.K.9.24–84 (Mâtürîdî: Kâ'bî'nin istitâat görüşü II: köle–efendi, ilimde yapmayacak, Firavun, aslah, emir ve kudret; 3-I 241, 242) | 61 | 38.1 KB |
-| [V.Kk_MATURIDI_ISTITAAT_IV_ECEL](DESME/KISIM_V/V.Kk_MATURIDI_ISTITAAT_IV_ECEL.md) | V.K.9.85–99, V.K.10.1–17, V.K.11.1–26, V.K.12.1 (Mâtürîdî: Kâ'bî'nin istitâat görüşü III, ihtiyar ve tercih, ecel konusu, rızık başı; 3-I 241, 242) | 59 | 34.1 KB |
+| [V.Kk_MATURIDI_ISTITAAT_IV_ECEL](DESME/KISIM_V/V.Kk_MATURIDI_ISTITAAT_IV_ECEL.md) | V.K.9.85–99, V.K.10.1–17, V.K.11.1–26 (Mâtürîdî: Kâ'bî'nin istitâat görüşü III, ihtiyar ve tercih, ecel konusu; 3-I 241, 242) | 58 | 34.1 KB |
 | [V.Kl_MATURIDI_ISTITAAT_TENKIT](DESME/KISIM_V/V.Kl_MATURIDI_ISTITAAT_TENKIT.md) | V.K.T7.1–25 (Claude tenkidi: istitâat, aslah, ecel, levh-i mahfûz; 3-I 241, 242) | 25 | 21.4 KB |
+| [V.Km_MATURIDI_RIZIK_IRADE_I](DESME/KISIM_V/V.Km_MATURIDI_RIZIK_IRADE_I.md) | V.K.12.1–20, V.K.13.1–31 (Mâtürîdî: rızık konusu; irade I: meşîet âyetleri, cebir yorumuna üç cevap, Mu'tezile'ye âyet ilzamları; 3-I 241, 242) | 51 | 29.3 KB |
+| [V.Km2_MATURIDI_IRADE_II](DESME/KISIM_V/V.Km2_MATURIDI_IRADE_II.md) | V.K.13.32–52 (Mâtürîdî: irade II: genel kabul, dua, aklî zaruret, hikmet, iradenin dört mânası; 3-I 241, 242) | 21 | 13.0 KB |
+| [V.Kn_MATURIDI_KABI_IRADE](DESME/KISIM_V/V.Kn_MATURIDI_KABI_IRADE.md) | V.K.14.1–59, V.K.15.1–4 (Mâtürîdî: Kâ'bî'nin irade görüşü ve tenkidi; irade konularının devamı başı; 3-I 241, 242) | 63 | 35.3 KB |
+| [V.Ko_MATURIDI_RIZIK_IRADE_TENKIT](DESME/KISIM_V/V.Ko_MATURIDI_RIZIK_IRADE_TENKIT.md) | V.K.T8.1–32 (Claude tenkidi: rızık, irade, Kâ'bî'nin irade görüşü; 3-I 241, 242) | 32 | 26.7 KB |
 | [V.TOPLU_TENKIT_ACIK_ISLER](DESME/KISIM_V/V.TOPLU_TENKIT_ACIK_ISLER.md) | TOPLU | 0 | 1.2 KB |
 
-**Toplam yaprak: 3167.** Cinse göre: K 1282 · Z 879 · C 710 · B 59 · İt 80 · T 31 · İ 108 · M 17 · H 1
+**Toplam yaprak: 3333.** Cinse göre: K 1342 · Z 913 · C 764 · B 59 · İt 80 · T 31 · İ 126 · M 17 · H 1
 
-Not (3-I 241): V.1.3.M (285), V.2.6–V.2.39 (943), V.3.M (107), V.4.M (83), V.4.N (96), V.4.O (70) ve V.5.8–V.5.12 (66), V.K (657) ve V.M (73) yaprakları Mâtürîdî'den alınmıştır; V.F ve V.M satırlarının cinsi 3. sütundadır (namzet önerisi). V.1 dosyası 40 KB'ı aşınca V.1.4.17 ve sonrası **silinmeden** V.1.4b dosyasına taşınmıştır (3-I 238).
+Not (3-I 241): V.1.3.M (285), V.2.6–V.2.39 (943), V.3.M (107), V.4.M (83), V.4.N (96), V.4.O (70) ve V.5.8–V.5.12 (66), V.K (823) ve V.M (73) yaprakları Mâtürîdî'den alınmıştır; V.F ve V.M satırlarının cinsi 3. sütundadır (namzet önerisi). V.1 dosyası 40 KB'ı aşınca V.1.4.17 ve sonrası **silinmeden** V.1.4b dosyasına taşınmıştır (3-I 238).

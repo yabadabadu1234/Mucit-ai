@@ -1,4 +1,4 @@
-> Dizin: [DESME_KISIM_V.md](../../DESME_KISIM_V.md) · yaprak aralığı: V.K.9.85–V.K.9.99, V.K.10.1–V.K.10.17, V.K.11.1–V.K.11.26, V.K.12.1 (V.K.9.24–84 için V.Kj; bâbın kaynak ve dürüstlük kaydı V.Ka satır 5; okuma kaydı V.Kc satır 5; üslûp kaydı V.Kd, V.K.4 başı; terim kaydı V.Kh, V.K.7 başı aynen geçerlidir; tenkit V.Kl'dedir)
+> Dizin: [DESME_KISIM_V.md](../../DESME_KISIM_V.md) · yaprak aralığı: V.K.9.85–V.K.9.99, V.K.10.1–V.K.10.17, V.K.11.1–V.K.11.26 (V.K.9.24–84 için V.Kj; bâbın kaynak ve dürüstlük kaydı V.Ka satır 5; okuma kaydı V.Kc satır 5; üslûp kaydı V.Kd, V.K.4 başı; terim kaydı V.Kh, V.K.7 başı aynen geçerlidir; tenkit V.Kl'dedir)
 
 ## V.K.9 (devam) KÂ'BÎ'NİN İSTİTÂAT GÖRÜŞÜ VE TENKİDİ — III (OCR satır 20481–20784; 3-I 241, 242)
 
@@ -85,9 +85,3 @@
 | V.K.11.24 | **Mâtürîdî'nin hükmü:** durum böyle olunca **Kâ'bî'nin ileri sürdüğü şekilde karşı fikir beyan etmesi isabetsizdir**; **onun, bizim düşüncemize de uygun olarak "Allah (ilminde katledilmeyecek diye sübût bulmuş kimsenin katledilmesine) mâni olur" şeklinde yaptığı açıklama ise yerindedir**; **Allah Teâlâ önce yasakladıktan sonra (kayıtlar koymak suretiyle) "… müşriklerin yolunu serbest bırakın" buyurmuştur** (Tevbe 9/5: **[malumat]**) | K |
 | V.K.11.25 | **Dua farkı (Mâtürîdî):** **bir de insanların "Allahım! Sana itaat etmek konusunda bizi güçlendir!" tarzındaki sözü övgüye lâyık görüldüğü hâlde "Allahım! Sana itaat etme konusunda bizi serbest bırak!" şeklindeki bir ifade övülmeye değer bulunmaz**; **şu hâlde bu iki fiilden birinde diğerinde bulunmayan bir özelliğin mevcut olduğu anlaşılmaktadır** | K |
 | V.K.11.26 | **Kulun kabulü (Mâtürîdî):** **yine, kul kendi kudretinin sona ermesi ve artık kudretsiz kalması hâlinde bile (Allah'ın kudretiyle) fiilin vuku bulabileceğini kabul eder**; **bunun yanında böyle bir fiilin vukuu sırasında kendi fiil işleme serbestliğinin ortadan kalktığına da hükmetmez**, **o bununla güç yetirebildiği konulardaki dolaşım alanını belirlemiş olur** | K |
-
-### V.K.12 RIZIK KONUSU (basılı fihrist s.546 başlığı; OCR satır 21009–21020; başlangıç)
-
-| No | Cümle | Cins |
-| :-- | :-- | :-- |
-| V.K.12.1 | **Kâ'bî'nin rızık talebi (aktarım):** **Kâ'bî (eserinde) kulun Allah'tan rızık talep etmesi konusuna da temas etmiş, fakat söylemine "rızık talep etme" denemeyecek bir şekil vermiştir**; Mâtürîdî: **bu konunun vazedilişi şöyle olmalıdır: "Cenâb-ı Hak …"** (**cümle OCR satır 21014'te kesilir ve devamı sonraki sayfaya geçer; V.Kl dosyasında yazılır; yarım yaprak yazılmadı**) | İ |
