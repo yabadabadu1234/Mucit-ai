@@ -25,10 +25,10 @@
 | İlâhî fiillerin ihtiyarî olduğu (150) | 5277–5309 | **okundu** | orta | |
 | Hikmet ve ilim sahibi bir yaratıcıyı inkâr edenlere cevap (151–157) | 5310–5597 | **okundu** | orta | dipnot 49–50 okundu |
 | Allah'ın isimleri (158–161) | 5598–5745 | **okundu** | orta | dipnot 51–55 okundu |
-| Arş konusunun açıklanması (162–177) | 5746–5793 | **kısmen: yalnız başı** | orta | görüş sayımı okundu; devamı **okunmadı**; **bir sonraki okuma OCR satır 5794'ten** başlar |
+| Arş konusunun açıklanması (162–177) | 5746–6456 | **okundu** (3-I 242: "49–162 arasında okumadığın varsa tamamla") | orta; tercüman dipnotları (Dehriyye, Seneviyye, Nâbiga, Süyûtî atfı) ve ayet atıfları okundu; ayet metinleri OCR'da yer yer bozuk, düzeltilmedi | görüş sayımı, mekân nefyi, istivâ te'villeri, Kâ'bî'ye ilzam, yön ve yakınlık okundu; **bir sonraki okuma OCR satır 6457'den ("Allah'ın Görülmesi", s.178)** başlar |
 | Dördüncü Bölüm (s.617–712) | 23874–27791 | **okunmaz** | -- | padişah emri |
 
-**Sayı:** okunan basılı sayfa **49–161 = 113 sayfa** (fihrist aralığına göre; sayfa sayfa doğrulanmadı) ve 162. sayfanın başı. Okunmayan: s.162–616 (455 sayfa; s.162–163 kısmen) ve s.713–758 (46 sayfa); okunmaz: s.617–712 (96 sayfa).
+**Sayı:** okunan basılı sayfa **49–177 = 129 sayfa** (fihrist aralığına göre; sayfa sayfa doğrulanmadı). Okunmayan: s.178–616 (439 sayfa) ve s.713–758 (46 sayfa); okunmaz: s.617–712 (96 sayfa).
 
 **Yoklanan şeyler (3-A 25-D):** bölüm başlıkları OCR'da bulundu ve fihristle eşleşti (ör. "Âlemin Ezeliliğini Savunanların Görüşleri" ve "Seneviyye'nin Âlemin Ezelîliği ve Diğer Konular Hakkındaki Görüşleri" aynen). OCR sayfa numarası fihrist numarasıyla örtüşmez; bu yüzden OCR sayfa numarasına dayanılmadı.
 

@@ -140,10 +140,12 @@
 | I.3.15.24 | Hayvanlar bile varlığını sürdürmeye ve mahvetmeye vesile olan şeyleri farkeder ve haz ve elemi hisseder; duyu bilgisini inkâr eden bu gerçeği inkâr etmiş olur | K |
 | I.3.15.25 | Duyu bilgisini inkâr eden kişiyle fikrî tartışma yapılmaz: münazara bir şeyin zihnî veya hâricî varlığı üzerinde yürür, o ise inkârını da kendi mevcudiyetini de kabul etmemektedir | K |
 | I.3.15.26 | **İlzam:** "İnkâr etmekte olduğunu biliyor musun?" Hayır derse inkâr durumu ortadan kalkar; evet derse hiç olmazsa inkâr durumu diye bir şeyi kabul etmiş ve duyu bilgisini reddedişini çürütmüş olur | C |
+| I.3.15.26-b | **3-I 242 (S40 kapandı):** Mâtürîdî bu ilzamı "mizah" çerçevesinde sunar; **mizah çerçevesi alınmaz**, bu yaprağın mantıkî özü (inkâr eden inkârını biliyor mu sorusuyla kendi kendini çürütme) I.7.3.7'de durur | K |
 | I.3.15.27 | Haberler iki nevidir (mütevâtir ve haber-i vâhid); ikisini de inkâr eden önceki gruba (duyu inkârcısına) katılır, çünkü kendi inkârı da bir haberdir (Haberler) | K |
 | I.3.15.28 | Haberin tümünü reddeden kendi soyunu, adını, insanlık cevherini ve her şeye ait isimleri de bilemez; duyu ötesi hiçbir bilgiye ve yaşantısına vesile olanın bilgisine ulaşamaz | K |
 | I.3.15.29 | Akılların tek başına kavrayamadığı iyilik ve kötülüklerin duyu ve haber yoluyla öğrenilmesi ancak algılayanların konuşması ve diğerlerinin dinlemesiyle mümkün olur | K |
 | I.3.15.30 | **İlzam:** haberi inkâr edene "Ne diyorsun?" denir; aynı inkâr cümlesini tekrar ederse haber niteliği taşıyan talebi kabul etmiştir (kendi sözünü tekrar etmiştir), tekrar etmezse hiçbir şey söylememiş durumuna düşer | C |
+| I.3.15.30-b | **3-I 242 (S40):** I.3.15.30 de Mâtürîdî'de mizah çerçevesindedir; **çerçeve alınmaz**, mantıkî öz (inkâr cümlesi de bir haberdir) I.7.3.7'de durur | K |
 | I.3.15.31 | Haberlerin bilgi vasıtalarından olması aklî bir zorunluluk olarak ortaya çıktığına göre peygamberlerin getirdiği haberlerin benimsenmesinin lüzumu da, doğruluklarını kanıtlayan mûcizeleri bulunması sebebiyle, sabit olur; bu yaprak **H3'ün ispatına dayalıdır**, kitapta öncül değildir | Z |
 | I.3.15.32 | Mütevâtir haber: yanılması ve yalan söylemesi muhtemel kişilerin dilinden gelse de bir haberin yalan olmasına hiçbir şekilde ihtimal verilmiyorsa, masumiyeti açık birinden bizzat duyulmuş söz gibi sayılır (Mütevâtir haber) | K |
 | I.3.15.33 | Tek tek râvilerden hiçbirinin masumiyetine delil bulunmasa da tamamının naklettiği haber bu dereceye ulaşınca yalan söyleyemeyeceği sabit olur, tek tek her biri hakkında aksini söylemek teoride mümkün olsa da | K |
@@ -176,6 +178,7 @@
 | I.3.15.60 | Bir kez algılanan şeyin (insan, ateş) yeniden tanınması önceki bilgi ve algılarla istidlâl yoluyla olur; istidlâl olmasa hiçbir şey tanınamaz ve insanî ilişki kurulamazdı | K |
 | I.3.15.61 | Öğretici ve yol gösterici de, kim olduğunu bildirecek bir delil olmadan tanınamaz; delil ancak öğreticinin önce haber vermesiyle bulunur ve bu haber de istidlâl gerektirir | K |
 | I.3.15.62 | Mâtürîdî inatçı inkârcıya karşı önce mizah yöntemini, sonra eziyet ve elem verecek biçimde dövmeyi önerir; bu bir akıl yürütme değil ceza önerisidir | K |
-| I.3.15.63 | **Claude önerisi (S40; padişaha sorulur):** kitap I.3.15.62'yi usul olarak almaz; Mâtürîdî'den alınan, ilzam kısımlarıdır (I.3.15.26, I.3.15.30, I.3.15.47, I.3.15.58–59) | Z |
+| I.3.15.63 | **NAKZ (3-I 242, S40 kapandı; I.3.15.63'ün eski metni nakzedildi; eski metin aynen: "Claude önerisi (S40; padişaha sorulur): kitap I.3.15.62'yi usul olarak almaz; Mâtürîdî'den alınan, ilzam kısımlarıdır (I.3.15.26, I.3.15.30, I.3.15.47, I.3.15.58–59)"):** padişah: kitap yazı yazmaktır, fiziken birini dövmek veya eziyet etmek kitabın aracı olamaz; bu yüzden **I.3.15.62'nin dövme ve eziyet önerisi alınmaz** ve **mizah usulü kitap için gereksizdir**; alınanlar ilzam kısımlarıdır: I.3.15.26, I.3.15.30, I.3.15.47, I.3.15.58–59 (çerçevesi mizah olmaksızın, mantıkî özüyle) | K |
+| I.3.15.64 | Padişah, inatçıları hikmetle alaya alan **hikmetli bir kıssanın hâtime bölümünde** bulunabileceğini söyledi ("belki"; **karar değildir**); kıssa metni seçilmedi, uydurulmadı; V.9'da namzet yaprak olarak durur | Z |
 
 ---

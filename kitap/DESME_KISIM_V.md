@@ -20,13 +20,14 @@ Bu dosya **dizindir**. Eskiden tek dosya olan deşmenin bütün yaprakları **si
 | Dosya | Yapraklar | Yaprak sayısı | Hacim |
 | :-- | :-- | :-- | :-- |
 | [V.0_ONERMENIN_TAHLILI](DESME/KISIM_V/V.0_ONERMENIN_TAHLILI.md) | V.0 | 60 | 9.9 KB |
-| [V.1_ALLAHIN_VARLIGI](DESME/KISIM_V/V.1_ALLAHIN_VARLIGI.md) | V.1.1–V.1.4.16, V.1.5–V.1.6 (V.1.3.a.1–25 dâhil) | 85 | 13.8 KB |
+| [V.1_ALLAHIN_VARLIGI](DESME/KISIM_V/V.1_ALLAHIN_VARLIGI.md) | V.1.1–V.1.4.16, V.1.5–V.1.6 (V.1.3.a.1–38 dâhil; V.1.3.a.26–38 üç hâl, 3-I 242) | 98 | 18.7 KB |
 | [V.1.3m_MATURIDI_ILAHIYYAT](DESME/KISIM_V/V.1.3m_MATURIDI_ILAHIYYAT.md) | V.1.3.M.1–117 (Mâtürîdî: hudûs, yaratıcı, ezelîliğin tenkidi; 3-I 241) | 117 | 35.7 KB |
 | [V.1.3n_MATURIDI_HIKMET_INKAR](DESME/KISIM_V/V.1.3n_MATURIDI_HIKMET_INKAR.md) | V.1.3.M.118–144 (Mâtürîdî: hikmet ve ilim sahibi yaratıcıyı inkâr edenlere cevap; 3-I 241) | 27 | 12.3 KB |
 | [V.1.4b_RASTGELELIK_SEBEP_ILKESI](DESME/KISIM_V/V.1.4b_RASTGELELIK_SEBEP_ILKESI.md) | V.1.4.17–V.1.4.166 (V.1'den taşındı, 3-I 238) | 150 | 35.2 KB |
 | [V.2_TEVHID_KEMAL_SIFATLAR](DESME/KISIM_V/V.2_TEVHID_KEMAL_SIFATLAR.md) | V.2 (V.2.6–V.2.8 Mâtürîdî, 3-I 241) | 137 | 34.1 KB |
 | [V.2m_MATURIDI_SIFAT_TEKVIN](DESME/KISIM_V/V.2m_MATURIDI_SIFAT_TEKVIN.md) | V.2.9–V.2.11 (Mâtürîdî: cisim ve şey, sıfatlar, tekvin; 3-I 241) | 83 | 24.2 KB |
 | [V.2n_MATURIDI_KABI_KELAM_ISIM](DESME/KISIM_V/V.2n_MATURIDI_KABI_KELAM_ISIM.md) | V.2.12–V.2.15 (Mâtürîdî: Kâ'bî, kelâm sıfatı, ihtiyar, isimler; 3-I 241) | 74 | 25.0 KB |
+| [V.2o_MATURIDI_ARS_MEKAN](DESME/KISIM_V/V.2o_MATURIDI_ARS_MEKAN.md) | V.2.16 (Mâtürîdî: Arş ve mekân; 3-I 241, 242) | 97 | 29.1 KB |
 | [V.3_VAHIY](DESME/KISIM_V/V.3_VAHIY.md) | V.3 | 66 | 10.0 KB |
 | [V.4_KURAN](DESME/KISIM_V/V.4_KURAN.md) | V.4 | 51 | 7.3 KB |
 | [V.5_BILDIRIMIN_DOGRULUGU](DESME/KISIM_V/V.5_BILDIRIMIN_DOGRULUGU.md) | V.5 | 47 | 6.8 KB |
@@ -40,11 +41,11 @@ Bu dosya **dizindir**. Eskiden tek dosya olan deşmenin bütün yaprakları **si
 | [V.6.3-5_SABLON_LISTE_TUTARLILIK](DESME/KISIM_V/V.6.3-5_SABLON_LISTE_TUTARLILIK.md) | V.6.3–V.6.5 | 22 | 4.0 KB |
 | [V.7_SUNNET](DESME/KISIM_V/V.7_SUNNET.md) | V.7 | 10 | 1.2 KB |
 | [V.8_MUSLUMAN_OKUYUCU](DESME/KISIM_V/V.8_MUSLUMAN_OKUYUCU.md) | V.8 | 8 | 1.2 KB |
-| [V.9_HATIME](DESME/KISIM_V/V.9_HATIME.md) | V.9 | 5 | 0.7 KB |
+| [V.9_HATIME](DESME/KISIM_V/V.9_HATIME.md) | V.9 (V.9.6–V.9.7 hâtime kıssası namzedi, 3-I 242) | 7 | 1.3 KB |
 | [V.F_FARABI_NAMZET](DESME/KISIM_V/V.F_FARABI_NAMZET.md) | V.F | 18 | 3.2 KB |
 | [V.M_MATURIDI_NAMZET](DESME/KISIM_V/V.M_MATURIDI_NAMZET.md) | V.M (Mâtürîdî fihristinden namzet başlıklar; 3-I 241) | 73 | 11.0 KB |
 | [V.TOPLU_TENKIT_ACIK_ISLER](DESME/KISIM_V/V.TOPLU_TENKIT_ACIK_ISLER.md) | TOPLU | 0 | 1.2 KB |
 
-**Toplam yaprak: 1224.** Cinse göre: K 577 · Z 338 · C 142 · B 59 · İt 54 · T 25 · İ 14 · M 14 · H 1
+**Toplam yaprak: 1336.** Cinse göre: K 654 · Z 364 · C 151 · B 59 · İt 54 · T 25 · İ 14 · M 14 · H 1
 
-Not (3-I 241): V.1.3.M (144), V.2.6–V.2.15 (235) ve V.M (73) yaprakları Mâtürîdî'den alınmıştır; V.F ve V.M satırlarının cinsi 3. sütundadır (namzet önerisi). V.1 dosyası 40 KB'ı aşınca V.1.4.17 ve sonrası **silinmeden** V.1.4b dosyasına taşınmıştır (3-I 238).
+Not (3-I 241): V.1.3.M (144), V.2.6–V.2.16 (332) ve V.M (73) yaprakları Mâtürîdî'den alınmıştır; V.F ve V.M satırlarının cinsi 3. sütundadır (namzet önerisi). V.1 dosyası 40 KB'ı aşınca V.1.4.17 ve sonrası **silinmeden** V.1.4b dosyasına taşınmıştır (3-I 238).

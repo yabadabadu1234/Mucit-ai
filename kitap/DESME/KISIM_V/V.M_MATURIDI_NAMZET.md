@@ -33,8 +33,8 @@ Kaynak: padişahın verdiği altı fotoğraftaki basılı İçindekiler (Kitâb�
 | V.M.25 | [7.4.] Mesele [İlâhî Fiillerin İhtiyarî Olduğu Hakkında] (150) | Z | V.2.2.3 (irade ve tahsis); V.1.3.M.95–101 (illet ve fâil) | okundu |
 | V.M.26 | [8. Hikmet ve İlim Sahibi Bir Yaratıcıyı İnkâr Edenlere Cevap] (151) | Z | V.2.2.1 (ilim), V.2.4.1 (hikmet); V.1.3.c (nizam) | okundu |
 | V.M.27 | [9.] Mesele [Azîz ve Celîl Olan Allah'ın İsimleri Hakkında] (158) | Z | V.2.5; `SIFAT_SAYISI_ARAMA.md` (isim sayısı mevzuu tehir edilmişti, 3-I 213) | okundu |
-| V.M.28 | [10.] Mesele [Arş Konusunun Açıklanması] (162) | Z | V.2.1.8 (mekân) | kısmen (yalnız başı) |
-| V.M.29 | [11.] Mesele [Allah'ın Görülmesi] (178) | Z | V.2 (açık: kitabın mevzuuna girer mi, S39) | okunmadı |
+| V.M.28 | [10.] Mesele [Arş Konusunun Açıklanması] (162) | Z | V.2.1.8 (mekân); **yapraklar V.2.16 (3-I 242)** | okundu |
+| V.M.29 | [11.] Mesele [Allah'ın Görülmesi] (178) | Z | V.2 (açık: kitabın mevzuuna girer mi; padişaha sorulur) | okunmadı |
 | V.M.30 | [12.] Mesele [Mu'tezile'ye Göre Ma'dûmun Şey Oluşu ve Bunun Tenkidi] (193) | Z | V.1.3.M (yokluk ve şey; "ezelî mümkin ma'dûm olarak şeydir" iddiası ile ilgili olabilir) | okunmadı |
 | V.M.31 | [13.] Mesele [Allah'ı Niteleyip İsimlendirmek Benzeşmeyi Gerektirmez] (204) | Z | V.2.7.15–19 (ispat ve teşbih) | okunmadı |
 | V.M.32 | [14. Allah Kâinatı Niçin Yaratmıştır?] (210) | Z | V.5.3, V.5.4 (hikmet, şer); V.2.4.1 | okunmadı |
@@ -67,12 +67,12 @@ Kaynak: padişahın verdiği altı fotoğraftaki basılı İçindekiler (Kitâb�
 | V.M.59 | [5. Hz. Peygamber'in Nübüvvetinin İspatı] (393) | Z | V.4.2–V.4.3 (i'câz, davet sahibi); **H4'ün çekirdeği** | okunmadı |
 | V.M.60 | [6. Hıristiyanların Mesih Îsâ Hakkındaki Görüşleri ve Tenkidi] (409) | Z | V.2.3.4 (teslis); V.4.5 | okunmadı |
 | V.M.61 | [6.1.] Mesele [Cisimlerin Yaratılmışlığı Deliliyle Mesih Îsâ'nın Ulûhiyyetinin Reddi] (413) | Z | V.2.3.4; V.1.3.M (hudûs delilinin ilâh iddiasına uygulanışı) | okunmadı |
-| V.M.62 | [Kazâ ve Kader] (421) ve [1.] Mesele [Hikmet ve Sefeh Hakkında] (421) | Z | **Mevcut fihristte kazâ ve kader bâbı yok:** altı îmân esasının biri; yeni bâb namzedi (S39) | okunmadı |
-| V.M.63 | [2.] Kulların Fiilleri ve Fâillerinin Belirlenmesi (430) ve alt başlıkları (436, 457, 463, 491) | Z | S39 (kader bâbı) | okunmadı |
-| V.M.64 | [3. Kula Ait Fiilin Kudret veya İstitâati] (495) ve alt başlıkları (503, 506, 511) | Z | S39 | okunmadı |
-| V.M.65 | [4. Ecel Konusu] (540) · [5. Rızık Konusu] (546) | Z | S39 | okunmadı |
-| V.M.66 | [6.] İradeye Dair Meseleler (549) ve alt başlıkları (562, 575) | Z | S39; V.2.2.3 (irade) | okunmadı |
-| V.M.67 | [7.] Mesele [Kazâ ve Kader Hakkında] (582) ve alt başlıkları (586, 597, 601, 606) | Z | S39 | okunmadı |
+| V.M.62 | [Kazâ ve Kader] (421) ve [1.] Mesele [Hikmet ve Sefeh Hakkında] (421) | Z | **Mevcut fihristte kazâ ve kader bâbı yok:** altı îmân esasının biri; **kader bâbı `V.K` (S39 kapandı, 3-I 242; etiket Claude'un çıkarımıdır)** | okunmadı |
+| V.M.63 | [2.] Kulların Fiilleri ve Fâillerinin Belirlenmesi (430) ve alt başlıkları (436, 457, 463, 491) | Z | V.K (3-I 242) | okunmadı |
+| V.M.64 | [3. Kula Ait Fiilin Kudret veya İstitâati] (495) ve alt başlıkları (503, 506, 511) | Z | V.K (3-I 242) | okunmadı |
+| V.M.65 | [4. Ecel Konusu] (540) · [5. Rızık Konusu] (546) | Z | V.K (3-I 242) | okunmadı |
+| V.M.66 | [6.] İradeye Dair Meseleler (549) ve alt başlıkları (562, 575) | Z | V.K (3-I 242); V.2.2.3 (irade) | okunmadı |
+| V.M.67 | [7.] Mesele [Kazâ ve Kader Hakkında] (582) ve alt başlıkları (586, 597, 601, 606) | Z | V.K (3-I 242) | okunmadı |
 | V.M.68 | Dördüncü Bölüm: Büyük Günahlar ve Bunları İşleyenlerin Durumu (617–712) | K | **Okunmaz; kitabın mevzuu dışı** (padişah: "bizi alakadar etmiyor") | okunmaz |
 | V.M.69 | Beşinci Bölüm: [İman ve İslâm] (713) ve alt başlıkları (713, 724, 726, 732, 737, 745) | Z | Giriş 0.1 (tanıtım) **ya da** V.6.1 (çekirdeğin tarifi; farz, inkâr, terk) / V.9; padişah "kitabın başı için tanıtım maksatlı ya da sonunda" dedi, karar padişahın | okunmadı |
 | V.M.70 | Ebû Mansûr el-Mâtürîdî: Hayatı (21), Siyasî ve İlmî Çevresi (25), İlmî Şahsiyeti (28), Eserleri (31–40) | Z | Ek B (düşünürler ve eserler: kısa biyografi) | okunmadı |

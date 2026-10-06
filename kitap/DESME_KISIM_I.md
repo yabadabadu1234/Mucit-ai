@@ -20,7 +20,7 @@ Bu dosya **dizindir**. Eskiden tek dosya olan deşmenin bütün yaprakları **si
 | [I.1_TASNIF_USULU](DESME/KISIM_I/I.1_TASNIF_USULU.md) | I.1 | 102 | 14.0 KB |
 | [I.2_TANIM_USULU](DESME/KISIM_I/I.2_TANIM_USULU.md) | I.2 | 51 | 5.8 KB |
 | [I.3a_KATIYET_DERECELERI](DESME/KISIM_I/I.3a_KATIYET_DERECELERI.md) | I.3.1–I.3.7 | 54 | 6.4 KB |
-| [I.3b_FARABI_TASDIK_ILK_ILKELER](DESME/KISIM_I/I.3b_FARABI_TASDIK_ILK_ILKELER.md) | I.3.8–I.3.15 | 136 | 26.6 KB |
+| [I.3b_FARABI_TASDIK_ILK_ILKELER](DESME/KISIM_I/I.3b_FARABI_TASDIK_ILK_ILKELER.md) | I.3.8–I.3.15 | 139 | 28.3 KB |
 | [I.4a_ISPAT_USULLERI](DESME/KISIM_I/I.4a_ISPAT_USULLERI.md) | I.4.1–I.4.5 | 51 | 6.7 KB |
 | [I.4b_FARABI_ENNE_LIME_SEBEP_ONCULLER](DESME/KISIM_I/I.4b_FARABI_ENNE_LIME_SEBEP_ONCULLER.md) | I.4.6–I.4.8 | 71 | 12.4 KB |
 | [I.4c_FARABI_TERKIP_KIPLERI](DESME/KISIM_I/I.4c_FARABI_TERKIP_KIPLERI.md) | I.4.9 | 49 | 13.0 KB |
@@ -30,7 +30,10 @@ Bu dosya **dizindir**. Eskiden tek dosya olan deşmenin bütün yaprakları **si
 | [I.7_BIRLESME_VE_CATISMA](DESME/KISIM_I/I.7_BIRLESME_VE_CATISMA.md) | I.7 | 59 | 11.8 KB |
 | [I.8_KAPANIS_USULU](DESME/KISIM_I/I.8_KAPANIS_USULU.md) | I.8 | 9 | 1.0 KB |
 | [I.9_DAGITIM_SAYIM_TENKIT](DESME/KISIM_I/I.9_DAGITIM_SAYIM_TENKIT.md) | I.9, SAYIM, TENKİT | 14 | 3.5 KB |
+| [I.10_LAFIZ_MANA_YORUM_USULU](DESME/KISIM_I/I.10_LAFIZ_MANA_YORUM_USULU.md) | I.10 (Mâtürîdî Arş bölümünden çıkarılan lafız, anlam ve yorum usulü; 3-I 242) | 29 | 6.0 KB |
 
-**Toplam yaprak: 735.** Cinse göre (I.9 dosyasının 14 yaprağı hariç, o dosyanın biçimi farklıdır): K 447 · T 141 · H 48 · Z 41 · M 16 · B 4 · C 24
+**Toplam yaprak: 767.** Cinse göre (I.9 dosyasının 14 yaprağı hariç, o dosyanın biçimi farklıdır): K 473 · T 141 · H 48 · Z 47 · M 16 · B 4 · C 24
+
+Not (3-I 242): I.3.15.63 nakzedildi (S40; eski metin kendi yaprağında yazılı), I.3.15.64 ve iki "-b" yaprağı (I.3.15.26-b, I.3.15.30-b) eklendi; I.10 yeni fasıldır.
 
 Not (3-I 241): Mâtürîdî'den alınan 101 yaprak I.3.15 (63), I.4.14 (17), I.6.7 (7), I.7.9 (14) fasıllarındadır.

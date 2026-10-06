@@ -34,7 +34,7 @@ Umumîden hususîye. **Sayfa numaraları padişahın fotoğrafladığı basılı
 | İlâhiyyât | [7.4.] Mesele [İlâhî Fiillerin İhtiyarî Olduğu Hakkında] | 150 | **okundu** | yüksek |
 | İlâhiyyât | [8. Hikmet ve İlim Sahibi Bir Yaratıcıyı İnkâr Edenlere Cevap] | 151–157 | **okundu** | yüksek |
 | İlâhiyyât | [9.] Mesele [Azîz ve Celîl Olan Allah'ın İsimleri Hakkında] | 158–161 | **okundu** | orta (S35) |
-| İlâhiyyât | [10.] Mesele [Arş Konusunun Açıklanması] | 162–177 | **kısmen** (yalnız başı: Arş hakkında görüş sayımı okundu, OCR satır 5745–5793; devamı okunmadı) | orta |
+| İlâhiyyât | [10.] Mesele [Arş Konusunun Açıklanması] | 162–177 | **okundu** (3-I 242: bütünü okundu, OCR satır 5746–6456; yapraklar V.2.16, 97 yaprak) | orta |
 | İlâhiyyât | [11.] Mesele [Allah'ın Görülmesi] | 178–192 | okunmadı | orta |
 | İlâhiyyât | [12.] Mesele [Mu'tezile'ye Göre Ma'dûmun Şey Oluşu ve Bunun Tenkidi] | 193–203 | okunmadı | orta |
 | İlâhiyyât | [13.] Mesele [Allah'ı Niteleyip İsimlendirmek Benzeşmeyi Gerektirmez] | 204–209 | okunmadı | orta |

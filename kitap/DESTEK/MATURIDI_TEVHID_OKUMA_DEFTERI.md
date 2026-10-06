@@ -1,6 +1,6 @@
-# MÂTÜRÎDÎ, KİTÂBÜ'T-TEVHÎD, basılı s.49–161 (+ Arş'ın başı) -- OKUMA DEFTERİ VE BÖLÜM ÖZETİ (3-I 241)
+# MÂTÜRÎDÎ, KİTÂBÜ'T-TEVHÎD, basılı s.49–177 (Arş dâhil) -- OKUMA DEFTERİ VE BÖLÜM ÖZETİ (3-I 241, 242)
 
-**Dürüstlük kaydı.** Kaynak: archive.org OCR, Türkçe tercüme (Bekir Topaloğlu, İSAM). Arapça asıl ve gerçek metin (Şâmile/tahkikli neşir) **okunmadı ve yoklanmadı** (3-A 25-E); okumadan önce yoklama yapmadığım kusurdur (`kaynak/maturidi_kitabu_tevhid/INDIRME_NOTU.md`). OCR sayfa numarası basılı numarayla örtüşmediğinden bölüm içi sayfa yeri yazılmadı. Padişah (3-I 241): seçmece yapılmaz, azamî istifade edilir, **kopyalanmaz; formül ve şemayla daha az sayfada ifade edilir.** Alınanlar: `DESME/KISIM_I/` (I.3.15 · 63 yaprak, I.4.14 · 17, I.6.7 · 7, I.7.9 · 14) ve `DESME/KISIM_V/` (V.1.3.M · 144 yaprak: V.1.3m ve V.1.3n; V.2.6–V.2.15 · 235: V.2, V.2m, V.2n; V.M · 73). Okuma sırası padişahın tayinidir: önce s.103–116, sonra usul ve ilâhiyyât başı.
+**Dürüstlük kaydı.** Kaynak: archive.org OCR, Türkçe tercüme (Bekir Topaloğlu, İSAM). Arapça asıl ve gerçek metin (Şâmile/tahkikli neşir) **okunmadı ve yoklanmadı** (3-A 25-E); okumadan önce yoklama yapmadığım kusurdur (`kaynak/maturidi_kitabu_tevhid/INDIRME_NOTU.md`). OCR sayfa numarası basılı numarayla örtüşmediğinden bölüm içi sayfa yeri yazılmadı. Padişah (3-I 241): seçmece yapılmaz, azamî istifade edilir, **kopyalanmaz; formül ve şemayla daha az sayfada ifade edilir.** Alınanlar: `DESME/KISIM_I/` (I.3.15 · 63 yaprak, I.4.14 · 17, I.6.7 · 7, I.7.9 · 14) ve `DESME/KISIM_V/` (V.1.3.M · 144 yaprak: V.1.3m ve V.1.3n; V.2.6–V.2.16 · 332: V.2, V.2m, V.2n, V.2o; V.M · 73); usul fasılları I.10 (29 yaprak). Okuma sırası padişahın tayinidir: önce s.103–116, sonra usul ve ilâhiyyât başı.
 
 ## 1. Bölüm defteri
 
@@ -25,6 +25,7 @@
 | İlâhî fiillerin ihtiyarîliği (150) | ihtiyarın ihtiyarı → sonsuz silsile; yaratıklar sonlu | irade ezelî | V.2.14 | "yaratıklar sonlu" = fiilî sonsuz iddiası |
 | Hikmet ve ilim sahibi yaratıcıyı inkâr edenlere cevap (151) | kendine sebep ikilemi (+ "yok da edebilirdi"); ihtiyaç ve arzu gıdadan doğmaz; **"kendi başına var olan müstağnidir, ihtiyaç ona dönüşmez"**; temel madde taksimi; heyûlâ ve Karmatîler | ezelî temel madde yaratıcıyı gerektirir | V.1.3.M.118–144 | D1'in somut biçimi; "adlandırma farkı" ilzamı |
 | Allah'ın isimleri (158) | üç kısım (mânâca farklı, zâta râci, sıfattan türemiş); ilim yokken Allah'ın hâli dilemması | sıfatlar ezelîdir | V.2.15 | isim sayısı mevzuu (tehir edilmiş) bu bölümde yok |
+| Arş ve mekân (162–177; 3-I 242) | üç görüş (istivâ = mekân tutmak · her yerde · mekân reddi); izâfet-i tahsîsiyye ve umûmiyye; mekân nefyi: ezelde mekân yoktu, değişim = mahlûkiyet alâmeti, mekâna muhtaçlık, âlemin ünitesi olma, üç ihtimal (arş kuşatır / eşit / Allah kuşatır), bölünme; yüksekliğe çıkmak şeref değil; istivânın üç anlamı (istilâ · yükselme · kemâl) ve arş = mülk; dil şahidi (şiir); mükellef yaratılışı mülkün kemâli; hüküm: benzetme nefyi, te'vilde kesinlik verilmez, muradına iman; anlama şartı; Kâ'bî'ye ilzam; el kaldırma/yön delilinin ters çevrilmesi; yakınlığın anlamları; gelmek–gitmek | Allah mekâna muhtaç değildir; istivâ yorumuna kesinlik verilmez | V.2.16 (97 yaprak), I.10 (29 yaprak) | ayet ve rivayetler **malumat**; güneş–ay ve İbn Abbas rivayetlerinin sıhhati yoklanmadı; tercüman dipnotu Süyûtî'nin uydurma hadis eserini anar |
 
 ## 2. Şema: Mâtürîdî'de "âlem hâdistir" çıkarımının dayanak öncülleri (Claude tahlili)
 
@@ -68,6 +69,19 @@
 3. **"Neden sonradan" dilemması** (V.2.11.5–7): fiilin ezelde değil sonradan mümkün olması ya zâttan ya dış sebepten gelir; zâttan ise ebediyen böyle olurdu, dıştan ise Allah'ın dışında etkileyici vardır. Mâtürîdî: fiil ve tekvin ezelî, mükevven hâdis. Bu filozofların hudûs itirazına cevaptır; tahsisin (irade) kabulüne dayanır.
 4. **Her yerde fiilî sonsuz öncülü** (V.2.6.4–6, V.2.14.4–5, V.1.3.M.27–32): sayı argümanı, ihtiyarın ihtiyarı silsilesi, mazi, hesap. Hepsi aynı metafizik iddiaya (S38) bağlanır; bu yüzden **fiilî sonsuz iddiası Mâtürîdî'de en çok kullanılan öncüldür** ve kitapta tek yerde (V.1.3.a.16) ispat borcu olarak yazılıp diğer yerlere atıf yapılır.
 
+## 3c. Damıtma (s.162–177, Arş): 1 okuyup 10 türetme (3-I 242)
+
+1. **Hâsırlı mekân sorusu:** "zâtî konum ilişkisi var mı" (yok / var) ve "var" ise (belli mekânda / her mekânda) → Mâtürîdî'nin üç görüşü tam hasredilir (V.2.16.83); zâtî olmayan ilişkiler (ilim, kudret, koruma) üçüncü görüşün mecaz koluna yazılır (V.2.16.84).
+2. **Ezelden mi sonradan mı ikilemi** (V.2.16.85): mekânda bulunan Allah ya ezelden mekândadır (mekân ezelî) ya sonradandır (hâl değişimi); iki kol da kapatılır; **öncül:** mekân âlemin parçasıdır, hâl değişimi mahlûkiyet alâmetidir.
+3. **Bölünme ikilemi** (V.2.16.86): her yerde zâtıyla → tamamen mi parçasıyla mı; tamamen: bir cisim iki yerde olamaz; parçasıyla: bölünme.
+4. **Sınırlı = mümkin** (V.2.16.87): sınır ve hacim başka türlü de olabilirdi → tahsis ister → mümkin; **sebep ilkesine bağlı** (evvelî ilan, `sebep-ilkesi-*` ailesi).
+5. **Yön delilinin reductio'su** (V.2.16.88–89): aynı gerekçe secde ve kıble için karşıt yön verir; ibadet yönü ≠ ilâh yönü.
+6. **Üç usul fasılı:** dil şahidi (I.10.1), hakikat–mecaz ve en güzel anlam (I.10.2–3), kesinlik verilmeyen yorum ve tefviz (I.10.3), anlama şartı (I.10.4), delil olamayan delil (I.10.5).
+7. **Hâsırlı kuşatma ilişkisi** (arş > Allah, = , <) tek başına "boyut" öncülünü varsayar: Allah'ın bir ölçüsü olduğu varsayılırsa üç şık; kitap bunu **şartlı ilzam** olarak yazar.
+8. **Kâ'bî ilzamı** (V.2.16.67–69): fiilî sıfatlarda değişikliği kabul edenin mekân değişikliğini reddetmesi tutarsızdır; yalnız kendi öncüllerine göre bağlayıcıdır.
+9. **Rivayet dürüstlüğü** (V.2.16.95): güneş–ay ve İbn Abbas rivayetleri öncül değil, tercüman dipnotu şüpheyi artırır.
+10. **Hikmet kanadı** (V.2.16.96): "yaratılışın gayesi mükelleftir" hükmü ayrı bir hikmet iddiasıdır, V.1.3n ile aynı kümede.
+
 ## 4. Bizde olan / olmayan (kümeler)
 
 | Küme | Mâtürîdî | Bizde karşılık | Durum |
@@ -87,12 +101,14 @@
 | Tevhid: bilgi/gizleme argümanı | s.88 | V.2.1.2–5 | **yeni** (V.2.6.17–20) |
 | Sayı argümanı | s.88 | -- | yeni; fiilî sonsuza bağlı (V.2.6.6) |
 | Düalizm aktarımı | s.110 | V.2.3.3 | yeni (V.2.8; kaynak: Mâtürîdî aktarımı) |
+| Mekân nefyi ve üç ihtimal argümanı | s.162–177 | V.2.1.8 (tenzih: mekân) | **yeni** (V.2.16.16–33, V.2.16.82–97) |
+| Yorum usulü (hakikat–mecaz, en güzel anlam, tefviz, dil şahidi) | s.162–177 | -- | **yok**, I.10 eklendi |
 
 ## 5. Açık suâller
 
 | # | Suâl |
 | :-- | :-- |
-| S38 | Fiilî sonsuzun imkânsızlığı kitapta ne olarak yazılacak (evvelî ilan, ispat borcu, zannî delil) |
-| S39 | Kazâ ve kader bâbı (okuma planında; altı îmân esasının biri) |
-| S40 | Mâtürîdî'nin inatçıya muamele önerisi usul olarak alınmasın mı |
-| (okuma) | s.162'den (arş) itibaren okuma sürecek: arş, görülme, ma'dûm, niteleme, hikmet, Seneviyye, Tabiatçılar, Dehriyye (s.288), Sofistler (s.307), Menâniyye … Mecûsîler (s.346'ya kadar); padişah "ilâhiyyât 73–347" dedi |
+| S38 | **Kapandı (3-I 242):** üç hâl de beyan edilir (V.1.3.a.26–38) |
+| S39 | **Kapandı (3-I 242):** kazâ ve kader bâbı olacak (`V.K`; etiket Claude'un çıkarımı); s.421–616 okuma planında |
+| S40 | **Kapandı, nakz (3-I 242):** dövme ve eziyet alınmaz, mizah usulü gereksiz; hâtimede hikmetli kıssa **namzet** (padişah "belki") |
+| (okuma) | s.178'den (Allah'ın görülmesi, OCR satır 6457) itibaren okuma sürer: görülme, ma'dûm, niteleme, hikmet, Seneviyye, Tabiatçılar, Dehriyye (s.288), Sofistler (s.307), Menâniyye … Mecûsîler (s.346'ya kadar); padişah "ilâhiyyât 73–347" dedi |

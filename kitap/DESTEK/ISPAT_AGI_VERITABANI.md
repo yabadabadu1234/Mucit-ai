@@ -11,9 +11,9 @@
 | Dosya | İş |
 | :-- | :-- |
 | `veri_usul.py` | 35 usul kaydı: tanım, nasıl yapılır, şart, hudut, safsata, katiyet tavanı, misal |
-| `veri_onerme.py` | 90 önerme (evveliyyât, müşâhede, tanım, mantık, türetilmiş); zayıf halkalar `zayif` ve `aile` ile işaretli |
+| `veri_onerme.py` | 101 önerme (evveliyyât, müşâhede, tanım, mantık, türetilmiş); zayıf halkalar `zayif` ve `aile` ile işaretli |
 | `veri_soru.py` | 33 suâl (Q18 zemin, Q00 sebep ilkesi, Q01–Q09, Q11–Q17, 15 sıfat suâli Q10.*), 109 hücre, 42 felsefe, 25 "olmasaydı" kaydı, **sıfat tasnifi** (6 zâtî, 8 sübûtî, 4 fiilî) |
-| `veri_ispat.py` | Elle yazılmış 165 doğrudan ispat kaydı (hücre, usul, öncül listesi, özet) |
+| `veri_ispat.py` | Elle yazılmış 173 doğrudan ispat kaydı (hücre, usul, öncül listesi, özet) |
 | `kural.py` | Bir usulün bir hücrede **neden yapılamayacağını** söyleyen kurallar |
 | `motor.py` | Katmanlı hesap, türetilmiş ispatlar, kombinasyon, matris, felsefe durumu |
 | `insa.py` | Kontroller, SQLite, JSON, HTML üretimi |
@@ -43,13 +43,13 @@ Yeniden kurmak: `python3 insa.py` (kontroller kırmızıysa çıktıda KIRMIZI g
 
 | Ölçü | Değer |
 | :-- | :-- |
-| Suâl · hücre · önerme · usul (kabul edilmiş) · felsefe | 33 · 109 · 90 · 32 · 42 |
-| İspat kaydı (doğrudan · sibr · dışlama · alt suâl) | 165 · 25 · 152 · 1 = 343 |
-| Hücre durumu | KAT'Î 37 · KAT'Î-ŞARTLI 45 · ZAN-I GÂLİB 21 · İHTİLAFLI 6 (ispatsız DOĞRU/YANLIŞ hücre yok) |
-| Matris (3488 satır) | YAPILAMAZ 1970 · KULLANILDI 312 · YAPILMADI 580 · SINIFLANMADI 429 · KOMBİNE 87 · HUDUT 66 · ÖNCÜL 37 · AÇIK 7 |
-| Kombinasyon satırı (usul alt kümesi) | 1287 |
-| Türetme ağacı sayısı | hücre başına 1 ile 230 arası (en çok Q17.c1: 230, Q02.c2: 192, Q02.c1: 191) |
-| “Olmasaydı” satırı | 134: hücre doğru olmasaydı 25 · hiç var olmasaydı 15 · aksi doğru olsaydı 94 |
+| Suâl · hücre · önerme · usul (kabul edilmiş) · felsefe | 33 · 109 · 101 · 32 · 42 |
+| İspat kaydı (doğrudan · sibr · dışlama · alt suâl) | 173 · 25 · 154 · 1 = 353 |
+| Hücre durumu | KAT'Î 37 · KAT'Î-ŞARTLI 47 · ZAN-I GÂLİB 19 · İHTİLAFLI 6 (ispatsız DOĞRU/YANLIŞ hücre yok) |
+| Matris (3488 satır) | YAPILAMAZ 1969 · KULLANILDI 317 · YAPILMADI 575 · SINIFLANMADI 429 · KOMBİNE 88 · HUDUT 66 · ÖNCÜL 37 · AÇIK 7 |
+| Kombinasyon satırı (usul alt kümesi) | 1321 |
+| Türetme ağacı sayısı | hücre başına 0 ile 274 arası (en çok Q02.c2: 274, Q02.c1: 273, Q17.c1: 270) |
+| “Olmasaydı” satırı | 147: hücre doğru olmasaydı 25 · hiç var olmasaydı 20 · aksi doğru olsaydı 102 |
 | Felsefe | ÇÜRÜTÜLDÜ kat'î 23 · kat'î fakat şartlı 14 · zannî 3 · İHTİLAFLI 1 · UYUMLU 1 · **koşulsuz ÇÜRÜMEDİ 0** |
 
 ## Sıfat tasnifi (padişahın sorusu, 3-I 238)
@@ -89,3 +89,13 @@ Harita bir **canvas**tır; dünya alanı yaklaşık 18 000 × 12 800 birimdir. H
 ## Düzeltme kaydı (3-I 240)
 
 Nizam delili (`U17`, `U25`) yalnız ilimli ve iradeli bir fâile işaret eder; hücre metni "Vâcib" dediği hâlde fâil–Vâcib köprüsü yazılı değildi. `k_fail_vacib` açıkça eklendi (8 ispat, varlık ilkesi ailesine). İlke farz edildiğinde sayılar değişmedi; ilkesiz harita `ISPAT_YONU_ALTERNATIFLERI.md`dedir.
+
+## Düzeltme kaydı (3-I 242: Mâtürîdî okumasından türetilen kayıtlar)
+
+"1 okuyup 10 yeni üret" hükmüyle Arş (V.2.16), tevhid (V.2.6), ihtiyar (V.2.14) ve adlandırma farkı (V.1.3.M.144) okumalarından **11 yeni önerme** ve **10 yeni doğrudan ispat** eklendi (`veri_onerme.py` ve `veri_ispat.py` sonunda "3-I 242" başlığıyla). Yeni ispatlar: **Q07.c3** (mekânlı Vâcib) için dört kayıt: ezelden mi sonradan mı ikilemi (U07), sınırlı ⇒ mümkin ⇒ Vâcib değil (U07, imkân–vücûb çekirdeğine indirgenmiş), kuşatma üçlüsü (U07, **kısmî**: eşitlik şıkkı kayıtlı değil), el kaldırma yön delilinin ters çevrilmesi (U29, **kısmî**: yalnız yön delilini kapsar; ilk sürümde kısmî işaretlenmeyip hücreyi tek başına ispatlıyor göründüğü için düzeltildi); **Q13.c2** için adlandırma farkı ilzamı (U27); **Q09.c2** için sudûr itirazı (U07, **kısmî**); **Q10.irade.c1** için çeşitlilik ve tabiatla iş yapanın tek türlülüğü (U17); **Q04.c2** için gizleme (bilgi) argümanı (U07).
+
+**Sayılar:** ispat 343 → 353; önerme 90 → 101; hücre durumu KAT'Î-ŞARTLI 45 → 47, ZAN-I GÂLİB 21 → 19 (Q07.c3 ve Q07.c2 zan-ı gâlibden kat'î-şartlıya çıktı; şart `k_sinirli_mumkin`, yani sebep-ilkesi hâl kanadı); kombinasyon 1287 → 1321; açık iş (`YAPILMADI`) 580 → 575. Matris, kombinasyon ve kimlik kontrolleri tamam çıktı.
+
+**Yeni zayıf aileler (adıyla):** `alem-parca` (âlem hâdisse her parçası hâdistir), `mekan-degisim` (mekâna girmek hâl değişimidir; Mâtürîdî Kâ'bî'ye karşı bunu zâtta zorunlu görmez, V.2.16.68), `sudur-cesitlilik` (tek özellikli illetten çeşitli sonuç çıkmaz; alıcı farkı itirazı açık), `gizleme-gucu` (gizleme gücü kemâldir; hasım mantıkî imkânsızı yapamamanın eksiklik olmadığını söyler), ve `mekan` ailesine eklenen `k_kusatma_muhtac`. **Bu beş zayıf ailenin hiçbiri hücre durumunu düşürmez** (ayırt testinin "etkisiz" sayısı 17 → 22); bu, ağın başka ispatlarla ayakta olduğunu gösterir ve ölçünün bu aileler için ayırt etmediği anlamına gelir; sayı gizlenmedi.
+
+**Okuma notu:** Önceki "açık iş" notu ("sudûr itirazı veritabanında yok") kısmen yanlıştı: Q09.c2'de zorunlu sudûrun tek değişmez sonuç vermesine dair ispat zaten vardı; yeni kayıt "çeşitli ve zıt özellikli sonuç" kanadını ayrı ve **kısmî** olarak ekler. **DB'de hücresi olmayan** Mâtürîdî malzemesi (hâdis mükevven ve "neden sonradan" ikilemi, V.2.11.5–7) bir itiraz–cevap zinciridir ve ayrı hücre açılmadan yazılmadı; açık iştir.

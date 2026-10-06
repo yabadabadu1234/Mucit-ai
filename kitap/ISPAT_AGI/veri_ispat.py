@@ -209,3 +209,26 @@ P('Q10.rahmet.c1', 'U17', ['m_ihkam', 'k_gaye', 'H:Q09.c4'], 'Varlık ve nimet v
 P('Q10.rahmet.c3', 'U07', ['k_gaye', 'H:Q09.c4', 'H:Q14.c1'], 'İhsan imkânsız olsaydı kemâl sınırlı olurdu.')
 P('Q10.sidk.c1', 'U07', ['k_yalan_noksan', 'H:Q14.c1'], 'Yalan noksandan doğar; Vâcib noksandan münezzehtir.')
 P('Q10.sidk.c3', 'U07', ['k_yalan_noksan', 'H:Q14.c1'], 'Sıdk imkânsız olsaydı yalan mümkin olurdu.')
+
+# 3-I 242: Mâtürîdî okumasından türetilen ispatlar (Arş: V.2.16; tevhid: V.2.6; ihtiyar: V.2.14; hikmet: V.1.3.M)
+P('Q07.c3', 'U07', ['t_alem', 'H:Q04.c1', 'H:Q13.c1', 'k_alem_parca_hadis', 'k_mekanda_olus_hal', 'k_degisen_vacib_degil', 'e_ucuncu_sik'],
+  'Mekânlı Vâcib ya ezelden mekândadır (mekân âlemdendir ve ezelî olur; âlem hâdistir) ya sonradan mekâna girmiştir (hâl değiştirir; değişen vâcib olamaz); iki kol da çürür (Mâtürîdî, Arş).',
+  hd='Mekânın âlemin parçası olduğu ve hâdis olduğu öncülleri ayrıca yazılmıştır (alem-parca ailesi); Kâ’bî’nin mekân edinmenin değişiklik gerektirmediği itirazı mekan-degisim ailesine düşer.')
+P('Q07.c3', 'U07', ['k_mekanli_sinirli', 'k_sinirli_mumkin', 'k_muhtac_mumkin', 't_vacib'],
+  'Mekânla sınırlı olanın hacmi ve sınırı vardır; sınır bir müreccihle belirlenir; müreccihe muhtaç olan mümkindir ve Vâcib olamaz (Mâtürîdî, Arş; imkân–vücûb çekirdeğine indirgenmiş biçim).')
+P('Q07.c3', 'U07', ['k_mekan_uclu', 'k_kusatma_muhtac', 'k_muhtac_mumkin', 'k_basit_vacib', 'k_parca_muhtac', 't_vacib'],
+  'Mekân Vâcib’i kuşatırsa kuşatılan kuşatana bağlıdır ve mümkin olur; Vâcib mekânı aşarsa bir kısmı mekânın içinde bir kısmı dışında olur ve parçalanır; iki şık da çürür (Mâtürîdî, üç ihtimal argümanı).',
+  kismi='Yalnız kuşatma ve aşma şıklarını kapsar; eşitlik şıkkı Mâtürîdî’de “ilâve yaratılınca küçük kalır” ve acz argümanına bağlanır (V.2.16.28–29) ve burada kayıtlı değildir')
+P('Q07.c3', 'U29', ['k_yon_delil_cift', 'e_celismezlik'],
+  'El kaldırmanın Allah’ın yukarıda olduğunu gösterdiği iddiası, secde ve kıble eylemleri karşıt yönlere yöneldiğinden kendi gerekçesiyle çürür; ibadetin yönü ilâhın yönü değildir (Mâtürîdî, Arş).',
+  kismi='Yalnız yön (el kaldırma, secde, kıble) delilini çürütür; mekânlı oluşun başka delillerini kapsamaz, bu yüzden hücreyi tek başına ispatlamaz')
+P('Q13.c2', 'U27', ['k_asil_ikilem', 'k_kudret_fiil', 'k_irade_cuzi', 'm_tahsis', 'H:Q09.c4'],
+  'Âlemi kadîm ve zorunlu bir asla bağlayan, o asla âlemi var etme ve yönetme gücü veriyorsa onu Vâcib’in sıfatlarıyla tanımlamıştır ve fark yalnız addır; vermiyorsa açıklama başka şeye kalır (Mâtürîdî, adlandırma farkı ilzamı).',
+  hd='Yalnız ilk asılı var edici ve yönetici sayan muhatabı bağlar; bu fiilleri asıla vermeyen muhatap için açıklama sorusu Q03.c2’ye kalır.')
+P('Q09.c2', 'U07', ['m_cok', 'm_tahsis', 'k_zorunlu_sonuc', 'k_tek_ozellik_cesitlilik'],
+  'Zorunlu ve tek özellikli sebepten çeşitli ve zıt özellikli bir âlem çıkmaz; alıcı farkı ise ayrıca açıklama ister (Mâtürîdî, sudûr itirazı).',
+  kismi='Sudûrcu felsefecilerin akıllar silsilesi ve alıcı farkının kaynağı cevabı yoklanmadı; bu kayıt yalnız tek basamaklı zorunlu sudûru kapsar')
+P('Q10.irade.c1', 'U17', ['m_cok', 'm_tahsis', 'k_tabi_tek_tur', 'k_irade_cuzi'],
+  'Âlemde çokluk ve çeşitlilik vardır; tabiatıyla iş yapan tek türde iş yapar; çeşitli fiil ihtiyarlı ve iradeli fâile işaret eder (Mâtürîdî, ilâhî fiillerin ihtiyarîliği).')
+P('Q04.c2', 'U07', ['k_gizleme_gucu', 'k_aciz_vacib_degil', 'k_bilgisiz_vacib_degil', 't_vacib'],
+  'İki ilâhtan biri diğerinden gizli fiil işleyebiliyorsa diğeri bilgisizdir, işleyemiyorsa kendisi güçte sınırlıdır; her iki hâlde biri noksandır ve vâcib olamaz (Mâtürîdî, gizleme argümanı).')
