@@ -1010,7 +1010,7 @@
 
 ---
 
-## I.9 -- (DAĞITILDI; NAKZ 3-I 236)
+## I.9 -- (DAĞITILDI; TAŞIMA, NAKZ DEĞİL; 3-I 236)
 
 Bu bâb 3-I 235 turunda Fârâbî'den alınanların toplu yeri idi; padişah (3-I 236) usullerin **Kısım I'e fasıl fasıl** eklenmesini istedi, bu yüzden yaprakların hepsi aşağıdaki yerlere **taşındı** (hiçbiri silinmedi; toplam 265 yaprak = 205 Fârâbî cümlesi + 39 kip + 3 Önsöz + 7 Claude tenkidi (eski I.9) + 7 yeni I.6.6 + 4 yeni I.7.6):
 
