@@ -194,7 +194,7 @@
 
 ### 3h. kazâ ve kader (OCR 16002–18135): hikmet ve sefeh · mükellefiyet · akıl–tabiat · muhkem–müteşâbih · kulların fiilleri (üç kol, on dokuz aklî delil, Mu'tezile'nin emir–nehiy delili, Kâ'bî I) damıtması
 
-**Okunan ve yazılan:** V.K.1, V.K.2, V.K.T1 (V.Ka, V.Kb: 90 yaprak) · V.K.3, V.K.T2 (V.Kc, V.Kc2: 85) · V.K.3.74–88, V.K.4, V.K.5, V.K.T3 (V.Kd, V.Ke: 94) = **269 yaprak** (6 dosya); ayrıca V.Kf, V.Kg (121 yaprak): toplam **390 yaprak** (8 dosya). OCR satır 16002–18989. **Okunmayan:** OCR satır 18990'dan sonrası (istitâat, ecel, rızık, irade, kazâ ve kader). **Mu'tezile, Cebriyye ve Mürcie aktarımları Mâtürîdî'nindir; kendi kaynakları okunmadı.**
+**Okunan ve yazılan:** V.K.1, V.K.2, V.K.T1 (V.Ka, V.Kb: 90 yaprak) · V.K.3, V.K.T2 (V.Kc, V.Kc2: 85) · V.K.3.74–88, V.K.4, V.K.5, V.K.T3 (V.Kd, V.Ke: 94) = **269 yaprak** (6 dosya); ayrıca V.Kf, V.Kg (121 yaprak): toplam **390 yaprak** (8 dosya); ayrıca V.Kh, V.Ki (122 yaprak): toplam **512 yaprak** (10 dosya). OCR satır 16002–19858. **Okunmayan:** OCR satır 19858'den sonrası (istitâatin devamı, ecel, rızık, irade, kazâ ve kader). **Mu'tezile, Cebriyye ve Mürcie aktarımları Mâtürîdî'nindir; kendi kaynakları okunmadı.**
 
 | # | Okunandan türeyen yeni şey | Nerede |
 | :-- | :-- | :-- |
@@ -234,6 +234,28 @@
 | 34 | Faktörlerin faktörü silsilesi: kul ihtiyarî fiilin faktörlerini sağlıyorsa o sağlamanın da faktörü gerekir (teselsül bâbına bağlanacak, açık iş) | V.K.T4.16 |
 | 35 | "Yaratan bilmez mi" ayeti tek yönlüdür (yaratmak bilmeyi gerektirir), H4'e dayalı | V.K.T4.17 |
 | 36 | İki kudret bir fiil: aynı cihetten aynı fiile yöneldiklerinde çatışırlar; cihetleri ayrıysa çatışma yoktur (çatışma kaidesi) | V.K.T4.20 |
+| 37 | Kudretin iki türü: imkân hâli (selâmetü'l-esbâb, sıhhatü'l-âlât) ve fiil gücü; Türkçe terim önerisi (Claude'un, padişah onaylamadı) | V.K.T5.1 |
+| 38 | Şükür ilkesi emrin ön şartıdır; "akıl şükrü gerekli görür" insan açısındandır, Allah'a vecîbe değildir | V.K.T5.2 |
+| 39 | Ayetin ifadesi (malumat) ile münafıkların zihin hâli ayrılır; niyet isnadı yazılmaz | V.K.T5.3 |
+| 40 | Ayıplama ancak muhatabın bildiği şey için olur; ayet imkân hâlinin istitâat olduğunu gösterir, fiil gücünün sonradan oluştuğunu göstermez (ikinci iddia aklî delillere dayanır) | V.K.T5.4 |
+| 41 | "Allah gücünün yettiğinden fazlasıyla yükümlü kılmaz" ayetlerindeki gücün mânası ihtilaflıdır; ortak çekirdek hüküm, ihtilaf işaretli | V.K.T5.5 |
+| 42 | Fiil kudreti ilzamları (düalizm, hüccetler, minnet borcu) tek ilzam ailesi tablosunda, yanına Mu'tezile'nin olası cevabı sütunuyla | V.K.T5.6 |
+| 43 | "Şunu yapamıyorum" tekil olumsuzdur; "hiçbir şeye gücüm yok" evrensel olumsuzdur; ikincisi birincisinden çıkmaz | V.K.T5.7 |
+| 44 | "Arazın bekâsı yoktur" öncülü atom–araz fiziğinde metafizik, zannî; bu öncüle dayanan hüküm yakîne yükseltilmez | V.K.T5.8 |
+| 45 | "Kadir = fâil" bir tanım hamlesidir; tanıma göre kudret–fiil bir ve beraber olur (delil değil tanım gereği) | V.K.T5.9 |
+| 46 | İki kudret ayrımı cebir itirazını çözmek için kurulmuştur: mükellefiyetin dayanağı imkân hâli, fiilin oluşu fiil gücü | V.K.T5.10 |
+| 47 | Kudretin zamanı için ikili nefy–isbât hasrı: (önce E/H) × (beraber E/H) dört hücre; (H,H) mantıkça imkânsız | V.K.T5.11 |
+| 48 | Aklî görünen istitâat delillerinin (hac, cihad, bedel, zekât, yardım dileme) öncülleri naklîdir: H4'e dayalı akıl yürütme | V.K.T5.12 |
+| 49 | Ezelî bilgi, zamanlı eser: "Allah onu ezelde şu zamanda olacak şekilde bildi"; bilginin konusunun zamanını belirtmek bilgiyi zamanlı yapmaz; "ezelî bilgi cebir mi" itirazı için ayrı yaprak | V.K.T6.1 |
+| 50 | Mu'tezile'ye atfedilen kudret–zaman iddiaları (a–d) bağımsız beş iddia gibi aktarılmıştır; Muğnî okununca kendi sözleriyle listelenir | V.K.T6.4 |
+| 51 | Kudret tek mi çift mi (sayı) ve iki zıddın birine mi ikisine mi elverişli (kapasite) ayrı iki sorudur | V.K.T6.5 |
+| 52 | Dua delili inanç uygulaması şahididir, ispat değildir | V.K.T6.6 |
+| 53 | Lafzî ve mânevî ihtilaf ayrımı tanım usulüne (I.2) bağlanacak | V.K.T6.7 |
+| 54 | Firavun örneği ezelî bilgi–cebir sorusunu açar; cevap irade ve kazâ–kader bölümleri okunmadan açık iş | V.K.T6.8 |
+| 55 | "Samimi olduğu takdirde" şart cümlesi niyet isnadına dönüştürülmez: "tezin tutarlı uygulanması hâlinde" | V.K.T6.9 |
+| 56 | Kudretin oluşması kulun istek ve tercihine bağlıdır; iradenin kendisinin yaratılıp yaratılmadığı sorusu irade bölümüne bırakılır | V.K.T6.10 |
+| 57 | "Şer" iki anlamlıdır: kul fiili olarak şer ve elem–hastalık olarak kötülük; Mâtürîdî'nin Mu'tezile–Senevî çelişki ilzamı bu ayrımla birlikte yazılır | V.K.T6.11 |
+| 58 | Tercümanın güçlük çektiği iki yaprak (V.K.9.17–18) Claude okumasıdır; Arapça asıl okunmadan hüküm yazılmaz | V.K.T6.12 |
 
 ## 5. Açık suâller
 
@@ -250,4 +272,4 @@
 | S46 | **Açık:** Eski Ahit ve Yeni Ahit'in V.2.37 ilzamlarında anılan pasajları okunsun mu? (V.2.39.12) |
 | S47 | **Açık:** cüz ilzamları DB'ye kısmî ispat olarak yazılsın mı, yoksa hasmın kaynağı okunana kadar beklensin mi? Claude: beklesin (V.2.39.13) |
 | S48 | **Açık (tetabuk):** kul fiili mezhep ayrıntısı (halk–kesb, istitâat) inanması farz olan çekirdeğe mi girer, ayrıntı mı kalır? (V.K.T2.12; 3-I 202, 229) |
-| (okuma) | İlâhiyyât (s.73–346) ve nübüvvet (s.347–420) bitti; kaza–kader OCR 16002–18989 okundu (V.K.1–V.K.6); sıra kaza–kader devamı OCR satır 18990'dan ( istitâat s.495–539, ecel, rızık, irade, kazâ ve kader s.582–616), sonra îmân s.713–758 (OCR ~27792'den); s.617–712 okunmaz |
+| (okuma) | İlâhiyyât (s.73–346) ve nübüvvet (s.347–420) bitti; kaza–kader OCR 16002–19858 okundu (V.K.1–V.K.9); sıra kaza–kader devamı OCR satır 19858'den ( istitâat s.495–539, ecel, rızık, irade, kazâ ve kader s.582–616), sonra îmân s.713–758 (OCR ~27792'den); s.617–712 okunmaz |
