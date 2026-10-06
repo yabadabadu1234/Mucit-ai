@@ -75,8 +75,11 @@ Bu dosya **dizindir**. Eskiden tek dosya olan deşmenin bütün yaprakları **si
 | [V.Kg_MATURIDI_KABI_III_NAKLI_DELIL_TENKIT](DESME/KISIM_V/V.Kg_MATURIDI_KABI_III_NAKLI_DELIL_TENKIT.md) | V.K.5.100–121, V.K.6.1–20, V.K.T4.1–21 (Mâtürîdî: Kâ'bî III, naklî delil s.491; Claude tenkidi; 3-I 241, 242) | 63 | 34.1 KB |
 | [V.Kh_MATURIDI_ISTITAAT_I](DESME/KISIM_V/V.Kh_MATURIDI_ISTITAAT_I.md) | V.K.7.1–45, V.K.T5.1–12 (Mâtürîdî: istitâat I: iki kudret, nakil ve akıl delilleri, Mu'tezile'ye ilzam, kudret fiille beraberdir; Claude tenkidi; 3-I 241, 242) | 57 | 30.6 KB |
 | [V.Ki_MATURIDI_ISTITAAT_II_KABI](DESME/KISIM_V/V.Ki_MATURIDI_ISTITAAT_II_KABI.md) | V.K.7.46–52, V.K.8.1–23, V.K.9.1–23, V.K.T6.1–12 (Mâtürîdî: istitâat II: kudretin taat ve mâsiyete elverişliliği, teklîf-i mâ lâ yutâk, Kâ'bî'nin görüşü I; Claude tenkidi; 3-I 241, 242) | 65 | 35.2 KB |
+| [V.Kj_MATURIDI_KABI_ISTITAAT_III](DESME/KISIM_V/V.Kj_MATURIDI_KABI_ISTITAAT_III.md) | V.K.9.24–84 (Mâtürîdî: Kâ'bî'nin istitâat görüşü II: köle–efendi, ilimde yapmayacak, Firavun, aslah, emir ve kudret; 3-I 241, 242) | 61 | 38.1 KB |
+| [V.Kk_MATURIDI_ISTITAAT_IV_ECEL](DESME/KISIM_V/V.Kk_MATURIDI_ISTITAAT_IV_ECEL.md) | V.K.9.85–99, V.K.10.1–17, V.K.11.1–26, V.K.12.1 (Mâtürîdî: Kâ'bî'nin istitâat görüşü III, ihtiyar ve tercih, ecel konusu, rızık başı; 3-I 241, 242) | 59 | 34.1 KB |
+| [V.Kl_MATURIDI_ISTITAAT_TENKIT](DESME/KISIM_V/V.Kl_MATURIDI_ISTITAAT_TENKIT.md) | V.K.T7.1–25 (Claude tenkidi: istitâat, aslah, ecel, levh-i mahfûz; 3-I 241, 242) | 25 | 21.4 KB |
 | [V.TOPLU_TENKIT_ACIK_ISLER](DESME/KISIM_V/V.TOPLU_TENKIT_ACIK_ISLER.md) | TOPLU | 0 | 1.2 KB |
 
-**Toplam yaprak: 3022.** Cinse göre: K 1245 · Z 854 · C 654 · B 59 · İt 80 · T 31 · İ 81 · M 17 · H 1
+**Toplam yaprak: 3167.** Cinse göre: K 1282 · Z 879 · C 710 · B 59 · İt 80 · T 31 · İ 108 · M 17 · H 1
 
-Not (3-I 241): V.1.3.M (285), V.2.6–V.2.39 (943), V.3.M (107), V.4.M (83), V.4.N (96), V.4.O (70) ve V.5.8–V.5.12 (66), V.K (512) ve V.M (73) yaprakları Mâtürîdî'den alınmıştır; V.F ve V.M satırlarının cinsi 3. sütundadır (namzet önerisi). V.1 dosyası 40 KB'ı aşınca V.1.4.17 ve sonrası **silinmeden** V.1.4b dosyasına taşınmıştır (3-I 238).
+Not (3-I 241): V.1.3.M (285), V.2.6–V.2.39 (943), V.3.M (107), V.4.M (83), V.4.N (96), V.4.O (70) ve V.5.8–V.5.12 (66), V.K (657) ve V.M (73) yaprakları Mâtürîdî'den alınmıştır; V.F ve V.M satırlarının cinsi 3. sütundadır (namzet önerisi). V.1 dosyası 40 KB'ı aşınca V.1.4.17 ve sonrası **silinmeden** V.1.4b dosyasına taşınmıştır (3-I 238).

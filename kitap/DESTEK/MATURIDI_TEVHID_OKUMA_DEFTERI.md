@@ -194,7 +194,7 @@
 
 ### 3h. kazâ ve kader (OCR 16002–18135): hikmet ve sefeh · mükellefiyet · akıl–tabiat · muhkem–müteşâbih · kulların fiilleri (üç kol, on dokuz aklî delil, Mu'tezile'nin emir–nehiy delili, Kâ'bî I) damıtması
 
-**Okunan ve yazılan:** V.K.1, V.K.2, V.K.T1 (V.Ka, V.Kb: 90 yaprak) · V.K.3, V.K.T2 (V.Kc, V.Kc2: 85) · V.K.3.74–88, V.K.4, V.K.5, V.K.T3 (V.Kd, V.Ke: 94) = **269 yaprak** (6 dosya); ayrıca V.Kf, V.Kg (121 yaprak): toplam **390 yaprak** (8 dosya); ayrıca V.Kh, V.Ki (122 yaprak): toplam **512 yaprak** (10 dosya). OCR satır 16002–19858. **Okunmayan:** OCR satır 19858'den sonrası (istitâatin devamı, ecel, rızık, irade, kazâ ve kader). **Mu'tezile, Cebriyye ve Mürcie aktarımları Mâtürîdî'nindir; kendi kaynakları okunmadı.**
+**Okunan ve yazılan:** V.K.1, V.K.2, V.K.T1 (V.Ka, V.Kb: 90 yaprak) · V.K.3, V.K.T2 (V.Kc, V.Kc2: 85) · V.K.3.74–88, V.K.4, V.K.5, V.K.T3 (V.Kd, V.Ke: 94) = **269 yaprak** (6 dosya); ayrıca V.Kf, V.Kg (121 yaprak): toplam **390 yaprak** (8 dosya); ayrıca V.Kh, V.Ki (122 yaprak): toplam **512 yaprak** (10 dosya); ayrıca V.Kj, V.Kk, V.Kl (145 yaprak): toplam **657 yaprak** (13 dosya). OCR satır 16002–21020. **Okunmayan:** OCR satır 21014'ten sonrası (rızık, irade, kazâ ve kader). **Mu'tezile, Cebriyye ve Mürcie aktarımları Mâtürîdî'nindir; kendi kaynakları okunmadı.**
 
 | # | Okunandan türeyen yeni şey | Nerede |
 | :-- | :-- | :-- |
@@ -256,6 +256,22 @@
 | 56 | Kudretin oluşması kulun istek ve tercihine bağlıdır; iradenin kendisinin yaratılıp yaratılmadığı sorusu irade bölümüne bırakılır | V.K.T6.10 |
 | 57 | "Şer" iki anlamlıdır: kul fiili olarak şer ve elem–hastalık olarak kötülük; Mâtürîdî'nin Mu'tezile–Senevî çelişki ilzamı bu ayrımla birlikte yazılır | V.K.T6.11 |
 | 58 | Tercümanın güçlük çektiği iki yaprak (V.K.9.17–18) Claude okumasıdır; Arapça asıl okunmadan hüküm yazılmaz | V.K.T6.12 |
+| 58 | Kudretin kıyası iki yönlüdür: Kâ'bî'ye şâhid–gâib ilzamı Mâtürîdî'ye de yöneltilebilir; ortak illet şartı iki tarafı bağlar | V.K.T7.1 |
+| 59 | "Kul gücü olmaksızın mükellef tutulmuş olur" cümlesi iki kudret ayrımı olmadan çelişki gibi görünür; her kullanımda hangi kudretin kastedildiği yazılır | V.K.T7.2 |
+| 60 | "İlimde yapmayacak" ikilemi (zıddını işler / engel olunur / mükellefiyet kalkar) iki yönlüdür ve Ehl-i sünnete de yöneltilebilir; cevap irade ve kazâ–kader bölümleri okunmadan kapanmaz | V.K.T7.3 |
+| 61 | Aslah ilzamı: aslah ilkesi kabul edilirse Allah mâni olmadığı her âsî hakkında hayra olanı yapmamış olur; ilkenin sınırı Mu'tezile'nin kendi ifadesiyle okunacak | V.K.T7.4 |
+| 62 | Allah'ın görmesi nesnenin hâlini değiştirmez; "mevcut oluş"un iki anlamı (bitirmiş / meşgul) | V.K.T7.6 |
+| 63 | Düşman diliyle kurulan ilzam sahnesi kurgudur; kimsenin gerçek sözü gibi yazılmaz | V.K.T7.9 |
+| 64 | "Kudret kemal mertebesinde sahibi rab ve ilâh olur" cümlesi kulun rab olabileceği anlamına gelmez; kudretin mertebeleri ilkesi (mutlak kudret yalnız Allah'ta, kulda verilmiş ve kısmî) | V.K.T7.10 |
+| 65 | İlim bağlayıcı, emir bağlayıcı değil: tercümanın yorumu cebir olarak okunabilir; Mâtürîdî'nin ayrımı (ilim vâkıayı izler, vâkıa kulun kesbiyle oluşur) bu okumayı reddeder | V.K.T7.12 |
+| 66 | Kudretin devri tasavvuru (kudret verilir, kendisinden zâil olur) ilzamı; Mu'tezile'nin olası cevabı (yeni kudret yaratılır, ilim örneği) | V.K.T7.13 |
+| 67 | Mâtürîdî'nin kasıtlı seçimle ihtiyar tanımı: tercih bilinç ve ölçüt ister; "neden yaptığını bilmeyen" fiilde başkasının rolü Allah'ın rolü anlamına gelmez | V.K.T7.16 |
+| 68 | "Talep" kavramı iki okunur (dua ile istemek / iradeyle yönelmek); kitabın dili "Allah kulun talebine karşılık kudreti yarattı" | V.K.T7.17 |
+| 69 | Kılıç–para örneği araç benzetmesinin sınırını gösterir; "kudret fiilin sebebidir" öncülü tanım hamlesidir | V.K.T7.18 |
+| 70 | Ecelin iki tanımı: ilâhî ilimde kayıtlı son (öldürülme dâhil) / tabiî ömür | V.K.T7.20 |
+| 71 | Levh-i mahfûz: şartlı yazı ile kesin yazı ayrımı; mahiyeti H4'e bırakılır | V.K.T7.21 |
+| 72 | Sıla-i rahim hadisi: ilâhî ilimde kayıtlı karşı-olgusal ölçü / bereket okuması; sıhhat yoklanmadı | V.K.T7.22 |
+| 73 | Savaş ve müşrikler âyeti yalnız lafız örneği olarak yazılır; bağlamı ve hükmü kitabın mevzuu değildir (3-I 202) | V.K.T7.24 |
 
 ## 5. Açık suâller
 
@@ -272,4 +288,4 @@
 | S46 | **Açık:** Eski Ahit ve Yeni Ahit'in V.2.37 ilzamlarında anılan pasajları okunsun mu? (V.2.39.12) |
 | S47 | **Açık:** cüz ilzamları DB'ye kısmî ispat olarak yazılsın mı, yoksa hasmın kaynağı okunana kadar beklensin mi? Claude: beklesin (V.2.39.13) |
 | S48 | **Açık (tetabuk):** kul fiili mezhep ayrıntısı (halk–kesb, istitâat) inanması farz olan çekirdeğe mi girer, ayrıntı mı kalır? (V.K.T2.12; 3-I 202, 229) |
-| (okuma) | İlâhiyyât (s.73–346) ve nübüvvet (s.347–420) bitti; kaza–kader OCR 16002–19858 okundu (V.K.1–V.K.9); sıra kaza–kader devamı OCR satır 19858'den ( istitâat s.495–539, ecel, rızık, irade, kazâ ve kader s.582–616), sonra îmân s.713–758 (OCR ~27792'den); s.617–712 okunmaz |
+| (okuma) | İlâhiyyât (s.73–346) ve nübüvvet (s.347–420) bitti; kaza–kader OCR 16002–21020 okundu (V.K.1–V.K.12.1); sıra kaza–kader devamı OCR satır 21014'ten ( istitâat s.495–539, ecel, rızık, irade, kazâ ve kader s.582–616), sonra îmân s.713–758 (OCR ~27792'den); s.617–712 okunmaz |

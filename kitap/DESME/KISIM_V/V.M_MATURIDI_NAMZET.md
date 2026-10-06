@@ -69,8 +69,8 @@ Kaynak: padişahın verdiği altı fotoğraftaki basılı İçindekiler (Kitâb�
 | V.M.61 | [6.1.] Mesele [Cisimlerin Yaratılmışlığı Deliliyle Mesih Îsâ'nın Ulûhiyyetinin Reddi] (413) | Z | V.2.3.4; V.1.3.M (hudûs delilinin ilâh iddiasına uygulanışı); **yapraklar V.2.38–V.2.39** | okundu |
 | V.M.62 | [Kazâ ve Kader] (421) ve [1.] Mesele [Hikmet ve Sefeh Hakkında] (421) | Z | **Mevcut fihristte kazâ ve kader bâbı yok:** altı îmân esasının biri; **kader bâbı `V.K` (S39 kapandı, 3-I 242; etiket Claude'un çıkarımıdır)**; **yapraklar V.K.1, V.K.T1 (V.Ka, V.Kb)** | okundu |
 | V.M.63 | [2.] Kulların Fiilleri ve Fâillerinin Belirlenmesi (430) ve alt başlıkları (436, 457, 463, 491) | Z | V.K (3-I 242); **yapraklar V.K.3–V.K.6 ve tenkitler (V.Kc–V.Kg)** | **okundu** (OCR 16371–18989) |
-| V.M.64 | [3. Kula Ait Fiilin Kudret veya İstitâati] (495) ve alt başlıkları (503, 506, 511) | Z | V.K.7–V.K.9, V.K.T5–T6 (V.Kh, V.Ki; 3-I 242) | **kısmen okundu** (OCR 18990–19858) |
-| V.M.65 | [4. Ecel Konusu] (540) · [5. Rızık Konusu] (546) | Z | V.K (3-I 242) | okunmadı |
+| V.M.64 | [3. Kula Ait Fiilin Kudret veya İstitâati] (495) ve alt başlıkları (503, 506, 511) | Z | V.K.7–V.K.10, V.K.T5–T7 (V.Kh–V.Kl; 3-I 242) | **okundu** (OCR 18990–20784; s.495–539) |
+| V.M.65 | [4. Ecel Konusu] (540) · [5. Rızık Konusu] (546) | Z | V.K.11–V.K.12.1 (V.Kk; 3-I 242) | **kısmen okundu** (ecel okundu, rızık başı) |
 | V.M.66 | [6.] İradeye Dair Meseleler (549) ve alt başlıkları (562, 575) | Z | V.K (3-I 242); V.2.2.3 (irade) | okunmadı |
 | V.M.67 | [7.] Mesele [Kazâ ve Kader Hakkında] (582) ve alt başlıkları (586, 597, 601, 606) | Z | V.K (3-I 242) | okunmadı |
 | V.M.68 | Dördüncü Bölüm: Büyük Günahlar ve Bunları İşleyenlerin Durumu (617–712) | K | **Okunmaz; kitabın mevzuu dışı** (padişah: "bizi alakadar etmiyor") | okunmaz |
