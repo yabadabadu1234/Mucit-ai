@@ -171,6 +171,27 @@
 | 11 | Bilgi–güç dörtlüsü ilzam kalıbının Müslümana da yöneltilebilirliği (simetri sorusu; V.K açık suâli) | V.2.36.13 |
 | 12 | Düalizme karşı yedi ilzam ailesi haritası; DB'de eksik kollar | V.2.36.16 |
 
+### 3g. s.347–420 damıtması (nübüvvet; Verrâk, İbnü'r-Râvendî, Ebû Zeyd; Hıristiyanlar)
+
+**Okunan ve yazılan:** V.3.M (107), V.4.M (83), V.4.N (96), V.4.O (70), V.2.37–V.2.39 (61) = **417 yaprak** (9 dosya). **OCR bozukluğu:** satır 14119–14180 (Verrâk'a üçüncü cevap) okunamadı, V.4.M.60'ta işaretli. **Bu bölümün yapraklarının büyük kısmı H4'e dayalıdır** (ayet ve hadis kaynaklı); H3'te yalnız aklî ve müşahede çekirdeği delil sayılır (V.4.O.56).
+
+| # | Okunandan türeyen yeni şey | Nerede |
+| :-- | :-- | :-- |
+| 1 | Mûcizeden fâile yol bağımsız ikinci yoldur; kısırdöngü denetimi için sıra V.1 → V.3.4 → V.3.M.7 | V.3.M.9–10 |
+| 2 | Vahiy–akıl kaidesi: vahiy aklın mümteni'ini getirmez, mümkin alanında tercihe şayan olanı açıklar | V.3.M.93 |
+| 3 | Duyu ötesi bilginin iki vasıtası kapalı hâsır değildir; üçüncü kol hads ve vicdan | V.3.M.92 |
+| 4 | On iki ihtiyaç delili güç sırasıyla ayrıldı: sağlam çekirdek (denemenin bedeli ölüm, anlaşmazlık, nimetin şükrü) · orta · zayıf (tarihî veya teleolojik iddia) | V.3.M.106 |
+| 5 | Niyet ve zihin hâli isnadı yasağı: Mâtürîdî'nin "münkirler bilir" cümleleri alıntı olarak durur | V.3.M.104 |
+| 6 | Hukuk düzeni argümanının güçlü biçimi: insan çıkarından arınmış kanun koyucu | V.3.M.98 |
+| 7 | Verrâk'a üç ilzam aynı retorsion kalıbının uygulamasıdır | V.4.M.82 |
+| 8 | Mûcize delilinin iki ayağı: imkân (sağlam) ve vukû' (zan-ı gâlib) | V.4.M.80 |
+| 9 | Yedi çeşit Kur'ân istidlâlinin gücü ayrı ayrı: tutarlılık ve ihtiyaç zamanı sınanabilir, "bütün olayların ilkeleri" en zayıf | V.4.N.74 |
+| 10 | Yayılma yasası yayılmayı gösterir, doğruluğu değil; doğruluk tevâtürün dört şartına bağlı | V.4.N.81 |
+| 11 | Başarı doğruluğun delili değildir; geçerli çekirdek önceden haber + gerçekleşme + alternatiflerin çürütülmesi | V.4.O.58 |
+| 12 | Hasım–cevap tablosu ve üç kademeli savunma düzeni: ilzam · tarihî ve psikolojik sınama · vahiy bildirimi | V.4.N.91–92 |
+| 13 | Ayırt edici işaret argümanı kalıbı (X, B işaretini taşır; Y de taşır; B A'yı ayırmaz) Mesih mûcize ilzamına uygulandı | V.2.39.3 |
+| 14 | Eski Ahit atıflarının Mâtürîdî aktarımından ayrılabilmesi (hafızadan, yoklanmadı) ve Hıristiyan öğretisinin cüz biçiminde anlaşılan kolu | V.2.39.1, V.2.39.9 |
+
 ## 5. Açık suâller
 
 | # | Suâl |
@@ -178,4 +199,11 @@
 | S38 | **Kapandı (3-I 242):** üç hâl de beyan edilir (V.1.3.a.26–38) |
 | S39 | **Kapandı (3-I 242):** kazâ ve kader bâbı olacak (`V.K`; etiket Claude'un çıkarımı); s.421–616 okuma planında |
 | S40 | **Kapandı, nakz (3-I 242):** dövme ve eziyet alınmaz, mizah usulü gereksiz; hâtimede hikmetli kıssa **namzet** (padişah "belki") |
-| (okuma) | İlâhiyyât (s.73–346) bitti; sıra nübüvvet s.347–420 (OCR satır 12944'ten), sonra kaza–kader s.421–616 (OCR ~16091'den), sonra îmân s.713–758 (OCR ~27792'den); s.617–712 okunmaz |
+| S41 | **Açık:** Mâtürîdî'nin "aklî zorunluluk" lafzı (V.3.M.31, V.3.M.35) kitapta doğrudan alıntı mı, V.3.2.1 ile uzlaştırılmış (insan açısından ihtiyaç, Allah açısından hikmet ve lütuf) mı yazılsın? Claude: uzlaştırılmış kitapta, alıntı bu dosyada (V.4.M.83) |
+| S42 | **Açık:** hayvan kesimi cevabında aklî kısım ile vahiy bildirimi nasıl ayrılsın? (V.4.N.89) |
+| S43 | **Açık:** ispat ağı DB'si H3–H4 (nübüvvet, vahiy, Kur'ân) hücrelerine genişletilsin mi? (V.4.N.96) |
+| S44 | **Açık:** on iki hissî mûcize ayrı ayrı mı, toplu mu yazılsın? Claude: toplu (V.4.O.69) |
+| S45 | **Açık:** hadis ve siyer kaynaklarının hangi bölümleri tarihî deliller için okunsun? Okuma izni padişahın (3-I 230); Claude: yalnız tercümanın dipnotlarında anılan bölümler (V.4.O.70) |
+| S46 | **Açık:** Eski Ahit ve Yeni Ahit'in V.2.37 ilzamlarında anılan pasajları okunsun mu? (V.2.39.12) |
+| S47 | **Açık:** cüz ilzamları DB'ye kısmî ispat olarak yazılsın mı, yoksa hasmın kaynağı okunana kadar beklensin mi? Claude: beklesin (V.2.39.13) |
+| (okuma) | İlâhiyyât (s.73–346) ve nübüvvet (s.347–420) bitti; sıra kaza–kader s.421–616 (OCR satır 15984'ten; ilk Mesele OCR 16002), sonra îmân s.713–758 (OCR ~27792'den); s.617–712 okunmaz |

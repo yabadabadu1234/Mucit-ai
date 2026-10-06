@@ -39,8 +39,17 @@ Bu dosya **dizindir**. Eskiden tek dosya olan deşmenin bütün yaprakları **si
 | [V.2v_MATURIDI_IBN_SEBIB_TENKIT](DESME/KISIM_V/V.2v_MATURIDI_IBN_SEBIB_TENKIT.md) | V.2.30–V.2.31 (Mâtürîdî: Muhammed b. Şebîb ile soru–cevap; Claude tenkidi; 3-I 241, 242) | 60 | 32.6 KB |
 | [V.2w_MATURIDI_MENANIYYE_DEYSANIYYE](DESME/KISIM_V/V.2w_MATURIDI_MENANIYYE_DEYSANIYYE.md) | V.2.32–V.2.33 (Mâtürîdî: Seneviyye'nin alt fırkaları I: Menâniyye, Deysâniyye; yaratmanın hikmeti ve tek yaratıcı; 3-I 241, 242) | 126 | 37.8 KB |
 | [V.2x_MATURIDI_MERKAYUNIYYE_MECUSI_TENKIT](DESME/KISIM_V/V.2x_MATURIDI_MERKAYUNIYYE_MECUSI_TENKIT.md) | V.2.34–V.2.36 (Mâtürîdî: Merkayûniyye, Sâbiîler, Mecûsîler; Claude tenkidi ve düalizm haritası; 3-I 241, 242) | 64 | 27.8 KB |
+| [V.2y_MATURIDI_MESIH_ISA](DESME/KISIM_V/V.2y_MATURIDI_MESIH_ISA.md) | V.2.37–V.2.39 (Mâtürîdî: Hıristiyanların Mesih hakkındaki görüşleri, mûcize ilzamları, cisimlerin yaratılmışlığı delili, oğulluk; Claude tenkidi; 3-I 241, 242) | 61 | 27.9 KB |
 | [V.3_VAHIY](DESME/KISIM_V/V.3_VAHIY.md) | V.3 | 66 | 10.0 KB |
+| [V.3m_MATURIDI_NUBUVVET_GEREKLILIGI](DESME/KISIM_V/V.3m_MATURIDI_NUBUVVET_GEREKLILIGI.md) | V.3.M.1–34 (Mâtürîdî: nübüvveti reddedenlerin sınıfları, emir ve yasağın hikmeti; 3-I 241, 242) | 34 | 12.7 KB |
+| [V.3n_MATURIDI_NUBUVVET_IHTIYAC_DELILLERI](DESME/KISIM_V/V.3n_MATURIDI_NUBUVVET_IHTIYAC_DELILLERI.md) | V.3.M.35–107 (Mâtürîdî: aklın yeterliliği iddiasına cevap, on iki ihtiyaç delili; Claude tenkidi; 3-I 241, 242) | 73 | 31.2 KB |
 | [V.4_KURAN](DESME/KISIM_V/V.4_KURAN.md) | V.4 | 51 | 7.3 KB |
+| [V.4m_MATURIDI_VERRAK_ITIRAZI_PEYGAMBER_DELILLERI](DESME/KISIM_V/V.4m_MATURIDI_VERRAK_ITIRAZI_PEYGAMBER_DELILLERI.md) | V.4.M.1–62 (Mâtürîdî: Verrâk'ın itirazı, İbnü'r-Râvendî'nin cevabı, peygamberlerin delilleri; 3-I 241, 242) | 62 | 26.3 KB |
+| [V.4m2_MATURIDI_VERRAK_ITIRAZI_TENKIT](DESME/KISIM_V/V.4m2_MATURIDI_VERRAK_ITIRAZI_TENKIT.md) | V.4.M.63–83 (Claude tenkidi ve açık suâl S41; 3-I 241, 242) | 21 | 14.4 KB |
+| [V.4n_MATURIDI_KURAN_ISTIDLALI_HABER_KESIM](DESME/KISIM_V/V.4n_MATURIDI_KURAN_ISTIDLALI_HABER_KESIM.md) | V.4.N.1–72 (Mâtürîdî: Kur'ân'la istidlâl, mübâhele, haber ve tevâtür, Bedir, güzel–çirkin, hayvan kesimi; 3-I 241, 242) | 72 | 29.3 KB |
+| [V.4n2_MATURIDI_KURAN_ISTIDLALI_TENKIT](DESME/KISIM_V/V.4n2_MATURIDI_KURAN_ISTIDLALI_TENKIT.md) | V.4.N.73–96 (Claude tenkidi ve açık suâller S42, S43; 3-I 241, 242) | 24 | 17.6 KB |
+| [V.4o_MATURIDI_HZ_PEYGAMBER_ISPAT](DESME/KISIM_V/V.4o_MATURIDI_HZ_PEYGAMBER_ISPAT.md) | V.4.O.1–55 (Mâtürîdî: Hz. Peygamber'in nübüvvetinin ispatı, Ebû Zeyd'in istidlâlleri, Ehl-i kitaba ilzam; 3-I 241, 242) | 55 | 22.8 KB |
+| [V.4o2_MATURIDI_HZ_PEYGAMBER_TENKIT](DESME/KISIM_V/V.4o2_MATURIDI_HZ_PEYGAMBER_TENKIT.md) | V.4.O.56–70 (Claude tenkidi ve açık suâller S44, S45; 3-I 241, 242) | 15 | 12.1 KB |
 | [V.5_BILDIRIMIN_DOGRULUGU](DESME/KISIM_V/V.5_BILDIRIMIN_DOGRULUGU.md) | V.5 | 47 | 6.8 KB |
 | [V.5m_MATURIDI_HIKMET_YARATMA_EMIR_NEHY](DESME/KISIM_V/V.5m_MATURIDI_HIKMET_YARATMA_EMIR_NEHY.md) | V.5.8–V.5.12 (Mâtürîdî: kâinat niçin yaratılmıştır, emir ve nehyin hikmeti, zararlı nesneleri yaratmanın hikmeti; 3-I 241, 242) | 66 | 26.4 KB |
 | [V.6.1_CEKIRDEGIN_TARIFI](DESME/KISIM_V/V.6.1_CEKIRDEGIN_TARIFI.md) | V.6.1 | 8 | 1.2 KB |
@@ -58,6 +67,6 @@ Bu dosya **dizindir**. Eskiden tek dosya olan deşmenin bütün yaprakları **si
 | [V.M_MATURIDI_NAMZET](DESME/KISIM_V/V.M_MATURIDI_NAMZET.md) | V.M (Mâtürîdî fihristinden namzet başlıklar; 3-I 241) | 73 | 11.0 KB |
 | [V.TOPLU_TENKIT_ACIK_ISLER](DESME/KISIM_V/V.TOPLU_TENKIT_ACIK_ISLER.md) | TOPLU | 0 | 1.2 KB |
 
-**Toplam yaprak: 2093.** Cinse göre: K 918 · Z 572 · C 428 · B 59 · İt 58 · T 29 · İ 14 · M 14 · H 1
+**Toplam yaprak: 2510.** Cinse göre: K 1029 · Z 760 · C 524 · B 59 · İt 80 · T 29 · İ 14 · M 14 · H 1
 
-Not (3-I 241): V.1.3.M (285), V.2.6–V.2.36 (882) ve V.5.8–V.5.12 (66) ve V.M (73) yaprakları Mâtürîdî'den alınmıştır; V.F ve V.M satırlarının cinsi 3. sütundadır (namzet önerisi). V.1 dosyası 40 KB'ı aşınca V.1.4.17 ve sonrası **silinmeden** V.1.4b dosyasına taşınmıştır (3-I 238).
+Not (3-I 241): V.1.3.M (285), V.2.6–V.2.39 (943), V.3.M (107), V.4.M (83), V.4.N (96), V.4.O (70) ve V.5.8–V.5.12 (66) ve V.M (73) yaprakları Mâtürîdî'den alınmıştır; V.F ve V.M satırlarının cinsi 3. sütundadır (namzet önerisi). V.1 dosyası 40 KB'ı aşınca V.1.4.17 ve sonrası **silinmeden** V.1.4b dosyasına taşınmıştır (3-I 238).

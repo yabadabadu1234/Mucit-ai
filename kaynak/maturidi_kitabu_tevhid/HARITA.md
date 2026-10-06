@@ -60,14 +60,14 @@ Umumîden hususîye. **Sayfa numaraları padişahın fotoğrafladığı basılı
 | İlâhiyyât | [7.2 Deysâniyye'nin Görüşleri ve Tenkidi] | 323–334 | **okundu** (3-I 242; OCR satır 12140–12602; yapraklar V.2.33) | orta |
 | İlâhiyyât | [7.3 Merkayûniyye'nin Görüşleri ve Tenkidi] | 335–337 | **okundu** (3-I 242; OCR satır 12603–12714; yapraklar V.2.34) | orta |
 | İlâhiyyât | [7.4 Mecûsîler'in Görüşleri ve Tenkidi] | 338–346 | **okundu** (3-I 242; OCR satır 12715–12934; yapraklar V.2.35–V.2.36) | orta |
-| **İKİNCİ BÖLÜM** | [NÜBÜVVET KONULARI] · Mesele [Nübüvvetin İspatı ve Gerekliği] | 347–362 | okunmadı | **yüksek (V.3)** |
-| Nübüvvet | [1. Verrâk'ın Nübüvvet Konusundaki Görüşleri ve Tenkidi] | 363–370 | okunmadı | yüksek |
-| Nübüvvet | [2. Hz. Muhammed'in Nübüvvetinin İspatına Kısa Bir Bakış] | 371–373 | okunmadı | **en yüksek (V.4)** |
-| Nübüvvet | [3. Verrâk'a Ait Görüşlerin Devamı] | 374–376 | okunmadı | yüksek |
-| Nübüvvet | [4. İbnü'r-Râvendî'nin Nübüvveti İspat Konusundaki İstidlâli ve Verrâk'a Eleştirisi] | 377–392 | okunmadı | yüksek |
-| Nübüvvet | [5. Hz. Peygamber'in Nübüvvetinin İspatı] | 393–408 | okunmadı | **en yüksek (V.4)** |
-| Nübüvvet | [6. Hıristiyanların Mesih Îsâ Hakkındaki Görüşleri ve Tenkidi] | 409–412 | okunmadı | yüksek (V.2.3) |
-| Nübüvvet | [6.1.] Mesele [Cisimlerin Yaratılmışlığı Deliliyle Mesih Îsâ'nın Ulûhiyyetinin Reddi] | 413–420 | okunmadı | yüksek |
+| **İKİNCİ BÖLÜM** | [NÜBÜVVET KONULARI] · Mesele [Nübüvvetin İspatı ve Gerekliği] | 347–362 | **okundu** (3-I 242; OCR satır 12944–13603; yapraklar V.3.M.1–107) | **yüksek (V.3)** |
+| Nübüvvet | [1. Verrâk'ın Nübüvvet Konusundaki Görüşleri ve Tenkidi] | 363–370 | **okundu** (3-I 242; OCR satır 13604–14031; yapraklar V.4.M.1–62) | yüksek |
+| Nübüvvet | [2. Hz. Muhammed'in Nübüvvetinin İspatına Kısa Bir Bakış] | 371–373 | **okundu** (3-I 242; OCR satır 13914–14031; yapraklar V.4.M.40–49) | **en yüksek (V.4)** |
+| Nübüvvet | [3. Verrâk'a Ait Görüşlerin Devamı] | 374–376 | **kısmen okundu** (3-I 242; OCR satır 14032–14193; **OCR satır 14119–14180 bozuk, o parça okunamadı**; yapraklar V.4.M.50–62) | yüksek |
+| Nübüvvet | [4. İbnü'r-Râvendî'nin Nübüvveti İspat Konusundaki İstidlâli ve Verrâk'a Eleştirisi] | 377–392 | **okundu** (3-I 242; OCR satır 14194–14857; yapraklar V.4.N.1–72) | yüksek |
+| Nübüvvet | [5. Hz. Peygamber'in Nübüvvetinin İspatı] | 393–408 | **okundu** (3-I 242; OCR satır 14858–15623; yapraklar V.4.O.1–70) | **en yüksek (V.4)** |
+| Nübüvvet | [6. Hıristiyanların Mesih Îsâ Hakkındaki Görüşleri ve Tenkidi] | 409–412 | **okundu** (3-I 242; OCR satır 15625–15789; yapraklar V.2.37) | yüksek (V.2.3) |
+| Nübüvvet | [6.1.] Mesele [Cisimlerin Yaratılmışlığı Deliliyle Mesih Îsâ'nın Ulûhiyyetinin Reddi] | 413–420 | **okundu** (3-I 242; OCR satır 15790–15983; yapraklar V.2.38–V.2.39) | yüksek |
 | **ÜÇÜNCÜ BÖLÜM** | [KAZÂ ve KADER KONULARI] · [Kazâ ve Kader] 421 · [1.] Mesele [Hikmet ve Sefeh Hakkında] 421 | 421–429 | okunmadı | yüksek (altı îmân esası; S39) |
 | Kazâ ve Kader | [2.] Mesele: Kulların Fiilleri ve Fâillerinin Belirlenmesi Hakkında 430 · [2.1 İslâmî Fırkaların Kulların Fiilleri Hakkındaki Görüşleri] 436 · [2.2 Mu'tezile'nin Görüşü ve Tenkidi] 457 · [2.3 Kâ'bî'nin Görüşleri ve Bunların Tenkidi] 463 · [2.4 Fiillerin Yaratılmışlığı Hakkında Naklî Delil] 491 | 430–494 | okunmadı | yüksek |
 | Kazâ ve Kader | [3. Kula Ait Fiilin Kudret veya İstitâati] 495 · [3.1 İstitâat Fiilden Önce mi Fiil ile Beraber mi?] 503 · [3.2.] Mesele [Kudretin Hem Taat Hem Masiyete Elverişli Oluşu ve Güç Yetirilemeyecek Şeylerle Mükellef Tutulma Hakkında] 506 · [3.3. Kâ'bî'nin Kudret ve Güç Yetirilemeyecek Şeylerle Mükellef Tutulma Hakkındaki Görüşleri ve Tenkidi] 511 | 495–539 | okunmadı | yüksek |

@@ -59,14 +59,14 @@ Kaynak: padişahın verdiği altı fotoğraftaki basılı İçindekiler (Kitâb�
 | V.M.51 | [7.2 Deysâniyye'nin Görüşleri ve Tenkidi] (323) | Z | V.2.3.3; **yapraklar V.2.33** (67; yaratmanın hikmeti ve tek yaratıcı dâhil) | okundu |
 | V.M.52 | [7.3 Merkayûniyye'nin Görüşleri ve Tenkidi] (335) | Z | V.2.3.3; **yapraklar V.2.34** (16) | okundu |
 | V.M.53 | [7.4 Mecûsîler'in Görüşleri ve Tenkidi] (338) | Z | V.2.3.3; **yapraklar V.2.35–V.2.36** | okundu |
-| V.M.54 | Mesele [Nübüvvetin İspatı ve Gerekliği] (347) | Z | V.3.1–V.3.3 (imkân, hikmet ve ihtiyaç, vukû'); I.3.15.10–16 | okunmadı |
-| V.M.55 | [1. Verrâk'ın Nübüvvet Konusundaki Görüşleri ve Tenkidi] (363) | Z | V.3.6 (itirazlar: deist) | okunmadı |
-| V.M.56 | [2. Hz. Muhammed'in Nübüvvetinin İspatına Kısa Bir Bakış] (371) | Z | V.4.3 (davet sahibi) | okunmadı |
-| V.M.57 | [3. Verrâk'a Ait Görüşlerin Devamı] (374) | Z | V.3.6 | okunmadı |
-| V.M.58 | [4. İbnü'r-Râvendî'nin Nübüvveti İspat Konusundaki İstidlâli ve Verrâk'a Eleştirisi] (377) | Z | V.3.6 (nübüvvet itirazı) | okunmadı |
-| V.M.59 | [5. Hz. Peygamber'in Nübüvvetinin İspatı] (393) | Z | V.4.2–V.4.3 (i'câz, davet sahibi); **H4'ün çekirdeği** | okunmadı |
-| V.M.60 | [6. Hıristiyanların Mesih Îsâ Hakkındaki Görüşleri ve Tenkidi] (409) | Z | V.2.3.4 (teslis); V.4.5 | okunmadı |
-| V.M.61 | [6.1.] Mesele [Cisimlerin Yaratılmışlığı Deliliyle Mesih Îsâ'nın Ulûhiyyetinin Reddi] (413) | Z | V.2.3.4; V.1.3.M (hudûs delilinin ilâh iddiasına uygulanışı) | okunmadı |
+| V.M.54 | Mesele [Nübüvvetin İspatı ve Gerekliği] (347) | Z | V.3.1–V.3.3 (imkân, hikmet ve ihtiyaç, vukû'); I.3.15.10–16; **yapraklar V.3.M.1–107** (V.3m, V.3n) | okundu |
+| V.M.55 | [1. Verrâk'ın Nübüvvet Konusundaki Görüşleri ve Tenkidi] (363) | Z | V.3.6 (itirazlar: deist); **yapraklar V.4.M.1–62** (Verrâk itirazı) | okundu |
+| V.M.56 | [2. Hz. Muhammed'in Nübüvvetinin İspatına Kısa Bir Bakış] (371) | Z | V.4.3 (davet sahibi); **yapraklar V.4.M.40–49** | okundu |
+| V.M.57 | [3. Verrâk'a Ait Görüşlerin Devamı] (374) | Z | V.3.6; **yapraklar V.4.M.50–62** | okundu |
+| V.M.58 | [4. İbnü'r-Râvendî'nin Nübüvveti İspat Konusundaki İstidlâli ve Verrâk'a Eleştirisi] (377) | Z | V.3.6 (nübüvvet itirazı); **yapraklar V.4.N.1–72** (İbnü'r-Râvendî) ve tenkit V.4.M.63–83, V.4.N.73–96 | okundu |
+| V.M.59 | [5. Hz. Peygamber'in Nübüvvetinin İspatı] (393) | Z | V.4.2–V.4.3 (i'câz, davet sahibi); **H4'ün çekirdeği**; **yapraklar V.4.O.1–70** | okundu |
+| V.M.60 | [6. Hıristiyanların Mesih Îsâ Hakkındaki Görüşleri ve Tenkidi] (409) | Z | V.2.3.4 (teslis); V.4.5; **yapraklar V.2.37** | okundu |
+| V.M.61 | [6.1.] Mesele [Cisimlerin Yaratılmışlığı Deliliyle Mesih Îsâ'nın Ulûhiyyetinin Reddi] (413) | Z | V.2.3.4; V.1.3.M (hudûs delilinin ilâh iddiasına uygulanışı); **yapraklar V.2.38–V.2.39** | okundu |
 | V.M.62 | [Kazâ ve Kader] (421) ve [1.] Mesele [Hikmet ve Sefeh Hakkında] (421) | Z | **Mevcut fihristte kazâ ve kader bâbı yok:** altı îmân esasının biri; **kader bâbı `V.K` (S39 kapandı, 3-I 242; etiket Claude'un çıkarımıdır)** | okunmadı |
 | V.M.63 | [2.] Kulların Fiilleri ve Fâillerinin Belirlenmesi (430) ve alt başlıkları (436, 457, 463, 491) | Z | V.K (3-I 242) | okunmadı |
 | V.M.64 | [3. Kula Ait Fiilin Kudret veya İstitâati] (495) ve alt başlıkları (503, 506, 511) | Z | V.K (3-I 242) | okunmadı |

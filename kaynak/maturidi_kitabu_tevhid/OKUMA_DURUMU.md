@@ -41,9 +41,10 @@
 | İbn Şebîb'in cisimlerin yaratılmışlığı istidlâli (282–287) · Dehriyye tenkidi (288–305) · Sümeniyye (306) | 10594–11543 | **okundu** (3-I 242) | orta; Aristo ve kategori aktarımı OCR'da yer yer sıkışık, "Claude okuması" diye işaretli | yapraklar V.1.3.M.145–281 (V.1.3o, V.1.3p) |
 | Sofistlerin görüşleri ve tenkidi (307–312) | 11545–11751 | **okundu** (3-I 242) | orta | yapraklar I.3.17; (Menâniyye bölümü sonradan okundu, aşağıda) |
 | Seneviyye'ye ait görüşlerin mahiyeti: Menâniyye (313–322) · Deysâniyye (323–334) · Merkayûniyye ve Sâbiîler (335–337) · Mecûsîler (338–346) | 11753–12934 | **okundu** (3-I 242) | orta; ayet atıfı yok; tercüman dipnotları (Deysân, Ca'fer b. Harb, Merkayûniyye, Sâbiîler, dipnot 210) okundu | Mâtürîdî'nin aktarımları ve ilzamları; yapraklar V.2.32–V.2.36 (V.2w, V.2x); **ilâhiyyât bölümü bitti; bir sonraki okuma OCR satır 12944'ten (Nübüvvet, s.347)** |
+| İkinci Bölüm, Nübüvvet Konuları: nübüvvetin ispatı ve gereği (347–362) · Verrâk (363–376) · İbnü'r-Râvendî (377–392) · Hz. Peygamber'in nübüvvetinin ispatı (393–408) · Hıristiyanlar ve Mesih (409–420) | 12944–15983 | **okundu** (3-I 242); **OCR satır 14119–14180 bozuk, o parça okunamadı** | orta; ayet atıfları ve hadis kaynakları tercüman dipnotlarındandır, **ayet metinleri ve hadis isnadları doğrulanmadı** | yapraklar V.3.M, V.4.M, V.4.N, V.4.O ve V.2.37–V.2.39 (V.3m, V.3n, V.4m–V.4o2, V.2y); **bir sonraki okuma OCR satır 15984'ten (Üçüncü Bölüm: Kazâ ve Kader; ilk Mesele OCR 16002)** |
 | Dördüncü Bölüm (s.617–712) | 23874–27791 | **okunmaz** | -- | padişah emri |
 
-**Sayı:** okunan basılı sayfa **49–346 = 298 sayfa** (fihrist aralığına göre; sayfa sayfa doğrulanmadı). Okunmayan: s.347–616 (270 sayfa) ve s.713–758 (46 sayfa); okunmaz: s.617–712 (96 sayfa).
+**Sayı:** okunan basılı sayfa **49–420 = 372 sayfa** (fihrist aralığına göre; sayfa sayfa doğrulanmadı; s.374–376 içinde bir sayfa OCR bozukluğundan kısmen okunamadı). Okunmayan: s.421–616 (196 sayfa) ve s.713–758 (46 sayfa); okunmaz: s.617–712 (96 sayfa).
 
 **Yoklanan şeyler (3-A 25-D):** bölüm başlıkları OCR'da bulundu ve fihristle eşleşti (ör. "Âlemin Ezeliliğini Savunanların Görüşleri" ve "Seneviyye'nin Âlemin Ezelîliği ve Diğer Konular Hakkındaki Görüşleri" aynen). OCR sayfa numarası fihrist numarasıyla örtüşmez; bu yüzden OCR sayfa numarasına dayanılmadı.
 
