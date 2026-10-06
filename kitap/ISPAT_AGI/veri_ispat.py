@@ -67,6 +67,7 @@ P('Q03.c2', 'U17', ['k_sebepsiz_bilgi', 'm_tahsis'], 'Sebepsiz olgu kabul edilir
 P('Q03.c2', 'U08', ['k_aciklama_temelli', 'k_istisna_yapi', 'H:Q03.c3', 'H:Q03.c4'],
   'Bütün açıklamasız fakat her parça içeriden açıklanmışsa açıklama ilişkisi temelsizdir; temelsiz ilişki ya sonsuz geriye gider (Q03.c3) ya devirdir (Q03.c4); ikisi de çürütüldü.',
   kismi='yalnız “her parça içeriden açıklanmıştır” istisna biçimini kapsar; açıklanmamış bir parçanın bulunduğu kolları (sebepsiz hâdis ve ezelî mümkinin çıplak varlığı) kapsamaz')
+P('Q03.c2', 'U14', ['m_tahsis', 'k_simetri_kirilma'], 'Bilinen simetri kırılmalarının hepsinde kırıcı bulunmuştur; tarama tam olmadığından ve bütüne taşıma köprü istediğinden netice zannîdir.')
 P('Q03.c3', 'U05', ['k_muhtac_mumkin', 'k_butunun_dis_muhtac', 'e_celismezlik'],
   'Hiçbir halka varlığı kendi başına kazandırmıyorsa bütün zincir de kazandıramaz.', tag=None, hd='Eşzamanlı zâtî zincir için işler.')
 P('Q03.c3', 'U07', ['k_sonsuz_hadis', 'm_degisim'], 'Geçmişte sonsuz hâdis dizisi olsaydı bugüne ulaşan hâl hiç gelmezdi.')
@@ -173,7 +174,7 @@ P('Q17.c3', 'U26', ['k_bilinemez_bilgi', 'H:Q18.c1'], 'İlkesel bilinemezlik hü
 P('Q17.c3', 'U07', ['H:Q02.c1'], 'En az zan derecesinde ispat bulunduğundan hiçbir derecede bilinemez denemez.', sarti='zan')
 
 for sid in ('kidem', 'beka', 'gina', 'hayat', 'ilim', 'kudret', 'irade', 'semi', 'basar', 'kelam', 'tekvin', 'hikmet', 'adalet', 'rahmet', 'sidk'):
-    P('Q10.' + sid + '.c2', 'U07', ['k_muhtac_mumkin', 'k_sebep_istemez', 'k_zorunlu_tanim', 't_vacib'],
+    P('Q10.' + sid + '.c2', 'U07', ['k_muhtac_mumkin', 'k_tercihsiz_hal', 'k_sebep_istemez', 'k_zorunlu_tanim', 't_vacib'],
       'Sıfat mümkin olsaydı sıfatlı veya sıfatsız hâl bir müreccih isterdi; müreccih Vâcib’in dışında olamaz ve zâtı olursa sıfat zorunlu olur.')
 
 P('Q10.kidem.c1', 'U28', ['t_vacib', 'e_celismezlik', 'k_zat_vacip_tutarli'], 'Vâcib hâdis olsaydı bir an yok olmuş olurdu; yokluğu imkânsız olan için bu çelişir.', tag=('enne', 'suret'))

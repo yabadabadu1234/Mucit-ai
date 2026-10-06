@@ -104,7 +104,7 @@
 | V.1.4.15 | **İtiraz (ispat yükü):** "Yokluğu iddia etmiyorum" | İt |
 | V.1.4.16 | **Cevap:** V.0.2.2–3 | C |
 
-#### V.1.4.17–V.1.4.129 Rastgelelik itirazı (padişahın isteği; deşme taslağı)
+#### V.1.4.17–V.1.4.143 Rastgelelik itirazı (padişahın isteği; deşme taslağı)
 
 | No | Cümle | Cins |
 | :-- | :-- | :-- |
@@ -221,6 +221,20 @@
 | V.1.4.127 | Veritabanı: `Q03.c2/U08` **kısmî** ispat olarak kaydedildi (yalnız “her parça içeriden açıklanmış” biçimini kapsar, açıklanmamış parçalı kolları kapsamaz); hücre durumunu değiştirmez, kombinasyon tablosunda kısmî sayılır | K |
 | V.1.4.128 | Ölçüm: Q03.c3, `sonsuz-gecmis` ve `terkip` ailelerinden her biri tek başına düşse ayakta kalır, ikisi birden düşerse İSPATSIZ olur; Q03.c4 (devir) zayıf halka taşımaz | K |
 | V.1.4.129 | Dürüst hüküm: burhan bu yoldan gelmedi; yol kök zayıf halkayı tek bir noktaya (ezelî mümkinin çıplak varlığı) indirdi | K |
+| V.1.4.130 | Deneme (G11): iki yol birlikte denendi: (1) varlık köprüsünü ezelî mümkin için temellendirmek, (2) ezelî mümkinin tanımından imkânsızlık aramak; akıl yürütme **Claude’undur** (DESTEK/PRUSS_G11_EZELI_MUMKIN.md) | K |
+| V.1.4.131 | Düzeltme (V.1.4.126’ya): ezelî mümkinin çıplak varlığını çürüten **iki** klasik ilke vardır: varlık (mûcidsiz icâd muhaldir) ve hâl (tahsis muhassıs ister); biri yeter; kök zayıf halka tek değil “veya”dır | K |
+| V.1.4.132 | Yol 2 sonucu: mümkin, vâcib, ezelî ve açıklamasız tanımlarından tek başına çelişki çıkmaz; iki dünyalı bir karşı model (X yalnız birinde vardır, açıklama ilişkisi boştur) bütün tanımları sağlar | B |
+| V.1.4.133 | Çelişkiyi doğuran asgari ilke varlık ilkesidir (mümkin var ise var edicisi vardır) veya hâl ilkesidir (mümkin hâller arasından seçilen bir muhassıs ister); tanımın kendisi bunu söylemez | K |
+| V.1.4.134 | Gizli ilke bulundu: `k_sebep_istemez` öncülünün eski metni “sebep ihtiyacı mümkine mahsustur” idi ve “her mümkin sebep ister” yönünü yakîn öncül olarak gizlice taşıyordu; 15 sıfat hücresinin (Q10.*.c2) çürütmesi buna dayanıyordu | K |
+| V.1.4.135 | Düzeltme: öncül yalnız Vâcib için bırakıldı; mümkin yönü zayıf işaretli hâl kanadı olarak o ispatlara eklendi; hücre durumu KAT’Î 49 ve KAT’Î-ŞARTLI 33’ten 37 ve 45’e indi; hâl kanadı kalkınca düşen hücre 18’den 30’a çıktı | K |
+| V.1.4.136 | Yol 1 (varlık köprüsünü temellendirme) aday türetmeleri: analitik (icâd mûcid ister), simetri kırılması (Curie ilkesi), Pruss’un epistemik delili, tarihî mutabakat, retorsion | K |
+| V.1.4.137 | Analitik türetme: “icâd mûcid ister” hâdis için tanım gereği denebilir, ama “başlamak” ile “ihdas edilmek” ayrıdır (Hume); ezelî mümkinde başlama olmadığından türetme işlemez | Z |
+| V.1.4.138 | Simetri kırılması: varlık ile yokluğun nisbeti eşitse varlığın ağır basması bir simetri kırılmasıdır; fizikte kırılma için kırıcı bulunur (Curie ilkesi, hafızadan, yoklanmadı); bu yerel tecrübedir ve ancak tekdüzelik köprüsüyle bütüne taşınır; tavan zan-ı gâlib | Z |
+| V.1.4.139 | Tarihî mutabakat: kelâm (tahsis, kayyûmiyet) de felsefe (İbn Sînâ: mümkin vâcib bi-ğayrihidir) de ezelî mümkinin müreccih istediğinde birleşir (Güldü 2022, s.584-586); bu icmâ’dır, burhan değildir; modern hasım bunu kabul etmez | Z |
+| V.1.4.140 | Hiçbir aday ilkenin burhanını vermez; en yükseği zan-ı gâliptir; varlık köprüsü ancak evvelî sayılırsa burhan olur ve evveliyyât iddiası tartışmalıdır (V.0 tenkit) | Z |
+| V.1.4.141 | Birleşik sonuç: iki yol aynı noktada buluştu: tereccuh bilâ müreccih (eşit nisbetli iki taraftan birinin sebepsiz ağır basması); ne tanımdan ne tecrübeden ne tarihten burhan çıktı | K |
+| V.1.4.142 | Veritabanı: `Q03.c2/U14` (simetri kırılması, zan) eklendi; `k_sebep_istemez` düzeltildi; ölçüm değişimi yukarıdadır | K |
+| V.1.4.143 | Dürüst hüküm: burhan gelmedi; “ezelî mümkin açıklamasız var olabilir mi” sorusu, kesinlik ölçeğinin evvelî seviyesinde bir iddiaya (tereccuh bilâ müreccih muhaldir) bağlı kalıyor; kitap onu ilke olarak açıkça yazmalıdır | K |
 
 ### V.1.5 Neticenin hududu
 

@@ -49,3 +49,5 @@ Yeni öncüller: `k_aciklama_temelli`, `k_istisna_yapi` (ikisi mantıksal, yakî
 ## 6. Hüküm
 
 Padişahın "burhan seviyesinde ispatlanacak" kanaati için bu yol **burhan getirmedi** (çelişki türetilemedi, olumsuz sonuç yazıldı). Getirdiği: yol haritası. Burhan, ancak şu soru çözülürse gelir: **ezelî mümkin açıklamasız var olabilir mi?** Denenecek yollar: (1) imkân delilinin köprüsünü (`k_tercihsiz`, varlık kanadı) ezelî mümkin için ayrıca temellendirmek; (2) ezelî mümkinin **tanımından** (varlığı zâtından değil) çıkan bir imkânsızlık aramak. İkisinin de sonuç vereceği **bilinmiyor.**
+
+**Düzeltme (G11):** b.4 ve b.6, ezelî mümkinin çıplak varlığının yalnız varlık köprüsüyle çürüdüğünü söylerken eksikti; hâl ilkesi (tahsis) de ayrıca çürütür ve biri yeter. Bkz. `PRUSS_G11_EZELI_MUMKIN.md` b.0.

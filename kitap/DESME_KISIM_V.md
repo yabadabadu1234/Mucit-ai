@@ -20,7 +20,7 @@ Bu dosya **dizindir**. Eskiden tek dosya olan deşmenin bütün yaprakları **si
 | Dosya | Yapraklar | Yaprak sayısı | Hacim |
 | :-- | :-- | :-- | :-- |
 | [V.0_ONERMENIN_TAHLILI](DESME/KISIM_V/V.0_ONERMENIN_TAHLILI.md) | V.0 | 60 | 9.9 KB |
-| [V.1_ALLAHIN_VARLIGI](DESME/KISIM_V/V.1_ALLAHIN_VARLIGI.md) | V.1 | 183 | 34.5 KB |
+| [V.1_ALLAHIN_VARLIGI](DESME/KISIM_V/V.1_ALLAHIN_VARLIGI.md) | V.1 | 197 | 37.9 KB |
 | [V.2_TEVHID_KEMAL_SIFATLAR](DESME/KISIM_V/V.2_TEVHID_KEMAL_SIFATLAR.md) | V.2 | 59 | 9.8 KB |
 | [V.3_VAHIY](DESME/KISIM_V/V.3_VAHIY.md) | V.3 | 66 | 10.0 KB |
 | [V.4_KURAN](DESME/KISIM_V/V.4_KURAN.md) | V.4 | 51 | 7.3 KB |
@@ -39,4 +39,4 @@ Bu dosya **dizindir**. Eskiden tek dosya olan deşmenin bütün yaprakları **si
 | [V.F_FARABI_NAMZET](DESME/KISIM_V/V.F_FARABI_NAMZET.md) | V.F | 18 | 3.2 KB |
 | [V.TOPLU_TENKIT_ACIK_ISLER](DESME/KISIM_V/V.TOPLU_TENKIT_ACIK_ISLER.md) | TOPLU | 0 | 1.2 KB |
 
-**Toplam yaprak: 720.** Cinse göre: K 325 · Z 186 · C 61 · B 54 · İt 44 · T 22 · İ 14 · M 13 · H 1
+**Toplam yaprak: 734.** Cinse göre: K 334 · Z 190 · C 61 · B 55 · İt 44 · T 22 · İ 14 · M 13 · H 1
