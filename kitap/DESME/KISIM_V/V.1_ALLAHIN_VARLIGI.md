@@ -104,7 +104,7 @@
 | V.1.4.15 | **İtiraz (ispat yükü):** "Yokluğu iddia etmiyorum" | İt |
 | V.1.4.16 | **Cevap:** V.0.2.2–3 | C |
 
-#### V.1.4.17–V.1.4.103 Rastgelelik itirazı (padişahın isteği; deşme taslağı)
+#### V.1.4.17–V.1.4.115 Rastgelelik itirazı (padişahın isteği; deşme taslağı)
 
 | No | Cümle | Cins |
 | :-- | :-- | :-- |
@@ -195,6 +195,18 @@
 | V.1.4.101 | Sınır 3: iki öncül müsellemdir (hasmın kabulü kadar): yerel bulamama kuralı ve terkip itirazı; bunları kabul etmeyen hasım bu ikilemle kuşatılmaz | Z |
 | V.1.4.102 | Veritabanı: `Q02.c2/U27` (zan-ı gâlib, Q01.c1’e dayanır, Q03’e ve sebep ilkesine dayanmaz); sebep ilkesi, `yokluk-egilim` ve `kureselleme` ailesi birlikte düşse de Q02.c1 ve Q02.c2 zan-ı gâlib kalır; `destek-hasir`, `muhatap-kabulu` veya `sadelik` düşerse İSPATSIZ olur | K |
 | V.1.4.103 | Dürüst hüküm: bu kol **burhan seviyesinde kapanmadı**; hedefi daralttı: cezmî nefyi eledi, tevakkufu eleyemedi; katiyet zan-ı gâlib | K |
+| V.1.4.104 | Deneme (G7): sayım hasırı mantıksal ikileme çevrildi; akıl yürütme **Claude’undur** (DESTEK/PRUSS_G7_HASIR.md) | K |
+| V.1.4.105 | İkilik: yokluk hükmü ya çıkarımsız kabul edilir ya çıkarımla kurulur; çıkarımla kurulursa öncüller hükmü ya gerektirir ya gerektirmez; gerektirmiyorsa hükmü gerektirecek bir köprü öncül gerekir (nefy–isbât) | K |
+| V.1.4.106 | Çıkarımsız kol: duyu yalnız âlemin içini gözlemler ve dışın yokluğunu göstermez; haber kaynağının desteğini devralır ve yeni destek üretmez; “bütün istisnadır” hükmü aşikâr değildir | C |
+| V.1.4.107 | Gerektiren kol: öncüller yokluğu gerektiriyorsa ya Vâcib kavramı çelişkilidir ya kesin bir olguyla bağdaşmaz (ikisi Q01 hücrelerinde çürütüldü) ya da öncüller dışa dair bir yokluk hükmü taşır, bu da sorunun cevabını öncül yapmaktır (kısırdöngü) | C |
+| V.1.4.108 | Gerektirmeyen kol: öncüller yokluğu gerektirmiyorsa hükmü gerektirecek bir köprü öncül gerekir; köprü iç gözleme dayanan ve dışa dair bir ilkedir; gözlem içeride olduğundan köprü gözlemle desteklenemez | K |
+| V.1.4.109 | Hasmın tek tecrübî köprü adayı tekdüzeliktir (iç olayların açıklanmış olması dışa ve bütüne taşınır); bu köprü “bütün de açıklanmıştır” sonucunu destekler | K |
+| V.1.4.110 | “Bütün istisnadır” köprüsü evvelî değildir ve lehine delil gösterilmemiştir; cezmî nefy için gereken köprü budur | K |
+| V.1.4.111 | Simetri notu: sebep ilkesinin karşıtı da tutarlıdır, “evvelî değil” sınavı iki tarafa da vurur; fark, bizim tarafta Pruss’un delili ve iç tekdüzeliğin yönünün bulunması, karşı tarafta ikisinin bulunmamasıdır; bu fark zan-ı gâlib düzeyindedir | Z |
+| V.1.4.112 | Sınır (G8): hasım “tekdüzelik yalnız iç alanda geçerlidir” diyebilir; bu da bir istisna köprüsüdür ve aynı delilsizliğe düşer, fakat hasım bu adımı kabul etmeyebilir | Z |
+| V.1.4.113 | Sınır (G9): çıkarımsız kolun sayımı (duyu, akıl, haber) klasik üçlüdür; dördüncü bir çıkarımsız kaynak (ilham, iç tecrübe) gösterilirse güvenilirliği gösterilmelidir; gösterilmedikçe cezmî nefye destek olmaz | Z |
+| V.1.4.114 | Veritabanı: `Q02.c2/U08` (zan-ı gâlib) ikinci bağımsız yol; eski sayım yolunun ailelerinden veya yeni ikilem yolunun ailelerinden biri düşse zemin zan-ı gâlib kalır, ikisi birden düşerse İSPATSIZ olur | K |
+| V.1.4.115 | Dürüst hüküm: G7 sayımdan ikileme çevrildi ve sayıma bağımlılık yalnız çıkarımsız kolun (duyu, akıl, haber) üçlüsüne indi; burhan değil, zan-ı gâlib | K |
 
 ### V.1.5 Neticenin hududu
 

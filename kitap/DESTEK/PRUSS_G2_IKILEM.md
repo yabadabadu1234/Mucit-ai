@@ -50,3 +50,5 @@ Yani Vâcib'in varlığının bu hattaki zemini artık **sebep ilkesinden bağı
 ## 6. Hüküm
 
 Padişahın "burhan seviyesinde ispatlanacak" kanaati bu üç denemeyle (G1, G2, çıkarımı bırakan hasım) **burhana yaklaştı, ulaşmadı.** Elde edilen: (1) rastgelelik itirazı Pruss çizgisinde **eriyor** (çıplak şans açıklamadır); (2) cezmî nefy (katı ateizm) için gerekçe bulunamıyor; (3) kalan: tevakkuf ve üç zayıf aile. Burhana çıkarmak için bir sonraki iş: `k_destek_hasir` hasırının tamlığını (G7) göstermek, yani yokluk hükmünün desteklerinin bu dört türden başka olamayacağını aklî hasırla (nefy–isbât) kurmak. Bunun yapılıp yapılamayacağı **bilinmiyor**.
+
+**Güncelleme:** G7 (hasırın tamlığı) ayrıca denendi: `PRUSS_G7_HASIR.md` (sayım mantıksal ikileme çevrildi; ikinci bağımsız yol `Q02.c2/U08`).

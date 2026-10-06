@@ -52,6 +52,8 @@ P('Q02.c1', 'U32', ['m_bilinc'], 'İnsandaki mutlak varlığa yönelme eğilimi 
 
 P('Q02.c2', 'U27', ['k_iddia_gerekce', 'k_destek_hasir', 's_kaza_kurali', 's_parca_butun', 'p_sadelik_orantisiz', 'H:Q01.c1'],
   'Cezmî nefyin gerekçesi ya bulamamaktır (hasmın yerelde reddettiği kural), ya iç açıklamaların başarı sicilinden bütüne geçiştir (hasmın terkip itirazının tersine yürüyen aynı geçiş), ya sadeliktir (yerelde her olayı çıplak sayardı), ya imkânsızlık delilidir (Q01’de çürüdü); hiçbiri kalmadığından cezmî nefy savunulamaz ve geriye yalnız tevakkuf kalır.')
+P('Q02.c2', 'U08', ['k_destek_ikilik', 'H:Q01.c1', 'H:Q01.c3', 'k_gaybi_hiss_yok', 'k_haber_devir', 'k_tekduzelik_aciklama', 'k_istisna_delilsiz'],
+  'Cezmî nefyin desteği ya çıkarımsızdır (duyu yetmez, haber devralır, evvelî değildir) ya çıkarımlıdır; çıkarımlıysa öncüller ya hükmü gerektirir (kavram çelişkisi veya kesin bir olguyla çelişki: Q01’de çürüdü) ya gerektirmez ve köprü ister; tek tecrübî köprü olan tekdüzelik “bütün de açıklanmıştır” sonucunu verir, “bütün istisnadır” köprüsünün ise evvelîliği ve delili yoktur; kollar tükendiğinden cezmî nefy savunulamaz ve geriye yalnız tevakkuf kalır.')
 P('Q03.c1', 'U12', ['m_mumkin', 'm_degisim', 'k_degisen_vacib_degil'], 'Âlemde değişen ve başka türlü olabilen şeylerin bulunduğu müşâhede edilir.')
 P('Q03.c1', 'U26', ['m_ben', 'e_celismezlik'], '“Varlık kuruntudur” diyen, kuruntu eden bir varlığı kabul eder.')
 P('Q03.c1', 'U07', ['m_ben', 'e_celismezlik'], 'Hiçbir şey yoksa bu cümleyi söyleyen de yoktur.')

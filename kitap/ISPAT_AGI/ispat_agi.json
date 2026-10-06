@@ -1375,6 +1375,51 @@
    "aile": "sadelik",
    "zayif": 1,
    "not_": "Pruss, s.8 (çıplak açıklamasız hipotezler daha sadedir)"
+  },
+  {
+   "id": "k_destek_ikilik",
+   "metin": "Bir yokluk hükmü ya çıkarımsız kabul edilir ya çıkarımla kurulur; çıkarımla kurulursa öncüller hükmü ya gerektirir ya gerektirmez; gerektirmiyorsa hükmü gerektirecek bir köprü öncül gerekir; başka hâl yoktur.",
+   "tur": "mantik",
+   "kat": "yakîn",
+   "aile": "",
+   "zayif": 0,
+   "not_": "nefy–isbât; G7’yi sayımdan mantıksal ikileme çevirmek için (PRUSS_G7_HASIR.md)"
+  },
+  {
+   "id": "k_gaybi_hiss_yok",
+   "metin": "Duyu yalnız âlemin içindekini gözlemler; âlem dışında (Vâcib dâhil) bir şeyin yokluğu müşahede edilemez.",
+   "tur": "mantik",
+   "kat": "yakîn",
+   "aile": "",
+   "zayif": 0,
+   "not_": "I.4.3.5: müşâhede edilemeyen şey duyuyla ispatlanmaz ve yokluğu da duyuyla gösterilmez"
+  },
+  {
+   "id": "k_haber_devir",
+   "metin": "Haber yeni destek üretmez, kaynağının desteğini devralır; devralınan destek yine bu ikilemin kollarından biridir.",
+   "tur": "mantik",
+   "kat": "yakîn",
+   "aile": "",
+   "zayif": 0,
+   "not_": "I.4.5, V.1.2.5; haberin katiyeti kaynağından güçlü olamaz"
+  },
+  {
+   "id": "k_tekduzelik_aciklama",
+   "metin": "Hasmın elindeki tek tecrübî köprü, iç olayların açıklanmış olduğunun dışa ve bütüne taşınmasıdır (tekdüzelik); bu köprü “bütün de açıklanmıştır” sonucunu destekler, “bütün istisnadır” sonucunu desteklemez.",
+   "tur": "turetilmis",
+   "kat": "zan-ı gâlib",
+   "aile": "tekduzelik",
+   "zayif": 1,
+   "not_": "tekdüzelik varsayımı kendisi de delil istemez bir postulat sayılır; yorum tartışmalıdır (G8)"
+  },
+  {
+   "id": "k_istisna_delilsiz",
+   "metin": "“Açıklanmışlık yalnız parçalara mahsustur, bütün istisnadır” ilkesi evvelî değildir (karşıtı tutarlıdır) ve lehine bir delil gösterilmemiştir.",
+   "tur": "turetilmis",
+   "kat": "zan-ı gâlib",
+   "aile": "istisna",
+   "zayif": 1,
+   "not_": "karşıtının tutarlı olması tek başına “delilsiz” kılmaz; sebep ilkesinin karşıtı da tutarlıdır (simetri notu: PRUSS_G7_HASIR.md b.5)"
   }
  ],
  "soru": [
@@ -2040,7 +2085,7 @@
     "sebep-ilkesi-varlik",
     "terkip"
    ],
-   "yol": "232",
+   "yol": "233",
    "yol_altkume": 126,
    "asgari_yollar": [
     [
@@ -2066,7 +2111,7 @@
    "durum": "KAT’Î-ŞARTLI",
    "kat": 3,
    "en_iyi": "Q02.c2/U08#alt",
-   "ispat_say": 8,
+   "ispat_say": 9,
    "W": [
     "k_butunun_dis_muhtac",
     "k_tercihsiz_hal"
@@ -2075,7 +2120,7 @@
     "sebep-ilkesi-hal",
     "terkip"
    ],
-   "yol": "233",
+   "yol": "234",
    "yol_altkume": 127,
    "asgari_yollar": [
     [
@@ -5634,6 +5679,40 @@
     "destek-hasir",
     "muhatap-kabulu",
     "sadelik"
+   ],
+   "yol": "1"
+  },
+  {
+   "id": "Q02.c2/U08",
+   "hucre": "Q02.c2",
+   "usul": "U08",
+   "tur": "direct",
+   "ozet": "Cezmî nefyin desteği ya çıkarımsızdır (duyu yetmez, haber devralır, evvelî değildir) ya çıkarımlıdır; çıkarımlıysa öncüller ya hükmü gerektirir (kavram çelişkisi veya kesin bir olguyla çelişki: Q01’de çürüdü) ya gerektirmez ve köprü ister; tek tecrübî köprü olan tekdüzelik “bütün de açıklanmıştır” sonucunu verir, “bütün istisnadır” köprüsünün ise evvelîliği ve delili yoktur; kollar tükendiğinden cezmî nefy savunulamaz ve geriye yalnız tevakkuf kalır.",
+   "tag": null,
+   "hudut": "",
+   "sarti": null,
+   "kismi": "",
+   "prem": [
+    "k_destek_ikilik",
+    "H:Q01.c1",
+    "H:Q01.c3",
+    "k_gaybi_hiss_yok",
+    "k_haber_devir",
+    "k_tekduzelik_aciklama",
+    "k_istisna_delilsiz"
+   ],
+   "katman": 2,
+   "kat": 2,
+   "durum": "ZAN-I GÂLİB",
+   "W": [
+    "k_istisna_delilsiz",
+    "k_tekduzelik_aciklama",
+    "k_zorunluluk_dicto"
+   ],
+   "fam": [
+    "istisna",
+    "k_zorunluluk_dicto",
+    "tekduzelik"
    ],
    "yol": "1"
   },
@@ -9613,7 +9692,7 @@
     "sebep-ilkesi-hal",
     "terkip"
    ],
-   "yol": "181"
+   "yol": "182"
   },
   {
    "id": "Q02.c2/U08#dislama",
@@ -14729,7 +14808,7 @@
    ],
    "U08": [
     "KULLANILDI",
-    "Q02.c2/U08#alt, Q02.c2/U08#dislama"
+    "Q02.c2/U08, Q02.c2/U08#alt, Q02.c2/U08#dislama"
    ],
    "U09": [
     "YAPILAMAZ",
@@ -14761,7 +14840,7 @@
    ],
    "U16": [
     "KOMBİNE",
-    "8 ispat; ayrıntı kombinasyon tablosundadır."
+    "9 ispat; ayrıntı kombinasyon tablosundadır."
    ],
    "U17": [
     "YAPILMADI",
@@ -36139,7 +36218,7 @@
     [
      "U08"
     ],
-    2,
+    3,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -36158,7 +36237,7 @@
      "U01",
      "U08"
     ],
-    3,
+    4,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -36177,7 +36256,7 @@
      "U03",
      "U08"
     ],
-    3,
+    4,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -36198,7 +36277,7 @@
      "U03",
      "U08"
     ],
-    4,
+    5,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -36218,7 +36297,7 @@
      "U04",
      "U08"
     ],
-    3,
+    4,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -36241,7 +36320,7 @@
      "U04",
      "U08"
     ],
-    4,
+    5,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -36264,7 +36343,7 @@
      "U04",
      "U08"
     ],
-    4,
+    5,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -36289,7 +36368,7 @@
      "U04",
      "U08"
     ],
-    5,
+    6,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -36479,7 +36558,7 @@
      "U08",
      "U14"
     ],
-    3,
+    4,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -36499,7 +36578,7 @@
      "U08",
      "U14"
     ],
-    4,
+    5,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -36519,7 +36598,7 @@
      "U08",
      "U14"
     ],
-    4,
+    5,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -36541,7 +36620,7 @@
      "U08",
      "U14"
     ],
-    5,
+    6,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -36562,7 +36641,7 @@
      "U08",
      "U14"
     ],
-    4,
+    5,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -36586,7 +36665,7 @@
      "U08",
      "U14"
     ],
-    5,
+    6,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -36610,7 +36689,7 @@
      "U08",
      "U14"
     ],
-    5,
+    6,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -36636,7 +36715,7 @@
      "U08",
      "U14"
     ],
-    6,
+    7,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -36829,7 +36908,7 @@
      "U08",
      "U27"
     ],
-    3,
+    4,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -36849,7 +36928,7 @@
      "U08",
      "U27"
     ],
-    4,
+    5,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -36869,7 +36948,7 @@
      "U08",
      "U27"
     ],
-    4,
+    5,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -36891,7 +36970,7 @@
      "U08",
      "U27"
     ],
-    5,
+    6,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -36912,7 +36991,7 @@
      "U08",
      "U27"
     ],
-    4,
+    5,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -36936,7 +37015,7 @@
      "U08",
      "U27"
     ],
-    5,
+    6,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -36960,7 +37039,7 @@
      "U08",
      "U27"
     ],
-    5,
+    6,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -36986,7 +37065,7 @@
      "U08",
      "U27"
     ],
-    6,
+    7,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -37188,7 +37267,7 @@
      "U14",
      "U27"
     ],
-    4,
+    5,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -37209,7 +37288,7 @@
      "U14",
      "U27"
     ],
-    5,
+    6,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -37230,7 +37309,7 @@
      "U14",
      "U27"
     ],
-    5,
+    6,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -37253,7 +37332,7 @@
      "U14",
      "U27"
     ],
-    6,
+    7,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -37275,7 +37354,7 @@
      "U14",
      "U27"
     ],
-    5,
+    6,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -37300,7 +37379,7 @@
      "U14",
      "U27"
     ],
-    6,
+    7,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -37325,7 +37404,7 @@
      "U14",
      "U27"
     ],
-    6,
+    7,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -37352,7 +37431,7 @@
      "U14",
      "U27"
     ],
-    7,
+    8,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -37547,7 +37626,7 @@
      "U08",
      "U31"
     ],
-    3,
+    4,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -37568,7 +37647,7 @@
      "U08",
      "U31"
     ],
-    4,
+    5,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -37589,7 +37668,7 @@
      "U08",
      "U31"
     ],
-    4,
+    5,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -37611,7 +37690,7 @@
      "U08",
      "U31"
     ],
-    5,
+    6,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -37632,7 +37711,7 @@
      "U08",
      "U31"
     ],
-    4,
+    5,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -37657,7 +37736,7 @@
      "U08",
      "U31"
     ],
-    5,
+    6,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -37682,7 +37761,7 @@
      "U08",
      "U31"
     ],
-    5,
+    6,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -37708,7 +37787,7 @@
      "U08",
      "U31"
     ],
-    6,
+    7,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -37912,7 +37991,7 @@
      "U14",
      "U31"
     ],
-    4,
+    5,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -37934,7 +38013,7 @@
      "U14",
      "U31"
     ],
-    5,
+    6,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -37956,7 +38035,7 @@
      "U14",
      "U31"
     ],
-    5,
+    6,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -37979,7 +38058,7 @@
      "U14",
      "U31"
     ],
-    6,
+    7,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -38001,7 +38080,7 @@
      "U14",
      "U31"
     ],
-    5,
+    6,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -38027,7 +38106,7 @@
      "U14",
      "U31"
     ],
-    6,
+    7,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -38053,7 +38132,7 @@
      "U14",
      "U31"
     ],
-    6,
+    7,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -38080,7 +38159,7 @@
      "U14",
      "U31"
     ],
-    7,
+    8,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -38284,7 +38363,7 @@
      "U27",
      "U31"
     ],
-    4,
+    5,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -38306,7 +38385,7 @@
      "U27",
      "U31"
     ],
-    5,
+    6,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -38328,7 +38407,7 @@
      "U27",
      "U31"
     ],
-    5,
+    6,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -38351,7 +38430,7 @@
      "U27",
      "U31"
     ],
-    6,
+    7,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -38373,7 +38452,7 @@
      "U27",
      "U31"
     ],
-    5,
+    6,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -38399,7 +38478,7 @@
      "U27",
      "U31"
     ],
-    6,
+    7,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -38425,7 +38504,7 @@
      "U27",
      "U31"
     ],
-    6,
+    7,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -38452,7 +38531,7 @@
      "U27",
      "U31"
     ],
-    7,
+    8,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -38665,7 +38744,7 @@
      "U27",
      "U31"
     ],
-    5,
+    6,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -38688,7 +38767,7 @@
      "U27",
      "U31"
     ],
-    6,
+    7,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -38711,7 +38790,7 @@
      "U27",
      "U31"
     ],
-    6,
+    7,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -38735,7 +38814,7 @@
      "U27",
      "U31"
     ],
-    7,
+    8,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -38758,7 +38837,7 @@
      "U27",
      "U31"
     ],
-    6,
+    7,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -38785,7 +38864,7 @@
      "U27",
      "U31"
     ],
-    7,
+    8,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -38812,7 +38891,7 @@
      "U27",
      "U31"
     ],
-    7,
+    8,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -38840,7 +38919,7 @@
      "U27",
      "U31"
     ],
-    8,
+    9,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
@@ -51863,6 +51942,14 @@
   {
    "hucre": "Q02.c2",
    "tur": "hic-olmasaydi",
+   "sonuc": "Cezmî nefyin desteği ya çıkarımsızdır (duyu yetmez, haber devralır, evvelî değildir) ya çıkarımlıdır; çıkarımlıysa öncüller ya hükmü gerektirir (kavram çelişkisi veya kesin bir olguyla çelişki: Q01’de çürüdü) ya gerektirmez ve köprü ister; tek tecrübî köprü olan tekdüzelik “bütün de açıklanmıştır” sonucunu verir, “bütün istisnadır” köprüsünün ise evvelîliği ve delili yoktur; kollar tükendiğinden cezmî nefy savunulamaz ve geriye yalnız tevakkuf kalır.",
+   "usul": "U08",
+   "ispat": "Q02.c2/U08",
+   "not_": "ZAN-I GÂLİB"
+  },
+  {
+   "hucre": "Q02.c2",
+   "tur": "hic-olmasaydi",
    "sonuc": "Alt suâlin bütün hücreleri ayrı ayrı çürütüldüğünden bu hücre çürür.",
    "usul": "U08",
    "ispat": "Q02.c2/U08#alt",
@@ -53015,6 +53102,17 @@
   },
   {
    "tur": "aile",
+   "ad": "istisna",
+   "onermeler": [
+    "k_istisna_delilsiz"
+   ],
+   "hucre_say": 0,
+   "hucreler": [],
+   "felsefe_say": 0,
+   "felsefeler": []
+  },
+  {
+   "tur": "aile",
    "ad": "k_zorunluluk_dicto",
    "onermeler": [
     "k_zorunluluk_dicto"
@@ -53778,6 +53876,17 @@
   },
   {
    "tur": "aile",
+   "ad": "tekduzelik",
+   "onermeler": [
+    "k_tekduzelik_aciklama"
+   ],
+   "hucre_say": 0,
+   "hucreler": [],
+   "felsefe_say": 0,
+   "felsefeler": []
+  },
+  {
+   "tur": "aile",
    "ad": "terkip",
    "onermeler": [
     "k_butunun_dis_muhtac",
@@ -53991,14 +54100,14 @@
    "deger": true,
    "beklenen": true,
    "tamam": true,
-   "aciklama": "Ölçü ayırt eder: zayıf öncül kaldırıldığında bağlı hücrelerin durumu düşer (F 3-B 27-B). Etkisiz aileler (başka ispatla ayakta): apriori-ret, destek-hasir, ihkam, k_zorunluluk_dicto, kureselleme, muhatap-kabulu, ozdes, sadelik, sebep-ilkesi-bilgi, sebep-ilkesi-varlik, sebepsiz-sans, yokluk-egilim, zaman, zat-vucud"
+   "aciklama": "Ölçü ayırt eder: zayıf öncül kaldırıldığında bağlı hücrelerin durumu düşer (F 3-B 27-B). Etkisiz aileler (başka ispatla ayakta): apriori-ret, destek-hasir, ihkam, istisna, k_zorunluluk_dicto, kureselleme, muhatap-kabulu, ozdes, sadelik, sebep-ilkesi-bilgi, sebep-ilkesi-varlik, sebepsiz-sans, tekduzelik, yokluk-egilim, zaman, zat-vucud"
   },
   {
    "ad": "Etkisiz çıkan zayıf aile sayısı (bilgi)",
-   "deger": 14,
+   "deger": 16,
    "beklenen": null,
    "tamam": true,
-   "aciklama": "apriori-ret, destek-hasir, ihkam, k_zorunluluk_dicto, kureselleme, muhatap-kabulu, ozdes, sadelik, sebep-ilkesi-bilgi, sebep-ilkesi-varlik, sebepsiz-sans, yokluk-egilim, zaman, zat-vucud"
+   "aciklama": "apriori-ret, destek-hasir, ihkam, istisna, k_zorunluluk_dicto, kureselleme, muhatap-kabulu, ozdes, sadelik, sebep-ilkesi-bilgi, sebep-ilkesi-varlik, sebepsiz-sans, tekduzelik, yokluk-egilim, zaman, zat-vucud"
   },
   {
    "ad": "YAPILMADI (usul şartı mümkün, kayıt yazılmamış açık iş) sayısı",
@@ -54034,17 +54143,17 @@
    "UYUMLU": 1
   },
   "ispat": {
-   "direct": 162,
+   "direct": 163,
    "sibr": 25,
    "dislama": 152,
    "alt": 1
   },
-  "ispat_toplam": 340,
+  "ispat_toplam": 341,
   "kombinasyon": 1191,
   "usul": 32,
   "soru": 33,
   "hucre_say": 109,
   "felsefe_say": 42,
-  "onerme": 81
+  "onerme": 86
  }
 }
