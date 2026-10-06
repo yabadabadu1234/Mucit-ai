@@ -65,8 +65,12 @@ Bu dosya **dizindir**. Eskiden tek dosya olan deşmenin bütün yaprakları **si
 | [V.9_HATIME](DESME/KISIM_V/V.9_HATIME.md) | V.9 (V.9.6–V.9.7 hâtime kıssası namzedi, 3-I 242) | 7 | 1.3 KB |
 | [V.F_FARABI_NAMZET](DESME/KISIM_V/V.F_FARABI_NAMZET.md) | V.F | 18 | 3.2 KB |
 | [V.M_MATURIDI_NAMZET](DESME/KISIM_V/V.M_MATURIDI_NAMZET.md) | V.M (Mâtürîdî fihristinden namzet başlıklar; 3-I 241) | 73 | 11.0 KB |
+| [V.Ka_MATURIDI_HIKMET_SEFEH_MUKELLEFIYET](DESME/KISIM_V/V.Ka_MATURIDI_HIKMET_SEFEH_MUKELLEFIYET.md) | V.K.1 (Kazâ ve kader bâbı; Mâtürîdî: hikmet ve sefeh, Mu'tezile'nin aslah ve illet iddiaları, Seneviyye'den ayrılış; etiket Claude çıkarımı, 3-I 241, 242) | 48 | 20.7 KB |
+| [V.Kb_MATURIDI_MUKELLEFIYET_AKIL_TABIAT_TENKIT](DESME/KISIM_V/V.Kb_MATURIDI_MUKELLEFIYET_AKIL_TABIAT_TENKIT.md) | V.K.2, V.K.T1 (Mâtürîdî: mükellefiyet, akıl–tabiat, muhkem–müteşâbih; Claude tenkidi; 3-I 241, 242) | 42 | 23.3 KB |
+| [V.Kc_MATURIDI_KUL_FIILLERI_FIRKALAR](DESME/KISIM_V/V.Kc_MATURIDI_KUL_FIILLERI_FIRKALAR.md) | V.K.3.1–73 (Mâtürîdî: kulların fiilleri hakkında üç görüş, halk–kesb, on iki aklî delil; 3-I 241, 242) | 73 | 33.0 KB |
+| [V.Kc2_MATURIDI_KUL_FIILLERI_TENKIT](DESME/KISIM_V/V.Kc2_MATURIDI_KUL_FIILLERI_TENKIT.md) | V.K.T2.1–12 (Claude tenkidi, kat'î hasr denemesi, açık iş S48; 3-I 241, 242) | 12 | 8.6 KB |
 | [V.TOPLU_TENKIT_ACIK_ISLER](DESME/KISIM_V/V.TOPLU_TENKIT_ACIK_ISLER.md) | TOPLU | 0 | 1.2 KB |
 
-**Toplam yaprak: 2510.** Cinse göre: K 1029 · Z 760 · C 524 · B 59 · İt 80 · T 29 · İ 14 · M 14 · H 1
+**Toplam yaprak: 2685.** Cinse göre: K 1114 · Z 794 · C 557 · B 59 · İt 80 · T 29 · İ 37 · M 14 · H 1
 
-Not (3-I 241): V.1.3.M (285), V.2.6–V.2.39 (943), V.3.M (107), V.4.M (83), V.4.N (96), V.4.O (70) ve V.5.8–V.5.12 (66) ve V.M (73) yaprakları Mâtürîdî'den alınmıştır; V.F ve V.M satırlarının cinsi 3. sütundadır (namzet önerisi). V.1 dosyası 40 KB'ı aşınca V.1.4.17 ve sonrası **silinmeden** V.1.4b dosyasına taşınmıştır (3-I 238).
+Not (3-I 241): V.1.3.M (285), V.2.6–V.2.39 (943), V.3.M (107), V.4.M (83), V.4.N (96), V.4.O (70) ve V.5.8–V.5.12 (66), V.K (175) ve V.M (73) yaprakları Mâtürîdî'den alınmıştır; V.F ve V.M satırlarının cinsi 3. sütundadır (namzet önerisi). V.1 dosyası 40 KB'ı aşınca V.1.4.17 ve sonrası **silinmeden** V.1.4b dosyasına taşınmıştır (3-I 238).

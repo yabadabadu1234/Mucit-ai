@@ -192,6 +192,27 @@
 | 13 | Ayırt edici işaret argümanı kalıbı (X, B işaretini taşır; Y de taşır; B A'yı ayırmaz) Mesih mûcize ilzamına uygulandı | V.2.39.3 |
 | 14 | Eski Ahit atıflarının Mâtürîdî aktarımından ayrılabilmesi (hafızadan, yoklanmadı) ve Hıristiyan öğretisinin cüz biçiminde anlaşılan kolu | V.2.39.1, V.2.39.9 |
 
+### 3h. s.421–~460 damıtması (kazâ ve kader: hikmet ve sefeh · mükellefiyet · akıl–tabiat · muhkem–müteşâbih · kulların fiilleri, üç kol, ilk on iki aklî delil)
+
+**Okunan ve yazılan:** V.K.1, V.K.2, V.K.T1 (V.Ka, V.Kb: 90 yaprak) ve V.K.3, V.K.T2 (V.Kc, V.Kc2: 85 yaprak) = **175 yaprak** (4 dosya). OCR satır 16002–17297. **Okunmayan:** OCR satır 17297'den sonrası (peygamberlik delili ve devamı). **Mu'tezile, Cebriyye ve Mürcie aktarımları Mâtürîdî'nindir; kendi kaynakları okunmadı.**
+
+| # | Okunandan türeyen yeni şey | Nerede |
+| :-- | :-- | :-- |
+| 1 | Hikmet–sefeh–zulüm–adl ilkesinin iki düzeyi: ilkede mutlak ("Allah sefeh ve zulümden münezzehtir"), nokta düzeyinde konuma göre; şüpheci teizmin klasik biçimi; yalnız Vâcib'in hakîm olduğu önceden ispatlandıktan sonra işler | V.K.T1.3 |
+| 2 | "Aynı şeyde hikmet ve sefeh" cümlesi çelişmezliği ihlal etmez: "aynı bakımdan değil" kaydı (acı ilâç: hasta için hikmet) | V.K.T1.4 |
+| 3 | İlzam ile isnat ayrımı: Mâtürîdî'nin Mu'tezile'ye ilzamları "sonucun" gösterilmesidir, kitap "Mu'tezile mülhid fikrindedir" diye yazmaz | V.K.T2.3 |
+| 4 | Akıl–tabiat ayrımının üç ayırıcı ölçütü (değişmezlik, vuzuha kavuşma, duyu ötesine uzanma) ve tabiatın üç karşıtı | V.K.T1.8 |
+| 5 | "Muhkemi esas alıp müteşâbihi ona arzetme" yorum kuralı olarak I.10'a (açık iş) | V.K.T1.10 |
+| 6 | Tevakkufun iki türü: aklî (delil yetmez) ve naklî (müteşâbihte anlam kapalı); sınır bilgisi cehalet değildir | V.K.T1.11 |
+| 7 | Muhkem âyetlerin anlaşılmamasının altı sebebi muhataba isnat değil, Müslüman okuyucu için öz denetim listesi | V.K.T1.9 |
+| 8 | Kul fiilinin ikili nefy–isbât hasrı: (E,H) Cebriyye · (H,E) Kaderiyye · (E,E) Mâtürîdî · (H,H) fâilsiz; üç kol aklî hasrın üç hücresi | V.K.T2.8 |
+| 9 | Kudret kılma kıyası: "kudreti vermek" ile "fiili yaratmak" ayrımı; istitâat bölümü okunana kadar zan-ı gâlib | V.K.T2.4 |
+| 10 | Elem deliliyle hüsün–kubuh deliline ortak sınır: yalnız fiilin kasıtsız sonuçlarının kula ait olmadığını gösterir | V.K.T2.9–T2.10 |
+| 11 | On iki delilin dört türü (kudretin sınırı · mülkiyet ve rubûbiyyet · tevhid ve hudûs · bilinç ve duyu hâli) ve her türün itirazı | V.K.T2.11 |
+| 12 | Retorsion kalıbı Cebriyye'ye: iddiayı yıkmaz, savunulabilirliğini yıkar | V.K.T2.7 |
+| 13 | "Aklî zorunluluk" lafzı burada da öncülden sonucun zorunlu çıkışıdır, Allah'a vecîbe yüklemek değildir | V.K.T1.2 |
+| 14 | Hudûs delilinin kul fiilleri bâbındaki sonucu: V.1.3.M'nin öncülü tek yaratıcı ister | V.K.T2.6 |
+
 ## 5. Açık suâller
 
 | # | Suâl |
@@ -206,4 +227,5 @@
 | S45 | **Açık:** hadis ve siyer kaynaklarının hangi bölümleri tarihî deliller için okunsun? Okuma izni padişahın (3-I 230); Claude: yalnız tercümanın dipnotlarında anılan bölümler (V.4.O.70) |
 | S46 | **Açık:** Eski Ahit ve Yeni Ahit'in V.2.37 ilzamlarında anılan pasajları okunsun mu? (V.2.39.12) |
 | S47 | **Açık:** cüz ilzamları DB'ye kısmî ispat olarak yazılsın mı, yoksa hasmın kaynağı okunana kadar beklensin mi? Claude: beklesin (V.2.39.13) |
-| (okuma) | İlâhiyyât (s.73–346) ve nübüvvet (s.347–420) bitti; sıra kaza–kader s.421–616 (OCR satır 15984'ten; ilk Mesele OCR 16002), sonra îmân s.713–758 (OCR ~27792'den); s.617–712 okunmaz |
+| S48 | **Açık (tetabuk):** kul fiili mezhep ayrıntısı (halk–kesb, istitâat) inanması farz olan çekirdeğe mi girer, ayrıntı mı kalır? (V.K.T2.12; 3-I 202, 229) |
+| (okuma) | İlâhiyyât (s.73–346) ve nübüvvet (s.347–420) bitti; kaza–kader OCR 16002–17297 okundu (V.K.1–V.K.3); sıra kaza–kader devamı OCR satır 17297'den (peygamberlik delili, sonra Kâ'bî tenkidleri, istitâat s.495–539, ecel, rızık, irade, kazâ ve kader s.582–616), sonra îmân s.713–758 (OCR ~27792'den); s.617–712 okunmaz |
