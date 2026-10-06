@@ -48,14 +48,14 @@ Umumîden hususîye. **Sayfa numaraları padişahın fotoğrafladığı basılı
 | İlâhiyyât | Mesele [İnsanların Kâinat Hakkındaki Farklı Görüşleri] | 233–238 | **okundu** (3-I 242; OCR satır 8729–8951; yapraklar V.2.25) | yüksek (Kısım II) |
 | İlâhiyyât | [1. Seneviyye'nin Tenkidi] | 239–243 | **okundu** (3-I 242; OCR satır 8952–9151; yapraklar V.2.26) | yüksek |
 | İlâhiyyât | [2. Tabiatçıların Eleştirilmesi] | 244–248 | **okundu** (3-I 242; OCR satır 9152–9289; yapraklar V.2.27; tenkit V.2.28) | yüksek |
-| İlâhiyyât | Mesele [Tevhit Yöntemleri Hakkında] | 249–255 | okunmadı | **yüksek (usul)** |
-| İlâhiyyât | [1. Muhammed b. Şebîb'in Allah'ın Varlığı ve Sıfatları Hakkındaki Görüşleri] | 256–277 | okunmadı | yüksek |
-| İlâhiyyât | [2.] Mesele [Tefekkür Yoluyla Bilgi Edinme Hakkında Savunma] | 278–281 | okunmadı | **yüksek (usul)** |
-| İlâhiyyât | [3. Muhammed b. Şebîb'in Cisimlerin Yaratılmışlığı Hakkında İstidlâli] | 282–287 | okunmadı | yüksek |
-| İlâhiyyât | [4. Dehriyye'ye Ait Görüşlerin Tenkidi] | 288–305 | okunmadı | **yüksek (Kısım II, V.1)** |
-| İlâhiyyât | [5.] Mesele [Sümeniyye'nin Görüşleri ve Tenkidi] | 306 | okunmadı | orta |
-| İlâhiyyât | [6.] Mesele [Sofistlerin Görüşleri ve Tenkidi] | 307–312 | okunmadı | **yüksek (V.0.4)** |
-| İlâhiyyât | [7.] Mesele: Seneviyye'ye Ait Görüşlerin Mahiyeti | 313 | okunmadı | orta |
+| İlâhiyyât | Mesele [Tevhit Yöntemleri Hakkında] | 249–255 | **okundu** (3-I 242; OCR satır 9290–9570; yapraklar V.2.29) | **yüksek (usul)** |
+| İlâhiyyât | [1. Muhammed b. Şebîb'in Allah'ın Varlığı ve Sıfatları Hakkındaki Görüşleri] | 256–277 | **okundu** (3-I 242; OCR satır 9571–10413; yapraklar V.2.30–V.2.31) | yüksek |
+| İlâhiyyât | [2.] Mesele [Tefekkür Yoluyla Bilgi Edinme Hakkında Savunma] | 278–281 | **okundu** (3-I 242; OCR satır 10414–10583; yapraklar I.3.16) | **yüksek (usul)** |
+| İlâhiyyât | [3. Muhammed b. Şebîb'in Cisimlerin Yaratılmışlığı Hakkında İstidlâli] | 282–287 | **okundu** (3-I 242; OCR satır 10594–10820; yapraklar V.1.3.M.145–179) | yüksek |
+| İlâhiyyât | [4. Dehriyye'ye Ait Görüşlerin Tenkidi] | 288–305 | **okundu** (3-I 242; OCR satır 10821–11467; yapraklar V.1.3.M.180–252) | **yüksek (Kısım II, V.1)** |
+| İlâhiyyât | [5.] Mesele [Sümeniyye'nin Görüşleri ve Tenkidi] | 306 | **okundu** (3-I 242; OCR satır 11479–11543; yapraklar V.1.3.M.253–260) | orta |
+| İlâhiyyât | [6.] Mesele [Sofistlerin Görüşleri ve Tenkidi] | 307–312 | **okundu** (3-I 242; OCR satır 11545–11751; yapraklar I.3.17) | **yüksek (V.0.4)** |
+| İlâhiyyât | [7.] Mesele: Seneviyye'ye Ait Görüşlerin Mahiyeti | 313 | okunmadı (OCR satır 11753–11813'ün ilk satırları görüldü; bölüm okunmadı, yaprak yazılmadı) | orta |
 | İlâhiyyât | [7.1 Menâniyye'nin Görüşleri ve Tenkidi] | 313–322 | okunmadı | orta |
 | İlâhiyyât | [7.2 Deysâniyye'nin Görüşleri ve Tenkidi] | 323–334 | okunmadı | orta |
 | İlâhiyyât | [7.3 Merkayûniyye'nin Görüşleri ve Tenkidi] | 335–337 | okunmadı | orta |

@@ -35,10 +35,15 @@
 | Şey ve cisim (223) · Mekân (224–226) · Mahiyet, keyfiyet, kurb (227–228) | 8334–8617 | **okundu** (3-I 242) | orta | yapraklar V.2.21–V.2.23 |
 | Zararlı nesneleri yaratmanın hikmeti (229–232) | 8618–8728 | **okundu** (3-I 242) | orta | yapraklar V.5.11–V.5.12 |
 | İnsanların kâinat hakkındaki farklı görüşleri (233–238) · Seneviyye'nin tenkidi (239–243) · Tabiatçıların eleştirilmesi (244–248) | 8729–9289 | **okundu** (3-I 242) | orta; Mâtürîdî'nin Seneviyye, tabiatçı ve heyûlâ aktarımı; sıkışık tercüme yerleri "Claude okuması" diye işaretli | yapraklar V.2.25–V.2.28; **bir sonraki okuma OCR satır 9290'dan (Tevhid yöntemleri, s.249)** başlar |
+| Tevhit yöntemleri (249–255) | 9290–9570 | **okundu** (3-I 242) | orta | Dehriyye'nin üç ayrılık noktası, üçlü hâsr; yapraklar V.2.29 |
+| Muhammed b. Şebîb'in Allah'ın varlığı ve sıfatları hakkındaki görüşleri (256–277) | 9571–10413 | **okundu** (3-I 242) | orta | soru–cevap; İbn Şebîb aktarımı; yapraklar V.2.30–V.2.31 |
+| Tefekkür yoluyla bilgi edinme hakkında savunma (278–281) | 10414–10583 | **okundu** (3-I 242) | orta | tercüman dipnotu: ara bahis; yapraklar I.3.16 |
+| İbn Şebîb'in cisimlerin yaratılmışlığı istidlâli (282–287) · Dehriyye tenkidi (288–305) · Sümeniyye (306) | 10594–11543 | **okundu** (3-I 242) | orta; Aristo ve kategori aktarımı OCR'da yer yer sıkışık, "Claude okuması" diye işaretli | yapraklar V.1.3.M.145–281 (V.1.3o, V.1.3p) |
+| Sofistlerin görüşleri ve tenkidi (307–312) | 11545–11751 | **okundu** (3-I 242) | orta | yapraklar I.3.17; **bir sonraki okuma OCR satır 11753'ten (Menâniyye, s.313)** |
 | Dördüncü Bölüm (s.617–712) | 23874–27791 | **okunmaz** | -- | padişah emri |
 
-**Sayı:** okunan basılı sayfa **49–248 = 200 sayfa** (fihrist aralığına göre; sayfa sayfa doğrulanmadı). Okunmayan: s.249–616 (368 sayfa) ve s.713–758 (46 sayfa); okunmaz: s.617–712 (96 sayfa).
+**Sayı:** okunan basılı sayfa **49–312 = 264 sayfa** (fihrist aralığına göre; sayfa sayfa doğrulanmadı). Okunmayan: s.313–616 (304 sayfa) ve s.713–758 (46 sayfa); okunmaz: s.617–712 (96 sayfa).
 
 **Yoklanan şeyler (3-A 25-D):** bölüm başlıkları OCR'da bulundu ve fihristle eşleşti (ör. "Âlemin Ezeliliğini Savunanların Görüşleri" ve "Seneviyye'nin Âlemin Ezelîliği ve Diğer Konular Hakkındaki Görüşleri" aynen). OCR sayfa numarası fihrist numarasıyla örtüşmez; bu yüzden OCR sayfa numarasına dayanılmadı.
 
-**Bölüm özetleri:** `kitap/DESTEK/MATURIDI_TEVHID_OKUMA_DEFTERI.md`. Alınanlar: `kitap/DESME/KISIM_I/` (I.3.15, I.4.14, I.6.7, I.7.9) ve `kitap/DESME/KISIM_V/` (V.1.3m ve V.1.3n: V.1.3.M · V.2: V.2.6–V.2.8 · V.2m: V.2.9–V.2.11 · V.2n: V.2.12–V.2.15 · V.M).
+**Bölüm özetleri:** `kitap/DESTEK/MATURIDI_TEVHID_OKUMA_DEFTERI.md`. Alınanlar: `kitap/DESME/KISIM_I/` (I.3.15, I.3.16–I.3.17, I.4.14, I.6.7, I.7.9) ve `kitap/DESME/KISIM_V/` (V.1.3m–V.1.3p: V.1.3.M · V.2: V.2.6–V.2.8 · V.2m: V.2.9–V.2.11 · V.2n: V.2.12–V.2.15 · V.M).
