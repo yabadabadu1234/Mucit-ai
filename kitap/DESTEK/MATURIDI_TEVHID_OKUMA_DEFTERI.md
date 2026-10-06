@@ -192,9 +192,9 @@
 | 13 | Ayırt edici işaret argümanı kalıbı (X, B işaretini taşır; Y de taşır; B A'yı ayırmaz) Mesih mûcize ilzamına uygulandı | V.2.39.3 |
 | 14 | Eski Ahit atıflarının Mâtürîdî aktarımından ayrılabilmesi (hafızadan, yoklanmadı) ve Hıristiyan öğretisinin cüz biçiminde anlaşılan kolu | V.2.39.1, V.2.39.9 |
 
-### 3h. s.421–~460 damıtması (kazâ ve kader: hikmet ve sefeh · mükellefiyet · akıl–tabiat · muhkem–müteşâbih · kulların fiilleri, üç kol, ilk on iki aklî delil)
+### 3h. kazâ ve kader (OCR 16002–18135): hikmet ve sefeh · mükellefiyet · akıl–tabiat · muhkem–müteşâbih · kulların fiilleri (üç kol, on dokuz aklî delil, Mu'tezile'nin emir–nehiy delili, Kâ'bî I) damıtması
 
-**Okunan ve yazılan:** V.K.1, V.K.2, V.K.T1 (V.Ka, V.Kb: 90 yaprak) ve V.K.3, V.K.T2 (V.Kc, V.Kc2: 85 yaprak) = **175 yaprak** (4 dosya). OCR satır 16002–17297. **Okunmayan:** OCR satır 17297'den sonrası (peygamberlik delili ve devamı). **Mu'tezile, Cebriyye ve Mürcie aktarımları Mâtürîdî'nindir; kendi kaynakları okunmadı.**
+**Okunan ve yazılan:** V.K.1, V.K.2, V.K.T1 (V.Ka, V.Kb: 90 yaprak) · V.K.3, V.K.T2 (V.Kc, V.Kc2: 85) · V.K.3.74–88, V.K.4, V.K.5, V.K.T3 (V.Kd, V.Ke: 94) = **269 yaprak** (6 dosya). OCR satır 16002–18135. **Okunmayan:** OCR satır 18136'dan sonrası (Kâ'bî tenkidinin devamı, naklî delil, istitâat, ecel, rızık, irade, kazâ ve kader). **Mu'tezile, Cebriyye ve Mürcie aktarımları Mâtürîdî'nindir; kendi kaynakları okunmadı.**
 
 | # | Okunandan türeyen yeni şey | Nerede |
 | :-- | :-- | :-- |
@@ -212,6 +212,17 @@
 | 12 | Retorsion kalıbı Cebriyye'ye: iddiayı yıkmaz, savunulabilirliğini yıkar | V.K.T2.7 |
 | 13 | "Aklî zorunluluk" lafzı burada da öncülden sonucun zorunlu çıkışıdır, Allah'a vecîbe yüklemek değildir | V.K.T1.2 |
 | 14 | Hudûs delilinin kul fiilleri bâbındaki sonucu: V.1.3.M'nin öncülü tek yaratıcı ister | V.K.T2.6 |
+| 15 | Hüccet delilinin dar biçimi: yönetimin tutarlılığı kul iradesinin Allah'ın dilediğinden bağımsız olmamasını gerektirir; kul fiilinin bir araç olması Allah'ın yardım aldığı anlamına gelmez | V.K.T3.1 |
+| 16 | Mâtürîdî'nin Mu'tezile'ye ağır ilzamları (kulu Allah'tan üstün tutmak, Seneviyye'den daha çok yerilmek, zındıklığın cephesi) ilzam olarak yazılır, hükme çevrilmez; Mu'tezile'nin cevabı Muğnî okunana kadar açık iştir | V.K.T3.2–T3.3 |
+| 17 | Allah'ı kötü şeylerle özel olarak anmamak: genel ifade (her şeyin yaratıcısı) ile özel isimlendirme ayrımı kitabın dili için kaidedir | V.K.T3.4 |
+| 18 | İki kişinin çekmesi örneği ortaklığın imkânını gösterir, halk–kesb bağını tarif etmez (düzey ve tür farkı) | V.K.T3.5 |
+| 19 | İcmâ iddiası yalnız "Allah'tan başka hâlik yoktur" cümlesine bağlanır; kul fiillerini kapsayıp kapsamadığı ihtilaftır | V.K.T3.6 |
+| 20 | Küfür inancı (yanlış) ile o inancın bir fâilde bulunduğunu söyleyen cümle (doğru) ayrı iki cümledir | V.K.T3.7 |
+| 21 | Iztırar–ihtiyar ölçütü: fiil kulun iradesinden sonra ve o iradeye bağlı mı doğuyor | V.K.T3.8 |
+| 22 | "Örnek bulunamadı = zan ve hayal" hükmü ispat yükünü aktarır, çürütme değildir | V.K.T3.9 |
+| 23 | Şâhid–gâib kıyasında ortak illet gösterilmeli (fiil fâildir, söz kâildir ayrı illetler) | V.K.T3.10 |
+| 24 | Levh-i mahfûz cümlesi üç iddiaya bölünür (bilgi: aklî; kayıt: malumat; işlenirken yaratma: aklî delil) | V.K.T3.11 |
+| 25 | Kâ'bî–Mâtürîdî ortak zemin ve ihtilaf haritası: ortak (hâlik tek, kul mükellef, ihtiyar iradeye bağlı); ihtilaf (kim yarattı, şey'iyyet, fiilin iki faile aidiyeti) | V.K.T3.13 |
 
 ## 5. Açık suâller
 
@@ -228,4 +239,4 @@
 | S46 | **Açık:** Eski Ahit ve Yeni Ahit'in V.2.37 ilzamlarında anılan pasajları okunsun mu? (V.2.39.12) |
 | S47 | **Açık:** cüz ilzamları DB'ye kısmî ispat olarak yazılsın mı, yoksa hasmın kaynağı okunana kadar beklensin mi? Claude: beklesin (V.2.39.13) |
 | S48 | **Açık (tetabuk):** kul fiili mezhep ayrıntısı (halk–kesb, istitâat) inanması farz olan çekirdeğe mi girer, ayrıntı mı kalır? (V.K.T2.12; 3-I 202, 229) |
-| (okuma) | İlâhiyyât (s.73–346) ve nübüvvet (s.347–420) bitti; kaza–kader OCR 16002–17297 okundu (V.K.1–V.K.3); sıra kaza–kader devamı OCR satır 17297'den (peygamberlik delili, sonra Kâ'bî tenkidleri, istitâat s.495–539, ecel, rızık, irade, kazâ ve kader s.582–616), sonra îmân s.713–758 (OCR ~27792'den); s.617–712 okunmaz |
+| (okuma) | İlâhiyyât (s.73–346) ve nübüvvet (s.347–420) bitti; kaza–kader OCR 16002–18135 okundu (V.K.1–V.K.5); sıra kaza–kader devamı OCR satır 18136'dan (Kâ'bî tenkidinin devamı, istitâat s.495–539, ecel, rızık, irade, kazâ ve kader s.582–616), sonra îmân s.713–758 (OCR ~27792'den); s.617–712 okunmaz |
