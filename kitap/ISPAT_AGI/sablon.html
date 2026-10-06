@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>İspat Ağı</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap">
+<style>
+:root{
+  --bg:#f6f4ef;--panel:#fffdf9;--ink:#1d2a2a;--soft:#5b6b6a;--line:#d9d4c7;--accent:#0f5c57;--accent-ink:#ffffff;
+  --dogru:#1c6b3a;--dogru-bg:#dff1e4;--yanlis:#8a2b2b;--yanlis-bg:#f6dede;--ihtilaf:#8a6a12;--ihtilaf-bg:#f6ecc8;
+  --kati:#1c6b3a;--sartli:#0f5c57;--gal:#8a6a12;--zan:#8a4b12;--yok:#6b6b6b;--chip:#ebe7dc;--shadow:rgba(30,40,40,.08);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#12191a;--panel:#192222;--ink:#e6ecea;--soft:#9db0ad;--line:#2c3b3a;--accent:#59c2b8;--accent-ink:#0b1515;
+  --dogru:#7fd39a;--dogru-bg:#1b3626;--yanlis:#ee9a9a;--yanlis-bg:#3a2020;--ihtilaf:#e6c764;--ihtilaf-bg:#38301a;
+  --kati:#7fd39a;--sartli:#59c2b8;--gal:#e6c764;--zan:#e0a070;--yok:#9a9a9a;--chip:#223030;--shadow:rgba(0,0,0,.3);color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12191a;--panel:#192222;--ink:#e6ecea;--soft:#9db0ad;--line:#2c3b3a;--accent:#59c2b8;--accent-ink:#0b1515;
+  --dogru:#7fd39a;--dogru-bg:#1b3626;--yanlis:#ee9a9a;--yanlis-bg:#3a2020;--ihtilaf:#e6c764;--ihtilaf-bg:#38301a;
+  --kati:#7fd39a;--sartli:#59c2b8;--gal:#e6c764;--zan:#e0a070;--yok:#9a9a9a;--chip:#223030;--shadow:rgba(0,0,0,.3);color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink)}
+body{font:15px/1.55 "IBM Plex Sans",system-ui,sans-serif;padding-inline:16px;padding-block:20px 60px}
+.sar{max-width:1180px;margin:0 auto}
+h1{font:600 30px/1.15 "Source Serif 4",Georgia,serif;margin:0 0 6px;text-wrap:balance}
+h2{font:600 20px/1.25 "Source Serif 4",Georgia,serif;margin:22px 0 10px;text-wrap:balance}
+h3{font:600 15px/1.3 "IBM Plex Sans",sans-serif;margin:16px 0 6px}
+.alt{color:var(--soft);margin:0 0 14px;max-width:70ch}
+.say{display:flex;flex-wrap:wrap;gap:8px 18px;margin:10px 0 16px;font-variant-numeric:tabular-nums}
+.say b{font:600 20px "Source Serif 4",serif;display:block}
+.say span{font-size:12px;color:var(--soft);text-transform:uppercase;letter-spacing:.06em}
+nav{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:14px}
+nav button{font:500 14px "IBM Plex Sans",sans-serif;padding:7px 12px;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:6px;cursor:pointer}
+nav button[aria-selected="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.kutu{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:14px 16px;box-shadow:0 1px 2px var(--shadow)}
+.izgara{display:grid;grid-template-columns:minmax(260px,340px) minmax(0,1fr);gap:16px;align-items:start}
+@media (max-width:820px){.izgara{grid-template-columns:1fr}}
+.chip{display:inline-block;padding:1px 8px;border-radius:99px;background:var(--chip);font-size:12px;font-weight:500;white-space:nowrap}
+.c-DOĞRU{background:var(--dogru-bg);color:var(--dogru)}
+.c-YANLIŞ{background:var(--yanlis-bg);color:var(--yanlis)}
+.c-İHTİLAFLI{background:var(--ihtilaf-bg);color:var(--ihtilaf)}
+.d-kati{color:var(--kati)}.d-sartli{color:var(--sartli)}.d-gal{color:var(--gal)}.d-zan{color:var(--zan)}.d-yok{color:var(--yok)}
+.hl{display:flex;gap:8px;align-items:baseline;width:100%;text-align:left;border:0;background:transparent;color:var(--ink);padding:5px 6px;border-radius:5px;cursor:pointer;font:14px "IBM Plex Sans",sans-serif}
+.hl:hover,.hl[aria-current="true"]{background:var(--chip)}
+.soru-b{font-weight:600;margin:12px 0 2px;font-size:13px;color:var(--soft)}
+.liste{max-height:74vh;overflow:auto}
+input[type=search],select{font:14px "IBM Plex Sans",sans-serif;padding:7px 9px;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--ink);width:100%;margin-bottom:8px}
+.tab-kap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+th{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--soft);position:sticky;top:0;background:var(--panel)}
+.mono{font:12px "IBM Plex Mono",monospace}
+.ispat{border:1px solid var(--line);border-radius:7px;padding:10px 12px;margin:8px 0;background:var(--bg)}
+.ispat ol{margin:6px 0 4px 18px;padding:0}
+.ispat li{margin:3px 0}
+.zayif{color:var(--zan);font-weight:600;font-size:12px}
+.lnk{color:var(--accent);cursor:pointer;text-decoration:underline;background:none;border:0;padding:0;font:inherit}
+.not{color:var(--soft);font-size:13px}
+.usul-k{margin:8px 0}
+.usul-k summary{cursor:pointer;font-weight:600}
+svg text{font:11px "IBM Plex Sans",sans-serif;fill:var(--ink)}
+.ag-kap{overflow:auto;max-height:78vh}
+.sayfa{display:none}.sayfa.acik{display:block}
+.kirmizi{color:var(--yanlis);font-weight:600}.tamam{color:var(--dogru);font-weight:600}
+.cubuk{display:flex;height:10px;border-radius:5px;overflow:hidden;background:var(--chip);margin:4px 0}
+.cubuk i{display:block;height:100%}
+</style>
+</head>
+<body>
+<div class="sar">
+<h1>İspat Ağı</h1>
+<p class="alt">Vâcib hakkında sorulabilecek suâllerin, her suâlin bütün cevap hücrelerinin, her hücreyi ispat veya ret eden usullerin ve bu usullerin bütün kombinasyonlarının veritabanı. Önce usuller öğretilir, sonra her hücrede her usulün kullanılıp kullanılmadığı (kullanılamıyorsa sebebiyle) gösterilir. Bütün ispatlar taslaktır ve kaynağı yoklanmamış hafızadan yazılmıştır.</p>
+<div class="say" id="say"></div>
+<nav id="nav" role="tablist"></nav>
+<div id="sayfalar"></div>
+</div>
+<script>
+const D=__VERI__;
+const $=(s,r)=>(r||document).querySelector(s);
+function h(t,a,...c){const e=document.createElement(t);if(a)for(const k in a){if(k==='class')e.className=a[k];else if(k.startsWith('on'))e.addEventListener(k.slice(2),a[k]);else if(a[k]!==false&&a[k]!==null&&a[k]!==undefined)e.setAttribute(k,a[k]);}
+for(const x of c.flat()){if(x===null||x===undefined||x===false)continue;e.append(x.nodeType?x:document.createTextNode(String(x)));}return e}
+const HUCRE=Object.fromEntries(D.hucre.map(x=>[x.id,x]));
+const SORU=Object.fromEntries(D.soru.map(x=>[x.id,x]));
+const USUL=Object.fromEntries(D.usul.map(x=>[x.id,x]));
+const ONERME=Object.fromEntries(D.onerme.map(x=>[x.id,x]));
+const ISPAT=Object.fromEntries(D.ispat.map(x=>[x.id,x]));
+const HUCRE_ISPAT={};D.ispat.forEach(p=>{(HUCRE_ISPAT[p.hucre]=HUCRE_ISPAT[p.hucre]||[]).push(p)});
+function dcls(d){if(d.startsWith('KAT’Î-'))return'd-sartli';if(d==='KAT’Î')return'd-kati';if(d.startsWith('ZAN-I')||d.startsWith('ZANNÎ ÇÜRÜTÜLDÜ (zan-ı'))return'd-gal';if(d.startsWith('ZANNÎ')||d.startsWith('KISMEN'))return'd-zan';if(d.startsWith('ÇÜRÜTÜLDÜ (kat’î)')||d.startsWith('UYUMLU'))return'd-kati';if(d.startsWith('ÇÜRÜTÜLDÜ'))return'd-sartli';return'd-yok'}
+function durumChip(d){return h('span',{class:'chip '+dcls(d)},d)}
+function hukumChip(x){return h('span',{class:'chip c-'+x},x)}
+
+const sayfalar={};
+const sekmeler=[['usul','Usuller (öğretim)'],['hucre','Suâller ve hücreler'],['ag','Bağımlılık ağı'],['felsefe','Felsefeler'],['zayif','Zayıf halkalar'],['kontrol','Kontrol']];
+let aktif='usul';
+
+function baslat(){
+  const s=D.say;
+  const kat=D.hucre.filter(x=>x.durum==='KAT’Î').length;
+  const sart=D.hucre.filter(x=>x.durum==='KAT’Î-ŞARTLI').length;
+  const bir=[[s.soru,'suâl'],[s.hucre_say,'hücre'],[s.usul,'kabul edilmiş usul'],[s.ispat_toplam,'ispat kaydı'],[s.kombinasyon.toLocaleString('tr'),'kombinasyon'],[kat,'kat’î hücre'],[sart,'şartlı kat’î hücre'],[s.felsefe_say,'felsefe']];
+  const say=$('#say');bir.forEach(([a,b])=>say.append(h('div',null,h('b',null,a),h('span',null,b))));
+  const nav=$('#nav'),sf=$('#sayfalar');
+  sekmeler.forEach(([k,ad])=>{
+    nav.append(h('button',{role:'tab','aria-selected':k===aktif?'true':'false','data-k':k,onclick:()=>git(k)},ad));
+    const d=h('section',{class:'sayfa'+(k===aktif?' acik':''),id:'s-'+k});sf.append(d);sayfalar[k]=d;
+  });
+  usulSayfasi();hucreSayfasi();agSayfasi();felsefeSayfasi();zayifSayfasi();kontrolSayfasi();
+  const hs=location.hash.replace('#','');if(HUCRE[hs])hucreyeGit(hs);
+}
+function git(k){aktif=k;document.querySelectorAll('nav button').forEach(b=>b.setAttribute('aria-selected',b.dataset.k===k?'true':'false'));document.querySelectorAll('.sayfa').forEach(s=>s.classList.toggle('acik',s.id==='s-'+k));window.scrollTo({top:0})}
+
+function usulSayfasi(){
+  const r=sayfalar.usul;
+  r.append(h('h2',null,'Bir şeyi ispat etmekte kullanılabilecek usuller'),
+    h('p',{class:'alt'},'Bu liste, kitabın Kısım I usul bâbından alınan teçhizattır. Hiçbir ispatta bir usul seçilip diğeri bırakılmaz: her hücrede her usul için ya ispat kaydı, ya “yapılamaz” (sebebiyle), ya da “yapılmadı” (açık iş) yazılır. Fârâbî usulleri (U19–U25) başka bir usulle kurulan ispatın sınıfıdır, ayrı bir ispat değildir.'));
+  const gruplar={};D.usul.forEach(u=>(gruplar[u.grup]=gruplar[u.grup]||[]).push(u));
+  const ad={akıl:'Akıl yolları',haber:'Haber yolları',duyu:'Duyu yolları',birleşik:'Birleşik yollar',Fârâbî:'Fârâbî’nin burhân sınıflaması',müdafaa:'Müdafaa usulleri',tanım:'Tanım',tenbih:'Tenbih',aday:'Adaylar (kabul edilmedi)'};
+  for(const g in gruplar){
+    r.append(h('h3',null,ad[g]||g));
+    gruplar[g].forEach(u=>{
+      r.append(h('details',{class:'usul-k kutu'},h('summary',null,u.id+' · '+u.ad+' ',h('span',{class:'chip'},u.tur),' ',h('span',{class:'chip'},'tavan: '+u.tavan)),
+        h('p',null,u.tanim),
+        h('h3',null,'Nasıl yapılır'),h('ol',null,u.nasil.map(x=>h('li',null,x))),
+        h('p',null,h('b',null,'Şart: '),u.sart),h('p',null,h('b',null,'Hudut: '),u.hudut),h('p',null,h('b',null,'Safsata: '),u.safsata),
+        h('p',{class:'not'},h('b',null,'Misal: '),u.ornek),h('p',{class:'not'},'Atıf: '+u.atif+' · mevki: '+u.mevki)));
+    });
+  }
+}
+
+let seciliHucre=null;
+function hucreSayfasi(){
+  const r=sayfalar.hucre;
+  const sol=h('div',null);const sag=h('div',{id:'detay'});
+  const ara=h('input',{type:'search',placeholder:'Suâl veya hücre ara…',oninput:()=>liste()});
+  const flt=h('select',{onchange:()=>liste()},h('option',{value:''},'Bütün hükümler'),['DOĞRU','YANLIŞ','İHTİLAFLI'].map(x=>h('option',{value:x},x)));
+  const kap=h('div',{class:'liste kutu',id:'hl'});
+  sol.append(ara,flt,kap);
+  r.append(h('div',{class:'izgara'},sol,sag));
+  window._ara=ara;window._flt=flt;window._kap=kap;
+  liste();
+  sag.append(h('div',{class:'kutu'},h('h2',{style:'margin-top:0'},'Bir hücre seçin'),h('p',{class:'alt'},'Soldaki listeden bir hücre seçince o hücrenin ispatları, usul matrisi, bütün usul kombinasyonları, “olmaması hâlinde olacaklar” ve ilgili felsefeler burada görünür.')));
+}
+function liste(){
+  const q=_ara.value.toLowerCase(),f=_flt.value;_kap.replaceChildren();
+  D.soru.forEach(s=>{
+    const hs=D.hucre.filter(x=>x.soru===s.id&&(!f||x.hukum===f)&&(!q||(s.ad+' '+s.metin+' '+x.metin+' '+x.id).toLowerCase().includes(q)));
+    if(!hs.length)return;
+    _kap.append(h('div',{class:'soru-b'},s.id+' · '+s.ad+(s.hasir==='istikrâî'?' (istikrâî)':'')));
+    hs.forEach(x=>_kap.append(h('button',{class:'hl','aria-current':seciliHucre===x.id?'true':'false',onclick:()=>hucreyeGit(x.id)},h('span',{class:'mono'},x.id.split('.').slice(-1)[0]),h('span',{style:'flex:1'},x.ad),hukumChip(x.hukum))));
+  });
+}
+function hucreyeGit(id){git('hucre');seciliHucre=id;location.hash=id;liste();detay(id);const el=$('#detay');el.scrollIntoView({behavior:'smooth',block:'start'})}
+function oncul(pr){
+  if(pr.startsWith('H:')||pr.startsWith('D:')){const c=pr.slice(2);return h('li',null,h('button',{class:'lnk',onclick:()=>hucreyeGit(c)},c),' — '+HUCRE[c].metin+' ',hukumChip(HUCRE[c].hukum),' ',durumChip(HUCRE[c].durum),pr.startsWith('D:')?h('span',{class:'not'},' (yalnız doğrudan ispatlar)'):null)}
+  const o=ONERME[pr];return h('li',null,o.metin+' ',h('span',{class:'chip'},o.kat),o.zayif?h('span',{class:'zayif'},' ⚠ zayıf halka'+(o.aile?' ['+o.aile+']':'')):null,o.not_?h('div',{class:'not'},o.not_):null)
+}
+function detay(id){
+  const x=HUCRE[id],s=SORU[x.soru],kap=$('#detay');kap.replaceChildren();
+  kap.append(h('div',{class:'kutu'},
+    h('div',{class:'not'},s.id+' · '+s.ad+' — '+s.metin),
+    h('h2',{style:'margin-top:6px'},id+' · '+x.ad),
+    h('p',null,x.metin),
+    h('p',null,hukumChip(x.hukum),' ',durumChip(x.durum),' ',h('span',{class:'chip'},x.ispat_say+' ispat'),' ',h('span',{class:'chip'},'tür: '+x.tur)),
+    x.W.length?h('p',{class:'zayif'},'Bu hücrenin en iyi ispatı şu zayıf halkalara bağlıdır: '+x.W.join(', ')):null,
+    x.not_?h('p',{class:'not'},x.not_):null,
+    x.kapsam_cerhi.length?h('p',{class:'not'},'Kapsam çürütmesi: '+x.kapsam_cerhi.join(', ')+' hücrelerinin çürütülmesine dayanmak zorundadır.'):null,
+    x.alt_soru?h('p',{class:'not'},'Bu hücre bir alt suâle açılır: '+x.alt_soru+' (bütün hücreleri ayrı ayrı çürütülmeden bu hücre çürümez).'):null,
+    s.hasir_notu?h('p',{class:'not'},'Suâlin hasır notu ('+s.hasir+'): '+s.hasir_notu):null));
+  const ispatlar=HUCRE_ISPAT[id]||[];
+  const kutu=h('div',{class:'kutu',style:'margin-top:12px'},h('h3',{style:'margin-top:0'},'İspatlar ('+ispatlar.length+')'));
+  if(!ispatlar.length)kutu.append(h('p',{class:'not'},x.hukum==='İHTİLAFLI'?'Bu hücre kelâm içi ihtilaflıdır; kitap onu iddia etmez ve çürütmez, bu yüzden ispat kaydı yoktur.':'İspat kaydı yok.'));
+  ispatlar.forEach(p=>{
+    kutu.append(h('div',{class:'ispat'},
+      h('div',null,h('b',null,p.usul+' · '+USUL[p.usul].ad),' ',durumChip(p.durum),' ',h('span',{class:'chip'},p.tur==='direct'?'doğrudan':(p.tur==='sibr'?'hasırla türetilmiş':(p.tur==='dislama'?'dışlamayla türetilmiş':'alt suâlden türetilmiş'))),
+        p.kismi?h('span',{class:'chip c-İHTİLAFLI'},'kısmî kapsam'):null,p.tag?h('span',{class:'chip'},'sınıf: '+p.tag.join(' / ')):null,h('span',{class:'chip'},'katman '+(p.katman||'-'))),
+      h('p',{style:'margin:6px 0'},p.ozet),
+      h('ol',null,p.prem.map(oncul)),
+      p.kismi?h('p',{class:'zayif'},'Kısmî: '+p.kismi):null,
+      p.hudut?h('p',{class:'not'},'Hudut: '+p.hudut):null,
+      p.W.length?h('p',{class:'zayif'},'Zayıf halkalar: '+p.W.join(', ')):null,
+      p.usul==='U31'||p.usul==='U32'?h('p',{class:'not'},'Bu usul “taslak-namzet”tir; kitaba mühürlenmemiştir.'):null));
+  });
+  kap.append(kutu);
+  kap.append(matrisKutusu(id),kombKutusu(id),olumsuzKutusu(id),felsefeKutusu(id));
+}
+function matrisKutusu(id){
+  const m=D.matris[id];const sayac={};
+  const satir=D.usul.filter(u=>u.grup!=='aday').map(u=>{const [d,sb]=m[u.id];sayac[d]=(sayac[d]||0)+1;return h('tr',null,h('td',{class:'mono'},u.id),h('td',null,u.ad),h('td',null,h('span',{class:'chip'+(d==='KULLANILDI'?' c-DOĞRU':(d==='YAPILAMAZ'?' c-YANLIŞ':(d==='YAPILMADI'||d==='AÇIK'||d==='KURULAMADI'?' c-İHTİLAFLI':'')))},d)),h('td',null,sb))});
+  return h('div',{class:'kutu',style:'margin-top:12px'},h('h3',{style:'margin-top:0'},'Teçhizat matrisi (hücre × usul)'),
+    h('p',{class:'not'},Object.entries(sayac).map(([k,v])=>k+': '+v).join(' · ')),
+    h('div',{class:'tab-kap'},h('table',null,h('thead',null,h('tr',null,['Usul','Ad','Durum','Sebep veya kayıt'].map(t=>h('th',null,t)))),h('tbody',null,satir))));
+}
+let kombSayfa=0,kombSuz='hepsi';
+function kombKutusu(id){
+  const hepsi=D.komb[id]||[];
+  const kutu=h('div',{class:'kutu',style:'margin-top:12px'},h('h3',{style:'margin-top:0'},'Usul kombinasyonları ('+hepsi.length+')'));
+  if(!hepsi.length){kutu.append(h('p',{class:'not'},'Bu hücrede ispat kaydı bulunmadığından kombinasyon yok.'));return kutu}
+  const asg=hepsi.filter(k=>k[9]).length,yet=hepsi.filter(k=>k[8]).length;
+  kutu.append(h('p',{class:'not'},'Yeterli (hücrenin ulaştığı en yüksek hâle çıkaran) küme: '+yet+' · asgarî (hiçbir alt kümesi yeterli olmayan): '+asg+'. Azamî küme bütün usulleri birlikte alır.'));
+  const sel=h('select',{onchange:e=>{kombSuz=e.target.value;kutu.replaceWith(kombKutusu(id))}},[['hepsi','Hepsi'],['yeterli','Yalnız yeterli'],['asgari','Yalnız asgarî'],['azami','Yalnız azamî']].map(([v,t])=>h('option',{value:v,selected:v===kombSuz?'selected':null},t)));
+  kutu.append(sel);
+  let g=hepsi;if(kombSuz==='yeterli')g=hepsi.filter(k=>k[8]);if(kombSuz==='asgari')g=hepsi.filter(k=>k[9]);if(kombSuz==='azami')g=hepsi.filter(k=>k[10]);
+  g=g.slice().sort((a,b)=>b[1].length-a[1].length||a[0]-b[0]);
+  const sf=Math.max(0,Math.min(kombSayfa,Math.ceil(g.length/40)-1));
+  const dil=g.slice(sf*40,sf*40+40);
+  kutu.append(h('div',{class:'tab-kap'},h('table',null,h('thead',null,h('tr',null,['Usuller','İspat','Kat’iyet','Durum','Bağımlılık','Not'].map(t=>h('th',null,t)))),
+    h('tbody',null,dil.map(k=>h('tr',null,h('td',{class:'mono'},k[1].join(' + ')),h('td',null,k[2]+(k[3]?' ('+k[3]+' kısmî)':'')),h('td',null,k[4]),h('td',null,durumChip(k[5])),h('td',null,k[6]),h('td',null,(k[10]?'azamî ':'')+(k[9]?'asgarî ':'')+(k[8]&&!k[9]?'yeterli':'')+(k[7].length?' · zayıf: '+k[7].join(', '):''))))))));
+  if(g.length>40)kutu.append(h('p',null,h('button',{class:'lnk',onclick:()=>{kombSayfa=Math.max(0,sf-1);kutu.replaceWith(kombKutusu(id))}},'‹ önceki'),'  '+(sf+1)+' / '+Math.ceil(g.length/40)+'  ',h('button',{class:'lnk',onclick:()=>{kombSayfa=sf+1;kutu.replaceWith(kombKutusu(id))}},'sonraki ›')));
+  return kutu;
+}
+function olumsuzKutusu(id){
+  const o=D.olumsuz.filter(x=>x.hucre===id);
+  if(!o.length)return h('div');
+  return h('div',{class:'kutu',style:'margin-top:12px'},h('h3',{style:'margin-top:0'},'Bu hücre doğru olmasaydı ne olurdu?'),h('ul',null,o.map(x=>h('li',null,x.sonuc+' ',h('span',{class:'chip'},x.tur),' ',h('span',{class:'chip'},x.usul)))));
+}
+function felsefeKutusu(id){
+  const f=D.felsefe.filter(x=>x.hucreler.includes(id));
+  if(!f.length)return h('div');
+  return h('div',{class:'kutu',style:'margin-top:12px'},h('h3',{style:'margin-top:0'},'Bu hücreye bağlı felsefeler'),h('ul',null,f.map(x=>h('li',null,x.id+' · '+x.ad+' ',durumChip(x.durum)))));
+}
+
+function agSayfasi(){
+  const r=sayfalar.ag;
+  r.append(h('h2',null,'Hücreler arası bağımlılık ağı'),h('p',{class:'alt'},'Her ok, bir ispatın başka bir hücrenin sonucuna dayandığını gösterir. Sütunlar ispatın kurulabildiği katmandır: sol sütundaki hücre hiçbir başka hücreye dayanmaz, sağdaki soldakilere dayanır. Çember yoktur; çemberli ispat atanamaz. Bir düğüme tıklayınca hücre açılır.'));
+  const kat={};D.ispat.forEach(p=>{if(p.katman){kat[p.hucre]=Math.min(kat[p.hucre]||99,p.katman)}});
+  const kenar=[];D.ispat.forEach(p=>{p.prem.forEach(pr=>{if(pr.startsWith('H:')||pr.startsWith('D:'))kenar.push([pr.slice(2),p.hucre])})});
+  const tekil={};kenar.forEach(k=>tekil[k[0]+'>'+k[1]]=k);
+  const ks=Object.values(tekil);
+  const sut={};D.hucre.forEach(x=>{const k=kat[x.id]||0;(sut[k]=sut[k]||[]).push(x)});
+  const anah=Object.keys(sut).map(Number).sort((a,b)=>a-b);
+  const W=200,Hh=15,pos={};let maxY=0;
+  anah.forEach((k,i)=>{sut[k].forEach((x,j)=>{pos[x.id]=[i*W+10,j*Hh+30];maxY=Math.max(maxY,j*Hh+30)})});
+  const ns='http://www.w3.org/2000/svg';
+  const svg=document.createElementNS(ns,'svg');svg.setAttribute('width',anah.length*W+20);svg.setAttribute('height',maxY+30);
+  const kenarlar=document.createElementNS(ns,'g');svg.append(kenarlar);
+  ks.forEach(([a,b])=>{if(!pos[a]||!pos[b])return;const p=document.createElementNS(ns,'path');const x1=pos[a][0]+150,y1=pos[a][1]-4,x2=pos[b][0],y2=pos[b][1]-4;p.setAttribute('d','M'+x1+','+y1+' C'+(x1+40)+','+y1+' '+(x2-40)+','+y2+' '+x2+','+y2);p.setAttribute('fill','none');p.setAttribute('stroke','var(--line)');p.setAttribute('stroke-width','1');p.dataset.a=a;p.dataset.b=b;kenarlar.append(p)});
+  anah.forEach((k,i)=>{const t=document.createElementNS(ns,'text');t.setAttribute('x',i*W+10);t.setAttribute('y',14);t.setAttribute('font-weight','600');t.textContent=k?'Katman '+k:'Kökü yok';svg.append(t)});
+  D.hucre.forEach(x=>{const [px,py]=pos[x.id];const g=document.createElementNS(ns,'g');g.style.cursor='pointer';
+    const rect=document.createElementNS(ns,'rect');rect.setAttribute('x',px);rect.setAttribute('y',py-10);rect.setAttribute('width',150);rect.setAttribute('height',13);rect.setAttribute('rx',3);
+    rect.setAttribute('fill',x.hukum==='DOĞRU'?'var(--dogru-bg)':(x.hukum==='YANLIŞ'?'var(--yanlis-bg)':'var(--ihtilaf-bg)'));g.append(rect);
+    const t=document.createElementNS(ns,'text');t.setAttribute('x',px+3);t.setAttribute('y',py);t.textContent=x.id;g.append(t);
+    g.addEventListener('click',()=>hucreyeGit(x.id));
+    g.addEventListener('mouseenter',()=>{kenarlar.querySelectorAll('path').forEach(p=>{const on=p.dataset.a===x.id||p.dataset.b===x.id;p.setAttribute('stroke',on?'var(--accent)':'var(--line)');p.setAttribute('stroke-width',on?'2':'1');p.style.opacity=on?'1':'.35'})});
+    g.addEventListener('mouseleave',()=>{kenarlar.querySelectorAll('path').forEach(p=>{p.setAttribute('stroke','var(--line)');p.setAttribute('stroke-width','1');p.style.opacity='1'})});
+    svg.append(g)});
+  r.append(h('div',{class:'kutu ag-kap'},svg));
+}
+
+function felsefeSayfasi(){
+  const r=sayfalar.felsefe;
+  const say={};D.felsefe.forEach(f=>say[f.durum]=(say[f.durum]||0)+1);
+  r.append(h('h2',null,'Çürüyen ve çürümeyen felsefeler'),
+    h('p',{class:'alt'},'Bir felsefenin durumu, onun iddia ettiği hücrelerin ispat durumundan okunur. “Şartlı” kat’î, ispatın hâlâ zayıf halkalara (bir sonraki sayfa) dayandığı anlamına gelir; o halkayı kabul etmeyen muhatap için felsefe çürümüş sayılmaz. Hiçbir felsefenin durumu elle yazılmadı.'),
+    h('p',null,Object.entries(say).map(([k,v])=>k+': '+v).join(' · ')));
+  const sat=D.felsefe.map(f=>h('tr',null,h('td',{class:'mono'},f.id),h('td',null,h('b',null,f.ad),h('div',{class:'not'},f.aciklama),f.not_?h('div',{class:'not'},f.not_):null),h('td',null,f.aile),
+    h('td',null,durumChip(f.durum),f.kalan.length?h('div',{class:'not'},'Kalan iddia: '+f.kalan.join(', ')):null),
+    h('td',null,f.satirlar.map(s=>h('div',null,h('button',{class:'lnk',onclick:()=>hucreyeGit(s.hucre)},s.hucre),' ',hukumChip(s.hukum),' ',durumChip(s.durum))))));
+  r.append(h('div',{class:'tab-kap kutu'},h('table',null,h('thead',null,h('tr',null,['No','Felsefe','Aile','Durum','İddia ettiği hücreler'].map(t=>h('th',null,t)))),h('tbody',null,sat))));
+}
+
+function zayifSayfasi(){
+  const r=sayfalar.zayif;
+  r.append(h('h2',null,'Zayıf halkalar ve düşerse ne olur'),
+    h('p',{class:'alt'},'Her satırda, o zayıf öncül (veya öncüllerin ailesi) muhatap tarafından kabul edilmezse, motor bütün ağı yeniden hesaplar: hangi hücrelerin hükmü düşer, hangi felsefeler çürütülemez hâle gelir. Bu, ispat ağının nerede bir kabule yaslandığını açıkça gösterir.'));
+  D.ne_olur.forEach(n=>{
+    const kap=h('details',{class:'usul-k kutu'},h('summary',null,(n.tur==='aile'?'Aile: ':'Öncül: ')+n.ad+' — '+n.hucre_say+' hücre düşer, '+n.felsefe_say+' felsefenin durumu değişir'),
+      h('p',{class:'not'},'Düşen öncüller: '+n.onermeler.join(', ')),
+      n.felsefe_say?h('div',null,h('h3',null,'Felsefelerde değişim'),h('ul',null,n.felsefeler.map(f=>h('li',null,f.felsefe+' · '+f.ad+': '+f.once+' → ',h('b',null,f.sonra))))):null,
+      n.hucre_say?h('div',null,h('h3',null,'Düşen hücreler'),h('div',{class:'tab-kap'},h('table',null,h('tbody',null,n.hucreler.map(c=>h('tr',null,h('td',null,h('button',{class:'lnk',onclick:()=>hucreyeGit(c.hucre)},c.hucre)),h('td',null,c.once),h('td',null,'→ '+c.sonra))))))):null);
+    r.append(kap);
+  });
+}
+
+function kontrolSayfasi(){
+  const r=sayfalar.kontrol;
+  r.append(h('h2',null,'Kontrol'),h('p',{class:'alt'},'Veritabanı her kuruluşta kendini denetler. Kırmızı satır, ilgili kaydın düzeltilmesi gerektiği anlamına gelir.'));
+  r.append(h('div',{class:'kutu tab-kap'},h('table',null,h('thead',null,h('tr',null,['Ölçü','Değer','Beklenen','Sonuç','Açıklama'].map(t=>h('th',null,t)))),
+    h('tbody',null,D.kontrol.map(k=>h('tr',null,h('td',null,k.ad),h('td',null,String(k.deger)),h('td',null,k.beklenen===null?'—':String(k.beklenen)),h('td',{class:k.tamam?'tamam':'kirmizi'},k.tamam?'tamam':'KIRMIZI'),h('td',{class:'not'},k.aciklama)))))));
+  const m={};Object.values(D.matris).forEach(x=>Object.values(x).forEach(v=>m[v[0]]=(m[v[0]]||0)+1));
+  r.append(h('h3',null,'Matris özeti (bütün hücreler × usuller)'),h('p',null,Object.entries(m).map(([k,v])=>k+': '+v).join(' · ')));
+}
+baslat();
+</script>
+</body>
+</html>
