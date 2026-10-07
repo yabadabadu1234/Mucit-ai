@@ -28,6 +28,37 @@
 | V.2.2.5 | **Kemâl ilkesi:** varlıkta bir **kemâl** varsa, onu veren Vâcib o kemâlden **mahrum olamaz** | B |
 | V.2.2.6 | Konuşabilmek bir kemâldir; Vâcib kelâm sıfatından mahrum olamaz (H3 köprüsü) | B |
 | V.2.2.7 | Kemâl ilkesinin **kendi ispatı** tartışmalıdır (verenin vermiş olması, verdiğine sahip olmayı gerektirir mi); bu yaprak **Z** işaretlenir | Z |
+| V.2.2.8 | **Sübûtî sıfatlar sekizdir (Mâtürîdî sayımı):** hayat, ilim, semi’, basar, kudret, irade, kelâm, tekvîn. Kitap her birini ayrı ele alır ve her birinin **ortak çekirdeğini** (Vâcib bu kemâlden mahrum değildir) **ihtilaflı kanadından** (ayrı zâid sıfat mı, ilme veya kudret ve iradeye dönüş mü) ayırır; sayım ve mezhep notları hafızadandır, yoklanmadı (V.2.5.5–9) | K |
+| V.2.2.9 | **Ayrım ilkesi (3-I 243):** ihtilaf sıfatın **varlığı** hakkında değil **mahiyeti ve sayımı** hakkındadır; bu yüzden semi’, basar, kelâm ve tekvîn hücrelerinin tamamı ihtilaflı sayılıp ispatsız bırakılmaz: ortak çekirdek c1’de ispatlanır, ihtilaflı kanat c4’te iddia edilmeden durur | K |
+| V.2.2.10 | **Hayat — iddia:** Vâcib hayydır; ilim ve kudret sahibi olan cansız olamaz (DB hücresi Q10.hayat.c1: KAT’Î-ŞARTLI, 3 usul alt kümesi, 13 türetme yolu) | K |
+| V.2.2.11 | **Hayat — delil:** hayy, ilim ve kudret sahibi demektir (tanım); Vâcib’in ilmi (V.2.2.1) ve kudreti (V.2.2.2) ispatlandığından hayatı onlardan türer ve onların zayıf halkalarını devralır | B |
+| V.2.2.12 | **Hayat — hudut:** ispat hayatı ilim ve kudret tanımıyla kurar; biyolojik hayat (büyüme, üreme) kastedilmez; Mâtürîdî Allah’ı “hay” diye isimlendirmenin naklî ve aklî delille sabit olduğunu söyler (V.2.10.1; naklî kısım **[malumat; öncül değildir]**) | K |
+| V.2.2.13 | **İlim — iddia:** Vâcib âlimdir ve küllî ve cüz’î her şeyi bilir (Q10.ilim.c1: KAT’Î-ŞARTLI, 7 usul alt kümesi, 5 türetme yolu; kapsamı Q11.c3: KAT’Î-ŞARTLI, 7 usul alt kümesi, 11 türetme yolu) | K |
+| V.2.2.14 | **İlim — delil:** (a) irade murad edilenin bilinmesini gerektirir ve Vâcib iradelidir (hulf); (b) muhkem ve ayrıntılı eser ilme işaret eder (en iyi açıklamaya çıkarım, zan-ı gâlib) | B |
+| V.2.2.15 | **İlim — hudut:** (a) irade ispatına, (b) nizam çıkarımına ve “nizamı kuran fâil Vâcib’dir” köprüsüne dayanır; Mâtürîdî’nin aklî delili fiilin tab’an değil bilgiyle sâdır olduğudur (V.2.10.15–17, zannî); ilmin ezelîliğine dair “ilim hâdis olsaydı Allah ezelde cahil olurdu” ilzamı V.2.15.8–13’tedir | Z |
+| V.2.2.16 | **Semi’ — iddia:** Vâcib işitme kemâlinden mahrum değildir (Q10.semi.c1: KAT’Î-ŞARTLI, 3 usul alt kümesi, 4 türetme yolu) | K |
+| V.2.2.17 | **Semi’ — delil:** Vâcib hiçbir kemâlden mahrum değildir (Q14.c1); işitmek kemâl, sağırlık noksandır; öyleyse Vâcib işiticidir (hulf). İkinci yol şâhid–gâibdir: yaratıklarda bulunan kemâli veren onsuz olamaz (temsil, zan) | B |
+| V.2.2.18 | **Semi’ — zayıf halka ve hudut:** “işitmek kemâldir” önermesi kemâl tayinidir ve muhatapla ortaklaştırılır; kemâl ilkesinin kendisi V.2.2.7’de Z işaretlidir. İddia işitme **kemâlidir**, kulak–titreşim biçimi değil: aracı Vâcib’e nisbet edilmez (V.2.1.7); benzerlik isim ortaklığıyla doğmaz (V.2.7.15–18) | Z |
+| V.2.2.19 | **Semi’ — ihtilaflı kanat (Q10.semi.c4):** işitme ilimden ayrı zâid bir sıfat mıdır, yoksa ilmin işitilene taalluku mudur. Mu’tezile ilme döndürür (hafızadan, yoklanmadı); Mâtürîdî’nin sem’in ve ilmin zâtîliğine dair Kâ’bî’ye itirazı V.2.12.7 ve V.2.12.10’dadır, Kâ’bî’nin kitabı okunmadı; kitap bu kanadı iddia etmez ve çürütmez (V.2.1.10) | Z |
+| V.2.2.20 | **Basar — iddia:** Vâcib görme kemâlinden mahrum değildir (Q10.basar.c1: KAT’Î-ŞARTLI, 3 usul alt kümesi, 4 türetme yolu) | K |
+| V.2.2.21 | **Basar — delil:** Vâcib hiçbir kemâlden mahrum değildir (Q14.c1); görmek kemâl, körlük noksandır; öyleyse Vâcib görücüdür (hulf). İkinci yol şâhid–gâibdir (temsil, zan) | B |
+| V.2.2.22 | **Basar — zayıf halka ve hudut:** “görmek kemâldir” önermesi kemâl tayinidir; iddia görme **kemâlidir**, göz ve ışık biçimi değil (V.2.1.7, V.2.7.15–18); Mâtürîdî Allah’ı “sağırlık, körlük ve dilsizlik âfetinden münezzeh” bilir (V.2.13.22) | Z |
+| V.2.2.23 | **Basar — ihtilaflı kanat (Q10.basar.c4):** görme ilimden ayrı zâid sıfat mıdır, yoksa ilmin görülene taalluku mudur; semi’ ile aynı ihtilaf (V.2.2.19); kitap iddia etmez | Z |
+| V.2.2.24 | **Kudret — iddia:** Vâcib kâdirdir (Q10.kudret.c1: KAT’Î-ŞARTLI, 7 usul alt kümesi, 6 türetme yolu) | K |
+| V.2.2.25 | **Kudret — delil:** (a) var etme fiili kudretsiz olmaz ve Vâcib âlemi var etmiştir (Q09.c4) (hulf); (b) fiilden fâile geçiş (fâil sebep) | B |
+| V.2.2.26 | **Kudret — hudut:** Q09.c4’ün ispatı mümkinin müreccihe muhtaçlığına (sebep ilkesi, zayıf halka) dayanır; kudretin kapsamının (mümkinin hepsine taallukunun) ayrıca ispatı bu yapraklarda yoktur ve iddia edilmez; Mâtürîdî: kudretten yoksun yaratıcı bir şeyin hem kendisine hem zıddına hâkim olamaz (V.2.10.14) | Z |
+| V.2.2.27 | **İrade — iddia:** Vâcib müriddir, yani mümkin hâllerden birini seçip tahsis eder (Q10.irade.c1: KAT’Î-ŞARTLI, 15 usul alt kümesi, 6 türetme yolu) | K |
+| V.2.2.28 | **İrade — delil:** (a) belirli hâlin seçilmesi iradeyi gerektirir (hulf); (b) mümkin hâller arasından birini seçen tahsis iradeyle olur (imkân–vücûb); (c) çeşitlilik tabiatla iş yapanın değil ihtiyarlı fâilin eseridir (Mâtürîdî V.2.10.5–8, V.2.14.1; en iyi açıklamaya çıkarım) | B |
+| V.2.2.29 | **İrade — zayıf halka:** tahsisin müreccih istemesi sebep ilkesinin HÂL kanadına dayanır; klasik kelâm iradenin kendi tercihi için ikinci müreccih aramaz (V.2.14.5); sudûrcu itirazı V.2.10.9’da tenkitlidir | Z |
+| V.2.2.30 | **Kelâm — iddia:** Vâcib konuşma kemâlinden mahrum değildir; yani **konuşabilir** (Q10.kelam.c1: KAT’Î-ŞARTLI, 3 usul alt kümesi, 16 türetme yolu) | K |
+| V.2.2.31 | **Kelâm — delil:** (a) Vâcib hiçbir kemâlden mahrum değildir ve konuşabilmek kemâldir; (b) Mâtürîdî’nin aklî delili: âlim ve kâdir olduğu hâlde konuşmayan acz veya engel sebebiyle konuşmaz, Allah bundan münezzehtir (V.2.13.21–22) ve Claude tenkidiyle üçüncü kol **dilememe**dir: o hâlde de konuşma kudreti ondadır; (c) şâhid–gâib (temsil, zan) | B |
+| V.2.2.32 | **Kelâm sıfatı H3’e köprüdür:** bu ispat Vâcib’in **konuşabildiğini** gösterir, **konuştuğunu** (bildirdiğini) göstermez; konuşabilmek bildirmenin imkânını (V.3.1) verir, hikmetini (V.3.2) ve vukûunu (V.3.3) vermez | K |
+| V.2.2.33 | **Kelâm — ihtilaflı kanat (Q10.kelam.c4):** kelâm zâtla kâim, ezelî ve mahlûk olmayan bir sıfat mıdır (kelâm-ı nefsî) ve okunan lafız hâdis ve mecazî mi; Kâ’bî ve Mu’tezile kelâmı hâdis sayar (Mâtürîdî’nin aktarımı V.2.13.1–19), Mâtürîdî’nin hükmü V.2.13.20–31’dedir ve kelâm-ı nefsî ve lafzî ayrımı V.3.1.6’dadır; kitap bu kanadı iddia etmez | Z |
+| V.2.2.34 | **Tekvîn — iddia:** Vâcib’in var etme (tekvîn) kemâli vardır: var etmeye kâdirdir ve var eder (Q10.tekvin.c1: KAT’Î-ŞARTLI, 3 usul alt kümesi, 50 türetme yolu) | K |
+| V.2.2.35 | **Tekvîn — delil:** Vâcib âlemi ihtiyarla var etmiş ve her an var edip ayakta tutmaktadır (Q09.c4); var edenin var etme kemâli yoktur denemez (hulf); ayrıca fiilden fâile geçilir (kudret ve iradeli fâil) | B |
+| V.2.2.36 | **Tekvîn — ihtilaflı kanat (Q10.tekvin.c4):** tekvîn kudret ve iradeden ayrı ezelî bir sıfat mıdır, yoksa kudret ve iradenin taallukunu adlandırır mı. Mâtürîdî ayrı sıfat sayar (V.2.11); Eş’arî kudret ve iradeye döndürür (hafızadan, yoklanmadı); toplam bu yüzden sekiz veya yedi çıkar; Mâtürîdî’nin “neden sonradan” ilzamı V.2.11.5–6’dadır ve “mükevven hâdis, tekvîn ezelî” cevabı V.2.11.10 ve V.2.11.14’tedir; kitap bu kanadı iddia etmez | Z |
+| V.2.2.37 | **Sekizin toplu hâli:** sekiz sübûtî sıfatın sekizinin ortak çekirdeği DB’de KAT’Î-ŞARTLI’dır; ihtilaflı kanat dörttür (semi’, basar, kelâm, tekvîn) ve hiçbiri iddia edilmez; zayıf halkalar kemâl tayini, kemâl ilkesinin sınır dayanağı ve tahsisin müreccih istemesidir | K |
+| V.2.2.38 | **Claude tenkidi (3-I 243):** önceki sürümde semi’, basar, kelâm ve tekvîn hücrelerinin tamamı “ihtilaflı” sayılıp ispatsız bırakılmıştı; bu, ihtilafı varlıktan mahiyete taşımak olduğu için yanlıştı ve V.2.2 yalnız beş sıfatı içeriyordu. Düzeltme: ortak çekirdek ayrı hücre, ihtilaflı kanat ayrı hücre. Sıfat sayımı ve Mu’tezile, Eş’arî, Senûsî bilgileri kaynak yoklanmadan hafızadan yazılmıştır | Z |
 
 ### V.2.3 Öteki ilâh tasavvurlarının tahlili (eksen: hangi şartı çiğner)
 
@@ -67,20 +98,20 @@
 | V.2.5.11 | Kitabın ispat ağı veritabanında “on beş sıfat suâli” sıfat sayısı değil **suâl sayısıdır**: üç zâtî (kıdem, bekâ, gınâ), sekiz sübûtî ve dört fiilî köprü hücresi | K |
 | V.2.5.12 | Padişahın altı zâtî sıfatından vücûd, vahdâniyyet ve muhâlefet sıfat suâli olarak değil ayrı suâllerde durur: vücûd Q02, vahdâniyyet Q04 ve Q05, muhâlefetün li’l-havâdis Q06, Q07, Q08 | K |
 | V.2.5.13 | Sıfat sayımının kaynağı henüz yoklanmadı; hangi kaynaktan sayılacağı padişaha sorulur | K |
-| V.2.5.14 | **Vücûd** (zâtî): Vâcib için zorunludur; hücre Q02.c1, durum KAT’Î-ŞARTLI, 126 usul alt kümesi, 191 türetme yolu | B |
+| V.2.5.14 | **Vücûd** (zâtî): Vâcib için zorunludur; hücre Q02.c1, durum KAT’Î-ŞARTLI, 126 usul alt kümesi, 273 türetme yolu | B |
 | V.2.5.15 | **Kıdem** (zâtî): Vâcib için zorunludur; hücre Q10.kidem.c1, durum KAT’Î, 7 usul alt kümesi, 3 türetme yolu | B |
 | V.2.5.16 | **Bekâ** (zâtî): Vâcib için zorunludur; hücre Q10.beka.c1, durum KAT’Î, 3 usul alt kümesi, 2 türetme yolu | B |
-| V.2.5.17 | **Vahdâniyyet** (zâtî): Vâcib için zorunludur; hücre Q04.c1, durum KAT’Î-ŞARTLI, 3 usul alt kümesi, 28 türetme yolu | B |
+| V.2.5.17 | **Vahdâniyyet** (zâtî): Vâcib için zorunludur; hücre Q04.c1, durum KAT’Î-ŞARTLI, 3 usul alt kümesi, 217 türetme yolu | B |
 | V.2.5.18 | **Kıyâm bi-nefsihî (gınâ)** (zâtî): Vâcib için zorunludur; hücre Q10.gina.c1, durum KAT’Î, 3 usul alt kümesi, 2 türetme yolu | B |
 | V.2.5.19 | **Muhâlefetün li’l-havâdis** (zâtî): Vâcib için zorunludur; hücre Q06.c4, durum KAT’Î, 1 usul alt kümesi, 4 türetme yolu | B |
-| V.2.5.20 | **Hayat** (subûtî): Vâcib için zorunludur; hücre Q10.hayat.c1, durum KAT’Î-ŞARTLI, 3 usul alt kümesi, 9 türetme yolu | B |
-| V.2.5.21 | **İlim** (subûtî): Vâcib için zorunludur; hücre Q10.ilim.c1, durum KAT’Î-ŞARTLI, 7 usul alt kümesi, 3 türetme yolu | B |
-| V.2.5.22 | **Semi’** (subûtî): kelâm içi ihtilaflı, kitap iddia etmez; hücre Q10.semi.c1; çürütülen ihtimaller ayrıdır | Z |
-| V.2.5.23 | **Basar** (subûtî): kelâm içi ihtilaflı, kitap iddia etmez; hücre Q10.basar.c1; çürütülen ihtimaller ayrıdır | Z |
-| V.2.5.24 | **Kudret** (subûtî): Vâcib için zorunludur; hücre Q10.kudret.c1, durum KAT’Î-ŞARTLI, 7 usul alt kümesi, 6 türetme yolu | B |
-| V.2.5.25 | **İrade** (subûtî): Vâcib için zorunludur; hücre Q10.irade.c1, durum KAT’Î-ŞARTLI, 7 usul alt kümesi, 5 türetme yolu | B |
-| V.2.5.26 | **Kelâm** (subûtî): kelâm içi ihtilaflı, kitap iddia etmez; hücre Q10.kelam.c1; çürütülen ihtimaller ayrıdır | Z |
-| V.2.5.27 | **Tekvîn** (subûtî): kelâm içi ihtilaflı, kitap iddia etmez; hücre Q10.tekvin.c1; çürütülen ihtimaller ayrıdır | Z |
+| V.2.5.20 | **Hayat** (sübûtî): Vâcib için zorunludur; hücre Q10.hayat.c1, durum KAT’Î-ŞARTLI, 3 usul alt kümesi, 13 türetme yolu | B |
+| V.2.5.21 | **İlim** (sübûtî): Vâcib için zorunludur; hücre Q10.ilim.c1, durum KAT’Î-ŞARTLI, 7 usul alt kümesi, 5 türetme yolu | B |
+| V.2.5.22 | **Semi’** (sübûtî): ortak çekirdek hücresi Q10.semi.c1, durum KAT’Î-ŞARTLI, 3 usul alt kümesi, 4 türetme yolu; ayrı sıfat mı ilme dönüş mü kanadı Q10.semi.c4 kelâm içi ihtilaflıdır ve kitap onu iddia etmez (V.2.2.16–19) | B |
+| V.2.5.23 | **Basar** (sübûtî): ortak çekirdek hücresi Q10.basar.c1, durum KAT’Î-ŞARTLI, 3 usul alt kümesi, 4 türetme yolu; ayrı sıfat mı ilme dönüş mü kanadı Q10.basar.c4 kelâm içi ihtilaflıdır ve kitap onu iddia etmez (V.2.2.20–23) | B |
+| V.2.5.24 | **Kudret** (sübûtî): Vâcib için zorunludur; hücre Q10.kudret.c1, durum KAT’Î-ŞARTLI, 7 usul alt kümesi, 6 türetme yolu | B |
+| V.2.5.25 | **İrade** (sübûtî): Vâcib için zorunludur; hücre Q10.irade.c1, durum KAT’Î-ŞARTLI, 15 usul alt kümesi, 6 türetme yolu | B |
+| V.2.5.26 | **Kelâm** (sübûtî): ortak çekirdek hücresi Q10.kelam.c1, durum KAT’Î-ŞARTLI, 3 usul alt kümesi, 16 türetme yolu; kelâmın zâtî ve mahlûk olmadığı kanadı Q10.kelam.c4 kelâm içi ihtilaflıdır ve kitap onu iddia etmez (V.2.2.30–33) | B |
+| V.2.5.27 | **Tekvîn** (sübûtî): ortak çekirdek hücresi Q10.tekvin.c1, durum KAT’Î-ŞARTLI, 3 usul alt kümesi, 50 türetme yolu; ayrı ezelî sıfat mı kudret ve iradeye dönüş mü kanadı Q10.tekvin.c4 kelâm içi ihtilaflıdır ve kitap onu iddia etmez (V.2.2.34–36) | B |
 | V.2.5.28 | **Hikmet** (fiilî): hücre Q10.hikmet.c1 kelâm içi ihtilaflıdır (Allah’a vâcib olan bir şey yoktur kaidesi); yine de ispat kaydı ZAN-I GÂLİB, 3 usul alt kümesi, 2 türetme yolu; kitap bunu sübûtî sıfat gibi iddia etmez | Z |
 | V.2.5.29 | **Adâlet** (fiilî): Vâcib için zorunludur; hücre Q10.adalet.c1, durum ZAN-I GÂLİB, 3 usul alt kümesi, 6 türetme yolu; insanî mânâyla aynı olup olmadığı müşterek lafız ayrımına bağlıdır (V.2.4.2) | Z |
 | V.2.5.30 | **Rahmet** (fiilî): Vâcib için zorunludur; hücre Q10.rahmet.c1, durum ZAN-I GÂLİB, 3 usul alt kümesi, 8 türetme yolu; insanî mânâyla aynı olup olmadığı müşterek lafız ayrımına bağlıdır (V.2.4.2) | Z |

@@ -1681,6 +1681,42 @@
    "aile": "hasim-ogretisi",
    "zayif": 1,
    "not_": "Menâniyye modeli (V.2.32.2), Mâtürîdî’nin aktarımıdır; kendi kitapları okunmadı (V.2.3.8)"
+  },
+  {
+   "id": "k_isitme_kemal",
+   "metin": "İşitmek bir kemâldir; işitmemek (sağırlık) bir noksandır.",
+   "tur": "turetilmis",
+   "kat": "yakîn",
+   "aile": "kemal-tayini",
+   "zayif": 1,
+   "not_": "Mâtürîdî V.2.13.22 (sağırlık âfetinden münezzehlik); neyin kemâl sayıldığı muhatapla ortaklaştırılır, hasım bu sıfatı kemâl saymayabilir"
+  },
+  {
+   "id": "k_gorme_kemal",
+   "metin": "Görmek bir kemâldir; görmemek (körlük) bir noksandır.",
+   "tur": "turetilmis",
+   "kat": "yakîn",
+   "aile": "kemal-tayini",
+   "zayif": 1,
+   "not_": "Mâtürîdî V.2.13.22 (körlük âfetinden münezzehlik); kemâl tayini muhatapla ortaklaştırılır"
+  },
+  {
+   "id": "k_konusma_kemal",
+   "metin": "Konuşabilmek bir kemâldir; konuşamamak (dilsizlik) bir noksandır.",
+   "tur": "turetilmis",
+   "kat": "yakîn",
+   "aile": "kemal-tayini",
+   "zayif": 1,
+   "not_": "Mâtürîdî V.2.13.22 (konuşma övgü vesilelerinin en üstünüdür), V.2.13.9; kemâl tayini muhatapla ortaklaştırılır; bu önerme konuşabilmeyi kemâl sayar, fiilen konuştuğunu göstermez"
+  },
+  {
+   "id": "k_konusmama_sebebi",
+   "metin": "Bilen ve gücü yeten bir fâilin konuşmaması, ya acz veya engel (âfet) sebebiyledir ya da konuşmayı dilememesindendir; konuşma kudreti her iki hâlde de ondadır.",
+   "tur": "mantik",
+   "kat": "yakîn",
+   "aile": "",
+   "zayif": 0,
+   "not_": "Mâtürîdî V.2.13.21–22 yalnız âfeti anar; sükût (dilememe) kolu V.2.13.22’deki “ya acz ya sükût” ifadesinden gelir ve Claude tenkididir: bu önerme Vâcib’in konuşabildiğini gösterir, konuştuğunu göstermez"
   }
  ],
  "soru": [
@@ -1941,7 +1977,7 @@
    "hasir": "aklî",
    "hasir_notu": "Bir sıfat Vâcib için ya zorunludur ya mümkindir ya imkânsızdır (kip hasırı, aklî).",
    "grup": "sıfat",
-   "atif": "V.2.2; kelâm içi ihtilaf: Mu’tezile ilme döndürür; kitap yalnız noksandan münezzehliği iddia eder (V.2.1.10)",
+   "atif": "V.2.2; ortak çekirdek c1, ilme dönüş ihtilafı c4 (V.2.1.10)",
    "ust_hucre": ""
   },
   {
@@ -1951,7 +1987,7 @@
    "hasir": "aklî",
    "hasir_notu": "Bir sıfat Vâcib için ya zorunludur ya mümkindir ya imkânsızdır (kip hasırı, aklî).",
    "grup": "sıfat",
-   "atif": "V.2.2; kelâm içi ihtilaf: Mu’tezile ilme döndürür; kitap yalnız noksandan münezzehliği iddia eder (V.2.1.10)",
+   "atif": "V.2.2; ortak çekirdek c1, ilme dönüş ihtilafı c4 (V.2.1.10)",
    "ust_hucre": ""
   },
   {
@@ -1961,7 +1997,7 @@
    "hasir": "aklî",
    "hasir_notu": "Bir sıfat Vâcib için ya zorunludur ya mümkindir ya imkânsızdır (kip hasırı, aklî).",
    "grup": "sıfat",
-   "atif": "V.2.2; kelâm-ı nefsî ve lafzî ihtilafı (V.3.1.6)",
+   "atif": "V.2.2; ortak çekirdek c1, kelâm-ı nefsî ve lafzî ihtilafı c4 (V.3.1.6)",
    "ust_hucre": ""
   },
   {
@@ -1971,7 +2007,7 @@
    "hasir": "aklî",
    "hasir_notu": "Bir sıfat Vâcib için ya zorunludur ya mümkindir ya imkânsızdır (kip hasırı, aklî).",
    "grup": "sıfat",
-   "atif": "V.2.2; kelâm içi ihtilaf: Mâtürîdî ayrı sıfat sayar, Eş’arî kudret ve iradeye döndürür; kitap iddia etmez (V.2.1.10)",
+   "atif": "V.2.2; ortak çekirdek c1, ayrı sıfat mı kudret ve iradeye dönüş mü c4 (V.2.1.10)",
    "ust_hucre": ""
   },
   {
@@ -4554,21 +4590,31 @@
    "id": "Q10.semi.c1",
    "soru": "Q10.semi",
    "ad": "zorunlu",
-   "metin": "Vâcib ‘semi’ (işitme)’ sıfatına zorunlu olarak sahiptir.",
-   "hukum": "İHTİLAFLI",
+   "metin": "Vâcib işitme kemâlinden mahrum değildir; işitmeme (sağırlık) noksanı Vâcib’de bulunamaz.",
+   "hukum": "DOĞRU",
    "tur": "sifat",
    "kapsam_cerhi": [],
    "alt_soru": "",
-   "not_": "kelâm içi ihtilaf: Mu’tezile ilme döndürür; kitap yalnız noksandan münezzehliği iddia eder (V.2.1.10)",
-   "durum": "İHTİLAFLI",
-   "kat": -1,
-   "en_iyi": "",
-   "ispat_say": 0,
-   "W": [],
-   "fam": [],
-   "yol": "0",
-   "yol_altkume": 0,
-   "asgari_yollar": []
+   "not_": "ortak çekirdek c1, ilme dönüş ihtilafı c4 (V.2.1.10)",
+   "durum": "KAT’Î-ŞARTLI",
+   "kat": 3,
+   "en_iyi": "Q10.semi.c1/U07",
+   "ispat_say": 2,
+   "W": [
+    "k_isitme_kemal",
+    "k_sinirli_mumkin"
+   ],
+   "fam": [
+    "kemal-tayini",
+    "sebep-ilkesi-hal"
+   ],
+   "yol": "4",
+   "yol_altkume": 3,
+   "asgari_yollar": [
+    [
+     "U07"
+    ]
+   ]
   },
   {
    "id": "Q10.semi.c2",
@@ -4583,15 +4629,15 @@
    "durum": "KAT’Î-ŞARTLI",
    "kat": 3,
    "en_iyi": "Q10.semi.c2/U07",
-   "ispat_say": 1,
+   "ispat_say": 4,
    "W": [
     "k_tercihsiz_hal"
    ],
    "fam": [
     "sebep-ilkesi-hal"
    ],
-   "yol": "1",
-   "yol_altkume": 1,
+   "yol": "6",
+   "yol_altkume": 7,
    "asgari_yollar": [
     [
      "U07"
@@ -4611,7 +4657,7 @@
    "durum": "KAT’Î-ŞARTLI",
    "kat": 3,
    "en_iyi": "Q10.semi.c3/U07",
-   "ispat_say": 1,
+   "ispat_say": 4,
    "W": [
     "k_kemal",
     "k_sinirli_mumkin"
@@ -4620,8 +4666,8 @@
     "kemal",
     "sebep-ilkesi-hal"
    ],
-   "yol": "3",
-   "yol_altkume": 1,
+   "yol": "8",
+   "yol_altkume": 7,
    "asgari_yollar": [
     [
      "U07"
@@ -4629,15 +4675,15 @@
    ]
   },
   {
-   "id": "Q10.basar.c1",
-   "soru": "Q10.basar",
-   "ad": "zorunlu",
-   "metin": "Vâcib ‘basar (görme)’ sıfatına zorunlu olarak sahiptir.",
+   "id": "Q10.semi.c4",
+   "soru": "Q10.semi",
+   "ad": "ilimden ayrı sıfat",
+   "metin": "Semi’ ilimden ayrı, zâta zâid ezelî bir sıfattır (ilme döndürülmez).",
    "hukum": "İHTİLAFLI",
    "tur": "sifat",
    "kapsam_cerhi": [],
    "alt_soru": "",
-   "not_": "kelâm içi ihtilaf: Mu’tezile ilme döndürür; kitap yalnız noksandan münezzehliği iddia eder (V.2.1.10)",
+   "not_": "kelâm içi ihtilaf: Mu’tezile ilme döndürür (hafızadan, yoklanmadı); Mâtürîdî’nin Kâ’bî’ye karşı aktarımı V.2.12.7 ve V.2.12.10’dadır; kitap ortak çekirdeği (c1) iddia eder, bu hücreyi iddia etmez ve çürütmez (V.2.1.10)",
    "durum": "İHTİLAFLI",
    "kat": -1,
    "en_iyi": "",
@@ -4647,6 +4693,36 @@
    "yol": "0",
    "yol_altkume": 0,
    "asgari_yollar": []
+  },
+  {
+   "id": "Q10.basar.c1",
+   "soru": "Q10.basar",
+   "ad": "zorunlu",
+   "metin": "Vâcib görme kemâlinden mahrum değildir; görmeme (körlük) noksanı Vâcib’de bulunamaz.",
+   "hukum": "DOĞRU",
+   "tur": "sifat",
+   "kapsam_cerhi": [],
+   "alt_soru": "",
+   "not_": "ortak çekirdek c1, ilme dönüş ihtilafı c4 (V.2.1.10)",
+   "durum": "KAT’Î-ŞARTLI",
+   "kat": 3,
+   "en_iyi": "Q10.basar.c1/U07",
+   "ispat_say": 2,
+   "W": [
+    "k_gorme_kemal",
+    "k_sinirli_mumkin"
+   ],
+   "fam": [
+    "kemal-tayini",
+    "sebep-ilkesi-hal"
+   ],
+   "yol": "4",
+   "yol_altkume": 3,
+   "asgari_yollar": [
+    [
+     "U07"
+    ]
+   ]
   },
   {
    "id": "Q10.basar.c2",
@@ -4661,15 +4737,15 @@
    "durum": "KAT’Î-ŞARTLI",
    "kat": 3,
    "en_iyi": "Q10.basar.c2/U07",
-   "ispat_say": 1,
+   "ispat_say": 4,
    "W": [
     "k_tercihsiz_hal"
    ],
    "fam": [
     "sebep-ilkesi-hal"
    ],
-   "yol": "1",
-   "yol_altkume": 1,
+   "yol": "6",
+   "yol_altkume": 7,
    "asgari_yollar": [
     [
      "U07"
@@ -4689,7 +4765,7 @@
    "durum": "KAT’Î-ŞARTLI",
    "kat": 3,
    "en_iyi": "Q10.basar.c3/U07",
-   "ispat_say": 1,
+   "ispat_say": 4,
    "W": [
     "k_kemal",
     "k_sinirli_mumkin"
@@ -4698,8 +4774,8 @@
     "kemal",
     "sebep-ilkesi-hal"
    ],
-   "yol": "3",
-   "yol_altkume": 1,
+   "yol": "8",
+   "yol_altkume": 7,
    "asgari_yollar": [
     [
      "U07"
@@ -4707,15 +4783,15 @@
    ]
   },
   {
-   "id": "Q10.kelam.c1",
-   "soru": "Q10.kelam",
-   "ad": "zorunlu",
-   "metin": "Vâcib ‘kelâm’ sıfatına zorunlu olarak sahiptir.",
+   "id": "Q10.basar.c4",
+   "soru": "Q10.basar",
+   "ad": "ilimden ayrı sıfat",
+   "metin": "Basar ilimden ayrı, zâta zâid ezelî bir sıfattır (ilme döndürülmez).",
    "hukum": "İHTİLAFLI",
    "tur": "sifat",
    "kapsam_cerhi": [],
    "alt_soru": "",
-   "not_": "kelâm-ı nefsî ve lafzî ihtilafı (V.3.1.6)",
+   "not_": "kelâm içi ihtilaf: Mu’tezile ilme döndürür (hafızadan, yoklanmadı); kitap ortak çekirdeği (c1) iddia eder, bu hücreyi iddia etmez ve çürütmez (V.2.1.10)",
    "durum": "İHTİLAFLI",
    "kat": -1,
    "en_iyi": "",
@@ -4725,6 +4801,36 @@
    "yol": "0",
    "yol_altkume": 0,
    "asgari_yollar": []
+  },
+  {
+   "id": "Q10.kelam.c1",
+   "soru": "Q10.kelam",
+   "ad": "zorunlu",
+   "metin": "Vâcib konuşma kemâlinden mahrum değildir; konuşamama (dilsizlik) noksanı Vâcib’de bulunamaz. Fiilen konuştuğu, yani bildirdiği H3’ün meselesidir.",
+   "hukum": "DOĞRU",
+   "tur": "sifat",
+   "kapsam_cerhi": [],
+   "alt_soru": "",
+   "not_": "ortak çekirdek c1, kelâm-ı nefsî ve lafzî ihtilafı c4 (V.3.1.6)",
+   "durum": "KAT’Î-ŞARTLI",
+   "kat": 3,
+   "en_iyi": "Q10.kelam.c1/U07",
+   "ispat_say": 3,
+   "W": [
+    "k_konusma_kemal",
+    "k_sinirli_mumkin"
+   ],
+   "fam": [
+    "kemal-tayini",
+    "sebep-ilkesi-hal"
+   ],
+   "yol": "16",
+   "yol_altkume": 3,
+   "asgari_yollar": [
+    [
+     "U07"
+    ]
+   ]
   },
   {
    "id": "Q10.kelam.c2",
@@ -4739,15 +4845,15 @@
    "durum": "KAT’Î-ŞARTLI",
    "kat": 3,
    "en_iyi": "Q10.kelam.c2/U07",
-   "ispat_say": 1,
+   "ispat_say": 5,
    "W": [
     "k_tercihsiz_hal"
    ],
    "fam": [
     "sebep-ilkesi-hal"
    ],
-   "yol": "1",
-   "yol_altkume": 1,
+   "yol": "18",
+   "yol_altkume": 7,
    "asgari_yollar": [
     [
      "U07"
@@ -4767,7 +4873,7 @@
    "durum": "KAT’Î-ŞARTLI",
    "kat": 3,
    "en_iyi": "Q10.kelam.c3/U07",
-   "ispat_say": 1,
+   "ispat_say": 5,
    "W": [
     "k_kemal",
     "k_sinirli_mumkin"
@@ -4776,8 +4882,8 @@
     "kemal",
     "sebep-ilkesi-hal"
    ],
-   "yol": "3",
-   "yol_altkume": 1,
+   "yol": "20",
+   "yol_altkume": 7,
    "asgari_yollar": [
     [
      "U07"
@@ -4785,15 +4891,15 @@
    ]
   },
   {
-   "id": "Q10.tekvin.c1",
-   "soru": "Q10.tekvin",
-   "ad": "zorunlu",
-   "metin": "Vâcib ‘tekvîn’ sıfatına zorunlu olarak sahiptir.",
+   "id": "Q10.kelam.c4",
+   "soru": "Q10.kelam",
+   "ad": "kelâm-ı nefsî",
+   "metin": "Kelâm, zâtla kâim, ezelî ve mahlûk olmayan bir sıfattır (kelâm-ı nefsî); okunan ve yazılan lafız bunun mecazî adıdır ve hâdistir.",
    "hukum": "İHTİLAFLI",
    "tur": "sifat",
    "kapsam_cerhi": [],
    "alt_soru": "",
-   "not_": "kelâm içi ihtilaf: Mâtürîdî ayrı sıfat sayar, Eş’arî kudret ve iradeye döndürür; kitap iddia etmez (V.2.1.10)",
+   "not_": "kelâm içi ihtilaf: Kâ’bî ve Mu’tezile kelâmı hâdis sayar (Mâtürîdî’nin aktarımı V.2.13.1–19); Mâtürîdî’nin cevabı V.2.13.20–31; kelâm-ı nefsî ve lafzî ayrımı V.3.1.6; kitap ortak çekirdeği (c1) iddia eder, bu hücreyi iddia etmez (V.2.1.10)",
    "durum": "İHTİLAFLI",
    "kat": -1,
    "en_iyi": "",
@@ -4803,6 +4909,37 @@
    "yol": "0",
    "yol_altkume": 0,
    "asgari_yollar": []
+  },
+  {
+   "id": "Q10.tekvin.c1",
+   "soru": "Q10.tekvin",
+   "ad": "zorunlu",
+   "metin": "Vâcib’in var etme (tekvîn) kemâli vardır: var etmeye kâdirdir ve var eder. Bunun kudret ve iradenin taalluku mu ayrı bir ezelî sıfat mı olduğu c4’tedir.",
+   "hukum": "DOĞRU",
+   "tur": "sifat",
+   "kapsam_cerhi": [],
+   "alt_soru": "",
+   "not_": "ortak çekirdek c1, ayrı sıfat mı kudret ve iradeye dönüş mü c4 (V.2.1.10)",
+   "durum": "KAT’Î-ŞARTLI",
+   "kat": 3,
+   "en_iyi": "Q10.tekvin.c1/U07",
+   "ispat_say": 2,
+   "W": [
+    "k_tercihsiz_hal"
+   ],
+   "fam": [
+    "sebep-ilkesi-hal"
+   ],
+   "yol": "50",
+   "yol_altkume": 3,
+   "asgari_yollar": [
+    [
+     "U07"
+    ],
+    [
+     "U24"
+    ]
+   ]
   },
   {
    "id": "Q10.tekvin.c2",
@@ -4817,18 +4954,24 @@
    "durum": "KAT’Î-ŞARTLI",
    "kat": 3,
    "en_iyi": "Q10.tekvin.c2/U07",
-   "ispat_say": 1,
+   "ispat_say": 4,
    "W": [
     "k_tercihsiz_hal"
    ],
    "fam": [
     "sebep-ilkesi-hal"
    ],
-   "yol": "1",
-   "yol_altkume": 1,
+   "yol": "53",
+   "yol_altkume": 7,
    "asgari_yollar": [
     [
      "U07"
+    ],
+    [
+     "U08"
+    ],
+    [
+     "U24"
     ]
    ]
   },
@@ -4845,20 +4988,46 @@
    "durum": "KAT’Î-ŞARTLI",
    "kat": 3,
    "en_iyi": "Q10.tekvin.c3/U07",
-   "ispat_say": 1,
+   "ispat_say": 4,
    "W": [
     "k_tercihsiz_hal"
    ],
    "fam": [
     "sebep-ilkesi-hal"
    ],
-   "yol": "12",
-   "yol_altkume": 1,
+   "yol": "64",
+   "yol_altkume": 7,
    "asgari_yollar": [
     [
      "U07"
+    ],
+    [
+     "U08"
+    ],
+    [
+     "U24"
     ]
    ]
+  },
+  {
+   "id": "Q10.tekvin.c4",
+   "soru": "Q10.tekvin",
+   "ad": "ayrı ezelî sıfat",
+   "metin": "Tekvîn, kudret ve iradeden ayrı, ezelî bir sıfattır (Mâtürîdî sayımı).",
+   "hukum": "İHTİLAFLI",
+   "tur": "sifat",
+   "kapsam_cerhi": [],
+   "alt_soru": "",
+   "not_": "kelâm içi ihtilaf: Mâtürîdî ayrı sıfat sayar (V.2.11); Eş’arî kudret ve iradeye döndürür (hafızadan, yoklanmadı); kitap ortak çekirdeği (c1) iddia eder, bu hücreyi iddia etmez (V.2.1.10)",
+   "durum": "İHTİLAFLI",
+   "kat": -1,
+   "en_iyi": "",
+   "ispat_say": 0,
+   "W": [],
+   "fam": [],
+   "yol": "0",
+   "yol_altkume": 0,
+   "asgari_yollar": []
   },
   {
    "id": "Q10.hikmet.c1",
@@ -9973,6 +10142,260 @@
    "yol": "1"
   },
   {
+   "id": "Q10.semi.c1/U07",
+   "hucre": "Q10.semi.c1",
+   "usul": "U07",
+   "tur": "direct",
+   "ozet": "Vâcib hiçbir kemâlden mahrum değildir (Q14.c1); işitmek kemâldir; öyleyse Vâcib işitmeden mahrum değildir.",
+   "tag": null,
+   "hudut": "Yalnız işitme kemâlinden mahrum olmamayı kapsar; bunun ayrı bir sıfat mı yoksa ilmin işitilene taalluku mu olduğu c4’tedir ve ihtilaflıdır.",
+   "sarti": null,
+   "kismi": "",
+   "prem": [
+    "k_isitme_kemal",
+    "H:Q14.c1"
+   ],
+   "katman": 2,
+   "kat": 3,
+   "durum": "KAT’Î-ŞARTLI",
+   "W": [
+    "k_isitme_kemal",
+    "k_sinirli_mumkin"
+   ],
+   "fam": [
+    "kemal-tayini",
+    "sebep-ilkesi-hal"
+   ],
+   "yol": "3"
+  },
+  {
+   "id": "Q10.semi.c1/U09",
+   "hucre": "Q10.semi.c1",
+   "usul": "U09",
+   "tur": "direct",
+   "ozet": "Şâhidde (yaratıklarda) işitme kemâli bulunur; onu veren Vâcib bu kemâlden mahrum olamaz.",
+   "tag": null,
+   "hudut": "Gâib–şâhid yalnız kemâl için işler, noksan için işlemez.",
+   "sarti": null,
+   "kismi": "",
+   "prem": [
+    "k_kemal",
+    "k_isitme_kemal",
+    "k_fail_vacib"
+   ],
+   "katman": 1,
+   "kat": 1,
+   "durum": "ZANNÎ",
+   "W": [
+    "k_fail_vacib",
+    "k_isitme_kemal",
+    "k_kemal"
+   ],
+   "fam": [
+    "kemal",
+    "kemal-tayini",
+    "sebep-ilkesi-varlik"
+   ],
+   "yol": "1"
+  },
+  {
+   "id": "Q10.basar.c1/U07",
+   "hucre": "Q10.basar.c1",
+   "usul": "U07",
+   "tur": "direct",
+   "ozet": "Vâcib hiçbir kemâlden mahrum değildir (Q14.c1); görmek kemâldir; öyleyse Vâcib görmeden mahrum değildir.",
+   "tag": null,
+   "hudut": "Yalnız görme kemâlinden mahrum olmamayı kapsar; ayrı sıfat mı ilme dönüş mü sorusu c4’tedir ve ihtilaflıdır.",
+   "sarti": null,
+   "kismi": "",
+   "prem": [
+    "k_gorme_kemal",
+    "H:Q14.c1"
+   ],
+   "katman": 2,
+   "kat": 3,
+   "durum": "KAT’Î-ŞARTLI",
+   "W": [
+    "k_gorme_kemal",
+    "k_sinirli_mumkin"
+   ],
+   "fam": [
+    "kemal-tayini",
+    "sebep-ilkesi-hal"
+   ],
+   "yol": "3"
+  },
+  {
+   "id": "Q10.basar.c1/U09",
+   "hucre": "Q10.basar.c1",
+   "usul": "U09",
+   "tur": "direct",
+   "ozet": "Şâhidde görme kemâli bulunur; onu veren Vâcib bu kemâlden mahrum olamaz.",
+   "tag": null,
+   "hudut": "Gâib–şâhid yalnız kemâl için işler, noksan için işlemez.",
+   "sarti": null,
+   "kismi": "",
+   "prem": [
+    "k_kemal",
+    "k_gorme_kemal",
+    "k_fail_vacib"
+   ],
+   "katman": 1,
+   "kat": 1,
+   "durum": "ZANNÎ",
+   "W": [
+    "k_fail_vacib",
+    "k_gorme_kemal",
+    "k_kemal"
+   ],
+   "fam": [
+    "kemal",
+    "kemal-tayini",
+    "sebep-ilkesi-varlik"
+   ],
+   "yol": "1"
+  },
+  {
+   "id": "Q10.kelam.c1/U07",
+   "hucre": "Q10.kelam.c1",
+   "usul": "U07",
+   "tur": "direct",
+   "ozet": "Vâcib hiçbir kemâlden mahrum değildir (Q14.c1); konuşabilmek kemâldir; öyleyse Vâcib konuşabilir.",
+   "tag": null,
+   "hudut": "Yalnız konuşma kemâlinden mahrum olmamayı kapsar; konuşup konuşmadığı H3’ün, kelâmın zâtî ve mahlûk olmadığı c4’ün meselesidir.",
+   "sarti": null,
+   "kismi": "",
+   "prem": [
+    "k_konusma_kemal",
+    "H:Q14.c1"
+   ],
+   "katman": 2,
+   "kat": 3,
+   "durum": "KAT’Î-ŞARTLI",
+   "W": [
+    "k_konusma_kemal",
+    "k_sinirli_mumkin"
+   ],
+   "fam": [
+    "kemal-tayini",
+    "sebep-ilkesi-hal"
+   ],
+   "yol": "3"
+  },
+  {
+   "id": "Q10.kelam.c1/U07#2",
+   "hucre": "Q10.kelam.c1",
+   "usul": "U07",
+   "tur": "direct",
+   "ozet": "Âlim ve kâdir olan konuşmuyorsa sebep acz veya engel değildir (Vâcib’de bunlar yoktur); geriye yalnız dilememe kalır ve bu hâlde de konuşma kudreti vardır.",
+   "tag": null,
+   "hudut": "Konuşma kudretini gösterir, fiilen konuştuğunu göstermez (H3 köprüsü).",
+   "sarti": null,
+   "kismi": "",
+   "prem": [
+    "H:Q10.ilim.c1",
+    "H:Q10.kudret.c1",
+    "k_konusmama_sebebi",
+    "k_konusma_kemal"
+   ],
+   "katman": 3,
+   "kat": 3,
+   "durum": "KAT’Î-ŞARTLI",
+   "W": [
+    "k_konusma_kemal",
+    "k_tercihsiz_hal"
+   ],
+   "fam": [
+    "kemal-tayini",
+    "sebep-ilkesi-hal"
+   ],
+   "yol": "12"
+  },
+  {
+   "id": "Q10.kelam.c1/U09",
+   "hucre": "Q10.kelam.c1",
+   "usul": "U09",
+   "tur": "direct",
+   "ozet": "Şâhidde konuşma kemâli bulunur ve insanı diğer canlılardan ayırır; onu veren Vâcib bu kemâlden mahrum olamaz.",
+   "tag": null,
+   "hudut": "Gâib–şâhid yalnız kemâl için işler, noksan için işlemez.",
+   "sarti": null,
+   "kismi": "",
+   "prem": [
+    "k_kemal",
+    "k_konusma_kemal",
+    "k_fail_vacib"
+   ],
+   "katman": 1,
+   "kat": 1,
+   "durum": "ZANNÎ",
+   "W": [
+    "k_fail_vacib",
+    "k_kemal",
+    "k_konusma_kemal"
+   ],
+   "fam": [
+    "kemal",
+    "kemal-tayini",
+    "sebep-ilkesi-varlik"
+   ],
+   "yol": "1"
+  },
+  {
+   "id": "Q10.tekvin.c1/U07",
+   "hucre": "Q10.tekvin.c1",
+   "usul": "U07",
+   "tur": "direct",
+   "ozet": "Vâcib âlemi ihtiyarla var etmiş ve her an var edip ayakta tutmaktadır; var edenin var etme kemâli yoktur denemez.",
+   "tag": null,
+   "hudut": "Yalnız var etme kemâlinin varlığını gösterir; bunun kudret ve iradenin taalluku mu ayrı bir ezelî sıfat mı olduğu c4’tedir ve ihtilaflıdır.",
+   "sarti": null,
+   "kismi": "",
+   "prem": [
+    "H:Q09.c4",
+    "k_kudret_fiil"
+   ],
+   "katman": 2,
+   "kat": 3,
+   "durum": "KAT’Î-ŞARTLI",
+   "W": [
+    "k_tercihsiz_hal"
+   ],
+   "fam": [
+    "sebep-ilkesi-hal"
+   ],
+   "yol": "2"
+  },
+  {
+   "id": "Q10.tekvin.c1/U24",
+   "hucre": "Q10.tekvin.c1",
+   "usul": "U24",
+   "tur": "direct",
+   "ozet": "Fiilden fâile geçilir: var etme fiili vardır; fâil kudretli ve iradelidir; öyleyse var etme kemâli Vâcib’dedir.",
+   "tag": [
+    "enne",
+    "fail"
+   ],
+   "hudut": "",
+   "sarti": null,
+   "kismi": "",
+   "prem": [
+    "H:Q09.c4",
+    "H:Q10.kudret.c1",
+    "H:Q10.irade.c1"
+   ],
+   "katman": 3,
+   "kat": 3,
+   "durum": "KAT’Î-ŞARTLI",
+   "W": [
+    "k_tercihsiz_hal"
+   ],
+   "fam": [
+    "sebep-ilkesi-hal"
+   ],
+   "yol": "48"
+  },
+  {
    "id": "Q18.c1/U08#sibr",
    "hucre": "Q18.c1",
    "usul": "U08",
@@ -14061,6 +14484,720 @@
     "sudur-cesitlilik"
    ],
    "yol": "1"
+  },
+  {
+   "id": "Q10.semi.c2/U08#dislama",
+   "hucre": "Q10.semi.c2",
+   "usul": "U08",
+   "tur": "dislama",
+   "ozet": "Doğru hücre ispatlandığından aynı suâlin bu hücresi onunla bir arada doğru olamaz.",
+   "tag": null,
+   "hudut": "",
+   "sarti": null,
+   "kismi": "",
+   "prem": [
+    "k_hucre_dislama",
+    "D:Q10.semi.c1"
+   ],
+   "katman": 2,
+   "kat": 1,
+   "durum": "ZANNÎ",
+   "W": [
+    "k_fail_vacib",
+    "k_isitme_kemal",
+    "k_kemal"
+   ],
+   "fam": [
+    "kemal",
+    "kemal-tayini",
+    "sebep-ilkesi-varlik"
+   ],
+   "yol": "1"
+  },
+  {
+   "id": "Q10.semi.c2/U07#dis:Q10.semi.c1/U07",
+   "hucre": "Q10.semi.c2",
+   "usul": "U07",
+   "tur": "dislama",
+   "ozet": "Doğru kardeş Q10.semi.c1 bu usulle ispatlandı (Q10.semi.c1/U07); hücreler birbirini dışladığından bu hücre çürür.",
+   "tag": null,
+   "hudut": "",
+   "sarti": null,
+   "kismi": "",
+   "prem": [
+    "k_hucre_dislama",
+    "P:Q10.semi.c1/U07"
+   ],
+   "katman": 3,
+   "kat": 3,
+   "durum": "KAT’Î-ŞARTLI",
+   "W": [
+    "k_isitme_kemal",
+    "k_sinirli_mumkin"
+   ],
+   "fam": [
+    "kemal-tayini",
+    "sebep-ilkesi-hal"
+   ],
+   "yol": "3"
+  },
+  {
+   "id": "Q10.semi.c2/U09#dis:Q10.semi.c1/U09",
+   "hucre": "Q10.semi.c2",
+   "usul": "U09",
+   "tur": "dislama",
+   "ozet": "Doğru kardeş Q10.semi.c1 bu usulle ispatlandı (Q10.semi.c1/U09); hücreler birbirini dışladığından bu hücre çürür.",
+   "tag": null,
+   "hudut": "",
+   "sarti": null,
+   "kismi": "",
+   "prem": [
+    "k_hucre_dislama",
+    "P:Q10.semi.c1/U09"
+   ],
+   "katman": 2,
+   "kat": 1,
+   "durum": "ZANNÎ",
+   "W": [
+    "k_fail_vacib",
+    "k_isitme_kemal",
+    "k_kemal"
+   ],
+   "fam": [
+    "kemal",
+    "kemal-tayini",
+    "sebep-ilkesi-varlik"
+   ],
+   "yol": "1"
+  },
+  {
+   "id": "Q10.semi.c3/U08#dislama",
+   "hucre": "Q10.semi.c3",
+   "usul": "U08",
+   "tur": "dislama",
+   "ozet": "Doğru hücre ispatlandığından aynı suâlin bu hücresi onunla bir arada doğru olamaz.",
+   "tag": null,
+   "hudut": "",
+   "sarti": null,
+   "kismi": "",
+   "prem": [
+    "k_hucre_dislama",
+    "D:Q10.semi.c1"
+   ],
+   "katman": 2,
+   "kat": 1,
+   "durum": "ZANNÎ",
+   "W": [
+    "k_fail_vacib",
+    "k_isitme_kemal",
+    "k_kemal"
+   ],
+   "fam": [
+    "kemal",
+    "kemal-tayini",
+    "sebep-ilkesi-varlik"
+   ],
+   "yol": "1"
+  },
+  {
+   "id": "Q10.semi.c3/U07#dis:Q10.semi.c1/U07",
+   "hucre": "Q10.semi.c3",
+   "usul": "U07",
+   "tur": "dislama",
+   "ozet": "Doğru kardeş Q10.semi.c1 bu usulle ispatlandı (Q10.semi.c1/U07); hücreler birbirini dışladığından bu hücre çürür.",
+   "tag": null,
+   "hudut": "",
+   "sarti": null,
+   "kismi": "",
+   "prem": [
+    "k_hucre_dislama",
+    "P:Q10.semi.c1/U07"
+   ],
+   "katman": 3,
+   "kat": 3,
+   "durum": "KAT’Î-ŞARTLI",
+   "W": [
+    "k_isitme_kemal",
+    "k_sinirli_mumkin"
+   ],
+   "fam": [
+    "kemal-tayini",
+    "sebep-ilkesi-hal"
+   ],
+   "yol": "3"
+  },
+  {
+   "id": "Q10.semi.c3/U09#dis:Q10.semi.c1/U09",
+   "hucre": "Q10.semi.c3",
+   "usul": "U09",
+   "tur": "dislama",
+   "ozet": "Doğru kardeş Q10.semi.c1 bu usulle ispatlandı (Q10.semi.c1/U09); hücreler birbirini dışladığından bu hücre çürür.",
+   "tag": null,
+   "hudut": "",
+   "sarti": null,
+   "kismi": "",
+   "prem": [
+    "k_hucre_dislama",
+    "P:Q10.semi.c1/U09"
+   ],
+   "katman": 2,
+   "kat": 1,
+   "durum": "ZANNÎ",
+   "W": [
+    "k_fail_vacib",
+    "k_isitme_kemal",
+    "k_kemal"
+   ],
+   "fam": [
+    "kemal",
+    "kemal-tayini",
+    "sebep-ilkesi-varlik"
+   ],
+   "yol": "1"
+  },
+  {
+   "id": "Q10.basar.c2/U08#dislama",
+   "hucre": "Q10.basar.c2",
+   "usul": "U08",
+   "tur": "dislama",
+   "ozet": "Doğru hücre ispatlandığından aynı suâlin bu hücresi onunla bir arada doğru olamaz.",
+   "tag": null,
+   "hudut": "",
+   "sarti": null,
+   "kismi": "",
+   "prem": [
+    "k_hucre_dislama",
+    "D:Q10.basar.c1"
+   ],
+   "katman": 2,
+   "kat": 1,
+   "durum": "ZANNÎ",
+   "W": [
+    "k_fail_vacib",
+    "k_gorme_kemal",
+    "k_kemal"
+   ],
+   "fam": [
+    "kemal",
+    "kemal-tayini",
+    "sebep-ilkesi-varlik"
+   ],
+   "yol": "1"
+  },
+  {
+   "id": "Q10.basar.c2/U07#dis:Q10.basar.c1/U07",
+   "hucre": "Q10.basar.c2",
+   "usul": "U07",
+   "tur": "dislama",
+   "ozet": "Doğru kardeş Q10.basar.c1 bu usulle ispatlandı (Q10.basar.c1/U07); hücreler birbirini dışladığından bu hücre çürür.",
+   "tag": null,
+   "hudut": "",
+   "sarti": null,
+   "kismi": "",
+   "prem": [
+    "k_hucre_dislama",
+    "P:Q10.basar.c1/U07"
+   ],
+   "katman": 3,
+   "kat": 3,
+   "durum": "KAT’Î-ŞARTLI",
+   "W": [
+    "k_gorme_kemal",
+    "k_sinirli_mumkin"
+   ],
+   "fam": [
+    "kemal-tayini",
+    "sebep-ilkesi-hal"
+   ],
+   "yol": "3"
+  },
+  {
+   "id": "Q10.basar.c2/U09#dis:Q10.basar.c1/U09",
+   "hucre": "Q10.basar.c2",
+   "usul": "U09",
+   "tur": "dislama",
+   "ozet": "Doğru kardeş Q10.basar.c1 bu usulle ispatlandı (Q10.basar.c1/U09); hücreler birbirini dışladığından bu hücre çürür.",
+   "tag": null,
+   "hudut": "",
+   "sarti": null,
+   "kismi": "",
+   "prem": [
+    "k_hucre_dislama",
+    "P:Q10.basar.c1/U09"
+   ],
+   "katman": 2,
+   "kat": 1,
+   "durum": "ZANNÎ",
+   "W": [
+    "k_fail_vacib",
+    "k_gorme_kemal",
+    "k_kemal"
+   ],
+   "fam": [
+    "kemal",
+    "kemal-tayini",
+    "sebep-ilkesi-varlik"
+   ],
+   "yol": "1"
+  },
+  {
+   "id": "Q10.basar.c3/U08#dislama",
+   "hucre": "Q10.basar.c3",
+   "usul": "U08",
+   "tur": "dislama",
+   "ozet": "Doğru hücre ispatlandığından aynı suâlin bu hücresi onunla bir arada doğru olamaz.",
+   "tag": null,
+   "hudut": "",
+   "sarti": null,
+   "kismi": "",
+   "prem": [
+    "k_hucre_dislama",
+    "D:Q10.basar.c1"
+   ],
+   "katman": 2,
+   "kat": 1,
+   "durum": "ZANNÎ",
+   "W": [
+    "k_fail_vacib",
+    "k_gorme_kemal",
+    "k_kemal"
+   ],
+   "fam": [
+    "kemal",
+    "kemal-tayini",
+    "sebep-ilkesi-varlik"
+   ],
+   "yol": "1"
+  },
+  {
+   "id": "Q10.basar.c3/U07#dis:Q10.basar.c1/U07",
+   "hucre": "Q10.basar.c3",
+   "usul": "U07",
+   "tur": "dislama",
+   "ozet": "Doğru kardeş Q10.basar.c1 bu usulle ispatlandı (Q10.basar.c1/U07); hücreler birbirini dışladığından bu hücre çürür.",
+   "tag": null,
+   "hudut": "",
+   "sarti": null,
+   "kismi": "",
+   "prem": [
+    "k_hucre_dislama",
+    "P:Q10.basar.c1/U07"
+   ],
+   "katman": 3,
+   "kat": 3,
+   "durum": "KAT’Î-ŞARTLI",
+   "W": [
+    "k_gorme_kemal",
+    "k_sinirli_mumkin"
+   ],
+   "fam": [
+    "kemal-tayini",
+    "sebep-ilkesi-hal"
+   ],
+   "yol": "3"
+  },
+  {
+   "id": "Q10.basar.c3/U09#dis:Q10.basar.c1/U09",
+   "hucre": "Q10.basar.c3",
+   "usul": "U09",
+   "tur": "dislama",
+   "ozet": "Doğru kardeş Q10.basar.c1 bu usulle ispatlandı (Q10.basar.c1/U09); hücreler birbirini dışladığından bu hücre çürür.",
+   "tag": null,
+   "hudut": "",
+   "sarti": null,
+   "kismi": "",
+   "prem": [
+    "k_hucre_dislama",
+    "P:Q10.basar.c1/U09"
+   ],
+   "katman": 2,
+   "kat": 1,
+   "durum": "ZANNÎ",
+   "W": [
+    "k_fail_vacib",
+    "k_gorme_kemal",
+    "k_kemal"
+   ],
+   "fam": [
+    "kemal",
+    "kemal-tayini",
+    "sebep-ilkesi-varlik"
+   ],
+   "yol": "1"
+  },
+  {
+   "id": "Q10.kelam.c2/U08#dislama",
+   "hucre": "Q10.kelam.c2",
+   "usul": "U08",
+   "tur": "dislama",
+   "ozet": "Doğru hücre ispatlandığından aynı suâlin bu hücresi onunla bir arada doğru olamaz.",
+   "tag": null,
+   "hudut": "",
+   "sarti": null,
+   "kismi": "",
+   "prem": [
+    "k_hucre_dislama",
+    "D:Q10.kelam.c1"
+   ],
+   "katman": 2,
+   "kat": 1,
+   "durum": "ZANNÎ",
+   "W": [
+    "k_fail_vacib",
+    "k_kemal",
+    "k_konusma_kemal"
+   ],
+   "fam": [
+    "kemal",
+    "kemal-tayini",
+    "sebep-ilkesi-varlik"
+   ],
+   "yol": "1"
+  },
+  {
+   "id": "Q10.kelam.c2/U07#dis:Q10.kelam.c1/U07",
+   "hucre": "Q10.kelam.c2",
+   "usul": "U07",
+   "tur": "dislama",
+   "ozet": "Doğru kardeş Q10.kelam.c1 bu usulle ispatlandı (Q10.kelam.c1/U07); hücreler birbirini dışladığından bu hücre çürür.",
+   "tag": null,
+   "hudut": "",
+   "sarti": null,
+   "kismi": "",
+   "prem": [
+    "k_hucre_dislama",
+    "P:Q10.kelam.c1/U07"
+   ],
+   "katman": 3,
+   "kat": 3,
+   "durum": "KAT’Î-ŞARTLI",
+   "W": [
+    "k_konusma_kemal",
+    "k_sinirli_mumkin"
+   ],
+   "fam": [
+    "kemal-tayini",
+    "sebep-ilkesi-hal"
+   ],
+   "yol": "3"
+  },
+  {
+   "id": "Q10.kelam.c2/U07#dis:Q10.kelam.c1/U07#2",
+   "hucre": "Q10.kelam.c2",
+   "usul": "U07",
+   "tur": "dislama",
+   "ozet": "Doğru kardeş Q10.kelam.c1 bu usulle ispatlandı (Q10.kelam.c1/U07#2); hücreler birbirini dışladığından bu hücre çürür.",
+   "tag": null,
+   "hudut": "",
+   "sarti": null,
+   "kismi": "",
+   "prem": [
+    "k_hucre_dislama",
+    "P:Q10.kelam.c1/U07#2"
+   ],
+   "katman": 4,
+   "kat": 3,
+   "durum": "KAT’Î-ŞARTLI",
+   "W": [
+    "k_konusma_kemal",
+    "k_tercihsiz_hal"
+   ],
+   "fam": [
+    "kemal-tayini",
+    "sebep-ilkesi-hal"
+   ],
+   "yol": "12"
+  },
+  {
+   "id": "Q10.kelam.c2/U09#dis:Q10.kelam.c1/U09",
+   "hucre": "Q10.kelam.c2",
+   "usul": "U09",
+   "tur": "dislama",
+   "ozet": "Doğru kardeş Q10.kelam.c1 bu usulle ispatlandı (Q10.kelam.c1/U09); hücreler birbirini dışladığından bu hücre çürür.",
+   "tag": null,
+   "hudut": "",
+   "sarti": null,
+   "kismi": "",
+   "prem": [
+    "k_hucre_dislama",
+    "P:Q10.kelam.c1/U09"
+   ],
+   "katman": 2,
+   "kat": 1,
+   "durum": "ZANNÎ",
+   "W": [
+    "k_fail_vacib",
+    "k_kemal",
+    "k_konusma_kemal"
+   ],
+   "fam": [
+    "kemal",
+    "kemal-tayini",
+    "sebep-ilkesi-varlik"
+   ],
+   "yol": "1"
+  },
+  {
+   "id": "Q10.kelam.c3/U08#dislama",
+   "hucre": "Q10.kelam.c3",
+   "usul": "U08",
+   "tur": "dislama",
+   "ozet": "Doğru hücre ispatlandığından aynı suâlin bu hücresi onunla bir arada doğru olamaz.",
+   "tag": null,
+   "hudut": "",
+   "sarti": null,
+   "kismi": "",
+   "prem": [
+    "k_hucre_dislama",
+    "D:Q10.kelam.c1"
+   ],
+   "katman": 2,
+   "kat": 1,
+   "durum": "ZANNÎ",
+   "W": [
+    "k_fail_vacib",
+    "k_kemal",
+    "k_konusma_kemal"
+   ],
+   "fam": [
+    "kemal",
+    "kemal-tayini",
+    "sebep-ilkesi-varlik"
+   ],
+   "yol": "1"
+  },
+  {
+   "id": "Q10.kelam.c3/U07#dis:Q10.kelam.c1/U07",
+   "hucre": "Q10.kelam.c3",
+   "usul": "U07",
+   "tur": "dislama",
+   "ozet": "Doğru kardeş Q10.kelam.c1 bu usulle ispatlandı (Q10.kelam.c1/U07); hücreler birbirini dışladığından bu hücre çürür.",
+   "tag": null,
+   "hudut": "",
+   "sarti": null,
+   "kismi": "",
+   "prem": [
+    "k_hucre_dislama",
+    "P:Q10.kelam.c1/U07"
+   ],
+   "katman": 3,
+   "kat": 3,
+   "durum": "KAT’Î-ŞARTLI",
+   "W": [
+    "k_konusma_kemal",
+    "k_sinirli_mumkin"
+   ],
+   "fam": [
+    "kemal-tayini",
+    "sebep-ilkesi-hal"
+   ],
+   "yol": "3"
+  },
+  {
+   "id": "Q10.kelam.c3/U07#dis:Q10.kelam.c1/U07#2",
+   "hucre": "Q10.kelam.c3",
+   "usul": "U07",
+   "tur": "dislama",
+   "ozet": "Doğru kardeş Q10.kelam.c1 bu usulle ispatlandı (Q10.kelam.c1/U07#2); hücreler birbirini dışladığından bu hücre çürür.",
+   "tag": null,
+   "hudut": "",
+   "sarti": null,
+   "kismi": "",
+   "prem": [
+    "k_hucre_dislama",
+    "P:Q10.kelam.c1/U07#2"
+   ],
+   "katman": 4,
+   "kat": 3,
+   "durum": "KAT’Î-ŞARTLI",
+   "W": [
+    "k_konusma_kemal",
+    "k_tercihsiz_hal"
+   ],
+   "fam": [
+    "kemal-tayini",
+    "sebep-ilkesi-hal"
+   ],
+   "yol": "12"
+  },
+  {
+   "id": "Q10.kelam.c3/U09#dis:Q10.kelam.c1/U09",
+   "hucre": "Q10.kelam.c3",
+   "usul": "U09",
+   "tur": "dislama",
+   "ozet": "Doğru kardeş Q10.kelam.c1 bu usulle ispatlandı (Q10.kelam.c1/U09); hücreler birbirini dışladığından bu hücre çürür.",
+   "tag": null,
+   "hudut": "",
+   "sarti": null,
+   "kismi": "",
+   "prem": [
+    "k_hucre_dislama",
+    "P:Q10.kelam.c1/U09"
+   ],
+   "katman": 2,
+   "kat": 1,
+   "durum": "ZANNÎ",
+   "W": [
+    "k_fail_vacib",
+    "k_kemal",
+    "k_konusma_kemal"
+   ],
+   "fam": [
+    "kemal",
+    "kemal-tayini",
+    "sebep-ilkesi-varlik"
+   ],
+   "yol": "1"
+  },
+  {
+   "id": "Q10.tekvin.c2/U08#dislama",
+   "hucre": "Q10.tekvin.c2",
+   "usul": "U08",
+   "tur": "dislama",
+   "ozet": "Doğru hücre ispatlandığından aynı suâlin bu hücresi onunla bir arada doğru olamaz.",
+   "tag": null,
+   "hudut": "",
+   "sarti": null,
+   "kismi": "",
+   "prem": [
+    "k_hucre_dislama",
+    "D:Q10.tekvin.c1"
+   ],
+   "katman": 3,
+   "kat": 3,
+   "durum": "KAT’Î-ŞARTLI",
+   "W": [
+    "k_tercihsiz_hal"
+   ],
+   "fam": [
+    "sebep-ilkesi-hal"
+   ],
+   "yol": "2"
+  },
+  {
+   "id": "Q10.tekvin.c2/U07#dis:Q10.tekvin.c1/U07",
+   "hucre": "Q10.tekvin.c2",
+   "usul": "U07",
+   "tur": "dislama",
+   "ozet": "Doğru kardeş Q10.tekvin.c1 bu usulle ispatlandı (Q10.tekvin.c1/U07); hücreler birbirini dışladığından bu hücre çürür.",
+   "tag": null,
+   "hudut": "",
+   "sarti": null,
+   "kismi": "",
+   "prem": [
+    "k_hucre_dislama",
+    "P:Q10.tekvin.c1/U07"
+   ],
+   "katman": 3,
+   "kat": 3,
+   "durum": "KAT’Î-ŞARTLI",
+   "W": [
+    "k_tercihsiz_hal"
+   ],
+   "fam": [
+    "sebep-ilkesi-hal"
+   ],
+   "yol": "2"
+  },
+  {
+   "id": "Q10.tekvin.c2/U24#dis:Q10.tekvin.c1/U24",
+   "hucre": "Q10.tekvin.c2",
+   "usul": "U24",
+   "tur": "dislama",
+   "ozet": "Doğru kardeş Q10.tekvin.c1 bu usulle ispatlandı (Q10.tekvin.c1/U24); hücreler birbirini dışladığından bu hücre çürür.",
+   "tag": null,
+   "hudut": "",
+   "sarti": null,
+   "kismi": "",
+   "prem": [
+    "k_hucre_dislama",
+    "P:Q10.tekvin.c1/U24"
+   ],
+   "katman": 4,
+   "kat": 3,
+   "durum": "KAT’Î-ŞARTLI",
+   "W": [
+    "k_tercihsiz_hal"
+   ],
+   "fam": [
+    "sebep-ilkesi-hal"
+   ],
+   "yol": "48"
+  },
+  {
+   "id": "Q10.tekvin.c3/U08#dislama",
+   "hucre": "Q10.tekvin.c3",
+   "usul": "U08",
+   "tur": "dislama",
+   "ozet": "Doğru hücre ispatlandığından aynı suâlin bu hücresi onunla bir arada doğru olamaz.",
+   "tag": null,
+   "hudut": "",
+   "sarti": null,
+   "kismi": "",
+   "prem": [
+    "k_hucre_dislama",
+    "D:Q10.tekvin.c1"
+   ],
+   "katman": 3,
+   "kat": 3,
+   "durum": "KAT’Î-ŞARTLI",
+   "W": [
+    "k_tercihsiz_hal"
+   ],
+   "fam": [
+    "sebep-ilkesi-hal"
+   ],
+   "yol": "2"
+  },
+  {
+   "id": "Q10.tekvin.c3/U07#dis:Q10.tekvin.c1/U07",
+   "hucre": "Q10.tekvin.c3",
+   "usul": "U07",
+   "tur": "dislama",
+   "ozet": "Doğru kardeş Q10.tekvin.c1 bu usulle ispatlandı (Q10.tekvin.c1/U07); hücreler birbirini dışladığından bu hücre çürür.",
+   "tag": null,
+   "hudut": "",
+   "sarti": null,
+   "kismi": "",
+   "prem": [
+    "k_hucre_dislama",
+    "P:Q10.tekvin.c1/U07"
+   ],
+   "katman": 3,
+   "kat": 3,
+   "durum": "KAT’Î-ŞARTLI",
+   "W": [
+    "k_tercihsiz_hal"
+   ],
+   "fam": [
+    "sebep-ilkesi-hal"
+   ],
+   "yol": "2"
+  },
+  {
+   "id": "Q10.tekvin.c3/U24#dis:Q10.tekvin.c1/U24",
+   "hucre": "Q10.tekvin.c3",
+   "usul": "U24",
+   "tur": "dislama",
+   "ozet": "Doğru kardeş Q10.tekvin.c1 bu usulle ispatlandı (Q10.tekvin.c1/U24); hücreler birbirini dışladığından bu hücre çürür.",
+   "tag": null,
+   "hudut": "",
+   "sarti": null,
+   "kismi": "",
+   "prem": [
+    "k_hucre_dislama",
+    "P:Q10.tekvin.c1/U24"
+   ],
+   "katman": 4,
+   "kat": 3,
+   "durum": "KAT’Î-ŞARTLI",
+   "W": [
+    "k_tercihsiz_hal"
+   ],
+   "fam": [
+    "sebep-ilkesi-hal"
+   ],
+   "yol": "48"
   },
   {
    "id": "Q10.adalet.c1/U08#sibr",
@@ -25551,16 +26688,16 @@
     "Hükümde sebep zinciri veya dairesi yoktur."
    ],
    "U07": [
-    "YAPILMADI",
-    "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
+    "KULLANILDI",
+    "Q10.semi.c1/U07"
    ],
    "U08": [
     "YAPILAMAZ",
     "İHTİLAFLI hücre aklî hasırı kapatmaz; kitap o hücreyi iddia etmez."
    ],
    "U09": [
-    "YAPILMADI",
-    "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
+    "KULLANILDI",
+    "Q10.semi.c1/U09"
    ],
    "U10": [
     "YAPILAMAZ",
@@ -25587,8 +26724,8 @@
     "Hads sonradan doğrulama ister; bu hükümde doğrulayıcı bir ikinci yol yok."
    ],
    "U16": [
-    "YAPILAMAZ",
-    "Birleştirilecek ikinci ispat yok (ispat sayısı 0)."
+    "KOMBİNE",
+    "2 ispat; ayrıntı kombinasyon tablosundadır."
    ],
    "U17": [
     "YAPILMADI",
@@ -25632,7 +26769,7 @@
    ],
    "U27": [
     "YAPILAMAZ",
-    "Bu hücreyi savunan kayıtlı bir felsefe yok; muhatabın öncülü bilinmiyor."
+    "Doğru hücrede çürütülecek bir iddia yoktur."
    ],
    "U28": [
     "YAPILMADI",
@@ -25640,11 +26777,11 @@
    ],
    "U29": [
     "YAPILAMAZ",
-    "Bu hücreyi savunan kayıtlı bir felsefe yok; muhatabın öncülü bilinmiyor."
+    "Doğru hücrede çürütülecek bir iddia yoktur."
    ],
    "U30": [
-    "YAPILAMAZ",
-    "Hudut gerektiren zayıf halka veya kısmî kapsam yok."
+    "HUDUT",
+    "Zayıf halkalar: k_isitme_kemal, k_sinirli_mumkin; kısmî kapsam: 0"
    ],
    "U31": [
     "YAPILAMAZ",
@@ -25682,15 +26819,15 @@
    ],
    "U07": [
     "KULLANILDI",
-    "Q10.semi.c2/U07"
+    "Q10.semi.c2/U07, Q10.semi.c2/U07#dis:Q10.semi.c1/U07"
    ],
    "U08": [
-    "YAPILAMAZ",
-    "Bu suâlde doğru hücre yok (alt suâl); hasır dışlaması kurulamaz."
+    "KULLANILDI",
+    "Q10.semi.c2/U08#dislama"
    ],
    "U09": [
-    "YAPILMADI",
-    "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
+    "KULLANILDI",
+    "Q10.semi.c2/U09#dis:Q10.semi.c1/U09"
    ],
    "U10": [
     "YAPILAMAZ",
@@ -25717,8 +26854,8 @@
     "Hads sonradan doğrulama ister; bu hükümde doğrulayıcı bir ikinci yol yok."
    ],
    "U16": [
-    "YAPILAMAZ",
-    "Birleştirilecek ikinci ispat yok (ispat sayısı 1)."
+    "KOMBİNE",
+    "4 ispat; ayrıntı kombinasyon tablosundadır."
    ],
    "U17": [
     "YAPILMADI",
@@ -25812,15 +26949,15 @@
    ],
    "U07": [
     "KULLANILDI",
-    "Q10.semi.c3/U07"
+    "Q10.semi.c3/U07, Q10.semi.c3/U07#dis:Q10.semi.c1/U07"
    ],
    "U08": [
-    "YAPILAMAZ",
-    "Bu suâlde doğru hücre yok (alt suâl); hasır dışlaması kurulamaz."
+    "KULLANILDI",
+    "Q10.semi.c3/U08#dislama"
    ],
    "U09": [
-    "YAPILMADI",
-    "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
+    "KULLANILDI",
+    "Q10.semi.c3/U09#dis:Q10.semi.c1/U09"
    ],
    "U10": [
     "YAPILAMAZ",
@@ -25847,8 +26984,8 @@
     "Hads sonradan doğrulama ister; bu hükümde doğrulayıcı bir ikinci yol yok."
    ],
    "U16": [
-    "YAPILAMAZ",
-    "Birleştirilecek ikinci ispat yok (ispat sayısı 1)."
+    "KOMBİNE",
+    "4 ispat; ayrıntı kombinasyon tablosundadır."
    ],
    "U17": [
     "YAPILMADI",
@@ -25915,7 +27052,7 @@
     "Tenbih delil değildir; yalnız varlık ve ulûhiyet hücrelerinde muhatabı yönlendirir."
    ]
   },
-  "Q10.basar.c1": {
+  "Q10.semi.c4": {
    "U01": [
     "YAPILMADI",
     "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
@@ -26021,8 +27158,138 @@
     "Karşı iddia kendi ifadesiyle kendini çürütmüyor; ilzamın şartı bu hükümde yok (Claude hükmü, yoklanmadı)."
    ],
    "U27": [
+    "YAPILMADI",
+    "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
+   ],
+   "U28": [
+    "YAPILMADI",
+    "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
+   ],
+   "U29": [
+    "YAPILMADI",
+    "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
+   ],
+   "U30": [
     "YAPILAMAZ",
-    "Bu hücreyi savunan kayıtlı bir felsefe yok; muhatabın öncülü bilinmiyor."
+    "Hudut gerektiren zayıf halka veya kısmî kapsam yok."
+   ],
+   "U31": [
+    "YAPILAMAZ",
+    "Bu usul yalnız Vâcib’in varlığı mefhumundan yürür (V.6.2.167)."
+   ],
+   "U32": [
+    "YAPILAMAZ",
+    "Tenbih delil değildir; yalnız varlık ve ulûhiyet hücrelerinde muhatabı yönlendirir."
+   ]
+  },
+  "Q10.basar.c1": {
+   "U01": [
+    "YAPILMADI",
+    "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
+   ],
+   "U02": [
+    "YAPILMADI",
+    "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
+   ],
+   "U03": [
+    "YAPILMADI",
+    "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
+   ],
+   "U04": [
+    "YAPILAMAZ",
+    "Hudûs delili âlemin başlangıcı ve hâdisin muhdisi üzerinedir; bu hükmün konusu o değildir."
+   ],
+   "U05": [
+    "YAPILAMAZ",
+    "Hükümde sebep zinciri veya dairesi yoktur."
+   ],
+   "U06": [
+    "YAPILAMAZ",
+    "Hükümde sebep zinciri veya dairesi yoktur."
+   ],
+   "U07": [
+    "KULLANILDI",
+    "Q10.basar.c1/U07"
+   ],
+   "U08": [
+    "YAPILAMAZ",
+    "İHTİLAFLI hücre aklî hasırı kapatmaz; kitap o hücreyi iddia etmez."
+   ],
+   "U09": [
+    "KULLANILDI",
+    "Q10.basar.c1/U09"
+   ],
+   "U10": [
+    "YAPILAMAZ",
+    "Aklî–metafizik hüküm haberle ispat edilmez; muhatap haberi ve vahyi kabul etmeden onu öncül yapmak kısırdöngüdür (F 3-I 187; V.0.5)."
+   ],
+   "U11": [
+    "YAPILAMAZ",
+    "Aklî–metafizik hüküm haberle ispat edilmez; muhatap haberi ve vahyi kabul etmeden onu öncül yapmak kısırdöngüdür (F 3-I 187; V.0.5)."
+   ],
+   "U12": [
+    "YAPILAMAZ",
+    "Müşâhede edilemeyen şeyi (gayb, Vâcib) doğrudan ispat edemez; bu hücrede öncül de sağlamıyor (I.4.3.5)."
+   ],
+   "U13": [
+    "YAPILAMAZ",
+    "Metafizik varlığa uygulanamaz; bu hücrede kanun düzeni öncülü de kullanılmıyor."
+   ],
+   "U14": [
+    "YAPILAMAZ",
+    "Hükmün konusu taranabilir cüz’îlerden oluşmaz; istikrâ uygulanamaz."
+   ],
+   "U15": [
+    "YAPILAMAZ",
+    "Hads sonradan doğrulama ister; bu hükümde doğrulayıcı bir ikinci yol yok."
+   ],
+   "U16": [
+    "KOMBİNE",
+    "2 ispat; ayrıntı kombinasyon tablosundadır."
+   ],
+   "U17": [
+    "YAPILMADI",
+    "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
+   ],
+   "U18": [
+    "YAPILAMAZ",
+    "Aklî–metafizik hüküm haberle ispat edilmez; muhatap haberi ve vahyi kabul etmeden onu öncül yapmak kısırdöngüdür (F 3-I 187; V.0.5)."
+   ],
+   "U19": [
+    "SINIFLANMADI",
+    "Bu hücrenin ispatlarından hiçbiri bu sınıfa etiketlenmedi."
+   ],
+   "U20": [
+    "SINIFLANMADI",
+    "Bu hücrenin ispatlarından hiçbiri bu sınıfa etiketlenmedi."
+   ],
+   "U21": [
+    "SINIFLANMADI",
+    "Bu hücrenin ispatlarından hiçbiri bu sınıfa etiketlenmedi."
+   ],
+   "U22": [
+    "YAPILAMAZ",
+    "Vâcib basittir ve maddesi yoktur; maddî sebep orta terim olamaz."
+   ],
+   "U23": [
+    "SINIFLANMADI",
+    "Bu hücrenin ispatlarından hiçbiri bu sınıfa etiketlenmedi."
+   ],
+   "U24": [
+    "SINIFLANMADI",
+    "Bu hücrenin ispatlarından hiçbiri bu sınıfa etiketlenmedi."
+   ],
+   "U25": [
+    "SINIFLANMADI",
+    "Bu hücrenin ispatlarından hiçbiri bu sınıfa etiketlenmedi."
+   ],
+   "U26": [
+    "YAPILAMAZ",
+    "Karşı iddia kendi ifadesiyle kendini çürütmüyor; ilzamın şartı bu hükümde yok (Claude hükmü, yoklanmadı)."
+   ],
+   "U27": [
+    "YAPILAMAZ",
+    "Doğru hücrede çürütülecek bir iddia yoktur."
    ],
    "U28": [
     "YAPILMADI",
@@ -26030,11 +27297,11 @@
    ],
    "U29": [
     "YAPILAMAZ",
-    "Bu hücreyi savunan kayıtlı bir felsefe yok; muhatabın öncülü bilinmiyor."
+    "Doğru hücrede çürütülecek bir iddia yoktur."
    ],
    "U30": [
-    "YAPILAMAZ",
-    "Hudut gerektiren zayıf halka veya kısmî kapsam yok."
+    "HUDUT",
+    "Zayıf halkalar: k_gorme_kemal, k_sinirli_mumkin; kısmî kapsam: 0"
    ],
    "U31": [
     "YAPILAMAZ",
@@ -26072,15 +27339,15 @@
    ],
    "U07": [
     "KULLANILDI",
-    "Q10.basar.c2/U07"
+    "Q10.basar.c2/U07, Q10.basar.c2/U07#dis:Q10.basar.c1/U07"
    ],
    "U08": [
-    "YAPILAMAZ",
-    "Bu suâlde doğru hücre yok (alt suâl); hasır dışlaması kurulamaz."
+    "KULLANILDI",
+    "Q10.basar.c2/U08#dislama"
    ],
    "U09": [
-    "YAPILMADI",
-    "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
+    "KULLANILDI",
+    "Q10.basar.c2/U09#dis:Q10.basar.c1/U09"
    ],
    "U10": [
     "YAPILAMAZ",
@@ -26107,8 +27374,8 @@
     "Hads sonradan doğrulama ister; bu hükümde doğrulayıcı bir ikinci yol yok."
    ],
    "U16": [
-    "YAPILAMAZ",
-    "Birleştirilecek ikinci ispat yok (ispat sayısı 1)."
+    "KOMBİNE",
+    "4 ispat; ayrıntı kombinasyon tablosundadır."
    ],
    "U17": [
     "YAPILMADI",
@@ -26202,15 +27469,15 @@
    ],
    "U07": [
     "KULLANILDI",
-    "Q10.basar.c3/U07"
+    "Q10.basar.c3/U07, Q10.basar.c3/U07#dis:Q10.basar.c1/U07"
    ],
    "U08": [
-    "YAPILAMAZ",
-    "Bu suâlde doğru hücre yok (alt suâl); hasır dışlaması kurulamaz."
+    "KULLANILDI",
+    "Q10.basar.c3/U08#dislama"
    ],
    "U09": [
-    "YAPILMADI",
-    "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
+    "KULLANILDI",
+    "Q10.basar.c3/U09#dis:Q10.basar.c1/U09"
    ],
    "U10": [
     "YAPILAMAZ",
@@ -26237,8 +27504,8 @@
     "Hads sonradan doğrulama ister; bu hükümde doğrulayıcı bir ikinci yol yok."
    ],
    "U16": [
-    "YAPILAMAZ",
-    "Birleştirilecek ikinci ispat yok (ispat sayısı 1)."
+    "KOMBİNE",
+    "4 ispat; ayrıntı kombinasyon tablosundadır."
    ],
    "U17": [
     "YAPILMADI",
@@ -26305,7 +27572,7 @@
     "Tenbih delil değildir; yalnız varlık ve ulûhiyet hücrelerinde muhatabı yönlendirir."
    ]
   },
-  "Q10.kelam.c1": {
+  "Q10.basar.c4": {
    "U01": [
     "YAPILMADI",
     "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
@@ -26411,8 +27678,138 @@
     "Karşı iddia kendi ifadesiyle kendini çürütmüyor; ilzamın şartı bu hükümde yok (Claude hükmü, yoklanmadı)."
    ],
    "U27": [
+    "YAPILMADI",
+    "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
+   ],
+   "U28": [
+    "YAPILMADI",
+    "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
+   ],
+   "U29": [
+    "YAPILMADI",
+    "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
+   ],
+   "U30": [
     "YAPILAMAZ",
-    "Bu hücreyi savunan kayıtlı bir felsefe yok; muhatabın öncülü bilinmiyor."
+    "Hudut gerektiren zayıf halka veya kısmî kapsam yok."
+   ],
+   "U31": [
+    "YAPILAMAZ",
+    "Bu usul yalnız Vâcib’in varlığı mefhumundan yürür (V.6.2.167)."
+   ],
+   "U32": [
+    "YAPILAMAZ",
+    "Tenbih delil değildir; yalnız varlık ve ulûhiyet hücrelerinde muhatabı yönlendirir."
+   ]
+  },
+  "Q10.kelam.c1": {
+   "U01": [
+    "YAPILMADI",
+    "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
+   ],
+   "U02": [
+    "YAPILMADI",
+    "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
+   ],
+   "U03": [
+    "YAPILMADI",
+    "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
+   ],
+   "U04": [
+    "YAPILAMAZ",
+    "Hudûs delili âlemin başlangıcı ve hâdisin muhdisi üzerinedir; bu hükmün konusu o değildir."
+   ],
+   "U05": [
+    "YAPILAMAZ",
+    "Hükümde sebep zinciri veya dairesi yoktur."
+   ],
+   "U06": [
+    "YAPILAMAZ",
+    "Hükümde sebep zinciri veya dairesi yoktur."
+   ],
+   "U07": [
+    "KULLANILDI",
+    "Q10.kelam.c1/U07, Q10.kelam.c1/U07#2"
+   ],
+   "U08": [
+    "YAPILAMAZ",
+    "İHTİLAFLI hücre aklî hasırı kapatmaz; kitap o hücreyi iddia etmez."
+   ],
+   "U09": [
+    "KULLANILDI",
+    "Q10.kelam.c1/U09"
+   ],
+   "U10": [
+    "YAPILAMAZ",
+    "Aklî–metafizik hüküm haberle ispat edilmez; muhatap haberi ve vahyi kabul etmeden onu öncül yapmak kısırdöngüdür (F 3-I 187; V.0.5)."
+   ],
+   "U11": [
+    "YAPILAMAZ",
+    "Aklî–metafizik hüküm haberle ispat edilmez; muhatap haberi ve vahyi kabul etmeden onu öncül yapmak kısırdöngüdür (F 3-I 187; V.0.5)."
+   ],
+   "U12": [
+    "YAPILAMAZ",
+    "Müşâhede edilemeyen şeyi (gayb, Vâcib) doğrudan ispat edemez; bu hücrede öncül de sağlamıyor (I.4.3.5)."
+   ],
+   "U13": [
+    "YAPILAMAZ",
+    "Metafizik varlığa uygulanamaz; bu hücrede kanun düzeni öncülü de kullanılmıyor."
+   ],
+   "U14": [
+    "YAPILAMAZ",
+    "Hükmün konusu taranabilir cüz’îlerden oluşmaz; istikrâ uygulanamaz."
+   ],
+   "U15": [
+    "YAPILAMAZ",
+    "Hads sonradan doğrulama ister; bu hükümde doğrulayıcı bir ikinci yol yok."
+   ],
+   "U16": [
+    "KOMBİNE",
+    "3 ispat; ayrıntı kombinasyon tablosundadır."
+   ],
+   "U17": [
+    "YAPILMADI",
+    "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
+   ],
+   "U18": [
+    "YAPILAMAZ",
+    "Aklî–metafizik hüküm haberle ispat edilmez; muhatap haberi ve vahyi kabul etmeden onu öncül yapmak kısırdöngüdür (F 3-I 187; V.0.5)."
+   ],
+   "U19": [
+    "SINIFLANMADI",
+    "Bu hücrenin ispatlarından hiçbiri bu sınıfa etiketlenmedi."
+   ],
+   "U20": [
+    "SINIFLANMADI",
+    "Bu hücrenin ispatlarından hiçbiri bu sınıfa etiketlenmedi."
+   ],
+   "U21": [
+    "SINIFLANMADI",
+    "Bu hücrenin ispatlarından hiçbiri bu sınıfa etiketlenmedi."
+   ],
+   "U22": [
+    "YAPILAMAZ",
+    "Vâcib basittir ve maddesi yoktur; maddî sebep orta terim olamaz."
+   ],
+   "U23": [
+    "SINIFLANMADI",
+    "Bu hücrenin ispatlarından hiçbiri bu sınıfa etiketlenmedi."
+   ],
+   "U24": [
+    "SINIFLANMADI",
+    "Bu hücrenin ispatlarından hiçbiri bu sınıfa etiketlenmedi."
+   ],
+   "U25": [
+    "SINIFLANMADI",
+    "Bu hücrenin ispatlarından hiçbiri bu sınıfa etiketlenmedi."
+   ],
+   "U26": [
+    "YAPILAMAZ",
+    "Karşı iddia kendi ifadesiyle kendini çürütmüyor; ilzamın şartı bu hükümde yok (Claude hükmü, yoklanmadı)."
+   ],
+   "U27": [
+    "YAPILAMAZ",
+    "Doğru hücrede çürütülecek bir iddia yoktur."
    ],
    "U28": [
     "YAPILMADI",
@@ -26420,11 +27817,11 @@
    ],
    "U29": [
     "YAPILAMAZ",
-    "Bu hücreyi savunan kayıtlı bir felsefe yok; muhatabın öncülü bilinmiyor."
+    "Doğru hücrede çürütülecek bir iddia yoktur."
    ],
    "U30": [
-    "YAPILAMAZ",
-    "Hudut gerektiren zayıf halka veya kısmî kapsam yok."
+    "HUDUT",
+    "Zayıf halkalar: k_konusma_kemal, k_sinirli_mumkin; kısmî kapsam: 0"
    ],
    "U31": [
     "YAPILAMAZ",
@@ -26462,15 +27859,15 @@
    ],
    "U07": [
     "KULLANILDI",
-    "Q10.kelam.c2/U07"
+    "Q10.kelam.c2/U07, Q10.kelam.c2/U07#dis:Q10.kelam.c1/U07, Q10.kelam.c2/U07#dis:Q10.kelam.c1/U07#2"
    ],
    "U08": [
-    "YAPILAMAZ",
-    "Bu suâlde doğru hücre yok (alt suâl); hasır dışlaması kurulamaz."
+    "KULLANILDI",
+    "Q10.kelam.c2/U08#dislama"
    ],
    "U09": [
-    "YAPILMADI",
-    "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
+    "KULLANILDI",
+    "Q10.kelam.c2/U09#dis:Q10.kelam.c1/U09"
    ],
    "U10": [
     "YAPILAMAZ",
@@ -26497,8 +27894,8 @@
     "Hads sonradan doğrulama ister; bu hükümde doğrulayıcı bir ikinci yol yok."
    ],
    "U16": [
-    "YAPILAMAZ",
-    "Birleştirilecek ikinci ispat yok (ispat sayısı 1)."
+    "KOMBİNE",
+    "5 ispat; ayrıntı kombinasyon tablosundadır."
    ],
    "U17": [
     "YAPILMADI",
@@ -26592,15 +27989,15 @@
    ],
    "U07": [
     "KULLANILDI",
-    "Q10.kelam.c3/U07"
+    "Q10.kelam.c3/U07, Q10.kelam.c3/U07#dis:Q10.kelam.c1/U07, Q10.kelam.c3/U07#dis:Q10.kelam.c1/U07#2"
    ],
    "U08": [
-    "YAPILAMAZ",
-    "Bu suâlde doğru hücre yok (alt suâl); hasır dışlaması kurulamaz."
+    "KULLANILDI",
+    "Q10.kelam.c3/U08#dislama"
    ],
    "U09": [
-    "YAPILMADI",
-    "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
+    "KULLANILDI",
+    "Q10.kelam.c3/U09#dis:Q10.kelam.c1/U09"
    ],
    "U10": [
     "YAPILAMAZ",
@@ -26627,8 +28024,8 @@
     "Hads sonradan doğrulama ister; bu hükümde doğrulayıcı bir ikinci yol yok."
    ],
    "U16": [
-    "YAPILAMAZ",
-    "Birleştirilecek ikinci ispat yok (ispat sayısı 1)."
+    "KOMBİNE",
+    "5 ispat; ayrıntı kombinasyon tablosundadır."
    ],
    "U17": [
     "YAPILMADI",
@@ -26695,7 +28092,7 @@
     "Tenbih delil değildir; yalnız varlık ve ulûhiyet hücrelerinde muhatabı yönlendirir."
    ]
   },
-  "Q10.tekvin.c1": {
+  "Q10.kelam.c4": {
    "U01": [
     "YAPILMADI",
     "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
@@ -26801,8 +28198,138 @@
     "Karşı iddia kendi ifadesiyle kendini çürütmüyor; ilzamın şartı bu hükümde yok (Claude hükmü, yoklanmadı)."
    ],
    "U27": [
+    "YAPILMADI",
+    "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
+   ],
+   "U28": [
+    "YAPILMADI",
+    "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
+   ],
+   "U29": [
+    "YAPILMADI",
+    "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
+   ],
+   "U30": [
     "YAPILAMAZ",
-    "Bu hücreyi savunan kayıtlı bir felsefe yok; muhatabın öncülü bilinmiyor."
+    "Hudut gerektiren zayıf halka veya kısmî kapsam yok."
+   ],
+   "U31": [
+    "YAPILAMAZ",
+    "Bu usul yalnız Vâcib’in varlığı mefhumundan yürür (V.6.2.167)."
+   ],
+   "U32": [
+    "YAPILAMAZ",
+    "Tenbih delil değildir; yalnız varlık ve ulûhiyet hücrelerinde muhatabı yönlendirir."
+   ]
+  },
+  "Q10.tekvin.c1": {
+   "U01": [
+    "YAPILMADI",
+    "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
+   ],
+   "U02": [
+    "YAPILMADI",
+    "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
+   ],
+   "U03": [
+    "YAPILMADI",
+    "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
+   ],
+   "U04": [
+    "YAPILAMAZ",
+    "Hudûs delili âlemin başlangıcı ve hâdisin muhdisi üzerinedir; bu hükmün konusu o değildir."
+   ],
+   "U05": [
+    "YAPILAMAZ",
+    "Hükümde sebep zinciri veya dairesi yoktur."
+   ],
+   "U06": [
+    "YAPILAMAZ",
+    "Hükümde sebep zinciri veya dairesi yoktur."
+   ],
+   "U07": [
+    "KULLANILDI",
+    "Q10.tekvin.c1/U07"
+   ],
+   "U08": [
+    "YAPILAMAZ",
+    "İHTİLAFLI hücre aklî hasırı kapatmaz; kitap o hücreyi iddia etmez."
+   ],
+   "U09": [
+    "YAPILMADI",
+    "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
+   ],
+   "U10": [
+    "YAPILAMAZ",
+    "Aklî–metafizik hüküm haberle ispat edilmez; muhatap haberi ve vahyi kabul etmeden onu öncül yapmak kısırdöngüdür (F 3-I 187; V.0.5)."
+   ],
+   "U11": [
+    "YAPILAMAZ",
+    "Aklî–metafizik hüküm haberle ispat edilmez; muhatap haberi ve vahyi kabul etmeden onu öncül yapmak kısırdöngüdür (F 3-I 187; V.0.5)."
+   ],
+   "U12": [
+    "YAPILAMAZ",
+    "Müşâhede edilemeyen şeyi (gayb, Vâcib) doğrudan ispat edemez; bu hücrede öncül de sağlamıyor (I.4.3.5)."
+   ],
+   "U13": [
+    "YAPILAMAZ",
+    "Metafizik varlığa uygulanamaz; bu hücrede kanun düzeni öncülü de kullanılmıyor."
+   ],
+   "U14": [
+    "YAPILAMAZ",
+    "Hükmün konusu taranabilir cüz’îlerden oluşmaz; istikrâ uygulanamaz."
+   ],
+   "U15": [
+    "YAPILAMAZ",
+    "Hads sonradan doğrulama ister; bu hükümde doğrulayıcı bir ikinci yol yok."
+   ],
+   "U16": [
+    "KOMBİNE",
+    "2 ispat; ayrıntı kombinasyon tablosundadır."
+   ],
+   "U17": [
+    "YAPILMADI",
+    "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
+   ],
+   "U18": [
+    "YAPILAMAZ",
+    "Aklî–metafizik hüküm haberle ispat edilmez; muhatap haberi ve vahyi kabul etmeden onu öncül yapmak kısırdöngüdür (F 3-I 187; V.0.5)."
+   ],
+   "U19": [
+    "KULLANILDI",
+    "ispat sınıfı: Q10.tekvin.c1/U24"
+   ],
+   "U20": [
+    "SINIFLANMADI",
+    "Bu hücrenin ispatlarından hiçbiri bu sınıfa etiketlenmedi."
+   ],
+   "U21": [
+    "SINIFLANMADI",
+    "Bu hücrenin ispatlarından hiçbiri bu sınıfa etiketlenmedi."
+   ],
+   "U22": [
+    "YAPILAMAZ",
+    "Vâcib basittir ve maddesi yoktur; maddî sebep orta terim olamaz."
+   ],
+   "U23": [
+    "SINIFLANMADI",
+    "Bu hücrenin ispatlarından hiçbiri bu sınıfa etiketlenmedi."
+   ],
+   "U24": [
+    "KULLANILDI",
+    "ispat sınıfı: Q10.tekvin.c1/U24"
+   ],
+   "U25": [
+    "SINIFLANMADI",
+    "Bu hücrenin ispatlarından hiçbiri bu sınıfa etiketlenmedi."
+   ],
+   "U26": [
+    "YAPILAMAZ",
+    "Karşı iddia kendi ifadesiyle kendini çürütmüyor; ilzamın şartı bu hükümde yok (Claude hükmü, yoklanmadı)."
+   ],
+   "U27": [
+    "YAPILAMAZ",
+    "Doğru hücrede çürütülecek bir iddia yoktur."
    ],
    "U28": [
     "YAPILMADI",
@@ -26810,11 +28337,11 @@
    ],
    "U29": [
     "YAPILAMAZ",
-    "Bu hücreyi savunan kayıtlı bir felsefe yok; muhatabın öncülü bilinmiyor."
+    "Doğru hücrede çürütülecek bir iddia yoktur."
    ],
    "U30": [
-    "YAPILAMAZ",
-    "Hudut gerektiren zayıf halka veya kısmî kapsam yok."
+    "HUDUT",
+    "Zayıf halkalar: k_tercihsiz_hal; kısmî kapsam: 0"
    ],
    "U31": [
     "YAPILAMAZ",
@@ -26852,11 +28379,11 @@
    ],
    "U07": [
     "KULLANILDI",
-    "Q10.tekvin.c2/U07"
+    "Q10.tekvin.c2/U07, Q10.tekvin.c2/U07#dis:Q10.tekvin.c1/U07"
    ],
    "U08": [
-    "YAPILAMAZ",
-    "Bu suâlde doğru hücre yok (alt suâl); hasır dışlaması kurulamaz."
+    "KULLANILDI",
+    "Q10.tekvin.c2/U08#dislama"
    ],
    "U09": [
     "YAPILMADI",
@@ -26887,8 +28414,8 @@
     "Hads sonradan doğrulama ister; bu hükümde doğrulayıcı bir ikinci yol yok."
    ],
    "U16": [
-    "YAPILAMAZ",
-    "Birleştirilecek ikinci ispat yok (ispat sayısı 1)."
+    "KOMBİNE",
+    "4 ispat; ayrıntı kombinasyon tablosundadır."
    ],
    "U17": [
     "YAPILMADI",
@@ -26982,11 +28509,11 @@
    ],
    "U07": [
     "KULLANILDI",
-    "Q10.tekvin.c3/U07"
+    "Q10.tekvin.c3/U07, Q10.tekvin.c3/U07#dis:Q10.tekvin.c1/U07"
    ],
    "U08": [
-    "YAPILAMAZ",
-    "Bu suâlde doğru hücre yok (alt suâl); hasır dışlaması kurulamaz."
+    "KULLANILDI",
+    "Q10.tekvin.c3/U08#dislama"
    ],
    "U09": [
     "YAPILMADI",
@@ -27017,8 +28544,8 @@
     "Hads sonradan doğrulama ister; bu hükümde doğrulayıcı bir ikinci yol yok."
    ],
    "U16": [
-    "YAPILAMAZ",
-    "Birleştirilecek ikinci ispat yok (ispat sayısı 1)."
+    "KOMBİNE",
+    "4 ispat; ayrıntı kombinasyon tablosundadır."
    ],
    "U17": [
     "YAPILMADI",
@@ -27075,6 +28602,136 @@
    "U30": [
     "HUDUT",
     "Zayıf halkalar: k_tercihsiz_hal; kısmî kapsam: 0"
+   ],
+   "U31": [
+    "YAPILAMAZ",
+    "Bu usul yalnız Vâcib’in varlığı mefhumundan yürür (V.6.2.167)."
+   ],
+   "U32": [
+    "YAPILAMAZ",
+    "Tenbih delil değildir; yalnız varlık ve ulûhiyet hücrelerinde muhatabı yönlendirir."
+   ]
+  },
+  "Q10.tekvin.c4": {
+   "U01": [
+    "YAPILMADI",
+    "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
+   ],
+   "U02": [
+    "YAPILMADI",
+    "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
+   ],
+   "U03": [
+    "YAPILMADI",
+    "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
+   ],
+   "U04": [
+    "YAPILAMAZ",
+    "Hudûs delili âlemin başlangıcı ve hâdisin muhdisi üzerinedir; bu hükmün konusu o değildir."
+   ],
+   "U05": [
+    "YAPILAMAZ",
+    "Hükümde sebep zinciri veya dairesi yoktur."
+   ],
+   "U06": [
+    "YAPILAMAZ",
+    "Hükümde sebep zinciri veya dairesi yoktur."
+   ],
+   "U07": [
+    "YAPILMADI",
+    "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
+   ],
+   "U08": [
+    "YAPILAMAZ",
+    "İHTİLAFLI hücre aklî hasırı kapatmaz; kitap o hücreyi iddia etmez."
+   ],
+   "U09": [
+    "YAPILMADI",
+    "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
+   ],
+   "U10": [
+    "YAPILAMAZ",
+    "Aklî–metafizik hüküm haberle ispat edilmez; muhatap haberi ve vahyi kabul etmeden onu öncül yapmak kısırdöngüdür (F 3-I 187; V.0.5)."
+   ],
+   "U11": [
+    "YAPILAMAZ",
+    "Aklî–metafizik hüküm haberle ispat edilmez; muhatap haberi ve vahyi kabul etmeden onu öncül yapmak kısırdöngüdür (F 3-I 187; V.0.5)."
+   ],
+   "U12": [
+    "YAPILAMAZ",
+    "Müşâhede edilemeyen şeyi (gayb, Vâcib) doğrudan ispat edemez; bu hücrede öncül de sağlamıyor (I.4.3.5)."
+   ],
+   "U13": [
+    "YAPILAMAZ",
+    "Metafizik varlığa uygulanamaz; bu hücrede kanun düzeni öncülü de kullanılmıyor."
+   ],
+   "U14": [
+    "YAPILAMAZ",
+    "Hükmün konusu taranabilir cüz’îlerden oluşmaz; istikrâ uygulanamaz."
+   ],
+   "U15": [
+    "YAPILAMAZ",
+    "Hads sonradan doğrulama ister; bu hükümde doğrulayıcı bir ikinci yol yok."
+   ],
+   "U16": [
+    "YAPILAMAZ",
+    "Birleştirilecek ikinci ispat yok (ispat sayısı 0)."
+   ],
+   "U17": [
+    "YAPILMADI",
+    "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
+   ],
+   "U18": [
+    "YAPILAMAZ",
+    "Aklî–metafizik hüküm haberle ispat edilmez; muhatap haberi ve vahyi kabul etmeden onu öncül yapmak kısırdöngüdür (F 3-I 187; V.0.5)."
+   ],
+   "U19": [
+    "SINIFLANMADI",
+    "Bu hücrenin ispatlarından hiçbiri bu sınıfa etiketlenmedi."
+   ],
+   "U20": [
+    "SINIFLANMADI",
+    "Bu hücrenin ispatlarından hiçbiri bu sınıfa etiketlenmedi."
+   ],
+   "U21": [
+    "SINIFLANMADI",
+    "Bu hücrenin ispatlarından hiçbiri bu sınıfa etiketlenmedi."
+   ],
+   "U22": [
+    "YAPILAMAZ",
+    "Vâcib basittir ve maddesi yoktur; maddî sebep orta terim olamaz."
+   ],
+   "U23": [
+    "SINIFLANMADI",
+    "Bu hücrenin ispatlarından hiçbiri bu sınıfa etiketlenmedi."
+   ],
+   "U24": [
+    "SINIFLANMADI",
+    "Bu hücrenin ispatlarından hiçbiri bu sınıfa etiketlenmedi."
+   ],
+   "U25": [
+    "SINIFLANMADI",
+    "Bu hücrenin ispatlarından hiçbiri bu sınıfa etiketlenmedi."
+   ],
+   "U26": [
+    "YAPILAMAZ",
+    "Karşı iddia kendi ifadesiyle kendini çürütmüyor; ilzamın şartı bu hükümde yok (Claude hükmü, yoklanmadı)."
+   ],
+   "U27": [
+    "YAPILMADI",
+    "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
+   ],
+   "U28": [
+    "YAPILMADI",
+    "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
+   ],
+   "U29": [
+    "YAPILMADI",
+    "Usulün şartı bu hücrede mümkündür; ispat kaydı henüz yazılmadı (açık iş)."
+   ],
+   "U30": [
+    "YAPILAMAZ",
+    "Hudut gerektiren zayıf halka veya kısmî kapsam yok."
    ],
    "U31": [
     "YAPILAMAZ",
@@ -54573,7 +56230,7 @@
     1
    ]
   ],
-  "Q10.semi.c2": [
+  "Q10.semi.c1": [
    [
     1,
     [
@@ -54583,12 +56240,191 @@
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: kemal-tayini, sebep-ilkesi-hal",
+    [
+     "k_isitme_kemal",
+     "k_sinirli_mumkin"
+    ],
+    1,
+    1,
+    0
+   ],
+   [
+    2,
+    [
+     "U09"
+    ],
+    1,
+    0,
+    "zan",
+    "ZANNÎ",
+    "ortak zayıf halka: kemal, kemal-tayini, sebep-ilkesi-varlik",
+    [
+     "k_fail_vacib",
+     "k_isitme_kemal",
+     "k_kemal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    3,
+    [
+     "U07",
+     "U09"
+    ],
+    2,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: kemal-tayini, sebep-ilkesi-hal",
+    [
+     "k_isitme_kemal",
+     "k_sinirli_mumkin"
+    ],
+    1,
+    0,
+    1
+   ]
+  ],
+  "Q10.semi.c2": [
+   [
+    1,
+    [
+     "U07"
+    ],
+    2,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
     "ortak zayıf halka: sebep-ilkesi-hal",
     [
+     "k_isitme_kemal",
+     "k_sinirli_mumkin",
      "k_tercihsiz_hal"
     ],
     1,
     1,
+    0
+   ],
+   [
+    2,
+    [
+     "U08"
+    ],
+    1,
+    0,
+    "zan",
+    "ZANNÎ",
+    "ortak zayıf halka: kemal, kemal-tayini, sebep-ilkesi-varlik",
+    [
+     "k_fail_vacib",
+     "k_isitme_kemal",
+     "k_kemal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    3,
+    [
+     "U07",
+     "U08"
+    ],
+    3,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-hal",
+    [
+     "k_isitme_kemal",
+     "k_sinirli_mumkin",
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
+    0
+   ],
+   [
+    4,
+    [
+     "U09"
+    ],
+    1,
+    0,
+    "zan",
+    "ZANNÎ",
+    "ortak zayıf halka: kemal, kemal-tayini, sebep-ilkesi-varlik",
+    [
+     "k_fail_vacib",
+     "k_isitme_kemal",
+     "k_kemal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    5,
+    [
+     "U07",
+     "U09"
+    ],
+    3,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-hal",
+    [
+     "k_isitme_kemal",
+     "k_sinirli_mumkin",
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
+    0
+   ],
+   [
+    6,
+    [
+     "U08",
+     "U09"
+    ],
+    2,
+    0,
+    "zan",
+    "ZANNÎ",
+    "ortak zayıf halka: kemal, kemal-tayini, sebep-ilkesi-varlik",
+    [
+     "k_fail_vacib",
+     "k_isitme_kemal",
+     "k_kemal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    7,
+    [
+     "U07",
+     "U08",
+     "U09"
+    ],
+    4,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-hal",
+    [
+     "k_isitme_kemal",
+     "k_sinirli_mumkin",
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
     1
    ]
   ],
@@ -54598,17 +56434,195 @@
     [
      "U07"
     ],
-    1,
+    2,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
-    "ortak zayıf halka: kemal, sebep-ilkesi-hal",
+    "ortak zayıf halka: sebep-ilkesi-hal",
     [
+     "k_isitme_kemal",
      "k_kemal",
      "k_sinirli_mumkin"
     ],
     1,
     1,
+    0
+   ],
+   [
+    2,
+    [
+     "U08"
+    ],
+    1,
+    0,
+    "zan",
+    "ZANNÎ",
+    "ortak zayıf halka: kemal, kemal-tayini, sebep-ilkesi-varlik",
+    [
+     "k_fail_vacib",
+     "k_isitme_kemal",
+     "k_kemal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    3,
+    [
+     "U07",
+     "U08"
+    ],
+    3,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-hal",
+    [
+     "k_isitme_kemal",
+     "k_kemal",
+     "k_sinirli_mumkin"
+    ],
+    1,
+    0,
+    0
+   ],
+   [
+    4,
+    [
+     "U09"
+    ],
+    1,
+    0,
+    "zan",
+    "ZANNÎ",
+    "ortak zayıf halka: kemal, kemal-tayini, sebep-ilkesi-varlik",
+    [
+     "k_fail_vacib",
+     "k_isitme_kemal",
+     "k_kemal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    5,
+    [
+     "U07",
+     "U09"
+    ],
+    3,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-hal",
+    [
+     "k_isitme_kemal",
+     "k_kemal",
+     "k_sinirli_mumkin"
+    ],
+    1,
+    0,
+    0
+   ],
+   [
+    6,
+    [
+     "U08",
+     "U09"
+    ],
+    2,
+    0,
+    "zan",
+    "ZANNÎ",
+    "ortak zayıf halka: kemal, kemal-tayini, sebep-ilkesi-varlik",
+    [
+     "k_fail_vacib",
+     "k_isitme_kemal",
+     "k_kemal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    7,
+    [
+     "U07",
+     "U08",
+     "U09"
+    ],
+    4,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-hal",
+    [
+     "k_isitme_kemal",
+     "k_kemal",
+     "k_sinirli_mumkin"
+    ],
+    1,
+    0,
+    1
+   ]
+  ],
+  "Q10.basar.c1": [
+   [
+    1,
+    [
+     "U07"
+    ],
+    1,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: kemal-tayini, sebep-ilkesi-hal",
+    [
+     "k_gorme_kemal",
+     "k_sinirli_mumkin"
+    ],
+    1,
+    1,
+    0
+   ],
+   [
+    2,
+    [
+     "U09"
+    ],
+    1,
+    0,
+    "zan",
+    "ZANNÎ",
+    "ortak zayıf halka: kemal, kemal-tayini, sebep-ilkesi-varlik",
+    [
+     "k_fail_vacib",
+     "k_gorme_kemal",
+     "k_kemal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    3,
+    [
+     "U07",
+     "U09"
+    ],
+    2,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: kemal-tayini, sebep-ilkesi-hal",
+    [
+     "k_gorme_kemal",
+     "k_sinirli_mumkin"
+    ],
+    1,
+    0,
     1
    ]
   ],
@@ -54618,16 +56632,137 @@
     [
      "U07"
     ],
-    1,
+    2,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
     "ortak zayıf halka: sebep-ilkesi-hal",
     [
+     "k_gorme_kemal",
+     "k_sinirli_mumkin",
      "k_tercihsiz_hal"
     ],
     1,
     1,
+    0
+   ],
+   [
+    2,
+    [
+     "U08"
+    ],
+    1,
+    0,
+    "zan",
+    "ZANNÎ",
+    "ortak zayıf halka: kemal, kemal-tayini, sebep-ilkesi-varlik",
+    [
+     "k_fail_vacib",
+     "k_gorme_kemal",
+     "k_kemal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    3,
+    [
+     "U07",
+     "U08"
+    ],
+    3,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-hal",
+    [
+     "k_gorme_kemal",
+     "k_sinirli_mumkin",
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
+    0
+   ],
+   [
+    4,
+    [
+     "U09"
+    ],
+    1,
+    0,
+    "zan",
+    "ZANNÎ",
+    "ortak zayıf halka: kemal, kemal-tayini, sebep-ilkesi-varlik",
+    [
+     "k_fail_vacib",
+     "k_gorme_kemal",
+     "k_kemal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    5,
+    [
+     "U07",
+     "U09"
+    ],
+    3,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-hal",
+    [
+     "k_gorme_kemal",
+     "k_sinirli_mumkin",
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
+    0
+   ],
+   [
+    6,
+    [
+     "U08",
+     "U09"
+    ],
+    2,
+    0,
+    "zan",
+    "ZANNÎ",
+    "ortak zayıf halka: kemal, kemal-tayini, sebep-ilkesi-varlik",
+    [
+     "k_fail_vacib",
+     "k_gorme_kemal",
+     "k_kemal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    7,
+    [
+     "U07",
+     "U08",
+     "U09"
+    ],
+    4,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-hal",
+    [
+     "k_gorme_kemal",
+     "k_sinirli_mumkin",
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
     1
    ]
   ],
@@ -54637,17 +56772,197 @@
     [
      "U07"
     ],
-    1,
+    2,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
-    "ortak zayıf halka: kemal, sebep-ilkesi-hal",
+    "ortak zayıf halka: sebep-ilkesi-hal",
     [
+     "k_gorme_kemal",
      "k_kemal",
      "k_sinirli_mumkin"
     ],
     1,
     1,
+    0
+   ],
+   [
+    2,
+    [
+     "U08"
+    ],
+    1,
+    0,
+    "zan",
+    "ZANNÎ",
+    "ortak zayıf halka: kemal, kemal-tayini, sebep-ilkesi-varlik",
+    [
+     "k_fail_vacib",
+     "k_gorme_kemal",
+     "k_kemal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    3,
+    [
+     "U07",
+     "U08"
+    ],
+    3,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-hal",
+    [
+     "k_gorme_kemal",
+     "k_kemal",
+     "k_sinirli_mumkin"
+    ],
+    1,
+    0,
+    0
+   ],
+   [
+    4,
+    [
+     "U09"
+    ],
+    1,
+    0,
+    "zan",
+    "ZANNÎ",
+    "ortak zayıf halka: kemal, kemal-tayini, sebep-ilkesi-varlik",
+    [
+     "k_fail_vacib",
+     "k_gorme_kemal",
+     "k_kemal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    5,
+    [
+     "U07",
+     "U09"
+    ],
+    3,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-hal",
+    [
+     "k_gorme_kemal",
+     "k_kemal",
+     "k_sinirli_mumkin"
+    ],
+    1,
+    0,
+    0
+   ],
+   [
+    6,
+    [
+     "U08",
+     "U09"
+    ],
+    2,
+    0,
+    "zan",
+    "ZANNÎ",
+    "ortak zayıf halka: kemal, kemal-tayini, sebep-ilkesi-varlik",
+    [
+     "k_fail_vacib",
+     "k_gorme_kemal",
+     "k_kemal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    7,
+    [
+     "U07",
+     "U08",
+     "U09"
+    ],
+    4,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-hal",
+    [
+     "k_gorme_kemal",
+     "k_kemal",
+     "k_sinirli_mumkin"
+    ],
+    1,
+    0,
+    1
+   ]
+  ],
+  "Q10.kelam.c1": [
+   [
+    1,
+    [
+     "U07"
+    ],
+    2,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: kemal-tayini, sebep-ilkesi-hal",
+    [
+     "k_konusma_kemal",
+     "k_sinirli_mumkin",
+     "k_tercihsiz_hal"
+    ],
+    1,
+    1,
+    0
+   ],
+   [
+    2,
+    [
+     "U09"
+    ],
+    1,
+    0,
+    "zan",
+    "ZANNÎ",
+    "ortak zayıf halka: kemal, kemal-tayini, sebep-ilkesi-varlik",
+    [
+     "k_fail_vacib",
+     "k_kemal",
+     "k_konusma_kemal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    3,
+    [
+     "U07",
+     "U09"
+    ],
+    3,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: kemal-tayini, sebep-ilkesi-hal",
+    [
+     "k_konusma_kemal",
+     "k_sinirli_mumkin",
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
     1
    ]
   ],
@@ -54657,16 +56972,137 @@
     [
      "U07"
     ],
-    1,
+    3,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
     "ortak zayıf halka: sebep-ilkesi-hal",
     [
+     "k_konusma_kemal",
+     "k_sinirli_mumkin",
      "k_tercihsiz_hal"
     ],
     1,
     1,
+    0
+   ],
+   [
+    2,
+    [
+     "U08"
+    ],
+    1,
+    0,
+    "zan",
+    "ZANNÎ",
+    "ortak zayıf halka: kemal, kemal-tayini, sebep-ilkesi-varlik",
+    [
+     "k_fail_vacib",
+     "k_kemal",
+     "k_konusma_kemal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    3,
+    [
+     "U07",
+     "U08"
+    ],
+    4,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-hal",
+    [
+     "k_konusma_kemal",
+     "k_sinirli_mumkin",
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
+    0
+   ],
+   [
+    4,
+    [
+     "U09"
+    ],
+    1,
+    0,
+    "zan",
+    "ZANNÎ",
+    "ortak zayıf halka: kemal, kemal-tayini, sebep-ilkesi-varlik",
+    [
+     "k_fail_vacib",
+     "k_kemal",
+     "k_konusma_kemal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    5,
+    [
+     "U07",
+     "U09"
+    ],
+    4,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-hal",
+    [
+     "k_konusma_kemal",
+     "k_sinirli_mumkin",
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
+    0
+   ],
+   [
+    6,
+    [
+     "U08",
+     "U09"
+    ],
+    2,
+    0,
+    "zan",
+    "ZANNÎ",
+    "ortak zayıf halka: kemal, kemal-tayini, sebep-ilkesi-varlik",
+    [
+     "k_fail_vacib",
+     "k_kemal",
+     "k_konusma_kemal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    7,
+    [
+     "U07",
+     "U08",
+     "U09"
+    ],
+    5,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-hal",
+    [
+     "k_konusma_kemal",
+     "k_sinirli_mumkin",
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
     1
    ]
   ],
@@ -54676,17 +57112,195 @@
     [
      "U07"
     ],
+    3,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-hal",
+    [
+     "k_kemal",
+     "k_konusma_kemal",
+     "k_sinirli_mumkin",
+     "k_tercihsiz_hal"
+    ],
+    1,
+    1,
+    0
+   ],
+   [
+    2,
+    [
+     "U08"
+    ],
+    1,
+    0,
+    "zan",
+    "ZANNÎ",
+    "ortak zayıf halka: kemal, kemal-tayini, sebep-ilkesi-varlik",
+    [
+     "k_fail_vacib",
+     "k_kemal",
+     "k_konusma_kemal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    3,
+    [
+     "U07",
+     "U08"
+    ],
+    4,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-hal",
+    [
+     "k_kemal",
+     "k_konusma_kemal",
+     "k_sinirli_mumkin",
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
+    0
+   ],
+   [
+    4,
+    [
+     "U09"
+    ],
+    1,
+    0,
+    "zan",
+    "ZANNÎ",
+    "ortak zayıf halka: kemal, kemal-tayini, sebep-ilkesi-varlik",
+    [
+     "k_fail_vacib",
+     "k_kemal",
+     "k_konusma_kemal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    5,
+    [
+     "U07",
+     "U09"
+    ],
+    4,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-hal",
+    [
+     "k_kemal",
+     "k_konusma_kemal",
+     "k_sinirli_mumkin",
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
+    0
+   ],
+   [
+    6,
+    [
+     "U08",
+     "U09"
+    ],
+    2,
+    0,
+    "zan",
+    "ZANNÎ",
+    "ortak zayıf halka: kemal, kemal-tayini, sebep-ilkesi-varlik",
+    [
+     "k_fail_vacib",
+     "k_kemal",
+     "k_konusma_kemal"
+    ],
+    0,
+    0,
+    0
+   ],
+   [
+    7,
+    [
+     "U07",
+     "U08",
+     "U09"
+    ],
+    5,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-hal",
+    [
+     "k_kemal",
+     "k_konusma_kemal",
+     "k_sinirli_mumkin",
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
+    1
+   ]
+  ],
+  "Q10.tekvin.c1": [
+   [
+    1,
+    [
+     "U07"
+    ],
     1,
     0,
     "yakîn",
     "KAT’Î-ŞARTLI",
-    "ortak zayıf halka: kemal, sebep-ilkesi-hal",
+    "ortak zayıf halka: sebep-ilkesi-hal",
     [
-     "k_kemal",
-     "k_sinirli_mumkin"
+     "k_tercihsiz_hal"
     ],
     1,
     1,
+    0
+   ],
+   [
+    2,
+    [
+     "U24"
+    ],
+    1,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-hal",
+    [
+     "k_tercihsiz_hal"
+    ],
+    1,
+    1,
+    0
+   ],
+   [
+    3,
+    [
+     "U07",
+     "U24"
+    ],
+    2,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-hal",
+    [
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
     1
    ]
   ],
@@ -54696,6 +57310,23 @@
     [
      "U07"
     ],
+    2,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-hal",
+    [
+     "k_tercihsiz_hal"
+    ],
+    1,
+    1,
+    0
+   ],
+   [
+    2,
+    [
+     "U08"
+    ],
     1,
     0,
     "yakîn",
@@ -54706,6 +57337,96 @@
     ],
     1,
     1,
+    0
+   ],
+   [
+    3,
+    [
+     "U07",
+     "U08"
+    ],
+    3,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-hal",
+    [
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
+    0
+   ],
+   [
+    4,
+    [
+     "U24"
+    ],
+    1,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-hal",
+    [
+     "k_tercihsiz_hal"
+    ],
+    1,
+    1,
+    0
+   ],
+   [
+    5,
+    [
+     "U07",
+     "U24"
+    ],
+    3,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-hal",
+    [
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
+    0
+   ],
+   [
+    6,
+    [
+     "U08",
+     "U24"
+    ],
+    2,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-hal",
+    [
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
+    0
+   ],
+   [
+    7,
+    [
+     "U07",
+     "U08",
+     "U24"
+    ],
+    4,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-hal",
+    [
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
     1
    ]
   ],
@@ -54715,6 +57436,23 @@
     [
      "U07"
     ],
+    2,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-hal",
+    [
+     "k_tercihsiz_hal"
+    ],
+    1,
+    1,
+    0
+   ],
+   [
+    2,
+    [
+     "U08"
+    ],
     1,
     0,
     "yakîn",
@@ -54725,6 +57463,96 @@
     ],
     1,
     1,
+    0
+   ],
+   [
+    3,
+    [
+     "U07",
+     "U08"
+    ],
+    3,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-hal",
+    [
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
+    0
+   ],
+   [
+    4,
+    [
+     "U24"
+    ],
+    1,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-hal",
+    [
+     "k_tercihsiz_hal"
+    ],
+    1,
+    1,
+    0
+   ],
+   [
+    5,
+    [
+     "U07",
+     "U24"
+    ],
+    3,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-hal",
+    [
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
+    0
+   ],
+   [
+    6,
+    [
+     "U08",
+     "U24"
+    ],
+    2,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-hal",
+    [
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
+    0
+   ],
+   [
+    7,
+    [
+     "U07",
+     "U08",
+     "U24"
+    ],
+    4,
+    0,
+    "yakîn",
+    "KAT’Î-ŞARTLI",
+    "ortak zayıf halka: sebep-ilkesi-hal",
+    [
+     "k_tercihsiz_hal"
+    ],
+    1,
+    0,
     1
    ]
   ],
@@ -56783,6 +59611,84 @@
      ]
     }
    ]
+  },
+  {
+   "id": "F43",
+   "ad": "Mu’tezile (semi’ ve basar ilmin kendisidir)",
+   "aile": "kelâm içi",
+   "aciklama": "İşitme ve görme ayrı sıfat değil, ilmin işitilen ve görülene taalluku olarak ilme döner.",
+   "hucreler": [
+    "Q10.semi.c4",
+    "Q10.basar.c4"
+   ],
+   "not_": "ihtilaflı; kitap iddia etmez; Mu’tezile bilgisi hafızadandır, kaynak okunmadı",
+   "durum": "İHTİLAFLI (iddia edilmez)",
+   "kalan": [
+    "Q10.semi.c4 (İHTİLAFLI)",
+    "Q10.basar.c4 (İHTİLAFLI)"
+   ],
+   "satirlar": [
+    {
+     "hucre": "Q10.semi.c4",
+     "hukum": "İHTİLAFLI",
+     "durum": "İHTİLAFLI",
+     "kat": -1,
+     "W": []
+    },
+    {
+     "hucre": "Q10.basar.c4",
+     "hukum": "İHTİLAFLI",
+     "durum": "İHTİLAFLI",
+     "kat": -1,
+     "W": []
+    }
+   ]
+  },
+  {
+   "id": "F44",
+   "ad": "Tekvînin ayrı sıfat sayılmaması (kudret ve iradeye dönüş)",
+   "aile": "kelâm içi",
+   "aciklama": "Var etme ayrı bir ezelî sıfat değil, kudret ve iradenin taallukudur.",
+   "hucreler": [
+    "Q10.tekvin.c4"
+   ],
+   "not_": "ihtilaflı; kitap iddia etmez; hafızadan, yoklanmadı",
+   "durum": "İHTİLAFLI (iddia edilmez)",
+   "kalan": [
+    "Q10.tekvin.c4 (İHTİLAFLI)"
+   ],
+   "satirlar": [
+    {
+     "hucre": "Q10.tekvin.c4",
+     "hukum": "İHTİLAFLI",
+     "durum": "İHTİLAFLI",
+     "kat": -1,
+     "W": []
+    }
+   ]
+  },
+  {
+   "id": "F45",
+   "ad": "Kelâmın hâdis sayılması (Kâ’bî ve Mu’tezile; Mâtürîdî’nin aktarımıyla)",
+   "aile": "kelâm içi",
+   "aciklama": "Allah’ın kelâmı yaratılmıştır; zâtla kâim ezelî bir kelâm sıfatı yoktur.",
+   "hucreler": [
+    "Q10.kelam.c4"
+   ],
+   "not_": "ihtilaflı; kitap iddia etmez; Kâ’bî’nin kendi kitabı okunmadı (V.2.12–V.2.13)",
+   "durum": "İHTİLAFLI (iddia edilmez)",
+   "kalan": [
+    "Q10.kelam.c4 (İHTİLAFLI)"
+   ],
+   "satirlar": [
+    {
+     "hucre": "Q10.kelam.c4",
+     "hukum": "İHTİLAFLI",
+     "durum": "İHTİLAFLI",
+     "kat": -1,
+     "W": []
+    }
+   ]
   }
  ],
  "olumsuz": [
@@ -56879,6 +59785,30 @@
   {
    "hucre": "Q10.gina.c1",
    "sonuc": "Vâcib bir şeye muhtaç olsaydı mümkin olurdu.",
+   "tur": "ÇELİŞKİ",
+   "usul": "U07"
+  },
+  {
+   "hucre": "Q10.semi.c1",
+   "sonuc": "Vâcib işitmeseydi sağırlık noksanı Vâcib’de bulunurdu; noksanlı olan kemâli sınırlı demektir ve sınırı bir müreccihle belirlenirdi.",
+   "tur": "ÇELİŞKİ-KOŞULLU",
+   "usul": "U07"
+  },
+  {
+   "hucre": "Q10.basar.c1",
+   "sonuc": "Vâcib görmeseydi körlük noksanı Vâcib’de bulunurdu; noksanlı olan kemâli sınırlı demektir ve sınırı bir müreccihle belirlenirdi.",
+   "tur": "ÇELİŞKİ-KOŞULLU",
+   "usul": "U07"
+  },
+  {
+   "hucre": "Q10.kelam.c1",
+   "sonuc": "Vâcib konuşamasaydı dilsizlik noksanı Vâcib’de bulunurdu; ayrıca bildirme (H3) aklen imkânsız olurdu.",
+   "tur": "ÇELİŞKİ-KOŞULLU",
+   "usul": "U07"
+  },
+  {
+   "hucre": "Q10.tekvin.c1",
+   "sonuc": "Vâcib’in var etme kemâli olmasaydı âlem var edilemezdi; oysa âlem vardır ve mümkindir.",
    "tur": "ÇELİŞKİ",
    "usul": "U07"
   },
@@ -57062,6 +59992,38 @@
    "hucre": "Q10.gina.c1",
    "tur": "dogru-olmasaydi",
    "sonuc": "Vâcib bir şeye muhtaç olsaydı mümkin olurdu.",
+   "usul": "U07",
+   "ispat": "",
+   "not_": "ÇELİŞKİ"
+  },
+  {
+   "hucre": "Q10.semi.c1",
+   "tur": "dogru-olmasaydi",
+   "sonuc": "Vâcib işitmeseydi sağırlık noksanı Vâcib’de bulunurdu; noksanlı olan kemâli sınırlı demektir ve sınırı bir müreccihle belirlenirdi.",
+   "usul": "U07",
+   "ispat": "",
+   "not_": "ÇELİŞKİ-KOŞULLU"
+  },
+  {
+   "hucre": "Q10.basar.c1",
+   "tur": "dogru-olmasaydi",
+   "sonuc": "Vâcib görmeseydi körlük noksanı Vâcib’de bulunurdu; noksanlı olan kemâli sınırlı demektir ve sınırı bir müreccihle belirlenirdi.",
+   "usul": "U07",
+   "ispat": "",
+   "not_": "ÇELİŞKİ-KOŞULLU"
+  },
+  {
+   "hucre": "Q10.kelam.c1",
+   "tur": "dogru-olmasaydi",
+   "sonuc": "Vâcib konuşamasaydı dilsizlik noksanı Vâcib’de bulunurdu; ayrıca bildirme (H3) aklen imkânsız olurdu.",
+   "usul": "U07",
+   "ispat": "",
+   "not_": "ÇELİŞKİ-KOŞULLU"
+  },
+  {
+   "hucre": "Q10.tekvin.c1",
+   "tur": "dogru-olmasaydi",
+   "sonuc": "Vâcib’in var etme kemâli olmasaydı âlem var edilemezdi; oysa âlem vardır ve mümkindir.",
    "usul": "U07",
    "ispat": "",
    "not_": "ÇELİŞKİ"
@@ -58368,10 +61330,15 @@
    "sorular": [
     "Q10.semi"
    ],
-   "mezhep": "Ortak sayılır; Mu’tezile ilme döndürür (V.2.1.10).",
+   "mezhep": "Ortak çekirdek (işitme kemâlinden mahrum değildir) c1’de; ayrı sıfat mı ilme dönüş mü c4’te ihtilaflıdır, Mu’tezile ilme döndürür (hafızadan, yoklanmadı; V.2.1.10).",
    "hucreler": [
     {
      "hucre": "Q10.semi.c1",
+     "hukum": "DOĞRU",
+     "durum": "KAT’Î-ŞARTLI"
+    },
+    {
+     "hucre": "Q10.semi.c4",
      "hukum": "İHTİLAFLI",
      "durum": "İHTİLAFLI"
     }
@@ -58384,10 +61351,15 @@
    "sorular": [
     "Q10.basar"
    ],
-   "mezhep": "Ortak sayılır; Mu’tezile ilme döndürür (V.2.1.10).",
+   "mezhep": "Ortak çekirdek (görme kemâlinden mahrum değildir) c1’de; ayrı sıfat mı ilme dönüş mü c4’te ihtilaflıdır (hafızadan, yoklanmadı; V.2.1.10).",
    "hucreler": [
     {
      "hucre": "Q10.basar.c1",
+     "hukum": "DOĞRU",
+     "durum": "KAT’Î-ŞARTLI"
+    },
+    {
+     "hucre": "Q10.basar.c4",
      "hukum": "İHTİLAFLI",
      "durum": "İHTİLAFLI"
     }
@@ -58432,10 +61404,15 @@
    "sorular": [
     "Q10.kelam"
    ],
-   "mezhep": "Ortak sayılır; kelâm-ı nefsî ve lafzî ayrımı ihtilaflıdır (V.3.1.6).",
+   "mezhep": "Ortak çekirdek (konuşma kemâlinden mahrum değildir) c1’de; kelâmın zâtî ve mahlûk olmadığı (kelâm-ı nefsî) c4’te ihtilaflıdır (V.2.13, V.3.1.6).",
    "hucreler": [
     {
      "hucre": "Q10.kelam.c1",
+     "hukum": "DOĞRU",
+     "durum": "KAT’Î-ŞARTLI"
+    },
+    {
+     "hucre": "Q10.kelam.c4",
      "hukum": "İHTİLAFLI",
      "durum": "İHTİLAFLI"
     }
@@ -58448,10 +61425,15 @@
    "sorular": [
     "Q10.tekvin"
    ],
-   "mezhep": "Mâtürîdî ayrı sıfat sayar (sekiz); Eş’arî kudret ve iradeye döndürür (yedi). Bu yüzden toplam 8 veya 7 çıkar.",
+   "mezhep": "Ortak çekirdek (var etme kemâli) c1’de; Mâtürîdî ayrı sıfat sayar (sekiz), Eş’arî kudret ve iradeye döndürür (yedi), bu ayrım c4’te ihtilaflıdır; toplam bu yüzden 8 veya 7 çıkar.",
    "hucreler": [
     {
      "hucre": "Q10.tekvin.c1",
+     "hukum": "DOĞRU",
+     "durum": "KAT’Î-ŞARTLI"
+    },
+    {
+     "hucre": "Q10.tekvin.c4",
      "hukum": "İHTİLAFLI",
      "durum": "İHTİLAFLI"
     }
@@ -58715,7 +61697,7 @@
     "k_yalan_noksan",
     "k_zulum_noksan"
    ],
-   "hucre_say": 14,
+   "hucre_say": 11,
    "hucreler": [
     {
      "hucre": "Q04.c1",
@@ -58736,21 +61718,6 @@
      "hucre": "Q04.c4",
      "once": "KAT’Î-ŞARTLI",
      "sonra": "ZAN-I GÂLİB"
-    },
-    {
-     "hucre": "Q10.semi.c3",
-     "once": "KAT’Î-ŞARTLI",
-     "sonra": "İSPATSIZ"
-    },
-    {
-     "hucre": "Q10.basar.c3",
-     "once": "KAT’Î-ŞARTLI",
-     "sonra": "İSPATSIZ"
-    },
-    {
-     "hucre": "Q10.kelam.c3",
-     "once": "KAT’Î-ŞARTLI",
-     "sonra": "İSPATSIZ"
     },
     {
      "hucre": "Q10.hikmet.c3",
@@ -58816,7 +61783,7 @@
    "onermeler": [
     "k_kemal"
    ],
-   "hucre_say": 8,
+   "hucre_say": 5,
    "hucreler": [
     {
      "hucre": "Q04.c1",
@@ -58837,21 +61804,6 @@
      "hucre": "Q04.c4",
      "once": "KAT’Î-ŞARTLI",
      "sonra": "ZAN-I GÂLİB"
-    },
-    {
-     "hucre": "Q10.semi.c3",
-     "once": "KAT’Î-ŞARTLI",
-     "sonra": "İSPATSIZ"
-    },
-    {
-     "hucre": "Q10.basar.c3",
-     "once": "KAT’Î-ŞARTLI",
-     "sonra": "İSPATSIZ"
-    },
-    {
-     "hucre": "Q10.kelam.c3",
-     "once": "KAT’Î-ŞARTLI",
-     "sonra": "İSPATSIZ"
     },
     {
      "hucre": "Q10.hikmet.c3",
@@ -58946,6 +61898,86 @@
     {
      "hucre": "Q10.sidk.c3",
      "once": "ZAN-I GÂLİB",
+     "sonra": "İSPATSIZ"
+    }
+   ],
+   "felsefe_say": 0,
+   "felsefeler": []
+  },
+  {
+   "tur": "aile",
+   "ad": "kemal-tayini",
+   "onermeler": [
+    "k_gorme_kemal",
+    "k_isitme_kemal",
+    "k_konusma_kemal"
+   ],
+   "hucre_say": 3,
+   "hucreler": [
+    {
+     "hucre": "Q10.semi.c1",
+     "once": "KAT’Î-ŞARTLI",
+     "sonra": "İSPATSIZ"
+    },
+    {
+     "hucre": "Q10.basar.c1",
+     "once": "KAT’Î-ŞARTLI",
+     "sonra": "İSPATSIZ"
+    },
+    {
+     "hucre": "Q10.kelam.c1",
+     "once": "KAT’Î-ŞARTLI",
+     "sonra": "İSPATSIZ"
+    }
+   ],
+   "felsefe_say": 0,
+   "felsefeler": []
+  },
+  {
+   "tur": "onerme",
+   "ad": "k_isitme_kemal",
+   "onermeler": [
+    "k_isitme_kemal"
+   ],
+   "hucre_say": 1,
+   "hucreler": [
+    {
+     "hucre": "Q10.semi.c1",
+     "once": "KAT’Î-ŞARTLI",
+     "sonra": "İSPATSIZ"
+    }
+   ],
+   "felsefe_say": 0,
+   "felsefeler": []
+  },
+  {
+   "tur": "onerme",
+   "ad": "k_gorme_kemal",
+   "onermeler": [
+    "k_gorme_kemal"
+   ],
+   "hucre_say": 1,
+   "hucreler": [
+    {
+     "hucre": "Q10.basar.c1",
+     "once": "KAT’Î-ŞARTLI",
+     "sonra": "İSPATSIZ"
+    }
+   ],
+   "felsefe_say": 0,
+   "felsefeler": []
+  },
+  {
+   "tur": "onerme",
+   "ad": "k_konusma_kemal",
+   "onermeler": [
+    "k_konusma_kemal"
+   ],
+   "hucre_say": 1,
+   "hucreler": [
+    {
+     "hucre": "Q10.kelam.c1",
+     "once": "KAT’Î-ŞARTLI",
      "sonra": "İSPATSIZ"
     }
    ],
@@ -59106,7 +62138,7 @@
     "k_sinirli_mumkin",
     "k_tercihsiz_hal"
    ],
-   "hucre_say": 32,
+   "hucre_say": 36,
    "hucreler": [
     {
      "hucre": "Q07.c2",
@@ -59209,9 +62241,14 @@
      "sonra": "ZAN-I GÂLİB"
     },
     {
+     "hucre": "Q10.semi.c1",
+     "once": "KAT’Î-ŞARTLI",
+     "sonra": "ZAN-I GÂLİB"
+    },
+    {
      "hucre": "Q10.semi.c2",
      "once": "KAT’Î-ŞARTLI",
-     "sonra": "İSPATSIZ"
+     "sonra": "ZAN-I GÂLİB"
     },
     {
      "hucre": "Q10.semi.c3",
@@ -59219,9 +62256,14 @@
      "sonra": "ZAN-I GÂLİB"
     },
     {
+     "hucre": "Q10.basar.c1",
+     "once": "KAT’Î-ŞARTLI",
+     "sonra": "ZAN-I GÂLİB"
+    },
+    {
      "hucre": "Q10.basar.c2",
      "once": "KAT’Î-ŞARTLI",
-     "sonra": "İSPATSIZ"
+     "sonra": "ZAN-I GÂLİB"
     },
     {
      "hucre": "Q10.basar.c3",
@@ -59229,9 +62271,14 @@
      "sonra": "ZAN-I GÂLİB"
     },
     {
+     "hucre": "Q10.kelam.c1",
+     "once": "KAT’Î-ŞARTLI",
+     "sonra": "ZAN-I GÂLİB"
+    },
+    {
      "hucre": "Q10.kelam.c2",
      "once": "KAT’Î-ŞARTLI",
-     "sonra": "İSPATSIZ"
+     "sonra": "ZAN-I GÂLİB"
     },
     {
      "hucre": "Q10.kelam.c3",
@@ -59239,9 +62286,14 @@
      "sonra": "ZAN-I GÂLİB"
     },
     {
+     "hucre": "Q10.tekvin.c1",
+     "once": "KAT’Î-ŞARTLI",
+     "sonra": "ZAN-I GÂLİB"
+    },
+    {
      "hucre": "Q10.tekvin.c2",
      "once": "KAT’Î-ŞARTLI",
-     "sonra": "İSPATSIZ"
+     "sonra": "ZAN-I GÂLİB"
     },
     {
      "hucre": "Q10.tekvin.c3",
@@ -59309,7 +62361,7 @@
    "onermeler": [
     "k_tercihsiz_hal"
    ],
-   "hucre_say": 25,
+   "hucre_say": 23,
    "hucreler": [
     {
      "hucre": "Q11.c1",
@@ -59392,24 +62444,14 @@
      "sonra": "ZAN-I GÂLİB"
     },
     {
-     "hucre": "Q10.semi.c2",
+     "hucre": "Q10.tekvin.c1",
      "once": "KAT’Î-ŞARTLI",
-     "sonra": "İSPATSIZ"
-    },
-    {
-     "hucre": "Q10.basar.c2",
-     "once": "KAT’Î-ŞARTLI",
-     "sonra": "İSPATSIZ"
-    },
-    {
-     "hucre": "Q10.kelam.c2",
-     "once": "KAT’Î-ŞARTLI",
-     "sonra": "İSPATSIZ"
+     "sonra": "ZAN-I GÂLİB"
     },
     {
      "hucre": "Q10.tekvin.c2",
      "once": "KAT’Î-ŞARTLI",
-     "sonra": "İSPATSIZ"
+     "sonra": "ZAN-I GÂLİB"
     },
     {
      "hucre": "Q10.tekvin.c3",
@@ -59465,7 +62507,7 @@
    "onermeler": [
     "k_sinirli_mumkin"
    ],
-   "hucre_say": 7,
+   "hucre_say": 8,
    "hucreler": [
     {
      "hucre": "Q07.c2",
@@ -59488,17 +62530,22 @@
      "sonra": "ZAN-I GÂLİB"
     },
     {
+     "hucre": "Q10.semi.c1",
+     "once": "KAT’Î-ŞARTLI",
+     "sonra": "ZAN-I GÂLİB"
+    },
+    {
      "hucre": "Q10.semi.c3",
      "once": "KAT’Î-ŞARTLI",
      "sonra": "ZAN-I GÂLİB"
     },
     {
-     "hucre": "Q10.basar.c3",
+     "hucre": "Q10.basar.c1",
      "once": "KAT’Î-ŞARTLI",
      "sonra": "ZAN-I GÂLİB"
     },
     {
-     "hucre": "Q10.kelam.c3",
+     "hucre": "Q10.basar.c3",
      "once": "KAT’Î-ŞARTLI",
      "sonra": "ZAN-I GÂLİB"
     }
@@ -59910,15 +62957,15 @@
   },
   {
    "ad": "Matris satırı (hücre × kabul edilmiş usul)",
-   "deger": 3488,
-   "beklenen": 3488,
+   "deger": 3616,
+   "beklenen": 3616,
    "tamam": true,
    "aciklama": "Hiçbir teçhizat hiçbir hücrede sessizce atlanmadı."
   },
   {
    "ad": "Kombinasyon satırı",
-   "deger": 1389,
-   "beklenen": 1389,
+   "deger": 1449,
+   "beklenen": 1449,
    "tamam": true,
    "aciklama": "Her hücre için kullanılan usullerin bütün boş olmayan alt kümeleri yazıldı (2ⁿ−1)."
   },
@@ -59938,7 +62985,7 @@
   },
   {
    "ad": "YAPILMADI (usul şartı mümkün, kayıt yazılmamış açık iş) sayısı",
-   "deger": 575,
+   "deger": 598,
    "beklenen": null,
    "tamam": true,
    "aciklama": "Açık iş olarak sayılır; gizlenmez."
@@ -59949,38 +62996,38 @@
   "hucre": {
    "KAT’Î": 37,
    "ZAN-I GÂLİB": 19,
-   "KAT’Î-ŞARTLI": 47,
+   "KAT’Î-ŞARTLI": 51,
    "İHTİLAFLI": 6
   },
   "matris": {
-   "YAPILAMAZ": 1962,
-   "KULLANILDI": 322,
-   "KOMBİNE": 88,
-   "YAPILMADI": 575,
-   "HUDUT": 67,
+   "YAPILAMAZ": 2006,
+   "KULLANILDI": 345,
+   "KOMBİNE": 100,
+   "YAPILMADI": 598,
+   "HUDUT": 71,
    "ÖNCÜL": 38,
-   "SINIFLANMADI": 429,
+   "SINIFLANMADI": 451,
    "AÇIK": 7
   },
   "felsefe": {
    "ÇÜRÜTÜLDÜ (kat’î, şartlı)": 14,
    "ÇÜRÜTÜLDÜ (kat’î)": 23,
    "ZANNÎ ÇÜRÜTÜLDÜ (zan-ı gâlib)": 3,
-   "İHTİLAFLI (iddia edilmez)": 1,
+   "İHTİLAFLI (iddia edilmez)": 4,
    "UYUMLU": 1
   },
   "ispat": {
-   "direct": 185,
+   "direct": 194,
    "sibr": 25,
-   "dislama": 154,
+   "dislama": 180,
    "alt": 1
   },
-  "ispat_toplam": 365,
-  "kombinasyon": 1389,
+  "ispat_toplam": 400,
+  "kombinasyon": 1449,
   "usul": 32,
   "soru": 33,
-  "hucre_say": 109,
-  "felsefe_say": 42,
-  "onerme": 115
+  "hucre_say": 113,
+  "felsefe_say": 45,
+  "onerme": 119
  }
 }

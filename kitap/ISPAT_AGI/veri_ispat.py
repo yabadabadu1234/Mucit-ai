@@ -268,3 +268,22 @@ P('Q04.c2', 'U07', ['k_zitlik_ayri_ilke', 'k_hasir_cevap_uzayi'],
 P('Q04.c2', 'U27', ['k_sinir_ilke_tek_yon', 'k_sinirli_mumkin', 'k_muhtac_mumkin'],
   'Menâniyye modelinde her ilke temas yönünde sınırlıdır; sınırlı olan sınırını kendinden alamaz ve mümkindir; mümkin vâcib olamaz (Mâtürîdî, Menâniyye tenkidi).',
   hd='Yalnız her ilkenin bir yönde sınırlı olduğunu kabul eden düalisti bağlar; ışın modeli sınırın bir yönde sonsuzlukla bağdaştığını gösterir ve ilzam yalnız sınırın müreccih istemesi ilkesine dayanır (V.2.36.2)')
+
+# 3-I 243: semi’, basar, kelâm ve tekvîn ortak çekirdek ispatları (c1); ihtilaflı kanatlar c4’tedir ve ispatlanmaz
+P('Q10.semi.c1', 'U07', ['k_isitme_kemal', 'H:Q14.c1'], 'Vâcib hiçbir kemâlden mahrum değildir (Q14.c1); işitmek kemâldir; öyleyse Vâcib işitmeden mahrum değildir.',
+  hd='Yalnız işitme kemâlinden mahrum olmamayı kapsar; bunun ayrı bir sıfat mı yoksa ilmin işitilene taalluku mu olduğu c4’tedir ve ihtilaflıdır.')
+P('Q10.semi.c1', 'U09', ['k_kemal', 'k_isitme_kemal', 'k_fail_vacib'], 'Şâhidde (yaratıklarda) işitme kemâli bulunur; onu veren Vâcib bu kemâlden mahrum olamaz.',
+  hd='Gâib–şâhid yalnız kemâl için işler, noksan için işlemez.')
+P('Q10.basar.c1', 'U07', ['k_gorme_kemal', 'H:Q14.c1'], 'Vâcib hiçbir kemâlden mahrum değildir (Q14.c1); görmek kemâldir; öyleyse Vâcib görmeden mahrum değildir.',
+  hd='Yalnız görme kemâlinden mahrum olmamayı kapsar; ayrı sıfat mı ilme dönüş mü sorusu c4’tedir ve ihtilaflıdır.')
+P('Q10.basar.c1', 'U09', ['k_kemal', 'k_gorme_kemal', 'k_fail_vacib'], 'Şâhidde görme kemâli bulunur; onu veren Vâcib bu kemâlden mahrum olamaz.',
+  hd='Gâib–şâhid yalnız kemâl için işler, noksan için işlemez.')
+P('Q10.kelam.c1', 'U07', ['k_konusma_kemal', 'H:Q14.c1'], 'Vâcib hiçbir kemâlden mahrum değildir (Q14.c1); konuşabilmek kemâldir; öyleyse Vâcib konuşabilir.',
+  hd='Yalnız konuşma kemâlinden mahrum olmamayı kapsar; konuşup konuşmadığı H3’ün, kelâmın zâtî ve mahlûk olmadığı c4’ün meselesidir.')
+P('Q10.kelam.c1', 'U07', ['H:Q10.ilim.c1', 'H:Q10.kudret.c1', 'k_konusmama_sebebi', 'k_konusma_kemal'], 'Âlim ve kâdir olan konuşmuyorsa sebep acz veya engel değildir (Vâcib’de bunlar yoktur); geriye yalnız dilememe kalır ve bu hâlde de konuşma kudreti vardır.',
+  hd='Konuşma kudretini gösterir, fiilen konuştuğunu göstermez (H3 köprüsü).')
+P('Q10.kelam.c1', 'U09', ['k_kemal', 'k_konusma_kemal', 'k_fail_vacib'], 'Şâhidde konuşma kemâli bulunur ve insanı diğer canlılardan ayırır; onu veren Vâcib bu kemâlden mahrum olamaz.',
+  hd='Gâib–şâhid yalnız kemâl için işler, noksan için işlemez.')
+P('Q10.tekvin.c1', 'U07', ['H:Q09.c4', 'k_kudret_fiil'], 'Vâcib âlemi ihtiyarla var etmiş ve her an var edip ayakta tutmaktadır; var edenin var etme kemâli yoktur denemez.',
+  hd='Yalnız var etme kemâlinin varlığını gösterir; bunun kudret ve iradenin taalluku mu ayrı bir ezelî sıfat mı olduğu c4’tedir ve ihtilaflıdır.')
+P('Q10.tekvin.c1', 'U24', ['H:Q09.c4', 'H:Q10.kudret.c1', 'H:Q10.irade.c1'], 'Fiilden fâile geçilir: var etme fiili vardır; fâil kudretli ve iradelidir; öyleyse var etme kemâli Vâcib’dedir.', tag=('enne', 'fail'))

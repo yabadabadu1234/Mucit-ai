@@ -3,7 +3,25 @@ HUCRELER = []
 FELSEFELER = []
 OLUMSUZ = []
 
-IHTILAFLI_SIFAT = ('semi', 'basar', 'kelam', 'tekvin', 'hikmet')
+IHTILAFLI_SIFAT = ('hikmet',)
+
+SIFAT_C1 = {
+    'semi': 'Vâcib işitme kemâlinden mahrum değildir; işitmeme (sağırlık) noksanı Vâcib’de bulunamaz.',
+    'basar': 'Vâcib görme kemâlinden mahrum değildir; görmeme (körlük) noksanı Vâcib’de bulunamaz.',
+    'kelam': 'Vâcib konuşma kemâlinden mahrum değildir; konuşamama (dilsizlik) noksanı Vâcib’de bulunamaz. Fiilen konuştuğu, yani bildirdiği H3’ün meselesidir.',
+    'tekvin': 'Vâcib’in var etme (tekvîn) kemâli vardır: var etmeye kâdirdir ve var eder. Bunun kudret ve iradenin taalluku mu ayrı bir ezelî sıfat mı olduğu c4’tedir.',
+}
+
+SIFAT_C4 = {
+    'semi': ('ilimden ayrı sıfat', 'Semi’ ilimden ayrı, zâta zâid ezelî bir sıfattır (ilme döndürülmez).',
+             'kelâm içi ihtilaf: Mu’tezile ilme döndürür (hafızadan, yoklanmadı); Mâtürîdî’nin Kâ’bî’ye karşı aktarımı V.2.12.7 ve V.2.12.10’dadır; kitap ortak çekirdeği (c1) iddia eder, bu hücreyi iddia etmez ve çürütmez (V.2.1.10)'),
+    'basar': ('ilimden ayrı sıfat', 'Basar ilimden ayrı, zâta zâid ezelî bir sıfattır (ilme döndürülmez).',
+              'kelâm içi ihtilaf: Mu’tezile ilme döndürür (hafızadan, yoklanmadı); kitap ortak çekirdeği (c1) iddia eder, bu hücreyi iddia etmez ve çürütmez (V.2.1.10)'),
+    'kelam': ('kelâm-ı nefsî', 'Kelâm, zâtla kâim, ezelî ve mahlûk olmayan bir sıfattır (kelâm-ı nefsî); okunan ve yazılan lafız bunun mecazî adıdır ve hâdistir.',
+              'kelâm içi ihtilaf: Kâ’bî ve Mu’tezile kelâmı hâdis sayar (Mâtürîdî’nin aktarımı V.2.13.1–19); Mâtürîdî’nin cevabı V.2.13.20–31; kelâm-ı nefsî ve lafzî ayrımı V.3.1.6; kitap ortak çekirdeği (c1) iddia eder, bu hücreyi iddia etmez (V.2.1.10)'),
+    'tekvin': ('ayrı ezelî sıfat', 'Tekvîn, kudret ve iradeden ayrı, ezelî bir sıfattır (Mâtürîdî sayımı).',
+               'kelâm içi ihtilaf: Mâtürîdî ayrı sıfat sayar (V.2.11); Eş’arî kudret ve iradeye döndürür (hafızadan, yoklanmadı); kitap ortak çekirdeği (c1) iddia eder, bu hücreyi iddia etmez (V.2.1.10)'),
+}
 
 SIFATLAR = [
     ('kidem', 'kıdem (ezelîlik)', 'zâtî', ''),
@@ -13,10 +31,10 @@ SIFATLAR = [
     ('ilim', 'ilim', 'subûtî', ''),
     ('kudret', 'kudret', 'subûtî', ''),
     ('irade', 'irade', 'subûtî', ''),
-    ('semi', 'semi’ (işitme)', 'subûtî', 'kelâm içi ihtilaf: Mu’tezile ilme döndürür; kitap yalnız noksandan münezzehliği iddia eder (V.2.1.10)'),
-    ('basar', 'basar (görme)', 'subûtî', 'kelâm içi ihtilaf: Mu’tezile ilme döndürür; kitap yalnız noksandan münezzehliği iddia eder (V.2.1.10)'),
-    ('kelam', 'kelâm', 'subûtî', 'kelâm-ı nefsî ve lafzî ihtilafı (V.3.1.6)'),
-    ('tekvin', 'tekvîn', 'subûtî', 'kelâm içi ihtilaf: Mâtürîdî ayrı sıfat sayar, Eş’arî kudret ve iradeye döndürür; kitap iddia etmez (V.2.1.10)'),
+    ('semi', 'semi’ (işitme)', 'subûtî', 'ortak çekirdek c1, ilme dönüş ihtilafı c4 (V.2.1.10)'),
+    ('basar', 'basar (görme)', 'subûtî', 'ortak çekirdek c1, ilme dönüş ihtilafı c4 (V.2.1.10)'),
+    ('kelam', 'kelâm', 'subûtî', 'ortak çekirdek c1, kelâm-ı nefsî ve lafzî ihtilafı c4 (V.3.1.6)'),
+    ('tekvin', 'tekvîn', 'subûtî', 'ortak çekirdek c1, ayrı sıfat mı kudret ve iradeye dönüş mü c4 (V.2.1.10)'),
     ('hikmet', 'hikmet (gâyeli fiil)', 'fiilî-kemâl', 'Allah’a vâcib olan bir şey yoktur kaidesi gözetilir (V.3.2.1)'),
     ('adalet', 'adâlet (zulümden münezzehlik)', 'fiilî-kemâl', 'insanî mânâ ile aynı mı: müşterek lafız ayrımı (V.2.4.2)'),
     ('rahmet', 'rahmet', 'fiilî-kemâl', 'insanî mânâ ile aynı mı: müşterek lafız ayrımı (V.2.4.2)'),
@@ -166,9 +184,11 @@ H('Q17.c3', 'Q17', 'bilinemez', 'Vâcib’in varlığı hiçbir derecede bilinem
 for sid, ad, grup, ihtilaf in SIFATLAR:
     S('Q10.' + sid, 'Sıfat: ' + ad, 'Vâcib ‘' + ad + '’ sıfatına sahip midir?', 'aklî',
       'Bir sıfat Vâcib için ya zorunludur ya mümkindir ya imkânsızdır (kip hasırı, aklî).', 'sıfat', 'V.2.2' + ('; ' + ihtilaf if ihtilaf else ''))
-    H('Q10.' + sid + '.c1', 'Q10.' + sid, 'zorunlu', 'Vâcib ‘' + ad + '’ sıfatına zorunlu olarak sahiptir.', 'İHTİLAFLI' if sid in IHTILAFLI_SIFAT else 'DOĞRU', 'sifat', not_=ihtilaf)
+    H('Q10.' + sid + '.c1', 'Q10.' + sid, 'zorunlu', SIFAT_C1.get(sid, 'Vâcib ‘' + ad + '’ sıfatına zorunlu olarak sahiptir.'), 'İHTİLAFLI' if sid in IHTILAFLI_SIFAT else 'DOĞRU', 'sifat', not_=ihtilaf)
     H('Q10.' + sid + '.c2', 'Q10.' + sid, 'mümkin', 'Vâcib için ‘' + ad + '’ sıfatı mümkindir (olabilir de olmayabilir de).', 'YANLIŞ', 'sifat')
     H('Q10.' + sid + '.c3', 'Q10.' + sid, 'imkânsız', 'Vâcib için ‘' + ad + '’ sıfatı imkânsızdır (Vâcib bu sıfata sahip olamaz).', 'YANLIŞ', 'sifat')
+    if sid in SIFAT_C4:
+        H('Q10.' + sid + '.c4', 'Q10.' + sid, SIFAT_C4[sid][0], SIFAT_C4[sid][1], 'İHTİLAFLI', 'sifat', not_=SIFAT_C4[sid][2])
 
 F('F01', 'Katı ateizm (ontolojik, cezmî)', 'maddeci', 'Allah yoktur, hiçbir vâcib yoktur diye hükmeder.', ['Q02.c2', 'Q03.c2'])
 F('F02', 'Sebepsiz olgu savunusu (brute fact evrenciliği)', 'maddeci', 'Evren veya mümkinler bütünü açıklanması gerekmeyen çıplak olgudur (hafızadan: Russell tarzı).', ['Q03.c2', 'Q00.c2'])
@@ -212,6 +232,9 @@ F('F39', 'İbadetin boş sayılması (ahlâk ve kayıtsızlık)', 'şüpheci', '
 F('F40', 'Vâcib’in illetsiz olgu sayılması (Allah da çıplak olgudur)', 'şüpheci', 'Allah da açıklaması olmayan bir olgudur.', ['Q12.c3', 'Q12.c4'])
 F('F41', 'Vâcib’in başka sebepten gelmesi (üst ilke tasavvurları)', 'Doğu', 'Mutlak varlığın da bir üst sebebi veya zemini vardır.', ['Q12.c2'])
 F('F42', 'Ehl-i sünnet kelâmı (Mâtürîdî ve Eş’arî ortak çekirdeği)', 'kelâm içi', 'Vâcib birdir, basittir, mücerrettir, ihtiyarlı fâildir, mutlak kemâl sahibidir.', ['Q02.c1', 'Q04.c1', 'Q05.c1', 'Q06.c4', 'Q07.c2', 'Q08.c3', 'Q09.c4', 'Q11.c3', 'Q12.c1', 'Q14.c1', 'Q15.c1'], 'doğru cevapla uyumlu; ikinci derece ihtilaflar (V.2.1.10) iddia edilmez')
+F('F43', 'Mu’tezile (semi’ ve basar ilmin kendisidir)', 'kelâm içi', 'İşitme ve görme ayrı sıfat değil, ilmin işitilen ve görülene taalluku olarak ilme döner.', ['Q10.semi.c4', 'Q10.basar.c4'], 'ihtilaflı; kitap iddia etmez; Mu’tezile bilgisi hafızadandır, kaynak okunmadı')
+F('F44', 'Tekvînin ayrı sıfat sayılmaması (kudret ve iradeye dönüş)', 'kelâm içi', 'Var etme ayrı bir ezelî sıfat değil, kudret ve iradenin taallukudur.', ['Q10.tekvin.c4'], 'ihtilaflı; kitap iddia etmez; hafızadan, yoklanmadı')
+F('F45', 'Kelâmın hâdis sayılması (Kâ’bî ve Mu’tezile; Mâtürîdî’nin aktarımıyla)', 'kelâm içi', 'Allah’ın kelâmı yaratılmıştır; zâtla kâim ezelî bir kelâm sıfatı yoktur.', ['Q10.kelam.c4'], 'ihtilaflı; kitap iddia etmez; Kâ’bî’nin kendi kitabı okunmadı (V.2.12–V.2.13)')
 
 O('Q01.c1', 'Vâcib mümteni ise hiçbir mümkin müreccihini bulamaz; fakat mümkinler vardır (m_mumkin): çelişki.', 'ÇELİŞKİ', 'U07')
 O('Q02.c1', 'Hiçbir vâcib yoksa mümkinlerin varlığı beş yoldan birinde açıklanmak zorundadır (Q03): mümkin yok, bütün sebepsiz, sonsuz zincir, devir, kendi kendine; hepsi ayrı ayrı çürüğüdür.', 'ÇELİŞKİ-ZİNCİR', 'U08')
@@ -229,6 +252,10 @@ O('Q10.hayat.c1', 'Vâcib hayy olmasaydı ilim ve kudret sahibi olmazdı.', 'ÇE
 O('Q10.kidem.c1', 'Vâcib kadîm olmasaydı hâdis olur ve bir muhdise muhtaç olurdu.', 'ÇELİŞKİ', 'U07')
 O('Q10.beka.c1', 'Vâcib’in yokluğu mümkin olsaydı vâcib olmazdı.', 'ÇELİŞKİ', 'U07')
 O('Q10.gina.c1', 'Vâcib bir şeye muhtaç olsaydı mümkin olurdu.', 'ÇELİŞKİ', 'U07')
+O('Q10.semi.c1', 'Vâcib işitmeseydi sağırlık noksanı Vâcib’de bulunurdu; noksanlı olan kemâli sınırlı demektir ve sınırı bir müreccihle belirlenirdi.', 'ÇELİŞKİ-KOŞULLU', 'U07')
+O('Q10.basar.c1', 'Vâcib görmeseydi körlük noksanı Vâcib’de bulunurdu; noksanlı olan kemâli sınırlı demektir ve sınırı bir müreccihle belirlenirdi.', 'ÇELİŞKİ-KOŞULLU', 'U07')
+O('Q10.kelam.c1', 'Vâcib konuşamasaydı dilsizlik noksanı Vâcib’de bulunurdu; ayrıca bildirme (H3) aklen imkânsız olurdu.', 'ÇELİŞKİ-KOŞULLU', 'U07')
+O('Q10.tekvin.c1', 'Vâcib’in var etme kemâli olmasaydı âlem var edilemezdi; oysa âlem vardır ve mümkindir.', 'ÇELİŞKİ', 'U07')
 O('Q11.c3', 'Vâcib cüz’îleri bilmeseydi cüz’î fiil ve tahsis O’na isnat edilemezdi.', 'ÇELİŞKİ-KOŞULLU', 'U24')
 O('Q12.c1', 'Vâcib’in vücûbunun başka bir sebebi olsaydı Vâcib mümkin olurdu.', 'ÇELİŞKİ', 'U07')
 O('Q13.c1', 'Âlem hâdis değilse ya zorunludur (değişenin zorunluluğu çelişir) ya ezelî mümkindir (Vâcib’in varlığını etkilemez; fakat sudûrcu felsefe doğar).', 'KISMEN', 'U08')
@@ -249,12 +276,12 @@ SIFAT_TASNIFI = [
     dict(sinif='zâtî', sira=6, ad='Muhâlefetün li’l-havâdis', sorular=['Q06', 'Q07', 'Q08'], mezhep='Senûsî sayımında “selbiyye”; kitabın tenzih hücreleri (âlemden ayrılık, cisim ve mekân değil, hulûl ve ittihâd yok) bunun açılımıdır.'),
     dict(sinif='subûtî', sira=1, ad='Hayat', sorular=['Q10.hayat'], mezhep='Mâtürîdî ve Eş’arî ortak.'),
     dict(sinif='subûtî', sira=2, ad='İlim', sorular=['Q10.ilim'], mezhep='Mâtürîdî ve Eş’arî ortak; Mu’tezile zâtın aynı sayar.'),
-    dict(sinif='subûtî', sira=3, ad='Semi’', sorular=['Q10.semi'], mezhep='Ortak sayılır; Mu’tezile ilme döndürür (V.2.1.10).'),
-    dict(sinif='subûtî', sira=4, ad='Basar', sorular=['Q10.basar'], mezhep='Ortak sayılır; Mu’tezile ilme döndürür (V.2.1.10).'),
+    dict(sinif='subûtî', sira=3, ad='Semi’', sorular=['Q10.semi'], mezhep='Ortak çekirdek (işitme kemâlinden mahrum değildir) c1’de; ayrı sıfat mı ilme dönüş mü c4’te ihtilaflıdır, Mu’tezile ilme döndürür (hafızadan, yoklanmadı; V.2.1.10).'),
+    dict(sinif='subûtî', sira=4, ad='Basar', sorular=['Q10.basar'], mezhep='Ortak çekirdek (görme kemâlinden mahrum değildir) c1’de; ayrı sıfat mı ilme dönüş mü c4’te ihtilaflıdır (hafızadan, yoklanmadı; V.2.1.10).'),
     dict(sinif='subûtî', sira=5, ad='Kudret', sorular=['Q10.kudret'], mezhep='Ortak.'),
     dict(sinif='subûtî', sira=6, ad='İrade', sorular=['Q10.irade'], mezhep='Ortak.'),
-    dict(sinif='subûtî', sira=7, ad='Kelâm', sorular=['Q10.kelam'], mezhep='Ortak sayılır; kelâm-ı nefsî ve lafzî ayrımı ihtilaflıdır (V.3.1.6).'),
-    dict(sinif='subûtî', sira=8, ad='Tekvîn', sorular=['Q10.tekvin'], mezhep='Mâtürîdî ayrı sıfat sayar (sekiz); Eş’arî kudret ve iradeye döndürür (yedi). Bu yüzden toplam 8 veya 7 çıkar.'),
+    dict(sinif='subûtî', sira=7, ad='Kelâm', sorular=['Q10.kelam'], mezhep='Ortak çekirdek (konuşma kemâlinden mahrum değildir) c1’de; kelâmın zâtî ve mahlûk olmadığı (kelâm-ı nefsî) c4’te ihtilaflıdır (V.2.13, V.3.1.6).'),
+    dict(sinif='subûtî', sira=8, ad='Tekvîn', sorular=['Q10.tekvin'], mezhep='Ortak çekirdek (var etme kemâli) c1’de; Mâtürîdî ayrı sıfat sayar (sekiz), Eş’arî kudret ve iradeye döndürür (yedi), bu ayrım c4’te ihtilaflıdır; toplam bu yüzden 8 veya 7 çıkar.'),
     dict(sinif='fiilî', sira=1, ad='Hikmet', sorular=['Q10.hikmet'], mezhep='Sübûtî sayıya girmez; fiil sıfatıdır. Mâtürîdî’de tekvîne, Eş’arî’de kudret ve iradeye döner (hafızadan). Kitap bu dört hücreyi V.2.4 ve V.5 köprüsü için açtı.'),
     dict(sinif='fiilî', sira=2, ad='Adâlet', sorular=['Q10.adalet'], mezhep='Aynı; insanî mânâyla müşterek lafız ayrımı gerekir (V.2.4.2).'),
     dict(sinif='fiilî', sira=3, ad='Rahmet', sorular=['Q10.rahmet'], mezhep='Aynı.'),
