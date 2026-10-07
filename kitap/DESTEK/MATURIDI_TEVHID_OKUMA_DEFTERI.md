@@ -194,7 +194,7 @@
 
 ### 3h. kazâ ve kader (OCR 16002–18135): hikmet ve sefeh · mükellefiyet · akıl–tabiat · muhkem–müteşâbih · kulların fiilleri (üç kol, on dokuz aklî delil, Mu'tezile'nin emir–nehiy delili, Kâ'bî I) damıtması
 
-**Okunan ve yazılan:** V.K.1, V.K.2, V.K.T1 (V.Ka, V.Kb: 90 yaprak) · V.K.3, V.K.T2 (V.Kc, V.Kc2: 85) · V.K.3.74–88, V.K.4, V.K.5, V.K.T3 (V.Kd, V.Ke: 94) = **269 yaprak** (6 dosya); ayrıca V.Kf, V.Kg (121 yaprak): toplam **390 yaprak** (8 dosya); ayrıca V.Kh, V.Ki (122 yaprak): toplam **512 yaprak** (10 dosya); ayrıca V.Kj, V.Kk, V.Kl (145 yaprak): toplam **657 yaprak** (13 dosya); ayrıca V.Km, V.Km2, V.Kn, V.Ko (167 yaprak): toplam **824 yaprak** (17 dosya). OCR satır 16002–22276. **Okunmayan:** OCR satır 22262'den sonrası (irade konularının devamı, kazâ ve kader). **Mu'tezile, Cebriyye ve Mürcie aktarımları Mâtürîdî'nindir; kendi kaynakları okunmadı.**
+**Okunan ve yazılan:** V.K.1, V.K.2, V.K.T1 (V.Ka, V.Kb: 90 yaprak) · V.K.3, V.K.T2 (V.Kc, V.Kc2: 85) · V.K.3.74–88, V.K.4, V.K.5, V.K.T3 (V.Kd, V.Ke: 94) = **269 yaprak** (6 dosya); ayrıca V.Kf, V.Kg (121 yaprak): toplam **390 yaprak** (8 dosya); ayrıca V.Kh, V.Ki (122 yaprak): toplam **512 yaprak** (10 dosya); ayrıca V.Kj, V.Kk, V.Kl (145 yaprak): toplam **657 yaprak** (13 dosya); ayrıca V.Km, V.Km2, V.Kn, V.Ko (167 yaprak): toplam **824 yaprak** (17 dosya); ayrıca V.Kp, V.Kq (49 yaprak; V.Kn'deki yarım V.K.15.4 satırı silindi): **sayım tashihi: dizin ve dosyalar yeniden sayıldı, V.K toplamı 871 yaprak, 19 dosyadır; önceki "824" sayısı bir yaprak fazla yazılmıştı.** OCR satır 16002–22701. **Okunmayan:** OCR satır 22701'den sonrası (kader'in ikinci mânası ve sonrası). **Mu'tezile, Cebriyye ve Mürcie aktarımları Mâtürîdî'nindir; kendi kaynakları okunmadı.**
 
 | # | Okunandan türeyen yeni şey | Nerede |
 | :-- | :-- | :-- |
@@ -292,6 +292,25 @@
 | 90 | Kader bâbı kapanış soru haritası (S-a…S-h); S-f ve S-g Mâtürîdî'nin okunan bölümlerinde yok | V.K.T8.29 |
 | 91 | Müslüman okuyucu için üç ödev: kader sorumluluğu kaldırmaz; duayı ve çabayı anlamsız kılmaz; musibette teslimiyet ile fiilde pişmanlık ayrılır | V.K.T8.30 |
 
+### 3i. kazâ ve kader (OCR 22262–22701): irade konularının devamı · kazâ ve kader tanımları damıtması
+
+**Okunan ve yazılan:** V.Kp (38 yaprak: V.K.15.4–27, V.K.16.1–14) ve V.Kq (11 yaprak: V.K.T9.1–11) = **49 yaprak**. **OCR bozukluğu:** satır 22303–22360 (V.K.T9.1). Kader'in ikinci mânası OCR 22701'de cümle kesildiği için yazılmadı. **Mu'tezile, Kâ'bî ve Ebû Hanîfe'ye ait görüşler Mâtürîdî'nin aktarımı kadarıyladır; kendi kaynakları okunmadı.**
+
+| # | Okunandan türeyen yeni şey | Nerede |
+| :-- | :-- | :-- |
+| 1 | Müşriklerin "Allah dileseydi" sözüne verilen üç cevap (emir mânası · mühletin yanlış yorumu · alay) Mâtürîdî'nin "üç açıdan" sayımıdır; **hasır iddiası yoktur**, üçü de sözün hangi mânada söylendiğini sorar | V.K.15.2–15.4 |
+| 2 | Söz–kast ayrımı: söz doğru olabilir, kast yanlış olabilir (münafık örneği); kastın isnadı kitapta yazılmaz, Mâtürîdî'nin okuması olarak durur | V.K.15.5 |
+| 3 | Ebû Hanîfe ikilemi üç yapraklı ağaçtır: (ilim yok) · (ilim var, irade yok) · (ilim var, irade var); ikinci yaprak "dilememek = aksini dilemek" öncülüne bağlıdır ve bu öncül yazılı değildir | V.K.15.13–15.16, V.K.T9.3 |
+| 4 | Emir–irade dört hücresi: (emir var, irade var) · (emir yok, irade var) · (emir var, irade yok) · (emir yok, irade yok); üç hücre örnekli, dördüncüsü örneksiz ve açık | V.K.T9.11 |
+| 5 | Peygamberlerin mücadelede yenilgisi: murad var, emir yok, aksine dua emri; yenilgi ile ismet ayrı şeylerdir | V.K.15.21, V.K.T9.4 |
+| 6 | İbrâhîm ve İsmâil örneği: emir var, kesim iradesi yok; "fikir değiştirme" yoktur çünkü emir imtihandır; örnek yalnız "emir = irade" tezini çürütür | V.K.15.24, V.K.T9.5 |
+| 7 | İradeyi nefyetmenin ve emri nefyetmenin sonuçları ayrıdır: emir kulluğu ve verenin üstünlüğünü, irade hükümranlığı ve baskı altında olmamayı gösterir | V.K.15.22–15.23 |
+| 8 | "İrade fiille beraberdir" cümlesi, temennînin iradeden ayrı bir hâl olduğu gösterilmedikçe tanım hamlesidir (kadir = fâil ve zaman üçlüsüyle aynı yapı) | V.K.T9.10 |
+| 9 | Kazâ'nın dört mânası Mâtürîdî'nin sayımıdır, hasır değildir ve istikrâî diye işaretlenir | V.K.16.4–16.12, V.K.T9.6 |
+| 10 | Kazâ iki katmanlıdır (fiilin vukuuna · sonucuna hükmetmek) ve iki katman arasındaki yön açıktır; ilme dayanma okuması V.K.T7.3 ikilemine bağlanır | V.K.16.8, V.K.T9.7 |
+| 11 | Kader'in birinci mânası hikmet tanımıyla (her şeyi mahiyetine uygun kılmak) aynı kalıptadır; kazâ ve kader fiillerin yaratılmışlığının sonucu olarak yazılır, bâbın ispat yükü V.K.3–V.K.5 delillerindedir | V.K.16.1, V.K.16.14 |
+| 12 | Şâhid–gâib gerilimi: "ilâhî fiil beşerî fiille mukayese edilemez" ile "duyulur âlemde fiilin temeli"nden ilâhî iradeye hüküm çıkarma iki okumayla açık kalır | V.K.15.9, V.K.15.26–27, V.K.T9.8 |
+
 ## 5. Açık suâller
 
 | # | Suâl |
@@ -307,4 +326,4 @@
 | S46 | **Açık:** Eski Ahit ve Yeni Ahit'in V.2.37 ilzamlarında anılan pasajları okunsun mu? (V.2.39.12) |
 | S47 | **Açık:** cüz ilzamları DB'ye kısmî ispat olarak yazılsın mı, yoksa hasmın kaynağı okunana kadar beklensin mi? Claude: beklesin (V.2.39.13) |
 | S48 | **Açık (tetabuk):** kul fiili mezhep ayrıntısı (halk–kesb, istitâat) inanması farz olan çekirdeğe mi girer, ayrıntı mı kalır? (V.K.T2.12; 3-I 202, 229) |
-| (okuma) | İlâhiyyât (s.73–346) ve nübüvvet (s.347–420) bitti; kaza–kader OCR 16002–22276 okundu (V.K.1–V.K.15); sıra kaza–kader devamı OCR satır 22262'den ( istitâat s.495–539, ecel, rızık, irade, kazâ ve kader s.582–616), sonra îmân s.713–758 (OCR ~27792'den); s.617–712 okunmaz |
+| (okuma) | İlâhiyyât (s.73–346) ve nübüvvet (s.347–420) bitti; kaza–kader OCR 16002–22701 okundu (V.K.1–V.K.16.14; istitâat, ecel, rızık, irade, kazâ ve kader tanımları); sıra kaza–kader devamı OCR satır 22701'den (kader'in ikinci mânası, Kâ'bî'nin kazâ ve kader görüşleri s.586, Kaderiyye'nin yerilmesi s.597, s.601, s.606), sonra îmân s.713–758 (OCR ~27792'den); s.617–712 okunmaz |

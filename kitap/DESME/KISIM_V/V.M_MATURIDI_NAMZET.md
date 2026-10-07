@@ -71,8 +71,8 @@ Kaynak: padişahın verdiği altı fotoğraftaki basılı İçindekiler (Kitâb�
 | V.M.63 | [2.] Kulların Fiilleri ve Fâillerinin Belirlenmesi (430) ve alt başlıkları (436, 457, 463, 491) | Z | V.K (3-I 242); **yapraklar V.K.3–V.K.6 ve tenkitler (V.Kc–V.Kg)** | **okundu** (OCR 16371–18989) |
 | V.M.64 | [3. Kula Ait Fiilin Kudret veya İstitâati] (495) ve alt başlıkları (503, 506, 511) | Z | V.K.7–V.K.10, V.K.T5–T7 (V.Kh–V.Kl; 3-I 242) | **okundu** (OCR 18990–20784; s.495–539) |
 | V.M.65 | [4. Ecel Konusu] (540) · [5. Rızık Konusu] (546) | Z | V.K.11 (V.Kk), V.K.12 (V.Km; 3-I 242) | **okundu** (ecel ve rızık: OCR 20785–21174; s.540–548) |
-| V.M.66 | [6.] İradeye Dair Meseleler (549) ve alt başlıkları (562, 575) | Z | V.K.13–V.K.15, V.K.T8 (V.Km, V.Km2, V.Kn, V.Ko; 3-I 242); V.2.2.3 (irade) | **kısmen okundu** (OCR 21176–22276; s.549–~580) |
-| V.M.67 | [7.] Mesele [Kazâ ve Kader Hakkında] (582) ve alt başlıkları (586, 597, 601, 606) | Z | V.K (3-I 242) | okunmadı |
+| V.M.66 | [6.] İradeye Dair Meseleler (549) ve alt başlıkları (562, 575) | Z | V.K.13–V.K.15, V.K.T8, V.K.T9 (V.Km, V.Km2, V.Kn, V.Ko, V.Kp, V.Kq; 3-I 242); V.2.2.3 (irade) | **okundu** (OCR 21176–22573; s.549–581; fihrist sayfa yeri bulunmadı) |
+| V.M.67 | [7.] Mesele [Kazâ ve Kader Hakkında] (582) ve alt başlıkları (586, 597, 601, 606) | Z | V.K.16 (V.Kp; tanımlar), V.K.T9.6–T9.7, T9.9 (V.Kq; 3-I 242) | **kısmen okundu** (OCR 22575–22701: kazâ'nın dört mânası ve kader'in birinci mânası; sonrası okunmadı; OCR 22701'in basılı sayfası bulunmadı) |
 | V.M.68 | Dördüncü Bölüm: Büyük Günahlar ve Bunları İşleyenlerin Durumu (617–712) | K | **Okunmaz; kitabın mevzuu dışı** (padişah: "bizi alakadar etmiyor") | okunmaz |
 | V.M.69 | Beşinci Bölüm: [İman ve İslâm] (713) ve alt başlıkları (713, 724, 726, 732, 737, 745) | Z | Giriş 0.1 (tanıtım) **ya da** V.6.1 (çekirdeğin tarifi; farz, inkâr, terk) / V.9; padişah "kitabın başı için tanıtım maksatlı ya da sonunda" dedi, karar padişahın | okunmadı |
 | V.M.70 | Ebû Mansûr el-Mâtürîdî: Hayatı (21), Siyasî ve İlmî Çevresi (25), İlmî Şahsiyeti (28), Eserleri (31–40) | Z | Ek B (düşünürler ve eserler: kısa biyografi) | okunmadı |

@@ -80,10 +80,12 @@ Bu dosya **dizindir**. Eskiden tek dosya olan deşmenin bütün yaprakları **si
 | [V.Kl_MATURIDI_ISTITAAT_TENKIT](DESME/KISIM_V/V.Kl_MATURIDI_ISTITAAT_TENKIT.md) | V.K.T7.1–25 (Claude tenkidi: istitâat, aslah, ecel, levh-i mahfûz; 3-I 241, 242) | 25 | 21.4 KB |
 | [V.Km_MATURIDI_RIZIK_IRADE_I](DESME/KISIM_V/V.Km_MATURIDI_RIZIK_IRADE_I.md) | V.K.12.1–20, V.K.13.1–31 (Mâtürîdî: rızık konusu; irade I: meşîet âyetleri, cebir yorumuna üç cevap, Mu'tezile'ye âyet ilzamları; 3-I 241, 242) | 51 | 29.3 KB |
 | [V.Km2_MATURIDI_IRADE_II](DESME/KISIM_V/V.Km2_MATURIDI_IRADE_II.md) | V.K.13.32–52 (Mâtürîdî: irade II: genel kabul, dua, aklî zaruret, hikmet, iradenin dört mânası; 3-I 241, 242) | 21 | 13.0 KB |
-| [V.Kn_MATURIDI_KABI_IRADE](DESME/KISIM_V/V.Kn_MATURIDI_KABI_IRADE.md) | V.K.14.1–59, V.K.15.1–4 (Mâtürîdî: Kâ'bî'nin irade görüşü ve tenkidi; irade konularının devamı başı; 3-I 241, 242) | 63 | 35.3 KB |
+| [V.Kn_MATURIDI_KABI_IRADE](DESME/KISIM_V/V.Kn_MATURIDI_KABI_IRADE.md) | V.K.14.1–59, V.K.15.1–3 (Mâtürîdî: Kâ'bî'nin irade görüşü ve tenkidi; irade konularının devamı başı; yarım V.K.15.4 silindi, tam hâli V.Kp'de; 3-I 241, 242) | 62 | 35.1 KB |
 | [V.Ko_MATURIDI_RIZIK_IRADE_TENKIT](DESME/KISIM_V/V.Ko_MATURIDI_RIZIK_IRADE_TENKIT.md) | V.K.T8.1–32 (Claude tenkidi: rızık, irade, Kâ'bî'nin irade görüşü; 3-I 241, 242) | 32 | 26.7 KB |
+| [V.Kp_MATURIDI_IRADE_III_KAZA](DESME/KISIM_V/V.Kp_MATURIDI_IRADE_III_KAZA.md) | V.K.15.4–27, V.K.16.1–14 (Mâtürîdî: irade konularının devamı, emir–irade farkı, kazâ ve kader tanımları; 3-I 241, 242) | 38 | 21.7 KB |
+| [V.Kq_MATURIDI_IRADE_III_KAZA_TENKIT](DESME/KISIM_V/V.Kq_MATURIDI_IRADE_III_KAZA_TENKIT.md) | V.K.T9.1–11 (Claude tenkidi: irade III, kazâ ve kader tanımları; 3-I 241, 242) | 11 | 7.3 KB |
 | [V.TOPLU_TENKIT_ACIK_ISLER](DESME/KISIM_V/V.TOPLU_TENKIT_ACIK_ISLER.md) | TOPLU | 0 | 1.2 KB |
 
-**Toplam yaprak: 3333.** Cinse göre: K 1342 · Z 913 · C 764 · B 59 · İt 80 · T 31 · İ 126 · M 17 · H 1
+**Toplam yaprak: 3381.** Cinse göre: K 1369 · Z 924 · C 768 · B 59 · İt 80 · T 35 · İ 128 · M 17 · H 1
 
-Not (3-I 241): V.1.3.M (285), V.2.6–V.2.39 (943), V.3.M (107), V.4.M (83), V.4.N (96), V.4.O (70) ve V.5.8–V.5.12 (66), V.K (823) ve V.M (73) yaprakları Mâtürîdî'den alınmıştır; V.F ve V.M satırlarının cinsi 3. sütundadır (namzet önerisi). V.1 dosyası 40 KB'ı aşınca V.1.4.17 ve sonrası **silinmeden** V.1.4b dosyasına taşınmıştır (3-I 238).
+Not (3-I 241): V.1.3.M (285), V.2.6–V.2.39 (943), V.3.M (107), V.4.M (83), V.4.N (96), V.4.O (70) ve V.5.8–V.5.12 (66), V.K (871) ve V.M (73) yaprakları Mâtürîdî'den alınmıştır; V.F ve V.M satırlarının cinsi 3. sütundadır (namzet önerisi). V.1 dosyası 40 KB'ı aşınca V.1.4.17 ve sonrası **silinmeden** V.1.4b dosyasına taşınmıştır (3-I 238).
