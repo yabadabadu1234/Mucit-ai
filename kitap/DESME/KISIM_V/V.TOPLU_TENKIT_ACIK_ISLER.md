@@ -8,3 +8,4 @@
 4. **Kelâm çizgisi (Açık İş 3):** Kitap Ehl-i sünnet kelâmının ortak çekirdeğiyle yazılıyor; Mu'tezile ve Şia farkları **ilan edilmeli**.
 5. **S11 kapandı (3-I 197):** ret fiilleri tasavvur · tasdik · irade.
 6. **Yaprak sayısı:** her bölümün yaprak sayısı **bu defterden sayılarak** yazılacak (elle saymadım).
+7. **Kader bâbının açık suâlleri (3-I 180):** S48–S60 `kitap/KITAP_FIHRISTI.md` açık suâller tablosunda ve okuma defterinde yazılıdır; bu dosyaya yeniden yazılmaz, çift kayıt tutulmaz.
