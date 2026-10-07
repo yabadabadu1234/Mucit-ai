@@ -56,3 +56,6 @@ A, B ve C birlikte, D de zemin olarak: **iki katmanlı kitap.** (1) İlkesiz kat
 - Şık A'nın zinciri V.4'ün kendi tenkidine göre (V.4.2.4-6 sayımı istikrâî, tarihî kollar zan) zan-ı gâlibi geçmez ve **kaynaklar okunmadığı** için bu hâliyle bir iddia değil bir planıdır (kitap okuma izni, F 3-I 230).
 - "Sâdık ise Allah vardır" adımı, "vahiy aldığını söylemesi" ile "Allah'ın varlığı" arasındaki bağın **aklî** olduğunu varsayar: bilinçli yalan ve yanılma dışlanmışsa iddia ettiği şey doğrudur; fakat "Allah" kelimesinin neye delâlet ettiği (yalnız bir fâil mi, Vâcib mi) haberin muhtevasıyla gelir.
 - Ölçüm yalnız veritabanındaki 90 öncül ve 343 ispat üzerindendir; veritabanında H3 ve H4 hücreleri **henüz yoktur** (V.3, V.4 yalnız deşme).
+
+## 6. Güncelleme notu (kayıt tashihi)
+§2'deki ölçüm (90 öncül, 343 ispat) ve §5'teki sayılar **3-I 240 günündeki** veritabanına aittir. Veritabanı sonra 115 önerme ve 365 ispat kaydına çıktı (`ISPAT_AGI_VERITABANI.md`, Tashih kaydı); ilkesiz harita **yeniden koşturulmadı**, bu yüzden §2'deki "önce" ve "ilkesiz" sayıları güncel veritabanının değeri olarak okunmamalıdır.

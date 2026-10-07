@@ -133,4 +133,6 @@ Katalogda olup listede olmayan ve alınmayanlar: İbn Teymiyye, en-Nübüvvât (
 
 ## 4. Okuma durumu (toplu)
 
-Fihrist okundu: yalnız 12 gerçek-metin eserde (12.181 satır). OCR eserlerin fihristi ve metni okunmadı. Metin okundu: 0 eser.
+**4 Ekim durumu (tarihî kayıt):** Fihrist okundu: yalnız 12 gerçek-metin eserde (12.181 satır). OCR eserlerin fihristi ve metni okunmadı. Metin okundu: 0 eser.
+
+**Güncel durum (3-I 242; bu bölüm eskimişti, düzeltildi):** Metni fiilen okunan eserler: Mâtürîdî Kitâbü't-Tevhîd Topaloğlu tercümesi (s.49–581 ve s.582'nin tanım kısmı; `kaynak/maturidi_kitabu_tevhid/`), Fârâbî Kitâbü'l-Burhân (yalnız s.1–24; `kaynak/farabi_kitabul_burhan/`), Teftâzânî Şerhu'l-Akâid İngilizce (baştan sona; `kaynak/taftazani_serhul_akaid_elder_en/`), Risâle-i Nûr derlemesi `sifati-ilahiye.pdf` (201 sayfa, baştan sona), ayrıca Pruss ve Güldü makaleleri (`kitap/DESTEK/`). Bunlardan hiçbiri Arapçadan veya gerçek metinden doğrulanmadı (3-A 25-E). Diğer eserlerin metni okunmadı. Tabloların "Bulunan" listesi bu belgenin yazıldığı güne aittir; sonradan eklenen klasörler (`maturidi_kitabu_tevhid`, `farabi_kitabul_burhan`, `taftazani_serhul_akaid_elder_en`) yukarıdaki 2-B tablosunda **yoktur**, `FIHRIST_ALAKA_SIRASI.md` Güncelleme bölümündedir.

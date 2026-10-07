@@ -8,7 +8,7 @@
 | Dil | Türkçe; terimler yalnız Türkçe (3-I 193). Arapça terimler yaprakta **Türkçeye çevrilmeden bırakılamaz**; bu taslakta kelâm terimleri henüz Türkçeleşmedi, **terim cetveli açık iştir** (Açık İş 1) |
 | Kur'ân | V.0–V.4 boyunca **hiçbir yaprak Kur'ân'dan öncül almaz** (3-I 187). V.4 sonunda H4 ispatlandıktan sonra gelen yapraklar `[H4'e dayalı]` işareti taşır |
 | Önceden bilinenler | Profesörün (padişahın) zaten bildiği yapraklar **padişah tarafından işaretlenir** (3-I 192); bu taslakta işaret yoktur |
-| Kaynak | Dayanak olarak anılan kaynaklar **içindekiler düzeyinde** biliniyor; her bâb yazılmadan evvel ilgili bölüm baştan sona okunacak (3-A 25-B). Bu taslaktaki **delil kurguları benim okuyuşumdur**, kaynaktan doğrulanmadıkça taslaktır |
+| Kaynak | Dayanak olarak anılan kaynakların çoğu **içindekiler düzeyinde** biliniyor; her bâb yazılmadan evvel ilgili bölüm baştan sona okunacak (3-A 25-B). **Güncelleme (3-I 242):** Mâtürîdî Kitâbü't-Tevhîd'in s.49–581 ve s.582'nin tanım kısmı, Teftâzânî Şerhu'l-Akâid, Fârâbî s.1–24 ve Pruss, Güldü makaleleri **fiilen okundu** (`kaynak/maturidi_kitabu_tevhid/HARITA.md` ve `OKUMA_DURUMU.md`); bu okumalardan türeyen yapraklar V.1.3m–V.1.3p, V.2m–V.2y, V.3m–V.4o2, V.5m, V.Ka–V.Kq, V.M dosyalarındadır. Bunlar da OCR ve çeviriden okunmuştur, Arapçadan doğrulanmadı. Okunmayan kaynakların yaprakları ve **delil kurguları benim okuyuşumdur**, kaynaktan doğrulanmadıkça taslaktır |
 | Tenkit | Aşağıda her bâbın sonunda |
 
 ---
@@ -20,23 +20,23 @@ Bu dosya **dizindir**. Eskiden tek dosya olan deşmenin bütün yaprakları **si
 | Dosya | Yapraklar | Yaprak sayısı | Hacim |
 | :-- | :-- | :-- | :-- |
 | [V.0_ONERMENIN_TAHLILI](DESME/KISIM_V/V.0_ONERMENIN_TAHLILI.md) | V.0 | 60 | 9.9 KB |
-| [V.1_ALLAHIN_VARLIGI](DESME/KISIM_V/V.1_ALLAHIN_VARLIGI.md) | V.1.1–V.1.4.16, V.1.5–V.1.6 (V.1.3.a.1–38 dâhil; V.1.3.a.26–38 üç hâl, 3-I 242) | 98 | 18.7 KB |
+| [V.1_ALLAHIN_VARLIGI](DESME/KISIM_V/V.1_ALLAHIN_VARLIGI.md) | V.1.1–V.1.4.16, V.1.5–V.1.6 (V.1.3.a.1–38 dâhil; V.1.3.a.26–38 üç hâl, 3-I 242) | 98 | 18.3 KB |
 | [V.1.3m_MATURIDI_ILAHIYYAT](DESME/KISIM_V/V.1.3m_MATURIDI_ILAHIYYAT.md) | V.1.3.M.1–117 (Mâtürîdî: hudûs, yaratıcı, ezelîliğin tenkidi; 3-I 241) | 117 | 35.7 KB |
 | [V.1.3n_MATURIDI_HIKMET_INKAR](DESME/KISIM_V/V.1.3n_MATURIDI_HIKMET_INKAR.md) | V.1.3.M.118–144 (Mâtürîdî: hikmet ve ilim sahibi yaratıcıyı inkâr edenlere cevap; 3-I 241) | 27 | 12.3 KB |
-| [V.1.3o_MATURIDI_CISIMLER_DEHRIYYE_SUMENIYYE](DESME/KISIM_V/V.1.3o_MATURIDI_CISIMLER_DEHRIYYE_SUMENIYYE.md) | V.1.3.M.145–236 (Mâtürîdî: İbn Şebîb'in cisimlerin hudûsu delili, düalist ilzamı, Dehriyye, tabiatçılar, münecciler, heyûlâ; 3-I 241, 242) | 92 | 29.1 KB |
+| [V.1.3o_MATURIDI_CISIMLER_DEHRIYYE_SUMENIYYE](DESME/KISIM_V/V.1.3o_MATURIDI_CISIMLER_DEHRIYYE_SUMENIYYE.md) | V.1.3.M.145–236 (Mâtürîdî: İbn Şebîb'in cisimlerin hudûsu delili, düalist ilzamı, Dehriyye, tabiatçılar, münecciler, heyûlâ; 3-I 241, 242) | 92 | 28.4 KB |
 | [V.1.3p_MATURIDI_HEYULA_SUMENIYYE_TENKIT](DESME/KISIM_V/V.1.3p_MATURIDI_HEYULA_SUMENIYYE_TENKIT.md) | V.1.3.M.237–285 (Mâtürîdî: Aristo'nun heyûlâsı, Nâzzâm'ın itirazı, hareket noktası, Sümeniyye; Claude tenkidi; 3-I 241, 242) | 49 | 22.8 KB |
 | [V.1.4b_RASTGELELIK_SEBEP_ILKESI](DESME/KISIM_V/V.1.4b_RASTGELELIK_SEBEP_ILKESI.md) | V.1.4.17–V.1.4.166 (V.1'den taşındı, 3-I 238) | 150 | 35.2 KB |
 | [V.2_TEVHID_KEMAL_SIFATLAR](DESME/KISIM_V/V.2_TEVHID_KEMAL_SIFATLAR.md) | V.2 (V.2.6–V.2.8 Mâtürîdî, 3-I 241) | 137 | 34.1 KB |
 | [V.2m_MATURIDI_SIFAT_TEKVIN](DESME/KISIM_V/V.2m_MATURIDI_SIFAT_TEKVIN.md) | V.2.9–V.2.11 (Mâtürîdî: cisim ve şey, sıfatlar, tekvin; 3-I 241) | 83 | 24.2 KB |
 | [V.2n_MATURIDI_KABI_KELAM_ISIM](DESME/KISIM_V/V.2n_MATURIDI_KABI_KELAM_ISIM.md) | V.2.12–V.2.15 (Mâtürîdî: Kâ'bî, kelâm sıfatı, ihtiyar, isimler; 3-I 241) | 74 | 25.0 KB |
-| [V.2o_MATURIDI_ARS_MEKAN](DESME/KISIM_V/V.2o_MATURIDI_ARS_MEKAN.md) | V.2.16 (Mâtürîdî: Arş ve mekân; 3-I 241, 242) | 97 | 29.1 KB |
-| [V.2p_MATURIDI_RUYETULLAH](DESME/KISIM_V/V.2p_MATURIDI_RUYETULLAH.md) | V.2.17 (Mâtürîdî: Allah'ın görülmesi; yeri açık, V.M.29; 3-I 241, 242) | 71 | 25.2 KB |
-| [V.2q_MATURIDI_MADUM_SEY](DESME/KISIM_V/V.2q_MATURIDI_MADUM_SEY.md) | V.2.18 (Mâtürîdî: "ma'dûm şeydir" tezi ve ilzamlar; kader kısmı V.K namzedi; 3-I 241, 242) | 42 | 16.8 KB |
-| [V.2r_MATURIDI_NITELEME_TESBIH](DESME/KISIM_V/V.2r_MATURIDI_NITELEME_TESBIH.md) | V.2.19 (Mâtürîdî: Allah'ı niteleyip isimlendirmek benzeşmeyi gerektirmez; Bâtıniyye aktarımı; 3-I 241, 242) | 40 | 14.6 KB |
-| [V.2s_MATURIDI_NEFS_SEY_MEKAN_KEYFIYET](DESME/KISIM_V/V.2s_MATURIDI_NEFS_SEY_MEKAN_KEYFIYET.md) | V.2.20–V.2.24 (Mâtürîdî: rabbin tanınması, şey ve cisim, mekân, mahiyet–keyfiyet–kurb; 3-I 241, 242) | 51 | 21.6 KB |
-| [V.2t_MATURIDI_KAINAT_GORUSLERI_SENEVIYYE_TABIATCI](DESME/KISIM_V/V.2t_MATURIDI_KAINAT_GORUSLERI_SENEVIYYE_TABIATCI.md) | V.2.25–V.2.28 (Mâtürîdî: kâinat görüşleri, Seneviyye ve tabiatçıların tenkidi; Kısım II bağlantısı; 3-I 241, 242) | 74 | 32.6 KB |
-| [V.2u_MATURIDI_TEVHID_YONTEMLERI](DESME/KISIM_V/V.2u_MATURIDI_TEVHID_YONTEMLERI.md) | V.2.29 (Mâtürîdî: tevhid yöntemleri, Dehriyye'nin üç ayrılık noktası, üçlü hâsr; 3-I 241, 242) | 22 | 10.9 KB |
-| [V.2v_MATURIDI_IBN_SEBIB_TENKIT](DESME/KISIM_V/V.2v_MATURIDI_IBN_SEBIB_TENKIT.md) | V.2.30–V.2.31 (Mâtürîdî: Muhammed b. Şebîb ile soru–cevap; Claude tenkidi; 3-I 241, 242) | 60 | 32.6 KB |
+| [V.2o_MATURIDI_ARS_MEKAN](DESME/KISIM_V/V.2o_MATURIDI_ARS_MEKAN.md) | V.2.16 (Mâtürîdî: Arş ve mekân; 3-I 241, 242) | 97 | 28.4 KB |
+| [V.2p_MATURIDI_RUYETULLAH](DESME/KISIM_V/V.2p_MATURIDI_RUYETULLAH.md) | V.2.17 (Mâtürîdî: Allah'ın görülmesi; yeri açık, V.M.29; 3-I 241, 242) | 71 | 24.6 KB |
+| [V.2q_MATURIDI_MADUM_SEY](DESME/KISIM_V/V.2q_MATURIDI_MADUM_SEY.md) | V.2.18 (Mâtürîdî: "ma'dûm şeydir" tezi ve ilzamlar; kader kısmı V.K namzedi; 3-I 241, 242) | 42 | 16.4 KB |
+| [V.2r_MATURIDI_NITELEME_TESBIH](DESME/KISIM_V/V.2r_MATURIDI_NITELEME_TESBIH.md) | V.2.19 (Mâtürîdî: Allah'ı niteleyip isimlendirmek benzeşmeyi gerektirmez; Bâtıniyye aktarımı; 3-I 241, 242) | 40 | 14.2 KB |
+| [V.2s_MATURIDI_NEFS_SEY_MEKAN_KEYFIYET](DESME/KISIM_V/V.2s_MATURIDI_NEFS_SEY_MEKAN_KEYFIYET.md) | V.2.20–V.2.24 (Mâtürîdî: rabbin tanınması, şey ve cisim, mekân, mahiyet–keyfiyet–kurb; 3-I 241, 242) | 51 | 21.1 KB |
+| [V.2t_MATURIDI_KAINAT_GORUSLERI_SENEVIYYE_TABIATCI](DESME/KISIM_V/V.2t_MATURIDI_KAINAT_GORUSLERI_SENEVIYYE_TABIATCI.md) | V.2.25–V.2.28 (Mâtürîdî: kâinat görüşleri, Seneviyye ve tabiatçıların tenkidi; Kısım II bağlantısı; 3-I 241, 242) | 74 | 31.9 KB |
+| [V.2u_MATURIDI_TEVHID_YONTEMLERI](DESME/KISIM_V/V.2u_MATURIDI_TEVHID_YONTEMLERI.md) | V.2.29 (Mâtürîdî: tevhid yöntemleri, Dehriyye'nin üç ayrılık noktası, üçlü hâsr; 3-I 241, 242) | 22 | 10.6 KB |
+| [V.2v_MATURIDI_IBN_SEBIB_TENKIT](DESME/KISIM_V/V.2v_MATURIDI_IBN_SEBIB_TENKIT.md) | V.2.30–V.2.31 (Mâtürîdî: Muhammed b. Şebîb ile soru–cevap; Claude tenkidi; 3-I 241, 242) | 60 | 31.8 KB |
 | [V.2w_MATURIDI_MENANIYYE_DEYSANIYYE](DESME/KISIM_V/V.2w_MATURIDI_MENANIYYE_DEYSANIYYE.md) | V.2.32–V.2.33 (Mâtürîdî: Seneviyye'nin alt fırkaları I: Menâniyye, Deysâniyye; yaratmanın hikmeti ve tek yaratıcı; 3-I 241, 242) | 126 | 37.8 KB |
 | [V.2x_MATURIDI_MERKAYUNIYYE_MECUSI_TENKIT](DESME/KISIM_V/V.2x_MATURIDI_MERKAYUNIYYE_MECUSI_TENKIT.md) | V.2.34–V.2.36 (Mâtürîdî: Merkayûniyye, Sâbiîler, Mecûsîler; Claude tenkidi ve düalizm haritası; 3-I 241, 242) | 64 | 27.8 KB |
 | [V.2y_MATURIDI_MESIH_ISA](DESME/KISIM_V/V.2y_MATURIDI_MESIH_ISA.md) | V.2.37–V.2.39 (Mâtürîdî: Hıristiyanların Mesih hakkındaki görüşleri, mûcize ilzamları, cisimlerin yaratılmışlığı delili, oğulluk; Claude tenkidi; 3-I 241, 242) | 61 | 27.9 KB |
@@ -51,7 +51,7 @@ Bu dosya **dizindir**. Eskiden tek dosya olan deşmenin bütün yaprakları **si
 | [V.4o_MATURIDI_HZ_PEYGAMBER_ISPAT](DESME/KISIM_V/V.4o_MATURIDI_HZ_PEYGAMBER_ISPAT.md) | V.4.O.1–55 (Mâtürîdî: Hz. Peygamber'in nübüvvetinin ispatı, Ebû Zeyd'in istidlâlleri, Ehl-i kitaba ilzam; 3-I 241, 242) | 55 | 22.8 KB |
 | [V.4o2_MATURIDI_HZ_PEYGAMBER_TENKIT](DESME/KISIM_V/V.4o2_MATURIDI_HZ_PEYGAMBER_TENKIT.md) | V.4.O.56–70 (Claude tenkidi ve açık suâller S44, S45; 3-I 241, 242) | 15 | 12.1 KB |
 | [V.5_BILDIRIMIN_DOGRULUGU](DESME/KISIM_V/V.5_BILDIRIMIN_DOGRULUGU.md) | V.5 | 47 | 6.8 KB |
-| [V.5m_MATURIDI_HIKMET_YARATMA_EMIR_NEHY](DESME/KISIM_V/V.5m_MATURIDI_HIKMET_YARATMA_EMIR_NEHY.md) | V.5.8–V.5.12 (Mâtürîdî: kâinat niçin yaratılmıştır, emir ve nehyin hikmeti, zararlı nesneleri yaratmanın hikmeti; 3-I 241, 242) | 66 | 26.4 KB |
+| [V.5m_MATURIDI_HIKMET_YARATMA_EMIR_NEHY](DESME/KISIM_V/V.5m_MATURIDI_HIKMET_YARATMA_EMIR_NEHY.md) | V.5.8–V.5.12 (Mâtürîdî: kâinat niçin yaratılmıştır, emir ve nehyin hikmeti, zararlı nesneleri yaratmanın hikmeti; 3-I 241, 242) | 66 | 25.8 KB |
 | [V.6.1_CEKIRDEGIN_TARIFI](DESME/KISIM_V/V.6.1_CEKIRDEGIN_TARIFI.md) | V.6.1 | 8 | 1.2 KB |
 | [V.6.2.a_TEKLIFLER_0-8](DESME/KISIM_V/V.6.2.a_TEKLIFLER_0-8.md) | V.6.2.1-16 | 16 | 4.7 KB |
 | [V.6.2.b_FARZ_HARAM_BIRIM](DESME/KISIM_V/V.6.2.b_FARZ_HARAM_BIRIM.md) | V.6.2.17-53 | 37 | 7.1 KB |
@@ -64,7 +64,7 @@ Bu dosya **dizindir**. Eskiden tek dosya olan deşmenin bütün yaprakları **si
 | [V.8_MUSLUMAN_OKUYUCU](DESME/KISIM_V/V.8_MUSLUMAN_OKUYUCU.md) | V.8 | 8 | 1.2 KB |
 | [V.9_HATIME](DESME/KISIM_V/V.9_HATIME.md) | V.9 (V.9.6–V.9.7 hâtime kıssası namzedi, 3-I 242) | 7 | 1.3 KB |
 | [V.F_FARABI_NAMZET](DESME/KISIM_V/V.F_FARABI_NAMZET.md) | V.F | 18 | 3.2 KB |
-| [V.M_MATURIDI_NAMZET](DESME/KISIM_V/V.M_MATURIDI_NAMZET.md) | V.M (Mâtürîdî fihristinden namzet başlıklar; 3-I 241) | 73 | 11.0 KB |
+| [V.M_MATURIDI_NAMZET](DESME/KISIM_V/V.M_MATURIDI_NAMZET.md) | V.M (Mâtürîdî fihristinden namzet başlıklar; 3-I 241) | 73 | 12.8 KB |
 | [V.Ka_MATURIDI_HIKMET_SEFEH_MUKELLEFIYET](DESME/KISIM_V/V.Ka_MATURIDI_HIKMET_SEFEH_MUKELLEFIYET.md) | V.K.1 (Kazâ ve kader bâbı; Mâtürîdî: hikmet ve sefeh, Mu'tezile'nin aslah ve illet iddiaları, Seneviyye'den ayrılış; etiket Claude çıkarımı, 3-I 241, 242) | 48 | 20.7 KB |
 | [V.Kb_MATURIDI_MUKELLEFIYET_AKIL_TABIAT_TENKIT](DESME/KISIM_V/V.Kb_MATURIDI_MUKELLEFIYET_AKIL_TABIAT_TENKIT.md) | V.K.2, V.K.T1 (Mâtürîdî: mükellefiyet, akıl–tabiat, muhkem–müteşâbih; Claude tenkidi; 3-I 241, 242) | 42 | 23.3 KB |
 | [V.Kc_MATURIDI_KUL_FIILLERI_FIRKALAR](DESME/KISIM_V/V.Kc_MATURIDI_KUL_FIILLERI_FIRKALAR.md) | V.K.3.1–73 (Mâtürîdî: kulların fiilleri hakkında üç görüş, halk–kesb, on iki aklî delil; 3-I 241, 242) | 73 | 33.0 KB |
@@ -76,7 +76,7 @@ Bu dosya **dizindir**. Eskiden tek dosya olan deşmenin bütün yaprakları **si
 | [V.Kh_MATURIDI_ISTITAAT_I](DESME/KISIM_V/V.Kh_MATURIDI_ISTITAAT_I.md) | V.K.7.1–45, V.K.T5.1–12 (Mâtürîdî: istitâat I: iki kudret, nakil ve akıl delilleri, Mu'tezile'ye ilzam, kudret fiille beraberdir; Claude tenkidi; 3-I 241, 242) | 57 | 30.6 KB |
 | [V.Ki_MATURIDI_ISTITAAT_II_KABI](DESME/KISIM_V/V.Ki_MATURIDI_ISTITAAT_II_KABI.md) | V.K.7.46–52, V.K.8.1–23, V.K.9.1–23, V.K.T6.1–12 (Mâtürîdî: istitâat II: kudretin taat ve mâsiyete elverişliliği, teklîf-i mâ lâ yutâk, Kâ'bî'nin görüşü I; Claude tenkidi; 3-I 241, 242) | 65 | 35.2 KB |
 | [V.Kj_MATURIDI_KABI_ISTITAAT_III](DESME/KISIM_V/V.Kj_MATURIDI_KABI_ISTITAAT_III.md) | V.K.9.24–84 (Mâtürîdî: Kâ'bî'nin istitâat görüşü II: köle–efendi, ilimde yapmayacak, Firavun, aslah, emir ve kudret; 3-I 241, 242) | 61 | 38.1 KB |
-| [V.Kk_MATURIDI_ISTITAAT_IV_ECEL](DESME/KISIM_V/V.Kk_MATURIDI_ISTITAAT_IV_ECEL.md) | V.K.9.85–99, V.K.10.1–17, V.K.11.1–26 (Mâtürîdî: Kâ'bî'nin istitâat görüşü III, ihtiyar ve tercih, ecel konusu; 3-I 241, 242) | 58 | 34.1 KB |
+| [V.Kk_MATURIDI_ISTITAAT_IV_ECEL](DESME/KISIM_V/V.Kk_MATURIDI_ISTITAAT_IV_ECEL.md) | V.K.9.85–99, V.K.10.1–17, V.K.11.1–26 (Mâtürîdî: Kâ'bî'nin istitâat görüşü III, ihtiyar ve tercih, ecel konusu; 3-I 241, 242) | 58 | 33.5 KB |
 | [V.Kl_MATURIDI_ISTITAAT_TENKIT](DESME/KISIM_V/V.Kl_MATURIDI_ISTITAAT_TENKIT.md) | V.K.T7.1–25 (Claude tenkidi: istitâat, aslah, ecel, levh-i mahfûz; 3-I 241, 242) | 25 | 21.4 KB |
 | [V.Km_MATURIDI_RIZIK_IRADE_I](DESME/KISIM_V/V.Km_MATURIDI_RIZIK_IRADE_I.md) | V.K.12.1–20, V.K.13.1–31 (Mâtürîdî: rızık konusu; irade I: meşîet âyetleri, cebir yorumuna üç cevap, Mu'tezile'ye âyet ilzamları; 3-I 241, 242) | 51 | 29.3 KB |
 | [V.Km2_MATURIDI_IRADE_II](DESME/KISIM_V/V.Km2_MATURIDI_IRADE_II.md) | V.K.13.32–52 (Mâtürîdî: irade II: genel kabul, dua, aklî zaruret, hikmet, iradenin dört mânası; 3-I 241, 242) | 21 | 13.0 KB |
@@ -84,7 +84,7 @@ Bu dosya **dizindir**. Eskiden tek dosya olan deşmenin bütün yaprakları **si
 | [V.Ko_MATURIDI_RIZIK_IRADE_TENKIT](DESME/KISIM_V/V.Ko_MATURIDI_RIZIK_IRADE_TENKIT.md) | V.K.T8.1–32 (Claude tenkidi: rızık, irade, Kâ'bî'nin irade görüşü; 3-I 241, 242) | 32 | 26.7 KB |
 | [V.Kp_MATURIDI_IRADE_III_KAZA](DESME/KISIM_V/V.Kp_MATURIDI_IRADE_III_KAZA.md) | V.K.15.4–27, V.K.16.1–14 (Mâtürîdî: irade konularının devamı, emir–irade farkı, kazâ ve kader tanımları; 3-I 241, 242) | 38 | 21.7 KB |
 | [V.Kq_MATURIDI_IRADE_III_KAZA_TENKIT](DESME/KISIM_V/V.Kq_MATURIDI_IRADE_III_KAZA_TENKIT.md) | V.K.T9.1–11 (Claude tenkidi: irade III, kazâ ve kader tanımları; 3-I 241, 242) | 11 | 7.3 KB |
-| [V.TOPLU_TENKIT_ACIK_ISLER](DESME/KISIM_V/V.TOPLU_TENKIT_ACIK_ISLER.md) | TOPLU | 0 | 1.2 KB |
+| [V.TOPLU_TENKIT_ACIK_ISLER](DESME/KISIM_V/V.TOPLU_TENKIT_ACIK_ISLER.md) | TOPLU | 0 | 1.4 KB |
 
 **Toplam yaprak: 3381.** Cinse göre: K 1369 · Z 924 · C 768 · B 59 · İt 80 · T 35 · İ 128 · M 17 · H 1
 

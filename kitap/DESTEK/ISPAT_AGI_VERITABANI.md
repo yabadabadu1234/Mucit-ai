@@ -11,9 +11,9 @@
 | Dosya | İş |
 | :-- | :-- |
 | `veri_usul.py` | 35 usul kaydı: tanım, nasıl yapılır, şart, hudut, safsata, katiyet tavanı, misal |
-| `veri_onerme.py` | 101 önerme (evveliyyât, müşâhede, tanım, mantık, türetilmiş); zayıf halkalar `zayif` ve `aile` ile işaretli |
-| `veri_soru.py` | 33 suâl (Q18 zemin, Q00 sebep ilkesi, Q01–Q09, Q11–Q17, 15 sıfat suâli Q10.*), 109 hücre, 42 felsefe, 25 "olmasaydı" kaydı, **sıfat tasnifi** (6 zâtî, 8 sübûtî, 4 fiilî) |
-| `veri_ispat.py` | Elle yazılmış 173 doğrudan ispat kaydı (hücre, usul, öncül listesi, özet) |
+| `veri_onerme.py` | 115 önerme (evveliyyât, müşâhede, tanım, mantık, türetilmiş); zayıf halkalar `zayif` ve `aile` ile işaretli |
+| `veri_soru.py` | 33 suâl (Q18 zemin, Q00 sebep ilkesi, Q01–Q09, Q11–Q17, 15 sıfat suâli Q10.*), 109 hücre, 42 felsefe, 25 "olmasaydı" kaydı, **sıfat tasnifi** (6 zâtî, 8 sübûtî, 4 fiilî); "olmasaydı" kaydı üç türde toplam 158 |
+| `veri_ispat.py` | Elle yazılmış 185 doğrudan ispat kaydı (hücre, usul, öncül listesi, özet) |
 | `kural.py` | Bir usulün bir hücrede **neden yapılamayacağını** söyleyen kurallar |
 | `motor.py` | Katmanlı hesap, türetilmiş ispatlar, kombinasyon, matris, felsefe durumu |
 | `insa.py` | Kontroller, SQLite, JSON, HTML üretimi |
@@ -32,7 +32,7 @@ Yeniden kurmak: `python3 insa.py` (kontroller kırmızıysa çıktıda KIRMIZI g
    - *sibr:* doğru hücre, kardeş bütün hücrelerin doğrudan çürütmelerinden türer; suâlde İHTİLAFLI hücre varsa türemez (kitap o hücreyi iddia etmez); istikrâî hasırlı suâlde katiyet zanla sınırlanır.
    - *dışlama:* doğru kardeşin her doğrudan ispatı, yanlış hücreye aynı usulle bir çürütme olarak yazılır (kardeş ispatı P: ile bağlanır; tenbih sayılmaz).
    - *alt suâl:* Q02.c2 ("hiçbir vâcib yoktur") Q03'ün beş hücresinin ayrı ayrı çürütülmesinden çürür.
-5. **Kısmî ispat:** yalnız bir alt durumu kapsayan ispat `kısmî` işaretlenir; hücrenin hükmünü taşımaz, başka ispata dayanak olmaz, kombinasyonda ayrıca sayılır (4 kayıt).
+5. **Kısmî ispat:** yalnız bir alt durumu kapsayan ispat `kısmî` işaretlenir; hücrenin hükmünü taşımaz, başka ispata dayanak olmaz, kombinasyonda ayrıca sayılır (güncel sayı 18 kayıt; ilk sürümde 4 idi).
 6. **Tenbih** (U32) delil değildir: katiyeti sıfır, dayanak olamaz, dışlamayla yayılmaz.
 7. **Kombinasyon:** bir hücrenin kullandığı usullerin her alt kümesi için: en yüksek katiyet, zayıf halka yok mu, **ortak zayıf halka** (en yüksek katiyetteki bütün ispatların ortak ailesi), kısmî sayısı. `yeterli` = hücrenin ulaşabildiği en iyi hâle çıkaran küme; `asgarî` = hiçbir alt kümesi yeterli olmayan; `azamî` = bütün usuller.
 8. **Matris durumları (hücre × usul):** `KULLANILDI` · `KOMBİNE` (U16) · `HUDUT` (U30: zayıf halka veya kısmî kapsam var) · `ÖNCÜL` (U12, U13 yalnız öncül sağladı) · `YAPILAMAZ` (kuralla, sebebiyle) · `YAPILMADI` (usulün şartı mümkün, kayıt henüz yazılmadı: **açık iş**) · `SINIFLANMADI` (U19–U25: ispat Fârâbî sınıfına etiketlenmedi) · `AÇIK` (hasır kardeşlerden biri bağsız).
@@ -43,13 +43,13 @@ Yeniden kurmak: `python3 insa.py` (kontroller kırmızıysa çıktıda KIRMIZI g
 
 | Ölçü | Değer |
 | :-- | :-- |
-| Suâl · hücre · önerme · usul (kabul edilmiş) · felsefe | 33 · 109 · 101 · 32 · 42 |
-| İspat kaydı (doğrudan · sibr · dışlama · alt suâl) | 173 · 25 · 154 · 1 = 353 |
+| Suâl · hücre · önerme · usul (kabul edilmiş) · felsefe | 33 · 109 · 115 · 32 · 42 |
+| İspat kaydı (doğrudan · sibr · dışlama · alt suâl) | 185 · 25 · 154 · 1 = 365 |
 | Hücre durumu | KAT'Î 37 · KAT'Î-ŞARTLI 47 · ZAN-I GÂLİB 19 · İHTİLAFLI 6 (ispatsız DOĞRU/YANLIŞ hücre yok) |
-| Matris (3488 satır) | YAPILAMAZ 1969 · KULLANILDI 317 · YAPILMADI 575 · SINIFLANMADI 429 · KOMBİNE 88 · HUDUT 66 · ÖNCÜL 37 · AÇIK 7 |
-| Kombinasyon satırı (usul alt kümesi) | 1321 |
-| Türetme ağacı sayısı | hücre başına 0 ile 274 arası (en çok Q02.c2: 274, Q02.c1: 273, Q17.c1: 270) |
-| “Olmasaydı” satırı | 147: hücre doğru olmasaydı 25 · hiç var olmasaydı 20 · aksi doğru olsaydı 102 |
+| Matris (3488 satır) | YAPILAMAZ 1962 · KULLANILDI 322 · YAPILMADI 575 · SINIFLANMADI 429 · KOMBİNE 88 · HUDUT 67 · ÖNCÜL 38 · AÇIK 7 |
+| Kombinasyon satırı (usul alt kümesi) | 1389 |
+| Türetme ağacı sayısı | **ilk sürümün ölçümü** (hücre başına 0 ile 274 arası; en çok Q02.c2: 274, Q02.c1: 273, Q17.c1: 270); sonraki sürümlerde yeniden sayılmadı, güncel değerler `ispat_agi.json` içindedir |
+| “Olmasaydı” satırı | 158: hücre doğru olmasaydı 25 · hiç var olmasaydı 20 · aksi doğru olsaydı 113 |
 | Felsefe | ÇÜRÜTÜLDÜ kat'î 23 · kat'î fakat şartlı 14 · zannî 3 · İHTİLAFLI 1 · UYUMLU 1 · **koşulsuz ÇÜRÜMEDİ 0** |
 
 ## Sıfat tasnifi (padişahın sorusu, 3-I 238)
@@ -71,7 +71,7 @@ Padişahın saydığı altı zâtî sıfat (vücûd, kıdem, bekâ, vahdâniyyet
 
 ## Ölçü sağlığı (F 3-B 27-B)
 
-`insa.py` her kuruluşta şunları sayar ve hepsi tamam çıkmıştır: bulunamayan kimlik 0 · zemine bağlanamayan ispat 0 · `kapsam_cerhi` atfı eksik hücre 0 · ispatsız veya yalnız kısmî DOĞRU/YANLIŞ hücre 0 · İHTİLAFLI hücreye hasırla doğru hükmü 0 · matris satırı 3488 = 109 × 32 · kombinasyon 1111 = Σ(2ⁿ−1). **Ayırt testi:** bir zayıf aile kaldırıldığında bağlı hücrelerin durumu fiilen düşer (sebep-ilkesi ailesinin bütünü 28 hücre (üç kanada ayrılınca: hâl 18, varlık 0 çünkü varlık ve hâl kanadı birbirinden bağımsız yollar taşır, ikisi birden 26; ayrıntı DESTEK/SEBEP_ILKESI_ARASTIRMA.md), kemâl 14, ibadet tanımı 4, terkip 1); etkisiz çıkan aileler (ihkam, özdeşlik, zaman, zât–vücûd, zorunluluk de dicto, sebep-ilkesi-varlik ve Pruss ispatının iki ailesi sebepsiz-sans ve apriori-ret) başka ispatlarla ayaktadır ve bu da sayılıdır.
+`insa.py` her kuruluşta şunları sayar ve hepsi tamam çıkmıştır: bulunamayan kimlik 0 · zemine bağlanamayan ispat 0 · `kapsam_cerhi` atfı eksik hücre 0 · ispatsız veya yalnız kısmî DOĞRU/YANLIŞ hücre 0 · İHTİLAFLI hücreye hasırla doğru hükmü 0 · matris satırı 3488 = 109 × 32 · kombinasyon 1389 = Σ(2ⁿ−1) (güncel; ilk sürümde 1111). **Ayırt testi:** bir zayıf aile kaldırıldığında bağlı hücrelerin durumu fiilen düşer (sebep-ilkesi ailesinin bütünü 28 hücre (üç kanada ayrılınca: hâl 18, varlık 0 çünkü varlık ve hâl kanadı birbirinden bağımsız yollar taşır, ikisi birden 26; ayrıntı DESTEK/SEBEP_ILKESI_ARASTIRMA.md), kemâl 14, ibadet tanımı 4, terkip 1); etkisiz çıkan aileler (ihkam, özdeşlik, zaman, zât–vücûd, zorunluluk de dicto, sebep-ilkesi-varlik ve Pruss ispatının iki ailesi sebepsiz-sans ve apriori-ret) başka ispatlarla ayaktadır ve bu da sayılıdır.
 
 ## Padişaha sorulacak tetabuk (3-A 13)
 
@@ -115,3 +115,7 @@ Yeni önermeler (8): `k_hata_olcut`, `k_birlesme_sebep`, `k_tabii_birlesme`, `k_
 **Ek (s.313–346, Menâniyye ve Deysâniyye):** iki kısmî veya hudutlu ispat daha: **Q04.c2** için "her zıtlık ayrı ilke ister" ilkesinin sınırsız çoğalması (U07, kısmî; zayıf aile `zitlik-ilke`) ve Menâniyye modelinde sınırlı ilkenin mümkin oluşu (U27, hudutlu; yarım doğru modeli hudut olarak yazılı). Yeni önermeler: `k_zitlik_ayri_ilke`, `k_sinir_ilke_tek_yon`. **Sayılar:** ispat 363 → 365; önerme 113 → 115; hücre durumu değişmedi; etkisiz zayıf aile 26 → 27. **Q04.c2** artık 11 ispat taşır (bunlardan 4'ü bu okumadan; hepsi kısmî veya hudutlu olanlar tek başına hücreyi taşımaz).
 
 **Okuma notu (dürüstlük):** Mâtürîdî'nin tefekkür savunmasındaki kâr–zarar matrisi (I.3.16.20–24) bu DB'ye **yazılmadı**, çünkü DB Allah'a dair hücrelerin ispatlarını tutar; matris burhan değil karar teorisi tavsiyesidir (I.3.16.40) ve kitabın usul bâbında (`I.3c`) durur. Duyu bilgisi ve rüya cevapları (I.3.17.15–45) aynı sebeple DB dışındadır; Q18 hücrelerine (Sofistler) bağlanan tek ek ispat hata düzeltme argümanıdır.
+
+## Tashih kaydı (3-I 242, kayıt güncellemesi)
+
+Bu dosyanın "Dosyalar" ve "Sayılar" tabloları ilk sürümün sayılarında kalmıştı; sonraki "Güncelleme kaydı" bölümleri sayıları ayrı ayrı yazıyordu ve tablo ile çelişiyordu. Tablolar `ispat_agi.json`un `say` ve `kontrol` bölümüne göre düzeltildi (ispat 365, önerme 115, matris ve kombinasyon yukarıdaki gibi); hücre durumu (KAT'Î 37 · KAT'Î-ŞARTLI 47 · ZAN-I GÂLİB 19 · İHTİLAFLI 6) ve felsefe durumu (kat'î 23 · şartlı 14 · zannî 3 · İHTİLAFLI 1 · UYUMLU 1) değişmemişti. **Veritabanı yeniden kurulmadı** (`insa.py` koşturulmadı); değişen yalnız bu belgedeki sayılardır. **Mâtürîdî s.347–581 okumasından (nübüvvet, kazâ ve kader) veritabanına kayıt yazılmadı:** H3–H4 hücreleri yoktur (S43) ve kader suâlleri için hücre açılmamıştır; bu açık iştir.

@@ -20,8 +20,8 @@ Bu dosya **dizindir**. Eskiden tek dosya olan deşmenin bütün yaprakları **si
 | [I.1_TASNIF_USULU](DESME/KISIM_I/I.1_TASNIF_USULU.md) | I.1 | 102 | 14.0 KB |
 | [I.2_TANIM_USULU](DESME/KISIM_I/I.2_TANIM_USULU.md) | I.2 | 51 | 5.8 KB |
 | [I.3a_KATIYET_DERECELERI](DESME/KISIM_I/I.3a_KATIYET_DERECELERI.md) | I.3.1–I.3.7 | 54 | 6.4 KB |
-| [I.3b_FARABI_TASDIK_ILK_ILKELER](DESME/KISIM_I/I.3b_FARABI_TASDIK_ILK_ILKELER.md) | I.3.8–I.3.15 | 139 | 28.3 KB |
-| [I.3c_MATURIDI_TEFEKKUR_SOFISTLER](DESME/KISIM_I/I.3c_MATURIDI_TEFEKKUR_SOFISTLER.md) | I.3.16–I.3.17 (Mâtürîdî: tefekkürü terk etmek mi istidlâl mi; Sofistler ve duyu bilgisi; 3-I 241, 242) | 92 | 24.5 KB |
+| [I.3b_FARABI_TASDIK_ILK_ILKELER](DESME/KISIM_I/I.3b_FARABI_TASDIK_ILK_ILKELER.md) | I.3.8–I.3.15 | 139 | 27.7 KB |
+| [I.3c_MATURIDI_TEFEKKUR_SOFISTLER](DESME/KISIM_I/I.3c_MATURIDI_TEFEKKUR_SOFISTLER.md) | I.3.16–I.3.17 (Mâtürîdî: tefekkürü terk etmek mi istidlâl mi; Sofistler ve duyu bilgisi; 3-I 241, 242) | 92 | 23.9 KB |
 | [I.4a_ISPAT_USULLERI](DESME/KISIM_I/I.4a_ISPAT_USULLERI.md) | I.4.1–I.4.5 | 51 | 6.7 KB |
 | [I.4b_FARABI_ENNE_LIME_SEBEP_ONCULLER](DESME/KISIM_I/I.4b_FARABI_ENNE_LIME_SEBEP_ONCULLER.md) | I.4.6–I.4.8 | 71 | 12.4 KB |
 | [I.4c_FARABI_TERKIP_KIPLERI](DESME/KISIM_I/I.4c_FARABI_TERKIP_KIPLERI.md) | I.4.9 | 49 | 13.0 KB |
@@ -37,4 +37,4 @@ Bu dosya **dizindir**. Eskiden tek dosya olan deşmenin bütün yaprakları **si
 
 Not (3-I 242): I.3.15.63 nakzedildi (S40; eski metin kendi yaprağında yazılı), I.3.15.64 ve iki "-b" yaprağı (I.3.15.26-b, I.3.15.30-b) eklendi; I.10 yeni fasıldır.
 
-Not (3-I 241): Mâtürîdî'den alınan 101 yaprak I.3.15 (63), I.4.14 (17), I.6.7 (7), I.7.9 (14) fasıllarındadır.
+Not (3-I 241; **tashih 3-I 242**): 3-I 241 günü Mâtürîdî'den alınan 101 yaprak I.3.15 (63), I.4.14 (17), I.6.7 (7), I.7.9 (14) fasıllarındaydı; sonraki okumalarla Mâtürîdî'den **ayrıca** I.3.16–I.3.17 (92 yaprak, `I.3c`) ve I.10 (51 yaprak) alındı, I.3.15'e iki "-b" ve bir yeni yaprak eklendi. Bu not sayıları o günkü sayılardır, güncel yaprak sayıları yukarıdaki tablodadır.

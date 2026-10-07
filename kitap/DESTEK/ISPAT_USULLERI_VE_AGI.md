@@ -34,4 +34,4 @@
 - Muhatap ağacı = ağda sorgu: "bu düğüm reddedilirse ne ayakta kalır".
 
 ## Açık suâller
-S30 (başlayalım mı) · S31 (tam küme hangi eksenlerle).
+S30 (başlayalım mı): **kapandı (3-I 237)**, veritabanı kuruldu (`ISPAT_AGI_VERITABANI.md`) · S31 (tam küme hangi eksenlerle): **açık** (`KITAP_FIHRISTI.md`).

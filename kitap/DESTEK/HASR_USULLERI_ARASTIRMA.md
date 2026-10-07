@@ -79,3 +79,6 @@ TDV İslâm Ansiklopedisi "Sebr ve Taksim" (islamansiklopedisi.org.tr/sebr-ve-ta
 
 - **B12 (benim akıl yürütmem):** U20 eleme değildir, sayma da değildir; kesindir (her suâl bir alt kümedir). Fakat (a) **mümkün her suâlin** hasrıdır, **sorulması gerekenlerin** değil; (b) `X`in elemanlarının üyeliği kesin tanımlı olmalıdır; (c) sonsuz `X`te listelenemez, yalnız "dışarıda suâl yoktur" denir; (d) U20, çelişmezlik ilkesine dayanır: ikili nefyin **üzerine kurulur**, ondan bağımsız değildir.
 - **B13:** B1'in düzeltilmesi: verili olarak `X`in kendisi de yeter (bu, tanım·kanun·kaynak sayımına dördüncü bir kalem olarak **eklenmez**; B1 tamlık iddiası taşımıyordu). Kalan suâl: hasredilecek olan **mümkün suâller** mi, **sorulması gerekenler** mi?
+
+## 10. Güncelleme (3-I 212, 213, 214; kayıt tashihi)
+B13'ün son suâli ("hasredilecek olan mümkün suâller mi, sorulması gerekenler mi?") padişahça cevaplandı: **mümkün her suâl** (3-I 212). **U20 ve "evet/hayır suâli" ölçütü nakzedildi:** evet/hayır bir cevaptır, suâl değildir (3-I 213); S23 kapandı. Aranan şey artık iki tam zıt suâl kutbudur ve bu iş `SUAL_KUTUPLARI.md`de yürür (3-I 213–216, S24, S25). Bu dosyadaki U20 satırı ve B12–B13 **tarihî kayıttır, silinmedi** (3-I 179); güncel hüküm yukarıdadır.

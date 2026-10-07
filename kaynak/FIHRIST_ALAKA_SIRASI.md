@@ -72,6 +72,19 @@
 
 ## Sayım
 
-- Gruplanmış satır: 40 (bir satır birden çok klasör içerir).
+- Gruplanmış satır: 40 (bir satır birden çok klasör içerir; **4 Ekim tarihli ilk sayım**, güncel durum aşağıdaki "Güncelleme" bölümündedir).
 - İçindekisi okunamayan/bozuk/yok: Muhassal (3 klasör), Mâtürîdî Arapça–Türkçe, Nursî, Elmalılı (kısmen).
 - OCR dışı, doğrudan metin katmanından okunan makale ve PDF kitaplar: Hocazâde–Tehâfüt, Gelenbevî, Kemalpaşazâde, Harputlu, Sadrâ (Âriflerin İksiri, Nasr, Mukhtar Ali) vb.
+
+## Güncelleme (3-I 242; kayıt tashihi)
+
+Bu dosya 4 Ekim'de yazıldı ve yalnız **içindekilerin okunmasını** kaydediyordu; sonraki turlarda eserlerin **içeriği** de okundu ve yeni klasörler açıldı, fakat bu dosya güncellenmemişti. Güncel durum (ilk dört katmanın sırası **değişmedi**; yeni satırlar sona eklendi):
+
+| Sıra | Klasör | Eser | Durum (güncel) |
+| --: | :-- | :-- | :-- |
+| 1.12 (yeni) | `maturidi_kitabu_tevhid` | Mâtürîdî, Kitâbü't-Tevhîd, Türkçe tercüme ve açıklama (B. Topaloğlu, İSAM; archive.org `djvu.txt` OCR) | **padişah: temel kaynak (3-I 241).** Basılı İçindekiler padişahın fotoğraflarından `HARITA.md`ye aktarıldı; **metin okundu: s.49–581 ve s.582'nin tanım kısmı** (OCR satır 22701'e kadar); s.617–712 **okunmaz** (padişah), kalan okunmadı. Ayrıntı `OKUMA_DURUMU.md`. Arapça asıl okunmadı |
+| 3.10 (yeni) | `farabi_kitabul_burhan` | Fârâbî, Kitâbü'l-Burhân (Türker–Alper çevirisi; bir sayfa Arapça, bir sayfa Türkçe; OCR) | **metin okundu: yalnız s.1–24** (padişah izni, 3-I 235); s.25 ve sonrası okunmadı |
+| 1.6 (düzeltme) | `taftazani_serhul_akaid_elder_en` | Teftâzânî, Şerhu'l-Akâid (Elder, İngilizce) | içindekiyle birlikte **metin baştan sona okundu** (satır 1–11099; 3-I 228, 229); Arapçadan doğrulanmadı |
+| 5.3 (düzeltme) | `nursi_risale_i_nur` ve depo kökündeki `sifati-ilahiye.pdf` | Risâle-i Nûr (6 OCR dosyası) ve **A. Koçoğlu derlemesi "Risale-i Nur Külliyatında Sıfat-ı İlahiyenin İsbatı"** (201 sayfa, yerel metin katmanı, OCR değil) | **6 OCR dosyasının içindekisi yok ve metni okunmadı.** Derleme PDF'i **baştan sona okundu** (kayıt: `kitap/DESTEK/SIFAT_SAYISI_ARAMA.md` Ek 3), fakat delillerinin burhânî mi peşin kabule mi dayandığı **tasnif edilmedi** (`KITAP_FIHRISTI.md` S61) |
+
+Bu dosyanın başındaki "yalnız içindekileri okudum, eserlerin içeriğini okumadım" tenkidi bu satırlardaki eserler için **artık doğru değildir**; diğer eserler için geçerlidir.

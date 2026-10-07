@@ -87,3 +87,9 @@ Fiiller: **tasavvur** (mefhuma ulaşmamış veya yanlış ulaşmış) · **tasdi
 **Kısım A: 28 hücre** (28 açık). **Kısım B: 30 hücre** (30 açık). **Toplam: 58 hücre, 58 açık, 0 cevap yazıldı, 0 sınır ilan edildi.** Vesveseden sayılan suâl: 0.
 
 **Tenkit:** (1) Kısım A'nın taarruz türleri benim taramamdır, istikrâîdir; kapalılığı zannîdir. (2) Kısım B'de **yalnız halka düzeyi aklî hasırdır** (bağlaç mantığı). Fiil düzeyi ve tasdiğin alt dalları sayıma dayanır; **zannîdir**; bir kişi birden çok fiilde reddediyorsa **ilk** ret fiili sayılır. (3) H6 hücrelerinin cevap bâbı, hüküm listesi (S12) gelmeden **yazılamaz**; bu yüzden H6'nın dört hücresi, liste gelene kadar yalnız şablonla durur. (4) Cevap yerleri plandır; bâb yazılınca hücre kapanır.
+
+## GÜNCELLEME NOTU (3-I 242, kayıt tashihi)
+
+(1) **Sayım değişmedi:** 58 hücre, 58 açık. Bu defterde hücre ancak **bâb metni yazılınca** kapanır (satır 6 ve 11); şimdiye kadar yazılan şey deşme yapraklarıdır (`DESME_KISIM_V.md`: 3381 yaprak; `DESME_KISIM_I.md`: 881 yaprak), bâb metni değildir. Bu yüzden hiçbir hücre CEVAP YAZILDI yapılmadı.
+(2) **Defterde karşılığı olmayan yeni bâblar:** `V.K` (kazâ ve kader, 3-I 242) ve `V.İ` (ispat ağı veritabanı, 3-I 237) bu matrislerin hiçbir hücresinin "cevap bâbı" olarak atfında geçmez. Kazâ ve kader'e dair taarruz türleri (cebir itirazı, ezelî ilim ve ihtiyar ikilemi, şer problemi) Kısım A'ya hücre olarak **eklenmedi**; padişah "yeni taarruz çıkarsa A'ya hücre eklenir" (satır 9) kaidesine göre eklenip eklenmeyeceğini söylemedi (açık, `KITAP_FIHRISTI.md` açık suâller).
+(3) **Cevap yeri atıfları plandır** (satır 11): Kısım I'de artık Bâb 10 (lafız, anlam ve yorum usulü) vardır ve Bâb 9 dağıtılmıştır (3-I 236); bu defterdeki "Kısım I 1-8" atıfları bundan etkilenmez.
