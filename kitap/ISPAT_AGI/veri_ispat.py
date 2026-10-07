@@ -287,3 +287,24 @@ P('Q10.kelam.c1', 'U09', ['k_kemal', 'k_konusma_kemal', 'k_fail_vacib'], 'Şâhi
 P('Q10.tekvin.c1', 'U07', ['H:Q09.c4', 'k_kudret_fiil'], 'Vâcib âlemi ihtiyarla var etmiş ve her an var edip ayakta tutmaktadır; var edenin var etme kemâli yoktur denemez.',
   hd='Yalnız var etme kemâlinin varlığını gösterir; bunun kudret ve iradenin taalluku mu ayrı bir ezelî sıfat mı olduğu c4’tedir ve ihtilaflıdır.')
 P('Q10.tekvin.c1', 'U24', ['H:Q09.c4', 'H:Q10.kudret.c1', 'H:Q10.irade.c1'], 'Fiilden fâile geçilir: var etme fiili vardır; fâil kudretli ve iradelidir; öyleyse var etme kemâli Vâcib’dedir.', tag=('enne', 'fail'))
+
+# 3-I 243: Risâle-i Nûr derlemesi (sifati-ilahiye.pdf, S61) tasnifinden veritabanına işlenen ispatlar
+P('Q04.c1', 'U17', ['m_nizam', 'k_yeknesaklik_tek_fail', 'k_fail_vacib'],
+  'Kâinatın her yerinde aynı unsurun, aynı nev’in ve aynı kanunun bulunması tek bir fâile işaret eder (Risâle derlemesi s.88).',
+  hd='Aynı yasa çok failli bir düzenle de bağdaşır; zan-ı gâlib düzeyindedir.')
+P('Q04.c1', 'U17', ['m_cok', 'k_tevafuk_vahdet', 'k_fail_vacib'],
+  'Bir türün fertlerindeki ortak yapı tek bir müessire işaret eder (tevâfuk; Risâle derlemesi s.153, 157).')
+P('Q04.c1', 'U17', ['m_ihkam', 'k_vahdet_kolaylik', 'k_fail_vacib'],
+  'Mebzuliyet ve ucuzluk içinde yüksek kalite tek merkezli, tek failli idareyle daha iyi açıklanır (imdad-ı vâhidiyet ve yüsr-ü vahdet; Risâle derlemesi s.178-180).')
+P('Q10.irade.c1', 'U17', ['m_cok', 'm_tahsis', 'k_tehaluf_ihtiyar', 'k_irade_cuzi'],
+  'Ortak yapı içinde fertlerin hikmetli ayrışması (tehâlüf) müessirin ihtiyar sahibi olduğuna işaret eder (Risâle derlemesi s.153, 157-158).')
+P('Q10.ilim.c1', 'U17', ['m_ihkam', 'k_kolaylik_ilim', 'k_ihkam_ilim', 'k_fail_vacib'],
+  'Kolaylık ilim derecesiyle orantılıdır; hadsiz kolaylıkla yapılan muhkem eser ihatalı ilme işaret eder (Risâle derlemesi s.136, 145-146).')
+P('Q16.c2', 'U29', ['k_kanun_fail_degil', 'e_celismezlik'],
+  'Zorunluluk iddiası “kanun”u fâil yerine koyar; kanun düzenin betimlemesidir, kendi başına bir şey yapmaz (Risâle derlemesi s.78-79).',
+  kismi='Yalnız kanunu fâil yerine koyan zorunluluk iddiasını kapsar; yasaların nedensel güç taşıdığını kabul eden görüşü kapsamaz')
+P('Q19.c2', 'U07', ['H:Q09.c4', 'H:Q04.c1', 't_alem'],
+  'Vâcib dışındaki her şey (âlem) tek Vâcib’in ihtiyarlı fiilidir ve her an O’nun tarafından var edilip ayakta tutulur; öyleyse hiçbir mümkin O’nun kudretinden bağımsız var olamaz (Risâle derlemesi s.46-48, 171).')
+P('Q19.c3', 'U07', ['k_zati_zit_ariz_olmaz', 'k_mertebe_zit_karisim', 'H:Q10.kudret.c1', 'H:Q10.kudret.c2'],
+  'Kudret Vâcib’e zâtîdir (sıfat mümkin olamaz, Q10.kudret.c2); zâtîye zıddı (acz) ârız olamaz; derece zıddın karışmasıyla olur; öyleyse zâtî kudret derecesizdir ve hiçbir mümkin ona ağır gelmez (Risâle derlemesi s.166, 171).',
+  hd='“Derece zıddın karışmasıyla olur” zayıf doktrindir; aczsizlik adımı yakînîdir.')

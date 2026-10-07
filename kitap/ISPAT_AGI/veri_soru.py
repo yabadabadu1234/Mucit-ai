@@ -181,6 +181,13 @@ H('Q17.c1', 'Q17', 'yakîn', 'Vâcib’in varlığı yakîn derecesinde bilinebi
 H('Q17.c2', 'Q17', 'yalnız zan', 'Vâcib’in varlığı yalnız zan derecesinde bilinebilir.', 'YANLIŞ', 'bilgi')
 H('Q17.c3', 'Q17', 'bilinemez', 'Vâcib’in varlığı hiçbir derecede bilinemez (ilkesel olarak).', 'YANLIŞ', 'bilgi')
 
+S('Q19', 'Kudretin kapsamı', 'Vâcib’in kudreti hangi mümkinlere yetişir?', 'aklî',
+  'Kudret ya bir kısım mümkini dışarıda bırakır ya bütün mümkinlere yetişir; bütün mümkinlere yetişiyorsa ya dereceli ya derecesizdir.',
+  'sıfat', 'V.2.2.26; Risâle derlemesi s.166, 171')
+H('Q19.c1', 'Q19', 'hepsine, derecesiz', 'Vâcib’in kudreti bütün mümkinlere yetişir ve hiçbirine diğerinden daha zor gelmez (kudret derecesizdir).', 'DOĞRU', 'sifat')
+H('Q19.c2', 'Q19', 'bir kısmı dışarıda', 'Bir kısım mümkin, Vâcib’in kudretinden bağımsız olarak (esbabın, tabiatın veya başka bir fâilin eliyle) var olur.', 'YANLIŞ', 'sifat')
+H('Q19.c3', 'Q19', 'hepsine, dereceli', 'Vâcib’in kudreti bütün mümkinlere yetişir fakat dereceli olup bazılarında zorlanır.', 'YANLIŞ', 'sifat')
+
 for sid, ad, grup, ihtilaf in SIFATLAR:
     S('Q10.' + sid, 'Sıfat: ' + ad, 'Vâcib ‘' + ad + '’ sıfatına sahip midir?', 'aklî',
       'Bir sıfat Vâcib için ya zorunludur ya mümkindir ya imkânsızdır (kip hasırı, aklî).', 'sıfat', 'V.2.2' + ('; ' + ihtilaf if ihtilaf else ''))
@@ -218,11 +225,12 @@ F('F25', 'Aristo (Birinci Hareket Ettirici yalnız kendini düşünür)', 'felse
 F('F26', 'Felsefeciler (küllîleri bilir, cüz’îleri bilmez; hafızadan: İbn Sînâ)', 'felsefeci', 'Vâcib’in ilmi küllîlerle sınırlıdır.', ['Q11.c2'])
 F('F27', 'Açık teizm (gelecek henüz belirlenmemiştir)', 'çağdaş teist', 'Vâcib geleceği bilmez ve zamanla değişir.', ['Q11.c4', 'Q14.c3'])
 F('F28', 'Süreç teolojisi (Tanrı gelişir)', 'çağdaş teist', 'Vâcib’in kemâli gelişir veya değişir.', ['Q14.c3'])
-F('F29', 'Gnostik demiurge ve sınırlı tanrı', 'çok tanrıcı', 'Kemâli sınırlı ve noksanlıklı bir yaratıcı vardır.', ['Q14.c2'])
+F('F29', 'Gnostik demiurge ve sınırlı tanrı', 'çok tanrıcı', 'Kemâli sınırlı ve noksanlıklı bir yaratıcı vardır.', ['Q14.c2', 'Q19.c3'])
 F('F30', 'Sıfatsız mutlak (Vedânta’da nirguna Brahman’a yaklaşık okuma; Yeni-Eflâtuncu Bir)', 'Doğu', 'Mutlak varlık sıfatsız ve şuursuzdur.', ['Q10.hayat.c3', 'Q10.ilim.c3', 'Q10.irade.c3', 'Q10.kudret.c3'], 'yaklaşık eşleme; kaynak okunmadan ilzam yazılmaz')
 F('F31', 'Taoist ilke (şuursuz Tao’ya yaklaşık okuma)', 'Doğu', 'Mutlak ilke şuursuz ve iradesizdir.', ['Q10.ilim.c3', 'Q10.irade.c3'], 'yaklaşık eşleme')
 F('F32', 'Sıfat nefyi (Cehmiyye ve ileri Mu’tezile; hafızadan)', 'kelâm içi', 'Allah’a ilim, kudret ve diğer sıfatlar isnat edilemez.', ['Q10.hayat.c3', 'Q10.ilim.c3', 'Q10.kudret.c3', 'Q10.irade.c3', 'Q10.semi.c3', 'Q10.basar.c3', 'Q10.kelam.c3'], 'kaynak okunmadan ilzam yazılmaz')
 F('F33', 'Mu’tezile (sıfatlar zâtın aynıdır)', 'kelâm içi', 'Zât–sıfat ayrımı yoktur; sıfatlar zâtın aynıdır.', ['Q05.c4'], 'ihtilaflı; kitap iddia etmez')
+F('F46', 'Tabiatçılık ve esbaba bağımsız tesir verme (Risâle derlemesinin “ehl-i tabiat” tarifi)', 'maddeci', 'Bir kısım varlıklar Vâcib’in kudretinden bağımsız olarak maddenin ve esbabın kendi tesiriyle var olur.', ['Q19.c2'], 'Risâle derlemesinin tarifidir; kendi kaynakları okunmadı; ikinci derece sebepleri Vâcib’in kudreti dahilinde sayan görüş bu felsefe değildir')
 F('F34', 'Şansa ve tesadüfe dayanan ince ayar açıklamaları (çoklu evren)', 'maddeci', 'Nizam rastlantıdır; çok sayıda evrenden biri yaşama elverişlidir.', ['Q16.c1'])
 F('F35', 'Zorunlu madde nizamı (nizam maddenin zâtındandır)', 'maddeci', 'Nizam maddenin zâtından gelir; başka türlü olamazdı.', ['Q16.c2'])
 F('F36', 'Hakikatin yokluğu (inâdiyye)', 'sofist', 'Hakikat yoktur.', ['Q18.c2'])
@@ -256,6 +264,7 @@ O('Q10.semi.c1', 'Vâcib işitmeseydi sağırlık noksanı Vâcib’de bulunurdu
 O('Q10.basar.c1', 'Vâcib görmeseydi körlük noksanı Vâcib’de bulunurdu; noksanlı olan kemâli sınırlı demektir ve sınırı bir müreccihle belirlenirdi.', 'ÇELİŞKİ-KOŞULLU', 'U07')
 O('Q10.kelam.c1', 'Vâcib konuşamasaydı dilsizlik noksanı Vâcib’de bulunurdu; ayrıca bildirme (H3) aklen imkânsız olurdu.', 'ÇELİŞKİ-KOŞULLU', 'U07')
 O('Q10.tekvin.c1', 'Vâcib’in var etme kemâli olmasaydı âlem var edilemezdi; oysa âlem vardır ve mümkindir.', 'ÇELİŞKİ', 'U07')
+O('Q19.c1', 'Vâcib’in kudreti bir mümkine yetişmeseydi o mümkinin varlığı başka bir fâile kalırdı; oysa âlem tek Vâcib’in ihtiyarlı fiilidir (Q04.c1, Q09.c4); çelişki doğardı.', 'ÇELİŞKİ-KOŞULLU', 'U07')
 O('Q11.c3', 'Vâcib cüz’îleri bilmeseydi cüz’î fiil ve tahsis O’na isnat edilemezdi.', 'ÇELİŞKİ-KOŞULLU', 'U24')
 O('Q12.c1', 'Vâcib’in vücûbunun başka bir sebebi olsaydı Vâcib mümkin olurdu.', 'ÇELİŞKİ', 'U07')
 O('Q13.c1', 'Âlem hâdis değilse ya zorunludur (değişenin zorunluluğu çelişir) ya ezelî mümkindir (Vâcib’in varlığını etkilemez; fakat sudûrcu felsefe doğar).', 'KISMEN', 'U08')

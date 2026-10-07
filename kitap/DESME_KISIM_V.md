@@ -26,7 +26,8 @@ Bu dosya **dizindir**. Eskiden tek dosya olan deşmenin bütün yaprakları **si
 | [V.1.3o_MATURIDI_CISIMLER_DEHRIYYE_SUMENIYYE](DESME/KISIM_V/V.1.3o_MATURIDI_CISIMLER_DEHRIYYE_SUMENIYYE.md) | V.1.3.M.145–236 (Mâtürîdî: İbn Şebîb'in cisimlerin hudûsu delili, düalist ilzamı, Dehriyye, tabiatçılar, münecciler, heyûlâ; 3-I 241, 242) | 92 | 28.4 KB |
 | [V.1.3p_MATURIDI_HEYULA_SUMENIYYE_TENKIT](DESME/KISIM_V/V.1.3p_MATURIDI_HEYULA_SUMENIYYE_TENKIT.md) | V.1.3.M.237–285 (Mâtürîdî: Aristo'nun heyûlâsı, Nâzzâm'ın itirazı, hareket noktası, Sümeniyye; Claude tenkidi; 3-I 241, 242) | 49 | 22.8 KB |
 | [V.1.4b_RASTGELELIK_SEBEP_ILKESI](DESME/KISIM_V/V.1.4b_RASTGELELIK_SEBEP_ILKESI.md) | V.1.4.17–V.1.4.166 (V.1'den taşındı, 3-I 238) | 150 | 35.2 KB |
-| [V.2_TEVHID_KEMAL_SIFATLAR](DESME/KISIM_V/V.2_TEVHID_KEMAL_SIFATLAR.md) | V.2 (V.2.2.8–V.2.2.38 sekiz sübûtî sıfat, 3-I 243; V.2.6–V.2.8 Mâtürîdî, 3-I 241) | 168 | 43.1 KB |
+| [V.2_TEVHID_KEMAL_SIFATLAR](DESME/KISIM_V/V.2_TEVHID_KEMAL_SIFATLAR.md) | V.2.1–V.2.5 (tevhid, sıfatlar, öteki ilâh tasavvurları, sıfat tasnifi; V.2.2.8–V.2.2.50 sekiz sübûtî sıfat ve Risâle-i Nûr tasnifi, 3-I 243) | 102 | 23.7 KB |
+| [V.2l_MATURIDI_TEVHID_TESBIH_SENEVIYYE](DESME/KISIM_V/V.2l_MATURIDI_TEVHID_TESBIH_SENEVIYYE.md) | V.2.6–V.2.8 (Mâtürîdî: kâinatın yaratıcısı birdir, teşbihin nefyi, düalizm; V.2 dosyasından taşındı, 3-I 238, 241) | 78 | 24.5 KB |
 | [V.2m_MATURIDI_SIFAT_TEKVIN](DESME/KISIM_V/V.2m_MATURIDI_SIFAT_TEKVIN.md) | V.2.9–V.2.11 (Mâtürîdî: cisim ve şey, sıfatlar, tekvin; 3-I 241) | 83 | 24.2 KB |
 | [V.2n_MATURIDI_KABI_KELAM_ISIM](DESME/KISIM_V/V.2n_MATURIDI_KABI_KELAM_ISIM.md) | V.2.12–V.2.15 (Mâtürîdî: Kâ'bî, kelâm sıfatı, ihtiyar, isimler; 3-I 241) | 74 | 25.0 KB |
 | [V.2o_MATURIDI_ARS_MEKAN](DESME/KISIM_V/V.2o_MATURIDI_ARS_MEKAN.md) | V.2.16 (Mâtürîdî: Arş ve mekân; 3-I 241, 242) | 97 | 28.4 KB |
@@ -86,6 +87,6 @@ Bu dosya **dizindir**. Eskiden tek dosya olan deşmenin bütün yaprakları **si
 | [V.Kq_MATURIDI_IRADE_III_KAZA_TENKIT](DESME/KISIM_V/V.Kq_MATURIDI_IRADE_III_KAZA_TENKIT.md) | V.K.T9.1–11 (Claude tenkidi: irade III, kazâ ve kader tanımları; 3-I 241, 242) | 11 | 7.3 KB |
 | [V.TOPLU_TENKIT_ACIK_ISLER](DESME/KISIM_V/V.TOPLU_TENKIT_ACIK_ISLER.md) | TOPLU | 0 | 1.4 KB |
 
-**Toplam yaprak: 3412.** Cinse göre: K 1382 · Z 930 · C 768 · İ 128 · İt 80 · B 71 · T 35 · M 17 · H 1
+**Toplam yaprak: 3424.** Cinse göre: K 1389 · Z 933 · C 768 · İ 128 · İt 80 · B 73 · T 35 · M 17 · H 1
 
 Not (3-I 241): V.1.3.M (285), V.2.6–V.2.39 (943), V.3.M (107), V.4.M (83), V.4.N (96), V.4.O (70) ve V.5.8–V.5.12 (66), V.K (871) ve V.M (73) yaprakları Mâtürîdî'den alınmıştır; V.F ve V.M satırlarının cinsi 3. sütundadır (namzet önerisi). V.1 dosyası 40 KB'ı aşınca V.1.4.17 ve sonrası **silinmeden** V.1.4b dosyasına taşınmıştır (3-I 238).

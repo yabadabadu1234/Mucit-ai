@@ -30,6 +30,7 @@ Kaide: Bu dosyalardaki cümleler **başka bir yapay zekânın ifadeleridir**, pa
 | `SONSUZ_GECMIS_MESAFE_ARGUMANI.md` | "Yok kendini var edemez" ve "ezelden 2026'ya varılamaz" (padişahın iki sorusu) tahlili; fiilî sonsuzun imkânsızlığı metafizik iddiadır, matematik teoremi değil | S38 (kapandı, 3-I 242) |
 | `FARABI_BURHAN_1_24_OKUMA_DEFTERI.md` | Fârâbî Kitâbü'l-Burhân s.1–24 sayfa defteri, bizde olan/olmayan tablosu | 3-I 235, 236; S32, S33, S34 |
 | `MATURIDI_TEVHID_OKUMA_DEFTERI.md` | Mâtürîdî Kitâbü't-Tevhîd okuma defteri ve bölüm özetleri (usul, ilâhiyyât, nübüvvet, kazâ ve kader; damıtmalar 3b–3i; açık suâller S38–S60) | 3-I 241, 242 |
+| `RISALE_SIFATI_ILAHIYE_DELIL_TASNIFI.md` ve `RISALE_SIFATI_ILAHIYE_BIRIMLER.md` | Risâle-i Nûr derlemesinin (`sifati-ilahiye.pdf`, 201 sayfa) 94 delil biriminin öncül yapısına göre tasnifi (burhânî · şartlı · zannî · peşin kabul · yanlış ikilem …), sıfat sıfat özet, ortak bulgular ve veritabanına işlenenler; birim tablosu 40 KB aşmasın diye ayrı dosyadadır | 3-I 243; S61 (kapandı) |
 
 ## C. Okuma kuralı
 
