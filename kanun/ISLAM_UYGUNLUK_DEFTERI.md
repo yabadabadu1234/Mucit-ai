@@ -93,3 +93,18 @@ Makalenin hadis atıfları yalnız derleme adıyla verilmiştir (Buhârî, Ebû 
 | Müslüman–gayrimüslim ortaklık caizdir | Etki yok | Teklif din ayırt etmez |
 | Sermaye şirketlerine ve kapitalizme dair eleştiriler | **Kullanılmadı** | Siyasî ve iktisadî görüştür; teklifin hukukî ve teknik dilinde yeri yok, ölçülmüş veri de sunmaz |
 
+**E.8 F 3-I 248 (kat'î: işlevsellik bahane değildir; mümkünse işlenir) — düzeltmeler**
+
+Padişahın kızgınlığı üzerine E.7'deki “bilinçli uzaklaşma” (ortağın ayrılması) ve “uygulanmadı” kayıtları yeniden tartıldı. Kaynak: Hamdi Döndüren, Delilleriyle İslâm İlmihâli (Erkam); atıfları: Sâd 38/24, Mâide 5/1, İsrâ 17/34; Ebû Dâvûd Büyû' 26 ve 35; Ahmed b. Hanbel III/367; Zeylaî Nasbu'r-Râye III/475; Buhârî İcâre 14; Tirmizî Ahkâm 17; İbn Mâce Ticârât 83; Kâsânî Bedâyi' VI/60; İbn Âbidîn Reddü'l-Muhtâr III/369. **Bunlar kaynaktan aktarmadır, yoklanmadı** (3-I 244: yoklanamıyorsa engel yazılır; engel: hadis ve fıkıh derlemelerine erişim yok).
+
+| Önceki durum | Yeni durum | Dayanak |
+| :-- | :-- | :-- |
+| Ortağın ayrılması ortaklığı bozmaz (uzaklaşma) | **Geri alındı:** ölüm, mükellefiyetin sona ermesi, hacir ve ayrılma ortaklığı sona erdirir; geçmiş haklar payla saklı; diğer ortakların kendi mükellefiyeti sürer | Ölüm, akıl kaybı, hacir veya ayrılmayla şirketin bozulması |
+| Müşterinin ücreti ortaklardan birine ödemesi (m.1388-1389, ebdân) uygulanmadı | **İşlendi:** alıcı herhangi bir ortağa ödeyebilir ve borcundan kurtulur; portal payları dağıtır; tahsil eden ortak payı derhal aktarır | Ebdân'da ücretin herhangi birine veya hepsine verilebilmesi; m.1101 (kâbız kendi hissesine mahsup edemez) |
+| Mudârebe'de zarar sermayeye aittir; mudârib emeğini kaybeder (m.1428) Madde 8'e yazılmadı | **İşlendi:** Madde 8'de zarar girişimciye yüklenemez (kasıt, kusur, ihmal hariç); finansman sağlayan şart koyabilir ve denetler | Mudârebe hükümleri; teaddî hâlinde mudârib de sorumlu |
+| Ebdân'da iş zararı ortakların | **İşlendi:** iade, iptal ve zarar pay oranında | “Zarar olursa birlikte katlanırlar” |
+| Teâvün sandığı aidatı: “çelişir, eklenmedi” | **Kısmen işlendi:** karşılıklı yardımlaşma kuruluşlarından alınan yardımlar hasılat sayılmaz (Madde 5). Aidatın matrahtan indirilmesi **eklenmedi**; engel dinî değil, mali etkinin ölçülmemesi ve nihaî tevkifat yapısıdır (bu bir fıkhî engel değildir ve 3-I 248 (2) gereği padişaha açık kalem olarak sorulur) | İmece ve yardımlaşma |
+| Vücûh ve mufâveda uygulanmadı | **Uygulanmadı, engel:** ikisi mal alım satımı ve veresiye ticareti gerektirir; teklifin kapsamı mal alım satımını bilinçle dışarıda tutar (Madde 1 (g)); bu kapsam fıkhî değil mali (naylon fatura riski) bir tercihtir. 3-I 248 (2) gereği padişaha açık kalem olarak sorulur | |
+| Müzâraa, müsâkât, mugârase | **Uygulanmadı, engel:** tarım faaliyeti GVK mükerrer 20/C ve diğer tarımsal rejimlerin konusudur, bu teklifin dışında | |
+| Madde 12 (genel ek iş yasaklarının hükümsüzlüğü) | **İhtilaflı, dokunulmadı:** sözleşmeye vefa (“akitlerinizi yerine getirin”) ile “helâli haram kılan şart” istisnası arasındaki sınır ictihad konusudur; Claude hüküm vermez. Padişaha açık kalem olarak sorulur | Mâide 5/1; Buhârî İcâre 14 / Tirmizî Ahkâm 17 (aktarma) |
+
