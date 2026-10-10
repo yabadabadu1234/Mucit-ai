@@ -146,3 +146,15 @@ Harici analizin “Dört sualiniz” bölümündeki **“Karar”** satırları 
 | Vergi kavramı (sual 3) | Harici analiz Ebû Yûsuf, Cüveynî, İbn Hazm, Şâtıbî, İbn Âbidîn ve “Tirmizî, Zekât 27” atıflarını kullandı; **hiçbiri yoklanmadı** | E.2'deki ihtilaf kaydı **kalır**; padişah kararı bekliyor |
 | Vur-kaç (sual 4) | **Kendi hatam:** önceki turda “ilk yıl %60 sınırı uygulanmaz, tek faturayla tavan doldurulur” dedim; Madde 1 (f)'deki iki şart **birlikte** aranır (ilk yıl **ve** hasılat ≤ 6 aylık asgari ücret). Hasılat 6 asgari ücreti aşınca %60 sınırı baştan işler; bir müşteriden en çok %60 alınabilir. Açık yalnız iki müşteriyle (örn. %60 + %40) kalır. Harici analizin (f) düzeltme önerisi bu yüzden gereksizdir, **uygulanmadı** | Harici “son 2 yılda gerçek usulde olanları dışla” önerisi, dürüst küçük esnafı (teklifin asıl hedefi) da dışlayacağı için **daraltılarak** uygulandı: yalnız o yıllardan birinde hasılatı tavanı aşmış olanlar dışlanır (Madde 1 (r)); Geçici Madde 1 ve (h) dönüşü hariç |
 
+**E.12 F 3-I 249: madde gerekçeleri (II-A) ve harici “5 gedik” analizi**
+
+II-A bölümü dinî sebep ve delil taşımaz (F 3-I 246). Padişahın “dayandığımız tüm deliller” sözünün dinî delilleri de kapsayıp kapsamadığı söylenmediği için sorulacaktır.
+
+| Gedik | Yoklama | Uygulama |
+| :-- | :-- | :-- |
+| “GVK 9/10 ev hanımı muaflığı, banka %4 veya %2 keser” | GVK m.9 PDF'ten okundu: ilgili hüküm **(6) numaralı bent**tir, (10) değil; bu kişiler **gelir vergisinden muaftır** (satış tutarı asgari ücretin yıllık brütünü aşmamak, işçi ve motor kullanmamak şartıyla). “%4 veya %2 banka tevkifatı” **yoklanamadı**, kullanılmadı | Madde 1 (ğ): muafiyet hakları saklı, bu bent uygulanmaz |
+| KDV mahsubu ve gerçek gider çifte indirimi | Mekanizma gerçek; harici “KDVK m.58” atfı **yoklanmadı**, metne yazılmadı | Madde 3: mahsup edilen KDV gerçek giderde ayrıca gider yapılamaz |
+| Çek ve senet cirosu | Mekanizma gerçek; mevzuat atfı gerekmedi | Madde 1 (d): kambiyo senedi münhasır hesapta tahsil edilir, ciro hâlinde istisna yok |
+| Haciz ve banka otomasyonu | Harici “6183 m.21 rüçhan” atfı: kaynakların çoğu m.21'i teyit etti ama içeriği “hacze iştirak” olarak veriyor, “Hazine birinci sırada” iddiası kesin değil; metne **yazılmadı** | Madde 6: bloke koyarken önce tevkifat ayrılır, haciz kalan bakiyeye uygulanır |
+| e-İmza | E.10'da işlenmişti | Değişiklik yok |
+
