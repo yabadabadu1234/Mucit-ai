@@ -10,7 +10,7 @@ Bu Ek, "Bireysel Emek, Hizmet ve Fikrî Üreticilerin Vergilendirilmesi ve Sosya
 4. Metin PDF'leri bu çalışma sırasında (Ekim 2026) mevzuat.gov.tr'den indirilip okunmuştur. Mevzuat değişebilir; karar anında güncel metin adresten yeniden alınmalıdır.
 5. **Bölüm 2**, metni bu Ekte bulunmayan dayanakları ve her birinin neden bulunmadığını açıkça listeler. Bu dayanaklar teklif gerekçesinde "[İ]" (ikincil kaynak) işaretiyle anılmıştır ve resmî metinle teyidi gerekir.
 
-**İçindekiler (Bölüm 1):** 193 GVK · 213 VUK · 488 Damga · 492 Harçlar · 5510 SSGSSK · 5411 Bankacılık · 6493 Ödeme Hizmetleri · 4632 BES · 5846 FSEK · 6698 KVKK · 5549 MASAK · 3572 İşyeri Açma · 351 Yüksek Öğrenim Kredi · 2004 İcra İflas · 6098 TBK · 5237 TCK · 4721 TMK · 2577 İYUK · 3568 SMMM · 5174 TOBB
+**İçindekiler (Bölüm 1):** 193 · 213 · 488 · 492 · 5510 · 5411 · 6493 · 4632 · 5846 · 6698 · 5549 · 3572 · 351 · 2004 · 6098 · 5237 · 4721 · 2577 · 3568 · 5174 · 2709 · 6735 · 7201 · 3065 · 5018 · 657 · 2022 · 6183 · 4857 · 5682 (sayılı Kanunlar)
 
 ---
 
@@ -1261,31 +1261,243 @@ Bu Ek, "Bireysel Emek, Hizmet ve Fikrî Üreticilerin Vergilendirilmesi ve Sosya
 > Kapsam
 
 
+
+## 2709 sayılı Türkiye Cumhuriyeti Anayasası
+
+**Tam metin adresi:** https://www.mevzuat.gov.tr/mevzuatmetin/1.5.2709.pdf
+
+**Madde 16**
+
+*Teklifte kullanıldığı yer:* Madde 1 giriş fıkrası (yalnız vatandaşlar)
+
+> Madde 16 – Temel hak ve hürriyetler, yabancılar için, milletlerarası hukuka uygun olarak 
+> kanunla sınırlanabilir.
+
+## 6735 sayılı Uluslararası İşgücü Kanunu
+
+**Tam metin adresi:** https://www.mevzuat.gov.tr/mevzuatmetin/1.5.6735.pdf
+
+**Madde 6**
+
+*Teklifte kullanıldığı yer:* Madde 1 giriş fıkrası (yabancıların kapsam dışı kalması)
+
+> MADDE 6- (1) Çalışma izni, 4 üncü maddeye göre belirlenen uluslararası işgücü 
+> politikası esas alınarak Bakanlıkça verilir. 
+> (2) Bu Kanun kapsamında yer alan yabancıların çalışma izni olmaksızın Türkiye’de 
+> çalışmaları veya çalıştırılmaları yasaktır. 
+> (3) Diğer kanunlarda ya da Türkiye’nin taraf olduğu ikili veya çok taraflı anlaşmalar 
+> veya uluslararası sözleşmelerde çalışma izni almadan çalışabileceği belirtilen yabancılar, bu 
+> Kanuna göre çalışma izni almadan çalışabilir veya çalıştırılabilirler. 
+> (4) 29/5/2009 tarihli ve 5901 sayılı Türk Vatandaşlığı Kanununun 28 inci maddesi 
+> kapsamında olanların çalışma hakkı saklıdır.
+
+**Madde 13, birinci ve yedinci fıkralar**
+
+*Teklifte kullanıldığı yer:* aynı
+
+> MADDE 13- (1) Çalışma izni muafiyeti kapsamında olan yabancılar, çalışma izni 
+> muafiyeti almak kaydıyla çalışabilir. 
+>  […] (7) 6102 sayılı Kanuna göre kurulmuş anonim şirketlerin Türkiye’de ikamet etmeyen 
+> yönetim kurulu üyesi ve diğer şirketlerin yönetici sıfatı olmayan ortağı ile Türkiye’de 
+> gerçekleştirdiği faaliyetleri yüz seksen gün içinde doksan günü geçmeyen sınırötesi hizmet 
+> sunucusu, çalışma izni muafiyeti kapsamında değerlendirilir.
+
+## 7201 sayılı Tebligat Kanunu
+
+**Tam metin adresi:** https://www.mevzuat.gov.tr/mevzuatmetin/1.3.7201.pdf
+
+**Madde 7/a (birinci fıkranın ilk bentleri, ikinci fıkra ve elektronik tebligat usulü)**
+
+*Teklifte kullanıldığı yer:* Madde 2 (a)
+
+> Madde 7/a - (Ek : 11/1/2011-6099/2 md.) (Değişik:28/2/2018-7101/48 md.) 
+> Aşağıda belirtilen gerçek ve tüzel kişilere tebligatın elektronik yolla yapılması 
+> zorunludur. 
+> 1. 10/12/2003 tarihli ve 5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanununa ekli 
+> (I), (II), (III) ve (IV) sayılı cetvellerde yer alan kamu idareleri ile bunlara bağlı döner 
+> sermayeli kuruluşlar. 
+> 2. 5018 sayılı Kanunda tanımlanan mahallî idareler. 
+> 3. Özel kanunla kurulmuş diğe
+>  […]
+> Birinci fıkra kapsamı dışında kalan gerçek ve tüzel kişilere, talepleri hâlinde elektronik 
+> tebligat adresi verilir. Bu durumda bu kişilere tebligatın elektronik yolla yapılması 
+> zorunludur. 
+> Birinci ve ikinci fıkra hükümlerine göre elektronik yolla tebligatın zorunlu bir sebeple 
+> yapılamaması hâlinde bu Kanunda belirtilen diğer usullerle tebligat yapılır. 
+> Elektronik yolla tebligat, muhatabın elektronik adresine ulaştığı tarihi izleyen beşinci 
+> günün sonunda yapılmış sayılır. 
+> Bu Kanun uyarınca yapılan elektronik tebligat işlemleri, Posta ve Telgraf Teşkilatı 
+> Anonim Şirketi tarafından kurulan ve işletilen Ulusal Elektronik Tebligat Sistemi üzerinden 
+> yürütülür. Posta ve Telgraf Teşkilatı Anonim Şirketi, sistemin güvenliğini ve bu sistemde 
+> kayıtlı verilerin muhafazasını sağlayacak her türlü tedbiri alır. 
+> Bu maddenin uygulanmasına ilişkin usul ve esaslar yönetmelikle belirlenir.
+
+## 3065 sayılı Katma Değer Vergisi Kanunu
+
+**Tam metin adresi:** https://www.mevzuat.gov.tr/mevzuatmetin/1.5.3065.pdf
+
+**Madde 17, (4) numaralı fıkra, (a) bendi (güncel metin: 24/6/2026 tarihli 7587 sayılı Kanunla “mükerrer 20/B ve geçici 94 üncü maddeleri”)**
+
+*Teklifte kullanıldığı yer:* Madde 3
+
+> 4. Diğer İstisnalar: 
+> a) (Değişik: 9/4/2003-4842/23 md.) Gelir Vergisi Kanununa göre vergiden muaf esnaf 
+> ile kazançları basit usulde tespit edilen mükellefler tarafından yapılan teslim ve hizmetler, 
+> aynı Kanunun mükerrer 20/B ve geçici 94 üncü maddeleri kapsamında vergilendirilen 
+> kazançlara konu teslim ve hizmetler,3334 
+> b) (Değişik: 3/6/1986-3297/6 md.) Gelir Vergisi Kanununa göre gerçek usulde 
+> vergiye tabi olmayan çiftçiler ile aynı Kanunun 66 ncı maddesine göre vergiden muaf olan 
+> serbest meslek erbabı, tara
+
+**Madde 18, birinci fıkra**
+
+*Teklifte kullanıldığı yer:* Madde 3 (istisnadan vazgeçme)
+
+> Madde 18 – 1. (Değişik: 16/7/2004-5228/16 md.) Vergiden istisna edilmiş işlemleri 
+> yapanlar, ilgili vergi dairesine yazılı başvuruda bulunarak, belirtecekleri işlem türleri için 
+> vergiye tâbi tutulmalarını talep edebilirler. Bu talebin dilekçede belirtilen ve dilekçe 
+> tarihinden sonra ifa edilen işlemlerin tamamını kapsaması şarttır. Şu kadar ki, mükellefiyetin 
+> devam etmekte olan işlemlere şümulü yoktur. 
+> 2. (Değişik: 16/7/2004-5228/16 md.) Kamu menfaatine yararlı dernekler ve 
+> Cumhurbaşkanınca vergi muafiyeti tanınan vakıfların kuruluş amaçlarına uygun olarak 
+> işletmek veya yönetmek suretiyle ifa ettikleri teslim ve hizmetlere ilişkin istisnalar hariç 
+> olmak üzere, 17 nci maddenin (1) ve (2) numaralı fıkralar
+
+## 5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu
+
+**Tam metin adresi:** https://www.mevzuat.gov.tr/mevzuatmetin/1.5.5018.pdf
+
+**Madde 14 (iptal edilmiştir)**
+
+*Teklifte kullanıldığı yer:* III.D.5, Ek B (dayanak olarak kullanılmaz)
+
+> Madde 14- (Başlığı ile Birlikte Değişik: 2/7/2018-KHK-703/213 md.) (İptal 
+> Madde: Anayasa Mahkemesinin 7/12/2023 Tarihli ve E: 2018/117, K: 2023/212 Sayılı 
+> Kararı ile.)
+
+## 657 sayılı Devlet Memurları Kanunu
+
+**Tam metin adresi:** https://www.mevzuat.gov.tr/mevzuatmetin/1.5.657.pdf
+
+**Madde 206**
+
+*Teklifte kullanıldığı yer:* Madde 5 (aile yardımı ödeneği)
+
+> Madde 206 – Aşağıdaki hallerde çocuklar için aile yardımı ödeneği verilmez: 
+> 1. Evlenen çocuklar, 
+> 2. (Değişik: 21/4/2005 - 5335/28 md.) 25 yaşını dolduran çocuklar (25 yaşını bitirdiği 
+> halde evlenmemiş kız çocukları ile çalışamayacak derecede malûllükleri resmi sağlık kurulu 
+> raporuyla tespit edilenler için süresiz olarak ödeneğin verilmesine devam olunur.), 
+> 3. Kendileri hesabına ticaret yapan veya gerçek veya tüzel kişiler yanında her ne 
+> şekilde olursa olsun menfeat karşılığı çalışan çocuklar (Öğrenim yapmakta iken tatil 
+> devresinde çalışanlar hariç), 
+> 4. Burs alan veya Devletçe okutulan çocuklar.
+
+## 2022 sayılı 65 Yaşını Doldurmuş Muhtaç, Güçsüz ve Kimsesiz Türk Vatandaşlarına Aylık Bağlanması Hakkında Kanun
+
+**Tam metin adresi:** https://www.mevzuat.gov.tr/mevzuatmetin/1.5.2022.pdf
+
+**Madde 1, birinci fıkra**
+
+*Teklifte kullanıldığı yer:* Madde 5
+
+> Madde 1 – (Değişik: 14/4/2016-6704/1 md.) 
+> Sosyal güvenlik kuruluşlarının herhangi birisinden her ne nam altında olursa olsun bir 
+> gelir veya aylık hakkından yararlananlar ile uzun vadeli sigorta kolları açısından zorunlu 
+> olarak sigortalı olunması gereken bir işte çalışanlar, nafaka bağlanmış veya nafaka 
+> bağlanması mümkün olanlar veya 24/5/1983 tarihli ve 2828 sayılı Sosyal Hizmetler Kanunu 
+> hükümlerine göre harçlık ödenenler hariç olmak kaydıyla, Sosyal Yardımlaşma ve Dayanışma 
+> Vakıfları tarafından muhtaç olduğuna karar verilen 65 yaşını doldurmuş Türk vatandaşlarına, 
+> muhtaçlık hâli devam ettiği müddetçe (4.387) gösterge rakamının memur aylık katsayısı ile 
+> çarpımından bulunacak tutarda aylık bağlanır.1
+
+## 6183 sayılı Amme Alacaklarının Tahsil Usulü Hakkında Kanun
+
+**Tam metin adresi:** https://www.mevzuat.gov.tr/mevzuatmetin/1.3.6183.pdf
+
+**Madde 51**
+
+*Teklifte kullanıldığı yer:* Madde 1 (b) (gecikme zammı)
+
+> Madde 51- (Değişik: 25/12/2003-5035/4 md.) 
+> Amme alacağının ödeme müddeti içinde ödenmeyen kısmına vadenin bitim tarihinden 
+> itibaren her ay için ayrı ayrı %4 (%3,7)26 oranında gecikme zammı tatbik olunur. Ay 
+> kesirlerine isabet eden gecikme zammı günlük olarak hesap edilir. 
+> Gecikme zammı birmilyon liradan az olamaz. 
+> Gecikme zammı; 213 sayılı Vergi Usul Kanununa göre uygulanan vergi ziyaı 
+> cezalarında bu madde uyarınca belirlenen oranda, mahkemeler tarafından verilen ve ceza 
+> mahiyetinde olan amme alacaklarında ise bu oranın yarısı ölçüsünde uygulanır. Bunların 
+> dışındaki ceza mahiyetinde olan amme alacaklarına gecikme zammı tatbik edilmez. 
+> Cumhurbaşkanı, gecikme zammı oranlarını aylar itibarıyla topluca veya her ay için 
+> ayrı ayrı, yüzde onuna kadar indirmeye, gecikme zammı oranı ile gecikme zammı asgari 
+> tutarını iki katına kadar artırmaya, ayrıca gecikme zammı oranını aylar itibarıyla farklı olarak 
+> belirlemeye ve gecikme zammını bileşik faiz usulüyle aylık, üç aylık, altı aylık veya yıllık 
+> olarak hesaplatmaya yetkilidir.27
+
+## 4857 sayılı İş Kanunu
+
+**Tam metin adresi:** https://www.mevzuat.gov.tr/mevzuatmetin/1.5.4857.pdf
+
+**Madde 25, giriş ve II numaralı bent (ilk fıkralar)**
+
+*Teklifte kullanıldığı yer:* Madde 12
+
+> Madde 25 - Süresi belirli olsun veya olmasın işveren, aşağıda yazılı hallerde iş 
+> sözleşmesini sürenin bitiminden önce veya bildirim süresini beklemeksizin feshedebilir: 
+> I- Sağlık sebepleri: 
+> a) İşç […]
+> II- Ahlak ve iyi niyet kurallarına uymayan haller ve benzerleri: 
+> a) İş sözleşmesi yapıldığı sırada bu sözleşmenin esaslı noktalarından biri için gerekli 
+> vasıflar veya şartlar kendisinde bulunmadığı halde bunların kendisinde bulunduğunu ileri sürerek, 
+> yahut gerçeğe uygun olmayan bilgiler veya sözler söyleyerek işçinin işvereni yanıltması. 
+> b) İşçinin, işveren yahut bunların aile üyelerinden birinin şeref ve namusuna 
+> dokunacak sözler sarfetmesi veya davranışlarda bulunması, yahut işveren hakkında şeref ve 
+> haysiyet kırıcı asılsız ihbar ve isnadlarda bulunması. 
+> c) İşçinin işverenin başka bir işçisine cinsel tacizde bulunması. 
+> d) İşçinin işverene yahut onun ailesi üyelerinden birine yahut işverenin başka işçisine 
+> sataşması, işyerine sarhoş yahut uyuşturucu madde almış olarak gelmesi ya da işyerinde bu 
+> maddeleri kullanması.8 
+> e) İşçinin, işverenin güvenini kötüye kullanmak, hırsızlık yapmak, işverenin meslek 
+> sırlarını ortaya atmak gibi doğruluk ve bağlılığa uymayan davranışlarda bulunması. 
+> f) İşçinin, işyerinde, yedi günden fazla hapisle cezalandırılan ve cezası ertelenmeyen 
+> bir suç işlemesi. 
+> g) İşçinin işverenden izin almaksızın veya haklı bir sebebe dayanmaksızın ardı ardına 
+> iki işgünü veya bir ay içinde iki defa herhangi bir tatil gününden sonraki iş günü, yahut bir 
+> ayda üç işgünü işine devam etmemesi. 
+> h) İşçinin yapmakla ödevli bulunduğu görevleri kendisine hatırlatıldığı halde yapmamakta 
+> ısrar etmesi. 
+> ı) İşçinin kendi isteği veya savsaması yüzünden işin güve
+
+## 5682 sayılı Pasaport Kanunu
+
+**Tam metin adresi:** https://www.mevzuat.gov.tr/mevzuatmetin/1.3.5682.pdf
+
+**Madde 14, A) bendi, çocuklara ilişkin paragraf**
+
+*Teklifte kullanıldığı yer:* Madde 5
+
+> ragraf:23/7/2010-6009/58 md.) Hususi damgalı pasaport alabilecek 
+> durumda bulunanların ergin olmayan veya ergin olsalar dahi yanlarında yaşayıp evli 
+> bulunmayan ve iş sahibi olmayan öğrenimi devam eden çocuklarına 25 yaşının ikmaline 
+> kadar, yine ergin olsalar dahi yanlarında yaşayıp evli bulunmayan ve iş sahibi olmayan, aynı 
+> zamanda bedensel, zihinsel veya ruhsal engellerinden en az biri nedeniyle sürekli bakıma 
+> 
+
 ---
 
 # BÖLÜM 2. METNİ BU EKTE BULUNMAYAN DAYANAKLAR
 
-Aşağıdaki dayanakların resmî metni bu çalışmada indirilip okunmamıştır. Gerekçede bunlar "[İ]" ile işaretlenmiştir. Okuyan, metni mevzuat.gov.tr'de kanun numarasıyla aratarak bulur; aşağıda her biri için teklifin ondan ne beklediği yazılıdır.
+Aşağıdakilerin resmî metni indirilip okunamamıştır; gerekçede bunlar "[İ]" ile veya "teyit edilmedi" notuyla anılmıştır. Daha önce bu listede olan 2709 m.16, 6735, 7201 m.7/a, 3065 m.17/4-(a) ve m.18, 657 m.206, 2022, 6183 m.51, 4857 m.25/II ve 5682 m.14 sonradan resmî metinden okunmuş ve Bölüm 1'e alınmıştır.
 
 | Dayanak | Teklifin ondan beklediği | Durum |
 | :-- | :-- | :-- |
-| 2709 sayılı Türkiye Cumhuriyeti Anayasası m.16 | Yabancıların temel hak ve hürriyetlerinin milletlerarası hukuka uygun olarak kanunla sınırlanabilmesi (Madde 1 giriş fıkrası) | Metin okunmadı; arama özetiyle aktarılmıştır. Teyit gerekir. |
-| 6735 sayılı Uluslararası İşgücü Kanunu | Yabancıların izin veya muafiyet olmadan çalışamaması (Madde 1 giriş fıkrası gerekçesi) | Madde numaraları (m.6, m.13) dâhil metin okunmadı. Teklif metni bu kanuna atıf yapmaz; yalnız vatandaşlarla sınırlıdır. |
-| 7201 sayılı Tebligat Kanunu m.7/a | Elektronik tebligat adresi (Madde 2 (a)) | Metin okunmadı. |
-| 3065 sayılı KDV Kanunu m.17/4-(a) ve m.18 | Hizmet istisnasının bağlanacağı fıkra; istisnadan vazgeçme (Madde 3) | Metin okunmadı. Madde 3'ün fıkra atfı bu yüzden teyit bekler. |
-| 5018 sayılı Kamu Mali Yönetimi ve Kontrol Kanunu m.14 | Üç yıllık mali yük ve aktüeryal hesap şartı (Ek B) | Metin okunmadı. |
-| 657 sayılı Devlet Memurları Kanunu m.206 | Aile yardımı ödeneği (Madde 5) | Metin okunmadı. |
-| 2022 sayılı Kanun; 2828 sayılı Sosyal Hizmetler Kanunu | Yaşlı, engelli ve muhtaç aylıkları (Madde 5) | Metin okunmadı. |
-| 5682 sayılı Pasaport Kanunu m.14 | Hususi damgalı pasaport şartları (Madde 5) | Metin okunmadı. |
-| 4857 sayılı İş Kanunu m.25/II | İşverenin haklı fesih sebepleri (Madde 12) | Metin okunmadı. |
-| 6183 sayılı Amme Alacaklarının Tahsil Usulü Hakkında Kanun m.51 | Gecikme zammı (Madde 1 (b)) | Metin okunmadı. |
-| 7524 sayılı Kanun ve 21/12/2024 tarihli, 9284 sayılı Cumhurbaşkanı Kararı | GVK m.94/19 tevkifat oranının %25'ten %1'e indirilmesi | 7524 ile eklenen bent Bölüm 1'de aynen vardır. Karar metni okunmadı; oran ve tarih ikincil kaynaktandır. |
-| 10811 sayılı Cumhurbaşkanı Kararı (RG 7/1/2026, 33130) | BES Devlet katkısı oranının %20 olması | Kararın kendisi okunmadı; kararın varlığı ve içeriği 4632 sayılı Kanun Ek 1. madde dipnotunda Bölüm 1'de aynen vardır. |
-| Katılım esaslı emeklilik fonlarına ilişkin yönetmelik (RG 19/12/2020, 31339) | Faiz içermeyen BES fonu tanımı (Madde 9) | Metin okunmadı. |
-| TCMB EFT, FAST ve POS ücret ve komisyon düzenlemeleri | Madde 7'deki komisyon tavanının referansı | Metin okunmadı; ücret ve oranlar periyodik değiştiği için teklifte sabit oran yazılmamıştır. |
+| 2828 sayılı Sosyal Hizmetler Kanunu | Muhtaç aylıkları ve yardımlar (Madde 5) | Kanun metni indirildi; teklifin dayandığı madde numarası belirlenemediği için alıntı yapılamadı. Madde 5'te yalnız genel atıf vardır, teyit gerekir. |
+| 9284 sayılı Cumhurbaşkanı Kararı (21/12/2024) | GVK m.94/19 oranının %1 olması | Karar metni okunmadı. Kabul 21/12/2024, RG 22/12/2024, sayı 32760, yürürlük 1/1/2025, oran %1: alomaliye, KPMG Vergi, İSMMMO ve GİB duyurusunu aktaran Lexpera sayfalarında tutarlı (ikincil; resmî metin Resmî Gazete'de aranır). Kanundaki %25 oranı Bölüm 1'de aynen vardır. |
+| 10811 sayılı Cumhurbaşkanı Kararı (RG 7/1/2026, 33130) | BES Devlet katkısının %20 olması | Kararın kendisi okunmadı; varlığı ve içeriği 4632 Ek 1 dipnotunda Bölüm 1'de aynen vardır. |
+| Katılım esaslı emeklilik fonlarına ilişkin yönetmelik (RG 19/12/2020, 31339) | Faiz içermeyen BES fonu tanımı (Madde 9) | Yönetmeliğin adı, Resmî Gazete tarihi (19/12/2020) ve sayısı (31339) birden çok ikincil kaynakta tutarlı; yönetmelik metni okunmadı. |
+| TCMB EFT, FAST ve POS ücret ve komisyon düzenlemeleri | Madde 7 | Metin okunmadı; sabit oran teklifte yazılmamıştır. |
 | KGF faizsiz finansman kefalet programı | Madde 8 | Basın duyurusu okunmuştur; resmî program metni okunmadı. |
-| GİB e-Arşiv Portal kılavuzları | Fatura onayının e-Devlet veya SMS ile yapılabilmesi (Madde 2 (b)) | Kılavuzdan okunmuştur; mevzuat metni değildir. |
-| TÜİK, TEPAV, DİSK-AR kayıt dışılık ve genç işsizliği verileri | Genel gerekçe | İkincil aktarımdır; ham veri okunmadı. |
-| Kâr ve zarara ortaklık, mal ve hizmet alım satımına dayalı finansman usulleri | Madde 8 | Mevzuat atfı yoktur; teklifin kendi tercihidir. |
+| GİB e-Arşiv Portal kılavuzları | Madde 2 (b) | Kılavuzdan okunmuştur; mevzuat metni değildir. |
+| TÜİK, TEPAV, DİSK-AR kayıt dışılık ve genç işsizliği verileri | Genel gerekçe | İkincil aktarımdır. |
 
-**Teklifin kendi hesabı veya tercihi olan hükümler ("[H]")** için kanun metni yoktur; bunların gerekçesi II-A'daki ilgili satırda hesabıyla birlikte yazılıdır.
+**Teklifin kendi hesabı veya tercihi olan hükümler ("[H]")** için kanun metni yoktur; gerekçesi II-A'daki ilgili satırda hesabıyla birlikte yazılıdır.

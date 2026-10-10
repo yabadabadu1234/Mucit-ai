@@ -28,7 +28,7 @@ Bu dosya `DEVLETE_SUNULACAK_METIN.md`den taşınan çalışma kayıtlarını tut
 | F3 | Yurt dışı bedeli ödeme kuruluşundan yurt içi TL olarak geldiğinde (ç) bendi dışarıda kalabilirdi. | Genç | (ç) bendi genişletildi |
 | F4 | Net bakiyeyle şahsî harcamanın hesap türü gerekçesiyle kısıtlanması. | Genç | Madde 6: serbest tasarruf hakkı, ücret sınırı Madde 7’ye bağlı |
 | F5 | Akraba olmayan kişilerle yürütülen organize şebeke (aynı ajansa kesilen çok sayıda fatura). | Devlet | Çözüm metinde değil: VUK m.359 ve genel denetim saklıdır; bu teklif gence ilave belge yükü getirmez. Bu kalan bir risktir, ortadan kalkmış değildir |
-| F6 | 5018 m.14 mali yük ve aktüeryal hesap zorunluluğu. | Devlet | III.D.5; hesap hazırlanmalı |
+| F6 | 5018 m.14 AYM tarafından iptal edilmiştir (7/12/2023, E.2018/117, K.2023/212); yasal zorunluluk yoktur, hesap yine de eksiktir. | Devlet | III.D.5; hesap hazırlanmalı |
 | F7 | KDV Kanunu m.18 istisnadan vazgeçme: genç KDV beyanı yükümlülüğüne girebilirdi. | Genç | Madde 3: vazgeçme hakkı kullanılamaz. Bedeli: giriş KDV’sini indirme imkânı da kalkar 
 | F8 | Bordrolu (4/a) çalışan gencin akşam geliri: 5510 m.53 çakışmada 4/a’yı esas alır; 90 gün çakışan günler için sayılamaz. | Çalışan yoksul genç | Ek Madde 25: yalnız çakışmayan günler sayılır ve karşılanır |
 | F9 | Ek iş gelirinin ücretle birleştirilip yüksek vergi dilimine girmesi. | Çalışan genç | Madde 1 (m): birleştirilemez, beyannameye dahil edilemez |

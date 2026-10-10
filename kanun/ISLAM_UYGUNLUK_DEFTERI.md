@@ -167,3 +167,15 @@ II-A bölümü dinî sebep ve delil taşımaz (F 3-I 246). Padişahın “dayand
 | Vergi kavramı | Zekât dışı kamu yükümlülüğü meşru kabul edildi (Siyâset-i Şer'iyye, mukāseme, tahfîf) | E.2 satırı kapandı. Teklifte dinî sebep yazılmaz (F 3-I 246) | Mecelle m.20 ("Zarar izale olunur") ve m.29 ("Ehven-i şerreyn ihtiyar olunur") TBMM PDF'inden okundu. Tirmizî Zekât 27, Ebû Yûsuf, Cüveynî, İbn Hazm, Şâtıbî, İbn Âbidîn atıfları **yoklanmadı** |
 | Delil Eki | Okuyan, delilin kendisini bulabilmeli | `kanun/DELIL_EKI.md`: 20 kanunun ilgili maddeleri aynen ve mevzuat.gov.tr adresiyle; metni okunmayanlar Bölüm 2'de sayıyla | 20 kanun, PDF'ten çıkarıldı; Bölüm 2'de 18 dayanak okunmadı diye açıkça yazıldı |
 | Açık soru | Dinî delil teklifte yazılsın mı (F 3-I 246 kalkar mı) | Cevap yok; yazılmadı | — |
+
+## E.14 Teyit turu (padişah: "Teyit edilmeyenleri teyit et")
+
+| Atıf | Sonuç |
+| :-- | :-- |
+| Anayasa m.16, 6735 m.6 ve m.13, 7201 m.7/a, 657 m.206, 2022 m.1, 6183 m.51, 4857 m.25/II, 5682 m.14 | Resmî PDF'ten okundu, DELIL_EKI Bölüm 1'e alındı; içerikler teklifin kullanımıyla uyumlu |
+| 3065 m.17/4-(a) | **Düzeltme:** güncel metin "mükerrer 20/B ve geçici 94 üncü maddeleri" (7587 sayılı Kanun, 24/6/2026). Madde 3 lafzı bu ibareye göre düzeltildi |
+| 5018 m.14 | **Düzeltme:** AYM'nin 7/12/2023 tarihli ve E.2018/117, K.2023/212 sayılı kararıyla iptal edilmiş. "Üç yıllık mali yük" dayanağı kaldırıldı (III.D.5, II-A, Komisyon Paketi) |
+| 9284 sayılı Karar, katılım yönetmeliği | Birden çok ikincil kaynakta tutarlı; resmî metin okunmadı |
+| 2828 | Metin indirildi, teklifin dayandığı madde numarası belirlenemedi; açık |
+| TCMB düzenlemeleri, KGF programı, GİB kılavuzu, TÜİK/TEPAV | Okunmadı |
+| 7201 m.7/a | Gerçek kişiler için elektronik tebligat yalnız talep hâlinde; Madde 2 (a) tescille UETS talebi sayılması açıkça yazılmamıştır (açık nokta) |

@@ -19,7 +19,7 @@ Cevaplar teklifin kendi hesabına dayanır; ölçülmemiş yerler açıkça yaz�
 
 **S1. Naylon fatura artmaz mı?** Teklifin kendi hesabı bu riski ortadan kaldırmaz: kurumlar vergisi %25 varsayımıyla gider yazan alıcının vergi avantajı 25 TL, ödediği tevkifat 10,5 TL'dir; fark 14,5 TL sahte fatura teşviki olabilir (II-A, Madde 1 (b)). Riski azaltan hükümler: tevkifat Hazineye aktarılmadan gider indirimi yok; bedel bankacılık kanalıyla ödenmeli; bordro kalkanı; alıcı yoğunluğu taraması (işaretleme); VUK m.359 ve m.344 yaptırımları saklı. Riskin büyüklüğü ölçülmemiştir.
 
-**S2. SGK'ya yük getirir mi?** Evet, küçük de olsa: Ek Madde 25 uyarınca tavanın yarısına ulaşanlar için 90 günlük primin malûllük, yaşlılık ve ölüm payı (3 × 33.030 × %21 = 20.809 TL/kişi/yıl) Hazine tarafından karşılanır. Bu bedel SGK bütçesine yük olmaz, Hazine bütçesine yük olur; toplam tutar kişi sayısına bağlıdır ve hesaplanmamıştır. 5018 m.14 gereği üç yıllık mali yük ve yirmi yıllık aktüeryal hesap yapılmamıştır (Ek B).
+**S2. SGK'ya yük getirir mi?** Evet, küçük de olsa: Ek Madde 25 uyarınca tavanın yarısına ulaşanlar için 90 günlük primin malûllük, yaşlılık ve ölüm payı (3 × 33.030 × %21 = 20.809 TL/kişi/yıl) Hazine tarafından karşılanır. Bu bedel SGK bütçesine yük olmaz, Hazine bütçesine yük olur; toplam tutar kişi sayısına bağlıdır ve hesaplanmamıştır. 5018 m.14 Anayasa Mahkemesince iptal edilmiştir, yasal zorunluluk yoktur; yine de aktüeryal hesap yapılmamıştır (Ek B).
 
 **S3. SMMM'nin işini alır mı?** Teklif yalnız tavanın altındakileri muhasebeciden muaf tutar; tavanı aşan gerçek usule geçer. Bu kitlenin bugün ne kadarının muhasebeci tuttuğu ölçülmemiştir; "yeni müşteri havuzu" beklentisi de ölçülmemiş bir beklentidir ve öyle yazılmıştır.
 
@@ -35,7 +35,7 @@ Teklifin 14 maddesinin hepsi yeni madde, bent veya fıkra eklemektir; mevcut bir
 | :-- | :-- | :-- |
 | 193 GVK: mükerrer 20/B, 20/C, 20/D var, 20/E yok | Mükerrer 20/E (Madde 1) | II-A A; DELIL_EKI 193 |
 | 213 VUK: son ek madde Ek 18 | Ek 19 (Madde 2) | II-A B; DELIL_EKI 213 |
-| 3065 KDVK m.17/4-(a), m.18 (metni okunmadı) | İbare eklenmesi (Madde 3) | II-A C; DELIL_EKI Bölüm 2 (okunmadı) |
+| 3065 KDVK m.17/4-(a): “mükerrer 20/B ve geçici 94 üncü maddeleri” ibaresi | İbare eklenmesi (Madde 3) | II-A C; DELIL_EKI 3065 |
 | 488 Damga (2) sayılı Tablo IV: son sıra 56 | Sıra 57 (Madde 4) | II-A D; DELIL_EKI 488 |
 | 5510 m.6/1: (a)-(n) bentleri var; (n) "yaşlılık aylığı almaktayken ... 4 üncü maddenin birinci fıkrasının (b) bendi kapsamında çalışanlar" | (o) bendi ve fıkralar (Madde 5) | II-A E; DELIL_EKI 5510 |
 | 5510: son ek madde Ek 24 | Ek 25 (Madde 9) | II-A I |
