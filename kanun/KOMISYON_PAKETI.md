@@ -61,3 +61,11 @@ Bu bölüm yalnız teklif metnindeki hükümlerin sıralanmış hâlidir; yeni h
 6. **Tavan.** Portal kümülatif hasılatı izler; tavan aşılınca takip eden ay başından genel hükümler (Madde 1 (e), (h)).
 
 Tebliğ taslağı: bkz. `TEBLIG_TASLAGI.md` (Gelir Vergisi Genel Tebliği taslağı; yeni hüküm koymaz, teklif hükümlerini uygulama sırasına dizer; idarenin belirleyeceği ayrıntılar [İDARE] ile işaretlidir). Teklifin Madde 1 son fıkrası bu tebliğ için Hazine ve Maliye Bakanlığına yetki verir.
+
+## 5. GÖRSEL EK
+
+`GORSELLER/GORSEL_EK.pdf` (13 sayfa) ve aynı dizindeki PNG dosyaları: 8 uygulama ekranı (tescil, hesap ve UETS, belge, fatura, vadeli senet, pano, bildirimler, banka), 2 şema (tevkifat akışı, yaşam döngüsü) ve 2 grafik (100 TL dağılımı, kişi başı dağılım). HTML kaynakları ve üretim betikleri `GORSELLER/kaynak/` altındadır.
+
+**Uyarı:** Ekranlar taslak tasarımdır, hiçbir kurumun resmî arayüzü değildir; her ekranın üstünde bu uyarı yazılıdır. Gerçek GİB, banka veya PTT ekranı sistem kurulmadan alınamaz.
+
+Kalan tüm tehlikelerin güncel listesi: `TEHLIKE_DEFTERI.md`.

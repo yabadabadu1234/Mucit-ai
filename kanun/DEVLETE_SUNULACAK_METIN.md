@@ -460,6 +460,7 @@ Bu ek, Meclis’e sunulacak metnin hangi riske hangi hükümle cevap verdiğini 
 ## VI. KAYNAKLAR
 
 - Delil Eki (DELIL_EKI): dayanak kanun hükümlerinin aynen metinleri ve adresleri.
+- Görsel Ek (GORSELLER/GORSEL_EK.pdf): uygulama ekranı taslakları, şemalar ve grafikler; TEHLIKE_DEFTERI: kalan riskler.
 - Tebliğ taslağı (TEBLIG_TASLAGI) ve Komisyon Paketi (KOMISYON_PAKETI): uygulama usulü, karşılaştırma cetveli ve soru-cevap rehberi.
 - Güncel kanun metinleri: mevzuat.gov.tr (Cumhurbaşkanlığı Mevzuat Bilgi Sistemi); atıf yapılan 193, 213, 488, 3568, 3572, 4632, 5411, 5510, 5549, 5846, 6098, 6493, 6698 sayılı Kanunların metni buradan okunmuştur; 3065 ve 4721 (m.737) atıfları ikincil kaynağa dayanır.
 - GVK 94/19 tevkifat oranı: 21/12/2024 tarihli ve 9284 sayılı Cumhurbaşkanı Kararı (22/12/2024 tarihli ve 32760 sayılı Resmî Gazete); uygulama usulü Gelir Vergisi Genel Tebliği (Seri No: 330).
