@@ -108,3 +108,15 @@ Padişahın kızgınlığı üzerine E.7'deki “bilinçli uzaklaşma” (ortağ
 | Müzâraa, müsâkât, mugârase | **Uygulanmadı, engel:** tarım faaliyeti GVK mükerrer 20/C ve diğer tarımsal rejimlerin konusudur, bu teklifin dışında | |
 | Madde 12 (genel ek iş yasaklarının hükümsüzlüğü) | **İhtilaflı, dokunulmadı:** sözleşmeye vefa (“akitlerinizi yerine getirin”) ile “helâli haram kılan şart” istisnası arasındaki sınır ictihad konusudur; Claude hüküm vermez. Padişaha açık kalem olarak sorulur | Mâide 5/1; Buhârî İcâre 14 / Tirmizî Ahkâm 17 (aktarma) |
 
+**E.9 Siyâset-i şer'iyye gerekçeleri (harici analiz) — yoklama (F 3-I 244) ve uygulama (F 3-I 248)**
+
+| İddia | Yoklama | Sonuç |
+| :-- | :-- | :-- |
+| Mecelle m.58: raiyye üzerine tasarruf maslahata menûttur | Padişahın verdiği TBMM/muharrembalci PDF'inin Latin açıklamalı metninden okundu: “Madde 58- Raiyye yani tebe'a üzerine tasarruf maslahata menuttur. (Vatandaş üzerine tasarruf maslahata göredir.)” | **Doğrulandı.** Harici analizin Arapça alıntısındaki “el-imâm” kelimesi Mecelle metninde yoktur (kaide kitaplarında imâm lafzıyla geçer); Mecelle lafzı yukarıdaki gibidir |
+| Ebû Yûsuf, Kitâbü'l-Harâc, Hârûnürreşîd'in talebiyle yazıldı; sabit misâhaya karşı üründen oransal mukāsemeyi tercih etti | İkincil kaynaklarda (Wikipedia, ejournal.unma.ac.id) doğrulandı; Arapça, Türkçe veya İngilizce kitap metni okunmadı | **İkincil olarak doğrulandı.** Harici analizin Halife ile “diyalog” alıntıları yoklanamadı, metne ve deftere alıntı olarak girmedi |
+| İbn Haldun, Mukaddime: vergi hafifken gelir çok, ağırken az | Arama sonucunda Mukaddime'den hiçbir kayıt bulunmadı | **Yoklanamadı** (engel: Mukaddime metnine erişim yok). Harici analizin “alıntısı” kullanılmadı |
+| İbn Teymiyye el-Hisbe ve İbnü'l-Uhuve Meâlimü'l-Kurbe: hile, paravan, aldatma denetlenir; “fiyata müdahale edilmez” | Eserlerin varlığı genel bilgi; metin okunmadı. “Fiyata müdahale edilmez” iddiası **doğrulanamadı** ve İbn Teymiyye'nin bazı hâllerde narh (tes'îr) caiz gördüğü bilinir | Hisbe kısmı gerekçe olarak kalır; fiyat iddiası **kullanılmadı** |
+| Teklif Ebû Yûsuf'un reformuyla “birebir aynıdır” | Harâc arazi vergisidir; teklif hizmet hasılatı üzerinden tevkifattır. Kıyas ictihaddır | **İhtilaflı kıyas:** E.2'deki “vergi kavramı” kaydı **kalır**; Claude hüküm vermez |
+
+**Uygulama:** Bu gerekçeler dayanak içindir, teklif metnine dinî sebep yazılmaz (F 3-I 246). Mukāseme ilkesi (hasılat yoksa yük yok, yük hasılatla orantılı) bakımından teklif denetlendi: sabit bedel yoktur (damga muaf, hesap açılış ve işletim ücreti yok, kefalet komisyonu yok, harç yok, tevkifat orantılı, komisyon tavanı orantılı veya TCMB azami oranı). **Metinde değişiklik gerektiren başka bir hüküm bulunmadı.** Maslahat kaidesi (m.58) bakımından gerekçenin “kamu yararı” anlatımı yeterlidir, metne eklenecek ayrı hüküm yoktur.
+
