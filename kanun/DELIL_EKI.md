@@ -354,6 +354,14 @@ Bu Ek, "Bireysel Emek, Hizmet ve Fikrî Üreticilerin Vergilendirilmesi ve Sosya
 > Karşılıklı anlaşma sonucuna göre Türkiye’de düzeltme yapılmasının gerekmesi 
 > durumunda, anlaşma sonucu, Kanu
 
+**Madde 229, birinci fıkra**
+
+*Teklifte kullanıldığı yer:* Madde 1 (o) (müşterek fatura)
+
+> Madde 229 – Fatura, satılan emtia veya yapılan iş karşılığında müşterinin borçlandığı 
+> meblağı göstermek üzere emtiayı satan veya işi yapan tüccar tarafından müşteriye verilen 
+> ticari vesikadır.
+
 ## 488 sayılı Damga Vergisi Kanunu
 
 **Tam metin adresi:** https://www.mevzuat.gov.tr/mevzuatmetin/1.5.488.pdf
@@ -1273,6 +1281,14 @@ Bu Ek, "Bireysel Emek, Hizmet ve Fikrî Üreticilerin Vergilendirilmesi ve Sosya
 > Madde 16 – Temel hak ve hürriyetler, yabancılar için, milletlerarası hukuka uygun olarak 
 > kanunla sınırlanabilir.
 
+**Madde 88, birinci fıkra**
+
+*Teklifte kullanıldığı yer:* Teklif sahibi alanı
+
+> Madde 88 – Kanun teklif etmeye (…)40 milletvekilleri yetkilidir. 
+> Kanun (…)41 tekliflerinin Türkiye Büyük Millet Meclisinde görüşülme usul ve esasları 
+> içtüzükle düzenlenir.
+
 ## 6735 sayılı Uluslararası İşgücü Kanunu
 
 **Tam metin adresi:** https://www.mevzuat.gov.tr/mevzuatmetin/1.5.6735.pdf
@@ -1362,6 +1378,14 @@ Bu Ek, "Bireysel Emek, Hizmet ve Fikrî Üreticilerin Vergilendirilmesi ve Sosya
 > Cumhurbaşkanınca vergi muafiyeti tanınan vakıfların kuruluş amaçlarına uygun olarak 
 > işletmek veya yönetmek suretiyle ifa ettikleri teslim ve hizmetlere ilişkin istisnalar hariç 
 > olmak üzere, 17 nci maddenin (1) ve (2) numaralı fıkralar
+
+**Madde 58**
+
+*Teklifte kullanıldığı yer:* Madde 3 (mahsup edilen KDV'nin ayrıca gider yapılamaması; II-A C)
+
+> Madde 58 – Mükellefin vergiye tabi işlemleri üzerinden hesaplanan Katma Değer 
+> Vergisi ile mükellefçe indirilebilecek Katma Değer Vergisi, Gelir ve Kurumlar Vergisi 
+> matrahlarının tespitinde gider olarak kabul edilmez.
 
 ## 5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu
 
@@ -1483,15 +1507,41 @@ Bu Ek, "Bireysel Emek, Hizmet ve Fikrî Üreticilerin Vergilendirilmesi ve Sosya
 > zamanda bedensel, zihinsel veya ruhsal engellerinden en az biri nedeniyle sürekli bakıma 
 > 
 
+
+## 2828 sayılı Sosyal Hizmetler Kanunu
+
+**Tam metin adresi:** https://www.mevzuat.gov.tr/mevzuatmetin/1.5.2828.pdf
+
+**Ek Madde 7, birinci fıkra**
+
+*Teklifte kullanıldığı yer:* Madde 5 (muhtaçlık ve gelir eşiği)
+
+> Ek Madde 7 – (Ek: 1/7/2005-5378/30 md.; Değişik: 6/2/2014-6518/21 md.) 
+> Her ne ad altında olursa olsun her türlü gelirler toplamı esas alınmak suretiyle, hane 
+> içinde kişi başına düşen ortalama aylık gelir tutarı, asgarî ücretin aylık net tutarının 2/3’ünden 
+> daha az olan bakıma ihtiyacı olan engellilere, resmî veya özel bakım merkezlerinde bakım 
+> hizmeti ya da sosyal yardım yapılmak suretiyle evde bakımına destek verilmesi sağlanır. 
+> Hanede birden fazla bakıma ihtiyacı olan engelli bulunması hâlinde, hane içinde kişi başına 
+> düşen ortalama aylık gelir tutarının hesaplanmasında birinci bakıma ihtiyacı olan engelliden 
+> sonraki her bakıma ihtiyacı olan engelli iki kişi sayılır. (Ek cümle:21/2/2019-7166/1 md.) Bu 
+> fıkranın uygulanmasında, 5510 sayılı Kanunun ek 18 inci maddesi uyarınca Ramazan ve 
+> Kurban bayramlarında ödenen bayram ikramiyeleri hane içinde kişi başına düşen ortalama 
+> 36 Bu madde; evvelce 356 sayılı KHK'nin 4 üncü maddesi ile "Ek madde 1" olarak getirilmişse de 
+> teselsülü sağlamak için bu sefer 14/3/1991 tarih ve 3703 sayılı Kanunla madde numarası "Ek madde 
+> 2" olarak değiştirilmiştir. 
+> aylık gelir tutarının hesaplanmasına dâhil edilmez. 
+> Bakıma ihtiyacı olan engellilere özel bakım merkezlerinde sunulacak bakım hizmetinin 
+> karşılığı olarak belirlenecek kişi başına aylık bakım ücreti tutarı, (20.000) göster
+
 ---
 
 # BÖLÜM 2. METNİ BU EKTE BULUNMAYAN DAYANAKLAR
 
-Aşağıdakilerin resmî metni indirilip okunamamıştır; gerekçede bunlar "[İ]" ile veya "teyit edilmedi" notuyla anılmıştır. Daha önce bu listede olan 2709 m.16, 6735, 7201 m.7/a, 3065 m.17/4-(a) ve m.18, 657 m.206, 2022, 6183 m.51, 4857 m.25/II ve 5682 m.14 sonradan resmî metinden okunmuş ve Bölüm 1'e alınmıştır.
+Aşağıdakilerin resmî metni indirilip okunamamıştır; gerekçede bunlar "[İ]" ile veya "teyit edilmedi" notuyla anılmıştır. Daha önce bu listede olan 2828 Ek 7, 2709 m.16 ve m.88, 3065 m.58, 6735, 7201 m.7/a, 3065 m.17/4-(a) ve m.18, 657 m.206, 2022, 6183 m.51, 4857 m.25/II ve 5682 m.14 sonradan resmî metinden okunmuş ve Bölüm 1'e alınmıştır.
 
 | Dayanak | Teklifin ondan beklediği | Durum |
 | :-- | :-- | :-- |
-| 2828 sayılı Sosyal Hizmetler Kanunu | Muhtaç aylıkları ve yardımlar (Madde 5) | Kanun metni indirildi; teklifin dayandığı madde numarası belirlenemediği için alıntı yapılamadı. Madde 5'te yalnız genel atıf vardır, teyit gerekir. |
+| 6362 sayılı Sermaye Piyasası Kanunu m.35/A | Kitle fonlamasının platform iznine bağlı olması; iki kişi arasındaki ikili sözleşmenin bu kapsama girmediği değerlendirmesi (Madde 1 (j)) | Madde numarası ve platform izni ikincil kaynaktan (mevzuat.spk.gov.tr yönlendirmesi); kanun metni okunamadı (sunucu 503). Değerlendirme teklifin kendi yorumudur. |
 | 9284 sayılı Cumhurbaşkanı Kararı (21/12/2024) | GVK m.94/19 oranının %1 olması | Karar metni okunmadı. Kabul 21/12/2024, RG 22/12/2024, sayı 32760, yürürlük 1/1/2025, oran %1: alomaliye, KPMG Vergi, İSMMMO ve GİB duyurusunu aktaran Lexpera sayfalarında tutarlı (ikincil; resmî metin Resmî Gazete'de aranır). Kanundaki %25 oranı Bölüm 1'de aynen vardır. |
 | 10811 sayılı Cumhurbaşkanı Kararı (RG 7/1/2026, 33130) | BES Devlet katkısının %20 olması | Kararın kendisi okunmadı; varlığı ve içeriği 4632 Ek 1 dipnotunda Bölüm 1'de aynen vardır. |
 | Katılım esaslı emeklilik fonlarına ilişkin yönetmelik (RG 19/12/2020, 31339) | Faiz içermeyen BES fonu tanımı (Madde 9) | Yönetmeliğin adı, Resmî Gazete tarihi (19/12/2020) ve sayısı (31339) birden çok ikincil kaynakta tutarlı; yönetmelik metni okunmadı. |

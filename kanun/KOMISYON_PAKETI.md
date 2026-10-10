@@ -25,17 +25,23 @@ Cevaplar teklifin kendi hesabına dayanır; ölçülmemiş yerler açıkça yaz�
 
 **S4. Bordrolu çalışan buraya kaydırılır mı?** Kilitler: son iki yıl hizmet akdi bulunulan işverene ve ortaklıklarına fatura kesme yasağı; tek müşteriden yıllık hasılatın %60'ından fazlası elde edilemez; ihlalde ödeme ücret sayılır. Kalan açık: ilk yıl ve altı aylık asgari ücret altındaki hasılatta %60 sınırı uygulanmaz; iki müşteriyle tavanı doldurmak mümkündür (Ek A.4).
 
-**S5. Hazineye maliyeti ne?** Hesaplanmamıştır. Hazine'ye gelir kaybı kalemleri Ek B'de sayılmıştır (BES Devlet katkısı, 90 gün prim, KGF kefaleti, donanım KDV mahsubu, komisyon tavanı, taksit).
+**S5. Çifte vergilendirmeyi önleme anlaşmaları (K3)?** Genel ilke olarak hizmet kazancı üzerinde vergilendirme yetkisi mukim olunan devlete aittir; teklif Türkiye'de mukim vatandaşın hesabında tevkif eder, yabancı müşteriye vergi yüklemez. Bu bir yorumdur; belirli anlaşmaların maddeleri tek tek incelenmemiştir ve risk sıfır denemez.
+
+**S6. Platformdan satan %1 ile kurtulmaz mı?** Teklifin Madde 1 (l) bendi buna göre yazılmıştır: belgeli mükellefte 94/19 kesilmez, tevkifat bu maddeyle (%10,5) yapılır; belgesizde 94/19 kesintisi mahsup edilir.
+
+**S7. Teklif İçtüzük ve Anayasa bakımından kimden gelir?** Anayasa m.88 uyarınca kanun teklif etmeye milletvekilleri yetkilidir; teklif sahibi alanı bu yüzden milletvekili olarak bırakılmıştır.
+
+**S8. Hazineye maliyeti ne?** Hesaplanmamıştır. Hazine'ye gelir kaybı kalemleri Ek B'de sayılmıştır (BES Devlet katkısı, 90 gün prim, KGF kefaleti, donanım KDV mahsubu, komisyon tavanı, taksit).
 
 ## 3. KARŞILAŞTIRMA CETVELİ (3 kolon)
 
-Teklifin 14 maddesinin hepsi yeni madde, bent veya fıkra eklemektir; mevcut bir fıkranın metnini değiştiren yalnız Madde 3'ün KDV fıkra atfıdır. Bu sebeple "yürürlükteki metin" kolonu ya "yok" ya da eklenen yerin komşu metnidir. Alıntılar DELIL_EKI'ndendir.
+Teklifin maddelerinin hepsi yeni madde, bent veya fıkra eklemektir; mevcut bir hükmün metnine ibare ekleyen yalnız Madde 3'tür (KDV). Bu sebeple "yürürlükteki metin" kolonu ya "yok" ya da eklenen yerin komşu metnidir. Alıntılar DELIL_EKI'ndendir.
 
 | Yürürlükteki kanun yeri | Teklif edilen | Gerekçe ve deliller |
 | :-- | :-- | :-- |
 | 193 GVK: mükerrer 20/B, 20/C, 20/D var, 20/E yok | Mükerrer 20/E (Madde 1) | II-A A; DELIL_EKI 193 |
 | 213 VUK: son ek madde Ek 18 | Ek 19 (Madde 2) | II-A B; DELIL_EKI 213 |
-| 3065 KDVK m.17/4-(a): “mükerrer 20/B ve geçici 94 üncü maddeleri” ibaresi | İbare eklenmesi (Madde 3) | II-A C; DELIL_EKI 3065 |
+| 3065 KDVK m.17/4-(a): “Gelir Vergisi Kanununa göre vergiden muaf esnaf ile kazançları basit usulde tespit edilen mükellefler tarafından yapılan teslim ve hizmetler, aynı Kanunun mükerrer 20/B ve geçici 94 üncü maddeleri kapsamında vergilendirilen kazançlara konu teslim ve hizmetler,” | “mükerrer 20/B ve geçici 94 üncü maddeleri” ibaresinden sonra gelmek üzere “ile mükerrer 20/E maddesi” ibaresi eklenmiştir (Madde 3) | II-A C; DELIL_EKI 3065 (metin 7587 sayılı Kanunla değişmiş güncel hâli) |
 | 488 Damga (2) sayılı Tablo IV: son sıra 56 | Sıra 57 (Madde 4) | II-A D; DELIL_EKI 488 |
 | 5510 m.6/1: (a)-(n) bentleri var; (n) "yaşlılık aylığı almaktayken ... 4 üncü maddenin birinci fıkrasının (b) bendi kapsamında çalışanlar" | (o) bendi ve fıkralar (Madde 5) | II-A E; DELIL_EKI 5510 |
 | 5510: son ek madde Ek 24 | Ek 25 (Madde 9) | II-A I |
@@ -54,4 +60,4 @@ Bu bölüm yalnız teklif metnindeki hükümlerin sıralanmış hâlidir; yeni h
 5. **Askı ve itiraz.** Aşırı giriş "inceleme askısı"na alınır, mükellef 15 gün içinde Gelir Kaynağı Beyanı verir (Madde 1 (j)); kararlara karşı 30 günlük itiraz Dijital Hakem Heyeti'ne (Madde 10).
 6. **Tavan.** Portal kümülatif hasılatı izler; tavan aşılınca takip eden ay başından genel hükümler (Madde 1 (e), (h)).
 
-Hazırlanmayan: Resmî tebliğ taslağı. Gerekçe: tebliğ idarenin takdir ve yetki alanıdır; teklif sahibi tarafından yazılması yetkiyi aşan bir metin üretir. Karar padişahındır.
+Tebliğ taslağı: bkz. `TEBLIG_TASLAGI.md` (Gelir Vergisi Genel Tebliği taslağı; yeni hüküm koymaz, teklif hükümlerini uygulama sırasına dizer; idarenin belirleyeceği ayrıntılar [İDARE] ile işaretlidir). Teklifin Madde 1 son fıkrası bu tebliğ için Hazine ve Maliye Bakanlığına yetki verir.

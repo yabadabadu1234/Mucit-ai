@@ -179,3 +179,20 @@ II-A bölümü dinî sebep ve delil taşımaz (F 3-I 246). Padişahın “dayand
 | 2828 | Metin indirildi, teklifin dayandığı madde numarası belirlenemedi; açık |
 | TCMB düzenlemeleri, KGF programı, GİB kılavuzu, TÜİK/TEPAV | Okunmadı |
 | 7201 m.7/a | Gerçek kişiler için elektronik tebligat yalnız talep hâlinde; Madde 2 (a) tescille UETS talebi sayılması açıkça yazılmamıştır (açık nokta) |
+
+## E.15 Harici analiz turu (F 3-I 251): kabul edilenler ve edilmeyenler
+
+| Harici iddia | Sonuç |
+| :-- | :-- |
+| KDV 17/4-(a) "ticari plaka eklendi, 1/7/2026 RG 33297" | **Yanlış/yoklanamadı.** Okunan güncel metin 7587 ile "mükerrer 20/B ve geçici 94 üncü maddeleri"; plaka kazancı GVK geçici m.94'tedir. Madde 3 lafzı bu okumaya göre |
+| 6183 m.51/3 vergi ziyaı cezasına zam | **Doğru, işlendi:** Madde 1 (b) "ve buna bağlı vergi ziyaı cezasına" |
+| PTT resen UETS | Mantık doğru, işlendi (VUK Ek 19 (a)); PTT maliyeti ölçülmedi (K13) |
+| Platform %1 arbitrajı | **Doğru, işlendi:** Madde 1 (l) yeniden yazıldı (K12) |
+| Anayasa m.88 (yalnız milletvekili) | **Doğru**, metinden okundu; teklif sahibi alanı değişti |
+| 2828 Ek 7 (evde bakım) | Doğru, metinden okundu, Delil Eki'ne alındı |
+| KDVK m.58 | Doğru ama kapsamı dar (mükellefin KDV'sinin gider olmaması); II-A'da dayanak, madde metnine yazılmadı |
+| 6362 m.35/A kitle fonlaması | İkincil kaynakla doğrulandı; metin okunamadı |
+| "Mali etki: 1,04 / 4,16 milyar, net kâr %100" | III.D.3 ve D.4'te zaten var; "net %100" **yanlıştır** (yutulma riski D.4) |
+| "Risk sıfırdır" hükümleri (ÇVÖA, naylon fatura, MASAK) | Yazılmadı; Komisyon Paketi'nde "risk sıfır denemez" |
+| Yargıtay 9. ve 22. HD içtihadı, Mecelle m.1391/1404, Diyanet 2017 BES kararı, İslam Fıkıh Akademisi Karar 200, el-Bûtî fetvası | **Yoklanamadı, hiçbir yere yazılmadı** (F 3-I 244, 251) |
+| "Dinî delil teklife yazılamaz" | F 3-I 246'ya uygun; padişah kararı olarak değil, mevcut hüküm olarak sürüyor |
