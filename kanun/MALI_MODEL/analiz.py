@@ -11,25 +11,29 @@ for ad in SENARYO:
 # 2 kırılma noktası (Orta): net=0 için s*
 def net_s(s,base=None):
     p=sc('Orta') if base is None else dict(base); p['s_kayitli']=s; return kos(p)[0]['net']
-lo,hi=0.0,0.6
-for _ in range(60):
-    m=(lo+hi)/2
-    if net_s(m)>0: lo=m
-    else: hi=m
+def net_s1(s):
+    p=sc('Orta'); p['s_kayitli']=s; p['u_ucretli']=min(p['u_ucretli'],1-s); return kos(p)[0]['net']
+lo,hi=0.0,1.0
+if net_s1(1.0)>0: lo=None
+else:
+    for _ in range(60):
+        m=(lo+hi)/2
+        if net_s1(m)>0: lo=m
+        else: hi=m
 SONUC['s_kirilma']=lo
 # 3 politika varyantları (Orta tabanında)
 V={}
 def var(ad,**kw):
     p=sc('Orta'); p.update(kw); V[ad]=kos(p)[0]['net']
-var('G0 Güncel teklif: 24 ay giriş kapısı var (Orta, s=0,05)')
-var('G1 Önceki taslak: kapı yok (s=0,25)',s_kayitli=0.25)
-var('G2 Kapı sızıntısı yüksek (s=0,10)',s_kayitli=0.10)
-var('G3 Kapı sızıntısı çok yüksek (s=0,20)',s_kayitli=0.20)
-var('G4 Kapı + götürü gider %25',gider=0.25)
-var('G5 Kapı + (e) bendi yok: düz %10,5',duz_oran=0.105)
-var('G6 Kapı + 90 gün prim hibesi yok',myo_uygun=0.0)
-var('G7 Kapı + donanım KDV mahsubu yok',kdv_donanim_pay=0.0)
-var('G8 Kapı yok + geçenler primi yarı oranda sürdürür (s=0,25)',s_kayitli=0.25,prim_devam=0.5)
+var('G0 Seçilen: kapısız, halen kayıtlı olanın 4/b primi sürer (s=0,15)')
+var('G1 Prim sürekliliği olmasaydı (kapısız, s=0,15)',prim_devam=0.0)
+var('G2 Önceki karar: 24 ay giriş kapısı (s=0,05, prim sürekliliği yok)',s_kayitli=0.05,prim_devam=0.0)
+var('G3 Harici öneri: düz %15 (%5 prim payı), hibe yok, kapısız (s=0,15)',duz_oran=0.15,myo_oran=0.0,prim_devam=0.0)
+var('G4 Seçilen, herkes geçse (s=1,00)',s_kayitli=1.0,u_ucretli=0.0)
+var('G5 Seçilen + 90 gün prim hibesi yok',myo_uygun=0.0)
+var('G6 Seçilen + donanım KDV mahsubu yok',kdv_donanim_pay=0.0)
+var('G7 Seçilen + (e) bendi yok: düz %10,5',duz_oran=0.105)
+var('G8 Seçilen + götürü gider %25',gider=0.25)
 SONUC['varyant']=V
 # 4 tornado (Orta, yıl4)
 base=sc('Orta'); b0=kos(base)[0]['net']
@@ -47,7 +51,7 @@ NS=4000; net=[];npvs=[];prm=[]
 for i in range(NS):
     p=dict(BAZ)
     p['n_toplam']=float(np.exp(rng.normal(np.log(350000),0.55)))
-    p['s_kayitli']=float(rng.beta(2,38)); p['u_ucretli']=float(rng.beta(3,12))
+    p['s_kayitli']=float(rng.beta(2,6)); p['u_ucretli']=float(rng.beta(3,12))
     p['medyan_W']=tri(3,5,8); p['sigma']=tri(0.6,0.9,1.2)
     p['prim_odeme']=tri(0.4,0.7,1.0); p['phi']=tri(0,0.01,0.03); p['onlem']=tri(0.2,0.5,0.8)
     p['myo_uygun']=tri(0.1,0.35,0.6); p['bes_vazgecme']=tri(0.1,0.35,0.6); p['kdv_donanim_pay']=tri(0.2,0.4,0.6)
@@ -58,7 +62,7 @@ net=np.array(net);npvs=np.array(npvs)
 q=lambda a:{k:float(np.percentile(a,k)) for k in (5,10,25,50,75,90,95)}
 SONUC['mc']=dict(n=NS,net_q=q(net),npv_q=q(npvs),p_net_pozitif=float((net>0).mean()),p_npv_pozitif=float((npvs>0).mean()),net=net.tolist())
 json.dump(SONUC,open('sonuc.json','w'),ensure_ascii=False,default=float)
-print("kırılma s*=%.3f"%SONUC['s_kirilma'])
+print("kırılma s*=",SONUC['s_kirilma'])
 for k,v in V.items(): print("%-55s %.2f mlr"%(k,v/1e9))
 print("Orta yıl4 net %.2f"%(b0/1e9))
 for t in T[:8]: print(t[0],"%.2f %.2f"%(t[3]/1e9,t[4]/1e9))

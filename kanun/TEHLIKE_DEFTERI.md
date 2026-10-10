@@ -28,13 +28,13 @@ Durum kodu: **A** = ancak ilgili kurumun verisi veya kararıyla kapanır; **K** 
 | 17 | Donanım KDV mahsubu: seri no ve %50 üst sınır eklendi; sahte fatura riski kalır | A |
 | 18 | KDV oranı kaçırma (K2): hizmet istisna olduğu için dar, hizmet kodu zorunluluğu tebliğe bırakıldı | A |
 | 19 | Kimlik kiralama ve eşik altı hesaplar: tek tescil ve tek hesap eklendi; tespit banka ve portal verisine bağlı | A |
-| 20 | **Yutulma:** net etkinin işareti halen kayıtlı olanların payına (s) bağlı (kırılma %12,6). Giriş kapısı (Madde 1 (p), 24 ay) teklife işlendi; kalan risk: kapıdan sızıntı ve dolaşma yolları (aile adına tescil, kapatıp bekleme) ölçülmedi | K |
+| 20 | **Yutulma:** baskın kalem halen kayıtlı olanın 4/b prim kaybıdır. Madde 1 (p): giriş serbest, 4/b sigortalılığı ve primi sürer (son 24 ayda 4/b olanlar dâhil). Net etki s'ye dayanıklı; kalan risk: sigortalılığı sona erdirme yolları, aile adına tescil, eski–yeni prim asimetrisi (eşitlik itirazı), SGK sistem uyarlaması ölçülmedi | K |
 
 ## 3. Mali etki
 | # | Tehlike | Durum |
 | :-- | :-- | :-- |
 | 21 | Modelin çoğu girdisi ölçülmemiş varsayımdır (N, s, u, φ, KGF, BES vazgeçme, PTT, BT) | A |
-| 22 | Kapılı modelde 4. yıl net etki: kötümser +0,17, orta +3,44, iyimser +12,98 milyar TL; kötümserde pay ince, olumlu sonuç s ön kabulüne bağlı | K/A |
+| 22 | 4. yıl net etki (prim sürekliliğiyle): kötümser +1,08, orta +4,86, iyimser +14,19 milyar TL; herkes geçse bile orta +1,08, kötümser +0,11; kötümserde marj ince, sonuç prim sürekliliğinin hukuken tutmasına bağlı | K/A |
 | 23 | Modelde olmayan etkiler: ikinci tur vergi etkisi, emeklilik hakkı kazanımı, denetim maliyeti, vergi anlaşmaları | A |
 | 24 | 5018 m.14 iptal; bütçe birimlerinin kendi aktüeryal çalışması gerekir | A |
 

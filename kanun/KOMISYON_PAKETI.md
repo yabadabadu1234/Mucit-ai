@@ -10,7 +10,7 @@ Bu paket "Bireysel Emek, Hizmet ve Fikrî Üreticilerin Vergilendirilmesi ve Sos
 | Teklif | Yıllık hasılatı 24 brüt asgari ücreti (792.720 TL) aşmayan Türkiye Cumhuriyeti vatandaşı gerçek kişiler için: hasılat yoksa yük yok; hasılat varsa tahsilatta nihaî tevkifat (etkin %10,5); UETS ve e-Devlet adresi; deftersiz, SMMM'siz. |
 | Güvenlikler | Kurumsal alıcı tevkifatı ödemeden gider yazamaz; bordro kalkanı (2 yıl, %60 tek müşteri sınırı); münhasır hesap; negatif liste; toplulaştırma; 30 günlük itiraz. |
 | Değişen kanunlar | 193 GVK (mükerrer 20/E), 213 VUK (Ek 19), 3065 KDVK, 488 Damga (sıra 57), 5510 (m.6/1-(o), Ek 25), 5411 (Ek 2), 6493 (Ek 2), 4632 (Ek 3). |
-| Mali etki | Kapsamlı model kuruldu (MALI_MODEL/). İlk taslak yutulma yüzünden olumsuz çıktığı için halen kayıtlı olanlara 24 ay giriş kapısı konuldu (Madde 1 (p)); **kapı işlerse net etki pozitiftir**: 4. yıl Orta +3,4 milyar TL, kötümser +0,2, iyimser +13,0 (SGK dahil). Kırılma noktası: kapı sızıntısı %12,6. Girdilerin çoğu ölçülmemiş varsayımdır; veri talebi: GİB, SGK, TÜİK, SBB, Hazine ve Maliye Bakanlığı, BDDK, TCMB. |
+| Mali etki | Kapsamlı model kuruldu (MALI_MODEL/). İlk taslak yutulma (halen kayıtlı olanın prim yükümlülüğünü bırakması) yüzünden olumsuz çıktı; çare olarak giriş serbest bırakıldı, fakat halen kayıtlı olanın 4/b sigortalılığı ve primi sürer (Madde 1 (p)). Bu şartla net etki pozitiftir ve katılım payına karşı dayanıklıdır: 4. yıl Orta +4,9 milyar TL, kötümser +1,1, iyimser +14,2 (SGK dahil); halen kayıtlı herkes geçse bile Orta +1,1, kötümser +0,1. Girdilerin çoğu ölçülmemiş varsayımdır; veri talebi: GİB, SGK, TÜİK, SBB, Hazine ve Maliye Bakanlığı, BDDK, TCMB. |
 | Kalan riskler | Ek A.4'te sayılmıştır (ör. ilk yıl iki müşteriyle tavanı doldurma, naylon fatura teşviki, portal kapasitesi). |
 
 ## 2. KOMİSYON SORU-CEVAP REHBERİ
@@ -33,7 +33,7 @@ Cevaplar teklifin kendi hesabına dayanır; ölçülmemiş yerler açıkça yaz�
 
 **S7. Teklif İçtüzük ve Anayasa bakımından kimden gelir?** Anayasa m.88 uyarınca kanun teklif etmeye milletvekilleri yetkilidir; teklif sahibi alanı bu yüzden milletvekili olarak bırakılmıştır.
 
-**S8. Hazineye maliyeti ne?** Model, kapı işlerse 4. yılda net +3,4 milyar TL (Orta; genel devlet, SGK dahil), kötümserde +0,2, iyimserde +13,0 bulmuştur; kapı olmasaydı −5,6 çıkıyordu. Sonuç kapının sızıntısına bağlıdır (kırılma %12,6) ve girdiler ölçülmemiştir; kesin rakam için SGK ve GİB verisi gerekir.
+**S8. Hazineye maliyeti ne?** Model, halen kayıtlı olanın prim yükümlülüğü sürdüğü sürece 4. yılda net +4,9 milyar TL (Orta; genel devlet, SGK dahil), kötümserde +1,1, iyimserde +14,2 bulmuştur; prim sürekliliği olmasaydı −1,1 çıkıyordu. Sonuç prim sürekliliğinin hukuken tutmasına ve ölçülmemiş girdilere bağlıdır; kesin rakam için SGK ve GİB verisi gerekir.
 
 ## 3. KARŞILAŞTIRMA CETVELİ (3 kolon)
 

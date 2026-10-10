@@ -17,11 +17,11 @@ for i,(a,v) in enumerate(adim):
     ax.text(i,(cum-v/2 if i else v/2)/M if False else (cum/M + (0.3 if v<0 else 0.3)),"%.2f"%(v/M),ha='center',fontsize=9)
 net=O['net']; ax.bar(len(adim),net/M,color='#14662b' if net>0 else '#7a1f1f'); ax.text(len(adim),net/M-0.9 if net<0 else net/M+0.3,"%.2f"%(net/M),ha='center',fontsize=10,fontweight='bold')
 ax.axhline(0,color='#333',lw=1); ax.set_xticks(range(len(adim)+1)); ax.set_xticklabels([a for a,_ in adim]+["NET"],rotation=25,ha='right',fontsize=9)
-ax.set_ylabel("milyar TL / yıl"); ax.set_title("Orta senaryo, 4. yıl (kararlı durum): net etki, 24 ay giriş kapısıyla",fontsize=13,fontweight='bold',color='#1f3a5f'); ax.spines[['top','right']].set_visible(False)
+ax.set_ylabel("milyar TL / yıl"); ax.set_title("Orta senaryo, 4. yıl (kararlı durum): net etki, halen kayıtlı olanın 4/b primi sürerken",fontsize=13,fontweight='bold',color='#1f3a5f'); ax.spines[['top','right']].set_visible(False)
 fig.text(0.01,-0.10,NOT,fontsize=8,color='#555'); fig.savefig('../GORSELLER/model_01_selale.png',dpi=110,bbox_inches='tight'); plt.close()
 # 2 tornado
 T=S['tornado'][:10]; T=T[::-1]
-ad={'s_kayitli':'Kapı sızıntısı: halen kayıtlı payı (s)','n_toplam':'Katılımcı sayısı (N)','prim_odeme':'Eski 4/b prim ödeme oranı','medyan_W':'Medyan hasılat (asgari ücret)','marj':'Kâr marjı (eski rejim)','uyum_ucretli':'Ücretlilerin eski uyumu','u_ucretli':'Ücretli ek gelir payı (u)','sigma':'Hasılat dağılımı yayılımı','phi':'Sahte fatura payı','kgf_alim':'KGF kullanım oranı','myo_uygun':'90 gün prim hak edenler','bes_vazgecme':'BES vazgeçme','kdv_donanim_pay':'Donanım alan payı','kgf_temerrut':'KGF temerrüt','onlem':'Önlem etkinliği','r_marj_ucretli':'Ücretli marjinal oran'}
+ad={'s_kayitli':'Halen kayıtlı olup geçenlerin payı (s)','n_toplam':'Katılımcı sayısı (N)','prim_odeme':'Eski 4/b prim ödeme oranı','medyan_W':'Medyan hasılat (asgari ücret)','marj':'Kâr marjı (eski rejim)','uyum_ucretli':'Ücretlilerin eski uyumu','u_ucretli':'Ücretli ek gelir payı (u)','sigma':'Hasılat dağılımı yayılımı','phi':'Sahte fatura payı','kgf_alim':'KGF kullanım oranı','myo_uygun':'90 gün prim hak edenler','bes_vazgecme':'BES vazgeçme','kdv_donanim_pay':'Donanım alan payı','kgf_temerrut':'KGF temerrüt','onlem':'Önlem etkinliği','r_marj_ucretli':'Ücretli marjinal oran'}
 fig,ax=plt.subplots(figsize=(11,6)); 
 for i,t in enumerate(T):
     ax.barh(i,t[3]/M,color='#2d6aa8'); ax.barh(i,t[4]/M,color='#c98b00')

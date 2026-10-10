@@ -35,7 +35,7 @@ Bu Kanun Teklifi; sermayesiz hizmet ve fikrî üreticilerin önündeki bu bariye
 * Birden fazla mikro mükellef, payları serbestçe belirlenmek ve hiç kimse kendi onayı olmadan ortak gösterilmemek şartıyla müşterek fatura düzenleyebilmekte; ortak alan ve donanım kullanımı ile ortak donanıma ait KDV’nin pay oranında mahsubu düzenlenmektedir.
 * Faiz içermeyen borç, emanet iadesi, hibe, miras ve kâr paylaşımına dayalı sermaye desteği hasılat sayılmamakta, ikinci el şahsî eşya satışı vergi dışında tutulmaktadır.
 * Tavanı aşarak genel hükümlere geçen mükellefe, ertesi yıl hasılatı tavanın altında kalırsa geri dönüş yolu, gönüllü çıkanlara ise bir yıllık bekleme süresi öngörülmektedir.
-* On altı yaşını doldurmuş küçükler yasal temsilcinin elektronik rızasıyla tescil olabilmekte; son yirmi dört ayda 4/b sigortalısı veya gelir vergisi mükellefi olanlar bu rejimden yararlanamamaktadır (rejim kayıt dışından kayda geçiş içindir).
+* On altı yaşını doldurmuş küçükler yasal temsilcinin elektronik rızasıyla tescil olabilmekte; halen 4/b sigortalısı veya gelir vergisi mükellefi olanlar da rejime girebilir; ancak 4/b sigortalılıkları ve prim yükümlülükleri sürer (Madde 1 (p)).
 * Her maddenin amacı, kapattığı açığı, dayanağı ve delil durumu II-A bölümünde madde madde yazılmış; atıf yapılan kanun hükümlerinin tam metni ve resmî adresi Delil Ekinde verilmiştir.
 * İstisna yalnız Türkiye Cumhuriyeti vatandaşı gerçek kişilere tanınmıştır; yabancı uyruklular genel hükümlere tabidir.
 * Algoritmik denetim sonuçlarına karşı otuz günlük itiraz hakkı, çoklu başvuru kanalı ve itiraz süresince faaliyetin kesintisizliği güvence altına alınmaktadır.
@@ -46,7 +46,7 @@ Bu Kanun Teklifi; sermayesiz hizmet ve fikrî üreticilerin önündeki bu bariye
 
 ### B. Dürüstlük Notu
 
-Bu Kanun Teklifi, sermayesiz *hizmet* ve *fikir* üreticileri için kurulmuştur; **ticaretin tamamını kapsamaz.** Satın alınıp yeniden satılan mallar, stoklu ticaret, dropshipping ve toptan satış bu teklifin kapsamı dışındadır ve bunlar için ayrı bir düzenleme gerekir. Suistimal riski sıfırlanamaz; teklifteki hükümler bu riski azaltmayı amaçlar. Kalan riskler Ek A.4’te, hesaplanmamış mali etki kalemleri Ek B’de sıralanmıştır. Mali etki modeli (III.E) ilk taslağın Hazine ve SGK dengesini olumsuz etkileyeceğini gösterdiği için Madde 1 (p) ile halen kayıtlı olanlara giriş kapatılmıştır; bundan sonra net etki, modelde ve kapının işlediği varsayımıyla pozitiftir. Sonuç ölçülmemiş girdilere bağlıdır (kırılma noktası %12,6).
+Bu Kanun Teklifi, sermayesiz *hizmet* ve *fikir* üreticileri için kurulmuştur; **ticaretin tamamını kapsamaz.** Satın alınıp yeniden satılan mallar, stoklu ticaret, dropshipping ve toptan satış bu teklifin kapsamı dışındadır ve bunlar için ayrı bir düzenleme gerekir. Suistimal riski sıfırlanamaz; teklifteki hükümler bu riski azaltmayı amaçlar. Kalan riskler Ek A.4’te, hesaplanmamış mali etki kalemleri Ek B’de sıralanmıştır. Mali etki modeli (III.E), halen kayıtlı olanların prim yükümlülüğü kalkarsa Hazine ve SGK dengesinin olumsuz etkileneceğini gösterdiği için Madde 1 (p) ile bu kişilerin giriş hakkı korunmuş, fakat 4/b sigortalılıkları ve primleri sürdürülmüştür; bu şartla net etki modelde pozitiftir ve halen kayıtlı olanların katılım payından bağımsızdır. Sonuç ölçülmemiş girdilere bağlıdır; kötümser senaryoda marj incedir.
 
 ---
 
@@ -104,7 +104,7 @@ Bu Kanun Teklifi, sermayesiz *hizmet* ve *fikir* üreticileri için kurulmuştur
 >
 > **ö)** Küçükler: On altı yaşını doldurmuş ve ayırt etme gücüne sahip küçüklerin bu madde kapsamındaki tescil, münhasır hesap açma ve fatura işlemleri, yasal temsilcilerinin portal üzerinden vereceği elektronik rızayla yapılır. Küçüğün bu faaliyetten elde ettiği kazancın yönetimi ve bundan yararlanma hakkı küçüğe aittir.
 >
-> **p)** Giriş kapısı (halen kayıtlı olanlar): Başvuru tarihinden önceki yirmi dört ay içinde 5510 sayılı Kanunun 4 üncü maddesinin birinci fıkrasının (b) bendi kapsamında sigortalı sayılmış olanlar veya ticarî kazanç ya da serbest meslek kazancı yönünden gelir vergisi mükellefi (gerçek veya basit usulde) olmuş olanlar, (h) bendi uyarınca yeniden tescil edenler hariç olmak üzere bu istisnadan yararlanamaz. Bu fıkra, bu maddenin yürürlüğünden önce mükellefiyeti veya sigortalılığı bulunanlara da uygulanır; bunlar, sigortalılık ve mükellefiyetlerinin sona ermesinden sonra yirmi dört ay geçince başvurabilirler.
+> **p)** Sigortalılığın sürekliliği (halen kayıtlı olanlar): Başvuru tarihinden önceki yirmi dört ay içinde en az bir gün 5510 sayılı Kanunun 4 üncü maddesinin birinci fıkrasının (b) bendi kapsamında sigortalı sayılmış olanlar da bu maddeden yararlanabilir; ancak bunların söz konusu sigortalılığı ve buna bağlı prim yükümlülüğü, bu madde kapsamında tescil edilmeleri sebebiyle sona ermez, ertelenmez, azaltılmaz veya silinmez ve 5510 sayılı Kanunun 6 ncı maddesinin birinci fıkrasına eklenen (o) bendi bunlara uygulanmaz. Sigortalılığın sona ermesi 5510 sayılı Kanunun genel hükümlerine tabidir; sona eren sigortalılık, bu fıkranın yirmi dört aylık geriye bakışı bakımından sona erme tarihinden itibaren yirmi dört ay geçinceye kadar sayılır. Aynı dönemde mükerrer sigortalılık süreleri çakışma kuralıyla yalnız bir defa sayıldığından, bu kişilere 5510 sayılı Kanunun Ek 25 inci maddesindeki prim desteği ayrıca verilmez. Bu fıkra, bu maddenin yürürlüğünden önce sigortalılığı bulunanlara da uygulanır.
 >
 > **r)** Geri akış karinesi: Mükellefin münhasır hesabından, bir hizmet bedelini ödeyen alıcıya, alıcının ortak veya yöneticilerine ya da bunların ikinci dereceye kadar kan ve sıhrî hısımlarına veya bunların kontrolündeki hesaplara, ödeme tarihinden itibaren doksan gün içinde yapılan ve toplamı o ödemenin yüzde ellisini aşan transferler, hizmetin gerçekte ifa edilmediğine ilişkin aksi ispat edilebilir karine oluşturur. Bu hâlde banka veya ödeme kuruluşu transferi portala bildirir; ilgili faturaya ilişkin gider indirimi, aksi ispat edilene kadar askıya alınır; ispat edilemezse alıcının gider indirimi reddedilir. 213 sayılı Kanunun 359 uncu maddesi saklıdır. Mükellef ile alıcı arasındaki gerçek bir iade, iptal veya fesih sebebiyle yapılan geri ödemelere ve (b) bendindeki iade hükümlerine bu karine uygulanmaz.
 >
@@ -138,7 +138,7 @@ Bu Kanun Teklifi, sermayesiz *hizmet* ve *fikir* üreticileri için kurulmuştur
 
 **MADDE 5-** 31/5/2006 tarihli ve 5510 sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu’nun 6 ncı maddesinin birinci fıkrasına aşağıdaki bent, aynı maddeye aşağıdaki fıkralar eklenmiştir:
 
-> "o) 193 sayılı Gelir Vergisi Kanunu’nun mükerrer 20/E maddesi kapsamında “Mikro Mükellefiyet” tescili bulunan ve takvim yılı gayrisafi hasılatı yasal tavanı aşmayanlar, bu faaliyetleri sebebiyle 4 üncü maddenin birinci fıkrasının (b) bendi kapsamında sigortalı sayılmazlar ve adlarına prim tahakkuku yapılmaz. Bu kişilerin öğrencilikleri yahut anne veya babaları üzerinden hak sahibi sıfatıyla yararlandıkları genel sağlık sigortalılığı hakları kesintiye uğratılamaz; hak sahipliği bulunmayanlar ise 60 ıncı maddenin birinci fıkrasının (g) bendi uyarınca belirlenen genel sağlık sigortası primini ödeyerek sağlık güvencesinden yararlanır. Bu mükelleflerin talep etmeleri halinde 50 nci madde hükümlerine göre isteğe bağlı sigortalı olma hakları saklıdır."
+> "o) 193 sayılı Gelir Vergisi Kanunu’nun mükerrer 20/E maddesi kapsamında “Mikro Mükellefiyet” tescili bulunan ve takvim yılı gayrisafi hasılatı yasal tavanı aşmayanlar, bu faaliyetleri sebebiyle 4 üncü maddenin birinci fıkrasının (b) bendi kapsamında sigortalı sayılmazlar ve adlarına prim tahakkuku yapılmaz. Bu kişilerin öğrencilikleri yahut anne veya babaları üzerinden hak sahibi sıfatıyla yararlandıkları genel sağlık sigortalılığı hakları kesintiye uğratılamaz; hak sahipliği bulunmayanlar ise 60 ıncı maddenin birinci fıkrasının (g) bendi uyarınca belirlenen genel sağlık sigortası primini ödeyerek sağlık güvencesinden yararlanır. Bu mükelleflerin talep etmeleri halinde 50 nci madde hükümlerine göre isteğe bağlı sigortalı olma hakları saklıdır. Bu bent, 193 sayılı Kanunun mükerrer 20/E maddesinin (p) bendi kapsamındaki kişilere uygulanmaz."
 
 > "193 sayılı Gelir Vergisi Kanunu’nun mükerrer 20/E maddesi kapsamındaki tescil ve faaliyetler; mükellefe diğer mevzuat tatbikatında tacir, esnaf veya serbest meslek erbabı sıfatı kazandırmaz; ticari işletme veya serbest meslek faaliyeti sayılmaz. Bu durum, mükellefin dernek ve kooperatif kurma, bu kuruluşlara üye olma ve mesleki örgütlere ihtiyarî üye olma hakkını ortadan kaldırmaz. Mikro mükelleflerin karşılıklı yardımlaşma amacıyla kurdukları dernek veya kooperatiften hastalık, kaza, zarar ve ölüm hâllerinde aldıkları yardımlar hasılat sayılmaz, tevkifata tabi tutulmaz ve sosyal destekleri kesmeye dayanak yapılamaz.
 
@@ -227,7 +227,7 @@ Bu bölümde atıf yapılan her kanun hükmünün **tam metni, madde, fıkra ve 
 | (ö) küçükler | On altı yaşını doldurmuş ayırt etme gücüne sahip küçüğün işlem yapabilmesi | TMK m.11 (erginlik 18), m.13 (ayırt etme gücü), m.16 (yasal temsilcinin rızası), m.359 (kişisel kazancın yönetimi çocuğa aittir) [M] | — | — |
 | (r) geri akış karinesi | Naylon faturada alıcıya para geri dönüşünü (cash-back) yakalamak | Teklifin tercihi [H]; 213 m.359 saklı [M]. Eşik: ödemenin %50'si, 90 gün [H] | Tersine akış alıcıya veya ilişkili kişilere ise karine; gerçek iade/iptal/fesih hariç | Üçüncü kişi hesapları üzerinden dolaylı geri dönüş; yanlış pozitif |
 | (s) kimlik ve hesap tekliği | Kimlik veya hesap kiralamayı ve çoklu hesapla eşik altı bölmeyi caydırmak | Teklifin tercihi [H]; 5549 saklı [M] | Bir kişi: bir tescil, bir hesap; ihlalde tescil iptali ve üç yıl yasak | Kimliğini kiraya verenin tespiti zor |
-| (p) giriş kapısı | Halen vergi ve prim ödeyen kişilerin rejime geçerek ödemelerini azaltmasını (yutulma) önlemek; rejimi kayıt dışından kayda geçişe ayırmak | 5510 m.4/1-(b) [M]; teklifin tercihi [H]. Model: kırılma noktası s* = %12,6; kapı s'yi yaklaşık %5'e çekerse net etki pozitiftir (III.E) | 24 aylık bekleme; (h) ile dönenler hariç | Halen kayıtlı esnafın girememesi (eşitlik itirazı); kapıyı aşmak için mükellefiyeti kapatıp beklemek; kapının sızıntısı (s) ölçülmemiştir |
+| (p) sigortalılığın sürekliliği | Halen kayıtlı olanları dışlamadan (eşitlik), yutulmanın baskın kalemi olan 4/b prim kaybını önlemek | 5510 m.4/1-(b), m.6/1-(o), Ek 25 çakışma kuralı [M]; teklifin tercihi [H]. Model: prim sürerse net etki katılım payından bağımsız pozitiftir; herkes geçse bile Orta +1,08 milyar TL (III.E) | Giriş serbest; prim yükümlülüğü sürer; son 24 ayda 4/b olmuş olanlar dâhil (kapatıp yeniden açmayı önlemek için) | Eski–yeni asimetrisi (eski primini öder, yeni ödemez); eski mükellefin vergisi artabilir; sigortalılığın sona erdirilmesi yolları; aile bireyi adına tescil; kötümserde marj ince |
 
 ### B. Madde 2: VUK Ek Madde 19
 
@@ -275,7 +275,7 @@ Mikro mükellefiyet tescili tek başına fesih sebebi olamaz; işveren fesih hak
 
 ### M. Geçici maddeler, yürürlük, yürütme
 
-**Geçmişe matuf af maddesi bilerek yazılmamıştır**: eşitlik sorunu doğurur ve VUK m.370-371 (izaha davet, pişmanlık) genel hükümleri zaten vardır [M]. **Halen kayıtlı mükelleflere geçiş hakkı tanınmamıştır** (Madde 1 (p)): model, geçişin yutulma yoluyla net etkiyi olumsuz yaptığını göstermiştir (III.E). Geçici Madde 1: entegrasyon süresince (en çok altı ay) sistem tevkifatı kesemezse mükellefe sorumluluk yüklenmez. Madde 13 ve 14: yayımı izleyen ayın başı yürürlük, Cumhurbaşkanı yürütme.
+**Geçmişe matuf af maddesi bilerek yazılmamıştır**: eşitlik sorunu doğurur ve VUK m.370-371 (izaha davet, pişmanlık) genel hükümleri zaten vardır [M]. **Halen kayıtlı mükelleflere giriş hakkı tanınmıştır, fakat 4/b sigortalılıkları ve prim yükümlülükleri sürer** (Madde 1 (p)): model, prim kaybı olmadığında yutulmanın net etkiyi bozmadığını göstermiştir (III.E). Geçici Madde 1: entegrasyon süresince (en çok altı ay) sistem tevkifatı kesemezse mükellefe sorumluluk yüklenmez. Madde 13 ve 14: yayımı izleyen ayın başı yürürlük, Cumhurbaşkanı yürütme.
 
 ---
 
@@ -378,38 +378,36 @@ Prim oranı mevzuat metninden okundu: 5510 m.81 malullük, yaşlılık ve ölüm
 | 250.000 | 1.73 | 5.20 | 11.50 |
 | 500.000 | 3.47 | 10.40 | 23.00 |
 
-**D.4 Yutulma (kanibalizasyon) riski.** Halen kayıtlı olup bu rejime geçen bir serbest çalışan, mevcut ödemelerini bırakır. Yalnız Bağ-Kur asgari primi yılda 12 × 11.808,23 = 141.699 TL’dir ve tevkifat bunun çok altındadır. Toplam net katkı: $N \cdot [(1-s)\, n_{yeni} + s\,(n_{yeni} - c_{eski})]$; burada $s$ yutulan (halen kayıtlı) kişilerin payı, $c_{eski}$ bu kişilerin mevcut vergi ve prim ödemesidir. $s$ ve $c_{eski}$ ölçülmeden teklifin devlete net katkısı **kesin pozitif diye ilan edilemez**; teklif Madde 1 (p) ile halen kayıtlı olanların girişini yirmi dört ay kapatarak $s$'yi küçültmeyi hedefler, bu hedefin tutup tutmadığı ölçülmelidir (III.E).
+**D.4 Yutulma (kanibalizasyon) riski.** Halen kayıtlı olup bu rejime geçen bir serbest çalışan, mevcut vergisi yerine tevkifat öder; bu kişinin 4/b primi (asgari 12 × 11.808,23 = 141.699 TL/yıl) kalkarsa kayıp çok büyüktür. Toplam net katkı: $N \cdot [(1-s)\, n_{yeni} + s\,(n_{yeni} - c_{eski})]$; burada $s$ halen kayıtlı olup geçenlerin payı, $c_{eski}$ bu kişilerin kaybedilen ödemesidir. Modelde baskın kalem vergi değil prim çıkmıştır; bu yüzden teklif Madde 1 (p) ile bu kişilerin **prim yükümlülüğünü sürdürür**: bu durumda $c_{eski}$ yalnız vergi farkıdır ve net katkı $s$'ye karşı dayanıklı kalır (III.E). Bu dayanıklılık, prim sürekliliğinin hukuken sağlam kurulduğu varsayımına bağlıdır.
 
 **D.5 5018 sayılı Kanun m.14.** Bu madde, Anayasa Mahkemesinin 7/12/2023 tarihli ve E.2018/117, K.2023/212 sayılı kararıyla iptal edilmiştir (mevzuat.gov.tr metninde “İptal Madde” olarak görünür). Bu sebeple teklif, yasal bir üç yıllık mali yük veya yirmi yıllık aktüeryal hesap şartına dayandırılmamıştır. Buna rağmen mali etki ve Madde 9 için aktüeryal hesap yapılmamış olması bir eksikliktir ve Ek B'de sayılmıştır.
 
 ### E. Kapsamlı Mali Etki Modeli (özet; ayrıntı MALI_MODEL/ klasöründe)
 
-Model; hasılat dağılımı (log-normal, 0,1-24 asgari ücret), kademeli tevkifat (Madde 1 (e)), BES ve Devlet katkısı, 90 günlük prim hibesi, donanım KDV mahsubu, **yutulma** (halen kayıtlı mükellef ve sigortalıların ve ücretlilerin ek gelirinin bu rejime kayması), sahte fatura sızıntısı, KGF, PTT, BT ve itiraz giderlerini 5 yıllık ramp ile birleştirir. **Girdilerin çoğu ölçülmemiş varsayımdır**; her girdinin durumu `MALI_MODEL/MALI_MODEL.md` ve `MIKRO_MUKELLEF_MALI_MODEL.xlsx` (Girdiler sayfası) içinde yazılıdır. Excel formülleri Python modeliyle bağımsız bir hesaplayıcıda karşılaştırılmış, göreli fark 10⁻¹⁵ mertebesinde çıkmıştır.
+Model; hasılat dağılımı (log-normal, 0,1-24 asgari ücret), kademeli tevkifat (Madde 1 (e)), BES ve Devlet katkısı, 90 günlük prim hibesi, donanım KDV mahsubu, **yutulma** (halen kayıtlı mükellef ve sigortalıların ve ücretlilerin ek gelirinin bu rejime kayması), sahte fatura sızıntısı, KGF, PTT, BT ve itiraz giderlerini 5 yıllık ramp ile birleştirir. **Girdilerin çoğu ölçülmemiş varsayımdır**; her girdinin durumu `MALI_MODEL/MALI_MODEL.md` ve `MIKRO_MUKELLEF_MALI_MODEL.xlsx` (Girdiler sayfası) içinde yazılıdır.
 
-**Tasarım kararı.** Modelin ilk sürümü, halen vergi ve prim ödeyen kişilerin rejime geçmesi (yutulma) yüzünden net etkiyi olumsuz buldu (Orta senaryo −5,6 milyar TL). Bu yüzden Madde 1 (p) yeniden yazıldı: başvurudan önceki yirmi dört ayda 4/b sigortalısı veya gelir vergisi mükellefi olanlar rejime giremez ve eski taslaktaki statü geçişi hükmü (Geçici Madde 1) kaldırıldı. Aşağıdaki sonuçlar bu kapıyla hesaplanmıştır; $s$ artık **kapının sızıntı payıdır** (kapıdan geçen halen kayıtlı kişi oranı).
+**Tasarım kararı.** Modelin ilk sürümü, halen kayıtlı olanlar prim ödemesini bırakarak girebildiğinde net etkiyi olumsuz buldu (Orta −5,6 milyar TL). İlk çare, bu kişilere yirmi dört ay giriş kapısı koymaktı; kapı dürüst esnafı dışladığı ve eşitliğe aykırı göründüğü için bırakıldı. Seçilen çare **sigortalılığın sürekliliği**dir (Madde 1 (p)): halen kayıtlı olanlar girebilir, 4/b sigortalılıkları ve prim yükümlülükleri sürer. Aşağıdaki sonuçlar bununla hesaplanmıştır; $s$ artık halen kayıtlı olup rejime geçenlerin payıdır ve model ona karşı dayanıklıdır.
 
 | 4. yıl (kararlı durum), milyar TL | Kötümser | Orta | İyimser |
 | :-- | :-- | :-- | :-- |
 | Katılımcı (kişi) | 150.000 | 350.000 | 700.000 |
-| Kapı sızıntısı (s) | %8 | %5 | %2 |
+| Halen kayıtlı olup geçenlerin payı (s) | %30 | %15 | %5 |
 | Brüt tevkifat | 2,93 | 8,18 | 18,74 |
 | BES ve Devlet katkısı | −0,08 | −0,19 | −0,34 |
-| 90 gün prim hibesi | −0,15 | −0,36 | −0,53 |
+| 90 gün prim hibesi (model tüm uygun kişilere uygular; eskiler çakışma kuralıyla düşer, yani yukarı yönlü) | −0,15 | −0,36 | −0,53 |
 | Donanım KDV mahsubu | −0,32 | −0,63 | −0,97 |
-| Yutulma: vergi | −0,60 | −1,26 | −1,91 |
-| Yutulma: SGK primi | −1,36 | −1,98 | −1,59 |
+| Yutulma: vergi (4/b primi sürdüğü için prim kaybı 0) | −1,05 | −1,82 | −2,30 |
 | Sahte fatura, KGF, BT, itiraz, denetim | −0,24 | −0,32 | −0,42 |
-| **Net (genel devlet: Hazine + SGK)** | **+0,17** | **+3,44** | **+12,98** |
-| Net, yalnız vergi tarafı (SGK primi hariç) | +1,53 | +5,42 | +14,57 |
-| 5 yıllık bugünkü değer (reel %5) | +0,21 | +10,13 | +39,08 |
+| **Net (genel devlet: Hazine + SGK)** | **+1,08** | **+4,86** | **+14,19** |
+| 5 yıllık bugünkü değer (reel %5) | +2,99 | +14,45 | +42,73 |
 
 **Sonuçlar (hepsi varsayıma bağlıdır):**
-1. **Net etki, kapının işlediği varsayımıyla üç senaryoda da pozitiftir; kötümser senaryoda marj incedir (+0,17 milyar TL).** İşaret, kapı sızıntısına $s$ bağlıdır: net sıfır olan kırılma noktası $s^* = \%12{,}6$. Sızıntı %10'da Orta net +1,2; %20'de −3,4 milyar TL'dir. $s$ ölçülmemiştir; kapı e-Devlet ve SGK kayıtlarıyla başvuru anında otomatik denetlenebildiği için küçük kalacağı varsayılmıştır, bu bir varsayımdır.
-2. 4000 denemelik Monte Carlo'da ($s$ ortalaması %5 varsayımıyla) 4. yıl netinin medyanı +3,7 milyar TL, %90 aralığı +0,4 ile +10,8 milyar TL, net > 0 olasılığı %97'dir. Bu olasılık, **kapının işlemesi varsayımına koşulludur**; öngörü değildir.
-3. En duyarlı girdiler: $s$, katılımcı sayısı N, medyan hasılat. Sahte fatura, KGF ve idarî giderler küçüktür.
-4. **Varyantlar (Orta, 4. yıl net):** kapı yokken (eski taslak) −5,6; kapı varken +3,4; götürü gider %25 olursa +4,1; kademeli oran (e) olmasaydı +2,9 (kademeli oran +0,6 milyar TL katkı yapar); 90 gün prim hibesi olmasaydı +3,8; donanım KDV mahsubu olmasaydı +4,1.
-5. **Bedel:** halen kayıtlı esnaf rejime giremez; yirmi dört ay bekleyerek girebilir. Eşitlik ve haksız rekabet itirazı doğabilir (Ek A, D8).
-6. Ölçülmemiş ve modele girmeyenler: kayıt dışılığın kayda geçmesinin ikinci tur etkileri (tüketim ve diğer vergiler), tasarruf ve emeklilik hakkı kazanımı, yanlış pozitif denetim maliyeti, vergi anlaşmaları, kapı etrafında dolaşma (aile bireyi adına tescil gibi).
+1. **Net etki üç senaryoda da pozitiftir ve $s$'ye karşı dayanıklıdır:** halen kayıtlı herkes geçse ($s$=%100) Orta +1,08, Kötümser +0,11, İyimser +3,71 milyar TL; kırılma noktası yoktur. Kötümser senaryoda marj ince (+0,11 ile +1,08).
+2. 4000 denemelik Monte Carlo'da ($s$ ortalama %25, geniş aralık) 4. yıl netinin medyanı +4,2, %90 aralığı +1,4 ile +11,3 milyar TL, net > 0 olasılığı %99,9'dur. Bu olasılık, **prim sürekliliğinin hukuken tuttuğu ve diğer girdi dağılımlarının doğru olduğu varsayımına koşulludur**; öngörü değildir.
+3. En duyarlı girdiler: katılımcı sayısı N (Orta için −2,8 ile +4,9), medyan hasılat (−1,8 ile +2,0). Prim ödeme oranı artık sonucu etkilemez (prim sürüyor).
+4. **Varyantlar (Orta, 4. yıl net):** seçilen +4,86; prim sürekliliği olmasaydı −1,09; önceki karar (24 ay kapı, s=%5) +3,44; harici düz %15 (%5 prim payı, hibe yok, kapısız) +1,82; kademeli oran (e) olmasaydı +4,29; 90 gün prim hibesi olmasaydı +5,22; donanım KDV mahsubu olmasaydı +5,49; götürü gider %25 olsaydı +5,52.
+5. **Bedel:** eski ve yeni arasında prim asimetrisi vardır (halen kayıtlı olan primini öder, yeni giren ödemez); halen kayıtlı olanın vergisi artabilir (tevkifat, eski rejimdeki vergiden yüksek çıkabilir), bu yüzden geçişin cazibesi sınırlıdır. Yirmi dört aylık geriye bakış, mükellefiyeti kapatıp yeniden açarak primden kurtulmayı önlemek içindir.
+6. Ölçülmemiş ve modele girmeyenler: kayıt dışılığın kayda geçmesinin ikinci tur etkileri, emeklilik hakkı kazanımı, yanlış pozitif denetim maliyeti, vergi anlaşmaları, aile bireyi adına tescil ve benzeri dolaşma yolları, prim sürekliliği için gereken SGK sistem değişikliği maliyeti.
 
 ---
 
@@ -441,7 +439,7 @@ Bu ek, Meclis’e sunulacak metnin hangi riske hangi hükümle cevap verdiğini 
 | D5 | Algoritma hatası | İnsan gözden geçirmesi, otuz gün itiraz, hakem heyeti | M.10 | Heyetin bağımsızlığı. |
 | D6 | Veri sızıntısı | Takma adlaştırma, yerli veri merkezi | M.11 | Siber saldırı sıfırlanamaz. |
 | D7 | Sosyal güvenlik çöküşü | BES katkısı ve kısmî prim günü | M.9 | Mali etki hesaplanmadı. |
-| D8 | Halen kayıtlı esnafın rejime girememesi | 24 ay bekleyerek girebilir | M.1 (p) | Eşitlik ve haksız rekabet itirazı; kapıyı aşmak için mükellefiyeti kapatıp beklemek. |
+| D8 | Halen kayıtlı olanın primden kurtulmak için girmesi (yutulma) | Giriş serbest; 4/b sigortalılığı ve primi sürer; son 24 ayda 4/b olmuşlar dâhil | M.1 (p), M.5 (o) | Eski–yeni prim asimetrisi; sigortalılığı sona erdirme yolları; aile bireyi adına tescil. |
 
 ### A.3 Diğer Taraflar İçin
 
@@ -475,7 +473,7 @@ Bu ek, Meclis’e sunulacak metnin hangi riske hangi hükümle cevap verdiğini 
 | K11 | Referans kodu belirtilmeyen girişlerde mükellefin bildirimi görmemesi hâlinde kırk sekiz saat sonunda giriş hizmet bedeli sayılıp tevkifat kesilir. | Fazla kesinti (k) bendi uyarınca ertesi ay iade edilir; bildirimin ulaşması için portal, UETS ve kayıtlı iletişim araçları kullanılır; bildirim başarısızlık oranı ölçülmemiştir. |
 | K12 | Platformdan satan mükellefte 94/19 %1 kesintisi ile bu maddenin %10,5'i arasındaki farktan doğan arbitraj (Madde 1 (l)). | Belgeli mükellefte 94/19 kesilmez, belgesizde mahsup edilir; platformların belge ibraz kanalını kurması ve Hazine etkisi ölçülmemiştir. |
 | K13 | PTT'nin UETS tahsis yükü (Madde 2 (a)). | PTT maliyeti ve kapasitesi ölçülmemiştir; PTT görüşü alınmamıştır. |
-| K14 | Yutulma: halen kayıtlı mükelleflerin bu rejime geçerek ödediği vergi ve primi azaltması, kapının (Madde 1 (p)) sızıntısı. | III.E modeli: s* = %12,6; s %5 iken Orta net +3,4 milyar TL, s %20 iken −3,4. s ölçülmemiştir; kapı e-Devlet/SGK kayıtlarıyla başvuruda otomatik denetlenir. |
+| K14 | Yutulma: halen kayıtlı mükelleflerin bu rejime geçerek vergi ve prim ödemesini azaltması (Madde 1 (p)). | Prim yükümlülüğü sürdüğü için yutulma yalnız vergi farkıdır; III.E: herkes geçse bile Orta +1,08, Kötümser +0,11 milyar TL. Sigortalılığı sona erdirme yolları, aile bireyi adına tescil ve SGK sistem uyarlama maliyeti ölçülmemiştir. |
 | K15 | Geri akış karinesinin (Madde 1 (r)) yanlış pozitifi ve üçüncü kişi hesabı üzerinden dolaylı geri dönüş. | Karine aksi ispat edilebilir; gerçek iade, iptal ve fesih hariç; oranlar (%50, 90 gün) ölçülmemiştir. |
 | K16 | Kimlik veya hesap kiralamanın tespiti (Madde 1 (s)). | Tescil iptali ve üç yıl yasak caydırıcıdır; fiilî tespit için banka ve portal verisi gerekir, ölçülmemiştir. |
 

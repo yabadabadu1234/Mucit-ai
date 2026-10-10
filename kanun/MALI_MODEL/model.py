@@ -11,15 +11,15 @@ def tarife(S):
 def tevkifat(H,gider=0.30): return tarife((1-gider)*np.asarray(H,dtype=float))
 BAZ=dict(medyan_W=5.0,sigma=0.9,gider=0.30,bes=0.03,devlet_katki=0.20,bes_vazgecme=0.35,
  myo_oran=0.21,myo_gun_ay=3,myo_uygun=0.35,kdv_donanim_pay=0.4,kdv_donanim_kdv=5000.0,kdv_mahsup_tavan=0.5,
- n_toplam=350000,s_kayitli=0.05,u_ucretli=0.20,marj=0.5,prim_eski=141699.0,prim_odeme=0.8,r_marj_ucretli=0.27,uyum_ucretli=0.5,
+ n_toplam=350000,s_kayitli=0.15,u_ucretli=0.20,marj=0.5,prim_eski=141699.0,prim_odeme=0.8,r_marj_ucretli=0.27,uyum_ucretli=0.5,
  kurumsal_pay=0.70,kv=0.25,phi=0.01,onlem=0.5,
  kgf_alim=0.05,kgf_temerrut=0.10,kgf_kurtarma=0.30,kgf_pay=0.5,
- prim_devam=0.0,duz_oran=None,ptt_birim=50.0,ptt_pay=0.8,bt_tek=250e6,bt_yillik=50e6,itiraz_oran=0.04,itiraz_maliyet=2000.0,denetim=0.01,
+ prim_devam=1.0,duz_oran=None,ptt_birim=50.0,ptt_pay=0.8,bt_tek=250e6,bt_yillik=50e6,itiraz_oran=0.04,itiraz_maliyet=2000.0,denetim=0.01,
  ramp=[0.25,0.55,0.8,1.0,1.0],iskonto=0.05)
 SENARYO={
- "Kötümser":dict(medyan_W=4.0,n_toplam=150000,s_kayitli=0.08,u_ucretli=0.25,phi=0.02,onlem=0.3,myo_uygun=0.5,bes_vazgecme=0.2,kgf_alim=0.08,kgf_temerrut=0.15,kdv_donanim_pay=0.5),
+ "Kötümser":dict(medyan_W=4.0,n_toplam=150000,s_kayitli=0.30,u_ucretli=0.25,phi=0.02,onlem=0.3,myo_uygun=0.5,bes_vazgecme=0.2,kgf_alim=0.08,kgf_temerrut=0.15,kdv_donanim_pay=0.5),
  "Orta":dict(),
- "İyimser":dict(medyan_W=6.0,n_toplam=700000,s_kayitli=0.02,u_ucretli=0.15,phi=0.005,onlem=0.7,myo_uygun=0.2,bes_vazgecme=0.5,kgf_alim=0.03,kgf_temerrut=0.06,kdv_donanim_pay=0.3)}
+ "İyimser":dict(medyan_W=6.0,n_toplam=700000,s_kayitli=0.05,u_ucretli=0.15,phi=0.005,onlem=0.7,myo_uygun=0.2,bes_vazgecme=0.5,kgf_alim=0.03,kgf_temerrut=0.06,kdv_donanim_pay=0.3)}
 def agirliklar(p,k=60):
     lo,hi=0.1*W,TAVAN
     edges=np.geomspace(lo,hi,k+1); mid=np.sqrt(edges[:-1]*edges[1:])

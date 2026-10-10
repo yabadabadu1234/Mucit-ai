@@ -15,7 +15,8 @@ satir=[('Brüt asgari ücret (TL/ay)','W',33030,33030,33030,'Birden çok kaynakt
 ('Medyan yıllık hasılat (asgari ücret katı)','medyan_W',4.0,5.0,6.0,'Varsayım'),
 ('Hasılat dağılımı yayılımı (σ, log-normal)','sigma',0.9,0.9,0.9,'Varsayım'),
 ('Katılımcı sayısı (kararlı durum, kişi)','n_toplam',150000,350000,700000,'Varsayım; veri talebi: GİB, SGK'),
-('Giriş kapısına rağmen halen kayıtlı payı (s, kapı sızıntısı)','s_kayitli',0.08,0.05,0.02,'Varsayım; en duyarlı girdi; kırılma %12,6'),
+('Halen kayıtlı olup rejime geçenlerin payı (s)','s_kayitli',0.30,0.15,0.05,'Varsayım; prim sürdüğü için sonucu az etkiler'),
+('Halen kayıtlı olanın 4/b primine devamı (1 = prim sürer)','prim_devam',1,1,1,'Teklif Madde 1 (p)'),
 ('Ücretli ek gelir payı (u)','u_ucretli',0.25,0.20,0.15,'Varsayım'),
 ('Götürü gider oranı','gider',0.30,0.30,0.30,'Teklif Madde 1 (a)'),
 ('BES aktarım oranı (tevkifatın)','bes',0.03,0.03,0.03,'Teklif Madde 9'),
@@ -82,7 +83,7 @@ for i in range(K):
     d.cell(row=r,column=10,value=f"=IF(D{r}>=12*{W_},{ADR['myo_uygun']}*{ADR['myo_gun_ay']}*{W_}*{ADR['myo_oran']},0)")
     d.cell(row=r,column=11,value=f"={ADR['kdv_donanim_pay']}*MIN({ADR['kdv_mahsup_tavan']}*G{r},{ADR['kdv_donanim_kdv']})")
     d.cell(row=r,column=12,value=f"=SUMPRODUCT(({ADR['marj']}*D{r}>{alt})*({ADR['marj']}*D{r}-{alt})*{dl})")
-    d.cell(row=r,column=13,value=f"={ADR['prim_odeme']}*{ADR['prim_eski']}")
+    d.cell(row=r,column=13,value=f"={ADR['prim_odeme']}*{ADR['prim_eski']}*(1-{ADR['prim_devam']})")
     d.cell(row=r,column=14,value=f"={ADR['uyum_ucretli']}*{ADR['r_marj_ucretli']}*{ADR['marj']}*D{r}")
 last=1+K
 # --- Sonuç
@@ -98,7 +99,7 @@ SR=[('Ort. hasılat (TL)',f"={E('D')}"),('Ort. tevkifat (TL)',f"={E('G')}"),('Et
 ('NET HAZİNE ETKİSİ (TL/yıl)',"=B6-B7-B8-B9-B10-B11-B12-B13-B14-B15-B16"),('Net (milyar TL)',"=B17/1000000000")]
 for i,(a,f) in enumerate(SR): s.cell(row=2+i,column=1,value=a); s.cell(row=2+i,column=2,value=f)
 s['A17'].font=b; s['B17'].font=b; s.column_dimensions['A'].width=62; s.column_dimensions['B'].width=22
-s['A21']='Not: kırılma noktası s* (net=0 için yutulma payı) Python modelinde ikili aramayla hesaplanmıştır (Senaryolar_Python sayfası).'
+s['A21']='Not: prim sürekliliği (prim_devam=1) ile kırılma noktası yoktur; s=1 için Python varyantı Senaryolar_Python sayfasındadır.'
 # --- Python sonuçları (statik)
 p=wb.create_sheet('Senaryolar_Python'); p['A1']='Python modeli çıktıları (statik değerler; model.py ve analiz.py ile üretilir)'; p['A1'].font=b
 r=3
@@ -107,7 +108,7 @@ for ad in ['Kötümser','Orta','İyimser']:
     r+=1; p.cell(row=r,column=1,value=ad); p.cell(row=r,column=2,value=S['senaryo'][ad]['yil4']['net']/1e9); p.cell(row=r,column=3,value=S['senaryo'][ad]['npv5']/1e9)
 r+=2; p.cell(row=r,column=1,value='Politika varyantları (Orta, 4. yıl net, mlr TL)').font=b
 for k,v in S['varyant'].items(): r+=1; p.cell(row=r,column=1,value=k); p.cell(row=r,column=2,value=v/1e9)
-r+=2; p.cell(row=r,column=1,value='Kırılma noktası s* (Orta)').font=b; p.cell(row=r,column=2,value=S['s_kirilma'])
+r+=2; p.cell(row=r,column=1,value='Kırılma noktası s* (Orta)').font=b; p.cell(row=r,column=2,value=('yok' if S['s_kirilma'] is None else S['s_kirilma']))
 r+=2; p.cell(row=r,column=1,value='Monte Carlo (4000 deneme), 4. yıl net (mlr TL)').font=b
 for k,v in S['mc']['net_q'].items(): r+=1; p.cell(row=r,column=1,value='P'+k); p.cell(row=r,column=2,value=v/1e9)
 r+=1; p.cell(row=r,column=1,value='P(net>0)'); p.cell(row=r,column=2,value=S['mc']['p_net_pozitif'])

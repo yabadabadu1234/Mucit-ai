@@ -7,7 +7,7 @@
 
 1.1. Bu Tebliğin amacı, mükerrer 20/E maddesi kapsamındaki Mikro Mükellefiyet tescilinin, faturanın, tevkifatın ve ilgili bildirimlerin uygulama usul ve esaslarını açıklamaktır. [T: M.1 son fıkra]
 
-1.2. Kapsam: Türkiye Cumhuriyeti vatandaşı gerçek kişiler; yıllık gayrisafi hasılatı 24 brüt asgari ücreti aşmayan; sermayeden ziyade şahsî mesaiye, bilgiye veya dijital üretime dayanan hizmetler. Yabancı uyruklular kapsam dışıdır. Negatif liste (M.1 (g)) ve son yirmi dört ayda 4/b sigortalısı veya gelir vergisi mükellefi olanlar (M.1 (p)) kapsam dışıdır. [T: M.1 giriş, (g), (p)]
+1.2. Kapsam: Türkiye Cumhuriyeti vatandaşı gerçek kişiler; yıllık gayrisafi hasılatı 24 brüt asgari ücreti aşmayan; sermayeden ziyade şahsî mesaiye, bilgiye veya dijital üretime dayanan hizmetler. Yabancı uyruklular kapsam dışıdır. Negatif liste (M.1 (g)) kapsam dışıdır. Halen veya son yirmi dört ayda 4/b sigortalısı olanlar rejime girebilir; sigortalılıkları ve prim yükümlülükleri sürer (M.1 (p)). [T: M.1 giriş, (g), (p)]
 
 ## 2. TANIMLAR
 
@@ -28,7 +28,7 @@
 
 3.3. On altı yaşını doldurmuş küçüğün tescili yasal temsilcinin portalda vereceği elektronik rızayla yapılır. [T: M.1 (ö)]
 
-3.4. Tescilde aşağıdakiler kontrol edilir: son yirmi dört ayda 4/b sigortalılığı ve gelir vergisi mükellefiyeti bulunmaması (Madde 1 (p); portal SGK ve GİB kayıtlarını otomatik sorgular; (h) ile dönenler hariç); gönüllü sonlandırma bekleme süresinin dolmuş olması. [T: M.1 (h), (p)] [İDARE: SGK ve GİB sorgu entegrasyonu]
+3.4. Tescilde aşağıdakiler kontrol edilir: son yirmi dört ayda 4/b sigortalılığı bulunup bulunmadığı (Madde 1 (p); portal SGK kaydını otomatik sorgular; bulunuyorsa tescil yapılır, sigortalılık ve prim yükümlülüğü kesintisiz sürer ve mükellefe bu durum ekranda bildirilir); gönüllü sonlandırma bekleme süresinin dolmuş olması. [T: M.1 (h), (p)] [İDARE: SGK ve GİB sorgu entegrasyonu]
 
 3.5. Mükellefe karekodlu Mikro Mükellefiyet Belgesi üretilir. Belge, kamu kurumları, finansal kuruluşlar ve kurumsal müşteriler nezdinde mükellefiyet ve muafiyetin ispatıdır. [T: VUK Ek 19 (ç)]
 

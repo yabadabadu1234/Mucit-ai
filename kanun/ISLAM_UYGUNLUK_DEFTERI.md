@@ -218,3 +218,6 @@ II-A bölümü dinî sebep ve delil taşımaz (F 3-I 246). Padişahın “dayand
 
 ## E.17 Giriş kapısı kararı (F 3-I 253)
 Net etki pozitif çıkmadan gönderilmeyeceği padişahça bildirildi. Çare olarak Madde 1 (p) giriş kapısına çevrildi (24 ay). Bedel: halen kayıtlı esnaf giremez. Bu kapı bir dinî hüküm değildir, maslahat tercihidir; ihtilaflı bir kalem açmaz. Kapının dışarıda bıraktığı kesimin eşitlik şikâyeti kalan risk olarak yazılıdır.
+
+## E.18 Giriş kapısı bırakıldı, sigortalılığın sürekliliği seçildi (F 3-I 255)
+24 aylık giriş kapısı (E.17) halen kayıtlı, vergisini ve primini ödeyen esnafı dışladığı için bırakıldı (dışlama bir maslahat bedeliydi; padişah ölçütü adalet). Yerine Madde 1 (p): giriş serbest, 4/b sigortalılığı ve prim yükümlülüğü sürer. İhtilaflı bir fıkhî kalem açmaz: kişi kendi akdi ve kamu yükümlülüğünü sürdürür, yeni bir mal veya borç doğmaz. Kalan eşitlik itirazı (eski primini öder, yeni ödemez) maslahat gereği bedel olarak yazılıdır.
