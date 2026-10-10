@@ -43,3 +43,16 @@ Bu denetim, F 3-I 245 uyarınca yapılmıştır. Denetimi yapan müftî değildi
 
 Madde 1 (b)'deki 6183 m.51 atfı kaldırıldı. Yerine: elektronik teminatın vadede Hazine'ye aktarılması, aksi hâlde gider indirimi hakkının iptali, tevkifat aslının tahsili, VUK m.344 vergi ziyaı cezası (m.344 metninden okundu: ziyaa uğratılan verginin bir katı, yani %100; harici analizdeki "%35" yanlıştı) ve açıkça "gecikme zammı uygulanmaz". Harici analizin önerdiği lafız zam yasağını yazmıyordu; 6183 m.51 genel hüküm olduğu için yazılmasaydı yine işlerdi, eklendi. Kalan ihtilaf: para cezasının (ta'zîr bi'l-mâl) cevazı mezhepler arasında tartışmalıdır (cumhur dar yorumlar); harici analizdeki Ebû Yûsuf, İbn Teymiyye, AAOIFI Standart 8 atıfları yoklanmadı. Mali etki ve teminat zorunluluğunun alıcı tarafındaki maliyeti ölçülmedi. Eski lafız git geçmişindedir (b99d601 ve öncesi).
 
+**E.5 Teşvik edilen müesseseler (F 3-I 247) — 10 Ekim 2026 turu**
+
+Arama: Mecelle'nin txt/Latin tam metni indirilemedi (bulunan PDF'ler yalnız mukaddime veya taranmış sayfa); katılım bankası tarifelerine geçilmedi. **Bulamıyorum:** Mecelle madde numaralarını birincil metinden okuyamadım, bu yüzden hiçbir Mecelle numarası dosyaya yazılmadı. Harici analizin “Mecelle m.998 meslek aletleri hacizden müstesnadır” atfı **doğrulanamadı** (kullanılmadı); ikincil kaynaklar mudârebe için m.1404–1413 aralığını gösteriyor, birincil metin okunmadı.
+
+| Teşvik / mesele | Dayanak (içeride) | Teklife yansıma |
+| :-- | :-- | :-- |
+| Karz-ı hasen ve emanet vergilendirilmez | Faizsiz borç ve emanetin gelir sayılmaması (hadis atfı yoklanmadı; “on sekiz kat” rivayeti zayıf kabul edilir) | Madde 1 (j): faiz içermeyen borç, emanet iadesi, hibe, miras hasılat sayılmaz, tevkifata tabi tutulmaz |
+| Müflisin ekmek teknesi korunur | Meslek aletlerinin haczedilmezliği fıkhî ilke (Mecelle numarası okunamadı) | Madde 6: 2004 sayılı İİK m.82/1-(2) (6352/16 md.; mevzuat PDF'inden okundu: “sermayesinden ziyade bedenî çalışmasına dayanan borçlunun mesleğini sürdürebilmesi için gerekli olan her türlü eşya”) kapsamında olduğu teyit edildi. Harici analizin “(4) numaralı bent” atfı yanlıştı |
+| Şirket-i ebdân (emek ortaklığı) | Sermayesiz sanatkârların emeklerini birleştirmesi | Madde 1 (o): müşterek fatura, pay başına tevkifat ve tavan. Mecelle numarası okunamadı. Risk: Ek A.4 K8 |
+| Mudâraba / müşâreka (kitle fonlaması) | Emek-sermaye ortaklığı | **Eklenmedi.** Pay bazlı kitle fonlaması şirket (anonim) yapısı ister; gerçek kişi mikro mükellef pay çıkaramaz. SPK mevzuatı yoklanmadı. Madde 8'in faizsiz yapısı (katılım esaslı finansman) duruyor |
+| Teâvün/tekâfül sandığı | Mâide 2 | **Eklenmedi.** Aidatın tevkifat matrahından indirilmesi, sabit götürü gider ve nihaî tevkifat yapısıyla çelişir; Kooperatifler Kanunu atfı yoklanmadı. Not: İİK m.82/1-(10) muavenet sandığı/cemiyetinden bağlanan maaşları haczedilemez saymaktadır (mevzuattan okundu) |
+| Madde 1 (b) gecikme zammı | E.2'deki ihtilaflı kayıt | Zam kaldırıldı, E.4'e bakınız: **E.2'den E.1'e taşınmış sayılır** (yaptırım zamana değil fiile bağlanmıştır); para cezasının cevazı ihtilafı E.4'te durur |
+
