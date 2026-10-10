@@ -273,6 +273,24 @@ Bu ek, Meclis’e sunulacak metnin hangi riske hangi hükümle cevap verdiğini 
 
 ---
 
+### A.4 Bu Sürümde Eklenen Riskler
+
+Önceki sürümlerde işlenmemiş olan riskler aşağıdadır. “Hüküm” sütunu, çarenin metinde mevcut olup olmadığını gösterir; “Yeni hüküm gerekli” olanlar metne henüz işlenmemiştir.
+
+| # | Risk | Kimi etkiler | Çare | Hüküm |
+| :-- | :-- | :-- | :-- | :-- |
+| E1 | **Atölye ekipmanı ve depolama.** Gürültüsüz ama alet, malzeme ve stok depolayan üretim, fiziki alan ihtiyacı doğurur; muafiyet bu yükü çözmez. | Genç üretici | Muafiyet yalnız çevresel etkiye bakar; depolama ve alet için ayrı bir ölçüt konmamıştır. | Kısmi: M.2 (d). **Kalan risk: alan ihtiyacı kanunla çözülmemiştir.** |
+| E2 | **Alıcının iflası veya ödememesi.** Fatura kesilmiş, bedel tahsil edilmemiştir. | Genç | Tahsil edilmeyen faturada tevkifat borcu doğmaz (M.1 b). **Tahsil edildikten sonra iade veya iflas tasfiyesinde tevkifatın mahsubu düzenlenmemiştir.** | **Yeni hüküm gerekli:** “Tevkif edilmiş ve sonradan iade edilen veya iflas tasfiyesinde geri alınan bedel için tevkifat, sonraki ayın tevkifatından mahsup edilir.” |
+| E3 | **Kurum değişikliği ve mahkumiyet.** Gençler belirli bankalara veya ödeme kuruluşlarına bağlı kalabilir. | Genç | Binde iki tavan (M.7) ve hesap açma yükümlülüğü (M.6) kısmen çözer; **kurum değiştirme hakkı açıkça düzenlenmemiştir.** | **Yeni hüküm gerekli:** Mükellefin münhasır hesabını başka bir kuruma taşıma hakkı ve taşıma süresinin tanımı. |
+| E4 | **KDV mükellefi alıcıda kayıp (düzeltme).** Önceki sürümde “KDV kaybı yaratmaz” denmişti. Bu yalnız alıcı KDV indirimi yapabiliyorsa geçerlidir: indirim yapılabiliyorsa mal veya hizmet bedeli üzerinden KDV net olarak nötrdür; indirim yapılamıyorsa (alıcı muaf veya mükellef değilse) yüksek KDV’li hizmet düşük sınıfta faturalanarak Devletin KDV geliri kaybolur. | Hazine | M.3 faturada “hizmetin mahiyetinin ayırt edici biçimde belirtilmesini” zorunlu kılar. **Mahiyet beyanı, KDV oranının doğru uygulandığını denetlemez.** | Kısmi: M.3. **Yeni hüküm gerekli:** Alıcı KDV indirimi yapamıyorsa mahiyet uyuşmazlığında KDV oranına ilişkin genel hükümlerin uygulanması. |
+| E5 | **Yapay zekâ denetiminde yanılma oranı.** Yanlış pozitif masum gençleri, yanlış negatif sahtekârları kaçırır. | Genç ve Devlet | M.10: algoritma yalnız işaretler; ceza insan gözden geçirmesinden sonra. **Yanılma oranı ölçülmemiştir.** | Kısmi: M.10. **Yanılma oranının yıllık yayımlanması için hüküm gerekli.** |
+| E6 | **Uluslararası vergi düzenlemeleri (BEPS 2.0, küresel asgari vergi).** Tek taraflı tevkifat, çifte vergilendirme anlaşmalarında kaynakta vergilendirme tartışmasına ve karşı ülkenin misillemesine yol açabilir. | Hazine, yabancı alıcılar | Ek öneri olarak: yabancı alıcıdan değil, Türkiye’deki mükellefin kendi hasılatından tevkifat alınır. **Hukuki inceleme yapılmamıştır.** | Yok. **Hukuki inceleme gerekli.** |
+| E7 | **Yargı yolunun süresi.** Harçsız ve ivedi yargılama, yargı iş yükünde hızlanmayı garanti etmez. | Genç | M.10 harçsız ve ivedi yargı öngörür. | Kısmi. **Süre sınırı ve iş yükü ölçümü gerekli.** |
+
+**Düzeltme notu (E4):** Önceki sürümde “KDV kaybı yaratmaz” ifadesi koşulsuz yazılmıştı. Bu ifade doğru değildi; koşullu olarak düzeltilmiştir.
+
+---
+
 ## V. EK B: TEYİT DURUMU VE AÇIK KALEMLER
 
 Bu ek, metindeki atıfların hangilerinin yoklandığını ve hangilerinin yoklanmadan kesinleşmediğini gösterir.
