@@ -75,3 +75,21 @@ Yöntem: PDF taranmış görüntüdür (metin katmanı yok); aşağıdaki sayfal
 
 **Harici analizde yoklanamayan veya yanlış çıkanlar:** (1) “Hasılat Paylaşımlı Bireysel Destek Sözleşmesi” adlı bir TBK sözleşmesi bilinmiyor, kullanılmadı. (2) “TBK m.620-645 gizli ortaklık” atfı yoklanmadı (m.620-645 adi ortaklıktır). (3) “Mudâraba SPK'ya tabi değildir” iddiası yoklanmadı; metne SPK atfı yazılmadı, K9 riski eklendi. (4) “Mecelle m.1345 kâr fazlası” ve “m.1386 kumaş/terzi örneği” PDF'te kısmen farklı bağlamda çıktı (yukarı bakınız). (5) Harici analizin satır satır Osmanlıca alıntıları sayfadakiyle harfiyen eşleşmeyebilir; metne yalnız anlam girmiştir.
 
+**E.7 Yapıştırılan şirket türleri makalesinden (ikincil kaynak, yazarı belirtilmemiş) — uygulananlar ve uygulanmayanlar**
+
+Makalenin hadis atıfları yalnız derleme adıyla verilmiştir (Buhârî, Ebû Dâvûd, Müslim, Tirmizî); hadis numarası ve isnad yoktur, **yoklanmadı**. Aşağıdaki hükümler fıkıh anlatımı olarak alındı, metne dinî atıf yazılmadı.
+
+| Makaledeki hüküm | Teklife yansıma | Not |
+| :-- | :-- | :-- |
+| Ebdân: ortaklar mal koymadan yalnız bedenî/zihnî emekle ortak olur; farklı zanaatlardan olabilir; iş ve kazançta biri diğerinden üstün olabilir | Madde 1 (o): pay serbest, farklı işleri üstlenme serbest | m.1391 ile uyumlu (E.6) |
+| Ortak, kendi yerine başkasını ücretle çalıştıramaz; ortakların bizzat çalışması gerekir | Madde 1 (o): bizzat emek, yerine ücretli çalıştırma yok | Aynı zamanda ajans ve kimlik kiralama riskini (Ek A.4 K4) azaltır |
+| Ortaklık icap ve kabulle kurulur; tek taraflı sözleşmeyle ortak sayılmaz | Madde 1 (o): bütün ortakların kimlik doğrulamalı onayı | Kimlik kiralamaya karşı da işler |
+| Ortaklardan birinin ölümü, ayrılması veya hacri şirketi bozar | Madde 1 (o): bir ortağın ayrılması diğerlerinin mükellefiyetini etkilemez | Fıkıh “şirket bozulur” der; teklif iktisadî sürekliliği seçti, bu bilinçli bir uzaklaşmadır ve ihtilaf olarak kayıtlıdır |
+| Ortaklık hâlinde haram maddelerin (şarap, domuz) alım satımı caiz değil | Madde 1 (g) negatif liste: domuz eti ve mamulleri eklendi | Hüküm ihtilafsız; teklifte dinî gerekçe yok |
+| Müşteri ücreti ortaklardan birine veya hepsine verebilir; her biri ücretin tamamını isteyebilir | Uygulanmadı | m.1388-1389 ile aynı hüküm; portalın pay oranında dağıtımıyla çakışır, alıcının tek hesaba ödemesi hâli açık |
+| Mudârebe: kâr paylaşılır, zarar sermaye sahibine aittir, mudârib yalnız emeğini kaybeder | Madde 8 değişmedi | Madde 8'in “kâr ve zarara ortaklık” usulünde zarar bankaya yüklenirse bankaların isteği düşebilir; etkisi ölçülmedi, açık |
+| Vücûh şirketi (itibara dayalı borçla mal alımı) ve mufâveda | Uygulanmadı | Mal alım satımı kapsam dışıdır (Madde 1 (g)); bu türler ticaret gerektirir |
+| İnân şirketi (mal ortaklığı) | Uygulanmadı | Mikro mükellef sermayesiz emek üreticisidir |
+| Müslüman–gayrimüslim ortaklık caizdir | Etki yok | Teklif din ayırt etmez |
+| Sermaye şirketlerine ve kapitalizme dair eleştiriler | **Kullanılmadı** | Siyasî ve iktisadî görüştür; teklifin hukukî ve teknik dilinde yeri yok, ölçülmüş veri de sunmaz |
+
