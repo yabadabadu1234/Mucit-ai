@@ -77,7 +77,7 @@ Bu Kanun Teklifi, sermayesiz *hizmet* ve *fikir* üreticileri için kurulmuştur
 >
 > **ı)** Pasif gelir dışlaması: Mirasla veya devir yoluyla edinilmiş telif hakkı, yazılım, dijital varlık veya benzeri hakların, mükellefin bizzat hizmet üretmeksizin elde ettiği pasif gelirleri bu madde kapsamında istisnadan yararlanamaz. İstisna, mükellefin kendi mesaisiyle ürettiği hizmet ve eserden elde ettiği gelire münhasırdır.
 >
-> **i)** İlişkili kişilerde toplulaştırma: Aralarında ikinci dereceye kadar (ikinci derece dâhil) kan ve sıhrî hısımlık bulunan kişilerden oluşan mikro mükellef grubunun aynı alıcıdan elde ettikleri toplam hasılat veya fiilen tek bir faaliyetin bölünerek yürütüldüğünün tespiti halinde grubun elde ettiği toplam hasılat, tavan bakımından tek bir mükellefin hasılatı gibi toplulaştırılır. Toplulaştırma, bağımsız alanlarda ve farklı alıcılara hizmet veren hısımların ayrı ayrı yararlanma hakkını ortadan kaldırmaz. Mükellef, toplulaştırmaya karşı Ek Madde 15’in (ç) bendindeki itiraz yolunu kullanabilir ve faaliyetlerinin bağımsız olduğunu ispat edebilir.
+> **i)** İlişkili kişilerde toplulaştırma: Aralarında ikinci dereceye kadar (ikinci derece dâhil) kan ve sıhrî hısımlık bulunan kişilerden oluşan mikro mükellef grubunun aynı alıcıdan elde ettikleri toplam hasılat veya fiilen tek bir faaliyetin bölünerek yürütüldüğünün tespiti halinde grubun elde ettiği toplam hasılat, tavan bakımından tek bir mükellefin hasılatı gibi toplulaştırılır. Toplulaştırma, bağımsız alanlarda ve farklı alıcılara hizmet veren hısımların ayrı ayrı yararlanma hakkını ortadan kaldırmaz. Mükellef, toplulaştırmaya karşı Ek Madde 15’in (e) bendindeki itiraz yolunu kullanabilir ve faaliyetlerinin bağımsız olduğunu ispat edebilir.
 >
 > **j)** Gelir kaynağı beyanı ve inceleme askısı: Mikro mükellefin münhasır hesabına kısa süre içinde olağan gelirinin çok üzerinde (örneğin aylık ortalama gelirin beş katını aşan) bir giriş olması halinde sistem otomatik cezai kesinti veya cezai tevkifat oranı uygulamaz. Bunun yerine ilgili tutarı, belge süresi olan on beş gün boyunca “inceleme askısı”na alır ve mükellefe portal, UETS ve kayıtlı iletişim araçları üzerinden “Gelir Kaynağı Beyanı” (yarışma ödülü, miras, hibe, hizmet bedeli vb.) sunması için bildirim gönderir. Beyan süresi, bildirimin mükellefe ulaştığı tarihten itibaren on beş gündür. Beyan ve belge sunulursa askı derhal kalkar ve normal tevkifat uygulanır. Belge süresi içinde sunulmazsa askı, süre sonunda kendiliğinden kalkmaz; ilgili tutar için 5549 sayılı Kanun uyarınca şüpheli işlem bildirimi yapılır ve bu bildirim, mükellefin diğer tahsilat, fatura kesme ve hesap kullanım haklarını etkilemez. 5549 sayılı Kanun ile ceza muhakemesi tedbirleri saklıdır.
 >
@@ -101,7 +101,7 @@ Bu Kanun Teklifi, sermayesiz *hizmet* ve *fikir* üreticileri için kurulmuştur
 >
 > **e)** Yukarıdaki (a) ile (d) bentlerinde tanımlanan ve Gelir İdaresi Başkanlığı tarafından tescil edilen mükelleflerin itiraz hakkı, bu Kanunun 10 uncu maddesindeki Mikro Üretici Dijital Hakem Heyeti yoluyla kullanılır.
 >
-> **ç)** Madde 1, mükellefin başvurusu üzerine verilecek bütün hakem kararlarının gerekçeli olarak yazılı biçimde bildirilmesini zorunlu kılar.**"
+> **f)** Madde 1, mükellefin başvurusu üzerine verilecek bütün hakem kararlarının gerekçeli olarak yazılı biçimde bildirilmesini zorunlu kılar.**"
 
 **MADDE 3-** 25/10/1984 tarihli ve 3065 sayılı Katma Değer Vergisi Kanunu’nun 17 nci maddesinin (4) numaralı fıkrasının (a) bendinde yer alan “mükerrer 20/B maddesi” ibaresinden sonra gelmek üzere “ile mükerrer 20/C maddesi” ibaresi eklenmiştir. Mükerrer 20/C maddesi kapsamında düzenlenen faturalarda hizmetin mahiyeti, genel ifadelerle yetinilmeksizin ayırt edici biçimde belirtilir; mahiyetin gerçeğe aykırı beyanı halinde genel hükümler uygulanır.
 
@@ -148,8 +148,6 @@ Bu Kanun Teklifi, sermayesiz *hizmet* ve *fikir* üreticileri için kurulmuştur
 > Algoritmik denetim yalnızca işaretleme yapabilir; mükellefiyetin kapatılması veya cezai işlem tesisi, ilgili işlemin bir görevli tarafından gözden geçirilmesinden sonra yapılabilir.
 >
 > Heyet kararlarına karşı vergi mahkemelerinde açılacak davalar harca tabi değildir ve ivedi yargılama usulüne tabidir.
-
-**MADDE 11-** *(Yeni madde 2 (d) bendinde zaten düzenlendiği için bu madde yürürlükten kaldırılmıştır; numaralama sonraki maddeler için kaydırılmıştır.)*
 
 **MADDE 11-** 193 sayılı Kanunun mükerrer 20/C maddesi kapsamında konut içinde yürütülen mikro üretim faaliyetlerine ilişkin ruhsat muafiyeti, 213 sayılı Kanuna eklenen Ek Madde 15’in (d) bendi ile düzenlenmiştir. [Atıf yapılan 3572 sayılı Kanunun güncel metni Ek B’de yoklanacaktır.]
 
@@ -324,7 +322,7 @@ Bu ek, teklif metninde bu sürümde yapılan düzeltmeleri kayıt altına alır.
 | 3 | Askı süresi 72 saat, beyan süresi on beş gün idi; askı süresi dolunca kalkacağı yazılıydı. Beyan süresi boşa düşüyordu. | Askı, beyan süresi (on beş gün) boyunca sürer; süre dolunca beyan yoksa şüpheli işlem bildirimi yapılır. |
 | 4 | Madde 1 (j) ile Madde 10 arasında “bloke edilemez” güvencesiyle askı çelişiyordu. | Askı yalnız yüksek tutarlı girişe ve belge süresiyle sınırlanmıştır; itiraz güvencesi MASAK ve ceza tedbirlerini kapsamaz. |
 | 5 | Naylon fatura hesabında “matematiksel olarak imkânsız” ifadesi kesin değildi. | Başabaş 14,5 TL koşulu açıkça yazıldı (III.B). |
-| 6 | Gerekçe ve metin içinde “ı”, “i”, “j” bentleri harf sırasına uymuyordu. | Bentler sırayla (a)…(l) olarak yeniden numaralandı. |
+| 6 | VUK Ek Madde 15’te (d) bendinden sonra (e) ve iki kez (ç) geliyordu. | Bent sırası (a), (b), (c), (ç), (d), (e), (f) olarak düzeltildi; Madde 1 (i) atfı (e) bendine çekildi. |
 | 7 | Madde numaraları gerekçe ile metin arasında kaymıştı (Madde 6 ve 7). | Gerekçe ve metin numaraları eşitlendi. |
 | 8 | Tashih işaretleri (T1…T26) ve müzakere notları metinde kalmıştı. | Kaldırıldı; bu notlar yalnız iç çalışma dosyasında kalır. |
 | 9 | “Bu bir beşer eseridir” ve “hakikat” gibi retorik ifadeler gerekçede yer alıyordu. | Kaldırıldı; gerekçe yalnızca hukukî ve teknik ifadelerle yazıldı. |
