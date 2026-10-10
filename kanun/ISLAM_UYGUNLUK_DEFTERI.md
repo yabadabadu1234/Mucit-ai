@@ -28,3 +28,13 @@ Bu denetim, F 3-I 245 uyarınca yapılmıştır. Denetimi yapan müftî değildi
 | Diğer kanunlardaki hükümler: 351 sayılı Kanun m.16 erteleme sırasında ‘yüzde on ilave’ (ikincil kaynak), 5510 prim gecikme cezası ve zammı, 6183 m.48 tecil faizi | Bu teklifin dışındadır; ‘başka yerlerde’ tadil için ayrı teklif gerekir |
 | Sosyal sigorta primi (SGK) | Çoğunlukla taâvün esaslı sosyal sigorta olarak değerlendirilir; yetkili ilim ehline sorulmalıdır |
 | Sosyal içerik ve ‘dijital sanat’ kapsamında canlı resmi ve müzik | Fukahâ arasında ihtilaf vardır; metne alınmamış, negatif listeye de konmamıştır |
+
+**E.3 Bu turda eklenenler**
+
+| Mesele | Dayanak / ihtilaf | Yapılan |
+| :-- | :-- | :-- |
+| Madde 8 KGF kefalet komisyonu | Klasik çoğunluk kefaleti teberru sayar, karşılığında ücreti kabul etmez; çağdaş görüş fiilî idarî masrafı ayırır (yetkili metin okunmadı) | Madde 8: mükelleften komisyon veya ücret alınmaz, Hazine desteği (tarafsız lafız) |
+| Madde 1 (b) 6183 gecikme zammı | E.2'de ihtilaflı | Değişmedi; seçenek: zam uygulanmaksızın yalnız asıl tutar ve gider reddi. Karar padişahındır, fiskal etkisi ölçülmedi |
+| Madde 12 ek iş yasağı sözleşmeleri hükümsüz | Sözleşmeye vefa ile helali haram kılan şartın geçersizliği ictihad konusu | Değişmedi, kayıt |
+| Madde 7 oransal (binde iki) komisyon | Hizmet bedelinin tutara oranlı olması ihtilaflı; metin yalnız tavan koyar | Değişmedi, kayıt |
+| Madde 9 BES | Katılım esaslı fon şartı konmuştur; sistemin kendisinin hükmü ihtilaflı | Değişmedi, kayıt |
