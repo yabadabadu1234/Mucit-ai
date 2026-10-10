@@ -56,3 +56,22 @@ Arama: Mecelle'nin txt/Latin tam metni indirilemedi (bulunan PDF'ler yalnız muk
 | Teâvün/tekâfül sandığı | Mâide 2 | **Eklenmedi.** Aidatın tevkifat matrahından indirilmesi, sabit götürü gider ve nihaî tevkifat yapısıyla çelişir; Kooperatifler Kanunu atfı yoklanmadı. Not: İİK m.82/1-(10) muavenet sandığı/cemiyetinden bağlanan maaşları haczedilemez saymaktadır (mevzuattan okundu) |
 | Madde 1 (b) gecikme zammı | E.2'deki ihtilaflı kayıt | Zam kaldırıldı, E.4'e bakınız: **E.2'den E.1'e taşınmış sayılır** (yaptırım zamana değil fiile bağlanmıştır); para cezasının cevazı ihtilafı E.4'te durur |
 
+**E.6 Kitâbü'ş-Şirket (TBMM Kütüphanesi, Osmanlıca basım, padişahın verdiği PDF, 90 sayfa) — yoklama**
+
+Yöntem: PDF taranmış görüntüdür (metin katmanı yok); aşağıdaki sayfalar görüntü olarak okundu, madde numaraları sayfada görülen rakamlardan alındı. Basılı sayfa numarası PDF sayfasından 1 eksiktir. Okunan PDF sayfaları: 14, 31, 66, 75-78, 80, 83, 84. **Okunmayan:** kalan sayfalar (okuma notu yazılmadı; ticaretilmihali.com yalnız başlık ve bağlantı verdi, cevap metni yok).
+
+| Mecelle m. | PDF s. | Yoklanan içerik | Yoklama sonucu | Teklife yansıma |
+| :-- | :-- | :-- | :-- | :-- |
+| 1385 | 75 | Şirket-i a'mâl: iş takabbülü üzerine akit; amel müsavi veya mütefazıl olabilir | Okundu, doğru | Madde 1 (o) |
+| 1386 | 76 | Ortaklardan her biri iş kabul ve taahhüt edebilir; birinin kabul edip diğerinin fiilen çalışması caiz | Okundu, doğru | Madde 1 (o): iş kabul eden ortak aracı sayılmaz |
+| 1388-1389 | 76 | Ücrette şirket-i a'mâl mufavaza hükmündedir; müstecir herhangi bir ortağa ödese borcundan kurtulur | Okundu (harici analiz bunu aktarmamıştı) | Kullanılmadı: portalın pay oranında dağıtımıyla çakışır. **Açık:** alıcının tek hesaba ödemesi hâli |
+| 1391 | 77 | Amelde müsavi, kesbde tefazul şart edilebilir; sebep: biri sanatında daha mahir | Okundu; harici analiz bu hükmü yanlışlıkla m.1345'e bağlamıştı | Madde 1 (o): pay oranı serbest |
+| 1345 | 66 | Amelin kıymeti; **şirket-i inân** (sermaye ortaklığı) bağlamında biri ameli fazla ise kâr payı fazla şart edilebilir | Okundu; harici analiz bağlamı (şirket-i inân) belirtmemişti | Madde 1 (o) için kıyasen ikincil dayanak |
+| 1395 | 77 | Dükkân birinin, alet ve edevat diğerinin olup iş kabul etmek üzere şirket sahih | Okundu, doğru | Ek 19 (d) ve Madde 3: paylaşılan alan ve donanım |
+| 1174, 1176 | 31 | Muhâyee: menafi'in taksimi; iki nev'i: zamanen, mekânen | Okundu, doğru | Ek 19 (d): nöbetleşe veya ortaklaşa kullanım |
+| 1101 | 14 | Deyn-i müşterekten bir dâin ne kabzederse diğeriyle aralarında müşterektir; kâbız bunu kendi hissesine mahsup edemez | Okundu, doğru | Madde 1 (o): kısmî tahsilat pay oranında; mahsup yasağı |
+| 1404 | 80 | Mudâraba: bir taraftan sermaye, bir taraftan sa'y ve amel; sahibine rabbü'l-mâl, amile mudârib | Okundu, doğru | Madde 1 (j): kâr paylaşımına dayalı sermaye desteği hasılat sayılmaz |
+| 1428 | 84 | Zarar ve vüzân her hâlde rabbü'l-mâle aittir; mudârible müşterek olması şart olsa da itibar olunmaz | Okundu, doğru | Madde 8 zaten “kâr ve zarara ortaklık” (kâr-zarar bölüşümü rabbü'l-mâl–mudârib yönünden uyumlu) |
+
+**Harici analizde yoklanamayan veya yanlış çıkanlar:** (1) “Hasılat Paylaşımlı Bireysel Destek Sözleşmesi” adlı bir TBK sözleşmesi bilinmiyor, kullanılmadı. (2) “TBK m.620-645 gizli ortaklık” atfı yoklanmadı (m.620-645 adi ortaklıktır). (3) “Mudâraba SPK'ya tabi değildir” iddiası yoklanmadı; metne SPK atfı yazılmadı, K9 riski eklendi. (4) “Mecelle m.1345 kâr fazlası” ve “m.1386 kumaş/terzi örneği” PDF'te kısmen farklı bağlamda çıktı (yukarı bakınız). (5) Harici analizin satır satır Osmanlıca alıntıları sayfadakiyle harfiyen eşleşmeyebilir; metne yalnız anlam girmiştir.
+
