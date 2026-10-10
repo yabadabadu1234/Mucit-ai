@@ -504,14 +504,14 @@ Bu denetim, F 3-I 245 uyarınca yapılmıştır. Denetimi yapan müftî değildi
 
 | Mesele | İslâm hükmü (dayanak) | Önceki metin | Yapılan tadil |
 | :-- | :-- | :-- | :-- |
-| Faiz (ribâ) | Bakara 275 ve 278-279; faizi yiyenin, yedirenin, yazanın ve şahitlerin lanetlenmesi (Müslim, Müsâkât 106) | Madde 8: faizli “Mikro Girişimci Destek Kredisi” ve Hazine destekli kefalet | Faiz içermeyen finansman, faizli borç ve faizli borca kefalet yasağı. KGF’nin faizsiz finansmana kefalet programı bulunduğu basın duyurusundan okundu (Ziraat Katılım ve KGF, Ocak 2026) |
+| Faiz (ribâ) | Bakara 275 ve 278-279; faizi yiyenin, yedirenin, yazanın ve şahitlerin lanetlenmesi (Müslim; bâb ve hadis numarası teyit edilecek) | Madde 8: faizli “Mikro Girişimci Destek Kredisi” ve Hazine destekli kefalet | Faiz içermeyen finansman, faizli borç ve faizli borca kefalet yasağı. KGF’nin faizsiz finansmana kefalet programı bulunduğu basın duyurusundan okundu (Ziraat Katılım ve KGF, Ocak 2026) |
 | Faiz | Aynı | Madde 9: BES aktarımı fon tercihi belirtmiyordu | Aksi bildirilmedikçe katılım esaslı (faiz içermeyen) fon. Katılım fonlarının 4632 kapsamındaki durumu ayrıca doğrulanmalıdır |
 | Faiz | Aynı | Madde 1 (k): Hazine ‘gecikme faizi’ karşılıyordu | Mükelleften gecikme faizi veya zammı alınmaz, faiz ödemesi öngörülmez |
 | Faiz | Aynı | Geçici Madde 1: taksit | Taksit nedeniyle faiz veya gecikme zammı uygulanmaz |
-| Kumar, içki, uyuşturucu, müstehcenlik, falcılık | Mâide 90; falcıya gidenin namazının kabul olmayacağı (Müslim, Selâm 125) | Negatif listede yoktu; istisnadan yararlanabilirlerdi | Madde 1 (g) negatif listeye eklendi |
-| Zulüm ve haksız alım | Nisâ 29; Müslim, Birr 55 | — | Hasılat yoksa vergi yok (H=0); tevkifat tahsilat anında, belirli oranla |
-| Garar (belirsizlik) | Müslim, Büyû 4 | — | Sabit oran, defter ve takdir komisyonu yok |
-| Emeğin hakkı | İbn Mâce, Ahkâm 4; Buhârî, Büyû 106 | — | Vadeli Tevkifat Senedi ve mahsup hükümleri |
+| Kumar, içki, uyuşturucu, müstehcenlik, falcılık | Mâide 90; falcıya gidenin namazının kabul olmayacağı (Müslim; bâb ve hadis numarası teyit edilecek) | Negatif listede yoktu; istisnadan yararlanabilirlerdi | Madde 1 (g) negatif listeye eklendi |
+| Zulüm ve haksız alım | Nisâ 29; zulmün kıyamette karanlık olduğu hadisi (Müslim; numara teyit edilecek) | — | Hasılat yoksa vergi yok (H=0); tevkifat tahsilat anında, belirli oranla |
+| Garar (belirsizlik) | Garar satışının yasaklanması (Müslim; numara teyit edilecek) | — | Sabit oran, defter ve takdir komisyonu yok |
+| Emeğin hakkı | İbn Mâce ve Buhârî’deki ücret hadisleri (numaralar teyit edilecek) | — | Vadeli Tevkifat Senedi ve mahsup hükümleri |
 
 **E.2 İhtilaflı veya kapsam dışı, fıkhî hüküm bekleyen meseleler** (Claude hükmü kendisi vermemiştir)
 
