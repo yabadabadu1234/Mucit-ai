@@ -1,4 +1,4 @@
-# KALAN TEHLİKELER DEFTERİ (10/10/2026, ikinci güncelleme)
+# KALAN RİSKLER DEFTERİ (10/10/2026)
 
 Durum kodu: **A** = ancak ilgili kurumun verisi veya kararıyla kapanır; **K** = teklif sahibinin kararı bekler; **T** = teyit işidir (kaynak okunabilirse kapanır).
 
@@ -49,21 +49,12 @@ Durum kodu: **A** = ancak ilgili kurumun verisi veya kararıyla kapanır; **K** 
 | 30 | Veri sızıntısı ve siber saldırı | A |
 | 31 | Başka mevzuatta statüye bağlı yeni kesme nedenleri | A |
 
-## 5. İslâm uygunluğu (iç dosya; devlete sunulmaz)
-| # | Tehlike | Durum |
-| :-- | :-- | :-- |
-| 32 | İhtilaflı kalemler E.16'da çözüldü, fakat delil sağlamlığı basamağı çoğunda **yoklanamadı** (hadis tahrici yok); nihaî metin ilim ehline sunulmalı | T |
-| 33 | Çalgılı müzik negatif listeye **kaynaksız** (genel bilgiyle, ihtiyatla) alındı; geri alınması tek ibaredir | K |
-| 34 | Mücessem canlı figür negatif listede; iki boyutlu resim ve fotoğraf listede değil (ikincil kaynaklara göre ihtilaflı) | T |
-| 35 | Mali ceza (ta'zîr bi'l-mâl) ihtilafı maslahatla korundu | T |
-| 36 | Defterdeki hadis bâb/numaraları, Mecelle numaraları ve fıkıh atıfları yoklanmadı | T |
-
 ## 6. Süreç ve sunum
 | # | Tehlike | Durum |
 | :-- | :-- | :-- |
 | 37 | Teklif sahibi milletvekili yok; başvuru CİMER'den; Anayasa m.88 gereği teklifi bir milletvekili sahiplenmelidir | A |
 | 38 | TBMM Dilekçe Komisyonu'na başvuru (posta, faks, elektronik, şahsen) açık bir ikinci yoldur; elektronik sayfa hata verdi; dilekçede ad, soyad, imza ve adres gerekir (3071 m.4, ikincil kaynak) | K |
-| 39 | CİMER alanı 3000 karakterdir (padişahça teyit); ek dosya biçim ve boyut sınırları yoklanmadı | T |
+| 39 | CİMER alanı 3000 karakterdir (başvuru ekranında gözlenmiştir); ek dosya biçim ve boyut sınırları yoklanmadı | T |
 | 40 | Mali model dışındaki rakamlar elle hesaptır; mali model Python ile hesaplanıp Excel formülleri bağımsız hesaplayıcıyla doğrulandı | T |
 | 41 | Ekranlar taslak tasarımdır, resmî sistem ekranı değildir | A |
 | 42 | Tebliğ taslağı idare için öneridir; "[İDARE]" ayrıntılarını yalnız idare belirler | A |

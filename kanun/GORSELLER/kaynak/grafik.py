@@ -13,7 +13,7 @@ def ok(x1,y1,x2,y2): ax.annotate("",xy=(x2,y2),xytext=(x1,y1),arrowprops=dict(ar
 kutu(0.3,5.9,2.6,1.0,"Mükellef\nfatura keser\n(portal, e-Devlet onayı)",'#fff3d6')
 kutu(3.6,5.9,2.4,1.0,"Portal\nreferans kodu üretir\n(M.1 (a))")
 ok(2.9,6.4,3.6,6.4)
-kutu(0.3,3.7,3.6,1.3,"KURUMSAL ALICI\nÖdemede %15 × (hasılat − %30)\nmuhtasarla öder; ödemeden gider yazamaz\n(M.1 (b))")
+kutu(0.3,3.7,3.6,1.3,"KURUMSAL ALICI\nÖdemede portalca hesaplanan tevkifat\n(%10,5; safi matrah 190.000 TL üstünde kademeli)\nödemeden gider yazamaz (M.1 (b), (e))")
 kutu(4.5,3.7,3.6,1.3,"VADELİ (30-90 gün)\nVadeli Tevkifat Senedi + elektronik teminat\nVadede teminattan Hazine'ye\n(M.1 (b))")
 kutu(8.7,3.7,4.0,1.3,"NİHAÎ TÜKETİCİ veya PLATFORM\nBanka / ödeme kuruluşu tahsilatta\n%10,5 keser, Hazine'ye aktarır\n(M.1 (c), (l))")
 ok(4.8,5.9,2.1,5.0); ok(4.8,5.9,6.3,5.0); ok(5.4,5.9,10.7,5.0)
@@ -39,7 +39,7 @@ ax.text(0,-22,"Etkin oran: 70 × 0,15 = %10,5. Not: 5. sütun ölçeksizdir (gö
 fig.savefig(os.path.join(OUT,"grafik_01_yuz_lira.png"),dpi=110,bbox_inches='tight'); plt.close()
 # 3 kişi başı Hazine
 h=["2 asgari\n66.060","6 asgari\n198.180","12 asgari\n396.360","24 asgari\n792.720"]
-tev=[6936,20809,41618,83236]; bes=[250,749,1498,2996]; myo=[0,0,20809,20809]; net=[6687,20060,19311,59430]
+tev=[6936,20809,45990,112324]; bes=[250,749,1656,4044]; myo=[0,0,20809,20809]; net=[6687,20060,23526,87472]
 import numpy as np
 x=np.arange(4); fig,ax=plt.subplots(figsize=(11,6.2))
 ax.bar(x,net,color='#14662b',label="Hazine'de kalan net"); ax.bar(x,bes,bottom=net,color='#c98b00',label="BES yükü (%3,6)"); ax.bar(x,myo,bottom=np.array(net)+np.array(bes),color='#a11d1d',label="90 gün MYÖ primi (%21)")

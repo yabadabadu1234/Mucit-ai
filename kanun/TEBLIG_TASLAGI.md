@@ -32,7 +32,11 @@
 
 3.5. Mükellefe karekodlu Mikro Mükellefiyet Belgesi üretilir. Belge, kamu kurumları, finansal kuruluşlar ve kurumsal müşteriler nezdinde mükellefiyet ve muafiyetin ispatıdır. [T: VUK Ek 19 (ç)]
 
-3.6. Defter tutma, beyanname verme, SMMM sözleşmesi ve damga vergisi yükümlülüğü yoktur. [T: VUK Ek 19 (b), (c); M.4]
+3.6. Kimlik ve hesap tekliği: bir kişi adına yalnız bir tescil ve bir münhasır hesap bulunabilir; hesabın veya e-Devlet kimliğinin üçüncü kişilere kullandırılması hâlinde tescil iptal edilir ve üç takvim yılı yeniden tescil yapılamaz. [T: M.1 (s)]
+
+3.7. Konutta depolama: mikro üretim için gerekli alet, malzeme ve ürünün konutta depolanması, çevresel etki ve yangın veya patlama riski yoksa konutu iş yeri yapmaz; kat mülkiyeti yönetim planı saklıdır. [T: VUK Ek 19 (d)]
+
+3.8. Defter tutma, beyanname verme, SMMM sözleşmesi ve damga vergisi yükümlülüğü yoktur. [T: VUK Ek 19 (b), (c); M.4]
 
 ## 4. MÜNHASIR HESAP
 
@@ -54,15 +58,15 @@
 
 ## 6. TEVKİFAT
 
-6.1. Matrah ve oran. Tevkifat matrahı gayrisafi hasılatın yüzde yetmişidir (yüzde otuz götürü gider); oran, gelir vergisi tarifesinin ilk dilim oranıdır. Gayrisafi hasılata göre etkin oran yüzde 10,5'tir. Mükellef, gerçek gideri belgeleyerek portal üzerinden seçerse tevkifat belgelenen giderler düşüldükten sonra kalan tutar üzerinden hesaplanır. [T: M.1 (a), (b)]
+6.1. Matrah ve oran. Safi matrah, gayrisafi hasılatın yüzde yetmişidir (yüzde otuz götürü gider); mükellef gerçek gideri belgeleyerek portal üzerinden seçerse safi matrah belgelenen giderler düşüldükten sonra kalan tutardır. Tevkifat, her fatura bakımından portalca şöyle hesaplanır: o ana kadarki kümülatif safi matrahın, gelir vergisi genel tarifesinin birinci diliminin üst sınırına (2026 için 190.000 TL) kadar olan kısmına yüzde 15, bu sınırı aşan kısmına aşılan dilimin oranı (2026: 190.000-400.000 TL arası yüzde 20, 400.000-1.000.000 TL arası yüzde 27 …) uygulanır; bulunan toplamdan daha önce kesilen tevkifat düşülür. Etkin oran ilk dilimde yüzde 10,5, 12 brüt asgari ücretlik hasılatta yaklaşık yüzde 11,6, tavanda yaklaşık yüzde 14,2'dir. [T: M.1 (a), (b), (e)]
 
 6.2. Kurumsal alıcı. Alıcı, fiilî ödeme tarihinde tevkifatı yapar, muhtasar beyanname ile beyan eder ve öder; tevkifat Hazineye intikal etmeden gider indirimi yapamaz. [T: M.1 (b)]
 
 6.3. Vadeli tevkifat senedi. Otuz ila doksan gün vadeli ödemelerde alıcı, portalda Vadeli Tevkifat Senedi düzenler ve elektronik teminatı tescil ettirir. Tevkifat bedelin ödendiği tarihte teminattan Hazineye aktarılır. Teminat yetersizse veya tevkifat vadesinde aktarılmazsa alıcının gider indirimi hakkı kendiliğinden iptal olur, tevkifat aslı alıcıdan 6183 sayılı Kanuna göre tahsil edilir ve alıcı adına vergi ziyaı cezası kesilir; bu borca ve cezaya gecikme zammı uygulanmaz. Mükellef muhatap alınamaz. [T: M.1 (b)] [İDARE: teminat türleri ve teminat kaydı teknik şeması]
 
-6.4. Nihaî tüketici. Tahsilat münhasır hesaba girdiğinde aracı kuruluş, gayrisafi bedelin yüzde 10,5'ini otomatik keser ve Hazineye aktarır. [T: M.1 (c)]
+6.4. Nihaî tüketici. Tahsilat münhasır hesaba girdiğinde aracı kuruluş, portalca hesaplanan tevkifatı (6.1) otomatik keser ve Hazineye aktarır; kümülatif safi matrahı birinci dilim sınırını aşmayan mükellefte bu tutar gayrisafi bedelin yüzde 10,5'idir. [T: M.1 (c)]
 
-6.5. Hizmet ihracı. Bedelin döviz olarak veya yurt dışı kaynaklı olduğu ödeme kuruluşu kayıtlarıyla tevsik edilmek şartıyla Türk lirası karşılığı olarak intikalinde, transferi gerçekleştiren kuruluş tevkifatı keser. İspat: döviz cinsinden intikal, dekonttaki hizmet ihracı açıklaması ve sözleşme, proforma fatura, kabul belgesi veya iş emri teyidinden birinin basit kopyasının portala yüklenmesi. Tevkifat transfer anındaki TCMB döviz alış kuru üzerinden hesaplanır. IP kaydı, dijital trafik kaydı veya e-posta arşivi istenmez. [T: M.1 (ç)]
+6.5. Hizmet ihracı. Bedelin döviz olarak veya yurt dışı kaynaklı olduğu ödeme kuruluşu kayıtlarıyla tevsik edilmek şartıyla Türk lirası karşılığı olarak intikalinde, transferi gerçekleştiren kuruluş tevkifatı keser. İspat: döviz cinsinden intikal, dekonttaki hizmet ihracı açıklaması ve sözleşme, proforma fatura, kabul belgesi veya iş emri teyidinden birinin basit kopyasının portala yüklenmesi. Tevkifat transfer anındaki TCMB döviz alış kuru üzerinden hesaplanır. IP kaydı, dijital trafik kaydı veya e-posta arşivi istenmez. Bedelin intikalini yapan kuruluş göndericinin kimlik ve ülke bilgisini portala aktarır; bedel intikalden itibaren on beş gün içinde göndericiye veya ilişkili kişilere geri gönderilirse (gerçek iade, iptal ve fesih hariç) işlem hizmet ihracı sayılmaz. [T: M.1 (ç)]
 
 6.6. Platform ödemeleri. Belgeyi platforma ibraz eden mükellefe yapılan ve GVK m.94/19 kapsamındaki ödemelerde o bent uyarınca tevkifat yapılmaz; tevkifat 6.4'e göre münhasır hesapta yapılır. Belge ibraz edilmemişse 94/19 uyarınca kesilen vergi bu tevkifattan mahsup edilir, fazlası iade edilir. [T: M.1 (l)] [İDARE: platformlara belge ibraz kanalı]
 
@@ -71,6 +75,10 @@
 6.8. İade ve mahsup. Alıcının iflası, sözleşmenin feshi veya bedelin iadesi hâlinde mükellefin portal bildirimi üzerine fazla tevkif edilen vergi sonraki dönem tevkifatından mahsup edilir; altı ay içinde mahsup edilemeyen tutar münhasır hesaba nakden iade edilir. [T: M.1 (b)]
 
 6.9. Teknik hata. Entegrasyon arızası veya hesaplama hatasından doğan eksik kesinti bir sonraki ay mahsuben tamamlanır, fazla kesinti talebe gerek kalmadan ertesi ay münhasır hesaba iade edilir; mükelleften ceza, gecikme faizi veya gecikme zammı alınmaz. [T: M.1 (k)]
+
+6.10. Geri akış karinesi. Mükellefin münhasır hesabından, bedeli ödeyen alıcıya, alıcının ortak veya yöneticilerine ya da bunların ikinci dereceye kadar kan ve sıhrî hısımlarına veya kontrolündeki hesaplara, ödemeden itibaren doksan gün içinde yapılan ve toplamı ödemenin yüzde ellisini aşan transferler hizmetin ifa edilmediğine dair aksi ispat edilebilir karinedir. Banka transferi portala bildirir; ilgili faturanın gider indirimi aksi ispat edilene kadar askıya alınır, ispat edilemezse reddedilir; VUK m.359 saklıdır. Gerçek iade, iptal ve fesih bu karineye girmez. [T: M.1 (r)] [İDARE: bildirim alanları, ilişkili kişi eşleştirmesi]
+
+6.11. Donanım KDV mahsubu. Mahsup, donanımın seri numarası veya muadili tanımlayıcısı faturada gösterilmişse yapılır; yıllık toplam mahsup o yıl kesilen tevkifatın yüzde ellisini aşamaz, aşan kısım devreder; iki yıldan önce elden çıkarma hâlinde mahsup edilen KDV tevkifat borcuna eklenir. [T: M.3]
 
 ## 7. REFERANS KODSUZ GİRİŞ
 
@@ -126,6 +134,8 @@
 ## 13. YÜRÜRLÜK
 
 Bu Tebliğ yayımı tarihinde yürürlüğe girer. [İDARE: Geçici Madde 2 uyarınca entegrasyon süresi (en çok altı ay) bitiminde banka ve portal akışlarının tam işler hâle gelmesi]
+
+**Kademeli tevkifat örneği.** İki fatura, her biri 200.000 TL (aynı yıl): 1. fatura safi matrah 140.000 TL, tevkifat 140.000 × %15 = 21.000 TL. 2. fatura sonrası kümülatif safi matrah 280.000 TL; toplam tevkifat 190.000 × %15 + 90.000 × %20 = 46.500 TL; 2. faturada kesilecek tutar 46.500 − 21.000 = 25.500 TL.
 
 ## EK-1. PORTAL EKRAN AKIŞI (öneri)
 

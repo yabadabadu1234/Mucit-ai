@@ -10,14 +10,14 @@ Bu paket "Bireysel Emek, Hizmet ve Fikrî Üreticilerin Vergilendirilmesi ve Sos
 | Teklif | Yıllık hasılatı 24 brüt asgari ücreti (792.720 TL) aşmayan Türkiye Cumhuriyeti vatandaşı gerçek kişiler için: hasılat yoksa yük yok; hasılat varsa tahsilatta nihaî tevkifat (etkin %10,5); UETS ve e-Devlet adresi; deftersiz, SMMM'siz. |
 | Güvenlikler | Kurumsal alıcı tevkifatı ödemeden gider yazamaz; bordro kalkanı (2 yıl, %60 tek müşteri sınırı); münhasır hesap; negatif liste; toplulaştırma; 30 günlük itiraz. |
 | Değişen kanunlar | 193 GVK (mükerrer 20/E), 213 VUK (Ek 19), 3065 KDVK, 488 Damga (sıra 57), 5510 (m.6/1-(o), Ek 25), 5411 (Ek 2), 6493 (Ek 2), 4632 (Ek 3). |
-| Mali etki | **Hesaplanmamıştır** (Ek B). Bu pakette Hazine geliri veya maliyeti için sayı verilmez. Veri talebi yapılacak kurumlar: GİB, SGK, TÜİK, SBB, Hazine ve Maliye Bakanlığı, BDDK, TCMB. |
+| Mali etki | Kapsamlı model kuruldu (MALI_MODEL/): **net etkinin işareti, halen kayıtlı mükelleflerin rejime geçme payına (s) bağlıdır; kırılma noktası s* = %12,6.** Orta senaryo 4. yıl net: −5,6 milyar TL (SGK dahil), +4,3 (yalnız vergi); kötümser −6,9, iyimser +5,6. Girdilerin çoğu ölçülmemiş varsayımdır; veri talebi: GİB, SGK, TÜİK, SBB, Hazine ve Maliye Bakanlığı, BDDK, TCMB. |
 | Kalan riskler | Ek A.4'te sayılmıştır (ör. ilk yıl iki müşteriyle tavanı doldurma, naylon fatura teşviki, portal kapasitesi). |
 
 ## 2. KOMİSYON SORU-CEVAP REHBERİ
 
 Cevaplar teklifin kendi hesabına dayanır; ölçülmemiş yerler açıkça yazılmıştır.
 
-**S1. Naylon fatura artmaz mı?** Teklifin kendi hesabı bu riski ortadan kaldırmaz: kurumlar vergisi %25 varsayımıyla gider yazan alıcının vergi avantajı 25 TL, ödediği tevkifat 10,5 TL'dir; fark 14,5 TL sahte fatura teşviki olabilir (II-A, Madde 1 (b)). Riski azaltan hükümler: tevkifat Hazineye aktarılmadan gider indirimi yok; bedel bankacılık kanalıyla ödenmeli; bordro kalkanı; alıcı yoğunluğu taraması (işaretleme); VUK m.359 ve m.344 yaptırımları saklı. Riskin büyüklüğü ölçülmemiştir.
+**S1. Naylon fatura artmaz mı?** Teklifin kendi hesabı bu riski ortadan kaldırmaz: kurumlar vergisi %25 varsayımıyla gider yazan alıcının vergi avantajı 25 TL, ödediği tevkifat 10,5 TL'dir; fark 14,5 TL sahte fatura teşviki olabilir (II-A, Madde 1 (b)). Riski azaltan hükümler: tevkifat Hazineye aktarılmadan gider indirimi yok; bedel bankacılık kanalıyla ödenmeli; bordro kalkanı; alıcı yoğunluğu taraması (işaretleme); VUK m.359 ve m.344 yaptırımları saklı. Kademeli oran (Madde 1 (e)) yüksek hasılatta tevkifatı artırır (tavanda %14,2), geri akış karinesi (Madde 1 (r)) alıcıya para dönüşünü yakalar. Riskin büyüklüğü ölçülmemiştir.
 
 **S2. SGK'ya yük getirir mi?** Evet, küçük de olsa: Ek Madde 25 uyarınca tavanın yarısına ulaşanlar için 90 günlük primin malûllük, yaşlılık ve ölüm payı (3 × 33.030 × %21 = 20.809 TL/kişi/yıl) Hazine tarafından karşılanır. Bu bedel SGK bütçesine yük olmaz, Hazine bütçesine yük olur; toplam tutar kişi sayısına bağlıdır ve hesaplanmamıştır. 5018 m.14 Anayasa Mahkemesince iptal edilmiştir, yasal zorunluluk yoktur; yine de aktüeryal hesap yapılmamıştır (Ek B).
 
@@ -25,13 +25,15 @@ Cevaplar teklifin kendi hesabına dayanır; ölçülmemiş yerler açıkça yaz�
 
 **S4. Bordrolu çalışan buraya kaydırılır mı?** Kilitler: son iki yıl hizmet akdi bulunulan işverene ve ortaklıklarına fatura kesme yasağı; tek müşteriden yıllık hasılatın %60'ından fazlası elde edilemez; ihlalde ödeme ücret sayılır. Kalan açık: ilk yıl ve altı aylık asgari ücret altındaki hasılatta %60 sınırı uygulanmaz; iki müşteriyle tavanı doldurmak mümkündür (Ek A.4).
 
+**S5-A. Kademeli oran var mı?** Evet, Madde 1 (e): kümülatif safi matrah 190.000 TL'yi aşınca aşan kısma tarifenin sonraki dilim oranları uygulanır; etkin oran ilk dilimde %10,5, 12 asgari ücrette %11,6, tavanda %14,2'dir. Bu, yüksek hasılatlının düşük sabit oranla vergilenmesini önler.
+
 **S5. Çifte vergilendirmeyi önleme anlaşmaları (K3)?** Genel ilke olarak hizmet kazancı üzerinde vergilendirme yetkisi mukim olunan devlete aittir; teklif Türkiye'de mukim vatandaşın hesabında tevkif eder, yabancı müşteriye vergi yüklemez. Bu bir yorumdur; belirli anlaşmaların maddeleri tek tek incelenmemiştir ve risk sıfır denemez.
 
 **S6. Platformdan satan %1 ile kurtulmaz mı?** Teklifin Madde 1 (l) bendi buna göre yazılmıştır: belgeli mükellefte 94/19 kesilmez, tevkifat bu maddeyle (%10,5) yapılır; belgesizde 94/19 kesintisi mahsup edilir.
 
 **S7. Teklif İçtüzük ve Anayasa bakımından kimden gelir?** Anayasa m.88 uyarınca kanun teklif etmeye milletvekilleri yetkilidir; teklif sahibi alanı bu yüzden milletvekili olarak bırakılmıştır.
 
-**S8. Hazineye maliyeti ne?** Hesaplanmamıştır. Hazine'ye gelir kaybı kalemleri Ek B'de sayılmıştır (BES Devlet katkısı, 90 gün prim, KGF kefaleti, donanım KDV mahsubu, komisyon tavanı, taksit).
+**S8. Hazineye maliyeti ne?** Model Orta senaryoda 4. yılda net −5,6 milyar TL (SGK dahil) ve +4,3 milyar TL (yalnız vergi) bulmuştur; işaret yutulma payına bağlıdır (s* = %12,6). Girdiler ölçülmemiştir; kesin rakam için SGK ve GİB verisi gerekir. Yutulmayı kapatan iki hazır hüküm seçeneği MALI_MODEL.md'dedir. Hazine'ye gelir kaybı kalemleri Ek B'de sayılmıştır (BES Devlet katkısı, 90 gün prim, KGF kefaleti, donanım KDV mahsubu, komisyon tavanı, taksit).
 
 ## 3. KARŞILAŞTIRMA CETVELİ (3 kolon)
 
