@@ -48,7 +48,8 @@ Taslak, ticareti değil, sermayesiz **hizmet ve fikir** üretimini kapsıyor. Ma
 9. **Faizsiz finansman.** Faiz içermeyen, kâr-zarar ortaklığına veya mal ve hizmet alım satımına dayalı finansmana KGF kefaleti sağlanabilir; kefalet için mükelleften komisyon alınmaz. Faizli borç ve faizli borca kefalet yasaktır.
 10. **İtiraz ve yargı yolu.** Otuz günlük itiraz, çok kanallı başvuru (dijital imkânı olmayanlar için PTT, vergi dairesi, muhtarlık, nüfus müdürlüğü), Mikro Üretici Dijital Hakem Heyeti ve vergi mahkemesinde harçsız, ivedi yargı. Algoritmik denetim yalnızca işaretler; kapatma veya ceza insan incelemesinden sonra verilir; yanlış pozitif oranı her yıl ilan edilir.
 11. **Kişisel veriler.** Veriler takma adlaştırılır ve yalnızca Türkiye'deki kamu veri merkezlerinde tutulur; ihlal hâlinde TCK m.135-140 uygulanır.
-12. **Diğer.** İşverenin fesih hakkını koruyarak mikro mükellefiyet tescilinin tek başına fesih sebebi sayılmaması (Madde 12); mevcut küçük mükellefler için faizsiz otuz altı ay taksitle geçiş (Geçici Madde 1); sistem entegrasyonu için en çok altı ay geçiş (Geçici Madde 2).
+12. **Giriş kapısı (Madde 1 (p)).** Başvurudan önceki yirmi dört ayda 4/b sigortalısı veya gelir vergisi mükellefi olanlar rejime giremez; rejim kayıt dışından kayda geçiş içindir. Bu kapıyı mali modelin ilk sonucu üzerine ekledim (Bölüm 6).
+13. **Diğer.** İşverenin fesih hakkını koruyarak mikro mükellefiyet tescilinin tek başına fesih sebebi sayılmaması (Madde 12); sistem entegrasyonu için en çok altı ay geçiş (Geçici Madde 1).
 
 ## 4-A. Başlıca hükümlerin gerekçesi
 
@@ -84,18 +85,19 @@ Bunlar riski sıfırlamaz. Kalan riskler (örneğin hısım olmayan kişilerle k
 
 ## 6. Mali etki: dürüst sonuç
 
-Mali etkiyi hesaplayan bir model kurdum (Python ve formüllü Excel; iki hesaplama birbiriyle karşılaştırılmış ve fark yok denecek kadar küçük çıkmıştır). Model; hasılat dağılımını, kademeli tevkifatı, bireysel emeklilik katkısını ve Devlet katkısını, doksan günlük prim hibesini, donanım KDV mahsubunu, KGF maliyetini, sahte fatura sızıntısını, PTT ve bilgi işlem giderlerini ve en önemlisi **yutulmayı** (halen vergi ve prim ödeyen kişilerin bu rejime geçerek ödemelerini azaltmasını) birleştirir.
+Mali etkiyi hesaplayan bir model kurdum (Python ve formüllü Excel; iki hesaplama birbiriyle karşılaştırılmış ve fark yok denecek kadar küçük çıkmıştır). Model; hasılat dağılımını, kademeli tevkifatı, bireysel emeklilik katkısını ve Devlet katkısını, doksan günlük prim hibesini, donanım KDV mahsubunu, KGF maliyetini, sahte fatura sızıntısını, PTT ve bilgi işlem giderlerini ve en önemlisi **yutulmayı** (halen vergi ve prim ödeyen kişilerin bu rejime geçerek ödemelerini azaltmasını) birleştirir. Girdilerin çoğunu ölçemedim; bunlar varsayımdır ve ekteki tabloda tek tek işaretlenmiştir.
 
-Bulgular şöyledir. Girdilerin çoğunu ölçemedim; bunlar varsayımdır ve ekteki tabloda tek tek işaretlenmiştir.
+**İlk taslağın sonucu olumsuzdu.** Halen kayıtlı mükelleflere geçiş hakkı tanıyan ilk taslakta dördüncü yıl net etkisi orta senaryoda yaklaşık eksi 5,6 milyar TL çıktı; kayıp esas olarak SGK primi ve gelir vergisi kaybından geliyordu. Net etkinin sıfır olduğu kırılma noktası, rejime katılanların yüzde 12,6'sının halen kayıtlı olmasıydı. Bu sonuçla taslağı göndermeyi doğru bulmadım.
 
-1. Dördüncü yıl kararlı durumunda genel devlet dengesine (Hazine ve SGK) net etki, orta senaryoda yaklaşık eksi 5,6 milyar TL; kötümser senaryoda eksi 6,9; iyimser senaryoda artı 5,6 milyar TL çıkmıştır. Yalnızca vergi tarafına bakıldığında (SGK primi hariç) üç senaryo da olumludur: artı 0,8, artı 4,3 ve artı 13,6 milyar TL.
-2. Net etkinin işareti, rejime katılanların ne kadarının zaten kayıtlı olduğuna bağlıdır. Kırılma noktası yaklaşık yüzde 12,6'dır; halen kayıtlı olanların payı bunun üstündeyse genel devlet dengesi bozulur. Bu payı ölçen veri SGK ve Gelir İdaresi'ndedir; bende yoktur.
-3. Dört bin denemelik bir Monte Carlo çalışmasında net etkinin medyanı eksi 3,2 milyar TL, yüzde doksanlık aralığı eksi 19,9 ile artı 3,8 milyar TL olmuş, net etkinin pozitif çıkma olasılığı yüzde 24 bulunmuştur. Bu olasılık, kendi varsayımlarımın bir sonucudur; bir öngörü değildir.
-4. Bu nedenle "bu teklif Hazine'ye yük getirmez" ya da "Hazine'ye gelir sağlar" demiyorum. Doğru ifade şudur: "Kayıt dışı üretici kayda girer; Hazine ve SGK'ya net etki, halen kayıtlı olanların geçiş payına bağlıdır ve bu pay ölçülmemiştir."
+**Çare: giriş kapısı.** Madde 1 (p) yeniden yazıldı: başvurudan önceki yirmi dört ayda 4/b sigortalısı veya gelir vergisi mükellefi olanlar rejime giremez; eski taslaktaki statü geçişi hükmü kaldırıldı. Rejim, kayıt dışı üreticinin kayda girmesi içindir; zaten kayıtlı olanın vergi ve prim ödemesini azaltması için değildir.
 
-Yutulmayı sınırlayan iki seçenek hazırlayıp yalnızca sunuyorum, taslağa işlemedim. Birincisi, başvurudan önceki yirmi dört ayda 4/b sigortalısı olanların veya gelir vergisi mükellefi olanların rejime girişinin kapatılması ve Geçici Madde 1'in kaldırılmasıdır; orta senaryoda net etkiyi artı 4,8 milyar TL'ye çıkarır, ancak mevcut küçük esnafı rejimin dışında bırakır. İkincisi, geçiş yapanların 4/b primini yarı oranda ödemeye devam etmesidir; net etkiyi yaklaşık eksi 0,7 milyar TL'ye getirir. Karar, teklifi sahiplenecek makama aittir.
+**Kapıyla sonuç.** Genel devlet dengesine (Hazine ve SGK) dördüncü yıl net etki, orta senaryoda yaklaşık artı 3,4 milyar TL; kötümser senaryoda artı 0,2; iyimser senaryoda artı 13,0 milyar TL çıkmıştır. Beş yıllık bugünkü değer orta senaryoda yaklaşık artı 10,1 milyar TL'dir. Dört bin denemelik Monte Carlo'da net etkinin medyanı artı 3,7 milyar TL, yüzde doksanlık aralığı artı 0,4 ile artı 10,8 milyar TL, net etkinin pozitif çıkma olasılığı yüzde 97'dir.
 
-Modelde yer almayan etkiler de vardır: kayıt dışılığın kayda geçmesinin tüketim ve diğer vergilere dolaylı etkisi, çalışanların emeklilik hakkı kazanımı, denetim maliyeti ve vergi anlaşmaları. Ayrıca 5018 sayılı Kanun'un 14. maddesi Anayasa Mahkemesi'nce iptal edilmiş olduğundan teklif, yasal bir mali yük raporu şartına dayanmamaktadır; yine de bütçe birimlerinin kendi aktüeryal çalışmasını yapmasını rica ederim.
+**Bu sonuç şartlıdır.** Bu rakamlar, kapının işlediği ve kapıdan sızan halen kayıtlı kişi payının küçük (yaklaşık yüzde 5) kalacağı varsayımına dayanır; bu pay ölçülmemiştir. Sızıntı yüzde 10 olursa orta senaryo net etkisi artı 1,2; yüzde 12,6'da sıfır; yüzde 20'de eksi 3,4 milyar TL olur. Kötümser senaryoda marj incedir. Yüzde 97 olasılık, sızıntıya ilişkin kendi varsayımımın sonucudur; bir öngörü değildir. Bu yüzden "Hazine'ye net katkı sağlar" demiyorum; doğru ifade şudur: "Kapı işlerse, modelde net etki pozitiftir; kapının işleyip işlemediği SGK ve Gelir İdaresi verisiyle ölçülmelidir."
+
+**Bedel.** Halen kayıtlı esnaf rejime giremez; mükellefiyet ve sigortalılığı sona erdikten yirmi dört ay sonra girebilir. Bu, eşitlik ve haksız rekabet itirazı doğurabilir; bunu açıkça belirtiyorum. Kapıyı aşmak için mükellefiyeti kapatıp beklemek veya işi aile bireyi adına yürütmek gibi dolaşma yolları olabilir; bunlar modelde yer almamaktadır.
+
+Modelde yer almayan etkiler: kayıt dışılığın kayda geçmesinin tüketim ve diğer vergilere dolaylı etkisi, çalışanların emeklilik hakkı kazanımı, denetim maliyeti ve vergi anlaşmaları. Ayrıca 5018 sayılı Kanun'un 14. maddesi Anayasa Mahkemesi'nce iptal edilmiş olduğundan teklif, yasal bir mali yük raporu şartına dayanmamaktadır; yine de bütçe birimlerinin kendi aktüeryal çalışmasını yapmasını rica ederim.
 
 ## 6-A. Seçmediğim alternatifler
 
@@ -104,7 +106,8 @@ Modelde yer almayan etkiler de vardır: kayıt dışılığın kayda geçmesinin
 3. **Gelir Vergisi Kanunu'nun mükerrer 20/B maddesini genişletmek.** O madde sosyal içerik üreticileri ve bazı çevrimiçi hizmetler için kurulmuş, kendi şartları ve kapsamı olan bir istisnadır; kapsamı ve şartları farklı olduğu için yeni bir madde (mükerrer 20/E) önerildi.
 4. **Muhasebeciyi tümden kaldırmak.** Teklif muhasebeci zorunluluğunu yalnızca tavanın altındaki mükellef için kaldırır; tavanı aşan mükellef gerçek usule geçer ve meslek mensuplarıyla çalışır. Bu nedenle meslek mensuplarının mevcut müşterilerini azaltması beklenmez; ancak bu bir beklentidir ve ölçülmemiştir.
 5. **Yabancı uyruklular için aynı rejim.** Anayasa'nın 16. maddesi, temel hak ve hürriyetlerin yabancılar için milletlerarası hukuka uygun olarak kanunla sınırlanabileceğini söyler; yabancıların çalışması ayrıca 6735 sayılı Kanun'un çalışma izni rejimine tabidir. Bu sebeple teklif yalnız vatandaşlara hasredilmiştir; yabancı uyruklular için ayrı bir düzenleme gerekir.
-6. **Sosyal içerik dışı bazı faaliyetleri kapsama almak.** Ticari alım satım, komisyonculuk ve benzeri alanlar, sermayesiz emek tanımına uymadığı ve vergi kaybı riskini artırdığı için negatif listede bırakılmıştır.
+6. **Halen kayıtlı mükelleflere geçiş hakkı vermek.** İlk taslakta vardı; mali modelde yutulma yoluyla net etkiyi olumsuz yaptığı için kaldırıldı.
+7. **Sosyal içerik dışı bazı faaliyetleri kapsama almak.** Ticari alım satım, komisyonculuk ve benzeri alanlar, sermayesiz emek tanımına uymadığı ve vergi kaybı riskini artırdığı için negatif listede bırakılmıştır.
 
 ## 7. Hazırlık yöntemi ve sınırlılıklar
 

@@ -215,3 +215,6 @@ II-A bölümü dinî sebep ve delil taşımaz (F 3-I 246). Padişahın “dayand
 | Çalgı eşliğinde müzik | Dört mezhep cumhuru çalgıyı yasaklar; İbn Hazm, Zâhirîler, Gazzâlî (semâ) ve bazı çağdaş âlimler caiz görür (genel bilgi; **bu turda aranmadı**, kaynak yok) | İlgili hadisin sıhhati tartışmalı (genel bilgi, yoklanmadı) | Cumhur | İhtiyat | **Negatif listeye alındı** (Madde 1 (g)); **kaynaksız karardır, geri alınması kolaydır** (tek ibare) |
 
 **Kabul edilmeyen veya yazılmayanlar:** Mecelle madde numaraları, hadis bâb ve numaraları, fetva ve akademi karar numaraları (yoklanamadı).
+
+## E.17 Giriş kapısı kararı (F 3-I 253)
+Net etki pozitif çıkmadan gönderilmeyeceği padişahça bildirildi. Çare olarak Madde 1 (p) giriş kapısına çevrildi (24 ay). Bedel: halen kayıtlı esnaf giremez. Bu kapı bir dinî hüküm değildir, maslahat tercihidir; ihtilaflı bir kalem açmaz. Kapının dışarıda bıraktığı kesimin eşitlik şikâyeti kalan risk olarak yazılıdır.

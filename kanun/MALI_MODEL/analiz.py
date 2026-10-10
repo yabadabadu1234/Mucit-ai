@@ -21,18 +21,19 @@ SONUC['s_kirilma']=lo
 V={}
 def var(ad,**kw):
     p=sc('Orta'); p.update(kw); V[ad]=kos(p)[0]['net']
-var('P0 Teklif (Orta)')
-var('P1 Kayıtlı mükellef girişi kapalı (s=0,02)',s_kayitli=0.02)
-var('P2 Geçiş yapan 4/b primini yarı oranda sürdürür',prim_devam=0.5)
-var('P3 Götürü gider %20',gider=0.20)
-var('P4 (e) bendi yok: düz %10,5',duz_oran=0.105)
-var('P5 90 gün prim hibesi yok',myo_uygun=0.0)
-var('P6 P1 + P3',s_kayitli=0.02,gider=0.20)
-var('P7 P2 + P3',prim_devam=0.5,gider=0.20)
+var('G0 Güncel teklif: 24 ay giriş kapısı var (Orta, s=0,05)')
+var('G1 Önceki taslak: kapı yok (s=0,25)',s_kayitli=0.25)
+var('G2 Kapı sızıntısı yüksek (s=0,10)',s_kayitli=0.10)
+var('G3 Kapı sızıntısı çok yüksek (s=0,20)',s_kayitli=0.20)
+var('G4 Kapı + götürü gider %25',gider=0.25)
+var('G5 Kapı + (e) bendi yok: düz %10,5',duz_oran=0.105)
+var('G6 Kapı + 90 gün prim hibesi yok',myo_uygun=0.0)
+var('G7 Kapı + donanım KDV mahsubu yok',kdv_donanim_pay=0.0)
+var('G8 Kapı yok + geçenler primi yarı oranda sürdürür (s=0,25)',s_kayitli=0.25,prim_devam=0.5)
 SONUC['varyant']=V
 # 4 tornado (Orta, yıl4)
 base=sc('Orta'); b0=kos(base)[0]['net']
-ARALIK={'n_toplam':(150000,700000),'s_kayitli':(0.10,0.45),'u_ucretli':(0.10,0.30),'medyan_W':(3.0,8.0),'prim_odeme':(0.4,1.0),'phi':(0.0,0.03),'onlem':(0.2,0.8),
+ARALIK={'n_toplam':(150000,700000),'s_kayitli':(0.0,0.20),'u_ucretli':(0.10,0.30),'medyan_W':(3.0,8.0),'prim_odeme':(0.4,1.0),'phi':(0.0,0.03),'onlem':(0.2,0.8),
  'myo_uygun':(0.1,0.6),'bes_vazgecme':(0.1,0.6),'kdv_donanim_pay':(0.2,0.6),'kgf_alim':(0.02,0.10),'kgf_temerrut':(0.05,0.20),'uyum_ucretli':(0.2,0.8),'marj':(0.35,0.65),'r_marj_ucretli':(0.2,0.35),'sigma':(0.6,1.2)}
 T=[]
 for k,(a,b) in ARALIK.items():
@@ -46,7 +47,7 @@ NS=4000; net=[];npvs=[];prm=[]
 for i in range(NS):
     p=dict(BAZ)
     p['n_toplam']=float(np.exp(rng.normal(np.log(350000),0.55)))
-    p['s_kayitli']=float(rng.beta(2.5,7.5)); p['u_ucretli']=float(rng.beta(3,12))
+    p['s_kayitli']=float(rng.beta(2,38)); p['u_ucretli']=float(rng.beta(3,12))
     p['medyan_W']=tri(3,5,8); p['sigma']=tri(0.6,0.9,1.2)
     p['prim_odeme']=tri(0.4,0.7,1.0); p['phi']=tri(0,0.01,0.03); p['onlem']=tri(0.2,0.5,0.8)
     p['myo_uygun']=tri(0.1,0.35,0.6); p['bes_vazgecme']=tri(0.1,0.35,0.6); p['kdv_donanim_pay']=tri(0.2,0.4,0.6)

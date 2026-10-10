@@ -7,7 +7,7 @@
 
 1.1. Bu Tebliğin amacı, mükerrer 20/E maddesi kapsamındaki Mikro Mükellefiyet tescilinin, faturanın, tevkifatın ve ilgili bildirimlerin uygulama usul ve esaslarını açıklamaktır. [T: M.1 son fıkra]
 
-1.2. Kapsam: Türkiye Cumhuriyeti vatandaşı gerçek kişiler; yıllık gayrisafi hasılatı 24 brüt asgari ücreti aşmayan; sermayeden ziyade şahsî mesaiye, bilgiye veya dijital üretime dayanan hizmetler. Yabancı uyruklular kapsam dışıdır. Negatif liste (M.1 (g)) ve gerçek usulde yüksek hasılatlılar (M.1 (p)) kapsam dışıdır. [T: M.1 giriş, (g), (p)]
+1.2. Kapsam: Türkiye Cumhuriyeti vatandaşı gerçek kişiler; yıllık gayrisafi hasılatı 24 brüt asgari ücreti aşmayan; sermayeden ziyade şahsî mesaiye, bilgiye veya dijital üretime dayanan hizmetler. Yabancı uyruklular kapsam dışıdır. Negatif liste (M.1 (g)) ve son yirmi dört ayda 4/b sigortalısı veya gelir vergisi mükellefi olanlar (M.1 (p)) kapsam dışıdır. [T: M.1 giriş, (g), (p)]
 
 ## 2. TANIMLAR
 
@@ -28,7 +28,7 @@
 
 3.3. On altı yaşını doldurmuş küçüğün tescili yasal temsilcinin portalda vereceği elektronik rızayla yapılır. [T: M.1 (ö)]
 
-3.4. Tescilde aşağıdakiler kontrol edilir: son iki takvim yılında gerçek usulde yüksek hasılat bulunmaması; Geçici Madde 1 veya (h) bendi kapsamında olma; gönüllü sonlandırma bekleme süresinin dolmuş olması. [T: M.1 (h), (p)]
+3.4. Tescilde aşağıdakiler kontrol edilir: son yirmi dört ayda 4/b sigortalılığı ve gelir vergisi mükellefiyeti bulunmaması (Madde 1 (p); portal SGK ve GİB kayıtlarını otomatik sorgular; (h) ile dönenler hariç); gönüllü sonlandırma bekleme süresinin dolmuş olması. [T: M.1 (h), (p)] [İDARE: SGK ve GİB sorgu entegrasyonu]
 
 3.5. Mükellefe karekodlu Mikro Mükellefiyet Belgesi üretilir. Belge, kamu kurumları, finansal kuruluşlar ve kurumsal müşteriler nezdinde mükellefiyet ve muafiyetin ispatıdır. [T: VUK Ek 19 (ç)]
 
@@ -133,7 +133,7 @@
 
 ## 13. YÜRÜRLÜK
 
-Bu Tebliğ yayımı tarihinde yürürlüğe girer. [İDARE: Geçici Madde 2 uyarınca entegrasyon süresi (en çok altı ay) bitiminde banka ve portal akışlarının tam işler hâle gelmesi]
+Bu Tebliğ yayımı tarihinde yürürlüğe girer. [İDARE: Geçici Madde 1 uyarınca entegrasyon süresi (en çok altı ay) bitiminde banka ve portal akışlarının tam işler hâle gelmesi]
 
 **Kademeli tevkifat örneği.** İki fatura, her biri 200.000 TL (aynı yıl): 1. fatura safi matrah 140.000 TL, tevkifat 140.000 × %15 = 21.000 TL. 2. fatura sonrası kümülatif safi matrah 280.000 TL; toplam tevkifat 190.000 × %15 + 90.000 × %20 = 46.500 TL; 2. faturada kesilecek tutar 46.500 − 21.000 = 25.500 TL.
 

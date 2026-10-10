@@ -15,7 +15,7 @@ satir=[('Brüt asgari ücret (TL/ay)','W',33030,33030,33030,'Birden çok kaynakt
 ('Medyan yıllık hasılat (asgari ücret katı)','medyan_W',4.0,5.0,6.0,'Varsayım'),
 ('Hasılat dağılımı yayılımı (σ, log-normal)','sigma',0.9,0.9,0.9,'Varsayım'),
 ('Katılımcı sayısı (kararlı durum, kişi)','n_toplam',150000,350000,700000,'Varsayım; veri talebi: GİB, SGK'),
-('Halen kayıtlı mükellef/sigortalı payı (s)','s_kayitli',0.45,0.25,0.10,'Varsayım; en duyarlı girdi'),
+('Giriş kapısına rağmen halen kayıtlı payı (s, kapı sızıntısı)','s_kayitli',0.08,0.05,0.02,'Varsayım; en duyarlı girdi; kırılma %12,6'),
 ('Ücretli ek gelir payı (u)','u_ucretli',0.25,0.20,0.15,'Varsayım'),
 ('Götürü gider oranı','gider',0.30,0.30,0.30,'Teklif Madde 1 (a)'),
 ('BES aktarım oranı (tevkifatın)','bes',0.03,0.03,0.03,'Teklif Madde 9'),

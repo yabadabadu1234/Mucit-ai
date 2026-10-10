@@ -28,13 +28,13 @@ Durum kodu: **A** = ancak ilgili kurumun verisi veya kararıyla kapanır; **K** 
 | 17 | Donanım KDV mahsubu: seri no ve %50 üst sınır eklendi; sahte fatura riski kalır | A |
 | 18 | KDV oranı kaçırma (K2): hizmet istisna olduğu için dar, hizmet kodu zorunluluğu tebliğe bırakıldı | A |
 | 19 | Kimlik kiralama ve eşik altı hesaplar: tek tescil ve tek hesap eklendi; tespit banka ve portal verisine bağlı | A |
-| 20 | **Yutulma:** model net etkinin işaretinin halen kayıtlı olanların payına (s) bağlı olduğunu gösterdi (kırılma %12,6); hazır iki seçenek (P1 giriş kapısı, P2 prim devamı) teklife işlenmedi | K |
+| 20 | **Yutulma:** net etkinin işareti halen kayıtlı olanların payına (s) bağlı (kırılma %12,6). Giriş kapısı (Madde 1 (p), 24 ay) teklife işlendi; kalan risk: kapıdan sızıntı ve dolaşma yolları (aile adına tescil, kapatıp bekleme) ölçülmedi | K |
 
 ## 3. Mali etki
 | # | Tehlike | Durum |
 | :-- | :-- | :-- |
 | 21 | Modelin çoğu girdisi ölçülmemiş varsayımdır (N, s, u, φ, KGF, BES vazgeçme, PTT, BT) | A |
-| 22 | Orta senaryo net etki −5,6 milyar TL (SGK dahil), +4,3 (yalnız vergi); işaret belirsiz | K/A |
+| 22 | Kapılı modelde 4. yıl net etki: kötümser +0,17, orta +3,44, iyimser +12,98 milyar TL; kötümserde pay ince, olumlu sonuç s ön kabulüne bağlı | K/A |
 | 23 | Modelde olmayan etkiler: ikinci tur vergi etkisi, emeklilik hakkı kazanımı, denetim maliyeti, vergi anlaşmaları | A |
 | 24 | 5018 m.14 iptal; bütçe birimlerinin kendi aktüeryal çalışması gerekir | A |
 

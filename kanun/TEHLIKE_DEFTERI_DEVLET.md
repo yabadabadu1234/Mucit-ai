@@ -1,4 +1,4 @@
-# KALAN RİSKLER DEFTERİ (10/10/2026)
+# KALAN TEHLİKELER DEFTERİ (10/10/2026, ikinci güncelleme)
 
 Durum kodu: **A** = ancak ilgili kurumun verisi veya kararıyla kapanır; **K** = teklif sahibinin kararı bekler; **T** = teyit işidir (kaynak okunabilirse kapanır).
 
@@ -28,13 +28,13 @@ Durum kodu: **A** = ancak ilgili kurumun verisi veya kararıyla kapanır; **K** 
 | 17 | Donanım KDV mahsubu: seri no ve %50 üst sınır eklendi; sahte fatura riski kalır | A |
 | 18 | KDV oranı kaçırma (K2): hizmet istisna olduğu için dar, hizmet kodu zorunluluğu tebliğe bırakıldı | A |
 | 19 | Kimlik kiralama ve eşik altı hesaplar: tek tescil ve tek hesap eklendi; tespit banka ve portal verisine bağlı | A |
-| 20 | **Yutulma:** model net etkinin işaretinin halen kayıtlı olanların payına (s) bağlı olduğunu gösterdi (kırılma %12,6); hazır iki seçenek (P1 giriş kapısı, P2 prim devamı) teklife işlenmedi | K |
+| 20 | **Yutulma:** net etkinin işareti halen kayıtlı olanların payına (s) bağlı (kırılma %12,6). Giriş kapısı (Madde 1 (p), 24 ay) teklife işlendi; kalan risk: kapıdan sızıntı ve dolaşma yolları (aile adına tescil, kapatıp bekleme) ölçülmedi | K |
 
 ## 3. Mali etki
 | # | Tehlike | Durum |
 | :-- | :-- | :-- |
 | 21 | Modelin çoğu girdisi ölçülmemiş varsayımdır (N, s, u, φ, KGF, BES vazgeçme, PTT, BT) | A |
-| 22 | Orta senaryo net etki −5,6 milyar TL (SGK dahil), +4,3 (yalnız vergi); işaret belirsiz | K/A |
+| 22 | Kapılı modelde 4. yıl net etki: kötümser +0,17, orta +3,44, iyimser +12,98 milyar TL; kötümserde pay ince, olumlu sonuç s ön kabulüne bağlı | K/A |
 | 23 | Modelde olmayan etkiler: ikinci tur vergi etkisi, emeklilik hakkı kazanımı, denetim maliyeti, vergi anlaşmaları | A |
 | 24 | 5018 m.14 iptal; bütçe birimlerinin kendi aktüeryal çalışması gerekir | A |
 
@@ -49,12 +49,12 @@ Durum kodu: **A** = ancak ilgili kurumun verisi veya kararıyla kapanır; **K** 
 | 30 | Veri sızıntısı ve siber saldırı | A |
 | 31 | Başka mevzuatta statüye bağlı yeni kesme nedenleri | A |
 
-## 6. Süreç ve sunum
+## 5. Süreç ve sunum
 | # | Tehlike | Durum |
 | :-- | :-- | :-- |
 | 37 | Teklif sahibi milletvekili yok; başvuru CİMER'den; Anayasa m.88 gereği teklifi bir milletvekili sahiplenmelidir | A |
 | 38 | TBMM Dilekçe Komisyonu'na başvuru (posta, faks, elektronik, şahsen) açık bir ikinci yoldur; elektronik sayfa hata verdi; dilekçede ad, soyad, imza ve adres gerekir (3071 m.4, ikincil kaynak) | K |
-| 39 | CİMER alanı 3000 karakterdir (başvuru ekranında gözlenmiştir); ek dosya biçim ve boyut sınırları yoklanmadı | T |
+| 39 | CİMER alanı 3000 karakterdir (padişahça teyit); ek dosya biçim ve boyut sınırları yoklanmadı | T |
 | 40 | Mali model dışındaki rakamlar elle hesaptır; mali model Python ile hesaplanıp Excel formülleri bağımsız hesaplayıcıyla doğrulandı | T |
 | 41 | Ekranlar taslak tasarımdır, resmî sistem ekranı değildir | A |
 | 42 | Tebliğ taslağı idare için öneridir; "[İDARE]" ayrıntılarını yalnız idare belirler | A |

@@ -32,7 +32,7 @@ sayfa("ekran_01_tescil","Mikro Mükellefiyet · Tescil","Adım 1/4: Uygunluk kon
 <div class=kart><h3>Kimlik (e-Devlet doğrulaması)</h3><div class=row><div><div class=et>Ad Soyad</div><div class=alan>A. Y. (örnek kişi)</div></div><div><div class=et>T.C. Kimlik No</div><div class=alan>*******1234</div></div><div><div class=et>Vatandaşlık</div><div class=alan>T.C. vatandaşı ✔</div></div></div></div>
 <div class=kart><h3>Uygunluk kontrolü</h3><table><tr><th>Kontrol</th><th>Sonuç</th><th>Dayanak</th></tr>
 <tr><td>Türkiye Cumhuriyeti vatandaşı gerçek kişi</td><td class=ok>Uygun</td><td>M.1 giriş</td></tr>
-<tr><td>Son iki yılda gerçek usulde tavanı aşan hasılat yok</td><td class=ok>Uygun</td><td>M.1 (p)</td></tr>
+<tr><td>Son 24 ayda 4/b sigortalılığı ve gelir vergisi mükellefiyeti yok (SGK ve GİB kaydı otomatik sorgulandı)</td><td class=ok>Uygun</td><td>M.1 (p)</td></tr>
 <tr><td>Gönüllü sonlandırma bekleme süresi</td><td class=ok>Yok</td><td>M.1 (h)</td></tr>
 <tr><td>16 yaşını doldurmuş (18 yaşından küçükse yasal temsilci rızası)</td><td class=ok>18 yaş üstü</td><td>M.1 (ö)</td></tr>
 <tr><td>Faaliyet türü negatif listede değil</td><td class=uy>Beyan bekleniyor</td><td>M.1 (g)</td></tr></table></div>
@@ -102,3 +102,9 @@ sayfa("ekran_08_banka","Münhasır Hesap · Hesap Hareketleri","Örnek banka int
 <div class=yes><b>Serbest bakiye 89.500,00 TL</b> — çekim, kartla harcama ve yurt dışı yazılım/sunucu ödemesi serbesttir. Haciz varsa önce tevkifat ayrılır, haciz kalan bakiyeye uygulanır. (Madde 6)</div>
 <div class=not>EFT/havale/FAST: işlem tutarının binde ikisini veya TCMB azami ücretini, hangisi düşükse aşamaz. (Madde 7)</div>""","Kaynak: teklif Madde 1 (c), Madde 6, 7, 9. 100.000 × 0,105 = 10.500; × 0,03 = 315.",780)
 print("ekranlar tamam")
+
+from PIL import Image,ImageChops
+import glob
+for f in sorted(glob.glob(os.path.join(OUT,'ekran_*.png'))):
+    im=Image.open(f).convert('RGB'); bg=Image.new('RGB',im.size,(238,241,245)); bbox=ImageChops.difference(im,bg).getbbox()
+    if bbox: im.crop((0,0,im.width,min(im.height,bbox[3]+24))).save(f)
