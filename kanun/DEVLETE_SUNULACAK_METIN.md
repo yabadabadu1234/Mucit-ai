@@ -35,6 +35,8 @@ Bu Kanun Teklifi; sermayesiz hizmet ve fikrî üreticilerin önündeki bu bariye
 * Ticari emtia alım-satımı, gayrimenkul, taşıt, finansal arbitraj ve komisyonculuk faaliyetleri kapsam dışında tutulmuş; yalnız kendi el emeği ürünlerinin ve şahsî eşyanın dijital platformla satışına dar bir istisna tanınmıştır.
 * Algoritmik denetim sonuçlarına karşı otuz günlük itiraz hakkı, çoklu başvuru kanalı ve itiraz süresince faaliyetin kesintisizliği güvence altına alınmaktadır.
 
+* Teklif, muhasebeci zorunluluğunu yalnız yıllık hasılatı 24 brüt asgari ücreti aşmayan mükellefler için kaldırır; tavanı aşan mükellef gerçek usule geçer ve meslek mensuplarıyla sözleşme yapar. Bu nedenle düzenleme meslek mensuplarının mevcut müşterilerini azaltmaz; tavanı aşacak mükellefler için yeni bir müşteri havuzu oluşturması beklenir (bu beklenti ölçülmemiştir).
+
 ### B. Dürüstlük Notu
 
 Bu Kanun Teklifi, sermayesiz *hizmet* ve *fikir* üreticileri için kurulmuştur; **ticaretin tamamını kapsamaz.** Satın alınıp yeniden satılan mallar, stoklu ticaret, dropshipping ve toptan satış bu teklifin kapsamı dışındadır ve bunlar için ayrı bir düzenleme gerekir. Suistimal riski sıfırlanamaz; teklifteki hükümler bu riski azaltmayı amaçlar. Kalan riskler Ek A’da sıralanmıştır.
@@ -63,7 +65,7 @@ Bu Kanun Teklifi, sermayesiz *hizmet* ve *fikir* üreticileri için kurulmuştur
 >
 > **c)** Hizmet alanın vergi mükellefi olmayan nihaî tüketici olması halinde; mükellefin bu faaliyetlerine ilişkin tahsilatları için Türkiye’de kurulu bankalarda açtıracağı münhasır hesaba intikal eden gayrisafi bedeller üzerinden, aracı bankalar veya 20/6/2013 tarihli ve 6493 sayılı Kanun kapsamında yetkilendirilmiş kuruluşlarca, safi tutara tekabül eden tevkifat oranı (gayrisafi bedelin yüzde on virgül beşi) tahsilat anında otomatik olarak kesilerek Hazine’ye aktarılır.
 >
-> **ç)** Yurt dışındaki gerçek ve tüzel kişilere münhasıran elektronik ortamda sunulan ve bedeli fiilen döviz olarak, ya da yurt dışı kaynaklı olduğu ödeme kuruluşu kayıtlarıyla tevsik edilmek kaydıyla bu kuruluşlar aracılığıyla Türk lirası karşılığı olarak, Türkiye’deki banka veya ödeme kuruluşlarına intikal eden hizmet ihracı teslimleri üzerinden, transferi gerçekleştiren yetkili kuruluşlarca safi tutara birinci gelir dilimi tevkifat oranı uygulanarak vergi dairesine aktarılır. Yurt dışı hizmet ihracına ilişkin diğer mevzuatta yer alan istisna ve indirim hükümleri saklıdır. Bu bentte ispat, finansal izlenebilirlikle yapılır: bedelin Türkiye’deki banka hesabına döviz cinsinden intikal etmiş olması, banka dekontunda hizmet ihracı olduğuna dair açıklamanın bulunması ve mükellefin yurt dışı mukimi ile yaptığı sözleşme, proforma fatura, kabul belgesi veya iş emri teyidinden birinin basit bir kopyasının portala yüklenmesi yeterlidir. IP kaydı, dijital trafik kaydı veya elektronik posta arşivi istenemez.
+> **ç)** Yurt dışındaki gerçek ve tüzel kişilere münhasıran elektronik ortamda sunulan ve bedeli fiilen döviz olarak, ya da yurt dışı kaynaklı olduğu ödeme kuruluşu kayıtlarıyla tevsik edilmek kaydıyla bu kuruluşlar aracılığıyla Türk lirası karşılığı olarak, Türkiye’deki banka veya ödeme kuruluşlarına intikal eden hizmet ihracı teslimleri üzerinden, transferi gerçekleştiren yetkili kuruluşlarca safi tutara birinci gelir dilimi tevkifat oranı uygulanarak vergi dairesine aktarılır. Yurt dışı hizmet ihracına ilişkin diğer mevzuatta yer alan istisna ve indirim hükümleri saklıdır. Bu bentte ispat, finansal izlenebilirlikle yapılır: bedelin Türkiye’deki banka hesabına döviz cinsinden intikal etmiş olması, banka dekontunda hizmet ihracı olduğuna dair açıklamanın bulunması ve mükellefin yurt dışı mukimi ile yaptığı sözleşme, proforma fatura, kabul belgesi veya iş emri teyidinden birinin basit bir kopyasının portala yüklenmesi yeterlidir. Tevkifat, transfer anındaki Türkiye Cumhuriyet Merkez Bankası döviz alış kuru üzerinden hesaplanarak Türk lirası olarak Hazineye aktarılır; kalan net bakiye mükellefin talebi hâlinde döviz cinsinden hesapta tutulabilir. IP kaydı, dijital trafik kaydı veya elektronik posta arşivi istenemez.
 >
 > **d)** İstisna kapsamındaki tüm hasılatın, mükellef adına açılan ve vergi dairesine bildirilen münhasır banka veya ödeme kuruluşu hesabına transfer edilmesi şarttır. Elden nakit tahsilatlar istisna kapsamı dışındadır.
 >
@@ -85,7 +87,11 @@ Bu Kanun Teklifi, sermayesiz *hizmet* ve *fikir* üreticileri için kurulmuştur
 >
 > **k)** Teknik hata, mahsuplaşma ve cezasızlık: Gelir İdaresi Başkanlığı ile banka veya ödeme kuruluşu sistemleri arasındaki entegrasyon arızaları, gecikmeler veya hesaplama hatalarından kaynaklanan eksik veya fazla tevkifatlarda mükellef cezai sorumluluk taşımaz. Eksik kesinti bir sonraki ay mahsuben tamamlanır; fazla kesinti ise mükellefin talebine gerek kalmaksızın ertesi ay münhasır hesabına iade edilir. Sistemsel gecikmelerden doğan gecikme faizi Hazine tarafından karşılanır.
 >
-> **l)** Platform aracılığıyla yapılan ödemeler: Dijital platformlar üzerinden yapılan ve 193 sayılı Kanunun 94 üncü maddesinin 19 numaralı bendi kapsamında tevkifata tabi tutulan ödemeler, bu maddenin aynı gelir için ikinci kez tevkifat yapılmasını gerektirmez; mükerrer tevkifat yapılmaz."
+> **l)** Platform aracılığıyla yapılan ödemeler: Dijital platformlar üzerinden yapılan ve 193 sayılı Kanunun 94 üncü maddesinin 19 numaralı bendi kapsamında tevkifata tabi tutulan ödemeler, bu maddenin aynı gelir için ikinci kez tevkifat yapılmasını gerektirmez; mükerrer tevkifat yapılmaz.
+>
+> **m)** Ücret ve diğer gelirlerle ilişki: Bu madde kapsamındaki kazançlar; mükellefin hizmet akdine dayalı ücret gelirleri veya diğer gelir unsurları ile birleştirilemez, yıllık gelir vergisi beyannamesine dahil edilemez ve diğer gelirlerin vergi dilimi hesabında matraha eklenemez. Hizmet akdine dayalı ücret gelirleri, (f) bendindeki hasılata ve yıllık tavana dahil edilmez.
+>
+> **n)** Alıcı yoğunluğu taraması: Gelir İdaresi Başkanlığı, aynı kurumsal alıcıya aynı mahiyette hizmet faturası düzenleyen mikro mükellef sayısının mutat ticari hayatla bağdaşmayacak yoğunluğa ulaştığı halleri risk analiziyle tarayabilir. Tarama yalnız işaretleme niteliğindedir; mükelleften ilave belge istenmesine veya Madde 10’daki güvencelerin kaldırılmasına dayanak olmaz."
 
 **MADDE 2-** 4/1/1961 tarihli ve 213 sayılı Vergi Usul Kanunu’na aşağıdaki ek madde eklenmiştir:
 
@@ -121,11 +127,13 @@ Bu Kanun Teklifi, sermayesiz *hizmet* ve *fikir* üreticileri için kurulmuştur
 
 > Bu statüde mükellefiyet tesis edilmiş olması; ilgililerin ileride diğer mevzuat hükümleri uyarınca yararlanabileceği hiçbir girişimcilik, hibe ve teşvik hakkını ve 193 sayılı Kanunun mükerrer 20 nci maddesinde düzenlenen Genç Girişimci İstisnasından yararlanma hakkını ortadan kaldırmaz ve geriye dönük hak kaybı doğurmaz.
 >
-> Bu madde kapsamındaki mükellefiyet ve elde edilen hasılat; 15/7/1950 tarihli ve 5682 sayılı Pasaport Kanununun 14 üncü maddesinde aranan “iş sahibi olmama” ve öğrenim şartları bakımından iş sahibi olmak sayılmaz; hususi damgalı pasaport hakkının sona ermesine veya iptaline dayanak yapılamaz."
+> Bu madde kapsamındaki mükellefiyet ve elde edilen hasılat; 15/7/1950 tarihli ve 5682 sayılı Pasaport Kanununun 14 üncü maddesinde aranan “iş sahibi olmama” ve öğrenim şartları bakımından iş sahibi olmak sayılmaz; hususi damgalı pasaport hakkının sona ermesine veya iptaline dayanak yapılamaz.
+>
+> Bu madde kapsamındaki mükellefiyet ve 5510 sayılı Kanuna eklenen Ek Madde 25 uyarınca sayılan süreler, 351 sayılı Kanunun 16 ncı maddesi uyarınca yapılacak kredi borcu erteleme taleplerinde çalışma veya sosyal güvenlik kaydı sayılmaz."
 
 **MADDE 6-** 19/10/2005 tarihli ve 5411 sayılı Bankacılık Kanunu’na aşağıdaki ek madde eklenmiştir:
 
-> "**EK MADDE 2 – Mikro mükellef hesaplarına ilişkin güvence:** Mikro Mükellefiyet Belgesine sahip kişilerin münhasır hesap açma talebi, yasal gerekçe bulunmaksızın reddedilemez. Açılan hesap, gerekçesi yazılı olarak bildirilmeksizin kapatılamaz. Bu hesaplar için hesap açılış ve işletim ücreti alınamaz. Bu kişilerin münhasır hesaplarına gelen ve Gelir İdaresi Başkanlığı portal referans kodu ile eşleşen ödemeler, 5549 sayılı Kanun uyarınca yapılması gereken şüpheli işlem bildirimi ve ceza muhakemesi tedbirleri hariç olmak üzere bankalar tarafından bloke edilemez; hesaba giriş anında otomatik tevkifat yapılarak kalan bakiye derhal serbest bırakılır. Bu hükme aykırı uygulamalara karşı mükellefler Bankacılık Düzenleme ve Denetleme Kurumuna elektronik ortamda ivedi itirazda bulunabilir. Banka üç iş günü içinde yazılı savunma verir; Kurum itirazı en geç beş iş günü içinde karara bağlar. Aykırılığı tespit edilen bankalar hakkında bu Kanunun 148 inci maddesinin birinci fıkrasının (b) bendi hükmü uygulanır; bu hâlde 149 uncu maddedeki bir aylık savunma süresi yerine bu maddedeki üç iş günlük süre geçerlidir. Ödeme kuruluşları ve elektronik para kuruluşları bakımından aykırılık, 6493 sayılı Kanunun 27 nci maddesi kapsamında Türkiye Cumhuriyet Merkez Bankası tarafından değerlendirilir. Tevkifatı yapılmış net bakiye üzerinde mükellef, hesap türüne dayalı herhangi bir kısıtlamaya tabi olmaksızın serbestçe tasarruf etme, nakit çekme ve kartla harcama yapma hakkına sahiptir; bu işlemlerden 6493 sayılı Kanuna eklenen Ek Madde 2’nin sınırlarını aşan ücret alınamaz. Mükellefler münhasır hesaplarını diledikleri başka bir bankaya veya ödeme kuruluşuna taşıma hakkına sahiptir; taşıma talebi ilgili kuruluşlarca en geç üç iş günü içinde sonuçlandırılır."
+> "**EK MADDE 2 – Mikro mükellef hesaplarına ilişkin güvence:** Mikro Mükellefiyet Belgesine sahip kişilerin münhasır hesap açma talebi, yasal gerekçe bulunmaksızın reddedilemez. Açılan hesap, gerekçesi yazılı olarak bildirilmeksizin kapatılamaz. Bu hesaplar için hesap açılış ve işletim ücreti alınamaz. Bu kişilerin münhasır hesaplarına gelen ve Gelir İdaresi Başkanlığı portal referans kodu ile eşleşen ödemeler, 5549 sayılı Kanun uyarınca yapılması gereken şüpheli işlem bildirimi ve ceza muhakemesi tedbirleri hariç olmak üzere bankalar tarafından bloke edilemez; hesaba giriş anında otomatik tevkifat yapılarak kalan bakiye derhal serbest bırakılır. Bu hükme aykırı uygulamalara karşı mükellefler Bankacılık Düzenleme ve Denetleme Kurumuna elektronik ortamda ivedi itirazda bulunabilir. Banka üç iş günü içinde yazılı savunma verir; Kurum itirazı en geç beş iş günü içinde karara bağlar. Aykırılığı tespit edilen bankalar hakkında bu Kanunun 148 inci maddesinin birinci fıkrasının (b) bendi hükmü uygulanır; bu hâlde 149 uncu maddedeki bir aylık savunma süresi yerine bu maddedeki üç iş günlük süre geçerlidir. Ödeme kuruluşları ve elektronik para kuruluşları bakımından aykırılık, 6493 sayılı Kanunun 27 nci maddesi kapsamında Türkiye Cumhuriyet Merkez Bankası tarafından değerlendirilir. Tevkifatı yapılmış net bakiye üzerinde mükellef, hesap türüne dayalı herhangi bir kısıtlamaya tabi olmaksızın serbestçe tasarruf etme, nakit çekme ve kartla harcama yapma hakkına sahiptir; bu işlemlerden 6493 sayılı Kanuna eklenen Ek Madde 2’nin sınırlarını aşan ücret alınamaz. Haciz, hesaba giren tutardan tevkifatın Hazineye aktarılmasından sonra kalan bakiye üzerinde uygulanabilir; 2004 sayılı İcra ve İflas Kanununun 89 uncu maddesi uyarınca gönderilen haciz bildirimi hesabın tahsilat ve tevkifat işleyişini durduramaz. Mükellefler münhasır hesaplarını diledikleri başka bir bankaya veya ödeme kuruluşuna taşıma hakkına sahiptir; taşıma talebi ilgili kuruluşlarca en geç üç iş günü içinde sonuçlandırılır."
 
 **MADDE 7-** 20/6/2013 tarihli ve 6493 sayılı Ödeme ve Menkul Kıymet Mutabakat Sistemleri, Ödeme Hizmetleri ve Elektronik Para Kuruluşları Hakkında Kanuna aşağıdaki ek madde eklenmiştir:
 
@@ -137,7 +145,7 @@ Bu Kanun Teklifi, sermayesiz *hizmet* ve *fikir* üreticileri için kurulmuştur
 
 > "**4632 sayılı Kanuna EK MADDE 3 –** Mikro mükellefiyet kapsamında Hazine’ye aktarılan her yüz Türk Lirası tevkifatın üç Türk Lirası, mükellefin ayrılma (opt-out) hakkı saklı kalmak kaydıyla, mükellef adına otomatik olarak bireysel emeklilik sistemine aktarılır ve bu tutara 4632 sayılı Kanunun Ek 1 inci maddesi uyarınca belirlenen oranda Devlet katkısı eklenir."
 
-> "**5510 sayılı Kanuna EK MADDE 25 –** 193 sayılı Gelir Vergisi Kanunu’nun mükerrer 20/E maddesi kapsamında mikro mükellefiyet tescili bulunan kişilerin, yıllık hasılatının tavanın en az yarısına ulaştığı her takvim yılı, genel sağlık sigortası prim borcu bulunmamak kaydıyla, bu Kanunun 4 üncü maddesinin birinci fıkrasının (a) bendi kapsamında sigortalılık süresi olarak doksan gün prim ödeme süresine sayılır. Bu sürelere ait prim tutarı Hazine tarafından karşılanır."
+> "**5510 sayılı Kanuna EK MADDE 25 –** 193 sayılı Gelir Vergisi Kanunu’nun mükerrer 20/E maddesi kapsamında mikro mükellefiyet tescili bulunan kişilerin, yıllık hasılatının tavanın en az yarısına ulaştığı her takvim yılı, genel sağlık sigortası prim borcu bulunmamak kaydıyla, bu Kanunun 4 üncü maddesinin birinci fıkrasının (a) bendi kapsamında sigortalılık süresi olarak doksan gün prim ödeme süresine sayılır. Bu süreler, aynı döneme ait başka bir sigortalılık süresiyle çakışmayan günler bakımından sayılır. Bu sürelere ait malullük, yaşlılık ve ölüm sigortaları primi, prime esas kazanç alt sınırı üzerinden Hazine tarafından karşılanır."
 
 **MADDE 10-** Mikro Üretici Dijital Hakem Heyeti ve itiraz usulü:
 
@@ -165,9 +173,11 @@ Bu Kanun Teklifi, sermayesiz *hizmet* ve *fikir* üreticileri için kurulmuştur
 
 **GEÇİCİ MADDE 3-** Gelir İdaresi Başkanlığı ile bankalar ve ödeme kuruluşları arasındaki entegrasyon tamamlanıncaya kadar geçecek süre (en çok altı ay) içinde tevkifatın sistem tarafından kesilemediği hallerde doğan eksiklik mükellefe yüklenemez; mükellef hakkında ceza, faiz veya mükellefiyet kaybı uygulanamaz.
 
-**MADDE 12-** Bu Kanun, yayımını izleyen ayın başında yürürlüğe girer.
+**MADDE 12-** 4857 sayılı İş Kanunu ve 6098 sayılı Türk Borçlar Kanununun uygulanmasında: Mikro mükellefiyet tescili; normal çalışma saatleri dışında yürütülmesi, mevcut işverenin araç, gereç ve çalışma düzenini kullanmaması ve mevcut işverenle rekabet teşkil etmemesi kaydıyla, iş sözleşmesinin haklı veya geçerli nedenle feshine dayanak yapılamaz; sözleşmelerdeki genel ek iş yasakları bu faaliyet bakımından hükümsüzdür.
 
-**MADDE 13-** Bu Kanun hükümlerini Cumhurbaşkanı yürütür.
+**MADDE 13-** Bu Kanun, yayımını izleyen ayın başında yürürlüğe girer.
+
+**MADDE 14-** Bu Kanun hükümlerini Cumhurbaşkanı yürütür.
 
 ---
 
@@ -240,22 +250,22 @@ Brüt tevkifat geliri $\sum (H \times 0{,}105)$’tir. Statükoda bu kişilerin 
 | Serbest (freelance) çalışan sayısı | “2 milyonu aşkın” | Yaygın haber rakamı; kurum veya yöntem belirtilmemiştir, **delil sayılmaz** |
 | Brüt asgari ücret (2026) | 33.030 TL (net 28.075,50 TL) | Birden çok kaynakta tutarlı |
 | Yıllık tavan: 24 brüt asgari ücret | 792.720 TL | Hesap |
-| Bağ-Kur 4/b aylık asgari prim | 11.395,35 TL (yüzde 34,5) ile 11.808,23 TL (yüzde 35,75) arasında çelişen iki kaynak | İkincil; SGK duyurusundan teyit edilmelidir |
+| Bağ-Kur 4/b aylık asgari prim | 33.030 × yüzde 35,75 = 11.808,23 TL | 5510 m.81 metninden (MYÖ yüzde 21, KVSK yüzde 2,25) ve GSS yüzde 12,5; çelişki çözüldü |
 
 **Bulunamayanlar:** gözlenmeyen ekonominin GSYH içindeki payı; dijital hizmet, yazılım ve tasarım alanında kayıt dışı dönen yıllık hasılatın TL tutarı; kayıt dışı çalışan gençlerin (15–24 yaş) sayısı; halen kayıtlı olup bu rejime geçecek serbest çalışanların oranı. Bu dört büyüklük bu teklifin hesabında **ölçülmüş değer olarak kullanılamaz**; Gelir İdaresi Başkanlığı, SGK ve TÜİK’ten veri talebi gerektirir.
 
-**D.2 Kişi başına hesap** (tevkifat yüzde 10,5; BES aktarımı yüzde 3 ve buna yüzde 20 Devlet katkısı, yani Hazine yükü tevkifatın yüzde 3,6’sı; 90 günlük prim yalnızca yıllık hasılatı tavanın yarısına ulaşanlar için)
+**D.2 Kişi başına hesap** (tevkifat yüzde 10,5; BES aktarımı yüzde 3 ve buna Devlet katkısı yüzde 20 üzerinden toplam Hazine yükü tevkifatın yüzde 3,6’sı; 90 günlük prim yalnız malullük, yaşlılık ve ölüm sigortaları payıdır, yani yüzde 21, ve yalnız yıllık hasılatı tavanın yarısına ulaşıp başka sigortalılıkla çakışmayanlar için doğar)
 
-| Yıllık hasılat | Hazine’ye tevkifat (TL) | BES yükü (TL) | 90 gün prim yükü (TL) | Hazine’ye kişi başı net (TL) |
+| Yıllık hasılat | Hazine’ye tevkifat (TL) | BES yükü (TL) | 90 gün MYÖ primi (TL) | Hazine’ye kişi başı net (TL) |
 | :-- | :-- | :-- | :-- | :-- |
 | 2 brüt asgari ücret = 66.060 | 6.936 | 250 | 0 | 6.687 |
 | 6 brüt asgari ücret = 198.180 | 20.809 | 749 | 0 | 20.060 |
-| 12 brüt asgari ücret = 396.360 | 41.618 | 1.498 | 34.186–35.425 | 4.695–5.934 |
-| 24 brüt asgari ücret = 792.720 | 83.236 | 2.996 | 34.186–35.425 | 44.814–46.053 |
+| 12 brüt asgari ücret = 396.360 | 41.618 | 1.498 | 20.809 | 19.311 |
+| 24 brüt asgari ücret = 792.720 | 83.236 | 2.996 | 20.809 | 59.430 |
 
-Prim yükü, 4/b için 3 ay × 33.030 TL × yüzde 34,5–35,75 aralığından hesaplanmıştır; 4/a prim oranı yoklanmamıştır.
+Prim oranı mevzuat metninden okundu: 5510 m.81 malullük, yaşlılık ve ölüm payı yüzde 21 (7566 sayılı Kanunla yüzde 20’den artırıldı), kısa vadeli sigorta kolları yüzde 2,25 (6385 sayılı Kanun). Dört ayrı kaynakta görülen 34,5 ile 35,75 farkı bu artıştandır: güncel 4/b toplamı yüzde 21 + 12,5 + 2,25 = 35,75’tir. Genel sağlık sigortası primi ve kısa vadeli sigorta primi Hazine’ye yüklenmemiştir: emeklilik günü yalnız malullük, yaşlılık ve ölüm primiyle oluşur (5510 m.27-28).
 
-**Önemli bulgu:** Tavanın yarısında (hasılat 396.360 TL) Hazine’nin 90 günlük prim yükü tevkifatın yaklaşık yüzde 82–85’ine ulaşır; Devlet katkısı tevkifatın “yüzde 15–20’si” değildir. Teklif, yüksek hasılatlı gençlerde Hazine’ye ancak sınırlı net katkı bırakır ve düşük hasılatlı gençlerde yüzde 96,4’ünü bırakır.
+**Önemli bulgu:** Tavanın yarısında (hasılat 396.360 TL) MYÖ primi tevkifatın yüzde 50.0’ine, BES yükü yüzde 3,6’sına ulaşır; Hazine’de kalan net yüzde 46.4’dir. Tevkifatın yarısından fazlası, yüksek hasılatlı gençler için prim ve BES olarak geri akar. Düşük hasılatlı gençlerde Hazine’de kalan oran yüzde 96,4’tür. Bu rakamlar yutulma (D.4) ve idarî maliyet düşülmeden hesaplanmıştır.
 
 **D.3 Toplam tevkifat duyarlılığı** (milyar TL; N, bu rejime **yeni giren, daha önce hiç vergi ve prim ödemeyen** kişi sayısı; N varsayımdır, ölçüm değildir)
 
@@ -346,7 +356,14 @@ Bu ek, Meclis’e sunulacak metnin hangi riske hangi hükümle cevap verdiğini 
 | F4 | Net bakiyeyle şahsî harcamanın hesap türü gerekçesiyle kısıtlanması. | Genç | Madde 6: serbest tasarruf hakkı, ücret sınırı Madde 7’ye bağlı |
 | F5 | Akraba olmayan kişilerle yürütülen organize şebeke (aynı ajansa kesilen çok sayıda fatura). | Devlet | Çözüm metinde değil: VUK m.359 ve genel denetim saklıdır; bu teklif gence ilave belge yükü getirmez. Bu kalan bir risktir, ortadan kalkmış değildir |
 | F6 | 5018 m.14 mali yük ve aktüeryal hesap zorunluluğu. | Devlet | III.D.5; hesap hazırlanmalı |
-| F7 | KDV Kanunu m.18 istisnadan vazgeçme: genç KDV beyanı yükümlülüğüne girebilirdi. | Genç | Madde 3: vazgeçme hakkı kullanılamaz. Bedeli: giriş KDV’sini indirme imkânı da kalkar |
+| F7 | KDV Kanunu m.18 istisnadan vazgeçme: genç KDV beyanı yükümlülüğüne girebilirdi. | Genç | Madde 3: vazgeçme hakkı kullanılamaz. Bedeli: giriş KDV’sini indirme imkânı da kalkar 
+| F8 | Bordrolu (4/a) çalışan gencin akşam geliri: 5510 m.53 çakışmada 4/a’yı esas alır; 90 gün çakışan günler için sayılamaz. | Çalışan yoksul genç | Ek Madde 25: yalnız çakışmayan günler sayılır ve karşılanır |
+| F9 | Ek iş gelirinin ücretle birleştirilip yüksek vergi dilimine girmesi. | Çalışan genç | Madde 1 (m): birleştirilemez, beyannameye dahil edilemez |
+| F10 | İşverenin ek iş yasağı veya sadakat borcu gerekçesiyle feshi. | Çalışan genç | Madde 12: koşullu fesih yasağı ve genel ek iş yasaklarının hükümsüzlüğü (4857 m.25/II ve TBK m.396 atfı ikincil kaynaktan) |
+| F11 | KYK kredi erteleme koşulu (351 m.16, ikincil kaynak): sosyal güvenlik ilişkisi olmaması. 90 günlük sayılan süre bu ilişkiyi doğurabilir. | Mezun genç | Madde 5: çalışma veya sosyal güvenlik kaydı sayılmaz |
+| F12 | İcra haczinin hesabı kilitlemesi (İİK m.89). | Borçlu genç | Madde 6: haciz tevkifat sonrası bakiyeyi kapsar, işleyişi durduramaz |
+| F13 | Döviz tahsilatın zorunlu TL’ye çevrilmesi. | Yazılım ihracatçısı genç | Madde 1 (ç): tevkifat TCMB kuruyla, net bakiye döviz tutulabilir |
+| F14 | Aynı kuruma yoğun fatura (akraba olmayan şebeke). | Devlet | Madde 1 (n): GİB risk taraması, ilave belge yükü yok ||
 
 ## V. EK B: TEYİT DURUMU VE AÇIK KALEMLER
 
@@ -429,6 +446,7 @@ Bu ek, teklif metninde bu sürümde yapılan düzeltmeleri kayıt altına alır.
 | 18 | VUK Ek Madde 19 (f) ‘Madde 1,’ diye başlıyordu. | Bağımsız kural cümlesi yapıldı. |
 | 19 | Madde 9 tek tırnakta 4632 Ek Madde 3 içine 5510 prim günü hükmünü de koyuyordu. | İki ek maddeye bölündü: 4632 Ek Madde 3 ve 5510 Ek Madde 25 (5510’da son ek madde 24). |
 | 20 | Madde 11 yalnız ‘şu başka maddede düzenlenmiştir’ diyordu. | Madde çıkarıldı; sonraki maddeler yeniden numaralandı. |
+| 22 | D.2’de prim yüzde 34,5–35,75 tam primle hesaplanmıştı. | Yalnız MYÖ payı (yüzde 21) Hazine’ye yüklendi; BES yükü yüzde 3,6 olarak düzeltildi. |
 | 21 | III.C ‘statüko geliri 0 TL’ diyordu; kayıtlı mükelleflerin geçişi gelir kaybı doğurur. | III.D.4’te yutulma terimi eklendi. |
 | 16 | 5411 m.146 atfı yanlıştı; 6493 yaptırımı BDDK’da değil TCMB’dedir. | M.148/1-(b) ve 6493 m.27 yazıldı. |
 
@@ -484,3 +502,12 @@ Karar notları (bu sürümde işlenen tercihler): giriş eşiği iki aylık brü
 - [GİB Seri 330 bilgi notu](https://gib.gov.tr/sites/default/files/fileadmin/mevzuatek/mevzuatbilginotu/gelirvergisiteblig330not.pdf)
 - [BDDK faaliyet izni (Halk TV)](https://halktv.com.tr/ekonomi/bddk-bir-bankanin-faaliyet-iznini-kaldirdi-1055989h)
 - [Banka hesabı kapatma (avukatlık notu, resmî kaynak değil)](https://www.kazimceylan.av.tr/md/banka-hesabi-kapatma-dilekcesi)
+
+### Birincil kaynak adresleri (veri talebi ve teyit için)
+
+- Güncel kanun metinleri: mevzuat.gov.tr (Cumhurbaşkanlığı Mevzuat Bilgi Sistemi). Bu çalışmada 6493, 5411, 5510, 5846, 4632, 492, 488, 3572, 3568, 5549, 6698, 5464 sayılı Kanunlar ile VUK ve GVK metinleri buradan okunmuştur.
+- Kayıt dışı istihdam: tuik.gov.tr, Hanehalkı İşgücü Araştırması bültenleri (tablo adı bu çalışmada yoklanmadı).
+- Sosyal güvenlik istatistikleri ve prim verileri: sgk.gov.tr, istatistik bültenleri (bu çalışmada okunmadı).
+- Bütçe ve mali yük: sbb.gov.tr ve Hazine ve Maliye Bakanlığı (bu çalışmada okunmadı).
+- Bankalar ve ücretler: bddk.org.tr; tcmb.gov.tr.
+
