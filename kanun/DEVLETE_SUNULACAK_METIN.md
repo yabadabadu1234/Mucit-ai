@@ -14,11 +14,11 @@ Bilgi ve iletişim teknolojileri, yazılım, veri işleme, teknik ve mühendisli
 
 Mevcut hukuki rejimde:
 
-1. **Fiziki adres ve barınma şartı.** Fiziki bir iş yeri, mağaza veya büro gerektirmeyen; dizüstü bilgisayar veya el aletleriyle çalışan kişilerden iş yeri adresi bildirmeleri, kira kontratı ibraz etmeleri, belediyeden ruhsat almaları ve meslek odalarına kayıt olmaları istenmektedir (213 sayılı Vergi Usul Kanunu m. 156, 172 [mevzuat yoklaması bekliyor]). Öğrenci yurdunda, kütüphanede veya MERNİS ikametgâhı olmadan yaşayan kişiler bu şartlar nedeniyle yasal çalışma zeminine fiilen erişemez.
+1. **Fiziki adres ve barınma şartı.** Fiziki bir iş yeri, mağaza veya büro gerektirmeyen; dizüstü bilgisayar veya el aletleriyle çalışan kişilerden iş yeri adresi bildirmeleri, kira kontratı ibraz etmeleri, belediyeden ruhsat almaları ve meslek odalarına kayıt olmaları istenmektedir (213 sayılı Vergi Usul Kanunu m. 153, 156, 157 ve 172). Öğrenci yurdunda, kütüphanede veya MERNİS ikametgâhı olmadan yaşayan kişiler bu şartlar nedeniyle yasal çalışma zeminine fiilen erişemez.
 
-2. **Sabit maliyet.** Düzenli gelir elde etmeyen bir üreticinin fatura kesebilmesi için Serbest Muhasebeci Mali Müşavir ile sözleşme yapması, aylık muhasebe bedeli ödemesi ve hiç gelir elde etmediği aylarda da maktu damga vergisi içeren beyannameleri vermesi gerekmektedir (3568 ve 488 sayılı Kanunlar [yoklama bekliyor]).
+2. **Sabit maliyet.** Düzenli gelir elde etmeyen bir üreticinin fatura kesebilmesi için Serbest Muhasebeci Mali Müşavir ile sözleşme yapması, aylık muhasebe bedeli ödemesi ve hiç gelir elde etmediği aylarda da maktu damga vergisi içeren beyannameleri vermesi gerekmektedir (3568 ve 488 sayılı Kanunlar).
 
-3. **Sosyal güvenlik.** Mükellefiyet tesis edildiğinde kişi adına resen Bağ-Kur sigortalılığı başlatılmakta ve aylık asgari ücretin üçte birini aşan prim borcu tahakkuk ettirilmektedir (5510 sayılı Kanun m. 4/b [yoklama bekliyor]). Bu durum öğrencilerin ve hak sahiplerinin mevcut Genel Sağlık Sigortası haklarını kesintiye uğratabilmektedir.
+3. **Sosyal güvenlik.** Mükellefiyet tesis edildiğinde kişi adına resen Bağ-Kur sigortalılığı başlatılmakta ve prime esas kazanç alt sınırı olan asgari ücret üzerinden prim borcu tahakkuk ettirilmektedir (5510 sayılı Kanun m. 4/1-(b) ve m. 82). Bu durum öğrencilerin ve hak sahiplerinin mevcut Genel Sağlık Sigortası haklarını kesintiye uğratabilmektedir.
 
 4. **Sosyal destek riski.** Küçük tutarlı gelir, öğrenci burslarının, öğrenim kredilerinin, yurt barınma hakkının, yetim ve ölüm aylıklarının, nafakanın ve aile yardımlarının kesilmesine gerekçe yapılabilmektedir. Bu kişilerin ileride gerçek bir işletme kurduklarında yararlanabilecekleri girişimcilik istisnası da bu durumda tüketilmiş olmaktadır.
 
@@ -43,11 +43,11 @@ Bu Kanun Teklifi, sermayesiz *hizmet* ve *fikir* üreticileri için kurulmuştur
 
 ## II. KANUN TEKLİFİ METNİ
 
-**MADDE 1-** 31/12/1960 tarihli ve 193 sayılı Gelir Vergisi Kanunu’na mükerrer 20 nci maddesinden sonra gelmek üzere aşağıdaki mükerrer 20/C maddesi eklenmiştir:
+**MADDE 1-** 31/12/1960 tarihli ve 193 sayılı Gelir Vergisi Kanunu’na mükerrer 20/D maddesinden sonra gelmek üzere aşağıdaki mükerrer 20/E maddesi eklenmiştir:
 
 > **"Bireysel emek, hizmet ve fikrî üretimde kazanç istisnası ve tevkifat uygulaması**
 >
-> **MÜKERRER MADDE 20/C –** Bu Kanunun mükerrer 20/B maddesi kapsamına giren kazançlar hariç olmak üzere; sermayeden ziyade şahsî mesaiye, ilmî veya mesleki bilgiye, bedenî hizmet uzmanlığına veya dijital medya üretimine dayanan; yazılım, donanım tasarımı, teknik ve mühendislik analizi, veri işleme, teknik modelleme, tercüme, grafik ve görsel tasarım, dijital sanat ve içerik üretimi, uzaktan operasyon ve sanal asistanlık ile bağımsız teknik montaj, bakım ve butik servis mahiyetindeki bireysel hizmet teslimlerinden müstakilen elde edilen gayrisafi hasılatın, takvim yılı itibarıyla 16 yaşından büyük işçiler için uygulanan yürürlükteki iki aylık brüt asgari ücretin 12 katını aşmayan kısmı gelir vergisinden müstesnadır. Bu istisnadan yararlanılabilmesi için Gelir İdaresi Başkanlığı elektronik portalı üzerinden “Mikro Mükellefiyet” tescilinin açılması şarttır.
+> **MÜKERRER MADDE 20/E –** Bu Kanunun mükerrer 20/B maddesi kapsamına giren kazançlar hariç olmak üzere; sermayeden ziyade şahsî mesaiye, ilmî veya mesleki bilgiye, bedenî hizmet uzmanlığına veya dijital medya üretimine dayanan; yazılım, donanım tasarımı, teknik ve mühendislik analizi, veri işleme, teknik modelleme, tercüme, grafik ve görsel tasarım, dijital sanat ve içerik üretimi, uzaktan operasyon ve sanal asistanlık ile bağımsız teknik montaj, bakım ve butik servis mahiyetindeki bireysel hizmet teslimlerinden müstakilen elde edilen gayrisafi hasılatın, takvim yılı itibarıyla 16 yaşından büyük işçiler için uygulanan yürürlükteki iki aylık brüt asgari ücretin 12 katını aşmayan kısmı gelir vergisinden müstesnadır. Bu istisnadan yararlanılabilmesi için Gelir İdaresi Başkanlığı elektronik portalı üzerinden “Mikro Mükellefiyet” tescilinin açılması şarttır.
 >
 > İstisna kapsamındaki kazançlar üzerinden aşağıdaki esaslar dairesinde tevkifat yapılır ve bu tevkifat nihaî vergilendirme sayılır:
 >
@@ -89,7 +89,7 @@ Bu Kanun Teklifi, sermayesiz *hizmet* ve *fikir* üreticileri için kurulmuştur
 
 **MADDE 2-** 4/1/1961 tarihli ve 213 sayılı Vergi Usul Kanunu’na aşağıdaki ek madde eklenmiştir:
 
-> **"EK MADDE 15 –** 193 sayılı Gelir Vergisi Kanunu’nun mükerrer 20/C maddesi kapsamındaki mükellefler:
+> **"EK MADDE 15 –** 193 sayılı Gelir Vergisi Kanunu’nun mükerrer 20/E maddesi kapsamındaki mükellefler:
 >
 > **a)** 156 ncı maddede tanımlanan fiziki iş yeri adresi bildirme, kira kontratı ibraz etme, iş yeri açma ve çalışma ruhsatı alma ile ticaret veya esnaf odalarına kayıt olma zorunluluğundan muaftır. Mükellefin fiziki yerleşim yeri veya MERNİS ikametgâhı bulunup bulunmadığına bakılmaksızın; 11/2/1959 tarihli ve 7201 sayılı Tebligat Kanunu’nun 7/a maddesi kapsamında elektronik ortamda tescil edilen Ulusal Elektronik Tebligat Sistemi (UETS) adresi ve e-Devlet kimlik doğrulaması, her türlü yasal tebligat, yoklama ve faaliyet adresi hükmündedir. Bu mükellefler hakkında fiziki yoklama memuru sevki şartı aranmaz.
 >
@@ -105,17 +105,17 @@ Bu Kanun Teklifi, sermayesiz *hizmet* ve *fikir* üreticileri için kurulmuştur
 >
 > **f)** Madde 1, mükellefin başvurusu üzerine verilecek bütün hakem kararlarının gerekçeli olarak yazılı biçimde bildirilmesini zorunlu kılar.**"
 
-**MADDE 3-** 25/10/1984 tarihli ve 3065 sayılı Katma Değer Vergisi Kanunu’nun 17 nci maddesinin (4) numaralı fıkrasının (a) bendinde yer alan “mükerrer 20/B maddesi” ibaresinden sonra gelmek üzere “ile mükerrer 20/C maddesi” ibaresi eklenmiştir. Mükerrer 20/C maddesi kapsamında düzenlenen faturalarda hizmetin mahiyeti, genel ifadelerle yetinilmeksizin ayırt edici biçimde belirtilir; mahiyetin gerçeğe aykırı beyanı halinde genel hükümler uygulanır.
+**MADDE 3-** 25/10/1984 tarihli ve 3065 sayılı Katma Değer Vergisi Kanunu’nun 17 nci maddesinin (4) numaralı fıkrasının (a) bendinde yer alan “mükerrer 20/B maddesi” ibaresinden sonra gelmek üzere “ile mükerrer 20/E maddesi” ibaresi eklenmiştir. Mükerrer 20/E maddesi kapsamında düzenlenen faturalarda hizmetin mahiyeti, genel ifadelerle yetinilmeksizin ayırt edici biçimde belirtilir; mahiyetin gerçeğe aykırı beyanı halinde genel hükümler uygulanır.
 
 **MADDE 4-** 1/7/1964 tarihli ve 488 sayılı Damga Vergisi Kanunu’na ekli (2) sayılı Tablonun “IV- Ticari ve medeni işlerle ilgili kağıtlar” başlıklı bölümüne aşağıdaki fıkra eklenmiştir:
 
-> "57. 193 sayılı Gelir Vergisi Kanunu’nun mükerrer 20/C maddesi kapsamında Gelir İdaresi Başkanlığı portalı üzerinden düzenlenen faturalar, tahsilat bildirimleri, sistem kayıtları ve bu işlemlere ilişkin elektronik ortamda tanzim olunan kâğıtlar."
+> "57. 193 sayılı Gelir Vergisi Kanunu’nun mükerrer 20/E maddesi kapsamında Gelir İdaresi Başkanlığı portalı üzerinden düzenlenen faturalar, tahsilat bildirimleri, sistem kayıtları ve bu işlemlere ilişkin elektronik ortamda tanzim olunan kâğıtlar."
 
 **MADDE 5-** 31/5/2006 tarihli ve 5510 sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu’nun 6 ncı maddesinin birinci fıkrasına aşağıdaki bent, aynı maddeye aşağıdaki fıkralar eklenmiştir:
 
-> "n) 193 sayılı Gelir Vergisi Kanunu’nun mükerrer 20/C maddesi kapsamında “Mikro Mükellefiyet” tescili bulunan ve takvim yılı gayrisafi hasılatı yasal tavanı aşmayanlar, bu faaliyetleri sebebiyle 4 üncü maddenin birinci fıkrasının (b) bendi kapsamında sigortalı sayılmazlar ve adlarına prim tahakkuku yapılmaz. Bu kişilerin öğrencilikleri yahut anne veya babaları üzerinden hak sahibi sıfatıyla yararlandıkları genel sağlık sigortalılığı hakları kesintiye uğratılamaz; hak sahipliği bulunmayanlar ise 60 ıncı maddenin birinci fıkrasının (g) bendi uyarınca maktu prim ödeyerek sağlık güvencesinden yararlanır. Bu mükelleflerin talep etmeleri halinde 50 nci madde hükümlerine göre isteğe bağlı sigortalı olma hakları saklıdır."
+> "o) 193 sayılı Gelir Vergisi Kanunu’nun mükerrer 20/E maddesi kapsamında “Mikro Mükellefiyet” tescili bulunan ve takvim yılı gayrisafi hasılatı yasal tavanı aşmayanlar, bu faaliyetleri sebebiyle 4 üncü maddenin birinci fıkrasının (b) bendi kapsamında sigortalı sayılmazlar ve adlarına prim tahakkuku yapılmaz. Bu kişilerin öğrencilikleri yahut anne veya babaları üzerinden hak sahibi sıfatıyla yararlandıkları genel sağlık sigortalılığı hakları kesintiye uğratılamaz; hak sahipliği bulunmayanlar ise 60 ıncı maddenin birinci fıkrasının (g) bendi uyarınca belirlenen genel sağlık sigortası primini ödeyerek sağlık güvencesinden yararlanır. Bu mükelleflerin talep etmeleri halinde 50 nci madde hükümlerine göre isteğe bağlı sigortalı olma hakları saklıdır."
 
-> "193 sayılı Gelir Vergisi Kanunu’nun mükerrer 20/C maddesi kapsamındaki tescil ve faaliyetler; mükellefe diğer mevzuat tatbikatında tacir, esnaf veya serbest meslek erbabı sıfatı kazandırmaz; ticari işletme veya serbest meslek faaliyeti sayılmaz. Bu durum, mükellefin dernek ve kooperatif kurma, bu kuruluşlara üye olma ve mesleki örgütlere ihtiyarî üye olma hakkını ortadan kaldırmaz.
+> "193 sayılı Gelir Vergisi Kanunu’nun mükerrer 20/E maddesi kapsamındaki tescil ve faaliyetler; mükellefe diğer mevzuat tatbikatında tacir, esnaf veya serbest meslek erbabı sıfatı kazandırmaz; ticari işletme veya serbest meslek faaliyeti sayılmaz. Bu durum, mükellefin dernek ve kooperatif kurma, bu kuruluşlara üye olma ve mesleki örgütlere ihtiyarî üye olma hakkını ortadan kaldırmaz.
 
 > Bu madde kapsamındaki mükellefiyet ve elde edilen hasılat; 16/8/1961 tarihli ve 351 sayılı Kanun, 14/7/1965 tarihli ve 657 sayılı Kanunun 206 ncı maddesi, 1/7/1976 tarihli ve 2022 sayılı Kanun, 24/5/1983 tarihli ve 2828 sayılı Kanun ile diğer mevzuat hükümleri kapsamında burs, öğrenim kredisi, yurt barınma hakkı, yetim, ölüm ve malullük aylığı, aile yardımı ödeneği, nafaka, engelli veya evde bakım yardımı ile her türlü kamusal sosyal desteğin kesilmesine, iptaline veya geri alınmasına dayanak yapılamaz; muhtaçlık ve gelir eşiği tespitlerinde sürekli ve düzenli gelir olarak dikkate alınmaz. Hak sahipliğini “gelir elde etmeme” veya “vergi mükellefi olmama” koşuluna bağlayan diğer her türlü mevzuat hükmü bu mükellefler hakkında uygulanmaz.
 
@@ -123,17 +123,17 @@ Bu Kanun Teklifi, sermayesiz *hizmet* ve *fikir* üreticileri için kurulmuştur
 
 **MADDE 6-** 19/10/2005 tarihli ve 5411 sayılı Bankacılık Kanunu’na aşağıdaki ek madde eklenmiştir:
 
-> "**EK MADDE – Mikro mükellef hesaplarına ilişkin güvence:** Mikro Mükellefiyet Belgesine sahip kişilerin münhasır hesap açma talebi, yasal gerekçe bulunmaksızın reddedilemez. Açılan hesap, gerekçesi yazılı olarak bildirilmeksizin kapatılamaz. Bu hesaplar için hesap açılış ve işletim ücreti alınamaz. Bu kişilerin münhasır hesaplarına gelen ve Gelir İdaresi Başkanlığı portal referans kodu ile eşleşen ödemeler, 5549 sayılı Kanun uyarınca yapılması gereken şüpheli işlem bildirimi ve ceza muhakemesi tedbirleri hariç olmak üzere bankalar tarafından bloke edilemez; hesaba giriş anında otomatik tevkifat yapılarak kalan bakiye derhal serbest bırakılır. Bu hükme aykırı uygulamalara karşı mükellefler Bankacılık Düzenleme ve Denetleme Kurumuna elektronik ortamda ivedi itirazda bulunabilir [Kurum içindeki birim adı yoklanacak]. Banka üç iş günü içinde yazılı savunma verir; Kurum itirazı en geç beş iş günü içinde karara bağlar. Aykırılığı tespit edilen bankalar hakkında bu Kanunun 148 inci maddesinin birinci fıkrasının (b) bendi hükmü uygulanır; bu hâlde 149 uncu maddedeki bir aylık savunma süresi yerine bu maddedeki üç iş günlük süre geçerlidir. Ödeme kuruluşları ve elektronik para kuruluşları bakımından aykırılık, 6493 sayılı Kanunun 27 nci maddesi kapsamında Türkiye Cumhuriyet Merkez Bankası tarafından değerlendirilir. Mükellefler münhasır hesaplarını diledikleri başka bir bankaya veya ödeme kuruluşuna taşıma hakkına sahiptir; taşıma talebi ilgili kuruluşlarca en geç üç iş günü içinde sonuçlandırılır [süre karar bekliyor]."
+> "**EK MADDE – Mikro mükellef hesaplarına ilişkin güvence:** Mikro Mükellefiyet Belgesine sahip kişilerin münhasır hesap açma talebi, yasal gerekçe bulunmaksızın reddedilemez. Açılan hesap, gerekçesi yazılı olarak bildirilmeksizin kapatılamaz. Bu hesaplar için hesap açılış ve işletim ücreti alınamaz. Bu kişilerin münhasır hesaplarına gelen ve Gelir İdaresi Başkanlığı portal referans kodu ile eşleşen ödemeler, 5549 sayılı Kanun uyarınca yapılması gereken şüpheli işlem bildirimi ve ceza muhakemesi tedbirleri hariç olmak üzere bankalar tarafından bloke edilemez; hesaba giriş anında otomatik tevkifat yapılarak kalan bakiye derhal serbest bırakılır. Bu hükme aykırı uygulamalara karşı mükellefler Bankacılık Düzenleme ve Denetleme Kurumuna elektronik ortamda ivedi itirazda bulunabilir [BDDK’nın şikâyetlere bakan birimi 2015 ve 2021 tarihli kaynaklarda Finansal Tüketici İlişkileri Daire Başkanlığı olarak geçer; güncel teşkilat BDDK’dan teyit edilmelidir]. Banka üç iş günü içinde yazılı savunma verir; Kurum itirazı en geç beş iş günü içinde karara bağlar. Aykırılığı tespit edilen bankalar hakkında bu Kanunun 148 inci maddesinin birinci fıkrasının (b) bendi hükmü uygulanır; bu hâlde 149 uncu maddedeki bir aylık savunma süresi yerine bu maddedeki üç iş günlük süre geçerlidir. Ödeme kuruluşları ve elektronik para kuruluşları bakımından aykırılık, 6493 sayılı Kanunun 27 nci maddesi kapsamında Türkiye Cumhuriyet Merkez Bankası tarafından değerlendirilir. Mükellefler münhasır hesaplarını diledikleri başka bir bankaya veya ödeme kuruluşuna taşıma hakkına sahiptir; taşıma talebi ilgili kuruluşlarca en geç üç iş günü içinde sonuçlandırılır [süre karar bekliyor]."
 
 **MADDE 7-** 20/6/2013 tarihli ve 6493 sayılı Ödeme ve Menkul Kıymet Mutabakat Sistemleri, Ödeme Hizmetleri ve Elektronik Para Kuruluşları Hakkında Kanuna aşağıdaki ek madde eklenmiştir:
 
-> "**EK MADDE – Mikro mükellef tahsilatlarında komisyon tavanı:** 193 sayılı Gelir Vergisi Kanunu’nun mükerrer 20/C maddesi kapsamındaki tahsilatlarda ödeme kuruluşları ve bankalar; EFT, havale ve sanal POS komisyonu olarak banka ve sigorta muameleleri vergisi hariç azami binde iki (0,002) oranını aşan komisyon alamazlar. Türkiye Cumhuriyet Merkez Bankası, bu tavanı aşmamak üzere, 12 nci maddenin dördüncü fıkrası uyarınca ödeme hizmeti türlerine göre azami komisyon oranlarını belirlemeye yetkilidir." [TCMB’nin bu yetkisi 6493 sayılı Kanunun 12 nci maddesinin dördüncü fıkrasında (7192 sayılı Kanunla eklenen) mevzuat metninden doğrulanmıştır; binde iki oranının ekonomik etkisi ölçülmemiştir; bkz. Ek B.]
+> "**EK MADDE – Mikro mükellef tahsilatlarında komisyon tavanı:** 193 sayılı Gelir Vergisi Kanunu’nun mükerrer 20/E maddesi kapsamındaki tahsilatlarda ödeme kuruluşları ve bankalar; EFT, havale ve sanal POS komisyonu olarak banka ve sigorta muameleleri vergisi hariç azami binde iki (0,002) oranını aşan komisyon alamazlar. Türkiye Cumhuriyet Merkez Bankası, bu tavanı aşmamak üzere, 12 nci maddenin dördüncü fıkrası uyarınca ödeme hizmeti türlerine göre azami komisyon oranlarını belirlemeye yetkilidir." [TCMB’nin bu yetkisi 6493 sayılı Kanunun 12 nci maddesinin dördüncü fıkrasında (7192 sayılı Kanunla eklenen) mevzuat metninden doğrulanmıştır; binde iki oranının ekonomik etkisi ölçülmemiştir; bkz. Ek B.]
 
 **MADDE 8-** Mikro mükellefiyet kapsamında son on iki ayda düzenli tevkifat ödemesi yapan kişilere, Hazine destekli Kredi Garanti Fonu (KGF) kefaletiyle “Mikro Girişimci Destek Kredisi” verilebilir. Gelir İdaresi Başkanlığı tarafından üretilen karekodlu kümülatif hasılat ve tevkifat belgesi, bankacılık kredi tahsis süreçlerinde ticari ciro belgesi yerine geçer ve bankalar bu belgeyi kredi değerlendirmesinde dikkate almak zorundadır. Kefalet tutarı, mükellefin son on iki aydaki gayrisafi hasılatının [yüzde elli — karar bekliyor] ile sınırlıdır. [KGF mevzuatındaki uygulama biçimi ve Hazine maliyeti Ek B’de hesaplanacaktır.]
 
 **MADDE 9-** 28/3/2001 tarihli ve 4632 sayılı Bireysel Emeklilik Tasarruf ve Yatırım Sistemi Kanununa ve 5510 sayılı Kanuna aşağıdaki hüküm eklenmiştir:
 
-> "Mikro mükellefiyet kapsamında Hazine’ye aktarılan her yüz Türk Lirası tevkifatın üç Türk Lirası, mükellefin ayrılma (opt-out) hakkı saklı kalmak kaydıyla, mükellef adına otomatik olarak bireysel emeklilik sistemine aktarılır ve bu tutara yüzde yirmibeş devlet katkısı eklenir. Ayrıca bu statüde geçirilen ve yıllık hasılatın tavanın en az yarısına ulaştığı her takvim yılı, genel sağlık sigortası prim borcu bulunmamak kaydıyla, 5510 sayılı Kanun kapsamında doksan gün prim ödeme süresine sayılır." [Doksan günlük kısmî prim gününün finansmanı Hazine bütçe transferiyle sağlanır; İşsizlik Sigortası Fonu’nun bu amaçla kullanılıp kullanılamayacağı mevzuat uyumu bakımından yoklanacaktır.]
+> "Mikro mükellefiyet kapsamında Hazine’ye aktarılan her yüz Türk Lirası tevkifatın üç Türk Lirası, mükellefin ayrılma (opt-out) hakkı saklı kalmak kaydıyla, mükellef adına otomatik olarak bireysel emeklilik sistemine aktarılır ve bu tutara 4632 sayılı Kanunun Ek 1 inci maddesi uyarınca belirlenen oranda Devlet katkısı eklenir. Ayrıca bu statüde geçirilen ve yıllık hasılatın tavanın en az yarısına ulaştığı her takvim yılı, genel sağlık sigortası prim borcu bulunmamak kaydıyla, 5510 sayılı Kanun kapsamında doksan gün prim ödeme süresine sayılır." [4632 Ek 1 inci madde: kanundaki oran yüzde otuzdur, Cumhurbaşkanı sıfırdan yüzde elliye kadar belirler; 7/1/2026 tarihli 10811 sayılı Cumhurbaşkanı Kararıyla Türk parası katkı payları için yüzde yirmidir (mevzuat metninden okundu). Devlet katkısı Bakanlık bütçesindeki ödenekten karşılanır. Doksan günlük kısmî prim gününün finansmanı Hazine bütçe transferiyle sağlanır; İşsizlik Sigortası Fonu’nun bu amaçla kullanılıp kullanılamayacağı mevzuat uyumu bakımından yoklanacaktır.]
 
 **MADDE 10-** Mikro Üretici Dijital Hakem Heyeti ve itiraz usulü:
 
@@ -151,13 +151,13 @@ Bu Kanun Teklifi, sermayesiz *hizmet* ve *fikir* üreticileri için kurulmuştur
 >
 > Gelir İdaresi Başkanlığı, risk analizi algoritmaları tarafından işaretlenip inceleme askısına alınan işlemlerden, itiraz veya inceleme sonucunda hukuka uygun bulunanların oranını (yanlış pozitif oranı) her yıl faaliyet raporunda kamuoyuna ilan eder.
 >
-> Heyet kararlarına karşı vergi mahkemelerinde dava açma süresi otuz gündür. Bu davalar bakımından 2577 sayılı İdari Yargılama Usulü Kanunu’nun 20/A maddesinde düzenlenen ivedi yargılama usulü uygulanır [20/A maddesinin mevcut kapsamı bu uyuşmazlıkları içermediğinden bu cümle ayrı bir uygulama hükmü olarak yazılmıştır]. Bu davalar harca tabi değildir [Harçlar Kanununda vergi davaları için genel muafiyet hükmü aranmış ve bulunamamıştır; bu cümle 492 sayılı Kanuna ayrı bir atıf gerektirebilir].
+> Heyet kararlarına karşı vergi mahkemelerinde dava açma süresi otuz gündür. Bu davalar bakımından 2577 sayılı İdari Yargılama Usulü Kanunu’nun 20/A maddesinde düzenlenen ivedi yargılama usulü uygulanır [20/A maddesinin mevcut kapsamı bu uyuşmazlıkları içermediğinden bu cümle ayrı bir uygulama hükmü olarak yazılmıştır]. Bu davalar harca tabi değildir [492 sayılı Harçlar Kanunu (3) sayılı tarifesi uyarınca vergi mahkemesinde başvurma harcı 2026 için 732,00 TL, nispi harç binde 4,55’tir; genel muafiyet yoktur. Bu cümle bu tarifedeki başvurma, nispi ve maktu harçlardan muafiyeti açıkça yazmalıdır].
 
-**MADDE 11-** 193 sayılı Kanunun mükerrer 20/C maddesi kapsamında konut içinde yürütülen mikro üretim faaliyetlerine ilişkin ruhsat muafiyeti, 213 sayılı Kanuna eklenen Ek Madde 15’in (d) bendi ile düzenlenmiştir. [Atıf yapılan 3572 sayılı Kanunun güncel metni Ek B’de yoklanacaktır.]
+**MADDE 11-** 193 sayılı Kanunun mükerrer 20/E maddesi kapsamında konut içinde yürütülen mikro üretim faaliyetlerine ilişkin ruhsat muafiyeti, 213 sayılı Kanuna eklenen Ek Madde 15’in (d) bendi ile düzenlenmiştir. [Atıf yapılan 3572 sayılı Kanunun güncel metni Ek B’de yoklanacaktır.]
 
-**MADDE 12-** 24/3/2016 tarihli ve 6698 sayılı Kişisel Verilerin Korunması Kanununa ilişkin olarak: Mikro mükelleflerin finansal ve kişisel verileri takma adlaştırma (pseudonymization) tekniği ile maskelenerek saklanır. Verilerin işlendiği sunucular münhasıran Türkiye Cumhuriyeti sınırları içindeki kamu veri merkezlerinde barındırılır. Verilerin yetkisiz kişilerle veya üçüncü taraflarla paylaşılması ağır ceza yaptırımına bağlıdır.
+**MADDE 12-** 24/3/2016 tarihli ve 6698 sayılı Kişisel Verilerin Korunması Kanununa ilişkin olarak: Mikro mükelleflerin finansal ve kişisel verileri takma adlaştırma (pseudonymization) tekniği ile maskelenerek saklanır; bu Kanunda takma adlaştırma, kişisel verilerin ek bilgi kullanılmaksızın belirli bir gerçek kişiyle ilişkilendirilemeyecek hâle getirilmesidir. [6698 sayılı Kanun m.3 yalnız anonim hâle getirmeyi tanımlar, takma adlaştırmayı tanımlamaz; bu yüzden tanım burada verilmiştir.] Verilerin işlendiği sunucular münhasıran Türkiye Cumhuriyeti sınırları içindeki kamu veri merkezlerinde barındırılır. Verilerin yetkisiz kişilerle veya üçüncü taraflarla paylaşılması ağır ceza yaptırımına bağlıdır.
 
-**GEÇİCİ MADDE 1-** Bu Kanunun yürürlüğe girdiği tarihten önce, 193 sayılı Kanunun mükerrer 20/C maddesi kapsamına giren fikrî, teknik, bedenî ve dijital hizmet faaliyetlerinden hasılat elde etmiş olup mükellefiyet tesis ettirmemiş gerçek kişiler hakkında; geçmiş takvim yıllarında elde ettikleri hasılat üzerinden birinci gelir dilimi tevkifat oranına tekabül eden tutarın Kanunun yayımını izleyen altı ay içinde Hazine’ye ödenmesi kaydıyla, geçmişe dönük vergi ziyaı cezası, gecikme faizi ve usulsüzlük cezaları kesilmez, kesilenler terkin edilir; bu kişiler adına geçmişe dönük 5510 sayılı Kanunun 4 üncü maddesinin birinci fıkrasının (b) bendi kapsamında resen sigortalılık tescili ve prim borcu tahakkuku yapılmaz. Bu madde, her bir geçmiş takvim yılında hasılatı o yılın tavanını aşmayan kişileri kapsar; tavanı aşan kısım bu maddeden yararlanamaz ve genel hükümlere tabidir. Ayrıca 213 sayılı Kanunun 359 uncu maddesinde sayılan fiillerden dolayı haklarında vergi incelemesi veya ceza davası bulunanlar bu maddeden yararlanamaz [madde atfı yoklanacak].
+**GEÇİCİ MADDE 1-** Bu Kanunun yürürlüğe girdiği tarihten önce, 193 sayılı Kanunun mükerrer 20/E maddesi kapsamına giren fikrî, teknik, bedenî ve dijital hizmet faaliyetlerinden hasılat elde etmiş olup mükellefiyet tesis ettirmemiş gerçek kişiler hakkında; geçmiş takvim yıllarında elde ettikleri hasılat üzerinden birinci gelir dilimi tevkifat oranına tekabül eden tutarın Kanunun yayımını izleyen altı ay içinde Hazine’ye ödenmesi kaydıyla, geçmişe dönük vergi ziyaı cezası, gecikme faizi ve usulsüzlük cezaları kesilmez, kesilenler terkin edilir; bu kişiler adına geçmişe dönük 5510 sayılı Kanunun 4 üncü maddesinin birinci fıkrasının (b) bendi kapsamında resen sigortalılık tescili ve prim borcu tahakkuku yapılmaz. Bu madde, her bir geçmiş takvim yılında hasılatı o yılın tavanını aşmayan kişileri kapsar; tavanı aşan kısım bu maddeden yararlanamaz ve genel hükümlere tabidir. Ayrıca 213 sayılı Kanunun 359 uncu maddesinde sayılan fiillerden dolayı haklarında vergi incelemesi veya ceza davası bulunanlar bu maddeden yararlanamaz [madde atfı yoklanacak].
 
 **GEÇİCİ MADDE 2-** Bu Kanunun yürürlüğe girdiği tarihten önce mükellefiyeti bulunan ve yıllık cirosu 24 asgari ücretin altında olan gerçek kişi işletmeler, talep etmeleri halinde geçmiş dönem vergi ve prim borçlarını otuzaltı ay taksitle yapılandırarak Mikro Mükellefiyet statüsüne geçebilir. Önceki dönemde ödedikleri Bağ-Kur primleri kazanılmış hak olarak saklı tutulur ve yeni statüde kısmî gün sayımına eklenir.
 
@@ -312,10 +312,10 @@ Bu ek, metindeki atıfların hangilerinin yoklandığını ve hangilerinin yokla
 
 | # | Konu | Durum |
 | :-- | :-- | :-- |
-| 1 | GVK mükerrer 20/B (serbest meslek) ve 20/C | Arama bulamadı; “20/B kapsamı hariç” ibaresinin sonucu belirsiz. |
+| 1 | GVK mükerrer 20/B ve 20/C, 20/D | Mevzuat metninden okundu. 20/B: sosyal içerik üreticisi ve uygulama geliştirici istisnası, banka tevkifatı yüzde 15, dördüncü gelir dilimi sınırı. **20/C ve 20/D zaten mevcut** (tarımsal destekleme; yurt dışı kazanç), bu yüzden teklifin yeni maddesi **mükerrer 20/E** olarak yeniden numaralandı. |
 | 2 | 6493 sayılı Kanunda komisyon tavanı | TCMB’nin ödeme hizmetlerindeki komisyon ve ücretlerin niteliğini ve azami oranını belirleme yetkisi doğrulandı. Güncel tavan oranı bulunamadı; kanunda sabit binde iki tavan ile TCMB’nin yetkisi arasındaki ilişki seçilmelidir. |
-| 3 | 3568 (SMMM), 488 (Damga), 5510 m. 4/b, m. 6/1(n), m. 50, m. 60/1(g), 7201 m. 7/a (UETS), 351, 657 m. 206, 2022, 2828, 4632 (BES), 5549 (MASAK), 6698 (KVKK), 213 m. 156 ve 172, 103 üncü madde birinci dilim oranı | Mevzuat.gov.tr üzerinden tek tek yoklanacak. |
-| 4 | Bankacılık Kanunu’na Madde 6 ile eklenen uyuşmazlık merci | Türkiye Bankalar Birliği hakem heyeti yoklanmadı; merci sunumdan önce belirlenecek. |
+| 3 | Atıflar | **Mevzuat metninden okundu:** 3568, 488 (Tablo 2 IV; son madde 56, yeni madde 57 doğru), 5510 (m.4/1-(b), m.6/1: (n) zaten var, yeni bent (o) oldu; m.50; m.60/1-(g); m.82), 5549 m.4, 4632 Ek 1 (oran yüzde yirmi), 6698 m.3, VUK m.153-157-172, GVK m.103 (ilk dilim yüzde 15, 2026’da 190.000 TL), GVK m.94/19 (yüzde 25), TMK m.737, 3572 m.4 (c bendi kat mülkiyeti dâhil), 492 (3) sayılı tarife, 6493, 5411, 5846. **İkincil kaynaktan:** 351 (burs, kredi, yurt), 657 m.206 (aile yardımı), 7201 m.7/a (zorunlu kapsam sayılıdır; gerçek kişiler talebe bağlı), 2022 ve 2828 (5510 m.60 metninde geçer). **Okunamadı:** TOBB ve Sanayi ve Teknoloji Bakanlığı ad doğrulaması. |
+| 4 | Bankacılık Kanunu’na Madde 6 ile eklenen uyuşmazlık merci | BDDK (5411 m.148/1-(b), m.149) ve ödeme kuruluşları için TCMB (6493 m.27) olarak belirlendi; BDDK birim adı teyit bekliyor. |
 | 5 | e-Devlet kimlik paylaşım sistemi ile muhtarlık erişimi | Yoklanmadı. |
 | 6 | Vadeli tevkifat senedinin GİB’de işletilebilirliği | Teknik yetkinlik yoklanmadı. |
 | 7 | KGF destekli kredi ve Hazine maliyeti | Hesaplanmadı. |
@@ -324,7 +324,7 @@ Bu ek, metindeki atıfların hangilerinin yoklandığını ve hangilerinin yokla
 
 | Kalem | Açık |
 | :-- | :-- |
-| Madde 9 BES katkısı (yüzde 25) | Tahmini aktüeryal yük yok. |
+| Madde 9 BES katkısı (Devlet katkısı güncel yüzde 20) | Tahmini aktüeryal yük yok. |
 | Madde 9 kısmî prim günü (90 gün) | Finansman kaynağı belirlenmedi. |
 | Madde 8 KGF garantisi | Hazine yükü hesaplanmadı. |
 | Madde 7 komisyon tavanı | Ödeme kuruluşları için ekonomik etki ölçülmedi. |
@@ -349,7 +349,12 @@ Bu ek, teklif metninde bu sürümde yapılan düzeltmeleri kayıt altına alır.
 | 8 | Tashih işaretleri (T1…T26) ve müzakere notları metinde kalmıştı. | Kaldırıldı; bu notlar yalnız iç çalışma dosyasında kalır. |
 | 9 | “Bu bir beşer eseridir” ve “hakikat” gibi retorik ifadeler gerekçede yer alıyordu. | Kaldırıldı; gerekçe yalnızca hukukî ve teknik ifadelerle yazıldı. |
 | 10 | Madde 1 (l) platform stopajı hükmü teklifte yoktu. | Eklendi; yoklanmadan kesinleşmiş sayılmaz. |
-| 11 | Geçici Madde 1 ile Madde 1 (b) yüzde 15 ile birinci dilim arasında tutarsızdı. | Birinci gelir dilimi oranı tek ifadeyle kullanıldı; oranın yoklanması Ek B’de. |
+| 11 | Geçici Madde 1 ile Madde 1 (b) yüzde 15 ile birinci dilim arasında tutarsızdı. | Birinci gelir dilimi oranı tek ifadeyle kullanıldı; GVK m.103 ile yüzde 15 doğrulandı. |
+| 12 | Mükerrer 20/C ve 20/D GVK’da zaten vardı; teklifin 20/C’si çakışıyordu. | Yeni madde mükerrer 20/E olarak yeniden numaralandı. |
+| 13 | 5510 m.6/1’de (n) bendi zaten vardı. | Yeni bent (o) olarak yazıldı. |
+| 14 | Gerekçede “asgari ücretin üçte biri prim borcu” yazıyordu; üçte bir gelir testi eşiğidir. | Prime esas kazanç alt sınırı olan asgari ücret (5510 m.82) yazıldı. |
+| 15 | Devlet katkısı “yüzde yirmibeş” sabit yazılıydı; kanunda oran yüzde otuz, Cumhurbaşkanı Kararıyla yüzde yirmi. | Oran 4632 Ek 1’e bağlandı. |
+| 16 | 5411 m.146 atfı yanlıştı; 6493 yaptırımı BDDK’da değil TCMB’dedir. | M.148/1-(b) ve 6493 m.27 yazıldı. |
 
 ---
 
@@ -358,12 +363,12 @@ Bu ek, teklif metninde bu sürümde yapılan düzeltmeleri kayıt altına alır.
 Aşağıdakiler bu metnin tamamlanması için gereklidir; bunlara kadar metin “taslak” sayılır:
 
 1. Platform stopajı ve Madde 1 (l)’nin 94/19 ile ilişkisi (yoklama).
-2. GVK mükerrer 20/B’nin içeriği (yoklama).
-3. Komisyon tavanı için dayanak ve merci (yoklama).
-4. Uyuşmazlık mercii (Madde 6).
+2. GVK mükerrer 20/E’nin 20/B ile kesişiminin hukukî incelemesi (20/B metni yoklandı).
+3. Komisyon tavanı: kanunda sabit binde iki mi, yalnız TCMB yetkisi mi (karar).
+4. BDDK birim adının teyidi (Madde 6).
 5. Mali etki hesabı (Ek B.3).
 6. Yabancı uyruklu gençler için koşullar (A5).
-7. Kanun numaralarının ve maddelerin tek tek yoklanması (Ek B.2).
+7. TOBB ve Sanayi ve Teknoloji Bakanlığı adlarının teyidi (Madde 10).
 8. Hakem heyetinin kuruluş biçimi (Madde 10).
 
 ---
@@ -377,7 +382,7 @@ Aşağıdakiler bu metnin tamamlanması için gereklidir; bunlara kadar metin �
 | 5411 m.146’ya dayalı yaptırım | 5411 metninden okundu: m.146 bu ek maddeyi saymıyor; uygun hüküm m.148/1-(b) (50.000–500.000 TL), savunma süresi m.149’da bir aydır. M.6 buna göre düzeltildi. 6493 kapsamında ceza yetkisi BDDK’da değil Merkez Bankası Yönetim Komitesindedir (6493 m.27, 40.000–900.000 TL, bir ay savunma, idare mahkemesi). |
 | 6493 m.12/4 TCMB komisyon yetkisi | Mevzuat metninden doğrulandı (7192 ile eklendi). |
 | 5846 m.8 ve m.20 | Mevzuat metninden doğrulandı; M.1 (ı) buna göre yazıldı. |
-| GVK mükerrer 20/B | İkincil kaynaklarda sosyal içerik üreticisi istisnası olarak bulundu (banka tevkifatı yüzde 15, İstisna Belgesi); bu teklifteki mükerrer 20/C ile kesişimi ayrıca incelenmelidir. |
+| GVK mükerrer 20/B | İkincil kaynaklarda sosyal içerik üreticisi istisnası olarak bulundu (banka tevkifatı yüzde 15, İstisna Belgesi); bu teklifteki mükerrer 20/E ile kesişimi ayrıca incelenmelidir. |
 | “Hazine net kârdadır” | Ölçüm yok; yazılmadı. |
 | “SGK aktüeryal etkisi pozitif” | Ölçüm yok; yazılmadı. |
 | 2577 m.20/A’nın vergi uyuşmazlığını kapsadığı | Kapsamı sınırlıdır; yalnız açık başvuruyla uygulanır. |
