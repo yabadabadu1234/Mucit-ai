@@ -31,6 +31,7 @@ Kaide: Bu dosyalardaki cümleler **başka bir yapay zekânın ifadeleridir**, pa
 | `FARABI_BURHAN_1_24_OKUMA_DEFTERI.md` | Fârâbî Kitâbü'l-Burhân s.1–24 sayfa defteri, bizde olan/olmayan tablosu | 3-I 235, 236; S32, S33, S34 |
 | `MATURIDI_TEVHID_OKUMA_DEFTERI.md` | Mâtürîdî Kitâbü't-Tevhîd okuma defteri ve bölüm özetleri (usul, ilâhiyyât, nübüvvet, kazâ ve kader; damıtmalar 3b–3i; açık suâller S38–S60) | 3-I 241, 242 |
 | `RISALE_SIFATI_ILAHIYE_DELIL_TASNIFI.md` ve `RISALE_SIFATI_ILAHIYE_BIRIMLER.md` | Risâle-i Nûr derlemesinin (`sifati-ilahiye.pdf`, 201 sayfa) 94 delil biriminin öncül yapısına göre tasnifi (burhânî · şartlı · zannî · peşin kabul · yanlış ikilem …), sıfat sıfat özet, ortak bulgular ve veritabanına işlenenler; birim tablosu 40 KB aşmasın diye ayrı dosyadadır | 3-I 243; S61 (kapandı) |
+| `ISLAM_KUMESI_TASNIFI.md` | Mısıroğlu vasıflarının sınanması (karakterizasyon, taksim değil), başka yapay zekâ metinlerinin tenkidi, Şâtıbî Makâsıd girişi (Şâmile 668–678 okundu), tamlık yolları, tanım–içerik–gâye–vasıf katmanları, sahipsiz hüküm testi, eksik adayları, harita kartı | 3-I 254; S62–S66 |
 
 ## C. Okuma kuralı
 

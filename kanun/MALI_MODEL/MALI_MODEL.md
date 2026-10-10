@@ -94,3 +94,18 @@ Kırılma noktası: **s* = %12.6** (Orta). Monte Carlo (4000 deneme; s ortalamas
 | BES vazgeçme | EGM | Otomatik katılımda vazgeçme oranı |
 | KGF | KGF, Hazine | Mikro ölçek faizsiz finansman temerrüt oranı |
 | PTT, BT | PTT, GİB, BDDK | UETS birim gideri; portal ve banka entegrasyon maliyeti |
+
+## Ek: "kapısız + tavanlı" harici önerinin sınanması (10/10/2026)
+
+Harici bir metin kapıyı (Madde 1 (p)) kaldırıp KDV mahsubunu %25'e, 90 gün desteğini tevkifatın %25'ine sınırlayarak "s=%100 olsa da Hazine kârda" iddia etti. Bu model (4. yıl, aynı girdiler; prim tahsilat oranı %37,5 alındı, bu oran **yoklanmadı**) şunu verdi (milyar TL):
+
+| Senaryo | s | Mevcut metin, kapısız | Harici tavanlar + tahsilat %37,5 |
+| :-- | :-- | :-- | :-- |
+| Orta | %5 | +3,44 | +4,79 |
+| Orta | %20 | −3,35 | +1,16 |
+| Orta | %50 | −16,94 | −6,10 |
+| Orta | %100 | −38,60 | −17,22 |
+| Kötümser | %20 | −2,03 | −0,07 |
+| Kötümser | %100 | −16,89 | −7,71 |
+
+Sonuç: iddia (s=%100'de kesin kâr) bu modelde **tutmuyor**; çünkü iddia, kaybedilen mevcut vergi ve prim gelirini (yutulma) hesaba katmıyor. Tavanlar kırılma noktasını yükseltiyor (Orta: kırılma s≈%12,6'dan s≈%24,8'e) ama kapıyı gereksiz kılmıyor. Not: bu varyant metne **işlenmedi**; karar padişahındır.

@@ -60,6 +60,7 @@ Bu dosya **dizindir**. Eskiden tek dosya olan deşmenin bütün yaprakları **si
 | [V.6.2.d_YUVARLAK_TEMSILI](DESME/KISIM_V/V.6.2.d_YUVARLAK_TEMSILI.md) | V.6.2.102-126 | 25 | 6.1 KB |
 | [V.6.2.e_FIKIH_LISTE_NESEFI](DESME/KISIM_V/V.6.2.e_FIKIH_LISTE_NESEFI.md) | V.6.2.127-145 | 19 | 4.4 KB |
 | [V.6.2.f_ISPAT_KAPSAMI_AG](DESME/KISIM_V/V.6.2.f_ISPAT_KAPSAMI_AG.md) | V.6.2.146-173 | 38 | 11.4 KB |
+| [V.6.2.g_ISLAM_VASIF_TASNIFI](DESME/KISIM_V/V.6.2.g_ISLAM_VASIF_TASNIFI.md) | V.6.2.184-208 | 25 | 5 KB |
 | [V.6.3-5_SABLON_LISTE_TUTARLILIK](DESME/KISIM_V/V.6.3-5_SABLON_LISTE_TUTARLILIK.md) | V.6.3–V.6.5 | 22 | 4.0 KB |
 | [V.7_SUNNET](DESME/KISIM_V/V.7_SUNNET.md) | V.7 | 10 | 1.2 KB |
 | [V.8_MUSLUMAN_OKUYUCU](DESME/KISIM_V/V.8_MUSLUMAN_OKUYUCU.md) | V.8 | 8 | 1.2 KB |
@@ -87,6 +88,6 @@ Bu dosya **dizindir**. Eskiden tek dosya olan deşmenin bütün yaprakları **si
 | [V.Kq_MATURIDI_IRADE_III_KAZA_TENKIT](DESME/KISIM_V/V.Kq_MATURIDI_IRADE_III_KAZA_TENKIT.md) | V.K.T9.1–11 (Claude tenkidi: irade III, kazâ ve kader tanımları; 3-I 241, 242) | 11 | 7.3 KB |
 | [V.TOPLU_TENKIT_ACIK_ISLER](DESME/KISIM_V/V.TOPLU_TENKIT_ACIK_ISLER.md) | TOPLU | 0 | 1.4 KB |
 
-**Toplam yaprak: 3424.** Cinse göre: K 1389 · Z 933 · C 768 · İ 128 · İt 80 · B 73 · T 35 · M 17 · H 1
+**Toplam yaprak: 3449** (V.6.2.g'deki 25 yaprak eklendi, 3-I 254; cinse göre dağılım yeniden sayılmadı, eski sayı geçerlidir). Cinse göre: K 1389 · Z 933 · C 768 · İ 128 · İt 80 · B 73 · T 35 · M 17 · H 1
 
 Not (3-I 241): V.1.3.M (285), V.2.6–V.2.39 (943), V.3.M (107), V.4.M (83), V.4.N (96), V.4.O (70) ve V.5.8–V.5.12 (66), V.K (871) ve V.M (73) yaprakları Mâtürîdî'den alınmıştır; V.F ve V.M satırlarının cinsi 3. sütundadır (namzet önerisi). V.1 dosyası 40 KB'ı aşınca V.1.4.17 ve sonrası **silinmeden** V.1.4b dosyasına taşınmıştır (3-I 238).
