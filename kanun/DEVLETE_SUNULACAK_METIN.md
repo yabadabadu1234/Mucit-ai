@@ -37,6 +37,8 @@ Bu Kanun Teklifi; sermayesiz hizmet ve fikrî üreticilerin önündeki bu bariye
 
 * Teklif, muhasebeci zorunluluğunu yalnız yıllık hasılatı 24 brüt asgari ücreti aşmayan mükellefler için kaldırır; tavanı aşan mükellef gerçek usule geçer ve meslek mensuplarıyla sözleşme yapar. Bu nedenle düzenleme meslek mensuplarının mevcut müşterilerini azaltmaz; tavanı aşacak mükellefler için yeni bir müşteri havuzu oluşturması beklenir (bu beklenti ölçülmemiştir).
 
+* Teklif, faiz içermeyen finansmanı esas alır, kumar ve benzeri kazanç alanlarını ve faizli borç ilişkisini kapsam dışı bırakır; mükelleften hasılat doğmadan hiçbir bedel talep etmez ve vergiyi önceden belli bir oranla, tahsilat anında alır (belirsizlik ve haksız yük giderilmiştir).
+
 ### B. Dürüstlük Notu
 
 Bu Kanun Teklifi, sermayesiz *hizmet* ve *fikir* üreticileri için kurulmuştur; **ticaretin tamamını kapsamaz.** Satın alınıp yeniden satılan mallar, stoklu ticaret, dropshipping ve toptan satış bu teklifin kapsamı dışındadır ve bunlar için ayrı bir düzenleme gerekir. Suistimal riski sıfırlanamaz; teklifteki hükümler bu riski azaltmayı amaçlar. Kalan riskler Ek A’da sıralanmıştır.
@@ -73,7 +75,7 @@ Bu Kanun Teklifi, sermayesiz *hizmet* ve *fikir* üreticileri için kurulmuştur
 >
 > **f)** Bu istisnadan yararlanan mükellefler, geriye dönük son iki takvim yılı içinde hizmet akdi ile bağlı bulundukları işverenlere veya bu işverenlerin doğrudan ya da dolaylı ortaklıklarına mikro mükellefiyet kapsamında fatura düzenleyemezler. Ayrıca bir mikro üreticinin takvim yılı bütünü itibarıyla elde ettiği gayrisafi hasılatının yüzde altmışından fazlası tek bir mükellefden elde edilemez. Mükellefiyetin tesis edildiği ilk takvim yılında ve takvim yılı gayrisafi hasılatının yürürlükteki altı aylık brüt asgari ücret tutarını aşmadığı hallerde bu fıkrada yer alan yüzde altmışlık sınır uygulanmaz. Şartların ihlali halinde yapılan ödemeler ücret kabul edilir ve alıcı kurum adına cezalı tarhiyat uygulanır.
 >
-> **g)** Kapsam dışı faaliyetler (negatif liste): Ticari emtia alım-satımı, gayrimenkul ve motorlu taşıt satışı ile kiralanması, ticari amaçlı finansal ve kripto varlık alım-satım ve arbitraj işlemleri ile her türlü komisyonculuk, acentelik ve simsarlık faaliyetleri bu madde kapsamındaki istisnadan yararlanamaz. Hizmet ihracı karşılığı elde edilen bedellerin bankacılık veya ödeme kuruluşları vasıtasıyla ulusal para birimine çevrilmesi bu kısıtlamanın dışındadır. Bu neviden faaliyet gösterdiği tespit edilenler hakkında genel hükümlere göre işlem yapılır. Bu kısıtlama, (ğ) bendinde düzenlenen istisnayı etkilemez.
+> **g)** Kapsam dışı faaliyetler (negatif liste): Ticari emtia alım-satımı, gayrimenkul ve motorlu taşıt satışı ile kiralanması, ticari amaçlı finansal ve kripto varlık alım-satım ve arbitraj işlemleri ile her türlü komisyonculuk, acentelik ve simsarlık faaliyetleri ile kumar, bahis ve şans oyunlarına; alkollü içki, tütün ve uyuşturucu madde üretimi, tanıtımı ve satışına; müstehcen içerik üretimine; faiz karşılığı borç verilmesine veya buna aracılığa; falcılık, büyücülük ve kehanet hizmetlerine ilişkin faaliyetler bu madde kapsamındaki istisnadan yararlanamaz. Hizmet ihracı karşılığı elde edilen bedellerin bankacılık veya ödeme kuruluşları vasıtasıyla ulusal para birimine çevrilmesi bu kısıtlamanın dışındadır. Bu neviden faaliyet gösterdiği tespit edilenler hakkında genel hükümlere göre işlem yapılır. Bu kısıtlama, (ğ) bendinde düzenlenen istisnayı etkilemez.
 >
 > **ğ)** Mikro e-ticaret istisnası: Yıllık hasılat tavanını aşmamak kaydıyla, mükellefin kendi emeği ile ürettiği fiziki ürünlerin (takı, ahşap işi, örgü, sabun ve benzeri) ve şahsî kullanımındaki ikinci el eşyanın dijital platformlar aracılığıyla satışından elde edilen hasılat da bu madde kapsamındadır. Bu satışlarda tevkifat (c) bendi uyarınca yapılır. Satın alınarak yeniden satılan mal, dropshipping ve büyük hacimli al-sat faaliyetleri bu bendin kapsamı dışındadır. Bu bent kapsamındaki hasılat, bu maddedeki diğer bentlerle elde edilen hasılatla birlikte aynı yıllık tavana tabidir.
 >
@@ -85,7 +87,7 @@ Bu Kanun Teklifi, sermayesiz *hizmet* ve *fikir* üreticileri için kurulmuştur
 >
 > **j)** Gelir kaynağı beyanı ve inceleme askısı: Mikro mükellefin münhasır hesabına kısa süre içinde olağan gelirinin çok üzerinde (son üç aylık hasılat ortalamasının beş katını ve aynı zamanda yürürlükteki iki aylık brüt asgari ücret tutarını birlikte aşan, tekil veya kırk sekiz saat içindeki toplam) bir giriş olması halinde sistem otomatik cezai kesinti veya cezai tevkifat oranı uygulamaz. Bunun yerine ilgili tutarı, belge süresi olan on beş gün boyunca “inceleme askısı”na alır ve mükellefe portal, UETS ve kayıtlı iletişim araçları üzerinden “Gelir Kaynağı Beyanı” (yarışma ödülü, miras, hibe, hizmet bedeli vb.) sunması için bildirim gönderir. Beyan süresi, bildirimin mükellefe ulaştığı tarihten itibaren on beş gündür. Beyan ve belge sunulursa askı derhal kalkar ve normal tevkifat uygulanır. Belge süresi içinde sunulmazsa askı, süre sonunda kendiliğinden kalkmaz; ilgili tutar için 5549 sayılı Kanun uyarınca şüpheli işlem bildirimi yapılır ve bu bildirim, mükellefin diğer tahsilat, fatura kesme ve hesap kullanım haklarını etkilemez. 5549 sayılı Kanun ile ceza muhakemesi tedbirleri saklıdır.
 >
-> **k)** Teknik hata, mahsuplaşma ve cezasızlık: Gelir İdaresi Başkanlığı ile banka veya ödeme kuruluşu sistemleri arasındaki entegrasyon arızaları, gecikmeler veya hesaplama hatalarından kaynaklanan eksik veya fazla tevkifatlarda mükellef cezai sorumluluk taşımaz. Eksik kesinti bir sonraki ay mahsuben tamamlanır; fazla kesinti ise mükellefin talebine gerek kalmaksızın ertesi ay münhasır hesabına iade edilir. Sistemsel gecikmelerden doğan gecikme faizi Hazine tarafından karşılanır.
+> **k)** Teknik hata, mahsuplaşma ve cezasızlık: Gelir İdaresi Başkanlığı ile banka veya ödeme kuruluşu sistemleri arasındaki entegrasyon arızaları, gecikmeler veya hesaplama hatalarından kaynaklanan eksik veya fazla tevkifatlarda mükellef cezai sorumluluk taşımaz. Eksik kesinti bir sonraki ay mahsuben tamamlanır; fazla kesinti ise mükellefin talebine gerek kalmaksızın ertesi ay münhasır hesabına iade edilir. Sistemsel gecikmeler nedeniyle mükelleften gecikme faizi veya gecikme zammı alınmaz.
 >
 > **l)** Platform aracılığıyla yapılan ödemeler: Dijital platformlar üzerinden yapılan ve 193 sayılı Kanunun 94 üncü maddesinin 19 numaralı bendi kapsamında tevkifata tabi tutulan ödemeler, bu maddenin aynı gelir için ikinci kez tevkifat yapılmasını gerektirmez; mükerrer tevkifat yapılmaz.
 >
@@ -139,11 +141,11 @@ Bu Kanun Teklifi, sermayesiz *hizmet* ve *fikir* üreticileri için kurulmuştur
 
 > "**EK MADDE 2 – Mikro mükellef tahsilatlarında komisyon tavanı:** 193 sayılı Gelir Vergisi Kanunu’nun mükerrer 20/E maddesi kapsamındaki tahsilatlarda ödeme kuruluşları ve bankalar; EFT, havale ve FAST işlemlerinde banka ve sigorta muameleleri vergisi hariç işlem tutarının binde ikisini veya Türkiye Cumhuriyet Merkez Bankasının bu işlemler için belirlediği azami ücreti, hangisi düşükse onu; sanal POS ve diğer kartlı ödeme işlemlerinde ise Türkiye Cumhuriyet Merkez Bankasının mikro mükellef tahsilatları için belirlediği azami üye işyeri komisyon oranını aşan komisyon veya masraf alamazlar. Türkiye Cumhuriyet Merkez Bankası, 12 nci maddenin dördüncü fıkrası uyarınca bu sınırları aşmamak üzere hizmet türlerine göre daha düşük azami oran veya tutarlar belirlemeye yetkilidir."
 
-**MADDE 8-** Mikro mükellefiyet kapsamında son on iki ayda düzenli tevkifat ödemesi yapan kişilere, Hazine destekli Kredi Garanti Fonu (KGF) kefaletiyle “Mikro Girişimci Destek Kredisi” verilebilir. Gelir İdaresi Başkanlığı tarafından üretilen karekodlu kümülatif hasılat ve tevkifat belgesi, bankacılık kredi tahsis süreçlerinde ticari ciro belgesi yerine geçer ve bankalar bu belgeyi kredi değerlendirmesinde dikkate almak zorundadır. Kefalet tutarı, mükellefin son on iki aydaki gayrisafi hasılatının yüzde ellisi ile sınırlıdır.
+**MADDE 8-** Mikro mükellefiyet kapsamında son on iki ayda düzenli tevkifat ödemesi yapan kişilere, Hazine destekli Kredi Garanti Fonu (KGF) kefaletiyle “Mikro Girişimci Destek Finansmanı” sağlanabilir. Bu finansman faiz içermez; kâr ve zarara ortaklık veya mal ve hizmet alım satımına dayalı usullerle, faiz içermeyen finansman sunan bankalarca sağlanır. Bu madde kapsamında faizli borç verilemez ve faizli borca kefalet verilemez. Gelir İdaresi Başkanlığı tarafından üretilen karekodlu kümülatif hasılat ve tevkifat belgesi, bankacılık finansman tahsis süreçlerinde ticari ciro belgesi yerine geçer ve bankalar bu belgeyi finansman değerlendirmesinde dikkate almak zorundadır. Kefalet tutarı, mükellefin son on iki aydaki gayrisafi hasılatının yüzde ellisi ile sınırlıdır.
 
 **MADDE 9-** 28/3/2001 tarihli ve 4632 sayılı Bireysel Emeklilik Tasarruf ve Yatırım Sistemi Kanununa ve 31/5/2006 tarihli ve 5510 sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanununa aşağıdaki ek maddeler eklenmiştir:
 
-> "**4632 sayılı Kanuna EK MADDE 3 –** Mikro mükellefiyet kapsamında Hazine’ye aktarılan her yüz Türk Lirası tevkifatın üç Türk Lirası, mükellefin ayrılma (opt-out) hakkı saklı kalmak kaydıyla, mükellef adına otomatik olarak bireysel emeklilik sistemine aktarılır ve bu tutara 4632 sayılı Kanunun Ek 1 inci maddesi uyarınca belirlenen oranda Devlet katkısı eklenir."
+> "**4632 sayılı Kanuna EK MADDE 3 –** Mikro mükellefiyet kapsamında Hazine’ye aktarılan her yüz Türk Lirası tevkifatın üç Türk Lirası, mükellefin ayrılma (opt-out) hakkı saklı kalmak kaydıyla, mükellef adına otomatik olarak, mükellef aksini bildirmedikçe katılım esaslı (faiz içermeyen) emeklilik fonuna olmak üzere bireysel emeklilik sistemine aktarılır ve bu tutara 4632 sayılı Kanunun Ek 1 inci maddesi uyarınca belirlenen oranda Devlet katkısı eklenir."
 
 > "**5510 sayılı Kanuna EK MADDE 25 –** 193 sayılı Gelir Vergisi Kanunu’nun mükerrer 20/E maddesi kapsamında mikro mükellefiyet tescili bulunan kişilerin, yıllık hasılatının tavanın en az yarısına ulaştığı her takvim yılı, genel sağlık sigortası prim borcu bulunmamak kaydıyla, bu Kanunun 4 üncü maddesinin birinci fıkrasının (a) bendi kapsamında sigortalılık süresi olarak doksan gün prim ödeme süresine sayılır. Bu süreler, aynı döneme ait başka bir sigortalılık süresiyle çakışmayan günler bakımından sayılır. Bu sürelere ait malullük, yaşlılık ve ölüm sigortaları primi, prime esas kazanç alt sınırı üzerinden Hazine tarafından karşılanır."
 
@@ -167,7 +169,7 @@ Bu Kanun Teklifi, sermayesiz *hizmet* ve *fikir* üreticileri için kurulmuştur
 
 **MADDE 11-** 24/3/2016 tarihli ve 6698 sayılı Kişisel Verilerin Korunması Kanununa ilişkin olarak: Mikro mükelleflerin finansal ve kişisel verileri takma adlaştırma (pseudonymization) tekniği ile maskelenerek saklanır; bu Kanunda takma adlaştırma, kişisel verilerin ek bilgi kullanılmaksızın belirli bir gerçek kişiyle ilişkilendirilemeyecek hâle getirilmesidir. Verilerin işlendiği sunucular münhasıran Türkiye Cumhuriyeti sınırları içindeki kamu veri merkezlerinde barındırılır. Verilerin yetkisiz kişilerle veya üçüncü taraflarla paylaşılması ağır ceza yaptırımına bağlıdır.
 
-**GEÇİCİ MADDE 1-** Bu Kanunun yürürlüğe girdiği tarihten önce mükellefiyeti bulunan ve yıllık cirosu 24 asgari ücretin altında olan gerçek kişi işletmeler, talep etmeleri halinde geçmiş dönem vergi ve prim borçlarını otuzaltı ay taksitle yapılandırarak Mikro Mükellefiyet statüsüne geçebilir. Önceki dönemde ödedikleri Bağ-Kur primleri kazanılmış hak olarak saklı tutulur ve yeni statüde kısmî gün sayımına eklenir.
+**GEÇİCİ MADDE 1-** Bu Kanunun yürürlüğe girdiği tarihten önce mükellefiyeti bulunan ve yıllık cirosu 24 asgari ücretin altında olan gerçek kişi işletmeler, talep etmeleri halinde geçmiş dönem vergi ve prim borçlarını, taksit nedeniyle faiz veya gecikme zammı uygulanmaksızın, otuzaltı ay taksitle yapılandırarak Mikro Mükellefiyet statüsüne geçebilir. Önceki dönemde ödedikleri Bağ-Kur primleri kazanılmış hak olarak saklı tutulur ve yeni statüde kısmî gün sayımına eklenir.
 
 **GEÇİCİ MADDE 2-** Gelir İdaresi Başkanlığı ile bankalar ve ödeme kuruluşları arasındaki entegrasyon tamamlanıncaya kadar geçecek süre (en çok altı ay) içinde tevkifatın sistem tarafından kesilemediği hallerde doğan eksiklik mükellefe yüklenemez; mükellef hakkında ceza, faiz veya mükellefiyet kaybı uygulanamaz.
 
@@ -493,6 +495,33 @@ Karar notları (bu sürümde işlenen tercihler): giriş eşiği iki aylık brü
 | ‘Anayasa m.35 ve m.48’ | Doğrulandı (mülkiyet; çalışma ve sözleşme hürriyeti). |
 | ‘Üye işyeri takas komisyonu’ | Takas komisyonu (interchange) ile üye işyeri komisyonu farklıdır; metinde ‘azami üye işyeri komisyon oranı’ yazıldı. |
 | VUK ‘Ek Madde 15’ | VUK’ta Ek Madde 15 zaten vardır (karşılıklı anlaşma usulü, 7338 ile eklendi); en son Ek Madde 18’dir. Teklifin maddesi Ek Madde 19 oldu. |
+
+## EK E. İSLÂM HUKUKU UYGUNLUK DENETİMİ
+
+Bu denetim, F 3-I 245 uyarınca yapılmıştır. Denetimi yapan müftî değildir; yalnız ihtilafsız hükümler doğrudan uygulanmış, ihtilaflı hükümler açık kalem olarak yazılmıştır. Kanun metni Anayasa m.2 gereği tarafsız lafızla yazılmış, dinî gerekçe bu ekte ve gerekçede bırakılmıştır. Nihaî metin, yetkili ilim ehli tarafından ayrıca incelenmelidir.
+
+**E.1 Uygulanan tadiller**
+
+| Mesele | İslâm hükmü (dayanak) | Önceki metin | Yapılan tadil |
+| :-- | :-- | :-- | :-- |
+| Faiz (ribâ) | Bakara 275 ve 278-279; faizi yiyenin, yedirenin, yazanın ve şahitlerin lanetlenmesi (Müslim, Müsâkât 106) | Madde 8: faizli “Mikro Girişimci Destek Kredisi” ve Hazine destekli kefalet | Faiz içermeyen finansman, faizli borç ve faizli borca kefalet yasağı. KGF’nin faizsiz finansmana kefalet programı bulunduğu basın duyurusundan okundu (Ziraat Katılım ve KGF, Ocak 2026) |
+| Faiz | Aynı | Madde 9: BES aktarımı fon tercihi belirtmiyordu | Aksi bildirilmedikçe katılım esaslı (faiz içermeyen) fon. Katılım fonlarının 4632 kapsamındaki durumu ayrıca doğrulanmalıdır |
+| Faiz | Aynı | Madde 1 (k): Hazine ‘gecikme faizi’ karşılıyordu | Mükelleften gecikme faizi veya zammı alınmaz, faiz ödemesi öngörülmez |
+| Faiz | Aynı | Geçici Madde 1: taksit | Taksit nedeniyle faiz veya gecikme zammı uygulanmaz |
+| Kumar, içki, uyuşturucu, müstehcenlik, falcılık | Mâide 90; falcıya gidenin namazının kabul olmayacağı (Müslim, Selâm 125) | Negatif listede yoktu; istisnadan yararlanabilirlerdi | Madde 1 (g) negatif listeye eklendi |
+| Zulüm ve haksız alım | Nisâ 29; Müslim, Birr 55 | — | Hasılat yoksa vergi yok (H=0); tevkifat tahsilat anında, belirli oranla |
+| Garar (belirsizlik) | Müslim, Büyû 4 | — | Sabit oran, defter ve takdir komisyonu yok |
+| Emeğin hakkı | İbn Mâce, Ahkâm 4; Buhârî, Büyû 106 | — | Vadeli Tevkifat Senedi ve mahsup hükümleri |
+
+**E.2 İhtilaflı veya kapsam dışı, fıkhî hüküm bekleyen meseleler** (Claude hükmü kendisi vermemiştir)
+
+| Mesele | Neden açık |
+| :-- | :-- |
+| Vergi kavramı (zekât dışı mali yükümlülük) | Hazinenin ihtiyacı için adil ve ölçülü verginin meşruiyeti ictihad konusudur; bu teklif yükü azaltır ama vergi alma esasını tartışmaz |
+| Alıcıdan tevkifatın vadesinde ödenmemesi halinde 6183 sayılı Kanun m.51 gecikme zammı (Madde 1 (b)) | Gecikme zammının faizden farkı olup olmadığı ihtilaflıdır; metinde ilgili atıf duruyor |
+| Diğer kanunlardaki hükümler: 351 sayılı Kanun m.16 erteleme sırasında ‘yüzde on ilave’ (ikincil kaynak), 5510 prim gecikme cezası ve zammı, 6183 m.48 tecil faizi | Bu teklifin dışındadır; ‘başka yerlerde’ tadil için ayrı teklif gerekir |
+| Sosyal sigorta primi (SGK) | Çoğunlukla taâvün esaslı sosyal sigorta olarak değerlendirilir; yetkili ilim ehline sorulmalıdır |
+| Sosyal içerik ve ‘dijital sanat’ kapsamında canlı resmi ve müzik | Fukahâ arasında ihtilaf vardır; metne alınmamış, negatif listeye de konmamıştır |
 
 ## VIII. KAYNAKLAR
 
