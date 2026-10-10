@@ -23,7 +23,7 @@ Bu denetim, F 3-I 245 uyarınca yapılmıştır. Denetimi yapan müftî değildi
 
 | Mesele | Neden açık |
 | :-- | :-- |
-| Vergi kavramı (zekât dışı mali yükümlülük) | Hazinenin ihtiyacı için adil ve ölçülü verginin meşruiyeti ictihad konusudur; bu teklif yükü azaltır ama vergi alma esasını tartışmaz |
+| Vergi kavramı (zekât dışı mali yükümlülük) | **KAPANDI (F 3-I 250): padişah onayladı.** Ayrıntı E.13 |
 | Alıcıdan tevkifatın vadesinde ödenmemesi halinde 6183 sayılı Kanun m.51 gecikme zammı (Madde 1 (b)) | Gecikme zammının faizden farkı olup olmadığı ihtilaflıdır; metinde ilgili atıf duruyor |
 | Diğer kanunlardaki hükümler: 351 sayılı Kanun m.16 erteleme sırasında ‘yüzde on ilave’ (ikincil kaynak), 5510 prim gecikme cezası ve zammı, 6183 m.48 tecil faizi | Bu teklifin dışındadır; ‘başka yerlerde’ tadil için ayrı teklif gerekir |
 | Sosyal sigorta primi (SGK) | Çoğunlukla taâvün esaslı sosyal sigorta olarak değerlendirilir; yetkili ilim ehline sorulmalıdır |
@@ -143,7 +143,7 @@ Harici analizin “Dört sualiniz” bölümündeki **“Karar”** satırları 
 | KDV bakiye devri | Mantık doğru, ek mevzuat atfı gerekmedi | **Uygulandı:** Madde 3 |
 | Madde 12 (sual 2) | Harici analizin “Buhârî Şurût 10: batıl şart” atfı yoklanmadı. Daraltılmış metin sözleşme hükümsüzlüğünü kaldırdığı için sözleşmeye vefa ile “helâli haram kılan şart” arasındaki ihtilaflı sınırı **ortadan kaldırır** (ihtilaf çözülmedi, konusu kaldırıldı) | **Uygulandı** (önceki lafız git geçmişinde: b3a6f5d öncesi). Gence korumayı zayıflatır: ispat yükü işverene geçer ama sözleşme hükmü geçersiz sayılmaz |
 | Yabancı uyruk (sual 1) | Harici “vatandaşlıkla sınırla” kararı ve “6735 m.6, m.13” atıfları yoklanmadı | **Uygulanmadı**, padişah kararı bekliyor (şu an: çalışma izni saklı) |
-| Vergi kavramı (sual 3) | Harici analiz Ebû Yûsuf, Cüveynî, İbn Hazm, Şâtıbî, İbn Âbidîn ve “Tirmizî, Zekât 27” atıflarını kullandı; **hiçbiri yoklanmadı** | E.2'deki ihtilaf kaydı **kalır**; padişah kararı bekliyor |
+| Vergi kavramı (sual 3) | Harici analiz Ebû Yûsuf, Cüveynî, İbn Hazm, Şâtıbî, İbn Âbidîn ve “Tirmizî, Zekât 27” atıflarını kullandı; **hiçbiri yoklanmadı** | Padişah onayladı (E.13); atıflar yoklanmamış diye kalır |
 | Vur-kaç (sual 4) | **Kendi hatam:** önceki turda “ilk yıl %60 sınırı uygulanmaz, tek faturayla tavan doldurulur” dedim; Madde 1 (f)'deki iki şart **birlikte** aranır (ilk yıl **ve** hasılat ≤ 6 aylık asgari ücret). Hasılat 6 asgari ücreti aşınca %60 sınırı baştan işler; bir müşteriden en çok %60 alınabilir. Açık yalnız iki müşteriyle (örn. %60 + %40) kalır. Harici analizin (f) düzeltme önerisi bu yüzden gereksizdir, **uygulanmadı** | Harici “son 2 yılda gerçek usulde olanları dışla” önerisi, dürüst küçük esnafı (teklifin asıl hedefi) da dışlayacağı için **daraltılarak** uygulandı: yalnız o yıllardan birinde hasılatı tavanı aşmış olanlar dışlanır (Madde 1 (r)); Geçici Madde 1 ve (h) dönüşü hariç |
 
 **E.12 F 3-I 249: madde gerekçeleri (II-A) ve harici “5 gedik” analizi**
@@ -158,3 +158,12 @@ II-A bölümü dinî sebep ve delil taşımaz (F 3-I 246). Padişahın “dayand
 | Haciz ve banka otomasyonu | Harici “6183 m.21 rüçhan” atfı: kaynakların çoğu m.21'i teyit etti ama içeriği “hacze iştirak” olarak veriyor, “Hazine birinci sırada” iddiası kesin değil; metne **yazılmadı** | Madde 6: bloke koyarken önce tevkifat ayrılır, haciz kalan bakiyeye uygulanır |
 | e-İmza | E.10'da işlenmişti | Değişiklik yok |
 
+
+## E.13 F 3-I 250 kararları (iki karar, bir daha sorulmaz)
+
+| Konu | Padişah kararı | Uygulama | Yoklama durumu |
+| :-- | :-- | :-- | :-- |
+| Yabancı uyruk | Teklif yalnız Türkiye Cumhuriyeti vatandaşı gerçek kişilere hasredilir | Madde 1 giriş fıkrası "Türkiye Cumhuriyeti vatandaşı gerçek kişilerce" diye değişti; eski (ö) bendi kaldırıldı, bentler yeniden harflendi (ö) küçükler, (p) gerçek usul; II-A, Ek A.3 A5 ve K10 güncellendi | Karar metnindeki 6735 m.6 ve m.13 ayrıntıları ve Anayasa m.16 **yoklanmadı**; teklif metni bu kanunlara atıf yapmaz, yalnız II-A gerekçesinde [İ] olarak anılır |
+| Vergi kavramı | Zekât dışı kamu yükümlülüğü meşru kabul edildi (Siyâset-i Şer'iyye, mukāseme, tahfîf) | E.2 satırı kapandı. Teklifte dinî sebep yazılmaz (F 3-I 246) | Mecelle m.20 ("Zarar izale olunur") ve m.29 ("Ehven-i şerreyn ihtiyar olunur") TBMM PDF'inden okundu. Tirmizî Zekât 27, Ebû Yûsuf, Cüveynî, İbn Hazm, Şâtıbî, İbn Âbidîn atıfları **yoklanmadı** |
+| Delil Eki | Okuyan, delilin kendisini bulabilmeli | `kanun/DELIL_EKI.md`: 20 kanunun ilgili maddeleri aynen ve mevzuat.gov.tr adresiyle; metni okunmayanlar Bölüm 2'de sayıyla | 20 kanun, PDF'ten çıkarıldı; Bölüm 2'de 18 dayanak okunmadı diye açıkça yazıldı |
+| Açık soru | Dinî delil teklifte yazılsın mı (F 3-I 246 kalkar mı) | Cevap yok; yazılmadı | — |

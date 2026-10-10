@@ -36,7 +36,8 @@ Bu Kanun Teklifi; sermayesiz hizmet ve fikrî üreticilerin önündeki bu bariye
 * Faiz içermeyen borç, emanet iadesi, hibe, miras ve kâr paylaşımına dayalı sermaye desteği hasılat sayılmamakta, ikinci el şahsî eşya satışı vergi dışında tutulmaktadır.
 * Tavanı aşarak genel hükümlere geçen mükellefe, ertesi yıl hasılatı tavanın altında kalırsa geri dönüş yolu, gönüllü çıkanlara ise bir yıllık bekleme süresi öngörülmektedir.
 * On altı yaşını doldurmuş küçükler yasal temsilcinin elektronik rızasıyla tescil olabilmekte; önceki iki yılda gerçek usulde tavanı aşan hasılat elde edenler bu rejimden yararlanamamaktadır.
-* Her maddenin amacı, kapattığı açığı, dayanağı ve delil durumu II-A bölümünde madde madde yazılmıştır.
+* Her maddenin amacı, kapattığı açığı, dayanağı ve delil durumu II-A bölümünde madde madde yazılmış; atıf yapılan kanun hükümlerinin tam metni ve resmî adresi Delil Ekinde verilmiştir.
+* İstisna yalnız Türkiye Cumhuriyeti vatandaşı gerçek kişilere tanınmıştır; yabancı uyruklular genel hükümlere tabidir.
 * Algoritmik denetim sonuçlarına karşı otuz günlük itiraz hakkı, çoklu başvuru kanalı ve itiraz süresince faaliyetin kesintisizliği güvence altına alınmaktadır.
 
 * Teklif, muhasebeci zorunluluğunu yalnız yıllık hasılatı 24 brüt asgari ücreti aşmayan mükellefler için kaldırır; tavanı aşan mükellef gerçek usule geçer ve meslek mensuplarıyla sözleşme yapar. Bu nedenle düzenleme meslek mensuplarının mevcut müşterilerini azaltmaz; tavanı aşacak mükellefler için yeni bir müşteri havuzu oluşturması beklenir (bu beklenti ölçülmemiştir).
@@ -55,7 +56,7 @@ Bu Kanun Teklifi, sermayesiz *hizmet* ve *fikir* üreticileri için kurulmuştur
 
 > **"Bireysel emek, hizmet ve fikrî üretimde kazanç istisnası ve tevkifat uygulaması**
 >
-> **MÜKERRER MADDE 20/E –** Bu Kanunun mükerrer 20/B maddesi kapsamına giren kazançlar hariç olmak üzere; sermayeden ziyade şahsî mesaiye, ilmî veya mesleki bilgiye, bedenî hizmet uzmanlığına veya dijital medya üretimine dayanan; yazılım, donanım tasarımı, teknik ve mühendislik analizi, veri işleme, teknik modelleme, tercüme, grafik ve görsel tasarım, dijital sanat ve içerik üretimi, uzaktan operasyon ve sanal asistanlık ile bağımsız teknik montaj, bakım ve butik servis mahiyetindeki bireysel hizmet teslimlerinden müstakilen elde edilen gayrisafi hasılatın, takvim yılı itibarıyla 16 yaşından büyük işçiler için uygulanan yürürlükteki iki aylık brüt asgari ücretin 12 katını aşmayan kısmı gelir vergisinden müstesnadır. Bu istisnadan yararlanılabilmesi için Gelir İdaresi Başkanlığı elektronik portalı üzerinden “Mikro Mükellefiyet” tescilinin açılması şarttır.
+> **MÜKERRER MADDE 20/E –** Bu Kanunun mükerrer 20/B maddesi kapsamına giren kazançlar hariç olmak üzere; sermayeden ziyade şahsî mesaiye, ilmî veya mesleki bilgiye, bedenî hizmet uzmanlığına veya dijital medya üretimine dayanan; yazılım, donanım tasarımı, teknik ve mühendislik analizi, veri işleme, teknik modelleme, tercüme, grafik ve görsel tasarım, dijital sanat ve içerik üretimi, uzaktan operasyon ve sanal asistanlık ile bağımsız teknik montaj, bakım ve butik servis mahiyetindeki bireysel hizmet teslimlerinden Türkiye Cumhuriyeti vatandaşı gerçek kişilerce müstakilen elde edilen gayrisafi hasılatın, takvim yılı itibarıyla 16 yaşından büyük işçiler için uygulanan yürürlükteki iki aylık brüt asgari ücretin 12 katını aşmayan kısmı gelir vergisinden müstesnadır. Bu istisnadan yararlanılabilmesi için Gelir İdaresi Başkanlığı elektronik portalı üzerinden “Mikro Mükellefiyet” tescilinin açılması şarttır.
 >
 > İstisna kapsamındaki kazançlar üzerinden aşağıdaki esaslar dairesinde tevkifat yapılır ve bu tevkifat nihaî vergilendirme sayılır:
 >
@@ -101,11 +102,9 @@ Bu Kanun Teklifi, sermayesiz *hizmet* ve *fikir* üreticileri için kurulmuştur
 >
 > **o)** Emek ortaklığı ve müşterek hasılat: İki veya daha fazla mikro mükellef, müştereken üstlendikleri hizmet teslimi için Gelir İdaresi Başkanlığı portalı üzerinden, payları ortaklarca serbestçe belirlenmek suretiyle müşterek fatura düzenleyebilir; pay oranı emeğin niteliğine göre eşit veya farklı olabilir. Ortaklardan birinin işi kabul etmesi, müzakere ve koordinasyonu üstlenmesi, diğerlerinin ise teknik ve fiilî işi yapması emek ortaklığıdır; işi kabul eden ortak bu sebeple aracı, acente veya komisyoncu sayılamaz ve (g) bendindeki kapsam dışı faaliyetler kapsamında değerlendirilemez. Alıcı, bedeli ortaklardan herhangi birinin veya hepsinin münhasır hesabına ödeyebilir; bu ödeme alıcıyı borcundan kurtarır. Alıcıdan yapılan kısmî tahsilat dahil her tahsilat ve ona ilişkin tevkifat, faturadaki paylar oranında portal referans kodu vasıtasıyla her ortak için ayrı ayrı hesaplanır ve net tutarlar ortakların münhasır hesaplarına payları oranında aktarılır; ödemeyi tahsil eden ortak bunu başkasının payına rağmen kendi payına mahsup edemez, başkasının payını derhal ilgilisine aktarmakla yükümlüdür. Müşterek işe ilişkin iade, iptal veya zarar, ortakların paylarına göre her ortağın hasılatından ve tevkifatından ayrı ayrı düşülür; (b) bendindeki mahsup ve iade hükümleri ortaklara payları oranında uygulanır. Tevkifat, yıllık hasılat tavanı ve (f) bendindeki yüzde altmış sınırı her mükellef için kendi payı üzerinden uygulanır. Müşterek fatura, bütün ortakların portalda kimlik doğrulamalı onayıyla düzenlenir; hiçbir kişi kendi onayı olmaksızın ortak gösterilemez. İşin ifası ortakların bizzat emeğine dayanır; ortaklardan biri kendi yerine ücretle başkasını çalıştıramaz. Ortaklardan birinin ölümü, mükellefiyetinin sona ermesi, hacir altına alınması veya ortaklıktan ayrılması bu ortaklığı sona erdirir; sona erme tarihine kadar düzenlenmiş müşterek faturalara ilişkin haklar ve sorumluluklar payları oranında saklıdır, diğer ortakların kendi mükellefiyetleri devam eder. Bu işlem adi ortaklık tescili, ayrı bir vergi mükellefiyeti veya defter tutma yükümlülüğü doğurmaz. (i) bendindeki toplulaştırma hükmü saklıdır.
 >
-> **ö)** Yabancı uyruklu kişiler: Yabancı uyruklu kişilerin bu maddeden yararlanması, 6735 sayılı Uluslararası İşgücü Kanunu kapsamındaki çalışma izni veya muafiyet hükümlerine tabidir.
+> **ö)** Küçükler: On altı yaşını doldurmuş ve ayırt etme gücüne sahip küçüklerin bu madde kapsamındaki tescil, münhasır hesap açma ve fatura işlemleri, yasal temsilcilerinin portal üzerinden vereceği elektronik rızayla yapılır. Küçüğün bu faaliyetten elde ettiği kazancın yönetimi ve bundan yararlanma hakkı küçüğe aittir.
 >
-> **p)** Küçükler: On altı yaşını doldurmuş ve ayırt etme gücüne sahip küçüklerin bu madde kapsamındaki tescil, münhasır hesap açma ve fatura işlemleri, yasal temsilcilerinin portal üzerinden vereceği elektronik rızayla yapılır. Küçüğün bu faaliyetten elde ettiği kazancın yönetimi ve bundan yararlanma hakkı küçüğe aittir.
->
-> **r)** Gerçek usuldeki yüksek hasılatlılar: Başvuru tarihinden önceki iki takvim yılından herhangi birinde ticarî kazanç veya serbest meslek kazancı yönünden gerçek usulde gelir vergisi mükellefi olup o yıl gayrisafi hasılatı bu maddedeki yıllık tavanı aşmış olanlar, Geçici Madde 1 kapsamındakiler ve (h) bendi uyarınca dönenler hariç olmak üzere bu istisnadan yararlanamaz."
+> **p)** Gerçek usuldeki yüksek hasılatlılar: Başvuru tarihinden önceki iki takvim yılından herhangi birinde ticarî kazanç veya serbest meslek kazancı yönünden gerçek usulde gelir vergisi mükellefi olup o yıl gayrisafi hasılatı bu maddedeki yıllık tavanı aşmış olanlar, Geçici Madde 1 kapsamındakiler ve (h) bendi uyarınca dönenler hariç olmak üzere bu istisnadan yararlanamaz."
 
 **MADDE 2-** 4/1/1961 tarihli ve 213 sayılı Vergi Usul Kanunu’na aşağıdaki ek madde eklenmiştir:
 
@@ -194,7 +193,7 @@ Bu Kanun Teklifi, sermayesiz *hizmet* ve *fikir* üreticileri için kurulmuştur
 
 ## II-A. MADDE GEREKÇELERİ VE DELİLLER
 
-Bu bölüm, teklifin her madde ve bendi için amaç, kapattığı açık, dayanak, ölçü veya hesap, reddedilen alternatif ve kalan riski birlikte verir; metni inceleyenlerin aynı araştırmayı yeniden yapmasına gerek kalmasın diye hazırlanmıştır. Delil durumu şu işaretlerle yazılmıştır: **[M]** mevzuat metninden okunmuştur; **[İ]** ikincil kaynaktan aktarılmıştır, resmî metinle teyidi gerekir; **[H]** teklifin kendi hesabı veya tercihidir, ölçülmüş veri değildir. Sayısal örnekler 2026 brüt asgari ücreti olan 33.030 TL üzerinden hesaplanmıştır [İ: birden çok kaynakta tutarlı].
+Bu bölümde atıf yapılan her kanun hükmünün **tam metni, madde, fıkra ve bent numarasıyla ve mevzuat.gov.tr adresiyle** birlikte Delil Ekinde (DELIL_EKI) yer alır; metni okunmayan dayanaklar aynı Ekin ikinci bölümünde sayılmıştır. Bu bölüm, teklifin her madde ve bendi için amaç, kapattığı açık, dayanak, ölçü veya hesap, reddedilen alternatif ve kalan riski birlikte verir; metni inceleyenlerin aynı araştırmayı yeniden yapmasına gerek kalmasın diye hazırlanmıştır. Delil durumu şu işaretlerle yazılmıştır: **[M]** mevzuat metninden okunmuştur; **[İ]** ikincil kaynaktan aktarılmıştır, resmî metinle teyidi gerekir; **[H]** teklifin kendi hesabı veya tercihidir, ölçülmüş veri değildir. Sayısal örnekler 2026 brüt asgari ücreti olan 33.030 TL üzerinden hesaplanmıştır [İ: birden çok kaynakta tutarlı].
 
 ### A. Madde 1: GVK mükerrer 20/E
 
@@ -220,9 +219,9 @@ Bu bölüm, teklifin her madde ve bendi için amaç, kapattığı açık, dayana
 | (m) ücretle birleşmeme | Ek iş gelirinin ücretle birleşip üst dilime girmesini önlemek | Teklifin tercihi [H] | — | Hazine kaybı ölçülmemiştir |
 | (n) alıcı yoğunluğu | Aynı alıcıya çok sayıda mikro fatura kesilmesini işaretleme ile izlemek | Teklifin tercihi [H] | Yalnız işaretleme | Yanlış pozitif |
 | (o) emek ortaklığı | Tek başına yapamayacakları işleri birlikte üstlenen sermayesiz üreticilere müşterek fatura imkânı | 6098 sayılı Kanun m.620: adi ortaklık sözleşmesi iki veya daha fazla kişinin emeklerini ve mallarını ortak amaç için birleştirmesidir; m.621 katılım payının emek olabileceğini söyler [M]. Bir ortağın işi kabul edip diğerinin yapması sözleşme serbestisi içindedir [H] | Pay serbest; tevkifat ve tavan her ortağın payı üzerinden | Ortaklık yoluyla tavan çoğaltma; (i) saklı |
-| (ö) yabancı uyruklu | Çalışma izni mevzuatıyla çatışmayı önlemek | 6735 sayılı Kanun: izin veya muafiyet olmadan çalışma yasağı [İ] | — | Öğrenci muafiyeti yoklanmamıştır |
-| (p) küçükler | On altı yaşını doldurmuş ayırt etme gücüne sahip küçüğün işlem yapabilmesi | TMK m.11 (erginlik 18), m.13 (ayırt etme gücü), m.16 (yasal temsilcinin rızası), m.359 (kişisel kazancın yönetimi çocuğa aittir) [M] | — | — |
-| (r) yüksek hasılatlı gerçek usul mükellefi | Gerçek usulde yüksek kazancı olanın tevkifat oranıyla vergi yükünü hafifletmesini önlemek | Teklifin tercihi [H] | Yalnız o yıllardan birinde hasılatı tavanı aşmış olanlar; küçük esnaf dışlanmaz | Mükellefiyetin kapatılıp tekrar açılması |
+| giriş fıkrası: yalnız Türkiye Cumhuriyeti vatandaşı gerçek kişiler | Çalışma izni, yabancı uyruklular için ayrı tabi oldukları rejimle çatışmayı baştan önlemek; istisnayı yalnız vatandaşlarla sınırlamak | Anayasa m.16 (temel hak ve hürriyetler yabancılar bakımından milletlerarası hukuka uygun olarak kanunla sınırlanabilir) [İ]; 6735 sayılı Kanun: izin veya muafiyet olmadan çalışma yasağı [İ] | — | Yabancı uyruklu öğrenci ve mukimler bu istisnanın dışındadır; onlar genel hükümlere tabidir
+| (ö) küçükler | On altı yaşını doldurmuş ayırt etme gücüne sahip küçüğün işlem yapabilmesi | TMK m.11 (erginlik 18), m.13 (ayırt etme gücü), m.16 (yasal temsilcinin rızası), m.359 (kişisel kazancın yönetimi çocuğa aittir) [M] | — | — |
+| (p) yüksek hasılatlı gerçek usul mükellefi | Gerçek usulde yüksek kazancı olanın tevkifat oranıyla vergi yükünü hafifletmesini önlemek | Teklifin tercihi [H] | Yalnız o yıllardan birinde hasılatı tavanı aşmış olanlar; küçük esnaf dışlanmaz | Mükellefiyetin kapatılıp tekrar açılması |
 
 ### B. Madde 2: VUK Ek Madde 19
 
@@ -415,7 +414,7 @@ Bu ek, Meclis’e sunulacak metnin hangi riske hangi hükümle cevap verdiğini 
 | A2 | Alıcı tevkifatı yanlış uygularsa giderin reddi | Kurumsal alıcı | Tevkifat ve kesinti belgesi zorunluluğu | M.1 (b) |
 | A3 | Yüksek banka komisyonu | Genç, küçük satıcı | Binde iki tavan ve TCMB yetkisi (6493 m.12/4) | M.7 |
 | A4 | Engelli veya yaşlı mükellef dijital itirazda yardım isteyemez | Savunmasız gruplar | PTT, muhtarlık ve memur yolu | M.10 |
-| A5 | Yabancı uyruklu veya ikamet izinli gençler | Göçmen gençler | Kimlik ve vergi numarası koşulları | 5510 m.60/1-(d): oturma izni olan yabancılar mütekabiliyet şartıyla genel sağlık sigortası kapsamındadır; Madde 1 (ö): çalışma izni veya muafiyet hükümleri saklıdır |
+| A5 | Yabancı uyruklu veya ikamet izinli gençler (kapsam dışı) | Göçmen gençler | Kimlik ve vergi numarası koşulları | 5510 m.60/1-(d): oturma izni olan yabancılar mütekabiliyet şartıyla genel sağlık sigortası kapsamındadır; Madde 1 giriş fıkrası: istisna yalnız Türkiye Cumhuriyeti vatandaşı gerçek kişilere tanınmıştır; bu kişiler genel hükümlere tabidir |
 | A6 | Ev içi bakım yükü ile üretimin görünmezliği | Kadınlar | Gürültü esaslı muafiyet cinsiyet gözetmez | İzlenecek |
 | A7 | Dernek ve kooperatif kurma hakkı | Mikro üretici | Ihtiyarî üyelik hakkı | M.5 |
 | A8 | Geçmişe dönük af | Dürüst mükellef | Af maddesi teklifte yoktur; geçmiş için VUK m.370-371 (izaha davet, pişmanlık) genel hükümleri işler | — |
@@ -435,7 +434,7 @@ Bu ek, Meclis’e sunulacak metnin hangi riske hangi hükümle cevap verdiğini 
 | K7 | Algoritmik denetimde yanlış pozitif ve yanlış negatif oranı. | Madde 10: algoritma yalnız işaretler, yanlış pozitif oranı yıllık ilan edilir; oran ölçülmemiştir. |
 | K8 | Müşterek fatura (Madde 1 (o)) ile 213 sayılı Kanunun fatura düzenine uyum ve payların gelir bölme amacıyla kullanılması. | Pay başına ayrı tavan ve ayrı yüzde altmış sınırı uygulanır, toplulaştırma saklıdır; faturanın teknik uyumu ve Hazine etkisi ölçülmemiştir. |
 | K9 | Kâr paylaşımına dayalı sermaye desteği beyanının hizmet bedelinin vergi dışı bırakılması için kullanılması (Madde 1 (j)). | Belge şartı ve 5549 sayılı Kanun kapsamındaki bildirim saklıdır; ilgili sözleşme türünün hukuki nitelendirmesi ve sermaye piyasası mevzuatıyla ilişkisi yoklanmamıştır. |
-| K10 | Yabancı uyruklu kişilerin çalışma izni ile mikro mükellefiyet tescilinin birbirine etkisi (özellikle öğrenciler). | Madde 1 (ö) 6735 sayılı Kanunu saklı tutar; öğrenciler için muafiyetin kapsamı ve tescil ile ilişkisi yoklanmamıştır. |
+| K10 | Yabancı uyruklu kişilerin (özellikle öğrencilerin) bu istisnanın dışında kalması ve genel hükümlere tabi olması. | Madde 1 giriş fıkrası istisnayı yalnız Türkiye Cumhuriyeti vatandaşı gerçek kişilere hasreder; yabancı uyruklular için ayrı bir düzenleme gerekir. |
 | K11 | Referans kodu belirtilmeyen girişlerde mükellefin bildirimi görmemesi hâlinde kırk sekiz saat sonunda giriş hizmet bedeli sayılıp tevkifat kesilir. | Fazla kesinti (k) bendi uyarınca ertesi ay iade edilir; bildirimin ulaşması için portal, UETS ve kayıtlı iletişim araçları kullanılır; bildirim başarısızlık oranı ölçülmemiştir. |
 
 ---
@@ -455,6 +454,7 @@ Bu ek, Meclis’e sunulacak metnin hangi riske hangi hükümle cevap verdiğini 
 
 ## VI. KAYNAKLAR
 
+- Delil Eki (DELIL_EKI): dayanak kanun hükümlerinin aynen metinleri ve adresleri.
 - Güncel kanun metinleri: mevzuat.gov.tr (Cumhurbaşkanlığı Mevzuat Bilgi Sistemi); atıf yapılan 193, 213, 488, 3568, 3572, 4632, 5411, 5510, 5549, 5846, 6098, 6493, 6698 sayılı Kanunların metni buradan okunmuştur; 3065 ve 4721 (m.737) atıfları ikincil kaynağa dayanır.
 - GVK 94/19 tevkifat oranı: 21/12/2024 tarihli ve 9284 sayılı Cumhurbaşkanı Kararı (22/12/2024 tarihli ve 32760 sayılı Resmî Gazete); uygulama usulü Gelir Vergisi Genel Tebliği (Seri No: 330).
 - Kayıt dışı istihdam: TÜİK Hanehalkı İşgücü Araştırması (aktaran TEPAV); genç işsizliği: TÜİK verisine dayanan DİSK-AR bülteni. Her ikisi ikincil aktarımdır.
