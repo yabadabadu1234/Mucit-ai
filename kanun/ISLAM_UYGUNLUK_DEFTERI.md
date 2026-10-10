@@ -38,3 +38,8 @@ Bu denetim, F 3-I 245 uyarınca yapılmıştır. Denetimi yapan müftî değildi
 | Madde 12 ek iş yasağı sözleşmeleri hükümsüz | Sözleşmeye vefa ile helali haram kılan şartın geçersizliği ictihad konusu | Değişmedi, kayıt |
 | Madde 7 oransal (binde iki) komisyon | Hizmet bedelinin tutara oranlı olması ihtilaflı; metin yalnız tavan koyar | Değişmedi, kayıt |
 | Madde 9 BES | Katılım esaslı fon şartı konmuştur; sistemin kendisinin hükmü ihtilaflı | Değişmedi, kayıt |
+
+**E.4 Gecikme zammı kararı (Madde 1 (b))**
+
+Madde 1 (b)'deki 6183 m.51 atfı kaldırıldı. Yerine: elektronik teminatın vadede Hazine'ye aktarılması, aksi hâlde gider indirimi hakkının iptali, tevkifat aslının tahsili, VUK m.344 vergi ziyaı cezası (m.344 metninden okundu: ziyaa uğratılan verginin bir katı, yani %100; harici analizdeki "%35" yanlıştı) ve açıkça "gecikme zammı uygulanmaz". Harici analizin önerdiği lafız zam yasağını yazmıyordu; 6183 m.51 genel hüküm olduğu için yazılmasaydı yine işlerdi, eklendi. Kalan ihtilaf: para cezasının (ta'zîr bi'l-mâl) cevazı mezhepler arasında tartışmalıdır (cumhur dar yorumlar); harici analizdeki Ebû Yûsuf, İbn Teymiyye, AAOIFI Standart 8 atıfları yoklanmadı. Mali etki ve teminat zorunluluğunun alıcı tarafındaki maliyeti ölçülmedi. Eski lafız git geçmişindedir (b99d601 ve öncesi).
+
