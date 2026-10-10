@@ -120,3 +120,13 @@ Padişahın kızgınlığı üzerine E.7'deki “bilinçli uzaklaşma” (ortağ
 
 **Uygulama:** Bu gerekçeler dayanak içindir, teklif metnine dinî sebep yazılmaz (F 3-I 246). Mukāseme ilkesi (hasılat yoksa yük yok, yük hasılatla orantılı) bakımından teklif denetlendi: sabit bedel yoktur (damga muaf, hesap açılış ve işletim ücreti yok, kefalet komisyonu yok, harç yok, tevkifat orantılı, komisyon tavanı orantılı veya TCMB azami oranı). **Metinde değişiklik gerektiren başka bir hüküm bulunmadı.** Maslahat kaidesi (m.58) bakımından gerekçenin “kamu yararı” anlatımı yeterlidir, metne eklenecek ayrı hüküm yoktur.
 
+**E.10 Harici “5 gedik” analizinin yoklaması ve uygulaması (dinî yönü yoktur; uygunluk denetimi: hiçbir hüküm ribâ, garar, haksız alım veya haram faaliyete kapı açmıyor, ihtilaflı yeni kalem çıkmadı)**
+
+| Gedik | Yoklama | Uygulama |
+| :-- | :-- | :-- |
+| (ğ) ikinci el eşyaya %10,5 tevkifat | GVK m.80 ve mükerrer m.80 PDF'ten okundu: değer artışı kazançları listesi (menkul kıymet, hak, ortaklık payı, gayrimenkul, işletme vb.) şahsî menkul eşyayı saymıyor; dolayısıyla tevkifat vergi konusu olmayan işleme vergi yükler. “Tamamen vergi dışıdır” iddiası bu kadar kesin yazılmadı: GVK değer artışı hükümleri saklı tutuldu | (ğ) düzeltildi; ayrıca (c)'ye “tevkifat yalnız referans kodlu hizmet bedeline” cümlesi eklendi (kendi tespitim: kodsuz girişlere kazara tevkifat riski) |
+| Madde 3 donanım KDV arbitrajı | Risk gerçek; harici analizin KDVK m.30/c ve m.32 atıfları **yoklanmadı**, metne yazılmadı | İki takvim yılı elde tutma; çalınma, tahrip, onarılamaz arıza ve belgeli yenisiyle değiştirme istisna (kendi ilavem: dürüst yükseltmeyi cezalandırmamak için) |
+| Tavan aşımı sonrası dönüş | GVK basit usul geri dönüş kuralı (m.46 vb.) atfı yoklanmadı; boşluk teklifin kendi metninde gerçek | (h)'ye geri dönüş köprüsü |
+| Yabancı uyruklu ve 6735 | 6735 sayılı Uluslararası İşgücü Kanunu: çalışma izni veya muafiyeti olmadan çalışmak ve çalıştırmak yasak; kendi adına çalışanlar için bağımsız çalışma izni var (ikincil kaynak aramasıyla). Harici analizin “m.6 ve m.23, sınır dışı” atıfları **yoklanmadı**, metne yazılmadı; öğrenciler için muafiyet ayrıntısı bulunamadı | (ö) bendi: çalışma izni/muafiyet hükümleri saklı (T.C. vatandaşlarıyla sınırlama yerine) |
+| e-İmza / mali mühür | GİB e-Arşiv Portal'ın kullanıcı kodu ve şifre ile girildiği, faturanın cep telefonuna SMS şifresiyle onaylandığı ve mali mühür/e-imzanın zorunlu olmadığı üçüncü taraf rehberlerde ve 2019 tarihli GİB kılavuzunda görüldü; güncel ekran doğrulanmadı. “1.500-3.000 TL” maliyet **yoklanmadı**, yazılmadı | Ek 19 (b): nitelikli sertifika, mali mühür veya donanım şartı aranamaz |
+
