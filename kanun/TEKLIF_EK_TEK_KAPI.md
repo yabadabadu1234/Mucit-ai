@@ -52,7 +52,7 @@ Fikir: gelir kaydırmanın (naylon fatura, sahte ortak) ekonomik özü, parayı 
 
 **Madde Y (Bildirim güvencesi).** Mikro mükellef, hesabına geçen bir ödemenin gerçek bir mal veya hizmete karşılık olmadığını yahut geri verilmesinin istendiğini veya kimliğinin başkasınca kullanıldığını portala bildirirse, bildirdiği işlem nedeniyle hakkında vergi ve usulsüzlük cezası uygulanmaz; yalnız ödeyen yönünden vergi sonucu doğar. Bildirimle ortaya çıkan vergi ve cezanın **tahsil edilen** kısmının yüzde onu bildirene ödenir (tahsil edilmeyen tutardan ödül verilmez; mevcut ihbar ikramiyesi hükümleri saklıdır). Ödeyen, denetim başlamadan önce işlemi kendisi bildirirse, vergi usulüne ilişkin pişmanlık hükümleri üçüncü kişi bildirimi şartı aranmaksızın uygulanır.
 
-**Madde Z (Bilgilendirme).** Portal, mikro mükellefe, kendisine ilk kez ödeme yapan ödeyenden gelen ve Bakanlıkça belirlenen tutarı aşan ödemelerde, Madde V ve Y'deki hakları bildiren bir ileti gönderir. Mükellefin herhangi bir işlem yapması gerekmez.
+**Madde Z (Bilgilendirme).** Portal, mikro mükellefe, kendisine ilk kez ödeme yapan ödeyenden gelen ve Bakanlıkça belirlenen tutarı aşan ödemelerde, Madde V ve Y'deki hakları bildiren bir ileti gönderir; aynı içerikli ileti ödeyene de gider. Mükellefin herhangi bir işlem yapması gerekmez. (İletinin ödeyene de gitmesi, karşı tarafın bu haklardan haberdar olduğunu ortak bilgi yapar; sahte düzen kurmak isteyen güvenebileceği bir sessizlik bulamaz.)
 
 **Madde AA (İlişkili ödeyen).** Mikro mükelleften ilişkili kişi sayılan bir ödeyenin yaptığı alımda indirim, emsal bedelle sınırlıdır. Emsal bedel, portalın aynı hizmet kodunda ilan ettiği bölgesel bedel aralığıdır; aralık içindeki işlem hiçbir belge istemez. (Gelir vergisi mükellefi ödeyen için bu hükmün mevcut mevzuattaki karşılığı yoklanmamıştır; yoksa bu madde yeni hüküm olarak gerekir.)
 
@@ -61,5 +61,22 @@ Fikir: gelir kaydırmanın (naylon fatura, sahte ortak) ekonomik özü, parayı 
 **Neden keser (simülasyon, varsayımlı):** bugün sahte faturada iki taraf birbirini ihbarla tehdit edebildiğinden ihanet pahalıdır (karşılıklı rehin). Madde V ve Y bunu kaldırır: parayı alan ihanet ederse hem parayı tutar, hem cezadan korunur, hem ödül alır; paranın sahibi şikâyet edemez. Tanınmayan tarafla yapılan düzen kendi kendini bozar. Yabancı kimlikle yapılan teşebbüsün kapanması %93,6, tanıdıkta %69,4; aile içinde %32,1 kapanır, kalan %56,4 işlemeye devam eder (yaptırım gücü varsayımlıdır). Ağırlıklı aktif teşebbüs payı %29,0'dan %18,2'ye iner (-%37,2).
 
 **Kalan risk (sıfır denmez):** aile ve örgüt içinde sadakat veya şiddet güveni sağlar; kimliğin, telefonun ve hesabın fiilen alıcıda olduğu kiralama; sahte seri numarası. Aile başına sızıntı üst sınırı kimlik başına değil ilişkili kişiler toplulaştırıldığı için bir tavan × oran farkıdır: 792 720 × (0,25 − 0,105) = 114 944 TL/yıl; tek alıcıda ilk yıl %60 kuralıyla 28 736 TL.
+
+**Madde AB (Cihaz mahsubu sınırı).** Mikro mükellefin cihaz alımına bağlı KDV mahsubu otuz altı ayda bir defa kullanılır, yalnız mükellefin kendi tevkifatından düşülür, nakde çevrilmez ve iade edilmez; tutar Madde 1'deki üst sınırı geçemez. Gerekçe: seri numarası sahte olsa bile kazanç, mükellefin kendi ödeyeceği verginin bir kısmıyla sınırlıdır; geliri olmayan kimlik hiçbir şey alamaz (en çok 5 000 TL, otuz altı ayda bir; model girdisi `kdv_donanim_kdv`).
+
+**Madde AC (Kimlik kullanımı izi).** Portal, aynı cihaz, bağlantı veya telefon hattından çok sayıda mikro mükellef kimliğiyle oturum açıldığını kayda geçirir; tek başına hiçbir yaptırım doğurmaz, yalnız Madde Y bildirimine ve idarenin incelemesine dayanak olur. Dürüst mükelleften hiçbir işlem istenmez.
+
+## Mucitçe sualler ve cevapları (F 3-I 287)
+
+| Suâl | Cevap |
+| :-- | :-- |
+| Sahte düzen niçin işler? | Para geri dönerse. Geri dönüşü zorlayan yalnız karşılıklı ihbar korkusu ve ilişkidir. |
+| O hâlde hangi öncül kaldırılırsa kalkar? | Karşılıklı rehin: Madde V (para hesap sahibinindir, geri verme sözü hükümsüz) ve Y (bildirene güvence ve ödül) bunu kaldırır. |
+| Tersinden bakılırsa? | Düzeni kuran alıcı yalnız kazanmak için girer: girişi, karşı tarafın ihanetinin ona hiçbir bedeli olmadığı bir oyuna çevirmek, girişin kendisini rasyonel olmaktan çıkarır (B'nin girmesi için S'nin işbirliği olasılığı en az 0,867 olmalı). |
+| Aile ve örgüt içinde sadakat bağlıyorsa? | Kimlik başına değil, ilişkili kişiler toplulaştırıldığı için aile başına tek tavan sızıntı sınırıdır: 114 944 TL/yıl; ayrıca Madde AA. |
+| Bu sınır Hazine'yi bozar mı? | Hesap aşağıdadır: kırılma noktası, kimliklerin %5,1'i (Kötümser) veya %10,7'si (Orta) hepsini azamî tavanda sahte işlerse; model aracılığıyla `sahte_fatura_kaybi` kırılma payı %35 (Kötümser, tedbirsiz) ile %77 (İyimser) arasındadır. |
+| Kiralanmış kimlik? | Kiralayanın elinde ne ödül ne güvence vardır; kimliğin sahibi her an bildirebilir ve bildirdiği miktar büyüdükçe ödülü büyür; bekleyen taraf kiralayanın alacağı değil kendisidir (bekleme oyunu alıcının aleyhine). Madde AC iz bırakır. |
+
+**Hesap (varsayımsızdır, aritmetiktir):** Orta yıl-4 net +4,06 mlr TL; tam tavanda sahte aile başına Hazine kaybı 792 720 × (0,25 − 0,105) = 114 944 TL; 4,06 mlr / 114 944 = 35 322 aile = N'nin (331 000) %10,7'si. Kötümser: 0,59 mlr / 114 944 = 5 133 aile = N'nin (100 000) %5,1'i. Bu hesap, sahtekârların bu rejimde zaten ödeyeceği vergiyi (0,105) düştükten sonraki kaybı verir; mevcut mükellefin rejime kaymasını (yutulma) ayrıca barındırmaz.
 
 **Kaldırılanlar (nakz):** ortak sayısıyla tavan indirimi (dürüst ortaklığa zarar verirdi) ve ceza katsayıları. **Kesilemeyenler ve mevcut sınırlayıcıları:** `MALI_MODEL/imkan_kesme_sim_out.txt`.
