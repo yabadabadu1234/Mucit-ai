@@ -16,11 +16,11 @@ belirleyen şeyler (a) 12 saatlik toplam süreyi ~120 görev arasında bölen za
 
 ## Bu klasördeki iş
 * build_submission.py -- iki arşiv kurar: `bf18` (referans, Budget-Fit ile bayt bayt aynı 4 dosya + atıf)
-  ve `locator` (özgün: yeni istem + skills/repo_navigation).
-* skills/repo_navigation/scripts/locate.py -- ÖZGÜN. Sorun metninden iz/kimlik/hata dizgisi/yol ipuçlarını
+  ve `locator` (özgün: yeni istem + skills/repo-navigation).
+* skills/repo-navigation/scripts/locate.py -- ÖZGÜN. Sorun metninden iz/kimlik/hata dizgisi/yol ipuçlarını
   çıkarır, AST dizinine karşı puanlar, `dosya:satır` + ilgili test verir. Gerekçe: referansın kendi ölçümü
   "12. çağrıya kadar düzenleme yoksa %87 başarısız" ve grafik araçları boş dönüyor.
-* skills/repo_navigation/scripts/verify.py -- ÖZGÜN. Tek çağrıda: boş/test-dokunan diff, derleme, yalnız ilgili
+* skills/repo-navigation/scripts/verify.py -- ÖZGÜN. Tek çağrıda: boş/test-dokunan diff, derleme, yalnız ilgili
   testler (zaman sınırlı), "sözleşme ipucu" (sorunda geçen dizgi yamada yok mu). Sentetik depoda ayırt ettiği
   sınandı (doğru yama sessiz, yanlış mesaj ipucu veriyor).
 * eval/localization_bench.py -- gerçek düzeltme commit'lerinden çevrimdışı yerelleştirme mihengi.

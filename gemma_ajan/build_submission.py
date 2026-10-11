@@ -27,6 +27,9 @@ tools:
 generate_content_config: !include configs/sampling.yaml
 """
 
+AGENT_YAML_LOCATOR = AGENT_YAML.replace(
+    "generate_content_config:", "skills:\n  - skills/repo-navigation\ngenerate_content_config:")
+
 SAMPLING_YAML = """temperature: 0.2
 top_p: 0.95
 max_output_tokens: 8192
@@ -96,7 +99,7 @@ Agent" by verracodeguacas (Kaggle notebook, Apache License 2.0), which itself
 builds on the competition's official sample_submission prompt.
 Changes: the "bf18" archive reproduces the four files unchanged and adds this
 notice. The "locator" archive replaces prompts/system.md and adds the original
-skills/repo_navigation scripts (locate.py, verify.py). Licensed under the
+skills/repo-navigation scripts (locate.py, verify.py). Licensed under the
 Apache License, Version 2.0.
 """
 
@@ -106,8 +109,7 @@ LOCATOR_SYSTEM_MD = """You are an expert autonomous software engineer assigned t
 
 ### 1. Localize in two calls
 1. Write the key facts of the issue to `/tmp/issue.txt` with `run_command` and a heredoc (NOT inside /workspace; `write_file` would put it in the patch). Include at most ~15 lines: traceback frames (`File "x.py", line N, in func`), exact error messages and quoted strings, function/class/file names, and one sentence of expected behavior.
-2. Run: `python3 $(find / -maxdepth 7 -path '*repo_navigation/scripts/locate.py' 2>/dev/null | head -1) /tmp/issue.txt --root /workspace`
-   It prints ranked `file:start-end` ranges and likely test files. Read only the top 1-2 ranges with `read_file`. If the command prints nothing useful, fall back to `git grep -n "<most specific identifier>" -- '*.py' | head -20`.
+2. Call `run_skill_script` with `skill_name="repo-navigation"` and `file_path="scripts/locate.py"` (no other arguments needed). It prints ranked candidate files with line ranges and likely test files. Read only the top 1-2 ranges with `read_file` (each call shows at most 150 lines). You do not need `load_skill` first. If the tool returns an error or nothing useful, do not retry more than once: fall back to `git grep -n "<most specific identifier>" -- '*.py' | head -20`.
 - Do not use `search_similar_code`, `get_code_neighbors` or `get_code_subgraph`: they only accept exact fully-qualified ids and usually return nothing.
 
 ### 2. Edit decisively
@@ -117,7 +119,7 @@ LOCATOR_SYSTEM_MD = """You are an expert autonomous software engineer assigned t
 - By your 8th tool call you should be editing. If you are not, edit the top-ranked candidate now.
 
 ### 3. Verify with one call, then submit
-- Run: `python3 $(find / -maxdepth 7 -path '*repo_navigation/scripts/verify.py' 2>/dev/null | head -1) /tmp/issue.txt --root /workspace`
+- Call `run_skill_script` with `skill_name="repo-navigation"` and `file_path="scripts/verify.py"`.
 - It compiles your changes, runs only related tests, and lists issue strings that your patch never mentions. Fix what it reports (one correction round), then call `submit_patch`. Verify `patch_size > 0`.
 - Never run bare `pytest`, `pytest .` or full-repo sweeps; they cause timeouts. Pre-existing unrelated test failures: ignore them.
 
@@ -128,7 +130,7 @@ LOCATOR_SYSTEM_MD = """You are an expert autonomous software engineer assigned t
 ## Anti-Patterns to Avoid
 - **NEVER modify, create, or delete test files** (`*_test.py`, `test_*.py`, anything under `tests/`). Modifying tests results in an automatic evaluation failure.
 - **NEVER leave stray files in /workspace** (notes, scratch scripts, `__pycache__`); keep scratch files in `/tmp`.
-- **NEVER search outside `/workspace`** for repository code or packages (the single `find` for the helper scripts is the only exception).
+- **NEVER search outside `/workspace`** for repository code or packages.
 - Do NOT refactor or reformat unrelated code. Do NOT conclude without a non-empty patch.
 """
 
@@ -140,7 +142,7 @@ BF18_FILES = {
     "ATTRIBUTION.md": ATTRIBUTION_MD,
 }
 
-SKILL_DIR = Path(__file__).resolve().parent / "skills" / "repo_navigation"
+SKILL_DIR = Path(__file__).resolve().parent / "skills" / "repo-navigation"
 SKILL_FILES = ["SKILL.md", "scripts/locate.py", "scripts/verify.py"]
 
 
@@ -149,9 +151,10 @@ def files_for(variant: str) -> dict:
         return dict(BF18_FILES)
     if variant == "locator":
         f = dict(BF18_FILES)
+        f["agent.yaml"] = AGENT_YAML_LOCATOR
         f["prompts/system.md"] = LOCATOR_SYSTEM_MD
         for rel in SKILL_FILES:
-            f["skills/repo_navigation/" + rel] = (SKILL_DIR / rel).read_text(encoding="utf-8")
+            f["skills/repo-navigation/" + rel] = (SKILL_DIR / rel).read_text(encoding="utf-8")
         return f
     raise SystemExit("variant: bf18 | locator")
 

@@ -20,7 +20,7 @@ import io
 from collections import Counter
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, os.path.join(HERE, "..", "skills", "repo_navigation", "scripts"))
+sys.path.insert(0, os.path.join(HERE, "..", "skills", "repo-navigation", "scripts"))
 import locate as L  # noqa: E402
 
 

@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """verify.py -- one-call post-edit gate.
 
-usage: python3 verify.py [STATEMENT_FILE]   (keep the statement file OUTSIDE /workspace, e.g. /tmp/issue.txt) [--root /workspace] [--timeout 120]
+usage: verify.py [--issue /tmp/issue.txt] [--root /workspace] [--timeout 120]
+(keep the issue file OUTSIDE /workspace; always exits 0 so run_skill_script keeps the output)
 
 Checks, in order, and prints a short verdict the agent can act on:
   1. the diff is non-empty and touches no test file
@@ -33,13 +34,9 @@ def sh(cmd, root, timeout=60):
 
 
 def main():
-    a = sys.argv[1:]
-    root, timeout = "/workspace", 120
-    if "--root" in a:
-        i = a.index("--root"); root = a[i + 1]; del a[i:i + 2]
-    if "--timeout" in a:
-        i = a.index("--timeout"); timeout = int(a[i + 1]); del a[i:i + 2]
-    text = open(a[0], errors="replace").read() if a and os.path.exists(a[0]) else ""
+    o = L.parse_args(sys.argv[1:])
+    root, timeout = o["root"], int(o["timeout"])
+    text = L.read_issue(o["issue"]) or ""
 
     sh("git add -N . 2>/dev/null", root)
     _, names = sh("git diff HEAD --name-only", root)
@@ -55,7 +52,7 @@ def main():
     problems = []
     if not changed:
         print("FAIL: empty diff. Make your best-guess edit now (top candidate from locate.py).")
-        return 1
+        return 0
     tests_touched = [f for f in changed if L.is_test_path(f)]
     if tests_touched:
         problems.append("test files modified (automatic failure): " + ", ".join(tests_touched)
@@ -105,10 +102,10 @@ def main():
         print("CONTRACT HINT (mentioned in the issue, absent from your added lines): " + "; ".join(missing))
     if problems:
         print("FIX BEFORE SUBMITTING:\n- " + "\n- ".join(problems))
-        return 1
+        return 0
     print("OK: call submit_patch now.")
     return 0
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    main()

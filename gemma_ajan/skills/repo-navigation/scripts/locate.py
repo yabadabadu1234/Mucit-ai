@@ -264,29 +264,54 @@ def locate(root, text, top=5):
     return ranked[:top], hints
 
 
+def parse_args(a):
+    opts = {"root": "/workspace", "top": "5", "issue": "/tmp/issue.txt", "timeout": "120"}
+    pos, i = [], 0
+    while i < len(a):
+        if a[i].startswith("--") and a[i][2:] in opts and i + 1 < len(a):
+            opts[a[i][2:]] = a[i + 1]
+            i += 2
+        else:
+            pos.append(a[i])
+            i += 1
+    if pos:
+        opts["issue"] = pos[0]
+    return opts
+
+
+def read_issue(path):
+    if path == "-":
+        return sys.stdin.read()
+    if not os.path.exists(path):
+        return None
+    return open(path, encoding="utf-8", errors="replace").read()
+
+
+def span(u, cap=140):
+    end = min(u.end, u.start + cap - 1)
+    more = u.end - end
+    return f"{u.start}-{end}" + (f" (+{more} more lines)" if more > 0 else "")
+
+
 def main():
-    a = sys.argv[1:]
-    if not a:
-        print(__doc__)
-        return 2
-    root, top = "/workspace", 5
-    if "--root" in a:
-        i = a.index("--root"); root = a[i + 1]; del a[i:i + 2]
-    if "--top" in a:
-        i = a.index("--top"); top = int(a[i + 1]); del a[i:i + 2]
-    text = sys.stdin.read() if a[0] == "-" else open(a[0], encoding="utf-8", errors="replace").read()
-    ranked, hints = locate(root, text, top)
-    if not ranked:
-        print("NO CANDIDATES: issue has no usable hints; read the files named in the issue.")
+    o = parse_args(sys.argv[1:])
+    text = read_issue(o["issue"])
+    if text is None:
+        print(f"NO ISSUE FILE at {o['issue']}: write the key facts of the issue there first "
+              "(run_command with a heredoc), then run this again.")
         return 0
-    print("CANDIDATES (edit the top one first; read only these ranges):")
+    ranked, hints = locate(o["root"], text, int(o["top"]))
+    if not ranked:
+        print("NO CANDIDATES: the issue has no usable hints; read the files it names.")
+        return 0
+    print("CANDIDATES (edit the top one first; read only these ranges with read_file):")
     topu = []
     for i, (fs, f, lst) in enumerate(ranked, 1):
         print(f"{i}. {f}  [{fs:.1f}]")
         for s, u in lst:
-            print(f"     {f}:{u.start}-{u.end}  {u.qual}  ({s:.1f})")
+            print(f"     {f} lines {span(u)}  {u.qual}  ({s:.1f})")
             topu.append(u)
-    tf = tests_for(root, topu[:6], hints)
+    tf = tests_for(o["root"], topu[:6], hints)
     if tf:
         print("LIKELY TESTS (run only these, with -x -q and -k <name>):")
         for t in tf:
@@ -295,4 +320,4 @@ def main():
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    main()

@@ -1,9 +1,9 @@
 ---
-name: repo_navigation
+name: repo-navigation
 description: Localize an issue to the files/symbols to edit in one call (locate.py) and gate a patch before submitting (verify.py).
 ---
 
-# repo_navigation
+# repo-navigation
 
 Two standard-library Python tools. Keep the issue facts in `/tmp/issue.txt`
 (outside `/workspace`, so they never end up in the patch).
