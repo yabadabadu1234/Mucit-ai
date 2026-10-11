@@ -111,3 +111,19 @@ Gerçek kişi ticari işletmede kapanan/kurulan oranı 2016-2022 ortalaması %55
 # EK-5 (F 3-I 267): işsizlerin yaşa göre dağılımı ve padişahın geçiş oranları
 Kaynak: ILO ILOSTAT (TÜİK HİA 2025), `veri_ilo/UNE.csv`, 5 yıllık bantlar; tek yaş için bant içi tekdüze dağılım **varsayımı** (ölçüm değil). Resmî işsiz, bin: 16-21 yaş 442,6 · 22-29: 881,8 · 30-39: 693,1 · 40+: 895,6. Padişahın tahmini (22-29: %60, 30-39: %40) → 529,1 + 277,2 = **806,3 bin kişi**. Hesap: `katilim_egrisi.py`, çıktı `katilim_egrisi_out.txt`.
 Haberdar olma gecikmesi için ölçülmüş veri **yoktur**; Bass yayılma eğrisi yalnız **duyarlılık** olarak koşturuldu (q=0,3 benim varsayımım): ilan şiddeti p=0,02 iken 3. yıl sonunda haberdar payı %9, p=0,05 → %21, p=0,15 → %49, p=0,40 → %81.
+
+---
+# EK-6 (F 3-I 270, 271): TÜİK Yıllık ve Bölgesel İşgücü İstatistikleri 2025 (bülten 57996, 25.3.2026) + SBB iki rapor
+Tablolar: 28 xls indirildi (`veri_tuik/isgucu_2025_57996/`), il düzeyi (İBBS-3, 81 il + Türkiye) işsizlik, istihdam, katılım 2022-2025 `il_duzeyi_2022_2025.csv`. Grafikler görüntü olarak çizilip görüldü (F 271); il tahminleri **örneklem tahminidir, güven aralığı geniştir** (ör. Tekirdağ istihdam oranı 2024 %56,0 → 2025 %52,1).
+
+## Türkiye 2025 (bülten)
+İşsizlik %8,3 (2 966 bin) · istihdam 32 566 bin, oran %49,0 · işgücü 35 533 bin (−200 bin), katılım %53,5 (−0,7 puan) · kadın istihdam oranı %32,1, erkek %66,4 · genç (15-24) işsizlik %15,3 (kadın %22,1) · **atıl işgücü %29,7 (+3 puan)** · sektör payı: tarım %14,0, sanayi %20,2, inşaat %6,8, hizmet %59,0; 2025'te tarım −267 bin, sanayi −168 bin, inşaat +62 bin, hizmet +318 bin · **ne eğitimde ne istihdamda** 15-24: %23,3 (2 684 bin), 15-29: %26,3 (4 711 bin).
+İl uçları 2025: işsizlik en düşük Ardahan %4,0, en yüksek Hakkari %13,8 (Van %12,7, Yalova %11,8, Muş %11,7, Adana %11,6); istihdam oranı en yüksek Artvin %58,1, en düşük Hakkari %32,9 (Muş %35,7, Van %37,0, Siirt %37,3).
+Sosyal güvenliğe kayıtsız (esas iş): 2025'te 8 344 bin (istihdamın %25,6); ücretli 2 843 · işveren 243 · kendi hesabına 3 111 · ücretsiz aile işçisi 2 148 bin.
+İşgücü dışı 2025: 30 862 bin; ev işleriyle meşgul 5 844 bin (2021: 9 917), çalışamaz halde 7 690 bin (2021: 4 998), "diğer" 4 665 bin (2021: 2 925). Sütun başlıkları birleşik olduğundan potansiyel işgücü alt kırılımı **ayrıştırılamadı**.
+
+## SBB İşgücü Piyasası Makro Analizi 2026-I (14 sayfa, tamamı okundu; grafikler görüldü)
+2026Ç1: büyüme %2,5 iken istihdam −%1,4 (−449 bin, 31 480 bin); MEA istihdam çeyreklik −301 bin; MEA katılım %52,6 (−0,7), MEA işsizlik %8,2, **atıl işgücü %30,4**; HİA tablosunda 2026-I ham katılım %51,6, atıl %31,9. Yıllık: hizmet +33 bin, tarım −158, sanayi −238, inşaat −86 bin. Konaklama-yiyecek −79 bin, idari-destek −71 bin, mesleki-bilimsel-teknik +68 bin (MEA çeyreklik). Grafik 3 (görüldü): emek yoğun imalat 2023Ç3'ten beri imalat genelinden ayrışmış, imalat KKO ve istihdama duyarlı KKO düşüyor; inşaat istihdamı 2025 ortasından beri geriliyor. Kamu istihdamı 5 369 bin (%16,7). İşsizlik sigortası alan 480 928 (Mayıs 2026). Kutu: istihdamın büyüme esnekliği uzun dönemde yükselmiş, tarımda büyümeden bağımsız yapısal düşüş.
+## SBB Haftalık Gelişmeler 9 Ekim 2026 (107 sayfa; yalnız işgücü ve asgari ücret sayfaları 22 ve 25 görüntü olarak okundu, kalan sayfalar okunmadı)
+Ağustos 2026 (ham): işgücü 36 083 bin, istihdam 33 301, işsiz 2 782, katılım %53,8, işsizlik %7,7; MEA: katılım %52,5, istihdam oranı %48,4, işsizlik %7,8. Asgari ücret 2026: brüt 33 030, net 28 075,5, işverene maliyet 40 874,6 TL; net/işveren maliyeti = %68,7; toplam kesinti/brüt %30,4 (tabloda "SSK+issizlik+gelir ve damga" ayrıntısı 4 954,5 TL işçi payı).
+## ÇSGB e-bülten sayfası: en güncel Çalışma Hayatı bülteni Ocak 2026 (PDF), Ağustos/Eylül 2026 yalnız "ücret ve sendikal" serisi; "81 İle İlişkin Genel Göstergeler" tematik bülteni listede var. **Bu turda okunmadı.**
