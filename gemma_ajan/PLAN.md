@@ -35,16 +35,28 @@ belirleyen şeyler (a) 12 saatlik toplam süreyi ~120 görev arasında bölen za
   istem bu yüzden `find ... locate.py` ile yolu buluyor. HARNESS_README gelince bu adım sadeleşir.
 * Her iki arşivi de göndermek, LB gürültüsü (±0.06) yüzünden tek başına kanıt vermez.
 
-## Beni durduran şeyler (hesap işi, benim aşamayacağım)
-1. Veri (22 GB, HARNESS_README, örnek gönderim) giriş + kural kabulü istiyor (anonim GetDataViewExternal = 403).
-2. Gönderim `kaggle competitions submit` / arayüz: Kaggle API jetonu gerekir. Kural kabulü sizin hukukî fiilinizdir.
-3. Gemma-4-31B'yi çalıştırmak L4x4 GPU ister (yalnız yarışmaya bağlı Kaggle defterlerinde). Bu kutuda GPU yok;
-   yerel ajan koşusu / LoRA eğitimi burada yapılamaz.
+## Durum (2026-10-11 22:55 UTC)
+* GÖNDERİLDİ: `locator` arşivi, ref 57087206, durum PENDING. Günlük gönderim hakkı doldu ("0 submissions remaining
+  today"); referans arşiv (`bf18`) kontrol olarak ertesi gün gönderilebilir.
+* Kaggle jetonu yalnız komut ortamı değişkeni olarak kullanıldı; depoda/dosyada yok (tarandı). Sohbette göründüğü
+  için sahibi Kaggle > Settings > API'den iptal edip yenilemelidir.
+* Harness kaynağı (`metric/gemma-4-developer-agent-wheelhouse`: google-adk 1.36.1, adk-submission 0.2.13,
+  swegemma 0.2.11) indirilip okundu. Bulgular: (1) skill adı kebab-case olmalı (`repo_navigation` ile arşiv
+  DERLENMİYORDU, düzeltildi); (2) `run_skill_script` betiği geçici dizinde `runpy` ile koşturur, cwd /workspace
+  değildir, sıfırdan farklı çıkış kodu stdout'u kaybettirir -> betikler her zaman 0 ile çıkar ve /workspace'i
+  açıkça kullanır; (3) `read_file` 150 satır, komut çıktısı 5000 karakter sınırlı.
+* Doğrulama: `eval/harness_check.py` arşivi GERÇEK adk-submission ile derler ve betikleri GERÇEK run_skill_script
+  sarmalayıcısıyla sentetik depoda koşturur (boş diff / yanlış mesaj / sözdizimi hatası ayırt edilir).
+* Gerçek 129 görevde yerelleştirme (`eval/real_bench.py`, base_commit ağacı): locate hit@1/3/5 = 0.50/0.72/0.80,
+  tüm-dosya TF-IDF 0.36/0.56/0.67. FastAPI (67): 0.46/0.72/0.84 karşı 0.25/0.52/0.66; Rich (48): 0.48/0.67/0.71
+  karşı 0.40/0.50/0.58; requests (13): 0.69/0.92/0.92 karşı 0.77/0.92/1.00 (TF-IDF önde).
+
+## Ölçülmeyen (dürüstlük)
+* İstem Gemma'ya karşı HİÇ koşulmadı (GPU yok); gerçek skor yalnız LB'den gelir ve LB gürültüsü ±0.06'dır.
+* Gerçek harness'in `ctx.code_executor` değerinin hangi yürütücü olduğu kaynaktan okunmadı (swegemma agent_runner
+  okunmadı); görev metni "run_skill_script Docker kutusunda koşar" diyor.
 
 ## Sıradaki adımlar
-1. (Sizde) Kaggle'da yarışma kurallarını kabul et; Settings > API > jeton üret; jetonu bu oturumun
-   ortam gizlisi olarak KAGGLE_API_TOKEN ver.
-2. (Bende) `kaggle kernels push` ile defteri gönder, çıktıdaki submission.zip'i
-   `kaggle competitions submit gemma-4-developer-agent -f submission.zip` ile yolla.
-3. (Bende) Veri inince HARNESS_README'yi baştan sona oku, 129 görev üstünde yerel eşleştirilmiş deney yap
-   (GPU gerektiği için bunu Kaggle L4x4 defterinde), yalnız eşleştirilmiş kazanç gösteren değişikliği ekle.
+1. LB sonucunu bekle (`kaggle competitions submissions gemma-4-developer-agent`).
+2. Ertesi gün `submission_bf18.zip` kontrol olarak gönder; iki skoru yan yana yaz (gürültü payıyla).
+3. `swegemma eval` yerelde Docker+GPU ister; Kaggle L4x4 defterinde eşleştirilmiş koşu yapılabilir.
