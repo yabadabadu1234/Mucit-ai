@@ -15,8 +15,25 @@ belirleyen şeyler (a) 12 saatlik toplam süreyi ~120 görev arasında bölen za
 * Lider tablo tepesi ~0.24 (kaynağı arşivle bağlanmış değil).
 
 ## Bu klasördeki iş
-* build_submission.py -- submission.zip kurar (Budget-Fit ile bayt bayt aynı 4 dosya + ATTRIBUTION.md).
-* kernel-metadata.json -- aynı betiği Kaggle'da koşturacak script defteri (CPU, internet kapalı).
+* build_submission.py -- iki arşiv kurar: `bf18` (referans, Budget-Fit ile bayt bayt aynı 4 dosya + atıf)
+  ve `locator` (özgün: yeni istem + skills/repo_navigation).
+* skills/repo_navigation/scripts/locate.py -- ÖZGÜN. Sorun metninden iz/kimlik/hata dizgisi/yol ipuçlarını
+  çıkarır, AST dizinine karşı puanlar, `dosya:satır` + ilgili test verir. Gerekçe: referansın kendi ölçümü
+  "12. çağrıya kadar düzenleme yoksa %87 başarısız" ve grafik araçları boş dönüyor.
+* skills/repo_navigation/scripts/verify.py -- ÖZGÜN. Tek çağrıda: boş/test-dokunan diff, derleme, yalnız ilgili
+  testler (zaman sınırlı), "sözleşme ipucu" (sorunda geçen dizgi yamada yok mu). Sentetik depoda ayırt ettiği
+  sınandı (doğru yama sessiz, yanlış mesaj ipucu veriyor).
+* eval/localization_bench.py -- gerçek düzeltme commit'lerinden çevrimdışı yerelleştirme mihengi.
+  137 görev (fastapi/httpx/requests/rich, ebeveyn sürümde): hit@1/3/5 = 0.51/0.81/0.89 (locate) karşı
+  0.39/0.72/0.83 (tüm-dosya TF-IDF). Dosya yolları silinince 0.50/0.81/0.89. Uyarı: "sorun" olarak commit
+  mesajı kullanıldı (gerçek sorun metni değil); yani bu bir vekil ölçüdür, çözüm oranı değildir.
+* kernel-metadata.json -- betiği Kaggle'da koşturacak script defteri (CPU, internet kapalı).
+
+## Ölçülmeyen (dürüstlük)
+* `locator` istemi Gemma'ya karşı HİÇ koşulmadı (GPU yok). Skill betiklerinin harness'te hangi yolla
+  çağrılacağı (`run_skill_script` imzası, dosyaların kutuya yerleşimi) HARNESS_README okunmadan bilinmiyor;
+  istem bu yüzden `find ... locate.py` ile yolu buluyor. HARNESS_README gelince bu adım sadeleşir.
+* Her iki arşivi de göndermek, LB gürültüsü (±0.06) yüzünden tek başına kanıt vermez.
 
 ## Beni durduran şeyler (hesap işi, benim aşamayacağım)
 1. Veri (22 GB, HARNESS_README, örnek gönderim) giriş + kural kabulü istiyor (anonim GetDataViewExternal = 403).

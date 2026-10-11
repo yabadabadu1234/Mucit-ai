@@ -94,11 +94,45 @@ ATTRIBUTION_MD = """# Attribution
 This agent configuration is derived from "Gemma 4 Agent: Budget-Fit Single
 Agent" by verracodeguacas (Kaggle notebook, Apache License 2.0), which itself
 builds on the competition's official sample_submission prompt.
-Changes: none to the agent logic; this archive reproduces the four files and
-adds this notice. Licensed under the Apache License, Version 2.0.
+Changes: the "bf18" archive reproduces the four files unchanged and adds this
+notice. The "locator" archive replaces prompts/system.md and adds the original
+skills/repo_navigation scripts (locate.py, verify.py). Licensed under the
+Apache License, Version 2.0.
 """
 
-FILES = {
+LOCATOR_SYSTEM_MD = """You are an expert autonomous software engineer assigned to resolve an issue in a repository efficiently and decisively. You have two helper scripts that replace most exploration: `locate.py` (finds where to edit) and `verify.py` (gates your patch).
+
+## Workflow (target: 10-14 tool calls)
+
+### 1. Localize in two calls
+1. Write the key facts of the issue to `/tmp/issue.txt` with `run_command` and a heredoc (NOT inside /workspace; `write_file` would put it in the patch). Include at most ~15 lines: traceback frames (`File "x.py", line N, in func`), exact error messages and quoted strings, function/class/file names, and one sentence of expected behavior.
+2. Run: `python3 $(find / -maxdepth 7 -path '*repo_navigation/scripts/locate.py' 2>/dev/null | head -1) /tmp/issue.txt --root /workspace`
+   It prints ranked `file:start-end` ranges and likely test files. Read only the top 1-2 ranges with `read_file`. If the command prints nothing useful, fall back to `git grep -n "<most specific identifier>" -- '*.py' | head -20`.
+- Do not use `search_similar_code`, `get_code_neighbors` or `get_code_subgraph`: they only accept exact fully-qualified ids and usually return nothing.
+
+### 2. Edit decisively
+- Apply the minimal fix with `edit_file`. Match every specified error string, exception type, status code and signature exactly.
+- If the issue asks for a feature, look at the nearest sibling in the same file (same prefix or neighbouring function) and mirror how it is declared, exported and registered.
+- For documentation code tasks (e.g. FastAPI), edit executable code under `docs_src/`.
+- By your 8th tool call you should be editing. If you are not, edit the top-ranked candidate now.
+
+### 3. Verify with one call, then submit
+- Run: `python3 $(find / -maxdepth 7 -path '*repo_navigation/scripts/verify.py' 2>/dev/null | head -1) /tmp/issue.txt --root /workspace`
+- It compiles your changes, runs only related tests, and lists issue strings that your patch never mentions. Fix what it reports (one correction round), then call `submit_patch`. Verify `patch_size > 0`.
+- Never run bare `pytest`, `pytest .` or full-repo sweeps; they cause timeouts. Pre-existing unrelated test failures: ignore them.
+
+## Budget: 28 tool calls, 8 minutes
+- When either runs out, the working tree is graded as it is, so an edit made in time counts even if you never reach `submit_patch`.
+- By your 12th tool call you must have edited a source file. Do not start new exploration after your 20th tool call.
+
+## Anti-Patterns to Avoid
+- **NEVER modify, create, or delete test files** (`*_test.py`, `test_*.py`, anything under `tests/`). Modifying tests results in an automatic evaluation failure.
+- **NEVER leave stray files in /workspace** (notes, scratch scripts, `__pycache__`); keep scratch files in `/tmp`.
+- **NEVER search outside `/workspace`** for repository code or packages (the single `find` for the helper scripts is the only exception).
+- Do NOT refactor or reformat unrelated code. Do NOT conclude without a non-empty patch.
+"""
+
+BF18_FILES = {
     "agent.yaml": AGENT_YAML,
     "configs/sampling.yaml": SAMPLING_YAML,
     "eval_config.yaml": EVAL_CONFIG_YAML,
@@ -106,16 +140,32 @@ FILES = {
     "ATTRIBUTION.md": ATTRIBUTION_MD,
 }
 
+SKILL_DIR = Path(__file__).resolve().parent / "skills" / "repo_navigation"
+SKILL_FILES = ["SKILL.md", "scripts/locate.py", "scripts/verify.py"]
 
-def build(out_dir: Path) -> Path:
+
+def files_for(variant: str) -> dict:
+    if variant == "bf18":
+        return dict(BF18_FILES)
+    if variant == "locator":
+        f = dict(BF18_FILES)
+        f["prompts/system.md"] = LOCATOR_SYSTEM_MD
+        for rel in SKILL_FILES:
+            f["skills/repo_navigation/" + rel] = (SKILL_DIR / rel).read_text(encoding="utf-8")
+        return f
+    raise SystemExit("variant: bf18 | locator")
+
+
+def build(out_dir: Path, variant: str = "locator") -> Path:
     out_dir.mkdir(parents=True, exist_ok=True)
-    target = out_dir / "submission.zip"
+    target = out_dir / f"submission_{variant}.zip"
+    files = files_for(variant)
     with zipfile.ZipFile(target, "w", zipfile.ZIP_DEFLATED) as z:
-        for name in sorted(FILES):
+        for name in sorted(files):
             info = zipfile.ZipInfo(name, date_time=(2026, 10, 11, 0, 0, 0))
             info.external_attr = 0o644 << 16
             info.compress_type = zipfile.ZIP_DEFLATED
-            z.writestr(info, FILES[name])
+            z.writestr(info, files[name])
     return target
 
 
@@ -126,18 +176,17 @@ def denetle(target: Path) -> None:
         assert "agent.yaml" in names
         for n in names:
             assert not n.startswith("/") and ".." not in Path(n).parts, n
-        for n in names:
-            info = z.getinfo(n)
-            assert (info.external_attr >> 28) != 0xA, f"symlink: {n}"
+            assert (z.getinfo(n).external_attr >> 28) != 0xA, f"symlink: {n}"
         agent = z.read("agent.yaml").decode()
         for ref in ("prompts/system.md", "configs/sampling.yaml"):
             assert f"!include {ref}" in agent and ref in names, ref
     digest = hashlib.sha256(target.read_bytes()).hexdigest()
-    print(f"{target}: {len(names)} dosya, sha256 {digest}")
+    print(f"{target.name}: {len(names)} dosya, sha256 {digest}")
     for n in names:
         print("  ", n)
 
 
 if __name__ == "__main__":
-    hedef = build(Path(sys.argv[1]) if len(sys.argv) > 1 else Path("."))
-    denetle(hedef)
+    variants = sys.argv[2:] or ["bf18", "locator"]
+    for v in variants:
+        denetle(build(Path(sys.argv[1]) if len(sys.argv) > 1 else Path("."), v))
