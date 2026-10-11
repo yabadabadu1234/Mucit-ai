@@ -1,0 +1,14 @@
+* ELE224L
+Ib 0 b DC 0.0005
+Ic 0 c DC 0.01
+Q1 c b 0 BC238A
+.model BC238A NPN(IS=7.7754e-14 BF=170 BR=10 RB=130 RC=1)
+.control
+set noaskquit
+option numdgt=9
+op
+print v(c)
+print v(b)
+quit
+.endc
+.end

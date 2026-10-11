@@ -1,0 +1,15 @@
+* ELE224L
+V1 a 0 DC -5
+D1 a b D1N4148
+R1 b 0 1k
+.model D1N4148 D(IS=2.52n RS=.568 N=1.752 CJO=4p M=.4 TT=20n)
+.control
+set noaskquit
+option numdgt=9
+op
+print v(a)
+print v(b)
+print i(v1)
+quit
+.endc
+.end

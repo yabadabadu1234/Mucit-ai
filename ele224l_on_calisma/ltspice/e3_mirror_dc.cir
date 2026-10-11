@@ -1,0 +1,12 @@
+* ELE224L - e3_mirror_dc
+* ngspice ile uretildi/dogrulandi; LTspice'ta bu ortamda ACILMADI (File>Open ile acip calistirin).
+VDD vdd 0 DC 15
+Vi vi 0 DC 0
+R1 vi d1 680
+M1 d1 d1 0 0 BS170 W=100u L=100u
+M2 d2 d1 0 0 BS170 W=100u L=100u
+R2 vdd d2 1k
+.model BS170 NMOS (VTO=2.1 RG=270 RS=1.572 RD=1.436 RB=.768
++ KP=.1233 Rds=1.2E8 IS=5p Tt=161.6n)
+.dc Vi 0 15 0.5
+.end
