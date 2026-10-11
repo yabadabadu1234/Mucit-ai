@@ -1,0 +1,24 @@
+== kalibrasyon zor (soğuk başlangıç: ilk müşteri yok)
+  Bugün esnaf/şahıs (açılış 12000, sabit yük)                    6ay gelir 0.32 | 12ay 0.47 | yıkım 1.00 | aç ay 32.5 | kalıcı üst 0.002 | dip 0.996 | devletPV   258150
+  Bugün LTD (12500 peşin sermaye + 5400 oda/tescil; sabit yük)   6ay gelir 0.29 | 12ay 0.47 | yıkım 1.00 | aç ay 32.2 | kalıcı üst 0.002 | dip 0.997 | devletPV   253570
+  Bugün kollektif (noter/sicil 3000 VARSAYIM; sabit yük)         6ay gelir 0.36 | 12ay 0.49 | yıkım 1.00 | aç ay 32.7 | kalıcı üst 0.001 | dip 0.997 | devletPV   260986
+  Bugün ticaret, stoklu (stok 20000 VARSAYIM + esnaf 12000)      6ay gelir 0.24 | 12ay 0.47 | yıkım 1.00 | aç ay 31.8 | kalıcı üst 0.001 | dip 0.997 | devletPV   249046
+  Çare: tek kapı, hizmet/emek (gün-0 0)                          6ay gelir 0.52 | 12ay 0.64 | yıkım 0.79 | aç ay 28.9 | kalıcı üst 0.031 | dip 0.907 | devletPV    70346
+  Çare: tek kapı + sermayesiz tüzel (gün-0 0)                    6ay gelir 0.52 | 12ay 0.64 | yıkım 0.79 | aç ay 28.9 | kalıcı üst 0.031 | dip 0.907 | devletPV    70346
+  Çare: tek kapı + emanet/siparişle ticaret (gün-0 0)            6ay gelir 0.52 | 12ay 0.64 | yıkım 0.79 | aç ay 28.9 | kalıcı üst 0.031 | dip 0.907 | devletPV    70346
+== kalibrasyon orta (soğuk başlangıç: ilk müşteri yok)
+  Bugün esnaf/şahıs (açılış 12000, sabit yük)                    6ay gelir 0.44 | 12ay 0.59 | yıkım 0.99 | aç ay 32.5 | kalıcı üst 0.016 | dip 0.975 | devletPV   287658
+  Bugün LTD (12500 peşin sermaye + 5400 oda/tescil; sabit yük)   6ay gelir 0.40 | 12ay 0.59 | yıkım 0.99 | aç ay 32.2 | kalıcı üst 0.016 | dip 0.977 | devletPV   282939
+  Bugün kollektif (noter/sicil 3000 VARSAYIM; sabit yük)         6ay gelir 0.48 | 12ay 0.61 | yıkım 0.99 | aç ay 32.7 | kalıcı üst 0.019 | dip 0.973 | devletPV   293573
+  Bugün ticaret, stoklu (stok 20000 VARSAYIM + esnaf 12000)      6ay gelir 0.35 | 12ay 0.60 | yıkım 0.99 | aç ay 31.8 | kalıcı üst 0.016 | dip 0.978 | devletPV   278106
+  Çare: tek kapı, hizmet/emek (gün-0 0)                          6ay gelir 0.63 | 12ay 0.74 | yıkım 0.53 | aç ay 20.9 | kalıcı üst 0.130 | dip 0.661 | devletPV   217781
+  Çare: tek kapı + sermayesiz tüzel (gün-0 0)                    6ay gelir 0.63 | 12ay 0.74 | yıkım 0.53 | aç ay 20.9 | kalıcı üst 0.130 | dip 0.661 | devletPV   217781
+  Çare: tek kapı + emanet/siparişle ticaret (gün-0 0)            6ay gelir 0.63 | 12ay 0.74 | yıkım 0.53 | aç ay 20.9 | kalıcı üst 0.130 | dip 0.661 | devletPV   217781
+== kalibrasyon kolay (soğuk başlangıç: ilk müşteri yok)
+  Bugün esnaf/şahıs (açılış 12000, sabit yük)                    6ay gelir 0.53 | 12ay 0.67 | yıkım 0.96 | aç ay 31.8 | kalıcı üst 0.055 | dip 0.915 | devletPV   371483
+  Bugün LTD (12500 peşin sermaye + 5400 oda/tescil; sabit yük)   6ay gelir 0.49 | 12ay 0.67 | yıkım 0.97 | aç ay 31.5 | kalıcı üst 0.052 | dip 0.915 | devletPV   364931
+  Bugün kollektif (noter/sicil 3000 VARSAYIM; sabit yük)         6ay gelir 0.57 | 12ay 0.69 | yıkım 0.95 | aç ay 31.9 | kalıcı üst 0.061 | dip 0.908 | devletPV   383637
+  Bugün ticaret, stoklu (stok 20000 VARSAYIM + esnaf 12000)      6ay gelir 0.43 | 12ay 0.68 | yıkım 0.98 | aç ay 31.2 | kalıcı üst 0.052 | dip 0.918 | devletPV   356490
+  Çare: tek kapı, hizmet/emek (gün-0 0)                          6ay gelir 0.71 | 12ay 0.81 | yıkım 0.33 | aç ay 13.7 | kalıcı üst 0.341 | dip 0.349 | devletPV   475727
+  Çare: tek kapı + sermayesiz tüzel (gün-0 0)                    6ay gelir 0.71 | 12ay 0.81 | yıkım 0.33 | aç ay 13.7 | kalıcı üst 0.341 | dip 0.349 | devletPV   475727
+  Çare: tek kapı + emanet/siparişle ticaret (gün-0 0)            6ay gelir 0.71 | 12ay 0.81 | yıkım 0.33 | aç ay 13.7 | kalıcı üst 0.341 | dip 0.349 | devletPV   475727

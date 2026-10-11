@@ -80,3 +80,21 @@ Rakamlar ikincil kaynaktır (3-I 244: asıl rakam başvuru öncesi yoklanır).
 2. Ticaret için emanet/siparişle sıfır stoklu yol açılsın mı (suistimal riski kalır)?
 3. C2 GSS primi ve kanun gerekçelerinin birincil metni yoklanacak (okuma izni gerekmez, 3-I 244).
 4. Madde 1(p) grubu ve cihaz bedeli (C5).
+
+## I. SİMÜLASYON (F 3-I 276) -- `MALI_MODEL/bariyer_sim.py`, `bariyer_sim_out.txt`
+3000 genç, 72 ay, soğuk başlangıç (ilk müşteri yok), gün-0 bedel başlangıç borcu olarak girer; noter/sicil 3 000 ve stok 20 000 TL **varsayımdır** (ölçülmedi). Orta kalibrasyon:
+
+| Senaryo | 6 ayda gelir | 12 ayda gelir | Yıkım | Kalıcı üst |
+|---|---|---|---|---|
+| Bugün esnaf (12 000 açılış + sabit yük) | 0,44 | 0,59 | 0,99 | 0,016 |
+| Bugün LTD (17 900 + sabit yük) | 0,40 | 0,59 | 0,99 | 0,016 |
+| Bugün kollektif (3 000 varsayım) | 0,48 | 0,61 | 0,99 | 0,019 |
+| Bugün stoklu ticaret (32 000 varsayım) | 0,35 | 0,60 | 0,99 | 0,016 |
+| Çare: tek kapı (gün-0 0) | 0,63 | 0,74 | 0,53 | 0,130 |
+
+Zor kalibrasyonda çare: yıkım 0,79, kalıcı üst 0,031; kolay: yıkım 0,33, kalıcı üst 0,341. Devlet bugünkü PV'si (orta) 287 658 → çare 217 781 TL/genç.
+
+**Tenkit (dürüst sınırlar):**
+1. Üç çare satırı (hizmet / tüzel / ticaret) **birebir aynı** çıktı: model bunları ayırt etmiyor. Tüzel kişinin sınırlı sorumluluğu, ticaretin düşük marjı ve stok riski modelde yok. Yani "ticaret ve tüzel kişi de aynı sonucu verir" iddiası **ölçülmedi**, yalnız gün-0 bedelinin sıfırlanmasının etkisi ölçüldü.
+2. Bugünkü yıkım 0,99 çıkması; yük (sabit gider + borçla başlangıç) ağır varsayıldığından, mutlak değil karşılaştırma için okunmalı.
+3. Çarede yıkım orta kalibrasyonda hâlâ 0,53: kapı bariyerlerinin kalkması tek başına yetmez; padişahın "kalıcı üst segmente geçemeyen kanunda hatadır" ölçütü (3-I 258) çarede de sağlanmış **değildir** (kalıcı üst 0,13).
