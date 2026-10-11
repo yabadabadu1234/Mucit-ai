@@ -277,6 +277,10 @@ Mikro mükellefiyet tescili tek başına fesih sebebi olamaz; işveren fesih hak
 
 **Geçmişe matuf af maddesi bilerek yazılmamıştır**: eşitlik sorunu doğurur ve VUK m.370-371 (izaha davet, pişmanlık) genel hükümleri zaten vardır [M]. **Halen kayıtlı mükelleflere giriş hakkı tanınmıştır, fakat 4/b sigortalılıkları ve prim yükümlülükleri sürer** (Madde 1 (p)): model, prim kaybı olmadığında yutulmanın net etkiyi bozmadığını göstermiştir (III.E). Geçici Madde 1: entegrasyon süresince (en çok altı ay) sistem tevkifatı kesemezse mükellefe sorumluluk yüklenmez. Madde 13 ve 14: yayımı izleyen ayın başı yürürlük, Cumhurbaşkanı yürütme.
 
+### N. Ek maddeler: tek kapı, sermayesiz tüzel kişi, ortaklık türleri
+
+Kuruluş yükünü kaldıran Ek Madde A–O `kanun/TEKLIF_EK_TEK_KAPI.md` dosyasındadır; gerekçesi ve bariyer envanteri `BARIYER_ENVANTERI.md`, simülasyonu `MALI_MODEL/bariyer_sim_out.txt` ve `MALI_MODEL/ortaklik_sim_out.txt` dosyalarındadır. **Özet:** (A) tek başvuru, (B) defter ve muhasebeci şartı yok, (C) oda aidatı ilk yıl muaf, (D) düşük riskte ruhsat yerine bildirim, (E) adres ve tebligat, (F) ücretsiz e-belge, (G, H) emek sermayesi ve sınırlı sorumlu mikro tür (haksız fiil, ücret, vergi, prim ve kasıtta şahsî sorumluluk, ilan ve rıza), (I) aracılık ticareti, (J, K) sermaye–emek ortaklığı ve kademeli devir, (L, M, N) emek, itibar, tarım ortaklıkları, (O) saklı hükümler. **Delil durumu:** bedeller çoğunlukla ikincil kaynaktandır; simülasyonlar varsayım içerir (sermaye ile gencin nakdi karışık, tek kişilik model). **Kalan risk:** tavan çoğaltma (ortaklar arası bölüşme), sermayedar arzı ölçülmemiştir.
+
 ---
 
 ---

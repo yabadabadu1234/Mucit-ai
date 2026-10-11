@@ -23,12 +23,13 @@ def sok2(N,T,seed):
     for t in range(1,T): x[t]=0.9*x[t-1]+g.normal(0,0.06)
     return dict(makro=np.exp(x),beceri=np.exp(g.normal(0,0.35,N)),yeni_u=g.random((T,N)),birim=np.exp(g.normal(0,0.3,(T,N))),
       kayip=g.normal(0,0.04,(T,N)),gurultu=np.exp(g.normal(0,0.15,(T,N))),olay=g.random((T,N))<0.015,denetim=g.random((T,N)),pazar=g.random((T,N))<0.04)
-def kos2(rj,P,S,N,T=72,b0=5500.0,L=0.45,istisna_tutar=1737500.0,prim_oran=0.10,yol_zorla=None,burs_miktar=0.25*ASGARI_NET,k0=0.0,b_ilk=0.5):
+def kos2(rj,P,S,N,T=72,b0=5500.0,L=0.45,istisna_tutar=1737500.0,prim_oran=0.10,yol_zorla=None,burs_miktar=0.25*ASGARI_NET,k0=0.0,b_ilk=0.5,kar_payi=0.0,pay_tavan=None):
     yol=P["yol"] if yol_zorla is None else np.full(N,yol_zorla)
     s=S["beceri"]*P["beceri"]
     lam_yol=np.where(yol==0,P["erisim"],np.where(yol==1,0.9,0.3))
     b_yol=np.where(yol==0,1.0,np.where(yol==1,0.6,1.8))
     K=np.full(N,float(k0)); B=b_ilk*b0*b_yol*s*(lam_yol>0.3); aktif=np.zeros(N); harap=np.zeros(N,dtype=int); yil=np.zeros(N); genel=np.zeros(N,dtype=bool)
+    pay_toplam=np.zeros(N)
     gecmis=np.zeros((T,N)); net=np.zeros((T,N)); devlet=np.zeros((T,N)); gel_hepsi=np.zeros((T,N)); iflas=np.zeros(N,dtype=bool); iflas_ay=np.zeros(N); ac_ay=np.zeros(N); genel_ay=np.zeros(N)
     for t in range(T):
         ay=t%12
@@ -70,6 +71,9 @@ def kos2(rj,P,S,N,T=72,b0=5500.0,L=0.45,istisna_tutar=1737500.0,prim_oran=0.10,y
         odeme=(harap==0)
         prim=np.where(odeme,prim,0.0); sabit=np.where(odeme,sabit,0.0); vergi=np.where(odeme,vergi,0.0)
         gel=(1-GIDER)*R-vergi-prim-sabit-ceza+gig
+        pay=kar_payi*np.maximum((1-GIDER)*R-vergi-prim-sabit,0)*(harap==0)
+        if pay_tavan is not None: pay=np.minimum(pay,np.maximum(pay_tavan-pay_toplam,0))
+        gel=gel-pay; pay_toplam=pay_toplam+pay
         eldeki=gel+destek-burs_kaybi
         olay=np.where(S['olay'][t],2*SMIN,0.0)
         K=K+np.where(eldeki>=SMIN,0.5*(eldeki-SMIN),eldeki-SMIN)-olay
@@ -79,7 +83,7 @@ def kos2(rj,P,S,N,T=72,b0=5500.0,L=0.45,istisna_tutar=1737500.0,prim_oran=0.10,y
         harap=np.where(yeni_iflas,6,np.maximum(harap-1,0)); K=np.where(yeni_iflas,-2*SMIN,K); B=np.where(yeni_iflas,0.0,B)
         iflas_ay=iflas_ay+(harap>0); genel_ay=genel_ay+genel
         net[t]=gel; devlet[t]=vergi+prim; gel_hepsi[t]=R
-    return dict(net=net,devlet=devlet,iflas=iflas,iflas_ay=iflas_ay,ac_ay=ac_ay,genel_ay=genel_ay,R=gel_hepsi)
+    return dict(pay_toplam=pay_toplam,net=net,devlet=devlet,iflas=iflas,iflas_ay=iflas_ay,ac_ay=ac_ay,genel_ay=genel_ay,R=gel_hepsi)
 def bant2(net,pen=12):
     T=net.shape[0]; o=np.zeros_like(net)
     for t in range(T):

@@ -19,3 +19,15 @@ Lafız tarafsızdır (F 3-I 246); dinî sebep yazılmaz. Dayanak ve bedel durumu
 **Madde H (Sınırlı sorumlu mikro tür; tarafsız lafız).** Mikro mükellefler, unvanında "sınırlı sorumlu" ibaresi bulunan ve sicilde ilan edilen sermayesiz bir şirket kurabilir. Sınırlı sorumluluk yalnız sözleşmeden doğan borçlar için geçerlidir; haksız fiil, ücret, vergi ve prim alacakları ile kasıt ve ağır kusur hâllerinde ortaklar şahsen sorumludur. Alacaklıya sözleşmeden önce bu durum bildirilir. Yıllık hasılat Madde 1'deki tavanı aşamaz.
 
 **Madde I (Aracılık ticareti).** Negatif listeden, mal sahibi adına vekâlet veya komisyon sözleşmesiyle yapılan aracılık çıkarılır; mal sahibi olunmadan kendi namına satış açılmaz.
+
+**Madde J (Sermaye–emek ortaklığı).** Mikro mükellef, sermayeyi başkasından alıp işi kendi emeğiyle yürütmek üzere ortaklık kurabilir. Kâr, ortaklar arasında önceden belirlenen **oranla** paylaşılır; kâr için sabit tutar veya garanti verilemez. Zarar sermaye verene aittir; emek sahibi kasıt, kusur veya ihmali yoksa zarardan borçlandırılamaz.
+
+**Madde K (Kademeli devir).** Sermaye veren, ortaklık payını ayrı bir sözleşmeyle emek sahibine kademeli olarak devredebilir. Devir sözleşmesi ortaklık sözleşmesinin şartı olamaz; her devir ortaklık payını düşürür. Toplu devirle ortaklık sona erer. Sermaye verenin toplam kâr payı ve devir bedeli, sermayenin bir buçuk katını geçemez.
+
+**Madde L (Emek ortaklığı).** Madde 1 (o) kapsamındaki emek ortaklığında ortaklar aynı iş kolunda olmak zorunda değildir; kâr, ortakların işe katkı oranında paylaşılır. Tavan her ortağın payı üzerinden ayrı hesaplanır.
+
+**Madde M (İtibar ortaklığı).** Sermayesi olmayan mikro mükellefler, vadeli mal veya hizmet alıp satmak üzere ortaklık kurabilir. Zarar, ortakların ortaklık payı oranında bölüşülür; satıcıya ve alacaklılara karşı ortaklar **müteselsilen** sorumludur. Alım bedelleri portalda kayda geçer.
+
+**Madde N (Tarım ve bahçe ortaklığı).** Arazi veya bahçe sahibi ile işleyen arasında ürünün önceden belirlenen oranla paylaşıldığı ortaklıklar, mikro mükellef için de kurulabilir; ürünün bedeli Madde 1 kapsamında hasılattır.
+
+**Madde O (Kapsam notu).** Eşit sermaye, kâr, yetki ve sorumluluk şartı aranan türler bu Kanun kapsamında ayrıca düzenlenmez; Türk Ticaret Kanunundaki kollektif şirket hükümleri saklıdır.
