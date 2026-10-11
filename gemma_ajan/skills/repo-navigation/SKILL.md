@@ -1,6 +1,6 @@
 ---
 name: repo-navigation
-description: Localize an issue to the files/symbols to edit in one call (locate.py) and gate a patch before submitting (verify.py).
+description: Localize an issue (locate.py), execute-and-rank candidate fixes (select.py), and gate a patch before submitting (verify.py).
 ---
 
 # repo-navigation
@@ -21,3 +21,10 @@ ranges to read and the test files to run.
 
 Fails if the diff is empty, touches test files, does not compile, or the related
 tests fail. Lists issue strings/names that appear nowhere in your added lines.
+
+## select.py
+`run_skill_script(skill_name="repo-navigation", file_path="scripts/select.py")`
+
+Reads proposals `/tmp/prop_*.txt` (search/replace blocks), applies each on the real tree one at a
+time, compiles, runs the related tests against the untouched baseline, reverts, then re-applies
+the best: fewest new failures, issue strings covered, agreement, smallest change.

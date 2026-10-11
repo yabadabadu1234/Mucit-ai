@@ -42,8 +42,22 @@ def main():
     models.register("gemma-4-31b-it-qat-w4a16-ct", "dummy-model")
     agent = compile_submission(sub, {n: make_tool(n) for n in TOOLS}, models,
                                code_executor=UnsafeLocalCodeExecutor())
-    toolsets = [t for t in agent.tools if isinstance(t, SkillToolset)]
-    print(f"COMPILED agent={agent.name} tools={len(agent.tools)} skill_toolsets={len(toolsets)}")
+    def walk(a, seen=None):
+        seen = seen if seen is not None else set()
+        if id(a) in seen:
+            return []
+        seen.add(id(a))
+        out = [t for t in getattr(a, "tools", []) if isinstance(t, SkillToolset)]
+        for t in getattr(a, "tools", []):
+            inner = getattr(t, "agent", None)
+            if inner is not None:
+                out += walk(inner, seen)
+        for sa in getattr(a, "sub_agents", []) or []:
+            out += walk(sa, seen)
+        return out
+
+    toolsets = walk(agent)
+    print(f"COMPILED agent={agent.name} tools={len(getattr(agent, "tools", []) or [])} skill_toolsets={len(toolsets)}")
     if not toolsets:
         print("no skills declared in agent.yaml; nothing more to check")
         return

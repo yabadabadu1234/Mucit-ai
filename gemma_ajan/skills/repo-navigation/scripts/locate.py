@@ -264,8 +264,27 @@ def locate(root, text, top=5):
     return ranked[:top], hints
 
 
+def find_workspace():
+    f = sys._getframe()
+    while f is not None:
+        oc = f.f_locals.get("_orig_cwd")
+        if oc and os.path.isdir(os.path.join(oc, ".git")):
+            return oc
+        f = f.f_back
+    cands = ["/workspace"] + [p for p in os.environ.get("PYTHONPATH", "").split(os.pathsep) if p] + [os.getcwd()]
+    for c in cands:
+        if os.path.isdir(os.path.join(c, ".git")):
+            return c
+    return "/workspace"
+
+
+def tmpdir():
+    import tempfile
+    return tempfile.gettempdir()
+
+
 def parse_args(a):
-    opts = {"root": "/workspace", "top": "5", "issue": "/tmp/issue.txt", "timeout": "120"}
+    opts = {"root": "", "top": "5", "issue": "", "timeout": "120", "budget": "170"}
     pos, i = [], 0
     while i < len(a):
         if a[i].startswith("--") and a[i][2:] in opts and i + 1 < len(a):
@@ -276,7 +295,87 @@ def parse_args(a):
             i += 1
     if pos:
         opts["issue"] = pos[0]
+    if not opts["root"]:
+        opts["root"] = find_workspace()
+    if not opts["issue"]:
+        opts["issue"] = os.path.join(tmpdir(), "issue.txt")
     return opts
+
+
+def sh(cmd, root, timeout=60, env_extra=None):
+    import subprocess
+    env = dict(os.environ, PYTHONDONTWRITEBYTECODE="1")
+    if env_extra:
+        env.update(env_extra)
+    try:
+        p = subprocess.run(cmd, cwd=root, env=env, shell=isinstance(cmd, str), capture_output=True, text=True,
+                           errors="replace", timeout=timeout)
+        return p.returncode, (p.stdout + p.stderr)
+    except subprocess.TimeoutExpired:
+        return 124, "TIMEOUT"
+
+
+def is_junk(f):
+    b = os.path.basename(f)
+    return (b.startswith(".adk_exec_") or "__pycache__" in f or b.endswith((".pyc", ".orig", ".rej"))
+            or ".pytest_cache" in f)
+
+
+def git_changes(root):
+    """Changed files and added text WITHOUT touching the git index (no `git add -N`)."""
+    _, tracked = sh(["git", "diff", "HEAD", "--name-only"], root)
+    _, untracked = sh(["git", "ls-files", "--others", "--exclude-standard"], root)
+    files = [x for x in (tracked + "\n" + untracked).split("\n") if x.strip() and not is_junk(x.strip())]
+    _, diff = sh(["git", "diff", "HEAD", "-U0"], root)
+    added = [l[1:] for l in diff.split("\n") if l.startswith("+") and not l.startswith("+++")]
+    for f in untracked.split("\n"):
+        f = f.strip()
+        if f and not is_junk(f):
+            try:
+                added += open(os.path.join(root, f), encoding="utf-8", errors="replace").read().split("\n")
+            except OSError:
+                pass
+    return files, "\n".join(added).lower()
+
+
+def contract_gaps(text, added_l):
+    h = extract_hints(text)
+    missing = []
+    for s_ in h["strings"][:6]:
+        sub = subtokens(s_)
+        frac = sum(w in added_l for w in sub) / len(sub) if sub else 1.0
+        if s_ not in added_l and frac < 0.8:
+            missing.append(f'string "{s_[:60]}"')
+    for n in sorted(h["names"]):
+        if "." not in n and len(n) > 5 and n.lower() not in added_l and n in text and text.count(n) >= 2:
+            missing.append(f"name {n}")
+    return missing[:6]
+
+
+def related_tests(root, files, text, limit=2):
+    units = []
+    for f in files:
+        if f.endswith(".py") and not is_test_path(f) and os.path.exists(os.path.join(root, f)):
+            units += index_file(root, f)
+    return tests_for(root, units[:8], extract_hints(text))[:limit] if units else []
+
+
+def failing_ids(out):
+    return {l.split(" ", 1)[1].split(" - ")[0].strip() for l in out.split("\n") if l.startswith("FAILED ")}
+
+
+def run_tests(root, tests, timeout):
+    """-> (status, failed_ids, tail). status: pass | fail | timeout | unavailable"""
+    rc, out = sh(["python3", "-m", "pytest", "-q", "--no-header", "--tb=no", "-rf", "-p", "no:cacheprovider", *tests],
+                 root, timeout)
+    if "No module named pytest" in out:
+        return "unavailable", set(), out[-200:]
+    if rc == 124:
+        return "timeout", set(), "TIMEOUT"
+    tail = "\n".join(out.strip().splitlines()[-4:])
+    if rc in (0, 5):
+        return "pass", set(), tail
+    return "fail", failing_ids(out), tail
 
 
 def read_issue(path):
