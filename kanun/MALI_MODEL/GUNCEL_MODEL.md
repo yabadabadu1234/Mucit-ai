@@ -70,3 +70,8 @@ Tahsilat oranı π=0,8; "diğer" nedenli işgücü dışının iş arayabilecek 
 
 ## 7. F 273 ile değişen (nakz)
 İlk sürümde gayrıresmî = bütün işgücü dışı + kayıt dışı tarım dışı alınmıştı (İyimser N 1 966 bin). Padişah emekli ve ev hanımını hariç tuttu, yalnız iş arayabilecek durumdakileri saydı; N 1 096 bine (dar okumada 923 bine) indi ve yukarıdaki bütün sayılar yeniden koşturuldu.
+
+## 8. Muhasebeci mesleğine etki ve Brezilya dersi (padişah itirazı, 11/10/2026)
+**Hesap (çıkarım):** muhasebeci ücreti aylık 1 000 TL = yılda 12 000 TL (padişahın F 3-I 257'deki rakamı). Kaybeden yalnız *halen kayıtlı ve muhasebeciyle çalışırken rejime geçenler*dir (yeni girenler zaten müşteri değildi, kayıt dışı veya gelirsizdi). s×N×12 000: Kötümser 30 bin kişi = 0,36; Orta 49,7 bin = 0,60; İyimser 54,8 bin = 0,66 milyar TL/yıl. Üst sınır stresi (kayıtlı kendi hesabına 2 123 bin hepsi geçse): 25,5 milyar TL/yıl. Ücret 12 000 TL varsayımdır, ölçülmemiştir; mesleğin toplam cirosu yoklanamadı.
+**Dengeleyici (çıkarım, ölçülmedi):** tevkifat alıcıda kesildiği için kurumsal alıcının uyum işi artar; tavanı (24 asgari ücret) aşanlar defter tutar; gönüllü danışmanlık serbest kalır.
+**Brezilya dersi:** MEI'de vergi indirimi yeni firma doğurmadı ve net vergi kaybı yazdı (ISTIHDAM_EMSALLERI E7). Bizde fark: tevkifat alıcıdan kesilir ve gelire oranlıdır; aynı risk: yutulma (s) ve düşük ödemeyle sigorta hakkı. Teklifin emeklilik/sağlık hakkı doğurup doğurmadığı ve geleceğe dönük yükü bu modelde **hesaplanmadı** (açık kalem).
