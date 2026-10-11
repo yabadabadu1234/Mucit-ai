@@ -106,3 +106,8 @@ Gerçek kişi ticari işletmede kapanan/kurulan oranı 2016-2022 ortalaması %55
 - Gelir türü payı: maaş ve ücret %49,7, müteşebbis %18,3 (tarım %15,6), sosyal transfer %18,2.
 - **Hareketlilik (panel):** önceki yıl işsiz olanların %38,7'si ertesi yıl çalıştı; çalışanların %90,3'ü çalışmaya devam etti; işgücü dışı olanların %10,1'i işgücüne katıldı. En alt %10'da olanların %58,9'u aynı grupta kaldı, %19,8'i bir gruptan fazla yükseldi; en üst %10'da olanların %68,1'i kaldı. Bu, padişahın genç seyri ölçütü ("kalıcı üst segmente geçememe") için **tarafsız (kanunsuz) karşılaştırma tabanıdır**: yıllık geçiş matrisi mevcut.
 - **Yoklanamadı:** yaşa göre gelir dağılımı ve yaş × cins esas iş geliri (bültende yok; tablolar 7 adet, yalnız eğitim, sektör ve hanehalkı tipi kırılımı var). Bültendeki tabloların xls dosyaları henüz indirilmedi.
+
+---
+# EK-5 (F 3-I 267): işsizlerin yaşa göre dağılımı ve padişahın geçiş oranları
+Kaynak: ILO ILOSTAT (TÜİK HİA 2025), `veri_ilo/UNE.csv`, 5 yıllık bantlar; tek yaş için bant içi tekdüze dağılım **varsayımı** (ölçüm değil). Resmî işsiz, bin: 16-21 yaş 442,6 · 22-29: 881,8 · 30-39: 693,1 · 40+: 895,6. Padişahın tahmini (22-29: %60, 30-39: %40) → 529,1 + 277,2 = **806,3 bin kişi**. Hesap: `katilim_egrisi.py`, çıktı `katilim_egrisi_out.txt`.
+Haberdar olma gecikmesi için ölçülmüş veri **yoktur**; Bass yayılma eğrisi yalnız **duyarlılık** olarak koşturuldu (q=0,3 benim varsayımım): ilan şiddeti p=0,02 iken 3. yıl sonunda haberdar payı %9, p=0,05 → %21, p=0,15 → %49, p=0,40 → %81.
