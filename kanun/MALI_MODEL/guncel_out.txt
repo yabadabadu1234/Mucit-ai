@@ -1,0 +1,47 @@
+A. YIL-4 KALEM AYRISIMI (mlr TL; + gelir, - gider)
+Kötümser S: prim surer brut 1.95 | BES 0.06 hibe 0.10 KDV 0.21 yut.vergi 0.70 yut.prim 0.00 sahte 0.02 KGF 0.07 diger 0.08 | NET 0.71
+Kötümser prim kalkar (prim_devam=0) brut 1.95 | BES 0.06 hibe 0.10 KDV 0.21 yut.vergi 0.70 yut.prim 3.40 sahte 0.02 KGF 0.07 diger 0.08 | NET -2.69
+Kötümser duz %23 tek odeme, prim kalkar, hibe yok brut 4.02 | BES 0.12 hibe 0.00 KDV 0.24 yut.vergi 0.70 yut.prim 3.40 sahte 0.00 KGF 0.07 diger 0.10 | NET -0.61
+Orta S: prim surer brut 10.35 | BES 0.24 hibe 0.45 KDV 0.79 yut.vergi 2.30 yut.prim 0.00 sahte 0.04 KGF 0.16 diger 0.19 | NET 6.17
+Orta prim kalkar (prim_devam=0) brut 10.35 | BES 0.24 hibe 0.45 KDV 0.79 yut.vergi 2.30 yut.prim 7.53 sahte 0.04 KGF 0.16 diger 0.19 | NET -1.36
+Orta duz %23 tek odeme, prim kalkar, hibe yok brut 21.05 | BES 0.49 hibe 0.00 KDV 0.87 yut.vergi 2.30 yut.prim 7.53 sahte 0.01 KGF 0.16 diger 0.30 | NET 9.40
+İyimser S: prim surer brut 52.63 | BES 0.95 hibe 1.50 KDV 2.72 yut.vergi 6.45 yut.prim 0.00 sahte 0.07 KGF 0.29 diger 0.73 | NET 39.93
+İyimser prim kalkar (prim_devam=0) brut 52.63 | BES 0.95 hibe 1.50 KDV 2.72 yut.vergi 6.45 yut.prim 11.14 sahte 0.07 KGF 0.29 diger 0.73 | NET 28.79
+İyimser duz %23 tek odeme, prim kalkar, hibe yok brut 105.83 | BES 1.90 hibe 0.00 KDV 2.91 yut.vergi 6.45 yut.prim 11.14 sahte 0.01 KGF 0.29 diger 1.27 | NET 81.85
+
+B. TEK ODEME ORANI r (ciro uzerinden; vergi+SGK birlikte), prim kalkar, hibe ve KDV mahsubu yok; Orta, yil-4 net mlr TL
+s=0.05    0.01    4.45    8.89   13.33   15.99   20.42   26.62   35.46   48.73
+s=0.15   -5.72   -1.28    3.16    7.60   10.26   14.69   20.88   29.73   43.00
+s=0.30  -14.32   -9.88   -5.44   -1.00    1.67    6.10   12.29   21.13   34.40
+s=1.00  -53.20  -48.76  -44.32  -39.88  -37.22  -32.79  -26.60  -17.75   -4.48
+   r:   5%    10%    15%    20%    23%    28%    35%    45%    60%
+r* (net=0)  Kötümser {0.05: 0.062, 0.15: 0.136, 0.3: 0.248, 0.6: 0.474, 1.0: 0.762}
+r* (net=0)  Orta {0.05: 0.05, 0.15: 0.114, 0.3: 0.211, 0.6: 0.405, 1.0: 0.651}
+r* (net=0)  İyimser {0.05: 0.044, 0.15: 0.102, 0.3: 0.189, 0.6: 0.362, 1.0: 0.58}
+
+C. MEVCUT STOK STRESI: kayitli kendi hesabina (2123 bin) hepsi rejime gecse
+medyan 5W prim surer             net 6.78 mlr (yut.vergi 34.00 yut.prim 0.00 brut 49.61)
+medyan 5W prim kalkar            net -233.88 mlr (yut.vergi 34.00 yut.prim 240.66 brut 49.61)
+medyan 5W duz %23, prim kalkar   net -182.33 mlr (yut.vergi 34.00 yut.prim 240.66 brut 100.88)
+medyan 12W prim surer             net 13.82 mlr (yut.vergi 57.89 yut.prim 0.00 brut 86.45)
+medyan 12W prim kalkar            net -226.84 mlr (yut.vergi 57.89 yut.prim 240.66 brut 86.45)
+medyan 12W duz %23, prim kalkar   net -143.03 mlr (yut.vergi 57.89 yut.prim 240.66 brut 166.87)
+medyan 17W prim surer             net 16.72 mlr (yut.vergi 67.16 yut.prim 0.00 brut 101.01)
+medyan 17W prim kalkar            net -223.95 mlr (yut.vergi 67.16 yut.prim 240.66 brut 101.01)
+medyan 17W duz %23, prim kalkar   net -128.67 mlr (yut.vergi 67.16 yut.prim 240.66 brut 191.53)
+
+D. EN KUCUK SIZINTI s* (net=0) Orta, prim kalkar; baz tasarim ve alternatifler
+S prim surer None
+prim kalkar 0.12621255448182178
+prim kalkar, hibe yok 0.13415004325777327
+duz %15 tek odeme 0.19051263940535534
+duz %23 tek odeme 0.31392958623710576
+duz %35 tek odeme 0.49905012850357994
+
+E. ESKI YUK / YENI YUK (ayni hasilat)
+H=1W eski 115836 yeni 3468 oran 33.4 ; eski/ciro 3.51
+H=2W eski 118314 yeni 6936 oran 17.1 ; eski/ciro 1.79
+H=4W eski 123268 yeni 13873 oran 8.9 ; eski/ciro 0.93
+H=8W eski 133177 yeni 27745 oran 4.8 ; eski/ciro 0.50
+H=16W eski 156707 yeni 64487 oran 2.4 ; eski/ciro 0.30
+H=24W eski 183131 yeni 112324 oran 1.6 ; eski/ciro 0.23

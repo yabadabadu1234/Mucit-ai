@@ -1,0 +1,20 @@
+kırılma s*= None
+G0 Seçilen: kapısız, halen kayıtlı olanın 4/b primi sürer (s=0,15) 6.17 mlr
+G1 Prim sürekliliği olmasaydı (kapısız, s=0,15)         -1.36 mlr
+G2 Önceki karar: 24 ay giriş kapısı (s=0,05, prim sürekliliği yok) 4.37 mlr
+G3 Harici öneri: düz %15 (%5 prim payı), hibe yok, kapısız (s=0,15) 2.32 mlr
+G4 Seçilen, herkes geçse (s=1,00)                       1.37 mlr
+G5 Seçilen + 90 gün prim hibesi yok                     6.62 mlr
+G6 Seçilen + donanım KDV mahsubu yok                    6.96 mlr
+G7 Seçilen + (e) bendi yok: düz %10,5                   5.45 mlr
+G8 Seçilen + götürü gider %25                           7.00 mlr
+Orta yıl4 net 6.17
+n_toplam -4.82 21.38
+medyan_W -2.30 2.57
+s_kayitli 1.06 -0.35
+uyum_ucretli 0.74 -0.74
+marj 0.71 -0.73
+u_ucretli 0.62 -0.62
+sigma -0.58 0.03
+kdv_donanim_pay 0.40 -0.40
+MC net P5/P50/P95: 1.75 5.34 14.33 ; P(net>0)=1.00 ; NPV P50 15.91

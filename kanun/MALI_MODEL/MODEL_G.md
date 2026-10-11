@@ -1,5 +1,7 @@
 # MODEL G — GELİRE BAĞLI, SABİT YÜKSÜZ MODEL (F 3-I 257)
 
+> **GÜNCELLEME (11/10/2026, nakz F 3-I 179):** Güncel N ile sonuçlar GUNCEL_MODEL.md §2'dedir (S Orta +6,17; G Orta +2,69; Kötümser −1,88). Aşağıdaki eski sayılar tarihî kayıttır.
+
 Kod: `model_m.py`, `g_final.py`; sonuç: `sonuc_g.json`, `sonuc_g_tarama.json`. Hepsi modeldir; esneklik ve sahtekârlık parametreleri benim varsayımımdır, ölçülmemiştir.
 
 ## 1. Padişahın ölçütü ve teklif metninin denetimi

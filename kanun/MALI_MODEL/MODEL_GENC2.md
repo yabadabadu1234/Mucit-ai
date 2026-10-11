@@ -1,5 +1,7 @@
 # GENÇ SEYRİ MODELİ, İKİNCİ SÜRÜM (F 3-I 259)
 
+> **GÜNCELLEME (11/10/2026, nakz F 3-I 179):** Tip payları güncellendi, sonuçlar GUNCEL_MODEL.md §2'dedir (S kalıcı üst: zor 1,5, orta 7,8, kolay 25,1). Aşağıdaki eski sayılar tarihî kayıttır.
+
 Kod: `genc2.py` (3000 genç × 72 ay, ortak şoklar); sonuç: `sonuc_genc2.json`, `genc2_out.txt`. Önceki sürüm `MODEL_GENC.md`. **Bütün davranış ve oran parametreleri varsayımdır; TÜİK'in eğitim/okuma kırılımı tabloları alınamadı.**
 
 ## 1. İşsizlik oranı kimi sayıyor (padişahın sualine cevap)

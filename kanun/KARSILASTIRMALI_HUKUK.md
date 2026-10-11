@@ -66,3 +66,7 @@ Teklifin çekirdeği (tevkifat, hibe, prim sürekliliği) aynı kalır. **Eklene
 
 ## F. Kalan riskler
 Prim sürekliliğinin hukuken tutması; aile bireyi adına tescil (dolaşma); Kötümser senaryoda ince marj; eski–yeni asimetrisi; Brezilya tipi sahte bağımsızlık; bu dosyadaki ikincil kaynaklı sayıların birincil metinle doğrulanmaması.
+
+
+## G. Güncelleme (11/10/2026)
+Fransa sayıları arandı: sosyal katkı ciroya karşı BIC hizmet %21,2, BNC %26,1 (2026; ikincil), isteğe bağlı vergi %1,7-2,2; yük büyük ölçüde sosyal güvenlik tarafındadır. Güncel model sonuçları: `MALI_MODEL/GUNCEL_MODEL.md` §4.

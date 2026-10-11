@@ -37,7 +37,7 @@ var('G8 Seçilen + götürü gider %25',gider=0.25)
 SONUC['varyant']=V
 # 4 tornado (Orta, yıl4)
 base=sc('Orta'); b0=kos(base)[0]['net']
-ARALIK={'n_toplam':(150000,700000),'s_kayitli':(0.0,0.20),'u_ucretli':(0.10,0.30),'medyan_W':(3.0,8.0),'prim_odeme':(0.4,1.0),'phi':(0.0,0.03),'onlem':(0.2,0.8),
+ARALIK={'n_toplam':(100000,1966000),'s_kayitli':(0.0,0.20),'u_ucretli':(0.10,0.30),'medyan_W':(3.0,8.0),'prim_odeme':(0.4,1.0),'phi':(0.0,0.03),'onlem':(0.2,0.8),
  'myo_uygun':(0.1,0.6),'bes_vazgecme':(0.1,0.6),'kdv_donanim_pay':(0.2,0.6),'kgf_alim':(0.02,0.10),'kgf_temerrut':(0.05,0.20),'uyum_ucretli':(0.2,0.8),'marj':(0.35,0.65),'r_marj_ucretli':(0.2,0.35),'sigma':(0.6,1.2)}
 T=[]
 for k,(a,b) in ARALIK.items():
@@ -50,7 +50,7 @@ def tri(a,m,b): return rng.triangular(a,m,b)
 NS=4000; net=[];npvs=[];prm=[]
 for i in range(NS):
     p=dict(BAZ)
-    p['n_toplam']=float(np.exp(rng.normal(np.log(350000),0.55)))
+    p['n_toplam']=float(np.exp(rng.normal(np.log(443000),0.55)))
     p['s_kayitli']=float(rng.beta(2,6)); p['u_ucretli']=float(rng.beta(3,12))
     p['medyan_W']=tri(3,5,8); p['sigma']=tri(0.6,0.9,1.2)
     p['prim_odeme']=tri(0.4,0.7,1.0); p['phi']=tri(0,0.01,0.03); p['onlem']=tri(0.2,0.5,0.8)

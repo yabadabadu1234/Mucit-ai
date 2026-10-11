@@ -1,5 +1,7 @@
 # MİKRO MÜKELLEFİYET MALİ ETKİ MODELİ
 
+> **GÜNCELLEME (11/10/2026, nakz F 3-I 179):** N, medyan ve sonuç tabloları 11/10/2026 itibarıyla GUNCEL_MODEL.md'dedir (N=100/443/1966 bin; Orta yıl-4 net +6,17). Aşağıdaki eski sayılar tarihî kayıttır.
+
 Dosyalar: `model.py` (hesap), `analiz.py` (senaryo, tornado, Monte Carlo, varyant), `grafik.py`, `xlsx_uret.py`, `MIKRO_MUKELLEF_MALI_MODEL.xlsx` (canlı formüllü Excel), `sonuc.json`. Grafikler `../GORSELLER/model_*.png`.
 
 **Doğrulama.** Excel'deki formüller (Girdiler, Hesap, Sonuc sayfaları) bağımsız bir formül hesaplayıcısıyla (`formulas` kütüphanesi) çalıştırılıp Python modelinin Orta senaryo çıktılarıyla karşılaştırıldı; 14 kalemde göreli fark 10⁻¹⁵ mertebesindedir. Excel dosyası değerleri önbelleğe almadan kaydedilmiştir; Excel açıldığında kendisi hesaplar. Monte Carlo ve tornado Python'dadır; Excel'de statik değer olarak `Senaryolar_Python` sayfasındadır.

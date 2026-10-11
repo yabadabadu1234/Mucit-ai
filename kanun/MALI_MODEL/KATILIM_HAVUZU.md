@@ -1,5 +1,7 @@
 # KATILIM HAVUZU -- YAŞ SINIFLARINA GÖRE (F 3-I 260)
 
+> **GÜNCELLEME (11/10/2026, nakz F 3-I 179):** Katılımcı sayısı N padişah oranlarıyla hesaplandı: GUNCEL_MODEL.md §1. Aşağıdaki eski sayılar tarihî kayıttır.
+
 Kaynak: ILO ILOSTAT, Türkiye, 2025, TÜİK Hanehalkı İşgücü Araştırması (BA:622) verisi; ham dosyalar `veri_ilo/`, hesap `havuz.py`, çıktı `havuz_out.txt`. Rakamlar bin kişidir. Yaş sınıfları ILO'nun 10 yıllık bantlarıdır.
 
 ## Hüküm ve okuma

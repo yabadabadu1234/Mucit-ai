@@ -1,0 +1,47 @@
+Kötümser R0 Risksiz taban S 0.71  K1 0.82
+Kötümser R1 Prim sürekliliği %50 tutar S -0.99  K1 -0.88
+Kötümser R2 Prim sürekliliği hiç tutmaz S -2.69  K1 -2.58
+Kötümser R3 Dolaşma %10 (yüksek gelirli, 2'ye bölünür) S 0.71  K1 0.82
+Kötümser R4 Dolaşma %30 S 0.70  K1 0.81
+Kötümser R5 Sahte bağımsızlık %3 (tek müşteri testi yok) S 0.59  K1 0.70
+Kötümser R6 Sahte bağımsızlık %3 (test, %70 önler) S 0.67  K1 0.78
+Kötümser R7 Kayıtlı payı s=%30 S 0.71  K1 0.82
+Kötümser R8 Geri akış %100 (K'de prim kazancı yok) S 0.71  K1 0.71
+Kötümser R9 Geri akış %150 S 0.71  K1 0.57
+Kötümser R10 K katılım kaybı: her prim puanı %1 (4. yıl %5 -> %5 kayıp) S 0.71  K1 0.77
+Kötümser R11 K katılım kaybı: her puan %3 (%15 kayıp) S 0.71  K1 0.69
+Kötümser R12 Bileşik: prim %50 + dolaşma %10 + sahte %3 + geri akış %100 + kayıp %1/puan S -1.11  K1 -1.06
+Kötümser R13 Bileşik + testler (sahte %70 önlenir) S -1.03  K1 -0.98
+Orta R0 Risksiz taban S 6.17  K1 7.00
+Orta R1 Prim sürekliliği %50 tutar S 2.40  K1 3.24
+Orta R2 Prim sürekliliği hiç tutmaz S -1.36  K1 -0.53
+Orta R3 Dolaşma %10 (yüksek gelirli, 2'ye bölünür) S 6.15  K1 6.98
+Orta R4 Dolaşma %30 S 6.10  K1 6.94
+Orta R5 Sahte bağımsızlık %3 (tek müşteri testi yok) S 5.57  K1 6.40
+Orta R6 Sahte bağımsızlık %3 (test, %70 önler) S 5.99  K1 6.82
+Orta R7 Kayıtlı payı s=%30 S 5.11  K1 5.75
+Orta R8 Geri akış %100 (K'de prim kazancı yok) S 6.17  K1 6.17
+Orta R9 Geri akış %150 S 6.17  K1 5.13
+Orta R10 K katılım kaybı: her prim puanı %1 (4. yıl %5 -> %5 kayıp) S 6.17  K1 6.65
+Orta R11 K katılım kaybı: her puan %3 (%15 kayıp) S 6.17  K1 5.94
+Orta R12 Bileşik: prim %50 + dolaşma %10 + sahte %3 + geri akış %100 + kayıp %1/puan S 1.78  K1 1.69
+Orta R13 Bileşik + testler (sahte %70 önlenir) S 2.20  K1 2.09
+İyimser R0 Risksiz taban S 39.93  K1 45.08
+İyimser R1 Prim sürekliliği %50 tutar S 34.36  K1 39.51
+İyimser R2 Prim sürekliliği hiç tutmaz S 28.79  K1 33.94
+İyimser R3 Dolaşma %10 (yüksek gelirli, 2'ye bölünür) S 39.71  K1 44.86
+İyimser R4 Dolaşma %30 S 39.25  K1 44.41
+İyimser R5 Sahte bağımsızlık %3 (tek müşteri testi yok) S 37.01  K1 42.16
+İyimser R6 Sahte bağımsızlık %3 (test, %70 önler) S 39.05  K1 44.21
+İyimser R7 Kayıtlı payı s=%30 S 30.96  K1 34.50
+İyimser R8 Geri akış %100 (K'de prim kazancı yok) S 39.93  K1 39.93
+İyimser R9 Geri akış %150 S 39.93  K1 33.49
+İyimser R10 K katılım kaybı: her prim puanı %1 (4. yıl %5 -> %5 kayıp) S 39.93  K1 42.83
+İyimser R11 K katılım kaybı: her puan %3 (%15 kayıp) S 39.93  K1 38.31
+İyimser R12 Bileşik: prim %50 + dolaşma %10 + sahte %3 + geri akış %100 + kayıp %1/puan S 31.20  K1 29.64
+İyimser R13 Bileşik + testler (sahte %70 önlenir) S 33.25  K1 31.59
+Kötümser S {'p_negatif': 0.1935, 'p5': -2.0771690538735443, 'medyan': 0.6467508616799916, 'p95': 0.6998319720891676}
+Kötümser K1 {'p_negatif': 0.1945, 'p5': -1.87433288163963, 'medyan': 0.6235523261735743, 'p95': 0.7747729320621084}
+Orta S {'p_negatif': 0.0565, 'p5': -0.20860375992953606, 'medyan': 5.81206308089639, 'p95': 6.115653022970636}
+Orta K1 {'p_negatif': 0.0375, 'p5': 0.35413375483337056, 'medyan': 5.639100751461168, 'p95': 6.730447911175794}
+[{'H_W': 1.0, 'yeni': 3468.15, 'eski': 115836.45000000001, 'oran': 33.40006920115912}, {'H_W': 2.0, 'yeni': 6936.3, 'eski': 118313.70000000001, 'oran': 17.057177457722418}, {'H_W': 4.0, 'yeni': 13872.6, 'eski': 123268.20000000001, 'oran': 8.885731586004066}, {'H_W': 8.0, 'yeni': 27745.2, 'eski': 133177.2, 'oran': 4.80000865014489}, {'H_W': 16.0, 'yeni': 64487.200000000004, 'eski': 156707.2, 'oran': 2.4300512349737624}, {'H_W': 24.0, 'yeni': 112324.08, 'eski': 183131.2, 'oran': 1.6303823721502995}]

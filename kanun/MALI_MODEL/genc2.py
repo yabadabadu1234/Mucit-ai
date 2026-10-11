@@ -2,11 +2,11 @@ import numpy as np, json, sys
 from genc_model import tarife, W, ASGARI_NET, TAVAN, PRIM_AYLIK, SABIT_AYLIK, GIDER, REJIM
 SMIN=ASGARI_NET/3
 BANT2=np.array([1/3,1.0,2.0])
-TIPLER=[("okuyor, lise",0.15,dict(okuyor=1,derece=0,vakit=0.35,erisim=0.20,beceri=1.0,aile=0.7,burs=0.4)),
- ("okuyor, üniversite",0.20,dict(okuyor=1,derece=0,vakit=0.45,erisim=0.50,beceri=1.2,aile=0.7,burs=0.4)),
- ("okumuyor, lise altı",0.20,dict(okuyor=0,derece=0,vakit=1.0,erisim=0.25,beceri=0.9,aile=0.35,burs=0.0)),
- ("okumuyor, lise",0.25,dict(okuyor=0,derece=1,vakit=1.0,erisim=0.45,beceri=1.0,aile=0.35,burs=0.0)),
- ("okumuyor, lisans+",0.20,dict(okuyor=0,derece=2,vakit=1.0,erisim=1.0,beceri=1.2,aile=0.35,burs=0.0))]
+TIPLER=[("okuyor, lise",0.24,dict(okuyor=1,derece=0,vakit=0.35,erisim=0.20,beceri=1.0,aile=0.7,burs=0.4)),
+ ("okuyor, üniversite",0.37,dict(okuyor=1,derece=0,vakit=0.45,erisim=0.50,beceri=1.2,aile=0.7,burs=0.4)),
+ ("okumuyor, lise altı",0.15,dict(okuyor=0,derece=0,vakit=1.0,erisim=0.25,beceri=0.9,aile=0.35,burs=0.0)),
+ ("okumuyor, lise",0.18,dict(okuyor=0,derece=1,vakit=1.0,erisim=0.45,beceri=1.0,aile=0.35,burs=0.0)),
+ ("okumuyor, lisans+",0.06,dict(okuyor=0,derece=2,vakit=1.0,erisim=1.0,beceri=1.2,aile=0.35,burs=0.0))]
 YOL_PAY={"okuyor, lise":(0.30,0.60,0.10),"okuyor, üniversite":(0.45,0.40,0.15),"okumuyor, lise altı":(0.10,0.75,0.15),"okumuyor, lise":(0.20,0.65,0.15),"okumuyor, lisans+":(0.65,0.20,0.15)}
 YOLLAR=["serbest çalışan","bol rakipli iş","az rakipli iş"]
 def nufus(N,seed):
