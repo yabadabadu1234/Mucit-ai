@@ -122,3 +122,68 @@ Claude'un hafızasındaki malumat (yoklanmadı): mantık ilminde ilim ya **tasav
 | S-ARC-10 | Aşırı uydurma ölçüsü: bir misali dışarıda bırakıp sınama usulü eklensin mi | açık |
 | S-ARC-11 | Izgara belirteçlemesi (satır/sütun ayracı) | ayrıntı, sona kalır |
 | S-ARC-12 | Hesap bütçesi: yarışma ortamının süre ve donanım sınırı yoklanacak | yoklanmadı |
+
+---
+
+## 7. Tasavvur oluşturma mekanizması -- TEKLİF (Claude çıkarımı, F 3-I 281; padişah kabul etmedikçe hüküm değildir)
+
+Padişahın şartları [P]: tasavvur tokene eşleştirilmiş vektör değildir; bir şeye eşleşmez, bizzat kendi vardır; kaynağı token, tokenin manası, ses ya da herhangi bir duyu olabilir; hissi müşterekte bir motor vardır.
+
+### 7.1 Şartlardan çıkan altı kayıt [Ç]
+
+| # | Kayıt | Sebep |
+| :-- | :-- | :-- |
+| T1 | Kaynaktan bağımsız: aynı tasavvur token, şekil ya da ses yoluyla gelebilir | "token da olabilir, ses de" |
+| T2 | Kendi kendine ayakta: kaynak çekilince de durur, saklanır, çağrılır, birleştirilir | "bizzat kendi vardır" |
+| T3 | Oluşturulur, bakılıp alınmaz: bağlama göre kurulur; aynı token farklı bağlamda farklı tasavvur doğurur | "oluşturma motoru" |
+| T4 | Hükümsüzdür: doğru ya da yanlış değildir; doğruluk tasdikin işi | mantık ilmi |
+| T5 | İç içe girer: tasavvurun parçası tasavvurdur | mutasarrıfa |
+| T6 | Çalıştırılabilir: "bunu itersem ne olur" sualine cevap verir | "tasavvur bir modeldir" |
+
+### 7.2 Mekanizma
+
+```
+ duyu kapıları (kanıt üretir, tasavvur üretmez)
+   token kapısı · (ileride) ses kapısı · ...
+        │ kanıt
+        ▼
+ ┌──────────────────────────────────────────────┐
+ │ HİSS-İ MÜŞTEREK MOTORU  (bağlayıcı çalışma    │
+ │ alanı + iç ekran)                             │
+ │ 1D token akışından 2D İÇ EKRAN kurar          │
+ │ adaylar (yuvalar) kanıtı AÇIKLAMAK için       │
+ │ yarışır; birkaç tur oturma                    │
+ └───────────────────────┬──────────────────────┘
+                         ▼
+   TASAVVUR = ( z : kendi hâli , g(z) : kendi üretici ,
+                f(z,Δ) : kendi dinamiği , kimlik )
+   g her kapıya geri üretebilir; f ileri simüle eder
+                         │
+                         ▼
+   TECRİT MOTORU: arızî (konum, renk, adet) ayıklanır; soyutlama merdiveni
+   hissî → hayâlî → vehmî → aklî
+```
+
+- Oluşum bir çıkarımdır: kanıtı en iyi açıklayan tasavvur bulunur (analiz yoluyla sentez). Token, bu kanıtın yalnız bir kanalıdır.
+- Tasavvurun doğru kurulduğunun ölçüsü, kapılar arası tutarlılıktır: token kanalından kurulan tasavvur, iç ekranı da üretebilmelidir, tersi de.
+- Tecrit: İbn Sînâ'da tecrîd, sûretin maddî lâhikalardan soyulmasıdır (hafızadan, yoklanmadı). Burada: aynı kuralın birkaç misalinde ortak kalan, kaide cümlesinin ham maddesidir (F 3-I 278).
+
+### 7.3 Tasdike bağ [Ç]
+
+Tasdik, iki tasavvur arasında hükmedilen nispettir. Derecesi, birinin diğerini ne kadar açıkladığıdır (cezm · zan · şek). Bu, F 3-I 279'daki "durumun tek başına ihtimali"dir. İstifham zayıf nispeti bulur; muhakeme iki tasavvuru bağlayan orta tasavvuru (orta terim) arar.
+
+### 7.4 Riskler (kendi tenkidim)
+
+1. Yuvalar çökebilir (hepsi aynı şeyi taşır) ya da ARC'ta işe yaramaz parçalara bölünür.
+2. Yeniden üretme ölçüsü anlamlı soyutlamayı garanti etmez; kural çıkarımı için ayrıca sınanmalı.
+3. Tasavvur başına ayrı tam model bellek bakımından yürümez; ortak üretici ve yuvaya özgü kod gerekir.
+4. "Vektör olmayan" bir tasavvur bu donanımda yoktur; fark vektör olup olmamasında değil, üretimin çıkarımla, kaynaktan bağımsız ve üretici olmasındadır.
+
+### 7.5 Açık sualler
+
+| # | Sual |
+| :-- | :-- |
+| S-ARC-13 | Bu mekanizma padişahın "bizzat kendi vardır" şartını karşılıyor mu |
+| S-ARC-14 | Tasavvurun kimliği (zamanla aynı kalması) nasıl ölçülecek |
+| S-ARC-15 | Soyutlama merdiveninin basamakları ARC'ta neye karşılık gelir |
+| S-ARC-16 | Tecrit, hafıza tecritiyle (F 2-Ƶ) aynı mekanizma mı |
