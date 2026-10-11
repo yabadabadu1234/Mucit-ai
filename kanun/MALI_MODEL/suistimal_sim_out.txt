@@ -1,0 +1,120 @@
+== TUR 0: mevcut teklif (J–N dâhil), ceza katsayısı 1 (hedef kırılma yakalama olasılığı ≤ 0.15; ölçülmemiş varsayım)
+  V1 Naylon fatura (alıcı gider şişirir)                     p*saldırgan 0.315 | p*Hazine 0.225 | saldıran oranı 0.382 | Hazine kaybı/TL +0.0184 | AÇIK
+  V2 Kimlik kiralayıp eşik bölme                             p*saldırgan 0.160 | p*Hazine 0.115 | saldıran oranı 0.087 | Hazine kaybı/TL -0.0010 | AÇIK
+  V3a Aile bireyini sahte ortak yapıp tavan çoğaltma         p*saldırgan 0.500 | p*Hazine 0.333 | saldıran oranı 0.937 | Hazine kaybı/TL +0.0608 | AÇIK
+  V3b Aile dışı sahte ortak ile tavan çoğaltma               p*saldırgan 0.454 | p*Hazine 0.333 | saldıran oranı 0.831 | Hazine kaybı/TL +0.0540 | AÇIK
+  V5 24 ay beklemeyip kayıt dışı çalışma (prim kaçışı)       p*saldırgan 0.500 | p*Hazine 0.333 | saldıran oranı 0.924 | Hazine kaybı/TL +0.1778 | AÇIK
+  V6 Sahte bağımsızlık (işçiyi mikro mükellef yapma)         p*saldırgan 0.420 | p*Hazine 0.365 | saldıran oranı 0.853 | Hazine kaybı/TL +0.1733 | AÇIK
+  V7 Sermaye–emek ortaklığında gizli faiz                    p*saldırgan 0.500 | p*Hazine 0.000 | saldıran oranı 0.917 | Hazine kaybı/TL -0.0275 | AÇIK
+  V11 Donanım KDV mahsubunda fatura şişirme                  p*saldırgan 0.259 | p*Hazine 0.250 | saldıran oranı 0.368 | Hazine kaybı/TL +0.0147 | AÇIK
+== TUR 1: + T1 Sahte belge, sahte ortaklık ve gizli faizde alıcı/işveren/sermayeda (hedef kırılma yakalama olasılığı ≤ 0.15; ölçülmemiş varsayım)
+  V1 Naylon fatura (alıcı gider şişirir)                     p*saldırgan 0.133 | p*Hazine 0.127 | saldıran oranı 0.099 | Hazine kaybı/TL -0.0026 | KAPANDI
+  V2 Kimlik kiralayıp eşik bölme                             p*saldırgan 0.160 | p*Hazine 0.115 | saldıran oranı 0.088 | Hazine kaybı/TL -0.0010 | AÇIK
+  V3a Aile bireyini sahte ortak yapıp tavan çoğaltma         p*saldırgan 0.250 | p*Hazine 0.200 | saldıran oranı 0.555 | Hazine kaybı/TL +0.0164 | AÇIK
+  V3b Aile dışı sahte ortak ile tavan çoğaltma               p*saldırgan 0.217 | p*Hazine 0.200 | saldıran oranı 0.367 | Hazine kaybı/TL +0.0108 | AÇIK
+  V5 24 ay beklemeyip kayıt dışı çalışma (prim kaçışı)       p*saldırgan 0.250 | p*Hazine 0.200 | saldıran oranı 0.522 | Hazine kaybı/TL +0.0456 | AÇIK
+  V6 Sahte bağımsızlık (işçiyi mikro mükellef yapma)         p*saldırgan 0.195 | p*Hazine 0.223 | saldıran oranı 0.389 | Hazine kaybı/TL +0.0441 | AÇIK
+  V7 Sermaye–emek ortaklığında gizli faiz                    p*saldırgan 0.250 | p*Hazine 0.000 | saldıran oranı 0.505 | Hazine kaybı/TL -0.0303 | AÇIK
+  V11 Donanım KDV mahsubunda fatura şişirme                  p*saldırgan 0.259 | p*Hazine 0.250 | saldıran oranı 0.367 | Hazine kaybı/TL +0.0147 | AÇIK
+== TUR 2: + T2 Hane toplulaştırması: eş, usul ve füruun hasılatı ve ortaklığı tava (hedef kırılma yakalama olasılığı ≤ 0.15; ölçülmemiş varsayım)
+  V1 Naylon fatura (alıcı gider şişirir)                     p*saldırgan 0.133 | p*Hazine 0.127 | saldıran oranı 0.099 | Hazine kaybı/TL -0.0026 | KAPANDI
+  V2 Kimlik kiralayıp eşik bölme                             p*saldırgan 0.160 | p*Hazine 0.115 | saldıran oranı 0.088 | Hazine kaybı/TL -0.0010 | AÇIK
+  V3a Aile bireyini sahte ortak yapıp tavan çoğaltma         p*saldırgan 0.000 | p*Hazine 0.000 | saldıran oranı 0.000 | Hazine kaybı/TL +0.0000 | KAPANDI
+  V3b Aile dışı sahte ortak ile tavan çoğaltma               p*saldırgan 0.217 | p*Hazine 0.200 | saldıran oranı 0.366 | Hazine kaybı/TL +0.0108 | AÇIK
+  V5 24 ay beklemeyip kayıt dışı çalışma (prim kaçışı)       p*saldırgan 0.250 | p*Hazine 0.200 | saldıran oranı 0.520 | Hazine kaybı/TL +0.0455 | AÇIK
+  V6 Sahte bağımsızlık (işçiyi mikro mükellef yapma)         p*saldırgan 0.195 | p*Hazine 0.223 | saldıran oranı 0.389 | Hazine kaybı/TL +0.0441 | AÇIK
+  V7 Sermaye–emek ortaklığında gizli faiz                    p*saldırgan 0.250 | p*Hazine 0.000 | saldıran oranı 0.505 | Hazine kaybı/TL -0.0303 | AÇIK
+  V11 Donanım KDV mahsubunda fatura şişirme                  p*saldırgan 0.259 | p*Hazine 0.250 | saldıran oranı 0.369 | Hazine kaybı/TL +0.0147 | AÇIK
+== TUR 3: + T3 Geri akış karinesi genişletilir: iade, mahsup ve üçüncü kişi hesabı (hedef kırılma yakalama olasılığı ≤ 0.15; ölçülmemiş varsayım)
+  V1 Naylon fatura (alıcı gider şişirir)                     p*saldırgan 0.102 | p*Hazine 0.127 | saldıran oranı 0.063 | Hazine kaybı/TL -0.0017 | KAPANDI
+  V2 Kimlik kiralayıp eşik bölme                             p*saldırgan 0.160 | p*Hazine 0.115 | saldıran oranı 0.087 | Hazine kaybı/TL -0.0010 | AÇIK
+  V3a Aile bireyini sahte ortak yapıp tavan çoğaltma         p*saldırgan 0.000 | p*Hazine 0.000 | saldıran oranı 0.000 | Hazine kaybı/TL +0.0000 | KAPANDI
+  V3b Aile dışı sahte ortak ile tavan çoğaltma               p*saldırgan 0.217 | p*Hazine 0.200 | saldıran oranı 0.366 | Hazine kaybı/TL +0.0108 | AÇIK
+  V5 24 ay beklemeyip kayıt dışı çalışma (prim kaçışı)       p*saldırgan 0.250 | p*Hazine 0.200 | saldıran oranı 0.523 | Hazine kaybı/TL +0.0458 | AÇIK
+  V6 Sahte bağımsızlık (işçiyi mikro mükellef yapma)         p*saldırgan 0.195 | p*Hazine 0.223 | saldıran oranı 0.389 | Hazine kaybı/TL +0.0440 | AÇIK
+  V7 Sermaye–emek ortaklığında gizli faiz                    p*saldırgan 0.062 | p*Hazine 0.000 | saldıran oranı 0.024 | Hazine kaybı/TL -0.0014 | KAPANDI
+  V11 Donanım KDV mahsubunda fatura şişirme                  p*saldırgan 0.259 | p*Hazine 0.250 | saldıran oranı 0.371 | Hazine kaybı/TL +0.0148 | AÇIK
+== TUR 4: + T4 İşçi ihbar hakkı ve fark primi iki yıl geriye + ilişkili ödeyici to (hedef kırılma yakalama olasılığı ≤ 0.15; ölçülmemiş varsayım)
+  V1 Naylon fatura (alıcı gider şişirir)                     p*saldırgan 0.102 | p*Hazine 0.127 | saldıran oranı 0.063 | Hazine kaybı/TL -0.0017 | KAPANDI
+  V2 Kimlik kiralayıp eşik bölme                             p*saldırgan 0.160 | p*Hazine 0.115 | saldıran oranı 0.086 | Hazine kaybı/TL -0.0010 | AÇIK
+  V3a Aile bireyini sahte ortak yapıp tavan çoğaltma         p*saldırgan 0.000 | p*Hazine 0.000 | saldıran oranı 0.000 | Hazine kaybı/TL +0.0000 | KAPANDI
+  V3b Aile dışı sahte ortak ile tavan çoğaltma               p*saldırgan 0.217 | p*Hazine 0.200 | saldıran oranı 0.369 | Hazine kaybı/TL +0.0109 | AÇIK
+  V5 24 ay beklemeyip kayıt dışı çalışma (prim kaçışı)       p*saldırgan 0.250 | p*Hazine 0.200 | saldıran oranı 0.521 | Hazine kaybı/TL +0.0456 | AÇIK
+  V6 Sahte bağımsızlık (işçiyi mikro mükellef yapma)         p*saldırgan 0.118 | p*Hazine 0.223 | saldıran oranı 0.172 | Hazine kaybı/TL +0.0195 | AÇIK
+  V7 Sermaye–emek ortaklığında gizli faiz                    p*saldırgan 0.062 | p*Hazine 0.000 | saldıran oranı 0.025 | Hazine kaybı/TL -0.0015 | KAPANDI
+  V11 Donanım KDV mahsubunda fatura şişirme                  p*saldırgan 0.259 | p*Hazine 0.250 | saldıran oranı 0.371 | Hazine kaybı/TL +0.0148 | AÇIK
+== TUR 5: + T5 Hasılat karinesi: 24 aylık geriye bakışta banka girişleri tevkifats (hedef kırılma yakalama olasılığı ≤ 0.15; ölçülmemiş varsayım)
+  V1 Naylon fatura (alıcı gider şişirir)                     p*saldırgan 0.102 | p*Hazine 0.127 | saldıran oranı 0.064 | Hazine kaybı/TL -0.0017 | KAPANDI
+  V2 Kimlik kiralayıp eşik bölme                             p*saldırgan 0.160 | p*Hazine 0.115 | saldıran oranı 0.088 | Hazine kaybı/TL -0.0010 | AÇIK
+  V3a Aile bireyini sahte ortak yapıp tavan çoğaltma         p*saldırgan 0.000 | p*Hazine 0.000 | saldıran oranı 0.000 | Hazine kaybı/TL +0.0000 | KAPANDI
+  V3b Aile dışı sahte ortak ile tavan çoğaltma               p*saldırgan 0.217 | p*Hazine 0.200 | saldıran oranı 0.368 | Hazine kaybı/TL +0.0109 | AÇIK
+  V5 24 ay beklemeyip kayıt dışı çalışma (prim kaçışı)       p*saldırgan 0.200 | p*Hazine 0.167 | saldıran oranı 0.392 | Hazine kaybı/TL +0.0137 | AÇIK
+  V6 Sahte bağımsızlık (işçiyi mikro mükellef yapma)         p*saldırgan 0.118 | p*Hazine 0.223 | saldıran oranı 0.173 | Hazine kaybı/TL +0.0196 | AÇIK
+  V7 Sermaye–emek ortaklığında gizli faiz                    p*saldırgan 0.062 | p*Hazine 0.000 | saldıran oranı 0.024 | Hazine kaybı/TL -0.0014 | KAPANDI
+  V11 Donanım KDV mahsubunda fatura şişirme                  p*saldırgan 0.259 | p*Hazine 0.250 | saldıran oranı 0.368 | Hazine kaybı/TL +0.0147 | AÇIK
+== TUR 6: + T6 Ortaklıkta tavan ortak sayısıyla doğrusal artmaz: n ortaklıkta topl (hedef kırılma yakalama olasılığı ≤ 0.15; ölçülmemiş varsayım)
+  V1 Naylon fatura (alıcı gider şişirir)                     p*saldırgan 0.102 | p*Hazine 0.127 | saldıran oranı 0.063 | Hazine kaybı/TL -0.0017 | KAPANDI
+  V2 Kimlik kiralayıp eşik bölme                             p*saldırgan 0.160 | p*Hazine 0.115 | saldıran oranı 0.088 | Hazine kaybı/TL -0.0010 | AÇIK
+  V3a Aile bireyini sahte ortak yapıp tavan çoğaltma         p*saldırgan 0.000 | p*Hazine 0.000 | saldıran oranı 0.000 | Hazine kaybı/TL +0.0000 | KAPANDI
+  V3b Aile dışı sahte ortak ile tavan çoğaltma               p*saldırgan 0.099 | p*Hazine 0.125 | saldıran oranı 0.055 | Hazine kaybı/TL -0.0006 | KAPANDI
+  V5 24 ay beklemeyip kayıt dışı çalışma (prim kaçışı)       p*saldırgan 0.200 | p*Hazine 0.167 | saldıran oranı 0.390 | Hazine kaybı/TL +0.0136 | AÇIK
+  V6 Sahte bağımsızlık (işçiyi mikro mükellef yapma)         p*saldırgan 0.118 | p*Hazine 0.223 | saldıran oranı 0.172 | Hazine kaybı/TL +0.0195 | AÇIK
+  V7 Sermaye–emek ortaklığında gizli faiz                    p*saldırgan 0.062 | p*Hazine 0.000 | saldıran oranı 0.024 | Hazine kaybı/TL -0.0014 | KAPANDI
+  V11 Donanım KDV mahsubunda fatura şişirme                  p*saldırgan 0.259 | p*Hazine 0.250 | saldıran oranı 0.366 | Hazine kaybı/TL +0.0147 | AÇIK
+== TUR 7: + T7 Sahte bağımsızlıkta fark prim ve ücret vergisi işverenden asıl borç (hedef kırılma yakalama olasılığı ≤ 0.15; ölçülmemiş varsayım)
+  V1 Naylon fatura (alıcı gider şişirir)                     p*saldırgan 0.102 | p*Hazine 0.127 | saldıran oranı 0.063 | Hazine kaybı/TL -0.0017 | KAPANDI
+  V2 Kimlik kiralayıp eşik bölme                             p*saldırgan 0.160 | p*Hazine 0.115 | saldıran oranı 0.087 | Hazine kaybı/TL -0.0010 | AÇIK
+  V3a Aile bireyini sahte ortak yapıp tavan çoğaltma         p*saldırgan 0.000 | p*Hazine 0.000 | saldıran oranı 0.000 | Hazine kaybı/TL +0.0000 | KAPANDI
+  V3b Aile dışı sahte ortak ile tavan çoğaltma               p*saldırgan 0.099 | p*Hazine 0.125 | saldıran oranı 0.056 | Hazine kaybı/TL -0.0007 | KAPANDI
+  V5 24 ay beklemeyip kayıt dışı çalışma (prim kaçışı)       p*saldırgan 0.200 | p*Hazine 0.167 | saldıran oranı 0.390 | Hazine kaybı/TL +0.0137 | AÇIK
+  V6 Sahte bağımsızlık (işçiyi mikro mükellef yapma)         p*saldırgan 0.091 | p*Hazine 0.173 | saldıran oranı 0.112 | Hazine kaybı/TL +0.0051 | AÇIK
+  V7 Sermaye–emek ortaklığında gizli faiz                    p*saldırgan 0.062 | p*Hazine 0.000 | saldıran oranı 0.025 | Hazine kaybı/TL -0.0015 | KAPANDI
+  V11 Donanım KDV mahsubunda fatura şişirme                  p*saldırgan 0.259 | p*Hazine 0.250 | saldıran oranı 0.369 | Hazine kaybı/TL +0.0148 | AÇIK
+== TUR 8: + T8 Donanım faturasında seri numarası ve muadil tanımlayıcı sahteliğind (hedef kırılma yakalama olasılığı ≤ 0.15; ölçülmemiş varsayım)
+  V1 Naylon fatura (alıcı gider şişirir)                     p*saldırgan 0.102 | p*Hazine 0.127 | saldıran oranı 0.062 | Hazine kaybı/TL -0.0017 | KAPANDI
+  V2 Kimlik kiralayıp eşik bölme                             p*saldırgan 0.160 | p*Hazine 0.115 | saldıran oranı 0.087 | Hazine kaybı/TL -0.0010 | AÇIK
+  V3a Aile bireyini sahte ortak yapıp tavan çoğaltma         p*saldırgan 0.000 | p*Hazine 0.000 | saldıran oranı 0.000 | Hazine kaybı/TL +0.0000 | KAPANDI
+  V3b Aile dışı sahte ortak ile tavan çoğaltma               p*saldırgan 0.099 | p*Hazine 0.125 | saldıran oranı 0.055 | Hazine kaybı/TL -0.0007 | KAPANDI
+  V5 24 ay beklemeyip kayıt dışı çalışma (prim kaçışı)       p*saldırgan 0.200 | p*Hazine 0.167 | saldıran oranı 0.390 | Hazine kaybı/TL +0.0137 | AÇIK
+  V6 Sahte bağımsızlık (işçiyi mikro mükellef yapma)         p*saldırgan 0.091 | p*Hazine 0.173 | saldıran oranı 0.111 | Hazine kaybı/TL +0.0051 | AÇIK
+  V7 Sermaye–emek ortaklığında gizli faiz                    p*saldırgan 0.062 | p*Hazine 0.000 | saldıran oranı 0.024 | Hazine kaybı/TL -0.0014 | KAPANDI
+  V11 Donanım KDV mahsubunda fatura şişirme                  p*saldırgan 0.104 | p*Hazine 0.125 | saldıran oranı 0.082 | Hazine kaybı/TL -0.0016 | KAPANDI
+== TUR 9: + T9 Kimlik kiralamada kiralayan da cezalandırılır (katsayı 3) ve aynı ö (hedef kırılma yakalama olasılığı ≤ 0.15; ölçülmemiş varsayım)
+  V1 Naylon fatura (alıcı gider şişirir)                     p*saldırgan 0.102 | p*Hazine 0.127 | saldıran oranı 0.062 | Hazine kaybı/TL -0.0017 | KAPANDI
+  V2 Kimlik kiralayıp eşik bölme                             p*saldırgan 0.023 | p*Hazine 0.061 | saldıran oranı 0.001 | Hazine kaybı/TL -0.0001 | KAPANDI
+  V3a Aile bireyini sahte ortak yapıp tavan çoğaltma         p*saldırgan 0.000 | p*Hazine 0.000 | saldıran oranı 0.000 | Hazine kaybı/TL +0.0000 | KAPANDI
+  V3b Aile dışı sahte ortak ile tavan çoğaltma               p*saldırgan 0.099 | p*Hazine 0.125 | saldıran oranı 0.056 | Hazine kaybı/TL -0.0007 | KAPANDI
+  V5 24 ay beklemeyip kayıt dışı çalışma (prim kaçışı)       p*saldırgan 0.200 | p*Hazine 0.167 | saldıran oranı 0.390 | Hazine kaybı/TL +0.0136 | AÇIK
+  V6 Sahte bağımsızlık (işçiyi mikro mükellef yapma)         p*saldırgan 0.091 | p*Hazine 0.173 | saldıran oranı 0.112 | Hazine kaybı/TL +0.0051 | AÇIK
+  V7 Sermaye–emek ortaklığında gizli faiz                    p*saldırgan 0.062 | p*Hazine 0.000 | saldıran oranı 0.024 | Hazine kaybı/TL -0.0014 | KAPANDI
+  V11 Donanım KDV mahsubunda fatura şişirme                  p*saldırgan 0.104 | p*Hazine 0.125 | saldıran oranı 0.084 | Hazine kaybı/TL -0.0017 | KAPANDI
+
+Uygulanan tedbirler: 9
+ - T1 Sahte belge, sahte ortaklık ve gizli faizde alıcı/işveren/sermayedar için ceza katsayısı 3 + tescil iptali + üç yıl yasak
+ - T2 Hane toplulaştırması: eş, usul ve füruun hasılatı ve ortaklığı tavanda tek sayılır (aynı adres, aynı banka sahibi, aynı alıcı)
+ - T3 Geri akış karinesi genişletilir: iade, mahsup ve üçüncü kişi hesabı; ortaklık ödemeleri yalnız payın kâr beyanına oranlı olarak portaldan
+ - T4 İşçi ihbar hakkı ve fark primi iki yıl geriye + ilişkili ödeyici toplulaştırması (tek müşteri sınırı ilişkili ödeyicilerin toplamıdır)
+ - T5 Hasılat karinesi: 24 aylık geriye bakışta banka girişleri tevkifatsız ise karine ve tahakkuk
+ - T6 Ortaklıkta tavan ortak sayısıyla doğrusal artmaz: n ortaklıkta toplam tavan = tek tavan × (1 + 0,5·(n−1)); her ortak kendi hesabına tahsil eder
+ - T7 Sahte bağımsızlıkta fark prim ve ücret vergisi işverenden asıl borçlu olarak tahsil + üç kat ceza (katsayı 4)
+ - T8 Donanım faturasında seri numarası ve muadil tanımlayıcı sahteliğinde ceza katsayısı 3
+ - T9 Kimlik kiralamada kiralayan da cezalandırılır (katsayı 3) ve aynı ödeyiciden gelen ödemeler kimlikler arasında toplulaştırılır
+
+Duyarlılık: hedef yakalama olasılığı farklı olunca açık kalan vektör sayısı
+  hedef 0.10 -> açık: ['V1 ', 'V3b', 'V5 ', 'V6 ', 'V11']
+  hedef 0.15 -> açık: ['V5 ', 'V6 ']
+  hedef 0.20 -> açık: yok
+  hedef 0.30 -> açık: yok
+  hedef 0.40 -> açık: yok
+  hedef 0.50 -> açık: yok
+
+Ceza katsayısı duyarlılığı (V6, tur sonu g0): m=1,2,3,4 için p*saldırgan: [0.286, 0.167, 0.118, 0.091]
+
+V4 Aile adına tescil: eski rejim kâr usulü vergi/hasılat − yeni tevkifat/hasılat (negatifse teşvik yok; prim eski mükellefte sürdüğü için yalnız vergi farkı kalır)
+  H= 1 W: eski vergi oranı 0.000 yeni tevkifat oranı 0.105 fark -0.105
+  H= 2 W: eski vergi oranı 0.000 yeni tevkifat oranı 0.105 fark -0.105
+  H= 4 W: eski vergi oranı 0.000 yeni tevkifat oranı 0.105 fark -0.105
+  H= 8 W: eski vergi oranı 0.000 yeni tevkifat oranı 0.105 fark -0.105
+  H=16 W: eski vergi oranı 0.000 yeni tevkifat oranı 0.122 fark -0.122
+  H=24 W: eski vergi oranı 0.000 yeni tevkifat oranı 0.142 fark -0.142
+  azamî teşvik (eski−yeni): -0.105 -> yok, yapısal olarak kapalı

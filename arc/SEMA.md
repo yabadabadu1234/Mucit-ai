@@ -125,7 +125,7 @@ Claude'un hafızasındaki malumat (yoklanmadı): mantık ilminde ilim ya **tasav
 
 ---
 
-## 7. Tasavvur oluşturma mekanizması -- TEKLİF (Claude çıkarımı, F 3-I 281; padişah kabul etmedikçe hüküm değildir)
+## 7. Tasavvur oluşturma mekanizması -- TEKLİF (Claude çıkarımı, F 3-I 283; padişah kabul etmedikçe hüküm değildir)
 
 Padişahın şartları [P]: tasavvur tokene eşleştirilmiş vektör değildir; bir şeye eşleşmez, bizzat kendi vardır; kaynağı token, tokenin manası, ses ya da herhangi bir duyu olabilir; hissi müşterekte bir motor vardır.
 
