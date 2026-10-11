@@ -67,3 +67,25 @@ Portal bir React sayfasıdır; düz istekle içerik gelmez. `veri_tuik/render.js
 
 ## Uygulanan (havuz4.py, yaş × cins)
 Havuz **47 189 bin** (kadın 24 509, erkek 22 680); 16-34 yaş 19 471 bin. Çıkarılanlar: memur 3 716 bin (25-64, kayıtlı istihdam payıyla yaş-cinse dağıtım -- yaş ve cins dağılımı yoklanamadı), özel sektör memnunu %12,7 ≈ 2 273 bin. Kayıt dışı tarım dışı payı cinse göre (erkek %59,7; kadın %48,2). Ücretsiz aile işçisi (tarım) ayrıca ~2 066 bin.
+
+---
+# EK-3 (F 3-I 265): SBB kamu istihdamı, ASMMMO, KOSGEB ÖİK raporu, Terzibaş (2023)
+
+## 1. SBB Kamu Sektörü İstihdam Sayıları (xlsx, Mart ve Haziran 2026 sayfaları baştan sona okundu) -- gerçek veri
+- Haziran 2026 genel toplam **5 417 126** (fiilî dolu): kadrolu 3 582 025 · sözleşmeli 419 801 · sürekli işçi 1 267 501 · geçici işçi 50 418 · diğer 97 381. Mart 2026 toplam 5 368 945 (kadrolu 3 534 981). Belediye şirketleri (BİT) işçisi 696 178.
+- SGK 4/c (3 715 638) ile SBB kadrolu (3 582 025) arasındaki fark açıklanamadı (tanım farkı olası; çıkarım).
+- **Yoklanamayan:** kamu işçisi (sürekli/geçici), sözleşmeli ve BİT işçisinin ücreti 2 asgariyi geçiyor mu; yaş × cins dağılımı. Bu yüzden F 264 (3) yalnız kadrolu/memur için kesin uygulanır; diğerleri padişaha sorulacak açık kalemdir.
+
+## 2. ASMMMO UyeIstatistikleri.pdf -- amaca uymadı
+Yalnız SMMM odası üyeleri (12 339; 25-35: 1 140 · 35-45: 4 602 · 45-55: 3 413 · 55+: 3 184). Kamu çalışanının veya genel nüfusun yaş dağılımı **değildir**; modele girmez.
+
+## 3. Terzibaş (2023, SOBİNARDER) -- TOBB sicil verisi
+Gerçek kişi ticari işletmede kapanan/kurulan oranı 2016-2022 ortalaması %55 (yıllar %37-69); limited %13,7; anonim %21,7. Makalenin "yıllık hayatta kalma %98-99" tablosu yalnız resmî sicil kapanışını ölçer; TÜİK kohort ölçüsüyle (1 yıl %75-80) çelişir, **TÜİK esas alınır.** Sonuç sayfaları (s.19-22) okunmadı.
+
+## 4. KOSGEB 12. KP ÖİK Raporu (KOSGEB adresi 404; SBB kopyası, 136 sayfa) -- okunan: içindekiler, PDF s.53-65
+- 2021 mikro işletmelerin çalışan dağılımı (Tablo 8): 0 çalışan 1 737 585 (%53,45) · 1 çalışan 812 149 (%24,98) · 2-3: 447 149 (%13,76) · 4-9: 253 742 (%7,81); toplam 3 250 625.
+- Çalışan başına katma değer: KOBİ ~27-29 bin $, büyük ~96-123 bin $ (3,3-4,4 kat).
+- Şirket açılış/kapanış (TOBB, Tablo 14): 2022 açılan 140 229, kapanan 23 170.
+- KOBİ niteliğinde girişim hayatta kalma: 1 yıl %70 (2020) · 2 yıl %67,0 · 3 yıl %55,5 · 4 yıl %46,5 · 5 yıl %41,3 (2016). Doğum kohortu 2014-2016: 5 yıl %39,3-41,3 (TÜİK 2024 bülteniyle uyumlu: %41,2).
+- Hızlı büyüyen girişim 2021: 25 426 (istihdama göre); girişim yatırımı konusu (Startups Watch) bu modele girmez.
+- **Okunmayan: s.1-52 ve s.66-136** (özellikle 3.8 heterojenlik, Tablo 33 segmentasyon). Okunmayandan sonuç çıkarılmadı. Rapor ilk yıl gelirini **vermiyor** (okunan kısımda).
