@@ -1,0 +1,59 @@
+A. KURULUŞ KAPISI: gün-0 nakit ihtiyacı (TL) ve sıfır sermayeli gencin kurabilmesi
+   şahıs işletmesi, mevcut kanun: açılış 8000-12000-20000 + ilk ay 4/b primi 11808 + muhasebe 2000
+     açılış dusuk: gün-0 nakit 8000 TL; ilk ay toplam 21808 TL
+     açılış orta: gün-0 nakit 12000 TL; ilk ay toplam 25808 TL
+     açılış yuksek: gün-0 nakit 20000 TL; ilk ay toplam 33808 TL
+   mikro mükellef (Teklif S, Madde 1/2/6): gün-0 nakit 0 TL (portal, UETS ücretsiz, hesap ücretsiz, muhasebeci/mali mühür/oda yok); 4/b primi yok
+   limited şirket: nakdi sermaye 50 000 TL, peşin 1/4 = 12500 TL + tescil masrafı ; anonim: 250 000 TL, peşin 1/4 = 62500 TL
+   aile desteği yaşama eşiği (net asgari 1/3) = 9358 TL/ay (sim'de aylık geçim desteği, kuruluş fonu değil)
+
+B. SİMÜLASYON (3000 genç, 72 ay). Kalibrasyon orta. Tip payları: okuyor, lise 24%, okuyor, üniversite 37%, okumuyor, lise altı 15%, okumuyor, lise 18%, okumuyor, lisans+ 6%
+== kalibrasyon zor ; ilk müşteri var
+  Mevcut kanun, kayıtlı      ilk gelir medyan   1.0 ay | 6 ayda gelir 0.80 | 12 ayda gelir 0.82 | ilk yılda gelirli ay 3.1 | yıkım 1.00 | aç ay(72) 32.9 | kalıcı üst 0.002
+  Mevcut kanun, kayıt dışı   ilk gelir medyan   1.0 ay | 6 ayda gelir 0.81 | 12 ayda gelir 0.82 | ilk yılda gelirli ay 8.1 | yıkım 0.97 | aç ay(72) 32.9 | kalıcı üst 0.003
+  Teklif S                   ilk gelir medyan   1.0 ay | 6 ayda gelir 0.82 | 12 ayda gelir 0.84 | ilk yılda gelirli ay 8.4 | yıkım 0.78 | aç ay(72) 28.9 | kalıcı üst 0.026
+  Model G2                   ilk gelir medyan   1.0 ay | 6 ayda gelir 0.82 | 12 ayda gelir 0.84 | ilk yılda gelirli ay 8.3 | yıkım 0.82 | aç ay(72) 29.8 | kalıcı üst 0.016
+== kalibrasyon zor ; SOĞUK BAŞLANGIÇ (ilk müşteri yok)
+  Mevcut kanun, kayıtlı      ilk gelir medyan  13.0 ay | 6 ayda gelir 0.33 | 12 ayda gelir 0.48 | ilk yılda gelirli ay 1.4 | yıkım 1.00 | aç ay(72) 32.9 | kalıcı üst 0.001
+  Mevcut kanun, kayıt dışı   ilk gelir medyan  14.0 ay | 6 ayda gelir 0.35 | 12 ayda gelir 0.46 | ilk yılda gelirli ay 3.1 | yıkım 0.97 | aç ay(72) 32.9 | kalıcı üst 0.003
+  Teklif S                   ilk gelir medyan   6.0 ay | 6 ayda gelir 0.52 | 12 ayda gelir 0.63 | ilk yılda gelirli ay 4.6 | yıkım 0.80 | aç ay(72) 29.3 | kalıcı üst 0.023
+  Model G2                   ilk gelir medyan   6.0 ay | 6 ayda gelir 0.52 | 12 ayda gelir 0.63 | ilk yılda gelirli ay 4.6 | yıkım 0.83 | aç ay(72) 30.3 | kalıcı üst 0.014
+== kalibrasyon orta ; ilk müşteri var
+  Mevcut kanun, kayıtlı      ilk gelir medyan   1.0 ay | 6 ayda gelir 0.81 | 12 ayda gelir 0.83 | ilk yılda gelirli ay 3.6 | yıkım 0.99 | aç ay(72) 32.9 | kalıcı üst 0.011
+  Mevcut kanun, kayıt dışı   ilk gelir medyan   1.0 ay | 6 ayda gelir 0.81 | 12 ayda gelir 0.83 | ilk yılda gelirli ay 8.4 | yıkım 0.84 | aç ay(72) 29.9 | kalıcı üst 0.022
+  Teklif S                   ilk gelir medyan   1.0 ay | 6 ayda gelir 0.84 | 12 ayda gelir 0.86 | ilk yılda gelirli ay 8.9 | yıkım 0.53 | aç ay(72) 21.4 | kalıcı üst 0.110
+  Model G2                   ilk gelir medyan   1.0 ay | 6 ayda gelir 0.84 | 12 ayda gelir 0.86 | ilk yılda gelirli ay 8.9 | yıkım 0.57 | aç ay(72) 23.0 | kalıcı üst 0.069
+== kalibrasyon orta ; SOĞUK BAŞLANGIÇ (ilk müşteri yok)
+  Mevcut kanun, kayıtlı      ilk gelir medyan  10.0 ay | 6 ayda gelir 0.44 | 12 ayda gelir 0.59 | ilk yılda gelirli ay 2.0 | yıkım 0.99 | aç ay(72) 33.0 | kalıcı üst 0.009
+  Mevcut kanun, kayıt dışı   ilk gelir medyan   9.0 ay | 6 ayda gelir 0.46 | 12 ayda gelir 0.57 | ilk yılda gelirli ay 4.2 | yıkım 0.86 | aç ay(72) 30.3 | kalıcı üst 0.020
+  Teklif S                   ilk gelir medyan   4.0 ay | 6 ayda gelir 0.64 | 12 ayda gelir 0.75 | ilk yılda gelirli ay 6.1 | yıkım 0.55 | aç ay(72) 21.8 | kalıcı üst 0.107
+  Model G2                   ilk gelir medyan   4.0 ay | 6 ayda gelir 0.64 | 12 ayda gelir 0.75 | ilk yılda gelirli ay 6.0 | yıkım 0.59 | aç ay(72) 23.4 | kalıcı üst 0.067
+== kalibrasyon kolay ; ilk müşteri var
+  Mevcut kanun, kayıtlı      ilk gelir medyan   1.0 ay | 6 ayda gelir 0.82 | 12 ayda gelir 0.84 | ilk yılda gelirli ay 4.1 | yıkım 0.97 | aç ay(72) 32.2 | kalıcı üst 0.047
+  Mevcut kanun, kayıt dışı   ilk gelir medyan   1.0 ay | 6 ayda gelir 0.82 | 12 ayda gelir 0.84 | ilk yılda gelirli ay 8.8 | yıkım 0.63 | aç ay(72) 23.8 | kalıcı üst 0.080
+  Teklif S                   ilk gelir medyan   1.0 ay | 6 ayda gelir 0.85 | 12 ayda gelir 0.87 | ilk yılda gelirli ay 9.5 | yıkım 0.34 | aç ay(72) 14.5 | kalıcı üst 0.303
+  Model G2                   ilk gelir medyan   1.0 ay | 6 ayda gelir 0.85 | 12 ayda gelir 0.87 | ilk yılda gelirli ay 9.4 | yıkım 0.38 | aç ay(72) 16.0 | kalıcı üst 0.223
+== kalibrasyon kolay ; SOĞUK BAŞLANGIÇ (ilk müşteri yok)
+  Mevcut kanun, kayıtlı      ilk gelir medyan   4.0 ay | 6 ayda gelir 0.53 | 12 ayda gelir 0.68 | ilk yılda gelirli ay 2.7 | yıkım 0.98 | aç ay(72) 32.3 | kalıcı üst 0.045
+  Mevcut kanun, kayıt dışı   ilk gelir medyan   5.0 ay | 6 ayda gelir 0.55 | 12 ayda gelir 0.66 | ilk yılda gelirli ay 5.3 | yıkım 0.65 | aç ay(72) 24.3 | kalıcı üst 0.074
+  Teklif S                   ilk gelir medyan   3.0 ay | 6 ayda gelir 0.71 | 12 ayda gelir 0.80 | ilk yılda gelirli ay 7.2 | yıkım 0.37 | aç ay(72) 14.8 | kalıcı üst 0.287
+  Model G2                   ilk gelir medyan   3.0 ay | 6 ayda gelir 0.71 | 12 ayda gelir 0.80 | ilk yılda gelirli ay 7.2 | yıkım 0.40 | aç ay(72) 16.2 | kalıcı üst 0.215
+
+C. TİPE GÖRE (orta, soğuk başlangıç): Teklif S
+  okuyor, lise           n= 740 | 6 ayda gelir 0.45 | 12 ayda gelir 0.60 | yıkım 0.70 | kalıcı üst 0.000
+  okuyor, üniversite     n=1126 | 6 ayda gelir 0.55 | 12 ayda gelir 0.72 | yıkım 0.38 | kalıcı üst 0.067
+  okumuyor, lise altı    n= 442 | 6 ayda gelir 0.84 | 12 ayda gelir 0.88 | yıkım 0.73 | kalıcı üst 0.118
+  okumuyor, lise         n= 524 | 6 ayda gelir 0.84 | 12 ayda gelir 0.86 | yıkım 0.64 | kalıcı üst 0.162
+  okumuyor, lisans+      n= 168 | 6 ayda gelir 0.85 | 12 ayda gelir 0.89 | yıkım 0.33 | kalıcı üst 0.643
+
+D. CİHAZ ENGELİ (duyarlılık; ölçülmedi): cihazı olmayan oranı d ise kuramayan oranı en az d; Teklif S için 'kurabilen' = 1-d
+   d=0.0 -> kurabilen 1.00
+   d=0.1 -> kurabilen 0.90
+   d=0.2 -> kurabilen 0.80
+   d=0.3 -> kurabilen 0.70
+   d=0.4 -> kurabilen 0.60
+
+E. TAVAN (24 brüt asgari ücret = 792720 TL) AŞAN GENÇ ORANI (muhasebeci için yeni müşteri havuzu), Teklif S, soğuk başlangıç
+  zor   ömründe bir yıl tavanı aşan 0.043 | tavanın %70'ine ulaşan 0.076
+  orta  ömründe bir yıl tavanı aşan 0.201 | tavanın %70'ine ulaşan 0.318
+  kolay ömründe bir yıl tavanı aşan 0.474 | tavanın %70'ine ulaşan 0.610
