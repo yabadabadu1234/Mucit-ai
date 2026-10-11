@@ -1,4 +1,4 @@
-# ŞİRKET TÜRLERİ: TAM KÜME, İHTİLAF TERCİHLERİ, KANUNA ESLEME (F 3-I 277) -- İÇERİDE, DEVLETE GİTMEZ
+# ŞİRKET TÜRLERİ: TAM KÜME, İHTİLAF TERCİHLERİ, KANUNA ESLEME (F 3-I 281) -- İÇERİDE, DEVLETE GİTMEZ
 
 Kaynak durumu: Kur'ân Ansiklopedisi "şirket" maddesi ve Diyanet'in Müşâreke maddesi (ikincil, okundu), Mecelle şirket kitabı metni **bulunamadı**, madde numarası yazılmaz. Mezhep ayrıntısı bir kısım hafızadandır ve yoklanmamıştır ("[H]"). İhtilaf tercihi: F 3-I 252 (4) sırası (delil sağlamlığı > taraf güvenilirliği > maslahat), padişaha sorulmadan.
 
