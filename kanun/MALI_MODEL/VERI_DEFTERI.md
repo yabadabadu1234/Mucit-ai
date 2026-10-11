@@ -43,3 +43,27 @@ m değişti: halinden memnun = ücretlilerin %12,7'si (asgarinin 2 katı ve üze
 
 ## Hâlâ yoklanamayan
 Yaşa göre kazanç; kamu çalışanlarının (memur) memnun sayılıp sayılmayacağı; ilk yıl geliri ve işi bitirme oranı (genç, sermayesiz); kayıt dışının yaşa × sektör kırılımı; eğitim × işgücü durumu.
+
+---
+# EK-2 (F 3-I 264): TÜİK Veri Portalı bültenleri 54058 ve 57986 -- dönüştürücü ile okundu
+
+## Dönüştürücü
+Portal bir React sayfasıdır; düz istekle içerik gelmez. `veri_tuik/render.js` (başsız Chromium, yalnız ara CA'nın SPKI özetine güvenir; TLS doğrulaması kapatılmadı) sayfayı çizer ve `/api/tr/press/<no>` yanıtını yakalar; `veri_tuik/dl2.js` bültenin xls tablolarını indirir; xlrd ile TSV'ye çevrildi. 26 tablonun 26'sı okundu (18 girişim demografisi 2024, 8 işgücü Haziran 2026).
+
+## Girişimcilik ve İş Demografisi 2024 (bülten 54058, 16 Aralık 2025) -- gerçek veri
+- Hayatta kalma (doğum kohortuna göre): 1 yıl: 2019 %80,6 · 2020 %78,3 · 2021 %77,2 · 2022 %75,2 · 2023 %78,3. 2 yıl: %64,4 · %62,9 · %59,2 · %58,6. 3 yıl: %54,9 · %52,1 · %49,3. 4 yıl: %47,0 · %44,8. **5 yıl (2019 kohortu): %41,2.** İstihdam bazında 1 yıl: %85,2 · %81,4 · %81,2 · %79,5 · %83,6.
+- Doğum: 2024'te 633 146 girişim (%15,8), 996 550 istihdam; ölüm 2022'de 482 298 (%12,9). Doğanların **%77,5'i gerçek kişi** (490 458; 2024), ölenlerin %85,0'ı gerçek kişi (410 143; 2022).
+- Gerçek kişi (şahıs işletmesi) stoku: 2 915 107 (2024); işletme başına ortalama 2,05 istihdam; ortalama yıllık ciro 2 744 516 TL (2024, **ortalamadır; çarpık dağılım, medyan yoktur; ciro gelir değildir**).
+- Hızlı büyüyen girişim oranı %14,4; ceylan %2,4 (2024).
+- Kuruluş yılına göre stok (2024): 2021 ve sonrası kurulanlar girişimlerin %33,5'i ama cironun yalnız %13,5'i, istihdamın %17,4'ü.
+- Çıkarım (ayrı yazıldı): gerçek kişi ölüm payı %85 iken stok payı yaklaşık %73 olduğundan gerçek kişi ölüm hızı genel ortalamanın yaklaşık 1,16 katıdır; gerçek kişiye mahsus kohort hayatta kalma tablosu **yoktur** (yoklanamadı).
+
+## İşgücü İstatistikleri Haziran 2026 (bülten 57986) -- gerçek veri
+- 15-24 yaş, 2026 Haziran (aylık, mevsim arındırması yok): nüfus 11 405 bin, işgücü 5 516, istihdam 4 771, işsiz 745, işgücü dışı 5 890. Erkek: nüfus 5 895, işgücü 3 609, istihdam 3 212, işsiz 397, dışı 2 286. **Kadın: nüfus 5 510, işgücü 1 907, istihdam 1 559, işsiz 348, dışı 3 603** (kadınların %65,4'ü işgücü dışında).
+- Mevsim arındırmalı 15+ (Haziran 2026): işsizlik %7,6; atıl işgücü oranı %28,8; işsiz+potansiyel işgücü bütünleşik oranı %19,2.
+
+## Kamu çalışanları (F 3-I 264 (3))
+- SGK 2026 Haziran: 4/c (memur) 3 715 638 (ikincil kaynak; resmî tablo okunmadı). En düşük memur maaşı Temmuz 2026'da aile yardımı dâhil 70 224 TL ≈ net asgarinin (28 075,5) 2,5 katı (hesap benimdir; bekâr memurda altında olabilir). Padişah kararı: 2 asgariyi geçen kamu çalışanı modele geçmez; memur havuzdan **tamamen** çıkarıldı. Kamu işçisi (4/d) sayısı ve ücreti yoklanamadı; çıkarılmadı.
+
+## Uygulanan (havuz4.py, yaş × cins)
+Havuz **47 189 bin** (kadın 24 509, erkek 22 680); 16-34 yaş 19 471 bin. Çıkarılanlar: memur 3 716 bin (25-64, kayıtlı istihdam payıyla yaş-cinse dağıtım -- yaş ve cins dağılımı yoklanamadı), özel sektör memnunu %12,7 ≈ 2 273 bin. Kayıt dışı tarım dışı payı cinse göre (erkek %59,7; kadın %48,2). Ücretsiz aile işçisi (tarım) ayrıca ~2 066 bin.
