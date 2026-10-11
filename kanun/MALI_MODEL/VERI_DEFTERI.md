@@ -89,3 +89,20 @@ Gerçek kişi ticari işletmede kapanan/kurulan oranı 2016-2022 ortalaması %55
 - KOBİ niteliğinde girişim hayatta kalma: 1 yıl %70 (2020) · 2 yıl %67,0 · 3 yıl %55,5 · 4 yıl %46,5 · 5 yıl %41,3 (2016). Doğum kohortu 2014-2016: 5 yıl %39,3-41,3 (TÜİK 2024 bülteniyle uyumlu: %41,2).
 - Hızlı büyüyen girişim 2021: 25 426 (istihdama göre); girişim yatırımı konusu (Startups Watch) bu modele girmez.
 - **Okunmayan: s.1-52 ve s.66-136** (özellikle 3.8 heterojenlik, Tablo 33 segmentasyon). Okunmayandan sonuç çıkarılmadı. Rapor ilk yıl gelirini **vermiyor** (okunan kısımda).
+
+---
+# EK-4 (F 3-I 266): Hazine ve Maliye genelgeleri (Temmuz 2026) ve TÜİK Gelir Dağılımı 2025 (bülten 53993)
+
+## 1. Genelgeler (taranmış PDF; metinsel katman yok, sayfalar görüntü olarak baştan sona okundu)
+- **Mali ve Sosyal Haklar, Sıra 5 (3.7.2026):** 1.7–31.12.2026 için memur aylık katsayısı 1,575512, taban aylık katsayısı 25,794915, yan ödeme katsayısı 0,499649. Sözleşmeli (399 KHK 3/c) ücret tavanı **86 231,60 TL**; BKK sözleşmeli (3. madde) tavanı 76 873,55 TL; sözleşmeli ve KİT/BİT ücretleri **%13,52** artırıldı; 2002/3729 kapsamında ortalama ücret toplamı üst sınırı **156 920,53 TL**; kıdem tazminatı tavanı 73 729,87 TL; birinci derece şube müdürü net 102 085,23 TL.
+- **Mahalli İdare Sözleşmeli Personeli, Sıra 7 (3.7.2026):** 5393 sayılı Kanun m.49 kapsamı sözleşmelilerin unvan bazında **net aylık ücret tavanları** (tam zamanlı): çocuk eğitimcisi/eğitmen/kameraman 42,3-44,5 bin; sağlık meslek lisansiyeri 44,4-50,7 bin; teknisyen/teknik ressam 42,8-51,9 bin; fizikçi/kimyager/istatistikçi 57,1 bin; ekonomist 41,6 bin; mimar/mühendis/şehir plancısı 63,6 bin; avukat 57,6 bin; hukuk müşaviri 73,5 bin; tabip 61,0 bin; uzman tabip 67,7 bin; kısmi zamanlı en çok 25,4 bin. Ek ödeme (brüt) oranı %85-%200, tutar 12 722-29 935 TL; ek ödeme vergi ve sigorta primine tabi değildir.
+- **Hesabım (çıkarım):** net asgari ücret 28 075,5 TL → 2 asgari = **56 151 TL/ay**. Mahalli idare sözleşmelisinde tam zamanlı tavan 2 asgarinin **altında kalan unvanlar çoğunluktur**; üstü yalnız avukat, hukuk müşaviri, tabip, uzman tabip, mühendis, mimar, şehir plancısı ve benzeri lisans meslekleridir ve bunlar **tavandır, fiilî ücret değildir** (fiilî ücret ve unvan dağılımı yoklanamadı). Ek ödeme (net, vergisiz) tavana ilâve edilmediğinden bu rakam 2 asgari kıyasında ek ödemeyi içermez.
+- **Yoklanamadı:** kamu işçisinin (4/d) ve BİT işçisinin fiilî ücreti (ortalama ücret toplamı üst sınırı brüttür ve toplu sözleşme ile belirlenir; asgarinin kaç katı olduğu bilinmiyor); sözleşmeli ve işçilerin yaş dağılımı.
+
+## 2. TÜİK Gelir Dağılımı İstatistikleri 2025 (bülten 53993, 26.12.2025; gelir referansı 2024; sayfa tam okundu)
+- En yüksek %20'nin payı %48,0; en düşük %20'nin %6,4; Gini 0,410 (brüt gelirde 0,422); P80/P20 7,5; P90/P10 12,9.
+- Yıllık ortalama hanehalkı kullanılabilir geliri 662 414 TL; eşdeğer fert geliri 332 882 TL (2024: 187 728 TL; artış %77,3).
+- **Yıllık ortalama esas iş geliri (2025 bülteni, 2024 geliri):** yükseköğretim 566 839 · lise ve dengi 376 932 · lise altı 290 323 · okul bitirmeyen 183 900 TL. İşteki duruma göre: işveren 1 204 791 · ücretli/maaşlı 379 047 · **kendi hesabına 348 045** · yevmiyeli 186 682 TL. Sektör: hizmet 426 045 · tarım 237 461 TL.
+- Gelir türü payı: maaş ve ücret %49,7, müteşebbis %18,3 (tarım %15,6), sosyal transfer %18,2.
+- **Hareketlilik (panel):** önceki yıl işsiz olanların %38,7'si ertesi yıl çalıştı; çalışanların %90,3'ü çalışmaya devam etti; işgücü dışı olanların %10,1'i işgücüne katıldı. En alt %10'da olanların %58,9'u aynı grupta kaldı, %19,8'i bir gruptan fazla yükseldi; en üst %10'da olanların %68,1'i kaldı. Bu, padişahın genç seyri ölçütü ("kalıcı üst segmente geçememe") için **tarafsız (kanunsuz) karşılaştırma tabanıdır**: yıllık geçiş matrisi mevcut.
+- **Yoklanamadı:** yaşa göre gelir dağılımı ve yaş × cins esas iş geliri (bültende yok; tablolar 7 adet, yalnız eğitim, sektör ve hanehalkı tipi kırılımı var). Bültendeki tabloların xls dosyaları henüz indirilmedi.
