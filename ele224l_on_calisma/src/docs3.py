@@ -3,6 +3,7 @@ from common import *
 from docbuilder import Doc
 from docs1 import n2, sci, M, cursor_table
 import exp3
+import ltshots
 
 
 def kohm(x):
@@ -92,6 +93,10 @@ def build_en(R):
     cursor_table(d, "e3_tran_0", "tran2")
     d.fig("bode", R["fig_bode"], "Frequency response of the amplifier: SPICE (solid) and the phasor calculation (dashed).", 13)
     cursor_table(d, "e3_bode", "bode")
+    ltshots.add(d, "e3_tran_1", "lt_tran1")
+    ltshots.add(d, "e3_tran_0", "lt_tran0")
+    ltshots.add(d, "e3_ac_1", "lt_ac1")
+    ltshots.add(d, "e3_ac_0", "lt_ac0")
     d.p("**Interpretation.** The DC values of SPICE differ from the calculation by less than 5%%, since the SPICE model has a larger transconductance parameter ($KP\\cdot W/L=123.3$ mA/V$^2$ against $K_N=72$ mA/V$^2$), a slightly higher threshold (2.1 V against 2.0 V), and series resistances $R_D$ and $R_S$ of 1.4 and 1.6 $\\Omega$. At 10 kHz, the measured gain with $C_S$ is %s, which is far below the mid-band value %s of the calculation, but it agrees with the phasor calculation (%s) to %.1f%%; the reason is that at this frequency the gain is determined by the impedance of $C_S$, $|A_V|\\approx R_L'/|Z_S|$, and not by $g_m$. The mid-band gain of SPICE (%s) is %.0f%% larger than the calculated mid-band gain since the SPICE transistor has a higher $g_m$ at the same current, and this difference is visible only above about 100 kHz in [[f:bode]]. Without $C_S$, the gain is almost independent of $g_m$ because $g_mR_S\\gg1$, $A_V\\approx-R_L'/R_S=-0.6$, and the SPICE result agrees with the calculation within %.1f%%." % (
         n2(ta[True][0] / ta[True][1], 3), n2(abs(a_cs), 3), n2(abs(c10), 3), abs(pct_err(abs(c10), ta[True][0] / ta[True][1])), n2(R["mid_sp"][0], 3), pct_err(abs(a_cs), R["mid_sp"][0]), abs(pct_err(abs(a_no), R["mid_sp"][1]))))
 
@@ -104,6 +109,7 @@ def build_en(R):
           "Reference and output currents of the current mirror: calculation and SPICE", widths=[1.8, 3, 3, 3, 3, 2.6], size=9)
     d.fig("mirg", R["fig_mirror"], "$I_{ref}$\u2013$V_i$ and $I_{out}$\u2013$V_i$ graphs of the current mirror ($V_i$ on the x-axis) with the mirror ratio (ngspice).", 15.5)
     cursor_table(d, "e3_mirror", "mirg")
+    ltshots.add(d, "e3_mirror", "lt_mir")
     d.p("The two currents are equal (within 0.1%%) up to $V_i=12$ V. The SPICE and calculated reference currents agree within %.1f%% for $V_i\\geq5$ V, whereas at 3 V the SPICE current is %s lower than the calculated one; this larger difference is caused by the different transconductance and threshold of the SPICE model when $V_{OV}$ is small. For $V_i=15$ V, $I_{out}$ stays at about %s mA while $I_{ref}$ continues to rise to %s mA, because M2 enters the triode region (the calculation predicts this for $V_i>%.1f$ V; in the 0.5 V steps of the SPICE sweep, the ratio $I_{out}/I_{ref}$ first falls below 0.99 at %.1f V). The mirror therefore works as long as the load drop $I_{out}R_2$ leaves at least $V_{OV}$ across M2, i.e., $V_{DD}-I_{out}R_2\\geq V_{OV}$. In saturation, the equality of the currents also relies on the neglect of channel-length modulation, which is zero in the BS170 model." % (
         max(abs(pct_err(R["mirror_hand"][k][1], R["mirror_sp"][k][1])) for k in range(2, 7)), "%.1f%%" % abs(pct_err(R["mirror_hand"][1][1], R["mirror_sp"][1][1])), n2(R["mirror_sp"][-1][2] * 1e3, 3), n2(R["mirror_sp"][-1][1] * 1e3, 3), R["vi_tri"], R["vi_tri_sp"]))
 
@@ -187,6 +193,10 @@ def build_tr(R):
     d.fig("tran1", R["fig_tran_1"], "$C_S$'li devre: giriş (100 mV, 10 kHz) ve çıkış.", 13.5)
     d.fig("tran2", R["fig_tran_0"], "$C_S$'siz devre.", 13.5)
     d.fig("bode", R["fig_bode"], "Frekans cevabı: SPICE (düz) ve fazör hesabı (kesikli).", 13)
+    ltshots.add(d, "e3_tran_1", "lt_tran1", tr=True)
+    ltshots.add(d, "e3_tran_0", "lt_tran0", tr=True)
+    ltshots.add(d, "e3_ac_1", "lt_ac1", tr=True)
+    ltshots.add(d, "e3_ac_0", "lt_ac0", tr=True)
     op = R["op"][0]
     rows = [
         ["$V_{GSQ}$ (V)", n2(q["vgs"], 4), n2(op[0], 4), "%+.1f%%" % pct_err(q["vgs"], op[0])],
@@ -221,6 +231,7 @@ def build_tr(R):
     d.p("**Tabloyu doldurma stratejisi (her $V_i$ için):** (1) $V_i\\leq V_{TH}$ ise M1 kapalı: iki akım da 0 ($V_i=1$ V). (2) Değilse yukarıdaki ikinci derece denklemden $V_{OV}$ ve $I_{ref}$ bul. (3) M2'yi doymada varsay: $I_{out}=I_{ref}$; $V_{DS2}=15-I_{out}\\cdot1\\,\\text{k}\\Omega$ hesapla. (4) $V_{DS2}\\geq V_{OV}$ değilse (ör. $V_i=15$ V: $V_{DS2}=15-18{,}1<0$ imkânsız!) M2 triyottadır: $I_{out}=K_N\\left[V_{OV}V_{DS2}-\\tfrac{1}{2}V_{DS2}^2\\right]$ ve $V_{DS2}=15-1\\,\\text{k}\\Omega\\cdot I_{out}$ birlikte çözülür ⇒ $I_{out}=%s$ mA." % n2(R["mirror_hand"][-1][2] * 1e3, 4))
     d.tab("mir", ["$V_i$ (V)", "$I_{ref}$ el (mA)", "$I_{out}$ el (mA)", "$I_{ref}$ SPICE (mA)", "$I_{out}$ SPICE (mA)", "M2 bölgesi (el)"], mirror_rows(R, False), "Akım aynası: el hesabı ve SPICE", widths=[1.8, 3, 3, 3, 3, 2.6], size=9)
     d.fig("mirg", R["fig_mirror"], "$I_{ref}$–$V_i$ ve $I_{out}$–$V_i$ (soldaki), ayna oranı (sağdaki).", 15.5)
+    ltshots.add(d, "e3_mirror", "lt_mir", tr=True)
     d.p("**Okuma:** İki eğri, $V_i\\approx12$ V'a kadar üst üste (kopyalama çalışıyor); sonra $I_{out}$ ~14,6 mA'de doyar (M2 triyota girer: $V_{DD}/R_2=15$ mA'in altında kalan, direnç tarafından sınırlanan akım), $I_{ref}$ ise artmaya devam eder (18,1 mA). Sağdaki grafikte oran 1'den düşer. El hesabına göre triyota geçiş $V_i=%.1f$ V civarındadır; SPICE'ta 0,5 V adımla taranan veride oran ilk kez %%1'den fazla sapma 13,0 V'ta görülür (adım 0,5 V olduğundan çözünürlük sınırlı)." % R["vi_tri"])
     d.h(1, "Programda Nasıl Yapılır?")
     d.bullets([

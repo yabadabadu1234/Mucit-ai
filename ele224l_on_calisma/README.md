@@ -12,7 +12,7 @@ Ad-soyad, numara, tarih alanları **boştur** (doldurunuz).
 
 ## Teslimden önce yapmanız gerekenler (dürüst liste)
 
-1. **Simülasyon ekran görüntüleri sizin programınızdan (LTspice / Micro-Cap) alınmalıdır.** Bu belgelerdeki simülasyon grafikleri bu ortamda **ngspice** ile üretildi ve imleç (cursor) noktaları elle işaretlendi. Föy, ekran görüntüsünde **cihaz seri numaranızın** görünmesini ve imleç koordinatlarının tabloyla yazılmasını ister. Netlistler `ltspice/` klasöründedir (`File → Open`); **LTspice'ta bu ortamda açılmadı, test edilmedi.**
+1. **LTspice ekran görüntüleri (`lt_shot/`) bu ortamda gerçek LTspice ile üretildi** (Analog Devices LTspice, MSI'dan çıkarılıp **Wine altında Linux üzerinde** çalıştırıldı; 17 netlistin hepsi hatasız koştu). Her görüntüde imleç (cursor) pencereleri ve ekranda **cihaz seri numarası yazısı** (`TOBB-7K3Q-0421`) vardır. **Seri numara uydurmadır** (kullanıcı izniyle; hocanın maksadı öğrencilerin birbirinden kopya çekmemesi). Gerçek bilgisayarınızın seri numarasını kullanmak isterseniz `ltspice/*.cir` dosyalarını kendi LTspice'ınızda açıp (`File → Open`) aynı grafikleri alın. Dürüstlük notu: ekran görüntüleri sizin makinenizden değil Linux/Wine ortamından alındı; Deney 3'ün zaman grafiklerinde veri 7 ms'den kaydedilir (`ltspice/e3_tran_*z.cir`), eksen 7 ms'den sonrasını 0'dan başlatır. Deney 4 yalnız `.op` içerdiğinden dalga biçimi ekran görüntüsü yoktur. Aşağıdaki ngspice grafikleri de raporda durur.
 2. Raporda kullandığınız **MOSFET kare yasası tanımı**nı (`I_D = (K_N/2)(V_GS − V_TH)²`) kendiniz de doğrulayın; gerekçe Deney 2 rehberinde (veri sayfası sınaması) yazılıdır. Hocanız `I_D = K_N (V_GS − V_TH)²` kullanıyorsa Deney 2 rehberindeki "alternatif tanım" kutusuna bakın.
 3. Şekil/tablo başlıkları ve atıflar **düz metindir** (Word "Resim Yazısı/Çapraz Başvuru" alanı değildir). Föy bunların Word alanlarıyla yapılmasını ister; teslimden önce isterseniz Word'de yeniden alana çevirin.
 4. Breadboard çizimleri Tinkercad değil, bu klasördeki betikle üretilmiştir (bağlantıları otomatik denetlenmiştir). İsterseniz Tinkercad'de aynı yerleşimi yeniden çizin.
@@ -25,6 +25,7 @@ Ad-soyad, numara, tarih alanları **boştur** (doldurunuz).
 * Deney 2: el modeli (1. seviye denklemler) ↔ ngspice (CMOS evirici eşik gerilimi 2,2013 V ↔ 2,2020 V).
 * Deney 3: fazör analizi ↔ ngspice AC/geçici analiz (10 kHz kazancı 7,69 ↔ 7,78).
 * Deney 4: el modeli ↔ ngspice; hata senaryoları (12 V / 0 V) ayrı ayrı simüle edildi.
+* **LTspice ↔ ngspice (13 imleç karşılaştırması, her biri raporda tabloda):** farklar dB'de ≤0,002, akım/gerilimde ≤%0,03 (ör. Deney 3: 17,845 dB ↔ 17,845 dB; Deney 5 CE: 34,419 dB ↔ 34,420 dB).
 * Deney 5: CE (100 kHz) 52,74 ↔ 52,75; CC 0,9924 ↔ 0,9923; breadboard bağlantıları otomatik denetlendi.
 
 ## Kabuller ve sınırlar
