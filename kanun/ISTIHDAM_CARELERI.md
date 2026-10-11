@@ -69,5 +69,5 @@ Kişi başı maliyet kırılması c\* = p·(1−d)·12 799·H (p = yerleşme ola
 1. Ani yük sınırı: yüzde 0,1 GSMH benim varsayımım; sizin sayınız?
 2. Dönüşüm yüzdeleri (B1–B5) ve ölü ağırlık d ölçülmedi; veri kaynağı yok. Pilotla ölçülsün mü?
 3. Potansiyel işgücündeki 2021→2025 sıçraması (ve "ev işi → çalışamaz/diğer" kayması) sınıflama değişikliği mi? TÜİK notu yoklanmadı.
-4. "Kökten çözüm" hedefi 3,4 milyar değil **3 416 bin kişi** (2022 düzeyi) diye okunsun mu, yoksa başka bir hedef atıl oranı mı?
+4. "Kökten çözüm" hedefi **3 416 bin kişi** (3,4 milyon; 2022 düzeyi) diye okunsun mu, yoksa başka bir hedef atıl oranı mı?
 5. İl/ilçe kırılımı: atıl işgücü il düzeyinde yayımlanmıyor; elde il bazında yalnız işsizlik, istihdam, katılım var (t00–t02). Atıl oranı il bazına yaymak çıkarımdır, yazılmadı.
