@@ -127,3 +127,19 @@ Sosyal güvenliğe kayıtsız (esas iş): 2025'te 8 344 bin (istihdamın %25,6);
 ## SBB Haftalık Gelişmeler 9 Ekim 2026 (107 sayfa; yalnız işgücü ve asgari ücret sayfaları 22 ve 25 görüntü olarak okundu, kalan sayfalar okunmadı)
 Ağustos 2026 (ham): işgücü 36 083 bin, istihdam 33 301, işsiz 2 782, katılım %53,8, işsizlik %7,7; MEA: katılım %52,5, istihdam oranı %48,4, işsizlik %7,8. Asgari ücret 2026 (sayfa 25, 260 dpi görüntüden okundu): brüt 33 030; net 28 075,5; işverene maliyet 40 874,6 TL. İşveren kesintisi 7 844,6 (SSK 7 184,0 + işsizlik 660,6); işçi kesintisi 4 954,5 (SSK 4 624,2 + işsizlik 330,3; gelir ve damga vergisi 0). Net/işveren maliyeti %68,7; **toplam kesinti/işveren maliyeti %31,3**; toplam kesinti/brüt %38,8; işveren payı/brüt %23,8; işçi payı/brüt %15,0. 2026 artışları: işveren maliyeti %28,0, net %27,0, toplam kesinti %32,6.
 ## ÇSGB e-bülten sayfası: en güncel Çalışma Hayatı bülteni Ocak 2026 (PDF), Ağustos/Eylül 2026 yalnız "ücret ve sendikal" serisi; "81 İle İlişkin Genel Göstergeler" tematik bülteni listede var. **Bu turda okunmadı.**
+
+## EK-7 (F 3-I 272): ATIL İŞGÜCÜ KİŞİ SAYISI VE ÇARE MODELİ GİRDİLERİ
+
+| Girdi | Değer | Kaynak/Durum |
+| :-- | :-- | :-- |
+| İşgücü / işsiz 2025 | 35 533 / 2 966 bin | TÜİK t27 |
+| Potansiyel işgücü 2025 | 5 129 bin (2 608 + 2 348 + 173) | t05, 2021'de 3 275 bin |
+| Atıl işgücü oranı 2025 | 29,7% (erkek 24,0; kadın 39,1) | t15 |
+| Zamana bağlı eksik istihdam | 3 982 bin | **türetildi**, iki bütünleşik oranla kontrol tuttu |
+| 15-29 NEET | 4 711 bin (kadın 3 233) | t03 |
+| Uzun süreli işsiz (1 yıl+) | 537 bin | t13 |
+| İşsizden İŞKUR'a başvuran | 1 096 bin | t11 |
+| Kayıt dışı çalışan | 8 344 bin (tarım 3 735; ücretli 2 843) | t19 |
+| Asgari ücret SGK getirisi | 12 799,1 TL/ay | SBB s.25 |
+| GSMH 2025 | 62 288 195 804 bin TL | TÜİK KSH |
+| Yoklanamadı | tedbir esnekliği; ölü ağırlık; ilçe/il atıl oranı; 2021→2025 sınıflama kayması | -- |

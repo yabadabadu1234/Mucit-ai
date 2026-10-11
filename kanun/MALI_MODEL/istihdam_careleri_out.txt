@@ -1,0 +1,82 @@
+A. ATIL ISGUCU 2025 (bin kisi; TUIK t15,t26,t27,t05)
+isgucu 35533 | potansiyel isgucu 5129 (umitsiz 2608, aramayan 2348, arayip baslayamayan 173) | payda 40662
+atil = 29.7% x payda = 12077 bin | issiz 2966 | zamana bagli eksik istihdam (turetilen) 3982 | potansiyel 5129
+kontrol: (eksik+issiz)/isgucu = 19.6% (TUIK 19.6) ; (issiz+potansiyel)/payda = 19.9% (TUIK 19.9)
+kadin atil 39.1 / erkek 24.0 ; 15-29 NEET 4711 (kadin 3233 = 69%) ; uzun sureli issiz 537 ; Iskur basvuran issiz 1096 (37%)
+kayit disi calisan 8344 (tarim disi 4609) ; kayit disi ucretli 2843
+
+B. BUTCESIZ TEDBIRLER - tavan aritmetigi (SGK getirisi 12799.1 TL/ay, 154 bin TL/yil/kisi)
+B1 potansiyel isgucu eslestirme (ilan yayini, Iskur disi kanallar) hedef 5129 bin
+   donusum %1: 51.3 bin kisi; atil orani etkisi -0.13 puan; SGK geliri(asgari ucretle tavan) 7.9 milyar TL/yil
+   donusum %3: 153.9 bin kisi; atil orani etkisi -0.38 puan; SGK geliri(asgari ucretle tavan) 23.6 milyar TL/yil
+   donusum %5: 256.4 bin kisi; atil orani etkisi -0.63 puan; SGK geliri(asgari ucretle tavan) 39.4 milyar TL/yil
+   donusum %10: 512.9 bin kisi; atil orani etkisi -1.26 puan; SGK geliri(asgari ucretle tavan) 78.8 milyar TL/yil
+B2 zamana bagli eksik istihdam: tam zamana gecis hakki/esnek vardiya hedef 3982 bin
+   donusum %1: 39.8 bin kisi; atil orani etkisi -0.10 puan; SGK geliri(asgari ucretle tavan) 6.1 milyar TL/yil
+   donusum %3: 119.4 bin kisi; atil orani etkisi -0.29 puan; SGK geliri(asgari ucretle tavan) 18.3 milyar TL/yil
+   donusum %5: 199.1 bin kisi; atil orani etkisi -0.49 puan; SGK geliri(asgari ucretle tavan) 30.6 milyar TL/yil
+   donusum %10: 398.2 bin kisi; atil orani etkisi -0.98 puan; SGK geliri(asgari ucretle tavan) 61.2 milyar TL/yil
+B3 kayit disi ucretli: kayda gecis hedef 2843 bin
+   donusum %1: 28.4 bin kisi; atil orani etkisi -0.07 puan; SGK geliri(asgari ucretle tavan) 4.4 milyar TL/yil
+   donusum %3: 85.3 bin kisi; atil orani etkisi -0.21 puan; SGK geliri(asgari ucretle tavan) 13.1 milyar TL/yil
+   donusum %5: 142.2 bin kisi; atil orani etkisi -0.35 puan; SGK geliri(asgari ucretle tavan) 21.8 milyar TL/yil
+   donusum %10: 284.3 bin kisi; atil orani etkisi -0.70 puan; SGK geliri(asgari ucretle tavan) 43.7 milyar TL/yil
+B4 kayit disi tarim disi toplam hedef 4609 bin
+   donusum %1: 46.1 bin kisi; atil orani etkisi -0.11 puan; SGK geliri(asgari ucretle tavan) 7.1 milyar TL/yil
+   donusum %3: 138.3 bin kisi; atil orani etkisi -0.34 puan; SGK geliri(asgari ucretle tavan) 21.2 milyar TL/yil
+   donusum %5: 230.5 bin kisi; atil orani etkisi -0.57 puan; SGK geliri(asgari ucretle tavan) 35.4 milyar TL/yil
+   donusum %10: 460.9 bin kisi; atil orani etkisi -1.13 puan; SGK geliri(asgari ucretle tavan) 70.8 milyar TL/yil
+B5 15-29 NEET kadin: kismi sureli/ev eksenli is hakki hedef 3233 bin
+   donusum %1: 32.3 bin kisi; atil orani etkisi -0.08 puan; SGK geliri(asgari ucretle tavan) 5.0 milyar TL/yil
+   donusum %3: 97.0 bin kisi; atil orani etkisi -0.24 puan; SGK geliri(asgari ucretle tavan) 14.9 milyar TL/yil
+   donusum %5: 161.7 bin kisi; atil orani etkisi -0.40 puan; SGK geliri(asgari ucretle tavan) 24.8 milyar TL/yil
+   donusum %10: 323.3 bin kisi; atil orani etkisi -0.80 puan; SGK geliri(asgari ucretle tavan) 49.7 milyar TL/yil
+
+C. PRIM DESTEGI KIRILMA TABLOSU: ek is basina net = (1-d)*SGK*(T+H) - s*ISV*T
+d* = 1 - s*ISV*T / (SGK*(T+H))  (T destek ayi, H destek sonrasi ayri istihdam ayi, iskonto 0)
+s    T   H=0   H=12  H=24  H=36
+0.5   6   69.4%  89.8%  93.9%  95.6%
+0.5  12   69.4%  84.7%  89.8%  92.3%
+0.5  24   69.4%  79.6%  84.7%  87.7%
+1.0   6   38.7%  79.6%  87.7%  91.2%
+1.0  12   38.7%  69.4%  79.6%  84.7%
+1.0  24   38.7%  59.1%  69.4%  75.5%
+(deadweight bu orani asarsa program zarar eder; negatif = H ne olursa olsun zarar)
+
+D. ANI YUK SINIRI (varsayim: yillik net cikis <= GSMH'nin %0.1'i = 62.3 milyar TL)
+   s=1.0 T=12: yillik en fazla 662 bin hirasyon (brut maliyet)
+   s=0.5 T=12: yillik en fazla 1323 bin hirasyon (brut maliyet)
+   s=1.0 T=6: yillik en fazla 1323 bin hirasyon (brut maliyet)
+
+E. 10 YILLIK SIMULASYON (sabit 2026 TL; varsayim: ise alis yili 1-3 pilot 50/100/200 bin sonra 200 bin; s=1,T=12; yillik elde kalma ro)
+d     ro   iskonto  10y kumulatif(mlr TL)  dip(mlr TL)  dip/GSMH  basabas yili  max yillik cikis/GSMH
+0.3  0.6  0.0        226.0          0.0   0.0000%   1   0.030%
+0.3  0.6  0.2         83.1          0.0   0.0000%   1   0.030%
+0.3  0.8  0.0        408.0          0.0   0.0000%   1   0.030%
+0.3  0.8  0.2        140.9          0.0   0.0000%   1   0.030%
+0.5  0.6  0.0        114.4         -0.9   0.0014%   3   0.030%
+0.5  0.6  0.2         38.6         -0.9   0.0014%   3   0.030%
+0.5  0.8  0.0        244.4         -0.9   0.0014%   2   0.030%
+0.5  0.8  0.2         79.8         -0.9   0.0014%   2   0.030%
+0.7  0.6  0.0          2.7        -13.8   0.0221%   10   0.030%
+0.7  0.6  0.2         -5.9        -10.5   0.0169%   None   0.030%
+0.7  0.8  0.0         80.7         -9.8   0.0158%   6   0.030%
+0.7  0.8  0.2         18.8         -8.0   0.0128%   6   0.030%
+0.8  0.6  0.0        -53.1        -53.1   0.0852%   None   0.030%
+0.8  0.6  0.2        -28.2        -28.2   0.0453%   None   0.030%
+0.8  0.8  0.0         -1.1        -24.2   0.0388%   None   0.030%
+0.8  0.8  0.2        -11.7        -17.5   0.0282%   None   0.030%
+
+F. ESLESTIRME/DANISMANLIK (kisi basi maliyet c): kirilma c* = p*(1-d)*SGK_ayi*H ; p yerlesme olasiligi
+   p=0.02 d=0.5 H=12 ay: c* = 1536 TL/kisi
+   p=0.02 d=0.5 H=36 ay: c* = 4608 TL/kisi
+   p=0.02 d=0.8 H=12 ay: c* = 614 TL/kisi
+   p=0.02 d=0.8 H=36 ay: c* = 1843 TL/kisi
+   p=0.05 d=0.5 H=12 ay: c* = 3840 TL/kisi
+   p=0.05 d=0.5 H=36 ay: c* = 11519 TL/kisi
+   p=0.05 d=0.8 H=12 ay: c* = 1536 TL/kisi
+   p=0.05 d=0.8 H=36 ay: c* = 4608 TL/kisi
+   p=0.10 d=0.5 H=12 ay: c* = 7679 TL/kisi
+   p=0.10 d=0.5 H=36 ay: c* = 23038 TL/kisi
+   p=0.10 d=0.8 H=12 ay: c* = 3072 TL/kisi
+   p=0.10 d=0.8 H=36 ay: c* = 9215 TL/kisi
