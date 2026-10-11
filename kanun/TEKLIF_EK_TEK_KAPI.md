@@ -44,6 +44,6 @@ Lafız tarafsızdır (F 3-I 246); dinî sebep yazılmaz. Dayanak ve bedel durumu
 
 **Madde U (Sahte bağımsızlık).** Çalışan ihbar hakkına sahiptir; ihbar eden çalışana misilleme yapılamaz. İşverenden iki yıl geriye fark prim ve ücret vergisi asıl borçlu olarak tahsil edilir. Tek müşteri sınırı, ilişkili ödeyicilerin toplamı üzerinden uygulanır.
 
-**Madde V (Kimlik).** Kimliğini veya hesabını kiralayan ve kiralayan da aynı cezaya tabidir; aynı ödeyiciden gelen ödemeler kimlikler arasında toplulaştırılır. Donanım faturasında seri numarası veya muadil tanımlayıcı sahteliği Madde P'ye tabidir.
+**Madde V (Kimlik).** Kimliğini veya hesabını kiralayan da, kiralayan da Madde P cezasına tabidir; aynı ödeyiciden gelen ödemeler kimlikler arasında toplulaştırılır. Donanım faturasında seri numarası veya muadil tanımlayıcı sahteliği Madde P'ye tabidir.
 
 **Madde Y (Vadeli alım ve aracılık tavanı).** İtibar ortaklığında yeni mükellefin yıllık vadeli alım toplamı altı brüt asgari ücreti geçemez; ortaklar müteselsil sorumludur. Aracılıkta her satışta mal sahibi portala kaydedilir ve ödeme doğrudan mal sahibine yapılır.
