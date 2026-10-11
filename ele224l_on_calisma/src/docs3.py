@@ -4,6 +4,7 @@ from docbuilder import Doc
 from docs1 import n2, sci, M, cursor_table
 import exp3
 import ltshots
+import extras
 
 
 def kohm(x):
@@ -164,7 +165,7 @@ def build_tr(R):
         "$g_m=K_NV_{OV}=72\\ \\text{mA/V}^2\\times%s=%s$ mS. (Kontrol: $2I_D/V_{OV}=%s$ mS ✓.)" % (n2(q["vov"], 4), n2(q["gm"] * 1e3, 4), n2(2 * q["id"] / q["vov"] * 1e3, 4)),
     ])
     d.box("Dikkat: Q noktası neden eşik değerine çok yakın?", [
-        "$V_G=4{,}95$ V, $V_{GS}$ ise yalnızca 2,09 V: $R_S$ üzerinde ≈2,86 V düşüyor ve $V_{OV}=0{,}09$ V gibi çok küçük bir değer kalıyor. Bu, BS170'in eşiğinin (0,8–3,0 V) büyük yayılımı nedeniyle risklidir: eşik 3 V olan bir parçada transistör kesime girer. Gerçek laboratuvarda bu yüzden gerilimler ölçülüp doğrulanır.",
+        "$V_G=4{,}95$ V, $V_{GS}$ ise yalnızca 2,09 V: $R_S$ üzerinde ≈2,86 V düşüyor ve $V_{OV}=0{,}09$ V gibi çok küçük bir değer kalıyor. BS170'in eşiği veri sayfasında 0,8–3,0 V arasında yayılır; eşik 0,8 V olan parçada $V_{DS}$ yaklaşık 1,9 V'a düşer (doymaya yaklaşır), 3,0 V olan parçada ise akım 0,19 mA'e iner ve kazanç çok düşer (ayrıntı: sondaki ek sorular). Gerçek laboratuvarda bu yüzden gerilimler ölçülüp doğrulanır.",
     ], fill="FFF4E0")
     d.h(2, "Adım 2 – AC analiz (orta bant)")
     d.p("Kondansatörler kısa, $V_{DD}$ toprak. Küçük sinyal eşdeğerinde MOSFET: kapıdan kaynağa açık devre, savaktan kaynağa $g_mv_{gs}$ akım kaynağı ($r_o\\to\\infty$).")
@@ -253,4 +254,5 @@ def build_tr(R):
     for qq, aa in qa:
         d.p("**S:** " + qq)
         d.p("**C:** " + aa)
+    extras.tr_extra(3, d, R)
     return d

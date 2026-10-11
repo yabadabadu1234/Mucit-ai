@@ -3,6 +3,7 @@ from common import *
 from docbuilder import Doc
 import exp1
 import ltshots
+import extras
 
 M = "\u2212"
 
@@ -367,4 +368,5 @@ def build_tr(R):
     for q, a in qa:
         d.p("**S:** " + q)
         d.p("**C:** " + a)
+    extras.tr_extra(1, d, R)
     return d
