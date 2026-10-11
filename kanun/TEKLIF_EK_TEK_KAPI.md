@@ -15,3 +15,7 @@ Lafız tarafsızdır (F 3-I 246); dinî sebep yazılmaz. Dayanak ve bedel durumu
 **Madde F (E-belge).** E-belge ve yeni nesil kayıt cihazı yükümlülüğü, Bakanlıkça ücretsiz sunulan mobil uygulamayla yerine getirilebilir.
 
 **Madde G (Ortaklık).** Mikro mükelleflerin kurduğu kollektif şirket ve adi ortaklıkta emek, sermaye sayılır; noter şartı elektronik imzayla yerine getirilir. **Sermayesiz sınırlı sorumlu tür açılmaz** (açık kalem H-1, padişah kararı bekler); alacaklı koruması için kollektif şirketin ortak sorumluluğu ve gelir tavanı esastır.
+
+**Madde H (Sınırlı sorumlu mikro tür; tarafsız lafız).** Mikro mükellefler, unvanında "sınırlı sorumlu" ibaresi bulunan ve sicilde ilan edilen sermayesiz bir şirket kurabilir. Sınırlı sorumluluk yalnız sözleşmeden doğan borçlar için geçerlidir; haksız fiil, ücret, vergi ve prim alacakları ile kasıt ve ağır kusur hâllerinde ortaklar şahsen sorumludur. Alacaklıya sözleşmeden önce bu durum bildirilir. Yıllık hasılat Madde 1'deki tavanı aşamaz.
+
+**Madde I (Aracılık ticareti).** Negatif listeden, mal sahibi adına vekâlet veya komisyon sözleşmesiyle yapılan aracılık çıkarılır; mal sahibi olunmadan kendi namına satış açılmaz.
