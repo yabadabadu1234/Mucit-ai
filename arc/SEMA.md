@@ -127,6 +127,8 @@ Claude'un hafızasındaki malumat (yoklanmadı): mantık ilminde ilim ya **tasav
 
 ## 7. Tasavvur oluşturma mekanizması -- TEKLİF (Claude çıkarımı, F 3-I 283; padişah kabul etmedikçe hüküm değildir)
 
+> NAKZ (F 3-I 284): bu bölümde "tasavvur" diye anlatılan her şey padişahça MANA için doğru kabul edildi; "oluşum bir çıkarımdır" niteliği de reddedildi. T1-T6 ve mekanizma mana katmanına aittir. Tasavvurun kendisi § 8 içindedir.
+
 Padişahın şartları [P]: tasavvur tokene eşleştirilmiş vektör değildir; bir şeye eşleşmez, bizzat kendi vardır; kaynağı token, tokenin manası, ses ya da herhangi bir duyu olabilir; hissi müşterekte bir motor vardır.
 
 ### 7.1 Şartlardan çıkan altı kayıt [Ç]
@@ -187,3 +189,58 @@ Tasdik, iki tasavvur arasında hükmedilen nispettir. Derecesi, birinin diğerin
 | S-ARC-14 | Tasavvurun kimliği (zamanla aynı kalması) nasıl ölçülecek |
 | S-ARC-15 | Soyutlama merdiveninin basamakları ARC'ta neye karşılık gelir |
 | S-ARC-16 | Tecrit, hafıza tecritiyle (F 2-Ƶ) aynı mekanizma mı |
+
+---
+
+## 8. Mana ve tasavvur ayrımı -- İNSAN İNCELEMESİ (F 3-I 284; ARC bağlamı bir süreliğine askıda)
+
+### 8.1 Padişahın sözleri [P]
+
+- Mana: hislerin düşünülebilmek için getirildiği hâl; düşünme nesnesi; farklı formatlarda olabilir.
+- Tasavvur: insan zihninde var olan bir model; arama sonucu değil; mana değil; manaların birleşimi gibi sığ bir izahı yok.
+- F 3-I 283 şartları (tokene eşleşmez, bizzat kendi vardır, kaynak token/mana/ses/duyu, hiss-i müşterekte motor) mana içindir.
+
+### 8.2 Projenin mevcut İbn Sînâ şemasıyla örtüşme [Ç]
+
+`CLAUDE.md` § 4-I: hiss-i müşterek yalnız sûret taşır; vâhime sûretten mânâyı süzer; mânâ, İki Cezveli Hafıza Manalar Bölmesine yazılır; mutasarrıfa sûret ve mânâları birleştirir ve ayırır. Padişahın "mana" tarifi bu şemadaki mânâya yakındır; tasavvurun yeri şemada açık değildir.
+
+### 8.3 Tasavvur için mantık yürütme [Ç]
+
+Öncüller: (P1) tasavvur zihinde var olan bir modeldir; (P2) düşünce tasavvurlar üzerinden yürür (F 3-I 280); (P3) tasavvur tasdike gider, mantık motoru bu geçişte çelişkiden korur (F 3-I 280); (P4) düşünme nesnesi manadır; (P5) tasavvur mana değildir ve manaların birleşimi değildir.
+
+Çıkarım: mana düşünmenin nesnesi ise, düşüncenin kendisi manaları bir mevzu içinde, birbirine nispetli olarak ele alır. Bu mevzu ve nispet dokusu, düşüncenin içinde yürüdüğü yerdir. P1 ve P2 göre o yer modeldir.
+
+Aday tarif (teyit bekler): **tasavvur, bir mevzuyu (şey ya da hâl) temsil eden, manaların rol ve nispetlerle dizildiği, hükmü askıda tutulan ve çalıştırılabilen modeldir.**
+
+| Vasıf | Mana | Tasavvur |
+| :-- | :-- | :-- |
+| Birim | tek anlam | mevzu hakkında bütün |
+| Yapı | yok | rol ve nispet |
+| Mevzu yönelimi | yok | var ("bir şeyin tasavvuru") |
+| Doğruluk | sorulmaz | sorulabilir ama henüz hükmedilmemiş |
+| Boşluk | yok | doldurulur (varsayılan değerler) |
+| Çalıştırma | yok | "şöyle olsa ne olur" sorusuna cevap verir |
+
+### 8.4 "Birleşimden fazlası" sınamaları
+
+1. Rol değişimi: aynı manalar, ters roller, başka tasavvur ("adam köpeği ısırdı" / "köpek adamı ısırdı").
+2. Boşluk doldurma: tasavvur, kendisini kuran manalarda olmayan ayrıntıyı varsayılanla tamamlar.
+3. Karşı-olgusal: var olmayan bir şeyin (kanatlı at) tasavvuru kurulur; mevzu hayâlî olabilir ama tasavvur mevzusuz olamaz.
+4. Hata olmadan yanlışlık: tasavvur gerçeğe uymayabilir ve yine de tasavvurdur.
+5. Format bağımsızlığı: aynı mevzu görsel (harita), sözel (tarif) ya da hareketle taşınabilir; yapı aynı kalır.
+
+### 8.5 Tenkit
+
+- Klasik mantıkta tasavvur çoğu zaman "şeyin sûretinin zihinde hâsıl olması" diye tarif edilir (hafızadan, yoklanmadı). Padişahın ayrımı bu tarifle birebir örtüşmüyor; ayrım başlı başına bir bulgudur.
+- "Hükmü askıda" iddiası insan zihninde tartışmalıdır: anlamanın ilk anda geçici kabul içerdiğini savunan psikoloji çalışmaları var (Gilbert çizgisi, hafızadan, yoklanmadı). Doğruysa tasavvur ile tasdik arasındaki sınır keskin değildir.
+- Aday tarif bir mantık yürütmedir; ölçülmüş bir bulgu değildir.
+
+### 8.6 Açık sualler
+
+| # | Sual |
+| :-- | :-- |
+| S-ARC-17 | "His" yalnız dış duyular mı, iç hisler de (açlık, korku) girer mi |
+| S-ARC-18 | Mana ile tasavvur arasındaki fark birim farkı (atom/bütün) mı, tür farkı mı |
+| S-ARC-19 | Tasavvur mevzusuz olabilir mi |
+| S-ARC-20 | Tasavvur kendinde nötr mü, her tasavvur az çok inanç mı taşır |
+| S-ARC-21 | Mana üreten motor hiss-i müşterek mi, vâhime mi |
