@@ -1,0 +1,22 @@
+* ELE224L
+VDD vdd 0 DC 12
+Vi in 0 DC 0 AC 1 SIN(0 0.1 10k)
+Cc1 in g 22n
+R1 vdd g 47k
+R2 g 0 33k
+M1 d g s 0 BS170 W=100u L=100u
+RD vdd d 15k
+RS s 0 10k
+Cc2 d o 2.2n
+RL o 0 10k
+
+.model BS170 NMOS (VTO=2.1 RS=1.572 RD=1.436 KP=.1233 IS=5p)
+.control
+set noaskquit
+set wr_vecnames
+option numdgt=9
+tran 2u 8m 0 1u
+wrdata /tmp/e3_tran_0.dat v(in) v(o)
+quit
+.endc
+.end

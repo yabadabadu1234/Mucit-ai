@@ -1,0 +1,9 @@
+* ELE224L - e1_tran
+* ngspice ile uretildi/dogrulandi; LTspice'ta bu ortamda ACILMADI (File>Open ile acip calistirin).
+V1 a 0 SIN(0 5 1k)
+D1 a b D1N4148
+R1 b 0 1k
+.model D1N4148 D(IS=2.52n RS=.568 N=1.752 CJO=4p M=.4 TT=20n)
+
+.tran 2u 3m
+.end

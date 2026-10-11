@@ -1,0 +1,20 @@
+* ELE224L
+VCC vcc 0 DC 12
+Vi in 0 DC 0 SIN(0 5.94239 100000)
+Cc1 in b 22n
+R1 vcc b 22000
+R2 b 0 39000
+Q1 vcc b e BC238A
+RE e 0 3300
+Cc2 e o 2.2n
+RL o 0 47000
+.model BC238A NPN(IS=7.7754e-14 BF=170 BR=1 RB=30 RC=1 CJE=8p CJC=3.5p TF=0.5n)
+.control
+set noaskquit
+set wr_vecnames
+option numdgt=9
+tran 5e-08 0.004 0.0035 5e-08
+wrdata /tmp/e5_cc_sim.dat v(in) v(o)
+quit
+.endc
+.end

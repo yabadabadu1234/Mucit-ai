@@ -1,0 +1,16 @@
+* ELE224L
+V2 d 0 DC 5
+V1 n1 0 DC 4.675
+RG1 n1 g 33k
+RG2 g 0 120k
+M1 d g 0 0 BS170 W=100u L=100u
+.model BS170 NMOS (VTO=2.1 RS=1.572 RD=1.436 KP=.1233 IS=5p)
+.control
+set noaskquit
+option numdgt=9
+op
+print v(g)
+print i(v2)
+quit
+.endc
+.end

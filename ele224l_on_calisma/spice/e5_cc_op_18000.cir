@@ -1,0 +1,19 @@
+* ELE224L
+VCC vcc 0 DC 12
+Vi in 0 DC 0 SIN(0 0 100000)
+Cc1 in b 22n
+R1 vcc b 22000
+R2 b 0 18000
+Q1 vcc b e BC238A
+RE e 0 3300
+Cc2 e o 2.2n
+RL o 0 10000
+.model BC238A NPN(IS=7.7754e-14 BF=170 BR=1 RB=30 RC=1 CJE=8p CJC=3.5p TF=0.5n)
+.control
+set noaskquit
+option numdgt=9
+op
+print v(e)
+quit
+.endc
+.end

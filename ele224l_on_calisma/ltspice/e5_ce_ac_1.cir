@@ -1,0 +1,17 @@
+* ELE224L - e5_ce_ac_1
+* ngspice ile uretildi/dogrulandi; LTspice'ta bu ortamda ACILMADI (File>Open ile acip calistirin).
+VCC vcc 0 DC 12
+Vi in 0 DC 0 AC 1 SIN(0 0.001 100000)
+Cc1 in b 22n
+R1 vcc b 120k
+R2 b 0 39k
+RC vcc c 5.6k
+Q1 c b e BC238A
+RE e 0 1.8k
+CE e 0 22n
+Cc2 c o 2.2n
+RL o 0 15k
+.model BC238A NPN(IS=7.7754e-14 BF=170 BR=1 RB=30 RC=1 CJE=8p CJC=3.5p TF=0.5n)
+
+.ac dec 60 10 100Meg
+.end

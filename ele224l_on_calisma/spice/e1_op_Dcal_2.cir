@@ -1,0 +1,16 @@
+* ELE224L
+V1 a 0 DC 2
+D1 a b Dcal
+R1 b 0 1k
+.model Dcal D(IS=20f N=1.0052223 RS=0)
+.options gmin=1e-20
+.control
+set noaskquit
+option numdgt=9
+op
+print v(a)
+print v(b)
+print i(v1)
+quit
+.endc
+.end

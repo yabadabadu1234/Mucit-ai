@@ -127,7 +127,7 @@ Claude'un hafızasındaki malumat (yoklanmadı): mantık ilminde ilim ya **tasav
 
 ## 7. Tasavvur oluşturma mekanizması -- TEKLİF (Claude çıkarımı, F 3-I 283; padişah kabul etmedikçe hüküm değildir)
 
-> NAKZ (F 3-I 284): bu bölümde "tasavvur" diye anlatılan her şey padişahça MANA için doğru kabul edildi; "oluşum bir çıkarımdır" niteliği de reddedildi. T1-T6 ve mekanizma mana katmanına aittir. Tasavvurun kendisi § 8 içindedir.
+> NAKZ (F 3-I 285): bu bölümde "tasavvur" diye anlatılan her şey padişahça MANA için doğru kabul edildi; "oluşum bir çıkarımdır" niteliği de reddedildi. T1-T6 ve mekanizma mana katmanına aittir. Tasavvurun kendisi § 8 içindedir.
 
 Padişahın şartları [P]: tasavvur tokene eşleştirilmiş vektör değildir; bir şeye eşleşmez, bizzat kendi vardır; kaynağı token, tokenin manası, ses ya da herhangi bir duyu olabilir; hissi müşterekte bir motor vardır.
 
@@ -192,7 +192,7 @@ Tasdik, iki tasavvur arasında hükmedilen nispettir. Derecesi, birinin diğerin
 
 ---
 
-## 8. Mana ve tasavvur ayrımı -- İNSAN İNCELEMESİ (F 3-I 284; ARC bağlamı bir süreliğine askıda)
+## 8. Mana ve tasavvur ayrımı -- İNSAN İNCELEMESİ (F 3-I 285; ARC bağlamı bir süreliğine askıda)
 
 ### 8.1 Padişahın sözleri [P]
 

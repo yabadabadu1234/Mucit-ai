@@ -1,0 +1,11 @@
+* ELE224L - e2_inv_tran
+* ngspice ile uretildi/dogrulandi; LTspice'ta bu ortamda ACILMADI (File>Open ile acip calistirin).
+Vdd vdd 0 DC 6
+Vin in 0 SIN(3 3 1k)
+M1 out in 0 0 BS170 W=100u L=100u
+M2 out in vdd vdd BS250 W=100u L=100u
+.model BS170 NMOS (VTO=2.1 RG=270 RS=1.572 RD=1.436 RB=.768
++ KP=.1233 Rds=1.2E8 IS=5p Tt=161.6n)
+.model BS250 PMOS (VTO=-1.0 Kp=150u Lambda=0.02 Rd=1 Rs=1 Rg=1 Is=20n)
+.tran 2u 3m
+.end

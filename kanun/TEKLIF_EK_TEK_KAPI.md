@@ -32,18 +32,16 @@ Lafız tarafsızdır (F 3-I 246); dinî sebep yazılmaz. Dayanak ve bedel durumu
 
 **Madde O (Kapsam notu).** Eşit sermaye, kâr, yetki ve sorumluluk şartı aranan türler bu Kanun kapsamında ayrıca düzenlenmez; Türk Ticaret Kanunundaki kollektif şirket hükümleri saklıdır.
 
-## Sahtekârlığa karşı maddeler (F 3-I 282; simülasyon: `MALI_MODEL/suistimal_sim_out.txt`)
+## Sahtekârlığa karşı maddeler (F 3-I 282, nakz F 3-I 284: ceza katsayıları kaldırıldı; imkânı kesen yapılar)
 
-**Madde P (Ceza ve yasak).** Sahte belge düzenleyen veya kullanan, sahte ortaklık kuran, ortaklık sözleşmesinde kâra bağlı olmayan sabit getiri veya fazladan menfaat temin eden, işçisini mikro mükellef olarak çalıştıran alıcı, işveren veya sermaye verene, kaçırılan vergi ve primin üç katı idarî para cezası verilir; mükellefiyet tescili iptal edilir ve üç yıl bu Kanundan yararlanamaz. Fazladan alınan menfaat, ortaklık sözleşmesine rağmen iade edilir.
+**Madde P (Düz tevkifat).** Madde 1 (e): tek oran, kademe yok. Gerekçe: hasılatı kimliklere bölmenin vergi avantajı doğmaz (tarama sonucu: kademelide azamî kazanç 29 088 TL, düzde 0). Dürüst mükellef hiçbir hasılat düzeyinde daha fazla ödemez.
 
-**Madde R (Hane toplulaştırması).** Eş, usul ve füruun hasılatı ile ortaklıkları, aynı adres, aynı banka hesabı sahibi veya aynı ödeyici ölçütlerinden biri varsa, tavan bakımından tek mükellefin hasılatı sayılır.
+**Madde R (Kaynakta tahakkuk).** Madde 1 (f): eski işverene ve ilişkili ödeyicilere ait bağımlı pay için işveren primi ve ücret farkı ödeme anında ödeyenden tahakkuk eder.
 
-**Madde S (Ortaklık tavanı).** Ortaklıkta toplam tavan, ortak sayısının doğrusal çarpımı olmayıp tek tavanın (1 + 0,5 × (ortak sayısı − 1)) katıdır. Her ortak payını kendi hesabına tahsil eder. Ortaklık ödemeleri yalnız portal üzerinden ve payın beyan edilen kâra oranı kadar yapılabilir.
+**Madde S (Fazla ödeme anaparadan düşer).** Sermaye–emek ortaklığında portalca kayıtlı her ödeme, kâr payı formülünü aşan kısmıyla birlikte, sermayenin geri ödemesi sayılır; kâra bağlı olmayan sabit getiri şartı hükümsüzdür.
 
-**Madde T (Geri akış ve hasılat karinesi).** Madde 1 (r) geri akış karinesi iade, mahsup ve üçüncü kişi hesaplarını kapsar. Yirmi dört aylık geriye bakış süresinde tevkifatsız banka girişleri hasılat sayılır ve tahakkuk ettirilir.
+**Madde T (Cihaz sicili).** Mahsuba konu cihazın seri numarası portalda tek kullanımlık sicile yazılır; aynı seri numarası ikinci kez mahsup edilemez; satıcının elektronik belge mükellefi olması ve ödemenin banka kanalıyla yapılması şarttır.
 
-**Madde U (Sahte bağımsızlık).** Çalışan ihbar hakkına sahiptir; ihbar eden çalışana misilleme yapılamaz. İşverenden iki yıl geriye fark prim ve ücret vergisi asıl borçlu olarak tahsil edilir. Tek müşteri sınırı, ilişkili ödeyicilerin toplamı üzerinden uygulanır.
+**Madde U (Aracılık ve vadeli alım).** Aracılıkta her satışta mal sahibi portala kaydedilir ve ödeme doğrudan mal sahibine yapılır; itibar ortaklığında yeni mükellefin yıllık vadeli alım toplamı altı brüt asgari ücreti geçemez, ortaklar müteselsil sorumludur.
 
-**Madde V (Kimlik).** Kimliğini veya hesabını kiralayan da, kiralayan da Madde P cezasına tabidir; aynı ödeyiciden gelen ödemeler kimlikler arasında toplulaştırılır. Donanım faturasında seri numarası veya muadil tanımlayıcı sahteliği Madde P'ye tabidir.
-
-**Madde Y (Vadeli alım ve aracılık tavanı).** İtibar ortaklığında yeni mükellefin yıllık vadeli alım toplamı altı brüt asgari ücreti geçemez; ortaklar müteselsil sorumludur. Aracılıkta her satışta mal sahibi portala kaydedilir ve ödeme doğrudan mal sahibine yapılır.
+**Kaldırılanlar (nakz):** ortak sayısıyla tavan indirimi (dürüst ortaklığa zarar verirdi) ve ceza katsayıları. **Kesilemeyenler ve mevcut sınırlayıcıları:** `MALI_MODEL/imkan_kesme_sim_out.txt`.

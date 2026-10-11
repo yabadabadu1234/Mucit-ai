@@ -1,0 +1,15 @@
+V2 BÖLME: saldırgan H hasılatı k kimliğe böler, kimlik başı bedel c_id; kazanç = tek kimlik vergisi − k kimlik vergisi − k·c_id·H/k
+  kademeli (mevcut 1(e))     azamî kazanç 29088 TL (strateji (np.float64(24.0), 9, 0.0)) -> imkân VAR
+  düz %10,5 (yeni 1(e))      azamî kazanç 0 TL (strateji (np.float64(19.5), 3, 0.0)) -> imkân KESİLDİ (azamî kazanç 0)
+
+V6, V7, V11: YAPISAL ÖZDEŞLİK (mantıksal ispat; simülasyon DEĞİL, sonucu kuralın tanımından çıkar)
+  V6: kaynakta tahakkuk eden tutar = işverenin kaçınacağı SGK payı ve ücret farkı (bağımlı pay üzerinden, ilişkili ödeyiciler toplanarak). Kazanç = kaçınılan − tahakkuk eden = 0, ödeyiciyi bölmek bağımlı payı değiştirmez.
+      Dürüst bağımsız serbest çalışan etkilenmez: bağımlı pay yalnız son 24 ayda bordrolu çalıştığı ödeyicilerden gelen paydır.
+      KESİLEMEYEN: gerçek bir üçüncü kişi aracı şirket (taşeron) zinciri; iz yalnız mikro hesaplar ve ilişkili kişi bağı üzerinden sürülür.
+  V7: portalca kayıtlı her ödeme formül payını aşan kısmıyla birlikte anapara geri ödemesi sayılır; sistem dışı elden ödeme sözleşmede yoktur ve alacağa hak vermez.
+  V11: aynı seri numarası ikinci kez mahsup edilemez; KESİLEMEYEN: gerçek olmayan seri numarası (satıcının e-belge mükellefi olması ve banka ödemesi şartı yalnız sınırlar).
+
+V1 NAYLON FATURA ve V3b SAHTE ORTAK: gelir kaydırma; ekonomik kök = alıcı oranı (%25) ile tevkifat (%10,5) farkı; paranın sistem dışı geri dönüşü hiçbir hesap kuralıyla kapatılamaz
+  V1 alıcı kurumlar vergisi %25      kimlik başı azamî sızıntı = fark × tavan = 0.145 × 792720 = 114944 TL/yıl
+  V1 alıcı gelir vergisi %40         kimlik başı azamî sızıntı = fark × tavan = 0.295 × 792720 = 233852 TL/yıl
+  Dürüste zarar vermeyen sınırlayıcılar: (r) geri akış karinesi, (s) kimlik tekliği, (i) toplulaştırma, (n) alıcı yoğunluğu işareti; hepsi mevcut metindedir
