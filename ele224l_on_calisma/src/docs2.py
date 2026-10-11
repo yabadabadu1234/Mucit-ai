@@ -3,6 +3,7 @@ from common import *
 from docbuilder import Doc
 from docs1 import n2, sci, M, cursor_table
 import exp2
+import ltshots
 
 KP_N, KP_P = 0.1233, 150e-6
 
@@ -56,6 +57,8 @@ def build_en(R):
     d.fig("tran", R["fig_tran"], "$V_{IN}$ and $V_{OUT}$ of the CMOS inverter versus time (ngspice simulation).", 14)
     d.fig("vtc", R["fig_vtc"], "$V_{IN}$–$V_{OUT}$ characteristic of the inverter ($V_{IN}$ on the x-axis, $V_{OUT}$ on the y-axis) (ngspice simulation and hand model).", 11)
     d.fig("idv", R["fig_idv"], "$V_{IN}$–$I_D$ characteristic of the inverter ($V_{IN}$ on the x-axis, $I_D$ on the y-axis) (ngspice simulation and hand model).", 11)
+    ltshots.add(d, "e2_inv_tran", "lt_tran")
+    ltshots.add(d, "e2_inv_dc", "lt_vtc")
     (t1, a1, b1), (t2, a2, b2) = R["cur_tran"]
     ipk = R["ipk"]
     d.tab("cur", ["Figure", "Cursor", "x", "y"], [
@@ -88,6 +91,7 @@ def build_en(R):
     d.p("**SPICE.** The circuit was built with the BS170 model, $V_1$ was swept from 0 V to 12.75 V ($V_{GS}$ from 0 V to 10 V), and the $I_D$–$V_{GS}$ graph of [[f:idvgs]] was obtained. In the hand calculation, the $V_1$ values of [[t:bias]] were applied to the SPICE circuit, and the results are compared in [[t:bsp]].")
     d.fig("idvgs", R["fig_idvgs"], "$I_D$–$V_{GS}$ characteristic of the BS170 circuit ($V_{GS}$ on the x-axis, $I_D$ on the y-axis) with the operating regions and the pinch-off point (left); square-root plot for the threshold voltage (right) (ngspice simulation).", 15.5)
     cursor_table(d, "e2_idvgs", "idvgs")
+    ltshots.add(d, "e2_bs_dc", "lt_bs")
     rows = []
     for (kind, i, vgs, vds, v1), sp in zip(R["bs_th"], R["bs_sp"]):
         if kind == "ID":
@@ -196,6 +200,8 @@ def build_tr(R):
     d.p("Giriş sinüs ($0\\ldots6$ V, ortalama 3 V). Çıkış ise 6 V ile ≈0 V arasında geçen neredeyse kare bir dalgadır; çünkü geçiş bölgesi yalnızca ~0,2 V genişliğindedir. Geçişin girişin 3 V'luk orta noktasında değil ~2,2 V'ta olması yüzünden çıkış periyodun yarısından fazla süre **alçak** kalır (duty < %50: çıkış yüksek olduğu süre azdır).")
     d.fig("vtc", R["fig_vtc"], "$V_{IN}$–$V_{OUT}$ karakteristiği ($V_{IN}$ x ekseninde).", 11)
     d.fig("idv", R["fig_idv"], "$V_{IN}$–$I_D$ karakteristiği ($V_{IN}$ x ekseninde).", 11)
+    ltshots.add(d, "e2_inv_tran", "lt_tran", tr=True)
+    ltshots.add(d, "e2_inv_dc", "lt_vtc", tr=True)
     d.p("Akım grafiğinin okunuşu: iki ucu sıfır (bir transistör kapalı), ortada tek bir tepe: %s mA, $V_{IN}=%s$ V'ta. Tepe değerini zayıf transistör (PMOS) belirler: $\\approx K_p(V_{SG}-|V_{TP}|)^2=75\\ \\mu\\text{A/V}^2\\times(%s-1)^2\\approx%s$ mA. Bu akım **kısa devre (shoot-through) akımıdır**; hızlı anahtarlamada çok sayıda eviricide toplam güç kaybının önemli kısmını oluşturur." % (n2(ipk[1] * 1e3, 3), n2(ipk[0], 3), n2(6 - ipk[0], 3), n2(75e-6 * (6 - ipk[0] - 1) ** 2 * 1e3, 3)))
     rows = []
     for v, voh, vos, ih, is_, rn, rp in R["inv_tab"]:
@@ -224,6 +230,7 @@ def build_tr(R):
     d.box("Güvenlik uyarısı", ["$V_{GS}=4$ V ve 5 V sütunlarında akım 144 mA ve 324 mA, $V_{DS}=5$ V olduğu için güç 0,72 W ve 1,62 W eder. BS170 350 mW'a dayanır. Yani bu iki noktayı **gerçek devrede sürekli uygulamayın** (ya da çok kısa tutun); simülasyonda sakıncası yoktur. Hesapta $I_{D(max)}$=500 mA sınırının güç sınırından daha gevşek olduğunu görürsünüz: tek bir sınıra bakmak yetmez."])
     d.h(2, "SPICE ve karşılaştırma")
     d.fig("idvgs", R["fig_idvgs"], "Sol: $I_D$–$V_{GS}$ ve çalışma bölgeleri; sağ: $\\sqrt{I_D}$–$V_{GS}$ grafiğinden eşik çıkarımı.", 15.5)
+    ltshots.add(d, "e2_bs_dc", "lt_bs", tr=True)
     rows = []
     for (kind, i, vgs, vds, v1), sp in zip(R["bs_th"], R["bs_sp"]):
         if kind == "ID":
