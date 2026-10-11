@@ -15,7 +15,7 @@ import locate as L  # noqa: E402
 def main():
     o = L.parse_args(sys.argv[1:])
     root, timeout = o["root"], int(o["timeout"])
-    text = L.read_issue(o["issue"]) or ""
+    text = L.get_issue(o) or ""
     changed, added_l = L.git_changes(root)
     if not changed:
         print("FAIL: empty diff. Make your best-guess edit now (top candidate from locate.py).")

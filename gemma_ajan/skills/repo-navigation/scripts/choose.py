@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""select.py -- try every proposal on the real tree, keep the one that executes best.
+"""choose.py -- try every proposal on the real tree, keep the one that executes best.
 
 Proposals are text files prop_*.txt in the temp dir (written by the proposer agents), each made
 of search/replace blocks:
@@ -16,7 +16,7 @@ first): applies and compiles, fewest NEW test failures versus the untouched tree
 covered, agreement with other proposals, smallest change. The winner is re-applied and left in
 the working tree. Never touches the git index. Always exits 0.
 
-usage: select.py [--issue FILE] [--root DIR] [--timeout 40] [--budget 170]
+usage: choose.py [--issue FILE] [--root DIR] [--timeout 40] [--budget 170]
 """
 import glob
 import os
@@ -123,7 +123,7 @@ def main():
     o = L.parse_args(sys.argv[1:])
     root, per_run, budget = o["root"], int(o["timeout"] if o["timeout"] != "120" else 40), float(o["budget"])
     t0 = time.monotonic()
-    text = L.read_issue(o["issue"]) or ""
+    text = L.get_issue(o) or ""
     files = sorted(glob.glob(os.path.join(L.tmpdir(), "prop_*.txt")))
     if not files:
         print("NO PROPOSALS found (prop_*.txt). Make the fix yourself with edit_file.")

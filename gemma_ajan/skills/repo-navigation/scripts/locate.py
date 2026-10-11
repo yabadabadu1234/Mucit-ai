@@ -284,17 +284,25 @@ def tmpdir():
 
 
 def parse_args(a):
-    opts = {"root": "", "top": "5", "issue": "", "timeout": "120", "budget": "170"}
+    """Tolerant of every run_skill_script argument style (args dict, positional list, stray `--`)."""
+    opts = {"root": "", "top": "5", "issue": "", "text": "", "timeout": "120", "budget": "170",
+            "name": "", "file": "", "pattern": "", "glob": "*.py", "max": "20"}
     pos, i = [], 0
-    while i < len(a):
-        if a[i].startswith("--") and a[i][2:] in opts and i + 1 < len(a):
-            opts[a[i][2:]] = a[i + 1]
+    toks = [t for t in a if t != "--"]
+    while i < len(toks):
+        t = toks[i]
+        key = t[2:] if t.startswith("--") else ""
+        if key in opts and i + 1 < len(toks):
+            opts[key] = toks[i + 1]
             i += 2
         else:
-            pos.append(a[i])
+            pos.append(t)
             i += 1
-    if pos:
-        opts["issue"] = pos[0]
+    for p in pos:
+        if not opts["issue"] and not opts["text"] and os.path.isfile(p):
+            opts["issue"] = p
+        elif not opts["text"] and (" " in p or "\n" in p):
+            opts["text"] = p
     if not opts["root"]:
         opts["root"] = find_workspace()
     if not opts["issue"]:
@@ -386,35 +394,55 @@ def read_issue(path):
     return open(path, encoding="utf-8", errors="replace").read()
 
 
+def get_issue(o):
+    if o.get("text"):
+        return o["text"]
+    return read_issue(o["issue"])
+
+
 def span(u, cap=140):
     end = min(u.end, u.start + cap - 1)
     more = u.end - end
     return f"{u.start}-{end}" + (f" (+{more} more lines)" if more > 0 else "")
 
 
+def excerpt(root, u, cap=45):
+    try:
+        lines = open(os.path.join(root, u.file), encoding="utf-8", errors="replace").read().split("\n")
+    except OSError:
+        return ""
+    end = min(u.end, u.start + cap - 1)
+    body = "\n".join(f"{n:5d}  {lines[n - 1]}" for n in range(u.start, end + 1))
+    return body + (f"\n       ... (+{u.end - end} more lines)" if u.end > end else "")
+
+
 def main():
     o = parse_args(sys.argv[1:])
-    text = read_issue(o["issue"])
+    text = get_issue(o)
     if text is None:
-        print(f"NO ISSUE FILE at {o['issue']}: write the key facts of the issue there first "
-              "(run_command with a heredoc), then run this again.")
+        print("NO ISSUE TEXT: call again with args {\"text\": \"<key facts of the issue>\"}.")
         return 0
     ranked, hints = locate(o["root"], text, int(o["top"]))
     if not ranked:
-        print("NO CANDIDATES: the issue has no usable hints; read the files it names.")
+        print("NO CANDIDATES: the issue has no usable hints; name the file or symbol you suspect in text.")
         return 0
-    print("CANDIDATES (edit the top one first; read only these ranges with read_file):")
+    print("CANDIDATES (best first):")
     topu = []
     for i, (fs, f, lst) in enumerate(ranked, 1):
         print(f"{i}. {f}  [{fs:.1f}]")
         for s, u in lst:
             print(f"     {f} lines {span(u)}  {u.qual}  ({s:.1f})")
             topu.append(u)
+    print("\nCODE OF THE TOP CANDIDATES:")
+    shown = 0
+    for fs, f, lst in ranked[:2]:
+        for s, u in lst[:1]:
+            print(f"--- {f} lines {span(u, 45)}  {u.qual}")
+            print(excerpt(o["root"], u))
+            shown += 1
     tf = tests_for(o["root"], topu[:6], hints)
     if tf:
-        print("LIKELY TESTS (run only these, with -x -q and -k <name>):")
-        for t in tf:
-            print("  ", t)
+        print("\nLIKELY TESTS:", ", ".join(tf))
     return 0
 
 

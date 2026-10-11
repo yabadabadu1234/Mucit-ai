@@ -8,6 +8,7 @@ usage (inside a venv with google-adk==1.36.1, adk-submission==0.2.13):
 Needs: a throwaway git repo is created in a temp dir; no network, no GPU, no model call.
 """
 import asyncio
+import glob
 import os
 import subprocess
 import sys
@@ -83,14 +84,40 @@ def main():
     def run(path, args):
         return asyncio.run(ex.execute_script_async(None, skill, path, args))
 
-    r = run("scripts/locate.py", {"issue": str(issue), "root": str(repo)})
-    print("--- locate status:", r.get("status"), r.get("error_code", ""))
+    issue_txt = issue.read_text()
+    # the model may use any argument style: args dict, positional list with ADK's stray `--`
+    r = run("scripts/locate.py", {"text": issue_txt, "root": str(repo)})
+    print("--- locate (args text):", r.get("status"))
     print(r.get("stdout", r))
-    assert "pkg/greet.py" in r.get("stdout", ""), "locate did not find the file"
+    assert "pkg/greet.py" in r.get("stdout", "") and "CODE OF THE TOP" in r.get("stdout", ""), "locate did not find/show the file"
+    r2 = asyncio.run(ex.execute_script_async(None, skill, "scripts/locate.py", None, None, [str(issue), "--root", str(repo)]))
+    assert "pkg/greet.py" in r2.get("stdout", ""), "positional style (with stray --) broke locate: " + str(r2)
+    print("--- locate positional style OK")
+
+    bad = "=== FILE: pkg/greet.py\n<<<<<<< OLD\ndef salute(name):\n    return name\n=======\nx\n>>>>>>> NEW\n"
+    good = ("=== FILE: pkg/greet.py\n<<<<<<< OLD\ndef greet(name):\n    return \"hello \" + name\n=======\n"
+            "def greet(name):\n    if not name:\n        raise ValueError(\"name must not be empty\")\n"
+            "    return \"hello \" + name\n>>>>>>> NEW\n")
+    wrong = ("=== FILE: pkg/greet.py\n<<<<<<< OLD\n    return \"hello \" + name\n=======\n"
+             "    return \"bye \" + name\n>>>>>>> NEW\n")
+    for nm, blocks, expect in (("a", good, "SAVED"), ("b", bad, "NOT SAVED"), ("c", wrong, "SAVED")):
+        r = run("scripts/propose.py", {"name": nm, "text": blocks, "root": str(repo)})
+        print(f"--- propose {nm}:", r.get("stdout", r).strip()[:200])
+        assert expect in r.get("stdout", ""), f"propose {nm}: {r}"
+    r = run("scripts/choose.py", {"issue": str(issue), "root": str(repo)})
+    print("--- choose:")
+    print(r.get("stdout", r))
+    assert "WINNER a" in r.get("stdout", ""), "wrong winner"
+    assert "greet" in (repo / "pkg" / "greet.py").read_text() and "ValueError" in (repo / "pkg" / "greet.py").read_text()
+    r = run("scripts/verify.py", {"issue": str(issue), "root": str(repo)})
+    print("--- verify after winner:", r.get("stdout", r).strip().splitlines()[-1])
+    assert "OK" in r.get("stdout", "")
+    subprocess.run(["git", "checkout", "HEAD", "--", "pkg/greet.py"], cwd=repo, check=True)
+    for p in glob.glob(os.path.join(tempfile.gettempdir(), "prop_*.txt")):
+        os.remove(p)
 
     r = run("scripts/verify.py", {"issue": str(issue), "root": str(repo)})
     print("--- verify (empty diff) status:", r.get("status"))
-    print(r.get("stdout", r))
     assert "empty diff" in r.get("stdout", ""), "empty diff not reported"
 
     (repo / "pkg" / "greet.py").write_text('def greet(name):\n    raise ValueError("bad")\n')
