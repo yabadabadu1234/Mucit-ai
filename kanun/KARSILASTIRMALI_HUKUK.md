@@ -53,6 +53,8 @@ Teklifin çekirdeği (tevkifat, hibe, prim sürekliliği) aynı kalır. **Eklene
 - Prim yükünün hangi sigorta kolunda ve hangi hakla karşılanacağı (5510 ile uyum) birincil metinle yoklanmadı.
 - **Karar:** Teklifin ana metni **değiştirilmedi**: kazanç marjinal, davranış etkisi ölçülmemiş, 5510 uyumu yoklanmamış. K1, **komisyona alternatif öneri** olarak `KOMISYON_PAKETI.md` seçeneklerine eklenmeli; bunu padişaha **çıkarım olarak** sunuyorum (F 3-I 33-B).
 
+**Risk simülasyonu:** bilinen riskler (prim sürekliliği, dolaşma, sahte bağımsızlık, katılım kaybı, geri akış) `MALI_MODEL/RISK_SIMULASYONU.md`de. Özet: belirleyici risk prim sürekliliği; Kötümser'de kırılma noktası %79, Orta'da %18 (K1 %7).
+
 ## E. Harici analizin iddiaları — yoklama sonucu
 | İddia | Durum |
 | :-- | :-- |
