@@ -1,6 +1,6 @@
 # MİKRO MÜKELLEFİYET MALİ ETKİ MODELİ
 
-> **GÜNCELLEME (11/10/2026, nakz F 3-I 179):** N, medyan ve sonuç tabloları 11/10/2026 itibarıyla GUNCEL_MODEL.md'dedir (N=100/443/1966 bin; Orta yıl-4 net +6,17). Aşağıdaki eski sayılar tarihî kayıttır.
+> **GÜNCELLEME (11/10/2026, nakz F 3-I 179):** N, medyan ve sonuç tabloları 11/10/2026 itibarıyla GUNCEL_MODEL.md'dedir (N=100/331/1096 bin; Orta yıl-4 net +4,60). Aşağıdaki eski sayılar tarihî kayıttır.
 
 Dosyalar: `model.py` (hesap), `analiz.py` (senaryo, tornado, Monte Carlo, varyant), `grafik.py`, `xlsx_uret.py`, `MIKRO_MUKELLEF_MALI_MODEL.xlsx` (canlı formüllü Excel), `sonuc.json`. Grafikler `../GORSELLER/model_*.png`.
 

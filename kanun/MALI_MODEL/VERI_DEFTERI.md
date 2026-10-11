@@ -145,4 +145,4 @@ Ağustos 2026 (ham): işgücü 36 083 bin, istihdam 33 301, işsiz 2 782, katıl
 | Yoklanamadı | tedbir esnekliği; ölü ağırlık; ilçe/il atıl oranı; 2021→2025 sınıflama kayması | -- |
 
 ## EK-8 (11/10/2026): model girdilerinin güncellenmesi
-N: Kötümser 100 bin (F 268), İyimser 1 966 bin (F 269 oranları × ILO 2025; gayrıresmî = işgücü dışı + kayıt dışı tarım dışı, bant yaklaştırması), Orta 443 bin (geometrik ortalama, Claude). Genç tipleri: TÜİK t14 NEET eğitim dağılımı (15-24, 2025). Fransa tek ödeme oranları: ikincil kaynak. Ayrıntı: `GUNCEL_MODEL.md`.
+N: Kötümser 100 bin (F 268), İyimser 1 096 bin (F 269 oranları × ILO 2025; gayrıresmî = F 273: potansiyel işgücü + diğer, emekli/ev hanımı/çalışamaz hariç, yaş payı yaklaştırması), Orta 331 bin (geometrik ortalama, Claude). Genç tipleri: TÜİK t14 NEET eğitim dağılımı (15-24, 2025). Fransa tek ödeme oranları: ikincil kaynak. Ayrıntı: `GUNCEL_MODEL.md`.

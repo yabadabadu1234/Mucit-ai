@@ -2,6 +2,8 @@
 
 Betik: `MALI_MODEL/istihdam_careleri.py`, çıktı: `MALI_MODEL/istihdam_careleri_out.txt`. Kaynak: TÜİK İşgücü 2025 (bülten 57996: t05, t11, t13, t15, t19, t26, t27, t03), SBB Haftalık Gelişmeler 9 Ekim 2026 s.25 (asgari ücret kaması), TÜİK Kurumsal Sektör Hesapları 2025 (GSMH).
 
+> Tarihte ve milletlerde emsaller ve kanıt gücü: `ISTIHDAM_EMSALLERI.md` (F 3-I 273).
+
 ## 1. Teşhis: atıl işgücü 2025 = 12 077 bin kişi (yüzde 29,7)
 
 | Bileşen | Bin kişi | Kaynak/yöntem |

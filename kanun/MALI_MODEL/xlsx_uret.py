@@ -14,7 +14,7 @@ g['A3']='Tüm tutarlar sabit 2026 TL. Girdilerin çoğu ölçülmemiş varsayım
 satir=[('Brüt asgari ücret (TL/ay)','W',33030,33030,33030,'Birden çok kaynakta tutarlı; resmî metin okunmadı'),
 ('Medyan yıllık hasılat (asgari ücret katı)','medyan_W',4.0,5.0,6.0,'Varsayım'),
 ('Hasılat dağılımı yayılımı (σ, log-normal)','sigma',0.9,0.9,0.9,'Varsayım'),
-('Katılımcı sayısı (kararlı durum, kişi)','n_toplam',100000,443000,1966000,'Kötümser: F 3-I 268; İyimser: F 3-I 269 oranları × ILO 2025 (n_veri.py); Orta: geometrik ortalama (Claude)'),
+('Katılımcı sayısı (kararlı durum, kişi)','n_toplam',100000,331000,1096000,'Kötümser: F 3-I 268; İyimser: F 3-I 269 oranları × ILO 2025 + F 3-I 273 gayrıresmî tanımı (n_veri.py); Orta: geometrik ortalama (Claude)'),
 ('Halen kayıtlı olup rejime geçenlerin payı (s)','s_kayitli',0.30,0.15,0.05,'Varsayım; prim sürdüğü için sonucu az etkiler'),
 ('Halen kayıtlı olanın 4/b primine devamı (1 = prim sürer)','prim_devam',1,1,1,'Teklif Madde 1 (p)'),
 ('Ücretli ek gelir payı (u)','u_ucretli',0.25,0.20,0.15,'Varsayım'),

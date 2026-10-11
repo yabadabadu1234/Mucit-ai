@@ -10,14 +10,21 @@ def yas(a,b):
         t+=v*max(0,min(hi,b-1)-max(lo,a)+1)/(hi-lo+1)
     return t
 res_2230=yas(22,31); res_3040=yas(31,40)
-isgdisi_2534=3013+581; kd_2534=461+450
-isgdisi_3544=3128+455; kd_3544=437+380
-gay_2230=0.9*(isgdisi_2534+0.0)+0.9*(437+225)
-gay_3040=isgdisi_3544+(437+380)
+ISG={"E":[1740,581,455,950,1814,3267],"K":[3049,3013,3128,3347,3459,4822]}
+POT={"E":1944,"K":3185}
+DIGER={"E":775,"K":3891}
+def pay(c,idx,agirlik): return agirlik*ISG[c][idx]/sum(ISG[c])
+gay_dar_2230=sum(POT[c]*pay(c,1,0.9) for c in "EK")
+gay_dar_3040=sum(POT[c]*pay(c,2,1.0) for c in "EK")
+gay_gen_2230=gay_dar_2230+sum(DIGER[c]*pay(c,1,0.9) for c in "EK")
+gay_gen_3040=gay_dar_3040+sum(DIGER[c]*pay(c,2,1.0) for c in "EK")
+gay_2230=gay_gen_2230; gay_3040=gay_gen_3040
+dar=0.60*res_2230+0.20*gay_dar_2230+0.30*res_3040+0.10*gay_dar_3040
 iyi=0.60*res_2230+0.20*gay_2230+0.30*res_3040+0.10*gay_3040
 kotu=100.0
 orta=math.sqrt(kotu*iyi)
 print("resmi 22-30 %.1f  31-39 %.1f ; gayriresmi 22-30 %.0f 30-40 %.0f"%(res_2230,res_3040,gay_2230,gay_3040))
+print("dar %.0f bin (potansiyel isgucu), gayriresmi dar 22-30 %.0f 30-40 %.0f ; genis 22-30 %.0f 30-40 %.0f"%(dar,gay_dar_2230,gay_dar_3040,gay_gen_2230,gay_gen_3040))
 print("iyi %.0f bin  orta %.0f bin  kotu %.0f bin"%(iyi,orta,kotu))
 q=0.3
 for p in (0.02,0.05,0.15,0.40):

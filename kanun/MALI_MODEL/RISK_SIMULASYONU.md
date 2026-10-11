@@ -1,6 +1,6 @@
 # RİSK SİMÜLASYONU — SEÇİLEN (S) VE MODEL K (K1) (F 3-I 256, padişah: "Onu da, bilinen riskleri de simüle et")
 
-> **GÜNCELLEME (11/10/2026, nakz F 3-I 179):** Güncel N ile risk tablosu GUNCEL_MODEL.md §2'dedir (risksiz Orta +6,17; prim %50 +2,40; hiç tutmazsa −1,36). Aşağıdaki eski sayılar tarihî kayıttır.
+> **GÜNCELLEME (11/10/2026, nakz F 3-I 179):** Güncel N ile risk tablosu GUNCEL_MODEL.md §2'dedir (risksiz Orta +4,60; prim %50 +1,78; hiç tutmazsa −1,03). Aşağıdaki eski sayılar tarihî kayıttır.
 
 Kod: `risk.py`, `risk2.py`; sonuç: `sonuc_risk.json`, `sonuc_risk2.json`. Ölçü: yıl-4 net etki, milyar TL/yıl. S = teklifin mevcut hâli; K1 = S + kuluçka 3 yıl, sonra net gelirin %5'i prim (geri akış %60 varsayımı). Hepsi **modeldir**, ölçülmüş değildir; risk parametreleri benim varsayımımdır.
 
