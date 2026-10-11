@@ -3,6 +3,22 @@ from model import *
 _orj=model.kisi_basi
 def _yama(H,p):
     k=_orj(H,p); d=p.get('dolasma',0.0)
+    if p.get('oranlar') is not None:
+        S=(1-p['gider'])*np.asarray(H,dtype=float); t=0*S; lo=0.0
+        for e,r in zip(ESIKLER,p['oranlar'][:4]):
+            t=t+r*np.clip(S-lo,0,e-lo); lo=e
+        Tn=t+p['oranlar'][4]*np.clip(S-lo,0,None); Tb=np.maximum(k['T'],1e-9)
+        artis=np.maximum(Tn/Tb-1,0)
+        T=Tn*np.maximum(0,1-p.get('tel',1.0)*artis); k['T']=T
+        k['bes']=p['bes']*T*(1-p['bes_vazgecme']); k['dk']=k['bes']*p['devlet_katki']
+        k['kdv']=p['kdv_donanim_pay']*np.minimum(p['kdv_mahsup_tavan']*T,p['kdv_donanim_kdv'])
+        k['yeni_net']=T-k['bes']-k['dk']-k['myo']-k['kdv']
+    m=p.get('tm',1.0)
+    if m!=1.0:
+        T=k['T']*m*max(0.0,1-p.get('tel',1.0)*(m-1)); k['T']=T
+        k['bes']=p['bes']*T*(1-p['bes_vazgecme']); k['dk']=k['bes']*p['devlet_katki']
+        k['kdv']=p['kdv_donanim_pay']*np.minimum(p['kdv_mahsup_tavan']*T,p['kdv_donanim_kdv'])
+        k['yeni_net']=T-k['bes']-k['dk']-k['myo']-k['kdv']
     if d>0:
         yarim=_orj(H/2,p); m=(H>=0.5*TAVAN)
         for x in ['T','bes','dk','myo','kdv']: k[x]=np.where(m,(1-d)*k[x]+d*2*yarim[x],k[x])
@@ -10,7 +26,7 @@ def _yama(H,p):
     return k
 model.kisi_basi=_yama
 TAM=141699.0
-M0=dict(cap_e=None,r_e=None,floor_e=0.0,r_y=0.0,e0=0.0,kulucka=3,levy=0.0,prog=1.0,prog_esik=10.0,
+M0=dict(tm=1.0,tel=1.0,eski_ayni=False,cap_e=None,r_e=None,floor_e=0.0,r_y=0.0,e0=0.0,kulucka=3,levy=0.0,prog=1.0,prog_esik=10.0,
  kp_maliyet_pay=0.6,eps_pp=0.0,dolasma=0.0,pej=0.0,pej_onlem=0.0,pej_sgk=0.30,pej_vergi=0.15,
  ghost=0.0,ghost_onlem=0.0,uyum_bireysel=1.0,c_e=1.0,cyc=0.0,cyc_onlem=0.0,prim_devam=1.0,levy_kacis=3.0)
 def pm(ad,**kw):
@@ -21,6 +37,7 @@ def prim_y(p,H):
     return np.where(gelir>=p['e0'],r*(1-p['gider'])*H,0.0)
 def prim_e(p,H):
     full=p['prim_odeme']*TAM
+    if p['eski_ayni']: return np.minimum(prim_y(p,H),full)
     if p['r_e'] is None:
         v=np.full_like(H,full)*p['prim_devam']
         return v if p['cap_e'] is None else np.minimum(v,p['cap_e']*(1-p['gider'])*H)
