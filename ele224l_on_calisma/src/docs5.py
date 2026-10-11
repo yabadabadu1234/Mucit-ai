@@ -4,6 +4,7 @@ from docbuilder import Doc
 from docs1 import n2, sci, M, cursor_table
 import exp5
 import ltshots
+import extras
 
 ERRS_EN = [
     ["E1", "The node where $R_1$ and $R_C$ meet (columns 14\u201315) is not connected to the + rail.", "No supply voltage reaches the circuit; $V_{CC}$ must be wired to this node (red wire from the + rail to column 15)."],
@@ -380,4 +381,5 @@ def build_tr(R):
     for q, a in qa:
         d.p("**S:** " + q)
         d.p("**C:** " + a)
+    extras.tr_extra(5, d, R)
     return d

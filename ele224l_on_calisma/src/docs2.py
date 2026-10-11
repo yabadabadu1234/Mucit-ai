@@ -4,6 +4,7 @@ from docbuilder import Doc
 from docs1 import n2, sci, M, cursor_table
 import exp2
 import ltshots
+import extras
 
 KP_N, KP_P = 0.1233, 150e-6
 
@@ -266,4 +267,5 @@ def build_tr(R):
     for q, a in qa:
         d.p("**S:** " + q)
         d.p("**C:** " + a)
+    extras.tr_extra(2, d, R)
     return d

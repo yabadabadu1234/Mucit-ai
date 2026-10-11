@@ -178,22 +178,30 @@ class Doc:
 
     # ---------- bloklar ----------
     def title_block(self, lines, fields):
+        en = self.lang == "en"
+        vals = ["Be\u015fir Kerem \u00dcst\u00fcnt\u00fcrk", "251201037", "October 11, 2026" if en else "11 Ekim 2026"]
+        p = self.d.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        p.add_run().add_picture(os.path.join(os.path.dirname(__file__), "..", "assets", "cover_banner.png"), width=Cm(15.5))
+        for _ in range(3):
+            self.d.add_paragraph()
         for i, (txt, sz, b) in enumerate(lines):
             p = self.d.add_paragraph()
             p.alignment = WD_ALIGN_PARAGRAPH.CENTER
             p.paragraph_format.line_spacing = 1.15
-            p.paragraph_format.space_after = Pt(2)
-            r = p.add_run(txt); _set_font(r, sz, b)
+            p.paragraph_format.space_after = Pt(8)
+            r = p.add_run(txt); _set_font(r, sz + 2, b)
+        for _ in range(4):
+            self.d.add_paragraph()
         t = self.d.add_table(rows=len(fields), cols=2)
         t.alignment = WD_TABLE_ALIGNMENT.CENTER
         for i, (k, v) in enumerate(fields):
             c0, c1 = t.rows[i].cells
             c0.width, c1.width = Cm(5), Cm(9)
-            for c, txt, b in ((c0, k, True), (c1, v, False)):
-                c.paragraphs[0].paragraph_format.line_spacing = 1.15
-                r = c.paragraphs[0].add_run(txt); _set_font(r, 12, b)
+            for c, txt, bold in ((c0, k, True), (c1, vals[i] if i < len(vals) else v, False)):
+                c.paragraphs[0].paragraph_format.line_spacing = 1.5
+                r = c.paragraphs[0].add_run(txt); _set_font(r, 13, bold)
                 _cell_borders(c)
-        self.d.add_paragraph()
+        self.d.add_paragraph().add_run().add_break(WD_BREAK.PAGE)
 
     def h(self, level, text):
         if level == 1:

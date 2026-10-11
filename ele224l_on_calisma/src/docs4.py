@@ -3,6 +3,7 @@ from common import *
 from docbuilder import Doc
 from docs1 import n2, sci, M
 import exp4
+import extras
 from exp4 import VCC_LIST, VBB_LIST
 
 
@@ -316,4 +317,5 @@ def build_tr(R):
     for q, a in qa:
         d.p("**S:** " + q)
         d.p("**C:** " + a)
+    extras.tr_extra(4, d, R)
     return d
