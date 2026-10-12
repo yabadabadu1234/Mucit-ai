@@ -380,6 +380,8 @@ def run_tests(root, tests, timeout):
         return "unavailable", set(), out[-200:]
     if rc == 124:
         return "timeout", set(), "TIMEOUT"
+    if rc == 2 or "ModuleNotFoundError" in out or "error during collection" in out.lower():
+        return "unavailable", set(), "test environment cannot run these tests (import/collection error): " + "\n".join(out.strip().splitlines()[-2:])
     tail = "\n".join(out.strip().splitlines()[-4:])
     if rc in (0, 5):
         return "pass", set(), tail
@@ -460,10 +462,11 @@ def _report(o, text):
             topu.append(u)
     print("\nCODE OF THE TOP CANDIDATES:")
     shown = 0
-    for fs, f, lst in ranked[:2]:
+    for rank_i, (fs, f, lst) in enumerate(ranked[:2]):
+        cap = 80 if rank_i == 0 else 40
         for s, u in lst[:1]:
-            print(f"--- {f} lines {span(u, 45)}  {u.qual}")
-            print(excerpt(o["root"], u))
+            print(f"--- {f} lines {span(u, cap)}  {u.qual}")
+            print(excerpt(o["root"], u, cap))
             shown += 1
     tf = tests_for(o["root"], topu[:6], hints)
     if tf:

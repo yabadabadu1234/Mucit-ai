@@ -98,6 +98,9 @@ def main():
     r3 = run("scripts/locate.py", {"text": "something else"})
     assert "SCOUT BUDGET USED" in r3.get("stdout", ""), "locate budget not enforced: " + str(r3)
     print("--- locate budget enforced on 3rd call")
+    rc_ = run("scripts/context.py", {})
+    assert "pkg/greet.py" in rc_.get("stdout", ""), "context.py did not replay the scout output"
+    print("--- context.py replays scout output")
 
     bad = "=== FILE: pkg/greet.py\n<<<<<<< OLD\ndef salute(name):\n    return name\n=======\nx\n>>>>>>> NEW\n"
     good = ("=== FILE: pkg/greet.py\n<<<<<<< OLD\ndef greet(name):\n    return \"hello \" + name\n=======\n"

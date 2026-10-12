@@ -37,6 +37,8 @@ def main():
         if tf:
             status, failed, tail = L.run_tests(root, tf, timeout)
             verdict = f"pytest {' '.join(tf)} -> {status}\n{tail}"
+            if status == "unavailable":
+                verdict += "\n(the test environment cannot run these tests; ignore tests and submit if the patch looks right)"
             if status == "fail":
                 problems.append("related tests fail (existing failures may be unrelated; compare with `git stash`)")
     gaps = L.contract_gaps(text, added_l) if text else []

@@ -143,7 +143,7 @@ BF18_FILES = {
 }
 
 SKILL_DIR = Path(__file__).resolve().parent / "skills" / "repo-navigation"
-SKILL_FILES = ["scripts/locate.py", "scripts/verify.py", "scripts/choose.py", "scripts/propose.py", "scripts/grep.py"]
+SKILL_FILES = ["scripts/locate.py", "scripts/verify.py", "scripts/choose.py", "scripts/propose.py", "scripts/grep.py", "scripts/context.py"]
 
 
 SCOUT_MD = """You are the scout of a three-stage team that fixes one issue in a repository under /workspace. You have NO file tools: you work only through the repo-navigation skill, and you never edit anything.
@@ -166,12 +166,12 @@ Scout brief:
 
 Your angle: __ANGLE__
 
-Work in at most 6 tool calls:
-1. Read the exact code you will change with read_file (at most 150 lines per call; use start_line and end_line).
-__EXTRA__2. Call run_skill_script with skill_name="repo-navigation", file_path="scripts/propose.py" and args {"name": "__x__", "text": "<blocks>"}. Each block is:
+Work in at most 4 tool calls:
+1. Call run_skill_script with skill_name="repo-navigation" and file_path="scripts/context.py" (no args). It prints the code the scout found. That code is all you need; you have no other file tools.
+2. Call run_skill_script with skill_name="repo-navigation", file_path="scripts/propose.py" and args {"name": "__x__", "text": "<blocks>"}. Each block is:
 === FILE: path/to/file.py
 <<<<<<< OLD
-exact old lines copied from read_file, with 2-3 lines of context so they match in exactly one place
+exact old lines copied from the context output (without the line numbers), with 2-3 lines of context so they match in exactly one place
 =======
 new lines
 >>>>>>> NEW
@@ -181,11 +181,11 @@ You may give several blocks. Never edit tests. Keep the change as small as the i
 
 ANGLES = {
     "a": "Minimal. Make the smallest change at the most likely place, often 1 to 5 lines. Prefer fixing the root cause where the wrong value is produced rather than at a call site.",
-    "b": "Analogy. Find the nearest sibling in the same file or package (a similar function, parameter, class or registration; use git grep) and mirror exactly how it handles the same situation: naming, signature, error type, message style. Features are usually implemented the way their siblings are.",
+    "b": "Analogy. Look at the neighbouring code shown (similar branches, parameters, entries, registrations) and mirror exactly how it handles the same situation: naming, signature, error type, message style. Features are usually implemented the way their siblings are.",
     "c": "Defensive. Fix the root cause and also handle the edge cases the issue names (empty values, None, unusual types, whitespace). Still keep the whole change under 30 lines.",
 }
 PROP_TEMP = {"a": 0.2, "b": 0.5, "c": 0.7}
-EXTRA = {"a": "", "b": "   To find the sibling, call run_skill_script with file_path=\"scripts/grep.py\" and args {\"pattern\": \"<regex>\"} (once or twice).\n", "c": ""}
+EXTRA = {"a": "", "b": "", "c": ""}
 
 JUDGE_MD = """You are the judge of a team that fixes one issue under /workspace. Proposers saved candidate fixes. Your job is to apply the best one and submit it. You have no shell: use the repo-navigation skill, read_file, edit_file and submit_patch.
 
@@ -200,7 +200,7 @@ Steps:
 2. If it printed WINNER and no CONTRACT HINT, call run_skill_script with file_path="scripts/verify.py" once; if that says OK, call submit_patch.
 3. If it printed a CONTRACT HINT, make ONE small edit_file that covers the missing string or name, then call verify.py and submit_patch.
 4. If it printed NO PROPOSALS or NO VALID PROPOSAL, make the fix yourself with read_file and edit_file using the brief (at most 8 tool calls), call verify.py once, then submit_patch.
-5. If verify.py lists problems, fix them (one round), then call submit_patch.
+5. If verify.py lists problems, fix them (one round), then call submit_patch. If it says the test environment cannot run the tests, ignore tests and submit. Never run verify.py more than twice.
 Never modify tests. After submit_patch, reply with one short line.
 """
 
@@ -241,7 +241,7 @@ def wide_files():
     for k in "abc":
         f[f"sub_agents/proposer_{k}.yaml"] = agent_yaml(
             f"proposer_{k}", f"Writes candidate fix {k.upper()} as a text proposal.", f"proposer_{k}.md",
-            ["read_file"], f"sampling_prop_{k}.yaml", none_contents=True)
+            [], f"sampling_prop_{k}.yaml", none_contents=True)
         f[f"prompts/proposer_{k}.md"] = PROPOSER_MD.replace("__X__", k.upper()).replace("__x__", k).replace("__ANGLE__", ANGLES[k]).replace("__EXTRA__", EXTRA[k])
         f[f"configs/sampling_prop_{k}.yaml"] = sampling(PROP_TEMP[k], 2048)
     f["sub_agents/judge.yaml"] = agent_yaml("judge", "Applies the best executed proposal and submits.", "judge.md",
