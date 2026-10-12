@@ -60,3 +60,8 @@ belirleyen şeyler (a) 12 saatlik toplam süreyi ~120 görev arasında bölen za
 1. LB sonucunu bekle (`kaggle competitions submissions gemma-4-developer-agent`).
 2. Ertesi gün `submission_bf18.zip` kontrol olarak gönder; iki skoru yan yana yaz (gürültü payıyla).
 3. `swegemma eval` yerelde Docker+GPU ister; Kaggle L4x4 defterinde eşleştirilmiş koşu yapılabilir.
+
+## GPU deneyleri (2026-10-12)
+Ayrıntı: `eval/GPU_SONUCLARI.md`. Özet: 3 aşamalı "wide" tasarım gerçek Gemma ile uçtan uca çalıştı, ama sağlam görevlerde
+referans tek ajanla aynı sonucu aldı (4/5 = 4/5); ek getiri yok. Bekleyen gönderim 57087206 (`locator` v1) `--` tuzağı hatasını
+içerir (model `positional_args` kullanınca locate çalışmaz); düzeltilmiş sürüm bu dalda.
