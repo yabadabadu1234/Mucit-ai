@@ -1,0 +1,19 @@
+Çift (alıcı+satıcı) sahte işlemin net kazancı = P(taklit) x (alıcı mahsup oranı - satıcı vergi oranı) x P - ücret
+Hazine kaybı = aynı çarpım (korunum): sızıntı = sahte işleme verilen sübvansiyon
+
+kural                              t_satici  k_alici azamî kazanç
+teklif (mevcut, doğrulama yok)        0.105    0.250       +0.145
+nötr kural (AD)                       0.250    0.250       +0.000
+doğrulama yok, alıcı kredisi 10,5     0.105    0.105       +0.000
+
+Doğrulanmış kanal: sübvansiyon (k-t)=0,145 yalnız bağımsız şahitli işlemde; sahtekârın şahidi taklit etme olasılığı p
+  p_taklit=0.00  azamî kazanç +0.0000
+  p_taklit=0.01  azamî kazanç +0.0015
+  p_taklit=0.05  azamî kazanç +0.0073
+  p_taklit=0.20  azamî kazanç +0.0290
+  p_taklit=1.00  azamî kazanç +0.1450
+
+Dürüst işlem yükü (birim 1,0 gerçek B2B; düzenli piyasa ayarı: satıcı %25 öder, alıcı %25 indirir):
+  düzenli piyasa                 satıcı payı 0.250  alıcı indirimi 0.250  Hazine sübvansiyonu 0.000
+  teklif doğrulanmış kanalda     satıcı payı 0.105  alıcı indirimi 0.250  Hazine sübvansiyonu 0.145
+  nötr kural doğrulanmamışta     satıcı payı 0.250  alıcı indirimi 0.250  Hazine sübvansiyonu 0.000
