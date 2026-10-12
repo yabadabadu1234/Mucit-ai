@@ -136,9 +136,13 @@ try:
         t1 = time.time()
         try:
             r = asyncio.run(evaluator.evaluate_task(task=t, task_index=i, total_tasks=len(tasks)))
+            err = str(getattr(r, "error_message", "") or getattr(r, "error", "") or "")
             row = dict(id=t.instance_id, resolved=bool(r.resolved), exit=r.test_exit_code,
                        patch_chars=len(r.agent_patch or ""), tool_calls=r.tool_calls,
-                       seconds=round(r.duration_seconds, 1), error=str(getattr(r, "error", "") or "")[:300])
+                       seconds=round(r.duration_seconds, 1), error=err[:300],
+                       test_tail=(r.test_output or "")[-1500:])
+            (WORKING / f"patch_{LABEL}_{t.instance_id}.diff").write_text(r.agent_patch or "")
+            (WORKING / f"testlog_{LABEL}_{t.instance_id}.txt").write_text(r.test_output or "")
         except Exception as e:  # noqa: BLE001
             row = dict(id=t.instance_id, resolved=False, error=f"{type(e).__name__}: {e}"[:400], seconds=round(time.time() - t1, 1))
             traceback.print_exc()

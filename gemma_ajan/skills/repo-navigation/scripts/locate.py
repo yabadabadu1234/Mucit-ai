@@ -43,9 +43,9 @@ def is_test_path(p):
 def list_sources(root):
     out = []
     for d, dirs, files in os.walk(root):
-        dirs[:] = [x for x in dirs if x not in SKIP_DIRS]
+        dirs[:] = [x for x in dirs if x not in SKIP_DIRS and not x.startswith(".")]
         for f in files:
-            if f.endswith(".py"):
+            if f.endswith(".py") and not f.startswith("."):
                 rel = os.path.relpath(os.path.join(d, f), root).replace(os.sep, "/")
                 out.append(rel)
     return out
@@ -422,6 +422,31 @@ def main():
     if text is None:
         print("NO ISSUE TEXT: call again with args {\"text\": \"<key facts of the issue>\"}.")
         return 0
+    calls_f = os.path.join(tmpdir(), "locate_calls.txt")
+    last_f = os.path.join(tmpdir(), "locate_last.txt")
+    try:
+        n_calls = int(open(calls_f).read().strip()) + 1
+    except (OSError, ValueError):
+        n_calls = 1
+    open(calls_f, "w").write(str(n_calls))
+    if n_calls > 2 and os.path.exists(last_f):
+        print("SCOUT BUDGET USED (locate answers at most twice). Do NOT call it again. Below is the output of "
+              "your best earlier call; write the brief NOW from it.\n")
+        print(open(last_f, encoding="utf-8", errors="replace").read())
+        return 0
+    import io
+    import contextlib
+    buf = io.StringIO()
+    with contextlib.redirect_stdout(buf):
+        _report(o, text)
+    out_text = buf.getvalue()
+    if n_calls == 1 or "NO CANDIDATES" not in out_text:
+        open(last_f, "w", encoding="utf-8").write(out_text)
+    print(out_text, end="")
+    return 0
+
+
+def _report(o, text):
     ranked, hints = locate(o["root"], text, int(o["top"]))
     if not ranked:
         print("NO CANDIDATES: the issue has no usable hints; name the file or symbol you suspect in text.")

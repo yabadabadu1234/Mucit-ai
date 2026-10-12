@@ -84,6 +84,8 @@ def main():
     def run(path, args):
         return asyncio.run(ex.execute_script_async(None, skill, path, args))
 
+    for stale in glob.glob(os.path.join(tempfile.gettempdir(), "locate_*.txt")) + glob.glob(os.path.join(tempfile.gettempdir(), "prop_*.txt")):
+        os.remove(stale)
     issue_txt = issue.read_text()
     # the model may use any argument style: args dict, positional list with ADK's stray `--`
     r = run("scripts/locate.py", {"text": issue_txt, "root": str(repo)})
@@ -93,6 +95,9 @@ def main():
     r2 = asyncio.run(ex.execute_script_async(None, skill, "scripts/locate.py", None, None, [str(issue), "--root", str(repo)]))
     assert "pkg/greet.py" in r2.get("stdout", ""), "positional style (with stray --) broke locate: " + str(r2)
     print("--- locate positional style OK")
+    r3 = run("scripts/locate.py", {"text": "something else"})
+    assert "SCOUT BUDGET USED" in r3.get("stdout", ""), "locate budget not enforced: " + str(r3)
+    print("--- locate budget enforced on 3rd call")
 
     bad = "=== FILE: pkg/greet.py\n<<<<<<< OLD\ndef salute(name):\n    return name\n=======\nx\n>>>>>>> NEW\n"
     good = ("=== FILE: pkg/greet.py\n<<<<<<< OLD\ndef greet(name):\n    return \"hello \" + name\n=======\n"
