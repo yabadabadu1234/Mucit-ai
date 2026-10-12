@@ -131,7 +131,7 @@ try:
     import torch, requests
     from adk_submission import VllmConfig, VllmServer
     cfg = VllmConfig(model=MODEL, tool_call_parser="gemma4", reasoning_parser="gemma4", max_model_len=8192,
-                     dtype="bfloat16", gpu_memory_utilization=0.90, tensor_parallel_size=4, startup_timeout=900,
+                     dtype="bfloat16", gpu_memory_utilization=0.78, tensor_parallel_size=4, startup_timeout=900,
                      enable_lora=True, max_lora_rank=8)
     srv = VllmServer(cfg, lora_modules={"probe": str(AD)})
     srv.start(); log("vLLM adaptörle ayakta")
