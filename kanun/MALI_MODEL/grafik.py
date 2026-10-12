@@ -17,7 +17,7 @@ for i,(a,v) in enumerate(adim):
     ax.text(i,(cum-v/2 if i else v/2)/M if False else (cum/M + (0.3 if v<0 else 0.3)),"%.2f"%(v/M),ha='center',fontsize=9)
 net=O['net']; ax.bar(len(adim),net/M,color='#14662b' if net>0 else '#7a1f1f'); ax.text(len(adim),net/M-0.9 if net<0 else net/M+0.3,"%.2f"%(net/M),ha='center',fontsize=10,fontweight='bold')
 ax.axhline(0,color='#333',lw=1); ax.set_xticks(range(len(adim)+1)); ax.set_xticklabels([a for a,_ in adim]+["NET"],rotation=25,ha='right',fontsize=9)
-ax.set_ylabel("milyar TL / yıl"); ax.set_title("Orta senaryo, 4. yıl (kararlı durum): net etki, eski kayıtlıların primi hiç sürmezse (en kötü hâl)",fontsize=13,fontweight='bold',color='#1f3a5f'); ax.spines[['top','right']].set_visible(False)
+ax.set_ylim(min(0,net/M)-1.0,O['brut_tevkifat']/M*1.15); ax.set_ylabel("milyar TL / yıl"); ax.set_title("Orta senaryo, 4. yıl: net etki, eski kayıtlıların primi hiç sürmezse (en kötü hâl)",fontsize=11.5,fontweight='bold',color='#1f3a5f'); ax.spines[['top','right']].set_visible(False)
 fig.text(0.01,-0.10,NOT,fontsize=8,color='#555'); fig.savefig('../GORSELLER/model_01_selale.png',dpi=110,bbox_inches='tight'); plt.close()
 # 2 tornado
 T=S['tornado'][:10]; T=T[::-1]
