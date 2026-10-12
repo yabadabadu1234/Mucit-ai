@@ -244,3 +244,62 @@ Aday tarif (teyit bekler): **tasavvur, bir mevzuyu (şey ya da hâl) temsil eden
 | S-ARC-19 | Tasavvur mevzusuz olabilir mi |
 | S-ARC-20 | Tasavvur kendinde nötr mü, her tasavvur az çok inanç mı taşır |
 | S-ARC-21 | Mana üreten motor hiss-i müşterek mi, vâhime mi |
+
+---
+
+## 9. Kaynaklarla revizyon (F 3-I 289; ARC askıda)
+
+### 9.1 Kaynakların eklediği [Ç]
+| Eklenen | Kaynak | Şemaya etkisi |
+| :-- | :-- | :-- |
+| Tasavvur hüküm içermez, tasdikin öncülüdür | A, B | §8 "hükmü askıda" teyit |
+| İki yön: tecrit (tikel→tümel), tecessüm (mana→muşahhas suret) | A, E | tecrit motoru tek yönlü değildir |
+| Açıklık, seçiklik, tamlık; kaplam/içlem | A | istifham motorunun ölçüleri |
+| Tasdik: cezm, zan, şek; delil: burhan…şiir; usul: temsil, istikra, kıyas | B | strateji/muhakeme eşlemesi |
+| Yedi mertebe | D | ilk dördü şemada, kalp üçü ertelenmiş |
+| mana ≠ tasavvur terim ayrımı | E | padişahın ayrımını destekler |
+
+### 9.2 Tasavvur v2 (aday, teyit bekler) [Ç]
+Tasavvur, manalara bir **suret (nizam)** verilerek bir mevzuya bağlandığı; unsurları ayırt edilmiş ve nispetlendirilmiş, hükmü askıda, iç tutarlılığı sınanabilir, tecritle tümele yükseltilebilen modeldir. Manaların toplamı değil; toplamın üstündeki fark **suret/nizam**dır.
+
+### 9.3 Motor eşlemesi
+| Motor | Kaynaktan karşılık |
+| :-- | :-- |
+| Tecrit | tikel→tümel; tecessümle iki yön |
+| Mantık | zıddını içermeme, iç tutarlılık (sadık/kâzib) |
+| İstifham | açıklık, seçiklik, tamlık eksiği |
+| Strateji | temsil, istikra, kıyas seçimi |
+| Muhakeme | seçilen usulde yürümek |
+
+### 9.4 Yeni açık sualler
+| # | Sual |
+| :-- | :-- |
+| S-ARC-22 | DÜŞTÜ (F 3-I 290): maksat insanda çalışan matematiği bulmaktır |
+| S-ARC-23 | D'nin son cümlesi kimin sözü |
+| S-ARC-24 | İç tutarlılık (sadık/kâzib) tasavvura uygulanır mı |
+| S-ARC-25 | "Suret verme" mana birleşiminden fazlasını açıklar mı |
+| S-ARC-26 | Yedi mertebenin ilk dördü şemaya alınsın mı |
+
+---
+
+## 10. İnsanda çalışan matematik (F 3-I 290) -- Claude çıkarımı, hüküm değildir
+
+| Kavram | Matematik | Neden bu |
+| :-- | :-- | :-- |
+| Mana | Bölüm uzayı elemanı: his uzayı X, denklik ~, mana = [x] | his sürekli ve çok; mana ayrı ve ayırt edilebilir |
+| Tecrit | Bölüm haritası q: X → X/~ (hangi farkın yok sayılacağı) | tikel→tümel; bilgi atılır |
+| Kaplam / içlem | Galois bağlantısı (nesne kümesi A ↔ nitelik kümesi B) ve kapanış | kaplam arttıkça içlemin azalması bu bağlantıdır |
+| Tasavvur | Yapı M = (U, R₁…R_k): taşıyıcı + ilişkiler | birleşim yalnız U'dur; fark R'lerdir |
+| Tasavvur biçim bağımsızlığı | İzomorfizm sınıfı | görsel/sözel/hareket aynı yapı olabilir |
+| Tasdik | M ⊨ φ (yapının cümleyi karşılaması) | hüküm tasavvur ile cümle arasındadır |
+| Mantık motoru | Model var mı (tatmin edilebilirlik); model yoksa çelişki | tasavvurun tasdike geçişte çelişkiden korunması |
+| Durumun ihtimali | μ({M : M ⊨ φ}), modeller üzerinde ölçü | token ihtimali değil, durum ihtimali (F 3-I 279) |
+| Cezm / zan / şek | μ ≈ 1 / μ > ½ / μ ≈ ½ | derece |
+| Yakîn | μ ≈ 1 **ve** mutabakat **ve** direnç (∂μ/∂delil ≈ 0) | cezm tek başına cehalet-i mürekkebi de kapsar |
+| İstifham | argmax beklenen entropi azalması (en bilgilendirici sual) | belirsizliği teşhis ve hedefleme |
+| Muhakeme | seçilmiş usulde μ'yü güncelleme | usul sabit, yürüme |
+| Strateji | usul ailesi seçimi: kıyas (M ⊨ φ çıkarımı) · istikra (örnekten posterior) · temsil (M→M' yapı koruyan harita, funktör) | üç usul üç matematik |
+
+**NAKZ (padişah itirazı, §10 düzeltmesi):** "Mana ≠ tasavvur: tasavvur sözlüğün nasıl bağlandığıdır; adam köpeği ısırdı / köpek adamı ısırdı aynı mana, farklı R" iddiası yanlıştı. İki cümle aynı mana değildir; farklı manadır. Ayrıca "ısırmak" manası fail ve mef'ûl yuvalarını zaten taşır, yani ilişki manaların içindedir, dışarıdan eklenen bir şey değildir. Örnek mana ile tasavvuru ayırmaz. "Tasavvurun manadan fazlası ilişkilerdir" hükmü **delilsiz kaldı**; mana ile tasavvurun farkı hâlâ bulunamamıştır.
+
+Tenkit: "model" iki anlamda olabilir (model teorisindeki yapı; üretici/dinamik model p(x|z), "şöyle olsa ne olur" simülatörü). İkisi M ile geçiş fonksiyonu T birleştirilerek (M,T) tek nesne yapılabilir; padişahın hangisini kastettiği söylenmedi.
