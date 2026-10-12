@@ -13,6 +13,7 @@ Dayanak: F 3-I 277, 288, 289 (`CLAUDE.md`). Olgular `arc/YARISMA_2026.md`de.
 | 4 | 12 saat ve 4×L4 ile 240 görev: görev başına yaklaşık **180 saniye duvar saati** (240 görev rakamı bir 2026 raporundan, birincil metin okunmadı) | [Y] arama özeti, [Ç] bölme |
 | 5 | Açık defterlerin modelleri: Qwen3.8-27B (FP8, W4A16, GPTQ, GGUF), Qwen3.8-Flash-Next (NVFP4, W4A16, 512 uzman), DFlash2 taslak modeli, Flash-Next için ayrı taslak model | [Y] `kaggle models list` |
 | 6 | Bu konteynerde GPU yok; model koşan hiçbir şey burada sınanamaz. Model dışı parçalar sınandı | [Ö] |
+| 8 | Kaggle `machine_shape: NvidiaL4` ile: **4×NVIDIA L4, her biri 23 034 MiB, sm_89**; 46 CPU çekirdeği; 188 GB RAM; `/kaggle/working` 20 GB; torch 2.11.0+cu128; peft 0.20.0; transformers 5.16.1; triton 3.6.0; **vLLM kurulu değil** (kurulum için tekerlek deposu veri kümesi gerekir). Kuyruk bekleme yaklaşık 2 dakika, betik 27 saniyede bitti. Koşu: `ulankaggle/mucit-arc-olcum0`, 10 dk hudutlu, ücretsiz kota içinde | [Ö] |
 | 7 | Her çıktı için iki deneme verilir; tek çıktılı görevde ikisi de aynı çıktıya aday | [Y] defter metni |
 
 ## 2. İki kanal, bir hakem
