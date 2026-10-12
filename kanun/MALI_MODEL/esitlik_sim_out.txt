@@ -1,0 +1,28 @@
+EŞİT REJİM (eski ve yeni aynı: sabit prim yok, kapı yok): yıl-4 net (mlr TL), prim sürekliliği 0
+pi = eski sabit primin gerçekte tahsil edilen payı (modelde 0,8 varsayılmıştı, YOKLANAMADI)
+  Kötümser  düz %10,5 | s=0.30: net(pi=.8)   -2.78, pi* 0.15 | s=0.50: net(pi=.8)   -5.32, pi* 0.05 | s=1.00: net(pi=.8)  -11.66, pi* yok(pi=0'da bile <0)
+  Kötümser  A %35     | s=0.30: net(pi=.8)   -1.95, pi* 0.34 | s=0.50: net(pi=.8)   -4.48, pi* 0.17 | s=1.00: net(pi=.8)  -10.82, pi* 0.04
+  Kötümser  A %70     | s=0.30: net(pi=.8)   -1.10, pi* 0.54 | s=0.50: net(pi=.8)   -3.64, pi* 0.29 | s=1.00: net(pi=.8)   -9.98, pi* 0.10
+  Orta      düz %10,5 | s=0.15: net(pi=.8)   -1.53, pi* 0.58 | s=0.50: net(pi=.8)  -16.52, pi* 0.10 | s=1.00: net(pi=.8)  -37.93, pi* yok(pi=0'da bile <0)
+  Orta      A %35     | s=0.15: net(pi=.8)   +1.78, pi* 1.00 | s=0.50: net(pi=.8)  -13.20, pi* 0.24 | s=1.00: net(pi=.8)  -34.62, pi* 0.06
+  Orta      A %70     | s=0.15: net(pi=.8)   +5.12, pi* 1.00 | s=0.50: net(pi=.8)   -9.87, pi* 0.38 | s=1.00: net(pi=.8)  -31.28, pi* 0.13
+  İyimser   düz %10,5 | s=0.05: net(pi=.8)  +13.72, pi* 1.00 | s=0.50: net(pi=.8)  -51.19, pi* 0.14 | s=1.00: net(pi=.8) -123.31, pi* 0.01
+  İyimser   A %35     | s=0.05: net(pi=.8)  +26.30, pi* 1.00 | s=0.50: net(pi=.8)  -38.61, pi* 0.30 | s=1.00: net(pi=.8) -110.73, pi* 0.09
+  İyimser   A %70     | s=0.05: net(pi=.8)  +38.93, pi* 1.00 | s=0.50: net(pi=.8)  -25.98, pi* 0.47 | s=1.00: net(pi=.8)  -98.10, pi* 0.17
+
+MUHASEBECİ DOĞRULAMA GELİRİ: doğrulanmamış B2B hasılat havuzu x ücret oranı
+  Kötümser  toplam hasılat   17.5 mlr | doğrulanmamış B2B payı 0.35 -> havuz   4.3 mlr | kaybı (0.36 mlr) karşılayan ücret oranı 8.40% | AD'nin satıcıya getirdiği yük 0.6 mlr
+  Kötümser  toplam hasılat   17.5 mlr | doğrulanmamış B2B payı 0.70 -> havuz   8.6 mlr | kaybı (0.36 mlr) karşılayan ücret oranı 4.20% | AD'nin satıcıya getirdiği yük 1.2 mlr
+  Orta      toplam hasılat   68.4 mlr | doğrulanmamış B2B payı 0.35 -> havuz  16.8 mlr | kaybı (0.60 mlr) karşılayan ücret oranı 3.58% | AD'nin satıcıya getirdiği yük 2.4 mlr
+  Orta      toplam hasılat   68.4 mlr | doğrulanmamış B2B payı 0.70 -> havuz  33.5 mlr | kaybı (0.60 mlr) karşılayan ücret oranı 1.79% | AD'nin satıcıya getirdiği yük 4.9 mlr
+  İyimser   toplam hasılat  256.5 mlr | doğrulanmamış B2B payı 0.35 -> havuz  62.8 mlr | kaybı (0.66 mlr) karşılayan ücret oranı 1.05% | AD'nin satıcıya getirdiği yük 9.1 mlr
+  İyimser   toplam hasılat  256.5 mlr | doğrulanmamış B2B payı 0.70 -> havuz 125.7 mlr | kaybı (0.66 mlr) karşılayan ücret oranı 0.53% | AD'nin satıcıya getirdiği yük 18.2 mlr
+  aktif serbest SM+SMMM ~59 958 (ikincil, Ocak 2026 yazısı); kişi başı kayıp = kayıp / 59 958: ['6004 TL', '10007 TL', '11008 TL']
+
+DENGE ORANI: eşit rejimde (prim sürekliliği 0, pi=0,8) yıl-4 net=0 için gereken taban tevkifat oranı b (tüketici ve doğrulanmış kanal); doğrulanmamış B2B alıcı oranı 0,25
+  Kötümser  doğrulanmamış B2B 0.35: gereken taban oran %28.4 (teklifte %10,5)
+  Kötümser  doğrulanmamış B2B 0.70: gereken taban oran %32.4 (teklifte %10,5)
+  Orta      doğrulanmamış B2B 0.35: gereken taban oran %6.3 (teklifte %10,5)
+  Orta      B2B 0.70: b=%5 bile pozitif (net +4.04)
+  İyimser   B2B 0.35: b=%5 bile pozitif (net +17.43)
+  İyimser   B2B 0.70: b=%5 bile pozitif (net +34.82)
