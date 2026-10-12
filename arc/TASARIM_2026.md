@@ -126,3 +126,22 @@ Bütçe [Ç]: 240 görev / 12 saat = 180 sn/görev. Isınma 55 sn bir kerelik (i
 | 6 | Hazır ince ayar ağırlıkları: `madarshbb/nvarc-training-adapters-1..4` (12,4 GB'lık dört veri kümesi) | [Y] listeden, içeriği açılmadı [?] |
 
 Sonuç [Ç]: kanal T'yi sıfırdan kurmak yerine (a) kelime hazinesini 16'ya indirmek, (b) NVARC'ın açık sentetik bulmaca külliyatıyla ön eğitilmiş taban kullanmak gerekir; aksi hâlde § 8 satır 10'daki 0/4 tekrar eder.
+
+## 10. Qwen3.8-27B ölçümü (F 3-I 292; olcum3, 4×L4, manuel yerleşim)
+
+NOT (F 3-I 292): § 8-9'daki Qwen3.5-4B ölçümleri **yanlış modelle alınmıştır** (padişah Qwen3.8 dedi; 4B'ye geçiş örtük ikameydi). Silinmedi, işaretlendi. Ayrıca o koşularda modelin ürettiği metin kaydedilmemişti; "model ne dedi" sorusuna cevap yoktur.
+
+| # | Ölçü | Değer | İşaret |
+| :-- | :-- | :-- | :-- |
+| 1 | Qwen3.8-27B: 64 katman, **16 tam dikkat + 48 doğrusal dikkat**, 24 dikkat başı, **4 KV başı**, baş boyu 256, sözlük 248 320, bağlam 262 144, `mtp_num_hidden_layers` 1 | HF config.json | [Y] |
+| 2 | **KV bedeli = 2 × 16 × 4 × 256 × 2 bayt = 65 536 bayt/belirteç (64 KiB, bf16)**; fp8 KV ile 32 KiB. 32 bin belirteç = 2 GiB (bf16) | hesap | [Ö] |
+| 3 | Resmî FP8 ağırlıkları 30,9 GB; `FineGrainedFP8Config(dequantize=True)` ile bf16'ya açıldı | Kaggle model bilgisi, günlük | [Ö] |
+| 4 | Elle yerleşim: 64 katman 4 parçaya (0-15, 16-31, 32-47, 48-63); gömme+görsel GPU0'da, norm+`lm_head` GPU3'te. GPU belleği **14,7 / 12,2 / 12,2 / 14,7 GB** | günlük | [Ö] |
+| 5 | `transformers` 5.16.1'in FP8 niceleyicisi `update_tp_plan`'da çöküyor (`NoneType.get`); niceleyicinin bu metodu etkisizleştirilerek aşıldı | hata günlüğü | [Ö] |
+| 6 | Yükleme **202 sn** | günlük | [Ö] |
+| 7 | HF `generate` + elle boru hattı: **3,81 belirteç/sn** (877 belirteç, 230 sn); bir anda tek GPU çalışır (%25 doluluk) | günlük | [Ö] |
+| 8 | 240 görev × tek akış × 3,81 belirteç/sn ile 12 saatte görev başına yalnız yaklaşık 680 belirteç düşer: **HF boru hattı yarışmaya yetmez; toplu (eşzamanlı) çıkarım şart** | hesap | [Ç] |
+
+Modelin ilk görevde (`e8686506`, doğru cevap 8×5 ızgara) ürettiği tam metin `arc/defter/olcum3/cikti_e8686506.txt`: 877 belirtecin **tamamını** örnek ızgaraları satır satır yeniden yazmaya ve sütun saymaya harcadı ("Let's count: Row0: 8888888888888 (13)…"), arka plan rengini 0 mı 8 mi diye tarttı, kurala hiç varmadı, cevap üretmedi. Süre sınırım (230 sn) üretimi kesti; modelin düşünme kalitesi hakkında hüküm vermek için yetersizdir.
+
+Çıkarım [Ç]: modelin ilk işi ızgarayı yeniden yazıp saymak olduğundan, boyut/renk/nesne dökümünü **araç** verirse (F 3-I 289) bu belirteçler kurala ayrılır.

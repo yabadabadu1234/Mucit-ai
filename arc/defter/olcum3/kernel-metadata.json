@@ -1,0 +1,15 @@
+{
+  "id": "ulankaggle/mucit-arc-olcum3",
+  "title": "Mucit ARC Olcum3",
+  "code_file": "olcum3.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": "true",
+  "enable_gpu": "true",
+  "enable_internet": "false",
+  "machine_shape": "NvidiaL4",
+  "competition_sources": ["arc-prize-2026-arc-agi-2"],
+  "dataset_sources": ["ulankaggle/mucit-arc-eval-veri", "ulankaggle/mucit-arc-tekerlek"],
+  "kernel_sources": [],
+  "model_sources": ["mikedan7/qwen3-8-27b-fp8-official/pytorch/hf-fp8/1"]
+}
