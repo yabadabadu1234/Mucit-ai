@@ -50,7 +50,7 @@ Dosyalar: `model.py` (hesap), `duyarlilik_tablolari.py` (tek tek parametre tablo
 ## 4. Ne anlama geliyor
 
 1. **%13,5'te Orta ve İyimser pozitif, Kötümser negatiftir.** Kötümser; oran %25,5'e çıkarsa veya halen kayıtlı olanların %59'u isteğe bağlı primi sürdürürse sıfırı geçer.
-2. **Ana açık risk s'dir** (halen kayıtlı olup geçenlerin payı) ve primi sürdürenlerin payıdır; ikisi de ölçülmemiştir. s=%100'de üç senaryo da olumsuzdur.
+2. **Ana açık risk s'dir** (Orta'da kırılma noktası s*=%18; Monte Carlo, 4000 deneme: medyan +2,9, %90 aralığı −6,4 ile +12,1, net > 0 olasılığı %77) (halen kayıtlı olup geçenlerin payı) ve primi sürdürenlerin payıdır; ikisi de ölçülmemiştir. s=%100'de üç senaryo da olumsuzdur.
 3. SGK tahsil oranı π (0,8) harici metne göre %35-40 olabilir (yoklanmadı); π=%50 ve π=%100 varyantları yukarıdadır.
 4. Ücretli çalışanın dışarıda bırakılması Orta'da yaklaşık 0,9 milyar TL kazandırır (V0 − V7).
 5. Her varyantın tam tablosu ve diğer parametreler `DUYARLILIK_TABLOLARI.md` içindedir.

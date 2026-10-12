@@ -33,7 +33,7 @@ Cevaplar teklifin kendi hesabına dayanır; ölçülmemiş yerler açıkça yaz�
 
 **S7. Teklif İçtüzük ve Anayasa bakımından kimden gelir?** Anayasa m.88 uyarınca kanun teklif etmeye milletvekilleri yetkilidir; teklif sahibi alanı bu yüzden milletvekili olarak bırakılmıştır.
 
-**S8. Hazineye maliyeti ne?** Model, 4. yılda net etkiyi (genel devlet, SGK dâhil) %13,5 oranda ve eski kayıtlıların primi hiç sürmezse Orta +1,32, Kötümser −2,01, İyimser +23,72 milyar TL bulmuştur; primi sürdürenlerin payı %75 ise sırasıyla +5,54, +0,54, +28,38. Sonuç ölçülmemiş girdilere (halen kayıtlıların geçme payı, primi sürdürenlerin payı, SGK tahsil oranı) bağlıdır; kesin rakam için SGK ve GİB verisi gerekir.
+**S8. Hazineye maliyeti ne?** Model, 4. yılda net etkiyi (genel devlet, SGK dâhil) %13,5 oranda ve eski kayıtlıların primi hiç sürmezse Orta +1,32, Kötümser −2,01, İyimser +23,72 milyar TL bulmuştur; primi sürdürenlerin payı %75 ise sırasıyla +5,54, +0,54, +28,38. Orta senaryoda kırılma noktası, halen kayıtlı olup geçenlerin payı %18'dir; 4000 denemelik Monte Carlo'da Orta net etki medyanı +2,9, %90 aralığı −6,4 ile +12,1 milyar TL, net > 0 olasılığı %77'dir. Sonuç ölçülmemiş girdilere (halen kayıtlıların geçme payı, primi sürdürenlerin payı, SGK tahsil oranı) bağlıdır; kesin rakam için SGK ve GİB verisi gerekir.
 
 ## 3. KARŞILAŞTIRMA CETVELİ (3 kolon)
 

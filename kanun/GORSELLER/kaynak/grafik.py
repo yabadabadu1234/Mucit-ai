@@ -13,11 +13,11 @@ def ok(x1,y1,x2,y2): ax.annotate("",xy=(x2,y2),xytext=(x1,y1),arrowprops=dict(ar
 kutu(0.3,5.9,2.6,1.0,"Mükellef\nfatura keser\n(portal, e-Devlet onayı)",'#fff3d6')
 kutu(3.6,5.9,2.4,1.0,"Portal\nreferans kodu üretir\n(M.1 (a))")
 ok(2.9,6.4,3.6,6.4)
-kutu(0.3,3.7,3.6,1.3,"KURUMSAL ALICI\nÖdemede portalca hesaplanan tevkifat\n(%10,5; safi matrah 190.000 TL üstünde kademeli)\nödemeden gider yazamaz (M.1 (b), (e))")
+kutu(0.3,3.7,3.6,1.3,"KURUMSAL ALICI\nÖdemede portalca hesaplanan tevkifat\n(gayrisafi hasılatın %13,5'i, tek oran)\nödemeden gider yazamaz (M.1 (b), (e))")
 kutu(4.5,3.7,3.6,1.3,"VADELİ (30-90 gün)\nVadeli Tevkifat Senedi + elektronik teminat\nVadede teminattan Hazine'ye\n(M.1 (b))")
-kutu(8.7,3.7,4.0,1.3,"NİHAÎ TÜKETİCİ veya PLATFORM\nBanka / ödeme kuruluşu tahsilatta\n%10,5 keser, Hazine'ye aktarır\n(M.1 (c), (l))")
+kutu(8.7,3.7,4.0,1.3,"NİHAÎ TÜKETİCİ veya PLATFORM\nBanka / ödeme kuruluşu tahsilatta\n%13,5 keser, Hazine'ye aktarır\n(M.1 (c), (l))")
 ok(4.8,5.9,2.1,5.0); ok(4.8,5.9,6.3,5.0); ok(5.4,5.9,10.7,5.0)
-kutu(0.3,1.7,3.6,1.2,"YURT DIŞI MÜŞTERİ\nDöviz intikalinde %15 × %70\ntransferi yapan kuruluş keser\n(M.1 (ç))")
+kutu(0.3,1.7,3.6,1.2,"YURT DIŞI MÜŞTERİ\nDöviz intikalinde %13,5\ntransferi yapan kuruluş keser\n(M.1 (ç))")
 ok(4.8,5.9,1.0,2.9) if False else None
 kutu(4.5,1.7,3.6,1.2,"KODSUZ GİRİŞ\n48 saat bekler, bloke edilmez;\nmükellef eşleştirir; yoksa hizmet bedeli\n(M.1 (c))",'#fff3d6')
 kutu(8.7,1.7,4.0,1.2,"AŞIRI GİRİŞ (5× ortalama ve ≥ 2 asgari ücret)\n15 gün inceleme askısı,\ngelir kaynağı beyanı (M.1 (j))",'#fdeaea','#a11d1d')
@@ -27,19 +27,18 @@ ax.text(6.5,3.15,"Alıcı türüne göre tevkifat (üst sıra) ve istisnai hâll
 ax.text(0.1,0.0,NOT,fontsize=8,color='#555')
 fig.savefig(os.path.join(OUT,"sema_01_tevkifat_akisi.png"),dpi=110,bbox_inches='tight'); plt.close()
 # 2 100 TL dağılım
-fig,ax=plt.subplots(figsize=(11,6)); 
-ad=["Gayrisafi\nhasılat","Götürü gider\n(%30)","Tevkifat\nmatrahı","Tevkifat\n(%15)","Mükellefe\nnet","  İçinden BES\n(tevkifatın %3'ü)"]
-vals=[100,-30,70,-10.5,89.5,0.315]
-cols=['#2d6aa8','#9aa7b8','#2d6aa8','#a11d1d','#14662b','#c98b00']
-ax.bar(0,100,color=cols[0]); ax.bar(1,30,bottom=70,color=cols[1]); ax.bar(2,70,color=cols[2]); ax.bar(3,10.5,color=cols[3]); ax.bar(4,89.5,color=cols[4]); ax.bar(5,0.315*100/100*3.33,color=cols[5])
-for x,t in [(0,"100"),(1,"−30"),(2,"70"),(3,"10,5"),(4,"89,5"),(5,"0,315 TL\n(+0,063 Devlet katkısı)")]: ax.text(x,(100 if x==0 else 100 if x==1 else 72 if x==2 else 12.5 if x==3 else 91.5 if x==4 else 3.8),t,ha='center',fontsize=11,fontweight='bold')
-ax.set_xticks(range(6)); ax.set_xticklabels(ad,fontsize=10); ax.set_ylabel("TL (yüz liralık hasılat için)"); ax.set_ylim(0,112)
+fig,ax=plt.subplots(figsize=(11,6))
+ad=["Gayrisafi\nhasılat","Tevkifat\n(%13,5)","Mükellefe\nnet","  İçinden BES\n(tevkifatın %3'ü)"]
+cols=['#2d6aa8','#a11d1d','#14662b','#c98b00']
+ax.bar(0,100,color=cols[0]); ax.bar(1,13.5,color=cols[1]); ax.bar(2,86.5,color=cols[2]); ax.bar(3,0.405*100/100*3.33,color=cols[3])
+for x,t,y in [(0,"100",102),(1,"13,5",15.5),(2,"86,5",88.5),(3,"0,405 TL\n(+0,081 Devlet katkısı)",5.5)]: ax.text(x,y,t,ha='center',fontsize=11,fontweight='bold')
+ax.set_xticks(range(4)); ax.set_xticklabels(ad,fontsize=10); ax.set_ylabel("TL (yüz liralık hasılat için)"); ax.set_ylim(0,112)
 ax.set_title("100 TL'lik hasılatın dağılımı (nihaî tüketiciye hizmet)",fontsize=13,fontweight='bold',color='#1f3a5f'); ax.spines[['top','right']].set_visible(False)
-ax.text(0,-22,"Etkin oran: 70 × 0,15 = %10,5. Not: 5. sütun ölçeksizdir (görünürlük için büyütülmüştür).  "+NOT,fontsize=8,color='#555',transform=ax.transData)
+ax.text(0,-22,"Gider tenzili yok: tevkifat = 100 × 0,135 = 13,5. Not: 4. sütun ölçeksizdir (görünürlük için büyütülmüştür).  "+NOT,fontsize=8,color='#555',transform=ax.transData)
 fig.savefig(os.path.join(OUT,"grafik_01_yuz_lira.png"),dpi=110,bbox_inches='tight'); plt.close()
 # 3 kişi başı Hazine
 h=["2 asgari\n66.060","6 asgari\n198.180","12 asgari\n396.360","24 asgari\n792.720"]
-tev=[6936,20809,45990,112324]; bes=[250,749,1656,4044]; myo=[0,0,20809,20809]; net=[6687,20060,23526,87472]
+tev=[8918,26754,53509,107017]; bes=[321,963,1926,3853]; myo=[0,0,20809,20809]; net=[8597,25791,30773,82356]
 import numpy as np
 x=np.arange(4); fig,ax=plt.subplots(figsize=(11,6.2))
 ax.bar(x,net,color='#14662b',label="Hazine'de kalan net"); ax.bar(x,bes,bottom=net,color='#c98b00',label="BES yükü (%3,6)"); ax.bar(x,myo,bottom=np.array(net)+np.array(bes),color='#a11d1d',label="90 gün MYÖ primi (%21)")

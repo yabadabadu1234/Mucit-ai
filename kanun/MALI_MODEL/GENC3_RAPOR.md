@@ -54,3 +54,22 @@ Kod: `genc3.py` (model), `genc3_duyarlilik.py` (küresel duyarlılık ve oran ta
 Kusur (Claude'un): v3'ün ilk koşusunda (a) iflas eden gencin müşteri tabanı sıfırlanıyordu ve (b) uyuyan şirketin sabit primi/gideri **hiç işlemiyordu**. (b) mevcut kanunu lehine çarpıtıyordu: gerçekte 4/b primi ve sabit gider şirket uyurken de borç olarak işler.
 
 Düzeltme (`dayanma=True`, `genc3.py`): iflas eden **kişi** dışarıda iş bulur (gig), **şirket açık kalır**, müşteri tabanı yalnız doğal kayıpla erir, yeni müşteri akışı çeyreğe iner; mevcut rejimde sabit prim ve gider uyku sırasında **ödenmemiş borç** olarak birikir (`sabit_borc`). Yeni ölçütler: `acik_firma` (72. ayda gelir getiren ve nakit açığında olmayan), `gecim72` (12 aylık ort. net ≥ net asgarinin 1/3'ü, F 3-I 259), `yarim72` (≥ 1/2), `bir72` (≥ 1).
+
+
+## GÜNCEL SONUÇ: düz %13,5, ücretli çalışan modelde yok (F 3-I 299, 302)
+
+`genc3.py` varsayılan oranı artık %13,5'tir (`duz_oran`). Genç modelinde ücretli çalışan yoktur (ajanlar geliri olmayan gençlerdir); Madde 1 (t) bu yüzden modeli değiştirmez. 8 tohum, N=2000, %95 aralık (`genc3_out.txt`):
+
+| Ölçüt | Tarafsız | Mevcut kayıtlı | Mevcut kayıt dışı | **Teklif %13,5** |
+| :-- | --: | --: | --: | --: |
+| 12 ay canlılık (kalibre hedef) | 0,750 | 0,619 | 0,510 | 0,668 |
+| 72. ayda şirket açık ve nakit açığında değil | 0,925 | 0,621 | 0,677 | **0,883** |
+| Geçim eşiğini sürdürme (net asgarinin 1/3'ü), 72. ay | 0,890 | 0,586 | 0,555 | **0,805** |
+| Net asgarinin yarısı | 0,821 | 0,348 | 0,346 | 0,658 |
+| Net asgari | 0,716 | 0,259 | 0,229 | 0,493 |
+| Kalıcı üst segment | 0,536 | 0,175 | 0,127 | 0,312 |
+| Kalıcı alt (dip) | 0,263 | 0,735 | 0,743 | 0,474 |
+| Yıkım (iflas yaşayan kişi) | 0,340 | 0,907 | 0,730 | 0,483 |
+| Ödenmemiş sabit borç (TL, mevcut rejimde) | 0 | 423.594 | 0 | 0 |
+
+Okunuş: teklif mevcut kayıtlı düzenden her ölçüde iyidir (80 çekilişin %97'sinde geçim, %100'ünde şirketin açık kalması ve yıkım); kayıt dışına göre %78-90'ında iyidir; tarafsız ölçüye (kanunsuz dünya) göre hâlâ geridedir (0,805 / 0,890). Oran taraması (`genc3_duyarlilik_out.txt` C): %10,5'ten %27'ye geçimi sürdüren oranı 0,820 → 0,731, dip oranı 0,443 → 0,589; yani oran artışı gence ödünç verir ama teklif %27'de bile kayıtlı mevcut düzenden (0,586) iyidir.

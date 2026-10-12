@@ -421,7 +421,7 @@ Model; hasılat dağılımı (log-normal, 0,1-24 asgari ücret), düz tevkifat (
 
 **Sonuçlar (hepsi varsayıma bağlıdır):**
 1. **Orta ve İyimser senaryoda net etki pozitiftir; Kötümser'de negatiftir** (%13,5'te −2,01). Kötümser senaryo, oran %25,5'e çıkarsa veya halen kayıtlı olanların en az %59'u isteğe bağlı primi sürdürürse sıfırı geçer; kanundaki üst sınır (%27) bunun için konmuştur (Kötümser, %27'de +0,26).
-2. **En büyük açık risk s'dir:** halen kayıtlı olanların hepsi geçse net etki üç senaryoda da olumsuzdur; ölçülmesi gereken, halen kayıtlı olanların kaçının geçeceği ve kaçının primi sürdüreceğidir (Ek B).
+2. **En büyük açık risk s'dir:** Orta senaryoda kırılma noktası s*=%18'dir (halen kayıtlı olup geçenlerin payı bunu aşarsa net etki negatiftir); hepsi geçse net etki üç senaryoda da olumsuzdur; 4000 denemelik Monte Carlo'da (primi sürdürenlerin payı 0 ile 1 arasında belirsiz) Orta net etkinin medyanı +2,9, %90 aralığı −6,4 ile +12,1 milyar TL, net > 0 olasılığı %77'dir; ölçülmesi gereken, halen kayıtlı olanların kaçının geçeceği ve kaçının primi sürdüreceğidir (Ek B).
 3. Eski kayıtlıların primi hiç sürmediği ve SGK tahsil oranı (π) %100 olsaydı Orta −0,09'a iner (π varsayımdır, ölçülmemiştir).
 4. Ücretli çalışanın rejime girmesine izin verilseydi net etki Orta'da yaklaşık 0,9 milyar TL azalırdı; bu yüzden Madde 1 (t) hem padişahın görüşüne hem de modele uygundur.
 5. Ölçülmemiş ve modele girmeyenler: kayıt dışılığın kayda geçmesinin ikinci tur etkileri, emeklilik hakkı kazanımının gelecekteki yükü, yanlış pozitif denetim maliyeti, vergi anlaşmaları, aile bireyi adına tescil ve benzeri dolaşma yolları, SGK sistem değişikliği maliyeti.

@@ -32,13 +32,14 @@ sayfa("ekran_01_tescil","Mikro Mükellefiyet · Tescil","Adım 1/4: Uygunluk kon
 <div class=kart><h3>Kimlik (e-Devlet doğrulaması)</h3><div class=row><div><div class=et>Ad Soyad</div><div class=alan>A. Y. (örnek kişi)</div></div><div><div class=et>T.C. Kimlik No</div><div class=alan>*******1234</div></div><div><div class=et>Vatandaşlık</div><div class=alan>T.C. vatandaşı ✔</div></div></div></div>
 <div class=kart><h3>Uygunluk kontrolü</h3><table><tr><th>Kontrol</th><th>Sonuç</th><th>Dayanak</th></tr>
 <tr><td>Türkiye Cumhuriyeti vatandaşı gerçek kişi</td><td class=ok>Uygun</td><td>M.1 giriş</td></tr>
-<tr><td>Son 24 ayda 4/b sigortalılığı bulunmuyor (SGK kaydı otomatik sorgulandı); bulunsaydı giriş yine mümkün, sigortalılık ve prim sürerdi</td><td class=ok>Yok: prim yükümlülüğü doğmaz</td><td>M.1 (p), M.5 (o)</td></tr>
+<tr><td>4/a veya 4/c kapsamında ücretle çalışmıyor (SGK kaydı otomatik sorgulandı); çalışsaydı tescil yapılmaz, ücretli çalışana dokunulmaz</td><td class=ok>Ücretli değil: uygun</td><td>M.1 (t)</td></tr>
+<tr><td>Halen 4/b sigortalısı veya vergi mükellefi olsaydı giriş aynı şartlarla mümkün; sabit prim yükü kalkar, isteğe bağlı sigorta saklı</td><td class=ok>Eşit giriş</td><td>M.1 (p), M.5 (o)</td></tr>
 <tr><td>Gönüllü sonlandırma bekleme süresi</td><td class=ok>Yok</td><td>M.1 (h)</td></tr>
 <tr><td>16 yaşını doldurmuş (18 yaşından küçükse yasal temsilci rızası)</td><td class=ok>18 yaş üstü</td><td>M.1 (ö)</td></tr>
 <tr><td>Faaliyet türü negatif listede değil</td><td class=uy>Beyan bekleniyor</td><td>M.1 (g)</td></tr></table></div>
 <div class=kart><h3>Faaliyet türü (beyan)</h3><div class=alan>▾ Yazılım · veri işleme · tercüme · grafik tasarım · dijital sanat · uzaktan operasyon · bağımsız teknik montaj ve bakım</div>
 <div class=not>Bu başvuru için iş yeri adresi, kira sözleşmesi, ruhsat, oda kaydı veya muhasebeci sözleşmesi <b>istenmez</b>. (VUK Ek 19 (a)-(c))</div></div>
-<div><span class=btn>Devam et</span> &nbsp; <span class='btn gri'>Vazgeç</span></div>""","Kaynak: teklif Madde 1 giriş, (g), (h), (ö), (p); Madde 2.",760)
+<div><span class=btn>Devam et</span> &nbsp; <span class='btn gri'>Vazgeç</span></div>""","Kaynak: teklif Madde 1 giriş, (g), (h), (ö), (p), (t); Madde 2.",760)
 # 2 hesap + UETS
 sayfa("ekran_02_hesap_uets","Mikro Mükellefiyet · Tescil","Adım 2/4: Münhasır hesap ve tebligat adresi","""
 <div class=kart><h3>Münhasır hesap</h3><div class=et>Bu faaliyetin tüm tahsilatları yalnız bu hesaba girer (elden nakit istisna dışıdır).</div>
@@ -60,29 +61,27 @@ sayfa("ekran_03_belge","Mikro Mükellefiyet · Tescil","Adım 4/4: Mükellefiyet
 sayfa("ekran_04_fatura","Fatura Düzenle","Kurumsal alıcı · e-Devlet / mobil onay ile imzasız düzenleme","""
 <div class=kart><h3>Alıcı</h3><div class=row><div><div class=et>Alıcı türü</div><div class=alan>● Kurumsal (gelir/kurumlar vergisi mükellefi) &nbsp; ○ Nihaî tüketici &nbsp; ○ Yurt dışı</div></div><div><div class=et>Alıcı unvanı / VKN</div><div class=alan>Örnek Yazılım A.Ş. · 1234567890</div></div></div></div>
 <div class=kart><h3>Hizmet</h3><div class=alan>Mahiyet (genel ifade kabul edilmez): Mobil uygulama arayüzünün tasarımı ve 14 ekranın teslimi, sözleşme no ÖRN-77</div>
-<table><tr><th>Kalem</th><th class=r>Tutar</th></tr><tr><td>Gayrisafi hasılat (KDV: istisna, 0 TL)</td><td class=r>60.000,00 TL</td></tr>
-<tr><td>Gider yöntemi: ● Götürü %30 ○ Belgeli gerçek gider</td><td class=r>−18.000,00 TL</td></tr>
-<tr><td>Tevkifat matrahı</td><td class=r>42.000,00 TL</td></tr>
-<tr><td>Tevkifat (%15) — alıcı tarafından ödemede kesilir</td><td class=r>6.300,00 TL</td></tr>
-<tr><td><b>Mükellefe net tahsilat</b></td><td class=r><b>53.700,00 TL</b></td></tr></table></div>
+<table><tr><th>Kalem</th><th class=r>Tutar</th></tr><tr><td>Gayrisafi hasılat (KDV: istisna, 0 TL) — tevkifat matrahı (gider tenzili yok)</td><td class=r>60.000,00 TL</td></tr>
+<tr><td>Tevkifat (%13,5) — alıcı tarafından ödemede kesilir</td><td class=r>8.100,00 TL</td></tr>
+<tr><td><b>Mükellefe net tahsilat</b></td><td class=r><b>51.900,00 TL</b></td></tr></table></div>
 <div class=kart><div class=et>Fatura referans kodu</div><div class=alan><b>MM-2026-000123-F0007</b> (ödeme açıklamasına yazılır)</div>
 <div class=not>Alıcı, tevkifatı Hazine'ye aktarmadan bu gideri indiremez (M.1 (b)). Vade 30-90 gün ise alıcı "Vadeli Tevkifat Senedi" düzenleyebilir.</div></div>
-<div><span class=btn>Mobil onay kodunu gönder</span></div>""","Kaynak: teklif Madde 1 (a), (b), Madde 2 (b), Madde 3. 60.000 × 0,70 × 0,15 = 6.300.",1020)
+<div><span class=btn>Mobil onay kodunu gönder</span></div>""","Kaynak: teklif Madde 1 (a), (b), (e), Madde 2 (b), Madde 3. 60.000 × 0,135 = 8.100.",1020)
 # 5 vadeli senet
 sayfa("ekran_05_vadeli_senet","Alıcı Paneli · Vadeli Tevkifat Senedi","Kurumsal alıcı (Örnek Yazılım A.Ş.)","""
-<div class=kart><h3>Bekleyen fatura</h3><table><tr><th>Satıcı</th><th>Fatura</th><th class=r>Tutar</th><th>Vade</th><th class=r>Tevkifat</th></tr><tr><td>A. Y. (mikro mükellef)</td><td>MM-…-F0007</td><td class=r>60.000 TL</td><td>60 gün</td><td class=r>6.300 TL</td></tr></table></div>
+<div class=kart><h3>Bekleyen fatura</h3><table><tr><th>Satıcı</th><th>Fatura</th><th class=r>Tutar</th><th>Vade</th><th class=r>Tevkifat</th></tr><tr><td>A. Y. (mikro mükellef)</td><td>MM-…-F0007</td><td class=r>60.000 TL</td><td>60 gün</td><td class=r>8.100 TL</td></tr></table></div>
 <div class=row><div class=kart><h3>Seçenek 1: Peşin tevkifat</h3><p>Tevkifat ödeme tarihinde muhtasarla Hazine'ye gider. Gider kaydı ödeme tarihinde.</p></div>
-<div class=kart><h3>Seçenek 2: Vadeli Tevkifat Senedi</h3><p>Elektronik teminat: <b>6.300 TL</b> tescil edilir. Tevkifat vade tarihinde teminattan Hazine'ye aktarılır. Gider kaydı fatura tarihinde yapılabilir.</p></div></div>
+<div class=kart><h3>Seçenek 2: Vadeli Tevkifat Senedi</h3><p>Elektronik teminat: <b>8.100 TL</b> tescil edilir. Tevkifat vade tarihinde teminattan Hazine'ye aktarılır. Gider kaydı fatura tarihinde yapılabilir.</p></div></div>
 <div class=kir><b>Uyarı:</b> Teminat yetersiz kalırsa veya tevkifat vadesinde aktarılmazsa gider indirimi hakkı kendiliğinden iptal olur; tevkifat aslı 6183 sayılı Kanuna göre alıcıdan tahsil edilir, vergi ziyaı cezası alıcıya kesilir. Bu borca ve cezaya gecikme zammı uygulanmaz. Satıcı bundan sorumlu tutulamaz. (M.1 (b))</div>
 <div><span class=btn>Seçenek 2'yi onayla</span></div>""","Kaynak: teklif Madde 1 (b). Teminat işletmesinin teknik kapasitesi ölçülmemiştir (K13 benzeri risk).",720)
 # 6 pano
 sayfa("ekran_06_pano","Mükellef Panosu","Takvim yılı 2026 · Durum: AKTİF","""
 <div class=row><div class=kart><h3>Yıllık tavan</h3><div style='font-size:26px;font-weight:bold'>215.400 TL <span class=et>/ 792.720 TL</span></div><div class=bar><i style='width:27.2%'></i></div><div class=et>%27,2 kullanıldı · tavanın yarısı: 396.360 TL</div></div>
-<div class=kart><h3>Tevkifat (bu yıl)</h3><div style='font-size:26px;font-weight:bold'>22.617 TL</div><div class=et>Hasılatın %10,5'i · BES aktarımı (%3): 678,51 TL · Devlet katkısı (%20): 135,70 TL</div></div></div>
+<div class=kart><h3>Tevkifat (bu yıl)</h3><div style='font-size:26px;font-weight:bold'>29.079 TL</div><div class=et>Hasılatın %13,5'i · BES aktarımı (%3): 872,37 TL · Devlet katkısı (%20): 174,47 TL</div></div></div>
 <div class=kart><h3>Müşteri payı (en çok %60)</h3><table><tr><th>Müşteri</th><th class=r>Hasılat</th><th class=r>Pay</th><th></th></tr>
 <tr><td>Müşteri A</td><td class=r>126.000 TL</td><td class=r>%58,5</td><td class=uy>Sınıra yakın</td></tr><tr><td>Müşteri B</td><td class=r>62.400 TL</td><td class=r>%29,0</td><td class=ok>Uygun</td></tr><tr><td>Müşteri C</td><td class=r>27.000 TL</td><td class=r>%12,5</td><td class=ok>Uygun</td></tr></table>
 <div class=not>Mükellefiyetin ilk yılında ve yıllık hasılat altı aylık brüt asgari ücreti (198.180 TL) aşmadığı sürece %60 sınırı uygulanmaz. (M.1 (f))</div></div>
-<div class=kart><h3>Hatırlatmalar</h3><ul><li>Son iki yıl çalıştığınız işverene fatura kesilemez (M.1 (f)).</li><li>Tavan aşılırsa aşıldığı ayı izleyen ay başından genel hükümlere geçilir; o güne kadarki tevkifat nihaîdir (M.1 (h)).</li><li>Hasılat 396.360 TL'ye ulaşırsa 90 gün prim ödeme süresi sayılır, primi Hazine öder (Ek 25).</li></ul></div>""","Kaynak: teklif Madde 1 (e), (f), (h), Madde 9. 215.400 × 0,105 = 22.617; × 0,03 = 678,51; × 0,2 = 135,70.",1000)
+<div class=kart><h3>Hatırlatmalar</h3><ul><li>Son iki yıl çalıştığınız işverene fatura kesilemez (M.1 (f)).</li><li>Tavan aşılırsa aşıldığı ayı izleyen ay başından genel hükümlere geçilir; o güne kadarki tevkifat nihaîdir (M.1 (h)).</li><li>Hasılat 396.360 TL'ye ulaşırsa 90 gün prim ödeme süresi sayılır, primi Hazine öder (Ek 25).</li></ul></div>""","Kaynak: teklif Madde 1 (e), (f), (h), Madde 9. 215.400 × 0,135 = 29.079; × 0,03 = 872,37; × 0,2 = 174,47.",1000)
 # 7 bildirim
 sayfa("ekran_07_bildirimler","Bildirim Kutusu","Portal · UETS · kayıtlı iletişim araçları","""
 <div class=kart><h3>Referans kodsuz giriş — işlem bekliyor</h3><table><tr><th>Tarih</th><th class=r>Tutar</th><th>Kalan süre</th><th>Yapılacak</th></tr><tr><td>11/10/2026 09:14</td><td class=r>12.500 TL</td><td class=uy>31 saat</td><td>Fatura ile eşleştir veya "hizmet bedeli değil" belgesi yükle</td></tr></table>
@@ -96,11 +95,11 @@ sayfa("ekran_07_bildirimler","Bildirim Kutusu","Portal · UETS · kayıtlı ilet
 sayfa("ekran_08_banka","Münhasır Hesap · Hesap Hareketleri","Örnek banka internet şubesi (Mikro Mükellef Hesabı)","""
 <div class=kart><h3>Hareketler</h3><table><tr><th>Tarih</th><th>Açıklama</th><th class=r>Tutar</th><th class=r>Bakiye</th></tr>
 <tr><td>11/10 10:02</td><td>FAST gelen · REF: MM-2026-000123-F0009 · nihaî tüketici</td><td class=r>+100.000,00</td><td class=r>100.000,00</td></tr>
-<tr><td>11/10 10:02</td><td>Otomatik tevkifat (%10,5) — Hazine'ye aktarıldı</td><td class=r>−10.500,00</td><td class=r>89.500,00</td></tr>
-<tr><td>11/10 10:03</td><td>BES aktarımı (tevkifatın %3'ü) — tevkifattan ayrılır</td><td class=r>0,00*</td><td class=r>89.500,00</td></tr></table>
-<p class=et>* BES payı mükellefin hesabından değil tevkifat tutarından ayrılır (315,00 TL); mükellef aksini bildirebilir. (Madde 9)</p></div>
-<div class=yes><b>Serbest bakiye 89.500,00 TL</b> — çekim, kartla harcama ve yurt dışı yazılım/sunucu ödemesi serbesttir. Haciz varsa önce tevkifat ayrılır, haciz kalan bakiyeye uygulanır. (Madde 6)</div>
-<div class=not>EFT/havale/FAST: işlem tutarının binde ikisini veya TCMB azami ücretini, hangisi düşükse aşamaz. (Madde 7)</div>""","Kaynak: teklif Madde 1 (c), Madde 6, 7, 9. 100.000 × 0,105 = 10.500; × 0,03 = 315.",780)
+<tr><td>11/10 10:02</td><td>Otomatik tevkifat (%13,5) — Hazine'ye aktarıldı</td><td class=r>−13.500,00</td><td class=r>86.500,00</td></tr>
+<tr><td>11/10 10:03</td><td>BES aktarımı (tevkifatın %3'ü) — tevkifattan ayrılır</td><td class=r>0,00*</td><td class=r>86.500,00</td></tr></table>
+<p class=et>* BES payı mükellefin hesabından değil tevkifat tutarından ayrılır (405,00 TL); mükellef aksini bildirebilir. (Madde 9)</p></div>
+<div class=yes><b>Serbest bakiye 86.500,00 TL</b> — çekim, kartla harcama ve yurt dışı yazılım/sunucu ödemesi serbesttir. Haciz varsa önce tevkifat ayrılır, haciz kalan bakiyeye uygulanır. (Madde 6)</div>
+<div class=not>EFT/havale/FAST: işlem tutarının binde ikisini veya TCMB azami ücretini, hangisi düşükse aşamaz. (Madde 7)</div>""","Kaynak: teklif Madde 1 (c), Madde 6, 7, 9. 100.000 × 0,135 = 13.500; × 0,03 = 405.",780)
 print("ekranlar tamam")
 
 from PIL import Image,ImageChops

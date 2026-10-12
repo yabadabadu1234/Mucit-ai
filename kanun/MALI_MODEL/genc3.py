@@ -133,7 +133,7 @@ def olc3(r):
     return dict(**ek,kalici=float(kalici.mean()),salinim=float(salin.mean()),dip=float(dip.mean()),yikim=float(r["iflas"].mean()),
       canli12=float(r["canli"][11].mean()),canli24=float(r["canli"][23].mean()),canli60=float(r["canli"][59].mean()),
       net_son=float(net[60:].mean()/ASGARI_NET),devlet_pv=float((r["devlet"]*isk[:,None]).sum(axis=0).mean()),gss_yillik=float(r["gss"].mean()/6.0))
-VARSAYILAN=dict(b0=5500.0,L=0.45,b_ilk=0.5,duz_oran=0.105,kappa=0.10,talep_bolge=1.0,mal_pay=0.40,c_mal=0.50,c_hiz=0.15,
+VARSAYILAN=dict(b0=5500.0,L=0.45,b_ilk=0.5,duz_oran=0.135,kappa=0.10,talep_bolge=1.0,mal_pay=0.40,c_mal=0.50,c_hiz=0.15,
   faiz=0.015,sv=0.5,dayanma=True,drag=0.0,aile_olcek=1.0,erisim_kd=0.55,kayip_kd=0.12,gss_ac=True,gss_esik_katsayi=1.0,hedef_canli12=0.75)
 def kalibre(par,N,seed):
     P=nufus3(N,seed,par); S=sok3(N,72,seed+1)
