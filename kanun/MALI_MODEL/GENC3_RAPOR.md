@@ -48,3 +48,9 @@ Kod: `genc3.py` (model), `genc3_duyarlilik.py` (küresel duyarlılık ve oran ta
 | B-11 | yaş kullanılmıyor | yaş artık tipi ve giriş ağırlığını belirler |
 | -- | il/bölge | `talep_bolge` ölçeği 0,6-1,1 taranır; il bazlı veri işlenmedi |
 | -- | B2B doğrulayıcısız hizmette destek sıfır (Madde AD) | genç modeline girmedi |
+
+## F 3-I 298 düzeltmesi (padişah: "sabit gider yoksa şirket niye batsın; hiç kapatmaz, kasasına girenle yemek yer")
+
+Kusur (Claude'un): v3'ün ilk koşusunda (a) iflas eden gencin müşteri tabanı sıfırlanıyordu ve (b) uyuyan şirketin sabit primi/gideri **hiç işlemiyordu**. (b) mevcut kanunu lehine çarpıtıyordu: gerçekte 4/b primi ve sabit gider şirket uyurken de borç olarak işler.
+
+Düzeltme (`dayanma=True`, `genc3.py`): iflas eden **kişi** dışarıda iş bulur (gig), **şirket açık kalır**, müşteri tabanı yalnız doğal kayıpla erir, yeni müşteri akışı çeyreğe iner; mevcut rejimde sabit prim ve gider uyku sırasında **ödenmemiş borç** olarak birikir (`sabit_borc`). Yeni ölçütler: `acik_firma` (72. ayda gelir getiren ve nakit açığında olmayan), `gecim72` (12 aylık ort. net ≥ net asgarinin 1/3'ü, F 3-I 259), `yarim72` (≥ 1/2), `bir72` (≥ 1).

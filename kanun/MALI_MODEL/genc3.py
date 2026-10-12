@@ -59,7 +59,7 @@ def kos3(rj,P,S,N,par,T=72):
     K=np.zeros(N); B=par["b_ilk"]*par["b0"]*b_yol*s*(lam_yol>0.3)
     aktif=np.zeros(N); harap=np.zeros(N,dtype=int); yil=np.zeros(N); genel=np.zeros(N,dtype=bool)
     net=np.zeros((T,N)); devlet=np.zeros((T,N)); iflas=np.zeros(N,dtype=bool); canli=np.zeros((T,N),dtype=bool); ac_ay=np.zeros(N)
-    gss_toplam=np.zeros(N)
+    gss_toplam=np.zeros(N); borc_sabit=np.zeros(N)
     for t in range(T):
         ay=t%12
         if ay==0:
@@ -69,7 +69,10 @@ def kos3(rj,P,S,N,par,T=72):
         lam=par["L"]*erisim_rj*lam_yol*P["vakit"]*zor*(1+0.5*buf)*(1+0.02*np.minimum(aktif,36))
         yeni=(S["yeni_u"][t]<np.minimum(lam,0.95)).astype(float)
         kay=np.clip((rj["kayip"] if rj["vergi"]!="yok" or rj["erisim"]>=1.0 else par["kayip_kd"])-0.03*buf+S["kayip"][t],0.0,0.6)
-        B=np.where(harap>0,0.0,B*(1-kay)+yeni*par["b0"]*b_yol*s*S["birim"][t])
+        if par["dayanma"]:
+            B=np.where(harap>0,B*(1-kay)+0.25*yeni*par["b0"]*b_yol*s*S["birim"][t],B*(1-kay)+yeni*par["b0"]*b_yol*s*S["birim"][t])
+        else:
+            B=np.where(harap>0,0.0,B*(1-kay)+yeni*par["b0"]*b_yol*s*S["birim"][t])
         B=np.where((yol>0)&S["pazar"][t],B*0.5,B)
         aktif=np.where(harap>0,0,aktif+1)
         s=s*(1+0.003+0.006*buf)
@@ -94,6 +97,7 @@ def kos3(rj,P,S,N,par,T=72):
         ceza=np.zeros(N)
         if rj["denetim"]>0: ceza=np.where((S["denetim"][t]<rj["denetim"])&(R>0),3*R,0.0)
         odeme=(harap==0)
+        if par["dayanma"]: borc_sabit+=np.where(~odeme,prim+sabit,0.0)
         prim=np.where(odeme,prim,0.0); sabit=np.where(odeme,sabit,0.0); vergi=np.where(odeme,vergi,0.0)
         onceki=(1-c_real)*R-vergi-prim-sabit-ceza+gig
         gss=np.zeros(N)
@@ -110,9 +114,10 @@ def kos3(rj,P,S,N,par,T=72):
         ac_ay=ac_ay+((eldeki<SMIN)&(K<0))
         yeni_iflas=(K<-6*SMIN)&(harap==0)
         iflas=iflas|yeni_iflas
-        harap=np.where(yeni_iflas,6,np.maximum(harap-1,0)); K=np.where(yeni_iflas,-2*SMIN,K); B=np.where(yeni_iflas,0.0,B)
+        harap=np.where(yeni_iflas,6,np.maximum(harap-1,0)); K=np.where(yeni_iflas,-2*SMIN,K)
+        if not par["dayanma"]: B=np.where(yeni_iflas,0.0,B)
         net[t]=gel; devlet[t]=vergi+prim+gss; canli[t]=(harap==0)&(R>0.05*ASGARI_NET)
-    return dict(net=net,devlet=devlet,iflas=iflas,canli=canli,ac_ay=ac_ay,gss=gss_toplam)
+    return dict(net=net,devlet=devlet,iflas=iflas,canli=canli,ac_ay=ac_ay,gss=gss_toplam,borc_sabit=borc_sabit)
 def olc3(r):
     net=r["net"]; T=net.shape[0]
     o=np.zeros_like(net)
@@ -122,11 +127,14 @@ def olc3(r):
     kalici=(b[48:]>=2).all(axis=0); degisim=(np.diff(b[24:],axis=0)!=0).sum(axis=0)
     salin=(degisim>=4)&(~kalici); dip=(~(b>=2).any(axis=0))&(b[-1]<=1)
     isk=1.0/(1.05)**(np.arange(T)/12.0)
-    return dict(kalici=float(kalici.mean()),salinim=float(salin.mean()),dip=float(dip.mean()),yikim=float(r["iflas"].mean()),
+    gec=(o>=1/3)
+    ek=dict(gecim72=float(gec[71].mean()),gecim_ay=float(gec[12:].mean()),yarim72=float((o[71]>=0.5).mean()),bir72=float((o[71]>=1.0).mean()),
+      acik_firma=float(r["canli"][71].mean()),sabit_borc=float(r["borc_sabit"].mean()),sabit_borc_med=float(np.median(r["borc_sabit"])))
+    return dict(**ek,kalici=float(kalici.mean()),salinim=float(salin.mean()),dip=float(dip.mean()),yikim=float(r["iflas"].mean()),
       canli12=float(r["canli"][11].mean()),canli24=float(r["canli"][23].mean()),canli60=float(r["canli"][59].mean()),
       net_son=float(net[60:].mean()/ASGARI_NET),devlet_pv=float((r["devlet"]*isk[:,None]).sum(axis=0).mean()),gss_yillik=float(r["gss"].mean()/6.0))
 VARSAYILAN=dict(b0=5500.0,L=0.45,b_ilk=0.5,duz_oran=0.105,kappa=0.10,talep_bolge=1.0,mal_pay=0.40,c_mal=0.50,c_hiz=0.15,
-  faiz=0.015,sv=0.5,drag=0.0,aile_olcek=1.0,erisim_kd=0.55,kayip_kd=0.12,gss_ac=True,gss_esik_katsayi=1.0,hedef_canli12=0.75)
+  faiz=0.015,sv=0.5,dayanma=True,drag=0.0,aile_olcek=1.0,erisim_kd=0.55,kayip_kd=0.12,gss_ac=True,gss_esik_katsayi=1.0,hedef_canli12=0.75)
 def kalibre(par,N,seed):
     P=nufus3(N,seed,par); S=sok3(N,72,seed+1)
     lo,hi=1500.0,15000.0
@@ -156,5 +164,5 @@ if __name__=="__main__":
     print("b0 kalibre (8 tohum): ort %.0f std %.0f"%(np.mean([x[0] for x in tum]),np.std([x[0] for x in tum])))
     for ad in REJ:
         print("--",ad)
-        for k in ["canli12","canli24","canli60","kalici","salinim","dip","yikim","net_son","devlet_pv","gss_yillik"]:
+        for k in ["canli12","acik_firma","gecim72","gecim_ay","yarim72","bir72","kalici","dip","yikim","sabit_borc","sabit_borc_med","net_son","devlet_pv","gss_yillik"]:
             v=np.array([x[1][ad][k] for x in tum]); print("   %-10s %.3f ± %.3f"%(k,v.mean(),1.96*v.std()/np.sqrt(len(v))))

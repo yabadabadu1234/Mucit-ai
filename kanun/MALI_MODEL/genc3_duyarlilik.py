@@ -16,7 +16,7 @@ print("== B) KÜRESEL DUYARLILIK: %d rastgele parametre çekilişi (aralıklar a
 for k,v in ARALIK.items(): print("   %-18s %s"%(k,v))
 for ref in ["mevcut, kayıtlı","mevcut, kayıt dışı"]:
     print("-- referans:",ref)
-    for k,yon in (("kalici",1),("dip",-1),("yikim",-1),("canli24",1),("net_son",1)):
+    for k,yon in (("gecim72",1),("yarim72",1),("bir72",1),("acik_firma",1),("kalici",1),("dip",-1),("yikim",-1),("sabit_borc",-1),("net_son",1)):
         d=dizi("teklif",k)-dizi(ref,k)
         iyi=(d*yon>0).mean()
         print("   %-8s fark ort %+.3f  [min %+.3f, max %+.3f]  teklifin lehine olduğu çekiliş oranı %.2f"%(k,d.mean(),d.min(),d.max(),iyi))
@@ -34,4 +34,4 @@ print("\n== C) ORAN TARAMASI (varsayılan parametre, 8 tohum, N=2000): düz tevk
 for r in (0.105,0.12,0.135,0.15,0.17):
     par=dict(VARSAYILAN); par["duz_oran"]=r; res=[calistir(par,N=2000,seed=20261101+100*sd)[1]["teklif"] for sd in range(8)]
     f=lambda k:(np.mean([x[k] for x in res]),1.96*np.std([x[k] for x in res])/np.sqrt(8))
-    print("  oran %.3f  kalıcı %.3f±%.3f  dip %.3f±%.3f  yıkım %.3f±%.3f  canlı24 %.3f  net_son %.2f±%.2f"%((r,)+f("kalici")+f("dip")+f("yikim")+(f("canli24")[0],)+f("net_son")))
+    print("  oran %.3f  geçim72 %.3f±%.3f  yarım72 %.3f  bir72 %.3f  kalıcı %.3f  dip %.3f  yıkım %.3f  net_son %.2f"%((r,)+f("gecim72")+(f("yarim72")[0],f("bir72")[0],f("kalici")[0],f("dip")[0],f("yikim")[0],f("net_son")[0])))

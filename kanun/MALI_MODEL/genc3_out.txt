@@ -1,47 +1,63 @@
 == A) Kalibrasyon: ilk yıl canlılık hedefi %75 (TÜİK girişim demografisi 2024: 1 yıllık hayatta kalma ~%75-78, tüm girişimler) ==
    nüfus bileşimi (örneklem içi): okuyor, lise 0.005; okuyor, üniversite 0.197; okumuyor, lise altı 0.119; okumuyor, lise 0.450; okumuyor, lisans+ 0.229;  ort.yaş 24.9
-b0 kalibre (8 tohum): ort 8461 std 686
+b0 kalibre (8 tohum): ort 7626 std 611
 -- tarafsız
    canli12    0.750 ± 0.000
-   canli24    0.791 ± 0.010
-   canli60    0.853 ± 0.011
-   kalici     0.575 ± 0.026
-   salinim    0.109 ± 0.009
-   dip        0.257 ± 0.008
-   yikim      0.305 ± 0.006
-   net_son    3.005 ± 0.185
+   acik_firma 0.925 ± 0.004
+   gecim72    0.890 ± 0.005
+   gecim_ay   0.800 ± 0.010
+   yarim72    0.821 ± 0.008
+   bir72      0.716 ± 0.009
+   kalici     0.536 ± 0.030
+   dip        0.263 ± 0.010
+   yikim      0.340 ± 0.007
+   sabit_borc 0.000 ± 0.000
+   sabit_borc_med 0.000 ± 0.000
+   net_son    2.723 ± 0.159
    devlet_pv  0.000 ± 0.000
    gss_yillik 0.000 ± 0.000
 -- mevcut, kayıtlı
-   canli12    0.306 ± 0.009
-   canli24    0.233 ± 0.012
-   canli60    0.239 ± 0.013
-   kalici     0.136 ± 0.011
-   salinim    0.090 ± 0.003
-   dip        0.832 ± 0.011
-   yikim      0.885 ± 0.007
-   net_son    0.962 ± 0.054
-   devlet_pv  515838.360 ± 19992.975
+   canli12    0.619 ± 0.006
+   acik_firma 0.621 ± 0.016
+   gecim72    0.586 ± 0.019
+   gecim_ay   0.467 ± 0.015
+   yarim72    0.348 ± 0.016
+   bir72      0.259 ± 0.015
+   kalici     0.175 ± 0.017
+   dip        0.735 ± 0.017
+   yikim      0.907 ± 0.005
+   sabit_borc 423593.959 ± 10579.725
+   sabit_borc_med 495370.969 ± 7469.509
+   net_son    1.181 ± 0.060
+   devlet_pv  615340.614 ± 22734.868
    gss_yillik 0.000 ± 0.000
 -- mevcut, kayıt dışı
-   canli12    0.508 ± 0.006
-   canli24    0.512 ± 0.012
-   canli60    0.529 ± 0.021
-   kalici     0.147 ± 0.014
-   salinim    0.229 ± 0.005
-   dip        0.718 ± 0.012
-   yikim      0.691 ± 0.010
-   net_son    0.870 ± 0.046
+   canli12    0.510 ± 0.005
+   acik_firma 0.677 ± 0.010
+   gecim72    0.555 ± 0.016
+   gecim_ay   0.461 ± 0.014
+   yarim72    0.346 ± 0.012
+   bir72      0.229 ± 0.010
+   kalici     0.127 ± 0.013
+   dip        0.743 ± 0.010
+   yikim      0.730 ± 0.011
+   sabit_borc 0.000 ± 0.000
+   sabit_borc_med 0.000 ± 0.000
+   net_son    0.812 ± 0.039
    devlet_pv  0.000 ± 0.000
    gss_yillik 0.000 ± 0.000
 -- teklif
-   canli12    0.681 ± 0.005
-   canli24    0.711 ± 0.009
-   canli60    0.768 ± 0.012
-   kalici     0.361 ± 0.024
-   salinim    0.164 ± 0.008
-   dip        0.434 ± 0.009
-   yikim      0.417 ± 0.008
-   net_son    1.702 ± 0.109
-   devlet_pv  587099.168 ± 29827.927
-   gss_yillik 11273.242 ± 259.222
+   canli12    0.683 ± 0.006
+   acik_firma 0.889 ± 0.007
+   gecim72    0.820 ± 0.009
+   gecim_ay   0.713 ± 0.012
+   yarim72    0.683 ± 0.010
+   bir72      0.513 ± 0.022
+   kalici     0.328 ± 0.026
+   dip        0.443 ± 0.012
+   yikim      0.459 ± 0.011
+   sabit_borc 0.000 ± 0.000
+   sabit_borc_med 0.000 ± 0.000
+   net_son    1.578 ± 0.095
+   devlet_pv  528304.576 ± 27487.645
+   gss_yillik 11377.163 ± 336.305
