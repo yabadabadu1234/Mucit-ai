@@ -303,3 +303,8 @@ Tasavvur, manalara bir **suret (nizam)** verilerek bir mevzuya bağlandığı; u
 **NAKZ (padişah itirazı, §10 düzeltmesi):** "Mana ≠ tasavvur: tasavvur sözlüğün nasıl bağlandığıdır; adam köpeği ısırdı / köpek adamı ısırdı aynı mana, farklı R" iddiası yanlıştı. İki cümle aynı mana değildir; farklı manadır. Ayrıca "ısırmak" manası fail ve mef'ûl yuvalarını zaten taşır, yani ilişki manaların içindedir, dışarıdan eklenen bir şey değildir. Örnek mana ile tasavvuru ayırmaz. "Tasavvurun manadan fazlası ilişkilerdir" hükmü **delilsiz kaldı**; mana ile tasavvurun farkı hâlâ bulunamamıştır.
 
 Tenkit: "model" iki anlamda olabilir (model teorisindeki yapı; üretici/dinamik model p(x|z), "şöyle olsa ne olur" simülatörü). İkisi M ile geçiş fonksiyonu T birleştirilerek (M,T) tek nesne yapılabilir; padişahın hangisini kastettiği söylenmedi.
+
+---
+
+## 11. Mana · mefhum · masadak (F 3-I 303)
+Tam çalışma `arc/MANA_MEFHUM_MASADAK.md`de. Özet: masadak kavramın altındaki en özel nokta; mana kişinin alt bağlamındaki çift; mefhum tam bağlamdaki kanonik kapalı çift (zihnî ve hakikî iki kat); tasavvur kapalı, tutarlı, mümkün konuya bağlı çift; sadık/kâzib tutarlılık, tasdikte doğruluk mutabakat.
