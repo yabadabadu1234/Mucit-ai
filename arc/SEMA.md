@@ -300,6 +300,6 @@ Tasavvur, manalara bir **suret (nizam)** verilerek bir mevzuya bağlandığı; u
 | Muhakeme | seçilmiş usulde μ'yü güncelleme | usul sabit, yürüme |
 | Strateji | usul ailesi seçimi: kıyas (M ⊨ φ çıkarımı) · istikra (örnekten posterior) · temsil (M→M' yapı koruyan harita, funktör) | üç usul üç matematik |
 
-Mana ≠ tasavvur: mana sözlüğün elemanı/ilişki adı; tasavvur sözlüğün **nasıl bağlandığı**. "Adam köpeği ısırdı / köpek adamı ısırdı": aynı mana, farklı R, farklı M.
+**NAKZ (padişah itirazı, §10 düzeltmesi):** "Mana ≠ tasavvur: tasavvur sözlüğün nasıl bağlandığıdır; adam köpeği ısırdı / köpek adamı ısırdı aynı mana, farklı R" iddiası yanlıştı. İki cümle aynı mana değildir; farklı manadır. Ayrıca "ısırmak" manası fail ve mef'ûl yuvalarını zaten taşır, yani ilişki manaların içindedir, dışarıdan eklenen bir şey değildir. Örnek mana ile tasavvuru ayırmaz. "Tasavvurun manadan fazlası ilişkilerdir" hükmü **delilsiz kaldı**; mana ile tasavvurun farkı hâlâ bulunamamıştır.
 
 Tenkit: "model" iki anlamda olabilir (model teorisindeki yapı; üretici/dinamik model p(x|z), "şöyle olsa ne olur" simülatörü). İkisi M ile geçiş fonksiyonu T birleştirilerek (M,T) tek nesne yapılabilir; padişahın hangisini kastettiği söylenmedi.
