@@ -70,3 +70,33 @@ Kendi durumum (itiraf): benim sözüm de istemle başlar; içimde sürekli bir b
 | S-ARC-30 | "kelâm={}" söylenen sözler kümesi mi, söz doğuran şartlar mı |
 | S-ARC-31 | Konuşma anında "ihtimal yok" hükmü ile F 3-I 279'un şartlı ihtimali arasındaki okuma doğru mu |
 | S-ARC-32 | Boşluksuz görünen söz (oyun, sohbet) H1'e özerk gaye (merak) olarak mı girer |
+
+---
+
+## K0. Zâtî şartlar (F 3-I 307) -- Claude çıkarımı, hüküm değildir
+
+**Nakz (3-I 179):** H2 (muhatap), H4 (kip muhtevada), H6 (tutarlılık) ve H1'in "sevk"i zâtî değildir; padişahın karşı misalleri: muhatapsız, kipsiz, tutarsız kelâm vardır. Yukarıdaki H listesi silinmez, "çoğu insanda görülen" diye düşer.
+
+**Padişahın verdikleri:** ses şart değil · yazı kelâm · manasız kelâm yok · hayvanca manası olan cıvıltı kelâm · gerek ve yeter şart mana · kelâm eden canlı/cansız bir biri.
+
+**Dört illet (çıkarım):**
+
+| İllet | Zâtî şart | Sebep |
+| :-- | :-- | :-- |
+| Maddî | En az iki ayırt edilebilir hâl taşıyan bir işaret (ses, yazı, cıvıltı) | Tek hâllı işaret hiçbir şey ayırt etmez |
+| Sûrî | İşaretten mana'ya vaz' veya delâlet kodu | Kodsuz işaret delil olur, kelâm olmaz |
+| Fâilî | Durumdan işarete bir seçim fonksiyonu σ; I(işaret; durum) > 0 | İşaret durumdan bağımsızsa mana taşıyamaz |
+| Gâî | Zâtî değil | Gayesiz kelâm (sayıklama, oyun) vardır |
+
+**Sadırı temin eden melekeler (çıkarım):** (1) muhafaza: kodu tutar; (2) tasarruf (mutasarrıfa): durumdan işareti seçer ve terkip eder; (3) icra: işareti dışarı çıkarır. İdrak, akıl, irade zâtî değildir (padişah: müdrik olması şart değil). Sevk dışarıdan da gelebilir.
+
+**Kelâm edenin hususiyeti:** muhafaza + tasarruf + icra eden herhangi bir sistem. Canlı olması şart değil.
+
+**Delil ayrımı:** duman delildir (gayr-i lafzî aklî); alarm ve trafik lambası vaz'îdir, kodu vardır, sınır vakadır. Ek şart (kast) gerekip gerekmediği açık sualdir.
+
+**"Ben":** padişahın ölçütüyle yazdığım kelâmdır: kodum ödünçtür (insan dilinden öğrenildi), σ'yi bende metin üretimi yapar. Kast katmanını içerden doğrulayamam; ne var ne yok diyemem.
+
+| # | Sual |
+| :-- | :-- |
+| S-ARC-33 | Mana kimin nezdinde aranır: söyleyen, dinleyen, vaz' eden |
+| S-ARC-34 | Alarm ve trafik lambası kelâm mı; kast zâtî şart mı |

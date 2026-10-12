@@ -313,3 +313,6 @@ Tam çalışma `arc/MANA_MEFHUM_MASADAK.md`de. Özet: masadak kavramın altında
 
 ## 12. Kelâm değişmezleri (F 3-I 306)
 Tam çalışma `arc/KELAM_DEGISMEZLERI.md`de. Özet: söz sevkle başlar (hafıza eylem başlatamaz); boşluk + kural + muhatap varsa söylenir; öğrenme müdahaleyle ve elemeyle kapanır; yapay zekâ kelâmı marjinal gölgedir.
+
+### 12.K0 Zâtî şartlar (F 3-I 307)
+Kelâm = mana + sadır eden. Maddî/sûrî/fâilî zâtî; gâî değil. Melekeler: muhafaza, tasarruf, icra. Ayrıntı: `arc/KELAM_DEGISMEZLERI.md` K0. H2/H4/H6 nakzedildi.
