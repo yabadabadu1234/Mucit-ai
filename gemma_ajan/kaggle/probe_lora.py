@@ -21,8 +21,17 @@ OUT = Path("/kaggle/working"); AD = OUT / "adapter_probe"
 res = {}
 def save(): (OUT / "probe_result.json").write_text(json.dumps(res, indent=1))
 
+for pat in ("/usr/local/lib/python*/dist-packages/*cutlass*.pth", "/usr/local/lib/python*/site-packages/*cutlass*.pth"):
+    for q in glob.glob(pat): os.unlink(q)
+tmp = Path("/tmp/wheelhouse"); tmp.mkdir(exist_ok=True)
+for w in WH.glob("*.whl"):
+    if "cutlass" in w.name.lower(): continue
+    name = w.name.replace("cu128", "+cu128") if ("cu128" in w.name and "+" not in w.name) else w.name
+    if not (tmp / name).exists(): os.symlink(w, tmp / name)
+subprocess.run([sys.executable, "-m", "pip", "install", "-q", "--no-deps", "--force-reinstall", *sorted(str(x) for x in tmp.glob("*.whl"))], check=True)
+importlib.invalidate_caches(); log("wheelhouse kuruldu")
 log("wheelhouse", sorted(p.name for p in WH.glob("*.whl")) if WH.exists() else "MISSING")
-for m in ["torch", "transformers", "peft", "trl", "accelerate", "compressed_tensors", "bitsandbytes", "vllm"]:
+for m in ["torch", "transformers", "peft", "trl", "accelerate", "kernels", "compressed_tensors", "bitsandbytes", "vllm"]:
     try:
         mod = importlib.import_module(m); res[m] = getattr(mod, "__version__", "yok-sürüm")
     except Exception as e:
@@ -73,15 +82,6 @@ if "kaydedildi" not in s2:
 
 # aşama 3: vLLM adaptörü yükleyip cevap veriyor mu
 try:
-    for pat in ("/usr/local/lib/python*/dist-packages/*cutlass*.pth", "/usr/local/lib/python*/site-packages/*cutlass*.pth"):
-        for q in glob.glob(pat): os.unlink(q)
-    tmp = Path("/tmp/wheelhouse"); tmp.mkdir(exist_ok=True)
-    for w in WH.glob("*.whl"):
-        if "cutlass" in w.name.lower(): continue
-        name = w.name.replace("cu128", "+cu128") if ("cu128" in w.name and "+" not in w.name) else w.name
-        if not (tmp / name).exists(): os.symlink(w, tmp / name)
-    subprocess.run([sys.executable, "-m", "pip", "install", "-q", "--no-deps", "--force-reinstall", *sorted(str(x) for x in tmp.glob("*.whl"))], check=True)
-    importlib.invalidate_caches()
     for k, v in {"VLLM_WORKER_MULTIPROC_METHOD": "spawn", "VLLM_NO_USAGE_STATS": "1"}.items(): os.environ[k] = v
     import torch, requests
     from adk_submission import VllmConfig, VllmServer
