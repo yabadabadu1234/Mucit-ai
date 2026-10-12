@@ -1,3 +1,5 @@
+> **[TARİHÎ KAYIT, 12/10/2026]** Eski tasarım (gelire bağlı prim, götürü gider, kademeli oran) üzerinedir; güncel değildir. Güncel: `MALI_MODEL.md`.
+
 # MODEL G — GELİRE BAĞLI, SABİT YÜKSÜZ MODEL (F 3-I 257)
 
 > **GÜNCELLEME (11/10/2026, nakz F 3-I 179):** Güncel N ile sonuçlar GUNCEL_MODEL.md §2'dedir (S Orta +4,60; G Orta +2,00; Kötümser −1,88). Aşağıdaki eski sayılar tarihî kayıttır.

@@ -14,6 +14,6 @@
 3. **Tüketiciye satış:** indirim yok, sübvansiyon sızıntısı yok (yalnız Madde V, Y, AC ve ilişkili toplulaştırma).
 4. **Bağımsız şahidi olmayan B2B hizmet:** (a) uygulanır: nötr kural (Madde AD), yani bu kalemde sübvansiyon sıfırdır.
 
-**Bedel (doğruyu söylemek):** (4)'te sübvansiyon yoktur; bu, o satıcı için teklifin ilk vaadinden bir geri adımdır (yük, rakam olarak (k − t)·P ≈ hasılatın %14,5'i). Dürüst genç ve alıcı için ek belge, ek tıklama, ek bekleme yoktur; yük yalnız bu kalemde sübvansiyonun kalkmasıdır. (1)–(3)'te yük sıfırdır.
+**Bedel (doğruyu söylemek):** (4)'te sübvansiyon yoktur; bu, o satıcı için teklifin ilk vaadinden bir geri adımdır (yük, rakam olarak (k − t)·P ≈ hasılatın %11,5'i). Dürüst genç ve alıcı için ek belge, ek tıklama, ek bekleme yoktur; yük yalnız bu kalemde sübvansiyonun kalkmasıdır. (1)–(3)'te yük sıfırdır.
 
 **Ölçü:** `MALI_MODEL/imkansizlik_sim.py` ve `_out.txt`.

@@ -1,3 +1,5 @@
+> **[TARİHÎ KAYIT, 12/10/2026]** Genç modelinin ilk sürümüdür; yerine `GENC3_RAPOR.md` geçmiştir.
+
 # GENÇ SEYRİ MODELİ (F 3-I 258)
 
 Kod: `genc_model.py`; sonuç: `sonuc_genc.json`, `genc_out.txt`. 3000 genç × 72 ay, aynı rastgele şoklar bütün rejimlerde (ortak rastgele sayılar). **Bütün parametreler varsayımdır, ölçülmemiştir**; hiçbiri veriye oturtulmadı. Reel (2026) TL.

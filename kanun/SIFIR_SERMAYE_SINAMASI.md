@@ -1,3 +1,5 @@
+> **[GÜNCELLEME 12/10/2026, F 3-I 293, 299, 302]** Bu sınama eski tasarım (4/b primi (p) grubunda sürer, %10,5, gerçek gider) üzerinedir. Güncel tasarımda: eşit giriş ve sabit 4/b primi yoktur (§1'in son paragrafı geçersiz; açık kalem 3 kapandı), düz %13,5, ücretli çalışan rejim dışındadır; gün-0 nakit sonucu (0 TL) değişmez. Güncel genç sonuçları: `MALI_MODEL/GENC3_RAPOR.md`. Aşağıdaki §3 simülasyon eski modeldir (tarihî).
+
 # SIFIR SERMAYELİ GENÇ SINAMASI (F 3-I 274)
 
 Ölçüt (padişahın): sıfır sermayeli genç şirket kurmaya kalktığında **kurabilmelidir**; kuramadığı kanun kabul edilmez. Prim (4/b) şimdilik değişmez; şirket kurmanın önşartı değilse kalabilir. Kod: `MALI_MODEL/sifir_sermaye.py`, çıktı `sifir_sermaye_out.txt`, `sonuc_sifir_sermaye.json`; `genc2.py`ye `k0` (başlangıç nakdi/borcu) ve `b_ilk` (ilk müşteri payı) eklendi. Metin: `DEVLETE_SUNULACAK_METIN.md` Madde 1-12 (satır 1-229 okundu; geri kalanı gerekçe ve ekler, okunmadı).

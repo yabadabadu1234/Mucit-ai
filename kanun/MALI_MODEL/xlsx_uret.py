@@ -15,10 +15,10 @@ satir=[('Brüt asgari ücret (TL/ay)','W',33030,33030,33030,'Birden çok kaynakt
 ('Medyan yıllık hasılat (asgari ücret katı)','medyan_W',4.0,5.0,6.0,'Varsayım'),
 ('Hasılat dağılımı yayılımı (σ, log-normal)','sigma',0.9,0.9,0.9,'Varsayım'),
 ('Katılımcı sayısı (kararlı durum, kişi)','n_toplam',100000,331000,1096000,'Kötümser: F 3-I 268; İyimser: F 3-I 269 oranları × ILO 2025 + F 3-I 273 gayrıresmî tanımı (n_veri.py); Orta: geometrik ortalama (Claude)'),
-('Halen kayıtlı olup rejime geçenlerin payı (s)','s_kayitli',0.30,0.15,0.05,'Varsayım; prim sürdüğü için sonucu az etkiler'),
-('Halen kayıtlı olanın 4/b primine devamı (1 = prim sürer)','prim_devam',1,1,1,'Teklif Madde 1 (p)'),
-('Ücretli ek gelir payı (u)','u_ucretli',0.25,0.20,0.15,'Varsayım'),
-('Götürü gider oranı','gider',0.30,0.30,0.30,'Teklif Madde 1 (a)'),
+('Halen kayıtlı olup rejime geçenlerin payı (s)','s_kayitli',0.30,0.15,0.05,'Varsayım; prim isteğe bağlı olduğundan sonucu çok etkiler'),
+('Halen kayıtlı olanın isteğe bağlı primi sürdürme payı (0 = hiç sürdürmez)','prim_devam',0,0,0,'Teklif Madde 1 (p), 5 (o): prim isteğe bağlı; en kötü hâl 0'),
+('Ücretli ek gelir payı (u)','u_ucretli',0,0,0,'Teklif Madde 1 (t): ücretli çalışan rejim dışında (F 3-I 302)'),
+('Tevkifat oranı (gayrisafi hasılatın)','duz_oran',0.135,0.135,0.135,'Teklif Madde 1 (e): %13,5 ile %27 arası; F 3-I 299'),
 ('BES aktarım oranı (tevkifatın)','bes',0.03,0.03,0.03,'Teklif Madde 9'),
 ('Devlet katkısı oranı','devlet_katki',0.20,0.20,0.20,'4632 Ek 1 + 10811 sayılı Karar (ikincil)'),
 ('BES vazgeçme payı','bes_vazgecme',0.20,0.35,0.50,'Varsayım'),
@@ -68,7 +68,7 @@ TR=(t0+2,t0+6)  # rows
 alt=f"Girdiler!$D${TR[0]}:$D${TR[1]}"; dl=f"Girdiler!$C${TR[0]}:$C${TR[1]}"
 # --- Dağılım ve hesap
 d=wb.create_sheet('Hesap'); K=60
-heads=['k','H alt','H üst','H orta','ağırlık','Safi matrah','Tevkifat T','Etkin oran','BES+Devlet katkısı','90 gün prim','KDV mahsubu','Eski vergi (kayıtlı)','Eski prim','Eski vergi (ücretli)']
+heads=['k','H alt','H üst','H orta','ağırlık','Tevkifat matrahı (gayrisafi)','Tevkifat T','Etkin oran','BES+Devlet katkısı','90 gün prim','KDV mahsubu','Eski vergi (kayıtlı)','Eski prim','Eski vergi (ücretli)']
 for j,h in enumerate(heads): c=d.cell(row=1,column=1+j,value=h); c.font=hw; c.fill=hf
 W_=ADR['W']; lo=f"(0.1*{W_})"; hi=f"(24*{W_})"
 mu=f"LN({ADR['medyan_W']}*{W_})"; sg=ADR['sigma']
@@ -76,8 +76,8 @@ for i in range(K):
     r=2+i; d.cell(row=r,column=1,value=i)
     d.cell(row=r,column=2,value=f"={lo}*({hi}/{lo})^(A{r}/{K})"); d.cell(row=r,column=3,value=f"={lo}*({hi}/{lo})^((A{r}+1)/{K})"); d.cell(row=r,column=4,value=f"=SQRT(B{r}*C{r})")
     d.cell(row=r,column=5,value=f"=(NORMSDIST((LN(C{r})-{mu})/{sg})-NORMSDIST((LN(B{r})-{mu})/{sg}))/(NORMSDIST((LN({hi})-{mu})/{sg})-NORMSDIST((LN({lo})-{mu})/{sg}))")
-    d.cell(row=r,column=6,value=f"=(1-{ADR['gider']})*D{r}")
-    d.cell(row=r,column=7,value=f"=SUMPRODUCT((F{r}>{alt})*(F{r}-{alt})*{dl})")
+    d.cell(row=r,column=6,value=f"=D{r}")
+    d.cell(row=r,column=7,value=f"={ADR['duz_oran']}*F{r}")
     d.cell(row=r,column=8,value=f"=G{r}/D{r}")
     d.cell(row=r,column=9,value=f"={ADR['bes']}*G{r}*(1-{ADR['bes_vazgecme']})*(1+{ADR['devlet_katki']})")
     d.cell(row=r,column=10,value=f"=IF(D{r}>=12*{W_},{ADR['myo_uygun']}*{ADR['myo_gun_ay']}*{W_}*{ADR['myo_oran']},0)")
@@ -99,7 +99,7 @@ SR=[('Ort. hasılat (TL)',f"={E('D')}"),('Ort. tevkifat (TL)',f"={E('G')}"),('Et
 ('NET HAZİNE ETKİSİ (TL/yıl)',"=B6-B7-B8-B9-B10-B11-B12-B13-B14-B15-B16"),('Net (milyar TL)',"=B17/1000000000")]
 for i,(a,f) in enumerate(SR): s.cell(row=2+i,column=1,value=a); s.cell(row=2+i,column=2,value=f)
 s['A17'].font=b; s['B17'].font=b; s.column_dimensions['A'].width=62; s.column_dimensions['B'].width=22
-s['A21']='Not: prim sürekliliği (prim_devam=1) ile kırılma noktası yoktur; s=1 için Python varyantı Senaryolar_Python sayfasındadır.'
+s['A21']='Not: prim_devam=0 en kötü hâldir (eski kayıtlıların primi hiç sürmez); varyantlar Senaryolar_Python sayfasındadır.'
 # --- Python sonuçları (statik)
 p=wb.create_sheet('Senaryolar_Python'); p['A1']='Python modeli çıktıları (statik değerler; model.py ve analiz.py ile üretilir)'; p['A1'].font=b
 r=3

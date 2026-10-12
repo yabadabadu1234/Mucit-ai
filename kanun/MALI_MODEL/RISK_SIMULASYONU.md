@@ -1,3 +1,5 @@
+> **[TARİHÎ KAYIT, 12/10/2026]** Eski tasarım (prim sürer, %10,5) üzerinedir; güncel değildir. Güncel: `MALI_MODEL.md`, `DUYARLILIK_TABLOLARI.md`.
+
 # RİSK SİMÜLASYONU — SEÇİLEN (S) VE MODEL K (K1) (F 3-I 256, padişah: "Onu da, bilinen riskleri de simüle et")
 
 > **GÜNCELLEME (11/10/2026, nakz F 3-I 179):** Güncel N ile risk tablosu GUNCEL_MODEL.md §2'dedir (risksiz Orta +4,60; prim %50 +1,78; hiç tutmazsa −1,03). Aşağıdaki eski sayılar tarihî kayıttır.

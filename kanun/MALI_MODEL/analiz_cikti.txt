@@ -1,20 +1,23 @@
-kırılma s*= None
-G0 Seçilen: kapısız, halen kayıtlı olanın 4/b primi sürer (s=0,15) 4.60 mlr
-G1 Prim sürekliliği olmasaydı (kapısız, s=0,15)         -1.03 mlr
-G2 Önceki karar: 24 ay giriş kapısı (s=0,05, prim sürekliliği yok) 3.25 mlr
-G3 Harici öneri: düz %15 (%5 prim payı), hibe yok, kapısız (s=0,15) 1.72 mlr
-G4 Seçilen, herkes geçse (s=1,00)                       1.01 mlr
-G5 Seçilen + 90 gün prim hibesi yok                     4.94 mlr
-G6 Seçilen + donanım KDV mahsubu yok                    5.19 mlr
-G7 Seçilen + (e) bendi yok: düz %10,5                   4.06 mlr
-G8 Seçilen + götürü gider %25                           5.22 mlr
-Orta yıl4 net 4.60
-n_toplam -3.24 10.74
-medyan_W -1.72 1.92
-s_kayitli 0.80 -0.27
-uyum_ucretli 0.55 -0.55
-marj 0.53 -0.55
-u_ucretli 0.46 -0.46
-sigma -0.44 0.02
-kdv_donanim_pay 0.30 -0.30
-MC net P5/P50/P95: 1.29 3.98 10.70 ; P(net>0)=1.00 ; NPV P50 11.77
+kırılma s*= 0.18079388053989018
+V0 Baz: %13,5; eski kayıtlıların primi hiç sürmez       1.32 mlr
+V1 Eski kayıtlıların %50'si primi sürdürür              4.13 mlr
+V2 %75'i sürdürür                                       5.54 mlr
+V3 Hepsi sürdürür                                       6.95 mlr
+V4 Oran %20                                             5.61 mlr
+V6 Oran %27 (üst sınır)                                 10.23 mlr
+V7 Ücretli çalışana izin verilseydi (u=%20)             0.40 mlr
+V8 SGK tahsil oranı %50                                 3.43 mlr
+V9 SGK tahsil oranı %100                                -0.09 mlr
+V10 Halen kayıtlıların hepsi geçse (s=%100)             -35.08 mlr
+V11 90 gün prim hibesi olmasaydı                        1.66 mlr
+V12 Donanım KDV mahsubu olmasaydı                       1.94 mlr
+Orta yıl4 net 1.32
+duz_oran -1.96 8.92
+s_kayitli 6.42 -2.14
+prim_devam 0.00 5.63
+n_toplam -0.96 3.16
+prim_odeme 2.81 -1.41
+medyan_W -2.37 2.46
+sigma -0.34 -0.14
+kdv_donanim_pay 0.31 -0.31
+MC net P5/P50/P95: -6.36 2.94 12.13 ; P(net>0)=0.77 ; NPV P50 8.61

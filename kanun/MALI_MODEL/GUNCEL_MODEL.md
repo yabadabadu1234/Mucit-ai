@@ -1,3 +1,5 @@
+> **[NAKZ F 3-I 299, 300, 302; 12/10/2026]** Bu dosyanın §2, §3, §5 sayıları (prim sürer, ücretli ek gelir payı, götürü gider) eski tasarıma aittir ve **geçersizdir**. Güncel tasarım: düz %13,5, eşit giriş, prim isteğe bağlı, ücretli çalışan rejim dışında. Güncel sonuç (4. yıl, prim hiç sürmezse): Kötümser −2,01, Orta +1,32, İyimser +23,72 milyar TL; bkz. `MALI_MODEL.md` ve `DUYARLILIK_TABLOLARI.md`. §1 (N), §4 (Fransa karşılaştırması, tarihî) ve §8 (muhasebeci) bâkîdir.
+
 # GÜNCEL MODEL -- 11 Ekim 2026 (F 3-I 261, 266-269, 273; padişah: "modeli verilere göre güncelle, tüm modelleri")
 
 Kod: `n_veri.py` (N), `guncel.py` (ayrışım, tek ödeme, stres), `model.py` (güncellenmiş girdi), `analiz.py`, `risk.py`, `g_final.py`, `genc2.py` yeniden koşturuldu; Excel yeniden üretildi. Çıktılar: `*_cikti.txt`, `guncel_out.txt`, `sonuc*.json`. Eski sayılar (N=350 bin vb.) `MALI_MODEL.md`, `MODEL_G.md`, `RISK_SIMULASYONU.md`, `MODEL_GENC2.md`, `KARSILASTIRMALI_HUKUK.md` §D içinde kalmıştır ve **bu dosyadaki sayılarla değişmiştir** (nakz; eski değerler git geçmişindedir).

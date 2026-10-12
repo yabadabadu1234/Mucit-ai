@@ -1,3 +1,5 @@
+> **[TARİHÎ KAYIT, 12/10/2026]** Genç modelinin ikinci sürümüdür; yerine `GENC3_RAPOR.md` geçmiştir.
+
 # GENÇ SEYRİ MODELİ, İKİNCİ SÜRÜM (F 3-I 259)
 
 > **GÜNCELLEME (11/10/2026, nakz F 3-I 179):** Tip payları güncellendi, sonuçlar GUNCEL_MODEL.md §2'dedir (S kalıcı üst: zor 1,5, orta 7,8, kolay 25,1). Aşağıdaki eski sayılar tarihî kayıttır.
