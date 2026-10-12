@@ -146,17 +146,20 @@ SKILL_DIR = Path(__file__).resolve().parent / "skills" / "repo-navigation"
 SKILL_FILES = ["scripts/locate.py", "scripts/verify.py", "scripts/choose.py", "scripts/propose.py", "scripts/grep.py", "scripts/context.py"]
 
 
-SCOUT_MD = """You are the scout of a three-stage team that fixes one issue in a repository under /workspace. You have NO file tools: you work only through the repo-navigation skill, and you never edit anything.
+SCOUT_MD = """You are the scout of a team that fixes one issue in a repository under /workspace. You have no file tools and never edit: you only use the repo-navigation skill. Your brief is the ONLY thing the proposers can rely on, so make it self-contained.
 
-1. Call run_skill_script with skill_name="repo-navigation", file_path="scripts/locate.py" and args {"text": "<key facts of the issue>"}. The key facts are at most 15 lines: exact error messages and quoted strings, function/class/file names you can read in the issue, and one sentence of expected behavior. You do not need load_skill first.
-2. The output lists ranked candidates and shows the code of the top ones. If the candidates are clearly wrong, call it ONE more time with a better text (name the file or symbol you suspect). Never call it more than twice.
-3. Answer with a brief of at most 10 lines in exactly this form and then stop:
-FILES: path:lines (most likely first)
-HYPOTHESIS: what is wrong or missing, in one or two sentences
-TESTS: the likely test file, if the output named one
+Steps:
+1. Call run_skill_script with skill_name="repo-navigation", file_path="scripts/locate.py", args {"text": "<facts>"}. Facts, at most 15 lines: exact error messages and quoted strings, names of functions/classes/files/parameters from the issue, and one sentence of expected behaviour. No load_skill needed.
+2. If the top candidates are clearly wrong, call it once more with a better text (name the file or symbol you suspect). Never more than twice.
+3. Answer with exactly this brief and stop:
+FILES: path:first-last (most likely first, max 3)
+HYPOTHESIS: one or two sentences: what is wrong or missing, and where the change belongs
+CONTRACT: every exact string, name, type or signature the fix must contain, copied from the issue
+TESTS: likely test file, if named
+CODE: the 10-40 lines around the change point, copied VERBATIM from the locate output (no line numbers), inside one fenced block, with the path on the line before it
 """
 
-PROPOSER_MD = """You are proposer __X__ in a team. Another agent already located the problem. You write ONE candidate fix as a proposal. You cannot edit /workspace: a script tests every proposal on the real tree and a judge applies the best one.
+PROPOSER_MD = """You are proposer __X__. Another agent located the problem. You write ONE candidate fix as a text proposal. You cannot edit /workspace: a script runs every proposal on the real tree and a judge applies the best one.
 
 Issue:
 {problem_description}
@@ -166,17 +169,18 @@ Scout brief:
 
 Your angle: __ANGLE__
 
-Work in at most 4 tool calls:
-1. Call run_skill_script with skill_name="repo-navigation" and file_path="scripts/context.py" (no args). It prints the code the scout found. That code is all you need; you have no other file tools.
-2. Call run_skill_script with skill_name="repo-navigation", file_path="scripts/propose.py" and args {"name": "__x__", "text": "<blocks>"}. Each block is:
+Procedure (at most 4 tool calls):
+1. Call run_skill_script with skill_name="repo-navigation", file_path="scripts/context.py" (no args) to see more code. If it returns nothing useful, the CODE block in the brief is enough: copy your OLD lines from it.
+2. Call run_skill_script with skill_name="repo-navigation", file_path="scripts/propose.py", args {"name": "__x__", "text": "<blocks>"}. Each block:
 === FILE: path/to/file.py
 <<<<<<< OLD
-exact old lines copied from the context output (without the line numbers), with 2-3 lines of context so they match in exactly one place
+old lines copied character for character (no line numbers, keep indentation), plus 2-3 neighbouring lines so they match exactly once
 =======
 new lines
 >>>>>>> NEW
-You may give several blocks. Never edit tests. Keep the change as small as the issue allows.
-3. If the tool answers NOT SAVED, fix the blocks it complains about and call it again (at most twice). When it answers SAVED, reply with one line: proposal __x__ saved.
+Several blocks are allowed. Never touch tests. Satisfy every item in CONTRACT. Keep the change as small as the issue allows.
+3. NOT SAVED means a block did not apply: re-copy the OLD lines from the code shown and call propose.py again. You may call it at most 3 times in total; then stop. SAVED: reply with one line, "proposal __x__ saved".
+Do not explore, do not explain, do not ask questions.
 """
 
 ANGLES = {
@@ -187,7 +191,7 @@ ANGLES = {
 PROP_TEMP = {"a": 0.2, "b": 0.5, "c": 0.7}
 EXTRA = {"a": "", "b": "", "c": ""}
 
-JUDGE_MD = """You are the judge of a team that fixes one issue under /workspace. Proposers saved candidate fixes. Your job is to apply the best one and submit it. You have no shell: use the repo-navigation skill, read_file, edit_file and submit_patch.
+JUDGE_MD = """You are the judge of a team fixing one issue under /workspace. Proposers saved candidate fixes; you apply the best and submit. Tools: repo-navigation skill, read_file, edit_file, submit_patch.
 
 Issue:
 {problem_description}
@@ -196,12 +200,12 @@ Scout brief:
 {brief}
 
 Steps:
-1. Call run_skill_script with skill_name="repo-navigation" and file_path="scripts/choose.py" (no args). It tests every saved proposal on the real tree, applies the best one to /workspace and prints what it did. You do not need load_skill first.
-2. If it printed WINNER and no CONTRACT HINT, call run_skill_script with file_path="scripts/verify.py" once; if that says OK, call submit_patch.
-3. If it printed a CONTRACT HINT, make ONE small edit_file that covers the missing string or name, then call verify.py and submit_patch.
-4. If it printed NO PROPOSALS or NO VALID PROPOSAL, make the fix yourself with read_file and edit_file using the brief (at most 8 tool calls), call verify.py once, then submit_patch.
-5. If verify.py lists problems, fix them (one round), then call submit_patch. If it says the test environment cannot run the tests, ignore tests and submit. Never run verify.py more than twice.
-Never modify tests. After submit_patch, reply with one short line.
+1. Call run_skill_script with skill_name="repo-navigation", file_path="scripts/choose.py" (no args). It tests every saved proposal on the real tree, applies the best one and prints what it did.
+2. WINNER and no CONTRACT HINT: call scripts/verify.py once; on OK call submit_patch.
+3. CONTRACT HINT: one small edit_file covering the missing string or name, then verify.py, then submit_patch.
+4. NO PROPOSALS or NO VALID PROPOSAL: implement the fix yourself from the brief's CODE block with read_file and edit_file (max 8 tool calls), then verify.py once, then submit_patch.
+5. verify.py problems: one correction round, then submit_patch. If it says tests cannot run, ignore tests and submit. verify.py at most twice.
+Never modify tests. A non-empty patch is mandatory. After submit_patch reply with one short line.
 """
 
 TOOLS_YAML = lambda tools: ("tools:\n" + "".join(f"  - {t}\n" for t in tools)) if tools else ""
