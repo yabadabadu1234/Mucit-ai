@@ -59,6 +59,7 @@ Dosyalar: `model.py` (hesap), `duyarlilik_tablolari.py` (tek tek parametre tablo
 
 | Girdi | Kurum | İstenen |
 | :-- | :-- | :-- |
+| SGK 4/b prim tahsil oranı (π) | SGK | **Resmî veri bulunamadı** (iki arama, 12/10/2026: yalnız TBMM soru önergeleri ve haberler; "düzenli ödeyen 4/b sayısı" soruluyor, cevap yok). Modelde π=0,8 en kötü yönlü varsayımdır (düşük π yutulma kaybını azaltır): π=0,5'te Orta +3,43, π=0,375'te yaklaşık +4,3 |
 | s ve primi sürdürenlerin payı, eski vergi ve prim | SGK, GİB | Halen 4/b sigortalısı veya gelir vergisi mükellefi olup bu rejime başvurabilecek kişi sayısı; hizmet ve fikir sektörü hasılat dağılımı; prim tahsilat oranı |
 | N | TÜİK, GİB | Serbest çalışan sayısı; 20/B kapsamındaki mükellef sayısı ve hasılatı |
 | φ | GİB, MASAK | Hizmet faturalarında sahte fatura oranı |
