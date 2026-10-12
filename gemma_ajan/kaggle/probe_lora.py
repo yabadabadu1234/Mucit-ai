@@ -40,6 +40,8 @@ log("paketler", json.dumps(res)); save()
 subprocess.run("nvidia-smi --query-gpu=name,memory.total --format=csv,noheader", shell=True)
 
 STAGE2 = r"""
+import os
+os.environ["PYTORCH_ALLOC_CONF"] = "expandable_segments:True"
 import json, time, torch, traceback
 from pathlib import Path
 T0 = time.time()
@@ -50,7 +52,8 @@ try:
     from transformers import AutoModelForCausalLM, AutoTokenizer
     from peft import LoraConfig, get_peft_model
     tok = AutoTokenizer.from_pretrained(MODEL)
-    model = AutoModelForCausalLM.from_pretrained(MODEL, device_map="auto", torch_dtype=torch.bfloat16)
+    model = AutoModelForCausalLM.from_pretrained(MODEL, device_map="auto", max_memory={i: "15GiB" for i in range(torch.cuda.device_count())}, torch_dtype=torch.bfloat16)
+    out["gpu_sayisi"] = torch.cuda.device_count(); out["gpu_bellek_GB"] = [round(torch.cuda.memory_allocated(i)/2**30, 1) for i in range(torch.cuda.device_count())]; log("GPU bellek", out["gpu_bellek_GB"])
     log("model yüklendi", type(model).__name__); out["yuklendi"] = True
     names = sorted({n.split(".")[-1] for n, m in model.named_modules() if m.__class__.__name__.endswith("Linear")})
     log("Linear adları", names[:20]); out["linear_adlari"] = names[:20]
@@ -78,7 +81,7 @@ try:
     for p in params: p.requires_grad_(True)
     model.enable_input_require_grads() if hasattr(model, "enable_input_require_grads") else None
     opt = torch.optim.AdamW(params, lr=1e-4)
-    x = tok("def add(a, b):\n    return a + b\n" * 8, return_tensors="pt").to(next(model.parameters()).device)
+    x = tok("def add(a, b):\n    return a + b\n" * 2, return_tensors="pt").to(next(model.parameters()).device)
     losses = []
     for i in range(3):
         o = model(**x, labels=x["input_ids"]); o.loss.backward(); opt.step(); opt.zero_grad()
