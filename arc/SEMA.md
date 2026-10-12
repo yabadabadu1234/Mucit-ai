@@ -274,8 +274,32 @@ Tasavvur, manalara bir **suret (nizam)** verilerek bir mevzuya bağlandığı; u
 ### 9.4 Yeni açık sualler
 | # | Sual |
 | :-- | :-- |
-| S-ARC-22 | Tasavvurun ekseni betimleme mi (insan nasıl) tasarım mı (makine nasıl olmalı) |
+| S-ARC-22 | DÜŞTÜ (F 3-I 290): maksat insanda çalışan matematiği bulmaktır |
 | S-ARC-23 | D'nin son cümlesi kimin sözü |
 | S-ARC-24 | İç tutarlılık (sadık/kâzib) tasavvura uygulanır mı |
 | S-ARC-25 | "Suret verme" mana birleşiminden fazlasını açıklar mı |
 | S-ARC-26 | Yedi mertebenin ilk dördü şemaya alınsın mı |
+
+---
+
+## 10. İnsanda çalışan matematik (F 3-I 290) -- Claude çıkarımı, hüküm değildir
+
+| Kavram | Matematik | Neden bu |
+| :-- | :-- | :-- |
+| Mana | Bölüm uzayı elemanı: his uzayı X, denklik ~, mana = [x] | his sürekli ve çok; mana ayrı ve ayırt edilebilir |
+| Tecrit | Bölüm haritası q: X → X/~ (hangi farkın yok sayılacağı) | tikel→tümel; bilgi atılır |
+| Kaplam / içlem | Galois bağlantısı (nesne kümesi A ↔ nitelik kümesi B) ve kapanış | kaplam arttıkça içlemin azalması bu bağlantıdır |
+| Tasavvur | Yapı M = (U, R₁…R_k): taşıyıcı + ilişkiler | birleşim yalnız U'dur; fark R'lerdir |
+| Tasavvur biçim bağımsızlığı | İzomorfizm sınıfı | görsel/sözel/hareket aynı yapı olabilir |
+| Tasdik | M ⊨ φ (yapının cümleyi karşılaması) | hüküm tasavvur ile cümle arasındadır |
+| Mantık motoru | Model var mı (tatmin edilebilirlik); model yoksa çelişki | tasavvurun tasdike geçişte çelişkiden korunması |
+| Durumun ihtimali | μ({M : M ⊨ φ}), modeller üzerinde ölçü | token ihtimali değil, durum ihtimali (F 3-I 279) |
+| Cezm / zan / şek | μ ≈ 1 / μ > ½ / μ ≈ ½ | derece |
+| Yakîn | μ ≈ 1 **ve** mutabakat **ve** direnç (∂μ/∂delil ≈ 0) | cezm tek başına cehalet-i mürekkebi de kapsar |
+| İstifham | argmax beklenen entropi azalması (en bilgilendirici sual) | belirsizliği teşhis ve hedefleme |
+| Muhakeme | seçilmiş usulde μ'yü güncelleme | usul sabit, yürüme |
+| Strateji | usul ailesi seçimi: kıyas (M ⊨ φ çıkarımı) · istikra (örnekten posterior) · temsil (M→M' yapı koruyan harita, funktör) | üç usul üç matematik |
+
+Mana ≠ tasavvur: mana sözlüğün elemanı/ilişki adı; tasavvur sözlüğün **nasıl bağlandığı**. "Adam köpeği ısırdı / köpek adamı ısırdı": aynı mana, farklı R, farklı M.
+
+Tenkit: "model" iki anlamda olabilir (model teorisindeki yapı; üretici/dinamik model p(x|z), "şöyle olsa ne olur" simülatörü). İkisi M ile geçiş fonksiyonu T birleştirilerek (M,T) tek nesne yapılabilir; padişahın hangisini kastettiği söylenmedi.
