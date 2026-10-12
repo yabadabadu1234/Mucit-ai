@@ -91,3 +91,25 @@ Değerlendirme kümesi ölçü aracıdır, eğitime girmez (F 2-D 93).
 | S-T2 | B'nin tabanı büyük modelin kendisi mi, ayrı küçük model mi |
 | S-T3 | Kaggle'da koşturmak GPU kotanızı ve günlük gönderim hakkınızı yer; izin |
 | S-T4 | D8/renk kayması kural-korumayan görevlerde B'yi bozar; program-doğrulamalı süzgeç şart mı |
+
+## 8. Ölçümler (Kaggle, 4×L4, her koşu en çok 10 dk hedefli; defterler `arc/defter/olcum0..2`)
+
+Taban: Qwen3.5-4B (bf16, 8,51 GB/GPU), HF transformers 5.16.1, peft 0.20.0. Yerleşim: **manuel**, 4 işçi süreci, her biri `CUDA_VISIBLE_DEVICES=i` ile tek GPU'da tam kopya; `device_map` yok (F 291). Görevler: değerlendirme kümesinin en kısa 8 tek-çıktılı görevi, işçi başına 2.
+
+| # | Ölçü | Değer | İşaret |
+| :-- | :-- | :-- | :-- |
+| 1 | Mimari: 32 katman, **8 tam dikkat + 24 doğrusal dikkat** (her 4. katman tam), 4 KV başı, baş boyu 256 | config.json | [Ö] |
+| 2 | KV bedeli = 2 × 8 × 4 × 256 × 2 bayt = **32 768 bayt/belirteç (32 KiB)**; doğrusal katmanlar belirteç sayısından bağımsız sabit durum tutar | hesap, config'ten | [Ö] |
+| 3 | Model yükleme: 72-117 sn (4 işçi aynı anda diskten) | günlük | [Ö] |
+| 4 | `peft` ortamdaki `torchao 0.10.0` yüzünden kırılıyor; çözüm: `is_torchao_available` kapatıldı | hata günlüğü | [Ö] |
+| 5 | Hızlı doğrusal-dikkat çekirdeği (`fla` 0.5.2) kurulmadan LoRA eğitimi 22 GB'ı aştı (OOM, 800-1000 belirteçlik dizide) | günlük | [Ö] |
+| 6 | `fla` + gradyan kontrol noktası + yalnız cevap konumlarında kayıp ile zirve bellek **9,2-10,0 GB** | günlük | [Ö] |
+| 7 | **İlk çağrıda ~55 sn JIT/derleme** (eğitim ilk görevde 1 adım atabildi); ikinci görevde **41-50 adım / 45 sn**, yaklaşık 880 belirteç/sn, adım başına yaklaşık 1 sn | günlük | [Ö] |
+| 8 | HF `generate` bir çıktı için 8-40 sn (ısındıktan sonra), ilk çağrıda 49-60 sn | günlük | [Ö] |
+| 9 | Kayıp: bazı görevlerde 0,003'e düştü (ezberledi); diğerlerinde 0,12-0,16 | günlük | [Ö] |
+| 10 | **Doğruluk: LoRA öncesi 0/4, 45 sn LoRA sonrası 0/4** (iki görev işçi başına, sekiz görevden dört tanesi sonuna kadar yürüdü) | günlük | [Ö] |
+| 11 | Platform: betik süresine ek yük 41-60 sn (bir koşuda 632 ve 992 sn "RUNNING" gözlendi, betik 58 ve 143 sn'ydi; sebebi bilinmiyor) | durum sorguları | [Ö] |
+
+Yorum [Ç]: ARC'a önceden hiç eğitilmemiş bir tabana 45 sn'lik görev-içi eğitim kural öğretmedi; kayıp düştü ama test çıktısı tutmadı (4 görev, küçük örnek). Bu, NVARC'ın önce büyük sentetik ARC külliyatıyla ön eğitim yapıp sonra görev başına ince ayar yapmasının gerekçesini ölçüyle destekler. Sonuç görev sayısı küçük olduğu için kesin hüküm değildir.
+
+Bütçe [Ç]: 240 görev / 12 saat = 180 sn/görev. Isınma 55 sn bir kerelik (işçi başına), eğitim 45 sn, üretim 10-40 sn: sığar, fakat tek işçi sırayla 240 görev yapamaz; 4 işçi × 60 görev × (45+25 sn) = 70 dk. Yük burada üretim hızıdır (HF `generate`); vLLM ile LoRA'lı üretim ayrıca denenmeli.
