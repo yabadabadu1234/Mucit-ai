@@ -23,7 +23,7 @@ def sok2(N,T,seed):
     for t in range(1,T): x[t]=0.9*x[t-1]+g.normal(0,0.06)
     return dict(makro=np.exp(x),beceri=np.exp(g.normal(0,0.35,N)),yeni_u=g.random((T,N)),birim=np.exp(g.normal(0,0.3,(T,N))),
       kayip=g.normal(0,0.04,(T,N)),gurultu=np.exp(g.normal(0,0.15,(T,N))),olay=g.random((T,N))<0.015,denetim=g.random((T,N)),pazar=g.random((T,N))<0.04)
-def kos2(rj,P,S,N,T=72,b0=5500.0,L=0.45,istisna_tutar=1737500.0,prim_oran=0.10,yol_zorla=None,burs_miktar=0.25*ASGARI_NET,k0=0.0,b_ilk=0.5,kar_payi=0.0,pay_tavan=None):
+def kos2(rj,P,S,N,T=72,b0=5500.0,L=0.45,istisna_tutar=1737500.0,prim_oran=0.10,yol_zorla=None,burs_miktar=0.25*ASGARI_NET,k0=0.0,b_ilk=0.5,kar_payi=0.0,pay_tavan=None,duz_oran=None):
     yol=P["yol"] if yol_zorla is None else np.full(N,yol_zorla)
     s=S["beceri"]*P["beceri"]
     lam_yol=np.where(yol==0,P["erisim"],np.where(yol==1,0.9,0.3))
@@ -53,6 +53,7 @@ def kos2(rj,P,S,N,T=72,b0=5500.0,L=0.45,istisna_tutar=1737500.0,prim_oran=0.10,y
         kar_modu=(rj['vergi']=="kar")|genel
         vergi=np.zeros(N); prim=np.zeros(N); sabit=np.zeros(N)
         if rj['vergi']=="tevk": vergi=np.where(genel,0.0,tarife((1-GIDER)*yil)-tarife((1-GIDER)*(yil-R)))
+        if rj['vergi']=="tevk" and duz_oran is not None: vergi=np.where(genel,0.0,duz_oran*R)
         pm=PRIM_AYLIK+SABIT_AYLIK
         kar_ytd=np.maximum((1-GIDER)*yil-pm*(ay+1)-(istisna_tutar if ist else 0),0)
         kar_prev=np.maximum((1-GIDER)*(yil-R)-pm*ay-(istisna_tutar if ist else 0),0)
