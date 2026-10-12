@@ -52,7 +52,24 @@ try:
     from transformers import AutoModelForCausalLM, AutoTokenizer
     from peft import LoraConfig, get_peft_model
     tok = AutoTokenizer.from_pretrained(MODEL)
-    model = AutoModelForCausalLM.from_pretrained(MODEL, device_map="auto", max_memory={i: "15GiB" for i in range(torch.cuda.device_count())}, torch_dtype=torch.bfloat16)
+    import re as _r
+    from accelerate import init_empty_weights
+    from transformers import AutoConfig
+    with init_empty_weights():
+        meta = AutoModelForCausalLM.from_config(AutoConfig.from_pretrained(MODEL))
+    ng = torch.cuda.device_count()
+    keys = list(meta.state_dict().keys())
+    lay = sorted({int(_r.search(r"language_model.*?\.layers\.(\d+)\.", k).group(1)) for k in keys if _r.search(r"language_model.*?\.layers\.(\d+)\.", k)})
+    nl = max(lay) + 1; dmap = {}
+    for k in keys:
+        mm = _r.search(r"^(.*language_model.*?\.layers\.(\d+))\.", k)
+        if mm:
+            dmap[mm.group(1)] = min(int(mm.group(2)) * ng // nl, ng - 1)
+        else:
+            dmap[k.rsplit(".", 1)[0]] = 0
+    out["katman_sayisi"] = nl; out["harita_ornek"] = {k: v for k, v in list(dmap.items())[:3]}
+    log("elle harita: katman", nl, "kart", ng, "GPU başına katman", [sum(1 for v in dmap.values() if v == g) for g in range(ng)])
+    model = AutoModelForCausalLM.from_pretrained(MODEL, device_map=dmap, torch_dtype=torch.bfloat16)
     out["gpu_sayisi"] = torch.cuda.device_count(); out["gpu_bellek_GB"] = [round(torch.cuda.memory_allocated(i)/2**30, 1) for i in range(torch.cuda.device_count())]; log("GPU bellek", out["gpu_bellek_GB"])
     log("model yüklendi", type(model).__name__); out["yuklendi"] = True
     names = sorted({n.split(".")[-1] for n, m in model.named_modules() if m.__class__.__name__.endswith("Linear")})
