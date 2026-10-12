@@ -54,7 +54,7 @@ try:
     log("model yüklendi", type(model).__name__); out["yuklendi"] = True
     names = sorted({n.split(".")[-1] for n, m in model.named_modules() if m.__class__.__name__.endswith("Linear")})
     log("Linear adları", names[:20]); out["linear_adlari"] = names[:20]
-    cfg = LoraConfig(r=8, lora_alpha=16, target_modules=["q_proj", "v_proj"], task_type="CAUSAL_LM")
+    cfg = LoraConfig(r=8, lora_alpha=16, target_modules=r".*language_model.*\.(q_proj|v_proj)", task_type="CAUSAL_LM")
     model = get_peft_model(model, cfg); out["peft_sarildi"] = True
     model.print_trainable_parameters()
     model.gradient_checkpointing_enable() if hasattr(model, "gradient_checkpointing_enable") else None
