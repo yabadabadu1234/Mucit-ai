@@ -1,0 +1,47 @@
+== A) Kalibrasyon: ilk yıl canlılık hedefi %75 (TÜİK girişim demografisi 2024: 1 yıllık hayatta kalma ~%75-78, tüm girişimler) ==
+   nüfus bileşimi (örneklem içi): okuyor, lise 0.005; okuyor, üniversite 0.197; okumuyor, lise altı 0.119; okumuyor, lise 0.450; okumuyor, lisans+ 0.229;  ort.yaş 24.9
+b0 kalibre (8 tohum): ort 8461 std 686
+-- tarafsız
+   canli12    0.750 ± 0.000
+   canli24    0.791 ± 0.010
+   canli60    0.853 ± 0.011
+   kalici     0.575 ± 0.026
+   salinim    0.109 ± 0.009
+   dip        0.257 ± 0.008
+   yikim      0.305 ± 0.006
+   net_son    3.005 ± 0.185
+   devlet_pv  0.000 ± 0.000
+   gss_yillik 0.000 ± 0.000
+-- mevcut, kayıtlı
+   canli12    0.306 ± 0.009
+   canli24    0.233 ± 0.012
+   canli60    0.239 ± 0.013
+   kalici     0.136 ± 0.011
+   salinim    0.090 ± 0.003
+   dip        0.832 ± 0.011
+   yikim      0.885 ± 0.007
+   net_son    0.962 ± 0.054
+   devlet_pv  515838.360 ± 19992.975
+   gss_yillik 0.000 ± 0.000
+-- mevcut, kayıt dışı
+   canli12    0.508 ± 0.006
+   canli24    0.512 ± 0.012
+   canli60    0.529 ± 0.021
+   kalici     0.147 ± 0.014
+   salinim    0.229 ± 0.005
+   dip        0.718 ± 0.012
+   yikim      0.691 ± 0.010
+   net_son    0.870 ± 0.046
+   devlet_pv  0.000 ± 0.000
+   gss_yillik 0.000 ± 0.000
+-- teklif
+   canli12    0.681 ± 0.005
+   canli24    0.711 ± 0.009
+   canli60    0.768 ± 0.012
+   kalici     0.361 ± 0.024
+   salinim    0.164 ± 0.008
+   dip        0.434 ± 0.009
+   yikim      0.417 ± 0.008
+   net_son    1.702 ± 0.109
+   devlet_pv  587099.168 ± 29827.927
+   gss_yillik 11273.242 ± 259.222

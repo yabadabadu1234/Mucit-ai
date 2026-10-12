@@ -1,0 +1,58 @@
+== B) KÜRESEL DUYARLILIK: 80 rastgele parametre çekilişi (aralıklar aşağıda); teklif − referans farkı ==
+   hedef_canli12      (0.5, 0.85)
+   kappa              (0.0, 0.3)
+   mal_pay            (0.2, 0.6)
+   c_mal              (0.4, 0.65)
+   c_hiz              (0.1, 0.25)
+   faiz               (0.0, 0.03)
+   sv                 (0.2, 0.6)
+   aile_olcek         (0.5, 1.3)
+   erisim_kd          (0.4, 0.9)
+   kayip_kd           (0.08, 0.2)
+   talep_bolge        (0.6, 1.1)
+   gss_esik_katsayi   (0.5, 2.0)
+   drag               (0.0, 0.2)
+   duz_oran           (0.105, 0.15)
+-- referans: mevcut, kayıtlı
+   kalici   fark ort +0.135  [min +0.024, max +0.279]  teklifin lehine olduğu çekiliş oranı 1.00
+   dip      fark ort -0.262  [min -0.455, max -0.080]  teklifin lehine olduğu çekiliş oranı 1.00
+   yikim    fark ort -0.322  [min -0.508, max -0.152]  teklifin lehine olduğu çekiliş oranı 1.00
+   canli24  fark ort +0.416  [min +0.277, max +0.537]  teklifin lehine olduğu çekiliş oranı 1.00
+   net_son  fark ort +0.385  [min +0.140, max +0.825]  teklifin lehine olduğu çekiliş oranı 1.00
+-- referans: mevcut, kayıt dışı
+   kalici   fark ort +0.084  [min -0.212, max +0.425]  teklifin lehine olduğu çekiliş oranı 0.85
+   dip      fark ort -0.148  [min -0.457, max +0.134]  teklifin lehine olduğu çekiliş oranı 0.86
+   yikim    fark ort -0.163  [min -0.417, max +0.061]  teklifin lehine olduğu çekiliş oranı 0.93
+   canli24  fark ort +0.144  [min -0.083, max +0.409]  teklifin lehine olduğu çekiliş oranı 0.93
+   net_son  fark ort +0.119  [min -2.332, max +1.306]  teklifin lehine olduğu çekiliş oranı 0.66
+-- 'teklif' kalıcı üst segment oranı: ort 0.228  min 0.047  max 0.536
+-- 'teklif' dip (kalıcı alt) oranı: ort 0.614  min 0.244  max 0.903
+-- Spearman: hangi parametre 'teklif kalıcı üst segment' sonucunu en çok oynatıyor
+   hedef_canli12      +0.81
+   mal_pay            -0.36
+   c_hiz              -0.21
+   kappa              -0.17
+   c_mal              +0.12
+   faiz               +0.10
+   aile_olcek         -0.10
+   duz_oran           -0.09
+   gss_esik_katsayi   -0.09
+   talep_bolge        -0.08
+   drag               -0.05
+   kayip_kd           +0.05
+   erisim_kd          +0.03
+   sv                 -0.01
+-- Spearman: teklif − mevcut(kayıtlı) kalıcı fark
+   hedef_canli12      +0.66
+   mal_pay            -0.43
+   kappa              -0.30
+   c_hiz              -0.29
+   drag               -0.14
+   talep_bolge        -0.13
+
+== C) ORAN TARAMASI (varsayılan parametre, 8 tohum, N=2000): düz tevkifat oranı ==
+  oran 0.105  kalıcı 0.361±0.024  dip 0.434±0.009  yıkım 0.417±0.008  canlı24 0.711  net_son 1.70±0.11
+  oran 0.120  kalıcı 0.352±0.024  dip 0.449±0.009  yıkım 0.429±0.008  canlı24 0.703  net_son 1.68±0.11
+  oran 0.135  kalıcı 0.344±0.024  dip 0.466±0.009  yıkım 0.441±0.008  canlı24 0.695  net_son 1.66±0.11
+  oran 0.150  kalıcı 0.336±0.023  dip 0.480±0.010  yıkım 0.453±0.009  canlı24 0.685  net_son 1.63±0.10
+  oran 0.170  kalıcı 0.323±0.024  dip 0.498±0.010  yıkım 0.470±0.009  canlı24 0.677  net_son 1.60±0.10
