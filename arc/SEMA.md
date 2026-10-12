@@ -244,3 +244,38 @@ Aday tarif (teyit bekler): **tasavvur, bir mevzuyu (şey ya da hâl) temsil eden
 | S-ARC-19 | Tasavvur mevzusuz olabilir mi |
 | S-ARC-20 | Tasavvur kendinde nötr mü, her tasavvur az çok inanç mı taşır |
 | S-ARC-21 | Mana üreten motor hiss-i müşterek mi, vâhime mi |
+
+---
+
+## 9. Kaynaklarla revizyon (F 3-I 286; ARC askıda)
+
+### 9.1 Kaynakların eklediği [Ç]
+| Eklenen | Kaynak | Şemaya etkisi |
+| :-- | :-- | :-- |
+| Tasavvur hüküm içermez, tasdikin öncülüdür | A, B | §8 "hükmü askıda" teyit |
+| İki yön: tecrit (tikel→tümel), tecessüm (mana→muşahhas suret) | A, E | tecrit motoru tek yönlü değildir |
+| Açıklık, seçiklik, tamlık; kaplam/içlem | A | istifham motorunun ölçüleri |
+| Tasdik: cezm, zan, şek; delil: burhan…şiir; usul: temsil, istikra, kıyas | B | strateji/muhakeme eşlemesi |
+| Yedi mertebe | D | ilk dördü şemada, kalp üçü ertelenmiş |
+| mana ≠ tasavvur terim ayrımı | E | padişahın ayrımını destekler |
+
+### 9.2 Tasavvur v2 (aday, teyit bekler) [Ç]
+Tasavvur, manalara bir **suret (nizam)** verilerek bir mevzuya bağlandığı; unsurları ayırt edilmiş ve nispetlendirilmiş, hükmü askıda, iç tutarlılığı sınanabilir, tecritle tümele yükseltilebilen modeldir. Manaların toplamı değil; toplamın üstündeki fark **suret/nizam**dır.
+
+### 9.3 Motor eşlemesi
+| Motor | Kaynaktan karşılık |
+| :-- | :-- |
+| Tecrit | tikel→tümel; tecessümle iki yön |
+| Mantık | zıddını içermeme, iç tutarlılık (sadık/kâzib) |
+| İstifham | açıklık, seçiklik, tamlık eksiği |
+| Strateji | temsil, istikra, kıyas seçimi |
+| Muhakeme | seçilen usulde yürümek |
+
+### 9.4 Yeni açık sualler
+| # | Sual |
+| :-- | :-- |
+| S-ARC-22 | Tasavvurun ekseni betimleme mi (insan nasıl) tasarım mı (makine nasıl olmalı) |
+| S-ARC-23 | D'nin son cümlesi kimin sözü |
+| S-ARC-24 | İç tutarlılık (sadık/kâzib) tasavvura uygulanır mı |
+| S-ARC-25 | "Suret verme" mana birleşiminden fazlasını açıklar mı |
+| S-ARC-26 | Yedi mertebenin ilk dördü şemaya alınsın mı |
