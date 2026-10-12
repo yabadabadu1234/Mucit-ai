@@ -54,19 +54,44 @@ try:
     log("model yüklendi", type(model).__name__); out["yuklendi"] = True
     names = sorted({n.split(".")[-1] for n, m in model.named_modules() if m.__class__.__name__.endswith("Linear")})
     log("Linear adları", names[:20]); out["linear_adlari"] = names[:20]
-    cfg = LoraConfig(r=8, lora_alpha=16, target_modules=r".*language_model.*\.(q_proj|v_proj)", task_type="CAUSAL_LM")
-    model = get_peft_model(model, cfg); out["peft_sarildi"] = True
-    model.print_trainable_parameters()
-    model.gradient_checkpointing_enable() if hasattr(model, "gradient_checkpointing_enable") else None
+    import re as _re
+    from safetensors.torch import save_file
+    class LoraWrap(torch.nn.Module):
+        def __init__(self, base, r=8, alpha=16):
+            super().__init__()
+            self.base = base; self.scale = alpha / r
+            self.A = torch.nn.Parameter(torch.randn(r, base.in_features, dtype=torch.float32) * 0.01)
+            self.B = torch.nn.Parameter(torch.zeros(base.out_features, r, dtype=torch.float32))
+        def forward(self, x):
+            y = self.base(x)
+            d = (x.to(torch.float32) @ self.A.t()) @ self.B.t()
+            return y + (d * self.scale).to(y.dtype)
+    for p in model.parameters(): p.requires_grad_(False)
+    pat = _re.compile(r".*language_model.*\.(q_proj|v_proj)$")
+    wraps = {}
+    for n, m in list(model.named_modules()):
+        if pat.match(n) and hasattr(m, "in_features"):
+            parent = model.get_submodule(n.rsplit(".", 1)[0]); w = LoraWrap(m); dev = next(iter(list(m.parameters()) + list(m.buffers()))).device; w.A.data = w.A.data.to(dev); w.B.data = w.B.data.to(dev)
+            setattr(parent, n.rsplit(".", 1)[1], w); wraps[n] = w
+    out["lora_katman"] = len(wraps); log("sarılan katman", len(wraps))
+    params = [p for w in wraps.values() for p in (w.A, w.B)]
+    for p in params: p.requires_grad_(True)
     model.enable_input_require_grads() if hasattr(model, "enable_input_require_grads") else None
-    opt = torch.optim.AdamW([p for p in model.parameters() if p.requires_grad], lr=1e-4)
+    opt = torch.optim.AdamW(params, lr=1e-4)
     x = tok("def add(a, b):\n    return a + b\n" * 8, return_tensors="pt").to(next(model.parameters()).device)
     losses = []
     for i in range(3):
         o = model(**x, labels=x["input_ids"]); o.loss.backward(); opt.step(); opt.zero_grad()
         losses.append(float(o.loss)); log("adım", i, float(o.loss))
     out["kayiplar"] = losses
-    model.save_pretrained(AD); out["kaydedildi"] = sorted(p.name for p in Path(AD).glob("*"))
+    Path(AD).mkdir(parents=True, exist_ok=True)
+    tensors = {}
+    for n, w in wraps.items():
+        tensors["base_model.model." + n + ".lora_A.weight"] = w.A.detach().to(torch.bfloat16).cpu().contiguous()
+        tensors["base_model.model." + n + ".lora_B.weight"] = w.B.detach().to(torch.bfloat16).cpu().contiguous()
+    save_file(tensors, str(Path(AD) / "adapter_model.safetensors"))
+    (Path(AD) / "adapter_config.json").write_text(json.dumps({"peft_type": "LORA", "task_type": "CAUSAL_LM", "r": 8, "lora_alpha": 16, "lora_dropout": 0.0, "bias": "none", "target_modules": ["q_proj", "v_proj"], "base_model_name_or_path": MODEL, "inference_mode": True}))
+    out["kaydedildi"] = sorted(p.name for p in Path(AD).glob("*"))
 except Exception:
     out["hata"] = traceback.format_exc()[-1500:]; traceback.print_exc()
 Path("/kaggle/working/stage2.json").write_text(json.dumps(out, indent=1))
