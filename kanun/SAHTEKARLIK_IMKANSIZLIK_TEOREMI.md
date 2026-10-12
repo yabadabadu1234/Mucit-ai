@@ -1,4 +1,4 @@
-# SIZINTISIZ VE YÜKSÜZ OLMANIN ŞARTI (F 3-I 288, 290; imkânsızlığın delili, F 3-A 16)
+# SIZINTISIZ VE YÜKSÜZ OLMANIN ŞARTI (F 3-I 288, 291; imkânsızlığın delili, F 3-A 16)
 
 **Önerme (korunum).** Sahte bir B2B işlemde alıcının indirimi k·P, satıcının vergisi t·P ise, sahte işlemi kuran çiftin net kazancı ve Hazine'nin net kaybı aynı sayıdır: (k − t)·P − ücret. Başka kalem yoktur (para çifte geri döner; yalnız vergiler dışarıya akar).
 
