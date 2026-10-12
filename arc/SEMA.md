@@ -247,7 +247,7 @@ Aday tarif (teyit bekler): **tasavvur, bir mevzuyu (şey ya da hâl) temsil eden
 
 ---
 
-## 9. Kaynaklarla revizyon (F 3-I 286; ARC askıda)
+## 9. Kaynaklarla revizyon (F 3-I 289; ARC askıda)
 
 ### 9.1 Kaynakların eklediği [Ç]
 | Eklenen | Kaynak | Şemaya etkisi |

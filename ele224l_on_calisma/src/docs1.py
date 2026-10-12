@@ -2,6 +2,8 @@ import numpy as np
 from common import *
 from docbuilder import Doc
 import exp1
+import ltshots
+import extras
 
 M = "\u2212"
 
@@ -129,6 +131,7 @@ def build_en(R):
     pv, pi, ps = R["pt_spice"]
     d.tab("cursor", ["Cursor", "$V_D$ (V)", "$I_D$ (mA)", "Corresponding $V_S$ (V)"],
           [["X", n2(pv, 4), n2(pi * 1e3, 4), n2(ps, 3)]], "Coordinates of the cursor point in [[f:spice]]", widths=[2.5, 3, 3, 4.5])
+    ltshots.add(d, "e1_dc", "lt_dc")
     # karşılaştırma tablosu
     sel = [-5, 0.5, 0.7, 1, 2, 3, 5]
     th = {r[0]: r for r in R["eq"]}
@@ -168,6 +171,7 @@ def build_en(R):
     d.p("The peak of the output is $5-0.7=4.3$ V. The diode starts to conduct at $\\theta_1=\\arcsin(0.7/5)=%.2f^\\circ$ and stops at $180^\\circ-\\theta_1$, so the conduction angle is $%.1f^\\circ$, slightly shorter than $180^\\circ$. The negative half-cycle is completely blocked, and the reverse voltage across the diode reaches $-5$ V. The average value of the output is %s V (the ideal-diode value $V_p/\\pi$ would be %s V). The transient simulation with the 1N4148 model gives a peak of %s V, which deviates by %.1f%% from 4.3 V, because the real diode drop at 4.3 mA is 0.653 V and not 0.7 V." % (
         th1, 180 - 2 * th1, n2(vavg, 3), n2(5 / np.pi, 3), n2(R["tran_vo_peak"], 4), pct_err(4.3, R["tran_vo_peak"])))
     d.fig("time_spice", R["fig_time_spice"], "Transient simulation of the rectifier with the 1N4148 model compared with the CVD prediction (ngspice).", 13.5)
+    ltshots.add(d, "e1_tran", "lt_tran")
 
     # ------------------------------------------------------------ 3
     d.h(1, "Conclusions")
@@ -288,7 +292,8 @@ def build_tr(R):
     d.p("Devre kurulur, $V_S$ −5 V'tan +5 V'a süpürülür (DC sweep) ve **x ekseninde $V_D$, y ekseninde $I_D$** çizilir. 1N4148 diyodunun gerçek parametreleri ($I_S=2{,}52$ nA, $n=1{,}752$, $R_S=0{,}568\\ \\Omega$) föydeki idealize denklemden farklıdır; bu yüzden eğri biraz sağa (düşük akımlarda daha küçük $V_D$'ye) kayar.")
     d.fig("spice", R["fig_spice"], "SPICE DC süpürme sonucu ($V_D$–$I_D$), imleç (cursor) noktasıyla. ngspice ile üretildi.", 15)
     pv, pi, ps = R["pt_spice"]
-    d.p("İmleç noktası: $V_D=%s$ V, $I_D=%s$ mA (bu noktada $V_S=%s$ V). **Sizin raporunuzda** bu nokta LTspice/Micro-Cap'te sizin seçeceğiniz bir noktadır; ekran görüntüsünün altına tabloyla yazılır ve görüntüde **cihaz seri numarası** görünmelidir (föy kuralı)." % (n2(pv, 4), n2(pi * 1e3, 4), n2(ps, 3)))
+    d.p("İmleç noktası: $V_D=%s$ V, $I_D=%s$ mA (bu noktada $V_S=%s$ V). Raporda ekran görüntüsünün altına imleç koordinatları tabloyla yazılır ve görüntüde **cihaz seri numarası** görünür (föy kuralı)." % (n2(pv, 4), n2(pi * 1e3, 4), n2(ps, 3)))
+    ltshots.add(d, "e1_dc", "lt_dc", tr=True)
     d.h(2, "Teori ile SPICE neden farklı? Bunu mutlaka anlayın")
     sel = [-5, 0.5, 0.7, 1, 2, 3, 5]
     th = {r[0]: r for r in R["eq"]}
@@ -332,11 +337,12 @@ def build_tr(R):
     ])
     d.fig("time_spice", R["fig_time_spice"], "SPICE geçici analizi (1N4148) ve CVD tahmini üst üste.", 13.5)
     d.p("SPICE tepe değeri %s V; CVD'nin 4,3 V'una göre %%%.1f sapma vardır; çünkü 4,3 mA'de gerçek diyot gerilimi 0,653 V'tur, tam 0,7 V değil." % (n2(R["tran_vo_peak"], 4), pct_err(4.3, R["tran_vo_peak"])))
+    ltshots.add(d, "e1_tran", "lt_tran", tr=True)
 
     # ---------------- 7
     d.h(1, "Programda Nasıl Yapılır? (LTspice / Micro-Cap)")
     d.box("Önemli not", [
-        "Bu rehberdeki simülasyon grafikleri bu çalışma ortamında **ngspice** ile üretilmiştir (LTspice ve Micro-Cap'in de dayandığı SPICE motoru ailesindendir). Raporunuza koyacağınız ekran görüntüleri **sizin programınızdan** (LTspice/Micro-Cap) alınmalıdır; netlistler `spice/` klasöründedir ve LTspice'ta `File → Open` ile açılıp çalıştırılabilir. Sayılar aynı çıkmalıdır; küçük farklar için \"sorun giderme\" bölümüne bakın.",
+        "Bu rehberdeki grafiklerin çoğu **ngspice** ile üretilmiştir; ayrıca aynı netlistler **gerçek LTspice**'ta (Wine altında, Linux üzerinde) koşturulmuş ve imleçli ekran görüntüleri `lt_shot/` klasörüne kaydedilmiştir; İngilizce rapordaki 'LTspice' şekilleri bunlardır, üzerlerindeki cihaz seri numarası uydurmadır (hocanın kopya önleme maksadı gözetilerek kullanıcı izniyle). İsterseniz kendi bilgisayarınızda `ltspice/*.cir` dosyalarını `File → Open` ile açıp aynı ekran görüntülerini kendiniz de alabilirsiniz; sayılar aynı çıkmalıdır.",
     ])
     d.p("**LTspice için kısa tarif (DC süpürme, $V_D$–$I_D$):**")
     d.bullets([
@@ -362,4 +368,5 @@ def build_tr(R):
     for q, a in qa:
         d.p("**S:** " + q)
         d.p("**C:** " + a)
+    extras.tr_extra(1, d, R)
     return d

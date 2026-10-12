@@ -3,6 +3,8 @@ from common import *
 from docbuilder import Doc
 from docs1 import n2, sci, M, cursor_table
 import exp5
+import ltshots
+import extras
 
 ERRS_EN = [
     ["E1", "The node where $R_1$ and $R_C$ meet (columns 14\u201315) is not connected to the + rail.", "No supply voltage reaches the circuit; $V_{CC}$ must be wired to this node (red wire from the + rail to column 15)."],
@@ -115,6 +117,8 @@ def build_en(R):
     d.tab("cesp", ["Quantity", "Calculation", "SPICE", "Error"], rows, "Comparison of the calculation and SPICE for the common-emitter amplifier (Error = (SPICE $-$ calculation)/calculation)", widths=[7.4, 2.8, 2.8, 2.2], size=9)
     d.fig("cebode", R["fig_ce_bode"], "Frequency response of the common-emitter amplifier (SPICE and phasor calculation).", 13)
     cursor_table(d, "e5_ce_bode", "cebode")
+    ltshots.add(d, "e5_ce_1", "lt_ce1")
+    ltshots.add(d, "e5_ce_0", "lt_ce0")
     lim = R["ce_lim"]
     lp = R["ce_lim_pp"]
     d.p("**Highest undistorted amplitude.** For the circuit with $C_E$, the THD reaches 1%% at an input amplitude of %s mV peak (%s mV peak-to-peak), at which the output is %s V peak-to-peak (gain %s, equal to the phasor result); the THD reaches 5%% at %s mV peak-to-peak. For the circuit without $C_E$, the THD reaches 1%% at %s V peak-to-peak input (%s V peak-to-peak output) and 5%% at %s V peak-to-peak. The corresponding waveforms are shown in [[f:cetran]] (with $C_E$) and [[f:cetran2]] (without $C_E$); the top panel of each figure shows the highest undistorted amplitude, and the other panels show a larger amplitude and an overdriven input." % (
@@ -163,6 +167,7 @@ def build_en(R):
     cursor_table(d, "e5_cc_tran", "cctran")
     d.fig("ccbode", R["fig_cc_bode"], "Frequency response of the common-collector amplifier.", 12.5)
     cursor_table(d, "e5_cc_bode", "ccbode")
+    ltshots.add(d, "e5_cc", "lt_cc")
     d.fig("ccclip", R["fig_cc_clip"], "Overdriven common-collector amplifier (the output clips on both sides).", 13.5)
     d.p("**Is it possible to double the gain?** No. From [[e:avcc]], $A_V=\\dfrac{(\\beta+1)R_E'}{r_\\pi+(\\beta+1)R_E'}$ is smaller than one for any finite $\\beta$, because the denominator is larger than the numerator by $r_\\pi$. The gain approaches one only when $(\\beta+1)R_E'\\gg r_\\pi$ (equivalently $R_E'\\gg r_e$), and it is already %s. The largest possible improvement is therefore %.1f%%, and a gain of about 2 cannot be obtained by changing the resistors or the bias. Physically, the output follows $v_e=v_b-V_{BE}$ with $V_{BE}$ almost constant, so that the emitter follower provides current gain ($\\beta+1$) and impedance transformation, but not voltage gain. A voltage gain of 2 requires another configuration (for example, a common-emitter stage) or an additional gain stage." % (n2(cc["av"], 4), (1 - cc["av"]) / cc["av"] * 100))
 
@@ -277,6 +282,8 @@ def build_tr(R):
     d.h(2, "Adım 4 – 100 kHz tuzağı (Deney 3'teki gibi)")
     d.p("CE=22 nF'ın 100 kHz'teki empedansı $1/(2\\pi\\cdot10^5\\cdot22\\cdot10^{-9})=72\\ \\Omega$. Kısa devre sayılabilmesi için $r_e=%s\\ \\Omega$'dan **çok küçük** olması gerekir; değil! Bu yüzden 100 kHz'te kazanç kabaca $R_L'/(r_e+|Z_{CE}|)\\approx4078/(22+72)\\approx43$ mertebesine düşer (kaba tahmin). Eksiksiz fazör analizi $|A_V|=%s$ verir (orta bant %s). SPICE %s verir." % (n2(dce["re"], 3), n2(abs(ce["av100"][0]), 3), n2(abs(ce["av_ce"]), 3), n2(R["ce_sp_gain100"][0], 3)))
     d.fig("cebode", R["fig_ce_bode"], "CE'li ve CE'siz devrenin frekans cevabı (SPICE ve fazör hesabı).", 13)
+    ltshots.add(d, "e5_ce_1", "lt_ce1", tr=True)
+    ltshots.add(d, "e5_ce_0", "lt_ce0", tr=True)
     d.box("Ne yazmalısınız?", [
         "Tabloya **orta bant** değerlerini yazın (−183,7 ve −2,22; VO: 6,24 V ve 4,33 V). Yorum kısmında 100 kHz'te CE'nin kısa devre sayılamayacağını ve %.2f µF'lık bir kondansatörün %%90 kazanç için gerekeceğini yazın. Böylece hesapla simülasyon arasındaki farkı kendiniz açıklamış olursunuz." % (R["ce_need"] * 1e6),
     ])
@@ -325,6 +332,7 @@ def build_tr(R):
     thd, a1, a_in = R["cc_tran"]
     d.fig("cctran", R["fig_cc_tran"], "Ortak kollektörlü yükselteç: giriş ve çıkış (1 V tepe, 100 kHz).", 13.5)
     d.fig("ccbode", R["fig_cc_bode"], "Ortak kollektörlü yükselteçin frekans cevabı.", 12.5)
+    ltshots.add(d, "e5_cc", "lt_cc", tr=True)
     op = R["cc_op"]
     rows = [
         ["$V_{BEQ}$ (V)", "0,62", n2(op["vbe"], 4), pc(0.62, op["vbe"])],
@@ -373,4 +381,5 @@ def build_tr(R):
     for q, a in qa:
         d.p("**S:** " + q)
         d.p("**C:** " + a)
+    extras.tr_extra(5, d, R)
     return d

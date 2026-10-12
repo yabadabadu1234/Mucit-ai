@@ -1,4 +1,4 @@
-# İNSAN İNCELEMESİ -- TASAVVUR/TASDİK KAYNAK OKUMASI (F 3-I 286)
+# İNSAN İNCELEMESİ -- TASAVVUR/TASDİK KAYNAK OKUMASI (F 3-I 289)
 
 Bu dosya padişahın yapıştırdığı beş metnin envanteridir. Metinler **kaynaktır, padişahın sözü değildir**. Yorum çıkarımdır [Ç].
 OCR notu: metinlerde "i" yerine "!" çıkmıştır (Özpilavcı maddeleri); anlam değişmez.

@@ -44,4 +44,51 @@ Lafız tarafsızdır (F 3-I 246); dinî sebep yazılmaz. Dayanak ve bedel durumu
 
 **Madde U (Aracılık ve vadeli alım).** Aracılıkta her satışta mal sahibi portala kaydedilir ve ödeme doğrudan mal sahibine yapılır; itibar ortaklığında yeni mükellefin yıllık vadeli alım toplamı altı brüt asgari ücreti geçemez, ortaklar müteselsil sorumludur.
 
+## Gence yük yüklemeyen son kesici: güven oyunu (F 3-I 286; simülasyon `MALI_MODEL/guven_oyunu_sim_out.txt`)
+
+Fikir: gelir kaydırmanın (naylon fatura, sahte ortak) ekonomik özü, parayı alan tarafın parayı **geri vermesine** bağlıdır. Verecek olanın bağlayıcı bir yükü yoksa, paranın sahibi olan ona güvenemez. Aşağıdaki maddeler dürüst mükellefe hiçbir iş, belge veya ödeme yüklemez; yalnız hak ve koruma verir.
+
+**Madde V (Hesaptaki para hesap sahibinindir).** Mikro mükellefin hesabına geçen ödeme, hesap sahibine aittir. Ödemenin tamamının veya bir kısmının ödeyene geri verilmesine veya üçüncü kişiye aktarılmasına ilişkin anlaşma, söz veya senet hükümsüzdür; bunlara dayanılarak dava açılamaz veya takip yapılamaz.
+
+**Madde Y (Bildirim güvencesi).** Mikro mükellef, hesabına geçen bir ödemenin gerçek bir mal veya hizmete karşılık olmadığını yahut geri verilmesinin istendiğini veya kimliğinin başkasınca kullanıldığını portala bildirirse, bildirdiği işlem nedeniyle hakkında vergi ve usulsüzlük cezası uygulanmaz; yalnız ödeyen yönünden vergi sonucu doğar. Bildirimle ortaya çıkan vergi ve cezanın **tahsil edilen** kısmının yüzde onu bildirene ödenir (tahsil edilmeyen tutardan ödül verilmez; mevcut ihbar ikramiyesi hükümleri saklıdır). Ödeyen, denetim başlamadan önce işlemi kendisi bildirirse, vergi usulüne ilişkin pişmanlık hükümleri üçüncü kişi bildirimi şartı aranmaksızın uygulanır.
+
+**Madde Z (Bilgilendirme).** Portal, mikro mükellefe, kendisine ilk kez ödeme yapan ödeyenden gelen ve Bakanlıkça belirlenen tutarı aşan ödemelerde, Madde V ve Y'deki hakları bildiren bir ileti gönderir; aynı içerikli ileti ödeyene de gider. Mükellefin herhangi bir işlem yapması gerekmez. (İletinin ödeyene de gitmesi, karşı tarafın bu haklardan haberdar olduğunu ortak bilgi yapar; sahte düzen kurmak isteyen güvenebileceği bir sessizlik bulamaz.)
+
+**Madde AA (İlişkili ödeyen).** Mikro mükelleften ilişkili kişi sayılan bir ödeyenin yaptığı alımda indirim, emsal bedelle sınırlıdır. Emsal bedel, portalın aynı hizmet kodunda ilan ettiği bölgesel bedel aralığıdır; aralık içindeki işlem hiçbir belge istemez. (Gelir vergisi mükellefi ödeyen için bu hükmün mevcut mevzuattaki karşılığı yoklanmamıştır; yoksa bu madde yeni hüküm olarak gerekir.)
+
+**Neden dürüst gence yük değildir:** hiçbir madde mükellefe ödeme, belge, bekleme veya kısıt getirmez; Madde Z yalnız bilgi iletisidir; Madde AA emsal bedel aralığındaki satışı etkilemez; Madde Y yalnız savunmasız tarafı korur.
+
+**Neden keser (simülasyon, varsayımlı):** bugün sahte faturada iki taraf birbirini ihbarla tehdit edebildiğinden ihanet pahalıdır (karşılıklı rehin). Madde V ve Y bunu kaldırır: parayı alan ihanet ederse hem parayı tutar, hem cezadan korunur, hem ödül alır; paranın sahibi şikâyet edemez. Tanınmayan tarafla yapılan düzen kendi kendini bozar. Yabancı kimlikle yapılan teşebbüsün kapanması %93,6, tanıdıkta %69,4; aile içinde %32,1 kapanır, kalan %56,4 işlemeye devam eder (yaptırım gücü varsayımlıdır). Ağırlıklı aktif teşebbüs payı %29,0'dan %18,2'ye iner (-%37,2).
+
+**Kalan risk (sıfır denmez):** aile ve örgüt içinde sadakat veya şiddet güveni sağlar; kimliğin, telefonun ve hesabın fiilen alıcıda olduğu kiralama; sahte seri numarası. Aile başına sızıntı üst sınırı kimlik başına değil ilişkili kişiler toplulaştırıldığı için bir tavan × oran farkıdır: 792 720 × (0,25 − 0,105) = 114 944 TL/yıl; tek alıcıda ilk yıl %60 kuralıyla 28 736 TL.
+
+**Madde AB (Cihaz mahsubu sınırı).** Mikro mükellefin cihaz alımına bağlı KDV mahsubu otuz altı ayda bir defa kullanılır, yalnız mükellefin kendi tevkifatından düşülür, nakde çevrilmez ve iade edilmez; tutar Madde 1'deki üst sınırı geçemez. Gerekçe: seri numarası sahte olsa bile kazanç, mükellefin kendi ödeyeceği verginin bir kısmıyla sınırlıdır; geliri olmayan kimlik hiçbir şey alamaz (en çok 5 000 TL, otuz altı ayda bir; model girdisi `kdv_donanim_kdv`).
+
+**Madde AC (Kimlik kullanımı izi).** Portal, aynı cihaz, bağlantı veya telefon hattından çok sayıda mikro mükellef kimliğiyle oturum açıldığını kayda geçirir; tek başına hiçbir yaptırım doğurmaz, yalnız Madde Y bildirimine ve idarenin incelemesine dayanak olur. Dürüst mükelleften hiçbir işlem istenmez.
+
+## Mucitçe sualler ve cevapları (F 3-I 287)
+
+| Suâl | Cevap |
+| :-- | :-- |
+| Sahte düzen niçin işler? | Para geri dönerse. Geri dönüşü zorlayan yalnız karşılıklı ihbar korkusu ve ilişkidir. |
+| O hâlde hangi öncül kaldırılırsa kalkar? | Karşılıklı rehin: Madde V (para hesap sahibinindir, geri verme sözü hükümsüz) ve Y (bildirene güvence ve ödül) bunu kaldırır. |
+| Tersinden bakılırsa? | Düzeni kuran alıcı yalnız kazanmak için girer: girişi, karşı tarafın ihanetinin ona hiçbir bedeli olmadığı bir oyuna çevirmek, girişin kendisini rasyonel olmaktan çıkarır (B'nin girmesi için S'nin işbirliği olasılığı en az 0,867 olmalı). |
+| Aile ve örgüt içinde sadakat bağlıyorsa? | Kimlik başına değil, ilişkili kişiler toplulaştırıldığı için aile başına tek tavan sızıntı sınırıdır: 114 944 TL/yıl; ayrıca Madde AA. |
+| Bu sınır Hazine'yi bozar mı? | Hesap aşağıdadır: kırılma noktası, kimliklerin %5,1'i (Kötümser) veya %10,7'si (Orta) hepsini azamî tavanda sahte işlerse; model aracılığıyla `sahte_fatura_kaybi` kırılma payı %35 (Kötümser, tedbirsiz) ile %77 (İyimser) arasındadır. |
+| Kiralanmış kimlik? | Kiralayanın elinde ne ödül ne güvence vardır; kimliğin sahibi her an bildirebilir ve bildirdiği miktar büyüdükçe ödülü büyür; bekleyen taraf kiralayanın alacağı değil kendisidir (bekleme oyunu alıcının aleyhine). Madde AC iz bırakır. |
+
+**Hesap (varsayımsızdır, aritmetiktir):** Orta yıl-4 net +4,06 mlr TL; tam tavanda sahte aile başına Hazine kaybı 792 720 × (0,25 − 0,105) = 114 944 TL; 4,06 mlr / 114 944 = 35 322 aile = N'nin (331 000) %10,7'si. Kötümser: 0,59 mlr / 114 944 = 5 133 aile = N'nin (100 000) %5,1'i. Bu hesap, sahtekârların bu rejimde zaten ödeyeceği vergiyi (0,105) düştükten sonraki kaybı verir; mevcut mükellefin rejime kaymasını (yutulma) ayrıca barındırmaz.
+
+## Mecburî nötrlük kuralı (F 3-I 288; tarama `MALI_MODEL/notr_kural_sim_out.txt`)
+
+**Madde AD (Mahsup oranı eşitliği).** Alıcı, mikro mükelleften yaptığı alımı kendi vergi matrahından indirmek istiyorsa, ödeme anında portalda **mahsup talep ettiğini** işaretler. Mahsup talep edilen ödemede (a) mikro mükellefin o ödemeye ait vergisi, alıcının o yıl için portalda ilan edilen vergi oranıyla hesaplanır (götürü gider uygulanmaz; mükellef isterse belgeli gerçek gideri düşer) ve (b) alıcının indirimi, bu ödemede satıcıdan alınan oranı geçemez. Mahsup talep edilmeyen ödemede satıcı Madde 1 (e)'deki orana tabidir ve alıcı indirim yapamaz. Oran, ödemeden önce satıcıya portalda gösterilir.
+
+**Neden dürüste engel değil:** (1) Mahsup istemeyen alıcı (tüketici, kendi kullanımı için alan) ve onun satıcısı hiçbir şey değiştirmez; satıcı %10,5 öder. (2) Mahsup isteyen alıcı, düzenli bir tedarikçiden alsaydı zaten tam indirimle alırdı; satıcı da düzenli mükellef olsaydı daha yüksek vergi ve sabit primle karşılaşırdı (tablo: satıcının yıllık yükü eski rejimde hasılatın %23 ila %351'i, bu kuralda %25). (3) Yük yalnız fiilen kazanılan paraya biner; kuruluşta, ofiste, muhasebecide, belgede hiçbir sabit yük yoktur.
+
+**Neden sahtekâra zemin bırakmaz (tarama):** sahte ödemede alıcı mahsup talep ederse kazancı tam olarak `-(c)` (c: iade ücreti), yani sıfır veya negatiftir; talep etmezse indirimi yoktur. Alıcı oranı 0,15 ila 0,40, ücret 0 ila 0,10 bütün stratejilerde azamî kazanç **0,000**. Mevcut kuralda aynı tarama **+0,295** verir. Sahte fatura kaybı kalemi bu kuralla yapı icabı sıfırdır.
+
+**Bedel (açık):** (a) B2B satan genç, mahsup talep eden alıcıda %10,5 yerine alıcı oranını öder; bu, teklifin vaadinden bir geri adımdır ve padişahça ayrıca onaylanmalıdır. (b) Alıcı yönünden alternatif: satıcıya yük bindirmeden alıcının indirimini satıcının ödediği oranla sınırlamak (alıcı bedel öder, B2B talep düşebilir; modellenmedi). (c) Modelde B2B payı (`kurumsal_pay` 0,70) varsayımdır; katılım kaybı modellenmedi.
+
+**Kalan (kesilemeyen) vektör:** vergi oranı farkı tüketiciye satışta da vardır (yüksek hasılatlı bir işi, tavan altı kimliklere bölmek). Bunu kesen yapı bulunamadı; sınırlayıcılar: Madde V ve Y (yabancıyla işlemez), kimlik başına tek hesap, ilişkili kişilerin toplulaştırılması, Madde AC; sızıntı üst sınırı, sadakatle bağlı grup başına üye sayısı × 114 944 TL/yıl.
+
 **Kaldırılanlar (nakz):** ortak sayısıyla tavan indirimi (dürüst ortaklığa zarar verirdi) ve ceza katsayıları. **Kesilemeyenler ve mevcut sınırlayıcıları:** `MALI_MODEL/imkan_kesme_sim_out.txt`.
