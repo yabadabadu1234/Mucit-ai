@@ -113,3 +113,16 @@ Taban: Qwen3.5-4B (bf16, 8,51 GB/GPU), HF transformers 5.16.1, peft 0.20.0. Yerl
 Yorum [Ç]: ARC'a önceden hiç eğitilmemiş bir tabana 45 sn'lik görev-içi eğitim kural öğretmedi; kayıp düştü ama test çıktısı tutmadı (4 görev, küçük örnek). Bu, NVARC'ın önce büyük sentetik ARC külliyatıyla ön eğitim yapıp sonra görev başına ince ayar yapmasının gerekçesini ölçüyle destekler. Sonuç görev sayısı küçük olduğu için kesin hüküm değildir.
 
 Bütçe [Ç]: 240 görev / 12 saat = 180 sn/görev. Isınma 55 sn bir kerelik (işçi başına), eğitim 45 sn, üretim 10-40 sn: sığar, fakat tek işçi sırayla 240 görev yapamaz; 4 işçi × 60 görev × (45+25 sn) = 70 dk. Yük burada üretim hızıdır (HF `generate`); vLLM ile LoRA'lı üretim ayrıca denenmeli.
+
+## 9. NVARC'ın açık hattından okunanlar (`yiheng/reproduce-nvarc-2025-results`, 9 hücre, baştan sona okunmadı; ilk altı hücre okundu)
+
+| # | Olgu | İşaret |
+| :-- | :-- | :-- |
+| 1 | Her GPU için ayrı işçi süreci, `CUDA_VISIBLE_DEVICES=rank`: bizim manuel yerleşimimizle aynı kalıp | [Y] |
+| 2 | Kelime hazinesi **16 belirtece** indirgenmiş: rakamlar 0-9, satır sonu, kullanıcı/asistan/boşluk/bitiş işaretleri (`ARC_VOCAB`). Bizim OOM'un sebebi olan 248 bin kelimelik logit tablosu yoktur | [Y] |
+| 3 | Biçim: satır başına rakam dizisi, `\n` ayırıcı (bizimkiyle aynı) | [Y] |
+| 4 | Çıkarım: artırma + ışın puanı toplamı (`getter_full_probmul_3`: çıkarım puanı + artırma puanı) ile adaylar oylanır | [Y] |
+| 5 | Açık veri kümeleri: `sorokin/nvarc-synthetic-puzzles` (338 MB), `sorokin/nvarc-augmented-puzzles` (1,3 GB; arc2_training, concept, mini...), `sanyul/nvarc-full` (11,9 GB) | [Y] listeler |
+| 6 | Hazır ince ayar ağırlıkları: `madarshbb/nvarc-training-adapters-1..4` (12,4 GB'lık dört veri kümesi) | [Y] listeden, içeriği açılmadı [?] |
+
+Sonuç [Ç]: kanal T'yi sıfırdan kurmak yerine (a) kelime hazinesini 16'ya indirmek, (b) NVARC'ın açık sentetik bulmaca külliyatıyla ön eğitilmiş taban kullanmak gerekir; aksi hâlde § 8 satır 10'daki 0/4 tekrar eder.
