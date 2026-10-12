@@ -3,6 +3,7 @@ from genc_model import tarife, W, ASGARI_NET, TAVAN, PRIM_AYLIK, SABIT_AYLIK, GI
 SMIN=ASGARI_NET/3
 GSS_AYLIK=0.06*W
 GSS_GELIR_ESIGI=W/3.0
+GECIM_HADDI=W/3.0
 YAS=np.arange(16,30)
 KOHORT=np.array([1.283e6,1.283e6,1.295e6,1.295e6,1.237e6,1.237e6,1.237e6,1.276e6,1.276e6]+[1.35e6]*5)
 def giris_orani(a):
@@ -46,7 +47,7 @@ REJ={
  "tarafsız":dict(erisim=1.0,kayip=0.08,vergi="yok",prim="yok",sabit=False,tavan=False,istisna=False,denetim=0.0,z=0.0,gss=False),
  "mevcut, kayıtlı":dict(erisim=1.0,kayip=0.08,vergi="kar",prim="sabit",sabit=True,tavan=False,istisna=True,denetim=0.0,z=0.0,gss=False),
  "mevcut, kayıt dışı":dict(erisim=0.55,kayip=0.12,vergi="yok",prim="yok",sabit=False,tavan=False,istisna=False,denetim=0.004,z=0.3,gss=False),
- "teklif":dict(erisim=1.0,kayip=0.08,vergi="tevk",prim="yok",sabit=False,tavan=True,istisna=True,denetim=0.0,z=1.0,gss=True)}
+ "teklif":dict(erisim=1.0,kayip=0.08,vergi="tevk",prim="gelire",sabit=False,tavan=True,istisna=True,denetim=0.0,z=1.0,gss=True)}
 def kos3(rj,P,S,N,par,T=72):
     yol=P["yol"]; mal=P["mal"]
     c_real=np.where(mal,par["c_mal"],par["c_hiz"])
@@ -91,6 +92,9 @@ def kos3(rj,P,S,N,par,T=72):
         kar_prev=np.maximum((1-GIDER)*(yil-R)-pm*ay-(1737500.0 if ist else 0),0)*drag
         vergi=np.where(kar_modu,tarife(kar_ytd)-tarife(kar_prev),vergi)
         if rj["prim"]=="sabit": prim=np.full(N,PRIM_AYLIK)
+        if rj["prim"]=="gelire":
+            y_ay=R-vergi; K_esik=par["prim_k"]*W
+            prim=PRIM_AYLIK*np.clip((y_ay-GECIM_HADDI)/(K_esik-GECIM_HADDI),0.0,1.0)
         prim=np.where(genel&(rj["prim"]!="sabit"),PRIM_AYLIK,prim)
         if rj["sabit"]: sabit=np.full(N,SABIT_AYLIK)
         sabit=np.where(genel,SABIT_AYLIK,sabit)
@@ -103,7 +107,7 @@ def kos3(rj,P,S,N,par,T=72):
         gss=np.zeros(N)
         if rj["gss"] and par["gss_ac"]:
             kapsam_disi=(P["okuyor"]>0)&(P["yas"]<25)
-            gss=np.where((~kapsam_disi)&odeme&(onceki>GSS_GELIR_ESIGI*par["gss_esik_katsayi"]),GSS_AYLIK,0.0)
+            gss=np.where((~kapsam_disi)&odeme&(onceki>GSS_GELIR_ESIGI*par["gss_esik_katsayi"])&(prim<=0),GSS_AYLIK,0.0)
         gel=onceki-gss
         gss_toplam+=gss
         burs_kaybi=0.25*ASGARI_NET*P["burs"]*(rj["vergi"]=="kar")*(R>0)
@@ -134,7 +138,7 @@ def olc3(r):
       canli12=float(r["canli"][11].mean()),canli24=float(r["canli"][23].mean()),canli60=float(r["canli"][59].mean()),
       net_son=float(net[60:].mean()/ASGARI_NET),devlet_pv=float((r["devlet"]*isk[:,None]).sum(axis=0).mean()),gss_yillik=float(r["gss"].mean()/6.0))
 VARSAYILAN=dict(b0=5500.0,L=0.45,b_ilk=0.5,duz_oran=0.135,kappa=0.10,talep_bolge=1.0,mal_pay=0.40,c_mal=0.50,c_hiz=0.15,
-  faiz=0.015,sv=0.5,dayanma=True,drag=0.0,aile_olcek=1.0,erisim_kd=0.55,kayip_kd=0.12,gss_ac=True,gss_esik_katsayi=1.0,hedef_canli12=0.75)
+  faiz=0.015,sv=0.5,dayanma=True,drag=0.0,aile_olcek=1.0,erisim_kd=0.55,kayip_kd=0.12,gss_ac=True,gss_esik_katsayi=1.0,hedef_canli12=0.75,prim_k=6.0)
 def kalibre(par,N,seed):
     P=nufus3(N,seed,par); S=sok3(N,72,seed+1)
     lo,hi=1500.0,15000.0

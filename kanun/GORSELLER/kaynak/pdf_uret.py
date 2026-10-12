@@ -1,7 +1,7 @@
 import io,os,pymupdf
 from PIL import Image
 D=os.path.dirname(os.path.dirname(os.path.abspath(__file__))); os.chdir(D)
-bas=[("ekran_01_tescil.png","Ekran 1. Tescil: uygunluk kontrolü (Madde 1 giriş, (g), (h), (ö), (p), (t); VUK Ek 19)"),
+bas=[("ekran_01_tescil.png","Ekran 1. Tescil: uygunluk kontrolü (Madde 1 giriş, (g), (h), (ö), (p); Madde 5 (o); VUK Ek 19)"),
 ("ekran_02_hesap_uets.png","Ekran 2. Münhasır hesap ve UETS adresi (Madde 1 (d), Madde 2 (a), Madde 6)"),
 ("ekran_03_belge.png","Ekran 3. Mikro Mükellefiyet ve Muafiyet Belgesi (VUK Ek 19 (ç))"),
 ("ekran_04_fatura.png","Ekran 4. Fatura düzenleme ve tevkifat (Madde 1 (a), (b), (e); Madde 2 (b); Madde 3)"),
@@ -13,7 +13,7 @@ bas=[("ekran_01_tescil.png","Ekran 1. Tescil: uygunluk kontrolü (Madde 1 giriş
 ("sema_02_yasam_dongusu.png","Şema 2. Mükellefiyet yaşam döngüsü (Madde 1 (h))"),
 ("grafik_01_yuz_lira.png","Grafik 1. 100 TL'lik hasılatın dağılımı"),
 ("grafik_02_kisi_basi.png","Grafik 2. Kişi başına tevkifatın dağılımı (teklif III.D.2, %13,5)"),
-("model_01_selale.png","Model 1. Orta senaryo 4. yıl: Hazine net etkisi (şelale; prim hiç sürmezse)"),
+("model_01_selale.png","Model 1. Orta senaryo 4. yıl: Hazine net etkisi (şelale; gelire bağlı prim)"),
 ("model_02_tornado.png","Model 2. Duyarlılık (tornado)"),
 ("model_03_montecarlo.png","Model 3. Monte Carlo dağılımı"),
 ("model_04_varyantlar.png","Model 4. Politika varyantları"),

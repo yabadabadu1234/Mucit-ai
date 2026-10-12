@@ -38,11 +38,12 @@ ax.text(0,-22,"Gider tenzili yok: tevkifat = 100 × 0,135 = 13,5. Not: 4. sütun
 fig.savefig(os.path.join(OUT,"grafik_01_yuz_lira.png"),dpi=110,bbox_inches='tight'); plt.close()
 # 3 kişi başı Hazine
 h=["2 asgari\n66.060","6 asgari\n198.180","12 asgari\n396.360","24 asgari\n792.720"]
-tev=[8918,26754,53509,107017]; bes=[321,963,1926,3853]; myo=[0,0,20809,20809]; net=[8597,25791,30773,82356]
+tev=[8918,26754,53509,107017]; bes=[321,963,1926,3853]; myo=[0,0,20809,20809]; net=[8597,25791,30774,82356]; prim=[0,2480,13295,34925]
 import numpy as np
 x=np.arange(4); fig,ax=plt.subplots(figsize=(11,6.2))
 ax.bar(x,net,color='#14662b',label="Hazine'de kalan net"); ax.bar(x,bes,bottom=net,color='#c98b00',label="BES yükü (%3,6)"); ax.bar(x,myo,bottom=np.array(net)+np.array(bes),color='#a11d1d',label="90 gün MYÖ primi (%21)")
-for i in range(4): ax.text(i,tev[i]+1500,f"Tevkifat {tev[i]:,}".replace(",","."),ha='center',fontsize=10,fontweight='bold')
+ax.bar(x,prim,bottom=tev,color='#2d6aa8',label="Gelire bağlı prim (SGK'ya, kişinin ödediği)")
+for i in range(4): ax.text(i,tev[i]+prim[i]+1500,f"Tevkifat {tev[i]:,}".replace(",",".")+(f" + prim {prim[i]:,}".replace(",",".") if prim[i] else ""),ha='center',fontsize=9,fontweight='bold')
 ax.set_xticks(x); ax.set_xticklabels(h); ax.set_ylabel("TL / kişi / yıl"); ax.legend(frameon=False)
 ax.set_title("Kişi başına tevkifatın dağılımı (teklif III.D.2 tablosu)",fontsize=13,fontweight='bold',color='#1f3a5f'); ax.spines[['top','right']].set_visible(False)
 fig.text(0.01,-0.02,"Yutulma (halen kayıtlı mükelleflerin geçişi) bu grafikte yoktur; III.D.4'e bakınız. "+NOT,fontsize=8,color='#555')

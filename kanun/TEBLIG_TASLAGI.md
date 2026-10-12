@@ -7,7 +7,7 @@
 
 1.1. Bu Tebliğin amacı, mükerrer 20/E maddesi kapsamındaki Mikro Mükellefiyet tescilinin, faturanın, tevkifatın ve ilgili bildirimlerin uygulama usul ve esaslarını açıklamaktır. [T: M.1 son fıkra]
 
-1.2. Kapsam: Türkiye Cumhuriyeti vatandaşı gerçek kişiler; yıllık gayrisafi hasılatı 24 brüt asgari ücreti aşmayan; sermayeden ziyade şahsî mesaiye, bilgiye veya dijital üretime dayanan hizmetler. Yabancı uyruklular kapsam dışıdır. Negatif liste (M.1 (g)) kapsam dışıdır. Halen kayıtlı mükellef ve 4/b sigortalıları dâhil herkes aynı şartlarla girer (M.1 (p)); 5510 sayılı Kanunun 4/1-(a) veya (c) bendi kapsamında ücretle çalışanlar rejime alınmaz (M.1 (t)). [T: M.1 giriş, (g), (p), (t)]
+1.2. Kapsam: Türkiye Cumhuriyeti vatandaşı gerçek kişiler; yıllık gayrisafi hasılatı 24 brüt asgari ücreti aşmayan; sermayeden ziyade şahsî mesaiye, bilgiye veya dijital üretime dayanan hizmetler. Yabancı uyruklular kapsam dışıdır. Negatif liste (M.1 (g)) kapsam dışıdır. Halen kayıtlı mükellef ve 4/b sigortalıları dâhil herkes aynı şartlarla girer (M.1 (p)); maaşlı çalışan isterse tescil olabilir, tescil seçmemişse ona mikro muamelesi yapılmaz, genel hükümler uygulanır. [T: M.1 giriş, (g), (p)]
 
 ## 2. TANIMLAR
 
@@ -28,7 +28,7 @@
 
 3.3. On altı yaşını doldurmuş küçüğün tescili yasal temsilcinin portalda vereceği elektronik rızayla yapılır. [T: M.1 (ö)]
 
-3.4. Tescilde aşağıdakiler kontrol edilir: başvuru tarihinde 4/a veya 4/c kapsamında sigortalı olarak çalışılıp çalışılmadığı (portal SGK kaydını otomatik sorgular; çalışıyorsa tescil yapılmaz ve mükellefe sebep ekranda bildirilir); gönüllü sonlandırma bekleme süresinin dolmuş olması. Tescilli kişi sonradan 4/a veya 4/c kapsamında çalışmaya başlarsa tescil çalışmanın başladığı ayın sonundan itibaren askıya alınır, askı süresince hasılat genel hükümlere tabidir; ücretli çalışma bitince tescil başvuru aranmaksızın yeniden açılır ve mükelleften belge, ceza veya bekleme istenmez. 4/b sigortalılığı bulunanlar tescil olabilir; prim yükümlülükleri tescille sona erer, isteğe bağlı sigorta saklıdır. [T: M.1 (h), (p), (t)] [İDARE: SGK ve GİB sorgu entegrasyonu, askı ve yeniden açma akışı]
+3.4. Tescilde aşağıdakiler kontrol edilir: gönüllü sonlandırma bekleme süresinin dolmuş olması. Maaşlı (4/a veya 4/c) çalışan tescil olabilir; tescil açıkça istenmeden hiçbir kişiye mikro muamelesi yapılmaz. 4/b sigortalılığı bulunanlar tescil olabilir; gelirden bağımsız sabit prim yükümlülükleri tescille sona erer ve Madde 5 (o) gelire bağlı prim başlar: aylık net mikro gelir brüt asgari ücretin üçte biri olan geçim haddini (11.010 TL) aşmıyorsa prim yoktur, aşıyorsa gelirle orantılı artar, brüt asgari ücretin altı katında (198.180 TL) tam prim (11.808,23 TL) alınır; prim tevkifatla birlikte tahsilat anında kesilir; o ay 4/a veya 4/c kapsamında çalışılıyorsa mikro prim alınmaz. İsteğe bağlı sigorta saklıdır. 
 
 3.5. Mükellefe karekodlu Mikro Mükellefiyet Belgesi üretilir. Belge, kamu kurumları, finansal kuruluşlar ve kurumsal müşteriler nezdinde mükellefiyet ve muafiyetin ispatıdır. [T: VUK Ek 19 (ç)]
 

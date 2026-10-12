@@ -179,3 +179,10 @@ Karar notları (bu sürümde işlenen tercihler): giriş eşiği iki aylık brü
 - **Sanal POS:** TCMB üye işyeri azami komisyon oranlarını periyodik ilan eder; ikincil kaynaklarda kredi kartı %3,56, banka kartı %1,04 (1/11/2025); 2026 tebliği doğrulanmadı. Madde 7 sabit oran yazmaz, TCMB’nin ilanına bağlanır.
 - **TOBB, Sanayi ve Teknoloji Bakanlığı, YÖK, TÜRMOB** adları: genel bilgiye göre doğru; resmî teşkilat metni okunmadı.
 - **Yoklanamayan:** 4632 kapsamında katılım esaslı fonların kanunî dayanağı (ikincil kaynaklarda katılım emeklilik fonları ve OKS katılım standart fonu görülür; mevzuat metni okunmadı).
+
+## Açık sualler (F 3-I 304 sonrası, 12/10/2026)
+1. Geçim haddi: padişah "11.000" dedi; teklifte brüt asgari ücret/3 = 11.010 TL yazıldı (çıkarım). Doğru mu?
+2. Prim eğrisinin tabanı: aylık net mikro gelir (hasılat − tevkifat) alındı (çıkarım). Hasılat mı olmalı?
+3. "O ayki primi ödediği takdirde" ibaresinin gün sayısına tesiri: teklifte ödenen primin tam prime oranı kadar gün (orantılı); sonuç: iki asgari ücret net gelirle 9000 gün ≈ 85 yıl (`EMEKLILIK_HESABI.md`). Alternatif: ödenen her ay 30 gün (SGK yükü ölçülmedi).
+4. Tavan üstü bölme sızıntısı: A (tavansız doğrusal vergi) mı, B (tavan kalır, sızıntı azalır) mı (`SIZINTI_TAVAN_BOLME.md`).
+5. Kötümser senaryo %13,5'te −2,05; F 3-I 253 şartı ancak oran ≥ %26,1'de sağlanır.

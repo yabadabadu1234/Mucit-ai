@@ -1,5 +1,5 @@
 import model as m, genc3
-out=["# DUYARLILIK TABLOLARI (F 3-I 300) -- her tabloda yalnız bir parametre değişir, düz oran %13,5, diğerleri baz; prim_devam=0 (eski kayıtlı primin tamamı kayıp, muhafazakâr)\n",
+out=["# DUYARLILIK TABLOLARI (F 3-I 300) -- her tabloda yalnız bir parametre değişir, düz oran %13,5, diğerleri baz; gelire bağlı prim baz (tam prim eşiği 6 asgari ücret), maaşlı payı baz (F 3-I 304)\n",
 "Mali model: dördüncü yıl net etki, milyar TL (Kötümser / Orta / İyimser). Genç modeli: N=3000, tohum 1; teklif rejimi ve mevcut kayıtlı rejim.\n"]
 def fm(ad,deg,key=None,oran=0.135):
     r=[]
@@ -15,7 +15,7 @@ def tablo(baslik,key,vals):
 out.append("\n## Düz oran\n\n| oran | Kötümser | Orta | İyimser |\n|:--|--:|--:|--:|")
 for o in (0.105,0.12,0.135,0.15,0.18,0.20,0.22,0.25,0.27,0.30):
     out.append("| %%%.1f | %.2f | %.2f | %.2f |"%(o*100,*fm(None,None,None,o)))
-for k,v in [("prim_devam",(0,.25,.5,.75,1)),("prim_odeme",(.5,.65,.8,.9,1)),("s_kayitli",(.05,.15,.3,.45)),("u_ucretli",(.1,.2,.3,.4)),
+for k,v in [("prim_k",(3,4,6,8,12)),("prim_toplama",(0,.5,.8,1)),("prim_odeme",(.5,.65,.8,.9,1)),("s_kayitli",(.05,.15,.3,.45)),("u_ucretli",(.1,.2,.3,.4)),
  ("medyan_W",(3,4,5,6,8)),("sigma",(.6,.9,1.2)),("n_toplam",(100000,331000,700000,1096000)),("phi",(.005,.01,.02,.04)),
  ("onlem",(0,.3,.5,.7,.9)),("kurumsal_pay",(.3,.5,.7,.9)),("kgf_alim",(.03,.05,.08,.12)),("kgf_temerrut",(.06,.1,.15,.25)),
  ("itiraz_oran",(.02,.04,.08)),("denetim",(0,.005,.01,.02)),("bes_vazgecme",(.2,.35,.5,.8)),("myo_uygun",(.1,.2,.35,.5)),("iskonto",(.03,.05,.1))]:

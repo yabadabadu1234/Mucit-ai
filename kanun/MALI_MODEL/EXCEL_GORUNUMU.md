@@ -11,8 +11,11 @@ Excel'in 'Sonuc' sayfası bağımsız formül hesaplayıcısıyla (`formulas` k�
 | Hasılat dağılımı yayılımı (σ, log-normal) | sigma | 0.9 | 0.9 | 0.9 | Varsayım |
 | Katılımcı sayısı (kararlı durum, kişi) | n_toplam | 100000 | 331000 | 1.096e+06 | Kötümser: F 3-I 268; İyimser: F 3-I 269 oranları × ILO 2025 + F 3-I 273 gayrıresmî tanımı (n_veri.py); Orta: geometrik ortalama (Claude) |
 | Halen kayıtlı olup rejime geçenlerin payı (s) | s_kayitli | 0.3 | 0.15 | 0.05 | Varsayım; prim isteğe bağlı olduğundan sonucu çok etkiler |
-| Halen kayıtlı olanın isteğe bağlı primi sürdürme payı (0 = hiç sürdürmez) | prim_devam | 0 | 0 | 0 | Teklif Madde 1 (p), 5 (o): prim isteğe bağlı; en kötü hâl 0 |
-| Ücretli ek gelir payı (u) | u_ucretli | 0 | 0 | 0 | Teklif Madde 1 (t): ücretli çalışan rejim dışında (F 3-I 302) |
+| Gelire bağlı prim: tam prim eşiği (brüt asgari ücret katı) | prim_k | 6 | 6 | 6 | Teklif Madde 5 (o); genç simülasyonunda seçildi (prim_esigi_out2.txt); F 3-I 304 |
+| Tam prim tutarı (TL/ay) | prim_ay | 11808.2 | 11808.2 | 11808.2 | 5510 m.81: 33.030 x %35,75 |
+| Gelire bağlı primin tahsil oranı | prim_toplama | 1 | 1 | 1 | Tevkifatla birlikte kaynakta kesilir (tasarım); ölçülmemiş |
+| Eski kayıtlıların sabit primi sürdürme payı (0 = hiç sürdürmez) | prim_devam | 0 | 0 | 0 | Sabit prim kalktığı için 0 |
+| Maaşlı çalışanın mikro mükellef olma payı (u) | u_ucretli | 0.25 | 0.2 | 0.15 | Varsayım; maaşlı isterse girer (F 3-I 304) |
 | Tevkifat oranı (gayrisafi hasılatın) | duz_oran | 0.135 | 0.135 | 0.135 | Teklif Madde 1 (e): %13,5 ile %27 arası; F 3-I 299 |
 | BES aktarım oranı (tevkifatın) | bes | 0.03 | 0.03 | 0.03 | Teklif Madde 9 |
 | Devlet katkısı oranı | devlet_katki | 0.2 | 0.2 | 0.2 | 4632 Ek 1 + 10811 sayılı Karar (ikincil) |
@@ -52,6 +55,7 @@ Excel'in 'Sonuc' sayfası bağımsız formül hesaplayıcısıyla (`formulas` k�
 | BES ve Devlet katkısı | -0,07 | -0,22 | -0,62 |
 | 90 gün prim hibesi | -0,10 | -0,34 | -0,83 |
 | Donanım KDV mahsubu | -0,23 | -0,62 | -1,57 |
-| Yutulma: vergi | -0,40 | -0,80 | -1,00 |
-| Yutulma: prim | -3,40 | -5,63 | -6,21 |
-| **NET** | -2,01 | 1,32 | 23,72 |
+| Yutulma: vergi | -0,70 | -1,72 | -3,60 |
+| Yutulma: eski prim | -3,40 | -5,63 | -6,21 |
+| Gelire bağlı yeni prim | 0,26 | 1,25 | 5,44 |
+| **NET** | -2,05 | 1,64 | 26,56 |

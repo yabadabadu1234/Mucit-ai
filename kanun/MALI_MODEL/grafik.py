@@ -8,20 +8,20 @@ NOT="Varsayımsal model çıktısı (sabit 2026 TL, 2026 asgari ücret). Girdile
 O=S['senaryo']['Orta']['yil4']
 M=1e9
 # 1 şelale
-adim=[("Brüt tevkifat",O['brut_tevkifat']),("BES + Devlet katkısı",-O['bes_ve_devlet_katkisi']),("90 gün prim",-O['myo_primi']),("Donanım KDV",-O['kdv_mahsubu']),
- ("Yutulma: vergi",-O['yutulma_vergi']),("Yutulma: prim",-O['yutulma_prim']),("Sahte fatura",-O['sahte_fatura_kaybi']),("KGF",-O['kgf_maliyeti']),("İşletme ve itiraz",-(O['bt']+O['itiraz']+O['denetim']+O['ptt']))]
+adim=[("Brüt tevkifat",O['brut_tevkifat']),("Gelire bağlı prim",O['yeni_prim']),("BES + Devlet katkısı",-O['bes_ve_devlet_katkisi']),("90 gün prim",-O['myo_primi']),("Donanım KDV",-O['kdv_mahsubu']),
+ ("Yutulma: vergi",-O['yutulma_vergi']),("Yutulma: eski sabit prim",-O['yutulma_prim']),("Sahte fatura",-O['sahte_fatura_kaybi']),("KGF",-O['kgf_maliyeti']),("İşletme ve itiraz",-(O['bt']+O['itiraz']+O['denetim']+O['ptt']))]
 fig,ax=plt.subplots(figsize=(12,6.2)); cum=0
 for i,(a,v) in enumerate(adim):
     if i==0: ax.bar(i,v/M,color='#2d6aa8'); cum=v
-    else: ax.bar(i,v/M,bottom=cum/M,color='#a11d1d'); cum+=v
+    else: ax.bar(i,v/M,bottom=cum/M,color='#14662b' if v>0 else '#a11d1d'); cum+=v
     ax.text(i,(cum-v/2 if i else v/2)/M if False else (cum/M + (0.3 if v<0 else 0.3)),"%.2f"%(v/M),ha='center',fontsize=9)
 net=O['net']; ax.bar(len(adim),net/M,color='#14662b' if net>0 else '#7a1f1f'); ax.text(len(adim),net/M-0.9 if net<0 else net/M+0.3,"%.2f"%(net/M),ha='center',fontsize=10,fontweight='bold')
 ax.axhline(0,color='#333',lw=1); ax.set_xticks(range(len(adim)+1)); ax.set_xticklabels([a for a,_ in adim]+["NET"],rotation=25,ha='right',fontsize=9)
-ax.set_ylim(min(0,net/M)-1.0,O['brut_tevkifat']/M*1.15); ax.set_ylabel("milyar TL / yıl"); ax.set_title("Orta senaryo, 4. yıl: net etki, eski kayıtlıların primi hiç sürmezse (en kötü hâl)",fontsize=11.5,fontweight='bold',color='#1f3a5f'); ax.spines[['top','right']].set_visible(False)
+ax.set_ylim(min(0,net/M)-1.0,(O['brut_tevkifat']+O['yeni_prim'])/M*1.12); ax.set_ylabel("milyar TL / yıl"); ax.set_title("Orta senaryo, 4. yıl: net etki, gelire bağlı primle (tam prim eşiği 6 asgari ücret)",fontsize=11.5,fontweight='bold',color='#1f3a5f'); ax.spines[['top','right']].set_visible(False)
 fig.text(0.01,-0.10,NOT,fontsize=8,color='#555'); fig.savefig('../GORSELLER/model_01_selale.png',dpi=110,bbox_inches='tight'); plt.close()
 # 2 tornado
 T=S['tornado'][:10]; T=T[::-1]
-ad={'s_kayitli':'Halen kayıtlı olup geçenlerin payı (s)','n_toplam':'Katılımcı sayısı (N)','prim_odeme':'Eski 4/b prim ödeme oranı','medyan_W':'Medyan hasılat (asgari ücret)','marj':'Kâr marjı (eski rejim)','uyum_ucretli':'Ücretlilerin eski uyumu','u_ucretli':'Ücretli ek gelir payı (u)','prim_devam':'Eski kayıtlılardan primi sürdürenlerin payı','duz_oran':'Tevkifat oranı (%10,5-%27)','sigma':'Hasılat dağılımı yayılımı','phi':'Sahte fatura payı','kgf_alim':'KGF kullanım oranı','myo_uygun':'90 gün prim hak edenler','bes_vazgecme':'BES vazgeçme','kdv_donanim_pay':'Donanım alan payı','kgf_temerrut':'KGF temerrüt','onlem':'Önlem etkinliği','r_marj_ucretli':'Ücretli marjinal oran'}
+ad={'s_kayitli':'Halen kayıtlı olup geçenlerin payı (s)','n_toplam':'Katılımcı sayısı (N)','prim_odeme':'Eski 4/b prim ödeme oranı','medyan_W':'Medyan hasılat (asgari ücret)','marj':'Kâr marjı (eski rejim)','uyum_ucretli':'Ücretlilerin eski uyumu','u_ucretli':'Maaşlı mikro mükellef payı (u)','prim_k':'Tam prim eşiği (3-12 asgari ücret)','prim_toplama':'Yeni primin tahsil oranı','prim_devam':'Eski kayıtlılardan primi sürdürenlerin payı','duz_oran':'Tevkifat oranı (%10,5-%27)','sigma':'Hasılat dağılımı yayılımı','phi':'Sahte fatura payı','kgf_alim':'KGF kullanım oranı','myo_uygun':'90 gün prim hak edenler','bes_vazgecme':'BES vazgeçme','kdv_donanim_pay':'Donanım alan payı','kgf_temerrut':'KGF temerrüt','onlem':'Önlem etkinliği','r_marj_ucretli':'Ücretli marjinal oran'}
 fig,ax=plt.subplots(figsize=(11,6)); 
 for i,t in enumerate(T):
     ax.barh(i,t[3]/M,color='#2d6aa8'); ax.barh(i,t[4]/M,color='#c98b00')
@@ -34,7 +34,7 @@ ax.hist(np.clip(net,-40,15),bins=60,color='#2d6aa8'); ax.axvline(0,color='#a11d1
 q=S['mc']['net_q']
 for k,c in ((5,'#777'),(50,'#14662b'),(95,'#777')): ax.axvline(q[str(k)]/M,color=c,ls='--'); ax.text(q[str(k)]/M,ax.get_ylim()[1]*0.93,"P%d: %.1f"%(k,q[str(k)]/M),fontsize=9,ha='center')
 ax.set_xlabel("4. yıl net Hazine etkisi (milyar TL; −40 altı kırpıldı)"); ax.set_ylabel("deneme sayısı")
-ax.set_title("Monte Carlo (%d deneme): net etkinin dağılımı; net > 0 olasılığı %%%.0f (primi sürdürenlerin payı 0-1 arası belirsiz)"%(S['mc']['n'],100*S['mc']['p_net_pozitif']),fontsize=12,fontweight='bold',color='#1f3a5f'); ax.spines[['top','right']].set_visible(False)
+ax.set_title("Monte Carlo (%d deneme): net etkinin dağılımı; net > 0 olasılığı %%%.0f (s, u, π ve prim tahsil oranı belirsiz)"%(S['mc']['n'],100*S['mc']['p_net_pozitif']),fontsize=12,fontweight='bold',color='#1f3a5f'); ax.spines[['top','right']].set_visible(False)
 fig.text(0.01,-0.02,NOT,fontsize=8,color='#555'); fig.savefig('../GORSELLER/model_03_montecarlo.png',dpi=110,bbox_inches='tight'); plt.close()
 # 4 varyantlar
 V=S['varyant']; ks=list(V.keys()); vs=[V[k]/M for k in ks]

@@ -10,7 +10,7 @@ Durum kodu: **A** = ancak ilgili kurumun verisi veya kararıyla kapanır; **K** 
 | 3 | 9284 sayılı Karar ve katılım yönetmeliğinin resmî metni okunmadı (künye ikincil kaynakta tutarlı) | T |
 | 4 | TCMB ücret düzenlemeleri, KGF programı metni, GİB kılavuzu, TÜİK/TEPAV ham verisi okunmadı; 2828'in teklifin dayandığı maddesi belirlenemedi | T/A |
 | 5 | Yalnız vatandaş hükmü: yabancı öğrenci ve mukimler kapsam dışı kalıyor; gerekçe Anayasa m.16 ve 6735; Anayasa m.10 itirazı incelenmedi. Çare: ayrı düzenleme önerisi (metne işlenmedi) | K |
-| 6 | Madde 12 kaldırıldı (F 3-I 302: ücretli çalışan rejim dışında); ücretli çalışmaya başlayanın tescilinin askıya alınması (Madde 1 (t)) için SGK veri akışı ve kısmî süreli çalışmanın tespiti | A |
+| 6 | Madde 12 geri getirildi (F 3-I 304: maaşlı isterse mikro mükellef olabilir, seçmemişse ona mikro muamelesi yapılmaz); maaşlının payı (u) ölçülmemiştir, Orta'da bedeli yaklaşık 1,24 milyar TL | A |
 | 7 | Çifte vergilendirmeyi önleme anlaşmaları: belirli anlaşmalar tek tek incelenmedi | T |
 | 8 | Müşterek fatura ve kâr paylaşımlı sermaye desteği için ayrıntılı hukuki nitelendirme yapılmadı | T |
 | 9 | Platform tevkifatı (Madde 1 (l)): GVK 94 ile uyumu ve 94/19 kesintisinin mahsubu için GİB görüşü yok | T |
@@ -28,13 +28,13 @@ Durum kodu: **A** = ancak ilgili kurumun verisi veya kararıyla kapanır; **K** 
 | 17 | Donanım KDV mahsubu: seri no ve %50 üst sınır eklendi; sahte fatura riski kalır | A |
 | 18 | KDV oranı kaçırma (K2): hizmet istisna olduğu için dar, hizmet kodu zorunluluğu tebliğe bırakıldı | A |
 | 19 | Kimlik kiralama ve eşik altı hesaplar: tek tescil ve tek hesap eklendi; tespit banka ve portal verisine bağlı | A |
-| 20 | **Yutulma:** baskın kalem halen kayıtlı olanın 4/b prim kaybıdır. Madde 1 (p): eşit giriş, prim isteğe bağlı (F 3-I 293, 300). Kötümser net −2,01 milyar TL; oran sınırı %27 veya primi sürdürenlerin %59'u ile kapanır. Halen kayıtlıların hepsi geçse üç senaryo olumsuz; s ve primi sürdürenlerin payı ölçülmedi | K/A |
+| 20 | **Yutulma:** baskın kalem halen kayıtlı olanın eski sabit 4/b primini bırakmasıdır. Madde 1 (p): eşit giriş; Madde 5 (o): sabit prim yerine gelire bağlı prim (F 3-I 293, 304). Kötümser net −2,05 milyar TL; oran %26,1 ve üzerinde kapanır. Halen kayıtlıların hepsi geçse üç senaryo olumsuz; s, u ve primin tahsil oranı ölçülmedi | K/A |
 
 ## 3. Mali etki
 | # | Tehlike | Durum |
 | :-- | :-- | :-- |
 | 21 | Modelin çoğu girdisi ölçülmemiş varsayımdır (N, s, u, φ, KGF, BES vazgeçme, PTT, BT) | A |
-| 22 | 4. yıl net etki (%13,5, prim hiç sürmezse): Kötümser −2,01, Orta +1,32, İyimser +23,72 milyar TL; %27'de Kötümser +0,26; primi sürdürenlerin %75'i ile Kötümser +0,54, Orta +5,54 | K/A |
+| 22 | 4. yıl net etki (%13,5, gelire bağlı prim): Kötümser −2,05, Orta +1,64, İyimser +26,56 milyar TL; %27'de Kötümser +0,14 | K/A |
 | 23 | Modelde olmayan etkiler: ikinci tur vergi etkisi, emeklilik hakkı kazanımı, denetim maliyeti, vergi anlaşmaları | A |
 | 24 | 5018 m.14 iptal; bütçe birimlerinin kendi aktüeryal çalışması gerekir | A |
 

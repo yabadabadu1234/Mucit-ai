@@ -56,20 +56,22 @@ Kusur (Claude'un): v3'ün ilk koşusunda (a) iflas eden gencin müşteri tabanı
 Düzeltme (`dayanma=True`, `genc3.py`): iflas eden **kişi** dışarıda iş bulur (gig), **şirket açık kalır**, müşteri tabanı yalnız doğal kayıpla erir, yeni müşteri akışı çeyreğe iner; mevcut rejimde sabit prim ve gider uyku sırasında **ödenmemiş borç** olarak birikir (`sabit_borc`). Yeni ölçütler: `acik_firma` (72. ayda gelir getiren ve nakit açığında olmayan), `gecim72` (12 aylık ort. net ≥ net asgarinin 1/3'ü, F 3-I 259), `yarim72` (≥ 1/2), `bir72` (≥ 1).
 
 
-## GÜNCEL SONUÇ: düz %13,5, ücretli çalışan modelde yok (F 3-I 299, 302)
+## GÜNCEL SONUÇ: düz %13,5, gelire bağlı prim, maaşlı isterse girer (F 3-I 299, 304)
 
-`genc3.py` varsayılan oranı artık %13,5'tir (`duz_oran`). Genç modelinde ücretli çalışan yoktur (ajanlar geliri olmayan gençlerdir); Madde 1 (t) bu yüzden modeli değiştirmez. 8 tohum, N=2000, %95 aralık (`genc3_out.txt`):
+`genc3.py` varsayılan oranı %13,5'tir (`duz_oran`). Teklif rejiminde sabit prim yoktur; prim, aylık net mikro gelirin geçim haddini (brüt asgari/3 = 11.010 TL) aşan kısmıyla orantılı alınır ve `prim_k` x brüt asgari ücrette (varsayılan 6) tam prime (11.808,25 TL) ulaşır (`prim="gelire"`); prim kesilen ayda ayrıca genel sağlık sigortası primi alınmaz. Genç modelinde ajanlar geliri olmayan gençlerdir (maaşlı çalışan yoktur); F 3-I 304'te maaşlıya getirilen kısıt kalktığından bu model etkilenmez. 8 tohum, N=2000, %95 aralık (`genc3_out.txt`):
 
 | Ölçüt | Tarafsız | Mevcut kayıtlı | Mevcut kayıt dışı | **Teklif %13,5** |
 | :-- | --: | --: | --: | --: |
-| 12 ay canlılık (kalibre hedef) | 0,750 | 0,619 | 0,510 | 0,668 |
-| 72. ayda şirket açık ve nakit açığında değil | 0,925 | 0,621 | 0,677 | **0,883** |
-| Geçim eşiğini sürdürme (net asgarinin 1/3'ü), 72. ay | 0,890 | 0,586 | 0,555 | **0,805** |
-| Net asgarinin yarısı | 0,821 | 0,348 | 0,346 | 0,658 |
-| Net asgari | 0,716 | 0,259 | 0,229 | 0,493 |
-| Kalıcı üst segment | 0,536 | 0,175 | 0,127 | 0,312 |
-| Kalıcı alt (dip) | 0,263 | 0,735 | 0,743 | 0,474 |
+| 12 ay canlılık (kalibre hedef) | 0,750 | 0,619 | 0,510 | 0,667 |
+| 72. ayda şirket açık ve nakit açığında değil | 0,925 | 0,621 | 0,677 | **0,881** |
+| Geçim eşiğini sürdürme (net asgarinin 1/3'ü), 72. ay | 0,890 | 0,586 | 0,555 | **0,804** |
+| Net asgarinin yarısı | 0,821 | 0,348 | 0,346 | 0,663 |
+| Net asgari | 0,716 | 0,259 | 0,229 | 0,500 |
+| Kalıcı üst segment | 0,536 | 0,175 | 0,127 | 0,323 |
+| Kalıcı alt (dip) | 0,263 | 0,735 | 0,743 | 0,471 |
 | Yıkım (iflas yaşayan kişi) | 0,340 | 0,907 | 0,730 | 0,483 |
-| Ödenmemiş sabit borç (TL, mevcut rejimde) | 0 | 423.594 | 0 | 0 |
+| Ödenmemiş sabit borç (TL) | 0 | 423.594 | 0 | 296 |
 
-Okunuş: teklif mevcut kayıtlı düzenden her ölçüde iyidir (80 çekilişin %97'sinde geçim, %100'ünde şirketin açık kalması ve yıkım); kayıt dışına göre %78-90'ında iyidir; tarafsız ölçüye (kanunsuz dünya) göre hâlâ geridedir (0,805 / 0,890). Oran taraması (`genc3_duyarlilik_out.txt` C): %10,5'ten %27'ye geçimi sürdüren oranı 0,820 → 0,731, dip oranı 0,443 → 0,589; yani oran artışı gence ödünç verir ama teklif %27'de bile kayıtlı mevcut düzenden (0,586) iyidir.
+Okunuş: teklif mevcut kayıtlı düzenden her ölçüde iyidir (80 çekilişin %97'sinde geçim, %100'ünde şirketin açık kalması ve yıkım); kayıt dışına göre %80-89'unda iyidir; tarafsız ölçüye (kanunsuz dünya) göre hâlâ geridedir (0,804 / 0,890). Oran taraması (`genc3_duyarlilik_out.txt` C): %10,5'ten %27'ye geçimi sürdüren oranı 0,821 → 0,731, dip oranı 0,443 → 0,583; yani oran artışı gence ödünç verir ama teklif %27'de bile kayıtlı mevcut düzenden (0,586) iyidir.
+
+**Tam prim eşiği (`prim_esigi.py`, `prim_esigi_out2.txt`):** gelire bağlı primin tam primle sona erdiği eşik `prim_k` x brüt asgari ücret olarak taranmıştır. Primsiz teklife göre açık firma ve geçim oranı farkı (8 tohum, eşli fark, %95 aralık): eşik 3 katta −0,011±0,002 ve −0,017±0,003; 4 katta −0,006±0,002 ve −0,008±0,003; 5 katta −0,003±0,001 ve −0,004±0,002; **6 katta −0,002±0,002 ve −0,001±0,002**; 8 katta −0,001±0,001 ve +0,003±0,002. Fark, aralığı sıfırı içine alan en küçük eşik olan 6 katta ölçülebilir değildir; padişahın "tam prim ödenmesi devridaime zarar vermiyorsa" ölçütü bu eşikte sağlanır (F 3-I 304). Karşılaştırma için: gelirden bağımsız sabit prim (eski rejimin primi) teklif rejimine konsaydı aynı modelde açık firma oranı 0,883'ten 0,597'ye inerdi.

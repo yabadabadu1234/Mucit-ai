@@ -32,14 +32,14 @@ sayfa("ekran_01_tescil","Mikro Mükellefiyet · Tescil","Adım 1/4: Uygunluk kon
 <div class=kart><h3>Kimlik (e-Devlet doğrulaması)</h3><div class=row><div><div class=et>Ad Soyad</div><div class=alan>A. Y. (örnek kişi)</div></div><div><div class=et>T.C. Kimlik No</div><div class=alan>*******1234</div></div><div><div class=et>Vatandaşlık</div><div class=alan>T.C. vatandaşı ✔</div></div></div></div>
 <div class=kart><h3>Uygunluk kontrolü</h3><table><tr><th>Kontrol</th><th>Sonuç</th><th>Dayanak</th></tr>
 <tr><td>Türkiye Cumhuriyeti vatandaşı gerçek kişi</td><td class=ok>Uygun</td><td>M.1 giriş</td></tr>
-<tr><td>4/a veya 4/c kapsamında ücretle çalışmıyor (SGK kaydı otomatik sorgulandı); çalışsaydı tescil yapılmaz, ücretli çalışana dokunulmaz</td><td class=ok>Ücretli değil: uygun</td><td>M.1 (t)</td></tr>
-<tr><td>Halen 4/b sigortalısı veya vergi mükellefi olsaydı giriş aynı şartlarla mümkün; sabit prim yükü kalkar, isteğe bağlı sigorta saklı</td><td class=ok>Eşit giriş</td><td>M.1 (p), M.5 (o)</td></tr>
+<tr><td>Maaşlı çalışıyorsanız da mikro mükellef olabilirsiniz; tescili siz seçersiniz, seçmezseniz size mikro muamelesi yapılmaz</td><td class=ok>Tescil isteğe bağlı: uygun</td><td>M.1 giriş</td></tr>
+<tr><td>Halen 4/b sigortalısı veya vergi mükellefi olsaydı giriş aynı şartlarla mümkün; gelirden bağımsız sabit prim kalkar; prim gelire bağlı (geçim haddi 11.010 TL altında yok)</td><td class=ok>Eşit giriş</td><td>M.1 (p), M.5 (o)</td></tr>
 <tr><td>Gönüllü sonlandırma bekleme süresi</td><td class=ok>Yok</td><td>M.1 (h)</td></tr>
 <tr><td>16 yaşını doldurmuş (18 yaşından küçükse yasal temsilci rızası)</td><td class=ok>18 yaş üstü</td><td>M.1 (ö)</td></tr>
 <tr><td>Faaliyet türü negatif listede değil</td><td class=uy>Beyan bekleniyor</td><td>M.1 (g)</td></tr></table></div>
 <div class=kart><h3>Faaliyet türü (beyan)</h3><div class=alan>▾ Yazılım · veri işleme · tercüme · grafik tasarım · dijital sanat · uzaktan operasyon · bağımsız teknik montaj ve bakım</div>
 <div class=not>Bu başvuru için iş yeri adresi, kira sözleşmesi, ruhsat, oda kaydı veya muhasebeci sözleşmesi <b>istenmez</b>. (VUK Ek 19 (a)-(c))</div></div>
-<div><span class=btn>Devam et</span> &nbsp; <span class='btn gri'>Vazgeç</span></div>""","Kaynak: teklif Madde 1 giriş, (g), (h), (ö), (p), (t); Madde 2.",760)
+<div><span class=btn>Devam et</span> &nbsp; <span class='btn gri'>Vazgeç</span></div>""","Kaynak: teklif Madde 1 giriş, (g), (h), (ö), (p); Madde 2; Madde 5 (o).",760)
 # 2 hesap + UETS
 sayfa("ekran_02_hesap_uets","Mikro Mükellefiyet · Tescil","Adım 2/4: Münhasır hesap ve tebligat adresi","""
 <div class=kart><h3>Münhasır hesap</h3><div class=et>Bu faaliyetin tüm tahsilatları yalnız bu hesaba girer (elden nakit istisna dışıdır).</div>

@@ -1,23 +1,23 @@
-kırılma s*= 0.18079388053989018
-V0 Baz: %13,5; eski kayıtlıların primi hiç sürmez       1.32 mlr
-V1 Eski kayıtlıların %50'si primi sürdürür              4.13 mlr
-V2 %75'i sürdürür                                       5.54 mlr
-V3 Hepsi sürdürür                                       6.95 mlr
-V4 Oran %20                                             5.61 mlr
-V6 Oran %27 (üst sınır)                                 10.23 mlr
-V7 Ücretli çalışana izin verilseydi (u=%20)             0.40 mlr
-V8 SGK tahsil oranı %50                                 3.43 mlr
-V9 SGK tahsil oranı %100                                -0.09 mlr
-V10 Halen kayıtlıların hepsi geçse (s=%100)             -35.08 mlr
-V11 90 gün prim hibesi olmasaydı                        1.66 mlr
-V12 Donanım KDV mahsubu olmasaydı                       1.94 mlr
-Orta yıl4 net 1.32
-duz_oran -1.96 8.92
+kırılma s*= 0.18832790830051907
+V0 Baz: %13,5; gelire bağlı prim, tam prim 6 asgari ücrette 1.64 mlr
+V1 Gelire bağlı prim hiç alınmasaydı (prim sıfır)       0.40 mlr
+V2 Tam prim eşiği 3 asgari ücret                        3.04 mlr
+V3 Tam prim eşiği 12 asgari ücret                       1.00 mlr
+V4 Oran %20                                             5.75 mlr
+V6 Oran %27 (üst sınır)                                 10.20 mlr
+V7 Maaşlı hiç mikro mükellef olmasaydı (u=0)            2.88 mlr
+V8 SGK tahsil oranı %50                                 3.75 mlr
+V9 Gelire bağlı primin tahsil oranı %80                 1.39 mlr
+V10 Halen kayıtlıların hepsi geçse (s=%100)             -34.76 mlr
+V11 90 gün prim hibesi olmasaydı                        1.98 mlr
+V12 Donanım KDV mahsubu olmasaydı                       2.26 mlr
+Orta yıl4 net 1.64
+duz_oran -1.88 8.56
 s_kayitli 6.42 -2.14
-prim_devam 0.00 5.63
-n_toplam -0.96 3.16
+n_toplam -1.18 3.91
+medyan_W -2.73 2.97
 prim_odeme 2.81 -1.41
-medyan_W -2.37 2.46
-sigma -0.34 -0.14
-kdv_donanim_pay 0.31 -0.31
-MC net P5/P50/P95: -6.36 2.94 12.13 ; P(net>0)=0.77 ; NPV P50 8.61
+prim_k 1.40 -0.64
+u_ucretli 1.23 -1.23
+prim_toplama -0.62 0.00
+MC net P5/P50/P95: -16.35 -0.47 8.55 ; P(net>0)=0.46 ; NPV P50 -1.74
