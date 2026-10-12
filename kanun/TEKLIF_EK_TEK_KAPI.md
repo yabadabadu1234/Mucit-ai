@@ -79,4 +79,16 @@ Fikir: gelir kaydırmanın (naylon fatura, sahte ortak) ekonomik özü, parayı 
 
 **Hesap (varsayımsızdır, aritmetiktir):** Orta yıl-4 net +4,06 mlr TL; tam tavanda sahte aile başına Hazine kaybı 792 720 × (0,25 − 0,105) = 114 944 TL; 4,06 mlr / 114 944 = 35 322 aile = N'nin (331 000) %10,7'si. Kötümser: 0,59 mlr / 114 944 = 5 133 aile = N'nin (100 000) %5,1'i. Bu hesap, sahtekârların bu rejimde zaten ödeyeceği vergiyi (0,105) düştükten sonraki kaybı verir; mevcut mükellefin rejime kaymasını (yutulma) ayrıca barındırmaz.
 
+## Mecburî nötrlük kuralı (F 3-I 288; tarama `MALI_MODEL/notr_kural_sim_out.txt`)
+
+**Madde AD (Mahsup oranı eşitliği).** Alıcı, mikro mükelleften yaptığı alımı kendi vergi matrahından indirmek istiyorsa, ödeme anında portalda **mahsup talep ettiğini** işaretler. Mahsup talep edilen ödemede (a) mikro mükellefin o ödemeye ait vergisi, alıcının o yıl için portalda ilan edilen vergi oranıyla hesaplanır (götürü gider uygulanmaz; mükellef isterse belgeli gerçek gideri düşer) ve (b) alıcının indirimi, bu ödemede satıcıdan alınan oranı geçemez. Mahsup talep edilmeyen ödemede satıcı Madde 1 (e)'deki orana tabidir ve alıcı indirim yapamaz. Oran, ödemeden önce satıcıya portalda gösterilir.
+
+**Neden dürüste engel değil:** (1) Mahsup istemeyen alıcı (tüketici, kendi kullanımı için alan) ve onun satıcısı hiçbir şey değiştirmez; satıcı %10,5 öder. (2) Mahsup isteyen alıcı, düzenli bir tedarikçiden alsaydı zaten tam indirimle alırdı; satıcı da düzenli mükellef olsaydı daha yüksek vergi ve sabit primle karşılaşırdı (tablo: satıcının yıllık yükü eski rejimde hasılatın %23 ila %351'i, bu kuralda %25). (3) Yük yalnız fiilen kazanılan paraya biner; kuruluşta, ofiste, muhasebecide, belgede hiçbir sabit yük yoktur.
+
+**Neden sahtekâra zemin bırakmaz (tarama):** sahte ödemede alıcı mahsup talep ederse kazancı tam olarak `-(c)` (c: iade ücreti), yani sıfır veya negatiftir; talep etmezse indirimi yoktur. Alıcı oranı 0,15 ila 0,40, ücret 0 ila 0,10 bütün stratejilerde azamî kazanç **0,000**. Mevcut kuralda aynı tarama **+0,295** verir. Sahte fatura kaybı kalemi bu kuralla yapı icabı sıfırdır.
+
+**Bedel (açık):** (a) B2B satan genç, mahsup talep eden alıcıda %10,5 yerine alıcı oranını öder; bu, teklifin vaadinden bir geri adımdır ve padişahça ayrıca onaylanmalıdır. (b) Alıcı yönünden alternatif: satıcıya yük bindirmeden alıcının indirimini satıcının ödediği oranla sınırlamak (alıcı bedel öder, B2B talep düşebilir; modellenmedi). (c) Modelde B2B payı (`kurumsal_pay` 0,70) varsayımdır; katılım kaybı modellenmedi.
+
+**Kalan (kesilemeyen) vektör:** vergi oranı farkı tüketiciye satışta da vardır (yüksek hasılatlı bir işi, tavan altı kimliklere bölmek). Bunu kesen yapı bulunamadı; sınırlayıcılar: Madde V ve Y (yabancıyla işlemez), kimlik başına tek hesap, ilişkili kişilerin toplulaştırılması, Madde AC; sızıntı üst sınırı, sadakatle bağlı grup başına üye sayısı × 114 944 TL/yıl.
+
 **Kaldırılanlar (nakz):** ortak sayısıyla tavan indirimi (dürüst ortaklığa zarar verirdi) ve ceza katsayıları. **Kesilemeyenler ve mevcut sınırlayıcıları:** `MALI_MODEL/imkan_kesme_sim_out.txt`.
