@@ -7,33 +7,33 @@ Bu paket "Bireysel Emek, Hizmet ve Fikrî Üreticilerin Vergilendirilmesi ve Sos
 | Başlık | İçerik |
 | :-- | :-- |
 | Mevcut sorun | Sermayesiz hizmet ve fikir üreticisi, geliri olmasa da sabit yük taşıyor: iş yeri adresi ve ruhsat, SMMM sözleşmesi, maktu damga vergili beyannameler, resen 4/b primi (asgari ücretle 33.030 × %35,75 = 11.808,23 TL/ay). Sonuç kayıt dışılık veya faaliyetin durması. |
-| Teklif | Yıllık hasılatı 24 brüt asgari ücreti (792.720 TL) aşmayan Türkiye Cumhuriyeti vatandaşı gerçek kişiler için: hasılat yoksa yük yok; hasılat varsa tahsilatta nihaî tevkifat (etkin %10,5); UETS ve e-Devlet adresi; deftersiz, SMMM'siz. |
+| Teklif | Yıllık hasılatı 24 brüt asgari ücreti (792.720 TL) aşmayan Türkiye Cumhuriyeti vatandaşı gerçek kişiler için: hasılat yoksa yük yok; hasılat varsa tahsilatta gayrisafi hasılatın %13,5'i oranında nihaî tevkifat (oran kanunda %13,5 ile %27 arasında Cumhurbaşkanı kararıyla ayarlanabilir); UETS ve e-Devlet adresi; deftersiz, SMMM'siz. Ücretle (4/a, 4/c) çalışanlar rejime alınmaz. |
 | Güvenlikler | Kurumsal alıcı tevkifatı ödemeden gider yazamaz; bordro kalkanı (2 yıl, %60 tek müşteri sınırı); münhasır hesap; negatif liste; toplulaştırma; 30 günlük itiraz. |
 | Değişen kanunlar | 193 GVK (mükerrer 20/E), 213 VUK (Ek 19), 3065 KDVK, 488 Damga (sıra 57), 5510 (m.6/1-(o), Ek 25), 5411 (Ek 2), 6493 (Ek 2), 4632 (Ek 3). |
-| Mali etki | Kapsamlı model kuruldu (MALI_MODEL/). İlk taslak yutulma (halen kayıtlı olanın prim yükümlülüğünü bırakması) yüzünden olumsuz çıktı; çare olarak giriş serbest bırakıldı, fakat halen kayıtlı olanın 4/b sigortalılığı ve primi sürer (Madde 1 (p)). Bu şartla net etki pozitiftir ve katılım payına karşı dayanıklıdır: 4. yıl Orta +4,9 milyar TL, kötümser +1,1, iyimser +14,2 (SGK dahil); halen kayıtlı herkes geçse bile Orta +1,1, kötümser +0,1. Girdilerin çoğu ölçülmemiş varsayımdır; veri talebi: GİB, SGK, TÜİK, SBB, Hazine ve Maliye Bakanlığı, BDDK, TCMB. |
+| Mali etki | Kapsamlı model kuruldu (MALI_MODEL/; tek tek parametre tabloları DUYARLILIK_TABLOLARI.md). Halen kayıtlı olanlara eşit giriş tanınmış ve prim isteğe bağlı bırakılmıştır. %13,5 oranda ve eski kayıtlıların primi hiç sürmezse 4. yıl net etki (SGK dâhil, milyar TL): Kötümser −2,01, Orta +1,32, İyimser +23,72. Kötümser, oran %25,5'e çıkarsa veya eski kayıtlıların en az %59'u isteğe bağlı primi sürdürürse sıfırı geçer (%27'de +0,26). Halen kayıtlıların hepsi geçse üç senaryo da olumsuzdur; bu pay ölçülmemiştir. Girdilerin çoğu ölçülmemiş varsayımdır; veri talebi: GİB, SGK, TÜİK, SBB, Hazine ve Maliye Bakanlığı, BDDK, TCMB. |
 | Kalan riskler | Ek A.4'te sayılmıştır (ör. ilk yıl iki müşteriyle tavanı doldurma, naylon fatura teşviki, portal kapasitesi). |
 
 ## 2. KOMİSYON SORU-CEVAP REHBERİ
 
 Cevaplar teklifin kendi hesabına dayanır; ölçülmemiş yerler açıkça yazılmıştır.
 
-**S1. Naylon fatura artmaz mı?** Teklifin kendi hesabı bu riski ortadan kaldırmaz: kurumlar vergisi %25 varsayımıyla gider yazan alıcının vergi avantajı 25 TL, ödediği tevkifat 10,5 TL'dir; fark 14,5 TL sahte fatura teşviki olabilir (II-A, Madde 1 (b)). Riski azaltan hükümler: tevkifat Hazineye aktarılmadan gider indirimi yok; bedel bankacılık kanalıyla ödenmeli; bordro kalkanı; alıcı yoğunluğu taraması (işaretleme); VUK m.359 ve m.344 yaptırımları saklı. Kademeli oran (Madde 1 (e)) yüksek hasılatta tevkifatı artırır (tavanda %14,2), geri akış karinesi (Madde 1 (r)) alıcıya para dönüşünü yakalar. Riskin büyüklüğü ölçülmemiştir.
+**S1. Naylon fatura artmaz mı?** Teklifin kendi hesabı bu riski ortadan kaldırmaz: kurumlar vergisi %25 varsayımıyla gider yazan alıcının vergi avantajı 25 TL, ödediği tevkifat 13,5 TL'dir; fark 11,5 TL sahte fatura teşviki olabilir (II-A, Madde 1 (b)). Riski azaltan hükümler: tevkifat Hazineye aktarılmadan gider indirimi yok; bedel bankacılık kanalıyla ödenmeli; bordro kalkanı; alıcı yoğunluğu taraması (işaretleme); VUK m.359 ve m.344 yaptırımları saklı. Oran, kanundaki sınır içinde (%13,5-%27) artırılabilir (Madde 1 (e)); geri akış karinesi (Madde 1 (r)) alıcıya para dönüşünü yakalar. Riskin büyüklüğü ölçülmemiştir.
 
 **S2. SGK'ya yük getirir mi?** Evet, küçük de olsa: Ek Madde 25 uyarınca tavanın yarısına ulaşanlar için 90 günlük primin malûllük, yaşlılık ve ölüm payı (3 × 33.030 × %21 = 20.809 TL/kişi/yıl) Hazine tarafından karşılanır. Bu bedel SGK bütçesine yük olmaz, Hazine bütçesine yük olur; toplam tutar kişi sayısına bağlıdır ve hesaplanmamıştır. 5018 m.14 Anayasa Mahkemesince iptal edilmiştir, yasal zorunluluk yoktur; yine de aktüeryal hesap yapılmamıştır (Ek B).
 
 **S3. SMMM'nin işini alır mı?** Teklif yalnız tavanın altındakileri muhasebeciden muaf tutar; tavanı aşan gerçek usule geçer. Bu kitlenin bugün ne kadarının muhasebeci tuttuğu ölçülmemiştir; "yeni müşteri havuzu" beklentisi de ölçülmemiş bir beklentidir ve öyle yazılmıştır.
 
-**S4. Bordrolu çalışan buraya kaydırılır mı?** Kilitler: son iki yıl hizmet akdi bulunulan işverene ve ortaklıklarına fatura kesme yasağı; tek müşteriden yıllık hasılatın %60'ından fazlası elde edilemez; ihlalde ödeme ücret sayılır. Kalan açık: ilk yıl ve altı aylık asgari ücret altındaki hasılatta %60 sınırı uygulanmaz; iki müşteriyle tavanı doldurmak mümkündür (Ek A.4).
+**S4. Bordrolu çalışan buraya kaydırılır mı?** Ücretle (4/a, 4/c) çalışan rejime alınmaz (Madde 1 (t)); tescilli kişi ücretli çalışmaya başlarsa tescil askıya alınır. Ayrıca kilitler: son iki yıl hizmet akdi bulunulan işverene ve ortaklıklarına fatura kesme yasağı; tek müşteriden yıllık hasılatın %60'ından fazlası elde edilemez; ihlalde ödeme ücret sayılır. Kalan açık: ilk yıl ve altı aylık asgari ücret altındaki hasılatta %60 sınırı uygulanmaz; iki müşteriyle tavanı doldurmak mümkündür (Ek A.4).
 
-**S5-A. Kademeli oran var mı?** Evet, Madde 1 (e): kümülatif safi matrah 190.000 TL'yi aşınca aşan kısma tarifenin sonraki dilim oranları uygulanır; etkin oran ilk dilimde %10,5, 12 asgari ücrette %11,6, tavanda %14,2'dir. Bu, yüksek hasılatlının düşük sabit oranla vergilenmesini önler.
+**S5-A. Oran kaç ve değişir mi?** Madde 1 (e): gayrisafi hasılatın %13,5'i, tek oran; kümülatif hasılata göre artmaz. Kanun alt sınır %13,5 ve üst sınır %27 yazar; Cumhurbaşkanı bu sınırlar içinde değiştirebilir (Anayasa m.73/4). Sebep: model Kötümser senaryoda %13,5'te açık verir, %27'de dengeler.
 
 **S5. Çifte vergilendirmeyi önleme anlaşmaları (K3)?** Genel ilke olarak hizmet kazancı üzerinde vergilendirme yetkisi mukim olunan devlete aittir; teklif Türkiye'de mukim vatandaşın hesabında tevkif eder, yabancı müşteriye vergi yüklemez. Bu bir yorumdur; belirli anlaşmaların maddeleri tek tek incelenmemiştir ve risk sıfır denemez.
 
-**S6. Platformdan satan %1 ile kurtulmaz mı?** Teklifin Madde 1 (l) bendi buna göre yazılmıştır: belgeli mükellefte 94/19 kesilmez, tevkifat bu maddeyle (%10,5) yapılır; belgesizde 94/19 kesintisi mahsup edilir.
+**S6. Platformdan satan %1 ile kurtulmaz mı?** Teklifin Madde 1 (l) bendi buna göre yazılmıştır: belgeli mükellefte 94/19 kesilmez, tevkifat bu maddeyle (%13,5) yapılır; belgesizde 94/19 kesintisi mahsup edilir.
 
 **S7. Teklif İçtüzük ve Anayasa bakımından kimden gelir?** Anayasa m.88 uyarınca kanun teklif etmeye milletvekilleri yetkilidir; teklif sahibi alanı bu yüzden milletvekili olarak bırakılmıştır.
 
-**S8. Hazineye maliyeti ne?** Model, halen kayıtlı olanın prim yükümlülüğü sürdüğü sürece 4. yılda net +4,9 milyar TL (Orta; genel devlet, SGK dahil), kötümserde +1,1, iyimserde +14,2 bulmuştur; prim sürekliliği olmasaydı −1,1 çıkıyordu. Sonuç prim sürekliliğinin hukuken tutmasına ve ölçülmemiş girdilere bağlıdır; kesin rakam için SGK ve GİB verisi gerekir.
+**S8. Hazineye maliyeti ne?** Model, 4. yılda net etkiyi (genel devlet, SGK dâhil) %13,5 oranda ve eski kayıtlıların primi hiç sürmezse Orta +1,32, Kötümser −2,01, İyimser +23,72 milyar TL bulmuştur; primi sürdürenlerin payı %75 ise sırasıyla +5,54, +0,54, +28,38. Sonuç ölçülmemiş girdilere (halen kayıtlıların geçme payı, primi sürdürenlerin payı, SGK tahsil oranı) bağlıdır; kesin rakam için SGK ve GİB verisi gerekir.
 
 ## 3. KARŞILAŞTIRMA CETVELİ (3 kolon)
 

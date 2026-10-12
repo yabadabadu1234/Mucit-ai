@@ -10,31 +10,31 @@ Durum kodu: **A** = ancak ilgili kurumun verisi veya kararıyla kapanır; **K** 
 | 3 | 9284 sayılı Karar ve katılım yönetmeliğinin resmî metni okunmadı (künye ikincil kaynakta tutarlı) | T |
 | 4 | TCMB ücret düzenlemeleri, KGF programı metni, GİB kılavuzu, TÜİK/TEPAV ham verisi okunmadı; 2828'in teklifin dayandığı maddesi belirlenemedi | T/A |
 | 5 | Yalnız vatandaş hükmü: yabancı öğrenci ve mukimler kapsam dışı kalıyor; gerekçe Anayasa m.16 ve 6735; Anayasa m.10 itirazı incelenmedi. Çare: ayrı düzenleme önerisi (metne işlenmedi) | K |
-| 6 | Madde 12: daraltılmış lafız; işveren-çalışan gerilimi sürer | K |
+| 6 | Madde 12 kaldırıldı (F 3-I 302: ücretli çalışan rejim dışında); ücretli çalışmaya başlayanın tescilinin askıya alınması (Madde 1 (t)) için SGK veri akışı ve kısmî süreli çalışmanın tespiti | A |
 | 7 | Çifte vergilendirmeyi önleme anlaşmaları: belirli anlaşmalar tek tek incelenmedi | T |
 | 8 | Müşterek fatura ve kâr paylaşımlı sermaye desteği için ayrıntılı hukuki nitelendirme yapılmadı | T |
 | 9 | Platform tevkifatı (Madde 1 (l)): GVK 94 ile uyumu ve 94/19 kesintisinin mahsubu için GİB görüşü yok | T |
 | 10 | PTT'ye ücretsiz UETS tahsisi (Madde 2 (a)): maliyet, kapasite ve PTT görüşü yok | A |
 | 11 | Geri akış karinesi (r) ve kimlik tekliği (s): orantılılık, kişisel veri ve eşikler (yüzde elli, doksan gün, üç yıl) benim tercihimdir, veriyle doğrulanmadı | T |
-| 12 | Madde 1 (e) kademeli oran: 103. madde tarifesine bağlıdır, güncellemeyle oran değişir; ücret tarifesi ayrımı ve vergi hukukunda "oranın kanunda belirli olması" ilkesi yönünden hukuki inceleme yapılmadı | T |
+| 12 | Madde 1 (e) düz oran ve Cumhurbaşkanına oran yetkisi: Anayasa m.73/4 sınırı kanunda yazılıdır (%13,5-%27); yetkinin kapsamı ve vergi hukukunda oranın kanunda belirli olması ilkesi yönünden hukuki inceleme yapılmadı | T |
 
 ## 2. Suistimal ve Hazine
 | # | Tehlike | Durum |
 | :-- | :-- | :-- |
-| 13 | Naylon fatura: alıcı avantajı 25 TL, ilk dilimde tevkifat 10,5 TL; kademeli oran ve geri akış karinesiyle azaldı, sıfırlanmadı | A |
-| 14 | Tek ayda tavan doldurma: kademeli oranla vergi arbitrajı kapandı; kalan: prim tasarrufu ve ilk yıl %60 muafiyeti | A |
+| 13 | Naylon fatura: alıcı avantajı 25 TL, tevkifat 13,5 TL (fark 11,5); geri akış karinesiyle azaldı, sıfırlanmadı | A |
+| 14 | Tek ayda tavan doldurma: oran arbitrajı yok (düz oran); kalan: prim tasarrufu ve ilk yıl %60 muafiyeti | A |
 | 15 | Akraba olmayan şebeke: yalnız işaretleme ve %60 sınırı | A |
 | 16 | Sahte hizmet ihracı: gönderici kimliği ve geri gönderme kuralı eklendi; fiilî ifa denetlenemez | A |
 | 17 | Donanım KDV mahsubu: seri no ve %50 üst sınır eklendi; sahte fatura riski kalır | A |
 | 18 | KDV oranı kaçırma (K2): hizmet istisna olduğu için dar, hizmet kodu zorunluluğu tebliğe bırakıldı | A |
 | 19 | Kimlik kiralama ve eşik altı hesaplar: tek tescil ve tek hesap eklendi; tespit banka ve portal verisine bağlı | A |
-| 20 | **Yutulma:** baskın kalem halen kayıtlı olanın 4/b prim kaybıdır. Madde 1 (p): giriş serbest, 4/b sigortalılığı ve primi sürer (son 24 ayda 4/b olanlar dâhil). Net etki s'ye dayanıklı; kalan risk: sigortalılığı sona erdirme yolları, aile adına tescil, eski–yeni prim asimetrisi (eşitlik itirazı), SGK sistem uyarlaması ölçülmedi | K |
+| 20 | **Yutulma:** baskın kalem halen kayıtlı olanın 4/b prim kaybıdır. Madde 1 (p): eşit giriş, prim isteğe bağlı (F 3-I 293, 300). Kötümser net −2,01 milyar TL; oran sınırı %27 veya primi sürdürenlerin %59'u ile kapanır. Halen kayıtlıların hepsi geçse üç senaryo olumsuz; s ve primi sürdürenlerin payı ölçülmedi | K/A |
 
 ## 3. Mali etki
 | # | Tehlike | Durum |
 | :-- | :-- | :-- |
 | 21 | Modelin çoğu girdisi ölçülmemiş varsayımdır (N, s, u, φ, KGF, BES vazgeçme, PTT, BT) | A |
-| 22 | 4. yıl net etki (prim sürekliliğiyle): kötümser +1,08, orta +4,86, iyimser +14,19 milyar TL; herkes geçse bile orta +1,08, kötümser +0,11; kötümserde marj ince, sonuç prim sürekliliğinin hukuken tutmasına bağlı | K/A |
+| 22 | 4. yıl net etki (%13,5, prim hiç sürmezse): Kötümser −2,01, Orta +1,32, İyimser +23,72 milyar TL; %27'de Kötümser +0,26; primi sürdürenlerin %75'i ile Kötümser +0,54, Orta +5,54 | K/A |
 | 23 | Modelde olmayan etkiler: ikinci tur vergi etkisi, emeklilik hakkı kazanımı, denetim maliyeti, vergi anlaşmaları | A |
 | 24 | 5018 m.14 iptal; bütçe birimlerinin kendi aktüeryal çalışması gerekir | A |
 
@@ -63,7 +63,7 @@ Durum kodu: **A** = ancak ilgili kurumun verisi veya kararıyla kapanır; **K** 
 | :-- | :-- | :-- |
 | 37 | Teklif sahibi milletvekili yok; başvuru CİMER'den; Anayasa m.88 gereği teklifi bir milletvekili sahiplenmelidir | A |
 | 38 | TBMM Dilekçe Komisyonu'na başvuru (posta, faks, elektronik, şahsen) açık bir ikinci yoldur; elektronik sayfa hata verdi; dilekçede ad, soyad, imza ve adres gerekir (3071 m.4, ikincil kaynak) | K |
-| 39 | CİMER alanı 3000 karakterdir (padişahça teyit); ek dosya biçim ve boyut sınırları yoklanmadı | T |
+| 39 | CİMER alanı 3000 karakterdir (padişahça teyit); CİMER'e PDF yüklenmiyor, yalnız resim ve metin (padişahın beyanı, F 3-I 300); ekler resimlenmiştir | T |
 | 40 | Mali model dışındaki rakamlar elle hesaptır; mali model Python ile hesaplanıp Excel formülleri bağımsız hesaplayıcıyla doğrulandı | T |
 | 41 | Ekranlar taslak tasarımdır, resmî sistem ekranı değildir | A |
 | 42 | Tebliğ taslağı idare için öneridir; "[İDARE]" ayrıntılarını yalnız idare belirler | A |

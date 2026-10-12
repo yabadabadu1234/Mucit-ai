@@ -7,7 +7,7 @@
 
 1.1. Bu Tebliğin amacı, mükerrer 20/E maddesi kapsamındaki Mikro Mükellefiyet tescilinin, faturanın, tevkifatın ve ilgili bildirimlerin uygulama usul ve esaslarını açıklamaktır. [T: M.1 son fıkra]
 
-1.2. Kapsam: Türkiye Cumhuriyeti vatandaşı gerçek kişiler; yıllık gayrisafi hasılatı 24 brüt asgari ücreti aşmayan; sermayeden ziyade şahsî mesaiye, bilgiye veya dijital üretime dayanan hizmetler. Yabancı uyruklular kapsam dışıdır. Negatif liste (M.1 (g)) kapsam dışıdır. Halen veya son yirmi dört ayda 4/b sigortalısı olanlar rejime girebilir; sigortalılıkları ve prim yükümlülükleri sürer (M.1 (p)). [T: M.1 giriş, (g), (p)]
+1.2. Kapsam: Türkiye Cumhuriyeti vatandaşı gerçek kişiler; yıllık gayrisafi hasılatı 24 brüt asgari ücreti aşmayan; sermayeden ziyade şahsî mesaiye, bilgiye veya dijital üretime dayanan hizmetler. Yabancı uyruklular kapsam dışıdır. Negatif liste (M.1 (g)) kapsam dışıdır. Halen kayıtlı mükellef ve 4/b sigortalıları dâhil herkes aynı şartlarla girer (M.1 (p)); 5510 sayılı Kanunun 4/1-(a) veya (c) bendi kapsamında ücretle çalışanlar rejime alınmaz (M.1 (t)). [T: M.1 giriş, (g), (p), (t)]
 
 ## 2. TANIMLAR
 
@@ -28,7 +28,7 @@
 
 3.3. On altı yaşını doldurmuş küçüğün tescili yasal temsilcinin portalda vereceği elektronik rızayla yapılır. [T: M.1 (ö)]
 
-3.4. Tescilde aşağıdakiler kontrol edilir: son yirmi dört ayda 4/b sigortalılığı bulunup bulunmadığı (Madde 1 (p); portal SGK kaydını otomatik sorgular; bulunuyorsa tescil yapılır, sigortalılık ve prim yükümlülüğü kesintisiz sürer ve mükellefe bu durum ekranda bildirilir); gönüllü sonlandırma bekleme süresinin dolmuş olması. [T: M.1 (h), (p)] [İDARE: SGK ve GİB sorgu entegrasyonu]
+3.4. Tescilde aşağıdakiler kontrol edilir: başvuru tarihinde 4/a veya 4/c kapsamında sigortalı olarak çalışılıp çalışılmadığı (portal SGK kaydını otomatik sorgular; çalışıyorsa tescil yapılmaz ve mükellefe sebep ekranda bildirilir); gönüllü sonlandırma bekleme süresinin dolmuş olması. Tescilli kişi sonradan 4/a veya 4/c kapsamında çalışmaya başlarsa tescil çalışmanın başladığı ayın sonundan itibaren askıya alınır, askı süresince hasılat genel hükümlere tabidir; ücretli çalışma bitince tescil başvuru aranmaksızın yeniden açılır ve mükelleften belge, ceza veya bekleme istenmez. 4/b sigortalılığı bulunanlar tescil olabilir; prim yükümlülükleri tescille sona erer, isteğe bağlı sigorta saklıdır. [T: M.1 (h), (p), (t)] [İDARE: SGK ve GİB sorgu entegrasyonu, askı ve yeniden açma akışı]
 
 3.5. Mükellefe karekodlu Mikro Mükellefiyet Belgesi üretilir. Belge, kamu kurumları, finansal kuruluşlar ve kurumsal müşteriler nezdinde mükellefiyet ve muafiyetin ispatıdır. [T: VUK Ek 19 (ç)]
 
@@ -58,13 +58,13 @@
 
 ## 6. TEVKİFAT
 
-6.1. Matrah ve oran. Safi matrah, gayrisafi hasılatın yüzde yetmişidir (yüzde otuz götürü gider); mükellef gerçek gideri belgeleyerek portal üzerinden seçerse safi matrah belgelenen giderler düşüldükten sonra kalan tutardır. Tevkifat, her fatura bakımından portalca şöyle hesaplanır: o ana kadarki kümülatif safi matrahın, gelir vergisi genel tarifesinin birinci diliminin üst sınırına (2026 için 190.000 TL) kadar olan kısmına yüzde 15, bu sınırı aşan kısmına aşılan dilimin oranı (2026: 190.000-400.000 TL arası yüzde 20, 400.000-1.000.000 TL arası yüzde 27 …) uygulanır; bulunan toplamdan daha önce kesilen tevkifat düşülür. Etkin oran ilk dilimde yüzde 10,5, 12 brüt asgari ücretlik hasılatta yaklaşık yüzde 11,6, tavanda yaklaşık yüzde 14,2'dir. [T: M.1 (a), (b), (e)]
+6.1. Matrah ve oran. Tevkifat matrahı gayrisafi hasılattır; götürü veya gerçek gider tenzil edilmez ve gider belgesi istenmez. Tevkifat, her fatura bakımından portalca gayrisafi tutarın yüzde 13,5'i (binde 135) olarak hesaplanır; oran kümülatif hasılata göre artmaz. Oran, kanunda yazılı alt sınır (yüzde 13,5) ve üst sınır (yüzde 27) içinde Cumhurbaşkanı kararıyla değiştirilirse portal yeni oranı karar tarihinden sonraki hasılata uygular. [T: M.1 (a), (b), (e)]
 
 6.2. Kurumsal alıcı. Alıcı, fiilî ödeme tarihinde tevkifatı yapar, muhtasar beyanname ile beyan eder ve öder; tevkifat Hazineye intikal etmeden gider indirimi yapamaz. [T: M.1 (b)]
 
 6.3. Vadeli tevkifat senedi. Otuz ila doksan gün vadeli ödemelerde alıcı, portalda Vadeli Tevkifat Senedi düzenler ve elektronik teminatı tescil ettirir. Tevkifat bedelin ödendiği tarihte teminattan Hazineye aktarılır. Teminat yetersizse veya tevkifat vadesinde aktarılmazsa alıcının gider indirimi hakkı kendiliğinden iptal olur, tevkifat aslı alıcıdan 6183 sayılı Kanuna göre tahsil edilir ve alıcı adına vergi ziyaı cezası kesilir; bu borca ve cezaya gecikme zammı uygulanmaz. Mükellef muhatap alınamaz. [T: M.1 (b)] [İDARE: teminat türleri ve teminat kaydı teknik şeması]
 
-6.4. Nihaî tüketici. Tahsilat münhasır hesaba girdiğinde aracı kuruluş, portalca hesaplanan tevkifatı (6.1) otomatik keser ve Hazineye aktarır; kümülatif safi matrahı birinci dilim sınırını aşmayan mükellefte bu tutar gayrisafi bedelin yüzde 10,5'idir. [T: M.1 (c)]
+6.4. Nihaî tüketici. Tahsilat münhasır hesaba girdiğinde aracı kuruluş, portalca hesaplanan tevkifatı (6.1) otomatik keser ve Hazineye aktarır; bu tutar gayrisafi bedelin yüzde 13,5'idir. [T: M.1 (c)]
 
 6.5. Hizmet ihracı. Bedelin döviz olarak veya yurt dışı kaynaklı olduğu ödeme kuruluşu kayıtlarıyla tevsik edilmek şartıyla Türk lirası karşılığı olarak intikalinde, transferi gerçekleştiren kuruluş tevkifatı keser. İspat: döviz cinsinden intikal, dekonttaki hizmet ihracı açıklaması ve sözleşme, proforma fatura, kabul belgesi veya iş emri teyidinden birinin basit kopyasının portala yüklenmesi. Tevkifat transfer anındaki TCMB döviz alış kuru üzerinden hesaplanır. IP kaydı, dijital trafik kaydı veya e-posta arşivi istenmez. Bedelin intikalini yapan kuruluş göndericinin kimlik ve ülke bilgisini portala aktarır; bedel intikalden itibaren on beş gün içinde göndericiye veya ilişkili kişilere geri gönderilirse (gerçek iade, iptal ve fesih hariç) işlem hizmet ihracı sayılmaz. [T: M.1 (ç)]
 
@@ -108,7 +108,7 @@
 
 ## 10. SOSYAL GÜVENLİK VE KATKILAR
 
-10.1. Mikro Mükellefiyet bu faaliyet sebebiyle 4/b sigortalılığı doğurmaz, prim tahakkuku yapılmaz. Genel sağlık sigortası hakkı kesintiye uğramaz. [T: M.5]
+10.1. Mikro Mükellefiyet bu faaliyet sebebiyle 4/b sigortalılığı doğurmaz, prim tahakkuku yapılmaz. Genel sağlık sigortası hakkı kesintiye uğramaz. Mükellef isterse 5510 sayılı Kanunun 50 nci maddesi uyarınca isteğe bağlı sigortalı olur; ödenen süreler 4/b sigortalılık süresi sayılır (m.51). [T: M.5]
 
 10.2. Hazineye aktarılan her yüz liralık tevkifatın üç lirası, mükellef aksini bildirmedikçe katılım esaslı emeklilik fonuna aktarılır; Devlet katkısı eklenir. [T: M.9] [İDARE: emeklilik şirketi veri aktarımı]
 
@@ -123,11 +123,11 @@
 | Kalem | Tutar (TL) |
 | :-- | :-- |
 | Gayrisafi hasılat (nihaî tüketiciye) | 100.000 |
-| Tevkifat matrahı (%70) | 70.000 |
-| Tevkifat (%15) | 10.500 |
-| Mükellefin net tahsilatı | 89.500 |
-| BES aktarımı (tevkifatın %3'ü, mükellef aksini bildirmezse) | 315 |
-| Devlet katkısı (%20) | 63 |
+| Tevkifat matrahı (gayrisafi hasılat) | 100.000 |
+| Tevkifat (%13,5) | 13.500 |
+| Mükellefin net tahsilatı | 86.500 |
+| BES aktarımı (tevkifatın %3'ü, mükellef aksini bildirmezse) | 405 |
+| Devlet katkısı (%20) | 81 |
 
 [Tutarlar teklifin hesabıdır; BES kalemleri M.9'a göredir.]
 
@@ -135,7 +135,7 @@
 
 Bu Tebliğ yayımı tarihinde yürürlüğe girer. [İDARE: Geçici Madde 1 uyarınca entegrasyon süresi (en çok altı ay) bitiminde banka ve portal akışlarının tam işler hâle gelmesi]
 
-**Kademeli tevkifat örneği.** İki fatura, her biri 200.000 TL (aynı yıl): 1. fatura safi matrah 140.000 TL, tevkifat 140.000 × %15 = 21.000 TL. 2. fatura sonrası kümülatif safi matrah 280.000 TL; toplam tevkifat 190.000 × %15 + 90.000 × %20 = 46.500 TL; 2. faturada kesilecek tutar 46.500 − 21.000 = 25.500 TL.
+**İki faturalı örnek.** İki fatura, her biri 200.000 TL (aynı yıl): her faturada tevkifat 200.000 × %13,5 = 27.000 TL; toplam 54.000 TL. Kümülatif takip yalnız tavan (24 brüt asgari ücret) içindir.
 
 ## EK-1. PORTAL EKRAN AKIŞI (öneri)
 
@@ -143,7 +143,7 @@ Bu Tebliğ yayımı tarihinde yürürlüğe girer. [İDARE: Geçici Madde 1 uyar
 2. Münhasır hesap beyanı (IBAN).
 3. UETS adresi talebi / mevcut adres seçimi.
 4. Belge üretimi (karekod).
-5. Fatura ekranı: alıcı türü (kurumsal / tüketici / yurt dışı) → hizmet mahiyeti → tutar → gider seçeneği → referans kodu.
+5. Fatura ekranı: alıcı türü (kurumsal / tüketici / yurt dışı) → hizmet mahiyeti → tutar → referans kodu.
 6. Kurumsal alıcı için: tevkifat tutarı, Vadeli Tevkifat Senedi seçeneği.
 7. Hasılat sayacı: yıllık tavana oran, %60 sınırı uyarısı.
 8. Bildirim kutusu: kodsuz giriş (48 saat), askı (15 gün), itiraz.

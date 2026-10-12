@@ -1,3 +1,5 @@
+> **[GEÇERSİZ ÖZET, F 3-I 302 ve 299 itibarıyla]** Bu dosya eski taslağı (götürü gider, %15, etkin %10,5) özetler ve güncel değildir; güncel metin `DEVLETE_SUNULACAK_METIN.md`dir (düz %13,5, ücretli çalışan rejim dışında, eşit giriş). Silinmedi (F 3-I 179).
+
 # Bireysel Emek, Hizmet ve Fikrî Üreticilerin Vergilendirilmesi Kanun Teklifi
 ## Sunum Dosyası: Teyitler, Riskler, Çözümler, Sorular
 

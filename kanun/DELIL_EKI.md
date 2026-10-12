@@ -1535,6 +1535,154 @@ Bu Ek, "Bireysel Emek, Hizmet ve Fikrî Üreticilerin Vergilendirilmesi ve Sosya
 
 ---
 
+
+## 5510 sayılı Kanun: emeklilik ve isteğe bağlı sigorta (ek alıntı, F 3-I 300)
+
+**Tam metin adresi:** https://www.mevzuat.gov.tr/mevzuatmetin/1.5.5510.pdf (PDF'ten metne çevrilerek okunmuştur; dipnot satırları dâhildir.)
+
+**Madde 28 (yaşlılık aylığı şartları; 4/b için 9000 gün, 7200 gün yalnız 4/a):**
+
+> MADDE 28- Yaşlılık sigortasından sigortalıya sağlanan haklar şunlardır:
+> a) Yaşlılık aylığı bağlanması.
+> b) Toptan ödeme yapılması.
+> (Değişik ikinci fıkra: 17/4/2008-5754/16 md.) İlk defa bu Kanuna göre sigortalı
+> sayılanlara;
+> a) Kadın ise 58, erkek ise 60 yaşını doldurmuş olmaları ve en az 9000 gün malûllük,
+> yaşlılık ve ölüm sigortaları primi bildirilmiş olması şartıyla yaşlılık aylığı bağlanır. Ancak, 4 üncü
+> maddenin birinci fıkrasının (a) bendi kapsamında sigortalı sayılanlar için prim gün sayısı şartı
+> 7200 gün olarak uygulanır.
+> b) (a) bendinde belirtilen yaş şartı;
+> 1) 1/1/2036 ilâ 31/12/2037 tarihleri arasında kadın için 59, erkek için 61,
+> 2) 1/1/2038 ilâ 31/12/2039 tarihleri arasında kadın için 60, erkek için 62,
+> 3) 1/1/2040 ilâ 31/12/2041 tarihleri arasında kadın için 61, erkek için 63,
+> 4) 1/1/2042 ilâ 31/12/2043 tarihleri arasında kadın için 62, erkek için 64,
+> 5) 1/1/2044 ilâ 31/12/2045 tarihleri arasında kadın için 63, erkek için 65,
+> 6) 1/1/2046 ilâ 31/12/2047 tarihleri arasında kadın için 64, erkek için 65,
+> 7) 1/1/2048 tarihinden itibaren ise kadın ve erkek için 65,
+> olarak uygulanır. Ancak yaş hadlerinin uygulanmasında (a) bendinde belirtilen prim
+> gün sayısı şartının doldurulduğu tarihte geçerli olan yaş hadleri esas alınır.
+> Sigortalılar, ikinci fıkranın (a) ve (b) bentlerinde yer alan yaş hadlerine 65 yaşını
+> geçmemek üzere üç yıl eklenmek ve adlarına en az 5400 gün malûllük, yaşlılık ve ölüm
+> sigortaları primi bildirilmiş olmak şartıyla da yaşlılık aylığından yararlanabilirler.46
+> Sigortalı olarak ilk defa çalışmaya başladığı tarihten önce 25 inci maddenin ikinci
+> fıkrasına göre malûl sayılmayı gerektirecek derecede hastalığı veya engelliliği bulunan ve bu
+> nedenle malûllük aylığından yararlanamayan sigortalılara, en az onbeş yıldan beri sigortalı
+> bulunmak ve en az 3960 gün malûllük, yaşlılık ve ölüm sigortaları primi bildirilmiş olmak
+> şartıyla yaşlılık aylığı bağlanır.47
+> Kurumca yetkilendirilen sağlık hizmet sunucularının sağlık kurullarınca usûlüne
+> uygun düzenlenecek raporlar ve dayanağı tıbbî belgelerin incelenmesi sonucu, Kurum Sağlık
+> Kurulunca çalışma gücündeki kayıp oranının;
+> 45 17/4/2008 tarihli ve 5754 sayılı Kanunun 16 ncı maddesiyle; yedinci fıkrada yer alan "50" ibaresi
+> "55" şeklinde, dokuzuncu fıkrada yer alan "prim ve her türlü borcunun" ibaresi ise "prim ve prime
+> ilişkin her türlü borcunun" değiştirilmiştir.
+> 46 17/4/2008 tarihli ve 5754 sayılı Kanunun 16 ncı maddesiyle; bu fıkrada yer alan "yaş hadlerine"
+> ibaresinden sonra gelmek üzere "65 yaşını geçmemek üzere" ibaresi eklenmiştir.
+> 47 25/4/2013 tarihli ve 6462 sayılı Kanunun 1 inci maddesiyle, bu fıkrada yer alan “hastalık veya
+> özürü” ibaresi “hastalığı veya engelliliği” şeklinde değiştirilmiştir.
+> a) % 50 ilâ %59 arasında olduğu anlaşılan sigortalılar, en az 16 yıldan beri sigortalı
+> olmaları ve 4320 gün,
+> b) % 40 ilâ %49 arasında olduğu anlaşılan sigortalılar, en az 18 yıldan beri sigortalı
+> olmaları ve 4680 gün,
+> malûllük, yaşlılık ve ölüm sigortaları primi bildirilmiş olmak şartıyla ikinci fıkranın
+> (a) bendindeki yaş şartları aranmaksızın yaşlılık aylığına hak kazanırlar. Bunlar 94 üncü
+> madde hükümlerine göre kontrol muayenesine tâbi tutulabilirler.
+> Bakanlıkça tespit edilen maden işyerlerinin yeraltı işlerinde sürekli veya münavebeli
+> olarak en az 20 yıldan beri çalışan sigortalılar için ikinci fıkrada belirtilen yaş şartı 50 olarak
+> uygulanır.48
+> 55 yaşını dolduran ve erken yaşlanmış olduğu tespit edilen sigortalılar, yaş dışındaki
+> diğer şartları taşımaları halinde yaşlılık aylığından yararlanırlar.
+> (Ek fıkra: 17/4/2008-5754/16 md.) Emeklilik veya yaşlılık aylığı bağlanması
+> talebinde bulunan kadın sigortalılardan başka birinin sürekli bakımına muhtaç derecede ağır
+> engelli çocuğu bulunanların, bu Kanunun yürürlüğe girdiği tarihten sonra geçen prim ödeme
+> gün sayılarının dörtte biri, prim ödeme gün sayıları toplamına eklenir ve eklenen bu süreler
+> emeklilik yaş hadlerinden de indirilir.49
+> (Değişik fıkra: 17/4/2008-5754/16 md.) Yukarıdaki fıkralarda belirtilen yaşlılık
+> aylıklarından yararlanabilmek için, 4 üncü maddenin birinci fıkrasının (a) bendinde belirtilen
+> sigortalının çalıştığı işten ayrıldıktan, (b) bendinde belirtilen sigortalının sigortalılığa esas
+> faaliyete son verip vermeyeceğini beyan ettikten sonra yazılı istekte bulunmaları, 4 üncü
+> maddenin birinci fıkrasının (c) bendinde belirtilen sigortalıların ise istekleri üzerine yetkili
+> makamdan emekliye sevk onayı alındıktan sonra ilişiklerinin kesilmesi şarttır.
+> 4 üncü maddenin birinci fıkrasının (b) bendinde belirtilen sigortalılara yaşlılık aylığı
+> bağlanabilmesi için ayrıca, yazılı talepte bulunduğu tarih itibarıyla genel sağlık sigortası primi
+> dahil kendi sigortalılığı nedeniyle prim ve prime ilişkin her türlü borcunun olmaması
+> zorunludur.
+> Bu maddenin uygulamasına ilişkin usûl ve esaslar, Kurum tarafından çıkarılacak
+> yönetmelikle düzenlenir.
+> 48 10/9/2014 tarihli ve 6552 sayılı Kanunun 41 inci maddesiyle, bu fıkrada yer alan “55” ibaresi “50”
+> şeklinde değiştirilmiştir.
+> 49 10/9/2014 tarihli ve 6552 sayılı Kanunun 41 inci maddesiyle, bu fıkrada yer alan “malûl” ibaresi
+> “ağır engelli” şeklinde değiştirilmiştir.
+
+**Madde 29 (yaşlılık aylığının hesaplanması, ilk fıkralar):**
+
+> MADDE 29- (Değişik: 17/4/2008-5754/17 md.)
+> 4 üncü maddenin birinci fıkrasının (a) ve (b) bentleri kapsamındaki sigortalılar ile aynı
+> fıkranın (c) bendine göre bu Kanunun yürürlüğe girdiği tarihten sonra ilk defa sigortalı olarak
+> çalışmaya başlayanların yaşlılık aylığı, aşağıdaki hükümlere göre belirlenecek ortalama aylık
+> kazancı ile aylık bağlama oranının çarpımı sonucunda bulunan tutardır.
+> Ortalama aylık kazanç, sigortalının her yıla ait prime esas kazancının, kazancın ait
+> olduğu yıldan itibaren aylık talep tarihine kadar geçen yıllar için, her yıl gerçekleşen
+> güncelleme katsayısı ile güncellenerek bulunan kazançlar toplamının, itibarî hizmet süresi ile
+> fiilî hizmet süresi zammı hariç toplam prim ödeme gün sayısına bölünmesi suretiyle
+> hesaplanan ortalama günlük kazancın otuz katıdır.
+> Aylık bağlama oranı, sigortalının malûllük, yaşlılık ve ölüm sigortalarına tâbi geçen
+> toplam prim ödeme gün sayısının her 360 günü için %2 olarak uygulanır. Bu hesaplamada
+> 360 günden eksik süreler orantılı olarak dikkate alınır. Ancak aylık bağlama oranı %90'ı
+> geçemez.
+
+**Madde 50 (isteğe bağlı sigorta ve şartları):**
+
+> MADDE 50- İsteğe bağlı sigorta; kişilerin isteğe bağlı olarak prim ödemek suretiyle
+> uzun vadeli sigorta kollarına ve genel sağlık sigortasına tâbi olmalarını sağlayan sigortadır.
+> (Değişik ikinci fıkra: 17/4/2008-5754/30 md.) İsteğe bağlı sigortalı olabilmek için
+> Türkiye'de ikamet edenler ile Türkiye’de ikamet etmekte iken sosyal güvenlik sözleşmesi
+> imzalanmamış ülkelerdeki Türk vatandaşlarından;
+> a) Bu Kanuna tâbi zorunlu sigortalı olmayı gerektirecek şekilde çalışmamak veya sigortalı
+> olarak çalışmakla birlikte ay içerisinde 30 günden az çalışmak ya da tam gün çalışmamak,
+> b) Kendi sigortalılığı nedeniyle aylık bağlanmamış olmak,
+> c) 18 yaşını doldurmuş bulunmak,
+> d) İsteğe bağlı sigorta talep dilekçesiyle Kuruma başvuruda bulunmak,
+> şartları aranır.
+
+**Madde 51 (isteğe bağlı sigorta başlangıcı ve sona ermesi; ödenen sürelerin 4/b süresi sayılması):**
+
+> MADDE 51- (Değişik birinci fıkra: 17/4/2008-5754/31 md.) İsteğe bağlı sigortalılık,
+> müracaatın Kurum kayıtlarına intikal ettiği tarihi takip eden günden itibaren başlar.
+> İsteğe bağlı sigortalı olarak prim ödenen tarihlerde, 4 üncü maddeye göre sigortalı
+> olmayı gerektirecek çalışması bulunduğu tespit edilenlerin, zorunlu sigortalılıkla çakışan
+> isteğe bağlı prim ödenen süreleri iptal edilerek, bu süreye ilişkin ödedikleri primler ilgililere
+> iade edilir.
+> (Ek fıkra: 17/4/2008-5754/31 md.) Ay içerisinde 30 günden az çalışan veya 80 inci
+> madde uyarınca prim ödeme gün sayısı, ay içindeki toplam çalışma saatinin 4857 sayılı
+> Kanuna göre belirlenen günlük normal çalışma saatine bölünmesi suretiyle hesaplanan
+> sigortalıların aynı ay içerisinde isteğe bağlı sigortaya prim ödemeleri halinde, primi ödenen
+> süreler zorunlu sigortalılığa ilişkin prim ödeme gün sayısına otuz günü geçmemek üzere
+> eklenir ve eklenen bu süreler, 4 üncü maddenin birinci fıkrasının (a) bendi kapsamında
+> sigortalılık süresi olarak kabul edilir.
+> İsteğe bağlı sigortalılık;
+> a) İsteğe bağlı sigortalılığını sona erdirme talebinde bulunanların, primi ödenmiş son
+> günü takip eden günden,
+> b) Aylık talebinde bulunanların, aylığa hak kazanmış olmak şartıyla talep tarihinden,
+> c) Ölen sigortalının ölüm tarihinden,
+> itibaren sona erer.
+> İsteğe bağlı sigorta primi ödenmiş süreler, malûllük, yaşlılık ve ölüm sigortaları ile
+> genel sağlık sigortası hükümlerinin uygulamasında dikkate alınır ve söz konusu süreler, bu
+> 88 13/2/2011 tarihli ve 6111 sayılı Kanunun 32 nci maddesiyle, bu maddenin üçüncü fıkrasında yer
+> alan “(b) bendi” ibaresi “(a) bendi”, beşinci fıkrasında yer alan “bu süreler” ibaresi “söz konusu
+> süreler, bu maddenin üçüncü fıkrası hükmü saklı olmak üzere” şeklinde değiştirilmiştir.
+> maddenin üçüncü fıkrası hükmü saklı olmak üzere 4 üncü maddenin birinci fıkrasının (b)
+> bendi kapsamında sigortalılık süresi olarak kabul edilir.
+
+**Madde 52 (isteğe bağlı sigorta primi, ilk fıkra):**
+
+> MADDE 52- (Değişik: 17/4/2008-5754/32 md.)
+> İsteğe bağlı sigorta primi, 82 nci maddeye göre belirlenen prime esas kazancın alt sınırı
+> ile üst sınırı arasında, sigortalı tarafından belirlenen prime esas aylık kazancın %33’üdür. Bunun
+> %21'i malûllük, yaşlılık ve ölüm sigortaları primi, %12'si genel sağlık sigortası primidir. 51 inci
+> maddenin üçüncü fıkrasında belirtilenler için 82 nci maddeye göre belirlenen prime esas
+> kazancın alt sınırı ile üst sınırı arasında olmak kaydıyla belirlenen günlük kazanç ve gün sayısı
+> üzerinden malûllük, yaşlılık ve ölüm sigortaları ile genel sağlık sigortası primi alınır.89
+
 # BÖLÜM 2. METNİ BU EKTE BULUNMAYAN DAYANAKLAR
 
 Aşağıdakilerin resmî metni indirilip okunamamıştır; gerekçede bunlar "[İ]" ile veya "teyit edilmedi" notuyla anılmıştır. Daha önce bu listede olan 2828 Ek 7, 2709 m.16 ve m.88, 3065 m.58, 6735, 7201 m.7/a, 3065 m.17/4-(a) ve m.18, 657 m.206, 2022, 6183 m.51, 4857 m.25/II ve 5682 m.14 sonradan resmî metinden okunmuş ve Bölüm 1'e alınmıştır.

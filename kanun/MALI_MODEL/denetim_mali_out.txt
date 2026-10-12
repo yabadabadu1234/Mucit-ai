@@ -1,19 +1,19 @@
-Yıl-4 net (mlr TL). eff = etkin tevkifat oranı; s = rejime geçen kayıtlı payı; prim sürekliliği (pdv)
-  Kötümser  düz %10,5 (Madde P), sahte kaybı modelde     prim sürekliliği 1.0: net(s=taban 0.30)   +0.59 | s kırılma 0.74 | herkes geçse(s=0.8)   -0.08
-  Kötümser  düz %10,5 (Madde P), sahte kaybı modelde     prim sürekliliği 0.5: net(s=taban 0.30)   -1.11 | s kırılma 0.14 | herkes geçse(s=0.8)   -4.61
-  Kötümser  A kuralı %35 doğrulanmamış B2B, sahte=0      prim sürekliliği 1.0: net(s=taban 0.30)   +1.45 | s kırılma 1.00 | herkes geçse(s=0.8)   +0.78
-  Kötümser  A kuralı %35 doğrulanmamış B2B, sahte=0      prim sürekliliği 0.5: net(s=taban 0.30)   -0.25 | s kırılma 0.26 | herkes geçse(s=0.8)   -3.75
-  Kötümser  A kuralı %70, sahte=0                        prim sürekliliği 1.0: net(s=taban 0.30)   +2.30 | s kırılma 1.00 | herkes geçse(s=0.8)   +1.63
-  Kötümser  A kuralı %70, sahte=0                        prim sürekliliği 0.5: net(s=taban 0.30)   +0.60 | s kırılma 0.39 | herkes geçse(s=0.8)   -2.91
-  Orta      düz %10,5 (Madde P), sahte kaybı modelde     prim sürekliliği 1.0: net(s=taban 0.15)   +4.06 | s kırılma 0.92 | herkes geçse(s=0.8)   +0.61
-  Orta      düz %10,5 (Madde P), sahte kaybı modelde     prim sürekliliği 0.5: net(s=taban 0.15)   +1.24 | s kırılma 0.20 | herkes geçse(s=0.8)  -14.40
-  Orta      A kuralı %35 doğrulanmamış B2B, sahte=0      prim sürekliliği 1.0: net(s=taban 0.15)   +7.41 | s kırılma 1.00 | herkes geçse(s=0.8)   +3.97
-  Orta      A kuralı %35 doğrulanmamış B2B, sahte=0      prim sürekliliği 0.5: net(s=taban 0.15)   +4.60 | s kırılma 0.34 | herkes geçse(s=0.8)  -11.04
-  Orta      A kuralı %70, sahte=0                        prim sürekliliği 1.0: net(s=taban 0.15)  +10.75 | s kırılma 1.00 | herkes geçse(s=0.8)   +7.31
-  Orta      A kuralı %70, sahte=0                        prim sürekliliği 0.5: net(s=taban 0.15)   +7.94 | s kırılma 0.48 | herkes geçse(s=0.8)   -7.70
-  İyimser   düz %10,5 (Madde P), sahte kaybı modelde     prim sürekliliği 1.0: net(s=taban 0.05)  +19.89 | s kırılma 1.00 | herkes geçse(s=0.8)   +4.89
-  İyimser   düz %10,5 (Madde P), sahte kaybı modelde     prim sürekliliği 0.5: net(s=taban 0.05)  +16.79 | s kırılma 0.25 | herkes geçse(s=0.8)  -44.80
-  İyimser   A kuralı %35 doğrulanmamış B2B, sahte=0      prim sürekliliği 1.0: net(s=taban 0.05)  +32.52 | s kırılma 1.00 | herkes geçse(s=0.8)  +17.51
-  İyimser   A kuralı %35 doğrulanmamış B2B, sahte=0      prim sürekliliği 0.5: net(s=taban 0.05)  +29.41 | s kırılma 0.41 | herkes geçse(s=0.8)  -32.18
-  İyimser   A kuralı %70, sahte=0                        prim sürekliliği 1.0: net(s=taban 0.05)  +45.14 | s kırılma 1.00 | herkes geçse(s=0.8)  +30.14
-  İyimser   A kuralı %70, sahte=0                        prim sürekliliği 0.5: net(s=taban 0.05)  +42.03 | s kırılma 0.56 | herkes geçse(s=0.8)  -19.56
+Yıl-4 net (mlr TL). eff = etkin tevkifat oranı; s = rejime geçen kayıtlı payı; isteğe bağlı prim devam payı (pdv)
+  Kötümser  düz %13,5 (Madde P), sahte kaybı modelde     isteğe bağlı prim devam payı 0.0: net(s=taban 0.30)   -2.01 | s kırılma 0.14 | herkes geçse(s=0.8)   -8.36
+  Kötümser  düz %13,5 (Madde P), sahte kaybı modelde     isteğe bağlı prim devam payı 0.5: net(s=taban 0.30)   -0.31 | s kırılma 0.26 | herkes geçse(s=0.8)   -3.82
+  Kötümser  A kuralı %35 doğrulanmamış B2B, sahte=0      isteğe bağlı prim devam payı 0.0: net(s=taban 0.30)   -1.33 | s kırılma 0.20 | herkes geçse(s=0.8)   -7.67
+  Kötümser  A kuralı %35 doğrulanmamış B2B, sahte=0      isteğe bağlı prim devam payı 0.5: net(s=taban 0.30)   +0.37 | s kırılma 0.35 | herkes geçse(s=0.8)   -3.13
+  Kötümser  A kuralı %70, sahte=0                        isteğe bağlı prim devam payı 0.0: net(s=taban 0.30)   -0.66 | s kırılma 0.25 | herkes geçse(s=0.8)   -7.00
+  Kötümser  A kuralı %70, sahte=0                        isteğe bağlı prim devam payı 0.5: net(s=taban 0.30)   +1.05 | s kırılma 0.45 | herkes geçse(s=0.8)   -2.46
+  Orta      düz %13,5 (Madde P), sahte kaybı modelde     isteğe bağlı prim devam payı 0.0: net(s=taban 0.15)   +1.32 | s kırılma 0.18 | herkes geçse(s=0.8)  -26.52
+  Orta      düz %13,5 (Madde P), sahte kaybı modelde     isteğe bağlı prim devam payı 0.5: net(s=taban 0.15)   +4.13 | s kırılma 0.32 | herkes geçse(s=0.8)  -11.51
+  Orta      A kuralı %35 doğrulanmamış B2B, sahte=0      isteğe bağlı prim devam payı 0.0: net(s=taban 0.15)   +3.99 | s kırılma 0.24 | herkes geçse(s=0.8)  -23.85
+  Orta      A kuralı %35 doğrulanmamış B2B, sahte=0      isteğe bağlı prim devam payı 0.5: net(s=taban 0.15)   +6.80 | s kırılma 0.43 | herkes geçse(s=0.8)   -8.84
+  Orta      A kuralı %70, sahte=0                        isteğe bağlı prim devam payı 0.0: net(s=taban 0.15)   +6.64 | s kırılma 0.31 | herkes geçse(s=0.8)  -21.20
+  Orta      A kuralı %70, sahte=0                        isteğe bağlı prim devam payı 0.5: net(s=taban 0.15)   +9.45 | s kırılma 0.54 | herkes geçse(s=0.8)   -6.19
+  İyimser   düz %13,5 (Madde P), sahte kaybı modelde     isteğe bağlı prim devam payı 0.0: net(s=taban 0.05)  +23.72 | s kırılma 0.21 | herkes geçse(s=0.8)  -84.47
+  İyimser   düz %13,5 (Madde P), sahte kaybı modelde     isteğe bağlı prim devam payı 0.5: net(s=taban 0.05)  +26.82 | s kırılma 0.38 | herkes geçse(s=0.8)  -34.77
+  İyimser   A kuralı %35 doğrulanmamış B2B, sahte=0      isteğe bağlı prim devam payı 0.0: net(s=taban 0.05)  +33.75 | s kırılma 0.28 | herkes geçse(s=0.8)  -74.43
+  İyimser   A kuralı %35 doğrulanmamış B2B, sahte=0      isteğe bağlı prim devam payı 0.5: net(s=taban 0.05)  +36.85 | s kırılma 0.50 | herkes geçse(s=0.8)  -24.74
+  İyimser   A kuralı %70, sahte=0                        isteğe bağlı prim devam payı 0.0: net(s=taban 0.05)  +43.77 | s kırılma 0.35 | herkes geçse(s=0.8)  -64.42
+  İyimser   A kuralı %70, sahte=0                        isteğe bağlı prim devam payı 0.5: net(s=taban 0.05)  +46.87 | s kırılma 0.62 | herkes geçse(s=0.8)  -14.72

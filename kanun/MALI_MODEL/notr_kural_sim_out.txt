@@ -1,19 +1,19 @@
 Strateji taraması: alıcı oranı r_b, ücret c, mahsup talebi {evet,hayır}; birim ödeme 1,0 sahte
-  mevcut Madde 1(e) (alıcı mahsubu serbest, satıcı %10,5)        azamî kazanç +0.295 (strateji r_b=0.40 c=0.00 mahsup=True)
+  mevcut Madde 1(e) (alıcı mahsubu serbest, satıcı %13,5)        azamî kazanç +0.265 (strateji r_b=0.40 c=0.00 mahsup=True)
   NÖTR kural (satıcı oranı = mahsup talep edilirse alıcı oranı)  azamî kazanç +0.000 (strateji r_b=0.20 c=0.00 mahsup=True)
 
 Alıcı mahsup talep eder ve ücret c=0 iken kazanç (nötr): ['-0.000', '0.000', '0.000', '0.000', '0.000', '0.000']
 
 SAHİCİ SATICI YÜKÜ: yıllık H için satıcının ödediği toplam (hasılata oranı); alıcı mahsup talep ederse (alıcı kurumlar %25)
-H/W      eski rejim teklif %10,5 nötr (hepsi mahsup) nötr (%70 mahsup)
-1             3.507        0.105          0.250          0.206
-2             1.791        0.105          0.250          0.206
-4             0.933        0.105          0.250          0.206
-8             0.504        0.105          0.250          0.206
-16            0.297        0.105          0.250          0.206
-24            0.231        0.105          0.250          0.206
+H/W      eski rejim teklif %13,5 nötr (hepsi mahsup) nötr (%70 mahsup)
+1             3.507        0.135          0.250          0.215
+2             1.791        0.135          0.250          0.215
+4             0.933        0.135          0.250          0.215
+8             0.504        0.135          0.250          0.215
+16            0.297        0.135          0.250          0.215
+24            0.231        0.135          0.250          0.215
 
 Mali etki (yıl-4 net, mlr TL): sahte fatura kaybı sıfır, B2B payı kurumsal_pay=0,70 modelin varsayımı; katılım kaybı modellenmedi
-  Kötümser  teklif düz %10,5: +0.59   nötr kural (etkin 0.2065): +2.30
-  Orta      teklif düz %10,5: +4.06   nötr kural (etkin 0.2065): +10.75
-  İyimser   teklif düz %10,5: +19.89   nötr kural (etkin 0.2065): +45.14
+  Kötümser  teklif düz %13,5: -2.01   nötr kural (etkin 0.2155): -0.66
+  Orta      teklif düz %13,5: +1.32   nötr kural (etkin 0.2155): +6.64
+  İyimser   teklif düz %13,5: +23.72   nötr kural (etkin 0.2155): +43.77

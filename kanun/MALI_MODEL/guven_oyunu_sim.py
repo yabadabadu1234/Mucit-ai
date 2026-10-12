@@ -1,6 +1,6 @@
 import math
 from genc_model import TAVAN
-D=0.25; TEV=0.105; UCRET=0.03; ODUL=0.10
+D=0.25; TEV=0.135; UCRET=0.03; ODUL=0.10
 KAZ_B=D-UCRET-TEV+TEV
 B_KAZ=-1.0+(1.0-TEV-UCRET)+D
 B_ZARAR=-1.0+D
@@ -27,5 +27,5 @@ print("\nDuyarlılık: yaptırım medyanı çarpanı (tüm tipler), aktif sahte 
 for m in (0.5,1,2,4,8):
     s0=sum(p*aktif(med*m,0.40,0.0) for _,p,med in TIPLER); s1=sum(p*aktif(med*m,0.0,ODUL*(D-TEV)) for _,p,med in TIPLER)
     print("  x%-4s bugün %.3f  tedbir %.3f"%(m,s0,s1))
-print("\nSınır: kimlik başı yıllık azamî sızıntı tavan x (D-tev) = %.0f TL; ilişkili kişiler (i) ile toplulaştırıldığı için aile başına aynı sınır; tek alıcı ilk yıl (f) kuralıyla %.0f TL"%(TAVAN*(D-TEV),0.145*6*33030))
+print("\nSınır: kimlik başı yıllık azamî sızıntı tavan x (D-tev) = %.0f TL; ilişkili kişiler (i) ile toplulaştırıldığı için aile başına aynı sınır; tek alıcı ilk yıl (f) kuralıyla %.0f TL"%(TAVAN*(D-TEV),(D-TEV)*6*33030))
 print("Yaptırım medyanları, pay dağılımı, ödül ve rehin değerleri VARSAYIMDIR (ölçülmedi); sonuç yalnız yönü ve duyarlılığı gösterir")

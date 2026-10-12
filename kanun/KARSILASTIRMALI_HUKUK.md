@@ -1,6 +1,6 @@
 # KARŞILAŞTIRMALI HUKUK — MİKRO MÜKELLEFİYET MESELESİ (F 3-I 256)
 
-**Mesele:** Küçük bağımsız üreticiyi (hizmet, emek, fikrî üretim) tek, basit, kademeli bir rejime almak; vergiyi tevkifatla toplamak; sosyal güvenliği ve kayıt dışılığı birlikte çözmek.
+**Mesele:** Küçük bağımsız üreticiyi (hizmet, emek, fikrî üretim) tek, basit, düz oranlı bir rejime almak; vergiyi tevkifatla toplamak; sosyal güvenliği ve kayıt dışılığı birlikte çözmek.
 **Usul:** önce kendi milletimiz, sonra yabancı örnekler. Her satırda **yoklama durumu** yazılır: `arama` (bu oturumda web aramasıyla görüldü, ikincil özet), `hafıza` (yoklanmadı), `yoklanamadı` (kaynak bulunamadı). Birincil metin (kanun maddesinin kendisi) okunmadıkça hiçbir satır "kesin" değildir (F 3-I 244, 33-B). Bu oturumda arama sonuçlarının URL'leri deftere geçirilmedi; bu bir eksiktir, atıf yapan kişi birincil metni yeniden yoklamalıdır.
 
 ## A. Kendi milletimiz

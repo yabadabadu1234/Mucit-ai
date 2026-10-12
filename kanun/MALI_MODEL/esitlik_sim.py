@@ -15,7 +15,7 @@ print("EŞİT REJİM (eski ve yeni aynı: sabit prim yok, kapı yok): yıl-4 net
 print("pi = eski sabit primin gerçekte tahsil edilen payı (modelde 0,8 varsayılmıştı, YOKLANAMADI)")
 for ad in ("Kötümser","Orta","İyimser"):
     p=model.sc(ad)
-    for nm,eff in (("düz %10,5",0.105),("A %35",0.35*0.25+0.65*0.105),("A %70",0.7*0.25+0.3*0.105)):
+    for nm,eff in (("düz %13,5",0.135),("A %35",0.35*0.25+0.65*0.135),("A %70",0.7*0.25+0.3*0.135)):
         row=[]
         for s in (p['s_kayitli'],0.5,1.0):
             ps=pistar(ad,eff,s)
@@ -28,7 +28,7 @@ for ad in ("Kötümser","Orta","İyimser"):
     p=model.sc(ad); y=model.yil(p,p['ramp'][3]); toplam=y['N']*y['ort_H']
     for pb in (0.35,0.70):
         havuz=toplam*p['kurumsal_pay']*pb
-        print("  %-9s toplam hasılat %6.1f mlr | doğrulanmamış B2B payı %.2f -> havuz %5.1f mlr | kaybı (%.2f mlr) karşılayan ücret oranı %.2f%% | AD'nin satıcıya getirdiği yük %.1f mlr"%(ad,toplam/1e9,pb,havuz/1e9,LOSS[ad],100*LOSS[ad]*1e9/havuz,havuz*(0.25-0.105)/1e9))
+        print("  %-9s toplam hasılat %6.1f mlr | doğrulanmamış B2B payı %.2f -> havuz %5.1f mlr | kaybı (%.2f mlr) karşılayan ücret oranı %.2f%% | AD'nin satıcıya getirdiği yük %.1f mlr"%(ad,toplam/1e9,pb,havuz/1e9,LOSS[ad],100*LOSS[ad]*1e9/havuz,havuz*(0.25-0.135)/1e9))
 print("  aktif serbest SM+SMMM ~59 958 (ikincil, Ocak 2026 yazısı); kişi başı kayıp = kayıp / 59 958:",["%.0f TL"%(v*1e9/59958) for v in LOSS.values()])
 
 print("\nDENGE ORANI: eşit rejimde (prim sürekliliği 0, pi=0,8) yıl-4 net=0 için gereken taban tevkifat oranı b (tüketici ve doğrulanmış kanal); doğrulanmamış B2B alıcı oranı 0,25")
@@ -42,4 +42,4 @@ for ad in ("Kötümser","Orta","İyimser"):
             m=(lo+hi)/2
             if f(m)>0: hi=m
             else: lo=m
-        print("  %-9s doğrulanmamış B2B %.2f: gereken taban oran %%%.1f (teklifte %%10,5)"%(ad,pb,100*hi))
+        print("  %-9s doğrulanmamış B2B %.2f: gereken taban oran %%%.1f (teklifte %%13,5)"%(ad,pb,100*hi))
