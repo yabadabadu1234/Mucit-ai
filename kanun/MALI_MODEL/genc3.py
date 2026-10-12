@@ -95,6 +95,12 @@ def kos3(rj,P,S,N,par,T=72):
         if rj["prim"]=="gelire":
             y_ay=R-vergi; K_esik=par["prim_k"]*W
             prim=PRIM_AYLIK*np.clip((y_ay-GECIM_HADDI)/(K_esik-GECIM_HADDI),0.0,1.0)
+        if rj["prim"]=="asgari_tam":
+            prim=np.where(R-vergi>W,PRIM_AYLIK,0.0)
+        if rj["prim"]=="asgari_ust":
+            prim=np.minimum(PRIM_AYLIK,np.maximum(R-vergi-W,0.0))
+        if rj["prim"]=="asgari_yari":
+            prim=np.minimum(PRIM_AYLIK,0.5*np.maximum(R-vergi-W,0.0))
         prim=np.where(genel&(rj["prim"]!="sabit"),PRIM_AYLIK,prim)
         if rj["sabit"]: sabit=np.full(N,SABIT_AYLIK)
         sabit=np.where(genel,SABIT_AYLIK,sabit)

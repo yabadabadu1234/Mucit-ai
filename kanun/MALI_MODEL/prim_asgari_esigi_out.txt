@@ -1,0 +1,26 @@
+== GENÇ (6 tohum, N=2000, 72 ay) ==
+rejim                                                             canli12 acik_firma    gecim72     kalici        dip      yikim    net_son  devlet_pv
+eğri (F308 öncesi, 11.010 eşik, 6 asgaride tam)                     0.666      0.884      0.810      0.332      0.464      0.482      1.591 551858.422
+A: asgari altı 0, üstü TAM prim (basamak)                           0.665      0.872      0.744      0.260      0.555      0.544      1.466 621770.100
+B: asgari altı 0, üstü min(tam, asgari üstü kısım)                  0.668      0.881      0.800      0.277      0.527      0.498      1.497 614136.180
+C: asgari altı 0, üstü min(tam, yarısı asgari üstü kısım)           0.668      0.885      0.807      0.302      0.499      0.484      1.523 601568.986
+mevcut, kayıtlı                                                     0.621      0.626      0.594      0.183      0.728      0.906      1.208 626329.484
+tarafsız                                                            0.750      0.926      0.892      0.547      0.258      0.340      2.766      0.000
+
+== DEVLET: yeni prim geliri, 4. yıl (milyar TL), ortalama aylık gelire göre ==
+Kötümser gelire: net -2.05 (prim 0.26)  tam: net -1.65 (prim 0.66)  ust: net -1.90 (prim 0.41)  yari: net -2.06 (prim 0.25)
+Orta gelire: net 1.64 (prim 1.25)  tam: net 3.83 (prim 3.43)  ust: net 2.57 (prim 2.17)  yari: net 1.75 (prim 1.35)
+İyimser gelire: net 26.56 (prim 5.44)  tam: net 37.17 (prim 16.05)  ust: net 31.45 (prim 10.33)  yari: net 27.59 (prim 6.47)
+
+== AYLIK ESİK İSTİSMARI: yıllık net gelir A, aylık eşik W=33.030 ==
+A (yıllık)   dürüst(dalgalı) düzleştirilmiş aileye 3'e böl kayıp/yıl     
+200000       A:    5981 B:    2804  A:       0 B:       0  A:       0 B:       0  A:    5981 B:    2804
+396000       A:   58728 B:   41819  A:       0 B:       0  A:       0 B:       0  A:   58728 B:   41819
+600000       A:  104615 B:   87891  A:  141699 B:  141699  A:       0 B:       0  A:  -37084 B:  -53808
+800000       A:  125900 B:  114823  A:  141699 B:  141699  A:       0 B:       0  A:  -15799 B:  -26876
+1200000      A:  138647 B:  135137  A:  141699 B:  141699  A:  425097 B:   10920  A:   -3052 B:   -6562
+
+== B KURALI: oran duyarlılığı, 4. yıl net (milyar TL) ==
+Kötümser %13.5: -1.90  %20.0: -0.92  %27.0: 0.15 | kırılma oranı %26.0
+Orta %13.5: 2.57  %20.0: 6.30  %27.0: 10.37 | %13,5'te zaten pozitif
+İyimser %13.5: 31.45  %20.0: 45.07  %27.0: 59.89 | %13,5'te zaten pozitif
