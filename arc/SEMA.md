@@ -308,3 +308,8 @@ Tenkit: "model" iki anlamda olabilir (model teorisindeki yapı; üretici/dinamik
 
 ## 11. Mana · mefhum · masadak (F 3-I 303)
 Tam çalışma `arc/MANA_MEFHUM_MASADAK.md`de. Özet: masadak kavramın altındaki en özel nokta; mana kişinin alt bağlamındaki çift; mefhum tam bağlamdaki kanonik kapalı çift (zihnî ve hakikî iki kat); tasavvur kapalı, tutarlı, mümkün konuya bağlı çift; sadık/kâzib tutarlılık, tasdikte doğruluk mutabakat.
+
+---
+
+## 12. Kelâm değişmezleri (F 3-I 306)
+Tam çalışma `arc/KELAM_DEGISMEZLERI.md`de. Özet: söz sevkle başlar (hafıza eylem başlatamaz); boşluk + kural + muhatap varsa söylenir; öğrenme müdahaleyle ve elemeyle kapanır; yapay zekâ kelâmı marjinal gölgedir.
