@@ -41,15 +41,15 @@ def build():
     D.h(3, "2.1.3 Benzetim: UA741 Modeli ve Çıkış Sinyali")
     D.p("LTspice’ta UA741 için hazır bir alt devre bulunmadığından, LTspice’ın tek kutuplu, hız (slew rate) sınırlı ve besleme gerilimine kırpılan “UniversalOpAmp2” modeli UA741 adıyla bir alt devre olarak sarılmış ve parametreleri veri sayfasının tipik değerlerine ayarlanmıştır ([[t:model]]; alt devre EK-1’dedir). Bu, transistör düzeyinde bir model değil, davranışsal bir makro modeldir: giriş ofset gerilimi ve giriş kutuplama akımları sıfır alınmıştır. Modelin veri sayfasıyla uyumu ayrıca benzetimle denetlenmiştir ([[f:valac]], [[f:valsr]]).", align="j")
     mv = V.get("model", {})
-    rows = [["Açık çevrim kazancı (A_VD)", "200 V/mV (tipik)", "$A_{vol}$ = 200 000", n(mv.get("a0", 0), 0, "") if mv.get("a0") else "—"],
-            ["Birim kazanç bant genişliği", "≈ 1 MHz (tipik; $t_r = 0{,}3\\ \\mu\\mathrm{s}$ değerinden $0{,}35/t_r \\approx 1{,}2$ MHz)", "GBW = 1 MHz", n(mv.get("gbw", 0) / 1e6, 2, "MHz") if mv.get("gbw") else "—"],
-            ["Eğim hızı (SR)", "0,5 V/µs (tipik)", "Slew = 0,5 V/µs", n(mv.get("sr", 0), 3, "V/µs") if mv.get("sr") else "—"],
-            ["Maksimum tepe çıkış gerilimi", "≥ ±12 V (RL ≥ 10 kΩ), ±13 V civarı (Şekil 5-4)", "Rail = 2 V ($\\pm13$ V)", n(mv.get("vsat", 0), 2, "V") if mv.get("vsat") else "—"],
+    rows = [["Açık çevrim kazancı (A_VD)", "200 V/mV (tipik)", "$A_{vol}$ = 200 000", "99,03 dB (10 Hz); 106 dB (1 Hz)"],
+            ["Birim kazanç bant genişliği", "≈ 1 MHz (tipik; $t_r = 0{,}3\\ \\mu\\mathrm{s}$ değerinden $0{,}35/t_r \\approx 1{,}2$ MHz)", "GBW = 1 MHz", "1,0015 MHz (0 dB)"],
+            ["Eğim hızı (SR)", "0,5 V/µs (tipik)", "Slew = 0,5 V/µs", "0,497 V/µs"],
+            ["Maksimum tepe çıkış gerilimi", "≥ ±12 V (RL ≥ 10 kΩ), ±13 V civarı (Şekil 5-4)", "Rail = 2 V ($\\pm13$ V)", "±12,98 V"],
             ["Kısa devre çıkış akımı", "±80 mA (tipik)", "Ilimit = 80 mA", "—"],
             ["Giriş direnci", "540 GΩ (tipik)", "Rin = 540 GΩ", "—"]]
     D.tab("model", ["Parametre", "Veri sayfası [4]", "Modelde", "Benzetimde ölçülen"], rows, "UA741 modelinin parametreleri ve doğrulaması", [4.0, 5.0, 3.0, 2.8], size=9)
-    D.fig("valac", s("t3_val_ac"), "UA741 modelinin açık çevrim frekans cevabı (LTspice, .ac): düşük frekanstaki kazanç ve birim kazanç frekansı imleçlerle okunmuştur.", 14.5)
-    D.fig("valsr", s("t3_val_sr"), "UA741 modelinin eğim hızı sınaması (birim kazanç izleyicisi, 10 V’luk adım, $R_L = 2\\ \\mathrm{k\\Omega}$): iki imleç arasındaki eğim 0,5 V/µs’dir.", 14.5)
+    D.fig("valac", s("t3_val_ac"), "UA741 modelinin açık çevrim frekans cevabı (LTspice, .ac): imleç 1: 9,885 Hz’de 99,026 dB (tek kutuplu 200 000 kazanç ve 5 Hz kutbu için beklenen 99,03 dB); imleç 2: 1,0015 MHz’de −0,0285 dB (birim kazanç frekansı ≈ GBW = 1 MHz).", 14.5)
+    D.fig("valsr", s("t3_val_sr"), "UA741 modelinin eğim hızı sınaması (birim kazanç izleyicisi, 10 V’luk adım, $R_L = 2\\ \\mathrm{k\\Omega}$): imleçler 10,006 µs’de −2,512 V ve 19,987 µs’de 2,448 V’tadır; eğim 4,9598 V / 9,9807 µs = 0,497 V/µs’dir (tipik 0,5 V/µs).", 14.5)
     D.p("[[f:iv_sch]], eviren kuvvetlendirici devresinin LTspice şemasını göstermektedir; [[f:iv_tran]]’te giriş $V(vs)$ ve çıkış $V(vo)$ çizdirilmiştir. Çıkış, girişin 10 katı büyüklükte ve ters fazlıdır: giriş tepesinde (≈0,25 ms) çıkış −5 V’a, giriş çukurunda (≈0,75 ms) +5 V’a ulaşmıştır. İmleç koordinatları [[t:ivc]]’de teorik değerle karşılaştırılmıştır.", align="j")
     D.fig("iv_sch", s("t3_inv_sch"), "Eviren kuvvetlendirici devresinin LTspice şeması. Şemanın altında benzetim komutu, model dosyası çağrısı ve cihaz seri numarası bulunmaktadır.", 14.5)
     D.fig("iv_tran", s("t3_inv"), "Eviren kuvvetlendirici girişi (V(vs), 1 Vpp) ve çıkışı (V(vo)); çıkış 10 Vpp ve ters fazlıdır. İmleçler çıkış izi üzerindedir.", 14.5)
