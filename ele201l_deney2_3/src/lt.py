@@ -1,7 +1,7 @@
 import os
 SER = "ELE201L Lab PC | Device S/N: TOBB-7K3Q-0421"
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "asc")
-UA741 = (".subckt UA741 1 2 3 4 5 params: Avol=200k GBW=1Meg Slew=500k Ilimit=80m Rail=2 Vos=0 Rin=2Meg\n"
+UA741 = (".subckt UA741 1 2 3 4 5 params: Avol=200k GBW=1Meg Slew=500k Ilimit=80m Rail=2 Vos=0 Rin=540Gig\n"
          "X1 1 2 3 4 5 level2 Avol={Avol} GBW={GBW} Slew={Slew} Ilimit={Ilimit} Rail={Rail} Vos={Vos} Rin={Rin}\n.ends")
 
 class Sch:
@@ -22,7 +22,7 @@ class Sch:
     def opamp(self, name, cx, cy):
         self.uses_op = True
         self.l += ["SYMBOL OpAmps\\UniversalOpAmp2 %d %d R0" % (cx, cy), "WINDOW 0 40 -48 Left 2", "WINDOW 3 40 -28 Left 2", "SYMATTR InstName " + name, "SYMATTR SpiceModel UA741",
-                   "SYMATTR Value2 Avol=200k GBW=1Meg Slew=500k", "SYMATTR SpiceLine Ilimit=80m Rail=2 Vos=0", "SYMATTR SpiceLine2 Rin=2Meg"]
+                   "SYMATTR Value2 Avol=200k GBW=1Meg Slew=500k", "SYMATTR SpiceLine Ilimit=80m Rail=2 Vos=0", "SYMATTR SpiceLine2 Rin=540Gig"]
     def text(self, x, y, s, cmd=False):
         self.l.append("TEXT %d %d Left 2 %s%s" % (x, y, "!" if cmd else ";", s))
     def save(self, name, cmd, x=64, y=480):

@@ -46,7 +46,7 @@ def build():
             ["Eğim hızı (SR)", "0,5 V/µs (tipik)", "Slew = 0,5 V/µs", n(mv.get("sr", 0), 3, "V/µs") if mv.get("sr") else "—"],
             ["Maksimum tepe çıkış gerilimi", "≥ ±12 V (RL ≥ 10 kΩ), ±13 V civarı (Şekil 5-4)", "Rail = 2 V ($\\pm13$ V)", n(mv.get("vsat", 0), 2, "V") if mv.get("vsat") else "—"],
             ["Kısa devre çıkış akımı", "±80 mA (tipik)", "Ilimit = 80 mA", "—"],
-            ["Giriş direnci", "540 GΩ (tipik, bu revizyon)", "Rin = 2 MΩ (kötümser)", "—"]]
+            ["Giriş direnci", "540 GΩ (tipik)", "Rin = 540 GΩ", "—"]]
     D.tab("model", ["Parametre", "Veri sayfası [4]", "Modelde", "Benzetimde ölçülen"], rows, "UA741 modelinin parametreleri ve doğrulaması", [4.0, 5.0, 3.0, 2.8], size=9)
     D.fig("valac", s("t3_val_ac"), "UA741 modelinin açık çevrim frekans cevabı (LTspice, .ac): düşük frekanstaki kazanç ve birim kazanç frekansı imleçlerle okunmuştur.", 14.5)
     D.fig("valsr", s("t3_val_sr"), "UA741 modelinin eğim hızı sınaması (birim kazanç izleyicisi, 10 V’luk adım, $R_L = 2\\ \\mathrm{k\\Omega}$): iki imleç arasındaki eğim 0,5 V/µs’dir.", 14.5)
