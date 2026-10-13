@@ -68,9 +68,9 @@ def diff(name, e1, e2, tran):
     s = Sch()
     s.opamp("U1", 352, 192); s.flag(192, 176, "v1"); s.hres("R1", "10k", 192, 176); s.wire((272, 176), (320, 176))
     s.wire((304, 176), (304, 48)); s.hres("R2", "18k", 304, 48); s.wire((384, 48), (432, 48)); s.wire((384, 192), (432, 192)); s.wire((432, 192), (432, 48)); s.flag(432, 192, "vo")
-    s.flag(192, 208, "v2"); s.hres("R3", "33k", 192, 208); s.wire((272, 208), (320, 208)); s.wire((288, 208), (288, 224)); s.vres("R4", "39k", 288, 224); s.flag(288, 304, 0)
+    s.flag(192, 256, "v2"); s.hres("R3", "33k", 192, 256); s.wire((272, 256), (320, 256)); s.wire((320, 256), (320, 208)); s.wire((296, 256), (296, 272)); s.vres("R4", "39k", 296, 272); s.flag(296, 352, 0)
     s.flag(352, 160, "VCC"); s.flag(352, 224, "VEE")
-    for i, (nm, v, x, fl) in enumerate((("V1", e1, 544, "v1"), ("V2", e2, 624, "v2"), ("Vcc", "15", 704, "VCC"), ("Vee", "-15", 784, "VEE"))):
+    for i, (nm, v, x, fl) in enumerate((("V1", e1, 544, "v1"), ("V2", e2, 704, "v2"), ("Vcc", "15", 864, "VCC"), ("Vee", "-15", 1000, "VEE"))):
         s.vsrc(nm, v, x, 176); s.flag(x, 176, fl); s.flag(x, 256, 0)
     s.save(name, ".tran 0 3m 0 2u" if tran else ".op", 64, 400)
 
@@ -81,7 +81,7 @@ def summ(name, e1, e2, tran):
     s.flag(160, 176, "v2"); s.hres("R2", "18k", 160, 176); s.wire((240, 176), (320, 176))
     s.wire((288, 176), (288, 48)); s.hres("R3", "33k", 288, 48); s.wire((368, 48), (432, 48)); s.wire((384, 192), (432, 192)); s.wire((432, 192), (432, 48)); s.flag(432, 192, "vo")
     s.flag(352, 160, "VCC"); s.flag(352, 224, "VEE")
-    for nm, v, x, fl in (("V1", e1, 544, "v1"), ("V2", e2, 624, "v2"), ("Vcc", "15", 704, "VCC"), ("Vee", "-15", 784, "VEE")):
+    for nm, v, x, fl in (("V1", e1, 544, "v1"), ("V2", e2, 704, "v2"), ("Vcc", "15", 864, "VCC"), ("Vee", "-15", 1000, "VEE")):
         s.vsrc(nm, v, x, 176); s.flag(x, 176, fl); s.flag(x, 256, 0)
     s.save(name, ".tran 0 3m 0 2u" if tran else ".op", 64, 400)
 
