@@ -1,95 +1,97 @@
-# Planned Obsolescence: spoken script
+# Planned Obsolescence: speaking script
 
-Each part answers one question. Say the question aloud, then give the answer. The slide numbers refer to the 62-slide deck.
+Each part answers one question. Ask the question aloud, then give the answer.
 
 ---
 
 ## OPENING
 
-### Q1. What am I claiming, and why should you believe it? (slides 1–3)
+### Q1. What is planned obsolescence, and what do I say about it?
 
-Good morning. My claim is short. A maker may not shorten the life of a product he has already sold, or take away the owner's power to keep it working, unless the buyer knows and agrees. If he does, he commits a wrong.
+Many people think planned obsolescence is a complicated economic subject. It is not. It rests on one very simple idea, and the idea is this: you cannot sell someone one thing and secretly hand over a smaller thing.
 
-I will not ask you to trust me. I will give you three principles, show that anyone who rejects one of them must accept an absurdity, and then answer every objection I could find, including the maker's strongest one.
-
-Start with one purchase. You pay a price. You expect the device to serve you for a time E, as devices of its kind do. The maker knows, because of a design or software decision of his own, that it will serve for only L, and L is less than E. Nobody tells you. Half the expected life means half of the price bought nothing.
+Let me say it plainly. A maker sells you a device. You pay for a device that will last as long as such devices ordinarily last. The maker knows, because he designed it, that it will die earlier. He does not tell you. He has taken part of your money for something he did not give. That is planned obsolescence, and my position is that it is wrong, and I will show you why in three steps and then answer every defense a maker can offer.
 
 ---
 
 ## BODY
 
-### Q2. What exactly is planned obsolescence, and what is not? (slides 4–7)
+### Q2. Where exactly can a maker do this?
 
-It is a choice by the maker that shortens a sold product's life, or removes the owner's power to extend it. The word "choice" matters. Natural wear is not planned. A flaw the maker did not know about is not planned. An honest short life that the buyer knew about is not planned either.
+In four places, and no others. Ask two questions. Does the maker's choice act on the product itself? If yes, either it was built in before the sale, like a battery glued in so it cannot be changed, or it was done after the sale, like an update that slows your phone. If it does not act on the product, ask: do you need the maker's help to keep it running? If yes, he can pull his help away: he stops the updates, shuts the server, stops the parts. If no, he can still shut the door on repair, so that you or anyone else cannot fix what you own.
 
-Within that definition there are four places where a maker can cut a product's life. Ask two yes-or-no questions. Does the choice act on the product itself? If yes, it either acts before the sale, which is a built-in limit, or after the sale, which is a remote update or switch. If no, does the owner need the maker's help to keep the product working? If yes, the maker has withdrawn support. If no, the maker has blocked repair. Every case lands in exactly one of the four. If a product has several mechanisms, we judge each mechanism on its own.
+Built in, imposed later, support withdrawn, repair blocked. A product that wears out because everything wears out is not on this list, because nobody chose it.
 
-### Q3. What must be true for my argument to apply? (slide 9)
+### Q3. First: is it fair to take money for something the buyer did not agree to?
 
-Three facts. One: the maker knows the limit. Two: the buyer does not. Three: the price was set for the life the buyer ordinarily expects. If any of the three is missing in a given case, this is not planned obsolescence and my verdict does not apply. The proof is conditional on the facts, and the facts are checked case by case.
+Think of a baker who puts something in his bread so that it goes stale in a day. You paid for bread that keeps. Tomorrow you buy again. Would you call that a fair sale?
 
-### Q4. First principle: may a seller take money for something the buyer did not agree to? (slides 10–16)
+You would not, and the reason is simple. When you pay, you pay for what you expect. The price is only meaningful because the buyer knows what he is buying. If a seller may promise one thing and deliver another, then a price tells you nothing, and nobody could ever pay in advance for anything. So money can pass from one hand to another only by real agreement, and real agreement needs knowledge.
 
-Suppose he may. Then a seller can promise one thing, hand over another, and call the payment agreed. A price would tell the buyer nothing. Nobody could rationally pay in advance for anything. So wealth passes from one person to another only by informed consent. Denying this ends trade itself.
+Now the device. You agreed to pay for a device that lasts its ordinary life. You did not agree to pay for the shorter life, because you did not know about it. The maker knew. He was the only one who could have said. When the one who knows keeps silent, the silence is a statement: "this is what you expect." The part of the price that equals the missing life was taken without your agreement. It is the same as the wet grain under the dry grain. The Prophet, peace be upon him, found a seller who had put the wet grain underneath and said to him: "Why did you not put it on top, so that people could see it?" The buyer could not have found it himself, and the seller was still blamed for hiding it. A hidden life limit is exactly that: the wet grain at the bottom of the heap.
 
-Now apply it. The buyer agreed to pay for E. He did not agree to pay for L. The maker knew, the buyer could not see, and the maker was the only party who could say. Silence in that position is a statement. The part of the price equal to one minus L over E was taken without agreement.
+### Q4. Second: may someone profit from a loss he could have avoided?
 
-Two further grounds support the same conclusion. First, equivalence: a sale swaps two counter-values, and the jurists accept small gaps but give the buyer a way out when a gross gap comes with deceit. Here the gap is hidden, which is deceit. Second, uncertainty: a sale in which the seller alone knows an attribute that sets the price is the one-sided form of uncertainty that the classical rulings forbid.
+Imagine a man who digs a pit in front of his neighbor's door and then sells him a ladder. The ground is his, the ladder is honest, and the profit is his. Does that make it right? Nobody thinks so. One may not harm another, and may not profit from harm.
 
-### Q5. Second principle: may someone profit by a loss he could have avoided? (slides 17–21)
+Now the device. Remove the maker's choice and what happens? The buyer keeps his device and the maker does not get the second sale. So the maker's gain comes directly from the buyer's loss. The loss is real, because the buyer must pay again, earlier than he planned. It is caused, because the maker chose it. And the word "planned" settles intent. So this is harm, and harm must be removed.
 
-Suppose he may. Then a man could dig a pit at his neighbor's door and sell him a ladder. Everyone sees the wrong. No one may gain by another's loss without a right.
+It is also bigger than one buyer. One unit is a small loss. A practice built into a million units is a million times the act. And think about what the maker loses if we stop him: sales he has not earned yet, which exist only because the buyer was kept in the dark. When one side loses an unearned profit and the other side loses money already paid and the public carries the waste, the heavier harm is removed first. The maker takes the benefit, so he bears the cost of telling the truth.
 
-Here the buyer must pay again, earlier than he planned. Remove the maker's choice and the loss disappears, while the maker's gain disappears too. The word "planned" supplies the intent. So the harm is real, it is caused, and nothing in the buyer's agreement or in any necessity stands behind it.
+### Q5. Third: after the sale, who decides what happens to the product?
 
-Add the public side. One unit is a small loss. A practice built into a million units is a million times the act. If the maker is forbidden to hide the limit, he loses extra sales he has not yet earned, and which exist only because the buyer is kept in the dark. If it is allowed, buyers lose money already paid and the public carries the waste. When a private harm and a public harm collide, the heavier is removed by the lighter, and the burden follows the benefit. The maker takes the benefit, so he bears the cost of telling.
+Imagine you buy a car, and the dealer keeps a switch that stops it unless he approves every repair. Did you buy a car, or the right to ask for one?
 
-### Q6. Third principle: after the sale, who decides what happens to the product? (slides 22–25)
+If the seller still decides, he sold nothing. He rented it to you at the price of a purchase. When you buy, the thing is yours: you use it, you repair it, you lend it, you sell it. A maker who locks the repair, blocks the part, or switches your device off from a distance is keeping a power that he sold away. And when he says "it is licensed, not sold," look at what you actually paid for: a device you carry home and keep forever. A word on a label cannot turn a sale into a rent after the money has changed hands. If he truly wants to keep it, he must call it a lease and price it as a lease.
 
-Suppose the seller still does. Then he sold nothing. He rented it out at the price of a purchase. A sale transfers ownership, and an owner may use, repair, lend and resell. A maker who locks the repair, blocks the part, or switches the product off from a distance is keeping a power he sold away. That is acting in another man's property without his permission.
+### Q6. What can a maker say in his defense?
 
-The usual reply is: "It is licensed, not sold." In a contract, meaning counts, not wording. If you pay a price for permanent possession of a device that cannot work without the software, it is a sale of a working device, whatever the label says. If the maker really keeps ownership, he may keep control, but then the price must be rent and the word must be "lease."
+Five things, and only five. Every defense says one of these: nobody is harmed; the buyer agreed; there was no choice; it is the maker's right; or others benefit.
 
-### Q7. What about waste and the earth? (slides 26–27)
+"Nobody is harmed." The buyer pays again, so somebody is.
 
-I will be careful here. A hadith warns against wasting wealth, but its wording is "dislikes," so I use waste only as support. The stronger route is harm to third parties. The United Nations e-waste monitor reports 62 million tonnes in 2022, with less than a quarter documented as properly recycled, and it lists shorter product life and limited repair among the causes. I do not claim that planned obsolescence causes any particular share. That has not been measured. My claim is about direction: each product discarded early because of a maker's choice adds one unit to a stream whose costs fall on people who never agreed.
+"The buyer agreed." Agreement needs knowledge. If the limit was printed plainly before the sale, where a buyer sees it, the buyer agreed and the sale is honest. If it sits on page forty of terms nobody reads, nobody agreed to it. "Everyone does it" does not help either: if buyers know, there is no deception and he is right; if they do not know, then everyone is hiding it and the buyer has nowhere to go.
 
-### Q8. Can the maker defend himself at all? (slides 28–35)
+"There was no choice." Batteries age and security matters. Then tell the buyer and give him the option. Needing to do something never meant needing to hide it.
 
-He can say five things, and only five. First, no one is harmed. The buyer pays again, so this fails. Second, the buyer agreed. That holds only if the limit was stated plainly before the sale, or is the publicly known norm, or was later accepted knowingly with a real option to refuse. A term buried in pages nobody reads is not seen. Third, it was necessary. Batteries age and security matters, but necessity excuses a limit, never the hiding of it. Fourth, it is his right. It was his right until the sale, and it ends where the buyer's property begins. Fifth, it benefits others. A gain for others does not cancel a wrong done to this man without his consent.
+"It is my right." It was your right until you sold it. After the sale the device is the buyer's. A right to guard your design is not a right to control what you have already sold.
 
-Why only five? Every defense says the act was not wrong, the victim permitted it, it was excused, the maker had a right, or somebody else gains. There is no sixth thing to say.
+"Others benefit." A benefit to someone else does not cancel a wrong done to this man without his consent. You cannot make one person pay for a good that someone else enjoys without asking him.
 
-### Q9. What about the strongest defense: "It funds my innovation"? (slides 36–40)
+There is no sixth defense, because there is nothing else to claim: the wrong did not happen, the victim allowed it, it was excused, it was a right, or it is a good for others.
 
-The maker says research is expensive, durable products would end sales, revenue would fall and progress would stop. I accept that each step might be true. The question is whether the conclusion follows. It does not, and here are five reasons.
+### Q7. And the strongest defense: "I do it to fund innovation"?
 
-First, if buyers would accept "this lasts two years and the difference funds the next model," the maker loses nothing by saying it. He chooses silence, so he expects refusal. A method that works only while its victims do not know is not consent.
+The maker says: research is expensive, if products never wear out nobody buys the next one, so I must shorten their life to pay for the future.
 
-Second, the same aim can be reached lawfully. Raise the price openly. Offer trade-in and upgrade plans. Sell a cheaper line with the life printed on it. Lease the device and call it a lease. Where a lawful route exists, concealment is not necessary.
+First, if buyers would accept this, why does he hide it? He could say: "this lasts two years, and the difference pays for the next model." If buyers would nod, saying it costs him nothing. He keeps quiet, which means he knows they would refuse. A method that works only while its victims do not know is not a method that has their agreement.
 
-Third, the new product is either better or it is not. If it is better, buyers have a reason to buy it, and the old device does not need to die to sell it. If it is not better, the buyer pays again for the same thing and the money funds a repackaging, so the research is research in name only. Either way the defense fails. Nothing in the idea of a new model requires the old one to fail, and whoever claims that link must prove it.
+Second, the money can be raised honestly. Raise the price openly. Offer trade-in. Sell a cheaper line with its life printed on the box. If he needs money for research, there are many honest ways to ask for it. A good goal does not make a hidden method good.
 
-Fourth, the argument proves too much. A baker could thin his flour to fund a better oven. Any hidden charge could be defended by naming a worthy use for the money. Taking another man's wealth without lawful cause is not allowed, and the worth of the use does not change how it was taken.
+Third, the new product is either better or it is not. If it is better, people will buy it. A better phone does not need the old one to die: people replace what they have when something clearly better appears, and anyone who has watched people wait for a better product knows it. If it is not better, then the buyer pays again for the same thing, and the money funds no progress at all. That is not research. It is repackaging with the word research on it. In both cases the defense is empty.
 
-Fifth, costs follow benefits. The buyer pays the hidden cost and then pays again for the new model. The maker gets the funding and the new sale. If research benefits everyone, everyone should fund it openly.
+Fourth, this argument has no end. A baker could thin his flour to pay for a better oven. A builder could skimp on the concrete to pay for research. If naming a good use for the money makes a hidden charge acceptable, any hidden charge is acceptable.
 
-I also hold three hypotheses that I do not need. Makers who earn through real advances may build a more durable market. Buyers spared forced replacement may have more money for better devices. Technology may advance faster when sales rest on improvement. I cannot prove these from my chair, and I state no figures for them. If they are true, they add weight. If they are false, the five tests still defeat the funding defense, because that defense claims a license to hide, not merely a benefit.
+Fifth, look at who pays and who gains. The buyer pays the hidden cost and then pays again for the new model. The maker takes the funding and the new sale. If research benefits everyone, everyone should pay for it openly.
+
+### Q8. And the environment?
+
+Every device thrown away while it still works is one more item in the pile. The world makes about sixty-two million tonnes of electronic waste in a year, and most of it is not properly recycled. The people who live near that waste did not agree to carry it. When a maker's choice sends a working device to the pile early, he adds to a harm that other people bear without having agreed to it. That is harm to third parties, and the same rule that covers the buyer covers them.
 
 ---
 
 ## CONCLUSION
 
-### Q10. What is the ruling, and what remains lawful? (slides 41–42, 55–59)
+### Q9. So what is the ruling, and what stays lawful?
 
-Forbidden: hiding a limit the maker knows about, slowing or disabling a sold device without informed consent, switching off a service that was promised for the device's life, and closing the owner's means of repair beyond a narrow, stated safety need. Required: tell the buyer the designed life and the support period where he can see them, name what an update costs in function and offer a choice, and announce the end of support in good time while leaving the device working. Permitted: short-lived products honestly described, budget and premium lines side by side, support ended with notice, leases called leases, and updates under a consent the owner can withdraw.
+It is forbidden to hide a limit on a product's life or repair that the maker knows about. It is forbidden to slow, disable, or lock a device that has been sold, without the owner's informed agreement. It is forbidden to close the means of repair of something the owner owns.
 
-I tested the map on four public cases: a light-bulb cartel, a phone slowdown, a smart-home shutdown, and locked farm-machinery repair. They show that the map can place real events. They do not prove the ruling. The ruling stands on the three principles.
+It is required to tell the buyer, where he can see it, how long the product is designed to last and how long it will be supported. It is required to say what an update takes away and let him choose. It is required to announce the end of support in good time and leave the device working.
 
-### Q11. How sure am I, and where is the proof weakest? (slides 56–57)
+And a lot stays lawful. A short-lived, cheap product is lawful if it is honestly described, because the buyer can then choose it. Ending support with notice is lawful. Leasing is lawful if it is called a lease. Improving updates are lawful under a consent the owner can withdraw. Nothing here asks a product to last forever. It asks only that the buyer knows, and that the owner stays in charge.
 
-The core, hiding a known limit that sets the price, is certain. The ruling as a whole is strong. Three points are weaker, and I name them. The hadith about harm is graded differently by different scholars. Extending the old rulings to a hidden limit on life is reasoning by analogy. And for blocked repair that the owner knew about and accepted, the schools differ. This is reasoned argument, not a binding ruling.
+### Q10. What is the whole argument in one breath?
 
-To reject my conclusion, you must give up a named premise: that a price pays for what the buyer expects, that concealment removes consent, that a chosen loss is harm, or that a sold thing belongs to the buyer. Each of those costs more than the conclusion.
+A price pays for what the buyer expects. A maker who knows the product will give less and says nothing takes part of the price without agreement. That is deceit. The same choice harms the buyer and profits the maker with no right behind it. What was sold belongs to the buyer, and nobody may act on it from a distance without his permission. Every defense a maker can offer either fails or only narrows the rule, and the strongest of them, "it funds innovation," falls to five simple questions: why hide it, why not ask openly, is the new thing better or not, where does the argument stop, and who pays versus who gains.
 
-So the rule is simple: tell the buyer, ask the owner, and leave him in charge. Thank you.
+So the rule is this: tell the buyer, ask the owner, and leave him in charge. Thank you.
