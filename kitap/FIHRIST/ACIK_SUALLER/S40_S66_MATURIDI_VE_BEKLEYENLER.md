@@ -1,0 +1,32 @@
+# AÇIK SUÂLLER: S40 – S66 (MÂTÜRÎDÎ OKUMALARI VE BEKLEYEN PADİŞAH KARARLARI)
+> **Ana Dizin:** [Açık Suâller Dizin](README.md) · [Kitap Fihristi](../../KITAP_FIHRISTI.md)
+
+| # | Suâl | Durum |
+| :-- | :-- | :-- |
+| S40 | **Mâtürîdî inatçı inkârcıya mizah, sonra dövme ve eziyet önerir** (I.3.15.62) | **Kapandı, nakz (3-I 242):** dövme ve eziyet **alınmaz** (kitap yazıdır, fiziken eziyet aracı olamaz); mizah usulü **gereksiz**; ilzam çekirdeği I.7.3.7'de durur; **hâtimede hikmetli bir kıssa** padişahın "belki" dediği namzettir (karar değil; V.9.6) |
+| S41 | **Mâtürîdî'nin "aklî zorunluluk" lafzı** (V.3.M.31, V.3.M.35) kitapta doğrudan alıntı mı, V.3.2.1 ile uzlaştırılmış mı yazılsın? | **Açık:** Claude önerisi: uzlaştırılmış kitapta, alıntı deşmede (V.4.M.83) |
+| S42 | **Hayvan kesimi cevabında** aklî kısım ile vahiy bildirimi nasıl ayrılsın? | **Açık** (V.4.N.89) |
+| S43 | **İspat ağı DB'si** H3–H4 (nübüvvet, vahiy, Kur'ân) hücrelerine genişletilsin mi? | **Açık** (V.4.N.96) |
+| S44 | **On iki hissî mûcize** ayrı ayrı mı, toplu mu yazılsın? | **Açık:** Claude önerisi: toplu (V.4.O.69) |
+| S45 | **Hadis ve siyer kaynaklarından** hangi bölümler okunsun? (okuma izni padişahın, 3-I 230) | **Açık** (V.4.O.70) |
+| S46 | **Eski ve Yeni Ahit'in** V.2.37 ilzamlarında anılan pasajları okunsun mu? | **Açık** (V.2.39.12) |
+| S47 | **Cüz ilzamları** DB'ye kısmî ispat olarak yazılsın mı? | **Açık:** Claude önerisi: hasmın kaynağı okunana kadar beklesin (V.2.39.13) |
+| S48 | **Kul fiili mezhep ayrıntısı** (halk–kesb, istitâat) inanması farz olan çekirdeğe mi girer, ayrıntı mı kalır? (3-I 202, 229) | **Açık (tetabuk):** padişaha sorulur; Claude: kaderin Allah'tan olduğuna ve kulun mükellef bir fâil olduğuna inanmak çekirdek, halk–kesb ayrıntısı mezhep ayrıntısıdır; kitap Mâtürîdî çizgisini yazar ve ayrılığı işaretler (V.K.T2.12) |
+| S49 | **Ebû Hanîfe ikileminin ikinci şıkkı** ("dilememek = aksini dilemek" öncülü yazılı değil): Mâtürîdî bu öncülü başka yerde savunuyor mu, yoksa ikilem bu hâliyle mi yazılsın? | **Açık** (V.K.T9.3); Claude: öncül bulunana kadar ikilem "Mâtürîdî'nin rivayetten çıkardığı sonuç" diye yazılır |
+| S50 | **Şâhid–gâib gerilimi:** V.K.15.9 ("ilâhî fiil beşerî fiille mukayese edilemez") ile V.K.15.26–27 (duyulur âlemde fiilin temeli) hangi okumayla uzlaşır: kıyas reddi yalnız "fiil fiili doğurur" benzetmesine mi, yoksa duyulur âlem ifadesi kıyas değil tanım mı? | **Açık** (V.K.T9.8, V.K.T7.1); okunan bölümlerde cevap çıkmadı |
+| S51 | **Kazâ'nın dört mânası** (yaratma ve hükmetme · bildirme · emretme · bitirme) kitapta hangi adlarla kullanılsın; sayım hasır olmadığı için istikrâî işaretli kalsın mı (3-I 228 kapsamı Claude çıkarımıdır)? | **Açık** (V.K.T9.6); padişaha sorulur |
+| S52 | **Ezelî ilim ve kulun ihtiyarı ikilemi** ile **kazâ'nın iki katmanının yönü** (sonuç hükmü fiile mi bağlı, fiil hükmü sonucu mu belirler) ve **Firavun örneği**: irade ve kazâ–kader bölümleri bitince toplu kapatılacak | **Açık** (V.K.T7.3, V.K.T6.8, V.K.T9.7) |
+| S53 | **İrade–temenni ayrımı tanım hamlesi midir:** temennînin iradeden ayrı bir hâl olduğu delille nasıl gösterilir ("kadir = fâil" ve zaman üçlüsüyle aynı yapı)? | **Açık** (V.K.T9.10, V.K.T5.9, V.K.T8.20) |
+| S54 | **Emir–irade dört hücresinde (emir yok, irade yok) hücresi** örneksiz: gerçekten boş mu, yoksa Mâtürîdî'de örneği var mı? | **Açık** (V.K.T9.11); okuma sürdükçe yoklanır |
+| S55 | **Bozuk OCR aralıkları** Arapça asıl veya gerçek metinle doğrulanacak mı (3-A 25-E)? Aralıklar: 14119–14180, 17520–17523, 17657–17658, 18585–18604, 19002–19004, 19059–19066, 19361–19363, 20645–20648, 20765, 20814–20828, 21114–21116, 21622–21637, 22171–22218, 22303–22360 | **Açık;** bu yapraklardan hüküm kurulmaz (V.K.T9.1); padişaha sorulur |
+| S56 | **Mu'tezile, Kâ'bî, Verrâk, Neccâr ve Ebû Hanîfe'nin kendi kaynakları** (örneğin Muğnî) okunsun mu? Şimdiye dek hepsi yalnız Mâtürîdî'nin aktarımı kadarıyla anıldı | **Açık;** okuma izni padişahındır (3-I 230); okuma yapılmadı |
+| S57 | **OCR 22701'in basılı sayfa yeri** ve kazâ ve kader bölümünün alt başlıklarıyla (s.586, 597, 601, 606) eşlemesi nasıl doğrulanacak? Fihrist sayfa yeri okunarak bulunmadı | **Açık** (3-A 25-D: bulunmadıysa tahmin yazılmaz) |
+| S58 | **Kader bâbı kapanış soru haritası:** V.K.T8.29'daki S-f ve S-g suâlleri Mâtürîdî'nin okunan bölümlerinde cevaplanmadı; kalan bölüm okunduktan sonra cevap aranır, bulunmazsa hangi kaynaktan çıkarılacağı padişaha sorulur | **Açık** (V.K.T8.29) |
+| S59 | **Sudûr itirazı** ("tek özellikli illetten çeşitli âlem çıkmaz") ispat ağı veritabanında karşılıksız | **Açık iş** (okuma defteri 3. bölüm madde 4; V.1.3.M.96–97) |
+| S60 | **Bekleyen padişah kararları (hatırlatma):** hâtime kıssasının metni (V.9.6–7; padişah "belki" dedi, metin seçilmedi, uydurulmaz) · îmân ve İslâm bölümünün (s.713–758) kitabın başına mı sonuna mı gireceği (V.M.69) · Allah'ın görülmesi mevzuunun kitaba girip girmeyeceği (V.M.29) | **Açık;** karar padişahın |
+| S61 | **Risâle-i Nûr derlemesindeki (`sifati-ilahiye.pdf`) deliller burhânî mi, peşin kabule mi dayanıyor?** Padişahın sorusu | **Kapandı (3-I 243):** 201 sayfa baştan sona okundu; **94 delil birimi** tasnif edildi (birincil hüküm: burhânî 5 · burhânî-şartlı 24 · zannî 30 · peşin kabul 9 · yanlış ikilem 5 · empirik 1 · naklî 2 · şuhûdî 3 · temsil ve tenbih 7 · hasım teşhisi 4 · tanım 4); cevap: burhân yalnız Vâcib tanımından çıkan sıfatlarda zayıf halkasızdır, kemâl sıfatları için sebep ilkesi, kemâl ilkesi ve ihkâm ilkesi **peşin kabul ister**, deliller tek öncüle yaslandığından yığılma katiyet artırmaz; ayrıntı `DESTEK/RISALE_SIFATI_ILAHIYE_DELIL_TASNIFI.md` ve `RISALE_SIFATI_ILAHIYE_BIRIMLER.md`; sayfa defteri `kaynak/nursi_risale_i_nur/SIFATI_ILAHIYE_SAYFA_DEFTERI.md`. Veritabanına 8 önerme, yeni suâl Q19 (kudretin kapsamı) ve 8 ispat işlendi. **Açık kalan:** Risâle asılları (6 OCR dosyası) okunmadı |
+| S62 | **Mısıroğlu'nun "dualizm" ve "teaddilik"i** tam olarak ne demek; kitap ya da bölüm metni verilebilir mi? | **Açık** (ikincil sayfa: iki veçhelilik; teaddilik teyit edilemedi); padişaha sorulur |
+| S63 | **Şâtıbî Makâsıd'ın kalanı** (Şâmile 679–1223) okunsun mu? | **Açık** (3-I 230); 668–678 okundu |
+| S64 | Vasıf kataloğu **karakterizasyon (Z)** olarak girsin mi, hiç girmesin mi? (3-I 207) | **Açık** |
+| S65 | İslâm Haritası Giriş'te mi Hâtime'de mi? | **Açık** |
+| S66 | Mücerret ve müşahhas sekizliler çift (nazarî ↔ amelî) olarak mı kurulmuş? | **Açık;** bilen padişahtır |
