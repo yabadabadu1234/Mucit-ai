@@ -12,8 +12,8 @@ slide("Orientation", "What this talk will do",
 <li><b>Define the claim exactly</b>, and say what it leaves out.</li>
 <li><b>Show how a moral ruling is proven</b>, step by step, so you can check each step yourself.</li>
 <li><b>Prove the ruling from independent grounds</b>: consent, harm, ownership. A fourth ground, waste, is offered as support only.</li>
-<li><b>Close every escape route</b> with a complete yes/no tree of defenses.</li>
-<li><b>Test the ruling</b> on four public cases and twenty-four doubts.</li>
+<li><b>Close every escape route</b> with a complete yes/no tree of defenses, then <b>meet the maker&#8217;s own case</b> (&#8220;it funds innovation&#8221;) with five logical tests.</li>
+<li><b>Test the ruling</b> on four public cases and twenty-eight doubts.</li>
 <li><b>State the ruling in force</b>: what is forbidden, what is required, what is permitted.</li>
 </ul></div>
 <div class="col"><div class="card" style="padding:22px 26px"><div class="label">How certain is each step?</div>

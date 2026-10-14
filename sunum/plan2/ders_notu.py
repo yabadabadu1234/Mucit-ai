@@ -12,11 +12,11 @@ table { border-collapse: collapse; width: 100%; font-size: 10pt; margin: 4pt 0 8
 '''
 body = r'''
 <h1>Planlı Eskitme sunumu: öğretici ders notu</h1>
-<p class="sub">Beşir Kerem Üstüntürk için hazırlandı · Bu not İngilizce sunumun (53 slayt, <i>Planned_Obsolescence.pdf</i>) arkasındaki aklı öğretir. Sunumu ezberlemek yerine bunu anlayıp sunmanız yeter.</p>
+<p class="sub">Beşir Kerem Üstüntürk için hazırlandı · Bu not İngilizce sunumun (62 slayt, <i>Planned_Obsolescence.pdf</i>) arkasındaki aklı öğretir. Sunumu ezberlemek yerine bunu anlayıp sunmanız yeter.</p>
 
 <h2>1. Tez ve neden doğru: bir sayfada</h2>
 <div class="box"><b>Tez.</b> Üretici, alıcının bilgisi ve rızası olmadan, sattığı ürünün kullanım ömrünü kısaltamaz ve sahibinin onu çalışır tutma gücünü elinden alamaz. Bunu yapmak haksızlıktır; klasik fıkıh hükümleri bu yüzden isabetlidir.</div>
-<p><b>Akıl yürütmenin özü yedi cümledir</b> (slayt 46):</p>
+<p><b>Akıl yürütmenin özü yedi cümledir</b> (slayt 55):</p>
 <ol>
 <li>Fiyat, alıcının beklediği ömür için ödenir.</li>
 <li>Üretici ürünün daha az hizmet vereceğini bilip susarsa, fiyatın bir kısmını rıza olmadan almış olur. Bu aldatmadır ve nasslar yasaklar.</li>
@@ -39,16 +39,16 @@ body = r'''
 <p>Q1: kısaltma üreticinin tercihi mi? Hayır → doğal aşınma/gerçek ilerleme (iddia dışı). Evet → Q2: ürüne mi etki ediyor? Evet → <b>A1</b> (satıştan önce, tasarımda) veya <b>A2</b> (satıştan sonra, güncelleme/kill switch). Hayır → Q3: sahibin üreticinin yardımına ihtiyacı var mı? Evet → <b>B</b> (destek çekildi); hayır → <b>C</b> (onarım yolu kapatıldı). Her soru evet/hayır olduğu için aralarına bir şey düşmez; birden çok mekanizma varsa bölünür ve her biri ayrı değerlendirilir (slayt 7).</p>
 
 <h2>4. Üç ilkenin öğretisi</h2>
-<h3>İlke 1 · Rıza (slayt 10–15)</h3>
+<h3>İlke 1 · Rıza (slayt 10–16)</h3>
 <p><b>Aldatma.</b> Ürünün ömrü üzerindeki gizli sınır, kusurun (<i>ayb</i>) tarifine girer: Mecelle 338'e göre ehl-i vukûfun nazarında değeri düşüren şey; Şâfiîlere göre alıcının meşru maksadını boşa çıkaran şey. <b>Kıyas</b>: musarrât hadisinde (Buhârî 2148, Müslim 1515) süt tutma yasağının illeti, fiyatı belirleyen bir vasıf hakkında yanıltıcı görüntü yaratmaktır; ömür de fiyatı belirleyen bir vasıftır. <b>Delil künyesi:</b> Müslim 101, 102; Buhârî 2079; İbn Mâce 2246 (Albânî sahih). <b>Mecelle 67:</b> «ma'rız-ı hâcette sükût beyandır» yani konuşulması gereken yerde susmak söz yerine geçer.</p>
 <p class="warn"><b>Zayıf yer.</b> «Ömür sınırı ayıptır» hükmü kıyasla kurulur; bu yüzden işaret «güçlü»dür, «kesin» değil (yalnız çekirdek hâl kesindir: <i>fiyatı belirleyen, bilinen bir sınırı gizlemek</i>).</p>
-<h3>İlke 2 · Zarar (slayt 16–19)</h3>
+<h3>İlke 2 · Zarar (slayt 17–21)</h3>
 <p>Aynı tercih bir zarardır; zarar giderilir (Mecelle 19–20). <b>İnce nokta:</b> Mecelle 92–93: doğrudan fail (güncellemeyi cihaza yükleyen) kasıt aramadan tazmin eder; sebep olan ancak kasıtlıysa tazmin eder. «Planlı» kelimesi zaten kastı getirir. <b>Dürüst uyarı:</b> «lâ darar» hadisinin ravi zincirleri hakkında âlimler ayrışır (Nevevî hasen; Albânî ve Arnaût sahih; Darussalam ve Zubair Ali Zâî zayıf). Bu yüzden ilke tek hadise bağlanmadı: Mecelle kaidesi, 2:231 ve akıl da aynı yere varır.</p>
-<h3>İlke 3 · Mülkiyet (slayt 20–23)</h3>
+<h3>İlke 3 · Mülkiyet (slayt 22–25)</h3>
 <p>Satış mülkiyeti devreder. Mecelle 100: «kendi tarafından tamam olan şeyi nakzetmeye çalışanın çabası reddedilir». «Lisans, satış değil» savunmasına cevap: akitte itibar lafza değil mânâyadır (Mecelle 3); fiyat kalıcı sahiplik için ödendiyse akit satıştır. <b>Mezhep ihtilafı:</b> Hanefîler alıcıya konan tasarruf kısıtını (örnek: «satmayacaksın») batıl sayar; Mâlikî–Hanbelî daha serbesttir. Hükmümüz iki tarafta da çıkar: gizli kısıt hiçbirinde şart olmaz.</p>
 <p class="warn"><b>Zayıf yer.</b> C yaprağında, bildirilip kabul edilmiş kısıtın hükmü mezheplere göre değişir; slaytta dar kural (yalnız belirli güvenlik ihtiyacı) <b>olası</b> işaretiyle benimsendi.</p>
 
-<h2>5. Beş savunma ve cevapları (slayt 25–32)</h2>
+<h2>5. Beş savunma ve cevapları (slayt 28–35)</h2>
 <table><tr><th>Savunma</th><th>Kısa cevap</th></tr>
 <tr><td>D1 «Zarar yok»</td><td>«Zaten değiştirecekti» bir tahmindir. Sına: söyle; yine alacaksa söylemek bedava, almayacaksa zarar vardı.</td></tr>
 <tr><td>D2 «Alıcı razı oldu»</td><td>Üç test: önceden, sade dille, görülecek yerde söylenmiş mi? Yoksa bilinen örf mü? Yoksa sonradan bilerek, belirli ve özgürce kabul mü? Hiçbiri yoksa rıza yok. «Şartlarda yazıyordu» ancak görülüp anlaşıldıysa kabul edilir.</td></tr>
@@ -57,6 +57,20 @@ body = r'''
 <tr><td>D5 «Başkalarına fayda»</td><td>Mefsedeti defetmek menfaati celbetmekten önce gelir (Mecelle 30); beklenen fayda kesin zararı kaldırmaz (Mecelle 4, 74). Gizleyerek kazanılan kazanç helâl kazanç değildir.</td></tr></table>
 <p><b>Neden beşten fazlası yok?</b> Her savunma ya «yanlış yapılmadı» (D1), ya «mağdur izin verdi» (D2), ya «mazurdu» (D3), ya «hakkı vardı» (D4), ya «başkasına iyilik» (D5) der. Zincirin son kolu yapısı gereği boştur. Bu dizilişin kapalılığı akıl yürütmeyle kuruldu, sayımla değil; slayt <b>güçlü</b> işaretini taşır. «Niyetim yoktu» ve «tedarikçi yaptı» savunmaları iddianın dışında kalır: kasıt yoksa «planlı» değildir, varsa art. 93 devrededir.</p>
 
+<h2>5b. Üreticinin kendi davası: «AR-GE'yi finanse ediyorum»</h2>
+<p>Üretici savunmasını en güçlü hâliyle şöyle kurar: araştırma pahalıdır; ürünler sonsuza dek dayanırsa yenisi alınmaz, gelir düşer, araştırma durur. <b>Her öncülün doğru olabileceğini kabul edip sonucun çıkmadığını gösteririz</b> (slayt 36–39):</p>
+<table><tr><th>Sınav</th><th>Cevap</th></tr>
+<tr><td>T1 Gizlilik</td><td>Alıcı «bu iki yıl dayanır, fark yeni modeli finanse eder» demeye razı olurdu diyorsan söylemekte kayıp yok. Susuyorsan red bekliyorsun; kurbanı bilmeyen yöntem rıza değildir (N1).</td></tr>
+<tr><td>T2 Meşru yol</td><td>Aynı gaye açık fiyat, takas/yükseltme programı, ömrü yazılı ucuz hat, kiralama ile gerçekleşir. Zaruret ölçüsünce (Mecelle 22), zarar imkân nispetinde giderilir (31), ihtiyaç başkasının hakkını kaldırmaz (33).</td></tr>
+<tr><td>T3 İkilem</td><td>Yeni ürün daha iyi ise satmak için eskinin ölmesine gerek yok. Daha iyi değilse AR-GE ismen vardır: alıcı aynı şeye tekrar öder. İki halde de savunma çöker. Varsayım: talep gerçek iyileşmeye karşılık verir (makul, kesin değil).</td></tr>
+<tr><td>T4 Fazla ispat</td><td>Güzel gayeye dayanan gizli kesinti her haksız tahsilatı aklar: unu seyreltip fırın alan fırıncı. Başkasının malını meşru sebep olmadan almak caiz değildir (Mecelle 97, Nisâ 4:29).</td></tr>
+<tr><td>T5 Yük ve fayda</td><td>Külfet nimete göredir (Mecelle 87–88): bedeli alıcı öder, fonu ve yeni satışı üretici alır.</td></tr></table>
+<div class="warn"><b>Metninizin dürüst tenkidi.</b> «AR-GE bütçesi katbekat büyür», «teknoloji hızlanır», «tüketici parayı daha iyi icatlara harcar» ölçülmemiş ampirik iddialardır; rakamla savunamazsınız ve sunumda uydurma rakam yasaktır. Slayt 40'ta bunları <b>H1–H3 hipotezleri</b> diye açıkça yazdım: doğruysa ek ağırlık, yanlışsa T1–T5 savunmayı yine çürütür. «Tembel tüccar» gibi kişi nitelemelerini bilerek kullanmadım: akıl yürütmeye değil kişiye saldırı sayılır, hoca kolayca yıkar. Yerine aynı düşünceyi «araştırma ismen vardır» (T3) diye mantıkla yazdım.</div>
+<h3>Eklenen yeni deliller (slayt 16, 21, 27)</h3>
+<ul>
+<li><b>Denklik ve garar (16):</b> Fıkıh tam eşitlik aramaz; küçük gabn (yesîr) akde dokunmaz. Fâhiş gabn tağrîr ile birleşirse Hanefî–Şâfiî dahi seçimlik hak verir (Mecelle 356, TDV «Gabn»); gizlenen ömür tağrîrdir. Garar (Müslim 1513) hadisi sağlamdır, ama tek taraflı gizli vasfı onun altına koymak bizim adımımızdır: <b>olası</b>; N1'i ona dayandırmadık. Hadisin metnini sayfadan değil arama özetinden gördüm.</li>
+<li><b>Zarar-ı âmm (21):</b> Mecelle 26 (özel zarar genel zararı gidermek için), 27 (ağır zarar hafifle), 31, 87–88 (okundu). Üreticinin «kaybı» henüz kazanılmamış, ancak gizlemeyle işleyen gelirdir. Dikkat: madde firmayı topluma karşı tartmaya <b>kıyasla</b> uygulanıyor.</li>
+<li><b>Çevre ve israf (27):</b> BM E-waste Monitor 2024 (sayfa açıldı): 2022'de 62 milyon ton, 2010'dan %82 fazla; yalnız %22,3'ü belgeli toplanıp geri dönüştürülmüş; nedenler arasında «kısalan ürün ömrü, sınırlı onarım, tasarım kusurları» sayılıyor. <b>Planlı eskitmenin payı ölçülmemiştir; payı iddia etmedik.</b> Ağırlık N4'e (hadis «sevmez» der) değil, üçüncü kişilere zarar anlamında N2'ye bindi; Araf 7:56 ve Rûm 30:41 (sayfa açıldı) destek olarak anıldı.</li></ul>
 <h2>6. Dört vaka: ne söylenir, ne söylenmez</h2>
 <table><tr><th>Vaka</th><th>Yaprak</th><th>Söylenecek</th><th>Söylenmeyecek</th></tr>
 <tr><td>Phoebus 1925</td><td>A1</td><td>Üreticiler 1.000 saatlik bir standart koydu, numune test edildi, uzun ömürlü ampule ceza kesildi; 1951 İngiliz komisyonu «planlı eskitme» suçlamasını reddetti.</td><td>«İspatlandı.» Alıcıların bilgilendirilip bilgilendirilmediği kaynaklarda yok; hüküm buna bağlıdır.</td></tr>
@@ -67,18 +81,18 @@ body = r'''
 
 <h2>7. Sunumda en çok gelecek on iki soru</h2>
 <ol>
-<li><b>Ucuz ve kısa ömürlü ürün de mi yasak?</b> Hayır. Yasak olan gizlemedir (slayt 40).</li>
+<li><b>Ucuz ve kısa ömürlü ürün de mi yasak?</b> Hayır. Yasak olan gizlemedir (slayt 48).</li>
 <li><b>Beklenen ömrü kim belirler?</b> Ürün sınıfının örfü, üreticinin reklamı ve beyanı; belirsizse üretici söyleyerek meseleyi bitirir.</li>
 <li><b>Niyet ispatlanamaz.</b> Gerekmez: bilmek (testler, tasarım belgeleri), bildirmemek ve alıcının kaybı gösterilir; rızayı göstermek üreticiye düşer (Mecelle 76).</li>
 <li><b>Yazılım sonsuza kadar desteklenemez.</b> Doğru; destek bitirilebilir (Mecelle 17) ama haber verilerek ve cihaz çalışır bırakılarak.</li>
 <li><b>Pil için yavaşlatma korur.</b> Bildirilir ve seçenek verilirse dürüsttür.</li>
 <li><b>Herkes yapıyor.</b> Örf ancak yerleşik ve bilinen ise kabul edilir (Mecelle 41–42). Herkes gizliyorsa kötülük çoğalır.</li>
 <li><b>Yasal.</b> İzin, mahkemenin neyi uygulatacağını değiştirir; alıcının haksızlığa uğrayıp uğramadığını değiştirmez.</li>
-<li><b>Yeniliği finanse eder.</b> Bu ampirik bir iddiadır ve hüküm ona bağlı değildir; gizleyerek kazanılan kazanç helâl kazanç değildir.</li>
+<li><b>Yeniliği finanse eder.</b> Beş sınav (slayt 36–40): gizliyse neden gizli (T1)? Aynı para meşru yoldan toplanabilir (T2); yeni ürün ya daha iyidir ya değildir (T3); argüman her gizli kesintiyi aklar (T4); yükü taşıyan fayda görmez (T5). Büyüklük iddiaları (AR-GE bütçesi katlanır, teknoloji hızlanır) <b>hipotez</b>dir (H1–H3), hükmün onlara ihtiyacı yoktur.</li>
 <li><b>Moda?</b> İddia dışı: cihazı değil arzuyu değiştirir.</li>
 <li><b>Lisans, satış değil.</b> Akitte mânâ esastır (Mecelle 3).</li>
 <li><b>Neden klasik hüküm?</b> Hüküm illete bağlıdır, nesneye değil; illet burada da vardır (kıyas).</li>
-<li><b>Bu sizin görüşünüz mü?</b> Her adımın işareti vardır; reddeden hangi öncülü reddettiğini ve bedelini gösterir (slayt 48).</li></ol>
+<li><b>Bu sizin görüşünüz mü?</b> Her adımın işareti vardır; reddeden hangi öncülü reddettiğini ve bedelini gösterir (slayt 57).</li></ol>
 
 <h2>8. Kendini sına</h2>
 <ol>
@@ -100,8 +114,8 @@ body = r'''
 
 <h2>10. Sunum için öneri</h2>
 <ul>
-<li><b>20 dakikalık sürüm:</b> 1–3 (açılış), 5 ve 7 (harita ve örnek), 11–12 (rıza ispatı ve metinler), 14 (kıyas), 16–17 (zarar), 20–21 (mülkiyet), 25 (savunma ağacı), 37 (Apple), 46 (bir dakikalık özet), 48 (reddin bedeli), 49 (hüküm). Kalanı soru sırasında açılır.</li>
+<li><b>20 dakikalık sürüm:</b> 1–3 (açılış), 5 ve 7 (harita ve örnek), 11–12 (rıza ispatı ve metinler), 14 (kıyas), 18–19 (zarar), 23–24 (mülkiyet), 28 (savunma ağacı), 36–39 (üreticinin AR-GE savunması), 45 (Apple), 55 (bir dakikalık özet), 57 (reddin bedeli), 58 (hüküm). Kalanı soru sırasında açılır.</li>
 <li><b>45 dakikalık sürüm:</b> bütün ilkeler ve beş savunma; vakalardan ikisi; doubt court'tan altı soru.</li>
-<li>Slayt numaraları PDF'nin altında yazılıdır; notlardaki numaralar 53 slaytlık sürüme göredir.</li></ul>
+<li>Slayt numaraları PDF'nin altında yazılıdır; notlardaki numaralar 62 slaytlık sürüme göredir.</li></ul>
 '''
 open('ders_notu.html','w').write('<!doctype html><html><head><meta charset="utf-8"><title>Ders notu</title><style>'+CSS+'</style></head><body>'+body+'</body></html>')
