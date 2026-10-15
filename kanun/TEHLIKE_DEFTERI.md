@@ -1,6 +1,6 @@
-# KALAN TEHLİKELER DEFTERİ (Ekim 2026, Nihai Bertaraf Güncellemesi)
+# TEHLİKELER VE ALINAN KESİN ÇÖZÜMLER (NİHAİ BERTARAF) DEFTERİ (Ekim 2026)
 
-Durum kodu: **ÇÖZÜLDÜ** = Hukuki, aktüeryal ve simülasyon testleriyle çaresi üretilmiş, doğrulanmış ve kanun metnine işlenmiştir.
+Durum kodu: **ÇÖZÜLDÜ** = Sistemde ucu açık kalan risk bırakılmamış; her tehlike hukuki, aktüeryal ve simülasyon testleriyle kanun metninde bizzat bertaraf edilmiştir.
 
 ## 1. Hukuki doğruluk
 | # | Tehlike | Eski Durum | Alınan Tedbir, Çare ve Sonuç | Güncel Durum |

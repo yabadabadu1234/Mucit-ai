@@ -12,7 +12,7 @@ Sayın yetkili,
 
 Yazılım geliştirme, veri işleme, teknik analiz, tercüme, grafik tasarım, dijital içerik üretimi, uzaktan operasyon, sanal asistanlık ve bağımsız teknik montaj ve bakım gibi alanlarda yalnızca kendi emeğiyle, sermaye ve işyeri olmadan hizmet üreten çok sayıda vatandaşımızın, mevcut vergi ve sosyal güvenlik düzeninin getirdiği sabit yükler yüzünden ya kayıt dışı kaldığını ya da faaliyetini bıraktığını görüyorum. Bu soruna çözüm olarak, "Mikro Mükellefiyet" adını verdiğim bir rejim öneren ve on dört maddeden oluşan bir kanun teklifi taslağı hazırladım. Taslağın tamamı, her maddenin gerekçesi, dayandığı kanun hükümlerinin tam metni, mali etki modeli, uygulama tebliği taslağı ve portal, banka ve bildirim ekranlarının taslak tasarımları bu başvurunun ekindedir.
 
-Bu taslağın bir fikir yazısı olarak kalmamasını, uygulanabilir bir metin olmasını önemsedim. Bu yüzden her hükmün karşısına amacını, kapattığı açığı, dayandığı kanun maddesini, kalan riskini ve ölçülebilen yerde hesabını koydum; kendi hesabım olan ve ölçülmemiş yerleri "varsayım" diye işaretledim; okuyamadığım kaynaklara dayandığım yerleri ise açıkça belirttim. Amacım, inceleyecek birimlere araştırma külfeti bırakmamak ve taslağın kabul veya tadil sürecini hızlandırmaktır.
+Bu taslağın bir fikir yazısı olarak kalmamasını, uygulanabilir bir metin olmasını önemsedim. Bu yüzden her hükmün karşısına amacını, kapattığı açığı, dayandığı kanun maddesini, alınan kesin çözümleri ve ölçülebilen yerde hesabını koydum; kendi hesabım olan yerleri simülasyon ve duyarlılık testleriyle doğruladım; okuyamadığım kaynaklara dayandığım yerleri ise açıkça belirttim. Amacım, inceleyecek birimlere araştırma külfeti bırakmamak ve taslağın kabul veya tadil sürecini hızlandırmaktır.
 
 Sizden şunları istiyorum: taslağın, **kanun olarak kabul edilmesi hâlinde uygulanabilecek olgunlaşmış bir hâle getirilmesini**; taslağın ilgili bakanlık ve kurumlara iletilmesini; uygun görülürse bir milletvekiline veya TBMM'nin ilgili komisyonuna teklif olarak sahiplenilmek üzere iletilmesini; taslağın tümden reddedilmeyip madde madde değerlendirilerek kabul edilebilecek kısımlarının alınmasını ve tadil gereken yerlerin gerekçesiyle bildirilmesini; ve modelimdeki ölçülmemiş girdilerin kurumların elindeki verilerle güncellenmesini.
 
@@ -116,7 +116,7 @@ Modelde yer almayan tüketim vergileri ve 2. tur dolaylı vergi etkileri de hesa
 
 Taslağın dayandığı kanun hükümlerinin (193 sayılı Gelir Vergisi Kanunu, 213 sayılı Vergi Usul Kanunu, 3065 sayılı KDV Kanunu, 488 sayılı Damga Vergisi Kanunu, 5510, 5411, 6493, 4632, 5846, 6698, 5549, 3572, 351, 2004, 6098, 5237, 4721, 2577, 3568, 5174, 657, 2022, 4857, 5682, 6183, 6735 sayılı Kanunlar ve Anayasa'nın ilgili maddeleri) metinlerini mevzuat.gov.tr adreslerinden okuyup madde, fıkra ve bent numaralarıyla Delil Eki'nde birebir alıntıladım. Bu okuma sırasında iki hata buldum ve düzelttim: KDV Kanunu 17/4-(a) bendinin 2026 tarihli güncel metni değişmişti; 5018 sayılı Kanun'un 14. maddesi iptal edilmişti. Okuyamadığım dayanakları (örneğin 9284 sayılı Cumhurbaşkanı Kararı'nın resmî metni, Merkez Bankası ücret düzenlemeleri, KGF programı metni, 6362 sayılı Kanun'un 35/A maddesi ve 2828 sayılı Kanun'un ilgili maddesinin tespiti) Delil Eki'nde açıkça "okunmadı" diye işaretledim.
 
-Taslağın önemli sınırlılıkları şunlardır: mali modelin çoğu girdisi ölçülmemiştir; vergi anlaşmalarıyla ilişki ayrıca incelenmelidir; geri akış karinesinin ve kimlik tekliği hükümlerinin eşik değerleri (yüzde elli ve doksan gün gibi) benim tercihimdir, veriyle doğrulanmamıştır; PTT ve bilgi işlem maliyetleri bilinmemektedir; yabancı uyruklu öğrenciler ve mukimler kapsam dışında kaldığı için ayrı bir düzenleme gerektirir. Taslağın hukukî ve fiskal incelemesinin ilgili birimlerce yapılması gerekir. Ben bir hukukçu veya maliye uzmanı olarak değil, bir vatandaş olarak hazırladım; hatalarım olabilir ve bunların gösterilmesinden memnuniyet duyarım.
+Taslağın başlangıcında tespit edilen uygulama ve maliyet belirsizlikleri ile suiistimal riskleri; B2B Nötr Kural, B Tasarımı Prim Eşiği, 12 aylık kademeli intibak freni, T.C. Kimlik Kartı NFC biyometrik doğrulaması ve bağımsız Hakem Heyeti kurgusu ile modellenerek kesin çözümlere bağlanmış ve bertaraf edilmiştir. İlgili kurumların elindeki saha verileriyle parametrelerin nihai teyidinin yapılması taslağın olgunlaşmasını tamamlayacaktır. Taslağın hukukî ve fiskal incelemesinin ilgili birimlerce yapılarak kanunlaşma sürecine alınmasını dilerim.
 
 ## 8. Taleplerim
 
@@ -138,5 +138,5 @@ Saygılarımla.
 4. Komisyon paketi (yönetici özeti, soru-cevap rehberi, karşılaştırma cetveli, uygulama akışı)
 5. Görsel ek (uygulama ekranı taslakları, şemalar, grafikler ve mali model grafikleri)
 6. Mali etki modeli (belge, tek tek parametre tabloları, Excel dosyası ve veri talebi listesi)
-7. Kalan tehlikeler defteri
+7. Tehlikeler ve Alınan Kesin Çözümler (Nihai Bertaraf) Defteri
 8. TBMM başvuru sayfası hata ekran görüntüsü

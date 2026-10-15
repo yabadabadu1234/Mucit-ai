@@ -48,7 +48,7 @@ if __name__=="__main__":
           ("BARIYER_ENVANTERI.md","F_MALI_MODEL","F8","Bariyer envanteri"),
           ("SAHTEKARLIK_IMKANSIZLIK_TEOREMI.md","F_MALI_MODEL","F9","Sahtekârlık imkânsızlık önermesi"),
           ("SIZINTI_TAVAN_BOLME.md","F_MALI_MODEL","F10","Tavan üstü bölme sızıntısı: hesap, imkânsızlığın delili, seçenekler"),
-          ("TEHLIKE_DEFTERI_DEVLET.md","H_KALAN_RISKLER","H","Kalan riskler defteri")]:
+          ("TEHLIKE_DEFTERI_DEVLET.md","H_KALAN_RISKLER","H","Tehlikeler ve Çareler (Nihai Bertaraf) Defteri")]:
             md_belge(md,kl,ok,bs)
     if "kod" in secim:
         mm=sorted(glob.glob(os.path.join(K,'MALI_MODEL','*.py')))

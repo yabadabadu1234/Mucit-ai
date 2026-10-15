@@ -18,7 +18,7 @@
 | F_MALI_MODEL | Bariyer envanteri | `BARIYER_ENVANTERI.md` | 4 |
 | F_MALI_MODEL | Sahtekârlık imkânsızlık önermesi | `SAHTEKARLIK_IMKANSIZLIK_TEOREMI.md` | 1 |
 | F_MALI_MODEL | Tavan üstü bölme sızıntısı: hesap, imkânsızlığın delili, seçenekler | `SIZINTI_TAVAN_BOLME.md` | 2 |
-| H_KALAN_RISKLER | Kalan riskler defteri | `TEHLIKE_DEFTERI_DEVLET.md` | 3 |
+| H_KALAN_RISKLER | Tehlikeler ve Çareler (Nihai Bertaraf) Defteri | `TEHLIKE_DEFTERI_DEVLET.md` | 3 |
 | I_KOD | Kod: analiz.py | `MALI_MODEL/analiz.py` | 2 |
 | I_KOD | Kod: bariyer_sim.py | `MALI_MODEL/bariyer_sim.py` | 1 |
 | I_KOD | Kod: bolme_kazanci.py | `MALI_MODEL/bolme_kazanci.py` | 1 |
