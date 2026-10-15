@@ -20,7 +20,8 @@ The structural and economic parameters:
 * $W \in [0, 1]$: Captive switching barrier and platform lock-in index:
   $$\text{Exit Extinction: As } W \to 1, \quad \frac{\partial P}{\partial L} \to 0 \quad (\text{market discipline is severed; captive extraction prevails}).$$
 * $C$: Public commons threshold:
-  $$\text{Inalienability Axiom: If } \sum_{i=1}^N (E_i - L_i) > C, \quad \text{Contractual Assent } \equiv \text{Void ab initio (Mecelle Article 26)}.$$
+  $$\text{Regulatory Invalidation Axiom: If } \sum_{i=1}^N (E_i - L_i) > C, \quad \text{Exculpatory Waiver } \equiv \text{Bâtıl / Void (Mecelle Article 26)}.$$
+  $$\text{Ownership of } B \text{ is fully confirmed (Milk Tamm), while punitive regulatory liability & remediation fall on } M \text{ (Ta'zîr \& Hisbah)}.$$
 
 ```
 ========================================================================================================================
@@ -29,7 +30,7 @@ The structural and economic parameters:
 
                                             [ JURISDICTIONAL PLANE / HUKUKULLÂH ]
                                                 Commons Threshold: C (Mecelle 26)
-                                                  If Σ(E - L) > C  ==>  VOID
+                                      If Σ(E - L) > C  ==>  Exculpatory Waiver VOID / Hisbah Sanction on M
                                                               │
                                                               ▼
                [ MAKER / AL-SÂNI' ] ────────── Technical Asymmetry (Δ Blueprints, Logic)
@@ -126,23 +127,26 @@ TAHTA ŞEMASI (MODEL 1: FABRİKA FAZI / İVAZ VE AYIP HİLESİ):
 ========================================================================================
 [ SÂNi' / M ] ──> Tasarım Seçimi: A1 (E) vs A2 (L) ──> L < E (Asimetrik Bilgi)
       │
-      ▼  (Dağıtım Zinciri)
-[ BÂi' / S ]  ──> Semen: P = P(E) Tahsil Edilir ──> [ MÂLiK / B ] (Mülkiyet Devri / t0)
-                                                           │
-                                                           ▼ (Doğal / Hızlı Aşınma)
-                                                    [ Tali / Yardımcı Unsur Tükendi ]
-                                                           │
-                                      ┌────────────────────┴────────────────────┐
-                                      ▼ (A1: Meşru Modülerlik)                  ▼ (A2: Yapısal Tuzak / L)
-                               [ Tahribatsız Yenileme ]                  [ Bütünleşik Kilitleme / İtlaf ]
-                                    Ömür -> E                               Ömür -> L (Erken Helâk)
-                                                                                │
-                                                                                ▼
-                                                                 Hukuki Netice:
-                                                                 * Ayb-i Hafî (Mecelle 337)
-                                                                 * Gabn-i Fâhiş bi't-Taghrîr
-                                                                 * Faskh (356) / Arsh (343)
-                                                                 * S -> M Rücû' Hakkı
+      ├───────────────────────────────────┬───────────────────────────────────┐
+      ▼ (Meşru Bütünleşik Entegrasyon)    ▼ (Yapay Ayrıştırma Engeli / L)     ▼
+[ Fıtrî / Fonksiyonel Bütünlük ]     [ Suni Servis / Tamir Kilidi ]      [ Kasti / Zâtî Zaaf ]
+(Yüksek Hız / SoC / Minyatürleşme)    (Orantısız Tutkallama / Kilit)      (Gizli Erken İtlaf)
+      │                                   │                                   │
+      ▼ (T Filtresi Meşru: ΔT Tenasübî)   ▼ (T Yok / Orantısız: Sû-i İsti'mâl)▼ (Ayb-i Hafî)
+  [ Meşru Zâtî Vasıf (Mecelle 87) ]   [ Sün'î Helâk-ı Hükmî ]             [ Hileli Kusur ]
+  (B Risk-i Zamanı Yüklenir)          (Ayıp ve Gabn-i Fâhiş)              (Al-Taghrîr al-Fi'lî)
+      │                                   │                                   │
+      └───────────────────────────────────┴───────────────────────────────────┘
+                                          │
+                                          ▼  (Dağıtım Zinciri)
+[ BÂi' / S ] ──> Semen: P = P(E) Tahsil Edilir ──> [ MÂLiK / B ] (Mülkiyet Devri / t0)
+                                                       │
+                                                       ▼
+                                                Hukuki Netice:
+                                                * Ayb-i Hafî (Mecelle 337)
+                                                * Gabn-i Fâhiş bi't-Taghrîr
+                                                * Faskh (356) / Arsh (343)
+                                                * S -> M Rücû' Hakkı
 ========================================================================================
 ```
 
@@ -152,13 +156,14 @@ Mathematical Specification:
 * Commutative Unearned Surplus (Gabn-i Fâhiş):
   $$\Delta P = P(E) - P(L) > 0 \implies \text{Ekl-i Emvâl bi'l-Bâtıl (Nisâ 29)}$$
 * Damage Ratio (Constructive Destruction / Helâk-ı Hükmî):
-  $$\Omega = \frac{\text{Value of Residual Functional Capacity }(E - L)}{\text{Cost of Renewing Exhausted Element}} \gg 1 \implies \text{Actionable Latent Defect}$$
+  $$\Omega = \frac{\text{Value of Residual Functional Capacity }(E - L)}{\text{Cost of Renewing Exhausted Element}} \gg 1 \quad \text{where } \Pi = \frac{\Delta T}{E - L} \to 0 \implies \text{Actionable Latent Defect}$$
+  *(Aksiyom: Eğer entegrasyon yüksek performans veya fiziksel zaruret [SoC, bandwith, su geçirmezlik] için kaçınılmazsa $\Pi > 0$ olup bu bir zâtî vasıftır; lakin fonksiyonel hiçbir kazanım olmaksızın sırf tamiri engellemek için kurulan yapay kilitlerde $\Pi \to 0$ olup bu bir ayb-ı hafîdir).*
 
-Here is the model. M manufactures cyber-physical asset X. In manufacturing, M has two design configurations, A one and A two. A one grants X its authentic uncurtailed functional capacity and structural durability benchmark E inherent in its physical architecture and material allocation, allowing exhausted auxiliary elements to be non-destructively maintained, calibrated, or renewed, and preserving structural integrity. A two imposes an artificial structural, logical, or monolithic barrier that irreversibly couples the lifespan of the entire asset to the earliest-exhausting element, or structurally plants a latent premature failure threshold into the asset's constitution, terminating X at an artificially truncated capacity ceiling L. Between A one and A two, any claimed technical or cost difference T is either nonexistent or grossly trivial and disproportionate to the massive destruction of operational utility (E - L). B is bound to M's ecosystem by switching barriers W. M chooses A two to accelerate replacement demand within its captive domain. At conveyance t zero, B observes the customary market benchmark E and pays price P corresponding to a sound, serviceable asset. For analytical clarity, let E represent ten units of baseline functional capacity, and let L represent an engineered ceiling of four units. P was paid upon the normative assumption of ten units of unhindered capacity.
+Here is the model. M manufactures cyber-physical asset X. In manufacturing, M has two design configurations, A one and A two. A one grants X its authentic uncurtailed functional capacity and structural durability benchmark E inherent in its physical architecture and material allocation, allowing exhausted auxiliary elements to be non-destructively maintained, calibrated, or renewed wherever technically proportionate, and preserving structural integrity. A two imposes an artificial structural, logical, or non-functional barrier that irreversibly couples the lifespan of the entire asset to the earliest-exhausting element, or structurally plants a latent premature failure threshold into the asset's constitution, terminating X at an artificially truncated capacity ceiling L without legitimate functional necessity. Crucially, legitimate monolithic integration engineered for authentic operational throughput, microelectronic bandwidth, or physical protection is recognized as an intrinsic functional attribute under proportionality filter T; what Model One condemns is the deliberate, non-functional obstructive assembly or unannounced latent temporal truncation designed to accelerate captive replacement. Between A one and A two, any claimed technical or cost difference T is either nonexistent or grossly trivial and disproportionate to the massive destruction of operational utility (E - L). B is bound to M's ecosystem by switching barriers W. M chooses A two to accelerate replacement demand within its captive domain. At conveyance t zero, B observes the customary market benchmark E and pays price P corresponding to a sound, serviceable asset. For analytical clarity, let E represent ten units of baseline functional capacity, and let L represent an engineered ceiling of four units. P was paid upon the normative assumption of ten units of unhindered capacity.
 
 OUR FIRST EVIDENCE: COMMUTATIVE DISPARITY, LATENT DEFECT, AND UPSTREAM FRAUD.
-The claim: in commutative transactions, fair market valuation is determined by intrinsic operational capacity and fatigue resistance; introducing an artificial structural or monolithic bottleneck constitutes an actionable upstream latent defect (ayb) and fraudulent disparity (gabn-i fâhiş bi't-taghrîr), enforceable via contractual rescission against S and upstream restitutionary indemnification against M.
-The proof: durable assets are acquired for their authentic capacity and unhindered stream of utility. When M manufactures asset X with engineered limitation L, M introduces an objective defect into the commercial stream of commerce. In the period of informational opacity, or under switching barrier W, price P is maintained at the valuation of sound benchmark capacity E. While contract law tolerates minor subjective valuation differences (gabn-i yesîr), neutral commercial appraisers (ahl al-khibrah) evaluate the true financial value of an asset whose intrinsic utility is structurally curtailed from ten units of capacity to four. Because an asset designed to force premature abandonment upon the failure of an unrenewable auxiliary element loses a major proportion of its commercial value at the very moment of exchange, the resulting gap between the price paid P and the true objective value constitutes an unconscionable disparity (gabn-i fâhiş) accompanied by active fraudulent concealment (taghrîr). Under the economic loss doctrine and classical sales jurisprudence, this upstream factory-phase flaw is strictly categorized as an original latent defect (ayb-i kadîm / ayb-i hafî)—not an external physical trespass (itlâf)—because the failure occurs purely within the internal commercial boundary of the asset itself.
+The claim: in commutative transactions, fair market valuation is determined by intrinsic operational capacity and fatigue resistance; introducing an artificial structural or non-functional bottleneck constitutes an actionable upstream latent defect (ayb) and fraudulent disparity (gabn-i fâhiş bi't-taghrîr), enforceable via contractual rescission against S and upstream restitutionary indemnification against M.
+The proof: durable assets are acquired for their authentic capacity and unhindered stream of utility. When M manufactures asset X with engineered limitation L, M introduces an objective defect into the commercial stream of commerce. In the period of informational opacity, or under switching barrier W, price P is maintained at the valuation of sound benchmark capacity E. While contract law tolerates minor subjective valuation differences (gabn-i yesîr), neutral commercial appraisers (ahl al-khibrah) evaluate the true financial value of an asset whose intrinsic utility is structurally curtailed from ten units of capacity to four. Because an asset designed to force premature abandonment through artificial non-functional impediments loses a major proportion of its commercial value at the very moment of exchange, the resulting gap between the price paid P and the true objective value constitutes an unconscionable disparity (gabn-i fâhiş) accompanied by active fraudulent concealment (taghrîr). Under the economic loss doctrine and classical sales jurisprudence, this upstream factory-phase flaw is strictly categorized as an original latent defect (ayb-i kadîm / ayb-i hafî)—not an external physical trespass (itlâf)—because the failure occurs purely within the internal commercial boundary of the asset itself.
 The Qur'an commands in Surah An-Nisa, verse 29: "Do not consume your wealth among yourselves by false ways." Extracting the full market price of a durable, serviceable good while delivering an asset burdened with an engineered kill-condition is consuming property by falsehood (ekl-i emvâl bi'l-bâtıl).
 The rule: against immediate seller S, under Mecelle Article 356, B possesses the contractual remedy of rescission (faskh): B may cancel the contract and recover purchase price P upon tendering restitution. Under Mecelle Article 358, where restitution of the physical good is barred due to alteration or consumption, contractual rescission strictly lapses. Crucially, intermediate seller S is an innocent retailer; once S compensates B or accepts rescission, S possesses the established right of upstream recourse (rücû') against manufacturer M to recover all disbursed sums. Furthermore, where M organized the deceptive distribution scheme, public commercial law and hisbah regulations compel M to directly disgorge the unearned price differential (noksan-ı semen).
 
@@ -386,9 +391,9 @@ Second, hedonic price deflation—the real drop in computing and manufacturing c
 
 CONCLUSION.
 The legal, rational, and moral ruling on planned obsolescence is definitively established wherever an artificial limit L or ecosystem lock-in is imposed without proportional necessity, or where a nominal technical pretext T is deployed to engineer unearned replacement sales:
-First: to engineer premature failure L into a durable good by structurally preventing modular renewal is an act of upstream commutative deceit (taghrîr), latent defect (ayb), and actionable commercial fraud within the supply chain.
+First: to engineer premature failure L into a durable good by deploying non-functional structural barriers against renewal or embedding unannounced latent kill-conditions is an act of upstream commutative deceit (taghrîr), latent defect (ayb), and actionable commercial fraud within the supply chain.
 Second: to remotely degrade an asset after conveyance, or to deploy locks that paralyze independent maintenance and calibration, is an unlawful post-sale trespass (mubâşereten teaddî), an abuse of custodial trust, and a nullification of ownership.
-Third: to force durable assets prematurely onto waste heaps generates severe, inalienable public harm (ifsâd fi'l-arz / darar âmm) that cannot be validated or sanitized by private contractual consent.
+Third: to force durable assets prematurely onto waste heaps generates severe, inalienable public harm (ifsâd fi'l-arz / darar âmm) that invalidates exculpatory contractual waivers without diminishing the buyer's vested ownership, triggering peremptory regulatory sanctions and restitution against the maker.
 Fourth: to cloak these practices under the labels of license, safety, ecosystem security, or innovation does not diminish the wrong; it merely layers legal evasion upon public destruction.
 
 For manufacturers and platform architects, the boundary is clear and just:
