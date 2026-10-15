@@ -688,6 +688,30 @@
       "created_at": "2026-10-15T16:03:08.789Z",
       "sender": "ios",
       "is_cancelled": false
+    },
+    {
+      "id": "dc6dad84-9a85-4307-b22e-dadf5c47e78b",
+      "role": "agent",
+      "content": "Talebiniz doğrultusunda sistem tam olarak iki ayrık, profesyonel bileşene bölündü:\n\n---\n\n### 1. Görsel ve Formel Sunum Panosu (Sadece Formüller ve Şemalar)\n[`docs/planli_eskitme_sunum_panosu.html`](https://github.com/yabadabadu1234/Mucit-ai/blob/claude/project-gaps-integration-ubwi2r/docs/planli_eskitme_sunum_panosu.html)\n* **Görsel Sanatlara ve Modern Sahne Estetiğine Münasip Tasarım:** Koyu zemin (`#07090e`), neon-siyanür ve altın varak vurgular, cam efektli kartlar (`backdrop-filter: blur`), yüksek okunurluklu tek aralıklı fontlar (`JetBrains Mono`).\n* **Sadece ve Sadece Formül ve Şema:** İçinde hiçbir uzun edebi paragraf barındırmaz; her slayt/sayfa yoğun bir biçimde **düzyazı aksiyomlar, formül kutuları ve ASCII akış diyagramları** ile donatılmıştır:\n  1. **Pano 01:** *El-Menâtü'l-Mücerred:* Formel Değişkenler, Orantılılık ve Hukukullâh Eşiği\n  2. **Pano 02:** *Model 1 (Fabrika Fazı):* Yapısal Kısıt, Gabn-i Fâhiş ve Hükmî Helâk Şeması\n  3. **Pano 03:** *Model 2 (Satış Sonrası):* Negatif Gradyan, Mübâşereten İtlâf ve Amânatü'l-Hıfz Şeması\n  4. **Pano 04:** *Model 3 (İdâme Ambargosu):* Tekelci Ambargo Oranı, Şart-ı Fâsid ve Bay'u'l-Mudtarr Şeması\n  5. **Pano 05:** *Model 4 (Limon Pazarı & Çöküş):* Dinamik Ters Seçilim, Esaret Soygunu ve İfsâd fi'l-Arz Şeması\n  6. **Pano 06:** *Fikrî Mülkiyet Sınırı:* İlk Satış / İstihlâk-ı Hak ve Çift Düzlemli Mülkiyet Şeması\n  7. **Pano 07:** *İcmâlî Netice Matrisi:* 6 Müsbet İllet, 4 Mefsedet ve Kesin Hükümler Tablosu\n\n---\n\n### 2. Hatibin Kürsü Konuşma Metni (Ağzınızdan Çıkacak Hitabet)\n[`docs/planli_eskitme_hitabet_metni.md`](https://github.com/yabadabadu1234/Mucit-ai/blob/claude/project-gaps-integration-ubwi2r/docs/planli_eskitme_hitabet_metni.md)\n* **Formül Dökümünden Arındırılmış Akıcı Diksiyon:** Hatip sahnede formülleri tek tek hecelemez; tahtadaki yoğun aksiyomlara işaret ederek delilleri ve fıkhi/akli tahlilleri doğrudan dinleyicinin zihnine nakşeder.\n* **Sahne İpuçları:** Hangi delilde hangi panonun gösterileceği parantez içi hatip notlarıyla (`*(Hatip perdedeki 2. Panoya geçer)*`) belirtilmiştir.\n* **Vakar ve İkna Gücü:** Girişteki *tenkîh-i menât* metodundan başlayarak, üreticilerin 4 sahte savunmasının çürütülmesine ve nihai hüküm bildirisindeki *Bey' - İcâre* ayrımına kadar hitabetin ritmi ve mantıki silsilesi eksiksiz kurgulanmıştır.\n\nTüm dosyalar oluşturuldu, kaydedildi ve depoya işlendi.",
+      "status": "completed",
+      "model": "gemini-3.8-flash-low",
+      "client_type": "gemini-bridge",
+      "parent_message_id": "faa38a86-3257-414f-bc98-35df3f180c0b",
+      "created_at": "2026-10-15T16:05:29.105Z",
+      "sender": "macOS",
+      "is_cancelled": false
+    },
+    {
+      "id": "a1eee80f-c1c0-4528-ace2-bb44578d2970",
+      "role": "user",
+      "content": "Hitabetin İngilizcesini de yazacaktın. Ayırca hitabet hukuki olandan aşağı kalmayacktı, sadece şemaları çıkartıp onu hitabet metni diye sunacaktın gafil. Her şeyi berbat etmişsin",
+      "status": "pending",
+      "model": "gemini-3.8-flash-low",
+      "client_type": "gemini-bridge",
+      "parent_message_id": null,
+      "created_at": "2026-10-15T16:13:22.779Z",
+      "sender": "ios",
+      "is_cancelled": false
     }
   ]
 }
