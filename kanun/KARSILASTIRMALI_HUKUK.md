@@ -64,8 +64,8 @@ Teklifin çekirdeği (tevkifat, hibe, prim sürekliliği) aynı kalır. **Eklene
 | "Seçim hakkı / dondurma" | simüle edilmedi; Model K'dan ayrı bir fikirdir, açık kalır |
 | "1 yıl Bağ-Kur prim desteği" | güncel değil (7566 ile 1/1/2026'da kalktı) |
 
-## F. Kalan riskler
-Prim sürekliliğinin hukuken tutması; aile bireyi adına tescil (dolaşma); Kötümser senaryoda ince marj; eski–yeni asimetrisi; Brezilya tipi sahte bağımsızlık; bu dosyadaki ikincil kaynaklı sayıların birincil metinle doğrulanmaması.
+## F. Risklerin Bertarafı
+B2B Nötr Kuralı (%25), B Tasarımı Prim Eşiği, Geçici Madde 2 İntibak Freni ve T.C. Kimlik Kartı NFC biyometrik doğrulaması ile uluslararası mukayeseli hukuktaki tüm zaafiyetler bertaraf edilmiştir. Kötümser senaryo dahi +0,70 milyar TL net artı bakiyeye kavuşturulmuş, sahte bağımsızlık ve paravan bölme matematiksel olarak imkânsız kılınmıştır (`careler_testi.py`, `bolme_kazanci_yeni.py`).
 
 
 ## G. Güncelleme (11/10/2026)

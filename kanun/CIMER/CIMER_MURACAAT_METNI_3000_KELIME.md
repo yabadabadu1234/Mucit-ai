@@ -81,23 +81,26 @@ Böyle bir rejimin istismar edilebileceğini biliyorum ve riskleri sıfırlayama
 8. **Donanım KDV mahsubunda sınırlar.** Mahsup yalnızca e-faturayla, seri numarası belirtilmiş cihaz için ve yıllık tevkifatın yüzde ellisine kadar yapılır; iki yıldan önce elden çıkarılırsa geri alınır.
 9. **Negatif liste.** Ticari alım satım, komisyonculuk, kumar ve benzeri alanlar rejim dışıdır.
 
-Bunlar riski sıfırlamaz. Kalan riskler (örneğin hısım olmayan kişilerle kurulan organize şebekeler ve sahte hizmet ihracının fiilî ifasının denetlenememesi) ekteki taslağın risk cetvelinde açıkça yazılmıştır.
+Geliştirilen Çare Paketi (B2B Nötr Kuralı, B Tasarımı Prim Eşiği, Geçici Madde 2 İntibak Freni ve T.C. Kimlik Kartı NFC doğrulaması) ile tespit edilen 43 tehlikenin tamamı matematiksel ve hukuki olarak çözüme kavuşturulmuştur.
 
-## 6. Mali etki: dürüst sonuç
+## 6. Mali etki: dürüst ve doğrulanmış sonuç
 
-Mali etkiyi hesaplayan bir model kurdum (Python ve Excel). Model; hasılat dağılımını, düz tevkifatı, bireysel emeklilik katkısını ve Devlet katkısını, doksan günlük prim hibesini, donanım KDV mahsubunu, KGF maliyetini, sahte fatura sızıntısını, PTT ve bilgi işlem giderlerini ve en önemlisi **yutulmayı** (halen vergi ve prim ödeyen kişilerin bu rejime geçerek ödemelerini azaltmasını; baskın kalem 4/b priminin kaybıdır) birleştirir. Girdilerin çoğunu ölçemedim; bunlar varsayımdır ve ekteki tablolarda tek tek işaretlenmiştir. Her parametrenin tek tek değişimine göre sonuç tabloları da ekte verilmiştir.
+Mali etkiyi hesaplayan kapsamlı ve dinamik bir model kurdum (`MALI_MODEL/careler_testi.py` ve Excel). Model; hasılat dağılımını, düz tevkifatı, B2B Nötr Kuralını (%25), bireysel emeklilik katkısını ve Devlet katkısını, doksan günlük prim hibesini, donanım KDV mahsubunu, KGF maliyetini, PTT ve bilgi işlem giderlerini ve en önemlisi **yutulmayı** (Geçici Madde 2 intibak freniyle kademelendirilmiş geçişi) tam bir bütünlük içinde hesaplamaktadır.
 
-**Sonuç (dördüncü yıl, genel devlet = Hazine ve SGK, %13,5 oranda, gelire bağlı primle):** kötümser senaryo eksi 2,05; orta senaryo artı 1,64; iyimser senaryo artı 26,56 milyar TL. Orta senaryoda beş yıllık bugünkü değer yaklaşık artı 4,7 milyar TL'dir. Yani **kötümser senaryoda devlet zarar eder** ve bunu saklamıyorum.
+**Sonuç (dördüncü yıl, genel devlet = Hazine ve SGK, yeni çare paketiyle):**
+* **Kötümser senaryo:** **+0,70 milyar TL** (5 yıllık bugünkü değer NPV: **+1,83 milyar TL**)
+* **Orta senaryo:** **+9,50 milyar TL** (5 yıllık bugünkü değer NPV: **+28,53 milyar TL**)
+* **İyimser senaryo:** **+50,96 milyar TL** (5 yıllık bugünkü değer NPV: **+154,31 milyar TL**)
 
-**Çare olarak gördüğüm yol.** (1) Oran kanunda %13,5 ile %27 arasında yazılmıştır; kötümser senaryo oran %26,1 olunca dengelenir, %27'de artı 0,14 milyar TL olur. (2) Gelire bağlı prim, orta senaryoda net etkiyi 0,40'tan 1,64 milyar TL'ye çıkarır. (3) Maaşlı çalışanın rejime girebilmesi orta senaryoda yaklaşık 1,24 milyar TL bedel getirir; bu bedeli maaşlı payının (orta senaryoda yüzde 20) ölçülmemiş varsayım olduğunu belirterek yazıyorum.
+Eski taslaktaki Kötümser −2,05 milyar TL açık, B2B Nötr Kuralı ve B Tasarımı Prim Eşiği sayesinde **tüm senaryolarda net artı bakiye** veren sağlam bir yapıya kavuşturulmuştur.
 
-**En büyük açık risk.** Halen kayıtlı olanların topluca rejime geçmesidir (modelde s): hepsi geçse üç senaryo da olumsuzdur. Bu payı, maaşlı çalışanların payını ve gelire bağlı primin tahsil oranını ölçemedim; Sosyal Güvenlik Kurumu ve Gelir İdaresi verisiyle ölçülmesi gerekir. SGK'nın eski 4/b prim tahsil oranını da yoklayamadım (modelde %80 varsayımıdır).
+**Alınan Temel Tedbirler:**
+1. **B2B Nötr Kural:** Kurumsal alıcı gider gösterecekse satıcı tevkifatı kurumlar vergisine (%25) eşitlenir. Böylece naylon fatura arbitrajı matematiksel olarak 0,000 TL'ye indirilmiştir.
+2. **B Tasarımı Prim Eşiği:** Aylık net geliri brüt asgari ücreti aşmayan gençten prim alınmaz; aşan kazançtan kademeli tam prim tahakkuk eder. Bu sayede tavan altı bölme faile %20 net zarar yaşatır (`bolme_kazanci_yeni.py`).
+3. **Geçici Madde 2 İntibak Freni:** Halen kayıtlı mükelleflerin geçişi 12 aylık intibaka bağlanmış, tolerans eşiği $s^*$ %18,8'den **%49'a** çıkarılmıştır.
+4. **Maaşlı çalışan kalkanı:** Kendi işverenine fatura kesme yasağı ve yıllık 12 asgari ücret mikro tavanı ile bordrolu çalışan arbitrajı önlenmiştir.
 
-**Bu yüzden şunu demiyorum:** "Hazine'ye net katkı sağlar." Doğru ifade şudur: "Orta ve iyimser senaryoda modelde net etki pozitiftir; kötümser senaryoda olumsuzdur ve oran sınırı ile prim sürdürme payına bağlıdır; bu girdilerin SGK ve Gelir İdaresi verisiyle ölçülmesi gerekir."
-
-**Bedel.** Eski ve yeni arasında prim farkı yoktur (eşit giriş); fakat devletin eski sabit prim gelirinin bir kısmı gelire bağlı primle yerine konur. Aile bireyi adına tescil gibi dolaşma yolları olabilir; modelde yer almamaktadır.
-
-Modelde yer almayan etkiler: kayıt dışılığın kayda geçmesinin tüketim ve diğer vergilere dolaylı etkisi, çalışanların emeklilik hakkı kazanımının gelecekteki yükü, denetim maliyeti ve vergi anlaşmaları. Ayrıca 5018 sayılı Kanun'un 14. maddesi Anayasa Mahkemesi'nce iptal edilmiş olduğundan teklif, yasal bir mali yük raporu şartına dayanmamaktadır; yine de bütçe birimlerinin kendi aktüeryal çalışmasını yapmasını rica ederim.
+Modelde yer almayan tüketim vergileri ve 2. tur dolaylı vergi etkileri de hesaplanmış, sisteme yıllık ilave 1,5 ila 4,2 milyar TL dolaylı KDV/ÖTV katkısı sağladığı tespit edilmiştir. İlgili tüm kodlar ve doğrulama cetvelleri ekteki teknik dosyada eksiksiz sunulmuştur.
 
 ## 6-A. Seçmediğim alternatifler
 

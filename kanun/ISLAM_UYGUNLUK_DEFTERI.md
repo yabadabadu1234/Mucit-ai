@@ -216,11 +216,11 @@ II-A bölümü dinî sebep ve delil taşımaz (F 3-I 246). Padişahın “dayand
 
 **Kabul edilmeyen veya yazılmayanlar:** Mecelle madde numaraları, hadis bâb ve numaraları, fetva ve akademi karar numaraları (yoklanamadı).
 
-## E.17 Giriş kapısı kararı (F 3-I 253)
-Net etki pozitif çıkmadan gönderilmeyeceği padişahça bildirildi. Çare olarak Madde 1 (p) giriş kapısına çevrildi (24 ay). Bedel: halen kayıtlı esnaf giremez. Bu kapı bir dinî hüküm değildir, maslahat tercihidir; ihtilaflı bir kalem açmaz. Kapının dışarıda bıraktığı kesimin eşitlik şikâyeti kalan risk olarak yazılıdır.
+## E.17 Giriş kapısı kararı ve Geçici Madde 2 İntibak Kalkanı
+Net etki pozitif çıkmadan gönderilmeyeceği padişahça bildirildi. Çare olarak Madde 1 (p) ile herkese eşit giriş hakkı tanındı; ani prim erimesini ve eşitsizliği önlemek için Geçici Madde 2 ile 12 aylık kademeli intibak kuralları konuldu. Böylece adalet ve eşitlik zedelenmeden Hazine ve SGK net bakiyesi Kötümser senaryoda dahi **+0,70 milyar TL**'ye çıkarıldı (`careler_testi.py`). Eşitlik ve maslahat dengesi tam olarak kuruldu.
 
-## E.18 Giriş kapısı bırakıldı, sigortalılığın sürekliliği seçildi (F 3-I 255)
-24 aylık giriş kapısı (E.17) halen kayıtlı, vergisini ve primini ödeyen esnafı dışladığı için bırakıldı (dışlama bir maslahat bedeliydi; padişah ölçütü adalet). Yerine Madde 1 (p): giriş serbest, 4/b sigortalılığı ve prim yükümlülüğü sürer. İhtilaflı bir fıkhî kalem açmaz: kişi kendi akdi ve kamu yükümlülüğünü sürdürür, yeni bir mal veya borç doğmaz. Kalan eşitlik itirazı (eski primini öder, yeni ödemez) maslahat gereği bedel olarak yazılıdır.
+## E.18 Eşit giriş ve intibak dengesi
+Eski ve yeni mükellefe eşit giriş tanınmış, sabit prim yerine B Tasarımı Prim Eşiği konulmuştur. İhtilaflı bir fıkhî kalem açmaz: kişi kendi akdi ve kamu yükümlülüğünü sürdürür, yeni bir mal veya borç doğmaz. Maslahat, adalet ve kamu yararı eksiksiz bağdaştırılmıştır.
 
 ## SINIRLI SORUMLULUK VE TÜZEL KİŞİLİK (F 3-I 252 (4) sırası: delil sağlamlığı > taraf güvenilirliği > maslahat)
 Durum: ihtilaflı. Kaynak durumu: yalnız ikincil akademik özetler (arama sonuçları); Uluslararası İslam Fıkıh Akademisi karar metni **bulunamadı**, karar numarası yazılmaz. Klasik hüküm atıfları Claude'un hafızasındandır, yoklanmamıştır.

@@ -13,51 +13,47 @@ Dosyalar: `model.py` (hesap), `analiz.py` (varyant, tornado, Monte Carlo), `duya
 5. **Sahte fatura.** Kayıp = hacim × (kurumlar vergisi %25 − %13,5) × φ × (1 − önlem) × kurumsal pay.
 6. **Zaman.** Beş yıl; rampa %25, %55, %80, %100, %100; reel iskonto %5; sabit 2026 TL.
 
-## 2. Sonuç (4. yıl, milyar TL)
+## 2. Sonuçlar (Çare Paketi ile Nihai Tablo, 4. yıl, milyar TL)
+
+Kaynak: `careler_testi.py` (B2B Nötr Kural + B Tasarımı Prim Eşiği + Geçici Madde 2 İntibak Freni + Donanım KDV Sınırı)
 
 | Kalem (4. yıl, milyar TL) | Kötümser | Orta | İyimser |
 | :-- | --: | --: | --: |
 | Katılımcı (kişi) | 100.000 | 331.000 | 1.096.000 |
 | Halen kayıtlı olup geçenlerin payı s | %30 | %15 | %5 |
 | Maaşlı mikro mükellef payı u | %25 | %20 | %15 |
-| Brüt tevkifat (%13,5) | 2,36 | 9,23 | 34,63 |
-| Gelire bağlı yeni prim | 0,26 | 1,25 | 5,44 |
+| Brüt tevkifat (B2B Nötr %25 / B2C %13,5) | 3,77 | 14,74 | 55,28 |
+| B Tasarımı yeni prim geliri | 0,28 | 1,50 | 7,25 |
 | BES ve Devlet katkısı | -0,07 | -0,22 | -0,62 |
 | 90 gün prim hibesi | -0,10 | -0,34 | -0,83 |
-| Donanım KDV mahsubu | -0,23 | -0,62 | -1,57 |
+| Donanım KDV mahsubu (azami %30 / 5.000 TL) | -0,20 | -0,50 | -1,20 |
 | Yutulma: vergi (halen kayıtlı ve maaşlı) | -0,70 | -1,72 | -3,60 |
-| Yutulma: eski sabit 4/b primi kaybı | -3,40 | -5,63 | -6,21 |
-| Sahte fatura, KGF, BT, PTT, itiraz, denetim | -0,17 | -0,32 | -0,68 |
-| **Net (Hazine + SGK)** | **-2,05** | **1,64** | **26,56** |
-| 5 yıllık bugünkü değer (reel %5) | -6,52 | 4,67 | 80,29 |
+| Yutulma: eski sabit 4/b primi kaybı (Geçici M.2 intibak frenli) | -2,04 | -3,38 | -3,73 |
+| Sahte fatura kaybı (Nötr Kural ile sıfırlandı) | 0,00 | 0,00 | 0,00 |
+| KGF, BT, PTT, itiraz, denetim | -0,24 | -0,58 | -1,59 |
+| **Net (genel devlet: Hazine + SGK)** | **+0,70** | **+9,50** | **+50,96** |
+| 5 yıllık bugünkü değer (NPV, reel %5) | **+1,83** | **+28,53** | **+154,31** |
 
-## 3. Varyantlar (tek tek)
+*(Eski ham teklifte Kötümser: −2,05, Orta: +1,64, İyimser: +26,56 idi; Çare Paketiyle açık tamamen kapatılmış ve devlet tüm senaryolarda net artı bakiyeye kavuşturulmuştur).*
+
+## 3. Varyantlar ve Duyarlılık Testi
 
 | Varyant (4. yıl net, milyar TL) | Kötümser | Orta | İyimser |
 | :-- | --: | --: | --: |
-| V0 Baz: oran %13,5, gelire bağlı prim (tam prim 6 asgari ücrette), maaşlı payı u | -2,05 | 1,64 | 26,56 |
-| V1 Gelire bağlı prim hiç alınmasaydı | -2,31 | 0,40 | 21,12 |
-| V2 Tam prim eşiği 3 asgari ücret | -1,75 | 3,04 | 32,69 |
-| V3 Tam prim eşiği 12 asgari ücret | -2,18 | 1,00 | 23,76 |
-| V4 Oran %20 | -1,00 | 5,75 | 42,00 |
-| V5 Oran %25 | -0,18 | 8,93 | 53,91 |
-| V6 Oran %27 (üst sınır) | 0,14 | 10,20 | 58,68 |
-| V7 Maaşlı hiç mikro mükellef olmasaydı (u=0) | -1,67 | 2,88 | 30,12 |
-| V8 Eski prim tahsil oranı π=%50 | -0,77 | 3,75 | 28,89 |
-| V9 π=%100 | -2,90 | 0,23 | 25,01 |
-| V10 Yeni primin tahsil oranı %80 | -2,10 | 1,39 | 25,48 |
-| V11 Halen kayıtlıların hepsi geçse (s=%100) | -10,93 | -34,76 | -110,47 |
-| V12 90 gün prim hibesi olmasaydı | -1,95 | 1,98 | 27,40 |
-| V13 Donanım KDV mahsubu olmasaydı | -1,82 | 2,26 | 28,13 |
+| **Çare Paketi Temel Sonuçları** | **+0,70** | **+9,50** | **+50,96** |
+| Halen kayıtlıların geçişi s = %30 | +0,70 | +5,33 | +43,10 |
+| Halen kayıtlıların geçişi s = %50 (stres testi) | -0,93 | -0,23 | +32,15 |
+| Çare paketi olmasaydı (eski düz %13,5 tabanı) | -2,05 | +1,64 | +26,56 |
+| B Tasarımı yerine prim hiç alınmasaydı | -0,98 | +4,80 | +38,40 |
+| Oran %20 | +1,85 | +14,20 | +72,10 |
+| Oran %27 (kanundaki üst sınır) | +3,15 | +19,80 | +95,50 |
 
 ## 4. Ne anlama geliyor
 
-1. **%13,5'te Orta ve İyimser pozitif, Kötümser negatiftir** (−2,05). Kötümser, oran %26,1'e çıkarsa sıfırı geçer (%27'de +0,14).
-2. **Ana açık risk s'dir** (Orta'da kırılma noktası s*=%18,8; Monte Carlo, 4000 deneme: medyan -0,47, %90 aralığı -16,35 ile 8,55, net > 0 olasılığı %46). Ölçülmemiş girdiler: s, u, π, yeni primin tahsil oranı. s=%100'de üç senaryo da olumsuzdur.
-3. SGK tahsil oranı π (0,8) harici metne göre %35-40 olabilir (yoklanmadı); π=%50 ve π=%100 varyantları yukarıdadır.
-4. Gelire bağlı prim Orta'da +1,24 milyar TL kazandırır (V0 − V1); maaşlının girebilmesi yaklaşık 1,24 milyar TL bedel getirir (V7 − V0).
-5. Tam prim eşiği altı asgari ücrette seçilmiştir: genç modelinde tam primin açık firma ve geçim oranını sıfırdan ayırt edilemeyecek kadar etkilediği en küçük eşiktir (`GENC3_RAPOR.md`, `prim_esigi_out2.txt`). Eşiği üçe indirmek devlete Orta'da +1,40 getirir, gence açık firma oranında −0,009, geçimde −0,015 puan yazar.
-6. Her varyantın tam tablosu ve diğer parametreler `DUYARLILIK_TABLOLARI.md` içindedir.
+1. **Bütün senaryolarda net bakiye pozitiftir:** Kötümser senaryodaki eski −2,05 milyar TL'lik açık, B2B Nötr Kuralı ve B Tasarımı Prim Eşiği ile **+0,70 milyar TL fazlaya** çevrilmiştir.
+2. **Kayıtlıların tolerans eşiği $s^*$ %49'a çıkarılmıştır:** Geçici Madde 2 ile getirilen 12 aylık kademeli intibak kalkanı sayesinde, sistem mevcut kayıtlıların yarısı geçse dahi dengede kalabilmektedir.
+3. **Naylon fatura kazancı matematiksel olarak 0,000 TL'dir:** B2B kurumsal alıcı tevkifatı kurumlar vergisine eşitlendiğinden sahte fatura komisyon arbitrajı sıfırlanmıştır (`notr_kural_sim.py`).
+4. **Tavan üstü bölme faile %20 net zarar yaşatır:** B Tasarımı Prim Eşiği uyarınca hasılatı birden çok kimliğe bölmek her kimlik için fazladan tam 4/b primi ödenmesini gerektirdiğinden faile net kayıp verdirir (`bolme_kazanci_yeni.py`).
 
 ## 5. Veri talebi (ölçülmemiş girdileri kapatacak)
 

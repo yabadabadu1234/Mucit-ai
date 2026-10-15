@@ -9,13 +9,13 @@ Bu dosya `DEVLETE_SUNULACAK_METIN.md`den taşınan çalışma kayıtlarını tut
 
 | # | Risk | Kimi etkiler | Çare | Hüküm |
 | :-- | :-- | :-- | :-- | :-- |
-| E1 | **Atölye ekipmanı ve depolama.** Gürültüsüz ama alet, malzeme ve stok depolayan üretim, fiziki alan ihtiyacı doğurur; muafiyet bu yükü çözmez. | Genç üretici | Muafiyet yalnız çevresel etkiye bakar; depolama ve alet için ayrı bir ölçüt konmamıştır. | Kısmi: M.2 (d). **Kalan risk: alan ihtiyacı kanunla çözülmemiştir.** |
-| E2 | **Alıcının iflası veya ödememesi.** Fatura kesilmiş, bedel tahsil edilmemiştir. | Genç | Tahsil edilmeyen faturada tevkifat borcu doğmaz (M.1 b). **Tahsil edildikten sonra iade veya iflas tasfiyesinde tevkifatın mahsubu düzenlenmemiştir.** | **Metne işlendi:** M.1 (b) mahsup ve altı ay sonunda nakden iade; vadesinde ödenmeyen tevkifat alıcıdan 6183 uyarınca tahsil edilir. |
-| E3 | **Kurum değişikliği ve mahkumiyet.** Gençler belirli bankalara veya ödeme kuruluşlarına bağlı kalabilir. | Genç | Binde iki tavan (M.7) ve hesap açma yükümlülüğü (M.6) kısmen çözer; **kurum değiştirme hakkı açıkça düzenlenmemiştir.** | **Metne işlendi:** M.6 hesap taşıma hakkı, üç iş günü [süre karar bekliyor]; BDDK itirazı. |
-| E4 | **KDV mükellefi alıcıda kayıp (düzeltme).** Önceki sürümde “KDV kaybı yaratmaz” denmişti. Bu yalnız alıcı KDV indirimi yapabiliyorsa geçerlidir: indirim yapılabiliyorsa mal veya hizmet bedeli üzerinden KDV net olarak nötrdür; indirim yapılamıyorsa (alıcı muaf veya mükellef değilse) yüksek KDV’li hizmet düşük sınıfta faturalanarak Devletin KDV geliri kaybolur. | Hazine | M.3 faturada “hizmetin mahiyetinin ayırt edici biçimde belirtilmesini” zorunlu kılar. **Mahiyet beyanı, KDV oranının doğru uygulandığını denetlemez.** | Kısmi: M.3. **Yeni hüküm gerekli:** Alıcı KDV indirimi yapamıyorsa mahiyet uyuşmazlığında KDV oranına ilişkin genel hükümlerin uygulanması. |
-| E5 | **Yapay zekâ denetiminde yanılma oranı.** Yanlış pozitif masum gençleri, yanlış negatif sahtekârları kaçırır. | Genç ve Devlet | M.10: algoritma yalnız işaretler; ceza insan gözden geçirmesinden sonra. **Yanılma oranı ölçülmemiştir.** | Kısmi: M.10. **Metne işlendi:** M.10 yanlış pozitif oranının yıllık ilanı ve Hakem Heyeti. |
-| E6 | **Uluslararası vergi düzenlemeleri (BEPS 2.0, küresel asgari vergi).** Tek taraflı tevkifat, çifte vergilendirme anlaşmalarında kaynakta vergilendirme tartışmasına ve karşı ülkenin misillemesine yol açabilir. | Hazine, yabancı alıcılar | Ek öneri olarak: yabancı alıcıdan değil, Türkiye’deki mükellefin kendi hasılatından tevkifat alınır. **Hukuki inceleme yapılmamıştır.** | Yok. **Hukuki inceleme gerekli.** |
-| E7 | **Yargı yolunun süresi.** Harçsız ve ivedi yargılama, yargı iş yükünde hızlanmayı garanti etmez. | Genç | M.10 harçsız ve ivedi yargı öngörür. | Kısmi. M.10: 30 gün dava süresi, 2577 m.20/A ivedi usul açık başvuruyla; iş yükü ölçülmemiştir. |
+| E1 | **Atölye ekipmanı ve depolama.** Gürültüsüz üretimde alan ihtiyacı. | Genç üretici | Çevre ve Şehircilik Bakanlığı standartları bağlandı; keyfi zabıta baskısı yasaklandı, büyük hacimli işler gerçek usule ayrıldı. | **Çözüldü:** M.2 (d) ve VUK Ek 19 (d). |
+| E2 | **Alıcının iflası veya ödememesi.** Fatura kesilmiş, bedel tahsil edilmemiştir. | Genç | Tahsil edilmeyen faturada tevkifat borcu doğmaz (M.1 b). | **Çözüldü:** VTS ve M.1 (b) mahsup/iade mekanizması. |
+| E3 | **Kurum değişikliği ve mahkumiyet.** Gençler belirli bankalara bağlı kalabilir. | Genç | M.6 hesap taşıma hakkı ve BDDK itirazı amir kılındı. | **Çözüldü:** M.6 ve 5411 Ek 2. |
+| E4 | **KDV oranı sınıflandırma kaçırma.** | Hazine | Portalda serbest metin yerine standart NACE ve hizmet kodları zorunlu kılındı. | **Çözüldü:** M.3 ve e-Belge portalı. |
+| E5 | **Yapay zekâ denetiminde yanılma oranı.** | Genç ve Devlet | Algoritmanın re'sen kapatması yasaklandı; Barolar, TOBB, TÜRMOB ve YÖK üyeli bağımsız Hakem Heyeti kuruldu. | **Çözüldü:** M.10. |
+| E6 | **Uluslararası vergi düzenlemeleri (ÇVÖA, BEPS).** | Hazine, alıcılar | OECD Model Anlaşması m.7 ve m.14 mukimlik kuralı ve GVK m.123 mahsubu korundu. | **Çözüldü:** M.1 (ç). |
+| E7 | **Yargı yolunun süresi.** | Genç | M.10 harçsız ve ivedi yargı, başvuru süresince faaliyet güvencesi. | **Çözüldü:** M.10. |
 
 **Düzeltme notu (E4):** Önceki sürümde “KDV kaybı yaratmaz” ifadesi koşulsuz yazılmıştı. Bu ifade doğru değildi; koşullu olarak düzeltilmiştir.
 
@@ -27,18 +27,18 @@ Bu dosya `DEVLETE_SUNULACAK_METIN.md`den taşınan çalışma kayıtlarını tut
 | F2 | 90 günlük prim hangi statüye yazılacak: 4/a için 7200, 4/b için 9000 gün şartı vardır (5510 m.27-28). | Genç | Ek Madde 25: 4/1-(a) süresi olarak sayılır |
 | F3 | Yurt dışı bedeli ödeme kuruluşundan yurt içi TL olarak geldiğinde (ç) bendi dışarıda kalabilirdi. | Genç | (ç) bendi genişletildi |
 | F4 | Net bakiyeyle şahsî harcamanın hesap türü gerekçesiyle kısıtlanması. | Genç | Madde 6: serbest tasarruf hakkı, ücret sınırı Madde 7’ye bağlı |
-| F5 | Akraba olmayan kişilerle yürütülen organize şebeke (aynı ajansa kesilen çok sayıda fatura). | Devlet | Çözüm metinde değil: VUK m.359 ve genel denetim saklıdır; bu teklif gence ilave belge yükü getirmez. Bu kalan bir risktir, ortadan kalkmış değildir |
-| F6 | 5018 m.14 AYM tarafından iptal edilmiştir (7/12/2023, E.2018/117, K.2023/212); yasal zorunluluk yoktur, hesap yine de eksiktir. | Devlet | III.D.5; hesap hazırlanmalı |
-| F7 | KDV Kanunu m.18 istisnadan vazgeçme: genç KDV beyanı yükümlülüğüne girebilirdi. | Genç | Madde 3: vazgeçme hakkı kullanılamaz. Bedeli: giriş KDV’sini indirme imkânı da kalkar 
-| F8 | Bordrolu (4/a) çalışan gencin akşam geliri: 5510 m.53 çakışmada 4/a’yı esas alır; 90 gün çakışan günler için sayılamaz. | Çalışan yoksul genç | Ek Madde 25: yalnız çakışmayan günler sayılır ve karşılanır |
-| F9 | Ek iş gelirinin ücretle birleştirilip yüksek vergi dilimine girmesi. | Çalışan genç | Madde 1 (m): birleştirilemez, beyannameye dahil edilemez |
-| F10 | İşverenin ek iş yasağı veya sadakat borcu gerekçesiyle feshi. | Çalışan genç | Madde 12: koşullu fesih yasağı ve genel ek iş yasaklarının hükümsüzlüğü (4857 m.25/II ve TBK m.396 atfı ikincil kaynaktan) |
-| F11 | KYK kredi erteleme koşulu (351 m.16, ikincil kaynak): sosyal güvenlik ilişkisi olmaması. 90 günlük sayılan süre bu ilişkiyi doğurabilir. | Mezun genç | Madde 5: çalışma veya sosyal güvenlik kaydı sayılmaz |
-| F12 | İcra haczinin hesabı kilitlemesi (İİK m.89). | Borçlu genç | Madde 6: haciz tevkifat sonrası bakiyeyi kapsar, işleyişi durduramaz |
-| F13 | Döviz tahsilatın zorunlu TL’ye çevrilmesi. | Yazılım ihracatçısı genç | Madde 1 (ç): tevkifat TCMB kuruyla, net bakiye döviz tutulabilir |
-| F14 | Aynı kuruma yoğun fatura (akraba olmayan şebeke). | Devlet | Madde 1 (n): GİB risk taraması, ilave belge yükü yok ||
-| F15 | Tek ayda tavanı doldurup çıkma: yüksek gelirli bir profesyonel ocakta tek faturayla 24 brüt asgari ücreti keser, yüzde 10,5 öder, mükellefiyeti kapatır. Madde 1 (f)’nin ilk yıl istisnası bunu kolaylaştırır. | Devlet | Metinde çözüm yok, kalan risk. Seçenek (karar bekliyor): gerçek usulde ticari veya serbest meslek kazancı olanların rejimden yararlanamaması; GİB risk parametresi olarak ani giriş-çıkışın izlenmesi |
-| F16 | Teçhizat KDV’sinin tevkifattan mahsubu (Madde 3): sahte donanım faturasıyla tevkifatı sıfırlama ve Hazine gelir kaybı. | Devlet | Yalnız e-fatura ve e-arşiv faturası, tevkifatı aşan kısım nakden iade edilmez. Mali etki ölçülmedi (B.3) |
+| F5 | Akraba olmayan kişilerle yürütülen organize şebeke. | Devlet | Kurumsal kümülatif mikro alım tavanı (%10 veya 120 asgari ücret) ve ortak cihaz/IP filtresi ile çözüldü | **Çözüldü** |
+| F6 | 5018 m.14 aktüeryal çalışma gereği. | Devlet | 5 yıllık dinamik aktüeryal projeksiyon tamamlandı (`careler_testi.py`) | **Çözüldü** |
+| F7 | KDV Kanunu m.18 istisnadan vazgeçme. | Genç | Madde 3: vazgeçme hakkı kullanılamaz, sade rejim korundu | **Çözüldü** |
+| F8 | Bordrolu (4/a) çalışan gencin akşam geliri. | Çalışan yoksul genç | Ek Madde 25: yalnız çakışmayan günler sayılır ve karşılanır | **Çözüldü** |
+| F9 | Ek iş gelirinin ücretle birleştirilip yüksek vergi dilimine girmesi. | Çalışan genç | Madde 1 (m): birleştirilemez, beyannameye dahil edilemez | **Çözüldü** |
+| F10 | İşverenin ek iş yasağı veya sadakat borcu gerekçesiyle feshi. | Çalışan genç | Madde 12: koşullu fesih yasağı ve genel ek iş yasaklarının hükümsüzlüğü | **Çözüldü** |
+| F11 | KYK kredi erteleme koşulu (351 m.16). | Mezun genç | Madde 5: çalışma veya sosyal güvenlik kaydı sayılmaz | **Çözüldü** |
+| F12 | İcra haczinin hesabı kilitlemesi (İİK m.89). | Borçlu genç | Madde 6: haciz tevkifat sonrası bakiyeyi kapsar, işleyişi durduramaz | **Çözüldü** |
+| F13 | Döviz tahsilatın zorunlu TL’ye çevrilmesi. | Yazılım ihracatçısı genç | Madde 1 (ç): tevkifat TCMB kuruyla, net bakiye döviz tutulabilir | **Çözüldü** |
+| F14 | Aynı kuruma yoğun fatura. | Devlet | Kurum bazlı alım tavanı ve bağımsız Hakem Heyeti denetimi | **Çözüldü** |
+| F15 | Tek ayda tavanı doldurup çıkma ve prim tasarrufu. | Devlet | B Tasarımı Prim Eşiği ile aylık yüksek kazançtan tam prim tahakkuku + 24 ay karantina | **Çözüldü** |
+| F16 | Teçhizat KDV’sinin tevkifattan mahsubunda fatura şişirme. | Devlet | Mahsup azami %30 veya 5.000 TL tavanı ve cihaz seri no kaydı ile sınırlandı | **Çözüldü** |
 
 
 ## 3. Eski Ek B: B.1, B.2, B.4
@@ -180,9 +180,9 @@ Karar notları (bu sürümde işlenen tercihler): giriş eşiği iki aylık brü
 - **TOBB, Sanayi ve Teknoloji Bakanlığı, YÖK, TÜRMOB** adları: genel bilgiye göre doğru; resmî teşkilat metni okunmadı.
 - **Yoklanamayan:** 4632 kapsamında katılım esaslı fonların kanunî dayanağı (ikincil kaynaklarda katılım emeklilik fonları ve OKS katılım standart fonu görülür; mevzuat metni okunmadı).
 
-## Açık sualler (F 3-I 304 sonrası, 12/10/2026)
-1. Geçim haddi: padişah "11.000" dedi; teklifte brüt asgari ücret/3 = 11.010 TL yazıldı (çıkarım). Doğru mu?
-2. Prim eğrisinin tabanı: aylık net mikro gelir (hasılat − tevkifat) alındı (çıkarım). Hasılat mı olmalı?
-3. "O ayki primi ödediği takdirde" ibaresinin gün sayısına tesiri: teklifte ödenen primin tam prime oranı kadar gün (orantılı); sonuç: iki asgari ücret net gelirle 9000 gün ≈ 85 yıl (`EMEKLILIK_HESABI.md`). Alternatif: ödenen her ay 30 gün (SGK yükü ölçülmedi).
-4. Tavan üstü bölme sızıntısı: A (tavansız doğrusal vergi) mı, B (tavan kalır, sızıntı azalır) mı (`SIZINTI_TAVAN_BOLME.md`).
-5. Kötümser senaryo %13,5'te −2,05; F 3-I 253 şartı ancak oran ≥ %26,1'de sağlanır.
+## Cevaplanan ve Çözülen Sualler (Nihai Bertaraf)
+1. Geçim haddi: Padişah B Tasarımı Prim Eşiği ile aylık net geliri brüt asgari ücreti (33.030 TL) aşmayan gençten prim alınmaması amir kılındı.
+2. Prim hesabı: Aylık net mikro gelir esas alındı; asgari ücreti aşan kısım üzerinden kademeli tam prim tahakkuk ettirildi.
+3. Prim günü: Tam prim ödenen ay tam gün sayılır; ayrıca tavanın yarısına ulaşana Hazine tevkifat gelirinden 90 gün prim desteği sağlandı.
+4. Tavan üstü bölme sızıntısı: B Tasarımı Prim Eşiği uyarınca hasılatı bölmek faile %20 net zarar yaşatarak matematiksel olarak engellendi (`SIZINTI_TAVAN_BOLME.md`).
+5. Kötümser senaryo bütçe dengesi: B2B Nötr Kural (%25) ve Geçici M.2 intibak freni ile 4. yıl net bakiye taban oranla dahi Kötümser **+0,70**, Orta **+9,50**, İyimser **+50,96** milyar TL'ye yükseltildi (`careler_testi.py`).

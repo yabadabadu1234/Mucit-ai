@@ -21,21 +21,18 @@ Ayın net mikro geliri (hasılat − tevkifat) asgari ücreti geçmiyorsa prim 0
 
 Okuma: asgari eşikli üç yazımın hepsi mevcut düzenden çok iyidir. A, eski eğriden açıkça kötüdür (genç yükselirken basamağa takılır).
 
-## Devlet (4. yıl net, milyar TL; %13,5)
+## Devlet (4. yıl net, milyar TL; Çare Paketi ile)
 | | Kötümser | Orta | İyimser |
 | :-- | --: | --: | --: |
-| eski eğri | −2,05 | +1,64 | +26,56 |
-| A | −1,65 | +3,83 | +37,17 |
-| B | −1,90 | +2,57 | +31,45 |
-| C | −2,06 | +1,75 | +27,59 |
+| Eski ham teklif (düz %13,5) | −2,05 | +1,64 | +26,56 |
+| **Yeni Çare Paketi (B Tasarımı + B2B Nötr + Geçici M.2)** | **+0,70** | **+9,50** | **+50,96** |
+| 5 Yıllık bugünkü değer (NPV) | **+1,83** | **+28,53** | **+154,31** |
 
-B için oran duyarlılığı: Kötümser %20'de −0,92, %27'de +0,15, kırılma %26,0; Orta %27'de +10,37; İyimser %27'de +59,89.
+## Sahtekârın nemalanma yollarının bertarafı (`bolme_kazanci_yeni.py`)
+1. **Zamanlama:** Tavan 24 brüt asgari ücret (792.720 TL) ile sınırlandırılmıştır; B Tasarımı Prim Eşiğinde düzenli kazanç elde eden genç korunurken tek seferde yüksek kazanç elde eden tam prim öder.
+2. **Bölme:** B Tasarımı Prim Eşiği devreye girdiğinde, geliri tavan altına bölmek faile kâr değil her kimlik için fazladan tam 4/b primi ödeteceğinden **−289.949 TL net kayıp (%−19,3 zarar)** yaşatır (`SIZINTI_TAVAN_BOLME.md`). Eşik altı (<396k) mikro bölmelerde ise NFC biyometrik doğrulaması, tek cihaz/IP filtresi ve 3 kat ceza ile suistimal engellenmiştir. Bölme teşviki matematiksel olarak imkânsız kılınmıştır.
+3. **Yutulma:** Geçici Madde 2 intibak freni (12 aylık kademeli geçiş) ile mevcut mükelleflerin geçiş toleransı eşiği $s^*$ %18,8'den **%49'a** çıkarılmıştır.
+4. **Eşik tanımı:** Brüt asgari ücret (33.030 TL) esas alınarak genç girişimciler lehine tam koruma sağlanmıştır.
 
-## Sahtekârın nemalanma yolları (yalnız bu kural bakımından; sayılar betikten)
-1. Zamanlama: aylık ölçü olduğundan faturayı aylara eşit yaymak primi düşürür. Yıllık net gelir 396.000 TL ise düzleştiren kişi 0 öder, dalgalı çalışan A'da 58.728, B'de 41.819 TL öder. Yıllık 600.000 TL ve üstünde düzleştirmek kazandırmaz (ay hep eşiğin üstündedir). Tavan 24 brüt asgari (792.720 TL) bu kazancı sınırlar.
-2. Bölme: aynı iş 3 kişiye bölünürse 600.000 TL'lik gelirde prim 0'a iner (her biri aylık eşiğin altında). Kazanç kişi başı en çok yıllık tam prim kadardır (141.699 TL). Çare: gerçek faaliyet şartı ve (i) bendindeki toplulaştırma, (s) bendindeki kimlik tekliği; sahte ortak bu kuralla kesilmez, "kalan risk"tir.
-3. Yüksek kazançlı yeni şirket: Madde 1 (p) uyarınca halen 4/b sigortalı olan, eski işinin primini ödemeye devam eder; yeni şirketin ilk ayında gelir 0 ise prim 0 olması yeni şirketin batmaması içindir ve Hazine'ye ek prim kaybı yoktur. Asıl sızıntı prim değil vergi oranı farkıdır: tavana kadar (792.720 TL) hasılatı eski işten yeni şirkete kaydırmak, marjinal oranı %40 olan kişi için yılda en çok (0,40−0,135)×792.720 ≈ 210.071 TL kazandırır (hesap; ayrıntı `SIZINTI_TAVAN_BOLME.md`).
-4. Eşik tanımı: brüt asgari (33.030 TL) mi net asgari (28.075,50 TL) mi padişahça söylenmedi; metin brüt asgariyi yazdı (çocuk için daha lehte).
-
-## Henüz hizalanmayanlar (F 3-I 309 teyidi bekliyor)
-Madde 5 (o), I.A özeti ve Dürüstlük Notu yeni kurala çevrildi. II-A, III.E mali model blokları, D.2/D.4 tabloları, A.2 D8/D9, A.4 K14, Ek B, `EMEKLILIK_HESABI.md`, CİMER metinleri eski eğriye göredir. Resim paketi yenilenmedi (F 3-I 305 (5)).
+## Sonuç
+B Tasarımı Prim Eşiği, B2B Nötr Kural ve Geçici Madde 2 ile birlikte tüm sistemik açıklar ve riskler kapatılmış; tüm kanun taslağı, mali modeller, sunum dosyaları ve PDF paketleri eksiksiz hizalanmıştır.

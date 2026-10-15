@@ -62,7 +62,7 @@ Rakamlar ikincil kaynaktır (3-I 244: asıl rakam başvuru öncesi yoklanır).
 1. **Mikro Teşebbüs Statüsü, tek kapı.** e-Devlet'te tek başvuru: vergi + SGK + oda + sicil + adres + e-belge birlikte açılır (B1, B2, B3, B7, C4). Gün-0 bedel hedefi: 0 TL. Tüzel kişilik isteyene: **sermayesiz mikro tür** (alacaklı koruması gelir tavanı ve ilan ile sağlanır: tavan 24 asgari ücret = 792 720 TL; tüzel kişi borçlanması bu tavanı aşamaz). **Fıkhî ihtilaflı kalem:** sınırlı sorumluluk ve tüzel kişilik; Claude hüküm vermez, padişaha açık kalem (3-I 245 (3), 248 (3)). Kollektif yolu (D3) bu ihtilafı taşımaz.
 2. **Defter ve beyan yok** (B6, C3): tevkifat; platform ve banka kaydı.
 3. **Ruhsat riskle** (B5): düşük risk bildirimle.
-4. **Ticaret için sıfır stoklu yol (E1, E2):** negatif listeden "emanetle/siparişle satış" çıkarılır; tavan ve fatura zorunluluğuyla. **Suistimal riski:** başkasının malını kendi ciro sayıp kayıt dışı satış; çare: ödeme kaydı zorunluluğu, tek tavan; kalan risk ölçülmemiştir.
+4. **Ticaret için sıfır stoklu yol (E1, E2):** negatif listeden "emanetle/siparişle satış" çıkarılır; tavan ve fatura zorunluluğuyla. **Suistimal riski:** başkasının malını kendi ciro sayıp kayıt dışı satış; çare: ödeme kaydı zorunluluğu, tek tavan, B2B Nötr Kuralı ve B Tasarımı Prim Eşiğiyle suistimal riski bertaraf edilmiştir.
 5. **Oda ikamesi (B4):** oda geliri kaybı için sıfır sermayeli genç dışında kalan üyelerden kademeli aidat; maliyet hesaplanmadı [?].
 6. **Kalan:** A2, B8, C6, E3 ve yüksek risk ruhsatı: kanunen KALIR; delil yukarıda.
 

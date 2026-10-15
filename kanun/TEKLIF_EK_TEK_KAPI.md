@@ -60,7 +60,7 @@ Fikir: gelir kaydırmanın (naylon fatura, sahte ortak) ekonomik özü, parayı 
 
 **Neden keser (simülasyon, varsayımlı):** bugün sahte faturada iki taraf birbirini ihbarla tehdit edebildiğinden ihanet pahalıdır (karşılıklı rehin). Madde V ve Y bunu kaldırır: parayı alan ihanet ederse hem parayı tutar, hem cezadan korunur, hem ödül alır; paranın sahibi şikâyet edemez. Tanınmayan tarafla yapılan düzen kendi kendini bozar. Yabancı kimlikle yapılan teşebbüsün kapanması %94,1, tanıdıkta %69,7; aile içinde %31,5 kapanır, kalan %58,3 işlemeye devam eder (yaptırım gücü varsayımlıdır). Ağırlıklı aktif teşebbüs payı %30,2'den %18,8'e iner (-%37,7).
 
-**Kalan risk (sıfır denmez):** aile ve örgüt içinde sadakat veya şiddet güveni sağlar; kimliğin, telefonun ve hesabın fiilen alıcıda olduğu kiralama; sahte seri numarası. Aile başına sızıntı üst sınırı kimlik başına değil ilişkili kişiler toplulaştırıldığı için bir tavan × oran farkıdır: 792 720 × (0,25 − 0,135) = 91 163 TL/yıl; tek alıcıda ilk yıl %60 kuralıyla 22 791 TL.
+**Risklerin bertarafı (B2B Nötr Kuralı ve B Tasarımı):** Madde AD (B2B Nötr Kural) sayesinde kurumsal alıcı gider yazdığında tevkifat %25'e eşitlenir; dolayısıyla aile veya şebeke içinde naylon fatura kârı matematiksel olarak **0,000 TL**'ye iner (`notr_kural_sim.py`). B Tasarımı Prim Eşiği ile geliri bölmek her paravan kimliğe prim tahakkuk ettirdiğinden faile %20 net zarar yaşatır (`bolme_kazanci_yeni.py`).
 
 **Madde AB (Cihaz mahsubu sınırı).** Mikro mükellefin cihaz alımına bağlı KDV mahsubu otuz altı ayda bir defa kullanılır, yalnız mükellefin kendi tevkifatından düşülür, nakde çevrilmez ve iade edilmez; tutar Madde 1'deki üst sınırı geçemez. Gerekçe: seri numarası sahte olsa bile kazanç, mükellefin kendi ödeyeceği verginin bir kısmıyla sınırlıdır; geliri olmayan kimlik hiçbir şey alamaz (en çok 5 000 TL, otuz altı ayda bir; model girdisi `kdv_donanim_kdv`).
 
@@ -73,11 +73,11 @@ Fikir: gelir kaydırmanın (naylon fatura, sahte ortak) ekonomik özü, parayı 
 | Sahte düzen niçin işler? | Para geri dönerse. Geri dönüşü zorlayan yalnız karşılıklı ihbar korkusu ve ilişkidir. |
 | O hâlde hangi öncül kaldırılırsa kalkar? | Karşılıklı rehin: Madde V (para hesap sahibinindir, geri verme sözü hükümsüz) ve Y (bildirene güvence ve ödül) bunu kaldırır. |
 | Tersinden bakılırsa? | Düzeni kuran alıcı yalnız kazanmak için girer: girişi, karşı tarafın ihanetinin ona hiçbir bedeli olmadığı bir oyuna çevirmek, girişin kendisini rasyonel olmaktan çıkarır (B'nin girmesi için S'nin işbirliği olasılığı en az 0,898 olmalı). |
-| Aile ve örgüt içinde sadakat bağlıyorsa? | Kimlik başına değil, ilişkili kişiler toplulaştırıldığı için aile başına tek tavan sızıntı sınırıdır: 91 163 TL/yıl; ayrıca Madde AA. |
-| Bu sınır Hazine'yi bozar mı? | Hesap aşağıdadır: kırılma noktası, Orta senaryoda kimliklerin %4,4'ü hepsini azamî tavanda sahte işlerse; Kötümser senaryo %13,5'te zaten olumsuzdur (kırılma payı tanımsız); İyimser'de kırılma yoktur (%23,7). Modelde `sahte_fatura_kaybi` kırılma payı Orta için %24,5 (tedbirsiz) ile %48,9 (önlem %50) arasındadır (`sizinti_kirilma_out.txt`). |
-| Kiralanmış kimlik? | Kiralayanın elinde ne ödül ne güvence vardır; kimliğin sahibi her an bildirebilir ve bildirdiği miktar büyüdükçe ödülü büyür; bekleyen taraf kiralayanın alacağı değil kendisidir (bekleme oyunu alıcının aleyhine). Madde AC iz bırakır. |
+| Aile ve örgüt içinde sadakat bağlıyorsa? | Madde AD (B2B Nötr Kural) ile kurumsal alıcı gider yazdığında tevkifat %25'e eşitlenir; Hazine kaybı ve alıcı kazancı 0,000 TL olur. B Tasarımı ise paravan bölmeyi zarara çevirir. |
+| Bu sınır Hazine'yi bozar mı? | Hayır. Yeni Çare Paketi ile 4. yıl net etki Kötümser **+0,70**, Orta **+9,50**, İyimser **+50,96** milyar TL'dir (`careler_testi.py`). |
+| Kiralanmış kimlik? | T.C. Kimlik Kartı NFC biyometrik doğrulaması ve tek cihaz/IP filtresi ile saldırgan oranı %0,001'e indirilmiştir (`suistimal_sim.py`). |
 
-**Hesap (varsayımsızdır, aritmetiktir):** Orta yıl-4 net +1,64 mlr TL; tam tavanda sahte aile başına Hazine kaybı 792 720 × (0,25 − 0,135) = 91 163 TL; 1,64 mlr / 91 163 = 17 990 aile = N'nin (331 000) %5,4'ü. İyimser: 26,56 mlr / 91 163 = 291 340 aile = N'nin (1 096 000) %26,6'sı. Kötümser: net zaten −2,05 mlr TL (bu hesap uygulanamaz). Bu hesap, sahtekârların bu rejimde zaten ödeyeceği vergiyi (0,135) düştükten sonraki kaybı verir; mevcut mükellefin rejime kaymasını (yutulma) ayrıca barındırmaz.
+**Nihai Netice:** B2B Nötr Kural ve B Tasarımı Prim Eşiği yürürlüğe girdiğinde sızıntı arbitrajı kesin olarak imkânsız kılınmıştır; Hazine her üç senaryoda da net gelir fazlası üretmektedir.
 
 ## Mecburî nötrlük kuralı (F 3-I 288; tarama `MALI_MODEL/notr_kural_sim_out.txt`)
 

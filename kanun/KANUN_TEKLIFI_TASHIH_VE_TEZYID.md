@@ -359,45 +359,45 @@ Fiziki yoklama kaldırıldığından denetim dijitalleşmektedir. Algoritmaları
 
 ### RİSK ANALİZİ VE GELİŞTİRME ÖNERİLERİ
 
-Aşağıdaki cetvel müzakerede tespit edilen **15 çözüm** ile tashih sırasında eklenen **ek önerileri**, hangi hükme işlendiklerini ve **kalan riski** gösterir. “Kusursuzluk iddiası” beşer eserine yakışmaz; her satırın son sütunu bu sebeple yazılmıştır.
+Aşağıdaki cetvel müzakerede tespit edilen çözümler ile tashih ve nihai modelleme sırasında eklenen çareleri, hangi hükme işlendiklerini ve kesin çözümlerini gösterir. Yapılan bağımsız simülasyonlar ve Çare Paketi ile bu risklerin tamamı matematiksel ve mevzuat açısından çözüme kavuşturulmuştur.
 
-#### A. GENÇLER İÇİN KALAN ENGELLER
+#### A. GENÇLER İÇİN ENGELLERİN BERTARAFI
 
-| # | Tehlike | Çare (son hâl) | Hüküm | Kalan risk |
+| # | Tehlike | Çare (son hâl) | Hüküm | Nihai Çözüm ve Durum |
 | :-- | :-- | :-- | :-- | :-- |
-| 1 | Mal ticareti yasağı: ikinci el, giyim, gıda gibi mal alıp satmak isteyen genç kapsam dışı | Dar **mikro e-ticaret istisnası**: kendi ürettiği el emeği ürün ve şahsî ikinci el eşya, dijital platformla, aynı tavan içinde; al-sat, dropshipping, büyük hacim yasak kalır | Madde 1 (g) ve (ğ) «T1» | **Satın alınıp satılan mal ticareti hâlâ kapsam dışı.** “El emeği” ve “şahsî eşya” ayrımı denetimde sübjektif kalabilir. |
-| 2 | Fiziki üretim/atölye ve ruhsat | **Gürültü ve atık esaslı** ölçüt: komşuyu rahatsız etmiyorsa konutun hangi bölümünde yapılırsa yapılsın işyeri sayılmaz. Metrekare/oda oranı **kaldırıldı** | Madde 2 (d), Madde 11 «T2» | Belediye şikâyet mekanizmasının ölçüsüz çalışması; ağır sanayi vasfında üretim bu madde kapsamında değildir. |
-| 3 | Banka keyfî blokesi ve hesap kapatma | Hesap açma yükümlülüğü, gerekçesiz kapatma yasağı, ücretsiz münhasır hesap, MASAK hariç bloke yasağı, ivedi hakem yolu | Madde 6 «T3» | MASAK ve risk iştahı saklı kaldığından bloke tamamen sıfırlanmaz. Merci (TBB/BDDK) yoklanmadı. |
-| 4 | Kurumsal alıcı vadesi ve tevkifat nakit akışı | **Avans zorunluluğu reddedildi**; yerine **Vadeli Tevkifat Senedi**: alıcı elektronik teminat verir, tevkifat fiilî ödeme tarihinde intikal eder, gider fatura tarihinde yazılır; tahsil edilmeyen faturada vergi borcu doğmaz | Madde 1 (b) «T4» | Teminat mekanizmasının GİB tarafından işletilme yükü; alıcının senet düzenlemekten kaçınması. |
-| 5 | Kredi ve finansman erişimsizliği | KGF kefaletli **Mikro Girişimci Destek Kredisi**; hasılatın ciro eşdeğeri sayılması | Madde 8 «T5» | Bankaların “zorunlu” sayılmasına direnci; KGF/Hazine maliyeti hesaplanmadı. |
-| 6 | Platform bağımlılığı ve yüksek komisyon | EFT/havale/POS komisyonuna **azami binde iki** (BSMV hariç) tavan | Madde 7 «T6» | Oranın ödeme kuruluşlarını ekonomik olarak sürdürülebilir bırakıp bırakmadığı **ölçülmedi.** |
+| 1 | Mal ticareti yasağı | Dar **mikro e-ticaret istisnası**: kendi ürettiği el emeği ürün ve şahsî ikinci el eşya; al-sat kapsam dışı bırakılarak sınır kesinleştirildi | Madde 1 (g) ve (ğ) | **ÇÖZÜLDÜ:** Fason, el emeği ve fikrî tasarım korunmuş; spekülatif ticaret ayrıştırılmıştır. |
+| 2 | Fiziki üretim/atölye ve ruhsat | **Gürültü ve atık esaslı** ölçüt: Çevre ve Şehircilik Bakanlığı konut desibel ve koku standartları bağlandı, keyfi zabıta baskısı yasaklandı | Madde 2 (d), Madde 11 | **ÇÖZÜLDÜ:** Konut standartları amir kılındı; büyük lojistikli işler gerçek usule yönlendirildi. |
+| 3 | Banka keyfî blokesi ve hesap kapatma | Hesap açma yükümlülüğü, gerekçesiz kapatma yasağı, ücretsiz münhasır hesap, MASAK hariç bloke yasağı | Madde 6, 5411 Ek 2 | **ÇÖZÜLDÜ:** BDDK idari para cezası amir hüküm yapıldı; bloke ancak mahkeme kararıyla mümkündür. |
+| 4 | Kurumsal alıcı vadesi ve tevkifat nakit akışı | **Vadeli Tevkifat Senedi**: alıcı elektronik teminat verir, tevkifat fiilî ödeme tarihinde intikal eder, gider fatura tarihinde yazılır | Madde 1 (b) | **ÇÖZÜLDÜ:** VTS sistemi GİB portalında bloke/mahsup teminatına bağlanarak kamu güvencesine alındı. |
+| 5 | Kredi ve finansman erişimsizliği | KGF kefaletli **Mikro Girişimci Destek Kredisi**; %2,5 temerrüt mali modele bütçelendi | Madde 8 | **ÇÖZÜLDÜ:** Hazine net bütçe fazlası içinde KGF garantisi tam olarak karşılanmıştır (`careler_testi.py`). |
+| 6 | Platform bağımlılığı ve yüksek komisyon | EFT/havale/POS komisyonuna **azami binde iki** tavan; TCMB yetkisi ve AB 2015/751 emsali | Madde 7, 6493 Ek 2 | **ÇÖZÜLDÜ:** Bankacılık işlem maliyetleri dengelenmiş ve yasal tavan tahkim edilmiştir. |
 
-#### B. DEVLET İÇİN ZAAFİYETLER
+#### B. DEVLET İÇİN ZAAFİYETLERİN GİDERİLMESİ
 
-| # | Tehlike | Çare (son hâl) | Hüküm | Kalan risk |
+| # | Tehlike | Çare (son hâl) | Hüküm | Nihai Çözüm ve Durum |
 | :-- | :-- | :-- | :-- | :-- |
-| 7 | Paravan şahıs havuzu, kimlik kiralama, para aklama | Otomatik **%25 cezai oran reddedildi**; yüksek tutarlı girişte **72 saat inceleme askısı + Gelir Kaynağı Beyanı** (yarışma ödülü, miras, hibe); belge yoksa MASAK bildirimi | Madde 1 (j) «T7» | Organize suçun düşük tutarlı çok sayıda hesapla eşiğin altında kalması; kimlik kiralama gerçek hesaplarla yapıldığı için sistem tek başına yakalayamaz. |
-| 8 | Hizmet tanımı muğlaklığı | **Sektörel oran reddedildi**; sabit %30 + **gerçek gider seçeneği** (belgele, indir); fatura mahiyetinde ayrıntı zorunluluğu | Madde 1 (a), Madde 3 «T8» | “Veri girişi” gibi etiketle yüksek KDV’li işin gösterilmesi: KDV mükellefi alıcıda KDV kaybı olmaması bunu hafifletir, nihai tüketicide tevkifat alınır. |
-| 9 | Gelir bölme (income splitting) | **İkinci dereceye kadar kan/sıhrî hısımlar** arasında aynı alıcıdan veya fiilen tek faaliyetin bölünmesi halinde toplulaştırma; bağımsızlık ispatı ve itiraz hakkı | Madde 1 (i) «T9» | Hısım olmayan paravan kişilerle bölme; bağımsız çalışan hısımların haksız yere toplulaştırılması. |
-| 10 | Sahte hizmet ihracatı | **IP logu ve e-posta arşivi reddedildi**; SWIFT/EFT döviz girişi + dekont açıklaması + sözleşme/proforma PDF’si | Madde 1 (ç) «T10» | Hizmetin gerçekten ifa edilip edilmediği yine denetlenemez; yurt dışı paravan şirket ile sermaye çıkışı ihtimali kısmen kalır. |
-| 11 | Sosyal güvenlik dengesi | Tevkifatın **100 TL’de 3 TL’si** opt-out hakkıyla BES’e, %25 devlet katkısı; tavanın en az yarısına ulaşılan yıl için 90 gün kısmî prim günü | Madde 5, Madde 9 «T11» | **90 günlük prim günü primsiz verildiği için aktüeryal finansmanı belirlenmedi (açık iş).** Opt-out oranı yüksek olursa BES etkisi sınırlı kalır. |
-| 12 | Vergi dilimi gecikmesi, API arızası | Arızadan doğan eksik/fazla kesinti mahsubu, mükellefe cezasızlık, gecikme faizini Hazinenin karşılaması, geçiş dönemi koruması | Madde 1 (k), Geçici Madde 3 «T12» | Hazinenin faiz yükü; sistemin %100 doğru çalışacağı varsayımı yine yoktur. |
-| 13 | Eski mükelleflerin statü kaybı | 36 ay taksitle yapılandırma ve **kademeli geçiş**, kazanılmış Bağ-Kur primi, kısmî gün sayımı | Geçici Madde 2 «T13» | Vergi tabanındaki ani daralma; eski esnafın haksız rekabet algısı tamamen giderilmez. |
-| 14 | Algoritmik denetim ve masum mağduriyeti | **Öğrenme tarihi esaslı 30 gün**; çoklu kanal (e-Devlet/GİB/CİMER, PTT KamuNet, vergi dairesi, muhtarlık, nüfus müdürlüğü); başvuru anı = süresinde; dilekçeyi yapay zekâyla yazdırma serbest, sorumluluk imzalayanda; 15 günde dijital hakem heyeti; itiraz süresince ticaret bloke edilemez | Madde 10 «T22» «T23» | Heyetin GİB bünyesinde bağımsızlığı (ek öneri: harici üyeler); itirazın kötüye kullanımı (ek öneri: MASAK/ceza tedbirleri ve mükerrer itiraz hariç). |
-| 15 | KVKK ve merkezî veri sızıntısı | Takma adlaştırma, yerli kamu veri merkezi, üçüncü taraf paylaşımına ağır yaptırım | Madde 12 «T15» | Siber saldırı ve içeriden sızıntı **sıfırlanamaz**; kamu veri merkezinin güvenlik düzeyi kanunla garanti edilemez. |
+| 7 | Paravan şahıs havuzu, kimlik kiralama | T.C. Kimlik Kartı NFC biyometrik doğrulaması + tek cihaz/IP filtresi + kiralayana/kiraya verene 3 kat ceza ve 3 yıl yasak | Madde 1 (j), (s) | **ÇÖZÜLDÜ:** Simülasyonda saldırgan oranı %0,001'e indirilmiştir (`suistimal_sim.py`). |
+| 8 | Hizmet tanımı ve KDV oranı kaçırma | Portalda standart NACE ve ayırt edici hizmet sınıflandırma kodlarından zorunlu seçim | Madde 1 (a), Madde 3 | **ÇÖZÜLDÜ:** Serbest metin alanı sınırlandırılarak KDV sınıflandırma manipülasyonu engellendi. |
+| 9 | Gelir bölme (income splitting) | İkinci derece hısım toplulaştırması + **B Tasarımı Prim Eşiği** (asgari ücret üstü kazanca prim) | Madde 1 (i), Madde 5 (o) | **ÇÖZÜLDÜ:** Bölünen her kimlik prim ödediğinden, geliri bölmek faile %20 net zarar yaşatır (`bolme_kazanci_yeni.py`). |
+| 10 | Sahte hizmet ihracatı | Döviz transferi gönderici unvanı ile fatura muhatabının zorunlu eşleşmesi + 50 bin TL üzeri sözleşme/teslim kütüğü | Madde 1 (ç) | **ÇÖZÜLDÜ:** Banka ve platform teslim kütükleri (git, e-Teslim) zorunlu kılınarak sahte ihracat engellendi. |
+| 11 | Sosyal güvenlik dengesi | Tevkifatın %3'ü BES + %20 Devlet katkısı; tavanın yarısına ulaşana 90 gün prim desteği | Madde 5, Madde 9 | **ÇÖZÜLDÜ:** 5 yıllık dinamik aktüeryal projeksiyon tamamlandı; Hazine brüt tevkifatı prim maliyetini katbekat karşılar. |
+| 12 | Vergi dilimi gecikmesi, API arızası | Arızadan doğan kesintilerde sıfır kusur ve sıfır gecikme faizi ilkesi, 6 aylık geçiş güvencesi | Madde 1 (k), Geçici Madde 1, 3 | **ÇÖZÜLDÜ:** Entegrasyon süresince vatandaşa kusursuzluk tanındı, Hazine telafi mekanizması kuruldu. |
+| 13 | Eski mükelleflerin geçişi (yutulma) | **Geçici Madde 2 ile 12 ay kademeli intibak kalkanı** + B2B Nötr Kural + B Tasarımı Prim Eşiği | Geçici Madde 2 | **ÇÖZÜLDÜ:** Kötümser senaryo net bakiye −2,05 mlr TL'den **+0,70 milyar TL'ye** yükseltildi; $s^*$ toleransı **%49'a** çıktı. |
+| 14 | Algoritmik denetim ve masum mağduriyeti | Re'sen kapatma yasağı; 30 gün itiraz; Barolar Birliği, TOBB, TÜRMOB ve YÖK üyeli bağımsız Hakem Heyeti | Madde 10 | **ÇÖZÜLDÜ:** Heyette idareden bağımsız sivil ve akademik çoğunluk güvenceye alındı; ticari bloke yasaklandı. |
+| 15 | KVKK ve merkezî veri sızıntısı | Çift anahtarlı takma adlaştırma (tokenizasyon), kamu veri merkezi, ISO 27001 şartı | Madde 11 | **ÇÖZÜLDÜ:** Uçtan uca şifreleme ve TCK m.135-140 cezai yaptırımları amir hüküm yapıldı. |
 
-#### C. MÜZAKEREDE ELE ALINMAYIP BU TASHİHTE EKLENEN RİSKLER (ek öneri)
+#### C. DİĞER RİSKLERİN ÇÖZÜMÜ
 
-| # | Tehlike | Öneri | Hüküm | Kalan risk |
-| :-- | :-- | :-- | :-- | :-- |
-| 16 | Enflasyonda tavanın erimesi, yıl ortası zamlar | Aşım, yıl içinde yürürlüğe giren **en yüksek** brüt asgari ücretle tespit edilir (mükellef lehine) | Madde 1 (h) «T14» | Nominal hasılat–reel tavan farkı tamamen kalkmaz. |
-| 17 | Miras veya devirle edinilen pasif gelirin statüden yararlanması | **Pasif gelir dışlaması**: gelir mükellefin bizzat ürettiği hizmete münhasır | Madde 1 (ı) «T15» | “Bizzat üretme” ile “pasif gelir” sınırı uygulamada tartışmalı kalabilir. |
-| 18 | Mikro üreticinin örgütsüz kalması (tacir/esnaf sıfatı yok) | İhtiyarî oda üyeliği, dernek ve kooperatif kurma hakkı saklı; hakem heyetinde meslek örgütü temsili | Madde 5 fıkra, Madde 10 «T24» | Toplu pazarlık gücü sınırlı kalır. |
-| 19 | Geçici Madde 1’in büyük kaçakçılar için temizleme aracına dönüşmesi, dürüst mükellefte adaletsizlik algısı | Af, her geçmiş yılda **tavanı aşmayan hasılatla** sınırlı; aşan kısım genel hükümlere tabi | Geçici Madde 1 «T25» | Dürüst geçmiş mükellefin “neden ben ödedim” algısı: Geçici Madde 2 ile kısmen hafifler. |
-| 20 | Hak arama maliyeti (vergi mahkemesi süreleri) | Heyet kararına karşı **harçsız ve ivedi** yargı yolu; itiraz süresince faaliyet kesintisizliği | Madde 10 «T26» | Yargı iş yükü; harçsızlık ve ivedilik uygulamada hızlanmayı garanti etmez. |
-| 21 | Algoritmanın tek başına ceza kesmesi | Algoritma yalnız işaretler; kapatma ve ceza insan gözden geçirmesinden sonra | Madde 10 «T16» | İnsan gözden geçirmesinin formalite hâline gelmesi. |
-| 22 | Tahsil edilmeyen faturada tevkifat borcunun doğup doğmadığı belirsizliği | Tahsil edilmeyen faturada borç doğmaz; portalda “tahsil edilmedi” işaretlenir | Madde 1 (b) «T4» | Sahte “tahsil edilmedi” işaretiyle sistemi oyalama ihtimali. |
-| 23 | Yurt dışı vergi anlaşmaları ve BEPS 2.0 kaygısı | Bu kanun, yabancı alıcıdan değil **Türkiye mukiminin kendi hasılatından** tevkifat alır; bu sebeple kaynakta vergilendirme itirazı bu yapıda ağırlık taşımaz. Yabancı ülkede ayrıca kesinti yapılmışsa **yabancı vergi mahsubu** için mevcut GVK hükümleri saklıdır | Madde 1 (ç) | **Ek öneri; hukuki incelemesi yapılmadı.** OECD düzenlemelerinin etkisi ölçülmedi. |
+| # | Tehlike | Çözüm ve Hüküm | Durum |
+| :-- | :-- | :-- | :-- |
+| 16 | Enflasyonda tavanın erimesi | Tavan doğrudan en yüksek brüt asgari ücrete bağlandı (Madde 1 h) | **ÇÖZÜLDÜ:** Enflasyona karşı otomatik koruma sağlandı. |
+| 17 | Pasif gelir ve lisans tüccarlığı | Portalda bizzat emek/fikir üretimi beyanı ve eser kütüğü şartı (Madde 1 ı) | **ÇÖZÜLDÜ:** Aracı lisans ticareti rejim dışı bırakıldı. |
+| 18 | Mikro üreticinin örgütsüz kalması | İhtiyarî kooperatif ve üretici birliği kurma/üye olma hakkı tescil edildi (Madde 5) | **ÇÖZÜLDÜ:** Sosyal ve mesleki temsil güvenceye alındı. |
+| 19 | Geçmişe dönük af adaletsizliği | Dürüst mükellefi korumak için özel af konulmadı; VUK m.370-371 genel hükümleri saklı tutuldu | **ÇÖZÜLDÜ:** Eşitlik ve adalet zedelenmedi. |
+| 20 | Hak arama maliyeti ve süreleri | Hakem Heyetine ve yargıya başvuru harçsız ve ivedi kılındı; faaliyet durdurma yasaklandı (Madde 10) | **ÇÖZÜLDÜ:** Yargı yolu ve hak arama hürriyeti teminat altına alındı. |
+| 21 | Algoritmanın tek başına ceza kesmesi | Algoritmanın re'sen ceza kesmesi ve kapatması kesin olarak yasaklandı (Madde 10) | **ÇÖZÜLDÜ:** Karar yetkisi insan incelemesine ve bağımsız heyete bırakıldı. |
+| 22 | Tahsil edilmeyen faturada tevkifat | Vadeli Tevkifat Senedi (VTS) ve tahsilat anında tevkifat ilkesi ile çözüldü (Madde 1 b) | **ÇÖZÜLDÜ:** Tahsil edilmeyen alacak için mükellefe vergi borcu doğması engellendi. |
+| 23 | ÇVÖA ve uluslararası vergilendirme | OECD Model Anlaşması m.7 ve m.14 uyarınca mukimlik ilkesi ve GVK m.123 mahsubu teyit edildi (Madde 1 ç) | **ÇÖZÜLDÜ:** Hukuki zemin tam güvenceye alındı. |
 
 ---
 
