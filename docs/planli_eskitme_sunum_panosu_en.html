@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formal Legal Model of Planned Obsolescence - Axiomatic Presentation Board</title>
+<style>
+  :root {
+    --bg-dark: #07090e;
+    --card-bg: rgba(13, 17, 25, 0.92);
+    --border-color: #1f293d;
+    --accent-gold: #e5b95c;
+    --accent-cyan: #38bdf8;
+    --accent-emerald: #34d399;
+    --accent-rose: #f43f5e;
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  
+  body {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    line-height: 1.5;
+    background-image: 
+      radial-gradient(circle at 15% 15%, rgba(56, 189, 248, 0.05) 0%, transparent 40%),
+      radial-gradient(circle at 85% 85%, rgba(229, 185, 92, 0.05) 0%, transparent 40%),
+      linear-gradient(to right, rgba(255, 255, 255, 0.01) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+    padding: 30px;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 35px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .header-tag {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--accent-gold);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    padding: 4px 12px;
+    background: rgba(229, 185, 92, 0.1);
+    border: 1px solid rgba(229, 185, 92, 0.25);
+    border-radius: 4px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .nav-bar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+  }
+
+  .nav-btn {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    padding: 8px 16px;
+    background: #111827;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+  }
+
+  .nav-btn:hover {
+    color: #ffffff;
+    border-color: var(--accent-cyan);
+    background: #1e293b;
+  }
+
+  .slide-container {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  .slide-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 20px 40px -15px rgba(0,0,0,0.7);
+    backdrop-filter: blur(12px);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .slide-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--accent-gold), var(--accent-cyan));
+  }
+
+  .slide-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    padding-bottom: 15px;
+  }
+
+  .slide-title-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .slide-tag {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--accent-cyan);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  .slide-title {
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  .slide-number {
+    font-family: var(--font-mono);
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: rgba(255,255,255,0.08);
+    line-height: 1;
+  }
+
+  .slide-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    gap: 25px;
+  }
+
+  @media (max-width: 1100px) {
+    .slide-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .formulas-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .formula-box {
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid rgba(56, 189, 248, 0.15);
+    border-radius: 8px;
+    padding: 16px;
+    transition: transform 0.15s ease, border-color 0.15s ease;
+  }
+
+  .formula-box:hover {
+    border-color: rgba(56, 189, 248, 0.4);
+    transform: translateY(-2px);
+  }
+
+  .formula-label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .formula-label::before {
+    content: '▶';
+    font-size: 0.65rem;
+    color: var(--accent-gold);
+  }
+
+  .formula-content {
+    font-family: var(--font-mono);
+    font-size: 0.88rem;
+    color: #e2e8f0;
+    white-space: pre-wrap;
+    background: rgba(0, 0, 0, 0.35);
+    padding: 10px 14px;
+    border-radius: 6px;
+    border-left: 2px solid var(--accent-cyan);
+  }
+
+  .diagram-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .diagram-box {
+    background: #090d16;
+    border: 1px solid rgba(229, 185, 92, 0.2);
+    border-radius: 8px;
+    padding: 18px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .diagram-title {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(229, 185, 92, 0.15);
+    padding-bottom: 6px;
+  }
+
+  .diagram-ascii {
+    font-family: var(--font-mono);
+    font-size: 0.80rem;
+    line-height: 1.35;
+    color: #38bdf8;
+    white-space: pre;
+    overflow-x: auto;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 14px;
+    border-radius: 6px;
+    flex-grow: 1;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">ABSTRACT MODEL &amp; FORMAL AXIOMS</div>
+  <h1>LEGAL MODEL OF PLANNED OBSOLESCENCE: PRESENTATION BOARD</h1>
+  <p class="subtitle">Pure algebraic and juristic architecture grounded upon Sâni, Bâi, Mâlik, Semen, AsliKapasite, KasıtlıKısıt, TeknikZaruret, EsaretKatsayısı, and Hukukullâh.</p>
+</header>
+
+<div class="nav-bar">
+  <a class="nav-btn" href="#slide-00">00: Cover &amp; Index</a>
+  <a class="nav-btn" href="#slide-01">01: Variables &amp; Thresholds</a>
+  <a class="nav-btn" href="#slide-02">02: Model 1: Factory Phase</a>
+  <a class="nav-btn" href="#slide-03">03: Model 2: Post-Sale Phase</a>
+  <a class="nav-btn" href="#slide-04">04: Model 3: Repair Foreclosure</a>
+  <a class="nav-btn" href="#slide-05">05: Model 4: Lemons &amp; Commons</a>
+  <a class="nav-btn" href="#slide-06">06: First Sale &amp; IP Limits</a>
+  <a class="nav-btn" href="#slide-07">07: Operative Rulings &amp; Matrix</a>
+</div>
+
+<main class="slide-container">
+
+  <article class="slide-card" id="slide-00">
+    <div class="slide-header">
+      <div class="slide-title-wrap">
+        <span class="slide-tag">ABSTRACT MODEL &amp; GENERAL OVERVIEW</span>
+        <h2 class="slide-title">LEGAL MODEL OF PLANNED OBSOLESCENCE: AXIOMATIC &amp; JURISTIC BOARD</h2>
+      </div>
+      <div class="slide-number">00</div>
+    </div>
+    <div class="slide-grid">
+      <div class="formulas-column">
+        
+        <div class="formula-box">
+          <div class="formula-label">SCOPE AND METHODOLOGICAL GROUNDWORK</div>
+          <div class="formula-content">Tenkîh-i Menât Method: Abstracted from specific brands and physical substrates; defined purely through economic architecture, delictual liability, and objective normative variables.</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">GOVERNING ACTORS &amp; PROPRIETARY REGIMES</div>
+          <div class="formula-content">Sâni (Manufacturer / Platform Architect) | Bâi (Vendor / Distributor) | Mâlik (Purchaser paying Semen / Milk Tamm) | Hukukullâh (Planetary Carrying Capacity &amp; Public Commons Order)</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">ADJUDICATION AND REMEDY DOCTRINE</div>
+          <div class="formula-content">Bey' (Sale): Absolute conveyance of ownership (Milk Tamm). Remote interference and obsolescence = Void / Usurpation / Delictual Destruction.
+İcâre (Lease / Service): If ongoing governance is retained, operational risk and lifecycle costs fall exclusively upon Sâni.</div>
+        </div>
+        
+      </div>
+      <div class="diagram-column">
+        <div class="diagram-box">
+          <div class="diagram-title">PRESENTATION PANELS &amp; OPERATIVE FLOW INDEX</div>
+          <pre class="diagram-ascii">======================================================================
+  PLANNED OBSOLESCENCE &amp; PLATFORM REGIMES: ARCHITECTURAL FLOW
+======================================================================
+
+01: AL-MANÂT AL-MUJARRAD: FORMAL VARIABLES &amp; JURISTIC THRESHOLDS
+    └─ Proportionality Filter, Lock-in Index, Mecelle Articles 22 &amp; 26
+
+02: MODEL 1: FACTORY PHASE (PRE-CONVEYANCE LATENT DEFECT)
+    └─ Structural Curtailment, Unconscionable Disparity, Constructive Loss
+
+03: MODEL 2: POST-SALE PHASE (DELICTUAL TRESPASS ON CHATTEL)
+    └─ Negative Gradient, Direct Tortious Destruction, Breach of Trust
+
+04: MODEL 3: MAINTENANCE FORECLOSURE (LOGICAL RESTRAINTS)
+    └─ Artificial Hoarding, Void Restraints, Distress Extraction
+
+05: MODEL 4: SECTOR COLLAPSE &amp; THE COMMONS (LEMONS DYNAMIC)
+    └─ Adverse Selection, Monopolistic Capture, Thermodynamic Depravation
+
+06: INTELLECTUAL PROPERTY BOUNDARY (FIRST SALE &amp; EXHAUSTION)
+    └─ Dual Proprietary Planes: Universal IP vs. Embodied Chattel Title
+
+07: SYNOPTIC MATRIX &amp; DEFINITIVE JURISTIC RULINGS
+    └─ 6 Operative Grounds, 4 Systemic Harms, Maqâsid &amp; Final Norms
+======================================================================</pre>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <article class="slide-card" id="slide-01">
+    <div class="slide-header">
+      <div class="slide-title-wrap">
+        <span class="slide-tag">AXIOMATIC FOUNDATION &amp; VARIABLES</span>
+        <h2 class="slide-title">AL-MANÂT AL-MUJARRAD: FORMAL VARIABLES AND JURISTIC THRESHOLDS</h2>
+      </div>
+      <div class="slide-number">01</div>
+    </div>
+    <div class="slide-grid">
+      <div class="formulas-column">
+        
+        <div class="formula-box">
+          <div class="formula-label">PARTIES AND JURISDICTIONAL STANDING</div>
+          <div class="formula-content">Sâni: Asymmetric Design &amp; Architectural Power | Bâi: Possession &amp; Contractual Conveyance (t0) | Mâlik: Purchase Price Semen &amp; Absolute Title (Milk Tamm) | Hukukullâh: Commons Carrying Capacity (C)</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">FUNDAMENTAL STRUCTURAL PARAMETERS</div>
+          <div class="formula-content">Metâ: Time-Resistant Durable Economic Asset | Semen: Commutative Value | AsliKapasite: Inherent Durability Benchmark (E) | KasıtlıKısıt: Premature Failure Ceiling (L &lt; E)</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">PROPORTIONALITY FILTER (MECELLE ARTICLE 22)</div>
+          <div class="formula-content">Proportion = TechnicalGainAchieved / OperationalCapacityDestroyed
+If Proportion -&gt; 0, then TeknikZaruret = Void ab initio (Abuse of Rights / Sû-i İsti&#x27;mâl-i Hak)</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">ECOSYSTEM LOCK-IN &amp; EXTRACTION INDEX</div>
+          <div class="formula-content">EsaretKatsayısı ∈ [0, 1]
+As EsaretKatsayısı -&gt; 1, d(Semen)/d(KasıtlıKısıt) -&gt; 0 (Price discipline collapses, monopolistic capture begins)</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">PUBLIC &amp; ECOLOGICAL COMMONS BOUNDARY (MECELLE ARTICLE 26)</div>
+          <div class="formula-content">Sum[AsliKapasite - KasıtlıKısıt] &gt; MüştereklerEşiği ==&gt; Contractual Exculpatory Waivers = VOID
+Mâlik Title Preserved (Milk Tamm); Compensatory Liability falls strictly on Sâni (Ta&#x27;zîr &amp; Hisbah)</div>
+        </div>
+        
+      </div>
+      <div class="diagram-column">
+        <div class="diagram-box">
+          <div class="diagram-title">BLACKBOARD SCHEMA &amp; LOGICAL FLOW DIAGRAM</div>
+          <pre class="diagram-ascii">[ JURISDICTIONAL PLANE / HUKUKULLÂH ]
+    Commons Threshold: MüştereklerEşiği (Mecelle Article 26)
+    Sum(AsliKapasite - KasıtlıKısıt) &gt; MüştereklerEşiği  ==&gt;  Waivers VOID / Mandatory Hisbah
+                                │
+                                ▼
+         [ SÂNI&#x27; / MANUFACTURER ] ───────── Asymmetric Knowledge &amp; Code Power
+                ( Sâni )
+                  │
+ ┌────────────────┴────────────────┐
+ │ PHASE 1: FACTORY ARCHITECTURE   │ PHASE 2: POST-SALE INTERVENTION
+ │ A1: AsliKapasite (Full Inherent)│ Latent Custodial Channel (Amânah)
+ │ A2: KasıtlıKısıt (Limit &lt; Asli) │ Remote Throttling / Lockout
+ └────────────────┬────────────────┘
+                  │
+                  ▼  Conveyance: t0
+         [ BÂİ&#x27; / VENDOR ] ───────────── Consideration = Semen(AsliKapasite) Collected
+                ( Bâi )                  (Upstream Taghrîr &amp; Gabn-i Fâhiş)
+                  │
+                  ▼  Milk Tamm (Absolute Ownership Conveyance)
+         [ MÂLİK / PURCHASER ]
+                ( Mâlik )
+                  │
+   ┌──────────────┴───────────────────────────────────────────────────────┐
+   │                                                                      │
+   ▼                                                                      ▼
+[ MICRO CONTRACTUAL DEFECT PHASE ]                         [ DIRECT DELICTUAL TRESPASS PHASE ]
+* KasıtlıKısıt &lt; AsliKapasite ==&gt; Latent Defect (Mecelle 337)* Remote Degradation ==&gt; Direct Destruction (Mecelle 92)
+* Rescission: Faskh (Mecelle 356)                          * Repair Embargo ==&gt; Void Restraint &amp; Hoarding (100)
+* Price Reduction: Arsh / Noksan-ı Semen                   * Restitution &amp; Specific Performance
+* Cascade Recourse: Bâi ---&gt; Sâni                          * Liability Charged Directly to Manufacturer Sâni</pre>
+        </div>
+      </div>
+    </div>
+  </article>
+    
+  <article class="slide-card" id="slide-02">
+    <div class="slide-header">
+      <div class="slide-title-wrap">
+        <span class="slide-tag">MODEL 1: FACTORY PHASE</span>
+        <h2 class="slide-title">PRE-EXCHANGE DEFECT, UNCONSCIONABLE DISPARITY, AND CONSTRUCTIVE DESTRUCTION</h2>
+      </div>
+      <div class="slide-number">02</div>
+    </div>
+    <div class="slide-grid">
+      <div class="formulas-column">
+        
+        <div class="formula-box">
+          <div class="formula-label">STRUCTURAL CAPACITY CURTAILMENT &amp; EXPROPRIATED UTILITY</div>
+          <div class="formula-content">KasıtlıKısıt &lt; AsliKapasite
+DestroyedUtility = Integral[KasıtlıKısıt -&gt; AsliKapasite] Utility(t) dt &gt; 0</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">UNCONSCIONABLE DISPARITY &amp; UNLAWFUL APPROPRIATION (AN-NISA 29)</div>
+          <div class="formula-content">UnlawfulPriceGain = Semen(AsliKapasite) - Semen(KasıtlıKısıt) &gt; 0
+Under Information Asymmetry ==&gt; Ekl-i Emvâl bi&#x27;l-Bâtıl (An-Nisâ 29) &amp; Latent Defect (Mecelle 337)</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">CONSTRUCTIVE DESTRUCTION &amp; DAMAGE RATIO AXIOM</div>
+          <div class="formula-content">DamageRatio = (Residual Utility between AsliKapasite and KasıtlıKısıt) / (Replacement Cost of Depleting Element) &gt;&gt; 1
+Where Proportion = TeknikZaruret / (AsliKapasite - KasıtlıKısıt) -&gt; 0 ==&gt; Actionable Latent Defect</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">REMEDIES &amp; UPSTREAM INDEMNIFICATION RULES</div>
+          <div class="formula-content">Rescission: Mâlik Cancels Contract (Mecelle 356) | Price Reduction if Restitution Barred (Arsh: 343-345)
+Cascade Recourse: Bâi Compensates Buyer and Recovers from Sâni | Premature Gain Disgorgement: Mecelle 99</div>
+        </div>
+        
+      </div>
+      <div class="diagram-column">
+        <div class="diagram-box">
+          <div class="diagram-title">BLACKBOARD SCHEMA &amp; LOGICAL FLOW DIAGRAM</div>
+          <pre class="diagram-ascii">[ SÂNI&#x27; / MANUFACTURER ] ──&gt; Design Choice: A1 (AsliKapasite) vs A2 (KasıtlıKısıt) ──&gt; KasıtlıKısıt &lt; AsliKapasite
+      │
+      ├───────────────────────────────────┬───────────────────────────────────┐
+      ▼ (Legitimate Functional Design)    ▼ (Artificial Monolithic Lockout)   ▼ (Inherent Hidden Trap)
+[ Intrinsic Functional Unity ]            [ Artificial Maintenance Lockout ]  [ Deliberate Early Kill ]
+(Thermodynamic / Physical Necessity)      (Disproportionate Non-Functional Bar)(Latent Structural Flaw)
+      │                                   │                                   │
+      ▼ (Proportionate: Legitimate)       ▼ (Zero Proportion: Abuse of Right) ▼ (Latent Defect)
+  [ Legitimate Inherent Trait (Mecelle 87)][ Constructive Total Loss ]         [ Fraudulent Defect ]
+  (Owner Bears Natural Time Risk)         (Actionable Unconscionable Disparity)(Al-Taghrîr al-Fi&#x27;lî)
+      │                                   │                                   │
+      └───────────────────────────────────┴───────────────────────────────────┘
+                                          │
+                                          ▼  (Supply Chain Distribution)
+[ BÂİ&#x27; / VENDOR ] ──&gt; Semen: Price for Full Capacity Collected ──&gt; [ MÂLİK / PURCHASER ] (Conveyance / t0)
+                                                       │
+                                                       ▼
+                                                Operative Legal Consequence:
+                                                * Latent Defect (Mecelle 337)
+                                                * Unconscionable Disparity
+                                                * Contract Rescission (356) / Arsh (343)
+                                                * Upstream Recourse: Bâi -&gt; Sâni</pre>
+        </div>
+      </div>
+    </div>
+  </article>
+    
+  <article class="slide-card" id="slide-03">
+    <div class="slide-header">
+      <div class="slide-title-wrap">
+        <span class="slide-tag">MODEL 2: POST-SALE PHASE</span>
+        <h2 class="slide-title">POST-SALE TRESPASS, BREACH OF TRUST, AND DIRECT TORTIOUS DESTRUCTION</h2>
+      </div>
+      <div class="slide-number">03</div>
+    </div>
+    <div class="slide-grid">
+      <div class="formulas-column">
+        
+        <div class="formula-box">
+          <div class="formula-label">UNILATERAL POST-SALE DEGRADATION GRADIENT</div>
+          <div class="formula-content">At all post-sale times (t &gt; t0): d(Capacity)/dt &lt; 0 by Sâni&#x27;s remote intervention.
+Proportion = TechnicalGainAchieved / OperationalCapacityDestroyed -&gt; 0 ==&gt; Direct Tortious Destruction (Mübâşereten İtlâf, Mecelle Article 92)</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">STRICT COMPENSATORY LIABILITY (DAMÂN AL-MÜTLİF)</div>
+          <div class="formula-content">Sâni Compensatory Liability = Market Value (Pre-Intervention) - Market Value (Post-Intervention) + Expropriated Usufruct.
+Mecelle Article 92: Direct perpetrator is strictly liable regardless of subjective intent.</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">DELEGATED CUSTODIAL TRUST &amp; UNAUTHORIZED EXERCISE</div>
+          <div class="formula-content">Post-Conveyance (t0) = Absolute Title (Milk Tamm) ==&gt; Sâni Discretionary Authority = 0.
+Converting update channel into impairment vector = Breach of Trust (Hıyânetü&#x27;l-Amâne) &amp; Unauthorized Intermeddling (Tasarruf fî Milk al-Gayr).</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">MECELLE ARTICLE 33 &amp; THE PROPORTIONALITY IMPASSE</div>
+          <div class="formula-content">Al-Idtirâru lâ yubtilu haqqa&#x27;l-gayr (Necessity does not extinguish the property right of another).
+Sâni cannot invoke security/stability pretexts to unilaterally throttle or cripple Mâlik&#x27;s vested property.</div>
+        </div>
+        
+      </div>
+      <div class="diagram-column">
+        <div class="diagram-box">
+          <div class="diagram-title">BLACKBOARD SCHEMA &amp; LOGICAL FLOW DIAGRAM</div>
+          <pre class="diagram-ascii">[ SÂNI&#x27; / MANUFACTURER ] ──( t &gt; t0: Property Vested in Mâlik / Milk Tamm )──&gt; [ Metâ ]
+           │                                                                    │
+           ├─────────────────( External / Network Link )────────────────────────┤
+           │                 [ Delegated Custodial Trust / Amânah ]             │
+           ▼                                                                    ▼
+[ Unilateral Algorithmic Downgrade ]                         [ Functional Impairment / Throttling ]
+(Unannounced Remote Code Push)                               (Throughput Throttled / Performance Capped)
+           │                                                                    │
+           ▼                                                                    ▼
+Legitimacy Adjudication:                                     Operative Legal Finding:
+* Proportionality Test: Proportion -&gt; 0 (Disproportionate)   * Unauthorized Disposal of External Property
+* Mecelle Article 33: &quot;Necessity does not extinguish          * Direct Tortious Destruction (Mecelle 92)
+  the vested property right of another&quot;                      * Specific Performance / Full Restitution</pre>
+        </div>
+      </div>
+    </div>
+  </article>
+    
+  <article class="slide-card" id="slide-04">
+    <div class="slide-header">
+      <div class="slide-title-wrap">
+        <span class="slide-tag">MODEL 3: MAINTENANCE FORECLOSURE</span>
+        <h2 class="slide-title">LOGICAL LOCKOUTS, ARTIFICIAL HOARDING, AND DISTRESS COMMERCE (BAY&#x27;U&#x27;L-MUDTARR)</h2>
+      </div>
+      <div class="slide-number">04</div>
+    </div>
+    <div class="slide-grid">
+      <div class="formulas-column">
+        
+        <div class="formula-box">
+          <div class="formula-label">MONOPOLISTIC EMBARGO RATIO (HOARDING &amp; VOID RESTRAINTS)</div>
+          <div class="formula-content">Embargo Ratio = Foreclosed Maintenance Loss / Authentic Security Risk Differential -&gt; Infinity
+Cryptographic / Serialization Lock = Void Restraint (Şart-ı Fâsid under Mecelle Article 100)</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">DISTRESS EXPLOITATION SURCHARGE (BAY&#x27;U&#x27;L-MUDTARR)</div>
+          <div class="formula-content">Extortionate Repair Premium = Sâni Monopoly Repair Price - Competitive Replacement Cost &gt; 0
+Exploiting Mâlik&#x27;s Distress ==&gt; Prophetic Prohibition: Bay&#x27;u&#x27;l-Mudtarr (Void / Unenforceable)</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">COMPONENT FATIGUE DYNAMICS &amp; COERCION</div>
+          <div class="formula-content">Sub-element Lifespan &lt;&lt; Main Chassis Lifespan:
+Sâni foreclosing independent modular renewal = Constructive Destruction &amp; Artificial Hoarding (İhtikâr)</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">DECOUPLING CORE SECURITY FROM MAINTENANCE</div>
+          <div class="formula-content">Open Attestation Protocol ==&gt; Modular renewal without secret key disclosure
+Sâni invoking security to monopolize repairs = Abuse of Right (Sû-i İsti&#x27;mâl-i Hak, legally nullified)</div>
+        </div>
+        
+      </div>
+      <div class="diagram-column">
+        <div class="diagram-box">
+          <div class="diagram-title">BLACKBOARD SCHEMA &amp; LOGICAL FLOW DIAGRAM</div>
+          <pre class="diagram-ascii">[ Metâ ] ──&gt; Sub-Component Depleted / Natural Wear ──&gt; [ Mâlik / Independent Repairer ]
+      │                                                                  │
+      │                                                                  ▼
+      │                                                      [ Standard Modular Renewal ]
+      │                                                                  │
+      ├───[ Cryptographic / Serialization Lock ] &lt;───────────────────────┘
+      │   (Proprietary Serialization / Monopolistic Lock)
+      ▼
+False Dilemma:                                               Authentic Legal / Technical Solution:
+&quot;Either Proprietary Monopoly or System Compromise&quot;           &quot;Modular Attestation &amp; Open Protocols&quot;
+      │                                                                  │
+      ▼                                                                  ▼
+Operative Ruling:                                            Decoupling Architecture:
+* Void Restraint: Şart-ı Fâsid (Mecelle 100)                 * Zero-Knowledge Cryptographic Proofs
+* Unlawful Hoarding: İhtikâr (Foreclosing Parts &amp; Tools)     * Component Replacement without Key Disclosure
+* Distress Commerce: Bay&#x27; al-Mudtarr (Coercive Extraction)  * Mecelle 100: Monopolistic Barrier Void</pre>
+        </div>
+      </div>
+    </div>
+  </article>
+    
+  <article class="slide-card" id="slide-05">
+    <div class="slide-header">
+      <div class="slide-title-wrap">
+        <span class="slide-tag">MODEL 4: SECTOR COLLAPSE &amp; THE COMMONS</span>
+        <h2 class="slide-title">THE LEMONS DYNAMIC, CAPTIVITY TRAP, AND THERMODYNAMIC DEPRAVATION</h2>
+      </div>
+      <div class="slide-number">05</div>
+    </div>
+    <div class="slide-grid">
+      <div class="formulas-column">
+        
+        <div class="formula-box">
+          <div class="formula-label">DYNAMIC ADVERSE SELECTION (LEMONS MARKET COLLAPSE)</div>
+          <div class="formula-content">Profit(Sâni-2 / Fraudulent) &gt; Profit(Sâni-1 / Honest)
+[Semen(Asli) - Cost(Kısıt)] &gt; [Semen(Asli) - Cost(Asli)] ==&gt; Honest producers systematically expelled</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">CAPTIVE EXTRACTION PARADOX UNDER LOCK-IN</div>
+          <div class="formula-content">As EsaretKatsayısı -&gt; 1: d(Semen)/d(KasıtlıKısıt) -&gt; 0 and Demand Elasticity -&gt; 0
+Consumers cannot exit even with full disclosure ==&gt; Systemic Monopolistic Extraction</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">PLANETARY METABOLIC DEBT &amp; IFSÂD FI&#x27;L-ARZ</div>
+          <div class="formula-content">Time Integral[Sum EmbeddedEnergy * (AsliKapasite - KasıtlıKısıt) / AsliKapasite] &gt; MüştereklerEşiği
+Generates Systemic Public Injury ==&gt; Mecelle 26: Severe private restraint chosen to avert general public harm</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">CORRUPT CUSTOM (ÖRF-I FÂSİD) &amp; MANDATORY HISBAH</div>
+          <div class="formula-content">Systemic Industry Collusion = Corrupt Custom (Örf-i Fâsid, generates zero legal legitimacy)
+Siyâsah Shar&#x27;iyyah &amp; Hisbah Intervention with Mandatory Minimum Durability Floors is an Absolute Duty (FARD)</div>
+        </div>
+        
+      </div>
+      <div class="diagram-column">
+        <div class="diagram-box">
+          <div class="diagram-title">BLACKBOARD SCHEMA &amp; LOGICAL FLOW DIAGRAM</div>
+          <pre class="diagram-ascii">[ MARKET REGIME ] ──&gt; Lock-in Index (0 to 1) ──&gt; EsaretKatsayısı Approaches 1 (Exit Extinguished)
+        │
+        ├─────────────────────────────┬─────────────────────────────┐
+        ▼ (Phase 1: Information Gap)  ▼ (Phase 2: Common Knowledge) ▼ (Ecological Threshold)
+  [ Phase 1: Information Gap ]   [ Phase 2: Common Knowledge ]   [ Commons Boundary: Hukukullâh ]
+  * Honest Maker-1 expelled      * Consumers know goods fail     * Sum(Asli - Limit) &gt; Threshold
+  * Fraudulent Maker-2 dominates * Due to lock-in, price rigid   * Thermodynamic Entropy Depravation
+  * Semen(Asli) extracted        * Price does not drop (Extortion* Public Harm (Darar Âmm, Mecelle 26)
+        │                             │                              │
+        └─────────────────────────────┼──────────────────────────────┘
+                                      ▼
+                        Judicial &amp; Regulatory Adjudication:
+                        * Mecelle 26: Private restriction mandated to avert universal harm
+                        * Corrupt custom (Örf-i Fâsid) never establishes legal norms
+                        * Mandatory regulatory hisbah intervention with durability floors</pre>
+        </div>
+      </div>
+    </div>
+  </article>
+    
+  <article class="slide-card" id="slide-06">
+    <div class="slide-header">
+      <div class="slide-title-wrap">
+        <span class="slide-tag">INTELLECTUAL PROPERTY &amp; OWNERSHIP PLANES</span>
+        <h2 class="slide-title">PATENT/COPYRIGHT EXHAUSTION (FIRST SALE) AND DUAL PROPRIETARY SPHERES</h2>
+      </div>
+      <div class="slide-number">06</div>
+    </div>
+    <div class="slide-grid">
+      <div class="formulas-column">
+        
+        <div class="formula-box">
+          <div class="formula-label">EXHAUSTION BOUNDARY &amp; DOMAIN SEPARATION</div>
+          <div class="formula-content">At all post-sale times (t &gt; t0): Sâni Discretionary Authority ∩ Conveyed Individual Asset = Empty Set
+Sâni IP = Protects universal architecture and commercial duplication (Universal Negative Right)</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">MÂLIK&#x27;S CHATTEL PROPRIETARY TITLE (MILK AL-NUSKHA)</div>
+          <div class="formula-content">First Sale Doctrine (İstihlâk-ı Hak bi&#x27;l-Bey&#x27;i&#x27;l-Evvel) ==&gt; Distribution and control power EXHAUSTS
+Mâlik: Fully entitled to operate, preserve, maintain, calibrate, and repair the physical/logical instance</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">REFUTATION OF COMMON-OWNERSHIP FALLACY (SHIRKAT AL-MILK)</div>
+          <div class="formula-content">Buyer is not partner in abstract code; buyer owns the operational utility of the physical chattel.
+&#x27;Code is ours, we may throttle the device at will&#x27; = Void Restraint (Şart-ı Fâsid under Mecelle Article 100)</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">ABSOLUTE SALE (BEY&#x27;) VS. CIRCULAR LEASE (ICÂRE)</div>
+          <div class="formula-content">If Purchase Price Semen Collected ==&gt; Ownership is absolute; remote coercion is tortious usurpation.
+Genuine Circular Economy Lease ==&gt; Asset remains on Sâni balance sheet; Sâni bears all maintenance costs.</div>
+        </div>
+        
+      </div>
+      <div class="diagram-column">
+        <div class="diagram-box">
+          <div class="diagram-title">BLACKBOARD SCHEMA &amp; LOGICAL FLOW DIAGRAM</div>
+          <pre class="diagram-ascii">[ JURISPRUDENTIAL DEMARCATION: TWO DISTINCT PROPERTY PLANES ]
+
+1. AUTHOR&#x27;S INTANGIBLE MONOPOLY RIGHT (Hakk al-Müellif / Patent &amp; Copyright):
+   * Protected Domain: Universal code architecture, commercial duplication, licensing.
+   * Legitimate Remedy: Injunctions against third parties cloning and selling the software.
+   * NEVER EXTENDS TO: Right to remotely throttle, disable, or sabotage conveyed physical chattel!
+
+                                     RESOLUTION DOCTRINE
+                                             │
+                                             ▼
+2. PROPRIETARY TITLE OVER EMBODIED CHATTEL (Milk al-Nuskha / Chattel Sovereignty):
+   * THE FIRST SALE DOCTRINE (Patent/Copyright Exhaustion / İstihlâk-ı Hak):
+     The moment Sâni conveys Metâ in exchange for purchase price Semen, Sâni&#x27;s legal authority
+     to restrict the physical and logical use of that INDIVIDUAL chattel is EXHAUSTED.
+   * Refutation of Shirkat al-Milk: Buyer does not become co-owner of the universal code;
+     buyer becomes sovereign owner of the functional utility of the specific physical asset.
+   * Mecelle Article 100 &amp; Lex Exhaustionis:
+     &quot;We own the code, so we may remotely cripple the machine&quot; is a void restraint
+     contravening the essence of the contract (Şart-ı Fâsid).</pre>
+        </div>
+      </div>
+    </div>
+  </article>
+    
+  <article class="slide-card" id="slide-07">
+    <div class="slide-header">
+      <div class="slide-title-wrap">
+        <span class="slide-tag">SYNOPTIC MATRIX &amp; FINAL RULINGS</span>
+        <h2 class="slide-title">COMPREHENSIVE JURISTIC RATIONALE, RATIONAL HARMS, AND LEGAL MATRIX</h2>
+      </div>
+      <div class="slide-number">07</div>
+    </div>
+    <div class="slide-grid">
+      <div class="formulas-column">
+        
+        <div class="formula-box">
+          <div class="formula-label">SIX POSITIVE OPERATIVE GROUNDS (ILEL-I SHAR&#x27;IYYAH)</div>
+          <div class="formula-content">1. Unlawful Consumption of Wealth (Nisâ 29) | 2. Unconscionable Disparity bi&#x27;t-Taghrîr | 3. Original Latent Defect (Ayb-i Hafî)
+4. Constructive Total Loss &amp; Direct Tortious Destruction (Mecelle 92) | 5. Unauthorized Disposal &amp; Breach of Trust | 6. Void Restraint &amp; Hoarding (100)</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">FOUR SYSTEMIC RATIONAL HARMS (MEFÂSID-I AKLIYYAH)</div>
+          <div class="formula-content">7. Premature Capital Extraction (Mecelle 99) | 8. Intentional Waste of Societal Capital
+9. Planetary Depravation &amp; Public Harm (Mecelle 26) | 10. Destruction of Honest Commerce via Lemons Dynamics</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">MAQÂSID BALANCE &amp; TELOS OF LEGISLATION</div>
+          <div class="formula-content">Destruction of Mutual Commercial Trust: Trust Loss &gt;&gt; 0 (Al-Ma&#x27;idah 91 Principle)
+Preservation of Wealth + Public Order + Planetary Commons ==&gt; Planned Obsolescence: HARAM AND SUBJECT TO FULL INDEMNIFICATION</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">PEREMPTORY RULES FOR MANUFACTURERS &amp; ARCHITECTS</div>
+          <div class="formula-content">Inherent Limits: Transparent declaration + stable operating regime + decoupled local autonomy
+Localized Fatigue: Transparent notice + modular renewal (Mecelle 22 Proportionality)
+Universal Rule: Sale (Bey&#x27;) requires absolute surrender of control; Ongoing governance requires genuine lease (İcâre).</div>
+        </div>
+        
+      </div>
+      <div class="diagram-column">
+        <div class="diagram-box">
+          <div class="diagram-title">BLACKBOARD SCHEMA &amp; LOGICAL FLOW DIAGRAM</div>
+          <pre class="diagram-ascii">========================================================================================================================
+                   LEGAL MODEL OF PLANNED OBSOLESCENCE: SYNOPTIC RULINGS &amp; AXIOMATIC MATRIX
+========================================================================================================================
+
+PHASE / ACTOR              AFFIRMATIVE INTERVENTION            JURISTIC CHARACTERIZATION       STATUTORY / SHAR&#x27;I AUTHORITY
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+Factory Phase (Sâni)       Secretly Curtailing Inherent Life   Latent Defect &amp; Disparity       An-Nisâ 29, Mecelle 337, 356
+                           (KasıtlıKısıt &lt; AsliKapasite)        Constructive Total Loss         Rescission / Arsh / Recourse
+
+Post-Sale Phase (Sâni)     Remote Performance Throttling       Direct Tortious Destruction     Mecelle 92, 93, 33
+                           (d(Capacity)/dt &lt; 0)                Unauthorized Property Disposal  Specific Restitution / Damages
+
+Maintenance Phase (Sâni)   Repair Embargo &amp; Component Lockout  Void Restraint &amp; Hoarding       Mecelle 100, 22
+                           (Embargo Ratio -&gt; Infinity)         Distress Commerce (Mudtarr)     Restraint VOID, Repair Free
+
+Market / Macro (Sector)    Collusive Lemons Regime &amp; Lock-in   Public Harm (Darar Âmm)         Mecelle 26, 19, 85
+                           (Cumulative Loss &gt; Commons)         Corrupt Custom (Örf-i Fâsid)    Mandatory Hisbah / Sanctions
+========================================================================================================================
+CONCLUSION: Extracting full purchase price while retaining unilateral remote power to extinguish the good is legally void.
+Absolute Conveyance (Bey&#x27;) or Complete Stewardship (İcâre) is strictly mandatory.</pre>
+        </div>
+      </div>
+    </div>
+  </article>
+    
+</main>
+
+<footer>
+  LEGAL MODEL OF PLANNED OBSOLESCENCE &amp; PLATFORM REGIMES • 100% ABSTRACT ALGEBRAIC AND JURISTIC AXIOMS
+</footer>
+
+</body>
+</html>
