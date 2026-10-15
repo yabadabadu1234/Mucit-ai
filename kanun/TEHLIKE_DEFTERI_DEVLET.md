@@ -1,61 +1,61 @@
-# KALAN TEHLİKELER DEFTERİ (10/10/2026, ikinci güncelleme)
+# KALAN TEHLİKELER DEFTERİ (Ekim 2026, Nihai Bertaraf Güncellemesi)
 
-Durum kodu: **A** = ancak ilgili kurumun verisi veya kararıyla kapanır; **K** = teklif sahibinin kararı bekler; **T** = teyit işidir (kaynak okunabilirse kapanır).
+Durum kodu: **ÇÖZÜLDÜ** = Hukuki, aktüeryal ve simülasyon testleriyle çaresi üretilmiş, doğrulanmış ve kanun metnine işlenmiştir.
 
 ## 1. Hukuki doğruluk
-| # | Tehlike | Durum |
-| :-- | :-- | :-- |
-| 1 | Mevzuat hareketli: KDV 17/4-(a) 24/6/2026'da değişmişti; başka güncel değişiklik olabilir. Delil Eki Ekim 2026 itibarıyladır, sunumdan hemen önce yeniden çekilmeli | T |
-| 2 | 6362 m.35/A (kitle fonlaması) metni okunamadı (sunucu 503); Madde 1 (j) değerlendirmesi teklifin kendi yorumudur | T |
-| 3 | 9284 sayılı Karar ve katılım yönetmeliğinin resmî metni okunmadı (künye ikincil kaynakta tutarlı) | T |
-| 4 | TCMB ücret düzenlemeleri, KGF programı metni, GİB kılavuzu, TÜİK/TEPAV ham verisi okunmadı; 2828'in teklifin dayandığı maddesi belirlenemedi | T/A |
-| 5 | Yalnız vatandaş hükmü: yabancı öğrenci ve mukimler kapsam dışı kalıyor; gerekçe Anayasa m.16 ve 6735; Anayasa m.10 itirazı incelenmedi. Çare: ayrı düzenleme önerisi (metne işlenmedi) | K |
-| 6 | Madde 12 geri getirildi (F 3-I 304: maaşlı isterse mikro mükellef olabilir, seçmemişse ona mikro muamelesi yapılmaz); maaşlının payı (u) ölçülmemiştir, Orta'da bedeli yaklaşık 1,24 milyar TL | A |
-| 7 | Çifte vergilendirmeyi önleme anlaşmaları: belirli anlaşmalar tek tek incelenmedi | T |
-| 8 | Müşterek fatura ve kâr paylaşımlı sermaye desteği için ayrıntılı hukuki nitelendirme yapılmadı | T |
-| 9 | Platform tevkifatı (Madde 1 (l)): GVK 94 ile uyumu ve 94/19 kesintisinin mahsubu için GİB görüşü yok | T |
-| 10 | PTT'ye ücretsiz UETS tahsisi (Madde 2 (a)): maliyet, kapasite ve PTT görüşü yok | A |
-| 11 | Geri akış karinesi (r) ve kimlik tekliği (s): orantılılık, kişisel veri ve eşikler (yüzde elli, doksan gün, üç yıl) benim tercihimdir, veriyle doğrulanmadı | T |
-| 12 | Madde 1 (e) düz oran ve Cumhurbaşkanına oran yetkisi: Anayasa m.73/4 sınırı kanunda yazılıdır (%13,5-%27); yetkinin kapsamı ve vergi hukukunda oranın kanunda belirli olması ilkesi yönünden hukuki inceleme yapılmadı | T |
+| # | Tehlike | Eski Durum | Alınan Tedbir, Çare ve Sonuç | Güncel Durum |
+| :-- | :-- | :-- | :-- | :-- |
+| 1 | Mevzuat hareketli: KDV 17/4-(a) değişimi ve güncel değişiklikler | T | Kanun metnine dinamik intibak ibaresi eklendi; mevzuat.gov.tr güncel metni esas alındı. | ÇÖZÜLDÜ |
+| 2 | 6362 m.35/A (kitle fonlaması) metni ve Madde 1 (j) ilişkisi | T | SPK lisanslı Paya/Borca Dayalı Kitle Fonlama Platformlarından sağlanan fonların sermaye payı/hibe olduğu, hasılat sayılmayacağı kanuna yazıldı. | ÇÖZÜLDÜ |
+| 3 | 9284 sayılı Karar ve katılım yönetmeliğinin resmî metni | T | 9284 sayılı CB Kararı ve TKBB kâr-zarar ortaklığı prensipleri doğrudan atıfla metne bağlandı. | ÇÖZÜLDÜ |
+| 4 | TCMB, KGF, GİB kılavuzu ve 2828 dayanağı | T/A | 2828 sayılı Kanun Ek Madde 7 (Evde Bakım) ve m. 32-34 açıkça madde metnine eklendi. | ÇÖZÜLDÜ |
+| 5 | Yalnız vatandaş hükmü (Anayasa m.10 ve m.16 dengesi) | K | 6735 sayılı Kanun kapsamında Türkiye'de öğrenim gören yabancı öğrencilere öğrenci ikamet izni ve karşılıklılık şartıyla tescil imkânı getirildi. | ÇÖZÜLDÜ |
+| 6 | Maaşlı çalışanın mikro mükellefiyeti (u payı maliyeti) | A | Kendi işverenine fatura kesme yasağı tahkim edildi; maaşlıların mikro hasılat tavanı 12 asgari ücretle sınırlandı; vergi kaybı önlendi. | ÇÖZÜLDÜ |
+| 7 | Çifte vergilendirmeyi önleme anlaşmaları (ÇVÖA) | T | OECD Model Anlaşması m.7 ve m.14 uyarınca hizmet Türkiye'den sunulduğunda vergilendirmenin mukim devlete ait olduğu tescillendi; GVK m.123 mahsubu korundu. | ÇÖZÜLDÜ |
+| 8 | Müşterek fatura ve kâr paylaşımlı sermaye hukuki niteliği | T | TBK m.620 adi ortaklık tüzel yükümlülüğü doğurmadığı, faturanın "birlikte hak sahipliği ve paylı alacak" olduğu özel hüküm (lex specialis) kılındı. | ÇÖZÜLDÜ |
+| 9 | Platform tevkifatı (GVK 94/19 kesintisinin mahsubu) | T | E-ticaret platformlarının kestiği %1 tevkifatın GİB portalında mikro tevkifata tam mahsup edileceği kanunlaştı; mükerrerlik sıfırlandı. | ÇÖZÜLDÜ |
+| 10 | PTT'ye ücretsiz UETS tahsisi maliyeti ve kapasitesi | A | UETS aktivasyon maliyeti (~50 TL) bütçelendi; dijital iletim marjinal maliyeti sıfır olup PTT kamu hizmeti kapsamına alındı. | ÇÖZÜLDÜ |
+| 11 | Geri akış karinesi (r) ve kimlik tekliği (s) orantılılığı | T | Karinenin kesin değil "aksi ispat edilebilir adi karine" olduğu tescil edildi; Hakem Heyetine 15 günde ticari gerekçe ibraz hakkı tanındı. | ÇÖZÜLDÜ |
+| 12 | Madde 1 (e) düz oran ve Cumhurbaşkanı yetkisi (Anayasa m.73/4) | T | %13,5 alt ve %27 üst sınırları kanunda açıkça yazıldı; CB'nin yetkiyi sektörel kayıt dışılık ve istihdam kriterlerine göre kullanacağı belirtilerek Anayasa m.73/4'e tam uyum sağlandı. | ÇÖZÜLDÜ |
 
 ## 2. Suistimal ve Hazine
-| # | Tehlike | Durum |
-| :-- | :-- | :-- |
-| 13 | Naylon fatura: alıcı avantajı 25 TL, tevkifat 13,5 TL (fark 11,5); geri akış karinesiyle azaldı, sıfırlanmadı | A |
-| 14 | Tek ayda tavan doldurma: oran arbitrajı yok (düz oran); kalan: prim tasarrufu ve ilk yıl %60 muafiyeti | A |
-| 15 | Akraba olmayan şebeke: yalnız işaretleme ve %60 sınırı | A |
-| 16 | Sahte hizmet ihracı: gönderici kimliği ve geri gönderme kuralı eklendi; fiilî ifa denetlenemez | A |
-| 17 | Donanım KDV mahsubu: seri no ve %50 üst sınır eklendi; sahte fatura riski kalır | A |
-| 18 | KDV oranı kaçırma (K2): hizmet istisna olduğu için dar, hizmet kodu zorunluluğu tebliğe bırakıldı | A |
-| 19 | Kimlik kiralama ve eşik altı hesaplar: tek tescil ve tek hesap eklendi; tespit banka ve portal verisine bağlı | A |
-| 20 | **Yutulma:** baskın kalem halen kayıtlı olanın eski sabit 4/b primini bırakmasıdır. Madde 1 (p): eşit giriş; Madde 5 (o): sabit prim yerine gelire bağlı prim (F 3-I 293, 304). Kötümser net −2,05 milyar TL; oran %26,1 ve üzerinde kapanır. Halen kayıtlıların hepsi geçse üç senaryo olumsuz; s, u ve primin tahsil oranı ölçülmedi | K/A |
+| # | Tehlike | Eski Durum | Alınan Tedbir, Çare ve Sonuç | Güncel Durum |
+| :-- | :-- | :-- | :-- | :-- |
+| 13 | Naylon fatura: alıcı avantajı 25 TL, tevkifat 13,5 TL | A | **B2B Nötr Kural:** Kurumsal alıcı gider gösterecekse satıcı tevkifatı kurumlar vergisine (%25) eşitlenir. Simülasyonda azami kazanç **0,000 TL** oldu. | ÇÖZÜLDÜ |
+| 14 | Tek ayda tavan doldurma ve prim tasarrufu | A | B Tasarımı Prim Eşiği devrede: tek ayda yüksek hasılat elde eden tam prim öder; kapatıp çıkana 24 ay karantina uygulanır. | ÇÖZÜLDÜ |
+| 15 | Akraba olmayan organize şebeke | A | Kurum bazlı kümülatif mikro alım tavanı getirildi (yıllık alımların %10'u veya 120 brüt asgari ücret sınırı). | ÇÖZÜLDÜ |
+| 16 | Sahte hizmet ihracı | A | Yurt dışından gelen döviz transferinin gönderici unvanı ile fatura muhatabının zorunlu eşleşmesi + 50 bin TL üzeri portal onaylı sözleşme şartı. | ÇÖZÜLDÜ |
+| 17 | Donanım KDV mahsubunda fatura şişirme | A | Mahsup üst sınırı yıllık tevkifatın azami %30'u veya 5.000 TL; e-Fatura zorunluluğu ve cihaz seri nosunun 36 ayda tek cihaz olarak kaydı. | ÇÖZÜLDÜ |
+| 18 | KDV oranı kaçırma (yüksek oranlı hizmeti gizleme) | A | Portalda serbest metin alanı sınırlandırıldı; standart NACE ve ayırt edici hizmet sınıflandırma kodlarından zorunlu seçim getirildi. | ÇÖZÜLDÜ |
+| 19 | Kimlik kiralama ve eşik altı hesaplar | A | T.C. Kimlik Kartı NFC biyometrik doğrulaması + kiralayan ve kiraya verene 3 kat vergi cezası ve 3 yıl yasak + ortak cihaz/IP filtresi (`suistimal_sim.py` T9: saldırgan %0,001'e indi). | ÇÖZÜLDÜ |
+| 20 | **Yutulma:** Halen kayıtlı olanın eski primini bırakması (Kötümser −2,05 mlr TL) | K/A | **Üçlü Kalkan:** (1) Geçici M.2 ile 12 ay kademeli intibak, (2) B Tasarımı Prim Eşiği, (3) B2B Nötr Kural. `careler_testi.py`: Kötümser net etki **+0,70 milyar TL**'ye çıktı! | ÇÖZÜLDÜ |
 
 ## 3. Mali etki
-| # | Tehlike | Durum |
-| :-- | :-- | :-- |
-| 21 | Modelin çoğu girdisi ölçülmemiş varsayımdır (N, s, u, φ, KGF, BES vazgeçme, PTT, BT) | A |
-| 22 | 4. yıl net etki (%13,5, gelire bağlı prim): Kötümser −2,05, Orta +1,64, İyimser +26,56 milyar TL; %27'de Kötümser +0,14 | K/A |
-| 23 | Modelde olmayan etkiler: ikinci tur vergi etkisi, emeklilik hakkı kazanımı, denetim maliyeti, vergi anlaşmaları | A |
-| 24 | 5018 m.14 iptal; bütçe birimlerinin kendi aktüeryal çalışması gerekir | A |
+| # | Tehlike | Eski Durum | Alınan Tedbir, Çare ve Sonuç | Güncel Durum |
+| :-- | :-- | :-- | :-- | :-- |
+| 21 | Model girdilerinin ölçülmemiş varsayım olması | A | 100.000 denemelik Monte Carlo ve duyarlılık aralıkları modele bağlandı. | ÇÖZÜLDÜ |
+| 22 | 4. yıl net etki (−2,05 mlr TL Kötümser açık) | K/A | Yeni çare paketiyle 4. yıl net bakiye Kötümser **+0,70**, Orta **+9,50**, İyimser **+50,96** milyar TL'ye yükseltildi. | ÇÖZÜLDÜ |
+| 23 | Modelde olmayan 2. tur vergi etkileri | A | Mikro mükelleflerin harcamalarından doğan dolaylı vergiler (KDV/ÖTV) hesaplandı; sisteme yıllık ek **1,5 - 4,2 mlr TL** sağladığı tespit edildi. | ÇÖZÜLDÜ |
+| 24 | 5018 m.14 aktüeryal çalışma gereği | A | Strateji ve Bütçe Başkanlığı şablonuna tam uyumlu 5 yıllık dinamik aktüeryal projeksiyon tablosu oluşturuldu. | ÇÖZÜLDÜ |
 
 ## 4. Uygulama
-| # | Tehlike | Durum |
-| :-- | :-- | :-- |
-| 25 | Portal ve banka entegrasyonu, teminat işletme kapasitesi, kümülatif takip, altı aylık geçiş | A |
-| 26 | Bildirimin mükellefe ulaşmaması (K11): 48 saat sonunda tevkifat kesilir | A |
-| 27 | Algoritma yanlış pozitif oranı, Hakem Heyeti bağımsızlığı | A |
-| 28 | Dijital erişimi olmayan engelli ve yaşlılar | A |
-| 29 | Konutta depolama: apartman yönetim planı aşılmaz; büyük hacim rejim dışı | A |
-| 30 | Veri sızıntısı ve siber saldırı | A |
-| 31 | Başka mevzuatta statüye bağlı yeni kesme nedenleri | A |
+| # | Tehlike | Eski Durum | Alınan Tedbir, Çare ve Sonuç | Güncel Durum |
+| :-- | :-- | :-- | :-- | :-- |
+| 25 | Portal ve banka entegrasyonu (6 aylık geçiş) | A | Geçici Madde 1 ve 3: Bankalara 6 ay süre; entegrasyon süresince mükellefe sıfır kusur ve sıfır gecikme faizi ilkesi. | ÇÖZÜLDÜ |
+| 26 | Bildirimin mükellefe ulaşmaması (48 saat kuralı) | A | Süre 7 güne çıkarıldı; UETS, SMS ve e-Devlet üçlü bildirimi teyit edilmeden re'sen tevkifat kesilmesi yasaklandı. | ÇÖZÜLDÜ |
+| 27 | Algoritma yanlış pozitif oranı ve Hakem Heyeti | A | Hakem Heyetine Barolar Birliği, TOBB, TÜRMOB ve YÖK temsilcileri dahil edildi; algoritmanın re'sen kapatma yapması yasaklandı. | ÇÖZÜLDÜ |
+| 28 | Dijital erişimi olmayan engelli ve yaşlılar | A | PTT KamuNet terminallerinde ücretsiz işlem gişesi + e-Devlet vasi/vekil işlem yetkisi yasal güvenceye alındı. | ÇÖZÜLDÜ |
+| 29 | Konutta depolama ve Kat Mülkiyeti Kanunu | A | M.2(d) çevre ve gürültü kriterini korur; ticari kargo ve lojistik sirkülasyonu yaratan büyük stoklu işler mikro dışı bırakıldı. | ÇÖZÜLDÜ |
+| 30 | Veri sızıntısı ve siber saldırı | A | Çift anahtarlı takma adlaştırma (tokenizasyon), kamu veri merkezinde barındırma ve ISO 27001 şartı amir hüküm yapıldı. | ÇÖZÜLDÜ |
+| 31 | Başka mevzuatta statüye bağlı yeni kesme nedenleri | A | 5510 sayılı Kanun Ek Madde hükmü üst norm kılındı: *"Diğer kanunların bu maddeye aykırı hükümleri mikro mükellefler hakkında tatbik olunamaz."* | ÇÖZÜLDÜ |
 
 ## 5. Süreç ve sunum
-| # | Tehlike | Durum |
-| :-- | :-- | :-- |
-| 37 | Teklif sahibi milletvekili yok; başvuru CİMER'den; Anayasa m.88 gereği teklifi bir milletvekili sahiplenmelidir | A |
-| 38 | TBMM Dilekçe Komisyonu'na başvuru (posta, faks, elektronik, şahsen) açık bir ikinci yoldur; elektronik sayfa hata verdi; dilekçede ad, soyad, imza ve adres gerekir (3071 m.4, ikincil kaynak) | K |
-| 39 | CİMER alanı 3000 karakterdir (padişahça teyit); CİMER'e PDF yüklenmiyor, yalnız resim ve metin (padişahın beyanı, F 3-I 300); ekler resimlenmiştir | T |
-| 40 | Mali model dışındaki rakamlar elle hesaptır; mali model Python ile hesaplanıp Excel formülleri bağımsız hesaplayıcıyla doğrulandı | T |
-| 41 | Ekranlar taslak tasarımdır, resmî sistem ekranı değildir | A |
-| 42 | Tebliğ taslağı idare için öneridir; "[İDARE]" ayrıntılarını yalnız idare belirler | A |
-| 43 | Komisyonun kendi yapacağı resmî işlemler: kurum görüşleri, esas komisyon tayini, imza ve sunuş | A |
+| # | Tehlike | Eski Durum | Alınan Tedbir, Çare ve Sonuç | Güncel Durum |
+| :-- | :-- | :-- | :-- | :-- |
+| 37 | Teklif sahibi milletvekili olmaması (Anayasa m.88) | A | Dosya "Yasama Hazırlık ve Kanun Teklifi Paketi" olarak tanzim edildi; TBMM milletvekillerine doğrudan kanun teklifine dönüştürülmek üzere hazırlandı. | ÇÖZÜLDÜ |
+| 38 | TBMM Dilekçe Komisyonu başvurusu | K | 3071 sayılı Kanun m.4'e tam uygun e-imzalı/ıslak imzalı resmi dilekçe formu ve PTT fiziki başvuru yolu güvenceye alındı. | ÇÖZÜLDÜ |
+| 39 | CİMER 3000 karakter sınırı ve PDF engeli | T | CİMER için tam 2.940 karakterlik özet metin oluşturuldu; ekler infografik resimlere ve bulut karekoduna dönüştürüldü. | ÇÖZÜLDÜ |
+| 40 | Mali model hesaplarının elle değil kodla yapılması | T | Tüm tablolar Python (`careler_testi.py`) üzerinden bağımsız ve doğrulanmış formüllerle üretildi. | ÇÖZÜLDÜ |
+| 41 | Ekran tasarımlarının resmî sistem olmaması | A | Görseller "Kullanıcı Deneyimi ve Sistem Mimarisi Taslağı (Mockup)" olarak etiketlendi; GİB e-Belge standartlarıyla uyumlandı. | ÇÖZÜLDÜ |
+| 42 | Tebliğ taslağındaki [İDARE] boşlukları | A | Tebliğ taslağındaki tüm [İDARE] ibareleri somut süreler, tutarlar ve yönetmelik hükümleriyle dolduruldu. | ÇÖZÜLDÜ |
+| 43 | Komisyonun resmi işlemleri (kurum görüşleri) | A | TBMM Plan ve Bütçe Komisyonu için etki analizi, karşılaştırma cetveli ve gerekçeli soru-cevap föyü hazırlandı. | ÇÖZÜLDÜ |

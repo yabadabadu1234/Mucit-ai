@@ -26,7 +26,7 @@ def sayfa(ad,baslik,alt,icerik,dip,h):
     html=f"<!doctype html><meta charset=utf-8><style>{CSS}</style><div class=bant>{BANT}</div><div class=ust><b>{baslik}</b><span>{alt}</span></div><div class=govde>{icerik}</div><div class=dip>{dip}</div>"
     p=os.path.join(D,ad+".html"); open(p,"w").write(html)
     out=os.path.join(OUT,ad+".png")
-    subprocess.run(["/opt/pw-browsers/chromium-1194/chrome-linux/chrome","--headless","--no-sandbox","--disable-gpu","--hide-scrollbars","--force-device-scale-factor=1",f"--window-size=1280,{h}",f"--screenshot={out}","file://"+p],check=True,capture_output=True)
+    subprocess.run(["/usr/bin/chromium","--headless","--no-sandbox","--disable-gpu","--hide-scrollbars","--force-device-scale-factor=1",f"--window-size=1280,{h}",f"--screenshot={out}","file://"+p],check=True,capture_output=True)
 # 1 tescil
 sayfa("ekran_01_tescil","Mikro Mükellefiyet · Tescil","Adım 1/4: Uygunluk kontrolü (e-Devlet ile giriş yapıldı)","""
 <div class=kart><h3>Kimlik (e-Devlet doğrulaması)</h3><div class=row><div><div class=et>Ad Soyad</div><div class=alan>A. Y. (örnek kişi)</div></div><div><div class=et>T.C. Kimlik No</div><div class=alan>*******1234</div></div><div><div class=et>Vatandaşlık</div><div class=alan>T.C. vatandaşı ✔</div></div></div></div>
@@ -85,7 +85,7 @@ sayfa("ekran_06_pano","Mükellef Panosu","Takvim yılı 2026 · Durum: AKTİF","
 # 7 bildirim
 sayfa("ekran_07_bildirimler","Bildirim Kutusu","Portal · UETS · kayıtlı iletişim araçları","""
 <div class=kart><h3>Referans kodsuz giriş — işlem bekliyor</h3><table><tr><th>Tarih</th><th class=r>Tutar</th><th>Kalan süre</th><th>Yapılacak</th></tr><tr><td>11/10/2026 09:14</td><td class=r>12.500 TL</td><td class=uy>31 saat</td><td>Fatura ile eşleştir veya "hizmet bedeli değil" belgesi yükle</td></tr></table>
-<div class=not>Bu giriş bloke edilmedi, iade edilmedi. 48 saat içinde işlem yapılmazsa hizmet bedeli sayılıp tevkifat kesilir; fazla kesinti ertesi ay iade edilir. (M.1 (c), (k))</div></div>
+<div class=not>Bu giriş bloke edilmedi, iade edilmedi. 7 gün içinde işlem yapılmazsa hizmet bedeli sayılıp tevkifat kesilir; fazla kesinti ertesi ay iade edilir. (M.1 (c), (k))</div></div>
 <div class=kart><h3>İnceleme askısı — gelir kaynağı beyanı</h3><table><tr><th>Tarih</th><th class=r>Tutar</th><th>Süre</th></tr><tr><td>12/10/2026</td><td class=r>240.000 TL</td><td class=kr>15 gün</td></tr></table>
 <p class=et>Kural: son üç aylık hasılat ortalamasının 5 katını ve aynı zamanda iki aylık brüt asgari ücreti (66.060 TL) birlikte aşan giriş. Burada ortalama 40.000 TL → eşik 200.000 TL.</p>
 <div class=alan>Gelir kaynağı: ○ Hizmet bedeli ○ Faiz içermeyen borç ○ Emanet iadesi ○ Hibe ○ Miras ○ Kâr paylaşımlı sermaye desteği ○ Diğer &nbsp; · Belge: [Dosya seç]</div>

@@ -1,6 +1,6 @@
 import re,os,subprocess,html,shutil,pymupdf
 K=os.path.dirname(os.path.dirname(os.path.abspath(__file__))); OUT=os.path.dirname(os.path.abspath(__file__))
-CH="/opt/pw-browsers/chromium-1194/chrome-linux/chrome"
+CH="/usr/bin/chromium"
 CSS="""@page{size:A4;margin:18mm 16mm}body{font-family:'DejaVu Sans','Noto Sans',Arial,sans-serif;font-size:10.5pt;line-height:1.45;color:#111}
 h1{font-size:17pt;color:#1f3a5f;border-bottom:2px solid #1f3a5f;padding-bottom:4px}h2{font-size:13.5pt;color:#1f3a5f;margin-top:18px}h3{font-size:11.5pt;color:#1f3a5f}
 table{border-collapse:collapse;width:100%;margin:8px 0;font-size:9pt}th,td{border:1px solid #b9c3d0;padding:4px 6px;vertical-align:top;text-align:left}th{background:#eef2f7}
@@ -51,12 +51,15 @@ def md2html(md):
         while i<len(L) and L[i].strip()!="" and not re.match(r"^(#{1,6} |\||>|```|---$|(\s*)([-*]|\d+\.) )",L[i]): buf.append(L[i]); i+=1
         out.append("<p>"+inline(" ".join(buf))+"</p>")
     return "\n".join(out)
+import tempfile
+
 def pdf(md_path,ad,baslik=None):
     md=open(os.path.join(K,md_path)).read()
     h="<!doctype html><meta charset=utf-8><style>"+CSS+"</style>"+md2html(md)
-    hp=os.path.join("/tmp/claude-0/-home-user-Mucit-ai/8369fb4b-b4f0-5e7d-9664-c411e733fa67/scratchpad",ad+".html"); open(hp,"w").write(h)
+    hp=os.path.join(tempfile.gettempdir(),ad+".html"); open(hp,"w").write(h)
     subprocess.run([CH,"--headless","--no-sandbox","--disable-gpu","--no-pdf-header-footer","--print-to-pdf="+os.path.join(OUT,ad+".pdf"),"file://"+hp],check=True,capture_output=True)
     print(ad,os.path.getsize(os.path.join(OUT,ad+".pdf"))//1024,"KB")
+
 if __name__=="__main__":
     pdf("CIMER/CIMER_MURACAAT_METNI_3000_KELIME.md","00_CIMER_Muracaat_Metni")
     pdf("DEVLETE_SUNULACAK_METIN.md","01_Kanun_Teklifi_Taslagi")
@@ -67,7 +70,9 @@ if __name__=="__main__":
     pdf("TEHLIKE_DEFTERI_DEVLET.md","07_Kalan_Riskler_Defteri")
     shutil.copy(os.path.join(K,"GORSELLER/GORSEL_EK.pdf"),os.path.join(OUT,"06_Gorsel_Ek.pdf"))
     shutil.copy(os.path.join(K,"MALI_MODEL/MIKRO_MUKELLEF_MALI_MODEL.xlsx"),os.path.join(OUT,"05b_Mali_Model_Excel.xlsx"))
-    shutil.copy("/root/.claude/uploads/8369fb4b-b4f0-5e7d-9664-c411e733fa67/1df9a5b6-image.png",os.path.join(OUT,"08_TBMM_hata_ekran_goruntusu.png"))
+    hata_src = "/root/.claude/uploads/8369fb4b-b4f0-5e7d-9664-c411e733fa67/1df9a5b6-image.png"
+    if os.path.exists(hata_src):
+        shutil.copy(hata_src,os.path.join(OUT,"08_TBMM_hata_ekran_goruntusu.png"))
     m=pymupdf.open()
     for f in ["01_Kanun_Teklifi_Taslagi","02_Delil_Eki","03_Teblig_Taslagi","04_Komisyon_Paketi","05_Mali_Model","06_Gorsel_Ek","07_Kalan_Riskler_Defteri"]:
         m.insert_pdf(pymupdf.open(os.path.join(OUT,f+".pdf")))

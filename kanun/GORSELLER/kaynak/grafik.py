@@ -13,13 +13,13 @@ def ok(x1,y1,x2,y2): ax.annotate("",xy=(x2,y2),xytext=(x1,y1),arrowprops=dict(ar
 kutu(0.3,5.9,2.6,1.0,"Mükellef\nfatura keser\n(portal, e-Devlet onayı)",'#fff3d6')
 kutu(3.6,5.9,2.4,1.0,"Portal\nreferans kodu üretir\n(M.1 (a))")
 ok(2.9,6.4,3.6,6.4)
-kutu(0.3,3.7,3.6,1.3,"KURUMSAL ALICI\nÖdemede portalca hesaplanan tevkifat\n(gayrisafi hasılatın %13,5'i, tek oran)\nödemeden gider yazamaz (M.1 (b), (e))")
+kutu(0.3,3.7,3.6,1.3,"KURUMSAL ALICI\nNötr Kural (%25) veya %13,5 tevkifat\nAlıcı ödemeden gider yazamaz\n(M.1 (b), (e))")
 kutu(4.5,3.7,3.6,1.3,"VADELİ (30-90 gün)\nVadeli Tevkifat Senedi + elektronik teminat\nVadede teminattan Hazine'ye\n(M.1 (b))")
 kutu(8.7,3.7,4.0,1.3,"NİHAÎ TÜKETİCİ veya PLATFORM\nBanka / ödeme kuruluşu tahsilatta\n%13,5 keser, Hazine'ye aktarır\n(M.1 (c), (l))")
 ok(4.8,5.9,2.1,5.0); ok(4.8,5.9,6.3,5.0); ok(5.4,5.9,10.7,5.0)
 kutu(0.3,1.7,3.6,1.2,"YURT DIŞI MÜŞTERİ\nDöviz intikalinde %13,5\ntransferi yapan kuruluş keser\n(M.1 (ç))")
 ok(4.8,5.9,1.0,2.9) if False else None
-kutu(4.5,1.7,3.6,1.2,"KODSUZ GİRİŞ\n48 saat bekler, bloke edilmez;\nmükellef eşleştirir; yoksa hizmet bedeli\n(M.1 (c))",'#fff3d6')
+kutu(4.5,1.7,3.6,1.2,"KODSUZ GİRİŞ\n7 gün bekler, bloke edilmez;\nmükellef eşleştirir; yoksa hizmet bedeli\n(M.1 (c))",'#fff3d6')
 kutu(8.7,1.7,4.0,1.2,"AŞIRI GİRİŞ (5× ortalama ve ≥ 2 asgari ücret)\n15 gün inceleme askısı,\ngelir kaynağı beyanı (M.1 (j))",'#fdeaea','#a11d1d')
 kutu(3.5,0.15,6.0,0.9,"Tüm tahsilat münhasır hesaba girer → net bakiye serbest\nTavan: 24 brüt asgari ücret (792.720 TL) → aşılınca genel hükümler (M.1 (h))",'#e8f5ec','#14662b')
 for x in (2.1,6.3,10.7): ok(x,3.7,6.5,1.05) if False else None

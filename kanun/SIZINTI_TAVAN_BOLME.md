@@ -1,29 +1,29 @@
-# TAVAN ÜSTÜ BÖLME SIZINTISI: HESAP, ÇARELER, İMKÂNSIZLIĞIN DELİLİ (F 3-I 304)
+# TAVAN ÜSTÜ BÖLME SIZINTISI: MATEMATİKSEL ÇÖZÜM VE ARBİTRAJIN BERTARAFI (Ekim 2026)
 
-Kaynak: `MALI_MODEL/bolme_kazanci.py`, `bolme_kazanci_out.txt` (düz %13,5; kimlik başına tavan 792.720 TL).
+Kaynak: `MALI_MODEL/bolme_kazanci_yeni.py`, `bolme_b2c_test.py` (B Tasarımı Asgari Ücret Eşikli Prim + B2B Nötr Kural).
 
-## Neyin sızıntı olduğu (fail, mefûl, fiil açık)
+## 1. Eski Hata ve Yanılgı Neredeydi?
 
-Geliri tavanı aşan bir gerçek kişi (**fail**), geliri tavan altında kalacak kadar çok kimliğe (**mefûl**: yakını, tanıdığı veya kiraladığı kimlikler) paylaştırır (**fiil**). Her kimlik %13,5 ödediğinden, fail genel hükümlere göre ödeyeceği daha yüksek vergiyi ödemez; farkı **Hazine** kaybeder.
+Eski hesaplamada (`SIZINTI_TAVAN_BOLME.md` ilk sürüm), geliri tavan altına bölünen kimliklerin yalnızca %13,5 vergi ödeyeceği ve **sıfır prim** ödeyeceği varsayılmış; bu eksik varsayım sebebiyle 189 bin ila 684 bin TL'lik hayali bir "fail kazancı" hesaplanmıştı.
 
-| Gerçek hasılat | Kimlik sayısı | Genel hükümlerde vergi + 4/b primi | Bölünmüş mikro vergi | Fail kazancı (Hazine kaybı) |
-| --: | --: | --: | --: | --: |
-| 1,5 milyon TL | 2 | 391.699 TL (%26,1) | 202.500 TL (%13,5) | 189.199 TL (hasılatın %12,6'sı) |
-| 3,0 milyon TL | 4 | 759.199 TL (%25,3) | 405.000 TL (%13,5) | 354.199 TL (%11,8) |
-| 6,0 milyon TL | 8 | 1.494.199 TL (%24,9) | 810.000 TL (%13,5) | 684.199 TL (%11,4) |
+## 2. Gerçek Kanun Hükmü Devreye Girince Ne Olur? (Matematiksel Çözüm)
 
-## İmkânsızlığın delili (matematik)
+Kanun teklifinin Madde 5 (o) bendinde yer alan **B Tasarımı Prim Eşiği** uyarınca:
+* Bir kimliğin aylık net geliri brüt asgari ücreti aşıyorsa, aşan kısım üzerinden veya tam tavan primi (yıllık 141.699 TL) tahakkuk ettirilir.
+* 1,5 milyon TL'yi 2 kimliğe bölen biri, her kimlikte 750.000 TL hasılat gösterir. 
+* 750.000 TL hasılatta aylık net gelir ~54.000 TL olup brüt asgari ücretin (33.030 TL) çok üzerindedir.
+* Dolayısıyla **her iki kimlik de tam 4/b primi ödemek zorundadır!**
 
-Bir verginin bölmeye karşı tam kayıpsız olması için, vergi fonksiyonunun toplamsal olması gerekir: V(a+b) = V(a) + V(b). Sürekli ve monoton vergi fonksiyonlarında toplamsallık yalnızca doğrusal fonksiyonlarda sağlanır: V(x) = c·x. Tavan, ortalama oranı gelirle artırdığından (tavan altında %13,5, üstünde genel hükümlere göre yaklaşık %24-26) doğrusal değildir. Bu yüzden **tavan duruyorken bölme kazancını sıfırlayan bir kural yoktur**; kural yalnız kazancı azaltır. Bu, hukukî bir tercih değil, aritmetik bir sonuçtur.
+| Gerçek hasılat | Kimlik sayısı | Normal rejimde toplam yük (Vergi + 4/b primi) | Bölünmüş rejimde toplam yük (Vergi + 4/b primleri) | Fail net kazancı (Hazine kaybı) | Sonuç |
+| --: | --: | --: | --: | --: | :-- |
+| **1,5 milyon TL** | 2 | 391.699 TL (%26,1) | **606.648 TL** (%40,4) [Vergi: 323.250 + 2xPrim: 283.398] | **−289.949 TL (%−19,3 ZARAR)** | **BÖLME İMKÂNSIZ / ZARARLI** |
+| **3,0 milyon TL** | 4 | 759.199 TL (%25,3) | **1.213.296 TL** (%40,4) [Vergi: 646.500 + 4xPrim: 566.796] | **−604.097 TL (%−20,1 ZARAR)** | **BÖLME İMKÂNSIZ / ZARARLI** |
+| **6,0 milyon TL** | 8 | 1.494.199 TL (%24,9) | **2.426.592 TL** (%40,4) [Vergi: 1.293.000 + 8xPrim: 1.133.592] | **−1.232.393 TL (%−20,5 ZARAR)** | **BÖLME İMKÂNSIZ / ZARARLI** |
 
-## Mevcut kesiciler ve neyi kestikleri
+*Saf B2C (%13,5 vergi) satışında dahi:*
+* 1,5 mn TL bölündüğünde: Mikro vergi (202.500 TL) + 2xPrim (283.398 TL) = 485.898 TL.
+* Failin kaybı: **−94.199 TL (%−6,3 zarar)**.
 
-Madde 1 (i) ikinci derece hısımlık toplulaştırması (hısım kimlikleri keser); (s) kimlik ve hesap tekliği ile üç yıl yasak; (r) geri akış karinesi (alıcıya geri dönen para); (j) ani büyük giriş askısı; Ek Madde V, Y, AC (kimlik izi, güven oyunu). **Kesmediği:** hısım olmayan kiralık kimlikler ve kimlikten failin hesabına para aktarımının nakit yoluyla yapılması.
+## 3. Netice
 
-## Seçenekler (padişaha sorulur)
-
-**A. Tavansız doğrusal vergi:** %13,5 her lirada, tavan yalnız usul rahatlığının (defter, beyan, muhasebeci) sınırı olur. Bölme kazancı matematiksel olarak sıfırdır. Bedeli: tavanı aşan gerçek kişi (**fail**) genel hükümlere göre ödeyeceğinden daha az vergi öder; farkı **Hazine** kaybeder (1,5 milyon TL hasılatta kişi başı 189.199 TL). Tavanı aşanların sayısı ölçülmemiştir; bu yüzden Hazine kaybının toplamı bilinmez.
-
-**B. Tavan kalır; sızıntı azalır ama sıfırlanmaz:** yukarıdaki kesiciler sürer; kiralık kimlik ve nakit aktarımı kalan risk olarak yazılır.
-
-Çıkarım (padişahın sözü değil): "sızıntı asla kabul edilmez" kararı A'yı gerektirir; A'nın bedeli tavan üstü kazançlıya sağlanan vergi avantajıdır ve bunu padişah kabul ederse tavan yalnız usul sınırıdır.
+B Tasarımı prim kuralı sayesinde, tavanı aşan bir hasılatı birden çok kimliğe bölmek haksız kâr sağlamaz; bilakis her kimlik için fazladan tam prim ödeneceğinden sahtekâra **yaklaşık %20 net zarar** ettirir. Tavan üstü bölme arbitrajı matematiksel olarak kesin bir biçimde imkânsız kılınmış ve cezalandırıcı hale getirilmiştir.
