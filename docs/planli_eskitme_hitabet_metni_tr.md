@@ -6,7 +6,7 @@
 
 Bugün sizlerle planlı eskitmenin ve platform vesayetinin hukuki, akli ve ahlaki hükmünü konuşacağım.
 
-Huzurunuza herhangi bir tikel nesneyle çıkmayacağım. Belirli bir mekanizma, değiştirilebilir bir alt parça, bir enerji depolama ünitesi veya icra edilebilir bir kod rutini kendi hususi fiziğini, kendi güvenlik kurallarını ve dönemsel mevzuatını taşır; ve bunlardan birinin adını andığım an, müzakere o somut aygıtın tikel özelliklerine hapsolur ve evrensel ilke kaybolur. Bu sebeple ilkeyi her türlü somut tezahürden soyutluyorum. Usul ehlinin diliyle bu işlem tenkîh-i menâttır: Markayı, ürün kategorisini ve tikel maddi zemini ayıklıyorum; geriye yalnızca hükmün hakikaten bağlı olduğu asıl menatı bırakıyorum. Geriye kalan; iktisadi mimari, endüstriyel ekosistemler, kusursuz haksız fiil sorumluluğu ve objektif normatif değişkenlerle tarif edilmiş bir modeldir. Bu hitabetteki her delil, münhasıran bu model ve onun dört arketipi üzerine inşa edilmiştir.
+Bu meseleyi usul ehlinin kadim yöntemiyle, tenkîh-i menât ameliyesiyle ele alıyoruz: Markayı, ürün kategorisini ve tikel maddi kabuğu ayıklayarak doğrudan muamelenin yalın hukuki zeminine odaklanıyoruz. Karşımızdaki hakikat; asimetrik güç, kusursuz haksız fiil sorumluluğu ve objektif normatif değişkenlerle örülü bir iktisadi mimaridir. Bu hitabette serdedilen her delil, münhasıran bu model ve onun dört arketipi üzerine inşa edilmiştir.
 
 İşte değişkenler ve hakim matematiksel aksiyomlar:
 
