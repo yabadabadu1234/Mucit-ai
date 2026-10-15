@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Planlı Eskitme Formel Hukuki Modeli - Aksiyomatik Sunum Panosu</title>
+<style>
+  :root {
+    --bg-dark: #07090e;
+    --card-bg: rgba(13, 17, 25, 0.92);
+    --border-color: #1f293d;
+    --accent-gold: #e5b95c;
+    --accent-cyan: #38bdf8;
+    --accent-emerald: #34d399;
+    --accent-rose: #f43f5e;
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  
+  body {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    line-height: 1.5;
+    background-image: 
+      radial-gradient(circle at 15% 15%, rgba(56, 189, 248, 0.05) 0%, transparent 40%),
+      radial-gradient(circle at 85% 85%, rgba(229, 185, 92, 0.05) 0%, transparent 40%),
+      linear-gradient(to right, rgba(255, 255, 255, 0.01) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+    padding: 30px;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 35px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .header-tag {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--accent-gold);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    padding: 4px 12px;
+    background: rgba(229, 185, 92, 0.1);
+    border: 1px solid rgba(229, 185, 92, 0.25);
+    border-radius: 4px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .nav-bar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+  }
+
+  .nav-btn {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    padding: 8px 16px;
+    background: #111827;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+  }
+
+  .nav-btn:hover {
+    color: #ffffff;
+    border-color: var(--accent-cyan);
+    background: #1e293b;
+  }
+
+  .slide-container {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  .slide-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 20px 40px -15px rgba(0,0,0,0.7);
+    backdrop-filter: blur(12px);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .slide-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--accent-gold), var(--accent-cyan));
+  }
+
+  .slide-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    padding-bottom: 15px;
+  }
+
+  .slide-title-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .slide-tag {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--accent-cyan);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  .slide-title {
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  .slide-number {
+    font-family: var(--font-mono);
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: rgba(255,255,255,0.08);
+    line-height: 1;
+  }
+
+  .slide-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    gap: 25px;
+  }
+
+  @media (max-width: 1100px) {
+    .slide-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .formulas-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .formula-box {
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid rgba(56, 189, 248, 0.15);
+    border-radius: 8px;
+    padding: 16px;
+    transition: transform 0.15s ease, border-color 0.15s ease;
+  }
+
+  .formula-box:hover {
+    border-color: rgba(56, 189, 248, 0.4);
+    transform: translateY(-2px);
+  }
+
+  .formula-label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .formula-label::before {
+    content: '▶';
+    font-size: 0.65rem;
+    color: var(--accent-gold);
+  }
+
+  .formula-content {
+    font-family: var(--font-mono);
+    font-size: 0.88rem;
+    color: #e2e8f0;
+    white-space: pre-wrap;
+    background: rgba(0, 0, 0, 0.35);
+    padding: 10px 14px;
+    border-radius: 6px;
+    border-left: 2px solid var(--accent-cyan);
+  }
+
+  .diagram-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .diagram-box {
+    background: #090d16;
+    border: 1px solid rgba(229, 185, 92, 0.2);
+    border-radius: 8px;
+    padding: 18px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .diagram-title {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(229, 185, 92, 0.15);
+    padding-bottom: 6px;
+  }
+
+  .diagram-ascii {
+    font-family: var(--font-mono);
+    font-size: 0.80rem;
+    line-height: 1.35;
+    color: #38bdf8;
+    white-space: pre;
+    overflow-x: auto;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 14px;
+    border-radius: 6px;
+    flex-grow: 1;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">MÜCERRET MODEL & FORMEL AKSİYOMLAR</div>
+  <h1>PLANLI ESKİTME HUKUKİ MODELİ: SUNUM PANOSU</h1>
+  <p class="subtitle">Sâni, Bâi, Mâlik, Semen, AsliKapasite, KasıtlıKısıt, TeknikZaruret, EsaretKatsayısı ve Hukukullâh değişkenleri üzerine kurulu saf cebirsel/hukuki mimari.</p>
+</header>
+
+<div class="nav-bar">
+  <a class="nav-btn" href="#slide-01">01: Değişkenler & Eşikler</a>
+  <a class="nav-btn" href="#slide-02">02: Model 1: Fabrika Fazı</a>
+  <a class="nav-btn" href="#slide-03">03: Model 2: Satış Sonrası</a>
+  <a class="nav-btn" href="#slide-04">04: Model 3: Tamir Ambargosu</a>
+  <a class="nav-btn" href="#slide-05">05: Model 4: Limon & Hukukullâh</a>
+  <a class="nav-btn" href="#slide-06">06: Fikrî Mülkiyet & İlk Satış</a>
+  <a class="nav-btn" href="#slide-07">07: Hükümler & Netice Matrisi</a>
+</div>
+
+<main class="slide-container">
+
+  <article class="slide-card" id="slide-01">
+    <div class="slide-header">
+      <div class="slide-title-wrap">
+        <span class="slide-tag">AKSİYOMATİK TEMEL &amp; DEĞİŞKENLER</span>
+        <h2 class="slide-title">EL-MENÂTÜ&#x27;L-MÜCERRED: FORMEL DEĞİŞKENLER VE HUKUKİ EŞİKLER</h2>
+      </div>
+      <div class="slide-number">01</div>
+    </div>
+    <div class="slide-grid">
+      <div class="formulas-column">
+        
+        <div class="formula-box">
+          <div class="formula-label">TARAFLAR VE HUKUKİ EHLİYET REJİMİ</div>
+          <div class="formula-content">Sâni: Asimetrik Tasarım &amp; Mantıksal Tahakküm | Bâi: Zilyetlik &amp; Akit İntikali (t0) | Mâlik: Semen &amp; Milk-i Tâmm Sahibi | Hukukullâh: Müşterekler Taşıma Kapasitesi (C)</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">TEMEL PARAMETRİK BAĞINTILAR</div>
+          <div class="formula-content">Metâ: Zamana Mukavim İktisadi Varlık | Semen: Değişim Bedeli | AsliKapasite: Fıtrî Mimari Benchmark (E) | KasıtlıKısıt: Suni Erken Kırılma Tavanı (L &lt; E)</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">ORANTILILIK FİLTRESİ (MECELLE 22)</div>
+          <div class="formula-content">Orantı = KazanılanTeknikFayda / İmhaEdilenKapasite
+Eğer Orantı -&gt; 0 ise TeknikZaruret = Bâtıl (Sû-i İsti&#x27;mâl-i Hak)</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">ESARET VE FİYAT MANİPÜLASYONU ENDEKSİ</div>
+          <div class="formula-content">EsaretKatsayısı ∈ [0, 1]
+EsaretKatsayısı -&gt; 1 iken d(Semen)/d(KasıtlıKısıt) -&gt; 0 (Fiyat Disiplini Kopar, Soygun Tekeli Başlar)</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">KAMUSAL VE EKOLOJİK HÜKÜMSÜZLÜK İLKESİ (MECELLE 26)</div>
+          <div class="formula-content">Toplam[AsliKapasite - KasıtlıKısıt] &gt; MüştereklerEşiği ==&gt; Akdi Feragat Şartları = BÂTIL
+Mâlik Mülkiyeti Mahfuzdur (Milk-i Tâmm); Müeyyide ve İtlâf Tazmini Doğrudan Sâni Üzerinedir (Hisbe ve Ta&#x27;zîr)</div>
+        </div>
+        
+      </div>
+      <div class="diagram-column">
+        <div class="diagram-box">
+          <div class="diagram-title">TAHTA ŞEMASI & MANTIKÎ AKIŞ DİYAGRAMI</div>
+          <pre class="diagram-ascii">[ JURISDICTIONAL PLANE / HUKUKULLÂH ]
+    Commons Threshold: MüştereklerEşiği (Mecelle 26)
+    Toplam(AsliKapasite - KasıtlıKısıt) &gt; MüştereklerEşiği  ==&gt;  Feragat BÂTIL / Hisbe Müdahalesi
+                                │
+                                ▼
+         [ SÂNi&#x27; / ÜRETİCİ ] ────────── Asimetrik Bilgi &amp; Mantıksal Kod
+                ( Sâni )
+                  │
+ ┌────────────────┴────────────────┐
+ │ FAZ 1: FABRİKA TASARIMI         │ FAZ 2: SATIŞ SONRASI MÜDAHALE
+ │ A1: AsliKapasite (Tam Fıtrî)    │ Saklı Amânatü&#x27;l-Hıfz Kanalı
+ │ A2: KasıtlıKısıt (Kısıt &lt; Asli) │ Uzaktan Kısma / Blokaj
+ └────────────────┬────────────────┘
+                  │
+                  ▼  Akit Anı: t0
+         [ BÂİ&#x27; / SATICI ] ───────────── Semen = Semen(AsliKapasite) Tahsil Edilir
+                ( Bâi )                  (Upstream Taghrîr &amp; Gabn-i Fâhiş)
+                  │
+                  ▼  Milk-i Tâmm (Mutlak Mülkiyet İntikali)
+         [ MÂLİK / ALICI ]
+                ( Mâlik )
+                  │
+   ┌──────────────┴───────────────────────────────────────────────────────┐
+   │                                                                      │
+   ▼                                                                      ▼
+[ MİKRO AKDİ AYIP FAZI ]                                   [ MÜBÂŞERETEN İTLÂF FAZI ]
+* KasıtlıKısıt &lt; AsliKapasite ==&gt; Ayb-i Hafî (Mecelle 337) * Uzaktan Kısma ==&gt; Mübâşereten İtlâf (Mecelle 92)
+* Fesih: Faskh (Mecelle 356)                               * Tamir Ambargosu ==&gt; Şart-ı Fâsid &amp; İhtikâr (100)
+* Semen Tenzili: Erş / Noksan-ı Semen                      * Ref&#x27;-i Teaddî &amp; Aynen İade
+* Teselsül Rücû: Bâi ---&gt; Sâni                             * Tazminat Doğrudan Sâni&#x27;ye Yüklenir</pre>
+        </div>
+      </div>
+    </div>
+  </article>
+    
+  <article class="slide-card" id="slide-02">
+    <div class="slide-header">
+      <div class="slide-title-wrap">
+        <span class="slide-tag">MODEL 1: FABRİKA FAZI</span>
+        <h2 class="slide-title">MÜBADELE ÖNCESİ KUSUR, GABN-İ FÂHİŞ VE HÜKMÎ HELÂK</h2>
+      </div>
+      <div class="slide-number">02</div>
+    </div>
+    <div class="slide-grid">
+      <div class="formulas-column">
+        
+        <div class="formula-box">
+          <div class="formula-label">YAPISAL KAPASİTE BUDAMASI &amp; YOK EDİLEN FAYDA</div>
+          <div class="formula-content">KasıtlıKısıt &lt; AsliKapasite
+YokEdilenFayda = Integral[KasıtlıKısıt -&gt; AsliKapasite] Fayda(t) dt &gt; 0</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">GABN-İ FÂHİŞ VE BÂTIL GASP (NİSÂ 29)</div>
+          <div class="formula-content">HaksızSemenFarkı = Semen(AsliKapasite) - Semen(KasıtlıKısıt) &gt; 0
+Bilgi Asimetrisi Altında ==&gt; Ekl-i Emvâl bi&#x27;l-Bâtıl (Nisâ 29) &amp; Ayb-ı Hafî (Mecelle 337)</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">HÜKMÎ HELÂK VE ZARAR ORANI AKSİYOMU</div>
+          <div class="formula-content">ZararOranı = (AsliKapasite - KasıtlıKısıt Kalan Değeri) / (Yorulan Parçanın İkâme Maliyeti) &gt;&gt; 1
+Burada Orantı = TeknikZaruret / (AsliKapasite - KasıtlıKısıt) -&gt; 0 ==&gt; Dava Edilebilir Ayb-ı Hafî</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">MECELLE TAZMİNAT VE DEF&#x27;İ HÜKÜMLERİ</div>
+          <div class="formula-content">Akit Feshi: Mâlik İptal Eder (Mecelle 356) | Mâni-i Redd Varsa Semen Tenzili (Erş: Mecelle 343-345)
+Teselsül: Bâi Öder, Sâni&#x27;ye Rücû Eder | Haksız İsticel Cezası: Mecelle 99 (Men İste&#x27;cele...)</div>
+        </div>
+        
+      </div>
+      <div class="diagram-column">
+        <div class="diagram-box">
+          <div class="diagram-title">TAHTA ŞEMASI & MANTIKÎ AKIŞ DİYAGRAMI</div>
+          <pre class="diagram-ascii">[ SÂNİ&#x27; / ÜRETİCİ ] ──&gt; Tasarım Seçimi: A1 (AsliKapasite) vs A2 (KasıtlıKısıt) ──&gt; KasıtlıKısıt &lt; AsliKapasite
+      │
+      ├───────────────────────────────────┬───────────────────────────────────┐
+      ▼ (Meşru Yapısal Entegrasyon)       ▼ (Yapay Ayrıştırma / KasıtlıKısıt) ▼
+[ Fıtrî / Fonksiyonel Bütünlük ]     [ Suni Servis / İdâme Kilidi ]      [ Kasti / Zâtî Zaaf ]
+(Fiziki / Operasyonel Zaruret)       (Orantısız Fiziki / Mantıksal Set)  (Gizli Erken İtlaf)
+      │                                   │                                   │
+      ▼ (Teknik Zaruret Meşru: Orantılı)  ▼ (Zaruret Yok / Sû-i İsti&#x27;mâl)     ▼ (Ayb-i Hafî)
+  [ Meşru Zâtî Vasıf (Mecelle 87) ]   [ Sün&#x27;î Helâk-ı Hükmî ]             [ Hileli Kusur ]
+  (Mâlik Zaman Riskini Yüklenir)      (Ayıp ve Gabn-i Fâhiş)              (Al-Taghrîr al-Fi&#x27;lî)
+      │                                   │                                   │
+      └───────────────────────────────────┴───────────────────────────────────┘
+                                          │
+                                          ▼  (Dağıtım Zinciri)
+[ BÂİ&#x27; / SATICI ] ──&gt; Semen: Semen(AsliKapasite) Tahsil Edilir ──&gt; [ MÂLİK / ALICI ] (Mülkiyet Devri / t0)
+                                                       │
+                                                       ▼
+                                                Hukuki Netice:
+                                                * Ayb-i Hafî (Mecelle 337)
+                                                * Gabn-i Fâhiş bi&#x27;t-Taghrîr
+                                                * Faskh (356) / Arsh (343)
+                                                * Bâi -&gt; Sâni Rücû&#x27; Hakkı</pre>
+        </div>
+      </div>
+    </div>
+  </article>
+    
+  <article class="slide-card" id="slide-03">
+    <div class="slide-header">
+      <div class="slide-title-wrap">
+        <span class="slide-tag">MODEL 2: SATIŞ SONRASI FAZ</span>
+        <h2 class="slide-title">MÜLKİYETE TECAVÜZ, AMÂNATA İHANET VE MÜBÂŞERETEN İTLÂF</h2>
+      </div>
+      <div class="slide-number">03</div>
+    </div>
+    <div class="slide-grid">
+      <div class="formulas-column">
+        
+        <div class="formula-box">
+          <div class="formula-label">TEK TARAFLI KAPASİTE DÜŞÜRME GRADYANI</div>
+          <div class="formula-content">Herhangi bir an (t &gt; t0) için: Sâni müdahalesiyle d(Kapasite)/dt &lt; 0
+Burada Orantı = KazanılanTeknikFayda / KayıpKapasite -&gt; 0 ==&gt; Mübâşereten İtlâf (Mecelle 92)</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">MÜTLİFİN KUSURSUZ TAZMİN BORCU (DAMÂN AL-MÜTLİF)</div>
+          <div class="formula-content">Sâni Tazminat Borcu = Kıymet(Müdahale Öncesi) - Kıymet(Müdahale Sonrası) + Menâfi Gasbı
+Mecelle 92: Mübâşir mütlif kasıt şartı aranmaksızın zâmindir.</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">AMÂNATÜ&#x27;L-HIFZ VE TASARRUF FÎ MİLKİ&#x27;L-GAYR</div>
+          <div class="formula-content">Akit Devri = Milk-i Tâmm (Mâlik İktisabı) ==&gt; Sâni Tasarruf Yetkisi = 0
+Bakım Kanalının Zarar İçin Kullanılması = Hiyânetü&#x27;l-Amâneh &amp; Fuzûlî Tasarruf (Bâtıl)</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">MECELLE 33 VE ORANTILILIK ÇIKMAZI</div>
+          <div class="formula-content">El-Idtırâru lâ yubtılü hakka&#x27;l-gayr (Zaruret başkasının hakkını iptal etmez).
+Sâni &#x27;güvenlik/kararlılık&#x27; bahanesiyle Mâlik&#x27;in mülkünü kısamaz veya felç edemez.</div>
+        </div>
+        
+      </div>
+      <div class="diagram-column">
+        <div class="diagram-box">
+          <div class="diagram-title">TAHTA ŞEMASI & MANTIKÎ AKIŞ DİYAGRAMI</div>
+          <pre class="diagram-ascii">[ SÂNİ&#x27; / ÜRETİCİ ] ──( t &gt; t0: Mülkiyet Mâlik&#x27;te / Milk Tamm )──&gt; [ Metâ ]
+      │                                                        │
+      ├──────────────────( Harici / Dahili İrtibat )───────────┤
+      │                   [ Amânatü&#x27;l-Hıfz Kanalı ]            │
+      ▼                                                        ▼
+[ Tek Taraflı Mantıksal Müdahale ]                  [ Fonksiyonel Felç / Kısma ]
+(Unannounced Algorithmic Downgrade)                 (Throughput Throttled / Impaired)
+      │                                                        │
+      ▼                                                        ▼
+Meşruiyet Testi:                                    Hukuki Netice:
+* Teknik Filtre: Orantı -&gt; 0 (Orantısız)             * Tasarruf fî Milk al-Gayr
+* Mecelle 33: &quot;Zaruret başkasının hakkını iptal     * Mübâşereten İtlâf (Mecelle 92)
+  etmez&quot; (Al-idtirâru lâ yubtilu haqqa&#x27;l-ghayr)      * Tazmin / Aynen İade / Ref&#x27;-i Teaddî</pre>
+        </div>
+      </div>
+    </div>
+  </article>
+    
+  <article class="slide-card" id="slide-04">
+    <div class="slide-header">
+      <div class="slide-title-wrap">
+        <span class="slide-tag">MODEL 3: İDÂME VE İKÂME AMBARGOSU</span>
+        <h2 class="slide-title">MANTIKÎ KİLİTLER, YAPAY İHTİKÂR VE BAY&#x27;U&#x27;L-MUDTARR</h2>
+      </div>
+      <div class="slide-number">04</div>
+    </div>
+    <div class="slide-grid">
+      <div class="formulas-column">
+        
+        <div class="formula-box">
+          <div class="formula-label">TEKELCİ AMBARGO ORANI (İHTİKÂR VE ŞART-I FÂSİD)</div>
+          <div class="formula-content">AmbargoOranı = Bakım ve İdâme Kaybı / Sahih Güvenlik Tehdidi Farkı -&gt; Sonsuz
+Kriptografik / Mantıksal Eşleştirme Kilidi = Şart-ı Fâsid (Mecelle 100 gereği Bâtıl)</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">ZOR DURUM İSTİSMAR FAZLASI (BAY&#x27;U&#x27;L-MUDTARR)</div>
+          <div class="formula-content">ZorlamaTamirPrimi = Sâni Tekel Tamir Fiyatı - Rekabetçi İkâme Maliyeti &gt; 0
+Mâlik Çaresizliğinin Sömürülmesi ==&gt; Nehy-i Nebî: Bay&#x27;u&#x27;l-Mudtarr (Bâtıl / Fâsid)</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">ALT BİLEŞEN YIPRANMA DİNAMİĞİ</div>
+          <div class="formula-content">AltBileşenÖmrü &lt;&lt; MetâGövdeÖmrü iken:
+Sâni&#x27;nin Bağımsız Müdahaleyi Engellemesi = Hükmî Helâk ve Yapay İhtikâr (Ebû Yûsuf Kaidesi)</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">ÇEKİRDEK GÜVENLİK İLE İDÂME AYRIŞMASI (DECOUPLING)</div>
+          <div class="formula-content">Açık Doğrulama Protokolü ==&gt; Anahtar İfşası Olmadan İkâme Mümkündür
+Sâni&#x27;nin Güvenliği Bahane Ederek İdâmeyi Kilitlemesi = Sû-i İsti&#x27;mâl-i Hak (Hükümsüz)</div>
+        </div>
+        
+      </div>
+      <div class="diagram-column">
+        <div class="diagram-box">
+          <div class="diagram-title">TAHTA ŞEMASI & MANTIKÎ AKIŞ DİYAGRAMI</div>
+          <pre class="diagram-ascii">[ Metâ ] ──&gt; Alt Unsur Yoruldu / Doğal Aşınma ──&gt; [ Mâlik / Müstakil Usta ]
+      │                                                        │
+      │                                                        ▼
+      │                                             [ Standart Müdahale / İkâme ]
+      │                                                        │
+      ├───[ Kriptografik / Mantıksal Kilit ] &lt;─────────────────┘
+      │   (Proprietary Serialization / Monopolistic Lock)
+      ▼
+Sahte İkilem (False Dilemma):                       Gerçek Hukuki / Teknik Çözüm:
+&quot;Ya Güvenlik Çekirdeği Ya Tamir Yasağı&quot;            &quot;Modüler Doğrulama &amp; Açık Protokol&quot;
+      │                                                        │
+      ▼                                                        ▼
+Hukuki Netice:                                      Ayrışma (Decoupling):
+* Şart-ı Fâsid (Mülkiyeti Boğan Kayıt)             * Sıfır-Bilgi İspatı (Zero-Knowledge)
+* İhtikâr (Hizmet ve Parçayı Yapay Kısma)           * Anahtarlar İfşa Olmadan Tamir
+* Bay&#x27; al-Mudtarr (Zor Düşürme / İstismâr)          * Mecelle 100: Kısıtlama Hükümsüzdür</pre>
+        </div>
+      </div>
+    </div>
+  </article>
+    
+  <article class="slide-card" id="slide-05">
+    <div class="slide-header">
+      <div class="slide-title-wrap">
+        <span class="slide-tag">MODEL 4: SEKTÖREL ÇÖKÜŞ &amp; HUKUKULLÂH</span>
+        <h2 class="slide-title">LİMON DİNAMİĞİ, ESARET KAPANI VE TERMODİNAMİK İFSÂD</h2>
+      </div>
+      <div class="slide-number">05</div>
+    </div>
+    <div class="slide-grid">
+      <div class="formulas-column">
+        
+        <div class="formula-box">
+          <div class="formula-label">DİNAMİK TERS SEÇİLİM (LİMON PİYASASI ÇÖKÜŞÜ)</div>
+          <div class="formula-content">Kâr(Sâni-2 / Hilekâr) &gt; Kâr(Sâni-1 / Dürüst)
+[Semen(Asli) - Maliyet(Kısıt)] &gt; [Semen(Asli) - Maliyet(Asli)] ==&gt; Dürüst Üretici Piyasadan Silinir</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">ESARET ALTINDA SOYGUN PARADOKSU</div>
+          <div class="formula-content">EsaretKatsayısı -&gt; 1 iken: d(Semen)/d(KasıtlıKısıt) -&gt; 0 ve Talep Esnekliği -&gt; 0
+Tüketici Aldatıldığını Bilse Dahi Kaçamaz ==&gt; Tekelci Haksız Haraç Düzeni</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">GEZEGENSEL METABOLİK BORÇ VE İFSÂD Fİ&#x27;L-ARZ</div>
+          <div class="formula-content">Zaman Entegrali[Toplam GömülüEnerji * (AsliKapasite - KasıtlıKısıt) / AsliKapasite] &gt; MüştereklerEşiği
+Kamu Zararı-ı Âmm Doğurur ==&gt; Mecelle 26: Zarar-ı Âmmı Def İçin Zarar-ı Hâs İhtiyar Olunur</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">ÖRF-İ FÂSİD VE HİSBE MÜDAHALESİ</div>
+          <div class="formula-content">Sektörel Mutabakat = Örf-i Fâsid (Hukuki Norm Doğurmaz)
+Siyâset-i Şer&#x27;iyye ve Hisbe Otoritesinin Resen Müdahalesi ve Asgari Ömür Eşiği Koyması FARZDIR</div>
+        </div>
+        
+      </div>
+      <div class="diagram-column">
+        <div class="diagram-box">
+          <div class="diagram-title">TAHTA ŞEMASI & MANTIKÎ AKIŞ DİYAGRAMI</div>
+          <pre class="diagram-ascii">[ PİYASA REJİMİ ] ──&gt; EsaretKatsayısı (0 ile 1 arası) ──&gt; EsaretKatsayısı 1&#x27;e Gider (Kaçış İmkânsız)
+        │
+        ├─────────────────────────────┬─────────────────────────────┐
+        ▼ (Faz 1: Örtük Bilgi)        ▼ (Faz 2: Kamusal İfşa)       ▼ (Ekolojik Eşik)
+  [ Faz 1: Örtük Bilgi ]         [ Faz 2: Kamusal İfşa ]         [ Müşterekler: Hukukullâh Sınırı ]
+  * Dürüst Sâni-1 (Asli) elenir  * Tüketici aldatıldığını anlar  * Toplam(Asli - Kısıt) &gt; Müşterekler
+  * Hilekâr Sâni-2 piyasayı boğar* Esaret sebebiyle fiyat sabit: * Termodinamik İfsad
+  * Semen(Asli) gasp edilir      * Fiyat Kısıtla Düşmez (Soygun) * İfsâd fi&#x27;l-Arz (Mecelle 26)
+        │                             │                              │
+        └─────────────────────────────┼──────────────────────────────┘
+                                      ▼
+                        Hukuki ve Kazai Müdahale:
+                        * Mecelle 26: Zarar-ı Âmmı Def İçin Zarar-ı Hâs İhtiyar Olunur
+                        * Örf-i Fâsid Asla Hukuki Norm Doğurmaz
+                        * Hisbe / Siyâset-i Şer&#x27;iyye Müdahalesi Farzdır</pre>
+        </div>
+      </div>
+    </div>
+  </article>
+    
+  <article class="slide-card" id="slide-06">
+    <div class="slide-header">
+      <div class="slide-title-wrap">
+        <span class="slide-tag">FİKRÎ MÜLKİYET &amp; MÜLKİYET REJİMİ</span>
+        <h2 class="slide-title">İLK SATIŞ / İSTİHLÂK-I HAK VE MÜLKİYETİN DÜZLEMLERİ</h2>
+      </div>
+      <div class="slide-number">06</div>
+    </div>
+    <div class="slide-grid">
+      <div class="formulas-column">
+        
+        <div class="formula-box">
+          <div class="formula-label">İSTİHLÂK EŞİĞİ VE TASARRUF ALANI AYRIŞMASI</div>
+          <div class="formula-content">Satış Sonrası Tüm Anlarda (t &gt; t0): Sâni Tasarruf Yetkisi ∩ Satılan Münferit Metâ = Boş Küme
+Sâni Fikrî Mülkiyeti = Küllî Mimariyi ve Çoğaltmayı Korur (Küllî Tasarruf)</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">MÂLİKİN CÜZ&#x27;Î TASARRUF HAKKI (MİLK AL-NUSKHA)</div>
+          <div class="formula-content">İlk Satış Doktrini (İstihlâk-ı Hak bi&#x27;l-Bey&#x27;i&#x27;l-Evvel) ==&gt; Dağıtım/Kontrol Yetkisi TÜKENİR
+Mâlik: Fiziksel ve Mantıksal İşlerliği Çalıştırma, Koruma, İdâme ve Tadil Etme Hakkına Mâliktir</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">ŞİRKAT-İ MÜLK SAFSATASI VE ŞART-I FÂSİD</div>
+          <div class="formula-content">Alıcı Koda Şerik Değildir; Münferit Varlığın İşlerliğine Mâliktir
+&#x27;Kod benimdir, aleti istediğim an kısarım/kapatırım&#x27; Şartı = Şart-ı Fâsid (Mecelle 100: Bâtıl Tahakküm)</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">BEY&#x27; VE İCÂRE KARŞITLIĞI (HUKUKİ SINIR)</div>
+          <div class="formula-content">Satış Semeni Tahsil Edilmişse ==&gt; Mülkiyet Tamdır, Uzaktan Tahakküm İhlaldir
+Servis / Döngüsel İktisat İcâresi ==&gt; Metâ Sâni Bilançosundadır; Bakım ve Ömür Sâni Borcudur</div>
+        </div>
+        
+      </div>
+      <div class="diagram-column">
+        <div class="diagram-box">
+          <div class="diagram-title">TAHTA ŞEMASI & MANTIKÎ AKIŞ DİYAGRAMI</div>
+          <pre class="diagram-ascii">[ HUKUKİ REJİM AYRIMI: İKİ AYRI MÜLKİYET DÜZLEMİ ]
+
+1. MÜELLİFİN GAYRİ MADDİ HAKKI (Intellectual Monopoly - Hakk al-Ihtirâ&#x27;):
+   * Korunan Hak: Kodun külli mimarisi, çoğaltılması, ticarileştirilmesi, lisanslanması.
+   * Korunan Eylem: Üçüncü şahısların kodu kopyalayıp piyasaya satmasını engelleme yetkisi.
+   * ASLA KAPSAMAZ: Satılmış tekil nüshanın fiili işleyişini uzaktan imha etme yetkisi!
+
+                                     ÇATIŞMA ÇÖZÜMÜ
+                                            │
+                                            ▼
+2. SATILMIŞ MÜNFERİT NÜSHA ÜZERİNDEKİ MÜLKİYET (Milk al-Nuskha / Chattel Property):
+   * İLK SATIŞ DOKTRİNİ (First Sale / Exhaustion / İstihlâk-ı Hak):
+     Sâni, metâyı bir Semen karşılığında sattığı an, o MÜNFERİT kopyanın maddi ve
+     mantıksal tasarruf yetkisi üzerindeki dağıtım/kontrol hakkı TÜKENİR (Exhausted).
+   * Şirkat-i Mülk Reddiyesi: Alıcı kodun külli fikri mülkiyetine ortak olmaz (şerik değildir);
+     alıcı, mülkiyetine geçen tekil fiziksel varlığın fıtrî ve mantıksal işlerliğine mâliktir.
+   * Mecelle 100 &amp; Lex Exhaustionis:
+     &quot;Kod benimdir, aleti istediğim an kapatırım&quot; şartı, akdin muktezasını bozan
+     bâtıl bir tahakkümdür (Şart-ı Fâsid).</pre>
+        </div>
+      </div>
+    </div>
+  </article>
+    
+  <article class="slide-card" id="slide-07">
+    <div class="slide-header">
+      <div class="slide-title-wrap">
+        <span class="slide-tag">İCMÂLİ VE HÜKÜM TABLOSU</span>
+        <h2 class="slide-title">İLEL-İ MÜUCİBE, MEFÂSİD-İ ŞER&#x27;İYYE VE HİKMET-İ TEŞRÎ&#x27; CETVELİ</h2>
+      </div>
+      <div class="slide-number">07</div>
+    </div>
+    <div class="slide-grid">
+      <div class="formulas-column">
+        
+        <div class="formula-box">
+          <div class="formula-label">ALTI MÜSBET İLLET (İLEL-İ ŞER&#x27;İYYE)</div>
+          <div class="formula-content">1. Ekl-i Emvâl bi&#x27;l-Bâtıl (Nisâ 29) | 2. Gabn-i Fâhiş bi&#x27;t-Taghrîr | 3. Ayb-ı Kadîm / Ayb-ı Hafî
+4. Helâk-ı Hükmî ve Mübâşereten İtlâf (Mecelle 92) | 5. Tasarruf fî Milk al-Gayr &amp; Hıyânetü&#x27;l-Amâne | 6. Şart-ı Fâsid &amp; İhtikâr (Mecelle 100)</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">DÖRT SİSTEMİK MEFSEDET (MEFÂSİD-İ AKLİYYE)</div>
+          <div class="formula-content">7. İsticel: Erken Semen Gaspı (Mecelle 99) | 8. Sermayenin Kasıtlı İsrafı ve İtlafı
+9. İfsâd fi&#x27;l-Arz ve Darar-ı Âmm (Mecelle 26) | 10. Limon Dinamiğiyle Dürüst Ticaretin Felci</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">HİKMET-İ TEŞRÎ&#x27; VE MAQÂSİD DENGESİ</div>
+          <div class="formula-content">Adâvet ve İtimadın Tahribi: Güven Kaybı &gt;&gt; 0 (Maide 91 İlkesi)
+Hıfz-ı Mâl + Hıfz-ı Nizâm + Hıfz-ı Çevre ==&gt; Kasıtlı Eskitmenin Mutlak Hükmü = HARAM VE TAZMİNE TABİ</div>
+        </div>
+        
+        <div class="formula-box">
+          <div class="formula-label">MÜTEAHHİT VE ÜRETİCİLER İÇİN KESİN HADLER</div>
+          <div class="formula-content">Fıtrî Limit Varsa: Şeffaf İlan + Durgun Rejim + Açık Protokol Devri
+Lokal Aşınma Varsa: Şeffaf İhtar + Modüler İkâme (Mecelle 22 Orantılılık)
+Teklif Edilen Rejim: Bey&#x27; ise Mutlak Devir; Tahakküm İsteniyorsa İcâre (Tüm Risk Üreticide)</div>
+        </div>
+        
+      </div>
+      <div class="diagram-column">
+        <div class="diagram-box">
+          <div class="diagram-title">TAHTA ŞEMASI & MANTIKÎ AKIŞ DİYAGRAMI</div>
+          <pre class="diagram-ascii">========================================================================================================================
+                     PLANLI ESKİTME HUKUKİ MODELİ: HÜKÜMLER VE AKSİYOMATİK NETİCE MATRİSİ
+========================================================================================================================
+
+FAZ / FAİL                 FİİL / MÜDAHALE                     HUKUKİ TAVSIF                   MECELLE / ŞER&#x27;İ DAYANAK
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+Fabrika Fazı (Sâni)       AsliKapasite&#x27;yi Gizlice Kısma       Ayb-i Hafî &amp; Gabn-i Fâhiş       Nisâ 29, Mecelle 337, 356
+                          (KasıtlıKısıt &lt; AsliKapasite)        Hükmî Helâk                     Erş / Fesih / Rücû&#x27;
+
+Akit Sonrası (Sâni)        Uzaktan Kapasite Düşürme            Mübâşereten İtlâf               Mecelle 92, 93, 33
+                          (d(Kapasite)/dt &lt; 0)                Tasarruf fî Milk al-Gayr        Aynen İade / Tazminat
+
+İdâme Fazı (Sâni)          Tamir Ambargosu &amp; Parça Kilidi      Şart-ı Fâsid &amp; İhtikâr          Mecelle 100, 22
+                          (AmbargoOranı -&gt; Sonsuz)            Bay&#x27; al-Mudtarr                 Kısıtlama BÂTIL, İkâme Serbest
+
+Piyasa / Makro (Sektör)    Toplu Limon Rejimi &amp; Esaret         Darar-ı Âmm / İfsâd fi&#x27;l-Arz   Mecelle 26, 19, 85
+                          (Toplam Kayıp &gt; Müşterekler)        Örf-i Fâsid                     Hisbe Müdahalesi / Ceza FARZ
+========================================================================================================================
+SONUÇ: Satış bedeli alıp mülkü uzaktan köleleştirmek bâtıldır. Tam devir (Bey&#x27;) veya tam sorumluluk (İcâre) şarttır.</pre>
+        </div>
+      </div>
+    </div>
+  </article>
+    
+</main>
+
+<footer>
+  PLANLI ESKİTME VE PLATFORM TEKELLERİ HUKUKİ MODELİ • %100 MÜCERRET CEBİRSEL VE ŞER'İ AKSİYOMLAR
+</footer>
+
+</body>
+</html>
