@@ -22,6 +22,65 @@ The structural and economic parameters:
 * $C$: Public commons threshold:
   $$\text{Inalienability Axiom: If } \sum_{i=1}^N (E_i - L_i) > C, \quad \text{Contractual Assent } \equiv \text{Void ab initio (Mecelle Article 26)}.$$
 
+```
+========================================================================================================================
+                              THE UNIVERSAL CYBER-PHYSICAL MODEL (TAHTA ŞEMASI / ARCHITECTURE)
+========================================================================================================================
+
+                                            [ JURISDICTIONAL PLANE / HUKUKULLÂH ]
+                                                Commons Threshold: C (Mecelle 26)
+                                                  If Σ(E - L) > C  ==>  VOID
+                                                              │
+                                                              ▼
+               [ MAKER / AL-SÂNI' ] ────────── Technical Asymmetry (Δ Blueprints, Logic)
+                      ( M )
+                        │
+       ┌────────────────┴────────────────┐
+       │ PHASE 1: PRE-SALE DESIGN        │ PHASE 2: POST-SALE INTERVENTION
+       │ A1: Durability E (Authentic)    │ Retained Custodial Channel (Amânah)
+       │ A2: Engineered Limit L (L < E)  │ Unilateral Impairment / Lockout
+       └────────────────┬────────────────┘
+                        │
+                        ▼  Conveyance at t0
+               [ VENDOR / AL-BÂI' ] ───────────── Price P = P(E) Paid
+                      ( S )                      (Upstream Taghrîr & Gabn-i Fâhiş)
+                        │
+                        ▼  Milk Tamm (Absolute Ownership)
+               [ BUYER / AL-MUSHTARÎ ]
+                      ( B )
+                        │
+         ┌──────────────┴───────────────────────────────────────────────────────┐
+         │                                                                      │
+         ▼                                                                      ▼
+  [ MICRO CONTRACT DEFECT ]                                            [ TORTIOUS EXTERNAL TRESPASS ]
+  Phase 1: Factory Phase Flaw                                          Phase 2: Post-Conveyance Act
+  * L < E  ==> Ayb-i Hafî (Mecelle 337)                                * Remote Throttling ==> Mubâşereten İtlâf (Mecelle 92)
+  * Rescission: Faskh (Mecelle 356)                                    * Repair Lockout ==> Shart Fâsid & Ihtikâr (Mecelle 100)
+  * Remedy: Price Diminution (Arsh / Noksan-ı Semen)                   * Injunction & Restitution: Raf'-i Teaddî
+  * Upstream Recourse: S ---> M (Rücû')                                * Tortious Damages Cascading Directly to M
+         │                                                                      │
+         └──────────────────────────────┬───────────────────────────────────────┘
+                                        │
+                                        ▼
+                  [ MACRO DYNAMICS & EXTINCTION OF EXIT ]
+                  Switching Barrier: W ∈ [0, 1]
+                  * If W -> 1  ==>  ∂P/∂L -> 0 (Captive Tollbooth / Extortion)
+                  * Lemons Dynamic: Honest M1 Bankrupted by Predatory M2
+                  * Corrupt Custom (Al-'Urf al-Fâsid) Invalidated
+                  * Duty of Public Regulatory Authority (Hisbah / Siyâsah Shar'iyyah)
+========================================================================================================================
+```
+
+THE MATHEMATICAL SPECIFICATION OF THE FOUR ARCHETYPES:
+1. Upstream Commutative Exploitation (Model 1):
+   $$\Delta P = P(E) - P(L) > 0 \quad \text{under } \text{Inf-Opacity} \implies \text{Ekl-i Emvâl bi'l-Bâtıl (Nisâ 29)}$$
+2. Structural Inseparable Entrapment (Model 1 / Monolithic Captivity):
+   $$\text{Damage Ratio: } \Omega = \frac{\text{Loss of Unexhausted Core Utility}}{\text{Cost of Renewable Exhausted Element}} \gg 1 \implies \text{Helâk-ı Hükmî}$$
+3. Post-Sale Delictual Trespass (Model 2):
+   $$\forall t > t_0, \quad \frac{\partial \text{Utility}(X)}{\partial t} \Bigg|_{\text{M's unilateral intervention}} < 0 \implies \text{Mubâşereten İtlâf (Mecelle 92)}$$
+4. Monopolistic Foreclosure of Maintenance (Model 3):
+   $$\text{Foreclosure Index: } \Phi = \lim_{\text{Zero-Knowledge Auth}} \left( \frac{\text{Repair Obstruction}}{\text{Core Root Compromise Risk}} \right) = \infty \implies \text{Ihtikâr \& Shart-ı Fâsid (Mecelle 100)}$$
+
 THE ROOT CHARACTERIZATION: THE SIX JURISTIC HARMONIES.
 Before examining the models, the legal and economic reality of planned obsolescence must be freed from six critical misconceptions:
 
@@ -61,6 +120,40 @@ Crucially, declaring a premature structural limit openly in standard contract te
 The talk has two sides. On the first side stand our evidences, eight of them, built on four models. On the second side stand the producer defenses, four of them, and I will refute each one.
 
 MODEL ONE: THE LIMIT PLANTED BEFORE THE SALE.
+
+```
+TAHTA ŞEMASI (MODEL 1: FABRİKA FAZI / İVAZ VE AYIP HİLESİ):
+========================================================================================
+[ SÂNi' / M ] ──> Tasarım Seçimi: A1 (E) vs A2 (L) ──> L < E (Asimetrik Bilgi)
+      │
+      ▼  (Dağıtım Zinciri)
+[ BÂi' / S ]  ──> Semen: P = P(E) Tahsil Edilir ──> [ MÂLiK / B ] (Mülkiyet Devri / t0)
+                                                           │
+                                                           ▼ (Doğal / Hızlı Aşınma)
+                                                    [ Tali / Yardımcı Unsur Tükendi ]
+                                                           │
+                                      ┌────────────────────┴────────────────────┐
+                                      ▼ (A1: Meşru Modülerlik)                  ▼ (A2: Yapısal Tuzak / L)
+                               [ Tahribatsız Yenileme ]                  [ Bütünleşik Kilitleme / İtlaf ]
+                                    Ömür -> E                               Ömür -> L (Erken Helâk)
+                                                                                │
+                                                                                ▼
+                                                                 Hukuki Netice:
+                                                                 * Ayb-i Hafî (Mecelle 337)
+                                                                 * Gabn-i Fâhiş bi't-Taghrîr
+                                                                 * Faskh (356) / Arsh (343)
+                                                                 * S -> M Rücû' Hakkı
+========================================================================================
+```
+
+Mathematical Specification:
+* Structural Truncation:
+  $$L < E \quad \text{where} \quad \Delta U = \int_{L}^{E} u(t) \, dt > 0 \quad (\text{Destroyed Utility})$$
+* Commutative Unearned Surplus (Gabn-i Fâhiş):
+  $$\Delta P = P(E) - P(L) > 0 \implies \text{Ekl-i Emvâl bi'l-Bâtıl (Nisâ 29)}$$
+* Damage Ratio (Constructive Destruction / Helâk-ı Hükmî):
+  $$\Omega = \frac{\text{Value of Residual Functional Capacity }(E - L)}{\text{Cost of Renewing Exhausted Element}} \gg 1 \implies \text{Actionable Latent Defect}$$
+
 Here is the model. M manufactures cyber-physical asset X. In manufacturing, M has two design configurations, A one and A two. A one grants X its authentic uncurtailed functional capacity and structural durability benchmark E inherent in its physical architecture and material allocation, allowing exhausted auxiliary elements to be non-destructively maintained, calibrated, or renewed, and preserving structural integrity. A two imposes an artificial structural, logical, or monolithic barrier that irreversibly couples the lifespan of the entire asset to the earliest-exhausting element, or structurally plants a latent premature failure threshold into the asset's constitution, terminating X at an artificially truncated capacity ceiling L. Between A one and A two, any claimed technical or cost difference T is either nonexistent or grossly trivial and disproportionate to the massive destruction of operational utility (E - L). B is bound to M's ecosystem by switching barriers W. M chooses A two to accelerate replacement demand within its captive domain. At conveyance t zero, B observes the customary market benchmark E and pays price P corresponding to a sound, serviceable asset. For analytical clarity, let E represent ten units of baseline functional capacity, and let L represent an engineered ceiling of four units. P was paid upon the normative assumption of ten units of unhindered capacity.
 
 OUR FIRST EVIDENCE: COMMUTATIVE DISPARITY, LATENT DEFECT, AND UPSTREAM FRAUD.
@@ -82,6 +175,32 @@ The legal principles are two. First, Mecelle Article 19: "Harm is eliminated" (A
 The instance: at four units of capacity, X fails prematurely. Because B's accumulated digital and capital assets are locked in M's domain (W), B is economically coerced to repurchase from M, accelerating M's revenue cycle at the direct expense of B's wealth.
 
 MODEL TWO: THE ACT ON THE GOOD AFTER THE SALE.
+
+```
+TAHTA ŞEMASI (MODEL 2: SATIŞ SONRASI MÜLKiYETE TECAVÜZ / MÜBÂŞERETEN İTLAF):
+========================================================================================
+[ SÂNi' / M ] ──( t > t0: Mülkiyet B'de / Milk Tamm )──> [ Metâ: X ]
+      │                                                        │
+      ├──────────────────( Harici / Dahili İrtibat )───────────┤
+      │                   [ Amânatü'l-Hıfz Kanalı ]            │
+      ▼                                                        ▼
+[ Tek Taraflı Mantıksal Müdahale ]                  [ Fonksiyonel Felç / Kısma ]
+(Unannounced Firmware / Parameter Downgrade)        (Throughput Throttled / Bricked)
+      │                                                        │
+      ▼                                                        ▼
+Meşruiyet Testi:                                    Hukuki Netice:
+* T Filresi: ΔT / (E - L) -> 0 (Orantısız)          * Tasarruf fî Milk al-Gayr
+* Mecelle 33: "Zaruret başkasının hakkını iptal     * Mübâşereten İtlâf (Mecelle 92)
+  etmez" (Al-idtirâru lâ yubtilu haqqa'l-ghayr)      * Tazmin / Aynen İade / Ref'-i Teaddî
+========================================================================================
+```
+
+Mathematical Specification:
+* Unilateral Impairment Gradient:
+  $$\forall t > t_0, \quad \nabla_M \text{Capacity}(X_t) < 0 \quad \text{where } \Pi_t = \frac{\Delta T_t}{\Delta \text{Capacity}} \to 0 \implies \text{Mubâşereten İtlâf}$$
+* Strict Delictual Restitution (Damân al-Mütlif):
+  $$\text{Liability}(M) = \text{Valuation}(X_{t^-}) - \text{Valuation}(X_{t^+}) + \text{Lost Usufruct (Menâfi')}$$
+
 The model: the transaction is finalized at t zero, and complete ownership and physical custody reside with B. No imminent threat to systemic integrity arises, or any claimed justification T is grossly disproportionate to the damage inflicted. X performs every warranted function. At a subsequent time t one, M utilizes a retained logical trigger, deferred microcode command, or external modification channel to unilaterally throttle performance, disable existing functional capacities, or induce artificial system rejection of compatible maintenance interventions.
 
 OUR FOURTH EVIDENCE: UNLAWFUL TRESPASS, DIRECT DESTRUCTION, AND ABUSE OF CUSTODIAL ACCESS.
@@ -91,6 +210,35 @@ The instance: at t one, X is functioning soundly. M deploys an unannounced logic
 The rule: M executed the adverse alteration directly through algorithmic intervention, acting as the direct tortfeasor (mubâshir). Under Mecelle Article 92, M is strictly liable for property damage. B is entitled to injunctive relief, specific performance—the full restoration of X to its warranted operating state—and compensatory damages for the incurred devaluation and lost utility.
 
 MODEL THREE: THE CLOSING OF REPAIR.
+
+```
+TAHTA ŞEMASI (MODEL 3: İDÂME VE İKÂME AMBARGOSU / YAPAY İHTİKÂR):
+========================================================================================
+[ Metâ: X ] ──> Tali Unsur Yoruldu / Doğal Aşınma ──> [ Mâlik B / Müstakil Usta ]
+      │                                                        │
+      │                                                        ▼
+      │                                             [ Standart Müdahale / İkâme ]
+      │                                                        │
+      ├───[ Kriptografik / Mantıksal Kilit ] <─────────────────┘
+      │   (Proprietary Serialization / Monopolistic Lock)
+      ▼
+Sahte İkilem (False Dilemma):                       Gerçek Hukuki / Teknik Çözüm:
+"Ya Güvenlik Çekirdeği Ya Tamir Yasağı"            "Modüler Doğrulama & Açık Protokol"
+      │                                                        │
+      ▼                                                        ▼
+Hukuki Netice:                                      Ayrışma (Decoupling):
+* Şart-ı Fâsid (Mülkiyeti Boğan Kayıt)             * Sıfır-Bilgi İspatı (Zero-Knowledge)
+* İhtikâr (Hizmet ve Parçayı Yapay Kısma)           * Anahtarlar İfşa Olmadan Tamir
+* Bay' al-Mudtarr (Zor Düşürme / İstismâr)          * Mecelle 100: Kısıtlama Hükümsüzdür
+========================================================================================
+```
+
+Mathematical Specification:
+* Monopolistic Foreclosure Ratio:
+  $$\Phi = \frac{\text{Maintenance Deadweight Loss}}{\text{Authentic Security Threat Delta}} \to \infty \implies \text{Shart Fâsid \& Ihtikâr}$$
+* Exploitative Captive Surplus:
+  $$\text{Extortion Premium: } \Delta P_{\text{repair}} = P_{\text{monopoly}}(M) - P_{\text{competitive}} \implies \text{Bay' al-Mudtarr (Bâtıl)}$$
+
 The model: X suffers a natural fatigue or wear fault in an internal subcomponent or functional element. B, or an independent qualified technician, possesses the technical capability to restore or recalibrate it. The maintenance operation involves standard, compatible elements or routine calibration procedures and does not compromise core safety thresholds, systemic security roots of trust, or statutory safety standards, so any claimed technical excuse T is either nonexistent or grossly disproportionate. M withholds diagnostic interfaces and error specifications, imposes proprietary cryptographic or physical lockouts that artificially reject non-proprietary replacement elements, or legally and logically shuts down independent diagnostic calibration utilities.
 
 OUR FIFTH EVIDENCE: VOID RESTRAINTS, MANUFACTURED DISTRESS, AND MONOPOLISTIC IMPEDIMENTS.
@@ -103,6 +251,35 @@ The instance: an unbonded physical interface, auxiliary input/output module, or 
 The rule: under Mecelle Article 100, M's attempt to restrict completed ownership is legally void. The restrictive lock is an unlawful impediment, and B has the untrammeled right to repair, recalibrate, and sustain his property through any competent provider.
 
 MODEL FOUR: THE PLATFORM AND SECTOR DYNAMICS.
+
+```
+TAHTA ŞEMASI (MODEL 4: SEKTÖREL ÇÖKÜŞ / LİMON PİYASASI VE HUKUKULLÂH):
+========================================================================================
+[ PİYASA REJİMİ ] ──> Platform Esareti: W ∈ [0, 1] ──> W -> 1 (Kaçış İmkânsız)
+        │
+        ├─────────────────────────────┬─────────────────────────────┐
+        ▼ (Zaman Vektörü: t < t_exp)   ▼ (Zaman Vektörü: t >= t_exp)  ▼ (Ekolojik Eşik)
+  [ Faz 1: Örtük Bilgi ]         [ Faz 2: Kamusal İfşa ]         [ Müşterekler: C ]
+  * Dürüst M1 (E) elenir         * Tüketici aldatıldığını anlar  * Σ(E - L) > C
+  * Hilekâr M2 (L) piyasayı boğar* W sebebiyle fiyat düşmez:     * Termodinamik ifsad
+  * Fiyat: P = P(E) gasp edilir   ∂P/∂L -> 0 (Soygun Tekeli)     * İfsâd fi'l-Arz
+        │                             │                              │
+        └─────────────────────────────┼──────────────────────────────┘
+                                      ▼
+                        Hukuki ve Kazai Müdahale:
+                        * Mecelle 26: Zarar-ı Âmmı Def İçin Zarar-ı Hâs İhtiyar Olunur
+                        * Örf-i Fâsid Asla Hukuki Norm Doğurmaz
+                        * Hisbe / Siyâset-i Şer'iyye Müdahalesi Farzdır
+========================================================================================
+```
+
+Mathematical Specification:
+* Dynamic Adverse Selection (Lemons Collapse):
+  $$\mathbb{E}[\text{Profit}(M_2)] > \mathbb{E}[\text{Profit}(M_1)] \iff P(E) - \text{Cost}(L) > P(E) - \text{Cost}(E) \implies M_1 \to \emptyset$$
+* Captive Pricing Paradox under Lock-in W:
+  $$\lim_{W \to 1} \frac{dP}{dL} = 0 \quad \text{and} \quad \lim_{W \to 1} \epsilon_{\text{demand}} = 0 \implies \text{Monopolistic Extraction}$$
+* Planetary Metabolic Debt:
+  $$\text{Ecological Invalidation: } \int_{0}^{T_{\text{fleet}}} \left( \mathcal{E}_{\text{embodied}} \cdot \frac{E - L}{E} \right) dt > C_{\text{carrying}} \implies \text{Null and Void}$$
 The model: Models One, Two and Three expand from isolated practices into an industry-wide platform oligopoly or cartel. In this market, manufacturers leverage high switching barriers W (structural lock-in, non-interoperable peripherals, closed interfaces, and cumulative capital dependencies) to extinguish consumer exit. The model analyzes two successive phases: the informational opacity phase where captive repeat purchases occur, followed by the revelation phase where collective resource squandering and public harm erupt.
 
 OUR SIXTH EVIDENCE: SYSTEMIC SQUANDERING AND THE INALIENABLE COMMONS.
