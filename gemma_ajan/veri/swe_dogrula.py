@@ -128,7 +128,7 @@ def test_dosyalari(test_yamasi):
     return dosyalar
 
 
-def f2p_p2p_turet(gorev, python=sys.executable, zaman=600):
+def f2p_p2p_turet(gorev, python=None, zaman=600, etiket="elle"):
     """Yarışma görevleri F2P/P2P listesi içermez; pipeline tanımına göre türetilir:
     F2P = test yaması uygulanmış temel ağaçta BAŞARISIZ olup altın yamayla GEÇEN testler;
     P2P = her iki durumda da GEÇEN testler. Sonuç önbelleğe yazılır (her görev bir kez koşar)."""
@@ -139,6 +139,10 @@ def f2p_p2p_turet(gorev, python=sys.executable, zaman=600):
     dosyalar = test_dosyalari(gorev["test_patch"])
     if not dosyalar:
         raise EnvHatasi(f"{gorev['instance_id']}: test yaması Python test dosyası içermiyor")
+    if python is None:
+        from yarisma_ortam import ortam_kur  # geç içe aktarma: yarisma_ortam bu modülü kullanır
+
+        python, etiket = ortam_kur(gorev, zaman)
     # P2P tanımı "tüm test paketi": koşu, test yamasının dokunduğu kökün tamamıdır (ör. tests/).
     kokler = sorted({yol.split("/")[0] for yol in dosyalar})
     if len(kokler) != 1:
@@ -160,22 +164,27 @@ def f2p_p2p_turet(gorev, python=sys.executable, zaman=600):
     p2p = sorted(t for t, s in altin.items() if s == "PASSED" and temel.get(t) == "PASSED")
     if not f2p:
         raise EnvHatasi(f"{gorev['instance_id']}: F2P boş (test yaması bir şey ayırt etmiyor)")
-    sonuc = {"FAIL_TO_PASS": json.dumps(f2p), "PASS_TO_PASS": json.dumps(p2p)}
+    sonuc = {"FAIL_TO_PASS": json.dumps(f2p), "PASS_TO_PASS": json.dumps(p2p), "ortam": etiket}
     os.makedirs(CACHE, exist_ok=True)
     with open(yol, "w", encoding="utf-8") as f:
         json.dump(sonuc, f, ensure_ascii=False)
     return sonuc
 
 
-def dogrula(gorev, yama, python=sys.executable, zaman=600):
+def dogrula(gorev, yama, python=None, zaman=600):
     """Bir görev ve model yaması için ölçüm. gorev: SWE-bench satırı (dict).
 
     Önce altın kapı: altın yamada bozuk P2P testleri ölçümden çıkarılır (dislanan listesinde döner).
-    Model yaması uygulanamazsa mesafe = 1.
+    Model yaması uygulanamazsa mesafe = 1. python None ise görev için karma ortam seçilir.
     """
+    etiket = "elle"
+    if python is None:
+        from yarisma_ortam import ortam_kur
+
+        python, etiket = ortam_kur(gorev, zaman)
     if "FAIL_TO_PASS" not in gorev:
         # Yarışma formatı: listeler yok; altın yamayla türetilir (türetme kapıyı zaten içerir).
-        gorev = dict(gorev, **f2p_p2p_turet(gorev, python, zaman))
+        gorev = dict(gorev, **f2p_p2p_turet(gorev, python, zaman, etiket))
         dislanan = []
     else:
         dislanan = altin_kapi(gorev, python, zaman)
@@ -211,7 +220,7 @@ def main():
     ap.add_argument("ornek_id")
     ap.add_argument("--yama", default="gold")
     ap.add_argument("--veri", default=VERI_DOSYASI)
-    ap.add_argument("--python", default=sys.executable)
+    ap.add_argument("--python", default=None, help="boşsa karma ortam (yarisma_ortam) seçilir")
     ap.add_argument("--zaman", type=int, default=600)
     a = ap.parse_args()
     if not a.veri:
