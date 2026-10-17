@@ -13,6 +13,7 @@ import traceback
 import zipfile
 from pathlib import Path
 from google.adk.apps.base_events_summarizer import BaseEventsSummarizer
+from google.adk.apps.llm_event_summarizer import LlmEventSummarizer
 from google.adk.events import Event
 from google.adk.events.event_actions import EventActions, EventCompaction
 from google.genai import types
@@ -103,14 +104,14 @@ class CodeEventsSummarizer(BaseEventsSummarizer):
         return Event(author="user", actions=EventActions(compaction=compaction), invocation_id=Event.new_id())
 
 
-class HybridEventsSummarizer(BaseEventsSummarizer):
-    """Küçük parça: kod özeti (deterministik, bedava). Büyük parça: LLM özeti (ADK LlmEventSummarizer).
-    Neden hibrit: LLM özeti 30k'ya yaklaşınca kaçınılmaz; ama küçük parçada kod özeti hatasızdır."""
+class HybridEventsSummarizer(LlmEventSummarizer):
+    """ADK'nın LlmEventSummarizer'ından türer (pydantic'in tanıdığı tür). Küçük parça: kod özeti
+    (deterministik, bedava). Büyük parça: LLM özeti (üst sınıf). Neden: LLM özeti 30k'ya yaklaşınca
+    kaçınılmaz; küçük parçada kod özeti hatasızdır."""
 
     def __init__(self, llm, code_max_tokens=CODE_MAX_TOKENS):
+        super().__init__(llm=llm)
         self._code = CodeEventsSummarizer()
-        self._llm = None
-        self._llm_factory = llm
         self._code_max = code_max_tokens
 
     async def maybe_summarize_events(self, *, events):
@@ -118,10 +119,7 @@ class HybridEventsSummarizer(BaseEventsSummarizer):
             return None
         if events_tokens(events) <= self._code_max:
             return await self._code.maybe_summarize_events(events=events)
-        from google.adk.apps.llm_event_summarizer import LlmEventSummarizer
-        if self._llm is None:
-            self._llm = LlmEventSummarizer(llm=self._llm_factory())
-        return await self._llm.maybe_summarize_events(events=events)
+        return await super().maybe_summarize_events(events=events)
 
 
 T0 = time.time()
@@ -389,7 +387,10 @@ try:
 
     # Sıkıştırma: küçük parça kodla, büyük parça (>6000 token) LLM özeti. Eşik 16000 (ölçüm: sistem ~4.2k,
     # araç ~3.4k, çıktı payı 6144 -> en kötü adımda güvenli eşik 11.9k, tipik adımda 16.5k). interval=2.
-    # E17: summarizer Kaggle harness App doğrulamasında reddedildi; ADK varsayılanı kullanılıyor
+    # Sıkıştırma: küçük parça kodla, büyük parça (>6000 token) LLM özeti. Eşik 36000 (55k pencere).
+    compaction_cfg = EventsCompactionConfig(
+        summarizer=HybridEventsSummarizer(llm=LiteLlm(model="openai/" + TARGET_MODEL_NAME, api_base=server.base_url, api_key="EMPTY")),
+        compaction_interval=2, overlap_size=2, token_threshold=36000, event_retention_size=4)
     raw = yaml.safe_load((SUB_DIR / "eval_config.yaml").read_text(encoding="utf-8"))
     ev = raw.get("evaluation", raw)
     limits, gen_constraints = build_submission_limits()
@@ -405,7 +406,7 @@ try:
         limits=limits, generation_constraints=gen_constraints, adapter_manifest=adapters,
         context_cache_config=ContextCacheConfig(min_tokens=2048, ttl_seconds=3600, cache_intervals=15),
         # Hülasacı Compaction: 25k token eşiğine ulaştığında devreye girip bağlamı ~8k seviyesine düşürür
-        events_compaction_config=None,  # E17: App doğrulaması Kaggle'da reddediyor; sıkıştırma bu koşuda kapalı
+        events_compaction_config=compaction_cfg,
         graph_dir=str(EVAL_DIR / "graphs"), embeddings_dir=str(EVAL_DIR / "embeddings"),
         wheels_dir=EVAL_DIR / "wheels", verbose=False,
     )

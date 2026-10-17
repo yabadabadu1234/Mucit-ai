@@ -10,6 +10,7 @@ import json
 import math
 
 from google.adk.apps.base_events_summarizer import BaseEventsSummarizer
+from google.adk.apps.llm_event_summarizer import LlmEventSummarizer
 from google.adk.events import Event
 from google.adk.events.event_actions import EventActions
 from google.adk.events.event_actions import EventCompaction  # noqa: F401  (sürüm farkı için)
@@ -99,14 +100,14 @@ class CodeEventsSummarizer(BaseEventsSummarizer):
         return Event(author="user", actions=EventActions(compaction=compaction), invocation_id=Event.new_id())
 
 
-class HybridEventsSummarizer(BaseEventsSummarizer):
-    """Küçük parça: kod özeti (deterministik, bedava). Büyük parça: LLM özeti (ADK LlmEventSummarizer).
-    Neden hibrit: LLM özeti 30k'ya yaklaşınca kaçınılmaz; ama küçük parçada kod özeti hatasızdır."""
+class HybridEventsSummarizer(LlmEventSummarizer):
+    """ADK'nın LlmEventSummarizer'ından türer (pydantic'in tanıdığı tür). Küçük parça: kod özeti
+    (deterministik, bedava). Büyük parça: LLM özeti (üst sınıf). Neden: LLM özeti 30k'ya yaklaşınca
+    kaçınılmaz; küçük parçada kod özeti hatasızdır."""
 
     def __init__(self, llm, code_max_tokens=CODE_MAX_TOKENS):
+        super().__init__(llm=llm)
         self._code = CodeEventsSummarizer()
-        self._llm = None
-        self._llm_factory = llm
         self._code_max = code_max_tokens
 
     async def maybe_summarize_events(self, *, events):
@@ -114,7 +115,4 @@ class HybridEventsSummarizer(BaseEventsSummarizer):
             return None
         if events_tokens(events) <= self._code_max:
             return await self._code.maybe_summarize_events(events=events)
-        from google.adk.apps.llm_event_summarizer import LlmEventSummarizer
-        if self._llm is None:
-            self._llm = LlmEventSummarizer(llm=self._llm_factory())
-        return await self._llm.maybe_summarize_events(events=events)
+        return await super().maybe_summarize_events(events=events)
