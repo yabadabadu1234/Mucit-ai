@@ -29,7 +29,10 @@ W_TABAN = float(os.environ.get("W_TABAN", "0.1"))
 BATCH = int(os.environ.get("BATCH", "8"))
 RANK, ALPHA = 8, 16
 TARGETS = ("q_proj", "v_proj")
+GEN_N = int(os.environ.get("GEN_N", "2"))  # her partide model kendi yanıtını üretir (K2)
+GEN_MAX_NEW = int(os.environ.get("GEN_MAX_NEW", "512"))
 MAX_LEN = int(os.environ.get("MAX_LEN", "4096"))
+sys.path.insert(0, os.environ.get("VERI_DIR", str(Path(__file__).resolve().parent.parent.parent / "veri")))
 EPOCHS = int(os.environ.get("EPOCHS", "1"))
 CKPT_EVERY = 5
 
@@ -43,7 +46,7 @@ def log(*a):
 def load_verified(path):
     from kuvvet import validate_row
 
-    rows = []
+    rows = []  # her satır: messages, route, compiler_score, distance, prompt, kayit
     with open(path, encoding="utf-8") as f:
         for i, line in enumerate(f, 1):
             line = line.strip()
@@ -56,8 +59,33 @@ def load_verified(path):
             if r.get("verified") is not True:
                 raise ValueError(f"{path}:{i} 'verified': true değil; yalnız gerçek test sonucuyla doğrulanmış yörünge kabul edilir")
             route, score, dist = validate_row(r, where=f"{path}:{i}")
-            rows.append({"msgs": msgs, "route": route, "compiler_score": score, "distance": dist})
+            if not r.get("prompt") or not isinstance(r.get("kayit"), dict):
+                raise ValueError(f"{path}:{i} 'prompt' ve 'kayit' zorunlu (üretilen yanıtın mesafesi için)")
+            rows.append({"msgs": msgs, "route": route, "compiler_score": score, "distance": dist,
+                         "prompt": r["prompt"], "kayit": r["kayit"]})
     return rows
+
+
+def generate_rows(model, tok, pool, start, k, torch):
+    """K2: model kendi yanıtını üretir (açgözlü, zar yok). Mesafe program denetçisiyle ölçülür."""
+    from mantik_veri import mesafe
+
+    out = []
+    model.eval()
+    with torch.no_grad():
+        for j in range(k):
+            src = pool[(start + j) % len(pool)]
+            msgs = [{"role": "user", "content": src["prompt"]}]
+            txt = tok.apply_chat_template(msgs, tokenize=False, add_generation_prompt=True)
+            dev = "cuda:0" if torch.cuda.is_available() else "cpu"
+            enc = tok(txt, add_special_tokens=False, return_tensors="pt").input_ids.to(dev)
+            gen = model.generate(enc, max_new_tokens=GEN_MAX_NEW, do_sample=False)
+            text = tok.decode(gen[0, enc.shape[1]:], skip_special_tokens=True)
+            d = mesafe(src["kayit"], text)
+            out.append({"msgs": msgs + [{"role": "assistant", "content": text}], "route": src["route"],
+                        "compiler_score": 0.0, "distance": d, "prompt": src["prompt"], "kayit": src["kayit"]})
+    model.train()
+    return out
 
 
 def encode_with_mask(tok, msgs):
@@ -116,13 +144,12 @@ def build_device_map(torch, meta, ng):
     return dmap, nl
 
 
-def batch_plan(rows, start):
-    """Bir mini-parti: BATCH örnek. Katsayılar bu partinin n'i ile normalize edilir."""
+def batch_plan(batch):
+    """Bir mini-parti (doğrulanmış + üretilmiş örnekler). Katsayılar bu partinin n'i ile normalize edilir."""
     from kuvvet import katsayilar
 
-    part = rows[start:start + BATCH]
-    A, B = katsayilar([{"route": r["route"], "compiler_score": r["compiler_score"], "distance": r["distance"]} for r in part], W_TABAN)
-    return part, A, B
+    A, B = katsayilar([{"route": r["route"], "compiler_score": r["compiler_score"], "distance": r["distance"]} for r in batch], W_TABAN)
+    return A, B
 
 
 def main():
@@ -193,10 +220,16 @@ def main():
     step = 0
     for ep in range(EPOCHS):
         for start in range(0, len(rows), BATCH):
-            part, A, B = batch_plan(rows, start)
+            part = rows[start:start + BATCH]
+            t_gen = time.time()
+            gen = generate_rows(model, tok, rows, start, GEN_N, torch) if GEN_N > 0 else []
+            log(f"parti {start // BATCH + 1}: {len(gen)} yanıt üretildi ({time.time() - t_gen:.1f}s), "
+                f"ortalama mesafe={sum(g['distance'] for g in gen) / max(1, len(gen)):.3f}")
+            batch = part + gen
+            A, B = batch_plan(batch)
             streams = [torch.zeros(sum(p.numel() for p in params)) for _ in range(STREAMS)]
             used = 0
-            for row, a, b in zip(part, A, B):
+            for row, a, b in zip(batch, A, B):
                 ids, mask = encode_with_mask(tok, row["msgs"])
                 if len(ids) < 2:
                     raise ValueError("kısa örnek: kayıp hesaplanamaz")

@@ -62,6 +62,20 @@ def test_katsayi_toplamlari():
         assert abs(lhs - rhs) < 1e-12, (r, lhs, rhs)
 
 
+def test_uretilmis_ornek_k1_seyreltmez():
+    """compiler_score = 0 (üretilmiş) örnek K1 paydasını değiştirmemeli, yalnız K2'ye girer."""
+    dogrulanmis = [{"route": 0, "compiler_score": 1.0, "distance": 0.0},
+                   {"route": 0, "compiler_score": 1.0, "distance": 0.0}]
+    uretilmis = {"route": 0, "compiler_score": 0.0, "distance": 0.5}
+    A1, _ = K.katsayilar(dogrulanmis, 0.1)
+    A2, _ = K.katsayilar(dogrulanmis + [uretilmis], 0.1)
+    assert abs(A2[0][0] - A1[0][0]) < 1e-12 and abs(A2[1][0] - A1[1][0]) < 1e-12, "K1 seyrelmemeli"
+    assert A2[2][0] == 0.0 and A2[2][K.STREAM_CLM] > 0.0
+    _, B2 = K.katsayilar([uretilmis], 0.1)
+    assert B2[0][K.STREAM_SFT] == 1.0, "SFT akışı her örneğe 1/n"
+    assert abs(K.katsayilar([uretilmis], 0.1)[0][0][K.STREAM_DIST] - 0.5 * K.taban_agirlik(0.5, 0.1)) < 1e-12
+
+
 def test_pcgrad_ozellikleri():
     g1 = [1.0, 0.0]
     g2 = [-1.0, 0.5]  # g1 ile negatif iç çarpım

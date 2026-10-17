@@ -53,14 +53,16 @@ def katsayilar(rows, w_taban):
     parsed = []
     for i, row in enumerate(rows):
         r, c, d = validate_row(row, where=f"satır {i}:")
-        n_route[r] += 1
+        if c > 0.0:
+            n_route[r] += 1  # yalnız derleyici skoru olan (doğrulanmış) örnekler K1'e girer
         parsed.append((r, c, d))
     A, B = [], []
     for r, c, d in parsed:
         w = taban_agirlik(d, w_taban)
         a = [0.0] * STREAMS
         b = [0.0] * STREAMS
-        a[r] = c * w / n_route[r]  # K1 + K4
+        if c > 0.0:
+            a[r] = c * w / n_route[r]  # K1 + K4
         a[STREAM_DIST] = d * w / n  # K2 + K4
         a[STREAM_CLM] = 1.0 / n  # K5
         b[STREAM_SFT] = 1.0 / n  # K6
