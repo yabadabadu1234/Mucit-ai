@@ -376,7 +376,7 @@ Aşağıdaki cetvel müzakerede tespit edilen çözümler ile tashih ve nihai mo
 
 | # | Tehlike | Çare (son hâl) | Hüküm | Nihai Çözüm ve Durum |
 | :-- | :-- | :-- | :-- | :-- |
-| 7 | Paravan şahıs havuzu, kimlik kiralama | T.C. Kimlik Kartı NFC biyometrik doğrulaması + tek cihaz/IP filtresi + kiralayana/kiraya verene 3 kat ceza ve 3 yıl yasak | Madde 1 (j), (s) | **ÇÖZÜLDÜ:** Simülasyonda saldırgan oranı %0,001'e indirilmiştir (`suistimal_sim.py`). |
+| 7 | Paravan şahıs havuzu, kimlik kiralama | e-Devlet kimlik doğrulaması (teklifte ek tedbir değildir; yalnız tescil şartı) + tek cihaz/IP filtresi + kiralayana/kiraya verene 3 kat ceza ve 3 yıl yasak | Madde 1 (j), (s) | **ÇÖZÜLDÜ:** Simülasyonda saldırgan oranı %0,001'e indirilmiştir (`suistimal_sim.py`). |
 | 8 | Hizmet tanımı ve KDV oranı kaçırma | Portalda standart NACE ve ayırt edici hizmet sınıflandırma kodlarından zorunlu seçim | Madde 1 (a), Madde 3 | **ÇÖZÜLDÜ:** Serbest metin alanı sınırlandırılarak KDV sınıflandırma manipülasyonu engellendi. |
 | 9 | Gelir bölme (income splitting) | İkinci derece hısım toplulaştırması + **B Tasarımı Prim Eşiği** (asgari ücret üstü kazanca prim) | Madde 1 (i), Madde 5 (o) | **ÇÖZÜLDÜ:** Bölünen her kimlik prim ödediğinden, geliri bölmek faile %20 net zarar yaşatır (`bolme_kazanci_yeni.py`). |
 | 10 | Sahte hizmet ihracatı | Döviz transferi gönderici unvanı ile fatura muhatabının zorunlu eşleşmesi + 50 bin TL üzeri sözleşme/teslim kütüğü | Madde 1 (ç) | **ÇÖZÜLDÜ:** Banka ve platform teslim kütükleri (git, e-Teslim) zorunlu kılınarak sahte ihracat engellendi. |

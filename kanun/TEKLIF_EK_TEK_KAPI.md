@@ -75,7 +75,7 @@ Fikir: gelir kaydırmanın (naylon fatura, sahte ortak) ekonomik özü, parayı 
 | Tersinden bakılırsa? | Düzeni kuran alıcı yalnız kazanmak için girer: girişi, karşı tarafın ihanetinin ona hiçbir bedeli olmadığı bir oyuna çevirmek, girişin kendisini rasyonel olmaktan çıkarır (B'nin girmesi için S'nin işbirliği olasılığı en az 0,898 olmalı). |
 | Aile ve örgüt içinde sadakat bağlıyorsa? | Madde AD (B2B Nötr Kural) ile kurumsal alıcı gider yazdığında tevkifat %25'e eşitlenir; Hazine kaybı ve alıcı kazancı 0,000 TL olur. B Tasarımı ise paravan bölmeyi zarara çevirir. |
 | Bu sınır Hazine'yi bozar mı? | Hayır. Yeni Çare Paketi ile 4. yıl net etki Kötümser **+0,70**, Orta **+9,50**, İyimser **+50,96** milyar TL'dir (`careler_testi.py`). |
-| Kiralanmış kimlik? | T.C. Kimlik Kartı NFC biyometrik doğrulaması ve tek cihaz/IP filtresi ile saldırgan oranı %0,001'e indirilmiştir (`suistimal_sim.py`). |
+| Kiralanmış kimlik? | e-Devlet kimlik doğrulaması (teklifte ek tedbir değildir; yalnız tescil şartı) ve tek cihaz/IP filtresi ile saldırgan oranı %0,001'e indirilmiştir (`suistimal_sim.py`). |
 
 **Nihai Netice:** B2B Nötr Kural ve B Tasarımı Prim Eşiği yürürlüğe girdiğinde sızıntı arbitrajı kesin olarak imkânsız kılınmıştır; Hazine her üç senaryoda da net gelir fazlası üretmektedir.
 

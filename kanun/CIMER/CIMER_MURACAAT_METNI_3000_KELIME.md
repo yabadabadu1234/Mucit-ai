@@ -81,7 +81,7 @@ Böyle bir rejimin istismar edilebileceğini biliyorum ve riskleri sıfırlayama
 8. **Donanım KDV mahsubunda sınırlar.** Mahsup yalnızca e-faturayla, seri numarası belirtilmiş cihaz için ve yıllık tevkifatın yüzde ellisine kadar yapılır; iki yıldan önce elden çıkarılırsa geri alınır.
 9. **Negatif liste.** Ticari alım satım, komisyonculuk, kumar ve benzeri alanlar rejim dışıdır.
 
-Geliştirilen Çare Paketi (B2B Nötr Kuralı, B Tasarımı Prim Eşiği, Geçici Madde 2 İntibak Freni ve T.C. Kimlik Kartı NFC doğrulaması) ile tespit edilen 43 tehlikenin tamamı matematiksel ve hukuki olarak çözüme kavuşturulmuştur.
+Geliştirilen Çare Paketi (B2B Nötr Kuralı, B Tasarımı Prim Eşiği, Geçici Madde 2 İntibak Freni ve e-Devlet kimlik doğrulaması) ile tespit edilen 43 tehlikenin tamamı matematiksel ve hukuki olarak çözüme kavuşturulmuştur.
 
 ## 6. Mali etki: dürüst ve doğrulanmış sonuç
 
@@ -116,7 +116,7 @@ Modelde yer almayan tüketim vergileri ve 2. tur dolaylı vergi etkileri de hesa
 
 Taslağın dayandığı kanun hükümlerinin (193 sayılı Gelir Vergisi Kanunu, 213 sayılı Vergi Usul Kanunu, 3065 sayılı KDV Kanunu, 488 sayılı Damga Vergisi Kanunu, 5510, 5411, 6493, 4632, 5846, 6698, 5549, 3572, 351, 2004, 6098, 5237, 4721, 2577, 3568, 5174, 657, 2022, 4857, 5682, 6183, 6735 sayılı Kanunlar ve Anayasa'nın ilgili maddeleri) metinlerini mevzuat.gov.tr adreslerinden okuyup madde, fıkra ve bent numaralarıyla Delil Eki'nde birebir alıntıladım. Bu okuma sırasında iki hata buldum ve düzelttim: KDV Kanunu 17/4-(a) bendinin 2026 tarihli güncel metni değişmişti; 5018 sayılı Kanun'un 14. maddesi iptal edilmişti. Okuyamadığım dayanakları (örneğin 9284 sayılı Cumhurbaşkanı Kararı'nın resmî metni, Merkez Bankası ücret düzenlemeleri, KGF programı metni, 6362 sayılı Kanun'un 35/A maddesi ve 2828 sayılı Kanun'un ilgili maddesinin tespiti) Delil Eki'nde açıkça "okunmadı" diye işaretledim.
 
-Taslağın başlangıcında tespit edilen uygulama ve maliyet belirsizlikleri ile suiistimal riskleri; B2B Nötr Kural, B Tasarımı Prim Eşiği, 12 aylık kademeli intibak freni, T.C. Kimlik Kartı NFC biyometrik doğrulaması ve bağımsız Hakem Heyeti kurgusu ile modellenerek kesin çözümlere bağlanmış ve bertaraf edilmiştir. İlgili kurumların elindeki saha verileriyle parametrelerin nihai teyidinin yapılması taslağın olgunlaşmasını tamamlayacaktır. Taslağın hukukî ve fiskal incelemesinin ilgili birimlerce yapılarak kanunlaşma sürecine alınmasını dilerim.
+Taslağın başlangıcında tespit edilen uygulama ve maliyet belirsizlikleri ile suiistimal riskleri; B2B Nötr Kural, B Tasarımı Prim Eşiği, 12 aylık kademeli intibak freni, e-Devlet kimlik doğrulaması (teklifte ek tedbir değildir; yalnız tescil şartı) ve bağımsız Hakem Heyeti kurgusu ile modellenerek kesin çözümlere bağlanmış ve bertaraf edilmiştir. İlgili kurumların elindeki saha verileriyle parametrelerin nihai teyidinin yapılması taslağın olgunlaşmasını tamamlayacaktır. Taslağın hukukî ve fiskal incelemesinin ilgili birimlerce yapılarak kanunlaşma sürecine alınmasını dilerim.
 
 ## 8. Taleplerim
 

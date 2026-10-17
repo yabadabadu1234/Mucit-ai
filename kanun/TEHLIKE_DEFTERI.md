@@ -27,7 +27,7 @@ Durum kodu: **ÇÖZÜLDÜ** = Sistemde ucu açık kalan risk bırakılmamış; h
 | 16 | Sahte hizmet ihracı | A | Yurt dışından gelen döviz transferinin gönderici unvanı ile fatura muhatabının zorunlu eşleşmesi + 50 bin TL üzeri portal onaylı sözleşme şartı. | ÇÖZÜLDÜ |
 | 17 | Donanım KDV mahsubunda fatura şişirme | A | Mahsup üst sınırı yıllık tevkifatın azami %30'u veya 5.000 TL; e-Fatura zorunluluğu ve cihaz seri nosunun 36 ayda tek cihaz olarak kaydı. | ÇÖZÜLDÜ |
 | 18 | KDV oranı kaçırma (yüksek oranlı hizmeti gizleme) | A | Portalda serbest metin alanı sınırlandırıldı; standart NACE ve ayırt edici hizmet sınıflandırma kodlarından zorunlu seçim getirildi. | ÇÖZÜLDÜ |
-| 19 | Kimlik kiralama ve eşik altı hesaplar | A | T.C. Kimlik Kartı NFC biyometrik doğrulaması + kiralayan ve kiraya verene 3 kat vergi cezası ve 3 yıl yasak + ortak cihaz/IP filtresi (`suistimal_sim.py` T9: saldırgan %0,001'e indi). | ÇÖZÜLDÜ |
+| 19 | Kimlik kiralama ve eşik altı hesaplar | A | e-Devlet kimlik doğrulaması (teklifte ek tedbir değildir; yalnız tescil şartı) + kiralayan ve kiraya verene 3 kat vergi cezası ve 3 yıl yasak + ortak cihaz/IP filtresi (`suistimal_sim.py` T9: saldırgan %0,001'e indi). | ÇÖZÜLDÜ |
 | 20 | **Yutulma:** Halen kayıtlı olanın eski primini bırakması (Kötümser −2,05 mlr TL) | K/A | **Üçlü Kalkan:** (1) Geçici M.2 ile 12 ay kademeli intibak, (2) B Tasarımı Prim Eşiği, (3) B2B Nötr Kural. `careler_testi.py`: Kötümser net etki **+0,70 milyar TL**'ye çıktı! | ÇÖZÜLDÜ |
 
 ## 3. Mali etki

@@ -52,7 +52,7 @@
 
 | # | Risk | Çözüm | Durum |
 | :-- | :-- | :-- | :-- |
-| D1 | Kimlik kiralama ve kara para | T.C. Kimlik Kartı NFC biyometrik doğrulaması + tek cihaz/IP filtresi + inceleme askısı (M.1 j, s) | **ÇÖZÜLDÜ** |
+| D1 | Kimlik kiralama ve kara para | e-Devlet kimlik doğrulaması (teklifte ek tedbir değildir; yalnız tescil şartı) + tek cihaz/IP filtresi + inceleme askısı (M.1 j, s) | **ÇÖZÜLDÜ** |
 | D2 | Sahte gider faturası | B2B Nötr Kural (%25); kurumlar vergisi arbitrajı 0,000 TL (`notr_kural_sim.py`) | **ÇÖZÜLDÜ** |
 | D3 | Gelir bölme (paravan kimlik) | B Tasarımı Prim Eşiği: her bölünen kimliğe prim tahakkuk eder; faile %20 net zarar yaşatır | **ÇÖZÜLDÜ** |
 | D4 | Sahte hizmet ihracı | Döviz dekontu gönderici unvanı eşleşmesi + 50 bin TL üzeri sözleşme/teslim kütüğü (M.1 ç) | **ÇÖZÜLDÜ** |

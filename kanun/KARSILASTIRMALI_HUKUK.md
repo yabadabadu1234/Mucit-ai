@@ -65,7 +65,7 @@ Teklifin çekirdeği (tevkifat, hibe, prim sürekliliği) aynı kalır. **Eklene
 | "1 yıl Bağ-Kur prim desteği" | güncel değil (7566 ile 1/1/2026'da kalktı) |
 
 ## F. Risklerin Bertarafı
-B2B Nötr Kuralı (%25), B Tasarımı Prim Eşiği, Geçici Madde 2 İntibak Freni ve T.C. Kimlik Kartı NFC biyometrik doğrulaması ile uluslararası mukayeseli hukuktaki tüm zaafiyetler bertaraf edilmiştir. Kötümser senaryo dahi +0,70 milyar TL net artı bakiyeye kavuşturulmuş, sahte bağımsızlık ve paravan bölme matematiksel olarak imkânsız kılınmıştır (`careler_testi.py`, `bolme_kazanci_yeni.py`).
+B2B Nötr Kuralı (%25), B Tasarımı Prim Eşiği, Geçici Madde 2 İntibak Freni ve e-Devlet kimlik doğrulaması (teklifte ek tedbir değildir; yalnız tescil şartı) ile uluslararası mukayeseli hukuktaki tüm zaafiyetler bertaraf edilmiştir. Kötümser senaryo dahi +0,70 milyar TL net artı bakiyeye kavuşturulmuş, sahte bağımsızlık ve paravan bölme matematiksel olarak imkânsız kılınmıştır (`careler_testi.py`, `bolme_kazanci_yeni.py`).
 
 
 ## G. Güncelleme (11/10/2026)
