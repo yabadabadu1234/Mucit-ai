@@ -421,6 +421,7 @@ try:
             err = str(getattr(r, "error_message", "") or getattr(r, "error", "") or "")
             is_res = bool(r.resolved)
             
+            test_out = r.test_output or ""
             verdict = "DOĞRU ÇÖZÜLDÜ ✅" if is_res else "ÇÖZÜLEMEDİ ❌"
             row = dict(
                 id=t.instance_id,
