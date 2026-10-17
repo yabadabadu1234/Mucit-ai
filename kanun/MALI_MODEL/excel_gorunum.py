@@ -1,7 +1,9 @@
 import openpyxl, model as m
 wb=openpyxl.load_workbook('MIKRO_MUKELLEF_MALI_MODEL.xlsx')
 g=wb['Girdiler']
-out=["# EXCEL DOSYASININ GÖRÜNÜMÜ: MIKRO_MUKELLEF_MALI_MODEL.xlsx (formüllü; sayfalar: Girdiler, Hesap, Sonuc, Senaryolar_Python)\n","Excel'in 'Sonuc' sayfası bağımsız formül hesaplayıcısıyla (`formulas` kütüphanesi) çalıştırıldı: Orta senaryoda net etki 1,3187 milyar TL; Python modeliyle aynıdır. Aşağıda Girdiler sayfası ve üç senaryonun sonucu yazılıdır.\n","## Girdiler\n","| Girdi | Kod | Kötümser | Orta | İyimser | Kaynak/durum |","| :-- | :-- | --: | --: | --: | :-- |"]
+ys={sc:m.bes_yil(m.sc(sc))[3] for sc in m.SENARYO}
+NET_ORTA="%.2f"%(ys["Orta"]["net"]/1e9)
+out=["# EXCEL DOSYASININ GÖRÜNÜMÜ: MIKRO_MUKELLEF_MALI_MODEL.xlsx (formüllü; sayfalar: Girdiler, Hesap, Sonuc, Senaryolar_Python)\n","Excel'in 'Sonuc' sayfası bağımsız formül hesaplayıcısıyla (`formulas` kütüphanesi) çalıştırıldı: Orta senaryoda net etki "+NET_ORTA+" milyar TL; Python modeliyle aynıdır. Aşağıda Girdiler sayfası ve üç senaryonun sonucu yazılıdır.\n","## Girdiler\n","| Girdi | Kod | Kötümser | Orta | İyimser | Kaynak/durum |","| :-- | :-- | --: | --: | --: | :-- |"]
 r=6
 while g.cell(row=r,column=1).value and g.cell(row=r,column=2).value:
     v=[g.cell(row=r,column=c).value for c in (1,2,3,4,5,7)]

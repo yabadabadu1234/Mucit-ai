@@ -1,6 +1,6 @@
 # EXCEL DOSYASININ GÖRÜNÜMÜ: MIKRO_MUKELLEF_MALI_MODEL.xlsx (formüllü; sayfalar: Girdiler, Hesap, Sonuc, Senaryolar_Python)
 
-Excel'in 'Sonuc' sayfası bağımsız formül hesaplayıcısıyla (`formulas` kütüphanesi) çalıştırıldı: Orta senaryoda net etki 1,3187 milyar TL; Python modeliyle aynıdır. Aşağıda Girdiler sayfası ve üç senaryonun sonucu yazılıdır.
+Excel'in 'Sonuc' sayfası bağımsız formül hesaplayıcısıyla (`formulas` kütüphanesi) çalıştırıldı: Orta senaryoda net etki 12.66 milyar TL; Python modeliyle aynıdır. Aşağıda Girdiler sayfası ve üç senaryonun sonucu yazılıdır.
 
 ## Girdiler
 
