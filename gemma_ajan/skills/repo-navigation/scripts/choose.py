@@ -78,7 +78,7 @@ def apply_edit(text, old, new):
     key = [x.strip() for x in ol]
     hits = [i for i in range(len(lines) - len(ol) + 1) if [x.strip() for x in lines[i:i + len(ol)]] == key]
     if len(hits) != 1:
-        return None, ("OLD not found (copy lines exactly from read_file)" if not hits else f"OLD matches {len(hits)} places")
+        return None, ("OLD not found (copy lines exactly from the CODE block of the brief or from context.py output)" if not hits else f"OLD matches {len(hits)} places")
     i = hits[0]
     delta = _indent(lines[i]) - _indent(ol[0])
     nl = new.split("\n")
