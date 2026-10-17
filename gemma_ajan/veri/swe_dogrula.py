@@ -116,13 +116,62 @@ def altin_kapi(gorev, python, zaman):
     return [t for t in p2p if sonuc.get(t) != "PASSED"]
 
 
+def test_dosyalari(test_yamasi):
+    """Test yamasının dokunduğu test dosyaları. Her iki biçimi de okur:
+    'diff --git a/X b/X' (SWE-bench) ve yalnız '+++ b/X' (yarışma verisi)."""
+    dosyalar = []
+    for m in re.finditer(r"^(?:diff --git a/\S+ b/|\+\+\+ b/)(\S+)", test_yamasi, re.M):
+        yol = m.group(1)
+        if "test" in yol.lower() and yol.endswith(".py") and yol not in dosyalar:
+            dosyalar.append(yol)
+    return dosyalar
+
+
+def f2p_p2p_turet(gorev, python=sys.executable, zaman=600):
+    """Yarışma görevleri F2P/P2P listesi içermez; pipeline tanımına göre türetilir:
+    F2P = test yaması uygulanmış temel ağaçta BAŞARISIZ olup altın yamayla GEÇEN testler;
+    P2P = her iki durumda da GEÇEN testler. Sonuç önbelleğe yazılır (her görev bir kez koşar)."""
+    yol = os.path.join(CACHE, f"turet_{gorev['instance_id']}.json")
+    if os.path.exists(yol):
+        with open(yol, encoding="utf-8") as f:
+            return json.load(f)
+    dosyalar = test_dosyalari(gorev["test_patch"])
+    if not dosyalar:
+        raise EnvHatasi(f"{gorev['instance_id']}: test yaması Python test dosyası içermiyor")
+    hedef = tempfile.mkdtemp(prefix="turet_")
+    try:
+        agaci_ac(gorev["repo"], gorev["base_commit"], hedef)
+        if not yama_uygula(hedef, gorev["test_patch"], "test"):
+            raise RuntimeError(f"{gorev['instance_id']}: test yaması uygulanamadı")
+        temel = testleri_kos(hedef, dosyalar, python, zaman)
+        if not yama_uygula(hedef, gorev["patch"], "gold"):
+            raise RuntimeError(f"{gorev['instance_id']}: altın yama uygulanamadı")
+        altin = testleri_kos(hedef, dosyalar, python, zaman)
+    finally:
+        shutil.rmtree(hedef, ignore_errors=True)
+    f2p = sorted(t for t, s in altin.items() if s == "PASSED" and temel.get(t) != "PASSED")
+    p2p = sorted(t for t, s in altin.items() if s == "PASSED" and temel.get(t) == "PASSED")
+    if not f2p:
+        raise EnvHatasi(f"{gorev['instance_id']}: F2P boş (test yaması bir şey ayırt etmiyor)")
+    sonuc = {"FAIL_TO_PASS": json.dumps(f2p), "PASS_TO_PASS": json.dumps(p2p)}
+    os.makedirs(CACHE, exist_ok=True)
+    with open(yol, "w", encoding="utf-8") as f:
+        json.dump(sonuc, f, ensure_ascii=False)
+    return sonuc
+
+
 def dogrula(gorev, yama, python=sys.executable, zaman=600):
     """Bir görev ve model yaması için ölçüm. gorev: SWE-bench satırı (dict).
 
     Önce altın kapı: altın yamada bozuk P2P testleri ölçümden çıkarılır (dislanan listesinde döner).
     Model yaması uygulanamazsa mesafe = 1.
     """
-    dislanan = altin_kapi(gorev, python, zaman)
+    if "FAIL_TO_PASS" not in gorev:
+        # Yarışma formatı: listeler yok; altın yamayla türetilir (türetme kapıyı zaten içerir).
+        gorev = dict(gorev, **f2p_p2p_turet(gorev, python, zaman))
+        dislanan = []
+    else:
+        dislanan = altin_kapi(gorev, python, zaman)
     f2p = json.loads(gorev["FAIL_TO_PASS"])
     p2p = [t for t in json.loads(gorev["PASS_TO_PASS"]) if t not in set(dislanan)]
     sonuc = _kosum(gorev, yama, python, zaman, "model")
