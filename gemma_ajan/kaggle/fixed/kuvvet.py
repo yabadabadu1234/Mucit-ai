@@ -32,6 +32,22 @@ def validate_row(row, where=""):
     return int(r), float(c), float(d)
 
 
+def guzergah_skorlari(onceki, uretilen, taban=0.1):
+    """K1 derleyici skoru: her güzergâh için 1 − ortalama mesafe (güzergâha özgü denetçiyle ölçülür).
+
+    uretilen: model çıktıları [{"route", "distance"}]. Bu partide o güzergâhtan çıktı yoksa önceki
+    değer kalır. taban > 0: skor 0'a inmez, güzergâh K1'den tamamen düşmez.
+    """
+    if not (0.0 < taban <= 1.0):
+        raise ValueError("taban (0, 1] aralığında olmalı")
+    yeni = list(onceki)
+    for r in range(ROUTES):
+        ds = [float(g["distance"]) for g in uretilen if g["route"] == r]
+        if ds:
+            yeni[r] = max(taban, 1.0 - sum(ds) / len(ds))
+    return yeni
+
+
 def taban_agirlik(distance, w_taban):
     """K4: uzaklık 0 (doğru) iken 1, uzaklık 1 iken w_taban. Her zaman w_taban > 0."""
     if not (0.0 < w_taban <= 1.0):

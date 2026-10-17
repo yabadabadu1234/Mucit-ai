@@ -31,6 +31,7 @@ RANK, ALPHA = 8, 16
 TARGETS = ("q_proj", "v_proj")
 GEN_N = int(os.environ.get("GEN_N", "2"))  # her partide model kendi yanıtını üretir (K2)
 GEN_MAX_NEW = int(os.environ.get("GEN_MAX_NEW", "512"))
+SCORE_FLOOR = float(os.environ.get("SCORE_FLOOR", "0.1"))  # güzergâh skoru bu değerin altına inmez
 MAX_LEN = int(os.environ.get("MAX_LEN", "4096"))
 sys.path.insert(0, os.environ.get("VERI_DIR", str(Path(__file__).resolve().parent.parent.parent / "veri")))
 EPOCHS = int(os.environ.get("EPOCHS", "1"))
@@ -157,7 +158,7 @@ def main():
     import torch.nn.functional as F
     from transformers import AutoConfig, AutoModelForCausalLM, AutoTokenizer
     from accelerate import init_empty_weights
-    from kuvvet import STREAMS, pcgrad
+    from kuvvet import STREAMS, guzergah_skorlari, pcgrad
 
     if not VERIFIED_JSONL.exists():
         log(f"DURDU: doğrulanmış veri yok ({VERIFIED_JSONL}). Sahte veriyle eğitim yapılmaz.")
@@ -218,13 +219,16 @@ def main():
 
     model.train()
     step = 0
+    route_score = [1.0] * 4  # K1 derleyici skoru: güzergâh başına, üretilen çıktıdan güncellenir
     for ep in range(EPOCHS):
         for start in range(0, len(rows), BATCH):
-            part = rows[start:start + BATCH]
             t_gen = time.time()
             gen = generate_rows(model, tok, rows, start, GEN_N, torch) if GEN_N > 0 else []
+            route_score = guzergah_skorlari(route_score, gen, SCORE_FLOOR)
+            part = [dict(r, compiler_score=route_score[r["route"]]) for r in rows[start:start + BATCH]]
             log(f"parti {start // BATCH + 1}: {len(gen)} yanıt üretildi ({time.time() - t_gen:.1f}s), "
-                f"ortalama mesafe={sum(g['distance'] for g in gen) / max(1, len(gen)):.3f}")
+                f"ortalama mesafe={sum(g['distance'] for g in gen) / max(1, len(gen)):.3f}, "
+                f"güzergâh skorları={[round(s, 3) for s in route_score]}")
             batch = part + gen
             A, B = batch_plan(batch)
             streams = [torch.zeros(sum(p.numel() for p in params)) for _ in range(STREAMS)]

@@ -76,6 +76,24 @@ def test_uretilmis_ornek_k1_seyreltmez():
     assert abs(K.katsayilar([uretilmis], 0.1)[0][0][K.STREAM_DIST] - 0.5 * K.taban_agirlik(0.5, 0.1)) < 1e-12
 
 
+def test_guzergah_skoru():
+    onceki = [1.0, 0.8, 0.6, 0.4]
+    uretilen = [{"route": 0, "distance": 0.25}, {"route": 0, "distance": 0.75},
+                {"route": 2, "distance": 1.0}]
+    yeni = K.guzergah_skorlari(onceki, uretilen, taban=0.1)
+    assert abs(yeni[0] - 0.5) < 1e-12, "1 - ortalama(0.25, 0.75)"
+    assert yeni[1] == 0.8, "çıktısı olmayan güzergâh önceki değerini korur"
+    assert abs(yeni[2] - 0.1) < 1e-12, "taban: skor 0'a inmez"
+    assert yeni[3] == 0.4
+    # Skorlar değişken: güzergâhlar birbirinden farklı olabilir
+    assert len({round(x, 6) for x in yeni}) > 1
+    try:
+        K.guzergah_skorlari(onceki, uretilen, taban=0.0)
+        raise AssertionError("taban = 0 reddedilmeli")
+    except ValueError:
+        pass
+
+
 def test_pcgrad_ozellikleri():
     g1 = [1.0, 0.0]
     g2 = [-1.0, 0.5]  # g1 ile negatif iç çarpım
