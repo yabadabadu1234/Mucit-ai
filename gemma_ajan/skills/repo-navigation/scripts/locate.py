@@ -14,6 +14,8 @@ import math
 import os
 import re
 import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import budget  # noqa: E402
 from collections import Counter, defaultdict
 
 STOP = set("""a an the and or but if then else for from to of in on at by with without is are was were be been being
@@ -475,4 +477,4 @@ def _report(o, text):
 
 
 if __name__ == "__main__":
-    main()
+    budget.guard(main)

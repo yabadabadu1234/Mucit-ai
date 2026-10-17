@@ -6,6 +6,8 @@ Always exits 0 so run_skill_script keeps the output.
 """
 import os
 import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import budget  # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
@@ -53,4 +55,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    budget.guard(main)

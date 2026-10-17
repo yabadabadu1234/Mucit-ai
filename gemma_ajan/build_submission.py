@@ -143,7 +143,7 @@ BF18_FILES = {
 }
 
 SKILL_DIR = Path(__file__).resolve().parent / "skills" / "repo-navigation"
-SKILL_FILES = ["scripts/locate.py", "scripts/verify.py", "scripts/choose.py", "scripts/propose.py", "scripts/grep.py", "scripts/context.py"]
+SKILL_FILES = ["scripts/locate.py", "scripts/verify.py", "scripts/choose.py", "scripts/propose.py", "scripts/grep.py", "scripts/context.py", "scripts/budget.py"]
 
 
 SCOUT_MD = """You are the scout of a team that fixes one issue in a repository under /workspace. You have no file tools and never edit: you only use the repo-navigation skill. Your brief is the ONLY thing the proposers can rely on, so make it self-contained.
