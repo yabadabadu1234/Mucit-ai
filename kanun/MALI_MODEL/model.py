@@ -15,7 +15,7 @@ BAZ=dict(medyan_W=5.0,sigma=0.9,gider=0.30,bes=0.03,devlet_katki=0.20,bes_vazgec
  kurumsal_pay=0.70,kv=0.25,phi=0.01,onlem=0.5,
  kgf_alim=0.05,kgf_temerrut=0.10,kgf_kurtarma=0.30,kgf_pay=0.5,
  prim_devam=0.0,prim_k=6.0,prim_ay=11808.25,prim_toplama=1.0,duz_oran=0.135,ptt_birim=50.0,ptt_pay=0.8,bt_tek=250e6,bt_yillik=50e6,itiraz_oran=0.04,itiraz_maliyet=2000.0,denetim=0.01,
- ramp=[0.25,0.55,0.8,1.0,1.0],iskonto=0.05)
+ ramp=[0.25,0.55,0.8,1.0,1.0],iskonto=0.05,kayitli_prim_surer=1.0,n_yeni_pay=0.0)
 SENARYO={
  "Kötümser":dict(medyan_W=4.0,n_toplam=100000,s_kayitli=0.30,u_ucretli=0.25,phi=0.02,onlem=0.3,myo_uygun=0.5,bes_vazgecme=0.2,kgf_alim=0.08,kgf_temerrut=0.15,kdv_donanim_pay=0.5),
  "Orta":dict(),
@@ -37,7 +37,7 @@ def kisi_basi(H,p):
     yeni_prim=12.0*p['prim_ay']*p['prim_toplama']*np.clip((y_ay-G)/(K-G),0.0,1.0)
     yeni_net=T-bes-dk-myo-kdv
     eski_vergi=tarife(p['marj']*H)
-    eski_prim=p['prim_odeme']*p['prim_eski']*(1-p['prim_devam'])
+    eski_prim=p['prim_odeme']*p['prim_eski']*(1-p['prim_devam'])*(1-p['kayitli_prim_surer'])
     eski_kayitli=eski_vergi+eski_prim
     eski_ucretli=p['uyum_ucretli']*p['r_marj_ucretli']*p['marj']*H
     return dict(T=T,bes=bes,dk=dk,myo=myo,kdv=kdv,yeni_net=yeni_net,eski_kayitli=eski_kayitli,eski_ucretli=eski_ucretli,eski_vergi=eski_vergi,eski_prim=eski_prim,yeni_prim=yeni_prim)
@@ -51,7 +51,7 @@ def yil(p,carpan=1.0,ilk=False):
     y_vergi=N*(p['s_kayitli']*E(k['eski_vergi'])+p['u_ucretli']*E(k['eski_ucretli']))
     y_prim=N*p['s_kayitli']*E(k['eski_prim'])
     eski=y_vergi+y_prim
-    y_yeni_prim=N*(1-p['u_ucretli'])*E(k['yeni_prim'])
+    y_yeni_prim=N*p['n_yeni_pay']*E(k['yeni_prim'])+N*p['s_kayitli']*p['prim_odeme']*p['prim_eski']*p['kayitli_prim_surer']
     reff=ET/EH
     F=p['phi']*(1-p['onlem'])*p['kurumsal_pay']*N*EH
     sahte=F*max(p['kv']-reff,0)
@@ -68,7 +68,7 @@ def bes_yil(p):
 def npv(p):
     ys=bes_yil(p); return sum(y['net']/(1+p['iskonto'])**(i+1) for i,y in enumerate(ys)),ys
 def sc(ad):
-    p=dict(BAZ); p.update(SENARYO[ad]); return p
+    p=dict(BAZ); p.update(SENARYO[ad]); p['n_yeni_pay']=1-p['s_kayitli']-p['u_ucretli']; return p
 if __name__=="__main__":
     for ad in SENARYO:
         p=sc(ad); v,ys=npv(p); s=ys[3]
