@@ -69,7 +69,8 @@ def testleri_kos(hedef, kimlikler, python, zaman):
     toplanamayan (bulunamayan) kimlikler sonuç listesinde olmaz ve başarısız sayılır."""
     if not kimlikler:
         return {}
-    komut = [python, "-m", "pytest", "-q", "-rA", "-p", "no:cacheprovider", "--no-header", "--tb=no", *kimlikler]
+    komut = [python, "-m", "pytest", "-q", "-rA", "-p", "no:cacheprovider", "--no-header", "--tb=no",
+             "--continue-on-collection-errors", *kimlikler]
     ortam = dict(os.environ, PYTHONPATH=hedef)
     try:
         r = subprocess.run(komut, cwd=hedef, capture_output=True, text=True, timeout=zaman, env=ortam)
@@ -138,15 +139,21 @@ def f2p_p2p_turet(gorev, python=sys.executable, zaman=600):
     dosyalar = test_dosyalari(gorev["test_patch"])
     if not dosyalar:
         raise EnvHatasi(f"{gorev['instance_id']}: test yaması Python test dosyası içermiyor")
+    # P2P tanımı "tüm test paketi": koşu, test yamasının dokunduğu kökün tamamıdır (ör. tests/).
+    kokler = sorted({yol.split("/")[0] for yol in dosyalar})
+    if len(kokler) != 1:
+        raise EnvHatasi(f"{gorev['instance_id']}: test yaması birden çok test kökü dokunuyor: {kokler}")
     hedef = tempfile.mkdtemp(prefix="turet_")
     try:
         agaci_ac(gorev["repo"], gorev["base_commit"], hedef)
         if not yama_uygula(hedef, gorev["test_patch"], "test"):
             raise RuntimeError(f"{gorev['instance_id']}: test yaması uygulanamadı")
-        temel = testleri_kos(hedef, dosyalar, python, zaman)
+        temel = testleri_kos(hedef, kokler, python, zaman)
         if not yama_uygula(hedef, gorev["patch"], "gold"):
             raise RuntimeError(f"{gorev['instance_id']}: altın yama uygulanamadı")
-        altin = testleri_kos(hedef, dosyalar, python, zaman)
+        altin = testleri_kos(hedef, kokler, python, zaman)
+        if not altin:
+            raise EnvHatasi(f"{gorev['instance_id']}: altın yamayla hiç test sonucu alınamadı")
     finally:
         shutil.rmtree(hedef, ignore_errors=True)
     f2p = sorted(t for t, s in altin.items() if s == "PASSED" and temel.get(t) != "PASSED")
