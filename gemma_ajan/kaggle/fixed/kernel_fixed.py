@@ -389,7 +389,7 @@ try:
 
     # Sıkıştırma: küçük parça kodla, büyük parça (>6000 token) LLM özeti. Eşik 16000 (ölçüm: sistem ~4.2k,
     # araç ~3.4k, çıktı payı 6144 -> en kötü adımda güvenli eşik 11.9k, tipik adımda 16.5k). interval=2.
-    summarizer = HybridEventsSummarizer(llm=lambda: LiteLlm(model="openai/" + TARGET_MODEL_NAME, api_base=server.base_url, api_key="EMPTY"))
+    # E17: summarizer Kaggle harness App doğrulamasında reddedildi; ADK varsayılanı kullanılıyor
     raw = yaml.safe_load((SUB_DIR / "eval_config.yaml").read_text(encoding="utf-8"))
     ev = raw.get("evaluation", raw)
     limits, gen_constraints = build_submission_limits()
@@ -405,7 +405,7 @@ try:
         limits=limits, generation_constraints=gen_constraints, adapter_manifest=adapters,
         context_cache_config=ContextCacheConfig(min_tokens=2048, ttl_seconds=3600, cache_intervals=15),
         # Hülasacı Compaction: 25k token eşiğine ulaştığında devreye girip bağlamı ~8k seviyesine düşürür
-        events_compaction_config=EventsCompactionConfig(summarizer=summarizer, compaction_interval=2, overlap_size=2, token_threshold=36000, event_retention_size=4),
+        events_compaction_config=EventsCompactionConfig(compaction_interval=2, overlap_size=2, token_threshold=36000, event_retention_size=4),
         graph_dir=str(EVAL_DIR / "graphs"), embeddings_dir=str(EVAL_DIR / "embeddings"),
         wheels_dir=EVAL_DIR / "wheels", verbose=False,
     )
