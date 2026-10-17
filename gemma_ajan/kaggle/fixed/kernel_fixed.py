@@ -405,7 +405,7 @@ try:
         limits=limits, generation_constraints=gen_constraints, adapter_manifest=adapters,
         context_cache_config=ContextCacheConfig(min_tokens=2048, ttl_seconds=3600, cache_intervals=15),
         # Hülasacı Compaction: 25k token eşiğine ulaştığında devreye girip bağlamı ~8k seviyesine düşürür
-        events_compaction_config=EventsCompactionConfig(compaction_interval=2, overlap_size=2, token_threshold=36000, event_retention_size=4),
+        events_compaction_config=None,  # E17: App doğrulaması Kaggle'da reddediyor; sıkıştırma bu koşuda kapalı
         graph_dir=str(EVAL_DIR / "graphs"), embeddings_dir=str(EVAL_DIR / "embeddings"),
         wheels_dir=EVAL_DIR / "wheels", verbose=False,
     )
