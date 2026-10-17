@@ -1,5 +1,5 @@
 # Birlikte en kötü ve en iyi uç: her girdi, senaryonun kendi (en düşük, en yüksek) aralığının aleyhte/lehte ucunda.
-# Aralıklar mc_uc.py'deki DAG ile aynıdır. n_toplam için: en kötü = 2021 düzeyi 255 bin, en iyi = 2025 eğiliminin 5 yıl uzatılması 462 bin (veriye dayalı).
+# Aralıklar mc_uc.py'deki DAG ile aynıdır. n_toplam için: en kötü = 119 bin, en iyi = 475 bin (aday stok x katılım, aday_n.json).
 import json
 from model import *
 ALEYHE={'s_kayitli':'lo','phi':'hi','onlem':'lo','ort_H_W':'lo','prim_odeme':'lo','u_ucretli':'hi','duz_oran':'lo','kgf_temerrut':'hi','kgf_alim':'hi',
@@ -17,7 +17,7 @@ for ad,spec in DAG.items():
     for k,(lo,m,hi) in spec.items():
         if ALEYHE.get(k)=='hi': w[k],b[k]=hi,lo
         else: w[k],b[k]=lo,hi
-    w['n_toplam']=255000; b['n_toplam']=462000
+    w['n_toplam']=119000; b['n_toplam']=475000
     res[ad]=dict(taban=uc(dict(base)),en_kotu=uc(w),en_iyi=uc(b))
     print(ad,{k:round(v,2) for k,v in res[ad].items()})
 json.dump(res,open('kose_stres.json','w'),indent=1,ensure_ascii=False)

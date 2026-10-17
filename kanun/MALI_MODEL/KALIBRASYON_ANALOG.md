@@ -117,3 +117,11 @@ Daha önce "gayrıresmî sayısı ve işsizlik yaş kırılımı veride yok" dem
 - Gayrıresmî = potansiyel işgücü (çekirdek, 5.129) ve ücretsiz aile işçisi (tarım dışı, 599); "diğer" (4.665) ayrıca genişletilmiş okumadır.
 - İyi (padişah oranları): çekirdek 1.536 bin; "diğer" dâhil 2.026 bin. Orta (yarı oranlar): 768 bin / 1.013 bin. Kötü (padişah: en fazla 100 bin ilave): 100 bin.
 - Bunlar **yeni** (şimdiye kadar prim ve vergi dışı) katılımcıdır. Modeldeki `n_yeni_pay` Orta'da yalnız 0,311 × 332.000 ≈ 103 bin; yani model, padişahın iyi senaryosunun çok altında yeni katılım varsayıyor. Bu fark kapatılmadı; N'nin yeni kanadı ayrıca karar gerektirir.
+
+## 10. N'nin güncel tanımı (aday stok × katılım; F 3-I 300–304 ve 3-I 281 ile uyumlu)
+
+- Açık gerçek kişi girişimleri, 2024: 1.683.000 (`19242e77` doğumları × `f361f6a7` hayatta kalma; 2019–2024 kohortları). Gerçek kişi dışındaki türler (limited, anonim, adi ortaklık vb.) dâhil değildir (F 3-I 250); F 3-I 281'in diğer caiz türleri için bir karar gerekir.
+- Ciro payı (ciro ≤ 24 asgari ücret, 2024 TL 480.060): 0,706 (σ 1,75 log-normal; `veri_kalibrasyon.json`).
+- Aday stok: 1.188.000.
+- Katılım (varsayım): Kötümser %10 → 119.000; Orta %20 → 238.000; İyimser %40 → 475.000. Katılım oranını veri belirlemez; bu, senaryo ayrımının asıl kaynağıdır.
+- Eski değerler (100 bin / 331 bin / 1,096 milyon ve 255 bin / 332 bin / 462 bin) bu tanımla değiştirildi; bağımsız kanıt sayılmaz.
