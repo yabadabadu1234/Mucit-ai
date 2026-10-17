@@ -35,4 +35,4 @@ Savaşın ayrıntıları ve ganimet ihtilafı nedeniyle iki ad kullanılmıştı
 - **K008-03** — Esir ve ihtiyat (67-75)
 
 ---
-*Bu dosya tefsir ve lügat geleneğinin yaygın kabullerinden derlenmiştir. '(rivayet)' işaretli adlar ve hadisler sıhhati ayrıca yoklanmadan kesin sayılmamalıdır. Kısımların ayet aralıkları yaklaşıktır; ayn ve rükû sınırları Mushaf ile doğrulanarak eklenecektir.*
+*'(rivayet)' işaretli adlar ve hadisler kaynağından yoklanmalıdır.*

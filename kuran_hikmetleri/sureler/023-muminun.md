@@ -35,4 +35,4 @@ Tek ad.
 - **K023-03** — Nûh ve Mûsâ (23-50)
 
 ---
-*Bu dosya tefsir ve lügat geleneğinin yaygın kabullerinden derlenmiştir. '(rivayet)' işaretli adlar ve hadisler sıhhati ayrıca yoklanmadan kesin sayılmamalıdır. Kısımların ayet aralıkları yaklaşıktır; ayn ve rükû sınırları Mushaf ile doğrulanarak eklenecektir.*
+*'(rivayet)' işaretli adlar ve hadisler kaynağından yoklanmalıdır.*

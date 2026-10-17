@@ -35,4 +35,4 @@ Amme (ilk kelime; rivayet).
 - **K078-03** — Cennet ve kâfirler (31-40)
 
 ---
-*Bu dosya tefsir ve lügat geleneğinin yaygın kabullerinden derlenmiştir. '(rivayet)' işaretli adlar ve hadisler sıhhati ayrıca yoklanmadan kesin sayılmamalıdır. Kısımların ayet aralıkları yaklaşıktır; ayn ve rükû sınırları Mushaf ile doğrulanarak eklenecektir.*
+*'(rivayet)' işaretli adlar ve hadisler kaynağından yoklanmalıdır.*

@@ -34,4 +34,4 @@ Tebbet (ilk kelime; rivayet).
 - **K111-02** — Karısı ve ip (4-5)
 
 ---
-*Bu dosya tefsir ve lügat geleneğinin yaygın kabullerinden derlenmiştir. '(rivayet)' işaretli adlar ve hadisler sıhhati ayrıca yoklanmadan kesin sayılmamalıdır. Kısımların ayet aralıkları yaklaşıktır; ayn ve rükû sınırları Mushaf ile doğrulanarak eklenecektir.*
+*'(rivayet)' işaretli adlar ve hadisler kaynağından yoklanmalıdır.*

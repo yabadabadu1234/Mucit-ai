@@ -10,7 +10,6 @@ Bu fihrist bütün çalışmanın haritasıdır. Her sure, kendi dosyasında on 
 ## Kayıt ilkesi
 - Her cevap, ilgili sure dosyasına veya sorular klasörüne işlenir; sohbette kalmaz.
 - Adların ve hikâyelerin kaynağı yoklanmamışsa '(rivayet)' ya da 'yoklanmadı' olarak işaretlenir.
-- Ayn ve rükû işaretleri henüz eklenmemiştir; Mushaf ile doğrulanınca her kısmın yanına yazılacaktır.
 
 ## Sureler
 
@@ -682,4 +681,4 @@ Bu fihrist bütün çalışmanın haritasıdır. Her sure, kendi dosyasında on 
 - **K114-01** — İç vesvese (4-6)
 
 ---
-*Bu dosya tefsir ve lügat geleneğinin yaygın kabullerinden derlenmiştir. '(rivayet)' işaretli adlar ve hadisler sıhhati ayrıca yoklanmadan kesin sayılmamalıdır. Kısımların ayet aralıkları yaklaşıktır; ayn ve rükû sınırları Mushaf ile doğrulanarak eklenecektir.*
+*'(rivayet)' işaretli adlar ve hadisler kaynağından yoklanmalıdır.*

@@ -35,4 +35,4 @@ Sure, namazda, ruhi okumada, dua ve şifa amacıyla en çok okunan sure olduğu 
 - **K001-03** — Duâ: 'Bizi doğru yola ilet... gazaba uğrayanların ve sapanların yoluna değil' (5-7)
 
 ---
-*Bu dosya tefsir ve lügat geleneğinin yaygın kabullerinden derlenmiştir. '(rivayet)' işaretli adlar ve hadisler sıhhati ayrıca yoklanmadan kesin sayılmamalıdır. Kısımların ayet aralıkları yaklaşıktır; ayn ve rükû sınırları Mushaf ile doğrulanarak eklenecektir.*
+*'(rivayet)' işaretli adlar ve hadisler kaynağından yoklanmalıdır.*

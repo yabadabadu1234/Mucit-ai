@@ -36,4 +36,4 @@ Sure başında Besmele bulunmadığı için rivayetler ve tefsirler farklı ad v
 - **K009-04** — Tevbe ve üç kişinin hikâyesi (97-129)
 
 ---
-*Bu dosya tefsir ve lügat geleneğinin yaygın kabullerinden derlenmiştir. '(rivayet)' işaretli adlar ve hadisler sıhhati ayrıca yoklanmadan kesin sayılmamalıdır. Kısımların ayet aralıkları yaklaşıktır; ayn ve rükû sınırları Mushaf ile doğrulanarak eklenecektir.*
+*'(rivayet)' işaretli adlar ve hadisler kaynağından yoklanmalıdır.*

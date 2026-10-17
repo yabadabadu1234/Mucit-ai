@@ -18,7 +18,7 @@ Kelimenin kökü 'yarmak/sürmek' anlamındadır; sığırın toprak sürmesiyle
 Cüz'den kül: kıssanın bir parçası (inek) bütün surenin adı oldu. Hakikat (cins adı) kullanılmıştır.
 
 ## 6. Neden bu isim seçildi
-67-73. ayetlerdeki kıssa İsrailoğullarının sorgulamada aşırıya kaçmasını, emri ağırlaştırmasını ve maddi bağlılığını gösterir. Sure bu kıssayla başlayan kıssa halkasının en uzunudur.
+67-73. ayetlerdeki kıssa İsrailoğullarının sorgulamada aşırıya kaçmasını, emri ağırlaştırmasını ve maddi bağlılığını gösterir. Kıssa, surenin en uzun anlatısıdır.
 
 ## 7. Neden başka bir isim seçilemezdi
 'Buzağı' adı Bakara 51 ve 92'de geçen daha özel bir hadiseyi vurgular, ama kıssanın sonunda buzağı değil inek kesilir. 'Musa' adı yalnızca bir peygamberi anar. 'İnek' adı ise kıssanın emir-sorgu-kesim üçlüsünü tek kelimede toplar.
@@ -37,4 +37,4 @@ Sure hem uzunluğu, hem hukuki içeriği, hem kıssası ile çok yönlüdür; bu
 - **K002-05** — Hukuk: namaz, oruç, nikâh, borç, faiz (142-286)
 
 ---
-*Bu dosya tefsir ve lügat geleneğinin yaygın kabullerinden derlenmiştir. '(rivayet)' işaretli adlar ve hadisler sıhhati ayrıca yoklanmadan kesin sayılmamalıdır. Kısımların ayet aralıkları yaklaşıktır; ayn ve rükû sınırları Mushaf ile doğrulanarak eklenecektir.*
+*'(rivayet)' işaretli adlar ve hadisler kaynağından yoklanmalıdır.*

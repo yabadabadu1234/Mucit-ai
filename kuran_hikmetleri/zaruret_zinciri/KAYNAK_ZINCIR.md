@@ -791,7 +791,7 @@ Meleklerin saf saf kulluğu + İbrahim-İsmail teslimiyeti + İlyas-Lût: **Tesl
 
 ---
 
-### 37-46: HÂ-MÎM SÜTUNU (BLOK)
+### 40-46: HÂ-MÎM SÜTUNU (BLOK)
 
 **Bu yedi surenin ortak zarureti (Mekânsal):**
 Plan gereği, Kur'an'ın **ortasına** (34-46) bir **tevhid savunma sütunu** konulmalıdır; çünkü Mushaf'ın ilk yarısı (1-33) tevhidi **temellendirir ve uygular**; ikinci yarısı (51-114) tevhidi **eskatolojik ve muamelat boyutunda** işler. **Orta** ise tevhidin **soyut müdafaası**dır: Müşrik zihniyete karşı **felsefi teolojik** savunma, sadece burada, sadece bu yedi surede **bağımsız bir blok** olarak verilir. Neden **yedi**? Çünkü **yedi gök**ün her birine bir levha.
@@ -801,7 +801,7 @@ Hâ-Mîm ailesinin iç düzeni **basamaklı yoğunlaşma**dır (kriz-çözüm de
 
 | Sure | Açı |
 |---|---|
-| **40 Mû'min (Ğâfir)** | Tevhid inancının **savunması** (Mûsâ-Firavun paradigması: "Ben sizi ateşten kurtarırım, siz beni öldürmek istiyorsunuz") |
+| **40 Mû'min (Gâfir)** | Tevhid inancının **savunması** (Mûsâ-Firavun paradigması: "Ben sizi ateşten kurtarırım, siz beni öldürmek istiyorsunuz") |
 | **41 Fussilet** | Vahyin **dil** olarak açıklanması ("Fussilet" = detaylı açıklandı): Müşrik "Kur'an bir beşerin sözü" diyor; sure: "Bu, detaylandırılmış bir kitaptır." |
 | **42 Şûrâ** | Vahyin **toplumsal** alana uygulanma usulü: **Şûrâ** (istişare). "Onların işleri aralarında istişare iledir." |
 | **43 Zuhruf** | Tevhidin **sınıfsal** imtihanı: Zenginler ("Eğer bu Kur'an bir şey olsaydı, iki köyden birine bir **mal**ı olarak inerdi") ve Firavun tipolojisi. |
@@ -810,7 +810,7 @@ Hâ-Mîm ailesinin iç düzeni **basamaklı yoğunlaşma**dır (kriz-çözüm de
 | **46 Ahkâf** | **Coğrafi** final: Kum tepeleri (Ahkâf). Güçlü kavimlerin **güçlü** yapılarının (kayaları oyarak yaptıkları şehirlerin) bile çökeceği. **Son söz: Kuvvet Allah'ındır.** |
 
 **Dış zaruret (Mekânsal):**
-Neden Ahkâf'tan sonra **Muhammed (47)**? Çünkü Ahkâf, **müşriklerin sığınaklarının (kum tepeleri şehirleri)** çöküşünü ilan etti. Plan gereği, sığınak çöktükten sonra, sığınağı çökerten **fiili savaş** gelir: Muahammed suresi, savaş hükümlerini verir. Ahkâf → Muhammed geçişi: **Coğrafî helak ilanı → fiilî cihad emri.**
+Neden Ahkâf'tan sonra **Muhammed (47)**? Çünkü Ahkâf, **müşriklerin sığınaklarının (kum tepeleri şehirleri)** çöküşünü ilan etti. Plan gereği, sığınak çöktükten sonra, sığınağı çökerten **fiili savaş** gelir: Muhammed suresi, savaş hükümlerini verir. Ahkâf → Muhammed geçişi: **Coğrafî helak ilanı → fiilî cihad emri.**
 
 ---
 
@@ -861,21 +861,19 @@ Plan gereği: Cemiyet inşasına başlamadan önce, **inanç sınırı** bir kez
 
 ---
 
-### 51 · ZÂRİYÂT — 53 NAHL: RIZIK, ŞÜKÜR VE TEHDİT
+### 51 · ZÂRİYÂT — 52 TÛR — 53 NECM: RIZIK, AZAP VE VAHİY
 
-Bu üç sure (Zâriyât, Tûr, Nahl) **bir blok**dur.
+Bu üç sure (Zâriyât, Tûr, Necm) **bir blok**dur.
 
 **Neden blok?**
-Zâriyât: Rüzgâr/bulut/rızık → Tûr: Azap/dağ → Nahl: Nimet/şükür. Bu üçü **kavram üçgeni**: **Verilen (rızkı) → Hatırlatılan (ceza) → Şükredilen (nimet).** Aralarında "kriz-çözüm" yok; **üçlü ritim** var. Plan gereği, bu üçü **aynı nefeste** gelmelidir; ayrılsalar, şükür teolojisi **azap tehdidinden** kopar ve **rızık teolojisi** **nimet farkındalığından** uzaklaşır.
+Zâriyât: rüzgâr/bulut/rızık → Tûr: azap/dağ → Necm: peygamberin doğru yolu ve vahyin ölçüsü. Bu üçü **kavram üçgeni**: **Verilen (rızık) → Hatırlatılan (ceza) → Bildirilen (vahiy).** Aralarında "kriz-çözüm" yok; **üçlü ritim** var. Plan gereği, bu üçü **aynı nefeste** gelmelidir; ayrılsalar, şükür teolojisi **azap tehdidinden** kopar ve **rızık teolojisi** **nimet farkındalığından** uzaklaşır.
 
 ---
-
-### 53 · NAHL — (Blokla aynı, üstte ele alındı)
 
 ### 54 · KAMER — GÖĞÜN YARILMASI VE HER İŞİN KÂTİLEŞMESİ
 
 **Nerede?**
-Rızık-azap-şükür bloğu bitti. Plan gereği: Her şeyin **kader olarak** yazıldığı, tarihin **tekrar ettiği** bir **ontolojik** hatırlatma gelmelidir. Kamer'de gök yarılır; ve her kavmin **aynı** akıbeti tekrar tekrar alır: "Andolsun, Kur'an'ı hatıra kolaylaştırdık; hatırlayan yok mu?"
+Rızık-azap-vahiy bloğu bitti. Plan gereği: Her şeyin **kader olarak** yazıldığı, tarihin **tekrar ettiği** bir **ontolojik** hatırlatma gelmelidir. Kamer'de gök yarılır; ve her kavmin **aynı** akıbeti tekrar tekrar alır: "Andolsun, Kur'an'ı hatıra kolaylaştırdık; hatırlayan yok mu?"
 
 **Neden bu sure?**
 "Vakti saati geldi ve ay yarıldı" ile başlayan **kozmo-eskatalogik** açılış + **beş kavmin tekrar tekrar** aynı red ve aynı helak ile anlatılması: Bu **tekrar-montaj** başka bir surede bu kadar **perdeli** değildir.
@@ -891,7 +889,7 @@ Bu beş sure, Medine toplumunun **devletleşme ve dış ilişkiler** boyutunu ve
 |---|---|
 | **55 Rahmân** | **Söylev üslubuyla** (ikili tekrar: "Feminne bi-âlai Rabbikumâ...) | Allah'ın nimetlerini **iki cihan**a ilan; devletin **müjde ve tehdit** dilini kurar. |
 | **56 Vâkıa** | **Kıyamet**in kesinliği: Üç sınıf (yemin sahipleri, ashab-ı şimâl, mukarrebûn). |
-| **59 Haşr** | **Beni Nadiyr** sürgünü: Düşman **dışarıda** bir cephe daha temizlenir. |
+| **59 Haşr** | **Benî Nadîr** sürgünü: Düşman **dışarıda** bir cephe daha temizlenir. |
 | **60 Mümtehine** | **Savaşta** Müslüman olan kadınların statüsü: Dış ilişkilerde **kadının** hukuku. |
 | **61 Saf** | **Saf saf** cemaat: Medine toplumunun **disiplin** son hamlesi. |
 
@@ -964,8 +962,8 @@ Gecenin yarısı, Kur'an oku, teheccüd: Bu, tebliğ yükünün **kişisel ritü
 
 ### 74 · MÜDDESSİR — KAPANIŞ ÜLTİMATOMU
 
-**Nered?**
-Müddessir, Kur'an'ın **inmiş** (tenzil) surelerden **ilk** olanlarından biridir (İbn Abbas rivayeti). Mushaf'ta **son**a (74) konması, plan gereğidir: **Görünmez âlem ve kişisel ibadet** anlatıldıktan sonra, **son çağrı, son ültimatom, son "kalk ve uyar!"** gelir. Müddessir'in "Ey örtüsüne bürünen!" emri, bu noktada **son uyarıdır.**
+**Nerede?**
+Müddessir'in ilk inen sureler arasında olduğu bazı rivayetlerde geçer (rivayet, ihtilaflıdır). Mushaf'ta **son**a (74) konması, plan gereğidir: **Görünmez âlem ve kişisel ibadet** anlatıldıktan sonra, **son çağrı, son ültimatom, son "kalk ve uyar!"** gelir. Müddessir'in "Ey örtüsüne bürünen!" emri, bu noktada **son uyarıdır.**
 
 ### 75 · KIYÂME — 77 MÜRSELÂT: ÜÇLÜ KIYAMET FIRTINASI
 
@@ -1001,3 +999,135 @@ Sen sordun: "Neden 76 İnsan, 32 Secde'nin yerine geçmez?" Cevap: Geçmez. **32
 | **87 A'lâ** | Yüce Allah'ın tesbihi — **tevhid** |
 | **88 Gâşiye** | Kapanan yüzler — **son tepki** |
 | **89 Fecr** | Şafak — **sabır**
+
+---
+
+## 90-114: SON KAPILAR (ZON VIII)
+
+Bu zon, Mushaf'ın kapanış bölümüdür. Üç ayrı grup halinde okunur: kısa sureler arasındaki yemin ve tesbih hattı (90-97), tarihî ve ahlakî uyarı hattı (98-108) ve kapanış koruma hattı (109-114).
+
+### 90 · BELED — İNSANIN ÇABASI VE YOKSULU DOYURMAK
+**Nerede?** Fecr'in sabırdan sonra gelen insan tahlili, çabanın ahlakî sonucunu ister.
+**Neden bu sure?** "Biz insanı zahmet içinde yarattık" (4) ile başlayan çaba tanımı, yoksulu doyurmayı ve ashab-ı meymeneyi tek surede bağlar.
+**Ya başka sure?** Bu bağı başka bir sure vermez; çaba ile infak arasındaki ilişki ancak burada, insanın yükünü tarif eden bir yemin sonrasında kurulur.
+
+### 91 · ŞEMS — NEFSİN TEZKİYESİ
+**Nerede?** Beled'in insan yükü, nefsin arınması sorusuna çevrilir.
+**Neden bu sure?** Yemin silsilesi (1-7) nefsi arındıran ve gömen ayrımını tek nefeste verir; Semûd kıssası bu ayrımın tarihî örneğidir (11-15).
+**Ya başka sure?** Tezkiye kavramı başka surelerde de geçer, ama bu sırada, insan yükünden sonra gelen bir hesap olarak yalnızca burada yer alır.
+
+### 92 · LEYL — İNFAK VE REZİL OLUŞ
+**Nerede?** Şems'in nefs tezkiyesi, sadakanın gizliliği ve yoksulluk meselesiyle açılır.
+**Neden bu sure?** Gece ve gündüz yeminiyle başlayan (1-4) sure, verenle esirgeyeni ayırır (5-11); ateş ve rızâ ayrımı (14-21) bu ayrımın sonucudur.
+**Ya başka sure?** Bağış ve cehennem ayrımı başka yerlerde de var; burada ayrım, gece yeminiyle iç içe gelir.
+
+### 93 · DUHÂ — TESELLİ
+**Nerede?** Leyl'in ayrımı Peygamber'in kendi hâline yöneltilir: rabbin seni terk etmedi (3).
+**Neden bu sure?** İnşirâh'tan önce, yaşanan sıkıntının ardından gelen tesellinin nimetleri hatırlatılır (6-11).
+**Ya başka sure?** Teselli ve nimet hatırlatması birlikte başka surede yoktur; kısa ve doğrudan hitap bu yüzden yalnızca burada.
+
+### 94 · İNŞİRÂH — GÖĞÜS AÇILIŞI
+**Nerede?** Duhâ'nın teselli cümlesi, zorlukla kolaylık ilkesine genişler.
+**Neden bu sure?** "Zorlukla beraber bir kolaylık vardır" (5-6) tekrarıyla, Duhâ'nın teselli cümlesi kurala dönüşür.
+**Ya başka sure?** Kurallı teselli cümlesi başka yerde tekrar edilmez; tekrar burada bilinçlidir.
+
+### 95 · TÎN — İNCİR, ZEYTİN VE İNSANIN KIVAMI
+**Nerede?** İnşirâh'ın tesellisinden sonra insanın asıl kıvamı sorulur.
+**Neden bu sure?** İncir ve zeytin yemini (1-3) insanın en güzel yaratılışından sonraki düşüşünü (4-5) ve imanı (6) bağlar.
+**Ya başka sure?** En güzel yaratılış ile düşüş arasındaki bağ başka yerde bu kadar kısa değildir.
+
+### 96 · ALAK — İLK VAHİY
+**Nerede?** Tîn'in insan kıvamı, insanın öğrenmesiyle açılır.
+**Neden bu sure?** "Oku" (1-5) ile insanın ilk vahyi, Ebû Cehil'in karşı çıkışı (9-19) ile birlikte gelir.
+**Ya başka sure?** İlk vahiy ile itiraz birlikte başka yerde verilmez; bu yüzden zincir tam burada kapanır.
+
+### 97 · KADR — VAHYİN GECESİ
+**Nerede?** Alak'taki ilk vahyin zamanı sorulur.
+**Neden bu sure?** Kadir gecesinin değeri (1-5) vahyin gecesini tek sayfada verir.
+**Ya başka sure?** Zaman ve vahiy ilişkisi başka surede bu kadar kısa ve doğrudan değildir.
+
+### 98 · BEYYİNE — AÇIK DELİL
+**Nerede?** Kadir'in vahyi, ehl-i kitabın delil beklentisine bağlanır.
+**Neden bu sure?** Ehl-i kitabın ayrılığı ve açık delil (1-5), ahiret karşılığı (6-8) ile biter.
+**Ya başka sure?** Ehl-i kitap tartışması Medenî sure olan Âl-i İmrân'da geniştir; burada kısa bir ayrılık tespiti olarak gelir.
+
+### 99 · ZİLZÂL — AMELİN KARŞILIĞI
+**Nerede?** Beyyine'nin delili, amelin karşılığına döner.
+**Neden bu sure?** Yer sarsıntısı (1-5) amelin tartıya konmasını (6-8) doğurur.
+**Ya başka sure?** Amel karşılığı ilkesi başka yerde geniş anlatılır, burada kısa ve sarsıcı bir sahneyle verilir.
+
+### 100 · ÂDİYÂT — İNSANIN NANKÖRLÜĞÜ
+**Nerede?** Zilzâl'in amel karşılığı, insanın nankörlüğü ile karşılaştırılır.
+**Neden bu sure?** Koşan atlara yemin (1-5), insanın nankörlüğünü (6-8) ve kabirdekilerin dirilişini (9-11) bağlar.
+**Ya başka sure?** Nankörlük ile diriliş arasındaki bağ başka yerde bu kadar kısa değildir.
+
+### 101 · KÂRİA — GÖZLERİN TARTILMASI
+**Nerede?** Âdiyât'ın nankörlüğü kıyamet sarsıntısına bağlanır.
+**Neden bu sure?** Kâria (1-5) ile terazi (6-11) bir arada, nankörün tartısını verir.
+**Ya başka sure?** Terazi ve çarpış imajı başka yerde birlikte gelmez.
+
+### 102 · TEKÂSÜR — ÇOKLUK YARIŞI
+**Nerede?** Kâria'nın tartısı dünya yarışına döner.
+**Neden bu sure?** Çokluk yarışı (1-4) ve kıyamette sorgu (5-8) birlikte, dünyanın aldatıcılığını verir.
+**Ya başka sure?** Dünyaya bağlanmanın bu kadar kısa anlatımı başka yerde yoktur.
+
+### 103 · ASR — ZAMANA YEMİN VE KAYIP
+**Nerede?** Tekâsür'ün çokluk yarışı zamanın kaybına bağlanır.
+**Neden bu sure?** Zamana yemin (1) ve insanın kaybı (2), dört şartla kurtuluşu (3) tek nefeste verir.
+**Ya başka sure?** En kısa surelerden biri olarak tüm insanlık için kapsayıcı bir ölçü, başka yerde değildir.
+
+### 104 · HÜMEZE — AYIPLAYAN VE MALINI SAYAN
+**Nerede?** Asr'ın kaybı, ayıplayanın ve malını sayanın hâlinde somutlaşır.
+**Neden bu sure?** Ayıplayanlar (1-4) ve Hutame (5-9) ile malı biriktirenin ahlakı verilir.
+**Ya başka sure?** Malın ahlakı Tekâsür'de de vardır; burada doğrudan ayıplama ile ele alınır.
+
+### 105 · FÎL — EBREHE'NİN ORDUSU
+**Nerede?** Hümeze'nin mal ve güç yanılgısı, tarihî bir helake dönüşür.
+**Neden bu sure?** Ebrehe'nin fillerle Kâbe'ye saldırısı ve ilahi müdahale (1-5), gücün kaynağını gösterir.
+**Ya başka sure?** Mekke'nin korunması olayı başka surede bu kadar kısa anlatılmaz.
+
+### 106 · KUREYŞ — İLAF VE NİMET
+**Nerede?** Fîl'in koruması, Kureyş'in nimetine bağlanır.
+**Neden bu sure?** Kış ve yaz yolculuklarındaki ilaf (1-2) ile nimetin Rabbe ibadetle şükredilmesi (3-4) birlikte gelir.
+**Ya başka sure?** İlaf kavramı yalnız burada vardır.
+
+### 107 · MÂ'ÛN — YETİM VE NAMAZDA RİYA
+**Nerede?** Kureyş'in nimeti, yardımı esirgemenin ayıbına karşılık gelir.
+**Neden bu sure?** Yetimi itmek (2) ve namazda riya (4-7), dinin ahlakî kısmını tek surede bağlar.
+**Ya başka sure?** Namaz ve yardım ilişkisi burada doğrudan kurulur.
+
+### 108 · KEVSER — NİMET VE ŞANİ
+**Nerede?** Mâ'ûn'un yardım eksikliği, Peygamber'e verilen en büyük nimetle karşılaştırılır.
+**Neden bu sure?** Kevser (1) ve düşmanın sonu (3) tek surede, nimetle yalancı düşmanı karşıtlar.
+**Ya başka sure?** En kısa surelerden biri olarak bu karşıtlık yalnız burada vardır.
+
+### 109 · KÂFİRÛN — AYRIM BEYANI
+**Nerede?** Kevser'in nimeti ile düşmanın sonu arasında, inanç ayrımı açıkça çizilir.
+**Neden bu sure?** "Sizin dininiz size, benim dinim bana" (6) ayrımı, tek surede tam olarak verilir.
+**Ya başka sure?** Ayrım beyanı başka yerde bu kadar kısa değildir.
+
+### 110 · NASR — YARDIM VE İSTİĞFAR
+**Nerede?** Kâfirûn'un ayrımı, sonunda yardım ve zafer haberiyle sonuçlanır.
+**Neden bu sure?** Yardım ve fetih (1-2), istiğfarla (3) tamamlanır.
+**Ya başka sure?** Zafer ile istiğfar birlikte, Medenî bir sure olarak yalnız burada.
+
+### 111 · MESED — EBU LEHEB'İN SONU
+**Nerede?** Nasr'ın zaferi, düşmanın sonuyla karşılanır.
+**Neden bu sure?** Ebu Leheb ve karısının sonu (1-5) tek surede verilir.
+**Ya başka sure?** Adı açıkça anılan bir kişinin sonu başka yerde yoktur.
+
+### 112 · İHLÂS — TEVHİD ÖZETİ
+**Nerede?** Mesed'in helakı, tevhidin özet ilanına dönüşür.
+**Neden bu sure?** Dört ayette tevhid (1-4) Kur'an'ın özetidir (rivayet).
+**Ya başka sure?** Tevhidin bu kadar kısa özeti başka yerde yoktur.
+
+### 113 · FELAK — DIŞ ŞERRE SIĞINMA
+**Nerede?** Tevhidin özetinden sonra, dış şerlere karşı sığınma gelir.
+**Neden bu sure?** Yaratılanın şerri, karanlığın şerri, düğümlere üfürenlerin şerri ve hasetçinin şerri (1-5).
+**Ya başka sure?** Dış şerlere sığınma, iç vesveseye karşı Nâs ile birlikte kapanır.
+
+### 114 · NÂS — İÇ VESVESE VE SON KAPI
+**Nerede?** Felak'ın dış şerri, insanın içindeki vesveseye bağlanır.
+**Neden bu sure?** İnsanların Rabbine (1-3), insanın içindeki vesvese (4-6) ile mushaf kapanır.
+**Ya başka sure?** Mushafın son sözü olarak insanın içini hedef alan sığınma başka yerde değildir.
+
