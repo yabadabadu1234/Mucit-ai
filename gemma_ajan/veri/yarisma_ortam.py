@@ -18,7 +18,7 @@ import shutil
 import subprocess
 import tempfile
 
-from swe_dogrula import agaci_ac, EnvHatasi
+from swe_dogrula import agaci_ac, EnvHatasi  # noqa: F401  (agaci_ac: ağaç açma)
 
 ORTAM_KOKU = os.environ.get("YARISMA_ORTAM", os.path.join(tempfile.gettempdir(), "yarisma_ortam"))
 TEKERLEK_KLASORU = os.environ.get("YARISMA_WHEELS", "")
@@ -64,7 +64,7 @@ def ortam_kur(gorev, zaman=900):
     """Görev için (python, etiket) döner. Etiket: 'cevrimdisi' veya 'pypi'."""
     agac = tempfile.mkdtemp(prefix="anahtar_")
     try:
-        agaci_ac(gorev["repo"], gorev["base_commit"], agac)
+        agaci_ac(gorev, agac)
         anahtar = bagimlilik_anahtari(agac)
         kurulum = os.path.join(agac)  # bağımlılık kurulumu bu ağaçtan yapılır
         dizin = os.path.join(ORTAM_KOKU, anahtar)

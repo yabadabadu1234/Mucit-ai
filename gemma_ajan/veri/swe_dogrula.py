@@ -41,11 +41,26 @@ def depoyu_hazirla(repo):
     return d
 
 
-def agaci_ac(repo, commit, hedef):
-    """Temel commit'in ağacını (git archive) hedef dizine açar."""
-    kaynak = depoyu_hazirla(repo)
+ANLIK_GORUNTU_KLASORU = os.environ.get("SWE_SNAPSHOTS", "")
+
+
+def agaci_ac(gorev, hedef):
+    """Görevin temel durumunu hedef dizine açar.
+
+    SWE_SNAPSHOTS tanımlıysa yarışmanın anlık görüntüsü (<instance_id>.tgz, .git hariç) kullanılır:
+    içeriği temel commit ile aynıdır (test ve altın yamalar bu ağaca temiz uygulanır). Yoksa depo
+    GitHub'dan klonlanıp temel commit'in ağacı git archive ile açılır.
+    """
     os.makedirs(hedef, exist_ok=True)
-    arsiv = subprocess.run(["git", "-C", kaynak, "archive", commit], capture_output=True, check=True).stdout
+    if ANLIK_GORUNTU_KLASORU:
+        tgz = os.path.join(ANLIK_GORUNTU_KLASORU, f"{gorev['instance_id']}.tgz")
+        if not os.path.exists(tgz):
+            raise EnvHatasi(f"{gorev['instance_id']}: anlık görüntü yok: {tgz}")
+        subprocess.run(["tar", "-xzf", tgz, "-C", hedef, "--exclude=./.git"], check=True)
+        return
+    kaynak = depoyu_hazirla(gorev["repo"])
+    arsiv = subprocess.run(["git", "-C", kaynak, "archive", gorev["base_commit"]],
+                           capture_output=True, check=True).stdout
     subprocess.run(["tar", "-x", "-C", hedef], input=arsiv, check=True)
 
 
@@ -93,7 +108,7 @@ def _kosum(gorev, yama, python, zaman, ad):
     yama uygulanamazsa sonuç None."""
     hedef = tempfile.mkdtemp(prefix="swe_")
     try:
-        agaci_ac(gorev["repo"], gorev["base_commit"], hedef)
+        agaci_ac(gorev, hedef)
         if not yama_uygula(hedef, gorev["test_patch"], "test"):
             raise RuntimeError(f"{gorev['instance_id']}: test yaması uygulanamadı (görev verisi bozuk)")
         if not yama_uygula(hedef, yama, ad):
@@ -149,7 +164,7 @@ def f2p_p2p_turet(gorev, python=None, zaman=600, etiket="elle"):
         raise EnvHatasi(f"{gorev['instance_id']}: test yaması birden çok test kökü dokunuyor: {kokler}")
     hedef = tempfile.mkdtemp(prefix="turet_")
     try:
-        agaci_ac(gorev["repo"], gorev["base_commit"], hedef)
+        agaci_ac(gorev, hedef)
         if not yama_uygula(hedef, gorev["test_patch"], "test"):
             raise RuntimeError(f"{gorev['instance_id']}: test yaması uygulanamadı")
         temel = testleri_kos(hedef, kokler, python, zaman)
