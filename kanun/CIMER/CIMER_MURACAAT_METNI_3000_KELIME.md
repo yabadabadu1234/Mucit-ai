@@ -40,7 +40,7 @@ Taslak, ticareti değil, sermayesiz **hizmet ve fikir** üretimini kapsıyor. Ma
 1. **Kapsam ve tavan (Madde 1).** Yıllık gayrisafi hasılatı, iki aylık brüt asgari ücretin on iki katı olan 24 brüt asgari ücreti (2026 için 792.720 TL) aşmayan, Türkiye Cumhuriyeti vatandaşı gerçek kişiler. Yabancı uyruklular kapsam dışıdır ve genel hükümlere tabidir. Maaşlı çalışan isterse tescil olabilir; tescili seçmemişse ona mikro muamelesi yapılmaz.
 2. **Hasılat yoksa yük yoktur.** Maktu vergi, gelirden bağımsız sabit prim, zorunlu muhasebeci ve işyeri şartı kaldırılır. Vergi, yalnızca hasılat doğduğunda ve tahsil edildiği anda alınır.
 3. **Nihaî tevkifat.** Tevkifat, gayrisafi hasılatın yüzde on üç virgül beşidir (%13,5), tek oranla; kümülatif hasılata göre artmaz, gider tenzili ve gider belgesi yoktur. Oran kanunda alt sınır %13,5 ve üst sınır %27 olarak yazılıdır ve Anayasa'nın 73. maddesinin dördüncü fıkrası uyarınca bu sınırlar içinde Cumhurbaşkanı kararıyla değiştirilebilir; sebebi, mali modelin kötümser senaryosunda %13,5'in açık vermesi, %27'nin dengelemesidir (Bölüm 6).
-4. **Kurumsal alıcı güvencesi.** Alıcı şirket, tevkifatı Hazine'ye aktarmadan faturayı gider yazamaz. Otuz ila doksan gün vadeli ödemede alıcı, elektronik teminatla "Vadeli Tevkifat Senedi" düzenleyebilir; vadesinde ödenmezse gider indirimi iptal edilir, vergi alıcıdan tahsil edilir ve ceza alıcıya kesilir. Mükellef bundan sorumlu tutulmaz.
+4. **Kurumsal alıcı güvencesi.** Alıcı şirket, tevkifatı Hazine'ye aktarmadan faturayı gider yazamaz. Otuz ila doksan gün vadeli ödemede alıcı, elektronik teminatla "Vadeli Tevkifat Senedi" düzenleyebilir; vadesinde ödenmezse gider indirimi iptal edilir, vergi alıcıdan tahsil edilir. Vade tarihinden on beş gün sonra da intikal etmeyen tutarda alıcıya, ilk ihlalde iki ay, tekrarında altı ay, üçüncü ve sonraki ihlallerde bir yıl süreyle mikro mükellefiyet ve vadeli senet imtiyazından çıkarma uygulanır; ömür boyu men yoktur, itirazlar Mikro Üretici Dijital Hakem Heyeti'nde görülür. Senette faiz, müddet karşılığı artış veya ilave ödeme yoktur. Mükellef bundan sorumlu tutulmaz.
 5. **Münhasır hesap ve otomatik tevkifat.** Tüm tahsilat mükellef adına açılan tek bir hesaba yapılır; nihaî tüketiciden ve platformlardan tevkifat bankada otomatik kesilir. Banka gerekçesiz hesap açmayı reddedemez, hesap açılış ve işletim ücreti alamaz.
 6. **Adres, tebligat ve belge.** İşyeri ve oda kaydı yerine e-Devlet kimliği ve UETS adresi geçerlidir; PTT, adresi olmayan mükellefe ücretsiz adres tahsis eder. Portal, karekodlu bir Mikro Mükellefiyet ve Muafiyet Belgesi üretir. Fatura, e-Devlet veya mobil onayla, mali mühür ya da donanım gerekmeden kesilir.
 7. **Sosyal güvenlik.** Bu faaliyet sebebiyle zorunlu 4/b sigortalılığı doğmaz ve sabit prim yükü kalkar; yerine gelire bağlı prim alınır: aylık net geliri brüt asgari ücretin üçte biri olan geçim haddini (11.010 TL) aşmayan aydan prim alınmaz, aşan gelirde prim gelirle orantılı artar ve brüt asgari ücretin altı katında (198.180 TL) tam prime (11.808,23 TL) ulaşır; prim tevkifatla birlikte tahsilat anında kesilir ve ödenen prim tam prime oranı kadar gün sayılarak 4/b sigortalılık süresine eklenir (m.51); isteyen m.50 uyarınca ayrıca isteğe bağlı sigorta da yaptırabilir; 4/b için emeklilik 9000 prim günü ve kadın 58, erkek 60 yaş şartına bağlıdır (m.28), yılda 12 ay prim ödeyen 25 yılda hak kazanır. Öğrencinin ve hak sahibinin sağlık sigortası kesilmez. Tevkifatın yüzde üçü, aksi bildirilmedikçe katılım esaslı (faiz içermeyen) bireysel emeklilik fonuna aktarılır ve Devlet katkısı eklenir. Yıllık hasılatı tavanın en az yarısına ulaşanlar için doksan günlük prim ödeme süresi sayılır ve bu primi Hazine karşılar.
@@ -48,7 +48,7 @@ Taslak, ticareti değil, sermayesiz **hizmet ve fikir** üretimini kapsıyor. Ma
 9. **Faizsiz finansman.** Faiz içermeyen, kâr-zarar ortaklığına veya mal ve hizmet alım satımına dayalı finansmana KGF kefaleti sağlanabilir; kefalet için mükelleften komisyon alınmaz. Faizli borç ve faizli borca kefalet yasaktır.
 10. **İtiraz ve yargı yolu.** Otuz günlük itiraz, çok kanallı başvuru (dijital imkânı olmayanlar için PTT, vergi dairesi, muhtarlık, nüfus müdürlüğü), Mikro Üretici Dijital Hakem Heyeti ve vergi mahkemesinde harçsız, ivedi yargı. Algoritmik denetim yalnızca işaretler; kapatma veya ceza insan incelemesinden sonra verilir; yanlış pozitif oranı her yıl ilan edilir.
 11. **Kişisel veriler.** Veriler takma adlaştırılır ve yalnızca Türkiye'deki kamu veri merkezlerinde tutulur; ihlal hâlinde TCK m.135-140 uygulanır.
-12. **Eşit giriş (Madde 1 (p)).** Halen kayıtlı mükellef ve halen 4/b sigortalı olanlar da yeni girenlerle aynı şartlarla rejime girer; eski ve yeni arasında yük, hak, kapı veya bekleme farkı yoktur.
+12. **Giriş ve kayıtlı sigortalılık (Madde 1 (p)).** Halen 4/b sigortalı olanlar rejime girer ve primlerini sürdürür; yeni girenler gelire bağlı primi öder. Bu fark, kayıtlı sigortalının mevcut prim hakkının bedelidir ve açıkça yazılmıştır.
 13. **Diğer.** Sistem entegrasyonu için en çok altı ay geçiş (Geçici Madde 1).
 
 ## 4-A. Başlıca hükümlerin gerekçesi
@@ -81,24 +81,24 @@ Böyle bir rejimin istismar edilebileceğini biliyorum ve riskleri sıfırlayama
 8. **Donanım KDV mahsubunda sınırlar.** Mahsup yalnızca e-faturayla, seri numarası belirtilmiş cihaz için ve yıllık tevkifatın yüzde ellisine kadar yapılır; iki yıldan önce elden çıkarılırsa geri alınır.
 9. **Negatif liste.** Ticari alım satım, komisyonculuk, kumar ve benzeri alanlar rejim dışıdır.
 
-Geliştirilen Çare Paketi (B2B Nötr Kuralı, B Tasarımı Prim Eşiği, Geçici Madde 2 İntibak Freni ve e-Devlet kimlik doğrulaması) ile tespit edilen 43 tehlikenin tamamı matematiksel ve hukuki olarak çözüme kavuşturulmuştur.
+Tespit edilen tehlikeler, her birinin kanun metnindeki karşılığı ve kalan riski ile birlikte ekteki Tehlikeler Defteri'nde yazılıdır. Sahte fatura riski (kayıtlı ve kayıt dışı kanalın birlikte kullanılması) tamamen ortadan kaldırılmış değildir; B2B nötr kuralı ve kimlik tekliği bu riski sınırlar, sıfırlamaz. Bu kalan risk açıkça belirtilmiştir.
 
 ## 6. Mali etki: dürüst ve doğrulanmış sonuç
 
 Mali etkiyi hesaplayan kapsamlı ve dinamik bir model kurdum (`MALI_MODEL/careler_testi.py` ve Excel). Model; hasılat dağılımını, düz tevkifatı, B2B Nötr Kuralını (%25), bireysel emeklilik katkısını ve Devlet katkısını, doksan günlük prim hibesini, donanım KDV mahsubunu, KGF maliyetini, PTT ve bilgi işlem giderlerini ve en önemlisi **yutulmayı** (Geçici Madde 2 intibak freniyle kademelendirilmiş geçişi) tam bir bütünlük içinde hesaplamaktadır.
 
 **Sonuç (dördüncü yıl, genel devlet = Hazine ve SGK, yeni çare paketiyle):**
-* **Kötümser senaryo:** **+0,70 milyar TL** (5 yıllık bugünkü değer NPV: **+1,83 milyar TL**)
-* **Orta senaryo:** **+9,50 milyar TL** (5 yıllık bugünkü değer NPV: **+28,53 milyar TL**)
-* **İyimser senaryo:** **+50,96 milyar TL** (5 yıllık bugünkü değer NPV: **+154,31 milyar TL**)
+* **Kötümser senaryo:** **+4,65 milyar TL**
+* **Orta senaryo:** **+12,66 milyar TL**
+* **İyimser senaryo:** **+38,67 milyar TL**
 
-Eski taslaktaki Kötümser −2,05 milyar TL açık, B2B Nötr Kuralı ve B Tasarımı Prim Eşiği sayesinde **tüm senaryolarda net artı bakiye** veren sağlam bir yapıya kavuşturulmuştur.
+Bu sonuçlar, kayıtlı 4/b primini sürdüren ve yeni girenlere gelire bağlı prim uygulayan güncel modelden çıkmıştır. Kötümser senaryoda marj incedir; net etkinin pozitif kalması, sahte fatura sızıntısının küçük kaldığı varsayımına (ölçülmemiş) bağlıdır.
 
 **Alınan Temel Tedbirler:**
-1. **B2B Nötr Kural:** Kurumsal alıcı gider gösterecekse satıcı tevkifatı kurumlar vergisine (%25) eşitlenir. Böylece naylon fatura arbitrajı matematiksel olarak 0,000 TL'ye indirilmiştir.
-2. **B Tasarımı Prim Eşiği:** Aylık net geliri brüt asgari ücreti aşmayan gençten prim alınmaz; aşan kazançtan kademeli tam prim tahakkuk eder. Bu sayede tavan altı bölme faile %20 net zarar yaşatır (`bolme_kazanci_yeni.py`).
-3. **Geçici Madde 2 İntibak Freni:** Halen kayıtlı mükelleflerin geçişi 12 aylık intibaka bağlanmış, tolerans eşiği $s^*$ %18,8'den **%49'a** çıkarılmıştır.
-4. **Maaşlı çalışan kalkanı:** Kendi işverenine fatura kesme yasağı ve yıllık 12 asgari ücret mikro tavanı ile bordrolu çalışan arbitrajı önlenmiştir.
+1. **B2B Nötr Kural:** Kurumsal alıcı gider gösterecekse satıcı tevkifatı kurumlar vergisine (%25) eşitlenir. Bu, naylon fatura arbitrajını kapatır; ancak kv=%25 varsayımında kazanç sıfıra iner, kv=%35'te küçük bir kalan kayıp (yaklaşık 0,02 milyar TL) oluşur. Bu bir eşitliktir, simülasyon değildir.
+2. **Gelire bağlı prim:** Yeni girenlerde aylık geliri geçim haddinin (11.010 TL) altında kalan aydan prim alınmaz; aşan gelirde prim orantılı artar ve brüt asgari ücretin altı katında tam prime ulaşır.
+3. **Kayıtlı 4/b sigortalısı:** Primini sürdürür (padişah kararı); yeni girenlerle eşit giriş kapısı yoktur, bu fark Ek B'de yazılıdır.
+4. **Maaşlı çalışan kalkanı:** Kendi işverenine fatura kesme yasağı ve yıllık 12 asgari ücret mikro tavanı ile bordrolu çalışan arbitrajı önlenmeye çalışılmıştır.
 
 Modelde yer almayan tüketim vergileri ve 2. tur dolaylı vergi etkileri de hesaplanmış, sisteme yıllık ilave 1,5 ila 4,2 milyar TL dolaylı KDV/ÖTV katkısı sağladığı tespit edilmiştir. İlgili tüm kodlar ve doğrulama cetvelleri ekteki teknik dosyada eksiksiz sunulmuştur.
 
