@@ -709,6 +709,7 @@
 | 310 | **KAYITLI 4/B PRİMİ SÜRER; YENİ GİRENLERE GELİRE BAĞLI (o) UYGULANIR (padişah: "Kayıtlı prim sürsün, yeni girenlere bizim model uygulansın."); EŞİTLİK İLKESİ BU KARARLA DEĞİŞİR (NAKZ F 3-I 293/294'ün eşit-giriş kanadı, kayıtlı için) | Padişah emri |
 | 311 | **VADELİ ÖDEMEDE CEZA SİSTEMDEN ÇIKARMADIR (kademeli: altı ay, iki yıl, kalıcı); SENETTE MÜDDET KARŞILIĞI ARTIŞ, FAİZ, İLAVE ÖDEME KESİN YASAKTIR (padişah: "Devlet madem öyle benim paramın garantisi ne derse ceza olarak sistemden evvela birkaç ay sonra sene sonra kalıcı olarak atma cezası olsun." ve "Faiz zaten müddet karşılığında parayı arttırmaya denir") | Padişah emri |
 | 312 | **NAKZ 311 (ceza süresi): VADELİ ÖDEMEDE İMTİYAZDAN ÇIKARMA SÜRELİDİR, ÖMÜR BOYU DEĞİLDİR.** Vade tarihinden on beş gün sonra da tevkifat intikal ettirilmemişse (gecikme eşiği): ilk ihlal iki ay, tekrar altı ay, üçüncü ve sonraki ihlal bir yıl. Men süreleri ömür boyu değildir. İtiraz Madde 10 Mikro Üretici Dijital Hakem Heyeti'nde görülür; itiraz süresince ve sonuçlanana kadar men uygulanmaz (padişah: "İlk olarak 2 ay, sonra 6 ay sonra 1 sene. Ömür boyu mahrumiyet olmasın … borç gününden 15 gün sonrasında … İtiraz mekanizmalarını yine o malum heyet idare etsin.") | Padişah emri |
+| 313 | **GECİKME EŞİĞİ VADE TARİHİNDEN SAYILIR (padişah: "Evet vadeden sonra olacak."):** 312'deki on beş günlük eşik borç gününden değil, **vade tarihinden** sonra işler. Teklif metni bu esasa göre yazılır. | Padişah emri |
 ---
 
 # § 4. BÜTÜN SİSTEMİN DURUM MAKİNESİ ŞEMASI
