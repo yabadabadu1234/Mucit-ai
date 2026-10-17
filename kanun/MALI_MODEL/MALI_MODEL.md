@@ -48,14 +48,14 @@ Bu bölüm bu turda yeniden hesaplanmadı. Eski varyant tabloları (çare paketi
 3. **Sahte fatura kaybı sıfır değildir:** kv ve φ varsayımına bağlı olarak 0,02–0,03 milyar TL. "Sıfır" ifadesi bu modelde kullanılmaz.
 4. **Tavan üstü bölme** ve **gelire bağlı primin** etkisi bu turda yeniden ölçülmedi; eski `bolme_kazanci_yeni.py` çıktısı eski modele dayanır ve güncellenmelidir.
 
-## 5. Veri talebi (ölçülmemiş girdileri kapatacak)
+## 5. Varsayım girdileri (yeni kategori için ölçülmüş veri yoktur)
 
-| Girdi | Kurum | İstenen |
+Mikro mükellefiyet yeni bir kategoridir; bu kategoriye özgü ölçülmüş veri yoktur ve bu model bunu beklemez. Aşağıdaki girdiler varsayımdır; her biri için duyarlılık aralığı `tornado_senaryo.py` ve `mc_uc.py` içinde tanımlıdır. Sonuçlar bu varsayımlar koşulunda geçerlidir.
+
+| Girdi | Durum | Duyarlılık nerede |
 | :-- | :-- | :-- |
-| SGK 4/b prim tahsil oranı (π) | SGK | Resmî veri bulunamadı (iki arama, 12/10/2026). Modelde π=0,8 varsayımı. |
-| s ve u (maaşlı payı), yeni primin tahsil oranı | SGK, GİB | Halen 4/b sigortalısı veya gelir vergisi mükellefi olup başvurabilecek kişi sayısı; hizmet ve fikir sektörü hasılat dağılımı |
-| N | TÜİK, GİB | Serbest çalışan sayısı; 20/B kapsamındaki mükellef sayısı ve hasılatı |
-| φ | GİB, MASAK | Hizmet faturalarında sahte fatura oranı |
-| BES vazgeçme | EGM | Otomatik katılımda vazgeçme oranı |
-| KGF | KGF, Hazine | Mikro ölçek faizsiz finansman temerrüt oranı |
-| PTT, BT | PTT, GİB, BDDK | UETS birim gideri; portal ve banka entegrasyon maliyeti |
+| N (katılımcı sayısı) | Senaryo varsayımı (100 bin / 331 bin / 1,1 milyon) | tornado, MC, kırılma ızgarası |
+| s (kayıtlı geçiş payı) | Senaryo varsayımı | tornado, MC, kırılma ızgarası |
+| π (4/b prim tahsil oranı) | Varsayım 0,8 | tornado (prim_odeme) |
+| sahte fatura φ, sızıntı, kiralama | Varsayım; sızıntı ve kiralama modelde açık | `sizinti_analiz.py` |
+| KGF, BES vazgeçme, MYÖ, donanım, PTT, BT | Varsayım | tornado |
