@@ -28,13 +28,13 @@ Durum kodu: **ÇÖZÜLDÜ** = Sistemde ucu açık kalan risk bırakılmamış; h
 | 17 | Donanım KDV mahsubunda fatura şişirme | A | Mahsup üst sınırı yıllık tevkifatın azami %30'u veya 5.000 TL; e-Fatura zorunluluğu ve cihaz seri nosunun 36 ayda tek cihaz olarak kaydı. | ÇÖZÜLDÜ |
 | 18 | KDV oranı kaçırma (yüksek oranlı hizmeti gizleme) | A | Portalda serbest metin alanı sınırlandırıldı; standart NACE ve ayırt edici hizmet sınıflandırma kodlarından zorunlu seçim getirildi. | ÇÖZÜLDÜ |
 | 19 | Kimlik kiralama ve eşik altı hesaplar | A | e-Devlet kimlik doğrulaması (teklifte ek tedbir değildir; yalnız tescil şartı) + kiralayan ve kiraya verene 3 kat vergi cezası ve 3 yıl yasak + ortak cihaz/IP filtresi (`suistimal_sim.py` T9: saldırgan %0,001'e indi). | ÇÖZÜLDÜ |
-| 20 | **Yutulma:** Halen kayıtlı olanın eski primini bırakması (Kötümser −2,05 mlr TL) | K/A | **Üçlü Kalkan:** (1) Geçici M.2 ile 12 ay kademeli intibak, (2) B Tasarımı Prim Eşiği, (3) B2B Nötr Kural. `careler_testi.py`: Kötümser net etki **+0,70 milyar TL**'ye çıktı! | ÇÖZÜLDÜ |
+| 20 | **Yutulma:** Halen kayıtlı olanın eski primini bırakması (Kötümser −2,05 mlr TL) | K/A | **Kayıtlı prim sürer** (padişah kararı, F 3-I 310): halen 4/b sigortalı olanın primi devam eder; yeni girenlere gelire bağlı prim (Madde 5, 5510 m.6/1-(o)) uygulanır. Kötümser net etki **+4,65 milyar TL** (model: `kanun/MALI_MODEL/model.py`). Sahte fatura sızıntısı ölçülmemiş varsayımdır. | ÇÖZÜLDÜ (model; sızıntı varsayımı açık) |
 
 ## 3. Mali etki
 | # | Tehlike | Eski Durum | Alınan Tedbir, Çare ve Sonuç | Güncel Durum |
 | :-- | :-- | :-- | :-- | :-- |
 | 21 | Model girdilerinin ölçülmemiş varsayım olması | A | 100.000 denemelik Monte Carlo ve duyarlılık aralıkları modele bağlandı. | ÇÖZÜLDÜ |
-| 22 | 4. yıl net etki (−2,05 mlr TL Kötümser açık) | K/A | Yeni çare paketiyle 4. yıl net bakiye Kötümser **+0,70**, Orta **+9,50**, İyimser **+50,96** milyar TL'ye yükseltildi. | ÇÖZÜLDÜ |
+| 22 | 4. yıl net etki (eski −2,05 mlr TL Kötümser açık) | K/A | Kayıtlı prim sürdürülerek 4. yıl net bakiye Kötümser **+4,65**, Orta **+12,66**, İyimser **+38,67** milyar TL. (Eski "çare paketi" rakamları +0,70 / +9,50 / +50,96 geçersizdir.) | ÇÖZÜLDÜ (model) |
 | 23 | Modelde olmayan 2. tur vergi etkileri | A | Mikro mükelleflerin harcamalarından doğan dolaylı vergiler (KDV/ÖTV) hesaplandı; sisteme yıllık ek **1,5 - 4,2 mlr TL** sağladığı tespit edildi. | ÇÖZÜLDÜ |
 | 24 | 5018 m.14 aktüeryal çalışma gereği | A | Strateji ve Bütçe Başkanlığı şablonuna tam uyumlu 5 yıllık dinamik aktüeryal projeksiyon tablosu oluşturuldu. | ÇÖZÜLDÜ |
 
