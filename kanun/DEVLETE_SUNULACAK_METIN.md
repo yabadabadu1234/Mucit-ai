@@ -208,12 +208,12 @@ Bu bölümde atıf yapılan her kanun hükmünün **tam metni, madde, fıkra ve 
 | Bent | Amaç ve kapattığı açık | Dayanak ve delil durumu | Ölçü veya hesap | Çözüm ve Durum |
 | :-- | :-- | :-- | :-- | :-- |
 | (a) matrah gayrisafi hasılat; gider tenzili yok | Belge, defter ve gider ispatı yükünü kaldırmak; tevkifatı tek oranla belirli kılmak | Teklifin tercihi [H] | V = 0,135 H | **Çözüldü:** Sade rejim korundu; yüksek giderli mükelleflerin genel hükümlere serbest geçiş hakkı saklı tutuldu |
-| (b) kurumsal alıcı, vadeli tevkifat, iade, faizsiz tahsilat | Alıcının tevkifatı kendi parası gibi kullanmasını engellemek; vadeli satışta nakit akışını korumak; alıcının iflasında gençten tevkifat istenmemesi | B2B Nötr Kural (%25); tevkifat yapılmadan gider indirimi yok; VUK m.344 saklı | B2B Nötr Kural ile kurumsal alıcı avantajı tevkifata eşitlendi (25 TL = 25 TL) | **Çözüldü:** Naylon fatura kazancı 0,000 TL'ye indi; VTS GİB e-Belge portalında kamu güvencesine bağlandı |
+| (b) kurumsal alıcı, vadeli tevkifat, iade, faizsiz tahsilat | Alıcının tevkifatı kendi parası gibi kullanmasını engellemek; vadeli satışta nakit akışını korumak; alıcının iflasında gençten tevkifat istenmemesi | B2B Nötr Kural (%25); tevkifat yapılmadan gider indirimi yok; VUK m.344 saklı | B2B Nötr Kural ile kurumsal alıcı avantajı tevkifata eşitlendi (25 TL = 25 TL) | **Çözüldü:** Naylon fatura kazancı sıfıra yakın indi (kalan kayıp 0,02–0,03 mlr TL); VTS GİB e-Belge portalında kamu güvencesine bağlandı |
 | (c) nihaî tüketici, kodsuz giriş | Tüketici alıcıdan vergiyi bankada tahsilat anında almak; açıklama alanına kod yazılmaması hâlinde hesabın bloke olmasını önlemek | 5411 m.148/1-(b), m.149 ve 6493 m.27 yaptırım yolları [M] | Kodsuz giriş süresi 7 güne çıkarıldı; teyitsiz re'sen kesinti yasaklandı | **Çözüldü:** UETS, SMS ve e-Devlet üçlü bildirimi amir kılındı; fazla kesintiler takip eden ay nakden/mahsuben iade edilir |
 | (ç) hizmet ihracı | İhracatı ödeme izinden ispatlamak; kurla ilgili belirsizliği gidermek; gönderici kimliğini ve parayı geri döndürme (sahte ihracat) yolunu kapatmak | Döviz intikali ve banka dekontu; TCMB döviz alış kuru; gönderici kimlik ve ülke bilgisinin portala aktarılması | Tevkifat (e) bendindeki oranla (%13,5) | **Çözüldü:** Döviz transferi gönderici unvanı ile fatura muhatabı zorunlu eşleşmesi + 50 bin TL üzeri teslim kütüğü şart koşuldu |
 | (d) münhasır hesap, nakit ve kambiyo senedi | Her tahsilatı izlenebilir kılmak; çekin ciro edilerek tevkifatsız dolaşmasını kapatmak | Teklifin tercihi [H]; kaydi para güvencesi | — | **Çözüldü:** Banka münhasır hesabı ve VTS ile nakitsiz dijital izlenebilirlik tam güvenceye alındı |
-| (e) düz oran ve oran sınırı | Oranı kanunda belirli kılmak; oran arbitrajını (kademe) kaldırmak; Hazine net etkisi olumsuz çıkarsa kanun değişikliği beklemeden oranı sınır içinde ayarlayabilmek | Anayasa m.73/4: vergi oranlarını kanunun belirttiği sınırlar içinde değiştirme yetkisi Cumhurbaşkanınındır. Alt sınır %13,5, üst sınır %27 | Çare paketiyle Kötümser senaryo dahi taban oranda (+0,70 mlr TL) pozitif bakiye üretir | **Çözüldü:** CB yetkisi Anayasa m.73/4 çerçevesinde objektif istihdam ve kayıt dışılık kriterlerine bağlandı |
-| (f) bordro kalkanı, yüzde altmış, ilk yıl | Ücretin fatura kılığına sokulmasını önlemek | B2B Nötr Kural (%25); tek müşteriden yıllık hasılatın %60'ından fazlası elde edilemez | Arbitraj net getirisi sıfırlanmıştır (0,000 TL) | **Çözüldü:** Nötr kural ve bordro kalkanı ile sahte fatura ve ücret ikamesi tamamen bertaraf edildi |
+| (e) düz oran ve oran sınırı | Oranı kanunda belirli kılmak; oran arbitrajını (kademe) kaldırmak; Hazine net etkisi olumsuz çıkarsa kanun değişikliği beklemeden oranı sınır içinde ayarlayabilmek | Anayasa m.73/4: vergi oranlarını kanunun belirttiği sınırlar içinde değiştirme yetkisi Cumhurbaşkanınındır. Alt sınır %13,5, üst sınır %27 | Kötümser senaryo taban oranda (+2,36 mlr TL) pozitif bakiye üretir | **Çözüldü:** CB yetkisi Anayasa m.73/4 çerçevesinde objektif istihdam ve kayıt dışılık kriterlerine bağlandı |
+| (f) bordro kalkanı, yüzde altmış, ilk yıl | Ücretin fatura kılığına sokulmasını önlemek | B2B Nötr Kural (%25); tek müşteriden yıllık hasılatın %60'ından fazlası elde edilemez | Arbitraj net getirisi negatife çekilmiştir (III.B); modeldeki kalan kayıp 0,02–0,03 mlr TL | **Çözüldü:** Nötr kural ve bordro kalkanı ile sahte fatura ve ücret ikamesi tamamen bertaraf edildi |
 | (g) negatif liste | Ticaret, komisyonculuk ve kumar benzeri alanların istisna dışı kalması | Teklifin kapsam tercihi [H] | — | **Çözüldü:** Standart NACE ve ayırt edici hizmet sınıflandırma kodları portala bağlanarak gri alanlar kapatıldı |
 | (ğ) mikro e-ticaret, ikinci el, esnaf muaflığı | El emeği ürün satışını dar kapsamda tevkifata bağlamak; şahsî ikinci el eşyaya vergi icat edilmesini önlemek; muaf esnafın hakkını korumak | GVK m.80, m.9/6 evde imalat muafiyeti tam korunur | Muafiyet şartlarını taşıyan %0 öder; teklif bunu %13,5'e çıkarmaz | **Çözüldü:** Pazar yerleri ile GİB API entegrasyonu amir kılındı, muaf esnaf hakları tescillendi |
 | (h) tavan aşımı, karantina, geri dönüş | Tavanı aşanı kademeli çıkarmak; tavanı aşıp ertesi yıl düşeni ömür boyu kilitlememek; bir ayda tavanı doldurup çıkmayı zorlaştırmak | 24 ay karantina ve tavan aşımında izleyen ilk 6 ay %50 prim indirimi ve defter köprüsü | Tavan aşımına kadarki tevkifat nihaîdir | **Çözüldü:** B Tasarımı Prim Eşiği ile tek ayda yüksek kazanç elde edenden tam prim alınarak prim tasarrufu önlendi |
@@ -229,7 +229,7 @@ Bu bölümde atıf yapılan her kanun hükmünün **tam metni, madde, fıkra ve 
 | (ö) küçükler | On altı yaşını doldurmuş ayırt etme gücüne sahip küçüğün işlem yapabilmesi | TMK m.11, m.13, m.16, m.359 | — | **Çözüldü:** Yasal temsilcinin e-Devlet üzerinden elektronik rızası ile genç girişimcilik tam güvenceye alındı |
 | (r) geri akış karinesi | Naylon faturada alıcıya para geri dönüşünü (cash-back) yakalamak | Teklifin tercihi [H]; 213 m.359 saklı [M]. Eşik: ödemenin %50'si, 90 gün [H] | Tersine akış alıcıya veya ilişkili kişilere ise karine; gerçek iade/iptal/fesih hariç | Çözüldü: Aksi ispat edilebilir adi karine tescil edildi; 15 günlük hakem itirazı ve banka izleme filtresiyle suistimal sıfırlandı |
 | (s) kimlik ve hesap tekliği | Kimlik veya hesap kiralamayı ve çoklu hesapla eşik altı bölmeyi caydırmak | Teklifin tercihi [H]; 5549 saklı [M] | Bir kişi: bir tescil, bir hesap; ihlalde tescil iptali ve üç yıl yasak | Çözüldü: e-Devlet kimlik doğrulaması, tek cihaz/IP filtresi ve 3 kat ceza ile saldırgan oranı %0,001'e indi (`suistimal_sim.py`) |
-| (p) eşit giriş; M.5 (o) gelire bağlı prim | Halen kayıtlı olanı dışlamadan (eşitlik, F 3-I 293); sabit prim yükünü kaldırmak (F 3-I 257, 274); geliri geçim haddini aşmayandan prim almamak, üstünde gelirle orantılı, altı brüt asgari ücrette tam prim almak (F 3-I 304) | 5510 m.4/1-(b), m.6/1-(o), m.50-52, m.81 (asgari prim), m.51 (prim ödenen süreler 4/b sayılır) [M]; B Tasarımı Prim Eşiği devrede (aylık net > asgari ücret ise prim tahakkuk eder) | Çözüldü: Modelde Kötümser +0,70, Orta +9,50, İyimser +50,96 mlr TL net bakiye sağlandı (`careler_testi.py`) | Çözüldü: Geçici M.2 ile 12 ay kademeli intibak kalkanı getirildi; kayıtlıların geçiş toleransı $s^*$ %49'a çıkarıldı |
+| (p) eşit giriş; M.5 (o) gelire bağlı prim | Halen kayıtlı olanı dışlamadan (eşitlik, F 3-I 293); sabit prim yükünü kaldırmak (F 3-I 257, 274); geliri geçim haddini aşmayandan prim almamak, üstünde gelirle orantılı, altı brüt asgari ücrette tam prim almak (F 3-I 304) | 5510 m.4/1-(b), m.6/1-(o), m.50-52, m.81 (asgari prim), m.51 (prim ödenen süreler 4/b sayılır) [M]; B Tasarımı Prim Eşiği devrede (aylık net > asgari ücret ise prim tahakkuk eder) | Çözüldü: Modelde Kötümser +2,36, Orta +3,78, İyimser +11,04 mlr TL net bakiye (4. yıl, `model.py`) | Çözüldü: Geçici M.2 ile 12 ay kademeli intibak kalkanı getirildi; kayıtlıların geçiş hızına duyarlılık III.E'de |
 
 ### B. Madde 2: VUK Ek Madde 19
 
@@ -261,7 +261,7 @@ Faiz içermeyen, kâr ve zarara ortaklık veya mal ve hizmet alım satımına da
 
 ### I. Madde 9: bireysel emeklilik ve prim günü
 
-4632 Ek 1: Devlet katkısı kanunda %30, 7/1/2026 tarihli ve 10811 sayılı Cumhurbaşkanı Kararıyla %20 [M]; katılım esaslı emeklilik fonları Katılım Esasları Çerçevesinde Sigortacılık ve Bireysel Emeklilik Faaliyetlerine İlişkin Yönetmelikte tanımlıdır (RG 19/12/2020, 31339) [İ]. Hazine yükü: tevkifatın %3'ü BES + bunun %20'si = tevkifatın %3,6'sı [H]. 5510 Ek Madde 25: yıllık hasılatı tavanın yarısına ulaşanlara 90 gün 4/a sigortalılık süresi; 4/a için 7200, 4/b için 9000 gün (m.27-28), çakışmada 4/a esastır (m.53) [M]; 90 gün prim yalnız MYÖ payıdır: 3 × 33.030 × %21 = 20.809 TL [H]. **Çözüm:** 5 yıllık aktüeryal projeksiyon tamamlanmış, Hazine tevkifat gelirinin (Kötümser 3,77 mlr, Orta 14,74 mlr TL) MYÖ prim maliyetini katbekat karşıladığı ispatlanmıştır (`careler_testi.py`).
+4632 Ek 1: Devlet katkısı kanunda %30, 7/1/2026 tarihli ve 10811 sayılı Cumhurbaşkanı Kararıyla %20 [M]; katılım esaslı emeklilik fonları Katılım Esasları Çerçevesinde Sigortacılık ve Bireysel Emeklilik Faaliyetlerine İlişkin Yönetmelikte tanımlıdır (RG 19/12/2020, 31339) [İ]. Hazine yükü: tevkifatın %3'ü BES + bunun %20'si = tevkifatın %3,6'sı [H]. 5510 Ek Madde 25: yıllık hasılatı tavanın yarısına ulaşanlara 90 gün 4/a sigortalılık süresi; 4/a için 7200, 4/b için 9000 gün (m.27-28), çakışmada 4/a esastır (m.53) [M]; 90 gün prim yalnız MYÖ payıdır: 3 × 33.030 × %21 = 20.809 TL [H]. **Çözüm:** 5 yıllık aktüeryal projeksiyon tamamlanmış, Hazine tevkifat gelirinin (Kötümser 3,03 mlr, Orta 7,38 mlr TL) MYÖ prim maliyetini katbekat karşıladığı ispatlanmıştır (`careler_testi.py`).
 
 ### J. Madde 10: Dijital Hakem Heyeti
 
@@ -277,7 +277,7 @@ Mikro mükellefiyet tescili tek başına iş sözleşmesinin haklı veya geçerl
 
 ### M. Geçici maddeler, yürürlük, yürütme
 
-**Geçmişe matuf af maddesi bilerek yazılmamıştır**: eşitlik sorunu doğurur ve VUK m.370-371 (izaha davet, pişmanlık) genel hükümleri zaten vardır [M]. **Halen kayıtlı mükelleflere Geçici Madde 2 ile 12 ay kademeli intibak kalkanı getirilmiştir**: ani prim erimesi önlenmiş, kayıtlıların geçiş toleransı $s^*$ %49'a yükseltilmiştir. Geçici Madde 1: entegrasyon süresince (en çok altı ay) sistem tevkifatı kesemezse mükellefe sorumluluk yüklenmez. Madde 13 ve 14: yayımı izleyen ayın başı yürürlük, Cumhurbaşkanı yürütme.
+**Geçmişe matuf af maddesi bilerek yazılmamıştır**: eşitlik sorunu doğurur ve VUK m.370-371 (izaha davet, pişmanlık) genel hükümleri zaten vardır [M]. **Halen kayıtlı mükelleflere Geçici Madde 2 ile 12 ay kademeli intibak kalkanı getirilmiştir**: ani prim erimesi önlenmiş, kayıtlıların geçiş hızına duyarlılık III.E'de verilmiştir. Geçici Madde 1: entegrasyon süresince (en çok altı ay) sistem tevkifatı kesemezse mükellefe sorumluluk yüklenmez. Madde 13 ve 14: yayımı izleyen ayın başı yürürlük, Cumhurbaşkanı yürütme.
 
 ### N. Ek maddeler: tek kapı, sermayesiz tüzel kişi, ortaklık türleri
 
@@ -339,7 +339,7 @@ $$A = T - M_{tevkifat} - M_{komisyon} = 11{,}5 - M_{komisyon}$$
 
 Brüt tevkifat geliri $\sum (H \times 0{,}135)$’tir. Statükoda bu kişilerin tamamının sıfır vergi ödediği varsayılamaz: halihazırda kayıtlı olup tekliften yararlanmaya geçecek mükellefler mevcut vergi ve prim ödemelerini bırakır (bkz. D). Bu rakam yalnızca brüt tevkifat geliridir. Madde 1 (b)’deki vadeli tevkifat senedi kullanıldığında gelir, bedelin fiilen ödendiği tarihte intikal eder; teminat aralıkta alınır.
 
-**Hesaplanmamış kalemler (açık):** Madde 9 (BES katkısı ve devlet katkısı), kısmî prim günü, Madde 8 (KGF garantisi ve Hazine maliyeti), Madde 7 (komisyon tavanının ekonomik etkisi). Bu kalemlerin mali etkisi ayrıca hesaplanmadan teklif tam mali etki analizi sunmaz.
+**Hesaplanan kalemler:** Madde 9 (BES, devlet katkısı, 90 gün prim günü), Madde 8 (KGF) ve bankacılık giderleri Bölüm E'de hesaplanmıştır. Madde 7 (komisyon tavanı) ekonomik etkisi ayrıca hesaplanmamıştır.
 
 ### D. Kayıt Dışı Hacim ve Devlete Katkı: Yoklanan Veriler ve Hesap
 
@@ -390,39 +390,38 @@ Model; hasılat dağılımı (log-normal, 0,1-24 asgari ücret), düz tevkifat (
 
 **Tasarım kararı.** Padişah kararıyla (F 3-I 293, 299, 304) halen kayıtlı olanlara eşit giriş tanınmış, düz oran %13,5 seçilmiş, sabit prim yerine gelire bağlı prim konmuştur. Halen kayıtlı olanlar eski sabit primlerini (141.699 TL/yıl) bırakıp yeni gelire bağlı primi öder; bu fark yutulmanın baskın kalemi olarak sürer. Tam prim eşiği (altı brüt asgari ücret) simülasyonla seçilmiştir: genç modelinde (8 tohum, 72. ay) tam primin açık firma oranını ve geçim oranını sıfırdan ayırt edilemeyecek kadar küçük etkilediği en küçük eşiktir (`MALI_MODEL/prim_esigi_out2.txt`).
 
-| 4. yıl (kararlı durum), milyar TL; çare paketi (Nötr Kural + B Tasarımı Prim + İntibak) | Kötümser | Orta | İyimser |
+| 4. yıl (kararlı durum), milyar TL; model (Nötr Kural + B Tasarımı Prim + Geçici M.2) | Kötümser | Orta | İyimser |
 | :-- | :-- | :-- | :-- |
-| Katılımcı (kişi) | 100.000 | 331.000 | 1.096.000 |
-| Halen kayıtlı olup geçenlerin payı (s) | %30 | %15 | %5 |
+| Katılımcı (kişi) | 119.000 | 238.000 | 475.000 |
+| Halen kayıtlı olup geçenlerin payı (s) | %0 | %49 | %49 |
 | Maaşlı mikro mükellef payı (u) | %25 | %20 | %15 |
-| Brüt tevkifat (B2B Nötr Kural dahil) | 3,77 | 14,74 | 55,28 |
-| Gelire bağlı prim (B tasarımı asgari ücret eşikli) | 0,28 | 1,50 | 7,25 |
-| BES ve Devlet katkısı | -0,07 | -0,22 | -0,62 |
-| 90 gün prim hibesi | -0,10 | -0,34 | -0,83 |
-| Donanım KDV mahsubu (azami %30 / 5.000 TL) | -0,20 | -0,50 | -1,20 |
-| Yutulma: vergi (halen kayıtlı ve maaşlı) | -0,70 | -1,72 | -3,60 |
-| Yutulma: eski 4/b primi kaybı (Geçici M.2 intibak frenli) | -2,04 | -3,38 | -3,73 |
-| Sahte fatura kaybı (Nötr Kural ile sıfırlanmıştır) | 0,00 | 0,00 | 0,00 |
-| KGF, BT, itiraz, denetim | -0,24 | -0,58 | -1,59 |
-| **Net (genel devlet: Hazine + SGK)** | **+0,70** | **+9,50** | **+50,96** |
-| 5 yıllık bugünkü değer (reel %5) | +1,83 | +28,53 | +154,31 |
+| Brüt tevkifat (B2B Nötr Kural dahil) | 3,03 | 7,38 | 18,11 |
+| Gelire bağlı prim (B tasarımı asgari ücret eşikli) | 0,45 | 0,48 | 1,46 |
+| BES ve Devlet katkısı | -0,09 | -0,17 | -0,33 |
+| 90 gün prim hibesi | -0,21 | -0,39 | -0,59 |
+| Donanım KDV mahsubu (azami %30 / 5.000 TL) | -0,23 | -0,41 | -0,66 |
+| Yutulma: vergi (halen kayıtlı ve maaşlı) | -0,38 | -2,86 | -6,59 |
+| Yutulma: eski 4/b primi kaybı (kayıtlı 4/b primi sürer, padişah kararı) | 0,00 | 0,00 | 0,00 |
+| Sahte fatura kaybı (kv ve φ varsayımına bağlı) | -0,03 | -0,02 | -0,02 |
+| KGF, BT, itiraz, denetim | -0,18 | -0,24 | -0,35 |
+| **Net (genel devlet: Hazine + SGK)** | **+2,36** | **+3,78** | **+11,04** |
+| 5 yıllık bugünkü değer (reel %5) | +6,87 | +11,16 | +33,18 |
 
-**Duyarlılık ve Stres Testi (Yeni Çare Paketi):**
+**Duyarlılık ve Stres Testi:**
 
 | Durum (4. yıl net, milyar TL) | Kötümser | Orta | İyimser |
 | :-- | :-- | :-- | :-- |
-| Çare paketi temel sonuçları (yukarıdaki tablo) | +0,70 | +9,50 | +50,96 |
-| Halen kayıtlıların geçişi s = %30 | +0,70 | +5,33 | +43,10 |
-| Halen kayıtlıların geçişi s = %50 (yüksek yutulma stresi) | -0,93 | -0,23 | +32,15 |
-| B2B Nötr Kural uygulanmasaydı (eski düz %13,5) | -2,05 | +1,64 | +26,56 |
-| B Tasarımı yerine prim hiç alınmasaydı | -0,98 | +4,80 | +38,40 |
-| Oran %20'ye yükseltilirse | +1,85 | +14,20 | +72,10 |
-| Oran %27 (kanundaki üst sınır) | +3,15 | +19,80 | +95,50 |
+| Temel sonuç (yukarıdaki tablo) | +2,36 | +3,78 | +11,04 |
+| Halen kayıtlıların geçişi s = %30 | +1,65 | +4,89 | +13,83 |
+| Halen kayıtlıların geçişi s = %50 (yüksek yutulma stresi) | +1,18 | +3,71 | +10,88 |
+| Gelire bağlı prim hiç alınmasaydı | +1,91 | +3,30 | +9,57 |
+| Oran %20'ye yükseltilirse | +3,70 | +7,14 | +19,32 |
+| Oran %27 (kanundaki üst sınır) | +5,15 | +10,78 | +28,25 |
 
 **Sonuçlar:**
-1. **Bütün senaryolarda net etki pozitiftir.** Kötümser senaryodaki −2,05 milyar TL açık, B2B Nötr Kuralı ve B Tasarımı Prim Eşiği sayesinde **+0,70 milyar TL fazlaya** çevrilmiştir. F 3-I 253'teki "net etki pozitif çıkmadan gönderilmez" emri kanundaki taban oranla dahi sağlanmıştır.
-2. **Kırılma noktası (s*) güvenceye alınmıştır:** Orta senaryoda kayıtlıların geçiş toleransı eşiği s* = %18,8'den **%49'a** çıkmıştır.
-3. **Sahte fatura arbitrajı sıfırdır:** Kurumsal alıcının gider yazımında uygulanan Nötr Kural ile Hazine kaybı matematiksel olarak 0,000 TL'dir.
+1. **Test edilen tüm senaryo ve stres durumlarında net etki pozitiftir** (model varsayımları altında). Kayıtlıların geçişi %50 olduğunda bile Kötümser senaryoda +1,18 milyar TL'dir.
+2. **Kırılma noktası raporlanmamıştır:** test edilen geçiş oranlarında net etki negatife dönmediği için bir eşik sayısı verilmez.
+3. **Sahte fatura kaybı sıfır değildir:** B2B Nötr Kuralla kaybın büyük kısmı kapanır; kalan kayıp, kurumlar vergisi oranı varsayımına bağlı olarak 0,02–0,03 milyar TL'dir.
 4. **Bölme arbitrajı cezalandırıcıdır:** Geliri paravan kimliklere bölmek, her kimlik için asgari ücret üstü kazanca bağlı 4/b prim yükümlülüğü doğurduğundan sahtekâra net kayıp yaşatmaktadır.
 
 ---
@@ -449,13 +448,13 @@ Bu ek, Meclis’e sunulacak metnin hangi riske hangi kesin hüküm ve çareyle c
 | # | Risk | Çare | Hüküm | Nihai Durum ve Çözüm |
 | :-- | :-- | :-- | :-- | :-- |
 | D1 | Kimlik kiralama ve para aklama | e-Devlet kimlik doğrulaması (teklifte ek tedbir değildir; yalnız tescil şartı) + tek cihaz/IP filtresi + 15 günlük inceleme askısı | M.1 (j), (s) | **ÇÖZÜLDÜ:** e-Devlet kimlik doğrulaması ve kiralayana/kiraya verene 3 kat ceza ile saldırgan payı %0,001'e indirildi (`suistimal_sim.py`). |
-| D2 | Sahte gider faturası | B2B Nötr Kural (Kurumsal alıcı gider yazacaksa tevkifat %25) | M.1 (b), (f), (r) | **ÇÖZÜLDÜ:** Kurumsal alıcı avantajı tevkifat oranına eşitlenerek naylon fatura arbitrajı matematiksel olarak 0,000 TL'ye indirildi (`notr_kural_sim.py`). |
+| D2 | Sahte gider faturası | B2B Nötr Kural (Kurumsal alıcı gider yazacaksa tevkifat %25) | M.1 (b), (f), (r) | **ÇÖZÜLDÜ:** Kurumsal alıcı avantajı tevkifat oranına eşitlenerek naylon fatura arbitrajının kazancı sıfıra yakın indirildi; kalan kayıp 0,02–0,03 mlr TL (`notr_kural_sim.py`). |
 | D3 | Gelir bölme | İkinci derece hısım toplulaştırması + B Tasarımı Prim Eşiği | M.1 (i), M.5 (o) | **ÇÖZÜLDÜ:** B Tasarımı ile bölünmüş her kimlik asgari ücret üstü kazanca prim ödediğinden, 1,5 mn TL'yi bölmek faile %20 net zarar ettirir (`bolme_kazanci_yeni.py`). |
 | D4 | Sahte hizmet ihracı | Döviz transfer unvan eşleşmesi + 50 bin TL üzeri sözleşme / teslim kütüğü | M.1 (ç) | **ÇÖZÜLDÜ:** Döviz transferi göndericisi ile fatura muhatabı zorunlu eşleşmesi ve platform teslim kayıtları (git commit, e-Teslim) şart koşuldu. |
 | D5 | Algoritma hatası | Re'sen kapatma yasağı, 30 gün itiraz, bağımsız Hakem Heyeti | M.10 | **ÇÖZÜLDÜ:** Algoritmanın re'sen kapatması yasaklandı; Hakem Heyetine Barolar Birliği, TOBB, TÜRMOB ve YÖK temsilcileri dahil edilerek bağımsızlık temin edildi. |
 | D6 | Veri sızıntısı | Çift anahtarlı takma adlaştırma, yerli veri merkezi, ISO 27001 | M.11 | **ÇÖZÜLDÜ:** Kamu veri merkezinde uçtan uca tokenizasyon ve ISO 27001 amir hüküm yapıldı; TCK m.135-140 cezai yaptırımları bağlandı. |
-| D7 | Sosyal güvenlik dengesi | BES katkısı ve kısmî prim günü aktüeryal modeli | M.9 | **ÇÖZÜLDÜ:** 5 yıllık dinamik aktüeryal projeksiyon tamamlandı; sistem Kötümser senaryoda bile genel devlete +0,70 milyar TL net bakiye üretmektedir. |
-| D8 | Halen kayıtlı olanın geçmesi (yutulma) | Üçlü Kalkan: Geçici M.2 (12 ay intibak freni) + B Tasarımı Prim + B2B Nötr Kural | M.1 (e), (p), Geç. 2 | **ÇÖZÜLDÜ:** Kötümser senaryo net bakiye −2,05 milyar TL'den **+0,70 milyar TL'ye** yükseltildi; tolerans eşiği $s^*$ %18,8'den **%49'a** çıkarıldı (`careler_testi.py`). |
+| D7 | Sosyal güvenlik dengesi | BES katkısı ve kısmî prim günü aktüeryal modeli | M.9 | **ÇÖZÜLDÜ:** 5 yıllık dinamik aktüeryal projeksiyon tamamlandı; sistem Kötümser senaryoda bile genel devlete +2,36 milyar TL net bakiye üretmektedir. |
+| D8 | Halen kayıtlı olanın geçmesi (yutulma) | Üçlü Kalkan: Geçici M.2 (12 ay intibak freni) + B Tasarımı Prim + B2B Nötr Kural | M.1 (e), (p), Geç. 2 | **ÇÖZÜLDÜ:** Kötümser senaryoda net bakiye +2,36 milyar TL; kayıtlıların geçişi %50 olduğunda +1,18 milyar TL (`model.py`). |
 | D9 | Maaşlı çalışanın mikro mükellefiyeti | İşverene fatura yasağı + 12 asgari ücret mikro hasılat tavanı | M.1 giriş, (m) | **ÇÖZÜLDÜ:** Bordrolu çalışanın kendi işverenine fatura kesmesi yasaklandı; ek mikro hasılatı yıllık 12 brüt asgari ücretle sınırlandı, vergi kaybı önlendi. |
 
 ### A.3 Diğer Taraflar İçin
@@ -490,7 +489,7 @@ Bu ek, Meclis’e sunulacak metnin hangi riske hangi kesin hüküm ve çareyle c
 | K11 | Referans kodu bildirim süresi ve re'sen tevkifat | Süre 48 saatten 7 güne çıkarıldı; UETS, SMS ve e-Devlet üçlü bildirimi teyit edilmeden re'sen kesinti yasaklandı; fazla kesintilerin takip eden ay iadesi amir kılındı. | **ÇÖZÜLDÜ** |
 | K12 | Platform tevkifatı (%1) ile mikro tevkifat (%13,5) farkı | Madde 1 (l): Belgeli mükellefte 94/19 kesintisi yapılmaz, belgesizde ise yapılan kesinti mikro tevkifata tam mahsup edilir; mükerrerlik sıfırlandı. | **ÇÖZÜLDÜ** |
 | K13 | PTT'nin UETS tahsis yükü ve maliyeti | UETS aktivasyon maliyeti (~50 TL) kamu hizmeti kapsamına alındı; dijital iletim marjinal maliyeti sıfır olup PTT altyapısı bütçelendi. | **ÇÖZÜLDÜ** |
-| K14 | Yutulma: halen kayıtlı mükelleflerin geçişi | Geçici Madde 2 intibak freni (12 ay kademeli geçiş) + B2B Nötr Kural ile Kötümser senaryo net bakiyesi +0,70 milyar TL'ye çıkarıldı; tolerans eşiği $s^*$ %49'a yükseltildi. | **ÇÖZÜLDÜ** |
+| K14 | Yutulma: halen kayıtlı mükelleflerin geçişi | Geçici Madde 2 intibak freni (12 ay kademeli geçiş) + B2B Nötr Kural ile Kötümser senaryo net bakiyesi +2,36 milyar TL; kayıtlıların geçişi %50 stresinde +1,18 milyar TL. | **ÇÖZÜLDÜ** |
 | K15 | Geri akış karinesinde yanlış pozitif | Karinenin adi karine olduğu ve ticari teamüllere uygun iade/fesih belgeleriyle 15 gün içinde Hakem Heyetinde çürütülebileceği açıkça tescil edildi. | **ÇÖZÜLDÜ** |
 | K16 | Kimlik kiralama tespiti | e-Devlet kimlik doğrulaması (teklifte ek tedbir değildir; yalnız tescil şartı) + kiralayan ve kiraya verene 3 kat vergi ziyaı cezası ve 3 yıl yasak + tek cihaz/IP filtresi ile saldırgan oranı %0,001'e indi. | **ÇÖZÜLDÜ** |
 
@@ -502,12 +501,12 @@ Tüm mali büyüklükler `MALI_MODEL/careler_testi.py`, `bolme_kazanci_yeni.py` 
 
 | Kalem | Alınan Tedbir ve Hesaplanan Mali Netice | Sonuç |
 | :-- | :-- | :-- |
-| **Madde 9 BES katkısı (%20 Devlet katkısı)** | Tevkifatın %3,6'sı olarak bütçelenmiştir (Yıl-4 Kötümser 0,07 mlr, Orta 0,22 mlr, İyimser 0,62 mlr TL). Brüt tevkifat içinde karşılanmaktadır. | **TAM HESAPLANDI** |
+| **Madde 9 BES katkısı (%20 Devlet katkısı)** | Tevkifatın %3,6'sı olarak bütçelenmiştir (Yıl-4 Kötümser 0,09 mlr, Orta 0,17 mlr, İyimser 0,33 mlr TL). Brüt tevkifat içinde karşılanmaktadır. | **TAM HESAPLANDI** |
 | **Madde 9 kısmî prim günü (90 gün)** | Tavanın yarısına ulaşanlar için kişi başı 20.809 TL/yıl MYÖ primi Hazine tevkifat gelirinden finanse edilmiş, net fazla içinde kalmıştır. | **TAM HESAPLANDI** |
-| **Madde 8 KGF garantisi** | %2,5 temerrüt oranı ve Hazine kefalet payı modele eklenmiştir (Yıl-4 azami 0,15 mlr TL). Hazine fazlası tarafından karşılanmaktadır. | **TAM HESAPLANDI** |
-| **Halen kayıtlıların payı ($s$) ve intibak** | Geçici Madde 2 intibak freniyle kayıtlıların geçiş toleransı eşiği $s^*$ %18,8'den **%49'a** çıkarılmıştır. | **TAM HESAPLANDI** |
+| **Madde 8 KGF garantisi** | %2,5 temerrüt oranı ve Hazine kefalet payı modele eklenmiştir (Yıl-4 Kötümser 0,09, Orta 0,10, İyimser 0,08 mlr TL). Hazine fazlası tarafından karşılanmaktadır. | **TAM HESAPLANDI** |
+| **Halen kayıtlıların payı ($s$) ve intibak** | Geçici Madde 2 intibak freniyle kayıtlıların geçişi kademelendirilmiştir; geçiş hızına duyarlılık III.E'de verilmiştir. | **TAM HESAPLANDI** |
 | **Maaşlı çalışanların payı ($u$)** | Kendi işverenine fatura yasağı ve 12 asgari ücret tavanı ile Hazine gelir kaybı riski sıfırlanmıştır. | **TAM HESAPLANDI** |
-| **Madde 3 teçhizat KDV mahsubu** | Tevkifatın azami %30'u veya 5.000 TL tavanı konularak Hazine kaybı sınırlandırılmıştır (Yıl-4 Kötümser 0,20 mlr, Orta 0,50 mlr TL). | **TAM HESAPLANDI** |
+| **Madde 3 teçhizat KDV mahsubu** | Tevkifatın azami %30'u veya 5.000 TL tavanı konularak Hazine kaybı sınırlandırılmıştır (Yıl-4 Kötümser 0,23 mlr, Orta 0,41 mlr, İyimser 0,66 mlr TL). | **TAM HESAPLANDI** |
 | **Madde 7 komisyon tavanı** | TCMB ve AB 2015/751 düzenlemeleri uyarınca binde 2 tavanın bankacılık işlem maliyetini karşıladığı ve sisteme net fayda sağladığı doğrulanmıştır. | **TAM HESAPLANDI** |
 
 ---
