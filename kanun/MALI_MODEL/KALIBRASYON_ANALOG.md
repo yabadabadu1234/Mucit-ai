@@ -102,4 +102,18 @@ Bu, `genc3.py` ve `genc_model.py` için **veriye dayalı hayatta kalma eğrisi**
 
 **Kalibrasyon kontrolü (N):** Orta N = 332 bin, 2024 doğan girişimlerin %52'si; gerçek kişi doğumlarının (490 bin) %68'i. Bu, Orta'nın "girişimci niyeti" mantığıyla, doğan girişimlerin büyük bölümüne karşılık geldiğini gösteriyor (tutarlılık, bağımsız kanıt değil).
 
-**Açık:** Sektörel doğum dağılımı (2015–2024) ve sektör başına istihdam dosyaları yüklenmiş ancak bu turda ayrıntılı çıkarılmadı.
+**Açık (kapandı):** Sektörel doğum dağılımı `SEKTOREL_DOGUM_DAGILIMI.md`, tüm girişim dosyalarının envanteri `GIRISIM_VERI_ENVANTERI.md` içindedir.
+
+## 9. İşgücü dışı havuz ve NEET (TÜİK 2025; `c2ab627f`, `e287fec9`, `26b0f734`)
+
+Daha önce "gayrıresmî sayısı ve işsizlik yaş kırılımı veride yok" demiştim; bu yanlıştı, dosyalar yüklüydü. Bin kişi, 2025:
+
+- İşgücüne dahil olmayan 30.862: potansiyel işgücü 5.129 (iş bulma ümidi olmayan 2.608 + işbaşı yapabilecek olup iş aramayan 2.348 + iş arayıp işbaşı yapamayacak 173), ev işleriyle meşgul 5.844, eğitim 3.795, emekli 3.739, çalışamaz halde 7.690, diğer 4.665. Toplam tutar. (Alt sütunların sırası başlık sırasındandır; ayrı bir etiket satırı yoktur.)
+- İşsiz (resmî) 2.966 (erkek 1.598, kadın 1.368).
+- NEET (ne eğitimde ne istihdamda): 15–24 yaş 2.684; 15–29 yaş 4.711; 15–34 yaş 6.672. Türetilen: 25–29 yaş 2.027; 30–34 yaş 1.961.
+
+**Padişahın oranlarıyla havuz hesabı** (`havuz_hesabi.py`; yaş payı varsayımı: işsizin %40'ı 22–30, %25'i 30–40 — işsizlerin yaş kırılımı yüklenmemiştir, varsayımdır):
+- Resmî işsiz oranı 0,40×0,60 + 0,25×0,30 = 0,315; gayrıresmî oranı 0,40×0,20 + 0,25×0,10 = 0,105.
+- Gayrıresmî = potansiyel işgücü (çekirdek, 5.129) ve ücretsiz aile işçisi (tarım dışı, 599); "diğer" (4.665) ayrıca genişletilmiş okumadır.
+- İyi (padişah oranları): çekirdek 1.536 bin; "diğer" dâhil 2.026 bin. Orta (yarı oranlar): 768 bin / 1.013 bin. Kötü (padişah: en fazla 100 bin ilave): 100 bin.
+- Bunlar **yeni** (şimdiye kadar prim ve vergi dışı) katılımcıdır. Modeldeki `n_yeni_pay` Orta'da yalnız 0,311 × 332.000 ≈ 103 bin; yani model, padişahın iyi senaryosunun çok altında yeni katılım varsayıyor. Bu fark kapatılmadı; N'nin yeni kanadı ayrıca karar gerektirir.

@@ -7,7 +7,7 @@ SONUC={}
 # 1 senaryolar
 SONUC['senaryo']={}
 for ad in SENARYO:
-    p=sc(ad); s4,v,ys=kos(p); SONUC['senaryo'][ad]=dict(yil4=s4,npv5=v,yillar=[y['net'] for y in ys],param={k:p[k] for k in ['medyan_W','n_toplam','s_kayitli','u_ucretli','phi','onlem','myo_uygun','bes_vazgecme','kgf_alim','kgf_temerrut','kdv_donanim_pay']})
+    p=sc(ad); s4,v,ys=kos(p); SONUC['senaryo'][ad]=dict(yil4=s4,npv5=v,yillar=[y['net'] for y in ys],param={k:p[k] for k in ['ort_H_W','sigma','n_toplam','s_kayitli','u_ucretli','phi','onlem','myo_uygun','bes_vazgecme','kgf_alim','kgf_temerrut','kdv_donanim_pay']})
 # 2 kırılma noktası (Orta): net=0 için s*
 def net_s(s,base=None):
     p=sc('Orta') if base is None else dict(base); p['s_kayitli']=s; return kos(p)[0]['net']
@@ -40,8 +40,8 @@ var('V12 Donanım KDV mahsubu olmasaydı',kdv_donanim_pay=0.0)
 SONUC['varyant']=V
 # 4 tornado (Orta, yıl4)
 base=sc('Orta'); b0=kos(base)[0]['net']
-ARALIK={'n_toplam':(100000,1096000),'s_kayitli':(0.0,0.20),'prim_k':(3.0,12.0),'prim_toplama':(0.5,1.0),'u_ucretli':(0.0,0.4),'duz_oran':(0.105,0.27),'medyan_W':(3.0,8.0),'prim_odeme':(0.4,1.0),'phi':(0.0,0.03),'onlem':(0.2,0.8),
- 'myo_uygun':(0.1,0.6),'bes_vazgecme':(0.1,0.6),'kdv_donanim_pay':(0.2,0.6),'kgf_alim':(0.02,0.10),'kgf_temerrut':(0.05,0.20),'marj':(0.35,0.65),'sigma':(0.6,1.2)}
+ARALIK={'n_toplam':(100000,1096000),'s_kayitli':(0.0,0.20),'prim_k':(3.0,12.0),'prim_toplama':(0.5,1.0),'u_ucretli':(0.0,0.4),'duz_oran':(0.105,0.27),'ort_H_W':(30.0,85.0),'prim_odeme':(0.4,1.0),'phi':(0.0,0.03),'onlem':(0.2,0.8),
+ 'myo_uygun':(0.1,0.6),'bes_vazgecme':(0.1,0.6),'kdv_donanim_pay':(0.2,0.6),'kgf_alim':(0.02,0.10),'kgf_temerrut':(0.05,0.20),'marj':(0.35,0.65),'sigma':(1.25,2.0)}
 T=[]
 for k,(a,b) in ARALIK.items():
     pa=dict(base);pa[k]=a;pb=dict(base);pb[k]=b
@@ -55,7 +55,7 @@ for i in range(NS):
     p=dict(BAZ)
     p['n_toplam']=float(np.exp(rng.normal(np.log(331000),0.55)))
     p['s_kayitli']=float(rng.beta(2,6)); p['prim_toplama']=tri(0.6,0.9,1.0); p['u_ucretli']=tri(0.05,0.2,0.35)
-    p['medyan_W']=tri(3,5,8); p['sigma']=tri(0.6,0.9,1.2)
+    p['ort_H_W']=tri(30,43,85); p['sigma']=tri(1.25,1.75,2.0)
     p['prim_odeme']=tri(0.4,0.7,1.0); p['phi']=tri(0,0.01,0.03); p['onlem']=tri(0.2,0.5,0.8)
     p['myo_uygun']=tri(0.1,0.35,0.6); p['bes_vazgecme']=tri(0.1,0.35,0.6); p['kdv_donanim_pay']=tri(0.2,0.4,0.6)
     p['kgf_alim']=tri(0.02,0.05,0.10); p['kgf_temerrut']=tri(0.05,0.10,0.20); 
