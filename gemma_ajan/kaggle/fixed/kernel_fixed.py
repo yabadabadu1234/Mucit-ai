@@ -385,12 +385,9 @@ try:
         raise
     models = server.create_model_registry(aliases=sorted(set(declared) | {TARGET_MODEL_NAME}), model_prefix="openai/", api_key="EMPTY")
 
-    # Sıkıştırma: küçük parça kodla, büyük parça (>6000 token) LLM özeti. Eşik 16000 (ölçüm: sistem ~4.2k,
-    # araç ~3.4k, çıktı payı 6144 -> en kötü adımda güvenli eşik 11.9k, tipik adımda 16.5k). interval=2.
-    # Sıkıştırma: küçük parça kodla, büyük parça (>6000 token) LLM özeti. Eşik 36000 (55k pencere).
-    compaction_cfg = EventsCompactionConfig(
-        summarizer=HybridEventsSummarizer(llm=LiteLlm(model="openai/" + TARGET_MODEL_NAME, api_base=server.base_url, api_key="EMPTY")),
-        compaction_interval=2, overlap_size=2, token_threshold=36000, event_retention_size=4)
+    # Sıkıştırma: ADK varsayılan özetleyicisi (LLM). Kodla özet ve hibrit özetleyici Kaggle harness App
+    # doğrulamasında reddediliyor (E17, açık); bu yüzden özetleyici verilmiyor.
+    compaction_cfg = EventsCompactionConfig(compaction_interval=2, overlap_size=2, token_threshold=36000, event_retention_size=4)
     raw = yaml.safe_load((SUB_DIR / "eval_config.yaml").read_text(encoding="utf-8"))
     ev = raw.get("evaluation", raw)
     limits, gen_constraints = build_submission_limits()
