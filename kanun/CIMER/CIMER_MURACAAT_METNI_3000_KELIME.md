@@ -88,9 +88,11 @@ Tespit edilen tehlikeler, her birinin kanun metnindeki karşılığı ve kalan r
 Mali etkiyi hesaplayan kapsamlı ve dinamik bir model kurdum (`MALI_MODEL/careler_testi.py` ve Excel). Model; hasılat dağılımını, düz tevkifatı, B2B Nötr Kuralını (%25), bireysel emeklilik katkısını ve Devlet katkısını, doksan günlük prim hibesini, donanım KDV mahsubunu, KGF maliyetini, PTT ve bilgi işlem giderlerini ve en önemlisi **yutulmayı** (Geçici Madde 2 intibak freniyle kademelendirilmiş geçişi) tam bir bütünlük içinde hesaplamaktadır.
 
 **Sonuç (dördüncü yıl, genel devlet = Hazine ve SGK, yeni çare paketiyle):**
-* **Kötümser senaryo:** **+4,65 milyar TL**
-* **Orta senaryo:** **+12,66 milyar TL**
-* **İyimser senaryo:** **+38,67 milyar TL**
+* **Kötümser senaryo:** **+2,36 milyar TL**
+* **Orta senaryo:** **+3,78 milyar TL**
+* **İyimser senaryo:** **+11,04 milyar TL**
+
+Katılımcı sayısı (N), 2024'te açık gerçek kişi girişimlerinin (1,68 milyon) ciro sınırı altında kalan payının (%70,6) katılım varsayımıyla çarpımıyla belirlenmiştir: Kötümser %10 (119 bin), Orta %20 (238 bin), İyimser %40 (475 bin).
 
 Bu sonuçlar, kayıtlı 4/b primini sürdüren ve yeni girenlere gelire bağlı prim uygulayan güncel modelden çıkmıştır. Kötümser senaryoda marj incedir; net etkinin pozitif kalması, sahte fatura sızıntısının küçük kaldığı varsayımına (ölçülmemiş) bağlıdır.
 
