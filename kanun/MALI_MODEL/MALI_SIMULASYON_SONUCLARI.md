@@ -70,3 +70,48 @@ Net, s=0..1 ve φ=0..0.2 aralığında hiçbir noktada sıfırın altına inmedi
 - Kötümser ve İyimser senaryo sınırları (N: 100 bin / 1,1 milyon) padişahın tahminleridir; modelin genel sonucu bu iki sınıra çok duyarlıdır (n_toplam tornado'da en büyük etken).
 - Bu model genel devletin (Hazine+SGK) yalnız dördüncü yıl ve beş yıllık NPV'sini verir; ilk yıl kayıp/kazanç, iflas oranı ve genç seyri (genc3.py) bu MC'de yer almaz.
 
+
+## 6. Tevkifat sızıntısı ve kimlik kiralama (model genişletildi: `model.py` sizinti, kiralama)
+
+- **sizinti**: kurumsal akıştaki sahte faturanın payı; kayıp = sizinti × kurumsal_pay × N × EH × kv (alıcının gider indirimi). Taban 0.
+- **kiralama**: kiralanan kimlikle tevkifatsız gelir payı; kayıp = kiralama × N × ET. Taban 0.
+- Baz sonuçlar (sizinti=0, kiralama=0) değişmedi (Kötümser 4,65 / Orta 12,66 / İyimser 38,67).
+
+**Kötümser** (satır: kiralama; sütun: sızıntı)
+
+| kiralama \ sızıntı | 0.00 | 0.02 | 0.05 | 0.10 | 0.20 | 0.30 |
+|:--|--:|--:|--:|--:|--:|--:|
+| 0.00 | 4.65 | 4.59 | 4.50 | 4.34 | 4.04 | 3.73 |
+| 0.02 | 4.60 | 4.54 | 4.45 | 4.30 | 3.99 | 3.68 |
+| 0.05 | 4.53 | 4.47 | 4.38 | 4.22 | 3.92 | 3.61 |
+| 0.10 | 4.41 | 4.35 | 4.26 | 4.11 | 3.80 | 3.49 |
+| 0.20 | 4.18 | 4.12 | 4.02 | 3.87 | 3.56 | 3.26 |
+
+**Orta** (satır: kiralama; sütun: sızıntı)
+
+| kiralama \ sızıntı | 0.00 | 0.02 | 0.05 | 0.10 | 0.20 | 0.30 |
+|:--|--:|--:|--:|--:|--:|--:|
+| 0.00 | 12.66 | 12.42 | 12.07 | 11.47 | 10.27 | 9.07 |
+| 0.02 | 12.48 | 12.24 | 11.88 | 11.28 | 10.09 | 8.89 |
+| 0.05 | 12.20 | 11.96 | 11.60 | 11.01 | 9.81 | 8.61 |
+| 0.10 | 11.74 | 11.50 | 11.14 | 10.54 | 9.35 | 8.15 |
+| 0.20 | 10.82 | 10.58 | 10.22 | 9.62 | 8.42 | 7.23 |
+
+**İyimser** (satır: kiralama; sütun: sızıntı)
+
+| kiralama \ sızıntı | 0.00 | 0.02 | 0.05 | 0.10 | 0.20 | 0.30 |
+|:--|--:|--:|--:|--:|--:|--:|
+| 0.00 | 38.67 | 37.77 | 36.42 | 34.18 | 29.69 | 25.20 |
+| 0.02 | 37.98 | 37.08 | 35.73 | 33.49 | 29.00 | 24.51 |
+| 0.05 | 36.94 | 36.04 | 34.69 | 32.45 | 27.96 | 23.47 |
+| 0.10 | 35.21 | 34.31 | 32.96 | 30.72 | 26.23 | 21.74 |
+| 0.20 | 31.74 | 30.84 | 29.50 | 27.25 | 22.76 | 18.28 |
+
+**Tevkifatın tamamen kaçması (en kötü tek kalem):** net = baz − κ × brüt tevkifat. Üç senaryoda da κ=%50 kaçakta net pozitif kalır; kırılma oranı bulunamadı (κ>1 gerekir).
+
+- Kötümser: brüt tevkifat 2.36; κ=0 → 4.65, κ=0,30 → 3.94, κ=0,50 → 3.47
+- Orta: brüt tevkifat 9.23; κ=0 → 12.66, κ=0,30 → 9.89, κ=0,50 → 8.05
+- İyimser: brüt tevkifat 34.63; κ=0 → 38.67, κ=0,30 → 28.28, κ=0,50 → 21.35
+
+**Sonuç:** Sahte fatura sızıntısı ve kimlik kiralama modelde artık açıkça var. İyimser senaryoda bile sızıntı 0,86 (yani %86) olmadan net sıfırlanmıyor; Kötümser ve Orta'da sızıntı ve kiralamanın makul aralıklarında net pozitif kalıyor. Bu, önceki 'sahte fatura kaybı küçük' uyarısını nicelleştirir: model, sızıntıya karşı dayanıklıdır; asıl hassasiyet hâlâ n_toplam ve s'dedir.
+

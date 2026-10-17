@@ -15,7 +15,7 @@ BAZ=dict(medyan_W=5.0,sigma=0.9,gider=0.30,bes=0.03,devlet_katki=0.20,bes_vazgec
  kurumsal_pay=0.70,kv=0.25,phi=0.01,onlem=0.5,
  kgf_alim=0.05,kgf_temerrut=0.10,kgf_kurtarma=0.30,kgf_pay=0.5,
  prim_devam=0.0,prim_k=6.0,prim_ay=11808.25,prim_toplama=1.0,duz_oran=0.135,ptt_birim=50.0,ptt_pay=0.8,bt_tek=250e6,bt_yillik=50e6,itiraz_oran=0.04,itiraz_maliyet=2000.0,denetim=0.01,
- ramp=[0.25,0.55,0.8,1.0,1.0],iskonto=0.05,kayitli_prim_surer=1.0,n_yeni_pay=0.0)
+ ramp=[0.25,0.55,0.8,1.0,1.0],iskonto=0.05,kayitli_prim_surer=1.0,n_yeni_pay=0.0,sizinti=0.0,kiralama=0.0)
 SENARYO={
  "Kötümser":dict(medyan_W=4.0,n_toplam=100000,s_kayitli=0.30,u_ucretli=0.25,phi=0.02,onlem=0.3,myo_uygun=0.5,bes_vazgecme=0.2,kgf_alim=0.08,kgf_temerrut=0.15,kdv_donanim_pay=0.5),
  "Orta":dict(),
@@ -60,9 +60,11 @@ def yil(p,carpan=1.0,ilk=False):
     it=(p['bt_tek'] if ilk else 0.0)+p['bt_yillik']
     itiraz=N*p['itiraz_oran']*p['itiraz_maliyet']
     den=p['denetim']*brut
-    net=brut+y_yeni_prim-bes_k-myo-kdv-eski-sahte-kgf-ptt-it-itiraz-den
+    sz=p.get('sizinti',0.0)*p['kurumsal_pay']*N*EH*p['kv']
+    kr=p.get('kiralama',0.0)*N*ET
+    net=brut+y_yeni_prim-bes_k-myo-kdv-eski-sahte-kgf-ptt-it-itiraz-den-sz-kr
     return dict(N=N,ort_H=EH,ort_T=ET,etkin_oran=reff,brut_tevkifat=brut,bes_ve_devlet_katkisi=bes_k,myo_primi=myo,kdv_mahsubu=kdv,
-      yutulma_kaybi=eski,yutulma_vergi=y_vergi,yutulma_prim=y_prim,yeni_prim=y_yeni_prim,sahte_fatura_kaybi=sahte,kgf_maliyeti=kgf,ptt=ptt,bt=it,itiraz=itiraz,denetim=den,net=net)
+      yutulma_kaybi=eski,yutulma_vergi=y_vergi,yutulma_prim=y_prim,yeni_prim=y_yeni_prim,sahte_fatura_kaybi=sahte,sizinti_kaybi=sz,kiralama_kaybi=kr,kgf_maliyeti=kgf,ptt=ptt,bt=it,itiraz=itiraz,denetim=den,net=net)
 def bes_yil(p):
     return [yil(p,r,ilk=(i==0)) for i,r in enumerate(p['ramp'])]
 def npv(p):
