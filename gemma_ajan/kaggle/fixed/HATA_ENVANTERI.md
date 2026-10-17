@@ -17,7 +17,7 @@ Durum: KOD = yerelde düzeltildi ve test edildi · ÇALIŞMA = GPU'da doğrulanm
 | E11 | Deneme sınırı betikte zorlanmıyordu; `NOT SAVED` döngüsü | propose.py | KOD: 3 denemeden sonra `STOP`; test edildi (4. çağrı STOP) |
 | E12 | `propose.py`/`choose.py` mesajı `read_file` öneriyor; önericiler `read_file` kullanamıyor | choose.py satır 81 | KOD: CODE bloğu / context.py öneriliyor |
 | E12b | Sayaç dosyası yazımında hata (`open("w")` önce boşaltıyor) | test sırasında bulundu | KOD: düzeltildi, test edildi |
-| E13 | Bağlam taşması 32768 (girdi 30721 + çıktı 2048) | sürüm 10 logu | KISMEN: sıkıştırma eşiği 25000→12000. ÇALIŞMA: ölçülmedi |
+| E13 | Bağlam taşması: araç çıktıları token sayılmadan modele gidiyor, sıkıştırma yok | sürüm 10 logu (30721 girdi) | KOD: (a) skill çıktıları `budget.py` ile token bütçeli (tek çıktı 700, toplam 6000 sonrası 200, 9000 sonrası dur); (b) konuşma sıkıştırması KOD ile (`CodeEventsSummarizer`, ADK `summarizer`), eşik 20000. ÖLÇÜLMEDİ: harness araçları (run_command, read_file) sayılmıyor, sistem istemi boyutu ölçülmedi |
 | E14 | Model `skill_name` yerine bozuk biçim üretiyor (`` `,skill_name: ``), Japon parantezi | sürüm 10: 47 + 8 olay | AÇIK: model davranışı; eğitimle (E4/E5 düzeltmesi + doğrulanmış veri) ele alınır. Kodla kapanmaz |
 | E15 | Önericiler kodun zaten `is` içerdiğini görüp `==` hipotezi ile dönüyor (sahte öncül) | sürüm 10 log, proposer'lar | AÇIK: scout'un CODE bloğu doğrulanmadan; kısmi azaltma yok |
 | E16 | Paketleyici kopyası: eski trainer çıktısı varsayımı | packer | KOD: kaynak kullanılmadı; değişiklik gerekmedi |
