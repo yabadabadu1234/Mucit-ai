@@ -1,24 +1,22 @@
-"""Düzeltilmiş LoRA eğitimcisi (gemma4-agent-iterative-trainer'ın yerine).
+"""LoRA eğitimcisi: altı kuvvetli gradyan birleştirici (kuvvet.py).
 
-Düzeltilen hatalar (HATA_ENVANTERI.md, E1-E9):
-  E1 sahte doğruluk (exit_code/patch_overlap formülden) -> kaldırıldı; doğruluk yalnız gerçek sonuçtan gelir
-  E2 gradyan çarpanı (toplamı her zaman 1.0) -> kaldırıldı
-  E3 DoRA (m, dora_m, peft_type DORA; vLLM desteklemiyor) -> düz LoRA
-  E4 sohbet şablonu yok, kayıp tüm token'larda -> apply_chat_template + yalnız asistan token'larına kayıp
-  E5 dört uyumsuz veri kümesi (glaive/moatless/openhands/swe_agent) -> kaldırıldı; yalnız doğrulanmış yörünge
-  E6 adım sayısı zorla 2060'a kilitleniyor, DoRA ağırlıkları devralınıyor -> kaldırıldı
-  E7 "ustalık/ZAFER" durma koşulları formülden -> kaldırıldı; durma: veri bitince
-Veri kaynağı: VERIFIED_JSONL (her satır {"messages": [{"role":..,"content":..}, ...]}), yalnız gerçek
-test sonucuyla doğrulanmış yörüngeler. Dosya yoksa eğitim BAŞLAMAZ (sahte eğitim yok).
+Veri: VERIFIED_JSONL, her satır {"messages": [...], "verified": true, "route": 0..3,
+"compiler_score": [0,1], "distance": [0,1]}. Eksik alan varsa satır reddedilir; dosya yoksa
+eğitim BAŞLAMAZ. Sahte veri, sahte doğruluk, uydurma sayı yoktur.
+
+Kuvvetler (ayrıntı kuvvet.py): K1 4 güzergâh · K2 uzaklık · K3 PCGrad · K4 taban katsayısı ·
+K5 CLM (tüm token'lar) · K6 SFT (yalnız asistan token'ları).
+
+Adım: BATCH örnek için her örnekte iki geri yayılım (CLM, SFT); akışlar katsayılarla
+toplanır; PCGrad uygulanır; AdamW bir adım atar. DoRA yok (vLLM desteklemiyor, E3).
 """
 import gc
 import json
-import math
 import os
+import re
 import signal
 import sys
 import time
-import traceback
 from pathlib import Path
 
 WORKING = Path(os.environ.get("WORKING", "/kaggle/working"))
@@ -26,8 +24,9 @@ WORKING.mkdir(parents=True, exist_ok=True)
 MODEL_PATH = Path(os.environ.get("MODEL_PATH", "/kaggle/input/models/google/gemma-4/other/gemma-4-31b-it-qat-w4a16-ct/2"))
 VERIFIED_JSONL = Path(os.environ.get("VERIFIED_JSONL", str(WORKING / "verified_trajectories.jsonl")))
 AD = WORKING / "adapter_reasoning"
-STATE_FILE = WORKING / "stream_state.json"
 LR = float(os.environ.get("LR", "1e-4"))
+W_TABAN = float(os.environ.get("W_TABAN", "0.1"))
+BATCH = int(os.environ.get("BATCH", "8"))
 RANK, ALPHA = 8, 16
 TARGETS = ("q_proj", "v_proj")
 MAX_LEN = int(os.environ.get("MAX_LEN", "4096"))
@@ -42,6 +41,8 @@ def log(*a):
 
 
 def load_verified(path):
+    from kuvvet import validate_row
+
     rows = []
     with open(path, encoding="utf-8") as f:
         for i, line in enumerate(f, 1):
@@ -54,14 +55,16 @@ def load_verified(path):
                 raise ValueError(f"{path}:{i} messages alanı eksik ya da asistan turu yok")
             if r.get("verified") is not True:
                 raise ValueError(f"{path}:{i} 'verified': true değil; yalnız gerçek test sonucuyla doğrulanmış yörünge kabul edilir")
-            rows.append(msgs)
+            route, score, dist = validate_row(r, where=f"{path}:{i}")
+            rows.append({"msgs": msgs, "route": route, "compiler_score": score, "distance": dist})
     return rows
 
 
 def encode_with_mask(tok, msgs):
-    """Konuşmayı şablonla kodla. Kayıp yalnız asistan turlarında; önceki bağlam -100 (kayıp dışı).
-    Metin üzerinden çalışır (apply_chat_template sürüme göre dict/liste dönebildiği için)."""
-    ids, labels = [], []
+    """Konuşmayı şablonla kodla. Dönüş: (ids, asistan_maskesi). Maske her token için True/False:
+    True yalnız asistan turunun token'larıdır. CLM kaybı ids'in tamamını, SFT kaybı yalnız
+    maskeyi kullanır. Önek tutarlılığı bozulursa örnek atlanır (sessiz ikame yok: hata fırlar)."""
+    ids, mask = [], []
     prev = []
     for m in msgs:
         if m["role"] != "assistant":
@@ -73,11 +76,11 @@ def encode_with_mask(tok, msgs):
         full = tok.encode(full_txt, add_special_tokens=False)
         if full[:len(ids)] != ids[:len(full)] or len(ctx) < len(ids):
             raise ValueError("şablon önek tutarlılığı bozuk; yörünge atlanıyor")
+        mask = mask + [False] * (len(ctx) - len(mask)) + [True] * (len(full) - len(ctx))
         ids = full
-        labels = labels + [-100] * (len(ctx) - len(labels)) + full[len(ctx):]
-        labels = labels[:len(ids)] + [-100] * (len(ids) - len(labels))
         prev.append(m)
-    return ids[:MAX_LEN], labels[:MAX_LEN]
+    mask = mask[:len(ids)] + [False] * (len(ids) - len(mask))
+    return ids[:MAX_LEN], mask[:MAX_LEN]
 
 
 class LoraWrap:
@@ -100,7 +103,6 @@ class LoraWrap:
 
 def build_device_map(torch, meta, ng):
     """Dil katmanlarını GPU'lara eşit dağıt (4 kart: 0-14, 15-29, 30-44, 45-59)."""
-    import re
     keys = list(meta.state_dict().keys())
     nl = 1 + max(int(re.search(r"layers\.(\d+)\.", k).group(1)) for k in keys if re.search(r"layers\.(\d+)\.", k))
     dmap = {}
@@ -109,23 +111,32 @@ def build_device_map(torch, meta, ng):
         mm = re.search(r"^(.*layers\.(\d+))\.", k)
         if mm and "vision" not in k.lower():
             dmap[mm.group(1)] = min(int(mm.group(2)) * ng // nl, ng - 1)
-        elif "vision" in k.lower():
-            dmap[mod] = 0
         else:
             dmap[mod] = 0
     return dmap, nl
 
 
+def batch_plan(rows, start):
+    """Bir mini-parti: BATCH örnek. Katsayılar bu partinin n'i ile normalize edilir."""
+    from kuvvet import katsayilar
+
+    part = rows[start:start + BATCH]
+    A, B = katsayilar([{"route": r["route"], "compiler_score": r["compiler_score"], "distance": r["distance"]} for r in part], W_TABAN)
+    return part, A, B
+
+
 def main():
     import torch
+    import torch.nn.functional as F
     from transformers import AutoConfig, AutoModelForCausalLM, AutoTokenizer
     from accelerate import init_empty_weights
+    from kuvvet import STREAMS, pcgrad
 
     if not VERIFIED_JSONL.exists():
         log(f"DURDU: doğrulanmış veri yok ({VERIFIED_JSONL}). Sahte veriyle eğitim yapılmaz.")
         return 2
     rows = load_verified(VERIFIED_JSONL)
-    log(f"doğrulanmış yörünge: {len(rows)}")
+    log(f"doğrulanmış yörünge: {len(rows)}; güzergâh dağılımı: {[sum(1 for r in rows if r['route'] == g) for g in range(4)]}")
 
     tok = AutoTokenizer.from_pretrained(str(MODEL_PATH))
     cfg = AutoConfig.from_pretrained(str(MODEL_PATH))
@@ -142,7 +153,6 @@ def main():
     model.gradient_checkpointing_enable(gradient_checkpointing_kwargs={"use_reentrant": False})
     model.enable_input_require_grads()
 
-    import re
     wraps = {}
     pat = re.compile(r".*language_model.*\.(q_proj|v_proj)$")
     for n, m in list(model.named_modules()):
@@ -176,27 +186,57 @@ def main():
         os._exit(0)
     signal.signal(signal.SIGTERM, on_signal)
 
+    def flat(gs):
+        return torch.cat([g.detach().float().reshape(-1).cpu() for g in gs])
+
     model.train()
     step = 0
     for ep in range(EPOCHS):
-        for msgs in rows:
-            ids, labels = encode_with_mask(tok, msgs)
-            if sum(1 for x in labels if x != -100) == 0:
+        for start in range(0, len(rows), BATCH):
+            part, A, B = batch_plan(rows, start)
+            streams = [torch.zeros(sum(p.numel() for p in params)) for _ in range(STREAMS)]
+            used = 0
+            for row, a, b in zip(part, A, B):
+                ids, mask = encode_with_mask(tok, row["msgs"])
+                if len(ids) < 2:
+                    raise ValueError("kısa örnek: kayıp hesaplanamaz")
+                x = torch.tensor([ids], device="cuda:0")
+                logits = model(input_ids=x).logits[0, :-1]
+                tgt = torch.tensor(ids[1:], device=logits.device)
+                nll = F.cross_entropy(logits.float(), tgt, reduction="none")
+                m = torch.tensor(mask[1:], device=nll.device, dtype=nll.dtype)
+                if float(m.sum()) == 0.0:
+                    raise ValueError("asistan token'ı yok: SFT kaybı tanımsız")
+                clm = nll.mean()  # K5
+                sft = (nll * m).sum() / m.sum()  # K6
+                if not torch.isfinite(clm) or not torch.isfinite(sft):
+                    log("geçersiz kayıp, örnek atlandı")
+                    continue
+                gc_clm = torch.autograd.grad(clm, params, retain_graph=True, allow_unused=True)
+                gc_sft = torch.autograd.grad(sft, params, allow_unused=True)
+                fc = flat([g if g is not None else torch.zeros_like(p) for g, p in zip(gc_clm, params)])
+                fs = flat([g if g is not None else torch.zeros_like(p) for g, p in zip(gc_sft, params)])
+                for k in range(STREAMS):
+                    if a[k] != 0.0:
+                        streams[k] += a[k] * fc
+                    if b[k] != 0.0:
+                        streams[k] += b[k] * fs
+                used += 1
+                del logits, nll, clm, sft, gc_clm, gc_sft
+            if used == 0:
                 continue
-            x = torch.tensor([ids], device="cuda:0")
-            y = torch.tensor([labels], device="cuda:0")
-            out = model(input_ids=x, labels=y)
-            if not torch.isfinite(out.loss):
-                log("geçersiz kayıp, adım atlandı")
-                continue
-            opt.zero_grad(set_to_none=True)
-            out.loss.backward()
+            total = pcgrad(streams)  # K3
+            off = 0
+            for p in params:
+                n_el = p.numel()
+                p.grad = total[off:off + n_el].reshape(p.shape).to(device=p.device, dtype=p.dtype)
+                off += n_el
             opt.step()
+            opt.zero_grad(set_to_none=True)
             step += 1
+            log(f"adım {step} örnek {used} (parti {start // BATCH + 1})")
             if step % CKPT_EVERY == 0:
-                log(f"adım {step} kayıp {float(out.loss):.4f}")
                 save_adapter()
-            del out
             gc.collect()
     save_adapter("son ")
     log(f"BİTTİ: {step} adım")
