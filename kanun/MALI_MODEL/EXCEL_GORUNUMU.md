@@ -56,6 +56,6 @@ Excel'in 'Sonuc' sayfası bağımsız formül hesaplayıcısıyla (`formulas` k�
 | 90 gün prim hibesi | -0,10 | -0,34 | -0,83 |
 | Donanım KDV mahsubu | -0,23 | -0,62 | -1,57 |
 | Yutulma: vergi | -0,70 | -1,72 | -3,60 |
-| Yutulma: eski prim | -3,40 | -5,63 | -6,21 |
-| Gelire bağlı yeni prim | 0,26 | 1,25 | 5,44 |
-| **NET** | -2,05 | 1,64 | 26,56 |
+| Yutulma: eski prim | -0,00 | -0,00 | -0,00 |
+| Gelire bağlı yeni prim | 3,56 | 6,64 | 11,34 |
+| **NET** | 4,65 | 12,66 | 38,67 |
