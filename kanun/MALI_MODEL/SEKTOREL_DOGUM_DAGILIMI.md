@@ -53,5 +53,5 @@ Not: A satırı (tarım) tabloda 4.651 olarak yer alır; yukarıdaki sıralama o
 
 ## 4. Açık kalanlar
 
-- `girisim_dokum.txt` dosyasının 282. satırdan sonrası (`9953c0b2` hızlı büyüyen girişimler ve devamındaki dosyalar: `f9ca6980`, `cf8e1e33`, `73ae6f2a` sonrası kalan bölümler) bu turda okunmamıştır. Dosyanın tamamı okunmadan o dosyalar hakkında hüküm yoktur; okuma ayrı bir turda yapılacaktır.
+- Dosyanın tamamı (500 satır) sonradan okunmuştur; bütün dosyaların envanteri ve sayıları `GIRISIM_VERI_ENVANTERI.md` dosyasındadır.
 - Sektör başına hayatta kalma oranı yoktur; sektör bazlı ölüm oranı yoklanamamıştır.

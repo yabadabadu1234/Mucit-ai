@@ -144,7 +144,7 @@ def olc3(r):
       canli12=float(r["canli"][11].mean()),canli24=float(r["canli"][23].mean()),canli60=float(r["canli"][59].mean()),
       net_son=float(net[60:].mean()/ASGARI_NET),devlet_pv=float((r["devlet"]*isk[:,None]).sum(axis=0).mean()),gss_yillik=float(r["gss"].mean()/6.0))
 VARSAYILAN=dict(b0=5500.0,L=0.45,b_ilk=0.5,duz_oran=0.135,kappa=0.10,talep_bolge=1.0,mal_pay=0.40,c_mal=0.50,c_hiz=0.15,
-  faiz=0.015,sv=0.5,dayanma=True,drag=0.0,aile_olcek=1.0,erisim_kd=0.55,kayip_kd=0.12,gss_ac=True,gss_esik_katsayi=1.0,hedef_canli12=0.75,prim_k=6.0)
+  faiz=0.015,sv=0.5,dayanma=True,drag=0.0,aile_olcek=1.0,erisim_kd=0.55,kayip_kd=0.12,gss_ac=True,gss_esik_katsayi=1.0,hedef_canli12=0.779,prim_k=6.0)
 def kalibre(par,N,seed):
     P=nufus3(N,seed,par); S=sok3(N,72,seed+1)
     lo,hi=1500.0,15000.0
@@ -163,7 +163,7 @@ def calistir(par,N=2000,seed=20261101,kal=True):
     return p["b0"],out
 if __name__=="__main__":
     par=dict(VARSAYILAN)
-    print("== A) Kalibrasyon: ilk yıl canlılık hedefi %75 (TÜİK girişim demografisi 2024: 1 yıllık hayatta kalma ~%75-78, tüm girişimler) ==")
+    print("== A) Kalibrasyon: ilk yıl canlılık hedefi %77,9 (TÜİK f361f6a7, 2019-2023 doğum kohortları 1 yıllık hayatta kalma ortalaması; 2 yıl %61,3, 3 yıl %52,1 — kıyas için) ==")
     print("   nüfus bileşimi (örneklem içi): ",end="")
     P=nufus3(20000,1,par);
     for i,t in enumerate(TIP_AD): print("%s %.3f; "%(t,(P["tip"]==i).mean()),end="")
