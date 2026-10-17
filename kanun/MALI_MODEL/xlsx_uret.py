@@ -12,9 +12,9 @@ g['A1']='MİKRO MÜKELLEFİYET MALİ ETKİ MODELİ: GİRDİLER (sarı hücreler 
 g['A2']='Aktif senaryo (1=Kötümser, 2=Orta, 3=İyimser):'; g['D2']=2; g['D2'].fill=inp
 g['A3']='Tüm tutarlar sabit 2026 TL. Girdilerin çoğu ölçülmemiş varsayımdır (Kaynak sütununa bakınız).'
 satir=[('Brüt asgari ücret (TL/ay)','W',33030,33030,33030,'Birden çok kaynakta tutarlı; resmî metin okunmadı'),
-('Medyan yıllık hasılat (asgari ücret katı)','medyan_W',4.0,5.0,6.0,'Varsayım'),
-('Hasılat dağılımı yayılımı (σ, log-normal)','sigma',0.9,0.9,0.9,'Varsayım'),
-('Katılımcı sayısı (kararlı durum, kişi)','n_toplam',100000,331000,1096000,'Kötümser: F 3-I 268; İyimser: F 3-I 269 oranları × ILO 2025 + F 3-I 273 gayrıresmî tanımı (n_veri.py); Orta: geometrik ortalama (Claude)'),
+('Ortalama yıllık hasılat (asgari ücret katı; veri: girişim ciro/firma, 2024)','ort_H_W',43.0,43.0,43.0,'Veri: 2024 genç/mikro ciro ortalaması (ciro/firma, veri_kalibrasyon.json)'),
+('Hasılat dağılımı yayılımı (σ, log-normal)','sigma',2.0,1.75,1.5,'Varsayım: 1,25–2,0 aralığı; veriyle belirlenmez'),
+('Katılımcı sayısı (kararlı durum, kişi)','n_toplam',119000,238000,475000,'Kötümser: F 3-I 268; İyimser: F 3-I 269 oranları × ILO 2025 + F 3-I 273 gayrıresmî tanımı (n_veri.py); Orta: geometrik ortalama (Claude)'),
 ('Halen kayıtlı olup rejime geçenlerin payı (s)','s_kayitli',0.30,0.15,0.05,'Varsayım; prim isteğe bağlı olduğundan sonucu çok etkiler'),
 ('Gelire bağlı prim: tam prim eşiği (brüt asgari ücret katı)','prim_k',6,6,6,'Teklif Madde 5 (o); genç simülasyonunda seçildi (prim_esigi_out2.txt); F 3-I 304'),
 ('Tam prim tutarı (TL/ay)','prim_ay',11808.25,11808.25,11808.25,'5510 m.81: 33.030 x %35,75'),
@@ -74,7 +74,7 @@ d=wb.create_sheet('Hesap'); K=60
 heads=['k','H alt','H üst','H orta','ağırlık','Tevkifat matrahı (gayrisafi)','Tevkifat T','Etkin oran','BES+Devlet katkısı','90 gün prim','KDV mahsubu','Eski vergi (kayıtlı)','Eski prim','Eski vergi (ücretli)','Gelire bağlı yeni prim']
 for j,h in enumerate(heads): c=d.cell(row=1,column=1+j,value=h); c.font=hw; c.fill=hf
 W_=ADR['W']; lo=f"(0.1*{W_})"; hi=f"(24*{W_})"
-mu=f"LN({ADR['medyan_W']}*{W_})"; sg=ADR['sigma']
+mu=f"LN({ADR['ort_H_W']}*{W_})-{ADR['sigma']}^2/2"; sg=ADR['sigma']
 for i in range(K):
     r=2+i; d.cell(row=r,column=1,value=i)
     d.cell(row=r,column=2,value=f"={lo}*({hi}/{lo})^(A{r}/{K})"); d.cell(row=r,column=3,value=f"={lo}*({hi}/{lo})^((A{r}+1)/{K})"); d.cell(row=r,column=4,value=f"=SQRT(B{r}*C{r})")

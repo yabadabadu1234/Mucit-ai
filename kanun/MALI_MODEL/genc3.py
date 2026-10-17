@@ -5,7 +5,8 @@ GSS_AYLIK=0.06*W
 GSS_GELIR_ESIGI=W/3.0
 GECIM_HADDI=W/3.0
 YAS=np.arange(16,30)
-KOHORT=np.array([1.283e6,1.283e6,1.295e6,1.295e6,1.237e6,1.237e6,1.237e6,1.276e6,1.276e6]+[1.35e6]*5)
+# TÜİK 2025 (e287fec9): 15–24 yaş nüfus 11.505 bin → 16–24 yaş için yıllık ≈1.150,5 bin; 15–34 yaş 24.115 bin, 15–24 çıkarılınca 25–34 ≈ 12.610 bin → 25–29 yaş için ≈1.261 bin
+KOHORT=np.array([1.1505e6]*9+[1.261e6]*5)
 def giris_orani(a):
     return np.where(a<22,0.025*(a-16)/6.0,0.056)
 TIP_AD=["okuyor, lise","okuyor, üniversite","okumuyor, lise altı","okumuyor, lise","okumuyor, lisans+"]

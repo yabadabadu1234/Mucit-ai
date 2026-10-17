@@ -233,3 +233,14 @@ Durum: ihtilaflı. Kaynak durumu: yalnız ikincil akademik özetler (arama sonu�
 ## E.19 Gelire bağlı sosyal sigorta primi ve maaşlının isteğe bağlı girişi (F 3-I 304)
 
 Madde 5 (o): geçim haddinin (brüt asgari ücretin üçte biri) altında prim alınmaz; üstünde gelirle orantılı, altı asgari ücrette tam prim alınır. İslâm uygunluğu bakımından: (1) prim, sosyal ve teâvünî sigorta niteliğinde olup E.2'deki satır 212'de "caiz (ikincil, ittifak)" diye kapanmıştı; bu tasarım primi artırmaz, geliri olmayandan kaldırır ve orantılı kılar. (2) Prim faiz, gizli faiz, kumar veya belirsiz bir bedel içermez; miktarı önceden belli bir formülle tayin olunur. (3) Geçim haddi altındakine yük bindirmemek, zorunlu ihtiyaç ölçüsüne (hacet) muvafıktır; gelirsizden talep edilmeyen yükün olması zulmü azaltır. (4) Maaşlı çalışanın mikro mükellef olmayı seçebilmesi bir akit serbestisidir; yeni bir haram doğurmaz. Delil durumu: ikincil; müftî hükmü değildir. **Kalan açık kalem (padişaha sorulur, hükmü Claude vermez):** orantılı gün saymanın (ödenen primin tam prime oranı kadar gün) emeklilik hakkında doğurduğu sonuç (`EMEKLILIK_HESABI.md`).
+
+
+## Dinî gerekçe kayıtları: Devlet metninden çıkarılan lafızlar (padişah talimatı: lafız değişir, hüküm aynı kalır)
+
+Devlet metninde aşağıdaki iki hüküm tarafsız lafızla yazılmıştır; hükmün kapsamı değişmemiştir. Dinî gerekçe yalnız bu defterde tutulur.
+
+1. **Vadeli tevkifat senedi, artış yasağı (Madde 1 (b)).** Metinde önce "müddet karşılığı artış ribâdır" yazılıydı. Devlet metnindeki yeni lafız: "vade karşılığında yapılan her türlü artış yasaktır; bu hüküm kesindir". Dinî gerekçe: ribâ yasağı (Bakara 275–279; faiz ve müddet karşılığı artışın haramlığı). Hüküm mahiyeti: faiz, müddet karşılığı artış ve ilave ödeme yasağı; KGF ve faizsiz finansman kapsamı ile uyumlu.
+2. **Tapınma amaçlı figür ve heykel (Madde 1 (g)).** Metinde önce "ruh sahibi varlıkların … put mahiyetindeki figürlerinin üretimi" yazılıydı. Yeni lafız: "tapınma amacıyla üretilen fiziksel üç boyutlu figür ve heykel". Dinî gerekçe: put ve sûret yasağı (aynî tasvirin tapınma amaçlı üretimi). Hüküm mahiyeti: aynı kapsam; ticari üretim yasağı değil, tapınma amaçlı üretim yasağıdır.
+3. **Domuz eti ve mamulleri (Madde 1 (g)).** Metinde kaldı. Gerekçe: domuz etinin haramlığı. Lafız (bir gıda ürünü adı) dinî bir terim değildir; ancak gerekçesi dinîdir. Padişah kararı bekleniyor: lafız kalsın mı, "belirli hayvansal gıda mamulleri" gibi genel bir kategoriye mi taşınsın.
+
+Teklif metninde dinî delil ve lafız yoktur (F 3-I 246, 252); bu kayıt yalnız iç defter içindir.
