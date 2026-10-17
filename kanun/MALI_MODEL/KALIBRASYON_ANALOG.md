@@ -48,3 +48,35 @@ Kaynak: TÜİK 2025 Hanehalkı İşgücü Araştırması özetleri, [alomaliye /
 | İnşaat | %6,8 | ≈ 2,2 milyon |
 
 Kendi hesabına ve ücretsiz aile işçilerinin sektör kırılımı bulunamadı. Bu nedenle tarım payı, serbest çalışan havuzuna uygulanamaz; kayıt dışı ve ücretsiz aile işçiliğinin büyük kısmının tarımda olduğu yalnızca bir varsayım olarak kalır, veri değildir. Gerekli tablo: TÜİK HİA "istihdam edilenlerin işteki duruma ve sektöre göre" çapraz tablosu.
+
+## 7. TÜİK 2025 tabloları (kullanıcı yüklemesi; doğrudan okundu)
+
+Kaynak dosyalar: `veri/xls_dokum.txt` (yüklenen 11 TÜİK xls'nin tam dökümü). Birimler: bin kişi.
+
+**İşteki durum × sektör (2025, Toplam):** E 32.566; ücretli/maaşlı 23.353; işveren + kendi hesabına 6.750 (bu tabloda birleşik); ücretsiz aile işçisi 2.464.
+- Tarım: 4.560 = ücretli 582 + işveren/kendi 2.113 + ücretsiz 1.865.
+- Tarım dışı: 28.006 = ücretli 22.771 + işveren/kendi 4.636 + ücretsiz 599.
+
+**Türetilen (formül):**
+- Ücretsiz aile işçisi payı: 2.464 / 32.566 = **%7,57**. SBB'nin verdiği %8,5 ile **0,93 puan fark var**; tanım/yıl farkı olabilir, ikisi de not edilmeli.
+- Kadın ücretsiz: 1.625 / 10.764 = %15,1; erkek: 839 / 21.802 = %3,8.
+- Ücretsiz aile işçilerinin %75,7'si tarımda; %24,3'ü tarım dışında.
+- Tarımda serbest+işveren payı %46,3; tarım dışında %16,6.
+- **Tarım dışı serbest + ücretsiz havuzu = 4.636 + 599 = 5.235 bin** (E'nin %16,1'i). Önceki dolaylı tahmin "7,96 milyon" üst sınırdı; gerçek tarım dışı payı bu.
+
+**Kalibrasyon (N):**
+| Senaryo | N | Tarım dışı serbest+ücretsiz havuzu (5,235 mn) | Kendi işyeri kurmak niyetli işsizler (332 bin) |
+|:--|--:|--:|--:|
+| Kötümser | 100.000 | %1,9 | %30 |
+| Orta | 331.000 | %6,3 | %100 |
+| İyimser | 1.096.000 | %20,9 | %330 |
+
+Yorum: Orta N, kendi işyeri kurmak niyetindeki işsiz sayısıyla (332 bin) neredeyse birebir örtüşüyor; bu, Orta'nın "işsizlerin girişimci niyeti kadar" katılım varsayımına karşılık geliyor. İyimser, tarım dışı havuzun %21'i; Brezilya MEI analogu (~%19) ile uyumlu. Kötümser, havuzun %2'si ve niyetin %30'u: düşük katılım.
+
+**Kendi işyeri niyeti (işsiz) 2021 → 2025:** 255 bin/3.919 bin (%6,5) → 332 bin/2.966 bin (%11,2). Girişimci niyeti artıyor; bu, s ve N için yukarı yönlü bir eğilim gösteriyor.
+
+**Genç (15–34), 2025:** Ne eğitimde ne istihdamda (NEET) 6.672 bin, %27,7. Kadın %40,6, erkek %15,1. 15–24 yaş: 2.684 bin (%23,3). Genç modeli için havuz bu tabloya bağlanabilir (`genc3.py`).
+
+**İş arama kanalı (2025, işsiz; birden fazla kanal sayılır):** eşe dostla 2.184; doğrudan işverene 1.514; İŞKUR 1.096; gazete/internet ilanı 1.002; özel ofis 922; internetle başvuru 858; sözlü/yazılı sınav 303; kendi işyerini kurmak 332.
+
+**Açık:** Serbest ve işveren birleşik; ayrı kendi hesabına sayısı bu dosyada yok (SBB'nin %16'sı ~5,2 milyon ile tutarlı: 6.750 − işveren ≈ 5,2 mn ise işveren ≈ 1,5 mn). Sektör × statü çapraz tablosu (ücretli/işveren/kendi/ücretsiz ayrı) bu yüklemede yok.
