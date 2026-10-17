@@ -64,6 +64,26 @@ def build_digest(events):
     return text
 
 
+CODE_MAX_TOKENS = 6000  # bu büyüklüğün altındaki parça koddan özetlenir; üstü LLM'e gider
+
+
+def raw_chars(ev):
+    """Olayın ham boyutu (kısaltma yok): karar bu boyuta göre verilir."""
+    n = 0
+    for p in (ev.content.parts if ev.content and ev.content.parts else []):
+        if getattr(p, "text", None):
+            n += len(p.text)
+        if getattr(p, "function_call", None):
+            n += len(json.dumps(dict(p.function_call.args or {}), ensure_ascii=False, default=str))
+        if getattr(p, "function_response", None):
+            n += len(json.dumps(dict(p.function_response.response or {}), ensure_ascii=False, default=str))
+    return n
+
+
+def events_tokens(events):
+    return sum(math.ceil(raw_chars(e) / 3) for e in events)
+
+
 class CodeEventsSummarizer(BaseEventsSummarizer):
     """Olay listesini koddan özetleyen sıkıştırıcı."""
 
@@ -77,3 +97,24 @@ class CodeEventsSummarizer(BaseEventsSummarizer):
             compacted_content=content,
         )
         return Event(author="user", actions=EventActions(compaction=compaction), invocation_id=Event.new_id())
+
+
+class HybridEventsSummarizer(BaseEventsSummarizer):
+    """Küçük parça: kod özeti (deterministik, bedava). Büyük parça: LLM özeti (ADK LlmEventSummarizer).
+    Neden hibrit: LLM özeti 30k'ya yaklaşınca kaçınılmaz; ama küçük parçada kod özeti hatasızdır."""
+
+    def __init__(self, llm, code_max_tokens=CODE_MAX_TOKENS):
+        self._code = CodeEventsSummarizer()
+        self._llm = None
+        self._llm_factory = llm
+        self._code_max = code_max_tokens
+
+    async def maybe_summarize_events(self, *, events):
+        if not events:
+            return None
+        if events_tokens(events) <= self._code_max:
+            return await self._code.maybe_summarize_events(events=events)
+        from google.adk.apps.llm_event_summarizer import LlmEventSummarizer
+        if self._llm is None:
+            self._llm = LlmEventSummarizer(llm=self._llm_factory())
+        return await self._llm.maybe_summarize_events(events=events)

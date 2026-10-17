@@ -18,7 +18,7 @@ from google.adk.events.event_actions import EventActions, EventCompaction
 from google.genai import types
 import math
 
-# ---- kodla konuşma sıkıştırması (code_summarizer.py ile aynı; host süreçte çalışır) ----
+# ---- kodla + LLM hibrit konuşma sıkıştırması (code_summarizer.py ile aynı; host süreçte çalışır) ----
 MAX_SUMMARY_TOKENS = 1200
 RESULT_HEAD_CHARS = 240
 ARG_CHARS = 160
@@ -68,6 +68,26 @@ def build_digest(events):
     return text
 
 
+CODE_MAX_TOKENS = 6000  # bu büyüklüğün altındaki parça koddan özetlenir; üstü LLM'e gider
+
+
+def raw_chars(ev):
+    """Olayın ham boyutu (kısaltma yok): karar bu boyuta göre verilir."""
+    n = 0
+    for p in (ev.content.parts if ev.content and ev.content.parts else []):
+        if getattr(p, "text", None):
+            n += len(p.text)
+        if getattr(p, "function_call", None):
+            n += len(json.dumps(dict(p.function_call.args or {}), ensure_ascii=False, default=str))
+        if getattr(p, "function_response", None):
+            n += len(json.dumps(dict(p.function_response.response or {}), ensure_ascii=False, default=str))
+    return n
+
+
+def events_tokens(events):
+    return sum(math.ceil(raw_chars(e) / 3) for e in events)
+
+
 class CodeEventsSummarizer(BaseEventsSummarizer):
     """Olay listesini koddan özetleyen sıkıştırıcı."""
 
@@ -81,6 +101,27 @@ class CodeEventsSummarizer(BaseEventsSummarizer):
             compacted_content=content,
         )
         return Event(author="user", actions=EventActions(compaction=compaction), invocation_id=Event.new_id())
+
+
+class HybridEventsSummarizer(BaseEventsSummarizer):
+    """Küçük parça: kod özeti (deterministik, bedava). Büyük parça: LLM özeti (ADK LlmEventSummarizer).
+    Neden hibrit: LLM özeti 30k'ya yaklaşınca kaçınılmaz; ama küçük parçada kod özeti hatasızdır."""
+
+    def __init__(self, llm, code_max_tokens=CODE_MAX_TOKENS):
+        self._code = CodeEventsSummarizer()
+        self._llm = None
+        self._llm_factory = llm
+        self._code_max = code_max_tokens
+
+    async def maybe_summarize_events(self, *, events):
+        if not events:
+            return None
+        if events_tokens(events) <= self._code_max:
+            return await self._code.maybe_summarize_events(events=events)
+        from google.adk.apps.llm_event_summarizer import LlmEventSummarizer
+        if self._llm is None:
+            self._llm = LlmEventSummarizer(llm=self._llm_factory())
+        return await self._llm.maybe_summarize_events(events=events)
 
 
 T0 = time.time()
@@ -296,6 +337,7 @@ try:
     log("submission files:", sorted(str(p.relative_to(SUB_DIR)) for p in SUB_DIR.rglob("*") if p.is_file()))
 
     import litellm
+    from google.adk.models.lite_llm import LiteLlm
     import pandas as pd
     import torch
     import yaml
@@ -345,6 +387,9 @@ try:
         raise
     models = server.create_model_registry(aliases=sorted(set(declared) | {TARGET_MODEL_NAME}), model_prefix="openai/", api_key="EMPTY")
 
+    # Sıkıştırma: küçük parça kodla, büyük parça (>6000 token) LLM özeti. Eşik 16000 (ölçüm: sistem ~4.2k,
+    # araç ~3.4k, çıktı payı 6144 -> en kötü adımda güvenli eşik 11.9k, tipik adımda 16.5k). interval=2.
+    summarizer = HybridEventsSummarizer(llm=lambda: LiteLlm(model="openai/" + TARGET_MODEL_NAME, api_base=server.base_url, api_key="EMPTY"))
     raw = yaml.safe_load((SUB_DIR / "eval_config.yaml").read_text(encoding="utf-8"))
     ev = raw.get("evaluation", raw)
     limits, gen_constraints = build_submission_limits()
@@ -360,7 +405,7 @@ try:
         limits=limits, generation_constraints=gen_constraints, adapter_manifest=adapters,
         context_cache_config=ContextCacheConfig(min_tokens=2048, ttl_seconds=3600, cache_intervals=15),
         # Hülasacı Compaction: 25k token eşiğine ulaştığında devreye girip bağlamı ~8k seviyesine düşürür
-        events_compaction_config=EventsCompactionConfig(summarizer=CodeEventsSummarizer(), compaction_interval=5, overlap_size=2, token_threshold=20000, event_retention_size=4),
+        events_compaction_config=EventsCompactionConfig(summarizer=summarizer, compaction_interval=2, overlap_size=2, token_threshold=16000, event_retention_size=4),
         graph_dir=str(EVAL_DIR / "graphs"), embeddings_dir=str(EVAL_DIR / "embeddings"),
         wheels_dir=EVAL_DIR / "wheels", verbose=False,
     )
