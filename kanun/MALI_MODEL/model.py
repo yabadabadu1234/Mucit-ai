@@ -51,7 +51,8 @@ def yil(p,carpan=1.0,ilk=False):
     y_vergi=N*(p['s_kayitli']*E(k['eski_vergi'])+p['u_ucretli']*E(k['eski_ucretli']))
     y_prim=N*p['s_kayitli']*E(k['eski_prim'])
     eski=y_vergi+y_prim
-    y_yeni_prim=N*p['n_yeni_pay']*E(k['yeni_prim'])+N*p['s_kayitli']*p['prim_odeme']*p['prim_eski']*p['kayitli_prim_surer']
+    # kayıtlı 4/b primi sürer: bu, mevcut durumdur (statüko); yasanın net etkisine girmez
+    y_yeni_prim=N*p['n_yeni_pay']*E(k['yeni_prim'])
     reff=ET/EH
     F=p['phi']*(1-p['onlem'])*p['kurumsal_pay']*N*EH
     sahte=F*max(p['kv']-reff,0)
