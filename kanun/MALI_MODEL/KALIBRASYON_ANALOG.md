@@ -35,3 +35,16 @@ Analog veri yok. Kayıtlı 4/b sigortalılarının rejime geçmesi, MEI'de oldu�
 ## 5. Modele etkisi
 
 Yeni girdi yok; mevcut senaryo değerleri analoglarla tutarlı bulundu. Eklenen şey: N'nin dayanağı ve sınırları. Hassas eksen olarak eşik (tavan) ayrıca eklenmeli: İtalya deneyimi, tavanın artmasının maliyeti belirgin biçimde yükselttiğini gösteriyor.
+
+## 6. Sektör kırılımı (2025, ikincil kaynak)
+
+Kaynak: TÜİK 2025 Hanehalkı İşgücü Araştırması özetleri, [alomaliye / haber özeti](https://www.alomaliye.com/wp-content/uploads/2025/10/isgucu-piyasasi-2025-ii.pdf) ve [iscihaber](https://www.iscihaber.net/gundem/tuik-2025-yili-isgucu-istatistiklerini-acikladi-issizlik-orani-yuzde-83-seviyesine-geriledi/215798). TÜİK tablosu doğrudan doğrulanmadı.
+
+| Sektör | Pay | Yaklaşık kişi (32,57 milyon üzerinden) |
+|:--|--:|--:|
+| Hizmet | %59,0 | ≈ 19,2 milyon |
+| Sanayi | %20,2 | ≈ 6,6 milyon |
+| Tarım | %14,0 | ≈ 4,5 milyon (2025'te 267 bin azaldı) |
+| İnşaat | %6,8 | ≈ 2,2 milyon |
+
+Kendi hesabına ve ücretsiz aile işçilerinin sektör kırılımı bulunamadı. Bu nedenle tarım payı, serbest çalışan havuzuna uygulanamaz; kayıt dışı ve ücretsiz aile işçiliğinin büyük kısmının tarımda olduğu yalnızca bir varsayım olarak kalır, veri değildir. Gerekli tablo: TÜİK HİA "istihdam edilenlerin işteki duruma ve sektöre göre" çapraz tablosu.
