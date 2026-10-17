@@ -80,3 +80,26 @@ Yorum: Orta N, kendi işyeri kurmak niyetindeki işsiz sayısıyla (332 bin) ner
 **İş arama kanalı (2025, işsiz; birden fazla kanal sayılır):** eşe dostla 2.184; doğrudan işverene 1.514; İŞKUR 1.096; gazete/internet ilanı 1.002; özel ofis 922; internetle başvuru 858; sözlü/yazılı sınav 303; kendi işyerini kurmak 332.
 
 **Açık:** Serbest ve işveren birleşik; ayrı kendi hesabına sayısı bu dosyada yok (SBB'nin %16'sı ~5,2 milyon ile tutarlı: 6.750 − işveren ≈ 5,2 mn ise işveren ≈ 1,5 mn). Sektör × statü çapraz tablosu (ücretli/işveren/kendi/ücretsiz ayrı) bu yüklemede yok.
+
+## 8. Girişimcilik ve İş Demografisi (TÜİK, yüklenen tablolar; doğrudan okundu)
+
+Kaynak dökümü: `veri/girisim_dokum.txt`. Birimler: girişim sayısı; istihdam kişi.
+
+**Doğan girişimler (yıllık):** 2015 396.986 → 2024 633.146 (girişim oranı %15,8). Doğan girişimlerin istihdamı 2024: 996.550 kişi (%4,9); girişim başına ≈ 1,57 kişi.
+
+**Hukuki durum, 2024 doğanlar:** gerçek kişi 490.458 (%77,5); limited 113.189 (%17,9); anonim 18.975 (%3,0); adi ortaklık 6.424 (%1,0); kooperatif 983; diğer 3.117. Gerçek kişi payı 2015'te %79,7'den 2024'te %77,5'e geriledi.
+
+**Hayatta kalma (girişim oranı, TÜİK tablo 1 yıl / 2 yıl):**
+| Doğum yılı | 1 yıl | 2 yıl |
+|:--|--:|--:|
+| 2019 | %80,6 | %64,4 |
+| 2020 | %78,3 | %62,9 |
+| 2021 | %77,2 | %59,2 |
+| 2022 | %75,2 | %58,6 |
+| 2023 | %78,3 | — |
+
+Bu, `genc3.py` ve `genc_model.py` için **veriye dayalı hayatta kalma eğrisi** sağlar: 2 yıl sonu açık kalma ≈ %59–64. Modelin mevcut "açık firma" varsayımıyla karşılaştırılmalı (henüz değiştirilmedi).
+
+**Kalibrasyon kontrolü (N):** Orta N = 332 bin, 2024 doğan girişimlerin %52'si; gerçek kişi doğumlarının (490 bin) %68'i. Bu, Orta'nın "girişimci niyeti" mantığıyla, doğan girişimlerin büyük bölümüne karşılık geldiğini gösteriyor (tutarlılık, bağımsız kanıt değil).
+
+**Açık:** Sektörel doğum dağılımı (2015–2024) ve sektör başına istihdam dosyaları yüklenmiş ancak bu turda ayrıntılı çıkarılmadı.
