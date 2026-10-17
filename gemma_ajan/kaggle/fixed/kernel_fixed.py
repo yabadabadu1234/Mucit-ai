@@ -366,9 +366,9 @@ try:
     # Max model len 32768 for maximum context
     cfg = VllmConfig(
         model=str(MODEL_PATH), port=8000, host="127.0.0.1",
-        tool_call_parser="gemma4", reasoning_parser="gemma4", max_model_len=32768,
+        tool_call_parser="gemma4", reasoning_parser="gemma4", max_model_len=55000,
         dtype="bfloat16" if (torch.cuda.is_available() and torch.cuda.is_bf16_supported()) else "auto",
-        gpu_memory_utilization=0.90, enable_auto_tool_choice=True,
+        gpu_memory_utilization=0.78, enable_auto_tool_choice=True,
         enable_lora=True, max_loras=8, max_lora_rank=128, tensor_parallel_size=tp, startup_timeout=60 * 25,
     )
     import logging
@@ -405,7 +405,7 @@ try:
         limits=limits, generation_constraints=gen_constraints, adapter_manifest=adapters,
         context_cache_config=ContextCacheConfig(min_tokens=2048, ttl_seconds=3600, cache_intervals=15),
         # Hülasacı Compaction: 25k token eşiğine ulaştığında devreye girip bağlamı ~8k seviyesine düşürür
-        events_compaction_config=EventsCompactionConfig(summarizer=summarizer, compaction_interval=2, overlap_size=2, token_threshold=16000, event_retention_size=4),
+        events_compaction_config=EventsCompactionConfig(summarizer=summarizer, compaction_interval=2, overlap_size=2, token_threshold=36000, event_retention_size=4),
         graph_dir=str(EVAL_DIR / "graphs"), embeddings_dir=str(EVAL_DIR / "embeddings"),
         wheels_dir=EVAL_DIR / "wheels", verbose=False,
     )
