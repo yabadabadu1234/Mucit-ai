@@ -1,117 +1,178 @@
-# MALİ MODEL: BİRLEŞİK BELİRSİZLİK, DUYARLILIK VE KIRILMA ANALİZİ (17 Oct 2026)
+# MALİ MODEL: VERİYE BAĞLI SENARYOLAR, BELİRSİZLİK VE KIRILMA ANALİZİ (Ekim 2026)
 
-Kaynak: `mc_uc.py` (birleşik Monte Carlo, 6000 çekim/senaryo), `kirilma_izgara.py`, `kose_stres.py`, `tornado_senaryo.py`. Tüm dağılımlar varsayımdır (ölçülmemiş girdiler); aralıklar senaryoya göre `mc_uc.py` içinde tanımlıdır. Sonuçlar 4. yıl net, milyar TL.
+Üretici: `rapor_uret.py` (tüm rakamlar JSON çıktılarından alınır). Net ve NPV milyar TL, 4. yıl ve 5 yıl reel %5.
 
-## 1. Birleşik Monte Carlo (tüm girdiler birlikte değişir)
+## 0. Senaryo girdileri (veriye bağlı)
+
+N (katılımcı) TÜİK 2025 tablolarından: Kötümser = 2021 düzeyi (255 bin, kendi işyeri kurmak niyetli işsiz); Orta = 2025 (332 bin); İyimser = 2025'in 2021–2025 büyüme hızıyla (%6,8/yıl) 5 yıl uzatılması (462 bin). Dağılım σ(log) = 0,106 (aynı seriden). Brezilya MEI analogu (havuzun %20'si ≈ 1.047 bin) yalnızca dış sınır olarak kırılma ızgarasında ve tornado'da kullanıldı.
+
+| Senaryo | N | Baz net | NPV5 | Brüt tevkifat |
+|:--|--:|--:|--:|--:|
+| Kötümser | 255.000 | 11.93 | 35.90 | 6.02 |
+| Orta | 332.000 | 12.70 | 38.24 | 9.26 |
+| İyimser | 462.000 | 16.27 | 49.06 | 14.60 |
+
+## 1. Birleşik Monte Carlo (6000 çekim, tüm girdiler birlikte)
 
 | Senaryo | P1 | P5 | P50 | P95 | P99 | P(net>0) | NPV P50 |
 |:--|--:|--:|--:|--:|--:|--:|--:|
-| Kötümser | 2.12 | 2.77 | 5.30 | 10.10 | 13.20 | 1.000 | 15.77 |
-| Orta | 3.80 | 5.79 | 15.28 | 41.85 | 62.38 | 1.000 | 46.06 |
-| İyimser | 23.98 | 28.82 | 48.15 | 81.20 | 100.95 | 1.000 | 145.78 |
+| Kötümser | 8.50 | 9.68 | 13.64 | 19.03 | 21.48 | 1.000 | 41.07 |
+| Orta | 9.00 | 10.54 | 15.48 | 22.36 | 25.59 | 1.000 | 46.66 |
+| İyimser | 12.74 | 14.33 | 20.28 | 28.89 | 33.51 | 1.000 | 61.22 |
 
-## 2. Spearman duyarlılık (girdi ↔ 4. yıl net, ilk 6)
+## 2. Spearman duyarlılığı (ilk 6)
 
-**Kötümser:** n_toplam +0.89, s_kayitli +0.25, duz_oran +0.24, prim_odeme +0.20, medyan_W +0.13, u_ucretli -0.05
-**Orta:** n_toplam +0.93, duz_oran +0.22, medyan_W +0.15, s_kayitli +0.14, prim_odeme +0.10, u_ucretli -0.05
-**İyimser:** n_toplam +0.79, duz_oran +0.49, medyan_W +0.28, s_kayitli +0.10, u_ucretli -0.09, prim_odeme +0.09
+- **Kötümser:** s_kayitli +0.50, n_toplam +0.49, duz_oran +0.48, prim_odeme +0.38, medyan_W +0.23, u_ucretli -0.07
+- **Orta:** duz_oran +0.58, n_toplam +0.44, medyan_W +0.39, s_kayitli +0.38, prim_odeme +0.26, u_ucretli -0.11
+- **İyimser:** duz_oran +0.72, n_toplam +0.48, medyan_W +0.41, s_kayitli +0.15, prim_odeme +0.12, u_ucretli -0.11
 
-## 3. Kırılma ızgarası (net, milyar TL): kayıtlı geçiş s × sahte fatura φ
+## 3. Tek parametre tornado (17 parametre; düşük / yüksek uç)
 
-Net, s=0..1 ve φ=0..0.2 aralığında hiçbir noktada sıfırın altına inmedi (s* ve φ* bulunamadı).
+**Kötümser** (taban 11.93)
 
-**Kötümser** (sütun: s; satır: φ)
+| parametre | düşük uç değeri | yüksek uç değeri | Δ düşük | Δ yüksek |
+|:--|--:|--:|--:|--:|
+| n_toplam | 255000 | 1.047e+06 | 0.00 | 37.22 |
+| s_kayitli | 0 | 0.2 | -7.64 | -2.55 |
+| duz_oran | 0.105 | 0.27 | -1.24 | 5.67 |
+| prim_odeme | 0.4 | 1 | -4.34 | 2.17 |
+| medyan_W | 3 | 8 | -0.78 | 2.23 |
+| u_ucretli | 0 | 0.4 | 0.75 | -0.45 |
+| marj | 0.35 | 0.65 | 0.55 | -0.57 |
+| prim_k | 3 | 12 | 0.45 | -0.21 |
+| sigma | 0.6 | 1.2 | -0.40 | 0.11 |
+| kdv_donanim_pay | 0.2 | 0.6 | 0.34 | -0.11 |
+| myo_uygun | 0.1 | 0.6 | 0.21 | -0.05 |
+| prim_toplama | 0.5 | 1 | -0.20 | 0.00 |
+| kgf_alim | 0.02 | 0.1 | 0.14 | -0.05 |
+| kgf_temerrut | 0.05 | 0.2 | 0.12 | -0.06 |
+| bes_vazgecme | 0.1 | 0.6 | -0.02 | 0.09 |
+| phi | 0 | 0.03 | 0.05 | -0.03 |
+| onlem | 0.2 | 0.8 | -0.01 | 0.04 |
+
+**Orta** (taban 12.70)
+
+| parametre | düşük uç değeri | yüksek uç değeri | Δ düşük | Δ yüksek |
+|:--|--:|--:|--:|--:|
+| n_toplam | 255000 | 1.047e+06 | -2.96 | 27.46 |
+| duz_oran | 0.105 | 0.27 | -1.90 | 8.65 |
+| s_kayitli | 0 | 0.2 | -4.85 | 1.62 |
+| prim_odeme | 0.4 | 1 | -2.82 | 1.41 |
+| medyan_W | 3 | 8 | -2.61 | 2.82 |
+| prim_k | 3 | 12 | 1.14 | -0.52 |
+| u_ucretli | 0 | 0.4 | 0.93 | -0.93 |
+| marj | 0.35 | 0.65 | 0.53 | -0.55 |
+| sigma | 0.6 | 1.2 | -0.54 | -0.05 |
+| prim_toplama | 0.5 | 1 | -0.51 | 0.00 |
+| kdv_donanim_pay | 0.2 | 0.6 | 0.31 | -0.31 |
+| myo_uygun | 0.1 | 0.6 | 0.24 | -0.24 |
+| kgf_alim | 0.02 | 0.1 | 0.07 | -0.12 |
+| kgf_temerrut | 0.05 | 0.2 | 0.06 | -0.12 |
+| bes_vazgecme | 0.1 | 0.6 | -0.08 | 0.08 |
+| phi | 0 | 0.03 | 0.03 | -0.06 |
+| onlem | 0.2 | 0.8 | -0.02 | 0.02 |
+
+**İyimser** (taban 16.27)
+
+| parametre | düşük uç değeri | yüksek uç değeri | Δ düşük | Δ yüksek |
+|:--|--:|--:|--:|--:|
+| n_toplam | 255000 | 1.047e+06 | -7.31 | 20.67 |
+| duz_oran | 0.105 | 0.27 | -3.00 | 13.57 |
+| s_kayitli | 0 | 0.2 | -2.20 | 6.59 |
+| medyan_W | 3 | 8 | -6.17 | 2.98 |
+| prim_k | 3 | 12 | 2.43 | -1.11 |
+| u_ucretli | 0 | 0.4 | 1.09 | -1.82 |
+| prim_odeme | 0.4 | 1 | -1.31 | 0.65 |
+| prim_toplama | 0.5 | 1 | -1.08 | 0.00 |
+| myo_uygun | 0.1 | 0.6 | 0.18 | -0.70 |
+| kdv_donanim_pay | 0.2 | 0.6 | 0.22 | -0.66 |
+| sigma | 0.6 | 1.2 | -0.47 | -0.52 |
+| marj | 0.35 | 0.65 | 0.46 | -0.47 |
+| bes_vazgecme | 0.1 | 0.6 | -0.21 | 0.05 |
+| kgf_alim | 0.02 | 0.1 | 0.02 | -0.16 |
+| kgf_temerrut | 0.05 | 0.2 | 0.01 | -0.16 |
+| phi | 0 | 0.03 | 0.01 | -0.07 |
+| onlem | 0.2 | 0.8 | -0.02 | 0.00 |
+
+## 4. Kırılma ızgarası (net): s × φ (sahte fatura)
+
+**Kötümser** (satır φ, sütun s)
 
 | φ \ s | 0.0 | 0.1 | 0.2 | 0.3 | 0.4 | 0.5 | 0.6 | 0.7 | 0.8 | 0.9 | 1.0 |
 |:--|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|
-| 0.00 | 1.8 | 2.7 | 3.7 | 4.7 | 5.6 | 6.6 | 7.6 | 8.5 | 9.5 | 10.4 | 11.4 |
-| 0.01 | 1.8 | 2.7 | 3.7 | 4.7 | 5.6 | 6.6 | 7.5 | 8.5 | 9.5 | 10.4 | 11.4 |
-| 0.02 | 1.8 | 2.7 | 3.7 | 4.7 | 5.6 | 6.6 | 7.5 | 8.5 | 9.5 | 10.4 | 11.4 |
-| 0.05 | 1.7 | 2.7 | 3.7 | 4.6 | 5.6 | 6.5 | 7.5 | 8.5 | 9.4 | 10.4 | 11.4 |
-| 0.10 | 1.7 | 2.6 | 3.6 | 4.6 | 5.5 | 6.5 | 7.5 | 8.4 | 9.4 | 10.4 | 11.3 |
-| 0.20 | 1.6 | 2.5 | 3.5 | 4.5 | 5.4 | 6.4 | 7.4 | 8.3 | 9.3 | 10.3 | 11.2 |
+| 0.00 | 4.6 | 7.1 | 9.5 | 12.0 | 14.4 | 16.9 | 19.4 | 21.8 | 24.3 | 26.7 | 29.2 |
+| 0.01 | 4.6 | 7.0 | 9.5 | 12.0 | 14.4 | 16.9 | 19.3 | 21.8 | 24.2 | 26.7 | 29.2 |
+| 0.02 | 4.6 | 7.0 | 9.5 | 11.9 | 14.4 | 16.9 | 19.3 | 21.8 | 24.2 | 26.7 | 29.1 |
+| 0.05 | 4.5 | 6.9 | 9.4 | 11.9 | 14.3 | 16.8 | 19.2 | 21.7 | 24.1 | 26.6 | 29.1 |
+| 0.10 | 4.4 | 6.8 | 9.3 | 11.7 | 14.2 | 16.6 | 19.1 | 21.6 | 24.0 | 26.5 | 28.9 |
+| 0.20 | 4.1 | 6.6 | 9.0 | 11.5 | 13.9 | 16.4 | 18.9 | 21.3 | 23.8 | 26.2 | 28.7 |
 
-**Orta** (sütun: s; satır: φ)
-
-| φ \ s | 0.0 | 0.1 | 0.2 | 0.3 | 0.4 | 0.5 | 0.6 | 0.7 | 0.8 | 0.9 | 1.0 |
-|:--|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|
-| 0.00 | 8.1 | 11.2 | 14.2 | 17.3 | 20.4 | 23.4 | 26.5 | 29.6 | 32.6 | 35.7 | 38.8 |
-| 0.01 | 8.1 | 11.1 | 14.2 | 17.3 | 20.3 | 23.4 | 26.5 | 29.5 | 32.6 | 35.7 | 38.7 |
-| 0.02 | 8.0 | 11.1 | 14.2 | 17.2 | 20.3 | 23.4 | 26.4 | 29.5 | 32.6 | 35.6 | 38.7 |
-| 0.05 | 8.0 | 11.0 | 14.1 | 17.1 | 20.2 | 23.3 | 26.4 | 29.4 | 32.5 | 35.5 | 38.6 |
-| 0.10 | 7.8 | 10.9 | 13.9 | 17.0 | 20.1 | 23.1 | 26.2 | 29.3 | 32.4 | 35.4 | 38.5 |
-| 0.20 | 7.5 | 10.6 | 13.7 | 16.7 | 19.8 | 22.9 | 25.9 | 29.0 | 32.1 | 35.1 | 38.2 |
-
-**İyimser** (sütun: s; satır: φ)
+**Orta** (satır φ, sütun s)
 
 | φ \ s | 0.0 | 0.1 | 0.2 | 0.3 | 0.4 | 0.5 | 0.6 | 0.7 | 0.8 | 0.9 | 1.0 |
 |:--|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|
-| 0.00 | 33.8 | 43.6 | 53.4 | 63.2 | 72.9 | 82.7 | 92.5 | 102.3 | 112.1 | 121.9 | 131.6 |
-| 0.01 | 33.8 | 43.5 | 53.3 | 63.1 | 72.9 | 82.7 | 92.5 | 102.2 | 112.0 | 121.8 | 131.6 |
-| 0.02 | 33.7 | 43.5 | 53.2 | 63.0 | 72.8 | 82.6 | 92.4 | 102.2 | 112.0 | 121.7 | 131.5 |
-| 0.05 | 33.5 | 43.3 | 53.1 | 62.9 | 72.6 | 82.4 | 92.2 | 102.0 | 111.8 | 121.5 | 131.3 |
-| 0.10 | 33.2 | 43.0 | 52.8 | 62.5 | 72.3 | 82.1 | 91.9 | 101.7 | 111.5 | 121.2 | 131.0 |
-| 0.20 | 32.6 | 42.4 | 52.1 | 61.9 | 71.7 | 81.5 | 91.3 | 101.0 | 110.8 | 120.6 | 130.4 |
+| 0.00 | 8.1 | 11.2 | 14.3 | 17.3 | 20.4 | 23.5 | 26.6 | 29.6 | 32.7 | 35.8 | 38.9 |
+| 0.01 | 8.1 | 11.2 | 14.2 | 17.3 | 20.4 | 23.5 | 26.5 | 29.6 | 32.7 | 35.8 | 38.9 |
+| 0.02 | 8.1 | 11.1 | 14.2 | 17.3 | 20.4 | 23.4 | 26.5 | 29.6 | 32.7 | 35.7 | 38.8 |
+| 0.05 | 8.0 | 11.1 | 14.1 | 17.2 | 20.3 | 23.4 | 26.4 | 29.5 | 32.6 | 35.7 | 38.7 |
+| 0.10 | 7.8 | 10.9 | 14.0 | 17.1 | 20.1 | 23.2 | 26.3 | 29.4 | 32.5 | 35.5 | 38.6 |
+| 0.20 | 7.6 | 10.6 | 13.7 | 16.8 | 19.9 | 22.9 | 26.0 | 29.1 | 32.2 | 35.2 | 38.3 |
 
-## 4. Birlikte en kötü / en iyi uç (her girdi aynı anda aleyhte / lehte)
+**İyimser** (satır φ, sütun s)
 
-| Senaryo | Taban | En kötü uç | En iyi uç |
+| φ \ s | 0.0 | 0.1 | 0.2 | 0.3 | 0.4 | 0.5 | 0.6 | 0.7 | 0.8 | 0.9 | 1.0 |
+|:--|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|
+| 0.00 | 14.2 | 18.4 | 22.5 | 26.6 | 30.7 | 34.8 | 39.0 | 43.1 | 47.2 | 51.3 | 55.5 |
+| 0.01 | 14.2 | 18.3 | 22.4 | 26.6 | 30.7 | 34.8 | 38.9 | 43.1 | 47.2 | 51.3 | 55.4 |
+| 0.02 | 14.2 | 18.3 | 22.4 | 26.5 | 30.7 | 34.8 | 38.9 | 43.0 | 47.2 | 51.3 | 55.4 |
+| 0.05 | 14.1 | 18.2 | 22.3 | 26.5 | 30.6 | 34.7 | 38.8 | 43.0 | 47.1 | 51.2 | 55.3 |
+| 0.10 | 14.0 | 18.1 | 22.2 | 26.3 | 30.5 | 34.6 | 38.7 | 42.8 | 47.0 | 51.1 | 55.2 |
+| 0.20 | 13.7 | 17.8 | 21.9 | 26.1 | 30.2 | 34.3 | 38.4 | 42.6 | 46.7 | 50.8 | 54.9 |
+
+## 5. Sızıntı (sizinti) × kimlik kiralama (kiralama)
+
+**Kötümser** (satır kiralama, sütun sızıntı)
+
+| kiralama \ sızıntı | 0.00 | 0.02 | 0.05 | 0.10 | 0.20 | 0.30 |
+|:--|--:|--:|--:|--:|--:|--:|
+| 0.00 | 11.93 | 11.78 | 11.54 | 11.15 | 10.37 | 9.59 |
+| 0.02 | 11.81 | 11.66 | 11.42 | 11.03 | 10.25 | 9.47 |
+| 0.05 | 11.63 | 11.48 | 11.24 | 10.85 | 10.07 | 9.29 |
+| 0.10 | 11.33 | 11.17 | 10.94 | 10.55 | 9.77 | 8.99 |
+| 0.20 | 10.73 | 10.57 | 10.34 | 9.95 | 9.17 | 8.39 |
+
+**Orta** (satır kiralama, sütun sızıntı)
+
+| kiralama \ sızıntı | 0.00 | 0.02 | 0.05 | 0.10 | 0.20 | 0.30 |
+|:--|--:|--:|--:|--:|--:|--:|
+| 0.00 | 12.70 | 12.46 | 12.10 | 11.50 | 10.30 | 9.10 |
+| 0.02 | 12.52 | 12.28 | 11.92 | 11.32 | 10.12 | 8.92 |
+| 0.05 | 12.24 | 12.00 | 11.64 | 11.04 | 9.84 | 8.64 |
+| 0.10 | 11.78 | 11.54 | 11.18 | 10.58 | 9.38 | 8.18 |
+| 0.20 | 10.85 | 10.61 | 10.25 | 9.65 | 8.45 | 7.25 |
+
+**İyimser** (satır kiralama, sütun sızıntı)
+
+| kiralama \ sızıntı | 0.00 | 0.02 | 0.05 | 0.10 | 0.20 | 0.30 |
+|:--|--:|--:|--:|--:|--:|--:|
+| 0.00 | 16.27 | 15.89 | 15.32 | 14.38 | 12.49 | 10.59 |
+| 0.02 | 15.98 | 15.60 | 15.03 | 14.09 | 12.19 | 10.30 |
+| 0.05 | 15.54 | 15.16 | 14.60 | 13.65 | 11.76 | 9.86 |
+| 0.10 | 14.81 | 14.43 | 13.87 | 12.92 | 11.03 | 9.13 |
+| 0.20 | 13.35 | 12.97 | 12.41 | 11.46 | 9.57 | 7.68 |
+
+## 6. Birlikte en kötü / en iyi uç
+
+| Senaryo | Taban | En kötü | En iyi |
 |:--|--:|--:|--:|
-| Kötümser | 4.65 | 1.94 | 7.45 |
-| Orta | 12.66 | 4.45 | 27.53 |
-| İyimser | 38.67 | 13.62 | 87.45 |
+| Kötümser | 11.93 | 10.10 | 23.04 |
+| Orta | 12.70 | 6.89 | 25.61 |
+| İyimser | 16.27 | 6.31 | 24.54 |
 
-## 5. Dürüst sınırlılıklar
+## 7. Sınırlılıklar
 
-- Dağılımlar (aralık ve mod) benim varsayımımdır; ölçülmüş veri değildir. Sonuçlar ancak bu varsayımlar kadar güvenilirdir.
-- Sahte fatura kaybı modelde çok küçük çıkıyor (φ=0,20'de bile net ~0,1 milyar TL). Nedeni: B2B nötr kuralı (kv %25) ile tevkifat %13,5 arasındaki fark küçük. Model sahte faturanın tüm zararını bu farka indirger; sahte faturanın tevkifatı sıfırlaması veya kimlik kiralamanın yarattığı sızıntı modelde yok. Bu, modelin en önemli yapısal açığıdır ve sonuçların iyimserliğini artırabilir.
-- Kayıtlı 4/b primi sürdüğü için s'nin artması modelde her zaman olumludur (kayıtlı prim gelir sayılır). Bu, kayıtlı sigortalının gerçekte primini ödemeyi sürdürüp sürdürmeyeceği varsayımına dayanır (prim tahsil oranı π=0,8 varsayımı).
-- Bağımsızlık varsayımı: girdiler birbirinden bağımsız çekildi; oysa n_toplam ile medyan_W, s ile prim_odeme gibi çiftler gerçekte ilişkili olabilir.
-- Kötümser ve İyimser senaryo sınırları (N: 100 bin / 1,1 milyon) padişahın tahminleridir; modelin genel sonucu bu iki sınıra çok duyarlıdır (n_toplam tornado'da en büyük etken).
-- Bu model genel devletin (Hazine+SGK) yalnız dördüncü yıl ve beş yıllık NPV'sini verir; ilk yıl kayıp/kazanç, iflas oranı ve genç seyri (genc3.py) bu MC'de yer almaz.
-
-
-## 6. Tevkifat sızıntısı ve kimlik kiralama (model genişletildi: `model.py` sizinti, kiralama)
-
-- **sizinti**: kurumsal akıştaki sahte faturanın payı; kayıp = sizinti × kurumsal_pay × N × EH × kv (alıcının gider indirimi). Taban 0.
-- **kiralama**: kiralanan kimlikle tevkifatsız gelir payı; kayıp = kiralama × N × ET. Taban 0.
-- Baz sonuçlar (sizinti=0, kiralama=0) değişmedi (Kötümser 4,65 / Orta 12,66 / İyimser 38,67).
-
-**Kötümser** (satır: kiralama; sütun: sızıntı)
-
-| kiralama \ sızıntı | 0.00 | 0.02 | 0.05 | 0.10 | 0.20 | 0.30 |
-|:--|--:|--:|--:|--:|--:|--:|
-| 0.00 | 4.65 | 4.59 | 4.50 | 4.34 | 4.04 | 3.73 |
-| 0.02 | 4.60 | 4.54 | 4.45 | 4.30 | 3.99 | 3.68 |
-| 0.05 | 4.53 | 4.47 | 4.38 | 4.22 | 3.92 | 3.61 |
-| 0.10 | 4.41 | 4.35 | 4.26 | 4.11 | 3.80 | 3.49 |
-| 0.20 | 4.18 | 4.12 | 4.02 | 3.87 | 3.56 | 3.26 |
-
-**Orta** (satır: kiralama; sütun: sızıntı)
-
-| kiralama \ sızıntı | 0.00 | 0.02 | 0.05 | 0.10 | 0.20 | 0.30 |
-|:--|--:|--:|--:|--:|--:|--:|
-| 0.00 | 12.66 | 12.42 | 12.07 | 11.47 | 10.27 | 9.07 |
-| 0.02 | 12.48 | 12.24 | 11.88 | 11.28 | 10.09 | 8.89 |
-| 0.05 | 12.20 | 11.96 | 11.60 | 11.01 | 9.81 | 8.61 |
-| 0.10 | 11.74 | 11.50 | 11.14 | 10.54 | 9.35 | 8.15 |
-| 0.20 | 10.82 | 10.58 | 10.22 | 9.62 | 8.42 | 7.23 |
-
-**İyimser** (satır: kiralama; sütun: sızıntı)
-
-| kiralama \ sızıntı | 0.00 | 0.02 | 0.05 | 0.10 | 0.20 | 0.30 |
-|:--|--:|--:|--:|--:|--:|--:|
-| 0.00 | 38.67 | 37.77 | 36.42 | 34.18 | 29.69 | 25.20 |
-| 0.02 | 37.98 | 37.08 | 35.73 | 33.49 | 29.00 | 24.51 |
-| 0.05 | 36.94 | 36.04 | 34.69 | 32.45 | 27.96 | 23.47 |
-| 0.10 | 35.21 | 34.31 | 32.96 | 30.72 | 26.23 | 21.74 |
-| 0.20 | 31.74 | 30.84 | 29.50 | 27.25 | 22.76 | 18.28 |
-
-**Tevkifatın tamamen kaçması (en kötü tek kalem):** net = baz − κ × brüt tevkifat. Üç senaryoda da κ=%50 kaçakta net pozitif kalır; kırılma oranı bulunamadı (κ>1 gerekir).
-
-- Kötümser: brüt tevkifat 2.36; κ=0 → 4.65, κ=0,30 → 3.94, κ=0,50 → 3.47
-- Orta: brüt tevkifat 9.23; κ=0 → 12.66, κ=0,30 → 9.89, κ=0,50 → 8.05
-- İyimser: brüt tevkifat 34.63; κ=0 → 38.67, κ=0,30 → 28.28, κ=0,50 → 21.35
-
-**Sonuç:** Sahte fatura sızıntısı ve kimlik kiralama modelde artık açıkça var. İyimser senaryoda bile sızıntı 0,86 (yani %86) olmadan net sıfırlanmıyor; Kötümser ve Orta'da sızıntı ve kiralamanın makul aralıklarında net pozitif kalıyor. Bu, önceki 'sahte fatura kaybı küçük' uyarısını nicelleştirir: model, sızıntıya karşı dayanıklıdır; asıl hassasiyet hâlâ n_toplam ve s'dedir.
+- N aralığı 2021–2025 niyet serisinden türetildi; yalnızca iki sayı noktası (2021, 2025) ve beş yıl var. Niyet ≠ katılım: kendi işyeri kurmak isteyen işsiz sayısı, mikro mükellefiyete geçecek kişi sayısının bir vekilidir. Serbest çalışanların geçişi bu sayıya dahil değil.
+- Brezilya analogu (%19–20) yalnızca dış sınır; Türkiye'de bu oran verilerle doğrulanmadı.
+- s, φ, sızıntı, kiralama, π, KGF, BES: veri yok, varsayım. Sonuçların bunlara duyarlılığı §3–§5'te.
+- Model yalnızca 4. yıl ve 5 yıllık NPV verir; ilk yıl etkisi ve genç seyri bu raporda yok.
 
