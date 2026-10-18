@@ -7,16 +7,18 @@ Kuvvetler (her biri bir gradyan akışıdır):
   K4  kademeli tesir: w_i = w_taban + (1 - w_taban) * (1 - d_i), w_taban > 0
   K5  CLM: tüm token'lar üzerinden kayıp (maskesiz)
   K6  SFT: yalnız asistan token'ları üzerinden kayıp
+  K7  politika: REINFORCE terimi; üretimin log-olasılığı, avantajla ağırlıklı (altın cevap yok)
 
-Akışlar: 0..3 güzergâh, 4 uzaklık, 5 CLM, 6 SFT. Her örnek için yalnız iki geri yayılım
+Akışlar: 0..3 güzergâh, 4 uzaklık, 5 CLM, 6 SFT, 7 politika. Her örnek için yalnız iki geri yayılım
 gerekir (CLM ve SFT kayıpları); akışlar bu iki gradyanın katsayılı toplamıdır.
 Veri eksik alan içeriyorsa reddedilir; uydurma değer yoktur.
 """
 ROUTES = 4
-STREAMS = ROUTES + 3  # 4 güzergâh + uzaklık + CLM + SFT
+STREAMS = ROUTES + 4  # 4 güzergâh + uzaklık + CLM + SFT + politika (REINFORCE)
 STREAM_DIST = ROUTES
 STREAM_CLM = ROUTES + 1
 STREAM_SFT = ROUTES + 2
+STREAM_POL = ROUTES + 3  # K7: -A * ∇log p(üretim); A = (1 − mesafe) − taban
 
 
 def validate_row(row, where=""):

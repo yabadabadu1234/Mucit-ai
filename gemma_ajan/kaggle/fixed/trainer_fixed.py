@@ -203,7 +203,7 @@ def main():
     import torch.nn.functional as F
     from transformers import AutoConfig, AutoModelForCausalLM, AutoTokenizer
     from accelerate import init_empty_weights
-    from kuvvet import STREAMS, guzergah_skorlari, pcgrad
+    from kuvvet import STREAM_POL, STREAMS, guzergah_skorlari, pcgrad
 
     if not VERIFIED_JSONL.exists():
         log(f"DURDU: doğrulanmış veri yok ({VERIFIED_JSONL}). Sahte veriyle eğitim yapılmaz.")
@@ -271,12 +271,16 @@ def main():
             gen = generate_rows(model, tok, rows, start, GEN_N, torch) if GEN_N > 0 else []
             route_score = guzergah_skorlari(route_score, gen, SCORE_FLOOR)
             # K1: model üretimleri kendi güzergâhının test-türevli skoruyla K1 akışına girer.
-            gen = [dict(g, compiler_score=route_score[g["route"]]) for g in gen]
+            # Avantaj (REINFORCE taban çıkarımı): ödül r = 1 − mesafe; taban = partinin ortalaması.
+            taban_odul = sum(1.0 - g["distance"] for g in gen) / len(gen) if gen else 0.0
+            gen = [dict(g, compiler_score=route_score[g["route"]],
+                        adv=(1.0 - g["distance"]) - taban_odul) for g in gen]
             part = [dict(r, compiler_score=route_score[r["route"]]) for r in rows[start:start + BATCH]]
             ezber = [g["ezber"] for g in gen]
             log(f"parti {start // BATCH + 1}: {len(gen)} yanıt üretildi ({time.time() - t_gen:.1f}s), "
                 f"ortalama mesafe={sum(g['distance'] for g in gen) / max(1, len(gen)):.3f}, "
                 f"ezber (altın 8-gram örtüşmesi) ortalama={sum(ezber) / max(1, len(ezber)):.3f}, "
+                f"|avantaj| ortalama={sum(abs(g.get('adv', 0.0)) for g in gen) / max(1, len(gen)):.3f}, "
                 f"güzergâh skorları={[round(s, 3) for s in route_score]}")
             # Doğrulanmış satırlar (altın cevap) hedef olarak eğitilmez; yalnız üretimler eğitilir.
             batch = (part if ALTIN_HEDEF == "acik" else []) + gen
@@ -301,8 +305,10 @@ def main():
                 if not torch.isfinite(clm) or not torch.isfinite(sft):
                     log("geçersiz kayıp, örnek atlandı")
                     continue
+                adv = row.get("adv", 0.0)
+                pol = -(nll * m).sum()  # −log p(üretim): K7 için (yalnız avantaj ≠ 0 olan örneklerde kullanılır)
                 gc_clm = torch.autograd.grad(clm, params, retain_graph=True, allow_unused=True)
-                gc_sft = torch.autograd.grad(sft, params, allow_unused=True)
+                gc_sft = torch.autograd.grad(sft, params, retain_graph=adv != 0.0, allow_unused=True)
                 fc = flat([g if g is not None else torch.zeros_like(p) for g, p in zip(gc_clm, params)])
                 fs = flat([g if g is not None else torch.zeros_like(p) for g, p in zip(gc_sft, params)])
                 for k in range(STREAMS):
@@ -310,8 +316,13 @@ def main():
                         streams[k] += a[k] * fc
                     if b[k] != 0.0:
                         streams[k] += b[k] * fs
+                if adv != 0.0:
+                    # K7: L = −A·log p ⇒ ∇L = A·∇(−log p); akışa A/n · ∇pol
+                    gc_pol = torch.autograd.grad(pol, params, allow_unused=True)
+                    fp = flat([g if g is not None else torch.zeros_like(p) for g, p in zip(gc_pol, params)])
+                    streams[STREAM_POL] += (adv / len(batch)) * fp
                 used += 1
-                del logits, nll, clm, sft, gc_clm, gc_sft
+                del logits, nll, clm, sft, pol, gc_clm, gc_sft
             if used == 0:
                 continue
             total = pcgrad(streams)  # K3
