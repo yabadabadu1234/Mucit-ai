@@ -711,6 +711,7 @@
 | 312 | **NAKZ 311 (ceza süresi): VADELİ ÖDEMEDE İMTİYAZDAN ÇIKARMA SÜRELİDİR, ÖMÜR BOYU DEĞİLDİR.** Vade tarihinden on beş gün sonra da tevkifat intikal ettirilmemişse (gecikme eşiği): ilk ihlal iki ay, tekrar altı ay, üçüncü ve sonraki ihlal bir yıl. Men süreleri ömür boyu değildir. İtiraz Madde 10 Mikro Üretici Dijital Hakem Heyeti'nde görülür; itiraz süresince ve sonuçlanana kadar men uygulanmaz (padişah: "İlk olarak 2 ay, sonra 6 ay sonra 1 sene. Ömür boyu mahrumiyet olmasın … borç gününden 15 gün sonrasında … İtiraz mekanizmalarını yine o malum heyet idare etsin.") | Padişah emri |
 | 313 | **GECİKME EŞİĞİ VADE TARİHİNDEN SAYILIR (padişah: "Evet vadeden sonra olacak."):** 312'deki on beş günlük eşik borç gününden değil, **vade tarihinden** sonra işler. Teklif metni bu esasa göre yazılır. | Padişah emri |
 | 314 | **GÖRSEL İŞTE YAYINDAKİ ESAS ALINIR:** Kitabın görsel durumu hakkında hüküm, değişiklik ve ekran tartışması, yerel dosya ya da önbellekteki sayfa değil, **yayındaki sayfa** (`https://yabadabadu1234.github.io/Mucit-ai/`) üzerinden yapılır; yayın kontrol edilmeden "ekranda şu görünüyor" hükmü verilmez | Padişah emri |
+| 315 | **YAYIN BAĞLANTISI HER ZAMAN YENİ KOPYAYI GÖSTERİR:** Her push'ta Pages iş akışı, README'deki ve kök yönlendirmedeki kitap bağlantısına commit kimliğini (`?v=`) otomatik yazar (`.github/workflows/pages.yml`, `[skip ci]` ile). Tarayıcı eski kopyayı kullanmaz | Padişah emri |
 ---
 
 # § 4. BÜTÜN SİSTEMİN DURUM MAKİNESİ ŞEMASI
