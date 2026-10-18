@@ -26,6 +26,7 @@ except ImportError:
     import markdown
 
 from grafik_uretici import build_all_charts, load_all_surah_data
+import kelime_mealli
 
 BASE_DIR = Path(__file__).resolve().parent
 REPO_ROOT = BASE_DIR.parent
@@ -79,12 +80,33 @@ def flat_segment_tablosu(segments):
                     """
 
 
+KELIME_RENKLERI = ["#dc2626", "#2563eb", "#16a34a", "#9333ea", "#ea580c",
+                   "#0891b2", "#be185d", "#ca8a04", "#4f46e5", "#0d9488"]
+
+
+def _kelime_mealli(verse_dict, v):
+    """Âyetin kelime mealli satırı: her kelime ayrı renkte; altında Türkçe karşılığı."""
+    kelimeler = verse_dict.get(v, {}).get("kelimeler", [])
+    if not kelimeler:
+        return ""
+    parcalar = []
+    for i, k in enumerate(kelimeler):
+        renk = KELIME_RENKLERI[i % len(KELIME_RENKLERI)]
+        parcalar.append(
+            f'<span class="kelime" style="border-bottom:3px solid {renk};" title="{k["lem"]}">'
+            f'<span class="kelime-ar" style="color:{renk};">{k["ar"]}</span>'
+            f'<span class="kelime-tr">{k["tr"] or "—"}</span></span>'
+        )
+    return f'<div class="kelime-satiri">{"".join(parcalar)}</div>'
+
+
 def _kart(renk, v, etiket, verse_dict):
     ar, tr = _ayet_metni(verse_dict, v)
     return (
         f'<div class="ag-kart" style="border-top:4px solid {renk};">'
         f'<div class="ag-kart-baslik" style="color:{renk};">Âyet {v}{" · " + etiket if etiket else ""}</div>'
-        f'<div class="verse-ar">{ar}</div><div class="verse-tr">{tr}</div></div>'
+        f'<div class="verse-ar">{ar}</div>{_kelime_mealli(verse_dict, v)}'
+        f'<div class="verse-tr">{tr}</div></div>'
     )
 
 
@@ -320,6 +342,7 @@ def build_unified_html(config, surahs_data):
     """Yapılandırmada işaret edilen dosyaları ve grafikleri uygun sırayla uç uca ekleyip tek bir HTML oluşturur."""
     md_conv = get_markdown_converter()
     surah_dict = {s["sno"]: s for s in surahs_data}
+    kelimeler = kelime_mealli.yukle()
 
     body_sections = []
 
@@ -415,6 +438,8 @@ def build_unified_html(config, surahs_data):
                     continue
                 sdir = matches[0]
                 s_meta = surah_dict.get(sno, {})
+                for v in s_meta.get("verses", []):
+                    v["kelimeler"] = kelimeler.get((sno, v["verseNumber"]), [])
 
                 sure_elements = []
 
@@ -513,14 +538,20 @@ def build_unified_html(config, surahs_data):
                 """)
 
     kenar_maddeler = "".join(
-        f'<a href="#sure-{s["sno"]}">{s["sno"]}. {s["name"]}</a>'
+        f'<a href="#sure-{s["sno"]}" onclick="surelerKapat()">{s["sno"]}. {s["name"]}</a>'
         for s in sorted(surahs_data, key=lambda s: s["sno"])
     )
     kenar_html = (
-        '<nav class="kenar" id="kenar"><div class="kenar-baslik">Sureler'
-        '<button type="button" class="kenar-dugme" onclick="kenarAc(false)" title="Sure listesini gizle">&#9664;</button>'
-        f'</div>{kenar_maddeler}</nav>'
-        '<button type="button" class="kenar-ac" onclick="kenarAc(true)" title="Sure listesini göster">&#9654; Sureler</button>'
+        '<header class="ust-cubuk">'
+        '<button type="button" class="menu-dugme" onclick="menuAc()" aria-label="Menü">&#9776; Menü</button>'
+        '<a class="ust-baslik" href="#kitap-basi">Kur\'an Hikmetleri</a>'
+        '<span class="ust-bos"></span></header>'
+        '<div class="menu-panel" id="menuPanel">'
+        '<button type="button" class="menu-sekme" onclick="surelerAc()">Sureler</button>'
+        '</div>'
+        '<nav class="kenar" id="kenar"><div class="kenar-ust"><span>Sureler</span>'
+        '<button type="button" class="kenar-kapat" onclick="surelerKapat()" title="Kapat">&#10005;</button></div>'
+        f'{kenar_maddeler}</nav>'
     )
 
     full_html = f"""<!DOCTYPE html>
@@ -961,27 +992,105 @@ tr:nth-child(even) {{ background: #f8fafc; }}
   padding-top: 6px;
 }}
 
-.kenar {{
+.ust-cubuk {{
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
+  height: 64px;
+  background: #0f172a;
+  border-bottom: 1px solid #1e293b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  z-index: 200;
+}}
+.menu-dugme {{
+  background: #1e293b;
+  color: #f8fafc;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  padding: 8px 18px;
+  font-size: 13pt;
+  font-weight: 700;
+  cursor: pointer;
+}}
+.menu-dugme:hover {{ background: #2563eb; border-color: #3b82f6; }}
+.ust-baslik {{
+  color: #fbbf24;
+  font-size: 15pt;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}}
+.ust-bos {{ width: 110px; }}
+.menu-panel {{
+  display: none;
+  position: fixed;
+  top: 72px;
+  left: 16px;
+  min-width: 220px;
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  padding: 8px;
+  z-index: 201;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}}
+.menu-panel.acik {{ display: block; }}
+.menu-sekme {{
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  color: #e2e8f0;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 12pt;
+  cursor: pointer;
+}}
+.menu-sekme:hover {{ background: #1e293b; color: #fff; }}
+.kenar {{
+  position: fixed;
+  top: 64px;
+  left: 0;
   bottom: 0;
-  width: 200px;
+  width: 270px;
   overflow-y: auto;
   background: #0f172a;
   color: #e2e8f0;
-  padding: 12px 8px;
+  padding: 12px 10px;
   font-size: 9pt;
   border-right: 1px solid #1e293b;
-  z-index: 100;
+  z-index: 150;
+  transform: translateX(-105%);
+  transition: transform 0.2s ease;
+  box-shadow: 4px 0 20px rgba(0,0,0,0.4);
 }}
-.kenar-baslik {{
+.kenar.acik {{ transform: none; }}
+.kenar-ust {{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   font-weight: 700;
   color: #fbbf24;
   padding: 0 6px 8px 6px;
   border-bottom: 1px solid #1e293b;
   margin-bottom: 6px;
 }}
+.kenar-kapat {{
+  background: transparent;
+  color: #e2e8f0;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 22.5pt;
+  line-height: 1;
+  padding: 2px 12px;
+}}
+.kenar-kapat:hover {{ background: #1e293b; color: #fff; }}
 .kenar a {{
   display: block;
   color: inherit;
@@ -994,40 +1103,35 @@ tr:nth-child(even) {{ background: #f8fafc; }}
   background: #1e293b;
   color: #ffffff;
 }}
-.kitap-govde {{
-  margin-left: 215px;
+body {{ padding-top: 72px; }}
+.sure-page, .sure-sutun-grafik, .ag-blok {{ scroll-margin-top: 80px; }}
+.kelime-satiri {{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  direction: rtl;
+  margin: 6px 0 8px 0;
 }}
-.kenar-dugme {{
-  float: right;
-  background: transparent;
-  border: 1px solid #334155;
-  color: #e2e8f0;
+.kelime {{
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2px 6px 3px 6px;
+  background: #f8fafc;
   border-radius: 4px;
-  cursor: pointer;
-  padding: 0 6px;
-  font-size: 9pt;
+  min-width: 0;
 }}
-.kenar-ac {{
-  display: none;
-  position: fixed;
-  top: 10px;
-  left: 0;
-  z-index: 101;
-  background: #0f172a;
-  color: #fbbf24;
-  border: 1px solid #334155;
-  border-left: none;
-  border-radius: 0 6px 6px 0;
-  padding: 6px 10px;
-  font-size: 9pt;
-  cursor: pointer;
+.kelime-ar {{
+  font-family: 'Amiri', serif;
+  font-size: 13pt;
+  line-height: 1.6;
 }}
-body.kenar-kapali .kenar {{ display: none; }}
-body.kenar-kapali .kenar-ac {{ display: block; }}
-body.kenar-kapali .kitap-govde {{ margin-left: 0; }}
-@media (max-width: 800px) {{
-  .kenar {{ display: none; }}
-  .kitap-govde {{ margin-left: 0; }}
+.kelime-tr {{
+  direction: ltr;
+  font-size: 7pt;
+  color: #334155;
+  text-align: center;
+  line-height: 1.2;
 }}
 @media print {{
   .kenar {{ display: none; }}
@@ -1041,16 +1145,16 @@ body.kenar-kapali .kitap-govde {{ margin-left: 0; }}
 <body>
 {kenar_html}
 <div class="kitap-govde">
+<div id="kitap-basi"></div>
 {"".join(body_sections)}
 </div>
 <script>
-function kenarAc(goster) {{
-  document.body.classList.toggle('kenar-kapali', !goster);
-  try {{ localStorage.setItem('kenarKapali', goster ? '0' : '1'); }} catch (e) {{}}
+function menuAc() {{ document.getElementById('menuPanel').classList.toggle('acik'); }}
+function surelerAc() {{
+  document.getElementById('kenar').classList.add('acik');
+  document.getElementById('menuPanel').classList.remove('acik');
 }}
-try {{
-  if (localStorage.getItem('kenarKapali') === '1') document.body.classList.add('kenar-kapali');
-}} catch (e) {{}}
+function surelerKapat() {{ document.getElementById('kenar').classList.remove('acik'); }}
 </script>
 
 </body>
