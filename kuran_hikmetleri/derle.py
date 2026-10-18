@@ -223,6 +223,28 @@ def mevzu_cetveli(segments, agac_segmentler):
     )
 
 
+def _madde(x):
+    """Mevzu düğümünü iç içe madde olarak yazar (md listesi gibi). Yaprak: tek âyet."""
+    a, b = x["aralik"]
+    aralik = f"Âyet {a}" if a == b else f"Âyet {a}-{b}"
+    if x.get("alt"):
+        alt = "".join(_madde(c) for c in x["alt"])
+        return f"<li><strong>{x['baslik']}</strong> <small>({aralik} · {_yaprak_sayisi(x)} âyet)</small><ul>{alt}</ul></li>"
+    return f"<li>{x['baslik']} <small>({aralik})</small></li>"
+
+
+def mevzu_listesi(segments, agac_segmentler):
+    """Sûreye mahsus mevzu listesi: genel mevzu → bölüm → alt bölüm → âyet, iç içe madde listesi."""
+    parcalar = []
+    for seg in segments:
+        anahtar = f"{seg['start']}-{seg['end']}"
+        d = {"baslik": seg["title"], "aralik": [seg["start"], seg["end"]]}
+        if anahtar in agac_segmentler:
+            d["alt"] = agac_segmentler[anahtar]
+        parcalar.append(_madde(d))
+    return f'<ul class="ag-liste">{"".join(parcalar)}</ul>'
+
+
 def detay_bolumu(segments, agac_segmentler, verse_dict):
     """Ayrıntılı görünüm: genel mevzu başlığı üstte; altında mevzu ağacı yatay olarak dizilir,
     her mevzunun âyetleri o mevzunun altında dikey sütunlar halinde bağlanır."""
@@ -433,7 +455,7 @@ def build_unified_html(config, surahs_data):
                             """)
                         detail_content = f'<div class="topics-container">{"".join(verse_blocks)}</div>'
                     else:
-                        detail_content = kesit_html + seg_table + '<h4 class="ag-baslik">Mevzuların cetveli</h4>' + mevzu_cetveli(segments, agac_segmentler) + '<h4 class="ag-baslik">Ayrıntılı görünüm: mevzular ve âyet metinleri</h4>' + ayrintili
+                        detail_content = kesit_html + seg_table + '<h4 class="ag-baslik">Mevzuların listesi</h4>' + mevzu_listesi(segments, agac_segmentler) + '<h4 class="ag-baslik">Ayrıntılı görünüm: mevzular ve âyet metinleri</h4>' + ayrintili
 
                     chart_section_html = f"""
                     <div class="surah-chart-section">
@@ -806,6 +828,17 @@ tr:nth-child(even) {{ background: #f8fafc; }}
 }}
 .ag-yaprak {{
   font-size: 6.5pt;
+}}
+.ag-liste {{
+  font-size: 9.5pt;
+  line-height: 1.6;
+}}
+.ag-liste ul {{
+  margin: 2px 0 2px 18px;
+  padding: 0;
+}}
+.ag-liste small {{
+  color: #64748b;
 }}
 .ag-cok-sutun {{
   display: block;
