@@ -516,7 +516,12 @@ def build_unified_html(config, surahs_data):
         f'<a href="#sure-{s["sno"]}">{s["sno"]}. {s["name"]}</a>'
         for s in sorted(surahs_data, key=lambda s: s["sno"])
     )
-    kenar_html = f'<nav class="kenar"><div class="kenar-baslik">Sureler</div>{kenar_maddeler}</nav>'
+    kenar_html = (
+        '<nav class="kenar" id="kenar"><div class="kenar-baslik">Sureler'
+        '<button type="button" class="kenar-dugme" onclick="kenarAc(false)" title="Sure listesini gizle">&#9664;</button>'
+        f'</div>{kenar_maddeler}</nav>'
+        '<button type="button" class="kenar-ac" onclick="kenarAc(true)" title="Sure listesini göster">&#9654; Sureler</button>'
+    )
 
     full_html = f"""<!DOCTYPE html>
 <html lang="tr">
@@ -992,6 +997,34 @@ tr:nth-child(even) {{ background: #f8fafc; }}
 .kitap-govde {{
   margin-left: 215px;
 }}
+.kenar-dugme {{
+  float: right;
+  background: transparent;
+  border: 1px solid #334155;
+  color: #e2e8f0;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0 6px;
+  font-size: 9pt;
+}}
+.kenar-ac {{
+  display: none;
+  position: fixed;
+  top: 10px;
+  left: 0;
+  z-index: 101;
+  background: #0f172a;
+  color: #fbbf24;
+  border: 1px solid #334155;
+  border-left: none;
+  border-radius: 0 6px 6px 0;
+  padding: 6px 10px;
+  font-size: 9pt;
+  cursor: pointer;
+}}
+body.kenar-kapali .kenar {{ display: none; }}
+body.kenar-kapali .kenar-ac {{ display: block; }}
+body.kenar-kapali .kitap-govde {{ margin-left: 0; }}
 @media (max-width: 800px) {{
   .kenar {{ display: none; }}
   .kitap-govde {{ margin-left: 0; }}
@@ -1010,6 +1043,15 @@ tr:nth-child(even) {{ background: #f8fafc; }}
 <div class="kitap-govde">
 {"".join(body_sections)}
 </div>
+<script>
+function kenarAc(goster) {{
+  document.body.classList.toggle('kenar-kapali', !goster);
+  try {{ localStorage.setItem('kenarKapali', goster ? '0' : '1'); }} catch (e) {{}}
+}}
+try {{
+  if (localStorage.getItem('kenarKapali') === '1') document.body.classList.add('kenar-kapali');
+}} catch (e) {{}}
+</script>
 
 </body>
 </html>
