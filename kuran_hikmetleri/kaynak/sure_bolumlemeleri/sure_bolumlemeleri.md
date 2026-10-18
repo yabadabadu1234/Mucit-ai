@@ -2,7 +2,7 @@
 
 Her sûre için üç ayrı bölümleme yazılmıştır. Kaynaklar birbirinden bağımsızdır; biri diğerini düzeltmez.
 
-- **A. Sizin liste:** kullanıcının yapıştırdığı meclis listesi (`kaynak/mecalis/KAYNAK_LISTE.md`). Yalnız 1–8. sûreler.
+- **A. Kitap verisi:** kitapta şu an gösterilen sûre bölümleri (kitabın kendi veri kaynağı: sûre bölümleri, kitapta gösterilenler). Tüm sûreler.
 - **B. Görsel okuma:** Mecâlisü'n-Nûr PDF'lerinin sayfalarının görüntü olarak okunması (`kaynak/mecalis/gorsel/cilt1–5.md`). Tüm sûreler.
 - **C. İzzet Derveze:** içindekiler fotoğrafları (`kaynak/derveze/ICINDEKILER.md`). Fotoğrafı bulunan sûreler.
 - **D. Feyzül Furkan:** Kur'ân Bilgisi, sûrelere göre muhtevâ indeksi (`kaynak/feyzul_furkan/INDEKS_HAM.md`). Her konu kendi âyet aralığıyla; aralık sûre başlığına göre atanmıştır, kaynaktaki yazım hatası olan üç aralık (15, 26, 55. sûreler) başlığa göre yazılmış ve not düşülmüştür.
@@ -10,8 +10,10 @@ Her sûre için üç ayrı bölümleme yazılmıştır. Kaynaklar birbirinden ba
 
 ## 1. Fâtiha Sûresi
 
-**A. Sizin liste**
-- 1. Meclis: Değerler Manzumesi
+**A. Kitap verisi (şu an kitapta)**
+- Hamd: 'Âlemlerin Rabbi Allah'a hamd olsun' (Âyet 1-2)
+- Rahmet ve ahiret: 'Rahmân, Rahîm, din gününün sahibi' (Âyet 3-4)
+- Duâ: 'Bizi doğru yola ilet... gazaba uğrayanların ve sapanların yoluna değil' (Âyet 5-7)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 1. Meclis: DEĞERLER MANZUMESİ
@@ -28,28 +30,14 @@ Her sûre için üç ayrı bölümleme yazılmıştır. Kaynaklar birbirinden ba
 
 ## 2. Bakara Sûresi
 
-**A. Sizin liste**
-- İslâm toplumunun inşası ve diğer toplumlardan ayrışması
-- İnsanın yeryüzüne halîfe olması
-- İsrâiloğullarına verilen ilâhî söz
-- İsrâiloğulları tecrübe vadisinde
-- Muhâkeme ve tartışma
-- Vahyin tecrübesiyle dersler ve ibretler
-- Yeni bir ümmet kimliğinin en belirgin özellikleri
-- Kimlik farklılığı
-- Hak yoldan sapmanın nedenleri
-- Toplumun inşası
-- Orucun mesajı
-- Cihadın mesajı
-- Haccın mesajı
-- Nifak cephesi
-- Sana soruyorlar
-- Boşanma fıkhı
-- Askerî eğitim
-- İmânî meseleler hakkında tartışmalar
-- İnfak fıkhı
-- Mâlî ilişkiler fıkhı
-- Kapanış tavsiyeleri
+**A. Kitap verisi (şu an kitapta)**
+- Müttakiler, kâfirler, münafıklar (Âyet 1-20)
+- Muhteva ve İlgili Âyetler (Âyet 21-29)
+- Âdem'in yaratılışı ve halifelik (Âyet 30-39)
+- İsrailoğulları ve inek kıssası (Âyet 40-103)
+- Muhteva ve İlgili Âyetler (Âyet 104-123)
+- İbrâhîm ve Kâbe (Âyet 124-141)
+- Hukuk: namaz, oruç, nikâh, borç, faiz (Âyet 142-286)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 2. Meclis: İSLAM TOPLUMUNUN İNŞASI VE DİĞER TOPLUMLARDAN AYRIŞMASI
@@ -208,17 +196,15 @@ Her sûre için üç ayrı bölümleme yazılmıştır. Kaynaklar birbirinden ba
 
 ## 3. Âl-i İmrân Sûresi
 
-**A. Sizin liste**
-- Muhkem ve müteşâbih
-- Hak ehlini bâtıl ehlinden ayıran hususlar
-- Peygamberler tarihinde büyük ıslâh tecrübeleri
-- Ehl-i kitapla görüşmeler; semâvî risâletler arasındaki ilişkinin hakikati
-- İslâm ümmetinin binasını güçlendiren unsurlar
-- Uhud yolunda
-- Savaşın beyânı
-- Savaştan dersler
-- Hızlı cevap
-- Ehl-i kitapla ilişkiler
+**A. Kitap verisi (şu an kitapta)**
+- Muhkem-müteşâbih ve tevhid (Âyet 1-9)
+- Muhteva ve İlgili Âyetler (Âyet 10-32)
+- Âl-i İbrâhîm, İmrân ailesi ve Meryem (Âyet 33-63)
+- Mübâhele ve Necran heyeti (Âyet 64-64)
+- Muhteva ve İlgili Âyetler (Âyet 65-120)
+- Uhud ve sabır (Âyet 121-180)
+- Muhteva ve İlgili Âyetler (Âyet 181-189)
+- Sabır ve tevekkül kapanışı (Âyet 190-200)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 23. Meclis: MUHKEM VE MÜTEŞÂBİH
@@ -288,17 +274,14 @@ Her sûre için üç ayrı bölümleme yazılmıştır. Kaynaklar birbirinden ba
 
 ## 4. Nisâ Sûresi
 
-**A. Sizin liste**
-- İnsanların köken birliği
-- Miras nizâmı
-- Temiz toplum
-- Toplum işlerinin tanzim edilmesi; Yahudilerin hâli ve müminlere düşmanlıkları
-- Yasama (teşrî) ve hükmün dayanağı; askerî eğitim
-- Askerî ilişkiler
-- Savaşçılar için irşad eğitimi
-- Aile ilişkileri
-- Münâfıklar
-- Ehl-i kitap
+**A. Kitap verisi (şu an kitapta)**
+- Yetim ve miras (Âyet 1-12)
+- Muhteva ve İlgili Âyetler (Âyet 13-18)
+- Nikâh ve mahrem ilişkiler (Âyet 19-35)
+- Muhteva ve İlgili Âyetler (Âyet 36-57)
+- Adalet ve emanet (Âyet 58-59)
+- Muhteva ve İlgili Âyetler (Âyet 60-135)
+- Ehl-i kitap, münafık ve cihad (Âyet 136-176)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 34. Meclis: İNSANLARIN KÖKEN BİRLİĞİ
@@ -362,13 +345,13 @@ Her sûre için üç ayrı bölümleme yazılmıştır. Kaynaklar birbirinden ba
 
 ## 5. Mâide Sûresi
 
-**A. Sizin liste**
-- Dinin kemâle ermesi ve nimetin tamamlanması
-- Allah'ın Ehl-i kitaba daha önce verdiği misâk
-- Emniyet ve hayat
-- Ehl-i kitap ve hükümle imtihan; velâ ve berâ
-- Ehl-i kitapla görüşmeler; Müslüman toplumun binası
-- Hz. İsâ'nın mucizeleri
+**A. Kitap verisi (şu an kitapta)**
+- Ahitler ve helal-haram (Âyet 1-5)
+- Abdest, hırsızlık, kısas, zina (Âyet 6-50)
+- Ehl-i kitap ve tevrat-incil (Âyet 51-82)
+- Muhteva ve İlgili Âyetler (Âyet 83-111)
+- Mâide kıssası (Âyet 112-115)
+- Kıyamet ve İsa (Âyet 116-120)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 46. Meclis: DİNİN KEMALE ERMESİ VE NİMETİN TAMAMLANMASI
@@ -433,13 +416,12 @@ Her sûre için üç ayrı bölümleme yazılmıştır. Kaynaklar birbirinden ba
 
 ## 6. En'âm Sûresi
 
-**A. Sizin liste**
-- Kur'ân, yalanlayanların karşısında müşriklerle görüşmeler
-- İslâm toplumu için imânî oluşum; İbrâhîmî hidâyet
-- Vahiy ve hayat
-- Sapma ve dalâlet yolları
-- Körlük ve dalâletten örnekler; kolaylık dini İslâm
-- On tavsiye ve bitiş tavsiyeleri
+**A. Kitap verisi (şu an kitapta)**
+- Tevhid ve kozmik deliller (Âyet 1-30)
+- Peygamberlik ve tebliğ (Âyet 31-93)
+- Muhteva ve İlgili Âyetler (Âyet 94-135)
+- Müşrik adetleri ve hayvanlar (Âyet 136-150)
+- Sırat-ı müstakîm ve kapanış (Âyet 151-165)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 54. Meclis: KUR'ÂN, YALANLAYANLARIN KARŞISINDA
@@ -475,19 +457,14 @@ _Fotoğraf yok veya okunamadı._
 
 ## 7. A'râf Sûresi
 
-**A. Sizin liste**
-- Hayatın ilk dersi
-- Ey Âdemoğulları: insâniyet ve fıtrat hitabı
-- Hesap gününden bazı diyaloglar
-- Muhammed'den (s.a.s.) Nûh'a (a.s.) peygamberlerin davetı
-- Hazret-i Hûd ve Hazret-i Sâlih
-- Hazret-i Lût ve Hazret-i Şuayb
-- Sihrin karşısında peygamberlik
-- Firavun ve adamlarıyla açık çatışma
-- Firavun'un helâki sonrası Hz. İsrâiloğulları'na liderlik etmesi
-- Kur'ân'ın Yahudilere hitabı
-- Hidâyet yolu ve dalâlete düşmenin sebepleri
-- Özet ve son tavsiyeler
+**A. Kitap verisi (şu an kitapta)**
+- Muhteva ve İlgili Âyetler (Âyet 1-10)
+- Âdem ve İblis (Âyet 11-25)
+- Muhteva ve İlgili Âyetler (Âyet 26-58)
+- Kavimlerin tarihi: Nûh, Hûd, Sâlih, Lût, Şuayb (Âyet 59-93)
+- Muhteva ve İlgili Âyetler (Âyet 94-102)
+- Mûsâ ve Firavun (Âyet 103-171)
+- Ahitten kayıt ve kapanış (Âyet 172-206)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 63. Meclis: HAYATIN İLK DERSİ
@@ -531,10 +508,11 @@ _Fotoğraf yok veya okunamadı._
 
 ## 8. Enfâl Sûresi
 
-**A. Sizin liste**
-- Furkan günü; safların ayrılması
-- Savaşın beyânı
-- Cihad fıkhı
+**A. Kitap verisi (şu an kitapta)**
+- Ganimet ve taksim (Âyet 1-10)
+- Melekler ve sabır (Âyet 11-19)
+- Muhteva ve İlgili Âyetler (Âyet 20-66)
+- Esir ve ihtiyat (Âyet 67-75)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 75. Meclis: FURKAN GÜNÜ
@@ -563,8 +541,12 @@ _Fotoğraf yok veya okunamadı._
 
 ## 9. Tevbe Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Berâe ve antlaşmalar (Âyet 1-16)
+- Hac, münafıklar ve cizye (Âyet 17-35)
+- Muhteva ve İlgili Âyetler (Âyet 36-37)
+- Tebük ve tasfiye (Âyet 38-96)
+- Tevbe ve üç kişinin hikâyesi (Âyet 97-129)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 79. Meclis: MÜŞRİKLERLE YAPILAN ANLAŞMALARIN SONLANDIRILMASI
@@ -623,8 +605,11 @@ _Bu sûre için listeniz yok._
 
 ## 10. Yûnus Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Tevhid ve risalet (Âyet 1-37)
+- Muhteva ve İlgili Âyetler (Âyet 38-70)
+- Peygamberler ve kavimler (Âyet 71-98)
+- Son hüküm (Âyet 99-109)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 84. Meclis: HAKİKİ İMANIN GÖSTERGELERİ
@@ -668,8 +653,12 @@ _Bu sûre için listeniz yok._
 
 ## 11. Hûd Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Muhteva ve İlgili Âyetler (Âyet 1-24)
+- Nûh ve Hûd kavimleri (Âyet 25-60)
+- Semûd, Lût, Şuayb (Âyet 61-95)
+- Muhteva ve İlgili Âyetler (Âyet 96-111)
+- İstikâmet emri (Âyet 112-123)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 89. Meclis: İMAN VE İNSAN
@@ -733,8 +722,11 @@ _Bu sûre için listeniz yok._
 
 ## 12. Yûsuf Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Rüya ve kardeşler (Âyet 1-20)
+- Mısır ve iftira (Âyet 21-53)
+- Tanışma ve aile (Âyet 54-101)
+- Hatime ve Son Hükümler (Âyet 102-111)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 96. Meclis: HASET İMTİHANI
@@ -761,8 +753,13 @@ _Bu sûre için listeniz yok._
 
 ## 13. Ra'd Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Kozmik zıtlıklar (Âyet 1-4)
+- Muhteva ve İlgili Âyetler (Âyet 5-16)
+- Hak-bâtıl misali (Âyet 17-17)
+- Muhteva ve İlgili Âyetler (Âyet 18-27)
+- Kalplerin zikri (Âyet 28-28)
+- Hatime ve Son Hükümler (Âyet 29-43)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 102. Meclis: HİDAYET YOLU
@@ -785,8 +782,13 @@ _Bu sûre için listeniz yok._
 
 ## 14. İbrâhim Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Kur'an'ın nur getirmesi (Âyet 1-5)
+- Muhteva ve İlgili Âyetler (Âyet 6-23)
+- Tevhid ağacı (Âyet 24-27)
+- Muhteva ve İlgili Âyetler (Âyet 28-34)
+- İbrahim'in duası (Âyet 35-41)
+- Hatime ve Son Hükümler (Âyet 42-52)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 105. Meclis: PEYGAMBERLERİN HAYATLARINDAN PARILTILAR
@@ -808,8 +810,12 @@ _Bu sûre için listeniz yok._
 
 ## 15. Hicr Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Kur'an'ın korunması (Âyet 1-9)
+- Muhteva ve İlgili Âyetler (Âyet 10-25)
+- Şeytan ve kıyas (Âyet 26-44)
+- Hicr ashabı ve İbrahim'in misafirleri (Âyet 45-84)
+- Hatime ve Son Hükümler (Âyet 85-99)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 107. Meclis: KUR'ÂN'IN, HAKİKATİ YALANLAYANLARLA MÜCADELESİ
@@ -831,8 +837,12 @@ _Fotoğraf yok veya okunamadı._
 
 ## 16. Nahl Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Nimetler sayımı (Âyet 1-20)
+- Muhteva ve İlgili Âyetler (Âyet 21-67)
+- Arının vahyi (Âyet 68-69)
+- Muhteva ve İlgili Âyetler (Âyet 70-89)
+- Adalet ve sabır (Âyet 90-128)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 111. Meclis: TEVHİDE DAİR DELİLLER
@@ -887,8 +897,12 @@ _Bu sûre için listeniz yok._
 
 ## 17. İsrâ Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- İsrailoğulları'na uyarı (Âyet 1-8)
+- Muhteva ve İlgili Âyetler (Âyet 9-21)
+- Ahlakî on iki madde (Âyet 22-39)
+- Muhteva ve İlgili Âyetler (Âyet 40-77)
+- Kur'an ve ahiret (Âyet 78-111)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 118. Meclis: MESCİD-İ AKSÂ
@@ -914,8 +928,15 @@ _Bu sûre için listeniz yok._
 
 ## 18. Kehf Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Muhteva ve İlgili Âyetler (Âyet 1-8)
+- Ashab-ı Kehf (Âyet 9-26)
+- Muhteva ve İlgili Âyetler (Âyet 27-31)
+- Mal fitnesi (Âyet 32-44)
+- Muhteva ve İlgili Âyetler (Âyet 45-59)
+- Mûsâ-Hızır (Âyet 60-82)
+- Zülkarneyn (Âyet 83-101)
+- Hatime ve Son Hükümler (Âyet 102-110)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 124. Meclis: ASHÂB-I KEHF
@@ -943,8 +964,12 @@ _Fotoğraf yok veya okunamadı._
 
 ## 19. Meryem Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Muhteva ve İlgili Âyetler (Âyet 1-1)
+- Zekeriyyâ'nın duası (Âyet 2-15)
+- Meryem ve İsa (Âyet 16-40)
+- Peygamberler (Âyet 41-65)
+- Hatime ve Son Hükümler (Âyet 66-98)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 130. Meclis: HZ. ZEKERİYA İLE HZ. YAHYA'NIN KISSALARI
@@ -972,8 +997,10 @@ _Bu sûre için listeniz yok._
 
 ## 20. Tâhâ Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Vahyin ağırlığı (Âyet 1-8)
+- Mûsâ kıssası (Âyet 9-98)
+- Ahiret (Âyet 99-135)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 134. Meclis: HZ. MÛSÂ (A.S.): RABBANÎ HAZIRLIK
@@ -1004,8 +1031,11 @@ _Bu sûre için listeniz yok._
 
 ## 21. Enbiyâ Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Haber ve kıyamet (Âyet 1-10)
+- Muhteva ve İlgili Âyetler (Âyet 11-47)
+- Peygamberler (Âyet 48-91)
+- Kıyamet ve son (Âyet 92-112)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 139. Meclis: GAFİLLERİN UYARILMASI
@@ -1047,8 +1077,12 @@ _Bu sûre için listeniz yok._
 
 ## 22. Hac Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Kıyamet sarsıntısı (Âyet 1-2)
+- Muhteva ve İlgili Âyetler (Âyet 3-24)
+- Hac ve kurban (Âyet 25-37)
+- Muhteva ve İlgili Âyetler (Âyet 38-38)
+- Cihad ve namaz (Âyet 39-78)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 144. Meclis: DİRİLİŞ VE CEZA AKİDESİ
@@ -1080,8 +1114,11 @@ _Bu sûre için listeniz yok._
 
 ## 23. Mü'minûn Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Mümin vasıfları (Âyet 1-11)
+- İnsanın yaratılışı (Âyet 12-22)
+- Nûh ve Mûsâ (Âyet 23-50)
+- Hatime ve Son Hükümler (Âyet 51-118)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 148. Meclis: MÜMİNLERİN NİTELİKLERİ
@@ -1121,8 +1158,13 @@ _Bu sûre için listeniz yok._
 
 ## 24. Nûr Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Zina ve iftira (Âyet 1-26)
+- Evlere girme ve tesettür (Âyet 27-34)
+- Nûr ayeti (Âyet 35-40)
+- Muhteva ve İlgili Âyetler (Âyet 41-57)
+- Aile edebi (Âyet 58-61)
+- Hatime ve Son Hükümler (Âyet 62-64)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 153. Meclis: TOPLUMU REZALETLERDEN KORUMAK
@@ -1156,8 +1198,11 @@ _Bu sûre için listeniz yok._
 
 ## 25. Furkân Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Furkân (Âyet 1-20)
+- Müşriklerin itirazları (Âyet 21-34)
+- Muhteva ve İlgili Âyetler (Âyet 35-62)
+- Kullar ve ibadet (Âyet 63-77)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 156. Meclis: HAK İLE BÂTILI AYIRAN ÖLÇÜT
@@ -1188,8 +1233,15 @@ _Bu sûre için listeniz yok._
 
 ## 26. Şu'arâ Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Kitabın apaçık ve tek gerçek olduğu bildirilir (Âyet 1-9)
+- Mûsâ (Âyet 10-68)
+- İbrâhîm, ve diğer kıssa çerçeveleri (Âyet 69-104)
+- Nûh, Hûd, Sâlih, Lût, Eyke, Şuayb (Âyet 105-191)
+- Kur'an'ın Rabbül-âlemîn'den indirildiği; Ruhu'l-Emîn'in indirdiği; Arapça açık bir dille indiği (Âyet 192-199)
+- İnkârın kalbe işlemesi ve azabın habersiz gelmesi (Âyet 200-209)
+- Kur'an'ı şeytanların indirmediği; şeytanların yalancı günahkâra indiği (Âyet 210-223)
+- Şairlerin tarifi: sapıklar onlara uyar, her vadide şaşkın dolaşırlar, yapmadıklarını söylerler (Âyet 224-227)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 160. Meclis: PEYGAMBERİMİZİN (S.A.S.) DAVETİNE GİRİŞ
@@ -1220,8 +1272,12 @@ _Bu sûre için listeniz yok._
 
 ## 27. Neml Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Kur'an'ın apaçık bir kitap ve müminlere hidayet olduğu bildirilir (Âyet 1-6)
+- Mûsâ (Âyet 7-14)
+- Süleyman (Âyet 15-44)
+- Sâlih, Lût (Âyet 45-58)
+- Kâinat delilleri, yerden canlı çıkarılması, gaybın yalnız Allah'a ait olması, kıyametin dehşeti (Âyet 59-93)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 166. Meclis: MUHAMMEDÎ VE MÛSEVÎ DAVETLERDEN PARILTILAR
@@ -1244,8 +1300,18 @@ _Fotoğraf yok veya okunamadı._
 
 ## 28. Kasas Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Kur'an'ın apaçık bir kitap olduğu ve Mûsâ-Firavun kıssasının hakkı ile anlatılacağı bildirilir (Âyet 1-6)
+- Mûsâ'nın doğumu (Âyet 7-13)
+- Mûsâ'nın gençliği ve kaçışı (Âyet 14-21)
+- Medyen ve Şuayb'ın kızları (Âyet 22-28)
+- Peygamberlik (Âyet 29-35)
+- Firavun'un inkârı (Âyet 36-42)
+- Tevrat'ın indirilişi (Âyet 43-50)
+- Hidayet ve vahiy (Âyet 51-56)
+- Mekke müşriklerinin itirazları (Âyet 57-75)
+- Kârûn (Âyet 76-82)
+- Ahiret ve dönüş (Âyet 83-88)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 171. Meclis: HZ. MÛSÂ (A.S.), BÜYÜK HEDEF VE ERKEN GELEN İLÂHÎ YARDIM
@@ -1268,8 +1334,11 @@ _Fotoğraf yok veya okunamadı._
 
 ## 29. Ankebût Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- İmtihan (Âyet 1-13)
+- Peygamberler (Âyet 14-40)
+- Örümcek misali (Âyet 41-45)
+- Hatime ve Son Hükümler (Âyet 46-69)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 177. Meclis: İMTİHAN VE SINAMA FİTNESİ
@@ -1295,8 +1364,12 @@ _Bu sûre için listeniz yok._
 
 ## 30. Rûm Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Bizans'ın mağlubiyeti ve zaferi (Âyet 1-7)
+- Muhteva ve İlgili Âyetler (Âyet 8-16)
+- Kâinat ve fıtrat (Âyet 17-27)
+- Muhteva ve İlgili Âyetler (Âyet 28-49)
+- Ahiret ve dirilme (Âyet 50-60)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 181. Meclis: HAK-BATIL MÜCADELESİ
@@ -1324,8 +1397,12 @@ _Bu sûre için listeniz yok._
 
 ## 31. Lokmân Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Kur'an'ın hidayeti (Âyet 1-9)
+- Muhteva ve İlgili Âyetler (Âyet 10-11)
+- Lokmân'ın öğütleri (Âyet 12-19)
+- Muhteva ve İlgili Âyetler (Âyet 20-26)
+- Kıyamet ve ilim (Âyet 27-34)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 185. Meclis: DEĞERLER VE EĞİTİM MANZUMESİ
@@ -1350,8 +1427,10 @@ _Bu sûre için listeniz yok._
 
 ## 32. Secde Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Kitabın indirilişi (Âyet 1-3)
+- Yaratılış ve insan (Âyet 4-14)
+- Secde ve kıyamet (Âyet 15-30)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 187. Meclis: İNANÇLA İLGİLİ MESELELER ÜZERİNE
@@ -1376,8 +1455,12 @@ _Bu sûre için listeniz yok._
 
 ## 33. Ahzâb Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Muhteva ve İlgili Âyetler (Âyet 1-8)
+- Hendek ve topluluklar (Âyet 9-27)
+- Peygamber'in eşleri ve edep (Âyet 28-35)
+- Zeyd ve evlilik hukuku (Âyet 36-40)
+- Hatime ve Son Hükümler (Âyet 41-73)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 188. Meclis: PEYGAMBER (S.A.S.) MÜMİNLER İÇİN KENDİ CANLARINDAN DAHA KIYMETLİDİR
@@ -1412,8 +1495,11 @@ _Bu sûre için listeniz yok._
 
 ## 34. Sebe' Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Muhteva ve İlgili Âyetler (Âyet 1-9)
+- Davud ve Süleyman (Âyet 10-14)
+- Sebe' kavmi ve nimet (Âyet 15-21)
+- Tevhid ve kıyamet (Âyet 22-54)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 192. Meclis: İMAN PERSPEKTİFİ VE TARİHÎ BOYUTU İTİBARİYLE YERYÜZÜNÜN İMARI VE TAHRİBİ
@@ -1430,8 +1516,11 @@ _Fotoğraf yok veya okunamadı._
 
 ## 35. Fâtır Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Yaratıcının nimetleri (Âyet 1-3)
+- Muhteva ve İlgili Âyetler (Âyet 4-4)
+- İnsanın imtihanı (Âyet 5-14)
+- Hikmet ve ilahi ilim (Âyet 15-45)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 194. Meclis: İMAN YOLU
@@ -1448,8 +1537,10 @@ _Fotoğraf yok veya okunamadı._
 
 ## 36. Yâsîn Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Risalet ve iman (Âyet 1-12)
+- Kâfirler ve iman (Âyet 13-32)
+- Kıyamet ve dirilme (Âyet 33-83)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 196. Meclis: ALLAH'A DAVET
@@ -1468,8 +1559,12 @@ _Fotoğraf yok veya okunamadı._
 
 ## 37. Sâffât Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Tevhid ve melekler (Âyet 1-10)
+- Muhteva ve İlgili Âyetler (Âyet 11-74)
+- Nûh, İbrahim, Mûsâ, Harun, İlyas, Lût, Yûnus (Âyet 75-148)
+- Muhteva ve İlgili Âyetler (Âyet 149-149)
+- Ahiret ve tenzih (Âyet 150-182)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 198. Meclis: MÜŞRİKLERLE TARTIŞMA
@@ -1489,8 +1584,12 @@ _Fotoğraf yok veya okunamadı._
 
 ## 38. Sâd Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Kureyş'in inkârı (Âyet 1-11)
+- Muhteva ve İlgili Âyetler (Âyet 12-16)
+- Davud, Süleyman, Eyyub (Âyet 17-44)
+- Muhteva ve İlgili Âyetler (Âyet 45-70)
+- Şeytan ve ahiret (Âyet 71-88)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 201. Meclis: MÜŞRİKLERİN İNADI
@@ -1510,8 +1609,11 @@ _Fotoğraf yok veya okunamadı._
 
 ## 39. Zümer Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Tevhid ve ihlâs (Âyet 1-9)
+- Kâfirler ve müminler (Âyet 10-20)
+- Muhteva ve İlgili Âyetler (Âyet 21-70)
+- Ahirette gruplar (Âyet 71-75)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 204. Meclis: HALİS DİN
@@ -1532,8 +1634,12 @@ _Fotoğraf yok veya okunamadı._
 
 ## 40. Gâfir Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Kur'an'ın indirilişi ve Allah'ın sıfatları (Âyet 1-9)
+- Muhteva ve İlgili Âyetler (Âyet 10-22)
+- Firavun ve mümin adam (Âyet 23-46)
+- Muhteva ve İlgili Âyetler (Âyet 47-57)
+- Kıyamet ve tevbe (Âyet 58-85)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 207. Meclis: İMAN EDENLER VE İNKÂR EDENLER
@@ -1555,8 +1661,10 @@ _Fotoğraf yok veya okunamadı._
 
 ## 41. Fussilet Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Kur'an'ın ayrıntısı (Âyet 1-8)
+- Kâfirlerin itirazları (Âyet 9-36)
+- Ahiret ve ilahi delil (Âyet 37-54)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 211. Meclis: DE Kİ: SİZİ, ÂD VE SEMÛD'UN BAŞINA GELEN KASIRGA GİBİ BİR KASIRGAYA KARŞI UYARIYORUM!
@@ -1573,8 +1681,12 @@ _Fotoğraf yok veya okunamadı._
 
 ## 42. Şûrâ Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Tevhid ve vahiy (Âyet 1-13)
+- Muhteva ve İlgili Âyetler (Âyet 14-35)
+- Müminlerin vasıfları ve şûrâ (Âyet 36-43)
+- Muhteva ve İlgili Âyetler (Âyet 44-50)
+- Adalet ve hidayet (Âyet 51-53)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 213. Meclis: HZ. MUHAMMED'E (S.A.S.) VE ÖNCEKİ PEYGAMBERLERE GELEN İLÂHÎ VAHİY
@@ -1592,8 +1704,12 @@ _Fotoğraf yok veya okunamadı._
 
 ## 43. Zuhruf Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Kur'an'ın Arapçalığı (Âyet 1-4)
+- Muhteva ve İlgili Âyetler (Âyet 5-45)
+- Firavun ve dünya süsü (Âyet 46-56)
+- İsa ve cennet (Âyet 57-73)
+- Hatime ve Son Hükümler (Âyet 74-89)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 216. Meclis: "ANLAYIP DÜŞÜNMENİZ İÇİN ONU ARAPÇA BİR KUR'ÂN KILDIK"
@@ -1615,8 +1731,13 @@ _Fotoğraf yok veya okunamadı._
 
 ## 44. Duhân Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Kur'an gecesi (Âyet 1-8)
+- Muhteva ve İlgili Âyetler (Âyet 9-16)
+- Firavun ve kavmi (Âyet 17-33)
+- Muhteva ve İlgili Âyetler (Âyet 34-39)
+- Kıyamet ve cennet (Âyet 40-57)
+- Hatime ve Son Hükümler (Âyet 58-59)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 220. Meclis: "FAKAT ONLAR ŞÜPHE İÇİNDE EĞLENİP DURUYORLAR"
@@ -1635,8 +1756,12 @@ _Fotoğraf yok veya okunamadı._
 
 ## 45. Câsiye Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Delil ve kâinat (Âyet 1-6)
+- Muhteva ve İlgili Âyetler (Âyet 7-15)
+- İsrailoğulları (Âyet 16-18)
+- Muhteva ve İlgili Âyetler (Âyet 19-26)
+- Kıyamet ve diz çökme (Âyet 27-37)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 223. Meclis: KUR'ÂN, İNSANLAR İÇİN BASİRET, HİDAYET VE RAHMETTİR
@@ -1652,8 +1777,13 @@ _Fotoğraf yok veya okunamadı._
 
 ## 46. Ahkâf Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Tevhid ve delil (Âyet 1-6)
+- Muhteva ve İlgili Âyetler (Âyet 7-20)
+- Âd kavmi (Âyet 21-26)
+- Muhteva ve İlgili Âyetler (Âyet 27-28)
+- Cinlerin Kur'an dinlemesi (Âyet 29-32)
+- Hatime ve Son Hükümler (Âyet 33-35)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 225. Meclis: "YOKSA 'ONU UYDURDU' MU DİYORLAR?"
@@ -1674,8 +1804,11 @@ _Fotoğraf yok veya okunamadı._
 
 ## 47. Muhammed Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Küfrün ve imanın sonu (Âyet 1-3)
+- Savaş ve esir (Âyet 4-9)
+- Muhteva ve İlgili Âyetler (Âyet 10-19)
+- Münafıklar ve infak (Âyet 20-38)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 229. Meclis: SİZ ALLAH'A YARDIM EDERSENİZ O DA SİZE YARDIM EDER
@@ -1694,8 +1827,12 @@ _Fotoğraf yok veya okunamadı._
 
 ## 48. Fetih Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Hudeybiye ve fetih (Âyet 1-10)
+- Muhteva ve İlgili Âyetler (Âyet 11-17)
+- Müminlerin sükûneti (Âyet 18-26)
+- Muhteva ve İlgili Âyetler (Âyet 27-28)
+- Sahabe'nin vasfı (Âyet 29-29)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 232. Meclis: "BİZ SANA APAÇIK BİR FETİH İHSAN ETTİK"
@@ -1723,8 +1860,11 @@ _Bu sûre için listeniz yok._
 
 ## 49. Hucurât Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Peygamber'e adab (Âyet 1-5)
+- Haber doğrulama ve gıybet (Âyet 6-12)
+- İnsanların eşitliği (Âyet 13-13)
+- Hatime ve Son Hükümler (Âyet 14-18)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 234. Meclis: İSLAMÎ DEĞERLER MANZUMESİ
@@ -1745,8 +1885,10 @@ _Bu sûre için listeniz yok._
 
 ## 50. Kâf Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Diriliş inkârı (Âyet 1-5)
+- İnsanın yaratılışı (Âyet 6-15)
+- Kıyamet ve cehennem (Âyet 16-45)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 235. Meclis: BİLAKİS ONLAR, HAK KENDİLERİNE GELİNCE ONU YALANLADILAR
@@ -1763,8 +1905,13 @@ _Fotoğraf yok veya okunamadı._
 
 ## 51. Zâriyât Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Rüzgârlar üzerine yemin (Âyet 1-6)
+- Muhteva ve İlgili Âyetler (Âyet 7-23)
+- Kıssalar (Âyet 24-46)
+- Muhteva ve İlgili Âyetler (Âyet 47-55)
+- Cin ve insan yaratılışı (Âyet 56-56)
+- Hatime ve Son Hükümler (Âyet 57-60)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 237. Meclis: SİZE VA'DEDİLENLER GERÇEKTİR
@@ -1783,8 +1930,11 @@ _Fotoğraf yok veya okunamadı._
 
 ## 52. Tûr Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Tur'a yemin ve ahiret (Âyet 1-16)
+- Muhteva ve İlgili Âyetler (Âyet 17-28)
+- Peygambere iftira (Âyet 29-34)
+- Kıyamet (Âyet 35-49)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 240. Meclis: "RABBİNİN AZABI MUTLAKA VUKU BULACAKTIR"
@@ -1800,8 +1950,12 @@ _Fotoğraf yok veya okunamadı._
 
 ## 53. Necm Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Vahiy (Âyet 1-18)
+- Lat, Uzza, Menat (Âyet 19-23)
+- Muhteva ve İlgili Âyetler (Âyet 24-37)
+- İnsanın sorumluluğu (Âyet 38-42)
+- Hatime ve Son Hükümler (Âyet 43-62)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 242. Meclis: "O, ARZUSUNA GÖRE KONUŞMAZ"
@@ -1817,8 +1971,11 @@ _Fotoğraf yok veya okunamadı._
 
 ## 54. Kamer Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Ayın yarılması (Âyet 1-8)
+- Nûh, Âd, Semûd, Lût, Firavun (Âyet 9-42)
+- Muhteva ve İlgili Âyetler (Âyet 43-48)
+- Kader ve yaratılış (Âyet 49-55)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 244. Meclis: "NASILMIŞ AZABIM VE UYARILARIM?!"
@@ -1832,8 +1989,13 @@ _Fotoğraf yok veya okunamadı._
 
 ## 55. Rahmân Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Kur'an ve insan (Âyet 1-4)
+- Nimetler (Âyet 5-30)
+- Muhteva ve İlgili Âyetler (Âyet 31-32)
+- Cin ve insan (Âyet 33-40)
+- Muhteva ve İlgili Âyetler (Âyet 41-45)
+- Cennet (Âyet 46-78)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 245. Meclis: "RABBİNİZİN HANGİ NİMETLERİNİ YALANLAYABİLİRSİNİZ?"
@@ -1855,8 +2017,10 @@ _Bu sûre için listeniz yok._
 
 ## 56. Vâkıa Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Üç grup (Âyet 1-56)
+- Ahiret (Âyet 57-74)
+- Delil (Âyet 75-96)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 246. Meclis: KIYAMET KOPTUĞU ZAMAN
@@ -1872,8 +2036,14 @@ _Fotoğraf yok veya okunamadı._
 
 ## 57. Hadîd Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Tevhid ve kâinat (Âyet 1-6)
+- İnfak (Âyet 7-11)
+- Muhteva ve İlgili Âyetler (Âyet 12-12)
+- Nifak (Âyet 13-15)
+- Muhteva ve İlgili Âyetler (Âyet 16-24)
+- Demir ve kitap (Âyet 25-25)
+- Hatime ve Son Hükümler (Âyet 26-29)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 248. Meclis: TASARRUFUNUZA VERDİĞİ ŞEYLERDEN ALLAH YOLUNDA İNFAK EDİN
@@ -1897,8 +2067,12 @@ _Bu sûre için listeniz yok._
 
 ## 58. Mücâdele Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Zıhar (Âyet 1-4)
+- Muhteva ve İlgili Âyetler (Âyet 5-6)
+- Gizli görüşme (Âyet 7-10)
+- Muhteva ve İlgili Âyetler (Âyet 11-13)
+- Münafıklar ve hizb (Âyet 14-22)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 250. Meclis: AİLE HUKUKU VE MÜSLÜMAN TOPLUMA DAİR
@@ -1918,8 +2092,12 @@ _Bu sûre için listeniz yok._
 
 ## 59. Haşr Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Muhteva ve İlgili Âyetler (Âyet 1-1)
+- Benî Nadîr (Âyet 2-5)
+- Ganimet ve muhacirler (Âyet 6-10)
+- Muhteva ve İlgili Âyetler (Âyet 11-21)
+- Esma-i Hüsnâ (Âyet 22-24)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 252. Meclis: KALELERİNİN ONLARI ALLAH'A KARŞI KORUYACAĞINI ZANNETTİLER
@@ -1941,8 +2119,10 @@ _Bu sûre için listeniz yok._
 
 ## 60. Mümtehine Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Dostluk ve muhalefet (Âyet 1-9)
+- Kadınların biatı (Âyet 10-12)
+- Hatime ve Son Hükümler (Âyet 13-13)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 254. Meclis: VELÂ VE BERÂ HUKUKU
@@ -1956,8 +2136,12 @@ _Bu sûre için listeniz yok._
 
 ## 61. Saff Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Muhteva ve İlgili Âyetler (Âyet 1-1)
+- Amel ve söz sadakati (Âyet 2-4)
+- Mûsâ ve İsa (Âyet 5-6)
+- Muhteva ve İlgili Âyetler (Âyet 7-12)
+- Yardım ve fetih (Âyet 13-14)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 255. Meclis: "KÂFİRLER HOŞ GÖRMESE DE ALLAH NURUNU TAMAMLAYACAKTIR!"
@@ -1973,8 +2157,12 @@ _Bu sûre için listeniz yok._
 
 ## 62. Cum'a Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Muhteva ve İlgili Âyetler (Âyet 1-1)
+- Peygamberin gönderilişi (Âyet 2-2)
+- Muhteva ve İlgili Âyetler (Âyet 3-4)
+- Yahudiler ve tevrat (Âyet 5-8)
+- Cuma (Âyet 9-11)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 256. Meclis: "ÜMMİLERE KENDİ İÇLERİNDEN BİR PEYGAMBER GÖNDEREN O'DUR"
@@ -1991,8 +2179,9 @@ _Bu sûre için listeniz yok._
 
 ## 63. Münâfikûn Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Münafıkların sözleri (Âyet 1-8)
+- Allah'ı zikir (Âyet 9-11)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 257. Meclis: ŞÜPHESİZ MÜNÂFIKLAR YALANCIDIRLAR
@@ -2006,8 +2195,12 @@ _Fotoğraf yok veya okunamadı._
 
 ## 64. Teğâbün Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Tevhid ve yaratılış (Âyet 1-4)
+- Aldanış ve kıyamet (Âyet 5-10)
+- Muhteva ve İlgili Âyetler (Âyet 11-13)
+- Aile ve mal imtihanı (Âyet 14-15)
+- Hatime ve Son Hükümler (Âyet 16-18)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 258. Meclis: MAHŞERDE SİZİ TOPLAYACAĞI GÜN TEĞÂBÜN GÜNÜDÜR
@@ -2022,8 +2215,9 @@ _Bu sûre için listeniz yok._
 
 ## 65. Talâk Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Boşama ve iddet (Âyet 1-7)
+- Hatime ve Son Hükümler (Âyet 8-12)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 259. Meclis: BOŞANMA HUKUKU
@@ -2037,8 +2231,10 @@ _Fotoğraf yok veya okunamadı._
 
 ## 66. Tahrîm Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Haram kılma ve tevbe (Âyet 1-5)
+- Muhteva ve İlgili Âyetler (Âyet 6-9)
+- Kadınların örneği (Âyet 10-12)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 260. Meclis: "ALLAH'IN HELAL KILDIĞI ŞEYİ NEDEN KENDİNE HARAM KILIYORSUN?"
@@ -2054,8 +2250,10 @@ _Bu sûre için listeniz yok._
 
 ## 67. Mülk Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Mülk ve hikmet (Âyet 1-5)
+- Gözlem ve kıyamet (Âyet 6-14)
+- İnsanın şükrü (Âyet 15-30)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 261. Meclis: HANGİNİZİN DAHA GÜZEL İŞ YAPACAĞINI DENEMEK İÇİN
@@ -2078,8 +2276,11 @@ _Bu sûre için listeniz yok._
 
 ## 68. Kalem Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Peygamberin ahlakı (Âyet 1-7)
+- Muhteva ve İlgili Âyetler (Âyet 8-16)
+- Bahçe sahipleri (Âyet 17-33)
+- Kıyamet (Âyet 34-52)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 262. Meclis: "SEN YÜCE BİR AHLÂK ÜZERESİN"
@@ -2094,8 +2295,11 @@ _Fotoğraf yok veya okunamadı._
 
 ## 69. Hâkka Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Kıyametin gerçekliği (Âyet 1-18)
+- Muhteva ve İlgili Âyetler (Âyet 19-24)
+- Kâfirler (Âyet 25-37)
+- Kur'an (Âyet 38-52)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 263. Meclis: "O HESAP GÜNÜNDE HİÇBİR ŞEYİ GİZLEYEMEZSİNİZ"
@@ -2110,8 +2314,10 @@ _Bu sûre için listeniz yok._
 
 ## 70. Meâric Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Kıyamet (Âyet 1-18)
+- İnsanın karakteri (Âyet 19-35)
+- Tevbe ve kapanış (Âyet 36-44)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 264. Meclis: İMANÎ VE AHLAKÎ DEĞERLERİN YÜKSELİŞİ
@@ -2131,8 +2337,9 @@ _Bu sûre için listeniz yok._
 
 ## 71. Nûh Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Tebliğ (Âyet 1-20)
+- Kavmin reddi ve dua (Âyet 21-28)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 265. Meclis: HZ. NÛH (A.S.)
@@ -2146,8 +2353,10 @@ _Fotoğraf yok veya okunamadı._
 
 ## 72. Cin Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Cinlerin Kur'an dinlemesi (Âyet 1-15)
+- Muhteva ve İlgili Âyetler (Âyet 16-20)
+- Kâfirler ve ahiret (Âyet 21-28)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 266. Meclis: İNSANLARIN CİNLERLE ALAKASI
@@ -2161,8 +2370,11 @@ _Fotoğraf yok veya okunamadı._
 
 ## 73. Müzzemmil Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Gece ibadeti (Âyet 1-9)
+- Vahyin ağırlığı (Âyet 10-14)
+- Tavsiye (Âyet 15-19)
+- Hatime ve Son Hükümler (Âyet 20-20)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 267. Meclis: DAVETÇİLERİN GECE NAMAZINA OLAN İHTİYACI
@@ -2176,8 +2388,11 @@ _Fotoğraf yok veya okunamadı._
 
 ## 74. Müddessir Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Tebliğ emri (Âyet 1-7)
+- Muhteva ve İlgili Âyetler (Âyet 8-10)
+- Velid bin Muğîre (Âyet 11-26)
+- Cehennem (Âyet 27-56)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 268. Meclis: "KALK VE UYAR!"
@@ -2191,8 +2406,10 @@ _Fotoğraf yok veya okunamadı._
 
 ## 75. Kıyâmet Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Kıyamet inkârı (Âyet 1-15)
+- İnsan (Âyet 16-25)
+- Ahiret (Âyet 26-40)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 269. Meclis: KIYAMET GÜNÜ
@@ -2206,8 +2423,12 @@ _Fotoğraf yok veya okunamadı._
 
 ## 76. İnsân Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- İnsanın yaratılışı (Âyet 1-3)
+- Muhteva ve İlgili Âyetler (Âyet 4-4)
+- Ebrar'ın ödülü (Âyet 5-22)
+- Sabır (Âyet 23-26)
+- Hatime ve Son Hükümler (Âyet 27-31)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 270. Meclis: GAYRETİNİZ KARŞILIĞINI BULMUŞTUR
@@ -2223,8 +2444,9 @@ _Bu sûre için listeniz yok._
 
 ## 77. Mürselât Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Kıyamet tehdidi (Âyet 1-40)
+- Yalanlayanların cezası (Âyet 41-50)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 271. Meclis: "O GÜN YALANCILARIN VAY HALİNE!"
@@ -2238,8 +2460,10 @@ _Fotoğraf yok veya okunamadı._
 
 ## 78. Nebe' Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Büyük haber ve kâinat (Âyet 1-16)
+- Kıyamet ve cehennem (Âyet 17-30)
+- Cennet ve kâfirler (Âyet 31-40)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 272. Meclis: BÜYÜK HABER
@@ -2258,8 +2482,10 @@ _Bu sûre için listeniz yok._
 
 ## 79. Nâziât Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Yemin ve kıyamet (Âyet 1-14)
+- Mûsâ ve Firavun (Âyet 15-26)
+- Kıyamet ve kâinat (Âyet 27-46)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 273. Meclis: BÜYÜK FELAKET GELDİĞİ VAKİT
@@ -2278,8 +2504,11 @@ _Bu sûre için listeniz yok._
 
 ## 80. Abese Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Abdullah b. Ümmü Mektûm (Âyet 1-10)
+- Kur'an öğüdü (Âyet 11-16)
+- İnsan (Âyet 17-32)
+- Hatime ve Son Hükümler (Âyet 33-42)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 274. Meclis: ÂMÂ ADAMIN KISSASI
@@ -2293,8 +2522,10 @@ _Fotoğraf yok veya okunamadı._
 
 ## 81. Tekvîr Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Kıyamet olayları (Âyet 1-14)
+- Muhteva ve İlgili Âyetler (Âyet 15-18)
+- Kur'an (Âyet 19-29)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 275. Meclis: O, ÂLEMLERE BİR ÖĞÜTTÜR
@@ -2309,8 +2540,12 @@ _Fotoğraf yok veya okunamadı._
 
 ## 82. İnfitâr Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Kıyamet (Âyet 1-5)
+- İnsan (Âyet 6-8)
+- Muhteva ve İlgili Âyetler (Âyet 9-9)
+- Amellerin kaydı (Âyet 10-12)
+- Hatime ve Son Hükümler (Âyet 13-19)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 276. Meclis: "EY İNSAN!"
@@ -2327,8 +2562,11 @@ _Bu sûre için listeniz yok._
 
 ## 83. Mutaffifîn Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Tartıda hile (Âyet 1-6)
+- Fücur defteri (Âyet 7-17)
+- İhsan (Âyet 18-28)
+- Hatime ve Son Hükümler (Âyet 29-36)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 277. Meclis: ÖLÇÜ VE TARTIDA HİLE YAPANLARIN VAY HALİNE!
@@ -2342,8 +2580,10 @@ _Bu sûre için listeniz yok._
 
 ## 84. İnşikâk Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Kıyamet (Âyet 1-6)
+- Muhteva ve İlgili Âyetler (Âyet 7-18)
+- Kâfirler (Âyet 19-25)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 278. Meclis: EY İNSAN!
@@ -2358,8 +2598,10 @@ _Bu sûre için listeniz yok._
 
 ## 85. Burûc Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Burçlara yemin (Âyet 1-3)
+- Ashâb-ı Uhdûd (Âyet 4-9)
+- Zalimler ve Kur'an (Âyet 10-22)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 279. Meclis: MÜMİNLERE YAPTIKLARI İŞKENCEYİ SEYREDİYORLARDI
@@ -2373,8 +2615,10 @@ _Fotoğraf yok veya okunamadı._
 
 ## 86. Târık Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Gece gelen (Âyet 1-4)
+- İnsan yaratılışı (Âyet 5-7)
+- Kıyamet ve Kur'an (Âyet 8-17)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 280. Meclis: HAK İLE BÂTILI AYIRAN VE ASLA ŞAKA OLMAYAN SÖZ
@@ -2388,8 +2632,11 @@ _Fotoğraf yok veya okunamadı._
 
 ## 87. A'lâ Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Tesbih (Âyet 1-5)
+- Kur'an ve tebliğ (Âyet 6-9)
+- Muhteva ve İlgili Âyetler (Âyet 10-13)
+- Hayır ve ahiret (Âyet 14-19)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 281. Meclis: KENDİNİ ARINDIRAN KURTULMUŞTUR
@@ -2403,8 +2650,11 @@ _Fotoğraf yok veya okunamadı._
 
 ## 88. Gâşiye Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Kıyamet (Âyet 1-7)
+- Nimetler (Âyet 8-16)
+- Kâinat (Âyet 17-20)
+- Hatime ve Son Hükümler (Âyet 21-26)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 282. Meclis: ÖĞÜT VER! ZİRA SEN ÖĞÜT VERMEKLE MÜKELLEFSİN!
@@ -2418,8 +2668,10 @@ _Fotoğraf yok veya okunamadı._
 
 ## 89. Fecr Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Yemin (Âyet 1-5)
+- Kavimlerin helakı (Âyet 6-14)
+- İnsanın imtihanı (Âyet 15-30)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 283. Meclis: RABBİN HER AN GÖZETLEMEDEDİR
@@ -2433,8 +2685,11 @@ _Fotoğraf yok veya okunamadı._
 
 ## 90. Beled Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Şehre yemin (Âyet 1-4)
+- Muhteva ve İlgili Âyetler (Âyet 5-11)
+- Yoksulu doyurmak (Âyet 12-16)
+- Ashâb-ı meymene (Âyet 17-20)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 284. Meclis: İNSANI ZORLUKLAR İÇİNDE YARATTIK
@@ -2448,8 +2703,9 @@ _Fotoğraf yok veya okunamadı._
 
 ## 91. Şems Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Yemin ve nefis (Âyet 1-10)
+- Semûd (Âyet 11-15)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 285. Meclis: NEFSİNİ ARINDIRAN KURTULUŞA ERMİŞTİR
@@ -2463,8 +2719,11 @@ _Fotoğraf yok veya okunamadı._
 
 ## 92. Leyl Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Gece ve gündüz (Âyet 1-4)
+- İnfak ve takva (Âyet 5-11)
+- Muhteva ve İlgili Âyetler (Âyet 12-13)
+- Ateş ve rızâ (Âyet 14-21)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 286. Meclis: İŞLERİNİZ BAŞKA BAŞKADIR
@@ -2477,8 +2736,10 @@ _Fotoğraf yok veya okunamadı._
 
 ## 93. Duhâ Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Muhteva ve İlgili Âyetler (Âyet 1-2)
+- Teselli (Âyet 3-8)
+- Nimetler (Âyet 9-11)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 287. Meclis: RABBİN SANA VERECEK, SEN DE HOŞNUT OLACAKSIN
@@ -2492,8 +2753,9 @@ _Fotoğraf yok veya okunamadı._
 
 ## 94. İnşirâh Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Göğsün açılması (Âyet 1-4)
+- Zorluk ve kolaylık (Âyet 5-8)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 288. Meclis: SENİN ŞÂNINI YÜCELTMEDİK Mİ?
@@ -2507,8 +2769,10 @@ _Fotoğraf yok veya okunamadı._
 
 ## 95. Tîn Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- İncir ve zeytin (Âyet 1-3)
+- İnsanın yaratılışı (Âyet 4-6)
+- Hüküm (Âyet 7-8)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 289. Meclis: "BİZ İNSANI EN GÜZEL BİÇİMDE YARATTIK"
@@ -2522,8 +2786,10 @@ _Fotoğraf yok veya okunamadı._
 
 ## 96. Alak Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- İlk vahiy (Âyet 1-5)
+- Muhteva ve İlgili Âyetler (Âyet 6-8)
+- Ebu Cehil (Âyet 9-19)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 290. Meclis: "RABBİNİN ADIYLA OKU!"
@@ -2537,8 +2803,8 @@ _Fotoğraf yok veya okunamadı._
 
 ## 97. Kadir Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Kadir gecesi (Âyet 1-5)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 291. Meclis: KADİR GECESİ
@@ -2552,8 +2818,9 @@ _Fotoğraf yok veya okunamadı._
 
 ## 98. Beyyine Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Ehl-i kitap ve delil (Âyet 1-5)
+- Ahiret (Âyet 6-8)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 292. Meclis: ONLARA APAÇIK DELİL GELİNCEYE DEK
@@ -2567,8 +2834,9 @@ _Fotoğraf yok veya okunamadı._
 
 ## 99. Zilzâl Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Sarsıntı (Âyet 1-5)
+- Amelin karşılığı (Âyet 6-8)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 293. Meclis: AMELLERİNİ GÖRMELERİ İÇİN
@@ -2582,8 +2850,9 @@ _Fotoğraf yok veya okunamadı._
 
 ## 100. Âdiyât Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Atlar üzerine yemin (Âyet 1-5)
+- İnsanın nankörlüğü (Âyet 6-11)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 - 294. Meclis: "İNSAN, RABBİNE KARŞI PEK NANKÖRDÜR!"
@@ -2603,8 +2872,9 @@ _Fotoğraf yok veya okunamadı._
 
 ## 101. Kâriâ Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Kıyamet (Âyet 1-5)
+- Terazi (Âyet 6-11)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 _Görsel okumada meclis bulunamadı._
@@ -2617,8 +2887,9 @@ _Fotoğraf yok veya okunamadı._
 
 ## 102. Tekâsür Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Çokluk yarışı (Âyet 1-4)
+- Kıyamet sorusu (Âyet 5-8)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 _Görsel okumada meclis bulunamadı._
@@ -2631,8 +2902,10 @@ _Fotoğraf yok veya okunamadı._
 
 ## 103. Asr Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Zamana yemin (Âyet 1-1)
+- İnsanın kaybı (Âyet 2-2)
+- Dört şart (Âyet 3-3)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 _Görsel okumada meclis bulunamadı._
@@ -2645,8 +2918,9 @@ _Fotoğraf yok veya okunamadı._
 
 ## 104. Hümeze Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Ayıplayanlar (Âyet 1-4)
+- Hutame (Âyet 5-9)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 _Görsel okumada meclis bulunamadı._
@@ -2659,8 +2933,8 @@ _Fotoğraf yok veya okunamadı._
 
 ## 105. Fîl Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Ebrehe'nin ordusu (Âyet 1-5)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 _Görsel okumada meclis bulunamadı._
@@ -2673,8 +2947,8 @@ _Fotoğraf yok veya okunamadı._
 
 ## 106. Kureyş Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- İlaf ve nimet (Âyet 1-4)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 _Görsel okumada meclis bulunamadı._
@@ -2687,8 +2961,9 @@ _Fotoğraf yok veya okunamadı._
 
 ## 107. Mâûn Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Yetim ve yoksul (Âyet 1-3)
+- Namazda riya (Âyet 4-7)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 _Görsel okumada meclis bulunamadı._
@@ -2701,8 +2976,9 @@ _Fotoğraf yok veya okunamadı._
 
 ## 108. Kevser Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Kevser (Âyet 1-2)
+- Düşmanın sonu (Âyet 3-3)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 _Görsel okumada meclis bulunamadı._
@@ -2715,8 +2991,8 @@ _Fotoğraf yok veya okunamadı._
 
 ## 109. Kâfirûn Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- İman ve küfrün ayrımı (Âyet 1-6)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 _Görsel okumada meclis bulunamadı._
@@ -2729,8 +3005,9 @@ _Fotoğraf yok veya okunamadı._
 
 ## 110. Nasr Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Yardım ve fetih (Âyet 1-2)
+- İstiğfar (Âyet 3-3)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 _Görsel okumada meclis bulunamadı._
@@ -2743,8 +3020,9 @@ _Fotoğraf yok veya okunamadı._
 
 ## 111. Tebbet Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Ebu Leheb (Âyet 1-3)
+- Karısı ve ip (Âyet 4-5)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 _Görsel okumada meclis bulunamadı._
@@ -2757,8 +3035,8 @@ _Fotoğraf yok veya okunamadı._
 
 ## 112. İhlâs Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Tevhid (Âyet 1-4)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 _Görsel okumada meclis bulunamadı._
@@ -2771,8 +3049,8 @@ _Fotoğraf yok veya okunamadı._
 
 ## 113. Felak Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Dış şerler (Âyet 1-5)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 _Görsel okumada meclis bulunamadı._
@@ -2785,8 +3063,9 @@ _Fotoğraf yok veya okunamadı._
 
 ## 114. Nâs Sûresi
 
-**A. Sizin liste**
-_Bu sûre için listeniz yok._
+**A. Kitap verisi (şu an kitapta)**
+- Muhteva ve İlgili Âyetler (Âyet 1-3)
+- İç vesvese (Âyet 4-6)
 
 **B. Görsel okuma (Mecâlisü'n-Nûr)**
 _Görsel okumada meclis bulunamadı._
