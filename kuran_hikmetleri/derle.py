@@ -78,66 +78,64 @@ def flat_segment_tablosu(segments):
                     """
 
 
-def _dugum_html(node, renk, derinlik):
-    """Mevzu ağacı düğümünü iç içe kutu olarak çizer. Aralık ve âyet sayısı düğümün içindedir."""
-    a, b = node["aralik"]
-    adet = b - a + 1
-    alt = "".join(_dugum_html(c, renk, derinlik + 1) for c in node.get("alt", []))
+def _kart(renk, v, etiket, verse_dict):
+    ar, tr = _ayet_metni(verse_dict, v)
     return (
-        f'<div class="ag-dugum" style="border-left:6px solid {renk}; margin-left:{derinlik * 14}px;">'
-        f'<strong>{node["baslik"]}</strong>'
-        f'<div class="ag-meta">Âyet {a}{"-" + str(b) if a != b else ""} · {adet} âyet</div>'
-        f'{alt}</div>'
+        f'<div class="ag-kart" style="border-top:4px solid {renk};">'
+        f'<div class="ag-kart-baslik" style="color:{renk};">Âyet {v}{" · " + etiket if etiket else ""}</div>'
+        f'<div class="verse-ar">{ar}</div><div class="verse-tr">{tr}</div></div>'
     )
 
 
+def _yumak_icerigi(dugumler, renk, verse_dict):
+    """Bir yumağın içi: alt mevzu başlıkları ve bu başlıkların altındaki âyet kartları (iç içe, sonsuz düzey)."""
+    parcalar = []
+    for x in dugumler:
+        if x.get("alt"):
+            a, b = x["aralik"]
+            parcalar.append(
+                f'<div class="ag-alt-baslik" style="border-left:4px solid {renk};">'
+                f'{x["baslik"]} <small>(Âyet {a}{"-" + str(b) if a != b else ""})</small></div>'
+            )
+            parcalar.append(_yumak_icerigi(x["alt"], renk, verse_dict))
+        else:
+            parcalar.append(_kart(renk, x["aralik"][0], x["baslik"], verse_dict))
+    return f'<div class="ag-yumak-icerik">{"".join(parcalar)}</div>'
+
+
 def detay_bolumu(segments, agac_segmentler, verse_dict):
-    """Ayrıntılı görünüm: her segment için sol sütunda mevzu ağacı, sağda âyet matrisi.
-    İki sütun bağımsız yükseklikte; aidiyet kenarlıktaki renkten anlaşılır."""
+    """Ayrıntılı görünüm: her genel mevzu başlığı üstte, tek bir ok altındaki âyet matrisine bağlanır.
+    Matris, mevzunun bölümlerine göre ayrı yumaklar halinde alt alta dizilir. Aidiyet renkle gösterilir."""
     bloklar = []
     for seg in segments:
         renk = seg["color"]
         anahtar = f"{seg['start']}-{seg['end']}"
-        sol_ust = (
-            f'<div class="ag-dugum" style="border-left:6px solid {renk};">'
+        ust = (
+            f'<div class="ag-ust" style="border-left:6px solid {renk};">'
             f'<strong>{seg["title"]}</strong>'
             f'<div class="ag-meta">Âyet {seg["start"]} - {seg["end"]} · {seg["count"]} âyet</div>'
             f'<div class="ag-aciklama">{seg["desc"]}</div></div>'
+            f'<div class="ag-ok" style="border-left-color:{renk};"></div>'
         )
         if anahtar in agac_segmentler:
-            sol = sol_ust + "".join(_dugum_html(n, renk, 1) for n in agac_segmentler[anahtar])
-            # Her yaprak âyet kartı: başlık yaprak düğümünden, metin JSON'dan
-            kartlar = []
-            def yapraklar(ns, ust):
-                for x in ns:
-                    if x.get("alt"):
-                        yapraklar(x["alt"], ust + [x])
-                    else:
-                        for v in range(x["aralik"][0], x["aralik"][1] + 1):
-                            kartlar.append((ust + [x], v))
-            yapraklar(agac_segmentler[anahtar], [])
-            kart_html = []
-            for yol, v in kartlar:
-                ar, tr = _ayet_metni(verse_dict, v)
-                kart_html.append(
-                    f'<div class="ag-kart" style="border-top:4px solid {renk};">'
-                    f'<div class="ag-kart-baslik" style="color:{renk};">Âyet {v} · {yol[-1]["baslik"]}</div>'
-                    f'<div class="verse-ar">{ar}</div><div class="verse-tr">{tr}</div></div>'
+            yumaklar = []
+            for bolum in agac_segmentler[anahtar]:
+                a, b = bolum["aralik"]
+                yumaklar.append(
+                    f'<div class="ag-yumak" style="border:2px solid {renk};">'
+                    f'<div class="ag-yumak-baslik" style="background:{renk};">'
+                    f'{bolum["baslik"]} <small>(Âyet {a}{"-" + str(b) if a != b else ""} · {b - a + 1} âyet)</small></div>'
+                    + (_yumak_icerigi(bolum["alt"], renk, verse_dict) if bolum.get("alt") else
+                       _kart(renk, a, bolum["baslik"], verse_dict))
+                    + "</div>"
                 )
         else:
-            sol = sol_ust
-            kart_html = []
-            for v in range(seg["start"], seg["end"] + 1):
-                ar, tr = _ayet_metni(verse_dict, v)
-                kart_html.append(
-                    f'<div class="ag-kart" style="border-top:4px solid {renk};">'
-                    f'<div class="ag-kart-baslik" style="color:{renk};">Âyet {v}</div>'
-                    f'<div class="verse-ar">{ar}</div><div class="verse-tr">{tr}</div></div>'
-                )
-        bloklar.append(
-            f'<div class="ag-blok"><div class="ag-sol">{sol}</div>'
-            f'<div class="ag-matris">{"".join(kart_html)}</div></div>'
-        )
+            kartlar = "".join(_kart(renk, v, "", verse_dict) for v in range(seg["start"], seg["end"] + 1))
+            yumaklar = [
+                f'<div class="ag-yumak" style="border:2px solid {renk};">'
+                f'<div class="ag-yumak-icerik">{kartlar}</div></div>'
+            ]
+        bloklar.append(f'<div class="ag-blok">{ust}{"".join(yumaklar)}</div>')
     return f'<div class="ag-ayrintili">{"".join(bloklar)}</div>'
 
 
@@ -613,20 +611,15 @@ tr:nth-child(even) {{ background: #f8fafc; }}
   color: #1e3a8a;
 }}
 .ag-blok {{
-  display: grid;
-  grid-template-columns: 2fr 3fr;
-  gap: 16px;
-  align-items: start;
-  margin-bottom: 18px;
+  margin-bottom: 22px;
   page-break-inside: auto;
 }}
-.ag-dugum {{
+.ag-ust {{
   background: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 6px;
-  padding: 6px 10px;
-  margin: 6px 0;
-  font-size: 9pt;
+  padding: 8px 12px;
+  font-size: 10pt;
 }}
 .ag-meta {{
   color: #64748b;
@@ -637,11 +630,53 @@ tr:nth-child(even) {{ background: #f8fafc; }}
   font-size: 8.5pt;
   margin-top: 4px;
 }}
-.ag-matris {{
+.ag-ok {{
+  position: relative;
+  width: 0;
+  height: 26px;
+  margin-left: 28px;
+  border-left: 3px solid #64748b;
+}}
+.ag-ok::after {{
+  content: "";
+  position: absolute;
+  left: -8px;
+  bottom: -8px;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid #64748b;
+}}
+.ag-yumak {{
+  border-radius: 8px;
+  padding: 8px;
+  margin: 0 0 10px 28px;
+  background: #fbfdff;
+}}
+.ag-yumak-baslik {{
+  color: #ffffff;
+  font-size: 9.5pt;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 5px;
+  margin-bottom: 8px;
+}}
+.ag-yumak-icerik {{
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   align-items: flex-start;
+}}
+.ag-alt-baslik {{
+  width: 100%;
+  font-size: 9pt;
+  font-weight: 700;
+  color: #1e293b;
+  padding: 2px 8px;
+  margin: 6px 0 2px 0;
+}}
+.ag-alt-baslik small {{
+  font-weight: 400;
+  color: #64748b;
 }}
 .ag-kart {{
   background: #ffffff;
