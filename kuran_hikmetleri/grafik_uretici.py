@@ -1,0 +1,948 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Kur'an-ı Kerim Sureleri ve Hikmetleri - Grafik ve Görsel Üretim Modülü
+Bu modül:
+1. Tertip sırasına göre 114 surenin ayet sayıları ve mevzu sütun grafiğini üretir.
+2. Nüzul sırasına göre 114 surenin ayet sayıları ve mevzu sütun grafiğini üretir.
+3. Her bir sure için özel büyütülmüş detaylı grafik/haritayı (tüm ayetlerin Arapça ve Türkçe metinleriyle) üretir.
+4. Headless Chrome ile bu grafiklerin yüksek çözünürlüklü kesit ekran görüntülerini PNG olarak kaydeder.
+"""
+
+import os
+import re
+import glob
+import json
+import subprocess
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
+REPO_ROOT = BASE_DIR.parent
+KAYNAK_SURE_DIR = BASE_DIR / "kaynak" / "sure"
+SURELER_DIR = BASE_DIR / "sureler"
+GRAFIKLER_DIR = BASE_DIR / "grafikler"
+GRAFIKLER_SURE_DIR = GRAFIKLER_DIR / "sureler"
+HTML_OUT_DIR = BASE_DIR / "html_grafikler"
+
+# Standart 114 Sure Nüzul Sırası (Diyanet / İbn Abbas kanonik sırası)
+NUZUL_SIRASI = [
+    96, 68, 73, 74, 1, 111, 81, 87, 92, 89, 93, 94, 103, 100, 108, 102, 107, 109,
+    105, 113, 114, 112, 53, 80, 97, 91, 85, 95, 106, 101, 75, 104, 77, 50, 90, 86,
+    54, 38, 7, 72, 36, 25, 35, 19, 20, 56, 26, 27, 28, 17, 10, 11, 12, 15,
+    6, 37, 31, 34, 39, 40, 41, 42, 43, 44, 45, 46, 51, 88, 18, 16, 71, 14,
+    21, 23, 32, 52, 67, 69, 70, 78, 79, 82, 84, 30, 29, 83, 2, 8, 3, 33,
+    60, 4, 99, 57, 47, 13, 55, 76, 65, 98, 59, 24, 22, 63, 58, 49, 66, 64,
+    61, 62, 48, 5, 9, 110
+]
+
+# Nüzul sıra haritası: sure_no -> nuzul_sirasi (1..114)
+NUZUL_MAP = {sno: idx + 1 for idx, sno in enumerate(NUZUL_SIRASI)}
+
+# Zengin, vakur İslami tema renk paleti (12 renk)
+RENK_PALETI = [
+    {"bg": "#1e40af", "border": "#1d4ed8", "text": "#ffffff", "name": "Safir Mavisi"},
+    {"bg": "#065f46", "border": "#047857", "text": "#ffffff", "name": "Zümrüt Yeşili"},
+    {"bg": "#b45309", "border": "#d97706", "text": "#ffffff", "name": "Kehribar Altını"},
+    {"bg": "#991b1b", "border": "#b91c1c", "text": "#ffffff", "name": "Lal Kırmızısı"},
+    {"bg": "#4338ca", "border": "#4f46e5", "text": "#ffffff", "name": "İndigo Moru"},
+    {"bg": "#0e7490", "border": "#0891b2", "text": "#ffffff", "name": "Turkuaz"},
+    {"bg": "#c2410c", "border": "#ea580c", "text": "#ffffff", "name": "Kiremit"},
+    {"bg": "#4d7c0f", "border": "#65a30d", "text": "#ffffff", "name": "Zeytin Yeşili"},
+    {"bg": "#86198f", "border": "#a21caf", "text": "#ffffff", "name": "Mürdüm"},
+    {"bg": "#334155", "border": "#475569", "text": "#ffffff", "name": "Grafit"},
+    {"bg": "#a16207", "border": "#ca8a04", "text": "#ffffff", "name": "Toprak Altını"},
+    {"bg": "#115e59", "border": "#0f766e", "text": "#ffffff", "name": "Hazer Yeşili"},
+]
+
+def load_all_surah_data():
+    """Tüm 114 surenin metadata ve ayet verilerini derler."""
+    surahs = []
+    
+    # 00_FIHRIST.md üzerinden ana listeyi çek
+    fihrist_file = BASE_DIR / "00_FIHRIST.md"
+    fihrist_meta = {}
+    if fihrist_file.exists():
+        with open(fihrist_file, "r", encoding="utf-8") as f:
+            ftext = f.read()
+        trows = re.findall(
+            r"\|\s*(S\d{3})\s*\|\s*(\d+)\s*\|\s*([^\|]+)\|\s*([^\|]+)\|\s*([^\|]+)\|\s*(\d+)\s*\|\s*([^\|]+)\|",
+            ftext
+        )
+        for sid, sno_str, name, arabic, meaning, vcount_str, place in trows:
+            sno = int(sno_str)
+            fihrist_meta[sno] = {
+                "id": sid.strip(),
+                "name": name.strip(),
+                "arabic": arabic.strip(),
+                "meaning": meaning.strip(),
+                "verses": int(vcount_str.strip()),
+                "place": place.strip()
+            }
+
+    for sno in range(1, 115):
+        # Klasör bul
+        matches = list(SURELER_DIR.glob(f"{sno:03d}-*"))
+        if not matches:
+            continue
+        sdir = matches[0]
+        sure_md_path = sdir / "sure.md"
+        gayeler_md_path = sdir / "gayeler-ve-hikmetler.md"
+        json_path = KAYNAK_SURE_DIR / f"{sno}.json"
+
+        # Temel bilgiler
+        meta = fihrist_meta.get(sno, {
+            "id": f"S{sno:03d}",
+            "name": sdir.name.split("-", 1)[1].replace("-", " ").title(),
+            "arabic": "",
+            "meaning": "",
+            "verses": 0,
+            "place": "Mekkî"
+        })
+
+        if sure_md_path.exists():
+            with open(sure_md_path, "r", encoding="utf-8") as f:
+                stext = f.read()
+            hm = re.search(r"#\s*S\d+\s*·\s*([^(\n]+)(?:\(([^)]+)\))?", stext)
+            if hm:
+                meta["name"] = hm.group(1).strip()
+                if hm.group(2):
+                    meta["arabic"] = hm.group(2).strip()
+            vm = re.search(r"\*\*Âyet sayısı:\*\*\s*(\d+)", stext)
+            if vm:
+                meta["verses"] = int(vm.group(1))
+            mm = re.search(r"\*\*Anlamı:\*\*\s*([^·\n]+)", stext)
+            if mm:
+                meta["meaning"] = mm.group(1).strip()
+            pm = re.search(r"\*\*İniş:\*\*\s*([^·\n]+)", stext)
+            if pm:
+                meta["place"] = pm.group(1).strip()
+        else:
+            stext = ""
+
+        # Ayet metinlerini JSON'dan al
+        verses_data = []
+        if json_path.exists():
+            with open(json_path, "r", encoding="utf-8") as f:
+                jdata = json.load(f)
+                verses_data = jdata.get("verses", [])
+        if meta["verses"] == 0 and verses_data:
+            meta["verses"] = len(verses_data)
+
+        # Kısımları ve mevzuları ayrıştır
+        parts_raw = []
+        # Öncelik: Varsa gayeler-ve-hikmetler.md
+        if gayeler_md_path.exists():
+            with open(gayeler_md_path, "r", encoding="utf-8") as f:
+                gtext = f.read()
+            gm = re.search(r"## 2\. Ayet dizisine göre gayeler\s*\n(.*?)(?:\n##|\Z)", gtext, re.DOTALL)
+            if gm:
+                for line in gm.group(1).strip().split("\n"):
+                    m = re.search(r"-\s*\*\*([\d\-,\s]+)(?:\s*\(([^)]+)\))?:\*\*\s*(.*)", line)
+                    if m:
+                        rng = m.group(1).strip()
+                        top = m.group(2).strip() if m.group(2) else ""
+                        dsc = m.group(3).strip()
+                        title = top if top else dsc.split(".")[0]
+                        parts_raw.append({"range_str": rng, "title": title, "desc": dsc})
+
+        # Yoksa sure.md kısımlarını al
+        if not parts_raw and stext:
+            km = re.search(r"## 10\. Kısımlar.*?\n(.*?)(?:\n---|\Z)", stext, re.DOTALL)
+            if km:
+                for line in km.group(1).strip().split("\n"):
+                    m = re.search(r"-\s*\*\*(K\d{3}-\d{2})\*\* — (.*?)(?:\s*\(([\d\-,\s]+)\))?$", line)
+                    if m:
+                        code = m.group(1).strip()
+                        desc = m.group(2).strip()
+                        rng = m.group(3).strip() if m.group(3) else ""
+                        parts_raw.append({"code": code, "range_str": rng, "title": desc, "desc": desc})
+
+        # Aralıkları düzenle ve 1'den meta['verses']'e kadar kesintisiz segmentler oluştur
+        total_v = meta["verses"]
+        parsed_ranges = []
+        for p in parts_raw:
+            rng_s = p.get("range_str", "")
+            if not rng_s:
+                continue
+            # örn: "1-20", "30", "1-2, 3-4"
+            subparts = rng_s.split(",")
+            for sp in subparts:
+                sp = sp.strip()
+                if "-" in sp:
+                    s_str, e_str = sp.split("-", 1)
+                    try:
+                        s_val = int(s_str.strip())
+                        e_val = int(e_str.strip())
+                        parsed_ranges.append({
+                            "start": s_val,
+                            "end": e_val,
+                            "title": p.get("title", ""),
+                            "desc": p.get("desc", ""),
+                            "code": p.get("code", "")
+                        })
+                    except ValueError:
+                        pass
+                else:
+                    try:
+                        val = int(sp)
+                        parsed_ranges.append({
+                            "start": val,
+                            "end": val,
+                            "title": p.get("title", ""),
+                            "desc": p.get("desc", ""),
+                            "code": p.get("code", "")
+                        })
+                    except ValueError:
+                        pass
+
+        # Sırala
+        parsed_ranges.sort(key=lambda x: x["start"])
+
+        # Kesintisiz segmentlere dönüştür
+        contiguous_segments = []
+        cur_ayah = 1
+
+        for pr in parsed_ranges:
+            if pr["start"] > cur_ayah:
+                # Aradaki boşluğu kapat
+                gap_start = cur_ayah
+                gap_end = pr["start"] - 1
+                contiguous_segments.append({
+                    "start": gap_start,
+                    "end": gap_end,
+                    "count": gap_end - gap_start + 1,
+                    "title": "Muhteva ve İlgili Âyetler",
+                    "desc": "Surenin ara faslı ve ilgili âyetleri",
+                    "code": f"K{sno:03d}-F"
+                })
+            
+            seg_start = max(cur_ayah, pr["start"])
+            seg_end = min(total_v, pr["end"])
+            if seg_end >= seg_start:
+                contiguous_segments.append({
+                    "start": seg_start,
+                    "end": seg_end,
+                    "count": seg_end - seg_start + 1,
+                    "title": pr["title"],
+                    "desc": pr["desc"],
+                    "code": pr.get("code", "")
+                })
+                cur_ayah = seg_end + 1
+
+        if cur_ayah <= total_v:
+            contiguous_segments.append({
+                "start": cur_ayah,
+                "end": total_v,
+                "count": total_v - cur_ayah + 1,
+                "title": "Hatime ve Son Hükümler" if contiguous_segments else "Surenin Ana Muhtevası",
+                "desc": "Surenin tamamlayıcı âyetleri",
+                "code": f"K{sno:03d}-H"
+            })
+
+        # Renk ata
+        for idx, seg in enumerate(contiguous_segments):
+            palette_color = RENK_PALETI[idx % len(RENK_PALETI)]
+            seg["color"] = palette_color["bg"]
+            seg["border"] = palette_color["border"]
+            seg["text_color"] = palette_color["text"]
+            seg["idx"] = idx + 1
+
+        surahs.append({
+            "sno": sno,
+            "id": meta["id"],
+            "name": meta["name"],
+            "arabic": meta["arabic"],
+            "meaning": meta["meaning"],
+            "verses_count": total_v,
+            "place": meta["place"],
+            "nuzul_order": NUZUL_MAP.get(sno, sno),
+            "segments": contiguous_segments,
+            "verses": verses_data,
+            "slug": sdir.name
+        })
+
+    return surahs
+
+
+def generate_panoramic_chart_html(surahs, order_by="tertip"):
+    """
+    114 surenin tamamını içeren yüksek çözünürlüklü sütun grafiği HTML'i üretir.
+    order_by: 'tertip' (1..114) veya 'nuzul' (kronolojik sıra)
+    """
+    if order_by == "nuzul":
+        sorted_surahs = sorted(surahs, key=lambda s: s["nuzul_order"])
+        title_text = "Kur'an-ı Kerim Sureleri Âyet Sayıları ve Mevzular Cetveli (Nüzul Sırasına Göre)"
+        subtitle_text = "İlk inen Alak Suresinden son inen Nasr Suresine kronolojik nüzul sırasıyla 114 surenin mevzu taksimatı"
+        x_label_title = "Sureler (Nüzul Sırasıyla)"
+    else:
+        sorted_surahs = sorted(surahs, key=lambda s: s["sno"])
+        title_text = "Kur'an-ı Kerim Sureleri Âyet Sayıları ve Mevzular Cetveli (Mushaf Tertip Sırasına Göre)"
+        subtitle_text = "Fâtiha'dan Nâs Suresine kadar 114 surenin âyet sayıları ve kendi içlerindeki mevzu bölümleri"
+        x_label_title = "Sureler (Tertip Sırasıyla)"
+
+    # SVG Boyutları
+    svg_width = 4600
+    svg_height = 1350
+    margin_left = 90
+    margin_right = 60
+    margin_top = 110
+    margin_bottom = 220
+
+    chart_w = svg_width - margin_left - margin_right
+    chart_h = svg_height - margin_top - margin_bottom
+
+    max_verses = 286  # Bakara suresi
+    # 290 tavan
+    y_max = 290
+    y_scale = chart_h / y_max
+
+    num_surahs = len(sorted_surahs)
+    col_width = (chart_w / num_surahs) - 6
+    col_gap = 6
+
+    # Y ekseni çizgileri (0, 25, 50, 75, 100, 150, 200, 250, 286)
+    grid_steps = [0, 25, 50, 75, 100, 125, 150, 175, 200, 225, 250, 286]
+
+    svg_elements = []
+
+    # Izgara çizgileri
+    for step in grid_steps:
+        y_pos = margin_top + chart_h - (step * y_scale)
+        stroke_color = "#334155" if step in [0, 100, 200, 286] else "#1e293b"
+        stroke_width = "2" if step in [0, 286] else "1"
+        dash_arr = "none" if step in [0, 286] else "4,4"
+        svg_elements.append(
+            f'<line x1="{margin_left}" y1="{y_pos}" x2="{margin_left + chart_w}" y2="{y_pos}" '
+            f'stroke="{stroke_color}" stroke-width="{stroke_width}" stroke-dasharray="{dash_arr}" />'
+        )
+        # Y etiketleri
+        svg_elements.append(
+            f'<text x="{margin_left - 15}" y="{y_pos + 5}" fill="#94a3b8" font-size="16" '
+            f'font-family="monospace" text-anchor="end" font-weight="600">{step}</text>'
+        )
+
+    # Her sure sütunu
+    for idx, s in enumerate(sorted_surahs):
+        x_pos = margin_left + idx * (col_width + col_gap)
+        base_y = margin_top + chart_h
+
+        curr_bottom = base_y
+
+        # Sütunun kısımları (Aşağıdan yukarıya: 1. ayetten son ayete)
+        for seg in s["segments"]:
+            seg_h = seg["count"] * y_scale
+            seg_y = curr_bottom - seg_h
+
+            seg_title_esc = seg["title"].replace('"', '&quot;').replace("'", "&#39;")
+            tooltip_data = (
+                f"{s['sno']}. {s['name']} ({s['place']}) | Âyet: {seg['start']}-{seg['end']} "
+                f"({seg['count']} âyet) | {seg_title_esc}"
+            )
+
+            # Segment kutusu
+            svg_elements.append(
+                f'<rect class="segment-rect" x="{x_pos}" y="{seg_y}" width="{col_width}" height="{seg_h}" '
+                f'fill="{seg["color"]}" stroke="{seg["border"]}" stroke-width="1.5" rx="3" '
+                f'data-tooltip="{tooltip_data}" '
+                f'onclick="showSurahModal({s["sno"]})" style="cursor: pointer; transition: all 0.2s;" />'
+            )
+
+            # Sütun içi metin (Eğer segment yeterince yüksekse)
+            if seg_h >= 32:
+                # Kısaltılmış mevzu başlığı
+                clean_title = seg["title"]
+                if len(clean_title) > 22:
+                    clean_title = clean_title[:20] + "…"
+                text_y = seg_y + seg_h / 2 + 5
+                # Metni dikey veya yatay yerleştir
+                svg_elements.append(
+                    f'<text x="{x_pos + col_width/2}" y="{text_y}" fill="#ffffff" font-size="11" '
+                    f'font-family="sans-serif" font-weight="600" text-anchor="middle" '
+                    f'pointer-events="none" opacity="0.95">'
+                    f'{seg["start"]}-{seg["end"]}'
+                    f'</text>'
+                )
+
+            curr_bottom = seg_y
+
+        # Sütun tepe toplam âyet sayısı
+        top_y = base_y - (s["verses_count"] * y_scale) - 8
+        svg_elements.append(
+            f'<text x="{x_pos + col_width/2}" y="{top_y}" fill="#38bdf8" font-size="13" '
+            f'font-family="monospace" font-weight="700" text-anchor="middle">{s["verses_count"]}</text>'
+        )
+
+        # X ekseni alt etiketleri (Sure No, Adı, İniş Rozeti)
+        label_y = base_y + 20
+        place_color = "#10b981" if "Meden" in s["place"] else "#f59e0b"
+        place_symbol = "Med." if "Meden" in s["place"] else "Mek."
+
+        # Sure adı ve nüzul / tertip bilgisi
+        order_info = f"N:{s['nuzul_order']}" if order_by == "tertip" else f"T:{s['sno']}"
+        display_no = f"{s['sno']}" if order_by == "tertip" else f"N{s['nuzul_order']}"
+
+        svg_elements.append(
+            f'<g transform="translate({x_pos + col_width/2}, {label_y}) rotate(55)" style="cursor:pointer;" onclick="showSurahModal({s["sno"]})">'
+            f'<text x="0" y="0" fill="#f8fafc" font-size="13" font-family="sans-serif" font-weight="600">{display_no}. {s["name"]}</text>'
+            f'<text x="0" y="15" fill="{place_color}" font-size="11" font-family="sans-serif">[{place_symbol} · {order_info}]</text>'
+            f'</g>'
+        )
+
+    svg_content = "\n".join(svg_elements)
+
+    html = f"""<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>{title_text}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Amiri:wght@700&display=swap" rel="stylesheet">
+<style>
+* {{ box-sizing: border-box; }}
+body {{
+  margin: 0;
+  padding: 24px;
+  background: #090d16;
+  color: #f1f5f9;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  overflow-x: auto;
+}}
+.header {{
+  max-width: 4600px;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0f172a;
+  padding: 24px 32px;
+  border-radius: 16px;
+  border: 1px solid #1e293b;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}}
+.title-box h1 {{
+  margin: 0 0 8px 0;
+  font-size: 28px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}}
+.title-box p {{
+  margin: 0;
+  color: #94a3b8;
+  font-size: 15px;
+}}
+.controls {{
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}}
+.btn {{
+  padding: 10px 20px;
+  background: #1e293b;
+  color: #f8fafc;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}}
+.btn:hover, .btn.active {{
+  background: #2563eb;
+  border-color: #3b82f6;
+  color: #ffffff;
+}}
+.chart-container {{
+  position: relative;
+  background: #0b1120;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid #1e293b;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+  display: inline-block;
+}}
+.legend {{
+  max-width: 4600px;
+  margin-top: 24px;
+  padding: 20px;
+  background: #0f172a;
+  border-radius: 12px;
+  border: 1px solid #1e293b;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  font-size: 14px;
+}}
+.legend-item {{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}}
+.legend-color {{
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+}}
+#tooltip {{
+  position: absolute;
+  display: none;
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid #38bdf8;
+  padding: 12px 18px;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+  pointer-events: none;
+  z-index: 1000;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+  max-width: 400px;
+  backdrop-filter: blur(8px);
+}}
+.segment-rect:hover {{
+  filter: brightness(1.25);
+  stroke: #ffffff !important;
+  stroke-width: 2.5px !important;
+}}
+/* Modal */
+.modal-overlay {{
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 9999;
+  backdrop-filter: blur(6px);
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}}
+.modal-content {{
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 1100px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 32px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.9);
+  position: relative;
+}}
+.close-btn {{
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #94a3b8;
+}}
+.close-btn:hover {{ color: #ffffff; }}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="title-box">
+    <h1>{title_text}</h1>
+    <p>{subtitle_text} · Toplam 114 Sure · 6236 Âyet</p>
+  </div>
+  <div class="controls">
+    <a href="grafik_tertip.html" class="btn {'active' if order_by=='tertip' else ''}">Mushaf Tertip Sırası</a>
+    <a href="grafik_nuzul.html" class="btn {'active' if order_by=='nuzul' else ''}">Nüzul Sırası</a>
+    <span style="color:#64748b; font-size:14px;">(Sütunlara tıklayarak ayet seviyesindeki detaylı haritaya geçebilirsiniz)</span>
+  </div>
+</div>
+
+<div class="chart-container">
+  <div id="tooltip"></div>
+  <svg width="{svg_width}" height="{svg_height}" viewBox="0 0 {svg_width} {svg_height}" xmlns="http://www.w3.org/2000/svg">
+    <!-- Başlık ve Eksanler -->
+    <text x="{margin_left}" y="50" fill="#38bdf8" font-size="22" font-weight="700">Y Ekseni: Âyet Sayısı (0 - 286)</text>
+    <text x="{svg_width - margin_right}" y="50" fill="#94a3b8" font-size="18" font-weight="600" text-anchor="end">{x_label_title}</text>
+    
+    {svg_content}
+  </svg>
+</div>
+
+<div class="legend">
+  <strong style="color:#f8fafc; font-size:15px;">Mevzu Renkleri:</strong>
+  {"".join([f'<div class="legend-item"><div class="legend-color" style="background:{c["bg"]}; border:1px solid {c["border"]};"></div><span>{c["name"]}</span></div>' for c in RENK_PALETI])}
+  <div style="margin-left: auto; display:flex; gap:16px;">
+    <span style="color:#f59e0b; font-weight:600;">● Mekkî Sureler</span>
+    <span style="color:#10b981; font-weight:600;">● Medenî Sureler</span>
+  </div>
+</div>
+
+<!-- Modal Container -->
+<div class="modal-overlay" id="surahModal">
+  <div class="modal-content" id="modalBody"></div>
+</div>
+
+<script>
+const tooltip = document.getElementById('tooltip');
+document.querySelectorAll('.segment-rect').forEach(rect => {{
+  rect.addEventListener('mousemove', (e) => {{
+    const data = rect.getAttribute('data-tooltip');
+    tooltip.innerHTML = data;
+    tooltip.style.display = 'block';
+    tooltip.style.left = (e.pageX + 15) + 'px';
+    tooltip.style.top = (e.pageY - 35) + 'px';
+  }});
+  rect.addEventListener('mouseleave', () => {{
+    tooltip.style.display = 'none';
+  }});
+}});
+
+function showSurahModal(sno) {{
+  window.open('sureler/' + sno + '_detay.html', '_blank');
+}}
+</script>
+</body>
+</html>"""
+    return html
+
+
+def generate_surah_detail_chart_html(surah_data):
+    """
+    Her bir sure için ayet seviyesinde pencereli detay harita HTML'i üretir.
+    "Grafik daha da büyütülürse bu sefer her bir ayetlik pencerede ayetin kendisi yer alacaktır."
+    """
+    sno = surah_data["sno"]
+    name = surah_data["name"]
+    arabic = surah_data["arabic"]
+    meaning = surah_data["meaning"]
+    vcount = surah_data["verses_count"]
+    place = surah_data["place"]
+    nuzul = surah_data["nuzul_order"]
+    segments = surah_data["segments"]
+    verses = surah_data["verses"]
+
+    # Ayet sözlüğü
+    verse_dict = {v["verseNumber"]: v for v in verses}
+
+    # Mini mevzu çubuğu
+    mini_bar_parts = []
+    for seg in segments:
+        pct = (seg["count"] / vcount) * 100
+        mini_bar_parts.append(
+            f'<div style="flex: {seg["count"]}; background:{seg["color"]}; border:1px solid {seg["border"]}; '
+            f'padding:8px 4px; text-align:center; color:#ffffff; font-size:12px; font-weight:600; '
+            f'overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" '
+            f'title="{seg["title"]} ({seg["start"]}-{seg["end"]})">'
+            f'{seg["title"]} ({seg["count"]})'
+            f'</div>'
+        )
+    mini_bar_html = f'<div style="display:flex; width:100%; border-radius:8px; overflow:hidden; margin:20px 0; box-shadow:0 4px 15px rgba(0,0,0,0.3);">' + "".join(mini_bar_parts) + '</div>'
+
+    # Mevzular ve altındaki ayet pencereleri
+    sections_html = []
+    for seg in segments:
+        verses_in_seg_html = []
+        for vnum in range(seg["start"], seg["end"] + 1):
+            vobj = verse_dict.get(vnum, {})
+            v_arabic = vobj.get("arabic", "")
+            turkish_dict = vobj.get("turkish", {})
+            v_meal = turkish_dict.get("diyanet_vakfi") or turkish_dict.get("hayrat_nesriyat") or turkish_dict.get("omer_nasuhi_bilmen") or ""
+
+            verses_in_seg_html.append(f"""
+            <div class="verse-window" style="border-left: 5px solid {seg['color']};">
+              <div class="verse-header">
+                <span class="verse-badge" style="background:{seg['color']};">Âyet {vnum}</span>
+                <span class="verse-key">{sno}:{vnum}</span>
+              </div>
+              <div class="verse-arabic">{v_arabic}</div>
+              <div class="verse-meal">{v_meal}</div>
+            </div>
+            """)
+
+        sections_html.append(f"""
+        <div class="topic-section">
+          <div class="topic-header" style="background: linear-gradient(90deg, {seg['color']}33, transparent); border-left: 6px solid {seg['color']};">
+            <div class="topic-title" style="color: {seg['color']};">
+              <span class="topic-code">{seg.get('code', '')}</span>
+              <span>{seg['title']}</span>
+            </div>
+            <div class="topic-meta">
+              <span>Âyet {seg['start']} - {seg['end']}</span>
+              <span class="badge" style="background:{seg['color']};">{seg['count']} Âyet</span>
+            </div>
+          </div>
+          <div class="verse-grid">
+            {"".join(verses_in_seg_html)}
+          </div>
+        </div>
+        """)
+
+    html = f"""<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>S{sno:03d} · {name} Suresi Âyet ve Mevzu Haritası</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+* {{ box-sizing: border-box; }}
+body {{
+  margin: 0;
+  padding: 32px;
+  background: #090d16;
+  color: #f1f5f9;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}}
+.container {{
+  max-width: 1400px;
+  margin: 0 auto;
+}}
+.surah-header {{
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}}
+.surah-title-box h1 {{
+  margin: 0 0 8px 0;
+  font-size: 32px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}}
+.surah-arabic {{
+  font-family: 'Amiri', serif;
+  font-size: 36px;
+  color: #38bdf8;
+}}
+.surah-badges {{
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}}
+.badge {{
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+}}
+.badge-mushaf {{ background: #2563eb; }}
+.badge-nuzul {{ background: #7c3aed; }}
+.badge-place {{ background: #059669; }}
+.badge-meaning {{ background: #334155; }}
+
+.topic-section {{
+  margin-top: 36px;
+  background: #0b1120;
+  border: 1px solid #1e293b;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}}
+.topic-header {{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}}
+.topic-title {{
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}}
+.topic-code {{
+  font-family: monospace;
+  background: rgba(255,255,255,0.1);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 14px;
+}}
+.topic-meta {{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #94a3b8;
+  font-weight: 600;
+}}
+.verse-grid {{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px;
+}}
+.verse-window {{
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}}
+.verse-window:hover {{
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  border-color: #38bdf8;
+}}
+.verse-header {{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}}
+.verse-badge {{
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #ffffff;
+}}
+.verse-key {{
+  color: #64748b;
+  font-family: monospace;
+  font-size: 13px;
+}}
+.verse-arabic {{
+  font-family: 'Amiri', serif;
+  font-size: 24px;
+  line-height: 1.8;
+  text-align: right;
+  direction: rtl;
+  color: #f8fafc;
+  padding: 6px 0;
+}}
+.verse-meal {{
+  font-size: 14px;
+  line-height: 1.6;
+  color: #cbd5e1;
+  border-top: 1px dashed #1e293b;
+  padding-top: 10px;
+}}
+@media (max-width: 768px) {{
+  .verse-grid {{ grid-template-columns: 1fr; }}
+}}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="surah-header">
+    <div class="surah-title-box">
+      <h1>
+        <span>{sno}. {name} Suresi</span>
+        <span class="surah-arabic">{arabic}</span>
+      </h1>
+      <div class="surah-badges">
+        <span class="badge badge-mushaf">Mushaf Tertibi: {sno}</span>
+        <span class="badge badge-nuzul">Nüzul Sırası: {nuzul}</span>
+        <span class="badge badge-place">{place}</span>
+        <span class="badge badge-meaning">Anlamı: {meaning}</span>
+        <span class="badge badge-mushaf">{vcount} Âyet</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Surenin Kendi İçindeki Mevzular Sütun / Cetvel Özeti -->
+  {mini_bar_html}
+
+  <!-- Mevzulara Göre Âyet Pencereleri -->
+  {"".join(sections_html)}
+</div>
+</body>
+</html>"""
+    return html
+
+
+def build_all_charts():
+    """Tüm grafikleri üretir ve HTML/PNG olarak kaydeder."""
+    HTML_OUT_DIR.mkdir(parents=True, exist_ok=True)
+    (HTML_OUT_DIR / "sureler").mkdir(parents=True, exist_ok=True)
+    GRAFIKLER_DIR.mkdir(parents=True, exist_ok=True)
+    GRAFIKLER_SURE_DIR.mkdir(parents=True, exist_ok=True)
+
+    print("1. Kur'an sure verileri yükleniyor...")
+    surahs = load_all_surah_data()
+    print(f"   {len(surahs)} sure başarıyla yüklendi.")
+
+    # 1. Tertip Grafiği HTML
+    print("2. Tertip sırası panoramik grafiği üretiliyor...")
+    tertip_html = generate_panoramic_chart_html(surahs, order_by="tertip")
+    tertip_path = HTML_OUT_DIR / "grafik_tertip.html"
+    with open(tertip_path, "w", encoding="utf-8") as f:
+        f.write(tertip_html)
+    print(f"   Kaydedildi: {tertip_path}")
+
+    # 2. Nüzul Grafiği HTML
+    print("3. Nüzul sırası panoramik grafiği üretiliyor...")
+    nuzul_html = generate_panoramic_chart_html(surahs, order_by="nuzul")
+    nuzul_path = HTML_OUT_DIR / "grafik_nuzul.html"
+    with open(nuzul_path, "w", encoding="utf-8") as f:
+        f.write(nuzul_html)
+    print(f"   Kaydedildi: {nuzul_path}")
+
+    # 3. Her Sure için Ayet Pencereli Detay Harita HTML
+    print("4. 114 sure için ayet seviyesinde pencereli detay haritaları üretiliyor...")
+    for s in surahs:
+        s_html = generate_surah_detail_chart_html(s)
+        s_path = HTML_OUT_DIR / "sureler" / f"{s['sno']}_detay.html"
+        with open(s_path, "w", encoding="utf-8") as f:
+            f.write(s_html)
+    print("   114 surenin detay haritaları tamamlandı.")
+
+    # 4. Headless Chrome ile Ekran Görüntüleri (Screenshots)
+    print("5. Panoramik grafiklerin yüksek çözünürlüklü ekran görüntüleri alınıyor...")
+    tertip_png = GRAFIKLER_DIR / "kuran_sureleri_tertip_cetveli.png"
+    nuzul_png = GRAFIKLER_DIR / "kuran_sureleri_nuzul_cetveli.png"
+
+    # Tertip ekran görüntüsü (Ultra-wide 4600x1400)
+    subprocess.run([
+        "google-chrome", "--headless=new", "--no-sandbox", "--disable-gpu",
+        "--window-size=4650,1450", f"--screenshot={tertip_png}", str(tertip_path)
+    ], check=True, capture_output=True)
+    print(f"   Ekran görüntüsü alındı: {tertip_png} ({os.path.getsize(tertip_png)} bayt)")
+
+    # Nüzul ekran görüntüsü
+    subprocess.run([
+        "google-chrome", "--headless=new", "--no-sandbox", "--disable-gpu",
+        "--window-size=4650,1450", f"--screenshot={nuzul_png}", str(nuzul_path)
+    ], check=True, capture_output=True)
+    print(f"   Ekran görüntüsü alındı: {nuzul_png} ({os.path.getsize(nuzul_png)} bayt)")
+
+    # Surelerin örnek / temsilî kesit ekran görüntüleri (Örn: Fâtiha, Bakara, Yâsîn, Kasas, İhlas vb.)
+    print("6. Sure bazlı kesit ekran görüntüleri alınıyor...")
+    sample_sures = [1, 2, 28, 36, 67, 108, 112, 114]
+    for sno in sample_sures:
+        s_html_path = HTML_OUT_DIR / "sureler" / f"{sno}_detay.html"
+        s_png_path = GRAFIKLER_SURE_DIR / f"sure_{sno:03d}_kesit.png"
+        subprocess.run([
+            "google-chrome", "--headless=new", "--no-sandbox", "--disable-gpu",
+            "--window-size=1400,900", f"--screenshot={s_png_path}", str(s_html_path)
+        ], check=True, capture_output=True)
+        print(f"   Sure {sno} kesit görüntüsü alındı: {s_png_path}")
+
+    return {
+        "tertip_html": tertip_path,
+        "nuzul_html": nuzul_path,
+        "tertip_png": tertip_png,
+        "nuzul_png": nuzul_png,
+        "surahs": surahs
+    }
+
+
+if __name__ == "__main__":
+    build_all_charts()

@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>S078 · Nebe' Suresi Âyet ve Mevzu Haritası</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 32px;
+  background: #090d16;
+  color: #f1f5f9;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.surah-header {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.surah-title-box h1 {
+  margin: 0 0 8px 0;
+  font-size: 32px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.surah-arabic {
+  font-family: 'Amiri', serif;
+  font-size: 36px;
+  color: #38bdf8;
+}
+.surah-badges {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+.badge {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+}
+.badge-mushaf { background: #2563eb; }
+.badge-nuzul { background: #7c3aed; }
+.badge-place { background: #059669; }
+.badge-meaning { background: #334155; }
+
+.topic-section {
+  margin-top: 36px;
+  background: #0b1120;
+  border: 1px solid #1e293b;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+.topic-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+.topic-title {
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.topic-code {
+  font-family: monospace;
+  background: rgba(255,255,255,0.1);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.topic-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #94a3b8;
+  font-weight: 600;
+}
+.verse-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px;
+}
+.verse-window {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.verse-window:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  border-color: #38bdf8;
+}
+.verse-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.verse-badge {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #ffffff;
+}
+.verse-key {
+  color: #64748b;
+  font-family: monospace;
+  font-size: 13px;
+}
+.verse-arabic {
+  font-family: 'Amiri', serif;
+  font-size: 24px;
+  line-height: 1.8;
+  text-align: right;
+  direction: rtl;
+  color: #f8fafc;
+  padding: 6px 0;
+}
+.verse-meal {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #cbd5e1;
+  border-top: 1px dashed #1e293b;
+  padding-top: 10px;
+}
+@media (max-width: 768px) {
+  .verse-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="surah-header">
+    <div class="surah-title-box">
+      <h1>
+        <span>78. Nebe' Suresi</span>
+        <span class="surah-arabic">النبأ</span>
+      </h1>
+      <div class="surah-badges">
+        <span class="badge badge-mushaf">Mushaf Tertibi: 78</span>
+        <span class="badge badge-nuzul">Nüzul Sırası: 80</span>
+        <span class="badge badge-place">Mekkî</span>
+        <span class="badge badge-meaning">Anlamı: Büyük Haber</span>
+        <span class="badge badge-mushaf">40 Âyet</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Surenin Kendi İçindeki Mevzular Sütun / Cetvel Özeti -->
+  <div style="display:flex; width:100%; border-radius:8px; overflow:hidden; margin:20px 0; box-shadow:0 4px 15px rgba(0,0,0,0.3);"><div style="flex: 16; background:#1e40af; border:1px solid #1d4ed8; padding:8px 4px; text-align:center; color:#ffffff; font-size:12px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Büyük haber ve kâinat (1-16)">Büyük haber ve kâinat (16)</div><div style="flex: 14; background:#065f46; border:1px solid #047857; padding:8px 4px; text-align:center; color:#ffffff; font-size:12px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Kıyamet ve cehennem (17-30)">Kıyamet ve cehennem (14)</div><div style="flex: 10; background:#b45309; border:1px solid #d97706; padding:8px 4px; text-align:center; color:#ffffff; font-size:12px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Cennet ve kâfirler (31-40)">Cennet ve kâfirler (10)</div></div>
+
+  <!-- Mevzulara Göre Âyet Pencereleri -->
+  
+        <div class="topic-section">
+          <div class="topic-header" style="background: linear-gradient(90deg, #1e40af33, transparent); border-left: 6px solid #1e40af;">
+            <div class="topic-title" style="color: #1e40af;">
+              <span class="topic-code">K078-01</span>
+              <span>Büyük haber ve kâinat</span>
+            </div>
+            <div class="topic-meta">
+              <span>Âyet 1 - 16</span>
+              <span class="badge" style="background:#1e40af;">16 Âyet</span>
+            </div>
+          </div>
+          <div class="verse-grid">
+            
+            <div class="verse-window" style="border-left: 5px solid #1e40af;">
+              <div class="verse-header">
+                <span class="verse-badge" style="background:#1e40af;">Âyet 1</span>
+                <span class="verse-key">78:1</span>
+              </div>
+              <div class="verse-arabic"> عَمَّ يَتَسَآءَلُونَ</div>
+              <div class="verse-meal">Birbirlerine neyi soruyorlar?</div>
+            </div>
+            
+            <div class="verse-window" style="border-left: 5px solid #1e40af;">
+              <div class="verse-header">
+                <span class="verse-badge" style="background:#1e40af;">Âyet 2</span>
+                <span class="verse-key">78:2</span>
+              </div>
+              <div class="verse-arabic">عَنِ ٱلنَّبَإِ ٱلْعَظِيمِ</div>
+              <div class="verse-meal">(2-3) (İnanıp inanmamakta) ayrılığa düştükleri büyük haberi mi?</div>
+            </div>
+            
+            <div class="verse-window" style="border-left: 5px solid #1e40af;">
+              <div class="verse-header">
+                <span class="verse-badge" style="background:#1e40af;">Âyet 3</span>
+                <span class="verse-key">78:3</span>
+              </div>
+              <div class="verse-arabic">ٱلَّذِى هُمْ فِيهِ مُخْتَلِفُونَ</div>
+              <div class="verse-meal">(2-3) (İnanıp inanmamakta) ayrılığa düştükleri büyük haberi mi?</div>
+            </div>
+            
+            <div class="verse-window" style="border-left: 5px solid #1e40af;">
+              <div class="verse-header">
+                <span class="verse-badge" style="background:#1e40af;">Âyet 4</span>
+                <span class="verse-key">78:4</span>
+              </div>
+              <div class="verse-arabic">كَلَّا سَيَعْلَمُونَ</div>
+              <div class="verse-meal">Hayır! Anlayacaklar!</div>
+            </div>
+            
+            <div class="verse-window" style="border-left: 5px solid #1e40af;">
+              <div class="verse-header">
+                <span class="verse-badge" style="background:#1e40af;">Âyet 5</span>
+                <span class="verse-key">78:5</span>
+              </div>
+              <div class="verse-arabic">ثُمَّ كَلَّا سَيَعْلَمُونَ</div>
+              <div class="verse-meal">Yine hayır! Onlar anlayacaklar!</div>
+            </div>
+            
+            <div class="verse-window" style="border-left: 5px solid #1e40af;">
+              <div class="verse-header">
+                <span class="verse-badge" style="background:#1e40af;">Âyet 6</span>
+                <span class="verse-key">78:6</span>
+              </div>
+              <div class="verse-arabic">أَلَمْ نَجْعَلِ ٱلْأَرْضَ مِهَـٰدًا</div>
+              <div class="verse-meal">(6-7) Biz yeryüzünü bir döşek, dağları da birer kazık yapmadık mı?</div>
+            </div>
+            
+            <div class="verse-window" style="border-left: 5px solid #1e40af;">
+              <div class="verse-header">
+                <span class="verse-badge" style="background:#1e40af;">Âyet 7</span>
+                <span class="verse-key">78:7</span>
+              </div>
+              <div class="verse-arabic">وَٱلْجِبَالَ أَوْتَادًا</div>
+              <div class="verse-meal">(6-7) Biz yeryüzünü bir döşek, dağları da birer kazık yapmadık mı?</div>
+            </div>
+            
+            <div class="verse-window" style="border-left: 5px solid #1e40af;">
+              <div class="verse-header">
+                <span class="verse-badge" style="background:#1e40af;">Âyet 8</span>
+                <span class="verse-key">78:8</span>
+              </div>
+              <div class="verse-arabic">وَخَلَقْنَـٰكُمْ أَزْوَٰجًا</div>
+              <div class="verse-meal">Sizi çifter çifter yarattık.</div>
+            </div>
+            
+            <div class="verse-window" style="border-left: 5px solid #1e40af;">
+              <div class="verse-header">
+                <span class="verse-badge" style="background:#1e40af;">Âyet 9</span>
+                <span class="verse-key">78:9</span>
+              </div>
+              <div class="verse-arabic">وَجَعَلْنَا نَوْمَكُمْ سُبَاتًا</div>
+              <div class="verse-meal">Uykunuzu bir dinlenme kıldık.</div>
+            </div>
+            
+            <div class="verse-window" style="border-left: 5px solid #1e40af;">
+              <div class="verse-header">
+                <span class="verse-badge" style="background:#1e40af;">Âyet 10</span>
+                <span class="verse-key">78:10</span>
+              </div>
+              <div class="verse-arabic">وَجَعَلْنَا ٱلَّيْلَ لِبَاسًا</div>
+              <div class="verse-meal">Geceyi bir örtü yaptık.</div>
+            </div>
+            
+            <div class="verse-window" style="border-left: 5px solid #1e40af;">
+              <div class="verse-header">
+                <span class="verse-badge" style="background:#1e40af;">Âyet 11</span>
+                <span class="verse-key">78:11</span>
+              </div>
+              <div class="verse-arabic">وَجَعَلْنَا ٱلنَّهَارَ مَعَاشًا</div>
+              <div class="verse-meal">Gündüzü de çalışıp kazanma zamanı kıldık.</div>
+            </div>
+            
+            <div class="verse-window" style="border-left: 5px solid #1e40af;">
+              <div class="verse-header">
+                <span class="verse-badge" style="background:#1e40af;">Âyet 12</span>
+                <span class="verse-key">78:12</span>
+              </div>
+              <div class="verse-arabic">وَبَنَيْنَا فَوْقَكُمْ سَبْعًا شِدَادًا</div>
+              <div class="verse-meal">Üstünüzde yedi kat sağlam göğü bina ettik.</div>
+            </div>
+            
+            <div class="verse-window" style="border-left: 5px solid #1e40af;">
+              <div class="verse-header">
+                <span class="verse-badge" style="background:#1e40af;">Âyet 13</span>
+                <span class="verse-key">78:13</span>
+              </div>
+              <div class="verse-arabic">وَجَعَلْنَا سِرَاجًا وَهَّاجًا</div>
+              <div class="verse-meal">(Orada) alev alev yanan bir kandil yarattık.</div>
+            </div>
+            
+            <div class="verse-window" style="border-left: 5px solid #1e40af;">
+              <div class="verse-header">
+                <span class="verse-badge" style="background:#1e40af;">Âyet 14</span>
+                <span class="verse-key">78:14</span>
+              </div>
+              <div class="verse-arabic">وَأَنزَلْنَا مِنَ ٱلْمُعْصِرَٰتِ مَآءً ثَجَّاجًا</div>
+              <div class="verse-meal">(14-16) Size tohumlar, bitkiler, (ağaçları) sarmaş dolaş olmuş bağlar bahçeler yetiştirmek için üstüste yığılıp sıkışan bulutlardan şarıl şarıl akan sular indirdik.</div>
+            </div>
+            
+            <div class="verse-window" style="border-left: 5px solid #1e40af;">
+              <div class="verse-header">
+                <span class="verse-badge" style="background:#1e40af;">Âyet 15</span>
+                <span class="verse-key">78:15</span>
+              </div>
+              <div class="verse-arabic">لِّنُخْرِجَ بِهِۦ حَبًّا وَنَبَاتًا</div>
+              <div class="verse-meal">(14-16) Size tohumlar, bitkiler, (ağaçları) sarmaş dolaş olmuş bağlar bahçeler yetiştirmek için üstüste yığılıp sıkışan bulutlardan şarıl şarıl akan sular indirdik.</div>
+            </div>
+            
+            <div class="verse-window" style="border-left: 5px solid #1e40af;">
+              <div class="verse-header">
+                <span class="verse-badge" style="background:#1e40af;">Âyet 16</span>
+                <span class="verse-key">78:16</span>
+              </div>
+              <div class="verse-arabic">وَجَنَّـٰتٍ أَلْفَافًا</div>
+              <div class="verse-meal">(14-16) Size tohumlar, bitkiler, (ağaçları) sarmaş dolaş olmuş bağlar bahçeler yetiştirmek için üstüste yığılıp sıkışan bulutlardan şarıl şarıl akan sular indirdik.</div>
+            </div>
+            
+          </div>
+        </div>
+        
+        <div class="topic-section">
+          <div class="topic-header" style="background: linear-gradient(90deg, #065f4633, transparent); border-left: 6px solid #065f46;">
+            <div class="topic-title" style="color: #065f46;">
+              <span class="topic-code">K078-02</span>
+              <span>Kıyamet ve cehennem</span>
+            </div>
+            <div class="topic-meta">
+              <span>Âyet 17 - 30</span>
+              <span class="badge" style="background:#065f46;">14 Âyet</span>
+            </div>
+          </div>
+          <div class="verse-grid">
+            
+            <div class="verse-window" style="border-left: 5px solid #065f46;">
+              <div class="verse-header">
+                <span class="verse-badge" style="background:#065f46;">Âyet 17</span>
+                <span class="verse-key">78:17</span>
+              </div>
+              <div class="verse-arabic">إِنَّ يَوْمَ ٱلْفَصْلِ كَانَ مِيقَـٰتًا</div>
+              <div class="verse-meal">Şüphesiz hüküm günü vakit olarak belirlenmiştir.</div>
+            </div>
+            
+            <div class="verse-window" style="border-left: 5px solid #065f46;">
+              <div class="verse-header">
+                <span class="verse-badge" style="background:#065f46;">Âyet 18</span>
+                <span class="verse-key">78:18</span>
+              </div>
+              <div class="verse-arabic">يَوْمَ يُنفَخُ فِى ٱلصُّورِ فَتَأْتُونَ أَفْوَاجًا</div>
+              <div class="verse-meal">Sûr’a üflendiği gün, bölük bölük Allah’a gelirsiniz;</div>
+            </div>
+            
+            <div class="verse-window" style="border-left: 5px solid #065f46;">
+              <div class="verse-header">
+                <span class="verse-badge" style="background:#065f46;">Âyet 19</span>
+                <span class="verse-key">78:19</span>
+              </div>
+              <div class="verse-arabic">وَفُتِحَتِ ٱلسَّمَآءُ فَكَانَتْ أَبْوَٰبًا</div>
+              <div class="verse-meal">Gökyüzü açılır ve orada pek çok kapılar oluşur;</div>
+            </div>
+            
+            <div class="verse-window" style="border-left: 5px solid #065f46;">
+              <div class="verse-header">
+                <span class="verse-badge" style="background:#065f46;">Âyet 20</span>
+                <span class="verse-key">78:20</span>
+              </div>
+              <div class="verse-arabic">وَسُيِّرَتِ ٱلْجِبَالُ فَكَانَتْ سَرَابًا</div>
+              <div class="verse-meal">Dağlar yürütülür, serap haline gelir.</div>
+            </div>
+            
+            <div class="verse-window" style="border-left: 5px solid #065f46;">
+              <div class="verse-header">
+                <span class="verse-badge" style="background:#065f46;">Âyet 21</span>
+                <span class="verse-key">78:21</span>
+              </div>
+              <div class="verse-arabic">إِنَّ جَهَنَّمَ كَانَتْ مِرْصَادًا</div>
+              <div class="verse-meal">(21-22) Şüphesiz, azgınların barınağı olacak cehennem pusuda beklemektedir.</div>
+            </div>
+            
+            <div class="verse-window" style="border-left: 5px solid #065f46;">
+              <div class="verse-header">
+                <span class="verse-badge" style="background:#065f46;">Âyet 22</span>
+                <span class="verse-key">78:22</span>
+              </div>
+              <div class="verse-arabic">لِّلطَّـٰغِينَ مَـَٔابًا</div>
+              <div class="verse-meal">(21-22) Şüphesiz, azgınların barınağı olacak cehennem pusuda beklemektedir.</div>
+            </div>
+            
+            <div class="verse-window" style="border-left: 5px solid #065f46;">
+              <div class="verse-header">
+                <span class="verse-badge" style="background:#065f46;">Âyet 23</span>
+                <span class="verse-key">78:23</span>
+              </div>
+              <div class="verse-arabic">لَّـٰبِثِينَ فِيهَآ أَحْقَابًا</div>
+              <div class="verse-meal">(23-26) (Azgınlar) orada çağlar boyu kalırlar, orada bir serinlik ya da (susuzluk gideren) bir içecek tatmazlar, ancak (dünyada yaptıklarına) uygun karşılık olarak kaynar su ve irin tadarlar.</div>
+            </div>
+            
+            <div class="verse-window" style="border-left: 5px solid #065f46;">
+              <div class="verse-header">
+                <span class="verse-badge" style="background:#065f46;">Âyet 24</span>
+                <span class="verse-key">78:24</span>
+              </div>
+              <div class="verse-arabic">لَّا يَذُوقُونَ فِيهَا بَرْدًا وَلَا شَرَابًا</div>
+              <div class="verse-meal">(23-26) (Azgınlar) orada çağlar boyu kalırlar, orada bir serinlik ya da (susuzluk gideren) bir içecek tatmazlar, ancak (dünyada yaptıklarına) uygun karşılık olarak kaynar su ve irin tadarlar.</div>
+            </div>
+            
+            <div class="verse-window" style="border-left: 5px solid #065f46;">
+              <div class="verse-header">
+                <span class="verse-badge" style="background:#065f46;">Âyet 25</span>
+                <span class="verse-key">78:25</span>
+              </div>
+              <div class="verse-arabic">إِلَّا حَمِيمًا وَغَسَّاقًا</div>
+              <div class="verse-meal">(23-26) (Azgınlar) orada çağlar boyu kalırlar, orada bir serinlik ya da (susuzluk gideren) bir içecek tatmazlar, ancak (dünyada yaptıklarına) uygun karşılık olarak kaynar su ve irin tadarlar.</div>
+            </div>
+            
+            <div class="verse-window" style="border-left: 5px solid #065f46;">
+              <div class="verse-header">
+                <span class="verse-badge" style="background:#065f46;">Âyet 26</span>
+                <span class="verse-key">78:26</span>
+              </div>
+              <div class="verse-arabic">جَزَآءً وِفَاقًا</div>
+              <div class="verse-meal">(23-26) (Azgınlar) orada çağlar boyu kalırlar, orada bir serinlik ya da (susuzluk gideren) bir içecek tatmazlar, ancak (dünyada yaptıklarına) uygun karşılık olarak kaynar su ve irin tadarlar.</div>
+            </div>
+            
+            <div class="verse-window" style="border-left: 5px solid #065f46;">
+              <div class="verse-header">
+                <span class="verse-badge" style="background:#065f46;">Âyet 27</span>
+                <span class="verse-key">78:27</span>
+              </div>
+              <div class="verse-arabic">إِنَّهُمْ كَانُوا۟ لَا يَرْجُونَ حِسَابًا</div>
+              <div class="verse-meal">Çünkü onlar hesap gününü (geleceğini) ummazlardı.</div>
+            </div>
+            
+            <div class="verse-window" style="border-left: 5px solid #065f46;">
+              <div class="verse-header">
+                <span class="verse-badge" style="background:#065f46;">Âyet 28</span>
+                <span class="verse-key">78:28</span>
+              </div>
+              <div class="verse-arabic">وَكَذَّبُوا۟ بِـَٔايَـٰتِنَا كِذَّابًا</div>
+              <div class="verse-meal">Bizim âyetlerimizi yalanladıkça yalanlamışlardı.</div>
+            </div>
+            
+            <div class="verse-window" style="border-left: 5px solid #065f46;">
+              <div class="verse-header">
+                <span class="verse-badge" style="background:#065f46;">Âyet 29</span>
+                <span class="verse-key">78:29</span>
+              </div>
+              <div class="verse-arabic">وَكُلَّ شَىْءٍ أَحْصَيْنَـٰهُ كِتَـٰبًا</div>
+              <div class="verse-meal">Biz ise her şeyi bir kitapta sayıp yazmışızdır.</div>
+            </div>
+            
+            <div class="verse-window" style="border-left: 5px solid #065f46;">
+              <div class="verse-header">
+                <span class="verse-badge" style="background:#065f46;">Âyet 30</span>
+                <span class="verse-key">78:30</span>
+              </div>
+              <div class="verse-arabic">فَذُوقُوا۟ فَلَن نَّزِيدَكُمْ إِلَّا عَذَابًا</div>
+              <div class="verse-meal">Tadın! Bundan sonra yalnızca azabınızı arttıracağız.</div>
+            </div>
+            
+          </div>
+        </div>
+        
+        <div class="topic-section">
+          <div class="topic-header" style="background: linear-gradient(90deg, #b4530933, transparent); border-left: 6px solid #b45309;">
+            <div class="topic-title" style="color: #b45309;">
+              <span class="topic-code">K078-03</span>
+              <span>Cennet ve kâfirler</span>
+            </div>
+            <div class="topic-meta">
+              <span>Âyet 31 - 40</span>
+              <span class="badge" style="background:#b45309;">10 Âyet</span>
+            </div>
+          </div>
+          <div class="verse-grid">
+            
+            <div class="verse-window" style="border-left: 5px solid #b45309;">
+              <div class="verse-header">
+                <span class="verse-badge" style="background:#b45309;">Âyet 31</span>
+                <span class="verse-key">78:31</span>
+              </div>
+              <div class="verse-arabic">إِنَّ لِلْمُتَّقِينَ مَفَازًا</div>
+              <div class="verse-meal">(31-34) Şüphesiz takvâ sahipleri için umulanı buldukları yer, bahçeler, üzüm bağları, göğüsleri tomurcuk gibi kabarmış yaşıt kızlar, içki dolu kâseler vardır.</div>
+            </div>
+            
+            <div class="verse-window" style="border-left: 5px solid #b45309;">
+              <div class="verse-header">
+                <span class="verse-badge" style="background:#b45309;">Âyet 32</span>
+                <span class="verse-key">78:32</span>
+              </div>
+              <div class="verse-arabic">حَدَآئِقَ وَأَعْنَـٰبًا</div>
+              <div class="verse-meal">(31-34) Şüphesiz takvâ sahipleri için umulanı buldukları yer, bahçeler, üzüm bağları, göğüsleri tomurcuk gibi kabarmış yaşıt kızlar, içki dolu kâseler vardır.</div>
+            </div>
+            
+            <div class="verse-window" style="border-left: 5px solid #b45309;">
+              <div class="verse-header">
+                <span class="verse-badge" style="background:#b45309;">Âyet 33</span>
+                <span class="verse-key">78:33</span>
+              </div>
+              <div class="verse-arabic">وَكَوَاعِبَ أَتْرَابًا</div>
+              <div class="verse-meal">(31-34) Şüphesiz takvâ sahipleri için umulanı buldukları yer, bahçeler, üzüm bağları, göğüsleri tomurcuk gibi kabarmış yaşıt kızlar, içki dolu kâseler vardır.</div>
+            </div>
+            
+            <div class="verse-window" style="border-left: 5px solid #b45309;">
+              <div class="verse-header">
+                <span class="verse-badge" style="background:#b45309;">Âyet 34</span>
+                <span class="verse-key">78:34</span>
+              </div>
+              <div class="verse-arabic">وَكَأْسًا دِهَاقًا</div>
+              <div class="verse-meal">(31-34) Şüphesiz takvâ sahipleri için umulanı buldukları yer, bahçeler, üzüm bağları, göğüsleri tomurcuk gibi kabarmış yaşıt kızlar, içki dolu kâseler vardır.</div>
+            </div>
+            
+            <div class="verse-window" style="border-left: 5px solid #b45309;">
+              <div class="verse-header">
+                <span class="verse-badge" style="background:#b45309;">Âyet 35</span>
+                <span class="verse-key">78:35</span>
+              </div>
+              <div class="verse-arabic">لَّا يَسْمَعُونَ فِيهَا لَغْوًا وَلَا كِذَّٰبًا</div>
+              <div class="verse-meal">Onlar orada ne boş bir lâkırdı ne de yalan işitirler.</div>
+            </div>
+            
+            <div class="verse-window" style="border-left: 5px solid #b45309;">
+              <div class="verse-header">
+                <span class="verse-badge" style="background:#b45309;">Âyet 36</span>
+                <span class="verse-key">78:36</span>
+              </div>
+              <div class="verse-arabic">جَزَآءً مِّن رَّبِّكَ عَطَآءً حِسَابًا</div>
+              <div class="verse-meal">Bunlar Rabbinin yeterli bir bağışı, mükâfatıdır.</div>
+            </div>
+            
+            <div class="verse-window" style="border-left: 5px solid #b45309;">
+              <div class="verse-header">
+                <span class="verse-badge" style="background:#b45309;">Âyet 37</span>
+                <span class="verse-key">78:37</span>
+              </div>
+              <div class="verse-arabic">رَّبِّ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ وَمَا بَيْنَهُمَا ٱلرَّحْمَـٰنِ ۖ لَا يَمْلِكُونَ مِنْهُ خِطَابًا</div>
+              <div class="verse-meal">O, göklerin, yerin ve ikisi arasında bulunanların Rabbidir. O, rahmândır. O gün insanlar O’na karşı konuşmaya yetkili değillerdir.</div>
+            </div>
+            
+            <div class="verse-window" style="border-left: 5px solid #b45309;">
+              <div class="verse-header">
+                <span class="verse-badge" style="background:#b45309;">Âyet 38</span>
+                <span class="verse-key">78:38</span>
+              </div>
+              <div class="verse-arabic">يَوْمَ يَقُومُ ٱلرُّوحُ وَٱلْمَلَـٰٓئِكَةُ صَفًّا ۖ لَّا يَتَكَلَّمُونَ إِلَّا مَنْ أَذِنَ لَهُ ٱلرَّحْمَـٰنُ وَقَالَ صَوَابًا</div>
+              <div class="verse-meal">Ruh (Cebrail) ve melekler saf saf olup durduğu gün, Rahmân’ın izin verdiklerinden başkaları konuşmazlar; konuşan da doğruyu söyler.</div>
+            </div>
+            
+            <div class="verse-window" style="border-left: 5px solid #b45309;">
+              <div class="verse-header">
+                <span class="verse-badge" style="background:#b45309;">Âyet 39</span>
+                <span class="verse-key">78:39</span>
+              </div>
+              <div class="verse-arabic">ذَٰلِكَ ٱلْيَوْمُ ٱلْحَقُّ ۖ فَمَن شَآءَ ٱتَّخَذَ إِلَىٰ رَبِّهِۦ مَـَٔابًا</div>
+              <div class="verse-meal">İşte o, kesin olarak gelecek gündür. O halde dileyen Rabbine varan bir yol tutsun.</div>
+            </div>
+            
+            <div class="verse-window" style="border-left: 5px solid #b45309;">
+              <div class="verse-header">
+                <span class="verse-badge" style="background:#b45309;">Âyet 40</span>
+                <span class="verse-key">78:40</span>
+              </div>
+              <div class="verse-arabic">إِنَّآ أَنذَرْنَـٰكُمْ عَذَابًا قَرِيبًا يَوْمَ يَنظُرُ ٱلْمَرْءُ مَا قَدَّمَتْ يَدَاهُ وَيَقُولُ ٱلْكَافِرُ يَـٰلَيْتَنِى كُنتُ تُرَٰبًۢا</div>
+              <div class="verse-meal">Biz, yakın bir azap ile sizi uyardık. O gün kişi önceden yaptıklarına bakacak ve inkârcı kişi: «Keşke toprak olsaydım!» diyecektir.</div>
+            </div>
+            
+          </div>
+        </div>
+        
+</div>
+</body>
+</html>

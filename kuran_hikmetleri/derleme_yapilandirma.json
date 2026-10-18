@@ -1,0 +1,40 @@
+{
+  "proje_adi": "Kur'an-ı Kerim Tertibindeki Hikmetler ve Sure Cetvelleri",
+  "alt_baslik": "Ayet Sayıları, Nüzul ve Tertip Cetveli ile Kısımlar Haritası",
+  "surum": "1.0.0",
+  "cikti_pdf": "kuran_hikmetleri.pdf",
+  "cikti_html": "kuran_hikmetleri_kitap.html",
+  "dosya_sirasi": [
+    {
+      "tur": "KAPAK",
+      "baslik": "Kur'an-ı Kerim Sureleri ve Hikmetleri"
+    },
+    {
+      "tur": "GRAFIK_TERTIP",
+      "baslik": "Kur'an Sureleri Âyet Sayıları ve Mevzular Cetveli (Mushaf Tertip Sırasıyla)",
+      "dosya": "grafikler/kuran_sureleri_tertip_cetveli.png",
+      "aciklama": "Mushaf tertip sırasına göre (1-114) surelerin âyet sayıları ve kendi içlerindeki mevzu/kısım taksimatı."
+    },
+    {
+      "tur": "GRAFIK_NUZUL",
+      "baslik": "Kur'an Sureleri Âyet Sayıları ve Mevzular Cetveli (Nüzul Sırasıyla)",
+      "dosya": "grafikler/kuran_sureleri_nuzul_cetveli.png",
+      "aciklama": "Kronolojik nüzul sırasına göre (Alak'tan Nasr'a) 114 surenin âyet sayıları ve mevzu blokları."
+    },
+    {
+      "tur": "FIHRIST",
+      "dosya": "00_FIHRIST.md"
+    },
+    {
+      "tur": "SURELER",
+      "dahil_edilecek_ekler": ["sure.md", "gayeler-ve-hikmetler.md"],
+      "sure_grafik_dahil_et": true,
+      "ayet_pencereleri_modu": "ozet_ve_harita"
+    }
+  ],
+  "izleme_ayarlari": {
+    "klasorler": ["sureler", "kaynak", "."],
+    "uzantilar": [".md", ".json", ".html"],
+    "kontrol_araligi_saniye": 3
+  }
+}
