@@ -94,6 +94,16 @@ def test_guzergah_skoru():
         pass
 
 
+def test_ezber_orani():
+    altin = "bir iki üç dört beş altı yedi sekiz dokuz on on bir on iki"
+    assert K.ezber_orani(altin, altin) == 1.0
+    assert K.ezber_orani("tamamen farklı bir metin burada yazılı", altin) == 0.0
+    yarim = " ".join(altin.split()[:10]) + " x y z"  # altının 8-gram'ları yarıda kalır: 0 < oran < 1
+    oran = K.ezber_orani(yarim, altin)
+    assert 0.0 < oran < 1.0
+    assert K.ezber_orani("herhangi", "kısa altın") == 0.0
+
+
 def test_pcgrad_ozellikleri():
     g1 = [1.0, 0.0]
     g2 = [-1.0, 0.5]  # g1 ile negatif iç çarpım

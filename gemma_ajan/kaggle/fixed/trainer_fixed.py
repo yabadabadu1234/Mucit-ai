@@ -32,6 +32,8 @@ TARGETS = ("q_proj", "v_proj")
 GEN_N = int(os.environ.get("GEN_N", "2"))  # her partide model kendi yanıtını üretir (K2)
 GEN_MAX_NEW = int(os.environ.get("GEN_MAX_NEW", "512"))
 SCORE_FLOOR = float(os.environ.get("SCORE_FLOOR", "0.1"))  # güzergâh skoru bu değerin altına inmez
+# Altın cevap eğitim hedefi değildir (ezberlemeyi önlemek için). "acik" yalnızca bilinçli deney içindir.
+ALTIN_HEDEF = os.environ.get("ALTIN_HEDEF", "kapali")
 MAX_LEN = int(os.environ.get("MAX_LEN", "4096"))
 sys.path.insert(0, os.environ.get("VERI_DIR", str(Path(__file__).resolve().parent.parent.parent / "veri")))
 EPOCHS = int(os.environ.get("EPOCHS", "1"))
@@ -96,6 +98,7 @@ def yamayi_cikar(metin):
 
 def generate_rows(model, tok, pool, start, k, torch):
     """K2: model kendi yanıtını üretir (açgözlü, zar yok). Mesafe program denetçisiyle ölçülür."""
+    from kuvvet import ezber_orani
     from mantik_veri import mesafe
     from swe_dogrula import dogrula
 
@@ -119,12 +122,14 @@ def generate_rows(model, tok, pool, start, k, torch):
                 # Yama yoksa mesafe 1 (test koşulmaz); varsa gerçek test koşusu ölçer.
                 d = dogrula(src["gorev"], yama, None, SWE_ZAMAN, kapi=False)["mesafe"] if yama else 1.0
                 out.append({"msgs": msgs + [{"role": "assistant", "content": yama or text}], "route": src["route"],
-                            "compiler_score": 0.0, "distance": d, "prompt": src["prompt"], "gorev": src["gorev"]})
+                            "compiler_score": 0.0, "distance": d, "prompt": src["prompt"], "gorev": src["gorev"],
+                            "ezber": ezber_orani(yama or text, src["msgs"][-1]["content"])})
                 log(f"SWE {src['gorev']['instance_id']}: yama={'var' if yama else 'yok'} mesafe={d:.3f}")
                 continue
             d = mesafe(src["kayit"], text)
             out.append({"msgs": msgs + [{"role": "assistant", "content": text}], "route": src["route"],
-                        "compiler_score": 0.0, "distance": d, "prompt": src["prompt"], "kayit": src["kayit"]})
+                        "compiler_score": 0.0, "distance": d, "prompt": src["prompt"], "kayit": src["kayit"],
+                        "ezber": ezber_orani(text, src["msgs"][-1]["content"])})
     model.train()
     return out
 
@@ -266,10 +271,15 @@ def main():
             gen = generate_rows(model, tok, rows, start, GEN_N, torch) if GEN_N > 0 else []
             route_score = guzergah_skorlari(route_score, gen, SCORE_FLOOR)
             part = [dict(r, compiler_score=route_score[r["route"]]) for r in rows[start:start + BATCH]]
+            ezber = [g["ezber"] for g in gen]
             log(f"parti {start // BATCH + 1}: {len(gen)} yanıt üretildi ({time.time() - t_gen:.1f}s), "
                 f"ortalama mesafe={sum(g['distance'] for g in gen) / max(1, len(gen)):.3f}, "
+                f"ezber (altın 8-gram örtüşmesi) ortalama={sum(ezber) / max(1, len(ezber)):.3f}, "
                 f"güzergâh skorları={[round(s, 3) for s in route_score]}")
-            batch = part + gen
+            # Doğrulanmış satırlar (altın cevap) hedef olarak eğitilmez; yalnız üretimler eğitilir.
+            batch = (part if ALTIN_HEDEF == "acik" else []) + gen
+            if not batch:
+                continue
             A, B = batch_plan(batch)
             streams = [torch.zeros(sum(p.numel() for p in params)) for _ in range(STREAMS)]
             used = 0

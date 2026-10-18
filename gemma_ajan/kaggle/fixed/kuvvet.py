@@ -32,6 +32,21 @@ def validate_row(row, where=""):
     return int(r), float(c), float(d)
 
 
+def ezber_orani(uretilen, altin, n=8):
+    """Altın cevabın kelime n-gramlarının üretilen metinde geçme oranı, [0,1].
+
+    Yüksekse model altın cevabı kelimesi kelimesine üretiyor (ezber). Bu oran yalnızca ÖLÇÜLÜR;
+    eğitim sinyali olarak kullanılmaz. Altın kısa ise (n'den az kelime) 0 döner.
+    """
+    a = altin.split()
+    if len(a) < n:
+        return 0.0
+    u = uretilen.split()
+    altin_ng = {tuple(a[i:i + n]) for i in range(len(a) - n + 1)}
+    uretilen_ng = {tuple(u[i:i + n]) for i in range(len(u) - n + 1)}
+    return len(altin_ng & uretilen_ng) / len(altin_ng)
+
+
 def guzergah_skorlari(onceki, uretilen, taban=0.1):
     """K1 derleyici skoru: her güzergâh için 1 − ortalama mesafe (güzergâha özgü denetçiyle ölçülür).
 
