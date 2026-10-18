@@ -614,7 +614,7 @@ KELIME_RENKLERI = ["#dc2626", "#2563eb", "#16a34a", "#9333ea", "#ea580c",
                    "#0891b2", "#be185d", "#ca8a04", "#4f46e5", "#0d9488"]
 
 ELMALILI_DIZIN = BASE_DIR / "kaynak" / "tafseer" / "elmalili"
-_ELMALILI_BASLIK = re.compile(r"^(?:\d+/(\d+)\.|(\d+)((?:-\d+)*)-)\s*(.*)$", re.S)
+_ELMALILI_BASLIK = re.compile(r"^(?:\d+/(\d+)\.|(\d+)((?:-\d+)*)-)\s*((?:.*))$", re.S)
 _ELMALILI_BOLUM = re.compile(r"^\d+-[A-ZÇĞİÖŞÜ' ]+:\s*$")
 
 
@@ -625,43 +625,74 @@ def _elmalili_temiz(p):
 
 
 def elmalili_tefsiri(sno, n_ayet):
-    """Elmalılı tefsirini sûre bazında âyetlere böler.
+    """Elmalılı tefsirini sûre bazında âyetlere böler; yalnız tefsir metnini verir.
+    Kaynakta "Meâl-i Şerifi" ile başlayan bölümler Elmalılı'nın meâlidir: tefsir sayılmaz, dışarıda kalır.
+    Âyet başlığı (`N-`, `N-M-`, `N/M.`) ancak beklenen sıradaki âyet numarasına yakınsa kabul edilir.
+    Meâl bölümünden sonra tefsir ikinci kez, âyet başlıklarıyla başlayabilir; bu başlıklar yeniden tanınır.
     Döner: (tanıtım_paragrafları, {âyet: paragraflar | ("ortak", ilk_âyet)}).
-    Âyet başlığı (`N-`, `N-M-`, `N/M.`) ancak beklenen sıradaki âyet numarasına yakınsa kabul edilir;
-    alt maddeler (`2\\.`, `1)`) ve bölüm başlıkları (`36-YASİN:`) başlık sayılmaz."""
+    """
     yol = ELMALILI_DIZIN / f"{sno}.md"
     if not yol.exists():
         return [], {}
     t = yol.read_text(encoding="utf-8")
     paragraflar = [p for p in re.split(r"\n\s*\n", t) if p.strip()]
-    tanitim, gruplar = [], []
+    bas, serbest, gruplar = [], [], []
     beklenen = 1
+    meal_basi = None
+    meal_modu = False
+    yeniden_basladi = False
+    bagli = False  # Son paragraf bir âyet başlığına bağlı mı? Değilse metin bir âyete atanmaz.
     for p in paragraflar:
         s = _elmalili_temiz(p)
         if not s or set(s) <= set("-= ") or _ELMALILI_BOLUM.match(s):
             continue
+        if re.match(r"Me[âa]l\s*-?\s*i\s*[Şş]\s*e\s*r", s, re.I):
+            meal_modu = True
+            bagli = False
+            continue
         m = _ELMALILI_BASLIK.match(s)
-        ilk = None
+        ilk, kalan, govde = None, "", s
         if m:
             if m.group(1):
-                ilk, kalan = int(m.group(1)), ""
+                ilk = int(m.group(1))
             else:
                 ilk, kalan = int(m.group(2)), m.group(3)
+            govde = m.group(4)
+        if meal_modu:
+            if ilk is not None and beklenen <= ilk <= beklenen + 5 and ilk <= n_ayet and len(s) <= 400:
+                # Kısa âyet satırı: Elmalılı meâlidir, tefsir değildir.
+                if meal_basi is None:
+                    meal_basi = ilk
+                beklenen = ilk + 1 + len([x for x in kalan.split("-") if x])
+                continue
+            meal_modu = False
+        if ilk is not None and not yeniden_basladi and meal_basi is not None and meal_basi <= ilk <= meal_basi + 5 and ilk < beklenen:
+            # Meâlden sonra tefsirin tekrar başladığı âyet.
+            beklenen = ilk
+            yeniden_basladi = True
         if ilk is not None and beklenen <= ilk <= beklenen + 5 and ilk <= n_ayet:
             ayetler = sorted(set([ilk] + [int(x) for x in kalan.split("-") if x and int(x) <= n_ayet]))
-            gruplar.append((ayetler, [s]))
+            if yeniden_basladi and meal_basi is not None and ilk >= meal_basi:
+                # Tekrar eden başlıkta baştaki meâl alıntısı ("...") tefsir değildir.
+                govde = re.sub(r'^"[^"]*"\s*', "", govde)
+            gruplar.append((ayetler, [govde]))
             beklenen = max(ayetler) + 1
-        elif gruplar:
+            bagli = True
+        elif bagli:
             gruplar[-1][1].append(s)
+        elif gruplar:
+            serbest.append(s)
         else:
-            tanitim.append(s)
+            bas.append(s)
     harita = {}
+    tanitim = serbest
     if gruplar:
         # Başlıksız giriş paragrafları, 1. âyet hiç başlık almadıysa 1. âyete aittir.
         kapsam = [a for ayetler, _ in gruplar for a in ayetler]
-        if tanitim and 1 not in kapsam:
-            harita[1] = tanitim
-            tanitim = []
+        if bas and 1 not in kapsam:
+            harita[1] = bas
+        else:
+            tanitim = bas + serbest
         for ayetler, paragraflar_g in gruplar:
             ilk = ayetler[0]
             harita[ilk] = paragraflar_g
