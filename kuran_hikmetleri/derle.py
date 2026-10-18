@@ -523,12 +523,14 @@ def build_unified_html(config, surahs_data):
                     <div class="surah-chart-section">
                       <h3 class="chart-heading">S{sno:03d} · {s_meta['name']} Suresi Âyet Taksimatı ve Mevzu Haritası</h3>
                       {sure_sutun_grafigi(segments)}
-                      {detail_content}
+                      <div class="lazy-icerik" data-sure="{sno}"></div>
                       <p style="font-size:9pt; color:#64748b; margin-top:8px;">
                         <em>(Detaylı interaktif harita ve ayet pencereleri için bkz: <code>html_grafikler/sureler/{sno}_detay.html</code>)</em>
                       </p>
                     </div>
                     """
+                    icerik_blogu = detail_content.replace("</script", "<\\/script")
+                    chart_section_html += f'<script type="text/html" id="icerik-{sno}">{icerik_blogu}</script>'
                     sure_elements.append(chart_section_html)
 
                 body_sections.append(f"""
@@ -538,7 +540,7 @@ def build_unified_html(config, surahs_data):
                 """)
 
     kenar_maddeler = "".join(
-        f'<a href="#sure-{s["sno"]}" onclick="surelerKapat()">{s["sno"]}. {s["name"]}</a>'
+        f'<a href="#sure-{s["sno"]}" onclick="surelerKapat(); sureYukle({s["sno"]})">{s["sno"]}. {s["name"]}</a>'
         for s in sorted(surahs_data, key=lambda s: s["sno"])
     )
     kenar_html = (
@@ -1105,6 +1107,7 @@ tr:nth-child(even) {{ background: #f8fafc; }}
 }}
 body {{ padding-top: 72px; }}
 .sure-page, .sure-sutun-grafik, .ag-blok {{ scroll-margin-top: 80px; }}
+.lazy-icerik {{ min-height: 300px; }}
 .kelime-satiri {{
   display: flex;
   flex-wrap: wrap;
@@ -1155,6 +1158,27 @@ function surelerAc() {{
   document.getElementById('menuPanel').classList.remove('acik');
 }}
 function surelerKapat() {{ document.getElementById('kenar').classList.remove('acik'); }}
+function icerikYukle(el) {{
+  if (el.getAttribute('data-yuklendi')) return;
+  var kaynak = document.getElementById('icerik-' + el.getAttribute('data-sure'));
+  if (!kaynak) return;
+  el.innerHTML = kaynak.textContent;
+  el.setAttribute('data-yuklendi', '1');
+}}
+function sureYukle(n) {{
+  var el = document.querySelector('.lazy-icerik[data-sure="' + n + '"]');
+  if (el) icerikYukle(el);
+}}
+if ('IntersectionObserver' in window) {{
+  var gozlemci = new IntersectionObserver(function (girdiler) {{
+    girdiler.forEach(function (g) {{
+      if (g.isIntersecting) {{ icerikYukle(g.target); gozlemci.unobserve(g.target); }}
+    }});
+  }}, {{ rootMargin: '0px' }});
+  document.querySelectorAll('.lazy-icerik').forEach(function (el) {{ gozlemci.observe(el); }});
+}} else {{
+  document.querySelectorAll('.lazy-icerik').forEach(icerikYukle);
+}}
 </script>
 
 </body>
