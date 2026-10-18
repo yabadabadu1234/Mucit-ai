@@ -2,270 +2,255 @@
 <html lang="tr">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>S114 · Nâs Suresi Âyet ve Mevzu Haritası</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 <style>
 * { box-sizing: border-box; }
 body {
   margin: 0;
-  padding: 32px;
-  background: #090d16;
-  color: #f1f5f9;
+  padding-top: 64px;
+  background: #f5f1e8;
+  color: #1e293b;
   font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  line-height: 1.7;
 }
-.container {
-  max-width: 1400px;
-  margin: 0 auto;
-}
-.surah-header {
+.ust-cubuk {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
   background: #0f172a;
-  border: 1px solid #1e293b;
-  border-radius: 20px;
-  padding: 32px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
+  padding: 0 16px;
+  z-index: 10;
 }
-.surah-title-box h1 {
-  margin: 0 0 8px 0;
-  font-size: 32px;
-  font-weight: 800;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-.surah-arabic {
-  font-family: 'Amiri', serif;
-  font-size: 36px;
-  color: #38bdf8;
-}
-.surah-badges {
-  display: flex;
-  gap: 10px;
-  margin-top: 12px;
-  flex-wrap: wrap;
-}
-.badge {
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 13px;
-  font-weight: 600;
-  color: white;
-}
-.badge-mushaf { background: #2563eb; }
-.badge-nuzul { background: #7c3aed; }
-.badge-place { background: #059669; }
-.badge-meaning { background: #334155; }
-
-.topic-section {
-  margin-top: 36px;
-  background: #0b1120;
-  border: 1px solid #1e293b;
-  border-radius: 16px;
-  padding: 24px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
-}
-.topic-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px 20px;
+.geri {
+  color: #fbbf24;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 11pt;
+  padding: 6px 12px;
+  border: 1px solid #334155;
   border-radius: 8px;
-  margin-bottom: 24px;
 }
-.topic-title {
-  font-size: 20px;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  gap: 12px;
+.geri:hover { background: #1e293b; }
+.ust-baslik { color: #e2e8f0; font-weight: 600; font-size: 10.5pt; }
+.kitap-sayfa {
+  max-width: 880px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 40px 48px 64px;
+  min-height: 100vh;
+  box-shadow: 0 2px 18px rgba(15, 23, 42, 0.08);
 }
-.topic-code {
-  font-family: monospace;
-  background: rgba(255,255,255,0.1);
-  padding: 4px 8px;
-  border-radius: 6px;
-  font-size: 14px;
+.sure-no {
+  font-size: 9.5pt;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #64748b;
 }
-.topic-meta {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: #94a3b8;
+.sure-baslik h1 {
+  font-family: 'Cinzel', 'Plus Jakarta Sans', serif;
+  font-size: 24pt;
+  color: #0f172a;
+  margin: 4px 0 8px;
+  line-height: 1.3;
+}
+.sure-arapca {
+  font-family: 'Amiri', serif;
+  color: #1e40af;
+  font-size: 26pt;
+  margin-left: 12px;
+  font-weight: 400;
+}
+.sure-rozetler { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.rozet {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 14px;
+  font-size: 9pt;
+  color: #ffffff;
   font-weight: 600;
 }
-.verse-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  gap: 20px;
+.rozet-acik { background: #475569; }
+.mevzu { margin-top: 34px; }
+.mevzu-baslik { padding: 10px 16px; border-radius: 6px; margin-bottom: 14px; }
+.mevzu-ad { font-size: 13pt; font-weight: 700; }
+.mevzu-kod {
+  font-family: monospace;
+  font-size: 9pt;
+  background: rgba(15, 23, 42, 0.06);
+  color: #334155;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-right: 8px;
 }
-.verse-window {
-  background: #0f172a;
-  border: 1px solid #1e293b;
-  border-radius: 12px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  transition: transform 0.2s, box-shadow 0.2s;
+.mevzu-meta { color: #64748b; font-size: 9.5pt; margin-top: 4px; }
+.ayet {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-bottom: 12px;
 }
-.verse-window:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-  border-color: #38bdf8;
-}
-.verse-header {
+.ayet-baslik {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-}
-.verse-badge {
-  padding: 4px 10px;
-  border-radius: 6px;
-  font-size: 12px;
+  font-size: 9.5pt;
   font-weight: 700;
-  color: #ffffff;
+  margin-bottom: 4px;
 }
-.verse-key {
-  color: #64748b;
-  font-family: monospace;
-  font-size: 13px;
-}
-.verse-arabic {
+.ayet-kod { color: #94a3b8; font-family: monospace; font-weight: 400; }
+.ayet-ar {
   font-family: 'Amiri', serif;
-  font-size: 24px;
-  line-height: 1.8;
-  text-align: right;
+  font-size: 22pt;
+  line-height: 1.9;
   direction: rtl;
-  color: #f8fafc;
-  padding: 6px 0;
+  text-align: right;
+  color: #0f172a;
 }
-.verse-meal {
-  font-size: 14px;
-  line-height: 1.6;
-  color: #cbd5e1;
-  border-top: 1px dashed #1e293b;
-  padding-top: 10px;
+.ayet-meal {
+  font-size: 10.5pt;
+  color: #334155;
+  border-top: 1px dashed #e2e8f0;
+  padding-top: 8px;
+  margin-top: 8px;
 }
-@media (max-width: 768px) {
-  .verse-grid { grid-template-columns: 1fr; }
+.kelime-satiri {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  direction: rtl;
+  margin: 6px 0 4px;
+}
+.kelime {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2px 6px 3px;
+  background: #f8fafc;
+  border-radius: 4px;
+}
+.kelime-ar { font-family: 'Amiri', serif; font-size: 14pt; line-height: 1.6; }
+.kelime-tr { direction: ltr; font-size: 7.5pt; color: #334155; line-height: 1.2; }
+.ayet { page-break-inside: avoid; }
+@media (max-width: 640px) {
+  .kitap-sayfa { padding: 22px 16px 40px; }
+  .sure-arapca { display: block; margin: 6px 0 0; }
+}
+@media print {
+  .ust-cubuk { display: none; }
+  body { padding-top: 0; background: #ffffff; }
 }
 </style>
 </head>
 <body>
-<div class="container">
-  <div class="surah-header">
-    <div class="surah-title-box">
-      <h1>
-        <span>114. Nâs Suresi</span>
-        <span class="surah-arabic">الناس</span>
-      </h1>
-      <div class="surah-badges">
-        <span class="badge badge-mushaf">Mushaf Tertibi: 114</span>
-        <span class="badge badge-nuzul">Nüzul Sırası: 21</span>
-        <span class="badge badge-place">Mekkî</span>
-        <span class="badge badge-meaning">Anlamı: İnsanlar</span>
-        <span class="badge badge-mushaf">6 Âyet</span>
-      </div>
+<header class="ust-cubuk">
+  <a class="geri" href="../../kuran_hikmetleri_kitap.html#sure-114">&larr; Kitaba dön</a>
+  <span class="ust-baslik">Kur'an Hikmetleri · S114</span>
+</header>
+<main class="kitap-sayfa">
+  <header class="sure-baslik">
+    <div class="sure-no">Sure 114</div>
+    <h1>114. Nâs Suresi <span class="sure-arapca">الناس</span></h1>
+    <div class="sure-rozetler">
+      <span class="rozet rozet-acik">Mushaf Tertibi: 114</span>
+      <span class="rozet rozet-acik">Nüzul Sırası: 21</span>
+      <span class="rozet rozet-acik">Mekkî</span>
+      <span class="rozet rozet-acik">Anlamı: İnsanlar</span>
+      <span class="rozet rozet-acik">6 Âyet</span>
     </div>
-  </div>
+  </header>
 
-  <!-- Surenin Kendi İçindeki Mevzular Sütun / Cetvel Özeti -->
-  <div style="display:flex; width:100%; border-radius:8px; overflow:hidden; margin:20px 0; box-shadow:0 4px 15px rgba(0,0,0,0.3);"><div style="flex: 3; background:#1e40af; border:1px solid #1d4ed8; padding:8px 4px; text-align:center; color:#ffffff; font-size:12px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Muhteva ve İlgili Âyetler (1-3)">Muhteva ve İlgili Âyetler (3)</div><div style="flex: 3; background:#065f46; border:1px solid #047857; padding:8px 4px; text-align:center; color:#ffffff; font-size:12px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="İç vesvese (4-6)">İç vesvese (3)</div></div>
+  <div style="display:flex; width:100%; border-radius:8px; overflow:hidden; margin:20px 0 8px; box-shadow:0 2px 10px rgba(0,0,0,0.12);"><div style="flex: 3; background:#1e40af; border:1px solid #1d4ed8; padding:8px 4px; text-align:center; color:#ffffff; font-size:11px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Muhteva ve İlgili Âyetler (1-3)">Muhteva ve İlgili Âyetler (3)</div><div style="flex: 3; background:#065f46; border:1px solid #047857; padding:8px 4px; text-align:center; color:#ffffff; font-size:11px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="İç vesvese (4-6)">İç vesvese (3)</div></div>
 
-  <!-- Mevzulara Göre Âyet Pencereleri -->
   
-        <div class="topic-section">
-          <div class="topic-header" style="background: linear-gradient(90deg, #1e40af33, transparent); border-left: 6px solid #1e40af;">
-            <div class="topic-title" style="color: #1e40af;">
-              <span class="topic-code">K114-F</span>
-              <span>Muhteva ve İlgili Âyetler</span>
+        <section class="mevzu">
+          <header class="mevzu-baslik" style="border-left:6px solid #1e40af; background:#1e40af14;">
+            <div class="mevzu-ad" style="color:#1e40af;">
+              <span class="mevzu-kod">K114-F</span>Muhteva ve İlgili Âyetler
             </div>
-            <div class="topic-meta">
-              <span>Âyet 1 - 3</span>
-              <span class="badge" style="background:#1e40af;">3 Âyet</span>
-            </div>
-          </div>
-          <div class="verse-grid">
-            
-            <div class="verse-window" style="border-left: 5px solid #1e40af;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#1e40af;">Âyet 1</span>
-                <span class="verse-key">114:1</span>
+            <div class="mevzu-meta">Âyet 1 - 3 · <span class="rozet" style="background:#1e40af;">3 âyet</span></div>
+          </header>
+          
+            <article class="ayet" style="border-left:5px solid #1e40af;">
+              <div class="ayet-baslik">
+                <span style="color:#1e40af;">Âyet 1</span>
+                <span class="ayet-kod">114:1</span>
               </div>
-              <div class="verse-arabic"> قُلْ أَعُوذُ بِرَبِّ ٱلنَّاسِ</div>
-              <div class="verse-meal">(1-6) De ki: İnsanların kalplerine vesvese sokan, (insan Allah’ı andığında) pusuya çekilen cin ve insan şeytanının şerrinden insanların Rabbine, insanların Melikine (mutlak sahip ve hakimine) insanların İlâhına sığınırım!</div>
-            </div>
+              <div class="ayet-ar"> قُلْ أَعُوذُ بِرَبِّ ٱلنَّاسِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="قالَ"><span class="kelime-ar" style="color:#dc2626;">قُلْ</span><span class="kelime-tr">Dedi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="عُذْ"><span class="kelime-ar" style="color:#2563eb;">أَعُوذُ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="رَبّ"><span class="kelime-ar" style="color:#16a34a;">بِرَبِّ</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="ناس"><span class="kelime-ar" style="color:#9333ea;">ٱلنَّاسِ</span><span class="kelime-tr">İnsanlar</span></span></div>
+              <div class="ayet-meal">(1-6) De ki: İnsanların kalplerine vesvese sokan, (insan Allah’ı andığında) pusuya çekilen cin ve insan şeytanının şerrinden insanların Rabbine, insanların Melikine (mutlak sahip ve hakimine) insanların İlâhına sığınırım!</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #1e40af;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#1e40af;">Âyet 2</span>
-                <span class="verse-key">114:2</span>
+            <article class="ayet" style="border-left:5px solid #1e40af;">
+              <div class="ayet-baslik">
+                <span style="color:#1e40af;">Âyet 2</span>
+                <span class="ayet-kod">114:2</span>
               </div>
-              <div class="verse-arabic">مَلِكِ ٱلنَّاسِ</div>
-              <div class="verse-meal">(1-6) De ki: İnsanların kalplerine vesvese sokan, (insan Allah’ı andığında) pusuya çekilen cin ve insan şeytanının şerrinden insanların Rabbine, insanların Melikine (mutlak sahip ve hakimine) insanların İlâhına sığınırım!</div>
-            </div>
+              <div class="ayet-ar">مَلِكِ ٱلنَّاسِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="مَلِك"><span class="kelime-ar" style="color:#dc2626;">مَلِكِ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="ناس"><span class="kelime-ar" style="color:#2563eb;">ٱلنَّاسِ</span><span class="kelime-tr">İnsanlar</span></span></div>
+              <div class="ayet-meal">(1-6) De ki: İnsanların kalplerine vesvese sokan, (insan Allah’ı andığında) pusuya çekilen cin ve insan şeytanının şerrinden insanların Rabbine, insanların Melikine (mutlak sahip ve hakimine) insanların İlâhına sığınırım!</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #1e40af;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#1e40af;">Âyet 3</span>
-                <span class="verse-key">114:3</span>
+            <article class="ayet" style="border-left:5px solid #1e40af;">
+              <div class="ayet-baslik">
+                <span style="color:#1e40af;">Âyet 3</span>
+                <span class="ayet-kod">114:3</span>
               </div>
-              <div class="verse-arabic">إِلَـٰهِ ٱلنَّاسِ</div>
-              <div class="verse-meal">(1-6) De ki: İnsanların kalplerine vesvese sokan, (insan Allah’ı andığında) pusuya çekilen cin ve insan şeytanının şerrinden insanların Rabbine, insanların Melikine (mutlak sahip ve hakimine) insanların İlâhına sığınırım!</div>
-            </div>
+              <div class="ayet-ar">إِلَـٰهِ ٱلنَّاسِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="إِلٰه"><span class="kelime-ar" style="color:#dc2626;">إِلَٰهِ</span><span class="kelime-tr">ilah, tanrı</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="ناس"><span class="kelime-ar" style="color:#2563eb;">ٱلنَّاسِ</span><span class="kelime-tr">İnsanlar</span></span></div>
+              <div class="ayet-meal">(1-6) De ki: İnsanların kalplerine vesvese sokan, (insan Allah’ı andığında) pusuya çekilen cin ve insan şeytanının şerrinden insanların Rabbine, insanların Melikine (mutlak sahip ve hakimine) insanların İlâhına sığınırım!</div>
+            </article>
             
-          </div>
-        </div>
+        </section>
         
-        <div class="topic-section">
-          <div class="topic-header" style="background: linear-gradient(90deg, #065f4633, transparent); border-left: 6px solid #065f46;">
-            <div class="topic-title" style="color: #065f46;">
-              <span class="topic-code">K114-01</span>
-              <span>İç vesvese</span>
+        <section class="mevzu">
+          <header class="mevzu-baslik" style="border-left:6px solid #065f46; background:#065f4614;">
+            <div class="mevzu-ad" style="color:#065f46;">
+              <span class="mevzu-kod">K114-01</span>İç vesvese
             </div>
-            <div class="topic-meta">
-              <span>Âyet 4 - 6</span>
-              <span class="badge" style="background:#065f46;">3 Âyet</span>
-            </div>
-          </div>
-          <div class="verse-grid">
-            
-            <div class="verse-window" style="border-left: 5px solid #065f46;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#065f46;">Âyet 4</span>
-                <span class="verse-key">114:4</span>
+            <div class="mevzu-meta">Âyet 4 - 6 · <span class="rozet" style="background:#065f46;">3 âyet</span></div>
+          </header>
+          
+            <article class="ayet" style="border-left:5px solid #065f46;">
+              <div class="ayet-baslik">
+                <span style="color:#065f46;">Âyet 4</span>
+                <span class="ayet-kod">114:4</span>
               </div>
-              <div class="verse-arabic">مِن شَرِّ ٱلْوَسْوَاسِ ٱلْخَنَّاسِ</div>
-              <div class="verse-meal">(1-6) De ki: İnsanların kalplerine vesvese sokan, (insan Allah’ı andığında) pusuya çekilen cin ve insan şeytanının şerrinden insanların Rabbine, insanların Melikine (mutlak sahip ve hakimine) insanların İlâhına sığınırım!</div>
-            </div>
+              <div class="ayet-ar">مِن شَرِّ ٱلْوَسْوَاسِ ٱلْخَنَّاسِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="مِن"><span class="kelime-ar" style="color:#dc2626;">مِن</span><span class="kelime-tr">-den, -dan</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="شَرّ"><span class="kelime-ar" style="color:#2563eb;">شَرِّ</span><span class="kelime-tr">Şer</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="وَسْواس"><span class="kelime-ar" style="color:#16a34a;">ٱلْوَسْوَاسِ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="خَنّاس"><span class="kelime-ar" style="color:#9333ea;">ٱلْخَنَّاسِ</span><span class="kelime-tr">the (belirteç)</span></span></div>
+              <div class="ayet-meal">(1-6) De ki: İnsanların kalplerine vesvese sokan, (insan Allah’ı andığında) pusuya çekilen cin ve insan şeytanının şerrinden insanların Rabbine, insanların Melikine (mutlak sahip ve hakimine) insanların İlâhına sığınırım!</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #065f46;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#065f46;">Âyet 5</span>
-                <span class="verse-key">114:5</span>
+            <article class="ayet" style="border-left:5px solid #065f46;">
+              <div class="ayet-baslik">
+                <span style="color:#065f46;">Âyet 5</span>
+                <span class="ayet-kod">114:5</span>
               </div>
-              <div class="verse-arabic">ٱلَّذِى يُوَسْوِسُ فِى صُدُورِ ٱلنَّاسِ</div>
-              <div class="verse-meal">(1-6) De ki: İnsanların kalplerine vesvese sokan, (insan Allah’ı andığında) pusuya çekilen cin ve insan şeytanının şerrinden insanların Rabbine, insanların Melikine (mutlak sahip ve hakimine) insanların İlâhına sığınırım!</div>
-            </div>
+              <div class="ayet-ar">ٱلَّذِى يُوَسْوِسُ فِى صُدُورِ ٱلنَّاسِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="الَّذِي"><span class="kelime-ar" style="color:#dc2626;">ٱلَّذِى</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="وَسْوَسَ"><span class="kelime-ar" style="color:#2563eb;">يُوَسْوِسُ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="فِي"><span class="kelime-ar" style="color:#16a34a;">فِى</span><span class="kelime-tr">İçinde</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="صَدْر"><span class="kelime-ar" style="color:#9333ea;">صُدُورِ</span><span class="kelime-tr">göğüs, sine</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="ناس"><span class="kelime-ar" style="color:#ea580c;">ٱلنَّاسِ</span><span class="kelime-tr">İnsanlar</span></span></div>
+              <div class="ayet-meal">(1-6) De ki: İnsanların kalplerine vesvese sokan, (insan Allah’ı andığında) pusuya çekilen cin ve insan şeytanının şerrinden insanların Rabbine, insanların Melikine (mutlak sahip ve hakimine) insanların İlâhına sığınırım!</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #065f46;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#065f46;">Âyet 6</span>
-                <span class="verse-key">114:6</span>
+            <article class="ayet" style="border-left:5px solid #065f46;">
+              <div class="ayet-baslik">
+                <span style="color:#065f46;">Âyet 6</span>
+                <span class="ayet-kod">114:6</span>
               </div>
-              <div class="verse-arabic">مِنَ ٱلْجِنَّةِ وَٱلنَّاسِ</div>
-              <div class="verse-meal">(1-6) De ki: İnsanların kalplerine vesvese sokan, (insan Allah’ı andığında) pusuya çekilen cin ve insan şeytanının şerrinden insanların Rabbine, insanların Melikine (mutlak sahip ve hakimine) insanların İlâhına sığınırım!</div>
-            </div>
+              <div class="ayet-ar">مِنَ ٱلْجِنَّةِ وَٱلنَّاسِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="مِن"><span class="kelime-ar" style="color:#dc2626;">مِنَ</span><span class="kelime-tr">-den, -dan</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="جِنَّة"><span class="kelime-ar" style="color:#2563eb;">ٱلْجِنَّةِ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="ناس"><span class="kelime-ar" style="color:#16a34a;">وَٱلنَّاسِ</span><span class="kelime-tr">İnsanlar</span></span></div>
+              <div class="ayet-meal">(1-6) De ki: İnsanların kalplerine vesvese sokan, (insan Allah’ı andığında) pusuya çekilen cin ve insan şeytanının şerrinden insanların Rabbine, insanların Melikine (mutlak sahip ve hakimine) insanların İlâhına sığınırım!</div>
+            </article>
             
-          </div>
-        </div>
+        </section>
         
-</div>
+</main>
 </body>
 </html>

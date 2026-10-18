@@ -2,982 +2,1015 @@
 <html lang="tr">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>S055 · Rahmân Suresi Âyet ve Mevzu Haritası</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 <style>
 * { box-sizing: border-box; }
 body {
   margin: 0;
-  padding: 32px;
-  background: #090d16;
-  color: #f1f5f9;
+  padding-top: 64px;
+  background: #f5f1e8;
+  color: #1e293b;
   font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  line-height: 1.7;
 }
-.container {
-  max-width: 1400px;
-  margin: 0 auto;
-}
-.surah-header {
+.ust-cubuk {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
   background: #0f172a;
-  border: 1px solid #1e293b;
-  border-radius: 20px;
-  padding: 32px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
+  padding: 0 16px;
+  z-index: 10;
 }
-.surah-title-box h1 {
-  margin: 0 0 8px 0;
-  font-size: 32px;
-  font-weight: 800;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-.surah-arabic {
-  font-family: 'Amiri', serif;
-  font-size: 36px;
-  color: #38bdf8;
-}
-.surah-badges {
-  display: flex;
-  gap: 10px;
-  margin-top: 12px;
-  flex-wrap: wrap;
-}
-.badge {
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 13px;
-  font-weight: 600;
-  color: white;
-}
-.badge-mushaf { background: #2563eb; }
-.badge-nuzul { background: #7c3aed; }
-.badge-place { background: #059669; }
-.badge-meaning { background: #334155; }
-
-.topic-section {
-  margin-top: 36px;
-  background: #0b1120;
-  border: 1px solid #1e293b;
-  border-radius: 16px;
-  padding: 24px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
-}
-.topic-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px 20px;
+.geri {
+  color: #fbbf24;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 11pt;
+  padding: 6px 12px;
+  border: 1px solid #334155;
   border-radius: 8px;
-  margin-bottom: 24px;
 }
-.topic-title {
-  font-size: 20px;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  gap: 12px;
+.geri:hover { background: #1e293b; }
+.ust-baslik { color: #e2e8f0; font-weight: 600; font-size: 10.5pt; }
+.kitap-sayfa {
+  max-width: 880px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 40px 48px 64px;
+  min-height: 100vh;
+  box-shadow: 0 2px 18px rgba(15, 23, 42, 0.08);
 }
-.topic-code {
-  font-family: monospace;
-  background: rgba(255,255,255,0.1);
-  padding: 4px 8px;
-  border-radius: 6px;
-  font-size: 14px;
+.sure-no {
+  font-size: 9.5pt;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #64748b;
 }
-.topic-meta {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: #94a3b8;
+.sure-baslik h1 {
+  font-family: 'Cinzel', 'Plus Jakarta Sans', serif;
+  font-size: 24pt;
+  color: #0f172a;
+  margin: 4px 0 8px;
+  line-height: 1.3;
+}
+.sure-arapca {
+  font-family: 'Amiri', serif;
+  color: #1e40af;
+  font-size: 26pt;
+  margin-left: 12px;
+  font-weight: 400;
+}
+.sure-rozetler { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.rozet {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 14px;
+  font-size: 9pt;
+  color: #ffffff;
   font-weight: 600;
 }
-.verse-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  gap: 20px;
+.rozet-acik { background: #475569; }
+.mevzu { margin-top: 34px; }
+.mevzu-baslik { padding: 10px 16px; border-radius: 6px; margin-bottom: 14px; }
+.mevzu-ad { font-size: 13pt; font-weight: 700; }
+.mevzu-kod {
+  font-family: monospace;
+  font-size: 9pt;
+  background: rgba(15, 23, 42, 0.06);
+  color: #334155;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-right: 8px;
 }
-.verse-window {
-  background: #0f172a;
-  border: 1px solid #1e293b;
-  border-radius: 12px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  transition: transform 0.2s, box-shadow 0.2s;
+.mevzu-meta { color: #64748b; font-size: 9.5pt; margin-top: 4px; }
+.ayet {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-bottom: 12px;
 }
-.verse-window:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-  border-color: #38bdf8;
-}
-.verse-header {
+.ayet-baslik {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-}
-.verse-badge {
-  padding: 4px 10px;
-  border-radius: 6px;
-  font-size: 12px;
+  font-size: 9.5pt;
   font-weight: 700;
-  color: #ffffff;
+  margin-bottom: 4px;
 }
-.verse-key {
-  color: #64748b;
-  font-family: monospace;
-  font-size: 13px;
-}
-.verse-arabic {
+.ayet-kod { color: #94a3b8; font-family: monospace; font-weight: 400; }
+.ayet-ar {
   font-family: 'Amiri', serif;
-  font-size: 24px;
-  line-height: 1.8;
-  text-align: right;
+  font-size: 22pt;
+  line-height: 1.9;
   direction: rtl;
-  color: #f8fafc;
-  padding: 6px 0;
+  text-align: right;
+  color: #0f172a;
 }
-.verse-meal {
-  font-size: 14px;
-  line-height: 1.6;
-  color: #cbd5e1;
-  border-top: 1px dashed #1e293b;
-  padding-top: 10px;
+.ayet-meal {
+  font-size: 10.5pt;
+  color: #334155;
+  border-top: 1px dashed #e2e8f0;
+  padding-top: 8px;
+  margin-top: 8px;
 }
-@media (max-width: 768px) {
-  .verse-grid { grid-template-columns: 1fr; }
+.kelime-satiri {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  direction: rtl;
+  margin: 6px 0 4px;
+}
+.kelime {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2px 6px 3px;
+  background: #f8fafc;
+  border-radius: 4px;
+}
+.kelime-ar { font-family: 'Amiri', serif; font-size: 14pt; line-height: 1.6; }
+.kelime-tr { direction: ltr; font-size: 7.5pt; color: #334155; line-height: 1.2; }
+.ayet { page-break-inside: avoid; }
+@media (max-width: 640px) {
+  .kitap-sayfa { padding: 22px 16px 40px; }
+  .sure-arapca { display: block; margin: 6px 0 0; }
+}
+@media print {
+  .ust-cubuk { display: none; }
+  body { padding-top: 0; background: #ffffff; }
 }
 </style>
 </head>
 <body>
-<div class="container">
-  <div class="surah-header">
-    <div class="surah-title-box">
-      <h1>
-        <span>55. Rahmân Suresi</span>
-        <span class="surah-arabic">الرحمن</span>
-      </h1>
-      <div class="surah-badges">
-        <span class="badge badge-mushaf">Mushaf Tertibi: 55</span>
-        <span class="badge badge-nuzul">Nüzul Sırası: 97</span>
-        <span class="badge badge-place">Medenî</span>
-        <span class="badge badge-meaning">Anlamı: Rahman</span>
-        <span class="badge badge-mushaf">78 Âyet</span>
-      </div>
+<header class="ust-cubuk">
+  <a class="geri" href="../../kuran_hikmetleri_kitap.html#sure-55">&larr; Kitaba dön</a>
+  <span class="ust-baslik">Kur'an Hikmetleri · S055</span>
+</header>
+<main class="kitap-sayfa">
+  <header class="sure-baslik">
+    <div class="sure-no">Sure 55</div>
+    <h1>55. Rahmân Suresi <span class="sure-arapca">الرحمن</span></h1>
+    <div class="sure-rozetler">
+      <span class="rozet rozet-acik">Mushaf Tertibi: 55</span>
+      <span class="rozet rozet-acik">Nüzul Sırası: 97</span>
+      <span class="rozet rozet-acik">Medenî</span>
+      <span class="rozet rozet-acik">Anlamı: Rahman</span>
+      <span class="rozet rozet-acik">78 Âyet</span>
     </div>
-  </div>
+  </header>
 
-  <!-- Surenin Kendi İçindeki Mevzular Sütun / Cetvel Özeti -->
-  <div style="display:flex; width:100%; border-radius:8px; overflow:hidden; margin:20px 0; box-shadow:0 4px 15px rgba(0,0,0,0.3);"><div style="flex: 4; background:#1e40af; border:1px solid #1d4ed8; padding:8px 4px; text-align:center; color:#ffffff; font-size:12px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Kur'an ve insan (1-4)">Kur'an ve insan (4)</div><div style="flex: 26; background:#065f46; border:1px solid #047857; padding:8px 4px; text-align:center; color:#ffffff; font-size:12px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Nimetler (5-30)">Nimetler (26)</div><div style="flex: 2; background:#b45309; border:1px solid #d97706; padding:8px 4px; text-align:center; color:#ffffff; font-size:12px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Muhteva ve İlgili Âyetler (31-32)">Muhteva ve İlgili Âyetler (2)</div><div style="flex: 8; background:#991b1b; border:1px solid #b91c1c; padding:8px 4px; text-align:center; color:#ffffff; font-size:12px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Cin ve insan (33-40)">Cin ve insan (8)</div><div style="flex: 5; background:#4338ca; border:1px solid #4f46e5; padding:8px 4px; text-align:center; color:#ffffff; font-size:12px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Muhteva ve İlgili Âyetler (41-45)">Muhteva ve İlgili Âyetler (5)</div><div style="flex: 33; background:#0e7490; border:1px solid #0891b2; padding:8px 4px; text-align:center; color:#ffffff; font-size:12px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Cennet (46-78)">Cennet (33)</div></div>
+  <div style="display:flex; width:100%; border-radius:8px; overflow:hidden; margin:20px 0 8px; box-shadow:0 2px 10px rgba(0,0,0,0.12);"><div style="flex: 4; background:#1e40af; border:1px solid #1d4ed8; padding:8px 4px; text-align:center; color:#ffffff; font-size:11px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Kur'an ve insan (1-4)">Kur'an ve insan (4)</div><div style="flex: 26; background:#065f46; border:1px solid #047857; padding:8px 4px; text-align:center; color:#ffffff; font-size:11px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Nimetler (5-30)">Nimetler (26)</div><div style="flex: 2; background:#b45309; border:1px solid #d97706; padding:8px 4px; text-align:center; color:#ffffff; font-size:11px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Muhteva ve İlgili Âyetler (31-32)">Muhteva ve İlgili Âyetler (2)</div><div style="flex: 8; background:#991b1b; border:1px solid #b91c1c; padding:8px 4px; text-align:center; color:#ffffff; font-size:11px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Cin ve insan (33-40)">Cin ve insan (8)</div><div style="flex: 5; background:#4338ca; border:1px solid #4f46e5; padding:8px 4px; text-align:center; color:#ffffff; font-size:11px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Muhteva ve İlgili Âyetler (41-45)">Muhteva ve İlgili Âyetler (5)</div><div style="flex: 33; background:#0e7490; border:1px solid #0891b2; padding:8px 4px; text-align:center; color:#ffffff; font-size:11px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Cennet (46-78)">Cennet (33)</div></div>
 
-  <!-- Mevzulara Göre Âyet Pencereleri -->
   
-        <div class="topic-section">
-          <div class="topic-header" style="background: linear-gradient(90deg, #1e40af33, transparent); border-left: 6px solid #1e40af;">
-            <div class="topic-title" style="color: #1e40af;">
-              <span class="topic-code">K055-01</span>
-              <span>Kur'an ve insan</span>
+        <section class="mevzu">
+          <header class="mevzu-baslik" style="border-left:6px solid #1e40af; background:#1e40af14;">
+            <div class="mevzu-ad" style="color:#1e40af;">
+              <span class="mevzu-kod">K055-01</span>Kur'an ve insan
             </div>
-            <div class="topic-meta">
-              <span>Âyet 1 - 4</span>
-              <span class="badge" style="background:#1e40af;">4 Âyet</span>
-            </div>
-          </div>
-          <div class="verse-grid">
-            
-            <div class="verse-window" style="border-left: 5px solid #1e40af;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#1e40af;">Âyet 1</span>
-                <span class="verse-key">55:1</span>
+            <div class="mevzu-meta">Âyet 1 - 4 · <span class="rozet" style="background:#1e40af;">4 âyet</span></div>
+          </header>
+          
+            <article class="ayet" style="border-left:5px solid #1e40af;">
+              <div class="ayet-baslik">
+                <span style="color:#1e40af;">Âyet 1</span>
+                <span class="ayet-kod">55:1</span>
               </div>
-              <div class="verse-arabic"> ٱلرَّحْمَـٰنُ</div>
-              <div class="verse-meal">(1-4) Rahmân Kur’an’ı öğretti. İnsanı yarattı. Ona açıklamayı öğretti.</div>
-            </div>
+              <div class="ayet-ar"> ٱلرَّحْمَـٰنُ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="رَحْمٰن"><span class="kelime-ar" style="color:#dc2626;">ٱلرَّحْمَٰنُ</span><span class="kelime-tr">Rahman</span></span></div>
+              <div class="ayet-meal">(1-4) Rahmân Kur’an’ı öğretti. İnsanı yarattı. Ona açıklamayı öğretti.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #1e40af;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#1e40af;">Âyet 2</span>
-                <span class="verse-key">55:2</span>
+            <article class="ayet" style="border-left:5px solid #1e40af;">
+              <div class="ayet-baslik">
+                <span style="color:#1e40af;">Âyet 2</span>
+                <span class="ayet-kod">55:2</span>
               </div>
-              <div class="verse-arabic">عَلَّمَ ٱلْقُرْءَانَ</div>
-              <div class="verse-meal">(1-4) Rahmân Kur’an’ı öğretti. İnsanı yarattı. Ona açıklamayı öğretti.</div>
-            </div>
+              <div class="ayet-ar">عَلَّمَ ٱلْقُرْءَانَ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="عَلَّمَ"><span class="kelime-ar" style="color:#dc2626;">عَلَّمَ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="قُرْءان"><span class="kelime-ar" style="color:#2563eb;">ٱلْقُرْءَانَ</span><span class="kelime-tr">the (belirteç)</span></span></div>
+              <div class="ayet-meal">(1-4) Rahmân Kur’an’ı öğretti. İnsanı yarattı. Ona açıklamayı öğretti.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #1e40af;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#1e40af;">Âyet 3</span>
-                <span class="verse-key">55:3</span>
+            <article class="ayet" style="border-left:5px solid #1e40af;">
+              <div class="ayet-baslik">
+                <span style="color:#1e40af;">Âyet 3</span>
+                <span class="ayet-kod">55:3</span>
               </div>
-              <div class="verse-arabic">خَلَقَ ٱلْإِنسَـٰنَ</div>
-              <div class="verse-meal">(1-4) Rahmân Kur’an’ı öğretti. İnsanı yarattı. Ona açıklamayı öğretti.</div>
-            </div>
+              <div class="ayet-ar">خَلَقَ ٱلْإِنسَـٰنَ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="خَلَقَ"><span class="kelime-ar" style="color:#dc2626;">خَلَقَ</span><span class="kelime-tr">yarattı</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="إِنسان"><span class="kelime-ar" style="color:#2563eb;">ٱلْإِنسَٰنَ</span><span class="kelime-tr">the (belirteç)</span></span></div>
+              <div class="ayet-meal">(1-4) Rahmân Kur’an’ı öğretti. İnsanı yarattı. Ona açıklamayı öğretti.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #1e40af;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#1e40af;">Âyet 4</span>
-                <span class="verse-key">55:4</span>
+            <article class="ayet" style="border-left:5px solid #1e40af;">
+              <div class="ayet-baslik">
+                <span style="color:#1e40af;">Âyet 4</span>
+                <span class="ayet-kod">55:4</span>
               </div>
-              <div class="verse-arabic">عَلَّمَهُ ٱلْبَيَانَ</div>
-              <div class="verse-meal">(1-4) Rahmân Kur’an’ı öğretti. İnsanı yarattı. Ona açıklamayı öğretti.</div>
-            </div>
+              <div class="ayet-ar">عَلَّمَهُ ٱلْبَيَانَ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="عَلَّمَ"><span class="kelime-ar" style="color:#dc2626;">عَلَّمَهُ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="بَيان"><span class="kelime-ar" style="color:#2563eb;">ٱلْبَيَانَ</span><span class="kelime-tr">the (belirteç)</span></span></div>
+              <div class="ayet-meal">(1-4) Rahmân Kur’an’ı öğretti. İnsanı yarattı. Ona açıklamayı öğretti.</div>
+            </article>
             
-          </div>
-        </div>
+        </section>
         
-        <div class="topic-section">
-          <div class="topic-header" style="background: linear-gradient(90deg, #065f4633, transparent); border-left: 6px solid #065f46;">
-            <div class="topic-title" style="color: #065f46;">
-              <span class="topic-code">K055-02</span>
-              <span>Nimetler</span>
+        <section class="mevzu">
+          <header class="mevzu-baslik" style="border-left:6px solid #065f46; background:#065f4614;">
+            <div class="mevzu-ad" style="color:#065f46;">
+              <span class="mevzu-kod">K055-02</span>Nimetler
             </div>
-            <div class="topic-meta">
-              <span>Âyet 5 - 30</span>
-              <span class="badge" style="background:#065f46;">26 Âyet</span>
-            </div>
-          </div>
-          <div class="verse-grid">
-            
-            <div class="verse-window" style="border-left: 5px solid #065f46;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#065f46;">Âyet 5</span>
-                <span class="verse-key">55:5</span>
+            <div class="mevzu-meta">Âyet 5 - 30 · <span class="rozet" style="background:#065f46;">26 âyet</span></div>
+          </header>
+          
+            <article class="ayet" style="border-left:5px solid #065f46;">
+              <div class="ayet-baslik">
+                <span style="color:#065f46;">Âyet 5</span>
+                <span class="ayet-kod">55:5</span>
               </div>
-              <div class="verse-arabic">ٱلشَّمْسُ وَٱلْقَمَرُ بِحُسْبَانٍ</div>
-              <div class="verse-meal">Güneş ve ay bir hesaba göre (hareket etmekte)dir.</div>
-            </div>
+              <div class="ayet-ar">ٱلشَّمْسُ وَٱلْقَمَرُ بِحُسْبَانٍ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="شَمْس"><span class="kelime-ar" style="color:#dc2626;">ٱلشَّمْسُ</span><span class="kelime-tr">Güneş</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="قَمَر"><span class="kelime-ar" style="color:#2563eb;">وَٱلْقَمَرُ</span><span class="kelime-tr">Ay</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="حُسْبان"><span class="kelime-ar" style="color:#16a34a;">بِحُسْبَانٍ</span><span class="kelime-tr">ile, -de</span></span></div>
+              <div class="ayet-meal">Güneş ve ay bir hesaba göre (hareket etmekte)dir.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #065f46;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#065f46;">Âyet 6</span>
-                <span class="verse-key">55:6</span>
+            <article class="ayet" style="border-left:5px solid #065f46;">
+              <div class="ayet-baslik">
+                <span style="color:#065f46;">Âyet 6</span>
+                <span class="ayet-kod">55:6</span>
               </div>
-              <div class="verse-arabic">وَٱلنَّجْمُ وَٱلشَّجَرُ يَسْجُدَانِ</div>
-              <div class="verse-meal">Bitkiler ve ağaçlar secde ederler.</div>
-            </div>
+              <div class="ayet-ar">وَٱلنَّجْمُ وَٱلشَّجَرُ يَسْجُدَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="نَجْم"><span class="kelime-ar" style="color:#dc2626;">وَٱلنَّجْمُ</span><span class="kelime-tr">Yıldız</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="شَجَر"><span class="kelime-ar" style="color:#2563eb;">وَٱلشَّجَرُ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="سَجَدَ"><span class="kelime-ar" style="color:#16a34a;">يَسْجُدَانِ</span><span class="kelime-tr">Secde etti</span></span></div>
+              <div class="ayet-meal">Bitkiler ve ağaçlar secde ederler.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #065f46;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#065f46;">Âyet 7</span>
-                <span class="verse-key">55:7</span>
+            <article class="ayet" style="border-left:5px solid #065f46;">
+              <div class="ayet-baslik">
+                <span style="color:#065f46;">Âyet 7</span>
+                <span class="ayet-kod">55:7</span>
               </div>
-              <div class="verse-arabic">وَٱلسَّمَآءَ رَفَعَهَا وَوَضَعَ ٱلْمِيزَانَ</div>
-              <div class="verse-meal">Göğü Allah yükseltti ve mîzanı (dengeyi) O koydu.</div>
-            </div>
+              <div class="ayet-ar">وَٱلسَّمَآءَ رَفَعَهَا وَوَضَعَ ٱلْمِيزَانَ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="سَماء"><span class="kelime-ar" style="color:#dc2626;">وَٱلسَّمَآءَ</span><span class="kelime-tr">Gök</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="رَفَعَ"><span class="kelime-ar" style="color:#2563eb;">رَفَعَهَا</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="وَضَعَ"><span class="kelime-ar" style="color:#16a34a;">وَوَضَعَ</span><span class="kelime-tr">ve</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="مِيزان"><span class="kelime-ar" style="color:#9333ea;">ٱلْمِيزَانَ</span><span class="kelime-tr">Terazi</span></span></div>
+              <div class="ayet-meal">Göğü Allah yükseltti ve mîzanı (dengeyi) O koydu.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #065f46;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#065f46;">Âyet 8</span>
-                <span class="verse-key">55:8</span>
+            <article class="ayet" style="border-left:5px solid #065f46;">
+              <div class="ayet-baslik">
+                <span style="color:#065f46;">Âyet 8</span>
+                <span class="ayet-kod">55:8</span>
               </div>
-              <div class="verse-arabic">أَلَّا تَطْغَوْا۟ فِى ٱلْمِيزَانِ</div>
-              <div class="verse-meal">Sakın dengeyi bozmayın.</div>
-            </div>
+              <div class="ayet-ar">أَلَّا تَطْغَوْا۟ فِى ٱلْمِيزَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="لا"><span class="kelime-ar" style="color:#dc2626;">أَلَّا</span><span class="kelime-tr">Hayır/değil</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="طَغَى"><span class="kelime-ar" style="color:#2563eb;">تَطْغَوْا۟</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="فِي"><span class="kelime-ar" style="color:#16a34a;">فِى</span><span class="kelime-tr">İçinde</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="مِيزان"><span class="kelime-ar" style="color:#9333ea;">ٱلْمِيزَانِ</span><span class="kelime-tr">Terazi</span></span></div>
+              <div class="ayet-meal">Sakın dengeyi bozmayın.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #065f46;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#065f46;">Âyet 9</span>
-                <span class="verse-key">55:9</span>
+            <article class="ayet" style="border-left:5px solid #065f46;">
+              <div class="ayet-baslik">
+                <span style="color:#065f46;">Âyet 9</span>
+                <span class="ayet-kod">55:9</span>
               </div>
-              <div class="verse-arabic">وَأَقِيمُوا۟ ٱلْوَزْنَ بِٱلْقِسْطِ وَلَا تُخْسِرُوا۟ ٱلْمِيزَانَ</div>
-              <div class="verse-meal">Ölçüyü adaletle tutun ve eksik tartmayın.</div>
-            </div>
+              <div class="ayet-ar">وَأَقِيمُوا۟ ٱلْوَزْنَ بِٱلْقِسْطِ وَلَا تُخْسِرُوا۟ ٱلْمِيزَانَ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَقامَ"><span class="kelime-ar" style="color:#dc2626;">وَأَقِيمُوا۟</span><span class="kelime-tr">Dosdoğru kıldı</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="وَزْن"><span class="kelime-ar" style="color:#2563eb;">ٱلْوَزْنَ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="قِسْط"><span class="kelime-ar" style="color:#16a34a;">بِٱلْقِسْطِ</span><span class="kelime-tr">Kıstas</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="لا"><span class="kelime-ar" style="color:#9333ea;">وَلَا</span><span class="kelime-tr">Hayır/değil</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="يُخْسِرُ"><span class="kelime-ar" style="color:#ea580c;">تُخْسِرُوا۟</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #0891b2;" title="مِيزان"><span class="kelime-ar" style="color:#0891b2;">ٱلْمِيزَانَ</span><span class="kelime-tr">Terazi</span></span></div>
+              <div class="ayet-meal">Ölçüyü adaletle tutun ve eksik tartmayın.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #065f46;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#065f46;">Âyet 10</span>
-                <span class="verse-key">55:10</span>
+            <article class="ayet" style="border-left:5px solid #065f46;">
+              <div class="ayet-baslik">
+                <span style="color:#065f46;">Âyet 10</span>
+                <span class="ayet-kod">55:10</span>
               </div>
-              <div class="verse-arabic">وَٱلْأَرْضَ وَضَعَهَا لِلْأَنَامِ</div>
-              <div class="verse-meal">Allah, yeri canlılar için yaratmıştır.</div>
-            </div>
+              <div class="ayet-ar">وَٱلْأَرْضَ وَضَعَهَا لِلْأَنَامِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَرْض"><span class="kelime-ar" style="color:#dc2626;">وَٱلْأَرْضَ</span><span class="kelime-tr">Yer</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="وَضَعَ"><span class="kelime-ar" style="color:#2563eb;">وَضَعَهَا</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="أَنام"><span class="kelime-ar" style="color:#16a34a;">لِلْأَنَامِ</span><span class="kelime-tr">the (belirteç)</span></span></div>
+              <div class="ayet-meal">Allah, yeri canlılar için yaratmıştır.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #065f46;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#065f46;">Âyet 11</span>
-                <span class="verse-key">55:11</span>
+            <article class="ayet" style="border-left:5px solid #065f46;">
+              <div class="ayet-baslik">
+                <span style="color:#065f46;">Âyet 11</span>
+                <span class="ayet-kod">55:11</span>
               </div>
-              <div class="verse-arabic">فِيهَا فَـٰكِهَةٌ وَٱلنَّخْلُ ذَاتُ ٱلْأَكْمَامِ</div>
-              <div class="verse-meal">Orada meyveler ve salkımlı hurma ağaçları vardır.</div>
-            </div>
+              <div class="ayet-ar">فِيهَا فَـٰكِهَةٌ وَٱلنَّخْلُ ذَاتُ ٱلْأَكْمَامِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="فِي"><span class="kelime-ar" style="color:#dc2626;">فِيهَا</span><span class="kelime-tr">İçinde</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="فاكِهَة"><span class="kelime-ar" style="color:#2563eb;">فَٰكِهَةٌ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="نَخْل"><span class="kelime-ar" style="color:#16a34a;">وَٱلنَّخْلُ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="ذُو"><span class="kelime-ar" style="color:#9333ea;">ذَاتُ</span><span class="kelime-tr">sahip olan</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="أَكْمام"><span class="kelime-ar" style="color:#ea580c;">ٱلْأَكْمَامِ</span><span class="kelime-tr">the (belirteç)</span></span></div>
+              <div class="ayet-meal">Orada meyveler ve salkımlı hurma ağaçları vardır.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #065f46;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#065f46;">Âyet 12</span>
-                <span class="verse-key">55:12</span>
+            <article class="ayet" style="border-left:5px solid #065f46;">
+              <div class="ayet-baslik">
+                <span style="color:#065f46;">Âyet 12</span>
+                <span class="ayet-kod">55:12</span>
               </div>
-              <div class="verse-arabic">وَٱلْحَبُّ ذُو ٱلْعَصْفِ وَٱلرَّيْحَانُ</div>
-              <div class="verse-meal">Yapraklı daneler ve hoş kokulu bitkiler vardır.</div>
-            </div>
+              <div class="ayet-ar">وَٱلْحَبُّ ذُو ٱلْعَصْفِ وَٱلرَّيْحَانُ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="حَبّ"><span class="kelime-ar" style="color:#dc2626;">وَٱلْحَبُّ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="ذُو"><span class="kelime-ar" style="color:#2563eb;">ذُو</span><span class="kelime-tr">sahip olan</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="عَصْف"><span class="kelime-ar" style="color:#16a34a;">ٱلْعَصْفِ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="رَيْحان"><span class="kelime-ar" style="color:#9333ea;">وَٱلرَّيْحَانُ</span><span class="kelime-tr">the (belirteç)</span></span></div>
+              <div class="ayet-meal">Yapraklı daneler ve hoş kokulu bitkiler vardır.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #065f46;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#065f46;">Âyet 13</span>
-                <span class="verse-key">55:13</span>
+            <article class="ayet" style="border-left:5px solid #065f46;">
+              <div class="ayet-baslik">
+                <span style="color:#065f46;">Âyet 13</span>
+                <span class="ayet-kod">55:13</span>
               </div>
-              <div class="verse-arabic">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
-              <div class="verse-meal">O halde Rabbinizin nimetlerinden hangisini yalanlayabilirsiniz?</div>
-            </div>
+              <div class="ayet-ar">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَيّ"><span class="kelime-ar" style="color:#dc2626;">فَبِأَىِّ</span><span class="kelime-tr">hangi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="آلاء"><span class="kelime-ar" style="color:#2563eb;">ءَالَآءِ</span><span class="kelime-tr">nimetler</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="رَبّ"><span class="kelime-ar" style="color:#16a34a;">رَبِّكُمَا</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="كَذَّبَ"><span class="kelime-ar" style="color:#9333ea;">تُكَذِّبَانِ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">O halde Rabbinizin nimetlerinden hangisini yalanlayabilirsiniz?</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #065f46;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#065f46;">Âyet 14</span>
-                <span class="verse-key">55:14</span>
+            <article class="ayet" style="border-left:5px solid #065f46;">
+              <div class="ayet-baslik">
+                <span style="color:#065f46;">Âyet 14</span>
+                <span class="ayet-kod">55:14</span>
               </div>
-              <div class="verse-arabic">خَلَقَ ٱلْإِنسَـٰنَ مِن صَلْصَـٰلٍ كَٱلْفَخَّارِ</div>
-              <div class="verse-meal">Allah insanı, pişmiş çamura benzeyen bir balçıktan yarattı.</div>
-            </div>
+              <div class="ayet-ar">خَلَقَ ٱلْإِنسَـٰنَ مِن صَلْصَـٰلٍ كَٱلْفَخَّارِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="خَلَقَ"><span class="kelime-ar" style="color:#dc2626;">خَلَقَ</span><span class="kelime-tr">yarattı</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="إِنسان"><span class="kelime-ar" style="color:#2563eb;">ٱلْإِنسَٰنَ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="مِن"><span class="kelime-ar" style="color:#16a34a;">مِن</span><span class="kelime-tr">-den, -dan</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="صَلْصال"><span class="kelime-ar" style="color:#9333ea;">صَلْصَٰلٍ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="فَخّار"><span class="kelime-ar" style="color:#ea580c;">كَٱلْفَخَّارِ</span><span class="kelime-tr">the (belirteç)</span></span></div>
+              <div class="ayet-meal">Allah insanı, pişmiş çamura benzeyen bir balçıktan yarattı.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #065f46;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#065f46;">Âyet 15</span>
-                <span class="verse-key">55:15</span>
+            <article class="ayet" style="border-left:5px solid #065f46;">
+              <div class="ayet-baslik">
+                <span style="color:#065f46;">Âyet 15</span>
+                <span class="ayet-kod">55:15</span>
               </div>
-              <div class="verse-arabic">وَخَلَقَ ٱلْجَآنَّ مِن مَّارِجٍ مِّن نَّارٍ</div>
-              <div class="verse-meal">Cinleri öz ateşten yarattı.</div>
-            </div>
+              <div class="ayet-ar">وَخَلَقَ ٱلْجَآنَّ مِن مَّارِجٍ مِّن نَّارٍ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="خَلَقَ"><span class="kelime-ar" style="color:#dc2626;">وَخَلَقَ</span><span class="kelime-tr">yarattı</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="جانّ"><span class="kelime-ar" style="color:#2563eb;">ٱلْجَآنَّ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="مِن"><span class="kelime-ar" style="color:#16a34a;">مِن</span><span class="kelime-tr">-den, -dan</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="مارِج"><span class="kelime-ar" style="color:#9333ea;">مَّارِجٍ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="مِن"><span class="kelime-ar" style="color:#ea580c;">مِّن</span><span class="kelime-tr">-den, -dan</span></span><span class="kelime" style="border-bottom:3px solid #0891b2;" title="نار"><span class="kelime-ar" style="color:#0891b2;">نَّارٍ</span><span class="kelime-tr">Ateş/Cehennem</span></span></div>
+              <div class="ayet-meal">Cinleri öz ateşten yarattı.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #065f46;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#065f46;">Âyet 16</span>
-                <span class="verse-key">55:16</span>
+            <article class="ayet" style="border-left:5px solid #065f46;">
+              <div class="ayet-baslik">
+                <span style="color:#065f46;">Âyet 16</span>
+                <span class="ayet-kod">55:16</span>
               </div>
-              <div class="verse-arabic">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
-              <div class="verse-meal">O halde, Rabbinizin nimetlerinden hangisini yalanlayabilirsiniz?</div>
-            </div>
+              <div class="ayet-ar">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَيّ"><span class="kelime-ar" style="color:#dc2626;">فَبِأَىِّ</span><span class="kelime-tr">hangi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="آلاء"><span class="kelime-ar" style="color:#2563eb;">ءَالَآءِ</span><span class="kelime-tr">nimetler</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="رَبّ"><span class="kelime-ar" style="color:#16a34a;">رَبِّكُمَا</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="كَذَّبَ"><span class="kelime-ar" style="color:#9333ea;">تُكَذِّبَانِ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">O halde, Rabbinizin nimetlerinden hangisini yalanlayabilirsiniz?</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #065f46;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#065f46;">Âyet 17</span>
-                <span class="verse-key">55:17</span>
+            <article class="ayet" style="border-left:5px solid #065f46;">
+              <div class="ayet-baslik">
+                <span style="color:#065f46;">Âyet 17</span>
+                <span class="ayet-kod">55:17</span>
               </div>
-              <div class="verse-arabic">رَبُّ ٱلْمَشْرِقَيْنِ وَرَبُّ ٱلْمَغْرِبَيْنِ</div>
-              <div class="verse-meal">(O,) iki doğunun ve iki batının Rabbidir.</div>
-            </div>
+              <div class="ayet-ar">رَبُّ ٱلْمَشْرِقَيْنِ وَرَبُّ ٱلْمَغْرِبَيْنِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="رَبّ"><span class="kelime-ar" style="color:#dc2626;">رَبُّ</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="مَشْرِق"><span class="kelime-ar" style="color:#2563eb;">ٱلْمَشْرِقَيْنِ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="رَبّ"><span class="kelime-ar" style="color:#16a34a;">وَرَبُّ</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="مَغْرِب"><span class="kelime-ar" style="color:#9333ea;">ٱلْمَغْرِبَيْنِ</span><span class="kelime-tr">the (belirteç)</span></span></div>
+              <div class="ayet-meal">(O,) iki doğunun ve iki batının Rabbidir.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #065f46;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#065f46;">Âyet 18</span>
-                <span class="verse-key">55:18</span>
+            <article class="ayet" style="border-left:5px solid #065f46;">
+              <div class="ayet-baslik">
+                <span style="color:#065f46;">Âyet 18</span>
+                <span class="ayet-kod">55:18</span>
               </div>
-              <div class="verse-arabic">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
-              <div class="verse-meal">Öyleyse Rabbinizin hangi nimetlerini yalanlayabilirsiniz?</div>
-            </div>
+              <div class="ayet-ar">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَيّ"><span class="kelime-ar" style="color:#dc2626;">فَبِأَىِّ</span><span class="kelime-tr">hangi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="آلاء"><span class="kelime-ar" style="color:#2563eb;">ءَالَآءِ</span><span class="kelime-tr">nimetler</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="رَبّ"><span class="kelime-ar" style="color:#16a34a;">رَبِّكُمَا</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="كَذَّبَ"><span class="kelime-ar" style="color:#9333ea;">تُكَذِّبَانِ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">Öyleyse Rabbinizin hangi nimetlerini yalanlayabilirsiniz?</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #065f46;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#065f46;">Âyet 19</span>
-                <span class="verse-key">55:19</span>
+            <article class="ayet" style="border-left:5px solid #065f46;">
+              <div class="ayet-baslik">
+                <span style="color:#065f46;">Âyet 19</span>
+                <span class="ayet-kod">55:19</span>
               </div>
-              <div class="verse-arabic">مَرَجَ ٱلْبَحْرَيْنِ يَلْتَقِيَانِ</div>
-              <div class="verse-meal">İki denizi birbirine kavuşmak üzere salıvermiştir.</div>
-            </div>
+              <div class="ayet-ar">مَرَجَ ٱلْبَحْرَيْنِ يَلْتَقِيَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="مَرَجَ"><span class="kelime-ar" style="color:#dc2626;">مَرَجَ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="بَحْر"><span class="kelime-ar" style="color:#2563eb;">ٱلْبَحْرَيْنِ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="الْتَقَى"><span class="kelime-ar" style="color:#16a34a;">يَلْتَقِيَانِ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">İki denizi birbirine kavuşmak üzere salıvermiştir.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #065f46;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#065f46;">Âyet 20</span>
-                <span class="verse-key">55:20</span>
+            <article class="ayet" style="border-left:5px solid #065f46;">
+              <div class="ayet-baslik">
+                <span style="color:#065f46;">Âyet 20</span>
+                <span class="ayet-kod">55:20</span>
               </div>
-              <div class="verse-arabic">بَيْنَهُمَا بَرْزَخٌ لَّا يَبْغِيَانِ</div>
-              <div class="verse-meal">Aralarında bir engel vardır, birbirine geçip karışmazlar.</div>
-            </div>
+              <div class="ayet-ar">بَيْنَهُمَا بَرْزَخٌ لَّا يَبْغِيَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="بَيْن"><span class="kelime-ar" style="color:#dc2626;">بَيْنَهُمَا</span><span class="kelime-tr">arasında</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="بَرْزَخ"><span class="kelime-ar" style="color:#2563eb;">بَرْزَخٌ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="لا"><span class="kelime-ar" style="color:#16a34a;">لَّا</span><span class="kelime-tr">Hayır/değil</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="بَغَى"><span class="kelime-ar" style="color:#9333ea;">يَبْغِيَانِ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">Aralarında bir engel vardır, birbirine geçip karışmazlar.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #065f46;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#065f46;">Âyet 21</span>
-                <span class="verse-key">55:21</span>
+            <article class="ayet" style="border-left:5px solid #065f46;">
+              <div class="ayet-baslik">
+                <span style="color:#065f46;">Âyet 21</span>
+                <span class="ayet-kod">55:21</span>
               </div>
-              <div class="verse-arabic">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
-              <div class="verse-meal">O halde Rabbinizin nimetlerinden hangisini yalanlayabilirsiniz?</div>
-            </div>
+              <div class="ayet-ar">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَيّ"><span class="kelime-ar" style="color:#dc2626;">فَبِأَىِّ</span><span class="kelime-tr">hangi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="آلاء"><span class="kelime-ar" style="color:#2563eb;">ءَالَآءِ</span><span class="kelime-tr">nimetler</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="رَبّ"><span class="kelime-ar" style="color:#16a34a;">رَبِّكُمَا</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="كَذَّبَ"><span class="kelime-ar" style="color:#9333ea;">تُكَذِّبَانِ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">O halde Rabbinizin nimetlerinden hangisini yalanlayabilirsiniz?</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #065f46;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#065f46;">Âyet 22</span>
-                <span class="verse-key">55:22</span>
+            <article class="ayet" style="border-left:5px solid #065f46;">
+              <div class="ayet-baslik">
+                <span style="color:#065f46;">Âyet 22</span>
+                <span class="ayet-kod">55:22</span>
               </div>
-              <div class="verse-arabic">يَخْرُجُ مِنْهُمَا ٱللُّؤْلُؤُ وَٱلْمَرْجَانُ</div>
-              <div class="verse-meal">İkisinden de inci ve mercan çıkar.</div>
-            </div>
+              <div class="ayet-ar">يَخْرُجُ مِنْهُمَا ٱللُّؤْلُؤُ وَٱلْمَرْجَانُ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="خَرَجَ"><span class="kelime-ar" style="color:#dc2626;">يَخْرُجُ</span><span class="kelime-tr">Çıktı</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="مِن"><span class="kelime-ar" style="color:#2563eb;">مِنْهُمَا</span><span class="kelime-tr">-den, -dan</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="لُؤْلُؤ"><span class="kelime-ar" style="color:#16a34a;">ٱللُّؤْلُؤُ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="مَرْجان"><span class="kelime-ar" style="color:#9333ea;">وَٱلْمَرْجَانُ</span><span class="kelime-tr">the (belirteç)</span></span></div>
+              <div class="ayet-meal">İkisinden de inci ve mercan çıkar.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #065f46;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#065f46;">Âyet 23</span>
-                <span class="verse-key">55:23</span>
+            <article class="ayet" style="border-left:5px solid #065f46;">
+              <div class="ayet-baslik">
+                <span style="color:#065f46;">Âyet 23</span>
+                <span class="ayet-kod">55:23</span>
               </div>
-              <div class="verse-arabic">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
-              <div class="verse-meal">Şimdi Rabbinizin nimetlerinden hangisini yalanlayabilirsiniz?</div>
-            </div>
+              <div class="ayet-ar">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَيّ"><span class="kelime-ar" style="color:#dc2626;">فَبِأَىِّ</span><span class="kelime-tr">hangi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="آلاء"><span class="kelime-ar" style="color:#2563eb;">ءَالَآءِ</span><span class="kelime-tr">nimetler</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="رَبّ"><span class="kelime-ar" style="color:#16a34a;">رَبِّكُمَا</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="كَذَّبَ"><span class="kelime-ar" style="color:#9333ea;">تُكَذِّبَانِ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">Şimdi Rabbinizin nimetlerinden hangisini yalanlayabilirsiniz?</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #065f46;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#065f46;">Âyet 24</span>
-                <span class="verse-key">55:24</span>
+            <article class="ayet" style="border-left:5px solid #065f46;">
+              <div class="ayet-baslik">
+                <span style="color:#065f46;">Âyet 24</span>
+                <span class="ayet-kod">55:24</span>
               </div>
-              <div class="verse-arabic">وَلَهُ ٱلْجَوَارِ ٱلْمُنشَـَٔاتُ فِى ٱلْبَحْرِ كَٱلْأَعْلَـٰمِ</div>
-              <div class="verse-meal">Denizde yüce dağlar gibi yükselen gemiler de O’nundur.</div>
-            </div>
+              <div class="ayet-ar">وَلَهُ ٱلْجَوَارِ ٱلْمُنشَـَٔاتُ فِى ٱلْبَحْرِ كَٱلْأَعْلَـٰمِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="ل"><span class="kelime-ar" style="color:#dc2626;">وَلَهُ</span><span class="kelime-tr">için, -e</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="جَوار"><span class="kelime-ar" style="color:#2563eb;">ٱلْجَوَارِ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="مُنشَآت"><span class="kelime-ar" style="color:#16a34a;">ٱلْمُنشَـَٔاتُ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="فِي"><span class="kelime-ar" style="color:#9333ea;">فِى</span><span class="kelime-tr">İçinde</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="بَحْر"><span class="kelime-ar" style="color:#ea580c;">ٱلْبَحْرِ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #0891b2;" title="أَعْلام"><span class="kelime-ar" style="color:#0891b2;">كَٱلْأَعْلَٰمِ</span><span class="kelime-tr">the (belirteç)</span></span></div>
+              <div class="ayet-meal">Denizde yüce dağlar gibi yükselen gemiler de O’nundur.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #065f46;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#065f46;">Âyet 25</span>
-                <span class="verse-key">55:25</span>
+            <article class="ayet" style="border-left:5px solid #065f46;">
+              <div class="ayet-baslik">
+                <span style="color:#065f46;">Âyet 25</span>
+                <span class="ayet-kod">55:25</span>
               </div>
-              <div class="verse-arabic">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
-              <div class="verse-meal">Öyleyken Rabbinizin nimetlerinden hangisini yalanlayabilirsiniz?</div>
-            </div>
+              <div class="ayet-ar">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَيّ"><span class="kelime-ar" style="color:#dc2626;">فَبِأَىِّ</span><span class="kelime-tr">hangi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="آلاء"><span class="kelime-ar" style="color:#2563eb;">ءَالَآءِ</span><span class="kelime-tr">nimetler</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="رَبّ"><span class="kelime-ar" style="color:#16a34a;">رَبِّكُمَا</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="كَذَّبَ"><span class="kelime-ar" style="color:#9333ea;">تُكَذِّبَانِ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">Öyleyken Rabbinizin nimetlerinden hangisini yalanlayabilirsiniz?</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #065f46;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#065f46;">Âyet 26</span>
-                <span class="verse-key">55:26</span>
+            <article class="ayet" style="border-left:5px solid #065f46;">
+              <div class="ayet-baslik">
+                <span style="color:#065f46;">Âyet 26</span>
+                <span class="ayet-kod">55:26</span>
               </div>
-              <div class="verse-arabic">كُلُّ مَنْ عَلَيْهَا فَانٍ</div>
-              <div class="verse-meal">Yeryüzünde bulunan her canlı yok olacak.</div>
-            </div>
+              <div class="ayet-ar">كُلُّ مَنْ عَلَيْهَا فَانٍ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="كُلّ"><span class="kelime-ar" style="color:#dc2626;">كُلُّ</span><span class="kelime-tr">Hepsi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="مَن"><span class="kelime-ar" style="color:#2563eb;">مَنْ</span><span class="kelime-tr">kim, kimse</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="عَلَى"><span class="kelime-ar" style="color:#16a34a;">عَلَيْهَا</span><span class="kelime-tr">üzerine, üstüne</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="فان"><span class="kelime-ar" style="color:#9333ea;">فَانٍ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">Yeryüzünde bulunan her canlı yok olacak.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #065f46;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#065f46;">Âyet 27</span>
-                <span class="verse-key">55:27</span>
+            <article class="ayet" style="border-left:5px solid #065f46;">
+              <div class="ayet-baslik">
+                <span style="color:#065f46;">Âyet 27</span>
+                <span class="ayet-kod">55:27</span>
               </div>
-              <div class="verse-arabic">وَيَبْقَىٰ وَجْهُ رَبِّكَ ذُو ٱلْجَلَـٰلِ وَٱلْإِكْرَامِ</div>
-              <div class="verse-meal">Ancak azamet ve ikram sahibi Rabbinin zâtı bâki kalacak.</div>
-            </div>
+              <div class="ayet-ar">وَيَبْقَىٰ وَجْهُ رَبِّكَ ذُو ٱلْجَلَـٰلِ وَٱلْإِكْرَامِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="بَقِيَ"><span class="kelime-ar" style="color:#dc2626;">وَيَبْقَىٰ</span><span class="kelime-tr">ve</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="وَجْه"><span class="kelime-ar" style="color:#2563eb;">وَجْهُ</span><span class="kelime-tr">yüz</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="رَبّ"><span class="kelime-ar" style="color:#16a34a;">رَبِّكَ</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="ذُو"><span class="kelime-ar" style="color:#9333ea;">ذُو</span><span class="kelime-tr">sahip olan</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="جَلال"><span class="kelime-ar" style="color:#ea580c;">ٱلْجَلَٰلِ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #0891b2;" title="إِكْرام"><span class="kelime-ar" style="color:#0891b2;">وَٱلْإِكْرَامِ</span><span class="kelime-tr">the (belirteç)</span></span></div>
+              <div class="ayet-meal">Ancak azamet ve ikram sahibi Rabbinin zâtı bâki kalacak.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #065f46;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#065f46;">Âyet 28</span>
-                <span class="verse-key">55:28</span>
+            <article class="ayet" style="border-left:5px solid #065f46;">
+              <div class="ayet-baslik">
+                <span style="color:#065f46;">Âyet 28</span>
+                <span class="ayet-kod">55:28</span>
               </div>
-              <div class="verse-arabic">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
-              <div class="verse-meal">Öyleyken Rabbinizin hangi nimetlerini yalanlayabilirsiniz?</div>
-            </div>
+              <div class="ayet-ar">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَيّ"><span class="kelime-ar" style="color:#dc2626;">فَبِأَىِّ</span><span class="kelime-tr">hangi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="آلاء"><span class="kelime-ar" style="color:#2563eb;">ءَالَآءِ</span><span class="kelime-tr">nimetler</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="رَبّ"><span class="kelime-ar" style="color:#16a34a;">رَبِّكُمَا</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="كَذَّبَ"><span class="kelime-ar" style="color:#9333ea;">تُكَذِّبَانِ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">Öyleyken Rabbinizin hangi nimetlerini yalanlayabilirsiniz?</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #065f46;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#065f46;">Âyet 29</span>
-                <span class="verse-key">55:29</span>
+            <article class="ayet" style="border-left:5px solid #065f46;">
+              <div class="ayet-baslik">
+                <span style="color:#065f46;">Âyet 29</span>
+                <span class="ayet-kod">55:29</span>
               </div>
-              <div class="verse-arabic">يَسْـَٔلُهُۥ مَن فِى ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۚ كُلَّ يَوْمٍ هُوَ فِى شَأْنٍ</div>
-              <div class="verse-meal">Göklerde ve yerde bulunan herkes, O’ndan ister. O, her an yaratma halindedir.</div>
-            </div>
+              <div class="ayet-ar">يَسْـَٔلُهُۥ مَن فِى ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۚ كُلَّ يَوْمٍ هُوَ فِى شَأْنٍ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="سَأَلَ"><span class="kelime-ar" style="color:#dc2626;">يَسْـَٔلُهُۥ</span><span class="kelime-tr">Sordu</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="مَن"><span class="kelime-ar" style="color:#2563eb;">مَن</span><span class="kelime-tr">kim, kimse</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="فِي"><span class="kelime-ar" style="color:#16a34a;">فِى</span><span class="kelime-tr">İçinde</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="سَماء"><span class="kelime-ar" style="color:#9333ea;">ٱلسَّمَٰوَٰتِ</span><span class="kelime-tr">Gök</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="أَرْض"><span class="kelime-ar" style="color:#ea580c;">وَٱلْأَرْضِ</span><span class="kelime-tr">Yer</span></span><span class="kelime" style="border-bottom:3px solid #0891b2;" title="كُلّ"><span class="kelime-ar" style="color:#0891b2;">كُلَّ</span><span class="kelime-tr">Hepsi</span></span><span class="kelime" style="border-bottom:3px solid #be185d;" title="يَوْم"><span class="kelime-ar" style="color:#be185d;">يَوْمٍ</span><span class="kelime-tr">gün</span></span><span class="kelime" style="border-bottom:3px solid #ca8a04;" title=""><span class="kelime-ar" style="color:#ca8a04;">هُوَ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #4f46e5;" title="فِي"><span class="kelime-ar" style="color:#4f46e5;">فِى</span><span class="kelime-tr">İçinde</span></span><span class="kelime" style="border-bottom:3px solid #0d9488;" title="شَأْن"><span class="kelime-ar" style="color:#0d9488;">شَأْنٍ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">Göklerde ve yerde bulunan herkes, O’ndan ister. O, her an yaratma halindedir.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #065f46;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#065f46;">Âyet 30</span>
-                <span class="verse-key">55:30</span>
+            <article class="ayet" style="border-left:5px solid #065f46;">
+              <div class="ayet-baslik">
+                <span style="color:#065f46;">Âyet 30</span>
+                <span class="ayet-kod">55:30</span>
               </div>
-              <div class="verse-arabic">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
-              <div class="verse-meal">O halde Rabbinizin hangi nimetlerini yalanlayabilirsiniz?</div>
-            </div>
+              <div class="ayet-ar">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَيّ"><span class="kelime-ar" style="color:#dc2626;">فَبِأَىِّ</span><span class="kelime-tr">hangi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="آلاء"><span class="kelime-ar" style="color:#2563eb;">ءَالَآءِ</span><span class="kelime-tr">nimetler</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="رَبّ"><span class="kelime-ar" style="color:#16a34a;">رَبِّكُمَا</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="كَذَّبَ"><span class="kelime-ar" style="color:#9333ea;">تُكَذِّبَانِ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">O halde Rabbinizin hangi nimetlerini yalanlayabilirsiniz?</div>
+            </article>
             
-          </div>
-        </div>
+        </section>
         
-        <div class="topic-section">
-          <div class="topic-header" style="background: linear-gradient(90deg, #b4530933, transparent); border-left: 6px solid #b45309;">
-            <div class="topic-title" style="color: #b45309;">
-              <span class="topic-code">K055-F</span>
-              <span>Muhteva ve İlgili Âyetler</span>
+        <section class="mevzu">
+          <header class="mevzu-baslik" style="border-left:6px solid #b45309; background:#b4530914;">
+            <div class="mevzu-ad" style="color:#b45309;">
+              <span class="mevzu-kod">K055-F</span>Muhteva ve İlgili Âyetler
             </div>
-            <div class="topic-meta">
-              <span>Âyet 31 - 32</span>
-              <span class="badge" style="background:#b45309;">2 Âyet</span>
-            </div>
-          </div>
-          <div class="verse-grid">
-            
-            <div class="verse-window" style="border-left: 5px solid #b45309;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#b45309;">Âyet 31</span>
-                <span class="verse-key">55:31</span>
+            <div class="mevzu-meta">Âyet 31 - 32 · <span class="rozet" style="background:#b45309;">2 âyet</span></div>
+          </header>
+          
+            <article class="ayet" style="border-left:5px solid #b45309;">
+              <div class="ayet-baslik">
+                <span style="color:#b45309;">Âyet 31</span>
+                <span class="ayet-kod">55:31</span>
               </div>
-              <div class="verse-arabic">سَنَفْرُغُ لَكُمْ أَيُّهَ ٱلثَّقَلَانِ</div>
-              <div class="verse-meal">Ey insan ve cin! Sizin de hesabınızı ele alacağız.</div>
-            </div>
+              <div class="ayet-ar">سَنَفْرُغُ لَكُمْ أَيُّهَ ٱلثَّقَلَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="فَرَغْ"><span class="kelime-ar" style="color:#dc2626;">سَنَفْرُغُ</span><span class="kelime-tr">-ecek (gelecek)</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="ل"><span class="kelime-ar" style="color:#2563eb;">لَكُمْ</span><span class="kelime-tr">için, -e</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="ه"><span class="kelime-ar" style="color:#16a34a;">أَيُّهَ</span><span class="kelime-tr">o, ona (zamir)</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="ثَقَل"><span class="kelime-ar" style="color:#9333ea;">ٱلثَّقَلَانِ</span><span class="kelime-tr">the (belirteç)</span></span></div>
+              <div class="ayet-meal">Ey insan ve cin! Sizin de hesabınızı ele alacağız.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #b45309;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#b45309;">Âyet 32</span>
-                <span class="verse-key">55:32</span>
+            <article class="ayet" style="border-left:5px solid #b45309;">
+              <div class="ayet-baslik">
+                <span style="color:#b45309;">Âyet 32</span>
+                <span class="ayet-kod">55:32</span>
               </div>
-              <div class="verse-arabic">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
-              <div class="verse-meal">Hal bu iken Rabbinizin nimetlerinden hangisini yalanlayabilirsiniz?</div>
-            </div>
+              <div class="ayet-ar">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَيّ"><span class="kelime-ar" style="color:#dc2626;">فَبِأَىِّ</span><span class="kelime-tr">hangi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="آلاء"><span class="kelime-ar" style="color:#2563eb;">ءَالَآءِ</span><span class="kelime-tr">nimetler</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="رَبّ"><span class="kelime-ar" style="color:#16a34a;">رَبِّكُمَا</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="كَذَّبَ"><span class="kelime-ar" style="color:#9333ea;">تُكَذِّبَانِ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">Hal bu iken Rabbinizin nimetlerinden hangisini yalanlayabilirsiniz?</div>
+            </article>
             
-          </div>
-        </div>
+        </section>
         
-        <div class="topic-section">
-          <div class="topic-header" style="background: linear-gradient(90deg, #991b1b33, transparent); border-left: 6px solid #991b1b;">
-            <div class="topic-title" style="color: #991b1b;">
-              <span class="topic-code">K055-03</span>
-              <span>Cin ve insan</span>
+        <section class="mevzu">
+          <header class="mevzu-baslik" style="border-left:6px solid #991b1b; background:#991b1b14;">
+            <div class="mevzu-ad" style="color:#991b1b;">
+              <span class="mevzu-kod">K055-03</span>Cin ve insan
             </div>
-            <div class="topic-meta">
-              <span>Âyet 33 - 40</span>
-              <span class="badge" style="background:#991b1b;">8 Âyet</span>
-            </div>
-          </div>
-          <div class="verse-grid">
-            
-            <div class="verse-window" style="border-left: 5px solid #991b1b;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#991b1b;">Âyet 33</span>
-                <span class="verse-key">55:33</span>
+            <div class="mevzu-meta">Âyet 33 - 40 · <span class="rozet" style="background:#991b1b;">8 âyet</span></div>
+          </header>
+          
+            <article class="ayet" style="border-left:5px solid #991b1b;">
+              <div class="ayet-baslik">
+                <span style="color:#991b1b;">Âyet 33</span>
+                <span class="ayet-kod">55:33</span>
               </div>
-              <div class="verse-arabic">يَـٰمَعْشَرَ ٱلْجِنِّ وَٱلْإِنسِ إِنِ ٱسْتَطَعْتُمْ أَن تَنفُذُوا۟ مِنْ أَقْطَارِ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ فَٱنفُذُوا۟ ۚ لَا تَنفُذُونَ إِلَّا بِسُلْطَـٰنٍ</div>
-              <div class="verse-meal">Ey cin ve insan toplulukları! Göklerin ve yerin çerçevesinden çıkıp gitmeye gücünüz yetiyorsa geçin. Ancak büyük bir güçle çıkıp gidebilirsiniz.</div>
-            </div>
+              <div class="ayet-ar">يَـٰمَعْشَرَ ٱلْجِنِّ وَٱلْإِنسِ إِنِ ٱسْتَطَعْتُمْ أَن تَنفُذُوا۟ مِنْ أَقْطَارِ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ فَٱنفُذُوا۟ ۚ لَا تَنفُذُونَ إِلَّا بِسُلْطَـٰنٍ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="مَعْشَر"><span class="kelime-ar" style="color:#dc2626;">يَٰمَعْشَرَ</span><span class="kelime-tr">-im (zamir)</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="جِنّ"><span class="kelime-ar" style="color:#2563eb;">ٱلْجِنِّ</span><span class="kelime-tr">Cin</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="إِنس"><span class="kelime-ar" style="color:#16a34a;">وَٱلْإِنسِ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="إِن"><span class="kelime-ar" style="color:#9333ea;">إِنِ</span><span class="kelime-tr">eğer, şayet</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="اسْتَطاعَ"><span class="kelime-ar" style="color:#ea580c;">ٱسْتَطَعْتُمْ</span><span class="kelime-tr">güç yetirdi</span></span><span class="kelime" style="border-bottom:3px solid #0891b2;" title="أَن"><span class="kelime-ar" style="color:#0891b2;">أَن</span><span class="kelime-tr">ki, -mesi</span></span><span class="kelime" style="border-bottom:3px solid #be185d;" title="تَنفُذُ"><span class="kelime-ar" style="color:#be185d;">تَنفُذُوا۟</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #ca8a04;" title="مِن"><span class="kelime-ar" style="color:#ca8a04;">مِنْ</span><span class="kelime-tr">-den, -dan</span></span><span class="kelime" style="border-bottom:3px solid #4f46e5;" title="أَقْطار"><span class="kelime-ar" style="color:#4f46e5;">أَقْطَارِ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #0d9488;" title="سَماء"><span class="kelime-ar" style="color:#0d9488;">ٱلسَّمَٰوَٰتِ</span><span class="kelime-tr">Gök</span></span><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَرْض"><span class="kelime-ar" style="color:#dc2626;">وَٱلْأَرْضِ</span><span class="kelime-tr">Yer</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="تَنفُذُ"><span class="kelime-ar" style="color:#2563eb;">فَٱنفُذُوا۟</span><span class="kelime-tr">ve, böylece</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="لا"><span class="kelime-ar" style="color:#16a34a;">لَا</span><span class="kelime-tr">Hayır/değil</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="تَنفُذُ"><span class="kelime-ar" style="color:#9333ea;">تَنفُذُونَ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="إِلّا"><span class="kelime-ar" style="color:#ea580c;">إِلَّا</span><span class="kelime-tr">ancak, sadece</span></span><span class="kelime" style="border-bottom:3px solid #0891b2;" title="سُلْطان"><span class="kelime-ar" style="color:#0891b2;">بِسُلْطَٰنٍ</span><span class="kelime-tr">delil, güç</span></span></div>
+              <div class="ayet-meal">Ey cin ve insan toplulukları! Göklerin ve yerin çerçevesinden çıkıp gitmeye gücünüz yetiyorsa geçin. Ancak büyük bir güçle çıkıp gidebilirsiniz.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #991b1b;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#991b1b;">Âyet 34</span>
-                <span class="verse-key">55:34</span>
+            <article class="ayet" style="border-left:5px solid #991b1b;">
+              <div class="ayet-baslik">
+                <span style="color:#991b1b;">Âyet 34</span>
+                <span class="ayet-kod">55:34</span>
               </div>
-              <div class="verse-arabic">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
-              <div class="verse-meal">Öyleyse Rabbinizin hangi nimetlerini yalanlayabilirsiniz?</div>
-            </div>
+              <div class="ayet-ar">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَيّ"><span class="kelime-ar" style="color:#dc2626;">فَبِأَىِّ</span><span class="kelime-tr">hangi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="آلاء"><span class="kelime-ar" style="color:#2563eb;">ءَالَآءِ</span><span class="kelime-tr">nimetler</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="رَبّ"><span class="kelime-ar" style="color:#16a34a;">رَبِّكُمَا</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="كَذَّبَ"><span class="kelime-ar" style="color:#9333ea;">تُكَذِّبَانِ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">Öyleyse Rabbinizin hangi nimetlerini yalanlayabilirsiniz?</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #991b1b;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#991b1b;">Âyet 35</span>
-                <span class="verse-key">55:35</span>
+            <article class="ayet" style="border-left:5px solid #991b1b;">
+              <div class="ayet-baslik">
+                <span style="color:#991b1b;">Âyet 35</span>
+                <span class="ayet-kod">55:35</span>
               </div>
-              <div class="verse-arabic">يُرْسَلُ عَلَيْكُمَا شُوَاظٌ مِّن نَّارٍ وَنُحَاسٌ فَلَا تَنتَصِرَانِ</div>
-              <div class="verse-meal">Üzerinize ateşten alev ve duman gönderilir de birbirinizi kurtaramaz ve yardımlaşamazsınız.</div>
-            </div>
+              <div class="ayet-ar">يُرْسَلُ عَلَيْكُمَا شُوَاظٌ مِّن نَّارٍ وَنُحَاسٌ فَلَا تَنتَصِرَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَرْسَلَ"><span class="kelime-ar" style="color:#dc2626;">يُرْسَلُ</span><span class="kelime-tr">gönderdi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="عَلَى"><span class="kelime-ar" style="color:#2563eb;">عَلَيْكُمَا</span><span class="kelime-tr">üzerine, üstüne</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="شُواظ"><span class="kelime-ar" style="color:#16a34a;">شُوَاظٌ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="مِن"><span class="kelime-ar" style="color:#9333ea;">مِّن</span><span class="kelime-tr">-den, -dan</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="نار"><span class="kelime-ar" style="color:#ea580c;">نَّارٍ</span><span class="kelime-tr">Ateş/Cehennem</span></span><span class="kelime" style="border-bottom:3px solid #0891b2;" title="نُحاس"><span class="kelime-ar" style="color:#0891b2;">وَنُحَاسٌ</span><span class="kelime-tr">ve</span></span><span class="kelime" style="border-bottom:3px solid #be185d;" title="لا"><span class="kelime-ar" style="color:#be185d;">فَلَا</span><span class="kelime-tr">Hayır/değil</span></span><span class="kelime" style="border-bottom:3px solid #ca8a04;" title="انتَصَرَ"><span class="kelime-ar" style="color:#ca8a04;">تَنتَصِرَانِ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">Üzerinize ateşten alev ve duman gönderilir de birbirinizi kurtaramaz ve yardımlaşamazsınız.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #991b1b;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#991b1b;">Âyet 36</span>
-                <span class="verse-key">55:36</span>
+            <article class="ayet" style="border-left:5px solid #991b1b;">
+              <div class="ayet-baslik">
+                <span style="color:#991b1b;">Âyet 36</span>
+                <span class="ayet-kod">55:36</span>
               </div>
-              <div class="verse-arabic">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
-              <div class="verse-meal">Öyleyken Rabbinizin hangi nimetlerini yalanlayabilirsiniz?</div>
-            </div>
+              <div class="ayet-ar">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَيّ"><span class="kelime-ar" style="color:#dc2626;">فَبِأَىِّ</span><span class="kelime-tr">hangi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="آلاء"><span class="kelime-ar" style="color:#2563eb;">ءَالَآءِ</span><span class="kelime-tr">nimetler</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="رَبّ"><span class="kelime-ar" style="color:#16a34a;">رَبِّكُمَا</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="كَذَّبَ"><span class="kelime-ar" style="color:#9333ea;">تُكَذِّبَانِ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">Öyleyken Rabbinizin hangi nimetlerini yalanlayabilirsiniz?</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #991b1b;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#991b1b;">Âyet 37</span>
-                <span class="verse-key">55:37</span>
+            <article class="ayet" style="border-left:5px solid #991b1b;">
+              <div class="ayet-baslik">
+                <span style="color:#991b1b;">Âyet 37</span>
+                <span class="ayet-kod">55:37</span>
               </div>
-              <div class="verse-arabic">فَإِذَا ٱنشَقَّتِ ٱلسَّمَآءُ فَكَانَتْ وَرْدَةً كَٱلدِّهَانِ</div>
-              <div class="verse-meal">Gök yarılıp da kızarmış yağ renginde gül gibi olduğu zaman,</div>
-            </div>
+              <div class="ayet-ar">فَإِذَا ٱنشَقَّتِ ٱلسَّمَآءُ فَكَانَتْ وَرْدَةً كَٱلدِّهَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="إِذا"><span class="kelime-ar" style="color:#dc2626;">فَإِذَا</span><span class="kelime-tr">ne zaman, -dığında</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="انشَقَّ"><span class="kelime-ar" style="color:#2563eb;">ٱنشَقَّتِ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="سَماء"><span class="kelime-ar" style="color:#16a34a;">ٱلسَّمَآءُ</span><span class="kelime-tr">Gök</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="كانَ"><span class="kelime-ar" style="color:#9333ea;">فَكَانَتْ</span><span class="kelime-tr">Oldu</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="وَرْدَة"><span class="kelime-ar" style="color:#ea580c;">وَرْدَةً</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #0891b2;" title="دِهان"><span class="kelime-ar" style="color:#0891b2;">كَٱلدِّهَانِ</span><span class="kelime-tr">the (belirteç)</span></span></div>
+              <div class="ayet-meal">Gök yarılıp da kızarmış yağ renginde gül gibi olduğu zaman,</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #991b1b;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#991b1b;">Âyet 38</span>
-                <span class="verse-key">55:38</span>
+            <article class="ayet" style="border-left:5px solid #991b1b;">
+              <div class="ayet-baslik">
+                <span style="color:#991b1b;">Âyet 38</span>
+                <span class="ayet-kod">55:38</span>
               </div>
-              <div class="verse-arabic">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
-              <div class="verse-meal">Rabbinizin hangi nimetlerini yalanlayabilirsiniz?</div>
-            </div>
+              <div class="ayet-ar">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَيّ"><span class="kelime-ar" style="color:#dc2626;">فَبِأَىِّ</span><span class="kelime-tr">hangi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="آلاء"><span class="kelime-ar" style="color:#2563eb;">ءَالَآءِ</span><span class="kelime-tr">nimetler</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="رَبّ"><span class="kelime-ar" style="color:#16a34a;">رَبِّكُمَا</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="كَذَّبَ"><span class="kelime-ar" style="color:#9333ea;">تُكَذِّبَانِ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">Rabbinizin hangi nimetlerini yalanlayabilirsiniz?</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #991b1b;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#991b1b;">Âyet 39</span>
-                <span class="verse-key">55:39</span>
+            <article class="ayet" style="border-left:5px solid #991b1b;">
+              <div class="ayet-baslik">
+                <span style="color:#991b1b;">Âyet 39</span>
+                <span class="ayet-kod">55:39</span>
               </div>
-              <div class="verse-arabic">فَيَوْمَئِذٍ لَّا يُسْـَٔلُ عَن ذَنۢبِهِۦٓ إِنسٌ وَلَا جَآنٌّ</div>
-              <div class="verse-meal">İşte o gün insana da cine de günahı sorulmaz.</div>
-            </div>
+              <div class="ayet-ar">فَيَوْمَئِذٍ لَّا يُسْـَٔلُ عَن ذَنۢبِهِۦٓ إِنسٌ وَلَا جَآنٌّ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="إِذ"><span class="kelime-ar" style="color:#dc2626;">فَيَوْمَئِذٍ</span><span class="kelime-tr">o zaman, -dığında</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="لا"><span class="kelime-ar" style="color:#2563eb;">لَّا</span><span class="kelime-tr">Hayır/değil</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="سَأَلَ"><span class="kelime-ar" style="color:#16a34a;">يُسْـَٔلُ</span><span class="kelime-tr">Sordu</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="عَن"><span class="kelime-ar" style="color:#9333ea;">عَن</span><span class="kelime-tr">hakkında, -den</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="ذَنب"><span class="kelime-ar" style="color:#ea580c;">ذَنۢبِهِۦٓ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #0891b2;" title="إِنس"><span class="kelime-ar" style="color:#0891b2;">إِنسٌ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #be185d;" title="لا"><span class="kelime-ar" style="color:#be185d;">وَلَا</span><span class="kelime-tr">Hayır/değil</span></span><span class="kelime" style="border-bottom:3px solid #ca8a04;" title="جانّ"><span class="kelime-ar" style="color:#ca8a04;">جَآنٌّ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">İşte o gün insana da cine de günahı sorulmaz.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #991b1b;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#991b1b;">Âyet 40</span>
-                <span class="verse-key">55:40</span>
+            <article class="ayet" style="border-left:5px solid #991b1b;">
+              <div class="ayet-baslik">
+                <span style="color:#991b1b;">Âyet 40</span>
+                <span class="ayet-kod">55:40</span>
               </div>
-              <div class="verse-arabic">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
-              <div class="verse-meal">O halde Rabbinizin nimetlerinden hangisini yalanlayabilirsiniz?</div>
-            </div>
+              <div class="ayet-ar">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَيّ"><span class="kelime-ar" style="color:#dc2626;">فَبِأَىِّ</span><span class="kelime-tr">hangi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="آلاء"><span class="kelime-ar" style="color:#2563eb;">ءَالَآءِ</span><span class="kelime-tr">nimetler</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="رَبّ"><span class="kelime-ar" style="color:#16a34a;">رَبِّكُمَا</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="كَذَّبَ"><span class="kelime-ar" style="color:#9333ea;">تُكَذِّبَانِ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">O halde Rabbinizin nimetlerinden hangisini yalanlayabilirsiniz?</div>
+            </article>
             
-          </div>
-        </div>
+        </section>
         
-        <div class="topic-section">
-          <div class="topic-header" style="background: linear-gradient(90deg, #4338ca33, transparent); border-left: 6px solid #4338ca;">
-            <div class="topic-title" style="color: #4338ca;">
-              <span class="topic-code">K055-F</span>
-              <span>Muhteva ve İlgili Âyetler</span>
+        <section class="mevzu">
+          <header class="mevzu-baslik" style="border-left:6px solid #4338ca; background:#4338ca14;">
+            <div class="mevzu-ad" style="color:#4338ca;">
+              <span class="mevzu-kod">K055-F</span>Muhteva ve İlgili Âyetler
             </div>
-            <div class="topic-meta">
-              <span>Âyet 41 - 45</span>
-              <span class="badge" style="background:#4338ca;">5 Âyet</span>
-            </div>
-          </div>
-          <div class="verse-grid">
-            
-            <div class="verse-window" style="border-left: 5px solid #4338ca;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#4338ca;">Âyet 41</span>
-                <span class="verse-key">55:41</span>
+            <div class="mevzu-meta">Âyet 41 - 45 · <span class="rozet" style="background:#4338ca;">5 âyet</span></div>
+          </header>
+          
+            <article class="ayet" style="border-left:5px solid #4338ca;">
+              <div class="ayet-baslik">
+                <span style="color:#4338ca;">Âyet 41</span>
+                <span class="ayet-kod">55:41</span>
               </div>
-              <div class="verse-arabic">يُعْرَفُ ٱلْمُجْرِمُونَ بِسِيمَـٰهُمْ فَيُؤْخَذُ بِٱلنَّوَٰصِى وَٱلْأَقْدَامِ</div>
-              <div class="verse-meal">Suçlular, simalarından tanınır, perçemlerinden ve ayaklarından yakalanırlar.</div>
-            </div>
+              <div class="ayet-ar">يُعْرَفُ ٱلْمُجْرِمُونَ بِسِيمَـٰهُمْ فَيُؤْخَذُ بِٱلنَّوَٰصِى وَٱلْأَقْدَامِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="عَرَفَ"><span class="kelime-ar" style="color:#dc2626;">يُعْرَفُ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="مُجْرِم"><span class="kelime-ar" style="color:#2563eb;">ٱلْمُجْرِمُونَ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="سِيما"><span class="kelime-ar" style="color:#16a34a;">بِسِيمَٰهُمْ</span><span class="kelime-tr">ile, -de</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="أَخَذَ"><span class="kelime-ar" style="color:#9333ea;">فَيُؤْخَذُ</span><span class="kelime-tr">Aldı</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="نَواصِي"><span class="kelime-ar" style="color:#ea580c;">بِٱلنَّوَٰصِى</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #0891b2;" title="قَدَم"><span class="kelime-ar" style="color:#0891b2;">وَٱلْأَقْدَامِ</span><span class="kelime-tr">the (belirteç)</span></span></div>
+              <div class="ayet-meal">Suçlular, simalarından tanınır, perçemlerinden ve ayaklarından yakalanırlar.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #4338ca;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#4338ca;">Âyet 42</span>
-                <span class="verse-key">55:42</span>
+            <article class="ayet" style="border-left:5px solid #4338ca;">
+              <div class="ayet-baslik">
+                <span style="color:#4338ca;">Âyet 42</span>
+                <span class="ayet-kod">55:42</span>
               </div>
-              <div class="verse-arabic">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
-              <div class="verse-meal">Öyleyken Rabbinizin hangi nimetlerini yalanlayabilirsiniz?</div>
-            </div>
+              <div class="ayet-ar">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَيّ"><span class="kelime-ar" style="color:#dc2626;">فَبِأَىِّ</span><span class="kelime-tr">hangi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="آلاء"><span class="kelime-ar" style="color:#2563eb;">ءَالَآءِ</span><span class="kelime-tr">nimetler</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="رَبّ"><span class="kelime-ar" style="color:#16a34a;">رَبِّكُمَا</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="كَذَّبَ"><span class="kelime-ar" style="color:#9333ea;">تُكَذِّبَانِ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">Öyleyken Rabbinizin hangi nimetlerini yalanlayabilirsiniz?</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #4338ca;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#4338ca;">Âyet 43</span>
-                <span class="verse-key">55:43</span>
+            <article class="ayet" style="border-left:5px solid #4338ca;">
+              <div class="ayet-baslik">
+                <span style="color:#4338ca;">Âyet 43</span>
+                <span class="ayet-kod">55:43</span>
               </div>
-              <div class="verse-arabic">هَـٰذِهِۦ جَهَنَّمُ ٱلَّتِى يُكَذِّبُ بِهَا ٱلْمُجْرِمُونَ</div>
-              <div class="verse-meal">İşte bu, suçluların yalanladıkları cehennemdir.</div>
-            </div>
+              <div class="ayet-ar">هَـٰذِهِۦ جَهَنَّمُ ٱلَّتِى يُكَذِّبُ بِهَا ٱلْمُجْرِمُونَ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="ذا"><span class="kelime-ar" style="color:#dc2626;">هَٰذِهِۦ</span><span class="kelime-tr">İşte o</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="جَهَنَّم"><span class="kelime-ar" style="color:#2563eb;">جَهَنَّمُ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="الَّذِي"><span class="kelime-ar" style="color:#16a34a;">ٱلَّتِى</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="كَذَّبَ"><span class="kelime-ar" style="color:#9333ea;">يُكَذِّبُ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="ب"><span class="kelime-ar" style="color:#ea580c;">بِهَا</span><span class="kelime-tr">ile, -de</span></span><span class="kelime" style="border-bottom:3px solid #0891b2;" title="مُجْرِم"><span class="kelime-ar" style="color:#0891b2;">ٱلْمُجْرِمُونَ</span><span class="kelime-tr">the (belirteç)</span></span></div>
+              <div class="ayet-meal">İşte bu, suçluların yalanladıkları cehennemdir.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #4338ca;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#4338ca;">Âyet 44</span>
-                <span class="verse-key">55:44</span>
+            <article class="ayet" style="border-left:5px solid #4338ca;">
+              <div class="ayet-baslik">
+                <span style="color:#4338ca;">Âyet 44</span>
+                <span class="ayet-kod">55:44</span>
               </div>
-              <div class="verse-arabic">يَطُوفُونَ بَيْنَهَا وَبَيْنَ حَمِيمٍ ءَانٍ</div>
-              <div class="verse-meal">Onlar, cehennemle kaynar su arasında dolaşır dururlar.</div>
-            </div>
+              <div class="ayet-ar">يَطُوفُونَ بَيْنَهَا وَبَيْنَ حَمِيمٍ ءَانٍ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="طافَ"><span class="kelime-ar" style="color:#dc2626;">يَطُوفُونَ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="بَيْن"><span class="kelime-ar" style="color:#2563eb;">بَيْنَهَا</span><span class="kelime-tr">arasında</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="بَيْن"><span class="kelime-ar" style="color:#16a34a;">وَبَيْنَ</span><span class="kelime-tr">arasında</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="حَمِيم"><span class="kelime-ar" style="color:#9333ea;">حَمِيمٍ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="آن"><span class="kelime-ar" style="color:#ea580c;">ءَانٍ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">Onlar, cehennemle kaynar su arasında dolaşır dururlar.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #4338ca;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#4338ca;">Âyet 45</span>
-                <span class="verse-key">55:45</span>
+            <article class="ayet" style="border-left:5px solid #4338ca;">
+              <div class="ayet-baslik">
+                <span style="color:#4338ca;">Âyet 45</span>
+                <span class="ayet-kod">55:45</span>
               </div>
-              <div class="verse-arabic">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
-              <div class="verse-meal">Şimdi Rabbinizin nimetlerinden hangisini yalanlayabilirsiniz?</div>
-            </div>
+              <div class="ayet-ar">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَيّ"><span class="kelime-ar" style="color:#dc2626;">فَبِأَىِّ</span><span class="kelime-tr">hangi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="آلاء"><span class="kelime-ar" style="color:#2563eb;">ءَالَآءِ</span><span class="kelime-tr">nimetler</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="رَبّ"><span class="kelime-ar" style="color:#16a34a;">رَبِّكُمَا</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="كَذَّبَ"><span class="kelime-ar" style="color:#9333ea;">تُكَذِّبَانِ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">Şimdi Rabbinizin nimetlerinden hangisini yalanlayabilirsiniz?</div>
+            </article>
             
-          </div>
-        </div>
+        </section>
         
-        <div class="topic-section">
-          <div class="topic-header" style="background: linear-gradient(90deg, #0e749033, transparent); border-left: 6px solid #0e7490;">
-            <div class="topic-title" style="color: #0e7490;">
-              <span class="topic-code">K055-04</span>
-              <span>Cennet</span>
+        <section class="mevzu">
+          <header class="mevzu-baslik" style="border-left:6px solid #0e7490; background:#0e749014;">
+            <div class="mevzu-ad" style="color:#0e7490;">
+              <span class="mevzu-kod">K055-04</span>Cennet
             </div>
-            <div class="topic-meta">
-              <span>Âyet 46 - 78</span>
-              <span class="badge" style="background:#0e7490;">33 Âyet</span>
-            </div>
-          </div>
-          <div class="verse-grid">
-            
-            <div class="verse-window" style="border-left: 5px solid #0e7490;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#0e7490;">Âyet 46</span>
-                <span class="verse-key">55:46</span>
+            <div class="mevzu-meta">Âyet 46 - 78 · <span class="rozet" style="background:#0e7490;">33 âyet</span></div>
+          </header>
+          
+            <article class="ayet" style="border-left:5px solid #0e7490;">
+              <div class="ayet-baslik">
+                <span style="color:#0e7490;">Âyet 46</span>
+                <span class="ayet-kod">55:46</span>
               </div>
-              <div class="verse-arabic">وَلِمَنْ خَافَ مَقَامَ رَبِّهِۦ جَنَّتَانِ</div>
-              <div class="verse-meal">Rabbinin huzurunda durmaktan korkan kimselere iki cennet vardır.</div>
-            </div>
+              <div class="ayet-ar">وَلِمَنْ خَافَ مَقَامَ رَبِّهِۦ جَنَّتَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="مَن"><span class="kelime-ar" style="color:#dc2626;">وَلِمَنْ</span><span class="kelime-tr">kim, kimse</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="خافَ"><span class="kelime-ar" style="color:#2563eb;">خَافَ</span><span class="kelime-tr">korktu</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="مَقام"><span class="kelime-ar" style="color:#16a34a;">مَقَامَ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="رَبّ"><span class="kelime-ar" style="color:#9333ea;">رَبِّهِۦ</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="جَنَّة"><span class="kelime-ar" style="color:#ea580c;">جَنَّتَانِ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">Rabbinin huzurunda durmaktan korkan kimselere iki cennet vardır.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #0e7490;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#0e7490;">Âyet 47</span>
-                <span class="verse-key">55:47</span>
+            <article class="ayet" style="border-left:5px solid #0e7490;">
+              <div class="ayet-baslik">
+                <span style="color:#0e7490;">Âyet 47</span>
+                <span class="ayet-kod">55:47</span>
               </div>
-              <div class="verse-arabic">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
-              <div class="verse-meal">Öyleyken Rabbinizin nimetlerinden hangisini yalanlayabilirsiniz?</div>
-            </div>
+              <div class="ayet-ar">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَيّ"><span class="kelime-ar" style="color:#dc2626;">فَبِأَىِّ</span><span class="kelime-tr">hangi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="آلاء"><span class="kelime-ar" style="color:#2563eb;">ءَالَآءِ</span><span class="kelime-tr">nimetler</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="رَبّ"><span class="kelime-ar" style="color:#16a34a;">رَبِّكُمَا</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="كَذَّبَ"><span class="kelime-ar" style="color:#9333ea;">تُكَذِّبَانِ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">Öyleyken Rabbinizin nimetlerinden hangisini yalanlayabilirsiniz?</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #0e7490;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#0e7490;">Âyet 48</span>
-                <span class="verse-key">55:48</span>
+            <article class="ayet" style="border-left:5px solid #0e7490;">
+              <div class="ayet-baslik">
+                <span style="color:#0e7490;">Âyet 48</span>
+                <span class="ayet-kod">55:48</span>
               </div>
-              <div class="verse-arabic">ذَوَاتَآ أَفْنَانٍ</div>
-              <div class="verse-meal">İki cennet de çeşit çeşit ağaçlarla doludur.</div>
-            </div>
+              <div class="ayet-ar">ذَوَاتَآ أَفْنَانٍ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="ذُو"><span class="kelime-ar" style="color:#dc2626;">ذَوَاتَآ</span><span class="kelime-tr">sahip olan</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="أَفْنان"><span class="kelime-ar" style="color:#2563eb;">أَفْنَانٍ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">İki cennet de çeşit çeşit ağaçlarla doludur.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #0e7490;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#0e7490;">Âyet 49</span>
-                <span class="verse-key">55:49</span>
+            <article class="ayet" style="border-left:5px solid #0e7490;">
+              <div class="ayet-baslik">
+                <span style="color:#0e7490;">Âyet 49</span>
+                <span class="ayet-kod">55:49</span>
               </div>
-              <div class="verse-arabic">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
-              <div class="verse-meal">Öyleyse Rabbinizin hangi nimetlerini yalanlayabilirsiniz?</div>
-            </div>
+              <div class="ayet-ar">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَيّ"><span class="kelime-ar" style="color:#dc2626;">فَبِأَىِّ</span><span class="kelime-tr">hangi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="آلاء"><span class="kelime-ar" style="color:#2563eb;">ءَالَآءِ</span><span class="kelime-tr">nimetler</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="رَبّ"><span class="kelime-ar" style="color:#16a34a;">رَبِّكُمَا</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="كَذَّبَ"><span class="kelime-ar" style="color:#9333ea;">تُكَذِّبَانِ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">Öyleyse Rabbinizin hangi nimetlerini yalanlayabilirsiniz?</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #0e7490;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#0e7490;">Âyet 50</span>
-                <span class="verse-key">55:50</span>
+            <article class="ayet" style="border-left:5px solid #0e7490;">
+              <div class="ayet-baslik">
+                <span style="color:#0e7490;">Âyet 50</span>
+                <span class="ayet-kod">55:50</span>
               </div>
-              <div class="verse-arabic">فِيهِمَا عَيْنَانِ تَجْرِيَانِ</div>
-              <div class="verse-meal">İkisinde de akıp giden iki kaynak vardır.</div>
-            </div>
+              <div class="ayet-ar">فِيهِمَا عَيْنَانِ تَجْرِيَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="فِي"><span class="kelime-ar" style="color:#dc2626;">فِيهِمَا</span><span class="kelime-tr">İçinde</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="عَيْن"><span class="kelime-ar" style="color:#2563eb;">عَيْنَانِ</span><span class="kelime-tr">göz, kaynak</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="جَرَيْ"><span class="kelime-ar" style="color:#16a34a;">تَجْرِيَانِ</span><span class="kelime-tr">aktı, cereyan etti</span></span></div>
+              <div class="ayet-meal">İkisinde de akıp giden iki kaynak vardır.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #0e7490;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#0e7490;">Âyet 51</span>
-                <span class="verse-key">55:51</span>
+            <article class="ayet" style="border-left:5px solid #0e7490;">
+              <div class="ayet-baslik">
+                <span style="color:#0e7490;">Âyet 51</span>
+                <span class="ayet-kod">55:51</span>
               </div>
-              <div class="verse-arabic">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
-              <div class="verse-meal">Öyleyken Rabbinizin hangi nimetlerini yalanlayabilirsiniz?</div>
-            </div>
+              <div class="ayet-ar">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَيّ"><span class="kelime-ar" style="color:#dc2626;">فَبِأَىِّ</span><span class="kelime-tr">hangi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="آلاء"><span class="kelime-ar" style="color:#2563eb;">ءَالَآءِ</span><span class="kelime-tr">nimetler</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="رَبّ"><span class="kelime-ar" style="color:#16a34a;">رَبِّكُمَا</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="كَذَّبَ"><span class="kelime-ar" style="color:#9333ea;">تُكَذِّبَانِ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">Öyleyken Rabbinizin hangi nimetlerini yalanlayabilirsiniz?</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #0e7490;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#0e7490;">Âyet 52</span>
-                <span class="verse-key">55:52</span>
+            <article class="ayet" style="border-left:5px solid #0e7490;">
+              <div class="ayet-baslik">
+                <span style="color:#0e7490;">Âyet 52</span>
+                <span class="ayet-kod">55:52</span>
               </div>
-              <div class="verse-arabic">فِيهِمَا مِن كُلِّ فَـٰكِهَةٍ زَوْجَانِ</div>
-              <div class="verse-meal">İkisinde de her türlü meyveden çift çift vardır.</div>
-            </div>
+              <div class="ayet-ar">فِيهِمَا مِن كُلِّ فَـٰكِهَةٍ زَوْجَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="فِي"><span class="kelime-ar" style="color:#dc2626;">فِيهِمَا</span><span class="kelime-tr">İçinde</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="مِن"><span class="kelime-ar" style="color:#2563eb;">مِن</span><span class="kelime-tr">-den, -dan</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="كُلّ"><span class="kelime-ar" style="color:#16a34a;">كُلِّ</span><span class="kelime-tr">Hepsi</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="فاكِهَة"><span class="kelime-ar" style="color:#9333ea;">فَٰكِهَةٍ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="زَوْج"><span class="kelime-ar" style="color:#ea580c;">زَوْجَانِ</span><span class="kelime-tr">eş, çift</span></span></div>
+              <div class="ayet-meal">İkisinde de her türlü meyveden çift çift vardır.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #0e7490;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#0e7490;">Âyet 53</span>
-                <span class="verse-key">55:53</span>
+            <article class="ayet" style="border-left:5px solid #0e7490;">
+              <div class="ayet-baslik">
+                <span style="color:#0e7490;">Âyet 53</span>
+                <span class="ayet-kod">55:53</span>
               </div>
-              <div class="verse-arabic">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
-              <div class="verse-meal">Öyleyken Rabbinizin hangi nimetlerini yalanlayabilirsiniz?</div>
-            </div>
+              <div class="ayet-ar">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَيّ"><span class="kelime-ar" style="color:#dc2626;">فَبِأَىِّ</span><span class="kelime-tr">hangi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="آلاء"><span class="kelime-ar" style="color:#2563eb;">ءَالَآءِ</span><span class="kelime-tr">nimetler</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="رَبّ"><span class="kelime-ar" style="color:#16a34a;">رَبِّكُمَا</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="كَذَّبَ"><span class="kelime-ar" style="color:#9333ea;">تُكَذِّبَانِ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">Öyleyken Rabbinizin hangi nimetlerini yalanlayabilirsiniz?</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #0e7490;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#0e7490;">Âyet 54</span>
-                <span class="verse-key">55:54</span>
+            <article class="ayet" style="border-left:5px solid #0e7490;">
+              <div class="ayet-baslik">
+                <span style="color:#0e7490;">Âyet 54</span>
+                <span class="ayet-kod">55:54</span>
               </div>
-              <div class="verse-arabic">مُتَّكِـِٔينَ عَلَىٰ فُرُشٍۭ بَطَآئِنُهَا مِنْ إِسْتَبْرَقٍ ۚ وَجَنَى ٱلْجَنَّتَيْنِ دَانٍ</div>
-              <div class="verse-meal">Hepsi de örtüleri atlastan minderlere yaslanırlar. İki cennetin de meyvesinin devşirilmesi yakındır.</div>
-            </div>
+              <div class="ayet-ar">مُتَّكِـِٔينَ عَلَىٰ فُرُشٍۭ بَطَآئِنُهَا مِنْ إِسْتَبْرَقٍ ۚ وَجَنَى ٱلْجَنَّتَيْنِ دَانٍ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="مُتَّكِئ"><span class="kelime-ar" style="color:#dc2626;">مُتَّكِـِٔينَ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="عَلَى"><span class="kelime-ar" style="color:#2563eb;">عَلَىٰ</span><span class="kelime-tr">üzerine, üstüne</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="فِراش"><span class="kelime-ar" style="color:#16a34a;">فُرُشٍۭ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="بِطانَة"><span class="kelime-ar" style="color:#9333ea;">بَطَآئِنُهَا</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="مِن"><span class="kelime-ar" style="color:#ea580c;">مِنْ</span><span class="kelime-tr">-den, -dan</span></span><span class="kelime" style="border-bottom:3px solid #0891b2;" title="إِسْتَبْرَق"><span class="kelime-ar" style="color:#0891b2;">إِسْتَبْرَقٍ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #be185d;" title="جَنَى"><span class="kelime-ar" style="color:#be185d;">وَجَنَى</span><span class="kelime-tr">ve</span></span><span class="kelime" style="border-bottom:3px solid #ca8a04;" title="جَنَّة"><span class="kelime-ar" style="color:#ca8a04;">ٱلْجَنَّتَيْنِ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #4f46e5;" title="دان"><span class="kelime-ar" style="color:#4f46e5;">دَانٍ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">Hepsi de örtüleri atlastan minderlere yaslanırlar. İki cennetin de meyvesinin devşirilmesi yakındır.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #0e7490;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#0e7490;">Âyet 55</span>
-                <span class="verse-key">55:55</span>
+            <article class="ayet" style="border-left:5px solid #0e7490;">
+              <div class="ayet-baslik">
+                <span style="color:#0e7490;">Âyet 55</span>
+                <span class="ayet-kod">55:55</span>
               </div>
-              <div class="verse-arabic">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
-              <div class="verse-meal">Öyleyken Rabinizin hangi nimetlerini yalanlayabilirsiniz?</div>
-            </div>
+              <div class="ayet-ar">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَيّ"><span class="kelime-ar" style="color:#dc2626;">فَبِأَىِّ</span><span class="kelime-tr">hangi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="آلاء"><span class="kelime-ar" style="color:#2563eb;">ءَالَآءِ</span><span class="kelime-tr">nimetler</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="رَبّ"><span class="kelime-ar" style="color:#16a34a;">رَبِّكُمَا</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="كَذَّبَ"><span class="kelime-ar" style="color:#9333ea;">تُكَذِّبَانِ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">Öyleyken Rabinizin hangi nimetlerini yalanlayabilirsiniz?</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #0e7490;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#0e7490;">Âyet 56</span>
-                <span class="verse-key">55:56</span>
+            <article class="ayet" style="border-left:5px solid #0e7490;">
+              <div class="ayet-baslik">
+                <span style="color:#0e7490;">Âyet 56</span>
+                <span class="ayet-kod">55:56</span>
               </div>
-              <div class="verse-arabic">فِيهِنَّ قَـٰصِرَٰتُ ٱلطَّرْفِ لَمْ يَطْمِثْهُنَّ إِنسٌ قَبْلَهُمْ وَلَا جَآنٌّ</div>
-              <div class="verse-meal">Oralarda gözlerini yalnız eşlerine çevirmiş güzeller var ki, bunlardan önce onlara ne insan ne de cin dokunmuştur.</div>
-            </div>
+              <div class="ayet-ar">فِيهِنَّ قَـٰصِرَٰتُ ٱلطَّرْفِ لَمْ يَطْمِثْهُنَّ إِنسٌ قَبْلَهُمْ وَلَا جَآنٌّ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="فِي"><span class="kelime-ar" style="color:#dc2626;">فِيهِنَّ</span><span class="kelime-tr">İçinde</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="قاصِرَة"><span class="kelime-ar" style="color:#2563eb;">قَٰصِرَٰتُ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="طَرْف"><span class="kelime-ar" style="color:#16a34a;">ٱلطَّرْفِ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="لَم"><span class="kelime-ar" style="color:#9333ea;">لَمْ</span><span class="kelime-tr">değil (geçmiş)</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="يَطْمِثْ"><span class="kelime-ar" style="color:#ea580c;">يَطْمِثْهُنَّ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #0891b2;" title="إِنس"><span class="kelime-ar" style="color:#0891b2;">إِنسٌ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #be185d;" title="قَبْل"><span class="kelime-ar" style="color:#be185d;">قَبْلَهُمْ</span><span class="kelime-tr">Önce</span></span><span class="kelime" style="border-bottom:3px solid #ca8a04;" title="لا"><span class="kelime-ar" style="color:#ca8a04;">وَلَا</span><span class="kelime-tr">Hayır/değil</span></span><span class="kelime" style="border-bottom:3px solid #4f46e5;" title="جانّ"><span class="kelime-ar" style="color:#4f46e5;">جَآنٌّ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">Oralarda gözlerini yalnız eşlerine çevirmiş güzeller var ki, bunlardan önce onlara ne insan ne de cin dokunmuştur.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #0e7490;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#0e7490;">Âyet 57</span>
-                <span class="verse-key">55:57</span>
+            <article class="ayet" style="border-left:5px solid #0e7490;">
+              <div class="ayet-baslik">
+                <span style="color:#0e7490;">Âyet 57</span>
+                <span class="ayet-kod">55:57</span>
               </div>
-              <div class="verse-arabic">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
-              <div class="verse-meal">Öyleyken Rabbinizin hangi nimetlerini yalanlayabilirsiniz?</div>
-            </div>
+              <div class="ayet-ar">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَيّ"><span class="kelime-ar" style="color:#dc2626;">فَبِأَىِّ</span><span class="kelime-tr">hangi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="آلاء"><span class="kelime-ar" style="color:#2563eb;">ءَالَآءِ</span><span class="kelime-tr">nimetler</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="رَبّ"><span class="kelime-ar" style="color:#16a34a;">رَبِّكُمَا</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="كَذَّبَ"><span class="kelime-ar" style="color:#9333ea;">تُكَذِّبَانِ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">Öyleyken Rabbinizin hangi nimetlerini yalanlayabilirsiniz?</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #0e7490;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#0e7490;">Âyet 58</span>
-                <span class="verse-key">55:58</span>
+            <article class="ayet" style="border-left:5px solid #0e7490;">
+              <div class="ayet-baslik">
+                <span style="color:#0e7490;">Âyet 58</span>
+                <span class="ayet-kod">55:58</span>
               </div>
-              <div class="verse-arabic">كَأَنَّهُنَّ ٱلْيَاقُوتُ وَٱلْمَرْجَانُ</div>
-              <div class="verse-meal">Sanki onlar yakut ve mercandırlar.</div>
-            </div>
+              <div class="ayet-ar">كَأَنَّهُنَّ ٱلْيَاقُوتُ وَٱلْمَرْجَانُ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="كَأَنّ"><span class="kelime-ar" style="color:#dc2626;">كَأَنَّهُنَّ</span><span class="kelime-tr">sanki</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="ياقُوت"><span class="kelime-ar" style="color:#2563eb;">ٱلْيَاقُوتُ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="مَرْجان"><span class="kelime-ar" style="color:#16a34a;">وَٱلْمَرْجَانُ</span><span class="kelime-tr">the (belirteç)</span></span></div>
+              <div class="ayet-meal">Sanki onlar yakut ve mercandırlar.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #0e7490;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#0e7490;">Âyet 59</span>
-                <span class="verse-key">55:59</span>
+            <article class="ayet" style="border-left:5px solid #0e7490;">
+              <div class="ayet-baslik">
+                <span style="color:#0e7490;">Âyet 59</span>
+                <span class="ayet-kod">55:59</span>
               </div>
-              <div class="verse-arabic">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
-              <div class="verse-meal">Öyleyken Rabbinizin hangi nimetlerini yalanlayabilirsiniz?</div>
-            </div>
+              <div class="ayet-ar">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَيّ"><span class="kelime-ar" style="color:#dc2626;">فَبِأَىِّ</span><span class="kelime-tr">hangi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="آلاء"><span class="kelime-ar" style="color:#2563eb;">ءَالَآءِ</span><span class="kelime-tr">nimetler</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="رَبّ"><span class="kelime-ar" style="color:#16a34a;">رَبِّكُمَا</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="كَذَّبَ"><span class="kelime-ar" style="color:#9333ea;">تُكَذِّبَانِ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">Öyleyken Rabbinizin hangi nimetlerini yalanlayabilirsiniz?</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #0e7490;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#0e7490;">Âyet 60</span>
-                <span class="verse-key">55:60</span>
+            <article class="ayet" style="border-left:5px solid #0e7490;">
+              <div class="ayet-baslik">
+                <span style="color:#0e7490;">Âyet 60</span>
+                <span class="ayet-kod">55:60</span>
               </div>
-              <div class="verse-arabic">هَلْ جَزَآءُ ٱلْإِحْسَـٰنِ إِلَّا ٱلْإِحْسَـٰنُ</div>
-              <div class="verse-meal">İyiliğin karşılığı iyilikten başka bir şey midir?</div>
-            </div>
+              <div class="ayet-ar">هَلْ جَزَآءُ ٱلْإِحْسَـٰنِ إِلَّا ٱلْإِحْسَـٰنُ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="هَل"><span class="kelime-ar" style="color:#dc2626;">هَلْ</span><span class="kelime-tr">mı? (soru)</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="جَزاء"><span class="kelime-ar" style="color:#2563eb;">جَزَآءُ</span><span class="kelime-tr">karşılık, ceza</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="إِحْسان"><span class="kelime-ar" style="color:#16a34a;">ٱلْإِحْسَٰنِ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="إِلّا"><span class="kelime-ar" style="color:#9333ea;">إِلَّا</span><span class="kelime-tr">ancak, sadece</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="إِحْسان"><span class="kelime-ar" style="color:#ea580c;">ٱلْإِحْسَٰنُ</span><span class="kelime-tr">the (belirteç)</span></span></div>
+              <div class="ayet-meal">İyiliğin karşılığı iyilikten başka bir şey midir?</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #0e7490;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#0e7490;">Âyet 61</span>
-                <span class="verse-key">55:61</span>
+            <article class="ayet" style="border-left:5px solid #0e7490;">
+              <div class="ayet-baslik">
+                <span style="color:#0e7490;">Âyet 61</span>
+                <span class="ayet-kod">55:61</span>
               </div>
-              <div class="verse-arabic">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
-              <div class="verse-meal">Öyleyken Rabbinizin hangi nimetlerini yalanlayabilirsiniz?</div>
-            </div>
+              <div class="ayet-ar">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَيّ"><span class="kelime-ar" style="color:#dc2626;">فَبِأَىِّ</span><span class="kelime-tr">hangi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="آلاء"><span class="kelime-ar" style="color:#2563eb;">ءَالَآءِ</span><span class="kelime-tr">nimetler</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="رَبّ"><span class="kelime-ar" style="color:#16a34a;">رَبِّكُمَا</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="كَذَّبَ"><span class="kelime-ar" style="color:#9333ea;">تُكَذِّبَانِ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">Öyleyken Rabbinizin hangi nimetlerini yalanlayabilirsiniz?</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #0e7490;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#0e7490;">Âyet 62</span>
-                <span class="verse-key">55:62</span>
+            <article class="ayet" style="border-left:5px solid #0e7490;">
+              <div class="ayet-baslik">
+                <span style="color:#0e7490;">Âyet 62</span>
+                <span class="ayet-kod">55:62</span>
               </div>
-              <div class="verse-arabic">وَمِن دُونِهِمَا جَنَّتَانِ</div>
-              <div class="verse-meal">Bu ikisinden başka iki cennet daha vardır.</div>
-            </div>
+              <div class="ayet-ar">وَمِن دُونِهِمَا جَنَّتَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="مِن"><span class="kelime-ar" style="color:#dc2626;">وَمِن</span><span class="kelime-tr">-den, -dan</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="دُون"><span class="kelime-ar" style="color:#2563eb;">دُونِهِمَا</span><span class="kelime-tr">başka, dışında</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="جَنَّة"><span class="kelime-ar" style="color:#16a34a;">جَنَّتَانِ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">Bu ikisinden başka iki cennet daha vardır.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #0e7490;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#0e7490;">Âyet 63</span>
-                <span class="verse-key">55:63</span>
+            <article class="ayet" style="border-left:5px solid #0e7490;">
+              <div class="ayet-baslik">
+                <span style="color:#0e7490;">Âyet 63</span>
+                <span class="ayet-kod">55:63</span>
               </div>
-              <div class="verse-arabic">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
-              <div class="verse-meal">Öyleyken Rabbinizin hangi nimetlerini yalanlayabilirsiniz?</div>
-            </div>
+              <div class="ayet-ar">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَيّ"><span class="kelime-ar" style="color:#dc2626;">فَبِأَىِّ</span><span class="kelime-tr">hangi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="آلاء"><span class="kelime-ar" style="color:#2563eb;">ءَالَآءِ</span><span class="kelime-tr">nimetler</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="رَبّ"><span class="kelime-ar" style="color:#16a34a;">رَبِّكُمَا</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="كَذَّبَ"><span class="kelime-ar" style="color:#9333ea;">تُكَذِّبَانِ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">Öyleyken Rabbinizin hangi nimetlerini yalanlayabilirsiniz?</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #0e7490;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#0e7490;">Âyet 64</span>
-                <span class="verse-key">55:64</span>
+            <article class="ayet" style="border-left:5px solid #0e7490;">
+              <div class="ayet-baslik">
+                <span style="color:#0e7490;">Âyet 64</span>
+                <span class="ayet-kod">55:64</span>
               </div>
-              <div class="verse-arabic">مُدْهَآمَّتَانِ</div>
-              <div class="verse-meal">Bu cennetler koyu yeşildirler.</div>
-            </div>
+              <div class="ayet-ar">مُدْهَآمَّتَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="مُدْهامَّتان"><span class="kelime-ar" style="color:#dc2626;">مُدْهَآمَّتَانِ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">Bu cennetler koyu yeşildirler.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #0e7490;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#0e7490;">Âyet 65</span>
-                <span class="verse-key">55:65</span>
+            <article class="ayet" style="border-left:5px solid #0e7490;">
+              <div class="ayet-baslik">
+                <span style="color:#0e7490;">Âyet 65</span>
+                <span class="ayet-kod">55:65</span>
               </div>
-              <div class="verse-arabic">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
-              <div class="verse-meal">Öyleyken Rabbinizin hangi nimetlerini yalanlayabilirsiniz?</div>
-            </div>
+              <div class="ayet-ar">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَيّ"><span class="kelime-ar" style="color:#dc2626;">فَبِأَىِّ</span><span class="kelime-tr">hangi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="آلاء"><span class="kelime-ar" style="color:#2563eb;">ءَالَآءِ</span><span class="kelime-tr">nimetler</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="رَبّ"><span class="kelime-ar" style="color:#16a34a;">رَبِّكُمَا</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="كَذَّبَ"><span class="kelime-ar" style="color:#9333ea;">تُكَذِّبَانِ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">Öyleyken Rabbinizin hangi nimetlerini yalanlayabilirsiniz?</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #0e7490;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#0e7490;">Âyet 66</span>
-                <span class="verse-key">55:66</span>
+            <article class="ayet" style="border-left:5px solid #0e7490;">
+              <div class="ayet-baslik">
+                <span style="color:#0e7490;">Âyet 66</span>
+                <span class="ayet-kod">55:66</span>
               </div>
-              <div class="verse-arabic">فِيهِمَا عَيْنَانِ نَضَّاخَتَانِ</div>
-              <div class="verse-meal">İkisinde de durmadan fışkıran iki kaynak vardır.</div>
-            </div>
+              <div class="ayet-ar">فِيهِمَا عَيْنَانِ نَضَّاخَتَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="فِي"><span class="kelime-ar" style="color:#dc2626;">فِيهِمَا</span><span class="kelime-tr">İçinde</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="عَيْن"><span class="kelime-ar" style="color:#2563eb;">عَيْنَانِ</span><span class="kelime-tr">göz, kaynak</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="نَضّاخَتان"><span class="kelime-ar" style="color:#16a34a;">نَضَّاخَتَانِ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">İkisinde de durmadan fışkıran iki kaynak vardır.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #0e7490;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#0e7490;">Âyet 67</span>
-                <span class="verse-key">55:67</span>
+            <article class="ayet" style="border-left:5px solid #0e7490;">
+              <div class="ayet-baslik">
+                <span style="color:#0e7490;">Âyet 67</span>
+                <span class="ayet-kod">55:67</span>
               </div>
-              <div class="verse-arabic">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
-              <div class="verse-meal">Öyleyken Rabbinizin hangi nimetlerini yalanlayabilirsiniz?</div>
-            </div>
+              <div class="ayet-ar">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَيّ"><span class="kelime-ar" style="color:#dc2626;">فَبِأَىِّ</span><span class="kelime-tr">hangi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="آلاء"><span class="kelime-ar" style="color:#2563eb;">ءَالَآءِ</span><span class="kelime-tr">nimetler</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="رَبّ"><span class="kelime-ar" style="color:#16a34a;">رَبِّكُمَا</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="كَذَّبَ"><span class="kelime-ar" style="color:#9333ea;">تُكَذِّبَانِ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">Öyleyken Rabbinizin hangi nimetlerini yalanlayabilirsiniz?</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #0e7490;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#0e7490;">Âyet 68</span>
-                <span class="verse-key">55:68</span>
+            <article class="ayet" style="border-left:5px solid #0e7490;">
+              <div class="ayet-baslik">
+                <span style="color:#0e7490;">Âyet 68</span>
+                <span class="ayet-kod">55:68</span>
               </div>
-              <div class="verse-arabic">فِيهِمَا فَـٰكِهَةٌ وَنَخْلٌ وَرُمَّانٌ</div>
-              <div class="verse-meal">İkisinde de her türlü meyveler, hurma ve nar vardır.</div>
-            </div>
+              <div class="ayet-ar">فِيهِمَا فَـٰكِهَةٌ وَنَخْلٌ وَرُمَّانٌ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="فِي"><span class="kelime-ar" style="color:#dc2626;">فِيهِمَا</span><span class="kelime-tr">İçinde</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="فاكِهَة"><span class="kelime-ar" style="color:#2563eb;">فَٰكِهَةٌ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="نَخْل"><span class="kelime-ar" style="color:#16a34a;">وَنَخْلٌ</span><span class="kelime-tr">ve</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="رُمّان"><span class="kelime-ar" style="color:#9333ea;">وَرُمَّانٌ</span><span class="kelime-tr">ve</span></span></div>
+              <div class="ayet-meal">İkisinde de her türlü meyveler, hurma ve nar vardır.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #0e7490;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#0e7490;">Âyet 69</span>
-                <span class="verse-key">55:69</span>
+            <article class="ayet" style="border-left:5px solid #0e7490;">
+              <div class="ayet-baslik">
+                <span style="color:#0e7490;">Âyet 69</span>
+                <span class="ayet-kod">55:69</span>
               </div>
-              <div class="verse-arabic">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
-              <div class="verse-meal">Öyleyken Rabbinizin hangi nimetlerini yalanlayabilirsiniz?</div>
-            </div>
+              <div class="ayet-ar">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَيّ"><span class="kelime-ar" style="color:#dc2626;">فَبِأَىِّ</span><span class="kelime-tr">hangi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="آلاء"><span class="kelime-ar" style="color:#2563eb;">ءَالَآءِ</span><span class="kelime-tr">nimetler</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="رَبّ"><span class="kelime-ar" style="color:#16a34a;">رَبِّكُمَا</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="كَذَّبَ"><span class="kelime-ar" style="color:#9333ea;">تُكَذِّبَانِ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">Öyleyken Rabbinizin hangi nimetlerini yalanlayabilirsiniz?</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #0e7490;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#0e7490;">Âyet 70</span>
-                <span class="verse-key">55:70</span>
+            <article class="ayet" style="border-left:5px solid #0e7490;">
+              <div class="ayet-baslik">
+                <span style="color:#0e7490;">Âyet 70</span>
+                <span class="ayet-kod">55:70</span>
               </div>
-              <div class="verse-arabic">فِيهِنَّ خَيْرَٰتٌ حِسَانٌ</div>
-              <div class="verse-meal">İçlerinde huyu güzel yüzü güzel kadınlar vardır.</div>
-            </div>
+              <div class="ayet-ar">فِيهِنَّ خَيْرَٰتٌ حِسَانٌ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="فِي"><span class="kelime-ar" style="color:#dc2626;">فِيهِنَّ</span><span class="kelime-tr">İçinde</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="خَيْرَة"><span class="kelime-ar" style="color:#2563eb;">خَيْرَٰتٌ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="حَسَن"><span class="kelime-ar" style="color:#16a34a;">حِسَانٌ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">İçlerinde huyu güzel yüzü güzel kadınlar vardır.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #0e7490;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#0e7490;">Âyet 71</span>
-                <span class="verse-key">55:71</span>
+            <article class="ayet" style="border-left:5px solid #0e7490;">
+              <div class="ayet-baslik">
+                <span style="color:#0e7490;">Âyet 71</span>
+                <span class="ayet-kod">55:71</span>
               </div>
-              <div class="verse-arabic">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
-              <div class="verse-meal">Öyleyken Rabbinizin hangi nimetlerini yalanlayabilirsiniz?</div>
-            </div>
+              <div class="ayet-ar">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَيّ"><span class="kelime-ar" style="color:#dc2626;">فَبِأَىِّ</span><span class="kelime-tr">hangi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="آلاء"><span class="kelime-ar" style="color:#2563eb;">ءَالَآءِ</span><span class="kelime-tr">nimetler</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="رَبّ"><span class="kelime-ar" style="color:#16a34a;">رَبِّكُمَا</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="كَذَّبَ"><span class="kelime-ar" style="color:#9333ea;">تُكَذِّبَانِ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">Öyleyken Rabbinizin hangi nimetlerini yalanlayabilirsiniz?</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #0e7490;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#0e7490;">Âyet 72</span>
-                <span class="verse-key">55:72</span>
+            <article class="ayet" style="border-left:5px solid #0e7490;">
+              <div class="ayet-baslik">
+                <span style="color:#0e7490;">Âyet 72</span>
+                <span class="ayet-kod">55:72</span>
               </div>
-              <div class="verse-arabic">حُورٌ مَّقْصُورَٰتٌ فِى ٱلْخِيَامِ</div>
-              <div class="verse-meal">Otağlar içinde sahiplerine tahsis edilmiş hûriler vardır.</div>
-            </div>
+              <div class="ayet-ar">حُورٌ مَّقْصُورَٰتٌ فِى ٱلْخِيَامِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="حُور"><span class="kelime-ar" style="color:#dc2626;">حُورٌ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="مَقْصُورَة"><span class="kelime-ar" style="color:#2563eb;">مَّقْصُورَٰتٌ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="فِي"><span class="kelime-ar" style="color:#16a34a;">فِى</span><span class="kelime-tr">İçinde</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="خِيام"><span class="kelime-ar" style="color:#9333ea;">ٱلْخِيَامِ</span><span class="kelime-tr">the (belirteç)</span></span></div>
+              <div class="ayet-meal">Otağlar içinde sahiplerine tahsis edilmiş hûriler vardır.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #0e7490;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#0e7490;">Âyet 73</span>
-                <span class="verse-key">55:73</span>
+            <article class="ayet" style="border-left:5px solid #0e7490;">
+              <div class="ayet-baslik">
+                <span style="color:#0e7490;">Âyet 73</span>
+                <span class="ayet-kod">55:73</span>
               </div>
-              <div class="verse-arabic">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
-              <div class="verse-meal">Öyleyken Rabbinizin hangi nimetlerini yalanlayabilirsiniz?</div>
-            </div>
+              <div class="ayet-ar">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَيّ"><span class="kelime-ar" style="color:#dc2626;">فَبِأَىِّ</span><span class="kelime-tr">hangi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="آلاء"><span class="kelime-ar" style="color:#2563eb;">ءَالَآءِ</span><span class="kelime-tr">nimetler</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="رَبّ"><span class="kelime-ar" style="color:#16a34a;">رَبِّكُمَا</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="كَذَّبَ"><span class="kelime-ar" style="color:#9333ea;">تُكَذِّبَانِ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">Öyleyken Rabbinizin hangi nimetlerini yalanlayabilirsiniz?</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #0e7490;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#0e7490;">Âyet 74</span>
-                <span class="verse-key">55:74</span>
+            <article class="ayet" style="border-left:5px solid #0e7490;">
+              <div class="ayet-baslik">
+                <span style="color:#0e7490;">Âyet 74</span>
+                <span class="ayet-kod">55:74</span>
               </div>
-              <div class="verse-arabic">لَمْ يَطْمِثْهُنَّ إِنسٌ قَبْلَهُمْ وَلَا جَآنٌّ</div>
-              <div class="verse-meal">Bunlara onlardan önce ne bir insan ne bir cin dokunmuştur.</div>
-            </div>
+              <div class="ayet-ar">لَمْ يَطْمِثْهُنَّ إِنسٌ قَبْلَهُمْ وَلَا جَآنٌّ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="لَم"><span class="kelime-ar" style="color:#dc2626;">لَمْ</span><span class="kelime-tr">değil (geçmiş)</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="يَطْمِثْ"><span class="kelime-ar" style="color:#2563eb;">يَطْمِثْهُنَّ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="إِنس"><span class="kelime-ar" style="color:#16a34a;">إِنسٌ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="قَبْل"><span class="kelime-ar" style="color:#9333ea;">قَبْلَهُمْ</span><span class="kelime-tr">Önce</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="لا"><span class="kelime-ar" style="color:#ea580c;">وَلَا</span><span class="kelime-tr">Hayır/değil</span></span><span class="kelime" style="border-bottom:3px solid #0891b2;" title="جانّ"><span class="kelime-ar" style="color:#0891b2;">جَآنٌّ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">Bunlara onlardan önce ne bir insan ne bir cin dokunmuştur.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #0e7490;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#0e7490;">Âyet 75</span>
-                <span class="verse-key">55:75</span>
+            <article class="ayet" style="border-left:5px solid #0e7490;">
+              <div class="ayet-baslik">
+                <span style="color:#0e7490;">Âyet 75</span>
+                <span class="ayet-kod">55:75</span>
               </div>
-              <div class="verse-arabic">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
-              <div class="verse-meal">Öyleyken Rabbinizin hangi nimetlerini yalanlayabilirsiniz?</div>
-            </div>
+              <div class="ayet-ar">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَيّ"><span class="kelime-ar" style="color:#dc2626;">فَبِأَىِّ</span><span class="kelime-tr">hangi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="آلاء"><span class="kelime-ar" style="color:#2563eb;">ءَالَآءِ</span><span class="kelime-tr">nimetler</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="رَبّ"><span class="kelime-ar" style="color:#16a34a;">رَبِّكُمَا</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="كَذَّبَ"><span class="kelime-ar" style="color:#9333ea;">تُكَذِّبَانِ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">Öyleyken Rabbinizin hangi nimetlerini yalanlayabilirsiniz?</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #0e7490;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#0e7490;">Âyet 76</span>
-                <span class="verse-key">55:76</span>
+            <article class="ayet" style="border-left:5px solid #0e7490;">
+              <div class="ayet-baslik">
+                <span style="color:#0e7490;">Âyet 76</span>
+                <span class="ayet-kod">55:76</span>
               </div>
-              <div class="verse-arabic">مُتَّكِـِٔينَ عَلَىٰ رَفْرَفٍ خُضْرٍ وَعَبْقَرِىٍّ حِسَانٍ</div>
-              <div class="verse-meal">Yeşil yastıklara ve hârikulâde güzel döşemelere yaslanırlar.</div>
-            </div>
+              <div class="ayet-ar">مُتَّكِـِٔينَ عَلَىٰ رَفْرَفٍ خُضْرٍ وَعَبْقَرِىٍّ حِسَانٍ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="مُتَّكِئ"><span class="kelime-ar" style="color:#dc2626;">مُتَّكِـِٔينَ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="عَلَى"><span class="kelime-ar" style="color:#2563eb;">عَلَىٰ</span><span class="kelime-tr">üzerine, üstüne</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="رَفْرَف"><span class="kelime-ar" style="color:#16a34a;">رَفْرَفٍ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="خُضْر"><span class="kelime-ar" style="color:#9333ea;">خُضْرٍ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="عَبْقَرِيّ"><span class="kelime-ar" style="color:#ea580c;">وَعَبْقَرِىٍّ</span><span class="kelime-tr">ve</span></span><span class="kelime" style="border-bottom:3px solid #0891b2;" title="حَسَن"><span class="kelime-ar" style="color:#0891b2;">حِسَانٍ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">Yeşil yastıklara ve hârikulâde güzel döşemelere yaslanırlar.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #0e7490;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#0e7490;">Âyet 77</span>
-                <span class="verse-key">55:77</span>
+            <article class="ayet" style="border-left:5px solid #0e7490;">
+              <div class="ayet-baslik">
+                <span style="color:#0e7490;">Âyet 77</span>
+                <span class="ayet-kod">55:77</span>
               </div>
-              <div class="verse-arabic">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
-              <div class="verse-meal">Öyleyken Rabbinizin hangi nimetlerini yalanlayabilirsiniz?</div>
-            </div>
+              <div class="ayet-ar">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَيّ"><span class="kelime-ar" style="color:#dc2626;">فَبِأَىِّ</span><span class="kelime-tr">hangi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="آلاء"><span class="kelime-ar" style="color:#2563eb;">ءَالَآءِ</span><span class="kelime-tr">nimetler</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="رَبّ"><span class="kelime-ar" style="color:#16a34a;">رَبِّكُمَا</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="كَذَّبَ"><span class="kelime-ar" style="color:#9333ea;">تُكَذِّبَانِ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">Öyleyken Rabbinizin hangi nimetlerini yalanlayabilirsiniz?</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #0e7490;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#0e7490;">Âyet 78</span>
-                <span class="verse-key">55:78</span>
+            <article class="ayet" style="border-left:5px solid #0e7490;">
+              <div class="ayet-baslik">
+                <span style="color:#0e7490;">Âyet 78</span>
+                <span class="ayet-kod">55:78</span>
               </div>
-              <div class="verse-arabic">تَبَـٰرَكَ ٱسْمُ رَبِّكَ ذِى ٱلْجَلَـٰلِ وَٱلْإِكْرَامِ</div>
-              <div class="verse-meal">Büyüklük ve ikram sahibi Rabbinin adı yücelerden yücedir.</div>
-            </div>
+              <div class="ayet-ar">تَبَـٰرَكَ ٱسْمُ رَبِّكَ ذِى ٱلْجَلَـٰلِ وَٱلْإِكْرَامِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="تَبارَكَ"><span class="kelime-ar" style="color:#dc2626;">تَبَٰرَكَ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="اسْم"><span class="kelime-ar" style="color:#2563eb;">ٱسْمُ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="رَبّ"><span class="kelime-ar" style="color:#16a34a;">رَبِّكَ</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="ذُو"><span class="kelime-ar" style="color:#9333ea;">ذِى</span><span class="kelime-tr">sahip olan</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="جَلال"><span class="kelime-ar" style="color:#ea580c;">ٱلْجَلَٰلِ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #0891b2;" title="إِكْرام"><span class="kelime-ar" style="color:#0891b2;">وَٱلْإِكْرَامِ</span><span class="kelime-tr">the (belirteç)</span></span></div>
+              <div class="ayet-meal">Büyüklük ve ikram sahibi Rabbinin adı yücelerden yücedir.</div>
+            </article>
             
-          </div>
-        </div>
+        </section>
         
-</div>
+</main>
 </body>
 </html>

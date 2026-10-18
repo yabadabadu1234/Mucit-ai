@@ -609,11 +609,32 @@ function showSurahModal(sno) {{
     return html
 
 
-def generate_surah_detail_chart_html(surah_data):
+KELIME_RENKLERI = ["#dc2626", "#2563eb", "#16a34a", "#9333ea", "#ea580c",
+                   "#0891b2", "#be185d", "#ca8a04", "#4f46e5", "#0d9488"]
+
+
+def kelime_satiri_html(kelimeler):
+    """Âyetin kelime mealli satırı: her kelime ayrı renkte; altında Türkçe karşılığı."""
+    if not kelimeler:
+        return ""
+    parcalar = []
+    for i, k in enumerate(kelimeler):
+        renk = KELIME_RENKLERI[i % len(KELIME_RENKLERI)]
+        parcalar.append(
+            f'<span class="kelime" style="border-bottom:3px solid {renk};" title="{k["lem"]}">'
+            f'<span class="kelime-ar" style="color:{renk};">{k["ar"]}</span>'
+            f'<span class="kelime-tr">{k["tr"] or "—"}</span></span>'
+        )
+    return f'<div class="kelime-satiri">{"".join(parcalar)}</div>'
+
+
+def generate_surah_detail_chart_html(surah_data, kelimeler=None):
     """
-    Her bir sure için ayet seviyesinde pencereli detay harita HTML'i üretir.
-    "Grafik daha da büyütülürse bu sefer her bir ayetlik pencerede ayetin kendisi yer alacaktır."
+    Her bir sure için detay sayfası. Kitap gibi okunur: üstte kitaba dönüş çubuğu,
+    altında mevzular ve her mevzunun âyetleri (Arapça, kelime mealli, Türkçe meal).
+    kelimeler: {(sure, âyet): [{'ar','tr','lem'}]} (kelime_mealli.yukle()).
     """
+    kelimeler = kelimeler or {}
     sno = surah_data["sno"]
     name = surah_data["name"]
     arabic = surah_data["arabic"]
@@ -624,245 +645,226 @@ def generate_surah_detail_chart_html(surah_data):
     segments = surah_data["segments"]
     verses = surah_data["verses"]
 
-    # Ayet sözlüğü
     verse_dict = {v["verseNumber"]: v for v in verses}
 
-    # Mini mevzu çubuğu
     mini_bar_parts = []
     for seg in segments:
-        pct = (seg["count"] / vcount) * 100
         mini_bar_parts.append(
             f'<div style="flex: {seg["count"]}; background:{seg["color"]}; border:1px solid {seg["border"]}; '
-            f'padding:8px 4px; text-align:center; color:#ffffff; font-size:12px; font-weight:600; '
+            f'padding:8px 4px; text-align:center; color:#ffffff; font-size:11px; font-weight:600; '
             f'overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" '
             f'title="{seg["title"]} ({seg["start"]}-{seg["end"]})">'
             f'{seg["title"]} ({seg["count"]})'
             f'</div>'
         )
-    mini_bar_html = f'<div style="display:flex; width:100%; border-radius:8px; overflow:hidden; margin:20px 0; box-shadow:0 4px 15px rgba(0,0,0,0.3);">' + "".join(mini_bar_parts) + '</div>'
+    mini_bar_html = '<div style="display:flex; width:100%; border-radius:8px; overflow:hidden; margin:20px 0 8px; box-shadow:0 2px 10px rgba(0,0,0,0.12);">' + "".join(mini_bar_parts) + '</div>'
 
-    # Mevzular ve altındaki ayet pencereleri
     sections_html = []
     for seg in segments:
-        verses_in_seg_html = []
+        ayetler = []
         for vnum in range(seg["start"], seg["end"] + 1):
             vobj = verse_dict.get(vnum, {})
             v_arabic = vobj.get("arabic", "")
             turkish_dict = vobj.get("turkish", {})
             v_meal = turkish_dict.get("diyanet_vakfi") or turkish_dict.get("hayrat_nesriyat") or turkish_dict.get("omer_nasuhi_bilmen") or ""
-
-            verses_in_seg_html.append(f"""
-            <div class="verse-window" style="border-left: 5px solid {seg['color']};">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:{seg['color']};">Âyet {vnum}</span>
-                <span class="verse-key">{sno}:{vnum}</span>
+            ayetler.append(f"""
+            <article class="ayet" style="border-left:5px solid {seg['color']};">
+              <div class="ayet-baslik">
+                <span style="color:{seg['color']};">Âyet {vnum}</span>
+                <span class="ayet-kod">{sno}:{vnum}</span>
               </div>
-              <div class="verse-arabic">{v_arabic}</div>
-              <div class="verse-meal">{v_meal}</div>
-            </div>
+              <div class="ayet-ar">{v_arabic}</div>
+              {kelime_satiri_html(kelimeler.get((sno, vnum), []))}
+              <div class="ayet-meal">{v_meal}</div>
+            </article>
             """)
 
         sections_html.append(f"""
-        <div class="topic-section">
-          <div class="topic-header" style="background: linear-gradient(90deg, {seg['color']}33, transparent); border-left: 6px solid {seg['color']};">
-            <div class="topic-title" style="color: {seg['color']};">
-              <span class="topic-code">{seg.get('code', '')}</span>
-              <span>{seg['title']}</span>
+        <section class="mevzu">
+          <header class="mevzu-baslik" style="border-left:6px solid {seg['color']}; background:{seg['color']}14;">
+            <div class="mevzu-ad" style="color:{seg['color']};">
+              <span class="mevzu-kod">{seg.get('code', '')}</span>{seg['title']}
             </div>
-            <div class="topic-meta">
-              <span>Âyet {seg['start']} - {seg['end']}</span>
-              <span class="badge" style="background:{seg['color']};">{seg['count']} Âyet</span>
-            </div>
-          </div>
-          <div class="verse-grid">
-            {"".join(verses_in_seg_html)}
-          </div>
-        </div>
+            <div class="mevzu-meta">Âyet {seg['start']} - {seg['end']} · <span class="rozet" style="background:{seg['color']};">{seg['count']} âyet</span></div>
+          </header>
+          {"".join(ayetler)}
+        </section>
         """)
 
     html = f"""<!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>S{sno:03d} · {name} Suresi Âyet ve Mevzu Haritası</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 <style>
 * {{ box-sizing: border-box; }}
 body {{
   margin: 0;
-  padding: 32px;
-  background: #090d16;
-  color: #f1f5f9;
+  padding-top: 64px;
+  background: #f5f1e8;
+  color: #1e293b;
   font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  line-height: 1.7;
 }}
-.container {{
-  max-width: 1400px;
-  margin: 0 auto;
-}}
-.surah-header {{
+.ust-cubuk {{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
   background: #0f172a;
-  border: 1px solid #1e293b;
-  border-radius: 20px;
-  padding: 32px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
+  padding: 0 16px;
+  z-index: 10;
 }}
-.surah-title-box h1 {{
-  margin: 0 0 8px 0;
-  font-size: 32px;
-  font-weight: 800;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}}
-.surah-arabic {{
-  font-family: 'Amiri', serif;
-  font-size: 36px;
-  color: #38bdf8;
-}}
-.surah-badges {{
-  display: flex;
-  gap: 10px;
-  margin-top: 12px;
-  flex-wrap: wrap;
-}}
-.badge {{
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 13px;
-  font-weight: 600;
-  color: white;
-}}
-.badge-mushaf {{ background: #2563eb; }}
-.badge-nuzul {{ background: #7c3aed; }}
-.badge-place {{ background: #059669; }}
-.badge-meaning {{ background: #334155; }}
-
-.topic-section {{
-  margin-top: 36px;
-  background: #0b1120;
-  border: 1px solid #1e293b;
-  border-radius: 16px;
-  padding: 24px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
-}}
-.topic-header {{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px 20px;
+.geri {{
+  color: #fbbf24;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 11pt;
+  padding: 6px 12px;
+  border: 1px solid #334155;
   border-radius: 8px;
-  margin-bottom: 24px;
 }}
-.topic-title {{
-  font-size: 20px;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  gap: 12px;
+.geri:hover {{ background: #1e293b; }}
+.ust-baslik {{ color: #e2e8f0; font-weight: 600; font-size: 10.5pt; }}
+.kitap-sayfa {{
+  max-width: 880px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 40px 48px 64px;
+  min-height: 100vh;
+  box-shadow: 0 2px 18px rgba(15, 23, 42, 0.08);
 }}
-.topic-code {{
-  font-family: monospace;
-  background: rgba(255,255,255,0.1);
-  padding: 4px 8px;
-  border-radius: 6px;
-  font-size: 14px;
+.sure-no {{
+  font-size: 9.5pt;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #64748b;
 }}
-.topic-meta {{
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: #94a3b8;
+.sure-baslik h1 {{
+  font-family: 'Cinzel', 'Plus Jakarta Sans', serif;
+  font-size: 24pt;
+  color: #0f172a;
+  margin: 4px 0 8px;
+  line-height: 1.3;
+}}
+.sure-arapca {{
+  font-family: 'Amiri', serif;
+  color: #1e40af;
+  font-size: 26pt;
+  margin-left: 12px;
+  font-weight: 400;
+}}
+.sure-rozetler {{ display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }}
+.rozet {{
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 14px;
+  font-size: 9pt;
+  color: #ffffff;
   font-weight: 600;
 }}
-.verse-grid {{
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  gap: 20px;
+.rozet-acik {{ background: #475569; }}
+.mevzu {{ margin-top: 34px; }}
+.mevzu-baslik {{ padding: 10px 16px; border-radius: 6px; margin-bottom: 14px; }}
+.mevzu-ad {{ font-size: 13pt; font-weight: 700; }}
+.mevzu-kod {{
+  font-family: monospace;
+  font-size: 9pt;
+  background: rgba(15, 23, 42, 0.06);
+  color: #334155;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-right: 8px;
 }}
-.verse-window {{
-  background: #0f172a;
-  border: 1px solid #1e293b;
-  border-radius: 12px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  transition: transform 0.2s, box-shadow 0.2s;
+.mevzu-meta {{ color: #64748b; font-size: 9.5pt; margin-top: 4px; }}
+.ayet {{
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-bottom: 12px;
 }}
-.verse-window:hover {{
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-  border-color: #38bdf8;
-}}
-.verse-header {{
+.ayet-baslik {{
   display: flex;
   justify-content: space-between;
-  align-items: center;
-}}
-.verse-badge {{
-  padding: 4px 10px;
-  border-radius: 6px;
-  font-size: 12px;
+  font-size: 9.5pt;
   font-weight: 700;
-  color: #ffffff;
+  margin-bottom: 4px;
 }}
-.verse-key {{
-  color: #64748b;
-  font-family: monospace;
-  font-size: 13px;
-}}
-.verse-arabic {{
+.ayet-kod {{ color: #94a3b8; font-family: monospace; font-weight: 400; }}
+.ayet-ar {{
   font-family: 'Amiri', serif;
-  font-size: 24px;
-  line-height: 1.8;
-  text-align: right;
+  font-size: 22pt;
+  line-height: 1.9;
   direction: rtl;
-  color: #f8fafc;
-  padding: 6px 0;
+  text-align: right;
+  color: #0f172a;
 }}
-.verse-meal {{
-  font-size: 14px;
-  line-height: 1.6;
-  color: #cbd5e1;
-  border-top: 1px dashed #1e293b;
-  padding-top: 10px;
+.ayet-meal {{
+  font-size: 10.5pt;
+  color: #334155;
+  border-top: 1px dashed #e2e8f0;
+  padding-top: 8px;
+  margin-top: 8px;
 }}
-@media (max-width: 768px) {{
-  .verse-grid {{ grid-template-columns: 1fr; }}
+.kelime-satiri {{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  direction: rtl;
+  margin: 6px 0 4px;
+}}
+.kelime {{
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2px 6px 3px;
+  background: #f8fafc;
+  border-radius: 4px;
+}}
+.kelime-ar {{ font-family: 'Amiri', serif; font-size: 14pt; line-height: 1.6; }}
+.kelime-tr {{ direction: ltr; font-size: 7.5pt; color: #334155; line-height: 1.2; }}
+.ayet {{ page-break-inside: avoid; }}
+@media (max-width: 640px) {{
+  .kitap-sayfa {{ padding: 22px 16px 40px; }}
+  .sure-arapca {{ display: block; margin: 6px 0 0; }}
+}}
+@media print {{
+  .ust-cubuk {{ display: none; }}
+  body {{ padding-top: 0; background: #ffffff; }}
 }}
 </style>
 </head>
 <body>
-<div class="container">
-  <div class="surah-header">
-    <div class="surah-title-box">
-      <h1>
-        <span>{sno}. {name} Suresi</span>
-        <span class="surah-arabic">{arabic}</span>
-      </h1>
-      <div class="surah-badges">
-        <span class="badge badge-mushaf">Mushaf Tertibi: {sno}</span>
-        <span class="badge badge-nuzul">Nüzul Sırası: {nuzul}</span>
-        <span class="badge badge-place">{place}</span>
-        <span class="badge badge-meaning">Anlamı: {meaning}</span>
-        <span class="badge badge-mushaf">{vcount} Âyet</span>
-      </div>
+<header class="ust-cubuk">
+  <a class="geri" href="../../kuran_hikmetleri_kitap.html#sure-{sno}">&larr; Kitaba dön</a>
+  <span class="ust-baslik">Kur'an Hikmetleri · S{sno:03d}</span>
+</header>
+<main class="kitap-sayfa">
+  <header class="sure-baslik">
+    <div class="sure-no">Sure {sno}</div>
+    <h1>{sno}. {name} Suresi <span class="sure-arapca">{arabic}</span></h1>
+    <div class="sure-rozetler">
+      <span class="rozet rozet-acik">Mushaf Tertibi: {sno}</span>
+      <span class="rozet rozet-acik">Nüzul Sırası: {nuzul}</span>
+      <span class="rozet rozet-acik">{place}</span>
+      <span class="rozet rozet-acik">Anlamı: {meaning}</span>
+      <span class="rozet rozet-acik">{vcount} Âyet</span>
     </div>
-  </div>
+  </header>
 
-  <!-- Surenin Kendi İçindeki Mevzular Sütun / Cetvel Özeti -->
   {mini_bar_html}
 
-  <!-- Mevzulara Göre Âyet Pencereleri -->
   {"".join(sections_html)}
-</div>
+</main>
 </body>
 </html>"""
     return html
@@ -897,8 +899,10 @@ def build_all_charts():
 
     # 3. Her Sure için Ayet Pencereli Detay Harita HTML
     print("4. 114 sure için ayet seviyesinde pencereli detay haritaları üretiliyor...")
+    import kelime_mealli
+    kelimeler = kelime_mealli.yukle()
     for s in surahs:
-        s_html = generate_surah_detail_chart_html(s)
+        s_html = generate_surah_detail_chart_html(s, kelimeler)
         s_path = HTML_OUT_DIR / "sureler" / f"{s['sno']}_detay.html"
         with open(s_path, "w", encoding="utf-8") as f:
             f.write(s_html)

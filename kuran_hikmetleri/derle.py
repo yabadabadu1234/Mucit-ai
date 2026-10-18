@@ -25,7 +25,7 @@ except ImportError:
     subprocess.run([sys.executable, "-m", "pip", "install", "--quiet", "markdown"], check=True)
     import markdown
 
-from grafik_uretici import build_all_charts, load_all_surah_data
+from grafik_uretici import build_all_charts, load_all_surah_data, kelime_satiri_html
 import kelime_mealli
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -80,32 +80,13 @@ def flat_segment_tablosu(segments):
                     """
 
 
-KELIME_RENKLERI = ["#dc2626", "#2563eb", "#16a34a", "#9333ea", "#ea580c",
-                   "#0891b2", "#be185d", "#ca8a04", "#4f46e5", "#0d9488"]
-
-
-def _kelime_mealli(verse_dict, v):
-    """Âyetin kelime mealli satırı: her kelime ayrı renkte; altında Türkçe karşılığı."""
-    kelimeler = verse_dict.get(v, {}).get("kelimeler", [])
-    if not kelimeler:
-        return ""
-    parcalar = []
-    for i, k in enumerate(kelimeler):
-        renk = KELIME_RENKLERI[i % len(KELIME_RENKLERI)]
-        parcalar.append(
-            f'<span class="kelime" style="border-bottom:3px solid {renk};" title="{k["lem"]}">'
-            f'<span class="kelime-ar" style="color:{renk};">{k["ar"]}</span>'
-            f'<span class="kelime-tr">{k["tr"] or "—"}</span></span>'
-        )
-    return f'<div class="kelime-satiri">{"".join(parcalar)}</div>'
-
-
 def _kart(renk, v, etiket, verse_dict):
     ar, tr = _ayet_metni(verse_dict, v)
     return (
         f'<div class="ag-kart" style="border-top:4px solid {renk};">'
         f'<div class="ag-kart-baslik" style="color:{renk};">Âyet {v}{" · " + etiket if etiket else ""}</div>'
-        f'<div class="verse-ar">{ar}</div>{_kelime_mealli(verse_dict, v)}'
+        f'<div class="verse-ar">{ar}</div>'
+        f'{kelime_satiri_html(verse_dict.get(v, {}).get("kelimeler", []))}'
         f'<div class="verse-tr">{tr}</div></div>'
     )
 
@@ -525,7 +506,7 @@ def build_unified_html(config, surahs_data):
                       {sure_sutun_grafigi(segments)}
                       <div class="lazy-icerik" data-sure="{sno}"></div>
                       <p style="font-size:9pt; color:#64748b; margin-top:8px;">
-                        <em>(Detaylı interaktif harita ve ayet pencereleri için bkz: <code>html_grafikler/sureler/{sno}_detay.html</code>)</em>
+                        <em>(Detaylı interaktif harita ve ayet pencereleri için bkz: <a href="html_grafikler/sureler/{sno}_detay.html" target="_blank" rel="noopener">html_grafikler/sureler/{sno}_detay.html</a>)</em>
                       </p>
                     </div>
                     """

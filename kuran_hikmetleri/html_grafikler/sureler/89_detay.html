@@ -2,502 +2,505 @@
 <html lang="tr">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>S089 · Fecr Suresi Âyet ve Mevzu Haritası</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 <style>
 * { box-sizing: border-box; }
 body {
   margin: 0;
-  padding: 32px;
-  background: #090d16;
-  color: #f1f5f9;
+  padding-top: 64px;
+  background: #f5f1e8;
+  color: #1e293b;
   font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  line-height: 1.7;
 }
-.container {
-  max-width: 1400px;
-  margin: 0 auto;
-}
-.surah-header {
+.ust-cubuk {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
   background: #0f172a;
-  border: 1px solid #1e293b;
-  border-radius: 20px;
-  padding: 32px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
+  padding: 0 16px;
+  z-index: 10;
 }
-.surah-title-box h1 {
-  margin: 0 0 8px 0;
-  font-size: 32px;
-  font-weight: 800;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-.surah-arabic {
-  font-family: 'Amiri', serif;
-  font-size: 36px;
-  color: #38bdf8;
-}
-.surah-badges {
-  display: flex;
-  gap: 10px;
-  margin-top: 12px;
-  flex-wrap: wrap;
-}
-.badge {
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 13px;
-  font-weight: 600;
-  color: white;
-}
-.badge-mushaf { background: #2563eb; }
-.badge-nuzul { background: #7c3aed; }
-.badge-place { background: #059669; }
-.badge-meaning { background: #334155; }
-
-.topic-section {
-  margin-top: 36px;
-  background: #0b1120;
-  border: 1px solid #1e293b;
-  border-radius: 16px;
-  padding: 24px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
-}
-.topic-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px 20px;
+.geri {
+  color: #fbbf24;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 11pt;
+  padding: 6px 12px;
+  border: 1px solid #334155;
   border-radius: 8px;
-  margin-bottom: 24px;
 }
-.topic-title {
-  font-size: 20px;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  gap: 12px;
+.geri:hover { background: #1e293b; }
+.ust-baslik { color: #e2e8f0; font-weight: 600; font-size: 10.5pt; }
+.kitap-sayfa {
+  max-width: 880px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 40px 48px 64px;
+  min-height: 100vh;
+  box-shadow: 0 2px 18px rgba(15, 23, 42, 0.08);
 }
-.topic-code {
-  font-family: monospace;
-  background: rgba(255,255,255,0.1);
-  padding: 4px 8px;
-  border-radius: 6px;
-  font-size: 14px;
+.sure-no {
+  font-size: 9.5pt;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #64748b;
 }
-.topic-meta {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: #94a3b8;
+.sure-baslik h1 {
+  font-family: 'Cinzel', 'Plus Jakarta Sans', serif;
+  font-size: 24pt;
+  color: #0f172a;
+  margin: 4px 0 8px;
+  line-height: 1.3;
+}
+.sure-arapca {
+  font-family: 'Amiri', serif;
+  color: #1e40af;
+  font-size: 26pt;
+  margin-left: 12px;
+  font-weight: 400;
+}
+.sure-rozetler { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.rozet {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 14px;
+  font-size: 9pt;
+  color: #ffffff;
   font-weight: 600;
 }
-.verse-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  gap: 20px;
+.rozet-acik { background: #475569; }
+.mevzu { margin-top: 34px; }
+.mevzu-baslik { padding: 10px 16px; border-radius: 6px; margin-bottom: 14px; }
+.mevzu-ad { font-size: 13pt; font-weight: 700; }
+.mevzu-kod {
+  font-family: monospace;
+  font-size: 9pt;
+  background: rgba(15, 23, 42, 0.06);
+  color: #334155;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-right: 8px;
 }
-.verse-window {
-  background: #0f172a;
-  border: 1px solid #1e293b;
-  border-radius: 12px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  transition: transform 0.2s, box-shadow 0.2s;
+.mevzu-meta { color: #64748b; font-size: 9.5pt; margin-top: 4px; }
+.ayet {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-bottom: 12px;
 }
-.verse-window:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-  border-color: #38bdf8;
-}
-.verse-header {
+.ayet-baslik {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-}
-.verse-badge {
-  padding: 4px 10px;
-  border-radius: 6px;
-  font-size: 12px;
+  font-size: 9.5pt;
   font-weight: 700;
-  color: #ffffff;
+  margin-bottom: 4px;
 }
-.verse-key {
-  color: #64748b;
-  font-family: monospace;
-  font-size: 13px;
-}
-.verse-arabic {
+.ayet-kod { color: #94a3b8; font-family: monospace; font-weight: 400; }
+.ayet-ar {
   font-family: 'Amiri', serif;
-  font-size: 24px;
-  line-height: 1.8;
-  text-align: right;
+  font-size: 22pt;
+  line-height: 1.9;
   direction: rtl;
-  color: #f8fafc;
-  padding: 6px 0;
+  text-align: right;
+  color: #0f172a;
 }
-.verse-meal {
-  font-size: 14px;
-  line-height: 1.6;
-  color: #cbd5e1;
-  border-top: 1px dashed #1e293b;
-  padding-top: 10px;
+.ayet-meal {
+  font-size: 10.5pt;
+  color: #334155;
+  border-top: 1px dashed #e2e8f0;
+  padding-top: 8px;
+  margin-top: 8px;
 }
-@media (max-width: 768px) {
-  .verse-grid { grid-template-columns: 1fr; }
+.kelime-satiri {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  direction: rtl;
+  margin: 6px 0 4px;
+}
+.kelime {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2px 6px 3px;
+  background: #f8fafc;
+  border-radius: 4px;
+}
+.kelime-ar { font-family: 'Amiri', serif; font-size: 14pt; line-height: 1.6; }
+.kelime-tr { direction: ltr; font-size: 7.5pt; color: #334155; line-height: 1.2; }
+.ayet { page-break-inside: avoid; }
+@media (max-width: 640px) {
+  .kitap-sayfa { padding: 22px 16px 40px; }
+  .sure-arapca { display: block; margin: 6px 0 0; }
+}
+@media print {
+  .ust-cubuk { display: none; }
+  body { padding-top: 0; background: #ffffff; }
 }
 </style>
 </head>
 <body>
-<div class="container">
-  <div class="surah-header">
-    <div class="surah-title-box">
-      <h1>
-        <span>89. Fecr Suresi</span>
-        <span class="surah-arabic">الفجر</span>
-      </h1>
-      <div class="surah-badges">
-        <span class="badge badge-mushaf">Mushaf Tertibi: 89</span>
-        <span class="badge badge-nuzul">Nüzul Sırası: 10</span>
-        <span class="badge badge-place">Mekkî</span>
-        <span class="badge badge-meaning">Anlamı: Şafak</span>
-        <span class="badge badge-mushaf">30 Âyet</span>
-      </div>
+<header class="ust-cubuk">
+  <a class="geri" href="../../kuran_hikmetleri_kitap.html#sure-89">&larr; Kitaba dön</a>
+  <span class="ust-baslik">Kur'an Hikmetleri · S089</span>
+</header>
+<main class="kitap-sayfa">
+  <header class="sure-baslik">
+    <div class="sure-no">Sure 89</div>
+    <h1>89. Fecr Suresi <span class="sure-arapca">الفجر</span></h1>
+    <div class="sure-rozetler">
+      <span class="rozet rozet-acik">Mushaf Tertibi: 89</span>
+      <span class="rozet rozet-acik">Nüzul Sırası: 10</span>
+      <span class="rozet rozet-acik">Mekkî</span>
+      <span class="rozet rozet-acik">Anlamı: Şafak</span>
+      <span class="rozet rozet-acik">30 Âyet</span>
     </div>
-  </div>
+  </header>
 
-  <!-- Surenin Kendi İçindeki Mevzular Sütun / Cetvel Özeti -->
-  <div style="display:flex; width:100%; border-radius:8px; overflow:hidden; margin:20px 0; box-shadow:0 4px 15px rgba(0,0,0,0.3);"><div style="flex: 5; background:#1e40af; border:1px solid #1d4ed8; padding:8px 4px; text-align:center; color:#ffffff; font-size:12px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Yemin (1-5)">Yemin (5)</div><div style="flex: 9; background:#065f46; border:1px solid #047857; padding:8px 4px; text-align:center; color:#ffffff; font-size:12px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Kavimlerin helakı (6-14)">Kavimlerin helakı (9)</div><div style="flex: 16; background:#b45309; border:1px solid #d97706; padding:8px 4px; text-align:center; color:#ffffff; font-size:12px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="İnsanın imtihanı (15-30)">İnsanın imtihanı (16)</div></div>
+  <div style="display:flex; width:100%; border-radius:8px; overflow:hidden; margin:20px 0 8px; box-shadow:0 2px 10px rgba(0,0,0,0.12);"><div style="flex: 5; background:#1e40af; border:1px solid #1d4ed8; padding:8px 4px; text-align:center; color:#ffffff; font-size:11px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Yemin (1-5)">Yemin (5)</div><div style="flex: 9; background:#065f46; border:1px solid #047857; padding:8px 4px; text-align:center; color:#ffffff; font-size:11px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Kavimlerin helakı (6-14)">Kavimlerin helakı (9)</div><div style="flex: 16; background:#b45309; border:1px solid #d97706; padding:8px 4px; text-align:center; color:#ffffff; font-size:11px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="İnsanın imtihanı (15-30)">İnsanın imtihanı (16)</div></div>
 
-  <!-- Mevzulara Göre Âyet Pencereleri -->
   
-        <div class="topic-section">
-          <div class="topic-header" style="background: linear-gradient(90deg, #1e40af33, transparent); border-left: 6px solid #1e40af;">
-            <div class="topic-title" style="color: #1e40af;">
-              <span class="topic-code">K089-01</span>
-              <span>Yemin</span>
+        <section class="mevzu">
+          <header class="mevzu-baslik" style="border-left:6px solid #1e40af; background:#1e40af14;">
+            <div class="mevzu-ad" style="color:#1e40af;">
+              <span class="mevzu-kod">K089-01</span>Yemin
             </div>
-            <div class="topic-meta">
-              <span>Âyet 1 - 5</span>
-              <span class="badge" style="background:#1e40af;">5 Âyet</span>
-            </div>
-          </div>
-          <div class="verse-grid">
-            
-            <div class="verse-window" style="border-left: 5px solid #1e40af;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#1e40af;">Âyet 1</span>
-                <span class="verse-key">89:1</span>
+            <div class="mevzu-meta">Âyet 1 - 5 · <span class="rozet" style="background:#1e40af;">5 âyet</span></div>
+          </header>
+          
+            <article class="ayet" style="border-left:5px solid #1e40af;">
+              <div class="ayet-baslik">
+                <span style="color:#1e40af;">Âyet 1</span>
+                <span class="ayet-kod">89:1</span>
               </div>
-              <div class="verse-arabic"> وَٱلْفَجْرِ</div>
-              <div class="verse-meal">(1-5) Fecre, on geceye (haccın on gecesine), çifte ve teke, (her şeyi karanlığı ile) örttüğü an geceye yemin ederim ki, akıl sahibi için bunlarda elbette bir yemin (değeri) var, değil mi?</div>
-            </div>
+              <div class="ayet-ar"> وَٱلْفَجْرِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="فَجْر"><span class="kelime-ar" style="color:#dc2626;">وَٱلْفَجْرِ</span><span class="kelime-tr">the (belirteç)</span></span></div>
+              <div class="ayet-meal">(1-5) Fecre, on geceye (haccın on gecesine), çifte ve teke, (her şeyi karanlığı ile) örttüğü an geceye yemin ederim ki, akıl sahibi için bunlarda elbette bir yemin (değeri) var, değil mi?</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #1e40af;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#1e40af;">Âyet 2</span>
-                <span class="verse-key">89:2</span>
+            <article class="ayet" style="border-left:5px solid #1e40af;">
+              <div class="ayet-baslik">
+                <span style="color:#1e40af;">Âyet 2</span>
+                <span class="ayet-kod">89:2</span>
               </div>
-              <div class="verse-arabic">وَلَيَالٍ عَشْرٍ</div>
-              <div class="verse-meal">(1-5) Fecre, on geceye (haccın on gecesine), çifte ve teke, (her şeyi karanlığı ile) örttüğü an geceye yemin ederim ki, akıl sahibi için bunlarda elbette bir yemin (değeri) var, değil mi?</div>
-            </div>
+              <div class="ayet-ar">وَلَيَالٍ عَشْرٍ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="لَيْل"><span class="kelime-ar" style="color:#dc2626;">وَلَيَالٍ</span><span class="kelime-tr">Gece</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="عَشْر"><span class="kelime-ar" style="color:#2563eb;">عَشْرٍ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">(1-5) Fecre, on geceye (haccın on gecesine), çifte ve teke, (her şeyi karanlığı ile) örttüğü an geceye yemin ederim ki, akıl sahibi için bunlarda elbette bir yemin (değeri) var, değil mi?</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #1e40af;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#1e40af;">Âyet 3</span>
-                <span class="verse-key">89:3</span>
+            <article class="ayet" style="border-left:5px solid #1e40af;">
+              <div class="ayet-baslik">
+                <span style="color:#1e40af;">Âyet 3</span>
+                <span class="ayet-kod">89:3</span>
               </div>
-              <div class="verse-arabic">وَٱلشَّفْعِ وَٱلْوَتْرِ</div>
-              <div class="verse-meal">(1-5) Fecre, on geceye (haccın on gecesine), çifte ve teke, (her şeyi karanlığı ile) örttüğü an geceye yemin ederim ki, akıl sahibi için bunlarda elbette bir yemin (değeri) var, değil mi?</div>
-            </div>
+              <div class="ayet-ar">وَٱلشَّفْعِ وَٱلْوَتْرِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="شَفْع"><span class="kelime-ar" style="color:#dc2626;">وَٱلشَّفْعِ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="وَتْر"><span class="kelime-ar" style="color:#2563eb;">وَٱلْوَتْرِ</span><span class="kelime-tr">the (belirteç)</span></span></div>
+              <div class="ayet-meal">(1-5) Fecre, on geceye (haccın on gecesine), çifte ve teke, (her şeyi karanlığı ile) örttüğü an geceye yemin ederim ki, akıl sahibi için bunlarda elbette bir yemin (değeri) var, değil mi?</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #1e40af;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#1e40af;">Âyet 4</span>
-                <span class="verse-key">89:4</span>
+            <article class="ayet" style="border-left:5px solid #1e40af;">
+              <div class="ayet-baslik">
+                <span style="color:#1e40af;">Âyet 4</span>
+                <span class="ayet-kod">89:4</span>
               </div>
-              <div class="verse-arabic">وَٱلَّيْلِ إِذَا يَسْرِ</div>
-              <div class="verse-meal">(1-5) Fecre, on geceye (haccın on gecesine), çifte ve teke, (her şeyi karanlığı ile) örttüğü an geceye yemin ederim ki, akıl sahibi için bunlarda elbette bir yemin (değeri) var, değil mi?</div>
-            </div>
+              <div class="ayet-ar">وَٱلَّيْلِ إِذَا يَسْرِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="لَيْل"><span class="kelime-ar" style="color:#dc2626;">وَٱلَّيْلِ</span><span class="kelime-tr">Gece</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="إِذا"><span class="kelime-ar" style="color:#2563eb;">إِذَا</span><span class="kelime-tr">ne zaman, -dığında</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="يَسْرِ"><span class="kelime-ar" style="color:#16a34a;">يَسْرِ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">(1-5) Fecre, on geceye (haccın on gecesine), çifte ve teke, (her şeyi karanlığı ile) örttüğü an geceye yemin ederim ki, akıl sahibi için bunlarda elbette bir yemin (değeri) var, değil mi?</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #1e40af;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#1e40af;">Âyet 5</span>
-                <span class="verse-key">89:5</span>
+            <article class="ayet" style="border-left:5px solid #1e40af;">
+              <div class="ayet-baslik">
+                <span style="color:#1e40af;">Âyet 5</span>
+                <span class="ayet-kod">89:5</span>
               </div>
-              <div class="verse-arabic">هَلْ فِى ذَٰلِكَ قَسَمٌ لِّذِى حِجْرٍ</div>
-              <div class="verse-meal">(1-5) Fecre, on geceye (haccın on gecesine), çifte ve teke, (her şeyi karanlığı ile) örttüğü an geceye yemin ederim ki, akıl sahibi için bunlarda elbette bir yemin (değeri) var, değil mi?</div>
-            </div>
+              <div class="ayet-ar">هَلْ فِى ذَٰلِكَ قَسَمٌ لِّذِى حِجْرٍ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="هَل"><span class="kelime-ar" style="color:#dc2626;">هَلْ</span><span class="kelime-tr">mı? (soru)</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="فِي"><span class="kelime-ar" style="color:#2563eb;">فِى</span><span class="kelime-tr">İçinde</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="ل"><span class="kelime-ar" style="color:#16a34a;">ذَٰلِكَ</span><span class="kelime-tr">için, -e</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="قَسَم"><span class="kelime-ar" style="color:#9333ea;">قَسَمٌ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="ذُو"><span class="kelime-ar" style="color:#ea580c;">لِّذِى</span><span class="kelime-tr">sahip olan</span></span><span class="kelime" style="border-bottom:3px solid #0891b2;" title="حِجْر"><span class="kelime-ar" style="color:#0891b2;">حِجْرٍ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">(1-5) Fecre, on geceye (haccın on gecesine), çifte ve teke, (her şeyi karanlığı ile) örttüğü an geceye yemin ederim ki, akıl sahibi için bunlarda elbette bir yemin (değeri) var, değil mi?</div>
+            </article>
             
-          </div>
-        </div>
+        </section>
         
-        <div class="topic-section">
-          <div class="topic-header" style="background: linear-gradient(90deg, #065f4633, transparent); border-left: 6px solid #065f46;">
-            <div class="topic-title" style="color: #065f46;">
-              <span class="topic-code">K089-02</span>
-              <span>Kavimlerin helakı</span>
+        <section class="mevzu">
+          <header class="mevzu-baslik" style="border-left:6px solid #065f46; background:#065f4614;">
+            <div class="mevzu-ad" style="color:#065f46;">
+              <span class="mevzu-kod">K089-02</span>Kavimlerin helakı
             </div>
-            <div class="topic-meta">
-              <span>Âyet 6 - 14</span>
-              <span class="badge" style="background:#065f46;">9 Âyet</span>
-            </div>
-          </div>
-          <div class="verse-grid">
-            
-            <div class="verse-window" style="border-left: 5px solid #065f46;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#065f46;">Âyet 6</span>
-                <span class="verse-key">89:6</span>
+            <div class="mevzu-meta">Âyet 6 - 14 · <span class="rozet" style="background:#065f46;">9 âyet</span></div>
+          </header>
+          
+            <article class="ayet" style="border-left:5px solid #065f46;">
+              <div class="ayet-baslik">
+                <span style="color:#065f46;">Âyet 6</span>
+                <span class="ayet-kod">89:6</span>
               </div>
-              <div class="verse-arabic">أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِعَادٍ</div>
-              <div class="verse-meal">(6-14) Görmedin mi, Rabbin ne yaptı Âd kavmine; direkleri (yüksek binaları) olan, ülkelerde benzeri yaratılmamış İrem şehrine, o vadide kayaları yontan Semûd kavmine, kazıklar (çadırlar, ordular) sahibi Firavun’a! Ki onların hepsi ülkelerinde azgınlık ettiler. Oralarda kötülüğü çoğalttılar. Bu yüzden Rabbin onların üstüne azap kamçısı yağdırdı. Çünkü Rabbin (her an) gözetlemededir.</div>
-            </div>
+              <div class="ayet-ar">أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِعَادٍ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="لَم"><span class="kelime-ar" style="color:#dc2626;">أَلَمْ</span><span class="kelime-tr">değil (geçmiş)</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="رَأَى"><span class="kelime-ar" style="color:#2563eb;">تَرَ</span><span class="kelime-tr">gördü</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="كَيْف"><span class="kelime-ar" style="color:#16a34a;">كَيْفَ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="فَعَلَ"><span class="kelime-ar" style="color:#9333ea;">فَعَلَ</span><span class="kelime-tr">Yaptı</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="رَبّ"><span class="kelime-ar" style="color:#ea580c;">رَبُّكَ</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #0891b2;" title="عاد"><span class="kelime-ar" style="color:#0891b2;">بِعَادٍ</span><span class="kelime-tr">ile, -de</span></span></div>
+              <div class="ayet-meal">(6-14) Görmedin mi, Rabbin ne yaptı Âd kavmine; direkleri (yüksek binaları) olan, ülkelerde benzeri yaratılmamış İrem şehrine, o vadide kayaları yontan Semûd kavmine, kazıklar (çadırlar, ordular) sahibi Firavun’a! Ki onların hepsi ülkelerinde azgınlık ettiler. Oralarda kötülüğü çoğalttılar. Bu yüzden Rabbin onların üstüne azap kamçısı yağdırdı. Çünkü Rabbin (her an) gözetlemededir.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #065f46;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#065f46;">Âyet 7</span>
-                <span class="verse-key">89:7</span>
+            <article class="ayet" style="border-left:5px solid #065f46;">
+              <div class="ayet-baslik">
+                <span style="color:#065f46;">Âyet 7</span>
+                <span class="ayet-kod">89:7</span>
               </div>
-              <div class="verse-arabic">إِرَمَ ذَاتِ ٱلْعِمَادِ</div>
-              <div class="verse-meal">(6-14) Görmedin mi, Rabbin ne yaptı Âd kavmine; direkleri (yüksek binaları) olan, ülkelerde benzeri yaratılmamış İrem şehrine, o vadide kayaları yontan Semûd kavmine, kazıklar (çadırlar, ordular) sahibi Firavun’a! Ki onların hepsi ülkelerinde azgınlık ettiler. Oralarda kötülüğü çoğalttılar. Bu yüzden Rabbin onların üstüne azap kamçısı yağdırdı. Çünkü Rabbin (her an) gözetlemededir.</div>
-            </div>
+              <div class="ayet-ar">إِرَمَ ذَاتِ ٱلْعِمَادِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="إِرَم"><span class="kelime-ar" style="color:#dc2626;">إِرَمَ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="ذُو"><span class="kelime-ar" style="color:#2563eb;">ذَاتِ</span><span class="kelime-tr">sahip olan</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="عِماد"><span class="kelime-ar" style="color:#16a34a;">ٱلْعِمَادِ</span><span class="kelime-tr">the (belirteç)</span></span></div>
+              <div class="ayet-meal">(6-14) Görmedin mi, Rabbin ne yaptı Âd kavmine; direkleri (yüksek binaları) olan, ülkelerde benzeri yaratılmamış İrem şehrine, o vadide kayaları yontan Semûd kavmine, kazıklar (çadırlar, ordular) sahibi Firavun’a! Ki onların hepsi ülkelerinde azgınlık ettiler. Oralarda kötülüğü çoğalttılar. Bu yüzden Rabbin onların üstüne azap kamçısı yağdırdı. Çünkü Rabbin (her an) gözetlemededir.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #065f46;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#065f46;">Âyet 8</span>
-                <span class="verse-key">89:8</span>
+            <article class="ayet" style="border-left:5px solid #065f46;">
+              <div class="ayet-baslik">
+                <span style="color:#065f46;">Âyet 8</span>
+                <span class="ayet-kod">89:8</span>
               </div>
-              <div class="verse-arabic">ٱلَّتِى لَمْ يُخْلَقْ مِثْلُهَا فِى ٱلْبِلَـٰدِ</div>
-              <div class="verse-meal">(6-14) Görmedin mi, Rabbin ne yaptı Âd kavmine; direkleri (yüksek binaları) olan, ülkelerde benzeri yaratılmamış İrem şehrine, o vadide kayaları yontan Semûd kavmine, kazıklar (çadırlar, ordular) sahibi Firavun’a! Ki onların hepsi ülkelerinde azgınlık ettiler. Oralarda kötülüğü çoğalttılar. Bu yüzden Rabbin onların üstüne azap kamçısı yağdırdı. Çünkü Rabbin (her an) gözetlemededir.</div>
-            </div>
+              <div class="ayet-ar">ٱلَّتِى لَمْ يُخْلَقْ مِثْلُهَا فِى ٱلْبِلَـٰدِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="الَّذِي"><span class="kelime-ar" style="color:#dc2626;">ٱلَّتِى</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="لَم"><span class="kelime-ar" style="color:#2563eb;">لَمْ</span><span class="kelime-tr">değil (geçmiş)</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="خَلَقَ"><span class="kelime-ar" style="color:#16a34a;">يُخْلَقْ</span><span class="kelime-tr">yarattı</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="مِثْل"><span class="kelime-ar" style="color:#9333ea;">مِثْلُهَا</span><span class="kelime-tr">gibi, benzer</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="فِي"><span class="kelime-ar" style="color:#ea580c;">فِى</span><span class="kelime-tr">İçinde</span></span><span class="kelime" style="border-bottom:3px solid #0891b2;" title="بَلَد"><span class="kelime-ar" style="color:#0891b2;">ٱلْبِلَٰدِ</span><span class="kelime-tr">the (belirteç)</span></span></div>
+              <div class="ayet-meal">(6-14) Görmedin mi, Rabbin ne yaptı Âd kavmine; direkleri (yüksek binaları) olan, ülkelerde benzeri yaratılmamış İrem şehrine, o vadide kayaları yontan Semûd kavmine, kazıklar (çadırlar, ordular) sahibi Firavun’a! Ki onların hepsi ülkelerinde azgınlık ettiler. Oralarda kötülüğü çoğalttılar. Bu yüzden Rabbin onların üstüne azap kamçısı yağdırdı. Çünkü Rabbin (her an) gözetlemededir.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #065f46;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#065f46;">Âyet 9</span>
-                <span class="verse-key">89:9</span>
+            <article class="ayet" style="border-left:5px solid #065f46;">
+              <div class="ayet-baslik">
+                <span style="color:#065f46;">Âyet 9</span>
+                <span class="ayet-kod">89:9</span>
               </div>
-              <div class="verse-arabic">وَثَمُودَ ٱلَّذِينَ جَابُوا۟ ٱلصَّخْرَ بِٱلْوَادِ</div>
-              <div class="verse-meal">(6-14) Görmedin mi, Rabbin ne yaptı Âd kavmine; direkleri (yüksek binaları) olan, ülkelerde benzeri yaratılmamış İrem şehrine, o vadide kayaları yontan Semûd kavmine, kazıklar (çadırlar, ordular) sahibi Firavun’a! Ki onların hepsi ülkelerinde azgınlık ettiler. Oralarda kötülüğü çoğalttılar. Bu yüzden Rabbin onların üstüne azap kamçısı yağdırdı. Çünkü Rabbin (her an) gözetlemededir.</div>
-            </div>
+              <div class="ayet-ar">وَثَمُودَ ٱلَّذِينَ جَابُوا۟ ٱلصَّخْرَ بِٱلْوَادِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="ثَمُود"><span class="kelime-ar" style="color:#dc2626;">وَثَمُودَ</span><span class="kelime-tr">ve</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="الَّذِي"><span class="kelime-ar" style="color:#2563eb;">ٱلَّذِينَ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="جابُ"><span class="kelime-ar" style="color:#16a34a;">جَابُوا۟</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="صَخْر"><span class="kelime-ar" style="color:#9333ea;">ٱلصَّخْرَ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="واد"><span class="kelime-ar" style="color:#ea580c;">بِٱلْوَادِ</span><span class="kelime-tr">the (belirteç)</span></span></div>
+              <div class="ayet-meal">(6-14) Görmedin mi, Rabbin ne yaptı Âd kavmine; direkleri (yüksek binaları) olan, ülkelerde benzeri yaratılmamış İrem şehrine, o vadide kayaları yontan Semûd kavmine, kazıklar (çadırlar, ordular) sahibi Firavun’a! Ki onların hepsi ülkelerinde azgınlık ettiler. Oralarda kötülüğü çoğalttılar. Bu yüzden Rabbin onların üstüne azap kamçısı yağdırdı. Çünkü Rabbin (her an) gözetlemededir.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #065f46;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#065f46;">Âyet 10</span>
-                <span class="verse-key">89:10</span>
+            <article class="ayet" style="border-left:5px solid #065f46;">
+              <div class="ayet-baslik">
+                <span style="color:#065f46;">Âyet 10</span>
+                <span class="ayet-kod">89:10</span>
               </div>
-              <div class="verse-arabic">وَفِرْعَوْنَ ذِى ٱلْأَوْتَادِ</div>
-              <div class="verse-meal">(6-14) Görmedin mi, Rabbin ne yaptı Âd kavmine; direkleri (yüksek binaları) olan, ülkelerde benzeri yaratılmamış İrem şehrine, o vadide kayaları yontan Semûd kavmine, kazıklar (çadırlar, ordular) sahibi Firavun’a! Ki onların hepsi ülkelerinde azgınlık ettiler. Oralarda kötülüğü çoğalttılar. Bu yüzden Rabbin onların üstüne azap kamçısı yağdırdı. Çünkü Rabbin (her an) gözetlemededir.</div>
-            </div>
+              <div class="ayet-ar">وَفِرْعَوْنَ ذِى ٱلْأَوْتَادِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="فِرْعَوْن"><span class="kelime-ar" style="color:#dc2626;">وَفِرْعَوْنَ</span><span class="kelime-tr">Firavun</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="ذُو"><span class="kelime-ar" style="color:#2563eb;">ذِى</span><span class="kelime-tr">sahip olan</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="أَوْتاد"><span class="kelime-ar" style="color:#16a34a;">ٱلْأَوْتَادِ</span><span class="kelime-tr">the (belirteç)</span></span></div>
+              <div class="ayet-meal">(6-14) Görmedin mi, Rabbin ne yaptı Âd kavmine; direkleri (yüksek binaları) olan, ülkelerde benzeri yaratılmamış İrem şehrine, o vadide kayaları yontan Semûd kavmine, kazıklar (çadırlar, ordular) sahibi Firavun’a! Ki onların hepsi ülkelerinde azgınlık ettiler. Oralarda kötülüğü çoğalttılar. Bu yüzden Rabbin onların üstüne azap kamçısı yağdırdı. Çünkü Rabbin (her an) gözetlemededir.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #065f46;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#065f46;">Âyet 11</span>
-                <span class="verse-key">89:11</span>
+            <article class="ayet" style="border-left:5px solid #065f46;">
+              <div class="ayet-baslik">
+                <span style="color:#065f46;">Âyet 11</span>
+                <span class="ayet-kod">89:11</span>
               </div>
-              <div class="verse-arabic">ٱلَّذِينَ طَغَوْا۟ فِى ٱلْبِلَـٰدِ</div>
-              <div class="verse-meal">(6-14) Görmedin mi, Rabbin ne yaptı Âd kavmine; direkleri (yüksek binaları) olan, ülkelerde benzeri yaratılmamış İrem şehrine, o vadide kayaları yontan Semûd kavmine, kazıklar (çadırlar, ordular) sahibi Firavun’a! Ki onların hepsi ülkelerinde azgınlık ettiler. Oralarda kötülüğü çoğalttılar. Bu yüzden Rabbin onların üstüne azap kamçısı yağdırdı. Çünkü Rabbin (her an) gözetlemededir.</div>
-            </div>
+              <div class="ayet-ar">ٱلَّذِينَ طَغَوْا۟ فِى ٱلْبِلَـٰدِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="الَّذِي"><span class="kelime-ar" style="color:#dc2626;">ٱلَّذِينَ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="طَغَى"><span class="kelime-ar" style="color:#2563eb;">طَغَوْا۟</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="فِي"><span class="kelime-ar" style="color:#16a34a;">فِى</span><span class="kelime-tr">İçinde</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="بَلَد"><span class="kelime-ar" style="color:#9333ea;">ٱلْبِلَٰدِ</span><span class="kelime-tr">the (belirteç)</span></span></div>
+              <div class="ayet-meal">(6-14) Görmedin mi, Rabbin ne yaptı Âd kavmine; direkleri (yüksek binaları) olan, ülkelerde benzeri yaratılmamış İrem şehrine, o vadide kayaları yontan Semûd kavmine, kazıklar (çadırlar, ordular) sahibi Firavun’a! Ki onların hepsi ülkelerinde azgınlık ettiler. Oralarda kötülüğü çoğalttılar. Bu yüzden Rabbin onların üstüne azap kamçısı yağdırdı. Çünkü Rabbin (her an) gözetlemededir.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #065f46;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#065f46;">Âyet 12</span>
-                <span class="verse-key">89:12</span>
+            <article class="ayet" style="border-left:5px solid #065f46;">
+              <div class="ayet-baslik">
+                <span style="color:#065f46;">Âyet 12</span>
+                <span class="ayet-kod">89:12</span>
               </div>
-              <div class="verse-arabic">فَأَكْثَرُوا۟ فِيهَا ٱلْفَسَادَ</div>
-              <div class="verse-meal">(6-14) Görmedin mi, Rabbin ne yaptı Âd kavmine; direkleri (yüksek binaları) olan, ülkelerde benzeri yaratılmamış İrem şehrine, o vadide kayaları yontan Semûd kavmine, kazıklar (çadırlar, ordular) sahibi Firavun’a! Ki onların hepsi ülkelerinde azgınlık ettiler. Oralarda kötülüğü çoğalttılar. Bu yüzden Rabbin onların üstüne azap kamçısı yağdırdı. Çünkü Rabbin (her an) gözetlemededir.</div>
-            </div>
+              <div class="ayet-ar">فَأَكْثَرُوا۟ فِيهَا ٱلْفَسَادَ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَكْثَرُ"><span class="kelime-ar" style="color:#dc2626;">فَأَكْثَرُوا۟</span><span class="kelime-tr">ve, böylece</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="فِي"><span class="kelime-ar" style="color:#2563eb;">فِيهَا</span><span class="kelime-tr">İçinde</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="فَساد"><span class="kelime-ar" style="color:#16a34a;">ٱلْفَسَادَ</span><span class="kelime-tr">the (belirteç)</span></span></div>
+              <div class="ayet-meal">(6-14) Görmedin mi, Rabbin ne yaptı Âd kavmine; direkleri (yüksek binaları) olan, ülkelerde benzeri yaratılmamış İrem şehrine, o vadide kayaları yontan Semûd kavmine, kazıklar (çadırlar, ordular) sahibi Firavun’a! Ki onların hepsi ülkelerinde azgınlık ettiler. Oralarda kötülüğü çoğalttılar. Bu yüzden Rabbin onların üstüne azap kamçısı yağdırdı. Çünkü Rabbin (her an) gözetlemededir.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #065f46;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#065f46;">Âyet 13</span>
-                <span class="verse-key">89:13</span>
+            <article class="ayet" style="border-left:5px solid #065f46;">
+              <div class="ayet-baslik">
+                <span style="color:#065f46;">Âyet 13</span>
+                <span class="ayet-kod">89:13</span>
               </div>
-              <div class="verse-arabic">فَصَبَّ عَلَيْهِمْ رَبُّكَ سَوْطَ عَذَابٍ</div>
-              <div class="verse-meal">(6-14) Görmedin mi, Rabbin ne yaptı Âd kavmine; direkleri (yüksek binaları) olan, ülkelerde benzeri yaratılmamış İrem şehrine, o vadide kayaları yontan Semûd kavmine, kazıklar (çadırlar, ordular) sahibi Firavun’a! Ki onların hepsi ülkelerinde azgınlık ettiler. Oralarda kötülüğü çoğalttılar. Bu yüzden Rabbin onların üstüne azap kamçısı yağdırdı. Çünkü Rabbin (her an) gözetlemededir.</div>
-            </div>
+              <div class="ayet-ar">فَصَبَّ عَلَيْهِمْ رَبُّكَ سَوْطَ عَذَابٍ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="صَبَّ"><span class="kelime-ar" style="color:#dc2626;">فَصَبَّ</span><span class="kelime-tr">ve, böylece</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="عَلَى"><span class="kelime-ar" style="color:#2563eb;">عَلَيْهِمْ</span><span class="kelime-tr">üzerine, üstüne</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="رَبّ"><span class="kelime-ar" style="color:#16a34a;">رَبُّكَ</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="سَوْط"><span class="kelime-ar" style="color:#9333ea;">سَوْطَ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="عَذاب"><span class="kelime-ar" style="color:#ea580c;">عَذَابٍ</span><span class="kelime-tr">Azap</span></span></div>
+              <div class="ayet-meal">(6-14) Görmedin mi, Rabbin ne yaptı Âd kavmine; direkleri (yüksek binaları) olan, ülkelerde benzeri yaratılmamış İrem şehrine, o vadide kayaları yontan Semûd kavmine, kazıklar (çadırlar, ordular) sahibi Firavun’a! Ki onların hepsi ülkelerinde azgınlık ettiler. Oralarda kötülüğü çoğalttılar. Bu yüzden Rabbin onların üstüne azap kamçısı yağdırdı. Çünkü Rabbin (her an) gözetlemededir.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #065f46;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#065f46;">Âyet 14</span>
-                <span class="verse-key">89:14</span>
+            <article class="ayet" style="border-left:5px solid #065f46;">
+              <div class="ayet-baslik">
+                <span style="color:#065f46;">Âyet 14</span>
+                <span class="ayet-kod">89:14</span>
               </div>
-              <div class="verse-arabic">إِنَّ رَبَّكَ لَبِٱلْمِرْصَادِ</div>
-              <div class="verse-meal">(6-14) Görmedin mi, Rabbin ne yaptı Âd kavmine; direkleri (yüksek binaları) olan, ülkelerde benzeri yaratılmamış İrem şehrine, o vadide kayaları yontan Semûd kavmine, kazıklar (çadırlar, ordular) sahibi Firavun’a! Ki onların hepsi ülkelerinde azgınlık ettiler. Oralarda kötülüğü çoğalttılar. Bu yüzden Rabbin onların üstüne azap kamçısı yağdırdı. Çünkü Rabbin (her an) gözetlemededir.</div>
-            </div>
+              <div class="ayet-ar">إِنَّ رَبَّكَ لَبِٱلْمِرْصَادِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="إِنّ"><span class="kelime-ar" style="color:#dc2626;">إِنَّ</span><span class="kelime-tr">şüphesiz, gerçekten</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="رَبّ"><span class="kelime-ar" style="color:#2563eb;">رَبَّكَ</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="مِرْصاد"><span class="kelime-ar" style="color:#16a34a;">لَبِٱلْمِرْصَادِ</span><span class="kelime-tr">the (belirteç)</span></span></div>
+              <div class="ayet-meal">(6-14) Görmedin mi, Rabbin ne yaptı Âd kavmine; direkleri (yüksek binaları) olan, ülkelerde benzeri yaratılmamış İrem şehrine, o vadide kayaları yontan Semûd kavmine, kazıklar (çadırlar, ordular) sahibi Firavun’a! Ki onların hepsi ülkelerinde azgınlık ettiler. Oralarda kötülüğü çoğalttılar. Bu yüzden Rabbin onların üstüne azap kamçısı yağdırdı. Çünkü Rabbin (her an) gözetlemededir.</div>
+            </article>
             
-          </div>
-        </div>
+        </section>
         
-        <div class="topic-section">
-          <div class="topic-header" style="background: linear-gradient(90deg, #b4530933, transparent); border-left: 6px solid #b45309;">
-            <div class="topic-title" style="color: #b45309;">
-              <span class="topic-code">K089-03</span>
-              <span>İnsanın imtihanı</span>
+        <section class="mevzu">
+          <header class="mevzu-baslik" style="border-left:6px solid #b45309; background:#b4530914;">
+            <div class="mevzu-ad" style="color:#b45309;">
+              <span class="mevzu-kod">K089-03</span>İnsanın imtihanı
             </div>
-            <div class="topic-meta">
-              <span>Âyet 15 - 30</span>
-              <span class="badge" style="background:#b45309;">16 Âyet</span>
-            </div>
-          </div>
-          <div class="verse-grid">
-            
-            <div class="verse-window" style="border-left: 5px solid #b45309;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#b45309;">Âyet 15</span>
-                <span class="verse-key">89:15</span>
+            <div class="mevzu-meta">Âyet 15 - 30 · <span class="rozet" style="background:#b45309;">16 âyet</span></div>
+          </header>
+          
+            <article class="ayet" style="border-left:5px solid #b45309;">
+              <div class="ayet-baslik">
+                <span style="color:#b45309;">Âyet 15</span>
+                <span class="ayet-kod">89:15</span>
               </div>
-              <div class="verse-arabic">فَأَمَّا ٱلْإِنسَـٰنُ إِذَا مَا ٱبْتَلَىٰهُ رَبُّهُۥ فَأَكْرَمَهُۥ وَنَعَّمَهُۥ فَيَقُولُ رَبِّىٓ أَكْرَمَنِ</div>
-              <div class="verse-meal">İnsan var ya, Rabbi kendisini imtihan edip de ikramda bulunduğunda ve bol nimet verdiğinde «Rabbim bana ikram etti» der.</div>
-            </div>
+              <div class="ayet-ar">فَأَمَّا ٱلْإِنسَـٰنُ إِذَا مَا ٱبْتَلَىٰهُ رَبُّهُۥ فَأَكْرَمَهُۥ وَنَعَّمَهُۥ فَيَقُولُ رَبِّىٓ أَكْرَمَنِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَمّا"><span class="kelime-ar" style="color:#dc2626;">فَأَمَّا</span><span class="kelime-tr">ve, böylece</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="إِنسان"><span class="kelime-ar" style="color:#2563eb;">ٱلْإِنسَٰنُ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="إِذا"><span class="kelime-ar" style="color:#16a34a;">إِذَا</span><span class="kelime-tr">ne zaman, -dığında</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="ما"><span class="kelime-ar" style="color:#9333ea;">مَا</span><span class="kelime-tr">Ne</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="ابْتَلَى"><span class="kelime-ar" style="color:#ea580c;">ٱبْتَلَىٰهُ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #0891b2;" title="رَبّ"><span class="kelime-ar" style="color:#0891b2;">رَبُّهُۥ</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #be185d;" title="أَكْرَمَ"><span class="kelime-ar" style="color:#be185d;">فَأَكْرَمَهُۥ</span><span class="kelime-tr">ve, böylece</span></span><span class="kelime" style="border-bottom:3px solid #ca8a04;" title="نَعَّمَ"><span class="kelime-ar" style="color:#ca8a04;">وَنَعَّمَهُۥ</span><span class="kelime-tr">ve</span></span><span class="kelime" style="border-bottom:3px solid #4f46e5;" title="قالَ"><span class="kelime-ar" style="color:#4f46e5;">فَيَقُولُ</span><span class="kelime-tr">Dedi</span></span><span class="kelime" style="border-bottom:3px solid #0d9488;" title="رَبّ"><span class="kelime-ar" style="color:#0d9488;">رَبِّىٓ</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَكْرَمَ"><span class="kelime-ar" style="color:#dc2626;">أَكْرَمَنِ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">İnsan var ya, Rabbi kendisini imtihan edip de ikramda bulunduğunda ve bol nimet verdiğinde «Rabbim bana ikram etti» der.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #b45309;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#b45309;">Âyet 16</span>
-                <span class="verse-key">89:16</span>
+            <article class="ayet" style="border-left:5px solid #b45309;">
+              <div class="ayet-baslik">
+                <span style="color:#b45309;">Âyet 16</span>
+                <span class="ayet-kod">89:16</span>
               </div>
-              <div class="verse-arabic">وَأَمَّآ إِذَا مَا ٱبْتَلَىٰهُ فَقَدَرَ عَلَيْهِ رِزْقَهُۥ فَيَقُولُ رَبِّىٓ أَهَـٰنَنِ</div>
-              <div class="verse-meal">Onu imtihan edip rızkını daralttığında ise «Rabbim beni önemsemedi» der.</div>
-            </div>
+              <div class="ayet-ar">وَأَمَّآ إِذَا مَا ٱبْتَلَىٰهُ فَقَدَرَ عَلَيْهِ رِزْقَهُۥ فَيَقُولُ رَبِّىٓ أَهَـٰنَنِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَمّا"><span class="kelime-ar" style="color:#dc2626;">وَأَمَّآ</span><span class="kelime-tr">ve</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="إِذا"><span class="kelime-ar" style="color:#2563eb;">إِذَا</span><span class="kelime-tr">ne zaman, -dığında</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="ما"><span class="kelime-ar" style="color:#16a34a;">مَا</span><span class="kelime-tr">Ne</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="ابْتَلَى"><span class="kelime-ar" style="color:#9333ea;">ٱبْتَلَىٰهُ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="قَدَرَ"><span class="kelime-ar" style="color:#ea580c;">فَقَدَرَ</span><span class="kelime-tr">takdir etti, gücü yetti</span></span><span class="kelime" style="border-bottom:3px solid #0891b2;" title="عَلَى"><span class="kelime-ar" style="color:#0891b2;">عَلَيْهِ</span><span class="kelime-tr">üzerine, üstüne</span></span><span class="kelime" style="border-bottom:3px solid #be185d;" title="رِزْق"><span class="kelime-ar" style="color:#be185d;">رِزْقَهُۥ</span><span class="kelime-tr">rızık</span></span><span class="kelime" style="border-bottom:3px solid #ca8a04;" title="قالَ"><span class="kelime-ar" style="color:#ca8a04;">فَيَقُولُ</span><span class="kelime-tr">Dedi</span></span><span class="kelime" style="border-bottom:3px solid #4f46e5;" title="رَبّ"><span class="kelime-ar" style="color:#4f46e5;">رَبِّىٓ</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #0d9488;" title="أَهانَ"><span class="kelime-ar" style="color:#0d9488;">أَهَٰنَنِ</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">Onu imtihan edip rızkını daralttığında ise «Rabbim beni önemsemedi» der.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #b45309;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#b45309;">Âyet 17</span>
-                <span class="verse-key">89:17</span>
+            <article class="ayet" style="border-left:5px solid #b45309;">
+              <div class="ayet-baslik">
+                <span style="color:#b45309;">Âyet 17</span>
+                <span class="ayet-kod">89:17</span>
               </div>
-              <div class="verse-arabic">كَلَّا ۖ بَل لَّا تُكْرِمُونَ ٱلْيَتِيمَ</div>
-              <div class="verse-meal">(17-20) Hayır! Doğrusu siz yetime ikram etmiyorsunuz, yoksulu yedirmeye birbirinizi teşvik etmiyorsunuz. Haram helâl demeden mirası yiyorsunuz. Malı aşırı biçimde seviyorsunuz.</div>
-            </div>
+              <div class="ayet-ar">كَلَّا ۖ بَل لَّا تُكْرِمُونَ ٱلْيَتِيمَ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="كَلّا"><span class="kelime-ar" style="color:#dc2626;">كَلَّا</span><span class="kelime-tr">hayır, asla</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="بَل"><span class="kelime-ar" style="color:#2563eb;">بَل</span><span class="kelime-tr">hayır, aksine</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="لا"><span class="kelime-ar" style="color:#16a34a;">لَّا</span><span class="kelime-tr">Hayır/değil</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="أَكْرَمَ"><span class="kelime-ar" style="color:#9333ea;">تُكْرِمُونَ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="يَتِيم"><span class="kelime-ar" style="color:#ea580c;">ٱلْيَتِيمَ</span><span class="kelime-tr">the (belirteç)</span></span></div>
+              <div class="ayet-meal">(17-20) Hayır! Doğrusu siz yetime ikram etmiyorsunuz, yoksulu yedirmeye birbirinizi teşvik etmiyorsunuz. Haram helâl demeden mirası yiyorsunuz. Malı aşırı biçimde seviyorsunuz.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #b45309;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#b45309;">Âyet 18</span>
-                <span class="verse-key">89:18</span>
+            <article class="ayet" style="border-left:5px solid #b45309;">
+              <div class="ayet-baslik">
+                <span style="color:#b45309;">Âyet 18</span>
+                <span class="ayet-kod">89:18</span>
               </div>
-              <div class="verse-arabic">وَلَا تَحَـٰٓضُّونَ عَلَىٰ طَعَامِ ٱلْمِسْكِينِ</div>
-              <div class="verse-meal">(17-20) Hayır! Doğrusu siz yetime ikram etmiyorsunuz, yoksulu yedirmeye birbirinizi teşvik etmiyorsunuz. Haram helâl demeden mirası yiyorsunuz. Malı aşırı biçimde seviyorsunuz.</div>
-            </div>
+              <div class="ayet-ar">وَلَا تَحَـٰٓضُّونَ عَلَىٰ طَعَامِ ٱلْمِسْكِينِ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="لا"><span class="kelime-ar" style="color:#dc2626;">وَلَا</span><span class="kelime-tr">Hayır/değil</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="تَحاضُّ"><span class="kelime-ar" style="color:#2563eb;">تَحَٰٓضُّونَ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="عَلَى"><span class="kelime-ar" style="color:#16a34a;">عَلَىٰ</span><span class="kelime-tr">üzerine, üstüne</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="طَعام"><span class="kelime-ar" style="color:#9333ea;">طَعَامِ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="مِسْكِين"><span class="kelime-ar" style="color:#ea580c;">ٱلْمِسْكِينِ</span><span class="kelime-tr">the (belirteç)</span></span></div>
+              <div class="ayet-meal">(17-20) Hayır! Doğrusu siz yetime ikram etmiyorsunuz, yoksulu yedirmeye birbirinizi teşvik etmiyorsunuz. Haram helâl demeden mirası yiyorsunuz. Malı aşırı biçimde seviyorsunuz.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #b45309;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#b45309;">Âyet 19</span>
-                <span class="verse-key">89:19</span>
+            <article class="ayet" style="border-left:5px solid #b45309;">
+              <div class="ayet-baslik">
+                <span style="color:#b45309;">Âyet 19</span>
+                <span class="ayet-kod">89:19</span>
               </div>
-              <div class="verse-arabic">وَتَأْكُلُونَ ٱلتُّرَاثَ أَكْلًا لَّمًّا</div>
-              <div class="verse-meal">(17-20) Hayır! Doğrusu siz yetime ikram etmiyorsunuz, yoksulu yedirmeye birbirinizi teşvik etmiyorsunuz. Haram helâl demeden mirası yiyorsunuz. Malı aşırı biçimde seviyorsunuz.</div>
-            </div>
+              <div class="ayet-ar">وَتَأْكُلُونَ ٱلتُّرَاثَ أَكْلًا لَّمًّا</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَكَلَ"><span class="kelime-ar" style="color:#dc2626;">وَتَأْكُلُونَ</span><span class="kelime-tr">Yedi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="تُراث"><span class="kelime-ar" style="color:#2563eb;">ٱلتُّرَاثَ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="أَكْل"><span class="kelime-ar" style="color:#16a34a;">أَكْلًا</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="لَمّ"><span class="kelime-ar" style="color:#9333ea;">لَّمًّا</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">(17-20) Hayır! Doğrusu siz yetime ikram etmiyorsunuz, yoksulu yedirmeye birbirinizi teşvik etmiyorsunuz. Haram helâl demeden mirası yiyorsunuz. Malı aşırı biçimde seviyorsunuz.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #b45309;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#b45309;">Âyet 20</span>
-                <span class="verse-key">89:20</span>
+            <article class="ayet" style="border-left:5px solid #b45309;">
+              <div class="ayet-baslik">
+                <span style="color:#b45309;">Âyet 20</span>
+                <span class="ayet-kod">89:20</span>
               </div>
-              <div class="verse-arabic">وَتُحِبُّونَ ٱلْمَالَ حُبًّا جَمًّا</div>
-              <div class="verse-meal">(17-20) Hayır! Doğrusu siz yetime ikram etmiyorsunuz, yoksulu yedirmeye birbirinizi teşvik etmiyorsunuz. Haram helâl demeden mirası yiyorsunuz. Malı aşırı biçimde seviyorsunuz.</div>
-            </div>
+              <div class="ayet-ar">وَتُحِبُّونَ ٱلْمَالَ حُبًّا جَمًّا</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَحْبَبْ"><span class="kelime-ar" style="color:#dc2626;">وَتُحِبُّونَ</span><span class="kelime-tr">sevdi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="مال"><span class="kelime-ar" style="color:#2563eb;">ٱلْمَالَ</span><span class="kelime-tr">mal, servet</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="حُبّ"><span class="kelime-ar" style="color:#16a34a;">حُبًّا</span><span class="kelime-tr">Sevgi</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="جَمّ"><span class="kelime-ar" style="color:#9333ea;">جَمًّا</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">(17-20) Hayır! Doğrusu siz yetime ikram etmiyorsunuz, yoksulu yedirmeye birbirinizi teşvik etmiyorsunuz. Haram helâl demeden mirası yiyorsunuz. Malı aşırı biçimde seviyorsunuz.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #b45309;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#b45309;">Âyet 21</span>
-                <span class="verse-key">89:21</span>
+            <article class="ayet" style="border-left:5px solid #b45309;">
+              <div class="ayet-baslik">
+                <span style="color:#b45309;">Âyet 21</span>
+                <span class="ayet-kod">89:21</span>
               </div>
-              <div class="verse-arabic">كَلَّآ إِذَا دُكَّتِ ٱلْأَرْضُ دَكًّا دَكًّا</div>
-              <div class="verse-meal">(21-22) Ama yeryüzü parça parça döküldüğü, Rabbin(in emri) geldiği ve melekler saf saf dizildiği zaman (her şey ortaya çıkacaktır).</div>
-            </div>
+              <div class="ayet-ar">كَلَّآ إِذَا دُكَّتِ ٱلْأَرْضُ دَكًّا دَكًّا</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="كَلّا"><span class="kelime-ar" style="color:#dc2626;">كَلَّآ</span><span class="kelime-tr">hayır, asla</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="إِذا"><span class="kelime-ar" style="color:#2563eb;">إِذَا</span><span class="kelime-tr">ne zaman, -dığında</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="دُكَّتِ"><span class="kelime-ar" style="color:#16a34a;">دُكَّتِ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="أَرْض"><span class="kelime-ar" style="color:#9333ea;">ٱلْأَرْضُ</span><span class="kelime-tr">Yer</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="دَكّ"><span class="kelime-ar" style="color:#ea580c;">دَكًّا</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #0891b2;" title="دَكّ"><span class="kelime-ar" style="color:#0891b2;">دَكًّا</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">(21-22) Ama yeryüzü parça parça döküldüğü, Rabbin(in emri) geldiği ve melekler saf saf dizildiği zaman (her şey ortaya çıkacaktır).</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #b45309;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#b45309;">Âyet 22</span>
-                <span class="verse-key">89:22</span>
+            <article class="ayet" style="border-left:5px solid #b45309;">
+              <div class="ayet-baslik">
+                <span style="color:#b45309;">Âyet 22</span>
+                <span class="ayet-kod">89:22</span>
               </div>
-              <div class="verse-arabic">وَجَآءَ رَبُّكَ وَٱلْمَلَكُ صَفًّا صَفًّا</div>
-              <div class="verse-meal">(21-22) Ama yeryüzü parça parça döküldüğü, Rabbin(in emri) geldiği ve melekler saf saf dizildiği zaman (her şey ortaya çıkacaktır).</div>
-            </div>
+              <div class="ayet-ar">وَجَآءَ رَبُّكَ وَٱلْمَلَكُ صَفًّا صَفًّا</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="جاءَ"><span class="kelime-ar" style="color:#dc2626;">وَجَآءَ</span><span class="kelime-tr">Geldi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="رَبّ"><span class="kelime-ar" style="color:#2563eb;">رَبُّكَ</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="مَلَك"><span class="kelime-ar" style="color:#16a34a;">وَٱلْمَلَكُ</span><span class="kelime-tr">Melek</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="صَفّ"><span class="kelime-ar" style="color:#9333ea;">صَفًّا</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="صَفّ"><span class="kelime-ar" style="color:#ea580c;">صَفًّا</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">(21-22) Ama yeryüzü parça parça döküldüğü, Rabbin(in emri) geldiği ve melekler saf saf dizildiği zaman (her şey ortaya çıkacaktır).</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #b45309;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#b45309;">Âyet 23</span>
-                <span class="verse-key">89:23</span>
+            <article class="ayet" style="border-left:5px solid #b45309;">
+              <div class="ayet-baslik">
+                <span style="color:#b45309;">Âyet 23</span>
+                <span class="ayet-kod">89:23</span>
               </div>
-              <div class="verse-arabic">وَجِا۟ىٓءَ يَوْمَئِذٍۭ بِجَهَنَّمَ ۚ يَوْمَئِذٍ يَتَذَكَّرُ ٱلْإِنسَـٰنُ وَأَنَّىٰ لَهُ ٱلذِّكْرَىٰ</div>
-              <div class="verse-meal">O gün cehennem getirilir, insan yaptıklarını birer birer hatırlar. Fakat bu hatırlamanın ne faydası var!</div>
-            </div>
+              <div class="ayet-ar">وَجِا۟ىٓءَ يَوْمَئِذٍۭ بِجَهَنَّمَ ۚ يَوْمَئِذٍ يَتَذَكَّرُ ٱلْإِنسَـٰنُ وَأَنَّىٰ لَهُ ٱلذِّكْرَىٰ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="جاءَ"><span class="kelime-ar" style="color:#dc2626;">وَجِا۟ىٓءَ</span><span class="kelime-tr">Geldi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="إِذ"><span class="kelime-ar" style="color:#2563eb;">يَوْمَئِذٍۭ</span><span class="kelime-tr">o zaman, -dığında</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="جَهَنَّم"><span class="kelime-ar" style="color:#16a34a;">بِجَهَنَّمَ</span><span class="kelime-tr">ile, -de</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="إِذ"><span class="kelime-ar" style="color:#9333ea;">يَوْمَئِذٍ</span><span class="kelime-tr">o zaman, -dığında</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="تَذَكَّرَ"><span class="kelime-ar" style="color:#ea580c;">يَتَذَكَّرُ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #0891b2;" title="إِنسان"><span class="kelime-ar" style="color:#0891b2;">ٱلْإِنسَٰنُ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #be185d;" title="أَنَّى"><span class="kelime-ar" style="color:#be185d;">وَأَنَّىٰ</span><span class="kelime-tr">ve</span></span><span class="kelime" style="border-bottom:3px solid #ca8a04;" title="ل"><span class="kelime-ar" style="color:#ca8a04;">لَهُ</span><span class="kelime-tr">için, -e</span></span><span class="kelime" style="border-bottom:3px solid #4f46e5;" title="ذِكْرَى"><span class="kelime-ar" style="color:#4f46e5;">ٱلذِّكْرَىٰ</span><span class="kelime-tr">the (belirteç)</span></span></div>
+              <div class="ayet-meal">O gün cehennem getirilir, insan yaptıklarını birer birer hatırlar. Fakat bu hatırlamanın ne faydası var!</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #b45309;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#b45309;">Âyet 24</span>
-                <span class="verse-key">89:24</span>
+            <article class="ayet" style="border-left:5px solid #b45309;">
+              <div class="ayet-baslik">
+                <span style="color:#b45309;">Âyet 24</span>
+                <span class="ayet-kod">89:24</span>
               </div>
-              <div class="verse-arabic">يَقُولُ يَـٰلَيْتَنِى قَدَّمْتُ لِحَيَاتِى</div>
-              <div class="verse-meal">(İşte o zaman insan:) «Keşke bu hayatım için bir şeyler yapıp gönderseydim!» der.</div>
-            </div>
+              <div class="ayet-ar">يَقُولُ يَـٰلَيْتَنِى قَدَّمْتُ لِحَيَاتِى</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="قالَ"><span class="kelime-ar" style="color:#dc2626;">يَقُولُ</span><span class="kelime-tr">Dedi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="لَيْت"><span class="kelime-ar" style="color:#2563eb;">يَٰلَيْتَنِى</span><span class="kelime-tr">-im (zamir)</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="قَدَّمَ"><span class="kelime-ar" style="color:#16a34a;">قَدَّمْتُ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="حَياة"><span class="kelime-ar" style="color:#9333ea;">لِحَيَاتِى</span><span class="kelime-tr">Hayat</span></span></div>
+              <div class="ayet-meal">(İşte o zaman insan:) «Keşke bu hayatım için bir şeyler yapıp gönderseydim!» der.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #b45309;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#b45309;">Âyet 25</span>
-                <span class="verse-key">89:25</span>
+            <article class="ayet" style="border-left:5px solid #b45309;">
+              <div class="ayet-baslik">
+                <span style="color:#b45309;">Âyet 25</span>
+                <span class="ayet-kod">89:25</span>
               </div>
-              <div class="verse-arabic">فَيَوْمَئِذٍ لَّا يُعَذِّبُ عَذَابَهُۥٓ أَحَدٌ</div>
-              <div class="verse-meal">Artık o gün, Allah’ın edeceği azabı kimse edemez.</div>
-            </div>
+              <div class="ayet-ar">فَيَوْمَئِذٍ لَّا يُعَذِّبُ عَذَابَهُۥٓ أَحَدٌ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="إِذ"><span class="kelime-ar" style="color:#dc2626;">فَيَوْمَئِذٍ</span><span class="kelime-tr">o zaman, -dığında</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="لا"><span class="kelime-ar" style="color:#2563eb;">لَّا</span><span class="kelime-tr">Hayır/değil</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="عَذَّبَ"><span class="kelime-ar" style="color:#16a34a;">يُعَذِّبُ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="عَذاب"><span class="kelime-ar" style="color:#9333ea;">عَذَابَهُۥٓ</span><span class="kelime-tr">Azap</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="أَحَد"><span class="kelime-ar" style="color:#ea580c;">أَحَدٌ</span><span class="kelime-tr">Biri</span></span></div>
+              <div class="ayet-meal">Artık o gün, Allah’ın edeceği azabı kimse edemez.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #b45309;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#b45309;">Âyet 26</span>
-                <span class="verse-key">89:26</span>
+            <article class="ayet" style="border-left:5px solid #b45309;">
+              <div class="ayet-baslik">
+                <span style="color:#b45309;">Âyet 26</span>
+                <span class="ayet-kod">89:26</span>
               </div>
-              <div class="verse-arabic">وَلَا يُوثِقُ وَثَاقَهُۥٓ أَحَدٌ</div>
-              <div class="verse-meal">O’nun vuracağı bağı kimse vuramaz.</div>
-            </div>
+              <div class="ayet-ar">وَلَا يُوثِقُ وَثَاقَهُۥٓ أَحَدٌ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="لا"><span class="kelime-ar" style="color:#dc2626;">وَلَا</span><span class="kelime-tr">Hayır/değil</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="يُوثِقُ"><span class="kelime-ar" style="color:#2563eb;">يُوثِقُ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="وَثاق"><span class="kelime-ar" style="color:#16a34a;">وَثَاقَهُۥٓ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="أَحَد"><span class="kelime-ar" style="color:#9333ea;">أَحَدٌ</span><span class="kelime-tr">Biri</span></span></div>
+              <div class="ayet-meal">O’nun vuracağı bağı kimse vuramaz.</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #b45309;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#b45309;">Âyet 27</span>
-                <span class="verse-key">89:27</span>
+            <article class="ayet" style="border-left:5px solid #b45309;">
+              <div class="ayet-baslik">
+                <span style="color:#b45309;">Âyet 27</span>
+                <span class="ayet-kod">89:27</span>
               </div>
-              <div class="verse-arabic">يَـٰٓأَيَّتُهَا ٱلنَّفْسُ ٱلْمُطْمَئِنَّةُ</div>
-              <div class="verse-meal">(27-30) Ey huzura kavuşmuş insan! Sen O’ndan hoşnut, O da senden hoşnut olarak Rabbine dön. (Seçkin) kullarım arasına katıl ve cennetime gir!</div>
-            </div>
+              <div class="ayet-ar">يَـٰٓأَيَّتُهَا ٱلنَّفْسُ ٱلْمُطْمَئِنَّةُ</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="ه"><span class="kelime-ar" style="color:#dc2626;">يَٰٓأَيَّتُهَا</span><span class="kelime-tr">o, ona (zamir)</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="نَفْس"><span class="kelime-ar" style="color:#2563eb;">ٱلنَّفْسُ</span><span class="kelime-tr">Nefis</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="مُطْمَئِنَّة"><span class="kelime-ar" style="color:#16a34a;">ٱلْمُطْمَئِنَّةُ</span><span class="kelime-tr">the (belirteç)</span></span></div>
+              <div class="ayet-meal">(27-30) Ey huzura kavuşmuş insan! Sen O’ndan hoşnut, O da senden hoşnut olarak Rabbine dön. (Seçkin) kullarım arasına katıl ve cennetime gir!</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #b45309;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#b45309;">Âyet 28</span>
-                <span class="verse-key">89:28</span>
+            <article class="ayet" style="border-left:5px solid #b45309;">
+              <div class="ayet-baslik">
+                <span style="color:#b45309;">Âyet 28</span>
+                <span class="ayet-kod">89:28</span>
               </div>
-              <div class="verse-arabic">ٱرْجِعِىٓ إِلَىٰ رَبِّكِ رَاضِيَةً مَّرْضِيَّةً</div>
-              <div class="verse-meal">(27-30) Ey huzura kavuşmuş insan! Sen O’ndan hoşnut, O da senden hoşnut olarak Rabbine dön. (Seçkin) kullarım arasına katıl ve cennetime gir!</div>
-            </div>
+              <div class="ayet-ar">ٱرْجِعِىٓ إِلَىٰ رَبِّكِ رَاضِيَةً مَّرْضِيَّةً</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="رَجَعَ"><span class="kelime-ar" style="color:#dc2626;">ٱرْجِعِىٓ</span><span class="kelime-tr">Döndü</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="إِلَى"><span class="kelime-ar" style="color:#2563eb;">إِلَىٰ</span><span class="kelime-tr">-e, -a doğru</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="رَبّ"><span class="kelime-ar" style="color:#16a34a;">رَبِّكِ</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="راضِيَة"><span class="kelime-ar" style="color:#9333ea;">رَاضِيَةً</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="مَرْضِيَّة"><span class="kelime-ar" style="color:#ea580c;">مَّرْضِيَّةً</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">(27-30) Ey huzura kavuşmuş insan! Sen O’ndan hoşnut, O da senden hoşnut olarak Rabbine dön. (Seçkin) kullarım arasına katıl ve cennetime gir!</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #b45309;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#b45309;">Âyet 29</span>
-                <span class="verse-key">89:29</span>
+            <article class="ayet" style="border-left:5px solid #b45309;">
+              <div class="ayet-baslik">
+                <span style="color:#b45309;">Âyet 29</span>
+                <span class="ayet-kod">89:29</span>
               </div>
-              <div class="verse-arabic">فَٱدْخُلِى فِى عِبَـٰدِى</div>
-              <div class="verse-meal">(27-30) Ey huzura kavuşmuş insan! Sen O’ndan hoşnut, O da senden hoşnut olarak Rabbine dön. (Seçkin) kullarım arasına katıl ve cennetime gir!</div>
-            </div>
+              <div class="ayet-ar">فَٱدْخُلِى فِى عِبَـٰدِى</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="دَخَلَ"><span class="kelime-ar" style="color:#dc2626;">فَٱدْخُلِى</span><span class="kelime-tr">Girdi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="فِي"><span class="kelime-ar" style="color:#2563eb;">فِى</span><span class="kelime-tr">İçinde</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="عَبْد"><span class="kelime-ar" style="color:#16a34a;">عِبَٰدِى</span><span class="kelime-tr">kul</span></span></div>
+              <div class="ayet-meal">(27-30) Ey huzura kavuşmuş insan! Sen O’ndan hoşnut, O da senden hoşnut olarak Rabbine dön. (Seçkin) kullarım arasına katıl ve cennetime gir!</div>
+            </article>
             
-            <div class="verse-window" style="border-left: 5px solid #b45309;">
-              <div class="verse-header">
-                <span class="verse-badge" style="background:#b45309;">Âyet 30</span>
-                <span class="verse-key">89:30</span>
+            <article class="ayet" style="border-left:5px solid #b45309;">
+              <div class="ayet-baslik">
+                <span style="color:#b45309;">Âyet 30</span>
+                <span class="ayet-kod">89:30</span>
               </div>
-              <div class="verse-arabic">وَٱدْخُلِى جَنَّتِى</div>
-              <div class="verse-meal">(27-30) Ey huzura kavuşmuş insan! Sen O’ndan hoşnut, O da senden hoşnut olarak Rabbine dön. (Seçkin) kullarım arasına katıl ve cennetime gir!</div>
-            </div>
+              <div class="ayet-ar">وَٱدْخُلِى جَنَّتِى</div>
+              <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="دَخَلَ"><span class="kelime-ar" style="color:#dc2626;">وَٱدْخُلِى</span><span class="kelime-tr">Girdi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="جَنَّة"><span class="kelime-ar" style="color:#2563eb;">جَنَّتِى</span><span class="kelime-tr">—</span></span></div>
+              <div class="ayet-meal">(27-30) Ey huzura kavuşmuş insan! Sen O’ndan hoşnut, O da senden hoşnut olarak Rabbine dön. (Seçkin) kullarım arasına katıl ve cennetime gir!</div>
+            </article>
             
-          </div>
-        </div>
+        </section>
         
-</div>
+</main>
 </body>
 </html>
