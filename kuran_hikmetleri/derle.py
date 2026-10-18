@@ -40,6 +40,88 @@ def get_markdown_converter():
     ])
 
 
+DUZEY_ADLARI = ["Bölüm", "Alt bölüm", "Alt-alt bölüm", "Âyet konusu", "Konu"]
+
+
+def mevzu_agaci_tablosu(seg, dugumler, verse_dict):
+    """Segmentin mevzu ağacını iç içe tabloya çevirir. Son sütun her âyetin Arapça ve Türkçe metnidir."""
+    yollar = []  # (düğüm yolu, âyet numarası)
+
+    def dolas(ns, ust):
+        for x in ns:
+            yol = ust + [x]
+            if x.get("alt"):
+                dolas(x["alt"], yol)
+            else:
+                s, e = x["aralik"]
+                for v in range(s, e + 1):
+                    yollar.append((yol, v))
+
+    dolas(dugumler, [])
+    if not yollar:
+        return ""
+    maks = max(len(y) for y, _ in yollar)
+    n = len(yollar)
+
+    # Her düzey için anahtar: düğüm kimliği; düğümün altında kalmayan düzeyler boş hücre (aynı yaprağa bağlı)
+    anahtar = []
+    for yol, _ in yollar:
+        leaf_id = id(yol[-1])
+        anahtar.append([id(yol[d]) if d < len(yol) else ("bos", leaf_id) for d in range(maks)])
+
+    # rowspan: ardışık aynı anahtarlar tek hücrede birleşir
+    span = [[0] * maks for _ in range(n)]
+    for d in range(maks):
+        i = 0
+        while i < n:
+            j = i
+            while j + 1 < n and anahtar[j + 1][d] == anahtar[i][d]:
+                j += 1
+            span[i][d] = j - i + 1
+            for k in range(i + 1, j + 1):
+                span[k][d] = 0
+            i = j + 1
+
+    renk = seg["color"]
+    basliklar = "".join(
+        f"<th>{DUZEY_ADLARI[d] if d < len(DUZEY_ADLARI) else str(d + 1) + '. düzey'}</th>" for d in range(maks)
+    )
+    satirlar = []
+    for i, (yol, v) in enumerate(yollar):
+        hucreler = []
+        if i == 0:
+            hucreler.append(
+                f'<td rowspan="{n}" style="background:{renk}; color:#ffffff; font-weight:700;">'
+                f'{seg["title"]}<br><small>{seg["start"]}-{seg["end"]}</small></td>'
+            )
+        for d in range(maks):
+            if span[i][d] == 0:
+                continue
+            if d < len(yol):
+                dugum = yol[d]
+                icerik = f'<strong>{dugum["baslik"]}</strong><br><small>{dugum["aralik"][0]}-{dugum["aralik"][1]}</small>' if dugum["aralik"][0] != dugum["aralik"][1] else f'{dugum["baslik"]}'
+            else:
+                icerik = ""
+            hucreler.append(f'<td rowspan="{span[i][d]}">{icerik}</td>')
+        vobj = verse_dict.get(v, {})
+        v_ar = vobj.get("arabic", "")
+        v_tr = vobj.get("turkish", {}).get("diyanet_vakfi") or vobj.get("turkish", {}).get("hayrat_nesriyat") or ""
+        hucreler.append(
+            f'<td class="ayet-hucre" style="border-left:4px solid {renk};">'
+            f'<div class="verse-num" style="color:{renk};">Âyet {v}</div>'
+            f'<div class="verse-ar">{v_ar}</div>'
+            f'<div class="verse-tr">{v_tr}</div></td>'
+        )
+        satirlar.append("<tr>" + "".join(hucreler) + "</tr>")
+
+    return f"""
+    <table class="agac-table">
+      <thead><tr><th>Mevzu</th>{basliklar}<th>Âyet ve metin</th></tr></thead>
+      <tbody>{"".join(satirlar)}</tbody>
+    </table>
+    """
+
+
 def build_unified_html(config, surahs_data):
     """Yapılandırmada işaret edilen dosyaları ve grafikleri uygun sırayla uç uca ekleyip tek bir HTML oluşturur."""
     md_conv = get_markdown_converter()
@@ -164,6 +246,14 @@ def build_unified_html(config, surahs_data):
                     ayet_modu = item.get("ayet_pencereleri_modu", "ozet_ve_harita")
                     segments = s_meta.get("segments", [])
                     
+                    # Mevzu ağacı (varsa): anahtar "başlangıç-bitiş" segmentin aralığıdır
+                    agac_path = sdir / "mevzu_agaci.json"
+                    agac_segmentler = {}
+                    if agac_path.exists():
+                        with open(agac_path, "r", encoding="utf-8") as f:
+                            agac_segmentler = json.load(f).get("segmentler", {})
+                    verse_dict_agac = {v["verseNumber"]: v for v in s_meta.get("verses", [])}
+
                     # Mini sütun mevzu çubuğu
                     mini_bar = []
                     for seg in segments:
@@ -188,7 +278,12 @@ def build_unified_html(config, surahs_data):
 
                     # Mevzu tablosu
                     seg_rows = []
+                    agac_tablolar = []
                     for seg in segments:
+                        anahtar_seg = f"{seg['start']}-{seg['end']}"
+                        if anahtar_seg in agac_segmentler:
+                            agac_tablolar.append(mevzu_agaci_tablosu(seg, agac_segmentler[anahtar_seg], verse_dict_agac))
+                            continue
                         seg_rows.append(f"""
                         <tr>
                           <td style="width:12px; background:{seg['color']};"></td>
@@ -244,7 +339,7 @@ def build_unified_html(config, surahs_data):
                             """)
                         detail_content = f'<div class="topics-container">{"".join(verse_blocks)}</div>'
                     else:
-                        detail_content = kesit_html + seg_table
+                        detail_content = kesit_html + seg_table + "".join(agac_tablolar)
 
                     chart_section_html = f"""
                     <div class="surah-chart-section">
@@ -499,6 +594,29 @@ tr:nth-child(even) {{ background: #f8fafc; }}
   font-size: 9pt;
 }}
 .segments-table td {{
+  font-size: 8.5pt;
+}}
+.agac-table {{
+  width: 100%;
+  margin-top: 15px;
+  font-size: 8.5pt;
+  page-break-inside: auto;
+}}
+.agac-table th {{
+  background: #f1f5f9;
+  font-size: 8.5pt;
+}}
+.agac-table td {{
+  vertical-align: top;
+  padding: 4px 6px;
+}}
+.agac-table tr {{
+  page-break-inside: avoid;
+}}
+.agac-table .verse-ar {{
+  font-size: 13pt;
+}}
+.agac-table .verse-tr {{
   font-size: 8.5pt;
 }}
 .topic-box {{
