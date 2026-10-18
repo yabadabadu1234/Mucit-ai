@@ -270,6 +270,8 @@ def main():
             t_gen = time.time()
             gen = generate_rows(model, tok, rows, start, GEN_N, torch) if GEN_N > 0 else []
             route_score = guzergah_skorlari(route_score, gen, SCORE_FLOOR)
+            # K1: model üretimleri kendi güzergâhının test-türevli skoruyla K1 akışına girer.
+            gen = [dict(g, compiler_score=route_score[g["route"]]) for g in gen]
             part = [dict(r, compiler_score=route_score[r["route"]]) for r in rows[start:start + BATCH]]
             ezber = [g["ezber"] for g in gen]
             log(f"parti {start // BATCH + 1}: {len(gen)} yanıt üretildi ({time.time() - t_gen:.1f}s), "
