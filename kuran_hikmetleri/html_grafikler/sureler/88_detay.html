@@ -15,7 +15,8 @@ body {
   background: #f5f1e8;
   color: #1e293b;
   font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-  line-height: 1.7;
+  line-height: 1.65;
+  font-size: 11pt;
 }
 .ust-cubuk {
   position: fixed;
@@ -42,10 +43,10 @@ body {
 .geri:hover { background: #1e293b; }
 .ust-baslik { color: #e2e8f0; font-weight: 600; font-size: 10.5pt; }
 .kitap-sayfa {
-  max-width: 880px;
+  max-width: 1100px;
   margin: 0 auto;
   background: #ffffff;
-  padding: 40px 48px 64px;
+  padding: 32px 36px 56px;
   min-height: 100vh;
   box-shadow: 0 2px 18px rgba(15, 23, 42, 0.08);
 }
@@ -57,7 +58,7 @@ body {
 }
 .sure-baslik h1 {
   font-family: 'Cinzel', 'Plus Jakarta Sans', serif;
-  font-size: 24pt;
+  font-size: 22pt;
   color: #0f172a;
   margin: 4px 0 8px;
   line-height: 1.3;
@@ -65,7 +66,7 @@ body {
 .sure-arapca {
   font-family: 'Amiri', serif;
   color: #1e40af;
-  font-size: 26pt;
+  font-size: 24pt;
   margin-left: 12px;
   font-weight: 400;
 }
@@ -79,8 +80,19 @@ body {
   font-weight: 600;
 }
 .rozet-acik { background: #475569; }
-.mevzu { margin-top: 34px; }
-.mevzu-baslik { padding: 10px 16px; border-radius: 6px; margin-bottom: 14px; }
+.tanitim {
+  margin-top: 26px;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 9.5pt;
+  color: #334155;
+}
+.tanitim h3 { margin: 0 0 6px; font-size: 11pt; color: #1e3a8a; }
+.tanitim p { margin: 0 0 6px; }
+.mevzu { margin-top: 30px; }
+.mevzu-baslik { padding: 10px 16px; border-radius: 6px; margin-bottom: 12px; }
 .mevzu-ad { font-size: 13pt; font-weight: 700; }
 .mevzu-kod {
   font-family: monospace;
@@ -92,61 +104,90 @@ body {
   margin-right: 8px;
 }
 .mevzu-meta { color: #64748b; font-size: 9.5pt; margin-top: 4px; }
-.ayet {
+/* Âyet kutuları: kitaptaki ag-kart ile aynı boyut */
+.ayetler {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 6px;
+  align-items: start;
+}
+.ag-kart {
   background: #ffffff;
   border: 1px solid #e2e8f0;
-  border-radius: 10px;
-  padding: 14px 18px;
-  margin-bottom: 12px;
+  border-radius: 6px;
+  padding: 6px 8px;
+  page-break-inside: avoid;
 }
-.ayet-baslik {
-  display: flex;
-  justify-content: space-between;
-  font-size: 9.5pt;
+.ag-kart-baslik {
+  font-size: 8.5pt;
   font-weight: 700;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
-.ayet-kod { color: #94a3b8; font-family: monospace; font-weight: 400; }
-.ayet-ar {
+.verse-ar {
   font-family: 'Amiri', serif;
-  font-size: 22pt;
-  line-height: 1.9;
+  font-size: 12pt;
+  line-height: 1.8;
   direction: rtl;
   text-align: right;
   color: #0f172a;
 }
-.ayet-meal {
-  font-size: 10.5pt;
-  color: #334155;
+.verse-tr {
+  font-size: 8pt;
+  color: #475569;
+  line-height: 1.5;
   border-top: 1px dashed #e2e8f0;
-  padding-top: 8px;
-  margin-top: 8px;
+  padding-top: 4px;
+  margin-top: 2px;
 }
+.ag-ortak {
+  font-size: 7.5pt;
+  color: #94a3b8;
+  font-style: italic;
+  margin-top: 4px;
+}
+.tefsir {
+  margin-top: 5px;
+  border-top: 1px dashed #e2e8f0;
+  padding-top: 4px;
+  font-size: 7.5pt;
+  color: #334155;
+  line-height: 1.5;
+}
+.tefsir summary {
+  cursor: pointer;
+  color: #1e40af;
+  font-weight: 700;
+  font-size: 7.5pt;
+}
+.tefsir p { margin: 4px 0 0; }
 .kelime-satiri {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
   direction: rtl;
-  margin: 6px 0 4px;
+  margin: 6px 0 8px 0;
 }
 .kelime {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  padding: 2px 6px 3px;
+  padding: 2px 6px 3px 6px;
   background: #f8fafc;
   border-radius: 4px;
+  min-width: 0;
 }
-.kelime-ar { font-family: 'Amiri', serif; font-size: 14pt; line-height: 1.6; }
-.kelime-tr { direction: ltr; font-size: 7.5pt; color: #334155; line-height: 1.2; }
-.ayet { page-break-inside: avoid; }
+.kelime-ar { font-family: 'Amiri', serif; font-size: 13pt; line-height: 1.6; }
+.kelime-tr { direction: ltr; font-size: 7pt; color: #334155; text-align: center; line-height: 1.2; }
 @media (max-width: 640px) {
-  .kitap-sayfa { padding: 22px 16px 40px; }
+  .kitap-sayfa { padding: 20px 16px 40px; }
   .sure-arapca { display: block; margin: 6px 0 0; }
+  .ayetler { grid-template-columns: 1fr; }
 }
 @media print {
   .ust-cubuk { display: none; }
   body { padding-top: 0; background: #ffffff; }
+  .tefsir { display: block; }
+  .tefsir > :not(summary) { display: block; }
 }
 </style>
 </head>
@@ -168,6 +209,8 @@ body {
     </div>
   </header>
 
+  <section class="tanitim"><h3>Elmalılı tefsiri: sûre tanıtımı</h3><p>&quot;Sana geldi mi?&quot;. Bu soru önemle dinlemeye teşvik ve olayın olduğunu haber vererek anlatmak içindir. &quot;Ğâşiye haberi&quot;</p><p>ĞÂŞİYE, aslında gayş = örtmek, sarmak kökünden ism-i fâil olarak bir şeyi her taraftan sarıp bürüyen salgın, sargın, kaplayan şey demektir ki sonundaki &quot;tâ&quot;, niteliği isme göre dişilik alâmeti veya aşırılık ifade etmek veya bazı durumlarda</p><p>sıfatlıktan isimliğe nakil içindir. At eyerinin örtüsüne ve kalp zarına, insanı veya hayvanı içinden saran derde ve kâbus gibi her taraftan saran salgın, kuşatıcı belaya da &quot;gâşiye&quot; denir ki &quot;Yoksa onlar Allah&#x27;ın azabından hepsini sarıverecek bir felaket gelivermesinden emin mi oldular.&quot;(Yusuf, 12/107) âyetinde bu mânâdandır.</p><p>Bu mânâdan &quot;lâm&quot; ile de kıyametin isimlerindendir. Çünkü birden bire şiddetiyle halkı saracak ve ondaki dehşet verici olaylar herkesi bürüyecektir. Bazıları demişlerdir ki: Ğâşiye, &quot;Yüzlerini ateş kaplar.&quot; (İbrahim, 14/50) buyrulduğu üzere kâfirlerin, cehennemliklerin yüzlerini saracak olan ateştir. &quot; Saran ateş&quot; mânâsınadır. Bazıları da, o cehennem ateşinin içine düşüp onu saracak olan cehennemliklerdir demişler. Çoğunluk birincisini sûrenin akışına uygun görmüşlerdir.</p><p>HADÎS, herkes tarafından birbirlerine aktarılıp rivayet edilerek söylenmeğe, hikaye edilmeğe ve her söylenişinde taze gibi dinlenmeye layık söz ve haber demektir ki bu Ğâşiye haberi de daima böyle önemle dinlenilmesi gereken bir haberdir.</p><p>2. Birtakım yüzler, yani nice kimseler o gün, yani o Ğâşiye sardığı gün eğilmiştir, daha önce hakkı saymazken o gün korku ve saygıyla boynunu bükmüş, zillete düşmüştür.</p><p>3. İş yapıcıdır, yani vaktiyle gereği gibi çalışmazlarken bugün hepsi ezici işlerde çalışmakta zahmet çekmektedirler, yahut, vaktiyle çalışmamış, amel etmemiş değiller; çalışmışlar, amel etmişler fakat boşuna zahmet çekmiş, sıkıntıya düşmüşlerdir. Yani bugün işe yarayacak şekilde Allah için hak, doğru yolda iyi amellere çalışmamışlar; batıl din, bozuk fikir ve inanç ile küfre saparak çalışmışlar, boşuna zahmet ve sıkıntı çekmişler, şimdi de onun cezasını çekiyorlar.</p><p>&quot;Amiletün, nasıbetün&quot; ikinci ve üçüncü haberdir. Yahut &quot;nasıbetün&quot; sıfattır. Bunların &quot;hâşia&quot; gibi &quot;yevmeizin&quot; ile kayıtlı olup olmadığına göre birkaç şekilde tefsiri rivayet edilmiştir.</p><p>BİRİNCİSİ, hepsinin de &quot;yevmeizin=bugün&quot; ile kayıtlı olmasıdır ki, daha önce eğilmez, hak yolunda çalışmazlarken bugün boynunu eğmiş, zilletler içinde dayanılmaz ezici amellerle işçilik etmekte, yorgunluk ve bitkinlikle sıkıntılar çekmektedirler, demek olur. Bug ü n bu amel ve sıkıntı, bundan sonra açıklanacağı gibi cehennem ateşi içinde esirlik zincirlerini, tomruklarını sürükleyerek aşağı-yukarı bata çıka boğuşup durmalarıdır. Bu mânâ İbnü Abbas&#x27;tan nakledilmiştir.</p><p>İKİNCİSİ, &quot;âmiletün nâsıbetün&quot;, &quot;yevmeizin&quot; ile kayıtlı olmayıp mutlak olarak geçmişe ait olmasıdır. Bu şekilde, bunlar vaktiyle dünyada çalışmışlar, iş yapmışlar, ibadet etmişler, fakat iyi yapıyoruz zannederek kâfir olup batıl yolda çalışmış bulunduklarından bütün amelleri boşa çıkmış, gayretle r i yok yere gitmiş, boşuna zahmet ve sıkıntı çekmekle kalmışlar, bugün zillete düşmüşlerdir, demek olur ki, Kehf Sûresi&#x27;nin sonundaki &quot;De ki: Amelleri en çok boşa gidenleri size haber verelim mi? Bunlar dünya hayatında, kendilerini gerçekten iyi iş yapıy o r zannettikleri halde çalışmaları boşa gidenlerdir. İşte onlar Rab&#x27;lerinin âyetlerini ve ona kavuşmayı inkâr etmişler de bütün amelleri boşa gitmiştir. Artık kıyamet günü onlar için hiçbir terazi tutmayız. İşte böyle, onların cezaları cehennemdir. Çünkü i nkar etmişler, benim âyetlerimi ve peygamberlerimi alaya almışlardır.&quot;(Kehf, 18/103-106) ve Furkân Sûresi&#x27;ndeki &quot;Yaptıkları her işi ele alır, onu saçılmış zerre haline getiririz.&quot;(Furkan, 25/23) âyetlerinin mânâsını özetlemektedir. Zeyd b. Eslem&#x27;den riv a yet edilen bu mânâ, İbnü Abbas&#x27;tan da diğer bir rivayettir. Ahiret, amel yurdu olmayıp, amellerin karşılığının verileceği bir yer olmak itibariyle, amelin dünyada olması daha açık olduğundan, birçokları bu mânâyı tercih etmişler ve bununla kiliselerde, ma n astırlarda rahipler gibi şiddet ve taşkınlığı kendileri için gerekli sayarak sapıklık üzere çalışan sapıkların amellerinin batıl olduğuna işaret edildiğini söylemişlerdir. Nitekim Buhârî&#x27;de İbnü Abbas&#x27;ın, &quot;Çalışıp boşa yorulanlar hıristiyanlardır.&quot; ded i ği rivayet edilmiştir. Bu durumda &#x27;nin, kelimesine sıfat olması gerektir.</p><p>ÜÇÜNCÜSÜ, İkrime&#x27;den rivayet edilendir ki, &quot;âmile&quot; dünyada, &quot;nâsıbe&quot; ahirette demektir. Bunun mânâsı, zannedildiği gibi ayrı ayrı zarflar takdir etmek değil, &quot;âmile&quot; ism-i fâilinin geçmiş zamanlı fiil mânâsına, &quot;nâsıbe&quot; ism-i fâilinin de hal veya devam mânâsına geldiğini söylemektir ki, amel dünyaya, amelin karşılığı da ahirete ait olmak düşüncesiyle bu mânâ da uzak değildir. Bu şekilde de &quot;nâsıbe&quot; üçüncü haberdir. Bu şu n unla beyan edilmiştir:</p><p>4. &quot;Kızgın ateşe girerler&quot; Hâmiyeye, yani ısı derecesi yüksek, şiddetli kızgın bir ateşe gerilip yaslanırlar.</p><p>5. Kaynar bir pınardan su içirilirler. &quot;Ayn&quot; burada da &quot;içirmek&quot; karinesiyle çeşme, pınar, menba, kaynak gibi su gözü mânâsına olduğu açıktır. Fakat bu göz, bir soğuk su gözü değil,</p><p>âniye &quot;kızgın su&quot; (Rahmân, 55/44) denilen son derece sıcak, kaynar, gayet kızgın ateş gibi bir pınardır.</p><p>6. &quot;Zehirli ve dikenli bir bitkiden başka yiyecekleri yoktur&quot;. Ta yukarılarda zakkum, Hâkka Sûresi&#x27;nde de &quot;sadece&quot; kaydı ile &quot;Bir irinden başka yiyecek de yok.&quot;(Hâkka, 69/36) diye geçmiş idi. Onun için burada da &quot;Darî&quot; kelimesini &quot;irin&quot; veya &quot;zakkum&quot; ile aynı şey olmak üzere &quot;ateşten bir ağaç&quot; diye tefsir edenler varsa d a, sadece bu yiyeceğin olduğu başka başka sınıflar için söylenmiş olması göz önüne alınarak herbirinin başka bir mânâda olması da mümkündür. Bu konuyla ilgili birkaç mânâ açıklamışlardır.</p><p>Râzî Tefsiri&#x27;nde Hasen&#x27;den gelen bir rivayette şöyle denilmekted ir: &quot;Elim&quot; kelimesi mü&#x27;lim, yani elem verici; semiun kelimesi müsniun, yani işittirici; bediün kelimesi mübdiün, yani eşsiz yaratıcı mânâsına olduğu gibi, dariun da, mudarriun, mânâsına olur ki, yenilmesindeki sertliği, acılığı, yakıcılığı ile onları zill e te ve alçalmaya mecbur eden bir şeyden başka bir yiyecek yok demektir.</p><p>İkinci olarak, tefsircilerin çoğu demişlerdir ki: Darî&#x27;, &quot;şibrık&quot;ın kurusudur. Şibrık bir tür dikendir ki yaş iken onu deve yer, kuruyunca kaçınır. Zehiri öldürücüdür. İbnü Cerir der ki: Araplar arasında dari, şibrık denilen bir bitkidir ki kuruduğu zaman Hicazlılar buna dari&#x27;derler. Diğer Araplar ise şibrık ismini verirler. Bir zehirdir. İkrime&#x27;den rivayetinde: Yere yapışık dikenli bir ağaçtır ki baharın Kureyş ona şibrık derler, k uruyup çöp olduğu zaman da dari&#x27; derler. Ebu Hayyân&#x27;ın nakillerine göre, dari&#x27; şibrıktır ki kötü bir otlaktır. Üzerinde yayılan hayvan ne yağ bağlar, ne et. İbnü Azzare-i Hüzeli&#x27;nin şu beyti ondandır:</p><p>&quot;O develer dari&#x27; çukurlarında hapsolunmuşlar da hepsi</p><p>Kambur, elleri kanamış, süt veremez olmuştu.&quot;</p><p>Ebu Züeyb de şöyle demiştir:</p><p>&quot;Seyrab, taze şibrıkı otladı, nihayet solup da</p><p>Dari&#x27; olunca o semiz kısır develer ondan uzaklaştı.&quot;</p><p>Bazı lugatçiler bunun, arfec kurusunun kırıntısı olduğunu söylemiş; Zeccâc: Avsec gibi bir ot demiş; Halil de, &quot;yeşil ve gayet fena kokulu bir ottur ki, deniz atar&quot; demiştir. Kamus&#x27;ta bu mânâlardan başka hurma ağacının dikenine ve bulanık kokmuş sularda ve kökleri arza ulaşmayıp su içinde olan b ir ota da denildiğini yazmıştır. Ki bu ot, &quot;Â&#x27;lâ&quot; Sûresi&#x27;nde &quot;Sonra onu kapkara bir su köpüğü yaptı.&quot;(A&#x27;lâ, 87/5) âyetinde açıklandığı üzere türbün ve maden kömürlerinin kaynağı olan yosun türü bitkilerden demek olur.</p><p>Demek ki Arapça&#x27;da darî&#x27;, insa nın değil hayvanın bile yemesi mümkün olmayan dikenli, sert veya yumuşak olsa da gayet fena kokulu, zehir zenberek birkaç türlü dikene ve bitkiye denirmiş. Şu halde burada bunlardan herhangi birinin özelliği değil, yenilip yutulma ihtimali olmayan elem ve r ici bir şey olma niteliği kastedilmiş olmalıdır.</p><p>7. Bu mânâ, denildiği gibi, bir alçalma ve zillet ile sızlandırmak mânâsını ima eden &quot;darî&#x27;&quot; kelimesiyle ifade edilmiş, &quot;ne besler, ne de açlıktan kurtarır&quot; niteliğiyle izah edilmiş demektir. Yine bundan dolayı Said&#x27;den rivayet olunduğu üzere bazı tefsirciler bunu &quot;taş&quot; diye tefsir etmiştir. İbnü Zeyd&#x27;den de şöyle rivayet edilmiştir: Dünyada darî&#x27;, Araplar&#x27;ın bu isimle andıkları yapraksız kuru dikendir. Ahirette ise dari&#x27; ateşten bir dikendir. İbnü Abbas&#x27; t an gelen bir rivayette, ateşten bir ağaçtır. &quot;Kamus&quot; da, bir görüşe göre: Cehennemde acı sabırdan daha acı, leşten daha kötü kokulu ve ateşten daha yakıcı bir şeydir demekle de bunu anlatmıştır. Maksat, böyle yenip yutulma ihtimali olmayan bir şey yemek m e cburiyetine düşmek, azabının elem ve acılığındaki şiddetini hissettirip anlatmak olduğuna göre zakkum, irin, dikenli bitki hepsi Müzzemmil Sûresi&#x27;ndeki &quot;Ve boğaza duran, yutulmaz yemek.&quot;(Müzzemmil, 73/13)i bu şekilde açıklamak demek olur ki, bunlar me c bur kalınıp da yenseler bile &quot;beslemez ve açlığı gidermez&quot; niteliktedir. Bunlar ne besler, ne de açlığa faydaları olur. Sade inletir de inletir, sızlatır da sızlatır.</p><p>Bunlar ızdırap içindeki insanlığın dünyada büyük açlık, felâket ve esaret zamanlarında gördükleri elem ve sıkıntıların yardımıyla anlaşılabilecek birer mânâ ile ahiret azabının akıllara sığmaz acılıklarını düşündürmektedir.</p><p>8. İşte o Ğâşiye, bir kısım yüzler için böyle sargın bir büyük beladır. Bunlara</p><p>karşılık birtakım yüzle r de o gün hoş, nimet içinde mutlu.</p><p>NÂİME, hoşluk ve yumuşaklık mânâsına &quot;nüûmet&quot;ten türetilmiş olup hoş yani &quot;Yüzlerinde nimetin neşesini tanırsın.&quot; (Mutaffifin, 83/24) mânâsınca, nimet ve mutluluk eseri olan neşe, hoşluk açık; yahut &quot;nimet&quot;ten türetilmiş olup nimete konmuş, nimet içinde mânâlarında iki şekilde tefsir olunmuştur ki, birisi netice, birisi sebep, ikisi de mutluluğu ifade eder.</p><p>9. Yaptıkları gayretlerden razı, çalıştıklarından dolayı hoşnutturlar. Zira boşuna çalışmamışlar, amelleri Allah&#x27;ın emir ve rızasına uygun yolda yapılmış, kabul görmüş, gayret ve çabaları o dehşetli günde meyvesini vermiş, nimet ve mutluluğa ermişler ve bu başarı onlarda tembellik duygusu değil, daha çok çalışma neşesi uyandırmıştır.</p><p>10. Yüksek bir cennettedirler. Hem yer olarak, hem de sağlamlık bakımından yüksek.</p><p>11. Öyle ki orada boş şey (veya boş bir kelime, yahut boş şeyler)le meşgul olan bir topluluk işitmezler yahut &quot;sen işitmezsin&quot; ey muhatap!</p><p>LÂĞIYE, &quot;boş söz&quot; veya &quot;boş şeyle meşgul olan topuluk&quot; yahut lüzumsuzluk mânâsına &quot;akibet&quot; gibi mastar olmak üzere üç görüş vardır. &quot;Lağiv&quot; de, lâğıye mânâsına olarak geçersiz kılınması ve düşürülmesi gerek olan, önem verilecek bir faydası olmayan boş, mânâsız, saçma, boşa giden, faydasız şeylere d e nir ki, leğviyat ve lağveyat tabir olunan sözler ve fiillerden daha geneldir. &quot;Lâğiye söz&quot; diye özellikle hata ve sövme gibi fâhiş söze denir. Cennette bunlar işitilmez. &quot;Orada ne boş bir laf işitirler, ne de bir yalan.&quot;(Nebe&#x27;, 78/35).</p><p>Cennetin yük sekliği izah edilirken ilk önce bu vasıf ile nitelenmesi, her şeyden önce cennet nimetlerinin ve cennet ehlinin temiz olduğunu göstermekle müminleri erdemli ahlâka teşviktir. Zira cennet, nimet, hoşnutluk, mutluluk denilince bir takım zihinler dünyada ref a h ve servet kısmet olmuş, şehvetine ve hevesine düşkün birçoklarının hallerinde görüldüğü üzere vakit geçirmek için oyunlar, eğlenceler, hakiki bir fayda içermeyen lüzumsuz şeylerle ilgili boş sözler, fiiller, neticesi hiçten ibaret olan şeyler için dedi k odular, entrikalar, edep kaydına bağlı kalmadan gevezelikler, şımarıklıklar yüksek bir zevk ve maharetmiş ve bu gibi haller ile keyif çatmak nimet ve mutluluğun tamamlayıcılarından olan gayelermiş gibi ve dolayısıyla cennetteki mutluluk da böyle boş eğlen c elerden ibaret olacakmış gibi bir kuruntu ve hayale kapılabileceğinden böyle bir ihtimali savmak için önce cennetin yüksekliği anlatılırken orada boş şeylere yer olmadığı ve cennet ehlinin öyle boş ve faydasız şeylerle meşgul olması</p><p>şöyle dursun onları işitmekten bile uzak bulundukları anlatılmış ve bu suretle müminlere layık olan da Müminun Sûresi&#x27;nde &quot;Boş ve faydasız şeylerden yüz çevirenler.&quot;(Mü&#x27;minûn, 23/3) diye açıklandığı üzere bu ahlâk ile ahlâklanmak, hem yalnız darlık ve ihtiyaç zamanlarında değil, nimetleri artıp durumlarında bir rahatlık meydana geldiği oranda da boş şeylerle meşgul olmaktan uzaklaşmakta ileri gitmek ve hatta yalnız yükümlülük yurdu olan dünyada değil, kendilerinden yükümlülüklerin kalktığı ve hiç öfke ve cezanın bulunmadığı r a hmet sahasına ulaştıkları zaman bile ondan uzak tutulmak ve dolayısıyla nimetleri, nimetin kıymetini bilmeyen cahil ve beyinsizlerin felaketlerine sebep olan nimetler türünden olmayıp sonsuz mutluluğa erişen faziletli ve ciddi kişilerin nimetleri türünden olmasını istemektir. Yine şu da dikkate değer bir şeydir ki, cennetin ve nimetin yüksek nitelikleri anlatılırken önce daha çok yüce nefislerin ve irfan ve vicdanî olgunluklarda büyük makam sahibi olanların şanlarına layık olan ruhanî ve manevî özellik öne alınmış, yapılan çalışmalardan hoşnut olmak, sonra da boş şeylerden uzak durmak anlatılmıştır. Herhangi bir hususta hoşnutluk mertebesine ermek büyük zevk ise de yapılan çalışmadan hoşnut olmak, insanı hamd makamına erdiren lezzetlerin en yükseğidir. Çün k ü &quot;İnsan için çalıştığından başkası yoktur.&quot;(Necm, 53/39) ve &quot;Kazandığı hayır kendi faydasına, yaptığı kötülük de zararınadır.&quot;(Bakara, 2/286) Hayat aslında çalışmak demek olduğu için, gerçekte hayatın zevki, gayesine yönelik olarak çalışma zevkind e n ibarettir. Çalışmanın zevki de gayesine isabet etmesindedir. Onun için, yaptığı çalışmanın güzel meyvesini gören ruhun duyacağı haz, her lezzetin üstünde ve bu suretle çalışmadan duyulan hoşnutluk, her hoşnutluğun başında bir ruhi hazdır. Gayesini bulamıyan çalışma ve amel, sonunda &quot;çalışmıştır, fakat boşuna yorulmuştur&quot; hükmünce yorgunluk, bitkinlik ve hayal kırıklığıyla elem ve beklenilenin elde edilememesinden duyulan açıdan ibaret kalacağı gibi, gayesiz yapılan veya gayesi bir önem taşımayan çalışma l ar da boş ve faydasız olmak itibariyle ona katılmıştır. Onun için, Çalışmasından hoşnutluk ruhun en yüksek hazlarından olduğu gibi boş şeylerden uzak durmak da onun tamamlanmasının şartlarından bulunmak nedeniyle yüksek cennetin sıfatlarında önce bu iki m utluluk öne alınmış, sonra da dünya hayatında tanınmakta olan maddi lezzetlere benzer hazlar zikredilmiştir.</p><p>12. Şöyle ki: Onda, (o cennette) akan bir pınar vardır, istenilen yere akan bir kaynak ki her tarafa hayat maya ve neşesi dağıtır. Defalarca geçtiği üzere, cennetteki pınarlar birkaç tanedir. Burada müfred (tekil) getirilmesi, cinsi dikkat nazarına</p><p>alındığı için demek olur. Yahut en genel olan birine işaret edilmiştir. Herhalde sonundaki tenvin müfred (tek)lik için değil, onun ululuğunu göstermek içindir. Belirsiz getirilmesi de, bilinen pınarlardan olmayıp &quot;Hiçbir gözün görmediği, hiçbir kulağın işitmediği, hiçbir insanın aklına gelmeyen şeyler.&quot; cümlesinden olduğuna işarettir ki, bundan sonrakiler de böyledir.</p><p>13. O cennette, o akan pınar civarında yükseltilmiş tahtlar vardır.</p><p>SERÎR, üzerinde sevinç ve neşe ile oturulan taht, sandalye veya yatılan karyola ve köşk kabilinden şeylere denir. Yükseltilmiş denilmesinin sebebi de zeminden yüksekliği veya şerefi itibarıyladır.</p><p>14. Ve küpler vardır. Kulpu olmayan küp, sürahi, bardak gibi içecek kapları yakınlarına konmuş istedikleri zaman &quot;Kuşkusuz iyiler öyle dolgun bir kadehten içerler ki katkısı kâfurdur. Bir çeşme ki ondan Allah&#x27;ın kulları içerler.&quot;(İnsan, 76/5-6) âyetlerin i n ifade ettiği gibi içmelerine hazır, yine o cennette</p><p>15. sıra sıra dizilmiş yastıklar, nunun zammesi ve kesresi ile dayanmak için konulan koltuk yastığı demektir.</p><p>16. Serilmiş (yahut yer yer yayılmış) döşemeler vardır. &quot;Zâ&quot;nın zammesi veya kesresi ile zürbiye, nefis ve kıymetli döşemeler demektir. &quot;Kâmus&quot;ta zikredildiği üzere zerabiyy, sararmış ve kızarmış olmakla beraber yeşilliği de bulunan otlara da denilir ve fiilinde, &quot;bitki, içinde yeşillik bulunduğu halde sarardı ve kızardı&quot; d enilir. Döşemelere zerabiyy denilmesi buna benzetme suretiyle olduğu da söylenmiştir. Lakin Ragıb demiştir ki: &quot;Zerabiyy, aslında bir yere mensup benekli dokumalardır. Sonra istiare olarak döşemeler için kullanılmıştır.&quot; Ferrâ&#x27;nın yazdığına göre ince tüyl ü halılardır. İnce püskülü ve kadifesi bulunan halılar (tanâfis), koltuk yastıkları (nemarik) ve nefis döşemeler (zerabi) birbirlerinin yerine de kullanıldığından Cevheri &quot;Sıhah&quot;ında bunların arasını ayırmıştır. Nitekim Hind&#x27;in;</p><p>&quot;Biz Târık&#x27;ın kızlarıyız.</p><p>Nefis döşemeler üzerinde yürürüz.&quot;</p><p>recezinde &quot;nemârık&quot;, &quot;zarâbi&quot; mânâsında kullanılmıştır. Çünkü âdet itibariyle yastık üzerinde yürünmez. Bununla beraber diğerleri farklarını göstermiş oldukları gibi âyette de bu açıktır.</p><p>17. Bakmıyorlar mı develere? Yukarının bir şubelendirilmesi olan bu cümlenin &quot;fâ&quot; ile bağlanmasındaki mânâ, kıyamet haberini ve onun içerdiği hayret verici niteliklerle, öldükten sonra dirilme meselesini inkar edenlere karşı yaratılışın en fazla göz önünde bu l unan şeylerinde bile görülüp duran enteresan durumlara dikkatleri çekmek suretiyle yaratıcının gücünü hatırlatmak ve boşuna yorgunluk olan yolsuz çalışmalardan ve boş şeylerden kurtulmak ve çalışmasından hoşnut olacağı işler yapmak için yerden göğe, gök t en yere, en yakınlarından en uzaklarına kadar eşyanın yaratılış şekillerini araştırıp inceleyerek onun kanunlarını ve kudretinin hayret verici neticelerini ve onun nasıl tasarrufta bulunduğunu ve ona göre emir ve hükümlerini anlayıp ortaya çıkararak kıyam e t gününün sıkıntılarından korunacak ve mutluluğuna erdirecek güzel ve yararlı işlere sevk ve teşvik etmektir ki önceki sûrede &quot;ilk sahifeler&quot;de olduğu anlatılan temizlenme mânâsının, &quot;son sahifeler&quot;de tamamlayıcısı ve kemale erdiricisi demek olan bir ha t ırlatma olmak hasebiyle sonunda &quot;hatırlat, öğüt ver&quot; emriyle takip edilmiştir.</p><p>Bu hatırlatma için kıyamet haberinden sonra yer ve göğün yaratılış nicelği ile yaratıcının kudretine dikkat çekilirken ilk önce devenin ileri sürülmesi birdenbire insana acayip gelirse de bu acayiplikte kastedilen mânâya isabet açısından &quot;bera&#x27;at-i istihlal&quot; gibi bir bediî sanat vardır. Zira maksat, bakılmaya alışılmış ve pek olağan gibi görünen şeylerin bile yaratılış niceliğinin enteresan şeylerle dolu bulunduğunu d uyurmak olduğu ve deve yaratılışının gerçekten enteresanlığı ile beraber Araplar&#x27;ın en yakından gözlerine çarpması gerektiği düşünülürse, bunun yaratılışının âlemi seyretmek için ilk bakılacak yer edinilmesi en uygun hareket olduktan başka, serilmiş döşe k lerden bir anda deveye atlatarak ondan göğe, ondan dağlara, onlardan yer tarafına bir inceleme yolculuğu yaptıran geçişte bir enteresanlık ve aynı zamanda âyet sonlarında kıvrık &quot;hâ&quot; yani (tâ-i merbuta) den şiddetli uzun &quot;tâ&quot; ya geçen bir genişleme ile i fadeye başkaca bir değişiklik verilmesinin yaratılıştaki enteresanlıkları göstermek maksadına her bakımdan uyan bediî sanatları kapsadığı anlaşılır. Bu sayılan şeylere bakmak da, bütün âleme bakma mânâsını taşır. &quot;Fâ&quot; bağlacı, kendinden sonra gelen kısmı â yetin akışından anlaşılması gereken mukadder bir mânâ üzerine</p><p>bağlayan bir bağ olarak mânânın özeti şöyle olur: Kıyamet olayı böyle haber verildiği, dünyanın sonu ya boşuna işlenmiş ameller yüzünden yorgun ve bitkin olarak zillet ve sefillikle ateşe yaslanmak veya yolunda yapılan güzel ve meyveli amellerle nimet ve mutluluğa ererek çalışmasından sonsuza kadar hoşnut olmaktan ibaret olduğu anlatıldığı halde, bulunduğu âlemi ve yaratanın hükmünü ve kudretini düşünmeyip de dünyayı ahirete tercih eden gafill e r hâlâ önünü sonunu görmek ve sonunda hoşnut olacağı faydalı ameller yolunu aramak ve gereği gibi faydalanmak için bakmazlar mı o her gün gözleri önünde kullanıp durdukları, etinden, sütünden, yününden, derisinden, işinden gücünden, türlü yararlarından is t ifade etmek için birçok sıkıntıya soktukları deveye? Nasıl yaratılmış? Ne ilgi çekici bir yaratılışı var? Birçok hayvanın yaratılışına benzemeyen iri cüssesi, son derece kuvvetli olması, ilgi çekici şekli, başka hayvanların yetinmediği çok az yem ve di k enli mikenli otlaklarla yetinerek ağır yüklerle uzun uzun yolculuklara ve günlerce susuzluğa dayanan sabır ve sağlamlığı ve oturup kalmaktaki durumu ve o kuvvet ve iriliğiyle beraber en zayıf bir hayvandan, bir koyundan, bir eşekten daha ziyade ve hatta b ir çocukla bile yedilip güdülebilecek derecede itaat ve boyun eğme ile insanların emrine verilerek hizmet ettirilmesi ve gittiği bir yolu birçok insandan daha sağlam bir hafıza ile belleyip çıkarması ve kalınlığına rağmen güzel sesle seslenildiğinde etki l enerek şevk ve neşe ile coşması gibi halleri ne hayret verici şeylerdir. İnsan kendi zekasıyla bu şaşırtıcı yaratılış arasındaki fark ve ilgiyi düşünür, o iri ilgi çekici hayvana karşı kendi maddi kuvvetinin küçüklüğünü mukayese eder ve bununla beraber ke n dinin onu hizmetinde kullanabilecek şekilde üstün olmasının sırlarını ve bundan daha güzel istifade yollarını araştırırsa kuşku yok ki herşeyden önce yüce yaratıcının yaratmasındaki hayret verici durumları, kudretinin enginliğini ve her şeye bir özellik l ü tfeden iradesindeki bu özelliği ve hepsini özel ilgi ve münasebetlerine göre bir düzen ile yöneten emir ve hükmünü ve dolayısıyla insanların da ona göre acı veya tatlı bir sona doğru yürümekte olduklarını</p><p>anlaması ve o yolda iman ve irfan ile ilerisi için şevkle çalışması gerekir. Allah tarafından her varlığa ayrı ayrı verilen bu özelliklerin önemini ve ilim ve irfan gibi manevî kuvvetlerin maddî kuvvetlere üstünlük ve hakimiyetini açık bir misal ile anlatmak için insanların emrine verilen devenin yaratılış niceliğini ilk bakış yeri edinmek herkes için en açık ve en faydalı bir misal olduğunda şüphe yoktur. Gerçi fil daha büyüktür ve onun yaratılışında da açık bir hayret verici durum vardır. Fakat o, deve gibi temiz bir hayvan olmadıktan başka onun kadar g ö z önünde de değil ve özellikle Arab&#x27;ın gözünden uzaktır. Deve ise Arab&#x27;ın başlıca mallarındandır. Hele &quot;dikenli ot&quot;un zikredilmesinden sonra deveye bir nazar (bakış) atmanın da başkaca bir münasebet ve hoşluğu vardır. Sonra dolaşmak ve yolculuk etmek içi n deveye binen kimse boyundan çok yukarda bir yüksekliğe çıkmış olur. Yukarı baktığı zaman üstünde göğü, sağa sola baktığı zaman dağları, aşağıya baktığı zaman da yerkürenin yüzeyini görür. Bu bakışlar ne kadar genişler, ne kadar derinleşirse insanın, bulu n duğu âlemi tanıması ve yüce Allah&#x27;ın yaratmasının, gücünün ve nimetlerinin enginliği, geleceğin önemi ve yolunda ve doğru yapılan çalışma ve gayretin kıymeti hakkındaki bilgisi de öyle genişler ve derinleşir.</p><p>Ebu&#x27;l-Abbas Müberred gibi bazıları da burada deveye bakıştan göğe bakışa geçmeği uzak görerek birbirlerine bağlanan konular arasında daha uygun bir ilgi düşünmek üzere &quot;gök&quot; karinesinden yararlanarak &quot;ibil&quot;den maksadın bulut olduğu görüşüne varmıştır. &quot;Keşşaf&quot; yazarı der ki: Bunun maksadı &quot;ibil&quot; k elimesinin ğamâm, müzn, rebâb, ğaym, ğayn ve benzeri bulut isimlerinden olduğunu söylemek değil, birçok Arap şiirinde bulutun deveye benzetilmiş olduğunu görerek burada da teşbih (benzetme) ve mecaz yoluyla &quot;ibil&quot;den bulut kastedilmiş olmasını câiz görmek olmalıdır. Fakat mecaza gerek yoktur. Deveye bakıştan göğe bakışa geçirmek, özellikle vadilerinde, çöllerinde, uzak gezi ve yolculuklarında özel olarak deveyi kullandıkları bilinen Araplar&#x27;ın irşat edilmesi bakımından son derece doğal ve güzeldir. Deve e n faydalı malı olup da ona bakmamak, hayret verici yaratılışını düşünmemek nasıl büyük gaflet ise deveye binip deha göğe bakmamak, yaratıcının kudret ve ululuğunu düşünmeye dalmamak daha büyük gaflettir. Onun için buyruluyor ki:</p><p>18. Ve o göğe (gece gündüz görüp durdukları hayret verici göğe) bakmazlar mı nasıl yükseltilmiş? Yukarı doğru yükselen hava boşluğu üstünde derin bir şekilde uzayıp giden boyut içinde her biri bir yörüngede direksiz</p><p>dayanaksız yüzüp duran sayısız cisim ve yıldızlarıyla, o süsü ve genişliğiyle bütün bakışları kaplayan o aşılmaz okyanusa nasıl bir yükseklik verilmiş.</p><p>19. Ve o dağlara yerden o göğe doğru başlarını kaldırarak dikilip bakışları sınırlayan ve türlü faydalarından yararlanılıp durulan dağlara bakmazlar mı nasıl dikilmiş? Nasıl yerlere konulup yerleştirilmiş?</p><p>20. Ve o yerküreye ve üzerinde yaşadıkları, altlarında kendilerine boyun eğmiş ve zelil buldukları ve yarın içine gömülecekleri toprağa bakmazlar mı nasıl düzlenmiş? O dağlar, vadilerle beraber ovalar, denizler gibi düzlüklerden nasıl bir yüzey ile kaplanıp üzerinde yaşanabilecek, gezi ve yolculuk yapılabilecek şekilde düzlenmiş, döşenmiş; bu yüzey oluşuncaya kadar nasıl başkalaşım ve dönüşümler vukua getirilmiş? Neler yıkılmış, neler yapılmış? Ne yaratışlar, ne düzgün bir biçime koyuşlar, ne işler olmuş? Bugün ne duruma gelmiş? Yarın neler olma ihtimali var? Kısacası nasıl ve ne gibi bir âlemde bulunuyorlar? Ne olmuş, ne olacaklar? Bütün bunlara, düşünme ve ibret gözüyle bakıp da yaratanın gücünü, Kıyamet haberinin ifade ettiği öldükten sonra dirilme ve toplanmanın, ceza ve mükâfatın hak olduğunu, gösterdiği gayretten hoşnut olmak için hak yolunda çalışmanın gerekliliğini düşünmezler mi?</p><p>Görülüyor ki bu bakış, âlemin yeri ve göğü ile hepsine bakmak demektir. Bununla beraber yerin bir parçasından başlayıp gökten ve dağlardan dolaşarak neticede yerküre yüzeyinin nasıl olduğunu tetkike getirilmiştir. Zira &quot;Size belli bir zamana kadar yeryüzünde yerleşme ve oradan faydalanma vardır. Orad a yaşayacak, orada ölecek ve tekrar oradan çıkarılacaksınız, dedi.&quot;(A&#x27;râf, 7/24-25) buyrulduğu üzere yeryüzü insanlar için bir zamana kadar hayattan nasip alınacak bir yurttur. Onda yaşanacak, onda ölünecek, ondan çıkarılıp mahşerde toplanarak ahirete gidi l ecektir. Onun için bulunduğu yurdu ileri geri sınırlarıyla ve niteliğiyle tanıyıp &quot;Şimdi yeryüzünde bir gezin de peygamberleri yalanlayanların sonu ne olmuş, görün.&quot;(Nahl, 16/36) âyetinin mânâsınca sonucu anlamak ve ona göre hayatını cahilce ve boş şeyle r le geçirmeyip iman ve irfan ile güzel amellere çalışmak gerektiğine dikkat çekilmiştir. Şu da çok dikkate değer bir husustur ki burada bu nasıllıkların detayına girilmemiş, sadece yaratma, yükseltme, dikme ve düzleme niteliklerine topluca bir tetkik bakı ş ı atılmıştır. Demek ki bunlar şu görünen âlemde bizzat var olan şeyler olduğu için ayrıntısı insanların soyut araştırma ve inceleme bakışlarıyla bilinebilecek ilimler ve akli bilgilerin konusuna giren şeylerdendir. Demek ki bunlara güzel bir bakış atmak, y üce Allah tarafından istenen bir şeydir. Bu bakış ve</p><p>tecrübe ile edinebileceğimiz bilgilerin, Allah&#x27;ı bilebilmek için özel bir önemi vardır. Kur&#x27;ân&#x27;ın birçok yerinde özellikle hatırlatılan bu gibi oluşumla ilgili maddi deliller yaratılışta bizzat mevcut bulunduğu için böyle topluca yapılan ilâhî işaretlere &quot;hatırlatma&quot; adı verilmiştir. Çünkü bunlar aklî ve tecrübeye dayanan inceleme ve araştırmalarla bilinebilecek şeyler olduğu için bilgi sebepleri aslında akıllarda yaratılıştan vardır. Bu suretle burada z ooloji, astronomi, coğrafya, jeoloji ve tabii tarih denilen aklî ve deneysel ilimlerin faydalarına ve müslümanların bunlarla da meşgul olmaları gerektiğine ve ancak bunları bilgi gayesi saymayıp yaratıcının nasıl tasarrufta bulunduğuna bakarak onun âyet v e kanunlarının gücünü tanımak ve kâfirlerin batıl ve yanlış inançlarını reddederek ahiret hayatı için dünya hayatından nasip almak üzere vazife yollarını anlayıp ortaya çıkarmaya vasıta gibi kabul etmek hususlarına bir işaret vardır. Gerçekte yerküreyi, ye r kürenin hallerini ve onun üzerinde yaşama kaidelerini en iyi bilenler ve bilgileri oranında iyi çalışan milletler diğerlerine üstünlük sağlayagelmişler; içinde bulundukları dünya hayatını ve dünyanın boş ve aldatıcı lezzetlerini en son gaye edinip de onun l a kalmak isteyen tembel, boş ve değersiz şeylerle uğraşan uluslar veya nereye gittiğini bilmeyerek cahilce bir hırs ve çılgınlıkla etrafına saldıran hırçın kavimler yenilmiş ve perişan olagelmişlerdir. Dünya hayatını tercih edenler de etmeyenler de nasıl olsa bu hayattan çıkıp gitmişler ve ancak iman, irfan, ihlas ve kesin inançla ahiret için çalışan ve güzel amellerle hakka kavuşanlar sonsuz mutluluk ve bahtiyarlığı kazanmışlardır. Kuşku yok ki bu bakış toptan da, ayrıntılı da olabilir. Toplu bakış bu ây e tlerle anlatılmış, ayrıntısı da bakışlarımızın gözlem yoluyla keşif ve tetkikine havale edilmiş, hala bakmayanlar &quot;hâlâ bakmazlar mı?&quot; diye kınanmıştır.</p><p>21. Bunun üzerine buyruluyor ki: o halde hatırlat, yani hâlâ bakmıyorlar, bunlara bakıp düşünmüyorlarsa sen onlara vaaz ve öğüt vererek hatırlat, bakmalarının gereğini veya o bakışın neticelerini duyur ve bildir. Hatırlatma ile yetin de daha fazla zorlama, zorla düşündüreceğim diye uğraşma çünkü sen ancak bir hatırlatıcısın. Sadece durumu on l ara iletmeye ve hatırlatmaya memur bir nasihatçı, bir öğütçüsün.</p><p>22. Üzerlerine bela olmuş bir zorba değilsin, zorla baktırıp düşündürecek, her istediğin şeyi yaptıracak, kalplerine hükmedip dilediğin gibi iman etmelerini sağlayacak değilsin. &quot;Doğrusu sen sevdiğine hidayet veremezsin.&quot;(Kasas, 28/56).</p><p>23. Ancak her kim aksine gidip inkâr ederse, yani öğüt ve hatırlatmayı dinlemez ve bu irşada karşı nankörlük ederek küfürde israr ederse.</p><p>24. Bundan dolayı Allah onu en büyük azap ile cezalandıracaktır ki, en</p><p>büyük azap ahiret azabıdır. &quot;Ahiret azabı, elbette daha büyüktür.&quot; (Zümer, 39/26) Ona bazan dünya azabı dahi katılırsa da o, ahiret azabına oranla küçük kalır.</p><p>25. Herhalde onların dönüşleri nihayet bizedir, ne kadar yüz çevirseler, ne kadar kaçmaya çalışsalar neticede dönüp bize geleceklerdir.</p><p>26. Sonra da hesaplarını görmek muhakkak bize aittir. Yani hesaplarını başkası değil, Allah görecek, Allah&#x27;a hesap vereceklerdir. Dolayısıyla o en büyük azaptan kurtulmalarına imkan ve iht imal yoktur.</p><p>Şimdi bu sûrede zikredilen inceleme bakışlarının ibret özetini biraz açmak suretiyle Allah&#x27;a dönüş akibetinin bir izahı, akışı içinde zaman değişikliklerine dikkati çekerek başlayan &quot;Ve&#x27;l-Fecr&quot; Sûresi gelecektir.</p><p>[Herhangi bir yanlislik gördügünüz zaman lütfen uyariniz. Simdiden tesekkürler.]{.small}</p><p>[mucahid dizayn: &lt;info@mucahid.net&gt;  ]{.small}</p></section>
+
   <div style="display:flex; width:100%; border-radius:8px; overflow:hidden; margin:20px 0 8px; box-shadow:0 2px 10px rgba(0,0,0,0.12);"><div style="flex: 7; background:#1e40af; border:1px solid #1d4ed8; padding:8px 4px; text-align:center; color:#ffffff; font-size:11px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Kıyamet (1-7)">Kıyamet (7)</div><div style="flex: 9; background:#065f46; border:1px solid #047857; padding:8px 4px; text-align:center; color:#ffffff; font-size:11px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Nimetler (8-16)">Nimetler (9)</div><div style="flex: 4; background:#b45309; border:1px solid #d97706; padding:8px 4px; text-align:center; color:#ffffff; font-size:11px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Kâinat (17-20)">Kâinat (4)</div><div style="flex: 6; background:#991b1b; border:1px solid #b91c1c; padding:8px 4px; text-align:center; color:#ffffff; font-size:11px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Hatime ve Son Hükümler (21-26)">Hatime ve Son Hükümler (6)</div></div>
 
   
@@ -178,77 +221,63 @@ body {
             </div>
             <div class="mevzu-meta">Âyet 1 - 7 · <span class="rozet" style="background:#1e40af;">7 âyet</span></div>
           </header>
-          
-            <article class="ayet" style="border-left:5px solid #1e40af;">
-              <div class="ayet-baslik">
-                <span style="color:#1e40af;">Âyet 1</span>
-                <span class="ayet-kod">88:1</span>
-              </div>
-              <div class="ayet-ar"> هَلْ أَتَىٰكَ حَدِيثُ ٱلْغَـٰشِيَةِ</div>
+          <div class="ayetler">
+            <article class="ag-kart" style="border-top:4px solid #1e40af;">
+              <div class="ag-kart-baslik" style="color:#1e40af;">Âyet 1</div>
+              <div class="verse-ar"> هَلْ أَتَىٰكَ حَدِيثُ ٱلْغَـٰشِيَةِ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="هَل"><span class="kelime-ar" style="color:#dc2626;">هَلْ</span><span class="kelime-tr">mı? (soru)</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="أَتَى"><span class="kelime-ar" style="color:#2563eb;">أَتَىٰكَ</span><span class="kelime-tr">geldi, getirdi</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="حَدِيث"><span class="kelime-ar" style="color:#16a34a;">حَدِيثُ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="غاشِيَة"><span class="kelime-ar" style="color:#9333ea;">ٱلْغَٰشِيَةِ</span><span class="kelime-tr">the (belirteç)</span></span></div>
-              <div class="ayet-meal">(Resûlüm!) Dehşeti her şeyi kaplayan kıyametin haberi sana geldi mi?</div>
+              <div class="verse-tr">(Resûlüm!) Dehşeti her şeyi kaplayan kıyametin haberi sana geldi mi?</div>
+              
             </article>
             
-            <article class="ayet" style="border-left:5px solid #1e40af;">
-              <div class="ayet-baslik">
-                <span style="color:#1e40af;">Âyet 2</span>
-                <span class="ayet-kod">88:2</span>
-              </div>
-              <div class="ayet-ar">وُجُوهٌ يَوْمَئِذٍ خَـٰشِعَةٌ</div>
+            <article class="ag-kart" style="border-top:4px solid #1e40af;">
+              <div class="ag-kart-baslik" style="color:#1e40af;">Âyet 2</div>
+              <div class="verse-ar">وُجُوهٌ يَوْمَئِذٍ خَـٰشِعَةٌ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="وَجْه"><span class="kelime-ar" style="color:#dc2626;">وُجُوهٌ</span><span class="kelime-tr">yüz</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="إِذ"><span class="kelime-ar" style="color:#2563eb;">يَوْمَئِذٍ</span><span class="kelime-tr">o zaman, -dığında</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="خاشِع"><span class="kelime-ar" style="color:#16a34a;">خَٰشِعَةٌ</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(2-7) O gün bir takım yüzler zelildir, durmadan çalışır, (fakat boşuna) yorulur, kızgın ateşe girer. Onlara kaynar su pınarından içirilir. Onlar için kuru dikenden başka yemek yoktur, o ise ne besler ne de açlığı giderir.</div>
+              <div class="verse-tr">(2-7) O gün bir takım yüzler zelildir, durmadan çalışır, (fakat boşuna) yorulur, kızgın ateşe girer. Onlara kaynar su pınarından içirilir. Onlar için kuru dikenden başka yemek yoktur, o ise ne besler ne de açlığı giderir.</div>
+              
             </article>
             
-            <article class="ayet" style="border-left:5px solid #1e40af;">
-              <div class="ayet-baslik">
-                <span style="color:#1e40af;">Âyet 3</span>
-                <span class="ayet-kod">88:3</span>
-              </div>
-              <div class="ayet-ar">عَامِلَةٌ نَّاصِبَةٌ</div>
+            <article class="ag-kart" style="border-top:4px solid #1e40af;">
+              <div class="ag-kart-baslik" style="color:#1e40af;">Âyet 3</div>
+              <div class="verse-ar">عَامِلَةٌ نَّاصِبَةٌ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="عامِلَة"><span class="kelime-ar" style="color:#dc2626;">عَامِلَةٌ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="ناصِبَة"><span class="kelime-ar" style="color:#2563eb;">نَّاصِبَةٌ</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(2-7) O gün bir takım yüzler zelildir, durmadan çalışır, (fakat boşuna) yorulur, kızgın ateşe girer. Onlara kaynar su pınarından içirilir. Onlar için kuru dikenden başka yemek yoktur, o ise ne besler ne de açlığı giderir.</div>
+              <div class="verse-tr">(2-7) O gün bir takım yüzler zelildir, durmadan çalışır, (fakat boşuna) yorulur, kızgın ateşe girer. Onlara kaynar su pınarından içirilir. Onlar için kuru dikenden başka yemek yoktur, o ise ne besler ne de açlığı giderir.</div>
+              
             </article>
             
-            <article class="ayet" style="border-left:5px solid #1e40af;">
-              <div class="ayet-baslik">
-                <span style="color:#1e40af;">Âyet 4</span>
-                <span class="ayet-kod">88:4</span>
-              </div>
-              <div class="ayet-ar">تَصْلَىٰ نَارًا حَامِيَةً</div>
+            <article class="ag-kart" style="border-top:4px solid #1e40af;">
+              <div class="ag-kart-baslik" style="color:#1e40af;">Âyet 4</div>
+              <div class="verse-ar">تَصْلَىٰ نَارًا حَامِيَةً</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="يَصْلَى"><span class="kelime-ar" style="color:#dc2626;">تَصْلَىٰ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="نار"><span class="kelime-ar" style="color:#2563eb;">نَارًا</span><span class="kelime-tr">Ateş/Cehennem</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="حامِيَة"><span class="kelime-ar" style="color:#16a34a;">حَامِيَةً</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(2-7) O gün bir takım yüzler zelildir, durmadan çalışır, (fakat boşuna) yorulur, kızgın ateşe girer. Onlara kaynar su pınarından içirilir. Onlar için kuru dikenden başka yemek yoktur, o ise ne besler ne de açlığı giderir.</div>
+              <div class="verse-tr">(2-7) O gün bir takım yüzler zelildir, durmadan çalışır, (fakat boşuna) yorulur, kızgın ateşe girer. Onlara kaynar su pınarından içirilir. Onlar için kuru dikenden başka yemek yoktur, o ise ne besler ne de açlığı giderir.</div>
+              
             </article>
             
-            <article class="ayet" style="border-left:5px solid #1e40af;">
-              <div class="ayet-baslik">
-                <span style="color:#1e40af;">Âyet 5</span>
-                <span class="ayet-kod">88:5</span>
-              </div>
-              <div class="ayet-ar">تُسْقَىٰ مِنْ عَيْنٍ ءَانِيَةٍ</div>
+            <article class="ag-kart" style="border-top:4px solid #1e40af;">
+              <div class="ag-kart-baslik" style="color:#1e40af;">Âyet 5</div>
+              <div class="verse-ar">تُسْقَىٰ مِنْ عَيْنٍ ءَانِيَةٍ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="سَقَى"><span class="kelime-ar" style="color:#dc2626;">تُسْقَىٰ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="مِن"><span class="kelime-ar" style="color:#2563eb;">مِنْ</span><span class="kelime-tr">-den, -dan</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="عَيْن"><span class="kelime-ar" style="color:#16a34a;">عَيْنٍ</span><span class="kelime-tr">göz, kaynak</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="آنِيَة"><span class="kelime-ar" style="color:#9333ea;">ءَانِيَةٍ</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(2-7) O gün bir takım yüzler zelildir, durmadan çalışır, (fakat boşuna) yorulur, kızgın ateşe girer. Onlara kaynar su pınarından içirilir. Onlar için kuru dikenden başka yemek yoktur, o ise ne besler ne de açlığı giderir.</div>
+              <div class="verse-tr">(2-7) O gün bir takım yüzler zelildir, durmadan çalışır, (fakat boşuna) yorulur, kızgın ateşe girer. Onlara kaynar su pınarından içirilir. Onlar için kuru dikenden başka yemek yoktur, o ise ne besler ne de açlığı giderir.</div>
+              
             </article>
             
-            <article class="ayet" style="border-left:5px solid #1e40af;">
-              <div class="ayet-baslik">
-                <span style="color:#1e40af;">Âyet 6</span>
-                <span class="ayet-kod">88:6</span>
-              </div>
-              <div class="ayet-ar">لَّيْسَ لَهُمْ طَعَامٌ إِلَّا مِن ضَرِيعٍ</div>
+            <article class="ag-kart" style="border-top:4px solid #1e40af;">
+              <div class="ag-kart-baslik" style="color:#1e40af;">Âyet 6</div>
+              <div class="verse-ar">لَّيْسَ لَهُمْ طَعَامٌ إِلَّا مِن ضَرِيعٍ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="لَيْسَ"><span class="kelime-ar" style="color:#dc2626;">لَّيْسَ</span><span class="kelime-tr">değil</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="ل"><span class="kelime-ar" style="color:#2563eb;">لَهُمْ</span><span class="kelime-tr">için, -e</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="طَعام"><span class="kelime-ar" style="color:#16a34a;">طَعَامٌ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="إِلّا"><span class="kelime-ar" style="color:#9333ea;">إِلَّا</span><span class="kelime-tr">ancak, sadece</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="مِن"><span class="kelime-ar" style="color:#ea580c;">مِن</span><span class="kelime-tr">-den, -dan</span></span><span class="kelime" style="border-bottom:3px solid #0891b2;" title="ضَرِيع"><span class="kelime-ar" style="color:#0891b2;">ضَرِيعٍ</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(2-7) O gün bir takım yüzler zelildir, durmadan çalışır, (fakat boşuna) yorulur, kızgın ateşe girer. Onlara kaynar su pınarından içirilir. Onlar için kuru dikenden başka yemek yoktur, o ise ne besler ne de açlığı giderir.</div>
+              <div class="verse-tr">(2-7) O gün bir takım yüzler zelildir, durmadan çalışır, (fakat boşuna) yorulur, kızgın ateşe girer. Onlara kaynar su pınarından içirilir. Onlar için kuru dikenden başka yemek yoktur, o ise ne besler ne de açlığı giderir.</div>
+              
             </article>
             
-            <article class="ayet" style="border-left:5px solid #1e40af;">
-              <div class="ayet-baslik">
-                <span style="color:#1e40af;">Âyet 7</span>
-                <span class="ayet-kod">88:7</span>
-              </div>
-              <div class="ayet-ar">لَّا يُسْمِنُ وَلَا يُغْنِى مِن جُوعٍ</div>
+            <article class="ag-kart" style="border-top:4px solid #1e40af;">
+              <div class="ag-kart-baslik" style="color:#1e40af;">Âyet 7</div>
+              <div class="verse-ar">لَّا يُسْمِنُ وَلَا يُغْنِى مِن جُوعٍ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="لا"><span class="kelime-ar" style="color:#dc2626;">لَّا</span><span class="kelime-tr">Hayır/değil</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="يُسْمِنُ"><span class="kelime-ar" style="color:#2563eb;">يُسْمِنُ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="لا"><span class="kelime-ar" style="color:#16a34a;">وَلَا</span><span class="kelime-tr">Hayır/değil</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="أَغْنَتْ"><span class="kelime-ar" style="color:#9333ea;">يُغْنِى</span><span class="kelime-tr">fayda vermedi</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="مِن"><span class="kelime-ar" style="color:#ea580c;">مِن</span><span class="kelime-tr">-den, -dan</span></span><span class="kelime" style="border-bottom:3px solid #0891b2;" title="جُوع"><span class="kelime-ar" style="color:#0891b2;">جُوعٍ</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(2-7) O gün bir takım yüzler zelildir, durmadan çalışır, (fakat boşuna) yorulur, kızgın ateşe girer. Onlara kaynar su pınarından içirilir. Onlar için kuru dikenden başka yemek yoktur, o ise ne besler ne de açlığı giderir.</div>
+              <div class="verse-tr">(2-7) O gün bir takım yüzler zelildir, durmadan çalışır, (fakat boşuna) yorulur, kızgın ateşe girer. Onlara kaynar su pınarından içirilir. Onlar için kuru dikenden başka yemek yoktur, o ise ne besler ne de açlığı giderir.</div>
+              
             </article>
-            
+            </div>
         </section>
         
         <section class="mevzu">
@@ -258,97 +287,79 @@ body {
             </div>
             <div class="mevzu-meta">Âyet 8 - 16 · <span class="rozet" style="background:#065f46;">9 âyet</span></div>
           </header>
-          
-            <article class="ayet" style="border-left:5px solid #065f46;">
-              <div class="ayet-baslik">
-                <span style="color:#065f46;">Âyet 8</span>
-                <span class="ayet-kod">88:8</span>
-              </div>
-              <div class="ayet-ar">وُجُوهٌ يَوْمَئِذٍ نَّاعِمَةٌ</div>
+          <div class="ayetler">
+            <article class="ag-kart" style="border-top:4px solid #065f46;">
+              <div class="ag-kart-baslik" style="color:#065f46;">Âyet 8</div>
+              <div class="verse-ar">وُجُوهٌ يَوْمَئِذٍ نَّاعِمَةٌ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="وَجْه"><span class="kelime-ar" style="color:#dc2626;">وُجُوهٌ</span><span class="kelime-tr">yüz</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="إِذ"><span class="kelime-ar" style="color:#2563eb;">يَوْمَئِذٍ</span><span class="kelime-tr">o zaman, -dığında</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="ناعِمَة"><span class="kelime-ar" style="color:#16a34a;">نَّاعِمَةٌ</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(8-11) O gün bir takım yüzler de vardır ki, mutludurlar; (dünyadaki) çabalarından hoşnut olmuşlardır, yüce bir cennettedirler. Orada boş bir söz işitmezler.</div>
+              <div class="verse-tr">(8-11) O gün bir takım yüzler de vardır ki, mutludurlar; (dünyadaki) çabalarından hoşnut olmuşlardır, yüce bir cennettedirler. Orada boş bir söz işitmezler.</div>
+              
             </article>
             
-            <article class="ayet" style="border-left:5px solid #065f46;">
-              <div class="ayet-baslik">
-                <span style="color:#065f46;">Âyet 9</span>
-                <span class="ayet-kod">88:9</span>
-              </div>
-              <div class="ayet-ar">لِّسَعْيِهَا رَاضِيَةٌ</div>
+            <article class="ag-kart" style="border-top:4px solid #065f46;">
+              <div class="ag-kart-baslik" style="color:#065f46;">Âyet 9</div>
+              <div class="verse-ar">لِّسَعْيِهَا رَاضِيَةٌ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="سَعْي"><span class="kelime-ar" style="color:#dc2626;">لِّسَعْيِهَا</span><span class="kelime-tr">için, -e</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="راضِيَة"><span class="kelime-ar" style="color:#2563eb;">رَاضِيَةٌ</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(8-11) O gün bir takım yüzler de vardır ki, mutludurlar; (dünyadaki) çabalarından hoşnut olmuşlardır, yüce bir cennettedirler. Orada boş bir söz işitmezler.</div>
+              <div class="verse-tr">(8-11) O gün bir takım yüzler de vardır ki, mutludurlar; (dünyadaki) çabalarından hoşnut olmuşlardır, yüce bir cennettedirler. Orada boş bir söz işitmezler.</div>
+              
             </article>
             
-            <article class="ayet" style="border-left:5px solid #065f46;">
-              <div class="ayet-baslik">
-                <span style="color:#065f46;">Âyet 10</span>
-                <span class="ayet-kod">88:10</span>
-              </div>
-              <div class="ayet-ar">فِى جَنَّةٍ عَالِيَةٍ</div>
+            <article class="ag-kart" style="border-top:4px solid #065f46;">
+              <div class="ag-kart-baslik" style="color:#065f46;">Âyet 10</div>
+              <div class="verse-ar">فِى جَنَّةٍ عَالِيَةٍ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="فِي"><span class="kelime-ar" style="color:#dc2626;">فِى</span><span class="kelime-tr">İçinde</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="جَنَّة"><span class="kelime-ar" style="color:#2563eb;">جَنَّةٍ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="عالِيَة"><span class="kelime-ar" style="color:#16a34a;">عَالِيَةٍ</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(8-11) O gün bir takım yüzler de vardır ki, mutludurlar; (dünyadaki) çabalarından hoşnut olmuşlardır, yüce bir cennettedirler. Orada boş bir söz işitmezler.</div>
+              <div class="verse-tr">(8-11) O gün bir takım yüzler de vardır ki, mutludurlar; (dünyadaki) çabalarından hoşnut olmuşlardır, yüce bir cennettedirler. Orada boş bir söz işitmezler.</div>
+              
             </article>
             
-            <article class="ayet" style="border-left:5px solid #065f46;">
-              <div class="ayet-baslik">
-                <span style="color:#065f46;">Âyet 11</span>
-                <span class="ayet-kod">88:11</span>
-              </div>
-              <div class="ayet-ar">لَّا تَسْمَعُ فِيهَا لَـٰغِيَةً</div>
+            <article class="ag-kart" style="border-top:4px solid #065f46;">
+              <div class="ag-kart-baslik" style="color:#065f46;">Âyet 11</div>
+              <div class="verse-ar">لَّا تَسْمَعُ فِيهَا لَـٰغِيَةً</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="لا"><span class="kelime-ar" style="color:#dc2626;">لَّا</span><span class="kelime-tr">Hayır/değil</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="سَمِعَ"><span class="kelime-ar" style="color:#2563eb;">تَسْمَعُ</span><span class="kelime-tr">İşitti</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="فِي"><span class="kelime-ar" style="color:#16a34a;">فِيهَا</span><span class="kelime-tr">İçinde</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="لاغِيَة"><span class="kelime-ar" style="color:#9333ea;">لَٰغِيَةً</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(8-11) O gün bir takım yüzler de vardır ki, mutludurlar; (dünyadaki) çabalarından hoşnut olmuşlardır, yüce bir cennettedirler. Orada boş bir söz işitmezler.</div>
+              <div class="verse-tr">(8-11) O gün bir takım yüzler de vardır ki, mutludurlar; (dünyadaki) çabalarından hoşnut olmuşlardır, yüce bir cennettedirler. Orada boş bir söz işitmezler.</div>
+              
             </article>
             
-            <article class="ayet" style="border-left:5px solid #065f46;">
-              <div class="ayet-baslik">
-                <span style="color:#065f46;">Âyet 12</span>
-                <span class="ayet-kod">88:12</span>
-              </div>
-              <div class="ayet-ar">فِيهَا عَيْنٌ جَارِيَةٌ</div>
+            <article class="ag-kart" style="border-top:4px solid #065f46;">
+              <div class="ag-kart-baslik" style="color:#065f46;">Âyet 12</div>
+              <div class="verse-ar">فِيهَا عَيْنٌ جَارِيَةٌ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="فِي"><span class="kelime-ar" style="color:#dc2626;">فِيهَا</span><span class="kelime-tr">İçinde</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="عَيْن"><span class="kelime-ar" style="color:#2563eb;">عَيْنٌ</span><span class="kelime-tr">göz, kaynak</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="جارِيَة"><span class="kelime-ar" style="color:#16a34a;">جَارِيَةٌ</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(12-16) Orada (cennette) devamlı akan bir pınar, orada yükseltilmiş tahtlar, konulmuş kadehler, sıra sıra dizilmiş yastıklar, serilmiş halılar vardır.</div>
+              <div class="verse-tr">(12-16) Orada (cennette) devamlı akan bir pınar, orada yükseltilmiş tahtlar, konulmuş kadehler, sıra sıra dizilmiş yastıklar, serilmiş halılar vardır.</div>
+              
             </article>
             
-            <article class="ayet" style="border-left:5px solid #065f46;">
-              <div class="ayet-baslik">
-                <span style="color:#065f46;">Âyet 13</span>
-                <span class="ayet-kod">88:13</span>
-              </div>
-              <div class="ayet-ar">فِيهَا سُرُرٌ مَّرْفُوعَةٌ</div>
+            <article class="ag-kart" style="border-top:4px solid #065f46;">
+              <div class="ag-kart-baslik" style="color:#065f46;">Âyet 13</div>
+              <div class="verse-ar">فِيهَا سُرُرٌ مَّرْفُوعَةٌ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="فِي"><span class="kelime-ar" style="color:#dc2626;">فِيهَا</span><span class="kelime-tr">İçinde</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="سُرُر"><span class="kelime-ar" style="color:#2563eb;">سُرُرٌ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="مَرْفُوعَة"><span class="kelime-ar" style="color:#16a34a;">مَّرْفُوعَةٌ</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(12-16) Orada (cennette) devamlı akan bir pınar, orada yükseltilmiş tahtlar, konulmuş kadehler, sıra sıra dizilmiş yastıklar, serilmiş halılar vardır.</div>
+              <div class="verse-tr">(12-16) Orada (cennette) devamlı akan bir pınar, orada yükseltilmiş tahtlar, konulmuş kadehler, sıra sıra dizilmiş yastıklar, serilmiş halılar vardır.</div>
+              
             </article>
             
-            <article class="ayet" style="border-left:5px solid #065f46;">
-              <div class="ayet-baslik">
-                <span style="color:#065f46;">Âyet 14</span>
-                <span class="ayet-kod">88:14</span>
-              </div>
-              <div class="ayet-ar">وَأَكْوَابٌ مَّوْضُوعَةٌ</div>
+            <article class="ag-kart" style="border-top:4px solid #065f46;">
+              <div class="ag-kart-baslik" style="color:#065f46;">Âyet 14</div>
+              <div class="verse-ar">وَأَكْوَابٌ مَّوْضُوعَةٌ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَكْواب"><span class="kelime-ar" style="color:#dc2626;">وَأَكْوَابٌ</span><span class="kelime-tr">ve</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="مَوْضُوعَة"><span class="kelime-ar" style="color:#2563eb;">مَّوْضُوعَةٌ</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(12-16) Orada (cennette) devamlı akan bir pınar, orada yükseltilmiş tahtlar, konulmuş kadehler, sıra sıra dizilmiş yastıklar, serilmiş halılar vardır.</div>
+              <div class="verse-tr">(12-16) Orada (cennette) devamlı akan bir pınar, orada yükseltilmiş tahtlar, konulmuş kadehler, sıra sıra dizilmiş yastıklar, serilmiş halılar vardır.</div>
+              
             </article>
             
-            <article class="ayet" style="border-left:5px solid #065f46;">
-              <div class="ayet-baslik">
-                <span style="color:#065f46;">Âyet 15</span>
-                <span class="ayet-kod">88:15</span>
-              </div>
-              <div class="ayet-ar">وَنَمَارِقُ مَصْفُوفَةٌ</div>
+            <article class="ag-kart" style="border-top:4px solid #065f46;">
+              <div class="ag-kart-baslik" style="color:#065f46;">Âyet 15</div>
+              <div class="verse-ar">وَنَمَارِقُ مَصْفُوفَةٌ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="نَمارِق"><span class="kelime-ar" style="color:#dc2626;">وَنَمَارِقُ</span><span class="kelime-tr">ve</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="مَصْفُوفَة"><span class="kelime-ar" style="color:#2563eb;">مَصْفُوفَةٌ</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(12-16) Orada (cennette) devamlı akan bir pınar, orada yükseltilmiş tahtlar, konulmuş kadehler, sıra sıra dizilmiş yastıklar, serilmiş halılar vardır.</div>
+              <div class="verse-tr">(12-16) Orada (cennette) devamlı akan bir pınar, orada yükseltilmiş tahtlar, konulmuş kadehler, sıra sıra dizilmiş yastıklar, serilmiş halılar vardır.</div>
+              
             </article>
             
-            <article class="ayet" style="border-left:5px solid #065f46;">
-              <div class="ayet-baslik">
-                <span style="color:#065f46;">Âyet 16</span>
-                <span class="ayet-kod">88:16</span>
-              </div>
-              <div class="ayet-ar">وَزَرَابِىُّ مَبْثُوثَةٌ</div>
+            <article class="ag-kart" style="border-top:4px solid #065f46;">
+              <div class="ag-kart-baslik" style="color:#065f46;">Âyet 16</div>
+              <div class="verse-ar">وَزَرَابِىُّ مَبْثُوثَةٌ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="زَرابِيّ"><span class="kelime-ar" style="color:#dc2626;">وَزَرَابِىُّ</span><span class="kelime-tr">ve</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="مَبْثُوثَة"><span class="kelime-ar" style="color:#2563eb;">مَبْثُوثَةٌ</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(12-16) Orada (cennette) devamlı akan bir pınar, orada yükseltilmiş tahtlar, konulmuş kadehler, sıra sıra dizilmiş yastıklar, serilmiş halılar vardır.</div>
+              <div class="verse-tr">(12-16) Orada (cennette) devamlı akan bir pınar, orada yükseltilmiş tahtlar, konulmuş kadehler, sıra sıra dizilmiş yastıklar, serilmiş halılar vardır.</div>
+              
             </article>
-            
+            </div>
         </section>
         
         <section class="mevzu">
@@ -358,47 +369,39 @@ body {
             </div>
             <div class="mevzu-meta">Âyet 17 - 20 · <span class="rozet" style="background:#b45309;">4 âyet</span></div>
           </header>
-          
-            <article class="ayet" style="border-left:5px solid #b45309;">
-              <div class="ayet-baslik">
-                <span style="color:#b45309;">Âyet 17</span>
-                <span class="ayet-kod">88:17</span>
-              </div>
-              <div class="ayet-ar">أَفَلَا يَنظُرُونَ إِلَى ٱلْإِبِلِ كَيْفَ خُلِقَتْ</div>
+          <div class="ayetler">
+            <article class="ag-kart" style="border-top:4px solid #b45309;">
+              <div class="ag-kart-baslik" style="color:#b45309;">Âyet 17</div>
+              <div class="verse-ar">أَفَلَا يَنظُرُونَ إِلَى ٱلْإِبِلِ كَيْفَ خُلِقَتْ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="لا"><span class="kelime-ar" style="color:#dc2626;">أَفَلَا</span><span class="kelime-tr">Hayır/değil</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="نَظَرَ"><span class="kelime-ar" style="color:#2563eb;">يَنظُرُونَ</span><span class="kelime-tr">baktı</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="إِلَى"><span class="kelime-ar" style="color:#16a34a;">إِلَى</span><span class="kelime-tr">-e, -a doğru</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="إِبِل"><span class="kelime-ar" style="color:#9333ea;">ٱلْإِبِلِ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="كَيْف"><span class="kelime-ar" style="color:#ea580c;">كَيْفَ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #0891b2;" title="خَلَقَ"><span class="kelime-ar" style="color:#0891b2;">خُلِقَتْ</span><span class="kelime-tr">yarattı</span></span></div>
-              <div class="ayet-meal">(17-20) (İnsanlar) devenin nasıl yaratıldığına, göğün nasıl yükseltildiğine, dağların nasıl dikildiğine, yeryüzünün nasıl yayıldığına bir bakmazlar mı?</div>
+              <div class="verse-tr">(17-20) (İnsanlar) devenin nasıl yaratıldığına, göğün nasıl yükseltildiğine, dağların nasıl dikildiğine, yeryüzünün nasıl yayıldığına bir bakmazlar mı?</div>
+              
             </article>
             
-            <article class="ayet" style="border-left:5px solid #b45309;">
-              <div class="ayet-baslik">
-                <span style="color:#b45309;">Âyet 18</span>
-                <span class="ayet-kod">88:18</span>
-              </div>
-              <div class="ayet-ar">وَإِلَى ٱلسَّمَآءِ كَيْفَ رُفِعَتْ</div>
+            <article class="ag-kart" style="border-top:4px solid #b45309;">
+              <div class="ag-kart-baslik" style="color:#b45309;">Âyet 18</div>
+              <div class="verse-ar">وَإِلَى ٱلسَّمَآءِ كَيْفَ رُفِعَتْ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="إِلَى"><span class="kelime-ar" style="color:#dc2626;">وَإِلَى</span><span class="kelime-tr">-e, -a doğru</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="سَماء"><span class="kelime-ar" style="color:#2563eb;">ٱلسَّمَآءِ</span><span class="kelime-tr">Gök</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="كَيْف"><span class="kelime-ar" style="color:#16a34a;">كَيْفَ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="رَفَعَ"><span class="kelime-ar" style="color:#9333ea;">رُفِعَتْ</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(17-20) (İnsanlar) devenin nasıl yaratıldığına, göğün nasıl yükseltildiğine, dağların nasıl dikildiğine, yeryüzünün nasıl yayıldığına bir bakmazlar mı?</div>
+              <div class="verse-tr">(17-20) (İnsanlar) devenin nasıl yaratıldığına, göğün nasıl yükseltildiğine, dağların nasıl dikildiğine, yeryüzünün nasıl yayıldığına bir bakmazlar mı?</div>
+              
             </article>
             
-            <article class="ayet" style="border-left:5px solid #b45309;">
-              <div class="ayet-baslik">
-                <span style="color:#b45309;">Âyet 19</span>
-                <span class="ayet-kod">88:19</span>
-              </div>
-              <div class="ayet-ar">وَإِلَى ٱلْجِبَالِ كَيْفَ نُصِبَتْ</div>
+            <article class="ag-kart" style="border-top:4px solid #b45309;">
+              <div class="ag-kart-baslik" style="color:#b45309;">Âyet 19</div>
+              <div class="verse-ar">وَإِلَى ٱلْجِبَالِ كَيْفَ نُصِبَتْ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="إِلَى"><span class="kelime-ar" style="color:#dc2626;">وَإِلَى</span><span class="kelime-tr">-e, -a doğru</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="جَبَل"><span class="kelime-ar" style="color:#2563eb;">ٱلْجِبَالِ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="كَيْف"><span class="kelime-ar" style="color:#16a34a;">كَيْفَ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="نُصِبَتْ"><span class="kelime-ar" style="color:#9333ea;">نُصِبَتْ</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(17-20) (İnsanlar) devenin nasıl yaratıldığına, göğün nasıl yükseltildiğine, dağların nasıl dikildiğine, yeryüzünün nasıl yayıldığına bir bakmazlar mı?</div>
+              <div class="verse-tr">(17-20) (İnsanlar) devenin nasıl yaratıldığına, göğün nasıl yükseltildiğine, dağların nasıl dikildiğine, yeryüzünün nasıl yayıldığına bir bakmazlar mı?</div>
+              
             </article>
             
-            <article class="ayet" style="border-left:5px solid #b45309;">
-              <div class="ayet-baslik">
-                <span style="color:#b45309;">Âyet 20</span>
-                <span class="ayet-kod">88:20</span>
-              </div>
-              <div class="ayet-ar">وَإِلَى ٱلْأَرْضِ كَيْفَ سُطِحَتْ</div>
+            <article class="ag-kart" style="border-top:4px solid #b45309;">
+              <div class="ag-kart-baslik" style="color:#b45309;">Âyet 20</div>
+              <div class="verse-ar">وَإِلَى ٱلْأَرْضِ كَيْفَ سُطِحَتْ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="إِلَى"><span class="kelime-ar" style="color:#dc2626;">وَإِلَى</span><span class="kelime-tr">-e, -a doğru</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="أَرْض"><span class="kelime-ar" style="color:#2563eb;">ٱلْأَرْضِ</span><span class="kelime-tr">Yer</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="كَيْف"><span class="kelime-ar" style="color:#16a34a;">كَيْفَ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="سُطِحَتْ"><span class="kelime-ar" style="color:#9333ea;">سُطِحَتْ</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(17-20) (İnsanlar) devenin nasıl yaratıldığına, göğün nasıl yükseltildiğine, dağların nasıl dikildiğine, yeryüzünün nasıl yayıldığına bir bakmazlar mı?</div>
+              <div class="verse-tr">(17-20) (İnsanlar) devenin nasıl yaratıldığına, göğün nasıl yükseltildiğine, dağların nasıl dikildiğine, yeryüzünün nasıl yayıldığına bir bakmazlar mı?</div>
+              
             </article>
-            
+            </div>
         </section>
         
         <section class="mevzu">
@@ -408,67 +411,55 @@ body {
             </div>
             <div class="mevzu-meta">Âyet 21 - 26 · <span class="rozet" style="background:#991b1b;">6 âyet</span></div>
           </header>
-          
-            <article class="ayet" style="border-left:5px solid #991b1b;">
-              <div class="ayet-baslik">
-                <span style="color:#991b1b;">Âyet 21</span>
-                <span class="ayet-kod">88:21</span>
-              </div>
-              <div class="ayet-ar">فَذَكِّرْ إِنَّمَآ أَنتَ مُذَكِّرٌ</div>
+          <div class="ayetler">
+            <article class="ag-kart" style="border-top:4px solid #991b1b;">
+              <div class="ag-kart-baslik" style="color:#991b1b;">Âyet 21</div>
+              <div class="verse-ar">فَذَكِّرْ إِنَّمَآ أَنتَ مُذَكِّرٌ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="ذُكِّرَ"><span class="kelime-ar" style="color:#dc2626;">فَذَكِّرْ</span><span class="kelime-tr">ve, böylece</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="ما"><span class="kelime-ar" style="color:#2563eb;">إِنَّمَآ</span><span class="kelime-tr">Ne</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title=""><span class="kelime-ar" style="color:#16a34a;">أَنتَ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="مُذَكِّر"><span class="kelime-ar" style="color:#9333ea;">مُذَكِّرٌ</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(21-26) O halde (Resûlüm), öğüt ver. Çünkü sen ancak öğüt vericisin. Onların üzerinde bir zorba değilsin. Ancak yüz çevirip inkâr edene gelince, işte öylesini Allah en büyük azap ile cezalandırır. Şüphesiz onların dönüşü sadece bizedir. Sonra onların sorguya çekilmesi de sadece bize aittir.</div>
+              <div class="verse-tr">(21-26) O halde (Resûlüm), öğüt ver. Çünkü sen ancak öğüt vericisin. Onların üzerinde bir zorba değilsin. Ancak yüz çevirip inkâr edene gelince, işte öylesini Allah en büyük azap ile cezalandırır. Şüphesiz onların dönüşü sadece bizedir. Sonra onların sorguya çekilmesi de sadece bize aittir.</div>
+              
             </article>
             
-            <article class="ayet" style="border-left:5px solid #991b1b;">
-              <div class="ayet-baslik">
-                <span style="color:#991b1b;">Âyet 22</span>
-                <span class="ayet-kod">88:22</span>
-              </div>
-              <div class="ayet-ar">لَّسْتَ عَلَيْهِم بِمُصَيْطِرٍ</div>
+            <article class="ag-kart" style="border-top:4px solid #991b1b;">
+              <div class="ag-kart-baslik" style="color:#991b1b;">Âyet 22</div>
+              <div class="verse-ar">لَّسْتَ عَلَيْهِم بِمُصَيْطِرٍ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="لَيْسَ"><span class="kelime-ar" style="color:#dc2626;">لَّسْتَ</span><span class="kelime-tr">değil</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="عَلَى"><span class="kelime-ar" style="color:#2563eb;">عَلَيْهِم</span><span class="kelime-tr">üzerine, üstüne</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="مُصَيْطِر"><span class="kelime-ar" style="color:#16a34a;">بِمُصَيْطِرٍ</span><span class="kelime-tr">ile, -de</span></span></div>
-              <div class="ayet-meal">(21-26) O halde (Resûlüm), öğüt ver. Çünkü sen ancak öğüt vericisin. Onların üzerinde bir zorba değilsin. Ancak yüz çevirip inkâr edene gelince, işte öylesini Allah en büyük azap ile cezalandırır. Şüphesiz onların dönüşü sadece bizedir. Sonra onların sorguya çekilmesi de sadece bize aittir.</div>
+              <div class="verse-tr">(21-26) O halde (Resûlüm), öğüt ver. Çünkü sen ancak öğüt vericisin. Onların üzerinde bir zorba değilsin. Ancak yüz çevirip inkâr edene gelince, işte öylesini Allah en büyük azap ile cezalandırır. Şüphesiz onların dönüşü sadece bizedir. Sonra onların sorguya çekilmesi de sadece bize aittir.</div>
+              
             </article>
             
-            <article class="ayet" style="border-left:5px solid #991b1b;">
-              <div class="ayet-baslik">
-                <span style="color:#991b1b;">Âyet 23</span>
-                <span class="ayet-kod">88:23</span>
-              </div>
-              <div class="ayet-ar">إِلَّا مَن تَوَلَّىٰ وَكَفَرَ</div>
+            <article class="ag-kart" style="border-top:4px solid #991b1b;">
+              <div class="ag-kart-baslik" style="color:#991b1b;">Âyet 23</div>
+              <div class="verse-ar">إِلَّا مَن تَوَلَّىٰ وَكَفَرَ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="إِلّا"><span class="kelime-ar" style="color:#dc2626;">إِلَّا</span><span class="kelime-tr">ancak, sadece</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="مَن"><span class="kelime-ar" style="color:#2563eb;">مَن</span><span class="kelime-tr">kim, kimse</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="تَوَلَّى"><span class="kelime-ar" style="color:#16a34a;">تَوَلَّىٰ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="كَفَرَ"><span class="kelime-ar" style="color:#9333ea;">وَكَفَرَ</span><span class="kelime-tr">Küfretti</span></span></div>
-              <div class="ayet-meal">(21-26) O halde (Resûlüm), öğüt ver. Çünkü sen ancak öğüt vericisin. Onların üzerinde bir zorba değilsin. Ancak yüz çevirip inkâr edene gelince, işte öylesini Allah en büyük azap ile cezalandırır. Şüphesiz onların dönüşü sadece bizedir. Sonra onların sorguya çekilmesi de sadece bize aittir.</div>
+              <div class="verse-tr">(21-26) O halde (Resûlüm), öğüt ver. Çünkü sen ancak öğüt vericisin. Onların üzerinde bir zorba değilsin. Ancak yüz çevirip inkâr edene gelince, işte öylesini Allah en büyük azap ile cezalandırır. Şüphesiz onların dönüşü sadece bizedir. Sonra onların sorguya çekilmesi de sadece bize aittir.</div>
+              
             </article>
             
-            <article class="ayet" style="border-left:5px solid #991b1b;">
-              <div class="ayet-baslik">
-                <span style="color:#991b1b;">Âyet 24</span>
-                <span class="ayet-kod">88:24</span>
-              </div>
-              <div class="ayet-ar">فَيُعَذِّبُهُ ٱللَّهُ ٱلْعَذَابَ ٱلْأَكْبَرَ</div>
+            <article class="ag-kart" style="border-top:4px solid #991b1b;">
+              <div class="ag-kart-baslik" style="color:#991b1b;">Âyet 24</div>
+              <div class="verse-ar">فَيُعَذِّبُهُ ٱللَّهُ ٱلْعَذَابَ ٱلْأَكْبَرَ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="عَذَّبَ"><span class="kelime-ar" style="color:#dc2626;">فَيُعَذِّبُهُ</span><span class="kelime-tr">ve, böylece</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="اللَّه"><span class="kelime-ar" style="color:#2563eb;">ٱللَّهُ</span><span class="kelime-tr">Allah</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="عَذاب"><span class="kelime-ar" style="color:#16a34a;">ٱلْعَذَابَ</span><span class="kelime-tr">Azap</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="أَكْبَر"><span class="kelime-ar" style="color:#9333ea;">ٱلْأَكْبَرَ</span><span class="kelime-tr">the (belirteç)</span></span></div>
-              <div class="ayet-meal">(21-26) O halde (Resûlüm), öğüt ver. Çünkü sen ancak öğüt vericisin. Onların üzerinde bir zorba değilsin. Ancak yüz çevirip inkâr edene gelince, işte öylesini Allah en büyük azap ile cezalandırır. Şüphesiz onların dönüşü sadece bizedir. Sonra onların sorguya çekilmesi de sadece bize aittir.</div>
+              <div class="verse-tr">(21-26) O halde (Resûlüm), öğüt ver. Çünkü sen ancak öğüt vericisin. Onların üzerinde bir zorba değilsin. Ancak yüz çevirip inkâr edene gelince, işte öylesini Allah en büyük azap ile cezalandırır. Şüphesiz onların dönüşü sadece bizedir. Sonra onların sorguya çekilmesi de sadece bize aittir.</div>
+              
             </article>
             
-            <article class="ayet" style="border-left:5px solid #991b1b;">
-              <div class="ayet-baslik">
-                <span style="color:#991b1b;">Âyet 25</span>
-                <span class="ayet-kod">88:25</span>
-              </div>
-              <div class="ayet-ar">إِنَّ إِلَيْنَآ إِيَابَهُمْ</div>
+            <article class="ag-kart" style="border-top:4px solid #991b1b;">
+              <div class="ag-kart-baslik" style="color:#991b1b;">Âyet 25</div>
+              <div class="verse-ar">إِنَّ إِلَيْنَآ إِيَابَهُمْ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="إِنّ"><span class="kelime-ar" style="color:#dc2626;">إِنَّ</span><span class="kelime-tr">şüphesiz, gerçekten</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="إِلَى"><span class="kelime-ar" style="color:#2563eb;">إِلَيْنَآ</span><span class="kelime-tr">-e, -a doğru</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="إِياب"><span class="kelime-ar" style="color:#16a34a;">إِيَابَهُمْ</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(21-26) O halde (Resûlüm), öğüt ver. Çünkü sen ancak öğüt vericisin. Onların üzerinde bir zorba değilsin. Ancak yüz çevirip inkâr edene gelince, işte öylesini Allah en büyük azap ile cezalandırır. Şüphesiz onların dönüşü sadece bizedir. Sonra onların sorguya çekilmesi de sadece bize aittir.</div>
+              <div class="verse-tr">(21-26) O halde (Resûlüm), öğüt ver. Çünkü sen ancak öğüt vericisin. Onların üzerinde bir zorba değilsin. Ancak yüz çevirip inkâr edene gelince, işte öylesini Allah en büyük azap ile cezalandırır. Şüphesiz onların dönüşü sadece bizedir. Sonra onların sorguya çekilmesi de sadece bize aittir.</div>
+              
             </article>
             
-            <article class="ayet" style="border-left:5px solid #991b1b;">
-              <div class="ayet-baslik">
-                <span style="color:#991b1b;">Âyet 26</span>
-                <span class="ayet-kod">88:26</span>
-              </div>
-              <div class="ayet-ar">ثُمَّ إِنَّ عَلَيْنَا حِسَابَهُم</div>
+            <article class="ag-kart" style="border-top:4px solid #991b1b;">
+              <div class="ag-kart-baslik" style="color:#991b1b;">Âyet 26</div>
+              <div class="verse-ar">ثُمَّ إِنَّ عَلَيْنَا حِسَابَهُم</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="ثُمّ"><span class="kelime-ar" style="color:#dc2626;">ثُمَّ</span><span class="kelime-tr">sonra, ardından</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="إِنّ"><span class="kelime-ar" style="color:#2563eb;">إِنَّ</span><span class="kelime-tr">şüphesiz, gerçekten</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="عَلَى"><span class="kelime-ar" style="color:#16a34a;">عَلَيْنَا</span><span class="kelime-tr">üzerine, üstüne</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="حِساب"><span class="kelime-ar" style="color:#9333ea;">حِسَابَهُم</span><span class="kelime-tr">Hesap</span></span></div>
-              <div class="ayet-meal">(21-26) O halde (Resûlüm), öğüt ver. Çünkü sen ancak öğüt vericisin. Onların üzerinde bir zorba değilsin. Ancak yüz çevirip inkâr edene gelince, işte öylesini Allah en büyük azap ile cezalandırır. Şüphesiz onların dönüşü sadece bizedir. Sonra onların sorguya çekilmesi de sadece bize aittir.</div>
+              <div class="verse-tr">(21-26) O halde (Resûlüm), öğüt ver. Çünkü sen ancak öğüt vericisin. Onların üzerinde bir zorba değilsin. Ancak yüz çevirip inkâr edene gelince, işte öylesini Allah en büyük azap ile cezalandırır. Şüphesiz onların dönüşü sadece bizedir. Sonra onların sorguya çekilmesi de sadece bize aittir.</div>
+              
             </article>
-            
+            </div>
         </section>
         
 </main>

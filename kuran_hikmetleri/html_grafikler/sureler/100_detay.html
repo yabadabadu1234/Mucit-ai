@@ -15,7 +15,8 @@ body {
   background: #f5f1e8;
   color: #1e293b;
   font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-  line-height: 1.7;
+  line-height: 1.65;
+  font-size: 11pt;
 }
 .ust-cubuk {
   position: fixed;
@@ -42,10 +43,10 @@ body {
 .geri:hover { background: #1e293b; }
 .ust-baslik { color: #e2e8f0; font-weight: 600; font-size: 10.5pt; }
 .kitap-sayfa {
-  max-width: 880px;
+  max-width: 1100px;
   margin: 0 auto;
   background: #ffffff;
-  padding: 40px 48px 64px;
+  padding: 32px 36px 56px;
   min-height: 100vh;
   box-shadow: 0 2px 18px rgba(15, 23, 42, 0.08);
 }
@@ -57,7 +58,7 @@ body {
 }
 .sure-baslik h1 {
   font-family: 'Cinzel', 'Plus Jakarta Sans', serif;
-  font-size: 24pt;
+  font-size: 22pt;
   color: #0f172a;
   margin: 4px 0 8px;
   line-height: 1.3;
@@ -65,7 +66,7 @@ body {
 .sure-arapca {
   font-family: 'Amiri', serif;
   color: #1e40af;
-  font-size: 26pt;
+  font-size: 24pt;
   margin-left: 12px;
   font-weight: 400;
 }
@@ -79,8 +80,19 @@ body {
   font-weight: 600;
 }
 .rozet-acik { background: #475569; }
-.mevzu { margin-top: 34px; }
-.mevzu-baslik { padding: 10px 16px; border-radius: 6px; margin-bottom: 14px; }
+.tanitim {
+  margin-top: 26px;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 9.5pt;
+  color: #334155;
+}
+.tanitim h3 { margin: 0 0 6px; font-size: 11pt; color: #1e3a8a; }
+.tanitim p { margin: 0 0 6px; }
+.mevzu { margin-top: 30px; }
+.mevzu-baslik { padding: 10px 16px; border-radius: 6px; margin-bottom: 12px; }
 .mevzu-ad { font-size: 13pt; font-weight: 700; }
 .mevzu-kod {
   font-family: monospace;
@@ -92,61 +104,90 @@ body {
   margin-right: 8px;
 }
 .mevzu-meta { color: #64748b; font-size: 9.5pt; margin-top: 4px; }
-.ayet {
+/* Âyet kutuları: kitaptaki ag-kart ile aynı boyut */
+.ayetler {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 6px;
+  align-items: start;
+}
+.ag-kart {
   background: #ffffff;
   border: 1px solid #e2e8f0;
-  border-radius: 10px;
-  padding: 14px 18px;
-  margin-bottom: 12px;
+  border-radius: 6px;
+  padding: 6px 8px;
+  page-break-inside: avoid;
 }
-.ayet-baslik {
-  display: flex;
-  justify-content: space-between;
-  font-size: 9.5pt;
+.ag-kart-baslik {
+  font-size: 8.5pt;
   font-weight: 700;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
-.ayet-kod { color: #94a3b8; font-family: monospace; font-weight: 400; }
-.ayet-ar {
+.verse-ar {
   font-family: 'Amiri', serif;
-  font-size: 22pt;
-  line-height: 1.9;
+  font-size: 12pt;
+  line-height: 1.8;
   direction: rtl;
   text-align: right;
   color: #0f172a;
 }
-.ayet-meal {
-  font-size: 10.5pt;
-  color: #334155;
+.verse-tr {
+  font-size: 8pt;
+  color: #475569;
+  line-height: 1.5;
   border-top: 1px dashed #e2e8f0;
-  padding-top: 8px;
-  margin-top: 8px;
+  padding-top: 4px;
+  margin-top: 2px;
 }
+.ag-ortak {
+  font-size: 7.5pt;
+  color: #94a3b8;
+  font-style: italic;
+  margin-top: 4px;
+}
+.tefsir {
+  margin-top: 5px;
+  border-top: 1px dashed #e2e8f0;
+  padding-top: 4px;
+  font-size: 7.5pt;
+  color: #334155;
+  line-height: 1.5;
+}
+.tefsir summary {
+  cursor: pointer;
+  color: #1e40af;
+  font-weight: 700;
+  font-size: 7.5pt;
+}
+.tefsir p { margin: 4px 0 0; }
 .kelime-satiri {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
   direction: rtl;
-  margin: 6px 0 4px;
+  margin: 6px 0 8px 0;
 }
 .kelime {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  padding: 2px 6px 3px;
+  padding: 2px 6px 3px 6px;
   background: #f8fafc;
   border-radius: 4px;
+  min-width: 0;
 }
-.kelime-ar { font-family: 'Amiri', serif; font-size: 14pt; line-height: 1.6; }
-.kelime-tr { direction: ltr; font-size: 7.5pt; color: #334155; line-height: 1.2; }
-.ayet { page-break-inside: avoid; }
+.kelime-ar { font-family: 'Amiri', serif; font-size: 13pt; line-height: 1.6; }
+.kelime-tr { direction: ltr; font-size: 7pt; color: #334155; text-align: center; line-height: 1.2; }
 @media (max-width: 640px) {
-  .kitap-sayfa { padding: 22px 16px 40px; }
+  .kitap-sayfa { padding: 20px 16px 40px; }
   .sure-arapca { display: block; margin: 6px 0 0; }
+  .ayetler { grid-template-columns: 1fr; }
 }
 @media print {
   .ust-cubuk { display: none; }
   body { padding-top: 0; background: #ffffff; }
+  .tefsir { display: block; }
+  .tefsir > :not(summary) { display: block; }
 }
 </style>
 </head>
@@ -168,6 +209,8 @@ body {
     </div>
   </header>
 
+  <section class="tanitim"><h3>Elmalılı tefsiri: sûre tanıtımı</h3><p>&quot;Vav&quot;, kasemdir. &quot;Adiyat&quot; hizla kosmak, segirtmek mânâsina &quot;adv&quot;den ism-i fail cem-i müennes salimdir. Su halde at, deveye diger kosanlarin hepsine söylenebilir. &quot;Kamus&quot; sahibinin &quot;Besâir&quot;de beyanina göre bu &quot;adv&quot; maddesi, esasinda tecavüz mânâsinda kullanilir. Kâh yürüyüs itibariyla düsünülür, ona &quot;adv&quot; yani segirtmek denilir. Ve kâh kalbi olarak düsünülür, ona adavet ve muadat yani düsmanlik denir Kâh da adalet bozmak itibariyla düsünülür ona da udvar, yani zulüm ve adaletsizlik denilir. Ve kâh da mekan ve yer itibariyla düsünülür, ona da adva yani sivayet denilir. Diger mânâlar bundan türemistir. &quot;Ganiy&quot; vezninde &quot;adiy&quot; ve sariye vezninde &quot;âdiye&quot; daima harp ve kitale kosup hücum eden topluluga denir. Bazilari &quot;adîy&quot;, piyade saldirganlarina; &quot;âdiye&quot;, süvari (atli) saldirganlarina mahsus oldugunu söylemistir. Burada Hz. Ali&#x27;den rivayet edilerek Arafat&#x27;a giden hacilarin develeriyle tefsir edildigine dair bir rivayet nakledilmis ise de, Ibnü Abbas&#x27;dan rivayet edildigi üzere süvarilerin atlari olmak âyetlerin mefhumuna göre açiktir ve tefsircilerin pek çogu bunu tercih etmislerdir. Zira DABH atlarin kosu esnasindaki nefeslerinin sesleridir ki, &quot;sahil&quot; denilen kisnemek degil, yemi ve sahibini gördügü zaman yaptigi gibi hamhame (genizden ses getirme) denilen sesi de degil, hizli nefes sesi olan bir harilti ve hohlamadir. Denilmistir ki &quot;dabh&quot;, bir at bir de köpek kosarken olur. Kelamin takdiri veya &quot;dâbihât&quot;, mânâsindadir.</p><p>2. Sonra &quot;Kadh&quot;, çakmak çakmak, yani hizla çarpmak çakmakla ates çikarmaktir. Bu da atlarin kosarlarken hizlarindan tirnaklariyla çarptiklari taslardan çakmak gibi atesler çakarak gitmelerinde görülür. Ki bu geceleyin görülecegi ve hiz eseri oldugu için onlarin hem kuvvetlerine, hem de geceleyin kostuklarina isaret eder. En açik olan mânâ da budur.</p><p>Bununla beraber bunu daha diger mânâlarla açiklayanlar da olmustur:</p></section>
+
   <div style="display:flex; width:100%; border-radius:8px; overflow:hidden; margin:20px 0 8px; box-shadow:0 2px 10px rgba(0,0,0,0.12);"><div style="flex: 5; background:#1e40af; border:1px solid #1d4ed8; padding:8px 4px; text-align:center; color:#ffffff; font-size:11px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Atlar üzerine yemin (1-5)">Atlar üzerine yemin (5)</div><div style="flex: 6; background:#065f46; border:1px solid #047857; padding:8px 4px; text-align:center; color:#ffffff; font-size:11px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="İnsanın nankörlüğü (6-11)">İnsanın nankörlüğü (6)</div></div>
 
   
@@ -178,57 +221,47 @@ body {
             </div>
             <div class="mevzu-meta">Âyet 1 - 5 · <span class="rozet" style="background:#1e40af;">5 âyet</span></div>
           </header>
-          
-            <article class="ayet" style="border-left:5px solid #1e40af;">
-              <div class="ayet-baslik">
-                <span style="color:#1e40af;">Âyet 1</span>
-                <span class="ayet-kod">100:1</span>
-              </div>
-              <div class="ayet-ar"> وَٱلْعَـٰدِيَـٰتِ ضَبْحًا</div>
+          <div class="ayetler">
+            <article class="ag-kart" style="border-top:4px solid #1e40af;">
+              <div class="ag-kart-baslik" style="color:#1e40af;">Âyet 1</div>
+              <div class="verse-ar"> وَٱلْعَـٰدِيَـٰتِ ضَبْحًا</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="عادِيَة"><span class="kelime-ar" style="color:#dc2626;">وَٱلْعَٰدِيَٰتِ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="ضَبْح"><span class="kelime-ar" style="color:#2563eb;">ضَبْحًا</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(1-8) Harıl harıl koşanlara, (nallarıyla) çakarak kıvılcım saçanlara, (ansızın) sabah baskını yapanlara, orada tozu dumana katanlara, derken orada bir topluluğun ta ortasına girenlere yemin ederim ki insan, Rabbine karşı pek nankördür. Şüphesiz buna kendisi de şahittir ve o, mal sevgisine de aşırı derecede düşkündür.</div>
+              <div class="verse-tr">(1-8) Harıl harıl koşanlara, (nallarıyla) çakarak kıvılcım saçanlara, (ansızın) sabah baskını yapanlara, orada tozu dumana katanlara, derken orada bir topluluğun ta ortasına girenlere yemin ederim ki insan, Rabbine karşı pek nankördür. Şüphesiz buna kendisi de şahittir ve o, mal sevgisine de aşırı derecede düşkündür.</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 1</summary><p>1- Bir kisim tefsirciler demislerdir ki: Gerçi bu âyetlerden maksat atlardir. Fakat ates çikarmalari, sahipleriyle düsmanlari arasinda harbi kizistirmalari, harp atesini tutusturmalaridir. Nitekim &quot;Ne zaman savas için bir ates yakmislarsa.&quot; (Maide, 5/64) buyurulmustur. Ve harp kizistigi zaman &quot;firin kizisti&quot; denilmek de darb-i meseldir.</p></details>
             </article>
             
-            <article class="ayet" style="border-left:5px solid #1e40af;">
-              <div class="ayet-baslik">
-                <span style="color:#1e40af;">Âyet 2</span>
-                <span class="ayet-kod">100:2</span>
-              </div>
-              <div class="ayet-ar">فَٱلْمُورِيَـٰتِ قَدْحًا</div>
+            <article class="ag-kart" style="border-top:4px solid #1e40af;">
+              <div class="ag-kart-baslik" style="color:#1e40af;">Âyet 2</div>
+              <div class="verse-ar">فَٱلْمُورِيَـٰتِ قَدْحًا</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="مُورِيَة"><span class="kelime-ar" style="color:#dc2626;">فَٱلْمُورِيَٰتِ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="قَدْح"><span class="kelime-ar" style="color:#2563eb;">قَدْحًا</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(1-8) Harıl harıl koşanlara, (nallarıyla) çakarak kıvılcım saçanlara, (ansızın) sabah baskını yapanlara, orada tozu dumana katanlara, derken orada bir topluluğun ta ortasına girenlere yemin ederim ki insan, Rabbine karşı pek nankördür. Şüphesiz buna kendisi de şahittir ve o, mal sevgisine de aşırı derecede düşkündür.</div>
+              <div class="verse-tr">(1-8) Harıl harıl koşanlara, (nallarıyla) çakarak kıvılcım saçanlara, (ansızın) sabah baskını yapanlara, orada tozu dumana katanlara, derken orada bir topluluğun ta ortasına girenlere yemin ederim ki insan, Rabbine karşı pek nankördür. Şüphesiz buna kendisi de şahittir ve o, mal sevgisine de aşırı derecede düşkündür.</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 2</summary><p>2- Bunlar geceleyin ihtiyaçlari ve yemekleri için ates yakan gazilerdir, &quot;gazilerden bir topluluktur&quot; denilmis, nitekim &quot;âdiyat&quot;i hacilarin develerine yoranlar da Arafat&#x27;tan geceleyin Müzdelife&#x27;ye, Mes&#x27;ar-i Haram&#x27;a gelip orada ates yakan hacilar demislerdir.</p></details>
             </article>
             
-            <article class="ayet" style="border-left:5px solid #1e40af;">
-              <div class="ayet-baslik">
-                <span style="color:#1e40af;">Âyet 3</span>
-                <span class="ayet-kod">100:3</span>
-              </div>
-              <div class="ayet-ar">فَٱلْمُغِيرَٰتِ صُبْحًا</div>
+            <article class="ag-kart" style="border-top:4px solid #1e40af;">
+              <div class="ag-kart-baslik" style="color:#1e40af;">Âyet 3</div>
+              <div class="verse-ar">فَٱلْمُغِيرَٰتِ صُبْحًا</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="مُغِيرَة"><span class="kelime-ar" style="color:#dc2626;">فَٱلْمُغِيرَٰتِ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="صُبْح"><span class="kelime-ar" style="color:#2563eb;">صُبْحًا</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(1-8) Harıl harıl koşanlara, (nallarıyla) çakarak kıvılcım saçanlara, (ansızın) sabah baskını yapanlara, orada tozu dumana katanlara, derken orada bir topluluğun ta ortasına girenlere yemin ederim ki insan, Rabbine karşı pek nankördür. Şüphesiz buna kendisi de şahittir ve o, mal sevgisine de aşırı derecede düşkündür.</div>
+              <div class="verse-tr">(1-8) Harıl harıl koşanlara, (nallarıyla) çakarak kıvılcım saçanlara, (ansızın) sabah baskını yapanlara, orada tozu dumana katanlara, derken orada bir topluluğun ta ortasına girenlere yemin ederim ki insan, Rabbine karşı pek nankördür. Şüphesiz buna kendisi de şahittir ve o, mal sevgisine de aşırı derecede düşkündür.</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 3</summary><p>3- Agir, heyecanli sözler söyliyerek düsmanlik atesi çalip tutusturan diller, denilmis ki, bu mânâda &quot;kadhan&quot; dil ile düsmanliga yorumlanabilir.</p></details>
             </article>
             
-            <article class="ayet" style="border-left:5px solid #1e40af;">
-              <div class="ayet-baslik">
-                <span style="color:#1e40af;">Âyet 4</span>
-                <span class="ayet-kod">100:4</span>
-              </div>
-              <div class="ayet-ar">فَأَثَرْنَ بِهِۦ نَقْعًا</div>
+            <article class="ag-kart" style="border-top:4px solid #1e40af;">
+              <div class="ag-kart-baslik" style="color:#1e40af;">Âyet 4</div>
+              <div class="verse-ar">فَأَثَرْنَ بِهِۦ نَقْعًا</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَثارُ"><span class="kelime-ar" style="color:#dc2626;">فَأَثَرْنَ</span><span class="kelime-tr">ve, böylece</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="ب"><span class="kelime-ar" style="color:#2563eb;">بِهِۦ</span><span class="kelime-tr">ile, -de</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="نَقْع"><span class="kelime-ar" style="color:#16a34a;">نَقْعًا</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(1-8) Harıl harıl koşanlara, (nallarıyla) çakarak kıvılcım saçanlara, (ansızın) sabah baskını yapanlara, orada tozu dumana katanlara, derken orada bir topluluğun ta ortasına girenlere yemin ederim ki insan, Rabbine karşı pek nankördür. Şüphesiz buna kendisi de şahittir ve o, mal sevgisine de aşırı derecede düşkündür.</div>
+              <div class="verse-tr">(1-8) Harıl harıl koşanlara, (nallarıyla) çakarak kıvılcım saçanlara, (ansızın) sabah baskını yapanlara, orada tozu dumana katanlara, derken orada bir topluluğun ta ortasına girenlere yemin ederim ki insan, Rabbine karşı pek nankördür. Şüphesiz buna kendisi de şahittir ve o, mal sevgisine de aşırı derecede düşkündür.</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 4</summary><p>4- Mekr (aldatma) ve hud&#x27;a (hile) atesi çikan fikirlerdir, denilmis, bu mânâ da Ibnü Abbas&#x27;dan rivayet edilmistir. Zira &quot;Ben sana bir çakmak çakayim, sonra bir ates çikarayim da gör!&quot; denilir ki, bir hile yapayim, basina bir is çikarayim da gör, demektir.</p></details>
             </article>
             
-            <article class="ayet" style="border-left:5px solid #1e40af;">
-              <div class="ayet-baslik">
-                <span style="color:#1e40af;">Âyet 5</span>
-                <span class="ayet-kod">100:5</span>
-              </div>
-              <div class="ayet-ar">فَوَسَطْنَ بِهِۦ جَمْعًا</div>
+            <article class="ag-kart" style="border-top:4px solid #1e40af;">
+              <div class="ag-kart-baslik" style="color:#1e40af;">Âyet 5</div>
+              <div class="verse-ar">فَوَسَطْنَ بِهِۦ جَمْعًا</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="وَسَطْ"><span class="kelime-ar" style="color:#dc2626;">فَوَسَطْنَ</span><span class="kelime-tr">ve, böylece</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="ب"><span class="kelime-ar" style="color:#2563eb;">بِهِۦ</span><span class="kelime-tr">ile, -de</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="جَمْع"><span class="kelime-ar" style="color:#16a34a;">جَمْعًا</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(1-8) Harıl harıl koşanlara, (nallarıyla) çakarak kıvılcım saçanlara, (ansızın) sabah baskını yapanlara, orada tozu dumana katanlara, derken orada bir topluluğun ta ortasına girenlere yemin ederim ki insan, Rabbine karşı pek nankördür. Şüphesiz buna kendisi de şahittir ve o, mal sevgisine de aşırı derecede düşkündür.</div>
+              <div class="verse-tr">(1-8) Harıl harıl koşanlara, (nallarıyla) çakarak kıvılcım saçanlara, (ansızın) sabah baskını yapanlara, orada tozu dumana katanlara, derken orada bir topluluğun ta ortasına girenlere yemin ederim ki insan, Rabbine karşı pek nankördür. Şüphesiz buna kendisi de şahittir ve o, mal sevgisine de aşırı derecede düşkündür.</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 5</summary><p>5- Ikrime demistir ki: süngüler, silahlardir. Buna göre zamanimizin ates saçan silahlari hiçbir mecaz düsünmesine hacet kalmaksizin bunda öncelikle dahil olmus bulunur. Özellikle sûrenin Mekkî olmasi rivayetine göre, o zaman müslümanlarda ne at, ne de silah olmadigi için bu âyetler bütün gelecege ait demek olacagindan bu mânâ ve sümul daha açiktir. Bu sekilde burada sonradan peyderpey ortaya çikacak böyle atesler saçan silahlarla gelecegin harp güçlerine de isaret edilmis olmakla buna göre yalniz atlara degil, haril haril süratle hücüm eden motorlu akin vasitalarinin da hepsini içine almis bulunur. Bu âyetlerde tamamen tercemesi mümkün olmayan kelimelerin özelliklerine ve cemiyetlerine dikkat edilir ve bunlarin aralarinda peyderpey tertip ifade eden &quot;fa&quot;larla geldikleri de düsünülürse, bunlar sadece bir seriyeye degil, her zamanin peyderpey gelisecek taarruz araçlarina isaret eden âyetler oldugu takdir olunabilir.</p></details>
             </article>
-            
+            </div>
         </section>
         
         <section class="mevzu">
@@ -238,67 +271,55 @@ body {
             </div>
             <div class="mevzu-meta">Âyet 6 - 11 · <span class="rozet" style="background:#065f46;">6 âyet</span></div>
           </header>
-          
-            <article class="ayet" style="border-left:5px solid #065f46;">
-              <div class="ayet-baslik">
-                <span style="color:#065f46;">Âyet 6</span>
-                <span class="ayet-kod">100:6</span>
-              </div>
-              <div class="ayet-ar">إِنَّ ٱلْإِنسَـٰنَ لِرَبِّهِۦ لَكَنُودٌ</div>
+          <div class="ayetler">
+            <article class="ag-kart" style="border-top:4px solid #065f46;">
+              <div class="ag-kart-baslik" style="color:#065f46;">Âyet 6</div>
+              <div class="verse-ar">إِنَّ ٱلْإِنسَـٰنَ لِرَبِّهِۦ لَكَنُودٌ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="إِنّ"><span class="kelime-ar" style="color:#dc2626;">إِنَّ</span><span class="kelime-tr">şüphesiz, gerçekten</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="إِنسان"><span class="kelime-ar" style="color:#2563eb;">ٱلْإِنسَٰنَ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="رَبّ"><span class="kelime-ar" style="color:#16a34a;">لِرَبِّهِۦ</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="كَنُود"><span class="kelime-ar" style="color:#9333ea;">لَكَنُودٌ</span><span class="kelime-tr">için, -e</span></span></div>
-              <div class="ayet-meal">(1-8) Harıl harıl koşanlara, (nallarıyla) çakarak kıvılcım saçanlara, (ansızın) sabah baskını yapanlara, orada tozu dumana katanlara, derken orada bir topluluğun ta ortasına girenlere yemin ederim ki insan, Rabbine karşı pek nankördür. Şüphesiz buna kendisi de şahittir ve o, mal sevgisine de aşırı derecede düşkündür.</div>
+              <div class="verse-tr">(1-8) Harıl harıl koşanlara, (nallarıyla) çakarak kıvılcım saçanlara, (ansızın) sabah baskını yapanlara, orada tozu dumana katanlara, derken orada bir topluluğun ta ortasına girenlere yemin ederim ki insan, Rabbine karşı pek nankördür. Şüphesiz buna kendisi de şahittir ve o, mal sevgisine de aşırı derecede düşkündür.</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 6</summary><p>6- Nihayet bir de yani isi basarmis: Istediklerini bulmus, harp veya Hac her ne ise isteklerinde basarili olmus olanlar diye tefsir edilmistir. Zira ihtiyacini bitirmis, isinde basarili olmus kimseye</p><p>&quot;o çakmagini çakti&quot; denilir ki, muradina erdi demektir. Bu sekilde münciha (maksadina eren) cemaatinin vasfi olup &quot;muradina eren toplum&quot; mânâsina râcî olur. Yahut atlarin süvarilerinin vasfini açiklama olur. Bu mânâda Cerir</p><p>&quot;Ezd kabilesini en iyi atlara sahip ve çakmagi çaktiklarinda en çok murada ermis kimseler bulduk.&quot;</p><p>demistir. Bir de derler ki: &quot;Filan çakmagi çakinca yandirir, ihsan edince de kandirir?&quot;, yani tam suya doyurur demektir. Bu mânâlardan birincisi dogrudan dogruya hakikat, digerleri mecaz olmak hasebiyle en açik olan birincisidir. Ancak bugün silahlarin ates çakmasi mânâsi da bir hakikat oldugu unutulmamak gerekir.</p><p>3. Sözlükte akin etmek, yani süratle gitmek veya baskin yapmak, talan etmek mânâlarina; bir de &quot;gavra&quot; yani engin araziye girmek mânâsina gelir ki, dilimizde de oldugu üzere akin, garet, en fazla baskin ve talan mânâsinda bilinmektedir. Deveye yoranlar, hacilarin sabahleyin Mina&#x27;ya süratle gelmeleri mânâsinda anlamak istemislerse de, düsmana baskin için akin eden süvariler olmak daha önce akla gelir. Bunun sabah vakti yapilmasi da hem geceleyin düsmanin vakif olamayacagi bir sekilde tertibat alarak hazirlanmak, hem de yaptigini, yapacagini iyi görüp bir yanlisliga meydan vermemek üzere hücumu sabahleyin göz göre göre yapmak çogunlukla daha saglam olmasi hasebiyle baskinlarda alisilmis bulunmasindandir. Harp tarihlerinde gece baskinlarinin da yerine göre basarili oldugu yok degilse de, tehlikesinin daha çok oldugu da inkar edilemez.</p><p>4. Derken o dem, bir toz duman savurmuslardir. Bu fiil cümlesi, önceki isim-i faillerin delalet ettikleri fiiller üzerine atfedilmistir. Zira ism-i failler üzerindeki (elif-lâm)lar, ism-i mevsul olanlarindan silalari fiil mânâsindadirlar. Onun için mânânin özeti &quot;Haril haril kosan atlar, ayaklarindan ates saçtilar, sabah baskini yaptilar, tozu dumana kattilar.&quot; demektir. Ancak bunun burada sarih fiile dönüstürülmesi bir nükte ister ki, o da maksadin bu anda tahakkukuna isaret olmalidir. Tercih etme, baslama ve inceleme mânâlarina &#x27;den olmak da mümkün ise de severan ettirmek (üzerine atilmak), yani heyecanlandirip savusturmak mânâsina isare &#x27;den olarak tefsir edilmistir. Açik olan da budur. zamiri, sabah vaktine racidir.</p><p>NAK&#x27;AN lügatta toz ve birikmis su ve haykirmak veya kayirtmak ve öldürmek mânâlarina gelir. Burada en çok gubar yani toz mânâsinda tefsir edilmistir ki, akin esnasinda savrulan toz, duman demektir. Bu daha önce kosu esnasinda savrulmus ise de &quot;îrâ&quot; gündüz görülmeyip gece göründügü gibi, bu da gece görülmeyip gündüz görünmüs oldugu için sabah vakti zikredilmistir. Bu sekilde önceki &quot;kadh&quot; (hizla çarpmak) ve &quot;îrâ&quot; (çakmak çakma)nin da gece vakti olduguna isaret olunmustur. Bundan baska bu toz sonradan bozulur kesfine de isaret olabilir. Bununla beraber &quot;nak&#x27;an&quot; çesitli mânâlarina göre hücum esnasindaki feryatlara, dökülen terlere ve kanlara da delalet ve isaretten uzak degildir.</p><p>5. Derken onunla (yani o haykiris ile yahut o anda) bir toplulugu ortalamislardir. Bir düsman toplumunu, ordusunu tam ortasindan vurup içine dalarak, yahut çevirip ortaya alarak maglup ve perisan etmislerdir.</p><p>6. Böyle yapan kuvvetlere kasem olsun ki o insan, birtakim fertleri itibariyla insan cinsi, Rabbine karsi çok nankördür. Üzerindeki nimetinin hakkini tanimaz, sükrünü eda etmez. Yahut gördügü nimetlerini, ulasmis oldugu feyizlerini hesaba almaz, ona karsi görevini yapmaz, unutur da hep ugradigi musibetleri ve müskülleri anarak sikayet ve itiraz eder durur. Kâfir, çifittir.</p><p>&quot;KENÛD kelimesi &quot;anûd&quot; vezninde &quot;kefûr&quot;, yani nimetleri çok inkâr eden demektir. Çok kötüleyen ve küfreden inkarci mânâsina da tefsir edilmistir. Birsey bitirmeyen verimsiz araziye ve kocasinin haklarini ve iyiliklerini inkar eden nankör kariya ve yemegini misafirden sakinarak yalnizca yiyen cimriye ve kazanmisa ücretini vermeyen kötüye ve mutlaka cimri ve pintiye ve inadina isyankar ve günahkara, kölesini, usagini çok dögen kimseye &quot;kenud&quot; denilir. Burada çogunlukla insan tabiatina ait olmak üzere çoklari &quot;nimeti inkar eden&quot; demislerdir. Zeccâc, kâfir demis; Hasan-i Basrî kötülükleri sayar, nimeti unutur paylayici demis; Ibnü Cerir, Ebu Umame (r.a.)&#x27;den söyle bir hadis de rivayet etmistir: Demis ki: Resulullah (s.a.v.): &quot;Muhakkak insan Rabb&#x27;ine karsi çok nankördür.&quot; dedi. &quot;Yani öyle nankör ki, yalniz basina yer, kölesini döger ve vergisini vermez.&quot;</p><p>7. Ve kendisi de buna sahittir. Buradaki zamirde de iki vecih vardir: Taberi gibi bazilari &quot;Rabbe&quot; göndererek, &quot;Allah ona sahittir, görüp duruyor&quot;, mânâsini vermislerdir. Bu, kötülüklerden vazgeçmeye zorlamak için bir tehdit ve korkutma demek olur. Zamirin yakinina atfedilmesinin asil olmasi kaidesine</p><p>göre de bu vecih daha uygun gibi görünür. Fakat kelâmin konusu insan olmak ve bundan sonraki zamir de ona raci bulunmak hasebiyle bunun da insana atfi nazmin düzgünlügüne daha uygundur. Onun için çoklari: Hem o insan kendisi o nankörlügüne sahittir, demek olmasini tercih etmislerdir. Yani baskaca delil ve ispata ihtiyaç yoktur. Insan öyle olduguna kendisi sahitlik eder. Zira o nankörlük eseri onun üzerinde o kadar asikardir ki kendi hallerini kalp gözü (basiret) ile inceler ve kölesine, usagina ve idaresi altinda olanlara karsi muamelesini bir düsünürse, kendinin Rabbine çok nankörlük etmekte bulundugunu inkâr edemez, kendi vicdaninda ikrar eder. Yahut dünyada etmezse biraz sonra açiklanacagi üzere ahirette kendi aleyhine sahitlik edip, günahlarini itiraf edecektir. Bu mânâda &quot;vâv&quot; atifa oldugundan bu da kasemin ikinci cevabi demektir.</p><p>8. Üçüncü; Ve gerçekte o insan, dünya malini çok sevdigi için pek katidir. &quot;Hayir&quot;, Kur&#x27;ân&#x27;in &quot;Eger bir hayir birakacaksa.&quot; (Bakara, 2/180) gibi birçok âyetlerinde mal mânâsina ve özellikle çok mal, servet mânâsina geldigi gibi, burada da genellikle &quot;mal&quot; diye tefsir edilmistir. Mala, &quot;hayir&quot; denilmesinin sebebi insan yaratilisinin ona meyledici olmasindan, dünya menfaati bulunmasindan dolayi çogu insanlarin onu mutlaka hayir gibi zannetmeleridir ki, burada o zannetme kötülenmistir. &quot;Sedid&quot; de cimri veya güçlü mânâsina olmak üzere iki vecih ile açiklanmistir. Yani mal ve serveti mutlaka &quot;hayir&quot; sanarak sevdigi için cimridir, sikidir. Allah için o malin hakkini vermek, hayira sarfetmek, genel menfaatlara hizmet etmek istemez, kiskanir. Yahut mali ve dünya menfaatini sevmekte çok kuvvetlidir. Onu kazanmak, eline geçirip toplamak hususunda güçlüdür, hirslidir. Fakat onun hakkini, sükrünü ödemeye, Allah için kulluk etmeye gelince zayifligini ileri sürerek on para vermek istemez, kaçinir da kaçinir, nankörlük eder. Rivayetler bu iki mânâ üzerindedir. Bununla beraber &quot;hayir&quot;, bilinen mânâsinda, &quot;sedid&quot; de sikintili olup sikilmak mânâsina siddetten olmak üzere &quot;Kessaf&quot; üçüncü bir mânâ daha söylemistir ki daha açik görünür. Söyle ki: O insan hayrâta, hayir islere sevgi beslemez, genis olmaz, sikintili olur, cani sikilir, mal ve bedene ait bir teklif yapilinca hoslanmaz, zoruna gider, sertlesir, sertlesir ama</p><p>9. ya sonra &quot;bilmeyecek mi?&quot;. Sonucu hatirlatmak suretiyle korkutmak ve tehdittir. Yani öyle servet hirsi, dünya menfaati sevdasiyla cimrilik, pintilik, nankörlük yapmakla ne fena hareket etmis, kendi gerçek menfaatinin nasil tersine gitmis olduguna bugün sahitlik etmiyorsa sonra da anlamayacak, itiraf etmeyecek, onun azaplarini çekmeyecek mi saniyor? O zelzele, o kiyamet günü yerin agirliklarini çikardigi ve kabirlerde gömülenler desilip firlatildigi</p><p>(Infitar Sûresi&#x27;nde &quot;Kabirlerin içi disina getirildigi zaman.&quot; Infitar, 82/4. âyetin tefsirine bkz.),</p><p>10. Ve o sinelerdekiler toplandigi, neticesi alindigi zaman. Yani gönüllerde saklanan bütün gizli sirlar, niyetler, gayeler, olgun ürün gibi derilip toplanip bütün neticesiyle meydana kondugu zaman muhakkak o nankör insanlar dünyada neler ettiklerini anlayacaklar.</p><p>11. Çünkü o gün, o Rabbleri onlardan, o nimetlerine karsi nankörlük ettikleri âlemlerin Rabbi, o insanlara onlarin bütün varliklariyla, bütün yaptiklarindan elbette haberdardir. Hiçbir zerresinden gafil degil, içlerini, dislarini, hepsini bilir, önce de bilir, sonra da bilir. Fakat o gün hepsini kendilerine bildirecektir. Onlar unuttuysalar da o bilir. &quot;Allah, onlarin yaptiklarini sayip tesbit etmistir, onlar ise bunu unutmuslardi.&quot; (Mücadele, 58/6) O haklari ödenmeyen mallari, servetleri, o hirsla biriktirilerek gömülen hazineleri, defineleri o gün çikaracak. &quot;O gün cehennem atesinde bunlarin üzeri kizdirilir, bunlarla onlarin alinlari, yanlari ve sirtlari daglanir: &quot;Iste kendiniz için yigdiklariniz&quot; (denir).&quot; (Tevbe, 9/35) âyeti delaletince cehennem atesinde kizdirilarak onlarla alinlari, yanlari, belleri daglanacaktir. Bunun dünyada baslica bir misali, bu sûrenin basindaki kasemlerle haber verildigi üzere atesler çakarak, gelip topluluklari perisan eden harp akinlari altinda kalanlarin halleridir. Bu münasebetle burada Enfal Sûresi&#x27;nde geçen &quot;O düsmanlara karsi gücümüz yettigi kadar kuvvet ve cihat için baglanip beslenen atlar (savas araçlari) hazirlayin. Bununla Allah&#x27;in düsmanini, sizin düsmaninizi ve onlardan baska sizin bilmediginiz, Allah&#x27;in bildigi (düsman) kimseleri korkutursunuz.&quot; (Enfal, 8/60) mefhumu üzere Allah yolunda kuvvet hazirlamak için seve seve mal sarfederek hayra çalismak ve ferdî servet hirsiyla cimrilik ve nankörlük etmemek geregi hatirlatilmis ve ayni zamanda dünya istilalarinda ölümle kurtulmak mümkün oldugu halde, kabirdekilerin desildigi ve sinelerdekilerin derildigi ve zerresine varincaya kadar hayir ve ser amellerin cezasi görülecegi gün yönelecek olan ebedî azaptan kurtulmak mümkün olmayacagi anlatilarak insanlar Allah için hayir yapmaya sevkolunmustur. Râzî der ki: Burada ögüt hissesi sudur: Ey insan, sen dünya menfaati hirsiyla hak ve hayra karsi gelmek için sinende türlü hisler besler, faydasiz seylere hazirlanir, kabirler bina eder, tabut satin alir, kefen dokur biçersin. Bunlarin ise hepsi kurtlarin hissesidir. Hani Rabbin, Rahmân&#x27;in hissesi nerede? Bir kadin bile hamile oldugu zaman çocuguna giyecek hazirlar, ona senin çocugun yok bu hazirlik nedir? denilecek olsa yarin</p><p>karnimdaki desilip çikacak degil mi? der, Rabbine de sana; bu yerin karnindakilerin hepsi desilecek degil mi? Hani hazirlik?&quot; diyor.</p><p>Bunun üzerine o kabirdekiler desilip o, sinedekiler derilirken hepsinden haberdar olan Rabb&#x27;in huzurunda neticenin ne olacagi anlatilmak üzere de bunu asagida gelecek Kâria Sûresi takip edecektir.</p><p>[Herhangi bir yanlislik gördügünüz zaman lütfen uyariniz. Simdiden tesekkürler.]{.small}</p><p>[mucahid dizayn: &lt;info@mucahid.net&gt;  ]{.small}</p></details>
             </article>
             
-            <article class="ayet" style="border-left:5px solid #065f46;">
-              <div class="ayet-baslik">
-                <span style="color:#065f46;">Âyet 7</span>
-                <span class="ayet-kod">100:7</span>
-              </div>
-              <div class="ayet-ar">وَإِنَّهُۥ عَلَىٰ ذَٰلِكَ لَشَهِيدٌ</div>
+            <article class="ag-kart" style="border-top:4px solid #065f46;">
+              <div class="ag-kart-baslik" style="color:#065f46;">Âyet 7</div>
+              <div class="verse-ar">وَإِنَّهُۥ عَلَىٰ ذَٰلِكَ لَشَهِيدٌ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="إِنّ"><span class="kelime-ar" style="color:#dc2626;">وَإِنَّهُۥ</span><span class="kelime-tr">şüphesiz, gerçekten</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="عَلَى"><span class="kelime-ar" style="color:#2563eb;">عَلَىٰ</span><span class="kelime-tr">üzerine, üstüne</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="ل"><span class="kelime-ar" style="color:#16a34a;">ذَٰلِكَ</span><span class="kelime-tr">için, -e</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="شَهِيد"><span class="kelime-ar" style="color:#9333ea;">لَشَهِيدٌ</span><span class="kelime-tr">şahit</span></span></div>
-              <div class="ayet-meal">(1-8) Harıl harıl koşanlara, (nallarıyla) çakarak kıvılcım saçanlara, (ansızın) sabah baskını yapanlara, orada tozu dumana katanlara, derken orada bir topluluğun ta ortasına girenlere yemin ederim ki insan, Rabbine karşı pek nankördür. Şüphesiz buna kendisi de şahittir ve o, mal sevgisine de aşırı derecede düşkündür.</div>
+              <div class="verse-tr">(1-8) Harıl harıl koşanlara, (nallarıyla) çakarak kıvılcım saçanlara, (ansızın) sabah baskını yapanlara, orada tozu dumana katanlara, derken orada bir topluluğun ta ortasına girenlere yemin ederim ki insan, Rabbine karşı pek nankördür. Şüphesiz buna kendisi de şahittir ve o, mal sevgisine de aşırı derecede düşkündür.</div>
+              
             </article>
             
-            <article class="ayet" style="border-left:5px solid #065f46;">
-              <div class="ayet-baslik">
-                <span style="color:#065f46;">Âyet 8</span>
-                <span class="ayet-kod">100:8</span>
-              </div>
-              <div class="ayet-ar">وَإِنَّهُۥ لِحُبِّ ٱلْخَيْرِ لَشَدِيدٌ</div>
+            <article class="ag-kart" style="border-top:4px solid #065f46;">
+              <div class="ag-kart-baslik" style="color:#065f46;">Âyet 8</div>
+              <div class="verse-ar">وَإِنَّهُۥ لِحُبِّ ٱلْخَيْرِ لَشَدِيدٌ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="إِنّ"><span class="kelime-ar" style="color:#dc2626;">وَإِنَّهُۥ</span><span class="kelime-tr">şüphesiz, gerçekten</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="حُبّ"><span class="kelime-ar" style="color:#2563eb;">لِحُبِّ</span><span class="kelime-tr">Sevgi</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="خَيْر"><span class="kelime-ar" style="color:#16a34a;">ٱلْخَيْرِ</span><span class="kelime-tr">Hayır</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="شَدِيد"><span class="kelime-ar" style="color:#9333ea;">لَشَدِيدٌ</span><span class="kelime-tr">şiddetli</span></span></div>
-              <div class="ayet-meal">(1-8) Harıl harıl koşanlara, (nallarıyla) çakarak kıvılcım saçanlara, (ansızın) sabah baskını yapanlara, orada tozu dumana katanlara, derken orada bir topluluğun ta ortasına girenlere yemin ederim ki insan, Rabbine karşı pek nankördür. Şüphesiz buna kendisi de şahittir ve o, mal sevgisine de aşırı derecede düşkündür.</div>
+              <div class="verse-tr">(1-8) Harıl harıl koşanlara, (nallarıyla) çakarak kıvılcım saçanlara, (ansızın) sabah baskını yapanlara, orada tozu dumana katanlara, derken orada bir topluluğun ta ortasına girenlere yemin ederim ki insan, Rabbine karşı pek nankördür. Şüphesiz buna kendisi de şahittir ve o, mal sevgisine de aşırı derecede düşkündür.</div>
+              
             </article>
             
-            <article class="ayet" style="border-left:5px solid #065f46;">
-              <div class="ayet-baslik">
-                <span style="color:#065f46;">Âyet 9</span>
-                <span class="ayet-kod">100:9</span>
-              </div>
-              <div class="ayet-ar">۞ أَفَلَا يَعْلَمُ إِذَا بُعْثِرَ مَا فِى ٱلْقُبُورِ</div>
+            <article class="ag-kart" style="border-top:4px solid #065f46;">
+              <div class="ag-kart-baslik" style="color:#065f46;">Âyet 9</div>
+              <div class="verse-ar">۞ أَفَلَا يَعْلَمُ إِذَا بُعْثِرَ مَا فِى ٱلْقُبُورِ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="لا"><span class="kelime-ar" style="color:#dc2626;">أَفَلَا</span><span class="kelime-tr">Hayır/değil</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="عَلِمَ"><span class="kelime-ar" style="color:#2563eb;">يَعْلَمُ</span><span class="kelime-tr">Bildi</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="إِذا"><span class="kelime-ar" style="color:#16a34a;">إِذَا</span><span class="kelime-tr">ne zaman, -dığında</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="بُعْثِرَ"><span class="kelime-ar" style="color:#9333ea;">بُعْثِرَ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="ما"><span class="kelime-ar" style="color:#ea580c;">مَا</span><span class="kelime-tr">Ne</span></span><span class="kelime" style="border-bottom:3px solid #0891b2;" title="فِي"><span class="kelime-ar" style="color:#0891b2;">فِى</span><span class="kelime-tr">İçinde</span></span><span class="kelime" style="border-bottom:3px solid #be185d;" title="قَبْر"><span class="kelime-ar" style="color:#be185d;">ٱلْقُبُورِ</span><span class="kelime-tr">the (belirteç)</span></span></div>
-              <div class="ayet-meal">(9-11) Kabirlerde bulunanlar diriltilip dışarı atıldığı ve kalplerde gizlenenler ortaya konduğu zaman insan (halinin ne olacağını) düşünmez mi? Şüphesiz Rableri o gün onlardan tamamıyle haberdardır.</div>
+              <div class="verse-tr">(9-11) Kabirlerde bulunanlar diriltilip dışarı atıldığı ve kalplerde gizlenenler ortaya konduğu zaman insan (halinin ne olacağını) düşünmez mi? Şüphesiz Rableri o gün onlardan tamamıyle haberdardır.</div>
+              
             </article>
             
-            <article class="ayet" style="border-left:5px solid #065f46;">
-              <div class="ayet-baslik">
-                <span style="color:#065f46;">Âyet 10</span>
-                <span class="ayet-kod">100:10</span>
-              </div>
-              <div class="ayet-ar">وَحُصِّلَ مَا فِى ٱلصُّدُورِ</div>
+            <article class="ag-kart" style="border-top:4px solid #065f46;">
+              <div class="ag-kart-baslik" style="color:#065f46;">Âyet 10</div>
+              <div class="verse-ar">وَحُصِّلَ مَا فِى ٱلصُّدُورِ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="حُصِّلَ"><span class="kelime-ar" style="color:#dc2626;">وَحُصِّلَ</span><span class="kelime-tr">ve</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="ما"><span class="kelime-ar" style="color:#2563eb;">مَا</span><span class="kelime-tr">Ne</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="فِي"><span class="kelime-ar" style="color:#16a34a;">فِى</span><span class="kelime-tr">İçinde</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="صَدْر"><span class="kelime-ar" style="color:#9333ea;">ٱلصُّدُورِ</span><span class="kelime-tr">göğüs, sine</span></span></div>
-              <div class="ayet-meal">(9-11) Kabirlerde bulunanlar diriltilip dışarı atıldığı ve kalplerde gizlenenler ortaya konduğu zaman insan (halinin ne olacağını) düşünmez mi? Şüphesiz Rableri o gün onlardan tamamıyle haberdardır.</div>
+              <div class="verse-tr">(9-11) Kabirlerde bulunanlar diriltilip dışarı atıldığı ve kalplerde gizlenenler ortaya konduğu zaman insan (halinin ne olacağını) düşünmez mi? Şüphesiz Rableri o gün onlardan tamamıyle haberdardır.</div>
+              
             </article>
             
-            <article class="ayet" style="border-left:5px solid #065f46;">
-              <div class="ayet-baslik">
-                <span style="color:#065f46;">Âyet 11</span>
-                <span class="ayet-kod">100:11</span>
-              </div>
-              <div class="ayet-ar">إِنَّ رَبَّهُم بِهِمْ يَوْمَئِذٍ لَّخَبِيرٌۢ</div>
+            <article class="ag-kart" style="border-top:4px solid #065f46;">
+              <div class="ag-kart-baslik" style="color:#065f46;">Âyet 11</div>
+              <div class="verse-ar">إِنَّ رَبَّهُم بِهِمْ يَوْمَئِذٍ لَّخَبِيرٌۢ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="إِنّ"><span class="kelime-ar" style="color:#dc2626;">إِنَّ</span><span class="kelime-tr">şüphesiz, gerçekten</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="رَبّ"><span class="kelime-ar" style="color:#2563eb;">رَبَّهُم</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="ب"><span class="kelime-ar" style="color:#16a34a;">بِهِمْ</span><span class="kelime-tr">ile, -de</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="إِذ"><span class="kelime-ar" style="color:#9333ea;">يَوْمَئِذٍ</span><span class="kelime-tr">o zaman, -dığında</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="خَبِير"><span class="kelime-ar" style="color:#ea580c;">لَّخَبِيرٌۢ</span><span class="kelime-tr">haberdar</span></span></div>
-              <div class="ayet-meal">(9-11) Kabirlerde bulunanlar diriltilip dışarı atıldığı ve kalplerde gizlenenler ortaya konduğu zaman insan (halinin ne olacağını) düşünmez mi? Şüphesiz Rableri o gün onlardan tamamıyle haberdardır.</div>
+              <div class="verse-tr">(9-11) Kabirlerde bulunanlar diriltilip dışarı atıldığı ve kalplerde gizlenenler ortaya konduğu zaman insan (halinin ne olacağını) düşünmez mi? Şüphesiz Rableri o gün onlardan tamamıyle haberdardır.</div>
+              
             </article>
-            
+            </div>
         </section>
         
 </main>

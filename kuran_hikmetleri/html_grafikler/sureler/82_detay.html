@@ -15,7 +15,8 @@ body {
   background: #f5f1e8;
   color: #1e293b;
   font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-  line-height: 1.7;
+  line-height: 1.65;
+  font-size: 11pt;
 }
 .ust-cubuk {
   position: fixed;
@@ -42,10 +43,10 @@ body {
 .geri:hover { background: #1e293b; }
 .ust-baslik { color: #e2e8f0; font-weight: 600; font-size: 10.5pt; }
 .kitap-sayfa {
-  max-width: 880px;
+  max-width: 1100px;
   margin: 0 auto;
   background: #ffffff;
-  padding: 40px 48px 64px;
+  padding: 32px 36px 56px;
   min-height: 100vh;
   box-shadow: 0 2px 18px rgba(15, 23, 42, 0.08);
 }
@@ -57,7 +58,7 @@ body {
 }
 .sure-baslik h1 {
   font-family: 'Cinzel', 'Plus Jakarta Sans', serif;
-  font-size: 24pt;
+  font-size: 22pt;
   color: #0f172a;
   margin: 4px 0 8px;
   line-height: 1.3;
@@ -65,7 +66,7 @@ body {
 .sure-arapca {
   font-family: 'Amiri', serif;
   color: #1e40af;
-  font-size: 26pt;
+  font-size: 24pt;
   margin-left: 12px;
   font-weight: 400;
 }
@@ -79,8 +80,19 @@ body {
   font-weight: 600;
 }
 .rozet-acik { background: #475569; }
-.mevzu { margin-top: 34px; }
-.mevzu-baslik { padding: 10px 16px; border-radius: 6px; margin-bottom: 14px; }
+.tanitim {
+  margin-top: 26px;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 9.5pt;
+  color: #334155;
+}
+.tanitim h3 { margin: 0 0 6px; font-size: 11pt; color: #1e3a8a; }
+.tanitim p { margin: 0 0 6px; }
+.mevzu { margin-top: 30px; }
+.mevzu-baslik { padding: 10px 16px; border-radius: 6px; margin-bottom: 12px; }
 .mevzu-ad { font-size: 13pt; font-weight: 700; }
 .mevzu-kod {
   font-family: monospace;
@@ -92,61 +104,90 @@ body {
   margin-right: 8px;
 }
 .mevzu-meta { color: #64748b; font-size: 9.5pt; margin-top: 4px; }
-.ayet {
+/* Âyet kutuları: kitaptaki ag-kart ile aynı boyut */
+.ayetler {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 6px;
+  align-items: start;
+}
+.ag-kart {
   background: #ffffff;
   border: 1px solid #e2e8f0;
-  border-radius: 10px;
-  padding: 14px 18px;
-  margin-bottom: 12px;
+  border-radius: 6px;
+  padding: 6px 8px;
+  page-break-inside: avoid;
 }
-.ayet-baslik {
-  display: flex;
-  justify-content: space-between;
-  font-size: 9.5pt;
+.ag-kart-baslik {
+  font-size: 8.5pt;
   font-weight: 700;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
-.ayet-kod { color: #94a3b8; font-family: monospace; font-weight: 400; }
-.ayet-ar {
+.verse-ar {
   font-family: 'Amiri', serif;
-  font-size: 22pt;
-  line-height: 1.9;
+  font-size: 12pt;
+  line-height: 1.8;
   direction: rtl;
   text-align: right;
   color: #0f172a;
 }
-.ayet-meal {
-  font-size: 10.5pt;
-  color: #334155;
+.verse-tr {
+  font-size: 8pt;
+  color: #475569;
+  line-height: 1.5;
   border-top: 1px dashed #e2e8f0;
-  padding-top: 8px;
-  margin-top: 8px;
+  padding-top: 4px;
+  margin-top: 2px;
 }
+.ag-ortak {
+  font-size: 7.5pt;
+  color: #94a3b8;
+  font-style: italic;
+  margin-top: 4px;
+}
+.tefsir {
+  margin-top: 5px;
+  border-top: 1px dashed #e2e8f0;
+  padding-top: 4px;
+  font-size: 7.5pt;
+  color: #334155;
+  line-height: 1.5;
+}
+.tefsir summary {
+  cursor: pointer;
+  color: #1e40af;
+  font-weight: 700;
+  font-size: 7.5pt;
+}
+.tefsir p { margin: 4px 0 0; }
 .kelime-satiri {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
   direction: rtl;
-  margin: 6px 0 4px;
+  margin: 6px 0 8px 0;
 }
 .kelime {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  padding: 2px 6px 3px;
+  padding: 2px 6px 3px 6px;
   background: #f8fafc;
   border-radius: 4px;
+  min-width: 0;
 }
-.kelime-ar { font-family: 'Amiri', serif; font-size: 14pt; line-height: 1.6; }
-.kelime-tr { direction: ltr; font-size: 7.5pt; color: #334155; line-height: 1.2; }
-.ayet { page-break-inside: avoid; }
+.kelime-ar { font-family: 'Amiri', serif; font-size: 13pt; line-height: 1.6; }
+.kelime-tr { direction: ltr; font-size: 7pt; color: #334155; text-align: center; line-height: 1.2; }
 @media (max-width: 640px) {
-  .kitap-sayfa { padding: 22px 16px 40px; }
+  .kitap-sayfa { padding: 20px 16px 40px; }
   .sure-arapca { display: block; margin: 6px 0 0; }
+  .ayetler { grid-template-columns: 1fr; }
 }
 @media print {
   .ust-cubuk { display: none; }
   body { padding-top: 0; background: #ffffff; }
+  .tefsir { display: block; }
+  .tefsir > :not(summary) { display: block; }
 }
 </style>
 </head>
@@ -168,6 +209,8 @@ body {
     </div>
   </header>
 
+  <section class="tanitim"><h3>Elmalılı tefsiri: sûre tanıtımı</h3><p>Sûresi denilen bu sûre de Mekke&#x27;de inmiştir.</p><p>Âyetleri : Ondokuz;</p><p>Kelimeleri : Seksen,</p><p>Harfleri : Üçyüz yirmiyedidir.</p><p>Fasılası : harfleridir.</p><p>Meâl-i Şerifi</p></section>
+
   <div style="display:flex; width:100%; border-radius:8px; overflow:hidden; margin:20px 0 8px; box-shadow:0 2px 10px rgba(0,0,0,0.12);"><div style="flex: 5; background:#1e40af; border:1px solid #1d4ed8; padding:8px 4px; text-align:center; color:#ffffff; font-size:11px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Kıyamet (1-5)">Kıyamet (5)</div><div style="flex: 3; background:#065f46; border:1px solid #047857; padding:8px 4px; text-align:center; color:#ffffff; font-size:11px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="İnsan (6-8)">İnsan (3)</div><div style="flex: 1; background:#b45309; border:1px solid #d97706; padding:8px 4px; text-align:center; color:#ffffff; font-size:11px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Muhteva ve İlgili Âyetler (9-9)">Muhteva ve İlgili Âyetler (1)</div><div style="flex: 3; background:#991b1b; border:1px solid #b91c1c; padding:8px 4px; text-align:center; color:#ffffff; font-size:11px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Amellerin kaydı (10-12)">Amellerin kaydı (3)</div><div style="flex: 7; background:#4338ca; border:1px solid #4f46e5; padding:8px 4px; text-align:center; color:#ffffff; font-size:11px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Hatime ve Son Hükümler (13-19)">Hatime ve Son Hükümler (7)</div></div>
 
   
@@ -178,57 +221,47 @@ body {
             </div>
             <div class="mevzu-meta">Âyet 1 - 5 · <span class="rozet" style="background:#1e40af;">5 âyet</span></div>
           </header>
-          
-            <article class="ayet" style="border-left:5px solid #1e40af;">
-              <div class="ayet-baslik">
-                <span style="color:#1e40af;">Âyet 1</span>
-                <span class="ayet-kod">82:1</span>
-              </div>
-              <div class="ayet-ar"> إِذَا ٱلسَّمَآءُ ٱنفَطَرَتْ</div>
+          <div class="ayetler">
+            <article class="ag-kart" style="border-top:4px solid #1e40af;">
+              <div class="ag-kart-baslik" style="color:#1e40af;">Âyet 1</div>
+              <div class="verse-ar"> إِذَا ٱلسَّمَآءُ ٱنفَطَرَتْ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="إِذا"><span class="kelime-ar" style="color:#dc2626;">إِذَا</span><span class="kelime-tr">ne zaman, -dığında</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="سَماء"><span class="kelime-ar" style="color:#2563eb;">ٱلسَّمَآءُ</span><span class="kelime-tr">Gök</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="انفَطَرَتْ"><span class="kelime-ar" style="color:#16a34a;">ٱنفَطَرَتْ</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(1-5) Gökyüzü yarıldığı, yıldızlar döküldüğü, denizler birbirine katıldığı, kabirlerin içindekiler dışarı çıkarıldığı zaman, insanoğlu (yapıp) gönderdiklerini ve (yapamayıp) geride bıraktıklarını bir bir anlar.</div>
+              <div class="verse-tr">(1-5) Gökyüzü yarıldığı, yıldızlar döküldüğü, denizler birbirine katıldığı, kabirlerin içindekiler dışarı çıkarıldığı zaman, insanoğlu (yapıp) gönderdiklerini ve (yapamayıp) geride bıraktıklarını bir bir anlar.</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 1</summary><p>1- Gök çatladığı vakit,</p></details>
             </article>
             
-            <article class="ayet" style="border-left:5px solid #1e40af;">
-              <div class="ayet-baslik">
-                <span style="color:#1e40af;">Âyet 2</span>
-                <span class="ayet-kod">82:2</span>
-              </div>
-              <div class="ayet-ar">وَإِذَا ٱلْكَوَاكِبُ ٱنتَثَرَتْ</div>
+            <article class="ag-kart" style="border-top:4px solid #1e40af;">
+              <div class="ag-kart-baslik" style="color:#1e40af;">Âyet 2</div>
+              <div class="verse-ar">وَإِذَا ٱلْكَوَاكِبُ ٱنتَثَرَتْ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="إِذا"><span class="kelime-ar" style="color:#dc2626;">وَإِذَا</span><span class="kelime-tr">ne zaman, -dığında</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="كَوْكَب"><span class="kelime-ar" style="color:#2563eb;">ٱلْكَوَاكِبُ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="انتَثَرَتْ"><span class="kelime-ar" style="color:#16a34a;">ٱنتَثَرَتْ</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(1-5) Gökyüzü yarıldığı, yıldızlar döküldüğü, denizler birbirine katıldığı, kabirlerin içindekiler dışarı çıkarıldığı zaman, insanoğlu (yapıp) gönderdiklerini ve (yapamayıp) geride bıraktıklarını bir bir anlar.</div>
+              <div class="verse-tr">(1-5) Gökyüzü yarıldığı, yıldızlar döküldüğü, denizler birbirine katıldığı, kabirlerin içindekiler dışarı çıkarıldığı zaman, insanoğlu (yapıp) gönderdiklerini ve (yapamayıp) geride bıraktıklarını bir bir anlar.</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 2</summary><p>2- Yıldızlar döküldüğü vakit,</p></details>
             </article>
             
-            <article class="ayet" style="border-left:5px solid #1e40af;">
-              <div class="ayet-baslik">
-                <span style="color:#1e40af;">Âyet 3</span>
-                <span class="ayet-kod">82:3</span>
-              </div>
-              <div class="ayet-ar">وَإِذَا ٱلْبِحَارُ فُجِّرَتْ</div>
+            <article class="ag-kart" style="border-top:4px solid #1e40af;">
+              <div class="ag-kart-baslik" style="color:#1e40af;">Âyet 3</div>
+              <div class="verse-ar">وَإِذَا ٱلْبِحَارُ فُجِّرَتْ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="إِذا"><span class="kelime-ar" style="color:#dc2626;">وَإِذَا</span><span class="kelime-tr">ne zaman, -dığında</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="بَحْر"><span class="kelime-ar" style="color:#2563eb;">ٱلْبِحَارُ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="فُجِّرَتْ"><span class="kelime-ar" style="color:#16a34a;">فُجِّرَتْ</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(1-5) Gökyüzü yarıldığı, yıldızlar döküldüğü, denizler birbirine katıldığı, kabirlerin içindekiler dışarı çıkarıldığı zaman, insanoğlu (yapıp) gönderdiklerini ve (yapamayıp) geride bıraktıklarını bir bir anlar.</div>
+              <div class="verse-tr">(1-5) Gökyüzü yarıldığı, yıldızlar döküldüğü, denizler birbirine katıldığı, kabirlerin içindekiler dışarı çıkarıldığı zaman, insanoğlu (yapıp) gönderdiklerini ve (yapamayıp) geride bıraktıklarını bir bir anlar.</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 3</summary><p>3- Denizler yarılıp akıtıldığı vakit,</p></details>
             </article>
             
-            <article class="ayet" style="border-left:5px solid #1e40af;">
-              <div class="ayet-baslik">
-                <span style="color:#1e40af;">Âyet 4</span>
-                <span class="ayet-kod">82:4</span>
-              </div>
-              <div class="ayet-ar">وَإِذَا ٱلْقُبُورُ بُعْثِرَتْ</div>
+            <article class="ag-kart" style="border-top:4px solid #1e40af;">
+              <div class="ag-kart-baslik" style="color:#1e40af;">Âyet 4</div>
+              <div class="verse-ar">وَإِذَا ٱلْقُبُورُ بُعْثِرَتْ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="إِذا"><span class="kelime-ar" style="color:#dc2626;">وَإِذَا</span><span class="kelime-tr">ne zaman, -dığında</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="قَبْر"><span class="kelime-ar" style="color:#2563eb;">ٱلْقُبُورُ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="بُعْثِرَ"><span class="kelime-ar" style="color:#16a34a;">بُعْثِرَتْ</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(1-5) Gökyüzü yarıldığı, yıldızlar döküldüğü, denizler birbirine katıldığı, kabirlerin içindekiler dışarı çıkarıldığı zaman, insanoğlu (yapıp) gönderdiklerini ve (yapamayıp) geride bıraktıklarını bir bir anlar.</div>
+              <div class="verse-tr">(1-5) Gökyüzü yarıldığı, yıldızlar döküldüğü, denizler birbirine katıldığı, kabirlerin içindekiler dışarı çıkarıldığı zaman, insanoğlu (yapıp) gönderdiklerini ve (yapamayıp) geride bıraktıklarını bir bir anlar.</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 4</summary><p>4- Kabirlerin içi dışına getirildiği vakit,</p></details>
             </article>
             
-            <article class="ayet" style="border-left:5px solid #1e40af;">
-              <div class="ayet-baslik">
-                <span style="color:#1e40af;">Âyet 5</span>
-                <span class="ayet-kod">82:5</span>
-              </div>
-              <div class="ayet-ar">عَلِمَتْ نَفْسٌ مَّا قَدَّمَتْ وَأَخَّرَتْ</div>
+            <article class="ag-kart" style="border-top:4px solid #1e40af;">
+              <div class="ag-kart-baslik" style="color:#1e40af;">Âyet 5</div>
+              <div class="verse-ar">عَلِمَتْ نَفْسٌ مَّا قَدَّمَتْ وَأَخَّرَتْ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="عَلِمَ"><span class="kelime-ar" style="color:#dc2626;">عَلِمَتْ</span><span class="kelime-tr">Bildi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="نَفْس"><span class="kelime-ar" style="color:#2563eb;">نَفْسٌ</span><span class="kelime-tr">Nefis</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="ما"><span class="kelime-ar" style="color:#16a34a;">مَّا</span><span class="kelime-tr">Ne</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="قَدَّمَ"><span class="kelime-ar" style="color:#9333ea;">قَدَّمَتْ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="أَخَّرَ"><span class="kelime-ar" style="color:#ea580c;">وَأَخَّرَتْ</span><span class="kelime-tr">ve</span></span></div>
-              <div class="ayet-meal">(1-5) Gökyüzü yarıldığı, yıldızlar döküldüğü, denizler birbirine katıldığı, kabirlerin içindekiler dışarı çıkarıldığı zaman, insanoğlu (yapıp) gönderdiklerini ve (yapamayıp) geride bıraktıklarını bir bir anlar.</div>
+              <div class="verse-tr">(1-5) Gökyüzü yarıldığı, yıldızlar döküldüğü, denizler birbirine katıldığı, kabirlerin içindekiler dışarı çıkarıldığı zaman, insanoğlu (yapıp) gönderdiklerini ve (yapamayıp) geride bıraktıklarını bir bir anlar.</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 5</summary><p>5- Herkes neyi önünden gönderdiğini ve neyi geri bıraktığını bilir.</p></details>
             </article>
-            
+            </div>
         </section>
         
         <section class="mevzu">
@@ -238,37 +271,31 @@ body {
             </div>
             <div class="mevzu-meta">Âyet 6 - 8 · <span class="rozet" style="background:#065f46;">3 âyet</span></div>
           </header>
-          
-            <article class="ayet" style="border-left:5px solid #065f46;">
-              <div class="ayet-baslik">
-                <span style="color:#065f46;">Âyet 6</span>
-                <span class="ayet-kod">82:6</span>
-              </div>
-              <div class="ayet-ar">يَـٰٓأَيُّهَا ٱلْإِنسَـٰنُ مَا غَرَّكَ بِرَبِّكَ ٱلْكَرِيمِ</div>
+          <div class="ayetler">
+            <article class="ag-kart" style="border-top:4px solid #065f46;">
+              <div class="ag-kart-baslik" style="color:#065f46;">Âyet 6</div>
+              <div class="verse-ar">يَـٰٓأَيُّهَا ٱلْإِنسَـٰنُ مَا غَرَّكَ بِرَبِّكَ ٱلْكَرِيمِ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="ه"><span class="kelime-ar" style="color:#dc2626;">يَٰٓأَيُّهَا</span><span class="kelime-tr">o, ona (zamir)</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="إِنسان"><span class="kelime-ar" style="color:#2563eb;">ٱلْإِنسَٰنُ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="ما"><span class="kelime-ar" style="color:#16a34a;">مَا</span><span class="kelime-tr">Ne</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="غَرَّ"><span class="kelime-ar" style="color:#9333ea;">غَرَّكَ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="رَبّ"><span class="kelime-ar" style="color:#ea580c;">بِرَبِّكَ</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #0891b2;" title="كَرِيم"><span class="kelime-ar" style="color:#0891b2;">ٱلْكَرِيمِ</span><span class="kelime-tr">kerim, cömert</span></span></div>
-              <div class="ayet-meal">(6-8) Ey insan! Seni yaratıp seni düzgün ve dengeli kılan, seni istediği bir şekilde birleştiren, ihsanı bol Rabbine karşı seni aldatan nedir?</div>
+              <div class="verse-tr">(6-8) Ey insan! Seni yaratıp seni düzgün ve dengeli kılan, seni istediği bir şekilde birleştiren, ihsanı bol Rabbine karşı seni aldatan nedir?</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 6</summary><p>6- Ey insan! İhsanı bol Rabb&#x27;ine karşı seni aldatan nedir?</p></details>
             </article>
             
-            <article class="ayet" style="border-left:5px solid #065f46;">
-              <div class="ayet-baslik">
-                <span style="color:#065f46;">Âyet 7</span>
-                <span class="ayet-kod">82:7</span>
-              </div>
-              <div class="ayet-ar">ٱلَّذِى خَلَقَكَ فَسَوَّىٰكَ فَعَدَلَكَ</div>
+            <article class="ag-kart" style="border-top:4px solid #065f46;">
+              <div class="ag-kart-baslik" style="color:#065f46;">Âyet 7</div>
+              <div class="verse-ar">ٱلَّذِى خَلَقَكَ فَسَوَّىٰكَ فَعَدَلَكَ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="الَّذِي"><span class="kelime-ar" style="color:#dc2626;">ٱلَّذِى</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="خَلَقَ"><span class="kelime-ar" style="color:#2563eb;">خَلَقَكَ</span><span class="kelime-tr">yarattı</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="سَوَّى"><span class="kelime-ar" style="color:#16a34a;">فَسَوَّىٰكَ</span><span class="kelime-tr">ve, böylece</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="عَدَلَ"><span class="kelime-ar" style="color:#9333ea;">فَعَدَلَكَ</span><span class="kelime-tr">ve, böylece</span></span></div>
-              <div class="ayet-meal">(6-8) Ey insan! Seni yaratıp seni düzgün ve dengeli kılan, seni istediği bir şekilde birleştiren, ihsanı bol Rabbine karşı seni aldatan nedir?</div>
+              <div class="verse-tr">(6-8) Ey insan! Seni yaratıp seni düzgün ve dengeli kılan, seni istediği bir şekilde birleştiren, ihsanı bol Rabbine karşı seni aldatan nedir?</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 7</summary><p>7- O Allah ki seni yarattı, seni düzgün yapılı kılıp ölçülü bir biçim verdi.</p></details>
             </article>
             
-            <article class="ayet" style="border-left:5px solid #065f46;">
-              <div class="ayet-baslik">
-                <span style="color:#065f46;">Âyet 8</span>
-                <span class="ayet-kod">82:8</span>
-              </div>
-              <div class="ayet-ar">فِىٓ أَىِّ صُورَةٍ مَّا شَآءَ رَكَّبَكَ</div>
+            <article class="ag-kart" style="border-top:4px solid #065f46;">
+              <div class="ag-kart-baslik" style="color:#065f46;">Âyet 8</div>
+              <div class="verse-ar">فِىٓ أَىِّ صُورَةٍ مَّا شَآءَ رَكَّبَكَ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="فِي"><span class="kelime-ar" style="color:#dc2626;">فِىٓ</span><span class="kelime-tr">İçinde</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="أَيّ"><span class="kelime-ar" style="color:#2563eb;">أَىِّ</span><span class="kelime-tr">hangi</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="صُورَة"><span class="kelime-ar" style="color:#16a34a;">صُورَةٍ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="ما"><span class="kelime-ar" style="color:#9333ea;">مَّا</span><span class="kelime-tr">Ne</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="شاءَ"><span class="kelime-ar" style="color:#ea580c;">شَآءَ</span><span class="kelime-tr">Diledi</span></span><span class="kelime" style="border-bottom:3px solid #0891b2;" title="رَكَّبَ"><span class="kelime-ar" style="color:#0891b2;">رَكَّبَكَ</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(6-8) Ey insan! Seni yaratıp seni düzgün ve dengeli kılan, seni istediği bir şekilde birleştiren, ihsanı bol Rabbine karşı seni aldatan nedir?</div>
+              <div class="verse-tr">(6-8) Ey insan! Seni yaratıp seni düzgün ve dengeli kılan, seni istediği bir şekilde birleştiren, ihsanı bol Rabbine karşı seni aldatan nedir?</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 8</summary><p>8- Seni dilediği her hangi bir şekilde parçalardan oluşturdu.</p></details>
             </article>
-            
+            </div>
         </section>
         
         <section class="mevzu">
@@ -278,17 +305,15 @@ body {
             </div>
             <div class="mevzu-meta">Âyet 9 - 9 · <span class="rozet" style="background:#b45309;">1 âyet</span></div>
           </header>
-          
-            <article class="ayet" style="border-left:5px solid #b45309;">
-              <div class="ayet-baslik">
-                <span style="color:#b45309;">Âyet 9</span>
-                <span class="ayet-kod">82:9</span>
-              </div>
-              <div class="ayet-ar">كَلَّا بَلْ تُكَذِّبُونَ بِٱلدِّينِ</div>
+          <div class="ayetler">
+            <article class="ag-kart" style="border-top:4px solid #b45309;">
+              <div class="ag-kart-baslik" style="color:#b45309;">Âyet 9</div>
+              <div class="verse-ar">كَلَّا بَلْ تُكَذِّبُونَ بِٱلدِّينِ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="كَلّا"><span class="kelime-ar" style="color:#dc2626;">كَلَّا</span><span class="kelime-tr">hayır, asla</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="بَل"><span class="kelime-ar" style="color:#2563eb;">بَلْ</span><span class="kelime-tr">hayır, aksine</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="كَذَّبَ"><span class="kelime-ar" style="color:#16a34a;">تُكَذِّبُونَ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="دِين"><span class="kelime-ar" style="color:#9333ea;">بِٱلدِّينِ</span><span class="kelime-tr">din, hesap</span></span></div>
-              <div class="ayet-meal">(9-12) Hayır! Bütün bunlara rağmen siz yine de dini yalanlıyorsunuz. Şunu iyi bilin ki üzerinizde bekçiler, değerli yazıcılar vardır; onlar, yapmakta olduklarınızı bilir.</div>
+              <div class="verse-tr">(9-12) Hayır! Bütün bunlara rağmen siz yine de dini yalanlıyorsunuz. Şunu iyi bilin ki üzerinizde bekçiler, değerli yazıcılar vardır; onlar, yapmakta olduklarınızı bilir.</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 9</summary><p>9- Hayır hayır, siz cezayı yalanlıyorsunuz.</p></details>
             </article>
-            
+            </div>
         </section>
         
         <section class="mevzu">
@@ -298,37 +323,31 @@ body {
             </div>
             <div class="mevzu-meta">Âyet 10 - 12 · <span class="rozet" style="background:#991b1b;">3 âyet</span></div>
           </header>
-          
-            <article class="ayet" style="border-left:5px solid #991b1b;">
-              <div class="ayet-baslik">
-                <span style="color:#991b1b;">Âyet 10</span>
-                <span class="ayet-kod">82:10</span>
-              </div>
-              <div class="ayet-ar">وَإِنَّ عَلَيْكُمْ لَحَـٰفِظِينَ</div>
+          <div class="ayetler">
+            <article class="ag-kart" style="border-top:4px solid #991b1b;">
+              <div class="ag-kart-baslik" style="color:#991b1b;">Âyet 10</div>
+              <div class="verse-ar">وَإِنَّ عَلَيْكُمْ لَحَـٰفِظِينَ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="إِنّ"><span class="kelime-ar" style="color:#dc2626;">وَإِنَّ</span><span class="kelime-tr">şüphesiz, gerçekten</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="عَلَى"><span class="kelime-ar" style="color:#2563eb;">عَلَيْكُمْ</span><span class="kelime-tr">üzerine, üstüne</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="حافِظ"><span class="kelime-ar" style="color:#16a34a;">لَحَٰفِظِينَ</span><span class="kelime-tr">için, -e</span></span></div>
-              <div class="ayet-meal">(9-12) Hayır! Bütün bunlara rağmen siz yine de dini yalanlıyorsunuz. Şunu iyi bilin ki üzerinizde bekçiler, değerli yazıcılar vardır; onlar, yapmakta olduklarınızı bilir.</div>
+              <div class="verse-tr">(9-12) Hayır! Bütün bunlara rağmen siz yine de dini yalanlıyorsunuz. Şunu iyi bilin ki üzerinizde bekçiler, değerli yazıcılar vardır; onlar, yapmakta olduklarınızı bilir.</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 10</summary><p>10- Oysa üzerinizde koruyucular var.</p></details>
             </article>
             
-            <article class="ayet" style="border-left:5px solid #991b1b;">
-              <div class="ayet-baslik">
-                <span style="color:#991b1b;">Âyet 11</span>
-                <span class="ayet-kod">82:11</span>
-              </div>
-              <div class="ayet-ar">كِرَامًا كَـٰتِبِينَ</div>
+            <article class="ag-kart" style="border-top:4px solid #991b1b;">
+              <div class="ag-kart-baslik" style="color:#991b1b;">Âyet 11</div>
+              <div class="verse-ar">كِرَامًا كَـٰتِبِينَ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="كَرِيم"><span class="kelime-ar" style="color:#dc2626;">كِرَامًا</span><span class="kelime-tr">kerim, cömert</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="كاتِب"><span class="kelime-ar" style="color:#2563eb;">كَٰتِبِينَ</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(9-12) Hayır! Bütün bunlara rağmen siz yine de dini yalanlıyorsunuz. Şunu iyi bilin ki üzerinizde bekçiler, değerli yazıcılar vardır; onlar, yapmakta olduklarınızı bilir.</div>
+              <div class="verse-tr">(9-12) Hayır! Bütün bunlara rağmen siz yine de dini yalanlıyorsunuz. Şunu iyi bilin ki üzerinizde bekçiler, değerli yazıcılar vardır; onlar, yapmakta olduklarınızı bilir.</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 11</summary><p>11- Değerli yazıcılar</p></details>
             </article>
             
-            <article class="ayet" style="border-left:5px solid #991b1b;">
-              <div class="ayet-baslik">
-                <span style="color:#991b1b;">Âyet 12</span>
-                <span class="ayet-kod">82:12</span>
-              </div>
-              <div class="ayet-ar">يَعْلَمُونَ مَا تَفْعَلُونَ</div>
+            <article class="ag-kart" style="border-top:4px solid #991b1b;">
+              <div class="ag-kart-baslik" style="color:#991b1b;">Âyet 12</div>
+              <div class="verse-ar">يَعْلَمُونَ مَا تَفْعَلُونَ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="عَلِمَ"><span class="kelime-ar" style="color:#dc2626;">يَعْلَمُونَ</span><span class="kelime-tr">Bildi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="ما"><span class="kelime-ar" style="color:#2563eb;">مَا</span><span class="kelime-tr">Ne</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="فَعَلَ"><span class="kelime-ar" style="color:#16a34a;">تَفْعَلُونَ</span><span class="kelime-tr">Yaptı</span></span></div>
-              <div class="ayet-meal">(9-12) Hayır! Bütün bunlara rağmen siz yine de dini yalanlıyorsunuz. Şunu iyi bilin ki üzerinizde bekçiler, değerli yazıcılar vardır; onlar, yapmakta olduklarınızı bilir.</div>
+              <div class="verse-tr">(9-12) Hayır! Bütün bunlara rağmen siz yine de dini yalanlıyorsunuz. Şunu iyi bilin ki üzerinizde bekçiler, değerli yazıcılar vardır; onlar, yapmakta olduklarınızı bilir.</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 12</summary><p>12- Onlar, siz her ne yaparsanız bilirler</p></details>
             </article>
-            
+            </div>
         </section>
         
         <section class="mevzu">
@@ -338,77 +357,63 @@ body {
             </div>
             <div class="mevzu-meta">Âyet 13 - 19 · <span class="rozet" style="background:#4338ca;">7 âyet</span></div>
           </header>
-          
-            <article class="ayet" style="border-left:5px solid #4338ca;">
-              <div class="ayet-baslik">
-                <span style="color:#4338ca;">Âyet 13</span>
-                <span class="ayet-kod">82:13</span>
-              </div>
-              <div class="ayet-ar">إِنَّ ٱلْأَبْرَارَ لَفِى نَعِيمٍ</div>
+          <div class="ayetler">
+            <article class="ag-kart" style="border-top:4px solid #4338ca;">
+              <div class="ag-kart-baslik" style="color:#4338ca;">Âyet 13</div>
+              <div class="verse-ar">إِنَّ ٱلْأَبْرَارَ لَفِى نَعِيمٍ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="إِنّ"><span class="kelime-ar" style="color:#dc2626;">إِنَّ</span><span class="kelime-tr">şüphesiz, gerçekten</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="بَرّ"><span class="kelime-ar" style="color:#2563eb;">ٱلْأَبْرَارَ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="فِي"><span class="kelime-ar" style="color:#16a34a;">لَفِى</span><span class="kelime-tr">İçinde</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="نَعِيم"><span class="kelime-ar" style="color:#9333ea;">نَعِيمٍ</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(13-16) İyiler muhakkak cennette, kötüler de cehennemdedirler. Ceza gününde oraya girerler. Onlar (kâfirler) oradan bir daha da ayrılmazlar.</div>
+              <div class="verse-tr">(13-16) İyiler muhakkak cennette, kötüler de cehennemdedirler. Ceza gününde oraya girerler. Onlar (kâfirler) oradan bir daha da ayrılmazlar.</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 13</summary><p>13- Kuşkusuz iyiler nimet içindedirler.</p></details>
             </article>
             
-            <article class="ayet" style="border-left:5px solid #4338ca;">
-              <div class="ayet-baslik">
-                <span style="color:#4338ca;">Âyet 14</span>
-                <span class="ayet-kod">82:14</span>
-              </div>
-              <div class="ayet-ar">وَإِنَّ ٱلْفُجَّارَ لَفِى جَحِيمٍ</div>
+            <article class="ag-kart" style="border-top:4px solid #4338ca;">
+              <div class="ag-kart-baslik" style="color:#4338ca;">Âyet 14</div>
+              <div class="verse-ar">وَإِنَّ ٱلْفُجَّارَ لَفِى جَحِيمٍ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="إِنّ"><span class="kelime-ar" style="color:#dc2626;">وَإِنَّ</span><span class="kelime-tr">şüphesiz, gerçekten</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="فُجّار"><span class="kelime-ar" style="color:#2563eb;">ٱلْفُجَّارَ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="فِي"><span class="kelime-ar" style="color:#16a34a;">لَفِى</span><span class="kelime-tr">İçinde</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="جَحِيم"><span class="kelime-ar" style="color:#9333ea;">جَحِيمٍ</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(13-16) İyiler muhakkak cennette, kötüler de cehennemdedirler. Ceza gününde oraya girerler. Onlar (kâfirler) oradan bir daha da ayrılmazlar.</div>
+              <div class="verse-tr">(13-16) İyiler muhakkak cennette, kötüler de cehennemdedirler. Ceza gününde oraya girerler. Onlar (kâfirler) oradan bir daha da ayrılmazlar.</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 14</summary><p>14- Kötüler de cehennemdedirler.</p></details>
             </article>
             
-            <article class="ayet" style="border-left:5px solid #4338ca;">
-              <div class="ayet-baslik">
-                <span style="color:#4338ca;">Âyet 15</span>
-                <span class="ayet-kod">82:15</span>
-              </div>
-              <div class="ayet-ar">يَصْلَوْنَهَا يَوْمَ ٱلدِّينِ</div>
+            <article class="ag-kart" style="border-top:4px solid #4338ca;">
+              <div class="ag-kart-baslik" style="color:#4338ca;">Âyet 15</div>
+              <div class="verse-ar">يَصْلَوْنَهَا يَوْمَ ٱلدِّينِ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="يَصْلَى"><span class="kelime-ar" style="color:#dc2626;">يَصْلَوْنَهَا</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="يَوْم"><span class="kelime-ar" style="color:#2563eb;">يَوْمَ</span><span class="kelime-tr">gün</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="دِين"><span class="kelime-ar" style="color:#16a34a;">ٱلدِّينِ</span><span class="kelime-tr">din, hesap</span></span></div>
-              <div class="ayet-meal">(13-16) İyiler muhakkak cennette, kötüler de cehennemdedirler. Ceza gününde oraya girerler. Onlar (kâfirler) oradan bir daha da ayrılmazlar.</div>
+              <div class="verse-tr">(13-16) İyiler muhakkak cennette, kötüler de cehennemdedirler. Ceza gününde oraya girerler. Onlar (kâfirler) oradan bir daha da ayrılmazlar.</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 15</summary><p>15- Ceza günü ona girecekler.</p></details>
             </article>
             
-            <article class="ayet" style="border-left:5px solid #4338ca;">
-              <div class="ayet-baslik">
-                <span style="color:#4338ca;">Âyet 16</span>
-                <span class="ayet-kod">82:16</span>
-              </div>
-              <div class="ayet-ar">وَمَا هُمْ عَنْهَا بِغَآئِبِينَ</div>
+            <article class="ag-kart" style="border-top:4px solid #4338ca;">
+              <div class="ag-kart-baslik" style="color:#4338ca;">Âyet 16</div>
+              <div class="verse-ar">وَمَا هُمْ عَنْهَا بِغَآئِبِينَ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="ما"><span class="kelime-ar" style="color:#dc2626;">وَمَا</span><span class="kelime-tr">Ne</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title=""><span class="kelime-ar" style="color:#2563eb;">هُمْ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="عَن"><span class="kelime-ar" style="color:#16a34a;">عَنْهَا</span><span class="kelime-tr">hakkında, -den</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="غائِب"><span class="kelime-ar" style="color:#9333ea;">بِغَآئِبِينَ</span><span class="kelime-tr">ile, -de</span></span></div>
-              <div class="ayet-meal">(13-16) İyiler muhakkak cennette, kötüler de cehennemdedirler. Ceza gününde oraya girerler. Onlar (kâfirler) oradan bir daha da ayrılmazlar.</div>
+              <div class="verse-tr">(13-16) İyiler muhakkak cennette, kötüler de cehennemdedirler. Ceza gününde oraya girerler. Onlar (kâfirler) oradan bir daha da ayrılmazlar.</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 16</summary><p>16- Onlar o cehennemin gözünden kaçamazlar.</p></details>
             </article>
             
-            <article class="ayet" style="border-left:5px solid #4338ca;">
-              <div class="ayet-baslik">
-                <span style="color:#4338ca;">Âyet 17</span>
-                <span class="ayet-kod">82:17</span>
-              </div>
-              <div class="ayet-ar">وَمَآ أَدْرَىٰكَ مَا يَوْمُ ٱلدِّينِ</div>
+            <article class="ag-kart" style="border-top:4px solid #4338ca;">
+              <div class="ag-kart-baslik" style="color:#4338ca;">Âyet 17</div>
+              <div class="verse-ar">وَمَآ أَدْرَىٰكَ مَا يَوْمُ ٱلدِّينِ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="ما"><span class="kelime-ar" style="color:#dc2626;">وَمَآ</span><span class="kelime-tr">Ne</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="أَدْرَى"><span class="kelime-ar" style="color:#2563eb;">أَدْرَىٰكَ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="ما"><span class="kelime-ar" style="color:#16a34a;">مَا</span><span class="kelime-tr">Ne</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="يَوْم"><span class="kelime-ar" style="color:#9333ea;">يَوْمُ</span><span class="kelime-tr">gün</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="دِين"><span class="kelime-ar" style="color:#ea580c;">ٱلدِّينِ</span><span class="kelime-tr">din, hesap</span></span></div>
-              <div class="ayet-meal">(17-19) Ceza günü nedir bilir misin? Nedir acaba o ceza günü? O gün hiçbir kimse başkası için bir şey yapamaz. O gün iş Allah’a kalmıştır.</div>
+              <div class="verse-tr">(17-19) Ceza günü nedir bilir misin? Nedir acaba o ceza günü? O gün hiçbir kimse başkası için bir şey yapamaz. O gün iş Allah’a kalmıştır.</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 17</summary><p>17- Ceza gününün ne olduğunu sen bilir misin?</p></details>
             </article>
             
-            <article class="ayet" style="border-left:5px solid #4338ca;">
-              <div class="ayet-baslik">
-                <span style="color:#4338ca;">Âyet 18</span>
-                <span class="ayet-kod">82:18</span>
-              </div>
-              <div class="ayet-ar">ثُمَّ مَآ أَدْرَىٰكَ مَا يَوْمُ ٱلدِّينِ</div>
+            <article class="ag-kart" style="border-top:4px solid #4338ca;">
+              <div class="ag-kart-baslik" style="color:#4338ca;">Âyet 18</div>
+              <div class="verse-ar">ثُمَّ مَآ أَدْرَىٰكَ مَا يَوْمُ ٱلدِّينِ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="ثُمّ"><span class="kelime-ar" style="color:#dc2626;">ثُمَّ</span><span class="kelime-tr">sonra, ardından</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="ما"><span class="kelime-ar" style="color:#2563eb;">مَآ</span><span class="kelime-tr">Ne</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="أَدْرَى"><span class="kelime-ar" style="color:#16a34a;">أَدْرَىٰكَ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="ما"><span class="kelime-ar" style="color:#9333ea;">مَا</span><span class="kelime-tr">Ne</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="يَوْم"><span class="kelime-ar" style="color:#ea580c;">يَوْمُ</span><span class="kelime-tr">gün</span></span><span class="kelime" style="border-bottom:3px solid #0891b2;" title="دِين"><span class="kelime-ar" style="color:#0891b2;">ٱلدِّينِ</span><span class="kelime-tr">din, hesap</span></span></div>
-              <div class="ayet-meal">(17-19) Ceza günü nedir bilir misin? Nedir acaba o ceza günü? O gün hiçbir kimse başkası için bir şey yapamaz. O gün iş Allah’a kalmıştır.</div>
+              <div class="verse-tr">(17-19) Ceza günü nedir bilir misin? Nedir acaba o ceza günü? O gün hiçbir kimse başkası için bir şey yapamaz. O gün iş Allah’a kalmıştır.</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 18</summary><p>18- Evet, bilir misin nedir acaba o ceza günü?</p></details>
             </article>
             
-            <article class="ayet" style="border-left:5px solid #4338ca;">
-              <div class="ayet-baslik">
-                <span style="color:#4338ca;">Âyet 19</span>
-                <span class="ayet-kod">82:19</span>
-              </div>
-              <div class="ayet-ar">يَوْمَ لَا تَمْلِكُ نَفْسٌ لِّنَفْسٍ شَيْـًٔا ۖ وَٱلْأَمْرُ يَوْمَئِذٍ لِّلَّهِ</div>
+            <article class="ag-kart" style="border-top:4px solid #4338ca;">
+              <div class="ag-kart-baslik" style="color:#4338ca;">Âyet 19</div>
+              <div class="verse-ar">يَوْمَ لَا تَمْلِكُ نَفْسٌ لِّنَفْسٍ شَيْـًٔا ۖ وَٱلْأَمْرُ يَوْمَئِذٍ لِّلَّهِ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="يَوْم"><span class="kelime-ar" style="color:#dc2626;">يَوْمَ</span><span class="kelime-tr">gün</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="لا"><span class="kelime-ar" style="color:#2563eb;">لَا</span><span class="kelime-tr">Hayır/değil</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="مَلَكَتْ"><span class="kelime-ar" style="color:#16a34a;">تَمْلِكُ</span><span class="kelime-tr">sahip oldu</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="نَفْس"><span class="kelime-ar" style="color:#9333ea;">نَفْسٌ</span><span class="kelime-tr">Nefis</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="نَفْس"><span class="kelime-ar" style="color:#ea580c;">لِّنَفْسٍ</span><span class="kelime-tr">Nefis</span></span><span class="kelime" style="border-bottom:3px solid #0891b2;" title="شَىْء"><span class="kelime-ar" style="color:#0891b2;">شَيْـًٔا</span><span class="kelime-tr">şey, bir şey</span></span><span class="kelime" style="border-bottom:3px solid #be185d;" title="أَمْر"><span class="kelime-ar" style="color:#be185d;">وَٱلْأَمْرُ</span><span class="kelime-tr">emir, iş</span></span><span class="kelime" style="border-bottom:3px solid #ca8a04;" title="إِذ"><span class="kelime-ar" style="color:#ca8a04;">يَوْمَئِذٍ</span><span class="kelime-tr">o zaman, -dığında</span></span><span class="kelime" style="border-bottom:3px solid #4f46e5;" title="اللَّه"><span class="kelime-ar" style="color:#4f46e5;">لِّلَّهِ</span><span class="kelime-tr">Allah</span></span></div>
-              <div class="ayet-meal">(17-19) Ceza günü nedir bilir misin? Nedir acaba o ceza günü? O gün hiçbir kimse başkası için bir şey yapamaz. O gün iş Allah’a kalmıştır.</div>
+              <div class="verse-tr">(17-19) Ceza günü nedir bilir misin? Nedir acaba o ceza günü? O gün hiçbir kimse başkası için bir şey yapamaz. O gün iş Allah’a kalmıştır.</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 19</summary><p>19- O gün, hiç kimsenin başkası için hiçbir şeye sahip olamadığı gündür. O gün buyruk yalnız Allah&#x27;ındır.</p><p>&quot;Gök çatladığı vakit&quot;.</p><p>İNFİTAR, yarılmak demek ise de, yarılmanın başlangıcı olması daha çok yaraşır. &quot;O gün gök, bulutlar ile yarılacak ve melekler ard arda indirilecek&quot;(Furkan, 25/25); &quot;Gök yarılıp da kızaran, yanan ve yağ gibi eriyen bir gül gibi olduğu zaman&quot; (Rahmân, 55/37); &quot;O gün gök yarılmış, sarkmıştır.&quot; (Hâkka, 69/16); &quot;O günün şiddetinden gök çatlamıştır.&quot; (Müzzemmil, 73/18), &quot;Gök açılmıştır da kapı kapı olmuştur.&quot; (Nebe&#x27;, 78/19) âyetlerinin ifade ettiği gibi meleklerin inmesi için yarılmaya başlamasıdır ki göğün terkibi, gökte bulunan ci s imlerin düzeni bozularak âlemin harap olmaya yüz tuttuğu zamandır.</p><p>Önceki sûrenin başındaki kıyamet kopacağı sırada olacak oniki alâmet gibi burada da dört alâmet zikrediliyor. Bunlardan ikisi yukarıda, ikisi de aşağıda olan şeylere ait bulunuyor.</p><p>2. Birincisi göğün çatlaması, ikincisi yıldızlar saçıldığı vakit.</p><p>İNTİSER, dizili bir şeyin bağı koparak dökülüp dağılmasıdır. Yıldızların dökülmesi de genel çekim dengesinin bozulmasıyla meydana gelecek düşüş ve yok oluşlarıdır ki ipliği kopmuş inci dizilerinin dökülüp saçılmalarına benzetilerek yok oluşlarını ifade eden bir istiare-i musarraha veya mekniyye olduğunu söylemişlerdir.</p><p>3. Üçüncüsü, denizler tefcir olunduğu vakit.</p><p>Denizlerin tefciri; yarılıp akıtılması, aralarındaki ince uzun kara parçalarının yırtılıp hepsinin bir deniz haline gelmesi veya sularının çekilip kalmaması durumlarını ifade edebilir ki önceki sûrede geçen &quot;denizlerin ateşlenmesi&quot; ile ilgilidir.</p><p>4. Dördüncüsü, kabirler deşildiği vakit.</p><p>BA&#x27;SE RE, bahsere gibi toprağı deşip dağıtarak altını üstüne, içini dışına çevirmektir. Ki bu işin zorunlu neticesi olan &quot;çıkarmak&quot; mânâsında da kullanılır. Bu durumda Âdiyât Sûresi&#x27;nde geleceği gibi öldükten sonra diriltme ve çıkarmadan mecaz da olur.</p><p>Zema hşerî ve diğer bazıları şöyle demiştir: &quot;Bu kelime aslında iki ayrı kelimeden meydana gelmiş olup &quot;ba&#x27;s&quot; ve &quot;isare&quot;den kısaltılmıştır. &quot;Bu&#x27;siret ve usire&quot;nin hafifletilmiş yani kısaltılmış şeklidir. Bu, yontma yahut traşlama tabir olunur. Bunun Arapça&#x27;da Besmele, demek; salvele demek; hamdele, demek; havkale, demek ve dem&#x27;aze &quot;Allah onun izzet ve şerefini devam ettirsin.&quot; demek olduğu gibi birçok benzeri vardır.&quot; Nitekim son zamanlarda Türkçe&#x27;de de örnekleri çoğalmaya başlamıştır.</p><p>Buna gö re &quot;bu&#x27;siret&quot;, öldükten sonra dirilme vuku bulup kabirlerin içindekiler dışarı çıkarıldığı vakit demek olur ki &quot;Yer dehşetli sarsıntı ile sarsıldığı ve yer ağırlıklarını çıkardığı vakit..&quot; (Zilzâl, 99/1-2) Sûresi&#x27;nin mânâsı demektir.</p><p>5. Bu dört alâ met meydana geldiği vakit her nefis dünyada neyi öne almış ve neyi geri bırakmış olduğunu bilecektir. Çünkü önceki sûrede anıldığı üzere o vakit toplanıp dağılma olacaktır. Takdim ve tehir etmek sözlerinin birkaç mânâsı vardır:</p><p>1. Takdim ettiği, dünyada hayır olsun, şer olsun, önce kendi işlemiş olduğu amel, tehir ettiği de geriye bıraktığı, yani örnek olup da kendisinden sonra gelenlerin işlemelerine sebep olduğu iyi veya kötü amel. Çünkü hadisi şerifi gereğince &quot;her kim güzel bir geleneğe yol a çarsa ona onu işleyenlerin mükâfatı vardır. Her kim de kötü bir</p><p>geleneğe yol açarsa ona da onu işleyenlerin günah ve vebali vardır.&quot; Dolayısıyla önce kendi yaptığı, takdim ettiği ameli; ondan öğrenip de sonra yapanlarınki de tehir ettiği geriye miras olarak bıraktığı ameli demektir. Bu mânâ İbnü Abbas ve İbnü Mesud Hazretlerinden rivayet edilmiştir.</p><p>2. Takdim ettiği, işlemiş olduğu günah; tehir ettiği de yapmamış olduğu itaattir. Bu mânâda yine İbnü Abbas&#x27;tan bir rivayet olup aynı zamanda Katâde&#x27;nin de görüşüdür.</p><p>3. Takdim ettiği, yükümlü olduğu şeylerden işlemiş olduğu; tehir ettiği de işlememiş olduğu ameller.</p><p>4. Takdim ettiği, mallarından kendisi için harcadığı; tehir ettiği de varislerine bıraktığıdır.</p><p>5. Takdim ettiği, amelinin evveli; tehir ettiği de sonudur denilmiştir.</p><p>Bütün bunlar tekrar dirilişten sonra deşilip sahifeleri ile ortaya konacaktır. Her nefis de, önceki sûrede geçtiği gibi, hakkında iyi mi, kötü mü yapmış olduğunu bütün çıplaklığıyla ayrıntılı olarak o vakit bile cektir.</p><p>Dünyanın geçiciliğini duyuracak olan herhangi bir acı değişiklik ve felaket anında, ölüm geldiği ve ölüm belirtilerinin ortaya çıktığı saatlerde insan, ömründe ileri geri ne yaptığına kısa ve toplu bir ilim edinirse de bunun ayrıntıları asıl tekrar dirildikten sonra sahifelerin açılması ile olacaktır.</p><p>6. Böylece toplanıp dağılmanın vuku bulacağı haber verildikten sonra aklen de onu düşündürmesi gereken bir hatırlatma ve ihtar olmak üzere buyruluyor ki: Ey insan!. Ey o vakitler başına gelecek olan insan!</p><p>Ata&#x27;dan bu âyetin Velid b. Muğire sebebiyle; İkrime&#x27;den Übeyy b. Halef sebebiyle indiği; Kelbî ve Mukatil&#x27;den de Esed b. Kelede sebebiyle indiği rivayet edilmiştir. Söz konusu kişi Hz. Peygamber (s.a.v)&#x27;e vurmuştu. Yüce Allah hemen onu cezalandırmayıp bu âyeti indirdi, diye rivayet edilmiştir. Sonra da &quot;Hayır hayır, doğrusu siz cezayı yalanlıyorsunuz.&quot; buyrulmuş olduğundan dolayı birçokları burada insandan muradın kâfir insan&quot; demek olduğu kanaatına varmışlardır. Fakat &quot;iniş sebeb i nin özel olması hükmün genelliğine engel olamıyacağı&quot; için diğer birçokları da gurur ile isyan eden insanların hepsini kapsamış olması lafzın genelliğine daha uygun olduğunu beyan etmişlerdir. Ey insan! Seni ne mağrur etti?. Seni hangi şey aldattı, gaflete düşürdü de isyana sürükledi, seni yakışmayacak işler yapacak şekilde gururlandırdı?</p><p>O ikrâmı bol Rabbine karşı?.</p><p>Bu hitap ve soru korkutma hitabı olması nedeniyle gururlanmaya engel olacak kahr ve celal yani üstün gelerek yıkıp ezme ve ululuk sıfatlarından biri zikredilmesi daha açık görünürken &quot;kerim&quot; vasfı ile özel olarak ilâhî ikramın hatırlatılmasında ince bir nükte ile büyük bir ahlakî mânâya işaret vardır. Bu, her şeyden önce şunu anlatıyor ki, ikram ve ihsanın gereği ona karşı guru r lanarak saygısızlık etmek, ahlâksızlık yapmak, günaha girmek değil, aksine o ikramın yüksekliği oranında iman ve şükür ile itaatı, saygıyı, hürmet ve tazimi artırmak, nankörlük ve isyandan sakınarak yüce ahlâka yükselmektir. Şeytanların dediği gibi, &quot;Adam sen de Allah kerimdir. İstediğini yap. Dünyada sana ettiği iyilik ve ikramını ahirette de eder.&quot; diyerek umursamamak yalnız bir kıyas yaparak aldanmaktır. O lütuf ve ikrama layık olmadığını, onu hak etmediğini göstermektir. Çünkü gerçek ikram bir hikmet g ö zetilerek yapılan ikramdır. Gerçi ikram eden, yaptığı lütuf ve ikrama, gösterdiği büyüklük ve iyiliğe karşı kendisi için bir bedel ve karşılık gözetmeye tenezzül etmez. Fakat hikmetli davranmayan, ikramını layık olduğu yerde kullanmayan da kerim değil, bi r müsrif demek olur. Onun için ikram sahibine karşı iman ve şükür ile itaat ve saygıyı artıracak yerde onun keremine mağrur olup da saygısızlık etmek büyük bir aldanış olduğu hatırlatılmıştır ki, bu mânâ tamamen &quot;Sakın o aldatıcı şeytan sizi Allah&#x27;ın affına güvendirerek aldatmasın.&quot;(Lokman, 31/33; Fâtır, 35/5) âyetinin mânâsıdır.</p><p>Bu soruyu bazıları, &quot;beni senin keremin mağrur etti ey Rabbim!&quot; dedirtmek için kulun göstereceği delili onu telkin etmek türünden bir kerem olarak anlamak istemişler ve bu bir hayli yayılmış ise de, bu anlayış sûrenin ifade ettiği korkutma akış ve üslubuna uygun düşmez. Ahlâk yüksekliği açısından düşünüldüğü zaman Allah&#x27;ın kerem sahibi olduğuna imanı olduğu halde isyan etmiş bir müminin bu hitaptan duyacağı utanç ve üzüntü k â firlerin duyamayacağı bir üzüntü hissi olmak gerekir. Nitekim, &quot;Suheyb ne güzel kuldur. Allah&#x27;tan korkmasa bile, isyan etmezdi.&quot;( hadisinde bu yüce ahlâka işaret buyrulmuştur.</p><p>Bazı âriflerin &quot;Allah&#x27;tan korkmasaydım yine isyan etmezdim.&quot; demesi de bu saygıdır. Fatır Sûresi&#x27;ndeki &quot;Allah&#x27;tan, kulları içinde ancak âlimler hakkıyla korkar.&quot;(Fatır, 35/28) âyetinin de bunu ifade ettiği daha önce geçmişti.</p><p>Tefsirciler bu gurura sebep olmak üzere üç şey nakletmişlerdir:</p><p>Birisi, Katade&#x27;den rivayet olunduğu üzere şeytanın kötü bir şeyi güzel göstererek aldatmasıdır. &quot;O aldatıcı şeytan sizi Allah&#x27;a karşı aldattı.&quot;(Hadid, 57/14).</p><p>Diğeri, Hasen&#x27;den rivayet edildiği üzere cehalettir.</p><p>Diğeri de, Mukatil&#x27;den rivayet edildiği üzere, işin başlangıcında hemen ceza verilmediğinden dolayı affa aldanmaktır.</p><p>Bir de Fuzayl b. Iyaz Hazretlerine kıyamet günü, &quot;İhsanı bol Rabb&#x27;ine karşı seni aldatan nedir?&quot; buyurduğu zaman ne dersin denildiğinde, &quot;indirilmiş perdelerin&quot;, yani &quot;günahlara örttüğün örtüler&quot; derim demiş olduğu da söylenmiştir.</p><p>Gayet açıktır ki, bu son ikisi, yani hemen cezalandırılmadığından dolayı afva ve günahların örtülmesine güvenmek bir cahilliktir. Şeytanın kötü şeyleri güzel göstermesine aldanmak da öyle demektir. Gerçekten Ebu Hayyan ve Alûsî&#x27;nin kaydettikleri gibi Hz. Peygamber (s.a.v)&#x27;den rivayet olunduğuna göre, O bu âyeti okumuş ve &quot;onun cahilliği&quot; demiştir. Keza Hz. Ömer (r.a) de bunu söyleyip &quot;İnsan cidden çok zalim, çok cahildir.&quot; (Ahzab, 33/72) âyetini okum u ştur. Bunun &quot;Allah&#x27;tan, kulları arasında ancak âlim olanlar hakkıyla korkar.&quot;(Fatır, 35/28) âyetinin ifade ettiği &quot;ancak&quot; mânâsına uygun olduğu ortadadır. Demek ki korkmak, Allah&#x27;a dair bilginin derecesi ile doğru orantılıdır.</p><p>7. Yüce Allah&#x27;ın Rabliği ve kerem sahibi olduğu da en açık misali olmak üzere insanın yaratılışında herkesin kendisine görünüp duran kudret eserleri ve kerem ile şöyle hatırlatılıyor:</p><p>O Rabbin ki seni yarattı. Burada yaratma; bünye ve uzuvları düzgünleştirme, ölçülü yapma, şekil verme ve parçaları birleştirip oluşturmadan daha önce olmak karinesiyle önce var kılmak demek olduğu açıktır. Yine bilinmektedir ki her nimetin esası olan var olma, ilâhî lütuf ve keremin birincisidir.</p><p>Sonra da senin bünye ve uzuvlarını düzgünleştirdi . &quot;Seni bir topraktan, sonra bir nutfeden yarattı. Sonra da seni bir insan şekline getirdi.&quot;(Kehf, 18/37) buyrulduğu ve daha bir çok âyette geçtiği gibi yaratılışını aşamadan aşamaya geçirerek ruh üflenecek şekilde</p><p>insanlık seviyesine getirdi; bünyeni, uzuvlarını, kuvvetlerini düzenine koydu, düzgünleştirdi de sana bir uyum ve itidal verdi. Burada biri &quot;adl&quot; kökünden birisi de &quot;ta&#x27;dil&quot; kökünden şeklinde olmak üzere iki kırâet vardır. İkisi de bir mânâya olarak denkleştirmek, norma l hale getirmek demek olduğuna göre az önce geçen &quot;tesviye&quot;nin mükemmel hale gelmiş olduğunu ifade etmek üzere birkaç şekilde tefsir edilmiştir.</p><p>BİRİNCİSİ, Mukatil&#x27;den rivayet edildiğine göre göz, kulak, el, ayak gibi çift uzuvların denkliği ve ayrıntıları anatomide bilindiği üzere vücudun her taraftan orantılı ve düzgünlüğü demek olup &quot;Evet, onun parmak uçlarını bile düzeltmeye kadir olduğumuz halde&quot;(Kıyamet, 75/4) âyetinin ifade ettiği gibi olur. Fakat bunda insanlık özelliğini ifade eden itibar v e değer açık değildir.</p><p>İKİNCİSİ, Ata&#x27;nın İbnü Abbas&#x27;tan rivayet ettiği izah şeklinde ise: &quot;Belini doğrultu, dik ve dengeli kıldı, eğri belli hayvanlar gibi yapmadı.&quot; diye tefsir edilmiştir ki, bunun hem insanın olgunlaştığını gösteren özelliği, hem de bünye ve uzuvları düzene koyduktan ve insanı, insan denilecek şekle getirdikten sonra olması daha açıktır. Zira çocuklarda görüldüğü gibi insanın belini doğrultup da ayakta dik ve doğru olarak yürüyebilmesi de uzuvları düzene koymanın tekamülünde bir aşa m adır.</p><p>ÜÇÜNCÜSÜ, Ebu Ali Fârisî&#x27;nin yazdığına göre, &quot;sana itidal verdi&quot; demek, bu mânâların hepsini ifade edici olarak &quot;Seni en güzel şekle koyup en güzel biçimde çıkardı ve bu denge ile seni akıl, fikir ve kudreti kabul etmeye yetenekli kılıp bu şekilde diğer canlı ve bitkilere hakim kıldı. Seni, bu âlemdeki diğer varlıkların ulaşamadığı bir olgunluk derecesine çıkardı.&quot; diye tefsir edilmiştir ki &quot;Onun yaratılışını tamamladığım ve içine ruhumdan üflediğim vakit.&quot; (Hıcr, 15/29) ve &quot;Onları, yarattı k larımızın bir çoğundan gerçekten üstün kıldık.&quot; (İsra, 17/70) mânâlarına uygundur. Bunların hepsi Allah&#x27;ın bir lütuf ve keremidir.</p><p>Bundan başka şeddesiz olarak döndürmek, eğip çevirmek mânâsına da tefsir edilmiştir ki, bunun da iki ayrı mânâya gelme ihtimali vardır.</p><p>BİRİNCİSİ, eksiklikten olgunluğa, uygun olmayan şekilden uygun olan şekle çevire çevire en güzel suret ve biçime getirdi demek olarak, yine arınma mertebelerini ifade etmiş olur ki bu da kerem sayılan şeylerdendir.</p><p>İKİNCİSİ, dü zgünleştirilerek en güzel biçime getirildikten sonra</p><p>&quot;Sonra da onu aşağıların aşağısına çevirdik.&quot; (Tin, 95/5) buyrulduğu üzere olgunlaştıktan sonra eksiltmek ve aşağılara doğru çevirmek mânâsını ifade etmiş olur ki, bu mânâ keremi değil de o kereme aldananlara karşı kerem sahibinin tasarruf kudretini göstererek korkutma ve ahiretin var olduğunu gösterme mahiyetinde olmuş olur.</p><p>8. &quot;Seni dilediği her hangi bir şekilde parçalardan oluşturdu&quot;. Bu âyetin de bir kaç izah şekli vardır:</p><p>BİRİNCİSİ, edatı fiili ile ilgili yani onun mef&#x27;ûlü; kelimesi meâlinde sorudan çevrilmiş sıfat, onu desteklemek için ziyade edilmiş; cümlesi kelimesinin sıfatı ve bunlarla cümlesi &#x27;nin bir beyanı olmaktadır ki meâli şöyle olur: &quot;Allah seni çeşitli sure t lerden dilediği her hangi bir surette oluşturup şekil verdi&quot;. Bu mânâya göre &quot;terkib&quot;, &quot;ahsen-i takvim&quot;i, yani en güzel biçimde yaratmayı beyan ile Allah&#x27;ın keremlerinden biri olur.</p><p>İKİNCİSİ, &#x27;nin şart edatı olmasıdır. Dolayısıyla gelecek zaman mânâsında olarak, &quot;Seni hangi surette dilerse öyle oluşturup şekil verir. Dilerse o güzel insan kılığından çıkarır da en çirkin suretlere kor, aşağıların aşağısına yuvarlar.&quot; demek olur. Bu mânâya göre, gururun cezasına işaretle bir korkutma olur.</p><p>ÜÇÜN CÜSÜ; , fiilinin mef&#x27;ûlü; e sıfat; cümlesi de &#x27;nın mevsûl veya sıfat veya şart olmasına göre ayrı bir cümle olmaktır. Bu takdirde mânâ, &quot;Seni her hangi bir surette denkleştirdi, yahut evirdi çevirdi, dilediği gibi seni oluşturdu, yahut dilerse b a şka bir surette oluşturur.&quot; demek olup önceki iki mânânın ikisini de kapsar. Âyetin, bu mânâların hepsine gelme ihtimali vardır ve bu mânâları vermek sahihtir. Bazısında suret, farklı güzellik mertebelerinden herhangi birisi; bazısında da güzellik ve çirk i nlikte farklı ve değişik şekillerden herhangi birisi demektir. Dolayısıyla ana, baba ve diğer akrabaya benzeyip benzememek, renk, uzunluk, kısalık, erkeklik dişilik, sağlamlık, çürüklük, iyi veya kötü kişi olmak, zekilik ve ahmaklık gibi maddî ve manevî b ü tün suret ve vasıfları kapsar.</p><p>İbnü Cerir, Ebu Rebah Lahmi&#x27;den şöyle rivayet etmiştir: Hz. Peygamber (s.a.v) Ebu Rebah&#x27;a, &quot;neyin oldu?&quot; diye sormuş. Sonra aralarında şu konuşma geçmiş:</p><p>- Ey Allah&#x27;ın Resulü! Ne çocuğum olabilir. Ya oğlan, ya kı z.</p><p>- Kime benziyor?</p><p>- Ey Allah&#x27;ın Resulü! Kime benzeyebilir? Ya babasına, ya anasına.</p><p>- Öyle deme. Meni rahimde yerleşince yüce Allah onunla Âdem arasındaki her nesebi hazır eder. Allah&#x27;ın kitabında şu âyeti okumadın mı? &quot;Seni dilediği herhangi bir şekilde terkib etti.&quot; Buradaki demektir. Yani, seni dilediği şekle sokar, o surete koyar.</p><p>Görüldüğü gibi hadis üç şeye işaret ediyor:</p><p>BİRİNCİSİ, yahut &#x27;da şart mânâsının bulunması,</p><p>İKİNCİSİ, atalara çekme (atavizm) denilen soya çekme özelliğidir ki, bir meni Âdem&#x27;den beri atalarından intikal ede gelen soyların, özelliklerin her birini kapsayabilir.</p><p>ÜÇÜNCÜSÜ de tabiî (doğal) ve irsî (kalıtsal) demek olan bu soya çekim hususunda da etkili olanın, doğa değil, yüce Allah&#x27;ın dilemesi olduğunun isbatıdır. Çünkü ana-baba gibi yakın akrabaların özelliklerine ta Âdem&#x27;e kadar varan uzak atalardan birinin özelliğinin galip getirilmesi, o farklı ve değişik tabiat ve suretler üzerinde yüce Allah&#x27;ın irade ve dilemesinin hakim olduğunu gösterir. Demek ki iyi veya kötü olarak tabiî (doğal) ve irsî(kalıtsal) değerler yok değildir. Onlar da düşünülmelidir. Fakat hükmün onlarda değil, sadece yüce Allah&#x27;ın dilemesinde olduğu bilinmeli ve ona yükselmeye çalışmalıdır. Bu ise yüce Allah&#x27;ın keremine aldanmakla değil, onun keremiyle beraber kudret ve hikmetini de düşünerek ilerde ona layık olmak hakkını kazanmak ve azabından korunmak için iman ve şükür ile itaate ve iyi amellere sarılmakla olur.</p><p>9. Hayır hayır. Bu, Allah&#x27;ın keremine güvenip aldanmaktan sakındırmaktır. Yani &quot;öyle mağrur olmayın&quot;. Fakat siz, O keremin kıymetini bilmiyorsunuz dini yalanlıyorsunuz, o kerim olan Rabb&#x27;ınızın keremine karşı onun emir ve yasaklarına teslim olarak, yani tam bir ihlâs (içtenlik) ve boyun eğ i şle itaat ederek o kereme layık yüksek ahlâk ile güzel ameller yapmak görev ve sorumluluğuna ve ona göre hesap ve ceza olacağına inanmıyorsunuz. Bir gün olup da Allah&#x27;ın iyilere iyiliklerine karşılık sevap ve mükafat vereceğini, kötülere de kötülükleri se b ebiyle ceza verceğini yalanlar bir şekilde gururlanıyor, aldanıyorsunuz. Çünkü Allah&#x27;ın lütuf ve kereminden ümidi kesmek, sevap ve mükâfatına inanmamak küfür olduğu gibi, azap ve cezasından emin olmak, güç ve kudretini tanımamak da küfürdür. Bunu açıkça y a pmak açık küfür, dolaylı yapmak da dolaylı küfür olmuş olur.</p><p>Bundan hitabın kâfirlere olduğu anlaşılırsa da kelimesi ile iki cümleyi birbirine bağlamak, kelâmda bir kesinti ve geçiş ifade ettiği için daha önce ifade edilen şeylerin kâfir ve asiyi kapsamasına engel olmaz. O gururun küfre kadar varabileceğini beyan ile sakındırmayı takviye edip desteklemiş olur.</p><p>Fatiha Sûresinde &quot;din gününün sahibi&quot;(Fatiha, 1/4) âyetinin tefsirinde geçtiği üzere burada da &quot;din&quot;, küllî ve cüz&#x27;î olarak iki mânâ ile de düşünülmüştür: İslâm ve ceza. Çünkü din, lügatte ceza, yani yapılan bir işe iyi veya kötü bir karşılık vermektir. Bunun hakkı da iyiye iyi ile, kötüye kötü ile cezadır. Bunun için Yusuf Sûresi&#x27;nde &quot;melik&#x27;in kanununa göre.&quot; (Yusuf, 12/76) âyetinde geçtiği üzere görev ve sorumluluk hükümlerini belirleyen kural ve âdetlere dahi din ve şeriat denir. &quot;Sizin için dinden Nuh&#x27;a tavsiye ettiğini şeriat yaptı.&quot;(Şûrâ, 42/13) âyetinin tefsirine bkz.)</p><p>Bu nedenle örf ve şeriatte din, insanları hamde, yani medih ve övgü ile mükafata layık, güzel tercihleriyle iyi olan şeylere kendiliklerinden sevk eden ilâhî kanundur. Bunun hakikati de &quot;Doğrusu Allah katında din ancak İslâm&#x27;dır.&quot;(Âl-i İmran, 3/19) buyrulduğu üzere İslâm&#x27;dır. Bunun esaslarından biri de a h irette tekrar dirilmek ve cezadır. İşte burada Allah&#x27;ın keremine mağrur olup aldanmakla dini yalanlamak, doğrudan doruya Allah&#x27;ın dini olan İslâm&#x27;ı yalanlamak demek olursa da, bu yalanlama, özellikle onun hükümlerinden biri olan öldükten sonra dirilme ve c ezayı ve bunun gereği olarak görev ve yükümlülüğü yalanlamak mânâsına geldiği için, &quot;siz mağrurlanıp saygısızlık etmekle cezayı ve dolayısıyla dini kökünden yalanlamış oluyorsunuz&quot; meâlinde olur. Bundan dolayı böyle yerlerde &quot;din&quot;i sadece &quot;ceza&quot; ile tefsi r etmek daha kestirme olacağından çoğunlukla bu mânâ tercih olunmuştur. Yani, siz demek ki cezayı yalanlıyorsunuz ve onun için Allah&#x27;tan korkmuyor mağrurlanıyorsunuz.</p><p>10. Oysa üzerinizde muhakkak koruyucular var, yani iyi ve kötü her yaptığınızı gözetip korumak ve zabıt (tutanak) tutmakla görevli hafıza güçleri, &quot;hafaza&quot; ve &quot;hâfizîn&quot; denilen gözcü melekler var.</p><p>11. Öyle ki değerli ve yazıcı ünvanını almışlardır. Her biri Allah katında saygın, görevlerinde kusur etmez kâtipler, dürüst hak yazıcılarıdır.</p><p>12. Her ne yapıyorsanız bilirler, iyi ve kötü hiç birini kaybetmeden hepsini hak yazısıyla amel defterinize bile bile yazarlar ve öyle şahitlik ederler.</p><p>Önceki sûrede anılan sahifeler öyle dağıtılırlar.</p><p>Bu kâtiplerin bu niteliklerle ni telenmesinde hesap ve ceza işinin önemini</p><p>hatırlatma vardır. Öyle ki yüce Allah bu iş için öyle değerli kâtipler memur etmiştir. Onun için o yazının, o ilim ve korumanın neticesini beyan mânâsında buyruluyor ki:</p><p>13. Kuşkusuz iyiler, sözünde ve fiilinde doğru, hayır ehli iyi kişiler (Geniş bilgi için Dehr Sûresinin tefsirine bkz.) Muhakkak bir Naîm cennetinde</p><p>14. ve kuşkusuz ki suçlular, Rabb&#x27;ine karşı terbiyesizlik edip aşırı isyan ve muhalefet yoluna sapanlar muhakkak bir Cahîm, (yani şiddetli bir cehennem ateşi) içindedirler.</p><p>15. O din günü, yani yalanladıkları o ceza günü ona yaslanacaklardır.</p><p>16. Ve onlar o cehennemden gaip olmayacaklardır. Daima ve sonsuza kadar onun içinde kalacaklardır.</p><p>İşte o yaratılışın, o ilmin, o yazının, o korumanın neticesi iyiler ile kötüleri böyle ayırt ederek iyileri cennete, kötüleri cehenneme gönderecek olan sonsuz cezadır.</p><p>İbnü Kuteybe&#x27;nin &quot;Kitabu&#x27;lİmâme&quot;sinde ayrıntıları anlatıldığı üzere şöyle nakledilir:</p><p>Süleyman b. Abdülmelik Mekke&#x27;ye giderken Medine&#x27;ye uğradığında ileri gelen zatlardan biri olan Ebu Hazim&#x27;i getirtmiş ve onunla karşılıklı bir sohbette bulunmuş idi. Ebu Hazim ona çok acı öğütler vermiş, neticede aralarında şu sorulu cevaplı konuşma olmuştu.</p><p>Süleyman: Ey Eb u Hazim! Yarın Allah&#x27;a varmak nasıl olacak?</p><p>Ebu Hazim: İhsan sahibine gelince o, yolculuğundan evine ve çoluk çocuğuna dönen bir yolcu gibi; isyankâr ise efendisine geri dönen kaçak köle gibi Allah&#x27;a varacak.</p><p>Bunun üzerine Süleyman ağladı da:</p><p>Keşke Allah yanında bize ne var bilseydim dedi.</p><p>Ebu Hazim: Amelini Allah&#x27;ın kitabına arzet.</p><p>Süleyman: Allah&#x27;ın kitabının neresinde?</p><p>Ebu Hazim: &quot;iyiler cennette, kötüler cehennemde.&quot;</p><p>Bu hatırlatmadan sonra o ceza gününün zeka ile ve akıl yürütmeyle tahmin edilemeyen azamet ve dehşeti haber verilmek üzere buyruluyor ki:</p><p>17. Sana o din gününün ne olduğunu ne bildirdi? Yani,</p><p>onun ne büyük ceza günü olduğunu bildin mi? Ey muhatap! Hayır sen onu akıl yoluyla bilemezsin. Çünkü o, dünyada bir benzeri olmuş, akıl yürütmeyle bilinebilecek ceza günleriyle ölçülemez.</p><p>Bazıları buradaki hitabın, engel olma ve korkutma yoluyla kâfire olduğu kanaatine varmış ise de çoğunluğun açıklamasına göre Resulullah (s.a.v)&#x27;a hitaptır. Çünkü vahiy gelmezden evvel bunu bilmiyordu. Bununla beraber önceki sûrede geçmiş olan &quot;Her nefis ne hazırlayıp getirdiğini bilecek.&quot; (Tekvir, 81/14) âyeti ile bu sûrenin başında geçmiş bulunan</p><p>âyeti gereği her nefis için o günün dehşet ve azametini hakkıyla bilmek ancak bizzat bu olayın meydana gelme ve görülme zamanında olabileceğinden dolayı hitabın her nefse yapılmış genel bir hitap olması bizce daha uygundur.</p><p>18. &quot;Evet, bildin mi nedir o ceza günü?&quot; Bu tekrarda iki nükte vardır:</p><p>Birisi, korkutmayı desteklemek için te&#x27;kit (vurgu)tir. Biri de, cennetliklere ait olan ile cehennemliklere ait olana ayrı ayrı işaret olmasıdır.</p><p>Bu sorudan sonra şöyle haber veriliyor:</p><p>19. O din günü, o ceza o gündür ki, hiçbir nefis bir n efis için bir şeye mâlik olamaz. Hiç kimse ne mümin ne kâfir, ne iyi ne kötü hiç kimsenin hesabına zerre kadar bir şey yapamaz. O gün emir yalnız Allah&#x27;ındır. O ne emrederse ancak o olacaktır. Onun için, &quot;Ölçü ve tartıda hile yapanların vay haline...&quot;(Mutaffifin, 83/1)</p><p>[Herhangi bir yanlislik gördügünüz zaman lütfen uyariniz. Simdiden tesekkürler.]{.small}</p><p>[mucahid dizayn: &lt;info@mucahid.net&gt;  ]{.small}</p></details>
             </article>
-            
+            </div>
         </section>
         
 </main>

@@ -14,6 +14,7 @@ import re
 import glob
 import json
 import subprocess
+from html import escape as html_escape
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -612,6 +613,62 @@ function showSurahModal(sno) {{
 KELIME_RENKLERI = ["#dc2626", "#2563eb", "#16a34a", "#9333ea", "#ea580c",
                    "#0891b2", "#be185d", "#ca8a04", "#4f46e5", "#0d9488"]
 
+ELMALILI_DIZIN = BASE_DIR / "kaynak" / "tafseer" / "elmalili"
+_ELMALILI_BASLIK = re.compile(r"^(?:\d+/(\d+)\.|(\d+)((?:-\d+)*)-)\s*(.*)$", re.S)
+_ELMALILI_BOLUM = re.compile(r"^\d+-[A-ZÇĞİÖŞÜ' ]+:\s*$")
+
+
+def _elmalili_temiz(p):
+    """Kaynak dosyadaki kaçış işaretlerini ve satır kırımlarını temizler."""
+    p = p.replace("\\'", "'").replace('\\"', '"').replace("\\", "")
+    return re.sub(r"\s*\n\s*", " ", p).strip()
+
+
+def elmalili_tefsiri(sno, n_ayet):
+    """Elmalılı tefsirini sûre bazında âyetlere böler.
+    Döner: (tanıtım_paragrafları, {âyet: paragraflar | ("ortak", ilk_âyet)}).
+    Âyet başlığı (`N-`, `N-M-`, `N/M.`) ancak beklenen sıradaki âyet numarasına yakınsa kabul edilir;
+    alt maddeler (`2\\.`, `1)`) ve bölüm başlıkları (`36-YASİN:`) başlık sayılmaz."""
+    yol = ELMALILI_DIZIN / f"{sno}.md"
+    if not yol.exists():
+        return [], {}
+    t = yol.read_text(encoding="utf-8")
+    paragraflar = [p for p in re.split(r"\n\s*\n", t) if p.strip()]
+    tanitim, gruplar = [], []
+    beklenen = 1
+    for p in paragraflar:
+        s = _elmalili_temiz(p)
+        if not s or set(s) <= set("-= ") or _ELMALILI_BOLUM.match(s):
+            continue
+        m = _ELMALILI_BASLIK.match(s)
+        ilk = None
+        if m:
+            if m.group(1):
+                ilk, kalan = int(m.group(1)), ""
+            else:
+                ilk, kalan = int(m.group(2)), m.group(3)
+        if ilk is not None and beklenen <= ilk <= beklenen + 5 and ilk <= n_ayet:
+            ayetler = sorted(set([ilk] + [int(x) for x in kalan.split("-") if x and int(x) <= n_ayet]))
+            gruplar.append((ayetler, [s]))
+            beklenen = max(ayetler) + 1
+        elif gruplar:
+            gruplar[-1][1].append(s)
+        else:
+            tanitim.append(s)
+    harita = {}
+    if gruplar:
+        # Başlıksız giriş paragrafları, 1. âyet hiç başlık almadıysa 1. âyete aittir.
+        kapsam = [a for ayetler, _ in gruplar for a in ayetler]
+        if tanitim and 1 not in kapsam:
+            harita[1] = tanitim
+            tanitim = []
+        for ayetler, paragraflar_g in gruplar:
+            ilk = ayetler[0]
+            harita[ilk] = paragraflar_g
+            for a in ayetler[1:]:
+                harita[a] = ("ortak", ilk)
+    return tanitim, harita
+
 
 def kelime_satiri_html(kelimeler):
     """Âyetin kelime mealli satırı: her kelime ayrı renkte; altında Türkçe karşılığı."""
@@ -628,10 +685,15 @@ def kelime_satiri_html(kelimeler):
     return f'<div class="kelime-satiri">{"".join(parcalar)}</div>'
 
 
+def _tefsir_paragraflari(paragraflar):
+    return "".join(f"<p>{html_escape(p)}</p>" for p in paragraflar)
+
+
 def generate_surah_detail_chart_html(surah_data, kelimeler=None):
     """
-    Her bir sure için detay sayfası. Kitap gibi okunur: üstte kitaba dönüş çubuğu,
-    altında mevzular ve her mevzunun âyetleri (Arapça, kelime mealli, Türkçe meal).
+    Her sûre için detay sayfası. Kitap gibi okunur: üstte kitaba dönüş çubuğu;
+    mevzular altında âyet kutuları (kitapla aynı boyutta: Arapça, kelime mealli, Türkçe meal).
+    Her âyet kutusunda, âyet metninden sonra Elmalılı tefsiri (açılır kapanır) yer alır.
     kelimeler: {(sure, âyet): [{'ar','tr','lem'}]} (kelime_mealli.yukle()).
     """
     kelimeler = kelimeler or {}
@@ -646,6 +708,14 @@ def generate_surah_detail_chart_html(surah_data, kelimeler=None):
     verses = surah_data["verses"]
 
     verse_dict = {v["verseNumber"]: v for v in verses}
+    tanitim, tefsir_haritasi = elmalili_tefsiri(sno, vcount)
+
+    tanitim_html = ""
+    if tanitim:
+        tanitim_html = (
+            '<section class="tanitim"><h3>Elmalılı tefsiri: sûre tanıtımı</h3>'
+            f'{_tefsir_paragraflari(tanitim)}</section>'
+        )
 
     mini_bar_parts = []
     for seg in segments:
@@ -661,21 +731,29 @@ def generate_surah_detail_chart_html(surah_data, kelimeler=None):
 
     sections_html = []
     for seg in segments:
-        ayetler = []
+        kutular = []
         for vnum in range(seg["start"], seg["end"] + 1):
             vobj = verse_dict.get(vnum, {})
             v_arabic = vobj.get("arabic", "")
             turkish_dict = vobj.get("turkish", {})
             v_meal = turkish_dict.get("diyanet_vakfi") or turkish_dict.get("hayrat_nesriyat") or turkish_dict.get("omer_nasuhi_bilmen") or ""
-            ayetler.append(f"""
-            <article class="ayet" style="border-left:5px solid {seg['color']};">
-              <div class="ayet-baslik">
-                <span style="color:{seg['color']};">Âyet {vnum}</span>
-                <span class="ayet-kod">{sno}:{vnum}</span>
-              </div>
-              <div class="ayet-ar">{v_arabic}</div>
+            tefsir = tefsir_haritasi.get(vnum)
+            if isinstance(tefsir, tuple):
+                tefsir_html = f'<div class="ag-ortak">Tefsiri {tefsir[1]}. âyetin kutusundadır.</div>'
+            elif tefsir:
+                tefsir_html = (
+                    f'<details class="tefsir"><summary>Elmalılı tefsiri · Âyet {vnum}</summary>'
+                    f'{_tefsir_paragraflari(tefsir)}</details>'
+                )
+            else:
+                tefsir_html = ""
+            kutular.append(f"""
+            <article class="ag-kart" style="border-top:4px solid {seg['color']};">
+              <div class="ag-kart-baslik" style="color:{seg['color']};">Âyet {vnum}</div>
+              <div class="verse-ar">{v_arabic}</div>
               {kelime_satiri_html(kelimeler.get((sno, vnum), []))}
-              <div class="ayet-meal">{v_meal}</div>
+              <div class="verse-tr">{v_meal}</div>
+              {tefsir_html}
             </article>
             """)
 
@@ -687,7 +765,7 @@ def generate_surah_detail_chart_html(surah_data, kelimeler=None):
             </div>
             <div class="mevzu-meta">Âyet {seg['start']} - {seg['end']} · <span class="rozet" style="background:{seg['color']};">{seg['count']} âyet</span></div>
           </header>
-          {"".join(ayetler)}
+          <div class="ayetler">{"".join(kutular)}</div>
         </section>
         """)
 
@@ -708,7 +786,8 @@ body {{
   background: #f5f1e8;
   color: #1e293b;
   font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-  line-height: 1.7;
+  line-height: 1.65;
+  font-size: 11pt;
 }}
 .ust-cubuk {{
   position: fixed;
@@ -735,10 +814,10 @@ body {{
 .geri:hover {{ background: #1e293b; }}
 .ust-baslik {{ color: #e2e8f0; font-weight: 600; font-size: 10.5pt; }}
 .kitap-sayfa {{
-  max-width: 880px;
+  max-width: 1100px;
   margin: 0 auto;
   background: #ffffff;
-  padding: 40px 48px 64px;
+  padding: 32px 36px 56px;
   min-height: 100vh;
   box-shadow: 0 2px 18px rgba(15, 23, 42, 0.08);
 }}
@@ -750,7 +829,7 @@ body {{
 }}
 .sure-baslik h1 {{
   font-family: 'Cinzel', 'Plus Jakarta Sans', serif;
-  font-size: 24pt;
+  font-size: 22pt;
   color: #0f172a;
   margin: 4px 0 8px;
   line-height: 1.3;
@@ -758,7 +837,7 @@ body {{
 .sure-arapca {{
   font-family: 'Amiri', serif;
   color: #1e40af;
-  font-size: 26pt;
+  font-size: 24pt;
   margin-left: 12px;
   font-weight: 400;
 }}
@@ -772,8 +851,19 @@ body {{
   font-weight: 600;
 }}
 .rozet-acik {{ background: #475569; }}
-.mevzu {{ margin-top: 34px; }}
-.mevzu-baslik {{ padding: 10px 16px; border-radius: 6px; margin-bottom: 14px; }}
+.tanitim {{
+  margin-top: 26px;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 9.5pt;
+  color: #334155;
+}}
+.tanitim h3 {{ margin: 0 0 6px; font-size: 11pt; color: #1e3a8a; }}
+.tanitim p {{ margin: 0 0 6px; }}
+.mevzu {{ margin-top: 30px; }}
+.mevzu-baslik {{ padding: 10px 16px; border-radius: 6px; margin-bottom: 12px; }}
 .mevzu-ad {{ font-size: 13pt; font-weight: 700; }}
 .mevzu-kod {{
   font-family: monospace;
@@ -785,61 +875,90 @@ body {{
   margin-right: 8px;
 }}
 .mevzu-meta {{ color: #64748b; font-size: 9.5pt; margin-top: 4px; }}
-.ayet {{
+/* Âyet kutuları: kitaptaki ag-kart ile aynı boyut */
+.ayetler {{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 6px;
+  align-items: start;
+}}
+.ag-kart {{
   background: #ffffff;
   border: 1px solid #e2e8f0;
-  border-radius: 10px;
-  padding: 14px 18px;
-  margin-bottom: 12px;
+  border-radius: 6px;
+  padding: 6px 8px;
+  page-break-inside: avoid;
 }}
-.ayet-baslik {{
-  display: flex;
-  justify-content: space-between;
-  font-size: 9.5pt;
+.ag-kart-baslik {{
+  font-size: 8.5pt;
   font-weight: 700;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }}
-.ayet-kod {{ color: #94a3b8; font-family: monospace; font-weight: 400; }}
-.ayet-ar {{
+.verse-ar {{
   font-family: 'Amiri', serif;
-  font-size: 22pt;
-  line-height: 1.9;
+  font-size: 12pt;
+  line-height: 1.8;
   direction: rtl;
   text-align: right;
   color: #0f172a;
 }}
-.ayet-meal {{
-  font-size: 10.5pt;
-  color: #334155;
+.verse-tr {{
+  font-size: 8pt;
+  color: #475569;
+  line-height: 1.5;
   border-top: 1px dashed #e2e8f0;
-  padding-top: 8px;
-  margin-top: 8px;
+  padding-top: 4px;
+  margin-top: 2px;
 }}
+.ag-ortak {{
+  font-size: 7.5pt;
+  color: #94a3b8;
+  font-style: italic;
+  margin-top: 4px;
+}}
+.tefsir {{
+  margin-top: 5px;
+  border-top: 1px dashed #e2e8f0;
+  padding-top: 4px;
+  font-size: 7.5pt;
+  color: #334155;
+  line-height: 1.5;
+}}
+.tefsir summary {{
+  cursor: pointer;
+  color: #1e40af;
+  font-weight: 700;
+  font-size: 7.5pt;
+}}
+.tefsir p {{ margin: 4px 0 0; }}
 .kelime-satiri {{
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
   direction: rtl;
-  margin: 6px 0 4px;
+  margin: 6px 0 8px 0;
 }}
 .kelime {{
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  padding: 2px 6px 3px;
+  padding: 2px 6px 3px 6px;
   background: #f8fafc;
   border-radius: 4px;
+  min-width: 0;
 }}
-.kelime-ar {{ font-family: 'Amiri', serif; font-size: 14pt; line-height: 1.6; }}
-.kelime-tr {{ direction: ltr; font-size: 7.5pt; color: #334155; line-height: 1.2; }}
-.ayet {{ page-break-inside: avoid; }}
+.kelime-ar {{ font-family: 'Amiri', serif; font-size: 13pt; line-height: 1.6; }}
+.kelime-tr {{ direction: ltr; font-size: 7pt; color: #334155; text-align: center; line-height: 1.2; }}
 @media (max-width: 640px) {{
-  .kitap-sayfa {{ padding: 22px 16px 40px; }}
+  .kitap-sayfa {{ padding: 20px 16px 40px; }}
   .sure-arapca {{ display: block; margin: 6px 0 0; }}
+  .ayetler {{ grid-template-columns: 1fr; }}
 }}
 @media print {{
   .ust-cubuk {{ display: none; }}
   body {{ padding-top: 0; background: #ffffff; }}
+  .tefsir {{ display: block; }}
+  .tefsir > :not(summary) {{ display: block; }}
 }}
 </style>
 </head>
@@ -860,6 +979,8 @@ body {{
       <span class="rozet rozet-acik">{vcount} Âyet</span>
     </div>
   </header>
+
+  {tanitim_html}
 
   {mini_bar_html}
 

@@ -15,7 +15,8 @@ body {
   background: #f5f1e8;
   color: #1e293b;
   font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-  line-height: 1.7;
+  line-height: 1.65;
+  font-size: 11pt;
 }
 .ust-cubuk {
   position: fixed;
@@ -42,10 +43,10 @@ body {
 .geri:hover { background: #1e293b; }
 .ust-baslik { color: #e2e8f0; font-weight: 600; font-size: 10.5pt; }
 .kitap-sayfa {
-  max-width: 880px;
+  max-width: 1100px;
   margin: 0 auto;
   background: #ffffff;
-  padding: 40px 48px 64px;
+  padding: 32px 36px 56px;
   min-height: 100vh;
   box-shadow: 0 2px 18px rgba(15, 23, 42, 0.08);
 }
@@ -57,7 +58,7 @@ body {
 }
 .sure-baslik h1 {
   font-family: 'Cinzel', 'Plus Jakarta Sans', serif;
-  font-size: 24pt;
+  font-size: 22pt;
   color: #0f172a;
   margin: 4px 0 8px;
   line-height: 1.3;
@@ -65,7 +66,7 @@ body {
 .sure-arapca {
   font-family: 'Amiri', serif;
   color: #1e40af;
-  font-size: 26pt;
+  font-size: 24pt;
   margin-left: 12px;
   font-weight: 400;
 }
@@ -79,8 +80,19 @@ body {
   font-weight: 600;
 }
 .rozet-acik { background: #475569; }
-.mevzu { margin-top: 34px; }
-.mevzu-baslik { padding: 10px 16px; border-radius: 6px; margin-bottom: 14px; }
+.tanitim {
+  margin-top: 26px;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 9.5pt;
+  color: #334155;
+}
+.tanitim h3 { margin: 0 0 6px; font-size: 11pt; color: #1e3a8a; }
+.tanitim p { margin: 0 0 6px; }
+.mevzu { margin-top: 30px; }
+.mevzu-baslik { padding: 10px 16px; border-radius: 6px; margin-bottom: 12px; }
 .mevzu-ad { font-size: 13pt; font-weight: 700; }
 .mevzu-kod {
   font-family: monospace;
@@ -92,61 +104,90 @@ body {
   margin-right: 8px;
 }
 .mevzu-meta { color: #64748b; font-size: 9.5pt; margin-top: 4px; }
-.ayet {
+/* Âyet kutuları: kitaptaki ag-kart ile aynı boyut */
+.ayetler {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 6px;
+  align-items: start;
+}
+.ag-kart {
   background: #ffffff;
   border: 1px solid #e2e8f0;
-  border-radius: 10px;
-  padding: 14px 18px;
-  margin-bottom: 12px;
+  border-radius: 6px;
+  padding: 6px 8px;
+  page-break-inside: avoid;
 }
-.ayet-baslik {
-  display: flex;
-  justify-content: space-between;
-  font-size: 9.5pt;
+.ag-kart-baslik {
+  font-size: 8.5pt;
   font-weight: 700;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
-.ayet-kod { color: #94a3b8; font-family: monospace; font-weight: 400; }
-.ayet-ar {
+.verse-ar {
   font-family: 'Amiri', serif;
-  font-size: 22pt;
-  line-height: 1.9;
+  font-size: 12pt;
+  line-height: 1.8;
   direction: rtl;
   text-align: right;
   color: #0f172a;
 }
-.ayet-meal {
-  font-size: 10.5pt;
-  color: #334155;
+.verse-tr {
+  font-size: 8pt;
+  color: #475569;
+  line-height: 1.5;
   border-top: 1px dashed #e2e8f0;
-  padding-top: 8px;
-  margin-top: 8px;
+  padding-top: 4px;
+  margin-top: 2px;
 }
+.ag-ortak {
+  font-size: 7.5pt;
+  color: #94a3b8;
+  font-style: italic;
+  margin-top: 4px;
+}
+.tefsir {
+  margin-top: 5px;
+  border-top: 1px dashed #e2e8f0;
+  padding-top: 4px;
+  font-size: 7.5pt;
+  color: #334155;
+  line-height: 1.5;
+}
+.tefsir summary {
+  cursor: pointer;
+  color: #1e40af;
+  font-weight: 700;
+  font-size: 7.5pt;
+}
+.tefsir p { margin: 4px 0 0; }
 .kelime-satiri {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
   direction: rtl;
-  margin: 6px 0 4px;
+  margin: 6px 0 8px 0;
 }
 .kelime {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  padding: 2px 6px 3px;
+  padding: 2px 6px 3px 6px;
   background: #f8fafc;
   border-radius: 4px;
+  min-width: 0;
 }
-.kelime-ar { font-family: 'Amiri', serif; font-size: 14pt; line-height: 1.6; }
-.kelime-tr { direction: ltr; font-size: 7.5pt; color: #334155; line-height: 1.2; }
-.ayet { page-break-inside: avoid; }
+.kelime-ar { font-family: 'Amiri', serif; font-size: 13pt; line-height: 1.6; }
+.kelime-tr { direction: ltr; font-size: 7pt; color: #334155; text-align: center; line-height: 1.2; }
 @media (max-width: 640px) {
-  .kitap-sayfa { padding: 22px 16px 40px; }
+  .kitap-sayfa { padding: 20px 16px 40px; }
   .sure-arapca { display: block; margin: 6px 0 0; }
+  .ayetler { grid-template-columns: 1fr; }
 }
 @media print {
   .ust-cubuk { display: none; }
   body { padding-top: 0; background: #ffffff; }
+  .tefsir { display: block; }
+  .tefsir > :not(summary) { display: block; }
 }
 </style>
 </head>
@@ -168,6 +209,8 @@ body {
     </div>
   </header>
 
+  <section class="tanitim"><h3>Elmalılı tefsiri: sûre tanıtımı</h3><p>Helâk oldu. Bu fiil esasen bir durumu haber vermekle birlikte dilek kipi de olabilir. Dilek kipi olması, ya tekvînî şekilde zarar görmesini dilemek, yahut da Arapların adetlerinde olduğu gibi &quot;Kahrolası&quot; şeklinde beddua olarak hüsran ve helâkı hak ettiğini anlatmak suretiyle kınamak ve çirkin görmek mânâsınadır. Söz konusu fiili, ilk nüzûlüne bakarak çokları, bu mânâda yorumlamışlardır. Bu yüzden &quot;elleri kurusun&quot; şeklindeki tercüme pek yaygındır. Eli kurusun tabiri daha ziyade yani &quot;eli ç o lak olsun&quot; mânâsında kullanılmaktadır. Bununla beraber mecâzî anlamda iflâs etsin, elinde avucunda bir şey kalmasın, tutacağını tutamasın ve her tuttuğu boşa çıksın gibi beddua mânâsına da gelmektedir ki, bu şekilde terceme edenlerin maksadı da budur. Bu f iile, yuh olsun, perişan olsun gibi mânâ vermek, de olduğu gibi tebâbın anlamına daha uygun görünmektedir. Ancak Ebu Leheb&#x27;in Bedir Savaşı&#x27;nın arkasından ümitsizliğe düşerek ölmesi ve Nasr Sûresi&#x27;nin inişinde onun hüsrân ve helakinin gerçekleşmesi sebe b iyle Tebbet Sûresi&#x27;nin tertibde buraya konulması, söz konusu kelimenin meydana gelen bir durumu haber verdiğini ifade etmektedir. Hatta Peygamber&#x27;in şanlı vefatıyla dahi Ebu Leheb&#x27;in isteğinin yerine gelmeyip, bilakis helakinin gittikçe daha çok artacağın a işaret sayılmaktadır. Bu da, fiilin gereği olarak kınama mânâsı taşımasına engel teşkil etmez. Yani, sadece ona yuh olsun değil, helake gitti. İki eli sağdan, soldan gerek olumlu gerek olumsuz, gerek tutmak ve gerek itmek için kullanmak istediği bütün sebeb ve vasıtaları, gerek dünyaya gerek dine uzatmak istediği iki eli de helâk oldu. O Peygamber&#x27;in zaferine ve hak dinin ortaya çıkmasına mani olmak ve küfre sarılmak için müracaat ettiği maddî manevî şey kendi aleyhine döndü de, yuh diye üflediği eller i hakikaten helâk oldu. Ebu Leheb&#x27;in, Peygamber&#x27;e nankörlük ve düşmanlıkta ileri giden ve İslâm dininin yayılmasına engel olmak için her türlü fitne ve fesat ateşini alevlendirmeye çalışan Ebu Cehil ve benzeri azgın kâfirlerin küfür ve taşkınlıkları Kur&#x27;â n &#x27;da anlatılmış olmakla beraber</p><p>hiçbirinin adı açıkça zikredilmediği halde, Ebu Leheb&#x27;in ismine özellikle yer verilmesi, ayrıca Peygamber&#x27;in zaferini konu edinen Nasr Sûresi&#x27;yle tevhidi konu edinen İhlâs Sûresi arasında bulunması da dikkate değer nitelikted ir. Şöyle ki:</p><p>Birincisi: Ona, &quot;Ey suçlular, bugün şöyle ayrılın (bakayım).&quot; (Yâsin, 36/59) âyetinin ifade ettiği anlam üzere bir üstünlük vermektir. Onun, Peygamber ile Allah arasına girmek, çoğalmasına mâni olmak isteyen ateşli düşmanlar arasında nazar-ı itibara alınmaya değer bir ayrıcalığa sahip olduğuna işaret eder. Çünkü Ebu Leheb, Peygamber&#x27;in baba bir amcası olması sebebiyle hususi bir şerefe haiz bulunuyordu. Böyle iken bu şeref ve nimetin değerini takdir etmediği ve ona yardım edecek yerde a ksine engel olmak için nankörlük ve düşmanlıkla ateş püskürmek isteyenlerin önüne düşmesi sebebiyle İslâm düşmanlarının hepsinden daha fazla teessüfe layık olduğunu bildirerek yine Peygamber&#x27;in şanını yüceltmek, onun neseb, şeref ve haysiyetlerinin üstünd e olan Hakk&#x27;ın cilvesinin büyüklüğünü göstermektir.</p><p>İkincisi: Ebu Leheb, şahsı gösteren bir künye olmakla beraber lugat itibarıyla asıl mânâsı, alev babası demektir. O itibarla Peygamber&#x27;e ve İslâm&#x27;a karşı ateş püskürmek isteyip de, kendini cehenneme atmış olan kâfirlerin hepsinin temsilcisi olması sebebiyle onun helâki, hepsinin helâkına misâl yapılmıştır ki, bu da, &quot;Allah&#x27;ın nûrunu ağızlarıyla söndürmek istiyorlar. Halbuki, kâfirler istemese de Allah, mutlaka nûrunu tamamlamak ister.&quot; (Tevbe, 9/32) âyetinin ifade ettiği anlama işaret olur. Künyeler, alem ismi olmakla beraber yerine göre Hâtem-i Tâi&#x27;nin cömertlik, Ebu Hanife&#x27;nin ilim ile şöhret bulması gibi sıfatlık mânâsına gelmelerinden ve Meânî ilminde Ebu Leheb isminin de &quot;ateş babası&quot; demek olma s ından dolayı, kinâye yoluyla &quot;cehennemlik&quot; vasfına delâlet eden meşhur bir misâl olarak söylenmiştir. Ayrıca kinâyeler de, hakikatin iradesine engel olmayacağına göre burada, söz konusu mânânın hususi bir önemi vardır. Yani maksat sadece Ebu Leheb&#x27;in şahsını belirtmekten ibaret olmayıp, onun vasfına ve bu vasıfta ona benzeyenlerin hallerine de işaret edilmiş demektir. Asıl ismi, Abdüluzza b. Abdilmuttalib iken yanaklarının pek kırmızı olmasından dolayı ateşe benzetilerek, Ebu Leheb denilmiş ve bu künye ile meşhur olmuştur. Çok ateşli mânâsına gelen &quot;alev babası&quot; künyesi ona başlangıçta, yüzünün parlaklığı veya canlılığı, yahut hiddet ve şiddeti itibarıyla övgü mânâsı düşünülerek verilmişti. Ancak bu vasfın hakikatinde &quot;ateş kaynağı olmak&quot; veya &quot;ateşi sevmek&quot; mânâsının bulunması ve en şiddetli ateşin de cehennem ateşi olması dolayısıyla Ebu Leheb ismi,</p><p>kendsini ateşe sürükleyen &quot;cehennemlik&quot; ünvanına dönüştürülmüş, fiil ve hareketleri itibarıyla da &quot;cehennemin babası&quot; mânâsına darb-ı mesel olarak kullanılmıştır. Burada söz konusu nüktenin kastedildiğine özellikle &quot;(o) alevli bir ateşe girecektir&quot; âyetiyle işaret edilmiştir. Yani Hz. Peygamber (s.a.v.)&#x27;in amcası olmak gibi yüksek bir neseb, yakınlık, soy ve şerefe sahip olduğu halde, iman etmeyip de ona düş m anlık ve küfürde ısrar ettiğinden dolayı Ebu Leheb böyle helâk oldu. O soy ve şeref Ebu Leheb&#x27;i kurtarmazsa Peygamber (s.a.v.)&#x27;e buğzedip de tevbe etmeyen diğer insanların ne kadar bedbaht olacakları ibret nazarıyla düşünülmelidir.</p><p>Keşşaf&#x27;da denilir k i: &quot;Tekniye&quot; mastarı, ikram etmek mânâsı ifade ederken burada künye anlamında kullanılmasının üç sebebi vardır. 1. İsmiyle değil, künyesiyle şöhret bulmasından dolayı. 2. Esasen ismi, Abdu&#x27;l-Uzzâ olduğu halde künyesi kullanıldığı için. 3. âyetine göre ateş ehlinden olmasından dolayı künyesinin haline uygun olması sebebiyle. Ayrıca şerli olan kimseye &quot;Ebu&#x27;ş-Şer&quot;, hayır sahibine de &quot;Ebu&#x27;l-hayr&quot; denilmesi kabilinden de Ebu Leheb denilmiştir.&quot; Evet, Ebu Leheb&#x27;in iki eli, yuha, hüsrana gitti, helâk oldu. K endisi de yok oldu. Muradına eremeyip, perişan oldu ve mahvolup gitti. Ebu Leheb, Peygamber&#x27;e karşı Kureyş ile beraber olduğu halde hasta olduğu için Bedir Savaşı&#x27;na bizzat iştirak edememiş, ancak maddî yardımda bulunarak Ebu Cehil&#x27;in kardeşi Âs b. Hişâm&#x27;ı kendi yerine göndermişti. Kendisi &quot;adese&quot; denilen çiçek hastalığına benzer bir hastalığa tutulmuş, Kureyş&#x27;in yenildiğini haber alınca savaştan yedi gün sonra kahrından ölmüştü. Alûsî ve diğer tefsircilerin naklettiğine göre Kureyşliler, adese hastalığınd a n tâun gibi sakındıkları için kendilerine de bulaşır korkusuyla ailesinden bile kimse yanına yaklaşmamış, bu yüzden ölüsü üç gün evde kalıp kokmuştu. Nihayet utandıkları için Sudâni&#x27;lerden birkaç kişiyi ücret karşılığı tutarak gömdürmüşlerdi. Bir rivayett e de bir çukur kazıp ağaçlarla içine kakmışlar ve örtünceye kadar da üzerine taş atmışlardı. Başka bir rivayete göre de çukur kazmayıp bir duvarın dibine koymuşlar ve sonra da üzeri örtülünceye kadar taş atmışlardı.</p><p>Demek ki hâdise, Kur&#x27;ân&#x27;ın on beş sene kadar önceden haber verdiği tarzda cereyan etmişti. Mamafih durum, sadece bundan ibaret de değildi. Ebu Leheb, dünyada maksadına ulaşamadığı gibi âhirette de çekeceği azaptan dolayı hem</p><p>cismânî ve hem de ruhânî bir zarara uğrayarak helâk olmuştu.</p><p>2. Buradaki istifhâm-ı inkârî veya doğrudan doğruya olumsuzluk edâtıdır ve Ebu Leheb&#x27;in helâkini izah etmektedir. Yani ne fayda verdi ona? Hiçbir fayda vermedi. Onu kurtaracak hiçbir hayra yaramadı malı ve kazandığı, yahut kazancı. Buradaki da mevsûl veya mastariyyedir. Mamafih önceki gibi istifhâm-ı inkârî veya olumsuzluk mânâsını ifade eden edat olması da düşünülebilir. Malı ona ne fayda verdi? Ve ne kazandığı? Onu felaketten kurtaracak hiçbir şeye yaramadı ve kendisi de hiçbir fayda elde edemedi anlamındadır. Ancak &quot;Malı da fayda vermedi, kazancı da.&quot; anlamı, iki elin helâkini izah etmeye daha uygundur. Malından maksat, sermayesi, kazancından maksat da, kâr ve gelirleri, yahut kazanmak için yaptığı ticaret ve benzeri işler; veya malı, babası n dan miras kalan, kazancı da kendi kazandığı şeylerdir. Ayrıca söz konusu âyette ifade edilen malından kasıt, eski ve yeni bütün malı, kazancından kasıt da, gerek malından harcamak ve gerekse başka yollardan faydalanmak suretiyle kendi istek ve arzusuna gö r e elde ettiği, pay ve nasip, yani çalışması ve emeği ile yaptığı işler ve sahip olduğu şeylerdir ki buna, isteyerek çalışıp elde ettiği bütün kazancı, çocukları, sosyal durumu, kendine ve toplumuna örf ve âdetlerine göre yaptığı iyilikler, ayrıca Peygambe r &#x27;e karşı kurduğu tuzak ve düşmanlıkların hepsi dahildir.</p><p>İbnü Abbas&#x27;tan nakledildiğine göre, âyette geçen &quot;kazancından&quot; maksat, Ebu Leheb&#x27;in çocuğudur. Yine denilmiştir ki: Ebu Leheb&#x27;in oğulları aralarında anlaşmazlığa düşerek, muhâkeme olmak üzere babalarının yanına gelmişler, derken birbirleriyle çarpışmaya başlamışlardı. Bunun üzerine Ebu Leheb oğullarını ayırmak için aralarına girmiş ve orada birisinin itivermesiyle yere düşmüştü. Buna son derece sinirlenen Ebu Leheb &quot;Çıkarın yanımdan bu pis kazan c ı.&quot; demişti. Bir hadisde de &quot;Her insanın yiyeceğinin en temizi ve çocuğu kazancındandır.&quot; buyurulmuştur. Dahhâk: &quot;Ebu Leheb&#x27;in kazancı, kötü ameli yani Resulullah&#x27;a yaptığı düşmanlık ve kurduğu tuzaktır.&quot; derken, Katâde de &quot;Onun kazandığı şey, bir iyi l ik yapıyorum zannıyla işlediği ameldir ki, bu &quot;Yaptıkları her işin önüne geçtik de, onu (etrafa) saçılmış toz zerreleri haline getirdik.&quot; (Furkân, 25/23) mânâsınadır.&quot; demiştir. Yine Ebu Leheb&#x27;in eğer kardeşimoğlunun söylediği hak ise, malımı ve çocuk l arımı fidye vererek ondan</p><p>kurtulurum.&quot; dediği rivayet edilmiştir. Verilen bu mânâların hiçbirisi diğerine zıt değildir. Maksat, tahsis olmayıp, örnek vermektir. Âyette ifade edilen &quot;kesb&quot;, bu mânâların hepsini içine aldığından, esasen âyetin anlamı şu şekildedir: &quot;Ne malı ne de hiçbir kazancı kendisine fayda vermedi, onu zarar ve helâkten kurtaramadı.</p><p>3. Zira o bir ateşe yaslanacak ki yarın âhirette bir ateşe girecek ki Gayet alevli, dünyada eşi, benzeri görülmemiş son derece şiddetli bir alev ve iltihabı olan bir ateş, yani sadece cisimleri yakan bir ateş değil, ruhları sarıp gönüllere nüfûz eden &quot;Allah&#x27;ın tutuşturulmuş ateşidir ki, gönüllere işler.&quot; (Hümeze, 104/6,7) âyetinde buyurulan cehennem nârıdır.</p><p>4. Karısı da ki o Harb&#x27;in kızı, Ümmü Cemil ve Ebu Sufyân b. Harb&#x27;in kız kardeşidir. Bu isimlerdeki imâlara da dikkat etmek gerekmektedir. Bu kelime, fiilinin altında gizli bulunan Ebu Leheb&#x27;e ait olan zamirine bağlıdır. Yani Ebu Leheb&#x27;in yalnız kendisi değil, karısı da o ateşe yas l anacaktır. Diğer kırâetlerin hepsinde kelimesi, haber olarak ötreli okunur. Bu durumda Ebu Leheb&#x27;e bağlanmayıp cümle olarak ondan hal yapılır. Âsım kırâetinde ise üstün okunur. Bu durumda da şu iki şekil söz konusudur.</p></section>
+
   <div style="display:flex; width:100%; border-radius:8px; overflow:hidden; margin:20px 0 8px; box-shadow:0 2px 10px rgba(0,0,0,0.12);"><div style="flex: 3; background:#1e40af; border:1px solid #1d4ed8; padding:8px 4px; text-align:center; color:#ffffff; font-size:11px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Ebu Leheb (1-3)">Ebu Leheb (3)</div><div style="flex: 2; background:#065f46; border:1px solid #047857; padding:8px 4px; text-align:center; color:#ffffff; font-size:11px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Karısı ve ip (4-5)">Karısı ve ip (2)</div></div>
 
   
@@ -178,37 +221,31 @@ body {
             </div>
             <div class="mevzu-meta">Âyet 1 - 3 · <span class="rozet" style="background:#1e40af;">3 âyet</span></div>
           </header>
-          
-            <article class="ayet" style="border-left:5px solid #1e40af;">
-              <div class="ayet-baslik">
-                <span style="color:#1e40af;">Âyet 1</span>
-                <span class="ayet-kod">111:1</span>
-              </div>
-              <div class="ayet-ar"> تَبَّتْ يَدَآ أَبِى لَهَبٍ وَتَبَّ</div>
+          <div class="ayetler">
+            <article class="ag-kart" style="border-top:4px solid #1e40af;">
+              <div class="ag-kart-baslik" style="color:#1e40af;">Âyet 1</div>
+              <div class="verse-ar"> تَبَّتْ يَدَآ أَبِى لَهَبٍ وَتَبَّ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="تَبَّ"><span class="kelime-ar" style="color:#dc2626;">تَبَّتْ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="يَد"><span class="kelime-ar" style="color:#2563eb;">يَدَآ</span><span class="kelime-tr">el</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="أَب"><span class="kelime-ar" style="color:#16a34a;">أَبِى</span><span class="kelime-tr">Baba</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="لَهَب"><span class="kelime-ar" style="color:#9333ea;">لَهَبٍ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="تَبَّ"><span class="kelime-ar" style="color:#ea580c;">وَتَبَّ</span><span class="kelime-tr">ve</span></span></div>
-              <div class="ayet-meal">(1-5) Ebu Leheb’in iki eli kurusun! Kurudu da. Malı ve kazandıkları ona fayda vermedi. O, alevli bir ateşte yanacak. Odun taşıyıcı olarak ve boynunda hurma lifinden bükülmüş bir ip olduğu halde karısı da (ateşe girecek).</div>
+              <div class="verse-tr">(1-5) Ebu Leheb’in iki eli kurusun! Kurudu da. Malı ve kazandıkları ona fayda vermedi. O, alevli bir ateşte yanacak. Odun taşıyıcı olarak ve boynunda hurma lifinden bükülmüş bir ip olduğu halde karısı da (ateşe girecek).</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 1</summary><p>1- Kelimesinden hal ya pılmasıdır ki, karısı da odun hammalı olarak cehenneme girecek, Ebu Leheb&#x27;i götürecek veya onun ateşini artırmak için, dünyada küfrüne, arzusuna hizmet ettiğinden dolayı cehennemde de azabına iştirak ile hizmet edecek demektir. Çünkü &quot;O halde yakıtı i nsanlar ve taşlar olan, inkârcılar için hazırlanmış ateşten sakının.&quot; (Bakara, 2/24), &quot;O inkâr edenler var ya, ne malları, ne de çocukları onlara, Allah&#x27;a karşı hiçbir fayda sağlamaz. Onlar ateşin yakıtıdırlar.&quot; (Al-i İmrân, 3/10) âyetlerinde buyurulduğu üzere cehennemin odunu, çırası kâfirler olduğundan küfre hizmet etmek, cehenneme odun taşımak mânâsına gelmektedir. Buna göre onun sırtındaki cehennem odununun da, Ebu Leheb&#x27;in kendisinin olması en uygun bir mânâdır.</p></details>
             </article>
             
-            <article class="ayet" style="border-left:5px solid #1e40af;">
-              <div class="ayet-baslik">
-                <span style="color:#1e40af;">Âyet 2</span>
-                <span class="ayet-kod">111:2</span>
-              </div>
-              <div class="ayet-ar">مَآ أَغْنَىٰ عَنْهُ مَالُهُۥ وَمَا كَسَبَ</div>
+            <article class="ag-kart" style="border-top:4px solid #1e40af;">
+              <div class="ag-kart-baslik" style="color:#1e40af;">Âyet 2</div>
+              <div class="verse-ar">مَآ أَغْنَىٰ عَنْهُ مَالُهُۥ وَمَا كَسَبَ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="ما"><span class="kelime-ar" style="color:#dc2626;">مَآ</span><span class="kelime-tr">Ne</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="أَغْنَى"><span class="kelime-ar" style="color:#2563eb;">أَغْنَىٰ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="عَن"><span class="kelime-ar" style="color:#16a34a;">عَنْهُ</span><span class="kelime-tr">hakkında, -den</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="مال"><span class="kelime-ar" style="color:#9333ea;">مَالُهُۥ</span><span class="kelime-tr">mal, servet</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="ما"><span class="kelime-ar" style="color:#ea580c;">وَمَا</span><span class="kelime-tr">Ne</span></span><span class="kelime" style="border-bottom:3px solid #0891b2;" title="كَسَبَ"><span class="kelime-ar" style="color:#0891b2;">كَسَبَ</span><span class="kelime-tr">kazandı</span></span></div>
-              <div class="ayet-meal">(1-5) Ebu Leheb’in iki eli kurusun! Kurudu da. Malı ve kazandıkları ona fayda vermedi. O, alevli bir ateşte yanacak. Odun taşıyıcı olarak ve boynunda hurma lifinden bükülmüş bir ip olduğu halde karısı da (ateşe girecek).</div>
+              <div class="verse-tr">(1-5) Ebu Leheb’in iki eli kurusun! Kurudu da. Malı ve kazandıkları ona fayda vermedi. O, alevli bir ateşte yanacak. Odun taşıyıcı olarak ve boynunda hurma lifinden bükülmüş bir ip olduğu halde karısı da (ateşe girecek).</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 2</summary><p>2- Kınama anlamında mansuptur. &quot;Yani o odun taşıyıcısı karı&quot; mânâsındadır. Bu durumda, kelimesi üzerinde durmak câizdir. Burada da &quot;hatab&quot;dan maksat Ebu Leheb&#x27;dir. Bundan başka bir de tâbiri, koğucu, ona buna laf taşıyan bozguncu şeklinde mecâzî bir anlam da taşımaktadır. Keşşaf sahibi ez-Zemahşerî der ki: &quot;İnsanlar arasında</p><p>koğuculuk yapan bozgunculara, &quot;Aralarında odun taşıyor.&quot; denilir. Bu cümle, insanlar arasında ateş yakmak, şerre sebeb olmak anlamında kulanılmaktadır. Nitekim</p><p>&quot;Beyaz insanları, yani yüzleri ak temiz kimseleri avlamaya çalışmadın,</p><p>Alçaklığın sırtına binerek oba arasında yaş odunla yürümedin.&quot;</p><p>diyen şair de bu mânâyı ifade etmiş, dumanı çok olmasından dolayı şiirinde &quot;yaş odun&quot; tabirini kullanarak şerrin çokluğuna işaret etmiştir.&quot; Lisanımızda bu mânâ, &quot;kundakcılık etmek&quot; şeklinde ifade edilmektedir. &quot;Yangına körükle gitmek&quot; sözünde de aynı anlam söz konusudur. Ancak, Türkçe&#x27;de &quot;odun hamalı&quot; tabirinden bu mânâ anlaşılmaz. Onda sadece küçümsemek anlamı vardır. Zira izzet ve servet içinde büyü m üş bir kadının odun hamallığı yapması, acıklı bir sefâlet demektir. Esasen bundan, koğuculuk ve bozgunculuk mânâsını çıkarmak için ya &quot;kundakçı&quot; demek, yahut &quot;hammâlete&#x27;l-hatab&quot; tâbirini terceme etmeyerek darb-ı mesel tarzında aynen söylemek daha uygundur. Bu anlam, cehenneme girmenin sebebi olan dünyadaki durumu göstermiş olmaktadır. Fakat asıl mânâ, dünyadaki aile şerefine, zenginlik ve üstünlüğüne rağmen, ahiretteki sefâlet ve hakaretini duyurması ayrıca Ebu Leheb&#x27;in arzusuna boyun eğenler içinde en sakınması gereken karısının bile cehennem ateşinde hakaretle onun azâbını şiddetlendirmeye hizmet etmekte olduğunu ifade etmesi sebebiyle, diğer anlamlarını da dikkate almakla birlikte, &quot;odun hamalı&quot; diye terceme etmeyi daha uygun gördük. Nitekim İbnü Zeyd ve daha başkalarından gelen rivayetler de, bunu kuvvetlendirmektedir. Denildiğine göre, Ebu Leheb&#x27;in karısı, Resulullah (s.a.v.)&#x27;in geçeceği yol üzerine geceleyin diken dalları bıraktırmak suretiyle ona eziyet etmek isterdi. Onun için bu tabirle kınanmıştır. Mamafih bu rivayet de onun Peygamber&#x27;e eziyet vermek ve dinin yayılmasına engel olmak için kocasının fikrine hizmet etmek üzere gizlice koğuculuk ve benzeri işler yapmak suretiyle rahatsız etmeye çalışması tarzında temsilî bir ifade olarak düşünülürse, yu k arıda söylenen mânâların hepsine uygun düşmüş olur.</p><p>5. Bu cümle de &quot;hammale&quot;nin altında gizli olarak bulunan zamirinden haldir. Yani gerdanında süs yerine bir ip ki...</p><p>Âyette yer alan &quot;cîd&quot; boyun mânâsına gelirse de, &quot;unuk&quot; kelimesi gibi sadece boyun anlamı ifade etmeyip, özellikle gerdanlık gibi zinet eşyalarıyla süslü veya süslenmeğe layık güzel boyunlar anlamındadır. Bu yüzden denilmeyip buyurulmuştur. Gerçi burası, tahkir makamıdır. &quot;... biz de inkâr edenlerin boyunlarına ( a teşten) halkalar koyduk.&quot;</p><p>(Sebe&#x27;, 34/33) gibi &quot;ğull&quot; (pranga) ve benzeri ifadelerle küçümseme mevkiinde boyun zikredilmektedir. Ancak burada &quot;odun hammalı&quot; diye küçük düşürüldükten sonra &quot;Boynunda da bir ip mevcuttur.&quot; denilseydi, kapsamlı bir mânâ ifade etmezdi. Halbuki &quot;cîd&quot; şâirin &quot;Güzel kadının gerdanındaki zinetten daha güzel.&quot; dediği gibi süs ve övgü ile söylenmektedir. Bu mânâ farkı, Türkçe&#x27;de de söz konusudur. Biz de bu gibi durumda &quot;gerdan&quot; tabirini kullanırız. Bu sebeple âyette, tahkirden sonra nın zikredilmesi, kadının kadınlık onurunu coşturmak suretiyle durumun acıklı manzarasını göstermektedir. Binaenaleyh bu kelâm &quot;boynunda bir ip vardır&quot; diye anlaşılmalıdır. &quot;O dilberin boynunda gerdanlık yerine bir ip vardır&quot; şeklinde düşünülmelid i r ki, &quot;Süs içinde yetiştirilip mücâdelede açık olmayanı (tartışmayı beceremeyeni) mi (Allah&#x27;ın parçası yaptılar).&quot; (Zuhruf, 43/18) âyetinin ifade ettiği mânâ üzere, süslü gerdanlıklarla donatılıp ikramla yetiştirilen, düşmanlık ve mücâdele mevkilerin d e bulunmaması gereken bir gerdanın hamallık ipi ile aşağılanmasındaki hakaret ve istihzânın acılığındaki fesahat anlaşılabilsin. Said b. Müseyyeb ve daha başkalarından rivayet edildiğine göre, onun gerdanında mücevherlerle süslü, kıymetli bir gerdanlık va r dı. Öyle iken bu gerdanlığın yerinde sağlam liflerden, kuvvetli tellerden bükülmüş, kıvrılarak örülmüş bir ip bulunmaktaydı. Söz konusu kelime ile ilgili Ragıb el-İsfahânî&#x27;nin &quot;Müfredât&quot; adlı eserinde şu açıklamalar mevcuttur: &quot;Mesed, ince hurma dalları n dan, yani şahlarından elde edilen ve fitillenen sağlam bükülüp örülen liftir. de yaratılışı, vücudu bükülmüş ip gibi derli toplu olan kadın demektir.</p><p>Bunun netiesi şudur ki, mesed, hurma lifinden bükülmüş, sağlam bir urgan demek oluyor. Fakat Zemahşerî diyor ki: Mesed, iplerden şiddetli ve kuvvetli bir şekilde bükülmüş olandır. Bu ister liften olsun, ister deriden olsun, ister başka şeylerden olsun aynıdır. Şair: &quot;Develerden daha hızlı, daha kıvrak geçen mesed...&quot;&gt; demiştir.</p><p>Aynı şekilde cümlesi de sağlam yapılı kuvvetli adam mânâsını ifade etmektedir. Kâmusta &quot;mesd&quot; kelimesi &quot;ip bükmek&quot; ve &quot;yolda gayretle sürüp gitmek&quot; mânâsınadır. denildiğinde bu sözle, &quot;ipi güzelce bükmek&quot; mânâsı kasdedilmektedir. &quot;Mesed&quot; ise, demirden çark oku demekti r. Ayrıca hurma lifinden, bir görüşe göre de &quot;Mukl&quot; ağacının ince dallarından bükülmüş ipe denilmektedir. Bazı alimlere göre de sağlam ve kuvvetli bükülüp örülmüş olan ipe &quot;mesed&quot; adı verilir. Besâir&#x27;de açıklandığına göre, &quot;Mesd&quot; mastar, &quot;Mesed&quot; ise isimdi r, ancak &quot;Memsûd&quot; anlamındadır, yani pek sağlam örülmüş ip demektir. Yani âyet, &quot;gerdanında şiddetli bir şekilde bükülüp demir bir ip yapılmış olarak&quot; mânâsınadır. Demek ki mesed, esasen &quot;memsud&quot; mânâsına alınarak bununla, hurma veya mukl ağacının lifl e ri gibi kuvvetli liflerden bildiğimiz kendir, urganlar tarzında fitil fitil, kat kat bükülmüş veya örülmüş sağlam urganlar kasdedilmektedir. Bu anlamda kıl, deri ve demir gibi hangi maddeden yapılırsa yapılsın, ip şeklinde bükülmüş yahut örülmüş olan sağl a m telli, fitilli urgan, halat ve zincirlerin hepsine mesed denilmektedir. Burada da maksat ipin, yapıldığı maddeden ziyâde kuvvet ve kıvraklığı söz konusu olduğu için en sağlamının düşünülmesi gerekmektedir. &quot;Biz, kâfirler için zincirler ve demir halk a lar hazırlamışızdır.&quot; (İnsan, 76/4) âyetinin ifade ettiği mânâ üzere cehenneme giden kâfirlere vaad edilen de zincirler ve bağlardır. Bir gerdana gerdanlık yerine yakışan da bir zincirdir. Fakat bir odun taşıyıcısının sırtına aldığı odunları bağlayıp uçla r ını, gerdanlık yerine sarkıtacağı sağlam ipin de zincir değil, liften bir urgan olması daha uygundur. Kâfirin hassasiyetine dokunan en acıklı manzara âyetin, sırtında cehennem odunu olan kocasını taşırken gerek iftihar ettiği gerdanlığını, gerekse örgülü k ıvrık saçlarının gerdanından sarkmasını, kendi yanacağı ateşin odununu taşıyan bir odun hamalının boynuna düğümleyip geçirdiği kuvvetli urganın boynundan sarkması şeklinde tasvir etmesidir. Bu da, dünyada Allah yoluna sarf edilmeyen servet ve kazancın, şü k rü bilinmeyen şeref ve asaletin ardındaki hakaret ve aşağılanmaya bir misâldir. İşte o ateş babası Ebu Leheb, parlaklığına ve bir takım üstünlüklerine rağmen Allah&#x27;a ve Resulü&#x27;ne karşı küfür ateşi yakmak istediğinden dolayı o ateşin odunu olarak helâke sü r üklenmiş ve karısıyla birlikte bütün âleme darb-ı mesel olmuştur. Ta peygamberliğin başlangıcında haber verilmiş olan bu hakikat, aynı tarzda tahakkuk etmiş, Resulullah (s.a.v.)&#x27;in tebliğ ettiği şekilde Allah&#x27;ın</p><p>birliğine imân etmediği için onun şefaatından istifade edememiş, ne nesebinin şerefi, ne de mal ve kazancı gibi asaletinin kudret ve ihtişamı, kendini helâk olmaktan kurtaramamıştır. Onun için diye beddua etmesinden dolayı da kendisine tevbe de nasip olmayıp mahvolup gitmiştir.&gt; &quot;Kötü sondan A l lah&#x27;a sığınırız.&quot;</p><p>Şimdi birisi, tesbih, hamd ve istiğfar ile Allah&#x27;a giden, diğeri de hüsran ve aşağılanma ile ateşe giden iki son böyle beyân edildikten sonra, güzel bir sona erişmek ve o helâkten kurtulmak için tek çarenin Allah&#x27;ın dinine sarılmak ve bunun için de önce Allah&#x27;ı birlemek ve samimiyetle tanımak sonra da bütün kötülüklerden korunmada O&#x27;nun yardımına sığınmak olduğu hususu beyân edilecek arkasından da Allah tarif edilerek tevhid ve samimiyetle O&#x27;na bağlanma emredilecektir.</p><p>[Herhangi bir yanlislik gördügünüz zaman lütfen uyariniz. Simdiden tesekkürler.]{.small}</p><p>[mucahid dizayn: &lt;info@mucahid.net&gt;  ]{.small}</p></details>
             </article>
             
-            <article class="ayet" style="border-left:5px solid #1e40af;">
-              <div class="ayet-baslik">
-                <span style="color:#1e40af;">Âyet 3</span>
-                <span class="ayet-kod">111:3</span>
-              </div>
-              <div class="ayet-ar">سَيَصْلَىٰ نَارًا ذَاتَ لَهَبٍ</div>
+            <article class="ag-kart" style="border-top:4px solid #1e40af;">
+              <div class="ag-kart-baslik" style="color:#1e40af;">Âyet 3</div>
+              <div class="verse-ar">سَيَصْلَىٰ نَارًا ذَاتَ لَهَبٍ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="يَصْلَى"><span class="kelime-ar" style="color:#dc2626;">سَيَصْلَىٰ</span><span class="kelime-tr">-ecek (gelecek)</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="نار"><span class="kelime-ar" style="color:#2563eb;">نَارًا</span><span class="kelime-tr">Ateş/Cehennem</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="ذُو"><span class="kelime-ar" style="color:#16a34a;">ذَاتَ</span><span class="kelime-tr">sahip olan</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="لَهَب"><span class="kelime-ar" style="color:#9333ea;">لَهَبٍ</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(1-5) Ebu Leheb’in iki eli kurusun! Kurudu da. Malı ve kazandıkları ona fayda vermedi. O, alevli bir ateşte yanacak. Odun taşıyıcı olarak ve boynunda hurma lifinden bükülmüş bir ip olduğu halde karısı da (ateşe girecek).</div>
+              <div class="verse-tr">(1-5) Ebu Leheb’in iki eli kurusun! Kurudu da. Malı ve kazandıkları ona fayda vermedi. O, alevli bir ateşte yanacak. Odun taşıyıcı olarak ve boynunda hurma lifinden bükülmüş bir ip olduğu halde karısı da (ateşe girecek).</div>
+              
             </article>
-            
+            </div>
         </section>
         
         <section class="mevzu">
@@ -218,27 +255,23 @@ body {
             </div>
             <div class="mevzu-meta">Âyet 4 - 5 · <span class="rozet" style="background:#065f46;">2 âyet</span></div>
           </header>
-          
-            <article class="ayet" style="border-left:5px solid #065f46;">
-              <div class="ayet-baslik">
-                <span style="color:#065f46;">Âyet 4</span>
-                <span class="ayet-kod">111:4</span>
-              </div>
-              <div class="ayet-ar">وَٱمْرَأَتُهُۥ حَمَّالَةَ ٱلْحَطَبِ</div>
+          <div class="ayetler">
+            <article class="ag-kart" style="border-top:4px solid #065f46;">
+              <div class="ag-kart-baslik" style="color:#065f46;">Âyet 4</div>
+              <div class="verse-ar">وَٱمْرَأَتُهُۥ حَمَّالَةَ ٱلْحَطَبِ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="امْرَأَت"><span class="kelime-ar" style="color:#dc2626;">وَٱمْرَأَتُهُۥ</span><span class="kelime-tr">ve</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="حَمّالَة"><span class="kelime-ar" style="color:#2563eb;">حَمَّالَةَ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="حَطَب"><span class="kelime-ar" style="color:#16a34a;">ٱلْحَطَبِ</span><span class="kelime-tr">the (belirteç)</span></span></div>
-              <div class="ayet-meal">(1-5) Ebu Leheb’in iki eli kurusun! Kurudu da. Malı ve kazandıkları ona fayda vermedi. O, alevli bir ateşte yanacak. Odun taşıyıcı olarak ve boynunda hurma lifinden bükülmüş bir ip olduğu halde karısı da (ateşe girecek).</div>
+              <div class="verse-tr">(1-5) Ebu Leheb’in iki eli kurusun! Kurudu da. Malı ve kazandıkları ona fayda vermedi. O, alevli bir ateşte yanacak. Odun taşıyıcı olarak ve boynunda hurma lifinden bükülmüş bir ip olduğu halde karısı da (ateşe girecek).</div>
+              
             </article>
             
-            <article class="ayet" style="border-left:5px solid #065f46;">
-              <div class="ayet-baslik">
-                <span style="color:#065f46;">Âyet 5</span>
-                <span class="ayet-kod">111:5</span>
-              </div>
-              <div class="ayet-ar">فِى جِيدِهَا حَبْلٌ مِّن مَّسَدٍۭ</div>
+            <article class="ag-kart" style="border-top:4px solid #065f46;">
+              <div class="ag-kart-baslik" style="color:#065f46;">Âyet 5</div>
+              <div class="verse-ar">فِى جِيدِهَا حَبْلٌ مِّن مَّسَدٍۭ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="فِي"><span class="kelime-ar" style="color:#dc2626;">فِى</span><span class="kelime-tr">İçinde</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="جِيد"><span class="kelime-ar" style="color:#2563eb;">جِيدِهَا</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="حَبْل"><span class="kelime-ar" style="color:#16a34a;">حَبْلٌ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="مِن"><span class="kelime-ar" style="color:#9333ea;">مِّن</span><span class="kelime-tr">-den, -dan</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="مَسَد"><span class="kelime-ar" style="color:#ea580c;">مَّسَدٍۭ</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(1-5) Ebu Leheb’in iki eli kurusun! Kurudu da. Malı ve kazandıkları ona fayda vermedi. O, alevli bir ateşte yanacak. Odun taşıyıcı olarak ve boynunda hurma lifinden bükülmüş bir ip olduğu halde karısı da (ateşe girecek).</div>
+              <div class="verse-tr">(1-5) Ebu Leheb’in iki eli kurusun! Kurudu da. Malı ve kazandıkları ona fayda vermedi. O, alevli bir ateşte yanacak. Odun taşıyıcı olarak ve boynunda hurma lifinden bükülmüş bir ip olduğu halde karısı da (ateşe girecek).</div>
+              
             </article>
-            
+            </div>
         </section>
         
 </main>

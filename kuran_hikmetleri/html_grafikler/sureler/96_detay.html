@@ -15,7 +15,8 @@ body {
   background: #f5f1e8;
   color: #1e293b;
   font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-  line-height: 1.7;
+  line-height: 1.65;
+  font-size: 11pt;
 }
 .ust-cubuk {
   position: fixed;
@@ -42,10 +43,10 @@ body {
 .geri:hover { background: #1e293b; }
 .ust-baslik { color: #e2e8f0; font-weight: 600; font-size: 10.5pt; }
 .kitap-sayfa {
-  max-width: 880px;
+  max-width: 1100px;
   margin: 0 auto;
   background: #ffffff;
-  padding: 40px 48px 64px;
+  padding: 32px 36px 56px;
   min-height: 100vh;
   box-shadow: 0 2px 18px rgba(15, 23, 42, 0.08);
 }
@@ -57,7 +58,7 @@ body {
 }
 .sure-baslik h1 {
   font-family: 'Cinzel', 'Plus Jakarta Sans', serif;
-  font-size: 24pt;
+  font-size: 22pt;
   color: #0f172a;
   margin: 4px 0 8px;
   line-height: 1.3;
@@ -65,7 +66,7 @@ body {
 .sure-arapca {
   font-family: 'Amiri', serif;
   color: #1e40af;
-  font-size: 26pt;
+  font-size: 24pt;
   margin-left: 12px;
   font-weight: 400;
 }
@@ -79,8 +80,19 @@ body {
   font-weight: 600;
 }
 .rozet-acik { background: #475569; }
-.mevzu { margin-top: 34px; }
-.mevzu-baslik { padding: 10px 16px; border-radius: 6px; margin-bottom: 14px; }
+.tanitim {
+  margin-top: 26px;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 9.5pt;
+  color: #334155;
+}
+.tanitim h3 { margin: 0 0 6px; font-size: 11pt; color: #1e3a8a; }
+.tanitim p { margin: 0 0 6px; }
+.mevzu { margin-top: 30px; }
+.mevzu-baslik { padding: 10px 16px; border-radius: 6px; margin-bottom: 12px; }
 .mevzu-ad { font-size: 13pt; font-weight: 700; }
 .mevzu-kod {
   font-family: monospace;
@@ -92,61 +104,90 @@ body {
   margin-right: 8px;
 }
 .mevzu-meta { color: #64748b; font-size: 9.5pt; margin-top: 4px; }
-.ayet {
+/* Âyet kutuları: kitaptaki ag-kart ile aynı boyut */
+.ayetler {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 6px;
+  align-items: start;
+}
+.ag-kart {
   background: #ffffff;
   border: 1px solid #e2e8f0;
-  border-radius: 10px;
-  padding: 14px 18px;
-  margin-bottom: 12px;
+  border-radius: 6px;
+  padding: 6px 8px;
+  page-break-inside: avoid;
 }
-.ayet-baslik {
-  display: flex;
-  justify-content: space-between;
-  font-size: 9.5pt;
+.ag-kart-baslik {
+  font-size: 8.5pt;
   font-weight: 700;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
-.ayet-kod { color: #94a3b8; font-family: monospace; font-weight: 400; }
-.ayet-ar {
+.verse-ar {
   font-family: 'Amiri', serif;
-  font-size: 22pt;
-  line-height: 1.9;
+  font-size: 12pt;
+  line-height: 1.8;
   direction: rtl;
   text-align: right;
   color: #0f172a;
 }
-.ayet-meal {
-  font-size: 10.5pt;
-  color: #334155;
+.verse-tr {
+  font-size: 8pt;
+  color: #475569;
+  line-height: 1.5;
   border-top: 1px dashed #e2e8f0;
-  padding-top: 8px;
-  margin-top: 8px;
+  padding-top: 4px;
+  margin-top: 2px;
 }
+.ag-ortak {
+  font-size: 7.5pt;
+  color: #94a3b8;
+  font-style: italic;
+  margin-top: 4px;
+}
+.tefsir {
+  margin-top: 5px;
+  border-top: 1px dashed #e2e8f0;
+  padding-top: 4px;
+  font-size: 7.5pt;
+  color: #334155;
+  line-height: 1.5;
+}
+.tefsir summary {
+  cursor: pointer;
+  color: #1e40af;
+  font-weight: 700;
+  font-size: 7.5pt;
+}
+.tefsir p { margin: 4px 0 0; }
 .kelime-satiri {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
   direction: rtl;
-  margin: 6px 0 4px;
+  margin: 6px 0 8px 0;
 }
 .kelime {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  padding: 2px 6px 3px;
+  padding: 2px 6px 3px 6px;
   background: #f8fafc;
   border-radius: 4px;
+  min-width: 0;
 }
-.kelime-ar { font-family: 'Amiri', serif; font-size: 14pt; line-height: 1.6; }
-.kelime-tr { direction: ltr; font-size: 7.5pt; color: #334155; line-height: 1.2; }
-.ayet { page-break-inside: avoid; }
+.kelime-ar { font-family: 'Amiri', serif; font-size: 13pt; line-height: 1.6; }
+.kelime-tr { direction: ltr; font-size: 7pt; color: #334155; text-align: center; line-height: 1.2; }
 @media (max-width: 640px) {
-  .kitap-sayfa { padding: 22px 16px 40px; }
+  .kitap-sayfa { padding: 20px 16px 40px; }
   .sure-arapca { display: block; margin: 6px 0 0; }
+  .ayetler { grid-template-columns: 1fr; }
 }
 @media print {
   .ust-cubuk { display: none; }
   body { padding-top: 0; background: #ffffff; }
+  .tefsir { display: block; }
+  .tefsir > :not(summary) { display: block; }
 }
 </style>
 </head>
@@ -168,6 +209,8 @@ body {
     </div>
   </header>
 
+  <section class="tanitim"><h3>Elmalılı tefsiri: sûre tanıtımı</h3><p>sûresinin başından e kadar beş âyettir. Tam sûre itibarıyla da Fatiha&#x27;dır. Fatiha bundan ve in ve in baş kısımlarından sonra inmekle beraber tam sûre olarak indirildiğinden, sûre itibarıyla önce indirilen Fatiha, âyet itibarıyla önce indirilen de &#x27;dir. İmam Ahmed b. Hanbel, Buharî ve Müslim ve Abd b. Humeyd ve Adurrezzak ve daha başkaları İbnü Şihab yoluyla &quot;Urve b. Zübeyr&#x27;den, Hazreti Aişe (r.a.)&#x27;den vahyin başlaması ile ilgili hadiste -ki Fatiha da tamamı nakl edilmişti- ilk vahyin r ü yayı sadıka (doğru çıkan rüyalar) ile başladığını açıkladıktan sonra Hira mağarasında meleğin gelip tazyik ile tutup sıkıp da &quot;oku&quot; dediğini, &quot;Ben okumuş değilim.&quot; diye cevap verdiğini, bunun üzerine bir daha sıkıp</p><p>yine diye cevap verdiğini, üçüncüde yine bütün çabasını sona erdirinceye kadar sıkıp bırakıp da dediğini rivayet etmiş olduklarından ve hepsinden en sahih (doğru) olan bu rivayette ise e kadar âyetler diye anlatılmış ve açıkça ifade edilmiş bulunduğundan ilk inen âyetlerin bu âyetle r olduğu en sahih olarak isbatlanmış bulunmaktadır. Yalnız ile yetinen bazı rivayetten maksat, sûrenin tamamına işaret olduğunu zannedenler olmuş ise de bu mücmel e kadar açıkça ifade eden rivayet müfessir demek olduğundan, müfessirin mücmele tercih e dilmesi gerekir.</p><p>Tamamı birden indirilen sûrelerin pek az olup azar azar ve çoğunlukla beşer veya onar âyet indiği bilindiği gibi, bunlarda da beşer âyet anlatıldığı ve bu sûrenin geride kalan kısmı da anlamlarına göre sonra davetin başlamasıyla karşılıklı mücadelenin meydana gelmesinden sonra indiğine delalet ettiği ve namazın farz kılınmasından sonra olduğu anlaşılan bu âyetlerin Ebu Cehil&#x27;in azgınlığı sebebiyle indiği hakkında da Buhari ve diğer (hadis) kitaplarında rivayetler nakledilmekte bulunduğ u ndan dolayı ilk indirilen, bu sûrenin tamamı değil, başından beş âyet ve tam sûre olarak indirilenin Fatiha olduğu ve değişik rivayetlerin bu şekilde bağdaştırılması bu konudaki sözlerin ve rivayetlerin gerek rivayet ve gerek dirayet bakımından en sahihi ( doğrusu) bulunduğu gerçekten tesbit edilmiştir. Onun için Zamahşerî&#x27;nin İbnü Abbas ve Mücahid&#x27;den: Bu sûre ilk inendir. Tefsir bilginlerinin çoğu ise; &quot;ilk inen (sûre) Fatiha, sonra Kalem sûresidir&quot; sözü de Fatiha tefsirinde geçtiği tarzda bu mânâ ile açı k lanmış ve rivayetler arasında uyum sağlanmıştır. Özetle en sahih olan rivayetlere göre bu sûrenin beş âyetinin ilk inen olması, Fatiha&#x27;nın tam sûre olarak ilk inen olmasına ve bu arada başka sûrelere ait bir takım âyetlerin inmiş olmasına aykırı değildir. Şu halde İbnü Abbas ve Mücahid&#x27;in sözü ile tefsir bilginlerinin çoğunun sözleri arasında gerçekten çelişki yoktur ve bundan dolayı &quot;Keşşaf&quot; sahibi gibi Fatiha&#x27;nın ilk inen sûre olduğu sabit değildir zannedenlerin görüşü doğru değildir. Kur&#x27;ân&#x27;ın gerek âye t ve gerek sûre tertibinde inme sırası gözetilmeyerek Mekkî (Mekkede inen) ve Medenî (Medine de inen) sûrelerin ve âyetlerin öne almak ve geriye bırakmakla karıştırılıp daha çok mânâ ilişkisi gözetilmiş bulunmasında ise nazmın güzellikleri ve Kur&#x27;ân&#x27;ın ica z ı açısından çok büyük hikmetler vardır ki bunun en belirgini hayatın gidiş ve gelişmesinde ve zaman olayları ve değişmelerinin meydana gelmeleriyle analiz ve</p><p>birleştirmesinde daima önceki ile sonraki arasındaki birlik ve düzen nizamını düşündürmektir. Mesela bu beş âyet, Fatiha&#x27;dan önce inmiştir diye bunları sûreden ayırıp da tertipde Fatiha&#x27;dan önce koymaya kalkışmak gibi bir üslub takip edilecek olsaydı, ne bu sûre kalır, ne de Kur&#x27;ân&#x27;ın (diğer) sûreleri ve âyetleri arasında bir uygunluk bulunurdu. Öyle y apılmayıp Kur&#x27;ân&#x27;ın herhangi bir kısmı okunurken ve hatta her hangi önemli bir işe başlarken diye başlamakta hem her şeyden önce &quot;Rabb&#x27;ının ismiyle oku&quot; emrinin mânâsının uygulama, hem de Kur&#x27;ân nazmını hiç bozmadan bütün yönleriyle korumak vardır. Bu sûrelerin bu şekilde Kur&#x27;ân&#x27;ın (indirilmesinin) bitimine doğru buraya konulmasında şüphesiz ki ilk sırasında anlaşılan mânâdan fazla bir mânâsı vardır. Henüz okunacak bir kitap verilmeden oku oku denilmekle &quot;İşte bu kitap&quot; (Bakara, 2/1) diye başlayarak okunacak kitabı tamamladıktan sonra bitimine doğru &quot;oku oku&quot; diye emredilmesindeki mânâ elbette farklıdır. Bunda olgunluk döneminden, zamanın geçmesinden sonra da peygamberliğin ilk durumunu hatırlatmakla sonu baş tarafa çeviren bir yenileme ve hiçbir zam a nda okumaktan doyulmayacağını anlatmak üzere &quot;O halde bir işi bitirdin mi daha yorucu olana koş, ancak Rabbinden iste.&quot; (İnşirah 94/7-8) mânâsı gereğince biri bitince diğerine başlamak suretiyle bir devam mânâsı vardır. İlk indirildiğinde okumaya başla m ak için varid olan bu pekiştirilmiş emir sonradan da tekrar tekrar devam etme mânâsını ifade etmek ve bu şekilde önceki sûrede geçen ahsen-i takvim ile ahkemü&#x27;l-hâkimîn (hükmedenlerin en doğru hükmedicisi) olan Allah, dininin gereğini uzun uzadıya açıklam a hususunda buraya derc etmiş. Ve onun içindir ki bunun başında ilk indirilen beş âyet, sonradan insanın kendini ihtiyaçsız görmesinin sakıncalı olduğunu açıklayan ve Allah&#x27;a dönüşü ifade eden &quot;Hayır! Gerçekten insan, kendisini zengin görünce azıyor. Oysa dönüş, elbette Rabbinedir.&quot; âyetleri ile takip edilmiştir. Demek ki İslâm dini, başlangıçta diye okumak emri ile gelmiş ve sonra da insan bir mertebeye gelir de okumaktan, ilimden, din ve kulluktan kendisini doygun olur zannetmemesi ve başlangıç ve s onuç birleştirilerek, her sonucun bir başlangıç gibi bilinmesi için bu emri kapsayan bu sûre buraya yerleştirilmiştir. Bu mânâ &quot;Ecelin gelinceye kadar Rabbine ibadet et.&quot; (Hicr 15/99); &quot;Ve de ki: Rabbim! İlmimi artır.&quot; (Tâhâ, 20/115) âyetlerinin de m â nâsıdır.</p><p>Âyetleri : Hicâzî&#x27;de yirmi, Irâkî&#x27;de on dokuz, Şâmî&#x27;de on sekizdir.</p><p>Fâsılası : harfleridir. Bunlar, sırasıyla birleştirilirse &quot;kalk bağışlayayım&quot; yahut &quot;kalk heybet ver&quot; mânâları çıkar.</p><p>Meâl-i Şerifi</p></section>
+
   <div style="display:flex; width:100%; border-radius:8px; overflow:hidden; margin:20px 0 8px; box-shadow:0 2px 10px rgba(0,0,0,0.12);"><div style="flex: 5; background:#1e40af; border:1px solid #1d4ed8; padding:8px 4px; text-align:center; color:#ffffff; font-size:11px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="İlk vahiy (1-5)">İlk vahiy (5)</div><div style="flex: 3; background:#065f46; border:1px solid #047857; padding:8px 4px; text-align:center; color:#ffffff; font-size:11px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Muhteva ve İlgili Âyetler (6-8)">Muhteva ve İlgili Âyetler (3)</div><div style="flex: 11; background:#b45309; border:1px solid #d97706; padding:8px 4px; text-align:center; color:#ffffff; font-size:11px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Ebu Cehil (9-19)">Ebu Cehil (11)</div></div>
 
   
@@ -178,57 +221,47 @@ body {
             </div>
             <div class="mevzu-meta">Âyet 1 - 5 · <span class="rozet" style="background:#1e40af;">5 âyet</span></div>
           </header>
-          
-            <article class="ayet" style="border-left:5px solid #1e40af;">
-              <div class="ayet-baslik">
-                <span style="color:#1e40af;">Âyet 1</span>
-                <span class="ayet-kod">96:1</span>
-              </div>
-              <div class="ayet-ar"> ٱقْرَأْ بِٱسْمِ رَبِّكَ ٱلَّذِى خَلَقَ</div>
+          <div class="ayetler">
+            <article class="ag-kart" style="border-top:4px solid #1e40af;">
+              <div class="ag-kart-baslik" style="color:#1e40af;">Âyet 1</div>
+              <div class="verse-ar"> ٱقْرَأْ بِٱسْمِ رَبِّكَ ٱلَّذِى خَلَقَ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="قَرَأَ"><span class="kelime-ar" style="color:#dc2626;">ٱقْرَأْ</span><span class="kelime-tr">Okudu</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="اسْم"><span class="kelime-ar" style="color:#2563eb;">بِٱسْمِ</span><span class="kelime-tr">ile, -de</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="رَبّ"><span class="kelime-ar" style="color:#16a34a;">رَبِّكَ</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="الَّذِي"><span class="kelime-ar" style="color:#9333ea;">ٱلَّذِى</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="خَلَقَ"><span class="kelime-ar" style="color:#ea580c;">خَلَقَ</span><span class="kelime-tr">yarattı</span></span></div>
-              <div class="ayet-meal">(1-2) Yaratan Rabbinin adıyla oku! O, insanı bir aşılanmış yumurtadan yarattı.</div>
+              <div class="verse-tr">(1-2) Yaratan Rabbinin adıyla oku! O, insanı bir aşılanmış yumurtadan yarattı.</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 1</summary><p>1- Yaratan Rabbinin a dıyla oku!</p></details>
             </article>
             
-            <article class="ayet" style="border-left:5px solid #1e40af;">
-              <div class="ayet-baslik">
-                <span style="color:#1e40af;">Âyet 2</span>
-                <span class="ayet-kod">96:2</span>
-              </div>
-              <div class="ayet-ar">خَلَقَ ٱلْإِنسَـٰنَ مِنْ عَلَقٍ</div>
+            <article class="ag-kart" style="border-top:4px solid #1e40af;">
+              <div class="ag-kart-baslik" style="color:#1e40af;">Âyet 2</div>
+              <div class="verse-ar">خَلَقَ ٱلْإِنسَـٰنَ مِنْ عَلَقٍ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="خَلَقَ"><span class="kelime-ar" style="color:#dc2626;">خَلَقَ</span><span class="kelime-tr">yarattı</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="إِنسان"><span class="kelime-ar" style="color:#2563eb;">ٱلْإِنسَٰنَ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="مِن"><span class="kelime-ar" style="color:#16a34a;">مِنْ</span><span class="kelime-tr">-den, -dan</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="عَلَق"><span class="kelime-ar" style="color:#9333ea;">عَلَقٍ</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(1-2) Yaratan Rabbinin adıyla oku! O, insanı bir aşılanmış yumurtadan yarattı.</div>
+              <div class="verse-tr">(1-2) Yaratan Rabbinin adıyla oku! O, insanı bir aşılanmış yumurtadan yarattı.</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 2</summary><p>2- O, insanı bir alekadan (embriyodan) yarattı.</p></details>
             </article>
             
-            <article class="ayet" style="border-left:5px solid #1e40af;">
-              <div class="ayet-baslik">
-                <span style="color:#1e40af;">Âyet 3</span>
-                <span class="ayet-kod">96:3</span>
-              </div>
-              <div class="ayet-ar">ٱقْرَأْ وَرَبُّكَ ٱلْأَكْرَمُ</div>
+            <article class="ag-kart" style="border-top:4px solid #1e40af;">
+              <div class="ag-kart-baslik" style="color:#1e40af;">Âyet 3</div>
+              <div class="verse-ar">ٱقْرَأْ وَرَبُّكَ ٱلْأَكْرَمُ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="قَرَأَ"><span class="kelime-ar" style="color:#dc2626;">ٱقْرَأْ</span><span class="kelime-tr">Okudu</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="رَبّ"><span class="kelime-ar" style="color:#2563eb;">وَرَبُّكَ</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="أَكْرَم"><span class="kelime-ar" style="color:#16a34a;">ٱلْأَكْرَمُ</span><span class="kelime-tr">the (belirteç)</span></span></div>
-              <div class="ayet-meal">(3-5) Oku! İnsana bilmediklerini belleten, kalemle (yazmayı) öğreten Rabbin, en büyük kerem sahibidir.</div>
+              <div class="verse-tr">(3-5) Oku! İnsana bilmediklerini belleten, kalemle (yazmayı) öğreten Rabbin, en büyük kerem sahibidir.</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 3</summary><p>3- Oku! Rabbin sonsuz kerem sahibidir.</p></details>
             </article>
             
-            <article class="ayet" style="border-left:5px solid #1e40af;">
-              <div class="ayet-baslik">
-                <span style="color:#1e40af;">Âyet 4</span>
-                <span class="ayet-kod">96:4</span>
-              </div>
-              <div class="ayet-ar">ٱلَّذِى عَلَّمَ بِٱلْقَلَمِ</div>
+            <article class="ag-kart" style="border-top:4px solid #1e40af;">
+              <div class="ag-kart-baslik" style="color:#1e40af;">Âyet 4</div>
+              <div class="verse-ar">ٱلَّذِى عَلَّمَ بِٱلْقَلَمِ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="الَّذِي"><span class="kelime-ar" style="color:#dc2626;">ٱلَّذِى</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="عَلَّمَ"><span class="kelime-ar" style="color:#2563eb;">عَلَّمَ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="قَلَم"><span class="kelime-ar" style="color:#16a34a;">بِٱلْقَلَمِ</span><span class="kelime-tr">the (belirteç)</span></span></div>
-              <div class="ayet-meal">(3-5) Oku! İnsana bilmediklerini belleten, kalemle (yazmayı) öğreten Rabbin, en büyük kerem sahibidir.</div>
+              <div class="verse-tr">(3-5) Oku! İnsana bilmediklerini belleten, kalemle (yazmayı) öğreten Rabbin, en büyük kerem sahibidir.</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 4</summary><p>4- O Rab ki kalemle yazmayı öğretti.</p></details>
             </article>
             
-            <article class="ayet" style="border-left:5px solid #1e40af;">
-              <div class="ayet-baslik">
-                <span style="color:#1e40af;">Âyet 5</span>
-                <span class="ayet-kod">96:5</span>
-              </div>
-              <div class="ayet-ar">عَلَّمَ ٱلْإِنسَـٰنَ مَا لَمْ يَعْلَمْ</div>
+            <article class="ag-kart" style="border-top:4px solid #1e40af;">
+              <div class="ag-kart-baslik" style="color:#1e40af;">Âyet 5</div>
+              <div class="verse-ar">عَلَّمَ ٱلْإِنسَـٰنَ مَا لَمْ يَعْلَمْ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="عَلَّمَ"><span class="kelime-ar" style="color:#dc2626;">عَلَّمَ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="إِنسان"><span class="kelime-ar" style="color:#2563eb;">ٱلْإِنسَٰنَ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="ما"><span class="kelime-ar" style="color:#16a34a;">مَا</span><span class="kelime-tr">Ne</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="لَم"><span class="kelime-ar" style="color:#9333ea;">لَمْ</span><span class="kelime-tr">değil (geçmiş)</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="عَلِمَ"><span class="kelime-ar" style="color:#ea580c;">يَعْلَمْ</span><span class="kelime-tr">Bildi</span></span></div>
-              <div class="ayet-meal">(3-5) Oku! İnsana bilmediklerini belleten, kalemle (yazmayı) öğreten Rabbin, en büyük kerem sahibidir.</div>
+              <div class="verse-tr">(3-5) Oku! İnsana bilmediklerini belleten, kalemle (yazmayı) öğreten Rabbin, en büyük kerem sahibidir.</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 5</summary><p>5- İnsana bilmediği şeyleri öğretti.</p></details>
             </article>
-            
+            </div>
         </section>
         
         <section class="mevzu">
@@ -238,37 +271,31 @@ body {
             </div>
             <div class="mevzu-meta">Âyet 6 - 8 · <span class="rozet" style="background:#065f46;">3 âyet</span></div>
           </header>
-          
-            <article class="ayet" style="border-left:5px solid #065f46;">
-              <div class="ayet-baslik">
-                <span style="color:#065f46;">Âyet 6</span>
-                <span class="ayet-kod">96:6</span>
-              </div>
-              <div class="ayet-ar">كَلَّآ إِنَّ ٱلْإِنسَـٰنَ لَيَطْغَىٰٓ</div>
+          <div class="ayetler">
+            <article class="ag-kart" style="border-top:4px solid #065f46;">
+              <div class="ag-kart-baslik" style="color:#065f46;">Âyet 6</div>
+              <div class="verse-ar">كَلَّآ إِنَّ ٱلْإِنسَـٰنَ لَيَطْغَىٰٓ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="كَلّا"><span class="kelime-ar" style="color:#dc2626;">كَلَّآ</span><span class="kelime-tr">hayır, asla</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="إِنّ"><span class="kelime-ar" style="color:#2563eb;">إِنَّ</span><span class="kelime-tr">şüphesiz, gerçekten</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="إِنسان"><span class="kelime-ar" style="color:#16a34a;">ٱلْإِنسَٰنَ</span><span class="kelime-tr">the (belirteç)</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="طَغَى"><span class="kelime-ar" style="color:#9333ea;">لَيَطْغَىٰٓ</span><span class="kelime-tr">için, -e</span></span></div>
-              <div class="ayet-meal">(6-8) Gerçek şu ki, insan kendini kendine yeterli görerek azar. Kuşkusuz dönüş Rabbinedir.</div>
+              <div class="verse-tr">(6-8) Gerçek şu ki, insan kendini kendine yeterli görerek azar. Kuşkusuz dönüş Rabbinedir.</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 6</summary><p>6- Hayır! Doğrusu (kâfir) insan azgınlık eder.</p></details>
             </article>
             
-            <article class="ayet" style="border-left:5px solid #065f46;">
-              <div class="ayet-baslik">
-                <span style="color:#065f46;">Âyet 7</span>
-                <span class="ayet-kod">96:7</span>
-              </div>
-              <div class="ayet-ar">أَن رَّءَاهُ ٱسْتَغْنَىٰٓ</div>
+            <article class="ag-kart" style="border-top:4px solid #065f46;">
+              <div class="ag-kart-baslik" style="color:#065f46;">Âyet 7</div>
+              <div class="verse-ar">أَن رَّءَاهُ ٱسْتَغْنَىٰٓ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَن"><span class="kelime-ar" style="color:#dc2626;">أَن</span><span class="kelime-tr">ki, -mesi</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="رَأَى"><span class="kelime-ar" style="color:#2563eb;">رَّءَاهُ</span><span class="kelime-tr">gördü</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="اسْتَغْنَى"><span class="kelime-ar" style="color:#16a34a;">ٱسْتَغْنَىٰٓ</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(6-8) Gerçek şu ki, insan kendini kendine yeterli görerek azar. Kuşkusuz dönüş Rabbinedir.</div>
+              <div class="verse-tr">(6-8) Gerçek şu ki, insan kendini kendine yeterli görerek azar. Kuşkusuz dönüş Rabbinedir.</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 7</summary><p>7- Kend isinin muhtaç olmadığını zannettiği için.</p></details>
             </article>
             
-            <article class="ayet" style="border-left:5px solid #065f46;">
-              <div class="ayet-baslik">
-                <span style="color:#065f46;">Âyet 8</span>
-                <span class="ayet-kod">96:8</span>
-              </div>
-              <div class="ayet-ar">إِنَّ إِلَىٰ رَبِّكَ ٱلرُّجْعَىٰٓ</div>
+            <article class="ag-kart" style="border-top:4px solid #065f46;">
+              <div class="ag-kart-baslik" style="color:#065f46;">Âyet 8</div>
+              <div class="verse-ar">إِنَّ إِلَىٰ رَبِّكَ ٱلرُّجْعَىٰٓ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="إِنّ"><span class="kelime-ar" style="color:#dc2626;">إِنَّ</span><span class="kelime-tr">şüphesiz, gerçekten</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="إِلَى"><span class="kelime-ar" style="color:#2563eb;">إِلَىٰ</span><span class="kelime-tr">-e, -a doğru</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="رَبّ"><span class="kelime-ar" style="color:#16a34a;">رَبِّكَ</span><span class="kelime-tr">Rab</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="رُجْعَى"><span class="kelime-ar" style="color:#9333ea;">ٱلرُّجْعَىٰٓ</span><span class="kelime-tr">the (belirteç)</span></span></div>
-              <div class="ayet-meal">(6-8) Gerçek şu ki, insan kendini kendine yeterli görerek azar. Kuşkusuz dönüş Rabbinedir.</div>
+              <div class="verse-tr">(6-8) Gerçek şu ki, insan kendini kendine yeterli görerek azar. Kuşkusuz dönüş Rabbinedir.</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 8</summary><p>8- Muhakkak ki dönüş mutlaka Rabbinedir.</p><p>9, 10- Namaz kıldığı zaman, bir kulu engelleyeni gördün mü?</p></details>
             </article>
-            
+            </div>
         </section>
         
         <section class="mevzu">
@@ -278,117 +305,95 @@ body {
             </div>
             <div class="mevzu-meta">Âyet 9 - 19 · <span class="rozet" style="background:#b45309;">11 âyet</span></div>
           </header>
-          
-            <article class="ayet" style="border-left:5px solid #b45309;">
-              <div class="ayet-baslik">
-                <span style="color:#b45309;">Âyet 9</span>
-                <span class="ayet-kod">96:9</span>
-              </div>
-              <div class="ayet-ar">أَرَءَيْتَ ٱلَّذِى يَنْهَىٰ</div>
+          <div class="ayetler">
+            <article class="ag-kart" style="border-top:4px solid #b45309;">
+              <div class="ag-kart-baslik" style="color:#b45309;">Âyet 9</div>
+              <div class="verse-ar">أَرَءَيْتَ ٱلَّذِى يَنْهَىٰ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="رَأَى"><span class="kelime-ar" style="color:#dc2626;">أَرَءَيْتَ</span><span class="kelime-tr">gördü</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="الَّذِي"><span class="kelime-ar" style="color:#2563eb;">ٱلَّذِى</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="نَهَى"><span class="kelime-ar" style="color:#16a34a;">يَنْهَىٰ</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(9-10) Namaz kılarken bir kulu (Peygamber’i namazdan) men edeni gördün mü?</div>
+              <div class="verse-tr">(9-10) Namaz kılarken bir kulu (Peygamber’i namazdan) men edeni gördün mü?</div>
+              
             </article>
             
-            <article class="ayet" style="border-left:5px solid #b45309;">
-              <div class="ayet-baslik">
-                <span style="color:#b45309;">Âyet 10</span>
-                <span class="ayet-kod">96:10</span>
-              </div>
-              <div class="ayet-ar">عَبْدًا إِذَا صَلَّىٰٓ</div>
+            <article class="ag-kart" style="border-top:4px solid #b45309;">
+              <div class="ag-kart-baslik" style="color:#b45309;">Âyet 10</div>
+              <div class="verse-ar">عَبْدًا إِذَا صَلَّىٰٓ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="عَبْد"><span class="kelime-ar" style="color:#dc2626;">عَبْدًا</span><span class="kelime-tr">kul</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="إِذا"><span class="kelime-ar" style="color:#2563eb;">إِذَا</span><span class="kelime-tr">ne zaman, -dığında</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="صَلَّى"><span class="kelime-ar" style="color:#16a34a;">صَلَّىٰٓ</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(9-10) Namaz kılarken bir kulu (Peygamber’i namazdan) men edeni gördün mü?</div>
+              <div class="verse-tr">(9-10) Namaz kılarken bir kulu (Peygamber’i namazdan) men edeni gördün mü?</div>
+              
             </article>
             
-            <article class="ayet" style="border-left:5px solid #b45309;">
-              <div class="ayet-baslik">
-                <span style="color:#b45309;">Âyet 11</span>
-                <span class="ayet-kod">96:11</span>
-              </div>
-              <div class="ayet-ar">أَرَءَيْتَ إِن كَانَ عَلَى ٱلْهُدَىٰٓ</div>
+            <article class="ag-kart" style="border-top:4px solid #b45309;">
+              <div class="ag-kart-baslik" style="color:#b45309;">Âyet 11</div>
+              <div class="verse-ar">أَرَءَيْتَ إِن كَانَ عَلَى ٱلْهُدَىٰٓ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="رَأَى"><span class="kelime-ar" style="color:#dc2626;">أَرَءَيْتَ</span><span class="kelime-tr">gördü</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="إِن"><span class="kelime-ar" style="color:#2563eb;">إِن</span><span class="kelime-tr">eğer, şayet</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="كانَ"><span class="kelime-ar" style="color:#16a34a;">كَانَ</span><span class="kelime-tr">Oldu</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="عَلَى"><span class="kelime-ar" style="color:#9333ea;">عَلَى</span><span class="kelime-tr">üzerine, üstüne</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="هُدًى"><span class="kelime-ar" style="color:#ea580c;">ٱلْهُدَىٰٓ</span><span class="kelime-tr">Hidayet</span></span></div>
-              <div class="ayet-meal">(11-12) Ne dersin, o (Peygamber) doğru yolda ise yahut takvâyı emrediyorsa?</div>
+              <div class="verse-tr">(11-12) Ne dersin, o (Peygamber) doğru yolda ise yahut takvâyı emrediyorsa?</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 11</summary><p>11- Gördün mü (ne dersin?), ya o (kul) doğru yolda olur,</p></details>
             </article>
             
-            <article class="ayet" style="border-left:5px solid #b45309;">
-              <div class="ayet-baslik">
-                <span style="color:#b45309;">Âyet 12</span>
-                <span class="ayet-kod">96:12</span>
-              </div>
-              <div class="ayet-ar">أَوْ أَمَرَ بِٱلتَّقْوَىٰٓ</div>
+            <article class="ag-kart" style="border-top:4px solid #b45309;">
+              <div class="ag-kart-baslik" style="color:#b45309;">Âyet 12</div>
+              <div class="verse-ar">أَوْ أَمَرَ بِٱلتَّقْوَىٰٓ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="أَو"><span class="kelime-ar" style="color:#dc2626;">أَوْ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="أَمَرَ"><span class="kelime-ar" style="color:#2563eb;">أَمَرَ</span><span class="kelime-tr">Emretti</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="تَقْوَى"><span class="kelime-ar" style="color:#16a34a;">بِٱلتَّقْوَىٰٓ</span><span class="kelime-tr">the (belirteç)</span></span></div>
-              <div class="ayet-meal">(11-12) Ne dersin, o (Peygamber) doğru yolda ise yahut takvâyı emrediyorsa?</div>
+              <div class="verse-tr">(11-12) Ne dersin, o (Peygamber) doğru yolda ise yahut takvâyı emrediyorsa?</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 12</summary><p>12- Veya kötülüklerden sakınmayı emr ederse?</p></details>
             </article>
             
-            <article class="ayet" style="border-left:5px solid #b45309;">
-              <div class="ayet-baslik">
-                <span style="color:#b45309;">Âyet 13</span>
-                <span class="ayet-kod">96:13</span>
-              </div>
-              <div class="ayet-ar">أَرَءَيْتَ إِن كَذَّبَ وَتَوَلَّىٰٓ</div>
+            <article class="ag-kart" style="border-top:4px solid #b45309;">
+              <div class="ag-kart-baslik" style="color:#b45309;">Âyet 13</div>
+              <div class="verse-ar">أَرَءَيْتَ إِن كَذَّبَ وَتَوَلَّىٰٓ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="رَأَى"><span class="kelime-ar" style="color:#dc2626;">أَرَءَيْتَ</span><span class="kelime-tr">gördü</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="إِن"><span class="kelime-ar" style="color:#2563eb;">إِن</span><span class="kelime-tr">eğer, şayet</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="كَذَّبَ"><span class="kelime-ar" style="color:#16a34a;">كَذَّبَ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="تَوَلَّى"><span class="kelime-ar" style="color:#9333ea;">وَتَوَلَّىٰٓ</span><span class="kelime-tr">ve</span></span></div>
-              <div class="ayet-meal">Ne dersin o (men eden, Peygamber’i) yalanlıyor ve doğru yoldan yüz çeviriyorsa?</div>
+              <div class="verse-tr">Ne dersin o (men eden, Peygamber’i) yalanlıyor ve doğru yoldan yüz çeviriyorsa?</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 13</summary><p>13- Gördün mü, ya bu (adam, hakkı) yalanlar, yüzçevirirse,</p></details>
             </article>
             
-            <article class="ayet" style="border-left:5px solid #b45309;">
-              <div class="ayet-baslik">
-                <span style="color:#b45309;">Âyet 14</span>
-                <span class="ayet-kod">96:14</span>
-              </div>
-              <div class="ayet-ar">أَلَمْ يَعْلَم بِأَنَّ ٱللَّهَ يَرَىٰ</div>
+            <article class="ag-kart" style="border-top:4px solid #b45309;">
+              <div class="ag-kart-baslik" style="color:#b45309;">Âyet 14</div>
+              <div class="verse-ar">أَلَمْ يَعْلَم بِأَنَّ ٱللَّهَ يَرَىٰ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="لَم"><span class="kelime-ar" style="color:#dc2626;">أَلَمْ</span><span class="kelime-tr">değil (geçmiş)</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="عَلِمَ"><span class="kelime-ar" style="color:#2563eb;">يَعْلَم</span><span class="kelime-tr">Bildi</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="أَنّ"><span class="kelime-ar" style="color:#16a34a;">بِأَنَّ</span><span class="kelime-tr">şu ki, -diğini</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="اللَّه"><span class="kelime-ar" style="color:#9333ea;">ٱللَّهَ</span><span class="kelime-tr">Allah</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="رَأَى"><span class="kelime-ar" style="color:#ea580c;">يَرَىٰ</span><span class="kelime-tr">gördü</span></span></div>
-              <div class="ayet-meal">(Bu adam) Allah’ın, (yaptıklarını) gördüğünü bilmez mi!</div>
+              <div class="verse-tr">(Bu adam) Allah’ın, (yaptıklarını) gördüğünü bilmez mi!</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 14</summary><p>14- O adam, Allah&#x27;ın kendini gördüğünü hiç bilmiyor mu?</p><p>15, 16- Hayır, hayır! Eğer o, bu davranışından vazgeçmezse, and olsun ki biz, onu perçeminden, o günahkâr ve yalancı p erçeminden tutup cehenneme sürükleriz.</p></details>
             </article>
             
-            <article class="ayet" style="border-left:5px solid #b45309;">
-              <div class="ayet-baslik">
-                <span style="color:#b45309;">Âyet 15</span>
-                <span class="ayet-kod">96:15</span>
-              </div>
-              <div class="ayet-ar">كَلَّا لَئِن لَّمْ يَنتَهِ لَنَسْفَعًۢا بِٱلنَّاصِيَةِ</div>
+            <article class="ag-kart" style="border-top:4px solid #b45309;">
+              <div class="ag-kart-baslik" style="color:#b45309;">Âyet 15</div>
+              <div class="verse-ar">كَلَّا لَئِن لَّمْ يَنتَهِ لَنَسْفَعًۢا بِٱلنَّاصِيَةِ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="كَلّا"><span class="kelime-ar" style="color:#dc2626;">كَلَّا</span><span class="kelime-tr">hayır, asla</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="إِن"><span class="kelime-ar" style="color:#2563eb;">لَئِن</span><span class="kelime-tr">eğer, şayet</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="لَم"><span class="kelime-ar" style="color:#16a34a;">لَّمْ</span><span class="kelime-tr">değil (geçmiş)</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="انتَهَى"><span class="kelime-ar" style="color:#9333ea;">يَنتَهِ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="ن"><span class="kelime-ar" style="color:#ea580c;">لَنَسْفَعًۢا</span><span class="kelime-tr">için, -e</span></span><span class="kelime" style="border-bottom:3px solid #0891b2;" title="ناصِيَة"><span class="kelime-ar" style="color:#0891b2;">بِٱلنَّاصِيَةِ</span><span class="kelime-tr">the (belirteç)</span></span></div>
-              <div class="ayet-meal">(15-19) Hayır, hayır! Eğer vazgeçmezse, derhal onu alnından (perçeminden), o yalancı, günahkâr alından (perçemden) yakalarız (cehenneme atarız). O, hemen gidip meclisini (kendi taraftarlarını) çağırsın. Biz de zebânîleri çağıracağız. Hayır! Ona uyma! Allah’a secde et ve (yalnızca O’na) yaklaş!</div>
+              <div class="verse-tr">(15-19) Hayır, hayır! Eğer vazgeçmezse, derhal onu alnından (perçeminden), o yalancı, günahkâr alından (perçemden) yakalarız (cehenneme atarız). O, hemen gidip meclisini (kendi taraftarlarını) çağırsın. Biz de zebânîleri çağıracağız. Hayır! Ona uyma! Allah’a secde et ve (yalnızca O’na) yaklaş!</div>
+              
             </article>
             
-            <article class="ayet" style="border-left:5px solid #b45309;">
-              <div class="ayet-baslik">
-                <span style="color:#b45309;">Âyet 16</span>
-                <span class="ayet-kod">96:16</span>
-              </div>
-              <div class="ayet-ar">نَاصِيَةٍ كَـٰذِبَةٍ خَاطِئَةٍ</div>
+            <article class="ag-kart" style="border-top:4px solid #b45309;">
+              <div class="ag-kart-baslik" style="color:#b45309;">Âyet 16</div>
+              <div class="verse-ar">نَاصِيَةٍ كَـٰذِبَةٍ خَاطِئَةٍ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="ناصِيَة"><span class="kelime-ar" style="color:#dc2626;">نَاصِيَةٍ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="كاذِب"><span class="kelime-ar" style="color:#2563eb;">كَٰذِبَةٍ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="خاطِئَة"><span class="kelime-ar" style="color:#16a34a;">خَاطِئَةٍ</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(15-19) Hayır, hayır! Eğer vazgeçmezse, derhal onu alnından (perçeminden), o yalancı, günahkâr alından (perçemden) yakalarız (cehenneme atarız). O, hemen gidip meclisini (kendi taraftarlarını) çağırsın. Biz de zebânîleri çağıracağız. Hayır! Ona uyma! Allah’a secde et ve (yalnızca O’na) yaklaş!</div>
+              <div class="verse-tr">(15-19) Hayır, hayır! Eğer vazgeçmezse, derhal onu alnından (perçeminden), o yalancı, günahkâr alından (perçemden) yakalarız (cehenneme atarız). O, hemen gidip meclisini (kendi taraftarlarını) çağırsın. Biz de zebânîleri çağıracağız. Hayır! Ona uyma! Allah’a secde et ve (yalnızca O’na) yaklaş!</div>
+              
             </article>
             
-            <article class="ayet" style="border-left:5px solid #b45309;">
-              <div class="ayet-baslik">
-                <span style="color:#b45309;">Âyet 17</span>
-                <span class="ayet-kod">96:17</span>
-              </div>
-              <div class="ayet-ar">فَلْيَدْعُ نَادِيَهُۥ</div>
+            <article class="ag-kart" style="border-top:4px solid #b45309;">
+              <div class="ag-kart-baslik" style="color:#b45309;">Âyet 17</div>
+              <div class="verse-ar">فَلْيَدْعُ نَادِيَهُۥ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="دَعا"><span class="kelime-ar" style="color:#dc2626;">فَلْيَدْعُ</span><span class="kelime-tr">Dua etti</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="نادِي"><span class="kelime-ar" style="color:#2563eb;">نَادِيَهُۥ</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(15-19) Hayır, hayır! Eğer vazgeçmezse, derhal onu alnından (perçeminden), o yalancı, günahkâr alından (perçemden) yakalarız (cehenneme atarız). O, hemen gidip meclisini (kendi taraftarlarını) çağırsın. Biz de zebânîleri çağıracağız. Hayır! Ona uyma! Allah’a secde et ve (yalnızca O’na) yaklaş!</div>
+              <div class="verse-tr">(15-19) Hayır, hayır! Eğer vazgeçmezse, derhal onu alnından (perçeminden), o yalancı, günahkâr alından (perçemden) yakalarız (cehenneme atarız). O, hemen gidip meclisini (kendi taraftarlarını) çağırsın. Biz de zebânîleri çağıracağız. Hayır! Ona uyma! Allah’a secde et ve (yalnızca O’na) yaklaş!</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 17</summary><p>17- O zaman o taraftarlarını yardıma çağırsın.</p></details>
             </article>
             
-            <article class="ayet" style="border-left:5px solid #b45309;">
-              <div class="ayet-baslik">
-                <span style="color:#b45309;">Âyet 18</span>
-                <span class="ayet-kod">96:18</span>
-              </div>
-              <div class="ayet-ar">سَنَدْعُ ٱلزَّبَانِيَةَ</div>
+            <article class="ag-kart" style="border-top:4px solid #b45309;">
+              <div class="ag-kart-baslik" style="color:#b45309;">Âyet 18</div>
+              <div class="verse-ar">سَنَدْعُ ٱلزَّبَانِيَةَ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="دَعا"><span class="kelime-ar" style="color:#dc2626;">سَنَدْعُ</span><span class="kelime-tr">Dua etti</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="زَبانِيَة"><span class="kelime-ar" style="color:#2563eb;">ٱلزَّبَانِيَةَ</span><span class="kelime-tr">the (belirteç)</span></span></div>
-              <div class="ayet-meal">(15-19) Hayır, hayır! Eğer vazgeçmezse, derhal onu alnından (perçeminden), o yalancı, günahkâr alından (perçemden) yakalarız (cehenneme atarız). O, hemen gidip meclisini (kendi taraftarlarını) çağırsın. Biz de zebânîleri çağıracağız. Hayır! Ona uyma! Allah’a secde et ve (yalnızca O’na) yaklaş!</div>
+              <div class="verse-tr">(15-19) Hayır, hayır! Eğer vazgeçmezse, derhal onu alnından (perçeminden), o yalancı, günahkâr alından (perçemden) yakalarız (cehenneme atarız). O, hemen gidip meclisini (kendi taraftarlarını) çağırsın. Biz de zebânîleri çağıracağız. Hayır! Ona uyma! Allah’a secde et ve (yalnızca O’na) yaklaş!</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 18</summary><p>18- Biz de Zebanileri çağıracağız.</p></details>
             </article>
             
-            <article class="ayet" style="border-left:5px solid #b45309;">
-              <div class="ayet-baslik">
-                <span style="color:#b45309;">Âyet 19</span>
-                <span class="ayet-kod">96:19</span>
-              </div>
-              <div class="ayet-ar">كَلَّا لَا تُطِعْهُ وَٱسْجُدْ وَٱقْتَرِب ۩</div>
+            <article class="ag-kart" style="border-top:4px solid #b45309;">
+              <div class="ag-kart-baslik" style="color:#b45309;">Âyet 19</div>
+              <div class="verse-ar">كَلَّا لَا تُطِعْهُ وَٱسْجُدْ وَٱقْتَرِب ۩</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="كَلّا"><span class="kelime-ar" style="color:#dc2626;">كَلَّا</span><span class="kelime-tr">hayır, asla</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="لا"><span class="kelime-ar" style="color:#2563eb;">لَا</span><span class="kelime-tr">Hayır/değil</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="أَطاعَ"><span class="kelime-ar" style="color:#16a34a;">تُطِعْهُ</span><span class="kelime-tr">itaat etti</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="سَجَدَ"><span class="kelime-ar" style="color:#9333ea;">وَٱسْجُدْ</span><span class="kelime-tr">Secde etti</span></span><span class="kelime" style="border-bottom:3px solid #ea580c;" title="اقْتَرَبَ"><span class="kelime-ar" style="color:#ea580c;">وَٱقْتَرِب</span><span class="kelime-tr">ve</span></span></div>
-              <div class="ayet-meal">(15-19) Hayır, hayır! Eğer vazgeçmezse, derhal onu alnından (perçeminden), o yalancı, günahkâr alından (perçemden) yakalarız (cehenneme atarız). O, hemen gidip meclisini (kendi taraftarlarını) çağırsın. Biz de zebânîleri çağıracağız. Hayır! Ona uyma! Allah’a secde et ve (yalnızca O’na) yaklaş!</div>
+              <div class="verse-tr">(15-19) Hayır, hayır! Eğer vazgeçmezse, derhal onu alnından (perçeminden), o yalancı, günahkâr alından (perçemden) yakalarız (cehenneme atarız). O, hemen gidip meclisini (kendi taraftarlarını) çağırsın. Biz de zebânîleri çağıracağız. Hayır! Ona uyma! Allah’a secde et ve (yalnızca O’na) yaklaş!</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 19</summary><p>19- Hayır, sakın ona boyun eğme (Allah&#x27;a) secde et ve yaklaş.</p><p>Rabbinin adıyla oku!. Yani onun yüce adıyla, &quot;Allah&quot; yüce ismi ile başlayarak oku. Okumaya başla. Yukarıda geçtiği üzere bu emir inerken, başlangıçta Hira mağarasında Hz. Muhammed&#x27;in zatına melek gelip canına tak diyen şiddetli bir sıkıştırma ile yalnız &quot;oku&quot; demiş. O zamana kadar Hz. Muhammed okumak bilmediği için &quot;ben okumuş değilim&quot; yani okumak bilmem ki ne okuyayım? demişti. Bunun üzerine yine şiddetli bir sıkıştırma ile &quot;oku&quot; demiş. O da yine &quot;ben okumuş değilim&quot; demişti. Demek ki o ilk iki &quot;oku&quot; emri henüz Kur&#x27;ân değil, okuma denilen işe başlamak için heceletme cinsinden hazırlayıcı bir emir teklif idi. Kur&#x27;ân, üçüncü defaki sıkıştırmadan sonra olan iş bu &quot;Rabb&#x27;inin adıyla oku!&quot; emri ile başlamıştı. Şu halde bu emir, ilk inmesinde hem yaratıcı bir mahiyette Hazreti Peygamber&#x27;i okumazken okur yapmış, hem öğretici bir şekilde nazmı ile okunanı belirtmeye başlamış, hem mânâsı ile ilk vazifenin böyle yaratan, terbiye</p><p>eden Allah&#x27;ı tanıtmak ve onun ismiyle okumaya başlamak olduğunu yükümlü tutmak şeklinde anlatmıştır. Bu başlangıçta şöyle demek olur: Gerçi sen bu zamana kadar okumadın. &quot;Sen Kur&#x27;ân&#x27;dan önce bir kitap okumuyordun.&quot; (Ankebut 29/48) kitabın niteliğini, imanın esasının neden oluştuğunu bilmezdin... &quot;Sen önceleri kitap nedir iman nedir bilmezdin.&quot; (Şurâ, 42/52) Fakat işte yaratm a k denilen işin sahibi olup kâinatı yaratan ve seni yaratıp yetiştiren, sana ve her işine sahip olan Rabb&#x27;in seni kudretiyle şu anda bir okur yaptı, okunacak bir Kur&#x27;ân, bir kitap indirmeğe başladı. Böyle öğretildiği gibi o Rabbi&#x27;nin ismiyle başlayarak oku!</p><p>&quot;Kur&#x27;ân okumak istediğin zaman, Allah&#x27;ın rahmetinden kovulmuş şeytanın şerinden Allah&#x27;a sığın.&quot; (Nahl, 16/98) âyetinde de geçtiği üzere Kur&#x27;ân okumanın hakikati, sözü rastgele söylemekten daha güzel bir şekilde düzgün olarak bağlayarak birbiri ardınca ağızdan sesle çıkarmaktır ki, gerek ezberden ve gerek yüzünden, gerek gizli ve gerek açık mutlak olarak okumak demektir. Kitabın kitap olması için, gerçekten yazılmış olması şart olmadığı gibi, okumak için de mutlaka yazı şart değildir.</p><p>Gözle müta laaya (okumaya), zihinden hatırlamaya okumak demek de mecazdır. Hakikaten kırâetin kemali ezbere okumaktır. Hz. Peygamber&#x27;in hadisinde söylendiği üzere yüzünden okumanın sevab ve fazileti, kavrama ve ezberlemeye vesile olmasından dolayıdır. Resulullah&#x27;ın k ırâati, yazıya ihtiyacı olmaksızın Allah tarafından kendine böyle inmiş olan Kur&#x27;ân&#x27;ı ezberinden en mükemmel şekilde okumaktır ki, kendi kendine veya namazda veya diğerlerine tebliğ için okumayı, okutmayı ve yazdırmayı kapsar. İşte eskiden hiç kitap okuma m ış, yazı yazmamış olan Ümmî Peygamber&#x27;e bu emir ile bir mu&#x27;cize olarak okunacak bir kitab verilmeye başlanmış ve kendisine yazmadan okuyacak okutacak, emir yoluyla yazdırtacak bir kırâet kudreti ihsan buyurmuştur. Buna besmele ile başlanması da emrolunmuş t ur. Ve bunun hikmeti, uluhiyet gereği olduğu da özellikle &quot;senin Rabbin&quot; izafeti ile anlatılmıştır. Hiç bir kitap okumadan ve kalem ile yazıyı bellemeden böyle bir kırâet mucizesi nasıl mümkün olur? gibi bir şüpheye meydan bırakılmaması için kalem işi n e kadar gelinmek üzere aşağıdaki gibi yaratıcılık vasfı (niteliği) ve yaratılışın başlangıcı ile uluhiyet hükmü hatırlatılarak ve açıklanarak buyuruluyor ki: O Rabb&#x27;in ki yarattı, yani olmayan şeyi yaratmak kendisinin vasfı olan, yahut seni ve her şeyi yaratan Rabb&#x27;inin ismiyle oku ki</p><p>2. O insanı bir kan</p><p>pıhtısından yarattı.</p><p>ALAK , aleka &#x27;nın çoğulu olarak sayılmıştır. Beydâvî demiş ki: &quot;İnsan&quot; kelimesi, çoğul mânâsında olduğu için çoğul yapılmıştır. &quot;Kamus&quot; ve şerhlerinden anlaşıldığına göre aslında lügatta alek maddesi, yapışıp ilişmek mânâsına vaaz edilmiştir. Ve mutlak şekilde ilişken ve yapışkan nesneye de denir. Bundan her türlü kana ve kırmızı kana ve özellikle uyuşuk kana alek denilmiş. Kandan bir kısım olması itibariyle veya doğrudan doğruya ilişiklik mânâsı ile rahimdeki tutuğa da aleka denilmiştir. Yapışkanlığından dolayı sülük ve kuyu makarasına ve ipine ve makarasının iliştirilip ipi geçirilen takıntısına ve işlek yola da alek denilir . Bütün bunlar maddî mânâdır. Bunlar d an başka alek, ruhanî ve manevî olarak &quot;alaka&quot; gibi aşk ve sevgi mânâsına geldiği de lügatta açıklanmıştır.</p><p>Tefsir bilginleri, yaratılışın maddi yönünü göz önünde bulundurarak meni (sperma)nin aşılamasından sonra medana gelen kan pıhtısının çoğulu olmasıyla yetinmişler ve bunu en alçaktan en yükseğe yükselmeyi göstermek için açıkça anlaşılan mânâ olarak görmüşlerdir. Fakat manevî yönü de kapsamak üzere mutlak bir alaka, bir ilişik mânâsına müfred olarak düşünülmesine hem alekanın yaratılmasına da baş l angıç olan ve Rabbanî bir izafetten ibaret bulunan ruhî ilişiğe kadar insanın bütün yaratılışın başlangıçlarını kapsayan, hem de okunanın ruhî bir sevgi ve alaka ile takip edilmesi hususuna da açık faydalı bir uyarım olacağından dolayı daha ince, da h a derin, daha beliğ olur. Bu şekilde meâle şöyle demeli: &quot;O, insanı bir ilişikten yarattı. Bununla beraber iki takdirde de kısaca mânâsı şudur: &quot;Bir alakadan, yahut sırf bir ilişikten bir insan yaratan ve mutlak surette yaratmak kendinin şanı olan Rabb&#x27;in hiç okumamış olan kimseyi de böyle bir emir ile elbette okutur. Onun için oku!</p><p>3. Onun ismi ile &quot;oku&quot; tekrarı ifade eden bu ikinci emir okumak yeteneğinin tekrar ile meydana geleceğini uyarmak üzere birinci &quot;oku&quot;yu pekiştirmek için bir tekrar olduğu gibi, daha sonraki âyetlerden hareket ederek başkalarına tebliğ etmek veya yazdırmak için okumak üzere ikinci bir emir de olur. Bundan dolayı kalem ile yazı meselesi burada açık olarak anlatılarak, mümkün olup olmamakla ilgili sorunun çözümü, başlangı ç veya itiraziye (parantez içi) veya hal vavı ile şöyle tamamlanıyor. Ve Rabb&#x27;in sonsuz kerem sahibidir. mübteda, sıfatı haberdir. (el-Ekrem) haber, (ellezi) onun sıfatı olması da caizdir. İki durumda da müsned marife (belirli) olduğu için kasr (tahsis) vardır. Birinci tarz, sözün gelişine daha uygun ve peygamberlik ile lütuf ve ihsanda bulunmanın</p><p>kalem ile ikramda bulunmadan daha yüksek olduğunu anlatmada daha açıktır. Yani başkası değil, o her cömertten daha cömert olan Keremine, kerametine nihayet olmayan, karşılıksız, bedelsiz, korkusuz, endişesiz lütuf ve hilmi ile, sebepli veya sebepsiz, alışılmış ve alışılmamış cömertlik ve yardım ile nimet verip, ihsanda bulunan kerametler ve mucizeler bağışlayan ve gerçek kerim (cömert) yalnız ken d isi olan o yaratan ve sana ismi ile başlayarak okumayı emreden ancak Rabb&#x27;indir.</p><p>4. O kalem ile öğretendir. Kalem ile yazıyı öğreten, o vasıta ile ilim belleten de odur. Yoksa bir kan pıhtısından yaratılmış olan insanlar ne kalem bilirdi ne yazı.</p><p>5. O, insana bilmediği şeyleri öğretti. İnsanda olmayan kuvvetleri, yetenekleri, kabiliyetleri yaratarak ve deliller getirerek ve âyetler indirerek vehbî (Allah vergisi) olarak da öğretti. Çalışarak kazanma yoluyla da öğretti. İşte öyle sonsuz kerem sahibi olan Rabb&#x27;in sen hiç okumamışken, yalnız cömertliğinden sana Ledünnî (Allah tarafından ihsan edilen) bir ilim vererek böyle bir emir ile seni kaleme muhtaç etmeden de okutur, bilmediğin şeyleri bildirir ve bildirdi. Onun için sen de onun ismiyle bu Kur&#x27;ân &#x27; ı oku, oku. Beydâvî der ki: Yüce Allah insanı en özel mertebelerden en yücesine nakleden ve nimetini ortaya koymakla Allah&#x27;lığını anlatmak ve cömertliğini gerçekleştirmek tarzında insanın başlangıç ve son durumunu sayarak bu şekilde önce Allah&#x27;ı tanımaya akıl yoluyla delalet edene işaret; ikinci olarak da işitme yoluyla delalet edene uyarıda bulunmuştur.</p><p>Doğrudan doğru yaratılışı incelemenin Allah&#x27;ı tanımaya delaleti akla dayanır. Okuma ve yazmada ise okuyan ve yazandan nakletme itibarıyla (Allah&#x27;ı tanımaya) işitmeye dayalı delaleti vardır. Bu şekilde Kur&#x27;ân akli delilleri de kapsamakla beraber onlar onun mânâsı olduğundan asıl kendi delaleti, sözle ve işitme yoluyla olan delalettir. Peygamber&#x27;in Allah&#x27;tan öğrenerek okuduğunu nakleder ve anlatır demek olur. Kur&#x27;ân&#x27;ın ilk inen âyetinin, böyle akıl ve işitmeye dayanan delili kapsayan, tekvinî (var etmeyle ilgili), teşriî (kanun yapmaya ait) emirlerle oku oku diyerek ve okumanın, yazmanın, ilmin öğretilmesi insana Allah&#x27;ın en büyük kereminden olduğunu hatırlatarak gelmesi elbette çok önemli ve çok dikkate değer. Burada Peygamber&#x27;in okumak için yazıya ihtiyacı olmadığı bildirilmekle beraber şüphe yok ki kalem ile öğretmenin de Allah&#x27;ın büyük bir ikramı olduğu açıklanmış ve böylece ümmet okuyup yazmaya teşvi k edilmiş ve özendirilmiştir. Şu kadar ki bunu anlatırken peygamberin yazı yazmaksızın okuması, kitap sahibi olması, hakkındaki Allah&#x27;ın keremini, yani peygamberlik</p><p>ve elçiliğini ispatlama görüşü açısından daha yüksek olduğu da ifade edilmiştir.</p><p>Nite kim bu mânâ, Ankebut Sûresi&#x27;nde &quot;(Ey Muhammed!) Kur&#x27;ân&#x27;dan önce sen herhangi bir yazı okumuş değildin; onu elinle de yazmamıştın. Öyle olsaydı o iptalciler şüpheye düşerlerdi.&quot; (Ankebut, 29/48) âyetinde açıkça anlatılmıştır. Şu halde kalemin bu önemin i ifade eden âyeti ilk okuma emri ile beraber kabul eden peygamberin (s.a.v) bundan sonra kalem ile yazıyı da öğrenip yazması gerekmez miydi? sorusu sorulmaz. Gerçekten peygamberin kendi eliyle hiç yazı yazmadığı ve A&#x27;lâ Sûresi&#x27;nde &quot;Sana Kur&#x27;ân&#x27;ı okuta c ağız (ve Allah dilemedikçe de) artık hiç bir şey unutmayacaksın.&quot; (A&#x27;lâ, 87/6) buyurulduğu üzere Allah tarafından okutulanı unutmayacağına dair kendisine güvence verildiğinden, ezberleme ve kavrama için de yazmaya ihtiyacı olmadığı, fakat indirilen (âyetl e r)i ümmetin ezberlemesi için vahy katiplerine okuyup yazdırdığı bilinmektedir. Acaba kendisi yazmamakla beraber yazılanı okumayı peygamberlikten sonra da bilmiyor muydu? Bu hususta da meşhur olanı, &quot;hayır bilmiyordu&quot;. Çünkü Hudeybiye anlaşması belgesinde y azılan bir kelimeyi silmek için hangisi olduğunu Hz. Ali&#x27;ye sorduğu bilinmektedir. Bununla beraber &quot;Şifa&quot; ve &quot;haşiyelerinde&quot; anlatıldığı üzere sonradan katibi Hz. Muaviye&#x27;ye &quot;Yani divite ham ipek koy, kalemi yan kes, ba&#x27;yı uzat, sin&#x27;i(n dişlerini) ayı r, mim&#x27;i köreltme, Allah (kelimesini) güzel yap, er-Rahmân&#x27;ı uzat er-Rahîm&#x27;i güzel yap (süsle).&quot; meâlinde besmeleyi güzel yazmasını emr ve tarif ettiğine dair bazı hadislere göre yazıyı bildiği de söylenmiştir. Bunu özel bir vahiy ile söylemiş olması düşü n ülmekle beraber bu &quot;oku&quot; emrinden sonra yirmi üç sene Kur&#x27;ân&#x27;ı okumak ve yazdırmak vazifesi olmuş olan Hz. Peygamber&#x27;in bu müddet içinde yazıyı da bellemiş olması akla uzak değil, uygundur. Bu onun hiç okumamış, yazmamış ümmi iken Allah&#x27;ın emri ile okur peygamber olması mucizesine aykırı olmaz, yasaklanmış da değildir. Daha önce okumuş yazmış olsaydı &quot;O vakit iptalciler şüpheye düşerlerdi.&quot; (Ankebut, 29/48) buyurulduğu üzere iptal ediciler onun Allah tarafından indirildiğinde şüphe edebilirler idiyse d e peygamberlikten sonra okur olması gibi yazıyı bilmesi de şüphe değil, vurgulama olur. Ve bu, âyetlerin teşvikine de yakışır. Fakat gerçekten fiili olarak yazmadığı ve başka kitap mütalaa etmediği kesindir.</p><p>6. &quot;Hayır.&quot; Sûrenin bundan sonraki kısmının epeyce zaman sonra indiği anlaşılıyor. Ve inmesine sebep de Ebu Cehil olduğu rivayet ediliyor. Bu arada Buhari ve Tirmizi&#x27;de İbnü Abbas&#x27;tan rivayet edildiği üzere: &quot;Eğer Muhammed&#x27;i Kabe&#x27;de namaz kılarken görürsem boynunu çiğnerim.&quot; demişti. Bu sebe p le ile sakındırma, her şeyden önce ona ait olmak üzere öyle azgın kâfir insana hitapdır. Çünkü başında görünürde azarlama ve yasak etmeyi yönlendirecek bir şey yoktur, denilmiş. Bu şekilde sûrenin baş tarafına bağlanmamış, Ebu Cehil&#x27;in sözünü redde d erek hitap ona yönelmiş oluyor. Bu ise görünüre aykırıdır. Kur&#x27;ân&#x27;da bazen sağa, bazen sola hitabı çeşitlendirme üslubu çoktur. Bu sûrede lerle de birkaç defa ahenkli bir şekilde yapılmış ise de, kendinden öncekine bir bağlantıyı gerektiren bu ile ü s lub çeşitliliği belli olmuyor. Onun için bazıları da burada &quot;Kella&quot; yasak etmek için değil, &quot;gerçekten&quot; mânâsına olarak sonrasını pekiştirmek içindir. Hitap, yine peygamberedir, demişler. Bizim anladığımıza göre hitabın ilk önce Resulullah&#x27;a olması açık, &quot; kellâ&quot;nın da kendinden önceki âyetleri tekrar tekrar okuma emirlerini zıddından caydırma ve sakındırma ile emri takviye olması nazmın ahengi itibariyle de uygun olduğundan mânâsının şu olması gerekir: &quot;Sakın okumamazlık etme ey Muhammed!&quot; Çünkü insanoğl u muhakkak azıyor, azar, haddini aşar, hakka karşı gelir, halka zarar verir,</p><p>7. kendini zengin görünce, kendini artık ihtiyacı yokmuş, maksada ermiş, zenginlik mertebesine gelmiş görmek, o görüş ve inançta bulunmak sebebiyle azar, onun için hiçbir zama n kendini zengin görme de Rabb&#x27;inin ismiyle oku, tekrar tekrar oku, emirlerini yerine getir.</p><p>8. Çünkü haberin olsun ki sonunda dönüş elbette Rabb&#x27;inedir.</p><p>RUC&#x27;A , &quot;büşrâ&quot; ölçüsünde dönme mânâsına masdardır. Yani dönüş onadır. Ondan kurtuluş yoktur. Onun için hangi basamakta olursa olsun kendini zengin görmemeli, azgınlıktan sakınmalıdır. Bu hitap da Resulullah&#x27;adır. Bununla beraber esas maksat, kendini zengin gören ve azgınlık edenleri uyarmaktır. Onun için âyetin inme sebebi olan kendini zengin g ören azgının azgınlığı bir misal halinde gösterilerek buyuruluyor ki:</p><p>9. &quot;Gördün mü?&quot;. Yukarılarda geçtiği üzere gerek bir mef&#x27;ule geçişli (müteaddî) olan görmek veya görüş sahibi olmaktan, gerekse iki mef&#x27;ulüne geçişli (müteaddî) olan ilim mânâsından gördün mü? Gördün ha, baksana ha, bilesin ha, anladın ha gibi dikkati çeken bir hitap ile ne dersin? Görüşün, fikrin,</p><p>bilgin ne ise bana haber ver! demek mânâsına kullanılır bir sorudur ki, çoğunlukla maksat gerçekten soru ve haber alma olmayıp sorulan duruma dikkati çekmekle bir kınama veya azarlama veya şaşırtma olur. Onun için biz de yerine göre gördün mü? Ne dersin? Söyle bakalım? Baksana ha diye tercüme edegeldik. Burada üç vardır. Tefsir bilginleri bunların tefsirinde birçok görüşler açıklamışlardır:</p><p>Birincisi; hepsinin de aynı muhataba, yani özel hitap ile Peygamber&#x27;e ve genel hitap ile insana yönelik olması olabildiği gibi, iki tarafın arasında bir muhakeme (yargılama) veya bir hitabet üslubu ile sağa sola çeşitli şekillerde hitap etmesi de olabilir ve daha mânâlıdır. Bu birincinin, önce Hz. Peygamber&#x27;e hitap olduğu açıktır. Dolayısıyla da hitap şanından olan herkese hitap olur. Bunda bir azgını suçüstü halinde sakındırarak gördün mü? Baksana ha şuna, kendini zengin saydığı için nasıl azgınlık ediyor? diye kötüleyerek Peygamber&#x27;e ve dolayısıyla insanlığa bir gösterme ve teşhir etme vardır. Yani ey Muhammed! Yahut ey insan baksana! O engelleyen azgına, bir kulu namaz kıldığında. Namaz kılan bir kulu özellikle namaz kıldığı sırada engell e mek ne büyük cür&#x27;et, ne büyük azgınlıktır! İşte bu, o engellemeyi kendini zengin gördüğünden dolayı yapıyor. Kırâetten (okumadan) bahs edilirken namaza geçilmesi onda kırâetin bir rükün olması ve namazın bütün ibadetlere esas ve dinin direği bulunmasından dolayıdır. Ve bu gösteriyor ki bu âyetlerin inmesi namazın farz kılınmasından sonradır. İbn Atiyye&#x27;nin açıklamasına göre; burada namaz kılan bir âbid (ibadet eden) den maksat Resulullah, engel olan da Ebu Cehil olduğunda tefsir bilginleri ihtilafa düşmem i şlerdir. Ahmed, Müslim, Nesaî ve daha başka hadisçilerin Ebu Hureyre&#x27;den rivayetlerinde: &quot;Ebu Cehil, Resulullah namaz kılarken görürse muhakkak boynunu çiğneyip yüzünü sürteceğine dair Lat ve Uzza&#x27;ya yemin etmiş, sonra da Resululah namaz kılarken dediğini yapmak için varmış, fakat birdenbire arkasına dönmüş elleriyle korunarak çekilmiş, &quot;ne oldu sana?&quot; denildiğinde, onunla benim aramda ateşten bir hendek, bir korku ve bir takım kanatlar var, demiş. Resulullah da &quot;Bana yaklaşsaydı melekler onu parça parça ederlerdi.&quot; buyurmuş. Allah Teâlâ da &#x27;dan sûrenin sonuna kadar indirmiştir. Tirmizî&#x27;nin rivayetinde de peygamber (s.a.v.) namaz kılarken Ebu Cehil, &quot;Ben seni bundan alıkoymadım mı?&quot; diyerek varmıştır. Ümeyye b. Halef Selman&#x27;ı namazdan</p><p>alıkordu diye Hasan&#x27;dan rivayet edilen haber sahih olamaz. Çünkü Selman&#x27;ın müslüman olması, hicretten sonra Medine&#x27;de olduğunda ihtilaf yoktur. Eğer Selman&#x27;dan başka Bilal ve diğerleri gibi biri hakkında olmuş ise âyetin hükmü genel olduğu için onu ve benzerlerini de kaps a yacağında şüphe yoktur. Ebu Hayyân&#x27;ın nakline göre Tebrizî demiş ki: &quot;Burada namazdan maksat, öğle namazıdır.&quot; Denilmiştir ki bu, İslâm&#x27;da cemaatle kılınan ilk namazdır. Ebu Bekir, Ali ve ilk müslümanlardan bir cemaat beraberdi. Bunlar, namaz kılarlarken E bu Talib, oğlu Caferle beraber uğramıştı. Ona: &quot;Haydi amcanın oğlunun yanında sende kıl dedi.&quot; ve kendisi sevinerek gitti ve Ebu Talib şu beyitleri söylüyordu:</p><p>&quot;Ali ve Cafer benim güvendiklerimdirler,</p><p>Zamanın sıkıntısı ve şiddeti esnasında,</p><p>Vallahi ben o peygamberi yardımsız bırakmam,</p><p>Benim soyumdan olan da bırakmaz.</p><p>Bırakmayın, yardım edin oğluna amucanızın,</p><p>Amcalarınız arasından ana-baba bir kardeşimin.&quot;</p><p>Resulullah da bununla sevinmişti. Alûsî der ki: Bunun üzerinde düşünmek gerekir. Çünkü namaz, hiç ihtilafsız İsra gecesinde farz kılınmıştır. İsra&#x27;nın hicretten bir sene önce olduğunda da İbnü Hazm, icma olduğunu iddia etmiştir. İbn Faris de hicretten bir sene ve üç ay önce olduğunu kesinlikle i f ade etmiştir. Suddî de bir sene ve beş ay demiştir. Ebu Talib&#x27;in vefatı ise hicretten üç sene kadar öncedir. Çünkü onun ölümü Hz. Hatice&#x27;nin vefatından üç veya beş gün öncedir. Onun vefatı ise, Hz. Peygamber&#x27;in peygamber olarak gönderilmesinden on sene s o nradır. Şu halde Ebu Talib, namazın farz kılınışına kavuşmuştur. Her ne kadar Kadı İyâz Zürrî&#x27;den İsra&#x27;nın peygamberin gönderilmesinden beş sene sonra olduğunu nakletmiş, Nevevî ve Kurtubî de bu görüşü tercih etmişlerse de bu görüş tenkid edilmiştir.</p><p>Fakat, Alûsî&#x27;nin bu itirazını biz uygun görmüyoruz. Çünkü İsra&#x27;da farz kılınan mutlak namaz değil, beş vakit namazdır. Bundan dolayı ondan önce Müzzemmil Sûresi tefsirinde geçtiği üzere gece namazının farz olması gibi bir öğle namazının da farz kılınmış o l masına aykırı düşmez. Kaldı ki, yukarıda zikredilen rivayette öğle namazı denilmiş, farz olduğu açıkça ifade edilmemiştir. Hz. Ömer&#x27;in müslüman olması ilk olarak açıkça kılındığı rivayet olunan namazın da bu olması gerekir. Ancak bu âyetin inme sebebi ola n olaydaki namaz öğle namazı olsa bile âyette de kasdedilen yalnız o namazdır demek doğru olmaz. Çünkü âyet kayıtsızdır. Şeriata uygun olan herhangi bir namazı kapsar. Gerek farz ve gerek nafile herhangi bir namazı yasaklamak, namazdan alıkoymak olması iti b arıyla bu azgınlık hükmüne dahildir. Ancak asıl yasak, namazın kendisinden dolayı değil de, namazla ilgili şartlardan biri itibarıyla olsa o vakit caiz olabilir. Mesela kerahet vaktinde veya gasbedilmiş bir yerde namaz kılmayı yasaklamak bu hükme girmez. Ç ünkü bunları yasaklamak, namazın kendisinden değil, namazın şartlarından olan zaman ve yerden dolayıdır. Bununla beraber bazıları ihtiyatlı davranarak bu gibi durumlarda bile yasaktan sakınmış ve yalnız doğruyu açıklamakla yetinmişlerdir. Nitekim rivayet e diliyor ki: &quot;Hz. Ali (r.a.) namazgâhta Bayram namazından önce namaz kılan bazı kimseleri gördüğü zaman Resulullah&#x27;ı böyle yaparken görmedim, demiş.&quot; Öyle ise neden yasaklamıyorsun denilmesine karşı da uyarması altına girmekten korkarım. Diğer bir rivay e tte de bir kulu namaz kılarken yasaklamayı istemem, fakat onlara Resulullah&#x27;tan gördüğümü söylerim demiştir. Yine bu nükte iledir ki İmam-ı Azam Ebu Hanife (r.a.) Hazretleri, kendisine İmam Ebu Yusuf: &quot;Namaz kılan rüku&#x27;dan başını kaldırırken &quot;Rabbim b e ni bağışla&quot; der mi? diye sorduğu zaman &quot;Rabbimiz sana hamd olsun&quot; der, diye cevap vermiş, açıkça &quot;hayır demez!&quot; dememiştir. Diğer ibadetlerden alıkoymak da namazdan alıkoymaya kıyas olunur. Bu konuda sözlü yasaklama ile fiilî yasaklama ve tavırla yasa k lama arasında fark da yoktur. Bir insanı meşgul ederek namazdan, ibadetten alıkoymak da bu hükme girer. O da Ebu Cehil davranışıdır.</p><p>10. &quot;Gördün mü?&quot;. Yukarılarda geçtiği üzere gerek bir mef&#x27;ule geçişli (müteaddî) olan görmek veya görüş sahibi olmaktan, gerekse iki mef&#x27;ulüne geçişli (müteaddî) olan ilim mânâsından gördün mü? Gördün ha, baksana ha, bilesin ha, anladın ha gibi dikkati çeken bir hitap ile ne dersin? Görüşün, fikrin,</p><p>bilgin ne ise bana haber ver! demek mânâsına kullanılır bir sorudur ki, çoğunlukla maksat gerçekten soru ve haber alma olmayıp sorulan duruma dikkati çekmekle bir kınama veya azarlama veya şaşırtma olur. Onun için biz de yerine göre gördün mü? Ne dersin? Söyle bakalım? Baksana ha diye tercüme edegeldik. Burada üç vardır. Tefsir bilginleri bunların tefsirinde birçok görüşler açıklamışlardır:</p><p>Birincisi; hepsinin de aynı muhataba, yani özel hitap ile Peygamber&#x27;e ve genel hitap ile insana yönelik olması olabildiği gibi, iki tarafın arasında bir muhakeme (yargılama) veya bir hitabet üslubu ile sağa sola çeşitli şekillerde hitap etmesi de olabilir ve daha mânâlıdır. Bu birincinin, önce Hz. Peygamber&#x27;e hitap olduğu açıktır. Dolayısıyla da hitap şanından olan herkese hitap olur. Bunda bir azgını suçüstü halinde sakındırarak gördün mü? Baksana ha şuna, kendini zengin saydığı için nasıl azgınlık ediyor? diye kötüleyerek Peygamber&#x27;e ve dolayısıyla insanlığa bir gösterme ve teşhir etme vardır. Yani ey Muhammed! Yahut ey insan baksana! O engelleyen azgına, bir kulu namaz kıldığında. Namaz kılan bir kulu özellikle namaz kıldığı sırada engellemek ne büyük cür&#x27;et, ne büyük azgınlıktır! İşte bu, o engellemeyi kendini zengin gördüğünden dolayı yapıyor. Kırâetten (okumadan) bahs edilirken namaza geçilmesi onda kırâetin bir rükün olma s ı ve namazın bütün ibadetlere esas ve dinin direği bulunmasından dolayıdır. Ve bu gösteriyor ki bu âyetlerin inmesi namazın farz kılınmasından sonradır. İbn Atiyye&#x27;nin açıklamasına göre; burada namaz kılan bir âbid (ibadet eden) den maksat Resulullah, en g el olan da Ebu Cehil olduğunda tefsir bilginleri ihtilafa düşmemişlerdir. Ahmed, Müslim, Nesaî ve daha başka hadisçilerin Ebu Hureyre&#x27;den rivayetlerinde: &quot;Ebu Cehil, Resulullah namaz kılarken görürse muhakkak boynunu çiğneyip yüzünü sürteceğine dair Lat v e Uzza&#x27;ya yemin etmiş, sonra da Resululah namaz kılarken dediğini yapmak için varmış, fakat birdenbire arkasına dönmüş elleriyle korunarak çekilmiş, &quot;ne oldu sana?&quot; denildiğinde, onunla benim aramda ateşten bir hendek, bir korku ve bir takım kanatlar var, d emiş. Resulullah da &quot;Bana yaklaşsaydı melekler onu parça parça ederlerdi.&quot; buyurmuş. Allah Teâlâ da &#x27;dan sûrenin sonuna kadar indirmiştir. Tirmizî&#x27;nin rivayetinde de peygamber (s.a.v.) namaz kılarken Ebu Cehil, &quot;Ben seni bundan alıkoymadım mı?&quot; diyer e k varmıştır. Ümeyye b. Halef Selman&#x27;ı namazdan</p><p>alıkordu diye Hasan&#x27;dan rivayet edilen haber sahih olamaz. Çünkü Selman&#x27;ın müslüman olması, hicretten sonra Medine&#x27;de olduğunda ihtilaf yoktur. Eğer Selman&#x27;dan başka Bilal ve diğerleri gibi biri hakkında olmuş ise âyetin hükmü genel olduğu için onu ve benzerlerini de kapsayacağında şüphe yoktur. Ebu Hayyân&#x27;ın nakline göre Tebrizî demiş ki: &quot;Burada namazdan maksat, öğle namazıdır.&quot; Denilmiştir ki bu, İslâm&#x27;da cemaatle kılınan ilk namazdır. Ebu Bekir, Ali ve il k müslümanlardan bir cemaat beraberdi. Bunlar, namaz kılarlarken Ebu Talib, oğlu Caferle beraber uğramıştı. Ona: &quot;Haydi amcanın oğlunun yanında sende kıl dedi.&quot; ve kendisi sevinerek gitti ve Ebu Talib şu beyitleri söylüyordu:</p><p>&quot;Ali ve Cafer benim güvendiklerimdirler,</p><p>Zamanın sıkıntısı ve şiddeti esnasında,</p><p>Vallahi ben o peygamberi yardımsız bırakmam,</p><p>Benim soyumdan olan da bırakmaz.</p><p>Bırakmayın, yardım edin oğluna amucanızın,</p><p>Amcalarınız arasından ana-baba bi r kardeşimin.&quot;</p><p>Resulullah da bununla sevinmişti. Alûsî der ki: Bunun üzerinde düşünmek gerekir. Çünkü namaz, hiç ihtilafsız İsra gecesinde farz kılınmıştır. İsra&#x27;nın hicretten bir sene önce olduğunda da İbnü Hazm, icma olduğunu iddia etmiştir. İbn Faris de hicretten bir sene ve üç ay önce olduğunu kesinlikle ifade etmiştir. Suddî de bir sene ve beş ay demiştir. Ebu Talib&#x27;in vefatı ise hicretten üç sene kadar öncedir. Çünkü onun ölümü Hz. Hatice&#x27;nin vefatından üç veya beş gün öncedir. Onun vefatı i se, Hz. Peygamber&#x27;in peygamber olarak gönderilmesinden on sene sonradır. Şu halde Ebu Talib, namazın farz kılınışına kavuşmuştur. Her ne kadar Kadı İyâz Zürrî&#x27;den İsra&#x27;nın peygamberin gönderilmesinden beş sene sonra olduğunu nakletmiş, Nevevî ve Kurtubî d e bu görüşü tercih etmişlerse de bu görüş tenkid edilmiştir.</p><p>Fakat, Alûsî&#x27;nin bu itirazını biz uygun görmüyoruz. Çünkü İsra&#x27;da farz kılınan mutlak namaz değil, beş vakit namazdır. Bundan dolayı ondan önce Müzzemmil Sûresi tefsirinde geçtiği üzere gece namazının farz olması gibi bir öğle namazının da farz kılınmış olmasına aykırı düşmez. Kaldı ki, yukarıda zikredilen rivayette öğle namazı denilmiş, farz olduğu açıkça ifade edilmemiştir. Hz. Ömer&#x27;in müslüman olması ilk olarak açıkça kılındığı rivayet olu n an namazın da bu olması gerekir. Ancak bu âyetin inme sebebi olan olaydaki namaz öğle namazı olsa bile âyette de kasdedilen yalnız o namazdır demek doğru olmaz. Çünkü âyet kayıtsızdır. Şeriata uygun olan herhangi bir namazı kapsar. Gerek farz ve gerek naf i le herhangi bir namazı yasaklamak, namazdan alıkoymak olması itibarıyla bu azgınlık hükmüne dahildir. Ancak asıl yasak, namazın kendisinden dolayı değil de, namazla ilgili şartlardan biri itibarıyla olsa o vakit caiz olabilir. Mesela kerahet vaktinde veya gasbedilmiş bir yerde namaz kılmayı yasaklamak bu hükme girmez. Çünkü bunları yasaklamak, namazın kendisinden değil, namazın şartlarından olan zaman ve yerden dolayıdır. Bununla beraber bazıları ihtiyatlı davranarak bu gibi durumlarda bile yasaktan sakınmış ve yalnız doğruyu açıklamakla yetinmişlerdir. Nitekim rivayet ediliyor ki: &quot;Hz. Ali (r.a.) namazgâhta Bayram namazından önce namaz kılan bazı kimseleri gördüğü zaman Resulullah&#x27;ı böyle yaparken görmedim, demiş.&quot; Öyle ise neden yasaklamıyorsun denilmesin e karşı da uyarması altına girmekten korkarım. Diğer bir rivayette de bir kulu namaz kılarken yasaklamayı istemem, fakat onlara Resulullah&#x27;tan gördüğümü söylerim demiştir. Yine bu nükte iledir ki İmam-ı Azam Ebu Hanife (r.a.) Hazretleri, kendisine İmam Ebu Yusuf: &quot;Namaz kılan rüku&#x27;dan başını kaldırırken &quot;Rabbim beni bağışla&quot; der mi? diye sorduğu zaman &quot;Rabbimiz sana hamd olsun&quot; der, diye cevap vermiş, açıkça &quot;hayır demez!&quot; dememiştir. Diğer ibadetlerden alıkoymak da namazdan alıkoymaya kıyas olun u r. Bu konuda sözlü yasaklama ile fiilî yasaklama ve tavırla yasaklama arasında fark da yoktur. Bir insanı meşgul ederek namazdan, ibadetten alıkoymak da bu hükme girer. O da Ebu Cehil davranışıdır.</p><p>11. Baksana. Yani bak, gör, düşün bil de haber ver, bakalım ne dersin? &quot;Ya o kul doğru yolda olur, yahut kötülüklerden sakınmayı emrederse&quot;. Bu şart cümlesi olduğu için cevabı hazfedilmiştir. fiillerindeki gizli zamirler &quot;abd=(kul)a da, yasaklayana da ait olabilir. Ve ona</p><p>göre hitabı da onun karşılığına yönelik olur. Kula ait olduğu takdirde hitap, yasaklayana çevrilmekle telvin edilmiş olur ki bu daha nüktelidir. Mânâ şu olur: &quot;Düşünsene! Ey namaz kılan bir kulu alıkoyan azgın insan! Eğer o kul hidayet, doğruluk, hak üzere gitse yahut onunla beraber daha yükselerek diğerlerine de takva ile, Allah&#x27;tan korkup fenalıktan sakınmakla emretse ne olur? Fena mı olur? Sen onu Allah&#x27;ın iyi, kötü her şeyi gördüğünü bilmez de senin yasağını dinler mi sanıyorsun?&quot; Zamir yasaklayana ait olduğu takdirde is e hitap, yine önceki üsluba uygun olarak kula yönelik olup mânâ şu olur: &quot;Ey o okumakla emredilip de namaz kılan kul! Ey Muhammed! O namazdan alıkoyan bu azgın insanı gördün ha, şimdi şunu bir düşün: Eğer öyle azgınlık etmeyip de hakk ve hidayet üzere gits e, yahut namazdan alıkoyacağına Allah korkusu ile korunmayı emretse ne iyi olurdu. O hâlâ Allah&#x27;ın görüyor olduğunu bilmedi değil mi?</p><p>12. Baksana. Yani bak, gör, düşün bil de haber ver, bakalım ne dersin? &quot;Ya o kul doğru yolda olur, yahut kötülüklerden sakınmayı emrederse&quot;. Bu şart cümlesi olduğu için cevabı hazfedilmiştir. fiillerindeki gizli zamirler &quot;abd=(kul)a da, yasaklayana da ait olabilir. Ve ona</p><p>göre hitabı da onun karşılığına yönelik olur. Kula ait olduğu takdirde hitap, yasaklayana çevrilmekle telvin edilmiş olur ki bu daha nüktelidir. Mânâ şu olur: &quot;Düşünsene! Ey namaz kılan bir kulu alıkoyan azgın insan! Eğer o kul hidayet, doğruluk, hak üzere gitse yahut onunla beraber daha yükselerek diğerlerine de takva ile, Allah&#x27;tan korkup fe n alıktan sakınmakla emretse ne olur? Fena mı olur? Sen onu Allah&#x27;ın iyi, kötü her şeyi gördüğünü bilmez de senin yasağını dinler mi sanıyorsun?&quot; Zamir yasaklayana ait olduğu takdirde ise hitap, yine önceki üsluba uygun olarak kula yönelik olup mânâ şu olu r: &quot;Ey o okumakla emredilip de namaz kılan kul! Ey Muhammed! O namazdan alıkoyan bu azgın insanı gördün ha, şimdi şunu bir düşün: Eğer öyle azgınlık etmeyip de hakk ve hidayet üzere gitse, yahut namazdan alıkoyacağına Allah korkusu ile korunmayı emretse ne iyi olurdu. O hâlâ Allah&#x27;ın görüyor olduğunu bilmedi değil mi?</p><p>13. &quot;Gördün mü?&quot; Bunda da iki yorum ihtimali vardır ve peygambere hitap olduğuna göre şöyle demek olur: &quot;Baksana ha, yahut gördün ha ey Muhammed! Sen doğru olduğun, hakkı söylediğin halde eğer o namazdan alıkoyan azgın yalanlıyor, inanmıyor, ve (öyle yalanlamakla, imansızlıkla) haktan yüz çeviriyor, tersine gidiyorsa iyi mi olur? (Namazı) yasaklayan azgına hitap olduğuna göre de şöyle demek olur: &quot;Baksana ha, ey o kulu namazdan alı k oyan azgın! Eğer o kul senin yasaklamanı dinleyip hakkı yalanlarsa, namaz kılmayıp tersine hareket ederse iyi mi olur?</p><p>14. Allah&#x27;ın her şeyi mutlaka gördüğünü bilmez mi? Sonra kendisine varılacak olan Allah mutlaka doğruyu da, eğriyi de, iyiyi de, kötüyü de hepsini görür ve herkesin ameline göre cezasını verir. Bu zamiri de hitabının karşılığına ait olarak bir bakıma e bir bakıma da yasaklayana işaret eder. Hitap, yasaklayana olduğu durumda zamir, e işaret ederek istifham-ı inkarî (olumsuz soru) olarak: O kul Allah&#x27;ın her şeyi gördüğünü bilir. Senin yasaklamanı dinlemez ey azgın! demek olur. Hitap, peygambere olduğu durumda da zamir, yasaklayana işaret edip istifham-ı takdirî (cevabı ikrar ettirmek için soru sorma) olarak: &quot;O azgın hala bi l medi mi? Hala bilmediyse bilsin ki Allah her iki takdirde de hepsini görüp duruyor ey Muhammed! demek olur. Ve ikisinde de o azgına tehdidi ifade eder. &quot;Keşşaf&#x27;ın dediği gibi iki şartın ikisinde de cevabı yapmak caiz olsa bile sözün başlangıç cümlesi olma s ı daha uygundur.</p><p>15 &quot;Hayır&quot; o azgının durumunu reddetmek ve ondan sakındırmak mânâsınadır. Yani gerçek, onun zannettiği gibi değil, sakın yemin için hazırlık yapma</p><p>içindir. Yani uluhiyet şanına yemin olsun, celalim hakkı için eğer &quot;O azgın vazgeçmezse&quot;, o kendini zengin görmekle azgınlıktan, o yasaklamadan vazgeçip akıllanmazsa &quot;sürükleriz&quot;; tenvin, pekiştirmek için olan hafifletilmiş nundan (değiştirilerek) elde edilmiştir, demektir. Çünkü fiile tenvin bitişmez.</p><p>SEF&#x27; , şiddetle tutup çekmektir. Yani muhakkak yakalayıp sürükleyeceğiz elbet o nasiyeyi (perçemi) yahut perçemi ile.</p><p>NASİYE; bilindiği gibi alındaki saç, perçem demektir. Onun bittiği alına, yani alnın üstünde başın ön tarafına da denilir. Burada maksat, baştan ve dolayısıyla şahıstan kinayedir. Onun için şu bedel ile açıklanıyor: Yalancı, cani bir nasiyeyi. Bu bedelin nekire (belirsiz) olarak getirilmesi, perçemi genelleştirerek benzerlerini de âyetin kapsamına almak içindir. ile vasfedilmesi de hem belirsiz bir kelimenin marife (belirli) kelimeye bedel olmasını düzeltmek, hem sürüklenmenin sebebini açıklamak, hem de sürüklenecek perçemden maksat, bizzat şahsın kendisi olduğunu açıklamaktır. Bununla beraber kinaye, gerçeğin de kasdedilmesine engel olmaz.</p><p>.</p><p>16. &quot;Hayır&quot; o azgının durumunu reddetmek ve ondan sakındırmak mânâsınadır. Yani gerçek, onun zannettiği gibi değil, sakın yemin için hazırlık yapma</p><p>içindir. Yani uluhiyet şanına yemin olsun, celalim hakkı için eğer &quot;O azgın vazgeçmezse&quot;, o kendini zengin görmekle azgınlıktan, o yasaklamadan vazgeçip akıllanmazsa &quot;sürükleriz&quot;; tenvin, pekiştirmek için olan hafifletilmiş nundan (değiştirilerek) elde edilmiştir, demektir. Çünkü fiile tenvin bitişmez.</p><p>SEF&#x27; , şiddetle tutup çekmektir. Yani muhakkak yakalayıp sürükleyeceğiz elbet o nasiyeyi (perçemi) yahut perçemi ile.</p><p>NASİYE; bilindiği gibi alındaki saç, perçem demektir. Onun bittiği alına, yani alnın üstünde başın ön tarafına da denilir. Burada maksat, baştan ve dolayısıyla şahıstan kinayedir. Onun için şu bedel ile açıklanıyor: Yalancı, cani bir nasiyeyi. Bu bedelin nekire (belirsiz) olarak getirilmesi, perçemi genelleştirerek benzerlerini de âyetin kapsamına almak içindir. ile vasfedilmesi de hem belirsiz bir kelimenin marife (bel i rli) kelimeye bedel olmasını düzeltmek, hem sürüklenmenin sebebini açıklamak, hem de sürüklenecek perçemden maksat, bizzat şahsın kendisi olduğunu açıklamaktır. Bununla beraber kinaye, gerçeğin de kasdedilmesine engel olmaz.</p><p>17. O vakit o, taraftarla rını çağırsın&quot;.</p><p>NADİ , halkın danışma v.s. gibi bir şey için konuşmak üzere bir yere toplanmaları mânâsına nedve&#x27;den gelir. Nitekim İslâm&#x27;dan önce Mekke&#x27;de Kureyşin toplandığı parlamento binasına &quot;Darü&#x27;n-nedve&quot; denilirdi. Nadi orada ve o gibi yerlerde toplanan heyettir ki eğlence meclisi, meclis, mahfel, kongre, parlamento terimleri gibidir. Yeni Türkçe&#x27;de bu gibi büyük toplantılara eski bir terim ile kurultay denilmesi yaygın olduğu için &quot;kurultayını çağırsın&quot; diye tercüme edilmesi zamanımız şivesine daha uygun gelir. Tirmizî&#x27;de rivayet olunduğu üzere Ebu Cehil, kurultayca çoğunluğun kendisinin olduğunu söylediğinden dolayı da bu âyetle ona işaret edilmiş ve şu cevapla karşılanmıştır:</p><p>18. &quot;Biz zebanileri çağıracağız.&quot; ZEBANİ, ZEBANİYE, azab meleklerine isim olmuştur. Demişlerdir ki esas lugatte, şurta yani zabıta kuvveti demektir. Kelime olarak çoğuldur. Bazıları, Abadid (dağılan askerler, tepeler) aynı kelimeden tekili yoktur, demişler. Bazıları da tekili zibniyye, yahut zi b nidir demişler ki itme mânâsına gelen zebne nisbet demektir. Buna göre çoğulunda zebaniyye nın şeddeli kılınması ile olması gerekirse de hafifletilmiş demektir. Bu zebanilerin çağırılmalarından anlaşılır ki o yalancı cinayetçi</p><p>perçem Cehennem&#x27;e sürüklenecektir.</p><p>19. Sakın. Sakındırma üzerine sakındırmadır. Ona itaat etme! Öyle kendini zengin gören, yalancı, cinayetkâr, namazdan alıkoyar azgını dinleme! Rabbine itaat etmekle okutmakta sebat eyle, ve secde et. Rabbinin emrine boyun eğmekle oku ve secdeye devam et ve yaklaş. Secde ile, namaz ile ve yakınlığa sebep olan diğer ibadet ve kulluk ile kulluk ederek biz Rabbine yaklaş. Çünkü sahih hadiste belirtildiği üzere &quot;Kulun Rabb&#x27;ine en yakın olabileceği durum secde ederkendir.&quot; Bir kudsi had i ste de &quot;Kul bana nafile ibadetlerle devamlı yaklaşır. O derece ki nihayet ben onun işittiği kulağı, gördüğü gözü, duyduğu kalbi olurum. Benimle işitir, benimle görür, benimle duyor.&quot; buyurulmuştur. Burada secdenin yukarıdaki namaz karinesi (ipucu) ile n a maz mânâsına olması da ihtimal dahilinde ise de gerçek mânâsı üzere özellikle kendi mânâsında olması daha açıktır. Çünkü &quot;yaklaş&quot;, namaz ve insanı Allah&#x27;a yaklaştıran diğer ibadet çeşitlerini kapsar. Secdenin ayrıca özelleştirilmesi hadisi gereğince önemini açıkça ifade eder. Çünkü secde bütün yakınlığın esası olan boyun eğme ve teslimiyetin en mükemmel şeklidir. Buhari ve Müslim&#x27;de sabit olduğu üzere Peygamber (s.a.v.) de ve bu sûrede tilavet secdesi yapmıştır. Biz de okuyalım, Allahu ekber deyip s ecdeye kapanalım ve Allah&#x27;a yavaş yavaş yaklaşmağa çalışalım. Nihayet en son dönüş O&#x27;nadır.</p><p>[Herhangi bir yanlislik gördügünüz zaman lütfen uyariniz. Simdiden tesekkürler.]{.small}</p><p>[mucahid dizayn: &lt;info@mucahid.net&gt;  ]{.small}</p></details>
             </article>
-            
+            </div>
         </section>
         
 </main>

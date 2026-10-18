@@ -15,7 +15,8 @@ body {
   background: #f5f1e8;
   color: #1e293b;
   font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-  line-height: 1.7;
+  line-height: 1.65;
+  font-size: 11pt;
 }
 .ust-cubuk {
   position: fixed;
@@ -42,10 +43,10 @@ body {
 .geri:hover { background: #1e293b; }
 .ust-baslik { color: #e2e8f0; font-weight: 600; font-size: 10.5pt; }
 .kitap-sayfa {
-  max-width: 880px;
+  max-width: 1100px;
   margin: 0 auto;
   background: #ffffff;
-  padding: 40px 48px 64px;
+  padding: 32px 36px 56px;
   min-height: 100vh;
   box-shadow: 0 2px 18px rgba(15, 23, 42, 0.08);
 }
@@ -57,7 +58,7 @@ body {
 }
 .sure-baslik h1 {
   font-family: 'Cinzel', 'Plus Jakarta Sans', serif;
-  font-size: 24pt;
+  font-size: 22pt;
   color: #0f172a;
   margin: 4px 0 8px;
   line-height: 1.3;
@@ -65,7 +66,7 @@ body {
 .sure-arapca {
   font-family: 'Amiri', serif;
   color: #1e40af;
-  font-size: 26pt;
+  font-size: 24pt;
   margin-left: 12px;
   font-weight: 400;
 }
@@ -79,8 +80,19 @@ body {
   font-weight: 600;
 }
 .rozet-acik { background: #475569; }
-.mevzu { margin-top: 34px; }
-.mevzu-baslik { padding: 10px 16px; border-radius: 6px; margin-bottom: 14px; }
+.tanitim {
+  margin-top: 26px;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 9.5pt;
+  color: #334155;
+}
+.tanitim h3 { margin: 0 0 6px; font-size: 11pt; color: #1e3a8a; }
+.tanitim p { margin: 0 0 6px; }
+.mevzu { margin-top: 30px; }
+.mevzu-baslik { padding: 10px 16px; border-radius: 6px; margin-bottom: 12px; }
 .mevzu-ad { font-size: 13pt; font-weight: 700; }
 .mevzu-kod {
   font-family: monospace;
@@ -92,61 +104,90 @@ body {
   margin-right: 8px;
 }
 .mevzu-meta { color: #64748b; font-size: 9.5pt; margin-top: 4px; }
-.ayet {
+/* Âyet kutuları: kitaptaki ag-kart ile aynı boyut */
+.ayetler {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 6px;
+  align-items: start;
+}
+.ag-kart {
   background: #ffffff;
   border: 1px solid #e2e8f0;
-  border-radius: 10px;
-  padding: 14px 18px;
-  margin-bottom: 12px;
+  border-radius: 6px;
+  padding: 6px 8px;
+  page-break-inside: avoid;
 }
-.ayet-baslik {
-  display: flex;
-  justify-content: space-between;
-  font-size: 9.5pt;
+.ag-kart-baslik {
+  font-size: 8.5pt;
   font-weight: 700;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
-.ayet-kod { color: #94a3b8; font-family: monospace; font-weight: 400; }
-.ayet-ar {
+.verse-ar {
   font-family: 'Amiri', serif;
-  font-size: 22pt;
-  line-height: 1.9;
+  font-size: 12pt;
+  line-height: 1.8;
   direction: rtl;
   text-align: right;
   color: #0f172a;
 }
-.ayet-meal {
-  font-size: 10.5pt;
-  color: #334155;
+.verse-tr {
+  font-size: 8pt;
+  color: #475569;
+  line-height: 1.5;
   border-top: 1px dashed #e2e8f0;
-  padding-top: 8px;
-  margin-top: 8px;
+  padding-top: 4px;
+  margin-top: 2px;
 }
+.ag-ortak {
+  font-size: 7.5pt;
+  color: #94a3b8;
+  font-style: italic;
+  margin-top: 4px;
+}
+.tefsir {
+  margin-top: 5px;
+  border-top: 1px dashed #e2e8f0;
+  padding-top: 4px;
+  font-size: 7.5pt;
+  color: #334155;
+  line-height: 1.5;
+}
+.tefsir summary {
+  cursor: pointer;
+  color: #1e40af;
+  font-weight: 700;
+  font-size: 7.5pt;
+}
+.tefsir p { margin: 4px 0 0; }
 .kelime-satiri {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
   direction: rtl;
-  margin: 6px 0 4px;
+  margin: 6px 0 8px 0;
 }
 .kelime {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  padding: 2px 6px 3px;
+  padding: 2px 6px 3px 6px;
   background: #f8fafc;
   border-radius: 4px;
+  min-width: 0;
 }
-.kelime-ar { font-family: 'Amiri', serif; font-size: 14pt; line-height: 1.6; }
-.kelime-tr { direction: ltr; font-size: 7.5pt; color: #334155; line-height: 1.2; }
-.ayet { page-break-inside: avoid; }
+.kelime-ar { font-family: 'Amiri', serif; font-size: 13pt; line-height: 1.6; }
+.kelime-tr { direction: ltr; font-size: 7pt; color: #334155; text-align: center; line-height: 1.2; }
 @media (max-width: 640px) {
-  .kitap-sayfa { padding: 22px 16px 40px; }
+  .kitap-sayfa { padding: 20px 16px 40px; }
   .sure-arapca { display: block; margin: 6px 0 0; }
+  .ayetler { grid-template-columns: 1fr; }
 }
 @media print {
   .ust-cubuk { display: none; }
   body { padding-top: 0; background: #ffffff; }
+  .tefsir { display: block; }
+  .tefsir > :not(summary) { display: block; }
 }
 </style>
 </head>
@@ -168,6 +209,8 @@ body {
     </div>
   </header>
 
+  <section class="tanitim"><h3>Elmalılı tefsiri: sûre tanıtımı</h3><p>&quot;Hümeze&quot;; sûrenin de ismi olmak münasebetiyle meâlde aynen muhafazasını daha uygun gördüğümüz bu &quot;hümeze&quot; kelimesi &quot;hemmaz&quot;, &quot;gammaz&quot; gibi &quot;hemz&quot; kelimesinden mübalağa sigası (kipi)dır ki, lüane (lânetleyen) duhake (çok gülen) gibi âdet ifade eder. Asıl mânâsı hemz (ayıplama, arkadan atma)i çok yapan, âdet edinenler demektir. &quot;Hemz&quot;, &quot;Kâmus&quot;un açıkladığına göre &quot;gamz&quot; vezninde ve onun anlamdaşıdır. El ile çimdiklemek ve dürtmek, kakmak, vurmak (nitekim mihmez, mihmaz, yani mahmuz, mudul ve çe k iç veya mudullu değnek demek olan mıhmeze bu mânâlardandır) ve bir dar yere sıkıştırmak (ki, hemze bu mânâdandır. Çünkü mahrecinden sıkıntı ile çıkar) ve ısırmak ve kırmak, yere çalmak mânâlarına gelir. Şu halde hümeze, bunlardan birini veya hepsini çok y a pan, âdet edinen demek olur. Bu ölçü ile hamiz gibi çimdikçi, çekiştirici, dürtüştürücü, kakıştırıcı, vurucu kırıcı, atıcı, sıkıcı, ısırıcı mânâlarını ifade edebilir. Fakat lügat örfünde hamiz ve hemmazdan daha mübalağalı olarak hümeze, inceden inceye vey a geriden geriye hafifseyerek ve alay ederek şunun bunun namusu ve şerefi ile oynayıp incitmeyi, yerme ve kötüleme ile arkadan konuşarak ayıplayıp kınamayı, şunu bunu dürtüştürerek öteye beriye koğuculuk etmeyi âdet ve sanat edinmiş, çekiştirici gammaz mâ n âsında meşhur</p><p>olmuştur ki, böyle olan kimseler fırsat buldukça hemzin her mânâsını yapar. Eli erdiği insanları cımbızlar, çimdikler, dürter, kakar, ısırır, çarpar, kırar, incitir, o yolda geçinir. Onun için bu mânâların hepsinden kinaye olarak hümeze, gammazlığı âdet ve sanat edinmiş kimselere söylenmiştir. Yani asıl hakikati, el ile sıkmak, cimdirmek, dürtmek, vurmak, kırmak iken ağızla, dille ısırmak, kötülemek ve arkadan konuşmak, küçük görmekle gönül incitmek ve kırmak mânâsında kinaye olarak yayılmıştır. Kinayeler hakikatin de iradesine engel olmayacağı için &#x27;de her mânâ dahil olur. Yani gerek el ile, gerek dil ile maddeten veya manen şunu bunu itip kakmayı, kırıp incitmeyi âdet edinmiş dedikoducu güruhunun hepsi cehennem uçurumunda, veyl deresind e, hüsran içinde kahrolmaya mahkumdurlar, vay hallerine. &quot;Lümeze&quot; de &quot;hümeze&quot; gibidir. Mızrak saplar gibi kötülemek, ayıplamak ve kaş göz kırparak, işaret ederek, eğlence suretiyle birini diğerine göstermek mânâlarına olan &quot;Lemz&quot;den &quot;Lümeze&quot; de daima herkesi ayıplamayı ve şuna buna ayıp ve eksiklik isnat ederek eğlenmeyi âdet edinmiş, kendini beğenmiş atak demektir ki, &quot;hümeze&quot;yle anlamdaş ve farklı olarak da kullanılır. Zemahşerî&#x27;nin beyanına göre hümezenin aslı kırıcı mânâsından, lümezenin aslı da ayıpla y ıcı, saplayıcı mânâsındandır. &quot;Keşşâf&quot;ta der ki: Hemz, hezm gibi kırmak, lemz de ayıplamaktır. &quot;Lemezehû ve lehezehû&quot; denilir, &quot;taanehû&quot; (onu ayıpladı) denir. Maksat, insanların ırzlarını, namuslarını kırmak ve arkalarından konuşmak ve onların ayıplamaktı r. Ve &quot;lüane&quot;, &quot;duhaka&quot; gibi fuale vezni onun, o kimsenin alışmış olduğu âdeti bulunduğuna delalet eder. Şâir:</p><p>&quot;Eğer ortada bulunmazsam, sen dürtücü ve ayıplayıcı kesilirsin.&quot;</p><p>demiştir. Daha önce İbnü Cerir de Ziyad-i Acem&#x27;in: &quot;Bana kavuştuğun zaman yalandan bana sevgi göstererek yanaşırsın ve eğer orada bulunmazsam o vakit de hamiz (dürtücü) lümeze (ayıplayıcı) kesilirsin.&quot; demek olan iş bu:</p><p>beyti ile hümeze insanları arkadan çekiştirip kızdıran; lümeze de arkadan konuşup ayıplayan demek olduğuna şahit getirmiş ve bazı rivayetler naklederek demiştir ki: İbnü Abbas&#x27;dan: &quot;Allah Teâlâ&#x27;nın veyl (yazıklar olsun) ile başladığı kimseler kimlerdir diye sorulduğunda, &quot;Nemime, yani koğuculuk ile gezenler,</p><p>dostlar arasını ayıranlar en büyük ayıp arayanlar.&quot; demiştir. Mücahid&#x27;den de üç farklı görüş rivayet edilmiştir:</p></section>
+
   <div style="display:flex; width:100%; border-radius:8px; overflow:hidden; margin:20px 0 8px; box-shadow:0 2px 10px rgba(0,0,0,0.12);"><div style="flex: 4; background:#1e40af; border:1px solid #1d4ed8; padding:8px 4px; text-align:center; color:#ffffff; font-size:11px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Ayıplayanlar (1-4)">Ayıplayanlar (4)</div><div style="flex: 5; background:#065f46; border:1px solid #047857; padding:8px 4px; text-align:center; color:#ffffff; font-size:11px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="Hutame (5-9)">Hutame (5)</div></div>
 
   
@@ -178,47 +221,39 @@ body {
             </div>
             <div class="mevzu-meta">Âyet 1 - 4 · <span class="rozet" style="background:#1e40af;">4 âyet</span></div>
           </header>
-          
-            <article class="ayet" style="border-left:5px solid #1e40af;">
-              <div class="ayet-baslik">
-                <span style="color:#1e40af;">Âyet 1</span>
-                <span class="ayet-kod">104:1</span>
-              </div>
-              <div class="ayet-ar"> وَيْلٌ لِّكُلِّ هُمَزَةٍ لُّمَزَةٍ</div>
+          <div class="ayetler">
+            <article class="ag-kart" style="border-top:4px solid #1e40af;">
+              <div class="ag-kart-baslik" style="color:#1e40af;">Âyet 1</div>
+              <div class="verse-ar"> وَيْلٌ لِّكُلِّ هُمَزَةٍ لُّمَزَةٍ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="وَيْل"><span class="kelime-ar" style="color:#dc2626;">وَيْلٌ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="كُلّ"><span class="kelime-ar" style="color:#2563eb;">لِّكُلِّ</span><span class="kelime-tr">Hepsi</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="هُمَزَة"><span class="kelime-ar" style="color:#16a34a;">هُمَزَةٍ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="لُمَزَة"><span class="kelime-ar" style="color:#9333ea;">لُّمَزَةٍ</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(1-2) Arkadan çekiştirmeyi, yüze karşı eğlenmeyi âdet edinen herkesin vay haline! O ki, mal toplamış ve onu sayıp durmuştur.</div>
+              <div class="verse-tr">(1-2) Arkadan çekiştirmeyi, yüze karşı eğlenmeyi âdet edinen herkesin vay haline! O ki, mal toplamış ve onu sayıp durmuştur.</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 1</summary><p>1- Hümeze, insanların etini yiyen; lümeze, ayıplayıcı ve atak.</p></details>
             </article>
             
-            <article class="ayet" style="border-left:5px solid #1e40af;">
-              <div class="ayet-baslik">
-                <span style="color:#1e40af;">Âyet 2</span>
-                <span class="ayet-kod">104:2</span>
-              </div>
-              <div class="ayet-ar">ٱلَّذِى جَمَعَ مَالًا وَعَدَّدَهُۥ</div>
+            <article class="ag-kart" style="border-top:4px solid #1e40af;">
+              <div class="ag-kart-baslik" style="color:#1e40af;">Âyet 2</div>
+              <div class="verse-ar">ٱلَّذِى جَمَعَ مَالًا وَعَدَّدَهُۥ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="الَّذِي"><span class="kelime-ar" style="color:#dc2626;">ٱلَّذِى</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="جَمَعَ"><span class="kelime-ar" style="color:#2563eb;">جَمَعَ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="مال"><span class="kelime-ar" style="color:#16a34a;">مَالًا</span><span class="kelime-tr">mal, servet</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="عَدَّدَ"><span class="kelime-ar" style="color:#9333ea;">وَعَدَّدَهُۥ</span><span class="kelime-tr">ve</span></span></div>
-              <div class="ayet-meal">(1-2) Arkadan çekiştirmeyi, yüze karşı eğlenmeyi âdet edinen herkesin vay haline! O ki, mal toplamış ve onu sayıp durmuştur.</div>
+              <div class="verse-tr">(1-2) Arkadan çekiştirmeyi, yüze karşı eğlenmeyi âdet edinen herkesin vay haline! O ki, mal toplamış ve onu sayıp durmuştur.</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 2</summary><p>2- Bunun aksine olarak: Hümeze, ayıplayıcı; lümeze, insanların etini yiyen.</p></details>
             </article>
             
-            <article class="ayet" style="border-left:5px solid #1e40af;">
-              <div class="ayet-baslik">
-                <span style="color:#1e40af;">Âyet 3</span>
-                <span class="ayet-kod">104:3</span>
-              </div>
-              <div class="ayet-ar">يَحْسَبُ أَنَّ مَالَهُۥٓ أَخْلَدَهُۥ</div>
+            <article class="ag-kart" style="border-top:4px solid #1e40af;">
+              <div class="ag-kart-baslik" style="color:#1e40af;">Âyet 3</div>
+              <div class="verse-ar">يَحْسَبُ أَنَّ مَالَهُۥٓ أَخْلَدَهُۥ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="حَسِبَ"><span class="kelime-ar" style="color:#dc2626;">يَحْسَبُ</span><span class="kelime-tr">sandı</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="أَنّ"><span class="kelime-ar" style="color:#2563eb;">أَنَّ</span><span class="kelime-tr">şu ki, -diğini</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="مال"><span class="kelime-ar" style="color:#16a34a;">مَالَهُۥٓ</span><span class="kelime-tr">mal, servet</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="أَخْلَدَ"><span class="kelime-ar" style="color:#9333ea;">أَخْلَدَهُۥ</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(O), malının kendisini ebedî kılacağını zanneder.</div>
+              <div class="verse-tr">(O), malının kendisini ebedî kılacağını zanneder.</div>
+              <details class="tefsir"><summary>Elmalılı tefsiri · Âyet 3</summary><p>3- Hümeze, Lümeze: Birisi insanların etlerini yiyen, diğeri ayıplama. Bu gösterir ki, bu haberi rivayet edenlere bu iki kelimenin yorumunda zorluk vaki olmuş, onun için ondan rivayet edenler ihtilaf etmişlerdir. Râzî de &quot;Kendi kendinizi kötülemeyin.&quot; (Hucurat, 49/11) âyetiyle &quot; Keşşâf&quot;ın ifadesi üzere beyandan sonra der ki: &quot;Tefsircilerin bunda bir çok görüşü vardır:</p><p>Birincisi: İbnü Abbas&#x27;dan, hümeze gıybetçi, lümeze ayıpçı.</p><p>İkincisi: İbnü Zeyd&#x27;den hümeze el ile, lümeze dil ile.</p><p>Üçüncüsü: Ebu&#x27;l-Aliye&#x27;den, hümeze yü ze karşı, lümeze arkadan.</p><p>Dördüncüsü: Hümeze açıkça, lümeze gizli, kaş ve gözle.</p><p>Beşincisi: Hümeze lümeze, insanlara hoşlanmayacakları lakaplar takanlar. Velid b. Muğire bunu yapardı. Fakat bu başkanlık yapanlara yakışmaz, döküntülerin âdetindendir. Bunda insanların sözlerini, fiillerini, seslerini güldürmek için taklit edenler de dahil olur.</p><p>Altıncısı: Hasen&#x27;den Hümeze, gözünü kırparak açıkça kızdıran; lümeze kardeşlerini kötülükle anarak ayıplayan.</p><p>Yedincisi: Anlatıldığı üzere İbnü Abbas&#x27;tan, söze yalan katarak gezenler, dostların arasını açanlar, insanların ayıbını arayanlar. Bunları naklettikten sonra Râzî şu hatırlatmayı da yapar: &quot;Bilinmeli ki bu görüşlerin hepsi de birbirine yakındır, bir asla döner. O da kusur bulmak ve ayıbı açıklamak, ortaya çıkarmak mânâsıdır. Sonra da bu iki kısımdır: Ya hased ve kin sırasında olduğu gibi ciddi olur, yahut da eğlence ve güldürme kabilinden eğlence ile olur. Bunlardan her biri de ya din ve taatle ilgili bir emirde olur veya dünya ile ilgili ol u r. Bu da görünüşe ve yürümek, oturmak, kalkmak gibi şeylerle ilgili olur ki, çeşitleri çoktur ve kayda geçmemiştir. Sonra bu dört kısımda ayıbı açıklama, bazan ortada bulunan için olur, bazan da bulunmayan için olur. Her iki takdirde de ya lafız ile olur v eya baş ve göz ve diğerleri ile olur. Bunların hepsi yasaklama altında dahildir. Ancak bahis konusu olan lafzın dilde ne için konmuş olduğudur.</p><p>Lâfzın konduğu lafzen yasaklanmış olur, konmadığı da delalet bakımından yasaklanmış olur. Peygmaber&#x27;le ilgili olunca da daha büyük suç olur.&quot;(1) Keşşâf sahibi bir de demiştir ki: &quot;Hümeze, lümeze mim&#x27;in sükunu ile ( şeklinde) de okunmuştur. Bu ise gülünç şeyler, garip ve tuhaf gevezelikler yapan zevzek maskaradır ki, kendisine hem gülünür, hem söğülür.&quot; Demek k i mim&#x27;in sükunuyla olan fethiyle olanın tersi gibi bir mânâ ifade ediyor. Üstün olan fail, sakin olan mef&#x27;ul mânâsında olmuş oluyor. Nitekim nın fethiyle &quot;duhake&quot;, şuna buna çok gülen edebsize denir. nın sükunuyla &quot;duhke&quot; de çok gülünen, herkese gülünç o lan maskaraya denir. Aynı şekilde &quot;ayn&quot;ın fethiyle &quot;lüane&quot;, çok lanet eden, &quot;ayn&quot;ın sükunuyla &quot;lu&#x27;ne&quot;, çok mel&#x27;un demektir. Demek ki sakin okunan, üstün, okunandan daha alçaktır. O halde üstünün kınamasından, daha alçağın kınaması öncelikle anlaşılır. On u n için âyette hümeze lümeze mim&#x27;in fethiyledir. Aşere kırâetlerinin hepsinde, hatta şazlar da dahil olmak üzere ondört kırâatta mimler üstün okunmuştur. Çünkü &quot;mal biriktiren&quot; ifadesinden de anlaşılacağına göre asıl maksat, kendini beğenmiş, herkesten üstünlük taslayarak ve eğlenircesine, şunu bunu gizliden açıktan, yüzünden veya arkasından eliyle veya diliyle taşlayıp inciten, namus ve haysiyeti ile oynayan, insanların arasını açmakla, koğuculukla yüze çıkıp yaşamak, eğlenmek isteyen saldırgan gurur l uların zararını beyandır ki, bunlar daha önceki sûrede geçen mal çokluğu kendilerini aldatmış olanlardandır. Bundan sonraki sûrede &quot;Fil Ashabı&quot;ndan bahsedilmesi de buna delalet eder.</p><p>Bunun inme sebebi (sebeb-i nüzulü)ne gelince: İbnü Cerir&#x27;in Muhammed b. Sa&#x27;d yoluyla İbnü Abbas&#x27;tan nakline göre: İnsanlarla alay ve hakaret eden, bir puta tapıcı idi. Hasen, Verka, İbnü Ebi Nüceym&#x27;den de Cemil b. Amir Cüheni hakkında nazil oldu denilmiş. Hasen Verka&#x27;dan naklen demiştir ki: Hümeze lümeze Cemil b. Amir ha k kında nazil oldu, fakat bir kimseye tahsis edilmiş değildir. Bazı Arap dili ehli de bu, demiş, Araplar&#x27;ın, geneli zikrederek tek kişiyi kastetmesi kabilindendir. Nitekim sözde birisi diğerine: &quot;Ben seni asla ziyaret etmeyeceğim; demesine karşı: &quot;Her kim b e ni ziyaret etmezse, ben de onu ziyaret etmem.&quot; denilir ki, maksat &quot;ziyaret etmeyeceğim&quot; diyene cevaptır. Fakat diğerlerinin dediği gibi doğrusu maksat, hass (özel) irade değil,</p><p>lafzın bu sıfatta olanların hepsini kastetmektir.</p><p>Mücahid de bir kimse ye mahsus değildir, demiştir. &quot;Keşşâf&quot;ta da der ki: &quot;Ahnes b. Şürayk hakkında indi, âdeti arkadan konuşma ve koğuculuk idi.&quot; denilmiş. Ümeyye b. Halef hakkında denilmiş, Velid b. Muğire ve Resulullah&#x27;ın arkasından konuşması hakkında da denilmiştir. Sebeb i n özel ve tehdidin genel olarak o çirkinliğe girişenlerin hepsini içermesi de caizdir.&quot; Bunun zahirî yönden herkesi kastetmiş olduğuna aşağıdaki &quot;o ateşin kapıları onların üzerine kapatılacaktır&quot; diye bunlara çoğul zamiri gönderilmesi karine (ipucu)dir. Ancak bu &#x27;nin, her şeyden önce, şöyle müfred (tekil) olarak bir bedel ile tarif ve tasvif olunması bu genellik içinde bir özellik kastedilmiş olduğunu da anlatır, zira müfred (tekil)dir. Fakat marife (belirli) olduğundan nekire (belirsiz) olan &#x27; n in sıfatı olamaz. &#x27;den bedel yahut zem üzere mansub (üstünlü)dur. Demek ki (veyl) ile hükmün asıl hedefi ve kelâmın sevkinden asıl maksad budur. Arabozuculuğa ve ayıplayıcılığa sevk eden sebep ve illet de bu demektir ki, bir mal toplamıştır. İbnü Amir, Hamze, Kisâi, Ebu Cafer, Ravh, Halef ve Ameş &quot;mim&quot;in şeddesiyle tef&#x27;il ölçüsünde şeklinde okumuşlardır ki, bunda teksir (çoğaltma) mânâsı olduğundan şöyle demek olur: &quot;Şuradan buradan bir mal biriktirmiştir&quot;. Ve hep onu saymaktadır. Yan i o malın hukukunu: Nereden gelip, nereye gitmesi gerekeceğini, onunla ne gibi hayırlar yapabileceğini düşünmeyerek, işi gücü sadece onun sayısını zaptedip çoğaltmak ve ona güvenmektir. Yahut etrafındakilere sadece onu saydırıp, onunla iftihar etmek, o sur e tle gözleri malda, işleri güçleri insanları birbirine tutuşturmak olan hümeze lümeze güruhunu başına toplayarak kendini onlara tanıtmak, başlarına geçmektir. Çünkü o hümeze lümeze güruhunun çoğunun malı olmamakla beraber emeli koğuculukla mal toplamak old u ğundan, öylelerinin başına toplanır ve onu sayarlar. Bu mânâya işaret için olmalıdır ki tekil olarak den yazılmış &quot;onlar, bir mal topladılar ve onu saydılar&quot; denilmemiştir. Sonra da bunların çoğulluğuna tenbih için diye çoğul zamiri gönderilmiştir. Bununla beraber her biri itibarıyla da tekil getirilmiş olmak düşünülebilir. Zira nekreye muzaf olan kül, küll-i ifrâdîdir.</p><p>2. &quot;Hümeze&quot;; sûrenin de ismi olmak münasebetiyle meâlde aynen muhafazasını daha uygun gördüğümüz bu &quot;hümeze&quot; kelimesi &quot;hemmaz&quot;, &quot;gammaz&quot; gibi &quot;hemz&quot; kelimesinden mübalağa sigası (kipi)dır ki, lüane (lânetleyen) duhake (çok gülen) gibi âdet ifade eder. Asıl mânâsı hemz (ayıplama, arkadan atma)i çok yapan, âdet edinenler demektir. &quot;Hemz&quot;, &quot;Kâmus&quot;un açıkladığına göre &quot;ga m z&quot; vezninde ve onun anlamdaşıdır. El ile çimdiklemek ve dürtmek, kakmak, vurmak (nitekim mihmez, mihmaz, yani mahmuz, mudul ve çekiç veya mudullu değnek demek olan mıhmeze bu mânâlardandır) ve bir dar yere sıkıştırmak (ki, hemze bu mânâdandır. Çünkü mahre c inden sıkıntı ile çıkar) ve ısırmak ve kırmak, yere çalmak mânâlarına gelir. Şu halde hümeze, bunlardan birini veya hepsini çok yapan, âdet edinen demek olur. Bu ölçü ile hamiz gibi çimdikçi, çekiştirici, dürtüştürücü, kakıştırıcı, vurucu kırıcı, atıcı, sıkıcı, ısırıcı mânâlarını ifade edebilir. Fakat lügat örfünde hamiz ve hemmazdan daha mübalağalı olarak hümeze, inceden inceye veya geriden geriye hafifseyerek ve alay ederek şunun bunun namusu ve şerefi ile oynayıp incitmeyi, yerme ve kötüleme ile arkadan konuşarak ayıplayıp kınamayı, şunu bunu dürtüştürerek öteye beriye koğuculuk etmeyi âdet ve sanat edinmiş, çekiştirici gammaz mânâsında meşhur</p><p>olmuştur ki, böyle olan kimseler fırsat buldukça hemzin her mânâsını yapar. Eli erdiği insanları cımbızlar, çimdikler, dürter, kakar, ısırır, çarpar, kırar, incitir, o yolda geçinir. Onun için bu mânâların hepsinden kinaye olarak hümeze, gammazlığı âdet ve sanat edinmiş kimselere söylenmiştir. Yani asıl hakikati, el ile sıkmak, cimdirmek, dürtmek, vurmak, kırmak ik e n ağızla, dille ısırmak, kötülemek ve arkadan konuşmak, küçük görmekle gönül incitmek ve kırmak mânâsında kinaye olarak yayılmıştır. Kinayeler hakikatin de iradesine engel olmayacağı için &#x27;de her mânâ dahil olur. Yani gerek el ile, gerek dil ile madd e ten veya manen şunu bunu itip kakmayı, kırıp incitmeyi âdet edinmiş dedikoducu güruhunun hepsi cehennem uçurumunda, veyl deresinde, hüsran içinde kahrolmaya mahkumdurlar, vay hallerine. &quot;Lümeze&quot; de &quot;hümeze&quot; gibidir. Mızrak saplar gibi kötülemek, ayıplamak ve kaş göz kırparak, işaret ederek, eğlence suretiyle birini diğerine göstermek mânâlarına olan &quot;Lemz&quot;den &quot;Lümeze&quot; de daima herkesi ayıplamayı ve şuna buna ayıp ve eksiklik isnat ederek eğlenmeyi âdet edinmiş, kendini beğenmiş atak demektir ki, &quot;hümeze&quot;y l e anlamdaş ve farklı olarak da kullanılır. Zemahşerî&#x27;nin beyanına göre hümezenin aslı kırıcı mânâsından, lümezenin aslı da ayıplayıcı, saplayıcı mânâsındandır. &quot;Keşşâf&quot;ta der ki: Hemz, hezm gibi kırmak, lemz de ayıplamaktır. &quot;Lemezehû ve lehezehû&quot; denilir, &quot;taanehû&quot; (onu ayıpladı) denir. Maksat, insanların ırzlarını, namuslarını kırmak ve arkalarından konuşmak ve onların ayıplamaktır. Ve &quot;lüane&quot;, &quot;duhaka&quot; gibi fuale vezni onun, o kimsenin alışmış olduğu âdeti bulunduğuna delalet eder. Şâir:</p><p>&quot;Eğer ortada bulunmazsam, sen dürtücü ve ayıplayıcı kesilirsin.&quot;</p><p>demiştir. Daha önce İbnü Cerir de Ziyad-i Acem&#x27;in: &quot;Bana kavuştuğun zaman yalandan bana sevgi göstererek yanaşırsın ve eğer orada bulunmazsam o vakit de hamiz (dürtücü) lümeze (ayıplayıcı) kesilirsin.&quot; demek olan iş bu:</p><p>beyti ile hümeze insanları arkadan çekiştirip kızdıran; lümeze de arkadan konuşup ayıplayan demek olduğuna şahit getirmiş ve bazı rivayetler naklederek demiştir ki: İbnü Abbas&#x27;dan: &quot;Allah Teâlâ&#x27;nın veyl (yazıklar olsun) ile başladığı kimseler kimlerdir diye sorulduğunda, &quot;Nemime, yani koğuculuk ile gezenler,</p><p>dostlar arasını ayıranlar en büyük ayıp arayanlar.&quot; demiştir. Mücahid&#x27;den de üç farklı görüş rivayet edilmiştir:</p><p>1- Hümeze, insanların etini yiyen; lümeze, ayıplayıcı ve atak.</p><p>2- Bunun aksine olarak: Hümeze, ayıplayıcı; lümeze, insanların etini yiyen.</p><p>3- Hümeze, Lümeze: Birisi insanların etlerini yiyen, diğeri ayıplama. Bu gösterir ki, bu haberi rivayet edenlere bu iki kelimenin yorumunda zorluk vaki olmuş, onun için ondan rivayet edenler ihtilaf etmişlerdir. Râzî de &quot;Kendi kendinizi kötülemeyin.&quot; (Hucurat, 49/11) âyetiyle &quot;Keşşâf&quot;ın ifadesi üzere beyandan sonra der ki: &quot;Tefsircilerin bunda bir çok görüşü vardır:</p><p>Birincisi: İbnü Abbas&#x27;dan, hümeze gıybetçi, lümeze ayıpçı.</p><p>İkincisi: İbnü Zeyd&#x27;den hümeze el ile, lümeze dil ile.</p><p>Üçüncüsü: Ebu&#x27;l-Aliye&#x27;den, hümeze yüze karşı, lümeze arkadan.</p><p>Dördüncüsü: Hümeze açıkça, lümeze gizli, kaş ve gözle.</p><p>Beşincisi: Hümeze lümeze, insanlara hoşlanmayacakları lakaplar takanlar. Velid b. Muğire bunu yapardı. Fakat bu başkanlık yapanlara yakışmaz, döküntülerin âdetindendir. Bunda insanların sözlerini, fiillerini, seslerini güldürmek için taklit edenler de dahil olur.</p><p>Altıncısı: Hasen&#x27;den Hümeze, gözünü kırparak açıkça kızdıran; lümeze kardeşlerini kötülükle anarak ayıplayan.</p><p>Yedincisi: Anlatıldığı üzere İbnü Abbas&#x27;tan, söze yalan katarak gezenler, dostların arasını açanlar, insanların ayıbını arayanlar. Bunları naklettikten sonra Râzî şu hatırlatmayı da yapar: &quot;Bilinmeli ki bu görüşlerin hepsi de birbirine yakındır, bir asla döner. O da kusur bulmak ve ayıbı açıklamak, ortaya çıkarmak mânâsıdır. Sonra da bu iki kısımdır: Ya hased ve kin sırasında olduğu gibi ciddi olur, yahut da eğlen c e ve güldürme kabilinden eğlence ile olur. Bunlardan her biri de ya din ve taatle ilgili bir emirde olur veya dünya ile ilgili olur. Bu da görünüşe ve yürümek, oturmak, kalkmak gibi şeylerle ilgili olur ki, çeşitleri çoktur ve kayda geçmemiştir. Sonra bu d ört kısımda ayıbı açıklama, bazan ortada bulunan için olur, bazan da bulunmayan için olur. Her iki takdirde de ya lafız ile olur veya baş ve göz ve diğerleri ile olur. Bunların hepsi yasaklama altında dahildir. Ancak bahis konusu olan lafzın dilde ne için konmuş olduğudur.</p><p>Lâfzın konduğu lafzen yasaklanmış olur, konmadığı da delalet bakımından yasaklanmış olur. Peygmaber&#x27;le ilgili olunca da daha büyük suç olur.&quot;(1) Keşşâf sahibi bir de demiştir ki: &quot;Hümeze, lümeze mim&#x27;in sükunu ile ( şeklinde) de okunmuştur. Bu ise gülünç şeyler, garip ve tuhaf gevezelikler yapan zevzek maskaradır ki, kendisine hem gülünür, hem söğülür.&quot; Demek ki mim&#x27;in sükunuyla olan fethiyle olanın tersi gibi bir mânâ ifade ediyor. Üstün olan fail, sakin olan mef&#x27;ul mânâsında olmuş o l uyor. Nitekim nın fethiyle &quot;duhake&quot;, şuna buna çok gülen edebsize denir. nın sükunuyla &quot;duhke&quot; de çok gülünen, herkese gülünç olan maskaraya denir. Aynı şekilde &quot;ayn&quot;ın fethiyle &quot;lüane&quot;, çok lanet eden, &quot;ayn&quot;ın sükunuyla &quot;lu&#x27;ne&quot;, çok mel&#x27;un demektir. D emek ki sakin okunan, üstün, okunandan daha alçaktır. O halde üstünün kınamasından, daha alçağın kınaması öncelikle anlaşılır. Onun için âyette hümeze lümeze mim&#x27;in fethiyledir. Aşere kırâetlerinin hepsinde, hatta şazlar da dahil olmak üzere ondört kırâa t ta mimler üstün okunmuştur. Çünkü &quot;mal biriktiren&quot; ifadesinden de anlaşılacağına göre asıl maksat, kendini beğenmiş, herkesten üstünlük taslayarak ve eğlenircesine, şunu bunu gizliden açıktan, yüzünden veya arkasından eliyle veya diliyle taşlayıp incit e n, namus ve haysiyeti ile oynayan, insanların arasını açmakla, koğuculukla yüze çıkıp yaşamak, eğlenmek isteyen saldırgan gururluların zararını beyandır ki, bunlar daha önceki sûrede geçen mal çokluğu kendilerini aldatmış olanlardandır. Bundan sonraki s ûrede &quot;Fil Ashabı&quot;ndan bahsedilmesi de buna delalet eder.</p><p>Bunun inme sebebi (sebeb-i nüzulü)ne gelince: İbnü Cerir&#x27;in Muhammed b. Sa&#x27;d yoluyla İbnü Abbas&#x27;tan nakline göre: İnsanlarla alay ve hakaret eden, bir puta tapıcı idi. Hasen, Verka, İbnü Ebi Nüceym&#x27;den de Cemil b. Amir Cüheni hakkında nazil oldu denilmiş. Hasen Verka&#x27;dan naklen demiştir ki: Hümeze lümeze Cemil b. Amir hakkında nazil oldu, fakat bir kimseye tahsis edilmiş değildir. Bazı Arap dili ehli de bu, demiş, Araplar&#x27;ın, geneli zikrederek t ek kişiyi kastetmesi kabilindendir. Nitekim sözde birisi diğerine: &quot;Ben seni asla ziyaret etmeyeceğim; demesine karşı: &quot;Her kim beni ziyaret etmezse, ben de onu ziyaret etmem.&quot; denilir ki, maksat &quot;ziyaret etmeyeceğim&quot; diyene cevaptır. Fakat diğerlerinin d ediği gibi doğrusu maksat, hass (özel) irade değil,</p><p>lafzın bu sıfatta olanların hepsini kastetmektir.</p><p>Mücahid de bir kimseye mahsus değildir, demiştir. &quot;Keşşâf&quot;ta da der ki: &quot;Ahnes b. Şürayk hakkında indi, âdeti arkadan konuşma ve koğuculuk idi.&quot; denilmiş. Ümeyye b. Halef hakkında denilmiş, Velid b. Muğire ve Resulullah&#x27;ın arkasından konuşması hakkında da denilmiştir. Sebebin özel ve tehdidin genel olarak o çirkinliğe girişenlerin hepsini içermesi de caizdir.&quot; Bunun zahirî yönden herkesi kastetmiş olduğuna aşağıdaki &quot;o ateşin kapıları onların üzerine kapatılacaktır&quot; diye bunlara çoğul zamiri gönderilmesi karine (ipucu)dir. Ancak bu &#x27;nin, her şeyden önce, şöyle müfred (tekil) olarak bir bedel ile tarif ve tasvif olunması bu genellik içinde bir özellik kastedilmiş olduğunu da anlatır, zira müfred (tekil)dir. Fakat marife (belirli) olduğundan nekire (belirsiz) olan &#x27;nin sıfatı olamaz. &#x27;den bedel yahut zem üzere mansub (üstünlü)dur. Demek ki (veyl) ile hükmün asıl hedefi ve kelâmın sevkinden asıl maksad budur. Arabozuculuğa ve ayıplayıcılığa sevk eden sebep ve illet de bu demektir ki, bir mal toplamıştır. İbnü Amir, Hamze, Kisâi, Ebu Cafer, Ravh, Halef ve Ameş &quot;mim&quot;in şeddesiyle tef&#x27;il ölçüsünde şeklinde okumuşlardır ki, bun d a teksir (çoğaltma) mânâsı olduğundan şöyle demek olur: &quot;Şuradan buradan bir mal biriktirmiştir&quot;. Ve hep onu saymaktadır. Yani o malın hukukunu: Nereden gelip, nereye gitmesi gerekeceğini, onunla ne gibi hayırlar yapabileceğini düşünmeyerek, işi gücü s adece onun sayısını zaptedip çoğaltmak ve ona güvenmektir. Yahut etrafındakilere sadece onu saydırıp, onunla iftihar etmek, o suretle gözleri malda, işleri güçleri insanları birbirine tutuşturmak olan hümeze lümeze güruhunu başına toplayarak kendini onlar a tanıtmak, başlarına geçmektir. Çünkü o hümeze lümeze güruhunun çoğunun malı olmamakla beraber emeli koğuculukla mal toplamak olduğundan, öylelerinin başına toplanır ve onu sayarlar. Bu mânâya işaret için olmalıdır ki tekil olarak den yazılmış &quot; o nlar, bir mal topladılar ve onu saydılar&quot; denilmemiştir. Sonra da bunların çoğulluğuna tenbih için diye çoğul zamiri gönderilmiştir. Bununla beraber her biri itibarıyla da tekil getirilmiş olmak düşünülebilir. Zira nekreye muzaf olan kül, küll-i ifr âdîdir.</p><p>3. Bunlar niçin böyle yapar? Zira sanır ki malı kendisini ebedî kılmıştır. Kılacak değil de, kılmıştır zanneder. Öyle hayıra yaramayan, sayılmak için biriktirilmiş malın, kendini kurtarmak şöyle dursun, başına bela, felaketlerine sebep olacağını düşünmez de o onu her tehlikeden kurtaracak,</p><p>dünyaya kazık kaktıracak, ondan öyle söz almış, artık ebedilik muhakkak imiş gibi zanneder. Bütün emellerini onun üzerine kurar.</p><p>4. Hayır, hayır. İş öyle sandığı gibi değildir. İnsanı kurtaracak, ebediyete götürecek şey mal değil, önceki sûrede açıklandığı üzere Hakk&#x27;a iman, ilim ile salih ameldir. Andolsun ki atılacaktır. Baştaki lâm yemin için dir. &quot;Nebz&quot;, bir şeyi küçümsemek suretiyle fırlatıp atıvermek, kelimenin sonundaki &quot;nun&quot; da te&#x27;kit nun u &#x27;dur. Yani Allahü Zülcelâl&#x27;e yemin olsun ki, o mala güvenip, hep onu sayıp da halkı eğlenircesine kırıp inciten, herkesin hukuk ve haysiyetiyle oynayan o gururlu hümeze ve lümeze, o atak, koğucu her halde tam hakaret ve sefaletle atılacaktır. Hutamey ( cehennemin için)e. Önüne geleni kırıp geçirmek, yalayıp yutmak âdeti olduğundan dolayı bir adına da Hutame denilmiş olan cehennemin içine, Hümeze lümeze vezninde Hutame, Kâria Sûresi&#x27;nde &quot;haviye&quot;, &quot;narun hamiye&quot;, Tekâsür Sûresi&#x27;nde &quot;cahim&quot; diye ismi geçen cehennemin isimlerindendir. Bazıları dördüncü, bazıları altıncı, bazıları da ikinci tabakası demişlerdir. &quot;Mevlid&quot;de: &quot;Korkarım ki yerleri ola Tamu.&quot; denildiği gibi, eski Türkçe&#x27;de cehenneme Tamu denildiği için burada hutame&#x27;yi tamu diye terceme etmek de y akışabileceğinden dolayı meâlde ona da işaret ettik.</p><p>Bununla beraber Tamu, hapishane, zindan mânâsına olan dam (ceza evi)dan gibi görünür. Bu da &quot;Cehennemi, kâfirler için kuşatıcı (bir zindan) yapmışızdır.&quot; (İsrâ, 17/8) mânâsına uygundur. &quot;Hutame&quot; kelimesinin aslı ise kırıp geçirmek demek olan &quot;hatm&quot;den türemiştir. Bu &quot;fuale&quot; vezni de sayılar ifade ettiği için hutame, son derece kırmak âdeti ve tabiatı olan, yani kıran geçiren demek olur. Türkçe&#x27;de: &quot;Filan yere kıran girdi.&quot; demek de, orası k ırıldı, tükendi, mahvoldu mânâsını ifade eder. Kızgın ateşin de tabiatı, böyle önüne geleni kırıp geçirmek, mahvetmek, diğer deyimle yalayıp yutmak olduğundan, böyle kırıp geçirici, yahut yalayıp yutucu ateş anlamıyla cehenneme de hutame denilmiş demektir. Nitekim ekûl, yani çok yiyici, obur kimseye de, ateşe benzetilerek, hutame denir ki, &quot;sanki içinde fırın var gibi&quot; her verileni yalayıp yutuyor demektir. Bir de deyimi vardır ki &quot;Çobanların en kötüsü hutame olandır&quot;. Yani güttüğü sürüyü kırıp g eçirendir, demek olur. Burada cehennemin &quot;hutame&quot; ismiyle söylenmesi, görünüşte (sureten) mânâ bakımından hümezeye uygunluk içindir. Çünkü ikisi de bir vezindedir. İkinci olarak &quot;hümeze&quot;de başkalarının kıymet ve haysiyetini, gönlünü kırmak mânâsı bulunduğ u gibi, &quot;hutame&quot;de de kırıp geçirmek mânâsı vardır. Üçüncü olarak hümeze lümezede insanları arkadan çekiştirerek &quot;Sizden biriniz, ölmüş kardeşinin etini yemeyi sever mi?&quot; (Hucurat, 49/12)</p><p>mânâsı üzere etlerini yemek mânâsı bulunduğu gibi, ateşte de deriyi, eti yemek mânâsı vardır. Bundan dolayı hümeze lümezeye bir hutame ile ilâhî adalet icra edilecek demektir.</p><p>5. Lakin bu ateşin diğer ateşlere benzemeyen bambaşka bir ateş olduğu anlatılmak üzere korkutmak için buyuruluyor ki: Ve bildin mi hutame nedi r? Yahut: &quot;Ne dehşetli hutam!&quot;</p><p>6. O, Allah&#x27;ın ateşi, Allah ateşidir. &quot;Nâr&quot; (ateş)ın Allah&#x27;a izafeti, dilimizde de : &quot;Allah&#x27;ın belası&quot; dediğimiz gibi büyütme ve korkutma içindir ki, Allah Teâlâ&#x27;nın öfke ve heybetini özellikle göstermesi bakımından korku ve şiddetinin büyüklüğünü ifade eder. Yani malum olan ateşlerle mukayese edilemeyecek derecede öyle heybetli ve fevkalade büyük bir ateş ki (Allah&#x27;ın emriyle) yakılmış, tutuşturulmuştur. Ebediyyen sönmek bilmez. Hz. Ali (k.v.) şöyle demiştir: &quot;Ne acai p tir o insanlar ki, altından ateş kaynayıp dururken yeryüzünde Allah&#x27;a isyan ederler&quot;. Bugünkü jeologların teorilerine göre de yerin içindeki ateşe göre üzerinde bulunduğumuz kabuğu, yumurtanın içine nisbetle üzerindeki iç zarı kadar ince sayılmaktadır. F a kat bu ateşin onlara benzemediği ve sadece cisimleri yakan bir ateş değil, maddî şeyleri geçip de maneviyatı saran, cesetlerden başka canlara, gönüllere kadar çıkan bir ateş olduğu anlatılmak üzere şöyle vasıflandırılıyor: Öyle tutuşturulmuş bir ateş k i, yüreklerin, kalplerin içi, merkezi demek olan füadlerin, yani anlama yeri olan gönüllerin üstüne çıkar. Tenden geçer ruhlara, maneviyat üzerine çıkar, çatar, savar, canlar yakar, gerçi onları öldürmez &quot;Onun içinde ne ölür, ne yaşar.&quot; (A&#x27;lâ, 87/13) Fakat uzanır, sarar, azab eder. Çünkü küfrün, çirkin inançların, kötü niyetlerin kaynağı onlardır. Razî&#x27;nin anlattığı üzere Hz. Peygamber&#x27;den rivayet edilmiştir ki: Nar (ateş), ehlini yer, nihayet gönüllere gelince son bulur, sonra Allah Teâlâ etlerini, k emiklerini diğer bir oluşla iade eder. &quot;Derileri piştikçe azabı tatsınlar diye onlara başka deriler vereceğiz.&quot; (Nisa, 4/56) âyeti de buna delalet eder.</p><p>ITTILA&#x27;, bir şeyin üzerine çıkmaktır. İlmî olan ıttıla ve mütalea da bundan alınmıştır. &quot;Gönüllerin üzeri&quot; tabiri belli ki beyini de içine alır. Ateşin böyle hayatın merkezi olan kalplerin içini bütün üzerinden sarması, onlara muttali olması asabının şiddetini ve kuşatmasını belağatlı bir beyandır. Alûsî demiştir ki: &quot;İşaret erbabı bunda ruhanî a z abın şiddetine işaret olduğunu söylerler.&quot;</p><p>7. O, Allah&#x27;ın ateşi, Allah ateşidir. &quot;Nâr&quot; (ateş)ın Allah&#x27;a izafeti, dilimizde de : &quot;Allah&#x27;ın belası&quot; dediğimiz gibi büyütme ve korkutma içindir ki, Allah Teâlâ&#x27;nın öfke ve heybetini özellikle göstermesi bakımından korku ve şiddetinin büyüklüğünü ifade eder. Yani malum olan ateşlerle mukayese edilemeyecek derecede öyle heybetli ve fevkalade büyük bir ateş ki (Allah&#x27;ın emriyle) yakılmış, tutuşturulmuştur. Ebediyyen sönmek bilmez. Hz. Ali (k.v.) şöyle d emiştir: &quot;Ne acaiptir o insanlar ki, altından ateş kaynayıp dururken yeryüzünde Allah&#x27;a isyan ederler&quot;. Bugünkü jeologların teorilerine göre de yerin içindeki ateşe göre üzerinde bulunduğumuz kabuğu, yumurtanın içine nisbetle üzerindeki iç zarı kadar inc e sayılmaktadır. Fakat bu ateşin onlara benzemediği ve sadece cisimleri yakan bir ateş değil, maddî şeyleri geçip de maneviyatı saran, cesetlerden başka canlara, gönüllere kadar çıkan bir ateş olduğu anlatılmak üzere şöyle vasıflandırılıyor: Öyle tutuşt u rulmuş bir ateş ki, yüreklerin, kalplerin içi, merkezi demek olan füadlerin, yani anlama yeri olan gönüllerin üstüne çıkar. Tenden geçer ruhlara, maneviyat üzerine çıkar, çatar, savar, canlar yakar, gerçi onları öldürmez &quot;Onun içinde ne ölür, ne ya ş ar.&quot; (A&#x27;lâ, 87/13) Fakat uzanır, sarar, azab eder. Çünkü küfrün, çirkin inançların, kötü niyetlerin kaynağı onlardır. Razî&#x27;nin anlattığı üzere Hz. Peygamber&#x27;den rivayet edilmiştir ki: Nar (ateş), ehlini yer, nihayet gönüllere gelince son bulur, sonra Alla h Teâlâ etlerini, kemiklerini diğer bir oluşla iade eder. &quot;Derileri piştikçe azabı tatsınlar diye onlara başka deriler vereceğiz.&quot; (Nisa, 4/56) âyeti de buna delalet eder.</p><p>ITTILA&#x27;, bir şeyin üzerine çıkmaktır. İlmî olan ıttıla ve mütalea da bundan alınmıştır. &quot;Gönüllerin üzeri&quot; tabiri belli ki beyini de içine alır. Ateşin böyle hayatın merkezi olan kalplerin içini bütün üzerinden sarması, onlara muttali olması asabının şiddetini ve kuşatmasını belağatlı bir beyandır. Alûsî demiştir ki: &quot;İşaret erb a bı bunda ruhanî azabın şiddetine işaret olduğunu söylerler.&quot;</p><p>8. Muhakkak o ateş onların (o hümeze lümeze güruhunun)</p><p>üzerine kapatılacak, yani üzerlerine bastırılıp kapıları kapanacaktır. Temdid olunmuş, (uzatılmış) direkler yahut dayaklar, dikmeler içinde olarak. Bu, ya kelimesinin altında &quot;nâr&quot;a râcî zamirinden haldir. O ateşin kapıları kapanırken tazyikle açılmamak için uzun uzun dikmeler, dayaklarla dayanacak, o halde o şekilde kapatılacaktır, demek olur. Bunda bir fırının içini i y ice yakıp da tamamen kızdırmak için kapısını sağlam dayayarak kapamak tarzında bir tasvir var demektir. Yahut zamirinden haldir. Bu şekilde önceki mânâ olabileceği gibi, bir de uzun uzun sürüklenmesi kabil olmayan direkler halinde, tomruklar içinde kı m ıldanamayacakları bir şekilde azap ve işkencelerini tasvir ve beyan olur.</p><p>AMED : &quot;Bahru&#x27;l-Muhit&quot;in beyanına göre çoğul ismi, diğerlerinin beyanına göre çoğuldur. Ragıb ve Ferrâ &quot;amud&quot;un çoğulu demiş, Ebu Ubeyde &quot;imad&quot;ın çoğulu demiştir. İmad, dayak, dayanacak şey olduğu cihetle mutlaka direk olması lazım değildir. &quot;Amud&quot;un da &quot;ımâd&quot; olması lazım değildir. Aralarında bir cihetten genellik ve özellik ilişkisi var demektir. Ebu Bekir, Hamze, Kisâî, Halef ayn&#x27;ın ve mim&#x27;in zammiyle (umud) okumuşlar d ır ki, bunun sarih çoğul olduğunda şüphe yoktur. Amud, bilindiği gibi direk, sütun demektir. Ve &quot;kast&quot; mânâsına &quot;and&quot;den alınmıştır. Bir kavmin işlerini yürüten ulu&#x27;suna &quot;kavmin amudu&quot; denilir. Askerin komutanına &quot;ordu amudu&quot; denilir. Kılıcın sırtında ola n yola &quot;amud-i seyf&quot; (kılıcın amudu) denilir. İnsanın göğsünde sehabe (korkuluk kemiği) dedikleri dil gibi kemikten göbeğin aşağısına doğru uzanan damara, ayn şekilde insanın sırtına &quot;karın amudu denilir. Bir de amud, hüzün ve kederin şiddetinden direk gib i donup kalan, çok hüzünlü ve meraklı kimseye denir. Bunlar mülahaza edilince , o ateş gönüllerini saranların bedenlerine veya onları sarmış olan zebanilerin iriliklerine işaret de olabilir. İbnü Abbas&#x27;dan bunların, onları saran ateş sütunları demek ol d uğu da rivayet edilmiştir. Hakim-i Tirmizî&#x27;nin &quot;Nevadiru&#x27;l-usul&quot;de Ebu Hüreyre&#x27;den merfu olarak rivayet ettiği bir hadiste de böyle varid olmuştur. Allah Teâlâ isyankâr müminleri ateşten çıkardıktan sonra, ki en uzun duran yedi bin sene duracaktır. Allah T eâlâ cehenneme ateşten kapaklar, ateşten egserler, ateşten amudlarla bir kısım melekler gönderecek, o kapakları onların üzerine kapayacaklar, o çivilerle sıkıştıracaklar, o amudları uzatıp bastıracaklar, ne bir ruh girecek, ne bir gam çıkacak bir boşluk k a lmayacak. Aziz, Celil, Cebbar olan Allah Arş&#x27;ı üzerinde, onları unutmuş gibi bırakacak, Cennet ehli nimetleriyle meşgul olacaklar, artık</p><p>ondan sonra o cehennem ehli hiçbir yardım dileyemeyecekler, söz kesilecek, artık onların sözleri bir nefes alıp vermekten ibaret kalacak. Ve işte &quot;Cehennemlikler dikilmiş direklere bağlı bulundukları halde, o ateşin kapıları üzerlerine kapatılacaktır.&quot; &quot;Allah&#x27;ım bizi cehennem ateşinden koru, iyiler ile beraber cennete dahil eyle!&quot;</p><p>9. Muhakkak o ateş onların (o hümeze lümeze güruhunun)</p><p>üzerine kapatılacak, yani üzerlerine bastırılıp kapıları kapanacaktır. Temdid olunmuş, (uzatılmış) direkler yahut dayaklar, dikmeler içinde olarak. Bu, ya kelimesinin altında &quot;nâr&quot;a râcî zamirinden haldir. O ateşin kapıları kapanırken tazyikle açılmamak için uzun uzun dikmeler, dayaklarla dayanacak, o halde o şekilde kapatılacaktır, demek olur. Bunda bir fırının içini iyice yakıp da tamamen kızdırmak için kapısını sağlam dayayarak kapamak tarzında bir tasvir var demekt i r. Yahut zamirinden haldir. Bu şekilde önceki mânâ olabileceği gibi, bir de uzun uzun sürüklenmesi kabil olmayan direkler halinde, tomruklar içinde kımıldanamayacakları bir şekilde azap ve işkencelerini tasvir ve beyan olur.</p><p>AMED : &quot;Bahru&#x27;l-Mu hit&quot;in beyanına göre çoğul ismi, diğerlerinin beyanına göre çoğuldur. Ragıb ve Ferrâ &quot;amud&quot;un çoğulu demiş, Ebu Ubeyde &quot;imad&quot;ın çoğulu demiştir. İmad, dayak, dayanacak şey olduğu cihetle mutlaka direk olması lazım değildir. &quot;Amud&quot;un da &quot;ımâd&quot; olması lazım değildir. Aralarında bir cihetten genellik ve özellik ilişkisi var demektir. Ebu Bekir, Hamze, Kisâî, Halef ayn&#x27;ın ve mim&#x27;in zammiyle (umud) okumuşlardır ki, bunun sarih çoğul olduğunda şüphe yoktur. Amud, bilindiği gibi direk, sütun demektir. Ve &quot;kas t&quot; mânâsına &quot;and&quot;den alınmıştır. Bir kavmin işlerini yürüten ulu&#x27;suna &quot;kavmin amudu&quot; denilir. Askerin komutanına &quot;ordu amudu&quot; denilir. Kılıcın sırtında olan yola &quot;amud-i seyf&quot; (kılıcın amudu) denilir. İnsanın göğsünde sehabe (korkuluk kemiği) dedikleri dil gibi kemikten göbeğin aşağısına doğru uzanan damara, ayn şekilde insanın sırtına &quot;karın amudu denilir. Bir de amud, hüzün ve kederin şiddetinden direk gibi donup kalan, çok hüzünlü ve meraklı kimseye denir. Bunlar mülahaza edilince , o ateş gönüllerin i saranların bedenlerine veya onları sarmış olan zebanilerin iriliklerine işaret de olabilir. İbnü Abbas&#x27;dan bunların, onları saran ateş sütunları demek olduğu da rivayet edilmiştir. Hakim-i Tirmizî&#x27;nin &quot;Nevadiru&#x27;l-usul&quot;de Ebu Hüreyre&#x27;den merfu olarak riva y et ettiği bir hadiste de böyle varid olmuştur. Allah Teâlâ isyankâr müminleri ateşten çıkardıktan sonra, ki en uzun duran yedi bin sene duracaktır. Allah Teâlâ cehenneme ateşten kapaklar, ateşten egserler, ateşten amudlarla bir kısım melekler gönderecek, o kapakları onların üzerine kapayacaklar, o çivilerle sıkıştıracaklar, o amudları uzatıp bastıracaklar, ne bir ruh girecek, ne bir gam çıkacak bir boşluk kalmayacak. Aziz, Celil, Cebbar olan Allah Arş&#x27;ı üzerinde, onları unutmuş gibi bırakacak, Cennet ehli n imetleriyle meşgul olacaklar, artık</p><p>ondan sonra o cehennem ehli hiçbir yardım dileyemeyecekler, söz kesilecek, artık onların sözleri bir nefes alıp vermekten ibaret kalacak. Ve işte &quot;Cehennemlikler dikilmiş direklere bağlı bulundukları halde, o ateşin kapıları üzerlerine kapatılacaktır.&quot; &quot;Allah&#x27;ım bizi cehennem ateşinden koru, iyiler ile beraber cennete dahil eyle!&quot;</p><p>[Herhangi bir yanlislik gördügünüz zaman lütfen uyariniz. Simdiden tesekkürler.]{.small}</p><p>[mucahid dizayn: &lt;info@mucahid.net&gt;  ]{.small}</p></details>
             </article>
             
-            <article class="ayet" style="border-left:5px solid #1e40af;">
-              <div class="ayet-baslik">
-                <span style="color:#1e40af;">Âyet 4</span>
-                <span class="ayet-kod">104:4</span>
-              </div>
-              <div class="ayet-ar">كَلَّا ۖ لَيُنۢبَذَنَّ فِى ٱلْحُطَمَةِ</div>
+            <article class="ag-kart" style="border-top:4px solid #1e40af;">
+              <div class="ag-kart-baslik" style="color:#1e40af;">Âyet 4</div>
+              <div class="verse-ar">كَلَّا ۖ لَيُنۢبَذَنَّ فِى ٱلْحُطَمَةِ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="كَلّا"><span class="kelime-ar" style="color:#dc2626;">كَلَّا</span><span class="kelime-tr">hayır, asla</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="ن"><span class="kelime-ar" style="color:#2563eb;">لَيُنۢبَذَنَّ</span><span class="kelime-tr">için, -e</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="فِي"><span class="kelime-ar" style="color:#16a34a;">فِى</span><span class="kelime-tr">İçinde</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="حُطَمَة"><span class="kelime-ar" style="color:#9333ea;">ٱلْحُطَمَةِ</span><span class="kelime-tr">the (belirteç)</span></span></div>
-              <div class="ayet-meal">Hayır! Andolsun ki o, Hutame’ye atılacaktır.</div>
+              <div class="verse-tr">Hayır! Andolsun ki o, Hutame’ye atılacaktır.</div>
+              
             </article>
-            
+            </div>
         </section>
         
         <section class="mevzu">
@@ -228,57 +263,47 @@ body {
             </div>
             <div class="mevzu-meta">Âyet 5 - 9 · <span class="rozet" style="background:#065f46;">5 âyet</span></div>
           </header>
-          
-            <article class="ayet" style="border-left:5px solid #065f46;">
-              <div class="ayet-baslik">
-                <span style="color:#065f46;">Âyet 5</span>
-                <span class="ayet-kod">104:5</span>
-              </div>
-              <div class="ayet-ar">وَمَآ أَدْرَىٰكَ مَا ٱلْحُطَمَةُ</div>
+          <div class="ayetler">
+            <article class="ag-kart" style="border-top:4px solid #065f46;">
+              <div class="ag-kart-baslik" style="color:#065f46;">Âyet 5</div>
+              <div class="verse-ar">وَمَآ أَدْرَىٰكَ مَا ٱلْحُطَمَةُ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="ما"><span class="kelime-ar" style="color:#dc2626;">وَمَآ</span><span class="kelime-tr">Ne</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="أَدْرَى"><span class="kelime-ar" style="color:#2563eb;">أَدْرَىٰكَ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="ما"><span class="kelime-ar" style="color:#16a34a;">مَا</span><span class="kelime-tr">Ne</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="حُطَمَة"><span class="kelime-ar" style="color:#9333ea;">ٱلْحُطَمَةُ</span><span class="kelime-tr">the (belirteç)</span></span></div>
-              <div class="ayet-meal">Hutame’nin ne olduğunu bilir misin?</div>
+              <div class="verse-tr">Hutame’nin ne olduğunu bilir misin?</div>
+              
             </article>
             
-            <article class="ayet" style="border-left:5px solid #065f46;">
-              <div class="ayet-baslik">
-                <span style="color:#065f46;">Âyet 6</span>
-                <span class="ayet-kod">104:6</span>
-              </div>
-              <div class="ayet-ar">نَارُ ٱللَّهِ ٱلْمُوقَدَةُ</div>
+            <article class="ag-kart" style="border-top:4px solid #065f46;">
+              <div class="ag-kart-baslik" style="color:#065f46;">Âyet 6</div>
+              <div class="verse-ar">نَارُ ٱللَّهِ ٱلْمُوقَدَةُ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="نار"><span class="kelime-ar" style="color:#dc2626;">نَارُ</span><span class="kelime-tr">Ateş/Cehennem</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="اللَّه"><span class="kelime-ar" style="color:#2563eb;">ٱللَّهِ</span><span class="kelime-tr">Allah</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="مُوقَدَة"><span class="kelime-ar" style="color:#16a34a;">ٱلْمُوقَدَةُ</span><span class="kelime-tr">the (belirteç)</span></span></div>
-              <div class="ayet-meal">(6-7) Allah’ın, tutuşturulmuş, (yandıkça) tırmanıp kalplerin ta üstüne çıkan ateşidir.</div>
+              <div class="verse-tr">(6-7) Allah’ın, tutuşturulmuş, (yandıkça) tırmanıp kalplerin ta üstüne çıkan ateşidir.</div>
+              
             </article>
             
-            <article class="ayet" style="border-left:5px solid #065f46;">
-              <div class="ayet-baslik">
-                <span style="color:#065f46;">Âyet 7</span>
-                <span class="ayet-kod">104:7</span>
-              </div>
-              <div class="ayet-ar">ٱلَّتِى تَطَّلِعُ عَلَى ٱلْأَفْـِٔدَةِ</div>
+            <article class="ag-kart" style="border-top:4px solid #065f46;">
+              <div class="ag-kart-baslik" style="color:#065f46;">Âyet 7</div>
+              <div class="verse-ar">ٱلَّتِى تَطَّلِعُ عَلَى ٱلْأَفْـِٔدَةِ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="الَّذِي"><span class="kelime-ar" style="color:#dc2626;">ٱلَّتِى</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="طَلَعَ"><span class="kelime-ar" style="color:#2563eb;">تَطَّلِعُ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="عَلَى"><span class="kelime-ar" style="color:#16a34a;">عَلَى</span><span class="kelime-tr">üzerine, üstüne</span></span><span class="kelime" style="border-bottom:3px solid #9333ea;" title="فُؤاد"><span class="kelime-ar" style="color:#9333ea;">ٱلْأَفْـِٔدَةِ</span><span class="kelime-tr">the (belirteç)</span></span></div>
-              <div class="ayet-meal">(6-7) Allah’ın, tutuşturulmuş, (yandıkça) tırmanıp kalplerin ta üstüne çıkan ateşidir.</div>
+              <div class="verse-tr">(6-7) Allah’ın, tutuşturulmuş, (yandıkça) tırmanıp kalplerin ta üstüne çıkan ateşidir.</div>
+              
             </article>
             
-            <article class="ayet" style="border-left:5px solid #065f46;">
-              <div class="ayet-baslik">
-                <span style="color:#065f46;">Âyet 8</span>
-                <span class="ayet-kod">104:8</span>
-              </div>
-              <div class="ayet-ar">إِنَّهَا عَلَيْهِم مُّؤْصَدَةٌ</div>
+            <article class="ag-kart" style="border-top:4px solid #065f46;">
+              <div class="ag-kart-baslik" style="color:#065f46;">Âyet 8</div>
+              <div class="verse-ar">إِنَّهَا عَلَيْهِم مُّؤْصَدَةٌ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="إِنّ"><span class="kelime-ar" style="color:#dc2626;">إِنَّهَا</span><span class="kelime-tr">şüphesiz, gerçekten</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="عَلَى"><span class="kelime-ar" style="color:#2563eb;">عَلَيْهِم</span><span class="kelime-tr">üzerine, üstüne</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="مُؤْصَدَة"><span class="kelime-ar" style="color:#16a34a;">مُّؤْصَدَةٌ</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(8-9) Onlar (bu ateşin içinde) uzatılmış sütunlara bağlanmışlar ve o vaziyette o (ateş) üzerlerine kapatılmıştır.</div>
+              <div class="verse-tr">(8-9) Onlar (bu ateşin içinde) uzatılmış sütunlara bağlanmışlar ve o vaziyette o (ateş) üzerlerine kapatılmıştır.</div>
+              
             </article>
             
-            <article class="ayet" style="border-left:5px solid #065f46;">
-              <div class="ayet-baslik">
-                <span style="color:#065f46;">Âyet 9</span>
-                <span class="ayet-kod">104:9</span>
-              </div>
-              <div class="ayet-ar">فِى عَمَدٍ مُّمَدَّدَةٍۭ</div>
+            <article class="ag-kart" style="border-top:4px solid #065f46;">
+              <div class="ag-kart-baslik" style="color:#065f46;">Âyet 9</div>
+              <div class="verse-ar">فِى عَمَدٍ مُّمَدَّدَةٍۭ</div>
               <div class="kelime-satiri"><span class="kelime" style="border-bottom:3px solid #dc2626;" title="فِي"><span class="kelime-ar" style="color:#dc2626;">فِى</span><span class="kelime-tr">İçinde</span></span><span class="kelime" style="border-bottom:3px solid #2563eb;" title="عَمَد"><span class="kelime-ar" style="color:#2563eb;">عَمَدٍ</span><span class="kelime-tr">—</span></span><span class="kelime" style="border-bottom:3px solid #16a34a;" title="مُمَدَّدَة"><span class="kelime-ar" style="color:#16a34a;">مُّمَدَّدَةٍۭ</span><span class="kelime-tr">—</span></span></div>
-              <div class="ayet-meal">(8-9) Onlar (bu ateşin içinde) uzatılmış sütunlara bağlanmışlar ve o vaziyette o (ateş) üzerlerine kapatılmıştır.</div>
+              <div class="verse-tr">(8-9) Onlar (bu ateşin içinde) uzatılmış sütunlara bağlanmışlar ve o vaziyette o (ateş) üzerlerine kapatılmıştır.</div>
+              
             </article>
-            
+            </div>
         </section>
         
 </main>
