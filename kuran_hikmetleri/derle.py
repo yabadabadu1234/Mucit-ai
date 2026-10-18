@@ -131,6 +131,45 @@ def _yatay_satir(dugumler, renk, verse_dict):
     return f'<div class="ag-yatay">{"".join(sutunlar)}</div>'
 
 
+def _yumak_kutusu(x, renk):
+    a, b = x["aralik"]
+    return (
+        f'<div class="ag-yumak-kutu" style="border-top:4px solid {renk};">'
+        f'<strong>{x["baslik"]}</strong>'
+        f'<div class="ag-meta">Âyet {a}{"-" + str(b) if a != b else ""} · {_yaprak_sayisi(x)} âyet</div></div>'
+    )
+
+
+def _yumak_satiri(dugumler, renk):
+    """Sadece mevzu ağacını yatay dizer; âyet metni içermez."""
+    sutunlar = []
+    for x in dugumler:
+        alt = _yumak_satiri(x["alt"], renk) if x.get("alt") else ""
+        sutunlar.append(
+            f'<div class="ag-sutun" style="flex-grow:{_yaprak_sayisi(x)};">'
+            f'{_yumak_kutusu(x, renk)}{alt}</div>'
+        )
+    return f'<div class="ag-yatay">{"".join(sutunlar)}</div>'
+
+
+def mevzu_yumagi(segments, agac_segmentler):
+    """Ayrıntılı görünümün üstünde, yalnızca mevzuların yumağı (âyet metni yok)."""
+    bloklar = []
+    for seg in segments:
+        anahtar = f"{seg['start']}-{seg['end']}"
+        if anahtar not in agac_segmentler:
+            continue
+        renk = seg["color"]
+        bloklar.append(
+            f'<div class="ag-blok">'
+            f'<div class="ag-ust" style="border-left:6px solid {renk};"><strong>{seg["title"]}</strong>'
+            f'<div class="ag-meta">Âyet {seg["start"]} - {seg["end"]} · {seg["count"]} âyet</div></div>'
+            f'<div class="ag-ok" style="border-left-color:{renk};"></div>'
+            f'{_yumak_satiri(agac_segmentler[anahtar], renk)}</div>'
+        )
+    return f'<div class="ag-ayrintili">{"".join(bloklar)}</div>'
+
+
 def detay_bolumu(segments, agac_segmentler, verse_dict):
     """Ayrıntılı görünüm: genel mevzu başlığı üstte; altında mevzu ağacı yatay olarak dizilir,
     her mevzunun âyetleri o mevzunun altında dikey sütunlar halinde bağlanır."""
@@ -341,7 +380,7 @@ def build_unified_html(config, surahs_data):
                             """)
                         detail_content = f'<div class="topics-container">{"".join(verse_blocks)}</div>'
                     else:
-                        detail_content = kesit_html + seg_table + '<h4 class="ag-baslik">Ayrıntılı görünüm: mevzular ve âyet metinleri</h4>' + ayrintili
+                        detail_content = kesit_html + seg_table + '<h4 class="ag-baslik">Mevzuların yumağı</h4>' + mevzu_yumagi(segments, agac_segmentler) + '<h4 class="ag-baslik">Ayrıntılı görünüm: mevzular ve âyet metinleri</h4>' + ayrintili
 
                     chart_section_html = f"""
                     <div class="surah-chart-section">
@@ -687,6 +726,13 @@ tr:nth-child(even) {{ background: #f8fafc; }}
   display: flex;
   flex-direction: column;
   gap: 6px;
+}}
+.ag-yumak-kutu {{
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 6px 8px;
+  font-size: 9pt;
 }}
 .ag-cok-sutun {{
   display: block;
