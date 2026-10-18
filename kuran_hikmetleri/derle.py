@@ -153,21 +153,21 @@ def _yumak_satiri(dugumler, renk):
 
 
 def mevzu_yumagi(segments, agac_segmentler):
-    """Ayrıntılı görünümün üstünde, yalnızca mevzuların yumağı (âyet metni yok)."""
-    bloklar = []
+    """Sûreye mahsus tek yumak: bütün segmentler yan yana, her birinin altında kendi mevzu ağacı.
+    Âyet metni içermez. Sütun genişliği segmentin âyet sayısına göre orantılıdır."""
+    sutunlar = []
     for seg in segments:
-        anahtar = f"{seg['start']}-{seg['end']}"
-        if anahtar not in agac_segmentler:
-            continue
         renk = seg["color"]
-        bloklar.append(
-            f'<div class="ag-blok">'
-            f'<div class="ag-ust" style="border-left:6px solid {renk};"><strong>{seg["title"]}</strong>'
+        anahtar = f"{seg['start']}-{seg['end']}"
+        govde = _yumak_satiri(agac_segmentler[anahtar], renk) if anahtar in agac_segmentler else ""
+        sutunlar.append(
+            f'<div class="ag-sutun" style="flex-grow:{seg["count"]};">'
+            f'<div class="ag-yumak-kutu" style="border-top:4px solid {renk};">'
+            f'<strong>{seg["title"]}</strong>'
             f'<div class="ag-meta">Âyet {seg["start"]} - {seg["end"]} · {seg["count"]} âyet</div></div>'
-            f'<div class="ag-ok" style="border-left-color:{renk};"></div>'
-            f'{_yumak_satiri(agac_segmentler[anahtar], renk)}</div>'
+            f'{govde}</div>'
         )
-    return f'<div class="ag-ayrintili">{"".join(bloklar)}</div>'
+    return f'<div class="ag-yatay">{"".join(sutunlar)}</div>'
 
 
 def detay_bolumu(segments, agac_segmentler, verse_dict):
@@ -702,15 +702,18 @@ tr:nth-child(even) {{ background: #f8fafc; }}
 }}
 .ag-yatay {{
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   align-items: stretch;
+  width: 100%;
 }}
 .ag-sutun {{
   display: flex;
   flex-direction: column;
   gap: 6px;
-  min-width: 150px;
-  flex-basis: 0;
+  flex: 1 1 170px;
+  min-width: 170px;
+  overflow-wrap: anywhere;
 }}
 .ag-sutun-baslik {{
   color: #ffffff;
