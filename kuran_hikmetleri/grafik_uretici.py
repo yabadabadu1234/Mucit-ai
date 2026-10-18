@@ -624,81 +624,85 @@ def _elmalili_temiz(p):
     return re.sub(r"\s*\n\s*", " ", p).strip()
 
 
-def elmalili_tefsiri(sno, n_ayet):
-    """Elmalılı tefsirini sûre bazında âyetlere böler; yalnız tefsir metnini verir.
-    Kaynakta "Meâl-i Şerifi" ile başlayan bölümler Elmalılı'nın meâlidir: tefsir sayılmaz, dışarıda kalır.
-    Âyet başlığı (`N-`, `N-M-`, `N/M.`) ancak beklenen sıradaki âyet numarasına yakınsa kabul edilir.
-    Meâl bölümünden sonra tefsir ikinci kez, âyet başlıklarıyla başlayabilir; bu başlıklar yeniden tanınır.
-    Döner: (tanıtım_paragrafları, {âyet: paragraflar | ("ortak", ilk_âyet)}).
-    """
-    yol = ELMALILI_DIZIN / f"{sno}.md"
-    if not yol.exists():
-        return [], {}
-    t = yol.read_text(encoding="utf-8")
-    paragraflar = [p for p in re.split(r"\n\s*\n", t) if p.strip()]
-    bas, serbest, gruplar = [], [], []
-    beklenen = 1
-    meal_basi = None
+def _elmalili_meal_cikar(paragraflar, n_ayet):
+    """"Meâl-i Şerifi" bölümlerindeki kısa âyet satırlarını (Elmalılı'nın meâli) çıkarır; geri kalanı döner."""
+    kalan = []
     meal_modu = False
-    yeniden_basladi = False
-    bagli = False  # Son paragraf bir âyet başlığına bağlı mı? Değilse metin bir âyete atanmaz.
+    beklenen = 1
     for p in paragraflar:
         s = _elmalili_temiz(p)
         if not s or set(s) <= set("-= ") or _ELMALILI_BOLUM.match(s):
             continue
         if re.match(r"Me[âa]l\s*-?\s*i\s*[Şş]\s*e\s*r", s, re.I):
             meal_modu = True
-            bagli = False
             continue
         m = _ELMALILI_BASLIK.match(s)
-        ilk, kalan, govde = None, "", s
+        ilk, son = None, None
         if m:
             if m.group(1):
-                ilk = int(m.group(1))
+                ilk = son = int(m.group(1))
             else:
-                ilk, kalan = int(m.group(2)), m.group(3)
-            govde = m.group(4)
+                ilk = int(m.group(2))
+                son = max([ilk] + [int(x) for x in m.group(3).split("-") if x])
         if meal_modu:
             if ilk is not None and beklenen <= ilk <= beklenen + 5 and ilk <= n_ayet and len(s) <= 400:
-                # Kısa âyet satırı: Elmalılı meâlidir, tefsir değildir.
-                if meal_basi is None:
-                    meal_basi = ilk
-                beklenen = ilk + 1 + len([x for x in kalan.split("-") if x])
+                beklenen = son + 1
                 continue
             meal_modu = False
-        if ilk is not None and not yeniden_basladi and meal_basi is not None and meal_basi <= ilk <= meal_basi + 5 and ilk < beklenen:
-            # Meâlden sonra tefsirin tekrar başladığı âyet.
-            beklenen = ilk
-            yeniden_basladi = True
         if ilk is not None and beklenen <= ilk <= beklenen + 5 and ilk <= n_ayet:
-            ayetler = sorted(set([ilk] + [int(x) for x in kalan.split("-") if x and int(x) <= n_ayet]))
-            if yeniden_basladi and meal_basi is not None and ilk >= meal_basi:
-                # Tekrar eden başlıkta baştaki meâl alıntısı ("...") tefsir değildir.
-                govde = re.sub(r'^"[^"]*"\s*', "", govde)
-            gruplar.append((ayetler, [govde]))
-            beklenen = max(ayetler) + 1
-            bagli = True
-        elif bagli:
-            gruplar[-1][1].append(s)
-        elif gruplar:
-            serbest.append(s)
-        else:
-            bas.append(s)
+            beklenen = son + 1
+        kalan.append(s)
+    return kalan
+
+
+def _elmalili_sirali_bol(metin, n_ayet):
+    """Metinde 1, 2, 3… sırasıyla ayet numaralarını arar; her numaranın arkasındaki parça o âyetin tefsiridir.
+    Ayet numarası, sayı/eğik çizgi (sûre-ayet atıfları: 10/96) veya rakamın parçası olmadığında kabul edilir."""
+    starts = []
+    pos = 0
+    for v in range(1, n_ayet + 1):
+        # Biçimler: "13-", "13 ", "13)" ve "54/1." (sûre/âyet başlığı); "10/96" gibi atıflar âyet sayılmaz.
+        m = re.compile(r"(?:(?<![\d/\w])" + str(v) + r"(?![\d/])(?=\s*[-.)\]:]|\s))|(?:(?<=\d/)" + str(v) + r"(?=\.\s))").search(metin, pos)
+        if not m:
+            continue  # Bu âyet metinde yok; sonrakini aramaya devam et.
+        starts.append((v, m.start(), m.end()))
+        pos = m.end()
+    intro = metin[:starts[0][1]].strip() if starts else metin.strip()
     harita = {}
-    tanitim = serbest
-    if gruplar:
-        # Başlıksız giriş paragrafları, 1. âyet hiç başlık almadıysa 1. âyete aittir.
-        kapsam = [a for ayetler, _ in gruplar for a in ayetler]
-        if bas and 1 not in kapsam:
-            harita[1] = bas
+    dolu = []
+    for i, (v, st, en) in enumerate(starts):
+        end = starts[i + 1][1] if i + 1 < len(starts) else len(metin)
+        govde = re.sub(r"^[\s\-.)\]:]+", "", metin[en:end]).strip()
+        # Ikinci geçişte âyet numarasının hemen arkasındaki tırnaklı meâl alıntısı tefsir değildir.
+        govde = re.sub(r'^"[^"\n]{0,300}"\s*', "", govde)
+        parcalar = [x.strip() for x in govde.split("\n\n") if x.strip()]
+        if parcalar:
+            harita[v] = parcalar
+            dolu.append(v)
         else:
-            tanitim = bas + serbest
-        for ayetler, paragraflar_g in gruplar:
-            ilk = ayetler[0]
-            harita[ilk] = paragraflar_g
-            for a in ayetler[1:]:
-                harita[a] = ("ortak", ilk)
-    return tanitim, harita
+            dolu.append(None)
+    # Metni boş kalan âyetler: sonraki dolu âyetin kutusunda gösterilir.
+    for i, (v, _, _) in enumerate(starts):
+        if v in harita:
+            continue
+        j = i + 1
+        while j < len(starts) and starts[j][0] not in harita:
+            j += 1
+        if j < len(starts):
+            harita[v] = ("ortak", starts[j][0])
+    return ([intro] if intro else []), harita
+
+
+def elmalili_tefsiri(sno, n_ayet):
+    """Elmalılı tefsirini sûre bazında âyetlere böler; yalnız tefsir metnini verir.
+    Döner: (sûre_başı_paragrafları, {âyet: paragraflar | ("ortak", âyet)})."""
+    yol = ELMALILI_DIZIN / f"{sno}.md"
+    if not yol.exists():
+        return [], {}
+    paragraflar = [p for p in re.split(r"\n\s*\n", yol.read_text(encoding="utf-8")) if p.strip()]
+    kalan = _elmalili_meal_cikar(paragraflar, n_ayet)
+    metin = "\n\n".join(kalan)
+    return _elmalili_sirali_bol(metin, n_ayet)
 
 
 def kelime_satiri_html(kelimeler):
