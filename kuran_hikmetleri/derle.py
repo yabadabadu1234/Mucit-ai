@@ -319,6 +319,26 @@ def detay_bolumu(segments, agac_segmentler, verse_dict):
     return f'<div class="ag-ayrintili">{"".join(bloklar)}</div>'
 
 
+SURUM_KONTROLU_HEAD = '<meta name="surum" content="__SURUM__">'
+
+# Açılışta kitabın kendi sürümünü son dağıtılan sürümle (surum.json) karşılaştırır.
+# Farklıysa güncel adrese (?v=SHA) yönlendirir; yenileme her zaman en son sürümü gösterir.
+SURUM_KONTROLU_SCRIPT = """<script>
+(function () {
+  var gomulu = document.querySelector('meta[name="surum"]').content;
+  if (gomulu.indexOf('__SUR') === 0) return;
+  fetch('surum.json?t=' + Date.now(), { cache: 'no-store' })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (d) {
+      if (d && d.sha && d.sha !== gomulu && location.search.indexOf(d.sha) === -1) {
+        location.replace(location.pathname + '?v=' + d.sha + location.hash);
+      }
+    })
+    .catch(function () {});
+})();
+</script>"""
+
+
 def build_unified_html(config, surahs_data):
     """Yapılandırmada işaret edilen dosyaları ve grafikleri uygun sırayla uç uca ekleyip tek bir HTML oluşturur."""
     md_conv = get_markdown_converter()
@@ -541,6 +561,7 @@ def build_unified_html(config, surahs_data):
 <html lang="tr">
 <head>
 <meta charset="utf-8">
+{SURUM_KONTROLU_HEAD}
 <title>{config.get('proje_adi', 'Kur-an Hikmetleri')}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1166,7 +1187,7 @@ window.addEventListener('scroll', kaydirmaIsle, {{ passive: true }});
 window.addEventListener('resize', kaydirmaIsle);
 gorunenleriYukle();
 </script>
-
+{SURUM_KONTROLU_SCRIPT}
 </body>
 </html>
 """

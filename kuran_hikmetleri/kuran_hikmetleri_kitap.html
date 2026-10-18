@@ -2,6 +2,7 @@
 <html lang="tr">
 <head>
 <meta charset="utf-8">
+<meta name="surum" content="__SURUM__">
 <title>Kur'an-ı Kerim Tertibindeki Hikmetler ve Sure Cetvelleri</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12680,6 +12681,19 @@ window.addEventListener('scroll', kaydirmaIsle, { passive: true });
 window.addEventListener('resize', kaydirmaIsle);
 gorunenleriYukle();
 </script>
-
+<script>
+(function () {
+  var gomulu = document.querySelector('meta[name="surum"]').content;
+  if (gomulu.indexOf('__SUR') === 0) return;
+  fetch('surum.json?t=' + Date.now(), { cache: 'no-store' })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (d) {
+      if (d && d.sha && d.sha !== gomulu && location.search.indexOf(d.sha) === -1) {
+        location.replace(location.pathname + '?v=' + d.sha + location.hash);
+      }
+    })
+    .catch(function () {});
+})();
+</script>
 </body>
 </html>

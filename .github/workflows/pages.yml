@@ -33,7 +33,9 @@ jobs:
           mkdir -p _site
           cp -r kuran_hikmetleri/. _site/
           sed -i 's#/home/runner/work/Mucit-ai/Mucit-ai/kuran_hikmetleri/##g' _site/kuran_hikmetleri_kitap.html
+          sed -i "s#__SURUM__#${GITHUB_SHA}#g" _site/kuran_hikmetleri_kitap.html
           cp _site/kuran_hikmetleri_kitap.html _site/index.html
+          printf '{"sha":"%s"}\n' "${GITHUB_SHA}" > _site/surum.json
 
       - uses: actions/upload-pages-artifact@v3
         with:
