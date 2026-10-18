@@ -436,7 +436,49 @@ tr:nth-child(even) { background: #f8fafc; }
   padding-top: 6px;
 }
 
+.kenar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 200px;
+  overflow-y: auto;
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 12px 8px;
+  font-size: 9pt;
+  border-right: 1px solid #1e293b;
+  z-index: 100;
+}
+.kenar-baslik {
+  font-weight: 700;
+  color: #fbbf24;
+  padding: 0 6px 8px 6px;
+  border-bottom: 1px solid #1e293b;
+  margin-bottom: 6px;
+}
+.kenar a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  padding: 3px 6px;
+  border-radius: 4px;
+  line-height: 1.35;
+}
+.kenar a:hover {
+  background: #1e293b;
+  color: #ffffff;
+}
+.kitap-govde {
+  margin-left: 215px;
+}
+@media (max-width: 800px) {
+  .kenar { display: none; }
+  .kitap-govde { margin-left: 0; }
+}
 @media print {
+  .kenar { display: none; }
+  .kitap-govde { margin-left: 0; }
   body { background: transparent; }
   .page { page-break-after: always; }
   .verse-card { page-break-inside: avoid; }
@@ -444,7 +486,8 @@ tr:nth-child(even) { background: #f8fafc; }
 </style>
 </head>
 <body>
-
+<nav class="kenar"><div class="kenar-baslik">Sureler</div><a href="#sure-1">1. Fâtiha</a><a href="#sure-2">2. Bakara</a><a href="#sure-3">3. Âl-i İmrân</a><a href="#sure-4">4. Nisâ</a><a href="#sure-5">5. Mâide</a><a href="#sure-6">6. En'âm</a><a href="#sure-7">7. A'râf</a><a href="#sure-8">8. Enfâl</a><a href="#sure-9">9. Tevbe</a><a href="#sure-10">10. Yûnus</a><a href="#sure-11">11. Hûd</a><a href="#sure-12">12. Yûsuf</a><a href="#sure-13">13. Ra'd</a><a href="#sure-14">14. İbrâhîm</a><a href="#sure-15">15. Hicr</a><a href="#sure-16">16. Nahl</a><a href="#sure-17">17. İsrâ</a><a href="#sure-18">18. Kehf</a><a href="#sure-19">19. Meryem</a><a href="#sure-20">20. Tâhâ</a><a href="#sure-21">21. Enbiyâ</a><a href="#sure-22">22. Hac</a><a href="#sure-23">23. Mü'minûn</a><a href="#sure-24">24. Nûr</a><a href="#sure-25">25. Furkân</a><a href="#sure-26">26. Şu'arâ</a><a href="#sure-27">27. Neml</a><a href="#sure-28">28. Kasas</a><a href="#sure-29">29. Ankebût</a><a href="#sure-30">30. Rûm</a><a href="#sure-31">31. Lokmân</a><a href="#sure-32">32. Secde</a><a href="#sure-33">33. Ahzâb</a><a href="#sure-34">34. Sebe'</a><a href="#sure-35">35. Fâtır</a><a href="#sure-36">36. Yâ-Sîn</a><a href="#sure-37">37. Sâffât</a><a href="#sure-38">38. Sâd</a><a href="#sure-39">39. Zümer</a><a href="#sure-40">40. Mü'min</a><a href="#sure-41">41. Fussilet</a><a href="#sure-42">42. Şûrâ</a><a href="#sure-43">43. Zuhruf</a><a href="#sure-44">44. Duhân</a><a href="#sure-45">45. Câsiye</a><a href="#sure-46">46. Ahkâf</a><a href="#sure-47">47. Muhammed</a><a href="#sure-48">48. Fetih</a><a href="#sure-49">49. Hucurât</a><a href="#sure-50">50. Kâf</a><a href="#sure-51">51. Zâriyât</a><a href="#sure-52">52. Tûr</a><a href="#sure-53">53. Necm</a><a href="#sure-54">54. Kamer</a><a href="#sure-55">55. Rahmân</a><a href="#sure-56">56. Vâkıa</a><a href="#sure-57">57. Hadîd</a><a href="#sure-58">58. Mücâdele</a><a href="#sure-59">59. Haşr</a><a href="#sure-60">60. Mümtehine</a><a href="#sure-61">61. Saff</a><a href="#sure-62">62. Cum'a</a><a href="#sure-63">63. Münâfikûn</a><a href="#sure-64">64. Teğâbun</a><a href="#sure-65">65. Talâk</a><a href="#sure-66">66. Tahrîm</a><a href="#sure-67">67. Mülk</a><a href="#sure-68">68. Kalem</a><a href="#sure-69">69. Hâkka</a><a href="#sure-70">70. Meâric</a><a href="#sure-71">71. Nûh</a><a href="#sure-72">72. Cin</a><a href="#sure-73">73. Müzzemmil</a><a href="#sure-74">74. Müddessir</a><a href="#sure-75">75. Kıyâme</a><a href="#sure-76">76. İnsân</a><a href="#sure-77">77. Mürselât</a><a href="#sure-78">78. Nebe'</a><a href="#sure-79">79. Nâziât</a><a href="#sure-80">80. Abese</a><a href="#sure-81">81. Tekvîr</a><a href="#sure-82">82. İnfitâr</a><a href="#sure-83">83. Mutaffifîn</a><a href="#sure-84">84. İnşikâk</a><a href="#sure-85">85. Bürûc</a><a href="#sure-86">86. Târık</a><a href="#sure-87">87. A'lâ</a><a href="#sure-88">88. Gâşiye</a><a href="#sure-89">89. Fecr</a><a href="#sure-90">90. Beled</a><a href="#sure-91">91. Şems</a><a href="#sure-92">92. Leyl</a><a href="#sure-93">93. Duhâ</a><a href="#sure-94">94. İnşirâh</a><a href="#sure-95">95. Tîn</a><a href="#sure-96">96. Alak</a><a href="#sure-97">97. Kadr</a><a href="#sure-98">98. Beyyine</a><a href="#sure-99">99. Zilzâl</a><a href="#sure-100">100. Âdiyât</a><a href="#sure-101">101. Kâria</a><a href="#sure-102">102. Tekâsür</a><a href="#sure-103">103. Asr</a><a href="#sure-104">104. Hümeze</a><a href="#sure-105">105. Fîl</a><a href="#sure-106">106. Kureyş</a><a href="#sure-107">107. Mâ'ûn</a><a href="#sure-108">108. Kevser</a><a href="#sure-109">109. Kâfirûn</a><a href="#sure-110">110. Nasr</a><a href="#sure-111">111. Mesed</a><a href="#sure-112">112. İhlâs</a><a href="#sure-113">113. Felak</a><a href="#sure-114">114. Nâs</a></nav>
+<div class="kitap-govde">
 
             <div class="page cover-page">
               <div class="cover-border">
@@ -12499,6 +12542,7 @@ tr:nth-child(even) { background: #f8fafc; }
                     
                 </div>
                 
+</div>
 
 </body>
 </html>

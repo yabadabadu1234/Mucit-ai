@@ -512,6 +512,12 @@ def build_unified_html(config, surahs_data):
                 </div>
                 """)
 
+    kenar_maddeler = "".join(
+        f'<a href="#sure-{s["sno"]}">{s["sno"]}. {s["name"]}</a>'
+        for s in sorted(surahs_data, key=lambda s: s["sno"])
+    )
+    kenar_html = f'<nav class="kenar"><div class="kenar-baslik">Sureler</div>{kenar_maddeler}</nav>'
+
     full_html = f"""<!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -950,7 +956,49 @@ tr:nth-child(even) {{ background: #f8fafc; }}
   padding-top: 6px;
 }}
 
+.kenar {{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 200px;
+  overflow-y: auto;
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 12px 8px;
+  font-size: 9pt;
+  border-right: 1px solid #1e293b;
+  z-index: 100;
+}}
+.kenar-baslik {{
+  font-weight: 700;
+  color: #fbbf24;
+  padding: 0 6px 8px 6px;
+  border-bottom: 1px solid #1e293b;
+  margin-bottom: 6px;
+}}
+.kenar a {{
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  padding: 3px 6px;
+  border-radius: 4px;
+  line-height: 1.35;
+}}
+.kenar a:hover {{
+  background: #1e293b;
+  color: #ffffff;
+}}
+.kitap-govde {{
+  margin-left: 215px;
+}}
+@media (max-width: 800px) {{
+  .kenar {{ display: none; }}
+  .kitap-govde {{ margin-left: 0; }}
+}}
 @media print {{
+  .kenar {{ display: none; }}
+  .kitap-govde {{ margin-left: 0; }}
   body {{ background: transparent; }}
   .page {{ page-break-after: always; }}
   .verse-card {{ page-break-inside: avoid; }}
@@ -958,8 +1006,10 @@ tr:nth-child(even) {{ background: #f8fafc; }}
 </style>
 </head>
 <body>
-
+{kenar_html}
+<div class="kitap-govde">
 {"".join(body_sections)}
+</div>
 
 </body>
 </html>
