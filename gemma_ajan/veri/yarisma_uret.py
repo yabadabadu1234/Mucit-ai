@@ -32,6 +32,13 @@ def main():
         gorevler = [json.loads(s) for s in f if s.strip()]
     if limit:
         gorevler = gorevler[:limit]
+    kimlik_dosyasi = os.environ.get("YARISMA_IDS", "")
+    if kimlik_dosyasi:
+        with open(kimlik_dosyasi, encoding="utf-8") as f:
+            istenen = {s.strip() for s in f if s.strip()}
+        gorevler = [g for g in gorevler if g["instance_id"] in istenen]
+        if len(gorevler) != len(istenen):
+            raise RuntimeError(f"istenen {len(istenen)} kimlikten {len(gorevler)} tanesi veride var")
 
     dogrulanan, hatalar = [], []
     yol_dogrulanan = os.path.join(cikti, "verified.jsonl")

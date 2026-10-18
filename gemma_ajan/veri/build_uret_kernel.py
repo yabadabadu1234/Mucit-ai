@@ -72,10 +72,14 @@ def blob(path):
         return base64.b64encode(zlib.compress(f.read(), 9)).decode("ascii")
 
 
-def build(out_dir):
+def build(out_dir, kimlikler=None):
     os.makedirs(out_dir, exist_ok=True)
     files = "".join(f'    "{m}": "{blob(os.path.join(HERE, m))}",\n' for m in MODULES)
+    if kimlikler:
+        files += f'    "kimlikler.txt": "{base64.b64encode(zlib.compress(chr(10).join(kimlikler).encode(), 9)).decode("ascii")}",\n'
     script = PRELUDE.replace("__FILES__", files) + SON
+    if kimlikler:
+        script = script.replace('os.environ["YARISMA_OUT"]', 'os.environ["YARISMA_IDS"] = os.path.join(W, "kimlikler.txt")\nos.environ["YARISMA_OUT"]', 1)
     compile(script, "gemma4-verified-producer.py", "exec")
     yol = os.path.join(out_dir, "gemma4-verified-producer.py")
     with open(yol, "w", encoding="utf-8") as f:
@@ -102,4 +106,6 @@ def build(out_dir):
 
 if __name__ == "__main__":
     out = sys.argv[1] if len(sys.argv) > 1 else os.path.join(HERE, "uret_kernel")
-    print("yazıldı:", build(out))
+    kimlik_dosyasi = sys.argv[2] if len(sys.argv) > 2 else None
+    kimlikler = [s.strip() for s in open(kimlik_dosyasi, encoding="utf-8") if s.strip()] if kimlik_dosyasi else None
+    print("yazıldı:", build(out, kimlikler))
