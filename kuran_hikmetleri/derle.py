@@ -11,6 +11,7 @@ Bu betik:
 """
 
 import os
+import re
 import sys
 import time
 import json
@@ -168,6 +169,58 @@ def mevzu_yumagi(segments, agac_segmentler):
             f'{govde}</div>'
         )
     return f'<div class="ag-yatay">{"".join(sutunlar)}</div>'
+
+
+def _derinlik(x):
+    return 1 if not x.get("alt") else 1 + max(_derinlik(c) for c in x["alt"])
+
+
+def _cetvel_hucreleri(x, satir, son_satir, renk, cells):
+    """Düğümü cetvelde yerleştirir: sütunlar âyet numarası, satırlar mevzu düzeyi.
+    Alt mevzusu olan düğüm kendi satırına oturur; yaprak en alt satıra kadar uzanır."""
+    a, b = x["aralik"]
+    if x.get("alt"):
+        cells.append(
+            f'<div class="ag-hucre" style="grid-column:{a}/{b + 1}; grid-row:{satir};'
+            f' border-top:4px solid {renk};"><strong>{x["baslik"]}</strong>'
+            f'<div class="ag-meta">Âyet {a}{"-" + str(b) if a != b else ""}</div></div>'
+        )
+        for c in x["alt"]:
+            _cetvel_hucreleri(c, satir + 1, son_satir, renk, cells)
+    else:
+        cells.append(
+            f'<div class="ag-hucre ag-yaprak" style="grid-column:{a}/{b + 1}; grid-row:{satir}/{son_satir + 1};'
+            f' border-top:4px solid {renk};" title="{x["baslik"]}">'
+            f'<div class="ag-meta">Âyet {a}{"-" + str(b) if a != b else ""}</div>'
+            f'<strong>{x["baslik"]}</strong></div>'
+        )
+
+
+def mevzu_cetveli(segments, agac_segmentler):
+    """Sûreye mahsus cetvel: genel mevzular üst satırda yan yana, alt düzeyler altta; genişlik âyet sayısıyla orantılı.
+    Her âyet bir sütundur, bu yüzden bütün sûre tek bir ızgarada hizalanır. Âyet metni içermez."""
+    ilk = min(seg["start"] for seg in segments)
+    son = max(seg["end"] for seg in segments)
+    sutun_sayisi = son - ilk + 1
+    dugumler = []
+    for seg in segments:
+        anahtar = f"{seg['start']}-{seg['end']}"
+        alt = agac_segmentler.get(anahtar)
+        dugumler.append((seg, {"baslik": seg["title"], "aralik": [seg["start"], seg["end"]], "alt": alt} if alt else
+                         {"baslik": seg["title"], "aralik": [seg["start"], seg["end"]]}))
+    satir_sayisi = max(_derinlik(d) for _, d in dugumler)
+    cells = []
+    for seg, d in dugumler:
+        _cetvel_hucreleri(d, 1, satir_sayisi, seg["color"], cells)
+    # Izgara koordinatları sûrenin ilk âyetine göre kaydırılır
+    cells_html = "".join(cells)
+    if ilk != 1:
+        cells_html = re.sub(r'grid-column:(\d+)/(\d+)',
+                            lambda m: f"grid-column:{int(m.group(1)) - ilk + 1}/{int(m.group(2)) - ilk + 1}", cells_html)
+    return (
+        f'<div class="ag-cetvel" style="grid-template-columns: repeat({sutun_sayisi}, minmax(0, 1fr));'
+        f' grid-template-rows: repeat({satir_sayisi}, auto);">{cells_html}</div>'
+    )
 
 
 def detay_bolumu(segments, agac_segmentler, verse_dict):
@@ -380,7 +433,7 @@ def build_unified_html(config, surahs_data):
                             """)
                         detail_content = f'<div class="topics-container">{"".join(verse_blocks)}</div>'
                     else:
-                        detail_content = kesit_html + seg_table + '<h4 class="ag-baslik">Mevzuların yumağı</h4>' + mevzu_yumagi(segments, agac_segmentler) + '<h4 class="ag-baslik">Ayrıntılı görünüm: mevzular ve âyet metinleri</h4>' + ayrintili
+                        detail_content = kesit_html + seg_table + '<h4 class="ag-baslik">Mevzuların cetveli</h4>' + mevzu_cetveli(segments, agac_segmentler) + '<h4 class="ag-baslik">Ayrıntılı görünüm: mevzular ve âyet metinleri</h4>' + ayrintili
 
                     chart_section_html = f"""
                     <div class="surah-chart-section">
@@ -736,6 +789,23 @@ tr:nth-child(even) {{ background: #f8fafc; }}
   border-radius: 6px;
   padding: 6px 8px;
   font-size: 9pt;
+}}
+.ag-cetvel {{
+  display: grid;
+  gap: 3px;
+  width: 100%;
+}}
+.ag-hucre {{
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  padding: 4px 5px;
+  font-size: 7.5pt;
+  overflow: hidden;
+  min-width: 0;
+}}
+.ag-yaprak {{
+  font-size: 6.5pt;
 }}
 .ag-cok-sutun {{
   display: block;
