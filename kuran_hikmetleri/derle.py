@@ -224,15 +224,21 @@ def mevzu_cetveli(segments, agac_segmentler):
 
 
 def sure_sutun_grafigi(segments):
-    """Sûre taksimatı sütun grafiği: X ekseninde mevzular, Y ekseninde âyet sayıları (tertip/nüzul grafiğiyle aynı mantık)."""
+    """Sûre taksimatı sütun grafiği: X ekseninde mevzular (tam metin, yatay ve sarmalı), Y ekseninde âyet sayıları."""
+    import textwrap
     from html import escape
     n = len(segments)
-    bar_w, gap, left, top, plot_h = 44, 34, 110, 30, 220
-    bottom = 190
+    slot, bar_w, left, top, plot_h = 150, 60, 110, 30, 220
+    satir_kar = 16
+    etiketler = []
+    for seg in segments:
+        etiket = f"{seg['title']} ({seg['start']}-{seg['end']})"
+        etiketler.append(textwrap.wrap(etiket, 22) or [etiket])
+    en_cok_satir = max(len(e) for e in etiketler)
     maks = max(seg["count"] for seg in segments)
     olcek = plot_h / maks
-    genislik = max(700, left + n * (bar_w + gap) + 40)
-    yukseklik = top + plot_h + bottom
+    genislik = max(700, left + n * slot + 40)
+    yukseklik = top + plot_h + 20 + en_cok_satir * satir_kar + 20
     adim = max(1, round(maks / 4))
     parcalar = []
     for deger in range(0, maks + 1, adim):
@@ -240,18 +246,21 @@ def sure_sutun_grafigi(segments):
         parcalar.append(f'<line x1="{left}" y1="{y}" x2="{genislik - 20}" y2="{y}" stroke="#e2e8f0" stroke-dasharray="3,3"/>')
         parcalar.append(f'<text x="{left - 8}" y="{y + 4}" font-size="11" text-anchor="end" fill="#64748b">{deger}</text>')
     for i, seg in enumerate(segments):
-        x = left + i * (bar_w + gap)
+        x0 = left + i * slot
+        merkez = x0 + slot / 2
         h = seg["count"] * olcek
         y = top + plot_h - h
-        baslik = escape(seg["title"] if len(seg["title"]) <= 28 else seg["title"][:26] + "…")
         parcalar.append(
-            f'<rect x="{x}" y="{y}" width="{bar_w}" height="{h}" fill="{seg["color"]}" rx="3">'
+            f'<rect x="{merkez - bar_w / 2}" y="{y}" width="{bar_w}" height="{h}" fill="{seg["color"]}" rx="3">'
             f'<title>{escape(seg["title"])} ({seg["start"]}-{seg["end"]}, {seg["count"]} âyet)</title></rect>'
         )
-        parcalar.append(f'<text x="{x + bar_w / 2}" y="{y - 5}" font-size="11" text-anchor="middle" fill="#0f172a">{seg["count"]}</text>')
+        parcalar.append(f'<text x="{merkez}" y="{y - 5}" font-size="11" text-anchor="middle" fill="#0f172a">{seg["count"]}</text>')
+        satirlar = "".join(
+            f'<tspan x="{merkez}" dy="{0 if k == 0 else satir_kar}">{escape(t)}</tspan>'
+            for k, t in enumerate(etiketler[i])
+        )
         parcalar.append(
-            f'<g transform="translate({x + bar_w / 2}, {top + plot_h + 8}) rotate(-40)">'
-            f'<text x="0" y="0" font-size="11" text-anchor="end" fill="#334155">{baslik} ({seg["start"]}-{seg["end"]})</text></g>'
+            f'<text x="{merkez}" y="{top + plot_h + 22}" font-size="12" text-anchor="middle" fill="#334155">{satirlar}</text>'
         )
     parcalar.append(f'<text x="{left}" y="14" font-size="12" font-weight="700" fill="#1e3a8a">Y: Âyet sayısı</text>')
     parcalar.append(f'<text x="{genislik - 20}" y="14" font-size="12" font-weight="700" text-anchor="end" fill="#1e3a8a">X: Mevzular</text>')
