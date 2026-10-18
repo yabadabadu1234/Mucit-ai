@@ -227,7 +227,7 @@ def sure_sutun_grafigi(segments):
     """Sûre taksimatı sütun grafiği: X ekseninde mevzular, Y ekseninde âyet sayıları (tertip/nüzul grafiğiyle aynı mantık)."""
     from html import escape
     n = len(segments)
-    bar_w, gap, left, top, plot_h = 44, 34, 56, 30, 220
+    bar_w, gap, left, top, plot_h = 44, 34, 110, 30, 220
     bottom = 190
     maks = max(seg["count"] for seg in segments)
     olcek = plot_h / maks
@@ -250,8 +250,8 @@ def sure_sutun_grafigi(segments):
         )
         parcalar.append(f'<text x="{x + bar_w / 2}" y="{y - 5}" font-size="11" text-anchor="middle" fill="#0f172a">{seg["count"]}</text>')
         parcalar.append(
-            f'<g transform="translate({x + bar_w / 2}, {top + plot_h + 8}) rotate(-35)">'
-            f'<text x="0" y="0" font-size="11" fill="#334155">{baslik} ({seg["start"]}-{seg["end"]})</text></g>'
+            f'<g transform="translate({x + bar_w / 2}, {top + plot_h + 8}) rotate(-40)">'
+            f'<text x="0" y="0" font-size="11" text-anchor="end" fill="#334155">{baslik} ({seg["start"]}-{seg["end"]})</text></g>'
         )
     parcalar.append(f'<text x="{left}" y="14" font-size="12" font-weight="700" fill="#1e3a8a">Y: Âyet sayısı</text>')
     parcalar.append(f'<text x="{genislik - 20}" y="14" font-size="12" font-weight="700" text-anchor="end" fill="#1e3a8a">X: Mevzular</text>')
