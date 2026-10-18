@@ -99,6 +99,12 @@ def tekerlek_kisitlari(klasor):
     return "".join(f"{p}<={s}\n" for p, s in sorted(en_yeni.items()))
 
 
+def _bagimlilik_tutarli(py):
+    """pip check: kurulu paketlerin bağımlılıkları eksiksiz mi? Eksikse kurulum sayılmaz."""
+    rc, _ = _calistir([py, "-m", "pip", "check"])
+    return rc == 0
+
+
 def _venv_hazirla(dizin):
     rc, cikti = _calistir([PYTHON, "-m", "venv", dizin])
     if rc != 0:
@@ -152,7 +158,7 @@ def ortam_kur(gorev, zaman=900, profil="varsayilan"):
             rc, cikti = _calistir([py, "-m", "pip", "install", "-q", "--no-index",
                                    "--find-links", TEKERLEK_KLASORU, "-c", kisit,
                                    *test_deps, kurulum], zaman=zaman)
-            if rc == 0:
+            if rc == 0 and _bagimlilik_tutarli(py):
                 etiket = "cevrimdisi"
         if etiket is None:
             # PyPI kademesi: tekerlekte olmayan paketler (ör. typing-inspection) PyPI'den gelir.
@@ -161,8 +167,8 @@ def ortam_kur(gorev, zaman=900, profil="varsayilan"):
                 komut += ["--find-links", TEKERLEK_KLASORU]
             komut += ["-c", kisit, *test_deps]
             rc, cikti = _calistir(komut + [kurulum], zaman=zaman)
-            if rc != 0:
-                raise EnvHatasi(f"{gorev['instance_id']}: bağımlılıklar kurulamadı: {cikti[-400:]}")
+            if rc != 0 or not _bagimlilik_tutarli(py):
+                raise EnvHatasi(f"{gorev['instance_id']}: bağımlılıklar kurulamadı/tutarsız: {cikti[-400:]}")
             etiket = "pypi"
         os.makedirs(dizin, exist_ok=True)
         with open(meta_yol, "w", encoding="utf-8") as f:

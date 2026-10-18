@@ -59,6 +59,12 @@ def load_verified(path):
                 raise ValueError(f"{path}:{i} messages alanı eksik ya da asistan turu yok")
             if r.get("verified") is not True:
                 raise ValueError(f"{path}:{i} 'verified': true değil; yalnız gerçek test sonucuyla doğrulanmış yörünge kabul edilir")
+            if "FAIL_TO_PASS" in r:  # SWE görevi: mesafe test koşusundan gelir (swe_dogrula)
+                if not r.get("prompt") or not r.get("repo") or not r.get("patch"):
+                    raise ValueError(f"{path}:{i} SWE satırında prompt/repo/patch zorunlu")
+                rows.append({"msgs": msgs, "route": REPO_ROUTE.get(r["repo"], 3), "compiler_score": 1.0,
+                             "distance": 0.0, "prompt": r["prompt"], "gorev": r})
+                continue
             route, score, dist = validate_row(r, where=f"{path}:{i}")
             if not r.get("prompt") or not isinstance(r.get("kayit"), dict):
                 raise ValueError(f"{path}:{i} 'prompt' ve 'kayit' zorunlu (üretilen yanıtın mesafesi için)")
@@ -67,21 +73,55 @@ def load_verified(path):
     return rows
 
 
+REPO_ROUTE = {"fastapi/fastapi": 0, "Textualize/rich": 1, "psf/requests": 2, "encode/httpx": 3}
+SWE_TALIMAT = ("\n\nRespond with only a unified git diff (lines starting with 'diff --git', '--- a/', "
+               "'+++ b/', '@@') that fixes this issue in the repository source.")
+SWE_GEN_MAX_NEW = int(os.environ.get("SWE_GEN_MAX_NEW", "2048"))
+SWE_ZAMAN = int(os.environ.get("SWE_ZAMAN", "900"))
+
+
+def yamayi_cikar(metin):
+    """Modelin metninden unified diff'i çıkarır: ```diff bloğu ya da ilk 'diff --git'/'--- a/' satırından
+    sona kadar. Bulunamazsa boş dize (sessiz ikame yok: çağıran mesafe 1 yazar)."""
+    import re
+
+    blok = re.search(r"```(?:diff|patch)?\s*\n(.*?)```", metin, re.S)
+    if blok and ("--- a/" in blok.group(1) or "diff --git" in blok.group(1)):
+        return blok.group(1) if blok.group(1).endswith("\n") else blok.group(1) + "\n"
+    for satir_no, satir in enumerate(metin.splitlines()):
+        if satir.startswith("diff --git") or satir.startswith("--- a/"):
+            return "\n".join(metin.splitlines()[satir_no:]) + "\n"
+    return ""
+
+
 def generate_rows(model, tok, pool, start, k, torch):
     """K2: model kendi yanıtını üretir (açgözlü, zar yok). Mesafe program denetçisiyle ölçülür."""
     from mantik_veri import mesafe
+    from swe_dogrula import dogrula
 
     out = []
     model.eval()
     with torch.no_grad():
         for j in range(k):
             src = pool[(start + j) % len(pool)]
-            msgs = [{"role": "user", "content": src["prompt"]}]
+            swe = "gorev" in src
+            soru = src["prompt"]
+            if swe:
+                soru = soru + SWE_TALIMAT
+            msgs = [{"role": "user", "content": soru}]
             txt = tok.apply_chat_template(msgs, tokenize=False, add_generation_prompt=True)
             dev = "cuda:0" if torch.cuda.is_available() else "cpu"
             enc = tok(txt, add_special_tokens=False, return_tensors="pt").input_ids.to(dev)
-            gen = model.generate(enc, max_new_tokens=GEN_MAX_NEW, do_sample=False)
+            gen = model.generate(enc, max_new_tokens=SWE_GEN_MAX_NEW if swe else GEN_MAX_NEW, do_sample=False)
             text = tok.decode(gen[0, enc.shape[1]:], skip_special_tokens=True)
+            if swe:
+                yama = yamayi_cikar(text)
+                # Yama yoksa mesafe 1 (test koşulmaz); varsa gerçek test koşusu ölçer.
+                d = dogrula(src["gorev"], yama, None, SWE_ZAMAN, kapi=False)["mesafe"] if yama else 1.0
+                out.append({"msgs": msgs + [{"role": "assistant", "content": yama or text}], "route": src["route"],
+                            "compiler_score": 0.0, "distance": d, "prompt": src["prompt"], "gorev": src["gorev"]})
+                log(f"SWE {src['gorev']['instance_id']}: yama={'var' if yama else 'yok'} mesafe={d:.3f}")
+                continue
             d = mesafe(src["kayit"], text)
             out.append({"msgs": msgs + [{"role": "assistant", "content": text}], "route": src["route"],
                         "compiler_score": 0.0, "distance": d, "prompt": src["prompt"], "kayit": src["kayit"]})

@@ -115,7 +115,10 @@ def _kosum(gorev, yama, python, zaman, ad):
             return None
         f2p = json.loads(gorev["FAIL_TO_PASS"])
         p2p = json.loads(gorev["PASS_TO_PASS"])
-        return testleri_kos(hedef, f2p + p2p, python, zaman)
+        sonuc = testleri_kos(hedef, f2p + p2p, python, zaman)
+        if not sonuc:
+            raise EnvHatasi(f"{gorev['instance_id']}: {ad} yamasıyla hiç test sonucu alınamadı")
+        return sonuc
     finally:
         shutil.rmtree(hedef, ignore_errors=True)
 
@@ -208,7 +211,7 @@ def f2p_p2p_turet(gorev, python=None, zaman=600, etiket="elle"):
     return sonuc
 
 
-def dogrula(gorev, yama, python=None, zaman=600):
+def dogrula(gorev, yama, python=None, zaman=600, kapi=True):
     """Bir görev ve model yaması için ölçüm. gorev: SWE-bench satırı (dict).
 
     Önce altın kapı: altın yamada bozuk P2P testleri ölçümden çıkarılır (dislanan listesinde döner).
@@ -218,13 +221,17 @@ def dogrula(gorev, yama, python=None, zaman=600):
     if python is None:
         from yarisma_ortam import ortam_kur
 
-        python, etiket = ortam_kur(gorev, zaman)
+        # Görev türetilirken seçilen profil kullanılır (ör. 'pypi+starlette0'); aksi hâlde ortam farklı olur.
+        profil = gorev["ortam"].split("+", 1)[1] if "+" in gorev.get("ortam", "") else "varsayilan"
+        python, etiket = ortam_kur(gorev, zaman, profil)
     if "FAIL_TO_PASS" not in gorev:
         # Yarışma formatı: listeler yok; altın yamayla türetilir (türetme kapıyı zaten içerir).
         gorev = dict(gorev, **f2p_p2p_turet(gorev, python, zaman, etiket))
         dislanan = []
-    else:
+    elif kapi:
         dislanan = altin_kapi(gorev, python, zaman)
+    else:
+        dislanan = []  # türetme sırasında altın kapı zaten koştu (verified.jsonl)
     f2p = json.loads(gorev["FAIL_TO_PASS"])
     p2p = [t for t in json.loads(gorev["PASS_TO_PASS"]) if t not in set(dislanan)]
     sonuc = _kosum(gorev, yama, python, zaman, "model")
