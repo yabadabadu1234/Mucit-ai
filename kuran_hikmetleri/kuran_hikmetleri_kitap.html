@@ -12664,16 +12664,21 @@ function sureYukle(n) {
   var el = document.querySelector('.lazy-icerik[data-sure="' + n + '"]');
   if (el) icerikYukle(el);
 }
-if ('IntersectionObserver' in window) {
-  var gozlemci = new IntersectionObserver(function (girdiler) {
-    girdiler.forEach(function (g) {
-      if (g.isIntersecting) { icerikYukle(g.target); gozlemci.unobserve(g.target); }
-    });
-  }, { rootMargin: '0px' });
-  document.querySelectorAll('.lazy-icerik').forEach(function (el) { gozlemci.observe(el); });
-} else {
-  document.querySelectorAll('.lazy-icerik').forEach(icerikYukle);
+var bekleyenKaydirma = false;
+function gorunenleriYukle() {
+  bekleyenKaydirma = false;
+  var ust = -400, alt = window.innerHeight + 400;
+  document.querySelectorAll('.lazy-icerik:not([data-yuklendi])').forEach(function (el) {
+    var r = el.getBoundingClientRect();
+    if (r.bottom >= ust && r.top <= alt) icerikYukle(el);
+  });
 }
+function kaydirmaIsle() {
+  if (!bekleyenKaydirma) { bekleyenKaydirma = true; requestAnimationFrame(gorunenleriYukle); }
+}
+window.addEventListener('scroll', kaydirmaIsle, { passive: true });
+window.addEventListener('resize', kaydirmaIsle);
+gorunenleriYukle();
 </script>
 
 </body>
