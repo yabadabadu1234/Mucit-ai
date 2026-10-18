@@ -143,25 +143,9 @@ def test_dosyalari(test_yamasi):
     return dosyalar
 
 
-def f2p_p2p_turet(gorev, python=None, zaman=600, etiket="elle"):
-    """Yarışma görevleri F2P/P2P listesi içermez; pipeline tanımına göre türetilir:
-    F2P = test yaması uygulanmış temel ağaçta BAŞARISIZ olup altın yamayla GEÇEN testler;
-    P2P = her iki durumda da GEÇEN testler. Sonuç önbelleğe yazılır (her görev bir kez koşar)."""
-    yol = os.path.join(CACHE, f"turet_{gorev['instance_id']}.json")
-    if os.path.exists(yol):
-        with open(yol, encoding="utf-8") as f:
-            return json.load(f)
-    dosyalar = test_dosyalari(gorev["test_patch"])
-    if not dosyalar:
-        raise EnvHatasi(f"{gorev['instance_id']}: test yaması Python test dosyası içermiyor")
-    if python is None:
-        from yarisma_ortam import ortam_kur  # geç içe aktarma: yarisma_ortam bu modülü kullanır
-
-        python, etiket = ortam_kur(gorev, zaman)
-    # P2P tanımı "tüm test paketi": koşu, test yamasının dokunduğu kökün tamamıdır (ör. tests/).
-    kokler = sorted({yol.split("/")[0] for yol in dosyalar})
-    if len(kokler) != 1:
-        raise EnvHatasi(f"{gorev['instance_id']}: test yaması birden çok test kökü dokunuyor: {kokler}")
+def _turet_tek(gorev, python, zaman, etiket):
+    """Tek ortamda türetme. Dönüş: (f2p, p2p) listeleri; F2P boşsa None (sebep çağırana bırakılır)."""
+    kokler = sorted({yol.split("/")[0] for yol in test_dosyalari(gorev["test_patch"])})
     hedef = tempfile.mkdtemp(prefix="turet_")
     try:
         agaci_ac(gorev, hedef)
@@ -172,14 +156,52 @@ def f2p_p2p_turet(gorev, python=None, zaman=600, etiket="elle"):
             raise RuntimeError(f"{gorev['instance_id']}: altın yama uygulanamadı")
         altin = testleri_kos(hedef, kokler, python, zaman)
         if not altin:
-            raise EnvHatasi(f"{gorev['instance_id']}: altın yamayla hiç test sonucu alınamadı")
+            raise EnvHatasi(f"{gorev['instance_id']}: altın yamayla hiç test sonucu alınamadı ({etiket})")
     finally:
         shutil.rmtree(hedef, ignore_errors=True)
     f2p = sorted(t for t, s in altin.items() if s == "PASSED" and temel.get(t) != "PASSED")
     p2p = sorted(t for t, s in altin.items() if s == "PASSED" and temel.get(t) == "PASSED")
     if not f2p:
-        raise EnvHatasi(f"{gorev['instance_id']}: F2P boş (test yaması bir şey ayırt etmiyor)")
-    sonuc = {"FAIL_TO_PASS": json.dumps(f2p), "PASS_TO_PASS": json.dumps(p2p), "ortam": etiket}
+        return None
+    return f2p, p2p
+
+
+# Sırayla denenir; ilk F2P'si boş olmayan profil kullanılır. Profil etikete yazılır.
+TUR_PROFILLERI = ("varsayilan", "starlette0")
+
+
+def f2p_p2p_turet(gorev, python=None, zaman=600, etiket="elle"):
+    """Yarışma görevleri F2P/P2P listesi içermez; pipeline tanımına göre türetilir:
+    F2P = test yaması uygulanmış temel ağaçta BAŞARISIZ olup altın yamayla GEÇEN testler;
+    P2P = her iki durumda da GEÇEN testler (kökün tamamı). Sonuç önbelleğe yazılır."""
+    yol = os.path.join(CACHE, f"turet_{gorev['instance_id']}.json")
+    if os.path.exists(yol):
+        with open(yol, encoding="utf-8") as f:
+            return json.load(f)
+    if not test_dosyalari(gorev["test_patch"]):
+        raise EnvHatasi(f"{gorev['instance_id']}: test yaması Python test dosyası içermiyor")
+    kokler = sorted({yol_.split("/")[0] for yol_ in test_dosyalari(gorev["test_patch"])})
+    if len(kokler) != 1:
+        raise EnvHatasi(f"{gorev['instance_id']}: test yaması birden çok test kökü dokunuyor: {kokler}")
+    if python is not None:
+        sonuc = _turet_tek(gorev, python, zaman, etiket)
+        if sonuc is None:
+            raise EnvHatasi(f"{gorev['instance_id']}: F2P boş (test yaması bir şey ayırt etmiyor)")
+        f2p, p2p = sonuc
+        ortam_etiketi = etiket
+    else:
+        from yarisma_ortam import ortam_kur  # geç içe aktarma: yarisma_ortam bu modülü kullanır
+
+        for profil in TUR_PROFILLERI:
+            py, et = ortam_kur(gorev, zaman, profil)
+            sonuc = _turet_tek(gorev, py, zaman, et)
+            if sonuc is not None:
+                f2p, p2p = sonuc
+                ortam_etiketi = f"{et}+{profil}"
+                break
+        else:
+            raise EnvHatasi(f"{gorev['instance_id']}: F2P boş (tüm profiller: {', '.join(TUR_PROFILLERI)})")
+    sonuc = {"FAIL_TO_PASS": json.dumps(f2p), "PASS_TO_PASS": json.dumps(p2p), "ortam": ortam_etiketi}
     os.makedirs(CACHE, exist_ok=True)
     with open(yol, "w", encoding="utf-8") as f:
         json.dump(sonuc, f, ensure_ascii=False)
