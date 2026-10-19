@@ -181,7 +181,7 @@ class Doc:
         en = self.lang == "en"
         vals = ["Be\u015fir Kerem \u00dcst\u00fcnt\u00fcrk", "251201037", "13.10.2026"]
         p = self.d.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-        p.add_run().add_picture(os.path.join(os.path.dirname(__file__), "..", "assets", "cover_banner.png"), width=Cm(15.5))
+        p.add_run().add_picture(os.path.join(os.path.dirname(__file__), "..", "assets", "cover_seal.jpg"), width=Cm(5.5))
         for _ in range(3):
             self.d.add_paragraph()
         for i, (txt, sz, b) in enumerate(lines):
