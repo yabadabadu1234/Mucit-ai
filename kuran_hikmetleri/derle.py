@@ -421,6 +421,8 @@ def lugat_sayfasi(surahs_data):
         ayet_kelime.setdefault((sno, ayet), []).append(k)
     sure_adi = {s["sno"]: s for s in surahs_data}
     toplam = len(kayitlar)
+    kok_anlam = {x["kok"]: x["turkce"] for x in json.loads(
+        (BASE_DIR / "kaynak/lugat/lisan_kok_turkce.json").read_text(encoding="utf-8"))}
     bolumler = []
     for sno in sorted(sure_adi):
         s = sure_adi[sno]
@@ -440,13 +442,13 @@ def lugat_sayfasi(surahs_data):
                     f'<td class="ar">{escape(k["kelime"])}</td><td>{escape(k["kok"]) or "—"}</td>'
                     f'<td>{k["kok_gecisi"] or "—"}</td><td>{escape(k["lugat"]) or "—"}</td>'
                     f'<td>{escape(k["tur"])}</td><td>{k["bab"] or "—"}</td><td>{k["zaman"] or "—"}</td>'
-                    f'<td>{k["adet"]}</td></tr>'
+                    f'<td>{k["adet"]}</td><td>{escape(kok_anlam.get(k["kok"], "—"))}</td></tr>'
                     for k in kelimeler
                 )
                 mevzu_kutular.append(
                     f'<details class="ayet-d"><summary>Âyet {ayet} · {len(kelimeler)} yeni kelime</summary>'
                     f'<table><thead><tr><th>Kelime</th><th>Kök</th><th>Kök geçişi</th><th>Lugat</th>'
-                    f'<th>Tür</th><th>Kalıp</th><th>Zaman</th><th>Adet</th></tr></thead>'
+                    f'<th>Tür</th><th>Kalıp</th><th>Zaman</th><th>Adet</th><th>Kök anlamı (Lisân)</th></tr></thead>'
                     f'<tbody>{satirlar}</tbody></table></details>'
                 )
             if not mevzu_kutular:
@@ -485,6 +487,7 @@ def lugat_sayfasi(surahs_data):
 <main class="kap">
   <h1>Lugat · Kur'ân'da ilk geçen kelimeler</h1>
   <p>Toplam {toplam} kelime. Kelimeler sûre → mevzu → âyet sırasıyla, Kur'ân metnindeki ilk geçtikleri yere göre dizilmiştir. Bir seviyeyi açmak için başlığına tıklayın; "tümünü aç" düğmesi o seviyedeki bütün tabloları açar. "Açık gibi davran" işaretliyken bütün tablolar açık kalır (kopyalama için).</p>
+  <div class="not"><strong>Kök anlamı notu:</strong> "Kök anlamı (Lisân)" sütunundaki metinler, Lisânü'l-Arab'ın (OSINTAI/Arabic-Dictionaries deposu) ilgili maddelerinin <em>ilk bölümünün</em> Claude tarafından yapılmış Türkçe çevirisidir; doğrulanmamıştır, tamamı değildir. Belirsiz yerler "(?)" ile işaretlidir.</div>
   <div class="not"><strong>Lugat notu:</strong> Lugat sütunundaki Türkçe karşılıklar, <em>veri_harici/eyupipler/word-translations-tr.json</em> dosyasından alınmıştır; hazır bir sözlük olup karşılıklar tek tek doğrulanmamıştır. Karşılığı olmayanlar "—" ile işaretlidir.</div>
   <div class="ara-sayi" id="ara-sayi2"></div>
   {"".join(bolumler)}
