@@ -13,122 +13,122 @@ Bu fihrist bütün çalışmanın haritasıdır. Her sure, kendi dosyasında on 
 
 ## Sureler
 
-| Sıra | Nüzul sırası | Tertip (Mushaf) sırası | Sure | Arapça | Anlamı | Âyet | İniş | Dosya |
+| Sıra | Tertip (Mushaf) sırası | Nüzul sırası | Arapça | Sure | Anlamı | Âyet | İniş | Dosya |
 |---|---|---|---|---|---|---|---|---|
-| 1 | 1 | 96 | Alak | العلق | Kan Pıhtısı | 19 | Mekkî | [sureler/096-alak.md](sureler/096-alak.md) |
-| 2 | 2 | 68 | Kalem | القلم | Kalem | 52 | Mekkî | [sureler/068-kalem.md](sureler/068-kalem.md) |
-| 3 | 3 | 73 | Müzzemmil | المزمل | Bürünen | 20 | Mekkî | [sureler/073-muzzemmil.md](sureler/073-muzzemmil.md) |
-| 4 | 4 | 74 | Müddessir | المدثر | Bürünen | 56 | Mekkî | [sureler/074-muddessir.md](sureler/074-muddessir.md) |
-| 5 | 5 | 1 | Fâtiha | الفاتحة | Açılış | 7 | Mekkî | [sureler/001-fatiha.md](sureler/001-fatiha.md) |
-| 6 | 6 | 111 | Mesed | المسد | Lif / Ip | 5 | Mekkî | [sureler/111-mesed.md](sureler/111-mesed.md) |
-| 7 | 7 | 81 | Tekvîr | التكوير | Dürülme | 29 | Mekkî | [sureler/081-tekvir.md](sureler/081-tekvir.md) |
-| 8 | 8 | 87 | A'lâ | الأعلى | En Yüce | 19 | Mekkî | [sureler/087-ala.md](sureler/087-ala.md) |
-| 9 | 9 | 92 | Leyl | الليل | Gece | 21 | Mekkî | [sureler/092-leyl.md](sureler/092-leyl.md) |
-| 10 | 10 | 89 | Fecr | الفجر | Şafak | 30 | Mekkî | [sureler/089-fecr.md](sureler/089-fecr.md) |
-| 11 | 11 | 93 | Duhâ | الضحى | Kuşluk | 11 | Mekkî | [sureler/093-duha.md](sureler/093-duha.md) |
-| 12 | 12 | 94 | İnşirâh | الشرح | Açılma | 8 | Mekkî | [sureler/094-insirah.md](sureler/094-insirah.md) |
-| 13 | 13 | 103 | Asr | العصر | Zaman / İkindi | 3 | Mekkî | [sureler/103-asr.md](sureler/103-asr.md) |
-| 14 | 14 | 100 | Âdiyât | العاديات | Koşan Atlar | 11 | Mekkî | [sureler/100-adiyat.md](sureler/100-adiyat.md) |
-| 15 | 15 | 108 | Kevser | الكوثر | Çok Hayır | 3 | Mekkî | [sureler/108-kevser.md](sureler/108-kevser.md) |
-| 16 | 16 | 102 | Tekâsür | التكاثر | Çokluk Yarışı | 8 | Mekkî | [sureler/102-tekasur.md](sureler/102-tekasur.md) |
-| 17 | 17 | 107 | Mâ'ûn | الماعون | Yardım Eşyası | 7 | Mekkî | [sureler/107-maun.md](sureler/107-maun.md) |
-| 18 | 18 | 109 | Kâfirûn | الكافرون | Kâfirler | 6 | Mekkî | [sureler/109-kafirun.md](sureler/109-kafirun.md) |
-| 19 | 19 | 105 | Fîl | الفيل | Fil | 5 | Mekkî | [sureler/105-fil.md](sureler/105-fil.md) |
-| 20 | 20 | 113 | Felak | الفلق | Sabah / Yarılma | 5 | Mekkî | [sureler/113-felak.md](sureler/113-felak.md) |
-| 21 | 21 | 114 | Nâs | الناس | İnsanlar | 6 | Mekkî | [sureler/114-nas.md](sureler/114-nas.md) |
-| 22 | 22 | 112 | İhlâs | الإخلاص | Samimiyet | 4 | Mekkî | [sureler/112-ihlas.md](sureler/112-ihlas.md) |
-| 23 | 23 | 53 | Necm | النجم | Yıldız | 62 | Mekkî | [sureler/053-necm.md](sureler/053-necm.md) |
-| 24 | 24 | 80 | Abese | عبس | Yüzünü Ekşitti | 42 | Mekkî | [sureler/080-abese.md](sureler/080-abese.md) |
-| 25 | 25 | 97 | Kadr | القدر | Kadir | 5 | Mekkî | [sureler/097-kadr.md](sureler/097-kadr.md) |
-| 26 | 26 | 91 | Şems | الشمس | Güneş | 15 | Mekkî | [sureler/091-sems.md](sureler/091-sems.md) |
-| 27 | 27 | 85 | Bürûc | البروج | Burçlar | 22 | Mekkî | [sureler/085-buruc.md](sureler/085-buruc.md) |
-| 28 | 28 | 95 | Tîn | التين | İncir | 8 | Mekkî | [sureler/095-tin.md](sureler/095-tin.md) |
-| 29 | 29 | 106 | Kureyş | قريش | Kureyş | 4 | Mekkî | [sureler/106-kureys.md](sureler/106-kureys.md) |
-| 30 | 30 | 101 | Kâria | القارعة | Çarpan | 11 | Mekkî | [sureler/101-karia.md](sureler/101-karia.md) |
-| 31 | 31 | 75 | Kıyâme | القيامة | Kıyamet | 40 | Mekkî | [sureler/075-kiyame.md](sureler/075-kiyame.md) |
-| 32 | 32 | 104 | Hümeze | الهمزة | Kötü Söz Söyleyen | 9 | Mekkî | [sureler/104-humeze.md](sureler/104-humeze.md) |
-| 33 | 33 | 77 | Mürselât | المرسلات | Gönderilenler | 50 | Mekkî | [sureler/077-murselat.md](sureler/077-murselat.md) |
-| 34 | 34 | 50 | Kâf | ق | Harf-i mukattaa | 45 | Mekkî | [sureler/050-kaf.md](sureler/050-kaf.md) |
-| 35 | 35 | 90 | Beled | البلد | Şehir | 20 | Mekkî | [sureler/090-beled.md](sureler/090-beled.md) |
-| 36 | 36 | 86 | Târık | الطارق | Gece Gelen | 17 | Mekkî | [sureler/086-tarik.md](sureler/086-tarik.md) |
-| 37 | 37 | 54 | Kamer | القمر | Ay | 55 | Mekkî | [sureler/054-kamer.md](sureler/054-kamer.md) |
-| 38 | 38 | 38 | Sâd | ص | Harf-i mukattaa | 88 | Mekkî | [sureler/038-sad.md](sureler/038-sad.md) |
-| 39 | 39 | 7 | A'râf | الأعراف | Yüksek Yerler | 206 | Mekkî | [sureler/007-araf.md](sureler/007-araf.md) |
-| 40 | 40 | 72 | Cin | الجن | Cinler | 28 | Mekkî | [sureler/072-cin.md](sureler/072-cin.md) |
-| 41 | 41 | 36 | Yâ-Sîn | يس | Harf-i mukattaa | 83 | Mekkî | [sureler/036-ya-sin.md](sureler/036-ya-sin.md) |
-| 42 | 42 | 25 | Furkân | الفرقان | Ayırıcı | 77 | Mekkî | [sureler/025-furkan.md](sureler/025-furkan.md) |
-| 43 | 43 | 35 | Fâtır | فاطر | Yaratıcı | 45 | Mekkî | [sureler/035-fatir.md](sureler/035-fatir.md) |
-| 44 | 44 | 19 | Meryem | مريم | Meryem Hatun | 98 | Mekkî | [sureler/019-meryem.md](sureler/019-meryem.md) |
-| 45 | 45 | 20 | Tâhâ | طه | Harf-i mukattaa | 135 | Mekkî | [sureler/020-taha.md](sureler/020-taha.md) |
-| 46 | 46 | 56 | Vâkıa | الواقعة | Vuku Bulacak Olay | 96 | Mekkî | [sureler/056-vakia.md](sureler/056-vakia.md) |
-| 47 | 47 | 26 | Şu'arâ | الشعراء | Şairler | 227 | Mekkî | [sureler/026-suara.md](sureler/026-suara.md) |
-| 48 | 48 | 27 | Neml | النمل | Karınca | 93 | Mekkî | [sureler/027-neml.md](sureler/027-neml.md) |
-| 49 | 49 | 28 | Kasas | القصص | Kıssalar | 88 | Mekkî | [sureler/028-kasas.md](sureler/028-kasas.md) |
-| 50 | 50 | 17 | İsrâ | الإسراء | Gece Yürüyüşü | 111 | Mekkî | [sureler/017-isra.md](sureler/017-isra.md) |
-| 51 | 51 | 10 | Yûnus | يونس | Yunus Peygamber | 109 | Mekkî | [sureler/010-yunus.md](sureler/010-yunus.md) |
-| 52 | 52 | 11 | Hûd | هود | Hûd Peygamber | 123 | Mekkî | [sureler/011-hud.md](sureler/011-hud.md) |
-| 53 | 53 | 12 | Yûsuf | يوسف | Yusuf Peygamber | 111 | Mekkî | [sureler/012-yusuf.md](sureler/012-yusuf.md) |
-| 54 | 54 | 15 | Hicr | الحجر | Taşlık Vadi | 99 | Mekkî | [sureler/015-hicr.md](sureler/015-hicr.md) |
-| 55 | 55 | 6 | En'âm | الأنعام | Hayvanlar, Davarlar | 165 | Mekkî | [sureler/006-enam.md](sureler/006-enam.md) |
-| 56 | 56 | 37 | Sâffât | الصافات | Saf Tutanlar | 182 | Mekkî | [sureler/037-saffat.md](sureler/037-saffat.md) |
-| 57 | 57 | 31 | Lokmân | لقمان | Lokmân Hakîm | 34 | Mekkî | [sureler/031-lokman.md](sureler/031-lokman.md) |
-| 58 | 58 | 34 | Sebe' | سبإ | Sebe' (Yemen'de bir kavim/ belde) | 54 | Mekkî | [sureler/034-sebe.md](sureler/034-sebe.md) |
-| 59 | 59 | 39 | Zümer | الزمر | Gruplar | 75 | Mekkî | [sureler/039-zumer.md](sureler/039-zumer.md) |
-| 60 | 60 | 40 | Mü'min | غافر | İman Eden / Bağışlayıcı | 85 | Mekkî | [sureler/040-mumin.md](sureler/040-mumin.md) |
-| 61 | 61 | 41 | Fussilet | فصلت | Ayrıntılandırılmış | 54 | Mekkî | [sureler/041-fussilet.md](sureler/041-fussilet.md) |
-| 62 | 62 | 42 | Şûrâ | الشورى | İstişare | 53 | Mekkî | [sureler/042-sura.md](sureler/042-sura.md) |
-| 63 | 63 | 43 | Zuhruf | الزخرف | Altın Süs | 89 | Mekkî | [sureler/043-zuhruf.md](sureler/043-zuhruf.md) |
-| 64 | 64 | 44 | Duhân | الدخان | Duman | 59 | Mekkî | [sureler/044-duhan.md](sureler/044-duhan.md) |
-| 65 | 65 | 45 | Câsiye | الجاثية | Diz Çökenler | 37 | Mekkî | [sureler/045-casiye.md](sureler/045-casiye.md) |
-| 66 | 66 | 46 | Ahkâf | الأحقاف | Kum Tepeleri | 35 | Mekkî | [sureler/046-ahkaf.md](sureler/046-ahkaf.md) |
-| 67 | 67 | 51 | Zâriyât | الذاريات | Savuran Rüzgârlar | 60 | Mekkî | [sureler/051-zariyat.md](sureler/051-zariyat.md) |
-| 68 | 68 | 88 | Gâşiye | الغاشية | Kaplayan | 26 | Mekkî | [sureler/088-gasiye.md](sureler/088-gasiye.md) |
-| 69 | 69 | 18 | Kehf | الكهف | Mağara | 110 | Mekkî | [sureler/018-kehf.md](sureler/018-kehf.md) |
-| 70 | 70 | 16 | Nahl | النحل | Bal Arısı | 128 | Mekkî | [sureler/016-nahl.md](sureler/016-nahl.md) |
-| 71 | 71 | 71 | Nûh | نوح | Nûh Peygamber | 28 | Mekkî | [sureler/071-nuh.md](sureler/071-nuh.md) |
-| 72 | 72 | 14 | İbrâhîm | إبراهيم | İbrahim Peygamber | 52 | Mekkî | [sureler/014-ibrahim.md](sureler/014-ibrahim.md) |
-| 73 | 73 | 21 | Enbiyâ | الأنبياء | Peygamberler | 112 | Mekkî | [sureler/021-enbiya.md](sureler/021-enbiya.md) |
-| 74 | 74 | 23 | Mü'minûn | المؤمنون | Müminler | 118 | Mekkî | [sureler/023-muminun.md](sureler/023-muminun.md) |
-| 75 | 75 | 32 | Secde | السجدة | Secde | 30 | Mekkî | [sureler/032-secde.md](sureler/032-secde.md) |
-| 76 | 76 | 52 | Tûr | الطور | Dağ | 49 | Mekkî | [sureler/052-tur.md](sureler/052-tur.md) |
-| 77 | 77 | 67 | Mülk | الملك | Mülk, Egemenlik | 30 | Mekkî | [sureler/067-mulk.md](sureler/067-mulk.md) |
-| 78 | 78 | 69 | Hâkka | الحاقة | Gerçekleşen | 52 | Mekkî | [sureler/069-hakka.md](sureler/069-hakka.md) |
-| 79 | 79 | 70 | Meâric | المعارج | Yükselme Dereceleri | 44 | Mekkî | [sureler/070-mearic.md](sureler/070-mearic.md) |
-| 80 | 80 | 78 | Nebe' | النبأ | Büyük Haber | 40 | Mekkî | [sureler/078-nebe.md](sureler/078-nebe.md) |
-| 81 | 81 | 79 | Nâziât | النازعات | Çekenler | 46 | Mekkî | [sureler/079-naziat.md](sureler/079-naziat.md) |
-| 82 | 82 | 82 | İnfitâr | الانفطار | Yarılma | 19 | Mekkî | [sureler/082-infitar.md](sureler/082-infitar.md) |
-| 83 | 83 | 84 | İnşikâk | الانشقاق | Yarılma | 25 | Mekkî | [sureler/084-insikak.md](sureler/084-insikak.md) |
-| 84 | 84 | 30 | Rûm | الروم | Rumlar (Bizans) | 60 | Mekkî | [sureler/030-rum.md](sureler/030-rum.md) |
-| 85 | 85 | 29 | Ankebût | العنكبوت | Örümcek | 69 | Mekkî | [sureler/029-ankebut.md](sureler/029-ankebut.md) |
-| 86 | 86 | 83 | Mutaffifîn | المطففين | Ölçüde Hile Edenler | 36 | Mekkî | [sureler/083-mutaffifin.md](sureler/083-mutaffifin.md) |
-| 87 | 87 | 2 | Bakara | البقرة | İnek / Sığır | 286 | Medenî | [sureler/002-bakara.md](sureler/002-bakara.md) |
-| 88 | 88 | 8 | Enfâl | الأنفال | Ganimetler | 75 | Medenî | [sureler/008-enfal.md](sureler/008-enfal.md) |
-| 89 | 89 | 3 | Âl-i İmrân | آل عمران | İmrân Ailesi | 200 | Medenî | [sureler/003-al-i-imran.md](sureler/003-al-i-imran.md) |
-| 90 | 90 | 33 | Ahzâb | الأحزاب | Topluluklar | 73 | Medenî | [sureler/033-ahzab.md](sureler/033-ahzab.md) |
-| 91 | 91 | 60 | Mümtehine | الممتحنة | İmtihan Edilen Kadın | 13 | Medenî | [sureler/060-mumtehine.md](sureler/060-mumtehine.md) |
-| 92 | 92 | 4 | Nisâ | النساء | Kadınlar | 176 | Medenî | [sureler/004-nisa.md](sureler/004-nisa.md) |
-| 93 | 93 | 99 | Zilzâl | الزلزلة | Sarsıntı | 8 | Medenî | [sureler/099-zilzal.md](sureler/099-zilzal.md) |
-| 94 | 94 | 57 | Hadîd | الحديد | Demir | 29 | Medenî | [sureler/057-hadid.md](sureler/057-hadid.md) |
-| 95 | 95 | 47 | Muhammed | محمد | Hz. Muhammed | 38 | Medenî | [sureler/047-muhammed.md](sureler/047-muhammed.md) |
-| 96 | 96 | 13 | Ra'd | الرعد | Gök Gürültüsü | 43 | Medenî | [sureler/013-rad.md](sureler/013-rad.md) |
-| 97 | 97 | 55 | Rahmân | الرحمن | Rahman | 78 | Medenî | [sureler/055-rahman.md](sureler/055-rahman.md) |
-| 98 | 98 | 76 | İnsân | الإنسان | İnsan | 31 | Medenî | [sureler/076-insan.md](sureler/076-insan.md) |
-| 99 | 99 | 65 | Talâk | الطلاق | Boşama | 12 | Medenî | [sureler/065-talak.md](sureler/065-talak.md) |
-| 100 | 100 | 98 | Beyyine | البينة | Apaçık Delil | 8 | Medenî | [sureler/098-beyyine.md](sureler/098-beyyine.md) |
-| 101 | 101 | 59 | Haşr | الحشر | Toplama / Sürme | 24 | Medenî | [sureler/059-hasr.md](sureler/059-hasr.md) |
-| 102 | 102 | 24 | Nûr | النور | Işık | 64 | Medenî | [sureler/024-nur.md](sureler/024-nur.md) |
-| 103 | 103 | 22 | Hac | الحج | Hac İbadeti | 78 | Medenî | [sureler/022-hac.md](sureler/022-hac.md) |
-| 104 | 104 | 63 | Münâfikûn | المنافقون | Münafıklar | 11 | Medenî | [sureler/063-munafikun.md](sureler/063-munafikun.md) |
-| 105 | 105 | 58 | Mücâdele | المجادلة | Tartışma | 22 | Medenî | [sureler/058-mucadele.md](sureler/058-mucadele.md) |
-| 106 | 106 | 49 | Hucurât | الحجرات | Odalar | 18 | Medenî | [sureler/049-hucurat.md](sureler/049-hucurat.md) |
-| 107 | 107 | 66 | Tahrîm | التحريم | Haram Kılma | 12 | Medenî | [sureler/066-tahrim.md](sureler/066-tahrim.md) |
-| 108 | 108 | 64 | Teğâbun | التغابن | Aldanış | 18 | Medenî | [sureler/064-tegabun.md](sureler/064-tegabun.md) |
-| 109 | 109 | 61 | Saff | الصف | Saf | 14 | Medenî | [sureler/061-saff.md](sureler/061-saff.md) |
-| 110 | 110 | 62 | Cum'a | الجمعة | Cuma | 11 | Medenî | [sureler/062-cuma.md](sureler/062-cuma.md) |
-| 111 | 111 | 48 | Fetih | الفتح | Açık Zafer | 29 | Medenî | [sureler/048-fetih.md](sureler/048-fetih.md) |
-| 112 | 112 | 5 | Mâide | المائدة | Sofra | 120 | Medenî | [sureler/005-maide.md](sureler/005-maide.md) |
-| 113 | 113 | 9 | Tevbe | التوبة | Dönüş, Pişmanlık | 129 | Medenî | [sureler/009-tevbe.md](sureler/009-tevbe.md) |
-| 114 | 114 | 110 | Nasr | النصر | Yardım | 3 | Medenî | [sureler/110-nasr.md](sureler/110-nasr.md) |
+| 1 | 96 | 1 | الْعَلَقِ | Alak | Kan Pıhtısı | 19 | Mekkî | [sureler/096-alak.md](sureler/096-alak.md) |
+| 2 | 68 | 2 | الْقَلَمِ | Kalem | Kalem | 52 | Mekkî | [sureler/068-kalem.md](sureler/068-kalem.md) |
+| 3 | 73 | 3 | الْمُزَّمِّلِ | Müzzemmil | Bürünen | 20 | Mekkî | [sureler/073-muzzemmil.md](sureler/073-muzzemmil.md) |
+| 4 | 74 | 4 | الْمُدَّثِّرِ | Müddessir | Bürünen | 56 | Mekkî | [sureler/074-muddessir.md](sureler/074-muddessir.md) |
+| 5 | 1 | 5 | الْفَاتِحَةِ | Fâtiha | Açılış | 7 | Mekkî | [sureler/001-fatiha.md](sureler/001-fatiha.md) |
+| 6 | 111 | 6 | الْمَسَدِ | Mesed | Lif / Ip | 5 | Mekkî | [sureler/111-mesed.md](sureler/111-mesed.md) |
+| 7 | 81 | 7 | التَّكْو۪يرِ | Tekvîr | Dürülme | 29 | Mekkî | [sureler/081-tekvir.md](sureler/081-tekvir.md) |
+| 8 | 87 | 8 | الْاَعْلٰى | A'lâ | En Yüce | 19 | Mekkî | [sureler/087-ala.md](sureler/087-ala.md) |
+| 9 | 92 | 9 | الَّيْلِ | Leyl | Gece | 21 | Mekkî | [sureler/092-leyl.md](sureler/092-leyl.md) |
+| 10 | 89 | 10 | الْفَجْرِ | Fecr | Şafak | 30 | Mekkî | [sureler/089-fecr.md](sureler/089-fecr.md) |
+| 11 | 93 | 11 | الضُّحٰى | Duhâ | Kuşluk | 11 | Mekkî | [sureler/093-duha.md](sureler/093-duha.md) |
+| 12 | 94 | 12 | الْاِنْشِرَاحِ | İnşirâh | Açılma | 8 | Mekkî | [sureler/094-insirah.md](sureler/094-insirah.md) |
+| 13 | 103 | 13 | الْعَصْرِ | Asr | Zaman / İkindi | 3 | Mekkî | [sureler/103-asr.md](sureler/103-asr.md) |
+| 14 | 100 | 14 | الْعَادِيَاتِ | Âdiyât | Koşan Atlar | 11 | Mekkî | [sureler/100-adiyat.md](sureler/100-adiyat.md) |
+| 15 | 108 | 15 | الْكَوْثَرِ | Kevser | Çok Hayır | 3 | Mekkî | [sureler/108-kevser.md](sureler/108-kevser.md) |
+| 16 | 102 | 16 | التَّكَاثُرِ | Tekâsür | Çokluk Yarışı | 8 | Mekkî | [sureler/102-tekasur.md](sureler/102-tekasur.md) |
+| 17 | 107 | 17 | الْمَاعُونِ | Mâ'ûn | Yardım Eşyası | 7 | Mekkî | [sureler/107-maun.md](sureler/107-maun.md) |
+| 18 | 109 | 18 | الْكَافِرُونَ | Kâfirûn | Kâfirler | 6 | Mekkî | [sureler/109-kafirun.md](sureler/109-kafirun.md) |
+| 19 | 105 | 19 | الْف۪يلِ | Fîl | Fil | 5 | Mekkî | [sureler/105-fil.md](sureler/105-fil.md) |
+| 20 | 113 | 20 | الْفَلَقِ | Felak | Sabah / Yarılma | 5 | Mekkî | [sureler/113-felak.md](sureler/113-felak.md) |
+| 21 | 114 | 21 | النَّاسِ | Nâs | İnsanlar | 6 | Mekkî | [sureler/114-nas.md](sureler/114-nas.md) |
+| 22 | 112 | 22 | الْاِخْلَاصِ | İhlâs | Samimiyet | 4 | Mekkî | [sureler/112-ihlas.md](sureler/112-ihlas.md) |
+| 23 | 53 | 23 | النَّجْمِ | Necm | Yıldız | 62 | Mekkî | [sureler/053-necm.md](sureler/053-necm.md) |
+| 24 | 80 | 24 | عَبَسَ | Abese | Yüzünü Ekşitti | 42 | Mekkî | [sureler/080-abese.md](sureler/080-abese.md) |
+| 25 | 97 | 25 | الْقَدْرِ | Kadr | Kadir | 5 | Mekkî | [sureler/097-kadr.md](sureler/097-kadr.md) |
+| 26 | 91 | 26 | الشَّمْسِ | Şems | Güneş | 15 | Mekkî | [sureler/091-sems.md](sureler/091-sems.md) |
+| 27 | 85 | 27 | الْبُرُوجِ | Bürûc | Burçlar | 22 | Mekkî | [sureler/085-buruc.md](sureler/085-buruc.md) |
+| 28 | 95 | 28 | التّ۪ينِ | Tîn | İncir | 8 | Mekkî | [sureler/095-tin.md](sureler/095-tin.md) |
+| 29 | 106 | 29 | قُرَيْشٍ | Kureyş | Kureyş | 4 | Mekkî | [sureler/106-kureys.md](sureler/106-kureys.md) |
+| 30 | 101 | 30 | الْقَارِعَةِ | Kâria | Çarpan | 11 | Mekkî | [sureler/101-karia.md](sureler/101-karia.md) |
+| 31 | 75 | 31 | الْقِيٰمَةِ | Kıyâme | Kıyamet | 40 | Mekkî | [sureler/075-kiyame.md](sureler/075-kiyame.md) |
+| 32 | 104 | 32 | الْهُمَزَةِ | Hümeze | Kötü Söz Söyleyen | 9 | Mekkî | [sureler/104-humeze.md](sureler/104-humeze.md) |
+| 33 | 77 | 33 | الْمُرْسَلَاتِ | Mürselât | Gönderilenler | 50 | Mekkî | [sureler/077-murselat.md](sureler/077-murselat.md) |
+| 34 | 50 | 34 | قۤ | Kâf | Harf-i mukattaa | 45 | Mekkî | [sureler/050-kaf.md](sureler/050-kaf.md) |
+| 35 | 90 | 35 | الْبَلَدِ | Beled | Şehir | 20 | Mekkî | [sureler/090-beled.md](sureler/090-beled.md) |
+| 36 | 86 | 36 | الطَّارِقِ | Târık | Gece Gelen | 17 | Mekkî | [sureler/086-tarik.md](sureler/086-tarik.md) |
+| 37 | 54 | 37 | الْقَمَرِ | Kamer | Ay | 55 | Mekkî | [sureler/054-kamer.md](sureler/054-kamer.md) |
+| 38 | 38 | 38 | صۤ | Sâd | Harf-i mukattaa | 88 | Mekkî | [sureler/038-sad.md](sureler/038-sad.md) |
+| 39 | 7 | 39 | الْاَعْرَافِ | A'râf | Yüksek Yerler | 206 | Mekkî | [sureler/007-araf.md](sureler/007-araf.md) |
+| 40 | 72 | 40 | الْجِنِّ | Cin | Cinler | 28 | Mekkî | [sureler/072-cin.md](sureler/072-cin.md) |
+| 41 | 36 | 41 | يٰسۤ | Yâ-Sîn | Harf-i mukattaa | 83 | Mekkî | [sureler/036-ya-sin.md](sureler/036-ya-sin.md) |
+| 42 | 25 | 42 | الْفُرْقَانِ | Furkân | Ayırıcı | 77 | Mekkî | [sureler/025-furkan.md](sureler/025-furkan.md) |
+| 43 | 35 | 43 | فَاطِرٍ | Fâtır | Yaratıcı | 45 | Mekkî | [sureler/035-fatir.md](sureler/035-fatir.md) |
+| 44 | 19 | 44 | مَرْيَمَ | Meryem | Meryem Hatun | 98 | Mekkî | [sureler/019-meryem.md](sureler/019-meryem.md) |
+| 45 | 20 | 45 | طٰهٰ | Tâhâ | Harf-i mukattaa | 135 | Mekkî | [sureler/020-taha.md](sureler/020-taha.md) |
+| 46 | 56 | 46 | الْوَاقِعَةِ | Vâkıa | Vuku Bulacak Olay | 96 | Mekkî | [sureler/056-vakia.md](sureler/056-vakia.md) |
+| 47 | 26 | 47 | الشُّعَرَاءِ | Şu'arâ | Şairler | 227 | Mekkî | [sureler/026-suara.md](sureler/026-suara.md) |
+| 48 | 27 | 48 | النَّمْلِ | Neml | Karınca | 93 | Mekkî | [sureler/027-neml.md](sureler/027-neml.md) |
+| 49 | 28 | 49 | الْقَصَصِ | Kasas | Kıssalar | 88 | Mekkî | [sureler/028-kasas.md](sureler/028-kasas.md) |
+| 50 | 17 | 50 | الْاِسْرَاۤءِ | İsrâ | Gece Yürüyüşü | 111 | Mekkî | [sureler/017-isra.md](sureler/017-isra.md) |
+| 51 | 10 | 51 | يُونُسَ | Yûnus | Yunus Peygamber | 109 | Mekkî | [sureler/010-yunus.md](sureler/010-yunus.md) |
+| 52 | 11 | 52 | هُودٍ | Hûd | Hûd Peygamber | 123 | Mekkî | [sureler/011-hud.md](sureler/011-hud.md) |
+| 53 | 12 | 53 | يُوسُفَ | Yûsuf | Yusuf Peygamber | 111 | Mekkî | [sureler/012-yusuf.md](sureler/012-yusuf.md) |
+| 54 | 15 | 54 | الْحِجْرِ | Hicr | Taşlık Vadi | 99 | Mekkî | [sureler/015-hicr.md](sureler/015-hicr.md) |
+| 55 | 6 | 55 | الْاَنْعَامِ | En'âm | Hayvanlar, Davarlar | 165 | Mekkî | [sureler/006-enam.md](sureler/006-enam.md) |
+| 56 | 37 | 56 | الصَّاۤفَّاتِ | Sâffât | Saf Tutanlar | 182 | Mekkî | [sureler/037-saffat.md](sureler/037-saffat.md) |
+| 57 | 31 | 57 | لُقْمٰانَ | Lokmân | Lokmân Hakîm | 34 | Mekkî | [sureler/031-lokman.md](sureler/031-lokman.md) |
+| 58 | 34 | 58 | سَبَأٍ | Sebe' | Sebe' (Yemen'de bir kavim/ belde) | 54 | Mekkî | [sureler/034-sebe.md](sureler/034-sebe.md) |
+| 59 | 39 | 59 | الزُّمَرِ | Zümer | Gruplar | 75 | Mekkî | [sureler/039-zumer.md](sureler/039-zumer.md) |
+| 60 | 40 | 60 | الْمُؤْمِنِ | Mü'min | İman Eden / Bağışlayıcı | 85 | Mekkî | [sureler/040-mumin.md](sureler/040-mumin.md) |
+| 61 | 41 | 61 | فُصِّلَتْ | Fussilet | Ayrıntılandırılmış | 54 | Mekkî | [sureler/041-fussilet.md](sureler/041-fussilet.md) |
+| 62 | 42 | 62 | الشُّورٰى | Şûrâ | İstişare | 53 | Mekkî | [sureler/042-sura.md](sureler/042-sura.md) |
+| 63 | 43 | 63 | الزُّخْرُفِ | Zuhruf | Altın Süs | 89 | Mekkî | [sureler/043-zuhruf.md](sureler/043-zuhruf.md) |
+| 64 | 44 | 64 | الدُّخَانِ | Duhân | Duman | 59 | Mekkî | [sureler/044-duhan.md](sureler/044-duhan.md) |
+| 65 | 45 | 65 | الْجَاثِيَةِ | Câsiye | Diz Çökenler | 37 | Mekkî | [sureler/045-casiye.md](sureler/045-casiye.md) |
+| 66 | 46 | 66 | الْاَحْقَافِ | Ahkâf | Kum Tepeleri | 35 | Mekkî | [sureler/046-ahkaf.md](sureler/046-ahkaf.md) |
+| 67 | 51 | 67 | الذَّارِيَاتِ | Zâriyât | Savuran Rüzgârlar | 60 | Mekkî | [sureler/051-zariyat.md](sureler/051-zariyat.md) |
+| 68 | 88 | 68 | الْغَاشِيَةِ | Gâşiye | Kaplayan | 26 | Mekkî | [sureler/088-gasiye.md](sureler/088-gasiye.md) |
+| 69 | 18 | 69 | الْكَهْفِ | Kehf | Mağara | 110 | Mekkî | [sureler/018-kehf.md](sureler/018-kehf.md) |
+| 70 | 16 | 70 | النَّحْلِ | Nahl | Bal Arısı | 128 | Mekkî | [sureler/016-nahl.md](sureler/016-nahl.md) |
+| 71 | 71 | 71 | نُوحٍ | Nûh | Nûh Peygamber | 28 | Mekkî | [sureler/071-nuh.md](sureler/071-nuh.md) |
+| 72 | 14 | 72 | اِبْرٰه۪يمَ | İbrâhîm | İbrahim Peygamber | 52 | Mekkî | [sureler/014-ibrahim.md](sureler/014-ibrahim.md) |
+| 73 | 21 | 73 | الْاَنْبِيَاءِ | Enbiyâ | Peygamberler | 112 | Mekkî | [sureler/021-enbiya.md](sureler/021-enbiya.md) |
+| 74 | 23 | 74 | الْمُؤْمِنُونَ | Mü'minûn | Müminler | 118 | Mekkî | [sureler/023-muminun.md](sureler/023-muminun.md) |
+| 75 | 32 | 75 | السَّجْدَةِ | Secde | Secde | 30 | Mekkî | [sureler/032-secde.md](sureler/032-secde.md) |
+| 76 | 52 | 76 | الطُّورِ | Tûr | Dağ | 49 | Mekkî | [sureler/052-tur.md](sureler/052-tur.md) |
+| 77 | 67 | 77 | الْمُلْكِ | Mülk | Mülk, Egemenlik | 30 | Mekkî | [sureler/067-mulk.md](sureler/067-mulk.md) |
+| 78 | 69 | 78 | الْحَاقَّةِ | Hâkka | Gerçekleşen | 52 | Mekkî | [sureler/069-hakka.md](sureler/069-hakka.md) |
+| 79 | 70 | 79 | الْمَعَارِجِ | Meâric | Yükselme Dereceleri | 44 | Mekkî | [sureler/070-mearic.md](sureler/070-mearic.md) |
+| 80 | 78 | 80 | النَّبَأِ | Nebe' | Büyük Haber | 40 | Mekkî | [sureler/078-nebe.md](sureler/078-nebe.md) |
+| 81 | 79 | 81 | النَّازِعَاتِ | Nâziât | Çekenler | 46 | Mekkî | [sureler/079-naziat.md](sureler/079-naziat.md) |
+| 82 | 82 | 82 | الْاِنْفِطَارِ | İnfitâr | Yarılma | 19 | Mekkî | [sureler/082-infitar.md](sureler/082-infitar.md) |
+| 83 | 84 | 83 | الْاِنْشِقَاقِ | İnşikâk | Yarılma | 25 | Mekkî | [sureler/084-insikak.md](sureler/084-insikak.md) |
+| 84 | 30 | 84 | الرُّومِ | Rûm | Rumlar (Bizans) | 60 | Mekkî | [sureler/030-rum.md](sureler/030-rum.md) |
+| 85 | 29 | 85 | الْعَنْكَبُوتِ | Ankebût | Örümcek | 69 | Mekkî | [sureler/029-ankebut.md](sureler/029-ankebut.md) |
+| 86 | 83 | 86 | الْمُطَفِّف۪ينَ | Mutaffifîn | Ölçüde Hile Edenler | 36 | Mekkî | [sureler/083-mutaffifin.md](sureler/083-mutaffifin.md) |
+| 87 | 2 | 87 | الْبَقَرَةِ | Bakara | İnek / Sığır | 286 | Medenî | [sureler/002-bakara.md](sureler/002-bakara.md) |
+| 88 | 8 | 88 | الْاَنْفَالِ | Enfâl | Ganimetler | 75 | Medenî | [sureler/008-enfal.md](sureler/008-enfal.md) |
+| 89 | 3 | 89 | اٰلِ عِمْرٰنَ | Âl-i İmrân | İmrân Ailesi | 200 | Medenî | [sureler/003-al-i-imran.md](sureler/003-al-i-imran.md) |
+| 90 | 33 | 90 | الْاَحْزَابِ | Ahzâb | Topluluklar | 73 | Medenî | [sureler/033-ahzab.md](sureler/033-ahzab.md) |
+| 91 | 60 | 91 | الْمُمْتَحِنَةِ | Mümtehine | İmtihan Edilen Kadın | 13 | Medenî | [sureler/060-mumtehine.md](sureler/060-mumtehine.md) |
+| 92 | 4 | 92 | النِّسَاءِ | Nisâ | Kadınlar | 176 | Medenî | [sureler/004-nisa.md](sureler/004-nisa.md) |
+| 93 | 99 | 93 | الزِّلْزَالِ | Zilzâl | Sarsıntı | 8 | Medenî | [sureler/099-zilzal.md](sureler/099-zilzal.md) |
+| 94 | 57 | 94 | الْحَد۪يدِ | Hadîd | Demir | 29 | Medenî | [sureler/057-hadid.md](sureler/057-hadid.md) |
+| 95 | 47 | 95 | مُحَمَّدٍ | Muhammed | Hz. Muhammed | 38 | Medenî | [sureler/047-muhammed.md](sureler/047-muhammed.md) |
+| 96 | 13 | 96 | الرَّعْدِ | Ra'd | Gök Gürültüsü | 43 | Medenî | [sureler/013-rad.md](sureler/013-rad.md) |
+| 97 | 55 | 97 | الرَّحْمٰنِ | Rahmân | Rahman | 78 | Medenî | [sureler/055-rahman.md](sureler/055-rahman.md) |
+| 98 | 76 | 98 | الْاِنْسَانِ | İnsân | İnsan | 31 | Medenî | [sureler/076-insan.md](sureler/076-insan.md) |
+| 99 | 65 | 99 | الطَّلَاقِ | Talâk | Boşama | 12 | Medenî | [sureler/065-talak.md](sureler/065-talak.md) |
+| 100 | 98 | 100 | الْبَيِّنَةِ | Beyyine | Apaçık Delil | 8 | Medenî | [sureler/098-beyyine.md](sureler/098-beyyine.md) |
+| 101 | 59 | 101 | الْحَشْرِ | Haşr | Toplama / Sürme | 24 | Medenî | [sureler/059-hasr.md](sureler/059-hasr.md) |
+| 102 | 24 | 102 | النُّورِ | Nûr | Işık | 64 | Medenî | [sureler/024-nur.md](sureler/024-nur.md) |
+| 103 | 22 | 103 | الْحَجِّ | Hac | Hac İbadeti | 78 | Medenî | [sureler/022-hac.md](sureler/022-hac.md) |
+| 104 | 63 | 104 | الْمُنَافِقُونَ | Münâfikûn | Münafıklar | 11 | Medenî | [sureler/063-munafikun.md](sureler/063-munafikun.md) |
+| 105 | 58 | 105 | الْمُجَادَلَةِ | Mücâdele | Tartışma | 22 | Medenî | [sureler/058-mucadele.md](sureler/058-mucadele.md) |
+| 106 | 49 | 106 | الْحُجُرَاتِ | Hucurât | Odalar | 18 | Medenî | [sureler/049-hucurat.md](sureler/049-hucurat.md) |
+| 107 | 66 | 107 | التَّحْر۪يمِ | Tahrîm | Haram Kılma | 12 | Medenî | [sureler/066-tahrim.md](sureler/066-tahrim.md) |
+| 108 | 64 | 108 | التَّغَابُنِ | Teğâbun | Aldanış | 18 | Medenî | [sureler/064-tegabun.md](sureler/064-tegabun.md) |
+| 109 | 61 | 109 | الصَّفِّ | Saff | Saf | 14 | Medenî | [sureler/061-saff.md](sureler/061-saff.md) |
+| 110 | 62 | 110 | الْجُمُعَةِ | Cum'a | Cuma | 11 | Medenî | [sureler/062-cuma.md](sureler/062-cuma.md) |
+| 111 | 48 | 111 | الْفَتْحِ | Fetih | Açık Zafer | 29 | Medenî | [sureler/048-fetih.md](sureler/048-fetih.md) |
+| 112 | 5 | 112 | الْمَائِدَةِ | Mâide | Sofra | 120 | Medenî | [sureler/005-maide.md](sureler/005-maide.md) |
+| 113 | 9 | 113 | التَّوْبَةِ | Tevbe | Dönüş, Pişmanlık | 129 | Medenî | [sureler/009-tevbe.md](sureler/009-tevbe.md) |
+| 114 | 110 | 114 | النَّصْرِ | Nasr | Yardım | 3 | Medenî | [sureler/110-nasr.md](sureler/110-nasr.md) |
 
 *'(rivayet)' işaretli adlar ve hadisler kaynağından yoklanmalıdır.*
 

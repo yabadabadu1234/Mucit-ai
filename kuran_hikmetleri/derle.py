@@ -28,6 +28,7 @@ except ImportError:
 from grafik_uretici import build_all_charts, load_all_surah_data, kelime_satiri_html
 import kelime_mealli
 from mevzu_kumeleri import mevzu_pasta
+from konu_haritasi import harita_bolumu
 
 BASE_DIR = Path(__file__).resolve().parent
 REPO_ROOT = BASE_DIR.parent
@@ -678,6 +679,9 @@ def build_unified_html(config, surahs_data):
 
         elif tur == "MEVZU_PASTA":
             body_sections.append(mevzu_pasta(surahs_data))
+
+        elif tur == "KONU_HARITASI":
+            body_sections.append(harita_bolumu())
 
         elif tur == "MEVZU_OZETI":
             body_sections.append(mevzu_ozeti(surahs_data))

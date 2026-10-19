@@ -113,7 +113,7 @@ def sure_adlari():
     """Sûre numarası → Türkçe ad (fihrist tablosundan)."""
     adlar = {}
     for ln in FIHRIST.read_text(encoding="utf-8").splitlines():
-        m = re.match(r"\|\s*\d+\s*\|\s*\d+\s*\|\s*(\d+)\s*\|\s*([^|]+?)\s*\|", ln)
+        m = re.match(r"\|\s*\d+\s*\|\s*(\d+)\s*\|\s*\d+\s*\|\s*[^|]+\|\s*([^|]+?)\s*\|", ln)
         if m:
             adlar[int(m.group(1))] = m.group(2)
     return adlar
@@ -123,7 +123,7 @@ def sure_ayet_sayilari():
     """Sûre numarası → âyet sayısı (fihrist tablosundan)."""
     sayilar = {}
     for ln in FIHRIST.read_text(encoding="utf-8").splitlines():
-        m = re.match(r"\|\s*\d+\s*\|\s*\d+\s*\|\s*(\d+)\s*\|(?:[^|]*\|){3}\s*(\d+)\s*\|", ln)
+        m = re.match(r"\|\s*\d+\s*\|\s*(\d+)\s*\|\s*(?:[^|]*\|){4}\s*(\d+)\s*\|", ln)
         if m:
             sayilar[int(m.group(1))] = int(m.group(2))
     return sayilar
@@ -137,6 +137,49 @@ def harita_verisi(konular):
             for ayet in range(a, b + 1):
                 anilma[(sure, ayet)].append(konu)
     return anilma
+
+
+def bolum_html(anilma, adlar, sayilar):
+    """Kitaba girecek harita bölümü (stil bölümün başında gömülü)."""
+    en_cok = max((len(v) for v in anilma.values()), default=1)
+    satirlar = []
+    for sure in range(1, 115):
+        n = sayilar.get(sure, 0)
+        hucreler = []
+        for ayet in range(1, n + 1):
+            konular = anilma.get((sure, ayet), [])
+            oran = len(konular) / en_cok
+            renk = "#e2e8f0" if not konular else f"rgba(30,64,175,{0.15 + 0.85 * oran:.2f})"
+            ipucu = f"{sure}:{ayet} · {len(konular)} konu" + ("\n" + "\n".join(konular) if konular else "")
+            hucreler.append(f'<i style="background:{renk}" title="{escape(ipucu)}"></i>')
+        satirlar.append(
+            f'<div class="kh-satir"><span class="kh-sure">{sure}. {escape(adlar.get(sure, ""))}</span>'
+            f'<span class="kh-hucreler">{"".join(hucreler)}</span></div>'
+        )
+    return f"""
+    <style>{KONU_HARITA_CSS}</style>
+    <div class="page doc-page konu-harita">
+      <h2>Konu haritası · Kur'ân âyetlerinin konu yoğunluğu</h2>
+      <p class="kh-not">Her hücre bir âyettir; koyu olan, konu dizininde daha çok anılmış âyettir. Üzerine gelin: âyet numarası ve konuları görünür. Kaynak: 00_FIHRIST.md konu dizini ({sum(len(v) for v in anilma.values())} âyet-konu girişi, {len(anilma)} farklı âyet).</p>
+      {"".join(satirlar)}
+      <p class="kh-not">Açık gri: hiçbir konuda anılmamış âyet. Koyu mavi: en çok konuda anılan âyetler (en fazla {en_cok} konu).</p>
+    </div>
+    """
+
+
+KONU_HARITA_CSS = """
+.kh-satir { display:flex; align-items:center; gap:8px; margin-bottom:2px; }
+.kh-sure { width:180px; flex:0 0 180px; font-size:9pt; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.kh-hucreler { display:flex; flex-wrap:nowrap; gap:1px; }
+.kh-hucreler i { display:block; width:7px; height:12px; border-radius:1px; }
+.kh-not { font-size:9pt; color:#475569; margin:6px 0; }
+"""
+
+
+def harita_bolumu():
+    """Kitap derlemesi için harita bölümü HTML'i."""
+    konular = konulari_oku()
+    return bolum_html(harita_verisi(konular), sure_adlari(), sure_ayet_sayilari())
 
 
 def html_uret(anilma, adlar, sayilar):
