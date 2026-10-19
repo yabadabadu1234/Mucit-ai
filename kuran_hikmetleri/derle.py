@@ -376,30 +376,45 @@ LUGAT_SAYFA_JS = """
 function hepsi(acik){ document.querySelectorAll('details').forEach(function(d){ d.open = acik; }); }
 function bolumAc(el, acik){ el.querySelectorAll('details').forEach(function(d){ d.open = acik; }); el.open = acik; }
 function sabitAc(cb){ hepsi(cb.checked); }
-function araIsle(q){
-  q = (q || '').trim();
-  var satirlar = document.querySelectorAll('tr[data-ara]');
+var LG = { satirlar: [], ayetler: [], ustler: [], zamanlayici: null };
+function lugatHazirla(){
+  LG.satirlar = Array.prototype.slice.call(document.querySelectorAll('tr[data-ara]'));
+  LG.ayetler = Array.prototype.slice.call(document.querySelectorAll('details.ayet-d'));
+  LG.ustler = Array.prototype.slice.call(document.querySelectorAll('details.mevzu-d, details.sure-d'));
+  LG.ayetler.forEach(function(d){ d._satirlar = Array.prototype.slice.call(d.querySelectorAll('tr[data-ara]')); });
+  LG.ustler.forEach(function(d){ d._ayetler = Array.prototype.slice.call(d.querySelectorAll('details.ayet-d')); });
+}
+function araUygula(q){
   var gorunen = 0;
-  satirlar.forEach(function(tr){
+  for (var i = 0; i < LG.satirlar.length; i++) {
+    var tr = LG.satirlar[i];
     var uyar = !q || tr.getAttribute('data-ara').indexOf(q) !== -1;
-    tr.classList.toggle('gizli', !uyar);
     if (uyar) gorunen++;
-  });
-  document.querySelectorAll('details.ayet-d').forEach(function(d){
-    var var_ = d.querySelector('tr[data-ara]:not(.gizli)') !== null;
-    d.style.display = (q && !var_) ? 'none' : '';
+    tr.style.display = uyar ? '' : 'none';
+  }
+  for (var j = 0; j < LG.ayetler.length; j++) {
+    var d = LG.ayetler[j];
+    var var_ = !q || d._satirlar.some(function(t){ return t.style.display !== 'none'; });
+    d.style.display = var_ ? '' : 'none';
     if (q && var_) d.open = true;
-  });
-  document.querySelectorAll('details.mevzu-d, details.sure-d').forEach(function(d){
-    var var_ = d.querySelector('tr[data-ara]:not(.gizli)') !== null;
-    d.style.display = (q && !var_) ? 'none' : '';
-    if (q && var_) d.open = true;
-  });
+  }
+  for (var k = 0; k < LG.ustler.length; k++) {
+    var u = LG.ustler[k];
+    var v2 = !q || u._ayetler.some(function(x){ return x.style.display !== 'none'; });
+    u.style.display = v2 ? '' : 'none';
+    if (q && v2) u.open = true;
+  }
   document.getElementById('ara-sayi').textContent = q ? (gorunen + ' sonuç') : '';
 }
+function araIsle(q){
+  q = (q || '').trim().toLowerCase();
+  clearTimeout(LG.zamanlayici);
+  LG.zamanlayici = setTimeout(function(){ requestAnimationFrame(function(){ araUygula(q); }); }, 220);
+}
 window.addEventListener('DOMContentLoaded', function(){
+  lugatHazirla();
   var q = new URLSearchParams(location.search).get('ara') || '';
-  if (q) { document.getElementById('ara').value = q; araIsle(q); }
+  if (q) { document.getElementById('ara').value = q; araUygula(q.trim().toLowerCase()); }
 });
 """
 
