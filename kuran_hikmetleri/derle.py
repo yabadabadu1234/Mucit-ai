@@ -115,7 +115,6 @@ def _kart(renk, v, etiket, verse_dict):
         f'<div class="ag-kart" style="border-top:4px solid {renk};">'
         f'<div class="ag-kart-baslik" style="color:{renk};">Âyet {v}{" · " + etiket if etiket else ""}</div>'
         f'<div class="verse-ar">{ar}</div>'
-        f'{kelime_satiri_html(verse_dict.get(v, {}).get("kelimeler", []))}'
         f'<div class="verse-tr">{tr}</div></div>'
     )
 
@@ -748,8 +747,6 @@ def build_unified_html(config, surahs_data):
                     continue
                 sdir = matches[0]
                 s_meta = surah_dict.get(sno, {})
-                for v in s_meta.get("verses", []):
-                    v["kelimeler"] = kelimeler.get((sno, v["verseNumber"]), [])
 
                 sure_elements = []
 
