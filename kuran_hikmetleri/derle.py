@@ -342,33 +342,37 @@ SURUM_KONTROLU_SCRIPT = """<script>
 def sozluk_bolumu(sarf_dosya, kelimeler_dosya, md_conv):
     """Sarf-nahiv anlatımı + Kur'ân'da sırayla karşılaşılan farklı kelimeler.
     Liste sure sure ayrılır: her sûrede ilk kez geçen kelimeler (kelimeler.json, 'ilk' alanı) tabloya girer.
-    Lugat (anlam) sütunu yoktur: anlamlar elle yazılmadıkça kopyalanmaz (sözlük_uret.py notu)."""
+    Lugat sütunu, kelime_mealli.SOZLUK dosyasındaki mevcut Türkçe karşılıklardan sözlük formuna göre gelir."""
     from html import escape
     md_conv.reset()
     sarf_html = md_conv.convert(sarf_dosya.read_text(encoding="utf-8"))
     kayitlar = json.loads(kelimeler_dosya.read_text(encoding="utf-8"))
+    # Lugat: kelimenin sözlük formu (lem) için mevcut Türkçe karşılık dosyasından; karşılığı olmayan "—"
+    karsiliklar = json.loads(kelime_mealli.SOZLUK.read_text(encoding="utf-8"))["translations"]
     sure_kelimeleri = {}
     for k in kayitlar:
+        k["lugat"] = karsiliklar.get(k["lem"], "")
         sure_kelimeleri.setdefault(int(k["ilk"].split(":")[0]), []).append(k)
     sureler_html = []
     for sno in sorted(sure_kelimeleri):
         satirlar = "".join(
             f'<tr><td style="font-family:Amiri,serif; font-size:13pt; direction:rtl;">{escape(k["kelime"])}</td>'
             f'<td>{escape(k["kok"]) or "—"}</td><td>{escape(k["tur"])}</td>'
+            f'<td>{escape(k["lugat"]) or "—"}</td>'
             f'<td>{k["bab"] or "—"}</td><td>{k["zaman"] or "—"}</td>'
             f'<td>{k["ilk"].split(":")[1]}</td><td>{k["adet"]}</td></tr>'
             for k in sure_kelimeleri[sno]
         )
         sureler_html.append(
             f'<details><summary><strong>{sno}. sûre</strong> · {len(sure_kelimeleri[sno])} yeni kelime</summary>'
-            f'<table><thead><tr><th>Kelime</th><th>Kök</th><th>Tür</th><th>Bab</th><th>Zaman</th>'
+            f'<table><thead><tr><th>Kelime</th><th>Kök</th><th>Tür</th><th>Lugat</th><th>Bab</th><th>Zaman</th>'
             f'<th>İlk âyet</th><th>Adet</th></tr></thead><tbody>{satirlar}</tbody></table></details>'
         )
     return f"""
     <div class="page doc-page sozluk-page">
       <div class="markdown-content">{sarf_html}</div>
       <h2>Sözlük: sûrelere göre yeni kelimeler</h2>
-      <p>Her sûrede ilk kez geçen kelimeler, Kur'ân metnindeki sırasıyla listelenir. Adet, kelimenin bütün Kur'ân'daki geçiş sayısıdır.</p>
+      <p>Her sûrede ilk kez geçen kelimeler, Kur'ân metnindeki sırasıyla listelenir. Adet, kelimenin bütün Kur'ân'daki geçiş sayısıdır. Lugat, sözlük formunun (lem) mevcut Türkçe karşılığıdır; karşılığı olmayanlar "—" ile işaretlidir.</p>
       {"".join(sureler_html)}
     </div>
     """

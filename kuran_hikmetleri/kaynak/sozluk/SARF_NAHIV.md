@@ -83,5 +83,5 @@ Sözlükte "bab" sütunu boş olan kelimeler, üç harfli fiil babı taşımayan
 ## 8. Kaynak ve sınır
 
 - Kök, bab, tür ve zaman bilgileri Kur'ân morfoloji verisinden (`veri_harici/eyupipler/quran-morphology.txt`) alınmıştır.
-- Kelimelerin Türkçe anlamı (lugat) bu sürümde yazılmamıştır; hazır sözlük kopyalanmamıştır. Kök anlamları, kök başına elle yazılacaktır.
+- Lugat sütunu, sözlük formuna (lem) göre `veri_harici/eyupipler/word-translations-tr.json` dosyasındaki mevcut Türkçe karşılıklardan gelir. Bu dosya hazır bir sözlüktür; karşılıklar tek tek doğrulanmamıştır, kök anlamları ayrıca elle gözden geçirilmelidir. Karşılığı olmayan kelimeler "—" ile işaretlidir (19 017 yüzeyden 6 846'sının karşılığı var).
 - Kök etiketi olmayan kelimeler sözlükte açıkça işaretlenmiştir.
