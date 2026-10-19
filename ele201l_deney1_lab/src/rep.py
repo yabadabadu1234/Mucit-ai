@@ -7,7 +7,7 @@ def build():
     D.sec = 2  # format: 1 Yazım kuralları ve 2 Rapor içeriği bölümleri kapsam dışı; rapor 3'ten başlar
     D.title_block([("TOBB Ekonomi ve Teknoloji Üniversitesi", 13, True), ("Elektrik – Elektronik Mühendisliği Bölümü", 12, False),
                    ("ELE 201 L – Devre Analizi I Laboratuvarı", 14, True), ("Deney 1 – Deney Raporu", 14, True), ("Güz 2026", 12, False)],
-                  [("Adı Soyadı", "Işıl Fidancan / Bahar Işıklar / Beşir Kerem Üstüntürk"), ("Numara", "251201045 / 241201036 / 251201037"), ("Tarih", "")])
+                  [("Adı Soyadı", "Işıl Fidancan / Bahar Işıklar / Beşir Kerem Üstüntürk"), ("Numara", "251201045 / 241201036 / 251201037"), ("Tarih", "19.10.2026")])
 
     # ---- sayılar
     R1, R2, R3 = 464.0, 99100.0, 10.30e6
@@ -35,10 +35,7 @@ def build():
 
     # ---- 1
     D.h(2, "Dirençlerin Seri ve Paralel Bağlantıları")
-    D.h(3, "Devre Tahtası Yerleşimi")
-    D.p("Dirençlerin renk kodundaki değerleri $R_1 = 470\\ \\Omega$, $R_2 = 100\\ \\mathrm{k\\Omega}$ ve $R_3 = 10\\ \\mathrm{M\\Omega}$’dur; gerçek değerleri aşağıda ölçülmüştür. [[f:bbs]]’te dirençlerin seri, [[f:bbp]]’te paralel bağlanmış hâlinin devre tahtası yerleşimi görülmektedir. Seri bağlantıda dirençler uç uca takılır; aradaki ortak sütun (a–e delikleri iç bağlıdır) bağlantı noktasıdır. Paralel bağlantıda üç direncin birer ucu aynı sütuna, diğer uçları başka bir ortak sütuna takılır.", align="j")
-    D.fig("bbs", a("bb_seri.png"), "Dirençlerin seri bağlantısı (devre tahtası yerleşimi). Multimetre Ω kademesinde iki serbest uç arasına bağlanır.", 14.0)
-    D.fig("bbp", a("bb_par.png"), "Dirençlerin paralel bağlantısı (devre tahtası yerleşimi).", 14.0)
+    D.p("Dirençlerin renk kodundaki değerleri $R_1 = 470\\ \\Omega$, $R_2 = 100\\ \\mathrm{k\\Omega}$ ve $R_3 = 10\\ \\mathrm{M\\Omega}$’dur; gerçek değerleri aşağıda ölçülmüştür. Seri bağlantıda dirençler uç uca bağlanmış, paralel bağlantıda ise üç direncin birer ucu aynı ortak düğüme, diğer uçları başka bir ortak düğüme bağlanmıştır.", align="j")
     D.h(3, "Ölçümler ve Hesaplar")
     D.p("Dirençler önce tek tek ölçülmüş ([[f:fd]]), ardından seri bağlanıp toplam direnç, paralel bağlanıp eşdeğer direnç ölçülmüştür ([[f:fsp]]). Seri elemanlardan aynı akım geçtiği ve gerilimler toplandığı için seri eşdeğer dirençlerin toplamıdır:", align="j", keep=True)
     D.eq(r"R_{seri}=R_1+R_2+R_3=464\ \Omega+99{,}1\ \mathrm{k\Omega}+10{,}30\ \mathrm{M\Omega}=10{,}3996\ \mathrm{M\Omega}", "seri")
@@ -58,9 +55,9 @@ def build():
 
     # ---- 2
     D.h(2, "Gerilim Bölücü Devresi")
-    D.h(3, "Devre ve Devre Tahtası Yerleşimi")
-    D.p("Föydeki Şekil 1’deki devre [3] kurulmuştur: $V_S = 15$ V’luk kaynağa seri bağlı iki eşit direnç ($R$) vardır ve çıkış $V_O$ alt dirençten alınır. Devre tahtası yerleşimi [[f:bbd]]’de görülmektedir. Aynı devre üç direnç değeri için ($R = 470\\ \\Omega,\\ 100\\ \\mathrm{k\\Omega},\\ 10\\ \\mathrm{M\\Omega}$) yalnızca dirençler değiştirilerek kullanılmıştır.", align="j")
-    D.fig("bbd", a("bb_bol.png"), "Gerilim bölücü devrenin devre tahtası yerleşimi. Güç kaynağı 15 V’a ayarlıdır; $V_O$ düğümünü multimetre ve osiloskop ölçer (iki alet aynı düğüme bağlıdır). Çizimde 470 Ω’luk dirençler gösterilmiştir.", 14.0)
+    D.h(3, "Devre Şeması")
+    D.p("Föydeki Şekil 1’deki devre [3] kurulmuştur: $V_S = 15$ V’luk kaynağa seri bağlı iki eşit direnç ($R$) vardır ve çıkış $V_O$ alt dirençten alınır. Devre şeması [[f:bbd]]’de görülmektedir. Aynı devre üç direnç değeri için ($R = 470\\ \\Omega,\\ 100\\ \\mathrm{k\\Omega},\\ 10\\ \\mathrm{M\\Omega}$) yalnızca dirençler değiştirilerek kullanılmıştır.", align="j")
+    D.fig("bbd", a("foy_sch_bol.png"), "Gerilim bölücü devre şeması (föy Şekil 1). Güç kaynağı 15 V’a ayarlıdır; $V_O$ düğümünü multimetre ve osiloskop ölçer (iki alet aynı düğüme bağlıdır).", 7.5)
     D.h(3, "Kuramsal Hesap")
     D.p("İki eşit direnç ideal bir bölücü oluşturduğundan beklenen çıkış gerilimi direnç değerinden bağımsızdır:", align="j", keep=True)
     D.eq(r"V_O=V_S\,\frac{R}{R+R}=\frac{15\ \mathrm{V}}{2}=7{,}5\ \mathrm{V}", "div")
@@ -106,9 +103,9 @@ def build():
 
     # ---- 3
     D.h(2, "Wheatstone Köprüsü")
-    D.h(3, "Devre ve Devre Tahtası Yerleşimi")
-    D.p("Föydeki Şekil 2’deki köprü [3] $V_S = +15$ V ile beslenmiştir; $R_1 = R_2 = 470\\ \\Omega$ (renk kodu) alınmış, $R_3$ yerine potansiyometre, $R_x$ yerine laboratuvar asistanının verdiği bilinmeyen direnç bağlanmıştır. Devre tahtası yerleşimi [[f:bbw]]’de görülmektedir. $V_B$, $R_1$–$R_3$ ortak düğümü ile $R_2$–$R_x$ ortak düğümü arasındaki gerilimdir.", align="j")
-    D.fig("bbw", a("bb_whe.png"), "Wheatstone köprüsünün devre tahtası yerleşimi. Potansiyometre $R_3$ yerine, bilinmeyen direnç $R_x$ yerine bağlanır; $V_B$ multimetreyle iki orta düğüm arasından ölçülür.", 14.0)
+    D.h(3, "Devre Şeması")
+    D.p("Föydeki Şekil 2’deki köprü [3] $V_S = +15$ V ile beslenmiştir; $R_1 = R_2 = 470\\ \\Omega$ (renk kodu) alınmış, $R_3$ yerine potansiyometre, $R_x$ yerine laboratuvar asistanının verdiği bilinmeyen direnç bağlanmıştır. Devre şeması [[f:bbw]]’de görülmektedir. $V_B$, $R_1$–$R_3$ ortak düğümü ile $R_2$–$R_x$ ortak düğümü arasındaki gerilimdir.", align="j")
+    D.fig("bbw", a("foy_sch_whe.png"), "Wheatstone köprüsü devre şeması (föy Şekil 2). Potansiyometre $R_3$ yerine, bilinmeyen direnç $R_x$ yerine bağlanır; $V_B$ multimetreyle iki orta düğüm arasından ölçülür.", 8.5)
     D.h(3, "Kuramsal Hesap")
     D.p("Sol kolun orta düğümü $V_L = V_S\\,R_3/(R_1+R_3)$, sağ kolun orta düğümü $V_R = V_S\\,R_x/(R_2+R_x)$ gerilimindedir. Köprü dengedeyken $V_B = V_L - V_R = 0$ olur ve bu koşul kaynak geriliminden bağımsızdır:", align="j", keep=True)
     D.eq(r"V_B=V_S\left(\frac{R_3}{R_1+R_3}-\frac{R_x}{R_2+R_x}\right)=0\;\Rightarrow\;R_1R_x=R_2R_3\;\Rightarrow\;R_x=\frac{R_2R_3}{R_1}", "bridge")
@@ -129,9 +126,9 @@ def build():
 
     # ---- 4
     D.h(2, "Dijital-Analog Çevirici (DAC)")
-    D.h(3, "Devre ve Devre Tahtası Yerleşimi")
-    D.p("Föydeki Şekil 3’teki [3] 3 bitlik R-2R merdiven DAC’ında her bit $2\\ \\mathrm{k\\Omega}$’luk bir giriş direnciyle merdivene bağlanır; merdiven iki adet $1\\ \\mathrm{k\\Omega}$’luk seri direnç ve $2\\ \\mathrm{k\\Omega}$’luk bir sonlandırma direncinden, çıkış ise $R_L = 1\\ \\mathrm{k\\Omega}$’luk yük direncinden oluşur. Mantık “1” için girişe 16 V, “0” için toprağa bağlanmıştır. Devre tahtası yerleşimi [[f:bbc]]’dedir.", align="j")
-    D.fig("bbc", a("bb_dac.png"), "3 bitlik R-2R DAC’ın devre tahtası yerleşimi. $R_{i1}, R_{i2}, R_{i3} = 2\\ \\mathrm{k\\Omega}$ (giriş), $R_a = R_b = 1\\ \\mathrm{k\\Omega}$, $R_t = 2\\ \\mathrm{k\\Omega}$, $R_L = 1\\ \\mathrm{k\\Omega}$. Turuncu jumperlar girişleri 16 V rayına (mantık 1, kod 111) bağlar; bir bit 0 olacaksa jumper alt rayına (toprağa) taşınır. Multimetre $V_O$ düğümündedir.", 14.0)
+    D.h(3, "Devre Şeması")
+    D.p("Föydeki Şekil 3’teki [3] 3 bitlik R-2R merdiven DAC’ında her bit $2\\ \\mathrm{k\\Omega}$’luk bir giriş direnciyle merdivene bağlanır; merdiven iki adet $1\\ \\mathrm{k\\Omega}$’luk seri direnç ve $2\\ \\mathrm{k\\Omega}$’luk bir sonlandırma direncinden, çıkış ise $R_L = 1\\ \\mathrm{k\\Omega}$’luk yük direncinden oluşur. Mantık “1” için girişe 16 V, “0” için toprağa bağlanmıştır. Devre şeması [[f:bbc]]’de görülmektedir.", align="j")
+    D.fig("bbc", a("foy_sch_dac.png"), "3 bitlik R-2R DAC devre şeması (föy Şekil 3). Her giriş 16 V (mantık 1) veya toprağa (mantık 0) bağlanır; $R_L = 1\\ \\mathrm{k\\Omega}$ çıkış yüküdür.", 9.0)
     D.h(3, "Kuramsal Hesap")
     D.p("Devre doğrusal olduğundan çıkış, her bitin tek başına yarattığı çıkışların toplamıdır (süperpozisyon). Giriş dirençlerinin merdivenle birleştiği üç düğüm vardır: $A$ ($V_O$ düğümü), $B$ ve $C$. Düğüm denklemleri ($G_i = 1/2\\ \\mathrm{k\\Omega}$, $b_k \\in \\{0,1\\}$):", align="j", keep=True)
     D.eq(r"\begin{bmatrix}G_i+G_a+G_L&-G_a&0\\-G_a&G_i+G_a+G_b&-G_b\\0&-G_b&G_i+G_b+G_t\end{bmatrix}\begin{bmatrix}V_A\\V_B\\V_C\end{bmatrix}=G_i\,V_{\mathrm{mantık}}\begin{bmatrix}b_2\\b_1\\b_0\end{bmatrix}", "dacm")
@@ -151,7 +148,7 @@ def build():
     D.h(1, "Sonuçlar")
     D.p("**Genel değerlendirme.** Seri ve paralel bağlantı kuralları ölçümle doğrulanmıştır: seri ölçüm toplamdan %0,48, paralel ölçüm hesaptan %0,39 farklı çıkmış ve ikisi de ölçü aletinin kılavuzdaki doğruluğu içindedir. Gerilim bölücüde asıl bulgu, ölçü aletlerinin iç direncinin sonucu belirlemesidir: $R = 470\\ \\Omega$ iken iki alet de beklenene yakın göstermiştir (7,4 V ve 7,40 V; beklenen 7,5 V); $R = 100\\ \\mathrm{k\\Omega}$ iken multimetre 6,5 V, osiloskop 7,4 V göstermiştir; $R = 10\\ \\mathrm{M\\Omega}$ iken multimetre 0,9 V göstermiş, osiloskop ekranında ise 50 Hz’lik parazit (en büyük 9,40 V, tepeden tepeye 21,4 V) görülmüştür. Ölçümlerden multimetrenin görünen iç direnci yaklaşık $0{,}3$–$0{,}7\\ \\mathrm{M\\Omega}$ hesaplanmıştır; kılavuz yaklaşık 10 MΩ vermektedir [1]. Wheatstone köprüsüyle bilinmeyen direnç $3165\\ \\Omega$ bulunmuştur; multimetreyle ölçülen $3260\\ \\Omega$’dan %3,0 farklıdır, bu fark aletlerin doğruluğuyla açıklanabilir ve ikisi de renk kodunun ($3{,}3\\ \\mathrm{k\\Omega}$ ±%5) tolerans aralığındadır. DAC çıkışları beklenenden %2,3–%9 yüksek ölçülmüştür; üç değer de ±%5 tolerans için hesaplanan uç durum aralıklarının içindedir.", align="j")
     D.p("**Eksik kalan noktalar.** (i) Multimetrenin $R = 100\\ \\mathrm{k\\Omega}$ ve $R = 10\\ \\mathrm{M\\Omega}$ iken kılavuzdaki 10 MΩ’dan çok küçük görünen iç direncinin nedeni belirlenememiştir; bilinen bir dirençle ayrıca ölçüm yapmak gerekir. (ii) Osiloskop ucunun 1× mi 10× mu olduğu kaydedilmemiştir. (iii) DAC dirençleri tek tek ölçülmemiştir.", align="j")
-    D.p("**Kazanımlar.** Seri-paralel direnç hesabı ve ölçümü; ölçü aletinin yük etkisinin hesaplanması; osiloskop ve multimetrenin birlikte kullanımı ve 50 Hz parazitin tanınması; köprü yöntemi; DAC ağırlıklarının süperpozisyonla hesabı; devre tahtası yerleşimi ve ölçümlerinin beklenen değerle yüzde farkla karşılaştırılması.", align="j")
+    D.p("**Kazanımlar.** Seri-paralel direnç hesabı ve ölçümü; ölçü aletinin yük etkisinin hesaplanması; osiloskop ve multimetrenin birlikte kullanımı ve 50 Hz parazitin tanınması; köprü yöntemi; DAC ağırlıklarının süperpozisyonla hesabı; devre şemasının kurulması ve ölçümlerinin beklenen değerle yüzde farkla karşılaştırılması.", align="j")
 
     D.h(1, "Kaynaklar")
     refs_block(D, ["UNI-T. (t.y.). *UT33+ series palm size multimeter operating manual* [Cihazla birlikte verilen basılı kılavuz, İngilizce]. UNI-TREND Technology (China) Co., Ltd.",
