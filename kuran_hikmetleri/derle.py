@@ -27,6 +27,7 @@ except ImportError:
 
 from grafik_uretici import build_all_charts, load_all_surah_data, kelime_satiri_html
 import kelime_mealli
+from mevzu_kumeleri import mevzu_pasta
 
 BASE_DIR = Path(__file__).resolve().parent
 REPO_ROOT = BASE_DIR.parent
@@ -674,6 +675,9 @@ def build_unified_html(config, surahs_data):
             </div>
             """
             body_sections.append(cover_html)
+
+        elif tur == "MEVZU_PASTA":
+            body_sections.append(mevzu_pasta(surahs_data))
 
         elif tur == "MEVZU_OZETI":
             body_sections.append(mevzu_ozeti(surahs_data))
@@ -1351,6 +1355,13 @@ tr:nth-child(even) {{ background: #f8fafc; }}
 .mevzu-ozeti h2 {{ margin-top: 0; }}
 .mo-not {{ font-size: 8.5pt; color: #64748b; margin: 4px 0 10px; }}
 .mo-izgara {{ column-count: 3; column-gap: 14px; }}
+.mp-kap {{ display:flex; flex-wrap:wrap; gap:24px; align-items:center; justify-content:center; }}
+.mp-svg {{ width:min(420px, 100%); height:auto; }}
+.mp-aciklama {{ list-style:none; margin:0; padding:0; min-width:300px; flex:1; }}
+.mp-aciklama li {{ display:flex; align-items:baseline; gap:8px; padding:4px 0; border-bottom:1px solid #e2e8f0; font-size:10pt; }}
+.mp-renk {{ width:14px; height:14px; border-radius:3px; flex:0 0 14px; }}
+.mp-ad {{ flex:1; }}
+.mp-say {{ color:#475569; white-space:nowrap; font-size:9pt; }}
 .mo-blok {{ break-inside: avoid; margin: 0 0 8px; padding: 4px 6px; border: 1px solid #e2e8f0; border-radius: 4px; }}
 .mo-baslik {{ font-weight: 700; font-size: 8.5pt; color: #1e3a8a; }}
 .mo-baslik small {{ font-weight: 400; color: #64748b; }}
