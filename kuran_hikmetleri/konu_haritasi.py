@@ -113,7 +113,7 @@ def sure_adlari():
     """Sûre numarası → Türkçe ad (fihrist tablosundan)."""
     adlar = {}
     for ln in FIHRIST.read_text(encoding="utf-8").splitlines():
-        m = re.match(r"\|\s*S(\d{3})\s*\|\s*\d+\s*\|\s*([^|]+?)\s*\|", ln)
+        m = re.match(r"\|\s*\d+\s*\|\s*\d+\s*\|\s*(\d+)\s*\|\s*([^|]+?)\s*\|", ln)
         if m:
             adlar[int(m.group(1))] = m.group(2)
     return adlar
@@ -123,7 +123,7 @@ def sure_ayet_sayilari():
     """Sûre numarası → âyet sayısı (fihrist tablosundan)."""
     sayilar = {}
     for ln in FIHRIST.read_text(encoding="utf-8").splitlines():
-        m = re.match(r"\|\s*S(\d{3})\s*\|\s*\d+\s*\|(?:[^|]*\|){3}\s*(\d+)\s*\|", ln)
+        m = re.match(r"\|\s*\d+\s*\|\s*\d+\s*\|\s*(\d+)\s*\|(?:[^|]*\|){3}\s*(\d+)\s*\|", ln)
         if m:
             sayilar[int(m.group(1))] = int(m.group(2))
     return sayilar

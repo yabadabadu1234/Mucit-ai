@@ -99,13 +99,13 @@ def load_all_surah_data():
         with open(fihrist_file, "r", encoding="utf-8") as f:
             ftext = f.read()
         trows = re.findall(
-            r"\|\s*(S\d{3})\s*\|\s*(\d+)\s*\|\s*([^\|]+)\|\s*([^\|]+)\|\s*([^\|]+)\|\s*(\d+)\s*\|\s*([^\|]+)\|",
+            r"\|\s*(\d+)\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|\s*([^\|]+)\|\s*([^\|]+)\|\s*([^\|]+)\|\s*(\d+)\s*\|\s*([^\|]+)\|",
             ftext
         )
-        for sid, sno_str, name, arabic, meaning, vcount_str, place in trows:
+        for _sira, _nuzul, sno_str, name, arabic, meaning, vcount_str, place in trows:
             sno = int(sno_str)
             fihrist_meta[sno] = {
-                "id": sid.strip(),
+                "id": f"S{sno:03d}",
                 "name": name.strip(),
                 "arabic": arabic.strip(),
                 "meaning": meaning.strip(),
