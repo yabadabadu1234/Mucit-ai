@@ -55,6 +55,39 @@ RENK_PALETI = [
     {"bg": "#115e59", "border": "#0f766e", "text": "#ffffff", "name": "Hazer Yeşili"},
 ]
 
+_D_KONULAR = None
+
+
+def _d_konulari():
+    """Feyzül Furkan (D) bölümlemesinden sûre → [(başlangıç, bitiş, konu)] haritası."""
+    global _D_KONULAR
+    if _D_KONULAR is not None:
+        return _D_KONULAR
+    _D_KONULAR = {}
+    metin = (BASE_DIR / "kaynak" / "sure_bolumlemeleri" / "sure_bolumlemeleri.md").read_text(encoding="utf-8")
+    for sno_str, govde in re.findall(r"^## (\d+)\. .*?\n(.*?)(?=^## \d+\. |\Z)", metin, re.M | re.S):
+        bolum = re.search(r"\*\*D\. Feyzül Furkan\*\*(.*)", govde, re.S)
+        if not bolum:
+            continue
+        for satir in bolum.group(1).splitlines():
+            m = re.match(r"- (.*?)\s*\((\d+)/(\d+)(?:-(\d+))?\)\s*$", satir.strip())
+            if m:
+                a = int(m.group(3))
+                b = int(m.group(4) or a)
+                _D_KONULAR.setdefault(int(sno_str), []).append((a, b, m.group(1)))
+    return _D_KONULAR
+
+
+def _d_konusu(sno, bas, son):
+    """Aralıkla en çok çakışan Feyzül Furkan konusu; yoksa None."""
+    en_iyi, en_cakisma = None, 0
+    for a, b, konu in _d_konulari().get(sno, []):
+        cakisma = min(b, son) - max(a, bas) + 1
+        if cakisma > en_cakisma:
+            en_iyi, en_cakisma = konu, cakisma
+    return en_iyi
+
+
 def load_all_surah_data():
     """Tüm 114 surenin metadata ve ayet verilerini derler."""
     surahs = []
@@ -208,12 +241,13 @@ def load_all_surah_data():
                 # Aradaki boşluğu kapat
                 gap_start = cur_ayah
                 gap_end = pr["start"] - 1
+                ara_konu = _d_konusu(sno, gap_start, gap_end) or "Konusu kaynakta belirtilmemiş"
                 contiguous_segments.append({
                     "start": gap_start,
                     "end": gap_end,
                     "count": gap_end - gap_start + 1,
-                    "title": "Muhteva ve İlgili Âyetler",
-                    "desc": "Surenin ara faslı ve ilgili âyetleri",
+                    "title": ara_konu,
+                    "desc": ara_konu,
                     "code": f"K{sno:03d}-F"
                 })
             
@@ -231,12 +265,13 @@ def load_all_surah_data():
                 cur_ayah = seg_end + 1
 
         if cur_ayah <= total_v:
+            son_konu = _d_konusu(sno, cur_ayah, total_v) or "Konusu kaynakta belirtilmemiş"
             contiguous_segments.append({
                 "start": cur_ayah,
                 "end": total_v,
                 "count": total_v - cur_ayah + 1,
-                "title": "Hatime ve Son Hükümler" if contiguous_segments else "Surenin Ana Muhtevası",
-                "desc": "Surenin tamamlayıcı âyetleri",
+                "title": son_konu,
+                "desc": son_konu,
                 "code": f"K{sno:03d}-H"
             })
 

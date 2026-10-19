@@ -10,12 +10,11 @@ from html import escape
 
 # (küme adı, desen). Sıra önemlidir: ilk eşleşen kazanır.
 KURALLAR = [
-    ("Genel muhteva (sûre içi ilgili âyetler)", r"^Muhteva ve İlgili"),
-    ("Hatime ve son hükümler", r"^Hatime ve Son Hükümler"),
     ("Hamd, dua ve doğru yol", r"Hamd|Duâ|Rahmet ve ahiret|Sırat"),
     ("Kıyamet, ahiret ve cezâ-mükâfât",
      r"Kıyamet|Ahiret|Ahirette|Cennet|Cehennem|Dirilme|Diriliş|Hutame|Terazi|Tartı|Sarsıntı|"
-     r"Ebrar|Haber ve|Büyük haber|Aldanış|Ateş ve|Dönüş|Gruplar|Gelen|Tur'a yemin|Yemin ve kıyamet"),
+     r"Ebrar|Haber ve|Büyük haber|Aldanış|Ateş ve|Dönüş|Gruplar|Gelen|Tur'a yemin|Yemin ve kıyamet|"
+     r"Âhiret|âhiret|kıyâmet|Kıyâmet|karşılığı"),
     ("Müşrikler, inkârcılar ve münafıklar",
      r"Kâfir|Müşrik|Münafık|Nifak|İnkâr|İtiraz|Yalanla|Ebu Cehil|Velid|Ebu Leheb|Lat,|Şeytan|İblis|"
      r"Dostluk ve muhalefet|Karısı ve ip|Kavmin reddi|Peygambere iftira|Zalimler|Zina ve iftira|Mısır ve iftira|"
@@ -26,10 +25,12 @@ KURALLAR = [
      r"Kavim|Kıssa|Kıssalar|Âdem|Hızır|İsrailoğulları|Sebe'|Kureyş|Yûsuf|Yusuf|Zülkarneyn|Lokmân"),
     ("Savaş, gazve ve Medine dönemi",
      r"Uhud|Tebük|Hendek|Hudeybiye|Benî Nadîr|Ganimet|Savaş|Cihad|Bizans|Esir|Berâe|Hıyanet|"
-     r"Mübâhele|Necran|Yardım ve fetih|Zafer|Muhacir|Ehl-i kitap ve cihad|Hac, münafık"),
+     r"Mübâhele|Necran|Yardım ve fetih|Zafer|Muhacir|Ehl-i kitap ve cihad|Hac, münafık|"
+     r"Bedir|Rum|mücadele|Hâkimiyet"),
     ("Peygamberlik, vahiy ve Kur'ân",
      r"Vahi|Kur'an|Kur'ân|Kitab|Furkân|Nûr|Risalet|Tebliğ|Peygamber|Hikmet|Tevrat|Arını|Şairler|Demir ve|Yahudiler|"
-     r"Şairlerin|Ruhu|Hidayet|Mesajı|İlk vahiy|Delil ve|Ehl-i kitap|Muhkem|Esma"),
+     r"Şairlerin|Ruhu|Hidayet|Mesajı|İlk vahiy|Delil ve|Ehl-i kitap|Muhkem|Esma|"
+     r"kitapların|tasdik|dinlerin|Temelde"),
     ("Hukuk, ibadet ve aile",
      r"Hukuk|Namaz|Oruç|Nikâh|Boşam|Miras|Yetim|Abdest|Zina|Hırsız|Kısas|Faiz|Borç|Helal|Haram|Hüküm|Rüya|Tanışma|"
      r"Hac|Zekât|İnfak|Gece ibadeti|Secde|Cuma|Zikir|Kullar ve ibadet|Tesbih|Aile|Evlere|Zıhar|"
@@ -37,12 +38,14 @@ KURALLAR = [
     ("Mümin, takva ve sabır",
      r"Mümin|Müttakî|Müttakiler|Takva|Sabır|Tevekkül|Müminlerin|Şükür|İhsan|Sahabe|Amel|İstiğfar|Ahlakî|İstikâmet|Abdullah|Zikir|"
      r"Tevbe|Tevbe|Kalplerin|İç vesvese|Dış şerler|Teselli|Melekler ve sabır|Ayıplayanlar|Gıybet|"
-     r"Haber doğrulama|Dostluk|Yoksul|Tavsiye|Mülk|Sorumluluk|Yalancı|Vahyin ağırlığı|Son hüküm|Kitabın"),
+     r"Haber doğrulama|Dostluk|Yoksul|Tavsiye|Mülk|Sorumluluk|Yalancı|Vahyin ağırlığı|Son hüküm|Kitabın|"
+     r"isyan|vesvese|ahlâk|adâlet|Dünya hayat|anmaksızın|güven"),
     ("İnsan ve nefs",
      r"İnsan|İnsanın|Nimet|Karakter|Kader|Yaratılış|Fıtrat|Riya|Çokluk|Kendini|Gizli|Gece ve gündüz|"
      r"Nefis|Yemin ve nefis|Göğsün|Zorluk|Yaratıcının nimetleri|İlaf|Namazda riya|Ahitten"),
     ("Tevhid, kâinat ve kozmik deliller",
      r"Tevhid|Kozmik|Kâinat|kâinat|Delil|Yemin|Gece|Burç|İncir|Zamana|Rüzgâr|Atlar|Şehre|Örümcek|"
+     r"kudret|ihtişam|Tabiat|yıldırım|gaybı|işaret|tesbîh|birliği|sonsuzluğu|yüceliği|gök gürültü|"
      r"Tesbih|Kadir|Kur'an'ın Arapçalığı|Cin|Hak-bâtıl|Ayın yarılması|Mülk|Büyük|Kâinat"),
 ]
 
@@ -101,7 +104,7 @@ def mevzu_pasta(surahs_data):
         renk = PALET[i % len(PALET)]
         dilimler.append(f'<path d="{_dilim_yolu(cx, cy, r, aci, aci + fark)}" fill="{renk}" '
                         f'stroke="#ffffff" stroke-width="1.5"/>')
-        if oran >= 0.05:
+        if oran >= 0.06:
             orta = aci + fark / 2
             tx, ty = cx + r * 0.62 * math.sin(orta), cy - r * 0.62 * math.cos(orta)
             dilimler.append(
