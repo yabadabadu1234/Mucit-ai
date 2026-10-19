@@ -423,6 +423,8 @@ def lugat_sayfasi(surahs_data):
     toplam = len(kayitlar)
     kok_anlam = {x["kok"]: x["turkce"] for x in json.loads(
         (BASE_DIR / "kaynak/lugat/lisan_kok_turkce.json").read_text(encoding="utf-8"))}
+    for x in json.loads((BASE_DIR / "kaynak/lugat/hafizadan_kok_turkce.json").read_text(encoding="utf-8")):
+        kok_anlam.setdefault(x["kok"], "(hafızadan) " + x["turkce"])
     bolumler = []
     for sno in sorted(sure_adi):
         s = sure_adi[sno]
@@ -487,7 +489,7 @@ def lugat_sayfasi(surahs_data):
 <main class="kap">
   <h1>Lugat · Kur'ân'da ilk geçen kelimeler</h1>
   <p>Toplam {toplam} kelime. Kelimeler sûre → mevzu → âyet sırasıyla, Kur'ân metnindeki ilk geçtikleri yere göre dizilmiştir. Bir seviyeyi açmak için başlığına tıklayın; "tümünü aç" düğmesi o seviyedeki bütün tabloları açar. "Açık gibi davran" işaretliyken bütün tablolar açık kalır (kopyalama için).</p>
-  <div class="not"><strong>Kök anlamı notu:</strong> "Kök anlamı (Lisân)" sütunundaki metinler, Lisânü'l-Arab'ın (OSINTAI/Arabic-Dictionaries deposu) ilgili maddelerinin <em>ilk bölümünün</em> Claude tarafından yapılmış Türkçe çevirisidir; doğrulanmamıştır, tamamı değildir. Belirsiz yerler "(?)" ile işaretlidir.</div>
+  <div class="not"><strong>Kök anlamı notu:</strong> "Kök anlamı (Lisân)" sütunundaki metinler, Lisânü'l-Arab'ın (OSINTAI/Arabic-Dictionaries deposu) ilgili maddelerinin <em>ilk bölümünün</em> Claude tarafından yapılmış Türkçe çevirisidir; doğrulanmamıştır, tamamı değildir. Belirsiz yerler "(?)" ile işaretlidir. "(hafızadan)" etiketli karşılıklar ise Lisân'a dayanmadan, hafızadan yazılmıştır ve doğrulanmamıştır.</div>
   <div class="not"><strong>Lugat notu:</strong> Lugat sütunundaki Türkçe karşılıklar, <em>veri_harici/eyupipler/word-translations-tr.json</em> dosyasından alınmıştır; hazır bir sözlük olup karşılıklar tek tek doğrulanmamıştır. Karşılığı olmayanlar "—" ile işaretlidir.</div>
   <div class="ara-sayi" id="ara-sayi2"></div>
   {"".join(bolumler)}
