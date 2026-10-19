@@ -13,7 +13,12 @@ from pathlib import Path
 BASE = Path(__file__).resolve().parent
 MORFOLOJI = BASE / "veri_harici" / "eyupipler" / "quran-morphology.txt"
 CIKTI = BASE / "kaynak" / "sozluk" / "kelimeler.json"
-ROMEN = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"]
+# Morfoloji etiketleri -> tek Türkçe karşılık. Kısaltma sözlükte görünmez.
+TUR = {"N": "İsim", "V": "Fiil", "P": "Harf"}
+ZAMAN = {"PERF": "Mâzî", "IMPF": "Muzâri", "IMPV": "Emir"}
+# Fiil babı (VF numarası) -> kalıp (vezin)
+BAB = {1: "fe'ale", 2: "fe''ale", 3: "fâale", 4: "af'ale", 5: "tefe''ale",
+       6: "tefâale", 7: "infe'ale", 8: "ifte'ale", 9: "if'alle", 10: "istef'ale"}
 
 
 def yukle():
@@ -38,10 +43,10 @@ def tek_kelime(parcalar):
             lem = m.group(1)
             break
     vf = next((int(re.search(r"VF:(\d+)", etiket).group(1)) for _, _, etiket in parcalar if "VF:" in etiket), 0)
-    zaman = next((z for _, _, etiket in parcalar for z in ("PERF", "IMPF", "IMPV") if z in etiket.split("|")), "")
-    tur = parcalar[-1][1]
+    zaman_kodu = next((z for _, _, etiket in parcalar for z in ("PERF", "IMPF", "IMPV") if z in etiket.split("|")), "")
+    tur = TUR[parcalar[-1][1]]
     return {"kelime": yuzey, "kok": kok, "lem": lem, "tur": tur,
-            "bab": ROMEN[vf] if 0 < vf < len(ROMEN) else "", "zaman": zaman}
+            "bab": BAB.get(vf, ""), "zaman": ZAMAN.get(zaman_kodu, "")}
 
 
 def main():
@@ -60,7 +65,7 @@ def main():
     kokler = {v["kok"] for v in sozluk.values() if v["kok"]}
     print("kelime (toplam):", toplam, "| farklı yüzey:", len(sozluk), "| farklı kök:", len(kokler))
     print("kök etiketi olmayan farklı kelime:", sum(1 for v in sozluk.values() if not v["kok"]))
-    print("bab dağılımı:", {b: sum(1 for v in sozluk.values() if v["bab"] == b) for b in ROMEN[1:]})
+    print("bab dağılımı:", {b: sum(1 for v in sozluk.values() if v["bab"] == b) for b in BAB.values()})
 
 
 if __name__ == "__main__":
