@@ -319,9 +319,6 @@ def detay_bolumu(segments, agac_segmentler, verse_dict):
     return f'<div class="ag-ayrintili">{"".join(bloklar)}</div>'
 
 
-KISIMLAR_BOLUMU = re.compile(r"## 10\. Kısımlar ve kısımlarda geçenler.*?(?=\n## |\n---|\Z)", re.S)
-
-
 def lazy_metin(sno, ad, html_icerik):
     """Sûre metni: görünür olunca yüklenir (script bloğunda saklanır)."""
     kimlik = f"metin-{sno}-{ad}"
@@ -698,7 +695,6 @@ def build_unified_html(config, surahs_data):
                 if sure_md_file.exists():
                     with open(sure_md_file, "r", encoding="utf-8") as f:
                         stext = f.read()
-                    stext = KISIMLAR_BOLUMU.sub("", stext)
                     md_conv.reset()
                     sure_elements.append(lazy_metin(sno, "sure", f'<div class="sure-md-block">{md_conv.convert(stext)}</div>'))
 
