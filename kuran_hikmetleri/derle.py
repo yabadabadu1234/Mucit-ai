@@ -319,6 +319,9 @@ def detay_bolumu(segments, agac_segmentler, verse_dict):
     return f'<div class="ag-ayrintili">{"".join(bloklar)}</div>'
 
 
+KISIMLAR_BOLUMU = re.compile(r"## 10\. Kısımlar ve kısımlarda geçenler.*?(?=\n## |\n---|\Z)", re.S)
+
+
 def lazy_metin(sno, ad, html_icerik):
     """Sûre metni: görünür olunca yüklenir (script bloğunda saklanır)."""
     kimlik = f"metin-{sno}-{ad}"
@@ -695,6 +698,7 @@ def build_unified_html(config, surahs_data):
                 if sure_md_file.exists():
                     with open(sure_md_file, "r", encoding="utf-8") as f:
                         stext = f.read()
+                    stext = KISIMLAR_BOLUMU.sub("", stext)
                     md_conv.reset()
                     sure_elements.append(lazy_metin(sno, "sure", f'<div class="sure-md-block">{md_conv.convert(stext)}</div>'))
 
@@ -1379,6 +1383,9 @@ body {{ padding-top: 72px; }}
 .sure-page, .sure-sutun-grafik, .ag-blok {{ scroll-margin-top: 80px; }}
 .lazy-icerik {{ min-height: 300px; }}
 .lazy-metin {{ min-height: 40px; }}
+.lazy-icerik, .lazy-metin, .sure-page {{ max-width: 100%; overflow-x: hidden; }}
+.sure-md-block table, .gayeler-md-block table, .surah-chart-section table {{ display: block; max-width: 100%; overflow-x: auto; }}
+.sure-md-block img, .gayeler-md-block img {{ max-width: 100%; height: auto; }}
 .kelime-satiri {{
   display: flex;
   flex-wrap: wrap;
@@ -1434,8 +1441,11 @@ function icerikYukle(el) {{
   var kimlik = el.getAttribute('data-kaynak') || ('icerik-' + el.getAttribute('data-sure'));
   var kaynak = document.getElementById(kimlik);
   if (!kaynak) return;
+  var once = el.getBoundingClientRect().top;
   el.innerHTML = kaynak.textContent;
   el.setAttribute('data-yuklendi', '1');
+  var sonra = el.getBoundingClientRect().top;
+  if (once < 0) window.scrollBy(0, sonra - once);
 }}
 function sureYukle(n) {{
   var el = document.querySelector('.lazy-icerik[data-sure="' + n + '"]');
