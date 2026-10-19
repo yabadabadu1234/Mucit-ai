@@ -1433,7 +1433,6 @@ body {{ padding-top: 72px; }}
 .lazy-icerik {{ min-height: 300px; }}
 .lazy-metin {{ min-height: 40px; }}
 .lazy-icerik, .lazy-metin, .sure-page {{ max-width: 100%; overflow-x: hidden; }}
-html {{ overflow-anchor: none; }}
 .sure-md-block table, .gayeler-md-block table, .surah-chart-section table {{ display: block; max-width: 100%; overflow-x: auto; }}
 .sure-md-block img, .gayeler-md-block img {{ max-width: 100%; height: auto; }}
 .kelime-satiri {{
@@ -1504,19 +1503,16 @@ function sureYukle(n) {{
 }}
 var bekleyenKaydirma = false;
 function gorunenleriYukle() {{
-  bekleyenKaydirma = false;
-  var orta = document.elementFromPoint(window.innerWidth / 2, 120);
-  var capa = orta && orta.closest ? orta.closest('.sure-page') : null;
-  var once = capa ? capa.getBoundingClientRect().top : null;
-  var ust = -400, alt = window.innerHeight + 400;
+  var ust = -window.innerHeight, alt = window.innerHeight * 2;
   document.querySelectorAll('.lazy-icerik:not([data-yuklendi]), .lazy-metin:not([data-yuklendi])').forEach(function (el) {{
     var r = el.getBoundingClientRect();
     if (r.bottom >= ust && r.top <= alt) icerikYukle(el);
   }});
-  if (capa && once !== null) window.scrollBy(0, capa.getBoundingClientRect().top - once);
 }}
+var kaydirmaZamani = null;
 function kaydirmaIsle() {{
-  if (!bekleyenKaydirma) {{ bekleyenKaydirma = true; requestAnimationFrame(gorunenleriYukle); }}
+  clearTimeout(kaydirmaZamani);
+  kaydirmaZamani = setTimeout(function () {{ requestAnimationFrame(gorunenleriYukle); }}, 150);
 }}
 window.addEventListener('scroll', kaydirmaIsle, {{ passive: true }});
 window.addEventListener('resize', kaydirmaIsle);
