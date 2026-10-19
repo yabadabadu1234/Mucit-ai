@@ -20,7 +20,7 @@ TOPLAM_AYET = 6236
 def konulari_oku():
     """(konu, [(sûre, başlangıç, bitiş), ...]) listesi."""
     satirlar = FIHRIST.read_text(encoding="utf-8").splitlines()
-    bas = next(i for i, s in enumerate(satirlar) if s.startswith("### S114"))
+    bas = next(i for i, s in enumerate(satirlar) if s.startswith("*'(rivayet)'"))
     konular = []
     for ham in satirlar[bas + 1:]:
         s = ham.strip()
