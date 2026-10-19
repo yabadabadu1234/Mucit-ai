@@ -10,6 +10,9 @@
       "baslik": "Kur'an-ı Kerim Sureleri ve Hikmetleri"
     },
     {
+      "tur": "MEVZU_OZETI"
+    },
+    {
       "tur": "SOZLUK",
       "sarf_dosya": "kaynak/sozluk/SARF_NAHIV.md",
       "kelimeler_dosya": "kaynak/sozluk/kelimeler.json"
@@ -32,14 +35,25 @@
     },
     {
       "tur": "SURELER",
-      "dahil_edilecek_ekler": ["sure.md", "gayeler-ve-hikmetler.md"],
+      "dahil_edilecek_ekler": [
+        "sure.md",
+        "gayeler-ve-hikmetler.md"
+      ],
       "sure_grafik_dahil_et": true,
       "ayet_pencereleri_modu": "ozet_ve_harita"
     }
   ],
   "izleme_ayarlari": {
-    "klasorler": ["sureler", "kaynak", "."],
-    "uzantilar": [".md", ".json", ".html"],
+    "klasorler": [
+      "sureler",
+      "kaynak",
+      "."
+    ],
+    "uzantilar": [
+      ".md",
+      ".json",
+      ".html"
+    ],
     "kontrol_araligi_saniye": 3
   }
 }

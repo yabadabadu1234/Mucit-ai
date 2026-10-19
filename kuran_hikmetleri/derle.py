@@ -496,6 +496,29 @@ def lugat_sayfasi(surahs_data):
 </body></html>"""
 
 
+def mevzu_ozeti(surahs_data):
+    """Bütün sûrelerin mevzu bölümlemesi tek yoğun tabloda (sûre başına bir blok; sütunlara bölünmüş)."""
+    from html import escape
+    bloklar = []
+    for s in sorted(surahs_data, key=lambda x: x["sno"]):
+        satirlar = "".join(
+            f'<li><span class="mo-ar">{seg["start"]}-{seg["end"]}</span> {escape(seg["title"])} '
+            f'<small>({seg["count"]})</small></li>'
+            for seg in s.get("segments", [])
+        )
+        bloklar.append(
+            f'<div class="mo-blok"><div class="mo-baslik">{s["sno"]}. {escape(s["name"])} '
+            f'<small>{s.get("verses_count", "")} âyet</small></div><ul>{satirlar}</ul></div>'
+        )
+    return f"""
+    <div class="page doc-page mevzu-ozeti">
+      <h2>Mevzu bölümlemesi · bütün sûreler</h2>
+      <p class="mo-not">Her sûrenin mevzu bölümleri: âyet aralığı, mevzu adı ve âyet sayısı. Sûreler sırayla; her sûre bir blok.</p>
+      <div class="mo-izgara">{"".join(bloklar)}</div>
+    </div>
+    """
+
+
 def build_unified_html(config, surahs_data):
     """Yapılandırmada işaret edilen dosyaları ve grafikleri uygun sırayla uç uca ekleyip tek bir HTML oluşturur."""
     md_conv = get_markdown_converter()
@@ -532,6 +555,9 @@ def build_unified_html(config, surahs_data):
             </div>
             """
             body_sections.append(cover_html)
+
+        elif tur == "MEVZU_OZETI":
+            body_sections.append(mevzu_ozeti(surahs_data))
 
         elif tur == "SOZLUK":
             body_sections.append(sozluk_bolumu(
@@ -1194,6 +1220,16 @@ tr:nth-child(even) {{ background: #f8fafc; }}
   text-decoration: none;
   letter-spacing: 0.5px;
 }}
+.mevzu-ozeti h2 {{ margin-top: 0; }}
+.mo-not {{ font-size: 8.5pt; color: #64748b; margin: 4px 0 10px; }}
+.mo-izgara {{ column-count: 3; column-gap: 14px; }}
+.mo-blok {{ break-inside: avoid; margin: 0 0 8px; padding: 4px 6px; border: 1px solid #e2e8f0; border-radius: 4px; }}
+.mo-baslik {{ font-weight: 700; font-size: 8.5pt; color: #1e3a8a; }}
+.mo-baslik small {{ font-weight: 400; color: #64748b; }}
+.mo-blok ul {{ list-style: none; margin: 2px 0 0; padding: 0; font-size: 7.5pt; line-height: 1.35; }}
+.mo-blok li {{ margin: 0; }}
+.mo-ar {{ font-family: monospace; color: #334155; }}
+.mo-blok li small {{ color: #64748b; }}
 .ust-bos {{ width: 110px; }}
 .ust-ara input {{
   width: 200px;
