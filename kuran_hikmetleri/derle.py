@@ -33,6 +33,7 @@ REPO_ROOT = BASE_DIR.parent
 CONFIG_PATH = BASE_DIR / "derleme_yapilandirma.json"
 PARCA_DIR = BASE_DIR / "parcalar"
 MOD_AYAR = {"mod": "gelistirme"}
+TEMBEL = {"acik": False}
 
 PARCA_JS = """
 function parcaGetir(ad){
@@ -349,6 +350,8 @@ def detay_bolumu(segments, agac_segmentler, verse_dict):
 
 def lazy_metin(sno, ad, html_icerik):
     """Sûre metni parçaya yazılır; görünür olunca indirilir."""
+    if not TEMBEL["acik"]:
+        return html_icerik
     dosya = parca_yaz(f"metin-{sno}-{ad}", html_icerik)
     return f'<div class="lazy-metin" data-parca="{dosya}"></div>'
 
@@ -412,7 +415,7 @@ function bolumAc(el, acik){ el.querySelectorAll('details').forEach(function(d){ 
 function sabitAc(cb){ hepsi(cb.checked); }
 var LG = { dizin: null, dizinYuk: null, parcalar: {}, zamanlayici: null };
 function tabloyuDoldur(d){
-  if (d.getAttribute('data-dolu') || d.getAttribute('data-yukleniyor')) return;
+  if (d.getAttribute('data-dolu') || d.getAttribute('data-yukleniyor') || !d.getAttribute('data-parca')) return;
   d.setAttribute('data-yukleniyor', '1');
   var ad = d.getAttribute('data-parca');
   var ayet = d.getAttribute('data-ayet');
@@ -435,6 +438,7 @@ document.addEventListener('toggle', function(e){
 }, true);
 function dizinHazir(){
   if (LG.dizin) return Promise.resolve(LG.dizin);
+  if (typeof LG_DIZIN_VERI !== 'undefined') { LG.dizin = LG_DIZIN_VERI; return Promise.resolve(LG.dizin); }
   if (!LG.dizinYuk) LG.dizinYuk = parcaGetir(LG_DIZIN).then(function(t){ LG.dizin = JSON.parse(t); return LG.dizin; });
   return LG.dizinYuk;
 }
@@ -539,10 +543,11 @@ def lugat_sayfasi(surahs_data):
                     f'<tbody>{satirlar}</tbody></table>'
                 )
                 frag_parcalar.append(f'<template data-ayet="{ayet}">{tablo}</template>')
+                govde_icerik = "" if TEMBEL["acik"] else tablo
                 mevzu_kutular.append(
                     f'<details class="ayet-d" data-sno="{sno}" data-ayet="{ayet}" data-parca="@@PARCA@@">'
                     f'<summary>Âyet {ayet} · {len(kelimeler)} yeni kelime</summary>'
-                    f'<div class="ayet-govde"></div></details>'
+                    f'<div class="ayet-govde">{govde_icerik}</div></details>'
                 )
             if not mevzu_kutular:
                 continue
@@ -555,8 +560,11 @@ def lugat_sayfasi(surahs_data):
             )
         if not sure_satirlari:
             continue
-        sure_dosya = parca_yaz(f"lg-{sno}", "".join(frag_parcalar))
-        sure_satirlari = [x.replace("@@PARCA@@", sure_dosya) for x in sure_satirlari]
+        if TEMBEL["acik"]:
+            sure_dosya = parca_yaz(f"lg-{sno}", "".join(frag_parcalar))
+            sure_satirlari = [x.replace("@@PARCA@@", sure_dosya) for x in sure_satirlari]
+        else:
+            sure_satirlari = [x.replace(' data-parca="@@PARCA@@"', '') for x in sure_satirlari]
         bolumler.append(
             f'<details class="sure-d" id="sure-{sno}"><summary>{sno}. {escape(s["name"])} Suresi · {sure_kelime} yeni kelime</summary>'
             f'<div class="bolum-ac"><button onclick="bolumAc(this.closest(\'details\'),true)">Bu surenin tüm tablolarını aç</button> '
@@ -564,7 +572,11 @@ def lugat_sayfasi(surahs_data):
             f'{"".join(sure_satirlari)}</details>'
         )
     dizin_json = json.dumps(dizin, ensure_ascii=False, separators=(",", ":"))
-    dizin_dosya = parca_yaz("lg-dizin", dizin_json, ".json")
+    if TEMBEL["acik"]:
+        dizin_dosya = parca_yaz("lg-dizin", dizin_json, ".json")
+        dizin_tanimi = f"var LG_DIZIN = '{dizin_dosya}';"
+    else:
+        dizin_tanimi = "var LG_DIZIN_VERI = " + dizin_json.replace("</", "<\\/") + ";"
     return f"""<!DOCTYPE html>
 <html lang="tr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -595,7 +607,7 @@ def lugat_sayfasi(surahs_data):
   <ul id="sonuclar" style="display:none"></ul>
   <div id="agac">{"".join(bolumler)}</div>
 </main>
-<script>var PARCA_MOD = '{MOD_AYAR["mod"]}'; var LG_DIZIN = '{dizin_dosya}';</script>
+<script>var PARCA_MOD = '{MOD_AYAR["mod"]}'; {dizin_tanimi}</script>
 <script>{PARCA_JS}</script>
 <script>{LUGAT_SAYFA_JS}</script>
 </body></html>"""
@@ -627,6 +639,7 @@ def mevzu_ozeti(surahs_data):
 def build_unified_html(config, surahs_data):
     """Yapılandırmada işaret edilen dosyaları ve grafikleri uygun sırayla uç uca ekleyip tek bir HTML oluşturur."""
     MOD_AYAR["mod"] = config.get("mod", "gelistirme")
+    TEMBEL["acik"] = bool(config.get("tembel_yukleme", False))
     parca_temizle()
     md_conv = get_markdown_converter()
     surah_dict = {s["sno"]: s for s in surahs_data}
@@ -827,10 +840,15 @@ def build_unified_html(config, surahs_data):
                     </div>
                     """
                     icerik_blogu = detail_content.replace("</script", "<\\/script")
-                    dosya_detay = parca_yaz(f"icerik-{sno}", detail_content)
-                    chart_section_html = chart_section_html.replace(
-                        f'<div class="lazy-icerik" data-sure="{sno}"></div>',
-                        f'<div class="lazy-icerik" data-sure="{sno}" data-parca="{dosya_detay}"></div>')
+                    if TEMBEL["acik"]:
+                        dosya_detay = parca_yaz(f"icerik-{sno}", detail_content)
+                        chart_section_html = chart_section_html.replace(
+                            f'<div class="lazy-icerik" data-sure="{sno}"></div>',
+                            f'<div class="lazy-icerik" data-sure="{sno}" data-parca="{dosya_detay}"></div>')
+                    else:
+                        chart_section_html = chart_section_html.replace(
+                            f'<div class="lazy-icerik" data-sure="{sno}"></div>',
+                            f'<div class="sure-detay">{detail_content}</div>')
                     sure_elements.append(chart_section_html)
 
                 body_sections.append(f"""
