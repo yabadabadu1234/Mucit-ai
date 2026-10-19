@@ -26,27 +26,42 @@ def konulari_oku():
         s = ham.strip()
         if not s or s.startswith(("|", "#", "- **")) or ":" not in s:
             continue
-        konu, refs = s.split(":", 1)
-        konular.append((konu.strip(), _atiflari_ayristir(refs.strip())))
-    return konular
+        # Tırnaklı alıntının içindeki iki nokta konu ayırıcısı değildir: atıf, sayıdan önceki iki noktadadır.
+        parcalar = re.split(r":\s+(?=\d)", s, maxsplit=1) if "“" in s else s.split(":", 1)
+        konu, refs = parcalar[0], parcalar[1]
+        konular.append((konu.strip(), refs.strip()))
+    atif_haritasi = {k: _atiflari_ayristir(r) for k, r in konular}
+    cozulmus = []
+    for konu, refs in konular:
+        if refs.startswith("bk."):
+            hedef = refs[3:].strip().rstrip(".").strip("()")
+            atiflar = atif_haritasi.get(hedef, [])
+        else:
+            atiflar = _atiflari_ayristir(refs)
+        cozulmus.append((konu, atiflar))
+    return cozulmus
 
 
 def _atiflari_ayristir(refs):
-    """'2/124, 258; 4/168-169' → [(2,124,124), (2,258,258), (4,168,169)]."""
+    """'2/124, 258; 4/168-169' → [(2,124,124), (2,258,258), (4,168,169)].
+
+    Sonundaki açıklamalar ('ve dipnotu', 'dipnotu', '(İyi):' gibi etiketler) atılır.
+    Boşluklu yazımlar ('12/ 4-18', '4/38,119 43/36-38') da okunur.
+    """
+    refs = re.sub(r"\([^)]*\):\s*", "", refs)
+    refs = re.sub(r"/\s+", "/", refs)
+    gövde = re.split(r"\s+(?=[A-Za-zÇĞİÖŞÜçğıöşü(’'])", refs.strip(), maxsplit=1)[0]
     cikti, sure = [], None
-    for parca in refs.rstrip(".").split(";"):
-        for oge in parca.split(","):
-            oge = oge.strip()
-            m = re.match(r"^(\d+)/(\d+)(?:-(\d+))?$", oge)
-            if m:
-                sure = int(m.group(1))
-                a, b = int(m.group(2)), int(m.group(3) or m.group(2))
-            else:
-                m = re.match(r"^(\d+)(?:-(\d+))?$", oge)
-                if not m or sure is None:
-                    continue
-                a, b = int(m.group(1)), int(m.group(2) or m.group(1))
-            cikti.append((sure, a, b))
+    for tok in re.findall(r"\d+/\d+(?:-\d+)?|\d+(?:-\d+)?", gövde):
+        if "/" in tok:
+            sure_s, aralik = tok.split("/")
+            sure = int(sure_s)
+        else:
+            aralik = tok
+        if sure is None:
+            continue
+        a, _, b = aralik.partition("-")
+        cikti.append((sure, int(a), int(b or a)))
     return cikti
 
 
