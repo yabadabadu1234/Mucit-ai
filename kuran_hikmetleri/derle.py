@@ -1241,14 +1241,17 @@ tr:nth-child(even) {{ background: #f8fafc; }}
   color: #64748b;
 }}
 .ag-cok-sutun {{
-  display: block;
-  column-count: 4;
-  column-gap: 8px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  direction: rtl;
+  align-items: start;
 }}
 .ag-cok-sutun .ag-kart {{
   display: inline-block;
   width: 100%;
   margin-bottom: 8px;
+  direction: ltr;
 }}
 .ag-kart {{
   background: #ffffff;
