@@ -487,7 +487,7 @@ def lugat_sayfasi(surahs_data):
 <main class="kap">
   <h1>Lugat · Kur'ân'da ilk geçen kelimeler</h1>
   <p>Toplam {toplam} kelime. Kelimeler sûre → mevzu → âyet sırasıyla, Kur'ân metnindeki ilk geçtikleri yere göre dizilmiştir. Bir seviyeyi açmak için başlığına tıklayın; "tümünü aç" düğmesi o seviyedeki bütün tabloları açar. "Açık gibi davran" işaretliyken bütün tablolar açık kalır (kopyalama için).</p>
-  <div class="not"><strong>Kök anlamı notu:</strong> Kök anlamları Türkçe karşılıklardır; doğrulanmamıştır. Belirsiz yerler "(?)" ile işaretlidir.</div>
+  <div class="not"><strong>Kök anlamı notu:</strong> Kök anlamları Türkçe karşılıklardır; doğrulanmamıştır. Belirsiz köklerde (?) işaretli kayıtlar için birden çok ihtimal sıralanmıştır; bu köklerin Arapça'daki varlığı meçhuldür.</div>
   <div class="not"><strong>Lugat notu:</strong> Lugat sütunundaki Türkçe karşılıklar, <em>veri_harici/eyupipler/word-translations-tr.json</em> dosyasından alınmıştır; hazır bir sözlük olup karşılıklar tek tek doğrulanmamıştır. Karşılığı olmayanlar "—" ile işaretlidir.</div>
   <div class="ara-sayi" id="ara-sayi2"></div>
   {"".join(bolumler)}
