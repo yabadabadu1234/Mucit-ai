@@ -339,49 +339,158 @@ SURUM_KONTROLU_SCRIPT = """<script>
 </script>"""
 
 
-def sozluk_bolumu(sarf_dosya, kelimeler_dosya, md_conv):
-    """Sarf-nahiv anlatımı + Kur'ân'da sırayla karşılaşılan farklı kelimeler.
-    Liste sure sure ayrılır: her sûrede ilk kez geçen kelimeler (kelimeler.json, 'ilk' alanı) tabloya girer.
-    Lugat sütunu, kelime_mealli.SOZLUK dosyasındaki mevcut Türkçe karşılıklardan sözlük formuna göre gelir."""
-    from html import escape
+def sozluk_bolumu(sarf_dosya, md_conv):
+    """Kitabın başındaki sarf-nahiv anlatımı. Kelime tabloları lugat sayfasındadır (lugat_sayfasi)."""
     md_conv.reset()
     sarf_html = md_conv.convert(sarf_dosya.read_text(encoding="utf-8"))
-    kayitlar = json.loads(kelimeler_dosya.read_text(encoding="utf-8"))
-    # Lugat: kelimenin sözlük formu (lem) için mevcut Türkçe karşılık dosyasından; karşılığı olmayan "—"
-    karsiliklar = json.loads(kelime_mealli.SOZLUK.read_text(encoding="utf-8"))["translations"]
-    # Kök geçişi: kökün Kur'ân'daki toplam geçiş sayısı (kelimelerin adetleri toplamı).
-    # Kaynak PDF'teki "Kur'ân'da geçen en çok kökler" tablosuyla karşılaştırıldı (ilk 12 kök uyumlu).
-    kok_gecisi = {}
-    for k in kayitlar:
-        kok_gecisi[k["kok"]] = kok_gecisi.get(k["kok"], 0) + k["adet"]
-    sure_kelimeleri = {}
-    for k in kayitlar:
-        k["lugat"] = karsiliklar.get(k["lem"], "")
-        k["kok_gecisi"] = kok_gecisi.get(k["kok"], 0) if k["kok"] else 0
-        sure_kelimeleri.setdefault(int(k["ilk"].split(":")[0]), []).append(k)
-    sureler_html = []
-    for sno in sorted(sure_kelimeleri):
-        satirlar = "".join(
-            f'<tr><td style="font-family:Amiri,serif; font-size:13pt; direction:rtl;">{escape(k["kelime"])}</td>'
-            f'<td>{escape(k["kok"]) or "—"}</td><td>{k["kok_gecisi"] or "—"}</td><td>{escape(k["tur"])}</td>'
-            f'<td>{escape(k["lugat"]) or "—"}</td>'
-            f'<td>{k["bab"] or "—"}</td><td>{k["zaman"] or "—"}</td>'
-            f'<td>{k["ilk"].split(":")[1]}</td><td>{k["adet"]}</td></tr>'
-            for k in sure_kelimeleri[sno]
-        )
-        sureler_html.append(
-            f'<details><summary><strong>{sno}. sûre</strong> · {len(sure_kelimeleri[sno])} yeni kelime</summary>'
-            f'<table><thead><tr><th>Kelime</th><th>Kök</th><th>Kök geçişi</th><th>Tür</th><th>Lugat</th><th>Bab</th><th>Zaman</th>'
-            f'<th>İlk âyet</th><th>Adet</th></tr></thead><tbody>{satirlar}</tbody></table></details>'
-        )
     return f"""
     <div class="page doc-page sozluk-page">
       <div class="markdown-content">{sarf_html}</div>
-      <h2>Sözlük: sûrelere göre yeni kelimeler</h2>
-      <p>Her sûrede ilk kez geçen kelimeler, Kur'ân metnindeki sırasıyla listelenir. Adet, kelimenin bütün Kur'ân'daki geçiş sayısıdır. Lugat, sözlük formunun (lem) mevcut Türkçe karşılığıdır; karşılığı olmayanlar "—" ile işaretlidir.</p>
-      {"".join(sureler_html)}
+      <p><a href="kuran_hikmetleri_lugat.html">Kelime tablolarına (lugat) git &rarr;</a></p>
     </div>
     """
+
+
+LUGAT_SAYFA_STIL = """
+body { margin:0; font-family:'Plus Jakarta Sans',system-ui,sans-serif; background:#f5f1e8; color:#1e293b; line-height:1.6; }
+.ust { position:sticky; top:0; z-index:5; background:#0f172a; color:#e2e8f0; padding:10px 16px; display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+.ust a { color:#fbbf24; text-decoration:none; font-weight:700; }
+.ust input[type=search] { flex:1 1 260px; padding:8px 10px; border-radius:8px; border:1px solid #334155; background:#1e293b; color:#fff; font-size:12pt; }
+.ust button, .ust label { background:#1e293b; color:#e2e8f0; border:1px solid #334155; border-radius:8px; padding:6px 10px; font-size:10pt; cursor:pointer; }
+.kap { max-width:960px; margin:0 auto; padding:18px 16px 60px; }
+.not { background:#fff7e6; border-left:4px solid #d97706; padding:8px 12px; font-size:10pt; margin:10px 0 16px; }
+details { background:#fff; border:1px solid #e2e8f0; border-radius:8px; margin:8px 0; }
+details > summary { cursor:pointer; padding:8px 12px; font-weight:600; }
+details > details { margin:6px 10px; }
+details .bolum-ac { margin:6px 12px; font-size:9.5pt; }
+.mevzu-d > summary { color:#1e40af; }
+table { width:calc(100% - 24px); margin:4px 12px 12px; border-collapse:collapse; font-size:10pt; }
+th, td { border:1px solid #e2e8f0; padding:4px 6px; text-align:left; }
+th { background:#f8fafc; }
+td.ar { font-family:'Amiri',serif; font-size:13pt; direction:rtl; text-align:right; }
+tr.gizli { display:none; }
+.ara-sayi { font-size:10pt; color:#64748b; margin:6px 0; }
+"""
+
+LUGAT_SAYFA_JS = """
+function hepsi(acik){ document.querySelectorAll('details').forEach(function(d){ d.open = acik; }); }
+function bolumAc(el, acik){ el.querySelectorAll('details').forEach(function(d){ d.open = acik; }); el.open = acik; }
+function sabitAc(cb){ hepsi(cb.checked); }
+function araIsle(q){
+  q = (q || '').trim();
+  var satirlar = document.querySelectorAll('tr[data-ara]');
+  var gorunen = 0;
+  satirlar.forEach(function(tr){
+    var uyar = !q || tr.getAttribute('data-ara').indexOf(q) !== -1;
+    tr.classList.toggle('gizli', !uyar);
+    if (uyar) gorunen++;
+  });
+  document.querySelectorAll('details.ayet-d').forEach(function(d){
+    var var_ = d.querySelector('tr[data-ara]:not(.gizli)') !== null;
+    d.style.display = (q && !var_) ? 'none' : '';
+    if (q && var_) d.open = true;
+  });
+  document.querySelectorAll('details.mevzu-d, details.sure-d').forEach(function(d){
+    var var_ = d.querySelector('tr[data-ara]:not(.gizli)') !== null;
+    d.style.display = (q && !var_) ? 'none' : '';
+    if (q && var_) d.open = true;
+  });
+  document.getElementById('ara-sayi').textContent = q ? (gorunen + ' sonuç') : '';
+}
+window.addEventListener('DOMContentLoaded', function(){
+  var q = new URLSearchParams(location.search).get('ara') || '';
+  if (q) { document.getElementById('ara').value = q; araIsle(q); }
+});
+"""
+
+
+def lugat_sayfasi(surahs_data):
+    """Lugat sayfası: sure → mevzu → âyet seviyesinde açılır kelime tabloları + arama."""
+    from html import escape
+    kayitlar = json.loads((BASE_DIR / "kaynak/sozluk/kelimeler.json").read_text(encoding="utf-8"))
+    karsiliklar = json.loads(kelime_mealli.SOZLUK.read_text(encoding="utf-8"))["translations"]
+    # Âyete göre gruplama: her kelime ilk geçtiği âyette listelenir
+    kok_gecisi = {}
+    for k in kayitlar:
+        kok_gecisi[k["kok"]] = kok_gecisi.get(k["kok"], 0) + k["adet"]
+    ayet_kelime = {}
+    for k in kayitlar:
+        k["lugat"] = karsiliklar.get(k["lem"], "")
+        k["kok_gecisi"] = kok_gecisi.get(k["kok"], 0) if k["kok"] else 0
+        sno, ayet = (int(x) for x in k["ilk"].split(":"))
+        ayet_kelime.setdefault((sno, ayet), []).append(k)
+    sure_adi = {s["sno"]: s for s in surahs_data}
+    toplam = len(kayitlar)
+    bolumler = []
+    for sno in sorted(sure_adi):
+        s = sure_adi[sno]
+        segmentler = s.get("segments", [])
+        sure_satirlari = []
+        sure_kelime = 0
+        for seg in segmentler:
+            mevzu_kutular = []
+            mevzu_kelime = 0
+            for ayet in range(seg["start"], seg["end"] + 1):
+                kelimeler = ayet_kelime.get((sno, ayet), [])
+                if not kelimeler:
+                    continue
+                mevzu_kelime += len(kelimeler)
+                satirlar = "".join(
+                    f'<tr data-ara="{escape((k["kelime"] + " " + k["kok"] + " " + k["lugat"]).lower())}">'
+                    f'<td class="ar">{escape(k["kelime"])}</td><td>{escape(k["kok"]) or "—"}</td>'
+                    f'<td>{k["kok_gecisi"] or "—"}</td><td>{escape(k["lugat"]) or "—"}</td>'
+                    f'<td>{escape(k["tur"])}</td><td>{k["bab"] or "—"}</td><td>{k["zaman"] or "—"}</td>'
+                    f'<td>{k["adet"]}</td></tr>'
+                    for k in kelimeler
+                )
+                mevzu_kutular.append(
+                    f'<details class="ayet-d"><summary>Âyet {ayet} · {len(kelimeler)} yeni kelime</summary>'
+                    f'<table><thead><tr><th>Kelime</th><th>Kök</th><th>Kök geçişi</th><th>Lugat</th>'
+                    f'<th>Tür</th><th>Kalıp</th><th>Zaman</th><th>Adet</th></tr></thead>'
+                    f'<tbody>{satirlar}</tbody></table></details>'
+                )
+            if not mevzu_kutular:
+                continue
+            sure_kelime += mevzu_kelime
+            sure_satirlari.append(
+                f'<details class="mevzu-d"><summary>{escape(seg["title"])} · Âyet {seg["start"]}–{seg["end"]} · {mevzu_kelime} yeni kelime</summary>'
+                f'<div class="bolum-ac"><button onclick="bolumAc(this.closest(\'details\'),true)">Bu mevzunun tümünü aç</button> '
+                f'<button onclick="bolumAc(this.closest(\'details\'),false)">Kapat</button></div>'
+                f'{"".join(mevzu_kutular)}</details>'
+            )
+        if not sure_satirlari:
+            continue
+        bolumler.append(
+            f'<details class="sure-d" id="sure-{sno}"><summary>{sno}. {escape(s["name"])} Suresi · {sure_kelime} yeni kelime</summary>'
+            f'<div class="bolum-ac"><button onclick="bolumAc(this.closest(\'details\'),true)">Bu surenin tüm tablolarını aç</button> '
+            f'<button onclick="bolumAc(this.closest(\'details\'),false)">Kapat</button></div>'
+            f'{"".join(sure_satirlari)}</details>'
+        )
+    return f"""<!DOCTYPE html>
+<html lang="tr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kur'an Hikmetleri · Lugat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>{LUGAT_SAYFA_STIL}</style></head>
+<body>
+<header class="ust">
+  <a href="kuran_hikmetleri_kitap.html">&larr; Kitap</a>
+  <input type="search" id="ara" placeholder="Kelime, kök veya lugat ara…" oninput="araIsle(this.value)">
+  <span id="ara-sayi" class="ara-sayi"></span>
+  <button onclick="hepsi(true)">Tümünü aç</button>
+  <button onclick="hepsi(false)">Tümünü kapat</button>
+  <label><input type="checkbox" onchange="sabitAc(this)"> Açık gibi davran</label>
+</header>
+<main class="kap">
+  <h1>Lugat · Kur'ân'da ilk geçen kelimeler</h1>
+  <p>Toplam {toplam} kelime. Kelimeler sûre → mevzu → âyet sırasıyla, Kur'ân metnindeki ilk geçtikleri yere göre dizilmiştir. Bir seviyeyi açmak için başlığına tıklayın; "tümünü aç" düğmesi o seviyedeki bütün tabloları açar. "Açık gibi davran" işaretliyken bütün tablolar açık kalır (kopyalama için).</p>
+  <div class="not"><strong>Lugat notu:</strong> Lugat sütunundaki Türkçe karşılıklar, <em>veri_harici/eyupipler/word-translations-tr.json</em> dosyasından alınmıştır; hazır bir sözlük olup karşılıklar tek tek doğrulanmamıştır. Karşılığı olmayanlar "—" ile işaretlidir.</div>
+  <div class="ara-sayi" id="ara-sayi2"></div>
+  {"".join(bolumler)}
+</main>
+<script>{LUGAT_SAYFA_JS}</script>
+</body></html>"""
 
 
 def build_unified_html(config, surahs_data):
@@ -424,7 +533,6 @@ def build_unified_html(config, surahs_data):
         elif tur == "SOZLUK":
             body_sections.append(sozluk_bolumu(
                 BASE_DIR / item.get("sarf_dosya", "kaynak/sozluk/SARF_NAHIV.md"),
-                BASE_DIR / item.get("kelimeler_dosya", "kaynak/sozluk/kelimeler.json"),
                 md_conv,
             ))
 
@@ -600,9 +708,12 @@ def build_unified_html(config, surahs_data):
         '<header class="ust-cubuk">'
         '<button type="button" class="menu-dugme" onclick="menuAc()" aria-label="Menü">&#9776; Menü</button>'
         '<a class="ust-baslik" href="#kitap-basi">Kur\'an Hikmetleri</a>'
-        '<span class="ust-bos"></span></header>'
+        '<form class="ust-ara" action="kuran_hikmetleri_lugat.html" method="get">'
+        '<input type="search" name="ara" placeholder="Lugatta ara…" aria-label="Lugatta ara">'
+        '</form></header>'
         '<div class="menu-panel" id="menuPanel">'
         '<button type="button" class="menu-sekme" onclick="surelerAc()">Sureler</button>'
+        '<a class="menu-sekme" href="kuran_hikmetleri_lugat.html">Lugat</a>'
         '</div>'
         '<nav class="kenar" id="kenar"><div class="kenar-ust"><span>Sureler</span>'
         '<button type="button" class="kenar-kapat" onclick="surelerKapat()" title="Kapat">&#10005;</button></div>'
@@ -1081,6 +1192,15 @@ tr:nth-child(even) {{ background: #f8fafc; }}
   letter-spacing: 0.5px;
 }}
 .ust-bos {{ width: 110px; }}
+.ust-ara input {{
+  width: 200px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background: #1e293b;
+  color: #fff;
+  font-size: 11pt;
+}}
 .menu-panel {{
   display: none;
   position: fixed;
@@ -1269,6 +1389,9 @@ def compile_all(rebuild_charts=True):
     with open(html_out_path, "w", encoding="utf-8") as f:
         f.write(unified_html)
     print(f"   Kitap HTML dosyası hazırlandı: {html_out_path} ({os.path.getsize(html_out_path)} bayt)")
+    lugat_path = BASE_DIR / "kuran_hikmetleri_lugat.html"
+    lugat_path.write_text(lugat_sayfasi(surahs_data), encoding="utf-8")
+    print(f"   Lugat sayfası hazırlandı: {lugat_path} ({os.path.getsize(lugat_path)} bayt)")
 
     pdf_out_path = BASE_DIR / config.get("cikti_pdf", "kuran_hikmetleri.pdf")
     print(f"\n[ADIM 3/3] Headless Chrome ile PDF derleniyor -> {pdf_out_path.name}...")
