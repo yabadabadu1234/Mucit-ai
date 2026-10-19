@@ -735,6 +735,10 @@ def build_unified_html(config, surahs_data):
             if fihrist_file.exists():
                 with open(fihrist_file, "r", encoding="utf-8") as f:
                     fcontent = f.read()
+                # Konu dizini (sûre tablosunun altındaki büyük liste) kitaba girmez; yalnız sûre tablosu ve notlar girer.
+                on_kisim, isaret, _konu_dizini = fcontent.partition("*'(rivayet)'")
+                if isaret:
+                    fcontent = on_kisim + isaret + _konu_dizini.split("\n", 1)[0]
                 fihrist_html = md_conv.convert(fcontent)
                 body_sections.append(f"""
                 <div class="page doc-page">
