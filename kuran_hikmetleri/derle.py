@@ -339,6 +339,41 @@ SURUM_KONTROLU_SCRIPT = """<script>
 </script>"""
 
 
+def sozluk_bolumu(sarf_dosya, kelimeler_dosya, md_conv):
+    """Sarf-nahiv anlatımı + Kur'ân'da sırayla karşılaşılan farklı kelimeler.
+    Liste sure sure ayrılır: her sûrede ilk kez geçen kelimeler (kelimeler.json, 'ilk' alanı) tabloya girer.
+    Lugat (anlam) sütunu yoktur: anlamlar elle yazılmadıkça kopyalanmaz (sözlük_uret.py notu)."""
+    from html import escape
+    md_conv.reset()
+    sarf_html = md_conv.convert(sarf_dosya.read_text(encoding="utf-8"))
+    kayitlar = json.loads(kelimeler_dosya.read_text(encoding="utf-8"))
+    sure_kelimeleri = {}
+    for k in kayitlar:
+        sure_kelimeleri.setdefault(int(k["ilk"].split(":")[0]), []).append(k)
+    sureler_html = []
+    for sno in sorted(sure_kelimeleri):
+        satirlar = "".join(
+            f'<tr><td style="font-family:Amiri,serif; font-size:13pt; direction:rtl;">{escape(k["kelime"])}</td>'
+            f'<td>{escape(k["kok"]) or "—"}</td><td>{escape(k["tur"])}</td>'
+            f'<td>{k["bab"] or "—"}</td><td>{k["zaman"] or "—"}</td>'
+            f'<td>{k["ilk"].split(":")[1]}</td><td>{k["adet"]}</td></tr>'
+            for k in sure_kelimeleri[sno]
+        )
+        sureler_html.append(
+            f'<details><summary><strong>{sno}. sûre</strong> · {len(sure_kelimeleri[sno])} yeni kelime</summary>'
+            f'<table><thead><tr><th>Kelime</th><th>Kök</th><th>Tür</th><th>Bab</th><th>Zaman</th>'
+            f'<th>İlk âyet</th><th>Adet</th></tr></thead><tbody>{satirlar}</tbody></table></details>'
+        )
+    return f"""
+    <div class="page doc-page sozluk-page">
+      <div class="markdown-content">{sarf_html}</div>
+      <h2>Sözlük: sûrelere göre yeni kelimeler</h2>
+      <p>Her sûrede ilk kez geçen kelimeler, Kur'ân metnindeki sırasıyla listelenir. Adet, kelimenin bütün Kur'ân'daki geçiş sayısıdır.</p>
+      {"".join(sureler_html)}
+    </div>
+    """
+
+
 def build_unified_html(config, surahs_data):
     """Yapılandırmada işaret edilen dosyaları ve grafikleri uygun sırayla uç uca ekleyip tek bir HTML oluşturur."""
     md_conv = get_markdown_converter()
@@ -375,6 +410,13 @@ def build_unified_html(config, surahs_data):
             </div>
             """
             body_sections.append(cover_html)
+
+        elif tur == "SOZLUK":
+            body_sections.append(sozluk_bolumu(
+                BASE_DIR / item.get("sarf_dosya", "kaynak/sozluk/SARF_NAHIV.md"),
+                BASE_DIR / item.get("kelimeler_dosya", "kaynak/sozluk/kelimeler.json"),
+                md_conv,
+            ))
 
         elif tur == "GRAFIK_TERTIP":
             img_rel = item.get("dosya", "grafikler/kuran_sureleri_tertip_cetveli.png")
