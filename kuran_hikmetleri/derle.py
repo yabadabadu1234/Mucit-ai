@@ -349,15 +349,21 @@ def sozluk_bolumu(sarf_dosya, kelimeler_dosya, md_conv):
     kayitlar = json.loads(kelimeler_dosya.read_text(encoding="utf-8"))
     # Lugat: kelimenin sözlük formu (lem) için mevcut Türkçe karşılık dosyasından; karşılığı olmayan "—"
     karsiliklar = json.loads(kelime_mealli.SOZLUK.read_text(encoding="utf-8"))["translations"]
+    # Kök geçişi: kökün Kur'ân'daki toplam geçiş sayısı (kelimelerin adetleri toplamı).
+    # Kaynak PDF'teki "Kur'ân'da geçen en çok kökler" tablosuyla karşılaştırıldı (ilk 12 kök uyumlu).
+    kok_gecisi = {}
+    for k in kayitlar:
+        kok_gecisi[k["kok"]] = kok_gecisi.get(k["kok"], 0) + k["adet"]
     sure_kelimeleri = {}
     for k in kayitlar:
         k["lugat"] = karsiliklar.get(k["lem"], "")
+        k["kok_gecisi"] = kok_gecisi.get(k["kok"], 0) if k["kok"] else 0
         sure_kelimeleri.setdefault(int(k["ilk"].split(":")[0]), []).append(k)
     sureler_html = []
     for sno in sorted(sure_kelimeleri):
         satirlar = "".join(
             f'<tr><td style="font-family:Amiri,serif; font-size:13pt; direction:rtl;">{escape(k["kelime"])}</td>'
-            f'<td>{escape(k["kok"]) or "—"}</td><td>{escape(k["tur"])}</td>'
+            f'<td>{escape(k["kok"]) or "—"}</td><td>{k["kok_gecisi"] or "—"}</td><td>{escape(k["tur"])}</td>'
             f'<td>{escape(k["lugat"]) or "—"}</td>'
             f'<td>{k["bab"] or "—"}</td><td>{k["zaman"] or "—"}</td>'
             f'<td>{k["ilk"].split(":")[1]}</td><td>{k["adet"]}</td></tr>'
@@ -365,7 +371,7 @@ def sozluk_bolumu(sarf_dosya, kelimeler_dosya, md_conv):
         )
         sureler_html.append(
             f'<details><summary><strong>{sno}. sûre</strong> · {len(sure_kelimeleri[sno])} yeni kelime</summary>'
-            f'<table><thead><tr><th>Kelime</th><th>Kök</th><th>Tür</th><th>Lugat</th><th>Bab</th><th>Zaman</th>'
+            f'<table><thead><tr><th>Kelime</th><th>Kök</th><th>Kök geçişi</th><th>Tür</th><th>Lugat</th><th>Bab</th><th>Zaman</th>'
             f'<th>İlk âyet</th><th>Adet</th></tr></thead><tbody>{satirlar}</tbody></table></details>'
         )
     return f"""
