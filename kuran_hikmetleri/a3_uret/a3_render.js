@@ -1,6 +1,6 @@
 // A3 kitap render'ı: kitap HTML'ini başlık (h1/h2) kesim noktalarına göre A3 yükseklikli sayfalara böler.
 // Kullanım: node a3_render.js [--html yol] [--cikti klasör] [--vw 1404] [--dsf 1.6]
-// Her çalıştırmada çıktı klasöründeki eski sayfalar silinir (birikmez).
+// Her çalıştırmada çıktı klasöründeki eski sayfalar silinir (birikmez). Sayfalar JPEG (kalite 85).
 const { chromium } = require('playwright');
 const fs = require('fs');
 const path = require('path');
@@ -44,7 +44,7 @@ const H = PAGE_H / DSF;              // sayfa yüksekliği CSS px cinsinden
   console.log('toplam', info.total, 'sayfa', cuts.length);
   for (let i = 0; i < cuts.length; i++) {
     const [y0, y1] = cuts[i];
-    await p.screenshot({ path: path.join(CIKTI, `p${String(i + 1).padStart(4, '0')}.png`), fullPage: true,
+    await p.screenshot({ path: path.join(CIKTI, `p${String(i + 1).padStart(4, '0')}.jpg`), type: 'jpeg', quality: 85, fullPage: true,
       clip: { x: 0, y: y0, width: VW, height: y1 - y0 } });
     if (i % 25 === 0) console.log('çekildi', i + 1, '/', cuts.length);
   }

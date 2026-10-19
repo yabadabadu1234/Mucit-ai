@@ -7,10 +7,10 @@ GIRIS="$(cd "${1:-$DIR/sayfalar}" && pwd)"
 CIKTI="$(cd "$(dirname "${2:-$DIR/../kuran_hikmetleri_a3.pdf}")" && pwd)/$(basename "${2:-$DIR/../kuran_hikmetleri_a3.pdf}")"
 ARA="$DIR/sayfalar_a3"
 rm -rf "$ARA" && mkdir -p "$ARA"
-for f in "$GIRIS"/p*.png; do
+for f in "$GIRIS"/p*.jpg "$GIRIS"/p*.png; do [ -e "$f" ] || continue
   convert "$f" -background white -gravity north -extent 2246x3175 "$ARA/$(basename "$f")"
 done
 rm -f "$CIKTI"
-convert "$ARA"/p*.png -units PixelsPerInch -density 192 "$CIKTI"
+convert "$ARA"/p* -units PixelsPerInch -density 192 "$CIKTI"
 rm -rf "$ARA"
 echo "PDF: $CIKTI"
