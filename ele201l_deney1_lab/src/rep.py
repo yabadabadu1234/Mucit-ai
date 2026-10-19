@@ -4,9 +4,10 @@ from docbuilder import Doc
 
 def build():
     D = Doc("tr")
+    D.sec = 2  # format: 1 Yazım kuralları ve 2 Rapor içeriği bölümleri kapsam dışı; rapor 3'ten başlar
     D.title_block([("TOBB Ekonomi ve Teknoloji Üniversitesi", 13, True), ("Elektrik – Elektronik Mühendisliği Bölümü", 12, False),
-                   ("ELE 201 L – Devre Analizi I Laboratuvarı", 14, True), ("Deney 1 – Laboratuvar Raporu", 14, True), ("Güz 2026", 12, False)],
-                  [("Ad Soyad", ""), ("Numara", ""), ("Tarih", ""), ("Grup Arkadaşı", "Işıl Fidancan, Bahar Işıklar")])
+                   ("ELE 201 L – Devre Analizi I Laboratuvarı", 14, True), ("Deney 1 – Deney Raporu", 14, True), ("Güz 2026", 12, False)],
+                  [("Adı Soyadı", "Işıl Fidancan / Bahar Işıklar / Beşir Kerem Üstüntürk"), ("Numara", "251201045 / 241201036 / 251201037"), ("Tarih", "")])
 
     # ---- sayılar
     R1, R2, R3 = 464.0, 99100.0, 10.30e6
