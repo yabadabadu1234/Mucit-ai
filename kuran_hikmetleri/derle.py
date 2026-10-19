@@ -319,6 +319,14 @@ def detay_bolumu(segments, agac_segmentler, verse_dict):
     return f'<div class="ag-ayrintili">{"".join(bloklar)}</div>'
 
 
+def lazy_metin(sno, ad, html_icerik):
+    """Sûre metni: görünür olunca yüklenir (script bloğunda saklanır)."""
+    kimlik = f"metin-{sno}-{ad}"
+    blok = html_icerik.replace("</script", "<\\/script")
+    return (f'<div class="lazy-metin" data-kaynak="{kimlik}"></div>'
+            f'<script type="text/html" id="{kimlik}">{blok}</script>')
+
+
 SURUM_KONTROLU_HEAD = '<meta name="surum" content="__SURUM__">'
 
 # Açılışta kitabın kendi sürümünü son dağıtılan sürümle (surum.json) karşılaştırır.
@@ -376,55 +384,75 @@ LUGAT_SAYFA_JS = """
 function hepsi(acik){ document.querySelectorAll('details').forEach(function(d){ d.open = acik; }); }
 function bolumAc(el, acik){ el.querySelectorAll('details').forEach(function(d){ d.open = acik; }); el.open = acik; }
 function sabitAc(cb){ hepsi(cb.checked); }
-var LG = { satirlar: [], ayetler: [], ustler: [], zamanlayici: null };
-function lugatHazirla(){
-  LG.satirlar = Array.prototype.slice.call(document.querySelectorAll('tr[data-ara]'));
-  LG.ayetler = Array.prototype.slice.call(document.querySelectorAll('details.ayet-d'));
-  LG.ustler = Array.prototype.slice.call(document.querySelectorAll('details.mevzu-d, details.sure-d'));
-  LG.ayetler.forEach(function(d){ d._satirlar = Array.prototype.slice.call(d.querySelectorAll('tr[data-ara]')); });
-  LG.ustler.forEach(function(d){ d._ayetler = Array.prototype.slice.call(d.querySelectorAll('details.ayet-d')); });
+var LG = { dizin: [], zamanlayici: null };
+function tabloyuDoldur(d){
+  if (d.getAttribute('data-dolu')) return;
+  var govde = d.querySelector('.ayet-govde');
+  var sablon = d.querySelector('template');
+  if (!govde || !sablon) return;
+  govde.appendChild(sablon.content.cloneNode(true));
+  d.setAttribute('data-dolu', '1');
 }
-function araUygula(q){
-  var gorunen = 0;
-  for (var i = 0; i < LG.satirlar.length; i++) {
-    var tr = LG.satirlar[i];
-    var uyar = !q || tr.getAttribute('data-ara').indexOf(q) !== -1;
-    if (uyar) gorunen++;
-    tr.style.display = uyar ? '' : 'none';
+document.addEventListener('toggle', function(e){
+  var d = e.target;
+  if (d.tagName === 'DETAILS' && d.classList.contains('ayet-d') && d.open) tabloyuDoldur(d);
+}, true);
+function dizinSonucu(sno, ayet){
+  var d = document.querySelector('details.ayet-d[data-sno="' + sno + '"][data-ayet="' + ayet + '"]');
+  if (!d) return;
+  var p = d.parentElement;
+  while (p) { if (p.tagName === 'DETAILS') p.open = true; p = p.parentElement; }
+  d.open = true;
+  d.scrollIntoView({ block: 'center' });
+}
+function sonuclariGoster(q){
+  var kutu = document.getElementById('sonuclar');
+  var agac = document.getElementById('agac');
+  var sayi = document.getElementById('ara-sayi');
+  if (!q) { kutu.style.display = 'none'; kutu.innerHTML = ''; agac.style.display = ''; sayi.textContent = ''; return; }
+  var eslesen = [];
+  for (var i = 0; i < LG.dizin.length; i++) {
+    if (LG.dizin[i][2].indexOf(q) !== -1) eslesen.push(LG.dizin[i]);
   }
-  for (var j = 0; j < LG.ayetler.length; j++) {
-    var d = LG.ayetler[j];
-    var var_ = !q || d._satirlar.some(function(t){ return t.style.display !== 'none'; });
-    d.style.display = var_ ? '' : 'none';
-    if (q && var_) d.open = true;
-  }
-  for (var k = 0; k < LG.ustler.length; k++) {
-    var u = LG.ustler[k];
-    var v2 = !q || u._ayetler.some(function(x){ return x.style.display !== 'none'; });
-    u.style.display = v2 ? '' : 'none';
-    if (q && v2) u.open = true;
-  }
-  document.getElementById('ara-sayi').textContent = q ? (gorunen + ' sonuç') : '';
+  var gosterilen = eslesen.slice(0, 300);
+  kutu.innerHTML = gosterilen.map(function(x){
+    return '<li><a href="#" data-sno="' + x[0] + '" data-ayet="' + x[1] + '">' +
+      'S' + x[0] + ':' + x[1] + ' · <span class="lg-ar">' + x[3] + '</span> <small>' + x[4] + '</small></a></li>';
+  }).join('');
+  sayi.textContent = eslesen.length + ' sonuç' + (eslesen.length > 300 ? ' (ilk 300 gösteriliyor)' : '');
+  kutu.style.display = '';
+  agac.style.display = 'none';
 }
 function araIsle(q){
   q = (q || '').trim().toLowerCase();
   clearTimeout(LG.zamanlayici);
-  LG.zamanlayici = setTimeout(function(){ requestAnimationFrame(function(){ araUygula(q); }); }, 220);
+  LG.zamanlayici = setTimeout(function(){ requestAnimationFrame(function(){ sonuclariGoster(q); }); }, 200);
 }
 window.addEventListener('DOMContentLoaded', function(){
-  lugatHazirla();
+  var dizinEl = document.getElementById('lg-dizin');
+  LG.dizin = dizinEl ? JSON.parse(dizinEl.textContent) : [];
+  var kutu = document.getElementById('sonuclar');
+  kutu.addEventListener('click', function(e){
+    var a = e.target.closest('a[data-sno]');
+    if (!a) return;
+    e.preventDefault();
+    document.getElementById('ara').value = '';
+    sonuclariGoster('');
+    dizinSonucu(a.getAttribute('data-sno'), a.getAttribute('data-ayet'));
+  });
   var q = new URLSearchParams(location.search).get('ara') || '';
-  if (q) { document.getElementById('ara').value = q; araUygula(q.trim().toLowerCase()); }
+  if (q) { document.getElementById('ara').value = q; sonuclariGoster(q.trim().toLowerCase()); }
 });
 """
 
 
 def lugat_sayfasi(surahs_data):
-    """Lugat sayfası: sure → mevzu → âyet seviyesinde açılır kelime tabloları + arama."""
+    """Lugat sayfası: sûre → mevzu → âyet. Tablolar açılınca oluşturulur (tembel); arama bir dizin üzerinden çalışır."""
     from html import escape
     kayitlar = json.loads((BASE_DIR / "kaynak/sozluk/kelimeler.json").read_text(encoding="utf-8"))
     karsiliklar = json.loads(kelime_mealli.SOZLUK.read_text(encoding="utf-8"))["translations"]
-    # Âyete göre gruplama: her kelime ilk geçtiği âyette listelenir
+    kok_anlam = {x["kok"]: x["turkce"] for x in json.loads(
+        (BASE_DIR / "kaynak/lugat/kok_anlamlari.json").read_text(encoding="utf-8"))}
     kok_gecisi = {}
     for k in kayitlar:
         kok_gecisi[k["kok"]] = kok_gecisi.get(k["kok"], 0) + k["adet"]
@@ -436,15 +464,13 @@ def lugat_sayfasi(surahs_data):
         ayet_kelime.setdefault((sno, ayet), []).append(k)
     sure_adi = {s["sno"]: s for s in surahs_data}
     toplam = len(kayitlar)
-    kok_anlam = {x["kok"]: x["turkce"] for x in json.loads(
-        (BASE_DIR / "kaynak/lugat/kok_anlamlari.json").read_text(encoding="utf-8"))}
+    dizin = []
     bolumler = []
     for sno in sorted(sure_adi):
         s = sure_adi[sno]
-        segmentler = s.get("segments", [])
         sure_satirlari = []
         sure_kelime = 0
-        for seg in segmentler:
+        for seg in s.get("segments", []):
             mevzu_kutular = []
             mevzu_kelime = 0
             for ayet in range(seg["start"], seg["end"] + 1):
@@ -453,18 +479,26 @@ def lugat_sayfasi(surahs_data):
                     continue
                 mevzu_kelime += len(kelimeler)
                 satirlar = "".join(
-                    f'<tr data-ara="{escape((k["kelime"] + " " + k["kok"] + " " + k["lugat"]).lower())}">'
-                    f'<td class="ar">{escape(k["kelime"])}</td><td>{escape(k["kok"]) or "—"}</td>'
-                    f'<td>{k["kok_gecisi"] or "—"}</td><td>{escape(k["lugat"]) or "—"}</td>'
+                    f'<tr><td class="ar">{escape(k["kelime"])}</td><td>{escape(k["kok"]) or "—"}</td>'
+                    f'<td>{k["kok_gecisi"] or "—"}</td><td>{escape(kok_anlam.get(k["kok"], "—"))}</td>'
+                    f'<td>{escape(k["lugat"]) or "—"}</td>'
                     f'<td>{escape(k["tur"])}</td><td>{k["bab"] or "—"}</td><td>{k["zaman"] or "—"}</td>'
-                    f'<td>{k["adet"]}</td><td>{escape(kok_anlam.get(k["kok"], "—"))}</td></tr>'
+                    f'<td>{k["adet"]}</td></tr>'
                     for k in kelimeler
                 )
+                for k in kelimeler:
+                    dizin.append([sno, ayet, (k["kelime"] + " " + k["kok"] + " " + k["lugat"]
+                                              + " " + kok_anlam.get(k["kok"], "")).lower(),
+                                  k["kelime"], k["kok"]])
+                tablo = (
+                    f'<table><thead><tr><th>Kelime</th><th>Kök</th><th>Kök geçişi</th><th>Kök anlamı</th>'
+                    f'<th>Lugat</th><th>Tür</th><th>Kalıp</th><th>Zaman</th><th>Adet</th></tr></thead>'
+                    f'<tbody>{satirlar}</tbody></table>'
+                )
                 mevzu_kutular.append(
-                    f'<details class="ayet-d"><summary>Âyet {ayet} · {len(kelimeler)} yeni kelime</summary>'
-                    f'<table><thead><tr><th>Kelime</th><th>Kök</th><th>Kök geçişi</th><th>Lugat</th>'
-                    f'<th>Tür</th><th>Kalıp</th><th>Zaman</th><th>Adet</th><th>Kök anlamı</th></tr></thead>'
-                    f'<tbody>{satirlar}</tbody></table></details>'
+                    f'<details class="ayet-d" data-sno="{sno}" data-ayet="{ayet}">'
+                    f'<summary>Âyet {ayet} · {len(kelimeler)} yeni kelime</summary>'
+                    f'<div class="ayet-govde"></div><template>{tablo}</template></details>'
                 )
             if not mevzu_kutular:
                 continue
@@ -483,13 +517,20 @@ def lugat_sayfasi(surahs_data):
             f'<button onclick="bolumAc(this.closest(\'details\'),false)">Kapat</button></div>'
             f'{"".join(sure_satirlari)}</details>'
         )
+    dizin_json = json.dumps(dizin, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
     return f"""<!DOCTYPE html>
 <html lang="tr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kur'an Hikmetleri · Lugat</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
-<style>{LUGAT_SAYFA_STIL}</style></head>
+<style>{LUGAT_SAYFA_STIL}
+#sonuclar {{ list-style:none; padding:0; margin:8px 0; }}
+#sonuclar li {{ background:#fff; border:1px solid #e2e8f0; border-radius:6px; margin:4px 0; }}
+#sonuclar a {{ display:block; padding:6px 10px; color:#1e293b; text-decoration:none; }}
+#sonuclar a:hover {{ background:#f1f5f9; }}
+.lg-ar {{ font-family:'Amiri',serif; font-size:13pt; }}
+</style></head>
 <body>
 <header class="ust">
   <a href="kuran_hikmetleri_kitap.html">&larr; Kitap</a>
@@ -501,12 +542,13 @@ def lugat_sayfasi(surahs_data):
 </header>
 <main class="kap">
   <h1>Lugat · Kur'ân'da ilk geçen kelimeler</h1>
-  <p>Toplam {toplam} kelime. Kelimeler sûre → mevzu → âyet sırasıyla, Kur'ân metnindeki ilk geçtikleri yere göre dizilmiştir. Bir seviyeyi açmak için başlığına tıklayın; "tümünü aç" düğmesi o seviyedeki bütün tabloları açar. "Açık gibi davran" işaretliyken bütün tablolar açık kalır (kopyalama için).</p>
+  <p>Toplam {toplam} kelime. Kelimeler sûre → mevzu → âyet sırasıyla, Kur'ân metnindeki ilk geçtikleri yere göre dizilmiştir. Tablolar, bir âyet açıldığında oluşturulur. Arama tüm kelimelerde çalışır; bir sonucu tıklayınca ilgili âyet açılır.</p>
   <div class="not"><strong>Kök anlamı notu:</strong> Kök anlamları Türkçe karşılıklardır; doğrulanmamıştır. Belirsiz köklerde (?) işaretli kayıtlar için birden çok ihtimal sıralanmıştır; bu köklerin Arapça'daki varlığı meçhuldür.</div>
   <div class="not"><strong>Lugat notu:</strong> Lugat sütunundaki Türkçe karşılıklar, <em>veri_harici/eyupipler/word-translations-tr.json</em> dosyasından alınmıştır; hazır bir sözlük olup karşılıklar tek tek doğrulanmamıştır. Karşılığı olmayanlar "—" ile işaretlidir.</div>
-  <div class="ara-sayi" id="ara-sayi2"></div>
-  {"".join(bolumler)}
+  <ul id="sonuclar" style="display:none"></ul>
+  <div id="agac">{"".join(bolumler)}</div>
 </main>
+<script type="application/json" id="lg-dizin">{dizin_json}</script>
 <script>{LUGAT_SAYFA_JS}</script>
 </body></html>"""
 
@@ -654,7 +696,7 @@ def build_unified_html(config, surahs_data):
                     with open(sure_md_file, "r", encoding="utf-8") as f:
                         stext = f.read()
                     md_conv.reset()
-                    sure_elements.append(f'<div class="sure-md-block">{md_conv.convert(stext)}</div>')
+                    sure_elements.append(lazy_metin(sno, "sure", f'<div class="sure-md-block">{md_conv.convert(stext)}</div>'))
 
                 # 2. gayeler-ve-hikmetler.md (varsa)
                 if "gayeler-ve-hikmetler.md" in dahil_ekler:
@@ -663,7 +705,7 @@ def build_unified_html(config, surahs_data):
                         with open(gayeler_file, "r", encoding="utf-8") as f:
                             gtext = f.read()
                         md_conv.reset()
-                        sure_elements.append(f'<div class="gayeler-md-block">{md_conv.convert(gtext)}</div>')
+                        sure_elements.append(lazy_metin(sno, "gayeler", f'<div class="gayeler-md-block">{md_conv.convert(gtext)}</div>'))
 
                 # 3. Sureye Mahsus Âyet Seviyesinde Pencereli Harita Grafiği
                 if sure_grafik_dahil and s_meta:
@@ -1336,6 +1378,7 @@ tr:nth-child(even) {{ background: #f8fafc; }}
 body {{ padding-top: 72px; }}
 .sure-page, .sure-sutun-grafik, .ag-blok {{ scroll-margin-top: 80px; }}
 .lazy-icerik {{ min-height: 300px; }}
+.lazy-metin {{ min-height: 40px; }}
 .kelime-satiri {{
   display: flex;
   flex-wrap: wrap;
@@ -1388,7 +1431,8 @@ function surelerAc() {{
 function surelerKapat() {{ document.getElementById('kenar').classList.remove('acik'); }}
 function icerikYukle(el) {{
   if (el.getAttribute('data-yuklendi')) return;
-  var kaynak = document.getElementById('icerik-' + el.getAttribute('data-sure'));
+  var kimlik = el.getAttribute('data-kaynak') || ('icerik-' + el.getAttribute('data-sure'));
+  var kaynak = document.getElementById(kimlik);
   if (!kaynak) return;
   el.innerHTML = kaynak.textContent;
   el.setAttribute('data-yuklendi', '1');
@@ -1401,7 +1445,7 @@ var bekleyenKaydirma = false;
 function gorunenleriYukle() {{
   bekleyenKaydirma = false;
   var ust = -400, alt = window.innerHeight + 400;
-  document.querySelectorAll('.lazy-icerik:not([data-yuklendi])').forEach(function (el) {{
+  document.querySelectorAll('.lazy-icerik:not([data-yuklendi]), .lazy-metin:not([data-yuklendi])').forEach(function (el) {{
     var r = el.getBoundingClientRect();
     if (r.bottom >= ust && r.top <= alt) icerikYukle(el);
   }});
