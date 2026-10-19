@@ -57,8 +57,8 @@ Bu fihrist bütün çalışmanın haritasıdır. Her sure, kendi dosyasında on 
 | 40 | 40 | 72 | Cin | الجن | Cinler | 28 | Mekkî | [sureler/072-cin.md](sureler/072-cin.md) |
 | 41 | 41 | 36 | Yâ-Sîn | يس | Harf-i mukattaa | 83 | Mekkî | [sureler/036-ya-sin.md](sureler/036-ya-sin.md) |
 | 42 | 42 | 25 | Furkân | الفرقان | Ayırıcı | 77 | Mekkî | [sureler/025-furkan.md](sureler/025-furkan.md) |
-| 43 | 44 | 19 | Meryem | مريم | Meryem Hatun | 98 | Mekkî | [sureler/019-meryem.md](sureler/019-meryem.md) |
-| 44 | 44 | 35 | Fâtır | فاطر | Yaratıcı | 45 | Mekkî | [sureler/035-fatir.md](sureler/035-fatir.md) |
+| 43 | 43 | 35 | Fâtır | فاطر | Yaratıcı | 45 | Mekkî | [sureler/035-fatir.md](sureler/035-fatir.md) |
+| 44 | 44 | 19 | Meryem | مريم | Meryem Hatun | 98 | Mekkî | [sureler/019-meryem.md](sureler/019-meryem.md) |
 | 45 | 45 | 20 | Tâhâ | طه | Harf-i mukattaa | 135 | Mekkî | [sureler/020-taha.md](sureler/020-taha.md) |
 | 46 | 46 | 56 | Vâkıa | الواقعة | Vuku Bulacak Olay | 96 | Mekkî | [sureler/056-vakia.md](sureler/056-vakia.md) |
 | 47 | 47 | 26 | Şu'arâ | الشعراء | Şairler | 227 | Mekkî | [sureler/026-suara.md](sureler/026-suara.md) |
