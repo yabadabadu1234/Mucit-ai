@@ -33,13 +33,57 @@ def konulari_oku():
     atif_haritasi = {k: _atiflari_ayristir(r) for k, r in konular}
     cozulmus = []
     for konu, refs in konular:
-        if refs.startswith("bk."):
-            hedef = refs[3:].strip().rstrip(".").strip("()")
-            atiflar = atif_haritasi.get(hedef, [])
+        if refs.startswith("bk.") or konu in CAPRAZ_GONDERMELER:
+            hedefler = CAPRAZ_GONDERMELER.get(konu) or [refs[3:].strip().rstrip(".").strip("()")]
+            atiflar = []
+            for hedef in hedefler:
+                atiflar += atif_haritasi.get(hedef, [])
         else:
             atiflar = _atiflari_ayristir(refs)
         cozulmus.append((konu, atiflar))
     return cozulmus
+
+
+# Çapraz gönderme düzeltmeleri: dizinde bulunmayan ya da yazımı farklı hedefler, mantıkla karşılığına eşlendi.
+CAPRAZ_GONDERMELER = {
+    "Âd kavmi": ["Hûd’un kavmi"],
+    "Arzularını putlaştıranlar": ["Hevâ ve heves"],
+    "Camilerin imârı": ["Mescidler"],
+    "Cibrîl": ["Cebrail"],
+    "Rûhu’l-Kudüs": ["Cebrail"],
+    "Ekolojik denge": ["Çevresel denge"],
+    "Emr-i mâruf": ["İyiliği emretmek"],
+    "Ferâiz": ["Mîras"],
+    "Gayb": ["İnsan idrakini aşan bilgi sahası"],
+    "Gök cisimlerinin durumları": ["Kozmoğrafya"],
+    "Hadd": ["Cezâlar"],
+    "Halîfe": ["İnsanın halîfe olarak yaratılması"],
+    "İblîs": ["Şeytan"],
+    "İblîs’in isyanı": ["Şeytanın Âdem’e secde etmeyişi"],
+    "İnsanların hayvana benzemesi": ["Hayvanlar gibi olanlar"],
+    "Kıyâmet ve Hesap": ["Âhiret gününde olacak olaylar"],
+    "Korku ânında yapılanlar": ["Felâket ânı"],
+    "Korunma âyetleri": ["Hıfz âyetleri"],
+    "Kozmoloji": ["Kâinat md."],
+    "Kör olanlar": ["Dünyada mânen kör olanlar"],
+    "Kur’an’da temsîlî anlatımlar": ["Darb-ı meseller"],
+    "Mürted": ["Dinden dönenler"],
+    "Nezâfet": ["Temizlik"],
+    "Önderler": ["Din dışı dünyalık liderler"],
+    "Peygamber’in sünnetine uymak": ["Sünnete uymak"],
+    "Ribâ": ["Fâiz"],
+    "Semûd kavmi": ["Salih’in (as.) kavmi"],
+    "Talak": ["Boşama"],
+    "Tenâsuh": ["Reenkarnasyon"],
+    "Terazi": ["Ölçü, tartı"],
+    "Toplum": ["Ümmet"],
+    "Uzuvlar": ["Âzâların şehadeti"],
+    "Üç sınıf insan": ["Sağın/solun adamları, hayırda önde gidenler"],
+    "Ümmetlerin helâki": ["Ecel"],
+    "Yok olma": ["Helâk olma"],
+    "Zekât-sadaka verin, namaz kılın": ["Namaz kılın, zekât-sadaka verin"],
+    "Dört büyük kitap": ["Kur’an", "Tevrat", "İncil ve Zebûr"],
+}
 
 
 def _atiflari_ayristir(refs):
