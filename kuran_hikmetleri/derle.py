@@ -31,6 +31,34 @@ import kelime_mealli
 BASE_DIR = Path(__file__).resolve().parent
 REPO_ROOT = BASE_DIR.parent
 CONFIG_PATH = BASE_DIR / "derleme_yapilandirma.json"
+PARCA_DIR = BASE_DIR / "parcalar"
+MOD_AYAR = {"mod": "gelistirme"}
+
+PARCA_JS = """
+function parcaGetir(ad){
+  var dev = PARCA_MOD === 'gelistirme';
+  return fetch('parcalar/' + ad + (dev ? '?t=' + Date.now() : ''), { cache: dev ? 'no-store' : 'default' })
+    .then(function(r){ if (!r.ok) throw new Error(ad); return r.text(); });
+}
+"""
+
+
+def parca_temizle():
+    PARCA_DIR.mkdir(exist_ok=True)
+    for f in PARCA_DIR.iterdir():
+        f.unlink()
+
+
+def parca_yaz(ad, icerik, uzanti=".html"):
+    """Parçayı parcalar/ klasörüne yazar. gelistirme: sabit ad; nesriyat: içerik özetli ad (önbellek güvenli)."""
+    import hashlib
+    if MOD_AYAR["mod"] == "nesriyat":
+        dosya = f"{ad}-{hashlib.sha1(icerik.encode('utf-8')).hexdigest()[:8]}{uzanti}"
+    else:
+        dosya = f"{ad}{uzanti}"
+    PARCA_DIR.mkdir(exist_ok=True)
+    (PARCA_DIR / dosya).write_text(icerik, encoding="utf-8")
+    return dosya
 
 
 def get_markdown_converter():
@@ -320,11 +348,9 @@ def detay_bolumu(segments, agac_segmentler, verse_dict):
 
 
 def lazy_metin(sno, ad, html_icerik):
-    """Sûre metni: görünür olunca yüklenir (script bloğunda saklanır)."""
-    kimlik = f"metin-{sno}-{ad}"
-    blok = html_icerik.replace("</script", "<\\/script")
-    return (f'<div class="lazy-metin" data-kaynak="{kimlik}"></div>'
-            f'<script type="text/html" id="{kimlik}">{blok}</script>')
+    """Sûre metni parçaya yazılır; görünür olunca indirilir."""
+    dosya = parca_yaz(f"metin-{sno}-{ad}", html_icerik)
+    return f'<div class="lazy-metin" data-parca="{dosya}"></div>'
 
 
 SURUM_KONTROLU_HEAD = '<meta name="surum" content="__SURUM__">'
@@ -384,19 +410,34 @@ LUGAT_SAYFA_JS = """
 function hepsi(acik){ document.querySelectorAll('details').forEach(function(d){ d.open = acik; }); }
 function bolumAc(el, acik){ el.querySelectorAll('details').forEach(function(d){ d.open = acik; }); el.open = acik; }
 function sabitAc(cb){ hepsi(cb.checked); }
-var LG = { dizin: [], zamanlayici: null };
+var LG = { dizin: null, dizinYuk: null, parcalar: {}, zamanlayici: null };
 function tabloyuDoldur(d){
-  if (d.getAttribute('data-dolu')) return;
-  var govde = d.querySelector('.ayet-govde');
-  var sablon = d.querySelector('template');
-  if (!govde || !sablon) return;
-  govde.appendChild(sablon.content.cloneNode(true));
-  d.setAttribute('data-dolu', '1');
+  if (d.getAttribute('data-dolu') || d.getAttribute('data-yukleniyor')) return;
+  d.setAttribute('data-yukleniyor', '1');
+  var ad = d.getAttribute('data-parca');
+  var ayet = d.getAttribute('data-ayet');
+  if (!LG.parcalar[ad]) LG.parcalar[ad] = parcaGetir(ad);
+  LG.parcalar[ad].then(function(h){
+    var kutu = document.createElement('div');
+    kutu.innerHTML = h;
+    var sab = kutu.querySelector('template[data-ayet="' + ayet + '"]');
+    var govde = d.querySelector('.ayet-govde');
+    if (sab && govde) govde.appendChild(sab.content.cloneNode(true));
+    d.setAttribute('data-dolu', '1');
+  }).catch(function(){
+    delete LG.parcalar[ad];
+    d.removeAttribute('data-yukleniyor');
+  });
 }
 document.addEventListener('toggle', function(e){
   var d = e.target;
   if (d.tagName === 'DETAILS' && d.classList.contains('ayet-d') && d.open) tabloyuDoldur(d);
 }, true);
+function dizinHazir(){
+  if (LG.dizin) return Promise.resolve(LG.dizin);
+  if (!LG.dizinYuk) LG.dizinYuk = parcaGetir(LG_DIZIN).then(function(t){ LG.dizin = JSON.parse(t); return LG.dizin; });
+  return LG.dizinYuk;
+}
 function dizinSonucu(sno, ayet){
   var d = document.querySelector('details.ayet-d[data-sno="' + sno + '"][data-ayet="' + ayet + '"]');
   if (!d) return;
@@ -410,18 +451,21 @@ function sonuclariGoster(q){
   var agac = document.getElementById('agac');
   var sayi = document.getElementById('ara-sayi');
   if (!q) { kutu.style.display = 'none'; kutu.innerHTML = ''; agac.style.display = ''; sayi.textContent = ''; return; }
-  var eslesen = [];
-  for (var i = 0; i < LG.dizin.length; i++) {
-    if (LG.dizin[i][2].indexOf(q) !== -1) eslesen.push(LG.dizin[i]);
-  }
-  var gosterilen = eslesen.slice(0, 300);
-  kutu.innerHTML = gosterilen.map(function(x){
-    return '<li><a href="#" data-sno="' + x[0] + '" data-ayet="' + x[1] + '">' +
-      'S' + x[0] + ':' + x[1] + ' · <span class="lg-ar">' + x[3] + '</span> <small>' + x[4] + '</small></a></li>';
-  }).join('');
-  sayi.textContent = eslesen.length + ' sonuç' + (eslesen.length > 300 ? ' (ilk 300 gösteriliyor)' : '');
-  kutu.style.display = '';
-  agac.style.display = 'none';
+  sayi.textContent = 'aranıyor…';
+  dizinHazir().then(function(dz){
+    var eslesen = [];
+    for (var i = 0; i < dz.length; i++) {
+      if (dz[i][2].indexOf(q) !== -1) eslesen.push(dz[i]);
+    }
+    var gosterilen = eslesen.slice(0, 300);
+    kutu.innerHTML = gosterilen.map(function(x){
+      return '<li><a href="#" data-sno="' + x[0] + '" data-ayet="' + x[1] + '">' +
+        'S' + x[0] + ':' + x[1] + ' · <span class="lg-ar">' + x[3] + '</span> <small>' + x[4] + '</small></a></li>';
+    }).join('');
+    sayi.textContent = eslesen.length + ' sonuç' + (eslesen.length > 300 ? ' (ilk 300 gösteriliyor)' : '');
+    kutu.style.display = '';
+    agac.style.display = 'none';
+  }).catch(function(){ sayi.textContent = 'dizin yüklenemedi'; });
 }
 function araIsle(q){
   q = (q || '').trim().toLowerCase();
@@ -429,8 +473,6 @@ function araIsle(q){
   LG.zamanlayici = setTimeout(function(){ requestAnimationFrame(function(){ sonuclariGoster(q); }); }, 200);
 }
 window.addEventListener('DOMContentLoaded', function(){
-  var dizinEl = document.getElementById('lg-dizin');
-  LG.dizin = dizinEl ? JSON.parse(dizinEl.textContent) : [];
   var kutu = document.getElementById('sonuclar');
   kutu.addEventListener('click', function(e){
     var a = e.target.closest('a[data-sno]');
@@ -468,6 +510,7 @@ def lugat_sayfasi(surahs_data):
     bolumler = []
     for sno in sorted(sure_adi):
         s = sure_adi[sno]
+        frag_parcalar = []
         sure_satirlari = []
         sure_kelime = 0
         for seg in s.get("segments", []):
@@ -495,10 +538,11 @@ def lugat_sayfasi(surahs_data):
                     f'<th>Lugat</th><th>Tür</th><th>Kalıp</th><th>Zaman</th><th>Adet</th></tr></thead>'
                     f'<tbody>{satirlar}</tbody></table>'
                 )
+                frag_parcalar.append(f'<template data-ayet="{ayet}">{tablo}</template>')
                 mevzu_kutular.append(
-                    f'<details class="ayet-d" data-sno="{sno}" data-ayet="{ayet}">'
+                    f'<details class="ayet-d" data-sno="{sno}" data-ayet="{ayet}" data-parca="@@PARCA@@">'
                     f'<summary>Âyet {ayet} · {len(kelimeler)} yeni kelime</summary>'
-                    f'<div class="ayet-govde"></div><template>{tablo}</template></details>'
+                    f'<div class="ayet-govde"></div></details>'
                 )
             if not mevzu_kutular:
                 continue
@@ -511,13 +555,16 @@ def lugat_sayfasi(surahs_data):
             )
         if not sure_satirlari:
             continue
+        sure_dosya = parca_yaz(f"lg-{sno}", "".join(frag_parcalar))
+        sure_satirlari = [x.replace("@@PARCA@@", sure_dosya) for x in sure_satirlari]
         bolumler.append(
             f'<details class="sure-d" id="sure-{sno}"><summary>{sno}. {escape(s["name"])} Suresi · {sure_kelime} yeni kelime</summary>'
             f'<div class="bolum-ac"><button onclick="bolumAc(this.closest(\'details\'),true)">Bu surenin tüm tablolarını aç</button> '
             f'<button onclick="bolumAc(this.closest(\'details\'),false)">Kapat</button></div>'
             f'{"".join(sure_satirlari)}</details>'
         )
-    dizin_json = json.dumps(dizin, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+    dizin_json = json.dumps(dizin, ensure_ascii=False, separators=(",", ":"))
+    dizin_dosya = parca_yaz("lg-dizin", dizin_json, ".json")
     return f"""<!DOCTYPE html>
 <html lang="tr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -548,7 +595,8 @@ def lugat_sayfasi(surahs_data):
   <ul id="sonuclar" style="display:none"></ul>
   <div id="agac">{"".join(bolumler)}</div>
 </main>
-<script type="application/json" id="lg-dizin">{dizin_json}</script>
+<script>var PARCA_MOD = '{MOD_AYAR["mod"]}'; var LG_DIZIN = '{dizin_dosya}';</script>
+<script>{PARCA_JS}</script>
 <script>{LUGAT_SAYFA_JS}</script>
 </body></html>"""
 
@@ -578,6 +626,8 @@ def mevzu_ozeti(surahs_data):
 
 def build_unified_html(config, surahs_data):
     """Yapılandırmada işaret edilen dosyaları ve grafikleri uygun sırayla uç uca ekleyip tek bir HTML oluşturur."""
+    MOD_AYAR["mod"] = config.get("mod", "gelistirme")
+    parca_temizle()
     md_conv = get_markdown_converter()
     surah_dict = {s["sno"]: s for s in surahs_data}
     kelimeler = kelime_mealli.yukle()
@@ -777,7 +827,10 @@ def build_unified_html(config, surahs_data):
                     </div>
                     """
                     icerik_blogu = detail_content.replace("</script", "<\\/script")
-                    chart_section_html += f'<script type="text/html" id="icerik-{sno}">{icerik_blogu}</script>'
+                    dosya_detay = parca_yaz(f"icerik-{sno}", detail_content)
+                    chart_section_html = chart_section_html.replace(
+                        f'<div class="lazy-icerik" data-sure="{sno}"></div>',
+                        f'<div class="lazy-icerik" data-sure="{sno}" data-parca="{dosya_detay}"></div>')
                     sure_elements.append(chart_section_html)
 
                 body_sections.append(f"""
@@ -1426,6 +1479,8 @@ html {{ overflow-anchor: none; }}
 <div id="kitap-basi"></div>
 {"".join(body_sections)}
 </div>
+<script>var PARCA_MOD = '{MOD_AYAR["mod"]}';</script>
+<script>{PARCA_JS}</script>
 <script>
 function menuAc() {{ document.getElementById('menuPanel').classList.toggle('acik'); }}
 function surelerAc() {{
@@ -1435,11 +1490,13 @@ function surelerAc() {{
 function surelerKapat() {{ document.getElementById('kenar').classList.remove('acik'); }}
 function icerikYukle(el) {{
   if (el.getAttribute('data-yuklendi')) return;
-  var kimlik = el.getAttribute('data-kaynak') || ('icerik-' + el.getAttribute('data-sure'));
-  var kaynak = document.getElementById(kimlik);
-  if (!kaynak) return;
-  el.innerHTML = kaynak.textContent;
+  var ad = el.getAttribute('data-parca');
+  if (!ad) return;
   el.setAttribute('data-yuklendi', '1');
+  parcaGetir(ad).then(function (h) {{ el.innerHTML = h; }}).catch(function () {{
+    el.removeAttribute('data-yuklendi');
+    el.textContent = 'İçerik yüklenemedi; sayfayı yenileyin.';
+  }});
 }}
 function sureYukle(n) {{
   var el = document.querySelector('.lazy-icerik[data-sure="' + n + '"]');
