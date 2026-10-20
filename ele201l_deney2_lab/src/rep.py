@@ -6,10 +6,9 @@ def build():
     D = Doc("tr")
     D.sec = 2
     D.title_block([("TOBB Ekonomi ve Teknoloji Üniversitesi", 13, True), ("Elektrik – Elektronik Mühendisliği Bölümü", 12, False),
-                   ("ELE 201 L – Devre Analizi I Laboratuvarı", 14, True), ("Deney 2 – Deney Raporu", 14, True), ("Güz 2026", 12, False)],
+                   ("ELE 201 L – Devre Analizi I Laboratuvarı", 14, True), ("Deney 2 – Ön Çalışma Raporu", 14, True), ("Güz 2026", 12, False)],
                   [("Adı Soyadı", "Beşir Kerem Üstüntürk"), ("Numara", "251201037"), ("Tarih", "20.10.2026")])
 
-    # ---- Thevenin (Şekil 1): R1 seri, R2 şönt, R3 seri çıkış
     V1s, R1, R2, R3 = 10.0, 2200.0, 3300.0, 2200.0
     Voc = V1s * R2 / (R1 + R2)
     Rp23 = R2 * R3 / (R2 + R3)
@@ -18,11 +17,9 @@ def build():
     Rth1 = Voc / Isc
     Rth1b = R3 + R1 * R2 / (R1 + R2)
 
-    # ---- Maksimum güç
     PL = Voc ** 2 / (4 * Rth1)
     IL = Voc / (2 * Rth1)
 
-    # ---- Süperpozisyon (Şekil 3), kΩ ve V
     V1, V2 = 12.0, 5.0
     Rb = 15.0 + 3.9
     G4, Gb, G6 = 1 / 1.0, 1 / Rb, 1 / 8.2
@@ -34,66 +31,81 @@ def build():
     IN = VocS / RthS
 
     D.h(1, "Giriş")
-    D.h(2, "Deneyin Amacı")
-    D.p("Bu deneyde doğrusal bir devrenin iki ucundan görülen davranışının bir gerilim kaynağı ve seri bir dirençle temsil edilebileceği (Thevenin eşdeğeri), bu eşdeğer üzerinden yük direncine aktarılan gücün en büyük olduğu koşul ve bağımsız kaynaklı devrelerde süperpozisyon ilkesi incelenmiştir. Her bölümde önce teorik değerler hesaplanmış, ardından simülasyon ve ölçüm sonuçlarıyla karşılaştırılacak biçimde düzenlenmiştir.", align="j")
-    D.h(2, "Deneyin Faydaları")
-    D.p("Deney sonucunda, karmaşık bir devrenin yük uçlarına göre iki elemanlı bir eşdeğerle çözülebildiği gösterilmiştir. Yükün alabileceği gücün, yük direnci kaynağın iç direncine eşit olduğunda en büyük olduğu ve bu değerin hesapla bulunabildiği görülmüştür. Süperpozisyon ilkesi ile birden fazla bağımsız kaynağın katkısının ayrı ayrı hesaplanıp toplanabildiği, bu toplamın tüm kaynakların birlikte çalıştığı devrenin sonucuna eşit çıktığı görülmüştür.", align="j")
+    D.h(2, "Ön Çalışmanın Amacı")
+    D.p("Bu ön çalışmada doğrusal bir devrenin iki ucundan görülen davranışının Thevenin eşdeğeriyle temsil edilmesi, yük direncine en büyük gücün aktarıldığı koşulun belirlenmesi ve bağımsız kaynaklı bir devrede süperpozisyon ilkesinin uygulanması incelenmiştir. Her soru için devre çizimi, teorik hesap ve SPICE kontrolü verilmiştir.", align="j")
+    D.h(2, "Ön Çalışmanın Faydaları")
+    D.p("Karmaşık bir devrenin yük uçlarına göre iki elemanlı bir eşdeğerle çözülebildiği, yükün çektiği gücün kaynağın iç direncine eşit yük direncinde en büyük olduğu ve birden fazla kaynaklı devrenin katkılarının ayrı ayrı hesaplanıp toplanabildiği görülmüştür.", align="j")
 
-    D.h(1, "Ölçümler")
+    D.h(1, "Hesaplar ve Simülasyonlar")
     D.h(2, "Thevenin Eşdeğer Devresi")
-    D.p("Şekil 1’deki devre [1] için $V_S = 10$ V, $R_1 = 2{,}2\\ \\mathrm{k\\Omega}$, $R_2 = 3{,}3\\ \\mathrm{k\\Omega}$ ve $R_3 = 2{,}2\\ \\mathrm{k\\Omega}$ alınmıştır. Devre açık devre ve kısa devre koşullarında ngspice ile analiz edilmiş, sonuçlar tablolarda SPICE sütununda verilmiştir.", align="j")
-    D.fig("s1", a("foy_s1.png"), "Basit bir dirençli devre (föy Şekil 1 [1]). Açık devre gerilimi $V_{oc}$ ile kısa devre akımı $I_{sc}$ devrenin $+$ ve $-$ uçlarından ölçülür.", 8.0)
-    D.fig("bb1", a("bb2_s1.png"), "Şekil 1 devresinin devre tahtası yerleşimi. Kaynak artı ucu üst rayda, eksi ucu alt rayda bulunur.", 14.0)
-    D.p("Açık devre gerilimi, çıkışta akım olmadığı için $R_3$ üzerinden düşen gerilim sıfırdır ve $V_{oc}$ doğrudan $R_2$ üzerindeki gerilimdir:", align="j", keep=True)
+    D.h(3, "Devre Çizimi")
+    D.p("Şekil 1’deki devre [1] için $V_S = 10$ V, $R_1 = 2{,}2\\ \\mathrm{k\\Omega}$, $R_2 = 3{,}3\\ \\mathrm{k\\Omega}$ ve $R_3 = 2{,}2\\ \\mathrm{k\\Omega}$ alınmıştır. Devrenin TinkerCAD tarzı çizimi ve devre tahtası yerleşimi aşağıda verilmiştir.", align="j")
+    D.fig("tk1", a("tk_s1.png"), "Şekil 1 devresinin TinkerCAD tarzı çizimi.", 9.0)
+    D.fig("bb1", a("bb2_s1.png"), "Şekil 1 devresinin devre tahtası yerleşimi.", 14.0)
+    D.h(3, "Açık Devre Gerilimi ve Kısa Devre Akımı")
+    D.p("Açık devrede çıkışta akım olmadığından $R_3$ üzerinde gerilim düşmez ve $V_{oc}$, $R_2$ üzerindeki gerilime eşittir:", align="j", keep=True)
     D.eq(r"V_{oc}=V_S\,\frac{R_2}{R_1+R_2}=10\ \mathrm{V}\cdot\frac{3{,}3}{2{,}2+3{,}3}=6{,}00\ \mathrm{V}", "voc")
-    D.p("Kısa devrede $R_2$ ve $R_3$ aynı iki düğüm arasında paralel olur; $R_2 \\parallel R_3 = 1{,}32\\ \\mathrm{k\\Omega}$ dir. Bu paralel kolun üzerindeki gerilim, $V_S$ nin $R_1$ ile bölünmesiyle bulunur; kısa devre akımı ise yalnızca $R_3$ kolundan geçen akımdır:", align="j", keep=True)
+    D.p("Kısa devrede $R_2$ ve $R_3$ aynı iki düğüm arasında paralel olur, $R_2 \\parallel R_3 = 1{,}32\\ \\mathrm{k\\Omega}$ dur. Kısa devre akımı yalnızca $R_3$ kolundan geçen akımdır:", align="j", keep=True)
     D.eq(r"V_N=V_S\,\frac{R_2\parallel R_3}{R_1+R_2\parallel R_3}=3{,}75\ \mathrm{V},\qquad I_{sc}=\frac{V_N}{R_3}=\frac{3{,}75\ \mathrm{V}}{2{,}2\ \mathrm{k\Omega}}=1{,}705\ \mathrm{mA}", "isc")
+    D.fig("spice", a("spice_cikti.png"), "Şekil 1 devresinin ngspice (batch modu) ile analiz çıktısı. Açık devre gerilimi 6,000 V, kısa devre akımı 1,7045 mA olarak elde edilmiştir.", 13.0)
+    D.h(3, "Thevenin Direnci")
     D.p("Thevenin direnci, açık devre gerilimi ile kısa devre akımının oranıdır:", align="j", keep=True)
     D.eq(r"R_{TH}=\frac{V_{oc}}{I_{sc}}=\frac{6{,}00\ \mathrm{V}}{1{,}705\ \mathrm{mA}}=3{,}52\ \mathrm{k\Omega}", "rth1")
     D.p("Bağımsız kaynaklar sıfırlandığında ($V_S$ kısa devre) $R_1 \\parallel R_2$ ile $R_3$ seri bağlanır ve aynı değer doğrudan elde edilir:", align="j", keep=True)
     D.eq(r"R_{TH}=R_3+R_1\parallel R_2=2{,}2\ \mathrm{k\Omega}+1{,}32\ \mathrm{k\Omega}=3{,}52\ \mathrm{k\Omega}", "rth2")
-    rows = [["$V_{oc}$ (V)", n(Voc, 2), "6,00"], ["$I_{sc}$ (mA)", n(Isc, 3), "1,705"], ["$R_{TH}=V_{oc}/I_{sc}$ (kΩ)", n(Rth1 / 1e3, 2), "3,52"],
+    D.p("İki yöntemle bulunan direnç aynı değeri verdiği için bu devrede iki ifade aynıdır.", align="j")
+    rows = [["$V_{oc}$ (V)", n(Voc, 2), "6,00"], ["$I_{sc}$ (mA)", n(Isc, 3), "1,705"],
+            ["$R_{TH}=V_{oc}/I_{sc}$ (kΩ)", n(Rth1 / 1e3, 2), "3,52"],
             ["$R_{TH}$, kaynaklar sıfırlanarak (kΩ)", n(Rth1b / 1e3, 2), "3,52"]]
     D.tab("t1", ["Büyüklük", "Teorik değer", "SPICE"], rows, "Thevenin eşdeğeri için teorik ve SPICE değerleri (Şekil 1)", [6.0, 3.5, 3.5])
-    D.p("İki yöntemle bulunan Thevenin direnci de $3{,}52\\ \\mathrm{k\\Omega}$ çıkmıştır. Bu eşitlik, $R_{TH}$ ifadesinin kaynakların sıfırlanarak elde edilmesinin ve $V_{oc}/I_{sc}$ oranının aynı büyüklüğü verdiğini gösterir; iki ifade bu devrede aynıdır.", align="j")
 
     D.h(2, "Maksimum Güç Transferi")
-    D.p("Şekil 1’deki devrenin çıkışına Şekil 2’deki gibi yük direnci $R_L$ bağlanmıştır [1].", align="j")
-    D.fig("s2", a("foy_s2.png"), "Yük direnci bağlanmış devre (föy Şekil 2 [1]). Yük gerilimi $V_L$ ve çıkış gerilimi $V_0$ ayrıca belirtilmiştir.", 8.0)
-    D.fig("bb2", a("bb2_s2.png"), "Şekil 2 devresinin devre tahtası yerleşimi. Yük direnci $R_L$, çıkış düğümü ile alt ray arasına bağlanmıştır.", 14.0)
-    D.p("Yük uçlarından bakıldığında devre, $V_{TH} = V_{oc} = 6{,}00$ V gerilim kaynağı ile $R_{TH}$ seri direncine eşdeğerdir. Yük akımı ve yükte harcanan güç şöyledir:", align="j", keep=True)
+    D.h(3, "Devre Çizimi")
+    D.p("Şekil 2’deki devre [1], Şekil 1’in çıkışına yük direnci $R_L$ bağlanarak elde edilmiştir. Devrenin TinkerCAD tarzı çizimi ve devre tahtası yerleşimi aşağıdadır.", align="j")
+    D.fig("tk2", a("tk_s2.png"), "Şekil 2 devresinin TinkerCAD tarzı çizimi.", 9.0)
+    D.fig("bb2", a("bb2_s2.png"), "Şekil 2 devresinin devre tahtası yerleşimi.", 14.0)
+    D.h(3, "Yük Direncinin Teorik Seçimi")
+    D.p("Yük uçlarından bakıldığında devre $V_{TH} = V_{oc} = 6{,}00$ V gerilim kaynağı ile $R_{TH}$ seri direncine eşdeğerdir. Yük akımı ve yükte harcanan güç şöyledir:", align="j", keep=True)
     D.eq(r"I_L=\frac{V_{TH}}{R_{TH}+R_L},\qquad P_L=I_L^2R_L=\left(\frac{V_{TH}}{R_{TH}+R_L}\right)^2R_L", "pl")
-    D.p("Güç $R_L$ ye göre türetilip sıfıra eşitlenirse, yükteki gücün en büyük olduğu koşul bulunur:", align="j", keep=True)
+    D.p("Gücün $R_L$ ye göre türevi sıfıra eşitlendiğinde yükteki güç en büyük olur:", align="j", keep=True)
     D.eq(r"\frac{dP_L}{dR_L}=0\;\Rightarrow\;R_L=R_{TH}=3{,}52\ \mathrm{k\Omega}", "rlopt")
     D.p("Bu koşulda yük akımı ve en büyük güç şöyle hesaplanır:", align="j", keep=True)
     D.eq(r"I_L=\frac{6{,}00\ \mathrm{V}}{3{,}52\ \mathrm{k\Omega}+3{,}52\ \mathrm{k\Omega}}=0{,}852\ \mathrm{mA},\qquad P_{L,max}=\frac{V_{TH}^2}{4R_{TH}}=2{,}557\ \mathrm{mW}", "pmax")
+    D.h(3, "SPICE Kontrolü")
+    D.p("$R_L = 3{,}52\\ \\mathrm{k\\Omega}$ ile kurulan devrede yük gerilimi ngspice ile $3{,}000$ V bulunmuştur. Bu değerden yükteki güç $3{,}000^2/3520 = 2{,}557$ mW olarak hesaplanır.", align="j")
     rows = [["$R_L$ (kΩ)", "3,52", "3,52"], ["$V_L$ (V)", n(Voc / 2, 3), "3,000"], ["$I_L$ (mA)", n(IL * 1e3, 3), "0,852"], ["$P_L$ (mW)", n(PL * 1e3, 3), "2,557"]]
     D.tab("t2", ["Büyüklük", "Teorik değer", "SPICE"], rows, "Maksimum güç transferi için teorik ve SPICE değerleri ($R_L = R_{TH}$)", [6.0, 3.5, 3.5])
 
     D.h(2, "Süperpozisyon İlkesi")
-    D.p("Şekil 3’teki devrede iki bağımsız gerilim kaynağı bulunmaktadır [1]. Bileşen değerleri $R_1 = R_2 = 15\\ \\mathrm{k\\Omega}$, $R_3 = 3{,}9\\ \\mathrm{k\\Omega}$, $R_4 = R_5 = 1\\ \\mathrm{k\\Omega}$, $R_6 = 8{,}2\\ \\mathrm{k\\Omega}$, $V_{S1} = 12$ V ve $V_{S2} = 5$ V’tur.", align="j")
-    D.fig("s3", a("foy_s3.png"), "İki bağımsız kaynak içeren devre (föy Şekil 3 [1]). Terminal C–D’den görülen Thevenin eşdeğeri hesaplanmıştır.", 9.0)
-    D.fig("bb3", a("bb2_s3.png"), "Şekil 3 devresinin devre tahtası yerleşimi. VS1 ve VS2 kaynakları ile toprak bağlantısı alt rayda gösterilmiştir.", 14.0)
-    D.p("Devrenin düğümleri şöyledir. $V_{S1}$ kaynağının artı ucu, $R_2$ nin sol ucu ve $A$ ucu aynı düğümdedir; bu düğümün gerilimi $12$ V tur. $V_{S2}$ kaynağının artı ucu, $R_2$ nin sağ ucu, $R_5$ in üst ucu ve $R_4$ ün sol ucu aynı düğümdedir; bu düğümün gerilimi $5$ V tur. $R_3$, $R_4$ ün sağ ucu ve $R_6$ terminal $C$ ile birlikte $N$ düğümünü oluşturur. Tüm eksi uçlar ve $D$ ortak düğümdür. $R_1$ ile $R_3$ , $A$ ile $N$ arasında seri bir kol oluşturur ($R_1+R_3 = 18{,}9\\ \\mathrm{k\\Omega}$).", align="j")
-    D.p("Önce iki kaynak da devrede iken $N$ düğümünde akımların toplamı sıfır yazılır. $G$ ile iletkenlik gösterilmek üzere ($\\mathrm{mS}$):", align="j", keep=True)
-    D.eq(r"\frac{V_{S2}-V_N}{R_4}+\frac{V_{S1}-V_N}{R_1+R_3}=\frac{V_N}{R_6}\;\Rightarrow\;V_N=\frac{V_{S2}G_4+V_{S1}G_{b}}{G_4+G_b+G_6}", "nodal")
-    D.p("Burada $G_4 = 1$ mS, $G_b = 1/18{,}9$ mS ve $G_6 = 1/8{,}2$ mS dir. Sayılar yerine konduğunda $V_{oc} = 4{,}796$ V bulunur. Terminal C–D’den bakıldığında kaynaklar sıfırlandığında düğüm $R_4$, $R_1+R_3$ ve $R_6$ ile paraleldir:", align="j", keep=True)
-    D.eq(r"R_{TH}=\frac{1}{G_4+G_b+G_6}=\frac{1}{1{,}1749\ \mathrm{mS}}=0{,}851\ \mathrm{k\Omega},\qquad I_N=\frac{V_{oc}}{R_{TH}}=5{,}635\ \mathrm{mA}", "supth")
-    D.p("Süperpozisyon ile katkılar ayrı ayrı hesaplanmıştır. $VS_1$ kısa devre edilerek ($V_{S1}=0$) elde edilen açık devre gerilimi ve $VS_2$ kısa devre edilerek ($V_{S2}=0$) elde edilen açık devre gerilimi şöyledir:", align="j", keep=True)
-    D.eq(r"V_{oc,S2}=\frac{V_{S2}G_4}{G_4+G_b+G_6}=4{,}256\ \mathrm{V},\qquad V_{oc,S1}=\frac{V_{S1}G_b}{G_4+G_b+G_6}=0{,}540\ \mathrm{V}", "supparts")
-    D.p("Bu iki katkının toplamı $4{,}256 + 0{,}540 = 4{,}796$ V olup, iki kaynağın birlikte çalıştığı durumdaki $V_{oc}$ ile aynıdır. Kaynaklar sıfırlandığında Thevenin direnci değişmediği için her iki katkı da aynı $R_{TH} = 0{,}851\\ \\mathrm{k\\Omega}$ ile çalışır.", align="j")
+    D.h(3, "Devre Çizimi")
+    D.p("Şekil 3’teki devre [1] iki bağımsız kaynak içerir. Bileşen değerleri $R_1 = R_2 = 15\\ \\mathrm{k\\Omega}$, $R_3 = 3{,}9\\ \\mathrm{k\\Omega}$, $R_4 = R_5 = 1\\ \\mathrm{k\\Omega}$, $R_6 = 8{,}2\\ \\mathrm{k\\Omega}$, $V_{S1} = 12$ V ve $V_{S2} = 5$ V tur. Devrenin TinkerCAD tarzı çizimi ve devre tahtası yerleşimi aşağıda verilmiştir.", align="j")
+    D.fig("tk3", a("tk_s3.png"), "Şekil 3 devresinin TinkerCAD tarzı çizimi.", 10.0)
+    D.fig("bb3", a("bb2_s3.png"), "Şekil 3 devresinin devre tahtası yerleşimi.", 14.0)
+    D.h(3, "Her İki Kaynak Birlikte")
+    D.p("Düğümler şöyledir: $V_{S1}$ kaynağının artı ucu, $R_1$ in bir ucu ve $R_2$ nin sol ucu aynı düğümdedir ve $12$ V tur. $V_{S2}$ kaynağının artı ucu, $R_2$ nin sağ ucu, $R_5$ in üst ucu ve $R_4$ ün sol ucu aynı düğümdedir ve $5$ V tur. $R_3$, $R_4$ ün sağ ucu ve $R_6$, terminal $C$ ile birlikte $N$ düğümünü oluşturur. Tüm eksi uçlar ve $D$ ortak düğümdür. $R_1$ ile $R_3$ seri bir kol oluşturur ve toplam direnci $18{,}9\\ \\mathrm{k\\Omega}$ dur.", align="j")
+    D.p("$N$ düğümünde akımların toplamı sıfır yazılarak açık devre gerilimi bulunur. Burada $G_4 = 1$ mS, $G_b = 1/18{,}9$ mS ve $G_6 = 1/8{,}2$ mS dir:", align="j", keep=True)
+    D.eq(r"V_{oc}=\frac{V_{S2}G_4+V_{S1}G_b}{G_4+G_b+G_6}=\frac{5\cdot1+12\cdot0{,}05291}{1{,}17486}=4{,}796\ \mathrm{V}", "voc3")
+    D.h(3, "Thevenin Direnci")
+    D.p("Terminal $C$–$D$’den bakıldığında kaynaklar sıfırlandığında $R_4$, $R_1+R_3$ ve $R_6$ paralel bağlanır:", align="j", keep=True)
+    D.eq(r"R_{TH}=\frac{1}{G_4+G_b+G_6}=\frac{1}{1{,}17486\ \mathrm{mS}}=0{,}851\ \mathrm{k\Omega}", "rth3")
+    D.h(3, "VS1 Kısa Devre Edildiğinde")
+    D.p("$V_{S1}$ kaynağı kısa devre edildiğinde açık devre gerilimi ve Thevenin direnci şöyle bulunur:", align="j", keep=True)
+    D.eq(r"V_{oc,S1=0}=\frac{V_{S2}G_4}{G_4+G_b+G_6}=\frac{5}{1{,}17486}=4{,}256\ \mathrm{V},\qquad R_{TH}=0{,}851\ \mathrm{k\Omega}", "vs1short")
+    D.h(3, "VS2 Kısa Devre Edildiğinde")
+    D.p("$V_{S2}$ kaynağı kısa devre edildiğinde açık devre gerilimi ve Thevenin direnci şöyledir:", align="j", keep=True)
+    D.eq(r"V_{oc,S2=0}=\frac{V_{S1}G_b}{G_4+G_b+G_6}=\frac{12\cdot0{,}05291}{1{,}17486}=0{,}540\ \mathrm{V},\qquad R_{TH}=0{,}851\ \mathrm{k\Omega}", "vs2short")
+    D.p("Her iki durumda Thevenin direnci aynıdır, çünkü kaynak değerleri direnç ağını değiştirmez. Açık devre gerilimleri toplamı $4{,}256 + 0{,}540 = 4{,}796$ V olup iki kaynaklı durumdaki değerle aynıdır.", align="j")
     rows = [["$V_{oc}$, iki kaynak birlikte (V)", n(VocS, 3), "4,796"],
-            ["$V_{oc}$, yalnız $V_{S2}$ (V)", n(VocS2, 3), "4,256"],
-            ["$V_{oc}$, yalnız $V_{S1}$ (V)", n(VocS1, 3), "0,540"],
+            ["$V_{oc}$, $V_{S1}$ kısa devre (V)", n(VocS2, 3), "4,256"],
+            ["$V_{oc}$, $V_{S2}$ kısa devre (V)", n(VocS1, 3), "0,540"],
             ["$R_{TH}$ (kΩ)", n(RthS, 3), "0,851"],
             ["$I_N = V_{oc}/R_{TH}$ (mA)", n(IN, 3), "5,635"]]
     D.tab("t3", ["Büyüklük", "Teorik değer", "SPICE"], rows, "Süperpozisyon devresi için teorik ve SPICE değerleri (Şekil 3)", [6.0, 3.5, 3.5])
 
     D.h(1, "Sonuçlar")
-    D.p("**Thevenin eşdeğeri.** Şekil 1’deki devrenin açık devre gerilimi $6{,}00$ V, kısa devre akımı $1{,}705$ mA ve Thevenin direnci $3{,}52\\ \\mathrm{k\\Omega}$ olarak hesaplanmıştır. Kaynakları sıfırlayarak bulunan direnç aynı değeri vermiştir. SPICE sonuçları teorik değerlerle yuvarlama düzeyinde uyuşmaktadır.", align="j")
-    D.p("**Maksimum güç.** Yük direnci Thevenin direncine eşit ($3{,}52\\ \\mathrm{k\\Omega}$) seçildiğinde yükte harcanan güç $2{,}557$ mW olarak bulunmuştur. Bu değerden farklı yük dirençlerinde güç daha küçük çıkar.", align="j")
-    D.p("**Süperpozisyon.** İki kaynağın birlikte oluşturduğu açık devre gerilimi, her kaynağın ayrı katkısının toplamına eşittir. Bu toplam $4{,}796$ V olarak bulunmuş, Thevenin direnci $0{,}851\\ \\mathrm{k\\Omega}$ olarak hesaplanmıştır.", align="j")
-    D.p("Bu çalışmadaki değerler teorik hesaba ve SPICE simülasyonuna dayanmaktadır.", align="j")
+    D.p("**Thevenin eşdeğeri.** Şekil 1’deki devrenin açık devre gerilimi $6{,}00$ V, kısa devre akımı $1{,}705$ mA ve Thevenin direnci $3{,}52\\ \\mathrm{k\\Omega}$ dur. Kaynaklar sıfırlanarak bulunan direnç de aynı değeri verir. SPICE sonuçları teorik değerlerle yuvarlama düzeyinde uyuşmaktadır.", align="j")
+    D.p("**Maksimum güç.** Yük direnci Thevenin direncine eşit seçildiğinde yükte harcanan güç $2{,}557$ mW dır. Bu değerden farklı yük dirençlerinde güç daha küçük çıkar.", align="j")
+    D.p("**Süperpozisyon.** Şekil 3’te iki kaynağın birlikte oluşturduğu açık devre gerilimi, her kaynağın ayrı katkısının toplamına eşittir: $4{,}796$ V. Thevenin direnci $0{,}851\\ \\mathrm{k\\Omega}$ dur.", align="j")
 
     D.h(1, "Kaynaklar")
     refs_block(D, ["TOBB Ekonomi ve Teknoloji Üniversitesi. (2026). *ELE 201 L – Devre Analizi I Laboratuvarı, Deney 2 Ön Çalışma*. Ankara: TOBB ETÜ, Elektrik – Elektronik Mühendisliği Bölümü."])
@@ -101,5 +113,5 @@ def build():
 
 if __name__ == "__main__":
     B = os.path.join(os.path.dirname(OUT), "build"); os.makedirs(B, exist_ok=True)
-    D = build(); f = os.path.join(B, "ELE201L_Deney2_Laboratuvar_Raporu.docx"); D.save(f)
+    D = build(); f = os.path.join(B, "ELE201L_Deney2_On_Calisma_Raporu.docx"); D.save(f)
     subprocess.run(["soffice", "--headless", "--convert-to", "pdf", "--outdir", OUT, f], capture_output=True, timeout=300); print("ok")
