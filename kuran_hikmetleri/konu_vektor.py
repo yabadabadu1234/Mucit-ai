@@ -31,14 +31,26 @@ def indir(uzak, yerel):
     return yerel
 
 
-def aralik_oku(url, bas, son):
-    req = urllib.request.Request(url, headers={"Range": f"bytes={bas}-{son}"})
-    with urllib.request.urlopen(req, timeout=300) as r:
-        return r.read()
+def aralik_oku(url, bas, son, deneme=6):
+    """Aralık isteği; bağlantı kopması ya da geçici hata olursa üstel bekleme ile yeniden dener."""
+    import time
+    for n in range(deneme):
+        try:
+            req = urllib.request.Request(url, headers={"Range": f"bytes={bas}-{son}"})
+            with urllib.request.urlopen(req, timeout=300) as r:
+                return r.read()
+        except Exception:
+            if n == deneme - 1:
+                raise
+            time.sleep(2 ** n)
+
+
+BOSLUK_TOLERANSI = 64      # bu kadar satırdan kısa boşluklar tek istekte okunur (gereksiz istek sayısını düşürür)
+PARCA_SATIR = 4096         # bir istekte en çok bu kadar satır
 
 
 def embedding_satirlari(id_listesi):
-    """{token_id: float32 vektör} — yalnız istenen satırlar, ardışık olanlar tek istekte."""
+    """{token_id: float32 vektör} — yakın satırlar birleştirilmiş büyük parçalar hâlinde çekilir."""
     url = f"{DEPO}/{SHARD}"
     n = struct.unpack("<Q", aralik_oku(url, 0, 7))[0]
     baslik = json.loads(aralik_oku(url, 8, 8 + n - 1))[TENSOR]
@@ -48,19 +60,22 @@ def embedding_satirlari(id_listesi):
     veri_bas = 8 + n + baslik["data_offsets"][0]
     satir_bayt = boyut * 2
     ids = sorted(set(id_listesi))
+    gruplar = []
+    for t in ids:
+        if gruplar and t - gruplar[-1][1] <= BOSLUK_TOLERANSI and t - gruplar[-1][0] < PARCA_SATIR:
+            gruplar[-1][1] = t
+        else:
+            gruplar.append([t, t])
     sonuc = {}
-    i = 0
-    while i < len(ids):
-        j = i
-        while j + 1 < len(ids) and ids[j + 1] == ids[j] + 1:
-            j += 1
-        a = veri_bas + ids[i] * satir_bayt
-        b = veri_bas + (ids[j] + 1) * satir_bayt - 1
+    for k, (ilk, son_id) in enumerate(gruplar, 1):
+        a = veri_bas + ilk * satir_bayt
+        b = veri_bas + (son_id + 1) * satir_bayt - 1
         blok = np.frombuffer(aralik_oku(url, a, b), dtype="<u2").reshape(-1, boyut)
-        for k, tid in enumerate(range(ids[i], ids[j] + 1)):
-            # bf16 → float32: üst 16 bit
-            sonuc[tid] = (blok[k].astype(np.uint32) << 16).view(np.float32)
-        i = j + 1
+        for tid in ids:
+            if ilk <= tid <= son_id:
+                sonuc[tid] = (blok[tid - ilk].astype(np.uint32) << 16).view(np.float32)
+        if k % 50 == 0:
+            print(f"  {k}/{len(gruplar)} parça çekildi", flush=True)
     return sonuc, boyut
 
 
