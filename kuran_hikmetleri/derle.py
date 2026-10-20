@@ -1560,6 +1560,7 @@ window.addEventListener('resize', kaydirmaIsle);
 gorunenleriYukle();
 </script>
 {SURUM_KONTROLU_SCRIPT}
+<script src="renk.js" defer></script>
 </body>
 </html>
 """
