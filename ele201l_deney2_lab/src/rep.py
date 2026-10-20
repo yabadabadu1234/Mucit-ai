@@ -52,10 +52,9 @@ def build():
     D.eq(r"R_{TH}=\frac{V_{oc}}{I_{sc}}=\frac{6{,}00\ \mathrm{V}}{1{,}705\ \mathrm{mA}}=3{,}52\ \mathrm{k\Omega}", "rth1")
     D.p("Bağımsız kaynaklar sıfırlandığında ($V_S$ kısa devre) $R_1 \\parallel R_2$ ile $R_3$ seri bağlanır ve aynı değer doğrudan elde edilir:", align="j", keep=True)
     D.eq(r"R_{TH}=R_3+R_1\parallel R_2=2{,}2\ \mathrm{k\Omega}+1{,}32\ \mathrm{k\Omega}=3{,}52\ \mathrm{k\Omega}", "rth2")
-    rows = [["$V_{oc}$ (V)", n(Voc, 2), "6,00", "—"], ["$I_{sc}$ (mA)", n(Isc, 3), "1,705", "—"], ["$R_{TH}=V_{oc}/I_{sc}$ (kΩ)", n(Rth1 / 1e3, 2), "3,52", "—"],
-            ["$R_{TH}$, kaynaklar sıfırlanarak (kΩ)", n(Rth1b / 1e3, 2), "3,52", "—"]]
-    D.tab("t1", ["Büyüklük", "Teorik değer", "SPICE", "Ölçüm"], rows, "Thevenin eşdeğeri için teorik ve SPICE değerleri (Şekil 1)", [6.2, 3.2, 3.2, 3.2])
-    D.fig("spice", a("spice_cikti.png"), "Şekil 1 devresinin ngspice (batch modu) ile çalıştırılmış analiz çıktısı. Bu bir simülasyon çıktısıdır, laboratuvar ölçümü değildir.", 13.0)
+    rows = [["$V_{oc}$ (V)", n(Voc, 2), "6,00"], ["$I_{sc}$ (mA)", n(Isc, 3), "1,705"], ["$R_{TH}=V_{oc}/I_{sc}$ (kΩ)", n(Rth1 / 1e3, 2), "3,52"],
+            ["$R_{TH}$, kaynaklar sıfırlanarak (kΩ)", n(Rth1b / 1e3, 2), "3,52"]]
+    D.tab("t1", ["Büyüklük", "Teorik değer", "SPICE"], rows, "Thevenin eşdeğeri için teorik ve SPICE değerleri (Şekil 1)", [6.0, 3.5, 3.5])
     D.p("İki yöntemle bulunan Thevenin direnci de $3{,}52\\ \\mathrm{k\\Omega}$ çıkmıştır. Bu eşitlik, $R_{TH}$ ifadesinin kaynakların sıfırlanarak elde edilmesinin ve $V_{oc}/I_{sc}$ oranının aynı büyüklüğü verdiğini gösterir; iki ifade bu devrede aynıdır.", align="j")
 
     D.h(2, "Maksimum Güç Transferi")
@@ -68,8 +67,8 @@ def build():
     D.eq(r"\frac{dP_L}{dR_L}=0\;\Rightarrow\;R_L=R_{TH}=3{,}52\ \mathrm{k\Omega}", "rlopt")
     D.p("Bu koşulda yük akımı ve en büyük güç şöyle hesaplanır:", align="j", keep=True)
     D.eq(r"I_L=\frac{6{,}00\ \mathrm{V}}{3{,}52\ \mathrm{k\Omega}+3{,}52\ \mathrm{k\Omega}}=0{,}852\ \mathrm{mA},\qquad P_{L,max}=\frac{V_{TH}^2}{4R_{TH}}=2{,}557\ \mathrm{mW}", "pmax")
-    rows = [["$R_L$ (kΩ)", "3,52", "3,52", "—"], ["$V_L$ (V)", n(Voc / 2, 3), "3,000", "—"], ["$I_L$ (mA)", n(IL * 1e3, 3), "0,852", "—"], ["$P_L$ (mW)", n(PL * 1e3, 3), "2,557", "—"]]
-    D.tab("t2", ["Büyüklük", "Teorik değer", "SPICE", "Ölçüm"], rows, "Maksimum güç transferi için teorik ve SPICE değerleri ($R_L = R_{TH}$)", [6.2, 3.2, 3.2, 3.2])
+    rows = [["$R_L$ (kΩ)", "3,52", "3,52"], ["$V_L$ (V)", n(Voc / 2, 3), "3,000"], ["$I_L$ (mA)", n(IL * 1e3, 3), "0,852"], ["$P_L$ (mW)", n(PL * 1e3, 3), "2,557"]]
+    D.tab("t2", ["Büyüklük", "Teorik değer", "SPICE"], rows, "Maksimum güç transferi için teorik ve SPICE değerleri ($R_L = R_{TH}$)", [6.0, 3.5, 3.5])
 
     D.h(2, "Süperpozisyon İlkesi")
     D.p("Şekil 3’teki devrede iki bağımsız gerilim kaynağı bulunmaktadır [1]. Bileşen değerleri $R_1 = R_2 = 15\\ \\mathrm{k\\Omega}$, $R_3 = 3{,}9\\ \\mathrm{k\\Omega}$, $R_4 = R_5 = 1\\ \\mathrm{k\\Omega}$, $R_6 = 8{,}2\\ \\mathrm{k\\Omega}$, $V_{S1} = 12$ V ve $V_{S2} = 5$ V’tur.", align="j")
@@ -83,18 +82,18 @@ def build():
     D.p("Süperpozisyon ile katkılar ayrı ayrı hesaplanmıştır. $VS_1$ kısa devre edilerek ($V_{S1}=0$) elde edilen açık devre gerilimi ve $VS_2$ kısa devre edilerek ($V_{S2}=0$) elde edilen açık devre gerilimi şöyledir:", align="j", keep=True)
     D.eq(r"V_{oc,S2}=\frac{V_{S2}G_4}{G_4+G_b+G_6}=4{,}256\ \mathrm{V},\qquad V_{oc,S1}=\frac{V_{S1}G_b}{G_4+G_b+G_6}=0{,}540\ \mathrm{V}", "supparts")
     D.p("Bu iki katkının toplamı $4{,}256 + 0{,}540 = 4{,}796$ V olup, iki kaynağın birlikte çalıştığı durumdaki $V_{oc}$ ile aynıdır. Kaynaklar sıfırlandığında Thevenin direnci değişmediği için her iki katkı da aynı $R_{TH} = 0{,}851\\ \\mathrm{k\\Omega}$ ile çalışır.", align="j")
-    rows = [["$V_{oc}$, iki kaynak birlikte (V)", n(VocS, 3), "4,796", "—"],
-            ["$V_{oc}$, yalnız $V_{S2}$ (V)", n(VocS2, 3), "4,256", "—"],
-            ["$V_{oc}$, yalnız $V_{S1}$ (V)", n(VocS1, 3), "0,540", "—"],
-            ["$R_{TH}$ (kΩ)", n(RthS, 3), "0,851", "—"],
-            ["$I_N = V_{oc}/R_{TH}$ (mA)", n(IN, 3), "5,635", "—"]]
-    D.tab("t3", ["Büyüklük", "Teorik değer", "SPICE", "Ölçüm"], rows, "Süperpozisyon devresi için teorik ve SPICE değerleri (Şekil 3)", [6.2, 3.2, 3.2, 3.2])
+    rows = [["$V_{oc}$, iki kaynak birlikte (V)", n(VocS, 3), "4,796"],
+            ["$V_{oc}$, yalnız $V_{S2}$ (V)", n(VocS2, 3), "4,256"],
+            ["$V_{oc}$, yalnız $V_{S1}$ (V)", n(VocS1, 3), "0,540"],
+            ["$R_{TH}$ (kΩ)", n(RthS, 3), "0,851"],
+            ["$I_N = V_{oc}/R_{TH}$ (mA)", n(IN, 3), "5,635"]]
+    D.tab("t3", ["Büyüklük", "Teorik değer", "SPICE"], rows, "Süperpozisyon devresi için teorik ve SPICE değerleri (Şekil 3)", [6.0, 3.5, 3.5])
 
     D.h(1, "Sonuçlar")
     D.p("**Thevenin eşdeğeri.** Şekil 1’deki devrenin açık devre gerilimi $6{,}00$ V, kısa devre akımı $1{,}705$ mA ve Thevenin direnci $3{,}52\\ \\mathrm{k\\Omega}$ olarak hesaplanmıştır. Kaynakları sıfırlayarak bulunan direnç aynı değeri vermiştir. SPICE sonuçları teorik değerlerle yuvarlama düzeyinde uyuşmaktadır.", align="j")
     D.p("**Maksimum güç.** Yük direnci Thevenin direncine eşit ($3{,}52\\ \\mathrm{k\\Omega}$) seçildiğinde yükte harcanan güç $2{,}557$ mW olarak bulunmuştur. Bu değerden farklı yük dirençlerinde güç daha küçük çıkar.", align="j")
     D.p("**Süperpozisyon.** İki kaynağın birlikte oluşturduğu açık devre gerilimi, her kaynağın ayrı katkısının toplamına eşittir. Bu toplam $4{,}796$ V olarak bulunmuş, Thevenin direnci $0{,}851\\ \\mathrm{k\\Omega}$ olarak hesaplanmıştır.", align="j")
-    D.p("**Eksik kalan noktalar.** Bu deneyde laboratuvar ölçümü yapılmadığı için ölçüm sütunları boştur. Teorik değerler SPICE sonuçlarıyla doğrulanmıştır; ölçülen değerlerle karşılaştırma ve hata payı yorumu, ölçümler yapıldıktan sonra eklenmelidir.", align="j")
+    D.p("Bu çalışmadaki değerler teorik hesaba ve SPICE simülasyonuna dayanmaktadır.", align="j")
 
     D.h(1, "Kaynaklar")
     refs_block(D, ["TOBB Ekonomi ve Teknoloji Üniversitesi. (2026). *ELE 201 L – Devre Analizi I Laboratuvarı, Deney 2 Ön Çalışma*. Ankara: TOBB ETÜ, Elektrik – Elektronik Mühendisliği Bölümü."])
