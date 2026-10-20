@@ -29,6 +29,7 @@ from grafik_uretici import build_all_charts, load_all_surah_data, kelime_satiri_
 import kelime_mealli
 from mevzu_kumeleri import mevzu_pasta
 from konu_haritasi import harita_bolumu
+from konu_ag import ag_bolumu
 
 BASE_DIR = Path(__file__).resolve().parent
 REPO_ROOT = BASE_DIR.parent
@@ -682,6 +683,9 @@ def build_unified_html(config, surahs_data):
 
         elif tur == "KONU_HARITASI":
             body_sections.append(harita_bolumu())
+
+        elif tur == "KONU_AG":
+            body_sections.append(ag_bolumu())
 
         elif tur == "MEVZU_OZETI":
             body_sections.append(mevzu_ozeti(surahs_data))

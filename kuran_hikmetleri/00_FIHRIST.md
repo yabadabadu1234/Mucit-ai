@@ -1520,7 +1520,7 @@ Oyun ve eğlencelerini din gibi yapanlar: 7/51.
 Ölen kişinin ve yanındakilerin âcizliği: 56/82-87.
 Ölü eti: 2/173; 5/3; 49/12.
 Ölüm ânındaki ve sonrasındaki pişmanlık: 4/18, 159; 6/27, 28; 8/33-37; 10/51, 90; 21/97; 23/99-101; 25/27-29; 26/201; 47/27; 68/42-43; 69/25-35; 77/34-40; 78/40; 89/24.
-Ölüm ânında yapılan iman: 6/158; 10/90-9140/84-85.
+Ölüm ânında yapılan iman: 6/158; 10/90-91; 40/84-85.
 Ölüm öncesi pişmanlık: 2/48; 4/18, 78; 7/153; 17/25; 18/42; 20/82; 23/99-100; 25/27, 70, 71. Ayrıca bk. Cehennemde pişmanlık
 Ölüm sarhoşluğu: 50/19.
 Ölüm ve hayat imtihan için verilmiştir: 18/7; 21/35; 11/7; 67/2.
