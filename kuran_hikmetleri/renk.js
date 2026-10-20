@@ -35,12 +35,21 @@
     'اليهم': 'onlara, onlara doğru', 'اليكم': 'size, size doğru', 'معه': 'onunla, ile', 'معهم': 'onlarla, ile',
     'عليه': 'onun üzerine, ona, onun üstüne', 'عليها': 'onun üzerine', 'عليهم': 'onların üzerine, onlara'
   };
-  var ZAMIR_DURAK = /^[ۖ-ۭ]+$/; // yalnız durak işareti (ۚ ۖ ۗ ۞ ۙ): kelime değildir
+  // Bitişik zamir ekleri: Arapça kelimenin sonu (norm biçimi) → meal'deki karşılık sözcükleri.
+  var ZAMIR_EKI = [
+    { ek: 'هم', meal: ['onlar', 'onları', 'onlara', 'onların', 'onlardan', 'onlarla', 'onlarda'] },
+    { ek: 'كم', meal: ['siz', 'sizi', 'size', 'sizin', 'sizden', 'sizinle'] },
+    { ek: 'نا', meal: ['biz', 'bizi', 'bize', 'bizim', 'bizden', 'bizimle'] },
+    { ek: 'ني', meal: ['ben', 'beni', 'bana', 'benim', 'bende'] }
+  ];
+  var ZAMIR_DURAK =/^[ۖ-ۭ]+$/; // yalnız durak işareti (ۚ ۖ ۗ ۞ ۙ): kelime değildir
   var ONEKLER = ['والـ', 'وال', 'فال', 'بال', 'لل', 'ال', 'و', 'ف', 'ب', 'ل', 'ك', 'س'];
   var SONEKLER = ['هما', 'هم', 'هن', 'ها', 'كم', 'كن', 'نا', 'ني', 'ه', 'ي', 'ة', 'ك'];
 
+  // Hemzeler (ء ؤ ئ) ve harekeler atılır: "لَـَٔايَـٰتٍ" ile "ايات" aynı anahtara düşer.
   function norm(s) {
     return s.replace(/[ً-ٰٟـۖ-ۭ]/g, '')
+      .replace(/[ءؤئ]/g, '')
       .replace(/[إأآٱ]/g, 'ا').replace(/ى/g, 'ي').trim();
   }
   function kaçış(s) {
@@ -128,6 +137,24 @@
       }
     });
 
+    // 3) Zamir eki: boyanmamış Arapça kelimenin sonundaki bitişik zamir (هم كم نا ني) meal'deki zamire bağlanır.
+    kelimeler.forEach(function (k, i) {
+      if (renk[i] >= 0) return;
+      var n = norm(k);
+      ZAMIR_EKI.some(function (kural) {
+        if (n.length - kural.ek.length < 2 || n.slice(-kural.ek.length) !== kural.ek) return false;
+        for (var j = 1; j < parcalar.length; j += 2) {
+          if (atama[j] !== undefined) continue;
+          if (kural.meal.indexOf(parcalar[j].toLocaleLowerCase('tr')) >= 0) {
+            renk[i] = sira++;
+            atama[j] = renk[i];
+            return true;
+          }
+        }
+        return false;
+      });
+    });
+
     arEl.innerHTML = kelimeler.map(function (k, i) {
       return renk[i] >= 0
         ? '<span class="rk" data-c="' + (renk[i] % PALET.length) + '">' + kaçış(k) + '</span>'
@@ -154,7 +181,10 @@
     dugme.disabled = true; dugme.textContent = 'Renkler yükleniyor…';
     fetch('renk_sozluk.json').then(function (r) { return r.json(); }).then(function (veri) {
       SOZLUK = {};
-      Object.keys(veri).forEach(function (k) { SOZLUK[k] = veri[k]; });
+      Object.keys(veri).forEach(function (k) {
+        var n = norm(k);
+        if (!(n in SOZLUK)) SOZLUK[n] = veri[k];
+      });
       stil();
       var arlar = document.querySelectorAll('.verse-ar');
       arlar.forEach(function (arEl) {
