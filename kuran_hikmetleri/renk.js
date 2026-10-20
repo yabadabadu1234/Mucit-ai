@@ -1,12 +1,18 @@
-/* Renkli anlam: Arapça kelime ile onun meal karşılığı aynı renkte görünür.
- * Eşleşme üç aşamalıdır: (1) sözlük karşılığının Türkçe sözcükleri, (2) Arapça ekleri
- * (و ف ب ل ك ... ve -hum, -hüm, -kum ...) ayıklanmış biçimin sözlüğü, (3) ünsüz iskeleti
- * (bihim = بهم, leküm = لكم, ente = أنت). Veri: renk_sozluk.json, ilk tıklamada yüklenir.
- * Kitap HTML'i şişmez; düğmeye basılınca her ayet işlenir (idempotent). */
+/* Renkli anlam (kelime meali): her Arapça kelime ile onun Türkçe karşılığı aynı renkte görünür.
+ * Bir Arapça kelimenin karşılığı birden çok Türkçe sözcük olabilir; meal'de sahipsiz sözcük bırakılmaz.
+ * Adımlar (her âyette, kelimelerin yaklaşık konumuna en yakın sözcük seçilir):
+ *   1) kelime gövde + ön ek (و ف ب ل ك س) + bitişik zamir (ـه ـهم ـكم ـنا ...) olarak ayrılır;
+ *      gövdenin sözlük karşılığı meal'de aranır;  2) ön ek ve zamir ekinin karşılığı aranır;
+ *   3) ünsüz iskeleti aynı olan kelime ile sözcük birleşir;  4) kalan Arapça kelimelerle kalan
+ *      içerik sözcükleri sayıca eşitse sırayla eşlenir;  5) geriye kalan sözcükler (de, ki, bir, ey…)
+ *      komşu karşılığın parçası olur.
+ * Veri: renk_sozluk.json, ilk tıklamada yüklenir. Kitap HTML'i şişmez. */
 (function () {
   var PALET = ['#fde68a', '#a7f3d0', '#bfdbfe', '#fbcfe8', '#fecaca', '#ddd6fe',
                '#bae6fd', '#fed7aa', '#d9f99d', '#fca5a5', '#c7d2fe', '#99f6e4'];
   var SOZLUK = null;
+  var ONBELLEK = {};
+  var DURAK = /^[ۖ-ۭ]+$/; // yalnız durak işareti (ۚ ۖ ۗ ۞ ۙ): kelime değildir
 
   var ARAP_ISKELET = {
     'ب': 'b', 'ت': 't', 'ط': 't', 'ث': 's', 'س': 's', 'ص': 's', 'ج': 'c', 'ح': 'h',
@@ -19,152 +25,268 @@
     'h': 'h', 'k': 'k', 'q': 'k', 'l': 'l', 'm': 'm', 'n': 'n', 'r': 'r', 's': 's',
     'ş': 'S', 't': 't', 'v': 'f', 'z': 'z'
   };
-  // Sözlükte olmayan zamirler ve edatlar (normalize biçim → meal karşılığı). Eşleşme yalnız meal'de bu sözcüklerle yapılır.
+
+  // Sözlükte olmayan zamir ve edat gövdeleri (norm biçimi → meal karşılığı).
   var ZAMIR = {
     'هو': 'o, onu, ona, onda', 'هي': 'o, onu, ona, onda', 'هم': 'onlar, onları, onlara',
     'هما': 'onlar, ikisi, onları', 'هن': 'onlar, onları, onlara',
     'انت': 'sen, seni, sana, sende', 'انتم': 'siz, sizi, size, sizde', 'نحن': 'biz, bizi, bize, bizde',
     'انا': 'ben, beni, bana, bende',
     'له': 'onun, ona, onu', 'لها': 'onun, ona, onu', 'لهم': 'onların, onlara, onlar', 'لهما': 'onların, onlara',
-    'لك': 'senin, sana, seni', 'لكم': 'sizin, size, sizi', 'لنا': 'bizim, bize, bizi', 'لي': 'benim, bana, beni',
+    'لهن': 'onların, onlara, onlar', 'لك': 'senin, sana, seni', 'لكم': 'sizin, size, sizi',
+    'لنا': 'bizim, bize, bizi', 'لي': 'benim, bana, beni',
     'به': 'onunla, ona, onda, bununla', 'بها': 'onunla, onda, bununla', 'بهم': 'onlarla, onlarda, onlara',
-    'بهما': 'onlarla', 'بك': 'seninle, sende', 'بنا': 'bizimle, bizde',
-    'منه': 'ondan, onun', 'منها': 'ondan, onun', 'منهم': 'onlardan', 'منكم': 'sizden, sizin',
+    'بهما': 'onlarla', 'بهن': 'onlarla', 'بك': 'seninle, sende', 'بنا': 'bizimle, bizde',
+    'منه': 'ondan, onun', 'منها': 'ondan, onun', 'منهم': 'onlardan', 'منهن': 'onlardan', 'منكم': 'sizden, sizin',
     'عنه': 'ondan, onun', 'عنها': 'ondan, onun', 'عنهم': 'onlardan', 'فيه': 'onda, içinde, onun',
-    'فيها': 'onda, içinde', 'فيهم': 'onlarda, içinde', 'اليه': 'ona, ona doğru', 'اليها': 'ona, ona doğru',
-    'اليهم': 'onlara, onlara doğru', 'اليكم': 'size, size doğru', 'معه': 'onunla, ile', 'معهم': 'onlarla, ile',
-    'عليه': 'onun üzerine, ona, onun üstüne', 'عليها': 'onun üzerine', 'عليهم': 'onların üzerine, onlara'
+    'فيها': 'onda, içinde', 'فيهم': 'onlarda, içinde', 'فيهن': 'onlarda, içinde',
+    'اليه': 'ona, ona doğru', 'اليها': 'ona, ona doğru', 'اليهم': 'onlara, onlara doğru',
+    'اليكم': 'size, size doğru', 'معه': 'onunla, ile', 'معهم': 'onlarla, ile',
+    'عليه': 'onun üzerine, ona, onun üstüne', 'عليها': 'onun üzerine', 'عليهم': 'onların üzerine, onlara',
+    'عليهن': 'onların üzerine, onlara'
   };
-  // Bitişik zamir ekleri: Arapça kelimenin sonu (norm biçimi) → meal'deki karşılık sözcükleri.
-  var ZAMIR_EKI = [
-    { ek: 'هم', meal: ['onlar', 'onları', 'onlara', 'onların', 'onlardan', 'onlarla', 'onlarda'] },
-    { ek: 'كم', meal: ['siz', 'sizi', 'size', 'sizin', 'sizden', 'sizinle'] },
-    { ek: 'نا', meal: ['biz', 'bizi', 'bize', 'bizim', 'bizden', 'bizimle'] },
-    { ek: 'ني', meal: ['ben', 'beni', 'bana', 'benim', 'bende'] }
-  ];
-  var ZAMIR_DURAK =/^[ۖ-ۭ]+$/; // yalnız durak işareti (ۚ ۖ ۗ ۞ ۙ): kelime değildir
-  var ONEKLER = ['والـ', 'وال', 'فال', 'بال', 'لل', 'ال', 'و', 'ف', 'ب', 'ل', 'ك', 'س'];
-  var SONEKLER = ['هما', 'هم', 'هن', 'ها', 'كم', 'كن', 'نا', 'ني', 'ه', 'ي', 'ة', 'ك'];
+  // Ön ek ve bitişik zamirin meal'deki karşılık sözcükleri.
+  var ONEK_MEAL = {
+    'و': ['ve'], 'ف': ['ve', 'böylece', 'ise', 'ama', 'fakat', 'artık'], 'ب': ['ile'],
+    'ل': ['için'], 'ك': ['gibi'], 'س': ['yakında']
+  };
+  var SONEK_MEAL = {
+    'ه': ['o', 'onu', 'ona', 'onun', 'ondan', 'onda', 'onunla'],
+    'ها': ['o', 'onu', 'ona', 'onun', 'ondan', 'onda', 'onunla'],
+    'هم': ['onlar', 'onları', 'onlara', 'onların', 'onlardan', 'onlarla', 'onlarda'],
+    'هما': ['onlar', 'onları', 'onlara', 'onların', 'onlardan', 'onlarla', 'onlarda'],
+    'هن': ['onlar', 'onları', 'onlara', 'onların', 'onlardan', 'onlarla', 'onlarda'],
+    'كم': ['siz', 'sizi', 'size', 'sizin', 'sizden', 'sizinle'],
+    'كن': ['siz', 'sizi', 'size', 'sizin', 'sizden', 'sizinle'],
+    'ك': ['sen', 'seni', 'sana', 'senin', 'senden', 'seninle'],
+    'ني': ['ben', 'beni', 'bana', 'benim', 'benden', 'benimle'],
+    'ي': ['ben', 'beni', 'bana', 'benim', 'benden', 'benimle'],
+    'نا': ['biz', 'bizi', 'bize', 'bizim', 'bizden', 'bizimle']
+  };
+  var ONEK_SECENEKLER = ['', 'و', 'ف', 'ب', 'ل', 'ك', 'س', 'وب', 'ول', 'وك', 'وس', 'فب', 'فل', 'فس'];
+  var SONEK_SECENEKLER = ['', 'ه', 'ها', 'هم', 'هما', 'هن', 'كم', 'كن', 'ك', 'ني', 'ي', 'نا'];
+  var SONEK_SOZLUKSUZ = ['هما', 'هم', 'هن', 'ها', 'كم', 'كن', 'نا', 'ني'];
+
+  // Eşleşmeyen Türkçe sözcüğün hangi komşuya yapışacağı.
+  var ONE_YAPIS = ['de', 'da', 'ki', 'mi', 'mı', 'mu', 'mü', 'ise', 'ile', 'için', 'gibi', 'olarak', 'kadar', 'bile', 'dahi'];
+  var SONRA_YAPIS = ['bir', 'ey', 'bu', 'şu', 'o', 'her', 've', 'ya', 'yahut', 'veya', 'ama', 'fakat', 'çünkü',
+                     'eğer', 'şayet', 'ne', 'hem'];
 
   // Hemzeler (ء ؤ ئ) ve harekeler atılır: "لَـَٔايَـٰتٍ" ile "ايات" aynı anahtara düşer.
   function norm(s) {
-    return s.replace(/[ً-ٰٟـۖ-ۭ]/g, '')
+    return s.replace(/[ً-ٰـۖ-ۭ]/g, '')
       .replace(/[ءؤئ]/g, '')
       .replace(/[إأآٱ]/g, 'ا').replace(/ى/g, 'ي').trim();
   }
   function kaçış(s) {
     return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   }
-  // Fiil mastarı (-mak / -mek) kökü: "anlamak" → "anla", meal'deki çekimli "anlamazsınız" ile eşleşsin.
-  function adaylar(karsilik) {
-    var out = [];
+  // Karşılık metninden aranacak Türkçe sözcükler; fiil mastarının (-mak/-mek) kökü de eklenir.
+  function adaylar(karsilik, zamirMi) {
+    var asgari = zamirMi ? 1 : 3, out = [];
     karsilik.toLocaleLowerCase('tr').split(/[\s,;()\/.:]+/).forEach(function (w) {
-      if (w.length >= 3 && w !== 'ile' && w !== 'olan' && w !== 'için') out.push(w);
+      if (w.length >= asgari && w !== 'ile' && w !== 'olan' && w !== 'için') out.push(w);
       if (/(mak|mek)$/.test(w) && w.length - 3 >= 3) out.push(w.slice(0, -3));
     });
     return out;
   }
-  function eslesir(meal, adaylar) {
-    var m = meal.toLocaleLowerCase('tr');
-    for (var i = 0; i < adaylar.length; i++) {
-      var a = adaylar[i];
-      if (m === a || (a.length >= 4 && m.indexOf(a) === 0)) return true;
+  // Türkçe ekler gövdeyi uzatır/değiştirir (rab → rabbimiz, kitap → kitabı): ortak baş kısım yeterince uzunsa eşleşir.
+  function ortakBas(a, b) {
+    var n = Math.min(a.length, b.length), i = 0;
+    while (i < n && a.charAt(i) === b.charAt(i)) i++;
+    return i;
+  }
+  function eslesir(meal, aday) {
+    for (var i = 0; i < aday.length; i++) {
+      var a = aday[i];
+      if (meal === a) return true;
+      if (a.length >= 3 && meal.indexOf(a) === 0) return true;
+      var o = ortakBas(a, meal);
+      if (o >= 4 && o >= 0.7 * Math.min(a.length, meal.length)) return true;
     }
     return false;
-  }
-  // Sözlükte aranacak biçimler: önce tam biçim, sonra ekleri ayıklanmış kök adayları.
-  function kokler(kelime) {
-    var n = norm(kelime), out = [n];
-    ONEKLER.forEach(function (p) {
-      if (n.indexOf(p) === 0 && n.length - p.length >= 3) out.push(n.slice(p.length));
-    });
-    out.slice().forEach(function (k) {
-      SONEKLER.forEach(function (s) {
-        if (k.length - s.length >= 3 && k.slice(-s.length) === s) out.push(k.slice(0, -s.length));
-      });
-    });
-    return out;
   }
   function arapIskelet(kelime) {
     return Array.from(norm(kelime)).map(function (c) { return ARAP_ISKELET[c] || ''; }).join('');
   }
   function turkIskelet(kelime) {
-    return Array.from(kelime.toLocaleLowerCase('tr')).map(function (c) { return TUR_ISKELET[c] || ''; }).join('');
+    return Array.from(kelime).map(function (c) { return TUR_ISKELET[c] || ''; }).join('');
+  }
+  function sozlukte(govde) {
+    if (SOZLUK[govde]) return { t: SOZLUK[govde], z: false };
+    if (ZAMIR[govde]) return { t: ZAMIR[govde], z: true };
+    return null;
+  }
+  function onekMeali(p) {
+    var out = [];
+    Array.from(p).forEach(function (h) { (ONEK_MEAL[h] || []).forEach(function (w) { out.push(w); }); });
+    return out;
+  }
+
+  // Kelimeyi ön ek + gövde + zamir eki olarak ayırır; en az soyma ile sözlükte bulunan biçimi seçer.
+  function ayristir(kelime) {
+    var n0 = norm(kelime);
+    if (ONBELLEK[n0]) return ONBELLEK[n0];
+    var en = null, enMaliyet = 99;
+    ONEK_SECENEKLER.forEach(function (p) {
+      if (n0.indexOf(p) !== 0) return;
+      var rest = n0.slice(p.length);
+      var govdeler = [[rest, 0]];
+      if (rest.indexOf('ال') === 0) govdeler.push([rest.slice(2), 2]);
+      if (p && p.slice(-1) === 'ل' && rest.charAt(0) === 'ل') govdeler.push([rest.slice(1), 1]);
+      govdeler.forEach(function (gv) {
+        SONEK_SECENEKLER.forEach(function (s) {
+          var g = gv[0];
+          if (s && (g.length - s.length < 2 || g.slice(-s.length) !== s)) return;
+          var govde = s ? g.slice(0, -s.length) : g;
+          if (govde.length < 2) return;
+          var m = p.length + gv[1] + s.length;
+          if (m >= enMaliyet) return;
+          var gl = sozlukte(govde);
+          if (gl) { en = { gl: gl, p: p, s: s }; enMaliyet = m; }
+        });
+      });
+    });
+    var sonuc;
+    if (en) {
+      sonuc = { aday: adaylar(en.gl.t, en.gl.z), onek: onekMeali(en.p), sonek: SONEK_MEAL[en.s] || [] };
+    } else {
+      // Sözlükte yoksa yalnız ön ek harfi ve çok harfli zamir eki aranır.
+      var r = n0, p2 = '', s2 = '';
+      if ((r.charAt(0) === 'و' || r.charAt(0) === 'ف') && r.length - 1 >= 3) { p2 = r.charAt(0); r = r.slice(1); }
+      if ('بلكس'.indexOf(r.charAt(0)) >= 0 && r.length - 1 >= 3) { p2 += r.charAt(0); r = r.slice(1); }
+      SONEK_SOZLUKSUZ.some(function (s) {
+        if (r.length - s.length >= 3 && r.slice(-s.length) === s) { s2 = s; return true; }
+        return false;
+      });
+      sonuc = { aday: [], onek: onekMeali(p2), sonek: SONEK_MEAL[s2] || [] };
+    }
+    ONBELLEK[n0] = sonuc;
+    return sonuc;
   }
 
   function ayetiIsle(arEl, trEl) {
     if (arEl.dataset.renk) return;
     var kelimeler = arEl.textContent.trim().split(/\s+/).filter(Boolean);
+    var gercek = kelimeler.map(function (k) { return !DURAK.test(k); });
+    var gs = [], say = 0;
+    kelimeler.forEach(function (k, i) { gs[i] = gercek[i] ? say++ : -1; });
     var parcalar = trEl.textContent.split(/([\p{L}’'’\-]+)/u);
-    var renk = kelimeler.map(function () { return -1; });
-    var atama = {};
+    var W = [];
+    for (var j = 1; j < parcalar.length; j += 2) if (/\p{L}/u.test(parcalar[j])) W.push(j);
+    // Birkaç âyetin mealini taşıyan pencere kartları ("(6–14) …") tek âyetin Arapçasıyla eşlenemez; dokunulmaz.
+    if (/^\s*\(\d+\s*[–-]\s*\d+\)/.test(trEl.textContent) || W.length > 3 * say + 8) return;
+    var ad = W.map(function (j) { return parcalar[j].toLocaleLowerCase('tr'); });
+    var cw = W.map(function () { return -1; });
+    var ci = kelimeler.map(function () { return -1; });
     var sira = 0;
+    var cozum = kelimeler.map(function (k, i) { return gercek[i] ? ayristir(k) : null; });
 
-    // 1) Sözlük: Arapça biçim (ya da ekleri ayıklanmış kökü) → meal kelimesi
+    // Kelimenin yaklaşık konumuna en yakın, henüz sahibi olmayan uygun sözcük.
+    function enYakin(i, uygun) {
+      var beklenen = (gs[i] + 0.5) / Math.max(say, 1) * W.length, en = -1, fark = 1e9;
+      for (var p = 0; p < W.length; p++) {
+        if (cw[p] >= 0 || !uygun(ad[p])) continue;
+        var f = Math.abs(p - beklenen);
+        if (f < fark) { fark = f; en = p; }
+      }
+      return en;
+    }
+    function ata(i, p) {
+      if (ci[i] < 0) ci[i] = sira++;
+      cw[p] = ci[i];
+    }
+
+    // 1) gövdenin sözlük karşılığı
     kelimeler.forEach(function (k, i) {
-      if (ZAMIR_DURAK.test(k)) return;
-      var ad = null;
-      kokler(k).some(function (kok) {
-        if (SOZLUK[kok]) { ad = SOZLUK[kok]; return true; }
-        return false;
-      });
-      if (!ad) {
-        var n = norm(k);
-        [n, n.replace(/^[وفبلك]/, '')].some(function (z) {
-          if (ZAMIR[z]) { ad = ZAMIR[z]; return true; }
-          return false;
-        });
-      }
-      if (!ad) return;
-      renk[i] = sira++;
-      var a = adaylar(ad);
-      for (var j = 1; j < parcalar.length; j += 2) {
-        if (atama[j] === undefined && eslesir(parcalar[j], a)) { atama[j] = renk[i]; break; }
-      }
+      var c = cozum[i];
+      if (!c || !c.aday.length) return;
+      var p = enYakin(i, function (w) { return eslesir(w, c.aday); });
+      if (p >= 0) ata(i, p);
     });
-
-    // 2) İskelet: eşleşmeyen Arapça kelime ile eşleşmeyen meal kelimesi aynı ünsüzlerden ise birleşir.
+    // 2) ön ek (ve, ile, için …) ve 3) bitişik zamir (onlar, size, biz …)
+    ['onek', 'sonek'].forEach(function (tur) {
+      kelimeler.forEach(function (k, i) {
+        var c = cozum[i];
+        if (!c || !c[tur].length) return;
+        var p = enYakin(i, function (w) { return c[tur].indexOf(w) >= 0; });
+        if (p >= 0) ata(i, p);
+      });
+    });
+    // 4) ünsüz iskeleti aynı olan kelime ile sözcük
     kelimeler.forEach(function (k, i) {
+      if (!gercek[i] || ci[i] >= 0) return;
       var sk = arapIskelet(k);
       if (sk.length < 2) return;
-      for (var j = 1; j < parcalar.length; j += 2) {
-        if (atama[j] !== undefined) continue;
-        var tk = turkIskelet(parcalar[j]);
-        if (tk.length < 2 || tk !== sk) continue;
-        if (renk[i] < 0) renk[i] = sira++;
-        atama[j] = renk[i];
-        break;
-      }
+      var p = enYakin(i, function (w) { var t = turkIskelet(w); return t.length >= 2 && t === sk; });
+      if (p >= 0) ata(i, p);
     });
-
-    // 3) Zamir eki: boyanmamış Arapça kelimenin sonundaki bitişik zamir (هم كم نا ني) meal'deki zamire bağlanır.
+    // 5) Omurga: eşleşmiş kelimelerden meal konumu sıralı kalan en uzun dizi. Omurga aralarındaki
+    //    eşleşmemiş Arapça kelimelerle eşleşmemiş içerik sözcükleri sırayla paylaştırılır.
+    var cap = [];
     kelimeler.forEach(function (k, i) {
-      if (renk[i] >= 0) return;
-      var n = norm(k);
-      ZAMIR_EKI.some(function (kural) {
-        if (n.length - kural.ek.length < 2 || n.slice(-kural.ek.length) !== kural.ek) return false;
-        for (var j = 1; j < parcalar.length; j += 2) {
-          if (atama[j] !== undefined) continue;
-          if (kural.meal.indexOf(parcalar[j].toLocaleLowerCase('tr')) >= 0) {
-            renk[i] = sira++;
-            atama[j] = renk[i];
-            return true;
-          }
-        }
-        return false;
-      });
+      if (ci[i] < 0) return;
+      var mn = 1e9, mx = -1;
+      cw.forEach(function (c, p) { if (c === ci[i]) { if (p < mn) mn = p; if (p > mx) mx = p; } });
+      cap.push({ i: i, mn: mn, mx: mx });
     });
+    var uz = cap.map(function () { return 1; }), geri = cap.map(function () { return -1; }), eniyi = -1;
+    cap.forEach(function (a, x) {
+      for (var y = 0; y < x; y++) {
+        if (cap[y].mx < a.mn && uz[y] + 1 > uz[x]) { uz[x] = uz[y] + 1; geri[x] = y; }
+      }
+      if (eniyi < 0 || uz[x] > uz[eniyi]) eniyi = x;
+    });
+    var omurga = [];
+    for (var x = eniyi; x >= 0; x = geri[x]) omurga.unshift(cap[x]);
+    omurga.unshift({ i: -1, mn: -1, mx: -1 });
+    omurga.push({ i: kelimeler.length, mn: W.length, mx: W.length });
+    for (var g = 0; g + 1 < omurga.length; g++) {
+      var U = [], M = [], t, p;
+      for (t = omurga[g].i + 1; t < omurga[g + 1].i; t++) if (gercek[t] && ci[t] < 0) U.push(t);
+      for (p = omurga[g].mx + 1; p < omurga[g + 1].mn; p++) {
+        if (cw[p] < 0 && ONE_YAPIS.indexOf(ad[p]) < 0 && SONRA_YAPIS.indexOf(ad[p]) < 0) M.push(p);
+      }
+      if (!U.length || !M.length) continue;
+      if (M.length >= U.length) {
+        U.forEach(function (tk, u) {
+          for (var y = Math.floor(u * M.length / U.length); y < Math.floor((u + 1) * M.length / U.length); y++) ata(tk, M[y]);
+        });
+      } else {
+        M.forEach(function (pp, y) { ata(U[Math.floor((y + 0.5) * U.length / M.length)], pp); });
+      }
+    }
+    // 6) hâlâ sahipsiz sözcükler komşu karşılığın parçası olur
+    var ilk = cw.slice();
+    for (var p = 0; p < W.length; p++) {
+      if (cw[p] >= 0) continue;
+      var sonraYapis = SONRA_YAPIS.indexOf(ad[p]) >= 0, hedef = -1, q;
+      if (!sonraYapis) { for (q = p - 1; q >= 0; q--) if (cw[q] >= 0) { hedef = cw[q]; break; } }
+      if (hedef < 0) { for (q = p + 1; q < W.length; q++) if (ilk[q] >= 0) { hedef = ilk[q]; break; } }
+      if (hedef < 0) { for (q = p - 1; q >= 0; q--) if (cw[q] >= 0) { hedef = cw[q]; break; } }
+      if (hedef >= 0) cw[p] = hedef;
+    }
 
     arEl.innerHTML = kelimeler.map(function (k, i) {
-      return renk[i] >= 0
-        ? '<span class="rk" data-c="' + (renk[i] % PALET.length) + '">' + kaçış(k) + '</span>'
+      return ci[i] >= 0
+        ? '<span class="rk" data-c="' + (ci[i] % PALET.length) + '">' + kaçış(k) + '</span>'
         : kaçış(k);
     }).join(' ');
-    trEl.innerHTML = parcalar.map(function (p, j) {
-      return (j % 2 === 1 && atama[j] !== undefined)
-        ? '<span class="rk" data-c="' + (atama[j] % PALET.length) + '">' + kaçış(p) + '</span>'
-        : kaçış(p);
-    }).join('');
+    var cpos = {};
+    W.forEach(function (j, p) { cpos[j] = cw[p]; });
+    var html = [], b = 0;
+    while (b < parcalar.length) {
+      if (b % 2 === 1 && cpos[b] !== undefined && cpos[b] >= 0) {
+        var c = cpos[b], son = b;
+        while (son + 2 < parcalar.length && cpos[son + 2] === c && /^\s*$/.test(parcalar[son + 1])) son += 2;
+        html.push('<span class="rk" data-c="' + (c % PALET.length) + '">' + kaçış(parcalar.slice(b, son + 1).join('')) + '</span>');
+        b = son + 1;
+      } else {
+        html.push(kaçış(parcalar[b]));
+        b++;
+      }
+    }
+    trEl.innerHTML = html.join('');
     arEl.dataset.renk = '1';
     trEl.dataset.renk = '1';
   }
