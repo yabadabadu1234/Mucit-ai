@@ -54,6 +54,7 @@ def build():
     rows = [["$V_{oc}$ (V)", n(Voc, 2), "6,00", "—"], ["$I_{sc}$ (mA)", n(Isc, 3), "1,705", "—"], ["$R_{TH}=V_{oc}/I_{sc}$ (kΩ)", n(Rth1 / 1e3, 2), "3,52", "—"],
             ["$R_{TH}$, kaynaklar sıfırlanarak (kΩ)", n(Rth1b / 1e3, 2), "3,52", "—"]]
     D.tab("t1", ["Büyüklük", "Teorik değer", "SPICE", "Ölçüm"], rows, "Thevenin eşdeğeri için teorik ve SPICE değerleri (Şekil 1)", [6.2, 3.2, 3.2, 3.2])
+    D.fig("spice", a("spice_cikti.png"), "Şekil 1 devresinin ngspice (batch modu) ile çalıştırılmış analiz çıktısı. Bu bir simülasyon çıktısıdır, laboratuvar ölçümü değildir.", 13.0)
     D.p("İki yöntemle bulunan Thevenin direnci de $3{,}52\\ \\mathrm{k\\Omega}$ çıkmıştır. Bu eşitlik, $R_{TH}$ ifadesinin kaynakların sıfırlanarak elde edilmesinin ve $V_{oc}/I_{sc}$ oranının aynı büyüklüğü verdiğini gösterir; iki ifade bu devrede aynıdır.", align="j")
 
     D.h(2, "Maksimum Güç Transferi")
