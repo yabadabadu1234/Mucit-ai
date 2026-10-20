@@ -7,7 +7,7 @@ BOT_P, BOT_N = ("bot", "+"), ("bot", "-")
 
 
 def s1(path, with_load=False):
-    b = Breadboard(title=None, xr=(0.0, 20.0))
+    b = Breadboard(title=None)
     b.lead("VS+", (2, TOP_P), "+10 V", color="red")
     b.lead("VS-", (2, BOT_N), "−", color="black")
     b.wire((2, TOP_P), (2, "j"), color="red")
