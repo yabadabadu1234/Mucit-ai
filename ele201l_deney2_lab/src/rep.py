@@ -7,7 +7,7 @@ def build():
     D.sec = 2
     D.title_block([("TOBB Ekonomi ve Teknoloji Üniversitesi", 13, True), ("Elektrik – Elektronik Mühendisliği Bölümü", 12, False),
                    ("ELE 201 L – Devre Analizi I Laboratuvarı", 14, True), ("Deney 2 – Deney Raporu", 14, True), ("Güz 2026", 12, False)],
-                  [("Adı Soyadı", ""), ("Numara", ""), ("Tarih", "20.10.2026")])
+                  [("Adı Soyadı", "Beşir Kerem Üstüntürk"), ("Numara", "251201037"), ("Tarih", "20.10.2026")])
 
     # ---- Thevenin (Şekil 1): R1 seri, R2 şönt, R3 seri çıkış
     V1s, R1, R2, R3 = 10.0, 2200.0, 3300.0, 2200.0
