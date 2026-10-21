@@ -21,3 +21,8 @@ Kaynak: padişahın son mesajı. Her satır padişahın teklifidir; "Yeri" sütu
 | T15 | Hepsinin güzel yanlarını en genel hâliyle cem eden tek usul; 1'i kabul et, 10 misli ilerlet; müzakere; usul bölümü kitabın başına; kalan sureler usule göre | Bu belge |
 
 Tenkit (Claude): yapıştırılan cevaplarda Alîmun/Hakîmun kuralı, "fâ ayetin içine kapanır" ve fonetik çengel (terek, lâket) yoklanmamış iddialardır. Kitaba hüküm diye girmez.
+
+## Vazife ve i'rab kaynağı (padişahın yapıştırdığı metin; yazarı belli değil, padişahın sözü sayılmaz)
+- Metin: 9'lu vazife listesi önerir (fiil, fâil/nâib, mübteda-haber, mef'ûl, taalluk, bağlaç, sıfat/hâl/tâbi, gâye, tekit); sonra Umde/Fadla/Tevâbi/Edat tasnifiyle "27", sonra "47" madde sayar. Sayılar kendi içinde tutarsız ve yoklanmadı.
+- Kaynak önerisi: 1. Muhyiddin Derviş (İ'râbü'l-Kur'ân), 2. Nehhâs / İbn Hişâm; geniş: Ebû Hayyân, Semîn el-Halebî, Sîbeveyhi, Esterâbâdî. Şüpheli yerler ehil gözüne arz.
+- Claude kararı (padişah onayına): iki kat. VERİ katmanı ince i'rab etiketi taşır (27+ vazifenin hepsi, kaynağıyla). EKRAN katmanı bunları 9 renk ailesine toplar. Kaynak okuma izni: 3-I 230 gereği sorulur.
