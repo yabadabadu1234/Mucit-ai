@@ -32,6 +32,19 @@ KISALTMA = {
     'MLCC': 'Çok katmanlı seramik kondansatör (Multilayer Ceramic Capacitor)',
     'BOM': 'Malzeme listesi (Bill of Materials)',
     'PTC': 'Pozitif sıcaklık katsayılı direnç (Positive Temperature Coefficient)',
+    'RF': 'Telsiz frekansı (Radio Frequency)',
+    'FSPL': 'Serbest uzay yol kaybı (Free Space Path Loss)',
+    'DRC': 'Tasarım kuralı denetimi (Design Rule Check)',
+    'ERC': 'Elektriksel kural denetimi (Electrical Rule Check)',
+    'IPC': 'Elektronik üretim standartları kuruluşu (Institute for Printed Circuits); IPC-2221 iz genişliği formülünü verir',
+    'SMD': 'Yüzey montaj parça (Surface Mount Device)',
+    'HASL': 'Sıcak hava ile kalay kaplama (Hot Air Solder Leveling)',
+    'ENIG': 'Nikel–altın kaplama (Electroless Nickel Immersion Gold)',
+    'LTE': 'Dördüncü nesil cep telefonu şebekesi (Long Term Evolution)',
+    'SIM': 'Abone kimlik kartı (Subscriber Identity Module)',
+    'PFM': 'Darbe frekansı kiplemesi (Pulse Frequency Modulation): hafif yükte anahtarlama sıklığını azaltır',
+    'PHY': 'Ethernet fiziksel katmanı (Physical Layer)',
+    'TCP': 'İletim denetim protokolü (Transmission Control Protocol)',
 }
 
 
