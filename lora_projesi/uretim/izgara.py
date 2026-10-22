@@ -48,6 +48,7 @@ class Izgara:
     def kur(self):
         b = self.b
         lab = np.zeros((2, self.ny, self.nx), np.int32)
+        trk = np.zeros((2, self.ny, self.nx), np.int32)
         for pad in b.GetPads():
             bb = pad.GetBoundingBox()
             r = (bb.GetLeft() / 1e6, bb.GetTop() / 1e6, bb.GetRight() / 1e6, bb.GetBottom() / 1e6)
@@ -76,7 +77,7 @@ class Izgara:
                 hw = t.GetWidth() / 2e6
                 for i in range(n + 1):
                     u = i / n
-                    self.disk(lab, l, ax + u * (bx - ax), ay + u * (by - ay), hw, nc)
+                    self.disk(trk, l, ax + u * (bx - ax), ay + u * (by - ay), hw, nc)
         for fp in b.GetFootprints():
             for z in fp.Zones():
                 if z.GetIsRuleArea():
@@ -85,19 +86,30 @@ class Izgara:
                         self.kutu(lab, l, bb.GetLeft() / 1e6, bb.GetTop() / 1e6, bb.GetRight() / 1e6, bb.GetBottom() / 1e6, -1)
         k = int(0.5 / R)
         lab[:, :k, :] = -1; lab[:, -k:, :] = -1; lab[:, :, :k] = -1; lab[:, :, -k:] = -1
-        self.lab = lab
+        self.lab = lab; self.trk = trk
 
-    def yasak(self, nc, w):
+    def yasak(self, nc, w, yumusak=False):
         out = []; via = []
         for l in (0, 1):
             dig = (self.lab[l] != 0) & (self.lab[l] != nc)
+            if not yumusak:
+                dig = dig | ((self.trk[l] != 0) & (self.trk[l] != nc))
             d = ndimage.distance_transform_edt(~dig) * R
             out.append(d >= KLR + w / 2 - 0.02)
             via.append(d >= KLR + VIA_D / 2 - 0.02)
         return np.array(out), np.array(via[0] & via[1])
 
-    def ara(self, nc, w, bas, hed, va_c=20.0):
-        ok, vok = self.yasak(nc, w)
+    def ara(self, nc, w, bas, hed, va_c=20.0, yumusak=False):
+        ok, vok = self.yasak(nc, w, yumusak)
+        if yumusak:
+            ceza = np.zeros((2, self.ny, self.nx), np.float32)
+            for l in (0, 1):
+                dig = (self.trk[l] != 0) & (self.trk[l] != nc)
+                d = ndimage.distance_transform_edt(~dig) * R
+                ceza[l] = np.where(d < KLR + w / 2, 12.0, 0.0)
+                vok = vok & (d >= KLR + VIA_D / 2) if l == 0 else vok & (d >= KLR + VIA_D / 2)
+        else:
+            ceza = None
         (l0, x0, y0), (l1, x1, y1) = bas, hed
         for (l, x, y) in ((l0, x0, y0), (l1, x1, y1)):
             cx, cy = dunya(x), dunya(y); r = 5
@@ -135,7 +147,7 @@ class Izgara:
                 if not (0 <= yy < ny and 0 <= xx < nx): continue
                 if not ok[l, yy, xx]: continue
                 if dy and dx and not (ok[l, y, xx] and ok[l, yy, x]): continue
-                ng = gc + c
+                ng = gc + c + (ceza[l, yy, xx] if ceza is not None else 0.0)
                 if ng < g[l, yy, xx]:
                     g[l, yy, xx] = ng; par[l, yy, xx] = (l * ny + y) * nx + x
                     heapq.heappush(pq, (ng + h(yy, xx), ng, (l, yy, xx)))
@@ -216,8 +228,8 @@ def calistir(yol, cikis, W, H):
     b = pcbnew.LoadBoard(yol)
     taban, rep = sorun_say(b)
     print('taban hata', taban)
-    kara = set()
-    for tur in range(60):
+    kara = set(); rip = {}
+    for tur in range(120):
         liste = [x for x in baglantisizlar(rep) if (x[0], x[1], x[2]) not in kara]
         if not liste: break
         net, bas, hed = liste[0]
@@ -237,6 +249,32 @@ def calistir(yol, cikis, W, H):
             taban = k; rep = rep2; yapildi = True
             print('kabul', net, w, bas[1:], hed[1:])
             break
+        if not yapildi and rip.get(net, 0) < 2:
+            rip[net] = rip.get(net, 0) + 1
+            yolu = I.ara(nc, 0.2, bas, hed, yumusak=True)
+            if yolu is not None:
+                pts = [(q[2] * R, q[1] * R, q[0]) for q in yolu]
+                sok = []
+                for t in list(b.GetTracks()):
+                    if t.GetClass() == 'PCB_VIA' or t.GetNetCode() == nc: continue
+                    l = 0 if t.GetLayer() == pcbnew.F_Cu else 1
+                    sx, sy, ex, ey = t.GetStart().x / 1e6, t.GetStart().y / 1e6, t.GetEnd().x / 1e6, t.GetEnd().y / 1e6
+                    lim = KLR + 0.1 + t.GetWidth() / 2e6
+                    for (px, py, pl) in pts[::2]:
+                        if pl == l and Y._nokta_dogru(px, py, sx, sy, ex, ey) < lim:
+                            sok.append(t); break
+                if sok and len(sok) <= 12:
+                    sakla = [(t, t.GetNetname()) for t in sok]
+                    for t in sok: b.Remove(t)
+                    yeni = ekle(b, nc, 0.2, sadelestir(yolu))
+                    k, rep2 = sorun_say(b)
+                    if k > taban:
+                        for t in yeni: b.Remove(t)
+                        for t, _ in sakla: b.Add(t)
+                        print('rip red', net, k - taban, len(sok))
+                    else:
+                        taban = k; rep = rep2; yapildi = True
+                        print('RIP kabul', net, 'sokulen', len(sok), sorted({n for _, n in sakla}))
         if not yapildi:
             kara.add((net, bas, hed)); print('olmadi', net, bas, hed)
     k, rep = sorun_say(b)
