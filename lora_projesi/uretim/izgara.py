@@ -242,6 +242,8 @@ def calistir(yol, cikis, W, H):
     for tur in range(120):
         liste = [x for x in baglantisizlar(rep) if (x[0], x[1], x[2]) not in kara]
         if not liste: break
+        once = os.environ.get('IZG_ONCELIK', '').split(',')
+        liste.sort(key=lambda x: once.index(x[0]) if x[0] in once else 99)
         net, bas, hed = liste[0]
         try:
             nc = b.FindNet(net).GetNetCode()
