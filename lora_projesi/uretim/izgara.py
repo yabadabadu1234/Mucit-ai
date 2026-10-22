@@ -6,7 +6,7 @@ import pcbnew
 import yonlendir as Y
 from pcbgen import mm
 
-R = 0.1
+R = 0.05
 KLR = 0.22
 VIA_D, VIA_DR = 0.5, 0.25
 
@@ -99,20 +99,20 @@ class Izgara:
             via.append(d >= KLR + VIA_D / 2 - 0.02)
         return np.array(out), np.array(via[0] & via[1])
 
-    def ara(self, nc, w, bas, hed, va_c=20.0, yumusak=False):
+    def ara(self, nc, w, bas, hed, va_c=40.0, yumusak=False):
         ok, vok = self.yasak(nc, w, yumusak)
         if yumusak:
             ceza = np.zeros((2, self.ny, self.nx), np.float32)
             for l in (0, 1):
                 dig = (self.trk[l] != 0) & (self.trk[l] != nc)
                 d = ndimage.distance_transform_edt(~dig) * R
-                ceza[l] = np.where(d < KLR + w / 2, 12.0, 0.0)
+                ceza[l] = np.where(d < KLR + w / 2, 24.0, 0.0)
                 vok = vok & (d >= KLR + VIA_D / 2) if l == 0 else vok & (d >= KLR + VIA_D / 2)
         else:
             ceza = None
         (l0, x0, y0), (l1, x1, y1) = bas, hed
         for (l, x, y) in ((l0, x0, y0), (l1, x1, y1)):
-            cx, cy = dunya(x), dunya(y); r = 5
+            cx, cy = dunya(x), dunya(y); r = int(0.5 / R)
             for dy in range(-r, r + 1):
                 for dx in range(-r, r + 1):
                     if dx * dx + dy * dy <= r * r and 0 <= cy + dy < self.ny and 0 <= cx + dx < self.nx:
@@ -140,7 +140,7 @@ class Izgara:
                 yol.append(s)
                 return yol[::-1]
             n += 1
-            if n > 4000000: return None
+            if n > 16000000: return None
             l, y, x = cur
             for dy, dx, c in nb:
                 yy, xx = y + dy, x + dx
