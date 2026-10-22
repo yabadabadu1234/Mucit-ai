@@ -7,7 +7,7 @@ import yonlendir as Y
 from pcbgen import mm
 
 R = 0.05
-KLR = 0.22
+KLR = 0.23
 VIA_D, VIA_DR = 0.5, 0.25
 
 
@@ -114,7 +114,7 @@ class Izgara:
             ceza = None
         (l0, x0, y0), (l1, x1, y1) = bas, hed
         for (l, x, y) in ((l0, x0, y0), (l1, x1, y1)):
-            cx, cy = dunya(x), dunya(y); r = int(0.5 / R)
+            cx, cy = dunya(x), dunya(y); r = int(0.3 / R)
             for dy in range(-r, r + 1):
                 for dx in range(-r, r + 1):
                     if dx * dx + dy * dy <= r * r and 0 <= cy + dy < self.ny and 0 <= cx + dx < self.nx:
@@ -163,7 +163,7 @@ class Izgara:
         return None
 
 
-def sadelestir(yol):
+def sadelestir(yol, bas=None, hed=None):
     # (katman,y,x) listesi -> parcalar: ('iz', l, [(x,y)...]) ve ('via', x, y)
     parcalar = []; cur = [yol[0]]
     for a in yol[1:]:
@@ -181,6 +181,9 @@ def sadelestir(yol):
                 nok.append(b_)
         nok.append(p[-1]) if len(p) > 1 else None
         out.append((p[0][0], [(q[2] * R, q[1] * R) for q in nok]))
+    if bas is not None and out:
+        out[0][1][0] = (bas[1], bas[2])
+        out[-1][1][-1] = (hed[1], hed[2])
     return out
 
 
@@ -250,7 +253,7 @@ def calistir(yol, cikis, W, H):
         for w in (tercih, 0.25, 0.2):
             yolu = I.ara(nc, w, bas, hed)
             if yolu is None: continue
-            yeni = ekle(b, nc, w, sadelestir(yolu))
+            yeni = ekle(b, nc, w, sadelestir(yolu, bas, hed))
             k, rep2 = sorun_say(b)
             if k > taban:
                 for t in yeni: b.Remove(t)
@@ -275,7 +278,7 @@ def calistir(yol, cikis, W, H):
                 if sok and len(sok) <= 12:
                     sakla = [(t, t.GetNetname()) for t in sok]
                     for t in sok: b.Remove(t)
-                    yeni = ekle(b, nc, 0.2, sadelestir(yolu))
+                    yeni = ekle(b, nc, 0.2, sadelestir(yolu, bas, hed))
                     k, rep2 = sorun_say(b)
                     if k > taban:
                         b = pcbnew.LoadBoard(cikis)
