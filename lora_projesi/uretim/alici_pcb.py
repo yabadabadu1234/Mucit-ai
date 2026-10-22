@@ -13,7 +13,7 @@ SABIT = {
     'U5': (40.0, 9.0, 0, False, False),
     'U10': (28.0, 47.0, 0, False, False),
     'U8': (28.0, 27.0, 0, False, False),
-    'U6': (40.0, 72.0, 0, False, False),
+    'U6': (34.0, 73.0, 0, False, False),
     'J1': (14.0, 94.8, 0, False, False),
     'U1': (66.0, 85.0, 180, False, False),
     'U4': (70.0, 16.0, 180, False, False),
@@ -23,8 +23,8 @@ SABIT = {
     'J4': (50.0, 58.0, 0, False, False),
     'J8': (50.0, 37.5, 0, False, False),
     'J7': (28.0, 47.0, 0, True, False),
-    'SW1': (38.0, 92.0, 0, False, False),
-    'D5': (45.0, 92.0, 0, False, False), 'D6': (49.0, 92.0, 0, False, False),
+    'SW1': (36.0, 86.0, 0, False, False),
+    'D5': (43.0, 87.0, 0, False, False), 'D6': (47.0, 87.0, 0, False, False),
 }
 
 # pasif: (capa_ref, capa_pin, arka)
