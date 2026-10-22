@@ -127,7 +127,7 @@ def _dogru_dikdortgen(ax, ay, bx, by, x0, y0, x1, y1):
         m = min(m, _nokta_dikdortgen(ax + t * (bx - ax), ay + t * (by - ay), x0, y0, x1, y1))
     return m
 
-def plane_via(b, aglar, W, H, via_d=0.5, via_drill=0.25, klirens=0.15, iz=0.25, kenar=0.6):
+def plane_via(b, aglar, W, H, via_d=0.5, via_drill=0.25, klirens=0.15, iz=0.25, kenar=0.6, sadece=None):
     F, B = pcbnew.F_Cu, pcbnew.B_Cu
     def ob_topla():
         obs = {F: [], B: []}
@@ -185,6 +185,8 @@ def plane_via(b, aglar, W, H, via_d=0.5, via_drill=0.25, klirens=0.15, iz=0.25, 
         ni = b.FindNet(ad)
         nc = ni.GetNetCode()
         pads = [p for p in b.GetPads() if p.GetNetCode() == nc and p.GetAttribute() == pcbnew.PAD_ATTRIB_SMD]
+        if sadece:
+            pads = [q for q in pads if (q.GetParent().GetReference(), q.GetNumber()) in sadece]
         for pad in pads:
             obs = ob_topla()
             dl = delikler()
@@ -277,6 +279,18 @@ def plane_via(b, aglar, W, H, via_d=0.5, via_drill=0.25, klirens=0.15, iz=0.25, 
             t.SetWidth(int(iz * 1e6)); t.SetLayer(L); t.SetNet(ni)
             b.Add(t)
             sonuc['eklendi'] += 1
+            if sadece:
+                # arka yuzde ayni agdaki en yakin via'ya duz iz
+                obs2 = ob_topla()
+                vs = [v1 for v1 in b.GetTracks() if v1.GetClass() == 'PCB_VIA' and v1.GetNetCode() == nc and (v1.GetPosition().x != v.GetPosition().x or v1.GetPosition().y != v.GetPosition().y)]
+                vs.sort(key=lambda v1: math.hypot(v1.GetPosition().x / 1e6 - ok[0], v1.GetPosition().y / 1e6 - ok[1]))
+                for v1 in vs[:8]:
+                    qx, qy = v1.GetPosition().x / 1e6, v1.GetPosition().y / 1e6
+                    if all(dist_ob_dogru(o, ok[0], ok[1], qx, qy) >= iz / 2 + klirens for o in obs2[B] if o[2] != nc):
+                        t2 = pcbnew.PCB_TRACK(b)
+                        t2.SetStart(v.GetPosition()); t2.SetEnd(v1.GetPosition()); t2.SetWidth(int(iz * 1e6)); t2.SetLayer(B); t2.SetNet(ni)
+                        b.Add(t2); sonuc['bagli'] = sonuc.get('bagli', 0) + 1
+                        break
     return sonuc
 
 

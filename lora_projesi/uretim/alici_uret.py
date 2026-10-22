@@ -47,9 +47,9 @@ def hazirla():
     p, y = alici_pcb.kur(XML)
     b = p.b
     ds = b.GetDesignSettings()
-    ds.m_TrackMinWidth = mm(0.15); ds.m_MinClearance = mm(0.15); ds.m_ViasMinSize = mm(0.5)
+    ds.m_TrackMinWidth = mm(0.15); ds.m_MinClearance = mm(0.14); ds.m_ViasMinSize = mm(0.5)
     ds.m_MinThroughDrill = mm(0.2); ds.m_CopperEdgeClearance = mm(0.3); ds.m_HoleClearance = mm(0.1)
-    ds.m_NetSettings.m_DefaultNetClass.SetClearance(mm(0.15))
+    ds.m_NetSettings.m_DefaultNetClass.SetClearance(mm(0.14))
     print('delik koruma', Y.delik_koruma(b))
     Y.zone(b, 'GND', pcbnew.In1_Cu, alici_pcb.W, alici_pcb.H, 0.3)
     Y.zone(b, '+3V3', pcbnew.In2_Cu, alici_pcb.W, alici_pcb.H, 0.3)

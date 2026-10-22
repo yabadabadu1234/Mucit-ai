@@ -44,12 +44,12 @@ def hazirla():
     b = p.b
     ds = b.GetDesignSettings()
     ds.m_TrackMinWidth = mm(0.15)
-    ds.m_MinClearance = mm(0.15)
+    ds.m_MinClearance = mm(0.14)
     ds.m_ViasMinSize = mm(0.5)
     ds.m_MinThroughDrill = mm(0.2)
     ds.m_CopperEdgeClearance = mm(0.3)
     ds.m_HoleClearance = mm(0.1)
-    ds.m_NetSettings.m_DefaultNetClass.SetClearance(mm(0.15))
+    ds.m_NetSettings.m_DefaultNetClass.SetClearance(mm(0.14))
     # RF izi: U4 pin9 -> J2 pin1, duz
     f4 = p.fps['U4']; f2 = p.fps['J2']
     a = [pd for pd in f4.Pads() if pd.GetNumber() == '9'][0].GetPosition()
@@ -79,6 +79,8 @@ if __name__ == '__main__':
     print('ses', Y.ses_uygula(b, ses))
     pv = Y.plane_via(b, ['GND', '+3V3'], tx_pcb.W, tx_pcb.H)
     print('plane via', pv['eklendi'], 'bulunamadi', pv['bulunamadi'])
+    for ag, pn in [('USB_DM', 'A7'), ('USB_DP', 'A6')]:
+        pass
     Y.doldur(b)
     b.BuildConnectivity()
     print('baglantisiz', b.GetConnectivity().GetUnconnectedCount(False))
