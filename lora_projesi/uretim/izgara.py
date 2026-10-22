@@ -231,6 +231,7 @@ def calistir(yol, cikis, W, H):
     taban, rep = sorun_say(b)
     print('taban hata', taban)
     kara = set(); rip = {}
+    b.Save(cikis)
     for tur in range(120):
         liste = [x for x in baglantisizlar(rep) if (x[0], x[1], x[2]) not in kara]
         if not liste: break
@@ -251,7 +252,7 @@ def calistir(yol, cikis, W, H):
                 for t in yeni: b.Remove(t)
                 print('red', net, w, k - taban)
                 continue
-            taban = k; rep = rep2; yapildi = True
+            taban = k; rep = rep2; yapildi = True; b.Save(cikis)
             print('kabul', net, w, bas[1:], hed[1:])
             break
         if not yapildi and rip.get(net, 0) < 2:
@@ -274,11 +275,10 @@ def calistir(yol, cikis, W, H):
                     yeni = ekle(b, nc, 0.2, sadelestir(yolu))
                     k, rep2 = sorun_say(b)
                     if k > taban:
-                        for t in yeni: b.Remove(t)
-                        for t, _ in sakla: b.Add(t)
+                        b = pcbnew.LoadBoard(cikis)
                         print('rip red', net, k - taban, len(sok))
                     else:
-                        taban = k; rep = rep2; yapildi = True
+                        taban = k; rep = rep2; yapildi = True; b.Save(cikis)
                         print('RIP kabul', net, 'sokulen', len(sok), sorted({n for _, n in sakla}))
         if not yapildi:
             kara.add((net, bas, hed)); print('olmadi', net, bas, hed)
