@@ -1,0 +1,36 @@
+# LoRa tasarim dersi sitesini her guncellemede uretir ve GitHub Pages'e (gh-pages dali, lora-ders/ klasoru) yayinlar.
+# Bir kerelik ayar: Depo Ayarlari > Pages > Source = "Deploy from a branch", Branch = gh-pages, klasor = / (root).
+name: ders-sitesi
+on:
+  push:
+    paths:
+      - 'lora_projesi/ders/**'
+      - '.github/workflows/ders_sitesi.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: ders-sitesi
+  cancel-in-progress: true
+jobs:
+  uret-ve-yayinla:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Siteyi uret (semalar baglanti listesiyle denetlenir; hata varsa burada durur)
+        env:
+          YAYIN_ZAMANI: ${{ github.sha }}
+        run: |
+          cd lora_projesi/ders
+          python3 uret.py
+          touch site/.nojekyll
+      - name: Yayinla
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: lora_projesi/ders/site
+          destination_dir: lora-ders
+          keep_files: true

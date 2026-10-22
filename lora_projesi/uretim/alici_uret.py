@@ -54,6 +54,7 @@ def hazirla():
     Y.zone(b, 'GND', pcbnew.In1_Cu, alici_pcb.W, alici_pcb.H, 0.3)
     Y.zone(b, '+3V3', pcbnew.In2_Cu, alici_pcb.W, alici_pcb.H, 0.3)
     ON = {('U9', '3'), ('U9', '9'), ('U9', '14'), ('U9', '19'), ('U9', '28'), ('U9', '23'), ('U9', '29'), ('U9', '48'), ('U8', '7'), ('U10', '14')}
+    ON = ON if os.environ.get('ON_YERLESTIR') else set()
     once = {str(t.m_Uuid) for t in b.GetTracks()}
     pv0 = Y.plane_via(b, ['GND', '+3V3'], alici_pcb.W, alici_pcb.H, sadece=ON)
     print('on plane via', pv0['eklendi'], pv0['bulunamadi'])
