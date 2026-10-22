@@ -8,14 +8,14 @@ OZET = 'RFM95W modülü: besleme, SPI bağlantısı, anten hattı. Telsiz bağla
 REFS = ['U4', 'C8', 'C9', 'J2']
 
 
-def sema(v):
-    c = CZ.Cizim('Verici LoRa şeması', 1000, 400, v.parca)
+def sema(v, adlar=None, hedef=None, kond=('C8', 'C9')):
+    c = CZ.Cizim('LoRa şeması', 1000, 400, v.parca)
     c.bolge(10, 8, 980, 382, 'LoRa TELSİZ  —  RFM95W-915S2 ve anten çıkışı')
     y0 = 90
     sol = [(2, 'MISO'), (3, 'MOSI'), (4, 'SCK'), (5, 'NSS'), (6, 'RESET'), (14, 'DIO0'), (15, 'DIO1')]
     P = c.kutu('U4', 400, y0, sol, [(9, 'ANT')], ust=[(13, '3.3V')], alt=[([1, 8, 10], 'GND')], genislik=160, baslik='RFM95W-915S2', pinaralik=26)
-    adlar = {2: 'LORA_MISO', 3: 'LORA_MOSI', 4: 'LORA_SCK', 5: 'LORA_NSS', 6: 'LORA_RESET', 14: 'LORA_DIO0', 15: 'LORA_DIO1'}
-    hedef = {2: 'işlemci IO13', 3: 'IO11', 4: 'IO12', 5: 'IO10', 6: 'IO14', 14: 'IO8', 15: 'IO9'}
+    adlar = adlar or {2: 'LORA_MISO', 3: 'LORA_MOSI', 4: 'LORA_SCK', 5: 'LORA_NSS', 6: 'LORA_RESET', 14: 'LORA_DIO0', 15: 'LORA_DIO1'}
+    hedef = hedef or {2: 'işlemci IO13', 3: 'IO11', 4: 'IO12', 5: 'IO10', 6: 'IO14', 14: 'IO8', 15: 'IO9'}
     for no, ad in adlar.items():
         x, y = P[str(no)]
         c.tel((x, y), (x - 40, y))
@@ -33,11 +33,11 @@ def sema(v):
     c.not_(590, ya + 30, '50 Ω’luk tek düz hat', 'start')
     c.toprak(J['2'][0], J['2'][1])
     # besleme kondansatorleri
-    for i, (ref, x) in enumerate((('C8', 90), ('C9', 190))):
+    for i, (ref, x) in enumerate(((kond[0], 640), (kond[1], 740))):
         c.ray('+3V3', x, 300); c.kondansator(ref, x, 300, 90); c.toprak(x, 360)
-    c.not_(40, 262, 'Besleme süzgeçleri (modüle yakın)', 'start')
+    c.not_(600, 255, 'Besleme süzgeçleri (modüle yakın)', 'start')
     c.not_(40, 40, 'Bağlanmayan: DIO2, DIO3, DIO4, DIO5 (pimler 16, 11, 12, 7)', 'start')
-    c.isaret(1, x3 + 40, y3 - 20); c.isaret(2, 250, 330); c.isaret(3, 560, ya - 24); c.isaret(4, 700, ya + 60)
+    c.isaret(1, x3 + 40, y3 - 20); c.isaret(2, 940, 330); c.isaret(3, 560, ya - 24); c.isaret(4, 830, ya + 30)
     return c
 
 

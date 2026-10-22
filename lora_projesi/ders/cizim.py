@@ -187,14 +187,21 @@ class Cizim:
                 res[str(no) if not isinstance(no, (list, tuple)) else str(no[0])] = (ex, py)
         yan(sol, x, -1)
         yan(sag, x, 1)
-        for i, (no, ad) in enumerate(ust):
+        for i, ent in enumerate(ust):
+            no, ad = ent[0], ent[1]
             px = x + (i + 1) * (w / (len(ust) + 1))
             self.katman['tel'].append('<path class="pinuc" d="M%s %sV%s"/>' % (px, y - 15, y))
             self._yaz(px, y + 14, ad, 'pinad', 'middle')
             self._yaz(px + 8, y - 18, '·'.join(str(q) for q in no) if isinstance(no, (list, tuple)) else str(no), 'pinno', 'start')
             [self._pin(ref, q, px, y - 15) for q in (no if isinstance(no, (list, tuple)) else [no])]; res[str(no if not isinstance(no, (list, tuple)) else no[0])] = (px, y - 15)
-        for i, (no, ad) in enumerate(alt):
+        for i, ent in enumerate(alt):
+            no, ad = ent[0], ent[1]
             px = x + (i + 1) * (w / (len(alt) + 1))
+            if len(ent) > 2 and ent[2] == 'nc':
+                self.katman['tel'].append('<path class="pinuc" d="M%s %sV%s"/>' % (px, y + h, y + h + 15))
+                self._yaz(px, y + h - 6, ad, 'pinad', 'middle')
+                self._yaz(px, y + h + 30, '×', 'not', 'middle')
+                continue
             self.katman['tel'].append('<path class="pinuc" d="M%s %sV%s"/>' % (px, y + h, y + h + 15))
             self._yaz(px, y + h - 6, ad, 'pinad', 'middle')
             self._yaz(px + 8, y + h + 22, '·'.join(str(q) for q in no) if isinstance(no, (list, tuple)) else str(no), 'pinno', 'start')

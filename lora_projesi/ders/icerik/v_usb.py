@@ -7,23 +7,23 @@ OZET = 'USB-C soketinin uçları ne işe yarar, iki direnç neden 5,1 kΩ, veri 
 REFS = ['J1', 'R9', 'R10', 'U3']
 
 
-def sema(v):
-    c = CZ.Cizim('Verici USB-C şeması', 1000, 410, v.parca)
+def sema(v, r1='R9', r2='R10', esd='U3'):
+    c = CZ.Cizim('USB-C şeması', 1000, 410, v.parca)
     c.bolge(10, 8, 980, 392, 'USB-C  —  güç, tanıtım dirençleri ve veri hatları')
     P = c.kutu('J1', 60, 60, [], [(['A4', 'B4', 'A9', 'B9'], 'VBUS'), ('A5', 'CC1'), ('B5', 'CC2'), (['A6', 'B6'], 'D+'), (['A7', 'B7'], 'D−'),
                                    (['A1', 'B1', 'A12', 'B12', 'S1'], 'GND / kılıf')], genislik=140, baslik='USB-C soket', pinaralik=40)
     ex = 215
     yv, y1, y2, yp, ym, yg = [P[k][1] for k in ('A4', 'A5', 'B5', 'A6', 'A7', 'A1')]
-    Q = c.kutu('U3', 440, yp - 40, [(1, 'I/O1'), (3, 'I/O2')], [(6, 'I/O1'), (4, 'I/O2')], ust=[(5, 'VBUS')], alt=[(2, 'GND')], genislik=150, baslik='USBLC6-2SC6', pinaralik=40)
-    c.ic_bag(('U3', '1'), ('U3', '6')); c.ic_bag(('U3', '3'), ('U3', '4'))
+    Q = c.kutu(esd, 440, yp - 40, [(1, 'I/O1'), (3, 'I/O2')], [(6, 'I/O1'), (4, 'I/O2')], ust=[(5, 'VBUS')], alt=[(2, 'GND')], genislik=150, baslik='USBLC6-2SC6', pinaralik=40)
+    c.ic_bag((esd, '1'), (esd, '6')); c.ic_bag((esd, '3'), (esd, '4'))
     # VBUS
     c.tel((ex, yv), (330, yv), (Q['5'][0], yv), (Q['5'][0], Q['5'][1]))
     c.etiket('VBUS', 330, yv - 6, 'yukari')
     c.not_(520, yv - 8, 'D2 diyoduna gider (1. bölüm)', 'start')
     # CC dirençleri
-    c.direnc('R9', ex, y1, 0)
+    c.direnc(r1, ex, y1, 0)
     c.tel((ex + 60, y1), (ex + 85, y1)); c.toprak(ex + 85, y1)
-    c.direnc('R10', ex, y2, 0)
+    c.direnc(r2, ex, y2, 0)
     c.tel((ex + 60, y2), (ex + 85, y2)); c.toprak(ex + 85, y2)
     # veri hatlari
     c.tel((ex, yp), (300, yp), (Q['1'][0], yp))
