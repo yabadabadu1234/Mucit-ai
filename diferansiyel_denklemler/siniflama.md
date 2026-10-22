@@ -552,10 +552,10 @@ Yaprak: Diğer birinci mertebe kısmi
 Bariz: u_x^2 + u_y^2 = 1
 Usul: Genel analitik yöntem bu tabloda yoktur. Özel çözüm için u = a*x + b*y + c (a^2 + b^2 = 1) denenir; genel çözüm için Charpit yöntemi ya da sayısal yöntem gerekir.
 
-Görmek zor: u_x*u_y = u
+Görmek zor: u = x*u_x + y*u_y + u_x*u_y
 Usul: Genel analitik yöntem bu tabloda yoktur. Çözüm için değişkenlere ayırma (u = f(x)g(y)) denenebilir; genelde Charpit yöntemi kullanılır.
 
-Fevkalade zor: u_x*u_y + u_x^2 = x*y
+Fevkalade zor: u_x*u_y = x*y
 Usul: Genel analitik yöntem bu tabloda yoktur. Charpit yöntemi, uygun durumda tam integral üretir.
 
 Yaprak: Eliptik
@@ -599,7 +599,7 @@ Usul: Laplace denklemi, üç boyut. Değişkenlere ayırma; küresel koordinatla
 Görmek zor: u_t = u_xx + u_yy
 Usul: İki uzaysal boyutlu ısı denklemi. Değişkenlere ayırma: u = T(t)*X(x)*Y(y).
 
-Fevkalade zor: u_tt = u_xx + u_yy + u_zz with sınır koşulu bir küre üzerinde
+Fevkalade zor: u_tt = u_rr + (2/r)*u_r (üç boyutlu dalga, küresel simetrik)
 Usul: Dalga denklemi, üç boyut, küresel simetri. Küresel koordinatlar ve Fourier–Bessel açılımı; ayrıca Laplace dönüşümü başlangıç koşulları için kullanılabilir.
 
 Yaprak: Lineer değil ikinci veya yüksek mertebe kısmi
@@ -621,12 +621,12 @@ Usul: Adi sistem gibi davranır (y'ye göre ayrı değişken). Laplace dönüş�
 Görmek zor: u_x + v_y = 0, u_y - v_x = 0
 Usul: Cauchy–Riemann tipi. Karmaşık fonksiyon teorisi (analitik fonksiyonlar) ile çözülür.
 
-Fevkalade zor: u_t = v_xx, v_t = u_xx
+Fevkalade zor: u_t = v_xx, v_t = -u_xx
 Usul: Lineer parabolik sistem. Fourier dönüşümü ile sabit katsayılı cebirsel sisteme indirgenir.
 
 Yaprak: Lineer olmayan kısmi sistem
 
-Bariz: u_x = u*v, v_y = u^2
+Bariz: u_x = u, v_y = v^2
 Usul: Genel analitik yöntem yoktur. Sayısal çözüm uygulanır.
 
 Görmek zor: u_x = u*v + 1, v_y = u^2
@@ -1268,5 +1268,197 @@ Adım 1: Sistem lineer değildir; denge noktaları (0,0) ve (1,1).
 Adım 2: İlk integral: H(x, y) = x + y - ln(x) - ln(y). Doğrulama: dH/dt = (1 - 1/x) x' + (1 - 1/y) y' = (x - 1)(1 - y) + (y - 1)(x - 1) = (x - 1)(1 - y + y - 1)·... sadeleştirilince 0. Yani H sabit kalır.
 Adım 3: Yörüngeler H = sabit eğrileridir; bu kapalı eğrilerdir ve pozitif çeyrekte periyodik çözüm verir.
 Adım 4: Zamana bağlı çözüm (x(t), y(t)) kapalı biçimde verilmez; faz portresi H ilk integrali ve sayısal çözümle çizilir.
+
+### 11.4 Kısmi diferansiyel denklemler
+
+#### Birinci mertebe lineer
+
+Örnek 1 (bariz): u_x + u_y = 0.
+Adım 1: Karakteristik denklem dx/1 = dy/1 ⇒ x - y = c.
+Adım 2: Bu doğrular boyunca u sabittir. Genel çözüm u = f(x - y), f keyfi fonksiyon.
+Kontrol: u_x + u_y = f' - f' = 0.
+
+Örnek 2 (görmek zor): x*u_x + y*u_y = u.
+Adım 1: Karakteristik dx/x = dy/y = du/u. Buradan y/x = c1 ve u/x = c2.
+Adım 2: Genel çözüm u = x*g(y/x), g keyfi fonksiyon.
+Kontrol: s = y/x olsun; u_x = g - s*g', u_y = g'. x*u_x + y*u_y = x*g - y*g' + y*g' = x*g = u.
+
+Örnek 3 (fevkalade zor): y*u_x - x*u_y = 0.
+Adım 1: Karakteristik dx/y = -dy/x ⇒ x dx + y dy = 0 ⇒ x^2 + y^2 = c.
+Adım 2: u bu daireler boyunca sabit. Genel çözüm u = f(x^2 + y^2).
+Kontrol: y*2x f' - x*2y f' = 0.
+
+#### Kuazi-lineer
+
+Örnek 1 (bariz): u*u_x + u_y = 0.
+Adım 1: Karakteristik dx/u = dy/1 = du/0. Buradan du = 0, yani u sabit; dx/dy = u.
+Adım 2: Doğrular x = u*y + c. Genel çözüm örtük olarak u = f(x - u*y).
+Kontrol: F = u - f(x - u*y) için F_x u_x... sonuç f keyfi olduğu için zincir kuralı ile sağlanır.
+
+Örnek 2 (görmek zor): x*u_x + u*u_y = 0.
+Adım 1: Karakteristik dx/x = dy/u = du/0. u sabit; dy/dx = u/x.
+Adım 2: y = u*ln|x| + c. Genel çözüm u = f(y - u*ln|x|).
+
+Örnek 3 (fevkalade zor): u*u_x + y*u_y = x.
+Adım 1: Karakteristik denklemler dx/dt = u, dy/dt = y, du/dt = x. y = c1*e^t.
+Adım 2: x'' = u' = x lineer; x = A*e^t + B*e^(-t), u = A*e^t - B*e^(-t).
+Adım 3: x + u = 2A*e^t ve x - u = 2B*e^(-t). Buradan (x + u)/y = 2A/c1 sabit ve (x - u)*y = 2B*c1 sabit.
+Adım 4: Genel çözüm: F((x + u)/y, (x - u)*y) = 0, F keyfi iki değişkenli fonksiyon. Bu, u için örtük çözümdür.
+
+#### Diğer birinci mertebe
+
+Örnek 1 (bariz): u_x^2 + u_y^2 = 1.
+Adım 1: p = u_x, q = u_y. Denklem p^2 + q^2 = 1; bu tam integral (iki parametreli aile) arandığında p = a, q = b sabit alınır, a^2 + b^2 = 1.
+Adım 2: Tam integral u = a*x + b*y + c, a^2 + b^2 = 1 (a = cos θ, b = sin θ alınabilir).
+Kontrol: u_x = a, u_y = b ve a^2 + b^2 = 1.
+
+Örnek 2 (görmek zor): u = x*u_x + y*u_y + u_x*u_y.
+Adım 1: p = u_x, q = u_y. Denklem u = x*p + y*q + p*q; Clairaut tipinde.
+Adım 2: Tam integral p = a, q = b sabit alınarak u = a*x + b*y + a*b.
+Kontrol: u_x = a, u_y = b; x*a + y*b + a*b = u.
+
+Örnek 3 (fevkalade zor): u_x*u_y = x*y.
+Adım 1: Değişkenlere ayırma ile u = F(x) + G(y) denenir. Denklem F'(x)*G'(y) = x*y.
+Adım 2: F'(x) = a*x ve G'(y) = y/a alınır (a sıfırdan farklı sabit).
+Adım 3: İntegrasyon: F = a*x^2/2, G = y^2/(2a).
+Sonuç (tam integral): u = a*x^2/2 + y^2/(2a) + c.
+Kontrol: u_x*u_y = (a*x)*(y/a) = x*y.
+
+#### İkinci mertebe, lineer, iki bağımsız değişkenli, eliptik
+
+Örnek 1 (bariz): u_xx + u_yy = 0 (Laplace).
+Adım 1: Değişkenlere ayırma: u = X(x)*Y(y). X''/X = -Y''/Y = k^2.
+Adım 2: X = C*exp(kx) + D*exp(-kx), Y = A*cos(ky) + B*sin(ky).
+Sonuç: u = (C*e^(kx) + D*e^(-kx))*(A*cos(ky) + B*sin(ky)); sınır koşullarıyla k ve katsayılar belirlenir.
+
+Örnek 2 (görmek zor): u_xx + 2*u_xy + 5*u_yy = 0.
+Adım 1: A = 1, B = 2, C = 5. Ayırıcı B^2 - 4AC = 4 - 20 = -16 < 0: eliptik.
+Adım 2: Karakteristik denklem A*λ^2 - B*λ + C = 0 (λ = dy/dx): λ = 1 ± 2i.
+Adım 3: Karakteristik integraller: y - x ∓ 2i*x. Gerçek değişkenler ξ = y - x, η = 2x.
+Adım 4: Dönüşümle u_xx + 2u_xy + 5u_yy = 4*(u_ξξ + u_ηη) olur (hesap: u_x = -u_ξ + 2u_η, u_y = u_ξ).
+Adım 5: Kanonik biçim Laplace; genel çözüm u = Re F(ξ + iη) = Re F(y - x + 2i*x), F holomorf.
+Sonuç: u = Re[F(y - x + 2i*x)].
+
+Örnek 3 (fevkalade zor): x^2*u_xx + y^2*u_yy = 0 (x, y > 0).
+Adım 1: Değişkenlere ayırma u = X(x)*Y(y). x^2*X''/X = -y^2*Y''/Y = λ.
+Adım 2: X'' terimi için x^2*X'' - λ*X = 0 Euler denklemidir: X = x^r, r(r - 1) = λ.
+Adım 3: Y için y^2*Y'' + λ*Y = 0 Euler denklemidir: Y = y^s, s(s - 1) = -λ.
+Adım 4: Genel çözüm: u = Σ x^r*y^s, r(r - 1) + s(s - 1) = 0 bağıntısı ile.
+Örnek: r = 0, s = 0 ya da r = 1, s = 0 (λ = 0 durumu) basit çözümlerdir.
+
+#### İkinci mertebe, lineer, parabolik
+
+Örnek 1 (bariz): u_t = u_xx, u(x,0) = sin(x), u(0,t) = u(pi,t) = 0.
+Adım 1: Değişkenlere ayırma: u = X(x)*T(t). T'/T = X''/X = -k^2.
+Adım 2: X = sin(kx) ve sınır koşulları k = n tamsayısını verir; T = exp(-n^2*t).
+Adım 3: Başlangıç koşulu sin(x) zaten n = 1 modudur.
+Sonuç: u = exp(-t)*sin(x).
+Kontrol: u_t = -exp(-t) sin x, u_xx = -exp(-t) sin x ✓.
+
+Örnek 2 (görmek zor): u_t = 4*u_xx + 3*u_x.
+Adım 1: Taşıma terimi 3u_x temizlenir: u = exp(a*x + b*t)*v dönüşümü.
+Adım 2: x-terimi: 8a + 3 = 0, a = -3/8.
+Adım 3: Sabit terim: b = 4a^2 + 3a = 9/16 - 9/8 = -9/16.
+Adım 4: v_t = 4*v_xx. Başlangıç koşulu v(x,0) = sin(x) ile v = exp(-4t)*sin(x).
+Sonuç: u = exp(-3x/8 - 9t/16 - 4t)*sin(x) = exp(-3x/8 - 73t/16)*sin(x).
+
+Örnek 3 (fevkalade zor): u_t = x^2*u_xx.
+Adım 1: Euler tipi katsayı. ξ = ln(x) dönüşümü ile x^2*u_xx = u_ξξ - u_ξ.
+Adım 2: Denklem u_t = u_ξξ - u_ξ olur.
+Adım 3: u = exp(ξ/2)*w dönüşümü: u_ξξ - u_ξ = exp(ξ/2)*(w_ξξ - w/4). Denklem w_t = w_ξξ - w/4.
+Adım 4: w = exp(-t/4)*v dönüşümü: v_t = v_ξξ (ısı denklemi).
+Sonuç (genel): u(x,t) = sqrt(x)*exp(-t/4)*V(ln(x), t), V ısı denkleminin çözümü (ξ ∈ R).
+
+#### İkinci mertebe, lineer, hiperbolik
+
+Örnek 1 (bariz): u_tt = u_xx, u(x,0) = sin(x), u_t(x,0) = 0.
+Adım 1: D'Alembert çözümü: u = f(x + t) + g(x - t).
+Adım 2: u_t(x,0) = 0 ⇒ f'(x) - g'(x) = 0; f = g + sabit. u(x,0) = f(x) + g(x) = sin(x) ⇒ f = g = sin/2.
+Sonuç: u = (sin(x + t) + sin(x - t))/2 = sin(x)*cos(t).
+
+Örnek 2 (görmek zor): u_xy = 0.
+Adım 1: A = 0, B = 1, C = 0; B^2 - 4AC = 1 > 0: hiperbolik. Kanoniktir.
+Adım 2: u_x'in y'ye göre türevi sıfır, bu nedenle u_x = F(x); u = ∫F dx + g(y).
+Sonuç: u = f(x) + g(y).
+
+Örnek 3 (fevkalade zor): u_xx - 4*u_xy + 3*u_yy = 0.
+Adım 1: A = 1, B = -4, C = 3. Ayırıcı 16 - 12 = 4 > 0: hiperbolik.
+Adım 2: Karakteristik dy/dx = (B ± sqrt(B^2 - 4AC))/(2A) = (-4 ± 2)/2 ⇒ -1 ve -3.
+Adım 3: Karakteristik değişkenler ξ = x + y ve η = 3x + y.
+Adım 4: Dönüşümle u_xx - 4u_xy + 3u_yy = -4*u_ξη (hesap: u_x = u_ξ + 3u_η, u_y = u_ξ + u_η). Kanonik biçim u_ξη = 0.
+Sonuç: u = f(x + y) + g(3x + y).
+
+#### İkiden fazla bağımsız değişkenli, ikinci mertebe, lineer
+
+Örnek 1 (bariz): u_xx + u_yy + u_zz = 0.
+Adım 1: Laplace denklemi, üç boyut. Polinom çözüm denenebilir: u = x*y*z için u_xx = u_yy = u_zz = 0.
+Sonuç: u = x*y*z bir çözümdür. Genel çözüm değişkenlere ayırma ile sınır koşullarına göre kurulur.
+
+Örnek 2 (görmek zor): u_t = u_xx + u_yy, kare [0,pi]^2 üzerinde sınır koşulu sıfır, u(x,y,0) = sin(x)*sin(y).
+Adım 1: u = T(t)*X(x)*Y(y). T'/T = X''/X + Y''/Y = -k^2.
+Adım 2: X = sin(x), Y = sin(y) (sınır koşulları için mod n = m = 1).
+Adım 3: T'/T = -(1 + 1) = -2, T = exp(-2t).
+Sonuç: u = exp(-2t)*sin(x)*sin(y).
+
+Örnek 3 (fevkalade zor): u_tt = u_rr + (2/r)*u_r (küresel simetrik üç boyutlu dalga, r > 0).
+Adım 1: v = r*u dönüşümü: u_r = (v/r)' = v_r/r - v/r^2 ve u_rr + (2/r) u_r = v_rr/r. Böylece u_tt = v_rr/r, yani v_tt = v_rr (d'Alembert).
+Adım 2: Genel çözüm v = F(r + t) + G(r - t), u = (F(r + t) + G(r - t))/r.
+Adım 3: Başlangıç koşulu u(r,0) = sin(r)/r, u_t(r,0) = 0 alınırsa v(r,0) = sin(r) ve v_t(r,0) = 0. F = G = sin/2.
+Sonuç: u = sin(r)*cos(t)/r.
+
+#### Lineer değil, ikinci veya yüksek mertebe
+
+Örnek 1 (bariz): u_xx*u_yy - (u_xy)^2 = 1 (Monge–Ampère).
+Adım 1: Lineer değildir. Özel çözüm denenir: u = (x^2 + y^2)/2.
+Kontrol: u_xx = 1, u_yy = 1, u_xy = 0; 1*1 - 0 = 1 ✓.
+Adım 2: Genel çözüm için Legendre dönüşümü ya da karakteristik yöntemler gerekir; bu, bu tabloda kapalı biçimde verilmiyor. Bu nedenle genel çözüm için sayısal yöntem uygulanabilir.
+
+Örnek 2 (görmek zor): u_t + u*u_x = u_xx (viskoz Burgers).
+Adım 1: Cole–Hopf dönüşümü u = -2*v_x/v. Bu dönüşümde v_t = v_xx ısı denklemine iner.
+Adım 2: Örnek v = 1 + exp(x + t) alınırsa v_t = exp(x + t) = v_xx ✓ (ısı denklemi sağlanır).
+Adım 3: u = -2*exp(x + t)/(1 + exp(x + t)) = -2/(1 + exp(-(x + t))).
+Sonuç: u(x,t) = -2/(1 + exp(-(x + t))), sabit hızlı yayılan bir cephe.
+
+Örnek 3 (fevkalade zor): u_t + 6*u*u_x + u_xxx = 0 (KdV).
+Adım 1: Lineer değildir; integrable bir denklemdir. Tam çözüm ters saçılma dönüşümü (IST) ile bulunur.
+Adım 2: Başlangıç koşulu u(x,0) = -2*k^2*sech^2(k*x) için tek soliton çözümü, IST ile elde edilir.
+Sonuç: u(x,t) = -2*k^2*sech^2(k*(x - 4*k^2*t)).
+Adım ayrıntısı bölüm 10'da verilmiştir (Lax çifti, saçılma verisi, GLM ve geri kazanım).
+
+#### Lineer kısmi sistem
+
+Örnek 1 (bariz): u_x = v, v_x = u.
+Adım 1: u_xx = v_x = u. Bu adi denklemdir: u'' = u (x'e göre).
+Adım 2: u = C1*exp(x) + C2*exp(-x). v = u_x = C1*exp(x) - C2*exp(-x).
+Kontrol: u_x = C1 e^x - C2 e^{-x} = v; v_x = C1 e^x + C2 e^{-x} = u ✓.
+
+Örnek 2 (görmek zor): u_x + v_y = 0, u_y - v_x = 0.
+Adım 1: f = v + i*u kompleks fonksiyonu tanımlanır. Koşullar, f'nin z = x + i*y üzerinde holomorf olmasını (Cauchy–Riemann) verir.
+Adım 2: Genel çözüm v + i*u = F(z), F holomorf.
+Örnek: F(z) = z^2 alınırsa v + i*u = (x + i*y)^2 = x^2 - y^2 + 2i*x*y, yani v = x^2 - y^2, u = 2*x*y.
+Kontrol: u_x + v_y = 2y - 2y = 0; u_y - v_x = 2x - 2x = 0 ✓.
+
+Örnek 3 (fevkalade zor): u_t = v_xx, v_t = -u_xx; başlangıç u(x,0) = sin(x), v(x,0) = 0.
+Adım 1: u = A(t)*sin(x), v = B(t)*sin(x) biçimi denenir.
+Adım 2: u_t = v_xx ⇒ A' = -B. v_t = -u_xx ⇒ B' = A.
+Adım 3: A'' = -A. A(0) = 1, A'(0) = -B(0) = 0 ⇒ A = cos(t), B = -A' = sin(t).
+Sonuç: u = cos(t)*sin(x), v = sin(t)*sin(x).
+Kontrol: u_t = -sin t sin x = v_xx ✓; v_t = cos t sin x = -u_xx ✓.
+
+#### Lineer değil sistem
+
+Örnek 1 (bariz): u_x = u, v_y = v^2.
+Adım 1: İlk denklem x'e göre lineerdir: u = f(y)*exp(x), f keyfi.
+Adım 2: İkinci denklem y'ye göre Bernoulli türündedir (n = 2): v_y = v^2 ⇒ v = -1/(y + g(x)), g keyfi.
+Sonuç: u = f(y)*e^x, v = -1/(y + g(x)).
+Kontrol: v_y = 1/(y + g)^2 = v^2 ✓.
+
+Örnek 2 (görmek zor): u_x = u*v + 1, v_y = u^2.
+Adım 1: Lineer değildir. Genel kapalı çözüm bu tabloda verilmez.
+Adım 2: Sayısal çözüm uygulanır; başlangıç ve sınır koşullarına göre yöntem (ör. sonlu farklar) kullanılır.
+
+Örnek 3 (fevkalade zor): Navier–Stokes denklemleri (sıkıştırılamaz, üç boyutlu).
+Adım 1: Lineer değildir; genel çözümün varlığı ve düzgünlüğü açık problemdir.
+Adım 2: Genel analitik yöntem yoktur. Hesaplamalı akışkanlar dinamiği (sonlu farklar, sonlu hacim ya da spektral) ile sayısal çözüm yapılır.
 
 Bu dosya bir sınıflama şemasıdır. Bir denklemin hangi yaprağa düştüğü, öncelik kuralı uygulanarak belirlenir.
