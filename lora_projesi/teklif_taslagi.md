@@ -2,7 +2,11 @@
 
 Hello,
 
+I have started the design and may have finished it before you accept this offer.
+
 I will deliver everything listed in your requirements, nothing less. No firmware, as stated.
+
+The choices below are plans made from my first impressions, before the detailed work. They may change during the work if necessity requires it, but under every condition I will do my best to deliver the best possible product.
 
 ## Additional items (not in your requirements, included at no extra charge; tell me if you do not want them)
 - A short design note: power budget, antenna placement, connector pin-out
