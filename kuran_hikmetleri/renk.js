@@ -318,7 +318,7 @@
     var s = document.createElement('style');
     s.textContent = Object.keys(VAZIFE_RENK).map(function (v) {
       return 'body.renk-acik .blok[data-v="' + v + '"]{background:' + VAZIFE_RENK[v] + ';}';
-    }).join('\n') + '\n' + '.ayet-kutu{display:flex;flex-direction:row-reverse;flex-wrap:wrap;gap:6px 4px;direction:rtl;}' +
+    }).join('\n') + '\n' + '.ayet-kutu{display:flex;flex-direction:row;flex-wrap:wrap;gap:6px 4px;direction:rtl;}' +
       '.blok{display:inline-flex;flex-direction:column;align-items:flex-end;border-radius:4px;padding:3px 6px;}' +
       '.blok-ar{direction:rtl;font-size:1.25em;line-height:1.9;}' +
       '.blok-tr{direction:ltr;font-size:.85em;color:#334155;text-align:left;}' + '\n' + PALET.map(function (c, i) {
