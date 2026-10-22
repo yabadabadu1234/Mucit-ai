@@ -9,7 +9,7 @@
      "ar": [
       0
      ],
-     "tr": "Tûr’a andolsun",
+     "tr": "Tûr'a andolsun",
      "v": "kasem"
     }
    ],
@@ -41,7 +41,7 @@
       0,
       1
      ],
-     "tr": "ve satır satır yazılmış Kitab’a andolsun",
+     "tr": "satır satır yazılmış Kitab'a andolsun",
      "v": "kasem"
     }
    ],
@@ -88,8 +88,8 @@
       1,
       2
      ],
-     "tr": "yayılmış ince deri üzerinde",
-     "v": "taalluk"
+     "tr": "yayılmış ince deri üzerinde olana andolsun",
+     "v": "kasem"
     }
    ],
    "kelimeler": [
@@ -148,7 +148,7 @@
       0,
       1
      ],
-     "tr": "ve ma’mûr olan Beyt’e andolsun",
+     "tr": "ve ma'mûr olan Beyt'e andolsun",
      "v": "kasem"
     }
    ],
@@ -244,7 +244,7 @@
       0,
       1
      ],
-     "tr": "ve dolu denize andolsun",
+     "tr": "ve kabaran denize andolsun",
      "v": "kasem"
     }
    ],
@@ -380,19 +380,19 @@
    "bloklar": [
     {
      "ar": [
-      0
+      0,
+      1,
+      2
      ],
-     "tr": "yoktur",
+     "tr": "onu önleyecek hiçbir",
      "v": "diger"
     },
     {
      "ar": [
-      1,
-      2,
       3
      ],
-     "tr": "onu önleyecek hiçbir engelleyici",
-     "v": "mubteda"
+     "tr": "engelleyici yoktur",
+     "v": "haber"
     }
    ],
    "kelimeler": [
@@ -472,17 +472,11 @@
     {
      "ar": [
       1,
-      2
-     ],
-     "tr": "gök çalkalanır",
-     "v": "fiil"
-    },
-    {
-     "ar": [
+      2,
       3
      ],
-     "tr": "şiddetle savrularak",
-     "v": "meful"
+     "tr": "gök şiddetle çalkalanır",
+     "v": "fiil"
     }
    ],
    "kelimeler": [
@@ -555,17 +549,11 @@
     {
      "ar": [
       0,
-      1
-     ],
-     "tr": "dağlar da yürür",
-     "v": "fiil"
-    },
-    {
-     "ar": [
+      1,
       2
      ],
-     "tr": "tam bir yürüyüşle",
-     "v": "meful"
+     "tr": "dağlar tam bir yürüyüşle yürür",
+     "v": "fiil"
     }
    ],
    "kelimeler": [
@@ -624,17 +612,11 @@
     {
      "ar": [
       0,
-      1
-     ],
-     "tr": "yazıklar olsun o gün",
-     "v": "mubteda"
-    },
-    {
-     "ar": [
+      1,
       2
      ],
-     "tr": "yalanlayanlara",
-     "v": "taalluk"
+     "tr": "o gün yalanlayanların vay haline",
+     "v": "mubteda"
     }
    ],
    "kelimeler": [
@@ -800,16 +782,10 @@
    "bloklar": [
     {
      "ar": [
-      0
-     ],
-     "tr": "O gün",
-     "v": "taalluk"
-    },
-    {
-     "ar": [
+      0,
       1
      ],
-     "tr": "itilirler",
+     "tr": "O gün itilip atılırlar",
      "v": "fiil"
     },
     {
@@ -825,7 +801,7 @@
      "ar": [
       5
      ],
-     "tr": "hızla itilerek",
+     "tr": "büyük bir hızla",
      "v": "meful"
     }
    ],
@@ -929,31 +905,19 @@
     {
      "ar": [
       0,
-      1
+      1,
+      2
      ],
      "tr": "işte bu ateş",
      "v": "mubteda"
     },
     {
      "ar": [
-      2,
-      3
-     ],
-     "tr": "ki siz idiniz",
-     "v": "sifat"
-    },
-    {
-     "ar": [
-      4
-     ],
-     "tr": "ona",
-     "v": "taalluk"
-    },
-    {
-     "ar": [
+      3,
+      4,
       5
      ],
-     "tr": "yalanlıyordunuz",
+     "tr": "yalanlayıp durduğunuzdur",
      "v": "haber"
     }
    ],
@@ -1063,24 +1027,24 @@
       0,
       1
      ],
-     "tr": "bu bir büyü mü",
+     "tr": "bu bir büyü müdür",
      "v": "haber"
     },
     {
      "ar": [
-      2
+      2,
+      3
      ],
-     "tr": "yoksa",
-     "v": "bag"
+     "tr": "yoksa siz",
+     "v": "tekit"
     },
     {
      "ar": [
-      3,
       4,
       5
      ],
-     "tr": "siz görmüyor musunuz",
-     "v": "haber"
+     "tr": "görmüyor musunuz",
+     "v": "fiil"
     }
    ],
    "kelimeler": [
@@ -1185,16 +1149,10 @@
    "bloklar": [
     {
      "ar": [
-      0
-     ],
-     "tr": "Girin ona",
-     "v": "fiil"
-    },
-    {
-     "ar": [
+      0,
       1
      ],
-     "tr": "sabredin",
+     "tr": "oraya girin sabredin",
      "v": "fiil"
     },
     {
@@ -1204,32 +1162,38 @@
       4
      ],
      "tr": "ya da sabretmeyin",
-     "v": "bag"
+     "v": "fiil"
     },
     {
      "ar": [
       5,
       6
      ],
-     "tr": "ikisi de sizin için birdir",
+     "tr": "sizin için birdir",
      "v": "haber"
     },
     {
      "ar": [
-      8,
-      9
+      8
      ],
-     "tr": "ancak cezalandırılırsınız",
-     "v": "haber"
+     "tr": "ancak",
+     "v": "tekit"
     },
     {
      "ar": [
+      9,
       10,
-      11,
+      11
+     ],
+     "tr": "yaptıklarınızın karşılığını",
+     "v": "taalluk"
+    },
+    {
+     "ar": [
       12
      ],
-     "tr": "yaptıklarınızın karşılığı olarak",
-     "v": "taalluk"
+     "tr": "görürsünüz",
+     "v": "fiil"
     }
    ],
    "kelimeler": [
@@ -1430,16 +1394,10 @@
    "bloklar": [
     {
      "ar": [
-      0
-     ],
-     "tr": "Şüphesiz",
-     "v": "tekit"
-    },
-    {
-     "ar": [
+      0,
       1
      ],
-     "tr": "takva sahipleri",
+     "tr": "şüphesiz korunanlar",
      "v": "mubteda"
     },
     {
@@ -1448,7 +1406,7 @@
       3,
       4
      ],
-     "tr": "cennetlerde nimetler içindedirler",
+     "tr": "cennetlerde ve nimet içindedirler",
      "v": "haber"
     }
    ],
@@ -1537,35 +1495,29 @@
    "bloklar": [
     {
      "ar": [
-      0
+      0,
+      1,
+      2
      ],
-     "tr": "sevinçli olarak",
+     "tr": "Rablerinin verdiklerinden neşeli olarak",
      "v": "hal"
     },
     {
      "ar": [
-      1,
-      2,
-      3
+      3,
+      4
      ],
-     "tr": "Rablerinin kendilerine verdiğiyle",
-     "v": "taalluk"
-    },
-    {
-     "ar": [
-      4,
-      5
-     ],
-     "tr": "ve Rableri onları korudu",
+     "tr": "Rableri onları",
      "v": "fiil"
     },
     {
      "ar": [
+      5,
       6,
       7
      ],
-     "tr": "cehennem azabından",
-     "v": "meful"
+     "tr": "cehennem azabından korumuştur",
+     "v": "fiil"
     }
    ],
    "kelimeler": [
@@ -1704,11 +1656,17 @@
     {
      "ar": [
       0,
-      1,
+      1
+     ],
+     "tr": "yeyin için",
+     "v": "fiil"
+    },
+    {
+     "ar": [
       2
      ],
-     "tr": "afiyetle yiyin ve için",
-     "v": "fiil"
+     "tr": "afiyetle",
+     "v": "hal"
     },
     {
      "ar": [
@@ -1716,7 +1674,7 @@
       4,
       5
      ],
-     "tr": "yaptıklarınızın karşılığı olarak",
+     "tr": "yaptıklarınıza karşılık olarak",
      "v": "taalluk"
     }
    ],
@@ -1824,18 +1782,18 @@
    "bloklar": [
     {
      "ar": [
-      0
+      0,
+      1
      ],
-     "tr": "yaslanmış olarak",
+     "tr": "yaslanarak",
      "v": "hal"
     },
     {
      "ar": [
-      1,
       2,
       3
      ],
-     "tr": "dizili koltuklar üzerine",
+     "tr": "sıra sıra dizilmiş koltuklara",
      "v": "taalluk"
     },
     {
@@ -1844,7 +1802,7 @@
       6,
       7
      ],
-     "tr": "onları iri gözlü hurilerle evlendirdik",
+     "tr": "onları ceylan gözlü hurilerle evlendirmişizdir",
      "v": "fiil"
     }
    ],
@@ -1968,8 +1926,8 @@
       0,
       1
      ],
-     "tr": "İman edenler",
-     "v": "mubteda"
+     "tr": "iman edenler",
+     "v": "sifat"
     },
     {
      "ar": [
@@ -1977,8 +1935,8 @@
       3,
       4
      ],
-     "tr": "ve soyları imanla onlara uydu",
-     "v": "fiil"
+     "tr": "soyları imanla onlara tâbi olanlar",
+     "v": "sifat"
     },
     {
      "ar": [
@@ -1986,39 +1944,33 @@
       6,
       7
      ],
-     "tr": "soylarını onlara kattık",
+     "tr": "onların nesillerini de kendilerine kattık",
      "v": "fiil"
     },
     {
      "ar": [
       8,
-      9
+      9,
+      10
      ],
-     "tr": "ve eksiltmedik",
+     "tr": "ve onların amellerinden eksiltmedik",
      "v": "fiil"
     },
     {
      "ar": [
-      10,
-      11
-     ],
-     "tr": "onların amellerinden",
-     "v": "taalluk"
-    },
-    {
-     "ar": [
+      11,
       12,
       13
      ],
-     "tr": "hiçbir şeyi",
-     "v": "meful"
+     "tr": "hiçbir şey",
+     "v": "diger"
     },
     {
      "ar": [
       15,
       16
      ],
-     "tr": "her insan",
+     "tr": "herkes",
      "v": "mubteda"
     },
     {
@@ -2344,25 +2296,19 @@
    "bloklar": [
     {
      "ar": [
-      0
+      0,
+      1
      ],
-     "tr": "Ve onlara verdik",
+     "tr": "onlara bol bol meyve verdik",
      "v": "fiil"
     },
     {
      "ar": [
-      1,
-      2
-     ],
-     "tr": "meyve ve etle",
-     "v": "taalluk"
-    },
-    {
-     "ar": [
+      2,
       3,
       4
      ],
-     "tr": "istedikleri şeyden",
+     "tr": "ve canlarının istediği et",
      "v": "taalluk"
     }
    ],
@@ -2460,30 +2406,24 @@
       1,
       2
      ],
-     "tr": "orada bir kadeh için çekişirler",
+     "tr": "orada birbirinden kadeh alırlar",
      "v": "fiil"
     },
     {
      "ar": [
       3,
-      4
-     ],
-     "tr": "boş söz yoktur",
-     "v": "haber"
-    },
-    {
-     "ar": [
+      4,
       5
      ],
-     "tr": "orada",
-     "v": "taalluk"
+     "tr": "orada ne boş söz",
+     "v": "haber"
     },
     {
      "ar": [
       6,
       7
      ],
-     "tr": "ve günah yoktur",
+     "tr": "ne de günah vardır",
      "v": "haber"
     }
    ],
@@ -2622,7 +2562,7 @@
       1,
       2
      ],
-     "tr": "onların etrafında dolaşır",
+     "tr": "onların etrafında dolaşırlar",
      "v": "fiil"
     },
     {
@@ -2630,8 +2570,8 @@
       3,
       4
      ],
-     "tr": "onlara ait gençler",
-     "v": "fail"
+     "tr": "onlara hizmet eden gençler",
+     "v": "mubteda"
     },
     {
      "ar": [
@@ -2639,7 +2579,7 @@
       6,
       7
      ],
-     "tr": "sanki onlar saklı inciler gibidir",
+     "tr": "sanki saklı inci gibidirler",
      "v": "haber"
     }
    ],
@@ -2761,19 +2701,19 @@
     {
      "ar": [
       0,
-      1
+      1,
+      2
      ],
-     "tr": "ve bazıları yöneldi",
+     "tr": "birbirlerine yönelip",
      "v": "fiil"
     },
     {
      "ar": [
-      2,
       3,
       4
      ],
-     "tr": "diğerlerine sorarak",
-     "v": "hal"
+     "tr": "sorarlar",
+     "v": "fiil"
     }
    ],
    "kelimeler": [
@@ -2864,19 +2804,19 @@
      "ar": [
       0
      ],
-     "tr": "dediler",
+     "tr": "derler ki",
      "v": "fiil"
     },
     {
      "ar": [
-      1,
-      2
+      1
      ],
-     "tr": "şüphesiz biz idik",
-     "v": "haber"
+     "tr": "biz",
+     "v": "tekit"
     },
     {
      "ar": [
+      2,
       3
      ],
      "tr": "daha önce",
@@ -2887,14 +2827,14 @@
       4,
       5
      ],
-     "tr": "ailemiz içinde",
+     "tr": "ailemizin içinde",
      "v": "taalluk"
     },
     {
      "ar": [
       6
      ],
-     "tr": "korkanlar",
+     "tr": "korkardık",
      "v": "haber"
     }
    ],
@@ -3034,8 +2974,8 @@
       4,
       5
      ],
-     "tr": "sam yelinin azabından",
-     "v": "meful"
+     "tr": "yakıcı rüzgârın azabından",
+     "v": "taalluk"
     }
    ],
    "kelimeler": [
@@ -3144,22 +3084,22 @@
       0,
       1
      ],
-     "tr": "şüphesiz biz idik",
-     "v": "mubteda"
+     "tr": "gerçekten biz",
+     "v": "tekit"
     },
     {
      "ar": [
       2,
       3
      ],
-     "tr": "daha önceden",
+     "tr": "daha önce",
      "v": "taalluk"
     },
     {
      "ar": [
       4
      ],
-     "tr": "O’na yalvarırdık",
+     "tr": "O'na yalvarırdık",
      "v": "fiil"
     },
     {
@@ -3172,17 +3112,11 @@
     },
     {
      "ar": [
-      8
-     ],
-     "tr": "iyilik eden",
-     "v": "haber"
-    },
-    {
-     "ar": [
+      8,
       9
      ],
-     "tr": "esirgeyen",
-     "v": "sifat"
+     "tr": "iyilik eden esirgeyendir",
+     "v": "haber"
     }
    ],
    "kelimeler": [
@@ -3336,38 +3270,32 @@
      "ar": [
       0
      ],
-     "tr": "öğüt ver",
+     "tr": "Öğüt ver",
      "v": "fiil"
     },
     {
      "ar": [
       1,
-      2
+      2,
+      3
      ],
-     "tr": "artık sen değilsin",
-     "v": "diger"
+     "tr": "Rabbinin lütfuyla sen",
+     "v": "haber"
     },
     {
      "ar": [
-      3,
-      4
-     ],
-     "tr": "Rabbinin nimetiyle",
-     "v": "taalluk"
-    },
-    {
-     "ar": [
+      4,
       5
      ],
-     "tr": "kâhin",
-     "v": "haber"
+     "tr": "ne kâhin",
+     "v": "taalluk"
     },
     {
      "ar": [
       6,
       7
      ],
-     "tr": "ve deli değilsin",
+     "tr": "ne de deli değilsin",
      "v": "haber"
     }
    ],
@@ -3508,14 +3436,14 @@
       0,
       1
      ],
-     "tr": "Yoksa diyorlar ki",
-     "v": "bag"
+     "tr": "yoksa diyorlar ki",
+     "v": "tekit"
     },
     {
      "ar": [
       2
      ],
-     "tr": "bir şair",
+     "tr": "o bir şairdir",
      "v": "haber"
     },
     {
@@ -3531,8 +3459,8 @@
       5,
       6
      ],
-     "tr": "ölüm felaketini",
-     "v": "mubteda"
+     "tr": "zamanın felaketini",
+     "v": "taalluk"
     }
    ],
    "kelimeler": [
@@ -3653,7 +3581,7 @@
      "ar": [
       0
      ],
-     "tr": "De ki",
+     "tr": "de ki",
      "v": "fiil"
     },
     {
@@ -3665,15 +3593,21 @@
     },
     {
      "ar": [
-      2,
-      3,
-      4
+      2
      ],
-     "tr": "şüphesiz ben de sizinle birlikte",
-     "v": "mubteda"
+     "tr": "ben de",
+     "v": "tekit"
     },
     {
      "ar": [
+      3
+     ],
+     "tr": "sizinle beraber",
+     "v": "taalluk"
+    },
+    {
+     "ar": [
+      4,
       5
      ],
      "tr": "bekleyenlerdenim",
@@ -3785,8 +3719,8 @@
      "ar": [
       0
      ],
-     "tr": "Yoksa",
-     "v": "bag"
+     "tr": "yoksa",
+     "v": "tekit"
     },
     {
      "ar": [
@@ -3794,7 +3728,7 @@
       2,
       3
      ],
-     "tr": "akılları onlara bunu mu emrediyor",
+     "tr": "akılları bunu emrediyor mu",
      "v": "fiil"
     },
     {
@@ -3802,7 +3736,7 @@
       5
      ],
      "tr": "yoksa",
-     "v": "bag"
+     "v": "tekit"
     },
     {
      "ar": [
@@ -3810,7 +3744,7 @@
       7,
       8
      ],
-     "tr": "onlar azgın bir kavim mi",
+     "tr": "onlar azgın bir topluluk mudur",
      "v": "haber"
     }
    ],
@@ -3949,8 +3883,8 @@
       0,
       1
      ],
-     "tr": "Yoksa diyorlar ki",
-     "v": "bag"
+     "tr": "yoksa diyorlar ki",
+     "v": "tekit"
     },
     {
      "ar": [
@@ -3961,11 +3895,17 @@
     },
     {
      "ar": [
-      4,
+      4
+     ],
+     "tr": "hayır",
+     "v": "tekit"
+    },
+    {
+     "ar": [
       5,
       6
      ],
-     "tr": "hayır, inanmıyorlar",
+     "tr": "onlar iman etmezler",
      "v": "haber"
     }
    ],
@@ -4070,18 +4010,12 @@
    "bloklar": [
     {
      "ar": [
-      0
-     ],
-     "tr": "Öyleyse getirsinler",
-     "v": "fiil"
-    },
-    {
-     "ar": [
+      0,
       1,
       2
      ],
-     "tr": "onun benzeri bir söz",
-     "v": "mubteda"
+     "tr": "onun benzeri bir söz getirsinler",
+     "v": "fiil"
     },
     {
      "ar": [
@@ -4089,7 +4023,7 @@
       4,
       5
      ],
-     "tr": "eğer doğru söyleyenler iseler",
+     "tr": "eğer doğru iseler",
      "v": "sart"
     }
    ],
@@ -4199,38 +4133,38 @@
      "ar": [
       0
      ],
-     "tr": "Yoksa",
-     "v": "bag"
+     "tr": "yoksa",
+     "v": "tekit"
     },
     {
      "ar": [
-      1
+      1,
+      2,
+      3
      ],
-     "tr": "yaratıldılar",
+     "tr": "hiçbir şeyden yaratıldılar",
      "v": "fiil"
     },
     {
      "ar": [
-      2,
-      3,
       4
      ],
-     "tr": "bir şey olmadan",
-     "v": "taalluk"
+     "tr": "mı",
+     "v": "tekit"
     },
     {
      "ar": [
       5
      ],
      "tr": "yoksa",
-     "v": "bag"
+     "v": "tekit"
     },
     {
      "ar": [
       6,
       7
      ],
-     "tr": "onlar yaratıcılar mı",
+     "tr": "kendileri yaratıcı mıdır",
      "v": "haber"
     }
    ],
@@ -4366,8 +4300,8 @@
      "ar": [
       0
      ],
-     "tr": "Yoksa",
-     "v": "bag"
+     "tr": "yoksa",
+     "v": "tekit"
     },
     {
      "ar": [
@@ -4380,11 +4314,17 @@
     },
     {
      "ar": [
-      5,
+      5
+     ],
+     "tr": "hayır",
+     "v": "tekit"
+    },
+    {
+     "ar": [
       6,
       7
      ],
-     "tr": "hayır, kesin inanmazlar",
+     "tr": "onlar kesin inanmazlar",
      "v": "haber"
     }
    ],
@@ -4508,8 +4448,8 @@
      "ar": [
       0
      ],
-     "tr": "Yoksa",
-     "v": "bag"
+     "tr": "yoksa",
+     "v": "tekit"
     },
     {
      "ar": [
@@ -4517,22 +4457,22 @@
       2,
       3
      ],
-     "tr": "yanlarında Rabbinin hazineleri mi var",
-     "v": "taalluk"
+     "tr": "onların yanında Rabbinin hazineleri mi var",
+     "v": "haber"
     },
     {
      "ar": [
       4
      ],
      "tr": "yoksa",
-     "v": "bag"
+     "v": "tekit"
     },
     {
      "ar": [
       5,
       6
      ],
-     "tr": "onlar mı hâkim olanlar",
+     "tr": "onlar hâkimler mi",
      "v": "haber"
     }
    ],
@@ -4654,31 +4594,31 @@
      "ar": [
       0
      ],
-     "tr": "Yoksa",
-     "v": "bag"
+     "tr": "yoksa",
+     "v": "tekit"
     },
     {
      "ar": [
       1,
       2
      ],
-     "tr": "onların bir merdiveni var da",
-     "v": "taalluk"
+     "tr": "onların bir merdiveni mi var",
+     "v": "haber"
     },
     {
      "ar": [
       3,
       4
      ],
-     "tr": "orada dinliyorlar",
-     "v": "fiil"
+     "tr": "üzerine çıkıp dinledikleri",
+     "v": "taalluk"
     },
     {
      "ar": [
       6,
       7
      ],
-     "tr": "dinleyicileri getirsin",
+     "tr": "öyleyse dinleyenleri getirsin",
      "v": "fiil"
     },
     {
@@ -4686,7 +4626,7 @@
       8,
       9
      ],
-     "tr": "apaçık bir delil ile",
+     "tr": "açık bir delil",
      "v": "taalluk"
     }
    ],
@@ -4842,15 +4782,15 @@
      "ar": [
       0
      ],
-     "tr": "Yoksa",
-     "v": "bag"
+     "tr": "yoksa",
+     "v": "tekit"
     },
     {
      "ar": [
       1,
       2
      ],
-     "tr": "O’nun için kızlar",
+     "tr": "kızlar O'nun",
      "v": "haber"
     },
     {
@@ -4858,7 +4798,7 @@
       3,
       4
      ],
-     "tr": "sizin için erkekler mi",
+     "tr": "oğullar sizin mi",
      "v": "haber"
     }
    ],
@@ -4952,31 +4892,31 @@
      "ar": [
       0
      ],
-     "tr": "Yoksa",
-     "v": "bag"
+     "tr": "yoksa",
+     "v": "tekit"
     },
     {
      "ar": [
       1,
       2
      ],
-     "tr": "onlardan ücret mi istiyorsun",
+     "tr": "onlardan ücret istiyorsun",
      "v": "fiil"
     },
     {
      "ar": [
       3,
-      4
+      4,
+      5
      ],
-     "tr": "onlar",
-     "v": "mubteda"
+     "tr": "onlar borç altında",
+     "v": "haber"
     },
     {
      "ar": [
-      5,
       6
      ],
-     "tr": "bir borç yükü altında mı",
+     "tr": "eziliyorlar",
      "v": "haber"
     }
    ],
@@ -5097,23 +5037,23 @@
      "ar": [
       0
      ],
-     "tr": "Yoksa",
-     "v": "bag"
+     "tr": "yoksa",
+     "v": "tekit"
     },
     {
      "ar": [
       1,
       2
      ],
-     "tr": "yanlarında gayb mı var",
-     "v": "taalluk"
+     "tr": "onların yanında gayb mı var",
+     "v": "haber"
     },
     {
      "ar": [
       3,
       4
      ],
-     "tr": "onlar yazıp duruyor mu",
+     "tr": "onlar yazıyorlar",
      "v": "haber"
     }
    ],
@@ -5206,15 +5146,15 @@
      "ar": [
       0
      ],
-     "tr": "Yoksa",
-     "v": "bag"
+     "tr": "yoksa",
+     "v": "tekit"
     },
     {
      "ar": [
       1,
       2
      ],
-     "tr": "tuzak mı kurmak istiyorlar",
+     "tr": "bir tuzak kurmak istiyorlar mı",
      "v": "fiil"
     },
     {
@@ -5222,15 +5162,15 @@
       4,
       5
      ],
-     "tr": "küfredenler",
-     "v": "mubteda"
+     "tr": "inkâr edenler ise",
+     "v": "sifat"
     },
     {
      "ar": [
       6,
       7
      ],
-     "tr": "onlar tuzağa düşürülenlerdir",
+     "tr": "tuzağa düşürülenler onlardır",
      "v": "haber"
     }
    ],
@@ -5353,15 +5293,15 @@
      "ar": [
       0
      ],
-     "tr": "Yoksa",
-     "v": "bag"
+     "tr": "yoksa",
+     "v": "tekit"
     },
     {
      "ar": [
       1,
       2
      ],
-     "tr": "onların bir ilahı mı var",
+     "tr": "onların bir tanrısı mı var",
      "v": "haber"
     },
     {
@@ -5369,7 +5309,7 @@
       3,
       4
      ],
-     "tr": "Allah’tan başka",
+     "tr": "Allah'tan başka",
      "v": "taalluk"
     },
     {
@@ -5377,8 +5317,8 @@
       6,
       7
      ],
-     "tr": "Allah tenzih olunur",
-     "v": "mubteda"
+     "tr": "Allah münezzehtir",
+     "v": "haber"
     },
     {
      "ar": [
@@ -5538,7 +5478,7 @@
       0,
       1
      ],
-     "tr": "ve eğer görseler",
+     "tr": "eğer görseler",
      "v": "sart"
     },
     {
@@ -5548,7 +5488,7 @@
       4
      ],
      "tr": "gökten bir parça",
-     "v": "mubteda"
+     "v": "taalluk"
     },
     {
      "ar": [
@@ -5559,18 +5499,12 @@
     },
     {
      "ar": [
-      6
-     ],
-     "tr": "derler",
-     "v": "fiil"
-    },
-    {
-     "ar": [
+      6,
       7,
       8
      ],
-     "tr": "kat kat bir bulut",
-     "v": "mubteda"
+     "tr": "üst üste yığılmış bir bulut derler",
+     "v": "fiil"
     }
    ],
    "kelimeler": [
@@ -5722,7 +5656,7 @@
      "ar": [
       0
      ],
-     "tr": "Bırak onları",
+     "tr": "onları bırak",
      "v": "fiil"
     },
     {
@@ -5730,7 +5664,7 @@
       1,
       2
      ],
-     "tr": "karşılaşıncaya dek",
+     "tr": "karşılaşıncaya kadar",
      "v": "taalluk"
     },
     {
@@ -5739,14 +5673,14 @@
       4,
       5
      ],
-     "tr": "o günlerine",
+     "tr": "çarpılacakları günlerine",
      "v": "taalluk"
     },
     {
      "ar": [
       6
      ],
-     "tr": "bayılırlar",
+     "tr": "çarpılırlar",
      "v": "fiil"
     }
    ],
@@ -5869,21 +5803,27 @@
    "bloklar": [
     {
      "ar": [
-      0,
-      1,
-      2
+      0
      ],
-     "tr": "O gün yarar sağlamaz",
+     "tr": "O gün",
+     "v": "taalluk"
+    },
+    {
+     "ar": [
+      1,
+      2,
+      3
+     ],
+     "tr": "planları onlara fayda vermez",
      "v": "fiil"
     },
     {
      "ar": [
-      3,
       4,
       5
      ],
-     "tr": "tuzakları onlara hiçbir şey",
-     "v": "taalluk"
+     "tr": "hiçbir şey",
+     "v": "diger"
     },
     {
      "ar": [
@@ -5891,7 +5831,7 @@
       7,
       8
      ],
-     "tr": "ve yardım edilmezler",
+     "tr": "ve onlara yardım edilmez",
      "v": "haber"
     }
    ],
@@ -6046,8 +5986,8 @@
       1,
       2
      ],
-     "tr": "şüphesiz zulmedenler için",
-     "v": "tekit"
+     "tr": "şüphesiz zulmedenlere",
+     "v": "mubteda"
     },
     {
      "ar": [
@@ -6055,7 +5995,7 @@
       4,
       5
      ],
-     "tr": "bunun başka bir azabı vardır",
+     "tr": "bundan başka bir azap vardır",
      "v": "haber"
     },
     {
@@ -6063,7 +6003,7 @@
       6,
       7
      ],
-     "tr": "ama çoğu",
+     "tr": "fakat çokları",
      "v": "bag"
     },
     {
@@ -6241,48 +6181,36 @@
    "bloklar": [
     {
      "ar": [
-      0
-     ],
-     "tr": "Sabret",
-     "v": "fiil"
-    },
-    {
-     "ar": [
+      0,
       1,
       2
      ],
-     "tr": "Rabbinin hükmüne",
-     "v": "taalluk"
+     "tr": "Rabbinin hükmüne sabret",
+     "v": "fiil"
     },
     {
      "ar": [
       3,
       4
      ],
-     "tr": "şüphesiz sen gözlerimiz önündesin",
+     "tr": "çünkü sen gözlerimizin önündesin",
      "v": "haber"
     },
     {
      "ar": [
-      6
-     ],
-     "tr": "ve tespih et",
-     "v": "fiil"
-    },
-    {
-     "ar": [
+      6,
       7,
       8
      ],
-     "tr": "Rabbini hamd ile",
-     "v": "taalluk"
+     "tr": "Rabbini hamdiyle tesbih et",
+     "v": "fiil"
     },
     {
      "ar": [
       9,
       10
      ],
-     "tr": "kalktığın vakit",
+     "tr": "kalktığın zaman",
      "v": "taalluk"
     }
    ],
@@ -6457,14 +6385,14 @@
       0,
       1
      ],
-     "tr": "ve gecenin bir kısmında",
+     "tr": "gecenin bir kısmında",
      "v": "taalluk"
     },
     {
      "ar": [
       2
      ],
-     "tr": "O’nu tespih et",
+     "tr": "O'nu tesbih et",
      "v": "fiil"
     },
     {
@@ -6472,7 +6400,7 @@
       3,
       4
      ],
-     "tr": "ve yıldızlar batarken",
+     "tr": "yıldızların batışından sonra da",
      "v": "taalluk"
     }
    ],

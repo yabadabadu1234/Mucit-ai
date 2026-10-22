@@ -11,7 +11,7 @@
       1,
       2
      ],
-     "tr": "Güneş dürüldüğünde",
+     "tr": "Güneş katlanıp dürüldüğünde",
      "v": "sart"
     }
    ],
@@ -136,7 +136,7 @@
       1,
       2
      ],
-     "tr": "Dağlar yürütüldüğünde",
+     "tr": "Dağlar sallanıp yürütüldüğünde",
      "v": "sart"
     }
    ],
@@ -262,7 +262,7 @@
       1,
       2
      ],
-     "tr": "Vahşi hayvanlar toplandığında",
+     "tr": "Vahşi hayvanlar toplanıp bir araya getirildiğinde",
      "v": "sart"
     }
    ],
@@ -388,7 +388,7 @@
       1,
       2
      ],
-     "tr": "Ruhlar (bedenlerle) birleştirildiğinde",
+     "tr": "Ruhlar bedenlerle birleştirildiğinde",
      "v": "sart"
     }
    ],
@@ -451,7 +451,7 @@
       1,
       2
      ],
-     "tr": "Diri diri gömülen kıza sorulduğunda",
+     "tr": "Diri diri gömülen kıza sorulduğunda,",
      "v": "sart"
     }
    ],
@@ -511,17 +511,11 @@
     {
      "ar": [
       0,
-      1
-     ],
-     "tr": "hangi günah yüzünden",
-     "v": "taalluk"
-    },
-    {
-     "ar": [
+      1,
       2
      ],
-     "tr": "öldürüldüğü",
-     "v": "fiil"
+     "tr": "hangi günah yüzünden öldürüldüğü.",
+     "v": "hal"
     }
    ],
    "kelimeler": [
@@ -831,18 +825,18 @@
     {
      "ar": [
       0,
-      1
+      1,
+      2
      ],
-     "tr": "Her kişi bilecektir",
+     "tr": "Her kişi neler",
      "v": "fiil"
     },
     {
      "ar": [
-      2,
       3
      ],
-     "tr": "ne getirdiğini",
-     "v": "meful"
+     "tr": "getirdiğini bilecektir",
+     "v": "fiil"
     }
    ],
    "kelimeler": [
@@ -913,11 +907,17 @@
    "bloklar": [
     {
      "ar": [
-      0,
+      0
+     ],
+     "tr": "Hayır,",
+     "v": "sart"
+    },
+    {
+     "ar": [
       1,
       2
      ],
-     "tr": "Hayır! Geri çekilen yıldızlara yemin ederim",
+     "tr": "geri çekilip kaybolan yıldızlara andolsun",
      "v": "kasem"
     }
    ],
@@ -1028,7 +1028,7 @@
       1,
       2
      ],
-     "tr": "ve kararmaya yüz tuttuğunda geceye",
+     "tr": "Kararmaya yüz tuttuğunda geceye andolsun",
      "v": "kasem"
     }
    ],
@@ -1091,7 +1091,7 @@
       1,
       2
      ],
-     "tr": "ve ağarmaya başladığında sabaha",
+     "tr": "Ağarmaya başladığında sabaha andolsun ki",
      "v": "kasem"
     }
    ],
@@ -1152,8 +1152,8 @@
      "ar": [
       0
      ],
-     "tr": "Şüphesiz o",
-     "v": "mubteda"
+     "tr": "Şüphesiz o,",
+     "v": "tekit"
     },
     {
      "ar": [
@@ -1161,8 +1161,8 @@
       2,
       3
      ],
-     "tr": "değerli bir elçinin sözüdür",
-     "v": "haber"
+     "tr": "değerli bir elçinin getirdiği sözdür",
+     "v": "bag"
     }
    ],
    "kelimeler": [
@@ -1238,7 +1238,7 @@
       0,
       1
      ],
-     "tr": "güç sahibi",
+     "tr": "Güç sahibi,",
      "v": "sifat"
     },
     {
@@ -1360,15 +1360,15 @@
       0,
       1
      ],
-     "tr": "orada itaat edilen",
+     "tr": "Orada itaat edilen,",
      "v": "sifat"
     },
     {
      "ar": [
       2
      ],
-     "tr": "güvenilir",
-     "v": "sifat"
+     "tr": "güvenilir bir elçidir.",
+     "v": "haber"
     }
    ],
    "kelimeler": [
@@ -1428,13 +1428,13 @@
       1
      ],
      "tr": "Arkadaşınız da",
-     "v": "mubteda"
+     "v": "meful"
     },
     {
      "ar": [
       2
      ],
-     "tr": "deli değildir",
+     "tr": "mecnun değildir.",
      "v": "haber"
     }
    ],
@@ -1494,18 +1494,18 @@
    "bloklar": [
     {
      "ar": [
-      0
+      0,
+      1
      ],
-     "tr": "Andolsun ki",
+     "tr": "Andolsun ki onu",
      "v": "kasem"
     },
     {
      "ar": [
-      1,
       2,
       3
      ],
-     "tr": "onu (Cebrail'i) apaçık ufukta görmüştür",
+     "tr": "apaçık ufukta görmüştür",
      "v": "fiil"
     }
    ],
@@ -1586,23 +1586,17 @@
       0,
       1
      ],
-     "tr": "O",
-     "v": "mubteda"
+     "tr": "O,",
+     "v": "tekit"
     },
     {
      "ar": [
       2,
-      3
-     ],
-     "tr": "gaybın bilgisini (sizden)",
-     "v": "taalluk"
-    },
-    {
-     "ar": [
+      3,
       4
      ],
-     "tr": "esirgeyici değildir",
-     "v": "haber"
+     "tr": "gaybın bilgilerini esirgemez",
+     "v": "fiil"
     }
    ],
    "kelimeler": [
@@ -1694,8 +1688,8 @@
       0,
       1
      ],
-     "tr": "O",
-     "v": "mubteda"
+     "tr": "O,",
+     "v": "tekit"
     },
     {
      "ar": [
@@ -1703,7 +1697,7 @@
       3,
       4
      ],
-     "tr": "lanetlenmiş şeytanın sözü de değildir",
+     "tr": "lanetli şeytanın sözü değildir",
      "v": "haber"
     }
    ],
@@ -1792,17 +1786,11 @@
    "bloklar": [
     {
      "ar": [
-      0
-     ],
-     "tr": "Öyleyse nereye",
-     "v": "taalluk"
-    },
-    {
-     "ar": [
+      0,
       1
      ],
-     "tr": "gidiyorsunuz",
-     "v": "fiil"
+     "tr": "Öyleyse nereye gidiyorsunuz?",
+     "v": "haber"
     }
    ],
    "kelimeler": [
@@ -1846,18 +1834,18 @@
     {
      "ar": [
       0,
-      1,
-      2
+      1
      ],
-     "tr": "O, ancak",
-     "v": "mubteda"
+     "tr": "O,",
+     "v": "tekit"
     },
     {
      "ar": [
+      2,
       3,
       4
      ],
-     "tr": "âlemler için bir öğüttür",
+     "tr": "ancak âlemler için bir öğüttür",
      "v": "haber"
     }
    ],
@@ -1950,16 +1938,16 @@
       1,
       2
      ],
-     "tr": "sizden dileyen kimse için",
-     "v": "taalluk"
+     "tr": "Sizden isteyen kimse için",
+     "v": "meful"
     },
     {
      "ar": [
       3,
       4
      ],
-     "tr": "doğru yolda olmayı",
-     "v": "meful"
+     "tr": "doğru yolda gitmek",
+     "v": "taalluk"
     }
    ],
    "kelimeler": [
@@ -2048,17 +2036,11 @@
     {
      "ar": [
       0,
-      1
-     ],
-     "tr": "Siz dileyemezsiniz",
-     "v": "fiil"
-    },
-    {
-     "ar": [
+      1,
       2
      ],
-     "tr": "ancak",
-     "v": "istisna"
+     "tr": "Siz dileyemezsiniz, ancak",
+     "v": "fiil"
     },
     {
      "ar": [
@@ -2067,15 +2049,15 @@
       5
      ],
      "tr": "Allah dilemedikçe",
-     "v": "meful"
+     "v": "sart"
     },
     {
      "ar": [
       6,
       7
      ],
-     "tr": "âlemlerin Rabbi",
-     "v": "diger"
+     "tr": "âlemlerin Rabbi.",
+     "v": "sifat"
     }
    ],
    "kelimeler": [
