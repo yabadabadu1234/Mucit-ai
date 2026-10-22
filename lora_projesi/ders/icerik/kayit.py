@@ -49,9 +49,9 @@ def giris(bolumler):
             + '<h2>Güven düzeyi etiketleri</h2><p>Bir bilginin nereden geldiği her yerde işaretlidir:</p><ul>'
             '<li>[[ds]] — üreticinin veri sayfasında bu çalışmada okundu.</li><li>[[bilgi]] — genel mühendislik bilgisi; bu çalışmada bir belgeden doğrulanmadı.</li>'
             '<li>[[tahmin]] — hesap ya da varsayım.</li><li>[[dogrulanmadi]] — sipariş ya da ölçüm öncesi kontrol edilmesi gereken.</li></ul>'
-            '<h2>Yol haritası</h2><ol><li><a href="verici/index.html">Verici kartı</a> (daha basit): besleme, USB, işlemci, düğmeler, telsiz.</li>'
+            '<h2>Yol haritası</h2><ol><li><a href="temel/index.html">Temel bilgiler</a> (dokuz kısa ders): Ohm yasasından üretim dosyalarına; kartlara geçmeden önce okumanı öneririm.</li><li><a href="verici/index.html">Verici kartı</a> (daha basit): besleme, USB, işlemci, düğmeler, telsiz.</li>'
             '<li><a href="alici/index.html">Alıcı kartı</a> (daha zengin): 12 V giriş koruması, iki çevirici, Ethernet, 4G modem, röle.</li>'
-            '<li><a href="hesap.html">Hesap makineleri</a>: bölücü, geri besleme, bobin, hat empedansı, iz genişliği, pil ömrü…</li></ol>')
+            '<li><a href="hesap.html">Hesap makineleri</a>: bölücü, geri besleme, bobin, hat empedansı, iz genişliği, pil ömrü…</li><li><a href="kaynak.html">Kaynaklar ve güven düzeyi</a>: hangi belge okundu, hangisi okunmadı.</li></ol>')
 
 
 def kart_giris(ad, liste):
