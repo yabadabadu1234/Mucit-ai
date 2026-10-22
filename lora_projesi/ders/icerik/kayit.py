@@ -72,7 +72,12 @@ def hesap_sayfasi():
 
 def sozluk():
     from uret import KISALTMA
-    return '<h1>Sözlük</h1><table><tr><th>Kısaltma</th><th>Açılımı ve anlamı</th></tr>' + ''.join('<tr><td><b>%s</b></td><td>%s</td></tr>' % (k, html.escape(v)) for k, v in sorted(KISALTMA.items())) + '</table>'
+    ref = [('R', 'Direnç (Resistor)'), ('C', 'Kondansatör (Capacitor)'), ('L', 'Bobin (Inductor; “L” harfi endüktans sembolünden)'), ('D', 'Diyot (Diode)'), ('Q', 'Transistör (Q: sembolde kullanılan harf)'),
+           ('U', 'Tümleşik devre, çip (Unit)'), ('J', 'Konnektör / jak (Jack)'), ('K', 'Röle (Kontak: “K” harfi)'), ('F', 'Sigorta (Fuse)'), ('Y', 'Kristal (osilatör)'),
+           ('SW', 'Düğme ya da anahtar (Switch)'), ('BT', 'Pil (Battery)'), ('TP', 'Test noktası (Test Point)'), ('H', 'Montaj deliği (Hole)')]
+    return ('<h1>Sözlük</h1><p>Sitede geçen yabancı kökenli ve kısaltılmış her terimin Türkçe açıklaması. Bir terim her sayfada ilk geçtiği yerde üzerine gelince de açıklanır.</p>'
+            '<h2>Parça kodları (şemada R1, C7, U3 gibi görülen harfler)</h2><table><tr><th>Harf</th><th>Anlamı</th></tr>' + ''.join('<tr><td><b>%s</b></td><td>%s</td></tr>' % (a, html.escape(b)) for a, b in ref) + '</table><p>Harfi izleyen sayı yalnızca sıra numarasıdır: R1, R2… kartta o türden kaçıncı parça olduğunu söyler.</p>'
+            '<h2>Kısaltmalar ve yabancı terimler</h2><table><tr><th>Terim</th><th>Açılımı ve anlamı</th></tr>' + ''.join('<tr><td><b>%s</b></td><td>%s</td></tr>' % (k, html.escape(v)) for k, v in sorted(KISALTMA.items(), key=lambda x: x[0].lower())) + '</table>')
 
 
 def kaynak():
