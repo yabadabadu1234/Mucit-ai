@@ -4,7 +4,7 @@ import pcbnew
 from pcbgen import Pano, mm, vec
 from otoyer import Yer, pad_konum, sinir
 
-W, H = 84.0, 98.0
+W, H = 88.0, 102.0
 
 SABIT = {
     # ref: (x, y, donme, arka, tht)
@@ -75,7 +75,7 @@ def kur(xml, W=W, H=H):
         konum = (p.fps[ref].GetPosition().x / 1e6, p.fps[ref].GetPosition().y / 1e6)
         # capa pad'i konumu
         ap = pos[0]
-        sonuc = y.pasif_ekle(r, ap, r in ARKA, rmax=25.0)
+        sonuc = y.pasif_ekle(r, ap, r in ARKA, rmax=40.0)
         yerlesti.add(r)
     assert not bekleyen, bekleyen
     eksik = set(p.parcalar) - set(p.fps)

@@ -48,7 +48,7 @@ class Yer:
         self.kaydet(ref, tht)
         self.sabit.add(ref)
 
-    def _cakisma(self, ref, k, side, bos=0.15):
+    def _cakisma(self, ref, k, side, bos=0.3):
         for r2, k2 in self.kutu[side].items():
             if r2 == ref: continue
             if k[0] - bos < k2[1] and k2[0] - bos < k[1] and k[2] - bos < k2[3] and k2[2] - bos < k[3]:
