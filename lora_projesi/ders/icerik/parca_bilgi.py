@@ -167,6 +167,94 @@ SINIFLAR = {
     ozellik=['3,3 V besleme; SPI ucları MISO/MOSI/SCK/NSS; sıfırlama RESET; kesme DIO0 ve DIO1; antene ANT ucu.[[bilgi]]',
              'Gönderirken (en yüksek güçte) akım tipik olarak 120 mA civarıdır; alırken ≈ 10–12 mA.[[bilgi]] Veri sayfasından okunacak. [[dogrulanmadi]]'],
     uc=['ANT ucu 50 Ω hat ile SMA’ya gitmelidir; anten takılı değilken gönderme yapılmaz.','Besleme dalgalanması vericide çıkış spektrumunu bozar; çıkışa yakın 10 µF + 100 nF gerekir.']),
+'tps62933': dict(
+    ad='TPS62933 (3 A senkron düşüren çevirici)',
+    ne='12 V’u geri besleme bölücüsüyle belirlenen düşük gerilime (bu kartta 3,3 V ve 3,8 V) verimli biçimde indirir.',
+    yapi='Çipin içinde iki güç transistörü (üst ve alt anahtar), denetim devresi ve yumuşak başlatma vardır; dışarıdan bobin, giriş/çıkış kondansatörleri, bootstrap kondansatörü ve geri besleme bölücüsü istenir. [[bilgi]]',
+    ozellik=['Geniş giriş aralığı (yaklaşık 3,8–30 V) ve 3 A sınıfı çıkış; kesin sayılar veri sayfasından okunmalıdır.[[dogrulanmadi]]',
+             'Çıkış gerilimi: V<sub>çıkış</sub> = V<sub>ref</sub> × (1 + R<sub>üst</sub>/R<sub>alt</sub>); hesap makinesinde “geri besleme bölücüsü”.[[bilgi]]',
+             'BST ucu ile SW ucu arasındaki bootstrap kondansatörü üst anahtarın kapısını sürer: eksik ya da kopuksa çevirici çalışmaz.[[bilgi]]'],
+    uc=['EN ayağı: eşik altında çip kapalıdır; modem çeviricisi işlemciden bu ayakla açılıp kapanır.',
+        'Girişte 12 V ve sıçramalar: giriş kondansatörleri çipe çok yakın olmalı; uzak olursa anahtarlama kenarları giriş hattında zil çalar.',
+        'Bobin tepe akımı doyma akımının altında kalmalı; modem rayında 2 A’lik darbe vardır (bkz. bobin kartı).',
+        'Düşük yükte darbe atlama (PFM) kipine geçebilir; çıkış dalgalanması bu kipte daha büyüktür.[[bilgi]]']),
+'w5500': dict(
+    ad='W5500 (donanım TCP/IP Ethernet çipi)',
+    ne='Ethernet (10/100 Mb/s) bağlantısını işlemci yerine kendisi yürütür: TCP, UDP, IP protokollerini donanımda çalıştırır; işlemci ona SPI ile yalnız veri verir.',
+    yapi='Tek yonga: MAC, PHY (fiziksel katman), 8 soket, 32 KB iç tampon, içte 1,2 V düzenleyici. [[bilgi]]',
+    ozellik=['3,3 V besleme, giriş/çıkışları 5 V’a dayanıklı; SPI en çok 80 MHz kuramsal, 33,3 MHz garantili.[[ds]]',
+             'Dış parçalar: 25 MHz kristal, EXRES1’e 12,4 kΩ %1 direnç, 1V2O ve TOCAP uçlarına kondansatör, TX/RX fark çiftleri için ayrı besleme süzgeçleri.[[ds]]',
+             'RJ45 konnektöründeki yerleşik trafo (magnetics) hattı yalıtır; çipin TXP/TXN, RXP/RXN uçları doğrudan buna gider.[[bilgi]]'],
+    uc=['EXRES1 direnci %1 olmalı; yanlış değer akım referansını ve Ethernet çıkış seviyesini bozar.',
+        'Analog besleme (+3V3A) bir ferrit boncuk ile süzülür; dijital gürültü PHY’ye geçmemeli.',
+        'Kristal yük kapasitesi hesabı: C<sub>yük</sub> = C1·C2/(C1+C2) + C<sub>kaçak</sub>; kristal veri sayfasındaki yük değeriyle eşleşmezse frekans kayar.',
+        'Fark çiftlerinin (TX, RX) izleri aynı uzunlukta ve birbirine yakın tutulmalıdır.']),
+'sim7600': dict(
+    ad='SIM7600SA (4G LTE Cat 1 modem modülü)',
+    ne='Kartı cep telefonu şebekesine bağlar; internet için veri bağlantısı sağlar. İşlemci ile seri hatla (UART, AT komutları) konuşur.',
+    yapi='Tek bir LCC (kenarında lehim pedleri olan) modül: baseband işlemcisi, RF, güç yönetimi, SIM arayüzü. [[bilgi]]',
+    ozellik=['Besleme 3,4–4,2 V (tipik 3,8 V); gönderirken kısa süreli yaklaşık 2 A çeker: bu yüzden ayrı çevirici ve 330 µF polimer kondansatör kullanıldı.[[bilgi]]',
+             'Seri hat mantık düzeyi 1,8 V: işlemcinin 3,3 V’uyla arada seviye çevirici gerekir.[[bilgi]]',
+             'Açma: PWRKEY ayağı belirli süre düşük tutulur; sıfırlama: RESET ayağı. Bu kartta işlemci bunları bir transistörle sürer.[[bilgi]]'],
+    uc=['Ayak düzeni SIM7600E/E-H belgesinden alındı; SA/SA-H için ayrı belge bulunamadı: sipariş öncesi doğrulanmalıdır. [[dogrulanmadi]]',
+        'Besleme çökerse modem şebekeden düşer ve yeniden açılması gerekir: giriş rayına ayrı bobin ve büyük kondansatör bu nedenle konuldu.',
+        'Ana anten ve yardımcı anten izleri 50 Ω olmalı, Ethernet ve LoRa hatlarından uzak durmalı.',
+        'SIM kartı kısa devre ve elektrostatik yüke karşı korunmalıdır: SIM hatlarına ESD koruma çipi bağlanır.']),
+'ap2112': dict(
+    ad='AP2112K-3.3 (doğrusal düzenleyici, LDO)',
+    ne='USB’nin 5 V’unu 3,3 V’a çevirir; kart yalnız USB ile programlanırken 12 V olmadan çalışmasını sağlar.',
+    yapi='Bir güç transistörü (pass element) ve hata yükselteci; giriş-çıkış farkını ısıya çevirir. [[bilgi]]',
+    ozellik=['600 mA sınıfı, düşük kalıcı akım (iki üç düzine µA).[[bilgi]]','Girişte ve çıkışta küçük seramik kondansatör ister.[[bilgi]]'],
+    uc=['Isı: P = (5 − 3,3) × I. 300 mA’de 0,5 W: SOT-23-5 kılıfı için sınırda; bu yüzden yalnız USB ile programlama sırasında kullanılır. [[tahmin]]',
+        'Besleme hem 12 V çeviriciden hem de USB’den gelirse bir diyotla veya kapıyla ayrılmalı ki akım geri akmasın.']),
+'role': dict(
+    ad='SRD-12VDC-SL-A (elektromekanik röle)',
+    ne='Küçük akımla (bobin) büyük akımı (kontak) açıp kapatır; lamba gibi yükü işlemciden yalıtılmış biçimde sürer.',
+    yapi='Bobin demir çekirdeği çeker, bir mıknatıs/yay sistemi kontağı hareket ettirir. Normalde açık (NO) kontak bobin enerjilenince kapanır. [[bilgi]]',
+    ozellik=['Bobin 12 V, yaklaşık 400 Ω, ≈ 30 mA; kontak yaklaşık 10 A anma (yük türüne göre değişir).[[bilgi]]','Çekme/bırakma süresi onlarca milisaniye, ömür yüz bin mertebesi anahtarlama.[[bilgi]]'],
+    uc=['Kapanırken bobin ters gerilim tepesi üretir: flyback diyodu (SS14) şarttır.',
+        'Kontak akımı yüksekse iz kalın olmalı (bkz. “iz genişliği”); bu kartta lamba akımı 12 V klemensten direkt kontağa gider.',
+        'Kontağın yüke bağlı gerilim ve akım anma değerleri alternatif ve doğru akım için farklıdır; doğru akım anma değeri düşüktür (ark söndürmek zordur). [[bilgi]]']),
+'rj45': dict(
+    ad='HR911105A (RJ45 konnektör, yerleşik trafolu)',
+    ne='Ethernet kablosunun girdiği soket; içindeki trafo ve LED’ler konnektörle bir arada.',
+    yapi='Plastik gövde içinde 8 temas ucu, iki çift için yalıtım trafosu (1:1) ve iki LED. Kılıf toprağa bağlanır. [[bilgi]]',
+    ozellik=['Trafo, kablodan gelen toprak potansiyel farklarını ve darbeleri çipten ayırır.[[bilgi]]','Orta uçlar (center tap) 3,3 V’a bobin/direnç ile bağlanır; bu kartta W5500 referans devresi izlendi.[[bilgi]]'],
+    uc=['Kılıf ucunu toprağa doğrudan değil, yüksek gerilimli bir kondansatörle (genellikle 1 nF/2 kV) bağlamak yaygındır; bu kartta karşılığı vardır (C41). [[bilgi]]',
+        'Fark çiftlerinin altından toprak düzlemini kesme; çiftler kısa ve eşit uzunlukta olmalı.']),
+'simsoket': dict(
+    ad='Mikro-SIM kart yuvası',
+    ne='SIM kartın modemle temas ettiği yuva.',
+    yapi='Metal kontak telleri ve plastik gövde; 6 kontak (C1–C7). [[bilgi]]',
+    ozellik=['Kart arka yüzde ve modülün altındadır: SIM hatları kısa olsun diye.'],
+    uc=['Nano-SIM için adaptör gerekir; ilk planda nano yuva vardı, kütüphanede micro bulunduğu için değişti.']),
+'kristal': dict(
+    ad='Kristal (25 MHz)',
+    ne='W5500’ün zaman tabanını üretir: çipin içindeki yükselteç kristali titreştirir.',
+    yapi='Kuvars plaka iki elektrot arasında; mekanik titreşim elektriksel rezonansa dönüşür. [[bilgi]]',
+    ozellik=['İki yük kondansatörü (C39, C40) rezonans frekansını belirler.'],
+    uc=['Yük kapasitesi uyumsuzsa frekans kayar; Ethernet bağlantısı 100 ppm gibi sapmaları tolere eder ama yine hesaplanmalıdır.[[bilgi]]','Kristal çipe çok yakın, altı toprak, çevresinde yüksek akım izi olmamalı.']),
+'txb0104': dict(
+    ad='TXB0104 (4 bit, iki yönlü seviye çevirici)',
+    ne='İşlemcinin 3,3 V mantığı ile modemin 1,8 V mantığı arasında sinyalleri çevirir.',
+    yapi='Her kanalda iki yöne de çalışan sürücü ve yön algılama devresi; yön pini yoktur. [[bilgi]]',
+    ozellik=['A tarafı düşük gerilim (burada 1,8 V), B tarafı yüksek (3,3 V); OE ucu çıkışları açar/kapatır.[[bilgi]]'],
+    uc=['Kullanılmayan kanalın A4/B4 uçları boş bırakılamaz: yüzer girişler hatalı yön algılar; toprağa bağlanır (bu çalışmada düzeltildi).',
+        'Yön algılama zayıf sürücülerle yapılır: hat üzerinde 10 kΩ’dan küçük yukarı/aşağı çekme direnci varsa kanal bozulabilir. [[bilgi]]',
+        'Seri hat hızlarında (115 kb/s) sorun çıkarmaz.']),
+'esd_cok': dict(
+    ad='ESDA6V1-5SC6 (5 hatlı elektrostatik boşalma koruması)',
+    ne='SIM hatlarına gelen statik elektrik darbesini toprağa akıtır.',
+    yapi='Bir toprak ucuna bağlı, her hat için iki yönlü bir TVS diyot dizisi. [[bilgi]]',
+    ozellik=['6,1 V civarı kırılma, birkaç pF kapasite.[[bilgi]]'],
+    uc=['Toprak ucu kısa ve geniş izle düzleme gitmezse koruma işe yaramaz.']),
+'testpad': dict(
+    ad='Test noktası',
+    ne='Üretimden sonra ölçüm probunu değmek için çıplak bakır pad.',
+    yapi='Lehim maskesinde açıklık bırakılmış tek bakır alan.',
+    ozellik=['Bu kartta: BOOT_CFG0, USB_DN, USB_DP.'],
+    uc=['USB hatlarındaki test pad’i kök bırakılırsa küçük bir “dal” oluşur; uzunluğu kısa tutulur.']),
+
 }
 
 def sinif_bul(ref, p):
@@ -213,4 +301,15 @@ def sinif_bul(ref, p):
         return 'esp32s3'
     if sem == 'RF_Module:RFM95W-915S2':
         return 'rfm95w'
+    if sem.startswith('Regulator_Switching:TPS62933'): return 'tps62933'
+    if sem.startswith('Interface_Ethernet:W5500'): return 'w5500'
+    if sem.startswith('Simcom:SIM7600'): return 'sim7600'
+    if sem.startswith('Regulator_Linear:AP2112'): return 'ap2112'
+    if sem.startswith('Relay:'): return 'role'
+    if sem.startswith('Connector:RJ45'): return 'rj45'
+    if sem == 'Connector:SIM_Card': return 'simsoket'
+    if sem == 'Device:Crystal_GND24': return 'kristal'
+    if sem.startswith('Logic_LevelTranslator'): return 'txb0104'
+    if sem.startswith('Power_Protection:ESDA'): return 'esd_cok'
+    if sem == 'Connector:TestPoint': return 'testpad'
     return None
