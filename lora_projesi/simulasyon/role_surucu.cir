@@ -1,0 +1,25 @@
+* Alici roli surucusu: NPN (MMBT2222A benzeri), 1k taban, 10k asagi cekme, SS14 sonum diyodu
+* NPN modeli genel 2N2222 sinifi parametreleridir, uretici modeli degildir.
+.model QNPN NPN(IS=1e-14 BF=200 NF=1 VAF=100 IKF=0.3 BR=5 NR=1 RB=10 RC=0.5 RE=0.3 CJE=22p CJC=7p TF=400p TR=50n)
+.model DSCH D(IS=1e-5 N=1.1 RS=0.04 BV=40 IBV=1m CJO=110p TT=1n)
+V12 vcc 0 12
+VG g 0 PULSE(0 3.3 1m 20n 20n 5m 20m)
+R37 g b 1k
+R38 b 0 10k
+Q2 c b 0 QNPN
+* SRD-12VDC bobini: yaklasik 400 ohm, 80 mH (tipik)
+LRL vcc x 80m
+RRL x c 400
+D7 c vcc DSCH
+.options reltol=1e-3 abstol=1e-10 gmin=1e-10
+.control
+tran 2u 14m
+meas tran icmax MAX i(LRL) from=3m to=5m
+meas tran vcesat MIN v(c) from=3m to=5m
+meas tran vcepeak MAX v(c) from=6m to=8m
+meas tran vbeon AVG v(b) from=3m to=5m
+let ibase = (3.3 - 0.7)/1000 - 0.7/10000
+echo "taban akimi (A) yaklasik:"
+print ibase
+.endc
+.end

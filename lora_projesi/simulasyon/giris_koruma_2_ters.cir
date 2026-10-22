@@ -1,0 +1,23 @@
+* Alici 12 V girisi: PTC sigorta, P-kanal ters baglanti korumasi, 10 V zener (kapi), 15 V tek yonlu TVS
+* Modeller genel/yaklasiktir (AO3401A, SMBJ15A uretici modeli degildir). Hedef: AO3401A Rds(on) ~ 50 mohm @ Vgs=-10 V.
+.model PM PMOS(LEVEL=1 VTO=-0.9 KP=2.2 IS=1e-11 CBD=100p)
+.model DZ10 D(IS=1e-14 BV=10 IBV=1m RS=2)
+.model DTVS D(IS=1e-12 BV=17.5 IBV=1m RS=0.42 CJO=300p)
+Rs in a 0.1
+Rf a b 0.15
+M1 b g out out PM
+Rg g 0 100k
+Dz g out DZ10
+Vtv out t 0
+Dtvs 0 t DTVS
+Cyuk out 0 100u
+Bvgs vgs 0 V=V(g)-V(out)
+Bdus dus 0 V=V(b)-V(out)
+Bitv itv 0 V=I(Vtv)
+Vin in 0 -12
+Iyuk out 0 0
+.control
+op
+print v(out) i(Vin) v(vgs)
+.endc
+.end
