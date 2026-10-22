@@ -736,4 +736,235 @@ Bu kontrol, bu bölümde ayrıntıya girilmeden yapılabilir; sonucun doğruluğ
 - IST her lineer olmayan denklemde çalışmaz; integrable denklemler sınıfı için geçerlidir.
 - Yöntem, yukarıdaki usul tablosunda "Ters saçılma dönüşümü (IST)" satırı olarak yer alır.
 
+## 11. Örneklerin tam çözümleri
+
+Bu bölümde yalnızca 9. bölümde verilen örneklerin tam çözümleri yazılır. Her bölüm yaprak sırasına göre ilerler. Şu an birinci mertebe adi denklemler tamamlanmıştır; diğer yapraklar sırayla eklenecektir.
+
+Yazım notu: Sabit C, her çözümde genel sabittir. Başlangıç koşulu verilirse C o koşuldan bulunur.
+
+### 11.1 Birinci mertebe adi denklemler
+
+#### Ayrılabilir
+
+Örnek 1 (bariz): y' = x*y.
+Adım 1: Değişkenler ayrılır: dy/y = x dx.
+Adım 2: İki taraf integre edilir: ln|y| = x^2/2 + C.
+Adım 3: Üstel alınır: y = K*exp(x^2/2), K = ±e^C (K sıfır da olabilir).
+
+Örnek 2 (görmek zor): y' = exp(x + y).
+Adım 1: exp(x + y) = exp(x)*exp(y) olduğu fark edilir. Böylece y' = exp(x)*exp(y).
+Adım 2: Ayırma: exp(-y) dy = exp(x) dx.
+Adım 3: İntegrasyon: -exp(-y) = exp(x) + C.
+Adım 4: exp(-y) = -exp(x) - C yazılır. K = -C diyelim: exp(-y) = K - exp(x).
+Sonuç: y = -ln(K - exp(x)). Tanım kümesi K > exp(x) olacak biçimde seçilir.
+
+Örnek 3 (fevkalade zor): y' = sin(x + y) - sin(x - y).
+Adım 1: Toplam-fark özdeşliği uygulanır: sin(A) - sin(B) = 2*cos((A+B)/2)*sin((A-B)/2). A = x + y, B = x - y için (A+B)/2 = x ve (A-B)/2 = y. Böylece y' = 2*cos(x)*sin(y).
+Adım 2: Ayırma: dy/sin(y) = 2*cos(x) dx.
+Adım 3: Sol taraf ∫ csc(y) dy = ln|tan(y/2)|; sağ taraf 2 sin(x). Böylece ln|tan(y/2)| = 2*sin(x) + C.
+Sonuç: tan(y/2) = K*exp(2*sin(x)).
+
+#### Birinci mertebe lineer
+
+Örnek 1 (bariz): y' + 2y = exp(x).
+Adım 1: Çarpan mu = exp(∫2 dx) = exp(2x).
+Adım 2: (mu*y)' = mu*exp(x) = exp(3x).
+Adım 3: İntegrasyon: exp(2x)*y = exp(3x)/3 + C.
+Sonuç: y = exp(x)/3 + C*exp(-2x).
+
+Örnek 2 (görmek zor): x*y' + y = x^3.
+Adım 1: Standart biçim: y' + y/x = x^2 (x ≠ 0).
+Adım 2: Çarpan mu = exp(∫dx/x) = x.
+Adım 3: (x*y)' = x^3 çünkü x*y' + y = (x*y)'.
+Adım 4: İntegrasyon: x*y = x^4/4 + C.
+Sonuç: y = x^3/4 + C/x.
+
+Örnek 3 (fevkalade zor): sin(x)*y' + cos(x)*y = exp(x).
+Adım 1: Sol taraf (y*sin(x))' türevidir: (y*sin(x))' = y'*sin(x) + y*cos(x).
+Adım 2: Böylece (y*sin(x))' = exp(x).
+Adım 3: İntegrasyon: y*sin(x) = exp(x) + C.
+Sonuç: y = (exp(x) + C)/sin(x). Tanım kümesi sin(x) ≠ 0 olan aralıklarda geçerlidir.
+
+#### Bernoulli
+
+Örnek 1 (bariz): y' + y = y^2.
+Adım 1: n = 2. Dönüşüm v = y^(1-2) = 1/y, yani v = y^(-1).
+Adım 2: v' = -y'/y^2, buradan y' = -y^2*v'.
+Adım 3: Denklemde yerine konulur: -y^2*v' + y = y^2. Her iki taraf y^2 ile bölünür: -v' + 1/y = 1, yani -v' + v = 1.
+Adım 4: Lineer denklem: v' - v = -1. Çözüm: v = 1 + C*exp(x). (Kontrol: v = 1 için v' - v = -1 sağlanır.)
+Sonuç: y = 1/(1 + C*exp(x)).
+
+Örnek 2 (görmek zor): 2*x*y*y' + y^2 = x^3.
+Adım 1: Denklemi y' + y/(2x) = x^2/(2y) biçimine getirilir. Bu bir Bernoulli denklemi, n = -1.
+Adım 2: Dönüşüm v = y^(1-n) = y^2.
+Adım 3: v' = 2*y*y', yani 2*x*y*y' = x*v'.
+Adım 4: Orijinal denklem x*v' + v = x^3 olur. Bu lineer: (x*v)' = x^3.
+Adım 5: İntegrasyon: x*v = x^4/4 + C, v = x^3/4 + C/x.
+Sonuç: y = ±sqrt(x^3/4 + C/x).
+
+Örnek 3 (fevkalade zor): y' + y/x = (1 + ln(x))*y^3.
+Adım 1: n = 3. Dönüşüm v = y^(1-n) = y^(-2).
+Adım 2: v' = -2*y^(-3)*y', yani y' = -(y^3/2)*v'.
+Adım 3: Denkleme yerine konulur: -(y^3/2)*v' + y/x = (1 + ln(x))*y^3. Her iki taraf -2/y^3 ile çarpılır: v' - 2*v/x = -2*(1 + ln(x)).
+Adım 4: Lineer denklem. Çarpan mu = exp(∫ -2/x dx) = x^(-2).
+Adım 5: (v*x^(-2))' = -2*(1 + ln(x))*x^(-2). Sağ taraf integre edilir: ∫(1 + ln(x))/x^2 dx = -(2 + ln(x))/x. Böylece v*x^(-2) = 2*(2 + ln(x))/x + C.
+Adım 6: v = 2*x*(2 + ln(x)) + C*x^2.
+Sonuç: y = 1/sqrt(2*x*(2 + ln(x)) + C*x^2) (y > 0 dalı). Kontrol: v' - 2v/x = -2(1 + ln(x)) sağlanır.
+
+#### Riccati
+
+Örnek 1 (bariz): y' = y^2 - 2/x^2, bilinen özel çözüm y1 = 1/x.
+Adım 1: Doğrulama: y1' = -1/x^2; y1^2 - 2/x^2 = 1/x^2 - 2/x^2 = -1/x^2. Eşit, yani y1 özel çözümdür.
+Adım 2: Dönüşüm y = y1 + 1/v. Riccati için v' = -(q + 2*r*y1)*v - r burada q = 0, r = 1 ve y1 = 1/x. Böylece v' = -(2/x)*v - 1.
+Adım 3: Lineer denklem: v' + (2/x)*v = -1. Çarpan x^2: (x^2*v)' = -x^2.
+Adım 4: İntegrasyon: x^2*v = -x^3/3 + C, v = -x/3 + C/x^2.
+Sonuç: y = 1/x + 1/(-x/3 + C/x^2).
+
+Örnek 2 (görmek zor): x^2*y' = x^2*y^2 - 6, yani y' = y^2 - 6/x^2.
+Adım 1: Özel çözüm y1 = 2/x. Doğrulama: y1' = -2/x^2; y1^2 - 6/x^2 = 4/x^2 - 6/x^2 = -2/x^2. Eşit.
+Adım 2: Dönüşüm y = y1 + 1/v, v' = -(2*y1)*v - 1 = -(4/x)*v - 1.
+Adım 3: Lineer denklem: v' + (4/x)*v = -1. Çarpan x^4: (x^4*v)' = -x^4.
+Adım 4: İntegrasyon: x^4*v = -x^5/5 + C, v = -x/5 + C/x^4.
+Sonuç: y = 2/x + 1/(-x/5 + C/x^4).
+
+Örnek 3 (fevkalade zor): y' = exp(x) - exp(2x) + y^2.
+Adım 1: Özel çözüm y1 = exp(x) denenir. Doğrulama: y1' = exp(x); sağ taraf exp(x) - exp(2x) + exp(2x) = exp(x). Eşit.
+Adım 2: Dönüşüm y = y1 + 1/v, v' = -2*exp(x)*v - 1.
+Adım 3: Lineer denklem: v' + 2*exp(x)*v = -1. Çarpan mu = exp(2*exp(x)).
+Adım 4: (v*exp(2*exp(x)))' = -exp(2*exp(x)). Sağ taraf ∫exp(2*exp(x)) dx ifadesine dönüşür. s = exp(x) yazılırsa dx = ds/s ve integral ∫exp(2s)/s ds = Ei(2s) olur (Ei üstel integral fonksiyonudur).
+Adım 5: v = exp(-2*exp(x))*(C - Ei(2*exp(x))).
+Sonuç: y = exp(x) + exp(2*exp(x))/(C - Ei(2*exp(x))).
+
+#### Homojen
+
+Örnek 1 (bariz): y' = y/x + sin(y/x).
+Adım 1: v = y/x, yani y = v*x. Türev: y' = v + x*v'.
+Adım 2: Denklemde yerine konulur: v + x*v' = v + sin(v), yani x*v' = sin(v).
+Adım 3: Ayırma: dv/sin(v) = dx/x.
+Adım 4: ∫csc(v) dv = ln|tan(v/2)| ve ∫dx/x = ln|x|. ln|tan(v/2)| = ln|x| + C, yani tan(v/2) = K*x.
+Sonuç: y = 2*x*arctan(K*x).
+
+Örnek 2 (görmek zor): x*y' = y + sqrt(x^2 + y^2), x > 0.
+Adım 1: v = y/x. Denklemi x ile bölünce y' = v + sqrt(1 + v^2) ... pratikte: x*(v + x*v') = v*x + x*sqrt(1 + v^2), yani x^2*v' = x*sqrt(1 + v^2).
+Adım 2: Ayırma: v'/sqrt(1 + v^2) = 1/x.
+Adım 3: İntegrasyon: asinh(v) = ln(x) + C. v = sinh(ln(x) + C) = (K*x - 1/(K*x))/2, K = e^C > 0.
+Adım 4: y = x*v = (K*x^2 - 1/K)/2.
+Kontrol: x*y' = K*x^2 ve y + sqrt(x^2 + y^2) = K*x^2 sağlanır.
+
+Örnek 3 (fevkalade zor): x*dy - (y + x*exp(y/x)) dx = 0.
+Adım 1: Denklem y' = y/x + exp(y/x) biçimine getirilir. Homojen; v = y/x.
+Adım 2: y' = v + x*v' ve denklem v + x*v' = v + exp(v) ⇒ x*v' = exp(v).
+Adım 3: Ayırma: exp(-v) dv = dx/x.
+Adım 4: İntegrasyon: -exp(-v) = ln|x| + C. exp(-v) = K - ln(x) (K = -C).
+Adım 5: v = -ln(K - ln(x)).
+Sonuç: y = -x*ln(K - ln(x)). Tanım kümesi K - ln(x) > 0.
+
+#### Tam diferansiyel
+
+Örnek 1 (bariz): (2x + y) dx + (x + 2y) dy = 0.
+Adım 1: M = 2x + y, N = x + 2y. M_y = 1 = N_x: tam.
+Adım 2: f_x = M ⇒ f = x^2 + x*y + g(y).
+Adım 3: f_y = x + g'(y) = N = x + 2y ⇒ g' = 2y, g = y^2.
+Sonuç: x^2 + x*y + y^2 = C.
+
+Örnek 2 (görmek zor): (y*cos(x*y) + 1) dx + x*cos(x*y) dy = 0.
+Adım 1: M_y = cos(xy) - x*y*sin(xy) ve N_x = cos(xy) - x*y*sin(xy). Tam.
+Adım 2: f_x = M ⇒ f = x + sin(x*y) + g(y).
+Adım 3: f_y = x*cos(x*y) + g'(y) = N = x*cos(x*y) ⇒ g' = 0.
+Sonuç: x + sin(x*y) = C.
+
+Örnek 3 (fevkalade zor): (y/(x^2 + y^2) + exp(x)) dx - (x/(x^2 + y^2)) dy = 0.
+Adım 1: M = y/(x^2 + y^2) + exp(x), N = -x/(x^2 + y^2).
+Adım 2: M_y = (x^2 - y^2)/(x^2 + y^2)^2; N_x = -(y^2 - x^2)/(x^2 + y^2)^2 = (x^2 - y^2)/(x^2 + y^2)^2. Tam.
+Adım 3: f_x = M ⇒ f = exp(x) + ∫ y/(x^2 + y^2) dx + g(y). ∫ y/(x^2 + y^2) dx = arctan(x/y) (türevi kontrol edilir).
+Adım 4: f = exp(x) + arctan(x/y) + g(y). f_y = -x/(x^2 + y^2) + g'(y) = N ⇒ g' = 0.
+Sonuç: exp(x) + arctan(x/y) = C.
+
+#### İntegrasyon çarpanlı
+
+Örnek 1 (bariz): (x + y^2) dx - 2*x*y dy = 0.
+Adım 1: M_y = 2y, N_x = -2y. Tam değil.
+Adım 2: (M_y - N_x)/N = 4y/(-2xy) = -2/x, yalnız x'e bağlı. Çarpan mu(x) = exp(∫-2/x dx) = x^(-2).
+Adım 3: Yeni M = 1/x + y^2/x^2, N = -2y/x. Kontrol: M_y = 2y/x^2 = N_x.
+Adım 4: f_x = M ⇒ f = ln|x| - y^2/x + g(y). f_y = -2y/x + g' = N ⇒ g' = 0.
+Sonuç: ln|x| - y^2/x = C.
+
+Örnek 2 (görmek zor): (x^2 + y) dx - x dy = 0.
+Adım 1: M_y = 1, N_x = -1; (M_y - N_x)/N = 2/(-x) = -2/x. Çarpan mu = x^(-2).
+Adım 2: Yeni M = 1 + y/x^2, N = -1/x. Kontrol: M_y = 1/x^2 = N_x.
+Adım 3: f = x - y/x + g(y); f_y = -1/x + g' = -1/x ⇒ g' = 0.
+Sonuç: x - y/x = C, yani x^2 - y = C*x.
+
+Örnek 3 (fevkalade zor): (x^2 + y^2 + x) dx + y dy = 0.
+Adım 1: M_y = 2y, N_x = 0. (M_y - N_x)/N = 2y/y = 2. Yalnız x'e bağlı; mu = exp(∫2 dx) = exp(2x).
+Adım 2: Yeni M = exp(2x)*(x^2 + y^2 + x), N = y*exp(2x). Kontrol: M_y = 2y*exp(2x) = N_x.
+Adım 3: f_y = y*exp(2x) ⇒ f = y^2*exp(2x)/2 + h(x).
+Adım 4: f_x = y^2*exp(2x) + h'(x) = exp(2x)*(x^2 + y^2 + x) ⇒ h'(x) = exp(2x)*(x^2 + x).
+Adım 5: h(x) = (x^2/2)*exp(2x) (kontrol: türevi exp(2x)*(x^2 + x) verir).
+Sonuç: (x^2 + y^2)*exp(2x) = C.
+
+#### Clairaut
+
+Örnek 1 (bariz): y = x*y' + (y')^2.
+Adım 1: p = y' yazılır; denklem y = x*p + p^2.
+Adım 2: Genel çözüm: p = C, yani y = C*x + C^2.
+Adım 3: Tekil çözüm: p'ye göre türev alınır: 0 = x + 2p, p = -x/2. Yerine konulursa y = -x^2/4 bulunur.
+Kontrol: y' = -x/2; x*y' + y'^2 = -x^2/2 + x^2/4 = -x^2/4 = y.
+Sonuç: Genel y = C*x + C^2; tekil y = -x^2/4.
+
+Örnek 2 (görmek zor): y = x*y' + ln(y').
+Adım 1: Clairaut biçimi: f(p) = ln(p).
+Adım 2: Genel çözüm: y = C*x + ln(C).
+Adım 3: Tekil çözüm: p'ye göre türev: 0 = x + 1/p ⇒ x = -1/p. Yerine konulursa y = -1 + ln(-1/x) (x < 0).
+Kontrol: p = -1/x > 0 (x < 0), x*p + ln(p) = -1 + ln(-1/x) = y.
+
+Örnek 3 (fevkalade zor): y = x*y' - exp(y').
+Adım 1: f(p) = -exp(p).
+Adım 2: Genel çözüm: y = C*x - exp(C).
+Adım 3: Tekil çözüm: x = -f'(p) = exp(p) ⇒ p = ln(x). Yerine konulursa y = x*ln(x) - x.
+Kontrol: y' = ln(x); x*y' - exp(y') = x*ln(x) - x = y.
+
+#### Lagrange
+
+Örnek 1 (bariz): y = 2*x*y' + (y')^2.
+Adım 1: p = y'. f(p) = 2p, g(p) = p^2. Denklem y = x*f(p) + g(p).
+Adım 2: x'e göre türev: p = 2p + 2*x*p' + 2*p*p', yani -p = 2(x + p)*p'.
+Adım 3: dx/dp biçimine çevrilir: dx/dp = -2(x + p)/p, yani dx/dp + (2/p)*x = -2.
+Adım 4: Çarpan p^2: (p^2*x)' = -2*p^2 ⇒ p^2*x = -2*p^3/3 + C ⇒ x = -2p/3 + C/p^2.
+Adım 5: y = 2*x*p + p^2 = -p^2/3 + 2C/p.
+Sonuç (parametrik): x = -2p/3 + C/p^2, y = -p^2/3 + 2C/p.
+
+Örnek 2 (görmek zor): y = x*(y')^2 + 2*y'.
+Adım 1: p = y'. f(p) = p^2, g(p) = 2p.
+Adım 2: Türev: p = p^2 + 2*x*p*p' + 2p', yani (2x*p + 2)*p' = p - p^2.
+Adım 3: dx/dp = (2x*p + 2)/(p - p^2) = 2x/(1 - p) + 2/(p(1 - p)).
+Adım 4: Lineer denklem: dx/dp - (2/(1 - p))*x = 2/(p(1 - p)). Çarpan (1 - p)^2 (ters işaretli dönüşümle kontrol edilir: exp(-∫2/(1-p)dp) = (1-p)^2).
+Adım 5: ((1-p)^2*x)' = (1-p)^2 * 2/(p(1-p)) = 2(1-p)/p = 2/p - 2.
+Adım 6: İntegrasyon: (1-p)^2*x = 2 ln|p| - 2p + C.
+Adım 7: y = x*p^2 + 2p.
+Sonuç (parametrik): x = (2 ln|p| - 2p + C)/(1 - p)^2, y = x*p^2 + 2p.
+
+Örnek 3 (fevkalade zor): y = x*exp(y') + ln(y').
+Adım 1: p = y'. f(p) = exp(p), g(p) = ln(p).
+Adım 2: Türev: p = exp(p) + x*exp(p)*p' + p'/p, yani p - exp(p) = (x*exp(p) + 1/p)*p'.
+Adım 3: dx/dp = (x*exp(p) + 1/p)/(p - exp(p)). Lineer denklem: dx/dp - (exp(p)/(p - exp(p)))*x = (1/p)/(p - exp(p)).
+Adım 4: Çarpan mu(p) = exp(-∫exp(p)/(p - exp(p)) dp). Bu integral elementer değildir; çarpan integral biçiminde bırakılır.
+Adım 5: x(p) = (1/mu(p))*(∫ mu(p)*(1/p)/(p - exp(p)) dp + C). Parametrik çözüm: x(p) yukarıdaki gibi, y = x*exp(p) + ln(p).
+Not: Bu örnekte çözüm kapalı biçimde elementer fonksiyonlarla verilemez; integral temsili yeterlidir.
+
+#### Diğer birinci mertebe
+
+Örnek 1 (bariz): y' = x + sin(y).
+Adım 1: Ayrılabilir değildir (toplam biçimi), lineer değildir (sin(y)), Bernoulli, Riccati, homojen, tam, Clairaut ve Lagrange biçimine uymaz.
+Adım 2: Genel analitik yöntem yoktur. Başlangıç koşulu y(x0) = y0 verildiğinde sayısal çözüm yapılır.
+Adım 3: Sayısal yöntem: Runge–Kutta 4. mertebe; her adımda k1 = f(x, y), k2 = f(x + h/2, y + h*k1/2), k3 = f(x + h/2, y + h*k2/2), k4 = f(x + h, y + h*k3), y_{n+1} = y_n + h*(k1 + 2k2 + 2k3 + k4)/6.
+
+Örnek 2 (görmek zor): y' = y^3 - x^2.
+Adım 1: Sağ taraf y^3 ve x^2 terimlerinin toplamıdır. Riccati değildir (y^2 terimi yok). Bernoulli değildir, çünkü y'ye bağlı lineer terim yoktur ve y'nin sabit kısmı -x^2 bağımlı değildir. Analitik kapalı form yoktur.
+Adım 2: Sayısal Runge–Kutta uygulanır (Örnek 1'deki formül).
+
+Örnek 3 (fevkalade zor): y' = x*y^3 + x^3*y.
+Adım 1: Sağ taraf iki farklı kuvvet (y^3 ve y) içerir; Bernoulli tek n ile tanımlanamaz. Lineer değildir, tam değildir (M ve N ayrılamaz).
+Adım 2: Dönüşüm bulunamaz; genel analitik yöntem yoktur. Sayısal yöntem uygulanır.
+
 Bu dosya bir sınıflama şemasıdır. Bir denklemin hangi yaprağa düştüğü, öncelik kuralı uygulanarak belirlenir.
