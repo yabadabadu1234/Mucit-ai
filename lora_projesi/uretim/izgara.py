@@ -7,7 +7,7 @@ import yonlendir as Y
 from pcbgen import mm
 
 R = 0.1
-KLR = 0.27
+KLR = 0.22
 VIA_D, VIA_DR = 0.5, 0.25
 
 
