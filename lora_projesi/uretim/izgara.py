@@ -80,9 +80,11 @@ class Izgara:
                     self.disk(trk, l, ax + u * (bx - ax), ay + u * (by - ay), hw, nc)
         for fp in b.GetFootprints():
             for z in fp.Zones():
-                if z.GetIsRuleArea():
-                    bb = z.GetBoundingBox()
-                    for l in (0, 1):
+                if z.GetIsRuleArea() and (z.GetDoNotAllowTracks() or z.GetDoNotAllowVias()):
+                    bb = z.Outline().BBox()
+                    ls = z.GetLayerSet()
+                    for l, LL in ((0, self.F), (1, self.B)):
+                        if not ls.Contains(LL): continue
                         self.kutu(lab, l, bb.GetLeft() / 1e6, bb.GetTop() / 1e6, bb.GetRight() / 1e6, bb.GetBottom() / 1e6, -1)
         k = int(0.5 / R)
         lab[:, :k, :] = -1; lab[:, -k:, :] = -1; lab[:, :, :k] = -1; lab[:, :, -k:] = -1
