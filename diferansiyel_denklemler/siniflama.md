@@ -73,11 +73,13 @@ F(x, y, y') = 0
 
 Burada F, üç değişkenli keyfi bir fonksiyondur. Bu biçim, sınıflandırmanın en üst kümesidir; diğer her yaprak bu kümenin bir alt kümesidir.
 
-Bu biçimin iki eşdeğer temsili vardır:
-- Açık (türev olarak) temsil: y' = f(x, y). Burada f, F'den ∂F/∂y' ≠ 0 koşulu altında çıkar.
-- Diferansiyel (form) temsili: M(x, y) dx + N(x, y) dy = 0. Burada y' = -M/N alınır; N = 0 olan noktalarda dikey teğetler de dahil edilmiş olur.
+Bu biçimin iki temsili vardır; aynı kapsamı vermezler:
+- Açık (türevli) temsil: F(x, y, y') = 0. Yalnızca teğetin eğimi sonlu olan eğrileri ifade eder; dikey teğet (y' = ∞) bu temsille yazılamaz.
+- Diferansiyel (yön) temsili: M(x, y) dx + N(x, y) dy = 0. Teğet doğrultusu (dx : dy) olarak okunur. N ≠ 0 ise y' = -M/N ile aynıdır; N = 0 olan noktalarda dx = 0 olur, yani dikey teğet bu temsilde kapsanır.
 
-Açık biçimde kaybolan durumlar (dikey teğetler, ∂F/∂y' = 0 olan singüler çözümler) F(x, y, y') = 0 biçiminde kalır. Bu nedenle en genel biçim olarak F(x, y, y') = 0 alınır.
+Singüler çözümler (∂F/∂y' = 0 ile tanımlanan) F(x, y, y') = 0 denklemini sağlar; yani açık temsilden kaybolmazlar, yalnızca genel çözüm ailesinin dışında ayrı bir kol olarak ortaya çıkarlar.
+
+Gerçekten en genel biçim, her (x, y) noktasında izin verilen teğet doğrultularının kümesini veren bir ilişkidir. F(x, y, y') = 0 ve M dx + N dy = 0 bu genel ilişkinin iki temsilidir; ikincisi dikey teğetleri de kapsar.
 
 Genel çözüm, bir keyfi sabit içeren eğri ailesidir: Φ(x, y, C) = 0.
 
