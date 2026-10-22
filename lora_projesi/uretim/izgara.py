@@ -230,8 +230,12 @@ def calistir(yol, cikis, W, H):
     b = pcbnew.LoadBoard(yol)
     taban, rep = sorun_say(b)
     print('taban hata', taban)
-    kara = set(); rip = {}
-    b.Save(cikis)
+    import json
+    KF = '/tmp/claude-0/izg_durum.json'
+    durum = json.load(open(KF)) if os.path.exists(KF) else {'kara': [], 'rip': {}}
+    kara = set(tuple([k[0], tuple(k[1]), tuple(k[2])]) for k in durum['kara']); rip = durum['rip']
+    def durum_yaz():
+        json.dump({'kara': [[k[0], list(k[1]), list(k[2])] for k in kara], 'rip': rip}, open(KF, 'w'))
     for tur in range(120):
         liste = [x for x in baglantisizlar(rep) if (x[0], x[1], x[2]) not in kara]
         if not liste: break
@@ -253,8 +257,7 @@ def calistir(yol, cikis, W, H):
                 print('red', net, w, k - taban)
                 continue
             taban = k; rep = rep2; yapildi = True; b.Save(cikis)
-            print('kabul', net, w, bas[1:], hed[1:])
-            break
+            print('kabul', net, w, bas[1:], hed[1:]); durum_yaz(); sys.stdout.flush(); os._exit(0)
         if not yapildi and rip.get(net, 0) < 2:
             rip[net] = rip.get(net, 0) + 1
             yolu = I.ara(nc, 0.2, bas, hed, yumusak=True)
@@ -279,9 +282,9 @@ def calistir(yol, cikis, W, H):
                         print('rip red', net, k - taban, len(sok))
                     else:
                         taban = k; rep = rep2; yapildi = True; b.Save(cikis)
-                        print('RIP kabul', net, 'sokulen', len(sok), sorted({n for _, n in sakla}))
+                        print('RIP kabul', net, 'sokulen', len(sok), sorted({n for _, n in sakla})); durum_yaz(); sys.stdout.flush(); os._exit(0)
         if not yapildi:
-            kara.add((net, bas, hed)); print('olmadi', net, bas, hed)
+            kara.add((net, bas, hed)); print('olmadi', net, bas, hed); durum_yaz()
     k, rep = sorun_say(b)
     b.BuildConnectivity()
     print('kalan baglantisiz', b.GetConnectivity().GetUnconnectedCount(False), 'hata', k)
