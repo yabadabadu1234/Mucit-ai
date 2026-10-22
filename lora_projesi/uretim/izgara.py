@@ -235,7 +235,10 @@ def calistir(yol, cikis, W, H):
         liste = [x for x in baglantisizlar(rep) if (x[0], x[1], x[2]) not in kara]
         if not liste: break
         net, bas, hed = liste[0]
-        nc = b.FindNet(net).GetNetCode()
+        try:
+            nc = b.FindNet(net).GetNetCode()
+        except Exception:
+            kara.add((net, bas, hed)); print('net bulunamadi', net); continue
         I = Izgara(b, W, H)
         tercih = 0.5 if net.startswith('+12V') else (0.4 if net in ('VBAT_MOD', 'LAMBA_SW') else 0.25)
         yapildi = False
