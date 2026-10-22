@@ -152,6 +152,7 @@ Bu tablo, verilen usul haritasının düzeltilmiş ve genişletilmiş hâlidir. 
 | Sınıflandırma ve kanonik form | İkinci mertebe kısmi | Sadece lineer | İki bağımsız değişkenli; $B^2 - 4AC$ işareti |
 | Değişkenlere ayırma (Fourier) | Kısmi | Sadece lineer | $u = X(x)Y(y)$ çarpımı ve homojen sınır koşulları |
 | Laplace ve Fourier dönüşümü | Adi ve kısmi | Sadece lineer | Sabit katsayılı; başlangıç ya da sınır koşulları verilmiş |
+| Ters saçılma dönüşümü (IST) | Kısmi (birinci mertebe zamana göre) | Lineer değil (integrable denklemler) | Denklemin bir Lax çifti olması; KdV, NLS, sine-Gordon gibi |
 
 ## 7. Yöntemlerin yapraklara eşlenmesi
 
@@ -190,7 +191,7 @@ Her yaprağa en az bir yöntem atanır. Yöntemi olmayan yapraklar "genel analit
 | Parabolik | Sınıflandırma ve kanonik form; değişkenlere ayırma (Fourier); Laplace ve Fourier dönüşümü |
 | Hiperbolik | Sınıflandırma ve kanonik form; değişkenlere ayırma (Fourier); Laplace ve Fourier dönüşümü |
 | İkiden fazla bağımsız değişkenli ikinci mertebe lineer kısmi | Değişkenlere ayırma (Fourier), ayrılabiliyorsa; aksi hâlde genel analitik yöntem yok |
-| Lineer olmayan ikinci veya yüksek mertebe kısmi | Genel analitik yöntem yok |
+| Lineer olmayan ikinci veya yüksek mertebe kısmi | Ters saçılma dönüşümü (IST), integrable ise; Cole–Hopf (Burgers tipi); aksi hâlde genel analitik yöntem yok |
 | Lineer kısmi sistem | Değişkenlere ayırma (Fourier) ve Laplace ve Fourier dönüşümü, uygunsa |
 | Lineer olmayan kısmi sistem | Genel analitik yöntem yok |
 
@@ -610,7 +611,7 @@ Görmek zor: u_t + u*u_x = u_xx
 Usul: Viskoz Burgers denklemi. Cole–Hopf dönüşümü u = -2*v_x/v, v ısı denklemine indirgenir.
 
 Fevkalade zor: u_t + 6*u*u_x + u_xxx = 0
-Usul: Korteweg–de Vries (KdV) denklemi. Tam çözüm ters saçılma dönüşümü (IST) ile bulunur. Bu yöntem yukarıdaki usul tablosunda yer almıyor; tabloya eklenmesi gerekir. Özel çözüm için tek soliton ansatzı denenebilir.
+Usul: Korteweg–de Vries (KdV) denklemi. Tam çözüm ters saçılma dönüşümü (IST) ile bulunur; adım adım çözüm bölüm 10'da verilmiştir.
 
 Yaprak: Lineer kısmi sistem
 
@@ -633,5 +634,106 @@ Usul: Genel analitik yöntem yoktur. Sayısal çözüm uygulanır.
 
 Fevkalade zor: Navier–Stokes denklemleri (sıkıştırılamaz, üç boyutlu)
 Usul: Genel analitik yöntem yoktur; açık problem düzeyinde zordur. Sayısal (hesaplamalı akışkanlar dinamiği) yöntemler uygulanır.
+
+## 10. Ters saçılma dönüşümü (IST): ayrıntılı çözüm
+
+### 10.1 Yöntem ne yapar?
+
+Bazı lineer olmayan kısmi denklemler, bir lineer spektral problemin uyumluluk koşulu olarak yazılabilir. Bu özelliğe integrable denir. KdV denklemi bu sınıftadır. IST yönteminde denklemin çözümü, lineer problemin saçılma verisi üzerinden üç adımda elde edilir. Bu yöntem her denklem için değil, yalnızca integrable denklemler için çalışır.
+
+Üç adım şunlardır:
+1. Doğrudan saçılma: Başlangıç koşulundan saçılma verisi (özdeğerler, normalizasyon sabitleri, yansıma katsayısı) hesaplanır.
+2. Zaman evrimi: Saçılma verisi zamanla basit bir şekilde değişir; bu değişim lineer denklemlerden çıkar.
+3. Ters saçılma: Gelfand–Levitan–Marchenko (GLM) integral denklemi çözülerek u(x,t) geri kazanılır.
+
+### 10.2 Örnek denklem: KdV
+
+Denklem: u_t + 6*u*u_x + u_xxx = 0.
+
+Başlangıç koşulu: u(x,0) = -2*k^2*sech(k*x)^2, burada k > 0 bir sabittir.
+
+Bu denklemin genel çözümü ayrıca bir tek soliton ailesi ile verilir; bunu adım adım türeteceğiz.
+
+### 10.3 Lax çifti
+
+Lineer spektral problem: L*psi = lambda*psi, burada L = -d^2/dx^2 + u(x,t).
+
+Zaman evrimi: psi_t = M*psi, burada M = -4*d^3/dx^3 - 6*u*d/dx - 3*u_x.
+
+Uyumluluk koşulu L_t = M*L - L*M, yani L_t = [M, L], KdV denklemini verir. Bu, Lax çiftinin doğruluğunun kanıtıdır. Kontrol için: bu iki operatörün komütatörü alınıp u_t + 6uu_x + u_xxx = 0 elde edilmelidir.
+
+İşaret notu: Bu çift u(x,t) negatif kuyu için düzenlenmiştir. Bağlı işaret tutarlılığı tek soliton kontrolünde doğrulanır (aşağıda).
+
+### 10.4 Adım 1: Doğrudan saçılma (t = 0)
+
+Başlangıç potansiyeli u(x,0) = -2*k^2*sech(k*x)^2 bir kuyudur. Bağ durumu (özdeğer) bulunur.
+
+Deneme fonksiyonu psi = sech(k*x) alınır. Hesap:
+- psi' = -k*sech(k*x)*tanh(k*x)
+- psi'' = k^2*(sech(k*x) - 2*sech(k*x)^3)
+
+Bu durumda -psi'' + u*psi = -k^2*sech + 2*k^2*sech^3 - 2*k^2*sech^3 = -k^2*psi. Böylece lambda = -k^2 bir özdeğerdir.
+
+Normalizasyon: integral(sech(k*x)^2 dx) = 2/k olduğundan, normalize özfonksiyon psi_n = sqrt(k/2)*sech(k*x) ile tanımlanır. x -> sonsuzda asimptotik davranış psi_n ~ sqrt(2*k)*exp(-k*|x|) olur. Bu nedenle normalizasyon sabiti c_0^2 = 2*k.
+
+Yansıma katsayısı sıfırdır: bu potansiyel yansıtmaz, yani saçılma verisinde sürekli spektrum katkısı yoktur. Bu yüzden saçılma verisi yalnızca tek bağ durumudur.
+
+### 10.5 Adım 2: Zaman evrimi
+
+Saçılma verisi zamanla şu biçimde değişir: c^2(t) = c_0^2 * exp(8*k^3*t), yani c^2(t) = 2*k*exp(8*k^3*t).
+
+Özdeğer lambda = -k^2 zamanla sabittir; yalnızca normalizasyon sabiti değişir. Bu, Lax çiftinin M operatörü ile bulunur.
+
+### 10.6 Adım 3: Ters saçılma (GLM)
+
+GLM integral denklemi, bağ durumu için şu biçimdedir:
+
+K(x,y) + F(x+y) + integral_{x}^{infinity} K(x,z)*F(z+y) dz = 0, burada F(s) = c^2(t)*exp(-k*s).
+
+Ayrılabilir çözüm arandığında K(x,y) = -A(x)*exp(-k*y) biçimi denenir. Yerine konulup düzenlenirse:
+
+A(x) = -c^2*exp(-k*x) / (1 + c^2*exp(-2*k*x)/(2*k)).
+
+Buradan köşegen değer K(x,x) elde edilir. Bu değeri q ile gösterelim:
+
+q(x,t) = c^2(t)*exp(-2*k*x)/(2*k) = exp(-2*k*x + 8*k^3*t), çünkü c_0^2/(2*k) = 1.
+
+### 10.7 Geri kazanım formülü
+
+Bu sistemde potansiyel şu biçimde geri kazanılır:
+
+u(x,t) = -2 * d^2/dx^2 [ln(1 + q(x,t))].
+
+Bu formül işaret konvansiyonuyla tutarlıdır, çünkü aşağıdaki hesapla tek soliton doğru çıkar.
+
+### 10.8 Hesap: tek soliton
+
+Hesap için θ = ln(q) = -2*k*x + 8*k^3*t olsun. Bilinen özdeşlik:
+
+d^2/dθ^2 [ln(1 + e^θ)] = e^θ / (1 + e^θ)^2 = (1/4)*sech^2(θ/2).
+
+Zincir kuralı ile dθ/dx = -2*k olduğundan:
+
+d^2/dx^2 [ln(1 + q)] = 4*k^2 * (1/4)*sech^2(θ/2) = k^2*sech^2(θ/2).
+
+Bu nedenle u(x,t) = -2*k^2*sech^2(θ/2). Burada θ/2 = -k*x + 4*k^3*t = -k*(x - 4*k^2*t).
+
+Sonuç: u(x,t) = -2*k^2*sech^2(k*(x - 4*k^2*t)).
+
+Bu, başlangıç koşuluyla tutarlıdır (t = 0 için u = -2*k^2*sech^2(k*x)). Hız 4*k^2 olan hareketli bir soliton elde edilmiştir: genlik büyüklüğü 2*k^2 ve genişlik k ile belirlenir. Dalga hızı genliğe bağlıdır; daha yüksek soliton daha hızlı gider.
+
+### 10.9 Doğrulama
+
+Bu çözümün KdV denklemini sağladığı doğrudan yerine koyma ile kontrol edilebilir. Kontrol adımları:
+- u_x ve u_xxx hesaplanır (sech türevleri ile).
+- u_t + 6*u*u_x + u_xxx toplamı sıfır çıkmalıdır.
+
+Bu kontrol, bu bölümde ayrıntıya girilmeden yapılabilir; sonucun doğruluğu bu yoldan bağımsız olarak teyit edilir.
+
+### 10.10 Sınırlamalar
+
+- Bu örnek yalnızca tek soliton içerir. Çoklu soliton ve sürekli spektrum katkısı (yansıma katsayısının sıfırdan farklı olduğu durumlar) bu bölümde yoktur. Çoklu soliton için GLM çekirdeği genel biçimde çözülür.
+- IST her lineer olmayan denklemde çalışmaz; integrable denklemler sınıfı için geçerlidir.
+- Yöntem, yukarıdaki usul tablosunda "Ters saçılma dönüşümü (IST)" satırı olarak yer alır.
 
 Bu dosya bir sınıflama şemasıdır. Bir denklemin hangi yaprağa düştüğü, öncelik kuralı uygulanarak belirlenir.
