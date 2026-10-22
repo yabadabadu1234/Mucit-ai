@@ -20,7 +20,7 @@ SABIT = {
     'J2': (62.5, 4.5, 90, False, False),
     'J3': (67.0, 66.0, 90, False, True),
     'U9': (56.0, 62.0, 0, False, False),
-    'J4': (50.0, 58.0, 0, False, False),
+    'J4': (49.5, 55.0, 0, False, False),
     'J8': (50.0, 37.5, 0, False, False),
     'J7': (28.0, 47.0, 0, True, False),
     'SW1': (36.0, 86.0, 0, False, False),
