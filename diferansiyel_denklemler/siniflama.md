@@ -23,7 +23,7 @@ Her denklemin bağımsız değişken sayısı 1 ya da en az 2 olduğu için bu a
 ```
 ADİ DİFERANSİYEL DENKLEM
 ├── Tek bilinmeyen fonksiyon
-│   ├── Birinci mertebe
+│   ├── Birinci mertebe: en genel biçim F(x, y, y') = 0 (ayrıntı için bölüm 2.1)
 │   │   ├── Ayrılabilir: y' = f(x)g(y)
 │   │   ├── Lineer: y' + p(x)y = q(x)
 │   │   ├── Bernoulli: y' + p(x)y = q(x)y^n, n ∉ {0, 1}
@@ -60,6 +60,67 @@ ADİ DİFERANSİYEL DENKLEM
     ├── Lineer, değişken katsayılı: X' = A(t)X + F(t), A(t) sabit değil
     └── Lineer değil: X' = G(t, X)
 ```
+
+## 2.1 Birinci mertebe, tek bilinmeyen: üst başlıkların en genel biçimleri
+
+Bu bölümde, birinci mertebe ve tek bilinmeyenli bir adi denklemin en genel biçimi verilir. Alt yapraklar bu genel biçimin hususi durumlarıdır.
+
+### 2.1.1 En genel biçim
+
+Birinci mertebe, tek bilinmeyenli her adi denklem şu biçimdedir:
+
+F(x, y, y') = 0
+
+Burada F, üç değişkenli keyfi bir fonksiyondur. Bu biçim, sınıflandırmanın en üst kümesidir; diğer her yaprak bu kümenin bir alt kümesidir.
+
+Bu biçimin iki eşdeğer temsili vardır:
+- Açık (türev olarak) temsil: y' = f(x, y). Burada f, F'den ∂F/∂y' ≠ 0 koşulu altında çıkar.
+- Diferansiyel (form) temsili: M(x, y) dx + N(x, y) dy = 0. Burada y' = -M/N alınır; N = 0 olan noktalarda dikey teğetler de dahil edilmiş olur.
+
+Açık biçimde kaybolan durumlar (dikey teğetler, ∂F/∂y' = 0 olan singüler çözümler) F(x, y, y') = 0 biçiminde kalır. Bu nedenle en genel biçim olarak F(x, y, y') = 0 alınır.
+
+Genel çözüm, bir keyfi sabit içeren eğri ailesidir: Φ(x, y, C) = 0.
+
+### 2.1.2 Açık biçim: y' = f(x, y)
+
+Bu dal, F'nin y'ye göre çözülebildiği durumdur. En genel hâli: y' = f(x, y), f keyfi iki değişkenli fonksiyon.
+
+Üst başlık ile yaprakların ilişkisi:
+- Ayrılabilir: y' = f(x, y) içinde f(x, y) = f1(x) g(y) çarpımı biçiminde olan özel durum.
+- Birinci mertebe lineer: f(x, y) = -P(x) y + Q(x) olan özel durum. Yani f, y'ye göre birinci dereceden.
+- Bernoulli: f(x, y) = -P(x) y + Q(x) y^n, n ∉ {0, 1}. Lineer terimlere bir kuvvet terimi eklenmiş hâl.
+- Riccati: f(x, y) = p(x) + q(x) y + r(x) y^2. Bernoulli'ye benzer, ancak n = 2 ve sabit terim p(x) var.
+- Homojen: f(x, y) = F(y/x), yani f(λx, λy) = f(x, y). Bu bir simetri koşuludur.
+- Diğer: yukarıdakilerin hiçbirine uymayan f. Bu, y' = f(x, y) içinde kalan tümleyendir.
+
+Önemli: Yukarıdaki özel durumlar birbirleriyle çakışabilir (ör. lineer homojen denklem hem ayrılabilir hem lineerdir). Öncelik kuralı bu çakışmayı çözer.
+
+### 2.1.3 Diferansiyel biçim: M dx + N dy = 0
+
+Bu biçim, açık biçimin bir eşdeğeridir; dikey teğetleri de kapsar. Üst başlık: M(x, y) dx + N(x, y) dy = 0.
+
+- Tam diferansiyel: M_y = N_x. Bu durumda M dx + N dy bir toplam diferansiyeldir.
+- İntegrasyon çarpanlı: M_y ≠ N_x olmakla birlikte bir μ(x, y) ile μM dx + μN dy tam hâle getirilebilen durum. Önemli: Yerel olarak, M ve N aynı anda sıfır olmadığı sürece, her M dx + N dy = 0 denkleminin bir integrasyon çarpanı vardır. Yani bu yaprak ayrı bir sınıf değildir; kapsamı tüm diferansiyel biçimdir. Burada yaprağın anlamı "çarpanın kapalı biçimde bilinmesi"dir.
+
+### 2.1.4 Parametrik (p = y') biçim: Clairaut ve Lagrange
+
+p = y' yazılarak F(x, y, p) = 0 biçimindeki denklemlerin özel bir sınıfı ayrılır:
+- Clairaut: y = x p + f(p). Bu, F'nin x ve y'de doğrusal olduğu özel durumdur ve x'in katsayısı p'nin kendisidir.
+- Lagrange: y = x f(p) + g(p). Clairaut'nın genelleşmesi; x'in katsayısı p'nin bir fonksiyonudur.
+
+Bu sınıfların ikisi de F(x, y, p) = 0 içindedir; açık biçimde (y' = f(x, y)) yazılamazlar, çünkü x ve y'nin doğrusal yapısı p'yi tek değerli çözmez.
+
+### 2.1.5 Özet: kapsama ilişkisi
+
+En üst kümeden aşağı doğru:
+- F(x, y, y') = 0: tüm birinci mertebe, tek bilinmeyenli adi denklemler.
+- Açık biçim, y' = f(x, y): F'nin y'ye göre çözülebildiği durum.
+  - Ayrılabilir, lineer, Bernoulli, Riccati, homojen ve diğer: f'nin biçimine göre ayrım.
+- Diferansiyel biçim, M dx + N dy = 0: dikey teğetleri de içeren eşdeğer temsil.
+  - Tam ve integrasyon çarpanlı: M ve N'nin yapısına göre ayrım.
+- Parametrik biçim, F(x, y, p) = 0: Clairaut ve Lagrange.
+
+Not: Yukarıdaki kümeler, dosyanın yaprak sınıflandırmasıyla birebir eşleşmez; yaprakların bir kısmı açık biçimin, bir kısmı diferansiyel biçimin ya da parametrik biçimin özel durumudur. Hangi yaprağa düşeceği öncelik kuralıyla belirlenir.
 
 ## 3. Kısmi diferansiyel denklemler
 
