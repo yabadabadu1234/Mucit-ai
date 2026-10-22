@@ -509,8 +509,8 @@ Usul: Köşegen sistem. Her denklem ayrı ayrı integrallenir: x = c1*exp(t^2/2)
 Görmek zor: x' = y, y' = t*x
 Usul: x'' = t*x: Airy denklemi. Kuvvet serisi veya Airy fonksiyonları ile çözülür.
 
-Fevkalade zor: x' = (1/t)*x + y, y' = -t*x
-Usul: Temel matris ve parametrelerin değişimi. Homojen sistem için temel matris kuvvet serisiyle yazılır; homojen olmayan kısım parametrelerin değişimiyle eklenir.
+Fevkalade zor: x' = t*y, y' = -t*x
+Usul: Katsayı matrisi A(t) = [[0, t], [-t, 0]]. Bu matrisler farklı zamanlarda birbiriyle değişmeli olduğu için temel matris, θ(t) = t^2/2 olmak üzere dönme matrisi biçiminde yazılır.
 
 Yaprak: Lineer değil sistem
 
@@ -1142,5 +1142,131 @@ Adım 2: Genel analitik yöntem yoktur. Sayısal çözüm yapılır.
 Örnek 3 (fevkalade zor): y'' = exp(x*y).
 Adım 1: Sağ taraf hem x hem y içerir; ne mertebe indirgemesi (x açık değil ya da y açık değil) ne de bilinen dönüşüm uygulanır.
 Adım 2: Genel analitik yöntem yoktur. Sayısal çözüm yapılır.
+
+### 11.3 Adi diferansiyel denklem sistemleri
+
+#### Sabit katsayılı, özdeğerleri reel ve farklı
+
+Örnek 1 (bariz): x' = x + 2y, y' = 3x + 2y.
+Adım 1: A = [[1, 2], [3, 2]]. Karakteristik denklem det(A - λI) = (1 - λ)(2 - λ) - 6 = λ^2 - 3λ - 4 = (λ - 4)(λ + 1) = 0. Özdeğerler 4 ve -1.
+Adım 2: λ = 4 için (A - 4I)v = 0; birinci satır -3v1 + 2v2 = 0, v = (2, 3).
+Adım 3: λ = -1 için (A + I)v = 0; birinci satır 2v1 + 2v2 = 0, v = (1, -1).
+Sonuç: X = C1*exp(4t)*(2, 3) + C2*exp(-t)*(1, -1).
+
+Örnek 2 (görmek zor): x' = 3x + y, y' = 2x + 4y.
+Adım 1: A = [[3, 1], [2, 4]]. det(A - λI) = (3 - λ)(4 - λ) - 2 = λ^2 - 7λ + 10 = (λ - 5)(λ - 2) = 0. Özdeğerler 5 ve 2.
+Adım 2: λ = 5: (A - 5I)v = 0; -2v1 + v2 = 0, v = (1, 2).
+Adım 3: λ = 2: (A - 2I)v = 0; v1 + v2 = 0, v = (1, -1).
+Sonuç: X = C1*exp(5t)*(1, 2) + C2*exp(2t)*(1, -1).
+
+Örnek 3 (fevkalade zor): x' = 0.5x + 1.5y, y' = 1.5x + 0.5y.
+Adım 1: A simetriktir. det(A - λI) = (0.5 - λ)^2 - 2.25 = 0, yani λ = 2 ve λ = -1.
+Adım 2: λ = 2 için v = (1, 1); λ = -1 için v = (1, -1). Kontrol: A(1,1) = (2,2) = 2(1,1).
+Sonuç: X = C1*exp(2t)*(1, 1) + C2*exp(-t)*(1, -1).
+
+#### Sabit katsayılı, özdeğerleri reel ve tekrarlı
+
+Örnek 1 (bariz): x' = 2x, y' = 2y.
+Adım 1: A = 2I, özdeğer 2 çift, her yön özvektördür. Köşegenleştirilebilir.
+Sonuç: x = C1*exp(2t), y = C2*exp(2t).
+
+Örnek 2 (görmek zor): x' = 2x + y, y' = 2y.
+Adım 1: A = [[2, 1], [0, 2]], özdeğer 2 çift.
+Adım 2: (A - 2I) = [[0, 1], [0, 0]]. Özvektör v1 = (1, 0). Köşegenleştirilemez.
+Adım 3: Genelleştirilmiş özvektör w: (A - 2I)w = v1 ⇒ w2 = 1, w = (0, 1).
+Adım 4: Çözüm X = C1*exp(2t)*v1 + C2*exp(2t)*(w + t*v1).
+Sonuç: x = (C1 + C2*t)*exp(2t), y = C2*exp(2t).
+Kontrol: x' = C2*exp(2t) + 2(C1 + C2 t) exp(2t) = 2x + y.
+
+Örnek 3 (fevkalade zor): x' = 4x - y, y' = x + 2y.
+Adım 1: A = [[4, -1], [1, 2]]. İz 6, determinant 9. Karakteristik denklem (λ - 3)^2 = 0; özdeğer 3 çift.
+Adım 2: (A - 3I) = [[1, -1], [1, -1]]. Özvektör v1 = (1, 1).
+Adım 3: Genelleştirilmiş özvektör w: w1 - w2 = 1; w = (1, 0).
+Adım 4: Çözüm X = exp(3t)*(C1*v1 + C2*(w + t*v1)).
+Sonuç: x = exp(3t)*(C1 + C2 + C2*t), y = exp(3t)*(C1 + C2*t).
+Kontrol: x' = 3x + C2 exp(3t) = 4x - y.
+
+#### Sabit katsayılı, özdeğerleri karmaşık eşlenik
+
+Örnek 1 (bariz): x' = -y, y' = x.
+Adım 1: A = [[0, -1], [1, 0]]. Karakteristik denklem λ^2 + 1 = 0, λ = ±i.
+Adım 2: Dönme matrisi olduğu görülür; reel çözüm bu nedenle trigonometriktir.
+Sonuç: x = C1*cos(t) - C2*sin(t), y = C1*sin(t) + C2*cos(t).
+Kontrol: x' = -C1 sin - C2 cos = -y; y' = C1 cos - C2 sin = x.
+
+Örnek 2 (görmek zor): x' = x - 2y, y' = 2x + y.
+Adım 1: A = [[1, -2], [2, 1]]. İz 2, determinant 5; λ = 1 ± 2i.
+Adım 2: λ = 1 + 2i için (A - λI)v = 0; birinci satır -2i v1 - 2v2 = 0, yani v2 = -i v1; v = (1, -i).
+Adım 3: e^{λt} v = e^t*(cos 2t + i sin 2t)*(1, -i). Reel ve sanal kısımlar alınır:
+Reel kısım: e^t*(cos 2t, sin 2t). Sanal kısım: e^t*(sin 2t, -cos 2t).
+Sonuç: X = C1*e^t*(cos 2t, sin 2t) + C2*e^t*(sin 2t, -cos 2t).
+Kontrol: x = e^t cos 2t, x' = e^t(cos 2t - 2 sin 2t) = x - 2y.
+
+Örnek 3 (fevkalade zor): x' = x + 5y, y' = -2x - y.
+Adım 1: A = [[1, 5], [-2, -1]]. İz 0, determinant 9; λ = ±3i.
+Adım 2: λ = 3i için ilk satır (1 - 3i)v1 + 5v2 = 0. v1 = 5 seçilirse v2 = -1 + 3i.
+Adım 3: e^{3it}*(5, -1 + 3i) ifadesinin reel ve sanal kısımları:
+(cos 3t + i sin 3t)*(-1 + 3i) = (-cos 3t - 3 sin 3t) + i(3 cos 3t - sin 3t).
+Reel çözüm: X1 = (5 cos 3t, -cos 3t - 3 sin 3t). Sanal çözüm: X2 = (5 sin 3t, 3 cos 3t - sin 3t).
+Sonuç: X = C1*X1 + C2*X2.
+Kontrol: x = 5 cos 3t, x' = -15 sin 3t = x + 5y = 5cos3t - 5cos3t - 15 sin3t ✓.
+
+#### Sabit katsayılı, özdeğerlerinden biri sıfır
+
+Örnek 1 (bariz): x' = 0, y' = y.
+Adım 1: A = diag(0, 1). Özdeğerler 0 ve 1.
+Sonuç: x = C1, y = C2*exp(t).
+
+Örnek 2 (görmek zor): x' = x + y, y' = x + y.
+Adım 1: A = [[1, 1], [1, 1]]. Özdeğerler 0 ve 2.
+Adım 2: λ = 0 için v = (1, -1); λ = 2 için v = (1, 1).
+Sonuç: x = C1 + C2*exp(2t), y = -C1 + C2*exp(2t).
+Kontrol: x' = 2C2 exp(2t) = x + y.
+
+Örnek 3 (fevkalade zor): x' = 2x - 2y, y' = x - y.
+Adım 1: A = [[2, -2], [1, -1]]. İz 1, determinant 0; özdeğerler 0 ve 1.
+Adım 2: λ = 0 için 2v1 - 2v2 = 0, v = (1, 1). λ = 1 için (A - I)v = 0; v1 - 2v2 = 0, v = (2, 1).
+Sonuç: x = C1 + 2*C2*exp(t), y = C1 + C2*exp(t).
+Kontrol: x' = 2C2 exp(t) = 2x - 2y.
+
+#### Sabit katsayılı değil (değişken katsayılı lineer)
+
+Örnek 1 (bariz): x' = t*x, y' = y.
+Adım 1: Sistem köşegendir, her denklem ayrı integre edilir.
+Adım 2: x' = t x ⇒ x = C1*exp(t^2/2). y' = y ⇒ y = C2*exp(t).
+Sonuç: x = C1*exp(t^2/2), y = C2*exp(t).
+
+Örnek 2 (görmek zor): x' = y, y' = t*x.
+Adım 1: y = x' yazılır; ikinci denklem x'' = t*x.
+Adım 2: Bu Airy denklemidir: x'' - t*x = 0. Çözüm x = C1*Ai(t) + C2*Bi(t).
+Adım 3: y = x' = C1*Ai'(t) + C2*Bi'(t).
+Sonuç: x = C1*Ai(t) + C2*Bi(t), y = C1*Ai'(t) + C2*Bi'(t).
+
+Örnek 3 (fevkalade zor): x' = t*y, y' = -t*x.
+Adım 1: A(t) = [[0, t], [-t, 0]]. Bu matrisin zamanlarda değişimi, A(t) ile A(s)'nin birbirinin üstüne yerleşmesi ile dönme olarak görülebilir.
+Adım 2: θ(t) = ∫t dt = t^2/2 tanımlanır. A(t) = θ'(t)*J, J = [[0, 1], [-1, 0]]. Matrislerin J'nin katları olması, iki zamanın matrisinin değişmesini sağlar.
+Adım 3: Temel matris Φ(t) = exp(θ(t)*J) = [[cos θ, sin θ], [-sin θ, cos θ]].
+Adım 4: Çözüm X = Φ(t)*C.
+Sonuç: x = C1*cos(t^2/2) + C2*sin(t^2/2), y = -C1*sin(t^2/2) + C2*cos(t^2/2).
+Kontrol: x' = -t*C1 sin(θ) + t*C2 cos(θ) = t*y ✓ ve y' = -t*C1 cos(θ) - t*C2 sin(θ) = -t*x ✓.
+
+#### Lineer değil
+
+Örnek 1 (bariz): x' = x - y^2, y' = y.
+Adım 1: İkinci denklem y'yi bağımsız integre eder: y = C2*exp(t).
+Adım 2: Birinci denklem x' = x - C2^2*exp(2t) lineerdir. Homojen çözüm C1*exp(t). Özel çözüm x_p = A*exp(2t): 2A = A - C2^2, A = -C2^2.
+Sonuç: x = C1*exp(t) - C2^2*exp(2t), y = C2*exp(t).
+Kontrol: x' = C1 exp(t) - 2C2^2 exp(2t); x - y^2 = C1 exp(t) - C2^2 exp(2t) - C2^2 exp(2t) ✓.
+
+Örnek 2 (görmek zor): x' = x*y, y' = x + y.
+Adım 1: Sistem lineer değildir (x*y çarpımı).
+Adım 2: Kapalı biçimde genel çözüm bilinen bir dönüşümle bulunmaz. Analitik ilk integral aranırsa bu sistem için kapalı bir ilk integral elde edilmez.
+Adım 3: Sayısal çözüm (Runge–Kutta 4. mertebe): her adımda k-katsayıları F(t, X) = (x*y, x + y) fonksiyonu ile hesaplanır.
+
+Örnek 3 (fevkalade zor): x' = x*(1 - y), y' = y*(x - 1) (Lotka–Volterra).
+Adım 1: Sistem lineer değildir; denge noktaları (0,0) ve (1,1).
+Adım 2: İlk integral: H(x, y) = x + y - ln(x) - ln(y). Doğrulama: dH/dt = (1 - 1/x) x' + (1 - 1/y) y' = (x - 1)(1 - y) + (y - 1)(x - 1) = (x - 1)(1 - y + y - 1)·... sadeleştirilince 0. Yani H sabit kalır.
+Adım 3: Yörüngeler H = sabit eğrileridir; bu kapalı eğrilerdir ve pozitif çeyrekte periyodik çözüm verir.
+Adım 4: Zamana bağlı çözüm (x(t), y(t)) kapalı biçimde verilmez; faz portresi H ilk integrali ve sayısal çözümle çizilir.
 
 Bu dosya bir sınıflama şemasıdır. Bir denklemin hangi yaprağa düştüğü, öncelik kuralı uygulanarak belirlenir.
