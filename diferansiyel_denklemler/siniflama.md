@@ -967,4 +967,180 @@ Adım 2: Sayısal Runge–Kutta uygulanır (Örnek 1'deki formül).
 Adım 1: Sağ taraf iki farklı kuvvet (y^3 ve y) içerir; Bernoulli tek n ile tanımlanamaz. Lineer değildir, tam değildir (M ve N ayrılamaz).
 Adım 2: Dönüşüm bulunamaz; genel analitik yöntem yoktur. Sayısal yöntem uygulanır.
 
+### 11.2 İkinci mertebe adi denklemler
+
+#### Sabit katsayılı, homojen, reel ve farklı kökler
+
+Örnek 1 (bariz): y'' - 3y' + 2y = 0.
+Adım 1: Karakteristik denklem r^2 - 3r + 2 = 0, yani (r - 1)(r - 2) = 0.
+Adım 2: Kökler r = 1 ve r = 2, reel ve farklıdır.
+Sonuç: y = C1*exp(x) + C2*exp(2x).
+
+Örnek 2 (görmek zor): (D^2 + D - 2) y = 0, yani y'' + y' - 2y = 0.
+Adım 1: Operatör D = d/dx. Karakteristik denklem r^2 + r - 2 = 0, yani (r + 2)(r - 1) = 0.
+Adım 2: Kökler r = 1 ve r = -2.
+Sonuç: y = C1*exp(x) + C2*exp(-2x).
+
+Örnek 3 (fevkalade zor): 6y'' - 5y' + y = 0.
+Adım 1: Karakteristik denklem 6r^2 - 5r + 1 = 0, yani (2r - 1)(3r - 1) = 0.
+Adım 2: Kökler r = 1/2 ve r = 1/3.
+Sonuç: y = C1*exp(x/2) + C2*exp(x/3).
+
+#### Sabit katsayılı, homojen, reel ve eşit kökler
+
+Örnek 1 (bariz): y'' + 4y' + 4y = 0.
+Adım 1: r^2 + 4r + 4 = (r + 2)^2 = 0.
+Adım 2: Kök r = -2, çift.
+Adım 3: Çift kökte ikinci çözüm x*exp(rx) biçimindedir.
+Sonuç: y = (C1 + C2*x)*exp(-2x).
+
+Örnek 2 (görmek zor): (D - 1)^2 y = 0, yani y'' - 2y' + y = 0.
+Adım 1: Operatör çarpanları (r - 1)^2 = 0 verir; kök r = 1, çift.
+Sonuç: y = (C1 + C2*x)*exp(x).
+
+Örnek 3 (fevkalade zor): 9y'' - 12y' + 4y = 0.
+Adım 1: 9r^2 - 12r + 4 = (3r - 2)^2 = 0.
+Adım 2: Kök r = 2/3, çift.
+Sonuç: y = (C1 + C2*x)*exp(2x/3).
+
+#### Sabit katsayılı, homojen, karmaşık eşlenik kökler
+
+Örnek 1 (bariz): y'' + y = 0.
+Adım 1: r^2 + 1 = 0, r = ±i.
+Adım 2: Reel çözümler cos ve sin'dir (α = 0, β = 1).
+Sonuç: y = C1*cos(x) + C2*sin(x).
+
+Örnek 2 (görmek zor): y'' + 2y' + 5y = 0.
+Adım 1: r^2 + 2r + 5 = 0; r = (-2 ± sqrt(4 - 20))/2 = -1 ± 2i.
+Adım 2: α = -1, β = 2. Genel çözüm exp(αx)*(C1*cos(βx) + C2*sin(βx)).
+Sonuç: y = exp(-x)*(C1*cos(2x) + C2*sin(2x)).
+
+Örnek 3 (fevkalade zor): y'' - 4y' + 13y = 0.
+Adım 1: r^2 - 4r + 13 = 0; r = (4 ± sqrt(16 - 52))/2 = 2 ± 3i.
+Adım 2: α = 2, β = 3.
+Sonuç: y = exp(2x)*(C1*cos(3x) + C2*sin(3x)).
+
+#### Sabit katsayılı, homojen olmayan
+
+Örnek 1 (bariz): y'' + y = x^2.
+Adım 1: Homojen çözüm yh = C1*cos(x) + C2*sin(x).
+Adım 2: Belirsiz katsayılar: yp = a*x^2 + b*x + c. yp'' = 2a.
+Adım 3: Yerine koyma: 2a + a*x^2 + b*x + c = x^2. Katsayılar: a = 1, b = 0, 2a + c = 0, yani c = -2.
+Sonuç: y = C1*cos(x) + C2*sin(x) + x^2 - 2.
+
+Örnek 2 (görmek zor): y'' - 3y' + 2y = exp(x).
+Adım 1: Homojen çözüm yh = C1*exp(x) + C2*exp(2x).
+Adım 2: Sağ taraf exp(x), homojen çözümde kök 1 ile çakışır. Bu yüzden deneme x*exp(x) biçiminde olur.
+Adım 3: yp = A*x*exp(x). yp' = A*(1 + x)*exp(x), yp'' = A*(2 + x)*exp(x).
+Adım 4: Yerine konulur: A*(2 + x) - 3A*(1 + x) + 2A*x = (2A - 3A) + (A - 3A + 2A)*x = -A. Denklem -A*exp(x) = exp(x), A = -1.
+Sonuç: y = C1*exp(x) + C2*exp(2x) - x*exp(x).
+
+Örnek 3 (fevkalade zor): y'' + y = sec(x).
+Adım 1: Belirsiz katsayılar uygulanamaz (sec(x) için tahmin sonsuz terim gerektirir). Parametrelerin değişimi kullanılır.
+Adım 2: y1 = cos(x), y2 = sin(x). Wronski determinantı W = y1*y2' - y1'*y2 = cos^2(x) + sin^2(x) = 1.
+Adım 3: u1' = -y2*g/W = -sin(x)*sec(x) = -tan(x); u1 = ln|cos(x)|.
+Adım 4: u2' = y1*g/W = cos(x)*sec(x) = 1; u2 = x.
+Adım 5: yp = u1*y1 + u2*y2 = cos(x)*ln|cos(x)| + x*sin(x).
+Sonuç: y = C1*cos(x) + C2*sin(x) + cos(x)*ln|cos(x)| + x*sin(x). Tanım kümesi -pi/2 < x < pi/2.
+
+#### Euler–Cauchy
+
+Örnek 1 (bariz): x^2*y'' + 3x*y' + y = 0.
+Adım 1: y = x^r yerine konulur: r(r - 1) + 3r + 1 = 0, yani r^2 + 2r + 1 = (r + 1)^2 = 0.
+Adım 2: Kök r = -1, çift. İkinci çözüm x^r*ln(x) biçimindedir.
+Sonuç: y = (C1 + C2*ln(x))/x.
+
+Örnek 2 (görmek zor): x^2*y'' - 2x*y' + 2y = x^3.
+Adım 1: Homojen kısım için y = x^r: r(r - 1) - 2r + 2 = r^2 - 3r + 2 = 0, r = 1 ve r = 2. yh = C1*x + C2*x^2.
+Adım 2: Sağ taraf x^3 için deneme yp = a*x^3. Sol taraf: x^2*6a*x - 2x*3a*x^2 + 2a*x^3 = (6a - 6a + 2a)*x^3 = 2a*x^3.
+Adım 3: 2a = 1, a = 1/2.
+Sonuç: y = C1*x + C2*x^2 + x^3/2.
+
+Örnek 3 (fevkalade zor): x^2*y'' - x*y' + 2y = x^2*ln(x).
+Adım 1: x = exp(t) dönüşümü: x*d/dx = d/dt, x^2*y'' = ÿ - ẏ (nokta t'ye göre). Denklem ÿ - 2ẏ + 2y = t*exp(2t).
+Adım 2: Homojen kısım: r^2 - 2r + 2 = 0, r = 1 ± i. Yani yh = exp(t)*(C1*cos t + C2*sin t) = x*(C1*cos(ln x) + C2*sin(ln x)).
+Adım 3: Özel çözüm yp = exp(2t)*(A*t + B). Operatör: L[exp(2t)g] = exp(2t)*(D^2 + 2D + 2)g. Burada (D^2 + 2D + 2)(A*t + B) = 2A*t + 2A + 2B, bu t*exp(2t) sağ tarafına eşit olmalıdır: 2A = 1, 2A + 2B = 0. A = 1/2, B = -1/2.
+Adım 4: yp = exp(2t)*(t/2 - 1/2) = x^2*(ln(x) - 1)/2.
+Sonuç: y = x*(C1*cos(ln x) + C2*sin(ln x)) + x^2*(ln(x) - 1)/2.
+
+#### Değişken katsayılı lineer (Euler–Cauchy değil)
+
+Örnek 1 (bariz): y'' + x*y = 0.
+Adım 1: Bu Airy denklemidir. Kuvvet serisi yöntemi uygulanır: y = Σ a_n*x^n.
+Adım 2: Yerine konulursa (n + 2)(n + 1)*a_{n+2} = -a_{n-1} bağıntısı elde edilir. a_0 ve a_1 serbesttir; a_2 = 0.
+Adım 3: a_3 = -a_0/6, a_4 = -a_1/12, a_5 = 0, a_6 = a_0/180 ...
+Adım 4: Kapalı biçim: y = C1*Ai(-x) + C2*Bi(-x), burada Ai ve Bi Airy fonksiyonlarıdır. Kontrol: Ai(-x) için d^2/dx^2 Ai(-x) = -x*Ai(-x).
+Sonuç: y = C1*Ai(-x) + C2*Bi(-x).
+
+Örnek 2 (görmek zor): x*y'' + (1 - x)*y' + 2y = 0.
+Adım 1: x = 0 düzgün düzensiz noktadır. Frobenius yöntemi için y = Σ a_n*x^n.
+Adım 2: İndis denklemi r^2 = 0, yani r = 0 çift kök.
+Adım 3: Bağıntı (n + 1)^2*a_{n+1} = (n - 2)*a_n. a_1 = -2*a_0; a_2: 4*a_2 = -a_1 = 2a_0, a_2 = a_0/2; a_3: 9*a_3 = 0*a_2 = 0, yani a_3 = 0 ve seri sonlanır.
+Adım 4: Birinci çözüm y1 = 1 - 2x + x^2/2 (Laguerre polinomu L_2(x)).
+Adım 5: İkinci çözüm mertebe indirgeme ile bulunur ve logaritma içerir.
+Sonuç: y = C1*(1 - 2x + x^2/2) + C2*y2, y2 ikinci çözümdür ve Laguerre ikinci tip fonksiyon biçimindedir.
+
+Örnek 3 (fevkalade zor): x^2*y'' + x*y' + (x^2 - 4)*y = 0.
+Adım 1: Bu Bessel denklemidir, mertebe ν = 2.
+Adım 2: Frobenius yöntemi ile indis denklemi r^2 - 4 = 0, r = ±2.
+Adım 3: Genel çözüm, Bessel fonksiyonları ile yazılır: y = C1*J_2(x) + C2*Y_2(x).
+Sonuç: y = C1*J_2(x) + C2*Y_2(x).
+
+#### Lineer değil, x açık değil
+
+Örnek 1 (bariz): y'' = 2y.
+Adım 1: x açık değil. p = y' alınır; y'' = p*dp/dy.
+Adım 2: p*dp/dy = 2y, yani p^2 = 2y^2 + C1.
+Adım 3: Denklem dy/dx = p ile tekrar ayrılır. Sonuç biçimi, sabit C1 seçimine göre sinh, cosh veya exp fonksiyonlarıdır.
+Sonuç (tümü): y = C1*exp(sqrt(2)*x) + C2*exp(-sqrt(2)*x). Bu, y'' = 2y'nin genel çözümüdür.
+
+Örnek 2 (görmek zor): y*y'' - (y')^2 = 0.
+Adım 1: p = y', y'' = p*dp/dy. Denklem y*p*dp/dy - p^2 = 0.
+Adım 2: p ≠ 0 için y*dp/dy = p, yani dp/p = dy/y. İntegrasyon: p = K*y.
+Adım 3: y' = K*y ayrılabilir; y = C*exp(K*x).
+Sonuç: y = C*exp(K*x) (C, K sabitleri). Bu ailede y = 0 ayrı bir trivial çözümdür.
+
+Örnek 3 (fevkalade zor): y*y'' = (y')^2 + (y')^3.
+Adım 1: p = y', y*p*dp/dy = p^2 + p^3, yani y*dp/dy = p + p^2.
+Adım 2: Ayırma: dp/(p + p^2) = dy/y. Sol taraf (1/p - 1/(1 + p)) dp; integrasyon: ln|p/(1 + p)| = ln|y| + C.
+Adım 3: p/(1 + p) = K*y, p = K*y/(1 - K*y).
+Adım 4: y' = K*y/(1 - K*y). Ayrıldığında (1 - K*y)/y dy = K dx, yani (1/y - K) dy = K dx.
+Adım 5: İntegrasyon: ln|y| - K*y = K*x + C.
+Sonuç (kapalı biçim, y'de örtük): ln|y| - K*y - K*x = C.
+
+#### Lineer değil, y açık değil
+
+Örnek 1 (bariz): y'' = 3x.
+Adım 1: İki kez integrasyon. y' = (3/2)x^2 + C1.
+Adım 2: y = x^3/2 + C1*x + C2.
+Sonuç: y = x^3/2 + C1*x + C2.
+
+Örnek 2 (görmek zor): x*y'' + y' = 1.
+Adım 1: Sol taraf (x*y')' türevidir: (x*y')' = x*y'' + y'.
+Adım 2: (x*y')' = 1. İntegrasyon: x*y' = x + C1, yani y' = 1 + C1/x.
+Adım 3: İntegrasyon: y = x + C1*ln|x| + C2.
+Sonuç: y = x + C1*ln|x| + C2.
+
+Örnek 3 (fevkalade zor): y'' = x + (y')^2.
+Adım 1: p = y' alınır: p' = x + p^2 (Riccati tipi).
+Adım 2: Dönüşüm p = -u'/u. Bu durumda p' = -u''/u + p^2, yani -u''/u = x, u'' + x*u = 0.
+Adım 3: Bu Airy denklemidir; u = C1*Ai(-x) + C2*Bi(-x).
+Adım 4: y = ∫p dx = -ln|u| + C3.
+Sonuç: y = -ln|C1*Ai(-x) + C2*Bi(-x)| + C3.
+
+#### Lineer değil, diğer ikinci mertebe
+
+Örnek 1 (bariz): y'' + y*y' + x = 0.
+Adım 1: x ve y birlikte bulunduğu için ne x açık değil ne y açık değil; ayrıca lineer değildir.
+Adım 2: Genel analitik yöntem yoktur. Başlangıç koşulları verilirse sayısal çözüm yapılır.
+Adım 3: Sistem biçimi: y1 = y, y2 = y'. y1' = y2, y2' = -x - y1*y2. Runge–Kutta 4. mertebe ile adım adım çözülür.
+
+Örnek 2 (görmek zor): y'' = x*y + (y')^2.
+Adım 1: Dönüşüm u = exp(-y) deneyenebilir; u'' ifadesi x*y*u ve y = -ln(u) terimlerini içerir. Bu lineer değildir.
+Adım 2: Genel analitik yöntem yoktur. Sayısal çözüm yapılır.
+
+Örnek 3 (fevkalade zor): y'' = exp(x*y).
+Adım 1: Sağ taraf hem x hem y içerir; ne mertebe indirgemesi (x açık değil ya da y açık değil) ne de bilinen dönüşüm uygulanır.
+Adım 2: Genel analitik yöntem yoktur. Sayısal çözüm yapılır.
+
 Bu dosya bir sınıflama şemasıdır. Bir denklemin hangi yaprağa düştüğü, öncelik kuralı uygulanarak belirlenir.
