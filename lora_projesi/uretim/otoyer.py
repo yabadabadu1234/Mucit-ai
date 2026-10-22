@@ -32,6 +32,8 @@ class Yer:
     ozel = {'U1'}
 
     def kaydet(self, ref, tht=False):
+        if ref in self.ozel:
+            self.poli = self.p.fps[ref].GetCourtyard(pcbnew.F_CrtYd)
         arka, k = self._kutu(ref)
         if k is None:
             return
@@ -48,7 +50,18 @@ class Yer:
         self.kaydet(ref, tht)
         self.sabit.add(ref)
 
+    poli = None
+
+    def _poli_cakisma(self, k):
+        if self.poli is None:
+            return False
+        x0, x1, y0, y1 = k
+        pts = [(x0, y0), (x1, y0), (x1, y1), (x0, y1), ((x0 + x1) / 2, y0), ((x0 + x1) / 2, y1), (x0, (y0 + y1) / 2), (x1, (y0 + y1) / 2), ((x0 + x1) / 2, (y0 + y1) / 2)]
+        return any(self.poli.Collide(pcbnew.VECTOR2I(int(x * 1e6), int(y * 1e6)), int(0.3e6)) for x, y in pts)
+
     def _cakisma(self, ref, k, side, bos=0.3):
+        if side == 'F' and self._poli_cakisma(k):
+            return True
         for r2, k2 in self.kutu[side].items():
             if r2 == ref: continue
             if k[0] - bos < k2[1] and k2[0] - bos < k[1] and k[2] - bos < k2[3] and k2[2] - bos < k[3]:
