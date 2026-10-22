@@ -1136,7 +1136,7 @@ Adım 2: Genel analitik yöntem yoktur. Başlangıç koşulları verilirse sayı
 Adım 3: Sistem biçimi: y1 = y, y2 = y'. y1' = y2, y2' = -x - y1*y2. Runge–Kutta 4. mertebe ile adım adım çözülür.
 
 Örnek 2 (görmek zor): y'' = x*y + (y')^2.
-Adım 1: Dönüşüm u = exp(-y) deneyenebilir; u'' ifadesi x*y*u ve y = -ln(u) terimlerini içerir. Bu lineer değildir.
+Adım 1: Dönüşüm u = exp(-y) denenebilir; u'' ifadesi x*y*u ve y = -ln(u) terimlerini içerir. Bu lineer değildir.
 Adım 2: Genel analitik yöntem yoktur. Sayısal çözüm yapılır.
 
 Örnek 3 (fevkalade zor): y'' = exp(x*y).
