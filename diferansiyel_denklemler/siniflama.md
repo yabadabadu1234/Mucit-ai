@@ -124,6 +124,57 @@ En üst kümeden aşağı doğru:
 
 Not: Yukarıdaki kümeler, dosyanın yaprak sınıflandırmasıyla birebir eşleşmez; yaprakların bir kısmı açık biçimin, bir kısmı diferansiyel biçimin ya da parametrik biçimin özel durumudur. Hangi yaprağa düşeceği öncelik kuralıyla belirlenir.
 
+## 2.2 Singüler çözümler
+
+### 2.2.1 Genel çözüm ve genel çözüm ailesi
+
+Birinci mertebe bir denklemin genel çözümü, bir keyfi sabit C içeren bir eğri ailesidir: Φ(x, y, C) = 0. C'nin her değeri bir çözüm verir. Örnek: y' = 2*(y)^(1/2) denkleminin genel çözümü y = (x - C)^2 ailesidir.
+
+### 2.2.2 Singüler çözüm nedir?
+
+Singüler çözüm, denklemin bir çözümü olan, ama genel çözüm ailesinin hiçbir C değeriyle elde edilemeyen eğridir. İki özelliği vardır:
+1. Denklemi sağlar.
+2. Her noktasında, aile içindeki bir eğriye teğettir. Bu nedenle başlangıç koşulu bu noktada verilirse çözüm birden fazla olur. Yani singüler çözüm, teğet olduğu eğrilerle birlikte "başlangıç değeri belirsizliği" yaratır.
+
+### 2.2.3 Neden bu tür çözümler ortaya çıkar?
+
+F(x, y, p) = 0 denkleminde p = y' bir kök olarak bulunur. Singüler çözümler, bu kökün çakıştığı (çift kök olduğu) yerlerde ortaya çıkar. Çakışmanın matematiksel ifadesi ∂F/∂p = 0 koşuludur. Çünkü p'nin çakışan iki kökü varsa, kökler arası fark sıfırdır; bu da türevin sıfır olmasına karşılık gelir.
+
+### 2.2.4 Bulma usulü (adım adım)
+
+Adım 1: F(x, y, p) = 0 ve ∂F/∂p = 0 denklemleri birlikte yazılır.
+Adım 2: Bu iki denklemden p elimine edilir. Sonuç bir D(x, y) = 0 eğrisidir; buna p-diskriminant denir.
+Adım 3: D(x, y) = 0 eğrisi, orijinal denklemi gerçekten sağlıyor mu diye yerine konularak kontrol edilir. Bazı D = 0 eğrileri çözüm değildir; bunlar atılır.
+Adım 4: Geriye kalan eğri genel çözüm ailesinde yer alıyor mu diye bakılır. Bir C değeriyle elde ediliyorsa singüler değildir.
+Adım 5: Singüler ise, genel ailenin zarfı olup olmadığı kontrol edilir: Φ(x, y, C) = 0 ile ∂Φ/∂C = 0 birlikte alınır ve C elimine edilir. Sonuç, singüler çözümle aynı eğri olmalıdır.
+
+### 2.2.5 Örnek 1: (y')^2 = 4y
+
+Adım 1: F = p^2 - 4y.
+Adım 2: Genel çözüm: y = (x - C)^2. Kontrol: y' = 2(x - C), (y')^2 = 4(x - C)^2 = 4y ✓.
+Adım 3: ∂F/∂p = 2p = 0 ⇒ p = 0. Yerine konulur: 0 - 4y = 0 ⇒ y = 0. D(x, y) = y.
+Adım 4: y = 0 çözüm mü? y' = 0, (y')^2 = 0 = 4*0 ✓. Evet.
+Adım 5: y = 0 genel ailede var mı? (x - C)^2 = 0 her x için sağlanamaz, yani hiçbir C değeri y = 0'ı vermez. Singüler.
+Adım 6: Zarf kontrolü: ∂/∂C [(x - C)^2] = -2(x - C) = 0 ⇒ x = C. Bu noktada y = 0. Yani her genel eğri, y = 0 doğrusuna x = C noktasında teğettir.
+Sonuç: y = 0 singülerdir.
+Neden önemli? (0, 0) noktasından iki çözüm geçer: y = 0 ve y = x^2 (C = 0). Başlangıç değeri aynı, çözüm farklı.
+
+### 2.2.6 Örnek 2: Clairaut denklemi y = x*y' + (y')^2
+
+Adım 1: F = y - x*p - p^2. Genel çözüm: y = C*x + C^2 (doğrular ailesi).
+Adım 2: ∂F/∂p = -x - 2p = 0 ⇒ p = -x/2.
+Adım 3: Yerine konulur: y = x*(-x/2) + (x/2)^2 = -x^2/2 + x^2/4 = -x^2/4. D(x, y) = y + x^2/4.
+Adım 4: Kontrol: y = -x^2/4 ⇒ y' = -x/2; x*y' + (y')^2 = -x^2/2 + x^2/4 = -x^2/4 = y ✓. Çözüm.
+Adım 5: Genel ailede var mı? Bir C için C*x + C^2 = -x^2/4 her x için sağlanamaz (sol taraf doğrusal, sağ taraf ikinci dereceden). Singüler.
+Adım 6: Zarf: ∂/∂C (C*x + C^2 - y) = x + 2C = 0 ⇒ C = -x/2. Yerine konulursa y = -x^2/4 çıkar. Yani parabol, doğru ailesinin zarfıdır.
+Sonuç: y = -x^2/4 singüler çözümdür.
+
+### 2.2.7 Dikkat edilecek noktalar
+
+- ∂F/∂p = 0 her zaman singüler çözüm vermez. Yalnızca bulunan eğri denklemi sağlıyor ve ailenin dışında kalıyorsa singülerdir.
+- Singüler çözüm, genel çözümün bir parçası değildir. Genel çözüm, başlangıç koşulu verildiğinde bazen tek bir C'ye götürür; singüler çözüm ise bu seçimin dışındadır.
+- Bu bölüm bir sınıflandırma yaprağı değildir: singüler çözüm, herhangi bir yaprakta (ayrılabilir, lineer, Clairaut vb.) ortaya çıkabilir. Yaprak belirlendikten sonra singüler çözüm ayrıca aranır.
+
 ## 3. Kısmi diferansiyel denklemler
 
 ```
