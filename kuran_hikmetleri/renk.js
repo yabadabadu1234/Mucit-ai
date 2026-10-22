@@ -11,6 +11,13 @@
   var PALET = ['#fde68a', '#a7f3d0', '#bfdbfe', '#fbcfe8', '#fecaca', '#ddd6fe',
                '#bae6fd', '#fed7aa', '#d9f99d', '#fca5a5', '#c7d2fe', '#99f6e4'];
   var SOZLUK = null;
+  var BLOK = null; // nazm_blok.json: âyet metni → blok listesi (kelime-öbek verisi)
+  var VAZIFE_RENK = {
+    kasem: '#e9d5ff', fiil: '#fde68a', fail: '#a7f3d0', mubteda: '#bfdbfe', haber: '#fbcfe8',
+    meful: '#fecaca', hal: '#ddd6fe', taalluk: '#bae6fd', sifat: '#fed7aa', sart: '#d9f99d',
+    cevap: '#fca5a5', bag: '#c7d2fe', gaye: '#99f6e4', istisna: '#fde047', nida: '#f5d0fe',
+    tekit: '#e7e5e4', diger: '#e2e8f0', ara: '#fef9c3'
+  };
   var ONBELLEK = {};
   var DURAK = /^[ۖ-ۭ]+$/; // yalnız durak işareti (ۚ ۖ ۗ ۞ ۙ): kelime değildir
 
@@ -165,8 +172,24 @@
     return sonuc;
   }
 
+  function blokIsle(arEl, trEl, kayit) {
+    var r = function (v) { return ' data-v="' + v + '"'; };
+    arEl.innerHTML = kayit.b.map(function (b) {
+      return '<span class="rk-b"' + r(b[2]) + '>' + kaçış(b[0]) + '</span>';
+    }).join(' ');
+    trEl.innerHTML = kayit.b.map(function (b) {
+      return '<span class="rk-b"' + r(b[2]) + '>' + kaçış(b[1]) + '</span>';
+    }).join(' ');
+    arEl.dataset.renk = '1';
+    trEl.dataset.renk = '1';
+  }
+
   function ayetiIsle(arEl, trEl) {
     if (arEl.dataset.renk) return;
+    if (BLOK) {
+      var kayit = BLOK[norm(arEl.textContent)];
+      if (kayit) { blokIsle(arEl, trEl, kayit); return; }
+    }
     var kelimeler = arEl.textContent.trim().split(/\s+/).filter(Boolean);
     var gercek = kelimeler.map(function (k) { return !DURAK.test(k); });
     var gs = [], say = 0;
@@ -293,7 +316,9 @@
 
   function stil() {
     var s = document.createElement('style');
-    s.textContent = PALET.map(function (c, i) {
+    s.textContent = Object.keys(VAZIFE_RENK).map(function (v) {
+      return 'body.renk-acik .rk-b[data-v="' + v + '"]{background:' + VAZIFE_RENK[v] + ';border-radius:3px;padding:0 1px;}';
+    }).join('\n') + '\n' + PALET.map(function (c, i) {
       return 'body.renk-acik .rk[data-c="' + i + '"]{background:' + c + ';border-radius:3px;}';
     }).join('\n') + '\nbody.renk-acik .rk{padding:0 1px;}';
     document.head.appendChild(s);
@@ -301,7 +326,12 @@
 
   function baslat(dugme) {
     dugme.disabled = true; dugme.textContent = 'Renkler yükleniyor…';
-    fetch('renk_sozluk.json').then(function (r) { return r.json(); }).then(function (veri) {
+    Promise.all([
+      fetch('renk_sozluk.json').then(function (r) { return r.json(); }),
+      fetch('nazm_blok.json').then(function (r) { return r.json(); }).catch(function () { return null; })
+    ]).then(function (sonuc) {
+      var veri = sonuc[0];
+      BLOK = sonuc[1];
       SOZLUK = {};
       Object.keys(veri).forEach(function (k) {
         var n = norm(k);
