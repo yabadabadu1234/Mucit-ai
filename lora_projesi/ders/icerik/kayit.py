@@ -2,7 +2,7 @@ import os, html, importlib
 from icerik.yardim import *
 
 VERICI_BOLUMLER = ['v_guc', 'v_usb', 'v_islemci', 'v_dugme', 'v_lora']
-ALICI_BOLUMLER = []
+ALICI_BOLUMLER = ['a_giris']
 
 
 def nav_kur(bolumler):

@@ -140,17 +140,19 @@ class Cizim:
         self._yaz(x + _don(48, 0, rot)[0] + (8 if rot == 0 else 0), y + _don(48, 0, rot)[1] + 10, self._deger(ref), 'deger', 'start')
         return {'B': (x + b[0], y + b[1]), 'C': (x + c[0], y + c[1]), 'E': (x + e[0], y + e[1])}
 
-    def pmos(self, ref, x, y, rot=0, pinler=('1', '2', '3')):
-        """kapi (0,0); kaynak ustte (40,-30); savak altta (40,30)."""
+    def pmos(self, ref, x, y, rot=0, pinler=('1', '2', '3'), ayna=False, yazi=(52, -2), yazi_hiza='start'):
+        """kapi (0,0); kaynak ustte (40,-30); savak altta (40,30). ayna=True: once soldan saga yansitilir, sonra dondurulur."""
         self.ciz_ref.add(ref)
         g = ('<path d="M0 0H18M18 -12V12M24 -14V-6M24 -4V4M24 6V14M24 -10H40V-30M24 10H40V30M24 0H33V-10"/>'
              '<path d="M30 0L25 -3V3Z" class="dolu"/><circle cx="33" cy="-10" r="1.8" class="dolu"/>')
-        self.katman['sembol'].append(self._g(ref, g, x, y, rot))
-        gt = _don(0, 0, rot); s = _don(40, -30, rot); d = _don(40, 30, rot)
-        self._pin(ref, pinler[0], x + gt[0], y + gt[1]); self._pin(ref, pinler[1], x + s[0], y + s[1]); self._pin(ref, pinler[2], x + d[0], y + d[1])
-        self._yaz(x + 52, y - 2, ref, 'ref', 'start')
-        self._yaz(x + 52, y + 12, self._deger(ref), 'deger', 'start')
-        return {'G': (x + gt[0], y + gt[1]), 'S': (x + s[0], y + s[1]), 'D': (x + d[0], y + d[1])}
+        tr = 'translate(%s,%s) rotate(%s)%s' % (x, y, rot, ' scale(-1,1)' if ayna else '')
+        self.katman['sembol'].append('<g class="parca" data-ref="%s" transform="%s">%s</g>' % (ref, tr, g))
+        m = -1 if ayna else 1
+        gt = _don(0, 0, rot); s_ = _don(40 * m, -30, rot); d = _don(40 * m, 30, rot)
+        self._pin(ref, pinler[0], x + gt[0], y + gt[1]); self._pin(ref, pinler[1], x + s_[0], y + s_[1]); self._pin(ref, pinler[2], x + d[0], y + d[1])
+        self._yaz(x + yazi[0], y + yazi[1], ref, 'ref', yazi_hiza)
+        self._yaz(x + yazi[0], y + yazi[1] + 14, self._deger(ref), 'deger', yazi_hiza)
+        return {'G': (x + gt[0], y + gt[1]), 'S': (x + s_[0], y + s_[1]), 'D': (x + d[0], y + d[1])}
 
     # ------------------------------------------------------------ kutu (entegre, konnektor)
     def kutu(self, ref, x, y, sol, sag, ust=(), alt=(), genislik=140, baslik=None, sinif='ic', pinaralik=20, goster_deger=True):
