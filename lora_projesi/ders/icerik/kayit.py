@@ -1,7 +1,7 @@
 import os, html, importlib
 from icerik.yardim import *
 
-VERICI_BOLUMLER = ['v_guc']
+VERICI_BOLUMLER = ['v_guc', 'v_usb', 'v_islemci', 'v_dugme', 'v_lora']
 ALICI_BOLUMLER = []
 
 
@@ -63,7 +63,7 @@ def kart_giris(ad, liste):
 
 
 def hesap_sayfasi():
-    ad = ['bolucu', 'geribesleme', 'led', 'rc', 'bobin', 'yukselten', 'ohm', 'pil', 'mikroserit', 'iz', 'dalga', 'izdirenc', 'kondgerilim']
+    ad = ['bolucu', 'geribesleme', 'led', 'rc', 'bobin', 'yukselten', 'ohm', 'pil', 'mikroserit', 'iz', 'dalga', 'izdirenc', 'kondgerilim', 'baglanti']
     return '<h1>Hesap makineleri</h1><p>Her biri tarayıcıda çalışır. Varsayılan değerler kartlardaki değerlerdir; kendi değerini yaz.</p>' + ''.join(hesap(a) for a in ad)
 
 

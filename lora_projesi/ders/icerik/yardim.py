@@ -81,3 +81,33 @@ def pano_kutusu(ver, refs, isaretler=None, not_=None, pay=6, arka=False):
     return ('<div class="panokap">' + kontrol + '<div class="panoalan">' + svg.replace('class="k-ipek"', 'class="k-ipek"') + '</div>'
             '<div class="panobilgi">Tekerlekle yaklaş, sürükleyerek kaydır. Bir bakır izine, ayağa ya da yazıya tıkla: o ağ vurgulanır ve hangi ayaklara gittiği yazılır.</div></div>'
             + ('<p class="kaynak">%s</p>' % not_ if not_ else ''))
+
+
+def iz_uzunlugu(ver, ag):
+    t = 0.0
+    for i in ver.d['izler']:
+        if i['ag'] == ag:
+            x1, y1, x2, y2 = i['p']
+            t += math.hypot(x2 - x1, y2 - y1)
+    return t
+
+
+def viya_sayisi(ver, ag):
+    return sum(1 for v in ver.d['viyalar'] if v['ag'] == ag)
+
+
+def mikroserit(w, h, t, er):
+    """Hammerstad yaklasimi, mikroserit karakteristik empedansi (ohm)."""
+    we = w + (t / math.pi) * (1 + math.log(2 * h / t))
+    u = we / h
+    if u <= 1:
+        ee = (er + 1) / 2 + (er - 1) / 2 * ((1 + 12 / u) ** -0.5 + 0.04 * (1 - u) ** 2)
+        z = 60 / math.sqrt(ee) * math.log(8 / u + u / 4)
+    else:
+        ee = (er + 1) / 2 + (er - 1) / 2 * (1 + 12 / u) ** -0.5
+        z = 120 * math.pi / (math.sqrt(ee) * (u + 1.393 + 0.667 * math.log(u + 1.444)))
+    return z, ee
+
+
+def iz_genislikleri(ver, ag):
+    return sorted({i['w'] for i in ver.d['izler'] if i['ag'] == ag})

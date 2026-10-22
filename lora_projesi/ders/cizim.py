@@ -50,8 +50,8 @@ class Cizim:
         cx, cy = x + _don(uzunluk / 2, 0, rot)[0], y + _don(uzunluk / 2, 0, rot)[1]
         if deger_yaz:
             if rot in (0, 180):
-                self._yaz(cx, cy - 16, ref, 'ref')
-                self._yaz(cx, cy + 22, self._deger(ref), 'deger')
+                self.katman['yazi'].append('<text x="%s" y="%s" text-anchor="middle"><tspan class="ref">%s</tspan><tspan class="deger" dx="6">%s</tspan></text>' % (
+                    cx, cy - 14, escape(ref), escape(self._deger(ref))))
             else:
                 self._yaz(cx + 14, cy - 3, ref, 'ref', 'start')
                 self._yaz(cx + 14, cy + 11, self._deger(ref), 'deger', 'start')
@@ -169,31 +169,32 @@ class Cizim:
                     ex, ix = x - 15, x
                     self.katman['tel'].append('<path class="pinuc" d="M%s %sH%s"/>' % (ex, py, ix))
                     self._yaz(x + 5, py + 4, ad, 'pinad', 'start')
-                    self._yaz(ex + 6, py - 4, str(no), 'pinno', 'middle')
+                    (self._yaz(ex + 6, py - 4, str(no), 'pinno', 'middle') if not isinstance(no, (list, tuple)) else self._yaz(ex - 14, py - 5, '·'.join(str(q) for q in no), 'pinno', 'end'))
                 else:
                     ex, ix = x + w + 15, x + w
                     self.katman['tel'].append('<path class="pinuc" d="M%s %sH%s"/>' % (ix, py, ex))
                     self._yaz(x + w - 5, py + 4, ad, 'pinad', 'end')
-                    self._yaz(ex - 6, py - 4, str(no), 'pinno', 'middle')
-                self._pin(ref, no, ex, py)
-                res[str(no)] = (ex, py)
+                    (self._yaz(ex - 6, py - 4, str(no), 'pinno', 'middle') if not isinstance(no, (list, tuple)) else self._yaz(ex + 14, py - 5, '·'.join(str(q) for q in no), 'pinno', 'start'))
+                for n_ in (no if isinstance(no, (list, tuple)) else [no]):
+                    self._pin(ref, n_, ex, py)
+                res[str(no) if not isinstance(no, (list, tuple)) else str(no[0])] = (ex, py)
         yan(sol, x, -1)
         yan(sag, x, 1)
         for i, (no, ad) in enumerate(ust):
             px = x + (i + 1) * (w / (len(ust) + 1))
             self.katman['tel'].append('<path class="pinuc" d="M%s %sV%s"/>' % (px, y - 15, y))
             self._yaz(px, y + 14, ad, 'pinad', 'middle')
-            self._yaz(px + 8, y - 18, str(no), 'pinno', 'start')
-            self._pin(ref, no, px, y - 15); res[str(no)] = (px, y - 15)
+            self._yaz(px + 8, y - 18, '·'.join(str(q) for q in no) if isinstance(no, (list, tuple)) else str(no), 'pinno', 'start')
+            [self._pin(ref, q, px, y - 15) for q in (no if isinstance(no, (list, tuple)) else [no])]; res[str(no if not isinstance(no, (list, tuple)) else no[0])] = (px, y - 15)
         for i, (no, ad) in enumerate(alt):
             px = x + (i + 1) * (w / (len(alt) + 1))
             self.katman['tel'].append('<path class="pinuc" d="M%s %sV%s"/>' % (px, y + h, y + h + 15))
             self._yaz(px, y + h - 6, ad, 'pinad', 'middle')
-            self._yaz(px + 8, y + h + 22, str(no), 'pinno', 'start')
-            self._pin(ref, no, px, y + h + 15); res[str(no)] = (px, y + h + 15)
+            self._yaz(px + 8, y + h + 22, '·'.join(str(q) for q in no) if isinstance(no, (list, tuple)) else str(no), 'pinno', 'start')
+            [self._pin(ref, q, px, y + h + 15) for q in (no if isinstance(no, (list, tuple)) else [no])]; res[str(no if not isinstance(no, (list, tuple)) else no[0])] = (px, y + h + 15)
         bas = ref + ('  ' + (baslik or self._deger(ref)) if goster_deger else '')
         if ust:
-            self._yaz(x + w / 2, y + 22 + (n + 1) * pinaralik / 2 - 8, bas, 'ref')
+            self._yaz(x + w / 2, y + h - 24, bas, 'ref')
         else:
             self._yaz(x + w / 2, y - 6, bas, 'ref')
         return res
@@ -239,6 +240,13 @@ class Cizim:
         else:
             self._yaz(x, y + 16, ad, 'agad', 'middle')
         self.etiketler.append((ad, (round(x, 2), round(y, 2))))
+
+    def ic_bag(self, a, b, etiket='içeriden bağlı'):
+        """Bir parcanin iki ayagi icerden bagliysa kesikli cizgiyle gosterir ve denetimde birlesik sayar."""
+        pa, pb = self.pinler[a], self.pinler[b]
+        self.katman['nokta'].append('<path class="pinuc" stroke-dasharray="5 4" d="M%s %sL%s %s"/>' % (pa[0] + 18, pa[1] + 9, pb[0] - 18, pb[1] + 9))
+        self.teller.append((pa, pb))
+        self.noktalar.setdefault(pa, []); self.noktalar.setdefault(pb, [])
 
     def not_(self, x, y, metin, anchor='start', sinif='not'):
         self._yaz(x, y, metin, sinif, anchor)
