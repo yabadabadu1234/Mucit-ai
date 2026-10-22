@@ -127,4 +127,80 @@ B1.2 dalındaki ayrım, kısmi türevlerin katsayılarından (A, B, C) hesaplana
 - **B1.2:** B² − 4AC'nin işareti üç durumdan birini verir: < 0, = 0 veya > 0. Yani yapraklar eksiksizdir.
 - **B1.1:** Lineer, kuazi-lineer ve diğer; bu üç küme birinci mertebe kısmi denklemleri eksiksiz böler.
 
+## 6. Çözüm yöntemleri (usul tablosu)
+
+Tablo, verilen usul haritasının düzeltilmiş ve genişletilmiş hâlidir. Düzeltmeler tabloda ayrıca işaretlenmiştir.
+
+| Kod | Yöntem | Mertebe | Lineer mi? | Temel şart / tetikleyici |
+|---|---|---|---|---|
+| YM1 | Değişkenlerine ayırma | Ana kullanım 1. mertebe (bazı yüksek mertebe özel biçimler) | Lineer ve lineer değil | Sağ taraf $f(x)\cdot g(y)$ çarpımına ayrılıyorsa |
+| YM2 | Tam diferansiyel / tamlaştırma | 1. mertebe | Lineer ve lineer değil | $M\,dx+N\,dy=0$ ve $\partial M/\partial y=\partial N/\partial x$ |
+| YM3 | İntegrasyon çarpanı | 1. mertebe | Lineer ve lineer değil | Tam değilse, $\mu(x)$, $\mu(y)$ ya da $\mu(x,y)$ ile tam hâle getirilebiliyorsa. **Düzeltme:** Eski tabloda "sadece lineer" yazıyordu; bu yanlıştı, çarpan gayr-ı lineer denklemlerde de kullanılır. |
+| YM4 | Lineer birinci mertebe (çarpan formülü) | 1. mertebe | Sadece lineer | $y'+P(x)y=Q(x)$; çarpan $\mu=e^{\int P\,dx}$ |
+| YM5 | Bernoulli | 1. mertebe | Gayr-ı lineer | $y'+P(x)y=Q(x)y^n$, $n\neq0,1$; $v=y^{1-n}$ dönüşümü |
+| YM6 | Riccati | 1. mertebe | Gayr-ı lineer | $y'=p+qy+ry^2$; bir özel çözüm $y_1$ biliniyorsa $y=y_1+1/v$ |
+| YM7 | Homojen (Euler) | 1. mertebe | Gayr-ı lineer | $y'=F(y/x)$; $v=y/x$ dönüşümü |
+| YM8 | Clairaut ve Lagrange ($p=y'$ parametresi) | 1. mertebe | Gayr-ı lineer | $y=xp+f(p)$ ya da $y=xf(p)+g(p)$ biçimi |
+| YM9 | Mertebe indirgeme | 2. ve üstü mertebe | Lineer ve lineer değil | (a) Bir çözüm $y_1$ verilmiş (lineer). (b) $x$ açık değil: $y''=F(y,y')$, $p=y'$, $y$ bağımsız. (c) $y$ açık değil: $y''=F(x,y')$, $p=y'$. **Düzeltme:** Eski tabloda "sadece lineer" yazıyordu; (b) ve (c) lineer olmayan denklemlerde de kullanılır. |
+| YM10 | Karakteristik denklem | 2. ve üstü mertebe | Sadece lineer | Katsayılar sabit ($ay''+by'+cy=0$ için $ar^2+br+c=0$) |
+| YM11 | Euler–Cauchy dönüşümü ($x=e^t$) | 2. ve üstü mertebe | Sadece lineer | $x^2y''+axy'+by=f(x)$ |
+| YM12 | Belirsiz katsayılar | 2. ve üstü mertebe | Sadece lineer | Sabit katsayılı ve sağ taraf polinom, üstel ya da trigonometrik ise |
+| YM13 | Parametrelerin değişimi | 2. ve üstü mertebe | Sadece lineer | Homojen olmayan lineer denklem; homojen çözümler biliniyorsa |
+| YM14 | Özdeğer ve özvektör | Sistem | Sadece lineer | $X'=AX$, $A$ sabit matris |
+| YM15 | Jordan biçimi ve üstel matris | Sistem | Sadece lineer | Tekrarlı özdeğer, köşegenleştirilemeyen $A$ |
+| YM16 | Temel matris ve parametrelerin değişimi (sistem) | Sistem | Sadece lineer | $X'=A(t)X+F(t)$, $A(t)$ değişken |
+| YM17 | Karakteristik yöntemi (birinci mertebe KDE) | 1. mertebe KDE | Lineer ve kuazi-lineer | $a\,u_x+b\,u_y=c\,u+d$ ya da kuazi-lineer biçim |
+| YM18 | Sınıflandırma ve kanonik form | 2. mertebe KDE | Sadece lineer | İki bağımsız değişkenli; $B^2-4AC$ işareti |
+| YM19 | Değişkenlere ayırma (Fourier) | KDE | Sadece lineer | $u=X(x)Y(y)$ çarpımı ve homojen sınır koşulları |
+| YM20 | Laplace ve Fourier dönüşümü | ODE ve KDE | Sadece lineer | Sabit katsayılı; başlangıç ya da sınır koşulları verilmiş |
+
+## 7. Yöntemlerin yapraklara eşlenmesi
+
+Her yaprağa en az bir yöntem atanır. Yöntemi olmayan yapraklar açıkça "genel analitik yöntem yok" diye işaretlenir; bunlar sayısal ya da özel durum yöntemiyle çözülür.
+
+| Yaprak | Yöntem kodları |
+|---|---|
+| A1.1.1 | YM1 |
+| A1.1.2 | YM4, YM3 |
+| A1.1.3 | YM5 |
+| A1.1.4 | YM6 |
+| A1.1.5 | YM7 |
+| A1.1.6 | YM2 |
+| A1.1.7 | YM3 |
+| A1.1.8 | YM8 |
+| A1.1.9 | YM8 |
+| A1.1.10 | Genel analitik yöntem yok |
+| A1.2.1.1.a–c | YM10 |
+| A1.2.1.1.d | YM10, YM12, YM13 |
+| A1.2.1.2 | YM11, YM13 |
+| A1.2.1.3 | YM13 (temel çözüm biliniyorsa); aksi hâlde genel analitik yöntem yok |
+| A1.2.2.1 | YM9 (b) |
+| A1.2.2.2 | YM9 (c) |
+| A1.2.2.3 | YM9 (uygunsa); genel analitik yöntem yok |
+| A1.3.1 | YM10, YM12, YM13 |
+| A1.3.2 | YM13 (temel çözüm biliniyorsa); aksi hâlde genel analitik yöntem yok |
+| A1.3.3 | Genel analitik yöntem yok |
+| A2.1.1 | YM14 |
+| A2.1.2 | YM14, YM15 |
+| A2.1.3 | YM14 |
+| A2.1.4 | YM14 |
+| A2.2 | YM16 |
+| A2.3 | Genel analitik yöntem yok |
+| B1.1.1 | YM17 |
+| B1.1.2 | YM17 |
+| B1.1.3 | Genel analitik yöntem yok |
+| B1.2.1 | YM18, YM19, YM20 |
+| B1.2.2 | YM18, YM19, YM20 |
+| B1.2.3 | YM18, YM19, YM20 |
+| B1.3 | YM19 (ayrılabiliyorsa); aksi hâlde genel analitik yöntem yok |
+| B1.4 | Genel analitik yöntem yok |
+| B2.1 | YM19, YM20 (uygunsa) |
+| B2.2 | Genel analitik yöntem yok |
+
+## 8. Kapsama kontrolü (yöntemler için)
+
+- Her yaprak ya bir yöntem koduna ya da "genel analitik yöntem yok" işaretine sahiptir. Başka durum yoktur.
+- Yöntem tablosundaki her kod en az bir yaprağa bağlanmıştır: YM1 (A1.1.1), YM2 (A1.1.6), YM3 (A1.1.2, A1.1.7), YM4 (A1.1.2), YM5 (A1.1.3), YM6 (A1.1.4), YM7 (A1.1.5), YM8 (A1.1.8, A1.1.9), YM9 (A1.2.2.1–3), YM10 (A1.2.1.1, A1.3.1), YM11 (A1.2.1.2), YM12 (A1.2.1.1.d, A1.3.1), YM13 (A1.2.1.1.d, A1.2.1.2, A1.2.1.3, A1.3.1, A1.3.2), YM14 (A2.1), YM15 (A2.1.2), YM16 (A2.2), YM17 (B1.1.1, B1.1.2), YM18–YM20 (B1.2, B1.3, B2.1).
+- Öncelik kuralı yöntemler için de geçerlidir: bir denklemin hangi yöntemle çözüleceği, denklem yapraklara düştükten sonra, yaprağın ilk yazılan yöntemiyle belirlenir.
+
 Bu dosya bir sınıflama şemasıdır. Bir denklemin hangi yaprağa düştüğü, öncelik kuralı uygulanarak belirlenir.
