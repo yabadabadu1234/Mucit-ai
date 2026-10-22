@@ -74,7 +74,7 @@ class Yer:
             return True
         return False
 
-    def pasif_ekle(self, ref, ap, side_arka=False, rmax=18.0, yon=None):
+    def pasif_ekle(self, ref, ap, side_arka=False, rmax=18.0, yon=None, bos=0.3):
         """ap: (x, y) capa konumu; yakin bos yer arar."""
         p = self.p
         f0 = p.parca_ekle(ref, ap[0], ap[1], 0, side_arka)
@@ -94,7 +94,7 @@ class Yer:
                 f0.SetOrientationDegrees(rot if not side_arka else rot)
                 kk = sinir(f0, pcbnew.B_CrtYd if side_arka else pcbnew.F_CrtYd)
                 if kk is None: continue
-                if not self._cakisma(ref, kk, side):
+                if not self._cakisma(ref, kk, side, bos):
                     self.kutu[side][ref] = kk
                     return (x, y, rot)
         raise RuntimeError('yer bulunamadi: ' + ref)

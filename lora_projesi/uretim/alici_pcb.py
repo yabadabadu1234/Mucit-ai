@@ -52,6 +52,7 @@ A = {
     'TP1': ('U10', '85'), 'TP2': ('U10', '12'), 'TP3': ('U10', '13'),
     'Q2': ('K1', '5'), 'R37': ('Q2', '1'), 'R38': ('Q2', '1'), 'D7': ('K1', '5'),
 }
+ETH = {'R14', 'R15', 'R16', 'R17', 'R18', 'R19', 'R21', 'R22', 'R26', 'R27', 'R28', 'R29', 'L3', 'Y1', 'C25', 'C26', 'C27', 'C28', 'C29', 'C30', 'C31', 'C32', 'C33', 'C34', 'C35', 'C36', 'C37', 'C38', 'C39', 'C40'}
 ARKA = {'U12', 'C49', 'C46', 'C47', 'C48'}
 
 def kur(xml, W=W, H=H):
@@ -75,7 +76,7 @@ def kur(xml, W=W, H=H):
         konum = (p.fps[ref].GetPosition().x / 1e6, p.fps[ref].GetPosition().y / 1e6)
         # capa pad'i konumu
         ap = pos[0]
-        sonuc = y.pasif_ekle(r, ap, r in ARKA, rmax=40.0)
+        sonuc = y.pasif_ekle(r, ap, r in ARKA, rmax=40.0, bos=0.9 if r in ETH else 0.3)
         yerlesti.add(r)
     assert not bekleyen, bekleyen
     eksik = set(p.parcalar) - set(p.fps)
