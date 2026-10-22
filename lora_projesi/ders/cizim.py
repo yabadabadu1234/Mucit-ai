@@ -41,7 +41,7 @@ class Cizim:
         p = self.parcalar[ref]
         return p.deger
 
-    def _iki(self, ref, x, y, rot, govde, uzunluk=60, deger_yaz=True, yazi_yon=None, pinler=('1', '2')):
+    def _iki(self, ref, x, y, rot, govde, uzunluk=60, deger_yaz=True, yazi_yon=None, pinler=('1', '2'), yazi_dy=0):
         self.ciz_ref.add(ref)
         self.katman['sembol'].append(self._g(ref, govde, x, y, rot))
         a = _don(0, 0, rot); b = _don(uzunluk, 0, rot)
@@ -53,8 +53,8 @@ class Cizim:
                 self.katman['yazi'].append('<text x="%s" y="%s" text-anchor="middle"><tspan class="ref">%s</tspan><tspan class="deger" dx="6">%s</tspan></text>' % (
                     cx, cy - 14, escape(ref), escape(self._deger(ref))))
             else:
-                self._yaz(cx + 14, cy - 3, ref, 'ref', 'start')
-                self._yaz(cx + 14, cy + 11, self._deger(ref), 'deger', 'start')
+                self._yaz(cx + 14, cy - 3 + yazi_dy, ref, 'ref', 'start')
+                self._yaz(cx + 14, cy + 11 + yazi_dy, self._deger(ref), 'deger', 'start')
         return {'a': (x + a[0], y + a[1]), 'b': (x + b[0], y + b[1]), 'm': (cx, cy)}
 
     # ------------------------------------------------------------ iki uclu semboller
@@ -165,7 +165,9 @@ class Cizim:
         self.katman['sembol'].append('<g class="parca" data-ref="%s">%s</g>' % (ref, govde))
         res = {}
         def yan(liste, ux, dy_dir):
-            for i, (no, ad) in enumerate(liste):
+            for i, ent in enumerate(liste):
+                no, ad = ent[0], ent[1]
+                nc = len(ent) > 2 and ent[2] == 'nc'
                 py = y + (i + 1) * pinaralik
                 if dy_dir < 0:
                     ex, ix = x - 15, x
@@ -177,6 +179,9 @@ class Cizim:
                     self.katman['tel'].append('<path class="pinuc" d="M%s %sH%s"/>' % (ix, py, ex))
                     self._yaz(x + w - 5, py + 4, ad, 'pinad', 'end')
                     (self._yaz(ex - 6, py - 4, str(no), 'pinno', 'middle') if not isinstance(no, (list, tuple)) else self._yaz(ex + 14, py - 5, '·'.join(str(q) for q in no), 'pinno', 'start'))
+                if nc:
+                    self.katman['yazi'].append('<text x="%s" y="%s" text-anchor="middle" class="not" font-size="14">×</text>' % (ex, py + 5))
+                    continue
                 for n_ in (no if isinstance(no, (list, tuple)) else [no]):
                     self._pin(ref, n_, ex, py)
                 res[str(no) if not isinstance(no, (list, tuple)) else str(no[0])] = (ex, py)

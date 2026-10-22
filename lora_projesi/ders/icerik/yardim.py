@@ -181,9 +181,12 @@ def ipc_genislik(akim, dT=10.0, dis=True, t_um=35.0):
 def iz_taramasi(ver, satirlar):
     """satirlar: [(ag, akim_A, aciklama)] -> HTML tablo; kartta olculen en dar iz genisligiyle IPC gereksinimini kiyaslar."""
     s = ['<table><tr><th>Ağ</th><th>Beklenen akım</th><th>Dayanak</th><th>Gereken iz (10 °C artış, 35 µm dış)</th><th>Kartta ölçülen</th><th>Sonuç</th></tr>']
-    for ag, akim, ac in satirlar:
+    for sat in satirlar:
+        ag, akim, ac = sat[:3]
         ws = iz_genislikleri(ver, ag)
         gerek = ipc_genislik(akim)
+        if len(sat) > 3 and sat[3]:
+            gerek = max(gerek, sat[3])
         if ws:
             en = min(ws)
             ok = en + 1e-9 >= gerek
