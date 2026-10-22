@@ -1,0 +1,17 @@
+Hello,
+
+I have started the design and may finish it before you accept. I deliver everything in your requirements (no firmware), ready for PCBWay/JLCPCB. Everything below is my first-impression plan and may change out of necessity, but I will always aim for the best possible product.
+
+Extras, free (say if unwanted): design note (power budget, antenna, pinout), simulation reports for relay driver and 12 V protection, reverse-polarity and surge protection.
+
+Modem: default SIM7600SA (Cat 1, cheaper; bands 2/4/5/7/28/66 cover common Chilean carriers). If you state it is insufficient, SIM7600SA-H (Cat 4). Bands are confirmed against the datasheet before schematic freeze.
+
+My part choices: ESP32-WROOM-32E, RFM95W-915S2, USB-C + CH340C, W5500 + HR911105A, relay Songle SRD-12VDC-SL-A with MMBT2222A and SS14, TPS62933 converters, SMBJ15A, AO3401A, 2xAAA (Keystone 2468) + TPS63031 + MSK12C02 switch, SMA and u.FL, Nano-SIM holder. Stock is checked in the PCBWay/JLCPCB libraries.
+
+Verification: KiCad ERC/DRC, power budget, ngspice. I cannot measure range or coverage without built boards.
+
+Defaults if unanswered: open-field range; 2xAAA, no charger; transmitter max 40x100 mm, receiver as small and efficient as possible; relay 12 VDC 10 A; one design per device, files only; unlocked Nano-SIM; Ethernet and 4G independent.
+
+5 days from acceptance. 333.33 USD.
+
+[YOUR NAME]
