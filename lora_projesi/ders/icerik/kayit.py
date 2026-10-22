@@ -17,6 +17,8 @@ def uret(cikti, ver, sayfa, icerik_dizin):
     for ad, adlar in (('verici', VERICI_BOLUMLER), ('alici', ALICI_BOLUMLER)):
         bolumler[ad + ' kartı'] = [importlib.import_module('icerik.' + m) for m in adlar]
     nav = []
+    from icerik import temel
+    nav.append(('Temel bilgiler', [('temel/index.html', 'Temel bilgiler: içindekiler')] + [('temel/%s.html' % i, b) for i, b, o, f in temel.SAYFALAR]))
     nav.append(('Başlangıç', [('index.html', 'Giriş ve yol haritası'), ('hesap.html', 'Hesap makineleri'), ('sozluk.html', 'Sözlük'), ('kaynak.html', 'Kaynaklar ve güven düzeyi')]))
     nav.append(('Verici kartı', [('verici/index.html', 'Verici: genel bakış')] + [('verici/%s.html' % m.ID, m.BASLIK) for m in bolumler['verici kartı']]))
     nav.append(('Alıcı kartı', [('alici/index.html', 'Alıcı: genel bakış')] + [('alici/%s.html' % m.ID, m.BASLIK) for m in bolumler['alici kartı']]))
@@ -29,6 +31,7 @@ def uret(cikti, ver, sayfa, icerik_dizin):
     for kart, ad in (('verici kartı', 'verici'), ('alici kartı', 'alici')):
         for m in bolumler[kart]:
             yaz('%s/%s.html' % (ad, m.ID), m.BASLIK, m.uret(ver[ad], None), 1, m.OZET)
+    temel.uret(yaz)
     yaz('index.html', 'Giriş', giris(bolumler), 0, 'Elektronik tasarımı sıfırdan öğreten ders sitesi')
     yaz('verici/index.html', 'Verici: genel bakış', kart_giris('verici', bolumler['verici kartı']), 1)
     yaz('alici/index.html', 'Alıcı: genel bakış', kart_giris('alici', bolumler['alici kartı']), 1)
