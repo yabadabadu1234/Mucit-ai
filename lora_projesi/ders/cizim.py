@@ -155,7 +155,7 @@ class Cizim:
         return {'G': (x + gt[0], y + gt[1]), 'S': (x + s_[0], y + s_[1]), 'D': (x + d[0], y + d[1])}
 
     # ------------------------------------------------------------ kutu (entegre, konnektor)
-    def kutu(self, ref, x, y, sol, sag, ust=(), alt=(), genislik=140, baslik=None, sinif='ic', pinaralik=20, goster_deger=True):
+    def kutu(self, ref, x, y, sol, sag, ust=(), alt=(), genislik=140, baslik=None, sinif='ic', pinaralik=20, goster_deger=True, baslik_yok=False):
         """sol/sag/ust/alt: [(pinno, ad)] listeleri. (x,y) sol ust kose. Pinler dis uca 'kisa' = 15 px."""
         self.ciz_ref.add(ref)
         n = max(len(sol), len(sag), 1)
@@ -173,7 +173,7 @@ class Cizim:
                     ex, ix = x - 15, x
                     self.katman['tel'].append('<path class="pinuc" d="M%s %sH%s"/>' % (ex, py, ix))
                     self._yaz(x + 5, py + 4, ad, 'pinad', 'start')
-                    (self._yaz(ex + 6, py - 4, str(no), 'pinno', 'middle') if not isinstance(no, (list, tuple)) else self._yaz(ex - 14, py - 5, '·'.join(str(q) for q in no), 'pinno', 'end'))
+                    (self._yaz(ex + 6, py - 4, str(no), 'pinno', 'middle') if not isinstance(no, (list, tuple)) else self._yaz(ex - 14, py - 15, '·'.join(str(q) for q in no), 'pinno', 'end'))
                 else:
                     ex, ix = x + w + 15, x + w
                     self.katman['tel'].append('<path class="pinuc" d="M%s %sH%s"/>' % (ix, py, ex))
@@ -200,7 +200,9 @@ class Cizim:
             self._yaz(px + 8, y + h + 22, '·'.join(str(q) for q in no) if isinstance(no, (list, tuple)) else str(no), 'pinno', 'start')
             [self._pin(ref, q, px, y + h + 15) for q in (no if isinstance(no, (list, tuple)) else [no])]; res[str(no if not isinstance(no, (list, tuple)) else no[0])] = (px, y + h + 15)
         bas = ref + ('  ' + (baslik or self._deger(ref)) if goster_deger else '')
-        if ust:
+        if baslik_yok:
+            pass
+        elif ust:
             self._yaz(x + w / 2, y + h - 24, bas, 'ref')
         else:
             self._yaz(x + w / 2, y - 6, bas, 'ref')

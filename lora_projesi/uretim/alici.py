@@ -150,7 +150,7 @@ def kur():
             modem[num] = ata[ad]
     p('U10', 'Simcom', 'SIM7600SA', 'SIM7600SA', 'Simcom:SIM7600_LCC87', modem, G, rot=0, alanlar={'MPN': 'SIM7600SA (Cat 1) / SIM7600SA-H (Cat 4)'})
     p('U8', 'Logic_LevelTranslator', 'TXB0104PW', 'TXB0104PW', 'Package_SO:TSSOP-14_4.4x5mm_P0.65mm',
-      {1: '+1V8', 8: '+1V8', 14: '+3V3', 7: 'GND', 2: 'M_TXD', 13: 'MODEM_RXD_H', 3: 'M_RXD', 12: 'MODEM_TXD_H', 4: 'M_STATUS', 11: 'MODEM_STATUS'}, G, alanlar={'MPN': 'TXB0104PWR'})
+      {1: '+1V8', 8: '+1V8', 14: '+3V3', 7: 'GND', 5: 'GND', 10: 'GND', 2: 'M_TXD', 13: 'MODEM_RXD_H', 3: 'M_RXD', 12: 'MODEM_TXD_H', 4: 'M_STATUS', 11: 'MODEM_STATUS'}, G, alanlar={'MPN': 'TXB0104PWR'})
     p('C42', 'Device', 'C', '100nF', C, {1: '+1V8', 2: 'GND'}, G)
     p('C43', 'Device', 'C', '100nF', C, {1: '+3V3', 2: 'GND'}, G)
     for q, ctl, col, c in [('Q3', 'MODEM_PWRKEY_CTL', 'PWRKEY', 'C44'), ('Q4', 'MODEM_RST_CTL', 'MODEM_RESET', 'C45')]:
