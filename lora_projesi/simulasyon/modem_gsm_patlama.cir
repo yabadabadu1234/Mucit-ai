@@ -1,0 +1,54 @@
+* 12V -> TPS62933 (ortalama akim modu modeli) -> VBAT_MOD -> SIM7600 GSM patlamasi 2 A / 577 us / 216 Hz
+.param vin=12 vref=3.79 fi=300k fc=40k cout_tot=70u esr16=30m der=0.6
+Vsrc src 0 DC {vin}
+Rptc src a 0.2
+Rq1 a b 0.08
+Rw b vi 0.02
+C1 vi c1x 220u ic=12
+Rc1 c1x 0 0.15
+C10 vi c10x {10u*0.6} ic=12
+Rc10 c10x 0 8m
+C11 vi 0 100n ic=12
+* denetleyici
+* iL durumu: 1F kondansator uzerinde voltaj = akim
+CiL iL 0 1 ic=0
+BiL 0 iL I = max( -v(vo)/4.7u, min( (max(0,min(4.5, 6.28*{fc}*{cout_tot}*(v(vref)-v(vo)))) - v(iL))*6.28*{fi}, (v(vi)-v(vo))/4.7u ) )
+Vrf vref 0 DC {vref}
+* L akimi cikis dugumune
+Gl 0 vo value = {v(iL)}
+* girisi cekilen akim (verim %90)
+Gin vi 0 value = {v(iL)*v(vo)/(max(v(vi),6)*0.9)}
+* cikis kondansatorleri ve iz direncleri (karttan cikarilan, mohm)
+C14 c14x 0 {22u*der} ic=3.79
+Rc14 vo c14x 9m
+C15 c15x 0 {22u*der} ic=3.79
+Rc15 vo c15x 3.4m
+C16 c16x 0 330u ic=3.79
+Resr c16x c16y {esr16}
+Rc16 vo c16y 13.5m
+C48 c48x 0 {10u*0.5} ic=3.79
+Rc48 vo c48x 2.5m
+C47 c47x 0 100n ic=3.79
+Rc47 vo c47x 1.2m
+* modul: 4 VBAT ayagi, iz dirençleri 7.1 m (38/39) ve 18 m (62/63)
+Rm1 vo m1 7.1m
+Rm2 vo m2 18m
+.param iburst=2
+Iload1 m1 0 PULSE(0.05 {iburst/2} 1m 1u 1u 577u 4.615m)
+Iload2 m2 0 PULSE(0.05 {iburst/2} 1m 1u 1u 577u 4.615m)
+Rchk vo 0 1k
+.ic v(vo)=3.79 v(vi)=12
+.options method=gear reltol=1e-3 abstol=1e-10 vntol=1e-7 itl4=200 gmin=1e-10
+.tran 0.5u 20m 0 0.5u uic
+.control
+run
+meas tran vmin_modul MIN v(m1) from=2m to=20m
+meas tran vmin_m2 MIN v(m2) from=2m to=20m
+meas tran vmax_modul MAX v(m1) from=2m to=20m
+meas tran vin_min MIN v(vi) from=2m to=20m
+meas tran il_max MAX v(iL) from=2m to=20m
+meas tran vmod_dc AVG v(m1) from=19m to=19.6m
+print v(vo) v(iL) v(vi) v(m1)
+wrdata gsm.dat v(vo) v(iL) v(vi) v(m1)
+.endc
+.end

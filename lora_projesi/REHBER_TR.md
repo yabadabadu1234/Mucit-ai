@@ -52,7 +52,7 @@ Ayak atamaları ve güç tahmini `verici/TASARIM_NOTU.md` içinde.
 ## 5. Alıcı nasıl çalışıyor
 
 1. **Giriş:** 12 volt vidalı klemense gelir. Sırayla: 2 amperlik kendini toparlayan sigorta, ters bağlanmaya karşı P-kanallı transistör, aşırı gerilime karşı 15 voltluk koruma diyodu.
-2. **İki ayrı çevirici:** Biri 12 voltu 3,3 volta çevirir (kart ve modüller). Diğeri 3,8 volt üretir ve yalnızca 4G modemi besler, çünkü modem kısa süreli 2 amper çeker. Yanında 330 mikrofaradlık büyük kondansatör var.
+2. **İki ayrı çevirici:** Biri 12 voltu 3,3 volta çevirir (kart ve modüller). Diğeri 4,0 volt üretir ve yalnızca 4G modemi besler, çünkü modem kısa süreli 2 amper çeker. Yanında 330 mikrofaradlık büyük kondansatör var.
 3. **Beyin ve telsiz:** Verici ile aynı ESP32-S3 ve RFM95W. İkisi aynı veri hattını paylaşır, seçim hatları ayrı.
 4. **Ethernet:** W5500 çipi ve yerleşik trafolu RJ45 konnektörü. Bağlantı şeması üreticinin (WIZnet) resmî referans devresinden alındı.
 5. **4G modem:** SIM7600SA modülü, SIM kart yuvası kartın arka yüzünde modülün altında. Modemin seri hattı 1,8 volt; ESP32 ise 3,3 volt. Aralarına gerilim seviyesi çeviren çip konuldu. İlk planda yoktu, belgeyi okuyunca fark ettim.

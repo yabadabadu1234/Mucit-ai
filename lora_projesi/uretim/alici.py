@@ -43,7 +43,7 @@ def kur():
     p('C9', 'Device', 'C', '10uF 10V', C, {1: '+3V3', 2: 'GND'}, G)
 
     # ---------------- MODEM CEVIRICISI ----------------
-    G = 'MODEM BESLEMESI: TPS62933 (12 V -> 3,8 V, >= 2 A tepe) ve toplu kondansator'
+    G = 'MODEM BESLEMESI: TPS62933 (12 V -> 4,0 V, >= 2 A tepe) ve toplu kondansator'
     p('U6', 'Regulator_Switching', 'TPS62933', 'TPS62933DRLR', 'Package_TO_SOT_SMD:SOT-583-8',
       {3: '+12V', 4: 'GND', 5: 'SW_MOD', 6: 'BST_MOD', 7: 'SS_MOD', 8: 'FB_MOD', 2: 'MODEM_EN'}, G, alanlar={'MPN': 'TPS62933DRLR'})
     p('C10', 'Device', 'C', '10uF 25V', C12, {1: '+12V', 2: 'GND'}, G)
@@ -51,11 +51,11 @@ def kur():
     p('C12', 'Device', 'C', '100nF 25V', C, {1: 'BST_MOD', 2: 'SW_MOD'}, G)
     p('C13', 'Device', 'C', '33nF', C, {1: 'SS_MOD', 2: 'GND'}, G)
     p('L2', 'Device', 'L', '4,7uH 5A', L, {1: 'SW_MOD', 2: 'VBAT_MOD'}, G, alanlar={'MPN': '4,7uH, Isat >= 5 A (Bourns SRN6028 sinifi)'})
-    p('R4', 'Device', 'R', '37,4k 1%', R, {1: 'VBAT_MOD', 2: 'FB_MOD'}, G)
+    p('R4', 'Device', 'R', '40,2k 1%', R, {1: 'VBAT_MOD', 2: 'FB_MOD'}, G)
     p('R5', 'Device', 'R', '10k 1%', R, {1: 'FB_MOD', 2: 'GND'}, G)
     p('C14', 'Device', 'C', '22uF 10V', C12, {1: 'VBAT_MOD', 2: 'GND'}, G)
     p('C15', 'Device', 'C', '22uF 10V', C12, {1: 'VBAT_MOD', 2: 'GND'}, G)
-    p('C16', 'Device', 'C_Polarized', '330uF 6,3V polimer', 'Capacitor_SMD:CP_Elec_6.3x7.7', {1: 'VBAT_MOD', 2: 'GND'}, G, rot=0)
+    p('C16', 'Device', 'C_Polarized', '330uF 6,3V polimer ESR en fazla 40 mOhm', 'Capacitor_SMD:CP_Elec_6.3x7.7', {1: 'VBAT_MOD', 2: 'GND'}, G, rot=0)
     p('D3', 'Device', 'D_Zener', '5,1 V', 'Diode_SMD:D_SOD-123', {1: 'VBAT_MOD', 2: 'GND'}, G, rot=0, alanlar={'MPN': 'BZT52C5V1 (SIMCom onerisi, 500 mW)'})
     p('R6', 'Device', 'R', '100k', R, {1: '+3V3', 2: 'MODEM_EN'}, G)
     p('R7', 'Device', 'R', '1k', R, {1: 'MODEM_EN_CTL', 2: 'MODEM_EN'}, G)
