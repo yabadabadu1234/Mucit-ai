@@ -46,6 +46,9 @@ jobs:
           python3 uret.py
           mkdir -p "$GITHUB_WORKSPACE/_site/lora-ders"
           cp -r site/. "$GITHUB_WORKSPACE/_site/lora-ders/"
+          rm -rf "$GITHUB_WORKSPACE/lora-ders"
+          mkdir -p "$GITHUB_WORKSPACE/lora-ders"
+          cp -r site/. "$GITHUB_WORKSPACE/lora-ders/"
 
       - uses: actions/upload-pages-artifact@v3
         with:
@@ -61,7 +64,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add README.md index.html
+          if [ -d lora-ders ]; then git add -A lora-ders; fi
           if ! git diff --cached --quiet; then
-            git commit -m "Kitap bağlantısı yeni sürüme bağlandı (v=${SHA}) [skip ci]"
+            git commit -m "Kitap bağlantısı yeni sürüme bağlandı (v=${SHA}); ders sitesi güncellendi [skip ci]"
             git push origin HEAD:${GITHUB_REF_NAME}
           fi
