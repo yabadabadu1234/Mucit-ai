@@ -26,6 +26,7 @@ Relay driver: coil 29.8 mA, Vce(sat) 62 mV, flyback peak 12.2 V. Input protectio
 ## Known weaknesses (not fixed)
 - W5500 crystal lines are long: XI about 28 mm, XO about 32 mm (datasheet advice: short). The crystal sits about 15 mm from the chip. It will probably work but is the first thing to check on a prototype.
 - Ethernet pairs are not length matched: TD_P 35 mm vs TD_N 21 mm, RD_P 24 mm vs RD_N 12 mm.
-- SA/SA-H modem pinout is taken from the SIM7600E/E-H hardware design V1.02 (the SA/SA-H document was not found): must be verified before ordering.
+- SA/SA-H modem pinout is taken from the SIM7600E/E-H hardware design V1.02 (the SA/SA-H hardware document was not found): must be verified before ordering. The SIMCom 3-page product brief (SIM7600 series, 2020) only confirms: SA and E share the LCC 87-pin 30x30x2.9 mm package, supply 3.4-4.2 V, SIM 1.8/3.0 V; it has NO pin table, so it neither proves nor disproves the pin map.
+- Band check [from memory of Turkish networks, unverified; the brief itself lists the SA bands]: SIM7600SA LTE-FDD B1/2/3/4/5/7/8/28/66 + TDD B40, no B20. If the receiver will run on Turkish operators, ask whether B20 coverage is needed; SIM7600E (B1/3/5/7/8/20) lists B20.
 - Not verified: radio range, cellular coverage, antenna matching, stock and LCSC numbers, datasheets of AO3401A, SMBJ15A, 1812L200, HR911105A, AP2112K, SRD relay, SS14, USBLC6, TXB0104 and inductor saturation currents.
 - Four-layer stack-up is an assumption; confirm with the fabricator.

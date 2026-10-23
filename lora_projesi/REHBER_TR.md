@@ -78,7 +78,7 @@ Bunlar tasarımın mantıksal olarak çalıştığını gösterir; gerçek parç
 ## 8. Neler doğrulanmadı (açıkça)
 
 - Telsiz menzili, anten uyumu, cep telefonu şebekesinde bağlanma: ölçülmedi, kart yapılıp sahada denenmeli.
-- Modemin ayak düzeni SIM7600E/E-H resmî belgesinden alındı. SA/SA-H'nin kendi donanım belgesini bulamadım; sipariş öncesi doğrulanmalı.
+- Modemin ayak düzeni SIM7600E/E-H resmî belgesinden alındı. SA/SA-H'nin kendi donanım belgesini bulamadım; sipariş öncesi doğrulanmalı. Gönderdiğiniz 3 sayfalık ürün tanıtım belgesi yalnızca şunu doğruluyor: SA ile E aynı gövdede (87 ayaklı, 30×30 mm), besleme 3,4–4,2 volt. Ayak tablosu yok; yani ayak düzenini ne doğruluyor ne yalanlıyor. Ayrıca belgeye göre SA'da 800 MHz'lik 20. bant yok (E'de var); Türkiye'de kullanılacaksa bu bant gerekebilir (bu bilgi hafızamdan, doğrulanmadı).
 - Parça stoğu ve satıcı numaraları kontrol edilmedi.
 - Pil ömrü rakamları hesap; ölçüm değil.
 - Röleden geçecek lamba akımı bilinmiyor; 3 amper varsayıldı.
