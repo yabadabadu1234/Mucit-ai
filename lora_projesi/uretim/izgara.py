@@ -107,8 +107,9 @@ class Izgara:
         for v in via[1:]: vm = vm & v
         return np.array(out), np.array(vm)
 
-    def ara(self, nc, w, bas, hed, va_c=40.0, yumusak=False):
+    def ara(self, nc, w, bas, hed, va_c=40.0, yumusak=False, novia=False):
         ok, vok = self.yasak(nc, w, yumusak)
+        if novia: vok[:] = False
         if yumusak:
             ceza = np.zeros((NL, self.ny, self.nx), np.float32)
             for l in range(NL):
@@ -259,7 +260,7 @@ def calistir(yol, cikis, W, H):
         I = Izgara(b, W, H)
         tercih = 0.5 if net.startswith('+12V') else (0.4 if net in ('VBAT_MOD', 'LAMBA_SW') else 0.25)
         yapildi = False
-        GUCW = {'LAMBA_SW': (1.4, 1.0, 0.8), '+12V_IN': (1.4, 1.0, 0.8), 'VBAT_MOD': (0.7, 0.55, 0.45)}
+        GUCW = {'LAMBA_SW': (1.4, 1.0, 0.8), '+12V_IN': (1.4, 1.3, 1.2, 1.1, 1.0), 'VBAT_MOD': (0.7, 0.55, 0.45)}
         ws = GUCW.get(net, (tercih, 0.25, 0.2))
         va = 1000.0 if net in ('LAMBA_SW', '+12V_IN') else 40.0
         for w in ws:

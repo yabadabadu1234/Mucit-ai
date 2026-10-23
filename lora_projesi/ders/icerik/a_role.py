@@ -67,7 +67,7 @@ def uret(ver, ctx):
     h.append('<h3>3.4 Kontak akımı ve iz genişliği</h3><p>Lamba akımını bilmiyoruz; teklifte yoktu. Çalışma varsayımı 3 A (36 W). Röle kontağı genel olarak 10 A (28 V DC’ye kadar) taşır [[bilgi]] [[dogrulanmadi]]; ama akkor telli lambada ilk anda akım 10 katına çıkabilir [[bilgi]]: 30 A, bu kontak için fazla olabilir. Lamba türü (LED/akkor) öğrenilmeden röle ve iz değerleri kesinleşmez.</p>')
     h.append(hesap('iz', [3, 10, 35, 1]))
     h.append(iz_taramasi(v, [('LAMBA_SW', 3.0, 'lamba (varsayım)'), ('+12V_IN', 3.0, 'kontak girişi (varsayım)'), ('ROLE_L', 0.03, 'bobin')]))
-    h.append(kutu('uyari', 'Lamba hattı için karttaki iz 0,4 mm; gereken ≈ 1,4 mm. Kart üretilmeden önce bu hat elle genişletilmelidir (açık iş).', 'Açık iş'))
+    h.append(kutu('not', 'Lamba hattı karta 1,4 mm genişlikte ve viyasız çizildi (önceki 0,4 mm yetersizdi). Akım 3 A’i aşarsa genişlik yeniden hesaplanmalıdır; tablodaki ölçü bunu kendiliğinden gösterir.', 'Giderildi'))
     h.append('<h2>4. Parça kartları</h2><div class="kartlar">' + ''.join(v.kart_html(r) for r in REFS) + '</div>')
     h.append('<h2>5. Uç durumlar</h2><table><tr><th>Durum</th><th>Ne olur?</th></tr>'
              '<tr><td>İşlemci açılıyor (ayak belirsiz)</td><td>R38 tabanı toprakta tutar: röle çekmez, lamba yanmaz. IO38 bir açılış (strapping) ayağı değildir. [[ds]]</td></tr>'
