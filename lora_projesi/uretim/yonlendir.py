@@ -131,18 +131,19 @@ MERKEZ = {}
 
 def plane_via(b, aglar, W, H, via_d=0.5, via_drill=0.25, klirens=0.15, iz=0.25, kenar=0.6, sadece=None):
     F, B = pcbnew.F_Cu, pcbnew.B_Cu
+    I2 = pcbnew.In2_Cu
     def ob_topla():
-        obs = {F: [], B: []}
+        obs = {F: [], B: [], I2: []}
         for pad in b.GetPads():
             bb = pad.GetBoundingBox()
             r = (bb.GetLeft() / 1e6, bb.GetTop() / 1e6, bb.GetRight() / 1e6, bb.GetBottom() / 1e6)
-            for L in (F, B):
+            for L in (F, B, I2):
                 if pad.IsOnLayer(L):
                     obs[L].append(('r', r, pad.GetNetCode(), id(pad)))
         for t in b.GetTracks():
             if t.GetClass() == 'PCB_VIA':
                 p = t.GetPosition(); rr = t.GetWidth() / 2e6
-                for L in (F, B):
+                for L in (F, B, I2):
                     obs[L].append(('c', (p.x / 1e6, p.y / 1e6, rr), t.GetNetCode(), 0))
             else:
                 L = t.GetLayer()
@@ -214,7 +215,7 @@ def plane_via(b, aglar, W, H, via_d=0.5, via_drill=0.25, klirens=0.15, iz=0.25, 
                         if math.hypot(qx - hx, qy - hy) < via_drill / 2 + hr + 0.3:
                             sorun = True; break
                     if sorun: continue
-                    for LL in (F, B):
+                    for LL in (F, B, I2):
                         for o in obs[LL]:
                             if o[2] == nc:
                                 continue
