@@ -72,7 +72,7 @@ if __name__ == '__main__':
     b = p.b
     b.Save(os.path.join(DIZIN, 'alici_once%s.kicad_pcb' % ET))
     dsn = '/tmp/claude-0/alici%s.dsn' % ET; ses = '/tmp/claude-0/alici%s.ses' % ET
-    ls = pcbnew.LSET(); ls.AddLayer(pcbnew.F_Cu); ls.AddLayer(pcbnew.B_Cu)
+    ls = pcbnew.LSET(); ls.AddLayer(pcbnew.F_Cu); ls.AddLayer(pcbnew.B_Cu); ls.AddLayer(pcbnew.In2_Cu)
     zlar = []
     for t in p.on_iz:
         b.Remove(t)
@@ -97,7 +97,21 @@ if __name__ == '__main__':
         log = Y.fr_calistir(dsn, ses, gecis, zaman=3000)
         print([l for l in log.split('\n') if 'completed' in l][:6])
     print('ses', Y.ses_uygula(b, ses))
-    pv = Y.plane_via(b, ['GND', '+3V3'], alici_pcb.W, alici_pcb.H)
+    in2 = [t for t in b.GetTracks() if t.GetClass() == 'PCB_TRACK' and t.GetLayer() == pcbnew.In2_Cu]
+    eksik = set()
+    for v in [t for t in p.on_iz if t.GetClass() == 'PCB_VIA']:
+        c = v.GetPosition(); r = v.GetWidth() / 2e6
+        if not any(t.GetNetCode() != v.GetNetCode() and Y._nokta_dogru(c.x / 1e6, c.y / 1e6, t.GetStart().x / 1e6, t.GetStart().y / 1e6, t.GetEnd().x / 1e6, t.GetEnd().y / 1e6) < r + t.GetWidth() / 2e6 + 0.2 for t in in2):
+            continue
+        for st in [t for t in p.on_iz if t.GetClass() != 'PCB_VIA' and (t.GetStart() == c or t.GetEnd() == c)]:
+            u = st.GetEnd() if st.GetStart() == c else st.GetStart()
+            for pad in b.GetPads():
+                if pad.GetPosition() == u and pad.GetNetCode() == v.GetNetCode():
+                    eksik.add((pad.GetParent().GetReference(), pad.GetNumber()))
+            b.Remove(st)
+        b.Remove(v)
+    print('in2 ile cakisan on via, yeniden yerlestirilecek pad', len(eksik))
+    pv = Y.plane_via(b, ['GND', '+3V3'], alici_pcb.W, alici_pcb.H, sadece=eksik) if eksik else {'eklendi': 0, 'bulunamadi': []}
     print('plane via', pv['eklendi'], 'bulunamadi', pv['bulunamadi'])
     Y.doldur(b)
     b.BuildConnectivity()
