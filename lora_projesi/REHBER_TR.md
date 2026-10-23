@@ -86,4 +86,6 @@ Bunlar tasarımın mantıksal olarak çalıştığını gösterir; gerçek parç
 ## 9. Durum
 
 - **Verici:** bitti. Kural denetiminden hata çıkmadı, üretim dosyaları hazır.
-- **Alıcı:** şema hazır. Kart yerleşimi ve yol çizimi sürüyor, henüz üretime hazır değil. Bitince bu rehberin "Durum" kısmını güncelleyeceğim.
+- **Alıcı:** bitti. Kart 88 × 102 mm, dört katmanlı. Kural denetiminde hata yok, bağlantısız ayak yok; 531 ayağın hepsi şemadan çıkarılan bağlantı listesiyle karşılaştırıldı, uyumsuzluk yok. Üretim dosyaları `alici/uretim_dosyalari/` içinde. Lamba hattı 1,4 mm genişlikte ve viyasız (3 A varsayımıyla).
+- **Bilinen zayıflıklar (alıcı):** W5500'ün kristal hatları uzun (yaklaşık 28 ve 32 mm; veri sayfası kısa ister), Ethernet çiftlerinin uzunlukları eşit değil, modem modülünün SA/SA-H ayak düzeni doğrulanmadı (E/E-H belgesinden alındı), telsiz menzili ve hücresel bağlantı denenmedi. Ayrıntı: `alici/TASARIM_NOTU.md`.
+- **Ders sitesi:** tasarımı sıfırdan öğreten bir site `ders/` klasöründedir; her güncellemede GitHub Pages'e otomatik yayınlanır (bkz. `ders/README.md`).

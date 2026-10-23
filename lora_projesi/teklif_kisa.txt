@@ -1,17 +1,17 @@
 Hello,
 
-I have started the design and may finish it before you accept. I deliver everything in your requirements (no firmware), ready for PCBWay/JLCPCB. Everything below is my first-impression plan and may change out of necessity, but I will always aim for the best possible product.
+Your product is ready. Both designs are finished and I can send the complete files as soon as you accept: KiCad sources (schematics and PCBs), Gerber, drill, BOM and pick-and-place files for PCBWay/JLCPCB, and PDFs of the schematics and board views. No firmware, as you asked.
 
-Extras, free (say if unwanted): design note (power budget, antenna, pinout), simulation reports for relay driver and 12 V protection, reverse-polarity and surge protection.
+Transmitter: 40 x 100 mm, 4 layers, two AAA cells + buck-boost converter + switch, ESP32-S3 (USB-C built in, so no USB-serial chip), RFM95W-915S2 with SMA, six buttons, status LED.
+Receiver: 88 x 102 mm, 4 layers, 12 V screw terminal with reverse-polarity and surge protection, 3.3 V and a separate 3.8 V converter for the modem, ESP32-S3, RFM95W with SMA, W5500 Ethernet with RJ45, SIM7600SA 4G modem (u.FL antenna, micro-SIM), relay for the lamp (contacts on 1.4 mm traces, sized for a 3 A assumption).
 
-Modem: default SIM7600SA (Cat 1, cheaper; bands 2/4/5/7/28/66 cover common Chilean carriers). If you state it is insufficient, SIM7600SA-H (Cat 4). Bands are confirmed against the datasheet before schematic freeze.
+Checked: KiCad design rule check with 0 errors and 0 unconnected pads on both boards; every pad compared with the schematic netlist; relay driver and input protection simulated in ngspice.
+Not checked, and I will not claim it: radio range, cellular coverage, antenna matching, part stock. The SA modem pinout comes from the SIM7600E/E-H hardware document (the SA one was not found) and should be confirmed before ordering.
 
-My part choices: ESP32-WROOM-32E, RFM95W-915S2, USB-C + CH340C, W5500 + HR911105A, relay Songle SRD-12VDC-SL-A with MMBT2222A and SS14, TPS62933 converters, SMBJ15A, AO3401A, 2xAAA (Keystone 2468) + TPS63031 + MSK12C02 switch, SMA and u.FL, Nano-SIM holder. Stock is checked in the PCBWay/JLCPCB libraries.
+Extras, free: design notes (pin map, power budget, known weak points), simulation reports.
 
-Verification: KiCad ERC/DRC, power budget, ngspice. I cannot measure range or coverage without built boards.
+I can adapt the files to your answers (e.g. SIM7600SA-H instead of SA, real lamp current, a different board size) within 5 days of acceptance at no extra charge. Defaults if unanswered: open-field range; 2xAAA, no charger; unlocked micro-SIM; Ethernet and 4G independent.
 
-Defaults if unanswered: open-field range; 2xAAA, no charger; transmitter max 40x100 mm, receiver as small and efficient as possible; relay 12 VDC 10 A; one design per device, files only; unlocked Nano-SIM; Ethernet and 4G independent.
-
-5 days from acceptance. 333.33 USD.
+333.33 USD.
 
 [YOUR NAME]

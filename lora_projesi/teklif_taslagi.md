@@ -1,52 +1,54 @@
-# Teklif taslağı (İngilizce, ilana gönderilecek metin)
+# Teklif (İngilizce, ilana gönderilecek metin) -- "ürününüz hazır" sürümü
+
+Kısa sürüm `teklif_kisa.txt` dosyasındadır. Bu dosya aynı teklifin ayrıntılı hâlidir. Fiyat: 333,33 USD (önceki taslaktaki 300 USD yerine; ilandaki teklif tutarıyla aynı olmalıdır, göndermeden önce kontrol edilecek).
+
+---
 
 Hello,
 
-I have started the design and may have finished it before you accept this offer.
+Your product is ready. Both designs are finished. I send the complete files as soon as you accept. No firmware, as you asked.
 
-I will deliver everything listed in your requirements, nothing less. No firmware, as stated.
+## What you receive (for each board)
+- KiCad sources: schematic and PCB
+- Gerber files (4 copper layers, mask, paste, silkscreen, board edge), drill files, zipped for PCBWay / JLCPCB
+- Bill of materials (CSV) and pick-and-place file (CSV)
+- PDFs of the schematic and of the board (front and back)
+- A short design note: pin map, power budget, known weak points
 
-The choices below are plans made from my first impressions, before the detailed work. They may change during the work if necessity requires it, but under every condition I will do my best to deliver the best possible product.
+## The two boards
+- Transmitter, 40 x 100 mm, 4 layers: two AAA cells (Keystone 2468 holder), TPS63031 buck-boost to 3.3 V, slide switch, USB-C, ESP32-S3-WROOM-1 (native USB, so no USB-serial chip and no extra standby drain), RFM95W-915S2 with an SMA connector, six buttons wired to wake-up capable pins, one status LED.
+- Receiver, 88 x 102 mm, 4 layers: 12 V screw terminal, PTC fuse, P-MOSFET reverse-polarity protection, SMBJ15A surge protection, TPS62933 converter to 3.3 V and a second TPS62933 to 3.8 V for the modem (2 A bursts, 330 uF polymer capacitor), ESP32-S3-WROOM-1, RFM95W-915S2 with SMA, W5500 Ethernet with HR911105A RJ45, SIM7600SA 4G modem (u.FL antenna, micro-SIM holder, TXB0104 level translator because the modem serial lines are 1.8 V), relay SRD-12VDC-SL-A with MMBT2222A driver and SS14 flyback diode. The lamp current path is 1.4 mm wide with no vias (sized for 3 A; the real lamp current was not in your requirements).
 
-## Additional items (not in your requirements, included at no extra charge; tell me if you do not want them)
-- A short design note: power budget, antenna placement, connector pin-out
-- Circuit simulation reports for the relay driver and the 12 V input protection
-- Reverse polarity and surge protection on the 12 V input
+## Changes from my first plan, and why
+- ESP32-S3 instead of ESP32-WROOM-32E: native USB removes the CH340C and its battery drain problem.
+- 4 layers instead of 2: continuous ground under the 50 ohm antenna lines.
+- Micro-SIM holder instead of nano: only a micro holder was available in the library I used. A nano SIM works with an adapter; tell me if you need a nano holder.
+- Level translator added for the modem (found while reading the modem document).
 
-## Cellular modem
-Default: SIMCom SIM7600SA (LTE Cat 1), the cheaper one. Its published band list includes bands 2, 4, 5, 7, 28 and 66, which cover the bands commonly used by Chilean carriers. If you state that it is not sufficient, I will use the SIM7600SA-H (LTE Cat 4) instead. I will confirm the exact band list against the manufacturer datasheet and the target carrier's current bands before the schematic is frozen.
+## What was checked
+- KiCad design rule check: 0 errors and 0 unconnected pads on both boards.
+- Every pad compared with the netlist exported from the schematic: 0 mismatches.
+- ngspice simulation of the relay driver and of the 12 V input protection (generic models, not the manufacturers' models).
+- Trace widths of the lamp path checked against IPC-2221.
 
-## Parts not specified in your requirements: my choices
-Chosen for expected low cost and good availability. Stock and final values are checked against the PCBWay / JLCPCB parts libraries during the design.
-- Microcontroller (both boards): ESP32-WROOM-32E
-- LoRa radio (both boards): RFM95W-915S2
-- USB programming: USB-C connector with CH340C USB-to-serial chip and automatic reset circuit
-- Ethernet: W5500 chip with HR911105A connector (RJ45 with built-in magnetics)
-- Relay: Songle SRD-12VDC-SL-A (10 A, normally open), driven by an MMBT2222A transistor with an SS14 flyback diode
-- Receiver power: TPS62933 step-down converters (12 V to 5 V and to the modem voltage), 3.3 V rail from a step-down converter instead of a linear regulator, to reduce heat
-- 12 V input protection: SMBJ15A surge protector, AO3401A reverse polarity protection
-- Transmitter power: two AAA cells in a Keystone 2468 holder, TPS63031 buck-boost converter to 3.3 V, slide switch MSK12C02
-- Buttons and LEDs: 6 mm tact switches, 0603 LEDs with series resistors
-- Connectors: 5.08 mm screw terminals (12 V input, relay contacts), SMA edge-mount connectors for LoRa antennas, u.FL connector for the cellular antenna, Nano-SIM push-push holder
+## What I did not check and will not claim
+- Radio range, antenna matching, cellular coverage: these need built boards and a field test.
+- The SA modem pinout comes from the SIM7600E/E-H hardware design document, because the SA/SA-H one was not found. Please confirm before ordering.
+- Part stock and LCSC numbers; some datasheets (surge diode, MOSFET, relay, Ethernet connector, level translator) were not read in full.
+- Known weak points of the receiver layout: the W5500 crystal traces are long (about 28-32 mm) and the Ethernet pairs are not length matched. They should work but are the first things to look at on a prototype.
 
-## How I verify the design
-- Electrical rules check and design rules check in KiCad
-- Power budget per rail, with current margins
-- ngspice simulation of the relay driver and the input protection
+## Questions, with the defaults the files already use
+1. Range: open field, line of sight. (No range figure can be guaranteed.)
+2. Transmitter battery: two AAA alkaline cells, no charger.
+3. Antennas: SMA for LoRa on both boards, u.FL for the cellular antenna.
+4. Lamp: 12 V, 3 A assumed. Tell me the real current and I resize the traces.
+5. Modem: SIM7600SA (Cat 1). If you need SIM7600SA-H (Cat 4), I adapt the files.
+6. SIM: unlocked SIM from any Chilean carrier.
+7. Ethernet and 4G: both present and independent.
 
-I cannot measure radio range or cellular coverage without built boards. I will follow the module manufacturers' reference designs and layout guidelines; real range needs a field test.
+I can adapt the files to your answers within 5 days of acceptance, at no extra charge.
 
-## Questions, with the defaults I will design to if you do not answer
-1. Target range of the remote: open field, line of sight. (I design for it but cannot guarantee a range figure.)
-2. Transmitter battery: two AAA alkaline cells in a user-replaceable holder (easy to source), with a converter to 3.3 V and the main ON/OFF switch. No charging circuit.
-3. Antennas: SMA connectors for the LoRa radio on both boards, plus a u.FL connector for the cellular antenna on the receiver.
-4. Board size: transmitter 40 x 100 mm is treated as the maximum; the receiver has no size limit in your requirements. For both I will aim for the smallest and most power-efficient board possible. Four M3 mounting holes, no enclosure assumed.
-5. Relay: 12 V coil, normally open contact rated for 12 VDC at 10 A, wired to a screw terminal. The 12 V input also feeds the board through a screw terminal.
-6. Quantity: one design per device. No physical production by me, design files only.
-7. SIM: unlocked Nano-SIM from any Chilean carrier.
-8. Ethernet and 4G: both present and independent on the board.
-
-Timeline: 5 days from your acceptance. Price: 300 USD, fixed.
+Price: 333.33 USD.
 
 Best regards,
 [YOUR NAME]
