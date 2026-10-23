@@ -33,7 +33,7 @@ Your product is ready. Both designs are finished. I send the complete files as s
 
 ## What I did not check and will not claim
 - Radio range, antenna matching, cellular coverage: these need built boards and a field test.
-- The SA modem pinout comes from the SIM7600E/E-H hardware design document, because the SA/SA-H one was not found. Please confirm before ordering.
+- The modem pin table was compared with SIMCom's SIM7600 Series Hardware Design V1.08, which lists SA/SA-H among the covered models (87 pins; all 87 names and numbers match). That document has one common pin table, not an SA-only one, so please still confirm with the supplier before ordering.
 - Part stock and LCSC numbers; some datasheets (surge diode, MOSFET, relay, Ethernet connector, level translator) were not read in full.
 - Known weak points of the receiver layout: the W5500 crystal traces are long (about 28-32 mm) and the Ethernet pairs are not length matched. They should work but are the first things to look at on a prototype.
 

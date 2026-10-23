@@ -1,17 +1,17 @@
 Hello,
 
-Your product is ready. Both designs are finished and I can send the complete files as soon as you accept: KiCad sources (schematics and PCBs), Gerber, drill, BOM and pick-and-place files for PCBWay/JLCPCB, and PDFs of the schematics and board views. No firmware, as you asked.
+Your product is ready. Both designs are finished; I send the complete files as soon as you accept. No firmware, as you asked.
 
-Transmitter: 40 x 100 mm, 4 layers, two AAA cells + buck-boost converter + switch, ESP32-S3 (USB-C built in, so no USB-serial chip), RFM95W-915S2 with SMA, six buttons, status LED.
-Receiver: 88 x 102 mm, 4 layers, 12 V screw terminal with reverse-polarity and surge protection, 3.3 V and a separate 3.8 V converter for the modem, ESP32-S3, RFM95W with SMA, W5500 Ethernet with RJ45, SIM7600SA 4G modem (u.FL antenna, micro-SIM), relay for the lamp (contacts on 1.4 mm traces, sized for a 3 A assumption).
+Per board you get: KiCad schematic and PCB, Gerber and drill files (4 layers, ready for PCBWay/JLCPCB), BOM, pick-and-place file, PDFs, and a short design note (pin map, power budget, weak points).
 
-Checked: KiCad design rule check with 0 errors and 0 unconnected pads on both boards; every pad compared with the schematic netlist; relay driver and input protection simulated in ngspice.
-Not checked, and I will not claim it: radio range, cellular coverage, antenna matching, part stock. The SA modem pinout comes from the SIM7600E/E-H hardware document (the SA one was not found) and should be confirmed before ordering.
+Transmitter, 40 x 100 mm: 2 AAA cells, buck-boost to 3.3 V, ESP32-S3 (native USB), RFM95W-915S2 with SMA, six wake-up buttons, status LED.
+Receiver, 88 x 102 mm: 12 V input with fuse, reverse-polarity and surge protection; separate 3.8 V supply for the modem (2 A bursts); ESP32-S3; RFM95W with SMA; W5500 Ethernet with RJ45; SIM7600SA 4G modem (micro-SIM, u.FL) with a 1.8 V level translator; relay for the lamp (1.4 mm traces, sized for an assumed 3 A).
 
-Extras, free: design notes (pin map, power budget, known weak points), simulation reports.
+Checked: KiCad design rules, 0 errors and 0 unconnected pads on both boards; every pad compared with the schematic netlist; modem pin table compared with SIMCom's SIM7600 Series Hardware Design V1.08; relay driver and input protection simulated.
+Not checked: radio range, antenna matching, Chilean 4G coverage, part stock. Receiver weak points: long W5500 crystal traces, unmatched Ethernet pairs.
 
-I can adapt the files to your answers (e.g. SIM7600SA-H instead of SA, real lamp current, a different board size) within 5 days of acceptance at no extra charge. Defaults if unanswered: open-field range; 2xAAA, no charger; unlocked micro-SIM; Ethernet and 4G independent.
+Defaults if unanswered: open-field range, 2 x AAA without charger, unlocked Chilean micro-SIM, Ethernet and 4G independent, 3 A lamp. I adapt the files within 5 days of acceptance at no extra charge.
 
-333.33 USD.
+Price: 333.33 USD.
 
 [YOUR NAME]

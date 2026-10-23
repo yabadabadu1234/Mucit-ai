@@ -78,7 +78,8 @@ Bunlar tasarımın mantıksal olarak çalıştığını gösterir; gerçek parç
 ## 8. Neler doğrulanmadı (açıkça)
 
 - Telsiz menzili, anten uyumu, cep telefonu şebekesinde bağlanma: ölçülmedi, kart yapılıp sahada denenmeli.
-- Modemin ayak düzeni SIM7600E/E-H resmî belgesinden alındı. SA/SA-H'nin kendi donanım belgesini bulamadım; sipariş öncesi doğrulanmalı. Gönderdiğiniz 3 sayfalık ürün tanıtım belgesi yalnızca şunu doğruluyor: SA ile E aynı gövdede (87 ayaklı, 30×30 mm), besleme 3,4–4,2 volt. Ayak tablosu yok; yani ayak düzenini ne doğruluyor ne yalanlıyor. Ayrıca belgeye göre SA'da 800 MHz'lik 20. bant yok (E'de var); Türkiye'de kullanılacaksa bu bant gerekebilir (bu bilgi hafızamdan, doğrulanmadı).
+- Modemin ayak tablosu SIMCom'un SIM7600 Series Hardware Design V1.08 belgesiyle betikle karşılaştırıldı (belge SA ve SA-H'yi kapsıyor): 87 ayağın numarası ve adı uyuyor. Belgede yalnız SA'ya ait ayrı tablo yok; ortak tablo var.
+- Modem besleme hattı 0,7 mm; SIMCom 2 mm'den geniş öneriyor. PWRKEY/RESET için koruma diyodu ve SIM hatlarında 22 ohm seri direnç önerilmiş, bizde yok. Modemin USB'si bağlı değil (yazılım güncellemesi için).
 - Parça stoğu ve satıcı numaraları kontrol edilmedi.
 - Pil ömrü rakamları hesap; ölçüm değil.
 - Röleden geçecek lamba akımı bilinmiyor; 3 amper varsayıldı.
@@ -87,5 +88,5 @@ Bunlar tasarımın mantıksal olarak çalıştığını gösterir; gerçek parç
 
 - **Verici:** bitti. Kural denetiminden hata çıkmadı, üretim dosyaları hazır.
 - **Alıcı:** bitti. Kart 88 × 102 mm, dört katmanlı. Kural denetiminde hata yok, bağlantısız ayak yok; 531 ayağın hepsi şemadan çıkarılan bağlantı listesiyle karşılaştırıldı, uyumsuzluk yok. Üretim dosyaları `alici/uretim_dosyalari/` içinde. Lamba hattı 1,4 mm genişlikte ve viyasız (3 A varsayımıyla).
-- **Bilinen zayıflıklar (alıcı):** W5500'ün kristal hatları uzun (yaklaşık 28 ve 32 mm; veri sayfası kısa ister), Ethernet çiftlerinin uzunlukları eşit değil, modem modülünün SA/SA-H ayak düzeni doğrulanmadı (E/E-H belgesinden alındı), telsiz menzili ve hücresel bağlantı denenmedi. Ayrıntı: `alici/TASARIM_NOTU.md`.
+- **Bilinen zayıflıklar (alıcı):** W5500'ün kristal hatları uzun (yaklaşık 28 ve 32 mm; veri sayfası kısa ister), Ethernet çiftlerinin uzunlukları eşit değil, modem besleme izi önerilen 2 mm yerine 0,7 mm, telsiz menzili ve hücresel bağlantı denenmedi. Ayrıntı: `alici/TASARIM_NOTU.md`.
 - **Ders sitesi:** tasarımı sıfırdan öğreten bir site `ders/` klasöründedir; her güncellemede GitHub Pages'e otomatik yayınlanır (bkz. `ders/README.md`).
