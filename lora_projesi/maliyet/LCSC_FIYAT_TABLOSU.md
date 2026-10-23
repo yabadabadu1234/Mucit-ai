@@ -35,3 +35,10 @@ Stok ve fiyat anlik degisir. "Kademe" = LCSC fiyat basamagi. Modem/LoRa icin 100
 | Ra-01H + A7670SA-LASC | 45,46 |
 
 Not: toplamin yaklasik 21 USD'si hala tahmindir (konektorler, pasifler, PCB, montaj; maliyet.py "T" kalemleri). A7670SA son ekleri (LASC/LASE/FASE/MASC) icin belgede esleme yok; hangisi Sili icin uygun dogrulanmadi.
+
+## A7670SA son ekleri: ne doğrulandı (2026-10-23)
+- SIMCom A7670SA datasheet'i (LCSC'deki FASE belgesi, V2021.01) ve A7670 serisi tanıtım belgesi (LCSC'deki LASC ve LASE belgeleri, V2020.02) **tek bir SA bant listesi** verir: LTE-FDD B1/B2/B3/B4/B5/B7/B8/B28/B66, GSM 850/900/1800/1900. Son ekler (LASC/LASE/FASE/MASC) için ayrı bant tablosu yoktur.
+- LCSC'nin kendi "Frequency Range" alanı bu belgelerle çelişir (LASE: B1-B7, FASE: B1-B4, LASC: tam liste). Katalog girişi hatalıdır; belge esas alınır.
+- Son ek anlamı SIMCom belgelerinde **yazılı değil**. Üçüncü taraf iki kaynak (kullanıcı kılavuzu, bir blog) LASE = GNSS yok, FASE = GNSS ve BT var der; LASC/MASC/MASE için kaynak bulunamadı.
+- Şili LTE bantları (Kimovil, Wikipedia, registromultibanda; kaynaklar kısmen tutarsız): B28 (700 MHz, üç büyük operatör), B7 (2600), B2 (1900), B4 AWS (WOM'un ana bandı), B66 (WOM), Claro 850 (B5). A7670SA hepsini taşır; **B3 Şili listesinde yok, gerekli değil**.
+- Karar: tasarım **A7670SA ailesi** için yapılır (24x24 LGA, 88 pad; aynı ayak izi). BOM'da ana kod **A7670SA-LASE** (GNSS/BT yok, bu projede gerekmez). LASC aynı bant listesini taşır ve %21 ucuzdur ama farkı belgelenmemiştir: satın almadan önce LCSC/SIMCom'a yazılı soru olarak sorulacaktır; tasarımı etkilemez.
