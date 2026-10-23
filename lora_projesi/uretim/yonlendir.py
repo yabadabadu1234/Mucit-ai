@@ -127,6 +127,8 @@ def _dogru_dikdortgen(ax, ay, bx, by, x0, y0, x1, y1):
         m = min(m, _nokta_dikdortgen(ax + t * (bx - ax), ay + t * (by - ay), x0, y0, x1, y1))
     return m
 
+MERKEZ = {}
+
 def plane_via(b, aglar, W, H, via_d=0.5, via_drill=0.25, klirens=0.15, iz=0.25, kenar=0.6, sadece=None):
     F, B = pcbnew.F_Cu, pcbnew.B_Cu
     def ob_topla():
@@ -195,7 +197,12 @@ def plane_via(b, aglar, W, H, via_d=0.5, via_drill=0.25, klirens=0.15, iz=0.25, 
             # zaten bir via ile ayni agda ve cok yakin mi
             ok = None
             for r in (0.9, 1.1, 1.4, 1.8, 2.3, 3.0, 4.0):
-                for k in range(16):
+                ks = list(range(16))
+                mk = MERKEZ.get(pad.GetParent().GetReference())
+                if mk:
+                    ta = math.atan2(mk[1] - cy, mk[0] - cx)
+                    ks.sort(key=lambda kk: abs(math.atan2(math.sin(2 * math.pi * kk / 16 - ta), math.cos(2 * math.pi * kk / 16 - ta))))
+                for k in ks:
                     a = 2 * math.pi * k / 16
                     qx, qy = cx + r * math.cos(a), cy + r * math.sin(a)
                     if qx < kenar + yaricap or qx > W - kenar - yaricap or qy < kenar + yaricap or qy > H - kenar - yaricap:
