@@ -37,6 +37,16 @@ jobs:
           cp _site/kuran_hikmetleri_kitap.html _site/index.html
           printf '{"sha":"%s"}\n' "${GITHUB_SHA}" > _site/surum.json
 
+      - name: LoRa ders sitesini /lora-ders/ altına ekle (başarısız olursa kitap yayını etkilenmez)
+        continue-on-error: true
+        run: |
+          git fetch --depth 1 origin claude/restore-lost-code-wlcust
+          git worktree add --detach "$RUNNER_TEMP/ders" FETCH_HEAD
+          cd "$RUNNER_TEMP/ders/lora_projesi/ders"
+          python3 uret.py
+          mkdir -p "$GITHUB_WORKSPACE/_site/lora-ders"
+          cp -r site/. "$GITHUB_WORKSPACE/_site/lora-ders/"
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
