@@ -19,7 +19,7 @@ def kur():
     # ---------------- 12 V GIRIS ----------------
     G = '12 V GIRISI: klemens, sigorta, ters baglanti ve asiri gerilim korumasi'
     p('J5', 'Connector', 'Screw_Terminal_01x02', '12 V GIRIS', 'TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal', {1: '+12V_IN', 2: 'GND'}, G, rot=0)
-    p('F1', 'Device', 'Polyfuse', '1812L200 (2 A)', 'Fuse:Fuse_1812_4532Metric', {1: '+12V_IN', 2: '+12V_F'}, G, alanlar={'MPN': 'PTC 2 A tutma, 1812'})
+    p('F1', 'Device', 'Polyfuse', '1812L200/16DR (2 A, 16 V)', 'Fuse:Fuse_1812_4532Metric', {1: '+12V_IN', 2: '+12V_F'}, G, alanlar={'MPN': 'Littelfuse 1812L200/16DR (tutma 2 A, 16 V; 8 V olan 1812L200TH kullanilmaz)'})
     p('Q1', 'Transistor_FET', 'AO3401A', 'AO3401A', 'Package_TO_SOT_SMD:SOT-23', {1: 'KAPI_P', 2: '+12V', 3: '+12V_F'}, G, rot=0, alanlar={'MPN': 'AO3401A'})
     p('R1', 'Device', 'R', '100k', R, {1: 'KAPI_P', 2: 'GND'}, G)
     p('D1', 'Device', 'D_Zener', '10 V', 'Diode_SMD:D_SOD-123', {1: '+12V', 2: 'KAPI_P'}, G, rot=0, alanlar={'MPN': 'BZT52C10 (10 V zener)'})
@@ -33,9 +33,9 @@ def kur():
       {3: '+12V', 4: 'GND', 5: 'SW_3V3', 6: 'BST_3V3', 7: 'SS_3V3', 8: 'FB_3V3'}, G, alanlar={'MPN': 'TPS62933DRLR'})
     p('C3', 'Device', 'C', '10uF 25V', C12, {1: '+12V', 2: 'GND'}, G)
     p('C4', 'Device', 'C', '100nF 50V', C, {1: '+12V', 2: 'GND'}, G)
-    p('C5', 'Device', 'C', '100nF 25V', C, {1: 'BST_3V3', 2: 'SW_3V3'}, G)
+    p('C5', 'Device', 'C', '100nF 25V X7R', C, {1: 'BST_3V3', 2: 'SW_3V3'}, G)
     p('C6', 'Device', 'C', '33nF', C, {1: 'SS_3V3', 2: 'GND'}, G)
-    p('L1', 'Device', 'L', '4,7uH 5A', L, {1: 'SW_3V3', 2: '+3V3'}, G, alanlar={'MPN': '4,7uH, Isat >= 5 A (Bourns SRN6028 sinifi)'})
+    p('L1', 'Device', 'L', '4,7uH Isat 2,7A', L, {1: 'SW_3V3', 2: '+3V3'}, G, alanlar={'MPN': 'Bourns SRN6028-4R7M (Isat 2,7 A, Irms 3 A, DCR 38 mOhm; dagitimci listesi)'})
     p('R2', 'Device', 'R', '31,6k 1%', R, {1: '+3V3', 2: 'FB_3V3'}, G)
     p('R3', 'Device', 'R', '10k 1%', R, {1: 'FB_3V3', 2: 'GND'}, G)
     p('C7', 'Device', 'C', '22uF 10V', C12, {1: '+3V3', 2: 'GND'}, G)
@@ -48,9 +48,9 @@ def kur():
       {3: '+12V', 4: 'GND', 5: 'SW_MOD', 6: 'BST_MOD', 7: 'SS_MOD', 8: 'FB_MOD', 2: 'MODEM_EN'}, G, alanlar={'MPN': 'TPS62933DRLR'})
     p('C10', 'Device', 'C', '10uF 25V', C12, {1: '+12V', 2: 'GND'}, G)
     p('C11', 'Device', 'C', '100nF 50V', C, {1: '+12V', 2: 'GND'}, G)
-    p('C12', 'Device', 'C', '100nF 25V', C, {1: 'BST_MOD', 2: 'SW_MOD'}, G)
+    p('C12', 'Device', 'C', '100nF 25V X7R', C, {1: 'BST_MOD', 2: 'SW_MOD'}, G)
     p('C13', 'Device', 'C', '33nF', C, {1: 'SS_MOD', 2: 'GND'}, G)
-    p('L2', 'Device', 'L', '4,7uH 5A', L, {1: 'SW_MOD', 2: 'VBAT_MOD'}, G, alanlar={'MPN': '4,7uH, Isat >= 5 A (Bourns SRN6028 sinifi)'})
+    p('L2', 'Device', 'L', '4,7uH Isat 2,7A', L, {1: 'SW_MOD', 2: 'VBAT_MOD'}, G, alanlar={'MPN': 'Bourns SRN6028-4R7M (Isat 2,7 A, Irms 3 A, DCR 38 mOhm; dagitimci listesi)'})
     p('R4', 'Device', 'R', '40,2k 1%', R, {1: 'VBAT_MOD', 2: 'FB_MOD'}, G)
     p('R5', 'Device', 'R', '10k 1%', R, {1: 'FB_MOD', 2: 'GND'}, G)
     p('C14', 'Device', 'C', '22uF 10V', C12, {1: 'VBAT_MOD', 2: 'GND'}, G)
@@ -130,7 +130,7 @@ def kur():
     p('R26', 'Device', 'R', '12,4k 1%', R, {1: 'EXRES1', 2: 'GND'}, G)
     p('C37', 'Device', 'C', '10nF', C, {1: '1V2O', 2: 'GND'}, G)
     p('C38', 'Device', 'C', '4,7uF', C, {1: 'TOCAP', 2: 'GND'}, G)
-    p('Y1', 'Device', 'Crystal_GND24', '25 MHz', 'Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm', {1: 'XI', 3: 'XB', 2: 'GND', 4: 'GND'}, G, rot=0, alanlar={'MPN': '25 MHz, 18 pF yuk'})
+    p('Y1', 'Device', 'Crystal_GND24', '25 MHz', 'Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm', {1: 'XI', 3: 'XB', 2: 'GND', 4: 'GND'}, G, rot=0, alanlar={'MPN': '25 MHz, 18 pF yuk, +-30 ppm, C0 en fazla 7 pF (W5500 belgesi 5.5.3)'})
     p('R27', 'Device', 'R', '1M', R, {1: 'XI', 2: 'XO'}, G)
     p('R28', 'Device', 'R', '0', R, {1: 'XO', 2: 'XB'}, G)
     p('C39', 'Device', 'C', '18pF', C, {1: 'XI', 2: 'GND'}, G)
@@ -176,7 +176,7 @@ def kur():
 
     # ---------------- ROLE ----------------
     G = 'ROLE: 12 V isaret lambasi (normalde acik)'
-    p('K1', 'Relay', 'SANYOU_SRD_Form_A', 'SRD-12VDC-SL-A', 'Relay_THT:Relay_SPST_SANYOU_SRD_Series_Form_A', {2: '+12V', 5: 'ROLE_L', 1: '+12V_IN', 3: 'LAMBA_SW'}, G, rot=0, alanlar={'MPN': 'Songle SRD-12VDC-SL-A'})
+    p('K1', 'Relay', 'SANYOU_SRD_Form_A', 'SRD-12VDC-SL-A', 'Relay_THT:Relay_SPST_SANYOU_SRD_Series_Form_A', {2: '+12V', 5: 'ROLE_L', 1: '+12V_IN', 3: 'LAMBA_SW'}, G, rot=0, alanlar={'MPN': 'Songle SRD-12VDC-SL-A (bobin 400 ohm, kontak 10 A 30 VDC)'})
     p('Q2', 'Device', 'Q_NPN_BEC', 'MMBT2222A', 'Package_TO_SOT_SMD:SOT-23', {1: 'Q2_B', 2: 'GND', 3: 'ROLE_L'}, G, rot=0, alanlar={'MPN': 'MMBT2222A'})
     p('R37', 'Device', 'R', '1k', R, {1: 'ROLE_CTL', 2: 'Q2_B'}, G)
     p('R38', 'Device', 'R', '10k', R, {1: 'Q2_B', 2: 'GND'}, G)

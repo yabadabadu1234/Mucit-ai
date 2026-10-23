@@ -69,7 +69,7 @@
       <tstamps>a7cec820-5694-4305-b837-956ac85e3d59</tstamps>
     </comp>
     <comp ref="C5">
-      <value>100nF 25V</value>
+      <value>100nF 25V X7R</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <property name="Sheetname" value=""/>
@@ -146,7 +146,7 @@
       <tstamps>e0f86698-a3f0-4218-8583-809cdd32aef2</tstamps>
     </comp>
     <comp ref="C12">
-      <value>100nF 25V</value>
+      <value>100nF 25V X7R</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <property name="Sheetname" value=""/>
@@ -685,13 +685,13 @@
       <tstamps>ad6c32d7-4589-4f8a-b11f-648ef5bbbea5</tstamps>
     </comp>
     <comp ref="F1">
-      <value>1812L200 (2 A)</value>
+      <value>1812L200/16DR (2 A, 16 V)</value>
       <footprint>Fuse:Fuse_1812_4532Metric</footprint>
       <fields>
-        <field name="MPN">PTC 2 A tutma, 1812</field>
+        <field name="MPN">Littelfuse 1812L200/16DR (tutma 2 A, 16 V; 8 V olan 1812L200TH kullanilmaz)</field>
       </fields>
       <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
-      <property name="MPN" value="PTC 2 A tutma, 1812"/>
+      <property name="MPN" value="Littelfuse 1812L200/16DR (tutma 2 A, 16 V; 8 V olan 1812L200TH kullanilmaz)"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="../../../../../tmp/claude-0/alici_new.kicad_sch"/>
       <property name="ki_description" value="Resettable fuse, polymeric positive temperature coefficient"/>
@@ -812,10 +812,10 @@
       <value>SRD-12VDC-SL-A</value>
       <footprint>Relay_THT:Relay_SPST_SANYOU_SRD_Series_Form_A</footprint>
       <fields>
-        <field name="MPN">Songle SRD-12VDC-SL-A</field>
+        <field name="MPN">Songle SRD-12VDC-SL-A (bobin 400 ohm, kontak 10 A 30 VDC)</field>
       </fields>
       <libsource lib="Relay" part="SANYOU_SRD_Form_A" description="Sanyo SRD relay, Single Pole Miniature Power Relay, Closing Contact"/>
-      <property name="MPN" value="Songle SRD-12VDC-SL-A"/>
+      <property name="MPN" value="Songle SRD-12VDC-SL-A (bobin 400 ohm, kontak 10 A 30 VDC)"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="../../../../../tmp/claude-0/alici_new.kicad_sch"/>
       <property name="ki_description" value="Sanyo SRD relay, Single Pole Miniature Power Relay, Closing Contact"/>
@@ -824,13 +824,13 @@
       <tstamps>86c6a6bd-aafb-4607-95ba-4b6b1f8b4336</tstamps>
     </comp>
     <comp ref="L1">
-      <value>4,7uH 5A</value>
+      <value>4,7uH Isat 2,7A</value>
       <footprint>Inductor_SMD:L_Bourns-SRN6028</footprint>
       <fields>
-        <field name="MPN">4,7uH, Isat &gt;= 5 A (Bourns SRN6028 sinifi)</field>
+        <field name="MPN">Bourns SRN6028-4R7M (Isat 2,7 A, Irms 3 A, DCR 38 mOhm; dagitimci listesi)</field>
       </fields>
       <libsource lib="Device" part="L" description="Inductor"/>
-      <property name="MPN" value="4,7uH, Isat &gt;= 5 A (Bourns SRN6028 sinifi)"/>
+      <property name="MPN" value="Bourns SRN6028-4R7M (Isat 2,7 A, Irms 3 A, DCR 38 mOhm; dagitimci listesi)"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="../../../../../tmp/claude-0/alici_new.kicad_sch"/>
       <property name="ki_description" value="Inductor"/>
@@ -839,13 +839,13 @@
       <tstamps>5f57a402-383e-411c-9802-ecd81fab8b84</tstamps>
     </comp>
     <comp ref="L2">
-      <value>4,7uH 5A</value>
+      <value>4,7uH Isat 2,7A</value>
       <footprint>Inductor_SMD:L_Bourns-SRN6028</footprint>
       <fields>
-        <field name="MPN">4,7uH, Isat &gt;= 5 A (Bourns SRN6028 sinifi)</field>
+        <field name="MPN">Bourns SRN6028-4R7M (Isat 2,7 A, Irms 3 A, DCR 38 mOhm; dagitimci listesi)</field>
       </fields>
       <libsource lib="Device" part="L" description="Inductor"/>
-      <property name="MPN" value="4,7uH, Isat &gt;= 5 A (Bourns SRN6028 sinifi)"/>
+      <property name="MPN" value="Bourns SRN6028-4R7M (Isat 2,7 A, Irms 3 A, DCR 38 mOhm; dagitimci listesi)"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="../../../../../tmp/claude-0/alici_new.kicad_sch"/>
       <property name="ki_description" value="Inductor"/>
@@ -1532,10 +1532,10 @@
       <value>25 MHz</value>
       <footprint>Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm</footprint>
       <fields>
-        <field name="MPN">25 MHz, 18 pF yuk</field>
+        <field name="MPN">25 MHz, 18 pF yuk, +-30 ppm, C0 en fazla 7 pF (W5500 belgesi 5.5.3)</field>
       </fields>
       <libsource lib="Device" part="Crystal_GND24" description="Four pin crystal, GND on pins 2 and 4"/>
-      <property name="MPN" value="25 MHz, 18 pF yuk"/>
+      <property name="MPN" value="25 MHz, 18 pF yuk, +-30 ppm, C0 en fazla 7 pF (W5500 belgesi 5.5.3)"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="../../../../../tmp/claude-0/alici_new.kicad_sch"/>
       <property name="ki_description" value="Four pin crystal, GND on pins 2 and 4"/>
