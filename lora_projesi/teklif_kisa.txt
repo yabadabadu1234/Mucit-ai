@@ -2,15 +2,17 @@ Hello,
 
 Your product is ready. Both designs are finished; I send the complete files as soon as you accept. No firmware, as you asked.
 
-Per board you get: KiCad schematic and PCB, Gerber and drill files (4 layers, ready for PCBWay/JLCPCB), BOM, pick-and-place file, PDFs, and a short design note (pin map, power budget, weak points).
+Per board: KiCad files, Gerber and drill (4 layers, PCBWay/JLCPCB ready), BOM, pick-and-place, PDFs, design note.
 
 Transmitter, 40 x 100 mm: 2 AAA cells, buck-boost to 3.3 V, ESP32-S3 (native USB), RFM95W-915S2 with SMA, six wake-up buttons, status LED.
-Receiver, 88 x 102 mm: 12 V input with fuse, reverse-polarity and surge protection; separate 3.8 V supply for the modem (2 A bursts); ESP32-S3; RFM95W with SMA; W5500 Ethernet with RJ45; SIM7600SA 4G modem (micro-SIM, u.FL) with a 1.8 V level translator; relay for the lamp (1.4 mm traces, sized for an assumed 3 A).
+Receiver, 88 x 102 mm: 12 V input with fuse, reverse-polarity and surge protection; separate 4.0 V supply for the modem; ESP32-S3; RFM95W with SMA; W5500 Ethernet with RJ45; SIM7600SA 4G modem (micro-SIM, u.FL; its bands cover Chilean B28/B7/B4); relay for the lamp.
 
-Checked: KiCad design rules, 0 errors and 0 unconnected pads on both boards; every pad compared with the schematic netlist; modem pin table compared with SIMCom's SIM7600 Series Hardware Design V1.08; relay driver and input protection simulated.
-Not checked: radio range, antenna matching, Chilean 4G coverage, part stock. Receiver weak points: long W5500 crystal traces, unmatched Ethernet pairs.
+Checked: design rules, 0 errors and 0 unconnected pads on both boards; every pad against the netlist; modem pin table against SIMCom's Hardware Design V1.08; simulations of the relay driver, input protection, a 2 A modem current burst (modem supply stays above its 3.4 V minimum, 3.9 V in the typical case), and transmitter battery life (about 2 years at 10-50 presses a day).
+Not tested: radio range, antenna matching, Chilean 4G coverage; this needs built boards.
 
-Defaults if unanswered: open-field range, 2 x AAA without charger, unlocked Chilean micro-SIM, Ethernet and 4G independent, 3 A lamp. I adapt the files within 5 days of acceptance at no extra charge.
+Cost: the BOM is about US$100 per transmitter+receiver set at 100 sets (estimate from distributor prices); modem and the two RFM95W modules are two thirds of it. A cheaper SX1276 LoRa module (about US$23 less per set) is possible; tell me and I adapt the files.
+
+Defaults: open-field range, 2 x AAA, unlocked micro-SIM, 3 A lamp.
 
 Price: 333.33 USD.
 
