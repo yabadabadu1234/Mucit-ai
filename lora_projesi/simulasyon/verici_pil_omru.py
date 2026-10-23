@@ -17,8 +17,8 @@ def vin_tepe(d, i_yuk, carpan=1.0):
     if disc < 0: return 0.0
     I = (V - math.sqrt(disc))/(2*R)
     return V - R*I
-# yuk basamaklari (mA): belge degerleri (RFM95W 87 mA @+17 dBm PA_BOOST; ESP32-S3 etkin ~40 mA tahmin: modul belgesi 240 MHz tipik, WiFi kapali)
-YUKLER = {'ESP32 acilis (WiFi yok)': 45, 'LoRa TX +17 dBm + ESP32 bosta': 87+30, 'LoRa TX +20 dBm + ESP32 bosta': 120+30}
+# yuk basamaklari (mA): belge degerleri (Ra-01H (SX1276) 915 MHz TX ortalama 97 mA [Ra-01H belgesi Tablo 1.1]; ESP32-S3 etkin ~40 mA tahmin: modul belgesi 240 MHz tipik, WiFi kapali)
+YUKLER = {'ESP32 acilis (WiFi yok)': 45, 'LoRa TX (Ra-01H 97 mA) + ESP32 bosta': 97+30, 'LoRa TX +20 dBm + ESP32 bosta': 120+30}
 for carpan, ad in [(1.0, '23 C'), (2.0, '0 C (ic direnc x2, varsayim)')]:
     print('===', ad)
     for yad, ma in YUKLER.items():
@@ -27,7 +27,7 @@ for carpan, ad in [(1.0, '23 C'), (2.0, '0 C (ic direnc x2, varsayim)')]:
             if vin_tepe(d, ma/1000, carpan) < VIN_UVLO:
                 sinir = d; break
         print(f'{yad:34s} {ma:4d} mA -> pil bu yuku %{100*(sinir if sinir else 1):.1f} bosalmaya kadar tasir')
-# omur: uyku akimi (belge): TPS63031 Iq 25 uA, ESP32-S3 derin uyku 8 uA, RFM95W 0.2 uA, sizinti tahmini 2 uA
+# omur: uyku akimi (belge): TPS63031 Iq 25 uA, ESP32-S3 derin uyku 8 uA, SX1276 uyku 0.2 uA (belgede Ra-01H icin uyku akimi yok; yonga degeri), sizinti tahmini 2 uA
 UYKU_UA = 25 + 4 + 8 + 0.2 + 2
 def lora_havada(sf=7, bw=125e3, yuk=12, cr=1, preamble=8):
     tsym = 2**sf/bw; de = 1 if (sf >= 11 and bw == 125e3) else 0
@@ -35,7 +35,7 @@ def lora_havada(sf=7, bw=125e3, yuk=12, cr=1, preamble=8):
     return (preamble + 4.25)*tsym + n*tsym
 for sf in (7, 9, 12):
     ta = lora_havada(sf)
-    olay_mC = 0.150*45 + ta*(87+30) + 0.020*45        # acilis 150 ms + TX + 20 ms kapanis
+    olay_mC = 0.150*45 + ta*(97+30) + 0.020*45        # acilis 150 ms + TX + 20 ms kapanis
     for gun in (10, 50, 200):
         olay_uAh_gun = gun*olay_mC/3.6
         ort_uA = UYKU_UA + olay_uAh_gun/24

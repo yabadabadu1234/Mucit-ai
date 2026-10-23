@@ -4,18 +4,15 @@ Your product is ready. Both designs are finished; I send the complete files as s
 
 Per board: KiCad files, Gerber and drill (4 layers, PCBWay/JLCPCB ready), BOM, pick-and-place, PDFs, design note.
 
-Transmitter, 40 x 100 mm: 2 AAA cells, buck-boost to 3.3 V, ESP32-S3 (native USB), RFM95W-915S2 with SMA, six wake-up buttons, status LED.
-Receiver, 88 x 102 mm: 12 V input with fuse, reverse-polarity and surge protection; separate 4.0 V modem supply; ESP32-S3; RFM95W with SMA; W5500 Ethernet; SIM7600SA 4G modem (covers Chilean B28/B7/B4); relay for the lamp.
+Transmitter, 40 x 100 mm: 2 AAA cells, buck-boost to 3.3 V, ESP32-S3 (native USB), Ra-01H SX1276 LoRa module (915 MHz) with SMA, six wake-up buttons, status LED.
+Receiver, 88 x 102 mm: 12 V input with fuse, reverse-polarity and surge protection; separate modem supply; ESP32-S3; Ra-01H LoRa with SMA; W5500 Ethernet; SIMCom A7670SA 4G Cat-1 modem (B28/B7/B4/B2/B66/B5, all Chilean bands, about US$9 instead of the SIM7600's US$37); relay for the lamp.
 
-Checked: design rules (0 errors, 0 unconnected pads); every pad against the netlist; modem pins against SIMCom's V1.08 document; key parts against their datasheets; simulations of the relay driver, input protection and a 2 A modem current burst. Not tested: radio range, antenna matching, Chilean 4G coverage (needs built boards).
+Checked: design rules (0 errors, 0 unconnected pads) on both boards; pads against the netlist; modem pins against SIMCom's hardware design; key parts against datasheets; simulations of the relay driver, input protection, a 2.8 A modem burst and battery life. Not tested: radio range, antenna matching, Chilean 4G coverage (needs built boards). Ra-01H pad drawing is taken from the same-size Ra-01 manual; I will confirm it with Ai-Thinker before fabrication.
 
 Battery life (simulated, 2 AAA): about 2 years at 10-50 presses a day.
-Cost: about US$100 per transmitter+receiver set at 100 sets (about US$80 from distributor prices, the rest estimated).
+Cost: about US$49 per transmitter+receiver set at 100 sets (about US$31 from LCSC prices, the rest estimated).
 
-Options if you want it cheaper (I adapt the files):
-1. Ra-01H SX1276 LoRa module instead of RFM95W: about US$23 less per set.
-2. A cheaper 4G module for Chilean bands (modem is US$37 of the set): needs a band check.
-3. Larger orders: price breaks (modem US$47 at 1, US$37 at 100).
+Options: a different 4G module is possible if you prefer another supplier; I adapt the files.
 
 Price: 333.33 USD.
 
