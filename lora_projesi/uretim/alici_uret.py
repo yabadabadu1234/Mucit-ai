@@ -6,6 +6,9 @@ from pcbgen import mm, vec
 import yonlendir as Y
 
 DIZIN = os.path.join(os.path.dirname(__file__), '..', 'alici')
+ET = os.environ.get('ETIKET', '')
+VIA = os.environ.get('VIA', '500:250')
+VIAD, VIAR = VIA.split(':')
 XML = os.path.join(DIZIN, 'alici.xml')
 GUC12 = ['+12V_IN', '+12V_F', '+12V']
 GUC_ORTA = ['VBAT_MOD', 'LAMBA_SW', 'SW_3V3', 'SW_MOD']
@@ -28,8 +31,8 @@ def dsn_duzenle(yol, korunan):
     normal = [a for a in aglar if a not in g12 + go + rf]
     def sinif(ad, gen, liste):
         if not liste: return ''
-        return ('    (class %s %s\n      (circuit\n        (use_via Via[0-3]_500:250_um)\n      )\n      (rule\n        (width %d)\n        (clearance 150)\n      )\n    )\n'
-                % (ad, ' '.join('"%s"' % x if ('+' in x) else x for x in liste), gen))
+        return ('    (class %s %s\n      (circuit\n        (use_via Via[0-3]_%s_um)\n      )\n      (rule\n        (width %d)\n        (clearance 150)\n      )\n    )\n'
+                % (ad, ' '.join('"%s"' % x if ('+' in x) else x for x in liste), VIA, gen))
     yeni = sinif('kicad_default', 200, normal) + sinif('g12', 300, g12) + sinif('gorta', 400, go) + sinif('rf', int(RF_W * 1000), rf)
     bas = t.index('    (class kicad_default')
     son = t.index('  (wiring')
@@ -50,7 +53,7 @@ def hazirla():
     ds.m_TrackMinWidth = mm(0.15); ds.m_MinClearance = mm(0.14); ds.m_ViasMinSize = mm(0.5)
     ds.m_MinThroughDrill = mm(0.2); ds.m_CopperEdgeClearance = mm(0.3); ds.m_HoleClearance = mm(0.1)
     ds.m_NetSettings.m_DefaultNetClass.SetClearance(mm(0.14))
-    ds.m_NetSettings.m_DefaultNetClass.SetViaDiameter(mm(0.5)); ds.m_NetSettings.m_DefaultNetClass.SetViaDrill(mm(0.25))
+    ds.m_NetSettings.m_DefaultNetClass.SetViaDiameter(mm(int(VIAD) / 1000)); ds.m_NetSettings.m_DefaultNetClass.SetViaDrill(mm(int(VIAR) / 1000))
     print('delik koruma', Y.delik_koruma(b))
     Y.zone(b, 'GND', pcbnew.In1_Cu, alici_pcb.W, alici_pcb.H, 0.3)
     Y.zone(b, '+3V3', pcbnew.In2_Cu, alici_pcb.W, alici_pcb.H, 0.3)
@@ -67,8 +70,8 @@ if __name__ == '__main__':
     gecis = int(sys.argv[1]) if len(sys.argv) > 1 else 40
     p = hazirla()
     b = p.b
-    b.Save(os.path.join(DIZIN, 'alici_once.kicad_pcb'))
-    dsn = '/tmp/claude-0/alici.dsn'; ses = '/tmp/claude-0/alici.ses'
+    b.Save(os.path.join(DIZIN, 'alici_once%s.kicad_pcb' % ET))
+    dsn = '/tmp/claude-0/alici%s.dsn' % ET; ses = '/tmp/claude-0/alici%s.ses' % ET
     ls = pcbnew.LSET(); ls.AddLayer(pcbnew.F_Cu); ls.AddLayer(pcbnew.B_Cu)
     zlar = []
     for t in p.on_iz:
@@ -99,8 +102,8 @@ if __name__ == '__main__':
     Y.doldur(b)
     b.BuildConnectivity()
     print('baglantisiz', b.GetConnectivity().GetUnconnectedCount(False))
-    b.Save(os.path.join(DIZIN, 'alici.kicad_pcb'))
-    rep = Y.drc(b, '/tmp/claude-0/drc_alici.rpt')
+    b.Save(os.path.join(DIZIN, 'alici%s.kicad_pcb' % ET))
+    rep = Y.drc(b, '/tmp/claude-0/drc_alici%s.rpt' % ET)
     s, o = Y.drc_ozet(rep, 6)
     print(dict(s))
     for k, v in o.items():
