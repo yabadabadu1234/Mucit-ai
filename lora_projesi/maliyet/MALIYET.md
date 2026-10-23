@@ -1,14 +1,16 @@
 # Takim basina maliyet (1 verici + 1 alici), ~100 takim
-Kaynakli kalemler [B] dagitimci/LCSC sayfalarindan arama ile okundu (canli sayfada degisebilir); [T] tahmin. Hesap: `maliyet.py`.
+Kaynakli kalemler [B] LCSC urun sayfalarindan okundu (fiyat ve stok canli sayfada degisebilir; ayrintili tablo `LCSC_FIYAT_TABLOSU.md`); [T] tahmin. Hesap: `maliyet.py`.
 
-Toplam ~101 USD: okunan fiyatli kalemler 79,8, tahmin 21,4.
+Toplam ~49 USD: okunan fiyatli kalemler 31,2, tahmin 17,8.
 | Kalem | USD/takim | Kaynak |
 | :-- | :-- | :-- |
-| SIM7600SA | 36,60 | DigiKey, 100 adet |
-| 2 x RFM95W-915S2 | 31,52 | LCSC C6760738 (1000+ 15,76); Mouser tek adet 23,75 |
-| 2 x ESP32-S3-WROOM-1-N4 | 7,32 | LCSC C2913197 |
-| gerisi | 25,8 | W5500 2,49 ve TPS63031 1,89 okundu; digerleri tahmin |
+| 2 x Ra-01H LoRa modulu | 9,30 | LCSC, 4,65/adet |
+| A7670SA-LASE modem | 8,88 | LCSC C47088708, 10+ adet fiyati (LASC 6,97; stok 97) |
+| 2 x ESP32-S3-WROOM-1-N4 | 6,72 | LCSC |
+| W5500, TPS63031, 2 x TPS62933, role, RJ45, LM66100, 5 x USBLC6, bobin farki | ~6,3 | LCSC (`maliyet.py` [B] kalemleri) |
+| PCBA montaj (iki kart) | 5,00 | tahmin |
+| PCB 4 katman (iki kart) | 3,00 | tahmin |
+| diger pasifler, konnektorler | ~10,8 | tahmin |
 
-**Iki gercek maliyet kalemi:** modem (%36) ve LoRa modulleri (%31).
-- LoRa: Ai-Thinker Ra-01H (SX1276, RFM95W ile ayni yonga, 803-930 MHz) LCSC C503593, 18+ adette 4,38 USD: **takim basina ~22,8 USD tasarruf**. Pin tablosu ve ayak izi alinamadi (belge sitesi erisime kapali), tasarima alinmadi.
-- Modem: SIM7600SA'dan ucuz ve Sili bantlarini kapsadigi dogrulanmis bir modul bu oturumda bulunamadi; A7670C-MASL (LCSC 8,62 USD) Cin bantlidir, Sili icin uygun degildir.
+Onceki surum (SIM7600SA + 2 x RFM95W) ~101 USD idi; fark modemden (36,60 -> 8,88) ve LoRa modullerinden (31,52 -> 9,30) geliyor.
+Uyari: A7670SA-LASE LCSC stogu 1 adet gorundu (LASC 97); 100 takim icin stok/teslim suresi sorulmadan fiyat kesin degildir. Ra-01H ve A7670SA son ek anlami belgelenmemistir.
