@@ -37,6 +37,13 @@ jobs:
           cp _site/kuran_hikmetleri_kitap.html _site/index.html
           printf '{"sha":"%s"}\n' "${GITHUB_SHA}" > _site/surum.json
 
+      - name: Kitabı eski adresinde de aç (kuran_hikmetleri/ alt yolu; kök bağlantıları bu yolu kullanır)
+        run: |
+          mkdir -p "$RUNNER_TEMP/kuran_kopya"
+          cp -r _site/. "$RUNNER_TEMP/kuran_kopya/"
+          mkdir -p _site/kuran_hikmetleri
+          cp -r "$RUNNER_TEMP/kuran_kopya/." _site/kuran_hikmetleri/
+
       - name: LoRa ders sitesini /lora-ders/ altına ekle (başarısız olursa kitap yayını etkilenmez)
         continue-on-error: true
         run: |
