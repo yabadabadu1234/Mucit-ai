@@ -36,3 +36,12 @@ Durum: **tam** = belge bastan sona okundu (resim ve grafik sayfalari dahil degil
 6. **A7670SA ve EC200U karsilastirmasi (yapistirilan yapay zeka metninin dogrulanmasi):** A7670SA'nin bantlari belgeden dogrulandi (yukarida). EC200U icin metindeki "EC200U-AU" **belgede yok**; belgedeki iki varyantin ikisinde de B2 ve B4 yok. Metindeki "yaklasik yarisi fiyat" iddiasi **hicbir belgede yok**, dagitimci fiyati okunmadan yazilmaz. Sili sebekelerinin hangi bantlari kullandigi bu belgelerde yok; "B2/B4/B7/B28 gerekir" ifadesi **hafizadan**, yoklanmamistir.
 7. **A7670 gecis maliyeti:** farkli ayak izi (24x24 LGA, 88 pin), farkli pin haritasi, PWRKEY/RESET VBAT'a 50 kOhm cekili, bu pinlerde 10 nF ustu kondansator yasak (bizde C44/C45 100 nF). Yani modem takasi **yeniden sema + ayak izi + yerlesim** demektir.
 8. **Kucuk dogrulamalar:** SS14 ve diger kalemler degismedi; Ra-01H icin pin tablosu okundu (onceki oturum).
+
+## Sonuc (A7670SA surumu)
+9. **Endüktör (bulgu 2):** karar verildi, Bourns SRP7028A-4R7M kullanildi (Isat 10 A); kart yeniden yerlestirildi.
+10. **USB tek basina (bulgu 5):** karar verildi, SS14 yerine **LM66100 ideal diyot** (TI SLVSEZ8A): CE VOUT'a bagli (ters akim engellenir), Ron yaklasik 91 mOhm (3,6 V'ta), ST GND'ye. +3V3 USB'de artik ~2,9 V'a dusmez.
+11. **ESD:** ESDA6V1 (50 pF) kaldirildi; SIM hatlarinda 3 x 22 ohm seri direnc ve USBLC6-2SC6 (3,5 pF), PWRKEY/RESET'te USBLC6 (kapasite toplam 10 nF sinirinin cok altinda).
+12. **TXB0104 OE:** OE VCCA'ya bagli kaldi. VCCA modem VDD_1V8'den geliyor; modem kapaliyken VCCA 0 V olur ve TI belgesine gore cikislar yuksek empedansa gecer, yani acilis sirasinda hatlar surulmez. Ayri bir cekme direnci eklenmedi (bu cikarim TI belgesinden okundu, devre uzerinde olculmedi).
+13. **A7670SA son ekleri:** LASC/LASE/FASE/MASC farki SIMCom belgelerinde yok (LCSC "Frequency Range" alani belgelerle celisir); BOM'da A7670SA-LASE yazili, LASC ayni bant listesiyle ~%21 ucuz ama stok 97. Satin almadan once LCSC/SIMCom'a yazili sorulmali.
+14. **Ra-01H ayak izi:** pad olculeri Ra-01/Ra-02 kilavuzunun Sekil 6'sindan (ayni 17 x 16 mm govde, 16 pin); Ra-01H belgesinde olcu cizimi yok. Uretimden once Ai-Thinker'e teyit ettirilecek. Ra-01H TX akimi 915 MHz'te 97 mA (belge Tablo 1.1).
+15. **VBAT yolu:** SIMCom 2 mm onerir; kartta 1,0 mm (41 mm) + 0,4 mm (43 mm), 3 via; bobinden modul pedlerine hesaplanan direnc 18-19 mOhm. Patlama simulasyonu cevrim bant genisligine bagli (SONUCLAR.md 1).
