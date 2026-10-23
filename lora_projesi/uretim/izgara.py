@@ -274,7 +274,7 @@ def calistir(yol, cikis, W, H):
                 continue
             taban = k; rep = rep2; yapildi = True; b.Save(cikis)
             print('kabul', net, w, bas[1:], hed[1:]); durum_yaz(); sys.stdout.flush(); os._exit(0)
-        if not yapildi and rip.get(net, 0) < 2 and net not in ('LAMBA_SW', '+12V_IN', 'VBAT_MOD'):
+        if not yapildi and rip.get(net, 0) < int(os.environ.get('IZG_RIP', '2')) and net not in ('LAMBA_SW', '+12V_IN', 'VBAT_MOD'):
             rip[net] = rip.get(net, 0) + 1
             yolu = I.ara(nc, 0.2, bas, hed, yumusak=True)
             if yolu is not None:
