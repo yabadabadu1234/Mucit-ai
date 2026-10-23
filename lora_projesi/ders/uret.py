@@ -219,7 +219,7 @@ class Veri:
         return rozetle(''.join(h))
 
 
-def sayfa(baslik, govde, yol_derinlik, nav, simdi, aciklama=''):
+def sayfa(baslik, govde, yol_derinlik, nav, simdi, aciklama='', genis=False):
     r = '../' * yol_derinlik
     yan = []
     for grup, ogeler in nav:
@@ -230,11 +230,11 @@ def sayfa(baslik, govde, yol_derinlik, nav, simdi, aciklama=''):
            '<a href="%sverici/index.html">Verici</a><a href="%salici/index.html">Alıcı</a><a href="%shesap.html">Hesap makineleri</a><a href="%ssozluk.html">Sözlük</a><a href="%skaynak.html">Kaynaklar</a></nav></header>') % ((r,) * 7)
     govde = kisalt(rozetle(govde))
     return ('<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
-            '<title>%s — LoRa Tasarım Dersi</title><meta name="description" content="%s"><link rel="stylesheet" href="%svarlik/stil.css"></head><body>%s'
+            '<title>%s — LoRa Tasarım Dersi</title><meta name="description" content="%s"><link rel="stylesheet" href="%svarlik/stil.css"></head><body%s>%s'
             '<div class="kap"><aside class="yan">%s</aside><main>%s</main></div>'
             '<footer>Bu sayfa her güncellemede otomatik üretilir. %s Tasarım verisi: <code>lora_projesi/ders/veri/*.json</code>. '
             'Sayılar tasarımın bağlantı listesinden ve yazılmış hesap kodundan çıkar; el ile yazılmış sayı yoktur, olanlar etiketlidir.</footer>'
-            '<script src="%svarlik/uygulama.js"></script></body></html>') % (html.escape(baslik), html.escape(aciklama), r, ust, ''.join(yan), govde, YAYIN_TARIHI, r)
+            '<script src="%svarlik/uygulama.js"></script></body></html>') % (html.escape(baslik), html.escape(aciklama), r, ' class="genis"' if genis else '', ust, ''.join(yan), govde, YAYIN_TARIHI, r)
 
 
 def main():

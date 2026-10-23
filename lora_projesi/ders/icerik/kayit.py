@@ -1,4 +1,4 @@
-import os, html, importlib
+import os, re, html, importlib
 from icerik.yardim import *
 
 VERICI_BOLUMLER = ['v_guc', 'v_usb', 'v_islemci', 'v_dugme', 'v_lora']
@@ -20,17 +20,26 @@ def uret(cikti, ver, sayfa, icerik_dizin):
     from icerik import temel
     nav.append(('Temel bilgiler', [('temel/index.html', 'Temel bilgiler: içindekiler')] + [('temel/%s.html' % i, b) for i, b, o, f in temel.SAYFALAR]))
     nav.append(('Başlangıç', [('index.html', 'Giriş ve yol haritası'), ('hesap.html', 'Hesap makineleri'), ('sozluk.html', 'Sözlük'), ('kaynak.html', 'Kaynaklar ve güven düzeyi')]))
-    nav.append(('Verici kartı', [('verici/index.html', 'Verici: genel bakış')] + [('verici/%s.html' % m.ID, m.BASLIK) for m in bolumler['verici kartı']]))
-    nav.append(('Alıcı kartı', [('alici/index.html', 'Alıcı: genel bakış')] + [('alici/%s.html' % m.ID, m.BASLIK) for m in bolumler['alici kartı']]))
+    nav.append(('Verici kartı', [('verici/index.html', 'Verici: genel bakış'), ('verici/tam.html', 'Tam tasarım gezgini')] + [('verici/%s.html' % m.ID, m.BASLIK) for m in bolumler['verici kartı']]))
+    nav.append(('Alıcı kartı', [('alici/index.html', 'Alıcı: genel bakış'), ('alici/tam.html', 'Tam tasarım gezgini')] + [('alici/%s.html' % m.ID, m.BASLIK) for m in bolumler['alici kartı']]))
 
-    def yaz(yol, baslik, govde, derinlik, aciklama=''):
+    def yaz(yol, baslik, govde, derinlik, aciklama='', genis=False):
         p = os.path.join(cikti, yol)
         os.makedirs(os.path.dirname(p), exist_ok=True)
-        open(p, 'w', encoding='utf-8').write(sayfa(baslik, govde, derinlik, nav, yol, aciklama))
+        open(p, 'w', encoding='utf-8').write(sayfa(baslik, govde, derinlik, nav, yol, aciklama, genis))
 
+    from icerik import gezgin
+    toplanan = {}
     for kart, ad in (('verici kartı', 'verici'), ('alici kartı', 'alici')):
         for m in bolumler[kart]:
-            yaz('%s/%s.html' % (ad, m.ID), m.BASLIK, m.uret(ver[ad], None), 1, m.OZET)
+            govde = m.uret(ver[ad], None)
+            toplanan.setdefault(ad, []).append((m.ID, m.BASLIK, govde))
+            yaz('%s/%s.html' % (ad, m.ID), m.BASLIK, govde, 1, m.OZET)
+    for ad in ('verici', 'alici'):
+        v = ver[ad]
+        sirala = lambda r: (re.match(r'[A-Z]+', r).group(), int(re.search(r'\d+', r).group()) if re.search(r'\d+', r) else 0)
+        kartlar = ''.join(v.kart_html(r) for r in sorted(v.d['parcalar'], key=sirala))
+        yaz('%s/tam.html' % ad, gezgin.BASLIK[ad] + ': tam tasarım gezgini', gezgin.sayfa_html(v, ad, toplanan[ad], kartlar), 1, 'Tasarımın tamamı: şema, kart, parçalar, ağlar', genis=True)
     temel.uret(yaz)
     yaz('index.html', 'Giriş', giris(bolumler), 0, 'Elektronik tasarımı sıfırdan öğreten ders sitesi')
     yaz('verici/index.html', 'Verici: genel bakış', kart_giris('verici', bolumler['verici kartı']), 1)
@@ -51,6 +60,7 @@ def giris(bolumler):
             '<li>[[tahmin]] — hesap ya da varsayım.</li><li>[[dogrulanmadi]] — sipariş ya da ölçüm öncesi kontrol edilmesi gereken.</li></ul>'
             '<h2>Yol haritası</h2><ol><li><a href="temel/index.html">Temel bilgiler</a> (dokuz kısa ders): Ohm yasasından üretim dosyalarına; kartlara geçmeden önce okumanı öneririm.</li><li><a href="verici/index.html">Verici kartı</a> (daha basit): besleme, USB, işlemci, düğmeler, telsiz.</li>'
             '<li><a href="alici/index.html">Alıcı kartı</a> (daha zengin): 12 V giriş koruması, iki çevirici, Ethernet, 4G modem, röle.</li>'
+            '<li>Her kartın <b>tam tasarım gezgini</b> (<a href="verici/tam.html">verici</a>, <a href="alici/tam.html">alıcı</a>): bütün şema, kartın iki yüzü, parça ve ağ dizini; öğrendiklerini bütün üstünde dene.</li>'
             '<li><a href="hesap.html">Hesap makineleri</a>: bölücü, geri besleme, bobin, hat empedansı, iz genişliği, pil ömrü…</li><li><a href="kaynak.html">Kaynaklar ve güven düzeyi</a>: hangi belge okundu, hangisi okunmadı.</li></ol>')
 
 
@@ -59,6 +69,7 @@ def kart_giris(ad, liste):
         t = ('<h1>Verici kartı: genel bakış</h1><p>İki AAA pille ya da USB-C ile çalışan, altı düğmeli uzaktan kumanda kartı. Düğmeye basılınca uyanır, LoRa telsiziyle alıcıya mesaj yollar ve yeniden uyur.</p>')
     else:
         t = ('<h1>Alıcı kartı: genel bakış</h1><p>12 V ile çalışan; telsiz mesajını alıp interneti Ethernet ya da 4G ile kullanan ve bir röleyle lamba süren kart.</p>')
+    t += kutu('ipucu', '<a href="tam.html"><b>Tam tasarım gezgini</b></a>: bütün şema, kartın iki yüzü, bütün parçalar ve ağlar tek sayfada; arama, tıklayarak izleme, denetim sayıları ve açık sorular.', 'Tasarımın tamamı')
     t += '<h2>Bölümler</h2><ol>' + ''.join('<li><a href="%s.html">%s</a> — %s</li>' % (m.ID, html.escape(m.BASLIK), html.escape(m.OZET)) for m in liste) + '</ol>'
     if not liste:
         t += '<p class="kaynak">Bu kartın bölümleri hazırlanıyor.</p>'
