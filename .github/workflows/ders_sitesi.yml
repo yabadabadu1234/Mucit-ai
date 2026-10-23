@@ -1,9 +1,9 @@
-# LoRa tasarim dersi sitesini uretir ve GitHub Pages'e yayinlar.
-# Bu depoda Pages kaynagi "GitHub Actions"tir (Kuran Hikmetleri sitesi de oyle yayinlanir). Actions kaynaginda
-# depo tek bir site yayinlar; bu yuzden iki site tek pakette birlesir:
-#   /            -> Kuran Hikmetleri (claude/kuran-hikmetleri dali, kendi tarifiyle)
-#   /lora-ders/  -> bu ders sitesi
-# Kuran dalindaki pages.yml de ayni birlestirmeyi yapar; hangisi son kosarsa iki site de acik kalir.
+# LoRa tasarim dersi sitesi: her guncellemede (1) siteyi uretip semalari denetler, (2) yayin icin Pages is akisini tetikler.
+# Bu depoda Pages "GitHub Actions" ile yayinlanir ve github-pages ortami yalniz claude/kuran-hikmetleri dalindan
+# yayina izin verir (bu dalin pages.yml dosyasi iki siteyi tek pakette birlestirir):
+#   /            -> Kuran Hikmetleri
+#   /lora-ders/  -> bu ders sitesi (bu dalin guncel hali kuran dalindaki is akisi tarafindan cekilir)
+# Bu is akisi yayin yapmaz; yalniz denetler ve o is akisini calistirir. Pages ayari degistirilmez.
 name: ders-sitesi
 on:
   push:
@@ -14,46 +14,20 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
-  pages: write
-  id-token: write
-concurrency:
-  group: pages
-  cancel-in-progress: false
+  actions: write
 jobs:
-  deploy:
+  uret-ve-tetikle:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-        with:
-          path: ders_kaynak
-      - uses: actions/checkout@v4
-        with:
-          ref: claude/kuran-hikmetleri
-          path: kuran_kaynak
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - uses: actions/configure-pages@v5
-      - name: Kuran Hikmetleri sitesini kendi tarifiyle hazirla (site kokune)
+      - name: Siteyi uret (semalar baglanti listesiyle denetlenir; hata varsa burada durur)
         run: |
-          SHA=$(git -C kuran_kaynak rev-parse HEAD)
-          mkdir -p _site
-          cp -r kuran_kaynak/kuran_hikmetleri/. _site/
-          sed -i 's#/home/runner/work/Mucit-ai/Mucit-ai/kuran_hikmetleri/##g' _site/kuran_hikmetleri_kitap.html
-          sed -i "s#__SURUM__#${SHA}#g" _site/kuran_hikmetleri_kitap.html
-          cp _site/kuran_hikmetleri_kitap.html _site/index.html
-          printf '{"sha":"%s"}\n' "${SHA}" > _site/surum.json
-      - name: Ders sitesini uret (semalar baglanti listesiyle denetlenir; hata varsa burada durur)
-        run: |
-          cd ders_kaynak/lora_projesi/ders
+          cd lora_projesi/ders
           python3 uret.py
-          mkdir -p "$GITHUB_WORKSPACE/_site/lora-ders"
-          cp -r site/. "$GITHUB_WORKSPACE/_site/lora-ders/"
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: _site
-      - id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Yayin is akisini tetikle (kuran dalindaki pages.yml)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run pages.yml --ref claude/kuran-hikmetleri --repo "$GITHUB_REPOSITORY"
