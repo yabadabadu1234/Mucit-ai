@@ -25,13 +25,16 @@ class Cizim:
         self.isaretler = []
         self.ciz_ref = set()
         self.ogeler = []
+        self.tel_ilk = []
+        self.tel_ag = {}
 
     # ------------------------------------------------------------ temel
     def _g(self, ref, govde, x, y, rot):
         return '<g class="parca" data-ref="%s" transform="translate(%s,%s) rotate(%s)">%s</g>' % (ref, x, y, rot, govde)
 
     def _yaz(self, x, y, metin, sinif='deger', anchor='middle'):
-        self.katman['yazi'].append('<text class="%s" x="%s" y="%s" text-anchor="%s">%s</text>' % (sinif, x, y, anchor, escape(metin)))
+        ek = ' data-ag="%s"' % escape(metin) if sinif in ('agad', 'rayad') else ''
+        self.katman['yazi'].append('<text class="%s" x="%s" y="%s" text-anchor="%s"%s>%s</text>' % (sinif, x, y, anchor, ek, escape(metin)))
 
     def _pin(self, ref, no, x, y):
         self.pinler[(ref, str(no))] = (round(x, 2), round(y, 2))
@@ -220,7 +223,9 @@ class Cizim:
         """noktalar: (x,y) dizisi; dik kirilimlar icin aralara nokta ver."""
         pts = [(round(a, 2), round(b, 2)) for a, b in noktalar]
         d = 'M' + ' L'.join('%s %s' % p for p in pts)
-        self.katman['tel'].append('<path class="tel" d="%s" data-ag="%s"/>' % (d, ag or ''))
+        tid = len(self.tel_ilk)
+        self.tel_ilk.append(pts[0])
+        self.katman['tel'].append('<path class="tel" d="%s" data-ag="@@T%d@@"/>' % (d, tid))
         for p in pts:
             self.noktalar.setdefault(p, [])
         for a, b in zip(pts, pts[1:]):
@@ -232,16 +237,16 @@ class Cizim:
         self.noktalar.setdefault((round(x, 2), round(y, 2)), [])
 
     def toprak(self, x, y):
-        self.katman['sembol'].append('<g class="toprak"><path d="M%s %sV%s"/><path d="M%s %sH%s M%s %sH%s M%s %sH%s"/></g>' % (
+        self.katman['sembol'].append('<g class="toprak" data-ag="GND"><path d="M%s %sV%s"/><path d="M%s %sH%s M%s %sH%s M%s %sH%s"/></g>' % (
             x, y, y + 10, x - 11, y + 10, x + 11, x - 7, y + 15, x + 7, x - 3, y + 20, x + 3))
         self.guc.append(('GND', (round(x, 2), round(y, 2))))
 
     def ray(self, ad, x, y, yon='yukari'):
         if yon == 'yukari':
-            self.katman['sembol'].append('<g class="ray"><path d="M%s %sV%s M%s %sH%s"/></g>' % (x, y, y - 12, x - 10, y - 12, x + 10))
+            self.katman['sembol'].append('<g class="ray" data-ag="%s"><path d="M%s %sV%s M%s %sH%s"/></g>' % (escape(ad), x, y, y - 12, x - 10, y - 12, x + 10))
             self._yaz(x, y - 18, ad, 'rayad')
         else:
-            self.katman['sembol'].append('<g class="ray"><path d="M%s %sV%s M%s %sH%s"/></g>' % (x, y, y + 12, x - 10, y + 12, x + 10))
+            self.katman['sembol'].append('<g class="ray" data-ag="%s"><path d="M%s %sV%s M%s %sH%s"/></g>' % (escape(ad), x, y, y + 12, x - 10, y + 12, x + 10))
             self._yaz(x, y + 26, ad, 'rayad')
         self.guc.append((ad, (round(x, 2), round(y, 2))))
 
@@ -301,6 +306,14 @@ class Cizim:
         for ad, kume in aglar.items():
             for rp in kume:
                 gercek[rp] = ad
+        kok_ag = {}
+        for (ref, no), p in self.pinler.items():
+            if (ref, no) in gercek:
+                kok_ag.setdefault(bul(('n',) + p), gercek[(ref, no)])
+        for (ad, p) in self.etiketler + self.guc:
+            kok_ag.setdefault(bul(('n',) + p), ad)
+        for tid, p in enumerate(self.tel_ilk):
+            self.tel_ag[tid] = kok_ag.get(bul(('n',) + p), '')
         bilesen = {}
         for (ref, no) in self.pinler:
             bilesen.setdefault(bul(('pin', ref, no)), []).append((ref, no))
@@ -325,5 +338,10 @@ class Cizim:
     # ------------------------------------------------------------ cikti
     def svg(self):
         k = self.katman
+        import re as _re
+        def _ag(m):
+            return escape(self.tel_ag.get(int(m.group(1)), ''))
+        for anahtar in ('tel',):
+            k[anahtar] = [_re.sub(r'@@T(\d+)@@', _ag, x) for x in k[anahtar]]
         return ('<svg class="sema" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %s %s" role="img" aria-label="%s">%s</svg>' % (
             self.w, self.h, escape(self.ad), ''.join(k['tel'] + k['sembol'] + k['nokta'] + k['yazi'] + k['isaret'])))

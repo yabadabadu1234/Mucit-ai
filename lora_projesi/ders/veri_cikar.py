@@ -6,6 +6,49 @@ sys.path.insert(0, U)
 import verici, alici
 import pcbnew
 
+def denetim_yap(b, pcb, ad):
+    """KiCad kural denetimi (DRC) sayilari ve ayaklarin sema ag listesiyle karsilastirmasi. Sayilar her calistirmada yeniden olculur."""
+    import re, tempfile
+    xml = os.path.join(os.path.dirname(pcb), ad + '.xml')
+    sonuc = {}
+    t = open(xml).read()
+    x = {}
+    for m in re.finditer(r'<net code="\d+" name="([^"]*)"[^>]*>(.*?)</net>', t, re.S):
+        for r, p in re.findall(r'ref="([^"]+)" pin="([^"]+)"', m.group(2)):
+            x[(r, p)] = m.group(1).lstrip('/')
+    toplam = bad = 0
+    for p in b.GetPads():
+        k = (p.GetParent().GetReference(), p.GetNumber())
+        if k not in x:
+            continue
+        toplam += 1
+        nn = p.GetNetname().lstrip('/')
+        if nn != x[k] and not x[k].startswith('unconnected'):
+            bad += 1
+    sonuc['pad_toplam'] = toplam
+    sonuc['pad_uyusmayan'] = bad
+    zf = pcbnew.ZONE_FILLER(b)
+    zf.Fill(b.Zones())
+    yol = os.path.join(tempfile.mkdtemp(), 'drc.rpt')
+    pcbnew.WriteDRCReport(b, yol, pcbnew.EDA_UNITS_MILLIMETRES, True)
+    rep = open(yol).read()
+    hata = {}
+    uyari = {}
+    for bl in re.split(r'\n(?=\[)', rep):
+        m = re.match(r'\[(\w+)\]', bl)
+        if not m:
+            continue
+        hedef = hata if 'Severity: error' in bl else uyari
+        hedef[m.group(1)] = hedef.get(m.group(1), 0) + 1
+    sonuc['drc_hata'] = sum(hata.values())
+    sonuc['drc_hata_turleri'] = hata
+    sonuc['drc_uyari'] = sum(uyari.values())
+    sonuc['drc_uyari_turleri'] = uyari
+    m = re.search(r'Found (\d+) unconnected pads', rep)
+    sonuc['bagli_olmayan_ayak'] = int(m.group(1)) if m else None
+    return sonuc
+
+
 def cikar(ad, modul, pcb):
     s = modul.kur()
     parcalar = {}
@@ -81,8 +124,9 @@ def cikar(ad, modul, pcb):
                 a, m, e = g.GetStart(), g.GetArcMid(), g.GetEnd()
                 kenar.append({'t': 'a', 'p': [round(v / 1e6, 3) for v in (a.x, a.y, m.x, m.y, e.x, e.y)]})
     kb = b.GetBoardEdgesBoundingBox()
+    denetim = denetim_yap(b, pcb, ad)
     d = {'ad': ad, 'baslik': s.baslik, 'parcalar': parcalar, 'aglar': aglar, 'konum': konum,
-         'padler': padler, 'cizgiler': cizgiler, 'izler': izler, 'viyalar': viyalar, 'kenar': kenar, 'kart': {'x': kb.GetX() / 1e6, 'y': kb.GetY() / 1e6, 'g': kb.GetWidth() / 1e6, 'y_': kb.GetHeight() / 1e6}}
+         'padler': padler, 'cizgiler': cizgiler, 'izler': izler, 'viyalar': viyalar, 'kenar': kenar, 'kart': {'x': kb.GetX() / 1e6, 'y': kb.GetY() / 1e6, 'g': kb.GetWidth() / 1e6, 'y_': kb.GetHeight() / 1e6}, 'denetim': denetim}
     json.dump(d, open(os.path.join(K, 'veri', ad + '.json'), 'w'), ensure_ascii=False, indent=1, sort_keys=True)
     print(ad, len(parcalar), 'parca', len(aglar), 'ag', len(konum), 'ayak izi')
 
