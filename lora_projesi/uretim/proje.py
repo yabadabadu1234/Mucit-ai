@@ -11,11 +11,16 @@ def proje_yaz(dizin, ad, ozel_lib=False):
     if ozel_lib:
         lib = os.path.join(dizin, 'kutuphane')
         os.makedirs(lib, exist_ok=True)
-        shutil.copy(os.path.join(D, 'kutuphane', 'Simcom.kicad_sym'), lib)
-        if os.path.isdir(os.path.join(lib, 'Simcom.pretty')): shutil.rmtree(os.path.join(lib, 'Simcom.pretty'))
-        shutil.copytree(os.path.join(D, 'kutuphane', 'Simcom.pretty'), os.path.join(lib, 'Simcom.pretty'))
-        open(os.path.join(dizin, 'sym-lib-table'), 'w').write('(sym_lib_table\n  (lib (name "Simcom")(type "KiCad")(uri "${KIPRJMOD}/kutuphane/Simcom.kicad_sym")(options "")(descr "SIM7600 modulu (resmi veri sayfasindan)"))\n)\n')
-        open(os.path.join(dizin, 'fp-lib-table'), 'w').write('(fp_lib_table\n  (lib (name "Simcom")(type "KiCad")(uri "${KIPRJMOD}/kutuphane/Simcom.pretty")(options "")(descr "SIM7600 LCC87 ayak izi"))\n)\n')
+        syms, fps = [], []
+        for ad, aciklama in (('Simcom', 'A7670SA modulu (resmi veri sayfasindan)'), ('Ozel', 'Ra-01H ve LM66100')):
+            shutil.copy(os.path.join(D, 'kutuphane', ad + '.kicad_sym'), lib)
+            hedef = os.path.join(lib, ad + '.pretty')
+            if os.path.isdir(hedef): shutil.rmtree(hedef)
+            shutil.copytree(os.path.join(D, 'kutuphane', ad + '.pretty'), hedef)
+            syms.append('  (lib (name "%s")(type "KiCad")(uri "${KIPRJMOD}/kutuphane/%s.kicad_sym")(options "")(descr "%s"))\n' % (ad, ad, aciklama))
+            fps.append('  (lib (name "%s")(type "KiCad")(uri "${KIPRJMOD}/kutuphane/%s.pretty")(options "")(descr "%s"))\n' % (ad, ad, aciklama))
+        open(os.path.join(dizin, 'sym-lib-table'), 'w').write('(sym_lib_table\n' + ''.join(syms) + ')\n')
+        open(os.path.join(dizin, 'fp-lib-table'), 'w').write('(fp_lib_table\n' + ''.join(fps) + ')\n')
 
 if __name__ == '__main__':
     proje_yaz(sys.argv[1], sys.argv[2], len(sys.argv) > 3)

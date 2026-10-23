@@ -50,9 +50,9 @@ def hazirla():
     ds.m_CopperEdgeClearance = mm(0.3)
     ds.m_HoleClearance = mm(0.1)
     ds.m_NetSettings.m_DefaultNetClass.SetClearance(mm(0.14))
-    # RF izi: U4 pin9 -> J2 pin1, duz
+    # RF izi: U4 pin1 -> J2 pin1, duz
     f4 = p.fps['U4']; f2 = p.fps['J2']
-    a = [pd for pd in f4.Pads() if pd.GetNumber() == '9'][0].GetPosition()
+    a = [pd for pd in f4.Pads() if pd.GetNumber() == '1'][0].GetPosition()
     c = [pd for pd in f2.Pads() if pd.GetNumber() == '1'][0].GetPosition()
     tr = pcbnew.PCB_TRACK(b)
     tr.SetStart(a); tr.SetEnd(c); tr.SetWidth(mm(RF_W)); tr.SetLayer(pcbnew.F_Cu); tr.SetNet(b.FindNet('ANT_RF'))

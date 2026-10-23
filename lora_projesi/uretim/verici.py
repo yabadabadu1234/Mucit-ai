@@ -50,10 +50,10 @@ def kur():
     s.parca('R8', 'Device', 'R', '470', R, {1: 'LED_CTL', 2: 'LED_A'}, grup=G)
     s.parca('D3', 'Device', 'LED', 'YESIL', 'LED_SMD:LED_0603_1608Metric', {2: 'LED_A', 1: 'GND'}, rot=0, grup=G)
 
-    G = 'LoRa: RFM95W-915S2 ve anten konnektoru'
-    s.parca('U4', 'RF_Module', 'RFM95W-915S2', 'RFM95W-915S2', 'RF_Module:HOPERF_RFM9XW_SMD',
-            {13: '+3V3', 1: 'GND', 8: 'GND', 10: 'GND', 2: 'LORA_MISO', 3: 'LORA_MOSI', 4: 'LORA_SCK', 5: 'LORA_NSS', 6: 'LORA_RESET',
-             14: 'LORA_DIO0', 15: 'LORA_DIO1', 9: 'ANT_RF'}, rot=0, grup=G, alanlar={'MPN': 'RFM95W-915S2'})
+    G = 'LoRa: Ra-01H (SX1276) ve anten konnektoru'
+    s.parca('U4', 'Ozel', 'Ra-01H', 'Ra-01H', 'Ozel:Ra-01H',
+            {3: '+3V3', 2: 'GND', 9: 'GND', 16: 'GND', 14: 'LORA_MOSI', 13: 'LORA_MISO', 12: 'LORA_SCK', 15: 'LORA_NSS', 4: 'LORA_RESET',
+             5: 'LORA_DIO0', 6: 'LORA_DIO1', 1: 'ANT_RF'}, rot=0, grup=G, alanlar={'MPN': 'Ai-Thinker Ra-01H (LCSC C503593)'})
     s.parca('C8', 'Device', 'C', '100nF', C, {1: '+3V3', 2: 'GND'}, grup=G)
     s.parca('C9', 'Device', 'C', '10uF 6,3V', C, {1: '+3V3', 2: 'GND'}, grup=G)
     s.parca('J2', 'Connector', 'Conn_Coaxial', 'SMA', 'Connector_Coaxial:SMA_Amphenol_132289_EdgeMount', {1: 'ANT_RF', 2: 'GND'}, rot=0, grup=G, alanlar={'MPN': 'Amphenol 132289 (kenar SMA)'})
