@@ -9,6 +9,9 @@ from pcbgen import mm
 R = 0.05
 KLR = 0.23
 VIA_D, VIA_DR = 0.5, 0.25
+NL = 3
+IN2 = os.environ.get('IZG_IN2', '1') == '1'
+if not IN2: NL = 2
 
 
 def dunya(v):
@@ -20,6 +23,7 @@ class Izgara:
         self.b = b; self.W = W; self.H = H
         self.nx = int(W / R) + 1; self.ny = int(H / R) + 1
         self.F, self.B = pcbnew.F_Cu, pcbnew.B_Cu
+        self.LAY = [pcbnew.F_Cu, pcbnew.B_Cu, pcbnew.In2_Cu][:NL]
         self.kur()
 
     def disk(self, lab, l, cx, cy, r, nc):
@@ -47,30 +51,30 @@ class Izgara:
 
     def kur(self):
         b = self.b
-        lab = np.zeros((2, self.ny, self.nx), np.int32)
-        trk = np.zeros((2, self.ny, self.nx), np.int32)
+        lab = np.zeros((NL, self.ny, self.nx), np.int32)
+        trk = np.zeros((NL, self.ny, self.nx), np.int32)
         for pad in b.GetPads():
             bb = pad.GetBoundingBox()
             r = (bb.GetLeft() / 1e6, bb.GetTop() / 1e6, bb.GetRight() / 1e6, bb.GetBottom() / 1e6)
             nc = pad.GetNetCode() if pad.GetNetCode() > 0 else 100000 + (id(pad) % 90000)
-            for l, L in enumerate((self.F, self.B)):
+            for l, L in enumerate(self.LAY):
                 if pad.IsOnLayer(L):
                     self.kutu(lab, l, *r, nc)
             dz = pad.GetDrillSize()
             if dz.x > 0:
                 p = pad.GetPosition()
-                for l in (0, 1):
+                for l in range(NL):
                     self.disk(lab, l, p.x / 1e6, p.y / 1e6, dz.x / 2e6 + 0.1, nc)
         for t in b.GetTracks():
             nc = t.GetNetCode()
             if t.GetClass() == 'PCB_VIA':
                 p = t.GetPosition()
-                for l in (0, 1):
+                for l in range(NL):
                     self.disk(lab, l, p.x / 1e6, p.y / 1e6, t.GetWidth() / 2e6, nc)
             else:
                 L = t.GetLayer()
-                if L not in (self.F, self.B): continue
-                l = 0 if L == self.F else 1
+                if L not in self.LAY: continue
+                l = self.LAY.index(L)
                 s, e = t.GetStart(), t.GetEnd()
                 ax, ay, bx, by = s.x / 1e6, s.y / 1e6, e.x / 1e6, e.y / 1e6
                 n = max(1, int(math.hypot(bx - ax, by - ay) / (R / 2)))
@@ -83,7 +87,7 @@ class Izgara:
                 if z.GetIsRuleArea() and (z.GetDoNotAllowTracks() or z.GetDoNotAllowVias()):
                     bb = z.Outline().BBox()
                     ls = z.GetLayerSet()
-                    for l, LL in ((0, self.F), (1, self.B)):
+                    for l, LL in enumerate(self.LAY):
                         if not ls.Contains(LL): continue
                         self.kutu(lab, l, bb.GetLeft() / 1e6, bb.GetTop() / 1e6, bb.GetRight() / 1e6, bb.GetBottom() / 1e6, -1)
         k = int(0.5 / R)
@@ -92,20 +96,22 @@ class Izgara:
 
     def yasak(self, nc, w, yumusak=False):
         out = []; via = []
-        for l in (0, 1):
+        for l in range(NL):
             dig = (self.lab[l] != 0) & (self.lab[l] != nc)
             if not yumusak:
                 dig = dig | ((self.trk[l] != 0) & (self.trk[l] != nc))
             d = ndimage.distance_transform_edt(~dig) * R
             out.append(d >= KLR + w / 2 - 0.02)
             via.append(d >= KLR + VIA_D / 2 - 0.02)
-        return np.array(out), np.array(via[0] & via[1])
+        vm = via[0]
+        for v in via[1:]: vm = vm & v
+        return np.array(out), np.array(vm)
 
     def ara(self, nc, w, bas, hed, va_c=40.0, yumusak=False):
         ok, vok = self.yasak(nc, w, yumusak)
         if yumusak:
-            ceza = np.zeros((2, self.ny, self.nx), np.float32)
-            for l in (0, 1):
+            ceza = np.zeros((NL, self.ny, self.nx), np.float32)
+            for l in range(NL):
                 dig = (self.trk[l] != 0) & (self.trk[l] != nc)
                 d = ndimage.distance_transform_edt(~dig) * R
                 ceza[l] = np.where(d < KLR + w / 2, 24.0, 0.0)
@@ -120,8 +126,8 @@ class Izgara:
                     if dx * dx + dy * dy <= r * r and 0 <= cy + dy < self.ny and 0 <= cx + dx < self.nx:
                         ok[l, cy + dy, cx + dx] = True
         nx, ny = self.nx, self.ny
-        g = np.full((2, ny, nx), np.inf, np.float32)
-        par = np.full((2, ny, nx), -1, np.int64)
+        g = np.full((NL, ny, nx), np.inf, np.float32)
+        par = np.full((NL, ny, nx), -1, np.int64)
         s = (l0, dunya(y0), dunya(x0)); t = (l1, dunya(y1), dunya(x1))
         g[s] = 0
         def h(y, x):
@@ -149,13 +155,13 @@ class Izgara:
                 if not (0 <= yy < ny and 0 <= xx < nx): continue
                 if not ok[l, yy, xx]: continue
                 if dy and dx and not (ok[l, y, xx] and ok[l, yy, x]): continue
-                ng = gc + c + (ceza[l, yy, xx] if ceza is not None else 0.0)
+                ng = gc + c + (ceza[l, yy, xx] if ceza is not None else 0.0) + (0.4 * c if l == 2 else 0.0)
                 if ng < g[l, yy, xx]:
                     g[l, yy, xx] = ng; par[l, yy, xx] = (l * ny + y) * nx + x
                     heapq.heappush(pq, (ng + h(yy, xx), ng, (l, yy, xx)))
             if vok[y, x]:
-                l2 = 1 - l
-                if ok[l2, y, x]:
+                for l2 in range(NL):
+                    if l2 == l or not ok[l2, y, x]: continue
                     ng = gc + va_c
                     if ng < g[l2, y, x]:
                         g[l2, y, x] = ng; par[l2, y, x] = (l * ny + y) * nx + x
@@ -193,7 +199,7 @@ def ekle(b, nc, w, parcalar):
     yeni = []
     prev = None
     for l, pts in parcalar:
-        L = pcbnew.F_Cu if l == 0 else pcbnew.B_Cu
+        L = [pcbnew.F_Cu, pcbnew.B_Cu, pcbnew.In2_Cu][l]
         for (x1, y1), (x2, y2) in zip(pts, pts[1:]):
             t = pcbnew.PCB_TRACK(b)
             t.SetStart(pcbnew.VECTOR2I(mm(x1), mm(y1))); t.SetEnd(pcbnew.VECTOR2I(mm(x2), mm(y2)))
@@ -215,9 +221,10 @@ def baglantisizlar(rep):
     for m in re.finditer(r'\[unconnected_items\][^\n]*\n[^\n]*\n\s+@\(([\d.]+) mm, ([\d.]+) mm\): ([^\n]*)\n\s+@\(([\d.]+) mm, ([\d.]+) mm\): ([^\n]*)', rep):
         x1, y1, a, x2, y2, c = m.groups()
         net = re.search(r'\[([^\]]+)\]', a).group(1)
-        la = re.search(r'on (F|B)\.Cu', a); lc = re.search(r'on (F|B)\.Cu', c)
-        l1 = 1 if (la and la.group(1) == 'B') else 0
-        l2 = 1 if (lc and lc.group(1) == 'B') else 0
+        def kat(m):
+            return 1 if (m and m.group(1) == 'B') else (2 if (m and m.group(1) == 'In2') else 0)
+        la = re.search(r'on (F|B|In2)\.Cu', a); lc = re.search(r'on (F|B|In2)\.Cu', c)
+        l1 = kat(la); l2 = kat(lc)
         out.append((net, (l1, float(x1), float(y1)), (l2, float(x2), float(y2))))
     return out
 
@@ -271,7 +278,7 @@ def calistir(yol, cikis, W, H):
                 sok = []
                 for t in list(b.GetTracks()):
                     if t.GetClass() == 'PCB_VIA' or t.GetNetCode() == nc: continue
-                    l = 0 if t.GetLayer() == pcbnew.F_Cu else 1
+                    l = {pcbnew.F_Cu: 0, pcbnew.B_Cu: 1, pcbnew.In2_Cu: 2}.get(t.GetLayer(), 9)
                     sx, sy, ex, ey = t.GetStart().x / 1e6, t.GetStart().y / 1e6, t.GetEnd().x / 1e6, t.GetEnd().y / 1e6
                     lim = KLR + 0.1 + t.GetWidth() / 2e6
                     for (px, py, pl) in pts[::2]:
