@@ -40,7 +40,7 @@ def dsn_duzenle(yol, korunan):
     t = re.sub(r'\(clearance [\d.]+ \(type smd_smd\)\)', '(clearance 150 (type smd_smd))', t)
     t = re.sub(r'\(clearance 20?[01]?\.?[01]?\)', '(clearance 150)', t)
     t = t.replace('(clearance 200.1)', '(clearance 150)').replace('(clearance 150.1', '(clearance 150')
-    t = re.sub(r'\(layer (In[12]\.Cu)\n      \(type signal\)', r'(layer \1\n      (type power)', t)
+    t = re.sub(r'\(layer (In1\.Cu)\n      \(type signal\)', r'(layer \1\n      (type power)', t)
     open(yol, 'w').write(t)
 
 def hazirla():
