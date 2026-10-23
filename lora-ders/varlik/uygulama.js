@@ -20,6 +20,20 @@ $$('ol.isaretli>li').forEach(function(li,i){
   li.addEventListener('mouseleave',function(){var m=$('.isaret[data-no="'+(i+1)+'"]');if(m)m.classList.remove('vurgu');li.classList.remove('vurgu')});
 });
 
+/* ---------- bölüm şemalarında tel/ağ vurgusu (tam gezginde gezgin.js yönetir) ---------- */
+$$('svg.sema:not(.tamsema)').forEach(function(svg){
+  svg.addEventListener('click',function(e){
+    var el=e.target.closest('[data-ag]');if(!el||el.closest('.parca'))return;
+    var a=el.getAttribute('data-ag');if(!a)return;
+    var ayni=svg.getAttribute('data-sec')===a;
+    $$('.secili-ag',svg).forEach(function(x){x.classList.remove('secili-ag')});
+    svg.classList.remove('agsecili');svg.removeAttribute('data-sec');
+    if(ayni)return;
+    svg.setAttribute('data-sec',a);svg.classList.add('agsecili');
+    $$('[data-ag="'+a.replace(/"/g,'\\"')+'"]',svg).forEach(function(x){x.classList.add('secili-ag')});
+  });
+});
+
 /* ---------- hesap makineleri ---------- */
 var H={
 bolucu:{b:'Gerilim bölücü: Çıkış = Giriş × Alt / (Üst + Alt)',a:[['Giriş gerilimi (V)',12],['Üst direnç (Ω)',31600],['Alt direnç (Ω)',10000]],

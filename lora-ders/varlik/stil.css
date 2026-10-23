@@ -91,3 +91,43 @@ svg.pano .secili{filter:drop-shadow(0 0 3px #fff)}
 footer{max-width:1360px;margin:30px auto;padding:16px;color:var(--soluk);font-size:14px;border-top:1px solid var(--cizgi)}
 @media (max-width:900px){.kap{grid-template-columns:1fr}aside.yan{position:static;max-height:none;border-right:0}.kartlar{grid-template-columns:1fr}}
 abbr{text-decoration:underline dotted;cursor:help}
+
+.gizli{display:none}
+body.genis .kap{grid-template-columns:minmax(0,1fr);max-width:none;padding:12px 18px}
+body.genis aside.yan{display:none}
+body.genis main{max-width:none}
+.gezgin .gz-ust{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0;align-items:center}
+.gezgin .gz-ust input{flex:1 1 340px;padding:8px 12px;border:1px solid var(--cizgi);border-radius:8px;background:var(--panel);color:var(--yazi);font-size:15px}
+.gezgin button{padding:6px 14px;border:1px solid var(--cizgi);border-radius:99px;background:var(--panel);color:var(--yazi);cursor:pointer;font-size:14.5px}
+.gezgin button.aktif{background:var(--mavi);color:#fff;border-color:var(--mavi)}
+.gz-govde{display:grid;grid-template-columns:minmax(0,1fr) 430px;gap:16px;align-items:start}
+.gz-bilgi{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;background:var(--panel);border:1px solid var(--cizgi);border-radius:10px;padding:10px 14px;font-size:14.5px}
+.gz-bilgi h3{margin:.2em 0 .3em}
+.gz-bilgi .alt{color:var(--soluk);font-size:13.5px;margin-bottom:4px}
+.gz-bilgi table{font-size:13.5px}
+.gz-bilgi .pkart{border:0;padding:0;margin-top:10px;background:transparent}
+.gz-bilgi .pkart h4{display:none}
+.gz-tablo tbody tr{cursor:pointer}
+.gz-tablo tbody tr:hover,.gz-tablo tr.secili{background:var(--sari)}
+.gz-filtre{width:100%;padding:8px 12px;margin:6px 0;border:1px solid var(--cizgi);border-radius:8px;background:var(--panel);color:var(--yazi);font-size:15px}
+svg.tamsema{min-width:0!important;height:72vh;width:100%;cursor:grab;touch-action:none;background:var(--bg)}
+svg.tamsema text.tamb{font-size:26px;font-weight:700;fill:var(--yazi);cursor:pointer}
+svg.tamsema text.tamb:hover{fill:var(--mavi);text-decoration:underline}
+svg.sema .tel.secili-ag{stroke:var(--vurgu);stroke-width:4.5}
+svg.sema text.secili-ag{fill:var(--vurgu);font-weight:800}
+svg.sema .ray.secili-ag path,svg.sema .toprak.secili-ag path{stroke:var(--vurgu);stroke-width:3.5}
+svg.sema.agsecili .tel:not(.secili-ag){opacity:.25}
+svg.tamsema .parca.secili-ref path,svg.tamsema .parca.secili-ref rect{stroke:var(--vurgu);stroke-width:3.5}
+svg.tamsema .parca.secili-ref{filter:drop-shadow(0 0 5px var(--vurgu))}
+svg.pano2{width:100%;height:72vh;display:block;touch-action:none;cursor:grab}
+svg.pano2 .gizli{display:none}
+svg.pano2.v-on .s-B{display:none}
+svg.pano2.v-arka .s-F{display:none}
+svg.pano2.ayna .k-ref text{transform-box:fill-box;transform-origin:center;transform:scaleX(-1)}
+svg.pano2 .iz.secili-ag{stroke:#fff}
+svg.pano2 circle.secili-ag,svg.pano2 .pd.secili-ag{fill:#fff}
+svg.pano2 .pd.secili-ref{fill:#ff4d4d}
+svg.pano2 .k-ref text.secili-ref{fill:#ff6b6b;font-weight:700}
+svg.pano2.agsecili [data-ag]:not(.secili-ag){opacity:.18}
+svg.pano2 .k-ref text{cursor:pointer}
+@media (max-width:1100px){.gz-govde{grid-template-columns:1fr}.gz-bilgi{position:static;max-height:none}}
