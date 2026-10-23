@@ -9,7 +9,7 @@ REFS = ['U5', 'C3', 'C4', 'C5', 'C6', 'L1', 'R2', 'R3', 'C7', 'C8', 'C9']
 CFG = dict(
     id=ID, baslik=BASLIK, ozet=OZET, ad='3,3 V çevirici', ic='U5', cin='C3', cin_hf='C4', cbst='C5', css='C6', L='L1', rt='R2', rb='R3',
     cout=['C7', 'C8', 'C9'], sw_net='SW_3V3', out_net='+3V3', fb_net='FB_3V3', ss_net='SS_3V3', sema_genislik=1040,
-    bolge_baslik='3,3 V ÇEVİRİCİ  —  TPS62933: 12 V → 3,3 V, 500 kHz', iyuk=0.5, yuk='ESP32-S3 (3,0–3,6 V), RFM95W (1,8–3,7 V), W5500 (≈ 3,3 V)', refs=REFS,
+    bolge_baslik='3,3 V ÇEVİRİCİ  —  TPS62933: 12 V → 3,3 V, 500 kHz', iyuk=0.5, yuk='ESP32-S3 (3,0–3,6 V), Ra-01H (1,8–3,6 V), W5500 (≈ 3,3 V)', refs=REFS,
     sema_not='EN ucu boşta (çip kendiliğinden etkin), RT ucu boşta (500 kHz).',
     isaret_ref=['U5', 'L1', 'C3', 'C5', 'C6', 'R2', 'C7'],
     ozel_ogren='Hiç kontrol ucu bağlanmayan (EN, RT boşta) bir çevirici nasıl çalışır?',
@@ -30,7 +30,7 @@ CFG = dict(
                  '<tr><td>Giriş 24 V’a darbe</td><td>TVS 24,4 V’ta kenetler; çip 30 V’a (mutlak 32 V) dayanır. [[ds]]</td></tr>'
                  '<tr><td>Hafif yük</td><td>Çip darbe frekansı modulasyonuna (PFM) geçer: verim yüksek, çıkış dalgalanması biraz büyük, frekans değişken. [[ds]]</td></tr>'
                  '<tr><td>Isı</td><td>Çip 165 °C’ta kapanır, 30 °C histerezisle geri açılır. [[ds]]</td></tr>',
-    kaynak_ek='Bobin ve kondansatör parça numaraları (Bourns SRN6028 sınıfı bobin, 22 µF 10 V 1206 seramik) bu çalışmada veri sayfasından doğrulanmadı.',
+    kaynak_ek='Bobin ve kondansatör parça numaraları (Bourns SRP7028A bobin, 22 µF 10 V 1206 seramik) bu çalışmada veri sayfasından doğrulanmadı.',
     kutuplu=[],
 )
 

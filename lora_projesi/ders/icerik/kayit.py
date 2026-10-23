@@ -96,12 +96,13 @@ def kaynak():
         ('TI TPS63031 (SLVS696D) — verici çevirici', 'Baştan sona okundu'),
         ('TI TPS62933 (SLUSEA4D) — alıcı çeviriciler', 'Özellikler, ayak tablosu, mutlak azami değerler, tavsiye edilen koşullar, elektriksel özellikler tablosu okundu; uygulama ve yerleşim bölümleri okunmadı'),
         ('Espressif ESP32-S3-WROOM-1 v1.8', 'Ayak tablosu ve strapping bölümleri okundu; geri kalanı okunmadı'),
-        ('HopeRF RFM95/96/97/98(W) v1.x', 'Elektriksel özellikler ve ayak tablosu okundu'),
-        ('SIMCom SIM7600E/E-H Hardware Design V1.02', 'Ayak düzeni için kullanıldı. SA/SA-H belgesi bulunamadı: ayak düzeni doğrulanmadı'),
-        ('SIMCom SIM7600-H ürün tanımı', 'Genel özellikler okundu'),
+        ('Ai-Thinker Ra-01H Specification V1', 'Baştan sona okundu (ayak tablosu, ana parametreler, elektriksel özellikler); ölçü çizimi yok — ayak izi Ra-01/Ra-02 kılavuzundan'),
+        ('SIMCom A7670 Series Hardware Design V1.00', 'Baştan sona okundu: bantlar, ayak tablosu, besleme, açma/kapama, UART, USB, SIM, anten, elektriksel sınırlar; akım tablosunun çoğu belgede “TBD”'),
+        ('SIMCom A7670SA ürün özeti (LCSC’deki belge)', 'Okundu; LASC/LASE/FASE/MASC son eklerinin anlamı yazılı değil'),
+        ('TI LM66100 (SLVSEZ8A)', 'Pinler, açık direnç ve CE bağlantısı okundu'),
         ('WIZnet W5500 v1.1.0', 'SPI davranışı ve referans devre için kullanıldı'),
         ('Hanrun HR911105A (RJ45) kısa belge', 'Okundu (iki sayfa)'),
-        ('AO3401A, SMBJ15A, 1812L200, AP2112K, SRD-12VDC, SS14, USBLC6-2SC6, ESDA6V1-5SC6, TXB0104, bobinlerin doyma akımı', 'Veri sayfaları okunmadı; bu parçalar için yazılan değerler genel bilgidir [[bilgi]] ve sipariş öncesi kontrol edilmelidir [[dogrulanmadi]]'),
+        ('AO3401A, SMBJ15A, 1812L200, AP2112K, SRD-12VDC, SS14, USBLC6-2SC6, bobinlerin doyma akımı (SRP7028A tablosu kısmen okundu)', 'Veri sayfaları okunmadı; bu parçalar için yazılan değerler genel bilgidir [[bilgi]] ve sipariş öncesi kontrol edilmelidir [[dogrulanmadi]]'),
         ('Mikroşerit hat hesabı (Hammerstad), IPC-2221 iz akımı, FSPL', 'Standart formüller; yazılımla çalışır, üretici katman dizilimi bilinmediği için [[tahmin]]'),
     ]
     return ('<h1>Kaynaklar ve güven düzeyi</h1><p>Bu sayfa “ne okundu, ne okunmadı”yı açık söyler. Okunmayan bir belgeden çıkan sayı sitede yalnızca [[bilgi]] ya da [[dogrulanmadi]] etiketiyle yer alır.</p>'

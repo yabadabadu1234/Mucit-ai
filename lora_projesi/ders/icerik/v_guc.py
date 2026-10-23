@@ -81,7 +81,7 @@ def uret(ver, ctx):
                   '<li>Neden iki diyot var, bedeli nedir?</li>'
                   '<li>Kartta nerede durmalılar?</li></ul>', 'Bu bölümde öğreneceklerin:'))
     h.append('<h2>1. Büyük resim</h2>')
-    h.append('<p>Kartın iki besleme kaynağı olabilir: iki adet AAA pil veya USB-C’den gelen 5 volt. İşlemci (ESP32-S3) ile telsiz modülünün (RFM95W) ihtiyacı ise <b>sabit 3,3 volttur</b>. '
+    h.append('<p>Kartın iki besleme kaynağı olabilir: iki adet AAA pil veya USB-C’den gelen 5 volt. İşlemci (ESP32-S3) ile telsiz modülünün (Ra-01H) ihtiyacı ise <b>sabit 3,3 volttur</b>. '
              'Alkali bir AAA pil yeni iken yaklaşık 1,5 volt verir, boşalırken 1,0 volt ve altına düşer. İki hücre seri bağlanınca toplam gerilim '
              'yeni pilde yaklaşık 3,0–3,2 volt, boş pilde yaklaşık 1,8–2,0 volt olur [[bilgi]]. Yani giriş gerilimi bazen 3,3 voltun <i>üstünde</i>, çoğunlukla <i>altındadır</i>. '
              'Düşüren (buck) çevirici yalnız indirebilir, yükselten (boost) çevirici yalnız çıkarabilir; ikisini birden yapan <b>yükselten-düşüren çevirici</b> gerekir. '

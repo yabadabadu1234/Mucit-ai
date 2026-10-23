@@ -160,16 +160,18 @@ SINIFLAR = {
     uc=['Açılışta bazı uçların seviyesi modun seçilmesini sağlar (strapping): IO0 düşük → programlama kipi. Bu uçlara bağlanan devrenin açılışta yanlış seviye vermesi cihazı açamaz hâle getirir.',
         'EN ucu düşük = sıfırlama; RC süzgeci (10 kΩ + 1 µF) açılışta ≈ 10 ms gecikme verir (τ = 10 ms).',
         'Wi-Fi vericisi açıkken akım 300–400 mA’ya çıkabilir; bu kartta Wi-Fi kullanılmadığı varsayıldı. [[tahmin]]']),
-'rfm95w': dict(
-    ad='RFM95W-915S2 (LoRa telsiz modülü, SX1276 yongalı)',
+'ra01h': dict(
+    ad='Ra-01H (Ai-Thinker, LoRa telsiz modülü, SX1276 yongalı)',
     ne='915 MHz bandında uzun menzilli, düşük hızlı mesaj gönderir ve alır.',
-    yapi='Semtech SX1276 yongası, kristal, süzgeç ve çıkış katı küçük bir modül üzerinde; SPI ile kontrol edilir. [[bilgi]]',
-    ozellik=['3,3 V besleme; SPI ucları MISO/MOSI/SCK/NSS; sıfırlama RESET; kesme DIO0 ve DIO1; antene ANT ucu.[[bilgi]]',
-             'Gönderirken (en yüksek güçte) akım tipik olarak 120 mA civarıdır; alırken ≈ 10–12 mA.[[bilgi]] Veri sayfasından okunacak. [[dogrulanmadi]]'],
-    uc=['ANT ucu 50 Ω hat ile SMA’ya gitmelidir; anten takılı değilken gönderme yapılmaz.','Besleme dalgalanması vericide çıkış spektrumunu bozar; çıkışa yakın 10 µF + 100 nF gerekir.']),
+    yapi='Semtech SX1276 yongası, kristal ve süzgeç 17 × 16 × 3,2 mm’lik bir modül üzerinde; kenarlarında 16 yarım delikli (kastel) pad vardır; SPI ile kontrol edilir. [[ds]]',
+    ozellik=['803–930 MHz; besleme 1,8–3,6 V (tipik 3,3 V); en çok +19 dBm çıkış, çıkış akımı en çok 105 mA. [[ds]]',
+             '915 MHz’de ortalama akım: gönderme 97 mA, alma 12,15 mA, bekleme (standby) 1,5 mA. [[ds]]',
+             'SPI ucları SCK/MISO/MOSI/NSS; sıfırlama RESET; kesme DIO0 ve DIO1; antene ANT ucu (pin 1); üç GND ucu (2, 9, 16). [[ds]]'],
+    uc=['ANT ucu 50 Ω hat ile SMA’ya gitmelidir; anten takılı değilken gönderme yapılmaz.','Besleme dalgalanması vericide çıkış spektrumunu bozar; çıkışa yakın 10 µF + 100 nF gerekir.',
+        'Bu kartın ayak izi, aynı boyuttaki Ra-01/Ra-02 kılavuzunun çizimine göre kuruldu; Ra-01H belgesinde ölçü çizimi yoktur: üretimden önce Ai-Thinker’e teyit ettirilmelidir. [[dogrulanmadi]]']),
 'tps62933': dict(
     ad='TPS62933 (3 A senkron düşüren çevirici)',
-    ne='12 V’u geri besleme bölücüsüyle belirlenen düşük gerilime (bu kartta 3,3 V ve 3,8 V) verimli biçimde indirir.',
+    ne='12 V’u geri besleme bölücüsüyle belirlenen düşük gerilime (bu kartta 3,3 V ve 4,0 V) verimli biçimde indirir.',
     yapi='Çipin içinde iki güç transistörü (üst anahtar 76 mΩ, alt anahtar 32 mΩ), denetim devresi ve yumuşak başlatma vardır; dışarıdan bobin, giriş/çıkış kondansatörleri, 100 nF bootstrap kondansatörü, SS kondansatörü ve geri besleme bölücüsü istenir. Dahili kompanzasyon vardır: dışarıdan kontrol döngüsü parçası gerekmez. [[ds]]',
     ozellik=['Giriş 3,8–30 V (mutlak azami 32 V), çıkış 0,8–22 V, sürekli çıkış akımı 3 A. [[ds]]',
              'Referans 0,8 V ±%1 (25 °C): V<sub>çıkış</sub> = 0,8 × (1 + R<sub>üst</sub>/R<sub>alt</sub>). [[ds]]',
@@ -193,17 +195,24 @@ SINIFLAR = {
         'Analog besleme (+3V3A) bir ferrit boncuk ile süzülür; dijital gürültü PHY’ye geçmemeli.',
         'Kristal yük kapasitesi hesabı: C<sub>yük</sub> = C1·C2/(C1+C2) + C<sub>kaçak</sub>; kristal veri sayfasındaki yük değeriyle eşleşmezse frekans kayar.',
         'Fark çiftlerinin (TX, RX) izleri aynı uzunlukta ve birbirine yakın tutulmalıdır.']),
-'sim7600': dict(
-    ad='SIM7600SA (4G LTE Cat 1 modem modülü)',
+'a7670': dict(
+    ad='A7670SA (SIMCom, 4G LTE Cat 1 modem modülü)',
     ne='Kartı cep telefonu şebekesine bağlar; internet için veri bağlantısı sağlar. İşlemci ile seri hatla (UART, AT komutları) konuşur.',
-    yapi='Tek bir LCC (kenarında lehim pedleri olan) modül: baseband işlemcisi, RF, güç yönetimi, SIM arayüzü. [[bilgi]]',
-    ozellik=['Besleme 3,4–4,2 V (tipik 3,8 V); gönderirken kısa süreli yaklaşık 2 A çeker: bu yüzden ayrı çevirici ve 330 µF polimer kondansatör kullanıldı.[[bilgi]]',
-             'Seri hat mantık düzeyi 1,8 V: işlemcinin 3,3 V’uyla arada seviye çevirici gerekir.[[bilgi]]',
-             'Açma: PWRKEY ayağı belirli süre düşük tutulur; sıfırlama: RESET ayağı. Bu kartta işlemci bunları bir transistörle sürer.[[bilgi]]'],
-    uc=['Ayak düzeni SIM7600E/E-H belgesinden alındı; SA/SA-H için ayrı belge bulunamadı: sipariş öncesi doğrulanmalıdır. [[dogrulanmadi]]',
-        'Besleme çökerse modem şebekeden düşer ve yeniden açılması gerekir: giriş rayına ayrı bobin ve büyük kondansatör bu nedenle konuldu.',
-        'Ana anten ve yardımcı anten izleri 50 Ω olmalı, Ethernet ve LoRa hatlarından uzak durmalı.',
-        'SIM kartı kısa devre ve elektrostatik yüke karşı korunmalıdır: SIM hatlarına ESD koruma çipi bağlanır.']),
+    yapi='Tek bir LGA (alt yüzünde lehim pedleri olan) 24 × 24 mm, 88 pedli modül: baseband işlemcisi, RF, güç yönetimi, SIM arayüzü. [[ds]]',
+    ozellik=['LTE-FDD B1/B2/B3/B4/B5/B7/B8/B28/B66 ve GSM 850/900/1800/1900; Cat 1 (10 Mbit/sn aşağı, 5 Mbit/sn yukarı). Şili’de kullanılan bantlar (B28, B7, B4, B2, B66, B5) listededir. [[ds]]',
+             'Besleme 3,4–4,2 V (tipik 3,8 V); gönderirken kısa süreli yaklaşık 2,8 A çeker; belge en az 300 µF önerir: bu yüzden ayrı çevirici ve 330 µF polimer kondansatör kullanıldı. [[ds]]',
+             'Seri hat mantık düzeyi 1,8 V: işlemcinin 3,3 V’uyla arada seviye çevirici gerekir. [[ds]]',
+             'Açma: PWRKEY ayağı belirli süre düşük tutulur; sıfırlama: RESET ayağı; ikisi de modül içinde 50 kΩ ile VBAT’a çekilidir ve en çok 10 nF yük kabul eder. [[ds]]'],
+    uc=['LASC/LASE/FASE/MASC son eklerinin farkı SIMCom belgelerinde yazılı değildir; satın almadan önce satıcıya yazılı sorulmalıdır. [[dogrulanmadi]]',
+        'Besleme çökerse modem şebekeden düşer ve yeniden açılması gerekir: modem rayına ayrı çevirici ve büyük kondansatör bu nedenle konuldu.',
+        'Ana anten izi 50 Ω olmalı, Ethernet ve LoRa hatlarından uzak durmalı. Belgedeki iki “yasak alan” karesi üst katmanda bakırsız bırakılmıştır.',
+        'SIM kartı kısa devre ve elektrostatik yüke karşı korunmalıdır: SIM hatlarına ESD koruma çipi (USBLC6) ve 22 Ω seri direnç konur.']),
+'lm66100': dict(
+    ad='LM66100 (ideal diyot, TI)',
+    ne='İki beslemeyi (12 V’tan gelen 3,3 V ve USB’den gelen 3,3 V) birleştirirken geri akımı keser ve Schottky diyottan çok daha az gerilim düşürür.',
+    yapi='İçinde bir P kanallı MOSFET ve geri akımı algılayan denetim devresi vardır; CE ucu VOUT’a bağlandığında geri akım engellenir. [[ds]]',
+    ozellik=['Açık direnç yaklaşık 91 mΩ (3,6 V’ta), yani 0,3 A’de yaklaşık 30 mV düşüm. [[ds]]','ST ucu durum çıkışıdır; bu kartta toprağa bağlıdır. [[ds]]'],
+    uc=['Giriş–çıkış ters kutuplanırsa MOSFET kapanır ve akım geri gitmez; yalnız CE ucunun doğru bağlanması gerekir. [[ds]]']),
 'ap2112': dict(
     ad='AP2112K-3.3 (doğrusal düzenleyici, LDO)',
     ne='USB’nin 5 V’unu 3,3 V’a çevirir; kart yalnız USB ile programlanırken 12 V olmadan çalışmasını sağlar.',
@@ -246,17 +255,11 @@ SINIFLAR = {
     uc=['Kullanılmayan kanalın A4/B4 uçları boş bırakılamaz: yüzer girişler hatalı yön algılar; toprağa bağlanır (bu çalışmada düzeltildi).',
         'Yön algılama zayıf sürücülerle yapılır: hat üzerinde 10 kΩ’dan küçük yukarı/aşağı çekme direnci varsa kanal bozulabilir. [[bilgi]]',
         'Seri hat hızlarında (115 kb/s) sorun çıkarmaz.']),
-'esd_cok': dict(
-    ad='ESDA6V1-5SC6 (5 hatlı elektrostatik boşalma koruması)',
-    ne='SIM hatlarına gelen statik elektrik darbesini toprağa akıtır.',
-    yapi='Bir toprak ucuna bağlı, her hat için iki yönlü bir TVS diyot dizisi. [[bilgi]]',
-    ozellik=['6,1 V civarı kırılma, birkaç pF kapasite.[[bilgi]]'],
-    uc=['Toprak ucu kısa ve geniş izle düzleme gitmezse koruma işe yaramaz.']),
 'testpad': dict(
     ad='Test noktası',
     ne='Üretimden sonra ölçüm probunu değmek için çıplak bakır pad.',
     yapi='Lehim maskesinde açıklık bırakılmış tek bakır alan.',
-    ozellik=['Bu kartta: BOOT_CFG0, USB_DN, USB_DP.'],
+    ozellik=['Alıcıda: USB_BOOT, VDD_1V8, UART_LOG_TX, modem USB VBUS/DP/DM.'],
     uc=['USB hatlarındaki test pad’i kök bırakılırsa küçük bir “dal” oluşur; uzunluğu kısa tutulur.']),
 
 }
@@ -303,17 +306,16 @@ def sinif_bul(ref, p):
         return 'tps63031'
     if sem.startswith('RF_Module:ESP32-S3'):
         return 'esp32s3'
-    if sem == 'RF_Module:RFM95W-915S2':
-        return 'rfm95w'
+    if sem == 'Ozel:Ra-01H': return 'ra01h'
+    if sem == 'Ozel:LM66100': return 'lm66100'
     if sem.startswith('Regulator_Switching:TPS62933'): return 'tps62933'
     if sem.startswith('Interface_Ethernet:W5500'): return 'w5500'
-    if sem.startswith('Simcom:SIM7600'): return 'sim7600'
+    if sem.startswith('Simcom:A7670'): return 'a7670'
     if sem.startswith('Regulator_Linear:AP2112'): return 'ap2112'
     if sem.startswith('Relay:'): return 'role'
     if sem.startswith('Connector:RJ45'): return 'rj45'
     if sem == 'Connector:SIM_Card': return 'simsoket'
     if sem == 'Device:Crystal_GND24': return 'kristal'
     if sem.startswith('Logic_LevelTranslator'): return 'txb0104'
-    if sem.startswith('Power_Protection:ESDA'): return 'esd_cok'
     if sem == 'Connector:TestPoint': return 'testpad'
     return None

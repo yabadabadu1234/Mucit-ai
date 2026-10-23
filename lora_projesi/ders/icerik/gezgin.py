@@ -10,24 +10,28 @@ SORULAR = {
         ('Pil ömrü', 'Uyku akımı veri sayfalarından toplandı (yaklaşık 40–50 µA); gerçek ölçüm yok.', 'Çözüm ancak prototip ölçümüyle olur.'),
     ],
     'alici': [
-        ('W5500 kristal hatları uzun', 'XI yaklaşık 28 mm, XO yaklaşık 32 mm; veri sayfası kristalin çipe yakın olmasını ister. Kristali ve iki kondansatörünü çipin yanına almayı denedim; çevredeki izler çakıştığı için geri aldım.', 'Çözmek için W5500 çevresini yeniden yerleştirip bütün yolu baştan çizmek gerekir (birkaç saat, riskli). Bunu yapmamı ister misiniz? Ya da kartı büyütebilir miyim?'),
-        ('Ethernet çiftlerinin uzunluğu eşit değil', 'TD_P 35 mm, TD_N 21 mm; RD_P 24 mm, RD_N 12 mm. Hızda ciddi bir sorun beklenmez ama ideal değil.', 'Yukarıdaki yeniden yerleştirmeyle birlikte düzelir; ayrı bir iş olarak yapmamı ister misiniz?'),
-        ('SIM7600SA ayak düzeni', 'Ayak düzeni SIM7600E/E-H donanım belgesinden alındı; SA/SA-H belgesi bulunamadı.', 'Sizde SA/SA-H donanım tasarım belgesi varsa verin; yoksa siparişten önce doğrulanmalı.'),
-        ('Lamba akımı', 'Teklifte yoktu; 3 A varsayıldı (iz 1,4 mm, viyasız).', 'Gerçek akım kaç amper?'),
-        ('Modem besleme hattında viyalar', 'VBAT_MOD 0,7 mm, yolda 4 delikli geçit var; kısa süreli 2 A tepe için viyaların akım kapasitesi doğrulanmadı.', 'Daha çok paralel viya eklememi ister misiniz?'),
+        ('W5500 kristal hatları', 'XI yaklaşık 19,5 mm, XO yaklaşık 20,9 mm; veri sayfası kristalin çipe yakın olmasını ister. Hesaplanan yük kayması ≈ 2 ppm (Ethernet sınırı ±50 ppm).', 'Prototipte ağ bağlantısı denenmeli; sorun çıkarsa W5500 çevresi yeniden yerleştirilir.'),
+        ('Ethernet çiftlerinin uzunluğu', 'TX çifti 2,1 mm, RX çifti 2,8 mm farklı (≈ 12 ve 17 ps; sembol süresi 8000 ps). Hangi iz parçalarının hangi çifti oluşturduğu ağ adlarından okundu.', 'Hızda sorun beklenmez; WIZnet “eşit uzunluk” der, tam eşitlenmesini ister misiniz?'),
+        ('A7670SA son ekleri ve stok', 'LASC / LASE / FASE / MASC farkı SIMCom belgelerinde yazılı değil; LCSC’de LASE’den 1, LASC’den 97 adet görüldü (100 takım gerekir).', 'Hangi son ek? Satıcıya yazılı soru sorulacak; ayak izi hepsi için aynıdır.'),
+        ('Ra-01H ayak izi', 'Ra-01H belgesinde ölçü çizimi yok; pad ölçüleri aynı boyuttaki Ra-01 kılavuzundan alındı.', 'Üretimden önce Ai-Thinker’e teyit ettirilecek.'),
+        ('Lamba akımı', 'Teklifte yoktu; 2 A varsayıldı (iz 0,8 mm).', 'Gerçek akım kaç amper?'),
+        ('Modem besleme hattı', 'VBAT_MOD 41 mm boyunca 1,0 mm, geri kalanında 0,4 mm (SIMCom ≥ 2 mm ister); bobinden modül pedlerine hesaplanan direnç 18–19 mΩ. 2,8 A patlama benzetimi çeviricinin döngü bant genişliğine bağlı: 20 kHz’de 3,54 V, 10 kHz’de 2,9 V (alt sınır 3,4 V).', 'Prototipte VBAT patlaması osiloskopla ölçülmeli.'),
         ('Dört katman dizilimi', 'Katman kalınlıkları varsayım.', 'Üretici seçilince doğrulanacak.'),
     ],
 }
 
 BULUNAN = {
     'verici': [
-        'LORA_DIO0 izi, RFM95W modülünün DIO1 ayağına 0,1486 mm yaklaşıyordu (sınır 0,15 mm): iz yeniden çizildi, kural denetimi temizlendi.',
+        'LORA_DIO0 izi, LoRa modülünün DIO1 ayağına 0,1486 mm yaklaşıyordu (sınır 0,15 mm; önceki RFM95W’li çizimde): iz yeniden çizildi, kural denetimi temizlendi.',
     ],
     'alici': [
         'TXB0104 seviye çeviricisinin kullanılmayan A4/B4 girişleri boştaydı: toprağa bağlandı, şema ve kart güncellendi.',
-        'Lamba hattı 0,4 mm çizilmişti (3 A için gereken ≈ 1,4 mm): 1,4 mm ve viyasız yeniden çizildi.',
-        'İki yönlendirme (Freerouting ve kendi yazdığım ızgara yönlendirici) birlikte kullanıldı; 16 bağlantısız ayak kalmıştı, hepsi kapandı.',
-        'Pin 16 (toprak) ayağının dışarı doğru uzanan bağlantısı, komşu +3V3A ayaklarının birleşmesini tıkıyordu: kaldırıldı.',
+        'USB tek başına çalışırken Schottky diyot (SS14) yüzünden +3V3 hattı ≈ 2,9 V’a iniyordu (ESP32-S3 alt sınırı 3,0 V): LM66100 ideal diyot kondu.',
+        'İlk seçilen güç bobininin doyma akımı (2,7 A) modemin 2,8 A’lik darbesi için yetersizdi: Bourns SRP7028A-4R7M (Isat ≈ 10 A) kondu.',
+        'SIM hatlarındaki 50 pF’lık ESD dizisi SIMCom’un 60 pF sınırına çok yakındı ve 22 Ω seri dirençler yoktu: USBLC6-2SC6 (≈ 3,5 pF) ve R39–R41 (22 Ω) eklendi; PWRKEY/RESET uçlarına da USBLC6 kondu.',
+        'W5500’ün +3V3 ayakları, iç katmandaki sinyal izleriyle büyük +3V3 düzleminden kopmuş küçük bir adaya iniyordu: ada ile düzlem arasına köprü viyası eklendi (bağlantısız ayak 2 → 0).',
+        'Yönlendirici bazı toprak viyalarını iç katman izlerinin üstüne yerleştirmişti (51 açıklık ihlali): viyalar iç katman izlerinden kaçınacak biçimde yeniden yerleştirildi.',
+        'SIM yuvasının alt yüz yasak alanına giren bir toprak izi çekildi.',
     ],
 }
 

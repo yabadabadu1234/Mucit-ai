@@ -7,7 +7,7 @@ Status: schematic, 4-layer PCB (88 x 102 mm), Gerber/drill, BOM, placement files
 - LoRa: Ai-Thinker Ra-01H (SX1276, 803-930 MHz, 16 half-hole pads) instead of RFM95W. Pad geometry is taken from the Ra-01/Ra-02 manual (same 17 x 16 mm body, same 16 pins); the Ra-01H document has no dimension drawing. Confirm with Ai-Thinker before fabrication.
 - Power inductors: Bourns SRP7028A-4R7M (Isat about 10 A) after the first inductor turned out too weak for the modem burst.
 - USB-only power path: LM66100 ideal diode instead of the Schottky, so +3V3 no longer drops to about 2.9 V when only USB is plugged in.
-- ESD: USBLC6-2SC6 on PWRKEY/RESET and on the SIM lines; 22 ohm series resistors on the three SIM signals; test points for USB_BOOT, VDD_1V8, log UART and USB D+/D-/VBUS.
+- ESD: USBLC6-2SC6 on PWRKEY/RESET and on the SIM lines; 22 ohm series resistors on the three SIM signals; test points for USB_BOOT, the log UART output and USB D+/D-/VBUS (SIMCom also asks for a VDD_1V8 test point; there is none, the +1V8 net can be probed at C42).
 
 ## Pin map (ESP32-S3-WROOM-1-N4)
 Shared SPI: SCK IO12, MOSI IO11, MISO IO13. Ra-01H: NSS IO10, RESET IO14, DIO0 IO8, DIO1 IO15. W5500: CS IO9, INT IO16, RST IO17. Modem UART (through TXB0104, modem side 1.8 V): host TX IO4, host RX IO5, STATUS IO1, PWRKEY driver IO6, RESET driver IO7, modem supply enable IO2. Relay driver IO38, LEDs IO39/IO40, button IO0 (also boot), USB D- IO19, D+ IO20.

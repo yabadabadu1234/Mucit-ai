@@ -129,13 +129,12 @@ KISALTMA = {
     'IP': 'İnternet protokolü (Internet Protocol)',
     'FR': 'FR-4: cam elyaf takviyeli epoksi, standart kart malzemesi (Flame Retardant)',
     'PEDOT': 'İletken polimer malzeme; polimer kondansatörde elektrolit yerine kullanılır',
-    'SA': 'SIM7600’ün Güney Amerika (South America) için üretilen sürümü; bant listesi doğrulanmalıdır',
-    'SA-H': 'SIM7600SA’nın Cat 4 (daha hızlı) sürümü',
+    'SA': 'A7670SA adındaki “SA” son eki; SIMCom belgelerinde açılımı yazılı değil (bant listesi belgeden okundu)',
     'ANT': 'Anten ucu (Antenna)',
     'TD': 'Ethernet’te gönderme çifti (Transmit Data)',
     'RD': 'Ethernet’te alma çifti (Receive Data)',
     'IC': 'Tümleşik devre (Integrated Circuit): çip',
-    'SIM7600': 'SIMCom’un 4G modem modül ailesi',
+    'A7670': 'SIMCom’un 4G (LTE Cat 1) modem modül ailesi',
 }
 
 
