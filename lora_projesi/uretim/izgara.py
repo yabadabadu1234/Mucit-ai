@@ -259,8 +259,11 @@ def calistir(yol, cikis, W, H):
         I = Izgara(b, W, H)
         tercih = 0.5 if net.startswith('+12V') else (0.4 if net in ('VBAT_MOD', 'LAMBA_SW') else 0.25)
         yapildi = False
-        for w in (tercih, 0.25, 0.2):
-            yolu = I.ara(nc, w, bas, hed)
+        GUCW = {'LAMBA_SW': (1.4, 1.0, 0.8), '+12V_IN': (1.4, 1.0, 0.8), 'VBAT_MOD': (0.7, 0.55, 0.45)}
+        ws = GUCW.get(net, (tercih, 0.25, 0.2))
+        va = 1000.0 if net in ('LAMBA_SW', '+12V_IN') else 40.0
+        for w in ws:
+            yolu = I.ara(nc, w, bas, hed, va_c=va)
             if yolu is None: continue
             yeni = ekle(b, nc, w, sadelestir(yolu, bas, hed))
             k, rep2 = sorun_say(b)
@@ -270,7 +273,7 @@ def calistir(yol, cikis, W, H):
                 continue
             taban = k; rep = rep2; yapildi = True; b.Save(cikis)
             print('kabul', net, w, bas[1:], hed[1:]); durum_yaz(); sys.stdout.flush(); os._exit(0)
-        if not yapildi and rip.get(net, 0) < 2:
+        if not yapildi and rip.get(net, 0) < 2 and net not in ('LAMBA_SW', '+12V_IN', 'VBAT_MOD'):
             rip[net] = rip.get(net, 0) + 1
             yolu = I.ara(nc, 0.2, bas, hed, yumusak=True)
             if yolu is not None:
