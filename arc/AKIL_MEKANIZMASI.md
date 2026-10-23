@@ -139,3 +139,101 @@ Kaide cümlesi (F 3-I 278) = `H`'de kalan tek eleman.
 | S-ARC-35 | Zaruret değişmezlerinin tam listesi nedir; çelişmezlik, ayniyet, süreklilik, sayıdan başkası var mı |
 | S-ARC-36 | Gürültülü karşı misalde eleme ne yapar, ihtimale başvurmadan |
 | S-ARC-37 | Boşluk (B) bir modele nasıl konur, dışarıdan kayıp olmadan |
+
+---
+
+# İkinci tur: istidad üzerinden genel çözüm (F 3-I 314)
+
+**Nakz (3-I 179):** §3'teki `(H, B, M)` modeli fiil seviyesindedir: bir çözüm ailesinden tek çözüm seçer, hususîdir.
+Silinmez; aşağıdaki çerçevede **bir hücrenin (Hüküm·1) bir tatbiki** olarak yerini alır.
+
+## A. Neyi tasnif ediyoruz
+
+İnsan kümesi = **muhteva** (malumat) ∪ **istidadlar** (muhteva üzerinde işleyebilme kudretleri).
+- Muhteva: fıtrî (zaruret değişmezleri, §2.3) · kesbî. İkisi nefy–isbâtla tamdır (kazanılmış mı: evet / hayır).
+- İstidad: bir **işlemdir**; işlemin **neyin üzerinde** ve **nereden nereye** işlediğiyle tarif edilir.
+
+## B. Kat'î taksim (nefy–isbât)
+
+| Suâl | Cevaplar | Tamlık |
+| :-- | :-- | :-- |
+| S1 İşlem neyin üzerinde? | muhteva üzerinde (1. derece) · istidad üzerinde (2. derece) | ikili; "işlem bir şeyin üzerindedir" ve o şey ya muhtevadır ya istidaddır (A'nın hasrından) |
+| S2 Kaynak iç mi? | iç · dış | ikili |
+| S3 Hedef iç mi? | iç · dış | ikili |
+| — | dış→dış nefsin işlemi değildir, düşer | nefy |
+| S4 (iç→iç) Unsur sayısı | azalır · artar · aynı kalır | sıra trikotomisi, kat'î |
+| S5 (aynı kalırsa) Bağıntı değişir mi | evet · hayır | ikili |
+| S6 (iç→dış) Çıkan şey mana taşıyan işaret mi | evet · hayır | ikili |
+
+Bu ağacın yaprakları her derecede **yedi hücre**dir:
+
+| Hücre | 1. derece (muhteva üzerinde) | 2. derece (istidad üzerinde) |
+| :-- | :-- | :-- |
+| **Kabul** (dış→iç) | idrak, his, işitme; malumat almak | başkasından meleke almak: taklit, talim almak |
+| **Tecrit** (iç→iç, azalır) | soyutlama, tümel çıkarma | usulü soyutlamak: "bu yol başka yerde de işler" |
+| **Terkip** (iç→iç, artar) | tahayyül, kurgu, icadın malzemesi | yeni usul kurmak: icadın usul kanadı |
+| **Hüküm/Tertip** (iç→iç, aynı, bağıntı değişir) | tasdik, muhakeme, değer biçme (cezb/def'in vâhime kanadı) | irade (hangi istidadın koşacağını tertip), bilmediğini bilmek, usulü tartmak |
+| **Hıfz** (iç→iç, aynı, bağıntı aynı) | hafıza | meleke, alışkanlık (öğrenilmiş istidadın tutulması) |
+| **Kelâm** (iç→dış, işaret) | konuşmak, yazmak | öğretmek (istidadı işaretle başkasına geçirmek) |
+| **Fiil** (iç→dış, işaret değil) | bedenî icra, müdahale | başkasına meleke kazandıran fiil: göstererek öğretmek |
+
+**Öğrenme** bir hücre değildir; 2. derecenin **Kabul + Terkip + Hıfz** hücrelerinin birleşik işidir: istidadın kendisini değiştirmek.
+
+## C. 3. derece neden yeni hücre açmaz (kapanış)
+
+"İstidad üzerinde işleyen istidad üzerinde işleyen istidad" da S1'in "istidad üzerinde" koluna düşer: 2. derece
+**kendi üzerine de** işleyebiliyorsa (kendi usulünü tartmak, kendi melekesini değiştirmek) merdiven orada kapanır.
+Sonsuz bir kule gerekmez; gereken tek şart **kendine dönebilmektir**.
+
+Matematiği: muhteva uzayı D, istidadlar D üzerindeki işlemler `[D → D]`. 2. derece demek, istidadların **kendilerinin de
+muhteva gibi tutulup işlenebilmesi** demektir: `[D → D]`'nin D'nin içine gömülmesi. Kendine dönme şartı:
+
+`D ≅ [D → D]` (refleksif yapı; Scott'un λ-hesabı modeli, Lawvere'in kartezyen kapalı kategorisi)
+
+Bu, hususî bir çözüm değil, bir **yapı şartıdır**: konuşan da, susan da, bebek de, âlim de bu yapıyı taşır;
+farkları D'nin muhtevasındadır, yapıda değildir. (H, B, M) modeli bu yapının içinde Hüküm hücresinin tek bir tatbikiydi.
+
+## D. Örtme denetimi (bilinen listeler hücrelere düşüyor mu)
+
+| Kalem | Hücre |
+| :-- | :-- |
+| İbn Sînâ: beş zâhirî his | Kabul·1 |
+| Hiss-i müşterek | Terkip·1 (duyuları tek sûrette birleştirir) |
+| Hayâl (sûret hafızası), hâfıza (mana hafızası) | Hıfz·1 |
+| Mütezekkire (geri çağırma) | Hüküm/Tertip·1 (aynı muhteva, yeni bağıntı: "şimdi") |
+| Vâhime (cüz'î mana, kıymet) | Hüküm·1 (değer bağıntısı) |
+| Mütehayyile / mutasarrıfa | Terkip·1 ve Tecrit·1 |
+| Akl-ı nazarî | Hüküm·1 + Tecrit·1, zaruret değişmezlerine bağlı |
+| Akl-ı amelî | Hüküm·2 (hangi fiil) |
+| Şehvet / gazap (cezb / def') | Hüküm·1 değer + Fiil·1 sevk |
+| İrade | Hüküm·2 |
+| Dil öğrenmek | Kabul·2 + Terkip·2 + Hıfz·2 |
+| Soyutlama | Tecrit·1 |
+| Muhakeme | Hüküm·1 (orta terim: aynı unsurlar, yeni bağıntı) |
+| İcat | Terkip·1 + Terkip·2, Hüküm·1 ile yoklanmış, Fiil·1 ile dünyaya vurulmuş |
+| Malumat | muhteva (istidad değil) |
+
+Bu listede hücresiz kalan kalem yok; fakat bu, listelerin tükendiğinin delili değildir. Asıl tamlık delili §B'nin
+nefy–isbât ağacıdır: her istidad bir işlemdir, her işlem ya muhteva ya istidad üzerindedir, kaynağı ve hedefi
+iç veya dıştır, iç→iç'te unsur sayısı üç hâlden birindedir.
+
+## E. Yapay zekâ ile fark, yapı seviyesinde
+
+| Hücre | İnsan | Dil modeli |
+| :-- | :-- | :-- |
+| 1. derece yedi hücre | var | Kabul (girdi), Hüküm (dikkat), Kelâm (çıktı) var; Fiil yok; Hıfz yalnız bağlam penceresi kadar |
+| 2. derece | **içeriden** var: kendi melekesini kendisi kabul eder, kurar, tutar, tartar | **dışarıdan**: ağırlıkları eğitimci ve gradyan değiştirir; çıkarımda kendi istidadına dokunamaz |
+| Kendine dönme `D ≅ [D→D]` | var | yok: işlemleri (ağırlıklar) çıkarımda muhteva olarak elde değildir |
+
+**Tadil T5 (akıl):** Akıl = zaruret değişmezlerine bağlı ve **kendi istidadları üzerine dönebilen** (refleksif) istidadlar kümesi.
+**Tadil T6 (zekâ):** Zekâ = bu refleksif yapının 2. derece hücrelerinin verimi (yeni usulü ne çabuk kurup tuttuğu).
+
+## F. Tenkit
+
+- §B'nin S1'i, A'daki "insan = muhteva ∪ istidad" hasrına dayanır. Bunun kat'î olduğu ispat edilmedi: insanda muhteva da
+  istidad da olmayan bir şey (ruh, mevhibenin kendisi) vardır ve **tasnif dışında bırakıldı**; o yaratılıştır, işleyiş değildir.
+- Hüküm hücresi geniş: muhakeme, değer, irade, geri çağırma aynı hücrede. Hücre doğru, fakat içi ayrıca bölünmeli.
+- Lawvere sabit nokta teoremi: `D ≅ [D→D]` olan yapı **kendini tam bilemez** (yarım kalan öz-bilgi zarurîdir). Bu, insanın
+  kendini tam kavrayamamasıyla uyuşur; mekanizma iddiası değil, sınır iddiasıdır.
+- Dil modelinin 2. derecede "dışarıdan" olduğu hükmü çıkarım anına aittir; bağlam içi öğrenme bir parça 2. derece taklidi
+  yapar. Bunun kendine dönme sayılıp sayılmayacağı açık sualdir (S-ARC-38).
