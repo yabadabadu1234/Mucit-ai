@@ -1,0 +1,66 @@
+{
+  "muhur": "CLAUDE.md § 3-I 316 örneği. Padişahın mühürlediği Bakara 1-10 blok tercümesi: blok sırası Arapça, blok içi Arapça kelime sırası, devrik belagattır, mâ…illâ istisnasında illâ arkada çevrilir.",
+  "surah_id": 2, "name_tr": "Bakara",
+  "verses": [
+    { "verse_key": "2:1", "blocks": [
+      {"ar": "الٓمٓ", "tr": "Elif. Lâm. Mîm.", "role": "huruf_muqattaa"} ]},
+
+    { "verse_key": "2:2", "blocks": [
+      {"ar": "ذَٰلِكَ ٱلْكِتَـٰبُ", "tr": "İşte o Kitap ki,", "role": "mubtada"},
+      {"ar": "لَا رَيْبَ فِيهِ", "tr": "yoktur şüphe onda,", "role": "khabar_jumla"},
+      {"ar": "هُدًى لِّلْمُتَّقِينَ", "tr": "bir hidayettir takvâ sahipleri için.", "role": "khabar_thani"} ]},
+
+    { "verse_key": "2:3", "blocks": [
+      {"ar": "ٱلَّذِينَ يُؤْمِنُونَ بِٱلْغَيْبِ", "tr": "Onlar ki iman ederler gayba,", "role": "sifa_mawsool"},
+      {"ar": "وَيُقِيمُونَ ٱلصَّلَوٰةَ", "tr": "ve kılarlar dosdoğru olarak namazı,", "role": "atf_fiil_mefool"},
+      {"ar": "وَمِمَّا رَزَقْنَـٰهُمْ يُنفِقُونَ", "tr": "ve rızık verdiğimizden onlara harcarlar.", "role": "atf_jar_majroor_muqaddam"} ]},
+
+    { "verse_key": "2:4", "blocks": [
+      {"ar": "وَٱلَّذِينَ يُؤْمِنُونَ", "tr": "Ve onlar ki iman ederler", "role": "atf_sifa_mawsool"},
+      {"ar": "بِمَآ أُنزِلَ إِلَيْكَ", "tr": "indirilene sana", "role": "jar_majroor_silah"},
+      {"ar": "وَمَآ أُنزِلَ", "tr": "ve indirilene", "role": "atf_silah"},
+      {"ar": "مِن قَبْلِكَ", "tr": "senden önce;", "role": "taalluk"},
+      {"ar": "وَبِٱلْـَٔاخِرَةِ", "tr": "ve âhirete,", "role": "jar_majroor_muqaddam"},
+      {"ar": "هُمْ يُوقِنُونَ", "tr": "onlar kesin inanırlar.", "role": "hasr_fiil"} ]},
+
+    { "verse_key": "2:5", "blocks": [
+      {"ar": "أُو۟لَـٰٓئِكَ عَلَىٰ هُدًى", "tr": "İşte onlar bir hidayet üzerindedirler", "role": "mubtada_khabar"},
+      {"ar": "مِّن رَّبِّهِمْ", "tr": "Rablerinden;", "role": "sifa_jar_majroor"},
+      {"ar": "وَأُو۟لَـٰٓئِكَ هُمُ ٱلْمُفْلِحُونَ", "tr": "ve işte onlardır kurtuluşa erenler.", "role": "atf_hasr"} ]},
+
+    { "verse_key": "2:6", "blocks": [
+      {"ar": "إِنَّ ٱلَّذِينَ كَفَرُوا۟", "tr": "Şüphesiz ki onlar ki inkâr ettiler,", "role": "inna_ismuha"},
+      {"ar": "سَوَآءٌ عَلَيْهِمْ", "tr": "birdir onlara,", "role": "khabar_muqaddam"},
+      {"ar": "ءَأَنذَرْتَهُمْ", "tr": "uyardın mı onları", "role": "istifham_fiil_mefool"},
+      {"ar": "أَمْ لَمْ تُنذِرْهُمْ", "tr": "yoksa uyarmadın mı onları;", "role": "atf_adl"},
+      {"ar": "لَا يُؤْمِنُونَ", "tr": "iman etmezler.", "role": "khabar_inna"} ]},
+
+    { "verse_key": "2:7", "blocks": [
+      {"ar": "خَتَمَ ٱللَّهُ", "tr": "Mühür vurdu Allah", "role": "fiil_fail"},
+      {"ar": "عَلَىٰ قُلُوبِهِمْ", "tr": "kalplerine", "role": "jar_majroor"},
+      {"ar": "وَعَلَىٰ سَمْعِهِمْ", "tr": "ve kulaklarına;", "role": "atf_jar_majroor"},
+      {"ar": "وَعَلَىٰٓ أَبْصَـٰرِهِمْ غِشَـٰوَةٌ", "tr": "ve gözleri üzerinde bir perde vardır,", "role": "khabar_muqaddam_mubtada"},
+      {"ar": "وَلَهُمْ عَذَابٌ عَظِيمٌ", "tr": "ve onlara vardır büyük bir azap.", "role": "atf_khabar_muqaddam"} ]},
+
+    { "verse_key": "2:8", "blocks": [
+      {"ar": "وَمِنَ ٱلنَّاسِ", "tr": "Ve insanlardan", "role": "khabar_muqaddam"},
+      {"ar": "مَن يَقُولُ", "tr": "kimse vardır ki söyler:", "role": "mubtada_mawsool"},
+      {"ar": "ءَامَنَّا بِٱللَّهِ", "tr": "'İman ettik Allah'a", "role": "maqul_qawl"},
+      {"ar": "وَبِٱلْيَوْمِ ٱلْـَٔاخِرِ", "tr": "ve âhiret gününe.'", "role": "atf_jar_majroor"},
+      {"ar": "وَمَا هُم بِمُؤْمِنِينَ", "tr": "Oysa değillerdir onlar mümin.", "role": "hal_nafi"} ]},
+
+    { "verse_key": "2:9", "blocks": [
+      {"ar": "يُخَـٰدِعُونَ ٱللَّهَ", "tr": "Aldatmaya çalışırlar Allah'ı", "role": "fiil_mefool"},
+      {"ar": "وَٱلَّذِينَ ءَامَنُوا۟", "tr": "ve onları ki iman ettiler;", "role": "atf_mawsool"},
+      {"ar": "وَمَا يَخْدَعُونَ", "tr": "oysa aldatmazlar", "role": "hal_nafi"},
+      {"ar": "إِلَّآ أَنفُسَهُمْ", "tr": "kendilerinden başkasını,", "role": "istithna_mufarragh",
+       "semantic_note": "İSTİSNA kuralı (3-I 316 bent 4): öndeki illâ Türkçede arkada ('başkasını') tercüme edilir."},
+      {"ar": "وَمَا يَشْعُرُونَ", "tr": "ve farkına varmazlar.", "role": "atf_nafi"} ]},
+
+    { "verse_key": "2:10", "blocks": [
+      {"ar": "فِى قُلُوبِهِم مَّرَضٌ", "tr": "Kalplerinde hastalık vardır;", "role": "khabar_muqaddam_mubtada"},
+      {"ar": "فَزَادَهُمُ ٱللَّهُ مَرَضًا", "tr": "artırdı Allah da o hastalığı,", "role": "fa_sababiyya_fiil_fail_mefool"},
+      {"ar": "وَلَهُمْ عَذَابٌ أَلِيمٌۢ", "tr": "ve onlara vardır acıklı bir azap,", "role": "atf_khabar_muqaddam"},
+      {"ar": "بِمَا كَانُوا۟ يَكْذِبُونَ", "tr": "yalan söylemelerinden ötürü.", "role": "illet_jar_majroor_masdar_muawwal"} ]}
+  ]
+}
