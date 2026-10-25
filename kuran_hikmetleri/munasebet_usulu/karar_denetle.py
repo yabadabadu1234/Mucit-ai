@@ -10,7 +10,8 @@ TASIYICI = {"muhatap", "baskasi"}
 UFUK = {"dunya", "ahiret"}
 KIP = {"yeni", "hatirlatma", "pekistirme", "duzeltme"}
 ILIM_CINSI = {"nazari", "ameli"}
-YON = {"onceki", "sonraki", "butun", "mutekellim", "muhatap", "konu", "vaziyet", "netice"}
+SICIL = json.load(open(__file__.rsplit("/", 1)[0] + "/YON_SICILI.json", encoding="utf-8")) if "/" in __file__ else json.load(open("YON_SICILI.json", encoding="utf-8"))
+YON = {x["ad"] for x in SICIL if x["yuva"] == "yon"}
 ETKI = {"dahil-etmeme", "miktar", "sira"}
 DERECE = {"iz-dogrulandi", "hipotez", "rivayet-yoklanmadi"}
 AYRISIM = {"ve", "taksim"}
@@ -284,6 +285,9 @@ def sinama(d):
     e = copy.deepcopy(d)
     e["kararlar"][0]["gerekce"][0]["yon"] = "tahmin"
     sonuc.append(("tanimsiz gerekce yonu", denetle(e)[0]))
+    g2 = copy.deepcopy(d)
+    g2["kararlar"][0]["gerekce"][0]["yon"] = "muktezayi-hal"
+    sonuc.append(("muktezayi-hali unsur (yon) diye yazmak", denetle(g2)[0]))
     f = copy.deepcopy(d)
     f["kararlar"] = [x for x in f["kararlar"] if x["id"] != "K07"]
     sonuc.append(("1:7'nin kararini silmek", denetle(f)[0]))

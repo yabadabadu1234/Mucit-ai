@@ -77,10 +77,26 @@ Bir birimin burada bulunuşunun sebebi, sözün şu **unsurlarından** biriyle m
 | `mutekellim` | Söyleyen |
 | `muhatap` | Sözü alanın iç hâli |
 | `konu` | Hakkında söylenen hakikat |
-| `vaziyet` | Sözün indiği ortam (öncesi): klasik belâgatın **makâm**ı, muktezâ-yı hâl |
+| `vaziyet` | Sözün indiği somut durum: olay, kişi, zaman, mekân (sebeb-i nüzûl bunun rivayetli hâli) |
+| `makam` | Söyleyen ile alanın konumu ve duruşu (Claude adaylığı) |
 | `netice` | Sözün dünyada ve ahirette bıraktığı eser (sonrası) |
 
-Hasr: söz bir olaydır; unsurları söyleyen, söz (metin içi üçü), alan, hakkında söylenen, ortam ve eserdir (P3). Önceki sürümdeki altılıda `vaziyet` ve `netice` yoktu; padişahın dolaylı gaye misali bu eksiği gösterdi. Muktezâ-yı hâl ilkesinin meânî ilminin temeli, Sekkâkî'nin onu sistemleştirdiği aramada **teyit edildi** (TDV/Kur'an Ansiklopedisi özetleri); "makâm" teriminin Sekkâkî'deki tam karşılığı **doğrudan teyit edilemedi**.
+**Yön kümesi açık sicildir (3-I 320):** "hasr" iddiası geri alındı. Her yön `YON_SICILI.json`da tanımı, kaynağı ve durumuyla yazılır; yeni yön bulunursa tanımıyla eklenir, hiçbiri silinmez. Denetçi yalnız sicildeki `yon` yuvalı adları kabul eder.
+
+**Ayrılan kavramlar (nakz: önceki sürümde vaziyet = makâm = muktezâ-yı hâl yazmıştım, yanlıştı):**
+
+| Kavram | Yuvası | Durum |
+|---|---|---|
+| hâl | Ayrı yön değil; söyleyenin, muhatabın ve konunun **durumu** | Belâgat tarifinde teyitli |
+| muktezâ-yı hâl | Unsur değil; ihtiyaç ile kararı bağlayan **gereklilik** (`neden_bu_kadar`, `neden şimdi`) | Teyitli |
+| mutâbakat | Ölçü: karar durumun gereğine uyuyor mu (`kapanis_testi`) | Kısmen teyitli |
+| vaziyet | Yön: somut olay, kişi, zaman, mekân | Kısmen teyitli |
+| makâm | Yön adayı: konum ve duruş | Claude adaylığı; hâl ile farkı kaynakta bulunamadı |
+| dâî, maksat | İhtiyacın kendisi, ayrıca açılmadı | Hafızadan, yoklanamadı |
+
+Teyitli çekirdek: belâgat, sözün **söyleyenin, muhatabın ve dile getirilen şeyin durumuna** uygun söylenmesidir; meânî bunun ilmidir.
+
+**Hocaların silsilesi (padişahın hayal meyal hatırası; aşağıdaki zincir Claude'un ADAYIDIR, yoklanmadı):** *sözün söyleyeni → muhatabı → vaziyeti → hâli → makâmı → dâîsi → maksadı → muktezâsı → o muktezâya mutâbakatı, sonra söz.* Bu zincir tam bir ihtiyaç→karar sorgusudur: ilk üçü yön, dâî ve maksat ihtiyaç, muktezâ karar bağı, mutâbakat ölçü. Zincirin hocalardaki tam sırası ve kelimeleri bulunamadı; padişah hatırlıyorsa düzeltir.
 
 ## 5. Kayıt alanları
 
@@ -131,6 +147,7 @@ Dosya: `kapsam` (örn. "1:1-7"), `gaye_ihtiyaci`, `kisitlar`.
 | Üç türlü ihtiyaç (hasır iddiası) | **Genişledi:** yedi değişken, iki taşıyıcı |
 | Altı gerekçe yönü | **Genişledi:** sekiz yön (`vaziyet`, `netice`) |
 | Kısım sınırı `sure.md`ye göre | Karar bekler; ağaçtan türeyen aday yanına konuldu |
+| Sekiz yönün hasr olduğu; vaziyet = makâm = muktezâ-yı hâl | **Nakzedildi (3-I 320).** Açık sicil; üç kavram ayrıldı |
 
 ## 10. Ezber için kullanım
 
@@ -138,7 +155,7 @@ Fâtiha zinciri: *Kime yöneliyorum? → adı (1:1) → yapabilir mi, övülür 
 
 ## 11. Açık sualler
 
-- **S-M2:** Kısım hududu ihtiyaç ağacına mı, `sure.md` konu etiketlerine mi göre olacak? (Padişah henüz karar vermedi; her ikisi duruyor.)
+- **Kısım hududu:** ağaç bitene kadar sorulmaz (3-I 320); her iki aday duruyor.
 - **S-M3:** § 2-B'de dördüncü bir durum değişkeni var mı? Padişah "bazı ihtiyaç çeşitleri daha olabilir" dedi; haritadaki on geçerli hücrenin (4 zihnî × muhatap + 3 zihnî olmayan × iki taşıyıcı) her biri için en az bir aday bulundu (örnekler § 2-B'de; **statü × muhatap dışı** için 4:2, **celb-i menfaat × muhatap** için 2:261). Bu, hücrelerin var olduğunu gösterir; dördüncü değişkenin bulunmadığını **göstermez**.
 - **S-M4:** Gazâlî'nin ilim–hâl–amel üçlüsü kaynaktan doğrulanmadı (P1'in tarihî dayanağı).
 - İş kalemleri (sayı): nakarat örneği 0 (Rahmân ya da Mürselât gerekir); 113 sûrenin `gaye_ihtiyaci` yazılmadı; besmele'nin Fâtiha âyeti sayılması ihtilaflıdır (hafızadan, yoklanmadı), 1:1 sayıldı.
