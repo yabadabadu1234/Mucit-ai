@@ -160,6 +160,10 @@ Bu açıklamaların her biri yaygın ve cazip sezgilere dayanır, fakat UID hipo
 
 ---
 
+**İşaret kaydı (sayfa görüntüsünden).** (4)'te yazılan PMI(u; g) = log p_tekil(u) − log p(u | g)  ve (5)'te PMI(u; g | ℓ) = log p(u | ℓ) − log p(u | g, ℓ), alışılmış karşılıklı bilginin (log p(u|g) − log p(u)) **ters işaretlisidir**; makale böyle yazar ve sebebini söylemez. Şekil ve formül kartları: `SEKILLER/` (fihrist: `SEKILLER/FIHRIST.md`).
+
+---
+
 ## 9. Bu eserin modernliği ve yeniliği (3-I 325 EK sınaması; benim hükmüm)
 
 **Modern mi?** Evet; Kasım 2024, bugün (Ekim 2026) iki yıllık. Kullandığı dil modelleri (Llama-2-7B-64k, Mistral-7B) 2023 modelleridir; bugünkü en güçlü modeller değildir.

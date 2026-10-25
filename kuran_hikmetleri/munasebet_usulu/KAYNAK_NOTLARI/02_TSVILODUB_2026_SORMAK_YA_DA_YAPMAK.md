@@ -141,6 +141,10 @@ Hükümleri: model, insanların konuşma belirsizliğine tepki verip vermeme ara
 
 ---
 
+*Şekil 1, 2 ve 3 ile modelin kapalı formülleri Türkçe resim olarak `SEKILLER/05`–`07`'de mühürlüdür; çubuk büyüklükleri gözle okunmuştur (yaklaşık).* Sayfada «Regret» tarifinde «argmax» yazılıdır; mânâ gereği «max» okunur.
+
+---
+
 ## 5. Müzakere ve sınırlar
 
 **Girizgâh.** Her ciddi eser, kendi zayıf yerlerini de sayar. Yazarlar burada ne yapamadıklarını açıkça yazıyor; aşağıdaki liste, bu modeli başka işe vurmadan evvel bilinmesi gereken kayıtlardır.

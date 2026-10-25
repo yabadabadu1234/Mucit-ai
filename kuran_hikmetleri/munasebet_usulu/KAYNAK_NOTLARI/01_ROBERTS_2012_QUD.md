@@ -123,7 +123,7 @@ Hamblin'de olduğu gibi bir sual bir **şıklar kümesine** karşılık gelir; R
 Basit bir wh-sualinin q-şık kümesi, wh-öğesinin üzerinde soyutlama yapılıp bu soyutlamanın modeldeki, wh-öğesiyle **aynı tipten bütün şeylere** (nesne, fonksiyon, her ne ise) sırayla uygulanmasıyla bulunan önermeler kümesidir. Bu şöyle genelleştirilir:
 
 **(1) Bir α cümlesinin söylenişine karşılık gelen q-şıkları:**
-q-alt(α) = { p : ∃u_{i−1}, …, u_{i−n} ∈ D, p = |β| (u_{i−1}) … (u_{i−n}) }
+q-alt(α) = { p : ∃ u^{i−1}, …, u^{i−n} ∈ D [ p = |β| (u^{i−1}) … (u^{i−n}) ] }
 Burada α'nın mantıkî biçimi wh_{i−1}, …, wh_{i−n}(β)'dır; {wh_{i−1}, …, wh_{i−n}} α'daki (belki boş) wh-öğeleri kümesidir; D ise dil için kurulan modelin alanıdır, uygun şekilde cinse göre daraltılmıştır: *kim* için insanlar, *ne* için insan olmayanlar.
 
 Dikkat edilecek nokta: (1) sual olmayan söz için bile bir şıklar kümesi verir; sözdeki wh-öğeleri soyutlanır ve soyutlama değişkenleri modelde uygun cinsten nesneler üzerinde serbestçe dolaşır. (Dipnot 9: Bu küme von Stechow'un (1991) sualle belirlenen şıklarından farklıdır, çünkü onun şıkları hem wh-öğeleri hem odaklanan öğeler üzerinde **aynı anda** değişir, oysa Roberts bu iki değişimi ayırır; bunun neden önemli olduğu 2. bölümde görülecektir.) **Evet/hayır sualları** wh-öğesi taşımaz, bu yüzden (1)'e göre ?(α) şeklindeki bir evet/hayır sualının q-şıklar kümesi tek elemanlı **{|α|}** kümesidir. (Dipnot 10: wh-öğelerinin işleç olarak ele alınması şart değildir; burada kapsamlarını işaretlemekten başka bir iş görmezler. Bunun yerine, Ginzburg'un (1995a,b) yaptığı gibi, wh-öğelerini kendileri ayrık değişken sayabilir ve bunları uygun seviyede serbestçe bağlayan, Ginzburg'un QUANT-CLOSURE işlecine benzer bir boş işleç kabul edebiliriz. Roberts wh-öğelerinin kapsamının, özellikle başka işleçlerin kapsamına göre nasıl işlediği ve boş işleç sayıltısının ampirik muhtevasının ne olduğu konusunda emin olmadığını söyler ve bu meseleyi ele almaz.)
@@ -419,7 +419,7 @@ Aşağıda, iddialar için tonlama odağının, von Stechow (1991) ve Rooth'un (
 
 **(27)** a. Who invited whom? (Kim kimi davet etti?) b. Who did [Mary]_F invite? (Mary kimi davet etti?)
 
-(27b), (27a)'dan hemen sonra, aşağı yukarı peşinden sorulabilir; ⟨(27a), {(27b), ∅}⟩ yerinde bir tahkik usulü gibi görünür. (27b)'deki tonlama bu yerindelik için kritik görünür; meselâ aynı dizgi, vurgu *invite* üzerine konduğunda yerinde olmazdı. Bunu yakalamak için tonlama odağının sualdeki önkabulleri hakkında bir şey söylemeliyiz. İki söz türü için tonlama odağının önkabullerini aşağıdaki gibi genelleştirmek isteriz. Her sözün mantıkî biçiminde bir **kip işleci** bulunduğunu varsayalım. ∗β, β'nın ∗ kip değişkeniyle söylenmesidir; ∗, {?, ⊢} aralığında değişir (sırasıyla sorgu ve iddia işleçleri):
+(27b), (27a)'dan hemen sonra, aşağı yukarı peşinden sorulabilir; ⟨(27a), {(27b), ∅}⟩ yerinde bir tahkik usulü gibi görünür. (27b)'deki tonlama bu yerindelik için kritik görünür; meselâ aynı dizgi, vurgu *invite* üzerine konduğunda yerinde olmazdı. Bunu yakalamak için tonlama odağının sualdeki önkabulleri hakkında bir şey söylemeliyiz. İki söz türü için tonlama odağının önkabullerini aşağıdaki gibi genelleştirmek isteriz. Her sözün mantıkî biçiminde bir **kip işleci** bulunduğunu varsayalım. ∗β, β'nın ∗ kip değişkeniyle söylenmesidir; ∗, {?, ·} aralığında değişir (sırasıyla sorgu ve iddia işleçleri; iddia işleci sayfada bir nokta işaretiyle yazılıdır):
 
 **(28) ∗β sözündeki tonlama odağının önkabulü:** β, söylendiği anda üzerinde konuşulan suale **uygundur**.
 
@@ -777,12 +777,12 @@ Roberts'ın kaynakça listesindeki başlıca isimler: Beckman ve Ayers 1997; Bec
 ## 8. Bozuk çıkan simgeler
 
 PDF'ten metin çıkarırken şu yerler bozuldu; hepsi bağlamdan düzeltildi ve **şüphe kaydıyla** yazıldı:
-- (1)'de küme ayracı ve parantezler kırıktı; tanım *{p : ∃u_{i−1},…,u_{i−n} ∈ D, p = |β|(u_{i−1})…(u_{i−n})}* diye okundu.
+- (1)'de küme ayracı ve parantezler kırıktı; sayfa görüntüsünden bakılınca indisler **üst yazı** (u^{i−1} … u^{i−n}) ve köşeli ayraçlı olduğu görüldü, tanım öyle düzeltildi (`SEKILLER/01_ROBERTS_formul_q_sik.png`).
 - (3) ve (8)'de "q-alt q" parantezsiz çıktı; *q-alt(q)* diye okundu.
 - (10f)'de birleşim işareti (∪) "S" diye çıktı; (10g-i)'de Q ∩ Acc olarak okundu.
 - (12)'de "QUD q′ = ⟨…, q⟩" parantezleri bozuk; mana apaçıktır.
 - (20) ve (64b)'de ayraçlar bozuk; mana apaçık.
-- (28)'deki kip kümesi {?, á} yazılmış; ikinci simge büyük ihtimalle iddia işleci ⊢ idi, öyle okundu.
+- (28)'deki kip kümesi metin çıkarıcıda {?, á} çıkmıştı; sayfa görüntüsünden bakılınca ikinci simge bir nokta (·) olarak yazılıdır, öyle düzeltildi (`SEKILLER/03_ROBERTS_formul_alaka_odak.png`).
 - (44) ve (60)'ta ton etiketlerinin hizası kaydı; öbek sınırları ve etiketler metindeki açıklamaya göre yerleştirildi.
 - Sayfa numaraları (6:2 vb.) metin içine karışmıştı, atlandı.
 
