@@ -149,6 +149,39 @@ def denetle(d):
             if not pozisyon[g] < pozisyon[kid]:
                 hata.append("sira: %s once gelmeli ama %s sonra" % (g, kid))
 
+    def atalar(x, yol=frozenset()):
+        s = {x}
+        for u in ihtiyac[x]["ust"]:
+            if u in ihtiyac and u not in yol:
+                s |= atalar(u, yol | {x})
+        return s
+
+    def en_yakin_gorulen(x, gorulen, yol=frozenset()):
+        if x in gorulen:
+            return {x}
+        s = set()
+        for u in ihtiyac[x]["ust"]:
+            if u in ihtiyac and u not in yol:
+                s |= en_yakin_gorulen(u, gorulen, yol | {x})
+        return s
+
+    sag_sinir_ihlali = []
+    gorulen = set()
+    cephe = set()
+    for k in sorted(karar.values(), key=lambda x: pozisyon[x["id"]]):
+        for i in k["ihtiyac"]:
+            if i not in ihtiyac:
+                continue
+            for a in en_yakin_gorulen(i, gorulen):
+                if a not in cephe:
+                    sag_sinir_ihlali.append("%s:%s->%s" % (k["id"], i, a))
+        yeni = set()
+        for i in k["ihtiyac"]:
+            if i in ihtiyac:
+                yeni |= atalar(i)
+        gorulen |= yeni
+        cephe = yeni
+
     cocuklar = {}
     for i in ihtiyac.values():
         for u in i["ust"]:
@@ -261,6 +294,7 @@ def denetle(d):
         "muhatap_disi_kok": dis_kok,
         "gecerli_sira_sayisi": serbest,
         "zorunlu_sira_cifti": sum(len(v) for v in onde.values()),
+        "sag_sinir_ihlali": sag_sinir_ihlali,
         "kisim_adaylari": ["%d-%d %s" % (a, b, "+".join(ks)) for a, b, ks, _ in kisim_adaylari],
     }
     return hata, rapor
@@ -305,6 +339,13 @@ def sinama(d):
     m2 = copy.deepcopy(d)
     m2["kararlar"][0]["miktar"] = "itnab"
     sonuc.append(("sebepsiz itnab", denetle(m2)[0]))
+    r0 = len(denetle(d)[1]["sag_sinir_ihlali"])
+    s1 = copy.deepcopy(d)
+    for x in s1["ihtiyaclar"]:
+        if x["id"] == "I6":
+            x["ust"] = ["I1d"]
+    r1 = len(denetle(s1)[1]["sag_sinir_ihlali"])
+    sonuc.append(("kapanmis alt agaca donus (sag sinir) ihlali artti %d -> %d" % (r0, r1), ["sag sinir"] if r1 > r0 else []))
     m3 = copy.deepcopy(d)
     m3["ihtiyaclar"][1]["hal_kaynagi"] = "belki"
     sonuc.append(("tanimsiz hal kaynagi", denetle(m3)[0]))
