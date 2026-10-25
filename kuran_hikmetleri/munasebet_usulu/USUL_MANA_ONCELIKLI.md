@@ -73,7 +73,7 @@ Karar: `id · ihtiyac[] · karsilik[] · gerekce[] {yon, cumle, atif} · neden_b
 
 ## 6. Fâtiha uygulaması · sayılar (`karar_denetle.py`)
 
-16 ihtiyaç (10 tasavvur · 5 irade · 1 tasdik), 8 karar, 7/7 âyet kapsandı, kapatılmamış yaprak 0, 3 elenen alternatif, 1 taksim (I4), 1 devir (I6 → 2:2). Karar gerekçeleri 24 satır: önceki 5 · sonraki 4 · bütün 4 · muhatap 4 · konu 2 · mütekellim 1. Bütün kararlar `hipotez`.
+16 ihtiyaç (10 tasavvur · 5 irade · 1 tasdik), 8 karar, 7/7 âyet kapsandı, kapatılmamış yaprak 0, 3 elenen alternatif, 1 taksim (I4), 1 devir (I6 → 2:2). Karar gerekçeleri 20 satır: önceki 5 · sonraki 4 · bütün 4 · muhatap 4 · konu 2 · mütekellim 1. Bütün kararlar `hipotez`.
 
 **Bulgu 1 (sıra):** 8 kararın sıra grafında 9 zorunlu çift var; geçerli sıralama **12**. Metindeki sıra bunlardan biridir. Sıfat kararlarının (K02, K03, K04) kendi aralarındaki 6 sıralaması ve K07–K08 sıralaması ihtiyaçla zorunlu **değildir**. Yani Rab → Rahmân-Rahîm → Mâlik sırasının sebebi bu sistemde **henüz yazılı değil**; ya ek bir ihtiyaç (mesela fikri kademeleme) ya da başka yön aranır. Bu, sistemin gösterdiği ilk açık: açık olduğu sayıyla görünür.
 
