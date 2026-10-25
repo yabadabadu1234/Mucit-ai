@@ -1,0 +1,242 @@
+{
+ "sure": "S083",
+ "kapsam": [
+  "83:1-6"
+ ],
+ "ihtiyaclar": [
+  {
+   "id": "W0",
+   "tur": "def-i-mefsedet",
+   "tasiyici": "baskasi",
+   "ufuk": [
+    "dunya"
+   ],
+   "seviye": "mushaf",
+   "icerik": "Alışverişte başkaları haksızlığa uğramasın; ölçüde ve tartıda adalet olsun.",
+   "kapanis_testi": "Haksız eksik ölçüm azalır; sonucu metnin dışındadır.",
+   "ust": [],
+   "onkosul": [],
+   "ayrisim": "ve"
+  },
+  {
+   "id": "W1",
+   "tur": "irade",
+   "tasiyici": "muhatap",
+   "ufuk": [
+    "dunya"
+   ],
+   "seviye": "ayet",
+   "icerik": "Ölçüde ve tartıda haksızlık yapanlar bundan vazgeçsin.",
+   "kapanis_testi": "Muhataplar eylemlerini tatfîf olarak tanır.",
+   "ust": [
+    "W0"
+   ],
+   "onkosul": [],
+   "ayrisim": "ve",
+   "kip": [
+    "duzeltme"
+   ]
+  },
+  {
+   "id": "W2",
+   "tur": "his",
+   "tasiyici": "muhatap",
+   "ufuk": [
+    "dunya"
+   ],
+   "seviye": "ayet",
+   "icerik": "Hesap şuuruyla haşyet duysunlar.",
+   "kapanis_testi": "Uyarı ve hesap günü anıldı.",
+   "ust": [
+    "W1"
+   ],
+   "onkosul": [],
+   "ayrisim": "ve"
+  },
+  {
+   "id": "W3",
+   "tur": "tasdik",
+   "tasiyici": "muhatap",
+   "ufuk": [
+    "dunya",
+    "ahiret"
+   ],
+   "seviye": "ayet",
+   "icerik": "Diriltilip hesap vereceklerine kanaat getirsinler.",
+   "kapanis_testi": "Diriltilme sorusu soruldu.",
+   "ust": [
+    "W2"
+   ],
+   "onkosul": [
+    "W6"
+   ],
+   "kip": [
+    "pekistirme",
+    "duzeltme"
+   ],
+   "ilim_cinsi": "nazari",
+   "ayrisim": "ve"
+  },
+  {
+   "id": "W4",
+   "tur": "tasavvur",
+   "tasiyici": "muhatap",
+   "ufuk": [
+    "ahiret"
+   ],
+   "seviye": "ayet",
+   "icerik": "Hesap gününün büyüklüğü ve insanların Rab önünde duracağı gün bilinsin.",
+   "kapanis_testi": "Büyük gün tarif edildi.",
+   "ust": [
+    "W3"
+   ],
+   "onkosul": [
+    "W3"
+   ],
+   "ilim_cinsi": "nazari"
+  },
+  {
+   "id": "W6",
+   "tur": "tasavvur",
+   "tasiyici": "muhatap",
+   "ufuk": [
+    "dunya"
+   ],
+   "seviye": "ayet",
+   "icerik": "Suçun mahiyeti bilinsin: kendi lehine tam alıp başkasına eksik vermek.",
+   "kapanis_testi": "Çifte ölçü tarif edildi.",
+   "ust": [
+    "W1"
+   ],
+   "onkosul": [],
+   "ilim_cinsi": "ameli"
+  }
+ ],
+ "kisitlar": [],
+ "kararlar": [
+  {
+   "id": "KW1",
+   "ihtiyac": [
+    "W2"
+   ],
+   "karsilik": [
+    "83:1"
+   ],
+   "gerekce": [
+    {
+     "yon": "muhatap",
+     "cumle": "İlk cümledeki uyarı dikkat ve haşyet uyandırır."
+    },
+    {
+     "yon": "netice",
+     "cumle": "Tatfîf azalsın: ölçü ve tartıda haksızlığa uğrayanlar zarar görmesin.",
+     "atif": [
+      "W0"
+     ]
+    },
+    {
+     "yon": "sonraki",
+     "cumle": "Suçu (83:2-3) ve hesap gerekçesini (83:4-6) açar.",
+     "atif": [
+      "W6",
+      "W3"
+     ]
+    }
+   ],
+   "neden_bu_kadar": "Tek cümle: uyarı yalın kalır, açıklama sonraya bırakılır.",
+   "katiyet": "hipotez"
+  },
+  {
+   "id": "KW2",
+   "ihtiyac": [
+    "W6"
+   ],
+   "karsilik": [
+    "83:2",
+    "83:3"
+   ],
+   "gerekce": [
+    {
+     "yon": "onceki",
+     "cumle": "'Vay kime?' sorusunu cevaplar.",
+     "atif": [
+      "W2"
+     ]
+    },
+    {
+     "yon": "konu",
+     "cumle": "Suçun mahiyeti: kendi lehine tam, başkası aleyhine eksik; çifte ölçüdür."
+    },
+    {
+     "yon": "sonraki",
+     "cumle": "83:4'teki 'ulâike' bu tarife işaret eder.",
+     "atif": [
+      "W3"
+     ]
+    }
+   ],
+   "neden_bu_kadar": "İki cümle: biri alırken, biri verirken; çifte ölçü iki yönüyle görünür.",
+   "katiyet": "hipotez"
+  },
+  {
+   "id": "KW3",
+   "ihtiyac": [
+    "W3"
+   ],
+   "karsilik": [
+    "83:4"
+   ],
+   "gerekce": [
+    {
+     "yon": "onceki",
+     "cumle": "'Ulâike' ile az önce tarif edilenlere dönülür.",
+     "atif": [
+      "W6"
+     ]
+    },
+    {
+     "yon": "konu",
+     "cumle": "Sorun ölçü tekniği değil hesap inancı eksikliğidir (kök sebep)."
+    },
+    {
+     "yon": "muhatap",
+     "cumle": "Soru olarak sorulur; cevap muhatapta doğar."
+    }
+   ],
+   "neden_bu_kadar": "Tek soru: tasdik boşluğu isimlendirilir.",
+   "katiyet": "hipotez"
+  },
+  {
+   "id": "KW4",
+   "ihtiyac": [
+    "W4"
+   ],
+   "karsilik": [
+    "83:5",
+    "83:6"
+   ],
+   "gerekce": [
+    {
+     "yon": "onceki",
+     "cumle": "83:5 diriltilme fiiline bağlanır; 83:4'ün devamıdır.",
+     "atif": [
+      "W3"
+     ]
+    },
+    {
+     "yon": "konu",
+     "cumle": "Gün büyüktür ve bütün insanlar aynı hesap makamında durur; terazi bir tek makama çıkar."
+    },
+    {
+     "yon": "netice",
+     "cumle": "Hesap günü bilgisi dünyada haksızlığın azalmasına hizmet eder.",
+     "atif": [
+      "W0"
+     ]
+    }
+   ],
+   "neden_bu_kadar": "Gün iki yönüyle (büyüklük ve herkesin Rab önünde duruşu) tarif edilir.",
+   "katiyet": "hipotez"
+  }
+ ]
+}

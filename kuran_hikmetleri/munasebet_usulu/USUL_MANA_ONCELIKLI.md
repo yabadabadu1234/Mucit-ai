@@ -1,102 +1,144 @@
-# Münâsebet usulü · mana öncelikli sistem (ihtiyaç ve karar)
+# Münâsebet usulü · mana öncelikli sistem (ihtiyaç, kayıt ve karar)
 
-Kayıt: CLAUDE.md § 3-I 318. `USUL.md` (hiperkenar temeli) silinmez; bu belge onun **altına** inen esas katmandır ve ona nakz getirir (§ 7).
+Kayıt: CLAUDE.md § 3-I 318 ve 319. `USUL.md` (hiperkenar temeli) silinmez; bu belge onun altına inen esas katmandır. Bu sürüm, padişahın § 3-I 319'daki düzeltmelerinden sonra yeniden yazılmıştır; nakzedilenler § 9'da.
 
 ## 0. Duruş
 
-"Yazar" burada bir **usul duruşudur**: metnin her yerinde "ne söylenmeli, neden burada, neden bu kadar" diye sormak için. Kur'ân Allah'ın kelâmıdır; aşağıdaki gerekçeler murâd-ı ilâhî diye değil **hikmet ihtimali** diye yazılır ve her kararda katiyet derecesi bulunur. Bu devirde **lafız ve yapı yazılmaz**; yalnız ne anlatıldığının sebebi yazılır.
+"Yazar" bir **usul duruşudur**: metnin her yerinde "ne söylenmeli, neden burada, neden bu kadar" diye sormak için. Kur'ân Allah'ın kelâmıdır; gerekçeler murâd-ı ilâhî diye değil **hikmet ihtimali** diye yazılır ve her kararda katiyet derecesi bulunur. Allah'ın ihtiyacı yoktur; aşağıda "ihtiyaç" diye geçen şey her yerde **mahlûkun hâlindeki eksiktir**. Bu devirde lafız ve yapı yazılmaz; yalnız ne anlatıldığının sebebi yazılır.
 
-## 1. Kayma: esas nesne bağ değil ihtiyaç ve karardır
-
-Önceki sistemde esas kayıt "şu iki birim arasında şu bağ var" idi. Bu, sebebi söylemez. Yeni sistemde esas kayıt iki nesnedir; münâsebet bunlardan türer.
+## 1. Esas nesneler
 
 | Nesne | Ne söyler |
 |---|---|
-| **İhtiyaç** | Okuyanın hâlinde eksik olan şey: bir tasavvur, bir tasdik ya da bir irade |
-| **Karar** | Hangi ihtiyacı hangi birim(ler)le, neden şimdi, neden bu kadar, neden bu yoldan kapattığı |
+| **İhtiyaç** | Bir taşıyıcının hâlinde, hedef hâle göre eksik olan şey |
+| **Kayıt** | Bir içeriği dışarıda tutan, azaltan ya da sıraya koyan sebep (ihtiyacın tersi) |
+| **Karar** | Hangi ihtiyacı hangi birim(ler)le, kayıtlara rağmen, neden şimdi, neden bu kadar kapattığı |
 
-Türetme: iki birim, aynı ihtiyacı kapatıyorlarsa **eştir**; birinin kapattığı ihtiyaç diğerinin ön şartıysa **sıralıdır**; biri ötekinin doğurduğu ihtiyacı kapatıyorsa **cevaptır**. Bağ kaydı yazılmaz, türetilir (`FATIHA_KAYITLARI.json` bu yüzden türev katman olur).
+Münâsebet bunlardan türer: aynı ihtiyacı kapatanlar **eştir**; birinin kapattığı ihtiyaç öbürünün ön şartıysa **sıralıdır**; biri ötekinin doğurduğu ihtiyacı kapatıyorsa **cevaptır**.
 
-## 2. Hasırlı iki zemin
+## 2. İhtiyaç: kimin hâlinde, hangi değişkende
 
-### 2-A. İhtiyaç türleri (üç)
+İhtiyaç = bir **taşıyıcının** bir **durum değişkenindeki** boşluk. Söz yalnız birinin hâlini değiştirmeye hizmet edebilir; bu yüzden taşıyıcı ve değişken sorulur.
 
-İçerik `c` ve okuyan `r` için, sırayla:
-1. `r` c'nin tasavvurunu taşımıyorsa → **tasavvur** ihtiyacı.
-2. Taşıyor ama c'yi doğru saymıyorsa → **tasdik** ihtiyacı.
-3. Doğru sayıyor ama c'ye göre yönelmiyorsa → **irade** ihtiyacı.
-4. Üçü de tamamsa ihtiyaç yoktur.
+### 2-A. Taşıyıcı (iki)
 
-Dördüncü durum bulunamaz: sıra tam bir durum analizidir. Sıra zorunludur: tasdik tasavvura, irade tasdike muhtaçtır (tasdikinden habersiz irade kurulmaz). Üçlünün adları F 3-I 197'den alındı (padişah bunları **ret fiilleri** olarak kabul etmişti); ihtiyaç türü olarak kullanmam **çıkarımdır**.
-Sınır: his tahriki ayrı bir ihtiyaç mıdır? F 3-I 285'e göre mana, hislerin düşünülebilir hâle getirilmiş hâlidir; bu okumayla his, tasavvura ve tasdike girer. Doğrudan his tahriki ayrı tür sayılacaksa hasır genişler (açık sual S-M1).
+**Muhatap** (sözü alan; duyup aktaranlar dâhil) ya da **muhatap dışı** (başkaları, toplum, âlem). Üçüncüsü yoktur: bir varlık sözü alıyordur ya da almıyordur.
 
-### 2-B. Gerekçe yönü (altı)
+### 2-B. Durum değişkeni (yedi) ve hasr dayanağı
 
-Bir `M` biriminin burada bulunuşunun sebebi, `M`'nin şunlarla münasebetindedir:
-- metinde **önceki** kısımla, **sonraki** kısımla ya da **bütünle**;
-- metin dışında **mütekellimle**, **muhatapla** ya da **konuyla** (söylenen hakikatle).
+| Değişken | Taşıyıcı | Ne eksik | Kur'ân'da aday misal (meal depodaki `ver.py` çıktısından okundu) |
+|---|---|---|---|
+| **tasavvur** | yalnız muhatap | Kavram yok | 101:1-3 "Nedir o kapı çalan? … bilir misin?" |
+| **tasdik** | yalnız muhatap | Doğru sayma yok | 2:23 "şüpheye düşüyorsanız … benzeri bir sûre getirin" |
+| **his** | yalnız muhatap | Duygu yok (korku, ümit, huzur, takdir) | 39:53 "ümit kesmeyin"; 93:1-3 "Rabbin seni bırakmadı" |
+| **irade** | yalnız muhatap | Yönelme ve fiil yok | 2:43 "Namazı tam kılın, zekâtı verin" |
+| **statü** | muhatap ya da muhatap dışı | Normatif konum yok (mesûliyet, hüccet, hak) | 4:165 "insanların … bir bahaneleri olmasın"; 4:2 "Yetimlere mallarını verin" |
+| **celb-i menfaat** | ikisi de | Bir iyilik yok | 2:261 infakın karşılığı |
+| **def-i mefsedet** | ikisi de | Bir kötülük var ya da yaklaşıyor | 66:6 "kendinizi … ateşten koruyun"; 83:1-6 tatfîf |
 
-Dayandığı öncül: kelâm üçlüdür (söyleyen, kime, ne) ve metin içinde bir birimin münasebeti ancak önce/sonra/bütün olabilir. Bu öncül aklî bir tasnife dayanır; biçim sebepleri (ahenk, fâsıla) bu devrin dışındadır, o yüzden hasır **yalnız mana sebepleri** içindir. İtiraz gelirse (altıncı bir yön) yön eklenir, karar atılmaz.
+**Hasr (nefy–isbât), öncülleri açık:**
+1. Muhatabın hâli ya zihnî ya zihnî değildir. Zihnî hâl **bilme · hissetme · isteme** üçlüsünden biridir (P1). Bilme ikiye ayrılır: kavram (tasavvur) ve hüküm (tasdik).
+2. Zihnî olmayan hâl ya **normatif** (statü) ya **fiilî** (refah) olur (P2). Fiilî refahta eksik, ya bir iyiliğin yokluğudur ya bir kötülüğün varlığıdır; iyileştirme ya iyilik katar ya kötülük kaldırır (celb-i menfaat / def-i mefsedet).
+3. Muhatap dışının zihnî hâline söz doğrudan ulaşmaz; ulaşıyorsa o kişi muhataptır. Dışarıya yalnız zihnî olmayan hâller kalır.
 
-## 3. Kayıt alanları
+Zayıf noktalar: **P1** bir psikoloji öncülüdür (bilme–hissetme–isteme; tasavvufta Gazâlî'ye atfedilen ilim–hâl–amel üçlüsüyle örtüşür; bu atıf **aramada doğrulanamadı**, hafızadandır). **P2** ikili bir tanım hasrıdır. Dördüncü değişken gösterilirse eklenir, kayıt atılmaz (S-M3).
 
-İhtiyaç: `id · tur · seviye (mushaf/sure/kisim/ayet) · icerik · kapanis_testi · ust · ayrisim (ve/taksim) · onkosul · dogan_karar · devir`.
-Karar: `id · ihtiyac[] · karsilik[] · gerekce[] {yon, cumle, atif} · neden_bu_kadar · elenen[] {alternatif, sebep} · katiyet`.
+**Padişahın düzeltmesi (3-I 319):** his, tasavvur ve tasdikten bağımsızdır; tasdik etmeden hissedilir, tasavvur etmeden hissedilir. Bu yüzden türler arasında zorunlu sıra **teorem değildir**. Sıra yalnız ihtiyaç başına, `onkosul` olarak ve hipotez diye yazılır.
 
-- **neden şimdi** = `onkosul` ve `dogan_karar` (ihtiyacın önce kapanması gereken ihtiyaçları ve onu doğuran karar).
-- **neden bu kadar** = `neden_bu_kadar` + ihtiyacın `kapanis_testi`.
-- **neden bu yoldan** = `elenen` (alternatif listesi **açıktır**, hasr iddiası yok) + sebep.
-- `ayrisim: taksim` = çocuk ihtiyaçlar bütün durumu kapatan, birbirini dışlayan hücrelerdir.
-- `devir` = sûre içinde kapanmayan ihtiyaç; Mushaf düzeyinde sonraki sûreye açık ihtiyaç olarak geçer.
+### 2-C. Bayraklar (bölüntü iddiası yoktur)
 
-## 4. Sekiz durum nasıl taşınır
+| Bayrak | Değerler | Not |
+|---|---|---|
+| `ufuk` | dünya · ahiret (ikisi birden olabilir) | Ölümden önce/sonra: iki ihtimal |
+| `kip` | yeni · hatırlatma · pekiştirme · düzeltme | **Açık liste**; hasır iddiası yoktur |
+| `ilim_cinsi` | nazarî · amelî | Yalnız tasavvur ve tasdikte; nazarî = ne, amelî = ne yapılacak (İbn Sînâ'nın akıl ayrımı, § 4-I) |
+
+### 2-D. Dolaylı gaye
+
+`ust` kenarı taşıyıcıyı ve değişkeni aşabilir. Padişahın misali (ahiret bilgisi → dünyada zulmü engellemek), 83:1-6'da **metnin kendi dizilişiyle** görünür (`ORNEK_83_DOLAYLI_GAYE.json`):
+
+`W4` büyük günün tarifi (tasavvur) → `W3` diriltilmeye kanaat (tasdik) → `W2` haşyet (his) → `W1` vazgeçme (irade) → `W0` **başkalarının haksızlığa uğramaması** (def-i mefsedet, muhatap dışı).
+
+Kök mesafesi 4. `W0`ın taşıyıcısı muhatap değildir; önceki sistem bu kökü taşıyamıyordu.
+
+## 3. Kayıtlar: ihtiyacın tersi
+
+İhtiyaçlar içeriği **çeker**; kayıtlar **sınırlar**. Karar ikisinin kesişimidir. Kayıt: `yon`, `etki`, `cumle`, `katiyet`.
+- `etki` hasrı: karar üç şeyi belirler, bunlar da üçüdür: içerik girsin mi (`dahil-etmeme`), ne kadar (`miktar`), ne zaman ve nerede (`sira`).
+- Misal: Fâtiha `KS1`: namazda her rekâtta okunan metin olarak sunulması (`sure.md` bunu "(rivayet)" diye işaretler) metni kısa tutar. Katiyet `rivayet-yoklanmadi`.
+
+## 4. Gerekçe yönü (sekiz)
+
+Bir birimin burada bulunuşunun sebebi, sözün şu **unsurlarından** biriyle münasebetindedir:
+
+| Yön | Unsur |
+|---|---|
+| `onceki`, `sonraki`, `butun` | Metin içi: öncesi, sonrası, bütünü |
+| `mutekellim` | Söyleyen |
+| `muhatap` | Sözü alanın iç hâli |
+| `konu` | Hakkında söylenen hakikat |
+| `vaziyet` | Sözün indiği ortam (öncesi): klasik belâgatın **makâm**ı, muktezâ-yı hâl |
+| `netice` | Sözün dünyada ve ahirette bıraktığı eser (sonrası) |
+
+Hasr: söz bir olaydır; unsurları söyleyen, söz (metin içi üçü), alan, hakkında söylenen, ortam ve eserdir (P3). Önceki sürümdeki altılıda `vaziyet` ve `netice` yoktu; padişahın dolaylı gaye misali bu eksiği gösterdi. Muktezâ-yı hâl ilkesinin meânî ilminin temeli, Sekkâkî'nin onu sistemleştirdiği aramada **teyit edildi** (TDV/Kur'an Ansiklopedisi özetleri); "makâm" teriminin Sekkâkî'deki tam karşılığı **doğrudan teyit edilemedi**.
+
+## 5. Kayıt alanları
+
+İhtiyaç: `id · tur · tasiyici · ufuk · kip · ilim_cinsi · seviye · icerik · kapanis_testi · ust · ayrisim (ve/taksim) · onkosul · dogan_karar · devir`.
+Karar: `id · ihtiyac[] · karsilik[] · gerekce[] {yon, cumle, atif} · kisit[] · neden_bu_kadar · elenen[] · katiyet`.
+Dosya: `kapsam` (örn. "1:1-7"), `gaye_ihtiyaci`, `kisitlar`.
+
+## 6. Sekiz durum nasıl taşınır
 
 | # | Durum | Taşıyan |
 |---|---|---|
-| 1 | Üç ve çok üyenin birlikte taşıdığı bağ | Çok ihtiyaçlı / çok karşılıklı karar (K02, K05, K07); `ayrisim: ve` |
+| 1 | Üç ve çok üyenin birlikte taşıdığı bağ | Çok ihtiyaçlı / çok karşılıklı karar (K02, K05, K07) |
 | 2 | Bölüntü | `ayrisim: taksim` (I4 → I4a, I4b, I4c) |
-| 3 | Yönsüz bağ | Aynı ihtiyacı kapatan, birbirine `onkosul`u olmayan kararlar (K02, K03, K04) |
-| 4 | Nakarat | Aynı ihtiyacın birden çok kararla kapatılması ve her tekrarda yeniden doğması; şema taşır, Fâtiha'da örnek **yok** (0) |
-| 5 | Birim–bütün | `seviye` ve ihtiyaç ağacı (I0 altında I1…I6); gerekçe yönü `butun` |
-| 6 | Bağın bağı | Karar–karar sıra ve doğurma (9 zorunlu çift) |
-| 7 | Metin dışı üye | Gerekçe yönleri `mutekellim`, `muhatap`, `konu` birinci sınıf alandır; `devir` Mushaf düzeyine çıkar |
-| 8 | Örtüşme | Bir karar birden çok ihtiyaç kapatır (K02: I1a + I2); bir birim birden çok kararın karşılığı olabilir |
+| 3 | Yönsüz bağ | Birbirine `onkosul`u olmayan eş kararlar (K02, K03, K04) |
+| 4 | Nakarat | Aynı ihtiyacın birden çok kararla kapanması; şema taşır, **örnek 0** |
+| 5 | Birim–bütün | İhtiyaç ağacı ve gerekçe yönü `butun` |
+| 6 | Bağın bağı | Karar–karar sıra ve doğurma (Fâtiha 10 zorunlu çift) |
+| 7 | Metin dışı üye | Taşıyıcı `baskasi`, yönler `mutekellim`, `vaziyet`, `netice`; `devir` |
+| 8 | Örtüşme | Bir karar birden çok ihtiyaç kapatır (K02: tasavvur + tasdik + his) |
 
-## 5. Bütün metin için işleyiş (hususîden değil umumîden)
+## 7. Bütün metin için işleyiş
 
-1. **Mushaf:** mütekellim–muhatap–konu üçlüsünden Mushaf ihtiyaçları doğar; her sûrenin `I0` ihtiyacı (gaye) burada yazılır. `I0` yazılamayan sûrenin altındaki kararlar **yetim** sayılır, sayılır ve rapora girer.
-2. **Sûre:** `I0` aşağı deşilir: ihtiyaç ağacı (`ve`/`taksim`) kısım ve âyet seviyesine iner. Her yaprak ihtiyaca bir karşılık bulunur; bulunmayan yaprak **kapatılmamış yaprak** diye sayılır.
-3. **Sıra:** `onkosul` ve `dogan_karar` ile karar–karar sıra grafı kurulur. Metindeki sıra bu grafın **geçerli bir sıralaması** olmak zorundadır (denetçi sınar). Geçerli sıralama sayısı > 1 ise sıra ihtiyaçla **zorunlu değildir** ve ek sebep aranır.
-4. **Kapsam:** her âyet en az bir kararın karşılığıdır; değilse **sebepsiz âyet** sayılır (eksik ihtiyaç işaretidir, âyet atılmaz).
-5. **Devir:** sûre sonunda kapanmayan ihtiyaç sonraki sûrenin açık ihtiyaç defterine geçer.
-6. **Sonraki devir (bu devirde yapılmaz):** her karşılığın lafız ve yapısı, kararın ifadesi olarak türetilir.
+1. **Mushaf:** kök ihtiyaçlar yazılır (taşıyıcı muhatap ya da dışı; ufuk dünya/ahiret). Her sûrenin `gaye_ihtiyaci` bunların altına bağlanır. Bağlanamayan sûre **yetim** sayılır.
+2. **Sûre:** gaye aşağı deşilir (`ve`/`taksim`) kısım ve âyet seviyesine; her yaprağa karar.
+3. **Sıra:** `onkosul` ve `dogan_karar`dan karar–karar sıra grafı; metindeki sıra bunun geçerli bir sıralaması olmak zorundadır. Geçerli sıralama sayısı > 1 ise sıra ihtiyaçla zorunlu değildir, ek sebep aranır.
+4. **Kapsam:** her âyet bir kararın karşılığıdır; değilse **sebepsiz âyet** (eksik ihtiyaç işareti).
+5. **Kısım hududu:** ihtiyaç ağacından **aday olarak türetilir** ve `sure.md` kısımlarıyla yan yana tutulur. **Karar padişahındır** (henüz verilmedi); hiçbiri silinmez.
+6. **Devir:** kapanmayan ihtiyaç sonraki sûreye açık ihtiyaç olarak geçer.
+7. **Sonraki devir (bu devirde yapılmaz):** karşılığın lafzı ve yapısı kararın ifadesi olarak türetilir.
 
-## 6. Fâtiha uygulaması · sayılar (`karar_denetle.py`)
+## 8. Sayılar (`karar_denetle.py`)
 
-16 ihtiyaç (10 tasavvur · 5 irade · 1 tasdik), 8 karar, 7/7 âyet kapsandı, kapatılmamış yaprak 0, 3 elenen alternatif, 1 taksim (I4), 1 devir (I6 → 2:2). Karar gerekçeleri 20 satır: önceki 5 · sonraki 4 · bütün 4 · muhatap 4 · konu 2 · mütekellim 1. Bütün kararlar `hipotez`.
+**Fâtiha:** 21 ihtiyaç (tasavvur 10 · irade 6 · his 3 · tasdik 1 · celb-i menfaat 1), 8 karar, 7/7 âyet kapsandı, kapatılmamış yaprak 0, 1 kayıt, 3 elenen alternatif, 1 taksim, 1 devir. Gerekçe yönleri: önceki 5 · sonraki 4 · bütün 4 · muhatap 4 · konu 2 · mütekellim 1 · netice 2. Geçerli sıralama **12**, zorunlu çift 10.
+- **Sıra bulgusu:** K02, K03, K04 (Rab · Rahmân-Rahîm · Mâlik) kendi aralarında ihtiyaçla sıralanmamış; bu üçlünün sırasının sebebi **yazılı değil**. Ek sebep aranacak.
+- **Kısım adayları (ihtiyaç ağacından):** 1:1-4 · 1:5 · 1:6-7. `sure.md` kısımları: 1-2 · 3-4 · 5-7. İkisi de duruyor.
+- **Yeni:** üç his ihtiyacı (takdir, ümit, haşyet) 1:2-1:4'ün tasavvur ihtiyaçlarıyla aynı âyetlere biner; 1:6-1:7'nin tarif ihtiyacı `amelî` ilimdir.
 
-**Bulgu 1 (sıra):** 8 kararın sıra grafında 9 zorunlu çift var; geçerli sıralama **12**. Metindeki sıra bunlardan biridir. Sıfat kararlarının (K02, K03, K04) kendi aralarındaki 6 sıralaması ve K07–K08 sıralaması ihtiyaçla zorunlu **değildir**. Yani Rab → Rahmân-Rahîm → Mâlik sırasının sebebi bu sistemde **henüz yazılı değil**; ya ek bir ihtiyaç (mesela fikri kademeleme) ya da başka yön aranır. Bu, sistemin gösterdiği ilk açık: açık olduğu sayıyla görünür.
+**83:1-6 (dolaylı gaye):** 6 ihtiyaç, 4 karar, 6/6 âyet kapsandı, kök mesafesi 4, muhatap dışı kök 1 (`W0`), geçerli sıralama 4 (83:1'in yeri ihtiyaçla zorunlu değil: dikkat için başa konmuş, bu `muhatap` gerekçesidir).
 
-**Bulgu 2 (ihtiyaç devri):** Önceki sistemde 1:6 ile 2:2'nin bağı "aynı kök, komşu" idi (lafız izi). Bu sistemde sebep şudur: K06 talebi yaptı ve "karşılık nerede" ihtiyacını (I6) doğurdu; sûre onu kapatmaz, 2:2 kapatır. Lafız izi sonraki devirde bu mana kararından türer; tersi değil.
+**Ölçünün ayırt ettiği (3-B 27-B):** denetçi beş yanlış kaydı reddetti: sonra gelen ihtiyaca "önceki" gerekçesi (1 hata), olmayan ihtiyaca atıf (1), his ihtiyacını muhatap dışına taşımak (1), tanımsız gerekçe yönü (1), 1:7'nin kararını silmek (4). `python3 karar_denetle.py --sinama` bunu tekrar koşturur. Bu turda kendi yazdığım iki kusur yakalandı: üst ihtiyaca atıfta sıra denetiminin atlanması (kod düzeltildi) ve çocuklu ihtiyaçta ayrışım alanının eksik bırakılması (veri düzeltildi).
 
-**Bulgu 3 (kısım sınırı):** `sure.md` kısımları (1-2 · 3-4 · 5-7) ile ihtiyaç ağacı (ad+tasdik+sıfatlar 1-4 · ikrar 5 · talep ve tarif 6-7) farklı bölüyor. Birincisi konu etiketidir (hamd, rahmet, duâ), ikincisi **okuyanın hâl değişimidir**. Hangisi esas olacak: açık sual (S-M2).
+## 9. Nakz (3-I 179)
 
-**Ölçünün ayırt ettiği** (3-B 27-B): denetçi dört yanlış kaydı reddetti: sonra gelen ihtiyaca "önceki" gerekçesi yazmak (1 hata), olmayan ihtiyaca atıf (1), talebi sıfatlardan öne yerleştirmek (4), 1:7'yi karşılıksız bırakmak (4). `python3 karar_denetle.py --sinama` bunu tekrar koşturur.
-
-## 7. Eski kayıtlarla ilişki (nakz, 3-I 179)
-
-| Eski | Yeni durum |
+| Eski hüküm | Durum |
 |---|---|
-| `USUL.md` § 2 "bağ esas nesnedir, hiperkenardır" | Bağ **türev katmandır**; esas nesne ihtiyaç ve karardır. Hiperkenar tanımı türev bağlar için bâkîdir |
-| `FATIHA_KAYITLARI.json` F01–F08 | Silinmez; F01≈K02-K05 gerekçe zinciri, F02≈K05'in `muhatap` gerekçesi, F04≈K07 taksimi, F07≈K08 devri. Eski kayıtlarda `katiyet` lafız için `iz-dogrulandi` idi; manadaki kısım hâlâ `hipotez` |
-| `zaruret_zinciri/` | Sûre sırası için `onkosul`/`devir` ile yeniden okunur; "ikame mümkün" yerine geçerli sıralama sayısı ölçülür |
+| "His tasavvura ve tasdike girer" (S-M1 okuması) | **Nakzedildi.** His ayrı değişkendir |
+| "Tasavvur → tasdik → irade zorunlu sıradır" | **Nakzedildi.** Teorem değil, ihtiyaç başına hipotez |
+| Üç türlü ihtiyaç (hasır iddiası) | **Genişledi:** yedi değişken, iki taşıyıcı |
+| Altı gerekçe yönü | **Genişledi:** sekiz yön (`vaziyet`, `netice`) |
+| Kısım sınırı `sure.md`ye göre | Karar bekler; ağaçtan türeyen aday yanına konuldu |
 
-## 8. Ezber için kullanım
+## 10. Ezber için kullanım
 
-Zincir (Fâtiha): *Okuyan kime yöneliyor? → adı (1:1) → yapabilir mi? (1:2: Rab, âlemler; hamd) → verir mi? (1:3) → bunun sonucu var mı? (1:4) → o hâlde kulluk ve yardım (1:5) → talep (1:6) → hangi yol? (1:7: sınırıyla) → karşılığı nerede? (devir: 2:2).* Her adım tek bir soru ve tek bir ihtiyaçtır. Lafız ve yapı sonraki devirde bu sorulara cevap olarak türetilir; sen soruyu hatırlayınca cevabın biçimini kurarsın.
+Fâtiha zinciri: *Kime yöneliyorum? → adı (1:1) → yapabilir mi, övülür mü (1:2) → verir mi, ümit var mı (1:3) → sonucu var mı, ciddiyet (1:4) → o hâlde kulluk ve yardım (1:5) → talep (1:6) → hangi yol, sınırıyla (1:7) → karşılığı nerede (2:2).* 83'te: *hesap şuuru olmayınca ölçü bozulur; haşyet, kanaat, tarif bu sırayla.* Her adım bir soru ve bir ihtiyaçtır. Lafız ve yapı sonraki devirde bu sorulara cevap olarak türetilir.
 
-## 9. Açık sualler
+## 11. Açık sualler
 
-- **S-M1:** Doğrudan his tahriki (huşû, korku) ayrı ihtiyaç türü mü, yoksa tasavvur/tasdike mi girer?
-- **S-M2:** Kısım sınırı `sure.md`deki konu etiketlerine mi, ihtiyaç ağacına (hâl değişimine) mi göre olacak?
-- Kapatılmayan işler (sayı): nakarat örneği 0 (Rahmân, Mürselât gibi sûre gerekir); his ihtiyacı; sıfat sırası sebebi; besmele'nin Fâtiha âyeti sayılması ihtilaflıdır (hafızadan, yoklanmadı) ve burada 1:1 olarak sayıldı; 113 sûre `I0`ı yazılmadı.
+- **S-M2:** Kısım hududu ihtiyaç ağacına mı, `sure.md` konu etiketlerine mi göre olacak? (Padişah henüz karar vermedi; her ikisi duruyor.)
+- **S-M3:** § 2-B'de dördüncü bir durum değişkeni var mı? Padişah "bazı ihtiyaç çeşitleri daha olabilir" dedi; haritada boş kalan hücreler: **statü × muhatap dışı** için tek aday 4:2 (yetimin hakkı), **celb-i menfaat × muhatap** için hâlâ aday bulunamadı.
+- **S-M4:** Gazâlî'nin ilim–hâl–amel üçlüsü kaynaktan doğrulanmadı (P1'in tarihî dayanağı).
+- İş kalemleri (sayı): nakarat örneği 0 (Rahmân ya da Mürselât gerekir); 112 sûrenin `gaye_ihtiyaci` yazılmadı; besmele'nin Fâtiha âyeti sayılması ihtilaflıdır (hafızadan, yoklanmadı), 1:1 sayıldı.
