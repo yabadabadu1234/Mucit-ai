@@ -19,4 +19,6 @@
 | 13_TSIPIDI_sekil6_7 | Ek neticeler | s. 18836 |
 | 14_TSIPIDI_formul_cizelge1 | (1)–(5) ve Çizelge 1 | s. 18821, 18835 |
 
+**Yeniden okuma (CLAUDE.md § 3-I 330):** üç makalenin hepsi (Roberts 69, Tsvilodub 5, Tsipidi 17 sayfa) metne çevrilmeden sayfa görüntüsü olarak baştan sona okundu; formüller ve misaller sayfayla karşılaştırıldı. Bu okumada bulunanlar: Roberts (D0)'da iktiza işareti ⊨'dür; Roberts (50)–(51)'de fiil *likes*'tır (kendi tutarsızlığı); (64a) küme ayracı içindedir; Tsipidi Şekil 6–7 kartındaki eksen notu düzeltildi.
+
 **Okumada bulunan kusurlar (notlara geçti):** Roberts (1)'de indisler üst yazıdır; (28)'de iddia işleci «⊢» değil «·» çıkmaktadır; Tsipidi'nin (4)–(5) PMI'sı alışılmış karşılıklı bilginin ters işaretlisidir; Tsvilodub'da «Regret» tarifi «argmax» yazılıdır (mânâ «max»).

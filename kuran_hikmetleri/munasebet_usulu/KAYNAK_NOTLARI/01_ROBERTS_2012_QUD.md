@@ -1,6 +1,6 @@
 # Ders notu 1: Söylemde bilgi yapısı — bir sözün yerinde olması neye bağlıdır?
 
-**Künye.** Craige Roberts (Ohio Eyalet Üniversitesi), *Information structure in discourse: Towards an integrated formal theory of pragmatics*, Semantics & Pragmatics, cilt 5, makale 6, s. 1–69, DOI 10.3765/sp.5.6. Eser 1996'da tezkere olarak çıktı, 1998'de tashih edildi, 2012-12-19'da neşredildi; muhtevası 1998 nüshasıdır. Metin açık erişimli PDF'ten alınıp baştan sona (3160 satır) okundu. Şekil yoktur; yalnız bazı simgeler PDF'ten bozuk çıktı, yeri en sonda yazılıdır.
+**Künye.** Craige Roberts (Ohio Eyalet Üniversitesi), *Information structure in discourse: Towards an integrated formal theory of pragmatics*, Semantics & Pragmatics, cilt 5, makale 6, s. 1–69, DOI 10.3765/sp.5.6. Eser 1996'da tezkere olarak çıktı, 1998'de tashih edildi, 2012-12-19'da neşredildi; muhtevası 1998 nüshasıdır. Eser açık erişimli PDF'ten, **69 sayfanın hepsi sayfa görüntüsü olarak** (metne çevrilmeden; CLAUDE.md § 3-I 330) baştan sona okundu ve her formül ile her misal sayfadan doğrulandı. Şekil yoktur; formüller ve ton etiketleri vardır, sayfada nasıl yazılıysa öyle alınmıştır. Sayfadan doğrulamada çıkan düzeltmeler en sonda (8. bahis) yazılıdır.
 
 **Bu nüshanın hâli.** Evvelki üç nüshadan birincisi anlaşılmazdı, ikincisi bilgiyi kırpmıştı, üçüncüsü bilgiyi tam taşıyor ama üslûbu kuru ve kırıktı (CLAUDE.md § 3-I 327, 328, 329). Bu nüshada kaynağın her tarifi, her formülü, her misali, her dipnotu ve her itirazı yine vardır; fakat anlatış öğretici bir muallimin ağzından, Osmanlı Türkçesiyle, her bahis bir girizgâhla açılarak yapılmıştır. Okuyanın hiçbir ismi ve hiçbir terimi bilmediği farz edilmiştir. Roberts'ın kendi sözü ile benim çıkarımım karışmasın diye çıkarımlar en sonda ayrı bir bölümde toplandı. Aynı sebepten, her bahsin başındaki **Girizgâh** paragrafları ve içlerindeki gündelik misaller (çarşıda pazarlık, doktor ve hasta, sigara, ev almak, "Ali gelmedi" gibi) **benimdir**, Roberts'ın değildir; Roberts'ın kendi misalleri numaralarıyla ve adlarıyla gelir: (D0), (5), (13), (32), (43), (52), (57), (63) gibi. İngilizce terimler ilk geçtikleri yerde parantezle bir kerre yazıldı.
 
@@ -214,10 +214,10 @@ Bu misal yalnız iki şahıslı, Hilary ve Robin, ve iki cins yiyecekli, simit (
              ii. Did Robin eat tofu?      Ans(bii) = evet
 ```
 
-Bu bütün söylem, birinci sualı, yani 1. hamleyi cevaplama usulünü gerçekleştirir. Buradaki sualler yalın iktiza ilişkilerindedir. (D0)'daki her sual için onun gerektirdiği suallerin kümesi (î fonksiyonu) şudur:
-- î(1) = { a, ai, aii, b, bi, bii }
-- î(a) = { ai, aii }
-- î(b) = { bi, bii }
+Bu bütün söylem, birinci sualı, yani 1. hamleyi cevaplama usulünü gerçekleştirir. Buradaki sualler yalın iktiza ilişkilerindedir. (D0)'daki her sual için onun gerektirdiği suallerin kümesi (sayfada ⊨ işaretiyle yazılıdır: ⊨(q) = q'nun gerektirdiği sualler) şudur:
+- ⊨(1) = { a, ai, aii, b, bi, bii }
+- ⊨(a) = { ai, aii }
+- ⊨(b) = { bi, bii }
 
 (Bu ilişkiler söylemin girintili yerleşiminde de görünür.) Ayrıca tarif edilen modelde (alan: Hilary, Robin, simit, tofu) şu olgular geçerlidir:
 
@@ -626,11 +626,13 @@ Benzer şekilde (43)'teki B-vurguları bize üst sual (45)'in üzerinde konuşul
 
 **Mekanizma.** Bu olguları yakalamak için Roberts hem A- hem B-vurgulu isim öbeklerinin odak olduğunu varsayar, böylece (45)'teki sual önkabul edilir; bu (43)'teki sözlerin F-işaretlemesinden çıkar (dipnot 28: Vallduví zıt konuların, ki ona göre Jackendoff'un misallerindeki B-vurgulu öğeleri de içerir, odak olmadığını varsayar. Ama Roberts'ın görebildiği kadarıyla bu onu burada tartışılan türden olgular için bir izahsız bırakır). O hâlde (45)'in hemen alt suallerinin varsayımı nasıl tetiklenir? Bu tür misallerdeki iki vurgu arasındaki kritik fark sınır tonu **H%**'dir (veya öbek vurgusu+sınır tonu **L–H%** dizisi, genelde öbek vurgusu+sınır tonunun morfolojik bir birim oluşturduğu çıkarsa). B-konturlu tonlama öbeğindeki **(L–)H%**, odaklı öğesini (45)'e karşılık gelen soyutlamanın **bağımsız argümanı** olarak işaretler; yani ilk seçilen, ve seçimi diğer, A-konturlu odağa karşılık gelen şık kümesinden bir şıkkın seçimini belirleyen ya da en azından daraltan öğe (dolayısıyla Jackendoff'un "bağımlı odak" terimi). '(L–)H%' şu manaya gelir: "**cevap sürüyor, doldurulacak başka bir odak var**." Bu, bağımsız argümanın neden tek başına bulunamadığını açıklar (ama bir yerlerde A-konturlu bir odak bulunduğu sürece yinelenebilir). Bu bağımsız argümanı (45)'in şık kümelerinden birinden seçersek, önkabul edilen üzerinde konuşulan sual (50a) veya (50b) olur:
 
-**(50)** a. { u sever u′'yi : u, u′ ∈ D ∧ u = John } b. { u sever u′'yi : u, u′ ∈ D ∧ u′ = beans }
+**(50)** a. { u likes u′ : u, u′ ∈ D ∧ u = John } b. { u likes u′ : u, u′ ∈ D ∧ u′ = beans }
 
 Ama (50a), (46a)'nın yorumu olan (51a)'ya eşdeğerdir; (50b) de (46b)'nin yorumu olan (51b)'ye eşdeğerdir:
 
-**(51)** a. { j u′'yi yedi : u′ ∈ D, j = |John| } b. { u fasulye yedi : u ∈ D }
+**(51)** a. { j likes u′ : u′ ∈ D, j = |John| } b. { u likes beans : u ∈ D }
+
+(Sayfada (50) ve (51)'de fiil *likes* (sever) yazılıdır; oysa (43)–(46)'da fiil *ate* (yedi)'dir. Bu Roberts'ın kendi yazısındaki tutarsızlıktır, kasıtlı bir fark değildir; kastedilen (46a) ve (46b)'nin yorumudur. Sayfada olduğu gibi bırakıldı.)
 
 Dolayısıyla (43a) ve (43b), odağın aynı yerleşimi sebebiyle ikisi de (45)'i önkabul eder. Fakat L–H% sınır dizisinin yeri, odak şıkları kümelerinden **seçim sırasına** işaret eder ve bu yüzden tonlama odağıyla önkabul edilen sualin bir **alt sualini** önkabul eder. Bu dizinin (43a) ve (43b)'de yeri farklı olduğundan, farklı alt sualler önkabul edilir. (43a) için önkabul edilen sualler (45) ve (46a) bir sual/alt sual usulü oluşturduğu için, (43a)'nın kendisi böyle bir usulü önkabul eder; (43b) ve ⟨(45), {⟨(46b), ∅⟩}⟩ usulü için de benzeri geçerlidir. Sonuç olarak hem bağımsız hem bağımlı odak içeren sözler yalnız bir üzerinde konuşulan sual değil, **sual dizilerinden oluşan muhtemelen karmaşık bir usulü** önkabul eder.
 
@@ -727,8 +729,8 @@ b. [Do you want [coffee]_F] [or [tea]_F] ? — H–H% (ilk öbekte), L–L% (iki
 
 Bunların yorumu (64) olmalıdır; burada coffee ∨ tea, |coffee| ile |tea|'nın "meet"idir (Roberts böyle yazıyor):
 
-**(64)** a. you want coffee ∨ tea
-b. you want u : u ∈ {coffee, tea} = { you want coffee, you want tea }
+**(64)** a. { you want coffee ∨ tea }
+b. { you want u : u ∈ {coffee, tea} } = { you want coffee, you want tea }
 
 (63a) için (64a)'daki yorum kolayca elde edilir. Yalın evet/hayır sualı, bağlam kümesi üzerinde yalnız **iki hücreli** bir taksim kurar: bir hücre (64a) kümesindeki tek önermenin doğru olduğu âlemleri, diğeri yanlış olduğu âlemleri içerir. Mesele (64b)'deki yorumun nasıl elde edildiğidir. (64b)'nin *Kahve ister misin ve çay ister misin?* bağlaçlı sualına eşdeğer olduğuna dikkat edin. (63)'ün (64b) yorumu, bu yüzden, nesne dil ayrılmasını üst-dil bağlacına çeviren bir tür anlamsal **bağlaç indirgemesi** içerir. von Stechow *or*'un suallerde genellikle **küme birleşimi** gibi davrandığını önerir: içerik düzeyinde âlem kümelerini birleştirir, şık düzeyinde ise önermeler kümelerini birleştirir. Onun kuramında (64b) doğrudan okumadır, (64a) ise bir ek mekanizmayla açıklanmalıdır (temelde niceleyiciyi içeri alma kullanır). Bu hesap tonlama ile yorum arasındaki bağıntı hakkında hiçbir şey söylemez.
 
@@ -776,15 +778,14 @@ Roberts'ın kaynakça listesindeki başlıca isimler: Beckman ve Ayers 1997; Bec
 
 ## 8. Bozuk çıkan simgeler
 
-PDF'ten metin çıkarırken şu yerler bozuldu; hepsi bağlamdan düzeltildi ve **şüphe kaydıyla** yazıldı:
-- (1)'de küme ayracı ve parantezler kırıktı; sayfa görüntüsünden bakılınca indisler **üst yazı** (u^{i−1} … u^{i−n}) ve köşeli ayraçlı olduğu görüldü, tanım öyle düzeltildi (`SEKILLER/01_ROBERTS_formul_q_sik.png`).
-- (3) ve (8)'de "q-alt q" parantezsiz çıktı; *q-alt(q)* diye okundu.
-- (10f)'de birleşim işareti (∪) "S" diye çıktı; (10g-i)'de Q ∩ Acc olarak okundu.
-- (12)'de "QUD q′ = ⟨…, q⟩" parantezleri bozuk; mana apaçıktır.
-- (20) ve (64b)'de ayraçlar bozuk; mana apaçık.
-- (28)'deki kip kümesi metin çıkarıcıda {?, á} çıkmıştı; sayfa görüntüsünden bakılınca ikinci simge bir nokta (·) olarak yazılıdır, öyle düzeltildi (`SEKILLER/03_ROBERTS_formul_alaka_odak.png`).
-- (44) ve (60)'ta ton etiketlerinin hizası kaydı; öbek sınırları ve etiketler metindeki açıklamaya göre yerleştirildi.
-- Sayfa numaraları (6:2 vb.) metin içine karışmıştı, atlandı.
+Bu bahsin evvelki nüshası, metin çıkarıcının bozduğu simgeleri sayıp "bağlamdan düzeltildi" diyordu. Bu usul bırakıldı (CLAUDE.md § 3-I 330); 69 sayfa görüntü olarak yeniden okundu ve her formül sayfadaki hâliyle denendi. Netice:
+- (1)'de indisler **üst yazı** (u^{i−1} … u^{i−n}) ve köşeli ayraçlıdır; sayfa böyle gösteriyor, tanım böyle yazıldı (`SEKILLER/01_ROBERTS_formul_q_sik.png`).
+- (3), (8), (9), (10), (12), (15), (17), (18), (19), (24), (25), (26), (28), (29), (30), (31), (56) sayfadan harf harf karşılaştırıldı; ayrılık yoktur.
+- (28)'deki kip kümesi {?, ·}'dir: ikinci simge bir noktadır, sayfada da öyledir (`SEKILLER/03_ROBERTS_formul_alaka_odak.png`).
+- (44) ve (60)'ta ton etiketlerinin hizası sayfadan alındı: (44a) L–H% *John*'un, L–L% *ate beans*'in altındadır; (44b) tersi. (60)'ta sıra H\* L– H\* L–L% H\* L– H\* L–L% şeklindedir.
+- (63)'te H–H% etiketi (a)'da cümle sonunda, (b)'de *coffee*'nin altında; L–L% *tea*'nın altındadır.
+- **Bu turda sayfadan bulunan düzeltmeler:** (D0)'daki iktiza işareti ⊨'dür (evvelki nüshada bozuk "î" yazılmıştı); (50) ve (51)'de fiil sayfada *likes*'tır (evvelki nüshada "yedi" diye çevrilmişti, yanlıştı) ve bu Roberts'ın kendi tutarsızlığıdır; (64a) sayfada küme ayracı içindedir ({you want coffee ∨ tea}), evvelki nüshada ayraç düşmüştü.
+- Sayfa numaraları (6:2 … 6:69) atlandı.
 
 ---
 
