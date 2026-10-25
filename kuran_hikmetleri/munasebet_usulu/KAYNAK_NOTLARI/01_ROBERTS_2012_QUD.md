@@ -122,6 +122,13 @@ Hamblin'de olduğu gibi bir sual bir **şıklar kümesine** karşılık gelir; R
 
 Basit bir wh-sualinin q-şık kümesi, wh-öğesinin üzerinde soyutlama yapılıp bu soyutlamanın modeldeki, wh-öğesiyle **aynı tipten bütün şeylere** (nesne, fonksiyon, her ne ise) sırayla uygulanmasıyla bulunan önermeler kümesidir. Bu şöyle genelleştirilir:
 
+**Formülü kurmak için harfler (benim öğretici ilâvem, Roberts'ın değildir).** Formüldeki her harf şu merdivenle tarif edilir; bu bahsin sonundaki (1) ancak bundan sonra okunur.
+1. **D**: dünyadaki kişilerin kümesi (misalde Mary, Alice, Grace). "Mary kimi davet etti?" cümlesinde "kimi" bir **boşluktur**; boşluğa D'den bir kişi konursa bir cümle çıkar ("Mary Alice'i davet etti"). Bu cümlelerin kümesi sualin şıklarıdır.
+2. **β**: cümlenin sual kelimesi çıkarılmış **gövdesi** ("Mary x'i davet etti"). **|β|**: gövdenin mânâsı. **|β|(Alice)**: boşluğa Alice konmuş hâli. **u**: boşluğa konacak kişinin genel adı; **p**: çıkan cümlenin (önermenin) adı. ∃ = "var öyle ki"; ∈ = "…'nin içinde".
+3. **Bir boşluk:** { p : bir u ∈ D vardır ki p = |β|(u) }.
+4. **n boşluk** ("Kim kimi davet etti?" iki boşluktur): her boşluğa ayrı ad lâzımdır; boşluklar numaralanır u¹, u², …, uⁿ. Roberts'ın **i−1, …, i−n** üst yazıları bu numaralardan ibarettir (i bir sıra numarasıdır, değeri mânâyı değiştirmez). **α**: bütün cümle; **β**: onun gövdesi.
+5. **n = 0** (evet/hayır suâli): gezilecek boşluk kalmaz, küme tek elemanlı olur: {|α|}.
+
 **(1) Bir α cümlesinin söylenişine karşılık gelen q-şıkları:**
 q-alt(α) = { p : ∃ u^{i−1}, …, u^{i−n} ∈ D [ p = |β| (u^{i−1}) … (u^{i−n}) ] }
 Burada α'nın mantıkî biçimi wh_{i−1}, …, wh_{i−n}(β)'dır; {wh_{i−1}, …, wh_{i−n}} α'daki (belki boş) wh-öğeleri kümesidir; D ise dil için kurulan modelin alanıdır, uygun şekilde cinse göre daraltılmıştır: *kim* için insanlar, *ne* için insan olmayanlar.
