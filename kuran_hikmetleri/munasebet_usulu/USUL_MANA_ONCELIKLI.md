@@ -139,6 +139,6 @@ Fâtiha zinciri: *Kime yöneliyorum? → adı (1:1) → yapabilir mi, övülür 
 ## 11. Açık sualler
 
 - **S-M2:** Kısım hududu ihtiyaç ağacına mı, `sure.md` konu etiketlerine mi göre olacak? (Padişah henüz karar vermedi; her ikisi duruyor.)
-- **S-M3:** § 2-B'de dördüncü bir durum değişkeni var mı? Padişah "bazı ihtiyaç çeşitleri daha olabilir" dedi; haritada boş kalan hücreler: **statü × muhatap dışı** için tek aday 4:2 (yetimin hakkı), **celb-i menfaat × muhatap** için hâlâ aday bulunamadı.
+- **S-M3:** § 2-B'de dördüncü bir durum değişkeni var mı? Padişah "bazı ihtiyaç çeşitleri daha olabilir" dedi; haritadaki on geçerli hücrenin (4 zihnî × muhatap + 3 zihnî olmayan × iki taşıyıcı) her biri için en az bir aday bulundu (örnekler § 2-B'de; **statü × muhatap dışı** için 4:2, **celb-i menfaat × muhatap** için 2:261). Bu, hücrelerin var olduğunu gösterir; dördüncü değişkenin bulunmadığını **göstermez**.
 - **S-M4:** Gazâlî'nin ilim–hâl–amel üçlüsü kaynaktan doğrulanmadı (P1'in tarihî dayanağı).
-- İş kalemleri (sayı): nakarat örneği 0 (Rahmân ya da Mürselât gerekir); 112 sûrenin `gaye_ihtiyaci` yazılmadı; besmele'nin Fâtiha âyeti sayılması ihtilaflıdır (hafızadan, yoklanmadı), 1:1 sayıldı.
+- İş kalemleri (sayı): nakarat örneği 0 (Rahmân ya da Mürselât gerekir); 113 sûrenin `gaye_ihtiyaci` yazılmadı; besmele'nin Fâtiha âyeti sayılması ihtilaflıdır (hafızadan, yoklanmadı), 1:1 sayıldı.
