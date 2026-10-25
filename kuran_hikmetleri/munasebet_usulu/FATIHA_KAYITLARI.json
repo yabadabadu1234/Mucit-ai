@@ -1,0 +1,364 @@
+{
+  "sure": "S001",
+  "cinsler": {
+    "gerekce": [
+      "gerekce",
+      "netice"
+    ],
+    "gaybdan-hitaba": [
+      "gaybi-son",
+      "hitabi-ilk"
+    ],
+    "paralel": [
+      "es"
+    ],
+    "bolunme": [
+      "tanimlanan",
+      "dahil",
+      "hariç"
+    ],
+    "hitabi-dizi": [
+      "hitabi"
+    ],
+    "cevap": [
+      "talep",
+      "mukabil"
+    ],
+    "butun-parca": [
+      "butun",
+      "parca"
+    ],
+    "baglarin-baglantisi": [
+      "baslangic",
+      "suruklik"
+    ]
+  },
+  "kayitlar": [
+    {
+      "id": "F01",
+      "cins": "gerekce",
+      "uyeler": [
+        {
+          "ref": "1:2",
+          "rol": "gerekce"
+        },
+        {
+          "ref": "1:3",
+          "rol": "gerekce"
+        },
+        {
+          "ref": "1:4",
+          "rol": "gerekce"
+        },
+        {
+          "ref": "1:5",
+          "rol": "netice"
+        }
+      ],
+      "tasiyici": [
+        "lafiz",
+        "mana"
+      ],
+      "iz": "1:2-4 aynı özneyi (Allah) niteleyen üç sıfat: Rabbi'l-âlemîn, er-Rahmân er-Rahîm, Mâliki yevmi'd-dîn; 1:5 kulluk ve yardım ikrarı",
+      "iddia": "Kulluk ikrarı (1:5), önce sayılan üç sıfata dayandırılır; sıfatlar ikrardan önce gelir.",
+      "yikan_sart": "Sıfatlar 1:5'ten sonra gelseydi ya da 1:5 sıfatsız başlasaydı gerekçe okuması düşerdi.",
+      "katiyet": {
+        "lafiz": "iz-dogrulandi",
+        "mana": "hipotez"
+      },
+      "testler": {
+        "T1": "uygulanmadi",
+        "T2": "uygulanmadi",
+        "T3": "gecti",
+        "T4": "uygulanmadi",
+        "T5": "uygulanmadi",
+        "T6": "uygulanmadi",
+        "T7": "uygulanmadi",
+        "T8": "gecti"
+      },
+      "geri_getirme": "Burada Rab, Rahmân-Rahîm ve Mâlik anılıyor, çünkü ikrarın dayanağı bunlar; öyleyse şimdi kulluk ve yardım ikrarı gelecek."
+    },
+    {
+      "id": "F02",
+      "cins": "gaybdan-hitaba",
+      "uyeler": [
+        {
+          "ref": "1:4",
+          "rol": "gaybi-son"
+        },
+        {
+          "ref": "1:5",
+          "rol": "hitabi-ilk"
+        }
+      ],
+      "tasiyici": [
+        "lafiz",
+        "yapi"
+      ],
+      "iz": "1:2-4 üçüncü şahıs (gaybi); 1:5 'iyyâke' ikinci şahıs (muhatap)",
+      "iddia": "Anlatım 1:4 ile 1:5 arasında üçüncü şahıstan ikinci şahsa döner.",
+      "yikan_sart": "1:5'te zamir 'iyyâhu' olsaydı dönüş olmazdı.",
+      "katiyet": {
+        "lafiz": "iz-dogrulandi",
+        "yapi": "iz-dogrulandi"
+      },
+      "testler": {
+        "T1": "uygulanmadi",
+        "T2": "uygulanmadi",
+        "T3": "gecti",
+        "T4": "uygulanmadi",
+        "T5": "uygulanmadi",
+        "T6": "uygulanmadi",
+        "T7": "uygulanmadi",
+        "T8": "gecti"
+      },
+      "geri_getirme": "Sıfatlar bitti ve söz 'O'ndan 'Sen'e döndü; şimdi hitapla başlayan ikrar gelecek."
+    },
+    {
+      "id": "F03",
+      "cins": "paralel",
+      "uyeler": [
+        {
+          "ref": "1:5a",
+          "rol": "es"
+        },
+        {
+          "ref": "1:5b",
+          "rol": "es"
+        }
+      ],
+      "tasiyici": [
+        "lafiz",
+        "yapi"
+      ],
+      "iz": "'iyyâke na'büdu' ve 'iyyâke nesta'în' aynı kalıp, bağlacı 've'",
+      "iddia": "1:5 iki eş cümleden oluşur; ibadet cümlesi yardım cümlesinden önce gelir. Sıranın sebebi metinden okunmaz.",
+      "yikan_sart": "Cümlelerden biri farklı kalıpta olsaydı paralellik düşerdi.",
+      "katiyet": {
+        "lafiz": "iz-dogrulandi",
+        "yapi": "iz-dogrulandi"
+      },
+      "testler": {
+        "T1": "uygulanmadi",
+        "T2": "uygulanmadi",
+        "T3": "gecti",
+        "T4": "uygulanmadi",
+        "T5": "uygulanmadi",
+        "T6": "uygulanmadi",
+        "T7": "uygulanmadi",
+        "T8": "gecti"
+      },
+      "geri_getirme": "'Sana kulluk ederiz' denildi; aynı kalıpta ikinci cümle gelecek."
+    },
+    {
+      "id": "F04",
+      "cins": "bolunme",
+      "uyeler": [
+        {
+          "ref": "1:6",
+          "rol": "tanimlanan"
+        },
+        {
+          "ref": "1:7a",
+          "rol": "dahil"
+        },
+        {
+          "ref": "1:7b",
+          "rol": "hariç"
+        },
+        {
+          "ref": "1:7c",
+          "rol": "hariç"
+        }
+      ],
+      "tasiyici": [
+        "lafiz",
+        "yapi"
+      ],
+      "iz": "1:6 sırât-ı müstakîm; 1:7 'nimet verilenlerin yolu', 'gayri' ile 'gazaba uğrayanlar', 've lâ' ile 'sapanlar'",
+      "iddia": "Doğru yol, bir olumlu ve iki olumsuz ayırıcıyla tanımlanır; üç kol birbirini dışlar.",
+      "yikan_sart": "1:7'de 've lâ' tekrarı olmasaydı iki ayrı hariç kolu okunamazdı.",
+      "katiyet": {
+        "lafiz": "iz-dogrulandi",
+        "yapi": "iz-dogrulandi"
+      },
+      "testler": {
+        "T1": "uygulanmadi",
+        "T2": "uygulanmadi",
+        "T3": "gecti",
+        "T4": "uygulanmadi",
+        "T5": "uygulanmadi",
+        "T6": "uygulanmadi",
+        "T7": "uygulanmadi",
+        "T8": "gecti"
+      },
+      "geri_getirme": "Yol isteniyor; hemen ardından kimlerin yolu olduğu, kimlerinki olmadığı gelecek."
+    },
+    {
+      "id": "F05",
+      "cins": "butun-parca",
+      "uyeler": [
+        {
+          "ref": "S001",
+          "rol": "butun"
+        },
+        {
+          "ref": "1:2",
+          "rol": "parca"
+        },
+        {
+          "ref": "1:3",
+          "rol": "parca"
+        },
+        {
+          "ref": "1:4",
+          "rol": "parca"
+        },
+        {
+          "ref": "1:5",
+          "rol": "parca"
+        },
+        {
+          "ref": "1:6",
+          "rol": "parca"
+        },
+        {
+          "ref": "1:7",
+          "rol": "parca"
+        }
+      ],
+      "tasiyici": [
+        "yapi",
+        "mana"
+      ],
+      "iz": "1:2-4 gaybi sıfat; 1:5 hitap ve ikrar; 1:6-7 talep",
+      "iddia": "Sûre sıfat-hitap-talep sırasıyla kurulmuş bir düzen taşır.",
+      "yikan_sart": "Talep, sıfatlardan önce gelseydi bu düzen okunamazdı.",
+      "katiyet": {
+        "yapi": "iz-dogrulandi",
+        "mana": "hipotez"
+      },
+      "testler": {
+        "T1": "uygulanmadi",
+        "T2": "uygulanmadi",
+        "T3": "gecti",
+        "T4": "uygulanmadi",
+        "T5": "uygulanmadi",
+        "T6": "uygulanmadi",
+        "T7": "uygulanmadi",
+        "T8": "gecti"
+      },
+      "geri_getirme": "Fatiha sıfatlarla açılır, hitaba döner, talebe biter."
+    },
+    {
+      "id": "F06",
+      "cins": "hitabi-dizi",
+      "uyeler": [
+        {
+          "ref": "1:5",
+          "rol": "hitabi"
+        },
+        {
+          "ref": "1:6",
+          "rol": "hitabi"
+        },
+        {
+          "ref": "1:7",
+          "rol": "hitabi"
+        }
+      ],
+      "tasiyici": [
+        "lafiz"
+      ],
+      "iz": "1:5 'iyyâke'; 1:6 'ihdinâ' (emir, muhatap Allah); 1:7 'en'amte' (ikinci şahs)",
+      "iddia": "1:5 'iyyâke', 1:6 'ihdinâ' ve 1:7 'en'amte' birer ikinci şahıs kipi taşır; 1:7'nin 'aleyhim' zamiri üçüncü şahıstır ve bu kayıtta kapsanmaz.",
+      "yikan_sart": "1:6 veya 1:7'de ikinci şahıs kipi bulunmasaydı dizi kırılırdı.",
+      "katiyet": {
+        "lafiz": "iz-dogrulandi"
+      },
+      "testler": {
+        "T1": "uygulanmadi",
+        "T2": "uygulanmadi",
+        "T3": "gecti",
+        "T4": "uygulanmadi",
+        "T5": "uygulanmadi",
+        "T6": "uygulanmadi",
+        "T7": "uygulanmadi",
+        "T8": "gecti"
+      },
+      "geri_getirme": "İkrar ikinci şahısla yapıldı; talep de ikinci şahıs kipiyle sürecek."
+    },
+    {
+      "id": "F07",
+      "cins": "cevap",
+      "uyeler": [
+        {
+          "ref": "1:6",
+          "rol": "talep"
+        },
+        {
+          "ref": "2:2",
+          "rol": "mukabil"
+        }
+      ],
+      "tasiyici": [
+        "lafiz",
+        "yapi",
+        "mana"
+      ],
+      "iz": "1:6 'ihdinâ' ve 2:2 'hüden' aynı kökten (h-d-y); iki sûre müshaîn bitiflik sırasında",
+      "iddia": "2:2'nin hidayet lafzı, 1:6'daki hidayet talebinin karşılığı olarak okunabilir.",
+      "yikan_sart": "'Hüdâ' kökü Mushaf'ta sıradan bir sözcük olarak rastgele her yerde aynı sıklıkta geçiyorsa (T7), lafzın burada bir bağ taşıdığı iddiası düşer.",
+      "katiyet": {
+        "lafiz": "iz-dogrulandi",
+        "yapi": "iz-dogrulandi",
+        "mana": "hipotez"
+      },
+      "testler": {
+        "T1": "uygulanmadi",
+        "T2": "uygulanmadi",
+        "T3": "gecti",
+        "T4": "uygulanmadi",
+        "T5": "uygulanmadi",
+        "T6": "uygulanmadi",
+        "T7": "uygulanmadi",
+        "T8": "gecti"
+      },
+      "geri_getirme": "Hidayet istendi; sûrenin hemen ardından hidayet lafzı geliyor."
+    },
+    {
+      "id": "F08",
+      "cins": "baglarin-baglantisi",
+      "uyeler": [
+        {
+          "ref": "F02",
+          "rol": "baslangic"
+        },
+        {
+          "ref": "F06",
+          "rol": "suruklik"
+        }
+      ],
+      "tasiyici": [
+        "yapi"
+      ],
+      "iz": "F02 ve F06 aynı üyeyi (1:5) paylaşır",
+      "iddia": "Hitaba dönüş (F02) 1:5'te başlar ve F06'da 1:7'ye kadar sürer; paylaşılan üye 1:5'tir.",
+      "yikan_sart": "F02 ve F06'dan biri düşerse veya 1:5 paylaşılan üye olmazsa bu bağ düşer.",
+      "katiyet": {
+        "yapi": "iz-dogrulandi"
+      },
+      "testler": {
+        "T1": "uygulanmadi",
+        "T2": "uygulanmadi",
+        "T3": "gecti",
+        "T4": "uygulanmadi",
+        "T5": "uygulanmadi",
+        "T6": "uygulanmadi",
+        "T7": "uygulanmadi",
+        "T8": "gecti"
+      },
+      "geri_getirme": "Hitaba dönüş 1:5'te oldu; 1:7'ye kadar değişmeyecek."
+    }
+  ]
+}
