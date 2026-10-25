@@ -1,0 +1,465 @@
+{
+  "sure": "S001",
+  "ihtiyaclar": [
+    {
+      "id": "I0",
+      "tur": "irade",
+      "seviye": "sure",
+      "icerik": "Okuyan hidayet talebini muhatabını tanıyarak ve isteyerek yapsın.",
+      "kapanis_testi": "1:6'daki talep, okuyanın tasavvur ve tasdik ettiği bir muhataba yönelmiş olur.",
+      "ust": [],
+      "onkosul": [],
+      "ayrisim": "ve"
+    },
+    {
+      "id": "I1",
+      "tur": "tasavvur",
+      "seviye": "kisim",
+      "icerik": "Talebin yöneldiği muhatabı tanısın.",
+      "kapanis_testi": "Adı, işi, merhameti ve hesabı bilinir.",
+      "ust": [
+        "I0"
+      ],
+      "ayrisim": "ve",
+      "onkosul": []
+    },
+    {
+      "id": "I1d",
+      "tur": "tasavvur",
+      "seviye": "ayet",
+      "icerik": "Muhatabın adı bilinsin.",
+      "kapanis_testi": "Ad ve rahmet nisbeti anıldı.",
+      "ust": [
+        "I1"
+      ],
+      "onkosul": []
+    },
+    {
+      "id": "I1a",
+      "tur": "tasavvur",
+      "seviye": "ayet",
+      "icerik": "Muhatabın bütün âlemleri terbiye edip yönettiği bilinsin.",
+      "kapanis_testi": "Rab ve âlemler zikredildi.",
+      "ust": [
+        "I1"
+      ],
+      "onkosul": [
+        "I1d"
+      ]
+    },
+    {
+      "id": "I1b",
+      "tur": "tasavvur",
+      "seviye": "ayet",
+      "icerik": "Muhatabın merhameti bilinsin.",
+      "kapanis_testi": "Rahmân ve Rahîm zikredildi.",
+      "ust": [
+        "I1"
+      ],
+      "onkosul": [
+        "I1d"
+      ]
+    },
+    {
+      "id": "I1c",
+      "tur": "tasavvur",
+      "seviye": "ayet",
+      "icerik": "Yolun karşılığının ve hesabın muhatapta olduğu bilinsin.",
+      "kapanis_testi": "Din gününün sahibi zikredildi.",
+      "ust": [
+        "I1"
+      ],
+      "onkosul": [
+        "I1d"
+      ]
+    },
+    {
+      "id": "I2",
+      "tur": "tasdik",
+      "seviye": "ayet",
+      "icerik": "Muhatabın övgüye lâyık olduğunu kabul etsin.",
+      "kapanis_testi": "Hamd ifadesi yapıldı.",
+      "ust": [
+        "I0"
+      ],
+      "onkosul": [
+        "I1d"
+      ]
+    },
+    {
+      "id": "I3",
+      "tur": "irade",
+      "seviye": "kisim",
+      "icerik": "Muhataba kulluk ve ondan yardım ikrarını yapsın.",
+      "kapanis_testi": "Yönelme ve aciz beyanı ikisi de yapıldı.",
+      "ust": [
+        "I0"
+      ],
+      "ayrisim": "ve",
+      "onkosul": [
+        "I1a",
+        "I1b",
+        "I1c",
+        "I2"
+      ]
+    },
+    {
+      "id": "I3a",
+      "tur": "irade",
+      "seviye": "ayet",
+      "icerik": "Yalnız muhataba yönelme ikrarı.",
+      "kapanis_testi": "Kulluk cümlesi söylendi.",
+      "ust": [
+        "I3"
+      ],
+      "onkosul": []
+    },
+    {
+      "id": "I3b",
+      "tur": "irade",
+      "seviye": "ayet",
+      "icerik": "Kendi aczini, yalnız muhataptan yardım istemekle beyan etsin.",
+      "kapanis_testi": "Yardım cümlesi söylendi.",
+      "ust": [
+        "I3"
+      ],
+      "onkosul": [
+        "I3a"
+      ]
+    },
+    {
+      "id": "I5",
+      "tur": "irade",
+      "seviye": "ayet",
+      "icerik": "Hidayet talebini açıkça ifade etsin.",
+      "kapanis_testi": "Talep cümlesi söylendi.",
+      "ust": [
+        "I0"
+      ],
+      "onkosul": [
+        "I3b"
+      ]
+    },
+    {
+      "id": "I4",
+      "tur": "tasavvur",
+      "seviye": "ayet",
+      "icerik": "Talep edilen yolun ne olduğu belli olsun.",
+      "kapanis_testi": "Yol olumlu ve olumsuz sınırıyla tarif edildi.",
+      "ust": [
+        "I0"
+      ],
+      "ayrisim": "taksim",
+      "onkosul": [],
+      "dogan_karar": "K06"
+    },
+    {
+      "id": "I4a",
+      "tur": "tasavvur",
+      "seviye": "ayet",
+      "icerik": "Yolun olumlu tarifi: nimet verilenlerin yolu.",
+      "kapanis_testi": "Olumlu hücre yazıldı.",
+      "ust": [
+        "I4"
+      ],
+      "onkosul": [],
+      "dogan_karar": "K06"
+    },
+    {
+      "id": "I4b",
+      "tur": "tasavvur",
+      "seviye": "ayet",
+      "icerik": "Yolu kaçırmanın birinci hücresi: gazaba uğrayanlar.",
+      "kapanis_testi": "Birinci olumsuz hücre yazıldı.",
+      "ust": [
+        "I4"
+      ],
+      "onkosul": [],
+      "dogan_karar": "K06"
+    },
+    {
+      "id": "I4c",
+      "tur": "tasavvur",
+      "seviye": "ayet",
+      "icerik": "Yolu kaçırmanın ikinci hücresi: sapanlar.",
+      "kapanis_testi": "İkinci olumsuz hücre yazıldı.",
+      "ust": [
+        "I4"
+      ],
+      "onkosul": [],
+      "dogan_karar": "K06"
+    },
+    {
+      "id": "I6",
+      "tur": "tasavvur",
+      "seviye": "ayet",
+      "icerik": "Talebin karşılığının ne ve nereden geleceği bilinsin.",
+      "kapanis_testi": "Hidayetin geldiği şey gösterildi.",
+      "ust": [
+        "I0"
+      ],
+      "onkosul": [],
+      "dogan_karar": "K06",
+      "devir": "2:2"
+    }
+  ],
+  "kararlar": [
+    {
+      "id": "K01",
+      "ihtiyac": [
+        "I1d"
+      ],
+      "karsilik": [
+        "1:1"
+      ],
+      "gerekce": [
+        {
+          "yon": "konu",
+          "cumle": "Sıfat bir zata nispetle anlaşılır; önce ad gelmezse 'Rab', 'Rahmân' kime ait olduğu bilinmeden kalır.",
+          "atif": [
+            "I1a",
+            "I1b",
+            "I1c"
+          ]
+        },
+        {
+          "yon": "mutekellim",
+          "cumle": "Sözün muhatapça kimin adıyla başladığı ilk bilgidir."
+        }
+      ],
+      "neden_bu_kadar": "Ad ve rahmet nisbeti yeter; ayrıntı sıfatlara bırakılır.",
+      "elenen": [
+        {
+          "alternatif": "Sıfatlarla başlamak",
+          "sebep": "Sıfat sahibini adından önce tanıtmak anlamı yarım bırakır."
+        }
+      ],
+      "katiyet": "hipotez"
+    },
+    {
+      "id": "K02",
+      "ihtiyac": [
+        "I1a",
+        "I2"
+      ],
+      "karsilik": [
+        "1:2"
+      ],
+      "gerekce": [
+        {
+          "yon": "muhatap",
+          "cumle": "Talep eden önce muhatabın yapabilir olup olmadığını sorar; Rab ve âlemler bu soruyu kapatır."
+        },
+        {
+          "yon": "onceki",
+          "cumle": "Hamd, ad bilindikten sonra anlamlıdır; tasdik tasavvura muhtaçtır.",
+          "atif": [
+            "I1d"
+          ]
+        },
+        {
+          "yon": "sonraki",
+          "cumle": "Sonraki ikrarın gücü buna dayanır.",
+          "atif": [
+            "I3"
+          ]
+        }
+      ],
+      "neden_bu_kadar": "Tek ayette hem tanıma hem tasdik kapanır; ikisi ayrı ayetlere bölünmez.",
+      "katiyet": "hipotez"
+    },
+    {
+      "id": "K03",
+      "ihtiyac": [
+        "I1b"
+      ],
+      "karsilik": [
+        "1:3"
+      ],
+      "gerekce": [
+        {
+          "yon": "muhatap",
+          "cumle": "Talep eden muhatabın verip vermeyeceğini sorar; merhamet bunu kapatır."
+        },
+        {
+          "yon": "sonraki",
+          "cumle": "Talep ancak merhametli bir muhataba yöneltilebilir.",
+          "atif": [
+            "I5"
+          ]
+        }
+      ],
+      "neden_bu_kadar": "İki sıfat yeter; merhametin iki yanı (genel ve sürekli) birlikte anılır.",
+      "katiyet": "hipotez"
+    },
+    {
+      "id": "K04",
+      "ihtiyac": [
+        "I1c"
+      ],
+      "karsilik": [
+        "1:4"
+      ],
+      "gerekce": [
+        {
+          "yon": "muhatap",
+          "cumle": "Talep eden yol seçiminin sonuçlu olup olmadığını sorar; hesap sahibi bunu kapatır."
+        },
+        {
+          "yon": "butun",
+          "cumle": "Dua, sonucu olan bir yol seçimini istediği için hesap günü zikri talebin ağırlığını kurar.",
+          "atif": [
+            "I0"
+          ]
+        }
+      ],
+      "neden_bu_kadar": "Tek sıfat yeter; hesabın ayrıntısı bu sûrenin işi değil.",
+      "katiyet": "hipotez"
+    },
+    {
+      "id": "K05",
+      "ihtiyac": [
+        "I3a",
+        "I3b"
+      ],
+      "karsilik": [
+        "1:5a",
+        "1:5b"
+      ],
+      "gerekce": [
+        {
+          "yon": "onceki",
+          "cumle": "Muhatap tanındı ve tasdik edildi; irade bunlar olmadan kurulamaz.",
+          "atif": [
+            "I1a",
+            "I1b",
+            "I1c",
+            "I2"
+          ]
+        },
+        {
+          "yon": "muhatap",
+          "cumle": "Tanıtılan muhataba artık doğrudan söylenir; anlatım hitaba döner."
+        },
+        {
+          "yon": "sonraki",
+          "cumle": "Yardım cümlesi, talebin hemen önündeki aciz beyanıdır.",
+          "atif": [
+            "I5"
+          ]
+        }
+      ],
+      "neden_bu_kadar": "İki cümle: yönelmek ve güç istemek; irade bu iki yönü kapatır.",
+      "elenen": [
+        {
+          "alternatif": "Yardım cümlesini kulluk cümlesinden önce koymak",
+          "sebep": "Yardım istemek yönelmiş olmayı öncelemiş varsayılır; aciz beyanı talebin hemen önünde durmalı."
+        }
+      ],
+      "katiyet": "hipotez"
+    },
+    {
+      "id": "K06",
+      "ihtiyac": [
+        "I5"
+      ],
+      "karsilik": [
+        "1:6"
+      ],
+      "gerekce": [
+        {
+          "yon": "onceki",
+          "cumle": "Aciz beyanından sonra talep gelir.",
+          "atif": [
+            "I3b"
+          ]
+        },
+        {
+          "yon": "butun",
+          "cumle": "Sürenin gayesi bu talebin yapılmasıdır.",
+          "atif": [
+            "I0"
+          ]
+        },
+        {
+          "yon": "sonraki",
+          "cumle": "'Doğru yol' kavramı belirsiz olduğundan tarif ihtiyacını doğurur.",
+          "atif": [
+            "I4",
+            "I6"
+          ]
+        }
+      ],
+      "neden_bu_kadar": "Tek cümle: talep yalın ve açık kalır.",
+      "katiyet": "hipotez"
+    },
+    {
+      "id": "K07",
+      "ihtiyac": [
+        "I4a",
+        "I4b",
+        "I4c"
+      ],
+      "karsilik": [
+        "1:7a",
+        "1:7b",
+        "1:7c"
+      ],
+      "gerekce": [
+        {
+          "yon": "onceki",
+          "cumle": "1:6'daki yol kavramı belirsizdir; belirsizlik sorusunu 1:6 doğurur.",
+          "atif": [
+            "I5"
+          ]
+        },
+        {
+          "yon": "konu",
+          "cumle": "Bir yol sınırıyla tarif edilir: neresi içinde, neresi dışında."
+        },
+        {
+          "yon": "butun",
+          "cumle": "Dua evreni kapanır: ne isteniyor belli olur.",
+          "atif": [
+            "I0"
+          ]
+        }
+      ],
+      "neden_bu_kadar": "Bir olumlu ve iki olumsuz hücre; yolu kaçırmanın iki biçimi ayrı ad altında kapanır.",
+      "elenen": [
+        {
+          "alternatif": "Yalnız olumlu tarif",
+          "sebep": "Sınırı olmayan tarif, yolu kaçıranın kendini içeride sanmasına izin verir."
+        }
+      ],
+      "katiyet": "hipotez"
+    },
+    {
+      "id": "K08",
+      "ihtiyac": [
+        "I6"
+      ],
+      "karsilik": [
+        "2:2"
+      ],
+      "gerekce": [
+        {
+          "yon": "onceki",
+          "cumle": "Talep edildi; karşılık beklentisi açık kaldı.",
+          "atif": [
+            "I5"
+          ]
+        },
+        {
+          "yon": "butun",
+          "cumle": "Açık ihtiyaç sûre sınırını aşarak Mushaf düzeyinde kapanır.",
+          "atif": [
+            "I0"
+          ]
+        }
+      ],
+      "neden_bu_kadar": "Sûre kendi içinde bu ihtiyacı kapatmaz; kapatmak onun işi değil, talep işidir.",
+      "katiyet": "hipotez"
+    }
+  ]
+}
