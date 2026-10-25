@@ -98,6 +98,8 @@ Teyitli çekirdek: belâgat, sözün **söyleyenin, muhatabın ve dile getirilen
 
 **Hocaların silsilesi (padişahın hayal meyal hatırası; aşağıdaki zincir Claude'un ADAYIDIR, yoklanmadı):** *sözün söyleyeni → muhatabı → vaziyeti → hâli → makâmı → dâîsi → maksadı → muktezâsı → o muktezâya mutâbakatı, sonra söz.* Bu zincir tam bir ihtiyaç→karar sorgusudur: ilk üçü yön, dâî ve maksat ihtiyaç, muktezâ karar bağı, mutâbakat ölçü. Zincirin hocalardaki tam sırası ve kelimeleri bulunamadı; padişah hatırlıyorsa düzeltir.
 
+**Meânî ile ilişki (3-I 321, `MEANI_ILISKISI.md`):** meânî hâli girdi alır, birimi cümledir ve biçim sebebi üretir; ihtiyaç ağacı hâli kurar, birimi âyet–kısım–sûredir. Ağaç meânînin önünde durur. Meânîden alınanlar: ihtiyaçta `hal_kaynagi` (zahir ya da farz), kararda `miktar` (icaz, musavat, itnab) ve `miktar_sebebi`. Söz edimi ve biçim sebepleri sonraki devrin işidir.
+
 ## 5. Kayıt alanları
 
 İhtiyaç: `id · tur · tasiyici · ufuk · kip · ilim_cinsi · seviye · icerik · kapanis_testi · ust · ayrisim (ve/taksim) · onkosul · dogan_karar · devir`.

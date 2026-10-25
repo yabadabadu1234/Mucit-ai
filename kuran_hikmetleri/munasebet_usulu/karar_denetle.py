@@ -15,6 +15,8 @@ YON = {x["ad"] for x in SICIL if x["yuva"] == "yon"}
 ETKI = {"dahil-etmeme", "miktar", "sira"}
 DERECE = {"iz-dogrulandi", "hipotez", "rivayet-yoklanmadi"}
 AYRISIM = {"ve", "taksim"}
+HAL_KAYNAGI = {"zahir", "farz"}
+MIKTAR = {"icaz", "musavat", "itnab"}
 
 
 def konum(ref):
@@ -56,6 +58,8 @@ def denetle(d):
             hata.append(i["id"] + " kip")
         if i.get("ilim_cinsi") and (i["ilim_cinsi"] not in ILIM_CINSI or i["tur"] not in {"tasavvur", "tasdik"}):
             hata.append(i["id"] + " ilim_cinsi")
+        if i.get("hal_kaynagi") and i["hal_kaynagi"] not in HAL_KAYNAGI:
+            hata.append(i["id"] + " hal_kaynagi")
         if not i.get("kapanis_testi") or not i.get("icerik"):
             hata.append(i["id"] + " icerik veya kapanis_testi yok")
         for u in i["ust"]:
@@ -93,6 +97,10 @@ def denetle(d):
             hata.append(k["id"] + " karsilik yok")
         if k["katiyet"] not in DERECE:
             hata.append(k["id"] + " katiyet")
+        if k.get("miktar") and k["miktar"] not in MIKTAR:
+            hata.append(k["id"] + " miktar")
+        if k.get("miktar") in {"icaz", "itnab"} and not k.get("miktar_sebebi"):
+            hata.append(k["id"] + " miktar_sebebi yok")
         if not k.get("neden_bu_kadar"):
             hata.append(k["id"] + " neden_bu_kadar yok")
         if not k["gerekce"]:
@@ -291,6 +299,15 @@ def sinama(d):
     f = copy.deepcopy(d)
     f["kararlar"] = [x for x in f["kararlar"] if x["id"] != "K07"]
     sonuc.append(("1:7'nin kararini silmek", denetle(f)[0]))
+    m1 = copy.deepcopy(d)
+    m1["kararlar"][0]["miktar"] = "uzun"
+    sonuc.append(("tanimsiz miktar olcusu", denetle(m1)[0]))
+    m2 = copy.deepcopy(d)
+    m2["kararlar"][0]["miktar"] = "itnab"
+    sonuc.append(("sebepsiz itnab", denetle(m2)[0]))
+    m3 = copy.deepcopy(d)
+    m3["ihtiyaclar"][1]["hal_kaynagi"] = "belki"
+    sonuc.append(("tanimsiz hal kaynagi", denetle(m3)[0]))
     return sonuc
 
 
