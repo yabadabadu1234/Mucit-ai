@@ -62,3 +62,21 @@ Her karardan türeyecek suâller üç katmandadır.
 - Kararların `miktar` alanı dolu olan sayısı: **0** (alan yeni açıldı). Fâtiha ve 83 örneği bu alan olmadan da denetçiyi geçiyor.
 - Meânînin sûre ya da kısım düzeyinde miktar (kaç âyet) tartışması yapıp yapmadığı bu makalede **bulunamadı**; Beydâvî tezi okunmadığı için buradan hüküm yazılmadı.
 - Söz edimi eksenin hangi alanda tutulacağı sonraki devirde belirlenir.
+
+## 6. Başka yapay zekânın görüşü ve tenkidi (3-I 322)
+
+Metin padişahın sözü değildir. Özeti: meânîde yok; mantık (iskelet), adâb-ı bahs (ikna kurgusu), usûl-i tefsîr ve fıkhü'l-lüga (bağlam) öncüldür; müstakil bir "tasarım ilmi" klasik gelenekte yoktur, modern karşılığı retorik inventio, kompozisyon, eleştirel düşünmedir.
+
+| İddia | Sonuç |
+|---|---|
+| Meânî sunumdur, ihtiyaç ağacı ondan öncedir | **Makaleyle uyuşuyor** (bölüm 2). Makale de belâgatı "fıtrî meleke" sayar (s. 177) |
+| Mantık, ağacı kurar | **Kısmen.** Mantık da iddiayı hazır alır ve geçerliliğini sorar. "Muhatabın şu eksiği için sûrede ne söylenmeli" sorusu mantığın sorusu değildir. Tasavvur ve tasdik ayrımını bizim ihtiyaç türleri zaten kullanıyor |
+| Adâb-ı bahs, ağacı karşılar | **Dar.** Münazara karşı tarafın itirazına göre sıra kurar; sûre münazara değildir. Kitabın ispat bölümü için faydalıdır, sûre analizi için değil |
+| Usûl-i tefsîr ve fıkhü'l-lüga "niyet ve sebep" bağlamını verir | **Yanlış eşleme.** Sebeb-i nüzûl, inen sözün olayını söyler; yazarın tasarımını değil. Fıkhü'l-lüga lügat ve anlam bilgisidir, bağlam tasarımı değil |
+| Klasik gelenekte "ne nerede söylenir" ilmi yoktur | **Depodaki ölçüyle çelişiyor.** `MUNASEBET_KANIT_OZETI.md`: Bikâî'de istifham-cevap terimi 98, illiyet terimi 145, matla'–maktâ' 66 geçiş (terim sayımı; her geçişin kenar olduğu elle doğrulanmadı). Münâsebet ve nazm literatürü "bu âyet neden burada" suâlini sorar. "Yoktur" iddiası ancak bu literatürü okuyup boş bulunca yazılır |
+| Buluş yetenektir, düzenleme ilimdir (klasik gelenek) | **Teyitsiz.** Makale belâgatın kurallarının sonradan tedvin edildiğini söyler (s. 177); aynı tedvin buluş için de olabilir. Batı retoriğinde inventio da bir sanat sayılmıştır (hafızadan) |
+| Modern karşılık: eleştirel düşünme, yaratıcı yazarlık | **Zayıf.** Daha isabetli karşılık söz üretimi (NLG) literatüründe: belge planlama (içerik belirleme + belge yapılandırma), sonra mikroplanlama, sonra yüzey gerçekleştirme (Reiter ve Dale'in tartışmalı ama yaygın boru hattı; arama özeti, baskı yılı yoklanmadı). Bizim ihtiyaç ağacı belge planlamaya, meânî mikroplanlamaya ve yüzey tarafına denk düşer |
+
+Bu eşleme bir benzetmedir. Belge planlamada içerik, bir veritabanından seçilir; bizde içerik Kur'ân'dır ve soru, seçilmiş içeriğin **hikmet ihtimalini** bulmaktır. Bu fark yüzünden NLG literatürü sistemi bire bir karşılamaz.
+
+**Sonuç:** metnin ana hükmü ("ihtiyaç ağacı meânî değil") doğru ve makaleyle uyuşuyor; "klasik gelenekte hiç yok" hükmü kanıtsız. Gerçek komşular: münâsebet–nazm literatürü (depoda sayımı var, içeriği okunmadı), makâsıd literatürü ve belge planlama.
