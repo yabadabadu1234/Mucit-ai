@@ -5,7 +5,8 @@ import numpy as np
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-MODEL = "Qwen/Qwen3.5-0.8B"
+MODEL = os.environ.get("ZEMIN_MODEL", "Qwen/Qwen3.5-0.8B")
+DTYPE = torch.bfloat16 if os.environ.get("ZEMIN_DTYPE") == "bf16" else torch.float32
 PENCERE = 2048
 ADIM = 1536
 KOMSU = PENCERE - ADIM
@@ -16,7 +17,7 @@ class Zemin:
     def __init__(self):
         torch.set_num_threads(os.cpu_count())
         self.tok = AutoTokenizer.from_pretrained(MODEL)
-        self.model = AutoModelForCausalLM.from_pretrained(MODEL, dtype=torch.float32).eval()
+        self.model = AutoModelForCausalLM.from_pretrained(MODEL, dtype=DTYPE).eval()
         self.bas = self.tok.convert_tokens_to_ids("<|endoftext|>")
 
     def token_vektorleri(self):
@@ -49,7 +50,7 @@ class Zemin:
             lp = self._logp(h[:-1], hed)
             for j in range(max(ilk, 0), son - bas - 1):
                 surp[bas + j] = -lp[j].item()
-                gizli[bas + j] = h[j + 1].numpy()
+                gizli[bas + j] = h[j + 1].float().numpy()
             if son == n:
                 break
             bas += ADIM
@@ -97,7 +98,7 @@ def loglik(self, onek, metin):
     girdi = torch.cat([torch.tensor([self.bas]), a, b])
     h = self._hidden(girdi)
     lp = self._logp(h[:-1], girdi[1:])
-    return float(lp[len(a):].sum())
+    return float(lp[len(a):].float().sum())
 
 
 Zemin.loglik = loglik

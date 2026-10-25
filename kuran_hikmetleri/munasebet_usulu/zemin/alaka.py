@@ -49,13 +49,19 @@ def main():
     aday = [(1, a) for a in range(1, 8)] + [(2, 2)]
     metin = {r: " ".join(ay[r]) for r in aday}
     z = Zemin()
-    taban = {r: z.loglik("Cevap: ", metin[r]) for r in aday}
+    yon = sys.argv[1] if len(sys.argv) > 1 else "A"
+    taban = {r: z.loglik("Cevap: ", metin[r]) for r in aday} if yon == "A" else {r: 0.0 for r in aday}
     pmi = {}
     pmi_olumsuz = {}
     for i in hed:
         for r in aday:
-            pmi[(i, r)] = z.loglik(sual(ihtiyac[i]["icerik"]), metin[r]) - taban[r]
-            pmi_olumsuz[(i, r)] = z.loglik(sual(OLUMSUZ[i]), metin[r]) - taban[r]
+            if yon == "A":
+                pmi[(i, r)] = z.loglik(sual(ihtiyac[i]["icerik"]), metin[r]) - taban[r]
+                pmi_olumsuz[(i, r)] = z.loglik(sual(OLUMSUZ[i]), metin[r]) - taban[r]
+            else:
+                onek = "Âyet: " + metin[r] + "\nBu âyetin gideren maksat şudur: "
+                pmi[(i, r)] = z.loglik(onek, ihtiyac[i]["icerik"])
+                pmi_olumsuz[(i, r)] = z.loglik(onek, OLUMSUZ[i])
     isabet = 0
     sira_toplam = 0.0
     beklenen = 0.0
