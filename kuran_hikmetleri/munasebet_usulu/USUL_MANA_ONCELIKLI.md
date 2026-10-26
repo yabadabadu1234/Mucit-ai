@@ -212,3 +212,17 @@ Fâtiha zinciri: *Kime yöneliyorum? → adı (1:1) → yapabilir mi, övülür 
 | G11 | DSP açık uçludur, sonlu liste yoktur (s. 179) | CLAUDE.md § 3-I 114-B (cins listelenmez) ile uyumlu; yedi durum değişkeni hasrı ayrı bir iddiadır (içerik değil, değişken hasrı) |
 
 **Sınır:** G&S yalnız saf inanç ya da saf eylem hâlini ele alır; karışık hâli "ek araştırma ister" der (s. 200). Bizim ağaçtaki karışık kenarlar (his, tasavvur, tasdikin irade gayesi altında olması) G&S dışıdır: Fâtiha'da 7, 83:1-6'da 3 kenar (`karisik_ust_kenar`).
+
+### 12-F. QUDEVAL, DCQA ve Riester'den usule işlenenler (sayfa görüntüsünden okundu; formüller `FORMUL_DEFTERI.md` § 2–4)
+
+| # | Alınan | Usulde yeri | Durum |
+| :-- | :-- | :-- | :-- |
+| 1 | Her gaye bir **zımnî sual**dir (Riester); ağaç **sıkı biçimde** okunur: sual düğümleri ara, âyetler yaprak, yapraklar soldan sağa mushaf sırası (T5) | `FATIHA_KARARLAR.json`'da her gayenin `sual` alanı vardır (21 gaye). Yaprak sırasının mushaf sırası olması `karar_denetle.py`nin sıra denetimidir (Fâtiha'da geçerli sıralama 12, zorunlu çift 10) | yapıldı |
+| 2 | **Sual Verilmişliği** (K2) ve **Azamî Sual Göndermesi** (K3): sual yalnız verilmiş malzemeden kurulur; cevaptaki verilmiş malzeme sualde görünür | `sual_denetle.py`: sualin içerik kelimelerini önceki âyetlerin mealinde ve kök gayenin sualinde arar; yalnız cevap âyetinde bulunanı **cevap sızıntısı**, hiçbir yerde bulunmayanı **uydurma** sayar (QUDEVAL Q4). Fâtiha, 21 gaye: **yeni mefhum yok 7 · cevap sızıntısı 5 · uydurma 9** | yapıldı; kaba kök eşleştirmesi (ilk dört harf) |
+| 3 | **Çıpa alâkası** (QUDEVAL Q5) | Sualin kelimelerinin hemen önceki âyetin mealinde bulunma nispeti: tam 4 · kısmen 13 · dayanmaz 4 | yapıldı; "en büyük isim öbeği" yerine bütün içerik kelimeleri kullanıldı |
+| 4 | **Köke dönüş** (K4): gelen sual en alçak öncülünün sağına, fakat mümkün olduğu kadar yukarı bağlanır | `yigin_islemleri` itme ve çıkarmayı sayar; "mümkün olduğu kadar yukarı" şartının sınaması **yazılmadı** (verilmiş malzemeyi gösteren bir tarif gerekir) | yarım: sayı var, şart yok |
+| 5 | **Alt sual iktiza etmeyebilir** (T3, Riester) | `ust` kenarının dayanağı hâkimiyettir (G&S, § 12-E); sualler iktiza ile bağlı olmak zorunda değildir. Aynı sual kümesine karşı kapalılık şartı aranmaz | yazıldı |
+| 6 | **Söylem bağı = sual şablonu** (T4): açıklama = "neden", ayrıntı = "…hakkında ne", koordine = paralel kardeş sual | Kenar türü için aday: `ust` kenarına `sual_turu` alanı (neden · hakkında ne · paralel). Bugün kenarlar türsüz | yazılmadı (teklif) |
+| 7 | **Mesele dışı malzeme** (T2): cevaptan çıkarılınca cevap olarak kalan yeni ifade ayrı alt sualin odağıdır | Fâtiha'da 1:7'nin "gazaba uğrayanlar … sapıtanlar" kısmı ile 1:3'ün "Rahmân ve Rahîm" tekrarı bu sınıfa aday | sınanmadı |
+| 8 | **DCQA taban ve üst sınırı** | Cevabı hep "sonraki âyet" saymak taban (%40); insanın cevap bulması %72,2; aynı âyet için iki insanın yazdığı suallerin dörtte ikisi benzer: tek "doğru sual" aranmaz | `zemin/alaka.py` S yönü: ilk sualler 4/15 (MRR 0,431); Riester kaidelerine göre yeniden yazılanlar **6/15 (MRR 0,550)**, tesadüf 1,88/15 ve MRR 0,34 (`zemin/SONUC.md`) |
+| 9 | **Sual kalitesi dört ölçü** (QUDEVAL Q3): dil · cevap uygunluğu · verilmişlik · çıpa alâkası; ilâve kusur olarak tekrar ve fazla umumîlik | 2 ve 3 kural tabanlıdır; cevap uygunluğu modelle ölçülür (`zemin/alaka.py` S yönü); dil kalitesi ve fazla umumîlik **elle** kalır | kısmen |

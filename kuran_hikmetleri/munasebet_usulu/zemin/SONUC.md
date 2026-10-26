@@ -52,3 +52,12 @@ Hedef âyeti ilk sıra olanlar: I1d, I1a, H1, I3a, I3b, I5, I4a, I4b. Sıra: I2 
 | S 4B | 4/15 | 0,431 |
 
 İlk sıra: I1d, I1a, I2, I4a. Hedef sırası: H1 6, I3a 8, I5 6, I6 8, I1c 5, H3 5, I4b 5, I4c 4. Olumsuz kontrolü bu yönde geçersiz (olumsuzlar sual değil).
+
+**Sual–cevap yönü (S, 4B), Riester kaidelerine göre yeniden yazılan sualler.** Sualler `FATIHA_KARARLAR.json`daki `sual` alanından okunur (tek kaynak); yazım kaidesi: yalnız verilmiş malzeme (K2), cevaptaki verilmiş malzeme sualde (K3), `sual_denetle.py` denetiminden sonra.
+
+| Yön / model | ilk sıra | MRR | tesadüf (ilk sıra, MRR) |
+| :-- | :-- | :-- | :-- |
+| S 4B, ilk sualler | 4/15 | 0,431 | 1,88/15 · 0,34 |
+| S 4B, kaideli sualler | 6/15 | 0,550 | aynı |
+
+Hedef âyeti ilk sıraya koyan: I2, I1b, H2, I1c, I4a, I1d. Sıra: I1a 2, H1 5, H3 6, I3a 7, I3b 2, I5 5, I4b 7, I4c 5, I6 5. `sual_denetle.py` verilmişlik sayısı: yeni mefhum yok 7 · cevap sızıntısı 5 · uydurma 9; çıpa alâkası: tam 4 · kısmen 13 · dayanmaz 4. Aynı âyet için iki insanın yazdığı sualler dörtte iki benzerdir (DCQA); bu sayı bir üst sınırdır, 15 gayenin 6'sı bu taban içindedir.
