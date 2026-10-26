@@ -44,3 +44,11 @@ B 4B ihtiyaç bazında: 1:5, 1:6, 1:7'nin altı ihtiyacının altısı da ilk s�
 | B 4B, z-skorlu | 8/15 | 0,697 | 2/15 (ortalama fark +0,10 sapma) |
 
 Hedef âyeti ilk sıra olanlar: I1d, I1a, H1, I3a, I3b, I5, I4a, I4b. Sıra: I2 3, I1b 2, H2 5, I1c 2, H3 4, I4c 6, I6 2.
+
+**Sual–cevap yönü (S, 4B; ihtiyaçlar Türkçe sual olarak; cevap = âyetin kendisi).** log p(âyet | "Sual: … Cevap:") − log p(âyet | "Cevap:"), âyet bazında z-skorlu.
+
+| Yön / model | ilk sıra | MRR |
+| :-- | :-- | :-- |
+| S 4B | 4/15 | 0,431 |
+
+İlk sıra: I1d, I1a, I2, I4a. Hedef sırası: H1 6, I3a 8, I5 6, I6 8, I1c 5, H3 5, I4b 5, I4c 4. Olumsuz kontrolü bu yönde geçersiz (olumsuzlar sual değil).

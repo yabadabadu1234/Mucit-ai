@@ -28,6 +28,25 @@ OLUMSUZ = {
 }
 
 
+SUAL = {
+    "I1d": "Bu sözü kime söylüyoruz, O'nun adı nedir?",
+    "I1a": "O muhatap kimdir, âlemlerle ilişkisi nedir?",
+    "I1b": "Muhatap kullarına nasıl muamele eder, sıfatı nedir?",
+    "I1c": "Yolun karşılığı ve hesap kimin elindedir?",
+    "H1": "Bunca nimet karşısında ne demeliyiz?",
+    "H2": "Kime güvenip ümit bağlayabiliriz?",
+    "H3": "Hesap gününe karşı neden ciddi olmalıyız?",
+    "I2": "Övgüye kim lâyıktır?",
+    "I3a": "İbadeti kime yapıyoruz?",
+    "I3b": "Yardımı kimden istiyoruz?",
+    "I5": "Muhataptan ne istiyoruz?",
+    "I4a": "Doğru yol hangi yoldur?",
+    "I4b": "Yolu kaçıranlardan gazaba uğrayanlar kimlerdir?",
+    "I4c": "Yolu kaçıran diğer grup kimlerdir?",
+    "I6": "İstenen hidayetin karşılığı nedir, nereden gelir?",
+}
+
+
 def hedefler(d):
     sonuc = {}
     for k in d["kararlar"]:
@@ -50,19 +69,22 @@ def main():
     metin = {r: " ".join(ay[r]) for r in aday}
     z = Zemin()
     yon = sys.argv[1] if len(sys.argv) > 1 else "A"
-    taban = {r: z.loglik("Cevap: ", metin[r]) for r in aday} if yon == "A" else {r: 0.0 for r in aday}
+    taban = {r: z.loglik("Cevap: ", metin[r]) for r in aday} if yon in ("A", "S") else {r: 0.0 for r in aday}
     pmi = {}
     pmi_olumsuz = {}
     for i in hed:
         for r in aday:
-            if yon == "A":
+            if yon == "S":
+                pmi[(i, r)] = z.loglik("Sual: " + SUAL[i] + "\nCevap: ", metin[r]) - taban[r]
+                pmi_olumsuz[(i, r)] = z.loglik(sual(OLUMSUZ[i]), metin[r]) - taban[r]
+            elif yon == "A":
                 pmi[(i, r)] = z.loglik(sual(ihtiyac[i]["icerik"]), metin[r]) - taban[r]
                 pmi_olumsuz[(i, r)] = z.loglik(sual(OLUMSUZ[i]), metin[r]) - taban[r]
             else:
                 onek = "Âyet: " + metin[r] + "\nBu âyetin gideren maksat şudur: "
                 pmi[(i, r)] = z.loglik(onek, ihtiyac[i]["icerik"])
                 pmi_olumsuz[(i, r)] = z.loglik(onek, OLUMSUZ[i])
-    if yon == "B":
+    if yon in ("B", "S"):
         for r in aday:
             sutun = np.array([pmi[(i, r)] for i in hed])
             ort, std = sutun.mean(), sutun.std() or 1.0
