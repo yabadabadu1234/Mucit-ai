@@ -5,7 +5,7 @@ Zemin: Qwen3.5 (0,8B / 2B / 4B) token vektörleri ve bağlam durumları. Metin: 
 | Makale | Kod | Zemin üstünde kurulan |
 | :-- | :-- | :-- |
 | Tsipidi 2024 | `vektor.py`, `uret_surpriz.py`, `tsipidi.py` | −log p(kelime \| önceki) her kelime için, 2048'lik pencere; yapı öngörücüleri; ridge, 5 katlı çapraz sınama (sûre gruplu), ΔMSE |
-| Roberts 2012 | `alaka.py` | Alâka (15)/uygunluk (25): ihtiyaç ↔ âyet, LM olabilirliğiyle; yön A: log p(âyet \| sual) − log p(âyet); yön B: log p(ihtiyaç \| âyet) |
+| Roberts 2012 | `alaka.py` | Alâka (15)/uygunluk (25): gaye ↔ âyet, LM olabilirliğiyle; yön A: log p(âyet \| sual) − log p(âyet); yön B: log p(ihtiyaç \| âyet) |
 | Tsvilodub 2026 | `tsvilodub.py` | Karar modeli; makalenin parametreleriyle (ε, δ) = (0,17; 0,32), (0,49; 0,32), (0,49; 0,11) için P(r_cq) = 0,491 · 0,623 · 0,437 |
 
 ## Elle yazılanlar
@@ -25,7 +25,7 @@ Zemin: Qwen3.5 (0,8B / 2B / 4B) token vektörleri ve bağlam durumları. Metin: 
 
 Kısım yapısı, âyet yapısının üstüne şaşırtıcılık öngörüsü katmadı.
 
-**İhtiyaç ↔ âyet (Fâtiha; 15 ihtiyaç; 8 aday âyet; tesadüf: ilk sıra 1,88/15, MRR 0,34).**
+**Gaye ↔ âyet (Fâtiha; 15 ihtiyaç; 8 aday âyet; tesadüf: ilk sıra 1,88/15, MRR 0,34).**
 
 | Yön / model | ilk sıra | MRR | olumsuzu daha yüksek bulunan çift |
 | :-- | :-- | :-- | :-- |

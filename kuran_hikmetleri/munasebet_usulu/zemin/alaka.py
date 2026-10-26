@@ -51,7 +51,7 @@ def hedefler(d):
     sonuc = {}
     for k in d["kararlar"]:
         ay = {tuple(int(x) for x in r.split(":")[0:1] + [r.split(":")[1].rstrip("abc")]) for r in k["karsilik"]}
-        for i in k["ihtiyac"]:
+        for i in k["gaye"]:
             sonuc.setdefault(i, set()).update(ay)
     return sonuc
 
@@ -62,7 +62,7 @@ def sual(metin):
 
 def main():
     d = json.load(open(MP / "FATIHA_KARARLAR.json", encoding="utf-8"))
-    ihtiyac = {i["id"]: i for i in d["ihtiyaclar"]}
+    gaye = {i["id"]: i for i in d["gayeler"]}
     hed = hedefler(d)
     ay = ayetler()
     aday = [(1, a) for a in range(1, 8)] + [(2, 2)]
@@ -78,11 +78,11 @@ def main():
                 pmi[(i, r)] = z.loglik("Sual: " + SUAL[i] + "\nCevap: ", metin[r]) - taban[r]
                 pmi_olumsuz[(i, r)] = z.loglik(sual(OLUMSUZ[i]), metin[r]) - taban[r]
             elif yon == "A":
-                pmi[(i, r)] = z.loglik(sual(ihtiyac[i]["icerik"]), metin[r]) - taban[r]
+                pmi[(i, r)] = z.loglik(sual(gaye[i]["icerik"]), metin[r]) - taban[r]
                 pmi_olumsuz[(i, r)] = z.loglik(sual(OLUMSUZ[i]), metin[r]) - taban[r]
             else:
                 onek = "Âyet: " + metin[r] + "\nBu âyetin gideren maksat şudur: "
-                pmi[(i, r)] = z.loglik(onek, ihtiyac[i]["icerik"])
+                pmi[(i, r)] = z.loglik(onek, gaye[i]["icerik"])
                 pmi_olumsuz[(i, r)] = z.loglik(onek, OLUMSUZ[i])
     if yon in ("B", "S"):
         for r in aday:
@@ -108,10 +108,10 @@ def main():
         ihlal += sum(pmi[(i, r)] <= pmi_olumsuz[(i, r)] for r in A)
         print(i, "hedef", sorted(A), "ilk", ilk, "sira", sira, "pmi_hedef", [round(pmi[(i, r)], 1) for r in sorted(A)])
     n = len(hed)
-    print("ihtiyac", n, "aday", len(aday))
+    print("gaye", n, "aday", len(aday))
     print("top1", isabet, "/", n, "tesadüf beklentisi", round(beklenen, 2))
     print("MRR", round(sira_toplam / n, 3))
-    print("olumsuzlama: PMI(ihtiyac) > PMI(olumsuz) olmayan (ihtiyac,ayet) cifti", ihlal, "/", len(farklar), "ortalama fark", round(float(np.mean(farklar)), 2))
+    print("olumsuzlama: PMI(gaye) > PMI(olumsuz) olmayan (gaye,ayet) cifti", ihlal, "/", len(farklar), "ortalama fark", round(float(np.mean(farklar)), 2))
     np.save(MP / "zemin" / ".pmi_fatiha.npy", np.array([[pmi[(i, r)] for r in aday] for i in hed]))
 
 

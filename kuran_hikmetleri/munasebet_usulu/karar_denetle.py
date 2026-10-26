@@ -35,23 +35,23 @@ def kapsam_ayetleri(d):
 
 def denetle(d):
     hata = []
-    ihtiyac = {i["id"]: i for i in d["ihtiyaclar"]}
+    gaye = {i["id"]: i for i in d["gayeler"]}
     karar = {k["id"]: k for k in d["kararlar"]}
     kisit = {x["id"]: x for x in d.get("kisitlar", [])}
     kapsam = kapsam_ayetleri(d)
-    if len(ihtiyac) != len(d["ihtiyaclar"]):
-        hata.append("tekrar eden ihtiyac kimligi")
+    if len(gaye) != len(d["gayeler"]):
+        hata.append("tekrar eden gaye kimligi")
     if len(karar) != len(d["kararlar"]):
         hata.append("tekrar eden karar kimligi")
 
     cocuklu = set()
-    for i in ihtiyac.values():
+    for i in gaye.values():
         if i["tur"] not in TUR:
             hata.append(i["id"] + " tur")
         if i.get("tasiyici") not in TASIYICI:
             hata.append(i["id"] + " tasiyici")
         if i["tur"] in ZIHNI and i.get("tasiyici") != "muhatap":
-            hata.append(i["id"] + " zihni ihtiyacin tasiyicisi muhatap olmak zorunda")
+            hata.append(i["id"] + " zihni gayein tasiyicisi muhatap olmak zorunda")
         if not i.get("ufuk") or not set(i["ufuk"]) <= UFUK:
             hata.append(i["id"] + " ufuk")
         if not set(i.get("kip", [])) <= KIP:
@@ -63,35 +63,35 @@ def denetle(d):
         if not i.get("kapanis_testi") or not i.get("icerik"):
             hata.append(i["id"] + " icerik veya kapanis_testi yok")
         for u in i["ust"]:
-            if u not in ihtiyac:
+            if u not in gaye:
                 hata.append(i["id"] + " bulunmayan ust " + u)
             else:
                 cocuklu.add(u)
         for o in i["onkosul"]:
-            if o not in ihtiyac:
+            if o not in gaye:
                 hata.append(i["id"] + " bulunmayan onkosul " + o)
         if i.get("dogan_karar") and i["dogan_karar"] not in karar:
             hata.append(i["id"] + " bulunmayan dogan_karar")
     for u in cocuklu:
-        if ihtiyac[u].get("ayrisim") not in AYRISIM:
-            hata.append(u + " cocuklu ihtiyacin ayrisimi yok")
+        if gaye[u].get("ayrisim") not in AYRISIM:
+            hata.append(u + " cocuklu gayein ayrisimi yok")
 
     def dongu(a, yol, kenar):
         if a in yol:
             return True
-        return any(dongu(b, yol | {a}, kenar) for b in kenar(a) if b in ihtiyac)
+        return any(dongu(b, yol | {a}, kenar) for b in kenar(a) if b in gaye)
 
-    for a in ihtiyac:
-        if dongu(a, frozenset(), lambda x: ihtiyac[x]["ust"]):
+    for a in gaye:
+        if dongu(a, frozenset(), lambda x: gaye[x]["ust"]):
             hata.append(a + " ust dongusu")
-        if dongu(a, frozenset(), lambda x: ihtiyac[x]["onkosul"]):
+        if dongu(a, frozenset(), lambda x: gaye[x]["onkosul"]):
             hata.append(a + " onkosul dongusu")
 
     hizmet = {}
     for k in karar.values():
-        for i in k["ihtiyac"]:
-            if i not in ihtiyac:
-                hata.append(k["id"] + " bulunmayan ihtiyac " + i)
+        for i in k["gaye"]:
+            if i not in gaye:
+                hata.append(k["id"] + " bulunmayan gaye " + i)
             hizmet.setdefault(i, []).append(k["id"])
         if not k["karsilik"]:
             hata.append(k["id"] + " karsilik yok")
@@ -109,7 +109,7 @@ def denetle(d):
             if g["yon"] not in YON or not g.get("cumle"):
                 hata.append(k["id"] + " gerekce yon veya cumle")
             for a in g.get("atif", []):
-                if a not in ihtiyac:
+                if a not in gaye:
                     hata.append(k["id"] + " bulunmayan atif " + a)
         for s in k.get("kisit", []):
             if s not in kisit:
@@ -121,21 +121,21 @@ def denetle(d):
     pozisyon = {k["id"]: min(konum(r) for r in k["karsilik"]) for k in karar.values()}
 
     def etkin_onkosul(x, gorulen=frozenset()):
-        sonuc = set(ihtiyac[x]["onkosul"])
-        for u in ihtiyac[x]["ust"]:
-            if u in ihtiyac and u not in gorulen:
+        sonuc = set(gaye[x]["onkosul"])
+        for u in gaye[x]["ust"]:
+            if u in gaye and u not in gorulen:
                 sonuc |= etkin_onkosul(u, gorulen | {x})
         return sonuc
 
     def etkin_dogan(x, gorulen=frozenset()):
-        sonuc = {ihtiyac[x]["dogan_karar"]} if ihtiyac[x].get("dogan_karar") else set()
-        for u in ihtiyac[x]["ust"]:
-            if u in ihtiyac and u not in gorulen:
+        sonuc = {gaye[x]["dogan_karar"]} if gaye[x].get("dogan_karar") else set()
+        for u in gaye[x]["ust"]:
+            if u in gaye and u not in gorulen:
                 sonuc |= etkin_dogan(u, gorulen | {x})
         return sonuc
 
     onde = {k: set() for k in karar}
-    for i in ihtiyac.values():
+    for i in gaye.values():
         for h in hizmet.get(i["id"], []):
             for o in etkin_onkosul(i["id"]):
                 for s in hizmet.get(o, []):
@@ -151,8 +151,8 @@ def denetle(d):
 
     def atalar(x, yol=frozenset()):
         s = {x}
-        for u in ihtiyac[x]["ust"]:
-            if u in ihtiyac and u not in yol:
+        for u in gaye[x]["ust"]:
+            if u in gaye and u not in yol:
                 s |= atalar(u, yol | {x})
         return s
 
@@ -160,8 +160,8 @@ def denetle(d):
         if x in gorulen:
             return {x}
         s = set()
-        for u in ihtiyac[x]["ust"]:
-            if u in ihtiyac and u not in yol:
+        for u in gaye[x]["ust"]:
+            if u in gaye and u not in yol:
                 s |= en_yakin_gorulen(u, gorulen, yol | {x})
         return s
 
@@ -169,21 +169,21 @@ def denetle(d):
     gorulen = set()
     cephe = set()
     for k in sorted(karar.values(), key=lambda x: pozisyon[x["id"]]):
-        for i in k["ihtiyac"]:
-            if i not in ihtiyac:
+        for i in k["gaye"]:
+            if i not in gaye:
                 continue
             for a in en_yakin_gorulen(i, gorulen):
                 if a not in cephe:
                     sag_sinir_ihlali.append("%s:%s->%s" % (k["id"], i, a))
         yeni = set()
-        for i in k["ihtiyac"]:
-            if i in ihtiyac:
+        for i in k["gaye"]:
+            if i in gaye:
                 yeni |= atalar(i)
         gorulen |= yeni
         cephe = yeni
 
     cocuklar = {}
-    for i in ihtiyac.values():
+    for i in gaye.values():
         for u in i["ust"]:
             cocuklar.setdefault(u, []).append(i["id"])
 
@@ -197,7 +197,7 @@ def denetle(d):
     for k in karar.values():
         for g in k["gerekce"]:
             for a in g.get("atif", []):
-                if a not in ihtiyac:
+                if a not in gaye:
                     continue
                 hizmet_edenler = set(hizmet.get(a, [])) or {s for y in soy(a) for s in hizmet.get(y, [])}
                 for s in hizmet_edenler:
@@ -208,9 +208,9 @@ def denetle(d):
                     if g["yon"] == "sonraki" and not pozisyon[s] > pozisyon[k["id"]]:
                         hata.append("%s sonraki gerekce: %s once geliyor" % (k["id"], s))
 
-    acik = [i for i in ihtiyac if i not in hizmet and i not in cocuklu and not ihtiyac[i].get("devir")]
+    acik = [i for i in gaye if i not in hizmet and i not in cocuklu and not gaye[i].get("devir")]
     for a in acik:
-        hata.append(a + " kapatilmamis yaprak ihtiyac")
+        hata.append(a + " kapatilmamis yaprak gaye")
 
     kapsanan = set()
     for k in karar.values():
@@ -221,18 +221,18 @@ def denetle(d):
         hata.append("sebepsiz ayet %d:%d" % (s, a))
 
     def kokler(x, yol=()):
-        if x in yol or not ihtiyac[x]["ust"]:
+        if x in yol or not gaye[x]["ust"]:
             return [(x, len(yol))]
         sonuc = []
-        for u in ihtiyac[x]["ust"]:
-            if u in ihtiyac:
+        for u in gaye[x]["ust"]:
+            if u in gaye:
                 sonuc += kokler(u, yol + (x,))
         return sonuc
 
     mesafe = {}
     for k in karar.values():
-        mesafe[k["id"]] = max(m for i in k["ihtiyac"] if i in ihtiyac for _, m in kokler(i))
-    dis_kok = [r for r in ihtiyac if not ihtiyac[r]["ust"] and ihtiyac[r]["tasiyici"] == "baskasi"]
+        mesafe[k["id"]] = max(m for i in k["gaye"] if i in gaye for _, m in kokler(i))
+    dis_kok = [r for r in gaye if not gaye[r]["ust"] and gaye[r]["tasiyici"] == "baskasi"]
 
     kimlikler = list(karar)
     n = len(kimlikler)
@@ -249,15 +249,15 @@ def denetle(d):
     serbest = sayim[(1 << n) - 1]
 
     kisim_adaylari = []
-    gaye = d.get("gaye_ihtiyaci")
-    if gaye in ihtiyac:
+    kok = d.get("kok_gaye")
+    if kok in gaye:
         def ust_cocuk(x, yol=()):
             if x in yol:
                 return None
-            if gaye in ihtiyac[x]["ust"]:
+            if kok in gaye[x]["ust"]:
                 return x
-            for u in ihtiyac[x]["ust"]:
-                if u in ihtiyac:
+            for u in gaye[x]["ust"]:
+                if u in gaye:
                     r = ust_cocuk(u, yol + (x,))
                     if r:
                         return r
@@ -266,7 +266,7 @@ def denetle(d):
         sirali = sorted((k for k in karar.values() if all(konum(r) in kapsam for r in k["karsilik"])), key=lambda k: pozisyon[k["id"]])
         onceki_anahtar = None
         for k in sirali:
-            anahtar = ust_cocuk(k["ihtiyac"][0])
+            anahtar = ust_cocuk(k["gaye"][0])
             ayetler = sorted(konum(r)[1] for r in k["karsilik"])
             if anahtar == onceki_anahtar and kisim_adaylari:
                 kisim_adaylari[-1][1] = ayetler[-1]
@@ -276,17 +276,17 @@ def denetle(d):
             onceki_anahtar = anahtar
 
     rapor = {
-        "ihtiyac": len(ihtiyac),
-        "ihtiyac_tur": dict(Counter(i["tur"] for i in ihtiyac.values())),
-        "ihtiyac_tasiyici": dict(Counter(i["tasiyici"] for i in ihtiyac.values())),
+        "gaye": len(gaye),
+        "gaye_tur": dict(Counter(i["tur"] for i in gaye.values())),
+        "gaye_tasiyici": dict(Counter(i["tasiyici"] for i in gaye.values())),
         "karar": len(karar),
         "gerekce_yon": dict(Counter(g["yon"] for k in karar.values() for g in k["gerekce"])),
         "katiyet": dict(Counter(k["katiyet"] for k in karar.values())),
         "kisit": len(kisit),
-        "cok_ihtiyacli_karar": [k["id"] for k in karar.values() if len(k["ihtiyac"]) > 1],
+        "cok_gayeli_karar": [k["id"] for k in karar.values() if len(k["gaye"]) > 1],
         "cok_karsiliklı_karar": [k["id"] for k in karar.values() if len(k["karsilik"]) > 1],
-        "taksim_ihtiyac": [i["id"] for i in ihtiyac.values() if i.get("ayrisim") == "taksim"],
-        "devredilen": [i["id"] for i in ihtiyac.values() if i.get("devir")],
+        "taksim_gaye": [i["id"] for i in gaye.values() if i.get("ayrisim") == "taksim"],
+        "devredilen": [i["id"] for i in gaye.values() if i.get("devir")],
         "elenen_alternatif": sum(len(k.get("elenen", [])) for k in karar.values()),
         "kapsanmayan_ayet": len(kapsanmayan),
         "kapatilmamis_yaprak": len(acik),
@@ -307,7 +307,7 @@ def sinama(d):
         return next(x for x in c["kararlar"] if x["id"] == kid)
 
     def i(c, iid):
-        return next(x for x in c["ihtiyaclar"] if x["id"] == iid)
+        return next(x for x in c["gayeler"] if x["id"] == iid)
 
     a = copy.deepcopy(d)
     degisti = False
@@ -316,14 +316,14 @@ def sinama(d):
             if g["yon"] == "sonraki" and g.get("atif") and not degisti:
                 g["yon"] = "onceki"
                 degisti = True
-    sonuc.append(("sonra gelen ihtiyaca 'onceki' gerekcesi", denetle(a)[0]))
+    sonuc.append(("sonra gelen gayea 'onceki' gerekcesi", denetle(a)[0]))
     b = copy.deepcopy(d)
     b["kararlar"][1]["gerekce"][0]["atif"] = ["I99"]
-    sonuc.append(("bulunmayan ihtiyaca atif", denetle(b)[0]))
+    sonuc.append(("bulunmayan gayea atif", denetle(b)[0]))
     c = copy.deepcopy(d)
-    c["ihtiyaclar"][1]["tasiyici"] = "baskasi"
-    c["ihtiyaclar"][1]["tur"] = "his"
-    sonuc.append(("his ihtiyacini muhatap disina tasimak", denetle(c)[0]))
+    c["gayeler"][1]["tasiyici"] = "baskasi"
+    c["gayeler"][1]["tur"] = "his"
+    sonuc.append(("his gayeini muhatap disina tasimak", denetle(c)[0]))
     e = copy.deepcopy(d)
     e["kararlar"][0]["gerekce"][0]["yon"] = "tahmin"
     sonuc.append(("tanimsiz gerekce yonu", denetle(e)[0]))
@@ -341,13 +341,13 @@ def sinama(d):
     sonuc.append(("sebepsiz itnab", denetle(m2)[0]))
     r0 = len(denetle(d)[1]["sag_sinir_ihlali"])
     s1 = copy.deepcopy(d)
-    for x in s1["ihtiyaclar"]:
+    for x in s1["gayeler"]:
         if x["id"] == "I6":
             x["ust"] = ["I1d"]
     r1 = len(denetle(s1)[1]["sag_sinir_ihlali"])
     sonuc.append(("kapanmis alt agaca donus (sag sinir) ihlali artti %d -> %d" % (r0, r1), ["sag sinir"] if r1 > r0 else []))
     m3 = copy.deepcopy(d)
-    m3["ihtiyaclar"][1]["hal_kaynagi"] = "belki"
+    m3["gayeler"][1]["hal_kaynagi"] = "belki"
     sonuc.append(("tanimsiz hal kaynagi", denetle(m3)[0]))
     return sonuc
 
