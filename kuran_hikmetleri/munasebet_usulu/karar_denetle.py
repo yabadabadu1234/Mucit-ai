@@ -275,6 +275,46 @@ def denetle(d):
                 kisim_adaylari.append([ayetler[0], ayetler[-1], [k["id"]], anahtar])
             onceki_anahtar = anahtar
 
+    def hakimler(x, yol=frozenset()):
+        sonuc = set()
+        for u in gaye[x]["ust"]:
+            if u in gaye and u not in yol:
+                sonuc |= {u} | hakimler(u, yol | {x})
+        return sonuc
+
+    ilk = sorted(karar.values(), key=lambda x: pozisyon[x["id"]])[0]["gaye"][0]
+    taban = kok if kok in gaye else next((r for r, _ in kokler(ilk)), None)
+    yigin = [taban] if taban in gaye else []
+    islem = Counter()
+    azami_derinlik = len(yigin)
+    for k in sorted(karar.values(), key=lambda x: pozisyon[x["id"]]):
+        g = k["gaye"][0]
+        if g not in gaye:
+            continue
+        ata = hakimler(g)
+        sira = [j for j, t in enumerate(yigin) if t == g or t in ata]
+        if not sira:
+            erken = [y for y in yigin if g in etkin_onkosul(y)]
+            islem["geri_donus_kesintisi" if erken else "kesinti"] += 1
+            yigin.append(g)
+        else:
+            j = sira[-1]
+            kaldirilan = len(yigin) - 1 - j
+            if yigin[j] == g:
+                islem["ayni" if kaldirilan == 0 else "donus"] += 1
+                islem["pop"] += kaldirilan
+                del yigin[j + 1:]
+            else:
+                islem["pop"] += kaldirilan
+                del yigin[j + 1:]
+                yigin.append(g)
+                islem["push"] += 1
+        azami_derinlik = max(azami_derinlik, len(yigin))
+
+    karisik_ust = sorted(
+        c["id"] for c in gaye.values() for u in c["ust"] if u in gaye and gaye[u]["tur"] in {"tasdik", "irade"} and c["tur"] != gaye[u]["tur"]
+    )
+
     rapor = {
         "gaye": len(gaye),
         "gaye_tur": dict(Counter(i["tur"] for i in gaye.values())),
@@ -295,6 +335,9 @@ def denetle(d):
         "gecerli_sira_sayisi": serbest,
         "zorunlu_sira_cifti": sum(len(v) for v in onde.values()),
         "sag_sinir_ihlali": sag_sinir_ihlali,
+        "yigin_islemleri": dict(islem),
+        "yigin_azami_derinlik": azami_derinlik,
+        "karisik_ust_kenar": karisik_ust,
         "kisim_adaylari": ["%d-%d %s" % (a, b, "+".join(ks)) for a, b, ks, _ in kisim_adaylari],
     }
     return hata, rapor
@@ -349,6 +392,13 @@ def sinama(d):
     m3 = copy.deepcopy(d)
     m3["gayeler"][1]["hal_kaynagi"] = "belki"
     sonuc.append(("tanimsiz hal kaynagi", denetle(m3)[0]))
+    y1 = copy.deepcopy(d)
+    for x in y1["gayeler"]:
+        if x["id"] == "I6":
+            x["ust"] = []
+    k0 = denetle(d)[1]["yigin_islemleri"].get("kesinti", 0)
+    k1 = denetle(y1)[1]["yigin_islemleri"].get("kesinti", 0)
+    sonuc.append(("hicbir hakimi olmayan seyir (yigin kesintisi) %d -> %d" % (k0, k1), ["yigin kesintisi"] if k1 > k0 else []))
     return sonuc
 
 
