@@ -62,6 +62,13 @@ def main():
                 onek = "Âyet: " + metin[r] + "\nBu âyetin gideren maksat şudur: "
                 pmi[(i, r)] = z.loglik(onek, ihtiyac[i]["icerik"])
                 pmi_olumsuz[(i, r)] = z.loglik(onek, OLUMSUZ[i])
+    if yon == "B":
+        for r in aday:
+            sutun = np.array([pmi[(i, r)] for i in hed])
+            ort, std = sutun.mean(), sutun.std() or 1.0
+            for i in hed:
+                pmi[(i, r)] = (pmi[(i, r)] - ort) / std
+                pmi_olumsuz[(i, r)] = (pmi_olumsuz[(i, r)] - ort) / std
     isabet = 0
     sira_toplam = 0.0
     beklenen = 0.0

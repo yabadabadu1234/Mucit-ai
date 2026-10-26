@@ -36,3 +36,11 @@ Kısım yapısı, âyet yapısının üstüne şaşırtıcılık öngörüsü ka
 | B 4B | 6/15 | 0,551 | 2/15 (ortalama fark +1,99) |
 
 B 4B ihtiyaç bazında: 1:5, 1:6, 1:7'nin altı ihtiyacının altısı da ilk sıra (I3a, I3b, I5, I4a, I4b, I4c). 1:1–1:4 ve 2:2'nin dokuz ihtiyacında hedef âyet 2.–7. sırada (I1d 4, I1a 2, I2 4, H1 3, I1b 6, H2 7, I1c 5, H3 6, I6 4).
+
+**Âyet bazında z-skoru (yön B, 4B).** Her âyet için 15 ihtiyacın log p'si o âyetin ortalama ve sapmasıyla standartlaştırıldı (âyetin kendine has uzunluk ve kolaylığı sıradan çıkar).
+
+| Yön / model | ilk sıra | MRR | olumsuzu daha yüksek bulunan çift |
+| :-- | :-- | :-- | :-- |
+| B 4B, z-skorlu | 8/15 | 0,697 | 2/15 (ortalama fark +0,10 sapma) |
+
+Hedef âyeti ilk sıra olanlar: I1d, I1a, H1, I3a, I3b, I5, I4a, I4b. Sıra: I2 3, I1b 2, H2 5, I1c 2, H3 4, I4c 6, I6 2.
