@@ -164,3 +164,58 @@ Formül yoktur; usul ve sayılar vardır.
 | Cevap, çıpadan 1 cümle uzakta / 2–4 / 5 ve fazla | %48,8 / 24,2 / 27,0 (DCQA) |
 
 **Usulde yeri:** § 3-I 332 sınamasında üç şey gelir: (1) **sual yazım şartları** D1 (a)–(c) gaye sualine uygulanır; (2) **taban:** "hemen sonraki âyet" tahmini %40 ile kıyas edilir (Fâtiha'da gaye sualinin cevabını hep bir sonraki âyet saymak bir taban ölçüdür); (3) **insan üst sınırı** %72,2 ve sual benzerliği %41,8: aynı âyet için iki insanın yazdığı sualler dörtte iki kadar benzer; bu yüzden tek bir "doğru sual" aranmaz, sual **kümesi** kabul edilir.
+
+## 4. Riester 2019: *Sual Ağaçlarının Kurulması* (Arndt Riester; Stuttgart Üniversitesi; 25 sayfa; sayfa görüntüsünden s. 1–18 okundu, ek veri s. 19–25 okunmadı)
+
+Okunmayan kısım: s. 19–25 (Almanca radyo mülâkatının sual ağacı ile işaretlenmiş misal verisi). Formül değil, işaretlenmiş misaldir.
+
+### 4-A. Kelime cetveli
+
+| Osmanlıca kelime | Mânâsı | Kaynaktaki karşılık |
+| :-- | :-- | :-- |
+| **Zımnî Sual** | Metinde yazılı olmayıp, metindeki bir hükmün cevap olduğu sual | implicit QUD |
+| **Hüküm** | Söylemin bir cümlesi, bir iddia hareketi | assertion (A) |
+| **Fon** | Hükmün, sualde zaten bulunan kısmı | background (BG) |
+| **Odak** | Hükmün, suali gerçekten cevaplayan kısmı (boş olamaz) | focus (F) |
+| **Odak Sahası** | Fon ile odağın birlikte oluşturduğu bütün | focus domain (~) |
+| **Zıt Konu** | Zıtlanan, birden çok cevapta farklılaşan kısım; üst sualin odağı, alt sualin konusu | contrastive topic (CT) |
+| **Besleyen Hüküm** | Altındaki zımnî suale malzeme veren hüküm | feeder |
+| **Anaforik Bağımlı Sual** | Besleyen hükmün verdiği malzemeye dayanan sual | anaphorically dependent question |
+| **Mesele Dışı Malzeme** | Söylemde yeni olup hükümden çıkarılsa da hüküm cevap olmaya devam eden ifade (ilâve zarflar, parantez, rivayet bildiren söz) | non-at-issue material |
+| **Sağ Sınır** | Ağacın en sağındaki, anafora erişilebilen düğümler | right frontier |
+
+### 4-B. Kaideler (s. 9–13; sayfadan doğrulandı; kaynakta söz ile)
+
+**K1. Sual–Cevap Uygunluğu.** Zımnî sual, hemen üstünde hâkim olduğu hükümle cevaplanabilir olmalıdır.
+
+**K2. Sual Verilmişliği.** Zımnî sual **yalnız verilmiş** (ya da çok belirgin) malzemeden kurulur; soru zamirleri ve fonksiyon kelimeleri hariç.
+
+**K3. Azamî Sual Göndermesi.** Zımnî sual mümkün olduğu kadar çok verilmiş malzeme taşır; cevaptaki bütün verilmiş malzeme sualde görünmelidir. (Aynı bağlam için birden çok sual kurulabilir; hepsi aynı bilgi yapısını verir; tek bir "doğru sual" aranmaz.)
+
+**K4. Köke Dönüş.** Gelen sual (ve cevapları), verilmiş içeriğinin en alçak öncülünün **sağına** bağlanır, fakat mümkün olduğu kadar **yukarıdan**. Böylece söylem bir bölümü bitirip başlangıç sualine döner.
+
+**K5. Paralellik.** İki ya da daha çok paralel cevabı olan sualin fonu, cevapların ortak malzemesidir. Basit paralellik tek yerde ayrılır; karmaşık paralellik iki yerde ayrılır ve zıt konu–odak çifti verir.
+
+### 4-C. Tarifler
+
+**T1. Odak ve fon.** `Hüküm = Fon ve Odak`; `Odak ≠ boş`; `Fon` sualde bulunan kısımdır (s. 12). Sualin fonu cevabın fonuna eşit olmalıdır; yalnız soru zamiri (odak yeri) farklıdır.
+
+**T2. Mesele dışı malzeme (s. 15).** `X`, `Sual`e göre mesele dışıdır ⟺ `X`'in mânâsı söylemde yenidir **ve** `X` hükümden çıkarılınca hüküm yine `Sual`e cevaptır (yani `X` isteğe bağlıdır). Mesele dışı malzeme bir alt sualin odağıdır; "mesele dışı" ≠ "önemsiz".
+
+**T3. Sual iktizası (dipnot 4, s. 3).** İki tarif vardır:
+
+- `Birinci Sual ikinci Suali iktiza eder` ⟺ Birinci Sual'i **tam** cevaplayan her önerme ikinci Sual'i de tam cevaplar.
+- ya da: ikinci Sual'i **kısmen** cevaplayan her hüküm Birinci Sual'i de kısmen cevaplar.
+
+Riester, Roberts'ın "alt sual üst sualin iktizasıdır" şartını **gevşetir:** alt sual iktiza edilmeyebilir (besleyen hükümden doğan anaforik bağımlı sual); alâka bağı yeter (s. 4–5, 17).
+
+**T4. Söylem bağları sualle tarif edilir (s. 6, 17).**
+
+| Bağ (SDRT) | Sual karşılığı |
+| :-- | :-- |
+| Açıklama (Explanation) | "**Neden?**" sualinin cevabı |
+| Ayrıntılandırma (Elaboration) | "**…hakkında ne?**" sualinin cevabı |
+| Anlatma, Paralel, Zıtlık (koordine bağlar) | Ortak bir sualin **paralel kardeş** cevapları |
+| Zaman ilerlemesi | Farklı zamanlar hakkında paralel sualler (von Stutterheim ve Klein 1989) |
+
+**T5. Ağaç biçimleri (s. 4, 11).** *Derin biçim:* cevap, kendi altındaki sualin besleyeni olarak yukarıda durur. *Sıkı biçim:* sual düğümleri ara düğüm, hükümler yaprak; anaforik bağımlı sual besleyenin sağındadır; yapraklar soldan sağa okununca **metnin sırası** korunur.
