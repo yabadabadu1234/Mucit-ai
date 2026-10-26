@@ -170,7 +170,7 @@ Fâtiha zinciri: *Kime yöneliyorum? → adı (1:1) → yapabilir mi, övülür 
 
 | Ağaçta bugün elle olan | Roberts'tan gelen tarif | Sınanışı |
 |---|---|---|
-| `ust` kenarı (alt gaye, üst gayeye hizmet eder) | Alt sual stratejisi `Strat(q)`: alt sualın tam cevabı üst sualın kısmî cevabıdır (iktiza (8), (9)) | Her `ust` kenarı için "alt cevap üst sualı kısmen cevaplıyor mu" suali sorulur; cevaplamıyorsa kenar yanlıştır |
+| `ust` kenarı (alt gaye, üst gayeye hizmet eder) | Birinci dayanak: Grosz–Sidner hâkimiyeti (alt maksadı gerçekleştirmek üst maksadın bir parçasını gerçekleştirmek için niyet edilmiştir). Roberts'ın alt sual stratejisi `Strat(q)` (iktiza (8), (9)) yalnız sualler bölüntü ise tarif verir; sualler çakışan ihtimallerse iktiza tutmaz (Groenendijk–Roelofsen). Bkz. `KAYNAK_ARAMA_NAZM_SOYLEM.md` § C | Her `ust` kenarı için "alt cevap üst sualı kısmen cevaplıyor mu" suali sorulur; cevaplamıyorsa kenar yanlıştır |
 | `ayrisim: ve` / `taksim` | `ve`: üst sualın tam cevabı ancak bütün alt cevaplar gelince. `taksim`: q-şık kümesi (1): şıklar sualın bütün cevaplarıdır | `taksim` için "şıkların dışında cevap var mı" suali sorulur (I4: nimetliler / gazaba uğrayanlar / sapanlar) |
 | `onkosul` (elle yazılı) | Sualin öncülü (26), (28): "Rab kimdir?" sualı bir Rab'bin bulunduğunu öncüller | `onkosul`, sualın öncülünden okunur; elle yazılan öncülle uyuşmazsa biri yanlıştır |
 | "sebepsiz âyet" | Alâka (15): âyet, yığındaki bir sualın kısmî cevabı ya da yeni alt sual stratejisi değilse alakasızdır | `kapsam` denetimi buna bağlanır |
