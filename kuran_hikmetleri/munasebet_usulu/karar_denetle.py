@@ -17,6 +17,31 @@ DERECE = {"iz-dogrulandi", "hipotez", "rivayet-yoklanmadi"}
 AYRISIM = {"ve", "taksim"}
 HAL_KAYNAGI = {"zahir", "farz"}
 MIKTAR = {"icaz", "musavat", "itnab"}
+BAG = {"teyid", "tevlid", "tarif", "karisik"}
+BAG_TUR = {"teyid": "tasdik", "tevlid": "irade", "tarif": "tasavvur"}
+SUAL_TURU = {"ne", "nasil", "neden", "hakkinda_ne", "paralel", "nereden", "kim"}
+KIFAYE = {"tam", "kismi"}
+HASR = {"akli", "nakli"}
+CEVAP = {"dogrudan", "odaksiz", "cevaplamaz"}
+ISARET = {"edat", "iltifat", "emir", "isaret_zamiri", "yok"}
+
+
+def sadelestir(m):
+    import unicodedata
+
+    m = m.replace("\u0671", "\u0627").replace("\u0640", "")
+    return "".join(c for c in unicodedata.normalize("NFD", m) if unicodedata.category(c) != "Mn")
+
+
+def blok_tablosu():
+    d = json.load(open(__file__.rsplit("/", 1)[0] + "/../nazm_blok.json", encoding="utf-8"))
+    return {(v["s"], v["a"]): v["b"] for v in d.values()}
+
+
+def blok_ref(r):
+    a, b = r.split("#")
+    s, ay = a.split(":")
+    return (int(s), int(ay)), int(b)
 
 
 def konum(ref):
@@ -315,6 +340,189 @@ def denetle(d):
         c["id"] for c in gaye.values() for u in c["ust"] if u in gaye and gaye[u]["tur"] in {"tasdik", "irade"} and c["tur"] != gaye[u]["tur"]
     )
 
+    s2 = Counter()
+    if d.get("sema") == 2:
+        bt = blok_tablosu()
+
+        def ayet_of(r):
+            a_, b_ = re.match(r"(\d+):(\d+)", r).groups()
+            return (int(a_), int(b_))
+
+        def blok_gecerli(ref):
+            try:
+                ay, n = blok_ref(ref)
+            except ValueError:
+                return None
+            return (ay, n) if ay in bt and 0 <= n < len(bt[ay]) else None
+
+        tum_blok = {}
+        for k in karar.values():
+            sonuc = set()
+            for r in k["karsilik"]:
+                ay = ayet_of(r)
+                if ay not in bt:
+                    hata.append(k["id"] + " blok tablosunda yok " + r)
+                    continue
+                sonuc |= {(ay, n) for n in range(len(bt[ay]))}
+            tum_blok[k["id"]] = sonuc
+
+        dogrudan_poz = {}
+        for k in karar.values():
+            for gi, refs in k.get("odak", {}).items():
+                for r in refs:
+                    b = blok_gecerli(r)
+                    if b:
+                        dogrudan_poz.setdefault(gi, []).append(b)
+
+        def ilk_cevap(x, gorulen=frozenset()):
+            adaylar = list(dogrudan_poz.get(x, []))
+            for c in cocuklar.get(x, []):
+                if c not in gorulen:
+                    r = ilk_cevap(c, gorulen | {x})
+                    if r:
+                        adaylar.append(r)
+            return min(adaylar) if adaylar else None
+
+        for g in gaye.values():
+            gi = g["id"]
+            if not g.get("mevzu") or not g.get("sual"):
+                hata.append(gi + " mevzu veya sual yok")
+            for u in g["ust"]:
+                b = g.get("ust_bag", {}).get(u)
+                if not b:
+                    hata.append(gi + " ust_bag eksik " + u)
+                    continue
+                if b.get("bag") not in BAG or b.get("sual_turu") not in SUAL_TURU:
+                    hata.append(gi + " ust_bag alanlari " + u)
+                    continue
+                tg, tu = g["tur"], gaye[u]["tur"]
+                if b["bag"] == "karisik":
+                    if tg == tu:
+                        hata.append(gi + " ayni turde karisik bag " + u)
+                    if not b.get("gerekce"):
+                        hata.append(gi + " karisik bag gerekcesiz " + u)
+                elif not (tg == tu == BAG_TUR[b["bag"]]):
+                    hata.append(gi + " bag turu ile gaye turleri uyusmuyor " + u)
+                s2["bag_" + b["bag"]] += 1
+            if gi in cocuklu:
+                kf = g.get("kifaye")
+                if not kf or kf.get("yeter") not in KIFAYE or kf.get("katiyet") not in DERECE:
+                    hata.append(gi + " kifaye eksik")
+                else:
+                    s2["kifaye_" + kf["yeter"]] += 1
+                    if kf["yeter"] == "kismi" and not kf.get("varsayilan_malumat"):
+                        hata.append(gi + " kismi kifayede varsayilan malumat yok")
+                sira = g.get("alt_sira", [])
+                if sorted(sira) != sorted(cocuklar.get(gi, [])):
+                    hata.append(gi + " alt_sira cocuklarin dizilisi degil")
+                else:
+                    for c in sira:
+                        for o in gaye[c]["onkosul"]:
+                            if o in sira and sira.index(o) > sira.index(c):
+                                hata.append(gi + " alt_sira onkosulu bozuyor " + o + " " + c)
+            if g.get("ayrisim") == "taksim":
+                sk = g.get("sikler", [])
+                if sorted(x["gaye"] for x in sk) != sorted(cocuklar.get(gi, [])):
+                    hata.append(gi + " siklar cocuklara esit degil")
+                hs = g.get("hasr", {})
+                if hs.get("usul") not in HASR or not hs.get("gerekce"):
+                    hata.append(gi + " hasr eksik")
+                else:
+                    s2["hasr_" + hs["usul"]] += 1
+            for o in g.get("oncul", []):
+                if o["gaye"] not in gaye or o["gaye"] not in etkin_onkosul(gi):
+                    hata.append(gi + " oncul onkosul degil " + o["gaye"])
+                s2["oncul"] += 1
+            c = g.get("capa")
+            if not c:
+                hata.append(gi + " capa yok")
+            elif c.get("ayet") != "kok":
+                cb = blok_gecerli("%s#%s" % (c.get("ayet", ""), c.get("blok", "x")))
+                ic = ilk_cevap(gi)
+                if not cb:
+                    hata.append(gi + " capa blogu gecersiz")
+                elif ic and not cb < ic:
+                    hata.append(gi + " capa cevaptan sonra")
+                s2["capa_blok"] += 1
+            else:
+                s2["capa_kok"] += 1
+
+        for k in karar.values():
+            ki = k["id"]
+            tum = tum_blok[ki]
+            odak = k.get("odak")
+            if not odak or set(odak) != set(k["gaye"]):
+                hata.append(ki + " odak her gaye icin yok")
+                continue
+            kapsanan = set()
+            for gi, refs in odak.items():
+                if not refs:
+                    hata.append(ki + " odak bos " + gi)
+                for r in refs:
+                    b = blok_gecerli(r)
+                    if not b or b not in tum:
+                        hata.append(ki + " odak blogu karsilikta degil " + r)
+                    else:
+                        kapsanan.add(b)
+            for f in k.get("fon", []):
+                b = blok_gecerli(f["blok"])
+                if not b or b not in tum:
+                    hata.append(ki + " fon blogu karsilikta degil")
+                    continue
+                if f["blok"] in odak.get(f["gaye"], []):
+                    hata.append(ki + " fon ile odak ayni blok " + f["blok"])
+                kapsanan.add(b)
+                s2["fon"] += 1
+            for m in k.get("mesele_disi", []):
+                b = blok_gecerli(m["blok"])
+                if not b or b not in tum:
+                    hata.append(ki + " mesele disi blogu karsilikta degil")
+                    continue
+                kapsanan.add(b)
+                s2["mesele_disi"] += 1
+                if m.get("alt_gaye"):
+                    ag = m["alt_gaye"]
+                    hizmet_eden = [x for x in karar.values() if ag in x["gaye"]]
+                    bagli = any(
+                        any(t["kaynak"] == m["blok"] for t in x.get("tekrar", [])) or any(ayet_of(r) == b[0] for r in x["karsilik"])
+                        for x in hizmet_eden
+                    )
+                    if ag not in gaye or not bagli:
+                        hata.append(ki + " mesele disi alt gayeye baglanmiyor " + m["blok"])
+                elif not m.get("devir"):
+                    hata.append(ki + " mesele disi ne alt gayeye ne devire bagli " + m["blok"])
+            if kapsanan != tum:
+                hata.append(ki + " bloklar kapsanmadi %d/%d" % (len(kapsanan & tum), len(tum)))
+            for t in k.get("tekrar", []):
+                b1, b0 = blok_gecerli(t["blok"]), blok_gecerli(t["kaynak"])
+                if not b1 or not b0 or not b0 < b1:
+                    hata.append(ki + " tekrar konumu gecersiz")
+                elif sadelestir(bt[b1[0]][b1[1]][0]) != sadelestir(bt[b0[0]][b0[1]][0]):
+                    hata.append(ki + " tekrar metinleri ayni degil " + t["blok"])
+                s2["tekrar"] += 1
+            for pr in k.get("paralel", []):
+                ust_kumeleri = {tuple(sorted(gaye[x]["ust"])) for x in pr["gayeler"] if x in gaye}
+                if len(pr["gayeler"]) < 2 or len(ust_kumeleri) != 1 or any(x not in k["gaye"] for x in pr["gayeler"]):
+                    hata.append(ki + " paralel gayeler kardes degil")
+                s2["paralel"] += 1
+            if k.get("isaret", {}).get("tur") not in ISARET:
+                hata.append(ki + " isaret turu")
+            else:
+                s2["isaret_" + k["isaret"]["tur"]] += 1
+            dr = k.get("daraltma")
+            if dr:
+                if not blok_gecerli(dr["blok"]) or blok_gecerli(dr["blok"]) not in tum or not dr.get("elenen_ihtimaller"):
+                    hata.append(ki + " daraltma eksik")
+                s2["daraltma"] += 1
+            cu = k.get("cevap_uygunlugu", {})
+            if set(cu) != set(k["gaye"]) or not set(cu.values()) <= CEVAP:
+                hata.append(ki + " cevap uygunlugu eksik")
+            else:
+                for v in cu.values():
+                    s2["cevap_" + v] += 1
+                    if v == "cevaplamaz":
+                        hata.append(ki + " cevaplamayan karar")
+
     rapor = {
         "gaye": len(gaye),
         "gaye_tur": dict(Counter(i["tur"] for i in gaye.values())),
@@ -335,6 +543,8 @@ def denetle(d):
         "gecerli_sira_sayisi": serbest,
         "zorunlu_sira_cifti": sum(len(v) for v in onde.values()),
         "sag_sinir_ihlali": sag_sinir_ihlali,
+        "sema": d.get("sema", 1),
+        "sema2": dict(s2),
         "yigin_islemleri": dict(islem),
         "yigin_azami_derinlik": azami_derinlik,
         "karisik_ust_kenar": karisik_ust,
@@ -399,7 +609,78 @@ def sinama(d):
     k0 = denetle(d)[1]["yigin_islemleri"].get("kesinti", 0)
     k1 = denetle(y1)[1]["yigin_islemleri"].get("kesinti", 0)
     sonuc.append(("hicbir hakimi olmayan seyir (yigin kesintisi) %d -> %d" % (k0, k1), ["yigin kesintisi"] if k1 > k0 else []))
+    if d.get("sema") == 2:
+        def g_(c, x):
+            return next(y for y in c["gayeler"] if y["id"] == x)
+
+        def k_(c, x):
+            return next(y for y in c["kararlar"] if y["id"] == x)
+
+        def dene(ad, degistir):
+            c = copy.deepcopy(d)
+            degistir(c)
+            sonuc.append((ad, denetle(c)[0]))
+
+        dene("ust_bag silindi", lambda c: g_(c, "I1a")["ust_bag"].clear())
+        dene("tur ile bag uyusmuyor (his altina tarif)", lambda c: g_(c, "H1")["ust_bag"]["I0"].update(bag="tarif"))
+        dene("karisik bag gerekcesiz", lambda c: g_(c, "I2")["ust_bag"]["I0"].pop("gerekce"))
+        dene("kifaye silindi", lambda c: g_(c, "I1").pop("kifaye"))
+        dene("kismi kifayede malumat yok", lambda c: g_(c, "I0")["kifaye"].update(varsayilan_malumat=[]))
+        dene("alt_sira onkosulu bozuyor", lambda c: g_(c, "I1").update(alt_sira=["I1a", "I1d", "I1b", "I1c"]))
+        dene("taksimde hasr yok", lambda c: g_(c, "I4").pop("hasr"))
+        dene("sikler cocuklara esit degil", lambda c: g_(c, "I4").update(sikler=g_(c, "I4")["sikler"][:2]))
+        dene("oncul onkosul degil", lambda c: g_(c, "I4").update(onkosul=[]))
+        dene("capa cevaptan sonra", lambda c: g_(c, "I1a").update(capa={"ayet": "1:3", "blok": 0}))
+        dene("odak bos", lambda c: k_(c, "K06")["odak"].update(I5=[]))
+        dene("blok kapsanmadi", lambda c: k_(c, "K07")["odak"].update(I4c=[]))
+        dene("tekrar metinleri ayni degil", lambda c: k_(c, "K03")["tekrar"][0].update(kaynak="1:2#0"))
+        dene("mesele disi alt gayeye baglanmiyor", lambda c: k_(c, "K01")["mesele_disi"][0].update(alt_gaye="I1c"))
+        dene("paralel gayeler kardes degil", lambda c: k_(c, "K07")["paralel"][0].update(gayeler=["I4b", "I3b"]))
+        dene("cevaplamayan karar", lambda c: k_(c, "K06")["cevap_uygunlugu"].update(I5="cevaplamaz"))
+        dene("fon ile odak ayni blok", lambda c: k_(c, "K08").update(fon=[{"blok": "2:2#0", "gaye": "I6"}]))
+        dene("isaret turu tanimsiz", lambda c: k_(c, "K05")["isaret"].update(tur="belki"))
     return sonuc
+
+
+def agac_yaz(d):
+    bt = blok_tablosu()
+    gaye = {g["id"]: g for g in d["gayeler"]}
+    cocuk = {}
+    for g in d["gayeler"]:
+        for u in g["ust"]:
+            cocuk.setdefault(u, []).append(g["id"])
+    satirlar = []
+
+    def cevap(k, gi, derinlik):
+        odak = set(k["odak"][gi])
+        md = {m["blok"] for m in k.get("mesele_disi", [])}
+        fon = {f["blok"] for f in k.get("fon", [])}
+        parcalar = []
+        for ay in dict.fromkeys((int(r.split(":")[0]), int("".join(c for c in r.split(":")[1] if c.isdigit()))) for r in k["karsilik"]):
+            for n, blk in enumerate(bt[ay]):
+                ref = "%d:%d#%d" % (ay[0], ay[1], n)
+                if ref in odak:
+                    parcalar.append("[" + blk[1] + "]F")
+                elif ref in md:
+                    parcalar.append("(" + blk[1] + ")MD")
+                elif ref in fon:
+                    parcalar.append("{" + blk[1] + "}BG")
+        satirlar.append("> " * derinlik + "A %s %s: %s" % (k["id"], ",".join(k["karsilik"]), " ".join(parcalar)))
+
+    def yaz(gi, derinlik, gorulen):
+        g = gaye[gi]
+        satirlar.append("> " * derinlik + "Q %s {%s}" % (gi, g["sual"]))
+        for k in d["kararlar"]:
+            if gi in k["gaye"] and gi in k.get("odak", {}):
+                cevap(k, gi, derinlik + 1)
+        for c in g.get("alt_sira", cocuk.get(gi, [])):
+            if c not in gorulen:
+                yaz(c, derinlik + 1, gorulen | {gi})
+
+    for k in d["gayeler"]:
+        if not k["ust"]:
+            yaz(k["id"], 0, frozenset())
+    return "\n".join(satirlar)
 
 
 if __name__ == "__main__":
@@ -410,7 +691,9 @@ if __name__ == "__main__":
         print(kk, v)
     for h in hata:
         print("HATA", h)
-    if "--sinama" in sys.argv:
+    if "--sinama" in sys.argv and any(g["id"] == "I1a" for g in d["gayeler"]):
         for ad, h in sinama(d):
             print("SINAMA", ad, "->", "REDDEDILDI (%d hata)" % len(h) if h else "KABUL EDILDI")
+    if "--agac" in sys.argv:
+        print(agac_yaz(d))
     sys.exit(1 if hata else 0)

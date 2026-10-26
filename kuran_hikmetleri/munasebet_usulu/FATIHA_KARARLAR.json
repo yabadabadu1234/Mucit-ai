@@ -19,7 +19,21 @@
    "ust": [],
    "onkosul": [],
    "ayrisim": "ve",
-   "sual": "Okuyan hidayeti nasıl bulur?"
+   "sual": "Okuyan hidayeti nasıl bulur?",
+   "mevzu": "Okuyan hidayet ve selâmet bulur.",
+   "kifaye": {
+    "yeter": "kismi",
+    "varsayilan_malumat": [
+     "Hidayet ve selâmetin talep edilen yolun sonucu olduğu"
+    ],
+    "katiyet": "hipotez"
+   },
+   "alt_sira": [
+    "I0"
+   ],
+   "capa": {
+    "ayet": "kok"
+   }
   },
   {
    "id": "I0",
@@ -36,7 +50,36 @@
    ],
    "onkosul": [],
    "ayrisim": "ve",
-   "sual": "Okuyan hidayeti nasıl ister?"
+   "sual": "Okuyan hidayeti nasıl ister?",
+   "mevzu": "Okuyan hidayet talebini, muhatabını tanıyarak ve isteyerek yapar.",
+   "ust_bag": {
+    "R0": {
+     "bag": "karisik",
+     "sual_turu": "nasil",
+     "gerekce": "Hidayet bulmak celb-i menfaattir (sonuç); talep eylemi sonucun şartıdır, sonucun kendisi sûre dışındadır. Tür farklıdır: Grosz–Sidner yalnız saf inanç ve saf eylem hâlini tarif eder; bu kenar G&S dışıdır."
+    }
+   },
+   "kifaye": {
+    "yeter": "kismi",
+    "varsayilan_malumat": [
+     "Muhatabı tanımadan talebin yöneltilemeyeceği",
+     "Hidayetin ne olduğunu okuyanın bildiği"
+    ],
+    "katiyet": "hipotez"
+   },
+   "alt_sira": [
+    "I1",
+    "H1",
+    "H2",
+    "I2",
+    "H3",
+    "I3",
+    "I7",
+    "I6"
+   ],
+   "capa": {
+    "ayet": "kok"
+   }
   },
   {
    "id": "I1",
@@ -54,7 +97,31 @@
    "onkosul": [],
    "ayrisim": "ve",
    "ilim_cinsi": "nazari",
-   "sual": "Okuyan hidayeti kimden ister?"
+   "sual": "Okuyan hidayeti kimden ister?",
+   "mevzu": "Talebin yöneldiği muhatap Allah'tır; sıfatları: âlemlerin Rabbi, Rahmân, Rahîm, din gününün sahibi.",
+   "ust_bag": {
+    "I0": {
+     "bag": "karisik",
+     "sual_turu": "kim",
+     "gerekce": "Talebi yönelteceği muhatabı tanımak, talebin yapılabilmesi için gereken bilgidir. Tür farklıdır: Grosz–Sidner yalnız saf inanç ve saf eylem hâlini tarif eder; bu kenar G&S dışıdır."
+    }
+   },
+   "kifaye": {
+    "yeter": "kismi",
+    "varsayilan_malumat": [
+     "Allah'ın bir ve yaratıcı olduğu okuyanca bilinir"
+    ],
+    "katiyet": "hipotez"
+   },
+   "alt_sira": [
+    "I1d",
+    "I1a",
+    "I1b",
+    "I1c"
+   ],
+   "capa": {
+    "ayet": "kok"
+   }
   },
   {
    "id": "I1d",
@@ -71,7 +138,17 @@
    ],
    "onkosul": [],
    "ilim_cinsi": "nazari",
-   "sual": "Okuyan hidayeti kimin adıyla ister?"
+   "sual": "Okuyan hidayeti kimin adıyla ister?",
+   "mevzu": "Söze başlanan zât Allah'tır; adı Allah'tır.",
+   "ust_bag": {
+    "I1": {
+     "bag": "tarif",
+     "sual_turu": "hakkinda_ne"
+    }
+   },
+   "capa": {
+    "ayet": "kok"
+   }
   },
   {
    "id": "I1a",
@@ -90,7 +167,24 @@
     "I1d"
    ],
    "ilim_cinsi": "nazari",
-   "sual": "Allah kimdir?"
+   "sual": "Allah kimdir?",
+   "mevzu": "Allah âlemlerin Rabbidir.",
+   "ust_bag": {
+    "I1": {
+     "bag": "tarif",
+     "sual_turu": "hakkinda_ne"
+    }
+   },
+   "oncul": [
+    {
+     "gaye": "I1d",
+     "mevzu": "Allah'ın anıldığı"
+    }
+   ],
+   "capa": {
+    "ayet": "1:1",
+    "blok": 1
+   }
   },
   {
    "id": "I1b",
@@ -109,7 +203,24 @@
     "I1d"
    ],
    "ilim_cinsi": "nazari",
-   "sual": "Allah'ın rahmeti nasıldır?"
+   "sual": "Allah'ın rahmeti nasıldır?",
+   "mevzu": "Allah Rahmân ve Rahîm'dir.",
+   "ust_bag": {
+    "I1": {
+     "bag": "tarif",
+     "sual_turu": "hakkinda_ne"
+    }
+   },
+   "oncul": [
+    {
+     "gaye": "I1d",
+     "mevzu": "Allah'ın anıldığı"
+    }
+   ],
+   "capa": {
+    "ayet": "1:2",
+    "blok": 2
+   }
   },
   {
    "id": "I1c",
@@ -128,7 +239,24 @@
     "I1d"
    ],
    "ilim_cinsi": "nazari",
-   "sual": "Allah din gününde ne yapar?"
+   "sual": "Allah din gününde ne yapar?",
+   "mevzu": "Allah din gününün sahibidir.",
+   "ust_bag": {
+    "I1": {
+     "bag": "tarif",
+     "sual_turu": "hakkinda_ne"
+    }
+   },
+   "oncul": [
+    {
+     "gaye": "I1d",
+     "mevzu": "Allah'ın anıldığı"
+    }
+   ],
+   "capa": {
+    "ayet": "1:3",
+    "blok": 0
+   }
   },
   {
    "id": "H1",
@@ -144,7 +272,19 @@
     "I0"
    ],
    "onkosul": [],
-   "sual": "Allah hakkında okuyan ne der?"
+   "sual": "Allah hakkında okuyan ne der?",
+   "mevzu": "Okuyan Allah'a karşı takdir ve şükran duyar.",
+   "ust_bag": {
+    "I0": {
+     "bag": "karisik",
+     "sual_turu": "hakkinda_ne",
+     "gerekce": "His, talebin yapılış hâlini doğurur (padişah: his ayrı türdür, sıra hipotezdir). Tür farklıdır: Grosz–Sidner yalnız saf inanç ve saf eylem hâlini tarif eder; bu kenar G&S dışıdır."
+    }
+   },
+   "capa": {
+    "ayet": "1:1",
+    "blok": 1
+   }
   },
   {
    "id": "H2",
@@ -160,7 +300,19 @@
     "I0"
    ],
    "onkosul": [],
-   "sual": "Allah'ın rahmeti karşısında okuyan ne ümit eder?"
+   "sual": "Allah'ın rahmeti karşısında okuyan ne ümit eder?",
+   "mevzu": "Okuyan Allah'ın rahmetine güven ve ümit duyar.",
+   "ust_bag": {
+    "I0": {
+     "bag": "karisik",
+     "sual_turu": "hakkinda_ne",
+     "gerekce": "Aynı sebeple. Tür farklıdır: Grosz–Sidner yalnız saf inanç ve saf eylem hâlini tarif eder; bu kenar G&S dışıdır."
+    }
+   },
+   "capa": {
+    "ayet": "1:2",
+    "blok": 2
+   }
   },
   {
    "id": "H3",
@@ -176,7 +328,19 @@
     "I0"
    ],
    "onkosul": [],
-   "sual": "Allah'ın hesabı karşısında okuyan ne hisseder?"
+   "sual": "Allah'ın hesabı karşısında okuyan ne hisseder?",
+   "mevzu": "Okuyan din gününden haşyet ve ciddiyet duyar.",
+   "ust_bag": {
+    "I0": {
+     "bag": "karisik",
+     "sual_turu": "hakkinda_ne",
+     "gerekce": "Aynı sebeple. Tür farklıdır: Grosz–Sidner yalnız saf inanç ve saf eylem hâlini tarif eder; bu kenar G&S dışıdır."
+    }
+   },
+   "capa": {
+    "ayet": "1:3",
+    "blok": 0
+   }
   },
   {
    "id": "I2",
@@ -195,7 +359,25 @@
     "I1d"
    ],
    "ilim_cinsi": "nazari",
-   "sual": "Övgüye kim lâyıktır?"
+   "sual": "Övgüye kim lâyıktır?",
+   "mevzu": "Hamd (övgü) Allah'a lâyıktır.",
+   "ust_bag": {
+    "I0": {
+     "bag": "karisik",
+     "sual_turu": "kim",
+     "gerekce": "Övgüye lâyık olduğunu kabul, talebi o muhataba yöneltmenin şartıdır. Tür farklıdır: Grosz–Sidner yalnız saf inanç ve saf eylem hâlini tarif eder; bu kenar G&S dışıdır."
+    }
+   },
+   "oncul": [
+    {
+     "gaye": "I1d",
+     "mevzu": "Muhatabın tanıtıldığı"
+    }
+   ],
+   "capa": {
+    "ayet": "1:1",
+    "blok": 1
+   }
   },
   {
    "id": "I3",
@@ -217,7 +399,27 @@
     "I2"
    ],
    "ayrisim": "ve",
-   "sual": "Okuyan Allah'a ne ikrar eder?"
+   "sual": "Okuyan Allah'a ne ikrar eder?",
+   "mevzu": "Okuyan yalnız Allah'a kulluk ve yalnız Allah'tan yardım ikrarını yapar.",
+   "ust_bag": {
+    "I0": {
+     "bag": "tevlid",
+     "sual_turu": "ne"
+    }
+   },
+   "kifaye": {
+    "yeter": "tam",
+    "varsayilan_malumat": [],
+    "katiyet": "hipotez"
+   },
+   "alt_sira": [
+    "I3a",
+    "I3b"
+   ],
+   "capa": {
+    "ayet": "1:4",
+    "blok": 1
+   }
   },
   {
    "id": "I3a",
@@ -233,7 +435,36 @@
     "I3"
    ],
    "onkosul": [],
-   "sual": "Okuyan kime kulluk eder?"
+   "sual": "Okuyan kime kulluk eder?",
+   "mevzu": "Okuyan yalnız Allah'a kulluk eder.",
+   "ust_bag": {
+    "I3": {
+     "bag": "tevlid",
+     "sual_turu": "ne"
+    }
+   },
+   "oncul": [
+    {
+     "gaye": "I1a",
+     "mevzu": "Rab olduğu bilindi"
+    },
+    {
+     "gaye": "I1b",
+     "mevzu": "rahmetli olduğu bilindi"
+    },
+    {
+     "gaye": "I1c",
+     "mevzu": "hesap sahibi olduğu bilindi"
+    },
+    {
+     "gaye": "I2",
+     "mevzu": "övgüye lâyık olduğu kabul edildi"
+    }
+   ],
+   "capa": {
+    "ayet": "1:4",
+    "blok": 1
+   }
   },
   {
    "id": "I3b",
@@ -251,7 +482,24 @@
    "onkosul": [
     "I3a"
    ],
-   "sual": "Okuyan yardımı kimden ister?"
+   "sual": "Okuyan yardımı kimden ister?",
+   "mevzu": "Okuyan yardımı yalnız Allah'tan diler.",
+   "ust_bag": {
+    "I3": {
+     "bag": "tevlid",
+     "sual_turu": "ne"
+    }
+   },
+   "oncul": [
+    {
+     "gaye": "I3a",
+     "mevzu": "Kulluk ikrarı yapıldı"
+    }
+   ],
+   "capa": {
+    "ayet": "1:5",
+    "blok": 0
+   }
   },
   {
    "id": "I7",
@@ -270,7 +518,27 @@
     "I3b"
    ],
    "ayrisim": "ve",
-   "sual": "Okuyan Allah'tan ne ister?"
+   "sual": "Okuyan Allah'tan ne ister?",
+   "mevzu": "Okuyan talebini tam ve açık söyler.",
+   "ust_bag": {
+    "I0": {
+     "bag": "tevlid",
+     "sual_turu": "ne"
+    }
+   },
+   "kifaye": {
+    "yeter": "tam",
+    "varsayilan_malumat": [],
+    "katiyet": "hipotez"
+   },
+   "alt_sira": [
+    "I5",
+    "I4"
+   ],
+   "capa": {
+    "ayet": "1:5",
+    "blok": 1
+   }
   },
   {
    "id": "I5",
@@ -286,7 +554,24 @@
     "I7"
    ],
    "onkosul": [],
-   "sual": "Okuyan Allah'tan ne diler?"
+   "sual": "Okuyan Allah'tan ne diler?",
+   "mevzu": "Okuyan Allah'tan dosdoğru yola iletilmeyi diler.",
+   "ust_bag": {
+    "I7": {
+     "bag": "tevlid",
+     "sual_turu": "ne"
+    }
+   },
+   "oncul": [
+    {
+     "gaye": "I3b",
+     "mevzu": "Aciz beyan edildi"
+    }
+   ],
+   "capa": {
+    "ayet": "1:5",
+    "blok": 1
+   }
   },
   {
    "id": "I4",
@@ -301,11 +586,59 @@
    "ust": [
     "I7"
    ],
-   "onkosul": [],
+   "onkosul": [
+    "I5"
+   ],
    "ayrisim": "taksim",
    "dogan_karar": "K06",
    "ilim_cinsi": "ameli",
-   "sual": "İstenen doğru yol nasıl bir yoldur?"
+   "sual": "İstenen doğru yol nasıl bir yoldur?",
+   "mevzu": "Dosdoğru yol, nimet verilenlerin yoludur; gazaba uğrayanların ve sapıtanların yolu değildir.",
+   "ust_bag": {
+    "I7": {
+     "bag": "karisik",
+     "sual_turu": "nasil",
+     "gerekce": "Talebin konusu olan yolun neliği belirsizdir; tarif talebin tamamlayıcısıdır. Tür farklıdır: Grosz–Sidner yalnız saf inanç ve saf eylem hâlini tarif eder; bu kenar G&S dışıdır."
+    }
+   },
+   "kifaye": {
+    "yeter": "tam",
+    "varsayilan_malumat": [],
+    "katiyet": "hipotez"
+   },
+   "alt_sira": [
+    "I4a",
+    "I4b",
+    "I4c"
+   ],
+   "sikler": [
+    {
+     "gaye": "I4a",
+     "mevzu": "nimet verilenlerin yolu"
+    },
+    {
+     "gaye": "I4b",
+     "mevzu": "gazaba uğrayanların yolu"
+    },
+    {
+     "gaye": "I4c",
+     "mevzu": "sapıtanların yolu"
+    }
+   ],
+   "hasr": {
+    "usul": "nakli",
+    "gerekce": "Şıklar Fâtiha'nın kendi bildirimidir; 'bu üçten başka yol yoktur' önermesinin aklî hasrı (nefy–isbât) yazılmadı; CLAUDE.md § 3-I 207 gereği tamlığı kat'î değildir."
+   },
+   "oncul": [
+    {
+     "gaye": "I5",
+     "mevzu": "Talep yapıldı"
+    }
+   ],
+   "capa": {
+    "ayet": "1:6",
+    "blok": 1
+   }
   },
   {
    "id": "I4a",
@@ -323,7 +656,18 @@
    "onkosul": [],
    "dogan_karar": "K06",
    "ilim_cinsi": "ameli",
-   "sual": "Doğru yol kimlerin yoludur?"
+   "sual": "Doğru yol kimlerin yoludur?",
+   "mevzu": "Dosdoğru yol, Allah'ın nimet verdiklerinin yoludur.",
+   "ust_bag": {
+    "I4": {
+     "bag": "tarif",
+     "sual_turu": "paralel"
+    }
+   },
+   "capa": {
+    "ayet": "1:6",
+    "blok": 1
+   }
   },
   {
    "id": "I4b",
@@ -341,7 +685,18 @@
    "onkosul": [],
    "dogan_karar": "K06",
    "ilim_cinsi": "ameli",
-   "sual": "Doğru yoldan ayrılanlardan kimler gazaba uğramıştır?"
+   "sual": "Doğru yoldan ayrılanlardan kimler gazaba uğramıştır?",
+   "mevzu": "Gazaba uğrayanların yolu dosdoğru yol değildir.",
+   "ust_bag": {
+    "I4": {
+     "bag": "tarif",
+     "sual_turu": "paralel"
+    }
+   },
+   "capa": {
+    "ayet": "1:7",
+    "blok": 1
+   }
   },
   {
    "id": "I4c",
@@ -359,7 +714,18 @@
    "onkosul": [],
    "dogan_karar": "K06",
    "ilim_cinsi": "ameli",
-   "sual": "Doğru yoldan ayrılan diğer kimlerdir?"
+   "sual": "Doğru yoldan ayrılan diğer kimlerdir?",
+   "mevzu": "Sapıtanların yolu dosdoğru yol değildir.",
+   "ust_bag": {
+    "I4": {
+     "bag": "tarif",
+     "sual_turu": "paralel"
+    }
+   },
+   "capa": {
+    "ayet": "1:7",
+    "blok": 3
+   }
   },
   {
    "id": "I6",
@@ -374,11 +740,31 @@
    "ust": [
     "I0"
    ],
-   "onkosul": [],
+   "onkosul": [
+    "I5"
+   ],
    "dogan_karar": "K06",
    "devir": "2:2",
    "ilim_cinsi": "ameli",
-   "sual": "İstenen hidayet nereden gelir?"
+   "sual": "İstenen hidayet nereden gelir?",
+   "mevzu": "Kitap, takvâ sahipleri için hidayettir.",
+   "ust_bag": {
+    "I0": {
+     "bag": "karisik",
+     "sual_turu": "nereden",
+     "gerekce": "Hidayetin kaynağı, talebin cevabıdır; talebin kendisi başka türdendir. Tür farklıdır: Grosz–Sidner yalnız saf inanç ve saf eylem hâlini tarif eder; bu kenar G&S dışıdır."
+    }
+   },
+   "oncul": [
+    {
+     "gaye": "I5",
+     "mevzu": "Talep yapıldı"
+    }
+   ],
+   "capa": {
+    "ayet": "1:6",
+    "blok": 1
+   }
   }
  ],
  "kisitlar": [
@@ -421,7 +807,27 @@
      "sebep": "Sıfat sahibini adından önce tanıtmak anlamı yarım bırakır."
     }
    ],
-   "katiyet": "hipotez"
+   "katiyet": "hipotez",
+   "odak": {
+    "I1d": [
+     "1:1#0"
+    ]
+   },
+   "mesele_disi": [
+    {
+     "blok": "1:1#1",
+     "gaye": "I1d",
+     "alt_gaye": "I1b"
+    }
+   ],
+   "isaret": {
+    "tur": "edat",
+    "blok": "1:1#0",
+    "not": "Besmele: söze başlama kalıbı; itme işlemi."
+   },
+   "cevap_uygunlugu": {
+    "I1d": "dogrudan"
+   }
   },
   {
    "id": "K02",
@@ -454,7 +860,26 @@
     }
    ],
    "neden_bu_kadar": "Tek ayette tanıma, tasdik ve takdir hâli birlikte kapanır; ayrı ayetlere bölünmez.",
-   "katiyet": "hipotez"
+   "katiyet": "hipotez",
+   "odak": {
+    "I1a": [
+     "1:2#2"
+    ],
+    "I2": [
+     "1:2#1"
+    ],
+    "H1": [
+     "1:2#0"
+    ]
+   },
+   "isaret": {
+    "tur": "yok"
+   },
+   "cevap_uygunlugu": {
+    "I1a": "dogrudan",
+    "I2": "dogrudan",
+    "H1": "odaksiz"
+   }
   },
   {
    "id": "K03",
@@ -479,7 +904,28 @@
     }
    ],
    "neden_bu_kadar": "İki sıfat yeter; merhametin iki yanı (geniş ve sürekli) birlikte anılır.",
-   "katiyet": "hipotez"
+   "katiyet": "hipotez",
+   "odak": {
+    "I1b": [
+     "1:3#0"
+    ],
+    "H2": [
+     "1:3#0"
+    ]
+   },
+   "tekrar": [
+    {
+     "blok": "1:3#0",
+     "kaynak": "1:1#1"
+    }
+   ],
+   "isaret": {
+    "tur": "yok"
+   },
+   "cevap_uygunlugu": {
+    "I1b": "dogrudan",
+    "H2": "odaksiz"
+   }
   },
   {
    "id": "K04",
@@ -511,7 +957,23 @@
     }
    ],
    "neden_bu_kadar": "Tek sıfat yeter; hesabın ayrıntısı bu sûrenin işi değildir.",
-   "katiyet": "hipotez"
+   "katiyet": "hipotez",
+   "odak": {
+    "I1c": [
+     "1:4#0",
+     "1:4#1"
+    ],
+    "H3": [
+     "1:4#1"
+    ]
+   },
+   "isaret": {
+    "tur": "yok"
+   },
+   "cevap_uygunlugu": {
+    "I1c": "dogrudan",
+    "H3": "odaksiz"
+   }
   },
   {
    "id": "K05",
@@ -553,7 +1015,32 @@
      "sebep": "Yardım istemek yönelmiş olmayı öncelemiş varsayılır; aciz beyanı talebin hemen önünde durmalı."
     }
    ],
-   "katiyet": "hipotez"
+   "katiyet": "hipotez",
+   "odak": {
+    "I3a": [
+     "1:5#0"
+    ],
+    "I3b": [
+     "1:5#1"
+    ]
+   },
+   "isaret": {
+    "tur": "iltifat",
+    "blok": "1:5#0",
+    "not": "Üçüncü şahıstan ikinci şahsa dönüş."
+   },
+   "daraltma": {
+    "blok": "1:5#0",
+    "edat": "إِيَّاكَ öne alınan mef'ûl",
+    "daraltilan": "Kulluk yalnız Allah'a yapılır.",
+    "elenen_ihtimaller": [
+     "Allah'tan başkasına kulluk"
+    ]
+   },
+   "cevap_uygunlugu": {
+    "I3a": "dogrudan",
+    "I3b": "dogrudan"
+   }
   },
   {
    "id": "K06",
@@ -591,7 +1078,21 @@
     }
    ],
    "neden_bu_kadar": "Tek cümle: talep yalın ve açık kalır.",
-   "katiyet": "hipotez"
+   "katiyet": "hipotez",
+   "odak": {
+    "I5": [
+     "1:6#0",
+     "1:6#1"
+    ]
+   },
+   "isaret": {
+    "tur": "emir",
+    "blok": "1:6#0",
+    "not": "İhdinâ: emir kipi, talep."
+   },
+   "cevap_uygunlugu": {
+    "I5": "dogrudan"
+   }
   },
   {
    "id": "K07",
@@ -642,7 +1143,37 @@
      "sebep": "Sınırı olmayan tarif, yolu kaçıranın kendini içeride sanmasına izin verir."
     }
    ],
-   "katiyet": "hipotez"
+   "katiyet": "hipotez",
+   "odak": {
+    "I4a": [
+     "1:7#0",
+     "1:7#1"
+    ],
+    "I4b": [
+     "1:7#2",
+     "1:7#3"
+    ],
+    "I4c": [
+     "1:7#4"
+    ]
+   },
+   "paralel": [
+    {
+     "gayeler": [
+      "I4b",
+      "I4c"
+     ],
+     "ortak": "yolu değil (istisna kalıbı: gayri … ve lâ …)"
+    }
+   ],
+   "isaret": {
+    "tur": "yok"
+   },
+   "cevap_uygunlugu": {
+    "I4a": "dogrudan",
+    "I4b": "dogrudan",
+    "I4c": "dogrudan"
+   }
   },
   {
    "id": "K08",
@@ -669,7 +1200,36 @@
     }
    ],
    "neden_bu_kadar": "Sûre kendi içinde bu gayeı kapatmaz; kapatmak onun işi değil, talep işidir.",
-   "katiyet": "hipotez"
+   "katiyet": "hipotez",
+   "odak": {
+    "I6": [
+     "2:2#0"
+    ]
+   },
+   "mesele_disi": [
+    {
+     "blok": "2:2#1",
+     "gaye": "I6",
+     "alt_gaye": null,
+     "devir": "2",
+     "alt_sual": "Kitap'ta şüphe var mı?"
+    }
+   ],
+   "fon": [
+    {
+     "blok": "2:2#2",
+     "gaye": "I6"
+    }
+   ],
+   "isaret": {
+    "tur": "isaret_zamiri",
+    "blok": "2:2#0",
+    "not": "İşte o: önceki talebe cevap bağı."
+   },
+   "cevap_uygunlugu": {
+    "I6": "dogrudan"
+   }
   }
- ]
+ ],
+ "sema": 2
 }

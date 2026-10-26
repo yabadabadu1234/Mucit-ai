@@ -16,7 +16,22 @@
    "kapanis_testi": "Haksız eksik ölçüm azalır; sonucu metnin dışındadır.",
    "ust": [],
    "onkosul": [],
-   "ayrisim": "ve"
+   "ayrisim": "ve",
+   "sual": "Ölçüde ve tartıda haksızlık nasıl azalır?",
+   "mevzu": "Ölçüde ve tartıda başkaları haksızlığa uğramaz.",
+   "kifaye": {
+    "yeter": "kismi",
+    "varsayilan_malumat": [
+     "Ölçüde adaletin gerekli olduğu okuyanca bilinir"
+    ],
+    "katiyet": "hipotez"
+   },
+   "alt_sira": [
+    "W1"
+   ],
+   "capa": {
+    "ayet": "kok"
+   }
   },
   {
    "id": "W1",
@@ -35,7 +50,30 @@
    "ayrisim": "ve",
    "kip": [
     "duzeltme"
-   ]
+   ],
+   "sual": "Eksik ölçenler bundan nasıl vazgeçer?",
+   "mevzu": "Eksik ölçenler eksik ölçmekten vazgeçer.",
+   "ust_bag": {
+    "W0": {
+     "bag": "karisik",
+     "sual_turu": "nasil",
+     "gerekce": "Haksızlığın azalması sonuçtur; vazgeçme eylemi sonucun şartıdır. Tür farklıdır; Grosz–Sidner yalnız saf inanç ve saf eylem hâlini tarif eder; bu kenar G&S dışıdır."
+    }
+   },
+   "kifaye": {
+    "yeter": "kismi",
+    "varsayilan_malumat": [
+     "Eksik ölçmenin haksızlık olduğu bilinir"
+    ],
+    "katiyet": "hipotez"
+   },
+   "alt_sira": [
+    "W2",
+    "W6"
+   ],
+   "capa": {
+    "ayet": "kok"
+   }
   },
   {
    "id": "W2",
@@ -51,7 +89,29 @@
     "W1"
    ],
    "onkosul": [],
-   "ayrisim": "ve"
+   "ayrisim": "ve",
+   "sual": "Eksik ölçenler eksik ölçerken neden korkmalı?",
+   "mevzu": "Eksik ölçenler hesap günü şuuruyla haşyet duyar.",
+   "ust_bag": {
+    "W1": {
+     "bag": "karisik",
+     "sual_turu": "neden",
+     "gerekce": "Haşyet, vazgeçme irâdesini doğurur. Tür farklıdır; Grosz–Sidner yalnız saf inanç ve saf eylem hâlini tarif eder; bu kenar G&S dışıdır."
+    }
+   },
+   "kifaye": {
+    "yeter": "kismi",
+    "varsayilan_malumat": [
+     "Hesap gününün varlığı muhatabın zihninde en azından ihtimal olarak bulunur"
+    ],
+    "katiyet": "hipotez"
+   },
+   "alt_sira": [
+    "W3"
+   ],
+   "capa": {
+    "ayet": "kok"
+   }
   },
   {
    "id": "W3",
@@ -75,7 +135,36 @@
     "duzeltme"
    ],
    "ilim_cinsi": "nazari",
-   "ayrisim": "ve"
+   "ayrisim": "ve",
+   "sual": "Eksik ölçenler neye kanaat getirmiyor?",
+   "mevzu": "Eksik ölçenler dirileceklerine ve hesap vereceklerine kanaat getirir.",
+   "ust_bag": {
+    "W2": {
+     "bag": "karisik",
+     "sual_turu": "neden",
+     "gerekce": "Kanaat, haşyetin sebebidir. Tür farklıdır; Grosz–Sidner yalnız saf inanç ve saf eylem hâlini tarif eder; bu kenar G&S dışıdır."
+    }
+   },
+   "kifaye": {
+    "yeter": "kismi",
+    "varsayilan_malumat": [
+     "Diriltilmenin imkânı"
+    ],
+    "katiyet": "hipotez"
+   },
+   "alt_sira": [
+    "W4"
+   ],
+   "oncul": [
+    {
+     "gaye": "W6",
+     "mevzu": "Eksik ölçenlerin kim olduğu bilindi"
+    }
+   ],
+   "capa": {
+    "ayet": "83:3",
+    "blok": 2
+   }
   },
   {
    "id": "W4",
@@ -93,7 +182,26 @@
    "onkosul": [
     "W3"
    ],
-   "ilim_cinsi": "nazari"
+   "ilim_cinsi": "nazari",
+   "sual": "Dirileceklerini sandıkları gün nasıl bir gündür?",
+   "mevzu": "Dirilme günü büyük bir gündür; o gün insanlar âlemlerin Rabbi için kalkar.",
+   "ust_bag": {
+    "W3": {
+     "bag": "karisik",
+     "sual_turu": "nasil",
+     "gerekce": "Günün tarifi kanaatin konusudur. Tür farklıdır; Grosz–Sidner yalnız saf inanç ve saf eylem hâlini tarif eder; bu kenar G&S dışıdır."
+    }
+   },
+   "oncul": [
+    {
+     "gaye": "W3",
+     "mevzu": "Dirilmekten söz edildi"
+    }
+   ],
+   "capa": {
+    "ayet": "83:4",
+    "blok": 1
+   }
   },
   {
    "id": "W6",
@@ -108,8 +216,29 @@
    "ust": [
     "W1"
    ],
-   "onkosul": [],
-   "ilim_cinsi": "ameli"
+   "onkosul": [
+    "W2"
+   ],
+   "ilim_cinsi": "ameli",
+   "sual": "Eksik ölçenler kimlerdir?",
+   "mevzu": "Eksik ölçenler, kendi lehine tam alıp başkasına eksik verenlerdir.",
+   "ust_bag": {
+    "W1": {
+     "bag": "karisik",
+     "sual_turu": "kim",
+     "gerekce": "Suçun mahiyeti, vazgeçilecek eylemin tarifidir. Tür farklıdır; Grosz–Sidner yalnız saf inanç ve saf eylem hâlini tarif eder; bu kenar G&S dışıdır."
+    }
+   },
+   "oncul": [
+    {
+     "gaye": "W2",
+     "mevzu": "Eksik ölçenlerin anıldığı"
+    }
+   ],
+   "capa": {
+    "ayet": "83:1",
+    "blok": 1
+   }
   }
  ],
  "kisitlar": [],
@@ -144,7 +273,21 @@
     }
    ],
    "neden_bu_kadar": "Tek cümle: uyarı yalın kalır, açıklama sonraya bırakılır.",
-   "katiyet": "hipotez"
+   "katiyet": "hipotez",
+   "odak": {
+    "W2": [
+     "83:1#0",
+     "83:1#1"
+    ]
+   },
+   "isaret": {
+    "tur": "edat",
+    "blok": "83:1#0",
+    "not": "Veyl: uyarı kalıbı."
+   },
+   "cevap_uygunlugu": {
+    "W2": "odaksiz"
+   }
   },
   {
    "id": "KW2",
@@ -176,7 +319,25 @@
     }
    ],
    "neden_bu_kadar": "İki cümle: biri alırken, biri verirken; çifte ölçü iki yönüyle görünür.",
-   "katiyet": "hipotez"
+   "katiyet": "hipotez",
+   "odak": {
+    "W6": [
+     "83:2#0",
+     "83:2#1",
+     "83:2#2",
+     "83:3#0",
+     "83:3#1",
+     "83:3#2"
+    ]
+   },
+   "isaret": {
+    "tur": "edat",
+    "blok": "83:2#0",
+    "not": "Ellezîne: ism-i mevsûl."
+   },
+   "cevap_uygunlugu": {
+    "W6": "dogrudan"
+   }
   },
   {
    "id": "KW3",
@@ -204,7 +365,21 @@
     }
    ],
    "neden_bu_kadar": "Tek soru: tasdik boşluğu isimlendirilir.",
-   "katiyet": "hipotez"
+   "katiyet": "hipotez",
+   "odak": {
+    "W3": [
+     "83:4#0",
+     "83:4#1"
+    ]
+   },
+   "isaret": {
+    "tur": "isaret_zamiri",
+    "blok": "83:4#0",
+    "not": "Eler (istifham) ve ulâike: önceki parçaya dönüş."
+   },
+   "cevap_uygunlugu": {
+    "W3": "dogrudan"
+   }
   },
   {
    "id": "KW4",
@@ -236,7 +411,21 @@
     }
    ],
    "neden_bu_kadar": "Gün iki yönüyle (büyüklük ve herkesin Rab önünde duruşu) tarif edilir.",
-   "katiyet": "hipotez"
+   "katiyet": "hipotez",
+   "odak": {
+    "W4": [
+     "83:5#0",
+     "83:6#0",
+     "83:6#1"
+    ]
+   },
+   "isaret": {
+    "tur": "yok"
+   },
+   "cevap_uygunlugu": {
+    "W4": "dogrudan"
+   }
   }
- ]
+ ],
+ "sema": 2
 }

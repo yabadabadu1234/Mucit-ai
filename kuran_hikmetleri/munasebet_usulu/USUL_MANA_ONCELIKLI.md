@@ -102,9 +102,7 @@ Teyitli çekirdek: belâgat, sözün **söyleyenin, muhatabın ve dile getirilen
 
 ## 5. Kayıt alanları
 
-Gaye: `id · tur · tasiyici · ufuk · kip · ilim_cinsi · seviye · icerik · kapanis_testi · ust · ayrisim (ve/taksim) · onkosul · dogan_karar · devir`.
-Karar: `id · gaye[] · karsilik[] · gerekce[] {yon, cumle, atif} · kisit[] · neden_bu_kadar · elenen[] · katiyet`.
-Dosya: `kapsam` (örn. "1:1-7"), `kok_gaye`, `kisitlar`.
+Şema sürüm 2'dir ve ayrı belgede tutulur: `SEMA_GAYE_AGACI.md`. Sürüm 1 alanları bâkîdir: gaye `id · tur · tasiyici · ufuk · kip · ilim_cinsi · seviye · icerik · kapanis_testi · ust · ayrisim · onkosul · dogan_karar · devir`; karar `id · gaye[] · karsilik[] · gerekce[] {yon, cumle, atif} · kisit[] · neden_bu_kadar · elenen[] · katiyet`; dosya `kapsam`, `kok_gaye`, `kisitlar`. Sürüm 2'nin eklediği alanlar gaye için `mevzu · sual · ust_bag · kifaye · alt_sira · sikler · hasr · oncul · capa`, karar için `odak · fon · mesele_disi · tekrar · paralel · isaret · daraltma · cevap_uygunlugu`.
 
 ## 6. Sekiz durum nasıl taşınır
 
