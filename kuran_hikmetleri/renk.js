@@ -83,7 +83,7 @@
   function norm(s) {
     return s.replace(/[ً-ٰـۖ-ۭ]/g, '')
       .replace(/[ءؤئ]/g, '')
-      .replace(/[إأآٱ]/g, 'ا').replace(/ى/g, 'ي').trim();
+      .replace(/[إأآٱ]/g, 'ا').replace(/ى/g, 'ي').replace(/\s+/g, ' ').trim();
   }
   function kaçış(s) {
     return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');

@@ -6,7 +6,7 @@ def norm(s):
     s = re.sub(r'[\u064B-\u0670\u0640\u06D6-\u06ED]', '', s)
     s = re.sub(r'[\u0621\u0624\u0626]', '', s)
     s = re.sub(r'[\u0625\u0623\u0622\u0671]', '\u0627', s).replace('\u0649', '\u064A')
-    return s.strip()
+    return re.sub(r'\s+', ' ', s).strip()
 out = {}
 for f in sorted(glob.glob('nazm_elle/*.json')):
     d = json.load(open(f, encoding='utf-8'))
