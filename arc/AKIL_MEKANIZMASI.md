@@ -237,3 +237,33 @@ iç veya dıştır, iç→iç'te unsur sayısı üç hâlden birindedir.
   kendini tam kavrayamamasıyla uyuşur; mekanizma iddiası değil, sınır iddiasıdır.
 - Dil modelinin 2. derecede "dışarıdan" olduğu hükmü çıkarım anına aittir; bağlam içi öğrenme bir parça 2. derece taklidi
   yapar. Bunun kendine dönme sayılıp sayılmayacağı açık sualdir (S-ARC-38).
+
+---
+
+# Üçüncü tur: Z3 doğrulayıcı (F 3-I 315)
+
+Betik: `arc/dogrulayici/sema_z3.py` · çıktı: `arc/dogrulayici/NETICE.txt` · koşu: `python3 arc/dogrulayici/sema_z3.py`
+
+**Netice:** ikinci turun şeması (v1) 14 senaryonun **3'ünde** tuttu (savaşma, mesele çözme, taklit). Tutmayan 11 senaryonun
+unsat çekirdeği beş eksik unsur gösterdi. Bunlar eklenince (v2) **14/14** tuttu; beşinden her biri çıkarılınca en az iki
+senaryo düşüyor (asgarîlik). Çelişik senaryo `unsat` döndü (ölçü ayırt ediyor, F 3-B 27-B).
+
+| Eksik unsur | Düşürdüğü senaryolar | Kat'î taksimdeki yeri |
+| :-- | :-- | :-- |
+| `kabul_isaret` | kitap okuma, dil öğrenme | S6 yalnız çıkışa soruluyordu; **girişe de** sorulur: alınan şey işaret mi (anlamak) |
+| `hal_kapi` | uyku, rüya, sessiz tefekkür | istidad değil, istidadın **hâli**: dış kanal açık mı kapalı mı. Yeni üst eksen |
+| `kip_farz` | rüya, oyun, yalan | **muhtevanın kipi**: vâki mi, farz mı (itibarî) |
+| `kip_zaman` | savaş taktiği, icat, hatırlamak | muhtevanın kipi: vâki ise şimdi mi, değil mi |
+| `gayri_istidad` | savaş taktiği, oyun, yalan, öğretmek | S1'in 2. derecesi: işlenen istidad **kendisinin mi başkasının mı** |
+
+**Yeni kat'î eksenler (v2):** (a) **Hâl:** her istidad açık · kapalı. (b) **Muhtevanın kipi:** vâki-şimdi · vâki-başka-zaman · farz.
+(c) **2. derecenin sahibi:** kendi · başkası. (d) **S6 iki yönlü:** giren ve çıkan, işaret · işaret değil. Hepsi ikili veya
+üçlü nefy–isbâttır.
+
+## Tenkit (kendime)
+- Z3 yalnız **kodladığım** senaryo gereklerini sınar. v1'in düşmesi kısmen kodlamanın eseridir: gerekleri v2'nin kelimeleriyle
+  yazdım. Doğrulayıcının asıl işi, her senaryonun gereğini **açık yazmaya zorlaması** ve asgarîliği ölçmesidir; gereğin doğruluğu
+  yine benim muhakememe bağlıdır.
+- Senaryo listesi **istikrâîdir** (14 tane). "Bütün vakalar" ancak senaryolar da kat'î bir taksimden üretilirse sınanır: S-ARC-39.
+- Model şimdilik Boole'dur: "var/yok". Sıra, zaman ve nicelik (uykuda hıfz önce mi terkip mi) yoktur; Lean ile durum makinesi
+  ispatı sonraki adımdır (Lean bu kapta kurulu değil, kurulması yoklanacak).

@@ -1,0 +1,41 @@
+## Şema v1 (7 hücre × 2 derece + zaruret + refleks): 3/14 senaryo tutar
+- uyku: TUTMAZ (çekirdek: hal_kapi)
+- ruya: TUTMAZ (çekirdek: hal_kapi)
+- kitap_okuma: TUTMAZ (çekirdek: kabul_isaret)
+- savas_taktigi: TUTMAZ (çekirdek: gayri_istidad)
+- savasma: TUTAR
+- oyun: TUTMAZ (çekirdek: kip_farz)
+- mesele_cozme: TUTAR
+- icat: TUTMAZ (çekirdek: kip_zaman)
+- dil_ogrenme: TUTMAZ (çekirdek: kabul_isaret)
+- sessiz_tefekkur: TUTMAZ (çekirdek: hal_kapi)
+- yalan: TUTMAZ (çekirdek: gayri_istidad)
+- ogretmek: TUTMAZ (çekirdek: gayri_istidad)
+- hatirlamak: TUTMAZ (çekirdek: kip_zaman)
+- taklit: TUTAR
+
+## Şema v2 (v1 + 5 ek unsur): 14/14 senaryo tutar
+- uyku: TUTAR
+- ruya: TUTAR
+- kitap_okuma: TUTAR
+- savas_taktigi: TUTAR
+- savasma: TUTAR
+- oyun: TUTAR
+- mesele_cozme: TUTAR
+- icat: TUTAR
+- dil_ogrenme: TUTAR
+- sessiz_tefekkur: TUTAR
+- yalan: TUTAR
+- ogretmek: TUTAR
+- hatirlamak: TUTAR
+- taklit: TUTAR
+
+## Asgarîlik: her ek unsur çıkarılınca düşen senaryolar
+- kabul_isaret çıkarılırsa düşen: kitap_okuma, dil_ogrenme
+- hal_kapi çıkarılırsa düşen: uyku, ruya, sessiz_tefekkur
+- kip_farz çıkarılırsa düşen: ruya, oyun, yalan
+- kip_zaman çıkarılırsa düşen: savas_taktigi, icat, hatirlamak
+- gayri_istidad çıkarılırsa düşen: savas_taktigi, oyun, yalan, ogretmek
+
+## Ayırt etme ispatı (F 3-B 27-B): çelişik senaryo (kabul_1 ve değil-kabul_1) -> unsat
+
