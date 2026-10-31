@@ -63,6 +63,7 @@ Fark(tecrit, tecezzi, tefrik ve temyiz, tensip, teşrih) = { κ₁, κ₂, κ₃
   sıra: tecezzi ≺ tefrik ≺ temyiz ≺ tensip ≺ teşrih
   Fark(Tasnif(ameliye)) = mahsul(tefrik, Tasnif(ameliye))                      [Fark, tefrikin mahsulüdür]
   ⊬ reddedilen (tabloda geçen): "tecrit soyutlama değil, değişken kontrolüdür" ∵ lügat C-r-d=soymak ; tecrit ayrım kıstası "bütünlük korunur mu" tersine çevrilmiş
+     [düzeltme: "bağımsız değişken haline getirmek" yarısı doğruydu (Tecrit = değer→değişken); ret fazla kaba idi]
   ⊬ reddedilen: tensip ⊇ nedensellik ; teşrih ⊇ yapısal ∨ işlevsel  ∵ tensip ∩ teşrih ∩ tecezzi ≠ ∅ [mütebâyin değil]
   ⊬ reddedilen: derece kıstasları (izolasyon derecesi, açıklama kapsamı)  ∵ Nakzeyn değil, ⟺ₜ kurulamaz
 ```
@@ -74,15 +75,22 @@ Fark(tecrit, tecezzi, tefrik ve temyiz, tensip, teşrih) = { κ₁, κ₂, κ₃
   φ(x) ≔ x'in vasıf kümesi ;  Terkip_β ≔ cüzleri bağ β ile birleştiren işlem
 
   tecezzi : Kül → Cüz*                 Tecezzi(x) = {c₁…c_n}, Terkip_β(c₁…c_n) = x         injektif (β ile), kayıpsız
-  tecrit  : Kül → Unsur                Tecrit(x;u) = π_u(x) = u, φ(x)∖{u} zihnen düşer       injektif değil, kayıplı
-            Küme → Unsur               Tecrit(S) = ⋂_{x∈S} φ(x)                              [ortak vasıf soymak = tecrit, açık dehliz kapandı ⊬]
+  ⊬ nakz [padişah itirazı: elma örneği]: Tecrit(x;u) = π_u(x), "vasıf kümesinden bir unsur seçmek", "kayıplı"; Tecrit(S) = ⋂ φ(x)
+     ∵ kırmızı-sert-tatlı elmadan "elma" demek vasıf seçmek değildir ; elma hâlâ renk, tat, sertlik alabilir ; kabiliyet kaybolmadı
+  tecrit  : Kül → Tür                  x = ⟨R; a_d : d∈D⟩ , R rükün (zâtî) , a_d ∈ V_d araz değeri
+                                       Tecrit(x) = λ(v_d)_{d∈D}. ⟨R; v_d⟩                    değer → değişken, R tutulur
+                                       Tecrit(x)(a) = x                                      örnekleme x'i geri verir
+            misal:                     ⟨elma; kırmızı, sert, tatlı⟩ ↦ λ(r,s,t). ⟨elma; r,s,t⟩ , r∈Renk , s∈Sertlik , t∈Tat
+            araz ¬zarurî ⟹ değişkene çevirmek W'yi bozmaz  ⋉ Bünye: Araz(x,W) ≔ ¬x ↛ ¬W
+            kaybolan = nokta (özel değerler) ; kalan = bütün noktaların uzayı Π_d V_d ; kabiliyet kaybı yok
+            Küme → Tür                 Tecrit(S) = λ(v_d)_{d∈Fark(S)}. ⟨R; a_d (d∉Fark(S)), v_d (d∈Fark(S))⟩   ortak değer sabit, farklı koordinat serbest ⊬
   tefrik  : Eleman² → Fark             Tefrik(a,b) = φ(a) Δ φ(b)                             hüküm yok, türev nesne
             Fark(a₁…a_n) = { (i,j, Tefrik(a_i,a_j)) }
   temyiz  : Eleman* × Kriter → Eleman*   Temyiz(S;c) = { s∈S : c(s) } , c ∈ ⋃ Tefrik       kardinalite düşer, kriter fark'tan seçilir ⟹ tefrik ≺ temyiz
   tensip  : Eleman* → Graf             Tensip(P) = ⟨P, R, ρ⟩ , R ⊆ P×P×Tip , ρ: P→Rol        yapı eklenir (statik)
   teşrih  : Graf → İz                  Teşrih(⟨P,R,ρ⟩) = s₀ →ₑ s₁ →ₑ … , e∈R illet→malul     zaman eklenir (dinamik)
 
-  bilgi seyri:  tecrit ↓ (kayıp)   tecezzi = (kayıpsız)   tefrik ⟶ türev   temyiz ↓ (eleman sayısı)   tensip ↑ (yapı)   teşrih ↑ (zaman)
+  bilgi seyri:  tecrit: nokta ↓ tür ↑ (değer→değişken)   tecezzi = (kayıpsız)   tefrik ⟶ türev   temyiz ↓ (eleman sayısı)   tensip ↑ (yapı)   teşrih ↑ (zaman)
   tefrik ve temyiz ayrımı: Tefrik fark üretir, Temyiz fark'tan kriter alıp süzer ; ayrı işlem, ayrı tip  ⟹ Tasnif(ameliye) ikisini ayrı sayar mı: padişahın hükmü bekleniyor
 ```
 
