@@ -48,6 +48,25 @@ Fark(tecrit, tecezzi, tefrik ve temyiz, tensip, teşrih) = { κ₁, κ₂, κ₃
   κ'lar maksada nispetle zarurîdir, mutlak değil  ⋉ bkz. Tefrik ve Temyiz § Temel usul
 ```
 
+```
+⊬ (taslak, tasdik bekliyor): Fark₂ — yapıştırılan tablonun kabul edilen kısımlarıyla
+  Tasnif(ameliye)₂ = { tecrit, tecezzi, tefrik, temyiz, tensip, teşrih }      [tefrik ve temyiz iki ameliye; mühürlü 5'li küme nakzedilmedi]
+  κ₂' = örter(mahsul, girdi)?     [∪mahsul = girdi mi; yalnız ¬κ₁ kolunda]   ← κ₂'nin yerine
+  κ₅  = kriterle-seçer-eler(nazar)?   [yalnız κ₁ ∧ ¬κ₃ ∧ ¬κ₄ kolunda]
+
+  ¬κ₁ ∧ ¬κ₂'                → tecrit     mahsul = soyulan unsur (vasıf, suret veya mana; kalan zihnen yok sayılır)
+  ¬κ₁ ∧  κ₂'                → tecezzi    mahsul = cüzlerin tamamı (fiilen veya zihnen)
+   κ₁ ∧ ¬κ₃ ∧ ¬κ₄ ∧ ¬κ₅     → tefrik     mahsul = fark kaydı (A≠B), hüküm yok
+   κ₁ ∧ ¬κ₃ ∧ ¬κ₄ ∧  κ₅     → temyiz     mahsul = seçilmiş alt küme
+   κ₁ ∧ ¬κ₃ ∧  κ₄           → tensip     mahsul = rol + hiyerarşi (statik)
+   κ₁ ∧  κ₃                 → teşrih     mahsul = illet-malul zinciri (dinamik)
+  sıra: tecezzi ≺ tefrik ≺ temyiz ≺ tensip ≺ teşrih
+  Fark(Tasnif(ameliye)) = mahsul(tefrik, Tasnif(ameliye))                      [Fark, tefrikin mahsulüdür]
+  ⊬ reddedilen (tabloda geçen): "tecrit soyutlama değil, değişken kontrolüdür" ∵ lügat C-r-d=soymak ; tecrit ayrım kıstası "bütünlük korunur mu" tersine çevrilmiş
+  ⊬ reddedilen: tensip ⊇ nedensellik ; teşrih ⊇ yapısal ∨ işlevsel  ∵ tensip ∩ teşrih ∩ tecezzi ≠ ∅ [mütebâyin değil]
+  ⊬ reddedilen: derece kıstasları (izolasyon derecesi, açıklama kapsamı)  ∵ Nakzeyn değil, ⟺ₜ kurulamaz
+```
+
 ---
 
 ## çeşit
