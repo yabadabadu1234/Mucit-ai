@@ -27,6 +27,27 @@ Bu dosya mimarî müzakerede mühürlenen bütün formülleri tutar. İzahat (ş
 
 Tasnif(ameliye) = { tecrit, tecezzi, tefrik ve temyiz, tensip, teşrih }
 
+```
+Fark(tecrit, tecezzi, tefrik ve temyiz, tensip, teşrih) = { κ₁, κ₂, κ₃, κ₄ }
+  κ₁ = çok-parça(girdi)?          [ortada tek nesne mi, çok eleman mı]
+  κ₂ = parçalar(girdi)?           [yalnız ¬κ₁ kolunda]
+  κ₃ = zaman-hareket(nazar)?      [yalnız κ₁ kolunda]
+  κ₄ = nispet-rol(nazar)?         [yalnız κ₁ ∧ ¬κ₃ kolunda]
+
+  ¬κ₁ ∧ ¬κ₂          → tecrit            mahsul = vasıf (araz soyulur, nesne bütün kalır)
+  ¬κ₁ ∧  κ₂          → tecezzi           mahsul = cüz (nesne sökülür)
+   κ₁ ∧ ¬κ₃ ∧ ¬κ₄    → tefrik ve temyiz  mahsul = zümre + sınır (fasla göre)
+   κ₁ ∧ ¬κ₃ ∧  κ₄    → tensip            mahsul = rol + hiyerarşi (statik)
+   κ₁ ∧  κ₃          → teşrih            mahsul = illet-malul zinciri (dinamik)
+
+  ⟺ₜ(Fark) ∵ her kıstas ikili Nakzeyn, 5 yaprak, yaprak dışı kol yok
+  sıra: tecezzi ≺ tefrik ≺ tensip ≺ teşrih   [izahat/tasnif/ lafzından: "sökülmüş", "tefrik edilmiş", "bütün bu parçaların"]
+  ⊬ tecrit ∉ sıra  ∵ mahsul(tecrit)=vasıf ≠ parça, tefrik'e girdi olamaz   [çıkarım]
+  ⊬ (açık, dehliz): çok nesneden ortak vasıf soymak κ₁∧¬κ₃∧¬κ₄ → tefrik'e düşer, hâlbuki mahsulü vasıftır;
+     ya tecrit "n kere tecrit + mukayese" diye okunur ya κ₁ kolunda beşinci yaprak lâzımdır
+  κ'lar maksada nispetle zarurîdir, mutlak değil  ⋉ bkz. Tefrik ve Temyiz § Temel usul
+```
+
 ---
 
 ## çeşit
