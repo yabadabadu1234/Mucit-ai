@@ -67,6 +67,25 @@ Fark(tecrit, tecezzi, tefrik ve temyiz, tensip, teşrih) = { κ₁, κ₂, κ₃
   ⊬ reddedilen: derece kıstasları (izolasyon derecesi, açıklama kapsamı)  ∵ Nakzeyn değil, ⟺ₜ kurulamaz
 ```
 
+```
+⊬ nakz [F 3-I 317]: yukarıdaki Fark ve Fark₂ κ-ağaçları (ikili bölümleme) mekanizma çalışmasında şart değil; silinmedi, aşağıdaki mekanizma yazımı onun yerine geçer.
+
+⊬ (taslak, tasdik bekliyor): Mekanizma — girdi → işlem → mahsul; neyi korur, neyi kaybettirir
+  φ(x) ≔ x'in vasıf kümesi ;  Terkip_β ≔ cüzleri bağ β ile birleştiren işlem
+
+  tecezzi : Kül → Cüz*                 Tecezzi(x) = {c₁…c_n}, Terkip_β(c₁…c_n) = x         injektif (β ile), kayıpsız
+  tecrit  : Kül → Unsur                Tecrit(x;u) = π_u(x) = u, φ(x)∖{u} zihnen düşer       injektif değil, kayıplı
+            Küme → Unsur               Tecrit(S) = ⋂_{x∈S} φ(x)                              [ortak vasıf soymak = tecrit, açık dehliz kapandı ⊬]
+  tefrik  : Eleman² → Fark             Tefrik(a,b) = φ(a) Δ φ(b)                             hüküm yok, türev nesne
+            Fark(a₁…a_n) = { (i,j, Tefrik(a_i,a_j)) }
+  temyiz  : Eleman* × Kriter → Eleman*   Temyiz(S;c) = { s∈S : c(s) } , c ∈ ⋃ Tefrik       kardinalite düşer, kriter fark'tan seçilir ⟹ tefrik ≺ temyiz
+  tensip  : Eleman* → Graf             Tensip(P) = ⟨P, R, ρ⟩ , R ⊆ P×P×Tip , ρ: P→Rol        yapı eklenir (statik)
+  teşrih  : Graf → İz                  Teşrih(⟨P,R,ρ⟩) = s₀ →ₑ s₁ →ₑ … , e∈R illet→malul     zaman eklenir (dinamik)
+
+  bilgi seyri:  tecrit ↓ (kayıp)   tecezzi = (kayıpsız)   tefrik ⟶ türev   temyiz ↓ (eleman sayısı)   tensip ↑ (yapı)   teşrih ↑ (zaman)
+  tefrik ve temyiz ayrımı: Tefrik fark üretir, Temyiz fark'tan kriter alıp süzer ; ayrı işlem, ayrı tip  ⟹ Tasnif(ameliye) ikisini ayrı sayar mı: padişahın hükmü bekleniyor
+```
+
 ---
 
 ## çeşit
