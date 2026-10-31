@@ -14,6 +14,7 @@ Bu dosya mimarî müzakerede mühürlenen bütün formülleri tutar. İzahat (ş
 ≔            tarif (tanım)
 ∵ ∴          çünkü / dolayısıyla
 ≺            öncelik (zaman/illiyet sırası, "A, B'den önce")
+⊥            ortogonal (ayrı eksen): A ⊥ B ≔ κ(A) ile κ(B) farklı kıstastır; biri ötekinin yerine geçmez, birbirinden indirgenemez  ∵ aynı kıstasa bağlı değil
 ```
 
 **Kural-1:** `Küme(Başlık)` — Başlık = sual (parametre), Küme = özne. Başlık hiçbir yerde özne olmaz.
