@@ -139,6 +139,7 @@ def main(ham=os.path.join(KOK, "ham"), karsilik_klasoru=os.path.join(KOK, "karsi
         ekle(kimlik, kimlik)
         for kay in m["kaynaklar"]:
             if kay["tasnif"] == "MeSH":
+                ekle(f"MeSH-ad:{kay['ad']}", kimlik)
                 for n in kay["agac_numaralari"]:
                     ekle(f"MeSH-agac:{n}", kimlik)
             else:

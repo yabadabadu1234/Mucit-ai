@@ -38,7 +38,7 @@ Karşılıklarda ve izahlarda kısaltma kullanılmaz.
 
 | sütun | mânâsı |
 |---|---|
-| kimlik | Maddenin kimliği. Şu şekillerden biri: `MeSH:<tavsif numarası>`, `MeSH-agac:<ağaç numarası>`, `MeSH-kita:<harf>`, `ICD11:<unsur kimliği>`, `ICD11-kod:<kod>`, `ICD11-bab:<bab numarası>`, `ICD11-ad:<İngilizce ad>` |
+| kimlik | Maddenin kimliği. Şu şekillerden biri: `MeSH:<tavsif numarası>`, `MeSH-agac:<ağaç numarası>`, `MeSH-kita:<harf>`, `MeSH-ad:<İngilizce başlık>`, `ICD11:<unsur kimliği>`, `ICD11-kod:<kod>`, `ICD11-bab:<bab numarası>`, `ICD11-ad:<İngilizce ad>`, `SERBEST:<İngilizce ıstılah>` (iki tasnifte de başlığı olmayan ıstılah; telifte maddeye bağlanmaz, `eslesmeyen_karsiliklar.tsv` dosyasında saklanır) |
 | ingilizce | Maddenin İngilizce adı; yoklama içindir. Maddedeki adla uyuşmazsa `telif/ingilizce_uyusmazligi.tsv` dosyasına yazılır. |
 | osmanlica | Osmanlıca karşılık |
 | muhur | kadîm, teklif yahut şüpheli |

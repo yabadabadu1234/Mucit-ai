@@ -94,3 +94,11 @@ Sıradaki iş:
 - Kullanıcı ortak depo olarak `yabadabadu1234/Mucit-ai` deposunu seçti. Klasör, deponun `tip-piri-lugat` dalında `lugat/` altına taşındı.
 - Deponun `CLAUDE.md` emirnamesi baştan sona okundu. Lügate dokunan hükümleri: `grep` ile arama yasak; kod içinde şerh ve izah eden belge dizgisi yasak; sessiz ikame yasak; hiçbir kayıt silinmez. Betiklerdeki şerhler bu deftere taşındı, betiklerden ayıklandı; deneme yeniden koşturuldu, netice yine DOĞRU.
 - Ağ yeniden yoklandı: resmî adresler bu oturumda hâlâ kapalı. Kullanıcının yeni muhiti ancak yeni açılan oturumlarda geçerli olur.
+
+### 1 Teşrinisani 2026 (Kasım), tercüme iş parçacığının ilk talebi
+
+- Tercüme iş parçacığı, Cannon'un "The Wisdom of the Body" şerhindeki kırk bir ıstılahı bildirdi. Şerh dosyası (`/mnt/project-files/tercume/cannon_bedenin_hikmeti/serh.md`) baştan sona okundu.
+- Hepsi tetkik edilip `karsiliklar/003_tercume_cannon.tsv` dosyasına kırk dört satır olarak yazıldı (umumî ziyâbitus ile şekerli ziyâbitus ayrıldı, "ra'şe" ile "kuş'ırîre" ayrıldı). Talepler `talepler/istilah_talepleri.tsv` dosyasına kaydedildi.
+- Tashihler: shivering için "ra'şe" yerine "kuş'ırîre" (ra'şe tremor'dur); edema için umumî olanında "istiskâ-yı lahmî"; plasma proteins için "mevâdd-ı zülâliyye-i dem" (şüpheli); autonomic için "cihâz-ı asabî-i nebâtî"; carbonic acid için "hâmız-ı fahmî" yeğlendi.
+- Anahtar şekli olarak `MeSH-ad:<İngilizce başlık>` ve tasnifte başlığı olmayanlar için `SERBEST:<ıstılah>` eklendi; imtizaç betiği buna göre güncellendi, deneme yeniden DOĞRU çıktı.
+- Kadîm mühürlerin delilleri el-Kânûn'un kitap ve fen künyesiyle yazıldı; sahife numaraları `QanunAvicennae` nüshası açılınca eklenecek.
