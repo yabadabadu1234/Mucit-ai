@@ -2,7 +2,7 @@
 
 Bu sahife `araclar/msc_birlestir.py` ile `kaynak.tsv` ve `ceviri/` dosyalarından üretilir; elle değiştirilmez.
 
-Toplam madde: 6603 · karşılığı bulunan: 2732 · kalan: 3871
+Toplam madde: 6603 · karşılığı bulunan: 3208 · kalan: 3395
 
 
 ## 00-XX — Umûmî ve şâmil mevzûlar; mecmualar
@@ -2537,521 +2537,521 @@ Special functions (33-XX deals with the properties of functions as functions) {F
 | 33F10 | Symbolic computation of special functions (Gosper and Zeilberger algorithms, etc.) [See also 68W30] | Hususî tâbilerin remzî hesabı (Gosper ve Zeilberger hârizmîleri ve emsâli) [Ayrıca bakınız: 68W30] |  |
 | 33F99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
-## 34-XX — Ordinary differential equations
+## 34-XX — Âdî tefâzulî muâdeleler (adi diferansiyel denklemler)
 
 Ordinary differential equations
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 34-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to ordinary differential equations |  |  |
-| 34-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to ordinary differential equations |  |  |
-| 34-02 | Research exposition (monographs, survey articles) pertaining to ordinary differential equations |  |  |
-| 34-03 | History of ordinary differential equations [Consider also classification numbers from Section 01] |  |  |
-| 34-04 | Software, source code, etc. for problems pertaining to ordinary differential equations |  |  |
-| 34-06 | Proceedings, conferences, collections, etc. pertaining to ordinary differential equations |  |  |
-| 34-11 | Research data for problems pertaining to ordinary differential equations |  |  |
-| **34Axx** | **General theory for ordinary differential equations** | **** |  |
-| 34A05 | Explicit solutions, first integrals of ordinary differential equations |  |  |
-| 34A06 | Generalized ordinary differential equations (measure-differential equations, set-valued differential equations, etc.) |  |  |
-| 34A07 | Fuzzy ordinary differential equations |  |  |
-| 34A08 | Fractional ordinary differential equations |  |  |
-| 34A09 | Implicit ordinary differential equations, differential-algebraic equations |  |  |
-| 34A12 | Initial value problems, existence, uniqueness, continuous dependence and continuation of solutions to ordinary differential equations |  |  |
-| 34A25 | Analytical theory of ordinary differential equations: series, transformations, transforms, operational calculus, etc. [See also 44-XX] |  |  |
-| 34A26 | Geometric methods in ordinary differential equations |  |  |
-| 34A30 | Linear ordinary differential equations and systems |  |  |
-| 34A33 | Ordinary lattice differential equations |  |  |
-| 34A34 | Nonlinear ordinary differential equations and systems |  |  |
-| 34A35 | Ordinary differential equations of infinite order |  |  |
-| 34A36 | Discontinuous ordinary differential equations |  |  |
-| 34A37 | Ordinary differential equations with impulses |  |  |
-| 34A38 | Hybrid systems of ordinary differential equations |  |  |
-| 34A40 | Differential inequalities involving functions of a single real variable [See also 26D20] |  |  |
-| 34A45 | Theoretical approximation of solutions to ordinary differential equations {For numerical analysis, see 65Lxx} |  |  |
-| 34A55 | Inverse problems involving ordinary differential equations |  |  |
-| 34A60 | Ordinary differential inclusions [See also 49J21, 49K21] |  |  |
+| 34-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to ordinary differential equations | Âdî tefâzulî muâdeleler hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 34-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to ordinary differential equations | Âdî tefâzulî muâdeleler hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 34-02 | Research exposition (monographs, survey articles) pertaining to ordinary differential equations | Âdî tefâzulî muâdeleler hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 34-03 | History of ordinary differential equations [Consider also classification numbers from Section 01] | Âdî tefâzulî muâdelelerin târihi [01. babın tasnif numaralarına da bakılsın] |  |
+| 34-04 | Software, source code, etc. for problems pertaining to ordinary differential equations | Âdî tefâzulî muâdeleler sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 34-06 | Proceedings, conferences, collections, etc. pertaining to ordinary differential equations | Âdî tefâzulî muâdeleler hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 34-11 | Research data for problems pertaining to ordinary differential equations | Âdî tefâzulî muâdeleler sahasındaki meselelere dair tetkik verileri |  |
+| **34Axx** | **General theory for ordinary differential equations** | **Âdî tefâzulî muâdeleler için umûmî nazariye** |  |
+| 34A05 | Explicit solutions, first integrals of ordinary differential equations | Âdî tefâzulî muâdelelerin sarîh halleri, ilk tamâmîleri |  |
+| 34A06 | Generalized ordinary differential equations (measure-differential equations, set-valued differential equations, etc.) | Umûmîleştirilmiş âdî tefâzulî muâdeleler (mikyâs-tefâzulî muâdeleler, mecmûa kıymetli tefâzulî muâdeleler ve emsâli) |  |
+| 34A07 | Fuzzy ordinary differential equations | Mübhem âdî tefâzulî muâdeleler |  |
+| 34A08 | Fractional ordinary differential equations | Kesrî âdî tefâzulî muâdeleler |  |
+| 34A09 | Implicit ordinary differential equations, differential-algebraic equations | Zımnî âdî tefâzulî muâdeleler, tefâzulî-cebrî muâdeleler |  |
+| 34A12 | Initial value problems, existence, uniqueness, continuous dependence and continuation of solutions to ordinary differential equations | İbtidâî kıymet meseleleri; âdî tefâzulî muâdeleler hallerinin vücûdu, yegâneliği, muttasıl bağımlılığı ve temdîdi |  |
+| 34A25 | Analytical theory of ordinary differential equations: series, transformations, transforms, operational calculus, etc. [See also 44-XX] | Âdî tefâzulî muâdelelerin tahlîlî nazariyesi: silsileler, tahvîller, tahvîlât (dönüşümler), âmilî hesap ve emsâli [Ayrıca bakınız: 44-XX] |  |
+| 34A26 | Geometric methods in ordinary differential equations | Âdî tefâzulî muâdelelerde hendesî usuller |  |
+| 34A30 | Linear ordinary differential equations and systems | Hattî âdî tefâzulî muâdeleler ve nizâmları |  |
+| 34A33 | Ordinary lattice differential equations | Kafes üzerinde âdî tefâzulî muâdeleler |  |
+| 34A34 | Nonlinear ordinary differential equations and systems | Gayr-ı hattî âdî tefâzulî muâdeleler ve nizâmları |  |
+| 34A35 | Ordinary differential equations of infinite order | Gayr-ı mütenâhî mertebeden âdî tefâzulî muâdeleler |  |
+| 34A36 | Discontinuous ordinary differential equations | Munkatı' âdî tefâzulî muâdeleler |  |
+| 34A37 | Ordinary differential equations with impulses | Darbeli (impulslu) âdî tefâzulî muâdeleler |  |
+| 34A38 | Hybrid systems of ordinary differential equations | Âdî tefâzulî muâdelelerin melez nizâmları |  |
+| 34A40 | Differential inequalities involving functions of a single real variable [See also 26D20] | Tek hakîkî mütehavvilli tâbileri ihtivâ eden tefâzulî adem-i müsâvâtlar [Ayrıca bakınız: 26D20] |  |
+| 34A45 | Theoretical approximation of solutions to ordinary differential equations {For numerical analysis, see 65Lxx} | Âdî tefâzulî muâdeleler hallerinin nazarî takrîbi {Adedî tahlîl için bakınız: 65Lxx} |  |
+| 34A55 | Inverse problems involving ordinary differential equations | Âdî tefâzulî muâdeleleri ihtivâ eden makûs meseleler |  |
+| 34A60 | Ordinary differential inclusions [See also 49J21, 49K21] | Âdî tefâzulî ihtivâlar (inklüzyonlar) [Ayrıca bakınız: 49J21, 49K21] |  |
 | 34A99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **34Bxx** | **Boundary value problems for ordinary differential equations {For ordinary differential operators, see 34Lxx}** | **** |  |
-| 34B05 | Linear boundary value problems for ordinary differential equations |  |  |
-| 34B07 | Linear boundary value problems for ordinary differential equations with nonlinear dependence on the spectral parameter |  |  |
-| 34B08 | Parameter dependent boundary value problems for ordinary differential equations |  |  |
-| 34B09 | Boundary eigenvalue problems for ordinary differential equations |  |  |
-| 34B10 | Nonlocal and multipoint boundary value problems for ordinary differential equations |  |  |
-| 34B15 | Nonlinear boundary value problems for ordinary differential equations |  |  |
-| 34B16 | Singular nonlinear boundary value problems for ordinary differential equations |  |  |
-| 34B18 | Positive solutions to nonlinear boundary value problems for ordinary differential equations |  |  |
-| 34B20 | Weyl theory and its generalizations for ordinary differential equations |  |  |
-| 34B24 | Sturm-Liouville theory [See also 34Lxx] |  |  |
-| 34B27 | Green’s functions for ordinary differential equations |  |  |
-| 34B30 | Special ordinary differential equations (Mathieu, Hill, Bessel, etc.) |  |  |
-| 34B37 | Boundary value problems with impulses for ordinary differential equations |  |  |
-| 34B40 | Boundary value problems on infinite intervals for ordinary differential equations |  |  |
-| 34B45 | Boundary value problems on graphs and networks for ordinary differential equations |  |  |
-| 34B60 | Applications of boundary value problems involving ordinary differential equations |  |  |
+| **34Bxx** | **Boundary value problems for ordinary differential equations {For ordinary differential operators, see 34Lxx}** | **Âdî tefâzulî muâdeleler için hudûd kıymeti meseleleri {Âdî tefâzulî âmiller için bakınız: 34Lxx}** |  |
+| 34B05 | Linear boundary value problems for ordinary differential equations | Âdî tefâzulî muâdeleler için hattî hudûd kıymeti meseleleri |  |
+| 34B07 | Linear boundary value problems for ordinary differential equations with nonlinear dependence on the spectral parameter | Tayfî vasîta gayr-ı hattî bağımlı, âdî tefâzulî muâdeleler için hattî hudûd kıymeti meseleleri |  |
+| 34B08 | Parameter dependent boundary value problems for ordinary differential equations | Âdî tefâzulî muâdeleler için vasîta bağımlı hudûd kıymeti meseleleri |  |
+| 34B09 | Boundary eigenvalue problems for ordinary differential equations | Âdî tefâzulî muâdeleler için hudûd zâtî kıymet meseleleri |  |
+| 34B10 | Nonlocal and multipoint boundary value problems for ordinary differential equations | Âdî tefâzulî muâdeleler için gayr-ı mahallî ve çok noktalı hudûd kıymeti meseleleri |  |
+| 34B15 | Nonlinear boundary value problems for ordinary differential equations | Âdî tefâzulî muâdeleler için gayr-ı hattî hudûd kıymeti meseleleri |  |
+| 34B16 | Singular nonlinear boundary value problems for ordinary differential equations | Âdî tefâzulî muâdeleler için münferid gayr-ı hattî hudûd kıymeti meseleleri |  |
+| 34B18 | Positive solutions to nonlinear boundary value problems for ordinary differential equations | Âdî tefâzulî muâdeleler için gayr-ı hattî hudûd kıymeti meselelerinin müsbet halleri |  |
+| 34B20 | Weyl theory and its generalizations for ordinary differential equations | Âdî tefâzulî muâdeleler için Weyl nazariyesi ve umûmîleştirmeleri |  |
+| 34B24 | Sturm-Liouville theory [See also 34Lxx] | Sturm-Liouville nazariyesi [Ayrıca bakınız: 34Lxx] |  |
+| 34B27 | Green’s functions for ordinary differential equations | Âdî tefâzulî muâdeleler için Green tâbileri |  |
+| 34B30 | Special ordinary differential equations (Mathieu, Hill, Bessel, etc.) | Hususî âdî tefâzulî muâdeleler (Mathieu, Hill, Bessel ve emsâli) |  |
+| 34B37 | Boundary value problems with impulses for ordinary differential equations | Âdî tefâzulî muâdeleler için darbeli hudûd kıymeti meseleleri |  |
+| 34B40 | Boundary value problems on infinite intervals for ordinary differential equations | Âdî tefâzulî muâdeleler için gayr-ı mütenâhî fâsılalar üzerinde hudûd kıymeti meseleleri |  |
+| 34B45 | Boundary value problems on graphs and networks for ordinary differential equations | Âdî tefâzulî muâdeleler için rabıta şekilleri ve şebekeler üzerinde hudûd kıymeti meseleleri |  |
+| 34B60 | Applications of boundary value problems involving ordinary differential equations | Âdî tefâzulî muâdeleleri ihtivâ eden hudûd kıymeti meselelerinin tatbîkleri |  |
 | 34B99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **34Cxx** | **Qualitative theory for ordinary differential equations [See also 37-XX]** | **** |  |
-| 34C05 | Topological structure of integral curves, singular points, limit cycles of ordinary differential equations |  |  |
-| 34C07 | Theory of limit cycles of polynomial and analytic vector fields (existence, uniqueness, bounds, Hilbert’s 16th problem and ramifications) for ordinary differential equations |  |  |
-| 34C08 | Ordinary differential equations and connections with real algebraic geometry (fewnomials, desingularization, zeros of abelian integrals, etc.) |  |  |
-| 34C10 | Oscillation theory, zeros, disconjugacy and comparison theory for ordinary differential equations |  |  |
-| 34C11 | Growth and boundedness of solutions to ordinary differential equations |  |  |
-| 34C12 | Monotone systems involving ordinary differential equations |  |  |
-| 34C14 | Symmetries, invariants of ordinary differential equations [See also 37C79] |  |  |
-| 34C15 | Nonlinear oscillations and coupled oscillators for ordinary differential equations |  |  |
-| 34C20 | Transformation and reduction of ordinary differential equations and systems, normal forms |  |  |
-| 34C23 | Bifurcation theory for ordinary differential equations [See also 37Gxx] |  |  |
-| 34C25 | Periodic solutions to ordinary differential equations |  |  |
-| 34C26 | Relaxation oscillations for ordinary differential equations |  |  |
-| 34C27 | Almost and pseudo-almost periodic solutions to ordinary differential equations |  |  |
-| 34C28 | Complex behavior and chaotic systems of ordinary differential equations [See also 37Dxx] |  |  |
-| 34C29 | Averaging method for ordinary differential equations |  |  |
-| 34C37 | Homoclinic and heteroclinic solutions to ordinary differential equations |  |  |
-| 34C40 | Ordinary differential equations and systems on manifolds |  |  |
-| 34C41 | Equivalence and asymptotic equivalence of ordinary differential equations |  |  |
-| 34C45 | Invariant manifolds for ordinary differential equations |  |  |
-| 34C46 | Multifrequency systems of ordinary differential equations |  |  |
-| 34C55 | Hysteresis for ordinary differential equations |  |  |
-| 34C60 | Qualitative investigation and simulation of ordinary differential equation models |  |  |
+| **34Cxx** | **Qualitative theory for ordinary differential equations [See also 37-XX]** | **Âdî tefâzulî muâdeleler için keyfiyete dair (kalitatif) nazariye [Ayrıca bakınız: 37-XX]** |  |
+| 34C05 | Topological structure of integral curves, singular points, limit cycles of ordinary differential equations | Âdî tefâzulî muâdelelerin tamâmî münhanîlerinin, münferid noktalarının, nihâî devirlerinin vaz'î bünyesi |  |
+| 34C07 | Theory of limit cycles of polynomial and analytic vector fields (existence, uniqueness, bounds, Hilbert’s 16th problem and ramifications) for ordinary differential equations | Âdî tefâzulî muâdeleler için kesîrü'l-hudûdî ve tahlîlî müteveccihe sahalarının nihâî devirleri nazariyesi (vücûd, yegânelik, hadler, Hilbert'in on altıncı meselesi ve şubeleri) |  |
+| 34C08 | Ordinary differential equations and connections with real algebraic geometry (fewnomials, desingularization, zeros of abelian integrals, etc.) | Âdî tefâzulî muâdeleler ve hakîkî hendese-i cebriyye ile irtibâtları (az-haddîler, infirâdın izâlesi, Abel tamâmîlerinin sıfırları ve emsâli) |  |
+| 34C10 | Oscillation theory, zeros, disconjugacy and comparison theory for ordinary differential equations | Âdî tefâzulî muâdeleler için ihtizaz nazariyesi, sıfırlar, gayr-ı mütezâviclik ve mukayese nazariyesi |  |
+| 34C11 | Growth and boundedness of solutions to ordinary differential equations | Âdî tefâzulî muâdeleler hallerinin nemâsı ve mahdûdiyeti |  |
+| 34C12 | Monotone systems involving ordinary differential equations | Âdî tefâzulî muâdeleleri ihtivâ eden yek-istikāmetli nizâmlar |  |
+| 34C14 | Symmetries, invariants of ordinary differential equations [See also 37C79] | Âdî tefâzulî muâdelelerin tenâzurları, lâyetegayyerleri [Ayrıca bakınız: 37C79] |  |
+| 34C15 | Nonlinear oscillations and coupled oscillators for ordinary differential equations | Âdî tefâzulî muâdeleler için gayr-ı hattî ihtizazlar ve merbût mühtezzler |  |
+| 34C20 | Transformation and reduction of ordinary differential equations and systems, normal forms | Âdî tefâzulî muâdelelerin ve nizâmlarının tahvîli ve irca'ı, nizâmî şekiller |  |
+| 34C23 | Bifurcation theory for ordinary differential equations [See also 37Gxx] | Âdî tefâzulî muâdeleler için çatallanma (iftirâk) nazariyesi [Ayrıca bakınız: 37Gxx] |  |
+| 34C25 | Periodic solutions to ordinary differential equations | Âdî tefâzulî muâdelelerin devrî halleri |  |
+| 34C26 | Relaxation oscillations for ordinary differential equations | Âdî tefâzulî muâdeleler için istirhâ (gevşeme) ihtizazları |  |
+| 34C27 | Almost and pseudo-almost periodic solutions to ordinary differential equations | Âdî tefâzulî muâdelelerin takrîben devrî ve kâzib-takrîben devrî halleri |  |
+| 34C28 | Complex behavior and chaotic systems of ordinary differential equations [See also 37Dxx] | Âdî tefâzulî muâdelelerin girift ahvâli ve kaotik (hercümercli) nizâmları [Ayrıca bakınız: 37Dxx] |  |
+| 34C29 | Averaging method for ordinary differential equations | Âdî tefâzulî muâdeleler için vasatlandırma usulü |  |
+| 34C37 | Homoclinic and heteroclinic solutions to ordinary differential equations | Âdî tefâzulî muâdelelerin homoklinik ve heteroklinik (aynı noktaya ve ayrı noktaya meyleden) halleri |  |
+| 34C40 | Ordinary differential equations and systems on manifolds | Müteşa'ibler üzerinde âdî tefâzulî muâdeleler ve nizâmları |  |
+| 34C41 | Equivalence and asymptotic equivalence of ordinary differential equations | Âdî tefâzulî muâdelelerin tekâfüü ve mukāribî tekâfüü |  |
+| 34C45 | Invariant manifolds for ordinary differential equations | Âdî tefâzulî muâdeleler için lâyetegayyer müteşa'ibler |  |
+| 34C46 | Multifrequency systems of ordinary differential equations | Âdî tefâzulî muâdelelerin çok-tekerrürlü (çok frekanslı) nizâmları |  |
+| 34C55 | Hysteresis for ordinary differential equations | Âdî tefâzulî muâdeleler için histerezis (gecikmeli tesir) |  |
+| 34C60 | Qualitative investigation and simulation of ordinary differential equation models | Âdî tefâzulî muâdeleler numûnelerinin keyfiyete dair tetkiki ve taklidi |  |
 | 34C99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **34Dxx** | **Stability theory for ordinary differential equations [See also 37C75, 93Dxx]** | **** |  |
-| 34D05 | Asymptotic properties of solutions to ordinary differential equations |  |  |
-| 34D06 | Synchronization of solutions to ordinary differential equations |  |  |
-| 34D08 | Characteristic and Lyapunov exponents of ordinary differential equations |  |  |
-| 34D09 | Dichotomy, trichotomy of solutions to ordinary differential equations |  |  |
-| 34D10 | Perturbations of ordinary differential equations |  |  |
-| 34D15 | Singular perturbations of ordinary differential equations |  |  |
-| 34D20 | Stability of solutions to ordinary differential equations |  |  |
-| 34D23 | Global stability of solutions to ordinary differential equations |  |  |
-| 34D30 | Structural stability and analogous concepts of solutions to ordinary differential equations [See also 37C20] |  |  |
-| 34D35 | Stability of manifolds of solutions to ordinary differential equations |  |  |
-| 34D45 | Attractors of solutions to ordinary differential equations [See also 37C70, 37D45] |  |  |
+| **34Dxx** | **Stability theory for ordinary differential equations [See also 37C75, 93Dxx]** | **Âdî tefâzulî muâdeleler için istikrâr nazariyesi [Ayrıca bakınız: 37C75, 93Dxx]** |  |
+| 34D05 | Asymptotic properties of solutions to ordinary differential equations | Âdî tefâzulî muâdeleler hallerinin mukāribî hâsiyetleri |  |
+| 34D06 | Synchronization of solutions to ordinary differential equations | Âdî tefâzulî muâdeleler hallerinin tezâmünü (eşzamanlanması) |  |
+| 34D08 | Characteristic and Lyapunov exponents of ordinary differential equations | Âdî tefâzulî muâdelelerin hâssa üsleri ve Lyapunov üsleri |  |
+| 34D09 | Dichotomy, trichotomy of solutions to ordinary differential equations | Âdî tefâzulî muâdeleler hallerinin ikiye ve üçe ayrılması |  |
+| 34D10 | Perturbations of ordinary differential equations | Âdî tefâzulî muâdelelerin ihtilâlleri (pertürbasyonları) |  |
+| 34D15 | Singular perturbations of ordinary differential equations | Âdî tefâzulî muâdelelerin münferid ihtilâlleri |  |
+| 34D20 | Stability of solutions to ordinary differential equations | Âdî tefâzulî muâdeleler hallerinin istikrârı |  |
+| 34D23 | Global stability of solutions to ordinary differential equations | Âdî tefâzulî muâdeleler hallerinin küllî istikrârı |  |
+| 34D30 | Structural stability and analogous concepts of solutions to ordinary differential equations [See also 37C20] | Âdî tefâzulî muâdeleler hallerinin bünyevî istikrârı ve nazîr mefhumlar [Ayrıca bakınız: 37C20] |  |
+| 34D35 | Stability of manifolds of solutions to ordinary differential equations | Âdî tefâzulî muâdeleler halleri müteşa'iblerinin istikrârı |  |
+| 34D45 | Attractors of solutions to ordinary differential equations [See also 37C70, 37D45] | Âdî tefâzulî muâdeleler hallerinin câzibleri (cezbedicileri) [Ayrıca bakınız: 37C70, 37D45] |  |
 | 34D99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **34Exx** | **Asymptotic theory for ordinary differential equations** | **** |  |
-| 34E05 | Asymptotic expansions of solutions to ordinary differential equations |  |  |
-| 34E10 | Perturbations, asymptotics of solutions to ordinary differential equations |  |  |
-| 34E13 | Multiple scale methods for ordinary differential equations |  |  |
-| 34E15 | Singular perturbations for ordinary differential equations |  |  |
-| 34E17 | Canard solutions to ordinary differential equations |  |  |
-| 34E18 | Methods of nonstandard analysis for ordinary differential equations |  |  |
-| 34E20 | Singular perturbations, turning point theory, WKB methods for ordinary differential equations |  |  |
+| **34Exx** | **Asymptotic theory for ordinary differential equations** | **Âdî tefâzulî muâdeleler için mukāribî nazariye** |  |
+| 34E05 | Asymptotic expansions of solutions to ordinary differential equations | Âdî tefâzulî muâdeleler hallerinin mukāribî inkişâfları |  |
+| 34E10 | Perturbations, asymptotics of solutions to ordinary differential equations | Âdî tefâzulî muâdeleler hallerinin ihtilâlleri, mukāribî ahvâli |  |
+| 34E13 | Multiple scale methods for ordinary differential equations | Âdî tefâzulî muâdeleler için katlı mikyâs usulleri |  |
+| 34E15 | Singular perturbations for ordinary differential equations | Âdî tefâzulî muâdeleler için münferid ihtilâller |  |
+| 34E17 | Canard solutions to ordinary differential equations | Âdî tefâzulî muâdelelerin Kanard (ördek) halleri |  |
+| 34E18 | Methods of nonstandard analysis for ordinary differential equations | Âdî tefâzulî muâdeleler için gayr-ı mi'yârî tahlîl usulleri |  |
+| 34E20 | Singular perturbations, turning point theory, WKB methods for ordinary differential equations | Âdî tefâzulî muâdeleler için münferid ihtilâller, dönüm noktası nazariyesi, Wentzel-Kramers-Brillouin (WKB) usulleri |  |
 | 34E99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **34Fxx** | **Ordinary differential equations and systems with randomness [See also 34K50, 60H10, 93E03]** | **** |  |
-| 34F05 | Ordinary differential equations and systems with randomness |  |  |
-| 34F10 | Bifurcation of solutions to ordinary differential equations involving randomness |  |  |
-| 34F15 | Resonance phenomena for ordinary differential equations involving randomness |  |  |
+| **34Fxx** | **Ordinary differential equations and systems with randomness [See also 34K50, 60H10, 93E03]** | **Tesâdüfîlik ihtivâ eden âdî tefâzulî muâdeleler ve nizâmlar [Ayrıca bakınız: 34K50, 60H10, 93E03]** |  |
+| 34F05 | Ordinary differential equations and systems with randomness | Tesâdüfîlik ihtivâ eden âdî tefâzulî muâdeleler ve nizâmlar |  |
+| 34F10 | Bifurcation of solutions to ordinary differential equations involving randomness | Tesâdüfîlik ihtivâ eden âdî tefâzulî muâdeleler hallerinin çatallanması |  |
+| 34F15 | Resonance phenomena for ordinary differential equations involving randomness | Tesâdüfîlik ihtivâ eden âdî tefâzulî muâdeleler için tanîn (rezonans) hâdiseleri |  |
 | 34F99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **34Gxx** | **Differential equations in abstract spaces [See also 34K30, 47Jxx, 58D25]** | **** |  |
-| 34G10 | Linear differential equations in abstract spaces [See also 47D06, 47D09] |  |  |
-| 34G20 | Nonlinear differential equations in abstract spaces [See also 34K30, 47Jxx] |  |  |
-| 34G25 | Evolution inclusions |  |  |
+| **34Gxx** | **Differential equations in abstract spaces [See also 34K30, 47Jxx, 58D25]** | **Mücerred fezâlarda tefâzulî muâdeleler [Ayrıca bakınız: 34K30, 47Jxx, 58D25]** |  |
+| 34G10 | Linear differential equations in abstract spaces [See also 47D06, 47D09] | Mücerred fezâlarda hattî tefâzulî muâdeleler [Ayrıca bakınız: 47D06, 47D09] |  |
+| 34G20 | Nonlinear differential equations in abstract spaces [See also 34K30, 47Jxx] | Mücerred fezâlarda gayr-ı hattî tefâzulî muâdeleler [Ayrıca bakınız: 34K30, 47Jxx] |  |
+| 34G25 | Evolution inclusions | Tekâmül ihtivâları |  |
 | 34G99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **34Hxx** | **Control problems involving ordinary differential equations [See also 49J15, 49K15, 93C15]** | **** |  |
-| 34H05 | Control problems involving ordinary differential equations |  |  |
-| 34H10 | Chaos control for problems involving ordinary differential equations |  |  |
-| 34H15 | Stabilization of solutions to ordinary differential equations |  |  |
-| 34H20 | Bifurcation control of ordinary differential equations |  |  |
+| **34Hxx** | **Control problems involving ordinary differential equations [See also 49J15, 49K15, 93C15]** | **Âdî tefâzulî muâdeleleri ihtivâ eden zabt (kontrol) meseleleri [Ayrıca bakınız: 49J15, 49K15, 93C15]** |  |
+| 34H05 | Control problems involving ordinary differential equations | Âdî tefâzulî muâdeleleri ihtivâ eden zabt meseleleri |  |
+| 34H10 | Chaos control for problems involving ordinary differential equations | Âdî tefâzulî muâdeleleri ihtivâ eden meseleler için kaos zabtı |  |
+| 34H15 | Stabilization of solutions to ordinary differential equations | Âdî tefâzulî muâdeleler hallerinin istikrâra kavuşturulması |  |
+| 34H20 | Bifurcation control of ordinary differential equations | Âdî tefâzulî muâdelelerin çatallanma zabtı |  |
 | 34H99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **34Kxx** | **Functional-differential equations (including equations with delayed, advanced or state-dependent argument)** | **** |  |
-| 34K04 | Symmetries, invariants of functional-differential equations [See also 37C79] |  |  |
-| 34K05 | General theory of functional-differential equations |  |  |
-| 34K06 | Linear functional-differential equations |  |  |
-| 34K07 | Theoretical approximation of solutions to functional-differential equations |  |  |
-| 34K08 | Spectral theory of functional-differential operators |  |  |
-| 34K09 | Functional-differential inclusions |  |  |
-| 34K10 | Boundary value problems for functional-differential equations |  |  |
-| 34K11 | Oscillation theory of functional-differential equations |  |  |
-| 34K12 | Growth, boundedness, comparison of solutions to functional-differential equations [See also 37C35] |  |  |
-| 34K13 | Periodic solutions to functional-differential equations [See also 37C27] |  |  |
-| 34K14 | Almost and pseudo-almost periodic solutions to functional-differential equations |  |  |
-| 34K16 | Heteroclinic and homoclinic orbits of functional-differential equations [See also 37C29] |  |  |
-| 34K17 | Transformation and reduction of functional-differential equations and systems, normal forms |  |  |
-| 34K18 | Bifurcation theory of functional-differential equations [See also 37Gxx] |  |  |
-| 34K19 | Invariant manifolds of functional-differential equations |  |  |
-| 34K20 | Stability theory of functional-differential equations [See also 37C75] |  |  |
-| 34K21 | Stationary solutions of functional-differential equations |  |  |
-| 34K23 | Complex (chaotic) behavior of solutions to functional-differential equations [See also 37D45] |  |  |
-| 34K24 | Synchronization of functional-differential equations |  |  |
-| 34K25 | Asymptotic theory of functional-differential equations |  |  |
-| 34K26 | Singular perturbations of functional-differential equations |  |  |
-| 34K27 | Perturbations of functional-differential equations |  |  |
-| 34K29 | Inverse problems for functional-differential equations |  |  |
-| 34K30 | Functional-differential equations in abstract spaces [See also 34Gxx, 35R09, 35R10, 47Jxx] |  |  |
-| 34K31 | Lattice functional-differential equations |  |  |
-| 34K32 | Implicit functional-differential equations |  |  |
-| 34K33 | Averaging for functional-differential equations |  |  |
-| 34K34 | Hybrid systems of functional-differential equations |  |  |
-| 34K35 | Control problems for functional-differential equations [See also 49J21, 49K21, 93C23] |  |  |
-| 34K36 | Fuzzy functional-differential equations |  |  |
-| 34K37 | Functional-differential equations with fractional derivatives |  |  |
-| 34K38 | Functional-differential inequalities |  |  |
-| 34K39 | Discontinuous functional-differential equations |  |  |
-| 34K40 | Neutral functional-differential equations |  |  |
-| 34K41 | Functional-differential equations in the complex domain |  |  |
-| 34K42 | Functional-differential equations on time scales or measure chains |  |  |
-| 34K43 | Functional-differential equations with state-dependent arguments |  |  |
-| 34K45 | Functional-differential equations with impulses |  |  |
-| 34K50 | Stochastic functional-differential equations [See also 34Fxx, 60Hxx] |  |  |
-| 34K60 | Qualitative investigation and simulation of models involving functional-differential equations |  |  |
+| **34Kxx** | **Functional-differential equations (including equations with delayed, advanced or state-dependent argument)** | **Tâbiî-tefâzulî muâdeleler (tehirli, takdimli yahut hâle bağlı mütehavvilli muâdeleler dahil)** |  |
+| 34K04 | Symmetries, invariants of functional-differential equations [See also 37C79] | Tâbiî-tefâzulî muâdelelerin tenâzurları, lâyetegayyerleri [Ayrıca bakınız: 37C79] |  |
+| 34K05 | General theory of functional-differential equations | Tâbiî-tefâzulî muâdelelerin umûmî nazariyesi |  |
+| 34K06 | Linear functional-differential equations | Hattî tâbiî-tefâzulî muâdeleler |  |
+| 34K07 | Theoretical approximation of solutions to functional-differential equations | Tâbiî-tefâzulî muâdeleler hallerinin nazarî takrîbi |  |
+| 34K08 | Spectral theory of functional-differential operators | Tâbiî-tefâzulî âmillerin tayf nazariyesi |  |
+| 34K09 | Functional-differential inclusions | Tâbiî-tefâzulî ihtivâlar |  |
+| 34K10 | Boundary value problems for functional-differential equations | Tâbiî-tefâzulî muâdeleler için hudûd kıymeti meseleleri |  |
+| 34K11 | Oscillation theory of functional-differential equations | Tâbiî-tefâzulî muâdelelerin ihtizaz nazariyesi |  |
+| 34K12 | Growth, boundedness, comparison of solutions to functional-differential equations [See also 37C35] | Tâbiî-tefâzulî muâdeleler hallerinin nemâsı, mahdûdiyeti, mukayesesi [Ayrıca bakınız: 37C35] |  |
+| 34K13 | Periodic solutions to functional-differential equations [See also 37C27] | Tâbiî-tefâzulî muâdelelerin devrî halleri [Ayrıca bakınız: 37C27] |  |
+| 34K14 | Almost and pseudo-almost periodic solutions to functional-differential equations | Tâbiî-tefâzulî muâdelelerin takrîben devrî ve kâzib-takrîben devrî halleri |  |
+| 34K16 | Heteroclinic and homoclinic orbits of functional-differential equations [See also 37C29] | Tâbiî-tefâzulî muâdelelerin heteroklinik ve homoklinik medârları [Ayrıca bakınız: 37C29] |  |
+| 34K17 | Transformation and reduction of functional-differential equations and systems, normal forms | Tâbiî-tefâzulî muâdelelerin ve nizâmlarının tahvîli ve irca'ı, nizâmî şekiller |  |
+| 34K18 | Bifurcation theory of functional-differential equations [See also 37Gxx] | Tâbiî-tefâzulî muâdelelerin çatallanma nazariyesi [Ayrıca bakınız: 37Gxx] |  |
+| 34K19 | Invariant manifolds of functional-differential equations | Tâbiî-tefâzulî muâdelelerin lâyetegayyer müteşa'ibleri |  |
+| 34K20 | Stability theory of functional-differential equations [See also 37C75] | Tâbiî-tefâzulî muâdelelerin istikrâr nazariyesi [Ayrıca bakınız: 37C75] |  |
+| 34K21 | Stationary solutions of functional-differential equations | Tâbiî-tefâzulî muâdelelerin sükûnî (durağan) halleri |  |
+| 34K23 | Complex (chaotic) behavior of solutions to functional-differential equations [See also 37D45] | Tâbiî-tefâzulî muâdeleler hallerinin girift (kaotik) ahvâli [Ayrıca bakınız: 37D45] |  |
+| 34K24 | Synchronization of functional-differential equations | Tâbiî-tefâzulî muâdelelerin tezâmünü |  |
+| 34K25 | Asymptotic theory of functional-differential equations | Tâbiî-tefâzulî muâdelelerin mukāribî nazariyesi |  |
+| 34K26 | Singular perturbations of functional-differential equations | Tâbiî-tefâzulî muâdelelerin münferid ihtilâlleri |  |
+| 34K27 | Perturbations of functional-differential equations | Tâbiî-tefâzulî muâdelelerin ihtilâlleri |  |
+| 34K29 | Inverse problems for functional-differential equations | Tâbiî-tefâzulî muâdeleler için makûs meseleler |  |
+| 34K30 | Functional-differential equations in abstract spaces [See also 34Gxx, 35R09, 35R10, 47Jxx] | Mücerred fezâlarda tâbiî-tefâzulî muâdeleler [Ayrıca bakınız: 34Gxx, 35R09, 35R10, 47Jxx] |  |
+| 34K31 | Lattice functional-differential equations | Kafes üzerinde tâbiî-tefâzulî muâdeleler |  |
+| 34K32 | Implicit functional-differential equations | Zımnî tâbiî-tefâzulî muâdeleler |  |
+| 34K33 | Averaging for functional-differential equations | Tâbiî-tefâzulî muâdeleler için vasatlandırma |  |
+| 34K34 | Hybrid systems of functional-differential equations | Tâbiî-tefâzulî muâdelelerin melez nizâmları |  |
+| 34K35 | Control problems for functional-differential equations [See also 49J21, 49K21, 93C23] | Tâbiî-tefâzulî muâdeleler için zabt meseleleri [Ayrıca bakınız: 49J21, 49K21, 93C23] |  |
+| 34K36 | Fuzzy functional-differential equations | Mübhem tâbiî-tefâzulî muâdeleler |  |
+| 34K37 | Functional-differential equations with fractional derivatives | Kesrî müştaklı tâbiî-tefâzulî muâdeleler |  |
+| 34K38 | Functional-differential inequalities | Tâbiî-tefâzulî adem-i müsâvâtlar |  |
+| 34K39 | Discontinuous functional-differential equations | Munkatı' tâbiî-tefâzulî muâdeleler |  |
+| 34K40 | Neutral functional-differential equations | Bîtaraf (nötr) tâbiî-tefâzulî muâdeleler |  |
+| 34K41 | Functional-differential equations in the complex domain | Mürekkeb mıntıkada tâbiî-tefâzulî muâdeleler |  |
+| 34K42 | Functional-differential equations on time scales or measure chains | Zaman mikyâsları yahut ölçü silsileleri üzerinde tâbiî-tefâzulî muâdeleler |  |
+| 34K43 | Functional-differential equations with state-dependent arguments | Hâle bağlı mütehavvilli tâbiî-tefâzulî muâdeleler |  |
+| 34K45 | Functional-differential equations with impulses | Darbeli tâbiî-tefâzulî muâdeleler |  |
+| 34K50 | Stochastic functional-differential equations [See also 34Fxx, 60Hxx] | İhtimâlî (stokastik) tâbiî-tefâzulî muâdeleler [Ayrıca bakınız: 34Fxx, 60Hxx] |  |
+| 34K60 | Qualitative investigation and simulation of models involving functional-differential equations | Tâbiî-tefâzulî muâdeleleri ihtivâ eden numûnelerin keyfiyete dair tetkiki ve taklidi |  |
 | 34K99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **34Lxx** | **Ordinary differential operators [See also 47E05]** | **** |  |
-| 34L05 | General spectral theory of ordinary differential operators |  |  |
-| 34L10 | Eigenfunctions, eigenfunction expansions, completeness of eigenfunctions of ordinary differential operators |  |  |
-| 34L15 | Eigenvalues, estimation of eigenvalues, upper and lower bounds of ordinary differential operators |  |  |
-| 34L16 | Numerical approximation of eigenvalues and of other parts of the spectrum of ordinary differential operators |  |  |
-| 34L20 | Asymptotic distribution of eigenvalues, asymptotic theory of eigenfunctions for ordinary differential operators |  |  |
-| 34L25 | Scattering theory, inverse scattering involving ordinary differential operators |  |  |
-| 34L30 | Nonlinear ordinary differential operators |  |  |
-| 34L40 | Particular ordinary differential operators (Dirac, one-dimensional Schrödinger, etc.) |  |  |
+| **34Lxx** | **Ordinary differential operators [See also 47E05]** | **Âdî tefâzulî âmiller [Ayrıca bakınız: 47E05]** |  |
+| 34L05 | General spectral theory of ordinary differential operators | Âdî tefâzulî âmillerin umûmî tayf nazariyesi |  |
+| 34L10 | Eigenfunctions, eigenfunction expansions, completeness of eigenfunctions of ordinary differential operators | Âdî tefâzulî âmillerin zâtî tâbileri, zâtî tâbi inkişâfları, zâtî tâbilerin tamâmiyeti |  |
+| 34L15 | Eigenvalues, estimation of eigenvalues, upper and lower bounds of ordinary differential operators | Âdî tefâzulî âmillerin zâtî kıymetleri, zâtî kıymetlerin tahmîni, üst ve alt hadleri |  |
+| 34L16 | Numerical approximation of eigenvalues and of other parts of the spectrum of ordinary differential operators | Âdî tefâzulî âmillerin zâtî kıymetlerinin ve tayfın sâir cüz'lerinin adedî takrîbi |  |
+| 34L20 | Asymptotic distribution of eigenvalues, asymptotic theory of eigenfunctions for ordinary differential operators | Âdî tefâzulî âmiller için zâtî kıymetlerin mukāribî tevzî'i, zâtî tâbilerin mukāribî nazariyesi |  |
+| 34L25 | Scattering theory, inverse scattering involving ordinary differential operators | Âdî tefâzulî âmilleri ihtivâ eden inteşâr (saçılma) nazariyesi, makûs inteşâr |  |
+| 34L30 | Nonlinear ordinary differential operators | Gayr-ı hattî âdî tefâzulî âmiller |  |
+| 34L40 | Particular ordinary differential operators (Dirac, one-dimensional Schrödinger, etc.) | Hususî âdî tefâzulî âmiller (Dirac, tek buudlu Schrödinger ve emsâli) |  |
 | 34L99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **34Mxx** | **Ordinary differential equations in the complex domain [See also 30Dxx, 32G34]** | **** |  |
-| 34M03 | Linear ordinary differential equations and systems in the complex domain |  |  |
-| 34M04 | Nonlinear ordinary differential equations and systems in the complex domain |  |  |
-| 34M05 | Entire and meromorphic solutions to ordinary differential equations in the complex domain |  |  |
-| 34M10 | Oscillation, growth of solutions to ordinary differential equations in the complex domain |  |  |
-| 34M15 | Algebraic aspects (differential-algebraic, hypertranscendence, group-theoretical) of ordinary differential equations in the complex domain |  |  |
-| 34M25 | Formal solutions and transform techniques for ordinary differential equations in the complex domain |  |  |
-| 34M30 | Asymptotics and summation methods for ordinary differential equations in the complex domain |  |  |
-| 34M35 | Singularities, monodromy and local behavior of solutions to ordinary differential equations in the complex domain, normal forms |  |  |
-| 34M40 | Stokes phenomena and connection problems (linear and nonlinear) for ordinary differential equations in the complex domain |  |  |
-| 34M45 | Ordinary differential equations on complex manifolds |  |  |
-| 34M46 | Spectral theory for ordinary differential operators in the complex domain |  |  |
-| 34M50 | Inverse problems (Riemann-Hilbert, inverse differential Galois, etc.) for ordinary differential equations in the complex domain |  |  |
-| 34M55 | Painlevé and other special ordinary differential equations in the complex domain; classification, hierarchies |  |  |
-| 34M56 | Isomonodromic deformations for ordinary differential equations in the complex domain |  |  |
-| 34M60 | Singular perturbation problems for ordinary differential equations in the complex domain (complex WKB, turning points, steepest descent) [See also 34E20] |  |  |
-| 34M65 | Topological structure of trajectories of ordinary differential equations in the complex domain |  |  |
+| **34Mxx** | **Ordinary differential equations in the complex domain [See also 30Dxx, 32G34]** | **Mürekkeb mıntıkada âdî tefâzulî muâdeleler [Ayrıca bakınız: 30Dxx, 32G34]** |  |
+| 34M03 | Linear ordinary differential equations and systems in the complex domain | Mürekkeb mıntıkada hattî âdî tefâzulî muâdeleler ve nizâmları |  |
+| 34M04 | Nonlinear ordinary differential equations and systems in the complex domain | Mürekkeb mıntıkada gayr-ı hattî âdî tefâzulî muâdeleler ve nizâmları |  |
+| 34M05 | Entire and meromorphic solutions to ordinary differential equations in the complex domain | Mürekkeb mıntıkada âdî tefâzulî muâdelelerin tam ve kesr-şekilli halleri |  |
+| 34M10 | Oscillation, growth of solutions to ordinary differential equations in the complex domain | Mürekkeb mıntıkada âdî tefâzulî muâdeleler hallerinin ihtizazı, nemâsı |  |
+| 34M15 | Algebraic aspects (differential-algebraic, hypertranscendence, group-theoretical) of ordinary differential equations in the complex domain | Mürekkeb mıntıkada âdî tefâzulî muâdelelerin cebrî cihetleri (tefâzulî-cebrî, fevk-müteâlîlik, zümreler nazariyesine ait) |  |
+| 34M25 | Formal solutions and transform techniques for ordinary differential equations in the complex domain | Mürekkeb mıntıkada âdî tefâzulî muâdeleler için sûrî haller ve tahvîl usulleri |  |
+| 34M30 | Asymptotics and summation methods for ordinary differential equations in the complex domain | Mürekkeb mıntıkada âdî tefâzulî muâdeleler için mukāribî ahvâl ve cem' usulleri |  |
+| 34M35 | Singularities, monodromy and local behavior of solutions to ordinary differential equations in the complex domain, normal forms | Mürekkeb mıntıkada âdî tefâzulî muâdeleler hallerinin infirâdları, monodromisi ve mahallî ahvâli, nizâmî şekiller |  |
+| 34M40 | Stokes phenomena and connection problems (linear and nonlinear) for ordinary differential equations in the complex domain | Mürekkeb mıntıkada âdî tefâzulî muâdeleler için Stokes hâdiseleri ve rabt meseleleri (hattî ve gayr-ı hattî) |  |
+| 34M45 | Ordinary differential equations on complex manifolds | Mürekkeb müteşa'ibler üzerinde âdî tefâzulî muâdeleler |  |
+| 34M46 | Spectral theory for ordinary differential operators in the complex domain | Mürekkeb mıntıkada âdî tefâzulî âmiller için tayf nazariyesi |  |
+| 34M50 | Inverse problems (Riemann-Hilbert, inverse differential Galois, etc.) for ordinary differential equations in the complex domain | Mürekkeb mıntıkada âdî tefâzulî muâdeleler için makûs meseleler (Riemann-Hilbert, makûs tefâzulî Galois ve emsâli) |  |
+| 34M55 | Painlevé and other special ordinary differential equations in the complex domain; classification, hierarchies | Mürekkeb mıntıkada Painlevé ve sâir hususî âdî tefâzulî muâdeleler; tasnif, silsile-i merâtib |  |
+| 34M56 | Isomonodromic deformations for ordinary differential equations in the complex domain | Mürekkeb mıntıkada âdî tefâzulî muâdeleler için eş-monodromili tagayyür-i şekiller |  |
+| 34M60 | Singular perturbation problems for ordinary differential equations in the complex domain (complex WKB, turning points, steepest descent) [See also 34E20] | Mürekkeb mıntıkada âdî tefâzulî muâdeleler için münferid ihtilâl meseleleri (mürekkeb Wentzel-Kramers-Brillouin, dönüm noktaları, en dik iniş) [Ayrıca bakınız: 34E20] |  |
+| 34M65 | Topological structure of trajectories of ordinary differential equations in the complex domain | Mürekkeb mıntıkada âdî tefâzulî muâdelelerin mesîrlerinin (yörüngelerinin) vaz'î bünyesi |  |
 | 34M99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **34Nxx** | **Dynamic equations on time scales or measure chains {For real analysis on time scales, see 26E70}** | **** |  |
-| 34N05 | Dynamic equations on time scales or measure chains {For real analysis on time scales or measure chains, see 26E70} |  |  |
+| **34Nxx** | **Dynamic equations on time scales or measure chains {For real analysis on time scales, see 26E70}** | **Zaman mikyâsları yahut ölçü silsileleri üzerinde harekî muâdeleler {Zaman mikyâsları üzerinde hakîkî tahlîl için bakınız: 26E70}** |  |
+| 34N05 | Dynamic equations on time scales or measure chains {For real analysis on time scales or measure chains, see 26E70} | Zaman mikyâsları yahut ölçü silsileleri üzerinde harekî muâdeleler {Zaman mikyâsları yahut ölçü silsileleri üzerinde hakîkî tahlîl için bakınız: 26E70} |  |
 | 34N99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
-## 35-XX — Partial differential equations
+## 35-XX — Kısmî tefâzulî muâdeleler (kısmî diferansiyel denklemler)
 
 Partial differential equations
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 35-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to partial differential equations |  |  |
-| 35-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to partial differential equations |  |  |
-| 35-02 | Research exposition (monographs, survey articles) pertaining to partial differential equations |  |  |
-| 35-03 | History of partial differential equations [Consider also classification numbers from Section 01] |  |  |
-| 35-04 | Software, source code, etc. for problems pertaining to partial differential equations |  |  |
-| 35-06 | Proceedings, conferences, collections, etc. pertaining to partial differential equations |  |  |
-| 35-11 | Research data for problems pertaining to partial differential equations |  |  |
-| **35Axx** | **General topics in partial differential equations** | **** |  |
-| 35A01 | Existence problems for PDEs: global existence, local existence, non-existence |  |  |
-| 35A02 | Uniqueness problems for PDEs: global uniqueness, local uniqueness, non-uniqueness |  |  |
-| 35A08 | Fundamental solutions to PDEs |  |  |
-| 35A09 | Classical solutions to PDEs |  |  |
-| 35A10 | Cauchy-Kovalevskaya theorems |  |  |
-| 35A15 | Variational methods applied to PDEs |  |  |
-| 35A16 | Topological and monotonicity methods applied to PDEs |  |  |
-| 35A17 | Parametrices in context of PDEs |  |  |
-| 35A18 | Wave front sets in context of PDEs |  |  |
-| 35A20 | Analyticity in context of PDEs |  |  |
-| 35A21 | Singularity in context of PDEs |  |  |
-| 35A22 | Transform methods (e.g., integral transforms) applied to PDEs |  |  |
-| 35A23 | Inequalities applied to PDEs involving derivatives, differential and integral operators, or integrals |  |  |
-| 35A24 | Methods of ordinary differential equations applied to PDEs |  |  |
-| 35A25 | Other special methods applied to PDEs |  |  |
-| 35A27 | Microlocal methods and methods of sheaf theory and homological algebra applied to PDEs [See also 32C38, 58J15] |  |  |
-| 35A30 | Geometric theory, characteristics, transformations in context of PDEs [See also 58J70, 58J72] |  |  |
-| 35A35 | Theoretical approximation in context of PDEs {For numerical analysis, see 65Mxx, 65Nxx} |  |  |
+| 35-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to partial differential equations | kısmî tefâzulî muâdeleler hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 35-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to partial differential equations | kısmî tefâzulî muâdeleler hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 35-02 | Research exposition (monographs, survey articles) pertaining to partial differential equations | kısmî tefâzulî muâdeleler hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 35-03 | History of partial differential equations [Consider also classification numbers from Section 01] | Kısmî tefâzulî muâdelelerin târihi [01. babın tasnif numaralarına da bakılsın] |  |
+| 35-04 | Software, source code, etc. for problems pertaining to partial differential equations | kısmî tefâzulî muâdeleler sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 35-06 | Proceedings, conferences, collections, etc. pertaining to partial differential equations | kısmî tefâzulî muâdeleler hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 35-11 | Research data for problems pertaining to partial differential equations | kısmî tefâzulî muâdeleler sahasındaki meselelere dair tetkik verileri |  |
+| **35Axx** | **General topics in partial differential equations** | **Kısmî tefâzulî muâdeleler hakkında umûmî mevzûlar** |  |
+| 35A01 | Existence problems for PDEs: global existence, local existence, non-existence | Kısmî tefâzulî muâdelelerde vücûd meseleleri: küllî vücûd, mahallî vücûd, adem-i vücûd |  |
+| 35A02 | Uniqueness problems for PDEs: global uniqueness, local uniqueness, non-uniqueness | Kısmî tefâzulî muâdelelerde vahdet (teklik) meseleleri: küllî vahdet, mahallî vahdet, adem-i vahdet |  |
+| 35A08 | Fundamental solutions to PDEs | Kısmî tefâzulî muâdelelerin esâsî halleri |  |
+| 35A09 | Classical solutions to PDEs | Kısmî tefâzulî muâdelelerin klasik halleri |  |
+| 35A10 | Cauchy-Kovalevskaya theorems | Cauchy-Kovalevskaya kaziyyeleri | nakil |
+| 35A15 | Variational methods applied to PDEs | Kısmî tefâzulî muâdelelere tatbik edilen tehavvülî usuller |  |
+| 35A16 | Topological and monotonicity methods applied to PDEs | Kısmî tefâzulî muâdelelere tatbik edilen vaz'î usuller ve yeknesak-tegayyür (monotonluk) usulleri |  |
+| 35A17 | Parametrices in context of PDEs | Kısmî tefâzulî muâdeleler bağlamında şibh-i halledici âmiller (parametriksler) | şüpheli: "parametrix" için yerleşik karşılık bilmiyorum |
+| 35A18 | Wave front sets in context of PDEs | Kısmî tefâzulî muâdeleler bağlamında mevc cephesi mecmûaları |  |
+| 35A20 | Analyticity in context of PDEs | Kısmî tefâzulî muâdeleler bağlamında tahlîlîlik |  |
+| 35A21 | Singularity in context of PDEs | Kısmî tefâzulî muâdeleler bağlamında infirâd |  |
+| 35A22 | Transform methods (e.g., integral transforms) applied to PDEs | Kısmî tefâzulî muâdelelere tatbik edilen tahvîl usulleri (meselâ tamâmî tahvîller) |  |
+| 35A23 | Inequalities applied to PDEs involving derivatives, differential and integral operators, or integrals | Kısmî tefâzulî muâdelelere tatbik edilen, müştakları, tefâzulî ve tamâmî âmilleri yahut tamâmîleri ihtivâ eden adem-i müsâvâtlar |  |
+| 35A24 | Methods of ordinary differential equations applied to PDEs | Kısmî tefâzulî muâdelelere tatbik edilen âdî tefâzulî muâdeleler usulleri |  |
+| 35A25 | Other special methods applied to PDEs | Kısmî tefâzulî muâdelelere tatbik edilen diğer hususî usuller |  |
+| 35A27 | Microlocal methods and methods of sheaf theory and homological algebra applied to PDEs [See also 32C38, 58J15] | Kısmî tefâzulî muâdelelere tatbik edilen mikro-mahallî usuller ile deste nazariyesi ve tecânüsî cebir usulleri [Ayrıca bakınız: 32C38, 58J15] |  |
+| 35A30 | Geometric theory, characteristics, transformations in context of PDEs [See also 58J70, 58J72] | Kısmî tefâzulî muâdeleler bağlamında hendesî nazariye, hâssa münhanîleri (karakteristikler), tahvîller [Ayrıca bakınız: 58J70, 58J72] |  |
+| 35A35 | Theoretical approximation in context of PDEs {For numerical analysis, see 65Mxx, 65Nxx} | Kısmî tefâzulî muâdeleler bağlamında nazarî takrîb {Adedî tahlîl için bakınız: 65Mxx, 65Nxx} |  |
 | 35A99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **35Bxx** | **Qualitative properties of solutions to partial differential equations** | **** |  |
-| 35B05 | Oscillation, zeros of solutions, mean value theorems, etc. in context of PDEs |  |  |
-| 35B06 | Symmetries, invariants, etc. in context of PDEs |  |  |
-| 35B07 | Axially symmetric solutions to PDEs |  |  |
-| 35B08 | Entire solutions to PDEs |  |  |
-| 35B09 | Positive solutions to PDEs |  |  |
-| 35B10 | Periodic solutions to PDEs |  |  |
-| 35B15 | Almost and pseudo-almost periodic solutions to PDEs |  |  |
-| 35B20 | Perturbations in context of PDEs |  |  |
-| 35B25 | Singular perturbations in context of PDEs |  |  |
-| 35B27 | Homogenization in context of PDEs; PDEs in media with periodic structure [See also 74Q05, 74Q10, 76M50, 78M40, 80M40] |  |  |
-| 35B30 | Dependence of solutions to PDEs on initial and/or boundary data and/or on parameters of PDEs [See also 37Cxx] |  |  |
-| 35B32 | Bifurcations in context of PDEs [See also 34C23, 34F10, 34H20, 37F46, 37Gxx, 37H20, 37J20, 37K50, 37L10, 37M20, 47J15, 58E05, 58E07, 58J55] |  |  |
-| 35B33 | Critical exponents in context of PDEs |  |  |
-| 35B34 | Resonance in context of PDEs [See also 34F15, 70J40, 70K28, 70K30, 81U24] |  |  |
-| 35B35 | Stability in context of PDEs [See also 34Dxx, 37B25, 37C20, 37C75, 37F15, 37J25, 37K45, 37L15, 49K40, 58K25, 93Dxx] |  |  |
-| 35B36 | Pattern formations in context of PDEs [See also 92C15] |  |  |
-| 35B38 | Critical points of functionals in context of PDEs (e.g., energy functionals) [See also 57R70, 58K05, 58E05] |  |  |
-| 35B40 | Asymptotic behavior of solutions to PDEs |  |  |
-| 35B41 | Attractors [See also 34D45, 37B35, 37C70, 37D45, 37G35, 37L30, 37M22] |  |  |
-| 35B42 | Inertial manifolds [See also 37L25] |  |  |
-| 35B44 | Blow-up in context of PDEs |  |  |
-| 35B45 | A priori estimates in context of PDEs |  |  |
-| 35B50 | Maximum principles in context of PDEs |  |  |
-| 35B51 | Comparison principles in context of PDEs |  |  |
-| 35B53 | Liouville theorems and Phragmén-Lindelöf theorems in context of PDEs |  |  |
-| 35B60 | Continuation and prolongation of solutions to PDEs [See also 58A15, 58A17, 58Hxx] |  |  |
-| 35B65 | Smoothness and regularity of solutions to PDEs |  |  |
+| **35Bxx** | **Qualitative properties of solutions to partial differential equations** | **Kısmî tefâzulî muâdelelerin hallerinin keyfî vasıfları** |  |
+| 35B05 | Oscillation, zeros of solutions, mean value theorems, etc. in context of PDEs | Kısmî tefâzulî muâdeleler bağlamında ihtizâz, hallerin sıfırları, vasat kıymet kaziyyeleri ve emsâli |  |
+| 35B06 | Symmetries, invariants, etc. in context of PDEs | Kısmî tefâzulî muâdeleler bağlamında tenâzurlar, lâ-yetegayyerler ve emsâli |  |
+| 35B07 | Axially symmetric solutions to PDEs | Kısmî tefâzulî muâdelelerin mihver etrafında mütenâzır halleri |  |
+| 35B08 | Entire solutions to PDEs | Kısmî tefâzulî muâdelelerin tâm (bütün fezâda tarif edilmiş) halleri |  |
+| 35B09 | Positive solutions to PDEs | Kısmî tefâzulî muâdelelerin müsbet halleri |  |
+| 35B10 | Periodic solutions to PDEs | Kısmî tefâzulî muâdelelerin devrî halleri |  |
+| 35B15 | Almost and pseudo-almost periodic solutions to PDEs | Kısmî tefâzulî muâdelelerin takrîben devrî ve kâzib-takrîben devrî halleri |  |
+| 35B20 | Perturbations in context of PDEs | Kısmî tefâzulî muâdeleler bağlamında ihtilâller |  |
+| 35B25 | Singular perturbations in context of PDEs | Kısmî tefâzulî muâdeleler bağlamında münferid ihtilâller |  |
+| 35B27 | Homogenization in context of PDEs; PDEs in media with periodic structure [See also 74Q05, 74Q10, 76M50, 78M40, 80M40] | Kısmî tefâzulî muâdeleler bağlamında mütecânisleştirme; devrî bünyeli vasatlarda kısmî tefâzulî muâdeleler [Ayrıca bakınız: 74Q05, 74Q10, 76M50, 78M40, 80M40] |  |
+| 35B30 | Dependence of solutions to PDEs on initial and/or boundary data and/or on parameters of PDEs [See also 37Cxx] | Kısmî tefâzulî muâdelelerin hallerinin ibtidâî ve/veya hudûd verilerine ve/veya kısmî tefâzulî muâdelelerin mütehavvil sâbitlerine (parametrelerine) tâbiiyeti [Ayrıca bakınız: 37Cxx] |  |
+| 35B32 | Bifurcations in context of PDEs [See also 34C23, 34F10, 34H20, 37F46, 37Gxx, 37H20, 37J20, 37K50, 37L10, 37M20, 47J15, 58E05, 58E07, 58J55] | Kısmî tefâzulî muâdeleler bağlamında çatallanmalar (iftirâklar) [Ayrıca bakınız: 34C23, 34F10, 34H20, 37F46, 37Gxx, 37H20, 37J20, 37K50, 37L10, 37M20, 47J15, 58E05, 58E07, 58J55] |  |
+| 35B33 | Critical exponents in context of PDEs | Kısmî tefâzulî muâdeleler bağlamında hâlî (kritik) üsler |  |
+| 35B34 | Resonance in context of PDEs [See also 34F15, 70J40, 70K28, 70K30, 81U24] | Kısmî tefâzulî muâdeleler bağlamında tanîn (rezonans) [Ayrıca bakınız: 34F15, 70J40, 70K28, 70K30, 81U24] |  |
+| 35B35 | Stability in context of PDEs [See also 34Dxx, 37B25, 37C20, 37C75, 37F15, 37J25, 37K45, 37L15, 49K40, 58K25, 93Dxx] | Kısmî tefâzulî muâdeleler bağlamında istikrar [Ayrıca bakınız: 34Dxx, 37B25, 37C20, 37C75, 37F15, 37J25, 37K45, 37L15, 49K40, 58K25, 93Dxx] |  |
+| 35B36 | Pattern formations in context of PDEs [See also 92C15] | Kısmî tefâzulî muâdeleler bağlamında numûne teşekkülleri [Ayrıca bakınız: 92C15] |  |
+| 35B38 | Critical points of functionals in context of PDEs (e.g., energy functionals) [See also 57R70, 58K05, 58E05] | Kısmî tefâzulî muâdeleler bağlamında tâbi'-i tevâbi'lerin hâlî noktaları (meselâ enerji tâbi'-i tevâbi'leri) [Ayrıca bakınız: 57R70, 58K05, 58E05] |  |
+| 35B40 | Asymptotic behavior of solutions to PDEs | Kısmî tefâzulî muâdelelerin hallerinin mukāribî (asimptotik) tavrı |  |
+| 35B41 | Attractors [See also 34D45, 37B35, 37C70, 37D45, 37G35, 37L30, 37M22] | Câzibler [Ayrıca bakınız: 34D45, 37B35, 37C70, 37D45, 37G35, 37L30, 37M22] |  |
+| 35B42 | Inertial manifolds [See also 37L25] | Ataletî müteşa'ibler [Ayrıca bakınız: 37L25] |  |
+| 35B44 | Blow-up in context of PDEs | Kısmî tefâzulî muâdeleler bağlamında infilâk (halin sonlu zamanda gayr-ı mütenâhîye kaçması) |  |
+| 35B45 | A priori estimates in context of PDEs | Kısmî tefâzulî muâdeleler bağlamında kablî tahmînler |  |
+| 35B50 | Maximum principles in context of PDEs | Kısmî tefâzulî muâdeleler bağlamında nihâyet-i uzmâ prensipleri |  |
+| 35B51 | Comparison principles in context of PDEs | Kısmî tefâzulî muâdeleler bağlamında mukayese prensipleri |  |
+| 35B53 | Liouville theorems and Phragmén-Lindelöf theorems in context of PDEs | Kısmî tefâzulî muâdeleler bağlamında Liouville kaziyyeleri ve Phragmén-Lindelöf kaziyyeleri | nakil |
+| 35B60 | Continuation and prolongation of solutions to PDEs [See also 58A15, 58A17, 58Hxx] | Kısmî tefâzulî muâdelelerin hallerinin temdîdi ve itâlesi [Ayrıca bakınız: 58A15, 58A17, 58Hxx] |  |
+| 35B65 | Smoothness and regularity of solutions to PDEs | Kısmî tefâzulî muâdelelerin hallerinin emlesiyeti ve muntazamlığı |  |
 | 35B99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **35Cxx** | **Representations of solutions to partial differential equations** | **** |  |
-| 35C05 | Solutions to PDEs in closed form |  |  |
-| 35C06 | Self-similar solutions to PDEs |  |  |
-| 35C07 | Traveling wave solutions |  |  |
-| 35C08 | Soliton solutions [See also 37K40] |  |  |
-| 35C09 | Trigonometric solutions to PDEs |  |  |
-| 35C10 | Series solutions to PDEs |  |  |
-| 35C11 | Polynomial solutions to PDEs |  |  |
-| 35C15 | Integral representations of solutions to PDEs |  |  |
-| 35C20 | Asymptotic expansions of solutions to PDEs |  |  |
+| **35Cxx** | **Representations of solutions to partial differential equations** | **Kısmî tefâzulî muâdelelerin hallerinin temsilleri** |  |
+| 35C05 | Solutions to PDEs in closed form | Kısmî tefâzulî muâdelelerin kapalı sûretteki halleri |  |
+| 35C06 | Self-similar solutions to PDEs | Kısmî tefâzulî muâdelelerin kendine benzer halleri |  |
+| 35C07 | Traveling wave solutions | Seyyâr mevc halleri |  |
+| 35C08 | Soliton solutions [See also 37K40] | Soliton halleri [Ayrıca bakınız: 37K40] | nakil |
+| 35C09 | Trigonometric solutions to PDEs | Kısmî tefâzulî muâdelelerin müsellesâtî halleri |  |
+| 35C10 | Series solutions to PDEs | Kısmî tefâzulî muâdelelerin silsile halleri |  |
+| 35C11 | Polynomial solutions to PDEs | Kısmî tefâzulî muâdelelerin kesîrü'l-hudûd halleri |  |
+| 35C15 | Integral representations of solutions to PDEs | Kısmî tefâzulî muâdelelerin hallerinin tamâmî temsilleri |  |
+| 35C20 | Asymptotic expansions of solutions to PDEs | Kısmî tefâzulî muâdelelerin hallerinin mukāribî açılımları |  |
 | 35C99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **35Dxx** | **Generalized solutions to partial differential equations** | **** |  |
-| 35D30 | Weak solutions to PDEs |  |  |
-| 35D35 | Strong solutions to PDEs |  |  |
-| 35D40 | Viscosity solutions to PDEs |  |  |
+| **35Dxx** | **Generalized solutions to partial differential equations** | **Kısmî tefâzulî muâdelelerin teşmîl edilmiş halleri** |  |
+| 35D30 | Weak solutions to PDEs | Kısmî tefâzulî muâdelelerin zayıf halleri |  |
+| 35D35 | Strong solutions to PDEs | Kısmî tefâzulî muâdelelerin kavî halleri |  |
+| 35D40 | Viscosity solutions to PDEs | Kısmî tefâzulî muâdelelerin lüzûcet halleri |  |
 | 35D99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **35Exx** | **Partial differential equations and systems of partial differential equations with constant coefficients [See also 35N05]** | **** |  |
-| 35E05 | Fundamental solutions to PDEs and systems of PDEs with constant coefficients |  |  |
-| 35E10 | Convexity properties of solutions to PDEs with constant coefficients |  |  |
-| 35E15 | Initial value problems for PDEs and systems of PDEs with constant coefficients |  |  |
-| 35E20 | General theory of PDEs and systems of PDEs with constant coefficients |  |  |
+| **35Exx** | **Partial differential equations and systems of partial differential equations with constant coefficients [See also 35N05]** | **Sâbit emsalli kısmî tefâzulî muâdeleler ve kısmî tefâzulî muâdele manzûmeleri [Ayrıca bakınız: 35N05]** |  |
+| 35E05 | Fundamental solutions to PDEs and systems of PDEs with constant coefficients | Sâbit emsalli kısmî tefâzulî muâdelelerin ve kısmî tefâzulî muâdeleler manzûmelerinin esâsî halleri |  |
+| 35E10 | Convexity properties of solutions to PDEs with constant coefficients | Sâbit emsalli kısmî tefâzulî muâdelelerin hallerinin muhaddebiyet vasıfları |  |
+| 35E15 | Initial value problems for PDEs and systems of PDEs with constant coefficients | Sâbit emsalli kısmî tefâzulî muâdeleler ve kısmî tefâzulî muâdeleler manzûmeleri için ibtidâî kıymet meseleleri |  |
+| 35E20 | General theory of PDEs and systems of PDEs with constant coefficients | Sâbit emsalli kısmî tefâzulî muâdelelerin ve kısmî tefâzulî muâdeleler manzûmelerinin umûmî nazariyesi |  |
 | 35E99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **35Fxx** | **General first-order partial differential equations and systems of first-order partial differential equations** | **** |  |
-| 35F05 | Linear first-order PDEs |  |  |
-| 35F10 | Initial value problems for linear first-order PDEs |  |  |
-| 35F15 | Boundary value problems for linear first-order PDEs |  |  |
-| 35F16 | Initial-boundary value problems for linear first-order PDEs |  |  |
-| 35F20 | Nonlinear first-order PDEs |  |  |
-| 35F21 | Hamilton-Jacobi equations {For calculus of variations and optimal control, see 49Lxx; for mechanics of particles and systems, see 70H20} |  |  |
-| 35F25 | Initial value problems for nonlinear first-order PDEs |  |  |
-| 35F30 | Boundary value problems for nonlinear first-order PDEs |  |  |
-| 35F31 | Initial-boundary value problems for nonlinear first-order PDEs |  |  |
-| 35F35 | Systems of linear first-order PDEs |  |  |
-| 35F40 | Initial value problems for systems of linear first-order PDEs |  |  |
-| 35F45 | Boundary value problems for systems of linear first-order PDEs |  |  |
-| 35F46 | Initial-boundary value problems for systems of linear first-order PDEs |  |  |
-| 35F50 | Systems of nonlinear first-order PDEs |  |  |
-| 35F55 | Initial value problems for systems of nonlinear first-order PDEs |  |  |
-| 35F60 | Boundary value problems for systems of nonlinear first-order PDEs |  |  |
-| 35F61 | Initial-boundary value problems for systems of nonlinear first-order PDEs |  |  |
+| **35Fxx** | **General first-order partial differential equations and systems of first-order partial differential equations** | **Umûmî birinci mertebeden kısmî tefâzulî muâdeleler ve birinci mertebeden kısmî tefâzulî muâdele manzûmeleri** |  |
+| 35F05 | Linear first-order PDEs | Hattî birinci mertebeden kısmî tefâzulî muâdeleler |  |
+| 35F10 | Initial value problems for linear first-order PDEs | Hattî birinci mertebeden kısmî tefâzulî muâdeleler için ibtidâî kıymet meseleleri |  |
+| 35F15 | Boundary value problems for linear first-order PDEs | Hattî birinci mertebeden kısmî tefâzulî muâdeleler için hudûd kıymeti meseleleri |  |
+| 35F16 | Initial-boundary value problems for linear first-order PDEs | Hattî birinci mertebeden kısmî tefâzulî muâdeleler için ibtidâî-hudûd kıymeti meseleleri |  |
+| 35F20 | Nonlinear first-order PDEs | Gayr-ı hattî birinci mertebeden kısmî tefâzulî muâdeleler |  |
+| 35F21 | Hamilton-Jacobi equations {For calculus of variations and optimal control, see 49Lxx; for mechanics of particles and systems, see 70H20} | Hamilton-Jacobi muâdeleleri {Tehavvülât hesabı ve ahsen idâre için bakınız: 49Lxx; zerreler ve manzûmeler mekaniği için bakınız: 70H20} | nakil |
+| 35F25 | Initial value problems for nonlinear first-order PDEs | Gayr-ı hattî birinci mertebeden kısmî tefâzulî muâdeleler için ibtidâî kıymet meseleleri |  |
+| 35F30 | Boundary value problems for nonlinear first-order PDEs | Gayr-ı hattî birinci mertebeden kısmî tefâzulî muâdeleler için hudûd kıymeti meseleleri |  |
+| 35F31 | Initial-boundary value problems for nonlinear first-order PDEs | Gayr-ı hattî birinci mertebeden kısmî tefâzulî muâdeleler için ibtidâî-hudûd kıymeti meseleleri |  |
+| 35F35 | Systems of linear first-order PDEs | Hattî birinci mertebeden kısmî tefâzulî muâdeleler manzûmeleri |  |
+| 35F40 | Initial value problems for systems of linear first-order PDEs | Hattî birinci mertebeden kısmî tefâzulî muâdeleler manzûmeleri için ibtidâî kıymet meseleleri |  |
+| 35F45 | Boundary value problems for systems of linear first-order PDEs | Hattî birinci mertebeden kısmî tefâzulî muâdeleler manzûmeleri için hudûd kıymeti meseleleri |  |
+| 35F46 | Initial-boundary value problems for systems of linear first-order PDEs | Hattî birinci mertebeden kısmî tefâzulî muâdeleler manzûmeleri için ibtidâî-hudûd kıymeti meseleleri |  |
+| 35F50 | Systems of nonlinear first-order PDEs | Gayr-ı hattî birinci mertebeden kısmî tefâzulî muâdeleler manzûmeleri |  |
+| 35F55 | Initial value problems for systems of nonlinear first-order PDEs | Gayr-ı hattî birinci mertebeden kısmî tefâzulî muâdeleler manzûmeleri için ibtidâî kıymet meseleleri |  |
+| 35F60 | Boundary value problems for systems of nonlinear first-order PDEs | Gayr-ı hattî birinci mertebeden kısmî tefâzulî muâdeleler manzûmeleri için hudûd kıymeti meseleleri |  |
+| 35F61 | Initial-boundary value problems for systems of nonlinear first-order PDEs | Gayr-ı hattî birinci mertebeden kısmî tefâzulî muâdeleler manzûmeleri için ibtidâî-hudûd kıymeti meseleleri |  |
 | 35F99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **35Gxx** | **General higher-order partial differential equations and systems of higher-order partial differential equations** | **** |  |
-| 35G05 | Linear higher-order PDEs |  |  |
-| 35G10 | Initial value problems for linear higher-order PDEs |  |  |
-| 35G15 | Boundary value problems for linear higher-order PDEs |  |  |
-| 35G16 | Initial-boundary value problems for linear higher-order PDEs |  |  |
-| 35G20 | Nonlinear higher-order PDEs |  |  |
-| 35G25 | Initial value problems for nonlinear higher-order PDEs |  |  |
-| 35G30 | Boundary value problems for nonlinear higher-order PDEs |  |  |
-| 35G31 | Initial-boundary value problems for nonlinear higher-order PDEs |  |  |
-| 35G35 | Systems of linear higher-order PDEs |  |  |
-| 35G40 | Initial value problems for systems of linear higher-order PDEs |  |  |
-| 35G45 | Boundary value problems for systems of linear higher-order PDEs |  |  |
-| 35G46 | Initial-boundary value problems for systems of linear higher-order PDEs |  |  |
-| 35G50 | Systems of nonlinear higher-order PDEs |  |  |
-| 35G55 | Initial value problems for systems of nonlinear higher-order PDEs |  |  |
-| 35G60 | Boundary value problems for systems of nonlinear higher-order PDEs |  |  |
-| 35G61 | Initial-boundary value problems for systems of nonlinear higher-order PDEs |  |  |
+| **35Gxx** | **General higher-order partial differential equations and systems of higher-order partial differential equations** | **Umûmî yüksek mertebeden kısmî tefâzulî muâdeleler ve yüksek mertebeden kısmî tefâzulî muâdele manzûmeleri** |  |
+| 35G05 | Linear higher-order PDEs | Hattî yüksek mertebeden kısmî tefâzulî muâdeleler |  |
+| 35G10 | Initial value problems for linear higher-order PDEs | Hattî yüksek mertebeden kısmî tefâzulî muâdeleler için ibtidâî kıymet meseleleri |  |
+| 35G15 | Boundary value problems for linear higher-order PDEs | Hattî yüksek mertebeden kısmî tefâzulî muâdeleler için hudûd kıymeti meseleleri |  |
+| 35G16 | Initial-boundary value problems for linear higher-order PDEs | Hattî yüksek mertebeden kısmî tefâzulî muâdeleler için ibtidâî-hudûd kıymeti meseleleri |  |
+| 35G20 | Nonlinear higher-order PDEs | Gayr-ı hattî yüksek mertebeden kısmî tefâzulî muâdeleler |  |
+| 35G25 | Initial value problems for nonlinear higher-order PDEs | Gayr-ı hattî yüksek mertebeden kısmî tefâzulî muâdeleler için ibtidâî kıymet meseleleri |  |
+| 35G30 | Boundary value problems for nonlinear higher-order PDEs | Gayr-ı hattî yüksek mertebeden kısmî tefâzulî muâdeleler için hudûd kıymeti meseleleri |  |
+| 35G31 | Initial-boundary value problems for nonlinear higher-order PDEs | Gayr-ı hattî yüksek mertebeden kısmî tefâzulî muâdeleler için ibtidâî-hudûd kıymeti meseleleri |  |
+| 35G35 | Systems of linear higher-order PDEs | Hattî yüksek mertebeden kısmî tefâzulî muâdeleler manzûmeleri |  |
+| 35G40 | Initial value problems for systems of linear higher-order PDEs | Hattî yüksek mertebeden kısmî tefâzulî muâdeleler manzûmeleri için ibtidâî kıymet meseleleri |  |
+| 35G45 | Boundary value problems for systems of linear higher-order PDEs | Hattî yüksek mertebeden kısmî tefâzulî muâdeleler manzûmeleri için hudûd kıymeti meseleleri |  |
+| 35G46 | Initial-boundary value problems for systems of linear higher-order PDEs | Hattî yüksek mertebeden kısmî tefâzulî muâdeleler manzûmeleri için ibtidâî-hudûd kıymeti meseleleri |  |
+| 35G50 | Systems of nonlinear higher-order PDEs | Gayr-ı hattî yüksek mertebeden kısmî tefâzulî muâdeleler manzûmeleri |  |
+| 35G55 | Initial value problems for systems of nonlinear higher-order PDEs | Gayr-ı hattî yüksek mertebeden kısmî tefâzulî muâdeleler manzûmeleri için ibtidâî kıymet meseleleri |  |
+| 35G60 | Boundary value problems for systems of nonlinear higher-order PDEs | Gayr-ı hattî yüksek mertebeden kısmî tefâzulî muâdeleler manzûmeleri için hudûd kıymeti meseleleri |  |
+| 35G61 | Initial-boundary value problems for systems of nonlinear higher-order PDEs | Gayr-ı hattî yüksek mertebeden kısmî tefâzulî muâdeleler manzûmeleri için ibtidâî-hudûd kıymeti meseleleri |  |
 | 35G99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **35Hxx** | **Close-to-elliptic equations** | **** |  |
-| 35H10 | Hypoelliptic equations |  |  |
-| 35H20 | Subelliptic equations |  |  |
-| 35H30 | Quasielliptic equations |  |  |
+| **35Hxx** | **Close-to-elliptic equations** | **İhlîlecîye yakın muâdeleler** |  |
+| 35H10 | Hypoelliptic equations | Tahtel-ihlîlecî (hipoeliptik) muâdeleler |  |
+| 35H20 | Subelliptic equations | Dûn-ihlîlecî (subeliptik) muâdeleler | şüpheli: "hypo-" ile "sub-" ayrımı için iki ayrı ön ek teklif ettim |
+| 35H30 | Quasielliptic equations | Şibh-i ihlîlecî muâdeleler |  |
 | 35H99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **35Jxx** | **Elliptic equations and elliptic systems {For global analysis, analysis on manifolds, see 58J10, 58J20}** | **** |  |
-| 35J05 | Laplace operator, Helmholtz equation (reduced wave equation), Poisson equation [See also 31Axx, 31Bxx] |  |  |
-| 35J08 | Green’s functions for elliptic equations |  |  |
-| 35J10 | Schrödinger operator, Schrödinger equation {For ordinary differential equations, see 34L40; for operator theory, see 47D08; for quantum theory, see 81Q05; for statistical mechanics, see 82B44} |  |  |
-| 35J15 | Second-order elliptic equations |  |  |
-| 35J20 | Variational methods for second-order elliptic equations |  |  |
-| 35J25 | Boundary value problems for second-order elliptic equations |  |  |
-| 35J30 | Higher-order elliptic equations [See also 31A30, 31B30] |  |  |
-| 35J35 | Variational methods for higher-order elliptic equations |  |  |
-| 35J40 | Boundary value problems for higher-order elliptic equations |  |  |
-| 35J46 | First-order elliptic systems |  |  |
-| 35J47 | Second-order elliptic systems |  |  |
-| 35J48 | Higher-order elliptic systems |  |  |
-| 35J50 | Variational methods for elliptic systems |  |  |
-| 35J56 | Boundary value problems for first-order elliptic systems |  |  |
-| 35J57 | Boundary value problems for second-order elliptic systems |  |  |
-| 35J58 | Boundary value problems for higher-order elliptic systems |  |  |
-| 35J60 | Nonlinear elliptic equations |  |  |
-| 35J61 | Semilinear elliptic equations |  |  |
-| 35J62 | Quasilinear elliptic equations |  |  |
-| 35J65 | Nonlinear boundary value problems for linear elliptic equations |  |  |
-| 35J66 | Nonlinear boundary value problems for nonlinear elliptic equations |  |  |
-| 35J67 | Boundary values of solutions to elliptic equations and elliptic systems |  |  |
-| 35J70 | Degenerate elliptic equations |  |  |
-| 35J75 | Singular elliptic equations |  |  |
-| 35J86 | Unilateral problems for linear elliptic equations and variational inequalities with linear elliptic operators [See also 35R35, 49J40] |  |  |
-| 35J87 | Unilateral problems for nonlinear elliptic equations and variational inequalities with nonlinear elliptic operators [See also 35R35, 49J40] |  |  |
-| 35J88 | Unilateral problems for elliptic systems and systems of variational inequalities with elliptic operators [See also 35R35, 49J40] |  |  |
-| 35J91 | Semilinear elliptic equations with Laplacian, bi-Laplacian or poly-Laplacian |  |  |
-| 35J92 | Quasilinear elliptic equations with p-Laplacian |  |  |
-| 35J93 | Quasilinear elliptic equations with mean curvature operator |  |  |
-| 35J94 | Elliptic equations with infinity-Laplacian |  |  |
-| 35J96 | Monge-Ampère equations {For complex Monge-Ampère operators, see 32W20; for parabolic Monge-Ampère equations, see 35K96} |  |  |
+| **35Jxx** | **Elliptic equations and elliptic systems {For global analysis, analysis on manifolds, see 58J10, 58J20}** | **İhlîlecî muâdeleler ve ihlîlecî manzûmeler {Küllî tahlîl ve müteşa'ibler üzerinde tahlîl için bakınız: 58J10, 58J20}** |  |
+| 35J05 | Laplace operator, Helmholtz equation (reduced wave equation), Poisson equation [See also 31Axx, 31Bxx] | Laplace âmili, Helmholtz muâdelesi (tenzîl edilmiş mevc muâdelesi), Poisson muâdelesi [Ayrıca bakınız: 31Axx, 31Bxx] | nakil |
+| 35J08 | Green’s functions for elliptic equations | İhlîlecî muâdeleler için Green tâbileri | nakil |
+| 35J10 | Schrödinger operator, Schrödinger equation {For ordinary differential equations, see 34L40; for operator theory, see 47D08; for quantum theory, see 81Q05; for statistical mechanics, see 82B44} | Schrödinger âmili, Schrödinger muâdelesi {Âdî tefâzulî muâdeleler için bakınız: 34L40; âmiller nazariyesi için bakınız: 47D08; kuantum nazariyesi için bakınız: 81Q05; ihsâî mekanik için bakınız: 82B44} | nakil |
+| 35J15 | Second-order elliptic equations | İkinci mertebeden ihlîlecî muâdeleler |  |
+| 35J20 | Variational methods for second-order elliptic equations | İkinci mertebeden ihlîlecî muâdeleler için tehavvülî usuller |  |
+| 35J25 | Boundary value problems for second-order elliptic equations | İkinci mertebeden ihlîlecî muâdeleler için hudûd kıymeti meseleleri |  |
+| 35J30 | Higher-order elliptic equations [See also 31A30, 31B30] | Yüksek mertebeden ihlîlecî muâdeleler [Ayrıca bakınız: 31A30, 31B30] |  |
+| 35J35 | Variational methods for higher-order elliptic equations | Yüksek mertebeden ihlîlecî muâdeleler için tehavvülî usuller |  |
+| 35J40 | Boundary value problems for higher-order elliptic equations | Yüksek mertebeden ihlîlecî muâdeleler için hudûd kıymeti meseleleri |  |
+| 35J46 | First-order elliptic systems | Birinci mertebeden ihlîlecî manzûmeler |  |
+| 35J47 | Second-order elliptic systems | İkinci mertebeden ihlîlecî manzûmeler |  |
+| 35J48 | Higher-order elliptic systems | Yüksek mertebeden ihlîlecî manzûmeler |  |
+| 35J50 | Variational methods for elliptic systems | İhlîlecî manzûmeler için tehavvülî usuller |  |
+| 35J56 | Boundary value problems for first-order elliptic systems | Birinci mertebeden ihlîlecî manzûmeler için hudûd kıymeti meseleleri |  |
+| 35J57 | Boundary value problems for second-order elliptic systems | İkinci mertebeden ihlîlecî manzûmeler için hudûd kıymeti meseleleri |  |
+| 35J58 | Boundary value problems for higher-order elliptic systems | Yüksek mertebeden ihlîlecî manzûmeler için hudûd kıymeti meseleleri |  |
+| 35J60 | Nonlinear elliptic equations | Gayr-ı hattî ihlîlecî muâdeleler |  |
+| 35J61 | Semilinear elliptic equations | Nîm-hattî ihlîlecî muâdeleler |  |
+| 35J62 | Quasilinear elliptic equations | Şibh-i hattî ihlîlecî muâdeleler |  |
+| 35J65 | Nonlinear boundary value problems for linear elliptic equations | Hattî ihlîlecî muâdeleler için gayr-ı hattî hudûd kıymeti meseleleri |  |
+| 35J66 | Nonlinear boundary value problems for nonlinear elliptic equations | Gayr-ı hattî ihlîlecî muâdeleler için gayr-ı hattî hudûd kıymeti meseleleri |  |
+| 35J67 | Boundary values of solutions to elliptic equations and elliptic systems | İhlîlecî muâdelelerin ve ihlîlecî manzûmelerin hallerinin hudûd kıymetleri |  |
+| 35J70 | Degenerate elliptic equations | Tereddî etmiş (soysuzlaşmış) ihlîlecî muâdeleler |  |
+| 35J75 | Singular elliptic equations | Münferid ihlîlecî muâdeleler |  |
+| 35J86 | Unilateral problems for linear elliptic equations and variational inequalities with linear elliptic operators [See also 35R35, 49J40] | Hattî ihlîlecî muâdeleler için tek taraflı meseleler ve hattî ihlîlecî âmilli tehavvülî adem-i müsâvâtlar [Ayrıca bakınız: 35R35, 49J40] |  |
+| 35J87 | Unilateral problems for nonlinear elliptic equations and variational inequalities with nonlinear elliptic operators [See also 35R35, 49J40] | Gayr-ı hattî ihlîlecî muâdeleler için tek taraflı meseleler ve gayr-ı hattî ihlîlecî âmilli tehavvülî adem-i müsâvâtlar [Ayrıca bakınız: 35R35, 49J40] |  |
+| 35J88 | Unilateral problems for elliptic systems and systems of variational inequalities with elliptic operators [See also 35R35, 49J40] | İhlîlecî manzûmeler için tek taraflı meseleler ve ihlîlecî âmilli tehavvülî adem-i müsâvât manzûmeleri [Ayrıca bakınız: 35R35, 49J40] |  |
+| 35J91 | Semilinear elliptic equations with Laplacian, bi-Laplacian or poly-Laplacian | Laplace âmilli, iki katlı Laplace âmilli yahut çok katlı Laplace âmilli nîm-hattî ihlîlecî muâdeleler |  |
+| 35J92 | Quasilinear elliptic equations with p-Laplacian | P-Laplace âmilli şibh-i hattî ihlîlecî muâdeleler | nakil |
+| 35J93 | Quasilinear elliptic equations with mean curvature operator | Vasatî inhinâ âmilli şibh-i hattî ihlîlecî muâdeleler |  |
+| 35J94 | Elliptic equations with infinity-Laplacian | Gayr-ı mütenâhî-Laplace âmilli ihlîlecî muâdeleler |  |
+| 35J96 | Monge-Ampère equations {For complex Monge-Ampère operators, see 32W20; for parabolic Monge-Ampère equations, see 35K96} | Monge-Ampère muâdeleleri {Mürekkeb Monge-Ampère âmilleri için bakınız: 32W20; mükâfî Monge-Ampère muâdeleleri için bakınız: 35K96} | nakil |
 | 35J99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **35Kxx** | **Parabolic equations and parabolic systems {For global analysis, analysis on manifolds, see 58J35}** | **** |  |
-| 35K05 | Heat equation |  |  |
-| 35K08 | Heat kernel |  |  |
-| 35K10 | Second-order parabolic equations |  |  |
-| 35K15 | Initial value problems for second-order parabolic equations |  |  |
-| 35K20 | Initial-boundary value problems for second-order parabolic equations |  |  |
-| 35K25 | Higher-order parabolic equations |  |  |
-| 35K30 | Initial value problems for higher-order parabolic equations |  |  |
-| 35K35 | Initial-boundary value problems for higher-order parabolic equations |  |  |
-| 35K40 | Second-order parabolic systems |  |  |
-| 35K41 | Higher-order parabolic systems |  |  |
-| 35K45 | Initial value problems for second-order parabolic systems |  |  |
-| 35K46 | Initial value problems for higher-order parabolic systems |  |  |
-| 35K51 | Initial-boundary value problems for second-order parabolic systems |  |  |
-| 35K52 | Initial-boundary value problems for higher-order parabolic systems |  |  |
-| 35K55 | Nonlinear parabolic equations |  |  |
-| 35K57 | Reaction-diffusion equations {For diffusion processes and reaction effects, see 47D07, 58J65, 60J60, 60J70, 74N25, 76R50, 76V05, 80A23, 82B24, 82C24, 92E20} |  |  |
-| 35K58 | Semilinear parabolic equations |  |  |
-| 35K59 | Quasilinear parabolic equations |  |  |
-| 35K60 | Nonlinear initial, boundary and initial-boundary value problems for linear parabolic equations |  |  |
-| 35K61 | Nonlinear initial, boundary and initial-boundary value problems for nonlinear parabolic equations |  |  |
-| 35K65 | Degenerate parabolic equations |  |  |
-| 35K67 | Singular parabolic equations |  |  |
-| 35K70 | Ultraparabolic equations, pseudoparabolic equations, etc. |  |  |
-| 35K85 | Unilateral problems for linear parabolic equations and variational inequalities with linear parabolic operators [See also 35R35, 49J40] |  |  |
-| 35K86 | Unilateral problems for nonlinear parabolic equations and variational inequalities with nonlinear parabolic operators [See also 35R35, 49J40] |  |  |
-| 35K87 | Unilateral problems for parabolic systems and systems of variational inequalities with parabolic operators [See also 35R35, 49J40] |  |  |
-| 35K90 | Abstract parabolic equations |  |  |
-| 35K91 | Semilinear parabolic equations with Laplacian, bi-Laplacian or poly-Laplacian |  |  |
-| 35K92 | Quasilinear parabolic equations with p-Laplacian |  |  |
-| 35K93 | Quasilinear parabolic equations with mean curvature operator |  |  |
-| 35K96 | Parabolic Monge-Ampère equations |  |  |
+| **35Kxx** | **Parabolic equations and parabolic systems {For global analysis, analysis on manifolds, see 58J35}** | **Mükâfî muâdeleler ve mükâfî manzûmeler {Küllî tahlîl ve müteşa'ibler üzerinde tahlîl için bakınız: 58J35}** |  |
+| 35K05 | Heat equation | Hararet muâdelesi |  |
+| 35K08 | Heat kernel | Hararet çekirdeği |  |
+| 35K10 | Second-order parabolic equations | İkinci mertebeden mükâfî muâdeleler |  |
+| 35K15 | Initial value problems for second-order parabolic equations | İkinci mertebeden mükâfî muâdeleler için ibtidâî kıymet meseleleri |  |
+| 35K20 | Initial-boundary value problems for second-order parabolic equations | İkinci mertebeden mükâfî muâdeleler için ibtidâî-hudûd kıymeti meseleleri |  |
+| 35K25 | Higher-order parabolic equations | Yüksek mertebeden mükâfî muâdeleler |  |
+| 35K30 | Initial value problems for higher-order parabolic equations | Yüksek mertebeden mükâfî muâdeleler için ibtidâî kıymet meseleleri |  |
+| 35K35 | Initial-boundary value problems for higher-order parabolic equations | Yüksek mertebeden mükâfî muâdeleler için ibtidâî-hudûd kıymeti meseleleri |  |
+| 35K40 | Second-order parabolic systems | İkinci mertebeden mükâfî manzûmeler |  |
+| 35K41 | Higher-order parabolic systems | Yüksek mertebeden mükâfî manzûmeler |  |
+| 35K45 | Initial value problems for second-order parabolic systems | İkinci mertebeden mükâfî manzûmeler için ibtidâî kıymet meseleleri |  |
+| 35K46 | Initial value problems for higher-order parabolic systems | Yüksek mertebeden mükâfî manzûmeler için ibtidâî kıymet meseleleri |  |
+| 35K51 | Initial-boundary value problems for second-order parabolic systems | İkinci mertebeden mükâfî manzûmeler için ibtidâî-hudûd kıymeti meseleleri |  |
+| 35K52 | Initial-boundary value problems for higher-order parabolic systems | Yüksek mertebeden mükâfî manzûmeler için ibtidâî-hudûd kıymeti meseleleri |  |
+| 35K55 | Nonlinear parabolic equations | Gayr-ı hattî mükâfî muâdeleler |  |
+| 35K57 | Reaction-diffusion equations {For diffusion processes and reaction effects, see 47D07, 58J65, 60J60, 60J70, 74N25, 76R50, 76V05, 80A23, 82B24, 82C24, 92E20} | Teâmül-intişâr muâdeleleri {İntişâr süreçleri ve teâmül tesirleri için bakınız: 47D07, 58J65, 60J60, 60J70, 74N25, 76R50, 76V05, 80A23, 82B24, 82C24, 92E20} |  |
+| 35K58 | Semilinear parabolic equations | Nîm-hattî mükâfî muâdeleler |  |
+| 35K59 | Quasilinear parabolic equations | Şibh-i hattî mükâfî muâdeleler |  |
+| 35K60 | Nonlinear initial, boundary and initial-boundary value problems for linear parabolic equations | Hattî mükâfî muâdeleler için gayr-ı hattî ibtidâî, hudûd ve ibtidâî-hudûd kıymeti meseleleri |  |
+| 35K61 | Nonlinear initial, boundary and initial-boundary value problems for nonlinear parabolic equations | Gayr-ı hattî mükâfî muâdeleler için gayr-ı hattî ibtidâî, hudûd ve ibtidâî-hudûd kıymeti meseleleri |  |
+| 35K65 | Degenerate parabolic equations | Tereddî etmiş mükâfî muâdeleler |  |
+| 35K67 | Singular parabolic equations | Münferid mükâfî muâdeleler |  |
+| 35K70 | Ultraparabolic equations, pseudoparabolic equations, etc. | Fevka'l-mükâfî muâdeleler, kâzib-mükâfî muâdeleler ve emsâli |  |
+| 35K85 | Unilateral problems for linear parabolic equations and variational inequalities with linear parabolic operators [See also 35R35, 49J40] | Hattî mükâfî muâdeleler için tek taraflı meseleler ve hattî mükâfî âmilli tehavvülî adem-i müsâvâtlar [Ayrıca bakınız: 35R35, 49J40] |  |
+| 35K86 | Unilateral problems for nonlinear parabolic equations and variational inequalities with nonlinear parabolic operators [See also 35R35, 49J40] | Gayr-ı hattî mükâfî muâdeleler için tek taraflı meseleler ve gayr-ı hattî mükâfî âmilli tehavvülî adem-i müsâvâtlar [Ayrıca bakınız: 35R35, 49J40] |  |
+| 35K87 | Unilateral problems for parabolic systems and systems of variational inequalities with parabolic operators [See also 35R35, 49J40] | Mükâfî manzûmeler için tek taraflı meseleler ve mükâfî âmilli tehavvülî adem-i müsâvât manzûmeleri [Ayrıca bakınız: 35R35, 49J40] |  |
+| 35K90 | Abstract parabolic equations | Mücerred mükâfî muâdeleler |  |
+| 35K91 | Semilinear parabolic equations with Laplacian, bi-Laplacian or poly-Laplacian | Laplace âmilli, iki katlı Laplace âmilli yahut çok katlı Laplace âmilli nîm-hattî mükâfî muâdeleler |  |
+| 35K92 | Quasilinear parabolic equations with p-Laplacian | P-Laplace âmilli şibh-i hattî mükâfî muâdeleler | nakil |
+| 35K93 | Quasilinear parabolic equations with mean curvature operator | Vasatî inhinâ âmilli şibh-i hattî mükâfî muâdeleler |  |
+| 35K96 | Parabolic Monge-Ampère equations | Mükâfî Monge-Ampère muâdeleleri | nakil |
 | 35K99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **35Lxx** | **Hyperbolic equations and hyperbolic systems {For global analysis, see 58J45}** | **** |  |
-| 35L02 | First-order hyperbolic equations |  |  |
-| 35L03 | Initial value problems for first-order hyperbolic equations |  |  |
-| 35L04 | Initial-boundary value problems for first-order hyperbolic equations |  |  |
-| 35L05 | Wave equation |  |  |
-| 35L10 | Second-order hyperbolic equations |  |  |
-| 35L15 | Initial value problems for second-order hyperbolic equations |  |  |
-| 35L20 | Initial-boundary value problems for second-order hyperbolic equations |  |  |
-| 35L25 | Higher-order hyperbolic equations |  |  |
-| 35L30 | Initial value problems for higher-order hyperbolic equations |  |  |
-| 35L35 | Initial-boundary value problems for higher-order hyperbolic equations |  |  |
-| 35L40 | First-order hyperbolic systems |  |  |
-| 35L45 | Initial value problems for first-order hyperbolic systems |  |  |
-| 35L50 | Initial-boundary value problems for first-order hyperbolic systems |  |  |
-| 35L51 | Second-order hyperbolic systems |  |  |
-| 35L52 | Initial value problems for second-order hyperbolic systems |  |  |
-| 35L53 | Initial-boundary value problems for second-order hyperbolic systems |  |  |
-| 35L55 | Higher-order hyperbolic systems |  |  |
-| 35L56 | Initial value problems for higher-order hyperbolic systems |  |  |
-| 35L57 | Initial-boundary value problems for higher-order hyperbolic systems |  |  |
-| 35L60 | First-order nonlinear hyperbolic equations |  |  |
-| 35L65 | Hyperbolic conservation laws |  |  |
-| 35L67 | Shocks and singularities for hyperbolic equations [See also 58Kxx, 74J40, 76L05] |  |  |
-| 35L70 | Second-order nonlinear hyperbolic equations |  |  |
-| 35L71 | Second-order semilinear hyperbolic equations |  |  |
-| 35L72 | Second-order quasilinear hyperbolic equations |  |  |
-| 35L75 | Higher-order nonlinear hyperbolic equations |  |  |
-| 35L76 | Higher-order semilinear hyperbolic equations |  |  |
-| 35L77 | Higher-order quasilinear hyperbolic equations |  |  |
-| 35L80 | Degenerate hyperbolic equations |  |  |
-| 35L81 | Singular hyperbolic equations |  |  |
-| 35L82 | Pseudohyperbolic equations |  |  |
-| 35L85 | Unilateral problems for linear hyperbolic equations and variational inequalities with linear hyperbolic operators [See also 35R35, 49J40] |  |  |
-| 35L86 | Unilateral problems for nonlinear hyperbolic equations and variational inequalities with nonlinear hyperbolic operators [See also 35R35, 49J40] |  |  |
-| 35L87 | Unilateral problems for hyperbolic systems and systems of variational inequalities with hyperbolic operators [See also 35R35, 49J40] |  |  |
-| 35L90 | Abstract hyperbolic equations |  |  |
+| **35Lxx** | **Hyperbolic equations and hyperbolic systems {For global analysis, see 58J45}** | **Zâidî muâdeleler ve zâidî manzûmeler {Küllî tahlîl için bakınız: 58J45}** |  |
+| 35L02 | First-order hyperbolic equations | Birinci mertebeden zâidî muâdeleler |  |
+| 35L03 | Initial value problems for first-order hyperbolic equations | Birinci mertebeden zâidî muâdeleler için ibtidâî kıymet meseleleri |  |
+| 35L04 | Initial-boundary value problems for first-order hyperbolic equations | Birinci mertebeden zâidî muâdeleler için ibtidâî-hudûd kıymeti meseleleri |  |
+| 35L05 | Wave equation | Mevc muâdelesi |  |
+| 35L10 | Second-order hyperbolic equations | İkinci mertebeden zâidî muâdeleler |  |
+| 35L15 | Initial value problems for second-order hyperbolic equations | İkinci mertebeden zâidî muâdeleler için ibtidâî kıymet meseleleri |  |
+| 35L20 | Initial-boundary value problems for second-order hyperbolic equations | İkinci mertebeden zâidî muâdeleler için ibtidâî-hudûd kıymeti meseleleri |  |
+| 35L25 | Higher-order hyperbolic equations | Yüksek mertebeden zâidî muâdeleler |  |
+| 35L30 | Initial value problems for higher-order hyperbolic equations | Yüksek mertebeden zâidî muâdeleler için ibtidâî kıymet meseleleri |  |
+| 35L35 | Initial-boundary value problems for higher-order hyperbolic equations | Yüksek mertebeden zâidî muâdeleler için ibtidâî-hudûd kıymeti meseleleri |  |
+| 35L40 | First-order hyperbolic systems | Birinci mertebeden zâidî manzûmeler |  |
+| 35L45 | Initial value problems for first-order hyperbolic systems | Birinci mertebeden zâidî manzûmeler için ibtidâî kıymet meseleleri |  |
+| 35L50 | Initial-boundary value problems for first-order hyperbolic systems | Birinci mertebeden zâidî manzûmeler için ibtidâî-hudûd kıymeti meseleleri |  |
+| 35L51 | Second-order hyperbolic systems | İkinci mertebeden zâidî manzûmeler |  |
+| 35L52 | Initial value problems for second-order hyperbolic systems | İkinci mertebeden zâidî manzûmeler için ibtidâî kıymet meseleleri |  |
+| 35L53 | Initial-boundary value problems for second-order hyperbolic systems | İkinci mertebeden zâidî manzûmeler için ibtidâî-hudûd kıymeti meseleleri |  |
+| 35L55 | Higher-order hyperbolic systems | Yüksek mertebeden zâidî manzûmeler |  |
+| 35L56 | Initial value problems for higher-order hyperbolic systems | Yüksek mertebeden zâidî manzûmeler için ibtidâî kıymet meseleleri |  |
+| 35L57 | Initial-boundary value problems for higher-order hyperbolic systems | Yüksek mertebeden zâidî manzûmeler için ibtidâî-hudûd kıymeti meseleleri |  |
+| 35L60 | First-order nonlinear hyperbolic equations | Birinci mertebeden gayr-ı hattî zâidî muâdeleler |  |
+| 35L65 | Hyperbolic conservation laws | Zâidî bekā kanunları |  |
+| 35L67 | Shocks and singularities for hyperbolic equations [See also 58Kxx, 74J40, 76L05] | Zâidî muâdeleler için sadmeler ve infirâdlar [Ayrıca bakınız: 58Kxx, 74J40, 76L05] |  |
+| 35L70 | Second-order nonlinear hyperbolic equations | İkinci mertebeden gayr-ı hattî zâidî muâdeleler |  |
+| 35L71 | Second-order semilinear hyperbolic equations | İkinci mertebeden nîm-hattî zâidî muâdeleler |  |
+| 35L72 | Second-order quasilinear hyperbolic equations | İkinci mertebeden şibh-i hattî zâidî muâdeleler |  |
+| 35L75 | Higher-order nonlinear hyperbolic equations | Yüksek mertebeden gayr-ı hattî zâidî muâdeleler |  |
+| 35L76 | Higher-order semilinear hyperbolic equations | Yüksek mertebeden nîm-hattî zâidî muâdeleler |  |
+| 35L77 | Higher-order quasilinear hyperbolic equations | Yüksek mertebeden şibh-i hattî zâidî muâdeleler |  |
+| 35L80 | Degenerate hyperbolic equations | Tereddî etmiş zâidî muâdeleler |  |
+| 35L81 | Singular hyperbolic equations | Münferid zâidî muâdeleler |  |
+| 35L82 | Pseudohyperbolic equations | Kâzib-zâidî muâdeleler |  |
+| 35L85 | Unilateral problems for linear hyperbolic equations and variational inequalities with linear hyperbolic operators [See also 35R35, 49J40] | Hattî zâidî muâdeleler için tek taraflı meseleler ve hattî zâidî âmilli tehavvülî adem-i müsâvâtlar [Ayrıca bakınız: 35R35, 49J40] |  |
+| 35L86 | Unilateral problems for nonlinear hyperbolic equations and variational inequalities with nonlinear hyperbolic operators [See also 35R35, 49J40] | Gayr-ı hattî zâidî muâdeleler için tek taraflı meseleler ve gayr-ı hattî zâidî âmilli tehavvülî adem-i müsâvâtlar [Ayrıca bakınız: 35R35, 49J40] |  |
+| 35L87 | Unilateral problems for hyperbolic systems and systems of variational inequalities with hyperbolic operators [See also 35R35, 49J40] | Zâidî manzûmeler için tek taraflı meseleler ve zâidî âmilli tehavvülî adem-i müsâvât manzûmeleri [Ayrıca bakınız: 35R35, 49J40] |  |
+| 35L90 | Abstract hyperbolic equations | Mücerred zâidî muâdeleler |  |
 | 35L99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **35Mxx** | **Partial differential equations of mixed type and mixed-type systems of partial differential equations** | **** |  |
-| 35M10 | PDEs of mixed type |  |  |
-| 35M11 | Initial value problems for PDEs of mixed type |  |  |
-| 35M12 | Boundary value problems for PDEs of mixed type |  |  |
-| 35M13 | Initial-boundary value problems for PDEs of mixed type |  |  |
-| 35M30 | Mixed-type systems of PDEs |  |  |
-| 35M31 | Initial value problems for mixed-type systems of PDEs |  |  |
-| 35M32 | Boundary value problems for mixed-type systems of PDEs |  |  |
-| 35M33 | Initial-boundary value problems for mixed-type systems of PDEs |  |  |
-| 35M85 | Unilateral problems for linear PDEs of mixed type and variational inequalities with partial differential operators of mixed type [See also 35R35, 49J40] |  |  |
-| 35M86 | Unilateral problems for nonlinear PDEs of mixed type and variational inequalities with nonlinear partial differential operators of mixed type [See also 35R35, 49J40] |  |  |
-| 35M87 | Unilateral problems for mixed-type systems of PDEs and systems of variational inequalities with partial differential operators of mixed type [See also 35R35, 49J40] |  |  |
+| **35Mxx** | **Partial differential equations of mixed type and mixed-type systems of partial differential equations** | **Karışık nevʻden kısmî tefâzulî muâdeleler ve karışık nevʻden kısmî tefâzulî muâdele manzûmeleri** |  |
+| 35M10 | PDEs of mixed type | Karışık nevʻden kısmî tefâzulî muâdeleler |  |
+| 35M11 | Initial value problems for PDEs of mixed type | Karışık nevʻden kısmî tefâzulî muâdeleler için ibtidâî kıymet meseleleri |  |
+| 35M12 | Boundary value problems for PDEs of mixed type | Karışık nevʻden kısmî tefâzulî muâdeleler için hudûd kıymeti meseleleri |  |
+| 35M13 | Initial-boundary value problems for PDEs of mixed type | Karışık nevʻden kısmî tefâzulî muâdeleler için ibtidâî-hudûd kıymeti meseleleri |  |
+| 35M30 | Mixed-type systems of PDEs | Karışık nevʻden kısmî tefâzulî muâdeleler manzûmeleri |  |
+| 35M31 | Initial value problems for mixed-type systems of PDEs | Karışık nevʻden kısmî tefâzulî muâdeleler manzûmeleri için ibtidâî kıymet meseleleri |  |
+| 35M32 | Boundary value problems for mixed-type systems of PDEs | Karışık nevʻden kısmî tefâzulî muâdeleler manzûmeleri için hudûd kıymeti meseleleri |  |
+| 35M33 | Initial-boundary value problems for mixed-type systems of PDEs | Karışık nevʻden kısmî tefâzulî muâdeleler manzûmeleri için ibtidâî-hudûd kıymeti meseleleri |  |
+| 35M85 | Unilateral problems for linear PDEs of mixed type and variational inequalities with partial differential operators of mixed type [See also 35R35, 49J40] | Karışık nevʻden hattî kısmî tefâzulî muâdeleler için tek taraflı meseleler ve karışık nevʻden kısmî tefâzulî âmilli tehavvülî adem-i müsâvâtlar [Ayrıca bakınız: 35R35, 49J40] |  |
+| 35M86 | Unilateral problems for nonlinear PDEs of mixed type and variational inequalities with nonlinear partial differential operators of mixed type [See also 35R35, 49J40] | Karışık nevʻden gayr-ı hattî kısmî tefâzulî muâdeleler için tek taraflı meseleler ve karışık nevʻden gayr-ı hattî kısmî tefâzulî âmilli tehavvülî adem-i müsâvâtlar [Ayrıca bakınız: 35R35, 49J40] |  |
+| 35M87 | Unilateral problems for mixed-type systems of PDEs and systems of variational inequalities with partial differential operators of mixed type [See also 35R35, 49J40] | Karışık nevʻden kısmî tefâzulî muâdeleler manzûmeleri için tek taraflı meseleler ve karışık nevʻden kısmî tefâzulî âmilli tehavvülî adem-i müsâvât manzûmeleri [Ayrıca bakınız: 35R35, 49J40] |  |
 | 35M99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **35Nxx** | **Overdetermined problems for partial differential equations and systems of partial differential equations {For global analysis, see 58Hxx, 58J10, 58J15}** | **** |  |
-| 35N05 | Overdetermined systems of PDEs with constant coefficients |  |  |
-| 35N10 | Overdetermined systems of PDEs with variable coefficients |  |  |
-| 35N15 | ∂-Neumann problems and formal complexes in context of PDEs [See also 32W05, 32W10, 58J10] |  |  |
-| 35N20 | Overdetermined initial value problems for PDEs and systems of PDEs |  |  |
-| 35N25 | Overdetermined boundary value problems for PDEs and systems of PDEs |  |  |
-| 35N30 | Overdetermined initial-boundary value problems for PDEs and systems of PDEs |  |  |
+| **35Nxx** | **Overdetermined problems for partial differential equations and systems of partial differential equations {For global analysis, see 58Hxx, 58J10, 58J15}** | **Kısmî tefâzulî muâdeleler ve kısmî tefâzulî muâdele manzûmeleri için fazla tayin edilmiş meseleler {Küllî tahlîl için bakınız: 58Hxx, 58J10, 58J15}** |  |
+| 35N05 | Overdetermined systems of PDEs with constant coefficients | Sâbit emsalli fazla tayin edilmiş kısmî tefâzulî muâdeleler manzûmeleri |  |
+| 35N10 | Overdetermined systems of PDEs with variable coefficients | Mütehavvil emsalli fazla tayin edilmiş kısmî tefâzulî muâdeleler manzûmeleri |  |
+| 35N15 | ∂-Neumann problems and formal complexes in context of PDEs [See also 32W05, 32W10, 58J10] | Kısmî tefâzulî muâdeleler bağlamında ∂-Neumann meseleleri ve sûrî mürekkebler (kompleksler) [Ayrıca bakınız: 32W05, 32W10, 58J10] | nakil |
+| 35N20 | Overdetermined initial value problems for PDEs and systems of PDEs | Kısmî tefâzulî muâdeleler ve kısmî tefâzulî muâdeleler manzûmeleri için fazla tayin edilmiş ibtidâî kıymet meseleleri |  |
+| 35N25 | Overdetermined boundary value problems for PDEs and systems of PDEs | Kısmî tefâzulî muâdeleler ve kısmî tefâzulî muâdeleler manzûmeleri için fazla tayin edilmiş hudûd kıymeti meseleleri |  |
+| 35N30 | Overdetermined initial-boundary value problems for PDEs and systems of PDEs | Kısmî tefâzulî muâdeleler ve kısmî tefâzulî muâdeleler manzûmeleri için fazla tayin edilmiş ibtidâî-hudûd kıymeti meseleleri |  |
 | 35N99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **35Pxx** | **Spectral theory and eigenvalue problems for partial differential equations {For operator theory, see 47Axx, 47Bxx, 47F05}** | **** |  |
-| 35P05 | General topics in linear spectral theory for PDEs |  |  |
-| 35P10 | Completeness of eigenfunctions and eigenfunction expansions in context of PDEs |  |  |
-| 35P15 | Estimates of eigenvalues in context of PDEs |  |  |
-| 35P20 | Asymptotic distributions of eigenvalues in context of PDEs |  |  |
-| 35P25 | Scattering theory for PDEs [See also 47A40] |  |  |
-| 35P30 | Nonlinear eigenvalue problems and nonlinear spectral theory for PDEs |  |  |
+| **35Pxx** | **Spectral theory and eigenvalue problems for partial differential equations {For operator theory, see 47Axx, 47Bxx, 47F05}** | **Kısmî tefâzulî muâdeleler için tayf nazariyesi ve hâs kıymet meseleleri {Âmiller nazariyesi için bakınız: 47Axx, 47Bxx, 47F05}** |  |
+| 35P05 | General topics in linear spectral theory for PDEs | Kısmî tefâzulî muâdeleler için hattî tayf nazariyesinde umûmî mevzûlar |  |
+| 35P10 | Completeness of eigenfunctions and eigenfunction expansions in context of PDEs | Kısmî tefâzulî muâdeleler bağlamında hâs tâbilerin tamamiyeti ve hâs tâbi açılımları |  |
+| 35P15 | Estimates of eigenvalues in context of PDEs | Kısmî tefâzulî muâdeleler bağlamında hâs kıymetlerin tahmînleri |  |
+| 35P20 | Asymptotic distributions of eigenvalues in context of PDEs | Kısmî tefâzulî muâdeleler bağlamında hâs kıymetlerin mukāribî tevzîleri |  |
+| 35P25 | Scattering theory for PDEs [See also 47A40] | Kısmî tefâzulî muâdeleler için inteşâr (saçılma) nazariyesi [Ayrıca bakınız: 47A40] |  |
+| 35P30 | Nonlinear eigenvalue problems and nonlinear spectral theory for PDEs | Kısmî tefâzulî muâdeleler için gayr-ı hattî hâs kıymet meseleleri ve gayr-ı hattî tayf nazariyesi |  |
 | 35P99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **35Qxx** | **Partial differential equations of mathematical physics and other areas of application [See also 35J05, 35J10, 35K05, 35L05]** | **** |  |
-| 35Q05 | Euler-Poisson-Darboux equations |  |  |
-| 35Q07 | Fuchsian PDEs |  |  |
-| 35Q15 | Riemann-Hilbert problems in context of PDEs [See also 30E25, 31A25, 31B20] |  |  |
-| 35Q20 | Boltzmann equations {For fluid mechanics, see 76P05; for statistical mechanics, see 82B40, 82C40, 82D05} |  |  |
-| 35Q30 | Navier-Stokes equations {For fluid mechanics, see 76D05, 76D07, 76N10} |  |  |
-| 35Q31 | Euler equations {For fluid mechanics, see 76D05, 76D07, 76N10} |  |  |
-| 35Q35 | PDEs in connection with fluid mechanics |  |  |
-| 35Q40 | PDEs in connection with quantum mechanics |  |  |
-| 35Q41 | Time-dependent Schrödinger equations and Dirac equations {For quantum theory, see 81Q05; for relativity and gravitational theory, see 83A05, 83C10} |  |  |
-| 35Q49 | Transport equations {For calculus of variations and optimal control, see 49Q22; for fluid mechanics, see 76F25; for statistical mechanics, see 82C70, 82D75; for operations research, see 90B06; for mathematical programming, see 90C08} |  |  |
-| 35Q51 | Soliton equations {For dynamical systems and ergodic theory, see 37K40} |  |  |
-| 35Q53 | KdV equations (Korteweg-de Vries equations) {For dynamical systems and ergodic theory, see 37K10} |  |  |
-| 35Q55 | NLS equations (nonlinear Schrödinger equations) {For dynamical systems and ergodic theory, see 37K10} |  |  |
-| 35Q56 | Ginzburg-Landau equations {For optics and electromagnetic theory, see 78A25} |  |  |
-| 35Q60 | PDEs in connection with optics and electromagnetic theory |  |  |
-| 35Q61 | Maxwell equations {For optics and electromagnetic theory, see 78A25; for relativity and gravitational theory, see 83C22} |  |  |
-| 35Q62 | PDEs in connection with statistics |  |  |
-| 35Q68 | PDEs in connection with computer science |  |  |
-| 35Q70 | PDEs in connection with mechanics of particles and systems of particles |  |  |
-| 35Q74 | PDEs in connection with mechanics of deformable solids |  |  |
-| 35Q75 | PDEs in connection with relativity and gravitational theory |  |  |
-| 35Q76 | Einstein equations {For several complex variables and analytic spaces, see 32Q40; for differential geometry, see 53C07; for relativity and gravitational theory, see 83C05, 83C25, 83D05} |  |  |
-| 35Q79 | PDEs in connection with classical thermodynamics and heat transfer |  |  |
-| 35Q81 | PDEs in connection with semiconductor devices {For statistical mechanics, see 82D37} |  |  |
-| 35Q82 | PDEs in connection with statistical mechanics |  |  |
-| 35Q83 | Vlasov equations {For statistical mechanics, see 82C70, 82D75} |  |  |
-| 35Q84 | Fokker-Planck equations {For fluid mechanics, see 76X05, 76W05; for statistical mechanics, see 82C31} |  |  |
-| 35Q85 | PDEs in connection with astronomy and astrophysics |  |  |
-| 35Q86 | PDEs in connection with geophysics |  |  |
-| 35Q89 | PDEs in connection with mean field game theory {For calculus of variations and optimal control, see 49N80; for game theory, see 91A16} |  |  |
-| 35Q90 | PDEs in connection with mathematical programming |  |  |
-| 35Q91 | PDEs in connection with game theory, economics, social and behavioral sciences |  |  |
-| 35Q92 | PDEs in connection with biology, chemistry and other natural sciences |  |  |
-| 35Q93 | PDEs in connection with control and optimization |  |  |
-| 35Q94 | PDEs in connection with information and communication |  |  |
+| **35Qxx** | **Partial differential equations of mathematical physics and other areas of application [See also 35J05, 35J10, 35K05, 35L05]** | **Riyâzî hikmet-i tabîiyyenin ve diğer tatbik sahalarının kısmî tefâzulî muâdeleleri [Ayrıca bakınız: 35J05, 35J10, 35K05, 35L05]** |  |
+| 35Q05 | Euler-Poisson-Darboux equations | Euler-Poisson-Darboux muâdeleleri | nakil |
+| 35Q07 | Fuchsian PDEs | Fuchs nevʻinden kısmî tefâzulî muâdeleler | nakil |
+| 35Q15 | Riemann-Hilbert problems in context of PDEs [See also 30E25, 31A25, 31B20] | Kısmî tefâzulî muâdeleler bağlamında Riemann-Hilbert meseleleri [Ayrıca bakınız: 30E25, 31A25, 31B20] | nakil |
+| 35Q20 | Boltzmann equations {For fluid mechanics, see 76P05; for statistical mechanics, see 82B40, 82C40, 82D05} | Boltzmann muâdeleleri {Mâyiât mekaniği için bakınız: 76P05; ihsâî mekanik için bakınız: 82B40, 82C40, 82D05} | nakil |
+| 35Q30 | Navier-Stokes equations {For fluid mechanics, see 76D05, 76D07, 76N10} | Navier-Stokes muâdeleleri {Mâyiât mekaniği için bakınız: 76D05, 76D07, 76N10} | nakil |
+| 35Q31 | Euler equations {For fluid mechanics, see 76D05, 76D07, 76N10} | Euler muâdeleleri {Mâyiât mekaniği için bakınız: 76D05, 76D07, 76N10} | nakil |
+| 35Q35 | PDEs in connection with fluid mechanics | Mâyiât mekaniğiyle alâkalı kısmî tefâzulî muâdeleler |  |
+| 35Q40 | PDEs in connection with quantum mechanics | Kuantum mekaniğiyle alâkalı kısmî tefâzulî muâdeleler |  |
+| 35Q41 | Time-dependent Schrödinger equations and Dirac equations {For quantum theory, see 81Q05; for relativity and gravitational theory, see 83A05, 83C10} | Zamana tâbi Schrödinger muâdeleleri ve Dirac muâdeleleri {Kuantum nazariyesi için bakınız: 81Q05; izâfiyet ve cazibe nazariyesi için bakınız: 83A05, 83C10} | nakil |
+| 35Q49 | Transport equations {For calculus of variations and optimal control, see 49Q22; for fluid mechanics, see 76F25; for statistical mechanics, see 82C70, 82D75; for operations research, see 90B06; for mathematical programming, see 90C08} | Nakil muâdeleleri {Tehavvülât hesabı ve ahsen idâre için bakınız: 49Q22; mâyiât mekaniği için bakınız: 76F25; ihsâî mekanik için bakınız: 82C70, 82D75; ameliyat araştırması için bakınız: 90B06; riyâzî programlama için bakınız: 90C08} |  |
+| 35Q51 | Soliton equations {For dynamical systems and ergodic theory, see 37K40} | Soliton muâdeleleri {Hareketli (dinamik) manzûmeler ve ergodik nazariye için bakınız: 37K40} | nakil |
+| 35Q53 | KdV equations (Korteweg-de Vries equations) {For dynamical systems and ergodic theory, see 37K10} | Korteweg-de Vries muâdeleleri {Hareketli (dinamik) manzûmeler ve ergodik nazariye için bakınız: 37K10} | nakil |
+| 35Q55 | NLS equations (nonlinear Schrödinger equations) {For dynamical systems and ergodic theory, see 37K10} | Gayr-ı hattî Schrödinger muâdeleleri {Hareketli (dinamik) manzûmeler ve ergodik nazariye için bakınız: 37K10} | nakil |
+| 35Q56 | Ginzburg-Landau equations {For optics and electromagnetic theory, see 78A25} | Ginzburg-Landau muâdeleleri {Ziyâ ilmi (menâzır) ve elektromıknatısî nazariye için bakınız: 78A25} | nakil |
+| 35Q60 | PDEs in connection with optics and electromagnetic theory | Menâzır ilmi ve elektromıknatısî nazariyeyle alâkalı kısmî tefâzulî muâdeleler |  |
+| 35Q61 | Maxwell equations {For optics and electromagnetic theory, see 78A25; for relativity and gravitational theory, see 83C22} | Maxwell muâdeleleri {Menâzır ilmi ve elektromıknatısî nazariye için bakınız: 78A25; izâfiyet ve cazibe nazariyesi için bakınız: 83C22} | nakil |
+| 35Q62 | PDEs in connection with statistics | İhsâiyyâtla alâkalı kısmî tefâzulî muâdeleler |  |
+| 35Q68 | PDEs in connection with computer science | Hâsibât ilmiyle alâkalı kısmî tefâzulî muâdeleler |  |
+| 35Q70 | PDEs in connection with mechanics of particles and systems of particles | Zerreler ve zerre manzûmeleri mekaniğiyle alâkalı kısmî tefâzulî muâdeleler |  |
+| 35Q74 | PDEs in connection with mechanics of deformable solids | Şekli bozulabilen sulb cisimler mekaniğiyle alâkalı kısmî tefâzulî muâdeleler |  |
+| 35Q75 | PDEs in connection with relativity and gravitational theory | İzâfiyet ve cazibe nazariyesiyle alâkalı kısmî tefâzulî muâdeleler |  |
+| 35Q76 | Einstein equations {For several complex variables and analytic spaces, see 32Q40; for differential geometry, see 53C07; for relativity and gravitational theory, see 83C05, 83C25, 83D05} | Einstein muâdeleleri {Birden çok mürekkeb mütehavvil ve tahlîlî fezâlar için bakınız: 32Q40; tefâzulî hendese için bakınız: 53C07; izâfiyet ve cazibe nazariyesi için bakınız: 83C05, 83C25, 83D05} | nakil |
+| 35Q79 | PDEs in connection with classical thermodynamics and heat transfer | Klasik hararet-i hareket ilmi (termodinamik) ve hararet nakliyle alâkalı kısmî tefâzulî muâdeleler |  |
+| 35Q81 | PDEs in connection with semiconductor devices {For statistical mechanics, see 82D37} | Nîm-nâkil cihazlarıyla alâkalı kısmî tefâzulî muâdeleler {İhsâî mekanik için bakınız: 82D37} |  |
+| 35Q82 | PDEs in connection with statistical mechanics | İhsâî mekanikle alâkalı kısmî tefâzulî muâdeleler |  |
+| 35Q83 | Vlasov equations {For statistical mechanics, see 82C70, 82D75} | Vlasov muâdeleleri {İhsâî mekanik için bakınız: 82C70, 82D75} | nakil |
+| 35Q84 | Fokker-Planck equations {For fluid mechanics, see 76X05, 76W05; for statistical mechanics, see 82C31} | Fokker-Planck muâdeleleri {Mâyiât mekaniği için bakınız: 76X05, 76W05; ihsâî mekanik için bakınız: 82C31} | nakil |
+| 35Q85 | PDEs in connection with astronomy and astrophysics | İlm-i hey'et ve hey'et-i tabîiyye (astrofizik) ile alâkalı kısmî tefâzulî muâdeleler |  |
+| 35Q86 | PDEs in connection with geophysics | Arz hikmeti (jeofizik) ile alâkalı kısmî tefâzulî muâdeleler |  |
+| 35Q89 | PDEs in connection with mean field game theory {For calculus of variations and optimal control, see 49N80; for game theory, see 91A16} | Vasatî sahâ oyunları nazariyesiyle alâkalı kısmî tefâzulî muâdeleler {Tehavvülât hesabı ve ahsen idâre için bakınız: 49N80; oyunlar nazariyesi için bakınız: 91A16} |  |
+| 35Q90 | PDEs in connection with mathematical programming | Riyâzî programlama ile alâkalı kısmî tefâzulî muâdeleler |  |
+| 35Q91 | PDEs in connection with game theory, economics, social and behavioral sciences | Oyunlar nazariyesi, iktisat, içtimaî ve sülûkî ilimlerle alâkalı kısmî tefâzulî muâdeleler |  |
+| 35Q92 | PDEs in connection with biology, chemistry and other natural sciences | Hayatiyyât (biyoloji), kimya ve diğer tabiî ilimlerle alâkalı kısmî tefâzulî muâdeleler |  |
+| 35Q93 | PDEs in connection with control and optimization | İdâre ve ahseniyet (optimizasyon) ile alâkalı kısmî tefâzulî muâdeleler |  |
+| 35Q94 | PDEs in connection with information and communication | Malûmat ve muhâbere ile alâkalı kısmî tefâzulî muâdeleler |  |
 | 35Q99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **35Rxx** | **Miscellaneous topics in partial differential equations {For equations on manifolds, see 32Wxx, 58Jxx; for manifolds of solutions, see 58Bxx; for stochastic PDEs, see 60H15}** | **** |  |
-| 35R01 | PDEs on manifolds [See also 32Wxx, 53Cxx, 58Jxx] |  |  |
-| 35R02 | PDEs on graphs and networks (ramified or polygonal spaces) |  |  |
-| 35R03 | PDEs on Heisenberg groups, Lie groups, Carnot groups, etc. |  |  |
-| 35R05 | PDEs with low regular coefficients and/or low regular data |  |  |
-| 35R06 | PDEs with measure |  |  |
-| 35R07 | PDEs on time scales |  |  |
-| 35R09 | Integro-partial differential equations [See also 34K30, 45K05] |  |  |
-| 35R10 | Partial functional-differential equations |  |  |
-| 35R11 | Fractional partial differential equations |  |  |
-| 35R12 | Impulsive partial differential equations |  |  |
-| 35R13 | Fuzzy partial differential equations |  |  |
-| 35R15 | PDEs on infinite-dimensional (e.g., function) spaces (= PDEs in infinitely many variables) [See also 46Gxx, 58D25] |  |  |
-| 35R20 | Operator partial differential equations (= PDEs on finite-dimensional spaces for abstract space valued functions) [See also 34Gxx, 47A50, 47D03, 47D06, 47D09, 47H20, 47Jxx] |  |  |
-| 35R25 | Ill-posed problems for PDEs |  |  |
-| 35R30 | Inverse problems for PDEs |  |  |
-| 35R35 | Free boundary problems for PDEs |  |  |
-| 35R37 | Moving boundary problems for PDEs |  |  |
-| 35R45 | Partial differential inequalities and systems of partial differential inequalities |  |  |
-| 35R50 | PDEs of infinite order |  |  |
-| 35R60 | PDEs with randomness, stochastic partial differential equations [See also 60H15] |  |  |
-| 35R70 | PDEs with multivalued right-hand sides |  |  |
+| **35Rxx** | **Miscellaneous topics in partial differential equations {For equations on manifolds, see 32Wxx, 58Jxx; for manifolds of solutions, see 58Bxx; for stochastic PDEs, see 60H15}** | **Kısmî tefâzulî muâdelelerde muhtelif mevzûlar {Müteşa'ibler üzerindeki muâdeleler için bakınız: 32Wxx, 58Jxx; hallerin müteşa'ibleri için bakınız: 58Bxx; tesâdüfî kısmî tefâzulî muâdeleler için bakınız: 60H15}** |  |
+| 35R01 | PDEs on manifolds [See also 32Wxx, 53Cxx, 58Jxx] | Müteşa'ibler üzerinde kısmî tefâzulî muâdeleler [Ayrıca bakınız: 32Wxx, 53Cxx, 58Jxx] |  |
+| 35R02 | PDEs on graphs and networks (ramified or polygonal spaces) | Rabıta şekilleri ve şebekeler (dallanmış yahut kesîrü'l-adlâ' fezâlar) üzerinde kısmî tefâzulî muâdeleler |  |
+| 35R03 | PDEs on Heisenberg groups, Lie groups, Carnot groups, etc. | Heisenberg zümreleri, Lie zümreleri, Carnot zümreleri ve emsâli üzerinde kısmî tefâzulî muâdeleler | nakil |
+| 35R05 | PDEs with low regular coefficients and/or low regular data | Az muntazam emsalli ve/veya az muntazam verili kısmî tefâzulî muâdeleler |  |
+| 35R06 | PDEs with measure | Mikyâslı kısmî tefâzulî muâdeleler |  |
+| 35R07 | PDEs on time scales | Zaman cetvelleri üzerinde kısmî tefâzulî muâdeleler | şüpheli: "time scales" (zaman ölçekleri hesabı) için yerleşik karşılık bilmiyorum |
+| 35R09 | Integro-partial differential equations [See also 34K30, 45K05] | Tamâmî-kısmî tefâzulî muâdeleler [Ayrıca bakınız: 34K30, 45K05] |  |
+| 35R10 | Partial functional-differential equations | Kısmî tâbi'-i tevâbi'-tefâzulî muâdeleler |  |
+| 35R11 | Fractional partial differential equations | Kesrî kısmî tefâzulî muâdeleler |  |
+| 35R12 | Impulsive partial differential equations | Def'î (darbeli) kısmî tefâzulî muâdeleler |  |
+| 35R13 | Fuzzy partial differential equations | Bulanık kısmî tefâzulî muâdeleler |  |
+| 35R15 | PDEs on infinite-dimensional (e.g., function) spaces (= PDEs in infinitely many variables) [See also 46Gxx, 58D25] | Gayr-ı mütenâhî buudlu (meselâ tâbi) fezâlarda kısmî tefâzulî muâdeleler (= gayr-ı mütenâhî adette mütehavvilli kısmî tefâzulî muâdeleler) [Ayrıca bakınız: 46Gxx, 58D25] |  |
+| 35R20 | Operator partial differential equations (= PDEs on finite-dimensional spaces for abstract space valued functions) [See also 34Gxx, 47A50, 47D03, 47D06, 47D09, 47H20, 47Jxx] | Âmil kısmî tefâzulî muâdeleleri (= mücerred fezâda kıymet alan tâbiler için mütenâhî buudlu fezâlarda kısmî tefâzulî muâdeleler) [Ayrıca bakınız: 34Gxx, 47A50, 47D03, 47D06, 47D09, 47H20, 47Jxx] |  |
+| 35R25 | Ill-posed problems for PDEs | Kısmî tefâzulî muâdeleler için kötü vaz' edilmiş meseleler |  |
+| 35R30 | Inverse problems for PDEs | Kısmî tefâzulî muâdeleler için makûs meseleler |  |
+| 35R35 | Free boundary problems for PDEs | Kısmî tefâzulî muâdeleler için serbest hudûd meseleleri |  |
+| 35R37 | Moving boundary problems for PDEs | Kısmî tefâzulî muâdeleler için müteharrik hudûd meseleleri |  |
+| 35R45 | Partial differential inequalities and systems of partial differential inequalities | Kısmî tefâzulî adem-i müsâvâtlar ve kısmî tefâzulî adem-i müsâvât manzûmeleri |  |
+| 35R50 | PDEs of infinite order | Gayr-ı mütenâhî mertebeden kısmî tefâzulî muâdeleler |  |
+| 35R60 | PDEs with randomness, stochastic partial differential equations [See also 60H15] | Tesâdüfiyetli kısmî tefâzulî muâdeleler, tesâdüfî (stokastik) kısmî tefâzulî muâdeleler [Ayrıca bakınız: 60H15] |  |
+| 35R70 | PDEs with multivalued right-hand sides | Sağ tarafı çok kıymetli kısmî tefâzulî muâdeleler |  |
 | 35R99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **35Sxx** | **Pseudodifferential operators and other generalizations of partial differential operators {For operator theory, see 47G30, 58J40}** | **** |  |
-| 35S05 | Pseudodifferential operators as generalizations of partial differential operators [See also 32W25, 47G30, 47L80, 58J40] |  |  |
-| 35S10 | Initial value problems for PDEs with pseudodifferential operators |  |  |
-| 35S15 | Boundary value problems for PDEs with pseudodifferential operators |  |  |
-| 35S16 | Initial-boundary value problems for PDEs with pseudodifferential operators |  |  |
-| 35S30 | Fourier integral operators applied to PDEs [See also 43A32, 58J40] |  |  |
-| 35S35 | Topological aspects for pseudodifferential operators in context of PDEs: intersection cohomology, stratified sets, etc. [See also 32C38, 32S40, 32S60, 58J15] |  |  |
-| 35S50 | Paradifferential operators as generalizations of partial differential operators in context of PDEs |  |  |
+| **35Sxx** | **Pseudodifferential operators and other generalizations of partial differential operators {For operator theory, see 47G30, 58J40}** | **Kâzib-tefâzulî âmiller ve kısmî tefâzulî âmillerin diğer teşmîlleri {Âmiller nazariyesi için bakınız: 47G30, 58J40}** |  |
+| 35S05 | Pseudodifferential operators as generalizations of partial differential operators [See also 32W25, 47G30, 47L80, 58J40] | Kısmî tefâzulî âmillerin teşmîli olarak kâzib-tefâzulî âmiller [Ayrıca bakınız: 32W25, 47G30, 47L80, 58J40] |  |
+| 35S10 | Initial value problems for PDEs with pseudodifferential operators | Kâzib-tefâzulî âmilli kısmî tefâzulî muâdeleler için ibtidâî kıymet meseleleri |  |
+| 35S15 | Boundary value problems for PDEs with pseudodifferential operators | Kâzib-tefâzulî âmilli kısmî tefâzulî muâdeleler için hudûd kıymeti meseleleri |  |
+| 35S16 | Initial-boundary value problems for PDEs with pseudodifferential operators | Kâzib-tefâzulî âmilli kısmî tefâzulî muâdeleler için ibtidâî-hudûd kıymeti meseleleri |  |
+| 35S30 | Fourier integral operators applied to PDEs [See also 43A32, 58J40] | Kısmî tefâzulî muâdelelere tatbik edilen Fourier tamâmî âmilleri [Ayrıca bakınız: 43A32, 58J40] | nakil |
+| 35S35 | Topological aspects for pseudodifferential operators in context of PDEs: intersection cohomology, stratified sets, etc. [See also 32C38, 32S40, 32S60, 58J15] | Kısmî tefâzulî muâdeleler bağlamında kâzib-tefâzulî âmiller için vaz'î cihetler: kesişme mukābil-tecânüsü, tabakalı mecmûalar ve emsâli [Ayrıca bakınız: 32C38, 32S40, 32S60, 58J15] |  |
+| 35S50 | Paradifferential operators as generalizations of partial differential operators in context of PDEs | Kısmî tefâzulî muâdeleler bağlamında kısmî tefâzulî âmillerin teşmîli olarak nazîr-tefâzulî âmiller |  |
 | 35S99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
 ## 37-XX — Dynamical systems and ergodic theory [See also 26A18, 28Dxx, 34Cxx, 34Dxx, 35Bxx, 46Lxx, 58Jxx, 70-XX]
