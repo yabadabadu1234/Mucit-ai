@@ -2,7 +2,7 @@
 
 Bu sahife `araclar/msc_birlestir.py` ile `kaynak.tsv` ve `ceviri/` dosyalarından üretilir; elle değiştirilmez.
 
-Toplam madde: 6603 · karşılığı bulunan: 6426 · kalan: 177
+Toplam madde: 6603 · karşılığı bulunan: 6483 · kalan: 120
 
 
 ## 00-XX — Umûmî ve şâmil mevzûlar; mecmualar
@@ -6597,7 +6597,7 @@ Game theory, economics, finance, and other social and behavioral sciences
 | 91E99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 | **91Fxx** | **Other social and behavioral sciences (mathematical treatment)** | **Sâir içtimaî ve sülûkî ilimler (riyâzî muâmele)** |  |
 | 91F10 | History, political science | Târih, siyâset ilmi |  |
-| 91F20 | Linguistics [See also 03B65, 68T50] | Lisâniyat [Ayrıca bakınız: 03B65, 68T50] |  |
+| 91F20 | Linguistics [See also 03B65, 68T50] | İlm-i lisan [Ayrıca bakınız: 03B65, 68T50] |  |
 | 91F99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 | **91Gxx** | **Actuarial science and mathematical finance {For statistics, see 62P05}** | **Sigorta hesabı ilmi (aktüerya) ve riyâzî mâliye {İhsâiyyât için bakınız: 62P05}** |  |
 | 91G05 | Actuarial mathematics | Sigorta hesabı riyâziyâtı |  |
@@ -6779,71 +6779,71 @@ Systems theory; control {For optimal control, see 49-XX}
 | 93E35 | Stochastic learning and adaptive control | İhtimâlî öğrenme ve uyum sağlayan idâre |  |
 | 93E99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
-## 94-XX — Information and communication theory, circuits
+## 94-XX — Malûmat ve muhâbere nazariyesi, devreler
 
 Information and communication theory, circuits
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 94-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to information and communication theory |  |  |
-| 94-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to information and communication theory |  |  |
-| 94-02 | Research exposition (monographs, survey articles) pertaining to information and communication theory |  |  |
-| 94-03 | History of information and communication theory [Consider also classification numbers from Section 01] |  |  |
-| 94-04 | Software, source code, etc. for problems pertaining to information and communication theory |  |  |
-| 94-05 | Experimental work for problems pertaining to information and communication theory |  |  |
-| 94-06 | Proceedings, conferences, collections, etc. pertaining to information and communication theory |  |  |
-| 94-08 | Computational methods for problems pertaining to information and communication theory |  |  |
-| 94-10 | Mathematical modeling or simulation for problems pertaining to information and communication theory |  |  |
-| 94-11 | Research data for problems pertaining to information and communication theory |  |  |
-| **94Axx** | **Communication, information** | **** |  |
-| 94A05 | Communication theory [See also 60G35, 90B18] |  |  |
-| 94A08 | Image processing (compression, reconstruction, etc.) in information and communication theory [See also 68U10] |  |  |
-| 94A11 | Application of orthogonal and other special functions |  |  |
-| 94A12 | Signal theory (characterization, reconstruction, filtering, etc.) |  |  |
-| 94A13 | Detection theory in information and communication theory |  |  |
-| 94A14 | Modulation and demodulation in information and communication theory |  |  |
-| 94A15 | Information theory (general) [See also 62B10] {For quantum-theoretic aspects, see also 81P45} |  |  |
-| 94A16 | Informational aspects of data analysis and big data [See also 62R07, 68T09] {For homological aspects, see 55N31} |  |  |
-| 94A17 | Measures of information, entropy [See also 62B10] |  |  |
-| 94A20 | Sampling theory in information and communication theory |  |  |
-| 94A24 | Coding theorems (Shannon theory) |  |  |
-| 94A29 | Source coding [See also 68P30] |  |  |
-| 94A34 | Rate-distortion theory in information and communication theory |  |  |
-| 94A40 | Channel models (including quantum) in information and communication theory [See also 81P47] |  |  |
-| 94A45 | Prefix, length-variable, comma-free codes [See also 20M35, 68Q45] |  |  |
-| 94A50 | Theory of questionnaires |  |  |
-| 94A55 | Shift register sequences and sequences over finite alphabets in information and communication theory |  |  |
-| 94A60 | Cryptography [See also 11T71, 14G50, 68P25, 81P94] |  |  |
-| 94A62 | Authentication, digital signatures and secret sharing |  |  |
+| 94-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to information and communication theory | Malûmat ve muhâbere nazariyesi hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 94-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to information and communication theory | Malûmat ve muhâbere nazariyesi hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 94-02 | Research exposition (monographs, survey articles) pertaining to information and communication theory | Malûmat ve muhâbere nazariyesi hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 94-03 | History of information and communication theory [Consider also classification numbers from Section 01] | Malûmat ve muhâbere nazariyesinin târihi [01. babın tasnif numaralarına da bakılsın] |  |
+| 94-04 | Software, source code, etc. for problems pertaining to information and communication theory | Malûmat ve muhâbere nazariyesi sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 94-05 | Experimental work for problems pertaining to information and communication theory | Malûmat ve muhâbere nazariyesi sahasındaki meselelere dair tecrübî çalışmalar |  |
+| 94-06 | Proceedings, conferences, collections, etc. pertaining to information and communication theory | Malûmat ve muhâbere nazariyesi hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 94-08 | Computational methods for problems pertaining to information and communication theory | Malûmat ve muhâbere nazariyesi sahasındaki meselelere dair hesap usulleri |  |
+| 94-10 | Mathematical modeling or simulation for problems pertaining to information and communication theory | Malûmat ve muhâbere nazariyesi sahasındaki meselelere dair riyâzî numûne kurma (temsil) yahut taklit (benzetim) |  |
+| 94-11 | Research data for problems pertaining to information and communication theory | Malûmat ve muhâbere nazariyesi sahasındaki meselelere dair tetkik verileri |  |
+| **94Axx** | **Communication, information** | **Muhâbere, malûmat** |  |
+| 94A05 | Communication theory [See also 60G35, 90B18] | Muhâbere nazariyesi [Ayrıca bakınız: 60G35, 90B18] |  |
+| 94A08 | Image processing (compression, reconstruction, etc.) in information and communication theory [See also 68U10] | Malûmat ve muhâbere nazariyesinde sûret işleme (sıkıştırma, yeniden inşâ ve emsâli) [Ayrıca bakınız: 68U10] |  |
+| 94A11 | Application of orthogonal and other special functions | Amûdî ve sâir hususî tâbilerin tatbîki |  |
+| 94A12 | Signal theory (characterization, reconstruction, filtering, etc.) | İşaret nazariyesi (tavsîf, yeniden inşâ, süzme ve emsâli) |  |
+| 94A13 | Detection theory in information and communication theory | Malûmat ve muhâbere nazariyesinde tespit nazariyesi |  |
+| 94A14 | Modulation and demodulation in information and communication theory | Malûmat ve muhâbere nazariyesinde tadîl ve tadîlin çözülmesi (modülasyon ve demodülasyon) |  |
+| 94A15 | Information theory (general) [See also 62B10] {For quantum-theoretic aspects, see also 81P45} | Malûmat nazariyesi (umûmî) [Ayrıca bakınız: 62B10] {Kuantum nazariyesine ait cihetler için ayrıca bakınız: 81P45} |  |
+| 94A16 | Informational aspects of data analysis and big data [See also 62R07, 68T09] {For homological aspects, see 55N31} | Veri tahlîlinin ve büyük verinin malûmata ait cihetleri [Ayrıca bakınız: 62R07, 68T09] {Tecânüse ait cihetler için bakınız: 55N31} |  |
+| 94A17 | Measures of information, entropy [See also 62B10] | Malûmat ölçüleri, entropi (karışıklık mikdârı) [Ayrıca bakınız: 62B10] |  |
+| 94A20 | Sampling theory in information and communication theory | Malûmat ve muhâbere nazariyesinde numûne alma nazariyesi |  |
+| 94A24 | Coding theorems (Shannon theory) | Remzleme kaziyyeleri (Shannon nazariyesi) | nakil |
+| 94A29 | Source coding [See also 68P30] | Menba remzlemesi [Ayrıca bakınız: 68P30] |  |
+| 94A34 | Rate-distortion theory in information and communication theory | Malûmat ve muhâbere nazariyesinde hız-bozulma nazariyesi |  |
+| 94A40 | Channel models (including quantum) in information and communication theory [See also 81P47] | Malûmat ve muhâbere nazariyesinde kanal numûneleri (kuantum kanalları dahil) [Ayrıca bakınız: 81P47] |  |
+| 94A45 | Prefix, length-variable, comma-free codes [See also 20M35, 68Q45] | Önek remzleri, mütehavvil uzunluklu remzler, virgülsüz remzler [Ayrıca bakınız: 20M35, 68Q45] |  |
+| 94A50 | Theory of questionnaires | Suâl cetvelleri (anketler) nazariyesi |  |
+| 94A55 | Shift register sequences and sequences over finite alphabets in information and communication theory | Malûmat ve muhâbere nazariyesinde kaydırmalı sicil (yazmaç) tevâlîleri ve mütenâhî elifbâlar üzerindeki tevâlîler |  |
+| 94A60 | Cryptography [See also 11T71, 14G50, 68P25, 81P94] | İlm-i ta'miye (şifre ilmi) [Ayrıca bakınız: 11T71, 14G50, 68P25, 81P94] |  |
+| 94A62 | Authentication, digital signatures and secret sharing | Sıhhat tasdîki, rakamî imzalar ve sırrın paylaştırılması |  |
 | 94A99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **94Bxx** | **Theory of error-correcting codes and error-detecting codes** | **** |  |
-| 94B05 | Linear codes (general theory) |  |  |
-| 94B10 | Convolutional codes |  |  |
-| 94B12 | Combined modulation schemes (including trellis codes) in coding theory |  |  |
-| 94B15 | Cyclic codes |  |  |
-| 94B20 | Burst-correcting codes |  |  |
-| 94B25 | Combinatorial codes |  |  |
-| 94B27 | Geometric methods (including applications of algebraic geometry) applied to coding theory [See also 11T71, 14G50] |  |  |
-| 94B30 | Majority codes |  |  |
-| 94B35 | Decoding |  |  |
-| 94B40 | Arithmetic codes [See also 11T71, 14G50] |  |  |
-| 94B50 | Synchronization error-correcting codes |  |  |
-| 94B60 | Other types of codes |  |  |
-| 94B65 | Bounds on codes |  |  |
-| 94B70 | Error probability in coding theory |  |  |
-| 94B75 | Applications of the theory of convex sets and geometry of numbers (covering radius, etc.) to coding theory [See also 11H31, 11H71] |  |  |
+| **94Bxx** | **Theory of error-correcting codes and error-detecting codes** | **Hata tashîh eden ve hata tespit eden remzler nazariyesi** |  |
+| 94B05 | Linear codes (general theory) | Hattî remzler (umûmî nazariye) |  |
+| 94B10 | Convolutional codes | İltifâfî remzler |  |
+| 94B12 | Combined modulation schemes (including trellis codes) in coding theory | Remzleme nazariyesinde birleşik tadîl şemaları (kafes remzleri dahil) |  |
+| 94B15 | Cyclic codes | Devrî remzler |  |
+| 94B20 | Burst-correcting codes | Tûfan (yığın hâlindeki hata) tashîh eden remzler |  |
+| 94B25 | Combinatorial codes | Terkîbî remzler |  |
+| 94B27 | Geometric methods (including applications of algebraic geometry) applied to coding theory [See also 11T71, 14G50] | Remzleme nazariyesine tatbik edilen hendesî usuller (hendese-i cebriyyenin tatbîkleri dahil) [Ayrıca bakınız: 11T71, 14G50] |  |
+| 94B30 | Majority codes | Ekseriyet remzleri |  |
+| 94B35 | Decoding | Remz çözme |  |
+| 94B40 | Arithmetic codes [See also 11T71, 14G50] | Hesâbî remzler [Ayrıca bakınız: 11T71, 14G50] |  |
+| 94B50 | Synchronization error-correcting codes | Eşzamanlılık hatası tashîh eden remzler |  |
+| 94B60 | Other types of codes | Remzlerin sâir nevileri |  |
+| 94B65 | Bounds on codes | Remzler üzerindeki hadler |  |
+| 94B70 | Error probability in coding theory | Remzleme nazariyesinde hata ihtimâli |  |
+| 94B75 | Applications of the theory of convex sets and geometry of numbers (covering radius, etc.) to coding theory [See also 11H31, 11H71] | Muhaddeb mecmûalar nazariyesinin ve a'dâd hendesesinin remzleme nazariyesine tatbîkleri (örtme nısf-ı kutru ve emsâli) [Ayrıca bakınız: 11H31, 11H71] |  |
 | 94B99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **94Cxx** | **Circuits, networks [See also 68Q06]** | **** |  |
-| 94C05 | Analytic circuit theory |  |  |
-| 94C11 | Switching theory, applications of Boolean algebras to circuits and networks |  |  |
-| 94C12 | Fault detection; testing in circuits and networks |  |  |
-| 94C15 | Applications of graph theory to circuits and networks [See also 05Cxx, 68R10] |  |  |
-| 94C30 | Applications of design theory to circuits and networks [See also 05Bxx] |  |  |
-| 94C60 | Circuits in qualitative investigation and simulation of models |  |  |
+| **94Cxx** | **Circuits, networks [See also 68Q06]** | **Devreler, şebekeler [Ayrıca bakınız: 68Q06]** |  |
+| 94C05 | Analytic circuit theory | Tahlîlî devre nazariyesi |  |
+| 94C11 | Switching theory, applications of Boolean algebras to circuits and networks | Anahtarlama nazariyesi, Boole cebirlerinin devrelere ve şebekelere tatbîkleri |  |
+| 94C12 | Fault detection; testing in circuits and networks | Arıza tespiti; devrelerde ve şebekelerde yoklama |  |
+| 94C15 | Applications of graph theory to circuits and networks [See also 05Cxx, 68R10] | Rabıta şekilleri nazariyesinin devrelere ve şebekelere tatbîkleri [Ayrıca bakınız: 05Cxx, 68R10] |  |
+| 94C30 | Applications of design theory to circuits and networks [See also 05Bxx] | Tasmîm nazariyesinin devrelere ve şebekelere tatbîkleri [Ayrıca bakınız: 05Bxx] |  |
+| 94C60 | Circuits in qualitative investigation and simulation of models | Numûnelerin keyfî tetkikinde ve taklidinde (benzetiminde) devreler |  |
 | 94C99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **94Dxx** | **Miscellaneous topics in information and communication theory** | **** |  |
-| 94D05 | Fuzzy sets and logic (in connection with information, communication, or circuits theory) [See also 03B52, 03E72, 28E10] |  |  |
-| 94D10 | Boolean functions [See also 06E30] {For connections with circuits and networks, see 94C11} |  |  |
+| **94Dxx** | **Miscellaneous topics in information and communication theory** | **Malûmat ve muhâbere nazariyesinde muhtelif mevzûlar** |  |
+| 94D05 | Fuzzy sets and logic (in connection with information, communication, or circuits theory) [See also 03B52, 03E72, 28E10] | Mübhem (bulanık) mecmûalar ve mantık (malûmat, muhâbere yahut devreler nazariyesiyle alâkalı olarak) [Ayrıca bakınız: 03B52, 03E72, 28E10] |  |
+| 94D10 | Boolean functions [See also 06E30] {For connections with circuits and networks, see 94C11} | Boole tâbileri [Ayrıca bakınız: 06E30] {Devreler ve şebekelerle münasebetleri için bakınız: 94C11} |  |
 | 94D99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
 ## 97-XX — Mathematics education
