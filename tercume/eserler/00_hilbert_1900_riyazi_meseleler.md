@@ -225,4 +225,192 @@ Bundan başka, hikmet-i tabîiyyenin mülâhaza tarzını tamamlamak üzere riy�
 
 Şimdiye kadar yalnız riyâzî bilgi şubelerinin esaslarına dair sualleri hesaba kattık. Hakikaten bir ilmin esaslarıyla meşguliyetin husûsî bir câzibesi vardır ve bu esasların yoklanması daima araştırıcının en asil vazifelerinden sayılacaktır. Weierstrass bir defasında şöyle demiştir: "Her zaman göz önünde tutulması gereken nihaî gaye, ilmin temelleri hakkında emin bir hükme ulaşmaya çalışmaktır" … "İlimlere umûmiyetle nüfuz edebilmek için ise tek tek meselelerle meşguliyet şüphesiz vazgeçilmezdir." Hakikaten bir ilmin esaslarını başarıyla ele almak için onun husûsî nazariyelerinin derin bir anlayışına ihtiyaç vardır; bir binanın temellerini ancak binanın kendi gayesini teferruatıyla esaslı olarak bilen mimar emin bir şekilde atabilir. Böylece şimdi riyâziyyâtın tek tek bilgi şubelerinin husûsî meselelerine dönüyor ve bunlar arasında evvelâ hesabı ve cebiri hesaba katıyoruz.
 
-<!-- KISIM-1-SONU -->
+**[274]**
+
+## 7. Bazı muayyen adetlerin asamm ve aşkın olması
+
+Hermite'in üssî tâbi hakkındaki hesabî kaziyyeleri ve Lindemann'ın onları ileri götürmesi, bütün riyâzî nesillerin hayranlığını muhakkak kazanacaktır. Fakat aynı zamanda tutulan yolda ilerlemek vazifesi de bize düşer. Bu sebeple, kanaatimce burada ele alınması en yakın olanlar sayılması gereken bir meseleler sınıfını tavsif etmek isterim. Tahlîlde mühim olan husûsî aşkın tâbilerin bazı cebrî müsteneflerde (Argumente) cebrî kıymetler aldığını görürsek, bu hakikat bize daima pek dikkate şayan ve derin tetkike layık görünür. Zira aşkın tâbilerden, cebrî müstenefler için umûmiyetle aşkın kıymetler de almalarını bekleriz; ve bütün cebrî müstenefler için hatta muntak kıymetlere sahip tam aşkın tâbilerin fiilen mevcut olduğunu pekâlâ bilsek de, meselâ şu üssî tâbiin
+
+$$\text{Neper}^{\,\text{mevhûm-vâhid} \,\cdot\, \text{dâire-nisbeti} \,\cdot\, \text{müstenef}}$$
+
+ki aşikâr olarak bütün muntak müstenefler için daima cebrî kıymetlere sahiptir, öbür taraftan bütün asamm cebrî müstenefler için daima aşkın adedî kıymetler aldığını yine de son derece muhtemel sayacağız. Bu hükme hendesî bir kisve de giydirebiliriz, şöyle: *İkizkenar bir müsellesde kaide zaviyesinin tepe zaviyesine nisbeti cebrî olup muntak değilse, kaide ile ikizkenar arasındaki nisbet daima aşkındır.* Bu hükmün sadeliğine ve Hermite ile Lindemann'ın hal ettiği meselelere benzerliğine rağmen bu kaziyyenin ispatını son derece güç sayarım; tıpkı meselâ şunun ispatı gibi: *cebrî bir taban ve cebrî asamm bir üs için*
+
+$$\text{taban}^{\,\text{üs}}$$
+
+*kuvveti, meselâ*
+
+$$2^{\sqrt{2}} \qquad \text{yahut} \qquad \text{Neper}^{\,\text{dâire-nisbeti}} = \text{mevhûm-vâhid}^{\,-2 \,\cdot\, \text{mevhûm-vâhid}}$$
+
+*adedi, daima aşkın yahut hiç değilse asamm bir adet gösterir.* Şurası muhakkaktır ki bu ve benzeri meselelerin halli bizi bambaşka yeni usullere ve husûsî asamm ve aşkın adetlerin mahiyetine dair yeni görüşlere götürmek zorundadır.
+
+## 8. Evvelî adetler meseleleri
+
+Evvelî adetlerin tevzîi nazariyesinde yakın zamanlarda Hadamard, de la Vallée Poussin, von Mangoldt ve başkaları tarafından esaslı terakkîler yapılmıştır. Fakat Riemann'ın
+
+**[275]** "Muayyen bir kemmiyetten küçük evvelî adetlerin sayısı hakkında" risalesinin bize koyduğu meselelerin tam halli için, Riemann'ın son derece mühim iddiasının doğruluğunu daha *ispat etmek lâzımdır: şu silsile ile*
+
+$$\text{Zeta}(\text{mütehavvil}) = 1 + \frac{1}{2^{\,\text{mütehavvil}}} + \frac{1}{3^{\,\text{mütehavvil}}} + \frac{1}{4^{\,\text{mütehavvil}}} + \cdots$$
+
+*gösterilen Zeta tâbiinin sıfır yerlerinin hepsinin hakikî cüzü yarımdır* (bilinen menfî tam adet sıfır yerleri hariç tutulursa). Bu ispat başarılır başarılmaz, bundan sonraki vazife evvelî adetlerin sayısı için Riemann'ın sonsuz silsilesini daha dikkatle yoklamak ve bilhassa *bir hudut kemmiyetinin altındaki evvelî adetlerin sayısı ile o hududun logaritmik tamâmîsi arasındaki farkın hakikaten hududun yarım kuvvetinden daha yüksek olmayan bir mertebede sonsuza gidip gitmediğine karar vermek* olurdu; bundan başka, Riemann düsturunda Zeta tâbiinin ilk mürekkeb sıfır yerlerine bağlı terimlerin, evvelî adetler sayılırken fark edilen evvelî adetlerin yer yer sıklaşmasını hakikaten tayin edip etmediğine de.
+
+Riemann'ın evvelî adetler düsturunun tam bir müzakeresinden sonra belki bir gün Goldbach'ın meselesinin **[Hâşiye 20]**, yâni her çift adedin iki evvelî adedin mecmûu olarak gösterilip gösterilemeyeceğinin kat'î cevabına girişmek mümkün olur; ayrıca farkı iki olan sonsuz çoklukta evvelî adet çifti bulunup bulunmadığı malûm sualine, yahut hatta şu daha umûmî meseleye: verilen, tam adet ve ikişer ikişer aralarında asal emsaller için
+
+$$\text{birinci-emsal} \cdot \text{birinci-evvelî} + \text{ikinci-emsal} \cdot \text{ikinci-evvelî} + \text{sâbit-emsal} = 0$$
+
+hattî Diophantos muâdelesi her zaman evvelî adetlerle, yâni birinci-evvelî ve ikinci-evvelî evvelî adet olmak üzere, hal edilebilir mi?
+
+Fakat bana daha az alâka çekici olmayan ve belki daha büyük şümullü görünen vazife şudur: *muntak evvelî adetlerin tevzîi için elde edilen neticeleri, verilen bir adedî cisimde evvelî misâliyelerin tevzîi nazariyesine nakletmek.* Bu vazife o adedî cisme ait şu tâbiin tetkikine
+
+$$\text{Cisim-zetası}(\text{mütehavvil}) = \sum_{\text{misâliye}} \frac{1}{\text{Kadr}(\text{misâliye})^{\,\text{mütehavvil}}}$$
+
+**[276]** varır; burada mecmû verilen adedî cismin bütün misâliyeleri üzerinden alınır ve Kadr(misâliye), misâliyenin kadrini (Norm) gösterir.
+
+Adetler nazariyesinden daha husûsî üç mesele daha zikrediyorum: biri mütekabiliyet kanunlarına dair, biri Diophantos muâdelelerine dair, üçüncüsü de murabba'î şekiller sahasından.
+
+## 9. Herhangi bir adedî cisimde en umûmî mütekabiliyet kanununun ispatı
+
+*Herhangi bir adedî cisim için, evvelî-üs bir tek evvelî adet olduğu takdirde, evvelî-üs kuvvetinden bâkîlerin mütekabiliyet kanunu ispat edilmelidir*; bundan başka evvelî-üs ikinin bir kuvveti yahut bir tek evvelî adedin bir kuvveti olduğu takdirde de. Kanunun konması ve ispatı için esaslı vasıtalar, kanaatimce, benim inkişâf ettirdiğim vâhidin evvelî-üs mertebeli cezirleri cismi nazariyesi **[Hâşiye 21]** ve nisbî murabba'î cisim nazariyem **[Hâşiye 22]** gereği gibi umûmîleştirilirse ortaya çıkacaktır.
+
+## 10. Bir Diophantos muâdelesinin hal edilebilirliği hakkında karar
+
+Herhangi adette meçhul ihtiva eden ve emsalleri tam muntak adetler olan bir Diophantos muâdelesi verilmiş olsun: *mütenâhî adette ameliye vasıtasıyla muâdelenin tam muntak adetlerle hal edilebilir olup olmadığına karar verilebilen bir usul gösterilmelidir.*
+
+## 11. Emsalleri herhangi cebrî adetler olan murabba'î şekiller
+
+Murabba'î adedî cisimler nazariyesi **[Hâşiye 23]** hakkındaki bugünkü bilgimiz bizi, *herhangi adette mütehavvilli ve emsalleri herhangi cebrî adetler olan murabba'î*
+
+**[277]** *şekiller nazariyesini muvaffakiyetle ele almaya* muktedir kılar. Bununla bilhassa şu alâka çekici vazifeye varırız: herhangi adette mütehavvilli ve emsalleri cebrî adetler olan verilmiş bir murabba'î muâdeleyi, emsallerin tayin ettiği cebrî muntakiyet sahasında bulunan tam yahut kesirli adetlerle hal etmek.
+
+Cebire ve tâbiler nazariyesine geçişi şu mühim mesele teşkil etsin.
+
+## 12. Kronecker'in Abel cisimleri hakkındaki kaziyyesinin herhangi bir cebrî muntakiyet sahasına genişletilmesi
+
+Muntak adetler sahasında her Abel adedî cisminin vâhidin cezirleri cisimlerinin terkibinden doğduğu kaziyyesi Kronecker'e aittir. Tam emsalli muâdeleler nazariyesinin bu esaslı kaziyyesi iki hüküm ihtiva eder:
+
+birincisi, onunla, muntak adetler sahasına nazaran önceden tayin edilmiş bir dereceye, önceden tayin edilmiş bir Abel zümresine ve önceden tayin edilmiş bir mümeyyize sahip muâdelelerin sayısı ve vücudu sualine cevap verilir; ve
+
+ikincisi, böyle muâdelelerin cezirlerinin, şu üssî tâbide
+
+$$\text{Neper}^{\,\text{mevhûm-vâhid} \,\cdot\, \text{dâire-nisbeti} \,\cdot\, \text{müstenef}}$$
+
+müstenef yerine sırasıyla bütün muntak adedî kıymetler konunca elde edilen sahaya tam olarak mutabık bir cebrî adetler sahası teşkil ettiği iddia edilir.
+
+Birinci hüküm, bazı cebrî adetlerin zümreleri ve inşiâbları (Verzweigung) vasıtasıyla tayini suali ile ilgilidir; bu sual o hâlde verilen bir Riemann sathına ait cebrî tâbilerin tayini şeklindeki malûm meseleye tekabül eder. İkinci hüküm istenen adetleri aşkın bir vasıta ile, yâni yukarıdaki üssî tâbi ile verir.
+
+Muntak adetler sahasından sonra en basit saha mevhûm murabba'î adedî cisimler sahası olduğundan, Kronecker kaziyyesini bu hâle genişletmek vazifesi doğar. Kronecker'in kendisi, bir murabba'î cisim sahasındaki Abel muâdelelerinin, hususî mikyâslı (singuläre Moduln) ihlîlecî tâbilerin tahvîl muâdeleleriyle verildiğini iddia etmiştir; öyle ki buna göre ihlîlecî tâbi, üssî tâbiin
+
+**[278]** evvelki hâldeki rolünü üstlenir. Kronecker'in tahmininin ispatı şimdiye kadar yapılamamıştır; fakat kanaatimce bu ispat, Heinrich Weber'in **[Hâşiye 24]** inkişâf ettirdiği mürekkeb darp nazariyesine dayanarak ve benim sınıf cisimleri hakkında koyduğum saf hesabî kaziyyeler işe katılarak ciddî bir güçlük olmaksızın başarılmak zorundadır.
+
+Nihayet bana en yüksek ehemmiyette görünen, Kronecker kaziyyesinin şu hâle genişletilmesidir: *muntak adetler sahası yahut mevhûm murabba'î adetler sahası yerine herhangi bir cebrî adedî cisim muntakiyet sahası olarak esas alınsın*; bu meseleyi adetler ve tâbiler nazariyesinin en derin ve en geniş şümullü meselelerinden biri sayarım.
+
+Mesele pek çok taraftan ulaşılabilir görünmektedir. Bu meselenin hesabî cüzünün halli için en mühim anahtarı, herhangi bir verilmiş adedî cisim dahilinde evvelî-üs kuvvetinden bâkîlerin umûmî mütekabiliyet kanununda görüyorum.
+
+Meselenin tâbiler nazariyesine ait cüzüne gelince, araştırıcı bu kadar câzip sahada, bir mütehavvilli cebrî tâbiler nazariyesi ile cebrî adetler nazariyesi arasında göze çarpan dikkate şayan benzerliklerin rehberliğine uyacaktır. Cebrî bir tâbiin kuvvet silsilesine açılımının cebrî adetler nazariyesindeki benzerini Hensel **[Hâşiye 25]** kurmuş ve tetkik etmiştir; Riemann ve Roch kaziyyesinin benzerini de Landsberg **[Hâşiye 26]** ele almıştır. Bir Riemann sathının cinsi mefhumu ile bir adedî cismin sınıf adedi mefhumu arasındaki benzerlik de göze çarpar. Yalnız en basit hâle dokunmak için, bir taraftan cinsi bir olan bir Riemann sathını, öbür taraftan sınıf adedi iki olan bir adedî cismi göz önüne alırsak, Riemann sathında her yerde mütenâhî bir tamâmînin vücudunun ispatına, adedî cisimde öyle bir tam-adedin vücudunun ispatı tekabül eder ki o tam-adedin murabbaî cezri,
+
+$$\sqrt{\text{tam-adet}}\,,$$
+
+esas cisme nazaran nisbeten inşiâbsız bir murabba'î
+
+**[279]** cisim göstersin. Cebrî tâbiler nazariyesinde, malûm olduğu üzere, Riemann'ın o vücut kaziyyesinin ispatına hudut kıymetleri vazifesi usulü hizmet eder; adedî cisimler nazariyesinde de o tam-adedin vücudunun ispatı tam da en çok güçlüğü arz eder. Bu ispat, adedî cisimde önceden tayin edilmiş bâkî seciyelerine (Restcharaktere) sahip evvelî misâliyelerin her zaman bulunduğu kaziyyesinin esaslı yardımıyla başarılır; bu son hakikat o hâlde hudut kıymetleri meselesinin adetler nazariyesindeki benzeridir.
+
+Cebrî tâbiler nazariyesinde Abel kaziyyesinin muâdelesi, malûm olduğu üzere, Riemann sathının bahis konusu noktalarının o sathı ait cebrî bir tâbiin sıfır yerleri olması için lâzım ve kâfi şartı ifade eder; Abel kaziyyesinin tam benzeri, sınıf adedi iki olan adedî cisim nazariyesinde, murabba'î mütekabiliyet kanununun **[Hâşiye 27]** şu muâdelesidir:
+
+$$\text{Bâkî-seciyesi}\big(\text{tam-adet} \,;\, \text{misâliye}\big) = +1$$
+
+ki şunu söyler: misâliye, ancak ve ancak o tam-adet misâliyeye nazaran müspet murabba'î bâkî seciyesine sahip olduğu takdirde, adedî cismin bir esas misâliyesidir (Hauptideal).
+
+Gördüğümüz gibi, az evvel tavsif edilen meselede riyâziyyâtın üç esaslı şubesi, yâni adetler nazariyesi, cebir ve tâbiler nazariyesi, en samimi karşılıklı temasa girer; ve eminim ki bilhassa birçok mütehavvilli tahlîlî tâbiler nazariyesi, *muntak adetler cismi için üssî tâbiin ve mevhûm murabba'î adedî cisim için ihlîlecî mikyâs tâbiinin oynadığı role tekabül eden rolü herhangi bir cebrî adedî cisim için oynayan tâbileri bulup müzakere etmek* başarılırsa esaslı bir zenginlik kazanırdı.
+
+Şimdi cebire geliyoruz; aşağıda muâdeleler nazariyesinden bir mesele ve cebrî değişmezler nazariyesinin beni götürdüğü bir mesele zikrediyorum.
+
+**[280]**
+
+## 13. Yedinci dereceden umûmî muâdelenin yalnız iki müstenefli tâbiler vasıtasıyla hallinin imkânsızlığı
+
+Resmî hesap (Nomographie) **[Hâşiye 28]**, muâdeleleri keyfî bir mütevassıta bağlı çizilmiş münhanî aileleri vasıtasıyla hal etmek vazifesine sahiptir. Hemen görülür ki emsalleri yalnız iki mütevassıta bağlı bir muâdelenin her cezri, yâni iki müstakil mütehavvilin her tâbii, resmî hesabın temelinde yatan prensiple pek çok tarzda gösterilebilir. Bundan başka bu prensiple, aşikâr olarak, üç ve daha fazla mütehavvilli tâbilerin büyük bir sınıfı da gösterilebilir; yâni şöyle üretilebilen bütün tâbiler: evvelâ iki müstenefli bir tâbi kurulur, sonra bu müsteneflerin her biri yerine yine iki müstenefli tâbiler konur, onların yerine de yine iki müstenefli tâbiler gelir ve bu böyle devam eder; iki müstenefli tâbilerin iç içe geçirilmesinin keyfî mütenâhî bir adedine izin verilir. Meselâ herhangi adette müstenefli her muntak tâbi, resmî levhalarla inşa edilebilen bu tâbiler sınıfına aittir; zira o toplama, çıkarma, çarpma ve bölme ameliyeleriyle üretilebilir ve bu ameliyelerin her biri yalnız iki müstenefli bir tâbi temsil eder. Kolayca görülür ki tabiî bir muntakiyet sahasında cezr alma ile hal edilebilen bütün muâdelelerin cezirleri de zikredilen tâbiler sınıfına aittir; zira burada dört ibtidâî hesap ameline yalnız cezr alma ameliyesi eklenir ki o da yalnız bir müstenefli bir tâbi temsil eder. Aynı şekilde beşinci ve altıncı dereceden umûmî muâdeleler de münasip resmî levhalarla hal edilebilir; zira bunlar, kendileri yalnız cezr almayı gerektiren Tschirnhaus tahvîlleriyle, emsalleri yalnız iki mütevassıta bağlı olan bir şekle sokulabilir.
+
+Muhtemeldir ki yedinci dereceden muâdelenin cezri, emsallerinin öyle bir tâbiidir ki zikredilen resmî olarak inşa edilebilir tâbiler sınıfına ait değildir, yâni iki müstenefli tâbilerin mütenâhî adette iç içe geçirilmesiyle üretilemez. Bunu görmek için şunun ispatı lâzım olurdu: *yedinci*
+
+**[281]** *dereceden şu muâdele*
+
+$$\text{cezr}^{7} + \text{birinci-emsal} \cdot \text{cezr}^{3} + \text{ikinci-emsal} \cdot \text{cezr}^{2} + \text{üçüncü-emsal} \cdot \text{cezr} + 1 = 0$$
+
+*yalnız iki müstenefli herhangi muttasıl tâbiler yardımıyla hal edilemez.* Şunu da kaydetmek isterim ki üç müstenefli, yâni birinci-emsal, ikinci-emsal ve üçüncü-emsale bağlı öyle tahlîlî tâbilerin umûmiyetle mevcut olduğuna, ki bunlar yalnız iki müstenefli tâbilerin mütenâhî defa zincirlenmesiyle elde edilemez, kat'î bir mülâhaza ile kanaat getirdim.
+
+## 14. Bazı tam tâbiler manzumelerinin mütenâhî olduğunun ispatı
+
+Cebrî değişmezler nazariyesinde, bana öyle geliyor ki, tam şekiller manzumelerinin mütenâhîliği sualleri husûsî bir alâkayı hak eder. Yakınlarda Ludwig Maurer'e **[Hâşiye 29]**, Paul Gordan'ın ve benim ispat ettiğimiz değişmezler nazariyesi mütenâhîlik kaziyyelerini şu hâle genişletmek nasip olmuştur: âdi değişmezler nazariyesinde olduğu gibi umûmî irtisâmî zümre değil, herhangi bir cüz zümre değişmezlerin tarifinin temeline konsun.
+
+Değişmezlerin mütenâhîliği suali ile meşguliyet beni basit bir meseleye götürdü ki o, değişmezlerin mütenâhîliği sualini husûsî bir hâl olarak kendinde ihtiva eder ve hallinin muhtemelen hazf nazariyesinin ve Kronecker'in cebrî mikyâs manzumelerinin şimdiye kadar başarılandan epey daha ince bir şekilde işlenmesini gerektirdiği bir meseledir.
+
+Tâbi-adedi kadar tam muntak tâbi, mütehavvil-adedi kadar mütehavvile bağlı olarak verilmiş olsun:
+
+$$\text{Yeni}_{1} = \text{Kesirsiz-tâbi}_{1}\big(\text{mütehavvil}_1, \ldots, \text{mütehavvil}_{\text{mütehavvil-adedi}}\big)$$
+
+$$\text{Yeni}_{2} = \text{Kesirsiz-tâbi}_{2}\big(\text{mütehavvil}_1, \ldots, \text{mütehavvil}_{\text{mütehavvil-adedi}}\big)$$
+
+$$\vdots \qquad\qquad \text{(İkame)}$$
+
+$$\text{Yeni}_{\text{tâbi-adedi}} = \text{Kesirsiz-tâbi}_{\text{tâbi-adedi}}\big(\text{mütehavvil}_1, \ldots, \text{mütehavvil}_{\text{mütehavvil-adedi}}\big)$$
+
+Yeni-adlı kemmiyetlerin her tam muntak terkibi, bu ifadeler yerine konunca, aşikâr olarak zarurî olarak her zaman mütehavvillerin tam muntak bir tâbii olur. Fakat Yeni-adlı kemmiyetlerin öyle kesirli muntak tâbileri pekâlâ bulunabilir ki o İkame icra edildikten sonra mütehavvillerde tam tâbiler olurlar. Yeni-adlı kemmiyetlerin, İkame icra edildikten sonra mütehavvillerde
+
+**[282]** tam olan her böyle muntak tâbiine Yeni-adlı kemmiyetlerin *nisbeten tam* (relativganz) tâbii demek isterim. Yeni-adlı kemmiyetlerin her tam tâbii aşikâr olarak nisbeten tamdır da; bundan başka nisbeten tam tâbilerin mecmûu, farkı ve hâsıl-ı zarbı da her zaman yine nisbeten tamdır.
+
+Doğan mesele şimdi şuna karar vermektir: *Yeni-adlı kemmiyetlerin nisbeten tam tâbilerinden mütenâhî bir manzume bulmak, ki Yeni-adlı kemmiyetlerin her başka nisbeten tam tâbii ondan tam muntak bir tarzda terkip edilebilsin*, her zaman mümkün müdür? Mütenâhî tamlık sahası (endlicher Integritätsbereich) mefhumunu işe katarsak meseleyi daha da basit ifade edebiliriz. Mütenâhî tamlık sahası ile öyle bir tâbiler manzumesini anlamak isterim ki ondan mütenâhî adette tâbi seçilebilsin ve onların yardımıyla manzumenin diğer bütün tâbileri tam muntak bir tarzda ifade edilebilsin. Meselemiz o vakit şunu göstermeye varır: herhangi bir muntakiyet sahasının bütün nisbeten tam tâbileri her zaman mütenâhî bir tamlık sahası teşkil eder.
+
+Meseleyi *adetler nazariyesi bakımından inceltmek* de akla yakındır: verilen Kesirsiz-tâbilerin emsalleri tam muntak adetler kabul edilir ve Yeni-adlı kemmiyetlerin nisbeten tam tâbileri ile, bu müsteneflerin yalnız o İkame icra edildikten sonra emsalleri tam muntak adetler olan mütehavvillerin tam muntak tâbileri olan muntak tâbileri anlaşılır.
+
+Bu inceltilmiş meselenin husûsî basit bir hâli şudur: tek bir mütehavvile bağlı, emsalleri tam muntak adetler olan tâbi-adedi kadar Yeni-adlı tam muntak tâbi ve ayrıca bir evvelî adet verilmiş olsun. Mütehavvilin şu şekilde
+
+$$\frac{\text{Tam-terkip}\big(\text{Yeni}_1, \ldots, \text{Yeni}_{\text{tâbi-adedi}}\big)}{\text{evvelî}^{\,\text{üs}}}$$
+
+gösterilebilen tam muntak tâbilerinin manzumesi göz önüne alınsın; burada Tam-terkip, Yeni-adlı müsteneflerin tam muntak bir tâbii ve evvelînin üs kuvveti o evvelî adedin herhangi bir kuvvetidir. Benim evvelki araştırmalarım **[Hâşiye 30]** o vakit doğrudan doğruya gösterir ki bu türlü bütün ifadeler muayyen bir üs için mütenâhî bir tamlık sahası teşkil eder; fakat burada sual şudur: aynı şey bütün üsler için birden de geçerli midir, yâni öyle
+
+**[283]** mütenâhî adette ifade seçilebilir mi ki o şekildeki her başka ifade, herhangi bir üs için, onlarla tam ve muntak olarak gösterilebilsin?
+
+Cebir ile hendese arasındaki hudut sahalarından iki mesele zikretmek isterim: biri hendesî sayma hesabına, ikincisi cebrî münhanîler ve sathların hendese-i vaz'iyyesine aittir.
+
+## 15. Schubert'in sayma hesabının kat'î temellendirilmesi
+
+Mesele şundan ibarettir: *bilhassa Schubert'in* **[Hâşiye 31]** *husûsî vaz' prensibi denilen prensibe dayanarak inkişâf ettirdiği sayma hesabı vasıtasıyla tayin ettiği hendesî sayıları kat'î olarak ve geçerlilik hudutları tam olarak tespit edilmek suretiyle ispat etmek.* Bugünkü cebir hazf ameliyelerinin icra edilebilirliğini prensip itibarıyla temin etse de, sayan hendesenin kaziyyelerini ispat için çok daha fazlası lâzımdır; yâni hazfin husûsî şekilli muâdelelerde öyle bir tarzda icrası ki nihaî muâdelelerin derecesi ve hallerinin kesreti (çokluk mertebesi) önceden görülebilsin.
+
+## 16. Cebrî münhanîler ve sathların hendese-i vaz'iyyesi meselesi
+
+Bir sath-ı müstevî üzerindeki derece-adedi mertebesinden bir cebrî münhanînin sahip olabileceği kapalı ve ayrı yatan kolların azamî sayısı Harnack **[Hâşiye 32]** tarafından tayin edilmiştir; bundan sonraki sual münhanî kollarının sath-ı müstevîdeki karşılıklı vaz'ı hakkındadır. Altıncı mertebeden münhanîlere gelince, Harnack'a göre sahip olabilecekleri on bir kolun hiçbir surette hepsi birbirinin dışında uzanamayacağına, bilakis içinde bir kol ve dışında dokuz kol uzanan bir kolun, yahut bunun aksi bir tertibin, bulunmak zorunda olduğuna, gerçi pek dolambaçlı bir yoldan, kanaat getirdim. *Ayrı kolların azamî sayısında karşılıklı vaz'ın esaslı bir tetkiki bana, fezâdaki bir cebrî sathın gömleklerinin (Mäntel) sayısı, şekli ve vaz'ı hakkındaki tekabül eden tetkik kadar alâka çekici görünüyor*; zira şimdiye kadar üç buudlu fezânın dördüncü
+
+**[284]** mertebeden bir sathının fiilen azamî kaç gömleğe sahip olduğu bile bilinmemektedir **[Hâşiye 33]**.
+
+Bu saf cebrî meseleye bağlı olarak bir sual ortaya atmak isterim ki, bana öyle geliyor, aynı emsallerin muttasıl tebdîli usulüyle ele alınabilir ve cevabı tefâzulî muâdelelerle tarif edilen münhanî ailelerinin hendese-i vaz'iyyesi için tekabül eden bir ehemmiyete sahiptir; yâni şu şekildeki *birinci mertebe ve birinci dereceden bir tefâzulî muâdele için Poincaré'nin hudut devirlerinin (cycles limites) azamî sayısı ve vaz'ı* suali:
+
+$$\frac{d\,\text{şâkulî}}{d\,\text{ufkî}} = \frac{\text{Şâkulî-tâbi}}{\text{Ufkî-tâbi}}$$
+
+burada Ufkî-tâbi ve Şâkulî-tâbi, ufkî ve şâkulî mevkilerde derece-adedi dereceden tam muntak tâbilerdir; yahut mütecânis yazılışla
+
+$$\text{Birinci-tâbi}\left(\text{ikinci-mevki}\,\frac{d\,\text{üçüncü-mevki}}{d\,\text{mütevassıt}} - \text{üçüncü-mevki}\,\frac{d\,\text{ikinci-mevki}}{d\,\text{mütevassıt}}\right) + \text{İkinci-tâbi}\left(\text{üçüncü-mevki}\,\frac{d\,\text{birinci-mevki}}{d\,\text{mütevassıt}} - \text{birinci-mevki}\,\frac{d\,\text{üçüncü-mevki}}{d\,\text{mütevassıt}}\right) + \text{Üçüncü-tâbi}\left(\text{birinci-mevki}\,\frac{d\,\text{ikinci-mevki}}{d\,\text{mütevassıt}} - \text{ikinci-mevki}\,\frac{d\,\text{birinci-mevki}}{d\,\text{mütevassıt}}\right) = 0$$
+
+burada Birinci-tâbi, İkinci-tâbi ve Üçüncü-tâbi, birinci, ikinci ve üçüncü mevkiin derece-adedi dereceden tam muntak mütecânis tâbileridir ve bu mevkiler mütevassıtın tâbileri olarak tayin edilecektir.
+
+## 17. Muayyen-işaretli şekillerin murabbalarla gösterilmesi
+
+Herhangi adette mütehavvilli, emsalleri hakikî olan tam muntak bir tâbie yahut şekle, bu mütehavvillerin hiçbir hakikî kıymeti için menfî çıkmıyorsa *muayyen-işaretli* (definit) denir. Bütün muayyen-işaretli tâbilerin manzumesi toplama ve çarpma ameliyelerine karşı değişmez kalır; fakat iki muayyen-işaretli tâbiin bölümü de, mütehavvillerin tam bir tâbii olduğu takdirde, muayyen-işaretli bir şekildir. Her herhangi şeklin murabbaı aşikâr olarak her zaman muayyen-işaretli bir şekildir; fakat, gösterdiğim üzere **[Hâşiye 34]**, her muayyen-işaretli şekil şekil murabbalarının toplanmasıyla terkip edilemediğinden şu sual doğar (ki üç mütehavvilli şekiller hâli için müspet mânâda karara bağladım **[Hâşiye 35]**): *her muayyen-işaretli şekil, şekil murabbaları mecmûlarının bölümü olarak gösterilemez mi?* Aynı zamanda bazı
+
+**[285]** hendesî inşaların imkânına dair bazı sualler bakımından şunu bilmek arzu edilir: gösterilişte kullanılacak şekillerin emsalleri her zaman gösterilen şeklin emsallerinin verdiği muntakiyet sahasında alınabilir mi **[Hâşiye 36]**?
+
+Bir hendesî vazife daha zikrediyorum.
+
+## 18. Fezânın mütetâbık kesîrü'l-vücûhlardan inşası
+
+Sath-ı müstevîde kendileri için bir esas sahanın (Fundamentalbereich) mevcut olduğu hareket zümreleri sorulursa, malûm olduğu üzere cevap, ele alınan sath-ı müstevî Riemann'ın (ihlîlecî), Öklid'in yahut Lobaçevski'nin (zâidî) sath-ı müstevîsi oluşuna göre pek farklı çıkar. İhlîlecî sath-ı müstevî hâlinde esas sahaların esasça farklı mütenâhî adette nev'i vardır ve bütün sath-ı müstevînin boşluksuz örtülmesi için mütetâbık sahaların mütenâhî adette nüshası kâfidir: zümre zaten yalnız mütenâhî adette hareketten müteşekkildir. Zâidî sath-ı müstevî hâlinde esas sahaların esasça farklı sonsuz adette nev'i vardır, yâni malûm Poincaré kesîrü'l-adlâ'ları (çokgenleri); sath-ı müstevînin boşluksuz örtülmesi için mütetâbık sahaların sonsuz adette nüshası lâzımdır. Öklid sath-ı müstevîsi hâli ortada durur; zira bu hâlde esas sahalı hareket zümrelerinin esasça farklı yalnız mütenâhî adette nev'i vardır; fakat bütün sath-ı müstevînin boşluksuz örtülmesi için mütetâbık sahaların sonsuz adette nüshası lâzımdır.
+
+Tam olarak tekabül eden hakikatler üç buudlu fezâda da geçerlidir. İhlîlecî fezâda hareket zümrelerinin mütenâhîliği hakikati, Camille Jordan'ın **[Hâşiye 37]** esaslı bir kaziyyesinin doğrudan neticesidir; o kaziyyeye göre boyut-adedi mütehavvilli hattî ikamelerin (lineare Substitutionen) mütenâhî zümrelerinin esasça farklı nev'lerinin sayısı, boyut-adedine bağlı muayyen mütenâhî bir hududu aşmaz. Zâidî fezâda esas sahalı hareket zümreleri Fricke ve Klein tarafından kendine tahvîl tâbiler nazariyesi hakkındaki
+
+**[286]** derslerinde **[Hâşiye 38]** tetkik edilmiştir; nihayet Fedorov **[Hâşiye 39]**, Schoenflies **[Hâşiye 40]** ve yakınlarda Rohn **[Hâşiye 41]**, Öklid fezâsında esas sahalı hareket zümrelerinin esasça farklı yalnız mütenâhî adette nev'i bulunduğunun ispatını getirmişlerdir. Şimdi ihlîlecî ve zâidî fezâya ait neticeler ve ispat usulleri doğrudan doğruya boyut-adedi buudlu fezâ için de geçerli iken, Öklid fezâsına ait kaziyyenin umûmîleştirilmesi ciddî güçlükler arz eder görünmektedir; bu sebeple şu sualin tetkiki arzu edilir: *boyut-adedi buudlu Öklid fezâsında da esas sahalı hareket zümrelerinin esasça farklı yalnız mütenâhî adette nev'i mi vardır?*
+
+Her hareket zümresinin bir esas sahası, zümreden doğan mütetâbık sahalarla birlikte, aşikâr olarak fezânın boşluksuz bir örtüsünü verir. Bundan başka şu sual doğar: *hareket zümrelerinin esas sahaları olarak ortaya çıkmayan ve yine de mütetâbık nüshalarının münasip şekilde yan yana konmasıyla bütün fezânın boşluksuz doldurulmasının mümkün olduğu kesîrü'l-vücûhlar da mevcut mudur?* Bununla bağlantılı olan, adetler nazariyesi için mühim ve belki bir gün hikmet-i tabîiyye ve kimya için de faydalı olacak şu suale işaret ederim: aynı önceden tayin edilmiş şekle sahip sonsuz adette cismi, meselâ verilmiş nısf-ı kuturlu küreleri yahut verilmiş kenarlı muntazam dört yüzlüleri (yahut önceden tayin edilmiş vaz'da), fezâda en sık nasıl yerleştirmeli, yâni dolu fezânın boş fezâya nisbeti mümkün olduğu kadar büyük çıkacak şekilde nasıl istif etmeli?
+
+Geçen asırda tâbiler nazariyesinin inkişâfına bir nazar edersek, her şeyden evvel bugün tahlîlî tâbiler dediğimiz tâbiler sınıfının esaslı rolünü fark ederiz; bu, muhtemelen dâimî olarak riyâzî alâkanın merkezinde duracak bir tâbiler sınıfıdır.
+
+Tasavvur edilebilir bütün tâbilerin bolluğu içinden, pek farklı nazar noktalarına göre, husûsî olarak derin bir tetkike layık şümullü sınıflar ayırabilirdik.
+
+<!-- KISIM-2-SONU -->
