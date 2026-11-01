@@ -22,6 +22,14 @@ Kullanıcı şöyle buyurdu: "Telifli telifsiz fark etmez, en şaheseri neyse on
 - Telifli eserlerin tam metni çoğaltılmaz ve bire bir tercüme edilmez; çünkü bu, müellifin hakkını çiğnemek olur. Bunların yerine, eserin mefhumlarını, illiyet zincirlerini ve bilgilerini kendi cümlelerimizle, lügat cedveline uygun olarak ve hiçbir bilgiyi eksiltmemeye gayret ederek anlatan müstakil bir Osmanlıca şerh yazılır. Uzun iktibas yapılmaz.
 - Cannon'un The Wisdom of the Body eseri de bu usulle, yani şerh olarak ele alınabilir.
 
+### Kullanıcının 1 Kasım 2026 tarihli ikinci ilâve kaidesi
+
+Kullanıcı şöyle buyurdu: "O zaman evvela birebir tercüme etsin, üzerine şerhini sonradan koysun ki metin kaybı yaşanmasın." Buna göre:
+
+- Telifi düşmüş ve açık lisanslı eserlerde usul şudur: evvelâ birebir tam tercüme, sonra ayrı bir dosyada şerh. Metin kaybı olmaz.
+- Telifli eserlerde birebir tercüme yine yapılmaz. Şerh, aslın bab bab tertibini takip eder; her babdaki bilgiyi, tarifi, illiyet zincirini ve rakamı kendi cümlelerimizle eksiksiz verir. Her kısmın asıldaki hangi bölüme denk geldiği gösterilir.
+- Asıl metne erişilemeden yazılan şerhte, bölüm tertibi ve rakamlar asılla karşılaştırılıncaya kadar "şüpheli" kaydını taşır.
+
 ## Çalışma yeri
 
 - Ortak depo: github.com/yabadabadu1234/mucit-ai, klasör: tercume/, dal: tip-piri/tercume.
@@ -50,7 +58,7 @@ Kullanıcı şöyle buyurdu: "Telifli telifsiz fark etmez, en şaheseri neyse on
 | 4 | Virchow, Die Cellularpathologie | Tam metin tercüme | Sırada |
 | 5 | Cohnheim, Vorlesungen über allgemeine Pathologie | Tam metin tercüme | Sırada |
 | 6 | Metchnikoff, Leçons sur la pathologie comparée de l'inflammation | Tam metin tercüme | Sırada |
-| 7 | Cannon, The Wisdom of the Body | Şerh | Sırada |
+| 7 | Cannon, The Wisdom of the Body | Şerh (bab bab) | Birinci müsvedde tamam: cannon_bedenin_hikmeti/serh.md. Asıl metne erişilemeden yazıldı; bab tertibi ve rakamlar şüpheli, asılla mukabele bekliyor. |
 | 8 | Guyton ile Hall, Textbook of Medical Physiology | Şerh | Sırada |
 | 9 | Robbins ile Cotran, Pathologic Basis of Disease | Şerh | Sırada |
 | 10 | OpenStax, Anatomy and Physiology | Tam metin tercüme, parça parça | Sırada |
@@ -59,4 +67,4 @@ Sıra, kullanıcının ilâve kaidesi üzerine şaheserlik derecesine göre yeni
 
 ## Kaldığı yer
 
-Depo kuruldu, ilerleme defteri yazıldı. Harvey nüshası Project Gutenberg'de tespit edildi. Tam metne erişim bekleniyor.
+Depo kuruldu, ilerleme defteri yazıldı. Harvey nüshası Project Gutenberg'de tespit edildi. Tam metne erişim bekleniyor. Cannon şerhinin birinci müsveddesi yazıldı ve ıstılah cedveli lügat iş parçacığına bildirildi. Şaheser iş parçacığından ikinci cüz (Kadîm İslâm tıbbı) haberi geldi: /mnt/project-files/saheser/cuz_02_kadim_islam_tibbi.md; okunup sıraya alınacak. Sıradaki iş: ağ izni gelirse Harvey birebir tercümesi; gelmezse ikinci cüzün okunması ve şaheserlik sırasına göre bir sonraki şerh.
