@@ -63,6 +63,20 @@ Kullanıcı şöyle buyurdu: "O zaman evvela birebir tercüme etsin, üzerine ş
 | 9 | Robbins ile Cotran, Pathologic Basis of Disease | Şerh | Sırada |
 | 10 | OpenStax, Anatomy and Physiology | Tam metin tercüme, parça parça | Sırada |
 
+### İkinci cüzden (Kadîm İslâm tıbbı) gelen eserler
+
+İkinci cüz baştan sona okundu. Şaheser iş parçacığının tavsiye ettiği sıra ve nüsha hâli şöyledir; hepsi Internet Archive'e erişim bekliyor:
+
+| Sıra | Eser | Nüsha | Not |
+|---|---|---|---|
+| 1 | Râzî, Kitâbü'l-Cüderî ve'l-Hasbe | Internet Archive "atreatiseonsmal00unkngoog" (Greenhill, 1848, Arapça ve İngilizce) | Arapça asıldan nakledilecek; Greenhill tercümesi mukabele için. |
+| 2 | İbn Sînâ, el-Kânûn, birinci kitap | Internet Archive "QanunAvicennae" (Roma, 1593) | Gruner tercümesi Türkiye'de korunduğu için kullanılmayacak. |
+| 3 | Zehrâvî, et-Tasrîf, otuzuncu makale | Internet Archive "b30411427" (Channell, Oxford, 1778) | |
+| 4 | Şânîzâde, Mir'âtü'l-Ebdân | Internet Archive "amseinzde01anizuoft" | Lügat iş parçacığıyla beraber yürütülecek. |
+| 5 | Sabuncuoğlu, Cerrâhiyyetü'l-Hâniyye | Nüsha bulunmadı | Gallica'da Paris nüshası aranacak. |
+
+Akşemseddin'in Maddetü'l-Hayât'ındaki "görünmez tohum" ibaresi hakkında, yazma nüshadan tahkik edilmeden hüküm yazılmayacak.
+
 Sıra, kullanıcının ilâve kaidesi üzerine şaheserlik derecesine göre yeniden tertip edilecektir; yukarıdaki sıra şimdilik şaheser cüzünün tavsiyesidir.
 
 ## Kaldığı yer
