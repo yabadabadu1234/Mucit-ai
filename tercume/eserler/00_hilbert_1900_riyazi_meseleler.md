@@ -413,4 +413,424 @@ Geçen asırda tâbiler nazariyesinin inkişâfına bir nazar edersek, her şeyd
 
 Tasavvur edilebilir bütün tâbilerin bolluğu içinden, pek farklı nazar noktalarına göre, husûsî olarak derin bir tetkike layık şümullü sınıflar ayırabilirdik.
 
-<!-- KISIM-2-SONU -->
+**[287]** Meselâ âdi yahut kısmî cebrî tefâzulî muâdelelerle tavsif edilebilen tâbiler sınıfını göz önüne alalım. Bu tâbiler sınıfında, hemen fark ettiğimiz üzere, tam da adetler nazariyesinden gelen ve tetkiki bizim için en yüksek ehemmiyeti haiz olan tâbiler bulunmaz. Meselâ yukarıda anılan Zeta tâbii hiçbir cebrî tefâzulî muâdeleye uymaz; bu, Zeta(mütehavvil) ile Zeta(1 − mütehavvil) arasındaki malûm münasebet yardımıyla, Hölder'in **[Hâşiye 42]** ispat ettiği, Gamma tâbiinin hiçbir cebrî tefâzulî muâdeleyi tatmin etmediği kaziyyesi kullanılırsa kolayca anlaşılır. Bundan başka şu sonsuz silsile ile
+
+$$\text{İki-mütehavvilli-zeta}(\text{mütehavvil}, \text{taban}) = \text{taban} + \frac{\text{taban}^{2}}{2^{\,\text{mütehavvil}}} + \frac{\text{taban}^{3}}{3^{\,\text{mütehavvil}}} + \frac{\text{taban}^{4}}{4^{\,\text{mütehavvil}}} + \cdots$$
+
+tarif edilen ve o Zeta tâbii ile sıkı münasebette bulunan iki mütehavvilli tâbi, yâni mütehavvil ve taban mütehavvillerinin tâbii, muhtemelen hiçbir kısmî cebrî tefâzulî muâdeleye uymaz; bu sualin tetkikinde şu tâbiler-muâdelesini kullanmak lâzım gelecektir:
+
+$$\text{taban} \cdot \frac{\partial\, \text{İki-mütehavvilli-zeta}(\text{mütehavvil}, \text{taban})}{\partial\, \text{taban}} = \text{İki-mütehavvilli-zeta}(\text{mütehavvil} - 1, \text{taban})\,.$$
+
+Öbür taraftan, hesabî ve hendesî sebeplerden akla yakın geldiği üzere, muttasıl ve hudutsuz müştak alınabilir bütün tâbiler sınıfını göz önüne alırsak, onların tetkikinde kuvvet silsilesinin uysal aletinden ve tâbiin her keyfî küçük sahada kıymetlerin tayiniyle bütünüyle muayyen olduğu hakikatinden vazgeçmemiz gerekirdi. O hâlde evvelki tâbiler sahası tahdidi çok dar iken, bu bize çok geniş görünür.
+
+Buna mukabil tahlîlî tâbi mefhumu, ister adetler nazariyesinden, ister tefâzulî muâdeleler yahut cebrî tâbiler-muâdeleleri nazariyesinden, ister hendeseden yahut riyâzî hikmet-i tabîiyyeden gelsin, ilim için en mühim tâbilerin bütün zenginliğini kendi içine alır; ve böylece tâbiler âleminde mutlak hâkimiyeti haklı olarak tahlîlî tâbi elinde tutar.
+
+**[288]**
+
+## 19. Muntazam tagayyür meselelerinin halleri daima zarurî olarak tahlîlî midir?
+
+Tahlîlî tâbiler nazariyesinin unsurlarında mefhumca en dikkate şayan hakikatlerden birini şurada görürüm: öyle kısmî tefâzulî muâdeleler vardır ki bütün tamâmîleri (halleri) zarurî olarak müstakil mütehavvillerin tahlîlî tâbileridir; yâni kısaca söylemek gerekirse, yalnız tahlîlî hallere kabiliyetlidirler. Bu nevîden en malûm kısmî tefâzulî muâdeleler kumun (potansiyel) muâdelesi
+
+$$\frac{\partial^{2}\, \text{Hal}}{\partial\, \text{ufkî}^{2}} + \frac{\partial^{2}\, \text{Hal}}{\partial\, \text{şâkulî}^{2}} = 0$$
+
+ve Picard'ın **[Hâşiye 43]** tetkik ettiği bazı hattî tefâzulî muâdeleler, bundan başka şu tefâzulî muâdele
+
+$$\frac{\partial^{2}\, \text{Hal}}{\partial\, \text{ufkî}^{2}} + \frac{\partial^{2}\, \text{Hal}}{\partial\, \text{şâkulî}^{2}} = \text{Neper}^{\,\text{Hal}}\,,$$
+
+asgarî sathın kısmî tefâzulî muâdelesi ve diğerleridir. Bu kısmî tefâzulî muâdelelerin çoğu alâmet olarak şunu müştereken taşır: bunlar bazı tagayyür meselelerinin Lagrange tefâzulî muâdeleleridir, hem de şöyle tagayyür meselelerinin:
+
+$$\iint \text{Esas-tâbi}\big(\text{ufkî-meyl}, \text{şâkulî-meyl}, \text{irtifâ} \,;\, \text{ufkî}, \text{şâkulî}\big)\; d\,\text{ufkî}\; d\,\text{şâkulî} = \text{nihâyet-i suğrâ}\,, \qquad \left[\, \text{ufkî-meyl} = \frac{\partial\, \text{irtifâ}}{\partial\, \text{ufkî}}\,,\quad \text{şâkulî-meyl} = \frac{\partial\, \text{irtifâ}}{\partial\, \text{şâkulî}} \,\right]$$
+
+ki onlarda bahis konusu bütün müstenefler için şu adem-i müsâvât
+
+$$\frac{\partial^{2}\, \text{Esas-tâbi}}{\partial\, \text{ufkî-meyl}^{2}} \cdot \frac{\partial^{2}\, \text{Esas-tâbi}}{\partial\, \text{şâkulî-meyl}^{2}} - \left(\frac{\partial^{2}\, \text{Esas-tâbi}}{\partial\, \text{ufkî-meyl}\; \partial\, \text{şâkulî-meyl}}\right)^{2} > 0$$
+
+geçerlidir ve Esas-tâbi'nin kendisi tahlîlî bir tâbidir. Böyle bir tagayyür meselesine *muntazam tagayyür meselesi* diyelim. Hendesede, mekanikte ve riyâzî hikmet-i tabîiyyede rol oynayanlar başlıca muntazam tagayyür meseleleridir; ve şu sual akla yakındır: muntazam tagayyür meselelerinin bütün halleri daima zarurî olarak tahlîlî tâbiler olmak zorunda mıdır, *yâni muntazam bir tagayyür meselesinin her Lagrange kısmî tefâzulî muâdelesi yalnız tahlîlî tamâmîlere izin verme vasfına sahip midir*; hatta Dirichlet'nin kumun meselesinde olduğu gibi tâbie herhangi muttasıl fakat tahlîlî olmayan hudut kıymetleri zorla verilse bile?
+
+**[289]** Şunu da kaydedeyim ki meselâ menfî sâbit Gauss inhinâlı (eğriliği) öyle sathlar vardır ki muttasıl ve devamlı müştak alınabilir fakat tahlîlî olmayan tâbilerle gösterilir; halbuki müspet sâbit Gauss inhinâlı her sath muhtemelen daima zarurî olarak tahlîlî bir sath olmak zorundadır. Malûm olduğu üzere müspet sâbit inhinâlı sathlar da şu muntazam tagayyür meselesiyle en sıkı münasebettedir: kapalı bir fezâ münhanîsinden, aynı fezâ münhanîsinden geçen sâbit bir sath ile birlikte verilmiş bir hacmi kuşatan en küçük sath mesahalı bir sath geçirmek.
+
+## 20. Umûmî hudut kıymetleri meselesi
+
+Az evvel zikredilenle sıkı münasebette bulunan mühim bir mesele, önceden tayin edilmiş hudut kıymetlerine sahip kısmî tefâzulî muâdelelerin hallerinin vücudu sualidir. Hermann Amandus Schwarz'ın, Carl Neumann'ın ve Poincaré'nin keskin usulleri bu meseleyi kumun tefâzulî muâdelesi için esas itibarıyla hal etmiştir; fakat bu usuller umûmiyetle şu hâllere doğrudan genişletilmeye kabiliyetli görünmez: hudutta müştaklar yahut bunlarla tâbiin kıymetleri arasındaki münasebetler önceden tayin edilmiş ise, yahut kumun sathları değil de meselâ verilmiş bir fezâ münhanîsinden geçen yahut verilmiş bir halka sathı üzerine gerilecek en küçük sath mesahalı sathlar yahut sâbit müspet Gauss inhinâlı sathlar soruluyorsa. Kaniim ki bu vücut burhanlarını, Dirichlet prensibinin işaret ettiği umûmî bir esas fikirle yürütmek mümkün olacaktır; o fikir de belki bizi şu suale yaklaşmaya muktedir kılacaktır: *verilen hudut şartları hakkında bazı farziyeler* (meselâ hudut şartları için ölçü olan tâbilerin ittisali ve parça parça birçok defa müştak alınabilirliği) *yerine geldiği ve icap ederse hal mefhumu mânâya uygun bir genişlemeye uğradığı takdirde, her muntazam tagayyür meselesinin bir hali yok mudur* **[Hâşiye 44]**?
+
+## 21. Önceden tayin edilmiş devir zümreli (Monodromiegruppe) hattî tefâzulî muâdelelerin vücudunun ispatı
+
+Bir müstakil mürekkeb-mütehavvilli hattî tefâzulî muâdeleler nazariyesinden mühim bir
+
+**[290]** meseleye işaret etmek isterim; bu mesele muhtemelen Riemann'ın zihninde de bulunmuştur ve şunu göstermekten ibarettir: *verilen tekil yerlere ve verilen bir devir zümresine sahip Fuchs sınıfından bir hattî tefâzulî muâdele* daima vardır. O hâlde vazife, mürekkeb-mütehavvilin derece-adedi kadar tâbiinin bulunmasını ister ki bunlar mürekkeb sath-ı müstevînin her yerinde, ancak verilen tekil yerler müstesna olabilir, muntazam davransınlar: bu tekil yerlerde ancak mütenâhî yüksek bir mertebeden sonsuz olabilirler ve mürekkeb-mütehavvil bunların etrafında dolaşınca verilen hattî ikamelere uğrarlar. Böyle tefâzulî muâdelelerin vücudu sâbitlerin sayılmasıyla muhtemel kılınmıştır; fakat kat'î ispat şimdiye kadar yalnız verilen ikamelerin esas muâdelelerinin cezirlerinin hepsinin mutlak kıymetinin bir olduğu husûsî hâlde başarılmıştır. Bu ispatı Ludwig Schlesinger **[Hâşiye 45]**, Poincaré'nin Fuchs Zeta-tâbileri nazariyesine dayanarak getirmiştir. Zikredilen meselenin umûmî halli başarılsa hattî tefâzulî muâdeleler nazariyesi aşikâr olarak esasça daha tamamlanmış bir manzara gösterirdi.
+
+## 22. Tahlîlî münasebetlerin kendine tahvîl tâbiler vasıtasıyla tek kıymetli kılınması (Uniformisirung)
+
+Poincaré'nin ilk defa ispat ettiği üzere, iki mütehavvil arasındaki herhangi bir cebrî münasebetin tek kıymetli kılınması, bir mütehavvilli kendine tahvîl tâbilerle daima başarılır; yâni iki mütehavvil arasında herhangi bir cebrî muâdele verilirse, bu mütehavviller için bir mütehavvilli öyle tek kıymetli kendine tahvîl tâbiler daima bulunabilir ki onlar yerine konunca cebrî muâdele bu mütehavvilde ayniyet olarak yerine gelir. Bu esaslı kaziyyenin cebrî olmayan, herhangi tahlîlî münasebetlere genişletilmesine de Poincaré **[Hâşiye 46]** muvaffakiyetle girişmiştir, hem de başta zikredilen husûsî meselede kendisini hedefe ulaştıran yoldan büsbütün başka bir yoldan. Fakat Poincaré'nin iki mütehavvil arasındaki herhangi tahlîlî münasebetin tek kıymetli kılınabileceğine dair burhanından henüz şu çıkmaz: yeni mütehavvilin tek kıymetli tâbilerini öyle seçmek mümkün müdür ki bu mütehavvil o tâbilerin
+
+**[291]** muntazam sahasını dolaşırken verilen tahlîlî yapının bütün muntazam yerlerinin heyet-i mecmûası fiilen gösterilmiş olsun? Bilakis Poincaré'nin araştırmalarında, inşiâb noktaları müstesna, umûmiyetle sonsuz adette daha başka munfasıl yerlerin de hariç kaldığı görünür ki onlara ancak yeni mütehavvil tâbilerin bazı hudut yerlerine yaklaştırılarak varılır. *Poincaré'nin sual koyuşunun esaslı ehemmiyeti göz önüne alınınca bu güçlüğün aydınlatılması ve halli bana son derece arzu edilir görünüyor.*
+
+Bu meseleye bağlı olarak, üç yahut daha fazla mürekkeb mütehavvil arasındaki cebrî yahut herhangi tahlîlî bir münasebetin tek kıymetli kılınması meselesi ortaya çıkar; malûm olduğu üzere bu mesele sayısız husûsî hâlde hal edilebilir ve onun için Picard'ın iki mütehavvilli cebrî tâbiler hakkındaki yeni araştırmaları memnuniyetle karşılanacak ve mühim ön çalışmalar olarak kullanılacaktır.
+
+## 23. Hesâb-ı tagayyürât usullerinin ileri götürülmesi
+
+Şimdiye kadar umûmiyetle mümkün olduğu kadar muayyen ve husûsî meseleler zikrettim; zira bizi en çok çeken ve çoğu zaman bütün ilim üzerinde en kalıcı tesiri meydana getiren tam da muayyen ve husûsî meselelerdir. Bununla beraber umûmî bir meseleyle bitirmek isterim; yâni nutkumda birkaç defa anılan bir şubeye işaretle: bu şube, yakın zamanlarda Weierstrass'tan gördüğü ciddî ilerletmeye rağmen, kanaatimce hak ettiği umûmî itibarı görmemektedir; *hesâb-ı tagayyürât*ı kastediyorum **[Hâşiye 47]**.
+
+En geniş mânâsıyla hesâb-ı tagayyürât, tâbilerin tagayyür ettirilmesi ilmidir ve bu sıfatla bize hesâb-ı tefâzulî ve tamâmînin aklen zarurî bir devamı olarak görünür. Böyle anlaşılınca meselâ Poincaré'nin üç cisim meselesi hakkındaki araştırmaları hesâb-ı tagayyürâtın bir babını teşkil eder; zira Poincaré orada belli vasıflı malûm yörünge münhanîlerinden tagayyür ettirme prensibiyle benzer vasıflı yeni yörünge münhanîleri çıkarır.
+
+**[292]** Nutkumun başında hesâb-ı tagayyürât hakkında yaptığım umûmî mülâhazalara burada kısa bir temellendirme ekliyorum.
+
+Asıl hesâb-ı tagayyürâtın en basit meselesi, malûm olduğu üzere, mevki mütehavvilinin bir İrtifâ tâbiini öyle bulmaktır ki şu muayyen tamâmî
+
+$$\text{Mecmû} = \int_{\text{başlangıç}}^{\text{nihâyet}} \text{Esas-tâbi}\big(\text{meyl}, \text{irtifâ} \,;\, \text{mevki}\big)\; d\,\text{mevki}\,, \qquad \left[\, \text{meyl} = \frac{d\,\text{irtifâ}}{d\,\text{mevki}} \,\right]$$
+
+İrtifâ yerine mevkiin aynı verilmiş başlangıç ve nihâyet kıymetlerine sahip başka tâbileri muayyen tamâmîye koyduğumuzda tamâmînin aldığı kıymetlere nisbetle bir asgarî kıymet alsın. Birinci tagayyürün âdi mânâda sıfır olması
+
+$$\delta\, \text{Mecmû} = 0$$
+
+aranan İrtifâ tâbii için malûm ikinci mertebe tefâzulî muâdeleyi verir:
+
+$$(1) \qquad \frac{d\, \text{Esas-tâbi}_{\text{meyl}}}{d\,\text{mevki}} - \text{Esas-tâbi}_{\text{irtifâ}} = 0\,, \qquad \left[\, \text{Esas-tâbi}_{\text{meyl}} = \frac{\partial\, \text{Esas-tâbi}}{\partial\, \text{meyl}}\,,\quad \text{Esas-tâbi}_{\text{irtifâ}} = \frac{\partial\, \text{Esas-tâbi}}{\partial\, \text{irtifâ}} \,\right].$$
+
+İstenen asgarînin vuku bulması için lâzım ve kâfi ölçütleri daha yakından tetkik etmek üzere şu tamâmîyi göz önüne alırız
+
+$$\text{Müstakil-mecmû} = \int_{\text{başlangıç}}^{\text{nihâyet}} \Big\{ \text{Esas-tâbi} + \big(\text{meyl} - \text{saha-meyli}\big)\, \text{Esas-tâbi}_{\text{saha-meyli}} \Big\}\; d\,\text{mevki}$$
+
+$$\left[\, \text{Esas-tâbi} = \text{Esas-tâbi}\big(\text{saha-meyli}, \text{irtifâ} \,;\, \text{mevki}\big)\,,\quad \text{Esas-tâbi}_{\text{saha-meyli}} = \frac{\partial\, \text{Esas-tâbi}\big(\text{saha-meyli}, \text{irtifâ} \,;\, \text{mevki}\big)}{\partial\, \text{saha-meyli}} \,\right]$$
+
+ve sorarız: bu Müstakil-mecmû tamâmîsinin kıymeti tamâmî yolundan, yâni mevki mütehavvilinin İrtifâ tâbiinin seçilişinden müstakil olsun diye, orada saha-meyli mevki ile irtifâın tâbii olarak nasıl alınmalıdır? Müstakil-mecmû tamâmîsi şu şekle sahiptir:
+
+$$\text{Müstakil-mecmû} = \int_{\text{başlangıç}}^{\text{nihâyet}} \big\{ \text{Birinci-katsayı} \cdot \text{meyl} - \text{İkinci-katsayı} \big\}\; d\,\text{mevki}\,,$$
+
+burada Birinci-katsayı ve İkinci-katsayı meyli ihtiva etmez; ve birinci tagayyürün
+
+$$\delta\, \text{Müstakil-mecmû} = 0$$
+
+yeni sual koyuşunun gerektirdiği mânâda sıfır olması şu muâdeleyi verir:
+
+**[293]**
+
+$$\frac{\partial\, \text{Birinci-katsayı}}{\partial\, \text{mevki}} + \frac{\partial\, \text{İkinci-katsayı}}{\partial\, \text{irtifâ}} = 0\,,$$
+
+yâni mevki ve irtifâ olmak üzere iki mütehavvilin tâbii olan saha-meyli için birinci mertebe şu kısmî tefâzulî muâdeleyi elde ederiz:
+
+$$(1^{*}) \qquad \frac{\partial\, \text{Esas-tâbi}_{\text{saha-meyli}}}{\partial\, \text{mevki}} + \frac{\partial\, \big(\text{saha-meyli} \cdot \text{Esas-tâbi}_{\text{saha-meyli}} - \text{Esas-tâbi}\big)}{\partial\, \text{irtifâ}} = 0\,.$$
+
+İkinci mertebe âdi tefâzulî muâdele (1) ile az evvel bulunan birinci mertebe kısmî tefâzulî muâdele (1*) birbiriyle en sıkı münasebettedir. Bu münasebet şu basit tahvîl ile bize doğrudan doğruya aşikâr olur:
+
+$$\begin{aligned} \delta\, \text{Müstakil-mecmû} &= \int_{\text{başlangıç}}^{\text{nihâyet}} \Big\{ \text{Esas-tâbi}_{\text{irtifâ}}\, \delta\,\text{irtifâ} + \text{Esas-tâbi}_{\text{saha-meyli}}\, \delta\,\text{saha-meyli} + \big(\delta\,\text{meyl} - \delta\,\text{saha-meyli}\big)\, \text{Esas-tâbi}_{\text{saha-meyli}} + \big(\text{meyl} - \text{saha-meyli}\big)\, \delta\, \text{Esas-tâbi}_{\text{saha-meyli}} \Big\}\, d\,\text{mevki} \\ &= \int_{\text{başlangıç}}^{\text{nihâyet}} \Big\{ \text{Esas-tâbi}_{\text{irtifâ}}\, \delta\,\text{irtifâ} + \delta\,\text{meyl}\; \text{Esas-tâbi}_{\text{saha-meyli}} + \big(\text{meyl} - \text{saha-meyli}\big)\, \delta\, \text{Esas-tâbi}_{\text{saha-meyli}} \Big\}\, d\,\text{mevki} \\ &= \delta\, \text{Mecmû} + \int_{\text{başlangıç}}^{\text{nihâyet}} \big(\text{meyl} - \text{saha-meyli}\big)\, \delta\, \text{Esas-tâbi}_{\text{saha-meyli}}\; d\,\text{mevki}\,. \end{aligned}$$
+
+Bundan şu hakikatleri çıkarırız: ikinci mertebe âdi tefâzulî muâdelenin (1) basit bir tamâmî münhanîleri ailesini edinir ve sonra bu tamâmî münhanîlerini de hal olarak kabul eden birinci mertebe bir âdi tefâzulî muâdele
+
+$$(2) \qquad \text{meyl} = \text{saha-meyli}\big(\text{mevki}, \text{irtifâ}\big)$$
+
+kurarsak, saha-meyli tâbii daima birinci mertebe kısmî tefâzulî muâdelenin (1*) bir tamâmîsidir; ve aksine, saha-meyli birinci mertebe kısmî tefâzulî muâdelenin (1*) herhangi bir hallini gösterirse, birinci mertebe âdi tefâzulî muâdelenin (2) bütün tekil olmayan tamâmîleri aynı zamanda ikinci mertebe tefâzulî muâdelenin (1) tamâmîleridir; yahut kısaca ifade edilirse: meyl = saha-meyli(mevki, irtifâ) ikinci mertebe tefâzulî muâdelenin (1) birinci mertebe bir tamâmî muâdelesi ise, saha-meyli kısmî tefâzulî muâdelenin (1*) bir tamâmîsini gösterir ve bunun aksi de doğrudur; o hâlde ikinci mertebe âdi tefâzulî muâdelenin (1) tamâmî münhanîleri aynı zamanda birinci mertebe kısmî tefâzulî muâdelenin (1*) hâsıyyet münhanîleridir (Charakteristiken).
+
+Elimizdeki hâlde aynı neticeyi basit bir hesapla da buluruz; bu hesap bize bahis konusu tefâzulî muâdeleleri (1) ve (1*)
+
+**[294]** şu şekilde verir:
+
+$$(1) \qquad \frac{d\,\text{meyl}}{d\,\text{mevki}}\; \text{Esas-tâbi}_{\text{meyl}\,\text{meyl}} + \text{meyl} \cdot \text{Esas-tâbi}_{\text{meyl}\,\text{irtifâ}} + \text{Esas-tâbi}_{\text{meyl}\,\text{mevki}} - \text{Esas-tâbi}_{\text{irtifâ}} = 0$$
+
+yahut
+
+$$(1^{*}) \qquad \left( \frac{\partial\,\text{saha-meyli}}{\partial\,\text{mevki}} + \text{saha-meyli} \cdot \frac{\partial\,\text{saha-meyli}}{\partial\,\text{irtifâ}} \right) \text{Esas-tâbi}_{\text{saha-meyli}\,\text{saha-meyli}} + \text{saha-meyli} \cdot \text{Esas-tâbi}_{\text{saha-meyli}\,\text{irtifâ}} + \text{Esas-tâbi}_{\text{saha-meyli}\,\text{mevki}} - \text{Esas-tâbi}_{\text{irtifâ}} = 0\,,$$
+
+burada alttaki kelimeler kolay anlaşılır bir yazılışla mevkie, irtifâa, saha-meyline ve meyle göre kısmî müştakları gösterir. Bundan iddia edilen münasebetin doğruluğu aşikâr olur.
+
+Az evvel kurulan ve şimdi ispat edilen, ikinci mertebe âdi tefâzulî muâdele (1) ile birinci mertebe kısmî tefâzulî muâdele (1*) arasındaki sıkı münasebet, bana öyle geliyor ki, hesâb-ı tagayyürât için esaslı ehemmiyete sahiptir. Zira Müstakil-mecmû tamâmîsinin tamâmî yolundan müstakil olması yüzünden şimdi şu çıkar:
+
+$$(3) \qquad \int_{\text{başlangıç}}^{\text{nihâyet}} \Big\{ \text{Esas-tâbi}(\text{saha-meyli}) + \big(\text{meyl} - \text{saha-meyli}\big)\, \text{Esas-tâbi}_{\text{saha-meyli}}(\text{saha-meyli}) \Big\}\; d\,\text{mevki} = \int_{\text{başlangıç}}^{\text{nihâyet}} \text{Esas-tâbi}\big(\text{hal-meyli}\big)\; d\,\text{mevki}\,,$$
+
+şöyle ki sol taraftaki tamâmîyi herhangi bir İrtifâ yolu üzerinde ve sağ taraftaki tamâmîyi şu tefâzulî muâdelenin
+
+$$\text{hal-meyli} = \text{saha-meyli}\big(\text{mevki}, \text{Hal-irtifâı}\big)$$
+
+bir Hal-irtifâı tamâmî münhanîsi üzerinde alınmış düşünürüz; burada hal-meyli, Hal-irtifâının mevkie göre müştakıdır. (3) muâdelesi yardımıyla Weierstrass düsturuna varırız:
+
+$$(4) \qquad \int_{\text{başlangıç}}^{\text{nihâyet}} \text{Esas-tâbi}(\text{meyl})\; d\,\text{mevki} - \int_{\text{başlangıç}}^{\text{nihâyet}} \text{Esas-tâbi}(\text{hal-meyli})\; d\,\text{mevki} = \int_{\text{başlangıç}}^{\text{nihâyet}} \text{Weierstrass-ifâdesi}\big(\text{meyl}, \text{saha-meyli}\big)\; d\,\text{mevki}\,,$$
+
+burada Weierstrass-ifâdesi meyl, saha-meyli, irtifâ ve mevki olmak üzere dört müstenefe bağlı şu Weierstrass ifadesini gösterir:
+
+$$\text{Weierstrass-ifâdesi}\big(\text{meyl}, \text{saha-meyli}\big) = \text{Esas-tâbi}(\text{meyl}) - \text{Esas-tâbi}(\text{saha-meyli}) - \big(\text{meyl} - \text{saha-meyli}\big)\, \text{Esas-tâbi}_{\text{saha-meyli}}(\text{saha-meyli})\,.$$
+
+Buna göre mesele yalnız bahis konusu Hal-irtifâı tamâmî münhanîsini mevki ve irtifâ sath-ı müstevîsinde tek kıymetli ve muttasıl bir tarzda tekabül eden bir saha-meyli tamâmî tâbiinin kıymetleriyle kuşatmaya bağlı olduğundan, az evvel işaret edilen tafsilat doğrudan doğruya, ikinci tagayyür işe katılmaksızın, yalnız tefâzulî muâdeleye (1) kutbî ameliyesi (Polarenprocess) tatbik edilerek, Jacobi şartının kurulmasına ve şu sualin cevabına götürür: bu Jacobi şartı, Weierstrass şartıyla, yâni
+
+$$\text{Weierstrass-ifâdesi} > 0$$
+
+şartıyla birlikte, bir asgarînin vuku bulması için ne dereceye kadar lâzım ve kâfidir?
+
+**[295]** İşaret edilen tafsilat, başka bir hesaba lüzum kalmaksızın, iki yahut daha fazla aranan tâbi hâline ve çift yahut çok katlı tamâmî hâline nakledilebilir. Meselâ verilmiş bir Saha üzerinden alınacak şu çift tamâmî hâlinde
+
+$$\text{Mecmû} = \int \text{Esas-tâbi}\big(\text{ufkî-meyl}, \text{şâkulî-meyl}, \text{irtifâ} \,;\, \text{ufkî}, \text{şâkulî}\big)\; d\,\text{Saha}\,, \qquad \left[\, \text{ufkî-meyl} = \frac{\partial\,\text{irtifâ}}{\partial\,\text{ufkî}}\,,\quad \text{şâkulî-meyl} = \frac{\partial\,\text{irtifâ}}{\partial\,\text{şâkulî}} \,\right]$$
+
+âdi mânâda anlaşılacak birinci tagayyürün sıfır olması
+
+$$\delta\,\text{Mecmû} = 0$$
+
+ufkî ve şâkulînin aranan İrtifâ tâbii için malûm ikinci mertebe tefâzulî muâdeleyi verir:
+
+$$(\mathrm{I}) \qquad \frac{d\,\text{Esas-tâbi}_{\text{ufkî-meyl}}}{d\,\text{ufkî}} + \frac{d\,\text{Esas-tâbi}_{\text{şâkulî-meyl}}}{d\,\text{şâkulî}} - \text{Esas-tâbi}_{\text{irtifâ}} = 0\,, \qquad \left[\, \text{Esas-tâbi}_{\text{ufkî-meyl}} = \frac{\partial\,\text{Esas-tâbi}}{\partial\,\text{ufkî-meyl}}\,,\ \ \text{Esas-tâbi}_{\text{şâkulî-meyl}} = \frac{\partial\,\text{Esas-tâbi}}{\partial\,\text{şâkulî-meyl}}\,,\ \ \text{Esas-tâbi}_{\text{irtifâ}} = \frac{\partial\,\text{Esas-tâbi}}{\partial\,\text{irtifâ}} \,\right].$$
+
+Öbür taraftan şu tamâmîyi göz önüne alırız:
+
+$$\text{Müstakil-mecmû} = \int \Big\{ \text{Esas-tâbi} + \big(\text{ufkî-meyl} - \text{ufkî-saha-meyli}\big)\, \text{Esas-tâbi}_{\text{ufkî-saha-meyli}} + \big(\text{şâkulî-meyl} - \text{şâkulî-saha-meyli}\big)\, \text{Esas-tâbi}_{\text{şâkulî-saha-meyli}} \Big\}\; d\,\text{Saha}$$
+
+$$\left[\, \text{Esas-tâbi} = \text{Esas-tâbi}\big(\text{ufkî-saha-meyli}, \text{şâkulî-saha-meyli}, \text{irtifâ} \,;\, \text{ufkî}, \text{şâkulî}\big)\,,\quad \text{Esas-tâbi}_{\text{ufkî-saha-meyli}} = \frac{\partial\,\text{Esas-tâbi}}{\partial\,\text{ufkî-saha-meyli}}\,,\quad \text{Esas-tâbi}_{\text{şâkulî-saha-meyli}} = \frac{\partial\,\text{Esas-tâbi}}{\partial\,\text{şâkulî-saha-meyli}} \,\right]$$
+
+ve sorarız: bu tamâmînin kıymeti verilmiş kapalı fezâ münhanîsinden geçirilen sathın seçilişinden, yâni ufkî ve şâkulî mütehavvillerinin İrtifâ tâbiinin seçilişinden müstakil olsun diye, orada ufkî-saha-meyli ile şâkulî-saha-meyli ufkî, şâkulî ve irtifâın tâbileri olarak nasıl alınmalıdır? Müstakil-mecmû tamâmîsi şu şekle sahiptir:
+
+$$\text{Müstakil-mecmû} = \int \big\{ \text{Birinci-katsayı} \cdot \text{ufkî-meyl} + \text{İkinci-katsayı} \cdot \text{şâkulî-meyl} - \text{Üçüncü-katsayı} \big\}\; d\,\text{Saha}$$
+
+ve birinci tagayyürün
+
+$$\delta\,\text{Müstakil-mecmû} = 0$$
+
+yeni sual koyuşunun gerektirdiği mânâda sıfır olması şu muâdeleyi verir:
+
+$$\frac{\partial\,\text{Birinci-katsayı}}{\partial\,\text{ufkî}} + \frac{\partial\,\text{İkinci-katsayı}}{\partial\,\text{şâkulî}} + \frac{\partial\,\text{Üçüncü-katsayı}}{\partial\,\text{irtifâ}} = 0\,,$$
+
+yâni ufkî, şâkulî ve irtifâ olmak üzere üç mütehavvilin tâbileri olan ufkî-saha-meyli ve şâkulî-saha-meyli için birinci mertebe şu tefâzulî muâdeleyi elde ederiz:
+
+$$(\mathrm{I}^{*}) \qquad \frac{\partial\,\text{Esas-tâbi}_{\text{ufkî-saha-meyli}}}{\partial\,\text{ufkî}} + \frac{\partial\,\text{Esas-tâbi}_{\text{şâkulî-saha-meyli}}}{\partial\,\text{şâkulî}} + \frac{\partial\,\big(\text{ufkî-saha-meyli} \cdot \text{Esas-tâbi}_{\text{ufkî-saha-meyli}} + \text{şâkulî-saha-meyli} \cdot \text{Esas-tâbi}_{\text{şâkulî-saha-meyli}} - \text{Esas-tâbi}\big)}{\partial\,\text{irtifâ}} = 0\,.$$
+
+**[296]** Bu tefâzulî muâdeleye bir de şu muâdelelerden
+
+$$\text{ufkî-meyl} = \text{ufkî-saha-meyli}\big(\text{ufkî}, \text{şâkulî}, \text{irtifâ}\big)\,, \qquad \text{şâkulî-meyl} = \text{şâkulî-saha-meyli}\big(\text{ufkî}, \text{şâkulî}, \text{irtifâ}\big)$$
+
+çıkan şu kısmî tefâzulî muâdeleyi
+
+$$(\mathrm{I}^{**}) \qquad \frac{\partial\,\text{ufkî-saha-meyli}}{\partial\,\text{şâkulî}} + \text{şâkulî-saha-meyli} \cdot \frac{\partial\,\text{ufkî-saha-meyli}}{\partial\,\text{irtifâ}} = \frac{\partial\,\text{şâkulî-saha-meyli}}{\partial\,\text{ufkî}} + \text{ufkî-saha-meyli} \cdot \frac{\partial\,\text{şâkulî-saha-meyli}}{\partial\,\text{irtifâ}}$$
+
+eklersek, iki mütehavvilli, yâni ufkî ve şâkulînin tâbii olan İrtifâ için ikinci mertebe kısmî tefâzulî muâdele (I) ile, üç mütehavvilli, yâni ufkî, şâkulî ve irtifâın tâbileri olan ufkî-saha-meyli ve şâkulî-saha-meyli için birinci mertebe iki kısmî tefâzulî muâdeleden müteşekkil müşterek manzume (I*) ile (I**), birbirine tam olarak, evvelce basit tamâmî hâlinde tefâzulî muâdeleler (1) ve (1*) arasındaki münasebetin benzeri bir münasebette bulunur.
+
+Müstakil-mecmû tamâmîsinin tamâmî sathı İrtifâın seçilişinden müstakil olması yüzünden şu çıkar:
+
+$$\int \Big\{ \text{Esas-tâbi}(\text{ufkî-saha-meyli}, \text{şâkulî-saha-meyli}) + \big(\text{ufkî-meyl} - \text{ufkî-saha-meyli}\big)\, \text{Esas-tâbi}_{\text{ufkî-saha-meyli}} + \big(\text{şâkulî-meyl} - \text{şâkulî-saha-meyli}\big)\, \text{Esas-tâbi}_{\text{şâkulî-saha-meyli}} \Big\}\; d\,\text{Saha} = \int \text{Esas-tâbi}\big(\text{ufkî-hal-meyli}, \text{şâkulî-hal-meyli}\big)\; d\,\text{Saha}\,,$$
+
+şöyle ki sağ taraftaki tamâmîyi şu kısmî tefâzulî muâdelelerin
+
+$$\text{ufkî-hal-meyli} = \text{ufkî-saha-meyli}\big(\text{ufkî}, \text{şâkulî}, \text{Hal-irtifâı}\big)\,, \qquad \text{şâkulî-hal-meyli} = \text{şâkulî-saha-meyli}\big(\text{ufkî}, \text{şâkulî}, \text{Hal-irtifâı}\big)$$
+
+bir Hal-irtifâı tamâmî sathı üzerinde alınmış düşünürüz; bu düstur yardımıyla da hemen şu düstura varırız:
+
+$$(\mathrm{IV}) \qquad \int \text{Esas-tâbi}(\text{ufkî-meyl}, \text{şâkulî-meyl})\; d\,\text{Saha} - \int \text{Esas-tâbi}(\text{ufkî-hal-meyli}, \text{şâkulî-hal-meyli})\; d\,\text{Saha} = \int \text{Weierstrass-ifâdesi}\big(\text{ufkî-meyl}, \text{şâkulî-meyl}, \text{ufkî-saha-meyli}, \text{şâkulî-saha-meyli}\big)\; d\,\text{Saha}\,,$$
+
+$$\text{Weierstrass-ifâdesi}\big(\text{ufkî-meyl}, \text{şâkulî-meyl}, \text{ufkî-saha-meyli}, \text{şâkulî-saha-meyli}\big) = \text{Esas-tâbi}(\text{ufkî-meyl}, \text{şâkulî-meyl}) - \text{Esas-tâbi}(\text{ufkî-saha-meyli}, \text{şâkulî-saha-meyli}) - \big(\text{ufkî-meyl} - \text{ufkî-saha-meyli}\big)\, \text{Esas-tâbi}_{\text{ufkî-saha-meyli}} - \big(\text{şâkulî-meyl} - \text{şâkulî-saha-meyli}\big)\, \text{Esas-tâbi}_{\text{şâkulî-saha-meyli}}\,,$$
+
+ki çift tamâmîlerin tagayyürü için, basit tamâmîler için yukarıda verilen (4) düsturunun oynadığı rolün aynısını oynar ve onun yardımıyla yine şu suale cevap verebiliriz: Jacobi şartı, Weierstrass şartıyla, yâni Weierstrass-ifâdesi > 0 şartıyla birlikte, bir asgarînin vuku bulması için ne dereceye kadar lâzım ve kâfidir?
+
+## Hâtime
+
+Zikredilen meseleler meselelerin yalnız numuneleridir; fakat riyâzî ilmin bugün dahi ne kadar zengin, ne kadar çeşitli ve ne kadar geniş olduğunu gözümüzün önüne sermeye kâfidir. Ve şu sual zihnimize kendini dayatır: başka ilimlerin çoktan başına gelmiş olan şey, yâni temsilcileri birbirini artık güçlükle anlayan ve bu yüzden birbiriyle irtibatı gittikçe gevşeyen tek tek cüz ilimlere parçalanmak, bir gün riyâziyyâtın da başına gelecek midir?
+
+**[297]** Buna ne inanırım ne de bunu dilerim; riyâzî ilim kanaatimce bölünmez bir bütündür, hayat kabiliyeti cüzlerinin irtibatına bağlı bir uzviyettir. Zira riyâzî bilgi malzemesinin teferruattaki bütün farklılığına rağmen, bütün riyâziyyâtta mantıkî vasıtaların aynılığını, fikir teşekküllerinin akrabalığını ve muhtelif bilgi sahalarındaki sayısız benzerliği pek açık olarak fark ederiz. Şunu da fark ederiz: bir riyâzî nazariye ne kadar ileri inkişâf ettirilirse binası o kadar ahenkli ve birlik içinde şekillenir ve şimdiye kadar ayrı duran bilgi şubeleri arasında umulmadık münasebetler keşfedilir. Böylece riyâziyyâtın genişlemesiyle birlik vasfı kaybolmaz, bilakis o kadar açık surette zâhir olur.
+
+Fakat, diye soruyoruz, riyâzî bilginin genişlemesiyle tek bir araştırıcı için bu bilginin bütün cüzlerini kucaklamak nihayet imkânsız hâle gelmeyecek midir? Cevap olarak şuna işaret etmek isterim: riyâzî ilmin mahiyetinde ne kadar derinden yatar ki her hakikî terakkî daima daha keskin vasıtaların ve daha basit usullerin bulunmasıyla el ele yürür; bu vasıtalar ve usuller aynı zamanda evvelki nazariyelerin anlaşılmasını kolaylaştırır ve dolambaçlı eski tafsilatı ortadan kaldırır; bu sebeple tek araştırıcı, bu daha keskin vasıtaları ve daha basit usulleri benimsemekle, riyâziyyâtın muhtelif bilgi şubelerinde yolunu bulmayı herhangi başka bir ilimde olduğundan daha kolay başarır.
+
+Riyâziyyâtın birlik vasfı bu ilmin iç mahiyetinde temellenmiştir; zira riyâziyyât bütün kat'î tabiat ilmî bilgisinin temelidir. Bu yüksek vazifesini tamamen ifa etsin diye, yeni asırda ona dâhî üstatlar ve asil bir gayretle tutuşan sayısız şâkirt yetişsin!
+
+---
+
+## Hâşiyeler (müellifin)
+
+Kitap ve mecmua isimleri, aranıp bulunabilsinler diye, aslın lisanında bırakılmıştır.
+
+1. Leipzig 1896.
+2. Bakınız: Helmholtz, *Ueber die Wechselwirkung der Naturkräfte und die darauf bezüglichen neuesten Ermittelungen der Physik*. Königsberg'de 1854'te verilmiş nutuk.
+3. *Jahresbericht der Deutschen Mathematiker-Vereinigung*, cilt 8, 1900, sahife 180.
+4. *Werke* (Gauss'un külliyatı), cilt 8, sahife 241 ve 244.
+5. Daha evvelki neşriyattan başka bakınız: Hilbert, *Grundlagen der Geometrie*, Leipzig 1899, dördüncü bab.
+6. Gauss'un *Werke*'si, cilt 8, sahife 242.
+7. Leipzig 1896.
+8. *Mathematische Annalen*, cilt 46, sahife 91.
+9. *Leçons sur la théorie générale des surfaces*, cilt 3, Paris 1894, sahife 54.
+10. Bakınız: Arthur Hirsch'in alâka çekici araştırmaları, *Mathematische Annalen*, cilt 49 ve 50.
+11. Lie ve Engel, *Theorie der Transformationsgruppen*, cilt 3, Leipzig 1893, fıkra 82 ve fıkra 144.
+12. *Ueber den analytischen Charakter der eine endliche continuirliche Transformationsgruppe darstellenden Functionen*, *Mathematische Annalen*, cilt 41.
+13. *Werke* (Abel'in külliyatı), cilt 1, sahife 1, 61 ve 389.
+14. *Quelques théories fondamentales dans l'analyse mathématique*. Clark Darülfünunu'nda verilmiş dersler. *Revue générale des Sciences* 1900, sahife 22.
+15. Bakınız: Bohlmann, *Ueber Versicherungsmathematik*, ikinci ders; Klein ve Riecke, *Ueber angewandte Mathematik und Physik*, Leipzig ve Berlin 1900 içinde.
+16. *Die Mechanik in ihrer Entwickelung*, ikinci tab', Leipzig 1889.
+17. *Die Principien der Mechanik*, Leipzig 1894.
+18. *Vorlesungen über die Principe der Mechanik*, Leipzig 1897.
+19. *Einführung in das Studium der theoretischen Physik*, Leipzig 1900.
+20. Bakınız: Paul Stäckel, *Ueber Goldbach's empirisches Theorem*, *Nachrichten der Königlichen Gesellschaft der Wissenschaften zu Göttingen* 1896; ve Landau, aynı yerde 1900.
+21. *Bericht der Deutschen Mathematiker-Vereinigung über die Theorie der algebraischen Zahlkörper*, cilt 4, 1897, beşinci kısım.
+22. *Mathematische Annalen*, cilt 51; ve *Nachrichten der Königlichen Gesellschaft der Wissenschaften zu Göttingen* 1898.
+23. Hilbert, *Ueber den Dirichletschen biquadratischen Zahlenkörper*, *Mathematische Annalen*, cilt 45; *Ueber die Theorie der relativquadratischen Zahlkörper*, *Jahresbericht der Deutschen Mathematiker-Vereinigung* 1897 ve *Mathematische Annalen*, cilt 51; *Ueber die Theorie der relativ-Abelschen Körper*, *Nachrichten der Königlichen Gesellschaft der Wissenschaften zu Göttingen* 1898; *Grundlagen der Geometrie*, Göttingen'de Gauss ve Weber abidesinin açılışı münasebetiyle hatıra kitabı, Leipzig 1899, sekizinci bab, fıkra 83.
+24. *Elliptische Functionen und algebraische Zahlen*, Braunschweig 1891.
+25. *Jahresbericht der Deutschen Mathematiker-Vereinigung*, cilt 6; ve yakında *Mathematische Annalen*'de çıkacak bir makale: *Ueber die Entwickelung der algebraischen Zahlen in Potenzreihen*.
+26. *Mathematische Annalen*, cilt 50, 1898.
+27. Bakınız: Hilbert, *Ueber die Theorie der relativ-Abelschen Zahlkörper*, *Nachrichten der Königlichen Gesellschaft der Wissenschaften zu Göttingen* 1898.
+28. Maurice d'Ocagne, *Traité de Nomographie*, Paris 1899.
+29. Bakınız: *Sitzungsberichte der Königlichen Akademie der Wissenschaften zu München* 1899; ve yakında *Mathematische Annalen*'de çıkacak bir makale.
+30. *Mathematische Annalen*, cilt 36, sahife 485.
+31. *Kalkül der abzählenden Geometrie*, Leipzig 1879.
+32. *Mathematische Annalen*, cilt 10.
+33. Bakınız: Rohn, *Flächen vierter Ordnung*, Fürstlich Jablonowskische Gesellschaft mükâfat risaleleri, Leipzig 1886.
+34. *Mathematische Annalen*, cilt 32 (aslın taşında "82" diye basılmıştır; bakınız Mütercim kaydı 18).
+35. *Acta mathematica*, cilt 17.
+36. Bakınız: Hilbert, *Grundlagen der Geometrie*, Leipzig 1899, yedinci bab, bilhassa fıkra 38.
+37. *Journal für Mathematik*, cilt 84 (1878); ve *Atti della Reale Accademia di Napoli* 1880.
+38. Leipzig 1897. Bilhassa birinci kısım, ikinci ve üçüncü bablar.
+39. *Symmetrie der regelmäßigen Systeme von Figuren*, 1890.
+40. *Krystallsysteme und Krystallstructur*, Leipzig 1891.
+41. *Mathematische Annalen*, cilt 53.
+42. *Mathematische Annalen*, cilt 28.
+43. *Journal de l'École Polytechnique* 1890.
+44. Bakınız: Dirichlet prensibi hakkındaki nutkum, *Jahresbericht der Deutschen Mathematiker-Vereinigung*, cilt 8, 1900, sahife 184.
+45. *Handbuch der Theorie der linearen Differentialgleichungen*, cilt 2, ikinci kısım, numara 366.
+46. *Bulletin de la Société Mathématique de France*, cilt 11, 1883.
+47. Ders kitapları şunlardır: Moigno ve Lindelöf, *Leçons du calcul des variations*, Paris 1861; ve Adolf Kneser, *Lehrbuch der Variationsrechnung*, Braunschweig 1900.
+
+---
+
+## Mütercim kayıtları
+
+Aşağıdaki kayıtlar asla ait değildir; mütercimin izahı, tashihi yahut aslın neşrinden sonraki gelişmelere dair bilgisidir. "Mütercimin bilgisi" ibaresi taşıyan hükümler bu tercüme sırasında ayrı bir kaynaktan yoklanmamış, mütercimin umûmî riyâziyyât târihi bilgisinden yazılmıştır.
+
+**[M1] Düsturların yazılışı.** `tercume/README.md` kaide 1 mucibince aslın bütün harfleri, mânâlarını söyleyen kelimelerle değiştirilmiştir; hangi kelimenin aslın hangi harfine tekabül ettiği eserin sonundaki **İsimler cedveli**ndedir. Aynı harf aslın muhtelif yerlerinde başka mânâlarda kullanılmışsa (meselâ küçük ve büyük harfler), her yerde o yerin mânâsına göre ayrı kelime seçilmiştir. Rakamlar, Neper adedi, dâire-nisbeti ve mevhûm-vâhid gibi sâbitler adlarıyla yazılmıştır.
+
+**[M2] Nutkun söylenişi.** Hilbert bu nutku 8 Ağustos 1900'de Paris'te söylemiş, fakat zaman darlığından kongrede meselelerin yalnız bir kısmını (umûmiyetle on tane olduğu bildirilir) okumuştur; yirmi üç meselenin tamamı bu Göttingen neşrinde yer alır (mütercimin bilgisi).
+
+**[M3] Fermat meselesi.** Mukaddimede anılan Fermat iddiası 1994'te Andrew Wiles tarafından (Richard Taylor ile birlikte tamamlanan çalışmayla) ispat edilmiştir (mütercimin bilgisi).
+
+**[M4] Mukaddimedeki iki misal.** Euler-Mascheroni sâbitinin asamm olup olmadığı bugün de bilinmemektedir. "2 üzeri kuvvet artı 1" şeklindeki bir adedin evvelî olabilmesi için kuvvetin ikinin bir kuvveti olması lâzım geldiğinden, bu sual Fermat evvelî adetlerinin sonsuz çoklukta olup olmadığı sualiyle aynıdır; o da hâlen açıktır (mütercimin bilgisi).
+
+**[M5] Birinci mesele.** Zermelo 1904'te her mecmûanın iyi tertip edilebileceğini seçme mütearifesine dayanarak ispat etmiştir; fakat Hilbert'in istediği gibi ittisalin *fiilen gösterilmiş* bir iyi tertibi verilmemiştir. İttisal farziyesinin umûmî mecmûalar nazariyesi mütearifelerinden (Zermelo ve Fraenkel manzumesi) müstakil olduğu, Gödel'in 1940 ve Paul Cohen'in 1963 çalışmalarıyla gösterilmiştir (mütercimin bilgisi).
+
+**[M6] İkinci mesele.** Kurt Gödel 1931'de, hesabı ihtiva eden tenâkuzsuz bir sûrî manzumenin kendi adem-i tenâkuzunu kendi vasıtalarıyla ispat edemeyeceğini göstermiştir; bu, Hilbert'in umduğu türden "doğrudan" bir burhanın, umduğu sınırlı vasıtalarla imkânsızlığı mânâsına gelir. Gerhard Gentzen 1936'da tabiî adetler hesabının adem-i tenâkuzunu sonsuz-ötesi tümevarım kullanarak ispat etmiştir (mütercimin bilgisi).
+
+**[M7] Üçüncü mesele.** Hilbert'in öğrencisi Max Dehn aynı sene (1900) müsâvî kaideli ve müsâvî irtifâlı, mütetâbık parçalara ayrılamayan dört yüzlüler bulunduğunu ispat ederek bu meseleyi hal etmiştir; meseleler arasında ilk hal edilen budur (mütercimin bilgisi).
+
+**[M8] Yedinci mesele.** Gelfond ve Schneider 1934'te birbirinden müstakil olarak, cebrî bir taban (sıfır ve bir hariç) ve cebrî asamm bir üs için kuvvetin aşkın olduğunu ispat etmişlerdir. Asıldaki "Neper üzeri dâire-nisbeti = mevhûm-vâhid üzeri eksi iki mevhûm-vâhid" ayniyeti, mevhûm-vâhidin logaritmasının esas kıymeti olan "mevhûm-vâhid çarpı dâire-nisbeti bölü iki" alınarak doğrulanır (mütercimin bilgisi).
+
+**[M9] Sekizinci mesele.** Riemann farziyesi, Goldbach meselesi ve farkı iki olan evvelî adet çiftleri meselesi hâlen açıktır. Riemann tercümesindeki ([`11_riemann_1859_adad_i_evveliyye.md`](11_riemann_1859_adad_i_evveliyye.md)) Zeta ve Tekmîl-zeta adlandırması burada da muhafaza edilmiştir (mütercimin bilgisi).
+
+**[M10] Onuncu mesele.** Martin Davis, Hilary Putnam, Julia Robinson ve nihayet Yuri Matiyasevich'in 1970'te tamamladığı çalışmayla, böyle umûmî bir usulün **bulunmadığı** ispat edilmiştir. Bu, mukaddimedeki "Ignorabimus yoktur" kanaatinin istenen mânâda değil, imkânsızlık burhanı mânâsında cevaplandığı bir misaldir (mütercimin bilgisi).
+
+**[M11] On üçüncü mesele ve bu projenin KAN tabakası.** Andrey Kolmogorov 1956 ve 1957'de, talebesi Vladimir Arnold ile birlikte, her muttasıl çok mütehavvilli tâbiin bir mütehavvilli muttasıl tâbilerin ve toplamanın sonlu terkibiyle gösterilebileceğini ispat etmiştir. Böylece Hilbert'in *muttasıl* tâbiler için sorduğu şekliyle mesele menfî cevaplanmıştır: yedinci derece muâdelenin cezri, iki müstenefli (hatta bir müstenefli ve toplamadan ibaret) muttasıl tâbilerle gösterilebilir. Bu "Kolmogorov ve Arnold gösterilişi", bu deponun tâlim motorunda kullanılan KAN (Kolmogorov ve Arnold Şebekesi) tabakasının riyâzî menşeidir. Hilbert'in kastettiği tahlîlî tâbiler hâli ise ayrı bir sualdir (mütercimin bilgisi).
+
+**[M12] On dördüncü mesele.** Masayoshi Nagata 1959'da mütenâhî olarak üretilmeyen bir değişmezler halkası misali vererek umûmî hâlde cevabın menfî olduğunu göstermiştir (mütercimin bilgisi).
+
+**[M13] On altıncı mesele ve "gömlek".** Aslın *Mäntel* (mantolar) kelimesi, bir cebrî sathın birbirinden ayrı bağlı cüzlerini anlatır; "gömlek" diye tercüme edilmiştir. Altıncı derece münhanîler için Gudkov 1969'da mümkün tertipleri tasnif etmiştir; hudut devirlerinin azamî sayısı sualinin ikinci kısmı hâlen açıktır (mütercimin bilgisi).
+
+**[M14] On yedinci mesele.** Emil Artin 1927'de her muayyen-işaretli şeklin muntak tâbilerin murabbaları mecmûu olarak gösterilebileceğini ispat etmiştir (mütercimin bilgisi).
+
+**[M15] On sekizinci mesele.** Bieberbach 1911'de her buudda mütenâhî adette kristal zümresi bulunduğunu ispat etmiştir; Reinhardt 1928'de bir zümrenin esas sahası olmayan fakat fezâyı dolduran bir kesîrü'l-vücûh göstermiştir; kürelerin en sık istifi hakkındaki Kepler farziyesi Thomas Hales tarafından 1998'de ispat edilmiş, ispat 2014 ve 2017'de sûrî olarak doğrulanmıştır (mütercimin bilgisi).
+
+**[M16] On dokuzuncu, yirminci, yirmi birinci ve yirmi ikinci meseleler.** On dokuzuncu mesele Bernstein (1904), De Giorgi (1957) ve Nash (1958) ile müspet hal edilmiştir. Yirmi birinci mesele için Plemelj 1908'de müspet bir hal vermiş; fakat Bolibrukh 1989'da Fuchs sınıfı şartıyla menfî bir misal göstermiştir. Yirmi ikinci mesele Koebe ve Poincaré tarafından 1907'de hal edilmiştir (mütercimin bilgisi).
+
+**[M17] Hesâb-ı tagayyürât babında aslın matbaa hataları.** Esas tutulan nüshanın bu babdaki bazı düsturlarında harf düşmesi yahut yanlış harf vardır. Tercümede şu yerler riyâzî olarak doğru şekliyle yazılmıştır:
+- (1*)'ın önündeki köşeli parantezde "Esas-tâbi = …" diye ikinci defa basılan ifade, saha-meyline göre kısmî müştakın tarifidir; öyle yazıldı.
+- "Müstakil-mecmû = birinci-katsayı çarpı meyl eksi ikinci-katsayı" tamâmîsinin üst haddi asılda düşmüştür; nihâyet olarak eklendi.
+- (1*)'ın açık şeklindeki parantez asılda "saha-meylinin mevkie göre müştakı artı saha-meyli çarpı saha-meylinin **mevkie** göre müştakı" diye basılmıştır; doğrusu **irtifâa** göredir, öyle yazıldı.
+- (I) muâdelesinde asıl ikinci terimi "Esas-tâbi'nin irtifâa göre müştakının şâkulîye göre tamâmî müştakı", son terimi de "Esas-tâbi'nin ufkîye göre müştakı" diye basmıştır; doğrusu sırasıyla şâkulî-meyle göre müştakın şâkulîye göre tamâmî müştakı ve irtifâa göre müştaktır.
+- İkinci Müstakil-mecmû tamâmîsinin köşeli parantezinde şâkulî-saha-meyline göre müştak, asılda yanlış harfle basılmıştır.
+- Asıl iki ayrı muâdeleye aynı "(I*)" numarasını vermiştir; ikincisi burada (I**) diye ayrılmıştır. Bu ikinci muâdele asılda "ufkî-saha-meylinin şâkulîye göre müştakı artı şâkulî-saha-meyli çarpı ufkî-saha-meylinin **ufkîye** göre müştakı" diye basılmıştır; tamâmîlenebilme şartının doğrusu **irtifâa** göredir, öyle yazıldı.
+- (IV) düsturunun sağ tarafında asıl "Esas-tâbi" basmıştır; doğrusu Weierstrass-ifâdesidir. Weierstrass-ifâdesinin son teriminde de asıl ufkî-saha-meyline göre müştak basmıştır; doğrusu şâkulî-saha-meyline göredir.
+
+**[M18] Hâşiye 34.** Asılda "Mathematische Annalen Bd. 82" diye basılmıştır; Hilbert'in muayyen-işaretli şekillerin murabba mecmûu olarak gösterilemeyeceğine dair 1888 tarihli makalesi *Mathematische Annalen*'in 32. cildindedir. 1900'de 82. cilt henüz çıkmamıştı (mütercimin bilgisi).
+
+**[M19] "Kesret mertebesi" ıstılahı.** Aslın *Mächtigkeit* kelimesi (bugünkü "kardinalite") için lugatte bir karşılık bulunmadığından "kesret mertebesi" teklif edilmiştir; "adet-i aslî" (cardinal number) lugatte mevcuttur ve bu mertebenin adedini anlatır.
+
+---
+
+## İsimler cedveli
+
+| Tercümedeki kelime | Aslın harfi | Mânâsı |
+| :-- | :-- | :-- |
+| birinci-adet, ikinci-adet, üçüncü-adet; kuvvet | x, y, z; n | Fermat muâdelesinin tam adet halleri ve üssü |
+| birinci-kemmiyet, ikinci-kemmiyet, üçüncü-kemmiyet | a, b, c | "arasında" mefhumunu anlatan üç kemmiyet |
+| Euler-Mascheroni sâbiti | C | Euler ve Mascheroni'nin sâbiti |
+| birinci-adet, ikinci-adet, üçüncü-adet (birinci mesele) | a, b, c | müretteb mecmûada tertibi denenen üç adet |
+| merkez-nokta | O | Minkowski hendesesinde mesafenin ölçüldüğü sâbit nokta |
+| mevki, yeni-mevki, ikinci-mevki | x, x′, x″ | Lie zümresinde tahvîl edilen noktanın, birinci ve ikinci tahvîlden sonraki mevkileri |
+| boyut | n | mütehavvillerin sayısı |
+| sıra | i | bir ile boyut arasında koşan sıra numarası |
+| Tahvîl | f | zümreyi tarif eden tâbiler |
+| birinci-mütevassıt, ikinci-mütevassıt, bileşik-mütevassıt; mütevassıt-adedi | a, b, c; r | zümrenin mütevassıtları (parametreleri) ve sayısı |
+| Mesâfe; birinci-mevki, ikinci-mevki | f; x, y | Minkowski'nin üçgen adem-i müsâvâtındaki tâbi ve iki nokta |
+| Arızalı-tâbi; Tahlîlî-tâbi; birinci-devir, ikinci-devir | φ; f; α, β | müştak alınamaz hal, tahlîlî sağ taraf ve iki hakikî devir |
+| müstenef | z | üssî tâbiin müstenefi (argümanı) |
+| taban, üs | α, β | cebrî taban ve cebrî asamm üs |
+| Zeta; mütehavvil | ζ; s | Riemann'ın zeta tâbii ve mürekkeb mütehavvili |
+| hudut | x | evvelî adetlerin sayıldığı üst hudut |
+| birinci-emsal, ikinci-emsal, sâbit-emsal; birinci-evvelî, ikinci-evvelî | a, b, c; x, y | hattî Diophantos muâdelesinin emsalleri ve evvelî adet halleri |
+| Cisim-zetası; misâliye; Kadr | ζ_k; 𝔧; n | adedî cismin zeta tâbii, cismin misâliyesi (ideali) ve misâliyenin kadri (normu) |
+| evvelî-üs | l | mütekabiliyet kanununun kuvvet mertebesi |
+| cins; sınıf adedi | p; h | Riemann sathının cinsi ve adedî cismin sınıf adedi |
+| tam-adet | α | adedî cismin murabbaî cezri inşiâbsız cisim veren tam adedi |
+| Bâkî-seciyesi | (α / 𝔧) | murabba'î bâkî alâmeti |
+| cezr; birinci-emsal, ikinci-emsal, üçüncü-emsal | f; x, y, z | yedinci derece muâdelenin cezri ve emsalleri |
+| Yeni; Kesirsiz-tâbi; tâbi-adedi; mütehavvil-adedi | X; f; m; n | on dördüncü meseledeki tam muntak tâbiler ve sayıları |
+| Tam-terkip; evvelî; üs | G; p; h | on dördüncü meselenin husûsî hâlindeki tam terkip, evvelî adet ve kuvvet |
+| derece-adedi | n | münhanînin mertebesi, tâbilerin derecesi, tefâzulî muâdelenin derecesi |
+| ufkî, şâkulî; Ufkî-tâbi, Şâkulî-tâbi | x, y; X, Y | sath-ı müstevî mevkileri ve hudut devri muâdelesinin tâbileri |
+| birinci-mevki, ikinci-mevki, üçüncü-mevki; Birinci-tâbi, İkinci-tâbi, Üçüncü-tâbi; mütevassıt | x, y, z; X, Y, Z; t | mütecânis yazılıştaki mevkiler, tâbiler ve mütevassıt |
+| İki-mütehavvilli-zeta; taban | ζ(s, x); x | zeta tâbiinin iki mütehavvilli genişlemesi ve kuvvet tabanı |
+| Gamma tâbii | Γ | Euler'in gamma tâbii |
+| Hal | f | kumun ve benzeri muâdelelerin hali |
+| Esas-tâbi | F | tagayyür meselesinin tamâmî altındaki tâbi |
+| irtifâ, İrtifâ tâbii | z yahut y | aranan tâbi |
+| ufkî-meyl, şâkulî-meyl; meyl | p, q yahut z_x, z_y; y_x | aranan tâbiin kısmî ve âdi müştakları |
+| Mecmû; Müstakil-mecmû | J; J* | tagayyür tamâmîsi ve yoldan müstakil kılınan tamâmî |
+| başlangıç, nihâyet | a, b | tamâmînin hadleri |
+| saha-meyli; ufkî-saha-meyli, şâkulî-saha-meyli | p; p, q | meyl sahası (yol yerine konan meyl tâbii) |
+| Birinci-katsayı, İkinci-katsayı, Üçüncü-katsayı | A, B, C | Müstakil-mecmû tamâmîsinin emsalleri |
+| Hal-irtifâı; hal-meyli, ufkî-hal-meyli, şâkulî-hal-meyli | ȳ yahut z̄; ȳ_x, z̄_x, z̄_y | meyl sahasının tamâmî münhanîsi yahut sathı ve onun müştakları |
+| Weierstrass-ifâdesi | E | Weierstrass'ın fazlalık tâbii |
+| Saha | ω | çift tamâmînin alındığı saha |
+
+## Istılah cedveli
+
+| Aslı (Almanca) | Tercüme | Menşei |
+| :-- | :-- | :-- |
+| Mathematik | riyâziyyât | lugat |
+| Problem | mesele | umûmî |
+| Axiom | mütearife | lugat |
+| Widerspruchslosigkeit | adem-i tenâkuz | lugat |
+| Continuum | ittisal | lugat |
+| Mächtigkeit | kesret mertebesi | teklif (bakınız M19) |
+| abzählbar | kābil-i ta'dâd | lugat |
+| Menge | mecmûa | lugat |
+| wohlgeordnet | iyi müretteb | lugat ("müretteb") ve teklif |
+| Primzahl | evvelî adet | lugat |
+| rational / irrational | muntak / asamm | lugat |
+| transcendent | aşkın | teklif |
+| Funktion | tâbi | lugat |
+| Funktionalgleichung | tâbiler-muâdelesi | teklif |
+| Differentialgleichung | tefâzulî muâdele | lugat |
+| Integral | tamâmî | lugat |
+| Variationsrechnung | hesâb-ı tagayyürât | teklif |
+| Maximum / Minimum | nihâyet-i uzmâ / nihâyet-i suğrâ | lugat |
+| Gruppe | zümre | lugat |
+| Transformationsgruppe | tahvîl zümresi | teklif |
+| Körper / Zahlkörper | cisim / adedî cisim | lugat |
+| Ideal / Hauptideal | misâliye / esas misâliye | lugat ve teklif |
+| Norm | kadr | teklif |
+| Coefficient | emsal | lugat |
+| Diskriminante | mümeyyiz | lugat |
+| Geschlecht | cins | lugat |
+| Klassenanzahl | sınıf adedi | teklif |
+| Verzweigung | inşiâb | teklif |
+| Reciprocitätsgesetz | mütekabiliyet kanunu | teklif |
+| Potenzrest | kuvvet bâkîsi | lugat ("bâkî") |
+| Invariante | değişmez | teklif |
+| Nomographie | resmî hesap | teklif |
+| Argument (bir tâbiin) | müstenef | teklif |
+| Parameter | mütevassıt | teklif |
+| Tetraeder / Polyeder | dört yüzlü / kesîrü'l-vücûh | teklif |
+| congruent | mütetâbık | teklif |
+| Exhaustionsmethode | istinfâd usulü | teklif |
+| Parallelenaxiom | muvâzîler mütearifesi | teklif |
+| elliptisch / hyperbolisch | ihlîlecî / zâidî | lugat ve teklif |
+| konvex | muhaddeb | lugat |
+| Krümmung | inhinâ | teklif |
+| Randwertproblem | hudut kıymetleri meselesi | teklif |
+| Monodromiegruppe | devir zümresi | teklif |
+| Uniformisirung | tek kıymetli kılma | teklif |
+| automorph | kendine tahvîl | teklif |
+| Fundamentalbereich | esas saha | teklif |
+| definit | muayyen-işaretli | teklif |
+| relativganz | nisbeten tam | teklif |
+| Integritätsbereich | tamlık sahası | teklif |
+| Grenzcykel | hudut devri | teklif |
+| Charakteristik (kısmî muâdelenin) | hâsıyyet münhanîsi | teklif |
+| Strenge | kat'iyet | umûmî |
