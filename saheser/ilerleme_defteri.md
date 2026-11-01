@@ -18,7 +18,7 @@ Bu defter, iş kesilirse kaldığı yerden devam edebilmek için tutulur. Her c�
 
 - Ortak GitHub deposu: yabadabadu1234/Mucit-ai, klasör: saheser/, dal: claude/saheser-tasnifi
 - Deponun varsayılan dalına doğrudan yazılmıyor; bu iş parçacığı kendi dalında çalışıyor.
-- Ortak proje klasörü (kalıcı nüsha): /mnt/project-files/saheser/
+- Ortak proje klasörü (kalıcı nüsha): /mnt/project-files/saheser/ (asıl kayıt GitHub dalıdır)
 - Deponun kökündeki CLAUDE.md, Mucit-AI yazılım projesinin emirnâmesidir. Bu klasördeki işe dokunan hükümleri: grep ile arama yasağı ve dosyaların baştan sona okunması.
 - Tercüme iş parçacığı: cmsg_01A3eskXyY6uU4cdnPk3VaruYP1h8zbB8CWSe2LKTnQ89t. İkinci cüzden itibaren her cüz doğrudan ona bildirilir.
 
