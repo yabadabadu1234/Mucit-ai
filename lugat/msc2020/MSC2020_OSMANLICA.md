@@ -2,7 +2,7 @@
 
 Bu sahife `araclar/msc_birlestir.py` ile `kaynak.tsv` ve `ceviri/` dosyalarından üretilir; elle değiştirilmez.
 
-Toplam madde: 6603 · karşılığı bulunan: 5583 · kalan: 1020
+Toplam madde: 6603 · karşılığı bulunan: 5803 · kalan: 800
 
 
 ## 00-XX — Umûmî ve şâmil mevzûlar; mecmualar
@@ -5799,269 +5799,269 @@ Mechanics of deformable solids
 | 74S70 | Complex-variable methods applied to problems in solid mechanics | Sulb cisimler mekaniği meselelerine tatbîk edilen mürekkeb mütehavvil usulleri |  |
 | 74S99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
-## 76-XX — Fluid mechanics {For general continuum mechanics, see 74Axx, or other parts of 74-XX}
+## 76-XX — Mâyiât mekaniği (akışkanlar mekaniği) {Umûmî muttasıl ortam mekaniği için bakınız: 74Axx, yahut 74-XX'in sâir kısımları}
 
 Fluid mechanics {For general continuum mechanics, see 74Axx, or other parts of 74-XX}
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 76-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to fluid mechanics |  |  |
-| 76-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to fluid mechanics |  |  |
-| 76-02 | Research exposition (monographs, survey articles) pertaining to fluid mechanics |  |  |
-| 76-03 | History of fluid mechanics [Consider also classification numbers from Section 01] |  |  |
-| 76-04 | Software, source code, etc. for problems pertaining to fluid mechanics |  |  |
-| 76-05 | Experimental work for problems pertaining to fluid mechanics |  |  |
-| 76-06 | Proceedings, conferences, collections, etc. pertaining to fluid mechanics |  |  |
-| 76-10 | Mathematical modeling or simulation for problems pertaining to fluid mechanics |  |  |
-| 76-11 | Research data for problems pertaining to fluid mechanics |  |  |
-| **76Axx** | **Foundations, constitutive equations, rheology, hydrodynamical models of non-fluid phenomena** | **** |  |
-| 76A02 | Foundations of fluid mechanics |  |  |
-| 76A05 | Non-Newtonian fluids |  |  |
-| 76A10 | Viscoelastic fluids |  |  |
-| 76A15 | Liquid crystals [See also 82D30] |  |  |
-| 76A20 | Thin fluid films |  |  |
-| 76A25 | Superfluids (classical aspects) |  |  |
-| 76A30 | Traffic and pedestrian flow models |  |  |
+| 76-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to fluid mechanics | mâyiât mekaniği hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 76-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to fluid mechanics | mâyiât mekaniği hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 76-02 | Research exposition (monographs, survey articles) pertaining to fluid mechanics | mâyiât mekaniği hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 76-03 | History of fluid mechanics [Consider also classification numbers from Section 01] | Mâyiât mekaniğinin târihi [01. babın tasnif numaralarına da bakılsın] |  |
+| 76-04 | Software, source code, etc. for problems pertaining to fluid mechanics | mâyiât mekaniği sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 76-05 | Experimental work for problems pertaining to fluid mechanics | mâyiât mekaniği sahasındaki meselelere dair tecrübî çalışmalar |  |
+| 76-06 | Proceedings, conferences, collections, etc. pertaining to fluid mechanics | mâyiât mekaniği hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 76-10 | Mathematical modeling or simulation for problems pertaining to fluid mechanics | mâyiât mekaniği sahasındaki meselelere dair riyâzî numûne kurma (temsil) yahut taklit (benzetim) |  |
+| 76-11 | Research data for problems pertaining to fluid mechanics | mâyiât mekaniği sahasındaki meselelere dair tetkik verileri |  |
+| **76Axx** | **Foundations, constitutive equations, rheology, hydrodynamical models of non-fluid phenomena** | **Esaslar, terkîbî muâdeleler, akış ilmi (reoloji), mâyi olmayan hâdiselerin mâyi-harekî numûneleri** |  |
+| 76A02 | Foundations of fluid mechanics | Mâyiât mekaniğinin esasları |  |
+| 76A05 | Non-Newtonian fluids | Newton'a uymayan mâyiler | nakil |
+| 76A10 | Viscoelastic fluids | Lüzûcetli-mürûnetli mâyiler |  |
+| 76A15 | Liquid crystals [See also 82D30] | Mâyi billûrlar [Ayrıca bakınız: 82D30] |  |
+| 76A20 | Thin fluid films | İnce mâyi tabakaları |  |
+| 76A25 | Superfluids (classical aspects) | Fevka'l-mâyiler (klasik cihetler) |  |
+| 76A30 | Traffic and pedestrian flow models | Nakliyat (trafik) ve yaya seyelânı numûneleri |  |
 | 76A99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **76Bxx** | **Incompressible inviscid fluids** | **** |  |
-| 76B03 | Existence, uniqueness, and regularity theory for incompressible inviscid fluids [See also 35Q35] |  |  |
-| 76B07 | Free-surface potential flows for incompressible inviscid fluids |  |  |
-| 76B10 | Jets and cavities, cavitation, free-streamline theory, water-entry problems, airfoil and hydrofoil theory, sloshing |  |  |
-| 76B15 | Water waves, gravity waves; dispersion and scattering, nonlinear interaction [See also 35Q30] |  |  |
-| 76B20 | Ship waves |  |  |
-| 76B25 | Solitary waves for incompressible inviscid fluids [See also 35C11] |  |  |
-| 76B45 | Capillarity (surface tension) for incompressible inviscid fluids [See also 76D45] |  |  |
-| 76B47 | Vortex flows for incompressible inviscid fluids |  |  |
-| 76B55 | Internal waves for incompressible inviscid fluids |  |  |
-| 76B70 | Stratification effects in inviscid fluids |  |  |
-| 76B75 | Flow control and optimization for incompressible inviscid fluids [See also 49Q10, 93C20, 93C95] |  |  |
+| **76Bxx** | **Incompressible inviscid fluids** | **Tazyîk kabul etmez lüzûcetsiz mâyiler** |  |
+| 76B03 | Existence, uniqueness, and regularity theory for incompressible inviscid fluids [See also 35Q35] | Tazyîk kabul etmez lüzûcetsiz mâyiler için vücûd, vahdet ve muntazamlık nazariyesi [Ayrıca bakınız: 35Q35] |  |
+| 76B07 | Free-surface potential flows for incompressible inviscid fluids | Tazyîk kabul etmez lüzûcetsiz mâyiler için serbest sathlı kuvve seyelânları |  |
+| 76B10 | Jets and cavities, cavitation, free-streamline theory, water-entry problems, airfoil and hydrofoil theory, sloshing | Fışkırmalar ve boşluklar, boşluk teşekkülü (kavitasyon), serbest seyelân hattı nazariyesi, suya giriş meseleleri, kanat ve su kanadı nazariyesi, çalkalanma |  |
+| 76B15 | Water waves, gravity waves; dispersion and scattering, nonlinear interaction [See also 35Q30] | Su mevcleri, sıklet mevcleri; tefrîk (dispersiyon) ve inteşâr, gayr-ı hattî mütekābil tesir [Ayrıca bakınız: 35Q30] |  |
+| 76B20 | Ship waves | Gemi mevcleri |  |
+| 76B25 | Solitary waves for incompressible inviscid fluids [See also 35C11] | Tazyîk kabul etmez lüzûcetsiz mâyiler için tek başına (yalnız) mevcler [Ayrıca bakınız: 35C11] |  |
+| 76B45 | Capillarity (surface tension) for incompressible inviscid fluids [See also 76D45] | Tazyîk kabul etmez lüzûcetsiz mâyiler için şa'riyet (sath gerilimi) [Ayrıca bakınız: 76D45] |  |
+| 76B47 | Vortex flows for incompressible inviscid fluids | Tazyîk kabul etmez lüzûcetsiz mâyiler için girdap seyelânları |  |
+| 76B55 | Internal waves for incompressible inviscid fluids | Tazyîk kabul etmez lüzûcetsiz mâyiler için dâhilî mevcler |  |
+| 76B70 | Stratification effects in inviscid fluids | Lüzûcetsiz mâyilerde tabakalaşma tesirleri |  |
+| 76B75 | Flow control and optimization for incompressible inviscid fluids [See also 49Q10, 93C20, 93C95] | Tazyîk kabul etmez lüzûcetsiz mâyiler için seyelân idâresi ve ahseniyeti [Ayrıca bakınız: 49Q10, 93C20, 93C95] |  |
 | 76B99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **76Dxx** | **Incompressible viscous fluids** | **** |  |
-| 76D03 | Existence, uniqueness, and regularity theory for incompressible viscous fluids [See also 35Q30] |  |  |
-| 76D05 | Navier-Stokes equations for incompressible viscous fluids [See also 35Q30] |  |  |
-| 76D06 | Statistical solutions of Navier-Stokes and related equations [See also 60H30, 76M35] |  |  |
-| 76D07 | Stokes and related (Oseen, etc.) flows |  |  |
-| 76D08 | Lubrication theory |  |  |
-| 76D09 | Viscous-inviscid interaction |  |  |
-| 76D10 | Boundary-layer theory, separation and reattachment, higher-order effects |  |  |
-| 76D17 | Viscous vortex flows |  |  |
-| 76D25 | Wakes and jets |  |  |
-| 76D27 | Other free boundary flows; Hele-Shaw flows |  |  |
-| 76D33 | Waves for incompressible viscous fluids |  |  |
-| 76D45 | Capillarity (surface tension) for incompressible viscous fluids [See also 76B45] |  |  |
-| 76D50 | Stratification effects in viscous fluids |  |  |
-| 76D55 | Flow control and optimization for incompressible viscous fluids [See also 49Q10, 93C20, 93C95] |  |  |
+| **76Dxx** | **Incompressible viscous fluids** | **Tazyîk kabul etmez lüzûcetli mâyiler** |  |
+| 76D03 | Existence, uniqueness, and regularity theory for incompressible viscous fluids [See also 35Q30] | Tazyîk kabul etmez lüzûcetli mâyiler için vücûd, vahdet ve muntazamlık nazariyesi [Ayrıca bakınız: 35Q30] |  |
+| 76D05 | Navier-Stokes equations for incompressible viscous fluids [See also 35Q30] | Tazyîk kabul etmez lüzûcetli mâyiler için Navier-Stokes muâdeleleri [Ayrıca bakınız: 35Q30] | nakil |
+| 76D06 | Statistical solutions of Navier-Stokes and related equations [See also 60H30, 76M35] | Navier-Stokes ve alâkalı muâdelelerin ihsâî halleri [Ayrıca bakınız: 60H30, 76M35] | nakil |
+| 76D07 | Stokes and related (Oseen, etc.) flows | Stokes seyelânları ve alâkalı (Oseen ve emsâli) seyelânlar | nakil |
+| 76D08 | Lubrication theory | Yağlama nazariyesi |  |
+| 76D09 | Viscous-inviscid interaction | Lüzûcetli-lüzûcetsiz mütekābil tesir |  |
+| 76D10 | Boundary-layer theory, separation and reattachment, higher-order effects | Hudûd tabakası nazariyesi, ayrılma ve yeniden yapışma, yüksek mertebeden tesirler |  |
+| 76D17 | Viscous vortex flows | Lüzûcetli girdap seyelânları |  |
+| 76D25 | Wakes and jets | İz seyelânları ve fışkırmalar |  |
+| 76D27 | Other free boundary flows; Hele-Shaw flows | Sâir serbest hudûdlu seyelânlar; Hele-Shaw seyelânları | nakil |
+| 76D33 | Waves for incompressible viscous fluids | Tazyîk kabul etmez lüzûcetli mâyiler için mevcler |  |
+| 76D45 | Capillarity (surface tension) for incompressible viscous fluids [See also 76B45] | Tazyîk kabul etmez lüzûcetli mâyiler için şa'riyet (sath gerilimi) [Ayrıca bakınız: 76B45] |  |
+| 76D50 | Stratification effects in viscous fluids | Lüzûcetli mâyilerde tabakalaşma tesirleri |  |
+| 76D55 | Flow control and optimization for incompressible viscous fluids [See also 49Q10, 93C20, 93C95] | Tazyîk kabul etmez lüzûcetli mâyiler için seyelân idâresi ve ahseniyeti [Ayrıca bakınız: 49Q10, 93C20, 93C95] |  |
 | 76D99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **76Exx** | **Hydrodynamic stability** | **** |  |
-| 76E05 | Parallel shear flows in hydrodynamic stability |  |  |
-| 76E06 | Convection in hydrodynamic stability |  |  |
-| 76E07 | Rotation in hydrodynamic stability |  |  |
-| 76E09 | Stability and instability of nonparallel flows in hydrodynamic stability |  |  |
-| 76E15 | Absolute and convective instability and stability in hydrodynamic stability |  |  |
-| 76E17 | Interfacial stability and instability in hydrodynamic stability |  |  |
-| 76E19 | Compressibility effects in hydrodynamic stability |  |  |
-| 76E20 | Stability and instability of geophysical and astrophysical flows |  |  |
-| 76E25 | Stability and instability of magnetohydrodynamic and electrohydrodynamic flows |  |  |
-| 76E30 | Nonlinear effects in hydrodynamic stability |  |  |
+| **76Exx** | **Hydrodynamic stability** | **Mâyi-harekî istikrar** |  |
+| 76E05 | Parallel shear flows in hydrodynamic stability | Mâyi-harekî istikrarda muvâzî kesme seyelânları |  |
+| 76E06 | Convection in hydrodynamic stability | Mâyi-harekî istikrarda hararet nakli (konveksiyon) |  |
+| 76E07 | Rotation in hydrodynamic stability | Mâyi-harekî istikrarda dönme |  |
+| 76E09 | Stability and instability of nonparallel flows in hydrodynamic stability | Mâyi-harekî istikrarda muvâzî olmayan seyelânların istikrarı ve istikrarsızlığı |  |
+| 76E15 | Absolute and convective instability and stability in hydrodynamic stability | Mâyi-harekî istikrarda mutlak ve nakil istikrarsızlığı ve istikrarı |  |
+| 76E17 | Interfacial stability and instability in hydrodynamic stability | Mâyi-harekî istikrarda ara yüz istikrarı ve istikrarsızlığı |  |
+| 76E19 | Compressibility effects in hydrodynamic stability | Mâyi-harekî istikrarda tazyîk kābiliyeti tesirleri |  |
+| 76E20 | Stability and instability of geophysical and astrophysical flows | Arz hikmetine ve hey'et-i tabîiyyeye ait seyelânların istikrarı ve istikrarsızlığı |  |
+| 76E25 | Stability and instability of magnetohydrodynamic and electrohydrodynamic flows | Mıknatısî-mâyi-harekî ve elektro-mâyi-harekî seyelânların istikrarı ve istikrarsızlığı |  |
+| 76E30 | Nonlinear effects in hydrodynamic stability | Mâyi-harekî istikrarda gayr-ı hattî tesirler |  |
 | 76E99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **76Fxx** | **Turbulence [See also 37-XX, 60Gxx, 60Jxx]** | **** |  |
-| 76F02 | Fundamentals of turbulence |  |  |
-| 76F05 | Isotropic turbulence; homogeneous turbulence |  |  |
-| 76F06 | Transition to turbulence |  |  |
-| 76F10 | Shear flows and turbulence |  |  |
-| 76F20 | Dynamical systems approach to turbulence [See also 37-XX] |  |  |
-| 76F25 | Turbulent transport, mixing |  |  |
-| 76F30 | Renormalization and other field-theoretical methods for turbulence [See also 81T99] |  |  |
-| 76F35 | Convective turbulence [See also 76E15, 76Rxx] |  |  |
-| 76F40 | Turbulent boundary layers |  |  |
-| 76F45 | Stratification effects in turbulence |  |  |
-| 76F50 | Compressibility effects in turbulence |  |  |
-| 76F55 | Statistical turbulence modeling [See also 76M35] |  |  |
-| 76F60 | k-ε modeling in turbulence |  |  |
-| 76F65 | Direct numerical and large eddy simulation of turbulence |  |  |
-| 76F70 | Control of turbulent flows |  |  |
-| 76F80 | Turbulent combustion; reactive turbulence |  |  |
+| **76Fxx** | **Turbulence [See also 37-XX, 60Gxx, 60Jxx]** | **Teşevvüş (türbülans) [Ayrıca bakınız: 37-XX, 60Gxx, 60Jxx]** |  |
+| 76F02 | Fundamentals of turbulence | Teşevvüşün esasları |  |
+| 76F05 | Isotropic turbulence; homogeneous turbulence | Her yönde müsâvî teşevvüş; mütecânis teşevvüş |  |
+| 76F06 | Transition to turbulence | Teşevvüşe geçiş |  |
+| 76F10 | Shear flows and turbulence | Kesme seyelânları ve teşevvüş |  |
+| 76F20 | Dynamical systems approach to turbulence [See also 37-XX] | Teşevvüşe harekî nizâm yaklaşımı [Ayrıca bakınız: 37-XX] |  |
+| 76F25 | Turbulent transport, mixing | Teşevvüşlü nakil, karışma |  |
+| 76F30 | Renormalization and other field-theoretical methods for turbulence [See also 81T99] | Teşevvüş için yeniden ayarlama ve sâir sahâ nazariyesi usulleri [Ayrıca bakınız: 81T99] |  |
+| 76F35 | Convective turbulence [See also 76E15, 76Rxx] | Hararet nakilli (konvektif) teşevvüş [Ayrıca bakınız: 76E15, 76Rxx] |  |
+| 76F40 | Turbulent boundary layers | Teşevvüşlü hudûd tabakaları |  |
+| 76F45 | Stratification effects in turbulence | Teşevvüşte tabakalaşma tesirleri |  |
+| 76F50 | Compressibility effects in turbulence | Teşevvüşte tazyîk kābiliyeti tesirleri |  |
+| 76F55 | Statistical turbulence modeling [See also 76M35] | İhsâî teşevvüş numûnelenmesi [Ayrıca bakınız: 76M35] |  |
+| 76F60 | k-ε modeling in turbulence | Teşevvüşte k-ε numûnelenmesi | nakil |
+| 76F65 | Direct numerical and large eddy simulation of turbulence | Teşevvüşün doğrudan adedî ve büyük girdap taklidi |  |
+| 76F70 | Control of turbulent flows | Teşevvüşlü seyelânların idâresi |  |
+| 76F80 | Turbulent combustion; reactive turbulence | Teşevvüşlü yanma; teâmüllü teşevvüş |  |
 | 76F99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **76Gxx** | **General aerodynamics and subsonic flows** | **** |  |
-| 76G25 | General aerodynamics and subsonic flows |  |  |
+| **76Gxx** | **General aerodynamics and subsonic flows** | **Umûmî havâ harekiyyâtı (aerodinamik) ve ses altı seyelânlar** |  |
+| 76G25 | General aerodynamics and subsonic flows | Umûmî havâ harekiyyâtı ve ses altı seyelânlar |  |
 | 76G99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **76Hxx** | **Transonic flows** | **** |  |
-| 76H05 | Transonic flows |  |  |
+| **76Hxx** | **Transonic flows** | **Ses civarı (transonik) seyelânlar** |  |
+| 76H05 | Transonic flows | Ses civarı seyelânlar |  |
 | 76H99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **76Jxx** | **Supersonic flows** | **** |  |
-| 76J20 | Supersonic flows |  |  |
+| **76Jxx** | **Supersonic flows** | **Ses üstü seyelânlar** |  |
+| 76J20 | Supersonic flows | Ses üstü seyelânlar |  |
 | 76J99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **76Kxx** | **Hypersonic flows** | **** |  |
-| 76K05 | Hypersonic flows |  |  |
+| **76Kxx** | **Hypersonic flows** | **Ses fevkinde pek yüksek sür'atli (hipersonik) seyelânlar** |  |
+| 76K05 | Hypersonic flows | Ses fevkinde pek yüksek sür'atli seyelânlar |  |
 | 76K99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **76Lxx** | **Shock waves and blast waves in fluid mechanics [See also 35L67]** | **** |  |
-| 76L05 | Shock waves and blast waves in fluid mechanics [See also 35L67] |  |  |
+| **76Lxx** | **Shock waves and blast waves in fluid mechanics [See also 35L67]** | **Mâyiât mekaniğinde sadme mevcleri ve infilâk mevcleri [Ayrıca bakınız: 35L67]** |  |
+| 76L05 | Shock waves and blast waves in fluid mechanics [See also 35L67] | Mâyiât mekaniğinde sadme mevcleri ve infilâk mevcleri [Ayrıca bakınız: 35L67] |  |
 | 76L99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **76Mxx** | **Basic methods in fluid mechanics [See also 65-XX]** | **** |  |
-| 76M10 | Finite element methods applied to problems in fluid mechanics |  |  |
-| 76M12 | Finite volume methods applied to problems in fluid mechanics |  |  |
-| 76M15 | Boundary element methods applied to problems in fluid mechanics |  |  |
-| 76M20 | Finite difference methods applied to problems in fluid mechanics |  |  |
-| 76M21 | Inverse problems in fluid mechanics |  |  |
-| 76M22 | Spectral methods applied to problems in fluid mechanics |  |  |
-| 76M23 | Vortex methods applied to problems in fluid mechanics |  |  |
-| 76M27 | Visualization algorithms applied to problems in fluid mechanics |  |  |
-| 76M28 | Particle methods and lattice-gas methods |  |  |
-| 76M30 | Variational methods applied to problems in fluid mechanics |  |  |
-| 76M35 | Stochastic analysis applied to problems in fluid mechanics |  |  |
-| 76M40 | Complex variables methods applied to problems in fluid mechanics |  |  |
-| 76M45 | Asymptotic methods, singular perturbations applied to problems in fluid mechanics |  |  |
-| 76M50 | Homogenization applied to problems in fluid mechanics |  |  |
-| 76M55 | Dimensional analysis and similarity applied to problems in fluid mechanics |  |  |
-| 76M60 | Symmetry analysis, Lie group and Lie algebra methods applied to problems in fluid mechanics |  |  |
+| **76Mxx** | **Basic methods in fluid mechanics [See also 65-XX]** | **Mâyiât mekaniğinde esâsî usuller [Ayrıca bakınız: 65-XX]** |  |
+| 76M10 | Finite element methods applied to problems in fluid mechanics | Mâyiât mekaniği meselelerine tatbîk edilen mütenâhî unsur usulleri |  |
+| 76M12 | Finite volume methods applied to problems in fluid mechanics | Mâyiât mekaniği meselelerine tatbîk edilen mütenâhî hacim usulleri |  |
+| 76M15 | Boundary element methods applied to problems in fluid mechanics | Mâyiât mekaniği meselelerine tatbîk edilen hudûd unsuru usulleri |  |
+| 76M20 | Finite difference methods applied to problems in fluid mechanics | Mâyiât mekaniği meselelerine tatbîk edilen mütenâhî fark usulleri |  |
+| 76M21 | Inverse problems in fluid mechanics | Mâyiât mekaniğinde makûs meseleler |  |
+| 76M22 | Spectral methods applied to problems in fluid mechanics | Mâyiât mekaniği meselelerine tatbîk edilen tayfî usuller |  |
+| 76M23 | Vortex methods applied to problems in fluid mechanics | Mâyiât mekaniği meselelerine tatbîk edilen girdap usulleri |  |
+| 76M27 | Visualization algorithms applied to problems in fluid mechanics | Mâyiât mekaniği meselelerine tatbîk edilen görselleştirme hârizmîleri |  |
+| 76M28 | Particle methods and lattice-gas methods | Zerre usulleri ve kafes-gaz usulleri |  |
+| 76M30 | Variational methods applied to problems in fluid mechanics | Mâyiât mekaniği meselelerine tatbîk edilen tehavvülî usuller |  |
+| 76M35 | Stochastic analysis applied to problems in fluid mechanics | Mâyiât mekaniği meselelerine tatbîk edilen ihtimâlî tahlîl |  |
+| 76M40 | Complex variables methods applied to problems in fluid mechanics | Mâyiât mekaniği meselelerine tatbîk edilen mürekkeb mütehavvil usulleri |  |
+| 76M45 | Asymptotic methods, singular perturbations applied to problems in fluid mechanics | Mâyiât mekaniği meselelerine tatbîk edilen mukāribî usuller, münferid ihtilâller |  |
+| 76M50 | Homogenization applied to problems in fluid mechanics | Mâyiât mekaniği meselelerine tatbîk edilen mütecânisleştirme |  |
+| 76M55 | Dimensional analysis and similarity applied to problems in fluid mechanics | Mâyiât mekaniği meselelerine tatbîk edilen buud tahlîli ve benzerlik |  |
+| 76M60 | Symmetry analysis, Lie group and Lie algebra methods applied to problems in fluid mechanics | Mâyiât mekaniği meselelerine tatbîk edilen tenâzur tahlîli, Lie zümresi ve Lie cebiri usulleri |  |
 | 76M99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **76Nxx** | **Compressible fluids and gas dynamics** | **** |  |
-| 76N06 | Compressible Navier-Stokes equations |  |  |
-| 76N10 | Existence, uniqueness, and regularity theory for compressible fluids and gas dynamics [See also 35L60, 35L65, 35Q30] |  |  |
-| 76N15 | Gas dynamics (general theory) |  |  |
-| 76N17 | Viscous-inviscid interaction for compressible fluids and gas dynamics |  |  |
-| 76N20 | Boundary-layer theory for compressible fluids and gas dynamics |  |  |
-| 76N25 | Flow control and optimization for compressible fluids and gas dynamics |  |  |
-| 76N30 | Waves in compressible fluids |  |  |
+| **76Nxx** | **Compressible fluids and gas dynamics** | **Tazyîk kabul eden mâyiler ve gaz harekiyyâtı** |  |
+| 76N06 | Compressible Navier-Stokes equations | Tazyîk kabul eden Navier-Stokes muâdeleleri | nakil |
+| 76N10 | Existence, uniqueness, and regularity theory for compressible fluids and gas dynamics [See also 35L60, 35L65, 35Q30] | Tazyîk kabul eden mâyiler ve gaz harekiyyâtı için vücûd, vahdet ve muntazamlık nazariyesi [Ayrıca bakınız: 35L60, 35L65, 35Q30] |  |
+| 76N15 | Gas dynamics (general theory) | Gaz harekiyyâtı (umûmî nazariye) |  |
+| 76N17 | Viscous-inviscid interaction for compressible fluids and gas dynamics | Tazyîk kabul eden mâyiler ve gaz harekiyyâtı için lüzûcetli-lüzûcetsiz mütekābil tesir |  |
+| 76N20 | Boundary-layer theory for compressible fluids and gas dynamics | Tazyîk kabul eden mâyiler ve gaz harekiyyâtı için hudûd tabakası nazariyesi |  |
+| 76N25 | Flow control and optimization for compressible fluids and gas dynamics | Tazyîk kabul eden mâyiler ve gaz harekiyyâtı için seyelân idâresi ve ahseniyeti |  |
+| 76N30 | Waves in compressible fluids | Tazyîk kabul eden mâyilerde mevcler |  |
 | 76N99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **76Pxx** | **Rarefied gas flows, Boltzmann equation in fluid mechanics [See also 82B40, 82C40, 82D05]** | **** |  |
-| 76P05 | Rarefied gas flows, Boltzmann equation in fluid mechanics [See also 82B40, 82C40, 82D05] |  |  |
+| **76Pxx** | **Rarefied gas flows, Boltzmann equation in fluid mechanics [See also 82B40, 82C40, 82D05]** | **Seyrekleşmiş gaz seyelânları, mâyiât mekaniğinde Boltzmann muâdelesi [Ayrıca bakınız: 82B40, 82C40, 82D05]** | nakil |
+| 76P05 | Rarefied gas flows, Boltzmann equation in fluid mechanics [See also 82B40, 82C40, 82D05] | Seyrekleşmiş gaz seyelânları, mâyiât mekaniğinde Boltzmann muâdelesi [Ayrıca bakınız: 82B40, 82C40, 82D05] | nakil |
 | 76P99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **76Qxx** | **Hydro- and aero-acoustics** | **** |  |
-| 76Q05 | Hydro- and aero-acoustics |  |  |
+| **76Qxx** | **Hydro- and aero-acoustics** | **Mâyi ve havâ savtiyâtı (akustiği)** |  |
+| 76Q05 | Hydro- and aero-acoustics | Mâyi ve havâ savtiyâtı (akustiği) |  |
 | 76Q99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **76Rxx** | **Diffusion and convection** | **** |  |
-| 76R05 | Forced convection |  |  |
-| 76R10 | Free convection |  |  |
-| 76R50 | Diffusion [See also 60J60] |  |  |
+| **76Rxx** | **Diffusion and convection** | **İntişâr ve hararet nakli (konveksiyon)** |  |
+| 76R05 | Forced convection | Zorlanmış hararet nakli |  |
+| 76R10 | Free convection | Serbest hararet nakli |  |
+| 76R50 | Diffusion [See also 60J60] | İntişâr (difüzyon) [Ayrıca bakınız: 60J60] |  |
 | 76R99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **76Sxx** | **Flows in porous media; filtration; seepage** | **** |  |
-| 76S05 | Flows in porous media; filtration; seepage |  |  |
+| **76Sxx** | **Flows in porous media; filtration; seepage** | **Mesâmeli ortamlarda seyelânlar; süzülme; sızıntı** |  |
+| 76S05 | Flows in porous media; filtration; seepage | Mesâmeli ortamlarda seyelânlar; süzülme; sızıntı |  |
 | 76S99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **76Txx** | **Multiphase and multicomponent flows** | **** |  |
-| 76T06 | Liquid-liquid two component flows |  |  |
-| 76T10 | Liquid-gas two-phase flows, bubbly flows |  |  |
-| 76T15 | Dusty-gas two-phase flows |  |  |
-| 76T17 | Two gas multicomponent flows |  |  |
-| 76T20 | Suspensions |  |  |
-| 76T25 | Granular flows [See also 74C99, 74E20] |  |  |
-| 76T30 | Three or more component flows |  |  |
+| **76Txx** | **Multiphase and multicomponent flows** | **Çok safhalı ve çok bileşenli seyelânlar** |  |
+| 76T06 | Liquid-liquid two component flows | Mâyi-mâyi iki bileşenli seyelânlar |  |
+| 76T10 | Liquid-gas two-phase flows, bubbly flows | Mâyi-gaz iki safhalı seyelânlar, kabarcıklı seyelânlar |  |
+| 76T15 | Dusty-gas two-phase flows | Tozlu gaz iki safhalı seyelânlar |  |
+| 76T17 | Two gas multicomponent flows | İki gazlı çok bileşenli seyelânlar |  |
+| 76T20 | Suspensions | Muallak karışımlar (süspansiyonlar) |  |
+| 76T25 | Granular flows [See also 74C99, 74E20] | Taneli seyelânlar [Ayrıca bakınız: 74C99, 74E20] |  |
+| 76T30 | Three or more component flows | Üç yahut daha fazla bileşenli seyelânlar |  |
 | 76T99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **76Uxx** | **Rotating fluids** | **** |  |
-| 76U05 | General theory of rotating fluids |  |  |
-| 76U60 | Geophysical flows [See also 86A05, 86A10] |  |  |
-| 76U65 | Rossby waves [See also 86A05, 86A10] |  |  |
+| **76Uxx** | **Rotating fluids** | **Dönen mâyiler** |  |
+| 76U05 | General theory of rotating fluids | Dönen mâyilerin umûmî nazariyesi |  |
+| 76U60 | Geophysical flows [See also 86A05, 86A10] | Arz hikmetine ait seyelânlar [Ayrıca bakınız: 86A05, 86A10] |  |
+| 76U65 | Rossby waves [See also 86A05, 86A10] | Rossby mevcleri [Ayrıca bakınız: 86A05, 86A10] | nakil |
 | 76U99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **76Vxx** | **Reaction effects in flows [See also 80A32]** | **** |  |
-| 76V05 | Reaction effects in flows [See also 80A32] |  |  |
+| **76Vxx** | **Reaction effects in flows [See also 80A32]** | **Seyelânlarda teâmül tesirleri [Ayrıca bakınız: 80A32]** |  |
+| 76V05 | Reaction effects in flows [See also 80A32] | Seyelânlarda teâmül tesirleri [Ayrıca bakınız: 80A32] |  |
 | 76V99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **76Wxx** | **Magnetohydrodynamics and electrohydrodynamics** | **** |  |
-| 76W05 | Magnetohydrodynamics and electrohydrodynamics |  |  |
+| **76Wxx** | **Magnetohydrodynamics and electrohydrodynamics** | **Mıknatısî mâyi harekiyyâtı ve elektro-mâyi harekiyyâtı** |  |
+| 76W05 | Magnetohydrodynamics and electrohydrodynamics | Mıknatısî mâyi harekiyyâtı ve elektro-mâyi harekiyyâtı |  |
 | 76W99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **76Xxx** | **Ionized gas flow in electromagnetic fields; plasmic flow [See also 82D10]** | **** |  |
-| 76X05 | Ionized gas flow in electromagnetic fields; plasmic flow [See also 82D10] |  |  |
+| **76Xxx** | **Ionized gas flow in electromagnetic fields; plasmic flow [See also 82D10]** | **Elektromıknatısî sahalarda iyonlaşmış gaz seyelânı; plazma seyelânı [Ayrıca bakınız: 82D10]** |  |
+| 76X05 | Ionized gas flow in electromagnetic fields; plasmic flow [See also 82D10] | Elektromıknatısî sahalarda iyonlaşmış gaz seyelânı; plazma seyelânı [Ayrıca bakınız: 82D10] |  |
 | 76X99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **76Yxx** | **Quantum hydrodynamics and relativistic hydrodynamics [See also 82D50, 83C55, 85A30]** | **** |  |
-| 76Y05 | Quantum hydrodynamics and relativistic hydrodynamics [See also 82D50, 83C55, 85A30] |  |  |
+| **76Yxx** | **Quantum hydrodynamics and relativistic hydrodynamics [See also 82D50, 83C55, 85A30]** | **Kuantum mâyi harekiyyâtı ve izâfî mâyi harekiyyâtı [Ayrıca bakınız: 82D50, 83C55, 85A30]** |  |
+| 76Y05 | Quantum hydrodynamics and relativistic hydrodynamics [See also 82D50, 83C55, 85A30] | Kuantum mâyi harekiyyâtı ve izâfî mâyi harekiyyâtı [Ayrıca bakınız: 82D50, 83C55, 85A30] |  |
 | 76Y99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **76Zxx** | **Biological fluid mechanics [See also 74F10, 74L15, 92Cxx]** | **** |  |
-| 76Z05 | Physiological flows [See also 92C35] |  |  |
-| 76Z10 | Biopropulsion in water and in air |  |  |
+| **76Zxx** | **Biological fluid mechanics [See also 74F10, 74L15, 92Cxx]** | **Hayatî mâyiât mekaniği [Ayrıca bakınız: 74F10, 74L15, 92Cxx]** |  |
+| 76Z05 | Physiological flows [See also 92C35] | Vazâif-i a'zâ (fizyoloji) seyelânları [Ayrıca bakınız: 92C35] |  |
+| 76Z10 | Biopropulsion in water and in air | Suda ve havada hayatî itme (yüzme ve uçma) |  |
 | 76Z99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
-## 78-XX — Optics, electromagnetic theory {For quantum optics, see 81V80}
+## 78-XX — Menâzır ilmi (optik), elektromıknatısî nazariye {Kuantum menâzırı için bakınız: 81V80}
 
 Optics, electromagnetic theory {For quantum optics, see 81V80}
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 78-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to optics and electromagnetic theory |  |  |
-| 78-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to optics and electromagnetic theory |  |  |
-| 78-02 | Research exposition (monographs, survey articles) pertaining to optics and electromagnetic theory |  |  |
-| 78-03 | History of optics and electromagnetic theory [Consider also classification numbers from Section 01] |  |  |
-| 78-04 | Software, source code, etc. for problems pertaining to optics and electromagnetic theory |  |  |
-| 78-05 | Experimental work for problems pertaining to optics and electromagnetic theory |  |  |
-| 78-06 | Proceedings, conferences, collections, etc. pertaining to optics and electromagnetic theory |  |  |
-| 78-10 | Mathematical modeling or simulation for problems pertaining to optics and electromagnetic theory |  |  |
-| 78-11 | Research data for problems pertaining to optics and electromagnetic theory |  |  |
-| **78Axx** | **General topics in optics and electromagnetic theory** | **** |  |
-| 78A02 | Foundations in optics and electromagnetic theory |  |  |
-| 78A05 | Geometric optics |  |  |
-| 78A10 | Physical optics |  |  |
-| 78A15 | Electron optics |  |  |
-| 78A20 | Space charge waves |  |  |
-| 78A25 | Electromagnetic theory (general) |  |  |
-| 78A30 | Electro- and magnetostatics |  |  |
-| 78A35 | Motion of charged particles |  |  |
-| 78A37 | Ion traps |  |  |
-| 78A40 | Waves and radiation in optics and electromagnetic theory |  |  |
-| 78A45 | Diffraction, scattering {For WKB methods, see also 34E20} |  |  |
-| 78A46 | Inverse problems (including inverse scattering) in optics and electromagnetic theory |  |  |
-| 78A48 | Composite media; random media in optics and electromagnetic theory |  |  |
-| 78A50 | Antennas, waveguides in optics and electromagnetic theory |  |  |
-| 78A55 | Technical applications of optics and electromagnetic theory |  |  |
-| 78A57 | Electrochemistry |  |  |
-| 78A60 | Lasers, masers, optical bistability, nonlinear optics [See also 81V80] |  |  |
-| 78A70 | Biological applications of optics and electromagnetic theory [See also 92-XX] |  |  |
-| 78A97 | Mathematically heuristic optics and electromagnetic theory (must also be assigned at least one other classification number in Section 78) |  |  |
+| 78-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to optics and electromagnetic theory | menâzır ilmi ve elektromıknatısî nazariye hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 78-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to optics and electromagnetic theory | menâzır ilmi ve elektromıknatısî nazariye hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 78-02 | Research exposition (monographs, survey articles) pertaining to optics and electromagnetic theory | menâzır ilmi ve elektromıknatısî nazariye hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 78-03 | History of optics and electromagnetic theory [Consider also classification numbers from Section 01] | Menâzır ilminin ve elektromıknatısî nazariyenin târihi [01. babın tasnif numaralarına da bakılsın] |  |
+| 78-04 | Software, source code, etc. for problems pertaining to optics and electromagnetic theory | menâzır ilmi ve elektromıknatısî nazariye sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 78-05 | Experimental work for problems pertaining to optics and electromagnetic theory | menâzır ilmi ve elektromıknatısî nazariye sahasındaki meselelere dair tecrübî çalışmalar |  |
+| 78-06 | Proceedings, conferences, collections, etc. pertaining to optics and electromagnetic theory | menâzır ilmi ve elektromıknatısî nazariye hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 78-10 | Mathematical modeling or simulation for problems pertaining to optics and electromagnetic theory | menâzır ilmi ve elektromıknatısî nazariye sahasındaki meselelere dair riyâzî numûne kurma (temsil) yahut taklit (benzetim) |  |
+| 78-11 | Research data for problems pertaining to optics and electromagnetic theory | menâzır ilmi ve elektromıknatısî nazariye sahasındaki meselelere dair tetkik verileri |  |
+| **78Axx** | **General topics in optics and electromagnetic theory** | **Menâzır ilminde ve elektromıknatısî nazariyede umûmî mevzûlar** |  |
+| 78A02 | Foundations in optics and electromagnetic theory | Menâzır ilminde ve elektromıknatısî nazariyede esaslar |  |
+| 78A05 | Geometric optics | Hendesî menâzır |  |
+| 78A10 | Physical optics | Tabiî (fizikî) menâzır |  |
+| 78A15 | Electron optics | Elektron menâzırı |  |
+| 78A20 | Space charge waves | Fezâ yükü mevcleri |  |
+| 78A25 | Electromagnetic theory (general) | Elektromıknatısî nazariye (umûmî) |  |
+| 78A30 | Electro- and magnetostatics | Elektro-sükûn ve mıknatıs-sükûn (elektrostatik ve manyetostatik) |  |
+| 78A35 | Motion of charged particles | Yüklü zerrelerin hareketi |  |
+| 78A37 | Ion traps | İyon tuzakları |  |
+| 78A40 | Waves and radiation in optics and electromagnetic theory | Menâzır ilmi ve elektromıknatısî nazariyede mevcler ve şuâ' |  |
+| 78A45 | Diffraction, scattering {For WKB methods, see also 34E20} | Kırınım, inteşâr (saçılma) {Wentzel-Kramers-Brillouin usulleri için ayrıca bakınız: 34E20} |  |
+| 78A46 | Inverse problems (including inverse scattering) in optics and electromagnetic theory | Menâzır ilmi ve elektromıknatısî nazariyede makûs meseleler (makûs inteşâr dahil) |  |
+| 78A48 | Composite media; random media in optics and electromagnetic theory | Menâzır ilmi ve elektromıknatısî nazariyede mürekkeb ortamlar; tesâdüfî ortamlar |  |
+| 78A50 | Antennas, waveguides in optics and electromagnetic theory | Menâzır ilmi ve elektromıknatısî nazariyede anten (havâî) ve mevc kılavuzları |  |
+| 78A55 | Technical applications of optics and electromagnetic theory | Menâzır ilminin ve elektromıknatısî nazariyenin fennî tatbîkleri |  |
+| 78A57 | Electrochemistry | Elektro-kimya |  |
+| 78A60 | Lasers, masers, optical bistability, nonlinear optics [See also 81V80] | Lazerler (tahrik edilmiş şuâ' neşriyle ziyânın tekessürü), maserler (tahrik edilmiş şuâ' neşriyle mikro-mevcin tekessürü), menâzırî iki-istikrarlılık, gayr-ı hattî menâzır [Ayrıca bakınız: 81V80] |  |
+| 78A70 | Biological applications of optics and electromagnetic theory [See also 92-XX] | Menâzır ilminin ve elektromıknatısî nazariyenin hayatî tatbîkleri [Ayrıca bakınız: 92-XX] |  |
+| 78A97 | Mathematically heuristic optics and electromagnetic theory (must also be assigned at least one other classification number in Section 78) | Riyâzî bakımdan tecrübî kestirmeye dayanan menâzır ilmi ve elektromıknatısî nazariye (buna 78. babdan en az bir başka tasnif numarası da verilmelidir) |  |
 | 78A99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **78Mxx** | **Basic methods for problems in optics and electromagnetic theory [See also 65-XX]** | **** |  |
-| 78M05 | Method of moments applied to problems in optics and electromagnetic theory |  |  |
-| 78M10 | Finite element, Galerkin and related methods applied to problems in optics and electromagnetic theory |  |  |
-| 78M12 | Finite volume methods, finite integration techniques applied to problems in optics and electromagnetic theory |  |  |
-| 78M15 | Boundary element methods applied to problems in optics and electromagnetic theory |  |  |
-| 78M16 | Multipole methods applied to problems in optics and electromagnetic theory |  |  |
-| 78M20 | Finite difference methods applied to problems in optics and electromagnetic theory |  |  |
-| 78M22 | Spectral, collocation and related methods applied to problems in optics and electromagnetic theory |  |  |
-| 78M30 | Variational methods applied to problems in optics and electromagnetic theory |  |  |
-| 78M31 | Monte Carlo methods applied to problems in optics and electromagnetic theory |  |  |
-| 78M32 | Neural and heuristic methods applied to problems in optics and electromagnetic theory |  |  |
-| 78M34 | Model reduction in optics and electromagnetic theory |  |  |
-| 78M35 | Asymptotic analysis in optics and electromagnetic theory |  |  |
-| 78M40 | Homogenization in optics and electromagnetic theory |  |  |
-| 78M50 | Optimization problems in optics and electromagnetic theory |  |  |
+| **78Mxx** | **Basic methods for problems in optics and electromagnetic theory [See also 65-XX]** | **Menâzır ilmi ve elektromıknatısî nazariye meseleleri için esâsî usuller [Ayrıca bakınız: 65-XX]** |  |
+| 78M05 | Method of moments applied to problems in optics and electromagnetic theory | Menâzır ilmi ve elektromıknatısî nazariye meselelerine tatbîk edilen lahzalar (momentler) usulü |  |
+| 78M10 | Finite element, Galerkin and related methods applied to problems in optics and electromagnetic theory | Menâzır ilmi ve elektromıknatısî nazariye meselelerine tatbîk edilen mütenâhî unsur, Galerkin ve alâkalı usuller | nakil |
+| 78M12 | Finite volume methods, finite integration techniques applied to problems in optics and electromagnetic theory | Menâzır ilmi ve elektromıknatısî nazariye meselelerine tatbîk edilen mütenâhî hacim usulleri, mütenâhî tamâmiye teknikleri |  |
+| 78M15 | Boundary element methods applied to problems in optics and electromagnetic theory | Menâzır ilmi ve elektromıknatısî nazariye meselelerine tatbîk edilen hudûd unsuru usulleri |  |
+| 78M16 | Multipole methods applied to problems in optics and electromagnetic theory | Menâzır ilmi ve elektromıknatısî nazariye meselelerine tatbîk edilen çok kutuplu usuller |  |
+| 78M20 | Finite difference methods applied to problems in optics and electromagnetic theory | Menâzır ilmi ve elektromıknatısî nazariye meselelerine tatbîk edilen mütenâhî fark usulleri |  |
+| 78M22 | Spectral, collocation and related methods applied to problems in optics and electromagnetic theory | Menâzır ilmi ve elektromıknatısî nazariye meselelerine tatbîk edilen tayfî, tertîb ve alâkalı usuller |  |
+| 78M30 | Variational methods applied to problems in optics and electromagnetic theory | Menâzır ilmi ve elektromıknatısî nazariye meselelerine tatbîk edilen tehavvülî usuller |  |
+| 78M31 | Monte Carlo methods applied to problems in optics and electromagnetic theory | Menâzır ilmi ve elektromıknatısî nazariye meselelerine tatbîk edilen Monte Carlo usulleri | nakil |
+| 78M32 | Neural and heuristic methods applied to problems in optics and electromagnetic theory | Menâzır ilmi ve elektromıknatısî nazariye meselelerine tatbîk edilen sinirî ve tecrübî kestirme usulleri |  |
+| 78M34 | Model reduction in optics and electromagnetic theory | Menâzır ilmi ve elektromıknatısî nazariyede numûne tenzîli |  |
+| 78M35 | Asymptotic analysis in optics and electromagnetic theory | Menâzır ilmi ve elektromıknatısî nazariyede mukāribî tahlîl |  |
+| 78M40 | Homogenization in optics and electromagnetic theory | Menâzır ilmi ve elektromıknatısî nazariyede mütecânisleştirme |  |
+| 78M50 | Optimization problems in optics and electromagnetic theory | Menâzır ilmi ve elektromıknatısî nazariyede ahseniyet meseleleri |  |
 | 78M99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
-## 80-XX — Classical thermodynamics, heat transfer {For thermodynamics of solids, see 74A15}
+## 80-XX — Klasik hararet-i hareket ilmi (termodinamik), hararet nakli {Sulb cisimlerin hararet-i hareket ilmi için bakınız: 74A15}
 
 Classical thermodynamics, heat transfer {For thermodynamics of solids, see 74A15}
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 80-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to classical thermodynamics |  |  |
-| 80-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to classical thermodynamics |  |  |
-| 80-02 | Research exposition (monographs, survey articles) pertaining to classical thermodynamics |  |  |
-| 80-03 | History of classical thermodynamics [Consider also classification numbers from Section 01] |  |  |
-| 80-04 | Software, source code, etc. for problems pertaining to classical thermodynamics |  |  |
-| 80-05 | Experimental work for problems pertaining to classical thermodynamics |  |  |
-| 80-06 | Proceedings, conferences, collections, etc. pertaining to classical thermodynamics |  |  |
-| 80-10 | Mathematical modeling or simulation for problems pertaining to classical thermodynamics |  |  |
-| 80-11 | Research data for problems pertaining to classical thermodynamics |  |  |
-| **80Axx** | **Thermodynamics and heat transfer** | **** |  |
-| 80A05 | Foundations of thermodynamics and heat transfer |  |  |
-| 80A10 | Classical and relativistic thermodynamics |  |  |
-| 80A17 | Thermodynamics of continua [See also 74A15] |  |  |
-| 80A19 | Diffusive and convective heat and mass transfer, heat flow |  |  |
-| 80A21 | Radiative heat transfer |  |  |
-| 80A22 | Stefan problems, phase changes, etc. [See also 74Nxx] |  |  |
-| 80A23 | Inverse problems in thermodynamics and heat transfer |  |  |
-| 80A25 | Combustion |  |  |
-| 80A30 | Chemical kinetics in thermodynamics and heat transfer [See also 76V05, 92C45, 92E20] |  |  |
-| 80A32 | Chemically reacting flows [See also 92C45, 92E20] |  |  |
-| 80A50 | Chemistry (general) in thermodynamics and heat transfer [See mainly 92Exx] |  |  |
+| 80-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to classical thermodynamics | klasik hararet-i hareket ilmi ve hararet nakli hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 80-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to classical thermodynamics | klasik hararet-i hareket ilmi ve hararet nakli hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 80-02 | Research exposition (monographs, survey articles) pertaining to classical thermodynamics | klasik hararet-i hareket ilmi ve hararet nakli hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 80-03 | History of classical thermodynamics [Consider also classification numbers from Section 01] | Klasik hararet-i hareket ilminin târihi [01. babın tasnif numaralarına da bakılsın] |  |
+| 80-04 | Software, source code, etc. for problems pertaining to classical thermodynamics | klasik hararet-i hareket ilmi ve hararet nakli sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 80-05 | Experimental work for problems pertaining to classical thermodynamics | klasik hararet-i hareket ilmi ve hararet nakli sahasındaki meselelere dair tecrübî çalışmalar |  |
+| 80-06 | Proceedings, conferences, collections, etc. pertaining to classical thermodynamics | klasik hararet-i hareket ilmi ve hararet nakli hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 80-10 | Mathematical modeling or simulation for problems pertaining to classical thermodynamics | klasik hararet-i hareket ilmi ve hararet nakli sahasındaki meselelere dair riyâzî numûne kurma (temsil) yahut taklit (benzetim) |  |
+| 80-11 | Research data for problems pertaining to classical thermodynamics | klasik hararet-i hareket ilmi ve hararet nakli sahasındaki meselelere dair tetkik verileri |  |
+| **80Axx** | **Thermodynamics and heat transfer** | **Hararet-i hareket ilmi ve hararet nakli** |  |
+| 80A05 | Foundations of thermodynamics and heat transfer | Hararet-i hareket ilmi ve hararet naklinin esasları |  |
+| 80A10 | Classical and relativistic thermodynamics | Klasik ve izâfî hararet-i hareket ilmi |  |
+| 80A17 | Thermodynamics of continua [See also 74A15] | Muttasıl ortamların hararet-i hareket ilmi [Ayrıca bakınız: 74A15] |  |
+| 80A19 | Diffusive and convective heat and mass transfer, heat flow | İntişârlı ve hararet nakilli (konvektif) hararet ve kütle nakli, hararet seyelânı |  |
+| 80A21 | Radiative heat transfer | Şuâ' yoluyla hararet nakli |  |
+| 80A22 | Stefan problems, phase changes, etc. [See also 74Nxx] | Stefan meseleleri, safha değişimleri ve emsâli [Ayrıca bakınız: 74Nxx] | nakil |
+| 80A23 | Inverse problems in thermodynamics and heat transfer | Hararet-i hareket ilmi ve hararet naklinde makûs meseleler |  |
+| 80A25 | Combustion | Yanma (ihtirâk) |  |
+| 80A30 | Chemical kinetics in thermodynamics and heat transfer [See also 76V05, 92C45, 92E20] | Hararet-i hareket ilmi ve hararet naklinde kimyevî harekiyyât (kinetik) [Ayrıca bakınız: 76V05, 92C45, 92E20] |  |
+| 80A32 | Chemically reacting flows [See also 92C45, 92E20] | Kimyevî teâmüllü seyelânlar [Ayrıca bakınız: 92C45, 92E20] |  |
+| 80A50 | Chemistry (general) in thermodynamics and heat transfer [See mainly 92Exx] | Hararet-i hareket ilmi ve hararet naklinde kimya (umûmî) [Bilhassa bakınız: 92Exx] |  |
 | 80A99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **80Mxx** | **Basic methods in thermodynamics and heat transfer [See also 65-XX]** | **** |  |
-| 80M10 | Finite element, Galerkin and related methods applied to problems in thermodynamics and heat transfer |  |  |
-| 80M12 | Finite volume methods applied to problems in thermodynamics and heat transfer |  |  |
-| 80M15 | Boundary element methods applied to problems in thermodynamics and heat transfer |  |  |
-| 80M20 | Finite difference methods applied to problems in thermodynamics and heat transfer |  |  |
-| 80M22 | Spectral, collocation and related (meshless) methods applied to problems in thermodynamics and heat transfer |  |  |
-| 80M30 | Variational methods applied to problems in thermodynamics and heat transfer |  |  |
-| 80M31 | Monte Carlo methods applied to problems in thermodynamics and heat transfer |  |  |
-| 80M35 | Asymptotic analysis for problems in thermodynamics and heat transfer |  |  |
-| 80M40 | Homogenization for problems in thermodynamics and heat transfer |  |  |
-| 80M50 | Optimization problems in thermodynamics and heat transfer |  |  |
-| 80M60 | Stochastic analysis in thermodynamics and heat transfer |  |  |
+| **80Mxx** | **Basic methods in thermodynamics and heat transfer [See also 65-XX]** | **Hararet-i hareket ilmi ve hararet naklinde esâsî usuller [Ayrıca bakınız: 65-XX]** |  |
+| 80M10 | Finite element, Galerkin and related methods applied to problems in thermodynamics and heat transfer | Hararet-i hareket ilmi ve hararet nakli meselelerine tatbîk edilen mütenâhî unsur, Galerkin ve alâkalı usuller | nakil |
+| 80M12 | Finite volume methods applied to problems in thermodynamics and heat transfer | Hararet-i hareket ilmi ve hararet nakli meselelerine tatbîk edilen mütenâhî hacim usulleri |  |
+| 80M15 | Boundary element methods applied to problems in thermodynamics and heat transfer | Hararet-i hareket ilmi ve hararet nakli meselelerine tatbîk edilen hudûd unsuru usulleri |  |
+| 80M20 | Finite difference methods applied to problems in thermodynamics and heat transfer | Hararet-i hareket ilmi ve hararet nakli meselelerine tatbîk edilen mütenâhî fark usulleri |  |
+| 80M22 | Spectral, collocation and related (meshless) methods applied to problems in thermodynamics and heat transfer | Hararet-i hareket ilmi ve hararet nakli meselelerine tatbîk edilen tayfî, tertîb ve alâkalı (ağsız) usuller |  |
+| 80M30 | Variational methods applied to problems in thermodynamics and heat transfer | Hararet-i hareket ilmi ve hararet nakli meselelerine tatbîk edilen tehavvülî usuller |  |
+| 80M31 | Monte Carlo methods applied to problems in thermodynamics and heat transfer | Hararet-i hareket ilmi ve hararet nakli meselelerine tatbîk edilen Monte Carlo usulleri | nakil |
+| 80M35 | Asymptotic analysis for problems in thermodynamics and heat transfer | Hararet-i hareket ilmi ve hararet nakli meseleleri için mukāribî tahlîl |  |
+| 80M40 | Homogenization for problems in thermodynamics and heat transfer | Hararet-i hareket ilmi ve hararet nakli meseleleri için mütecânisleştirme |  |
+| 80M50 | Optimization problems in thermodynamics and heat transfer | Hararet-i hareket ilmi ve hararet naklinde ahseniyet meseleleri |  |
+| 80M60 | Stochastic analysis in thermodynamics and heat transfer | Hararet-i hareket ilmi ve hararet naklinde ihtimâlî tahlîl |  |
 | 80M99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
 ## 81-XX — Quantum theory
