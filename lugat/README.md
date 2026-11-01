@@ -75,6 +75,12 @@ Her karşılığın yanında bir **kayıt** sütunu vardır:
    defterde ayrıca işaretlenir.
 4. Her ziyaret `gezinti_defteri.tsv`ye yazılır; kuyrukta bekleyen sahife
    kalmayınca ağ kapanmış sayılır.
+   Bulut muhitinin paylaşılan çıkış adresine Vikipedi 429 (fazla istek)
+   cevabı verdiği için tarama, kullanıcının emriyle, aynı betik yalnız
+   `VIKI` yolu `/kaggle/working` yapılarak Kaggle'da hususî bir çekirdekte
+   koşturuldu (2 Kasım 2026): 1284 sahife gezildi, 440 riyâzî liste,
+   682 kapsam dışı, 162 bulunamayan; 45860 farklı unsur. `durum.json`
+   devam hâlidir.
 5. Sonra her listenin unsurları çıkarılıp `vikipedi/listeler/`e yazılır
    ve MSC2020'deki usulle Osmanlıca karşılıkları bulunur.
 

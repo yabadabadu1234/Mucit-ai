@@ -63,14 +63,22 @@ def main():
     sayi = collections.Counter(k for _, kk in msc_kume for k in kk)
     agirlik = {k: math.log(len(msc) / s) for k, s in sayi.items()}
 
+    dizin = collections.defaultdict(list)
+    for i, (_, kk) in enumerate(msc_kume):
+        for k in kk:
+            dizin[k].append(i)
+
     def en_yakin(baslik, liste_kume):
-        enk, puan = '', 0.0
-        for kod, kk in msc_kume:
-            p = 2 * sum(agirlik[k] for k in baslik & kk) + sum(agirlik[k] for k in liste_kume & kk)
-            if p > puan:
-                enk, puan = kod, p
-        if not enk:
+        puan = collections.defaultdict(float)
+        for k in baslik:
+            for i in dizin.get(k, ()):
+                puan[i] += 2 * agirlik[k]
+        for k in liste_kume:
+            for i in dizin.get(k, ()):
+                puan[i] += agirlik[k]
+        if not puan:
             return ''
+        enk = msc_kume[min(puan, key=lambda i: (-puan[i], i))][0]
         return enk if enk.endswith('-XX') or re.match(r'^\d\d[A-Z]xx$', enk) else msc_ustu(enk)
 
     telif, tekrar, ustsuz = [], 0, 0

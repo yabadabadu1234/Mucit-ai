@@ -5,10 +5,10 @@ Bu sahife `araclar/telif.py` ile üretilir; elle değiştirilmez. Ana kaynaklar 
 | Ölçü | Sayı |
 | :-- | --: |
 | MSC2020 unsuru | 6603 |
-| Vikipedi unsuru | 0 |
-| Tekrar (birleştirilen) | 0 |
-| Telif mensubu | 6603 |
-| Üst başlığı tayin edilemeyen Vikipedi unsuru | 0 |
-| Osmanlıca karşılığı henüz olmayan mensup | 0 |
+| Vikipedi unsuru | 45860 |
+| Tekrar (birleştirilen) | 228 |
+| Telif mensubu | 52235 |
+| Üst başlığı tayin edilemeyen Vikipedi unsuru | 3473 |
+| Osmanlıca karşılığı henüz olmayan mensup | 45632 |
 
-Doğrulama: 6603 = 6603 + 0 − 0 tuttu.
+Doğrulama: 52235 = 6603 + 45860 − 228 tuttu.
