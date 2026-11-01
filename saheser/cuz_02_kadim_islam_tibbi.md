@@ -207,15 +207,24 @@ Hicrî tarihlerin mukabili verilirken bir seneye kadar sapma ihtimali vardır.
 
 ---
 
-## Tercüme iş parçacığına tavsiye
+## Şaheserlik sırası
 
-Bu cüzün eserleri zaten Arapça yahut Osmanlı Türkçesidir; burada "tercüme" bir lisandan diğerine nakilden ziyade, Arapça metnin Türkçeye nakli ve Osmanlıca metnin bugünkü okuyucunun anlayacağı edebî Türkçeye şerhli nakli demektir. Tavsiye edilen sıra:
+Kullanıcının 1 Kasım 2026 tarihli emri üzerine ("Telifli telifsiz fark etmez, en şaheseri neyse onlar tercüme edilecek") bu sıra telif hâline değil, şaheserlik derecesine göre tertip edilmiştir. Telifli eserlerin nasıl ele alınacağı (birebir tercüme yerine bab bab şerh) Tercüme iş parçacığının usulüdür.
 
-1. Râzî, Kitâbü'l-Cüderî ve'l-Hasbe (kısa, nüshası hazır, ayırıcı teşhisin örneği).
-2. İbn Sînâ, el-Kânûn, birinci kitap (1593 Roma neşrinden; Gruner tercümesi karışık olduğu için kullanılmamalıdır).
-3. Zehrâvî, et-Tasrîf, otuzuncu makale (1778 Channell neşrinden).
-4. Şânîzâde, Mir'âtü'l-Ebdân (lügat iş parçacığıyla beraber yürütülmelidir).
-5. Sabuncuoğlu, Cerrâhiyyetü'l-Hâniyye (önce nüshası bulunmalıdır).
+1. İbn Sînâ, el-Kânûn fi't-Tıb.
+2. Râzî, Kitâbü'l-Hâvî.
+3. Zehrâvî, et-Tasrîf, bilhassa otuzuncu makale.
+4. Sabuncuoğlu, Cerrâhiyyetü'l-Hâniyye.
+5. İbnü'n-Nefîs, Şerhu Teşrîhi'l-Kânûn.
+6. Ali bin Abbâs el-Mecûsî, Kâmilü's-Sınâati't-Tıbbiyye.
+7. Şânîzâde, Hamse-i Şânîzâde ve Mir'âtü'l-Ebdân (tıp lisanımız bakımından birinci derecededir).
+8. Râzî, Kitâbü'l-Cüderî ve'l-Hasbe.
+9. İbnü'l-Baytâr, el-Câmi' li-Müfredâti'l-Edviye ve'l-Ağdiye.
+10. Râzî, Kitâbü'l-Mansûrî.
+11. İbn Rüşd, Kitâbü'l-Külliyyât.
+12. Huneyn bin İshâk, el-Aşru Makâlât fi'l-Ayn.
+
+Kalan eserler ikinci derecededir. Bu cüzün eserleri zaten Arapça yahut Osmanlı Türkçesidir; burada "tercüme" Arapça metnin Türkçeye nakli ve Osmanlıca metnin bugünkü okuyucunun anlayacağı edebî Türkçeye şerhli nakli demektir. Nüshası hazır olanlar şunlardır: el-Kânûn (Roma 1593), Tasrîf'in otuzuncu makalesi (Oxford 1778), Kitâbü'l-Cüderî ve'l-Hasbe (Londra 1848), Hamse-i Şânîzâde. Gruner'in Kânûn tercümesi karışık hâlde olduğundan aslının yerine kullanılmamalıdır.
 
 ## Cevher
 

@@ -250,19 +250,32 @@ Bu eserlerin hepsi teliflidir; yalnız künye kaydedilmiştir. Tâb numaraları 
 
 ---
 
-## Tercüme iş parçacığına tavsiye
+## Şaheserlik sırası
 
-Tercümeye başlamak için en elverişli sıra şudur. Bu sıra, illiyet zincirine göre, önce sağlam bünyenin kanununu, sonra bozulmanın sebebini öğretecek şekilde tertip edilmiştir:
+Kullanıcının 1 Kasım 2026 tarihli emri üzerine ("Telifli telifsiz fark etmez, en şaheseri neyse onlar tercüme edilecek") bu sıra telif hâline değil, şaheserlik derecesine göre tertip edilmiştir. Telifli eserlerin nasıl ele alınacağı (birebir tercüme yerine bab bab şerh) Tercüme iş parçacığının usulüdür.
 
-1. Harvey, De Motu Cordis (kısa, kurucu, telifi düşmüş).
-2. Bernard, Introduction à l'étude de la médecine expérimentale (usulün anayasası).
-3. Sherrington, The Integrative Action of the Nervous System.
-4. Virchow, Die Cellularpathologie.
-5. Cohnheim, Vorlesungen über allgemeine Pathologie.
-6. Metchnikoff, Leçons sur la pathologie comparée de l'inflammation.
-7. OpenStax, Anatomy and Physiology (açık lisanslı medhal; uzun olduğu için parça parça).
+**Birinci derece, ilmi kuran ve bugün de esası teşkil eden eserler:**
 
-Cannon'un The Wisdom of the Body eseri karışık hâldedir; tercümesi için kullanıcının izni beklenmelidir.
+1. Virchow, Die Cellularpathologie (asrî patolojinin temeli).
+2. Harvey, De Motu Cordis (deneysel fizyolojinin doğuşu).
+3. Bernard, Introduction à l'étude de la médecine expérimentale (usulün anayasası ve iç muhit).
+4. Cannon, The Wisdom of the Body (homeostaz kanunu; pusulanın kalbi).
+5. Morgagni, De Sedibus et Causis Morborum (hastalığın yeri fikri).
+6. Sherrington, The Integrative Action of the Nervous System.
+7. Cohnheim, Vorlesungen über allgemeine Pathologie (patofizyolojinin kuruluşu).
+8. Koch, Die Ätiologie der Tuberkulose (sebebin ispatı).
+
+**Birinci derece, talebenin bugün okuyacağı esas ders kitapları:**
+
+1. Robbins and Cotran Pathologic Basis of Disease.
+2. Guyton and Hall Textbook of Medical Physiology.
+3. Boron and Boulpaep, Medical Physiology.
+
+**İkinci derece:** Metchnikoff, Starling'in kalp kanunu, Bayliss ile Starling'in sekretin makalesi, Krogh, Pavlov'un iki eseri, Müller, Bichat, Rokitansky, Florey, Pathophysiology of Disease.
+
+**Üçüncü derece:** Kalan eserler.
+
+Talebeye pusula ilmini aylar içinde öğretmek gayesiyle, kurucu bir eser ile asrî bir ders kitabının nöbetleşe ele alınması tavsiye olunur: Guyton ile Hall, Harvey ve Bernard ile; Robbins ile Cotran, Virchow ve Cohnheim ile beraber okunursa, hem mefhumun doğuşu hem bugünkü şekli görülür.
 
 ## Cevher
 

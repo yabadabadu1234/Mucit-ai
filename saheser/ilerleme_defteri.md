@@ -13,6 +13,8 @@ Bu defter, iş kesilirse kaldığı yerden devam edebilmek için tutulur. Her c�
 - Kadîm İslâm tıbbı eserleri ayrı bir cüzde toplanır.
 - Her cüz bitince tercüme iş parçacığına haber verilir. Birinci cüz koordinatöre bildirilir; tercüme iş parçacığını o açacaktır.
 - Her cüz ayrı commit edilir.
+- Kullanıcının 1 Kasım 2026 tarihli emri: "Telifli telifsiz fark etmez, en şaheseri neyse onlar tercüme edilecek." Buna göre her cüzün sonunda, telif hâline bakılmaksızın, eserlerin şaheserlik sırası verilir. Telif hâli yine her eserde kaydedilir, çünkü Tercüme iş parçacığı birebir tercüme ile şerh arasındaki seçimi ona göre yapar.
+- Kullanıcının aynı tarihli ikinci emri (Tercüme iş parçacığına): "Evvelâ birebir tercüme etsin, üzerine şerhini sonradan koysun ki metin kaybı yaşanmasın." 
 
 ## Çalışma yeri
 
@@ -21,6 +23,7 @@ Bu defter, iş kesilirse kaldığı yerden devam edebilmek için tutulur. Her c�
 - Ortak proje klasörü (kalıcı nüsha): /mnt/project-files/saheser/ (asıl kayıt GitHub dalıdır)
 - Deponun kökündeki CLAUDE.md, Mucit-AI yazılım projesinin emirnâmesidir. Bu klasördeki işe dokunan hükümleri: grep ile arama yasağı ve dosyaların baştan sona okunması.
 - Tercüme iş parçacığı: cmsg_01A3eskXyY6uU4cdnPk3VaruYP1h8zbB8CWSe2LKTnQ89t. İkinci cüzden itibaren her cüz doğrudan ona bildirilir.
+- Lügat iş parçacığı: cmsg_01A3eskXyY6uU4cdnPk3VaruLJQGc3UG8Pt9gNrGaDMi1Q. Talebe notu iş parçacığı: cmsg_01A3eskXyY6uU4cdnPk3VaruPL54f9fyw74ZQQpJRJmc4g.
 
 ## Ameliyat notları
 

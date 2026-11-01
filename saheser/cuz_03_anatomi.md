@@ -183,15 +183,29 @@ Bu eserlerin hepsi teliflidir; yalnız künye kaydedilmiştir. Son tâb numarala
 
 ---
 
-## Tercüme iş parçacığına tavsiye
+## Şaheserlik sırası
 
-1. Vesalius, De Humani Corporis Fabrica (1543 nüshası hazır; uzun olduğu için kitap kitap).
-2. Gray, Anatomy, Descriptive and Surgical (1858 birinci tâbı; 1918 Lewis tâbı karışık olduğu için kullanılmamalıdır).
-3. Ramón y Cajal, Textura del sistema nervioso (İspanyolca aslından).
-4. Schwann, Mikroskopische Untersuchungen (kısa ve kurucu).
+Kullanıcının 1 Kasım 2026 tarihli emri üzerine ("Telifli telifsiz fark etmez, en şaheseri neyse onlar tercüme edilecek") bu sıra telif hâline değil, şaheserlik derecesine göre tertip edilmiştir. Telifli eserlerin nasıl ele alınacağı (birebir tercüme yerine bab bab şerh) Tercüme iş parçacığının usulüdür.
+
+**Kurucu eserler:**
+
+1. Vesalius, De Humani Corporis Fabrica.
+2. Ramón y Cajal, Textura del sistema nervioso.
+3. Schwann, Mikroskopische Untersuchungen.
+4. Gray, Anatomy, Descriptive and Surgical (1858).
 5. Von Baer, Über Entwickelungsgeschichte der Thiere.
+6. Malpighi, De Pulmonibus.
+7. Brodmann, Vergleichende Lokalisationslehre der Grosshirnrinde.
 
-Teşrih ıstılahında Şânîzâde'nin Mir'âtü'l-Ebdân'ı ve Lügat iş parçacığının cedveli esas alınmalıdır.
+**Talebenin bugün okuyacağı esas eserler:**
+
+1. Gray's Anatomy, Standring tâbı.
+2. Moore, Clinically Oriented Anatomy.
+3. Netter, Atlas of Human Anatomy.
+4. Langman's Medical Embryology.
+5. Junqueira's Basic Histology.
+
+Kalan eserler ikinci derecededir. Teşrih ıstılahında Şânîzâde'nin Mir'âtü'l-Ebdân'ı ve Lügat iş parçacığının cedveli esas alınmalıdır.
 
 ## Cevher
 
