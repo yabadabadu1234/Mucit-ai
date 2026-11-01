@@ -12,6 +12,7 @@ Bu dizin, `saheserler/` defterinde (dal: `claude/project-thread-9mnlw4`) her sah
 | 4 | Istılahlarda esas, aynı depodaki `lugat/` dizinidir (dal: `claude/project-thread-jvwo8g`). Orada bulunmayan karşılık **teklif** diye işaretlenir; uydurma bir "eski karşılık" diye sunulmaz. | Coordinator notu |
 | 5 | Osmanlıca, edebî ve öğretici üslûp; Latin harfleriyle, uzun sesliler şapkalı (â, î, û), izafetler kesreli. **Kısaltma kullanılmaz**; aslında kısaltma varsa açılarak yazılır. | Padişahın tercihleri |
 | 6 | Kaynak dosyalar `grep` ile taranmaz, baştan sona okunur. | Padişahın tercihleri |
+| 7 | **Şâheser, en modern ve en güncel eserlerin en şâheseridir**, klasik eser değildir. Bundan sonra paylaştırmaya yalnız güncel ve tercümeye izin veren açık lisanslı (meselâ Creative Commons) eserler konur; klasik eser dağıtılmaz. Lisanslı eserin tercümesi aynı lisansla neşredilir ve künyede müellifler ile lisans adıyla gösterilir. | Padişah, 1 Teşrîn-i sânî 2026 |
 
 ## Telifin tayini
 
