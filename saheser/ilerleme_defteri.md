@@ -38,7 +38,7 @@ Bu defter, iş kesilirse kaldığı yerden devam edebilmek için tutulur. Her c�
 | İkinci | Kadîm İslâm tıbbı | Tamam (25 eser) | Bildirildi |
 | Üçüncü | Anatomi ("A" kıtası) | Tamam (23 eser) | Bildirildi |
 | Dördüncü | Hastalıklar ("C" kıtası) | Tamam (39 madde) | Bildirildi |
-| Beşinci | Kimyevî maddeler ve ilaçlar ("D" kıtası) | Sırada | Hayır |
+| Beşinci | Kimyevî maddeler ve ilaçlar ("D" kıtası) | Tamam (18 eser) | Bildirildi |
 | Altıncı | Canlılar ("B" kıtası) | Sırada | Hayır |
 | Yedinci | Teşhis ve tedavi usulleri ("E" kıtası) | Sırada | Hayır |
 | Sekizinci | Ruh hekimliği ve ruhiyat ("F" kıtası) | Sırada | Hayır |
@@ -46,7 +46,7 @@ Bu defter, iş kesilirse kaldığı yerden devam edebilmek için tutulur. Her c�
 
 ## Kaldığı yer
 
-Birinciden dördüncüye kadar cüzler tamamlandı ve commit edildi. Sıradaki iş: beşinci cüz, Kimyevî maddeler ve ilaçlar ("D" kıtası).
+Birinciden dördüncüye kadar cüzler tamamlandı ve commit edildi. Beşinci cüz de tamamlandı. Sıradaki iş: altıncı cüz, Canlılar ("B" kıtası).
 
 ## Açık tahkikler
 
@@ -56,3 +56,4 @@ Birinciden dördüncüye kadar cüzler tamamlandı ve commit edildi. Sıradaki i
 - İkinci cüzde: Sabuncuoğlu'nun üç müellif hattı nüshasının raf numaraları; Akşemseddin'in Maddetü'l-Hayât ibaresinin yazmadan tahkiki; Bulak basma tarihleri; Şânîzâde künyesindeki 1810 tarihi.
 - Üçüncü cüzde: "A" kıtasının alt dallarının sayımı hafızadan yapıldı; Lügat iş parçacığının indirdiği resmî ağaçla teyit edilmeli. Léon Azoulay'ın vefat yılı.
 - Dördüncü cüzde: "C" kıtasının alt dallarının sayımı (virüs ve tufeylî dallarının birleştirilmesi) resmî ağaçla teyit edilmeli. Wilmer Cave Wright'ın vefat yılı (1951). Janeway'in neşredeni.
+- Beşinci cüzde: Langley 1905 makalesinin tam adı; Fleming 1929 makalesinin PubMed Central'daki yeri; Clark 1933 eserinin Amerika'da yenilenme hâli.
