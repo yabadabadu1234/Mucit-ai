@@ -2,7 +2,7 @@
 
 Bu sahife `araclar/msc_birlestir.py` ile `kaynak.tsv` ve `ceviri/` dosyalarından üretilir; elle değiştirilmez.
 
-Toplam madde: 6603 · karşılığı bulunan: 4178 · kalan: 2425
+Toplam madde: 6603 · karşılığı bulunan: 4336 · kalan: 2267
 
 
 ## 00-XX — Umûmî ve şâmil mevzûlar; mecmualar
@@ -4134,7 +4134,7 @@ Geometry {For algebraic geometry, see 14-XX; for differential geometry, see 53-X
 | **51Fxx** | **Metric geometry** | **Mesâfevî (metrik) hendese** |  |
 | 51F05 | Absolute planes in metric geometry | Mesâfevî hendesede mutlak müstevîler |  |
 | 51F10 | Absolute spaces in metric geometry | Mesâfevî hendesede mutlak fezâlar |  |
-| 51F15 | Reflection groups, reflection geometries [See also 20H10, 20H15] {For Coxeter groups, see 20F55} | İn'ikâs zümreleri, in'ikâs hendeseleri {Coxeter zümreleri için bakınız: 20F55} |  |
+| 51F15 | Reflection groups, reflection geometries [See also 20H10, 20H15] {For Coxeter groups, see 20F55} | İn'ikâs zümreleri, in'ikâs hendeseleri [Ayrıca bakınız: 20H10, 20H15] {Coxeter zümreleri için bakınız: 20F55} |  |
 | 51F20 | Congruence and orthogonality in metric geometry [See also 20H05] | Mesâfevî hendesede tetâbuk ve amûdîlik [Ayrıca bakınız: 20H05] |  |
 | 51F25 | Orthogonal and unitary groups in metric geometry [See also 20H05] | Mesâfevî hendesede amûdî ve vâhidî zümreler [Ayrıca bakınız: 20H05] |  |
 | 51F30 | Lipschitz and coarse geometry of metric spaces [See also 53C23] | Mesâfeli fezâların Lipschitz hendesesi ve kaba hendesesi [Ayrıca bakınız: 53C23] | nakil |
@@ -4147,7 +4147,7 @@ Geometry {For algebraic geometry, see 14-XX; for differential geometry, see 53-X
 | 51H10 | Topological linear incidence structures | Vaz'î hattî vukû' bünyeleri |  |
 | 51H15 | Topological nonlinear incidence structures | Vaz'î gayr-ı hattî vukû' bünyeleri |  |
 | 51H20 | Topological geometries on manifolds [See also 57-XX] | Müteşa'ibler üzerinde vaz'î hendeseler [Ayrıca bakınız: 57-XX] |  |
-| 51H25 | Geometries with differentiable structure [See also 53Cxx, especially 53C70] | Tefâzulî bünyeli hendeseler |  |
+| 51H25 | Geometries with differentiable structure [See also 53Cxx, especially 53C70] | Tefâzulî bünyeli hendeseler [Ayrıca bakınız: 53Cxx, hususiyle 53C70] |  |
 | 51H30 | Geometries with algebraic manifold structure [See also 14-XX] | Cebrî müteşa'ib bünyeli hendeseler [Ayrıca bakınız: 14-XX] |  |
 | 51H99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 | **51Jxx** | **Incidence groups** | **Vukû' zümreleri** |  |
@@ -4191,183 +4191,183 @@ Geometry {For algebraic geometry, see 14-XX; for differential geometry, see 53-X
 | 51P05 | Classical or axiomatic geometry and physics [Should also be assigned at least one other classification number from Sections 70 through 86] | Klasik yahut mütearifevî hendese ve hikmet-i tabîiyye [Buna 70. ilâ 86. bablardan en az bir başka tasnif numarası da verilmelidir] |  |
 | 51P99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
-## 52-XX — Convex and discrete geometry
+## 52-XX — Muhaddeb (konveks) ve munfasıl (ayrık) hendese
 
 Convex and discrete geometry
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 52-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to convex and discrete geometry |  |  |
-| 52-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to convex and discrete geometry |  |  |
-| 52-02 | Research exposition (monographs, survey articles) pertaining to convex and discrete geometry |  |  |
-| 52-03 | History of convex and discrete geometry [Consider also classification numbers from Section 01] |  |  |
-| 52-04 | Software, source code, etc. for problems pertaining to convex and discrete geometry |  |  |
-| 52-06 | Proceedings, conferences, collections, etc. pertaining to convex and discrete geometry |  |  |
-| 52-08 | Computational methods for problems pertaining to convex and discrete geometry |  |  |
-| 52-11 | Research data for problems pertaining to convex and discrete geometry |  |  |
-| **52Axx** | **General convexity** | **** |  |
-| 52A01 | Axiomatic and generalized convexity |  |  |
-| 52A05 | Convex sets without dimension restrictions (aspects of convex geometry) |  |  |
-| 52A07 | Convex sets in topological vector spaces (aspects of convex geometry) [See also 46A55] |  |  |
-| 52A10 | Convex sets in 2 dimensions (including convex curves) [See also 53A04] |  |  |
-| 52A15 | Convex sets in 3 dimensions (including convex surfaces) [See also 53A05, 53C45] |  |  |
-| 52A20 | Convex sets in n dimensions (including convex hypersurfaces) [See also 53A07, 53C45] |  |  |
-| 52A21 | Convexity and finite-dimensional Banach spaces (including special norms, zonoids, etc.) (aspects of convex geometry) [See also 46Bxx] |  |  |
-| 52A22 | Random convex sets and integral geometry (aspects of convex geometry) [See also 53C65, 60D05] |  |  |
-| 52A23 | Asymptotic theory of convex bodies [See also 46B06] |  |  |
-| 52A27 | Approximation by convex sets |  |  |
-| 52A30 | Variants of convex sets (star-shaped, (m, n)-convex, etc.) |  |  |
-| 52A35 | Helly-type theorems and geometric transversal theory |  |  |
-| 52A37 | Other problems of combinatorial convexity |  |  |
-| 52A38 | Length, area, volume and convex sets (aspects of convex geometry) [See also 26B15, 28A75, 49Q20] |  |  |
-| 52A39 | Mixed volumes and related topics in convex geometry |  |  |
-| 52A40 | Inequalities and extremum problems involving convexity in convex geometry |  |  |
-| 52A41 | Convex functions and convex programs in convex geometry [See also 26B25, 90C25] |  |  |
-| 52A55 | Spherical and hyperbolic convexity |  |  |
+| 52-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to convex and discrete geometry | muhaddeb ve munfasıl hendese hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 52-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to convex and discrete geometry | muhaddeb ve munfasıl hendese hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 52-02 | Research exposition (monographs, survey articles) pertaining to convex and discrete geometry | muhaddeb ve munfasıl hendese hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 52-03 | History of convex and discrete geometry [Consider also classification numbers from Section 01] | Muhaddeb ve munfasıl hendesenin târihi [01. babın tasnif numaralarına da bakılsın] |  |
+| 52-04 | Software, source code, etc. for problems pertaining to convex and discrete geometry | muhaddeb ve munfasıl hendese sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 52-06 | Proceedings, conferences, collections, etc. pertaining to convex and discrete geometry | muhaddeb ve munfasıl hendese hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 52-08 | Computational methods for problems pertaining to convex and discrete geometry | muhaddeb ve munfasıl hendese sahasındaki meselelere dair hesap usulleri |  |
+| 52-11 | Research data for problems pertaining to convex and discrete geometry | muhaddeb ve munfasıl hendese sahasındaki meselelere dair tetkik verileri |  |
+| **52Axx** | **General convexity** | **Umûmî muhaddebiyet** |  |
+| 52A01 | Axiomatic and generalized convexity | Mütearifevî ve teşmîl edilmiş muhaddebiyet |  |
+| 52A05 | Convex sets without dimension restrictions (aspects of convex geometry) | Buud kaydı olmayan muhaddeb mecmûalar (muhaddeb hendeseye ait cihetler) |  |
+| 52A07 | Convex sets in topological vector spaces (aspects of convex geometry) [See also 46A55] | Vaz'î müteveccihe fezâlarında muhaddeb mecmûalar (muhaddeb hendeseye ait cihetler) [Ayrıca bakınız: 46A55] |  |
+| 52A10 | Convex sets in 2 dimensions (including convex curves) [See also 53A04] | 2 buudda muhaddeb mecmûalar (muhaddeb münhanîler dahil) [Ayrıca bakınız: 53A04] |  |
+| 52A15 | Convex sets in 3 dimensions (including convex surfaces) [See also 53A05, 53C45] | 3 buudda muhaddeb mecmûalar (muhaddeb sathlar dahil) [Ayrıca bakınız: 53A05, 53C45] |  |
+| 52A20 | Convex sets in n dimensions (including convex hypersurfaces) [See also 53A07, 53C45] | N buudda muhaddeb mecmûalar (muhaddeb fevka'l-sathlar dahil) [Ayrıca bakınız: 53A07, 53C45] |  |
+| 52A21 | Convexity and finite-dimensional Banach spaces (including special norms, zonoids, etc.) (aspects of convex geometry) [See also 46Bxx] | Muhaddebiyet ve mütenâhî buudlu Banach fezâları (hususî normlar, mıntıkavî şekiller (zonoidler) ve emsâli dahil) (muhaddeb hendeseye ait cihetler) [Ayrıca bakınız: 46Bxx] |  |
+| 52A22 | Random convex sets and integral geometry (aspects of convex geometry) [See also 53C65, 60D05] | Tesâdüfî muhaddeb mecmûalar ve tamâmî hendese (muhaddeb hendeseye ait cihetler) [Ayrıca bakınız: 53C65, 60D05] |  |
+| 52A23 | Asymptotic theory of convex bodies [See also 46B06] | Muhaddeb mücessemlerin mukāribî nazariyesi [Ayrıca bakınız: 46B06] |  |
+| 52A27 | Approximation by convex sets | Muhaddeb mecmûalarla takrîb |  |
+| 52A30 | Variants of convex sets (star-shaped, (m, n)-convex, etc.) | Muhaddeb mecmûaların nev'leri (yıldız şekilli, (m, n)-muhaddeb ve emsâli) |  |
+| 52A35 | Helly-type theorems and geometric transversal theory | Helly nev'inden kaziyyeler ve hendesî kesen (transversal) nazariyesi | nakil |
+| 52A37 | Other problems of combinatorial convexity | Terkîbî muhaddebiyetin sâir meseleleri |  |
+| 52A38 | Length, area, volume and convex sets (aspects of convex geometry) [See also 26B15, 28A75, 49Q20] | Tûl, mesâha, hacim ve muhaddeb mecmûalar (muhaddeb hendeseye ait cihetler) [Ayrıca bakınız: 26B15, 28A75, 49Q20] |  |
+| 52A39 | Mixed volumes and related topics in convex geometry | Muhaddeb hendesede karışık hacimler ve alâkalı mevzûlar |  |
+| 52A40 | Inequalities and extremum problems involving convexity in convex geometry | Muhaddeb hendesede muhaddebiyeti ihtivâ eden adem-i müsâvâtlar ve nihâyet meseleleri |  |
+| 52A41 | Convex functions and convex programs in convex geometry [See also 26B25, 90C25] | Muhaddeb hendesede muhaddeb tâbiler ve muhaddeb programlar [Ayrıca bakınız: 26B25, 90C25] |  |
+| 52A55 | Spherical and hyperbolic convexity | Kürevî ve zâidî muhaddebiyet |  |
 | 52A99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **52Bxx** | **Polytopes and polyhedra** | **** |  |
-| 52B05 | Combinatorial properties of polytopes and polyhedra (number of faces, shortest paths, etc.) [See also 05Cxx] |  |  |
-| 52B10 | Three-dimensional polytopes |  |  |
-| 52B11 | n-dimensional polytopes |  |  |
-| 52B12 | Special polytopes (linear programming, centrally symmetric, etc.) |  |  |
-| 52B15 | Symmetry properties of polytopes |  |  |
-| 52B20 | Lattice polytopes in convex geometry (including relations with commutative algebra and algebraic geometry) [See also 06A11, 13F20, 13F55, 13Hxx, 52C05, 52C07] |  |  |
-| 52B22 | Shellability for polytopes and polyhedra |  |  |
-| 52B35 | Gale and other diagrams |  |  |
-| 52B40 | Matroids in convex geometry (realizations in the context of convex polytopes, convexity in combinatorial structures, etc.) [See also 05B35, 52Cxx] |  |  |
-| 52B45 | Dissections and valuations (Hilbert’s third problem, etc.) |  |  |
-| 52B55 | Computational aspects related to convexity {For computational methods, see 52-08; for computational geometry and algorithms, see 68Q25, 68U05; for numerical algorithms, see 65Yxx} [See also 68Uxx] |  |  |
-| 52B60 | Isoperimetric problems for polytopes |  |  |
-| 52B70 | Polyhedral manifolds |  |  |
+| **52Bxx** | **Polytopes and polyhedra** | **Çok buudlu kesîrü'l-vücûhlar (politoplar) ve kesîrü'l-vücûh mücessemler** |  |
+| 52B05 | Combinatorial properties of polytopes and polyhedra (number of faces, shortest paths, etc.) [See also 05Cxx] | Politopların ve kesîrü'l-vücûh mücessemlerin terkîbî vasıfları (yüz adedi, en kısa yollar ve emsâli) [Ayrıca bakınız: 05Cxx] |  |
+| 52B10 | Three-dimensional polytopes | Üç buudlu politoplar |  |
+| 52B11 | n-dimensional polytopes | N buudlu politoplar |  |
+| 52B12 | Special polytopes (linear programming, centrally symmetric, etc.) | Hususî politoplar (hattî programlama, merkezce mütenâzır ve emsâli) |  |
+| 52B15 | Symmetry properties of polytopes | Politopların tenâzur vasıfları |  |
+| 52B20 | Lattice polytopes in convex geometry (including relations with commutative algebra and algebraic geometry) [See also 06A11, 13F20, 13F55, 13Hxx, 52C05, 52C07] | Muhaddeb hendesede kafes politopları (tebdîlî cebir ve cebrî hendeseyle münasebetleri dahil) [Ayrıca bakınız: 06A11, 13F20, 13F55, 13Hxx, 52C05, 52C07] |  |
+| 52B22 | Shellability for polytopes and polyhedra | Politoplar ve kesîrü'l-vücûh mücessemler için kabuklanabilirlik | şüpheli: "shellability" için lafzî karşılık teklif edildi |
+| 52B35 | Gale and other diagrams | Gale şemaları ve sâir şemalar | nakil |
+| 52B40 | Matroids in convex geometry (realizations in the context of convex polytopes, convexity in combinatorial structures, etc.) [See also 05B35, 52Cxx] | Muhaddeb hendesede matroidler (muhaddeb politoplar bağlamında tahakkuklar, terkîbî bünyelerde muhaddebiyet ve emsâli) [Ayrıca bakınız: 05B35, 52Cxx] | nakil |
+| 52B45 | Dissections and valuations (Hilbert’s third problem, etc.) | Kesip ayırmalar ve kıymetlendirmeler (Hilbert'in üçüncü meselesi ve emsâli) | nakil |
+| 52B55 | Computational aspects related to convexity {For computational methods, see 52-08; for computational geometry and algorithms, see 68Q25, 68U05; for numerical algorithms, see 65Yxx} [See also 68Uxx] | Muhaddebiyetle alâkalı hesâbî cihetler {Hesâbî usuller için bakınız: 52-08; hesâbî hendese ve hârizmîler için bakınız: 68Q25, 68U05; adedî hârizmîler için bakınız: 65Yxx} [Ayrıca bakınız: 68Uxx] |  |
+| 52B60 | Isoperimetric problems for polytopes | Politoplar için müsâvî-muhît (izoperimetrik) meseleler |  |
+| 52B70 | Polyhedral manifolds | Kesîrü'l-vücûhî müteşa'ibler |  |
 | 52B99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **52Cxx** | **Discrete geometry** | **** |  |
-| 52C05 | Lattices and convex bodies in 2 dimensions (aspects of discrete geometry) [See also 11H06, 11H31, 11P21] |  |  |
-| 52C07 | Lattices and convex bodies in n dimensions (aspects of discrete geometry) [See also 11H06, 11H31, 11P21] |  |  |
-| 52C10 | Erdős problems and related topics of discrete geometry [See also 11Hxx] |  |  |
-| 52C15 | Packing and covering in 2 dimensions (aspects of discrete geometry) [See also 05B40, 11H31] |  |  |
-| 52C17 | Packing and covering in n dimensions (aspects of discrete geometry) [See also 05B40, 11H31] |  |  |
-| 52C20 | Tilings in 2 dimensions (aspects of discrete geometry) [See also 05B45, 51M20] |  |  |
-| 52C22 | Tilings in n dimensions (aspects of discrete geometry) [See also 05B45, 51M20] |  |  |
-| 52C23 | Quasicrystals and aperiodic tilings in discrete geometry |  |  |
-| 52C25 | Rigidity and flexibility of structures (aspects of discrete geometry) [See also 70B15] |  |  |
-| 52C26 | Circle packings and discrete conformal geometry |  |  |
-| 52C30 | Planar arrangements of lines and pseudolines (aspects of discrete geometry) |  |  |
-| 52C35 | Arrangements of points, flats, hyperplanes (aspects of discrete geometry) [See also 14N20, 32S22] |  |  |
-| 52C40 | Oriented matroids in discrete geometry |  |  |
-| 52C45 | Combinatorial complexity of geometric structures [See also 68U05] |  |  |
+| **52Cxx** | **Discrete geometry** | **Munfasıl hendese** |  |
+| 52C05 | Lattices and convex bodies in 2 dimensions (aspects of discrete geometry) [See also 11H06, 11H31, 11P21] | 2 buudda kafesler ve muhaddeb mücessemler (munfasıl hendeseye ait cihetler) [Ayrıca bakınız: 11H06, 11H31, 11P21] |  |
+| 52C07 | Lattices and convex bodies in n dimensions (aspects of discrete geometry) [See also 11H06, 11H31, 11P21] | N buudda kafesler ve muhaddeb mücessemler (munfasıl hendeseye ait cihetler) [Ayrıca bakınız: 11H06, 11H31, 11P21] |  |
+| 52C10 | Erdős problems and related topics of discrete geometry [See also 11Hxx] | Erdős meseleleri ve munfasıl hendesenin alâkalı mevzûları [Ayrıca bakınız: 11Hxx] | nakil |
+| 52C15 | Packing and covering in 2 dimensions (aspects of discrete geometry) [See also 05B40, 11H31] | 2 buudda istif ve örtme (munfasıl hendeseye ait cihetler) [Ayrıca bakınız: 05B40, 11H31] |  |
+| 52C17 | Packing and covering in n dimensions (aspects of discrete geometry) [See also 05B40, 11H31] | N buudda istif ve örtme (munfasıl hendeseye ait cihetler) [Ayrıca bakınız: 05B40, 11H31] |  |
+| 52C20 | Tilings in 2 dimensions (aspects of discrete geometry) [See also 05B45, 51M20] | 2 buudda döşemeler (tefrîşler) (munfasıl hendeseye ait cihetler) [Ayrıca bakınız: 05B45, 51M20] |  |
+| 52C22 | Tilings in n dimensions (aspects of discrete geometry) [See also 05B45, 51M20] | N buudda döşemeler (munfasıl hendeseye ait cihetler) [Ayrıca bakınız: 05B45, 51M20] |  |
+| 52C23 | Quasicrystals and aperiodic tilings in discrete geometry | Munfasıl hendesede şibh-i billûrlar ve gayr-ı devrî döşemeler |  |
+| 52C25 | Rigidity and flexibility of structures (aspects of discrete geometry) [See also 70B15] | Bünyelerin sertliği ve eğilebilirliği (munfasıl hendeseye ait cihetler) [Ayrıca bakınız: 70B15] |  |
+| 52C26 | Circle packings and discrete conformal geometry | Dâire istifleri ve munfasıl zâviye-hâfız hendese |  |
+| 52C30 | Planar arrangements of lines and pseudolines (aspects of discrete geometry) | Hatların ve kâzib-hatların müstevî tertipleri (munfasıl hendeseye ait cihetler) |  |
+| 52C35 | Arrangements of points, flats, hyperplanes (aspects of discrete geometry) [See also 14N20, 32S22] | Noktaların, müstevî alt fezâların, fevka'l-müstevîlerin tertipleri (munfasıl hendeseye ait cihetler) [Ayrıca bakınız: 14N20, 32S22] |  |
+| 52C40 | Oriented matroids in discrete geometry | Munfasıl hendesede yönlendirilmiş matroidler | nakil |
+| 52C45 | Combinatorial complexity of geometric structures [See also 68U05] | Hendesî bünyelerin terkîbî mürekkebiyeti [Ayrıca bakınız: 68U05] |  |
 | 52C99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
-## 53-XX — Differential geometry {For differential topology, see 57Rxx; for foundational questions of differentiable manifolds, see 58Axx}
+## 53-XX — Tefâzulî hendese (diferansiyel geometri) {Tefâzulî hendese-i vaz'iyye için bakınız: 57Rxx; müştakı alınabilir müteşa'iblerin esâsî meseleleri için bakınız: 58Axx}
 
 Differential geometry {For differential topology, see 57Rxx; for foundational questions of differentiable manifolds, see 58Axx}
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 53-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to differential geometry |  |  |
-| 53-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to differential geometry |  |  |
-| 53-02 | Research exposition (monographs, survey articles) pertaining to differential geometry |  |  |
-| 53-03 | History of differential geometry [Consider also classification numbers from Section 01] |  |  |
-| 53-04 | Software, source code, etc. for problems pertaining to differential geometry |  |  |
-| 53-06 | Proceedings, conferences, collections, etc. pertaining to differential geometry |  |  |
-| 53-08 | Computational methods for problems pertaining to differential geometry |  |  |
-| 53-11 | Research data for problems pertaining to differential geometry |  |  |
-| **53Axx** | **Classical differential geometry** | **** |  |
-| 53A04 | Curves in Euclidean and related spaces |  |  |
-| 53A05 | Surfaces in Euclidean and related spaces |  |  |
-| 53A07 | Higher-dimensional and -codimensional surfaces in Euclidean and related n-spaces |  |  |
-| 53A10 | Minimal surfaces in differential geometry, surfaces with prescribed mean curvature [See also 49Q05, 49Q10, 53C42] |  |  |
-| 53A15 | Affine differential geometry |  |  |
-| 53A17 | Differential geometric aspects in kinematics |  |  |
-| 53A20 | Projective differential geometry |  |  |
-| 53A25 | Differential line geometry |  |  |
-| 53A31 | Differential geometry of submanifolds of Möbius space |  |  |
-| 53A35 | Non-Euclidean differential geometry |  |  |
-| 53A40 | Other special differential geometries |  |  |
-| 53A45 | Differential geometric aspects in vector and tensor analysis |  |  |
-| 53A55 | Differential invariants (local theory), geometric objects |  |  |
-| 53A60 | Differential geometry of webs [See also 14C21, 20N05] |  |  |
-| 53A70 | Discrete differential geometry |  |  |
+| 53-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to differential geometry | tefâzulî hendese hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 53-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to differential geometry | tefâzulî hendese hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 53-02 | Research exposition (monographs, survey articles) pertaining to differential geometry | tefâzulî hendese hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 53-03 | History of differential geometry [Consider also classification numbers from Section 01] | Tefâzulî hendesenin târihi [01. babın tasnif numaralarına da bakılsın] |  |
+| 53-04 | Software, source code, etc. for problems pertaining to differential geometry | tefâzulî hendese sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 53-06 | Proceedings, conferences, collections, etc. pertaining to differential geometry | tefâzulî hendese hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 53-08 | Computational methods for problems pertaining to differential geometry | tefâzulî hendese sahasındaki meselelere dair hesap usulleri |  |
+| 53-11 | Research data for problems pertaining to differential geometry | tefâzulî hendese sahasındaki meselelere dair tetkik verileri |  |
+| **53Axx** | **Classical differential geometry** | **Klasik tefâzulî hendese** |  |
+| 53A04 | Curves in Euclidean and related spaces | Öklid fezâlarında ve alâkalı fezâlarda münhanîler |  |
+| 53A05 | Surfaces in Euclidean and related spaces | Öklid fezâlarında ve alâkalı fezâlarda sathlar |  |
+| 53A07 | Higher-dimensional and -codimensional surfaces in Euclidean and related n-spaces | Öklid fezâlarında ve alâkalı n buudlu fezâlarda yüksek buudlu ve yüksek mütemmim-buudlu sathlar |  |
+| 53A10 | Minimal surfaces in differential geometry, surfaces with prescribed mean curvature [See also 49Q05, 49Q10, 53C42] | Tefâzulî hendesede asgarî sathlar, vasatî inhinâsı önceden tayin edilmiş sathlar [Ayrıca bakınız: 49Q05, 49Q10, 53C42] |  |
+| 53A15 | Affine differential geometry | Te'âlüfî tefâzulî hendese |  |
+| 53A17 | Differential geometric aspects in kinematics | Hareket ilminde (kinematikte) tefâzulî hendeseye ait cihetler |  |
+| 53A20 | Projective differential geometry | İrtisâmî tefâzulî hendese |  |
+| 53A25 | Differential line geometry | Tefâzulî hat hendesesi |  |
+| 53A31 | Differential geometry of submanifolds of Möbius space | Möbius fezâsının alt müteşa'iblerinin tefâzulî hendesesi | nakil |
+| 53A35 | Non-Euclidean differential geometry | Öklidî olmayan tefâzulî hendese |  |
+| 53A40 | Other special differential geometries | Sâir hususî tefâzulî hendeseler |  |
+| 53A45 | Differential geometric aspects in vector and tensor analysis | Müteveccihe ve tansör tahlîlinde tefâzulî hendeseye ait cihetler |  |
+| 53A55 | Differential invariants (local theory), geometric objects | Tefâzulî lâyetegayyerler (mahallî nazariye), hendesî nesneler |  |
+| 53A60 | Differential geometry of webs [See also 14C21, 20N05] | Ağların (dokumaların) tefâzulî hendesesi [Ayrıca bakınız: 14C21, 20N05] |  |
+| 53A70 | Discrete differential geometry | Munfasıl tefâzulî hendese |  |
 | 53A99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **53Bxx** | **Local differential geometry** | **** |  |
-| 53B05 | Linear and affine connections |  |  |
-| 53B10 | Projective connections |  |  |
-| 53B12 | Differential geometric aspects of statistical manifolds and information geometry |  |  |
-| 53B15 | Other connections |  |  |
-| 53B20 | Local Riemannian geometry |  |  |
-| 53B21 | Methods of local Riemannian geometry |  |  |
-| 53B25 | Local submanifolds [See also 53C40] |  |  |
-| 53B30 | Local differential geometry of Lorentz metrics, indefinite metrics |  |  |
-| 53B35 | Local differential geometry of Hermitian and Kählerian structures [See also 32Qxx] |  |  |
-| 53B40 | Local differential geometry of Finsler spaces and generalizations (areal metrics) |  |  |
-| 53B50 | Applications of local differential geometry to the sciences |  |  |
+| **53Bxx** | **Local differential geometry** | **Mahallî tefâzulî hendese** |  |
+| 53B05 | Linear and affine connections | Hattî ve te'âlüfî irtibatlar (konneksiyonlar) |  |
+| 53B10 | Projective connections | İrtisâmî irtibatlar |  |
+| 53B12 | Differential geometric aspects of statistical manifolds and information geometry | İhsâî müteşa'iblerin ve malûmat hendesesinin tefâzulî hendeseye ait cihetleri |  |
+| 53B15 | Other connections | Sâir irtibatlar |  |
+| 53B20 | Local Riemannian geometry | Mahallî Riemann hendesesi | nakil |
+| 53B21 | Methods of local Riemannian geometry | Mahallî Riemann hendesesinin usulleri | nakil |
+| 53B25 | Local submanifolds [See also 53C40] | Mahallî alt müteşa'ibler [Ayrıca bakınız: 53C40] |  |
+| 53B30 | Local differential geometry of Lorentz metrics, indefinite metrics | Lorentz mesâfelerinin (metriklerinin), gayr-ı muayyen mesâfelerin mahallî tefâzulî hendesesi | nakil |
+| 53B35 | Local differential geometry of Hermitian and Kählerian structures [See also 32Qxx] | Hermite ve Kähler bünyelerinin mahallî tefâzulî hendesesi [Ayrıca bakınız: 32Qxx] | nakil |
+| 53B40 | Local differential geometry of Finsler spaces and generalizations (areal metrics) | Finsler fezâlarının ve umûmîleştirmelerinin (mesâhavî mesâfeler) mahallî tefâzulî hendesesi | nakil |
+| 53B50 | Applications of local differential geometry to the sciences | Mahallî tefâzulî hendesenin ilimlere tatbîkleri |  |
 | 53B99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **53Cxx** | **Global differential geometry [See also 51H25, 58-XX] {For related bundle theory, see 55Rxx, 57Rxx}** | **** |  |
-| 53C05 | Connections (general theory) |  |  |
-| 53C07 | Special connections and metrics on vector bundles (Hermite-Einstein, Yang-Mills) [See also 32Q20] |  |  |
-| 53C08 | Differential geometric aspects of gerbes and differential characters |  |  |
-| 53C10 | G-structures |  |  |
-| 53C12 | Foliations (differential geometric aspects) [See also 57R30, 57R32] |  |  |
-| 53C15 | General geometric structures on manifolds (almost complex, almost product structures, etc.) |  |  |
-| 53C17 | Sub-Riemannian geometry |  |  |
-| 53C18 | Conformal structures on manifolds |  |  |
-| 53C20 | Global Riemannian geometry, including pinching [See also 31C12, 58B20] |  |  |
-| 53C21 | Methods of global Riemannian geometry, including PDE methods; curvature restrictions [See also 58J60] |  |  |
-| 53C22 | Geodesics in global differential geometry [See also 58E10] |  |  |
-| 53C23 | Global geometric and topological methods (à la Gromov); differential geometric analysis on metric spaces |  |  |
-| 53C24 | Rigidity results |  |  |
-| 53C25 | Special Riemannian manifolds (Einstein, Sasakian, etc.) |  |  |
-| 53C26 | Hyper-Kähler and quaternionic Kähler geometry, “special” geometry |  |  |
-| 53C27 | Spin and Spinc geometry |  |  |
-| 53C28 | Twistor methods in differential geometry [See also 32L25] |  |  |
-| 53C29 | Issues of holonomy in differential geometry |  |  |
-| 53C30 | Differential geometry of homogeneous manifolds [See also 14M15, 14M17, 32M10, 57T15] |  |  |
-| 53C35 | Differential geometry of symmetric spaces [See also 32M15, 57T15] |  |  |
-| 53C38 | Calibrations and calibrated geometries |  |  |
-| 53C40 | Global submanifolds [See also 53B25] |  |  |
-| 53C42 | Differential geometry of immersions (minimal, prescribed curvature, tight, etc.) [See also 49Q05, 49Q10, 53A10, 57R40, 57R42] |  |  |
-| 53C43 | Differential geometric aspects of harmonic maps [See also 58E20] |  |  |
-| 53C45 | Global surface theory (convex surfaces à la A. D. Aleksandrov) |  |  |
-| 53C50 | Global differential geometry of Lorentz manifolds, manifolds with indefinite metrics |  |  |
-| 53C55 | Global differential geometry of Hermitian and Kählerian manifolds [See also 32Qxx] |  |  |
-| 53C56 | Other complex differential geometry [See also 32Qxx] |  |  |
-| 53C60 | Global differential geometry of Finsler spaces and generalizations (areal metrics) [See also 58B20] |  |  |
-| 53C65 | Integral geometry [See also 52A22, 60D05]; differential forms, currents, etc. [See mainly 58Axx] |  |  |
-| 53C70 | Direct methods (G-spaces of Busemann, etc.) |  |  |
-| 53C75 | Geometric orders, order geometry [See also 51Lxx] |  |  |
-| 53C80 | Applications of global differential geometry to the sciences |  |  |
+| **53Cxx** | **Global differential geometry [See also 51H25, 58-XX] {For related bundle theory, see 55Rxx, 57Rxx}** | **Küllî tefâzulî hendese [Ayrıca bakınız: 51H25, 58-XX] {Alâkalı huzme nazariyesi için bakınız: 55Rxx, 57Rxx}** |  |
+| 53C05 | Connections (general theory) | İrtibatlar (umûmî nazariye) |  |
+| 53C07 | Special connections and metrics on vector bundles (Hermite-Einstein, Yang-Mills) [See also 32Q20] | Müteveccihe huzmeleri üzerinde hususî irtibatlar ve mesâfeler (Hermite-Einstein, Yang-Mills) [Ayrıca bakınız: 32Q20] | nakil |
+| 53C08 | Differential geometric aspects of gerbes and differential characters | Gerbelerin ve tefâzulî seciyelerin tefâzulî hendeseye ait cihetleri | şüpheli: "gerbe" nakledildi |
+| 53C10 | G-structures | G-bünyeleri | nakil |
+| 53C12 | Foliations (differential geometric aspects) [See also 57R30, 57R32] | Tevrîkler (yapraklanmalar) (tefâzulî hendeseye ait cihetler) [Ayrıca bakınız: 57R30, 57R32] |  |
+| 53C15 | General geometric structures on manifolds (almost complex, almost product structures, etc.) | Müteşa'ibler üzerinde umûmî hendesî bünyeler (takrîben mürekkeb, takrîben hâsıl-ı zarb bünyeleri ve emsâli) |  |
+| 53C17 | Sub-Riemannian geometry | Dûn-Riemann hendesesi | nakil |
+| 53C18 | Conformal structures on manifolds | Müteşa'ibler üzerinde zâviye-hâfız bünyeler |  |
+| 53C20 | Global Riemannian geometry, including pinching [See also 31C12, 58B20] | Küllî Riemann hendesesi, sıkıştırma (inhinâ kıstırma) dahil [Ayrıca bakınız: 31C12, 58B20] | nakil |
+| 53C21 | Methods of global Riemannian geometry, including PDE methods; curvature restrictions [See also 58J60] | Küllî Riemann hendesesinin usulleri, kısmî tefâzulî muâdele usulleri dahil; inhinâ kayıtları [Ayrıca bakınız: 58J60] | nakil |
+| 53C22 | Geodesics in global differential geometry [See also 58E10] | Küllî tefâzulî hendesede mesâfe-i aksarlar (jeodezikler) [Ayrıca bakınız: 58E10] |  |
+| 53C23 | Global geometric and topological methods (à la Gromov); differential geometric analysis on metric spaces | Küllî hendesî ve vaz'î usuller (Gromov tarzında); mesâfeli fezâlar üzerinde tefâzulî hendesî tahlîl | nakil |
+| 53C24 | Rigidity results | Sertlik (rijitlik) neticeleri |  |
+| 53C25 | Special Riemannian manifolds (Einstein, Sasakian, etc.) | Hususî Riemann müteşa'ibleri (Einstein, Sasaki ve emsâli) | nakil |
+| 53C26 | Hyper-Kähler and quaternionic Kähler geometry, “special” geometry | Hiper-Kähler ve kuaterniyonlu Kähler hendesesi, "hususî" hendese | nakil |
+| 53C27 | Spin and Spinc geometry | Spin ve Spin^c hendesesi | nakil |
+| 53C28 | Twistor methods in differential geometry [See also 32L25] | Tefâzulî hendesede twistor usulleri [Ayrıca bakınız: 32L25] | nakil |
+| 53C29 | Issues of holonomy in differential geometry | Tefâzulî hendesede holonomi meseleleri | nakil |
+| 53C30 | Differential geometry of homogeneous manifolds [See also 14M15, 14M17, 32M10, 57T15] | Mütecânis müteşa'iblerin tefâzulî hendesesi [Ayrıca bakınız: 14M15, 14M17, 32M10, 57T15] |  |
+| 53C35 | Differential geometry of symmetric spaces [See also 32M15, 57T15] | Mütenâzır fezâların tefâzulî hendesesi [Ayrıca bakınız: 32M15, 57T15] |  |
+| 53C38 | Calibrations and calibrated geometries | Ayarlar (kalibrasyonlar) ve ayarlanmış hendeseler |  |
+| 53C40 | Global submanifolds [See also 53B25] | Küllî alt müteşa'ibler [Ayrıca bakınız: 53B25] |  |
+| 53C42 | Differential geometry of immersions (minimal, prescribed curvature, tight, etc.) [See also 49Q05, 49Q10, 53A10, 57R40, 57R42] | Daldırmaların (inğımâsların) tefâzulî hendesesi (asgarî, inhinâsı önceden tayin edilmiş, sıkı ve emsâli) [Ayrıca bakınız: 49Q05, 49Q10, 53A10, 57R40, 57R42] |  |
+| 53C43 | Differential geometric aspects of harmonic maps [See also 58E20] | Te'lîfî tatbîklerin tefâzulî hendeseye ait cihetleri [Ayrıca bakınız: 58E20] |  |
+| 53C45 | Global surface theory (convex surfaces à la A. D. Aleksandrov) | Küllî sath nazariyesi (A. D. Aleksandrov tarzında muhaddeb sathlar) | nakil |
+| 53C50 | Global differential geometry of Lorentz manifolds, manifolds with indefinite metrics | Lorentz müteşa'iblerinin, gayr-ı muayyen mesâfeli müteşa'iblerin küllî tefâzulî hendesesi | nakil |
+| 53C55 | Global differential geometry of Hermitian and Kählerian manifolds [See also 32Qxx] | Hermite ve Kähler müteşa'iblerinin küllî tefâzulî hendesesi [Ayrıca bakınız: 32Qxx] | nakil |
+| 53C56 | Other complex differential geometry [See also 32Qxx] | Sâir mürekkeb tefâzulî hendese [Ayrıca bakınız: 32Qxx] |  |
+| 53C60 | Global differential geometry of Finsler spaces and generalizations (areal metrics) [See also 58B20] | Finsler fezâlarının ve umûmîleştirmelerinin (mesâhavî mesâfeler) küllî tefâzulî hendesesi [Ayrıca bakınız: 58B20] | nakil |
+| 53C65 | Integral geometry [See also 52A22, 60D05]; differential forms, currents, etc. [See mainly 58Axx] | Tamâmî hendese [Ayrıca bakınız: 52A22, 60D05]; tefâzulî şekiller, cereyanlar (akımlar) ve emsâli [Bilhassa bakınız: 58Axx] |  |
+| 53C70 | Direct methods (G-spaces of Busemann, etc.) | Doğrudan usuller (Busemann'ın G-fezâları ve emsâli) | nakil |
+| 53C75 | Geometric orders, order geometry [See also 51Lxx] | Hendesî tertipler, tertip hendesesi [Ayrıca bakınız: 51Lxx] |  |
+| 53C80 | Applications of global differential geometry to the sciences | Küllî tefâzulî hendesenin ilimlere tatbîkleri |  |
 | 53C99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **53Dxx** | **Symplectic geometry, contact geometry [See also 37Jxx, 70Gxx, 70Hxx]** | **** |  |
-| 53D05 | Symplectic manifolds (general theory) |  |  |
-| 53D10 | Contact manifolds (general theory) |  |  |
-| 53D12 | Lagrangian submanifolds; Maslov index |  |  |
-| 53D15 | Almost contact and almost symplectic manifolds |  |  |
-| 53D17 | Poisson manifolds; Poisson groupoids and algebroids |  |  |
-| 53D18 | Generalized geometries (à la Hitchin) |  |  |
-| 53D20 | Momentum maps; symplectic reduction |  |  |
-| 53D22 | Canonical transformations in symplectic and contact geometry |  |  |
-| 53D25 | Geodesic flows in symplectic geometry and contact geometry |  |  |
-| 53D30 | Symplectic structures of moduli spaces |  |  |
-| 53D35 | Global theory of symplectic and contact manifolds [See also 57Rxx] |  |  |
-| 53D37 | Symplectic aspects of mirror symmetry, homological mirror symmetry, and Fukaya category [See also 14J33] |  |  |
-| 53D40 | Symplectic aspects of Floer homology and cohomology |  |  |
-| 53D42 | Symplectic field theory; contact homology |  |  |
-| 53D45 | Gromov-Witten invariants, quantum cohomology, Frobenius manifolds [See also 14N35] |  |  |
-| 53D50 | Geometric quantization |  |  |
-| 53D55 | Deformation quantization, star products |  |  |
+| **53Dxx** | **Symplectic geometry, contact geometry [See also 37Jxx, 70Gxx, 70Hxx]** | **Simplektik hendese, temas hendesesi [Ayrıca bakınız: 37Jxx, 70Gxx, 70Hxx]** |  |
+| 53D05 | Symplectic manifolds (general theory) | Simplektik müteşa'ibler (umûmî nazariye) | şüpheli: "symplectic" Yunanca asıllı ıstılah olarak nakledildi |
+| 53D10 | Contact manifolds (general theory) | Temas müteşa'ibleri (umûmî nazariye) |  |
+| 53D12 | Lagrangian submanifolds; Maslov index | Lagrange alt müteşa'ibleri; Maslov delîli | nakil |
+| 53D15 | Almost contact and almost symplectic manifolds | Takrîben temas ve takrîben simplektik müteşa'ibler |  |
+| 53D17 | Poisson manifolds; Poisson groupoids and algebroids | Poisson müteşa'ibleri; Poisson zümremsileri ve cebir-vârîleri (algebroidler) | nakil |
+| 53D18 | Generalized geometries (à la Hitchin) | Teşmîl edilmiş hendeseler (Hitchin tarzında) | nakil |
+| 53D20 | Momentum maps; symplectic reduction | Kemmiyet-i hareket (momentum) tatbîkleri; simplektik tenzîl |  |
+| 53D22 | Canonical transformations in symplectic and contact geometry | Simplektik ve temas hendesesinde kanonik tahvîller |  |
+| 53D25 | Geodesic flows in symplectic geometry and contact geometry | Simplektik hendesede ve temas hendesesinde mesâfe-i aksar cereyanları |  |
+| 53D30 | Symplectic structures of moduli spaces | Modül fezâlarının simplektik bünyeleri |  |
+| 53D35 | Global theory of symplectic and contact manifolds [See also 57Rxx] | Simplektik ve temas müteşa'iblerinin küllî nazariyesi [Ayrıca bakınız: 57Rxx] |  |
+| 53D37 | Symplectic aspects of mirror symmetry, homological mirror symmetry, and Fukaya category [See also 14J33] | Âyine tenâzurunun, tecânüsî âyine tenâzurunun ve Fukaya makûlesinin simplektik cihetleri [Ayrıca bakınız: 14J33] | nakil |
+| 53D40 | Symplectic aspects of Floer homology and cohomology | Floer tecânüsünün ve mukābil-tecânüsünün simplektik cihetleri | nakil |
+| 53D42 | Symplectic field theory; contact homology | Simplektik sahâ nazariyesi; temas tecânüsü |  |
+| 53D45 | Gromov-Witten invariants, quantum cohomology, Frobenius manifolds [See also 14N35] | Gromov-Witten lâyetegayyerleri, kuantum mukābil-tecânüsü, Frobenius müteşa'ibleri [Ayrıca bakınız: 14N35] | nakil |
+| 53D50 | Geometric quantization | Hendesî kuantumlaştırma |  |
+| 53D55 | Deformation quantization, star products | Tağyîr-i şekil (deformasyon) kuantumlaştırması, yıldız hâsıl-ı zarbları |  |
 | 53D99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **53Exx** | **Geometric evolution equations** | **** |  |
-| 53E10 | Flows related to mean curvature |  |  |
-| 53E20 | Ricci flows |  |  |
-| 53E30 | Flows related to complex manifolds (e.g., Kähler-Ricci flows, Chern-Ricci flows) |  |  |
-| 53E40 | Higher-order geometric flows |  |  |
-| 53E50 | Flows related to symplectic and contact structures |  |  |
+| **53Exx** | **Geometric evolution equations** | **Hendesî tekâmül muâdeleleri** |  |
+| 53E10 | Flows related to mean curvature | Vasatî inhinâ ile alâkalı cereyanlar |  |
+| 53E20 | Ricci flows | Ricci cereyanları | nakil |
+| 53E30 | Flows related to complex manifolds (e.g., Kähler-Ricci flows, Chern-Ricci flows) | Mürekkeb müteşa'iblerle alâkalı cereyanlar (meselâ Kähler-Ricci cereyanları, Chern-Ricci cereyanları) | nakil |
+| 53E40 | Higher-order geometric flows | Yüksek mertebeden hendesî cereyanlar |  |
+| 53E50 | Flows related to symplectic and contact structures | Simplektik ve temas bünyeleriyle alâkalı cereyanlar |  |
 | 53E99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **53Zxx** | **Applications of differential geometry to sciences and engineering** | **** |  |
-| 53Z05 | Applications of differential geometry to physics |  |  |
-| 53Z10 | Applications of differential geometry to biology |  |  |
-| 53Z15 | Applications of differential geometry to chemistry |  |  |
-| 53Z30 | Applications of differential geometry to engineering |  |  |
-| 53Z50 | Applications of differential geometry to data and computer science |  |  |
+| **53Zxx** | **Applications of differential geometry to sciences and engineering** | **Tefâzulî hendesenin ilimlere ve mühendisliğe tatbîkleri** |  |
+| 53Z05 | Applications of differential geometry to physics | Tefâzulî hendesenin hikmet-i tabîiyyeye tatbîkleri |  |
+| 53Z10 | Applications of differential geometry to biology | Tefâzulî hendesenin hayatiyyâta tatbîkleri |  |
+| 53Z15 | Applications of differential geometry to chemistry | Tefâzulî hendesenin kimyaya tatbîkleri |  |
+| 53Z30 | Applications of differential geometry to engineering | Tefâzulî hendesenin mühendisliğe tatbîkleri |  |
+| 53Z50 | Applications of differential geometry to data and computer science | Tefâzulî hendesenin verilere ve hâsibât ilmine tatbîkleri |  |
 | 53Z99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
 ## 54-XX — General topology {For the topology of manifolds of all dimensions, see 57Nxx}
