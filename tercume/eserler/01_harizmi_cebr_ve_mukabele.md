@@ -258,4 +258,190 @@ Yüz ve bir mal eksik yirmi cezrin, elli ve on cezr eksik iki mala eklenmesine g
 
 Sözle aydınlatma pek kolaydır. Bilirsin ki elinde yüz ve bir mal eksik yirmi cezir vardır. Buna elli ve on cezir eklersen, yüz elli ve bir mal eksik on cezir olur. Bu nâkıs on cezrin sebebi şudur ki nâkıs yirmi cezirden zâid on cezir mukābele ile çıkarılmıştır. Bu yapılınca geriye yüz elli ve bir mal eksik on cezir kalır. Yüze bir mal bağlıdır. Bu yüz ve maldan elliye bağlı nâkıs iki malı çıkarırsan, bir mal öbürü sebebiyle ortadan kalkar ve bâkî yüz elli eksik bir mal ve eksik on cezir olur. İzah etmek istediğimiz bu idi.
 
-<!-- HARIZMI-KISIM-1-SONU -->
+**[35]**
+
+## Altı mesele babı
+
+Hesap bablarından ve onun muhtelif nevîlerinden evvel, bu eserin başında ele alınan altı hâlin misalleri olarak şimdi altı mesele getireceğim. Bu hâllerden üçünün, hal edilmeleri için cezirlerin yarılanmasını gerektirmediğini gösterdim; cebr ve mukābele ile hesabın seni dâimâ zarurî olarak bu hâllerden birine götürmesi gerektiğini de zikrettim. Şimdi bu meseleleri ekliyorum; bunlar mevzuu anlayışa yaklaştırmaya, kavranışını kolaylaştırmaya ve delilleri daha açık kılmaya yarayacaktır.
+
+### Birinci mesele
+
+Onu iki parçaya ayırdım; iki parçadan birini öbürüyle çarptım; bundan sonra ikisinden birini kendisiyle çarptım ve kendisiyle çarpımın hâsılı, parçalardan birinin öbürüyle çarpımının dört katı kadar oldu.
+
+Hesap: Parçalardan birini şey, öbürünü on eksik şey farz et; şeyi
+
+**[36]** on eksik şey ile çarparsın; on şey eksik bir mal olur. Sonra onu dört ile çarp, çünkü misal "dört katı kadar" der. Netice, parçalardan birinin öbürüyle çarpımının dört katı olur. Bu, kırk şey eksik dört maldır. Bundan sonra şeyi şeyle, yâni parçalardan birini kendisiyle çarparsın. Bu bir maldır ki kırk şey eksik dört mala müsâvîdir. Şimdi onu dört mal ile cebret (tamamla) ve onları bir mala ekle. O vakit muâdele şudur: kırk şey beş mala müsâvîdir; ve bir mal sekiz cezre, yâni altmış dörde müsâvî olur; bunun cezri sekizdir ve bu, iki parçadan biridir, yâni kendisiyle çarpılacak olan. Ondan bâkî ikidir ve bu öbür parçadır. Böylece sual seni altı hâlden birine, yâni "mallar cezirlere müsâvîdir" hâline götürür. Bunu dikkate al.
+
+### İkinci mesele
+
+Onu iki parçaya ayırdım: parçaların her birini kendisiyle çarptım ve sonra onu kendisiyle: onun kendisiyle çarpımının hâsılı, iki parçadan birinin kendisiyle çarpılıp sonra iki ve dokuzda yedi ile çarpılmasına; yahut öbürünün kendisiyle çarpılıp sonra altı ve dörtte bir ile çarpılmasına müsâvîdir.
+
+**[37]** Hesap: Parçalardan birini şey, öbürünü on eksik şey farz et. Şeyi kendisiyle çarparsın, bir maldır; sonra iki ve dokuzda yedi ile; bu onu iki mal ve bir malın dokuzda yedisi yapar. Sonra onu onla çarparsın; yüzdür ki iki mal ve bir malın dokuzda yedisine müsâvî olmalıdır. Onu, yirmi beşte dokuza bölmek suretiyle bir mala irca et; bu onun beşte biri ve beşte birinin beşte dördüdür; şimdi yüzün de beşte birini ve beşte birinin beşte dördünü al; bu otuz altıdır ki bir mala müsâvîdir. Cezrini al, altıdır. Bu iki parçadan biridir; buna göre öbürü dörttür. Bu sual seni o hâlde altı hâlden birine, yâni "mallar adetlere müsâvîdir" hâline götürür.
+
+### Üçüncü mesele
+
+Onu iki parçaya ayırdım. Sonra birini öbürüne böldüm ve bölüm dört oldu.
+
+Hesap: İki parçadan birini şey, öbürünü on eksik şey farz et. Sonra dört elde edilsin diye on eksik şeyi şeye bölersin. Bilirsin ki bölümü bölenle çarparsan, bölünen miktar geri gelir.
+
+**[38]** Bu sualde bölüm dört ve bölen şeydir. O hâlde dördü şeyle çarp; netice dört şeydir ki bölünecek miktara, yâni on eksik şeye müsâvîdir. Şimdi onu şeyle cebret ve şeyi dört şeye ekle. O vakit on'a müsâvî beş şeyimiz olur; dolayısıyla bir şey ikiye müsâvîdir ve bu, iki parçadan biridir. Bu sual seni altı hâlden birine, yâni "cezirler adetlere müsâvîdir" hâline götürür.
+
+### Dördüncü mesele
+
+Şeyin üçte biri ve bir dirhemi, şeyin dörtte biri ve bir dirhem ile çarptım ve hâsıl yirmi oldu.
+
+Hesap: Şeyin üçte birini şeyin dörtte biriyle çarparsın; bir malın altıda birinin yarısıdır. Bundan başka bir dirhemi şeyin üçte biriyle çarparsın, şeyin üçte biridir; bir dirhemi şeyin dörtte biriyle, şeyin dörtte biridir; bir dirhemi bir dirhemle, bir dirhemdir. Bunun neticesi şudur: bir malın altıda birinin yarısı, şeyin üçte biri, şeyin dörtte biri ve bir dirhem yirmi dirheme müsâvîdir. Şimdi bir dirhemi
+
+**[39]** bu yirmi dirhemden çıkar; geriye on dokuz dirhem kalır ki bir malın altıda birinin yarısına, şeyin üçte birine ve şeyin dörtte birine müsâvîdir. Şimdi malını tam bir mal yap: bunu elindeki her şeyi on iki ile çarparak yaparsın. Böylece iki yüz yirmi sekiz dirheme müsâvî bir mal ve yedi cezrin olur. Cezirlerin adedini yarıla ve kendisiyle çarp; on iki ve dörtte birdir. Bunu adetlere, yâni iki yüz yirmi sekize ekle; mecmû iki yüz kırk ve dörtte birdir. Bunun cezrini al; on beş buçuktur. Bundan cezirlerin yarısını, yâni üç buçuğu çıkar; geriye on iki kalır ki aranan maldır. Bu sual seni hâllerden birine, yâni "mallar ve cezirler adetlere müsâvîdir" hâline götürür. [Mütercim kaydı 6]
+
+### Beşinci mesele
+
+Onu iki parçaya ayırdım; sonra her birini kendisiyle çarptım ve hâsılları topladığımda mecmû elli sekiz dirhem oldu.
+
+Hesap: İki parçadan birini şey, öbürünü on eksik şey farz et. On eksik şeyi kendisiyle çarp; yüz ve bir mal eksik yirmi şeydir. Sonra şeyi şeyle çarp;
+
+**[40]** bir maldır. İkisini topla. Mecmû yüz artı iki mal eksik yirmi şeydir ki elli sekiz dirheme müsâvîdir. Şimdi nâkıs yirmi şeyi yüz ve iki maldan al ve elli sekize ekle; o vakit yüz artı iki mal, elli sekiz dirhem ve yirmi şeye müsâvî olur. Elindekinin hepsinin yarısını alarak bunu bir mala irca et. O vakit şöyle olur: elli dirhem ve bir mal, yirmi dokuz dirhem ve on şeye müsâvîdir. Sonra elliden yirmi dokuzu alarak bunu mukābele et; geriye yirmi bir ve bir mal kalır ki on şeye müsâvîdir. Cezirlerin adedini yarıla, beştir; bunu kendisiyle çarp, yirmi beştir; bundan mala bağlı olan yirmi biri çıkar, bâkî dörttür. Cezrini al, ikidir. Bunu cezirlerin yarısından, yâni beşten çıkar, geriye üç kalır. Bu parçalardan biridir; öbürü yedidir. Bu sual seni altı hâlden birine, yâni "mallar ve adetler cezirlere müsâvîdir" hâline götürür.
+
+### Altıncı mesele
+
+Bir cezrin üçte birini bir cezrin dörtte biriyle çarptım ve hâsıl cezre ve yirmi dört dirheme müsâvîdir.
+
+**[41]** Hesap: Cezre şey de; o vakit şeyin üçte biri şeyin dörtte biriyle çarpılır; bu malın altıda birinin yarısıdır ve şeye ve yirmi dört dirheme müsâvîdir. Malını tam bir mal yapmak için malın altıda birinin bu yarısını on iki ile çarp; şeyi de on iki ile çarp ki on iki şey verir; yirmi dördü de on iki ile: hepsinin hâsılı iki yüz seksen sekiz dirhem ve on iki cezir olur ki bir mala müsâvîdir. Cezirlerin yarısı altıdır. Bunu kendisiyle çarp ve iki yüz seksen sekize ekle, üç yüz yirmi dört olur. Bundan cezri al, on sekizdir; bunu cezirlerin yarısına, yâni altıya ekle; mecmû yirmi dörttür ve aranan mal budur. Bu sual seni altı hâlden birine, yâni "cezirler ve adetler mallara müsâvîdir" hâline götürür. [Mütercim kaydı 6]
+
+## Muhtelif meseleler babı
+
+Biri sana şöyle bir sual sorarsa: "Onu iki parçaya ayırdım ve bunlardan birini öbürüyle çarpınca netice yirmi bir oldu"; o vakit
+
+**[42]** bilirsin ki iki parçadan biri şey, öbürü on eksik şeydir. O hâlde şeyi on eksik şeyle çarp; o vakit yirmi bire müsâvî olan on şey eksik bir malın olur. Malı on şeyden ayır ve yirmi bire ekle. O vakit yirmi bir dirhem ve bir mala müsâvî on şeyin olur. Cezirlerin yarısını al ve kalan beşi kendisiyle çarp; yirmi beştir. Bundan mala bağlı olan yirmi biri çıkar; bâkî dörttür. Cezrini al, ikidir. Bunu cezirlerin yarısından, yâni beşten çıkar; geriye üç kalır ki iki parçadan biridir. Yahut istersen dörtün cezrini cezirlerin yarısına ekleyebilirsin; mecmû yedidir ki bu da parçalardan biridir. Bu, toplama ve çıkarma ile hal edilebilen meselelerden biridir.
+
+Sual şöyle olursa: "Onu iki parçaya ayırdım ve her parçayı kendisiyle çarptıktan sonra küçüğü büyükten çıkardım ve bâkî kırk oldu"; o vakit hesap şudur: on eksik şeyi kendisiyle çarparsın, yüz artı bir mal eksik yirmi şeydir; şeyi de
+
+**[43]** şeyle çarparsın, bir maldır. Bunu yüz ve bir mal eksik yirmi şeyden çıkar; kırk dirheme müsâvî olan yüz eksik yirmi şeyin olur. Şimdi yirmi şeyi yüzden ayır ve kırka ekle; o vakit yirmi şey ve kırk dirheme müsâvî bir yüzün olur. Şimdi yüzden kırkı çıkar; geriye yirmi şeye müsâvî altmış dirhem kalır; dolayısıyla bir şey üçe müsâvîdir ki iki parçadan biridir.
+
+Sual şöyle olursa: "Onu iki parçaya ayırdım ve her parçayı kendisiyle çarptıktan sonra ikisini bir araya koydum ve onlara iki parçanın çarpmadan evvelki farkını ekledim ve bütün bunun miktarı elli dört oldu"; o vakit hesap şudur: on eksik şeyi kendisiyle çarparsın; yüz ve bir mal eksik yirmi şeydir. Sonra onun öbür şeyini de kendisiyle çarp; bir maldır. Bunu topla, yüz artı iki mal eksik yirmi şey olur. Çarpmadan evvelki iki parçanın farkının onlara ekleneceği söylenmişti. O hâlde şöyle dersin: aralarındaki fark on eksik iki şeydir.
+
+**[44]** Netice yüz on ve iki mal eksik yirmi iki şeydir ki elli dört dirheme müsâvîdir. Bunu cebr ve mukābele ettikten sonra şöyle diyebilirsin: yüz on dirhem ve iki mal, elli dört dirhem ve yirmi iki şeye müsâvîdir. Şimdi elindekinin hepsinin yarısını alarak iki malı bir mala irca et. Böylece elli beş dirhem ve bir mal, yirmi yedi dirhem ve on bir şeye müsâvî olur. Elli beşten yirmi yediyi çıkar, geriye yirmi sekiz dirhem ve bir mal kalır ki on bir şeye müsâvîdir. Şimdi şeyleri yarıla, beş buçuk olur; bunu kendisiyle çarp, otuz ve dörtte birdir. Bundan malla birleşmiş yirmi sekizi çıkar, bâkî iki ve dörtte birdir. Cezrini al, bir buçuktur. Bunu cezirlerin yarısından çıkar, geriye dört kalır ki iki parçadan biridir.
+
+Biri şöyle derse: "Onu iki parçaya ayırdım; birinciyi ikinciye ve ikinciyi birinciye böldüm ve bölümlerin mecmûu iki dirhem ve altıda bir oldu"; o vakit hesap şudur: her parçayı kendisiyle çarpar ve hâsılları toplarsan, mecmûları parçalardan birinin
+
+**[45]** öbürüyle ve yine iki ve altıda bir olan bölümle çarpımına müsâvîdir. O hâlde on eksik şeyi kendisiyle çarp; yüz ve bir mal eksik yirmi şeydir. Şeyi şeyle çarp; bir maldır. Bunu topla; mecmû yüz artı iki mal eksik yirmi şeydir ki şeyin on eksik şeyle çarpımına, yâni on şey eksik bir malın, iki parçanın bölünmesinden doğan bölümlerin mecmûu olan iki ve altıda bir ile çarpımına müsâvîdir. O hâlde yirmi bir şey ve bir şeyin üçte ikisi eksik iki mal ve altıda bir, yüz artı iki mal eksik yirmi şeye müsâvî olur. İki mal ve altıda biri yüz artı iki mal eksik yirmi şeye ekleyerek bunu cebret; yüz artı iki maldaki nâkıs yirmi şeyi de yirmi bir şey ve bir şeyin üçte ikisine ekle. O vakit yüz artı dört mal ve bir malın altıda biri, kırk bir şey ve bir şeyin üçte ikisine müsâvî olur. Şimdi bunu bir mala irca et. Bilirsin ki dört mal ve altıda birden bir mal, beşte bir ve beşte birin beşte biri alınarak elde edilir. O hâlde elindekinin hepsinin beşte birini ve beşte birinin beşte birini al. O vakit yirmi dört ve bir mal on cezre müsâvî olur; çünkü on, kırk bir şey ve bir şeyin üçte ikisinin beşte biri ve beşte birinin beşte biridir. Şimdi cezirleri yarıla; beş verir. Bunu
+
+**[46]** kendisiyle çarp; yirmi beştir. Bundan malla bağlı yirmi dördü çıkar; bâkî birdir. Cezrini al; birdir. Bunu cezirlerin yarısından, yâni beşten çıkar. Geriye dört kalır ki iki parçadan biridir. [Mütercim kaydı 7]
+
+Dikkat et ki herhangi iki miktar birincisi ikincisine ve ikincisi birincisine bölündüğü her hâlde, bir bölmenin bölümünü öbürününkiyle çarparsan hâsıl dâimâ birdir.
+
+Biri şöyle derse: "Onu iki parçaya ayırırsın; iki parçadan birini beş ile çarp ve öbürüne böl; sonra bölümün yarısını al ve bunu bir parçanın beşle çarpımına ekle; mecmû elli dirhemdir"; o vakit hesap şudur: şeyi al ve beşle çarp. Bu şimdi onun bâkîsine, yâni on eksik şeye bölünecek ve bölümün yarısı alınacaktır.
+
+Bilirsin ki beş şeyi on eksik şeye bölüp bölümün yarısını alırsan netice,
+
+**[47]** beş şeyin yarısını on eksik şeye bölmekle aynıdır. O hâlde beş şeyin yarısını al; iki buçuk şeydir: ve bunu on eksik şeye bölmen gerekir. Şimdi bu iki buçuk şey on eksik şeye bölününce elli eksik beş şeye müsâvî bir bölüm verir; zira sual şöyle der: bunu (bölümü) beşle çarpılmış bir parçaya ekle, mecmû elli olur. Bölümü, yâni bölmenin neticesini bölenle çarparsan bölünenin, yâni taksim edilecek sermayenin geri geldiğini zaten gördün. Şimdi bu misalde sermayen iki buçuk şeydir. O hâlde on eksik şeyi elli eksik beş şeyle çarp. O vakit beş yüz dirhem ve beş mal eksik yüz şeyin olur ki iki buçuk şeye müsâvîdir. Bunu bir mala irca et. O vakit yüz dirhem ve bir mal eksik yirmi şey olur ki şeyin yarısına müsâvîdir. Şimdi yirmi şeyi yüz dirhem ve maldan ayır ve yarım şeye ekle. O vakit yirmi buçuk şeye müsâvî yüz dirhem ve bir malın olur. Şimdi şeyleri yarıla, yarısını kendisiyle çarp, bundan yüzü çıkar, bâkînin cezrini al ve bunu cezirlerin yarısından, yâni on ve dörtte birden çıkar: bâkî sekizdir; bu da parçalardan biridir.
+
+Biri şöyle derse: "Onu iki parçaya ayırırsın: birini kendisiyle çarp; öbürünün
+
+**[48]** seksen bir katına müsâvî olur." Hesap: şöyle dersin: on eksik şey kendisiyle çarpılınca yüz artı bir mal eksik yirmi şeydir ve bu seksen bir şeye müsâvîdir. Yirmi şeyi yüz ve bir maldan ayır ve seksen bire ekle. O vakit yüz artı bir mal olur ki yüz bir cezre müsâvîdir. Cezirleri yarıla; yarısı elli buçuktur. Bunu kendisiyle çarp, iki bin beş yüz elli ve dörtte birdir. Bundan yüzü çıkar; bâkî iki bin dört yüz elli ve dörtte birdir. Bundan cezri al; kırk dokuz buçuktur. Bunu cezirlerin yarısı olan elli buçuktan çıkar. Geriye bir kalır ve bu iki parçadan biridir.
+
+Biri şöyle derse: "Buğdaydan yahut arpadan iki ölçek satın aldım, her birini belli bir fiyata. Sonra masrafları topladım ve mecmû, iki fiyatın farkının ölçeklerin farkına eklenmesine müsâvî oldu." [Mütercim kaydı 8]
+
+**[49]** Hesap: İstediğin adetleri al, zira fark etmez; meselâ dört ile altı. O vakit şöyle dersin: dördün her ölçeğini şeye aldım; buna göre dördü şeyle çarparsın ki dört şey verir; ve altıyı, her birini dördü aldığım şeyin yarısına aldım; yahut istersen o fiyatın üçte birine yahut dörtte birine yahut herhangi başka bir cüzüne, zira fark etmez. Altı ölçeği şeyin yarısına aldığını farz et; o vakit şeyin yarısını altı ile çarparsın; bu üç şey verir. Bunları dört şeye ekle; mecmû yedi şeydir ki iki miktarın farkına, yâni iki ölçeğe, artı iki fiyatın farkına, yâni şeyin yarısına müsâvî olmalıdır. O hâlde iki ve şeyin yarısına müsâvî yedi şeyin olur. Şimdi şeyin bu yarısını yedi şeyden çıkararak gider. Geriye iki dirheme müsâvî altı buçuk şey kalır; dolayısıyla bir şey bir dirhemin on üçte dördüne müsâvîdir. Altı ölçek, her biri şeyin yarısına, yâni bir dirhemin on üçte ikisine alındı. Buna göre masraflar bir dirhemin on üçte yirmi sekizine baliğ olur ve bu mecmû iki miktarın farkına, yâni
+
+**[50]** hesaptaki karşılığı on üçte yirmi altı olan iki ölçeğe, iki fiyatın farkı olan on üçte ikinin eklenmesine müsâvîdir: her iki fark birlikte yine yirmi sekiz cüze müsâvîdir.
+
+Şöyle derse: "Farkı iki dirhem olan iki mal (yâni iki adet) vardır. Küçüğü büyüğe böldüm ve bölüm tam yarım dirhem oldu." [Mütercim kaydı 9] İki maldan birini şey, öbürünü şey artı iki dirhem farz et. Şeyin şey artı iki dirheme bölünmesiyle yarım dirhem bölüm olarak görünür. Bölümü bölenle çarparak böldüğün sermayenin geri geldiğini zaten gördün. Bu sermaye bu hâlde şeydir. O hâlde şeyi ve iki dirhemi bölüm olan yarım dirhemle çarp; hâsıl bir şeyin yarısı artı bir dirhemdir; bu şeye müsâvîdir. Şimdi yarım şeyi
+
+**[51]** öbür yarım şey sebebiyle gider; geriye yarım şeye müsâvî bir dirhem kalır. Bunu iki misline çıkar; o vakit iki dirheme müsâvî bir şeyin olur. Dolayısıyla öbür mal dörttür.
+
+Biri şöyle derse: "Onu iki parçaya ayırdım; birini onla ve öbürünü kendisiyle çarptım ve hâsıllar aynı oldu"; o vakit hesap şudur: şeyi onla çarparsın; on şeydir. Sonra on eksik şeyi kendisiyle çarp; yüz ve bir mal eksik yirmi şeydir ki on şeye müsâvîdir. Bunu sana yukarıda izah ettiğim kaidelere göre mukābele et.
+
+Aynı şekilde şöyle derse: "Onu iki parçaya ayırdım; ikisinden birini öbürüyle çarptım ve sonra hâsılı iki parçanın çarpmadan evvelki farkına böldüm ve bu bölmenin neticesi beş ve dörtte bir oldu": hesap şöyle olur: şeyi ondan çıkarırsın; geriye on eksik şey kalır. Birini öbürüyle çarp, on şey eksik bir maldır. Bu, iki parçadan birinin öbürüyle çarpımının hâsılıdır.
+
+**[52]** Şimdi bunu iki parçanın farkına, yâni on eksik iki şeye bölersin. Bu bölmenin bölümü, ifadeye göre, beş ve dörtte birdir. O hâlde beş ve dörtte biri on eksik iki şeyle çarparsan hâsıl yukarıdaki çarpımla elde edilen miktara, yâni on şey eksik bir mala müsâvî olmalıdır. Şimdi beş ve dörtte biri on eksik iki şeyle çarp. Netice elli iki buçuk dirhem eksik on buçuk cezirdir ki on cezr eksik bir mala müsâvîdir. [Mütercim kaydı 10] Şimdi on buçuk cezri elli iki dirhemden ayır ve on cezr eksik bir mala ekle; aynı zamanda bu malı onlardan ayır ve elli iki buçuk dirheme ekle. Böylece elli iki buçuk dirheme ve bir mala müsâvî yirmi buçuk cezir bulursun. Şimdi bu kitabın başında izah edilen kaidelere uygun olarak onu irca etmeye devam et.
+
+Sual şöyle olursa: "Bir mal vardır ki beşte birinin üçte ikisi cezrinin yedide birine müsâvîdir"; o vakit mal bir cezir ve bir cezrin yedide birinin yarısına müsâvîdir; ve cezr malın on beşte on dördünden müteşekkildir. Hesap şudur:
+
+**[53]** malın beşte birinin üçte ikisini, mal tamamlansın diye yedi buçukla çarparsın. Elinde olanı, yâni cezrinin yedide birini de aynısıyla çarp. Netice şu olur ki mal bir cezre ve cezrin yedide birinin yarısına müsâvîdir; malın cezri bir ve yedide birin yarısıdır; ve mal bir ve bir dirhemin yüz doksan altıda yirmi dokuzudur. Bunun beşte birinin üçte ikisi yüz doksan altı cüzün otuz cüzüdür. Cezrinin yedide biri de yine yüz doksan altının otuz cüzüdür.
+
+Misal şöyle olursa: "Bir malın beşte birinin dörtte üçü cezrinin beşte dördüne müsâvîdir"; o vakit hesap şudur: cezri tamamlamak için beşte dörde beşte bir eklersin. Bu o vakit yirmi cüzün üç ve dörtte üçüne, yâni malın sekizde on beşine müsâvîdir. Şimdi sekseni on beşe böl; bölüm beş ve üçte birdir. Bu malın cezridir ve malın kendisi yirmi sekiz ve dokuzda dörttür.
+
+Biri şöyle derse: "Öyle bir mal ne kadardır ki kendisinin dört katıyla çarpılınca
+
+**[54]** yirmiye baliğ olur?" [Mütercim kaydı 9] Cevap şudur: onu kendisiyle çarparsan beş olur: o hâlde beşin cezridir.
+
+Biri sana, üçte biriyle çarpılınca ona baliğ olan bir malın miktarını sorarsa, hal şudur ki kendisiyle çarpılınca otuza baliğ olur; ve dolayısıyla otuzun cezridir.
+
+Sual şöyle olursa: "Öyle bir miktar bul ki kendisinin dört katıyla çarpılınca birinci miktarın üçte birini hâsıl olarak versin"; hal şudur ki onu kendisinin on iki katıyla çarparsan miktarın kendisi yeniden görünmelidir: üçte birin yarısının yarısıdır.
+
+Sual şöyle olursa: "Bir mal ki cezriyle çarpılınca hâsıl olarak asıl malın üç katını verir"; o vakit hal şudur: cezri malın üçte biriyle çarparsan asıl mal
+
+**[55]** geri gelir; dolayısıyla cezri üç ve malın kendisi dokuz olmalıdır.
+
+Misal şöyle olursa: "Öyle bir mal bul ki dört cezri üç cezriyle çarpılınca malı kırk dört dirhem fazlasıyla geri getirsin"; o vakit hal şudur: dört cezri üç cezirle çarparsın ki on iki mal verir; bu bir mal ve kırk dört dirheme müsâvîdir. Şimdi kırk dört dirheme bağlı bir mal sebebiyle on iki maldan bir malı gider. Geriye kırk dört dirheme müsâvî on bir mal kalır. Bölmeyi yap, netice dört olur ve bu maldır.
+
+Misal şöyle olursa: "Bir mal ki dört cezri beş cezriyle çarpılınca malın iki katını otuz altı dirhem fazlasıyla verir"; o vakit hal şudur: dört cezri beş cezirle çarparsın ki yirmi mal verir; bu iki mal ve otuz altı dirheme müsâvîdir. Öbür ikisi sebebiyle yirmiden iki malı gider. Bâkî otuz altı dirheme müsâvî on sekiz maldır. Şimdi otuz altı dirhemi on sekize böl; bölüm ikidir ve bu maldır.
+
+**[56]** Aynı şekilde sual şöyle olursa: "Bir mal; cezrini dört cezriyle çarp, hâsıl malın üç katı ve elli dirhem fazlası olur." Hesap: cezri dört cezirle çarparsın, dört maldır ki üç mal ve elli dirheme müsâvîdir. Dörtten üç malı gider; geriye elli dirheme müsâvî bir mal kalır. Ellinin bir cezri, aynısının dört cezriyle çarpılınca iki yüz verir ki malın üç katına ve elli dirhemlik bir bâkîye müsâvîdir.
+
+Misal şöyle olursa: "Bir mal ki yirmi dirheme eklenince on iki cezrine müsâvî olur"; o vakit hal şudur: şöyle dersin: bir mal ve yirmi dirhem on iki cezre müsâvîdir. Cezirleri yarıla ve kendileriyle çarp; bu otuz altı verir. Bundan yirmi dirhemi çıkar, bâkînin cezrini al ve onu cezirlerin yarısından, yâni altıdan çıkar. Bâkî malın cezridir: iki dirhemdir ve mal dörttür.
+
+Misal şöyle olursa: "Öyle bir mal bul ki üçte biri üç dirheme eklenip mecmû maldan çıkarılınca bâkî kendisiyle çarpılınca
+
+**[57]** malı geri getirsin"; o vakit hesap şudur: maldan üçte biri ve üç dirhemi çıkarırsan geriye onun üçte ikisi eksik üç dirhem kalır. Bu cezirdir. O hâlde şeyin üçte ikisi eksik üç dirhemi kendisiyle çarp. Şöyle dersin: üçte ikinin üçte ikiyle çarpımı bir malın dokuzda dördüdür; eksik üçte ikinin üç dirhemle çarpımı iki cezirdir: ve yine üçte ikinin üç dirhemle çarpımı iki cezirdir; eksik üç dirhemin eksik üç dirhemle çarpımı dokuz dirhemdir. O hâlde bir malın dokuzda dördü ve dokuz dirhem eksik dört cezrin olur ki bir cezre müsâvîdir. Dört cezri bir cezre ekle, o vakit bir malın dokuzda dördüne ve dokuz dirheme müsâvî beş cezrin olur. Şimdi malını tamamla; yâni bir malın dokuzda dördünü iki ve dörtte bir ile çarp ki bir mal verir; dokuz dirhemi de iki ve dörtte bir ile çarp; bu yirmi ve dörtte bir verir; nihayet beş cezri iki ve dörtte bir ile çarp; bu on bir cezir ve dörtte bir verir. O hâlde on bir cezir ve dörtte bire müsâvî bir mal ve yirmi dirhem ve dörtte birin olur. Bunu cezirlerin yarılanması hakkında sana öğrettiğime göre irca et.
+
+**[58]** Misal şöyle olursa: "Öyle bir mal bul ki üçte biri dörtte biriyle çarpılınca malı geri getirsin" [Mütercim kaydı 9]; o vakit hesap şudur: şeyin üçte birini şeyin dörtte biriyle çarparsın, bu bir malın on ikide birini verir ki şeye müsâvîdir; ve mal on iki şeye müsâvîdir ki yüz kırk dördün cezridir.
+
+Misal şöyle olursa: "Bir mal ki üçte biri ve bir dirhem, dörtte biri ve iki dirhemle çarpılınca malı on üç dirhem fazlasıyla geri getirir"; o vakit hesap şudur: şeyin üçte birini şeyin dörtte biriyle çarparsın, bu bir malın altıda birinin yarısını verir; iki dirhemi şeyin üçte biriyle çarparsın, bu bir cezrin üçte ikisini verir; bir dirhemi şeyin dörtte biriyle çarpmak bir cezrin dörtte birini verir; bir dirhemi iki dirhemle çarpmak iki dirhem verir. Bu hepsi birlikte bir malın on ikide biri ve iki dirhem ve bir şeyin on ikide on biridir ki şeye ve on üç dirheme
+
+**[59]** müsâvîdir. Şimdi öbür iki dirhem sebebiyle on üçten iki dirhemi gider; bâkî on bir dirhemdir. Sonra bir cezrin on ikide on birini (öbür taraftaki) bir cezirden gider; geriye bir cezrin on ikide biri ve on bir dirhem kalır ki bir malın on ikide birine müsâvîdir. Malı tamamla: yâni onu on iki ile çarp ve elindekinin hepsine aynısını yap. Hâsıl bir maldır ki yüz otuz iki dirhem ve bir cezre müsâvîdir. Bunu sana öğrettiğime göre irca et, doğru çıkar.
+
+Misal şöyle olursa: "Bir buçuk dirhem bir kişi ile birkaç kişi arasında öyle taksim edilecek ki bir kişinin payı diğer kişilerin sayısının iki katı kadar dirhem olsun"; o vakit hesap şudur [Mütercim kaydı 11]: şöyle dersin: bir kişi ve birkaç kişi, bir ve şeydir: bu, sual "bir buçuk dirhem bir ve şeye bölünecek ve bir kişinin payı iki şeye müsâvî olacak" olmuş gibidir. O hâlde iki şeyi bir ve
+
+**[60]** şeyle çarp; iki mal ve iki şeydir ki bir buçuk dirheme müsâvîdir. Bunları bir mala irca et: yâni elindekinin hepsinin yarısını al. O hâlde şöyle dersin: bir mal ve bir şey bir dirhemin dörtte üçüne müsâvîdir. Bunu bu eserin başında sana öğrettiğime göre irca et.
+
+Misal şöyle olursa: "Bir mal; onun üçte birini, dörtte birini ve dört dirhemi gider: sonra bâkîyi kendisiyle çarparsın ve mal on iki dirhem fazlasıyla geri gelir" [Mütercim kaydı 9]: o vakit hesap şudur: şeyi alır ve ondan üçte biri ve dörtte biri çıkarırsın; geriye şeyin on ikide beşi kalır. Bundan dört dirhemi çıkar:
+
+**[61]** bâkî şeyin on ikide beşi eksik dört dirhemdir. Bunu kendisiyle çarp. Böylece beş cüz yirmi beş cüz olur; on ikiyi kendisiyle çarparsan yüz kırk dörttür. Bu o hâlde bir malın yüz kırk dörtte yirmi beşini yapar. Sonra dört dirhemi on ikide beşle iki defa çarp; bu kırk cüz verir ki her on ikisi bir cezir eder (on ikide kırk); nihayet dört dirhemin dört dirhemle çarpımı eklenecek on altı dirhem verir. On ikide kırk, çıkarılacak üç cezir ve bir cezrin üçte birine müsâvîdir. Bütün hâsıl o hâlde bir malın yüz kırk dörtte yirmi beşi ve on altı dirhem eksik üç cezir ve bir cezrin üçte biridir ki asıl mala, yâni şeye ve on iki dirheme müsâvîdir. Üç cezri ve üçte biri şeye ve on iki dirheme ekleyerek bunu cebret. Böylece dört cezir ve bir cezrin üçte biri ve on iki dirhemin olur. Mukābeleye devam et ve on iki (dirhemi) on altıdan çıkar; geriye dört dirhem ve bir malın yüz kırk dörtte yirmi beşi kalır ki dört cezir ve üçte bire müsâvîdir. Şimdi malı tamamlamak lâzımdır. Bunu elindekinin hepsini beş ve yirmi beşte on dokuz ile çarparak yapabilirsin. O hâlde bir malın yüz kırk dörtte yirmi beşini beş ve yirmi beşte on dokuz ile çarp. Bu bir mal verir. Sonra dört
+
+**[62]** dirhemi beş ve yirmi beşte on dokuz ile çarp; bu yirmi üç dirhem ve yirmi beşte bir verir. Sonra dört cezir ve üçte biri beş ve yirmi beşte on dokuz ile çarp; bu yirmi dört cezir ve bir cezrin yirmi beşte yirmi dördünü verir. Şimdi cezirlerin adedini yarıla: yarısı on iki cezir ve bir cezrin yirmi beşte on ikisidir. Bunu kendisiyle çarp. Yüz elli beş dirhem ve altı yüz yirmi beşte dört yüz altmış dokuzdur. Bundan malla bağlı yirmi üç dirhemi ve yirmi beşte biri çıkar. Bâkî yüz otuz iki ve altı yüz yirmi beşte dört yüz kırktır. Bunun cezrini al: on bir dirhem ve yirmi beşte on üçtür. Bunu cezirlerin yarısına, yâni on iki dirhem ve yirmi beşte on ikiye ekle. Mecmû yirmi dörttür. Aradığın mal budur. Ondan üçte birini, dörtte birini ve dört dirhemi çıkarıp bâkîyi kendisiyle çarptığında mal on iki dirhem fazlasıyla geri gelir.
+
+Sual şöyle olursa: "Öyle bir mal bul ki kendisinin üçte ikisiyle çarpılınca beşe baliğ olsun" [Mütercim kaydı 9]; o vakit hesap şudur: bir şeyi şeyin üçte ikisiyle
+
+**[63]** çarparsın; hâsıl bir malın üçte ikisidir ki beşe müsâvîdir. Ona yarısını ekleyerek onu tamamla ve beşe de yarısını ekle. Böylece yedi buçuğa müsâvî bir malın olur. Cezrini al; istediğin şey odur ve kendisinin üçte ikisiyle çarpılınca beşe müsâvîdir.
+
+Misal şöyle olursa: "Farkı iki dirhem olan iki mal; küçüğü büyüğe bölersin ve bölüm yarım dirheme müsâvîdir" [Mütercim kaydı 9]; o vakit hesap şudur: şeyi ve iki dirhemi bölümle, yâni yarımla çarp. Hâsıl yarım şey ve bir dirhemdir ki şeye müsâvîdir. Şimdi öbür taraftaki yarım şey sebebiyle yarım şeyi gider. Bâkî yarım şeye müsâvî bir dirhemdir. Bunu iki misline çıkar: o vakit iki dirheme müsâvî bir şeyin olur. Bu iki maldan biridir ve öbürü dörttür. [Mütercim kaydı 12]
+
+Misal: "Bir dirhemi belli sayıda adam arasında taksim edersin ki bu sayı şeydir. Şimdi onlara bir adam daha eklersin ve bir dirhemi yine aralarında taksim edersin; o vakit her birinin payı ilk seferdekinden bir dirhemin altıda biri kadar azdır." Hesap: ilk adam sayısını, yâni şeyi, her birinin payının farkıyla çarparsın. Sonra hâsılı birinci ve ikinci adam sayısıyla çarpar ve hâsılı
+
+**[64]** bu iki sayının farkına bölersin. Böylece taksim edilecek mecmûu elde edersin. O hâlde ilk adam sayısını, yâni şeyi, payların farkı olan altıda birle çarp; bu bir cezrin altıda birini verir. Sonra bunu asıl adam sayısıyla ve eklenen adamınkiyle, yâni şey artı bir ile çarp. Hâsıl bir malın altıda biri ve bir cezrin altıda biridir, bir dirheme bölünmüş olarak; ve bu bir dirheme müsâvîdir. Elindeki malı altı ile çarparak tamamla. O vakit altı dirheme müsâvî bir mal ve bir cezrin olur. Cezri yarıla ve yarısını kendisiyle çarp, dörtte birdir. Bunu altıya ekle; mecmûun cezrini al ve ondan kendisiyle çarptığın cezrin yarısını, yâni yarımı çıkar. Bâkî ilk adam sayısıdır; bu misalde ikidir.
+
+Misal şöyle olursa: "Öyle bir mal bul ki kendisinin üçte ikisiyle çarpılınca beşe baliğ olsun" [Mütercim kaydı 9]: o vakit hesap şudur: onu kendisiyle çarparsan yedi buçuk verir. O hâlde şöyle de:
+
+**[65]** yedi buçuğun cezrinin yedi buçuğun cezrinin üçte ikisiyle çarpımıdır. Sonra üçte ikiyi üçte ikiyle çarp, dokuzda dörttür; dokuzda dördün yedi buçukla çarpımı üç ve üçte birdir. Üç ve üçte birin cezri yedi buçuğun cezrinin üçte ikisidir. Üç ve üçte biri yedi buçukla çarp; hâsıl yirmi beştir ve cezri beştir.
+
+Misal şöyle olursa: "Bir mal, üç cezriyle çarpılınca asıl malın beş katına müsâvîdir"; o vakit bu, "bir mal ki cezriyle çarpılınca birinci malın kendisine ve üçte ikisine müsâvîdir" denmiş gibidir. O vakit malın cezri bir ve üçte ikidir ve mal iki dirhem ve dokuzda yedidir.
+
+Misal şöyle olursa: "Bir maldan üçte biri gider, sonra bâkîyi birinci malın üç cezriyle çarp ve birinci mal geri gelir." Hesap: birinci malı, ondan üçte biri gidermeden evvel aynısının üç cezriyle çarparsan [Mütercim kaydı 13], bir buçuk mal olur; zira ifadeye göre üçte ikisinin üç
+
+**[66]** cezirle çarpımı bir mal verir; ve dolayısıyla onun tamamının üç cezriyle çarpımı bir buçuk mal verir. Bu tam mal bir cezirle çarpılınca yarım mal verir; o hâlde malın cezri yarım, mal dörtte bir, malın üçte ikisi altıda bir ve malın üç cezri bir buçuk olmalıdır. Altıda biri bir buçukla çarparsan hâsıl dörtte birdir ki maldır.
+
+Misal: "Bir mal; ondan aynısının dört cezrini çıkarırsın, sonra bâkînin üçte birini alırsın; bu dört cezre müsâvîdir." Mal iki yüz elli altıdır. Hesap: bilirsin ki bâkînin üçte biri dört cezre müsâvîdir; dolayısıyla bâkînin tamamı on iki cezr olmalıdır; buna dört cezri ekle; mecmû on altıdır ki malın cezridir.
+
+Misal: "Bir mal; ondan bir cezri gidersin; ve bu cezre bâkînin bir cezrini eklersen mecmû iki dirhemdir." O vakit bu bir malın
+
+**[67]** cezridir ki aynı malın, eksik bir cezir, cezrine eklenince iki dirheme müsâvîdir. Bundan malın bir cezrini çıkar, iki dirhemden de malın bir cezrini çıkar. O vakit iki dirhem eksik bir cezrin kendisiyle çarpımı dört dirhem ve bir mal eksik dört cezirdir ve bu bir mal eksik bir cezre müsâvîdir. Bunu irca et ve bir mal ve dört dirhemin bir mal ve üç cezre müsâvî olduğunu bulursun. Malı malla gider; geriye dört dirheme müsâvî üç cezir kalır; dolayısıyla bir cezir bir dirhem ve üçte bire müsâvîdir. Bu malın cezridir ve mal bir dirhem ve bir dirhemin dokuzda yedisidir.
+
+Misal: "Bir maldan üç cezri çıkar, sonra bâkîyi kendisiyle çarp ve mal geri gelir." Bu ifadeden bilirsin ki bâkî de bir cezir olmalıdır; ve malın böyle dört cezirden müteşekkil olduğunu; dolayısıyla on altı olması gerektiğini.
+
+**[68]**
+
+## Muâmelât babı
+
+Bilirsin ki insanların bütün ticarî muâmeleleri, alım satım, mübadele ve kira gibi, dâimâ iki mefhum ve dört adet ihtiva eder ki soran tarafından söylenir; yâni *mikdar* (ölçü) ve *si'r* (birim fiyat), *semen* (miktar) ve *müsemmen* (mecmû). [Mütercim kaydı 14] Ölçüyü ifade eden adet mecmûu ifade eden adetle mütekabil nisbettedir ve birim fiyatın adedi miktarınkiyle mütekabil nisbettedir. Bu dört adetten üçü dâimâ malûm, biri meçhuldür ve bu, soran kişi *ne kadar?* dediğinde kastedilendir ve sualin maksadıdır. Böyle misallerde hesap şudur: verilen üç adedi yoklarsın; ikisi zarurî olarak birbiriyle mütekabil nisbette olmalıdır. Sonra bu iki mütekabil adedi birbiriyle çarparsın ve hâsılı, mütekabili meçhul olan üçüncü verilen adede bölersin. Bu bölmenin bölümü sorulan meçhul adettir ve bölenle mütekabil nisbettedir.
+
+Misaller. Birinci hâl için: sana "altıya on, dörde ne kadar?" denirse, o vakit on ölçüdür;
+
+**[69]** altı birim fiyattır; *ne kadar* ifadesi miktarın meçhul adedini anlatır; ve dört mecmûun adedidir. Ölçünün adedi olan on, mecmûun adedi olan dört ile mütekabil nisbettedir. O hâlde onu dört ile, yâni iki malûm mütekabil adedi birbiriyle çarp; hâsıl kırktır. Bunu öbür malûm adede, yâni birim fiyatınkine, yâni altıya böl. Bölüm altı ve üçte ikidir; bu, sualin "ne kadar" lafzında kastedilen meçhul adettir; miktardır ve birim fiyat olan altı ile mütekabil nisbettedir.
+
+İkinci hâl için: birinin şu suali sorduğunu farz et: "Sekize on; dört için mecmû ne olmalıdır?" Bu bazen şöyle de ifade edilir: "Bunların dördünün fiyatı ne olmalıdır?" On ölçünün adedidir ve ifadenin *ne kadar* lafzında gizli olan mecmûun meçhul adediyle mütekabil nisbettedir. Sekiz birim fiyatın adedidir ve bu, miktarın malûm adedi olan dört ile mütekabil nisbettedir. Şimdi iki malûm mütekabil adedi birbiriyle, yâni dördü sekizle çarp. Hâsıl otuz ikidir. Bunu öbür malûm adede, yâni ölçünün adedi olan ona böl. Bölüm üç ve beşte birdir; bu mecmûun adedidir ve bölen olan on ile mütekabil nisbettedir. Ticaret işlerindeki bütün hesaplar bu tarzda hal edilebilir.
+
+**[70]** Biri şöyle derse: "Bir işçi ayda on dirhem ücret alır; altı gün için ücreti ne olmalıdır?" O vakit bilirsin ki altı gün ayın beşte biridir; ve dirhemlerden payının ayın cüzüyle nisbetli olması gerekir. Bunu şöyle hesaplarsın: bir ay, yâni otuz gün ölçüdür, on dirhem birim fiyattır, altı gün miktardır ve payı mecmûdur. Birim fiyatı, yâni onu, onunla mütekabil olan miktarla, yâni altıyla çarp; hâsıl altmıştır. Bunu ölçünün malûm adedi olan otuza böl. Bölüm iki dirhemdir ve bu mecmûdur. Mübadeleye yahut ölçülere yahut tartılara dair bütün muameleler bu usulle halledilir.
+
+<!-- HARIZMI-KISIM-2-SONU -->
