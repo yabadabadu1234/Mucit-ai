@@ -87,6 +87,27 @@ Sıra: İbn Sînâ el-Kânûn; Râzî el-Hâvî; Zehrâvî et-Tasrîf; Sabuncuo�
 
 Kurucu eserler sırası: Vesalius Fabrica ("2295005R.nlm.nih.gov"); Cajal Textura ("b28122100", İspanyolca asıldan); Schwann ("mikroskopischeu00schwgoog"); Gray 1858 ("anatomydescripti1858gray"; 1918 Lewis tâbı karışık, kullanılmayacak); von Baer ("berentwickelun01baer"); Malpighi De Pulmonibus; Brodmann ("b28062449"). Bugünkü ders kitapları (telifli; yalnız kayıt): Gray's Anatomy Standring tâbı; Moore Clinically Oriented Anatomy; Netter Atlas; Langman; Junqueira.
 
+### Dördüncü cüz: Hastalıklar
+
+Baştan sona okundu. Kurucu eserlerin şaheserlik sırası (hepsi telifi düşmüş; birebir tam tercüme):
+
+| Sıra | Eser | Nüsha |
+|---|---|---|
+| 1 | Hipokrat, Fusûl ve Salgınlar (Adams tercümesi, 1849; Yunanca asıl Littré neşrinde) | "genuineworksofhi01hippuoft", "genuineworksofhi02hippuoft" |
+| 2 | Sydenham, Observationes Medicae (1676) | "selectedworksoft00syde", "b28705312_0001"; Latham tercümesinin künyesi tahkik edilecek |
+| 3 | Osler, The Principles and Practice of Medicine (1892) | "principlespracti1892osle2" |
+| 4 | Semmelweis, Die Ätiologie des Kindbettfiebers (1861) | "b33953740" |
+| 5 | Lind, A Treatise of the Scurvy (1753) | "treatiseonscurvy00lind" |
+| 6 | Garrod, Inborn Errors of Metabolism (1909) | "inbornerrorsofme00garriala" |
+| 7 | Charcot, Leçons sur les maladies du système nerveux | "leonssurlesmalad01char", "leonssurlesmalad02char" |
+| 8 | Fracastoro, De Contagione (1546) | "de-contagione"; Wright tercümesi şüpheli, Latince asıldan tercüme edilecek |
+| 9 | Ramazzini, De Morbis Artificum | "bim_eighteenth-century_de-morbis-artificum-dia_ramazzini-bernardino_1750" |
+| 10 | Addison, Supra-renal Capsules (1855) | "b21298786" |
+| 11 | Parkinson, An Essay on the Shaking Palsy (1817) | "essayonshakingpa00parkuoft"; Gutenberg 23777 olabilir, şüpheli |
+| 12 | Gowers, A Manual of Diseases of the Nervous System | "manualofdiseases1888gowe" |
+
+Telifli (yalnız kayıt, tercüme edilmez): Harrison, Davidson, Braunwald, Adams ile Victor, Mandell, DeVita, Williams, Nelson, Brenner ile Rector ve babların diğer asrî eserleri. Karışık (tercüme edilmez): Hutchison'ın Clinical Methods'u (1897), Joslin'in The Treatment of Diabetes Mellitus'u (1916).
+
 ## Kaldığı yer
 
-Kullanıcının son emriyle şerh usulü kaldırıldı; yalnız birebir tam tercüme yapılacak. Cannon şerhi terk edildi diye işaretlendi. Lügat iş parçacığının Cannon ıstılahlarına dair tashihleri (lugat/karsiliklar/003_tercume_cannon.tsv) terk edilen dosyaya işlenmişti; tercümelerde de bu karşılıklar esas alınacak. Bütün tam metin tercümeleri ağ iznine bağlı. İzin gelince sıra: Virchow, Harvey, Bernard, Morgagni, Sherrington, Cohnheim, Koch; sonra kadîm cüzden el-Kânûn ve diğerleri; sonra teşrih cüzünün kurucu eserleri.
+Kullanıcının son emriyle şerh usulü kaldırıldı; yalnız birebir tam tercüme yapılacak. Cannon şerhi terk edildi diye işaretlendi. Lügat iş parçacığının Cannon ıstılahlarına dair tashihleri (lugat/karsiliklar/003_tercume_cannon.tsv) terk edilen dosyaya işlenmişti; tercümelerde de bu karşılıklar esas alınacak. Bütün tam metin tercümeleri ağ iznine bağlı. İzin gelince sıra: Virchow, Harvey, Bernard, Morgagni, Sherrington, Cohnheim, Koch; sonra kadîm cüzden el-Kânûn ve diğerleri; sonra teşrih cüzünün kurucu eserleri; sonra hastalıklar cüzünün kurucu eserleri.
