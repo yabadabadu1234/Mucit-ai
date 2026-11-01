@@ -142,7 +142,7 @@ ki bu, Bab 2'deki birinci kanunun ta kendisidir. Bu terkip tercümede yoktur; Eu
 
 **Yoklama** [M5]: on altı ad (köprü + 1); on beş köprü, hiçbiri tekrar etmez (aslın harf dizisinde "j" yoktur); Birinci dört, İkinci iki, Üçüncü iki, Dördüncü iki, Beşinci üç, Altıncı üç defa geçer ⟹ cedvelin tekrar sütununun aynısı. Yol yıldızsız Beşinci'den başlar, öbür yıldızsız Dördüncü'de biter. **[N]** Not sahibi bu sayımı yol satırı üzerinde yeniden yapmış ve doğru bulmuştur; açılan köprülerin mecmû'u 30 = 2 × 15 olduğunu da yoklamıştır.
 
-**Dikkat:** Harf tanıma bu yol satırını bozmuştu; satır mütercimin bilgisinden yazılmıştır ve sahife resmiyle harf harf karşılaştırılması **henüz yapılmamıştır**. Cedvelin son satırının harfi de taramada okunamamış; altıncı arazinin olduğu metinden ve mecmû'un tutmasından anlaşılmıştır [M5].
+**Dikkat:** Harf tanıma bu yol satırını bozmuştu; satır önce mütercimin bilgisinden yazılmış, sonra mütercim tarafından Internet Archive nüshasının 137. sahifesinin (tarama yaprağı 162) resmiyle **harf harf karşılaştırılmış ve aynı bulunmuştur** [M5]. Cedvelin son satırının harfi taramada okunamamış; altıncı arazinin olduğu metinden ve mecmû'un tutmasından anlaşılmıştır [M5].
 
 ---
 
@@ -192,7 +192,7 @@ ki bu, Bab 2'deki birinci kanunun ta kendisidir. Bu terkip tercümede yoktur; Eu
 
 Bu bab tamamen not sahibinindir; talebenin Euler'i okurken düşmemesi gereken çukurları gösterir.
 
-1. **Gizli şart: arazilerin birbirine bağlı olması.** Euler'in "daima yapılabilir" hükümleri, bütün arazilerin köprülerle **tek bir bütün** teşkil ettiğini zımnen farz eder. Şehir iki ayrı parçadan ibaretse (bir parçadan öbürüne hiç köprü yoksa), her arazi çift köprülü olsa bile yol yoktur. Bugünkü kaziyye bu sebeple "**bağlı** çizgede" diye söylenir. Bu şart risâlede yoktur, mütercim kayıtlarında da yoktur.
+1. **Gizli şart: arazilerin birbirine bağlı olması.** Euler'in "daima yapılabilir" hükümleri, bütün arazilerin köprülerle **tek bir bütün** teşkil ettiğini zımnen farz eder. Şehir iki ayrı parçadan ibaretse (bir parçadan öbürüne hiç köprü yoksa), her arazi çift köprülü olsa bile yol yoktur. Bugünkü kaziyye bu sebeple "**bağlı** çizgede" diye söylenir. Bu şart risâlede yoktur; bu notun tenbihi üzerine mütercim [M6]'ya eklemiştir.
 2. **§ 10'daki "yapılabilir" hükmü:** Bütün arazileri tek olan bir şehirde mecmû'un köprü + 1'e müsâvî olması, ancak **tam iki arazi** bulunduğunda mümkündür (Bab 5, 5. madde ile karşılaştır). Euler orada kifâyeti henüz ispatsız söyler.
 3. **İspatın gücü ile zaafı ayrı tartılmalı:** "Yoktur" hükmü bir **sayım** ile kesinleşir; "vardır" hükmü bir **inşa** ister. Euler birincisini verir, ikincisine yol tarif eder.
 4. **Harf meselesi [M1]:** Tercümede arazi adları harfle bırakılmıştır, zîrâ Euler'in usûlü bizzat "geçişleri harflerle yazmak"tır. Bu notta Padişahın kaidesi mûcibince adlar kelimeye çevrilmiştir; usûlün mânâsı değişmemiştir, çünkü usûlde mühim olan **adın kendisi değil, tekrarının sayısıdır**.

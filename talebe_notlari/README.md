@@ -21,12 +21,13 @@ Bu dizin, `tercume/eserler/` altındaki Osmanlıca tam metin tercümelerinden **
 | :-- | :-- | :-- |
 | Euler 1741, Königsberg köprüleri | [05_euler_1741_konigsberg_kopruleri_not.md](05_euler_1741_konigsberg_kopruleri_not.md) | Tamam (8 bab) |
 | Riemann 1859, a'dâd-ı evveliyye | [11_riemann_1859_adad_i_evveliyye_not.md](11_riemann_1859_adad_i_evveliyye_not.md) | Tamam (16 bab ve iki ek) |
+| Hilbert 1900, Riyâzî Meseleler | — | Tercümesi sürüyor (1–18. meseleler hazır); not tercüme bitince |
 
 Yeni bir tercüme `tercume/DEFTER.md`de "Tamam" olunca notu bu dizine aynı adla, sonuna `_not` eklenerek yazılır.
 
 ## Tercümeye geri bildirilecek hususlar
 
-Notları yazarken tercümede düzeltilmesi yahut yoklanması lâzım gelen yerler (mütercime iletilir):
+Notları yazarken tercümede düzeltilmesi yahut yoklanması lâzım gelen yerler. Aşağıdaki üçü mütercime iletilmiş ve **üçü de** `claude/project-thread-y2govz` dalında 905dbab5 işlemesiyle **icra edilmiştir** (Euler yolu sahife resmiyle harf harf aynı çıkmıştır):
 
 1. **Riemann, [M10]:** "logaritma Tekmîl-zeta(0) = − logaritma(2)" cümlesi yanlış anlaşılmaya müsaittir. Riemann'ın Tekmîl-zeta(0)'ı irtifâ sıfır, yâni mütehavvil ½ noktasındaki kıymettir ve takriben 0,497'dir. Sarîh düsturun doğru sâbiti − logaritma 2'dir; Riemann'ın yazdığı sâbit bundan çok az farklıdır ve bu fark Riemann'ın bir sürçmesi olarak bilinir. Kaydın "Riemann'ın yazdığı sâbit, doğrusu olan − logaritma 2'den çok az farklıdır" şeklinde tashihi teklif olunur.
 2. **Euler, § 15 yolu ve son cedvel satırı:** sahife resmiyle harf harf karşılaştırma henüz yapılmamıştır ([M5]'in kendi ifadesi).
