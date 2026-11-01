@@ -147,6 +147,51 @@ Darwin hakkında: Şaheser iş parçacığı, eserin menşe hakkındaki hüküml
 
 Bergey (1923) karışık; asrî eserler telifli (yalnız kayıt): Jawetz, Murray, Sherris ile Ryan, Fields, Markell ile Voge, Alberts.
 
+### Yedinci cüz: Teşhis, tedavi ve cerrahî usulleri
+
+Baştan sona okundu. Kurucu eserlerin şaheserlik sırası (telifi düşmüş olanlar birebir tam tercüme edilecek):
+
+| Sıra | Eser | Telif | Nüsha |
+|---|---|---|---|
+| 1 | Laennec, De l'auscultation médiate (1819) | Telifi düşmüş | Forbes tercümesi 1830: "9308214.nlm.nih.gov"; "treatiseondiseas1829laen"; Fransızca asıl aranacak |
+| 2 | Jenner, Variolae Vaccinae (1798) | Telifi düşmüş | 1802 tâbı "2559001R.nlm.nih.gov" |
+| 3 | Lister, On the Antiseptic Principle (1867) | Telifi düşmüş | Tahkik edilecek |
+| 4 | Röntgen, Über eine neue Art von Strahlen (1895) | Telifi düşmüş | "eineneueartvonst00rntg" |
+| 5 | Bigelow (1846); Snow, On Chloroform (1858) | Telifi düşmüş | Tahkik edilecek |
+| 6 | Auenbrugger, Inventum Novum (1761) | Telifi düşmüş | Latince "leopoldauenbrug00auengoog"; Corvisart 1808 "McGillLibrary-osl_nouvelle-methode-reconnaitre-maladies_A917nF1808-26123" |
+| 7 | Billroth, Die allgemeine chirurgische Pathologie (1863) | Telifi düşmüş | "dieallgemeinech00billgoog" |
+| 8 | Montagu, İstanbul mektupları (1763 neşri) | Telifi düşmüş | "lettersladymwmo00montgoog" |
+| 9 | Streptomisin denemesi (1948) | Telifli; tercüme edilmez | |
+| 10 | Einthoven (1906); Gram (1884) | Telifi düşmüş | Tahkik edilecek |
+
+Telifli (yalnız kayıt): Cochrane (1972), Sabiston, Schwartz, Miller, Grainger ile Allison, Henry, Tietz, Campbell. Bailey ile Love'ın birinci tâbı (1932) karışık. Black (1908) telifi düşmüş, ikinci derecede.
+
+### Sekizinci cüz: Ruh hekimliği ve ruhiyat
+
+Baştan sona okundu. Kurucu eserlerin şaheserlik sırası:
+
+| Sıra | Eser | Telif | Nüsha |
+|---|---|---|---|
+| 1 | Griesinger, Die Pathologie und Therapie der psychischen Krankheiten (1845) | Telifi düşmüş | "diepathologieund00grie" |
+| 2 | Kraepelin, Psychiatrie | Telifi düşmüş | "psychiatrieeinl00kraegoog", "BIUSante_63261x01" |
+| 3 | Pinel, Traité médico-philosophique (1801) | Telifi düşmüş | Bulunamadı |
+| 4 | İbn Sînâ, Kitâbü'n-Nefs | Asıl telifi düşmüş; Fazlur Rahman neşri telifli, kullanılmayacak | Tahkik edilecek |
+| 5 | Belhî, Mesâlihü'l-Ebdân ve'l-Enfüs | Yazma telifi düşmüş | Süleymaniye, Ayasofya kısmı; şüpheli |
+| 6 | Jaspers, Allgemeine Psychopathologie (1913) | Karışık; izin gelmeden tercüme edilmez | |
+| 7 | William James, The Principles of Psychology (1890) | Telifi düşmüş | "theprinciplesofp01jameuoft" |
+| 8 | Bleuler, Dementia praecox (1911) | Almanca asıl telifi düşmüş | "b21296157" yahut "b31366703"; hangisi asıl, tahkik edilecek |
+| 9 | Esquirol, Des maladies mentales (1838) | Telifi düşmüş | Tahkik edilecek |
+| 10 | Râzî, et-Tıbbü'r-Rûhânî | Asıl telifi düşmüş; Arberry tercümesi telifli | Tahkik edilecek |
+| 11 | Freud, Die Traumdeutung (1900) | Telifi düşmüş | Tahkik edilecek |
+
+Freud ve asrî ruhiyat eserleri hakkında: Şaheser iş parçacığı, bu eserlerin insanın mahiyetine, ahlâka ve itikada dair bir kısım hükümlerinin İslâm bakımından kabul edilmediğini tenbih etmiştir. Darwin'de olduğu gibi Freud'un sırası gelince de tercümeye başlamadan kullanıcıya sorulacaktır.
+
+Telifli yahut karışık (yalnız kayıt): Ruh hastalıklarının teşhis ve istatistik el kitabının beşinci tâbı, Milletlerarası Hastalıklar Tasnifi'nin altıncı bölümü (türetilemez lisans), Kaplan ile Sadock, Oxford, Lishman, Stahl, Kandel, Beck.
+
+## Devir notu (1 Kasım 2026)
+
+Bu iş parçacığı, ayarı olmayan yerleşik muhitte (env_011111111111111111111119) çalıştığı için archive.org, gutenberg.org ve wikisource.org adreslerine erişemedi ("CONNECT tunnel failed, response 403"). Kullanıcının tam izinli muhiti "Benim Ortam"dır (env_01ViAcKYcs6eeuwaSbmf3C88). Proje bu muhite bağlanınca tercüme yeni bir iş parçacığında devam edecektir. Devralan iş parçacığı bu defteri baştan sona okuyup "Kaldığı yer" kısmından başlamalıdır.
+
 ## Kaldığı yer
 
-Kullanıcının son emriyle şerh usulü kaldırıldı; yalnız birebir tam tercüme yapılacak. Cannon şerhi terk edildi diye işaretlendi. Lügat iş parçacığının Cannon ıstılahlarına dair tashihleri (lugat/karsiliklar/003_tercume_cannon.tsv) terk edilen dosyaya işlenmişti; tercümelerde de bu karşılıklar esas alınacak. Bütün tam metin tercümeleri ağ iznine bağlı. İzin gelince sıra: Virchow, Harvey, Bernard, Morgagni, Sherrington, Cohnheim, Koch; sonra kadîm cüzden el-Kânûn ve diğerleri; sonra teşrih cüzünün kurucu eserleri; sonra hastalıklar, ilaçlar ve canlılar cüzlerinin kurucu eserleri.
+Kullanıcının son emriyle şerh usulü kaldırıldı; yalnız birebir tam tercüme yapılacak. Cannon şerhi terk edildi diye işaretlendi. Lügat iş parçacığının Cannon ıstılahlarına dair tashihleri (lugat/karsiliklar/003_tercume_cannon.tsv) terk edilen dosyaya işlenmişti; tercümelerde de bu karşılıklar esas alınacak. Bütün tam metin tercümeleri ağ iznine bağlı. İzin gelince sıra: Virchow, Harvey, Bernard, Morgagni, Sherrington, Cohnheim, Koch; sonra kadîm cüzden el-Kânûn ve diğerleri; sonra teşrih cüzünün kurucu eserleri; sonra hastalıklar, ilaçlar, canlılar, teşhis ile tedavi ve ruh hekimliği cüzlerinin kurucu eserleri. Darwin ile Freud'dan evvel kullanıcıya sorulacak.
