@@ -10,7 +10,7 @@ Bu defter, iş kesilirse kaldığı yerden devam edebilmek için tutulur. Her ad
 - Telifi düşmüş yahut açık lisanslı nüshalar bulunur ve tam metni tercüme edilir. Nüshalar Internet Archive, Wikisource, Project Gutenberg, PubMed Central'ın açık kısmı ve OpenStax gibi kaynaklarda aranır.
 - Istılahta lügat iş parçacığının cedveli esas alınır. Karşılığı olmayan ıstılah çıkarsa lügat iş parçacığına bildirilir.
 - Düsturlarda harf kullanılmaz, kemmiyetler kelimeyle yazılır.
-- Her tercüme bitince not iş parçacığına haber verilir. Not iş parçacığı henüz açılmadığı için ilk tercüme bitince koordinatöre haber verilecektir.
+- Her tercüme bitince not iş parçacığına haber verilir. Not iş parçacığı 1 Kasım 2026'da açıldı; kimliği: cmsg_01A3eskXyY6uU4cdnPk3VaruPL54f9fyw74ZQQpJRJmc4g. Lügat iş parçacığı: cmsg_01A3eskXyY6uU4cdnPk3VaruLJQGc3UG8Pt9gNrGaDMi1Q. Şaheser iş parçacığı: cmsg_01A3eskXyY6uU4cdnPk3VaruFuPQinpQvn1xvoaUZttgXj.
 - Bütün iş parçacıkları aynı depoda, ayrı klasörlerde çalışır ve parça parça kayıt eder.
 
 ### Kullanıcının 1 Kasım 2026 tarihli ilâve kaidesi
