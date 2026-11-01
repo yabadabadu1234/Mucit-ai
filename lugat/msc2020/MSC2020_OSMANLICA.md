@@ -2,7 +2,7 @@
 
 Bu sahife `araclar/msc_birlestir.py` ile `kaynak.tsv` ve `ceviri/` dosyalarından üretilir; elle değiştirilmez.
 
-Toplam madde: 6603 · karşılığı bulunan: 3842 · kalan: 2761
+Toplam madde: 6603 · karşılığı bulunan: 4007 · kalan: 2596
 
 
 ## 00-XX — Umûmî ve şâmil mevzûlar; mecmualar
@@ -3803,187 +3803,187 @@ Functional analysis {For manifolds modeled on topological linear spaces, see 57N
 | 46T30 | Distributions and generalized functions on nonlinear spaces [See also 46Fxx] | Gayr-ı hattî fezâlar üzerinde tevzî'ler ve teşmîl edilmiş tâbiler [Ayrıca bakınız: 46Fxx] |  |
 | 46T99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
-## 47-XX — Operator theory
+## 47-XX — Âmiller nazariyesi (operatör teorisi)
 
 Operator theory
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 47-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to operator theory |  |  |
-| 47-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to operator theory |  |  |
-| 47-02 | Research exposition (monographs, survey articles) pertaining to operator theory |  |  |
-| 47-03 | History of operator theory [Consider also classification numbers from Section 01] |  |  |
-| 47-04 | Software, source code, etc. for problems pertaining to operator theory |  |  |
-| 47-06 | Proceedings, conferences, collections, etc. pertaining to operator theory |  |  |
-| 47-08 | Computational methods for problems pertaining to operator theory |  |  |
-| 47-11 | Research data for problems pertaining to operator theory |  |  |
-| **47Axx** | **General theory of linear operators** | **** |  |
-| 47A05 | General (adjoints, conjugates, products, inverses, domains, ranges, etc.) |  |  |
-| 47A06 | Linear relations (multivalued linear operators) |  |  |
-| 47A07 | Forms (bilinear, sesquilinear, multilinear) |  |  |
-| 47A08 | Operator matrices [See also 47A13] |  |  |
-| 47A10 | Spectrum, resolvent |  |  |
-| 47A11 | Local spectral properties of linear operators |  |  |
-| 47A12 | Numerical range, numerical radius |  |  |
-| 47A13 | Several-variable operator theory (spectral, Fredholm, etc.) |  |  |
-| 47A15 | Invariant subspaces of linear operators [See also 47A46] |  |  |
-| 47A16 | Cyclic vectors, hypercyclic and chaotic operators |  |  |
-| 47A20 | Dilations, extensions, compressions of linear operators |  |  |
-| 47A25 | Spectral sets of linear operators |  |  |
-| 47A30 | Norms (inequalities, more than one norm, etc.) of linear operators |  |  |
-| 47A35 | Ergodic theory of linear operators [See also 28Dxx, 37Axx] |  |  |
-| 47A40 | Scattering theory of linear operators [See also 34L25, 35P25, 37K15, 58J50, 81Uxx] |  |  |
-| 47A45 | Canonical models for contractions and nonselfadjoint linear operators |  |  |
-| 47A46 | Chains (nests) of projections or of invariant subspaces, integrals along chains, etc. |  |  |
-| 47A48 | Operator colligations (= nodes), vessels, linear systems, characteristic functions, realizations, etc. |  |  |
-| 47A50 | Equations and inequalities involving linear operators, with vector unknowns |  |  |
-| 47A52 | Linear operators and ill-posed problems, regularization [See also 35R25, 47J06, 65F22, 65J20, 65L08, 65M30, 65R30] |  |  |
-| 47A53 | (Semi-) Fredholm operators; index theories [See also 58B15, 58J20] |  |  |
-| 47A55 | Perturbation theory of linear operators [See also 47H14, 58J37, 70H09, 81Q15] |  |  |
-| 47A56 | Functions whose values are linear operators (operator- and matrix-valued functions, etc., including analytic and meromorphic ones) |  |  |
-| 47A57 | Linear operator methods in interpolation, moment and extension problems [See also 30E05, 42A70, 42A82, 44A60] |  |  |
-| 47A58 | Linear operator approximation theory |  |  |
-| 47A60 | Functional calculus for linear operators |  |  |
-| 47A62 | Equations involving linear operators, with operator unknowns |  |  |
-| 47A63 | Linear operator inequalities |  |  |
-| 47A64 | Operator means involving linear operators, shorted linear operators, etc. |  |  |
-| 47A65 | Structure theory of linear operators |  |  |
-| 47A66 | Quasitriangular and nonquasitriangular, quasidiagonal and nonquasidiagonal linear operators |  |  |
-| 47A67 | Representation theory of linear operators |  |  |
-| 47A68 | Factorization theory (including Wiener-Hopf and spectral factorizations) of linear operators |  |  |
-| 47A70 | (Generalized) eigenfunction expansions of linear operators; rigged Hilbert spaces |  |  |
-| 47A75 | Eigenvalue problems for linear operators [See also 47J10, 49R05] |  |  |
-| 47A80 | Tensor products of linear operators [See also 46M05] |  |  |
+| 47-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to operator theory | âmiller nazariyesi hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 47-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to operator theory | âmiller nazariyesi hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 47-02 | Research exposition (monographs, survey articles) pertaining to operator theory | âmiller nazariyesi hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 47-03 | History of operator theory [Consider also classification numbers from Section 01] | Âmiller nazariyesinin târihi [01. babın tasnif numaralarına da bakılsın] |  |
+| 47-04 | Software, source code, etc. for problems pertaining to operator theory | âmiller nazariyesi sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 47-06 | Proceedings, conferences, collections, etc. pertaining to operator theory | âmiller nazariyesi hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 47-08 | Computational methods for problems pertaining to operator theory | âmiller nazariyesi sahasındaki meselelere dair hesap usulleri |  |
+| 47-11 | Research data for problems pertaining to operator theory | âmiller nazariyesi sahasındaki meselelere dair tetkik verileri |  |
+| **47Axx** | **General theory of linear operators** | **Hattî âmillerin umûmî nazariyesi** |  |
+| 47A05 | General (adjoints, conjugates, products, inverses, domains, ranges, etc.) | Umûmî (mülhaklar, mezdûclar, hâsıl-ı zarblar, tersler, tarif sahaları, kıymet sahaları ve emsâli) |  |
+| 47A06 | Linear relations (multivalued linear operators) | Hattî nisbetler (çok kıymetli hattî âmiller) |  |
+| 47A07 | Forms (bilinear, sesquilinear, multilinear) | Şekiller (iki hattî, bir buçuk hattî, çok hattî) | şüpheli: "sesquilinear" için lafzî "bir buçuk hattî" teklif edildi |
+| 47A08 | Operator matrices [See also 47A13] | Âmil masfûfeleri [Ayrıca bakınız: 47A13] |  |
+| 47A10 | Spectrum, resolvent | Tayf, halledici (rezolvent) |  |
+| 47A11 | Local spectral properties of linear operators | Hattî âmillerin mahallî tayfî vasıfları |  |
+| 47A12 | Numerical range, numerical radius | Adedî kıymet sahası, adedî nısf-ı kutr |  |
+| 47A13 | Several-variable operator theory (spectral, Fredholm, etc.) | Çok mütehavvilli âmiller nazariyesi (tayfî, Fredholm ve emsâli) | nakil |
+| 47A15 | Invariant subspaces of linear operators [See also 47A46] | Hattî âmillerin lâyetegayyer alt fezâları [Ayrıca bakınız: 47A46] |  |
+| 47A16 | Cyclic vectors, hypercyclic and chaotic operators | Devrî mütevecciheler, fevka'd-devrî ve herc ü merc (kaotik) âmiller |  |
+| 47A20 | Dilations, extensions, compressions of linear operators | Hattî âmillerin tevsîleri (dilatasyonları), temdîdleri, tazyîkleri (kompresyonları) |  |
+| 47A25 | Spectral sets of linear operators | Hattî âmillerin tayfî mecmûaları |  |
+| 47A30 | Norms (inequalities, more than one norm, etc.) of linear operators | Hattî âmillerin normları (adem-i müsâvâtlar, birden fazla norm ve emsâli) |  |
+| 47A35 | Ergodic theory of linear operators [See also 28Dxx, 37Axx] | Hattî âmillerin ergodik nazariyesi [Ayrıca bakınız: 28Dxx, 37Axx] |  |
+| 47A40 | Scattering theory of linear operators [See also 34L25, 35P25, 37K15, 58J50, 81Uxx] | Hattî âmillerin inteşâr (saçılma) nazariyesi [Ayrıca bakınız: 34L25, 35P25, 37K15, 58J50, 81Uxx] |  |
+| 47A45 | Canonical models for contractions and nonselfadjoint linear operators | İnkıbâzlar (büzülmeler) ve zâtî-mülhak olmayan hattî âmiller için kanonik numûneler |  |
+| 47A46 | Chains (nests) of projections or of invariant subspaces, integrals along chains, etc. | İzdüşümlerin (irtisâmların) yahut lâyetegayyer alt fezâların zincirleri (yuvaları), zincirler boyunca tamâmîler ve emsâli |  |
+| 47A48 | Operator colligations (= nodes), vessels, linear systems, characteristic functions, realizations, etc. | Âmil birleştirmeleri (= düğümler), kaplar, hattî nizâmlar, hâssa tâbileri, tahakkuklar ve emsâli | şüpheli: "colligation" ve "vessel" için lafzî karşılık verildi |
+| 47A50 | Equations and inequalities involving linear operators, with vector unknowns | Meçhulü müteveccihe olan, hattî âmilleri ihtivâ eden muâdeleler ve adem-i müsâvâtlar |  |
+| 47A52 | Linear operators and ill-posed problems, regularization [See also 35R25, 47J06, 65F22, 65J20, 65L08, 65M30, 65R30] | Hattî âmiller ve kötü vaz' edilmiş meseleler, muntazamlaştırma [Ayrıca bakınız: 35R25, 47J06, 65F22, 65J20, 65L08, 65M30, 65R30] |  |
+| 47A53 | (Semi-) Fredholm operators; index theories [See also 58B15, 58J20] | (Nîm-) Fredholm âmilleri; delîl nazariyeleri [Ayrıca bakınız: 58B15, 58J20] | nakil |
+| 47A55 | Perturbation theory of linear operators [See also 47H14, 58J37, 70H09, 81Q15] | Hattî âmillerin ihtilâl nazariyesi [Ayrıca bakınız: 47H14, 58J37, 70H09, 81Q15] |  |
+| 47A56 | Functions whose values are linear operators (operator- and matrix-valued functions, etc., including analytic and meromorphic ones) | Kıymetleri hattî âmil olan tâbiler (âmil kıymetli ve masfûfe kıymetli tâbiler ve emsâli, tahlîlî ve kesr-şekilli olanlar dahil) |  |
+| 47A57 | Linear operator methods in interpolation, moment and extension problems [See also 30E05, 42A70, 42A82, 44A60] | Dâhilî tahmîn, lahza ve temdîd meselelerinde hattî âmil usulleri [Ayrıca bakınız: 30E05, 42A70, 42A82, 44A60] |  |
+| 47A58 | Linear operator approximation theory | Hattî âmillerle takrîb nazariyesi |  |
+| 47A60 | Functional calculus for linear operators | Hattî âmiller için tâbiî hesap |  |
+| 47A62 | Equations involving linear operators, with operator unknowns | Meçhulü âmil olan, hattî âmilleri ihtivâ eden muâdeleler |  |
+| 47A63 | Linear operator inequalities | Hattî âmil adem-i müsâvâtları |  |
+| 47A64 | Operator means involving linear operators, shorted linear operators, etc. | Hattî âmilleri ihtivâ eden âmil vasatları, kısaltılmış hattî âmiller ve emsâli |  |
+| 47A65 | Structure theory of linear operators | Hattî âmillerin bünye nazariyesi |  |
+| 47A66 | Quasitriangular and nonquasitriangular, quasidiagonal and nonquasidiagonal linear operators | Şibh-i müsellesî ve şibh-i müsellesî olmayan, şibh-i kutrî ve şibh-i kutrî olmayan hattî âmiller |  |
+| 47A67 | Representation theory of linear operators | Hattî âmillerin temsil nazariyesi |  |
+| 47A68 | Factorization theory (including Wiener-Hopf and spectral factorizations) of linear operators | Hattî âmillerin tahlîl-i mazrûbât nazariyesi (Wiener-Hopf ve tayfî tahlîl-i mazrûbât dahil) |  |
+| 47A70 | (Generalized) eigenfunction expansions of linear operators; rigged Hilbert spaces | Hattî âmillerin (teşmîl edilmiş) hâs tâbi açılımları; donatılmış Hilbert fezâları |  |
+| 47A75 | Eigenvalue problems for linear operators [See also 47J10, 49R05] | Hattî âmiller için hâs kıymet meseleleri [Ayrıca bakınız: 47J10, 49R05] |  |
+| 47A80 | Tensor products of linear operators [See also 46M05] | Hattî âmillerin tansörî hâsıl-ı zarbları [Ayrıca bakınız: 46M05] |  |
 | 47A99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **47Bxx** | **Special classes of linear operators** | **** |  |
-| 47B01 | Operators on Banach spaces |  |  |
-| 47B02 | Operators on Hilbert spaces (general) |  |  |
-| 47B06 | Riesz operators; eigenvalue distributions; approximation numbers, s-numbers, Kolmogorov numbers, entropy numbers, etc. of operators |  |  |
-| 47B07 | Linear operators defined by compactness properties |  |  |
-| 47B10 | Linear operators belonging to operator ideals (nuclear, p-summing, in the Schatten-von Neumann classes, etc.) [See also 47L20] |  |  |
-| 47B12 | Sectorial operators |  |  |
-| 47B13 | Cowen-Douglas operators |  |  |
-| 47B15 | Hermitian and normal operators (spectral measures, functional calculus, etc.) |  |  |
-| 47B20 | Subnormal operators, hyponormal operators, etc. |  |  |
-| 47B25 | Linear symmetric and selfadjoint operators (unbounded) |  |  |
-| 47B28 | Nonselfadjoint operators [See also 47A45, 81Q12] |  |  |
-| 47B32 | Linear operators in reproducing-kernel Hilbert spaces (including de Branges, de Branges-Rovnyak, and other structured spaces) [See also 46E22] |  |  |
-| 47B33 | Linear composition operators |  |  |
-| 47B34 | Kernel operators |  |  |
-| 47B35 | Toeplitz operators, Hankel operators, Wiener-Hopf operators {For other integral operators, see also 45P05, 47G10} [See also 32A25, 32M15] |  |  |
-| 47B36 | Jacobi (tridiagonal) operators (matrices) and generalizations |  |  |
-| 47B37 | Linear operators on special spaces (weighted shifts, operators on sequence spaces, etc.) |  |  |
-| 47B38 | Linear operators on function spaces (general) |  |  |
-| 47B39 | Linear difference operators [See also 39A70] |  |  |
-| 47B40 | Spectral operators, decomposable operators, well-bounded operators, etc. |  |  |
-| 47B44 | Linear accretive operators, dissipative operators, etc. |  |  |
-| 47B47 | Commutators, derivations, elementary operators, etc. |  |  |
-| 47B48 | Linear operators on Banach algebras |  |  |
-| 47B49 | Transformers, preservers (linear operators on spaces of linear operators) |  |  |
-| 47B50 | Linear operators on spaces with an indefinite metric [See also 46C20] |  |  |
-| 47B60 | Linear operators on ordered spaces |  |  |
-| 47B65 | Positive linear operators and order-bounded operators |  |  |
-| 47B80 | Random linear operators [See also 47H40, 60H25] |  |  |
-| 47B90 | Operator theory and harmonic analysis [See also 42-XX, 43-XX, 44-XX] |  |  |
-| 47B91 | Operators on complex function spaces |  |  |
-| 47B92 | Operators on real function spaces |  |  |
-| 47B93 | Operators arising in mathematical physics |  |  |
+| **47Bxx** | **Special classes of linear operators** | **Hattî âmillerin hususî sınıfları** |  |
+| 47B01 | Operators on Banach spaces | Banach fezâları üzerinde âmiller | nakil |
+| 47B02 | Operators on Hilbert spaces (general) | Hilbert fezâları üzerinde âmiller (umûmî) | nakil |
+| 47B06 | Riesz operators; eigenvalue distributions; approximation numbers, s-numbers, Kolmogorov numbers, entropy numbers, etc. of operators | Riesz âmilleri; hâs kıymet tevzîleri; âmillerin takrîb adetleri, s-adetleri, Kolmogorov adetleri, entropi adetleri ve emsâli | nakil |
+| 47B07 | Linear operators defined by compactness properties | Mütarâsiyet vasıflarıyla tarif edilen hattî âmiller |  |
+| 47B10 | Linear operators belonging to operator ideals (nuclear, p-summing, in the Schatten-von Neumann classes, etc.) [See also 47L20] | Âmil misâliyelerine mensup hattî âmiller (nüvevî, p-cem'î, Schatten-von Neumann sınıflarında olanlar ve emsâli) [Ayrıca bakınız: 47L20] |  |
+| 47B12 | Sectorial operators | Kıt'avî (sektörel) âmiller |  |
+| 47B13 | Cowen-Douglas operators | Cowen-Douglas âmilleri | nakil |
+| 47B15 | Hermitian and normal operators (spectral measures, functional calculus, etc.) | Hermite ve mi'yârî (normal) âmiller (tayfî mikyâslar, tâbiî hesap ve emsâli) |  |
+| 47B20 | Subnormal operators, hyponormal operators, etc. | Dûn-mi'yârî âmiller, tahte'l-mi'yârî âmiller ve emsâli | şüpheli: "subnormal" ile "hyponormal" ayrımı için iki ön ek teklif edildi |
+| 47B25 | Linear symmetric and selfadjoint operators (unbounded) | Hattî mütenâzır ve zâtî-mülhak âmiller (gayr-ı mahdûd) |  |
+| 47B28 | Nonselfadjoint operators [See also 47A45, 81Q12] | Zâtî-mülhak olmayan âmiller [Ayrıca bakınız: 47A45, 81Q12] |  |
+| 47B32 | Linear operators in reproducing-kernel Hilbert spaces (including de Branges, de Branges-Rovnyak, and other structured spaces) [See also 46E22] | Yeniden üreten çekirdekli Hilbert fezâlarında hattî âmiller (de Branges, de Branges-Rovnyak ve sâir bünyeli fezâlar dahil) [Ayrıca bakınız: 46E22] |  |
+| 47B33 | Linear composition operators | Hattî terkîb âmilleri |  |
+| 47B34 | Kernel operators | Çekirdek âmilleri |  |
+| 47B35 | Toeplitz operators, Hankel operators, Wiener-Hopf operators {For other integral operators, see also 45P05, 47G10} [See also 32A25, 32M15] | Toeplitz âmilleri, Hankel âmilleri, Wiener-Hopf âmilleri {Sâir tamâmî âmiller için ayrıca bakınız: 45P05, 47G10} [Ayrıca bakınız: 32A25, 32M15] | nakil |
+| 47B36 | Jacobi (tridiagonal) operators (matrices) and generalizations | Jacobi (üç kutrlu) âmilleri (masfûfeleri) ve umûmîleştirmeleri | nakil |
+| 47B37 | Linear operators on special spaces (weighted shifts, operators on sequence spaces, etc.) | Hususî fezâlar üzerinde hattî âmiller (ağırlıklı kaydırmalar, tevâlî fezâları üzerindeki âmiller ve emsâli) |  |
+| 47B38 | Linear operators on function spaces (general) | Tâbi fezâları üzerinde hattî âmiller (umûmî) |  |
+| 47B39 | Linear difference operators [See also 39A70] | Hattî fark âmilleri [Ayrıca bakınız: 39A70] |  |
+| 47B40 | Spectral operators, decomposable operators, well-bounded operators, etc. | Tayfî âmiller, tahlîli kābil âmiller, iyi mahdûd âmiller ve emsâli |  |
+| 47B44 | Linear accretive operators, dissipative operators, etc. | Hattî tezâyüdî (akretif) âmiller, tebdîdî âmiller ve emsâli | şüpheli: "accretive" için "tezâyüdî" teklif edildi |
+| 47B47 | Commutators, derivations, elementary operators, etc. | Mübâdeleciler (komütatörler), iştikaklar, basît âmiller ve emsâli |  |
+| 47B48 | Linear operators on Banach algebras | Banach cebirleri üzerinde hattî âmiller |  |
+| 47B49 | Transformers, preservers (linear operators on spaces of linear operators) | Tahvîl ediciler, hâfızlar (hattî âmil fezâları üzerindeki hattî âmiller) |  |
+| 47B50 | Linear operators on spaces with an indefinite metric [See also 46C20] | Gayr-ı muayyen mesâfeli fezâlar üzerinde hattî âmiller [Ayrıca bakınız: 46C20] |  |
+| 47B60 | Linear operators on ordered spaces | Müretteb fezâlar üzerinde hattî âmiller |  |
+| 47B65 | Positive linear operators and order-bounded operators | Müsbet hattî âmiller ve tertibce mahdûd âmiller |  |
+| 47B80 | Random linear operators [See also 47H40, 60H25] | Tesâdüfî hattî âmiller [Ayrıca bakınız: 47H40, 60H25] |  |
+| 47B90 | Operator theory and harmonic analysis [See also 42-XX, 43-XX, 44-XX] | Âmiller nazariyesi ve te'lîfî tahlîl [Ayrıca bakınız: 42-XX, 43-XX, 44-XX] |  |
+| 47B91 | Operators on complex function spaces | Mürekkeb tâbi fezâları üzerinde âmiller |  |
+| 47B92 | Operators on real function spaces | Hakîkî tâbi fezâları üzerinde âmiller |  |
+| 47B93 | Operators arising in mathematical physics | Riyâzî hikmet-i tabîiyyede zuhûr eden âmiller |  |
 | 47B99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **47Cxx** | **Individual linear operators as elements of algebraic systems** | **** |  |
-| 47C05 | Linear operators in algebras |  |  |
-| 47C10 | Linear operators in ∗ -algebras |  |  |
-| 47C15 | Linear operators in C ∗ - or von Neumann algebras |  |  |
+| **47Cxx** | **Individual linear operators as elements of algebraic systems** | **Cebrî nizâmların unsurları olarak münferid hattî âmiller** |  |
+| 47C05 | Linear operators in algebras | Cebirlerde hattî âmiller |  |
+| 47C10 | Linear operators in ∗ -algebras | *-cebirlerinde hattî âmiller |  |
+| 47C15 | Linear operators in C ∗ - or von Neumann algebras | C*- yahut von Neumann cebirlerinde hattî âmiller | nakil |
 | 47C99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **47Dxx** | **Groups and semigroups of linear operators, their generalizations and applications** | **** |  |
-| 47D03 | Groups and semigroups of linear operators [See also 20M20] {For nonlinear operators, see 47H20} |  |  |
-| 47D06 | One-parameter semigroups and linear evolution equations [See also 34G10, 34K30] |  |  |
-| 47D07 | Markov semigroups and applications to diffusion processes {For Markov processes, see 60Jxx} |  |  |
-| 47D08 | Schrödinger and Feynman-Kac semigroups |  |  |
-| 47D09 | Operator sine and cosine functions and higher-order Cauchy problems [See also 34G10] |  |  |
-| 47D60 | C-semigroups, regularized semigroups |  |  |
-| 47D62 | Integrated semigroups |  |  |
+| **47Dxx** | **Groups and semigroups of linear operators, their generalizations and applications** | **Hattî âmillerin zümreleri ve nîm-zümreleri, bunların umûmîleştirmeleri ve tatbîkleri** |  |
+| 47D03 | Groups and semigroups of linear operators [See also 20M20] {For nonlinear operators, see 47H20} | Hattî âmillerin zümreleri ve nîm-zümreleri [Ayrıca bakınız: 20M20] {Gayr-ı hattî âmiller için bakınız: 47H20} |  |
+| 47D06 | One-parameter semigroups and linear evolution equations [See also 34G10, 34K30] | Tek vasîtlı nîm-zümreler ve hattî tekâmül muâdeleleri [Ayrıca bakınız: 34G10, 34K30] |  |
+| 47D07 | Markov semigroups and applications to diffusion processes {For Markov processes, see 60Jxx} | Markov nîm-zümreleri ve intişâr süreçlerine tatbîkleri {Markov süreçleri için bakınız: 60Jxx} | nakil |
+| 47D08 | Schrödinger and Feynman-Kac semigroups | Schrödinger ve Feynman-Kac nîm-zümreleri | nakil |
+| 47D09 | Operator sine and cosine functions and higher-order Cauchy problems [See also 34G10] | Âmil cîb ve cîb-i tamâm tâbileri ve yüksek mertebeden Cauchy meseleleri [Ayrıca bakınız: 34G10] |  |
+| 47D60 | C-semigroups, regularized semigroups | C-nîm-zümreleri, muntazamlaştırılmış nîm-zümreler |  |
+| 47D62 | Integrated semigroups | Tamâmîsi alınmış nîm-zümreler |  |
 | 47D99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **47Exx** | **Ordinary differential operators [See also 34Bxx, 34Lxx]** | **** |  |
-| 47E05 | General theory of ordinary differential operators [Should also be assigned at least one other classification number in Section 47] [See also 34Bxx, 34Lxx] |  |  |
-| 47E07 | Functional-differential and differential-difference operators [See also 34K08] |  |  |
+| **47Exx** | **Ordinary differential operators [See also 34Bxx, 34Lxx]** | **Âdî tefâzulî âmiller [Ayrıca bakınız: 34Bxx, 34Lxx]** |  |
+| 47E05 | General theory of ordinary differential operators [Should also be assigned at least one other classification number in Section 47] [See also 34Bxx, 34Lxx] | Âdî tefâzulî âmillerin umûmî nazariyesi [Buna 47. babdan en az bir başka tasnif numarası da verilmelidir] [Ayrıca bakınız: 34Bxx, 34Lxx] |  |
+| 47E07 | Functional-differential and differential-difference operators [See also 34K08] | Tâbiî-tefâzulî ve tefâzulî-fark âmilleri [Ayrıca bakınız: 34K08] |  |
 | 47E99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **47Fxx** | **Partial differential operators [See also 35Pxx, 58Jxx]** | **** |  |
-| 47F05 | General theory of partial differential operators [Should also be assigned at least one other classification number in Section 47] [See also 35Pxx, 58Jxx] |  |  |
-| 47F10 | Elliptic operators and their generalizations {For elliptic complexes, see 58J10} |  |  |
+| **47Fxx** | **Partial differential operators [See also 35Pxx, 58Jxx]** | **Kısmî tefâzulî âmiller [Ayrıca bakınız: 35Pxx, 58Jxx]** |  |
+| 47F05 | General theory of partial differential operators [Should also be assigned at least one other classification number in Section 47] [See also 35Pxx, 58Jxx] | Kısmî tefâzulî âmillerin umûmî nazariyesi [Buna 47. babdan en az bir başka tasnif numarası da verilmelidir] [Ayrıca bakınız: 35Pxx, 58Jxx] |  |
+| 47F10 | Elliptic operators and their generalizations {For elliptic complexes, see 58J10} | İhlîlecî âmiller ve bunların umûmîleştirmeleri {İhlîlecî mürekkebler (kompleksler) için bakınız: 58J10} |  |
 | 47F99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **47Gxx** | **Integral, integro-differential, and pseudodifferential operators [See also 58Jxx]** | **** |  |
-| 47G10 | Integral operators [See also 45P05] |  |  |
-| 47G20 | Integro-differential operators [See also 34K30, 35R09, 35R10, 45J05, 45K05] |  |  |
-| 47G30 | Pseudodifferential operators [See also 35Sxx, 58Jxx] |  |  |
-| 47G40 | Potential operators [See also 31-XX] |  |  |
+| **47Gxx** | **Integral, integro-differential, and pseudodifferential operators [See also 58Jxx]** | **Tamâmî, tamâmî-tefâzulî ve kâzib-tefâzulî âmiller [Ayrıca bakınız: 58Jxx]** |  |
+| 47G10 | Integral operators [See also 45P05] | Tamâmî âmiller [Ayrıca bakınız: 45P05] |  |
+| 47G20 | Integro-differential operators [See also 34K30, 35R09, 35R10, 45J05, 45K05] | Tamâmî-tefâzulî âmiller [Ayrıca bakınız: 34K30, 35R09, 35R10, 45J05, 45K05] |  |
+| 47G30 | Pseudodifferential operators [See also 35Sxx, 58Jxx] | Kâzib-tefâzulî âmiller [Ayrıca bakınız: 35Sxx, 58Jxx] |  |
+| 47G40 | Potential operators [See also 31-XX] | Kuvve âmilleri [Ayrıca bakınız: 31-XX] |  |
 | 47G99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **47Hxx** | **Nonlinear operators and their properties {For global and geometric aspects, see 49J53, 58-XX, especially 58Cxx}** | **** |  |
-| 47H04 | Set-valued operators [See also 28B20, 54C60, 58C06] |  |  |
-| 47H05 | Monotone operators and generalizations |  |  |
-| 47H06 | Nonlinear accretive operators, dissipative operators, etc. |  |  |
-| 47H07 | Monotone and positive operators on ordered Banach spaces or other ordered topological vector spaces |  |  |
-| 47H08 | Measures of noncompactness and condensing mappings, K-set contractions, etc. |  |  |
-| 47H09 | Contraction-type mappings, nonexpansive mappings, A-proper mappings, etc. |  |  |
-| 47H10 | Fixed-point theorems [See also 37C25, 54H25, 55M20, 58C30] |  |  |
-| 47H11 | Degree theory for nonlinear operators [See also 55M25, 58C30] |  |  |
-| 47H14 | Perturbations of nonlinear operators [See also 47A55, 58J37, 70H09, 70K60, 81Q15] |  |  |
-| 47H20 | Semigroups of nonlinear operators [See also 37L05, 47J35, 54H15, 58D07] |  |  |
-| 47H25 | Nonlinear ergodic theorems [See also 28Dxx, 37Axx, 47A35] |  |  |
-| 47H30 | Particular nonlinear operators (superposition, Hammerstein, Nemytskiı̆, Uryson, etc.) [See also 45Gxx, 45P05] |  |  |
-| 47H40 | Random nonlinear operators [See also 47B80, 60H25] |  |  |
-| 47H60 | Multilinear and polynomial operators [See also 46G25] |  |  |
+| **47Hxx** | **Nonlinear operators and their properties {For global and geometric aspects, see 49J53, 58-XX, especially 58Cxx}** | **Gayr-ı hattî âmiller ve bunların vasıfları {Küllî ve hendesî cihetler için bakınız: 49J53, 58-XX, hususiyle 58Cxx}** |  |
+| 47H04 | Set-valued operators [See also 28B20, 54C60, 58C06] | Mecmûa kıymetli âmiller [Ayrıca bakınız: 28B20, 54C60, 58C06] |  |
+| 47H05 | Monotone operators and generalizations | Yeknesak-tegayyürlü âmiller ve umûmîleştirmeleri |  |
+| 47H06 | Nonlinear accretive operators, dissipative operators, etc. | Gayr-ı hattî tezâyüdî âmiller, tebdîdî âmiller ve emsâli |  |
+| 47H07 | Monotone and positive operators on ordered Banach spaces or other ordered topological vector spaces | Müretteb Banach fezâları yahut sâir müretteb vaz'î müteveccihe fezâları üzerinde yeknesak-tegayyürlü ve müsbet âmiller |  |
+| 47H08 | Measures of noncompactness and condensing mappings, K-set contractions, etc. | Gayr-ı mütarâsiyet mikyâsları ve tekâsüf ettiren tatbîkler, K-mecmûa inkıbâzları ve emsâli |  |
+| 47H09 | Contraction-type mappings, nonexpansive mappings, A-proper mappings, etc. | İnkıbâz nev'inden tatbîkler, genişletmeyen tatbîkler, A-münâsib tatbîkler ve emsâli |  |
+| 47H10 | Fixed-point theorems [See also 37C25, 54H25, 55M20, 58C30] | Sâbit nokta kaziyyeleri [Ayrıca bakınız: 37C25, 54H25, 55M20, 58C30] |  |
+| 47H11 | Degree theory for nonlinear operators [See also 55M25, 58C30] | Gayr-ı hattî âmiller için derece nazariyesi [Ayrıca bakınız: 55M25, 58C30] |  |
+| 47H14 | Perturbations of nonlinear operators [See also 47A55, 58J37, 70H09, 70K60, 81Q15] | Gayr-ı hattî âmillerin ihtilâlleri [Ayrıca bakınız: 47A55, 58J37, 70H09, 70K60, 81Q15] |  |
+| 47H20 | Semigroups of nonlinear operators [See also 37L05, 47J35, 54H15, 58D07] | Gayr-ı hattî âmillerin nîm-zümreleri [Ayrıca bakınız: 37L05, 47J35, 54H15, 58D07] |  |
+| 47H25 | Nonlinear ergodic theorems [See also 28Dxx, 37Axx, 47A35] | Gayr-ı hattî ergodik kaziyyeler [Ayrıca bakınız: 28Dxx, 37Axx, 47A35] |  |
+| 47H30 | Particular nonlinear operators (superposition, Hammerstein, Nemytskiı̆, Uryson, etc.) [See also 45Gxx, 45P05] | Hususî gayr-ı hattî âmiller (terâkub (süperpozisyon), Hammerstein, Nemytskiĭ, Uryson ve emsâli) [Ayrıca bakınız: 45Gxx, 45P05] | nakil |
+| 47H40 | Random nonlinear operators [See also 47B80, 60H25] | Tesâdüfî gayr-ı hattî âmiller [Ayrıca bakınız: 47B80, 60H25] |  |
+| 47H60 | Multilinear and polynomial operators [See also 46G25] | Çok hattî ve kesîrü'l-hudûdî âmiller [Ayrıca bakınız: 46G25] |  |
 | 47H99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **47Jxx** | **Equations and inequalities involving nonlinear operators [See also 46Txx] {For global and geometric aspects, see 58-XX}** | **** |  |
-| 47J05 | Equations involving nonlinear operators (general) [See also 47H10, 47J25] |  |  |
-| 47J06 | Nonlinear ill-posed problems [See also 35R25, 47A52, 65F22, 65J20, 65L08, 65M30, 65R30] |  |  |
-| 47J07 | Abstract inverse mapping and implicit function theorems involving nonlinear operators [See also 46T20, 58C15] |  |  |
-| 47J10 | Nonlinear spectral theory, nonlinear eigenvalue problems [See also 49R05] |  |  |
-| 47J15 | Abstract bifurcation theory involving nonlinear operators [See also 34C23, 37Gxx, 58E07, 58E09] |  |  |
-| 47J20 | Variational and other types of inequalities involving nonlinear operators (general) [See also 49J40] |  |  |
-| 47J22 | Variational and other types of inclusions [See also 34A60, 49J21, 49K21] |  |  |
-| 47J25 | Iterative procedures involving nonlinear operators [See also 47J26, 65J15] |  |  |
-| 47J26 | Fixed-point iterations [See also 47J25] |  |  |
-| 47J30 | Variational methods involving nonlinear operators [See also 58Exx] |  |  |
-| 47J35 | Nonlinear evolution equations [See also 34G20, 35K90, 35L90, 35Qxx, 35R20, 37Kxx, 37Lxx, 47H20, 58D25] |  |  |
-| 47J40 | Equations with nonlinear hysteresis operators [See also 34C55, 74N30] |  |  |
+| **47Jxx** | **Equations and inequalities involving nonlinear operators [See also 46Txx] {For global and geometric aspects, see 58-XX}** | **Gayr-ı hattî âmilleri ihtivâ eden muâdeleler ve adem-i müsâvâtlar [Ayrıca bakınız: 46Txx] {Küllî ve hendesî cihetler için bakınız: 58-XX}** |  |
+| 47J05 | Equations involving nonlinear operators (general) [See also 47H10, 47J25] | Gayr-ı hattî âmilleri ihtivâ eden muâdeleler (umûmî) [Ayrıca bakınız: 47H10, 47J25] |  |
+| 47J06 | Nonlinear ill-posed problems [See also 35R25, 47A52, 65F22, 65J20, 65L08, 65M30, 65R30] | Gayr-ı hattî kötü vaz' edilmiş meseleler [Ayrıca bakınız: 35R25, 47A52, 65F22, 65J20, 65L08, 65M30, 65R30] |  |
+| 47J07 | Abstract inverse mapping and implicit function theorems involving nonlinear operators [See also 46T20, 58C15] | Gayr-ı hattî âmilleri ihtivâ eden mücerred makûs tatbîk ve kapalı (zımnî) tâbi kaziyyeleri [Ayrıca bakınız: 46T20, 58C15] |  |
+| 47J10 | Nonlinear spectral theory, nonlinear eigenvalue problems [See also 49R05] | Gayr-ı hattî tayf nazariyesi, gayr-ı hattî hâs kıymet meseleleri [Ayrıca bakınız: 49R05] |  |
+| 47J15 | Abstract bifurcation theory involving nonlinear operators [See also 34C23, 37Gxx, 58E07, 58E09] | Gayr-ı hattî âmilleri ihtivâ eden mücerred çatallanma nazariyesi [Ayrıca bakınız: 34C23, 37Gxx, 58E07, 58E09] |  |
+| 47J20 | Variational and other types of inequalities involving nonlinear operators (general) [See also 49J40] | Gayr-ı hattî âmilleri ihtivâ eden tehavvülî ve sâir nev'den adem-i müsâvâtlar (umûmî) [Ayrıca bakınız: 49J40] |  |
+| 47J22 | Variational and other types of inclusions [See also 34A60, 49J21, 49K21] | Tehavvülî ve sâir nev'den ihtivâlar (inklüzyonlar) [Ayrıca bakınız: 34A60, 49J21, 49K21] |  |
+| 47J25 | Iterative procedures involving nonlinear operators [See also 47J26, 65J15] | Gayr-ı hattî âmilleri ihtivâ eden tekrarî usuller [Ayrıca bakınız: 47J26, 65J15] |  |
+| 47J26 | Fixed-point iterations [See also 47J25] | Sâbit nokta tekrarları [Ayrıca bakınız: 47J25] |  |
+| 47J30 | Variational methods involving nonlinear operators [See also 58Exx] | Gayr-ı hattî âmilleri ihtivâ eden tehavvülî usuller [Ayrıca bakınız: 58Exx] |  |
+| 47J35 | Nonlinear evolution equations [See also 34G20, 35K90, 35L90, 35Qxx, 35R20, 37Kxx, 37Lxx, 47H20, 58D25] | Gayr-ı hattî tekâmül muâdeleleri [Ayrıca bakınız: 34G20, 35K90, 35L90, 35Qxx, 35R20, 37Kxx, 37Lxx, 47H20, 58D25] |  |
+| 47J40 | Equations with nonlinear hysteresis operators [See also 34C55, 74N30] | Gayr-ı hattî gecikme (histerezis) âmilli muâdeleler [Ayrıca bakınız: 34C55, 74N30] |  |
 | 47J99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **47Lxx** | **Linear spaces and algebras of operators [See also 46Lxx]** | **** |  |
-| 47L05 | Linear spaces of operators [See also 46A32, 46B28] |  |  |
-| 47L07 | Convex sets and cones of operators [See also 46A55] |  |  |
-| 47L10 | Algebras of operators on Banach spaces and other topological linear spaces |  |  |
-| 47L15 | Operator algebras with symbol structure |  |  |
-| 47L20 | Operator ideals [See also 47B10] |  |  |
-| 47L22 | Ideals of polynomials and of multilinear mappings in operator theory |  |  |
-| 47L25 | Operator spaces (= matricially normed spaces) [See also 46L07] |  |  |
-| 47L30 | Abstract operator algebras on Hilbert spaces |  |  |
-| 47L35 | Nest algebras, CSL algebras |  |  |
-| 47L40 | Limit algebras, subalgebras of C ∗ -algebras |  |  |
-| 47L45 | Dual algebras; weakly closed singly generated operator algebras |  |  |
-| 47L50 | Dual spaces of operator algebras |  |  |
-| 47L55 | Representations of (nonselfadjoint) operator algebras |  |  |
-| 47L60 | Algebras of unbounded operators; partial algebras of operators |  |  |
-| 47L65 | Crossed product algebras (analytic crossed products) |  |  |
-| 47L70 | Nonassociative nonselfadjoint operator algebras |  |  |
-| 47L75 | Other nonselfadjoint operator algebras |  |  |
-| 47L80 | Algebras of specific types of operators (Toeplitz, integral, pseudodifferential, etc.) |  |  |
-| 47L90 | Applications of operator algebras to the sciences |  |  |
+| **47Lxx** | **Linear spaces and algebras of operators [See also 46Lxx]** | **Âmillerin hattî fezâları ve cebirleri [Ayrıca bakınız: 46Lxx]** |  |
+| 47L05 | Linear spaces of operators [See also 46A32, 46B28] | Âmillerin hattî fezâları [Ayrıca bakınız: 46A32, 46B28] |  |
+| 47L07 | Convex sets and cones of operators [See also 46A55] | Âmillerin muhaddeb mecmûaları ve mahrûtları [Ayrıca bakınız: 46A55] |  |
+| 47L10 | Algebras of operators on Banach spaces and other topological linear spaces | Banach fezâları ve sâir vaz'î hattî fezâlar üzerindeki âmillerin cebirleri |  |
+| 47L15 | Operator algebras with symbol structure | Remz bünyeli âmil cebirleri |  |
+| 47L20 | Operator ideals [See also 47B10] | Âmil misâliyeleri [Ayrıca bakınız: 47B10] |  |
+| 47L22 | Ideals of polynomials and of multilinear mappings in operator theory | Âmiller nazariyesinde kesîrü'l-hudûdların ve çok hattî tatbîklerin misâliyeleri |  |
+| 47L25 | Operator spaces (= matricially normed spaces) [See also 46L07] | Âmil fezâları (= masfûfevî normlu fezâlar) [Ayrıca bakınız: 46L07] |  |
+| 47L30 | Abstract operator algebras on Hilbert spaces | Hilbert fezâları üzerinde mücerred âmil cebirleri |  |
+| 47L35 | Nest algebras, CSL algebras | Yuva cebirleri, CSL cebirleri | şüpheli: "CSL" (commutative subspace lattice) harfî işaret olarak nakledildi; açılımı "tebdîlî alt fezâ kafesi"dir |
+| 47L40 | Limit algebras, subalgebras of C ∗ -algebras | Nihâyet cebirleri, C*-cebirlerinin alt cebirleri |  |
+| 47L45 | Dual algebras; weakly closed singly generated operator algebras | Müsennâ cebirler; zayıf kapalı, tek unsurla tevlîd edilmiş âmil cebirleri |  |
+| 47L50 | Dual spaces of operator algebras | Âmil cebirlerinin müsennâ fezâları |  |
+| 47L55 | Representations of (nonselfadjoint) operator algebras | (Zâtî-mülhak olmayan) âmil cebirlerinin temsilleri |  |
+| 47L60 | Algebras of unbounded operators; partial algebras of operators | Gayr-ı mahdûd âmillerin cebirleri; âmillerin kısmî cebirleri |  |
+| 47L65 | Crossed product algebras (analytic crossed products) | Çapraz hâsıl-ı zarb cebirleri (tahlîlî çapraz hâsıl-ı zarblar) |  |
+| 47L70 | Nonassociative nonselfadjoint operator algebras | Tecmîî olmayan, zâtî-mülhak olmayan âmil cebirleri |  |
+| 47L75 | Other nonselfadjoint operator algebras | Sâir zâtî-mülhak olmayan âmil cebirleri |  |
+| 47L80 | Algebras of specific types of operators (Toeplitz, integral, pseudodifferential, etc.) | Muayyen nev'den âmillerin cebirleri (Toeplitz, tamâmî, kâzib-tefâzulî ve emsâli) |  |
+| 47L90 | Applications of operator algebras to the sciences | Âmil cebirlerinin ilimlere tatbîkleri |  |
 | 47L99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **47Nxx** | **Miscellaneous applications of operator theory [See also 46Nxx]** | **** |  |
-| 47N10 | Applications of operator theory in optimization, convex analysis, mathematical programming, economics |  |  |
-| 47N20 | Applications of operator theory to differential and integral equations |  |  |
-| 47N30 | Applications of operator theory in probability theory and statistics |  |  |
-| 47N40 | Applications of operator theory in numerical analysis [See also 65Jxx] |  |  |
-| 47N50 | Applications of operator theory in the physical sciences |  |  |
-| 47N60 | Applications of operator theory in chemistry and life sciences |  |  |
-| 47N70 | Applications of operator theory in systems, signals, circuits, and control theory |  |  |
+| **47Nxx** | **Miscellaneous applications of operator theory [See also 46Nxx]** | **Âmiller nazariyesinin muhtelif tatbîkleri [Ayrıca bakınız: 46Nxx]** |  |
+| 47N10 | Applications of operator theory in optimization, convex analysis, mathematical programming, economics | Âmiller nazariyesinin ahseniyet, muhaddeb tahlîl, riyâzî programlama ve iktisatta tatbîkleri |  |
+| 47N20 | Applications of operator theory to differential and integral equations | Âmiller nazariyesinin tefâzulî ve tamâmî muâdelelere tatbîkleri |  |
+| 47N30 | Applications of operator theory in probability theory and statistics | Âmiller nazariyesinin ihtimâl nazariyesi ve ihsâiyyâtta tatbîkleri |  |
+| 47N40 | Applications of operator theory in numerical analysis [See also 65Jxx] | Âmiller nazariyesinin adedî tahlîlde tatbîkleri [Ayrıca bakınız: 65Jxx] |  |
+| 47N50 | Applications of operator theory in the physical sciences | Âmiller nazariyesinin tabiat ilimlerinde (fizikî ilimlerde) tatbîkleri |  |
+| 47N60 | Applications of operator theory in chemistry and life sciences | Âmiller nazariyesinin kimya ve hayat ilimlerinde tatbîkleri |  |
+| 47N70 | Applications of operator theory in systems, signals, circuits, and control theory | Âmiller nazariyesinin nizâmlar, işaretler, devreler ve idâre nazariyesinde tatbîkleri |  |
 | 47N99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **47Sxx** | **Other (nonclassical) types of operator theory [See also 46Sxx]** | **** |  |
-| 47S05 | Quaternionic operator theory |  |  |
-| 47S10 | Operator theory over fields other than R, C or the quaternions; non-Archimedean operator theory |  |  |
-| 47S20 | Nonstandard operator theory [See also 03H05] |  |  |
-| 47S30 | Constructive operator theory [See also 03F60] |  |  |
-| 47S40 | Fuzzy operator theory [See also 03E72] |  |  |
-| 47S50 | Operator theory in probabilistic metric linear spaces [See also 54E70] |  |  |
+| **47Sxx** | **Other (nonclassical) types of operator theory [See also 46Sxx]** | **Âmiller nazariyesinin sâir (klasik olmayan) nev'leri [Ayrıca bakınız: 46Sxx]** |  |
+| 47S05 | Quaternionic operator theory | Kuaterniyonlu âmiller nazariyesi | nakil |
+| 47S10 | Operator theory over fields other than R, C or the quaternions; non-Archimedean operator theory | R, C yahut kuaterniyonlardan başka cisimler üzerinde âmiller nazariyesi; gayr-ı Arşimedî âmiller nazariyesi |  |
+| 47S20 | Nonstandard operator theory [See also 03H05] | Gayr-ı mi'yârî âmiller nazariyesi [Ayrıca bakınız: 03H05] |  |
+| 47S30 | Constructive operator theory [See also 03F60] | İnşâî âmiller nazariyesi [Ayrıca bakınız: 03F60] |  |
+| 47S40 | Fuzzy operator theory [See also 03E72] | Bulanık âmiller nazariyesi [Ayrıca bakınız: 03E72] |  |
+| 47S50 | Operator theory in probabilistic metric linear spaces [See also 54E70] | İhtimâlî mesâfeli hattî fezâlarda âmiller nazariyesi [Ayrıca bakınız: 54E70] |  |
 | 47S99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
 ## 49-XX — Calculus of variations and optimal control; optimization [See also 34H05, 34K35, 65Kxx, 90Cxx, 93-XX]

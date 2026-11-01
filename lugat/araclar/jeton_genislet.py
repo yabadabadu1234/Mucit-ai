@@ -15,11 +15,11 @@ for l in open(src, encoding='utf-8'):
             ek = m.group(2) or ''
             sesliler = [c for c in b if c in 'aeıioöuüâîû']
             kalin = sesliler[-1] in 'aıouâû'
-            ek = {'in': 'ın' if kalin else 'in', 'e': 'a' if kalin else 'e', 'de': 'da' if kalin else 'de', '': ''}[ek]
+            ek = {'in': 'ın' if kalin else 'in', 'e': 'a' if kalin else 'e', 'de': 'da' if kalin else 'de', 'i': 'ı' if kalin else 'i', '': ''}[ek]
             if ek and b[-1] in 'aeıioöuüâîû':
-                ek = 'n' + ek
+                ek = ('y' if ek in 'ıi' else 'n') + ek
             return b + ek
-        s = re.sub(r'§(\w)§(in|de|e)?(?![a-zçğıöşüâîû])', degis, s)
+        s = re.sub(r'§(\w)§(in|de|e|i)?(?![a-zçğıöşüâîû])', degis, s)
         assert '§' not in s, l
         if s[0] == 'i':
             s = 'İ' + s[1:]
