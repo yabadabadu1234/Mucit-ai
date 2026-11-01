@@ -102,3 +102,9 @@ Sıradaki iş:
 - Tashihler: shivering için "ra'şe" yerine "kuş'ırîre" (ra'şe tremor'dur); edema için umumî olanında "istiskâ-yı lahmî"; plasma proteins için "mevâdd-ı zülâliyye-i dem" (şüpheli); autonomic için "cihâz-ı asabî-i nebâtî"; carbonic acid için "hâmız-ı fahmî" yeğlendi.
 - Anahtar şekli olarak `MeSH-ad:<İngilizce başlık>` ve tasnifte başlığı olmayanlar için `SERBEST:<ıstılah>` eklendi; imtizaç betiği buna göre güncellendi, deneme yeniden DOĞRU çıktı.
 - Kadîm mühürlerin delilleri el-Kânûn'un kitap ve fen künyesiyle yazıldı; sahife numaraları `QanunAvicennae` nüshası açılınca eklenecek.
+
+### 1 Teşrinisani 2026 (Kasım), devir
+
+- Bu oturumun ağında resmî adresler kapalı kaldığı için iş, tam izinli muhitte açılan yeni lügat iş parçacığına devredildi. Bu oturum burada durur.
+- Devir anında: iki tasnif henüz indirilmedi; `ham/` ve `telif/` klasörleri boştur (yalnız `deneme/` altında sahte deneme verisi vardır). Karşılık dosyalarında seksen sekiz satır vardır (`001`, `002`, `003`).
+- Yeni oturumun ilk işi: `betikler/indir_mesh.py` ve `betikler/indir_icd11.py` koşturmak, sonra `imtizac.py` ve `dogrula.py`; `telif/ingilizce_uyusmazligi.tsv` ile `telif/eslesmeyen_karsiliklar.tsv` dosyalarını tetkik edip Hastalıklar Tasnifi bab anahtarlarının tutup tutmadığını yoklamak.
