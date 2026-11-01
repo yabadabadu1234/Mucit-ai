@@ -44,3 +44,10 @@ Bu defter, iş kesilirse kaldığı yerden devam edebilmek için tutulur. Her ot
 - Dikkat çeken husus: Tercüme iş parçacığının defteri, Cannon şerhinin ıstılah cedvelinin lügate bildirildiğini söylüyor; fakat `lugat/talepler/istilah_talepleri.tsv` dosyasında başlık satırından başka satır yoktur. Bildirim başka bir yoldan yapılmış olabilir; tenkitlerde zikredildi.
 
 Sıradaki iş: Talebe notunu üç parçada yazıp her parçayı kaydetmek; tenkitleri tercüme iş parçacığına iletmek.
+
+### 1 Teşrinisani 2026 (Kasım), birinci oturumun sonu: kullanıcı emriyle durduruldu
+
+- Kullanıcı şöyle buyurdu: "Şerhler berbat oluyor, hiç şerh ve not yazılmasın artık, sadece tercüme." Bu emir üzerine not iş parçacığının işi **kullanıcı emriyle durduruldu**.
+- Durdurulduğu anda yazılmış olan: `cannon_bedenin_hikmeti/talebe_notu.md`, mukaddime ile altıncı bab arası (birinci parça). Yedinci babdan hâtimeye kadarki kısım yazılmadı.
+- Notta işaret edilen `tenkitler.md` dosyası yazılmadı; tenkitler tercüme iş parçacığına iletilmedi. Bulunan iki tenkit kayıt olsun diye buraya yazılır: (1) Şerhte susuzluk ile açlık iki ayrı bab yapılmıştır; asılda tek bab olabilir ve kan pıhtılaşmasına dair ayrı bir bab bulunabilir (şüpheli, hafızaya dayanır). (2) Altıncı babda böbreğin eşiği "yüzde on yedide bir" diye yazılmıştır; yüz santimetre küpte yüz yetmiş miligram "yüzde sıfır tam yüzde on yedi"dir, şerhteki ifade riyazî olarak yanlıştır.
+- Kullanıcı yeniden emir vermedikçe bu klasörde yeni not yazılmaz.
