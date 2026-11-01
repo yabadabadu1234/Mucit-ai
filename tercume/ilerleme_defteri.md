@@ -40,6 +40,7 @@ Kullanıcı şöyle buyurdu: "Şerhler berbat oluyor, hiç şerh ve not yazılma
 - Cannon şerhi silinmedi; "terk edildi" diye işaretlendi.
 - Yeni tercümelerin not iş parçacığına bildirilmesine lüzum kalmadı.
 - Seçimde ve sırada şaheserlik derecesi esas olmaya devam eder.
+- Cannon'un The Wisdom of the Body eseri için kullanıcı açık izin verdi ("İznim var"). Diğer karışık eserler için bu iznin geçerli olup olmadığını şaheser iş parçacığı kullanıcıya soruyor; cevap gelinceye kadar onlar tercüme edilmez.
 
 ## Çalışma yeri
 
@@ -70,7 +71,7 @@ Kullanıcı şöyle buyurdu: "Şerhler berbat oluyor, hiç şerh ve not yazılma
 | 1 | Virchow, Die Cellularpathologie | Birebir tam tercüme | Nüsha: "cellularpatholog00virc"; ağ izni bekleniyor |
 | 2 | Harvey, De Motu Cordis | Birebir tam tercüme | Nüsha: Gutenberg 67065 (Willis); ağ izni bekleniyor |
 | 3 | Bernard, Introduction à l'étude de la médecine expérimentale | Fransızca asıldan birebir tam tercüme | Ağ izni bekleniyor |
-| 4 | Cannon, The Wisdom of the Body | Yalnız kayıt (karışık) | Şerh terk edildi (cannon_bedenin_hikmeti/serh.md, silinmedi). Nüsha: Internet Archive "wisdomofbody0000cann" ve "wisdomofbody0000walt" |
+| 4 | Cannon, The Wisdom of the Body | Birebir tam tercüme (kullanıcı izin verdi) | Kullanıcı 1 Kasım 2026'da şaheser iş parçacığında "İznim var" dedi; karışık hâldeki bu eser için açık izindir. Müellif 1945'te vefat ettiği için Türkiye'de serbesttir. Terk edilen şerh silinmedi (cannon_bedenin_hikmeti/serh.md). Nüsha: Internet Archive "wisdomofbody0000cann" ve "wisdomofbody0000walt" (ödünç usulü olabilir); ağ izni bekleniyor |
 | 5 | Morgagni, De Sedibus et Causis Morborum | Birebir tam tercüme | Ağ izni bekleniyor |
 | 6 | Sherrington, The Integrative Action of the Nervous System | Birebir tam tercüme | Ağ izni bekleniyor |
 | 7 | Cohnheim, Vorlesungen über allgemeine Pathologie | Birebir tam tercüme | Ağ izni bekleniyor |
