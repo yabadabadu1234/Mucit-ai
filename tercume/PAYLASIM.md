@@ -33,10 +33,11 @@ Eserlerin telif hâli ve nüshaları için: [DEFTER.md](DEFTER.md). Tercümenin 
 | 53 | Riemann 1854, *Über die Hypothesen, welche der Geometrie zu Grunde liegen* | İkinci | Sürüyor | `eserler/53_riemann_1854_hendesenin_esasi_olan_faraziyeler.md` |
 | 26 | Dedekind 1872, *Stetigkeit und irrationale Zahlen* | İkinci | Sırada | `eserler/26_dedekind_1872_sureklilik_ve_gayri_muntazam_adedler.md` |
 | 45 | Abel 1826, *Auflösung einer mechanischen Aufgabe* | Üçüncü | Sürüyor | |
+| 26 | Leibniz 1684, *Nova methodus pro maximis et minimis* | Üçüncü | Sırada | |
 | 41 | Weierstrass 1885, *Über die analytische Darstellbarkeit sogenannter willkürlicher Functionen* | Üçüncü | Sırada | |
 | 62 | Bayes 1763, *An Essay towards solving a Problem in the Doctrine of Chances* | Dördüncü | Sürüyor | `eserler/60_bayes_1763_…` |
 | 62 | Gosset ("Student") 1908, *The Probable Error of a Mean* | Dördüncü | Sırada | |
 
 ## Boştaki eserler
 
-[DEFTER.md](DEFTER.md)'de **Açık** yahut **Lisanslı** yazılı olup yukarıdaki paylaştırmada adı geçmeyen her eser boştadır. Meselâ Leibniz 1684, *Nova methodus pro maximis et minimis* şu an kimsede değildir. **Karışık** eserlere Padişaha sorulmadan başlanmaz.
+[DEFTER.md](DEFTER.md)'de **Açık** yahut **Lisanslı** yazılı olup yukarıdaki paylaştırmada adı geçmeyen her eser boştadır. **Karışık** eserlere Padişaha sorulmadan başlanmaz.

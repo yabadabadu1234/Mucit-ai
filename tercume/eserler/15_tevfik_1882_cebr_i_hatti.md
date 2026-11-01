@@ -10,13 +10,11 @@
 >
 > **Telif hâli.** Müellif 1901'de vefat etmiştir; eser 1882'de neşredilmiştir. Her memlekette umuma açıktır. Internet Archive de eseri telif altında olmayan eser diye kaydetmiştir.
 >
-> **Tercüme usulü.** Bendler aslındaki numaralarıyla, cümle cümle, atlamadan ve ilâve etmeden nakledilmiştir. Mütercimin her sözü sonda, **Mütercim kayıtları** babındadır; metindeki `[M1]` … işaretleri o kayıtlara gösterir. Aslın sahife numaraları köşeli parantez içinde, `[s. 3]` gibi, gösterilmiştir.
->
-> **Harfler hakkında.** Tercüme dizisinin birinci kaidesi gereğince düsturlarda harf yazılmamış, her kemmiyet mânâsını söyleyen bir kelimeyle adlandırılmıştır. Müellifin `A`, `B`, `C` … gibi büyük harfleri ise birer kemmiyet değil, **şekildeki noktaların adlarıdır**; `AB` hattı "A noktasından B noktasına giden hat" demektir. Euler ve Hârizmî tercümelerindeki emsaline uyularak bu nokta adları aslındaki gibi bırakılmıştır. Müellifin Yunan harfleriyle ve küçük Latin harfleriyle gösterdiği kemmiyetlerin bu tercümede hangi kelimelerle karşılandığı, eserin sonundaki **İsimler cedveli**nde gösterilmiştir; bakınız [M1].
+> Aslın sahife numaraları köşeli parantez içinde, `[s. 3]` gibi, gösterilmiştir. Düsturlarda harf yazılmamıştır; aslın işaretlerinin hangi kelimelerle karşılandığı sondaki **İsimler cedveli**ndedir. Şekillerdeki noktaların adları (`A`, `B`, `AB` gibi) birer kemmiyet değil, ad olduğu için aslındaki gibi bırakılmıştır.
 
 ---
 
-## Kapak sahifesinden evvel ciltlenmiş mektup [M2]
+## Müellifin Harvard nüshasına iliştirilmiş mektubu
 
 *Nev York, 5 Şubat 1885. Garbî Yirmi Birinci Sokak, numara 18, Nev York Şehri.*
 
@@ -43,11 +41,11 @@ Hüseyin Tevfik
 
 **3.** "`AB` hattı `NO` hattına müsavidir" ifadesinden, Cebr-i Hattî'de ve Kuaterniyonlar ilminde de, `AB`'nin tûlünün `NO`'nun tûlüne müsavi olduğu, ve ayrıca `AB` hattının istikametinin `NO` hattının istikametiyle aynı olduğu, yâni bu iki hattın ya aynı doğru hat üzerinde bulunduğu, yahut aynı istikamette birbirine müvâzî olduğu anlaşılır. Fakat Cebr-i Adedî'de bu hatların yalnız tûllerinin mutlak müsâvâtı anlaşılır.
 
-**4.** Meselâ bir `AB` hattını tavsif ederken "`AB` hattı" yahut kısaca "`AB`" dersek, muayyen bir istikameti ve tûlü olan hususî `AB` hattını kastederiz. Eğer `AB` hattının altına bir çizgi çekersek, yalnız tûlün nazar-ı itibara alındığını kastederiz. [M3]
+**4.** Meselâ bir `AB` hattını tavsif ederken "`AB` hattı" yahut kısaca "`AB`" dersek, muayyen bir istikameti ve tûlü olan hususî `AB` hattını kastederiz. Eğer `AB` hattının altına bir çizgi çekersek, yalnız tûlün nazar-ı itibara alındığını kastederiz.
 
 Bazan `AB`'nin altı çizili tûlü yerine "`AB`'nin adedi" diyeceğim, ve bir Yunan harfiyle gösterilmiş bir hat için de "o hattın adedi" diyeceğim. Ayrıca `AB` adedinin murabbaını, yâni `AB` adedi ile `AB` adedinin hâsıl-ı zarbını, ve bir hattın adedinin kendisiyle hâsıl-ı zarbını da böylece yazacağım. Bu hallerde bir hattın önüne konan "adet" kelimesiyle o hattın mücerred tûlünün adedi kastedilecektir.
 
-**5.** Bir şeklin muhtelif hatlarını hem istikametleri hem de tûlleri bakımından göstermek için çoğu zaman Yunan harfleri kullanılır. Meselâ `AB` hattı yerine bir Yunan harfi konursa, mesele değişmedikçe bu harften, farz olunduğu üzere muayyen bir tûlü ve istikameti olan `AB` hattı anlaşılır. [M1]
+**5.** Bir şeklin muhtelif hatlarını hem istikametleri hem de tûlleri bakımından göstermek için çoğu zaman Yunan harfleri kullanılır. Meselâ `AB` hattı yerine bir Yunan harfi konursa, mesele değişmedikçe bu harften, farz olunduğu üzere muayyen bir tûlü ve istikameti olan `AB` hattı anlaşılır.
 
 **6.** `AB` ve `BD` hatlarının muayyen bir istikameti ve tûlü olunca, `AD` hattının da zarurî olarak muayyen bir istikameti ve tûlü olacağı âşikârdır; ve `A` noktasından çıkıp `AB` hattını istikametini ve tûlünü vererek çizdikten sonra, `B`'den başlayarak `BD`'yi de tûlünü ve istikametini vererek çizersek, `A`'dan `D`'ye olan mesafe `AD` hattını kendine mahsus tûlü ve istikametiyle temsil edecektir.
 
@@ -65,7 +63,7 @@ Doğru hatları temsil etmenin bu tarzının umumî olduğunu söylemeye hâcet 
 
 > `AB` hattı + `BD` hattı = sıfır, yahut `AB` hattı + `BA` hattı = sıfır.
 
-Böylece "`AB` hattı ile `BA` hattının cem'i" yahut "`BA` hattı ile `AB` hattının cem'i" ifadelerinde `AB` ile `BA` birbirini ifnâ eder (sıfıra götürür); binâenaleyh bir istikamette ölçülen bir hat müsbet bir işaretle temsil olunursa, aksi istikamette ölçülen aynı hat aynı işaretin menfîsi alınarak temsil olunabilir, yâni
+Böylece "`AB` hattı ile `BA` hattının cem'i" yahut "`BA` hattı ile `AB` hattının cem'i" ifadelerinde `AB` ile `BA` birbirini ifnâ eder; binâenaleyh bir istikamette ölçülen bir hat müsbet bir işaretle temsil olunursa, aksi istikamette ölçülen aynı hat aynı işaretin menfîsi alınarak temsil olunabilir, yâni
 
 > `AB` hattı = menfî `BA` hattı, yahut `BA` hattı = menfî `AB` hattı;
 
@@ -83,7 +81,7 @@ bundan dolayı `AB` hattı bir Yunan harfiyle, meselâ **vasl hattı** diye tems
 
 > `AB` hattı = `DE` hattı
 
-olduğunu kabul etmemiz lâzımdır. Zîrâ aynı `AD` doğru hattı üzerinde `AN` ile `DM`'yi alır ve `AN` tûlünü `DM` tûlüne müsavi kılarsak, (10. bend mucibince) `AN` hattının `DM` hattına müsavi olduğunu kabul ederiz; fakat `DE`, `DM`'ye nisbetle, tamamen `AB`'nin `AN`'ye nisbetle bulunduğu gibi vaz' edilmiştir, ve vaz'daki bu benzerlik o kadar tamdır ki `AB`'yi `AN` ile münasebetinden bildiğimiz takdirde, [s. 5] `DE`'yi `DM` ile münasebetinden bilmişiz gibi olur. Binâenaleyh `DM`'nin `AN`'ye müsavi olduğu kabul edildiğinden, `AB`'nin `DE`'ye müsavi olduğunu farz etmeye hakkımız vardır. [M4]
+olduğunu kabul etmemiz lâzımdır. Zîrâ aynı `AD` doğru hattı üzerinde `AN` ile `DM`'yi alır ve `AN` tûlünü `DM` tûlüne müsavi kılarsak, (10. bend mucibince) `AN` hattının `DM` hattına müsavi olduğunu kabul ederiz; fakat `DE`, `DM`'ye nisbetle, tamamen `AB`'nin `AN`'ye nisbetle bulunduğu gibi vaz' edilmiştir, ve vaz'daki bu benzerlik o kadar tamdır ki `AB`'yi `AN` ile münasebetinden bildiğimiz takdirde, [s. 5] `DE`'yi `DM` ile münasebetinden bilmişiz gibi olur. Binâenaleyh `DM`'nin `AN`'ye müsavi olduğu kabul edildiğinden, `AB`'nin `DE`'ye müsavi olduğunu farz etmeye hakkımız vardır.
 
 Böylece
 
@@ -109,7 +107,7 @@ yahut `AB`, `BD`, `DH`'nin vâhidlerini sırasıyla **birinci vâhid**, **ikinci
 
 > kapayan hat = birinci tûl × birinci vâhid + ikinci tûl × ikinci vâhid + üçüncü tûl × üçüncü vâhid.
 
-**14.** Âşikârdır ki `AB`, `BD`, `DH` hatları aynı sath-ı müstevî üzerinde değilse, birinci, ikinci ve üçüncü tûlleri `H` noktasının Kartezyen ihdâsîleri gibi telakki edebiliriz. [M5]
+**14.** Âşikârdır ki `AB`, `BD`, `DH` hatları aynı sath-ı müstevî üzerinde değilse, birinci, ikinci ve üçüncü tûlleri `H` noktasının Kartezyen ihdâsîleri gibi telakki edebiliriz.
 
 `OX`, `OY`, `OZ` istikametleri birbirine amûd olunca, sırasıyla `OX`, `OY` ve `OZ` istikametlerinde bulunan hattî vâhidleri göstermek için çoğu zaman üç harf kullanacağız; bu tercümede onlara **`OX` vâhidi**, **`OY` vâhidi**, **`OZ` vâhidi** denecektir. Eğer **`OX` ihdâsîsi**, **`OY` ihdâsîsi**, **`OZ` ihdâsîsi** bir noktanın amûdî ihdâsîlerini, **mebde' hattı** da `O` mebde'ini bu noktaya birleştiren hattı temsil ederse,
 
@@ -123,7 +121,7 @@ olur.
 
 > `AH` hattı = `AB` hattı + `AC` hattı + `AD` hattı.
 
-Bu ameliyeyi *cem'* diye tarif ederiz. [M6]
+Bu ameliyeyi *cem'* diye tarif ederiz.
 
 Ayrıca kolayca görülür ki
 
@@ -173,7 +171,7 @@ yahut
 
 > 4 × `AB` hattı + 3 × `BD` hattı + `DH` hattı + 7 × `HL` hattı = 2 × netice hattı
 
-da olur. [M7]
+da olur.
 
 **18.** **Birinci hat** ile **ikinci hat** aynı istikamette değilse ve **birinci emsal** ile **ikinci emsal** diye iki mücerred adedi gösterirsek, "birinci emsal × birinci hat" ile "ikinci emsal × ikinci hat" hatları cebrî ifadelerde birbirini ifnâ edemez. Binâenaleyh bir ameliyenin neticesinde
 
@@ -239,7 +237,7 @@ yahut
 
 > birinci emsal : ikinci emsal : üçüncü emsal :: ikinci takımın birinci emsali : ikinci takımın ikinci emsali : ikinci takımın üçüncü emsali;
 
-öyle ki ikinci muâdele birincinin bir katından ibarettir. Birinci, ikinci ve üçüncü emsalin muhtelif kıymetlerini veren müselleslerin müteşâbih olduğuna dikkat edersek, son kaziyye *a priori* (tecrübeden evvel, aklen) kabul olunur.
+öyle ki ikinci muâdele birincinin bir katından ibarettir. Birinci, ikinci ve üçüncü emsalin muhtelif kıymetlerini veren müselleslerin müteşâbih olduğuna dikkat edersek, son kaziyye tecrübeden evvel, aklen kabul olunur.
 
 **22.** Birinci, ikinci ve üçüncü hat müşterekü'l-mebde' ve aynı sath-ı müstevî üzerinde olan, uçları da bir doğru hatta biten hatlar ise, o [s. 8] halde "birinci emsal × birinci hat + ikinci emsal × ikinci hat + üçüncü emsal × üçüncü hat"ı sıfır kılan aynı birinci, ikinci ve üçüncü emsal kıymetleri "birinci emsal + ikinci emsal + üçüncü emsal"i de sıfır kılar.
 
@@ -263,7 +261,7 @@ yahut
 
 ve bu muâdelede birinci, ikinci ve üçüncü hattın emsali "kat adedi − 1", "menfî kat adedi" ve "artı 1" olup birinci muâdeledeki birinci, ikinci ve üçüncü emsale tekabül ettiğinden, ve "(kat adedi − 1) − kat adedi + 1 = sıfır" olduğundan, o halde "birinci emsal + ikinci emsal + üçüncü emsal = sıfır" olur.
 
-**22.** [M8] Aksine olarak, birinci, ikinci ve üçüncü hat müşterekü'l-mebde' ve aynı sath-ı müstevî üzerinde hatlar ise ve hem "birinci emsal × birinci hat + ikinci emsal × ikinci hat + üçüncü emsal × üçüncü hat = sıfır", hem de "birinci emsal + ikinci emsal + üçüncü emsal = sıfır" ise, o halde birinci, ikinci ve üçüncü hat bir doğru hatta biter.
+**22.** Aksine olarak, birinci, ikinci ve üçüncü hat müşterekü'l-mebde' ve aynı sath-ı müstevî üzerinde hatlar ise ve hem "birinci emsal × birinci hat + ikinci emsal × ikinci hat + üçüncü emsal × üçüncü hat = sıfır", hem de "birinci emsal + ikinci emsal + üçüncü emsal = sıfır" ise, o halde birinci, ikinci ve üçüncü hat bir doğru hatta biter.
 
 Zîrâ farz mucibince
 
@@ -353,7 +351,7 @@ olur; binâenaleyh
 
 ki aranan murabbaın dıl'ının tûlüdür.
 
-**Misal 3.** Bir müsellesin dıl'larını ikiye bölen hatlar, her birini üçe bölen bir noktada buluşur. [M9]
+**Misal 3.** Bir müsellesin dıl'larını ikiye bölen hatlar, her birini üçe bölen bir noktada buluşur.
 
 `ABC` müsellesinin dıl'ları `D`, `E`, `F` noktalarında ikiye bölünmüş olsun ve `AE` ile `CD` `G`'de buluşsun; `DE` hattının `AC`'ye müvâzî ve onun yarısı olduğu görülecektir.
 
@@ -381,7 +379,7 @@ Bu muâdeleler gösterir ki `EG`, `EA`'nın üçte biri, `DG` de `DC`'nin üçte
 
 **Misal 4.** Bir şekl-i murabba'u'l-adlâ'ın karşılıklı dıl'larının orta noktalarını birleştiren hatların orta noktaları, murabba'u'l-adlâ'ın dört dıl'ı aynı sath-ı müstevî üzerinde olsun olmasın, üst üste gelir.
 
-`AB`, `AC`, `AD` hatlarını kendi adlarıyla kullanalım, ve `X` noktası `EG`'nin orta noktası olsun. [M10]
+`AB`, `AC`, `AD` hatlarını kendi adlarıyla kullanalım, ve `X` noktası `EG`'nin orta noktası olsun.
 
 Şöyle buluruz:
 
@@ -405,6 +403,6 @@ olduğundan,
 
 [s. 11] bu ise `AB`, `AC`, `AD`'de mütenâzır olduğundan, `A`'dan `HF`'nin orta noktasına olan hat için de aynıdır; binâenaleyh `EG` ile `FH` hatlarının orta noktaları üst üste gelmelidir.
 
-Bu küçük eseri, ifadenin vuzuhuyla telif edilebildiği kadar iktisatlı neşretmeyi tabiî olarak arzu ettiğimden, bu babda yalnız kolayca hallolunur birkaç misal koymakla iktifa ettim. Bununla beraber daha fazla izah isteyen olursa, Kelland ile Tait'in *Kuaterniyonlara Medhal* kitabının ikinci babında bu cinsten pek güzel ve kâfi derecede güç haller bulabilir. [M11]
+Bu küçük eseri, ifadenin vuzuhuyla telif edilebildiği kadar iktisatlı neşretmeyi tabiî olarak arzu ettiğimden, bu babda yalnız kolayca hallolunur birkaç misal koymakla iktifa ettim. Bununla beraber daha fazla izah isteyen olursa, Kelland ile Tait'in *Kuaterniyonlara Medhal* kitabının ikinci babında bu cinsten pek güzel ve kâfi derecede güç haller bulabilir.
 
 <!-- TEVFIK-BIRINCI-BAB-SONU -->
