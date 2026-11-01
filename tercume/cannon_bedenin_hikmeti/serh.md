@@ -1,5 +1,7 @@
 # Bedenin Hikmeti Şerhi
 
+> **TERK EDİLDİ (1 Kasım 2026).** Kullanıcının emri: "Şerhler berbat oluyor, hiç şerh ve not yazılmasın artık, sadece tercüme." Bu dosya silinmemiş, yalnız kayıt için saklanmıştır; esas alınmamalıdır.
+
 **Asıl eser:** The Wisdom of the Body (Bedenin hikmeti)
 **Müellif:** Walter Bradford Cannon (1871–1945), Harvard Üniversitesi fizyoloji müderrisi
 **Neşir:** Birinci tâb 1932; genişletilmiş ikinci tâb 1939, New York, W. W. Norton.
@@ -131,13 +133,13 @@ Istılahların Osmanlıca karşılıkları ve mühürleri bu dosyanın sonundaki
 **Bilgiler.**
 - Sağlam insanın kanında şeker, aç karnına takriben yüzde onda bir, yani yüz kısım kanda onda bir kısım civarındadır (yüz santimetre küp kanda yüz miligram civarı). Bu rakam fizyolojide yerleşmiştir; Cannon'un verdiği rakamla birebir aynılığı şüpheli.
 - **Şeker çok düşerse:** Kandaki şeker yüzde onda birin takriben üçte ikisinin altına inince titreme, terleme, açlık ve sinirlilik başlar; daha da inerse havale ve baygınlık gelir. Beyin yakıt olarak neredeyse yalnız şekere muhtaç olduğu için şekerin azlığından en evvel beyin zarar görür. Bu hudut rakamları şüpheli.
-- **Şeker çok yükselirse:** Kandaki şeker takriben yüzde on yedide bire, yani yüz santimetre küpte yüz yetmiş miligrama ulaşınca böbrek şekeri tutamaz ve şeker idrara geçer. Buna "böbreğin eşiği" denir. Şekerle beraber su da kaybolur. Rakam şüpheli.
+- **Şeker çok yükselirse:** Kandaki şeker takriben yüzde on yedide bire, yani yüz santimetre küpte yüz yetmiş miligrama ulaşınca böbrek şekeri tutamaz ve şeker idrara geçer. Buna "kilyenin eşiği" denir. Şekerle beraber su da kaybolur. Rakam şüpheli.
 - **Kebed:** Yemekten sonra kana bol gelen şekeri kebed alır ve "kebed nişastası" olarak saklar; öğünler arasında bu depoyu yine şekere çevirip kana verir. Kebed, kan şekerinin hazinedarıdır.
-- **Mide altı bezinin usaresi:** Mide altı bezindeki adacık hücrelerinin ifraz ettiği usare (bugün "insülin" diye bilinen kimyevî haberci) şekerin hücrelere girmesini ve depolanmasını sağlar. Bu usare eksik olursa şeker kanda birikir; bu, kadîm tıbbın "ziyâbitus" dediği şekerli hastalıktır. Bu usarenin 1921 ile 1922 seneleri arasında Toronto'da Frederick Banting, Charles Best ve arkadaşlarınca ayrılması Cannon'un kitabından evveldir ve kitapta zikredilir.
+- **Mide altı guddesinin usaresi:** Mide altı guddesindeki adacık hücrelerinin ifraz ettiği usare, yani "mide altı guddesinin şeker indirici usaresi" (bugün Latince asıllı bir adla bilinen usâre-i dâhiliyye) şekerin hücrelere girmesini ve depolanmasını sağlar. Bu usare eksik olursa şeker kanda birikir; bu, "ziyâbitus-ı sükkerî", yani şeker hastalığıdır. Kadîm tıbbın "ziyâbitus"u ise bol idrar ve susuzlukla seyreden daha umumî bir hastalıktır; şekerli olanı onun bir nev'idir. Bu usarenin 1921 ile 1922 seneleri arasında Toronto'da Frederick Banting, Charles Best ve arkadaşlarınca ayrılması Cannon'un kitabından evveldir ve kitapta zikredilir.
 - **Acil hâl ve böbrek üstü bezi:** Cannon'un kendi tecrübelerinin en mühim kısmı buradadır. Korku, öfke, şiddetli ağrı yahut kan şekerinin düşmesi gibi bir tehlike hâlinde seferber edici asab cihazı böbrek üstü bezinin iç kısmını uyarır; bu bez kana bugün "adrenalin" denen usareyi verir; bu usare kebeddeki depoyu çözdürür ve kan şekeri yükselir. Cannon, imtihana giren talebelerde ve heyecanlı futbol oyuncularında idrarda şeker görüldüğünü, buna "heyecan şekeri" denebileceğini tespit etmiştir (talebe ve oyuncu misallerinin bu kitapta mı, Cannon'un daha evvelki kitabında mı geçtiği şüpheli).
 
 **İlliyet zinciri.**
-- Yemek → kan şekerinin yükselmesi → mide altı bezinin usaresinin artması → şekerin kebedde ve kasta depolanması → kan şekerinin inmesi.
+- Yemek → kan şekerinin yükselmesi → mide altı guddesinin usaresinin artması → şekerin kebedde ve kasta depolanması → kan şekerinin inmesi.
 - Açlık yahut tehlike → kan şekerinin inmesi yahut inme ihtimali → seferber edici asab cihazı ve böbrek üstü bezi usaresi → kebedin deposunu çözmesi → kan şekerinin yükselmesi.
 - Bu iki zıt yolun birbirini dengelemesi → kan şekerinin dar hudut içinde kalması.
 
@@ -150,8 +152,8 @@ Istılahların Osmanlıca karşılıkları ve mühürleri bu dosyanın sonundaki
 **Asılda denk geldiği yer:** Kanın sulu kısmındaki etsi maddelere (plasma proteins) dair bab. Şüpheli.
 
 **Bilgiler.**
-- Kanın sulu kısmında bulunan iri yapılı etsi maddeler, dördüncü babda anlatıldığı üzere suyu damar içinde tutar; ayrıca kanın pıhtılaşmasına ve maddelerin taşınmasına hizmet eder.
-- Uzun açlıkta yahut kanama sonrasında bu maddeler azalırsa su dokulara kaçar ve ödem, yani "istiskâ" türünden bir şişlik doğar.
+- Kanın sulu kısmında bulunan iri yapılı etsi maddeler, yani "mevâdd-ı zülâliyye-i dem" (şüpheli), dördüncü babda anlatıldığı üzere suyu damar içinde tutar; ayrıca kanın pıhtılaşmasına ve maddelerin taşınmasına hizmet eder.
+- Uzun açlıkta yahut kanama sonrasında bu maddeler azalırsa su dokulara kaçar ve "veram-ı rihv" denen yumuşak bir şiş doğar; bu su toplanması bütün bedenin derisi altına yayılırsa kadîmlerin "istiskâ-yı lahmî" dediği hâl olur (her iki karşılık şüpheli).
 - Kanamadan sonra bu maddelerin, ağırlıklı olarak kebed tarafından yeniden yapılarak birkaç gün içinde yerine geldiği bilinir (müddet şüpheli).
 
 **İlliyet zinciri.** Etsi maddelerin azalması → suyu damarda tutan kuvvetin azalması → suyun dokuya kaçması → şişlik. Kebedin yeniden yapması → miktarın yerine gelmesi → suyun damara dönmesi.
@@ -180,10 +182,10 @@ Istılahların Osmanlıca karşılıkları ve mühürleri bu dosyanın sonundaki
 **Asılda denk geldiği yer:** Kanın kirecine (calcium) dair bab. Şüpheli.
 
 **Bilgiler.**
-- Kandaki kireç, yani kalsiyum, dar bir hudut içinde sabittir. Bu madde sinirin ve kasın uyarılmasında, kalbin çarpmasında ve kanın pıhtılaşmasında zaruridir.
+- Kandaki kireç unsuru, yani "unsur-ı kils" (şüpheli), dar bir hudut içinde sabittir. Bu madde sinirin ve kasın uyarılmasında, kalbin çarpmasında ve kanın pıhtılaşmasında zaruridir.
 - Kandaki kireç azalırsa sinirler ve kaslar aşırı uyarılır, kasılmalar ve kramplar başlar.
 - Kireç, kemiklerde büyük bir depo hâlinde saklanır; kan kireci azalınca kemikten çekilir.
-- Bu idarede boyundaki küçük bezlerin, yani dereki bezinin yanındaki ufak bezlerin (parathyroid) usaresinin rolü vardır; bu bezler çıkarılınca kan kireci düşer ve hayvanda kasılmalar baş gösterir.
+- Bu idarede boyundaki küçük bezlerin, yani dereki guddesinin yanındaki ufak guddelerin, "gudad-ı cenb-i derakiyye"nin usaresinin rolü vardır; bu bezler çıkarılınca kan kireci düşer ve hayvanda kasılmalar baş gösterir.
 
 **İlliyet zinciri.** Kan kirecinin azalması → bu küçük bezlerin usaresinin artması → kemikten kireç çekilmesi → kan kirecinin yerine gelmesi. Bezler yoksa → kireç düşer → sinir ve kas aşırı uyarılır → kasılma nöbetleri.
 
@@ -212,13 +214,13 @@ Istılahların Osmanlıca karşılıkları ve mühürleri bu dosyanın sonundaki
 
 **Bilgiler.**
 - Kan, çok hafif bir kalevîlik derecesinde sabit tutulur. Bu derece, kimyacıların kullandığı ölçekte yedi tam onda dört civarındadır. Bu ölçü Cannon'un kitabı yazdığı devirde yerleşmişti; asılda bu ölçüyle mi verildiği şüpheli.
-- Hücreler çalıştıkça ekşi maddeler, bilhassa karbon ekşisi (karbonik asit, Osmanlı kimyasında "hâmız-ı karbon") ve şiddetli kas işinde süt ekşisi doğurur. Bunlar birikse kan ekşileşir ve hücreler zarar görür.
+- Hücreler çalıştıkça ekşi maddeler, bilhassa kömür ekşisi, yani "hâmız-ı fahmî" (şüpheli) ve şiddetli kas işinde süt ekşisi doğurur. Bunlar birikse kan ekşileşir ve hücreler zarar görür.
 - Bünyenin üç müdafaa hattı vardır:
   1. **Kandaki dengeleyici maddeler:** Kanda, bilhassa bikarbonat tuzları gibi, ekşiliği kendi üzerine alıp etkisizleştiren maddeler vardır. Bu, ilk ve anlık müdafaadır.
-  2. **Nefes:** Kan ekşileşince beyindeki nefes merkezi uyarılır, nefes derinleşir ve karbon ekşisi gaz hâlinde dışarı atılır. Bu, dakikalar içindeki müdafaadır. İskoç fizyoloğu John Scott Haldane'in tecrübeleri bu bahsin esasıdır.
+  2. **Nefes:** Kan ekşileşince beyindeki nefes merkezi uyarılır, nefes derinleşir ve kömür ekşisi gaz hâlinde dışarı atılır. Bu, dakikalar içindeki müdafaadır. İskoç fizyoloğu John Scott Haldane'in tecrübeleri bu bahsin esasıdır.
   3. **Böbrek:** Böbrek fazla ekşiyi idrarla atar ve dengeleyici maddeleri tutar. Bu, saatler ve günler içindeki müdafaadır.
 
-**İlliyet zinciri.** Ekşi madde doğması → kandaki dengeleyici maddelerin onu karşılaması → nefes merkezinin uyarılması ve karbon ekşisinin nefesle atılması → böbreğin geri kalanı idrarla atması → kanın hafif kalevî derecesinin korunması.
+**İlliyet zinciri.** Ekşi madde doğması → kandaki dengeleyici maddelerin onu karşılaması → nefes merkezinin uyarılması ve kömür ekşisinin nefesle atılması → böbreğin geri kalanı idrarla atması → kanın hafif kalevî derecesinin korunması.
 
 **Cevher.** Kanın ekşilik derecesini üç bekçi korur: kandaki dengeleyici, akciğer ve böbrek; biri yetmezse öteki devreye girer.
 
@@ -231,9 +233,9 @@ Istılahların Osmanlıca karşılıkları ve mühürleri bu dosyanın sonundaki
 **Bilgiler.**
 - İnsanın iç ısısı, dış hava çok sıcak da olsa çok soğuk da olsa otuz yedi santigrat derece civarında sabit kalır. Gün içinde bir dereceden az bir dalgalanma olur.
 - **Soğukta ısıyı korumak:** Deri damarları daralır, kan derinlere çekilir, deri soğur fakat iç ısı korunur. Hayvanlarda tüyler kabarır; insanda bunun kalıntısı tüylerin diken diken olmasıdır.
-- **Soğukta ısı doğurmak:** Titreme, yani "ra'şe", kasların iş görmeden kasılarak ısı doğurmasıdır. Ayrıca seferber edici asab cihazı ile böbrek üstü bezi usaresi ve dereki bezinin usaresi bedenin yanmasını hızlandırır. Cannon'un laboratuvarında yapılan tecrübeler, soğuğa maruz bırakılan hayvanlarda böbrek üstü bezi usaresinin arttığını göstermiştir.
+- **Soğukta ısı doğurmak:** Titreme, yani "kuş'ırîre", kasların iş görmeden kasılarak ısı doğurmasıdır. Ayrıca seferber edici asab cihazı ile böbrek üstü bezi usaresi ve dereki bezinin usaresi bedenin yanmasını hızlandırır. Cannon'un laboratuvarında yapılan tecrübeler, soğuğa maruz bırakılan hayvanlarda böbrek üstü bezi usaresinin arttığını göstermiştir.
 - **Sıcakta ısı atmak:** Deri damarları genişler, kan deriye gelir ve ısısını havaya verir. Ter bezleri ter ifraz eder; terin buharlaşması deriyi serinletir. Tüyle örtülü bazı hayvanlar terlemek yerine dilini çıkarıp hızlı hızlı soluyarak ısı atar.
-- Bu işlerin idare merkezi beynin tabanındadır (bugün "hipotalamus" denen bölge; bu şerhte "beynin tabanındaki idare merkezi" denmiştir).
+- Bu işlerin idare merkezi beynin tabanındadır ("taht-ı sarîr", yani beynin tabanındaki idare merkezi).
 - **Humma:** Hummada bünyenin ısı ayarı bozulmuş değildir, daha yüksek bir dereceye çekilmiştir. Bu sebeple humma başlarken insan üşür ve titrer; humma kırılınca terler. Bu fikrin asılda bu açıklıkla geçtiği şüpheli.
 
 **İlliyet zinciri.** Soğuk → derideki ve kandaki ısının düşmesinin hissedilmesi → damarların daralması, titreme ve yanmanın artması → iç ısının korunması. Sıcak → damarların genişlemesi ve terleme → ısının atılması → iç ısının korunması.
@@ -268,7 +270,7 @@ Istılahların Osmanlıca karşılıkları ve mühürleri bu dosyanın sonundaki
 - Böbrekler çift yaratılmıştır; insan tek böbrekle sağlıklı yaşayabilir ve bir böbreğin bir kısmı dahi hayata yetebilir.
 - Akciğerler çifttir; tek akciğerle yaşamak mümkündür.
 - Kebedin büyük bir kısmı çıkarılsa da geri kalanı vazifeyi görür ve kebed yeniden büyür.
-- Mide altı bezinin küçük bir kısmı kalsa şekerli hastalık doğmaz.
+- Mide altı guddesinin küçük bir kısmı kalsa ziyâbitus-ı sükkerî doğmaz.
 - Kalp, istirahatteki ihtiyacın birkaç misli kan pompalayabilir.
 - Dereki bezinin ve böbrek üstü bezlerinin de bir kısmı yeter.
 
@@ -285,10 +287,10 @@ Istılahların Osmanlıca karşılıkları ve mühürleri bu dosyanın sonundaki
 **Asılda denk geldiği yer:** İç muhiti idare eden sinir sisteminin mimarisine dair bab. Şüpheli.
 
 **Bilgiler.**
-- Sinir cihazı iki kısımdır. Birincisi, dış âlemle münasebeti idare eden, iradî hareketleri ve duyuları taşıyan kısımdır. İkincisi, iç uzuvları, damarları ve bezleri iradeye bağlı olmaksızın idare eden kısımdır; buna "kendiliğinden işleyen asab cihazı" (autonomic) denir.
-- Kendiliğinden işleyen asab cihazı da üç kola ayrılır: kafadan çıkan kol, sırt ve bel omurlarından çıkan orta kol ve sağrıdan çıkan alt kol. Orta kol "seferber edici asab cihazı"dır (sympathetic). Kafa ve sağrı kolları beraber "tasarruf edici asab cihazı"dır (parasympathetic). Bu tasnif İngiliz fizyoloğu John Newport Langley'ye aittir.
+- Sinir cihazı iki kısımdır. Birincisi, dış âlemle münasebeti idare eden, iradî hareketleri ve duyuları taşıyan kısımdır. İkincisi, iç uzuvları, damarları ve bezleri iradeye bağlı olmaksızın idare eden kısımdır; buna "cihâz-ı asabî-i nebâtî", yani kendiliğinden işleyen asab cihazı denir. "Nebâtî" kaydı, İbn-i Sînâ'nın nefs-i nebâtîsine, yani beslenme, büyüme ve doğurma kuvvetlerine işarettir; bu cihazın idare ettiği işler de onlardır.
+- Cihâz-ı asabî-i nebâtî de üç kola ayrılır: kafadan çıkan kol, sırt ve bel omurlarından çıkan orta kol ve sağrıdan çıkan alt kol. Orta kol "seferber edici asab cihazı"dır (sympathetic). Kafa ve sağrı kolları beraber "tasarruf edici asab cihazı"dır (parasympathetic). Bu tasnif İngiliz fizyoloğu John Newport Langley'ye aittir.
 - Seferber edici cihazın lifleri omuriliğin yanındaki boğum zincirinde birbirine geniş bir şekilde bağlanır; bu yapı, onun bütün bedende birden harekete geçmesine elverişlidir. Tasarruf edici cihazın lifleri ise doğrudan hedef uzvun yanına kadar gider; bu yapı, onun her uzuvda ayrı ayrı ve yerinde işlemesine elverişlidir.
-- Beynin tabanındaki idare merkezi, bu iki cihazın üst amiridir.
+- Taht-ı sarîr, yani beynin tabanındaki idare merkezi, bu iki cihazın üst amiridir.
 
 **İlliyet zinciri.** Yapı vazifeyi tayin eder: Seferber edici cihazın birbirine bağlı yapısı → bütün bedenin aynı anda seferber edilmesi. Tasarruf edici cihazın ayrı ayrı yapısı → her uzvun kendi işinin ayrı ayrı idaresi.
 
@@ -377,49 +379,51 @@ Cannon bütün kitaptan şu umumî kaideleri çıkarır. Kaidelerin sayısı ve 
 
 ## Istılah cedveli
 
-Lügat iş parçacığının mühür kaidesi uygulanmıştır: "kadîm" (kadîm tıp kitaplarında geçtiği bilinen), "teklif" (mânâya göre yeni terkip edilen), "şüpheli" (emin olunmayan). Bu şerhin delilleri hafızaya dayandığı için "kadîm" mühürlerinin delili, lügat iş parçacığınca kaynaktan teyit edilmelidir.
+Bu cedvel, lügat iş parçacığının tetkikinden sonraki hâldir ve onun cedveline (lugat/karsiliklar/003_tercume_cannon.tsv) birebir uyar. Mühürler: "kadîm" (kadîm tıp kitaplarında geçtiği bilinen), "teklif" (mânâya göre yeni terkip edilen), "şüpheli" (emin olunmayan). Kadîm mühürlerinin delillerinde el-Kânûn'un sahife numaraları nüsha açılınca eklenecektir. Lügat iş parçacığının tashihleri şerhin metnine de işlenmiştir; bilhassa soğuktan gelen titreme "ra'şe" değil "kuş'ırîre"dir, çünkü el-Kânûn'da ra'şe iradesiz uzuv titremesidir.
 
-| İngilizce | Osmanlıca karşılık | Mühür | İzah |
+| İngilizce | Osmanlıca karşılık | Mühür | Delil yahut izah |
 |---|---|---|---|
-| homeostasis | hıfz-ı i'tidâl | teklif | Kadîm "i'tidâl" mefhumu üzerine kurulmuştur; dalgalanan fakat hududu aşmayan dengeyi anlatır. |
-| internal environment, fluid matrix | muhît-i dâhilî; sıvı zemin | teklif | Hücreleri kuşatan kan ve doku sıvısı. |
-| thirst | atş; susuzluk | kadîm | Kadîm tıp kitaplarında "atş" bahsi vardır. |
-| hunger | cû'; açlık | kadîm | |
-| appetite | iştah; şehvet-i taam | kadîm | "Şehvet-i taam" ifadesinin delili teyit edilmeli. |
-| glycogen | kebed nişastası | teklif | Kebedde ve kasta saklanan şeker deposu. |
-| liver | kebed | kadîm | |
-| kidney | böbrek; kilye | kadîm | |
-| pancreas | mide altı bezi | teklif | Kadîm adı tahkik edilmeli. |
-| insulin | mide altı bezinin şeker düşürücü usaresi | teklif | |
-| adrenal gland | böbrek üstü bezi; gudde-i fevkalkülye | şüpheli | "Fevkalkülye" terkibinin Osmanlı tıp kitaplarında geçtiği hatırlanıyor; delil tahkik edilmeli. |
-| adrenaline | böbrek üstü bezi usaresi | teklif | |
-| hormone | kimyevî haberci; usare | teklif | Kan yoluyla uzak uzvu harekete getiren madde. |
-| thyroid gland | dereki bezi; gudde-i derakiyye | şüpheli | Kalkan şeklinden; delil tahkik edilmeli. |
-| parathyroid glands | dereki bezinin yanındaki ufak bezler | teklif | Daha kısa bir terkip aranmalı. |
-| diabetes mellitus | ziyâbitus; şekerli hastalık | kadîm | İbn-i Sînâ "ziyâbitus" bahsini anlatır. |
-| glycosuria | şekerli bevl; idrarda şeker | teklif | |
-| renal threshold | böbreğin eşiği | teklif | |
-| plasma proteins | kanın etsi maddeleri | teklif | |
-| edema | istiskâ türünden şişlik; varem | şüpheli | "İstiskâ" kadîmde umumiyetle karın ve beden şişliğidir; tam karşılığı tahkik edilmeli. |
-| calcium | kireç maddesi; kalsiyum | şüpheli | Bir unsur adı olduğu için Osmanlı kimyasındaki karşılığı tahkik edilmeli. |
-| oxygen | havaî hayat; müvellidü'l-humûza | şüpheli | Osmanlı kimya kitaplarındaki karşılık teyit edilmeli. |
-| carbonic acid | karbon ekşisi; hâmız-ı karbon | şüpheli | Osmanlı kimya kitaplarındaki karşılık teyit edilmeli. |
-| buffer | ekşiliği dengeleyici madde | teklif | |
-| acid–base balance | ekşilik ile kalevîlik dengesi | teklif | |
-| shivering | ra'şe; titreme | kadîm | |
-| sweat | arak; ter | kadîm | |
-| fever | humma | kadîm | |
-| hypothalamus | beynin tabanındaki idare merkezi | teklif | Yer ve vazifeye göre; daha kısa bir terkip aranmalı. |
-| autonomic nervous system | kendiliğinden işleyen asab cihazı | teklif | "Asab" kadîmdir. |
-| sympathetic nervous system | seferber edici asab cihazı | teklif | Mânâya, yani bedeni zorluğa karşı seferber etmesine göre. |
-| parasympathetic nervous system | tasarruf edici asab cihazı | teklif | Mânâya, yani kuvvet biriktirmesine göre. |
-| fight or flight response | dövüş yahut kaç hâli | teklif | |
-| coagulation | kanın pıhtılaşması; in'ikâd-ı dem | şüpheli | "İn'ikâd" kelimesinin bu mânâda kadîm delili tahkik edilmeli. |
-| phagocyte | yutucu hücre | teklif | |
-| white blood cell | ak yuvar | teklif | |
-| red blood cell | kırmızı yuvar | teklif | |
-| capillary | kılcal damar | teklif | Şaheser cüzünde de kullanılmıştır. |
-| margin of safety | ihtiyat payı; emniyet payı | teklif | |
-| negative feedback | menfi geri besleme; bozulmanın kendi düzelticisini harekete getirmesi | teklif | |
-| spleen | dalak; tıhal | kadîm | |
-| lung | akciğer; ri'e | kadîm | |
+| Homeostasis | Hıfz-ı i'tidâl | teklif | Tercüme iş parçacığının teklifi kabul edildi. 'İ'tidâl' el-Kânûn'da mizacın ve bünyenin ölçülü hâli mânâsında kadîmdir; 'hıfz' muhafaza. Mefhum donmuş bir sabitlik değil, hudut içinde dalgalanan dengedir; 'i'tidâl' bunu verir. |
+| Extracellular Fluid | Muhît-i dâhilî | teklif | Claude Bernard'ın 'iç muhit' mefhumu; hücreleri kuşatan kan ve doku sıvısı. Tercüme iş parçacığının teklifi. Tasnifteki başlık hücre dışı sıvıdır; iki mefhumun hududu tam örtüşmeyebilir. |
+| Thirst | Atş | kadîm | İbn-i Sînâ, el-Kânûn fi't-Tıbb, Üçüncü Kitap, mide hastalıkları bahsinde 'el-atş' faslı. Sahife numarası nüsha açılınca yazılacak. |
+| Hunger | Cû' | kadîm | İbn-i Sînâ, el-Kânûn fi't-Tıbb, Üçüncü Kitap, mide hastalıkları bahsinde 'cû'' ve 'cû'-ı kelbî' (doymak bilmeyen açlık). Sahife numarası nüsha açılınca yazılacak. |
+| Appetite | İştihâ (şehvet-i taâm) | kadîm | İbn-i Sînâ, el-Kânûn fi't-Tıbb, Üçüncü Kitap, mide hastalıkları bahsinde şehvetin bozulması ve düşmesi fasılları. Sahife numarası nüsha açılınca yazılacak. 'Şehvet' kelimesi el-Kânûn'da yemeğe rağbet mânâsındadır; 'iştihâ' aynı kökten olup Osmanlıcada yerleşmiştir. |
+| Glycogen | Kebed nişastası | teklif | Tercüme iş parçacığının teklifi. Kebedde ve kaslarda saklanan şeker deposu. |
+| Liver | Kebed | kadîm | İbn-i Sînâ, el-Kânûn fi't-Tıbb, Üçüncü Kitap, kebed hastalıkları fenni. |
+| Kidney | Kilye (böbrek) | kadîm | İbn-i Sînâ, el-Kânûn fi't-Tıbb, Üçüncü Kitap, kilye ve mesane hastalıkları fenni. Cem'i 'külâ'dır. |
+| Pancreas | Mide altı guddesi | teklif | el-Kânûn'da bu uzvun Yunanca asıllı bir adla anıldığı zannedilir; Yunanca kökü tekrar ettiği için kabul edilmez. Yer ve hey'ete göre terkip edilmiştir. |
+| Insulin | Mide altı guddesinin şeker indirici usâresi | teklif | 'Usâre' guddenin kana verdiği ifraz mânâsında kullanılmıştır. |
+| Adrenal Glands | Gudde-i fevka'l-kilye (böbrek üstü bezi) | şüpheli | Terkibin son devir Osmanlı tıbbında kullanıldığı hatırlanıyor; nüshadan teyit edilmedi. |
+| Epinephrine | Böbrek üstü guddesinin usâresi | teklif | Tasnifte adrenalin bu başlıkla kayıtlıdır. |
+| Hormones | Usâre-i dâhiliyye (kimyevî haberci) | teklif | Kanla uzak uzva götürülüp onu harekete getiren ifraz. 'Dâhiliyye' kaydı, dışarı akan ifrazlardan (ter, tükürük) ayırmak içindir. |
+| Thyroid Gland | Gudde-i derakiyye (dereki bezi) | şüpheli | 'Deraka' kalkan demektir; terkibin son devir Osmanlı tıbbında kullanıldığı hatırlanıyor, nüshadan teyit edilmedi. |
+| Parathyroid Glands | Gudad-ı cenb-i derakiyye | teklif | Dereki guddesinin yanındaki ufak guddeler. Tercüme iş parçacığının daha kısa terkip talebine cevaptır. |
+| diabetes (umumî) | Ziyâbitus | kadîm | İbn-i Sînâ, el-Kânûn fi't-Tıbb, Üçüncü Kitap, kilye hastalıkları fenninde ziyâbitus faslı. Yunancadan bin sene evvel Arapçaya geçip yerleşmiş kadîm addır; kaidelerin ikinci maddesindeki istisnaya girer. el-Kânûn'daki ziyâbitus, bol idrar ve susuzlukla seyreden hastalıktır; şekerli olanına mahsus değildir. |
+| Diabetes Mellitus | Ziyâbitus-ı sükkerî (şeker hastalığı) | teklif | Kadîm ziyâbitus, idrarda şeker kaydıyla hususîleştirildi. |
+| Glycosuria | Bevl-i sükkerî | teklif | İdrarda şeker bulunması. |
+| renal threshold | Kilyenin eşiği | teklif | Tercüme iş parçacığının 'böbreğin eşiği' teklifi, uzvun kadîm adıyla yazıldı. |
+| Blood Proteins | Mevâdd-ı zülâliyye-i dem (kanın etsi maddeleri) | şüpheli | 'Zülâl' yumurta akı demektir; son devir Osmanlı tıbbında bu cins maddeler için 'mevâdd-ı zülâliyye' dendiği hatırlanıyor, nüshadan teyit edilmedi. Tercüme iş parçacığının 'etsi maddeler' teklifi izah olarak durur. |
+| Edema | Veram-ı rihv (yumuşak şiş); umumî olanı istiskâ-yı lahmî | şüpheli | el-Kânûn'da 'istiskâ' umumiyetle bedende su toplanmasıdır ve üç nev'i vardır; bunlardan 'lahmî' olanı bütün bedenin derisi altında su toplanmasıdır, yani umumî ödem. Mevziî ödem için 'yumuşak şiş' mânâsındaki terkibin el-Kânûn'daki tam şekli teyit edilmedi. |
+| Calcium | Unsur-ı kils (kireç unsuru) | şüpheli | 'Kils' Arapçada kireçtir. Osmanlı kimya kitaplarında bu unsur için Latince adın kullanıldığı zannedilir; kabul edilmez. Terkip tekliftir, fakat Osmanlı kimyasında başka bir karşılık bulunup bulunmadığı tahkik edilmediği için şüpheli bırakıldı. |
+| Oxygen | Müvellidü'l-humûza | şüpheli | Derviş Paşa'nın on dokuzuncu asır ortasındaki kimya kitaplarında ve Mekteb-i Tıbbiye lisanında bu adın kullanıldığı kuvvetle hatırlanıyor; nüshadan teyit edilince 'kadîm' olur. 'Ekşiliği doğuran' mânâsındadır. |
+| Carbonic Acid | Hâmız-ı fahmî; yahut hâmız-ı karbon | şüpheli | 'Fahm' kömür demektir. Osmanlı kimyasında iki şeklin hangisinin kullanıldığı teyit edilmedi; 'karbon' yarı Latince olduğu için 'fahmî' yeğlenir. |
+| Buffers | Humûzeti dengeleyici madde | teklif |  |
+| Acid-Base Equilibrium | Muvâzene-i humûzet ü kalevîyet | teklif |  |
+| Shivering | Kuş'ırîre | kadîm | İbn-i Sînâ, el-Kânûn fi't-Tıbb, Dördüncü Kitap, hummalar bahsi: hummanın başında gelen üşüme ve titreme. Tercüme iş parçacığının 'ra'şe' teklifi düzeltildi: el-Kânûn'da 'ra'şe' iradesiz el ve uzuv titremesidir (tremor), soğuktan yahut humma başında gelen titreme ise 'kuş'ırîre'dir. |
+| Tremor | Ra'şe | kadîm | İbn-i Sînâ, el-Kânûn fi't-Tıbb, Üçüncü Kitap, asab hastalıkları bahsinde ra'şe faslı. |
+| Sweat | Arak | kadîm | İbn-i Sînâ, el-Kânûn fi't-Tıbb, Dördüncü Kitap, hummalar bahsinde buhran günlerindeki terleme. Sahife numarası nüsha açılınca yazılacak. |
+| Fever | Humma | kadîm | İbn-i Sînâ, el-Kânûn fi't-Tıbb, Dördüncü Kitap, hummalar fenni. |
+| Hypothalamus | Taht-ı sarîr (beynin tabanındaki idare merkezi) | teklif | Thalamus için son devir Osmanlı teşrihinde 'sarîr-i basarî' dendiği hatırlanıyor (şüpheli); hypothalamus onun altıdır. Vazifeye göre adı izahta durur. |
+| Autonomic Nervous System | Cihâz-ı asabî-i nebâtî (kendiliğinden işleyen asab cihazı) | teklif | Bu cihazın Garb'daki eski adlarından biri 'vegetative'dir. İbn-i Sînâ'nın nefs-i nebâtîsi beslenme, büyüme ve doğurma kuvvetleridir; bu cihazın idare ettiği işler de onlardır. Böylece terkip hem mânâya hem kadîm hikmete bağlanır. |
+| Sympathetic Nervous System | Seferber edici asab cihazı | teklif | Tercüme iş parçacığının teklifi mânâya uygun bulunarak kabul edildi: bedeni zorluğa karşı seferber eder. |
+| Parasympathetic Nervous System | Tasarruf edici asab cihazı | teklif | Tercüme iş parçacığının teklifi kabul edildi: kuvveti toplar, depoları doldurur. |
+| fight or flight response | Dövüş yahut kaç hâli | teklif | Tasnifte müstakil başlığı yoktur. |
+| Blood Coagulation | İn'ikâd-ı dem (kanın pıhtılaşması) | şüpheli | 'İn'ikâd' Arapçada sıvının katılaşmasıdır; bu mânâ yerindedir, fakat terkibin bu şekliyle bir tıp kitabında geçtiği teyit edilmedi. |
+| Phagocytes | Hüceyre-i âkile (yutucu hücre) | teklif | Son devir Osmanlı tıbbında hücre için 'hüceyre' dendiği hatırlanıyor (şüpheli). |
+| Leukocytes | Küreyvât-ı beyzâ (ak yuvarlar) | şüpheli | Son devir Osmanlı tıbbında bu terkibin kullanıldığı hatırlanıyor; nüshadan teyit edilmedi. |
+| Erythrocytes | Küreyvât-ı hamrâ (kırmızı yuvarlar) | şüpheli | Aynı hükümle. |
+| Capillaries | Urûk-ı şa'riyye (kılcal damarlar) | şüpheli | 'Şa'r' kıl demektir; terkibin son devir Osmanlı tıbbında kullanıldığı hatırlanıyor, nüshadan teyit edilmedi. |
+| margin of safety | İhtiyat payı | teklif | Tasnifte müstakil başlığı yoktur. |
+| Feedback, Physiological | Geri tesir (menfi olanı: bozulmanın kendi düzelticisini harekete getirmesi) | teklif |  |
+| Spleen | Tıhâl (dalak) | kadîm | İbn-i Sînâ, el-Kânûn fi't-Tıbb, Üçüncü Kitap, tıhâl hastalıkları fenni. |
+| Lung | Ri'e (akciğer) | kadîm | İbn-i Sînâ, el-Kânûn fi't-Tıbb, Üçüncü Kitap, ri'e ve sadr hastalıkları fenni. |

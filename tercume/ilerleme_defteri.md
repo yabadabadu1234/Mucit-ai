@@ -30,6 +30,17 @@ Kullanıcı şöyle buyurdu: "O zaman evvela birebir tercüme etsin, üzerine ş
 - Telifli eserlerde birebir tercüme yine yapılmaz. Şerh, aslın bab bab tertibini takip eder; her babdaki bilgiyi, tarifi, illiyet zincirini ve rakamı kendi cümlelerimizle eksiksiz verir. Her kısmın asıldaki hangi bölüme denk geldiği gösterilir.
 - Asıl metne erişilemeden yazılan şerhte, bölüm tertibi ve rakamlar asılla karşılaştırılıncaya kadar "şüpheli" kaydını taşır.
 
+### Kullanıcının 1 Kasım 2026 tarihli üçüncü ilâve kaidesi (önceki iki kaidenin şerh kısmını kaldırır)
+
+Kullanıcı şöyle buyurdu: "Şerhler berbat oluyor, hiç şerh ve not yazılmasın artık, sadece tercüme." Buna göre:
+
+- Hiçbir eser için şerh yazılmaz; yalnız tercüme yapılır.
+- Telifi düşmüş ve açık lisanslı eserler birebir, tam metin tercüme edilir.
+- Telifli ve karışık eserler için yalnız nüshanın yeri ve telif hâli kaydedilir; tercüme edilmez, şerh de yazılmaz.
+- Cannon şerhi silinmedi; "terk edildi" diye işaretlendi.
+- Yeni tercümelerin not iş parçacığına bildirilmesine lüzum kalmadı.
+- Seçimde ve sırada şaheserlik derecesi esas olmaya devam eder.
+
 ## Çalışma yeri
 
 - Ortak depo: github.com/yabadabadu1234/mucit-ai, klasör: tercume/, dal: tip-piri/tercume.
@@ -50,23 +61,23 @@ Kullanıcı şöyle buyurdu: "O zaman evvela birebir tercüme etsin, üzerine ş
 
 ## Tercümelerin hâli
 
-Şaheser iş parçacığı, kullanıcının "en şaheseri neyse" emri üzerine cüzlerin sonundaki sırayı telif hâline bakmadan şaheserlik derecesine göre yeniden tertip etti. Aşağıdaki sıra o "Şaheserlik sırası"dır. Usul sütunu telif hâline göre tayin edilmiştir: telifi düşmüş eserde evvelâ birebir tam tercüme, sonra şerh; telifli yahut karışık eserde bab bab şerh.
+Şaheser iş parçacığı, kullanıcının "en şaheseri neyse" emri üzerine cüzlerin sonundaki sırayı telif hâline bakmadan şaheserlik derecesine göre yeniden tertip etti. Aşağıdaki sıra o "Şaheserlik sırası"dır. Usul sütunu telif hâline göre tayin edilmiştir: telifi düşmüş yahut açık lisanslı eserde birebir tam tercüme; telifli yahut karışık eserde yalnız nüsha yeri ve telif hâli kaydı.
 
 ### Birinci cüz: Pusula (fizyoloji ve patoloji)
 
 | Sıra | Eser | Usul | Hâli |
 |---|---|---|---|
-| 1 | Virchow, Die Cellularpathologie | Birebir tercüme, sonra şerh | Nüsha: "cellularpatholog00virc"; ağ izni bekleniyor |
-| 2 | Harvey, De Motu Cordis | Birebir tercüme, sonra şerh | Nüsha: Gutenberg 67065 (Willis); ağ izni bekleniyor |
-| 3 | Bernard, Introduction à l'étude de la médecine expérimentale | Fransızca asıldan birebir tercüme, sonra şerh | Ağ izni bekleniyor |
-| 4 | Cannon, The Wisdom of the Body | Bab bab şerh | Birinci müsvedde tamam (cannon_bedenin_hikmeti/serh.md); asılla mukabele bekliyor |
-| 5 | Morgagni, De Sedibus et Causis Morborum | Birebir tercüme, sonra şerh | Ağ izni bekleniyor |
-| 6 | Sherrington, The Integrative Action of the Nervous System | Birebir tercüme, sonra şerh | Ağ izni bekleniyor |
-| 7 | Cohnheim, Vorlesungen über allgemeine Pathologie | Birebir tercüme, sonra şerh | Ağ izni bekleniyor |
-| 8 | Koch, Die Ätiologie der Tuberkulose | Birebir tercüme, sonra şerh | Nüsha bulunmadı |
-| Ders kitabı 1 | Robbins ile Cotran, Pathologic Basis of Disease | Bab bab şerh | Asıl metne erişim gerekir |
-| Ders kitabı 2 | Guyton ile Hall, Textbook of Medical Physiology | Bab bab şerh | Asıl metne erişim gerekir |
-| Ders kitabı 3 | Boron ile Boulpaep, Medical Physiology | Bab bab şerh | Asıl metne erişim gerekir |
+| 1 | Virchow, Die Cellularpathologie | Birebir tam tercüme | Nüsha: "cellularpatholog00virc"; ağ izni bekleniyor |
+| 2 | Harvey, De Motu Cordis | Birebir tam tercüme | Nüsha: Gutenberg 67065 (Willis); ağ izni bekleniyor |
+| 3 | Bernard, Introduction à l'étude de la médecine expérimentale | Fransızca asıldan birebir tam tercüme | Ağ izni bekleniyor |
+| 4 | Cannon, The Wisdom of the Body | Yalnız kayıt (karışık) | Şerh terk edildi (cannon_bedenin_hikmeti/serh.md, silinmedi). Nüsha: Internet Archive "wisdomofbody0000cann" ve "wisdomofbody0000walt" |
+| 5 | Morgagni, De Sedibus et Causis Morborum | Birebir tam tercüme | Ağ izni bekleniyor |
+| 6 | Sherrington, The Integrative Action of the Nervous System | Birebir tam tercüme | Ağ izni bekleniyor |
+| 7 | Cohnheim, Vorlesungen über allgemeine Pathologie | Birebir tam tercüme | Ağ izni bekleniyor |
+| 8 | Koch, Die Ätiologie der Tuberkulose | Birebir tam tercüme | Nüsha bulunmadı |
+| Ders kitabı 1 | Robbins ile Cotran, Pathologic Basis of Disease | Yalnız kayıt (telifli) | Tercüme edilmez |
+| Ders kitabı 2 | Guyton ile Hall, Textbook of Medical Physiology | Yalnız kayıt (telifli) | Tercüme edilmez |
+| Ders kitabı 3 | Boron ile Boulpaep, Medical Physiology | Yalnız kayıt (telifli) | Tercüme edilmez |
 
 ### İkinci cüz: Kadîm İslâm tıbbı
 
@@ -74,8 +85,8 @@ Sıra: İbn Sînâ el-Kânûn; Râzî el-Hâvî; Zehrâvî et-Tasrîf; Sabuncuo�
 
 ### Üçüncü cüz: Teşrih
 
-Kurucu eserler sırası: Vesalius Fabrica ("2295005R.nlm.nih.gov"); Cajal Textura ("b28122100", İspanyolca asıldan); Schwann ("mikroskopischeu00schwgoog"); Gray 1858 ("anatomydescripti1858gray"; 1918 Lewis tâbı karışık, kullanılmayacak); von Baer ("berentwickelun01baer"); Malpighi De Pulmonibus; Brodmann ("b28062449"). Bugünkü ders kitapları (bab bab şerh): Gray's Anatomy Standring tâbı; Moore Clinically Oriented Anatomy; Netter Atlas; Langman; Junqueira.
+Kurucu eserler sırası: Vesalius Fabrica ("2295005R.nlm.nih.gov"); Cajal Textura ("b28122100", İspanyolca asıldan); Schwann ("mikroskopischeu00schwgoog"); Gray 1858 ("anatomydescripti1858gray"; 1918 Lewis tâbı karışık, kullanılmayacak); von Baer ("berentwickelun01baer"); Malpighi De Pulmonibus; Brodmann ("b28062449"). Bugünkü ders kitapları (telifli; yalnız kayıt): Gray's Anatomy Standring tâbı; Moore Clinically Oriented Anatomy; Netter Atlas; Langman; Junqueira.
 
 ## Kaldığı yer
 
-Depo kuruldu, ilerleme defteri yazıldı. Harvey nüshası Project Gutenberg'de tespit edildi. Tam metne erişim bekleniyor. Cannon şerhinin birinci müsveddesi yazıldı ve ıstılah cedveli lügat iş parçacığına bildirildi. Şaheser iş parçacığından ikinci cüz (Kadîm İslâm tıbbı) haberi geldi: /mnt/project-files/saheser/cuz_02_kadim_islam_tibbi.md; okunup sıraya alınacak. Sıradaki iş: ağ izni gelirse Harvey birebir tercümesi; gelmezse ikinci cüzün okunması ve şaheserlik sırasına göre bir sonraki şerh.
+Kullanıcının son emriyle şerh usulü kaldırıldı; yalnız birebir tam tercüme yapılacak. Cannon şerhi terk edildi diye işaretlendi. Lügat iş parçacığının Cannon ıstılahlarına dair tashihleri (lugat/karsiliklar/003_tercume_cannon.tsv) terk edilen dosyaya işlenmişti; tercümelerde de bu karşılıklar esas alınacak. Bütün tam metin tercümeleri ağ iznine bağlı. İzin gelince sıra: Virchow, Harvey, Bernard, Morgagni, Sherrington, Cohnheim, Koch; sonra kadîm cüzden el-Kânûn ve diğerleri; sonra teşrih cüzünün kurucu eserleri.
