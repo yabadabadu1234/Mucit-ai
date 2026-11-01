@@ -2,7 +2,7 @@
 
 Bu sahife `araclar/msc_birlestir.py` ile `kaynak.tsv` ve `ceviri/` dosyalarından üretilir; elle değiştirilmez.
 
-Toplam madde: 6603 · karşılığı bulunan: 3621 · kalan: 2982
+Toplam madde: 6603 · karşılığı bulunan: 3842 · kalan: 2761
 
 
 ## 00-XX — Umûmî ve şâmil mevzûlar; mecmualar
@@ -3094,7 +3094,7 @@ Dynamical systems and ergodic theory [See also 26A18, 28Dxx, 34Cxx, 34Dxx, 35Bxx
 | 37B35 | Gradient-like behavior; isolated (locally maximal) invariant sets; attractors, repellers for topological dynamical systems | Meyl-benzeri tavır; münferid (mahallen azamî) lâyetegayyer mecmûalar; vaz'î harekî nizâmlar için câzibler ve dâfi'ler |  |
 | 37B40 | Topological entropy | Vaz'î entropi |  |
 | 37B45 | Continua theory in dynamics | Harekiyyâtta muttasıllar (kontinuumlar) nazariyesi |  |
-| 37B51 | Multidimensional shifts of finite type | Mütenâhî nev'den çok buudlu kaydırma tahvîlleri |  |
+| 37B51 | Multidimensional shifts of finite type | Mütenâhî nevʻden çok buudlu kaydırma tahvîlleri |  |
 | 37B52 | Tiling dynamics | Döşeme (tefrîş) harekiyyâtı |  |
 | 37B55 | Topological dynamics of nonautonomous systems | Gayr-ı muhtâr nizâmların vaz'î harekiyyâtı |  |
 | 37B65 | Approximate trajectories, pseudotrajectories, shadowing and related notions for topological dynamical systems | Vaz'î harekî nizâmlar için takrîbî mahrekler, kâzib-mahrekler, gölgeleme ve alâkalı mefhumlar |  |
@@ -3137,7 +3137,7 @@ Dynamical systems and ergodic theory [See also 26A18, 28Dxx, 34Cxx, 34Dxx, 35Bxx
 | **37Exx** | **Low-dimensional dynamical systems** | **Düşük buudlu harekî nizâmlar** |  |
 | 37E05 | Dynamical systems involving maps of the interval | Fâsıla tatbîklerini ihtivâ eden harekî nizâmlar |  |
 | 37E10 | Dynamical systems involving maps of the circle | Dâire tatbîklerini ihtivâ eden harekî nizâmlar |  |
-| 37E15 | Combinatorial dynamics (types of periodic orbits) | Terkîbî harekiyyât (devrî medârların nev'leri) |  |
+| 37E15 | Combinatorial dynamics (types of periodic orbits) | Terkîbî harekiyyât (devrî medârların nevʻleri) |  |
 | 37E20 | Universality and renormalization of dynamical systems [See also 37F25] | Harekî nizâmların şümûliyeti ve yeniden ayarlanması (renormalizasyon) [Ayrıca bakınız: 37F25] |  |
 | 37E25 | Dynamical systems involving maps of trees and graphs | Ağaç ve rabıta şekli tatbîklerini ihtivâ eden harekî nizâmlar |  |
 | 37E30 | Dynamical systems involving homeomorphisms and diffeomorphisms of planes and surfaces | Müstevîlerin ve sathların vaz'î temâsüllerini ve tefâzulî temâsüllerini ihtivâ eden harekî nizâmlar |  |
@@ -3182,16 +3182,16 @@ Dynamical systems and ergodic theory [See also 26A18, 28Dxx, 34Cxx, 34Dxx, 35Bxx
 | 37H30 | Stability theory for random and stochastic dynamical systems | Tesâdüfî ve tesâdüfî-süreçli harekî nizâmlar için istikrar nazariyesi |  |
 | 37H99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 | **37Jxx** | **Dynamical aspects of finite-dimensional Hamiltonian and Lagrangian systems [See also 53Dxx, 70Fxx, 70Hxx]** | **Mütenâhî buudlu Hamilton ve Lagrange nizâmlarının harekî cihetleri [Ayrıca bakınız: 53Dxx, 70Fxx, 70Hxx]** |  |
-| 37J06 | General theory of finite-dimensional Hamiltonian and Lagrangian systems, Hamiltonian and Lagrangian structures, symmetries, invariants | Mütenâhî buudlu Hamilton ve Lagrange nizâmlarıin umûmî nazariyesi, Hamilton ve Lagrange bünyeleri, tenâzurlar, lâyetegayyerler |  |
+| 37J06 | General theory of finite-dimensional Hamiltonian and Lagrangian systems, Hamiltonian and Lagrangian structures, symmetries, invariants | Mütenâhî buudlu Hamilton ve Lagrange nizâmlarının umûmî nazariyesi, Hamilton ve Lagrange bünyeleri, tenâzurlar, lâyetegayyerler |  |
 | 37J11 | Symplectic and canonical mappings | Simplektik ve kanonik tatbîkler |  |
-| 37J12 | Fixed points and periodic points of finite-dimensional Hamiltonian and Lagrangian systems | Mütenâhî buudlu Hamilton ve Lagrange nizâmlarıin sâbit noktaları ve devrî noktaları |  |
+| 37J12 | Fixed points and periodic points of finite-dimensional Hamiltonian and Lagrangian systems | Mütenâhî buudlu Hamilton ve Lagrange nizâmlarının sâbit noktaları ve devrî noktaları |  |
 | 37J20 | Bifurcation problems for finite-dimensional Hamiltonian and Lagrangian systems | Mütenâhî buudlu Hamilton ve Lagrange nizâmları için çatallanma meseleleri |  |
 | 37J25 | Stability problems for finite-dimensional Hamiltonian and Lagrangian systems | Mütenâhî buudlu Hamilton ve Lagrange nizâmları için istikrar meseleleri |  |
 | 37J30 | Obstructions to integrability for finite-dimensional Hamiltonian and Lagrangian systems (nonintegrability criteria) | Mütenâhî buudlu Hamilton ve Lagrange nizâmları için kābiliyet-i tamâmiye (entegre edilebilirlik) mânileri (tamâmiye kābil olmayış mi'yârları) |  |
 | 37J35 | Completely integrable finite-dimensional Hamiltonian systems, integration methods, integrability tests | Tamâmen tamâmiye kābil mütenâhî buudlu Hamilton nizâmları, tamâmiye usulleri, tamâmiye kābiliyeti imtihanları |  |
-| 37J37 | Relations of finite-dimensional Hamiltonian and Lagrangian systems with Lie algebras and other algebraic structures | Mütenâhî buudlu Hamilton ve Lagrange nizâmlarıin Lie cebirleri ve sâir cebrî bünyelerle münasebetleri |  |
-| 37J38 | Relations of finite-dimensional Hamiltonian and Lagrangian systems with algebraic geometry, complex analysis, special functions | Mütenâhî buudlu Hamilton ve Lagrange nizâmlarıin cebrî hendese, mürekkeb tahlîl ve hususî tâbilerle münasebetleri |  |
-| 37J39 | Relations of finite-dimensional Hamiltonian and Lagrangian systems with topology, geometry and differential geometry (symplectic geometry, Poisson geometry, etc.) [See also 53D20] | Mütenâhî buudlu Hamilton ve Lagrange nizâmlarıin hendese-i vaz'iyye, hendese ve tefâzulî hendese (simplektik hendese, Poisson hendesesi ve emsâli) ile münasebetleri [Ayrıca bakınız: 53D20] |  |
+| 37J37 | Relations of finite-dimensional Hamiltonian and Lagrangian systems with Lie algebras and other algebraic structures | Mütenâhî buudlu Hamilton ve Lagrange nizâmlarının Lie cebirleri ve sâir cebrî bünyelerle münasebetleri |  |
+| 37J38 | Relations of finite-dimensional Hamiltonian and Lagrangian systems with algebraic geometry, complex analysis, special functions | Mütenâhî buudlu Hamilton ve Lagrange nizâmlarının cebrî hendese, mürekkeb tahlîl ve hususî tâbilerle münasebetleri |  |
+| 37J39 | Relations of finite-dimensional Hamiltonian and Lagrangian systems with topology, geometry and differential geometry (symplectic geometry, Poisson geometry, etc.) [See also 53D20] | Mütenâhî buudlu Hamilton ve Lagrange nizâmlarının hendese-i vaz'iyye, hendese ve tefâzulî hendese (simplektik hendese, Poisson hendesesi ve emsâli) ile münasebetleri [Ayrıca bakınız: 53D20] |  |
 | 37J40 | Perturbations of finite-dimensional Hamiltonian systems, normal forms, small divisors, KAM theory, Arnol’d diffusion | Mütenâhî buudlu Hamilton nizâmlarının ihtilâlleri, kanonik sûretler, küçük maksûmun-aleyhler, Kolmogorov-Arnold-Moser nazariyesi, Arnol'd intişârı | nakil |
 | 37J46 | Periodic, homoclinic and heteroclinic orbits of finite-dimensional Hamiltonian systems | Mütenâhî buudlu Hamilton nizâmlarının devrî, homoklinik ve heteroklinik medârları |  |
 | 37J51 | Action-minimizing orbits and measures for finite-dimensional Hamiltonian and Lagrangian systems; variational principles; degree-theoretic methods | Mütenâhî buudlu Hamilton ve Lagrange nizâmları için fiil (aksiyon) mikdârını asgarîleştiren medârlar ve mikyâslar; tehavvülî prensipler; derece nazariyesine ait usuller |  |
@@ -3201,7 +3201,7 @@ Dynamical systems and ergodic theory [See also 26A18, 28Dxx, 34Cxx, 34Dxx, 35Bxx
 | 37J70 | Completely integrable discrete dynamical systems | Tamâmen tamâmiye kābil munfasıl harekî nizâmlar |  |
 | 37J99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 | **37Kxx** | **Dynamical system aspects of infinite-dimensional Hamiltonian and Lagrangian systems [See also 35Axx, 35Qxx]** | **Gayr-ı mütenâhî buudlu Hamilton ve Lagrange nizâmlarının harekî nizâm cihetleri [Ayrıca bakınız: 35Axx, 35Qxx]** |  |
-| 37K06 | General theory of infinite-dimensional Hamiltonian and Lagrangian systems, Hamiltonian and Lagrangian structures, symmetries, conservation laws | Gayr-ı mütenâhî buudlu Hamilton ve Lagrange nizâmlarıin umûmî nazariyesi, Hamilton ve Lagrange bünyeleri, tenâzurlar, bekā kanunları |  |
+| 37K06 | General theory of infinite-dimensional Hamiltonian and Lagrangian systems, Hamiltonian and Lagrangian structures, symmetries, conservation laws | Gayr-ı mütenâhî buudlu Hamilton ve Lagrange nizâmlarının umûmî nazariyesi, Hamilton ve Lagrange bünyeleri, tenâzurlar, bekā kanunları |  |
 | 37K10 | Completely integrable infinite-dimensional Hamiltonian and Lagrangian systems, integration methods, integrability tests, integrable hierarchies (KdV, KP, Toda, etc.) | Tamâmen tamâmiye kābil gayr-ı mütenâhî buudlu Hamilton ve Lagrange nizâmları, tamâmiye usulleri, tamâmiye kābiliyeti imtihanları, tamâmiye kābil silsile-i merâtib (Korteweg-de Vries, Kadomtsev-Petviashvili, Toda ve emsâli) | nakil |
 | 37K15 | Inverse spectral and scattering methods for infinite-dimensional Hamiltonian and Lagrangian systems | Gayr-ı mütenâhî buudlu Hamilton ve Lagrange nizâmları için makûs tayf ve inteşâr usulleri |  |
 | 37K20 | Relations of infinite-dimensional Hamiltonian and Lagrangian dynamical systems with algebraic geometry, complex analysis, and special functions [See also 14H70] | Gayr-ı mütenâhî buudlu Hamilton ve Lagrange harekî nizâmlarının cebrî hendese, mürekkeb tahlîl ve hususî tâbilerle münasebetleri [Ayrıca bakınız: 14H70] |  |
@@ -3278,7 +3278,7 @@ Difference and functional equations
 | 39-08 | Computational methods for problems pertaining to difference and functional equations | fark muâdeleleri ve tâbiî muâdeleler sahasındaki meselelere dair hesap usulleri |  |
 | 39-11 | Research data for problems pertaining to difference and functional equations | fark muâdeleleri ve tâbiî muâdeleler sahasındaki meselelere dair tetkik verileri |  |
 | **39Axx** | **Difference equations {For dynamic equations on time scales, see 34N05; for dynamical systems, see 37-XX}** | **Fark muâdeleleri {Zaman cetvelleri üzerindeki harekî muâdeleler için bakınız: 34N05; harekî nizâmlar için bakınız: 37-XX}** |  |
-| 39A05 | General theory of difference equations | Fark muâdeleleriin umûmî nazariyesi |  |
+| 39A05 | General theory of difference equations | Fark muâdelelerinin umûmî nazariyesi |  |
 | 39A06 | Linear difference equations | Hattî fark muâdeleleri |  |
 | 39A10 | Additive difference equations | Cem'î fark muâdeleleri |  |
 | 39A12 | Discrete version of topics in analysis | Tahlîl mevzûlarının munfasıl sûreti |  |
@@ -3286,18 +3286,18 @@ Difference and functional equations
 | 39A14 | Partial difference equations | Kısmî fark muâdeleleri |  |
 | 39A20 | Multiplicative and other generalized difference equations | Zarbî ve sâir teşmîl edilmiş fark muâdeleleri |  |
 | 39A21 | Oscillation theory for difference equations | Fark muâdeleleri için ihtizâz nazariyesi |  |
-| 39A22 | Growth, boundedness, comparison of solutions to difference equations | Fark muâdeleleriin hallerinin tezâyüdü, mahdûdiyeti, mukayesesi |  |
-| 39A23 | Periodic solutions of difference equations | Fark muâdeleleriin devrî halleri |  |
-| 39A24 | Almost periodic solutions of difference equations | Fark muâdeleleriin takrîben devrî halleri |  |
+| 39A22 | Growth, boundedness, comparison of solutions to difference equations | Fark muâdelelerinin hallerinin tezâyüdü, mahdûdiyeti, mukayesesi |  |
+| 39A23 | Periodic solutions of difference equations | Fark muâdelelerinin devrî halleri |  |
+| 39A24 | Almost periodic solutions of difference equations | Fark muâdelelerinin takrîben devrî halleri |  |
 | 39A26 | Fuzzy difference equations | Bulanık fark muâdeleleri |  |
 | 39A27 | Boundary value problems for difference equations | Fark muâdeleleri için hudûd kıymeti meseleleri |  |
 | 39A28 | Bifurcation theory for difference equations | Fark muâdeleleri için çatallanma nazariyesi |  |
 | 39A30 | Stability theory for difference equations | Fark muâdeleleri için istikrar nazariyesi |  |
-| 39A33 | Chaotic behavior of solutions of difference equations | Fark muâdeleleriin hallerinin herc ü merc (kaotik) tavrı |  |
+| 39A33 | Chaotic behavior of solutions of difference equations | Fark muâdelelerinin hallerinin herc ü merc (kaotik) tavrı |  |
 | 39A36 | Integrable difference and lattice equations; integrability tests | Tamâmiye kābil fark ve kafes muâdeleleri; tamâmiye kābiliyeti imtihanları |  |
 | 39A45 | Difference equations in the complex domain | Mürekkeb sahada fark muâdeleleri |  |
 | 39A50 | Stochastic difference equations | Tesâdüfî-süreçli (stokastik) fark muâdeleleri |  |
-| 39A60 | Applications of difference equations | Fark muâdeleleriin tatbîkleri |  |
+| 39A60 | Applications of difference equations | Fark muâdelelerinin tatbîkleri |  |
 | 39A70 | Difference operators [See also 47B39] | Fark âmilleri [Ayrıca bakınız: 47B39] |  |
 | 39A99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 | **39Bxx** | **Functional equations and inequalities [See also 30D05]** | **Tâbiî muâdeleler ve tâbiî adem-i müsâvâtlar [Ayrıca bakınız: 30D05]** |  |
@@ -3540,267 +3540,267 @@ Integral transforms, operational calculus {For fractional derivatives and integr
 | 44A60 | Moment problems {For trigonometric moment problems, see 42A70} | Lahza (moment) meseleleri {Müsellesâtî lahza meseleleri için bakınız: 42A70} |  |
 | 44A99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
-## 45-XX — Integral equations
+## 45-XX — Tamâmî muâdeleler (integral denklemler)
 
 Integral equations
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 45-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to integral equations |  |  |
-| 45-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to integral equations |  |  |
-| 45-02 | Research exposition (monographs, survey articles) pertaining to integral equations |  |  |
-| 45-03 | History of integral equations [Consider also classification numbers from Section 01] |  |  |
-| 45-04 | Software, source code, etc. for problems pertaining to integral equations |  |  |
-| 45-06 | Proceedings, conferences, collections, etc. pertaining to integral equations |  |  |
-| 45-11 | Research data for problems pertaining to integral equations |  |  |
-| **45Axx** | **Linear integral equations** | **** |  |
-| 45A05 | Linear integral equations |  |  |
+| 45-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to integral equations | tamâmî muâdeleler hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 45-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to integral equations | tamâmî muâdeleler hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 45-02 | Research exposition (monographs, survey articles) pertaining to integral equations | tamâmî muâdeleler hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 45-03 | History of integral equations [Consider also classification numbers from Section 01] | Tamâmî muâdelelerin târihi [01. babın tasnif numaralarına da bakılsın] |  |
+| 45-04 | Software, source code, etc. for problems pertaining to integral equations | tamâmî muâdeleler sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 45-06 | Proceedings, conferences, collections, etc. pertaining to integral equations | tamâmî muâdeleler hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 45-11 | Research data for problems pertaining to integral equations | tamâmî muâdeleler sahasındaki meselelere dair tetkik verileri |  |
+| **45Axx** | **Linear integral equations** | **Hattî tamâmî muâdeleler** |  |
+| 45A05 | Linear integral equations | Hattî tamâmî muâdeleler |  |
 | 45A99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **45Bxx** | **Fredholm integral equations** | **** |  |
-| 45B05 | Fredholm integral equations |  |  |
+| **45Bxx** | **Fredholm integral equations** | **Fredholm tamâmî muâdeleleri** | nakil |
+| 45B05 | Fredholm integral equations | Fredholm tamâmî muâdeleleri | nakil |
 | 45B99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **45Cxx** | **Eigenvalue problems for integral equations [See also 34Lxx, 35Pxx, 45P05, 47A75]** | **** |  |
-| 45C05 | Eigenvalue problems for integral equations [See also 34Lxx, 35Pxx, 45P05, 47A75] |  |  |
+| **45Cxx** | **Eigenvalue problems for integral equations [See also 34Lxx, 35Pxx, 45P05, 47A75]** | **Tamâmî muâdeleler için hâs kıymet meseleleri [Ayrıca bakınız: 34Lxx, 35Pxx, 45P05, 47A75]** |  |
+| 45C05 | Eigenvalue problems for integral equations [See also 34Lxx, 35Pxx, 45P05, 47A75] | Tamâmî muâdeleler için hâs kıymet meseleleri [Ayrıca bakınız: 34Lxx, 35Pxx, 45P05, 47A75] |  |
 | 45C99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **45Dxx** | **Volterra integral equations [See also 34A12]** | **** |  |
-| 45D05 | Volterra integral equations [See also 34A12] |  |  |
+| **45Dxx** | **Volterra integral equations [See also 34A12]** | **Volterra tamâmî muâdeleleri [Ayrıca bakınız: 34A12]** | nakil |
+| 45D05 | Volterra integral equations [See also 34A12] | Volterra tamâmî muâdeleleri [Ayrıca bakınız: 34A12] | nakil |
 | 45D99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **45Exx** | **Singular integral equations [See also 30E20, 30E25, 44A15, 44A35]** | **** |  |
-| 45E05 | Integral equations with kernels of Cauchy type [See also 35J15] |  |  |
-| 45E10 | Integral equations of the convolution type (Abel, Picard, Toeplitz and Wiener-Hopf type) [See also 47B35] |  |  |
+| **45Exx** | **Singular integral equations [See also 30E20, 30E25, 44A15, 44A35]** | **Münferid tamâmî muâdeleler [Ayrıca bakınız: 30E20, 30E25, 44A15, 44A35]** |  |
+| 45E05 | Integral equations with kernels of Cauchy type [See also 35J15] | Cauchy nev'inden çekirdekli tamâmî muâdeleler [Ayrıca bakınız: 35J15] | nakil |
+| 45E10 | Integral equations of the convolution type (Abel, Picard, Toeplitz and Wiener-Hopf type) [See also 47B35] | İltifâf nev'inden tamâmî muâdeleler (Abel, Picard, Toeplitz ve Wiener-Hopf nev'inden) [Ayrıca bakınız: 47B35] | nakil |
 | 45E99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **45Fxx** | **Systems of linear integral equations** | **** |  |
-| 45F05 | Systems of nonsingular linear integral equations |  |  |
-| 45F10 | Dual, triple, etc., integral and series equations |  |  |
-| 45F15 | Systems of singular linear integral equations |  |  |
+| **45Fxx** | **Systems of linear integral equations** | **Hattî tamâmî muâdele manzûmeleri** |  |
+| 45F05 | Systems of nonsingular linear integral equations | Gayr-ı münferid hattî tamâmî muâdele manzûmeleri |  |
+| 45F10 | Dual, triple, etc., integral and series equations | İkili, üçlü ve emsâli tamâmî muâdeleler ve silsile muâdeleleri |  |
+| 45F15 | Systems of singular linear integral equations | Münferid hattî tamâmî muâdele manzûmeleri |  |
 | 45F99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **45Gxx** | **Nonlinear integral equations [See also 47H30, 47Jxx]** | **** |  |
-| 45G05 | Singular nonlinear integral equations |  |  |
-| 45G10 | Other nonlinear integral equations |  |  |
-| 45G15 | Systems of nonlinear integral equations |  |  |
+| **45Gxx** | **Nonlinear integral equations [See also 47H30, 47Jxx]** | **Gayr-ı hattî tamâmî muâdeleler [Ayrıca bakınız: 47H30, 47Jxx]** |  |
+| 45G05 | Singular nonlinear integral equations | Münferid gayr-ı hattî tamâmî muâdeleler |  |
+| 45G10 | Other nonlinear integral equations | Sâir gayr-ı hattî tamâmî muâdeleler |  |
+| 45G15 | Systems of nonlinear integral equations | Gayr-ı hattî tamâmî muâdele manzûmeleri |  |
 | 45G99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **45Hxx** | **Integral equations with miscellaneous special kernels [See also 44A15]** | **** |  |
-| 45H05 | Integral equations with miscellaneous special kernels [See also 44A15] |  |  |
+| **45Hxx** | **Integral equations with miscellaneous special kernels [See also 44A15]** | **Muhtelif hususî çekirdekli tamâmî muâdeleler [Ayrıca bakınız: 44A15]** |  |
+| 45H05 | Integral equations with miscellaneous special kernels [See also 44A15] | Muhtelif hususî çekirdekli tamâmî muâdeleler [Ayrıca bakınız: 44A15] |  |
 | 45H99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **45Jxx** | **Integro-ordinary differential equations [See also 34K05, 34K30, 47G20]** | **** |  |
-| 45J05 | Integro-ordinary differential equations [See also 34K05, 34K30, 47G20] |  |  |
+| **45Jxx** | **Integro-ordinary differential equations [See also 34K05, 34K30, 47G20]** | **Tamâmî-âdî tefâzulî muâdeleler [Ayrıca bakınız: 34K05, 34K30, 47G20]** |  |
+| 45J05 | Integro-ordinary differential equations [See also 34K05, 34K30, 47G20] | Tamâmî-âdî tefâzulî muâdeleler [Ayrıca bakınız: 34K05, 34K30, 47G20] |  |
 | 45J99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **45Kxx** | **Integro-partial differential equations [See also 34K30, 35R09, 35R10, 47G20]** | **** |  |
-| 45K05 | Integro-partial differential equations [See also 34K30, 35R09, 35R10, 47G20] |  |  |
+| **45Kxx** | **Integro-partial differential equations [See also 34K30, 35R09, 35R10, 47G20]** | **Tamâmî-kısmî tefâzulî muâdeleler [Ayrıca bakınız: 34K30, 35R09, 35R10, 47G20]** |  |
+| 45K05 | Integro-partial differential equations [See also 34K30, 35R09, 35R10, 47G20] | Tamâmî-kısmî tefâzulî muâdeleler [Ayrıca bakınız: 34K30, 35R09, 35R10, 47G20] |  |
 | 45K99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **45Lxx** | **Theoretical approximation of solutions to integral equations {For numerical analysis, see 65Rxx}** | **** |  |
-| 45L05 | Theoretical approximation of solutions to integral equations {For numerical analysis, see 65Rxx} |  |  |
+| **45Lxx** | **Theoretical approximation of solutions to integral equations {For numerical analysis, see 65Rxx}** | **Tamâmî muâdelelerin hallerinin nazarî takrîbi {Adedî tahlîl için bakınız: 65Rxx}** |  |
+| 45L05 | Theoretical approximation of solutions to integral equations {For numerical analysis, see 65Rxx} | Tamâmî muâdelelerin hallerinin nazarî takrîbi {Adedî tahlîl için bakınız: 65Rxx} |  |
 | 45L99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **45Mxx** | **Qualitative behavior of solutions to integral equations** | **** |  |
-| 45M05 | Asymptotics of solutions to integral equations |  |  |
-| 45M10 | Stability theory for integral equations |  |  |
-| 45M15 | Periodic solutions of integral equations |  |  |
-| 45M20 | Positive solutions of integral equations |  |  |
+| **45Mxx** | **Qualitative behavior of solutions to integral equations** | **Tamâmî muâdelelerin hallerinin keyfî tavrı** |  |
+| 45M05 | Asymptotics of solutions to integral equations | Tamâmî muâdelelerin hallerinin mukāribî tavrı |  |
+| 45M10 | Stability theory for integral equations | Tamâmî muâdeleler için istikrar nazariyesi |  |
+| 45M15 | Periodic solutions of integral equations | Tamâmî muâdelelerin devrî halleri |  |
+| 45M20 | Positive solutions of integral equations | Tamâmî muâdelelerin müsbet halleri |  |
 | 45M99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **45Nxx** | **Abstract integral equations, integral equations in abstract spaces** | **** |  |
-| 45N05 | Abstract integral equations, integral equations in abstract spaces |  |  |
+| **45Nxx** | **Abstract integral equations, integral equations in abstract spaces** | **Mücerred tamâmî muâdeleler, mücerred fezâlarda tamâmî muâdeleler** |  |
+| 45N05 | Abstract integral equations, integral equations in abstract spaces | Mücerred tamâmî muâdeleler, mücerred fezâlarda tamâmî muâdeleler |  |
 | 45N99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **45Pxx** | **Integral operators [See also 47B38, 47G10]** | **** |  |
-| 45P05 | Integral operators [See also 47B38, 47G10] |  |  |
+| **45Pxx** | **Integral operators [See also 47B38, 47G10]** | **Tamâmî âmiller [Ayrıca bakınız: 47B38, 47G10]** |  |
+| 45P05 | Integral operators [See also 47B38, 47G10] | Tamâmî âmiller [Ayrıca bakınız: 47B38, 47G10] |  |
 | 45P99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **45Qxx** | **Inverse problems for integral equations** | **** |  |
-| 45Q05 | Inverse problems for integral equations |  |  |
+| **45Qxx** | **Inverse problems for integral equations** | **Tamâmî muâdeleler için makûs meseleler** |  |
+| 45Q05 | Inverse problems for integral equations | Tamâmî muâdeleler için makûs meseleler |  |
 | 45Q99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **45Rxx** | **Random integral equations [See also 60H20]** | **** |  |
-| 45R05 | Random integral equations [See also 60H20] |  |  |
+| **45Rxx** | **Random integral equations [See also 60H20]** | **Tesâdüfî tamâmî muâdeleler [Ayrıca bakınız: 60H20]** |  |
+| 45R05 | Random integral equations [See also 60H20] | Tesâdüfî tamâmî muâdeleler [Ayrıca bakınız: 60H20] |  |
 | 45R99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
-## 46-XX — Functional analysis {For manifolds modeled on topological linear spaces, see 57Nxx, 58Bxx}
+## 46-XX — Tâbiî tahlîl (fonksiyonel analiz) {Vaz'î hattî fezâlar örnek alınarak kurulan müteşa'ibler için bakınız: 57Nxx, 58Bxx}
 
 Functional analysis {For manifolds modeled on topological linear spaces, see 57Nxx, 58Bxx}
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 46-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to functional analysis |  |  |
-| 46-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to functional analysis |  |  |
-| 46-02 | Research exposition (monographs, survey articles) pertaining to functional analysis |  |  |
-| 46-03 | History of functional analysis [Consider also classification numbers from Section 01] |  |  |
-| 46-04 | Software, source code, etc. for problems pertaining to functional analysis |  |  |
-| 46-06 | Proceedings, conferences, collections, etc. pertaining to functional analysis |  |  |
-| 46-08 | Computational methods for problems pertaining to functional analysis |  |  |
-| 46-11 | Research data for problems pertaining to functional analysis |  |  |
-| **46Axx** | **Topological linear spaces and related structures {For function spaces, see 46Exx}** | **** |  |
-| 46A03 | General theory of locally convex spaces |  |  |
-| 46A04 | Locally convex Fréchet spaces and (DF)-spaces |  |  |
-| 46A08 | Barrelled spaces, bornological spaces |  |  |
-| 46A11 | Spaces determined by compactness or summability properties (nuclear spaces, Schwartz spaces, Montel spaces, etc.) |  |  |
-| 46A13 | Spaces defined by inductive or projective limits (LB, LF, etc.) [See also 46M40] |  |  |
-| 46A16 | Not locally convex spaces (metrizable topological linear spaces, locally bounded spaces, quasi-Banach spaces, etc.) |  |  |
-| 46A17 | Bornologies and related structures; Mackey convergence, etc. |  |  |
-| 46A19 | Other “topological” linear spaces (convergence spaces, ranked spaces, spaces with a metric taking values in an ordered structure more general than R, etc.) |  |  |
-| 46A20 | Duality theory for topological vector spaces |  |  |
-| 46A22 | Theorems of Hahn-Banach type; extension and lifting of functionals and operators [See also 46M10] |  |  |
-| 46A25 | Reflexivity and semi-reflexivity [See also 46B10] |  |  |
-| 46A30 | Open mapping and closed graph theorems; completeness (including B-, Br -completeness) |  |  |
-| 46A32 | Spaces of linear operators; topological tensor products; approximation properties [See also 46B28, 46M05, 47L05, 47L20] |  |  |
-| 46A35 | Summability and bases in topological vector spaces [See also 46B15] |  |  |
-| 46A40 | Ordered topological linear spaces, vector lattices [See also 06F20, 46B40, 46B42] |  |  |
-| 46A45 | Sequence spaces (including Köthe sequence spaces) [See also 46B45] |  |  |
-| 46A50 | Compactness in topological linear spaces; angelic spaces, etc. |  |  |
-| 46A55 | Convex sets in topological linear spaces; Choquet theory [See also 52A07] |  |  |
-| 46A61 | Graded Fréchet spaces and tame operators |  |  |
-| 46A63 | Topological invariants ((DN), (Ω), etc.) for locally convex spaces |  |  |
-| 46A70 | Saks spaces and their duals (strict topologies, mixed topologies, two-norm spaces, co-Saks spaces, etc.) |  |  |
-| 46A80 | Modular spaces |  |  |
+| 46-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to functional analysis | tâbiî tahlîl hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 46-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to functional analysis | tâbiî tahlîl hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 46-02 | Research exposition (monographs, survey articles) pertaining to functional analysis | tâbiî tahlîl hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 46-03 | History of functional analysis [Consider also classification numbers from Section 01] | Tâbiî tahlîlin târihi [01. babın tasnif numaralarına da bakılsın] |  |
+| 46-04 | Software, source code, etc. for problems pertaining to functional analysis | tâbiî tahlîl sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 46-06 | Proceedings, conferences, collections, etc. pertaining to functional analysis | tâbiî tahlîl hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 46-08 | Computational methods for problems pertaining to functional analysis | tâbiî tahlîl sahasındaki meselelere dair hesap usulleri |  |
+| 46-11 | Research data for problems pertaining to functional analysis | tâbiî tahlîl sahasındaki meselelere dair tetkik verileri |  |
+| **46Axx** | **Topological linear spaces and related structures {For function spaces, see 46Exx}** | **Vaz'î hattî fezâlar ve alâkalı bünyeler {Tâbi fezâları için bakınız: 46Exx}** |  |
+| 46A03 | General theory of locally convex spaces | Mahallen muhaddeb fezâların umûmî nazariyesi |  |
+| 46A04 | Locally convex Fréchet spaces and (DF)-spaces | Mahallen muhaddeb Fréchet fezâları ve (DF) fezâları | nakil |
+| 46A08 | Barrelled spaces, bornological spaces | Fıçılı fezâlar, bornolojik fezâlar | şüpheli: "barrelled" için lafzî "fıçılı" teklif edildi; "bornolojik" nakildir |
+| 46A11 | Spaces determined by compactness or summability properties (nuclear spaces, Schwartz spaces, Montel spaces, etc.) | Mütarâsiyet yahut cem' kābiliyeti vasıflarıyla tayin olunan fezâlar (nüvevî fezâlar, Schwartz fezâları, Montel fezâları ve emsâli) | nakil |
+| 46A13 | Spaces defined by inductive or projective limits (LB, LF, etc.) [See also 46M40] | İstikrâî yahut irtisâmî nihâyetlerle tarif edilen fezâlar (LB, LF ve emsâli) [Ayrıca bakınız: 46M40] | şüpheli: "inductive limit" için "istikrâî nihâyet" teklif edildi |
+| 46A16 | Not locally convex spaces (metrizable topological linear spaces, locally bounded spaces, quasi-Banach spaces, etc.) | Mahallen muhaddeb olmayan fezâlar (mesâfelendirilebilir vaz'î hattî fezâlar, mahallen mahdûd fezâlar, şibh-i Banach fezâları ve emsâli) |  |
+| 46A17 | Bornologies and related structures; Mackey convergence, etc. | Bornolojiler ve alâkalı bünyeler; Mackey tekārübü ve emsâli | nakil |
+| 46A19 | Other “topological” linear spaces (convergence spaces, ranked spaces, spaces with a metric taking values in an ordered structure more general than R, etc.) | Sâir "vaz'î" hattî fezâlar (tekārüb fezâları, rütbeli fezâlar, R'den daha umûmî müretteb bir bünyede kıymet alan mesâfeli fezâlar ve emsâli) |  |
+| 46A20 | Duality theory for topological vector spaces | Vaz'î müteveccihe fezâları için müsennâlık (düalite) nazariyesi |  |
+| 46A22 | Theorems of Hahn-Banach type; extension and lifting of functionals and operators [See also 46M10] | Hahn-Banach nev'inden kaziyyeler; tâbi'-i tevâbi'lerin ve âmillerin temdîdi ve kaldırılması (ref'i) [Ayrıca bakınız: 46M10] | nakil |
+| 46A25 | Reflexivity and semi-reflexivity [See also 46B10] | İn'ikâsiyet ve nîm-in'ikâsiyet [Ayrıca bakınız: 46B10] |  |
+| 46A30 | Open mapping and closed graph theorems; completeness (including B-, Br -completeness) | Açık tatbîk ve kapalı rabıta şekli kaziyyeleri; tamamiyet (B- ve Br-tamamiyeti dahil) |  |
+| 46A32 | Spaces of linear operators; topological tensor products; approximation properties [See also 46B28, 46M05, 47L05, 47L20] | Hattî âmil fezâları; vaz'î tansörî hâsıl-ı zarblar; takrîb vasıfları [Ayrıca bakınız: 46B28, 46M05, 47L05, 47L20] |  |
+| 46A35 | Summability and bases in topological vector spaces [See also 46B15] | Vaz'î müteveccihe fezâlarında cem' kābiliyeti ve esaslar (bazlar) [Ayrıca bakınız: 46B15] |  |
+| 46A40 | Ordered topological linear spaces, vector lattices [See also 06F20, 46B40, 46B42] | Müretteb vaz'î hattî fezâlar, müteveccihe kafesleri [Ayrıca bakınız: 06F20, 46B40, 46B42] |  |
+| 46A45 | Sequence spaces (including Köthe sequence spaces) [See also 46B45] | Tevâlî fezâları (Köthe tevâlî fezâları dahil) [Ayrıca bakınız: 46B45] | nakil |
+| 46A50 | Compactness in topological linear spaces; angelic spaces, etc. | Vaz'î hattî fezâlarda mütarâsiyet; melekî fezâlar ve emsâli | şüpheli: "angelic spaces" lafzen "melekî fezâlar" diye tercüme edildi |
+| 46A55 | Convex sets in topological linear spaces; Choquet theory [See also 52A07] | Vaz'î hattî fezâlarda muhaddeb mecmûalar; Choquet nazariyesi [Ayrıca bakınız: 52A07] | nakil |
+| 46A61 | Graded Fréchet spaces and tame operators | Dereceli Fréchet fezâları ve münkād (uysal) âmiller | nakil |
+| 46A63 | Topological invariants ((DN), (Ω), etc.) for locally convex spaces | Mahallen muhaddeb fezâlar için vaz'î lâyetegayyerler ((DN), (Ω) ve emsâli) |  |
+| 46A70 | Saks spaces and their duals (strict topologies, mixed topologies, two-norm spaces, co-Saks spaces, etc.) | Saks fezâları ve bunların müsennâları (sıkı vaz'iyyetler, karışık vaz'iyyetler, iki normlu fezâlar, mukābil-Saks fezâları ve emsâli) | nakil |
+| 46A80 | Modular spaces | Mikyâsî (modüler) fezâlar |  |
 | 46A99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **46Bxx** | **Normed linear spaces and Banach spaces; Banach lattices {For function spaces, see 46Exx}** | **** |  |
-| 46B03 | Isomorphic theory (including renorming) of Banach spaces |  |  |
-| 46B04 | Isometric theory of Banach spaces |  |  |
-| 46B06 | Asymptotic theory of Banach spaces [See also 52A23] |  |  |
-| 46B07 | Local theory of Banach spaces |  |  |
-| 46B08 | Ultraproduct techniques in Banach space theory [See also 46M07] |  |  |
-| 46B09 | Probabilistic methods in Banach space theory [See also 60Bxx] |  |  |
-| 46B10 | Duality and reflexivity in normed linear and Banach spaces [See also 46A25] |  |  |
-| 46B15 | Summability and bases; functional analytic aspects of frames in Banach and Hilbert spaces [See also 46A35, 42C15] |  |  |
-| 46B20 | Geometry and structure of normed linear spaces |  |  |
-| 46B22 | Radon-Nikodým, Kreı̆n-Milman and related properties [See also 46G10] |  |  |
-| 46B25 | Classical Banach spaces in the general theory |  |  |
-| 46B26 | Nonseparable Banach spaces |  |  |
-| 46B28 | Spaces of operators; tensor products; approximation properties [See also 46A32, 46M05, 47L05, 47L20] |  |  |
-| 46B40 | Ordered normed spaces [See also 46A40, 46B42] |  |  |
-| 46B42 | Banach lattices [See also 46A40, 46B40] |  |  |
-| 46B45 | Banach sequence spaces [See also 46A45] |  |  |
-| 46B50 | Compactness in Banach (or normed) spaces |  |  |
-| 46B70 | Interpolation between normed linear spaces [See also 46M35] |  |  |
-| 46B80 | Nonlinear classification of Banach spaces; nonlinear quotients |  |  |
-| 46B85 | Embeddings of discrete metric spaces into Banach spaces; applications in topology and computer science [See also 05C12, 68Rxx] |  |  |
-| 46B87 | Lineability in functional analysis [See also 15A03] |  |  |
+| **46Bxx** | **Normed linear spaces and Banach spaces; Banach lattices {For function spaces, see 46Exx}** | **Normlu hattî fezâlar ve Banach fezâları; Banach kafesleri {Tâbi fezâları için bakınız: 46Exx}** | nakil |
+| 46B03 | Isomorphic theory (including renorming) of Banach spaces | Banach fezâlarının temâsül nazariyesi (yeniden normlandırma dahil) |  |
+| 46B04 | Isometric theory of Banach spaces | Banach fezâlarının mesâfe-müsâvî (izometrik) nazariyesi |  |
+| 46B06 | Asymptotic theory of Banach spaces [See also 52A23] | Banach fezâlarının mukāribî nazariyesi [Ayrıca bakınız: 52A23] |  |
+| 46B07 | Local theory of Banach spaces | Banach fezâlarının mahallî nazariyesi |  |
+| 46B08 | Ultraproduct techniques in Banach space theory [See also 46M07] | Banach fezâları nazariyesinde ultra-hâsıl-ı zarb teknikleri [Ayrıca bakınız: 46M07] |  |
+| 46B09 | Probabilistic methods in Banach space theory [See also 60Bxx] | Banach fezâları nazariyesinde ihtimâlî usuller [Ayrıca bakınız: 60Bxx] |  |
+| 46B10 | Duality and reflexivity in normed linear and Banach spaces [See also 46A25] | Normlu hattî fezâlarda ve Banach fezâlarında müsennâlık ve in'ikâsiyet [Ayrıca bakınız: 46A25] |  |
+| 46B15 | Summability and bases; functional analytic aspects of frames in Banach and Hilbert spaces [See also 46A35, 42C15] | Cem' kābiliyeti ve esaslar; Banach ve Hilbert fezâlarında çerçevelerin tâbiî tahlîle ait cihetleri [Ayrıca bakınız: 46A35, 42C15] | nakil |
+| 46B20 | Geometry and structure of normed linear spaces | Normlu hattî fezâların hendesesi ve bünyesi |  |
+| 46B22 | Radon-Nikodým, Kreı̆n-Milman and related properties [See also 46G10] | Radon-Nikodým, Kreĭn-Milman ve alâkalı vasıflar [Ayrıca bakınız: 46G10] | nakil |
+| 46B25 | Classical Banach spaces in the general theory | Umûmî nazariyede klasik Banach fezâları |  |
+| 46B26 | Nonseparable Banach spaces | Ayrılamaz (gayr-ı kābil-i tefrîk) Banach fezâları |  |
+| 46B28 | Spaces of operators; tensor products; approximation properties [See also 46A32, 46M05, 47L05, 47L20] | Âmil fezâları; tansörî hâsıl-ı zarblar; takrîb vasıfları [Ayrıca bakınız: 46A32, 46M05, 47L05, 47L20] |  |
+| 46B40 | Ordered normed spaces [See also 46A40, 46B42] | Müretteb normlu fezâlar [Ayrıca bakınız: 46A40, 46B42] |  |
+| 46B42 | Banach lattices [See also 46A40, 46B40] | Banach kafesleri [Ayrıca bakınız: 46A40, 46B40] | nakil |
+| 46B45 | Banach sequence spaces [See also 46A45] | Banach tevâlî fezâları [Ayrıca bakınız: 46A45] | nakil |
+| 46B50 | Compactness in Banach (or normed) spaces | Banach (yahut normlu) fezâlarda mütarâsiyet |  |
+| 46B70 | Interpolation between normed linear spaces [See also 46M35] | Normlu hattî fezâlar arasında dâhilî tahmîn (enterpolasyon) [Ayrıca bakınız: 46M35] |  |
+| 46B80 | Nonlinear classification of Banach spaces; nonlinear quotients | Banach fezâlarının gayr-ı hattî tasnifi; gayr-ı hattî bölüm fezâları |  |
+| 46B85 | Embeddings of discrete metric spaces into Banach spaces; applications in topology and computer science [See also 05C12, 68Rxx] | Munfasıl mesâfeli fezâların Banach fezâlarına gömülmesi; hendese-i vaz'iyye ve hâsibât ilminde tatbîkleri [Ayrıca bakınız: 05C12, 68Rxx] |  |
+| 46B87 | Lineability in functional analysis [See also 15A03] | Tâbiî tahlîlde hattîleşebilirlik [Ayrıca bakınız: 15A03] |  |
 | 46B99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **46Cxx** | **Inner product spaces and their generalizations, Hilbert spaces {For function spaces, see 46Exx}** | **** |  |
-| 46C05 | Hilbert and pre-Hilbert spaces: geometry and topology (including spaces with semidefinite inner product) |  |  |
-| 46C07 | Hilbert subspaces (= operator ranges); complementation (Aronszajn, de Branges, etc.) [See also 46B70, 46M35] |  |  |
-| 46C15 | Characterizations of Hilbert spaces |  |  |
-| 46C20 | Spaces with indefinite inner product (Kreı̆n spaces, Pontryagin spaces, etc.) [See also 47B50] |  |  |
-| 46C50 | Generalizations of inner products (semi-inner products, partial inner products, etc.) |  |  |
+| **46Cxx** | **Inner product spaces and their generalizations, Hilbert spaces {For function spaces, see 46Exx}** | **Dâhilî hâsıl-ı zarb fezâları ve bunların umûmîleştirmeleri, Hilbert fezâları {Tâbi fezâları için bakınız: 46Exx}** |  |
+| 46C05 | Hilbert and pre-Hilbert spaces: geometry and topology (including spaces with semidefinite inner product) | Hilbert ve Hilbert-öncesi fezâlar: hendese ve hendese-i vaz'iyye (nîm-muayyen dâhilî hâsıl-ı zarblı fezâlar dahil) | nakil |
+| 46C07 | Hilbert subspaces (= operator ranges); complementation (Aronszajn, de Branges, etc.) [See also 46B70, 46M35] | Hilbert alt fezâları (= âmil kıymet sahaları); tetmîm (Aronszajn, de Branges ve emsâli) [Ayrıca bakınız: 46B70, 46M35] | nakil |
+| 46C15 | Characterizations of Hilbert spaces | Hilbert fezâlarının tavsîfleri | nakil |
+| 46C20 | Spaces with indefinite inner product (Kreı̆n spaces, Pontryagin spaces, etc.) [See also 47B50] | Gayr-ı muayyen dâhilî hâsıl-ı zarblı fezâlar (Kreĭn fezâları, Pontryagin fezâları ve emsâli) [Ayrıca bakınız: 47B50] | nakil |
+| 46C50 | Generalizations of inner products (semi-inner products, partial inner products, etc.) | Dâhilî hâsıl-ı zarbların umûmîleştirmeleri (nîm-dâhilî hâsıl-ı zarblar, kısmî dâhilî hâsıl-ı zarblar ve emsâli) |  |
 | 46C99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **46Exx** | **Linear function spaces and their duals [See also 30H05, 32A38, 46F05] {For function algebras, see 46J10}** | **** |  |
-| 46E05 | Lattices of continuous, differentiable or analytic functions |  |  |
-| 46E10 | Topological linear spaces of continuous, differentiable or analytic functions |  |  |
-| 46E15 | Banach spaces of continuous, differentiable or analytic functions |  |  |
-| 46E20 | Hilbert spaces of continuous, differentiable or analytic functions |  |  |
-| 46E22 | Hilbert spaces with reproducing kernels (= (proper) functional Hilbert spaces, including de Branges-Rovnyak and other structured spaces) [See also 47B32] |  |  |
-| 46E25 | Rings and algebras of continuous, differentiable or analytic functions {For Banach function algebras, see 46J10, 46J15} |  |  |
-| 46E27 | Spaces of measures [See also 28A33, 46Gxx] |  |  |
-| 46E30 | Spaces of measurable functions (Lp -spaces, Orlicz spaces, Köthe function spaces, Lorentz spaces, rearrangement invariant spaces, ideal spaces, etc.) |  |  |
-| 46E35 | Sobolev spaces and other spaces of “smooth” functions, embedding theorems, trace theorems |  |  |
-| 46E36 | Sobolev (and similar kinds of) spaces of functions on metric spaces; analysis on metric spaces |  |  |
-| 46E39 | Sobolev (and similar kinds of) spaces of functions of discrete variables |  |  |
-| 46E40 | Spaces of vector- and operator-valued functions |  |  |
-| 46E50 | Spaces of differentiable or holomorphic functions on infinite-dimensional spaces [See also 46G20, 46G25, 47H60] |  |  |
+| **46Exx** | **Linear function spaces and their duals [See also 30H05, 32A38, 46F05] {For function algebras, see 46J10}** | **Hattî tâbi fezâları ve bunların müsennâları [Ayrıca bakınız: 30H05, 32A38, 46F05] {Tâbi cebirleri için bakınız: 46J10}** |  |
+| 46E05 | Lattices of continuous, differentiable or analytic functions | Muttasıl, müştakı alınabilir yahut tahlîlî tâbilerin kafesleri |  |
+| 46E10 | Topological linear spaces of continuous, differentiable or analytic functions | Muttasıl, müştakı alınabilir yahut tahlîlî tâbilerin vaz'î hattî fezâları |  |
+| 46E15 | Banach spaces of continuous, differentiable or analytic functions | Muttasıl, müştakı alınabilir yahut tahlîlî tâbilerin Banach fezâları |  |
+| 46E20 | Hilbert spaces of continuous, differentiable or analytic functions | Muttasıl, müştakı alınabilir yahut tahlîlî tâbilerin Hilbert fezâları |  |
+| 46E22 | Hilbert spaces with reproducing kernels (= (proper) functional Hilbert spaces, including de Branges-Rovnyak and other structured spaces) [See also 47B32] | Yeniden üreten çekirdekli Hilbert fezâları (= (hakîkî) tâbiî Hilbert fezâları; de Branges-Rovnyak ve sâir bünyeli fezâlar dahil) [Ayrıca bakınız: 47B32] | nakil |
+| 46E25 | Rings and algebras of continuous, differentiable or analytic functions {For Banach function algebras, see 46J10, 46J15} | Muttasıl, müştakı alınabilir yahut tahlîlî tâbilerin halkaları ve cebirleri {Banach tâbi cebirleri için bakınız: 46J10, 46J15} |  |
+| 46E27 | Spaces of measures [See also 28A33, 46Gxx] | Mikyâs fezâları [Ayrıca bakınız: 28A33, 46Gxx] |  |
+| 46E30 | Spaces of measurable functions (Lp -spaces, Orlicz spaces, Köthe function spaces, Lorentz spaces, rearrangement invariant spaces, ideal spaces, etc.) | Mikyâsı alınabilir tâbilerin fezâları (L^p fezâları, Orlicz fezâları, Köthe tâbi fezâları, Lorentz fezâları, yeniden tertibe karşı lâyetegayyer fezâlar, misâliye fezâları ve emsâli) | nakil |
+| 46E35 | Sobolev spaces and other spaces of “smooth” functions, embedding theorems, trace theorems | Sobolev fezâları ve sâir "emles" tâbi fezâları, gömme kaziyyeleri, iz kaziyyeleri | nakil |
+| 46E36 | Sobolev (and similar kinds of) spaces of functions on metric spaces; analysis on metric spaces | Mesâfeli fezâlar üzerindeki tâbilerin Sobolev (ve benzeri) fezâları; mesâfeli fezâlarda tahlîl | nakil |
+| 46E39 | Sobolev (and similar kinds of) spaces of functions of discrete variables | Munfasıl mütehavvilli tâbilerin Sobolev (ve benzeri) fezâları | nakil |
+| 46E40 | Spaces of vector- and operator-valued functions | Müteveccihe kıymetli ve âmil kıymetli tâbilerin fezâları |  |
+| 46E50 | Spaces of differentiable or holomorphic functions on infinite-dimensional spaces [See also 46G20, 46G25, 47H60] | Gayr-ı mütenâhî buudlu fezâlar üzerinde müştakı alınabilir yahut tâm-şekilli tâbilerin fezâları [Ayrıca bakınız: 46G20, 46G25, 47H60] |  |
 | 46E99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **46Fxx** | **Distributions, generalized functions, distribution spaces [See also 46T30]** | **** |  |
-| 46F05 | Topological linear spaces of test functions, distributions and ultradistributions [See also 46E10, 46E35] |  |  |
-| 46F10 | Operations with distributions and generalized functions |  |  |
-| 46F12 | Integral transforms in distribution spaces [See also 42-XX, 44-XX] |  |  |
-| 46F15 | Hyperfunctions, analytic functionals [See also 32A25, 32A45, 32C35, 58J15] |  |  |
-| 46F20 | Distributions and ultradistributions as boundary values of analytic functions [See also 30D40, 30E25, 32A40] |  |  |
-| 46F25 | Distributions on infinite-dimensional spaces [See also 58C35] |  |  |
-| 46F30 | Generalized functions for nonlinear analysis (Rosinger, Colombeau, nonstandard, etc.) |  |  |
+| **46Fxx** | **Distributions, generalized functions, distribution spaces [See also 46T30]** | **Tevzî'ler, teşmîl edilmiş tâbiler, tevzî' fezâları [Ayrıca bakınız: 46T30]** |  |
+| 46F05 | Topological linear spaces of test functions, distributions and ultradistributions [See also 46E10, 46E35] | İmtihan tâbilerinin, tevzî'lerin ve ultra-tevzî'lerin vaz'î hattî fezâları [Ayrıca bakınız: 46E10, 46E35] |  |
+| 46F10 | Operations with distributions and generalized functions | Tevzî'ler ve teşmîl edilmiş tâbilerle ameliyeler |  |
+| 46F12 | Integral transforms in distribution spaces [See also 42-XX, 44-XX] | Tevzî' fezâlarında tamâmî tahvîller [Ayrıca bakınız: 42-XX, 44-XX] |  |
+| 46F15 | Hyperfunctions, analytic functionals [See also 32A25, 32A45, 32C35, 58J15] | Fevk-tâbiler, tahlîlî tâbi'-i tevâbi'ler [Ayrıca bakınız: 32A25, 32A45, 32C35, 58J15] |  |
+| 46F20 | Distributions and ultradistributions as boundary values of analytic functions [See also 30D40, 30E25, 32A40] | Tahlîlî tâbilerin hudûd kıymetleri olarak tevzî'ler ve ultra-tevzî'ler [Ayrıca bakınız: 30D40, 30E25, 32A40] |  |
+| 46F25 | Distributions on infinite-dimensional spaces [See also 58C35] | Gayr-ı mütenâhî buudlu fezâlar üzerinde tevzî'ler [Ayrıca bakınız: 58C35] |  |
+| 46F30 | Generalized functions for nonlinear analysis (Rosinger, Colombeau, nonstandard, etc.) | Gayr-ı hattî tahlîl için teşmîl edilmiş tâbiler (Rosinger, Colombeau, gayr-ı mi'yârî ve emsâli) | nakil |
 | 46F99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **46Gxx** | **Measures, integration, derivative, holomorphy (all involving infinite-dimensional spaces) [See also 28-XX, 46Txx]** | **** |  |
-| 46G05 | Derivatives of functions in infinite-dimensional spaces [See also 46T20, 58C20, 58C25] |  |  |
-| 46G10 | Vector-valued measures and integration [See also 26E20, 28B05, 46B22] |  |  |
-| 46G12 | Measures and integration on abstract linear spaces [See also 28C20, 46T12] |  |  |
-| 46G15 | Functional analytic lifting theory [See also 28A51] |  |  |
-| 46G20 | Infinite-dimensional holomorphy [See also 32-XX, 46E50, 46T25, 58B12, 58C10] |  |  |
-| 46G25 | (Spaces of) multilinear mappings, polynomials [See also 46E50, 46G20, 47H60] |  |  |
+| **46Gxx** | **Measures, integration, derivative, holomorphy (all involving infinite-dimensional spaces) [See also 28-XX, 46Txx]** | **Mikyâslar, tamâmiye, müştak, tâm-şekillilik (hepsi gayr-ı mütenâhî buudlu fezâlara dair) [Ayrıca bakınız: 28-XX, 46Txx]** |  |
+| 46G05 | Derivatives of functions in infinite-dimensional spaces [See also 46T20, 58C20, 58C25] | Gayr-ı mütenâhî buudlu fezâlarda tâbilerin müştakları [Ayrıca bakınız: 46T20, 58C20, 58C25] |  |
+| 46G10 | Vector-valued measures and integration [See also 26E20, 28B05, 46B22] | Müteveccihe kıymetli mikyâslar ve tamâmiye [Ayrıca bakınız: 26E20, 28B05, 46B22] |  |
+| 46G12 | Measures and integration on abstract linear spaces [See also 28C20, 46T12] | Mücerred hattî fezâlar üzerinde mikyâslar ve tamâmiye [Ayrıca bakınız: 28C20, 46T12] |  |
+| 46G15 | Functional analytic lifting theory [See also 28A51] | Tâbiî tahlîle ait kaldırma (ref') nazariyesi [Ayrıca bakınız: 28A51] |  |
+| 46G20 | Infinite-dimensional holomorphy [See also 32-XX, 46E50, 46T25, 58B12, 58C10] | Gayr-ı mütenâhî buudlu tâm-şekillilik [Ayrıca bakınız: 32-XX, 46E50, 46T25, 58B12, 58C10] |  |
+| 46G25 | (Spaces of) multilinear mappings, polynomials [See also 46E50, 46G20, 47H60] | Çok hattî tatbîkler (ve fezâları), kesîrü'l-hudûdlar [Ayrıca bakınız: 46E50, 46G20, 47H60] |  |
 | 46G99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **46Hxx** | **Topological algebras, normed rings and algebras, Banach algebras {For group algebras, convolution algebras and measure algebras, see 43A10, 43A20}** | **** |  |
-| 46H05 | General theory of topological algebras |  |  |
-| 46H10 | Ideals and subalgebras |  |  |
-| 46H15 | Representations of topological algebras |  |  |
-| 46H20 | Structure, classification of topological algebras |  |  |
-| 46H25 | Normed modules and Banach modules, topological modules (if not placed in 13-XX or 16-XX) |  |  |
-| 46H30 | Functional calculus in topological algebras [See also 47A60] |  |  |
-| 46H35 | Topological algebras of operators [See mainly 47Lxx] |  |  |
-| 46H40 | Automatic continuity |  |  |
-| 46H70 | Nonassociative topological algebras [See also 46K70, 46L70] |  |  |
+| **46Hxx** | **Topological algebras, normed rings and algebras, Banach algebras {For group algebras, convolution algebras and measure algebras, see 43A10, 43A20}** | **Vaz'î cebirler, normlu halkalar ve cebirler, Banach cebirleri {Zümre cebirleri, iltifâf cebirleri ve mikyâs cebirleri için bakınız: 43A10, 43A20}** |  |
+| 46H05 | General theory of topological algebras | Vaz'î cebirlerin umûmî nazariyesi |  |
+| 46H10 | Ideals and subalgebras | Misâliyeler ve alt cebirler |  |
+| 46H15 | Representations of topological algebras | Vaz'î cebirlerin temsilleri |  |
+| 46H20 | Structure, classification of topological algebras | Vaz'î cebirlerin bünyesi, tasnifi |  |
+| 46H25 | Normed modules and Banach modules, topological modules (if not placed in 13-XX or 16-XX) | Normlu modüller ve Banach modülleri, vaz'î modüller (13-XX yahut 16-XX'e konmamışsa) |  |
+| 46H30 | Functional calculus in topological algebras [See also 47A60] | Vaz'î cebirlerde tâbiî hesap [Ayrıca bakınız: 47A60] |  |
+| 46H35 | Topological algebras of operators [See mainly 47Lxx] | Âmillerin vaz'î cebirleri [Bilhassa bakınız: 47Lxx] |  |
+| 46H40 | Automatic continuity | Kendiliğinden ittisal (otomatik süreklilik) |  |
+| 46H70 | Nonassociative topological algebras [See also 46K70, 46L70] | Tecmîî olmayan vaz'î cebirler [Ayrıca bakınız: 46K70, 46L70] |  |
 | 46H99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **46Jxx** | **Commutative Banach algebras and commutative topological algebras [See also 46E25]** | **** |  |
-| 46J05 | General theory of commutative topological algebras |  |  |
-| 46J10 | Banach algebras of continuous functions, function algebras [See also 46E25] |  |  |
-| 46J15 | Banach algebras of differentiable or analytic functions, H p -spaces [See also 30H10, 32A35, 32A37, 32A38, 42B30] |  |  |
-| 46J20 | Ideals, maximal ideals, boundaries |  |  |
-| 46J25 | Representations of commutative topological algebras |  |  |
-| 46J30 | Subalgebras of commutative topological algebras |  |  |
-| 46J40 | Structure and classification of commutative topological algebras |  |  |
-| 46J45 | Radical Banach algebras |  |  |
+| **46Jxx** | **Commutative Banach algebras and commutative topological algebras [See also 46E25]** | **Tebdîlî Banach cebirleri ve tebdîlî vaz'î cebirler [Ayrıca bakınız: 46E25]** |  |
+| 46J05 | General theory of commutative topological algebras | Tebdîlî vaz'î cebirlerin umûmî nazariyesi |  |
+| 46J10 | Banach algebras of continuous functions, function algebras [See also 46E25] | Muttasıl tâbilerin Banach cebirleri, tâbi cebirleri [Ayrıca bakınız: 46E25] |  |
+| 46J15 | Banach algebras of differentiable or analytic functions, H p -spaces [See also 30H10, 32A35, 32A37, 32A38, 42B30] | Müştakı alınabilir yahut tahlîlî tâbilerin Banach cebirleri, H^p fezâları [Ayrıca bakınız: 30H10, 32A35, 32A37, 32A38, 42B30] |  |
+| 46J20 | Ideals, maximal ideals, boundaries | Misâliyeler, azamî misâliyeler, hudûdlar |  |
+| 46J25 | Representations of commutative topological algebras | Tebdîlî vaz'î cebirlerin temsilleri |  |
+| 46J30 | Subalgebras of commutative topological algebras | Tebdîlî vaz'î cebirlerin alt cebirleri |  |
+| 46J40 | Structure and classification of commutative topological algebras | Tebdîlî vaz'î cebirlerin bünyesi ve tasnifi |  |
+| 46J45 | Radical Banach algebras | Cezrî (radikal) Banach cebirleri | nakil |
 | 46J99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **46Kxx** | **Topological (rings and) algebras with an involution [See also 16W10]** | **** |  |
-| 46K05 | General theory of topological algebras with involution |  |  |
-| 46K10 | Representations of topological algebras with involution |  |  |
-| 46K15 | Hilbert algebras |  |  |
-| 46K50 | Nonselfadjoint (sub)algebras in algebras with involution |  |  |
-| 46K70 | Nonassociative topological algebras with an involution [See also 46H70, 46L70] |  |  |
+| **46Kxx** | **Topological (rings and) algebras with an involution [See also 16W10]** | **İnkılâblı (involüsyonlu) vaz'î (halkalar ve) cebirler [Ayrıca bakınız: 16W10]** |  |
+| 46K05 | General theory of topological algebras with involution | İnkılâblı vaz'î cebirlerin umûmî nazariyesi |  |
+| 46K10 | Representations of topological algebras with involution | İnkılâblı vaz'î cebirlerin temsilleri |  |
+| 46K15 | Hilbert algebras | Hilbert cebirleri | nakil |
+| 46K50 | Nonselfadjoint (sub)algebras in algebras with involution | İnkılâblı cebirlerde zâtî-mülhak olmayan (alt) cebirler |  |
+| 46K70 | Nonassociative topological algebras with an involution [See also 46H70, 46L70] | İnkılâblı tecmîî olmayan vaz'î cebirler [Ayrıca bakınız: 46H70, 46L70] |  |
 | 46K99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **46Lxx** | **Selfadjoint operator algebras (C ∗ -algebras, von Neumann (W ∗ -) algebras, etc.) [See also 22D25, 47Lxx]** | **** |  |
-| 46L05 | General theory of C ∗ -algebras |  |  |
-| 46L06 | Tensor products of C ∗ -algebras |  |  |
-| 46L07 | Operator spaces and completely bounded maps [See also 47L25] |  |  |
-| 46L08 | C ∗ -modules |  |  |
-| 46L09 | Free products of C ∗ -algebras |  |  |
-| 46L10 | General theory of von Neumann algebras |  |  |
-| 46L30 | States of selfadjoint operator algebras |  |  |
-| 46L35 | Classifications of C ∗ -algebras |  |  |
-| 46L36 | Classification of factors |  |  |
-| 46L37 | Subfactors and their classification |  |  |
-| 46L40 | Automorphisms of selfadjoint operator algebras |  |  |
-| 46L45 | Decomposition theory for C ∗ -algebras |  |  |
-| 46L51 | Noncommutative measure and integration |  |  |
-| 46L52 | Noncommutative function spaces |  |  |
-| 46L53 | Noncommutative probability and statistics |  |  |
-| 46L54 | Free probability and free operator algebras |  |  |
-| 46L55 | Noncommutative dynamical systems [See also 28Dxx, 37Kxx, 37Lxx, 37A55] |  |  |
-| 46L57 | Derivations, dissipations and positive semigroups in C ∗ -algebras |  |  |
-| 46L60 | Applications of selfadjoint operator algebras to physics [See also 46N50, 46N55, 47L90, 81T05, 82B10, 82C10] |  |  |
-| 46L65 | Quantizations, deformations for selfadjoint operator algebras |  |  |
-| 46L67 | Quantum groups (operator algebraic aspects) |  |  |
-| 46L70 | Nonassociative selfadjoint operator algebras [See also 46H70, 46K70] |  |  |
-| 46L80 | K-theory and operator algebras (including cyclic theory) [See also 18F25, 19Kxx, 46M20, 55Rxx, 58J22] |  |  |
-| 46L85 | Noncommutative topology [See also 58B32, 58B34, 58J22] |  |  |
-| 46L87 | Noncommutative differential geometry [See also 58B32, 58B34, 58J22] |  |  |
-| 46L89 | Other “noncommutative” mathematics based on C ∗ -algebra theory [See also 58B32, 58B34, 58J22] |  |  |
+| **46Lxx** | **Selfadjoint operator algebras (C ∗ -algebras, von Neumann (W ∗ -) algebras, etc.) [See also 22D25, 47Lxx]** | **Zâtî-mülhak âmil cebirleri (C*-cebirleri, von Neumann (W*-) cebirleri ve emsâli) [Ayrıca bakınız: 22D25, 47Lxx]** | nakil |
+| 46L05 | General theory of C ∗ -algebras | C*-cebirlerinin umûmî nazariyesi |  |
+| 46L06 | Tensor products of C ∗ -algebras | C*-cebirlerinin tansörî hâsıl-ı zarbları |  |
+| 46L07 | Operator spaces and completely bounded maps [See also 47L25] | Âmil fezâları ve tamâmen mahdûd tatbîkler [Ayrıca bakınız: 47L25] |  |
+| 46L08 | C ∗ -modules | C*-modülleri | nakil |
+| 46L09 | Free products of C ∗ -algebras | C*-cebirlerinin serbest hâsıl-ı zarbları |  |
+| 46L10 | General theory of von Neumann algebras | Von Neumann cebirlerinin umûmî nazariyesi | nakil |
+| 46L30 | States of selfadjoint operator algebras | Zâtî-mülhak âmil cebirlerinin hâlleri |  |
+| 46L35 | Classifications of C ∗ -algebras | C*-cebirlerinin tasnifleri |  |
+| 46L36 | Classification of factors | Mazrûbların (faktörlerin) tasnifi |  |
+| 46L37 | Subfactors and their classification | Alt mazrûblar ve bunların tasnifi |  |
+| 46L40 | Automorphisms of selfadjoint operator algebras | Zâtî-mülhak âmil cebirlerinin zâtî temâsülleri |  |
+| 46L45 | Decomposition theory for C ∗ -algebras | C*-cebirleri için tahlîl (ayrışma) nazariyesi |  |
+| 46L51 | Noncommutative measure and integration | Gayr-ı tebdîlî mikyâs ve tamâmiye |  |
+| 46L52 | Noncommutative function spaces | Gayr-ı tebdîlî tâbi fezâları |  |
+| 46L53 | Noncommutative probability and statistics | Gayr-ı tebdîlî ihtimâl ve ihsâiyyât |  |
+| 46L54 | Free probability and free operator algebras | Serbest ihtimâl ve serbest âmil cebirleri |  |
+| 46L55 | Noncommutative dynamical systems [See also 28Dxx, 37Kxx, 37Lxx, 37A55] | Gayr-ı tebdîlî harekî nizâmlar [Ayrıca bakınız: 28Dxx, 37Kxx, 37Lxx, 37A55] |  |
+| 46L57 | Derivations, dissipations and positive semigroups in C ∗ -algebras | C*-cebirlerinde iştikaklar, tebdîdler ve müsbet nîm-zümreler |  |
+| 46L60 | Applications of selfadjoint operator algebras to physics [See also 46N50, 46N55, 47L90, 81T05, 82B10, 82C10] | Zâtî-mülhak âmil cebirlerinin hikmet-i tabîiyyeye tatbîkleri [Ayrıca bakınız: 46N50, 46N55, 47L90, 81T05, 82B10, 82C10] |  |
+| 46L65 | Quantizations, deformations for selfadjoint operator algebras | Zâtî-mülhak âmil cebirleri için kuantumlaştırmalar, tağyîr-i şekiller (deformasyonlar) |  |
+| 46L67 | Quantum groups (operator algebraic aspects) | Kuantum zümreleri (âmil cebirlerine ait cihetler) |  |
+| 46L70 | Nonassociative selfadjoint operator algebras [See also 46H70, 46K70] | Tecmîî olmayan zâtî-mülhak âmil cebirleri [Ayrıca bakınız: 46H70, 46K70] |  |
+| 46L80 | K-theory and operator algebras (including cyclic theory) [See also 18F25, 19Kxx, 46M20, 55Rxx, 58J22] | K-nazariyesi ve âmil cebirleri (devrî nazariye dahil) [Ayrıca bakınız: 18F25, 19Kxx, 46M20, 55Rxx, 58J22] | nakil |
+| 46L85 | Noncommutative topology [See also 58B32, 58B34, 58J22] | Gayr-ı tebdîlî hendese-i vaz'iyye [Ayrıca bakınız: 58B32, 58B34, 58J22] |  |
+| 46L87 | Noncommutative differential geometry [See also 58B32, 58B34, 58J22] | Gayr-ı tebdîlî tefâzulî hendese [Ayrıca bakınız: 58B32, 58B34, 58J22] |  |
+| 46L89 | Other “noncommutative” mathematics based on C ∗ -algebra theory [See also 58B32, 58B34, 58J22] | C*-cebiri nazariyesine dayanan sâir "gayr-ı tebdîlî" riyâziyât [Ayrıca bakınız: 58B32, 58B34, 58J22] |  |
 | 46L99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **46Mxx** | **Methods of category theory in functional analysis [See also 18-XX]** | **** |  |
-| 46M05 | Tensor products in functional analysis [See also 46A32, 46B28, 47A80] |  |  |
-| 46M07 | Ultraproducts in functional analysis [See also 46B08, 46S20] |  |  |
-| 46M10 | Projective and injective objects in functional analysis [See also 46A22] |  |  |
-| 46M15 | Categories, functors in functional analysis {For K-theory, Ext, etc., see 19K33, 46L80, 46M18, 46M20} |  |  |
-| 46M18 | Homological methods in functional analysis (exact sequences, right inverses, lifting, etc.) |  |  |
-| 46M20 | Methods of algebraic topology in functional analysis (cohomology, sheaf and bundle theory, etc.) [See also 14F06, 18Fxx, 19Kxx, 32Cxx, 32Lxx, 46L80, 46M15, 46M18, 55Rxx] |  |  |
-| 46M35 | Abstract interpolation of topological vector spaces [See also 46B70] |  |  |
-| 46M40 | Inductive and projective limits in functional analysis [See also 46A13] |  |  |
+| **46Mxx** | **Methods of category theory in functional analysis [See also 18-XX]** | **Tâbiî tahlîlde makûlât nazariyesi usulleri [Ayrıca bakınız: 18-XX]** |  |
+| 46M05 | Tensor products in functional analysis [See also 46A32, 46B28, 47A80] | Tâbiî tahlîlde tansörî hâsıl-ı zarblar [Ayrıca bakınız: 46A32, 46B28, 47A80] |  |
+| 46M07 | Ultraproducts in functional analysis [See also 46B08, 46S20] | Tâbiî tahlîlde ultra-hâsıl-ı zarblar [Ayrıca bakınız: 46B08, 46S20] |  |
+| 46M10 | Projective and injective objects in functional analysis [See also 46A22] | Tâbiî tahlîlde irtisâmî ve idhâlî (enjektif) nesneler [Ayrıca bakınız: 46A22] |  |
+| 46M15 | Categories, functors in functional analysis {For K-theory, Ext, etc., see 19K33, 46L80, 46M18, 46M20} | Tâbiî tahlîlde makûleler, nâkiller {K-nazariyesi, Ext ve emsâli için bakınız: 19K33, 46L80, 46M18, 46M20} |  |
+| 46M18 | Homological methods in functional analysis (exact sequences, right inverses, lifting, etc.) | Tâbiî tahlîlde tecânüsî usuller (tam tevâlîler, sağ tersler, kaldırma ve emsâli) |  |
+| 46M20 | Methods of algebraic topology in functional analysis (cohomology, sheaf and bundle theory, etc.) [See also 14F06, 18Fxx, 19Kxx, 32Cxx, 32Lxx, 46L80, 46M15, 46M18, 55Rxx] | Tâbiî tahlîlde cebrî hendese-i vaz'iyye usulleri (mukābil-tecânüs, deste ve huzme nazariyesi ve emsâli) [Ayrıca bakınız: 14F06, 18Fxx, 19Kxx, 32Cxx, 32Lxx, 46L80, 46M15, 46M18, 55Rxx] |  |
+| 46M35 | Abstract interpolation of topological vector spaces [See also 46B70] | Vaz'î müteveccihe fezâlarının mücerred dâhilî tahmîni [Ayrıca bakınız: 46B70] |  |
+| 46M40 | Inductive and projective limits in functional analysis [See also 46A13] | Tâbiî tahlîlde istikrâî ve irtisâmî nihâyetler [Ayrıca bakınız: 46A13] |  |
 | 46M99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **46Nxx** | **Miscellaneous applications of functional analysis [See also 47Nxx]** | **** |  |
-| 46N10 | Applications of functional analysis in optimization, convex analysis, mathematical programming, economics |  |  |
-| 46N20 | Applications of functional analysis to differential and integral equations |  |  |
-| 46N30 | Applications of functional analysis in probability theory and statistics |  |  |
-| 46N40 | Applications of functional analysis in numerical analysis [See also 65Jxx] |  |  |
-| 46N50 | Applications of functional analysis in quantum physics |  |  |
-| 46N55 | Applications of functional analysis in statistical physics |  |  |
-| 46N60 | Applications of functional analysis in biology and other sciences |  |  |
+| **46Nxx** | **Miscellaneous applications of functional analysis [See also 47Nxx]** | **Tâbiî tahlîlin muhtelif tatbîkleri [Ayrıca bakınız: 47Nxx]** |  |
+| 46N10 | Applications of functional analysis in optimization, convex analysis, mathematical programming, economics | Tâbiî tahlîlin ahseniyet, muhaddeb tahlîl, riyâzî programlama ve iktisatta tatbîkleri |  |
+| 46N20 | Applications of functional analysis to differential and integral equations | Tâbiî tahlîlin tefâzulî ve tamâmî muâdelelere tatbîkleri |  |
+| 46N30 | Applications of functional analysis in probability theory and statistics | Tâbiî tahlîlin ihtimâl nazariyesi ve ihsâiyyâtta tatbîkleri |  |
+| 46N40 | Applications of functional analysis in numerical analysis [See also 65Jxx] | Tâbiî tahlîlin adedî tahlîlde tatbîkleri [Ayrıca bakınız: 65Jxx] |  |
+| 46N50 | Applications of functional analysis in quantum physics | Tâbiî tahlîlin kuantum hikmetinde tatbîkleri |  |
+| 46N55 | Applications of functional analysis in statistical physics | Tâbiî tahlîlin ihsâî hikmet-i tabîiyyede tatbîkleri |  |
+| 46N60 | Applications of functional analysis in biology and other sciences | Tâbiî tahlîlin hayatiyyât ve sâir ilimlerde tatbîkleri |  |
 | 46N99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **46Sxx** | **Other (nonclassical) types of functional analysis [See also 47Sxx]** | **** |  |
-| 46S05 | Quaternionic functional analysis |  |  |
-| 46S10 | Functional analysis over fields other than R or C or the quaternions; non-Archimedean functional analysis [See also 12J25, 32P05] |  |  |
-| 46S20 | Nonstandard functional analysis [See also 03H05] |  |  |
-| 46S30 | Constructive functional analysis [See also 03F60] |  |  |
-| 46S40 | Fuzzy functional analysis [See also 03E72] |  |  |
-| 46S50 | Functional analysis in probabilistic metric linear spaces |  |  |
-| 46S60 | Functional analysis on superspaces (supermanifolds) or graded spaces [See also 58A50, 58C50] |  |  |
+| **46Sxx** | **Other (nonclassical) types of functional analysis [See also 47Sxx]** | **Tâbiî tahlîlin sâir (klasik olmayan) nev'leri [Ayrıca bakınız: 47Sxx]** |  |
+| 46S05 | Quaternionic functional analysis | Kuaterniyonlu tâbiî tahlîl | nakil |
+| 46S10 | Functional analysis over fields other than R or C or the quaternions; non-Archimedean functional analysis [See also 12J25, 32P05] | R, C yahut kuaterniyonlardan başka cisimler üzerinde tâbiî tahlîl; gayr-ı Arşimedî tâbiî tahlîl [Ayrıca bakınız: 12J25, 32P05] |  |
+| 46S20 | Nonstandard functional analysis [See also 03H05] | Gayr-ı mi'yârî tâbiî tahlîl [Ayrıca bakınız: 03H05] |  |
+| 46S30 | Constructive functional analysis [See also 03F60] | İnşâî (konstrüktif) tâbiî tahlîl [Ayrıca bakınız: 03F60] |  |
+| 46S40 | Fuzzy functional analysis [See also 03E72] | Bulanık tâbiî tahlîl [Ayrıca bakınız: 03E72] |  |
+| 46S50 | Functional analysis in probabilistic metric linear spaces | İhtimâlî mesâfeli hattî fezâlarda tâbiî tahlîl |  |
+| 46S60 | Functional analysis on superspaces (supermanifolds) or graded spaces [See also 58A50, 58C50] | Fevka'l-fezâlar (fevka'l-müteşa'ibler) yahut dereceli fezâlar üzerinde tâbiî tahlîl [Ayrıca bakınız: 58A50, 58C50] |  |
 | 46S99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **46Txx** | **Nonlinear functional analysis [See also 47Hxx, 47Jxx, 58Cxx, 58Dxx]** | **** |  |
-| 46T05 | Infinite-dimensional manifolds [See also 53Axx, 57N20, 58Bxx, 58Dxx] |  |  |
-| 46T10 | Manifolds of mappings |  |  |
-| 46T12 | Measure (Gaussian, cylindrical, etc.) and integrals (Feynman, path, Fresnel, etc.) on manifolds [See also 28Cxx, 46G12, 60-XX] |  |  |
-| 46T20 | Continuous and differentiable maps in nonlinear functional analysis [See also 46G05] |  |  |
-| 46T25 | Holomorphic maps in nonlinear functional analysis [See also 46G20] |  |  |
-| 46T30 | Distributions and generalized functions on nonlinear spaces [See also 46Fxx] |  |  |
+| **46Txx** | **Nonlinear functional analysis [See also 47Hxx, 47Jxx, 58Cxx, 58Dxx]** | **Gayr-ı hattî tâbiî tahlîl [Ayrıca bakınız: 47Hxx, 47Jxx, 58Cxx, 58Dxx]** |  |
+| 46T05 | Infinite-dimensional manifolds [See also 53Axx, 57N20, 58Bxx, 58Dxx] | Gayr-ı mütenâhî buudlu müteşa'ibler [Ayrıca bakınız: 53Axx, 57N20, 58Bxx, 58Dxx] |  |
+| 46T10 | Manifolds of mappings | Tatbîk müteşa'ibleri |  |
+| 46T12 | Measure (Gaussian, cylindrical, etc.) and integrals (Feynman, path, Fresnel, etc.) on manifolds [See also 28Cxx, 46G12, 60-XX] | Müteşa'ibler üzerinde mikyâs (Gauss, üstüvânî ve emsâli) ve tamâmîler (Feynman, yol, Fresnel ve emsâli) [Ayrıca bakınız: 28Cxx, 46G12, 60-XX] | nakil |
+| 46T20 | Continuous and differentiable maps in nonlinear functional analysis [See also 46G05] | Gayr-ı hattî tâbiî tahlîlde muttasıl ve müştakı alınabilir tatbîkler [Ayrıca bakınız: 46G05] |  |
+| 46T25 | Holomorphic maps in nonlinear functional analysis [See also 46G20] | Gayr-ı hattî tâbiî tahlîlde tâm-şekilli tatbîkler [Ayrıca bakınız: 46G20] |  |
+| 46T30 | Distributions and generalized functions on nonlinear spaces [See also 46Fxx] | Gayr-ı hattî fezâlar üzerinde tevzî'ler ve teşmîl edilmiş tâbiler [Ayrıca bakınız: 46Fxx] |  |
 | 46T99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
 ## 47-XX — Operator theory
