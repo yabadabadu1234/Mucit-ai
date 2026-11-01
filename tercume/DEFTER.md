@@ -20,6 +20,7 @@ Nüsha sütununda "yoklandı" yazılıysa, o adres bu oturumda Internet Archive'
 | 3 | Hilbert 1900, *Mathematische Probleme* | **Tamam** (mukaddime, yirmi üç mesele, hâtime, kırk yedi hâşiye; düsturlar kelimeyle; aslın matbaa hataları M17'de) | [eserler/00_hilbert_1900_riyazi_meseleler.md](eserler/00_hilbert_1900_riyazi_meseleler.md) |
 | 4 | Hârizmî, *el-Kitâbü'l-muhtasar fî hisâbi'l-cebr ve'l-mukābele* | **Tamam** (Rosen 1831 neşrinin İngilizcesinden vasıtalı tercüme, sahife 1–174: cebir, mesâha, vasâyâ ve devr; kırk beş mütercim kaydı; Arapça asılla mukabelesi henüz yapılmadı, M1) | [eserler/01_harizmi_cebr_ve_mukabele.md](eserler/01_harizmi_cebr_ve_mukabele.md) |
 | 5 | Riemann 1854, *Ueber die Hypothesen, welche der Geometrie zu Grunde liegen* | **Tamam** (ikinci tercüman; Wilkins istinsahından tam metin, düsturlar kelimeyle, yalnız aslın kendi hâşiyesi) | [eserler/53_riemann_1854_hendesenin_esasi_olan_faraziyeler.md](eserler/53_riemann_1854_hendesenin_esasi_olan_faraziyeler.md) |
+| 6 | Abel 1826, *Auflösung einer mechanischen Aufgabe* | **Tamam** (üçüncü tercüman; Crelle mecmuasının birinci cildinin taramasından tam metin, düsturlar kelimeyle) | [eserler/45_abel_1826_bir_mekanik_meselenin_halli.md](eserler/45_abel_1826_bir_mekanik_meselenin_halli.md) |
 
 Sıra tayininde ölçü: kısa ve kurucu eserler evvel (bir oturumda tamamı bitebilsin diye), uzun kitaplar bab bab sonra.
 
