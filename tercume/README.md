@@ -8,7 +8,7 @@ Bu dizin, `saheserler/` defterinde (dal: `claude/project-thread-9mnlw4`) her sah
 | :-- | :-- | :-- |
 | 1 | **Düsturlarda harf yazılmaz, kelime yazılır.** Her kemmiyet mânâsını söyleyen bir kelimeyle adlandırılır: "ağırlık × ehemmiyet = dikkat" doğrudur, "a × b = c" yanlıştır. Aslın harfleri her eserin sonundaki **İsimler cedveli**nde, okuyanın aslıyla karşılaştırabilmesi için yalnız **adlarıyla** gösterilir. Hesap ameliyelerinin işaretleri (cem', tarh, zarb, taksim, kuvvet, tamâmî, mecmû', hâsıl-ı zarb, hadd) ve rakamlar kalır, zîrâ bunlar kemmiyet değil fiil ve adettir. | Padişah, 1 Teşrîn-i sânî 2026 |
 | 2 | Tam metin tercümesi **yalnız telifi düşmüş yahut açık lisanslı** eserlerde yapılır. Telifli eserin tam metni depoya konmaz; yalnız künyesi, meşru nüshasının yeri ve telif hâli deftere yazılır. | Coordinator notu, Padişahın talebi üzerine |
-| 3 | Metin cümle cümle, atlamadan ve ilâve etmeden nakledilir. Mütercimin her sözü metnin dışında, numaralı **Mütercim kayıtları**nda durur ve hangi hükmün aslından, hangisinin mütercimin bilgisinden olduğunu söyler. | Padişahın tercihleri: dürüstlük, seçmece yapmamak |
+| 3 | Metin cümle cümle, atlamadan ve ilâve etmeden nakledilir. **Şerh, hâşiye, mütercim kaydı ve metin içi izah yazılmaz**; emek şerhe değil, eşzamanlı çalışan çok tercümana verilir. *Nakz:* bu kaidenin evvelki şekli "Mütercim kayıtları" isterdi; Padişahın 1 Teşrîn-i sânî 2026 tarihli emriyle kalktı. | Padişah, 1 Teşrîn-i sânî 2026 |
 | 4 | Istılahlarda esas, aynı depodaki `lugat/` dizinidir (dal: `claude/project-thread-jvwo8g`). Orada bulunmayan karşılık **teklif** diye işaretlenir; uydurma bir "eski karşılık" diye sunulmaz. | Coordinator notu |
 | 5 | Osmanlıca, edebî ve öğretici üslûp; Latin harfleriyle, uzun sesliler şapkalı (â, î, û), izafetler kesreli. **Kısaltma kullanılmaz**; aslında kısaltma varsa açılarak yazılır. | Padişahın tercihleri |
 | 6 | Kaynak dosyalar `grep` ile taranmaz, baştan sona okunur. | Padişahın tercihleri |
@@ -28,6 +28,7 @@ Açık lisanslı eserler (meselâ *Creative Commons Atıf-Aynı Lisansla Paylaş
 
 | Yol | Muhteva |
 | :-- | :-- |
+| `PAYLASIM.md` | Eşzamanlı çalışan tercümanlar arasında eserlerin paylaştırma defteri; bir esere başlamadan evvel buraya yazılır. |
 | `DEFTER.md` | İlerleme defteri: şâheserler defterindeki her eserin telif hâli, meşru nüshası ve tercüme durumu. |
 | `eserler/SS_muellif_yil_unvan.md` | Tamamlanmış yahut süren tercümeler; `SS`, Riyâziyyât Mevzû Tasnîfi 2020 sahasının numarasıdır. |
 
@@ -35,6 +36,4 @@ Açık lisanslı eserler (meselâ *Creative Commons Atıf-Aynı Lisansla Paylaş
 
 1. Künye, kullanılan nüsha ve adresi, telif hâli.
 2. Tercüme metni.
-3. Mütercim kayıtları.
-4. İsimler cedveli (düsturlardaki kelimeler ve aslın işaretlerinin adları).
-5. Istılah cedveli (lügatteki dayanağıyla).
+3. İsimler cedveli (düsturlardaki kelimeler ve aslın işaretlerinin adları).
