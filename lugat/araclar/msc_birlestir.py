@@ -60,6 +60,7 @@ def main():
             m = re.match(r'^\d\d-(\d\d)$', kod)
             if m and m.group(1) in KALIP and bab in ilgi and 'pertaining to' in ing:
                 osm = KALIP[m.group(1)].format(X=ilgi[bab]) + ayrica_bak(ing)
+                osm = ('İ' if osm[0] == 'i' else osm[0].upper()) + osm[1:]
             elif kod.endswith('99') and ing == 'None of the above, but in this section':
                 osm = HICBIRI
         elif '[' not in osm:

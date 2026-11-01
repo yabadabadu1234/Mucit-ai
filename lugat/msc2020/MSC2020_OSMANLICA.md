@@ -2,7 +2,7 @@
 
 Bu sahife `araclar/msc_birlestir.py` ile `kaynak.tsv` ve `ceviri/` dosyalarından üretilir; elle değiştirilmez.
 
-Toplam madde: 6603 · karşılığı bulunan: 6051 · kalan: 552
+Toplam madde: 6603 · karşılığı bulunan: 6096 · kalan: 507
 
 
 ## 00-XX — Umûmî ve şâmil mevzûlar; mecmualar
@@ -11,8 +11,8 @@ General and overarching topics; collections
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 00-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to mathematics in general | umûmiyetle riyâziyât hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 00-02 | Research exposition (monographs, survey articles) pertaining to mathematics in general | umûmiyetle riyâziyât hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 00-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to mathematics in general | Umûmiyetle riyâziyât hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 00-02 | Research exposition (monographs, survey articles) pertaining to mathematics in general | Umûmiyetle riyâziyât hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | **00Axx** | **General and miscellaneous specific topics** | **Umûmî ve muhtelif hususî mevzûlar** |  |
 | 00A05 | Mathematics in general | Umûmiyetle riyâziyât |  |
 | 00A06 | Mathematics for nonmathematicians (engineering, social sciences, etc.) | Riyâziyatçı olmayanlar için riyâziyât (mühendislik, ictimâî ilimler ve emsâli) |  |
@@ -53,11 +53,11 @@ History and biography [See also the classification number –03 in the other sec
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 01-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to history and biography | târih ve terâcim-i ahvâl hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 01-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to history and biography | târih ve terâcim-i ahvâl hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 01-02 | Research exposition (monographs, survey articles) pertaining to history and biography | târih ve terâcim-i ahvâl hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
-| 01-06 | Proceedings, conferences, collections, etc. pertaining to history and biography | târih ve terâcim-i ahvâl hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 01-11 | Research data for problems pertaining to history and biography | târih ve terâcim-i ahvâl sahasındaki meselelere dair tetkik verileri |  |
+| 01-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to history and biography | Târih ve terâcim-i ahvâl hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 01-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to history and biography | Târih ve terâcim-i ahvâl hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 01-02 | Research exposition (monographs, survey articles) pertaining to history and biography | Târih ve terâcim-i ahvâl hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 01-06 | Proceedings, conferences, collections, etc. pertaining to history and biography | Târih ve terâcim-i ahvâl hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 01-11 | Research data for problems pertaining to history and biography | Târih ve terâcim-i ahvâl sahasındaki meselelere dair tetkik verileri |  |
 | **01Axx** | **History of mathematics and mathematicians** | **Riyâziyâtın ve riyâziyatçıların târihi** |  |
 | 01A05 | General histories, source books | Umûmî târihler, menba kitapları |  |
 | 01A07 | Ethnomathematics (general) | Kavimlere mahsus riyâziyât (etnoriyâziyât) (umûmî) | şüpheli: "etnoriyâziyât" yeni bir mefhumdur, Osmanlıca karşılığı teklif mahiyetindedir |
@@ -98,14 +98,14 @@ Mathematical logic and foundations
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 03-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to mathematical logic and foundations | riyâzî mantık ve esâsât hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 03-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to mathematical logic and foundations | riyâzî mantık ve esâsât hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 03-02 | Research exposition (monographs, survey articles) pertaining to mathematical logic and foundations | riyâzî mantık ve esâsât hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 03-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to mathematical logic and foundations | Riyâzî mantık ve esâsât hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 03-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to mathematical logic and foundations | Riyâzî mantık ve esâsât hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 03-02 | Research exposition (monographs, survey articles) pertaining to mathematical logic and foundations | Riyâzî mantık ve esâsât hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 03-03 | History of mathematical logic and foundations [Consider also classification numbers from Section 01] | Riyâzî mantık ve esâsâtın târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 03-04 | Software, source code, etc. for problems pertaining to mathematical logic and foundations | riyâzî mantık ve esâsât sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 03-06 | Proceedings, conferences, collections, etc. pertaining to mathematical logic and foundations | riyâzî mantık ve esâsât hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 03-08 | Computational methods for problems pertaining to mathematical logic and foundations | riyâzî mantık ve esâsât sahasındaki meselelere dair hesap usulleri |  |
-| 03-11 | Research data for problems pertaining to mathematical logic and foundations | riyâzî mantık ve esâsât sahasındaki meselelere dair tetkik verileri |  |
+| 03-04 | Software, source code, etc. for problems pertaining to mathematical logic and foundations | Riyâzî mantık ve esâsât sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 03-06 | Proceedings, conferences, collections, etc. pertaining to mathematical logic and foundations | Riyâzî mantık ve esâsât hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 03-08 | Computational methods for problems pertaining to mathematical logic and foundations | Riyâzî mantık ve esâsât sahasındaki meselelere dair hesap usulleri |  |
+| 03-11 | Research data for problems pertaining to mathematical logic and foundations | Riyâzî mantık ve esâsât sahasındaki meselelere dair tetkik verileri |  |
 | **03Axx** | **Philosophical aspects of logic and foundations** | **Mantığın ve esâsâtın felsefî cihetleri** |  |
 | 03A05 | Philosophical and critical aspects of logic and foundations {For philosophy of mathematics, see also 00A30} | Mantığın ve esâsâtın felsefî ve tenkîdî cihetleri {Riyâziyât felsefesi için ayrıca bakınız: 00A30} |  |
 | 03A10 | Logic in the philosophy of science | İlim felsefesinde mantık |  |
@@ -252,14 +252,14 @@ Combinatorics {For finite fields, see 11Txx}
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 05-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to combinatorics | ilm-i terkîbât hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 05-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to combinatorics | ilm-i terkîbât hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 05-02 | Research exposition (monographs, survey articles) pertaining to combinatorics | ilm-i terkîbât hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 05-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to combinatorics | İlm-i terkîbât hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 05-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to combinatorics | İlm-i terkîbât hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 05-02 | Research exposition (monographs, survey articles) pertaining to combinatorics | İlm-i terkîbât hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 05-03 | History of combinatorics [Consider also classification numbers from Section 01] | İlm-i terkîbâtın târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 05-04 | Software, source code, etc. for problems pertaining to combinatorics | ilm-i terkîbât sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 05-06 | Proceedings, conferences, collections, etc. pertaining to combinatorics | ilm-i terkîbât hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 05-08 | Computational methods for problems pertaining to combinatorics | ilm-i terkîbât sahasındaki meselelere dair hesap usulleri |  |
-| 05-11 | Research data for problems pertaining to combinatorics | ilm-i terkîbât sahasındaki meselelere dair tetkik verileri |  |
+| 05-04 | Software, source code, etc. for problems pertaining to combinatorics | İlm-i terkîbât sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 05-06 | Proceedings, conferences, collections, etc. pertaining to combinatorics | İlm-i terkîbât hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 05-08 | Computational methods for problems pertaining to combinatorics | İlm-i terkîbât sahasındaki meselelere dair hesap usulleri |  |
+| 05-11 | Research data for problems pertaining to combinatorics | İlm-i terkîbât sahasındaki meselelere dair tetkik verileri |  |
 | **05Axx** | **Enumerative combinatorics {For enumeration in graph theory, see 05C30}** | **Ta'dâdî terkîbât {Rabıta şekilleri nazariyesinde ta'dâd için bakınız: 05C30}** |  |
 | 05A05 | Permutations, words, matrices | Tebdîller (permütasyonlar), kelimeler, masfûfeler |  |
 | 05A10 | Factorials, binomial coefficients, combinatorial functions [See also 11B65, 33Cxx] | Zarb-ı müteselsiller (faktöriyeller), dü-haddî emsal, terkîbî tâbiler [Ayrıca bakınız: 11B65, 33Cxx] |  |
@@ -350,14 +350,14 @@ Order, lattices, ordered algebraic structures [See also 18B35]
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 06-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to ordered structures | müretteb bünyeler hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 06-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to ordered structures | müretteb bünyeler hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 06-02 | Research exposition (monographs, survey articles) pertaining to ordered structures | müretteb bünyeler hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 06-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to ordered structures | Müretteb bünyeler hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 06-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to ordered structures | Müretteb bünyeler hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 06-02 | Research exposition (monographs, survey articles) pertaining to ordered structures | Müretteb bünyeler hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 06-03 | History of ordered structures [Consider also classification numbers from Section 01] | Müretteb bünyelerin târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 06-04 | Software, source code, etc. for problems pertaining to ordered structures | müretteb bünyeler sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 06-06 | Proceedings, conferences, collections, etc. pertaining to ordered structures | müretteb bünyeler hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 06-08 | Computational methods for problems pertaining to ordered structures | müretteb bünyeler sahasındaki meselelere dair hesap usulleri |  |
-| 06-11 | Research data for problems pertaining to ordered structures | müretteb bünyeler sahasındaki meselelere dair tetkik verileri |  |
+| 06-04 | Software, source code, etc. for problems pertaining to ordered structures | Müretteb bünyeler sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 06-06 | Proceedings, conferences, collections, etc. pertaining to ordered structures | Müretteb bünyeler hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 06-08 | Computational methods for problems pertaining to ordered structures | Müretteb bünyeler sahasındaki meselelere dair hesap usulleri |  |
+| 06-11 | Research data for problems pertaining to ordered structures | Müretteb bünyeler sahasındaki meselelere dair tetkik verileri |  |
 | **06Axx** | **Ordered sets** | **Müretteb mecmûalar** |  |
 | 06A05 | Total orders | Tam tertîbler |  |
 | 06A06 | Partial orders, general | Kısmî tertîbler, umûmî |  |
@@ -423,14 +423,14 @@ General algebraic systems
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 08-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to general algebraic systems | umûmî cebrî nizâmlar hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 08-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to general algebraic systems | umûmî cebrî nizâmlar hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 08-02 | Research exposition (monographs, survey articles) pertaining to general algebraic systems | umûmî cebrî nizâmlar hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 08-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to general algebraic systems | Umûmî cebrî nizâmlar hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 08-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to general algebraic systems | Umûmî cebrî nizâmlar hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 08-02 | Research exposition (monographs, survey articles) pertaining to general algebraic systems | Umûmî cebrî nizâmlar hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 08-03 | History of general algebraic systems [Consider also classification numbers from Section 01] | Umûmî cebrî nizâmların târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 08-04 | Software, source code, etc. for problems pertaining to general algebraic systems | umûmî cebrî nizâmlar sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 08-06 | Proceedings, conferences, collections, etc. pertaining to general algebraic systems | umûmî cebrî nizâmlar hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 08-08 | Computational methods for problems pertaining to general algebraic systems | umûmî cebrî nizâmlar sahasındaki meselelere dair hesap usulleri |  |
-| 08-11 | Research data for problems pertaining to general algebraic systems | umûmî cebrî nizâmlar sahasındaki meselelere dair tetkik verileri |  |
+| 08-04 | Software, source code, etc. for problems pertaining to general algebraic systems | Umûmî cebrî nizâmlar sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 08-06 | Proceedings, conferences, collections, etc. pertaining to general algebraic systems | Umûmî cebrî nizâmlar hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 08-08 | Computational methods for problems pertaining to general algebraic systems | Umûmî cebrî nizâmlar sahasındaki meselelere dair hesap usulleri |  |
+| 08-11 | Research data for problems pertaining to general algebraic systems | Umûmî cebrî nizâmlar sahasındaki meselelere dair tetkik verileri |  |
 | **08Axx** | **Algebraic structures [See also 03C05]** | **Cebrî bünyeler [Ayrıca bakınız: 03C05]** |  |
 | 08A02 | Relational systems, laws of composition | Münasebet nizâmları, terkip kanunları |  |
 | 08A05 | Structure theory of algebraic structures | Cebrî bünyelerin bünye nazariyesi |  |
@@ -469,13 +469,13 @@ Number theory
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 11-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to number theory | nazariye-i a'dâd hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 11-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to number theory | nazariye-i a'dâd hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 11-02 | Research exposition (monographs, survey articles) pertaining to number theory | nazariye-i a'dâd hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 11-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to number theory | Nazariye-i a'dâd hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 11-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to number theory | Nazariye-i a'dâd hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 11-02 | Research exposition (monographs, survey articles) pertaining to number theory | Nazariye-i a'dâd hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 11-03 | History of number theory [Consider also classification numbers from Section 01] | Nazariye-i a'dâdın târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 11-04 | Software, source code, etc. for problems pertaining to number theory | nazariye-i a'dâd sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 11-06 | Proceedings, conferences, collections, etc. pertaining to number theory | nazariye-i a'dâd hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 11-11 | Research data for problems pertaining to number theory | nazariye-i a'dâd sahasındaki meselelere dair tetkik verileri |  |
+| 11-04 | Software, source code, etc. for problems pertaining to number theory | Nazariye-i a'dâd sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 11-06 | Proceedings, conferences, collections, etc. pertaining to number theory | Nazariye-i a'dâd hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 11-11 | Research data for problems pertaining to number theory | Nazariye-i a'dâd sahasındaki meselelere dair tetkik verileri |  |
 | **11Axx** | **Elementary number theory {For analogues in number fields, see 11R04}** | **İbtidâî nazariye-i a'dâd {Adet cisimlerindeki nazîrleri için bakınız: 11R04}** |  |
 | 11A05 | Multiplicative structure; Euclidean algorithm; greatest common divisors | Zarbî bünye; Uklîdis hârizmîsi; kāsım-ı müşterek-i a'zamlar (en büyük ortak bölenler) |  |
 | 11A07 | Congruences; primitive roots; residue systems | Tevâfuklar (denklikler); iptidâî cezrler; bâkî nizâmları |  |
@@ -779,14 +779,14 @@ Field theory and polynomials
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 12-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to field theory | cisimler nazariyesi hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 12-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to field theory | cisimler nazariyesi hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 12-02 | Research exposition (monographs, survey articles) pertaining to field theory | cisimler nazariyesi hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 12-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to field theory | Cisimler nazariyesi hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 12-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to field theory | Cisimler nazariyesi hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 12-02 | Research exposition (monographs, survey articles) pertaining to field theory | Cisimler nazariyesi hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 12-03 | History of field theory [Consider also classification numbers from Section 01] | Cisimler nazariyesinin târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 12-04 | Software, source code, etc. for problems pertaining to field theory | cisimler nazariyesi sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 12-06 | Proceedings, conferences, collections, etc. pertaining to field theory | cisimler nazariyesi hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 12-08 | Computational methods for problems pertaining to field theory [See also 68W30] | cisimler nazariyesi sahasındaki meselelere dair hesap usulleri [Ayrıca bakınız: 68W30] |  |
-| 12-11 | Research data for problems pertaining to field theory | cisimler nazariyesi sahasındaki meselelere dair tetkik verileri |  |
+| 12-04 | Software, source code, etc. for problems pertaining to field theory | Cisimler nazariyesi sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 12-06 | Proceedings, conferences, collections, etc. pertaining to field theory | Cisimler nazariyesi hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 12-08 | Computational methods for problems pertaining to field theory [See also 68W30] | Cisimler nazariyesi sahasındaki meselelere dair hesap usulleri [Ayrıca bakınız: 68W30] |  |
+| 12-11 | Research data for problems pertaining to field theory | Cisimler nazariyesi sahasındaki meselelere dair tetkik verileri |  |
 | **12Dxx** | **Real and complex fields** | **Hakîkî ve mürekkeb cisimler** |  |
 | 12D05 | Polynomials in real and complex fields: factorization | Hakîkî ve mürekkeb cisimlerde kesîrü'l-hudûdlar: mazrûblarına tahlîl |  |
 | 12D10 | Polynomials in real and complex fields: location of zeros (algebraic theorems) {For the analytic theory, see 26C10, 30C15} | Hakîkî ve mürekkeb cisimlerde kesîrü'l-hudûdlar: sıfırların mahalleri (cebrî kaziyyeler) {Tahlîlî nazariye için bakınız: 26C10, 30C15} |  |
@@ -845,13 +845,13 @@ Commutative algebra
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 13-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to commutative algebra | tebdîlî cebir hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 13-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to commutative algebra | tebdîlî cebir hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 13-02 | Research exposition (monographs, survey articles) pertaining to commutative algebra | tebdîlî cebir hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 13-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to commutative algebra | Tebdîlî cebir hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 13-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to commutative algebra | Tebdîlî cebir hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 13-02 | Research exposition (monographs, survey articles) pertaining to commutative algebra | Tebdîlî cebir hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 13-03 | History of commutative algebra [Consider also classification numbers from Section 01] | Tebdîlî cebrin târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 13-04 | Software, source code, etc. for problems pertaining to commutative algebra | tebdîlî cebir sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 13-06 | Proceedings, conferences, collections, etc. pertaining to commutative algebra | tebdîlî cebir hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 13-11 | Research data for problems pertaining to commutative algebra | tebdîlî cebir sahasındaki meselelere dair tetkik verileri |  |
+| 13-04 | Software, source code, etc. for problems pertaining to commutative algebra | Tebdîlî cebir sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 13-06 | Proceedings, conferences, collections, etc. pertaining to commutative algebra | Tebdîlî cebir hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 13-11 | Research data for problems pertaining to commutative algebra | Tebdîlî cebir sahasındaki meselelere dair tetkik verileri |  |
 | **13Axx** | **General commutative ring theory** | **Umûmî tebdîlî halka nazariyesi** |  |
 | 13A02 | Graded rings [See also 16W50] | Müderrec (dereceli) halkalar [Ayrıca bakınız: 16W50] |  |
 | 13A05 | Divisibility and factorizations in commutative rings [See also 13F15] | Tebdîlî halkalarda kābiliyyet-i taksim ve mazrûblarına tahlîller [Ayrıca bakınız: 13F15] |  |
@@ -964,13 +964,13 @@ Algebraic geometry
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 14-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to algebraic geometry | hendese-i cebriyye hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 14-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to algebraic geometry | hendese-i cebriyye hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 14-02 | Research exposition (monographs, survey articles) pertaining to algebraic geometry | hendese-i cebriyye hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 14-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to algebraic geometry | Hendese-i cebriyye hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 14-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to algebraic geometry | Hendese-i cebriyye hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 14-02 | Research exposition (monographs, survey articles) pertaining to algebraic geometry | Hendese-i cebriyye hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 14-03 | History of algebraic geometry [Consider also classification numbers from Section 01] | Hendese-i cebriyyenin târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 14-04 | Software, source code, etc. for problems pertaining to algebraic geometry | hendese-i cebriyye sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 14-06 | Proceedings, conferences, collections, etc. pertaining to algebraic geometry | hendese-i cebriyye hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 14-11 | Research data for problems pertaining to algebraic geometry | hendese-i cebriyye sahasındaki meselelere dair tetkik verileri |  |
+| 14-04 | Software, source code, etc. for problems pertaining to algebraic geometry | Hendese-i cebriyye sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 14-06 | Proceedings, conferences, collections, etc. pertaining to algebraic geometry | Hendese-i cebriyye hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 14-11 | Research data for problems pertaining to algebraic geometry | Hendese-i cebriyye sahasındaki meselelere dair tetkik verileri |  |
 | **14Axx** | **Foundations of algebraic geometry** | **Hendese-i cebriyyenin esâsâtı** |  |
 | 14A05 | Relevant commutative algebra [See also 13-XX] | Alâkalı tebdîlî cebir [Ayrıca bakınız: 13-XX] |  |
 | 14A10 | Varieties and morphisms | Mütenevviât ve teşâküller |  |
@@ -1186,13 +1186,13 @@ Linear and multilinear algebra; matrix theory
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 15-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to linear algebra | hattî cebir hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 15-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to linear algebra | hattî cebir hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 15-02 | Research exposition (monographs, survey articles) pertaining to linear algebra | hattî cebir hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 15-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to linear algebra | Hattî cebir hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 15-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to linear algebra | Hattî cebir hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 15-02 | Research exposition (monographs, survey articles) pertaining to linear algebra | Hattî cebir hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 15-03 | History of linear algebra [Consider also classification numbers from Section 01] | Hattî cebrin târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 15-04 | Software, source code, etc. for problems pertaining to linear algebra | hattî cebir sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 15-06 | Proceedings, conferences, collections, etc. pertaining to linear algebra | hattî cebir hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 15-11 | Research data for problems pertaining to linear algebra | hattî cebir sahasındaki meselelere dair tetkik verileri |  |
+| 15-04 | Software, source code, etc. for problems pertaining to linear algebra | Hattî cebir sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 15-06 | Proceedings, conferences, collections, etc. pertaining to linear algebra | Hattî cebir hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 15-11 | Research data for problems pertaining to linear algebra | Hattî cebir sahasındaki meselelere dair tetkik verileri |  |
 | **15Axx** | **Basic linear algebra** | **Esas hattî cebir** |  |
 | 15A03 | Vector spaces, linear dependence, rank, lineability | Müteveccihe fezâları, hattî bağımlılık, rütbe, hattîleştirilebilirlik |  |
 | 15A04 | Linear transformations, semilinear transformations | Hattî tahvîller, nîm-hattî tahvîller |  |
@@ -1248,13 +1248,13 @@ Associative rings and algebras {For the commutative case, see 13-XX}
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 16-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to associative rings and algebras | tecmîî halkalar ve cebirler hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 16-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to associative rings and algebras | tecmîî halkalar ve cebirler hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 16-02 | Research exposition (monographs, survey articles) pertaining to associative rings and algebras | tecmîî halkalar ve cebirler hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 16-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to associative rings and algebras | Tecmîî halkalar ve cebirler hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 16-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to associative rings and algebras | Tecmîî halkalar ve cebirler hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 16-02 | Research exposition (monographs, survey articles) pertaining to associative rings and algebras | Tecmîî halkalar ve cebirler hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 16-03 | History of associative rings and algebras [Consider also classification numbers from Section 01] | Tecmîî halkaların ve cebirlerin târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 16-04 | Software, source code, etc. for problems pertaining to associative rings and algebras | tecmîî halkalar ve cebirler sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 16-06 | Proceedings, conferences, collections, etc. pertaining to associative rings and algebras | tecmîî halkalar ve cebirler hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 16-11 | Research data for problems pertaining to associative rings and algebras | tecmîî halkalar ve cebirler sahasındaki meselelere dair tetkik verileri |  |
+| 16-04 | Software, source code, etc. for problems pertaining to associative rings and algebras | Tecmîî halkalar ve cebirler sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 16-06 | Proceedings, conferences, collections, etc. pertaining to associative rings and algebras | Tecmîî halkalar ve cebirler hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 16-11 | Research data for problems pertaining to associative rings and algebras | Tecmîî halkalar ve cebirler sahasındaki meselelere dair tetkik verileri |  |
 | **16Bxx** | **General and miscellaneous** | **Umûmî ve muhtelif** |  |
 | 16B50 | Category-theoretic methods and results in associative algebras (except as in 16D90) [See also 18-XX] | Tecmîî cebirlerde makûlât nazariyesine ait usuller ve neticeler (16D90'dakiler hâriç) [Ayrıca bakınız: 18-XX] |  |
 | 16B70 | Applications of logic in associative algebras [See also 03Cxx] | Tecmîî cebirlerde mantığın tatbîkleri [Ayrıca bakınız: 03Cxx] |  |
@@ -1395,14 +1395,14 @@ Nonassociative rings and algebras
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 17-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to nonassociative rings and algebras | gayr-ı tecmîî halkalar ve cebirler hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 17-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to nonassociative rings and algebras | gayr-ı tecmîî halkalar ve cebirler hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 17-02 | Research exposition (monographs, survey articles) pertaining to nonassociative rings and algebras | gayr-ı tecmîî halkalar ve cebirler hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 17-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to nonassociative rings and algebras | Gayr-ı tecmîî halkalar ve cebirler hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 17-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to nonassociative rings and algebras | Gayr-ı tecmîî halkalar ve cebirler hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 17-02 | Research exposition (monographs, survey articles) pertaining to nonassociative rings and algebras | Gayr-ı tecmîî halkalar ve cebirler hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 17-03 | History of nonassociative rings and algebras [Consider also classification numbers from Section 01] | Gayr-ı tecmîî halkaların ve cebirlerin târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 17-04 | Software, source code, etc. for problems pertaining to nonassociative rings and algebras | gayr-ı tecmîî halkalar ve cebirler sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 17-06 | Proceedings, conferences, collections, etc. pertaining to nonassociative rings and algebras | gayr-ı tecmîî halkalar ve cebirler hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 17-08 | Computational methods for problems pertaining to nonassociative rings and algebras [See also 68W30] | gayr-ı tecmîî halkalar ve cebirler sahasındaki meselelere dair hesap usulleri [Ayrıca bakınız: 68W30] |  |
-| 17-11 | Research data for problems pertaining to nonassociative rings and algebras | gayr-ı tecmîî halkalar ve cebirler sahasındaki meselelere dair tetkik verileri |  |
+| 17-04 | Software, source code, etc. for problems pertaining to nonassociative rings and algebras | Gayr-ı tecmîî halkalar ve cebirler sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 17-06 | Proceedings, conferences, collections, etc. pertaining to nonassociative rings and algebras | Gayr-ı tecmîî halkalar ve cebirler hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 17-08 | Computational methods for problems pertaining to nonassociative rings and algebras [See also 68W30] | Gayr-ı tecmîî halkalar ve cebirler sahasındaki meselelere dair hesap usulleri [Ayrıca bakınız: 68W30] |  |
+| 17-11 | Research data for problems pertaining to nonassociative rings and algebras | Gayr-ı tecmîî halkalar ve cebirler sahasındaki meselelere dair tetkik verileri |  |
 | **17Axx** | **General nonassociative rings** | **Umûmî gayr-ı tecmîî halkalar** |  |
 | 17A01 | General theory of nonassociative rings and algebras | Gayr-ı tecmîî halkaların ve cebirlerin umûmî nazariyesi |  |
 | 17A05 | Power-associative rings | Kuvvetçe tecmîî halkalar |  |
@@ -1488,14 +1488,14 @@ Category theory; homological algebra {For commutative rings, see 13Dxx; for asso
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 18-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to category theory | makûlât nazariyesi hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 18-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to category theory | makûlât nazariyesi hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 18-02 | Research exposition (monographs, survey articles) pertaining to category theory | makûlât nazariyesi hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 18-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to category theory | Makûlât nazariyesi hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 18-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to category theory | Makûlât nazariyesi hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 18-02 | Research exposition (monographs, survey articles) pertaining to category theory | Makûlât nazariyesi hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 18-03 | History of category theory [Consider also classification numbers from Section 01] | Makûlât nazariyesinin târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 18-04 | Software, source code, etc. for problems pertaining to category theory | makûlât nazariyesi sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 18-06 | Proceedings, conferences, collections, etc. pertaining to category theory | makûlât nazariyesi hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 18-08 | Computational methods for problems pertaining to category theory | makûlât nazariyesi sahasındaki meselelere dair hesap usulleri |  |
-| 18-11 | Research data for problems pertaining to category theory | makûlât nazariyesi sahasındaki meselelere dair tetkik verileri |  |
+| 18-04 | Software, source code, etc. for problems pertaining to category theory | Makûlât nazariyesi sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 18-06 | Proceedings, conferences, collections, etc. pertaining to category theory | Makûlât nazariyesi hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 18-08 | Computational methods for problems pertaining to category theory | Makûlât nazariyesi sahasındaki meselelere dair hesap usulleri |  |
+| 18-11 | Research data for problems pertaining to category theory | Makûlât nazariyesi sahasındaki meselelere dair tetkik verileri |  |
 | **18Axx** | **General theory of categories and functors** | **Makûlelerin ve nâkillerin (funktorların) umûmî nazariyesi** |  |
 | 18A05 | Definitions and generalizations in theory of categories | Makûlât nazariyesinde ta'rîfler ve umûmîleştirmeler |  |
 | 18A10 | Graphs, diagram schemes, precategories | Rabıta şekilleri, şekil şemaları, makûle-öncesi bünyeler |  |
@@ -1704,14 +1704,14 @@ Group theory and generalizations
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 20-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to group theory | zümreler nazariyesi hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 20-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to group theory | zümreler nazariyesi hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 20-02 | Research exposition (monographs, survey articles) pertaining to group theory | zümreler nazariyesi hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 20-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to group theory | Zümreler nazariyesi hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 20-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to group theory | Zümreler nazariyesi hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 20-02 | Research exposition (monographs, survey articles) pertaining to group theory | Zümreler nazariyesi hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 20-03 | History of group theory [Consider also classification numbers from Section 01] | Zümreler nazariyesinin târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 20-04 | Software, source code, etc. for problems pertaining to group theory | zümreler nazariyesi sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 20-06 | Proceedings, conferences, collections, etc. pertaining to group theory | zümreler nazariyesi hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 20-08 | Computational methods for problems pertaining to group theory | zümreler nazariyesi sahasındaki meselelere dair hesap usulleri |  |
-| 20-11 | Research data for problems pertaining to group theory | zümreler nazariyesi sahasındaki meselelere dair tetkik verileri |  |
+| 20-04 | Software, source code, etc. for problems pertaining to group theory | Zümreler nazariyesi sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 20-06 | Proceedings, conferences, collections, etc. pertaining to group theory | Zümreler nazariyesi hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 20-08 | Computational methods for problems pertaining to group theory | Zümreler nazariyesi sahasındaki meselelere dair hesap usulleri |  |
+| 20-11 | Research data for problems pertaining to group theory | Zümreler nazariyesi sahasındaki meselelere dair tetkik verileri |  |
 | **20Axx** | **Foundations** | **Esâsât** |  |
 | 20A05 | Axiomatics and elementary properties of groups | Zümrelerin mütearifevî bünyesi ve ibtidâî hâsiyetleri |  |
 | 20A10 | Metamathematical considerations in group theory {For word problems, see 20F10} | Zümreler nazariyesinde mâ-ba'de'r-riyâziyâta ait mülâhazalar {Kelime meseleleri için bakınız: 20F10} |  |
@@ -1888,14 +1888,14 @@ Topological groups, Lie groups {For transformation groups, see 54H15, 57Sxx, 58-
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 22-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to topological groups | vaz'î zümreler hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 22-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to topological groups | vaz'î zümreler hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 22-02 | Research exposition (monographs, survey articles) pertaining to topological groups | vaz'î zümreler hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 22-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to topological groups | Vaz'î zümreler hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 22-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to topological groups | Vaz'î zümreler hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 22-02 | Research exposition (monographs, survey articles) pertaining to topological groups | Vaz'î zümreler hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 22-03 | History of topological groups [Consider also classification numbers from Section 01] | Vaz'î zümrelerin târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 22-04 | Software, source code, etc. for problems pertaining to topological groups | vaz'î zümreler sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 22-06 | Proceedings, conferences, collections, etc. pertaining to topological groups | vaz'î zümreler hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 22-08 | Computational methods for problems pertaining to topological groups | vaz'î zümreler sahasındaki meselelere dair hesap usulleri |  |
-| 22-11 | Research data for problems pertaining to topological groups | vaz'î zümreler sahasındaki meselelere dair tetkik verileri |  |
+| 22-04 | Software, source code, etc. for problems pertaining to topological groups | Vaz'î zümreler sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 22-06 | Proceedings, conferences, collections, etc. pertaining to topological groups | Vaz'î zümreler hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 22-08 | Computational methods for problems pertaining to topological groups | Vaz'î zümreler sahasındaki meselelere dair hesap usulleri |  |
+| 22-11 | Research data for problems pertaining to topological groups | Vaz'î zümreler sahasındaki meselelere dair tetkik verileri |  |
 | **22Axx** | **Topological and differentiable algebraic systems {For topological rings and fields, see 12Jxx, 13Jxx, 16W80}** | **Vaz'î ve kābil-i tefâzul cebrî nizâmlar {Vaz'î halkalar ve cisimler için bakınız: 12Jxx, 13Jxx, 16W80}** |  |
 | 22A05 | Structure of general topological groups | Umûmî vaz'î zümrelerin bünyesi |  |
 | 22A10 | Analysis on general topological groups | Umûmî vaz'î zümreler üzerinde tahlîl |  |
@@ -1964,14 +1964,14 @@ Real functions [See also 54C30]
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 26-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to real functions | hakîkî tâbiler hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 26-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to real functions | hakîkî tâbiler hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 26-02 | Research exposition (monographs, survey articles) pertaining to real functions | hakîkî tâbiler hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 26-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to real functions | Hakîkî tâbiler hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 26-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to real functions | Hakîkî tâbiler hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 26-02 | Research exposition (monographs, survey articles) pertaining to real functions | Hakîkî tâbiler hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 26-03 | History of real functions [Consider also classification numbers from Section 01] | Hakîkî tâbilerin târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 26-04 | Software, source code, etc. for problems pertaining to real functions | hakîkî tâbiler sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 26-06 | Proceedings, conferences, collections, etc. pertaining to real functions | hakîkî tâbiler hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 26-08 | Computational methods for problems pertaining to real functions | hakîkî tâbiler sahasındaki meselelere dair hesap usulleri |  |
-| 26-11 | Research data for problems pertaining to real functions | hakîkî tâbiler sahasındaki meselelere dair tetkik verileri |  |
+| 26-04 | Software, source code, etc. for problems pertaining to real functions | Hakîkî tâbiler sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 26-06 | Proceedings, conferences, collections, etc. pertaining to real functions | Hakîkî tâbiler hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 26-08 | Computational methods for problems pertaining to real functions | Hakîkî tâbiler sahasındaki meselelere dair hesap usulleri |  |
+| 26-11 | Research data for problems pertaining to real functions | Hakîkî tâbiler sahasındaki meselelere dair tetkik verileri |  |
 | **26Axx** | **Functions of one variable** | **Tek mütehavvilli tâbiler** |  |
 | 26A03 | Foundations: limits and generalizations, elementary topology of the line | Esâsât: nihâyetler ve umûmîleştirmeleri, hattın ibtidâî hendese-i vaz'iyyesi |  |
 | 26A06 | One-variable calculus | Tek mütehavvilli tefâzul ve tamâm hesabı |  |
@@ -2036,14 +2036,14 @@ Measure and integration {For analysis on manifolds, see 58-XX}
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 28-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to measure and integration | mikyâs ve tamâmlama hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 28-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to measure and integration | mikyâs ve tamâmlama hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 28-02 | Research exposition (monographs, survey articles) pertaining to measure and integration | mikyâs ve tamâmlama hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 28-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to measure and integration | Mikyâs ve tamâmlama hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 28-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to measure and integration | Mikyâs ve tamâmlama hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 28-02 | Research exposition (monographs, survey articles) pertaining to measure and integration | Mikyâs ve tamâmlama hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 28-03 | History of measure and integration [Consider also classification numbers from Section 01] | Mikyâs ve tamâmlamanın târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 28-04 | Software, source code, etc. for problems pertaining to measure and integration | mikyâs ve tamâmlama sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 28-06 | Proceedings, conferences, collections, etc. pertaining to measure and integration | mikyâs ve tamâmlama hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 28-08 | Computational methods for problems pertaining to measure and integration | mikyâs ve tamâmlama sahasındaki meselelere dair hesap usulleri |  |
-| 28-11 | Research data for problems pertaining to measure and integration | mikyâs ve tamâmlama sahasındaki meselelere dair tetkik verileri |  |
+| 28-04 | Software, source code, etc. for problems pertaining to measure and integration | Mikyâs ve tamâmlama sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 28-06 | Proceedings, conferences, collections, etc. pertaining to measure and integration | Mikyâs ve tamâmlama hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 28-08 | Computational methods for problems pertaining to measure and integration | Mikyâs ve tamâmlama sahasındaki meselelere dair hesap usulleri |  |
+| 28-11 | Research data for problems pertaining to measure and integration | Mikyâs ve tamâmlama sahasındaki meselelere dair tetkik verileri |  |
 | **28Axx** | **Classical measure theory** | **Klasik mikyâs nazariyesi** |  |
 | 28A05 | Classes of sets (Borel fields, σ-rings, etc.), measurable sets, Suslin sets, analytic sets [See also 03E15, 26A21, 54H05] | Mecmûa sınıfları (Borel cisimleri, σ-halkaları ve emsâli), kābil-i mikyâs mecmûalar, Suslin mecmûaları, tahlîlî mecmûalar [Ayrıca bakınız: 03E15, 26A21, 54H05] |  |
 | 28A10 | Real- or complex-valued set functions | Hakîkî yahut mürekkeb kıymetli mecmûa tâbileri |  |
@@ -2090,14 +2090,14 @@ Functions of a complex variable
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 30-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to functions of a complex variable | mürekkeb mütehavvilli tâbiler hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 30-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to functions of a complex variable | mürekkeb mütehavvilli tâbiler hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 30-02 | Research exposition (monographs, survey articles) pertaining to functions of a complex variable | mürekkeb mütehavvilli tâbiler hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 30-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to functions of a complex variable | Mürekkeb mütehavvilli tâbiler hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 30-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to functions of a complex variable | Mürekkeb mütehavvilli tâbiler hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 30-02 | Research exposition (monographs, survey articles) pertaining to functions of a complex variable | Mürekkeb mütehavvilli tâbiler hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 30-03 | History of functions of a complex variable [Consider also classification numbers from Section 01] | Mürekkeb mütehavvilli tâbilerin târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 30-04 | Software, source code, etc. for problems pertaining to functions of a complex variable | mürekkeb mütehavvilli tâbiler sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 30-06 | Proceedings, conferences, collections, etc. pertaining to functions of a complex variable | mürekkeb mütehavvilli tâbiler hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 30-08 | Computational methods for problems pertaining to functions of a complex variable [See also 65Exx] | mürekkeb mütehavvilli tâbiler sahasındaki meselelere dair hesap usulleri [Ayrıca bakınız: 65Exx] |  |
-| 30-11 | Research data for problems pertaining to functions of a complex variable | mürekkeb mütehavvilli tâbiler sahasındaki meselelere dair tetkik verileri |  |
+| 30-04 | Software, source code, etc. for problems pertaining to functions of a complex variable | Mürekkeb mütehavvilli tâbiler sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 30-06 | Proceedings, conferences, collections, etc. pertaining to functions of a complex variable | Mürekkeb mütehavvilli tâbiler hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 30-08 | Computational methods for problems pertaining to functions of a complex variable [See also 65Exx] | Mürekkeb mütehavvilli tâbiler sahasındaki meselelere dair hesap usulleri [Ayrıca bakınız: 65Exx] |  |
+| 30-11 | Research data for problems pertaining to functions of a complex variable | Mürekkeb mütehavvilli tâbiler sahasındaki meselelere dair tetkik verileri |  |
 | **30Axx** | **General properties of functions of one complex variable** | **Tek mürekkeb mütehavvilli tâbilerin umûmî hâsiyetleri** |  |
 | 30A05 | Monogenic and polygenic functions of one complex variable | Tek mürekkeb mütehavvilli tek-müvellidli ve çok-müvellidli tâbiler |  |
 | 30A10 | Inequalities in the complex plane | Mürekkeb müstevîde adem-i müsâvâtlar |  |
@@ -2203,14 +2203,14 @@ Potential theory {For probabilistic potential theory, see 60J45}
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 31-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to potential theory | kuvve (potansiyel) nazariyesi hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 31-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to potential theory | kuvve (potansiyel) nazariyesi hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 31-02 | Research exposition (monographs, survey articles) pertaining to potential theory | kuvve (potansiyel) nazariyesi hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 31-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to potential theory | Kuvve (potansiyel) nazariyesi hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 31-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to potential theory | Kuvve (potansiyel) nazariyesi hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 31-02 | Research exposition (monographs, survey articles) pertaining to potential theory | Kuvve (potansiyel) nazariyesi hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 31-03 | History of potential theory [Consider also classification numbers from Section 01] | Kuvve nazariyesinin târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 31-04 | Software, source code, etc. for problems pertaining to potential theory | kuvve (potansiyel) nazariyesi sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 31-06 | Proceedings, conferences, collections, etc. pertaining to potential theory | kuvve (potansiyel) nazariyesi hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 31-08 | Computational methods for problems pertaining to potential theory [See also 65Exx] | kuvve (potansiyel) nazariyesi sahasındaki meselelere dair hesap usulleri [Ayrıca bakınız: 65Exx] |  |
-| 31-11 | Research data for problems pertaining to potential theory | kuvve (potansiyel) nazariyesi sahasındaki meselelere dair tetkik verileri |  |
+| 31-04 | Software, source code, etc. for problems pertaining to potential theory | Kuvve (potansiyel) nazariyesi sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 31-06 | Proceedings, conferences, collections, etc. pertaining to potential theory | Kuvve (potansiyel) nazariyesi hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 31-08 | Computational methods for problems pertaining to potential theory [See also 65Exx] | Kuvve (potansiyel) nazariyesi sahasındaki meselelere dair hesap usulleri [Ayrıca bakınız: 65Exx] |  |
+| 31-11 | Research data for problems pertaining to potential theory | Kuvve (potansiyel) nazariyesi sahasındaki meselelere dair tetkik verileri |  |
 | **31Axx** | **Two-dimensional potential theory** | **İki buudlu kuvve nazariyesi** |  |
 | 31A05 | Harmonic, subharmonic, superharmonic functions in two dimensions | İki buudda te'lîfî, tahte'l-te'lîfî, fevka'l-te'lîfî (harmonik, alt-harmonik, üst-harmonik) tâbiler |  |
 | 31A10 | Integral representations, integral operators, integral equations methods in two dimensions | İki buudda tamâmî temsiller, tamâmî âmiller, tamâmî muâdele usulleri |  |
@@ -2253,14 +2253,14 @@ Several complex variables and analytic spaces {For infinite-dimensional holomorp
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 32-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to several complex variables and analytic spaces | çok mürekkeb mütehavvil ve tahlîlî fezâlar hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 32-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to several complex variables and analytic spaces | çok mürekkeb mütehavvil ve tahlîlî fezâlar hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 32-02 | Research exposition (monographs, survey articles) pertaining to several complex variables and analytic spaces | çok mürekkeb mütehavvil ve tahlîlî fezâlar hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 32-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to several complex variables and analytic spaces | Çok mürekkeb mütehavvil ve tahlîlî fezâlar hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 32-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to several complex variables and analytic spaces | Çok mürekkeb mütehavvil ve tahlîlî fezâlar hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 32-02 | Research exposition (monographs, survey articles) pertaining to several complex variables and analytic spaces | Çok mürekkeb mütehavvil ve tahlîlî fezâlar hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 32-03 | History of several complex variables and analytic spaces [Consider also classification numbers from Section 01] | Çok mürekkeb mütehavvil ve tahlîlî fezâların târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 32-04 | Software, source code, etc. for problems pertaining to several complex variables and analytic spaces | çok mürekkeb mütehavvil ve tahlîlî fezâlar sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 32-06 | Proceedings, conferences, collections, etc. pertaining to several complex variables and analytic spaces | çok mürekkeb mütehavvil ve tahlîlî fezâlar hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 32-08 | Computational methods for problems pertaining to several complex variables and analytic spaces [See also 65Exx] | çok mürekkeb mütehavvil ve tahlîlî fezâlar sahasındaki meselelere dair hesap usulleri [Ayrıca bakınız: 65Exx] |  |
-| 32-11 | Research data for problems pertaining to several complex variables and analytic spaces | çok mürekkeb mütehavvil ve tahlîlî fezâlar sahasındaki meselelere dair tetkik verileri |  |
+| 32-04 | Software, source code, etc. for problems pertaining to several complex variables and analytic spaces | Çok mürekkeb mütehavvil ve tahlîlî fezâlar sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 32-06 | Proceedings, conferences, collections, etc. pertaining to several complex variables and analytic spaces | Çok mürekkeb mütehavvil ve tahlîlî fezâlar hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 32-08 | Computational methods for problems pertaining to several complex variables and analytic spaces [See also 65Exx] | Çok mürekkeb mütehavvil ve tahlîlî fezâlar sahasındaki meselelere dair hesap usulleri [Ayrıca bakınız: 65Exx] |  |
+| 32-11 | Research data for problems pertaining to several complex variables and analytic spaces | Çok mürekkeb mütehavvil ve tahlîlî fezâlar sahasındaki meselelere dair tetkik verileri |  |
 | **32Axx** | **Holomorphic functions of several complex variables** | **Çok mürekkeb mütehavvilli tâm-şekilli (holomorf) tâbiler** |  |
 | 32A05 | Power series, series of functions of several complex variables | Çok mürekkeb mütehavvilli kuvvet silsileleri, tâbi silsileleri |  |
 | 32A08 | Polynomials and rational functions of several complex variables | Çok mürekkeb mütehavvilli kesîrü'l-hudûdlar ve muntak tâbiler |  |
@@ -2478,13 +2478,13 @@ Special functions (33-XX deals with the properties of functions as functions) {F
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 33-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to special functions | hususî tâbiler hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 33-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to special functions | hususî tâbiler hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 33-02 | Research exposition (monographs, survey articles) pertaining to special functions | hususî tâbiler hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 33-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to special functions | Hususî tâbiler hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 33-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to special functions | Hususî tâbiler hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 33-02 | Research exposition (monographs, survey articles) pertaining to special functions | Hususî tâbiler hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 33-03 | History of special functions [Consider also classification numbers from Section 01] | Hususî tâbilerin târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 33-04 | Software, source code, etc. for problems pertaining to special functions | hususî tâbiler sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 33-06 | Proceedings, conferences, collections, etc. pertaining to special functions | hususî tâbiler hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 33-11 | Research data for problems pertaining to special functions | hususî tâbiler sahasındaki meselelere dair tetkik verileri |  |
+| 33-04 | Software, source code, etc. for problems pertaining to special functions | Hususî tâbiler sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 33-06 | Proceedings, conferences, collections, etc. pertaining to special functions | Hususî tâbiler hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 33-11 | Research data for problems pertaining to special functions | Hususî tâbiler sahasındaki meselelere dair tetkik verileri |  |
 | **33Bxx** | **Elementary classical functions** | **İbtidâî klasik tâbiler** |  |
 | 33B10 | Exponential and trigonometric functions | Üssî ve müsellesâtî tâbiler |  |
 | 33B15 | Gamma, beta and polygamma functions | Gama, beta ve kesîrü'l-gama tâbileri |  |
@@ -2731,13 +2731,13 @@ Partial differential equations
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 35-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to partial differential equations | kısmî tefâzulî muâdeleler hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 35-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to partial differential equations | kısmî tefâzulî muâdeleler hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 35-02 | Research exposition (monographs, survey articles) pertaining to partial differential equations | kısmî tefâzulî muâdeleler hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 35-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to partial differential equations | Kısmî tefâzulî muâdeleler hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 35-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to partial differential equations | Kısmî tefâzulî muâdeleler hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 35-02 | Research exposition (monographs, survey articles) pertaining to partial differential equations | Kısmî tefâzulî muâdeleler hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 35-03 | History of partial differential equations [Consider also classification numbers from Section 01] | Kısmî tefâzulî muâdelelerin târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 35-04 | Software, source code, etc. for problems pertaining to partial differential equations | kısmî tefâzulî muâdeleler sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 35-06 | Proceedings, conferences, collections, etc. pertaining to partial differential equations | kısmî tefâzulî muâdeleler hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 35-11 | Research data for problems pertaining to partial differential equations | kısmî tefâzulî muâdeleler sahasındaki meselelere dair tetkik verileri |  |
+| 35-04 | Software, source code, etc. for problems pertaining to partial differential equations | Kısmî tefâzulî muâdeleler sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 35-06 | Proceedings, conferences, collections, etc. pertaining to partial differential equations | Kısmî tefâzulî muâdeleler hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 35-11 | Research data for problems pertaining to partial differential equations | Kısmî tefâzulî muâdeleler sahasındaki meselelere dair tetkik verileri |  |
 | **35Axx** | **General topics in partial differential equations** | **Kısmî tefâzulî muâdeleler hakkında umûmî mevzûlar** |  |
 | 35A01 | Existence problems for PDEs: global existence, local existence, non-existence | Kısmî tefâzulî muâdelelerde vücûd meseleleri: küllî vücûd, mahallî vücûd, adem-i vücûd |  |
 | 35A02 | Uniqueness problems for PDEs: global uniqueness, local uniqueness, non-uniqueness | Kısmî tefâzulî muâdelelerde vahdet (teklik) meseleleri: küllî vahdet, mahallî vahdet, adem-i vahdet |  |
@@ -3060,13 +3060,13 @@ Dynamical systems and ergodic theory [See also 26A18, 28Dxx, 34Cxx, 34Dxx, 35Bxx
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 37-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to dynamical systems and ergodic theory | harekî nizâmlar ve ergodik nazariye hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 37-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to dynamical systems and ergodic theory | harekî nizâmlar ve ergodik nazariye hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 37-02 | Research exposition (monographs, survey articles) pertaining to dynamical systems and ergodic theory | harekî nizâmlar ve ergodik nazariye hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 37-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to dynamical systems and ergodic theory | Harekî nizâmlar ve ergodik nazariye hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 37-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to dynamical systems and ergodic theory | Harekî nizâmlar ve ergodik nazariye hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 37-02 | Research exposition (monographs, survey articles) pertaining to dynamical systems and ergodic theory | Harekî nizâmlar ve ergodik nazariye hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 37-03 | History of dynamical systems and ergodic theory [Consider also classification numbers from Section 01] | Harekî nizâmlar ve ergodik nazariyenin târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 37-04 | Software, source code, etc. for problems pertaining to dynamical systems and ergodic theory | harekî nizâmlar ve ergodik nazariye sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 37-06 | Proceedings, conferences, collections, etc. pertaining to dynamical systems and ergodic theory | harekî nizâmlar ve ergodik nazariye hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 37-11 | Research data for problems pertaining to dynamical systems and ergodic theory | harekî nizâmlar ve ergodik nazariye sahasındaki meselelere dair tetkik verileri |  |
+| 37-04 | Software, source code, etc. for problems pertaining to dynamical systems and ergodic theory | Harekî nizâmlar ve ergodik nazariye sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 37-06 | Proceedings, conferences, collections, etc. pertaining to dynamical systems and ergodic theory | Harekî nizâmlar ve ergodik nazariye hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 37-11 | Research data for problems pertaining to dynamical systems and ergodic theory | Harekî nizâmlar ve ergodik nazariye sahasındaki meselelere dair tetkik verileri |  |
 | **37Axx** | **Ergodic theory [See also 28Dxx]** | **Ergodik nazariye [Ayrıca bakınız: 28Dxx]** | nakil |
 | 37A05 | Dynamical aspects of measure-preserving transformations | Mikyâsı hıfzeden tahvîllerin harekî cihetleri |  |
 | 37A10 | Dynamical systems involving one-parameter continuous families of measure-preserving transformations | Mikyâsı hıfzeden tahvîllerin tek vasîtlı muttasıl âilelerini ihtivâ eden harekî nizâmlar |  |
@@ -3269,14 +3269,14 @@ Difference and functional equations
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 39-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to difference and functional equations | fark muâdeleleri ve tâbiî muâdeleler hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 39-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to difference and functional equations | fark muâdeleleri ve tâbiî muâdeleler hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 39-02 | Research exposition (monographs, survey articles) pertaining to difference and functional equations | fark muâdeleleri ve tâbiî muâdeleler hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 39-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to difference and functional equations | Fark muâdeleleri ve tâbiî muâdeleler hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 39-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to difference and functional equations | Fark muâdeleleri ve tâbiî muâdeleler hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 39-02 | Research exposition (monographs, survey articles) pertaining to difference and functional equations | Fark muâdeleleri ve tâbiî muâdeleler hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 39-03 | History of difference and functional equations [Consider also classification numbers from Section 01] | Fark muâdelelerinin ve tâbiî muâdelelerin târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 39-04 | Software, source code, etc. for problems pertaining to difference and functional equations | fark muâdeleleri ve tâbiî muâdeleler sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 39-06 | Proceedings, conferences, collections, etc. pertaining to difference and functional equations | fark muâdeleleri ve tâbiî muâdeleler hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 39-08 | Computational methods for problems pertaining to difference and functional equations | fark muâdeleleri ve tâbiî muâdeleler sahasındaki meselelere dair hesap usulleri |  |
-| 39-11 | Research data for problems pertaining to difference and functional equations | fark muâdeleleri ve tâbiî muâdeleler sahasındaki meselelere dair tetkik verileri |  |
+| 39-04 | Software, source code, etc. for problems pertaining to difference and functional equations | Fark muâdeleleri ve tâbiî muâdeleler sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 39-06 | Proceedings, conferences, collections, etc. pertaining to difference and functional equations | Fark muâdeleleri ve tâbiî muâdeleler hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 39-08 | Computational methods for problems pertaining to difference and functional equations | Fark muâdeleleri ve tâbiî muâdeleler sahasındaki meselelere dair hesap usulleri |  |
+| 39-11 | Research data for problems pertaining to difference and functional equations | Fark muâdeleleri ve tâbiî muâdeleler sahasındaki meselelere dair tetkik verileri |  |
 | **39Axx** | **Difference equations {For dynamic equations on time scales, see 34N05; for dynamical systems, see 37-XX}** | **Fark muâdeleleri {Zaman cetvelleri üzerindeki harekî muâdeleler için bakınız: 34N05; harekî nizâmlar için bakınız: 37-XX}** |  |
 | 39A05 | General theory of difference equations | Fark muâdelelerinin umûmî nazariyesi |  |
 | 39A06 | Linear difference equations | Hattî fark muâdeleleri |  |
@@ -3319,14 +3319,14 @@ Sequences, series, summability
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 40-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to sequences, series, summability | tevâlîler, silsileler, cem' kābiliyeti hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 40-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to sequences, series, summability | tevâlîler, silsileler, cem' kābiliyeti hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 40-02 | Research exposition (monographs, survey articles) pertaining to sequences, series, summability | tevâlîler, silsileler, cem' kābiliyeti hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 40-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to sequences, series, summability | Tevâlîler, silsileler, cem' kābiliyeti hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 40-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to sequences, series, summability | Tevâlîler, silsileler, cem' kābiliyeti hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 40-02 | Research exposition (monographs, survey articles) pertaining to sequences, series, summability | Tevâlîler, silsileler, cem' kābiliyeti hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 40-03 | History of sequences, series, summability [Consider also classification numbers from Section 01] | Tevâlîlerin, silsilelerin ve cem' kābiliyetinin târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 40-04 | Software, source code, etc. for problems pertaining to sequences, series, summability | tevâlîler, silsileler, cem' kābiliyeti sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 40-06 | Proceedings, conferences, collections, etc. pertaining to sequences, series, summability | tevâlîler, silsileler, cem' kābiliyeti hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 40-08 | Computational methods for problems pertaining to sequences, series, summability | tevâlîler, silsileler, cem' kābiliyeti sahasındaki meselelere dair hesap usulleri |  |
-| 40-11 | Research data for problems pertaining to sequences, series, summability | tevâlîler, silsileler, cem' kābiliyeti sahasındaki meselelere dair tetkik verileri |  |
+| 40-04 | Software, source code, etc. for problems pertaining to sequences, series, summability | Tevâlîler, silsileler, cem' kābiliyeti sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 40-06 | Proceedings, conferences, collections, etc. pertaining to sequences, series, summability | Tevâlîler, silsileler, cem' kābiliyeti hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 40-08 | Computational methods for problems pertaining to sequences, series, summability | Tevâlîler, silsileler, cem' kābiliyeti sahasındaki meselelere dair hesap usulleri |  |
+| 40-11 | Research data for problems pertaining to sequences, series, summability | Tevâlîler, silsileler, cem' kābiliyeti sahasındaki meselelere dair tetkik verileri |  |
 | **40Axx** | **Convergence and divergence of infinite limiting processes** | **Gayr-ı mütenâhî nihâyet cereyanlarının tekārübü ve tebâüdü** |  |
 | 40A05 | Convergence and divergence of series and sequences | Silsilelerin ve tevâlîlerin tekārübü ve tebâüdü |  |
 | 40A10 | Convergence and divergence of integrals | Tamâmîlerin tekārübü ve tebâüdü |  |
@@ -3379,13 +3379,13 @@ Approximations and expansions {For approximation theory in the complex domain, s
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 41-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to approximations and expansions | takrîbler ve açılımlar hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 41-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to approximations and expansions | takrîbler ve açılımlar hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 41-02 | Research exposition (monographs, survey articles) pertaining to approximations and expansions | takrîbler ve açılımlar hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 41-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to approximations and expansions | Takrîbler ve açılımlar hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 41-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to approximations and expansions | Takrîbler ve açılımlar hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 41-02 | Research exposition (monographs, survey articles) pertaining to approximations and expansions | Takrîbler ve açılımlar hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 41-03 | History of approximations and expansions [Consider also classification numbers from Section 01] | Takrîblerin ve açılımların târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 41-04 | Software, source code, etc. for problems pertaining to approximations and expansions | takrîbler ve açılımlar sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 41-06 | Proceedings, conferences, collections, etc. pertaining to approximations and expansions | takrîbler ve açılımlar hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 41-11 | Research data for problems pertaining to approximations and expansions | takrîbler ve açılımlar sahasındaki meselelere dair tetkik verileri |  |
+| 41-04 | Software, source code, etc. for problems pertaining to approximations and expansions | Takrîbler ve açılımlar sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 41-06 | Proceedings, conferences, collections, etc. pertaining to approximations and expansions | Takrîbler ve açılımlar hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 41-11 | Research data for problems pertaining to approximations and expansions | Takrîbler ve açılımlar sahasındaki meselelere dair tetkik verileri |  |
 | **41Axx** | **Approximations and expansions {For approximation theory in the complex domain, see 30E05, 30E10; for trigonometric approximation and interpolation, see 42A10, 42A15; for numerical approximation, see 65Dxx}** | **Takrîbler ve açılımlar {Mürekkeb sahada takrîb nazariyesi için bakınız: 30E05, 30E10; müsellesâtî takrîb ve dâhilî tahmîn için bakınız: 42A10, 42A15; adedî takrîb için bakınız: 65Dxx}** |  |
 | 41A05 | Interpolation in approximation theory [See also 42A15, 65D05] | Takrîb nazariyesinde dâhilî tahmîn (enterpolasyon) [Ayrıca bakınız: 42A15, 65D05] |  |
 | 41A10 | Approximation by polynomials {For approximation by trigonometric polynomials, see 42A10} | Kesîrü'l-hudûdlarla takrîb {Müsellesâtî kesîrü'l-hudûdlarla takrîb için bakınız: 42A10} |  |
@@ -3476,14 +3476,14 @@ Abstract harmonic analysis {For other analysis on topological and Lie groups, se
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 43-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to abstract harmonic analysis | mücerred te'lîfî tahlîl hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 43-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to abstract harmonic analysis | mücerred te'lîfî tahlîl hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 43-02 | Research exposition (monographs, survey articles) pertaining to abstract harmonic analysis | mücerred te'lîfî tahlîl hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 43-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to abstract harmonic analysis | Mücerred te'lîfî tahlîl hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 43-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to abstract harmonic analysis | Mücerred te'lîfî tahlîl hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 43-02 | Research exposition (monographs, survey articles) pertaining to abstract harmonic analysis | Mücerred te'lîfî tahlîl hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 43-03 | History of abstract harmonic analysis [Consider also classification numbers from Section 01] | Mücerred te'lîfî tahlîlin târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 43-04 | Software, source code, etc. for problems pertaining to abstract harmonic analysis | mücerred te'lîfî tahlîl sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 43-06 | Proceedings, conferences, collections, etc. pertaining to abstract harmonic analysis | mücerred te'lîfî tahlîl hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 43-08 | Computational methods for problems pertaining to abstract harmonic analysis | mücerred te'lîfî tahlîl sahasındaki meselelere dair hesap usulleri |  |
-| 43-11 | Research data for problems pertaining to abstract harmonic analysis | mücerred te'lîfî tahlîl sahasındaki meselelere dair tetkik verileri |  |
+| 43-04 | Software, source code, etc. for problems pertaining to abstract harmonic analysis | Mücerred te'lîfî tahlîl sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 43-06 | Proceedings, conferences, collections, etc. pertaining to abstract harmonic analysis | Mücerred te'lîfî tahlîl hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 43-08 | Computational methods for problems pertaining to abstract harmonic analysis | Mücerred te'lîfî tahlîl sahasındaki meselelere dair hesap usulleri |  |
+| 43-11 | Research data for problems pertaining to abstract harmonic analysis | Mücerred te'lîfî tahlîl sahasındaki meselelere dair tetkik verileri |  |
 | **43Axx** | **Abstract harmonic analysis {For other analysis on topological and Lie groups, see 22Exx}** | **Mücerred te'lîfî tahlîl {Vaz'î zümreler ve Lie zümreleri üzerindeki sâir tahlîl için bakınız: 22Exx}** |  |
 | 43A05 | Measures on groups and semigroups, etc. | Zümreler, nîm-zümreler ve emsâli üzerinde mikyâslar |  |
 | 43A07 | Means on groups, semigroups, etc.; amenable groups | Zümreler, nîm-zümreler ve emsâli üzerinde vasatlar; müsâid (amenable) zümreler | şüpheli: "amenable" için "müsâid" teklif edildi |
@@ -3519,13 +3519,13 @@ Integral transforms, operational calculus {For fractional derivatives and integr
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 44-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to integral transforms | tamâmî tahvîller ve ameliyat hesabı hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 44-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to integral transforms | tamâmî tahvîller ve ameliyat hesabı hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 44-02 | Research exposition (monographs, survey articles) pertaining to integral transforms | tamâmî tahvîller ve ameliyat hesabı hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 44-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to integral transforms | Tamâmî tahvîller ve ameliyat hesabı hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 44-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to integral transforms | Tamâmî tahvîller ve ameliyat hesabı hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 44-02 | Research exposition (monographs, survey articles) pertaining to integral transforms | Tamâmî tahvîller ve ameliyat hesabı hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 44-03 | History of integral transforms [Consider also classification numbers from Section 01] | Tamâmî tahvîllerin târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 44-04 | Software, source code, etc. for problems pertaining to integral transforms | tamâmî tahvîller ve ameliyat hesabı sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 44-06 | Proceedings, conferences, collections, etc. pertaining to integral transforms | tamâmî tahvîller ve ameliyat hesabı hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 44-11 | Research data for problems pertaining to integral transforms | tamâmî tahvîller ve ameliyat hesabı sahasındaki meselelere dair tetkik verileri |  |
+| 44-04 | Software, source code, etc. for problems pertaining to integral transforms | Tamâmî tahvîller ve ameliyat hesabı sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 44-06 | Proceedings, conferences, collections, etc. pertaining to integral transforms | Tamâmî tahvîller ve ameliyat hesabı hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 44-11 | Research data for problems pertaining to integral transforms | Tamâmî tahvîller ve ameliyat hesabı sahasındaki meselelere dair tetkik verileri |  |
 | **44Axx** | **Integral transforms, operational calculus {For fractional derivatives and integrals, see 26A33; for Fourier transforms, see 42A38, 42B10; for integral transforms in distribution spaces, see 46F12; for numerical methods, see 65R10}** | **Tamâmî tahvîller, ameliyat hesabı {Kesrî müştaklar ve tamâmîler için bakınız: 26A33; Fourier tahvîlleri için bakınız: 42A38, 42B10; tevzî' fezâlarında tamâmî tahvîller için bakınız: 46F12; adedî usuller için bakınız: 65R10}** |  |
 | 44A05 | General integral transforms [See also 42A38] | Umûmî tamâmî tahvîller [Ayrıca bakınız: 42A38] |  |
 | 44A10 | Laplace transform | Laplace tahvîli | nakil |
@@ -3546,13 +3546,13 @@ Integral equations
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 45-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to integral equations | tamâmî muâdeleler hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 45-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to integral equations | tamâmî muâdeleler hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 45-02 | Research exposition (monographs, survey articles) pertaining to integral equations | tamâmî muâdeleler hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 45-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to integral equations | Tamâmî muâdeleler hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 45-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to integral equations | Tamâmî muâdeleler hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 45-02 | Research exposition (monographs, survey articles) pertaining to integral equations | Tamâmî muâdeleler hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 45-03 | History of integral equations [Consider also classification numbers from Section 01] | Tamâmî muâdelelerin târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 45-04 | Software, source code, etc. for problems pertaining to integral equations | tamâmî muâdeleler sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 45-06 | Proceedings, conferences, collections, etc. pertaining to integral equations | tamâmî muâdeleler hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 45-11 | Research data for problems pertaining to integral equations | tamâmî muâdeleler sahasındaki meselelere dair tetkik verileri |  |
+| 45-04 | Software, source code, etc. for problems pertaining to integral equations | Tamâmî muâdeleler sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 45-06 | Proceedings, conferences, collections, etc. pertaining to integral equations | Tamâmî muâdeleler hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 45-11 | Research data for problems pertaining to integral equations | Tamâmî muâdeleler sahasındaki meselelere dair tetkik verileri |  |
 | **45Axx** | **Linear integral equations** | **Hattî tamâmî muâdeleler** |  |
 | 45A05 | Linear integral equations | Hattî tamâmî muâdeleler |  |
 | 45A99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
@@ -3616,14 +3616,14 @@ Functional analysis {For manifolds modeled on topological linear spaces, see 57N
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 46-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to functional analysis | tâbiî tahlîl hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 46-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to functional analysis | tâbiî tahlîl hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 46-02 | Research exposition (monographs, survey articles) pertaining to functional analysis | tâbiî tahlîl hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 46-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to functional analysis | Tâbiî tahlîl hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 46-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to functional analysis | Tâbiî tahlîl hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 46-02 | Research exposition (monographs, survey articles) pertaining to functional analysis | Tâbiî tahlîl hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 46-03 | History of functional analysis [Consider also classification numbers from Section 01] | Tâbiî tahlîlin târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 46-04 | Software, source code, etc. for problems pertaining to functional analysis | tâbiî tahlîl sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 46-06 | Proceedings, conferences, collections, etc. pertaining to functional analysis | tâbiî tahlîl hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 46-08 | Computational methods for problems pertaining to functional analysis | tâbiî tahlîl sahasındaki meselelere dair hesap usulleri |  |
-| 46-11 | Research data for problems pertaining to functional analysis | tâbiî tahlîl sahasındaki meselelere dair tetkik verileri |  |
+| 46-04 | Software, source code, etc. for problems pertaining to functional analysis | Tâbiî tahlîl sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 46-06 | Proceedings, conferences, collections, etc. pertaining to functional analysis | Tâbiî tahlîl hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 46-08 | Computational methods for problems pertaining to functional analysis | Tâbiî tahlîl sahasındaki meselelere dair hesap usulleri |  |
+| 46-11 | Research data for problems pertaining to functional analysis | Tâbiî tahlîl sahasındaki meselelere dair tetkik verileri |  |
 | **46Axx** | **Topological linear spaces and related structures {For function spaces, see 46Exx}** | **Vaz'î hattî fezâlar ve alâkalı bünyeler {Tâbi fezâları için bakınız: 46Exx}** |  |
 | 46A03 | General theory of locally convex spaces | Mahallen muhaddeb fezâların umûmî nazariyesi |  |
 | 46A04 | Locally convex Fréchet spaces and (DF)-spaces | Mahallen muhaddeb Fréchet fezâları ve (DF) fezâları | nakil |
@@ -3809,14 +3809,14 @@ Operator theory
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 47-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to operator theory | âmiller nazariyesi hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 47-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to operator theory | âmiller nazariyesi hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 47-02 | Research exposition (monographs, survey articles) pertaining to operator theory | âmiller nazariyesi hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 47-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to operator theory | Âmiller nazariyesi hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 47-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to operator theory | Âmiller nazariyesi hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 47-02 | Research exposition (monographs, survey articles) pertaining to operator theory | Âmiller nazariyesi hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 47-03 | History of operator theory [Consider also classification numbers from Section 01] | Âmiller nazariyesinin târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 47-04 | Software, source code, etc. for problems pertaining to operator theory | âmiller nazariyesi sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 47-06 | Proceedings, conferences, collections, etc. pertaining to operator theory | âmiller nazariyesi hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 47-08 | Computational methods for problems pertaining to operator theory | âmiller nazariyesi sahasındaki meselelere dair hesap usulleri |  |
-| 47-11 | Research data for problems pertaining to operator theory | âmiller nazariyesi sahasındaki meselelere dair tetkik verileri |  |
+| 47-04 | Software, source code, etc. for problems pertaining to operator theory | Âmiller nazariyesi sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 47-06 | Proceedings, conferences, collections, etc. pertaining to operator theory | Âmiller nazariyesi hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 47-08 | Computational methods for problems pertaining to operator theory | Âmiller nazariyesi sahasındaki meselelere dair hesap usulleri |  |
+| 47-11 | Research data for problems pertaining to operator theory | Âmiller nazariyesi sahasındaki meselelere dair tetkik verileri |  |
 | **47Axx** | **General theory of linear operators** | **Hattî âmillerin umûmî nazariyesi** |  |
 | 47A05 | General (adjoints, conjugates, products, inverses, domains, ranges, etc.) | Umûmî (mülhaklar, mezdûclar, hâsıl-ı zarblar, tersler, tarif sahaları, kıymet sahaları ve emsâli) |  |
 | 47A06 | Linear relations (multivalued linear operators) | Hattî nisbetler (çok kıymetli hattî âmiller) |  |
@@ -3992,13 +3992,13 @@ Calculus of variations and optimal control; optimization [See also 34H05, 34K35,
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 49-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to calculus of variations and optimal control | tehavvülât hesabı ve ahsen idâre; ahseniyet hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 49-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to calculus of variations and optimal control | tehavvülât hesabı ve ahsen idâre; ahseniyet hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 49-02 | Research exposition (monographs, survey articles) pertaining to calculus of variations and optimal control | tehavvülât hesabı ve ahsen idâre; ahseniyet hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 49-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to calculus of variations and optimal control | Tehavvülât hesabı ve ahsen idâre; ahseniyet hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 49-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to calculus of variations and optimal control | Tehavvülât hesabı ve ahsen idâre; ahseniyet hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 49-02 | Research exposition (monographs, survey articles) pertaining to calculus of variations and optimal control | Tehavvülât hesabı ve ahsen idâre; ahseniyet hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 49-03 | History of calculus of variations and optimal control [Consider also classification numbers from Section 01] | Tehavvülât hesabının ve ahsen idârenin târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 49-04 | Software, source code, etc. for problems pertaining to calculus of variations and optimal control | tehavvülât hesabı ve ahsen idâre; ahseniyet sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 49-06 | Proceedings, conferences, collections, etc. pertaining to calculus of variations and optimal control | tehavvülât hesabı ve ahsen idâre; ahseniyet hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 49-11 | Research data for problems pertaining to calculus of variations and optimal control | tehavvülât hesabı ve ahsen idâre; ahseniyet sahasındaki meselelere dair tetkik verileri |  |
+| 49-04 | Software, source code, etc. for problems pertaining to calculus of variations and optimal control | Tehavvülât hesabı ve ahsen idâre; ahseniyet sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 49-06 | Proceedings, conferences, collections, etc. pertaining to calculus of variations and optimal control | Tehavvülât hesabı ve ahsen idâre; ahseniyet hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 49-11 | Research data for problems pertaining to calculus of variations and optimal control | Tehavvülât hesabı ve ahsen idâre; ahseniyet sahasındaki meselelere dair tetkik verileri |  |
 | **49Jxx** | **Existence theories in calculus of variations and optimal control** | **Tehavvülât hesabında ve ahsen idârede vücûd nazariyeleri** |  |
 | 49J05 | Existence theories for free problems in one independent variable | Tek müstakil mütehavvilli serbest meseleler için vücûd nazariyeleri |  |
 | 49J10 | Existence theories for free problems in two or more independent variables | İki yahut daha fazla müstakil mütehavvilli serbest meseleler için vücûd nazariyeleri |  |
@@ -4078,14 +4078,14 @@ Geometry {For algebraic geometry, see 14-XX; for differential geometry, see 53-X
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 51-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to geometry | hendese hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 51-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to geometry | hendese hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 51-02 | Research exposition (monographs, survey articles) pertaining to geometry | hendese hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 51-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to geometry | Hendese hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 51-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to geometry | Hendese hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 51-02 | Research exposition (monographs, survey articles) pertaining to geometry | Hendese hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 51-03 | History of geometry [Consider also classification numbers from Section 01] | Hendesenin târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 51-04 | Software, source code, etc. for problems pertaining to geometry | hendese sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 51-06 | Proceedings, conferences, collections, etc. pertaining to geometry | hendese hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 51-08 | Computational methods for problems pertaining to geometry | hendese sahasındaki meselelere dair hesap usulleri |  |
-| 51-11 | Research data for problems pertaining to geometry | hendese sahasındaki meselelere dair tetkik verileri |  |
+| 51-04 | Software, source code, etc. for problems pertaining to geometry | Hendese sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 51-06 | Proceedings, conferences, collections, etc. pertaining to geometry | Hendese hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 51-08 | Computational methods for problems pertaining to geometry | Hendese sahasındaki meselelere dair hesap usulleri |  |
+| 51-11 | Research data for problems pertaining to geometry | Hendese sahasındaki meselelere dair tetkik verileri |  |
 | **51Axx** | **Linear incidence geometry** | **Hattî vukû' hendesesi (insidans geometrisi)** | şüpheli: "incidence" için "vukû'" (bir noktanın bir hat üzerine düşmesi) teklif edildi |
 | 51A05 | General theory of linear incidence geometry and projective geometries | Hattî vukû' hendesesinin ve irtisâmî hendeselerin umûmî nazariyesi |  |
 | 51A10 | Homomorphism, automorphism and dualities in linear incidence geometry | Hattî vukû' hendesesinde teşâkül, zâtî temâsül ve müsennâlıklar |  |
@@ -4197,14 +4197,14 @@ Convex and discrete geometry
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 52-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to convex and discrete geometry | muhaddeb ve munfasıl hendese hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 52-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to convex and discrete geometry | muhaddeb ve munfasıl hendese hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 52-02 | Research exposition (monographs, survey articles) pertaining to convex and discrete geometry | muhaddeb ve munfasıl hendese hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 52-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to convex and discrete geometry | Muhaddeb ve munfasıl hendese hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 52-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to convex and discrete geometry | Muhaddeb ve munfasıl hendese hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 52-02 | Research exposition (monographs, survey articles) pertaining to convex and discrete geometry | Muhaddeb ve munfasıl hendese hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 52-03 | History of convex and discrete geometry [Consider also classification numbers from Section 01] | Muhaddeb ve munfasıl hendesenin târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 52-04 | Software, source code, etc. for problems pertaining to convex and discrete geometry | muhaddeb ve munfasıl hendese sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 52-06 | Proceedings, conferences, collections, etc. pertaining to convex and discrete geometry | muhaddeb ve munfasıl hendese hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 52-08 | Computational methods for problems pertaining to convex and discrete geometry | muhaddeb ve munfasıl hendese sahasındaki meselelere dair hesap usulleri |  |
-| 52-11 | Research data for problems pertaining to convex and discrete geometry | muhaddeb ve munfasıl hendese sahasındaki meselelere dair tetkik verileri |  |
+| 52-04 | Software, source code, etc. for problems pertaining to convex and discrete geometry | Muhaddeb ve munfasıl hendese sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 52-06 | Proceedings, conferences, collections, etc. pertaining to convex and discrete geometry | Muhaddeb ve munfasıl hendese hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 52-08 | Computational methods for problems pertaining to convex and discrete geometry | Muhaddeb ve munfasıl hendese sahasındaki meselelere dair hesap usulleri |  |
+| 52-11 | Research data for problems pertaining to convex and discrete geometry | Muhaddeb ve munfasıl hendese sahasındaki meselelere dair tetkik verileri |  |
 | **52Axx** | **General convexity** | **Umûmî muhaddebiyet** |  |
 | 52A01 | Axiomatic and generalized convexity | Mütearifevî ve teşmîl edilmiş muhaddebiyet |  |
 | 52A05 | Convex sets without dimension restrictions (aspects of convex geometry) | Buud kaydı olmayan muhaddeb mecmûalar (muhaddeb hendeseye ait cihetler) |  |
@@ -4263,14 +4263,14 @@ Differential geometry {For differential topology, see 57Rxx; for foundational qu
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 53-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to differential geometry | tefâzulî hendese hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 53-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to differential geometry | tefâzulî hendese hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 53-02 | Research exposition (monographs, survey articles) pertaining to differential geometry | tefâzulî hendese hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 53-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to differential geometry | Tefâzulî hendese hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 53-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to differential geometry | Tefâzulî hendese hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 53-02 | Research exposition (monographs, survey articles) pertaining to differential geometry | Tefâzulî hendese hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 53-03 | History of differential geometry [Consider also classification numbers from Section 01] | Tefâzulî hendesenin târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 53-04 | Software, source code, etc. for problems pertaining to differential geometry | tefâzulî hendese sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 53-06 | Proceedings, conferences, collections, etc. pertaining to differential geometry | tefâzulî hendese hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 53-08 | Computational methods for problems pertaining to differential geometry | tefâzulî hendese sahasındaki meselelere dair hesap usulleri |  |
-| 53-11 | Research data for problems pertaining to differential geometry | tefâzulî hendese sahasındaki meselelere dair tetkik verileri |  |
+| 53-04 | Software, source code, etc. for problems pertaining to differential geometry | Tefâzulî hendese sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 53-06 | Proceedings, conferences, collections, etc. pertaining to differential geometry | Tefâzulî hendese hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 53-08 | Computational methods for problems pertaining to differential geometry | Tefâzulî hendese sahasındaki meselelere dair hesap usulleri |  |
+| 53-11 | Research data for problems pertaining to differential geometry | Tefâzulî hendese sahasındaki meselelere dair tetkik verileri |  |
 | **53Axx** | **Classical differential geometry** | **Klasik tefâzulî hendese** |  |
 | 53A04 | Curves in Euclidean and related spaces | Öklid fezâlarında ve alâkalı fezâlarda münhanîler |  |
 | 53A05 | Surfaces in Euclidean and related spaces | Öklid fezâlarında ve alâkalı fezâlarda sathlar |  |
@@ -4376,14 +4376,14 @@ General topology {For the topology of manifolds of all dimensions, see 57Nxx}
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 54-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to general topology | umûmî hendese-i vaz'iyye hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 54-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to general topology | umûmî hendese-i vaz'iyye hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 54-02 | Research exposition (monographs, survey articles) pertaining to general topology | umûmî hendese-i vaz'iyye hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 54-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to general topology | Umûmî hendese-i vaz'iyye hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 54-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to general topology | Umûmî hendese-i vaz'iyye hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 54-02 | Research exposition (monographs, survey articles) pertaining to general topology | Umûmî hendese-i vaz'iyye hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 54-03 | History of general topology [Consider also classification numbers from Section 01] | Umûmî hendese-i vaz'iyyenin târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 54-04 | Software, source code, etc. for problems pertaining to general topology | umûmî hendese-i vaz'iyye sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 54-06 | Proceedings, conferences, collections, etc. pertaining to general topology | umûmî hendese-i vaz'iyye hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 54-08 | Computational methods for problems pertaining to general topology | umûmî hendese-i vaz'iyye sahasındaki meselelere dair hesap usulleri |  |
-| 54-11 | Research data for problems pertaining to general topology | umûmî hendese-i vaz'iyye sahasındaki meselelere dair tetkik verileri |  |
+| 54-04 | Software, source code, etc. for problems pertaining to general topology | Umûmî hendese-i vaz'iyye sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 54-06 | Proceedings, conferences, collections, etc. pertaining to general topology | Umûmî hendese-i vaz'iyye hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 54-08 | Computational methods for problems pertaining to general topology | Umûmî hendese-i vaz'iyye sahasındaki meselelere dair hesap usulleri |  |
+| 54-11 | Research data for problems pertaining to general topology | Umûmî hendese-i vaz'iyye sahasındaki meselelere dair tetkik verileri |  |
 | **54Axx** | **Generalities in topology** | **Hendese-i vaz'iyyede umûmî hususlar** |  |
 | 54A05 | Topological spaces and generalizations (closure spaces, etc.) | Vaz'î fezâlar ve umûmîleştirmeleri (kapanış fezâları ve emsâli) |  |
 | 54A10 | Several topologies on one set (change of topology, comparison of topologies, lattices of topologies) | Bir mecmûa üzerinde birden çok vaz'iyyet (vaz'iyyet tebdîli, vaz'iyyetlerin mukayesesi, vaz'iyyet kafesleri) |  |
@@ -4492,14 +4492,14 @@ Algebraic topology
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 55-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to algebraic topology | cebrî hendese-i vaz'iyye hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 55-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to algebraic topology | cebrî hendese-i vaz'iyye hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 55-02 | Research exposition (monographs, survey articles) pertaining to algebraic topology | cebrî hendese-i vaz'iyye hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 55-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to algebraic topology | Cebrî hendese-i vaz'iyye hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 55-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to algebraic topology | Cebrî hendese-i vaz'iyye hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 55-02 | Research exposition (monographs, survey articles) pertaining to algebraic topology | Cebrî hendese-i vaz'iyye hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 55-03 | History of algebraic topology [Consider also classification numbers from Section 01] | Cebrî hendese-i vaz'iyyenin târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 55-04 | Software, source code, etc. for problems pertaining to algebraic topology | cebrî hendese-i vaz'iyye sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 55-06 | Proceedings, conferences, collections, etc. pertaining to algebraic topology | cebrî hendese-i vaz'iyye hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 55-08 | Computational methods for problems pertaining to algebraic topology | cebrî hendese-i vaz'iyye sahasındaki meselelere dair hesap usulleri |  |
-| 55-11 | Research data for problems pertaining to algebraic topology | cebrî hendese-i vaz'iyye sahasındaki meselelere dair tetkik verileri |  |
+| 55-04 | Software, source code, etc. for problems pertaining to algebraic topology | Cebrî hendese-i vaz'iyye sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 55-06 | Proceedings, conferences, collections, etc. pertaining to algebraic topology | Cebrî hendese-i vaz'iyye hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 55-08 | Computational methods for problems pertaining to algebraic topology | Cebrî hendese-i vaz'iyye sahasındaki meselelere dair hesap usulleri |  |
+| 55-11 | Research data for problems pertaining to algebraic topology | Cebrî hendese-i vaz'iyye sahasındaki meselelere dair tetkik verileri |  |
 | **55Mxx** | **Classical topics in algebraic topology {For the topology of Euclidean spaces and manifolds, see 57Nxx}** | **Cebrî hendese-i vaz'iyyede klasik mevzûlar {Öklid fezâlarının ve müteşa'iblerin hendese-i vaz'iyyesi için bakınız: 57Nxx}** |  |
 | 55M05 | Duality in algebraic topology | Cebrî hendese-i vaz'iyyede müsennâlık |  |
 | 55M10 | Dimension theory in algebraic topology [See also 54F45] | Cebrî hendese-i vaz'iyyede buud nazariyesi [Ayrıca bakınız: 54F45] |  |
@@ -4625,14 +4625,14 @@ Manifolds and cell complexes {For complex manifolds, see 32Qxx}
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 57-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to manifolds and cell complexes | müteşa'ibler ve hücre mürekkebleri hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 57-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to manifolds and cell complexes | müteşa'ibler ve hücre mürekkebleri hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 57-02 | Research exposition (monographs, survey articles) pertaining to manifolds and cell complexes | müteşa'ibler ve hücre mürekkebleri hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 57-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to manifolds and cell complexes | Müteşa'ibler ve hücre mürekkebleri hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 57-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to manifolds and cell complexes | Müteşa'ibler ve hücre mürekkebleri hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 57-02 | Research exposition (monographs, survey articles) pertaining to manifolds and cell complexes | Müteşa'ibler ve hücre mürekkebleri hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 57-03 | History of manifolds and cell complexes [Consider also classification numbers from Section 01] | Müteşa'iblerin ve hücre mürekkeblerinin târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 57-04 | Software, source code, etc. for problems pertaining to manifolds and cell complexes | müteşa'ibler ve hücre mürekkebleri sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 57-06 | Proceedings, conferences, collections, etc. pertaining to manifolds and cell complexes | müteşa'ibler ve hücre mürekkebleri hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 57-08 | Computational methods for problems pertaining to manifolds and cell complexes | müteşa'ibler ve hücre mürekkebleri sahasındaki meselelere dair hesap usulleri |  |
-| 57-11 | Research data for problems pertaining to manifolds and cell complexes | müteşa'ibler ve hücre mürekkebleri sahasındaki meselelere dair tetkik verileri |  |
+| 57-04 | Software, source code, etc. for problems pertaining to manifolds and cell complexes | Müteşa'ibler ve hücre mürekkebleri sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 57-06 | Proceedings, conferences, collections, etc. pertaining to manifolds and cell complexes | Müteşa'ibler ve hücre mürekkebleri hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 57-08 | Computational methods for problems pertaining to manifolds and cell complexes | Müteşa'ibler ve hücre mürekkebleri sahasındaki meselelere dair hesap usulleri |  |
+| 57-11 | Research data for problems pertaining to manifolds and cell complexes | Müteşa'ibler ve hücre mürekkebleri sahasındaki meselelere dair tetkik verileri |  |
 | **57Kxx** | **Low-dimensional topology in specific dimensions** | **Muayyen buudlarda düşük buudlu hendese-i vaz'iyye** |  |
 | 57K10 | Knot theory | Ukdeler (düğümler) nazariyesi |  |
 | 57K12 | Generalized knots (virtual knots, welded knots, quandles, etc.) | Teşmîl edilmiş ukdeler (sanal ukdeler, kaynaklı ukdeler, kandleler ve emsâli) | şüpheli: "quandle" nakledildi |
@@ -4770,14 +4770,14 @@ Global analysis, analysis on manifolds [See also 32Cxx, 32Fxx, 32Wxx, 46-XX, 53C
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 58-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to global analysis | küllî tahlîl ve müteşa'ibler üzerinde tahlîl hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 58-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to global analysis | küllî tahlîl ve müteşa'ibler üzerinde tahlîl hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 58-02 | Research exposition (monographs, survey articles) pertaining to global analysis | küllî tahlîl ve müteşa'ibler üzerinde tahlîl hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 58-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to global analysis | Küllî tahlîl ve müteşa'ibler üzerinde tahlîl hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 58-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to global analysis | Küllî tahlîl ve müteşa'ibler üzerinde tahlîl hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 58-02 | Research exposition (monographs, survey articles) pertaining to global analysis | Küllî tahlîl ve müteşa'ibler üzerinde tahlîl hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 58-03 | History of global analysis [Consider also classification numbers from Section 01] | Küllî tahlîlin târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 58-04 | Software, source code, etc. for problems pertaining to global analysis | küllî tahlîl ve müteşa'ibler üzerinde tahlîl sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 58-06 | Proceedings, conferences, collections, etc. pertaining to global analysis | küllî tahlîl ve müteşa'ibler üzerinde tahlîl hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 58-08 | Computational methods for problems pertaining to global analysis | küllî tahlîl ve müteşa'ibler üzerinde tahlîl sahasındaki meselelere dair hesap usulleri |  |
-| 58-11 | Research data for problems pertaining to global analysis | küllî tahlîl ve müteşa'ibler üzerinde tahlîl sahasındaki meselelere dair tetkik verileri |  |
+| 58-04 | Software, source code, etc. for problems pertaining to global analysis | Küllî tahlîl ve müteşa'ibler üzerinde tahlîl sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 58-06 | Proceedings, conferences, collections, etc. pertaining to global analysis | Küllî tahlîl ve müteşa'ibler üzerinde tahlîl hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 58-08 | Computational methods for problems pertaining to global analysis | Küllî tahlîl ve müteşa'ibler üzerinde tahlîl sahasındaki meselelere dair hesap usulleri |  |
+| 58-11 | Research data for problems pertaining to global analysis | Küllî tahlîl ve müteşa'ibler üzerinde tahlîl sahasındaki meselelere dair tetkik verileri |  |
 | **58Axx** | **General theory of differentiable manifolds [See also 32Cxx]** | **Müştakı alınabilir müteşa'iblerin umûmî nazariyesi [Ayrıca bakınız: 32Cxx]** |  |
 | 58A03 | Topos-theoretic approach to differentiable manifolds | Müştakı alınabilir müteşa'iblere topos nazariyesi yoluyla yaklaşım |  |
 | 58A05 | Differentiable manifolds, foundations | Müştakı alınabilir müteşa'ibler, esaslar |  |
@@ -4905,14 +4905,14 @@ Probability theory and stochastic processes {For additional applications, see 05
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 60-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to probability theory | ihtimâl nazariyesi ve ihtimâlî cereyanlar hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 60-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to probability theory | ihtimâl nazariyesi ve ihtimâlî cereyanlar hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 60-02 | Research exposition (monographs, survey articles) pertaining to probability theory | ihtimâl nazariyesi ve ihtimâlî cereyanlar hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 60-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to probability theory | İhtimâl nazariyesi ve ihtimâlî cereyanlar hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 60-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to probability theory | İhtimâl nazariyesi ve ihtimâlî cereyanlar hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 60-02 | Research exposition (monographs, survey articles) pertaining to probability theory | İhtimâl nazariyesi ve ihtimâlî cereyanlar hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 60-03 | History of probability theory [Consider also classification numbers from Section 01] | İhtimâl nazariyesinin târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 60-04 | Software, source code, etc. for problems pertaining to probability theory | ihtimâl nazariyesi ve ihtimâlî cereyanlar sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 60-06 | Proceedings, conferences, collections, etc. pertaining to probability theory | ihtimâl nazariyesi ve ihtimâlî cereyanlar hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 60-08 | Computational methods for problems pertaining to probability theory | ihtimâl nazariyesi ve ihtimâlî cereyanlar sahasındaki meselelere dair hesap usulleri |  |
-| 60-11 | Research data for problems pertaining to probability theory | ihtimâl nazariyesi ve ihtimâlî cereyanlar sahasındaki meselelere dair tetkik verileri |  |
+| 60-04 | Software, source code, etc. for problems pertaining to probability theory | İhtimâl nazariyesi ve ihtimâlî cereyanlar sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 60-06 | Proceedings, conferences, collections, etc. pertaining to probability theory | İhtimâl nazariyesi ve ihtimâlî cereyanlar hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 60-08 | Computational methods for problems pertaining to probability theory | İhtimâl nazariyesi ve ihtimâlî cereyanlar sahasındaki meselelere dair hesap usulleri |  |
+| 60-11 | Research data for problems pertaining to probability theory | İhtimâl nazariyesi ve ihtimâlî cereyanlar sahasındaki meselelere dair tetkik verileri |  |
 | **60Axx** | **Foundations of probability theory** | **İhtimâl nazariyesinin esasları** |  |
 | 60A05 | Axioms; other general questions in probability | Mütearifeler; ihtimâlde sâir umûmî suâller |  |
 | 60A10 | Probabilistic measure theory {For ergodic theory, see 28Dxx, 60Fxx} | İhtimâlî mikyâs nazariyesi {Ergodik nazariye için bakınız: 28Dxx, 60Fxx} |  |
@@ -5043,14 +5043,14 @@ Statistics
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 62-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to statistics | ihsâiyyât hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 62-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to statistics | ihsâiyyât hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 62-02 | Research exposition (monographs, survey articles) pertaining to statistics | ihsâiyyât hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 62-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to statistics | İhsâiyyât hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 62-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to statistics | İhsâiyyât hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 62-02 | Research exposition (monographs, survey articles) pertaining to statistics | İhsâiyyât hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 62-03 | History of statistics [Consider also classification numbers from Section 01] | İhsâiyyâtın târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 62-04 | Software, source code, etc. for problems pertaining to statistics | ihsâiyyât sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 62-06 | Proceedings, conferences, collections, etc. pertaining to statistics | ihsâiyyât hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 62-08 | Computational methods for problems pertaining to statistics | ihsâiyyât sahasındaki meselelere dair hesap usulleri |  |
-| 62-11 | Research data for problems pertaining to statistics | ihsâiyyât sahasındaki meselelere dair tetkik verileri |  |
+| 62-04 | Software, source code, etc. for problems pertaining to statistics | İhsâiyyât sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 62-06 | Proceedings, conferences, collections, etc. pertaining to statistics | İhsâiyyât hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 62-08 | Computational methods for problems pertaining to statistics | İhsâiyyât sahasındaki meselelere dair hesap usulleri |  |
+| 62-11 | Research data for problems pertaining to statistics | İhsâiyyât sahasındaki meselelere dair tetkik verileri |  |
 | **62Axx** | **Foundational topics in statistics** | **İhsâiyyâtta esâsî mevzûlar** |  |
 | 62A01 | Foundations and philosophical topics in statistics | İhsâiyyâtta esaslar ve felsefî mevzûlar |  |
 | 62A09 | Graphical methods in statistics | İhsâiyyâtta tersîmî (grafik) usuller |  |
@@ -5199,13 +5199,13 @@ Numerical analysis
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 65-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to numerical analysis | adedî tahlîl hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 65-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to numerical analysis | adedî tahlîl hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 65-02 | Research exposition (monographs, survey articles) pertaining to numerical analysis | adedî tahlîl hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 65-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to numerical analysis | Adedî tahlîl hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 65-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to numerical analysis | Adedî tahlîl hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 65-02 | Research exposition (monographs, survey articles) pertaining to numerical analysis | Adedî tahlîl hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 65-03 | History of numerical analysis [Consider also classification numbers from Section 01] | Adedî tahlîlin târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 65-04 | Software, source code, etc. for problems pertaining to numerical analysis | adedî tahlîl sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 65-06 | Proceedings, conferences, collections, etc. pertaining to numerical analysis | adedî tahlîl hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 65-11 | Research data for problems pertaining to numerical analysis | adedî tahlîl sahasındaki meselelere dair tetkik verileri |  |
+| 65-04 | Software, source code, etc. for problems pertaining to numerical analysis | Adedî tahlîl sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 65-06 | Proceedings, conferences, collections, etc. pertaining to numerical analysis | Adedî tahlîl hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 65-11 | Research data for problems pertaining to numerical analysis | Adedî tahlîl sahasındaki meselelere dair tetkik verileri |  |
 | **65Axx** | **Tables in numerical analysis** | **Adedî tahlîlde cedveller** |  |
 | 65A05 | Tables in numerical analysis | Adedî tahlîlde cedveller |  |
 | 65A99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
@@ -5384,13 +5384,13 @@ Computer science {For papers containing software, source code, etc. in a specifi
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 68-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to computer science | hâsibât ilmi hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 68-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to computer science | hâsibât ilmi hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 68-02 | Research exposition (monographs, survey articles) pertaining to computer science | hâsibât ilmi hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 68-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to computer science | Hâsibât ilmi hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 68-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to computer science | Hâsibât ilmi hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 68-02 | Research exposition (monographs, survey articles) pertaining to computer science | Hâsibât ilmi hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 68-03 | History of computer science [Consider also classification numbers from Section 01] | Hâsibât ilminin târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 68-04 | Software, source code, etc. for problems pertaining to computer science | hâsibât ilmi sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 68-06 | Proceedings, conferences, collections, etc. pertaining to computer science | hâsibât ilmi hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 68-11 | Research data for problems pertaining to computer science | hâsibât ilmi sahasındaki meselelere dair tetkik verileri |  |
+| 68-04 | Software, source code, etc. for problems pertaining to computer science | Hâsibât ilmi sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 68-06 | Proceedings, conferences, collections, etc. pertaining to computer science | Hâsibât ilmi hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 68-11 | Research data for problems pertaining to computer science | Hâsibât ilmi sahasındaki meselelere dair tetkik verileri |  |
 | **68Mxx** | **Computer system organization** | **Hâsib nizâmlarının tertibi** |  |
 | 68M01 | General theory of computer systems | Hâsib nizâmlarının umûmî nazariyesi |  |
 | 68M07 | Mathematical problems of computer architecture [See also 68W35] | Hâsib mimarîsinin riyâzî meseleleri [Ayrıca bakınız: 68W35] |  |
@@ -5511,16 +5511,16 @@ Mechanics of particles and systems {For relativistic mechanics, see 83A05, 83C10
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 70-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to mechanics of particles and systems | zerreler ve manzûmeler mekaniği hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 70-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to mechanics of particles and systems | zerreler ve manzûmeler mekaniği hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 70-02 | Research exposition (monographs, survey articles) pertaining to mechanics of particles and systems | zerreler ve manzûmeler mekaniği hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 70-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to mechanics of particles and systems | Zerreler ve manzûmeler mekaniği hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 70-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to mechanics of particles and systems | Zerreler ve manzûmeler mekaniği hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 70-02 | Research exposition (monographs, survey articles) pertaining to mechanics of particles and systems | Zerreler ve manzûmeler mekaniği hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 70-03 | History of mechanics of particles and systems [Consider also classification numbers from Section 01] | Zerreler ve manzûmeler mekaniğinin târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 70-04 | Software, source code, etc. for problems pertaining to mechanics of particles and systems | zerreler ve manzûmeler mekaniği sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 70-05 | Experimental work for problems pertaining to mechanics of particles and systems | zerreler ve manzûmeler mekaniği sahasındaki meselelere dair tecrübî çalışmalar |  |
-| 70-06 | Proceedings, conferences, collections, etc. pertaining to mechanics of particles and systems | zerreler ve manzûmeler mekaniği hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 70-08 | Computational methods for problems pertaining to mechanics of particles and systems | zerreler ve manzûmeler mekaniği sahasındaki meselelere dair hesap usulleri |  |
-| 70-10 | Mathematical modeling or simulation for problems pertaining to mechanics of particles and systems | zerreler ve manzûmeler mekaniği sahasındaki meselelere dair riyâzî numûne kurma (temsil) yahut taklit (benzetim) |  |
-| 70-11 | Research data for problems pertaining to mechanics of particles and systems | zerreler ve manzûmeler mekaniği sahasındaki meselelere dair tetkik verileri |  |
+| 70-04 | Software, source code, etc. for problems pertaining to mechanics of particles and systems | Zerreler ve manzûmeler mekaniği sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 70-05 | Experimental work for problems pertaining to mechanics of particles and systems | Zerreler ve manzûmeler mekaniği sahasındaki meselelere dair tecrübî çalışmalar |  |
+| 70-06 | Proceedings, conferences, collections, etc. pertaining to mechanics of particles and systems | Zerreler ve manzûmeler mekaniği hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 70-08 | Computational methods for problems pertaining to mechanics of particles and systems | Zerreler ve manzûmeler mekaniği sahasındaki meselelere dair hesap usulleri |  |
+| 70-10 | Mathematical modeling or simulation for problems pertaining to mechanics of particles and systems | Zerreler ve manzûmeler mekaniği sahasındaki meselelere dair riyâzî numûne kurma (temsil) yahut taklit (benzetim) |  |
+| 70-11 | Research data for problems pertaining to mechanics of particles and systems | Zerreler ve manzûmeler mekaniği sahasındaki meselelere dair tetkik verileri |  |
 | **70Axx** | **Axiomatics, foundations** | **Mütearifeler, esaslar** |  |
 | 70A05 | Axiomatics, foundations | Mütearifeler, esaslar |  |
 | 70A99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
@@ -5638,15 +5638,15 @@ Mechanics of deformable solids
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 74-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to mechanics of deformable solids | şekli bozulabilen sulb cisimler mekaniği hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 74-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to mechanics of deformable solids | şekli bozulabilen sulb cisimler mekaniği hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 74-02 | Research exposition (monographs, survey articles) pertaining to mechanics of deformable solids | şekli bozulabilen sulb cisimler mekaniği hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 74-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to mechanics of deformable solids | Şekli bozulabilen sulb cisimler mekaniği hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 74-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to mechanics of deformable solids | Şekli bozulabilen sulb cisimler mekaniği hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 74-02 | Research exposition (monographs, survey articles) pertaining to mechanics of deformable solids | Şekli bozulabilen sulb cisimler mekaniği hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 74-03 | History of mechanics of deformable solids [Consider also classification numbers from Section 01] | Şekli bozulabilen sulb cisimler mekaniğinin târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 74-04 | Software, source code, etc. for problems pertaining to mechanics of deformable solids | şekli bozulabilen sulb cisimler mekaniği sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 74-05 | Experimental work for problems pertaining to mechanics of deformable solids | şekli bozulabilen sulb cisimler mekaniği sahasındaki meselelere dair tecrübî çalışmalar |  |
-| 74-06 | Proceedings, conferences, collections, etc. pertaining to mechanics of deformable solids | şekli bozulabilen sulb cisimler mekaniği hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 74-10 | Mathematical modeling or simulation for problems pertaining to mechanics of deformable solids | şekli bozulabilen sulb cisimler mekaniği sahasındaki meselelere dair riyâzî numûne kurma (temsil) yahut taklit (benzetim) |  |
-| 74-11 | Research data for problems pertaining to mechanics of deformable solids | şekli bozulabilen sulb cisimler mekaniği sahasındaki meselelere dair tetkik verileri |  |
+| 74-04 | Software, source code, etc. for problems pertaining to mechanics of deformable solids | Şekli bozulabilen sulb cisimler mekaniği sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 74-05 | Experimental work for problems pertaining to mechanics of deformable solids | Şekli bozulabilen sulb cisimler mekaniği sahasındaki meselelere dair tecrübî çalışmalar |  |
+| 74-06 | Proceedings, conferences, collections, etc. pertaining to mechanics of deformable solids | Şekli bozulabilen sulb cisimler mekaniği hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 74-10 | Mathematical modeling or simulation for problems pertaining to mechanics of deformable solids | Şekli bozulabilen sulb cisimler mekaniği sahasındaki meselelere dair riyâzî numûne kurma (temsil) yahut taklit (benzetim) |  |
+| 74-11 | Research data for problems pertaining to mechanics of deformable solids | Şekli bozulabilen sulb cisimler mekaniği sahasındaki meselelere dair tetkik verileri |  |
 | **74Axx** | **Generalities, axiomatics, foundations of continuum mechanics of solids** | **Sulb cisimlerin muttasıl ortam mekaniğinde umûmî hususlar, mütearifeler, esaslar** |  |
 | 74A05 | Kinematics of deformation | Tağyîr-i şeklin hareket ilmi |  |
 | 74A10 | Stress | Gerilim (tevettür) |  |
@@ -5805,15 +5805,15 @@ Fluid mechanics {For general continuum mechanics, see 74Axx, or other parts of 7
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 76-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to fluid mechanics | mâyiât mekaniği hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 76-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to fluid mechanics | mâyiât mekaniği hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 76-02 | Research exposition (monographs, survey articles) pertaining to fluid mechanics | mâyiât mekaniği hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 76-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to fluid mechanics | Mâyiât mekaniği hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 76-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to fluid mechanics | Mâyiât mekaniği hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 76-02 | Research exposition (monographs, survey articles) pertaining to fluid mechanics | Mâyiât mekaniği hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 76-03 | History of fluid mechanics [Consider also classification numbers from Section 01] | Mâyiât mekaniğinin târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 76-04 | Software, source code, etc. for problems pertaining to fluid mechanics | mâyiât mekaniği sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 76-05 | Experimental work for problems pertaining to fluid mechanics | mâyiât mekaniği sahasındaki meselelere dair tecrübî çalışmalar |  |
-| 76-06 | Proceedings, conferences, collections, etc. pertaining to fluid mechanics | mâyiât mekaniği hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 76-10 | Mathematical modeling or simulation for problems pertaining to fluid mechanics | mâyiât mekaniği sahasındaki meselelere dair riyâzî numûne kurma (temsil) yahut taklit (benzetim) |  |
-| 76-11 | Research data for problems pertaining to fluid mechanics | mâyiât mekaniği sahasındaki meselelere dair tetkik verileri |  |
+| 76-04 | Software, source code, etc. for problems pertaining to fluid mechanics | Mâyiât mekaniği sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 76-05 | Experimental work for problems pertaining to fluid mechanics | Mâyiât mekaniği sahasındaki meselelere dair tecrübî çalışmalar |  |
+| 76-06 | Proceedings, conferences, collections, etc. pertaining to fluid mechanics | Mâyiât mekaniği hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 76-10 | Mathematical modeling or simulation for problems pertaining to fluid mechanics | Mâyiât mekaniği sahasındaki meselelere dair riyâzî numûne kurma (temsil) yahut taklit (benzetim) |  |
+| 76-11 | Research data for problems pertaining to fluid mechanics | Mâyiât mekaniği sahasındaki meselelere dair tetkik verileri |  |
 | **76Axx** | **Foundations, constitutive equations, rheology, hydrodynamical models of non-fluid phenomena** | **Esaslar, terkîbî muâdeleler, akış ilmi (reoloji), mâyi olmayan hâdiselerin mâyi-harekî numûneleri** |  |
 | 76A02 | Foundations of fluid mechanics | Mâyiât mekaniğinin esasları |  |
 | 76A05 | Non-Newtonian fluids | Newton'a uymayan mâyiler | nakil |
@@ -5975,15 +5975,15 @@ Optics, electromagnetic theory {For quantum optics, see 81V80}
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 78-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to optics and electromagnetic theory | menâzır ilmi ve elektromıknatısî nazariye hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 78-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to optics and electromagnetic theory | menâzır ilmi ve elektromıknatısî nazariye hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 78-02 | Research exposition (monographs, survey articles) pertaining to optics and electromagnetic theory | menâzır ilmi ve elektromıknatısî nazariye hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 78-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to optics and electromagnetic theory | Menâzır ilmi ve elektromıknatısî nazariye hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 78-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to optics and electromagnetic theory | Menâzır ilmi ve elektromıknatısî nazariye hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 78-02 | Research exposition (monographs, survey articles) pertaining to optics and electromagnetic theory | Menâzır ilmi ve elektromıknatısî nazariye hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 78-03 | History of optics and electromagnetic theory [Consider also classification numbers from Section 01] | Menâzır ilminin ve elektromıknatısî nazariyenin târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 78-04 | Software, source code, etc. for problems pertaining to optics and electromagnetic theory | menâzır ilmi ve elektromıknatısî nazariye sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 78-05 | Experimental work for problems pertaining to optics and electromagnetic theory | menâzır ilmi ve elektromıknatısî nazariye sahasındaki meselelere dair tecrübî çalışmalar |  |
-| 78-06 | Proceedings, conferences, collections, etc. pertaining to optics and electromagnetic theory | menâzır ilmi ve elektromıknatısî nazariye hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 78-10 | Mathematical modeling or simulation for problems pertaining to optics and electromagnetic theory | menâzır ilmi ve elektromıknatısî nazariye sahasındaki meselelere dair riyâzî numûne kurma (temsil) yahut taklit (benzetim) |  |
-| 78-11 | Research data for problems pertaining to optics and electromagnetic theory | menâzır ilmi ve elektromıknatısî nazariye sahasındaki meselelere dair tetkik verileri |  |
+| 78-04 | Software, source code, etc. for problems pertaining to optics and electromagnetic theory | Menâzır ilmi ve elektromıknatısî nazariye sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 78-05 | Experimental work for problems pertaining to optics and electromagnetic theory | Menâzır ilmi ve elektromıknatısî nazariye sahasındaki meselelere dair tecrübî çalışmalar |  |
+| 78-06 | Proceedings, conferences, collections, etc. pertaining to optics and electromagnetic theory | Menâzır ilmi ve elektromıknatısî nazariye hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 78-10 | Mathematical modeling or simulation for problems pertaining to optics and electromagnetic theory | Menâzır ilmi ve elektromıknatısî nazariye sahasındaki meselelere dair riyâzî numûne kurma (temsil) yahut taklit (benzetim) |  |
+| 78-11 | Research data for problems pertaining to optics and electromagnetic theory | Menâzır ilmi ve elektromıknatısî nazariye sahasındaki meselelere dair tetkik verileri |  |
 | **78Axx** | **General topics in optics and electromagnetic theory** | **Menâzır ilminde ve elektromıknatısî nazariyede umûmî mevzûlar** |  |
 | 78A02 | Foundations in optics and electromagnetic theory | Menâzır ilminde ve elektromıknatısî nazariyede esaslar |  |
 | 78A05 | Geometric optics | Hendesî menâzır |  |
@@ -6028,15 +6028,15 @@ Classical thermodynamics, heat transfer {For thermodynamics of solids, see 74A15
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 80-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to classical thermodynamics | klasik hararet-i hareket ilmi ve hararet nakli hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 80-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to classical thermodynamics | klasik hararet-i hareket ilmi ve hararet nakli hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 80-02 | Research exposition (monographs, survey articles) pertaining to classical thermodynamics | klasik hararet-i hareket ilmi ve hararet nakli hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 80-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to classical thermodynamics | Klasik hararet-i hareket ilmi ve hararet nakli hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 80-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to classical thermodynamics | Klasik hararet-i hareket ilmi ve hararet nakli hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 80-02 | Research exposition (monographs, survey articles) pertaining to classical thermodynamics | Klasik hararet-i hareket ilmi ve hararet nakli hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 80-03 | History of classical thermodynamics [Consider also classification numbers from Section 01] | Klasik hararet-i hareket ilminin târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 80-04 | Software, source code, etc. for problems pertaining to classical thermodynamics | klasik hararet-i hareket ilmi ve hararet nakli sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 80-05 | Experimental work for problems pertaining to classical thermodynamics | klasik hararet-i hareket ilmi ve hararet nakli sahasındaki meselelere dair tecrübî çalışmalar |  |
-| 80-06 | Proceedings, conferences, collections, etc. pertaining to classical thermodynamics | klasik hararet-i hareket ilmi ve hararet nakli hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 80-10 | Mathematical modeling or simulation for problems pertaining to classical thermodynamics | klasik hararet-i hareket ilmi ve hararet nakli sahasındaki meselelere dair riyâzî numûne kurma (temsil) yahut taklit (benzetim) |  |
-| 80-11 | Research data for problems pertaining to classical thermodynamics | klasik hararet-i hareket ilmi ve hararet nakli sahasındaki meselelere dair tetkik verileri |  |
+| 80-04 | Software, source code, etc. for problems pertaining to classical thermodynamics | Klasik hararet-i hareket ilmi ve hararet nakli sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 80-05 | Experimental work for problems pertaining to classical thermodynamics | Klasik hararet-i hareket ilmi ve hararet nakli sahasındaki meselelere dair tecrübî çalışmalar |  |
+| 80-06 | Proceedings, conferences, collections, etc. pertaining to classical thermodynamics | Klasik hararet-i hareket ilmi ve hararet nakli hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 80-10 | Mathematical modeling or simulation for problems pertaining to classical thermodynamics | Klasik hararet-i hareket ilmi ve hararet nakli sahasındaki meselelere dair riyâzî numûne kurma (temsil) yahut taklit (benzetim) |  |
+| 80-11 | Research data for problems pertaining to classical thermodynamics | Klasik hararet-i hareket ilmi ve hararet nakli sahasındaki meselelere dair tetkik verileri |  |
 | **80Axx** | **Thermodynamics and heat transfer** | **Hararet-i hareket ilmi ve hararet nakli** |  |
 | 80A05 | Foundations of thermodynamics and heat transfer | Hararet-i hareket ilmi ve hararet naklinin esasları |  |
 | 80A10 | Classical and relativistic thermodynamics | Klasik ve izâfî hararet-i hareket ilmi |  |
@@ -6070,16 +6070,16 @@ Quantum theory
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 81-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to quantum theory | kuantum nazariyesi hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 81-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to quantum theory | kuantum nazariyesi hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 81-02 | Research exposition (monographs, survey articles) pertaining to quantum theory | kuantum nazariyesi hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 81-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to quantum theory | Kuantum nazariyesi hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 81-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to quantum theory | Kuantum nazariyesi hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 81-02 | Research exposition (monographs, survey articles) pertaining to quantum theory | Kuantum nazariyesi hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 81-03 | History of quantum theory [Consider also classification numbers from Section 01] | Kuantum nazariyesinin târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 81-04 | Software, source code, etc. for problems pertaining to quantum theory | kuantum nazariyesi sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 81-05 | Experimental work for problems pertaining to quantum theory | kuantum nazariyesi sahasındaki meselelere dair tecrübî çalışmalar |  |
-| 81-06 | Proceedings, conferences, collections, etc. pertaining to quantum theory | kuantum nazariyesi hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 81-08 | Computational methods for problems pertaining to quantum theory | kuantum nazariyesi sahasındaki meselelere dair hesap usulleri |  |
-| 81-10 | Mathematical modeling or simulation for problems pertaining to quantum theory | kuantum nazariyesi sahasındaki meselelere dair riyâzî numûne kurma (temsil) yahut taklit (benzetim) |  |
-| 81-11 | Research data for problems pertaining to quantum theory | kuantum nazariyesi sahasındaki meselelere dair tetkik verileri |  |
+| 81-04 | Software, source code, etc. for problems pertaining to quantum theory | Kuantum nazariyesi sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 81-05 | Experimental work for problems pertaining to quantum theory | Kuantum nazariyesi sahasındaki meselelere dair tecrübî çalışmalar |  |
+| 81-06 | Proceedings, conferences, collections, etc. pertaining to quantum theory | Kuantum nazariyesi hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 81-08 | Computational methods for problems pertaining to quantum theory | Kuantum nazariyesi sahasındaki meselelere dair hesap usulleri |  |
+| 81-10 | Mathematical modeling or simulation for problems pertaining to quantum theory | Kuantum nazariyesi sahasındaki meselelere dair riyâzî numûne kurma (temsil) yahut taklit (benzetim) |  |
+| 81-11 | Research data for problems pertaining to quantum theory | Kuantum nazariyesi sahasındaki meselelere dair tetkik verileri |  |
 | **81Pxx** | **Foundations, quantum information and its processing, quantum axioms, and philosophy** | **Esaslar, kuantum malûmatı ve işlenmesi, kuantum mütearifeleri ve felsefe** |  |
 | 81P05 | General and philosophical questions in quantum theory | Kuantum nazariyesinde umûmî ve felsefî suâller |  |
 | 81P10 | Logical foundations of quantum mechanics; quantum logic (quantum-theoretic aspects) [See also 03G12, 06C15] | Kuantum mekaniğinin mantıkî esasları; kuantum mantığı (kuantum nazariyesine ait cihetler) [Ayrıca bakınız: 03G12, 06C15] |  |
@@ -6209,15 +6209,15 @@ Statistical mechanics, structure of matter
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 82-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to statistical mechanics | ihsâî mekanik ve maddenin bünyesi hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 82-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to statistical mechanics | ihsâî mekanik ve maddenin bünyesi hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 82-02 | Research exposition (monographs, survey articles) pertaining to statistical mechanics | ihsâî mekanik ve maddenin bünyesi hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 82-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to statistical mechanics | İhsâî mekanik ve maddenin bünyesi hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 82-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to statistical mechanics | İhsâî mekanik ve maddenin bünyesi hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 82-02 | Research exposition (monographs, survey articles) pertaining to statistical mechanics | İhsâî mekanik ve maddenin bünyesi hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 82-03 | History of statistical mechanics [Consider also classification numbers from Section 01] | İhsâî mekaniğin târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 82-04 | Software, source code, etc. for problems pertaining to statistical mechanics | ihsâî mekanik ve maddenin bünyesi sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 82-05 | Experimental work for problems pertaining to statistical mechanics | ihsâî mekanik ve maddenin bünyesi sahasındaki meselelere dair tecrübî çalışmalar |  |
-| 82-06 | Proceedings, conferences, collections, etc. pertaining to statistical mechanics | ihsâî mekanik ve maddenin bünyesi hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 82-10 | Mathematical modeling or simulation for problems pertaining to statistical mechanics | ihsâî mekanik ve maddenin bünyesi sahasındaki meselelere dair riyâzî numûne kurma (temsil) yahut taklit (benzetim) |  |
-| 82-11 | Research data for problems pertaining to statistical mechanics | ihsâî mekanik ve maddenin bünyesi sahasındaki meselelere dair tetkik verileri |  |
+| 82-04 | Software, source code, etc. for problems pertaining to statistical mechanics | İhsâî mekanik ve maddenin bünyesi sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 82-05 | Experimental work for problems pertaining to statistical mechanics | İhsâî mekanik ve maddenin bünyesi sahasındaki meselelere dair tecrübî çalışmalar |  |
+| 82-06 | Proceedings, conferences, collections, etc. pertaining to statistical mechanics | İhsâî mekanik ve maddenin bünyesi hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 82-10 | Mathematical modeling or simulation for problems pertaining to statistical mechanics | İhsâî mekanik ve maddenin bünyesi sahasındaki meselelere dair riyâzî numûne kurma (temsil) yahut taklit (benzetim) |  |
+| 82-11 | Research data for problems pertaining to statistical mechanics | İhsâî mekanik ve maddenin bünyesi sahasındaki meselelere dair tetkik verileri |  |
 | **82Bxx** | **Equilibrium statistical mechanics** | **Muvâzene ihsâî mekaniği** |  |
 | 82B03 | Foundations of equilibrium statistical mechanics | Muvâzene ihsâî mekaniğinin esasları |  |
 | 82B05 | Classical equilibrium statistical mechanics (general) | Klasik muvâzene ihsâî mekaniği (umûmî) |  |
@@ -6296,16 +6296,16 @@ Relativity and gravitational theory
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 83-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to relativity and gravitational theory | izâfiyet ve cazibe nazariyesi hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
-| 83-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to relativity and gravitational theory | izâfiyet ve cazibe nazariyesi hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
-| 83-02 | Research exposition (monographs, survey articles) pertaining to relativity and gravitational theory | izâfiyet ve cazibe nazariyesi hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 83-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to relativity and gravitational theory | İzâfiyet ve cazibe nazariyesi hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 83-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to relativity and gravitational theory | İzâfiyet ve cazibe nazariyesi hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 83-02 | Research exposition (monographs, survey articles) pertaining to relativity and gravitational theory | İzâfiyet ve cazibe nazariyesi hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
 | 83-03 | History of relativity and gravitational theory [Consider also classification numbers from Section 01] | İzâfiyet ve cazibe nazariyesinin târihi [01. babın tasnif numaralarına da bakılsın] |  |
-| 83-04 | Software, source code, etc. for problems pertaining to relativity and gravitational theory | izâfiyet ve cazibe nazariyesi sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
-| 83-05 | Experimental work for problems pertaining to relativity and gravitational theory | izâfiyet ve cazibe nazariyesi sahasındaki meselelere dair tecrübî çalışmalar |  |
-| 83-06 | Proceedings, conferences, collections, etc. pertaining to relativity and gravitational theory | izâfiyet ve cazibe nazariyesi hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
-| 83-08 | Computational methods for problems pertaining to relativity and gravitational theory | izâfiyet ve cazibe nazariyesi sahasındaki meselelere dair hesap usulleri |  |
-| 83-10 | Mathematical modeling or simulation for problems pertaining to relativity and gravitational theory | izâfiyet ve cazibe nazariyesi sahasındaki meselelere dair riyâzî numûne kurma (temsil) yahut taklit (benzetim) |  |
-| 83-11 | Research data for problems pertaining to relativity and gravitational theory | izâfiyet ve cazibe nazariyesi sahasındaki meselelere dair tetkik verileri |  |
+| 83-04 | Software, source code, etc. for problems pertaining to relativity and gravitational theory | İzâfiyet ve cazibe nazariyesi sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 83-05 | Experimental work for problems pertaining to relativity and gravitational theory | İzâfiyet ve cazibe nazariyesi sahasındaki meselelere dair tecrübî çalışmalar |  |
+| 83-06 | Proceedings, conferences, collections, etc. pertaining to relativity and gravitational theory | İzâfiyet ve cazibe nazariyesi hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 83-08 | Computational methods for problems pertaining to relativity and gravitational theory | İzâfiyet ve cazibe nazariyesi sahasındaki meselelere dair hesap usulleri |  |
+| 83-10 | Mathematical modeling or simulation for problems pertaining to relativity and gravitational theory | İzâfiyet ve cazibe nazariyesi sahasındaki meselelere dair riyâzî numûne kurma (temsil) yahut taklit (benzetim) |  |
+| 83-11 | Research data for problems pertaining to relativity and gravitational theory | İzâfiyet ve cazibe nazariyesi sahasındaki meselelere dair tetkik verileri |  |
 | **83Axx** | **Special relativity** | **Hususî izâfiyet** |  |
 | 83A05 | Special relativity | Hususî izâfiyet |  |
 | 83A99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
@@ -6347,63 +6347,63 @@ Relativity and gravitational theory
 | 83F05 | Relativistic cosmology {For astrophysical cosmology, see 85A40} | İzâfî kevniyyât {Hey'et-i tabîiyyeye ait kevniyyât için bakınız: 85A40} |  |
 | 83F99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
-## 85-XX — Astronomy and astrophysics {For celestial mechanics, see 70F15}
+## 85-XX — İlm-i hey'et ve hey'et-i tabîiyye (astrofizik) {Mekanik-i semâviyye için bakınız: 70F15}
 
 Astronomy and astrophysics {For celestial mechanics, see 70F15}
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 85-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to astronomy and astrophysics |  |  |
-| 85-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to astronomy and astrophysics |  |  |
-| 85-02 | Research exposition (monographs, survey articles) pertaining to astronomy and astrophysics |  |  |
-| 85-03 | History of astronomy and astrophysics [Consider also classification numbers from Section 01] |  |  |
-| 85-04 | Software, source code, etc. for problems pertaining to astronomy and astrophysics |  |  |
-| 85-05 | Experimental work for problems pertaining to astronomy and astrophysics |  |  |
-| 85-06 | Proceedings, conferences, collections, etc. pertaining to astronomy and astrophysics |  |  |
-| 85-08 | Computational methods for problems pertaining to astronomy and astrophysics |  |  |
-| 85-10 | Mathematical modeling or simulation for problems pertaining to astronomy and astrophysics |  |  |
-| 85-11 | Research data for problems pertaining to astronomy and astrophysics |  |  |
-| **85Axx** | **Astronomy and astrophysics {For celestial mechanics, see 70F15}** | **** |  |
-| 85A04 | General questions in astronomy and astrophysics |  |  |
-| 85A05 | Galactic and stellar dynamics |  |  |
-| 85A15 | Galactic and stellar structure |  |  |
-| 85A20 | Planetary atmospheres |  |  |
-| 85A25 | Radiative transfer in astronomy and astrophysics |  |  |
-| 85A30 | Hydrodynamic and hydromagnetic problems in astronomy and astrophysics [See also 76Y05] |  |  |
-| 85A35 | Statistical astronomy |  |  |
-| 85A40 | Astrophysical cosmology {For relativistic cosmology, see 83F05} |  |  |
+| 85-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to astronomy and astrophysics | İlm-i hey'et ve hey'et-i tabîiyye hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 85-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to astronomy and astrophysics | İlm-i hey'et ve hey'et-i tabîiyye hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 85-02 | Research exposition (monographs, survey articles) pertaining to astronomy and astrophysics | İlm-i hey'et ve hey'et-i tabîiyye hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 85-03 | History of astronomy and astrophysics [Consider also classification numbers from Section 01] | İlm-i hey'et ve hey'et-i tabîiyyenin târihi [01. babın tasnif numaralarına da bakılsın] |  |
+| 85-04 | Software, source code, etc. for problems pertaining to astronomy and astrophysics | İlm-i hey'et ve hey'et-i tabîiyye sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 85-05 | Experimental work for problems pertaining to astronomy and astrophysics | İlm-i hey'et ve hey'et-i tabîiyye sahasındaki meselelere dair tecrübî çalışmalar |  |
+| 85-06 | Proceedings, conferences, collections, etc. pertaining to astronomy and astrophysics | İlm-i hey'et ve hey'et-i tabîiyye hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 85-08 | Computational methods for problems pertaining to astronomy and astrophysics | İlm-i hey'et ve hey'et-i tabîiyye sahasındaki meselelere dair hesap usulleri |  |
+| 85-10 | Mathematical modeling or simulation for problems pertaining to astronomy and astrophysics | İlm-i hey'et ve hey'et-i tabîiyye sahasındaki meselelere dair riyâzî numûne kurma (temsil) yahut taklit (benzetim) |  |
+| 85-11 | Research data for problems pertaining to astronomy and astrophysics | İlm-i hey'et ve hey'et-i tabîiyye sahasındaki meselelere dair tetkik verileri |  |
+| **85Axx** | **Astronomy and astrophysics {For celestial mechanics, see 70F15}** | **İlm-i hey'et ve hey'et-i tabîiyye {Mekanik-i semâviyye için bakınız: 70F15}** |  |
+| 85A04 | General questions in astronomy and astrophysics | İlm-i hey'et ve hey'et-i tabîiyyede umûmî suâller |  |
+| 85A05 | Galactic and stellar dynamics | Kehkeşân ve yıldız harekiyyâtı |  |
+| 85A15 | Galactic and stellar structure | Kehkeşân ve yıldız bünyesi |  |
+| 85A20 | Planetary atmospheres | Seyyârelerin cevv tabakaları (atmosferleri) |  |
+| 85A25 | Radiative transfer in astronomy and astrophysics | İlm-i hey'et ve hey'et-i tabîiyyede şuâ' nakli |  |
+| 85A30 | Hydrodynamic and hydromagnetic problems in astronomy and astrophysics [See also 76Y05] | İlm-i hey'et ve hey'et-i tabîiyyede mâyi harekî ve mâyi-mıknatısî meseleler [Ayrıca bakınız: 76Y05] |  |
+| 85A35 | Statistical astronomy | İhsâî ilm-i hey'et |  |
+| 85A40 | Astrophysical cosmology {For relativistic cosmology, see 83F05} | Hey'et-i tabîiyyeye ait kevniyyât {İzâfî kevniyyât için bakınız: 83F05} |  |
 | 85A99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
-## 86-XX — Geophysics [See also 76U05, 76V05]
+## 86-XX — Arz hikmet-i tabîiyyesi (jeofizik) [Ayrıca bakınız: 76U05, 76V05]
 
 Geophysics [See also 76U05, 76V05]
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 86-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to geophysics |  |  |
-| 86-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to geophysics |  |  |
-| 86-02 | Research exposition (monographs, survey articles) pertaining to geophysics |  |  |
-| 86-03 | History of geophysics [Consider also classification numbers from Section 01] |  |  |
-| 86-04 | Software, source code, etc. for problems pertaining to geophysics |  |  |
-| 86-05 | Experimental work for problems pertaining to geophysics |  |  |
-| 86-06 | Proceedings, conferences, collections, etc. pertaining to geophysics |  |  |
-| 86-08 | Computational methods for problems pertaining to geophysics |  |  |
-| 86-10 | Mathematical modeling or simulation for problems pertaining to geophysics |  |  |
-| 86-11 | Research data for problems pertaining to geophysics |  |  |
-| **86Axx** | **Geophysics [See also 76U05, 76V05]** | **** |  |
-| 86A04 | General questions in geophysics |  |  |
-| 86A05 | Hydrology, hydrography, oceanography [See also 76Bxx, 76E20, 76Q05, 76Rxx, 76Uxx] |  |  |
-| 86A08 | Climate science and climate modeling |  |  |
-| 86A10 | Meteorology and atmospheric physics [See also 76Bxx, 76E20, 76N15, 76Q05, 76Rxx, 76Uxx] |  |  |
-| 86A15 | Seismology (including tsunami modeling), earthquakes |  |  |
-| 86A20 | Potentials, prospecting |  |  |
-| 86A22 | Inverse problems in geophysics [See also 35R30] |  |  |
-| 86A25 | Geo-electricity and geomagnetism [See also 76W05, 78A25] |  |  |
-| 86A30 | Geodesy, mapping problems |  |  |
-| 86A32 | Geostatistics |  |  |
-| 86A40 | Glaciology |  |  |
-| 86A60 | Geological problems |  |  |
-| 86A70 | Vulcanology; magma and lava flow |  |  |
+| 86-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to geophysics | Arz hikmet-i tabîiyyesi (jeofizik) hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 86-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to geophysics | Arz hikmet-i tabîiyyesi (jeofizik) hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 86-02 | Research exposition (monographs, survey articles) pertaining to geophysics | Arz hikmet-i tabîiyyesi (jeofizik) hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 86-03 | History of geophysics [Consider also classification numbers from Section 01] | Arz hikmet-i tabîiyyesinin târihi [01. babın tasnif numaralarına da bakılsın] |  |
+| 86-04 | Software, source code, etc. for problems pertaining to geophysics | Arz hikmet-i tabîiyyesi (jeofizik) sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 86-05 | Experimental work for problems pertaining to geophysics | Arz hikmet-i tabîiyyesi (jeofizik) sahasındaki meselelere dair tecrübî çalışmalar |  |
+| 86-06 | Proceedings, conferences, collections, etc. pertaining to geophysics | Arz hikmet-i tabîiyyesi (jeofizik) hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 86-08 | Computational methods for problems pertaining to geophysics | Arz hikmet-i tabîiyyesi (jeofizik) sahasındaki meselelere dair hesap usulleri |  |
+| 86-10 | Mathematical modeling or simulation for problems pertaining to geophysics | Arz hikmet-i tabîiyyesi (jeofizik) sahasındaki meselelere dair riyâzî numûne kurma (temsil) yahut taklit (benzetim) |  |
+| 86-11 | Research data for problems pertaining to geophysics | Arz hikmet-i tabîiyyesi (jeofizik) sahasındaki meselelere dair tetkik verileri |  |
+| **86Axx** | **Geophysics [See also 76U05, 76V05]** | **Arz hikmet-i tabîiyyesi (jeofizik) [Ayrıca bakınız: 76U05, 76V05]** |  |
+| 86A04 | General questions in geophysics | Arz hikmet-i tabîiyyesinde umûmî suâller |  |
+| 86A05 | Hydrology, hydrography, oceanography [See also 76Bxx, 76E20, 76Q05, 76Rxx, 76Uxx] | Âb ilmi (hidroloji), suların tavsîfi (hidrografya), bihâr ilmi (oşinografya) [Ayrıca bakınız: 76Bxx, 76E20, 76Q05, 76Rxx, 76Uxx] | şüpheli: "âb ilmi", "bihâr ilmi" teklif terkiplerdir |
+| 86A08 | Climate science and climate modeling | İklîm ilmi ve iklîm numûnesi kurma |  |
+| 86A10 | Meteorology and atmospheric physics [See also 76Bxx, 76E20, 76N15, 76Q05, 76Rxx, 76Uxx] | Âsâr-ı ulviyye (meteoroloji) ve cevv hikmet-i tabîiyyesi [Ayrıca bakınız: 76Bxx, 76E20, 76N15, 76Q05, 76Rxx, 76Uxx] |  |
+| 86A15 | Seismology (including tsunami modeling), earthquakes | Zelzele ilmi (sunami, yâni zelzele mevci numûnesi kurma dahil), zelzeleler |  |
+| 86A20 | Potentials, prospecting | Kuvve-i kāmine tâbileri (potansiyeller), maden arama |  |
+| 86A22 | Inverse problems in geophysics [See also 35R30] | Arz hikmet-i tabîiyyesinde makûs meseleler [Ayrıca bakınız: 35R30] |  |
+| 86A25 | Geo-electricity and geomagnetism [See also 76W05, 78A25] | Arz elektriği ve arz mıknatısiyeti [Ayrıca bakınız: 76W05, 78A25] |  |
+| 86A30 | Geodesy, mapping problems | Mesâha-i arz (jeodezi), harita meseleleri |  |
+| 86A32 | Geostatistics | Arz ihsâiyyâtı (jeoistatistik) |  |
+| 86A40 | Glaciology | Buzullar ilmi (glasiyoloji) |  |
+| 86A60 | Geological problems | Arz ilmine (jeolojiye) ait meseleler |  |
+| 86A70 | Vulcanology; magma and lava flow | Volkanlar ilmi; magma ve lâv seyelânı |  |
 | 86A99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
 ## 90-XX — Operations research, mathematical programming
