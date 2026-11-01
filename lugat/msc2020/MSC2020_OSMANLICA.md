@@ -2,7 +2,7 @@
 
 Bu sahife `araclar/msc_birlestir.py` ile `kaynak.tsv` ve `ceviri/` dosyalarından üretilir; elle değiştirilmez.
 
-Toplam madde: 6603 · karşılığı bulunan: 1215 · kalan: 5388
+Toplam madde: 6603 · karşılığı bulunan: 2012 · kalan: 4591
 
 
 ## 00-XX — Umûmî ve şâmil mevzûlar; mecmualar
@@ -773,929 +773,929 @@ Number theory
 | 11Z05 | Miscellaneous applications of number theory | Nazariye-i a'dâdın muhtelif tatbîkleri |  |
 | 11Z99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
-## 12-XX — Field theory and polynomials
+## 12-XX — Cisimler nazariyesi ve kesîrü'l-hudûdlar
 
 Field theory and polynomials
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 12-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to field theory |  |  |
-| 12-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to field theory |  |  |
-| 12-02 | Research exposition (monographs, survey articles) pertaining to field theory |  |  |
-| 12-03 | History of field theory [Consider also classification numbers from Section 01] |  |  |
-| 12-04 | Software, source code, etc. for problems pertaining to field theory |  |  |
-| 12-06 | Proceedings, conferences, collections, etc. pertaining to field theory |  |  |
-| 12-08 | Computational methods for problems pertaining to field theory [See also 68W30] |  |  |
-| 12-11 | Research data for problems pertaining to field theory |  |  |
-| **12Dxx** | **Real and complex fields** | **** |  |
-| 12D05 | Polynomials in real and complex fields: factorization |  |  |
-| 12D10 | Polynomials in real and complex fields: location of zeros (algebraic theorems) {For the analytic theory, see 26C10, 30C15} |  |  |
-| 12D15 | Fields related with sums of squares (formally real fields, Pythagorean fields, etc.) [See also 11Exx] |  |  |
+| 12-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to field theory | cisimler nazariyesi hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 12-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to field theory | cisimler nazariyesi hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 12-02 | Research exposition (monographs, survey articles) pertaining to field theory | cisimler nazariyesi hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 12-03 | History of field theory [Consider also classification numbers from Section 01] | Cisimler nazariyesinin târihi [01. babın tasnif numaralarına da bakılsın] |  |
+| 12-04 | Software, source code, etc. for problems pertaining to field theory | cisimler nazariyesi sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 12-06 | Proceedings, conferences, collections, etc. pertaining to field theory | cisimler nazariyesi hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 12-08 | Computational methods for problems pertaining to field theory [See also 68W30] | cisimler nazariyesi sahasındaki meselelere dair hesap usulleri [Ayrıca bakınız: 68W30] |  |
+| 12-11 | Research data for problems pertaining to field theory | cisimler nazariyesi sahasındaki meselelere dair tetkik verileri |  |
+| **12Dxx** | **Real and complex fields** | **Hakîkî ve mürekkeb cisimler** |  |
+| 12D05 | Polynomials in real and complex fields: factorization | Hakîkî ve mürekkeb cisimlerde kesîrü'l-hudûdlar: mazrûblarına tahlîl |  |
+| 12D10 | Polynomials in real and complex fields: location of zeros (algebraic theorems) {For the analytic theory, see 26C10, 30C15} | Hakîkî ve mürekkeb cisimlerde kesîrü'l-hudûdlar: sıfırların mahalleri (cebrî kaziyyeler) {Tahlîlî nazariye için bakınız: 26C10, 30C15} |  |
+| 12D15 | Fields related with sums of squares (formally real fields, Pythagorean fields, etc.) [See also 11Exx] | Murabbaların mecmû'uyla alâkalı cisimler (sûreten hakîkî cisimler, Pisagor cisimleri ve emsâli) [Ayrıca bakınız: 11Exx] |  |
 | 12D99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **12Exx** | **General field theory** | **** |  |
-| 12E05 | Polynomials in general fields (irreducibility, etc.) |  |  |
-| 12E10 | Special polynomials in general fields |  |  |
-| 12E12 | Equations in general fields |  |  |
-| 12E15 | Skew fields, division rings [See also 11R52, 16Kxx] |  |  |
-| 12E20 | Finite fields (field-theoretic aspects) |  |  |
-| 12E25 | Hilbertian fields; Hilbert’s irreducibility theorem |  |  |
-| 12E30 | Field arithmetic |  |  |
+| **12Exx** | **General field theory** | **Umûmî cisimler nazariyesi** |  |
+| 12E05 | Polynomials in general fields (irreducibility, etc.) | Umûmî cisimlerde kesîrü'l-hudûdlar (gayr-ı kābil-i tahlîllik ve emsâli) |  |
+| 12E10 | Special polynomials in general fields | Umûmî cisimlerde hususî kesîrü'l-hudûdlar |  |
+| 12E12 | Equations in general fields | Umûmî cisimlerde muâdeleler |  |
+| 12E15 | Skew fields, division rings [See also 11R52, 16Kxx] | Mâil (çarpık) cisimler, taksim halkaları [Ayrıca bakınız: 11R52, 16Kxx] |  |
+| 12E20 | Finite fields (field-theoretic aspects) | Mütenâhî cisimler (cisimler nazariyesine ait cihetler) |  |
+| 12E25 | Hilbertian fields; Hilbert’s irreducibility theorem | Hilbert cisimleri; Hilbert'in gayr-ı kābil-i tahlîllik kaziyyesi |  |
+| 12E30 | Field arithmetic | Cisim hesabı |  |
 | 12E99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **12Fxx** | **Field extensions** | **** |  |
-| 12F05 | Algebraic field extensions |  |  |
-| 12F10 | Separable extensions, Galois theory |  |  |
-| 12F12 | Inverse Galois theory |  |  |
-| 12F15 | Inseparable field extensions |  |  |
-| 12F20 | Transcendental field extensions |  |  |
+| **12Fxx** | **Field extensions** | **Cisim tevsî'leri** |  |
+| 12F05 | Algebraic field extensions | Cebrî cisim tevsî'leri |  |
+| 12F10 | Separable extensions, Galois theory | Kābil-i infikâk (ayrılabilir) tevsî'ler, Galois nazariyesi |  |
+| 12F12 | Inverse Galois theory | Makûs Galois nazariyesi |  |
+| 12F15 | Inseparable field extensions | Gayr-ı kābil-i infikâk cisim tevsî'leri |  |
+| 12F20 | Transcendental field extensions | Müteâlî cisim tevsî'leri |  |
 | 12F99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **12Gxx** | **Homological methods (field theory)** | **** |  |
-| 12G05 | Galois cohomology [See also 14F22, 16H05, 16K50] |  |  |
-| 12G10 | Cohomological dimension of fields |  |  |
+| **12Gxx** | **Homological methods (field theory)** | **Tecânüsî usuller (cisimler nazariyesi)** |  |
+| 12G05 | Galois cohomology [See also 14F22, 16H05, 16K50] | Galois mukābil-tecânüsü [Ayrıca bakınız: 14F22, 16H05, 16K50] |  |
+| 12G10 | Cohomological dimension of fields | Cisimlerin mukābil-tecânüsî buudu |  |
 | 12G99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **12Hxx** | **Differential and difference algebra** | **** |  |
-| 12H05 | Differential algebra [See also 13Nxx] |  |  |
-| 12H10 | Difference algebra [See also 39Axx] |  |  |
-| 12H20 | Abstract differential equations [See also 34Mxx] |  |  |
-| 12H25 | p-adic differential equations [See also 11S80, 14G20] |  |  |
+| **12Hxx** | **Differential and difference algebra** | **Tefâzulî cebir ve fark cebri** |  |
+| 12H05 | Differential algebra [See also 13Nxx] | Tefâzulî cebir [Ayrıca bakınız: 13Nxx] |  |
+| 12H10 | Difference algebra [See also 39Axx] | Fark cebri [Ayrıca bakınız: 39Axx] |  |
+| 12H20 | Abstract differential equations [See also 34Mxx] | Mücerred tefâzulî muâdeleler [Ayrıca bakınız: 34Mxx] |  |
+| 12H25 | p-adic differential equations [See also 11S80, 14G20] | p-adî tefâzulî muâdeleler [Ayrıca bakınız: 11S80, 14G20] |  |
 | 12H99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **12Jxx** | **Topological fields** | **** |  |
-| 12J05 | Normed fields |  |  |
-| 12J10 | Valued fields |  |  |
-| 12J12 | Formally p-adic fields |  |  |
-| 12J15 | Ordered fields |  |  |
-| 12J17 | Topological semifields |  |  |
-| 12J20 | General valuation theory for fields [See also 13A18] |  |  |
-| 12J25 | Non-Archimedean valued fields [See also 30G06, 46S10] |  |  |
-| 12J27 | Krasner-Tate algebras [See mainly 32P05; see also 46S10, 47S10] |  |  |
+| **12Jxx** | **Topological fields** | **Vaz'î cisimler** |  |
+| 12J05 | Normed fields | Normlu cisimler |  |
+| 12J10 | Valued fields | Kıymetlendirilmiş cisimler |  |
+| 12J12 | Formally p-adic fields | Sûreten p-adî cisimler |  |
+| 12J15 | Ordered fields | Müretteb cisimler |  |
+| 12J17 | Topological semifields | Vaz'î nîm-cisimler |  |
+| 12J20 | General valuation theory for fields [See also 13A18] | Cisimler için umûmî kıymetlendirme nazariyesi [Ayrıca bakınız: 13A18] |  |
+| 12J25 | Non-Archimedean valued fields [See also 30G06, 46S10] | Gayr-ı Arşimedî kıymetlendirilmiş cisimler [Ayrıca bakınız: 30G06, 46S10] |  |
+| 12J27 | Krasner-Tate algebras [See mainly 32P05; see also 46S10, 47S10] | Krasner-Tate cebirleri [Bilhassa bakınız: 32P05; ayrıca bakınız: 46S10, 47S10] |  |
 | 12J99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **12Kxx** | **Generalizations of fields** | **** |  |
-| 12K05 | Near-fields [See also 16Y30] |  |  |
-| 12K10 | Semifields [See also 16Y60] |  |  |
+| **12Kxx** | **Generalizations of fields** | **Cisimlerin umûmîleştirmeleri** |  |
+| 12K05 | Near-fields [See also 16Y30] | Karîb-cisimler (yakın cisimler) [Ayrıca bakınız: 16Y30] |  |
+| 12K10 | Semifields [See also 16Y60] | Nîm-cisimler [Ayrıca bakınız: 16Y60] |  |
 | 12K99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **12Lxx** | **Connections between field theory and logic** | **** |  |
-| 12L05 | Decidability and field theory [See also 03B25] |  |  |
-| 12L10 | Ultraproducts and field theory [See also 03C20] |  |  |
-| 12L12 | Model theory of fields [See also 03C60] |  |  |
-| 12L15 | Nonstandard arithmetic and field theory [See also 03H15] |  |  |
+| **12Lxx** | **Connections between field theory and logic** | **Cisimler nazariyesi ile mantık arasındaki irtibâtlar** |  |
+| 12L05 | Decidability and field theory [See also 03B25] | Hükme bağlanabilirlik ve cisimler nazariyesi [Ayrıca bakınız: 03B25] |  |
+| 12L10 | Ultraproducts and field theory [See also 03C20] | Fevk-hâsıl-ı zarblar ve cisimler nazariyesi [Ayrıca bakınız: 03C20] |  |
+| 12L12 | Model theory of fields [See also 03C60] | Cisimlerin numûneler nazariyesi [Ayrıca bakınız: 03C60] |  |
+| 12L15 | Nonstandard arithmetic and field theory [See also 03H15] | Gayr-ı mi'yârî hesap ve cisimler nazariyesi [Ayrıca bakınız: 03H15] |  |
 | 12L99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
-## 13-XX — Commutative algebra
+## 13-XX — Tebdîlî (değişmeli) cebir
 
 Commutative algebra
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 13-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to commutative algebra |  |  |
-| 13-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to commutative algebra |  |  |
-| 13-02 | Research exposition (monographs, survey articles) pertaining to commutative algebra |  |  |
-| 13-03 | History of commutative algebra [Consider also classification numbers from Section 01] |  |  |
-| 13-04 | Software, source code, etc. for problems pertaining to commutative algebra |  |  |
-| 13-06 | Proceedings, conferences, collections, etc. pertaining to commutative algebra |  |  |
-| 13-11 | Research data for problems pertaining to commutative algebra |  |  |
-| **13Axx** | **General commutative ring theory** | **** |  |
-| 13A02 | Graded rings [See also 16W50] |  |  |
-| 13A05 | Divisibility and factorizations in commutative rings [See also 13F15] |  |  |
-| 13A15 | Ideals and multiplicative ideal theory in commutative rings |  |  |
-| 13A18 | Valuations and their generalizations for commutative rings [See also 12J20] |  |  |
-| 13A30 | Associated graded rings of ideals (Rees ring, form ring), analytic spread and related topics |  |  |
-| 13A35 | Characteristic p methods (Frobenius endomorphism) and reduction to characteristic p; tight closure [See also 13B22] |  |  |
-| 13A50 | Actions of groups on commutative rings; invariant theory [See also 14L24] |  |  |
-| 13A70 | General commutative ring theory and combinatorics (zero-divisor graphs, annihilating-ideal graphs, etc.) [See also 05C25, 05E40] |  |  |
+| 13-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to commutative algebra | tebdîlî cebir hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 13-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to commutative algebra | tebdîlî cebir hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 13-02 | Research exposition (monographs, survey articles) pertaining to commutative algebra | tebdîlî cebir hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 13-03 | History of commutative algebra [Consider also classification numbers from Section 01] | Tebdîlî cebrin târihi [01. babın tasnif numaralarına da bakılsın] |  |
+| 13-04 | Software, source code, etc. for problems pertaining to commutative algebra | tebdîlî cebir sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 13-06 | Proceedings, conferences, collections, etc. pertaining to commutative algebra | tebdîlî cebir hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 13-11 | Research data for problems pertaining to commutative algebra | tebdîlî cebir sahasındaki meselelere dair tetkik verileri |  |
+| **13Axx** | **General commutative ring theory** | **Umûmî tebdîlî halka nazariyesi** |  |
+| 13A02 | Graded rings [See also 16W50] | Müderrec (dereceli) halkalar [Ayrıca bakınız: 16W50] |  |
+| 13A05 | Divisibility and factorizations in commutative rings [See also 13F15] | Tebdîlî halkalarda kābiliyyet-i taksim ve mazrûblarına tahlîller [Ayrıca bakınız: 13F15] |  |
+| 13A15 | Ideals and multiplicative ideal theory in commutative rings | Tebdîlî halkalarda misâliyeler (idealler) ve zarbî misâliye nazariyesi |  |
+| 13A18 | Valuations and their generalizations for commutative rings [See also 12J20] | Tebdîlî halkalar için kıymetlendirmeler ve umûmîleştirmeleri [Ayrıca bakınız: 12J20] |  |
+| 13A30 | Associated graded rings of ideals (Rees ring, form ring), analytic spread and related topics | Misâliyelere mensup müderrec halkalar (Rees halkası, şekil halkası), tahlîlî inbisât ve alâkalı mevzûlar |  |
+| 13A35 | Characteristic p methods (Frobenius endomorphism) and reduction to characteristic p; tight closure [See also 13B22] | p hâssası usulleri (Frobenius zâtî teşâkülü) ve p hâssasına irca'; sıkı inglâk [Ayrıca bakınız: 13B22] |  |
+| 13A50 | Actions of groups on commutative rings; invariant theory [See also 14L24] | Zümrelerin tebdîlî halkalar üzerindeki tesirleri; lâyetegayyerler (değişmezler) nazariyesi [Ayrıca bakınız: 14L24] |  |
+| 13A70 | General commutative ring theory and combinatorics (zero-divisor graphs, annihilating-ideal graphs, etc.) [See also 05C25, 05E40] | Umûmî tebdîlî halka nazariyesi ve terkîbât (sıfır-kāsım rabıta şekilleri, sıfırlayıcı-misâliye rabıta şekilleri ve emsâli) [Ayrıca bakınız: 05C25, 05E40] |  |
 | 13A99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **13Bxx** | **Commutative ring extensions and related topics** | **** |  |
-| 13B02 | Extension theory of commutative rings |  |  |
-| 13B05 | Galois theory and commutative ring extensions |  |  |
-| 13B10 | Morphisms of commutative rings |  |  |
-| 13B21 | Integral dependence in commutative rings; going up, going down |  |  |
-| 13B22 | Integral closure of commutative rings and ideals [See also 13A35]; integrally closed rings, related rings (Japanese, etc.) |  |  |
-| 13B25 | Polynomials over commutative rings [See also 11C08, 11T06, 13F20, 13M10] |  |  |
-| 13B30 | Rings of fractions and localization for commutative rings [See also 16S85] |  |  |
-| 13B35 | Completion of commutative rings [See also 13J10] |  |  |
-| 13B40 | Étale and flat extensions; Henselization; Artin approximation [See also 13J15, 14B12, 14B25] |  |  |
+| **13Bxx** | **Commutative ring extensions and related topics** | **Tebdîlî halka tevsî'leri ve alâkalı mevzûlar** |  |
+| 13B02 | Extension theory of commutative rings | Tebdîlî halkaların tevsî' nazariyesi |  |
+| 13B05 | Galois theory and commutative ring extensions | Galois nazariyesi ve tebdîlî halka tevsî'leri |  |
+| 13B10 | Morphisms of commutative rings | Tebdîlî halkaların teşâkülleri (morfizmleri) |  |
+| 13B21 | Integral dependence in commutative rings; going up, going down | Tebdîlî halkalarda tam bağımlılık; yukarı çıkış, aşağı iniş |  |
+| 13B22 | Integral closure of commutative rings and ideals [See also 13A35]; integrally closed rings, related rings (Japanese, etc.) | Tebdîlî halkaların ve misâliyelerin tam inglâki [Ayrıca bakınız: 13A35]; tam inglâklı halkalar, alâkalı halkalar (Japon halkaları ve emsâli) |  |
+| 13B25 | Polynomials over commutative rings [See also 11C08, 11T06, 13F20, 13M10] | Tebdîlî halkalar üzerinde kesîrü'l-hudûdlar [Ayrıca bakınız: 11C08, 11T06, 13F20, 13M10] |  |
+| 13B30 | Rings of fractions and localization for commutative rings [See also 16S85] | Tebdîlî halkalar için kesir halkaları ve mahallîleştirme [Ayrıca bakınız: 16S85] |  |
+| 13B35 | Completion of commutative rings [See also 13J10] | Tebdîlî halkaların tetmîmi [Ayrıca bakınız: 13J10] |  |
+| 13B40 | Étale and flat extensions; Henselization; Artin approximation [See also 13J15, 14B12, 14B25] | Étale ve musattah (düz) tevsî'ler; Hensel'leştirme; Artin takrîbi [Ayrıca bakınız: 13J15, 14B12, 14B25] |  |
 | 13B99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **13Cxx** | **Theory of modules and ideals in commutative rings** | **** |  |
-| 13C05 | Structure, classification theorems for modules and ideals in commutative rings |  |  |
-| 13C10 | Projective and free modules and ideals in commutative rings [See also 19A13] |  |  |
-| 13C11 | Injective and flat modules and ideals in commutative rings |  |  |
-| 13C12 | Torsion modules and ideals in commutative rings |  |  |
-| 13C13 | Other special types of modules and ideals in commutative rings |  |  |
-| 13C14 | Cohen-Macaulay modules [See also 13H10] |  |  |
-| 13C15 | Dimension theory, depth, related commutative rings (catenary, etc.) |  |  |
-| 13C20 | Class groups [See also 11R29] |  |  |
-| 13C40 | Linkage, complete intersections and determinantal ideals [See also 14M06, 14M10, 14M12] |  |  |
-| 13C60 | Module categories and commutative rings |  |  |
-| 13C70 | Theory of modules and ideals in commutative rings described by combinatorial properties [See also 05C25, 05E40] |  |  |
+| **13Cxx** | **Theory of modules and ideals in commutative rings** | **Tebdîlî halkalarda modüller ve misâliyeler nazariyesi** |  |
+| 13C05 | Structure, classification theorems for modules and ideals in commutative rings | Tebdîlî halkalarda modüller ve misâliyeler için bünye ve tasnif kaziyyeleri |  |
+| 13C10 | Projective and free modules and ideals in commutative rings [See also 19A13] | Tebdîlî halkalarda irtisâmî ve serbest modüller ve misâliyeler [Ayrıca bakınız: 19A13] |  |
+| 13C11 | Injective and flat modules and ideals in commutative rings | Tebdîlî halkalarda dercî ve musattah modüller ve misâliyeler |  |
+| 13C12 | Torsion modules and ideals in commutative rings | Tebdîlî halkalarda iltivâlı (burulmalı) modüller ve misâliyeler |  |
+| 13C13 | Other special types of modules and ideals in commutative rings | Tebdîlî halkalarda sâir hususî nevi modüller ve misâliyeler |  |
+| 13C14 | Cohen-Macaulay modules [See also 13H10] | Cohen-Macaulay modülleri [Ayrıca bakınız: 13H10] |  |
+| 13C15 | Dimension theory, depth, related commutative rings (catenary, etc.) | Buud nazariyesi, umk (derinlik), alâkalı tebdîlî halkalar (silsilevî ve emsâli) |  |
+| 13C20 | Class groups [See also 11R29] | Sınıf zümreleri [Ayrıca bakınız: 11R29] |  |
+| 13C40 | Linkage, complete intersections and determinantal ideals [See also 14M06, 14M10, 14M12] | Rabt, tam tekātu'lar ve muhaddidî misâliyeler [Ayrıca bakınız: 14M06, 14M10, 14M12] |  |
+| 13C60 | Module categories and commutative rings | Modül makûleleri ve tebdîlî halkalar |  |
+| 13C70 | Theory of modules and ideals in commutative rings described by combinatorial properties [See also 05C25, 05E40] | Terkîbî hâsiyetlerle tavsîf edilen, tebdîlî halkalardaki modüller ve misâliyeler nazariyesi [Ayrıca bakınız: 05C25, 05E40] |  |
 | 13C99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **13Dxx** | **Homological methods in commutative ring theory {For noncommutative rings, see 16Exx; for general categories, see 18Gxx}** | **** |  |
-| 13D02 | Syzygies, resolutions, complexes and commutative rings |  |  |
-| 13D03 | (Co)homology of commutative rings and algebras (e.g., Hochschild, André-Quillen, cyclic, dihedral, etc.) |  |  |
-| 13D05 | Homological dimension and commutative rings |  |  |
-| 13D07 | Homological functors on modules of commutative rings (Tor, Ext, etc.) |  |  |
-| 13D09 | Derived categories and commutative rings |  |  |
-| 13D10 | Deformations and infinitesimal methods in commutative ring theory [See also 14B10, 14B12, 14D15, 32Gxx] |  |  |
-| 13D15 | Grothendieck groups, K-theory and commutative rings [See also 14C35, 18F30, 19Axx, 19D50] |  |  |
-| 13D22 | Homological conjectures (intersection theorems) in commutative ring theory |  |  |
-| 13D30 | Torsion theory for commutative rings [See also 13C12, 18E40] |  |  |
-| 13D40 | Hilbert-Samuel and Hilbert-Kunz functions; Poincaré series |  |  |
-| 13D45 | Local cohomology and commutative rings [See also 14B15] |  |  |
+| **13Dxx** | **Homological methods in commutative ring theory {For noncommutative rings, see 16Exx; for general categories, see 18Gxx}** | **Tebdîlî halka nazariyesinde tecânüsî usuller {Gayr-ı tebdîlî halkalar için bakınız: 16Exx; umûmî makûleler için bakınız: 18Gxx}** |  |
+| 13D02 | Syzygies, resolutions, complexes and commutative rings | İktirânlar (sizijiler), inhilâller (çözülümler), mürekkebât ve tebdîlî halkalar | şüpheli: "syzygy" için hey'et ilminin "iktirân"ı teklif edildi |
+| 13D03 | (Co)homology of commutative rings and algebras (e.g., Hochschild, André-Quillen, cyclic, dihedral, etc.) | Tebdîlî halkaların ve cebirlerin (mukābil-)tecânüsü (meselâ Hochschild, André-Quillen, devrî, zû-vecheyn ve emsâli) |  |
+| 13D05 | Homological dimension and commutative rings | Tecânüsî buud ve tebdîlî halkalar |  |
+| 13D07 | Homological functors on modules of commutative rings (Tor, Ext, etc.) | Tebdîlî halkaların modülleri üzerinde tecânüsî nâkiller (funktorlar) (Tor, Ext ve emsâli) | şüpheli: "functor" için "nâkil" teklif edildi |
+| 13D09 | Derived categories and commutative rings | Müştak makûleler ve tebdîlî halkalar |  |
+| 13D10 | Deformations and infinitesimal methods in commutative ring theory [See also 14B10, 14B12, 14D15, 32Gxx] | Tebdîlî halka nazariyesinde tagayyür-i şekiller (deformasyonlar) ve nâmütenâhî küçük usulleri [Ayrıca bakınız: 14B10, 14B12, 14D15, 32Gxx] |  |
+| 13D15 | Grothendieck groups, K-theory and commutative rings [See also 14C35, 18F30, 19Axx, 19D50] | Grothendieck zümreleri, K-nazariyesi ve tebdîlî halkalar [Ayrıca bakınız: 14C35, 18F30, 19Axx, 19D50] |  |
+| 13D22 | Homological conjectures (intersection theorems) in commutative ring theory | Tebdîlî halka nazariyesinde tecânüsî tahminler (tekātu' kaziyyeleri) |  |
+| 13D30 | Torsion theory for commutative rings [See also 13C12, 18E40] | Tebdîlî halkalar için iltivâ nazariyesi [Ayrıca bakınız: 13C12, 18E40] |  |
+| 13D40 | Hilbert-Samuel and Hilbert-Kunz functions; Poincaré series | Hilbert-Samuel ve Hilbert-Kunz tâbileri; Poincaré silsileleri |  |
+| 13D45 | Local cohomology and commutative rings [See also 14B15] | Mahallî mukābil-tecânüs ve tebdîlî halkalar [Ayrıca bakınız: 14B15] |  |
 | 13D99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **13Exx** | **Chain conditions, finiteness conditions in commutative ring theory** | **** |  |
-| 13E05 | Commutative Noetherian rings and modules |  |  |
-| 13E10 | Commutative Artinian rings and modules, finite-dimensional algebras |  |  |
-| 13E15 | Commutative rings and modules of finite generation or presentation; number of generators |  |  |
+| **13Exx** | **Chain conditions, finiteness conditions in commutative ring theory** | **Tebdîlî halka nazariyesinde silsile şartları, mütenâhîlik şartları** |  |
+| 13E05 | Commutative Noetherian rings and modules | Tebdîlî Noether halkaları ve modülleri |  |
+| 13E10 | Commutative Artinian rings and modules, finite-dimensional algebras | Tebdîlî Artin halkaları ve modülleri, mütenâhî buudlu cebirler |  |
+| 13E15 | Commutative rings and modules of finite generation or presentation; number of generators | Mütenâhî tevlîdli yahut mütenâhî arzlı tebdîlî halkalar ve modüller; müvellidlerin adedi |  |
 | 13E99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **13Fxx** | **Arithmetic rings and other special commutative rings** | **** |  |
-| 13F05 | Dedekind, Prüfer, Krull and Mori rings and their generalizations |  |  |
-| 13F07 | Euclidean rings and generalizations |  |  |
-| 13F10 | Principal ideal rings |  |  |
-| 13F15 | Commutative rings defined by factorization properties (e.g., atomic, factorial, half-factorial) [See also 13A05, 14M05] |  |  |
-| 13F20 | Polynomial rings and ideals; rings of integer-valued polynomials [See also 11C08, 13B25] |  |  |
-| 13F25 | Formal power series rings [See also 13J05] |  |  |
-| 13F30 | Valuation rings [See also 13A18] |  |  |
-| 13F35 | Witt vectors and related rings |  |  |
-| 13F40 | Excellent rings |  |  |
-| 13F45 | Seminormal rings |  |  |
-| 13F50 | Rings with straightening laws, Hodge algebras |  |  |
-| 13F55 | Commutative rings defined by monomial ideals; Stanley-Reisner face rings; simplicial complexes [See also 55U10] |  |  |
-| 13F60 | Cluster algebras |  |  |
-| 13F65 | Commutative rings defined by binomial ideals, toric rings, etc. [See also 14M25] |  |  |
-| 13F70 | Other commutative rings defined by combinatorial properties |  |  |
+| **13Fxx** | **Arithmetic rings and other special commutative rings** | **Hesâbî halkalar ve sâir hususî tebdîlî halkalar** |  |
+| 13F05 | Dedekind, Prüfer, Krull and Mori rings and their generalizations | Dedekind, Prüfer, Krull ve Mori halkaları ve umûmîleştirmeleri |  |
+| 13F07 | Euclidean rings and generalizations | Uklîdis halkaları ve umûmîleştirmeleri |  |
+| 13F10 | Principal ideal rings | Aslî misâliye halkaları |  |
+| 13F15 | Commutative rings defined by factorization properties (e.g., atomic, factorial, half-factorial) [See also 13A05, 14M05] | Mazrûblarına tahlîl hâsiyetleriyle ta'rîf edilen tebdîlî halkalar (meselâ cevherî, tahlîlî, nîm-tahlîlî) [Ayrıca bakınız: 13A05, 14M05] |  |
+| 13F20 | Polynomial rings and ideals; rings of integer-valued polynomials [See also 11C08, 13B25] | Kesîrü'l-hudûd halkaları ve misâliyeleri; tam kıymetli kesîrü'l-hudûdların halkaları [Ayrıca bakınız: 11C08, 13B25] |  |
+| 13F25 | Formal power series rings [See also 13J05] | Sûrî kuvvet silsilesi halkaları [Ayrıca bakınız: 13J05] |  |
+| 13F30 | Valuation rings [See also 13A18] | Kıymetlendirme halkaları [Ayrıca bakınız: 13A18] |  |
+| 13F35 | Witt vectors and related rings | Witt müteveccihleri ve alâkalı halkalar |  |
+| 13F40 | Excellent rings | Mümtaz halkalar |  |
+| 13F45 | Seminormal rings | Nîm-mutâd halkalar |  |
+| 13F50 | Rings with straightening laws, Hodge algebras | İstikāmet kanunlu halkalar, Hodge cebirleri |  |
+| 13F55 | Commutative rings defined by monomial ideals; Stanley-Reisner face rings; simplicial complexes [See also 55U10] | Tek-haddî misâliyelerle ta'rîf edilen tebdîlî halkalar; Stanley-Reisner yüz halkaları; basît mürekkebât [Ayrıca bakınız: 55U10] |  |
+| 13F60 | Cluster algebras | Ankūd (küme) cebirleri | şüpheli: "cluster algebra" için "ankūd" teklif edildi |
+| 13F65 | Commutative rings defined by binomial ideals, toric rings, etc. [See also 14M25] | Dü-haddî misâliyelerle ta'rîf edilen tebdîlî halkalar, torik halkalar ve emsâli [Ayrıca bakınız: 14M25] |  |
+| 13F70 | Other commutative rings defined by combinatorial properties | Terkîbî hâsiyetlerle ta'rîf edilen sâir tebdîlî halkalar |  |
 | 13F99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **13Gxx** | **Integral domains** | **** |  |
-| 13G05 | Integral domains |  |  |
+| **13Gxx** | **Integral domains** | **Tam mıntıkalar** |  |
+| 13G05 | Integral domains | Tam mıntıkalar |  |
 | 13G99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **13Hxx** | **Local rings and semilocal rings** | **** |  |
-| 13H05 | Regular local rings |  |  |
-| 13H10 | Special types (Cohen-Macaulay, Gorenstein, Buchsbaum, etc.) [See also 14M05] |  |  |
-| 13H15 | Multiplicity theory and related topics [See also 14C17] |  |  |
+| **13Hxx** | **Local rings and semilocal rings** | **Mahallî halkalar ve nîm-mahallî halkalar** |  |
+| 13H05 | Regular local rings | Muntazam mahallî halkalar |  |
+| 13H10 | Special types (Cohen-Macaulay, Gorenstein, Buchsbaum, etc.) [See also 14M05] | Hususî nevi'ler (Cohen-Macaulay, Gorenstein, Buchsbaum ve emsâli) [Ayrıca bakınız: 14M05] |  |
+| 13H15 | Multiplicity theory and related topics [See also 14C17] | Tekessür (katlılık) nazariyesi ve alâkalı mevzûlar [Ayrıca bakınız: 14C17] |  |
 | 13H99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **13Jxx** | **Topological rings and modules [See also 16W60, 16W80]** | **** |  |
-| 13J05 | Power series rings [See also 13F25] |  |  |
-| 13J07 | Analytical algebras and rings [See also 32B05] |  |  |
-| 13J10 | Complete rings, completion [See also 13B35] |  |  |
-| 13J15 | Henselian rings [See also 13B40] |  |  |
-| 13J20 | Global topological rings |  |  |
-| 13J25 | Ordered rings [See also 06F25] |  |  |
-| 13J30 | Real algebra [See also 12D15, 14Pxx] |  |  |
+| **13Jxx** | **Topological rings and modules [See also 16W60, 16W80]** | **Vaz'î halkalar ve modüller [Ayrıca bakınız: 16W60, 16W80]** |  |
+| 13J05 | Power series rings [See also 13F25] | Kuvvet silsilesi halkaları [Ayrıca bakınız: 13F25] |  |
+| 13J07 | Analytical algebras and rings [See also 32B05] | Tahlîlî cebirler ve halkalar [Ayrıca bakınız: 32B05] |  |
+| 13J10 | Complete rings, completion [See also 13B35] | Tâm halkalar, tetmîm [Ayrıca bakınız: 13B35] |  |
+| 13J15 | Henselian rings [See also 13B40] | Hensel halkaları [Ayrıca bakınız: 13B40] |  |
+| 13J20 | Global topological rings | Küllî vaz'î halkalar |  |
+| 13J25 | Ordered rings [See also 06F25] | Müretteb halkalar [Ayrıca bakınız: 06F25] |  |
+| 13J30 | Real algebra [See also 12D15, 14Pxx] | Hakîkî cebir [Ayrıca bakınız: 12D15, 14Pxx] |  |
 | 13J99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **13Lxx** | **Applications of logic to commutative algebra [See also 03Cxx, 03Hxx]** | **** |  |
-| 13L05 | Applications of logic to commutative algebra [See also 03Cxx, 03Hxx] |  |  |
+| **13Lxx** | **Applications of logic to commutative algebra [See also 03Cxx, 03Hxx]** | **Mantığın tebdîlî cebre tatbîkleri [Ayrıca bakınız: 03Cxx, 03Hxx]** |  |
+| 13L05 | Applications of logic to commutative algebra [See also 03Cxx, 03Hxx] | Mantığın tebdîlî cebre tatbîkleri [Ayrıca bakınız: 03Cxx, 03Hxx] |  |
 | 13L99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **13Mxx** | **Finite commutative rings {For number-theoretic aspects, see 11Txx}** | **** |  |
-| 13M05 | Structure of finite commutative rings |  |  |
-| 13M10 | Polynomials and finite commutative rings |  |  |
+| **13Mxx** | **Finite commutative rings {For number-theoretic aspects, see 11Txx}** | **Mütenâhî tebdîlî halkalar {Nazariye-i a'dâda ait cihetler için bakınız: 11Txx}** |  |
+| 13M05 | Structure of finite commutative rings | Mütenâhî tebdîlî halkaların bünyesi |  |
+| 13M10 | Polynomials and finite commutative rings | Kesîrü'l-hudûdlar ve mütenâhî tebdîlî halkalar |  |
 | 13M99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **13Nxx** | **Differential algebra [See also 12H05, 14F10]** | **** |  |
-| 13N05 | Modules of differentials |  |  |
-| 13N10 | Commutative rings of differential operators and their modules [See also 16S32, 32C38] |  |  |
-| 13N15 | Derivations and commutative rings |  |  |
+| **13Nxx** | **Differential algebra [See also 12H05, 14F10]** | **Tefâzulî cebir [Ayrıca bakınız: 12H05, 14F10]** |  |
+| 13N05 | Modules of differentials | Tefâzullerin modülleri |  |
+| 13N10 | Commutative rings of differential operators and their modules [See also 16S32, 32C38] | Tefâzulî âmillerin tebdîlî halkaları ve bunların modülleri [Ayrıca bakınız: 16S32, 32C38] |  |
+| 13N15 | Derivations and commutative rings | İştikāklar (türevlemeler) ve tebdîlî halkalar |  |
 | 13N99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **13Pxx** | **Computational aspects and applications of commutative rings [See also 14Qxx, 68W30] {For software etc., see 13-04}** | **** |  |
-| 13P05 | Polynomials, factorization in commutative rings [See also 12-08] |  |  |
-| 13P10 | Gröbner bases; other bases for ideals and modules (e.g., Janet and border bases) |  |  |
-| 13P15 | Solving polynomial systems; resultants |  |  |
-| 13P20 | Computational homological algebra [See also 13Dxx] |  |  |
-| 13P25 | Applications of commutative algebra (e.g., to statistics, control theory, optimization, etc.) |  |  |
+| **13Pxx** | **Computational aspects and applications of commutative rings [See also 14Qxx, 68W30] {For software etc., see 13-04}** | **Tebdîlî halkaların hesâbî cihetleri ve tatbîkleri [Ayrıca bakınız: 14Qxx, 68W30] {Programlar ve emsâli için bakınız: 13-04}** |  |
+| 13P05 | Polynomials, factorization in commutative rings [See also 12-08] | Tebdîlî halkalarda kesîrü'l-hudûdlar, mazrûblarına tahlîl [Ayrıca bakınız: 12-08] |  |
+| 13P10 | Gröbner bases; other bases for ideals and modules (e.g., Janet and border bases) | Gröbner esasları; misâliyeler ve modüller için sâir esaslar (meselâ Janet ve hudud esasları) |  |
+| 13P15 | Solving polynomial systems; resultants | Kesîrü'l-hudûd nizâmlarının halli; hâsılalar (rezültantlar) |  |
+| 13P20 | Computational homological algebra [See also 13Dxx] | Hesâbî tecânüsî cebir [Ayrıca bakınız: 13Dxx] |  |
+| 13P25 | Applications of commutative algebra (e.g., to statistics, control theory, optimization, etc.) | Tebdîlî cebrin tatbîkleri (meselâ ihsâiyyâta, zabt nazariyesine, tahsîne ve emsâline) |  |
 | 13P99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
-## 14-XX — Algebraic geometry
+## 14-XX — Hendese-i cebriyye (cebrî hendese)
 
 Algebraic geometry
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 14-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to algebraic geometry |  |  |
-| 14-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to algebraic geometry |  |  |
-| 14-02 | Research exposition (monographs, survey articles) pertaining to algebraic geometry |  |  |
-| 14-03 | History of algebraic geometry [Consider also classification numbers from Section 01] |  |  |
-| 14-04 | Software, source code, etc. for problems pertaining to algebraic geometry |  |  |
-| 14-06 | Proceedings, conferences, collections, etc. pertaining to algebraic geometry |  |  |
-| 14-11 | Research data for problems pertaining to algebraic geometry |  |  |
-| **14Axx** | **Foundations of algebraic geometry** | **** |  |
-| 14A05 | Relevant commutative algebra [See also 13-XX] |  |  |
-| 14A10 | Varieties and morphisms |  |  |
-| 14A15 | Schemes and morphisms |  |  |
-| 14A20 | Generalizations (algebraic spaces, stacks) |  |  |
-| 14A21 | Logarithmic algebraic geometry, log schemes |  |  |
-| 14A22 | Noncommutative algebraic geometry [See also 16S38] |  |  |
-| 14A23 | Geometry over the field with one element |  |  |
-| 14A25 | Elementary questions in algebraic geometry |  |  |
-| 14A30 | Fundamental constructions in algebraic geometry involving higher and derived categories (homotopical algebraic geometry, derived algebraic geometry, etc.) {For categorical aspects, see 18Fxx, 18Gxx} |  |  |
+| 14-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to algebraic geometry | hendese-i cebriyye hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 14-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to algebraic geometry | hendese-i cebriyye hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 14-02 | Research exposition (monographs, survey articles) pertaining to algebraic geometry | hendese-i cebriyye hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 14-03 | History of algebraic geometry [Consider also classification numbers from Section 01] | Hendese-i cebriyyenin târihi [01. babın tasnif numaralarına da bakılsın] |  |
+| 14-04 | Software, source code, etc. for problems pertaining to algebraic geometry | hendese-i cebriyye sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 14-06 | Proceedings, conferences, collections, etc. pertaining to algebraic geometry | hendese-i cebriyye hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 14-11 | Research data for problems pertaining to algebraic geometry | hendese-i cebriyye sahasındaki meselelere dair tetkik verileri |  |
+| **14Axx** | **Foundations of algebraic geometry** | **Hendese-i cebriyyenin esâsâtı** |  |
+| 14A05 | Relevant commutative algebra [See also 13-XX] | Alâkalı tebdîlî cebir [Ayrıca bakınız: 13-XX] |  |
+| 14A10 | Varieties and morphisms | Mütenevviât ve teşâküller |  |
+| 14A15 | Schemes and morphisms | Muhattatlar (şemalar) ve teşâküller | şüpheli: Grothendieck'in "scheme"i için Arapça "muhattat"tan teklif |
+| 14A20 | Generalizations (algebraic spaces, stacks) | Umûmîleştirmeler (cebrî fezâlar, istifler) | şüpheli: "stack" için "istif" teklif edildi |
+| 14A21 | Logarithmic algebraic geometry, log schemes | Logaritmik hendese-i cebriyye, log muhattatları |  |
+| 14A22 | Noncommutative algebraic geometry [See also 16S38] | Gayr-ı tebdîlî hendese-i cebriyye [Ayrıca bakınız: 16S38] |  |
+| 14A23 | Geometry over the field with one element | Tek unsurlu cisim üzerinde hendese |  |
+| 14A25 | Elementary questions in algebraic geometry | Hendese-i cebriyyede ibtidâî meseleler |  |
+| 14A30 | Fundamental constructions in algebraic geometry involving higher and derived categories (homotopical algebraic geometry, derived algebraic geometry, etc.) {For categorical aspects, see 18Fxx, 18Gxx} | Hendese-i cebriyyede yüksek ve müştak makûleleri ihtivâ eden esas inşâlar (tahavvül-i muttasıla ait hendese-i cebriyye, müştak hendese-i cebriyye ve emsâli) {Makûlî cihetler için bakınız: 18Fxx, 18Gxx} | şüpheli: "homotopy" için "tahavvül-i muttasıl" teklif edildi |
 | 14A99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **14Bxx** | **Local theory in algebraic geometry** | **** |  |
-| 14B05 | Singularities in algebraic geometry [See also 14E15, 14H20, 14J17, 32Sxx, 58Kxx] |  |  |
-| 14B07 | Deformations of singularities [See also 14D15, 32S30] |  |  |
-| 14B10 | Infinitesimal methods in algebraic geometry [See also 13D10] |  |  |
-| 14B12 | Local deformation theory, Artin approximation, etc. [See also 13B40, 13D10] |  |  |
-| 14B15 | Local cohomology and algebraic geometry [See also 13D45, 32C36] |  |  |
-| 14B20 | Formal neighborhoods in algebraic geometry |  |  |
-| 14B25 | Local structure of morphisms in algebraic geometry: étale, flat, etc. [See also 13B40] |  |  |
+| **14Bxx** | **Local theory in algebraic geometry** | **Hendese-i cebriyyede mahallî nazariye** |  |
+| 14B05 | Singularities in algebraic geometry [See also 14E15, 14H20, 14J17, 32Sxx, 58Kxx] | Hendese-i cebriyyede infirâdlar (münferid noktalar, tekillikler) [Ayrıca bakınız: 14E15, 14H20, 14J17, 32Sxx, 58Kxx] |  |
+| 14B07 | Deformations of singularities [See also 14D15, 32S30] | İnfirâdların tagayyür-i şekilleri [Ayrıca bakınız: 14D15, 32S30] |  |
+| 14B10 | Infinitesimal methods in algebraic geometry [See also 13D10] | Hendese-i cebriyyede nâmütenâhî küçük usulleri [Ayrıca bakınız: 13D10] |  |
+| 14B12 | Local deformation theory, Artin approximation, etc. [See also 13B40, 13D10] | Mahallî tagayyür-i şekil nazariyesi, Artin takrîbi ve emsâli [Ayrıca bakınız: 13B40, 13D10] |  |
+| 14B15 | Local cohomology and algebraic geometry [See also 13D45, 32C36] | Mahallî mukābil-tecânüs ve hendese-i cebriyye [Ayrıca bakınız: 13D45, 32C36] |  |
+| 14B20 | Formal neighborhoods in algebraic geometry | Hendese-i cebriyyede sûrî civarlar |  |
+| 14B25 | Local structure of morphisms in algebraic geometry: étale, flat, etc. [See also 13B40] | Hendese-i cebriyyede teşâküllerin mahallî bünyesi: étale, musattah ve emsâli [Ayrıca bakınız: 13B40] |  |
 | 14B99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **14Cxx** | **Cycles and subschemes** | **** |  |
-| 14C05 | Parametrization (Chow and Hilbert schemes) |  |  |
-| 14C15 | (Equivariant) Chow groups and rings; motives |  |  |
-| 14C17 | Intersection theory, characteristic classes, intersection multiplicities in algebraic geometry [See also 13H15] |  |  |
-| 14C20 | Divisors, linear systems, invertible sheaves |  |  |
-| 14C21 | Pencils, nets, webs in algebraic geometry [See also 53A60] |  |  |
-| 14C22 | Picard groups |  |  |
-| 14C25 | Algebraic cycles |  |  |
-| 14C30 | Transcendental methods, Hodge theory (algebro-geometric aspects) [See also 14D07, 32G20, 32J25, 32S35, 58A14], Hodge conjecture |  |  |
-| 14C34 | Torelli problem [See also 32G20] |  |  |
-| 14C35 | Applications of methods of algebraic K-theory in algebraic geometry [See also 19Exx] |  |  |
-| 14C40 | Riemann-Roch theorems [See also 19E20, 19L10] |  |  |
+| **14Cxx** | **Cycles and subschemes** | **Devreler ve alt muhattatlar** |  |
+| 14C05 | Parametrization (Chow and Hilbert schemes) | Vasîtla ifâde (parametrizasyon) (Chow ve Hilbert muhattatları) |  |
+| 14C15 | (Equivariant) Chow groups and rings; motives | (Hem-tegayyürlü) Chow zümreleri ve halkaları; motifler |  |
+| 14C17 | Intersection theory, characteristic classes, intersection multiplicities in algebraic geometry [See also 13H15] | Hendese-i cebriyyede tekātu' nazariyesi, hâssa sınıfları, tekātu' tekessürleri [Ayrıca bakınız: 13H15] |  |
+| 14C20 | Divisors, linear systems, invertible sheaves | Kāsımlar, hattî nizâmlar, kābil-i aks desteler |  |
+| 14C21 | Pencils, nets, webs in algebraic geometry [See also 53A60] | Hendese-i cebriyyede demetler, ağlar, nesîcler (dokular) [Ayrıca bakınız: 53A60] |  |
+| 14C22 | Picard groups | Picard zümreleri |  |
+| 14C25 | Algebraic cycles | Cebrî devreler |  |
+| 14C30 | Transcendental methods, Hodge theory (algebro-geometric aspects) [See also 14D07, 32G20, 32J25, 32S35, 58A14], Hodge conjecture | Müteâlî usuller, Hodge nazariyesi (cebrî-hendesî cihetler), Hodge tahmini [Ayrıca bakınız: 14D07, 32G20, 32J25, 32S35, 58A14] |  |
+| 14C34 | Torelli problem [See also 32G20] | Torelli meselesi [Ayrıca bakınız: 32G20] |  |
+| 14C35 | Applications of methods of algebraic K-theory in algebraic geometry [See also 19Exx] | Cebrî K-nazariyesi usullerinin hendese-i cebriyyede tatbîkleri [Ayrıca bakınız: 19Exx] |  |
+| 14C40 | Riemann-Roch theorems [See also 19E20, 19L10] | Riemann-Roch kaziyyeleri [Ayrıca bakınız: 19E20, 19L10] |  |
 | 14C99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **14Dxx** | **Families, fibrations in algebraic geometry** | **** |  |
-| 14D05 | Structure of families (Picard-Lefschetz, monodromy, etc.) |  |  |
-| 14D06 | Fibrations, degenerations in algebraic geometry |  |  |
-| 14D07 | Variation of Hodge structures (algebro-geometric aspects) [See also 32G20] |  |  |
-| 14D10 | Arithmetic ground fields (finite, local, global) and families or fibrations |  |  |
-| 14D15 | Formal methods and deformations in algebraic geometry [See also 13D10, 14B07, 32Gxx] |  |  |
-| 14D20 | Algebraic moduli problems, moduli of vector bundles {For analytic moduli problems, see 32G13} |  |  |
-| 14D21 | Applications of vector bundles and moduli spaces in mathematical physics (twistor theory, instantons, quantum field theory) [See also 32L25, 81Txx] |  |  |
-| 14D22 | Fine and coarse moduli spaces |  |  |
-| 14D23 | Stacks and moduli problems |  |  |
-| 14D24 | Geometric Langlands program (algebro-geometric aspects) [See also 22E57] |  |  |
+| **14Dxx** | **Families, fibrations in algebraic geometry** | **Hendese-i cebriyyede âileler, telyîfler (liflenmeler)** |  |
+| 14D05 | Structure of families (Picard-Lefschetz, monodromy, etc.) | Âilelerin bünyesi (Picard-Lefschetz, monodromi ve emsâli) |  |
+| 14D06 | Fibrations, degenerations in algebraic geometry | Hendese-i cebriyyede telyîfler, inhitâtlar (dejenerasyonlar) |  |
+| 14D07 | Variation of Hodge structures (algebro-geometric aspects) [See also 32G20] | Hodge bünyelerinin tagayyürü (cebrî-hendesî cihetler) [Ayrıca bakınız: 32G20] |  |
+| 14D10 | Arithmetic ground fields (finite, local, global) and families or fibrations | Hesâbî esas cisimler (mütenâhî, mahallî, küllî) ve âileler yahut telyîfler |  |
+| 14D15 | Formal methods and deformations in algebraic geometry [See also 13D10, 14B07, 32Gxx] | Hendese-i cebriyyede sûrî usuller ve tagayyür-i şekiller [Ayrıca bakınız: 13D10, 14B07, 32Gxx] |  |
+| 14D20 | Algebraic moduli problems, moduli of vector bundles {For analytic moduli problems, see 32G13} | Cebrî mikyâs meseleleri, müteveccihe huzmelerinin mikyâs fezâları {Tahlîlî mikyâs meseleleri için bakınız: 32G13} |  |
+| 14D21 | Applications of vector bundles and moduli spaces in mathematical physics (twistor theory, instantons, quantum field theory) [See also 32L25, 81Txx] | Müteveccihe huzmelerinin ve mikyâs fezâlarının riyâzî hikmet-i tabîiyyede tatbîkleri (tvistör nazariyesi, instantonlar, kuantum sahası nazariyesi) [Ayrıca bakınız: 32L25, 81Txx] |  |
+| 14D22 | Fine and coarse moduli spaces | İnce ve kaba mikyâs fezâları |  |
+| 14D23 | Stacks and moduli problems | İstifler ve mikyâs meseleleri |  |
+| 14D24 | Geometric Langlands program (algebro-geometric aspects) [See also 22E57] | Hendesî Langlands programı (cebrî-hendesî cihetler) [Ayrıca bakınız: 22E57] |  |
 | 14D99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **14Exx** | **Birational geometry** | **** |  |
-| 14E05 | Rational and birational maps |  |  |
-| 14E07 | Birational automorphisms, Cremona group and generalizations |  |  |
-| 14E08 | Rationality questions in algebraic geometry [See also 14M20] |  |  |
-| 14E15 | Global theory and resolution of singularities (algebro-geometric aspects) [See also 14B05, 32S20, 32S45] |  |  |
-| 14E16 | McKay correspondence |  |  |
-| 14E18 | Arcs and motivic integration |  |  |
-| 14E20 | Coverings in algebraic geometry [See also 14H30] |  |  |
-| 14E22 | Ramification problems in algebraic geometry [See also 11S15] |  |  |
-| 14E25 | Embeddings in algebraic geometry |  |  |
-| 14E30 | Minimal model program (Mori theory, extremal rays) |  |  |
+| **14Exx** | **Birational geometry** | **Mütekābil muntak (birasyonel) hendese** |  |
+| 14E05 | Rational and birational maps | Muntak ve mütekābil muntak tatbîkler (resimler) |  |
+| 14E07 | Birational automorphisms, Cremona group and generalizations | Mütekābil muntak zâtî temâsüller, Cremona zümresi ve umûmîleştirmeleri |  |
+| 14E08 | Rationality questions in algebraic geometry [See also 14M20] | Hendese-i cebriyyede muntaklık meseleleri [Ayrıca bakınız: 14M20] |  |
+| 14E15 | Global theory and resolution of singularities (algebro-geometric aspects) [See also 14B05, 32S20, 32S45] | Küllî nazariye ve infirâdların tahlîli (çözülmesi) (cebrî-hendesî cihetler) [Ayrıca bakınız: 14B05, 32S20, 32S45] |  |
+| 14E16 | McKay correspondence | McKay tekābülü |  |
+| 14E18 | Arcs and motivic integration | Kavisler (yaylar) ve motifî tamâmlama |  |
+| 14E20 | Coverings in algebraic geometry [See also 14H30] | Hendese-i cebriyyede örtüler [Ayrıca bakınız: 14H30] |  |
+| 14E22 | Ramification problems in algebraic geometry [See also 11S15] | Hendese-i cebriyyede teşa'ub meseleleri [Ayrıca bakınız: 11S15] |  |
+| 14E25 | Embeddings in algebraic geometry | Hendese-i cebriyyede dercler (gömmeler) |  |
+| 14E30 | Minimal model program (Mori theory, extremal rays) | Asgarî numûne programı (Mori nazariyesi, nihâî şuâlar) |  |
 | 14E99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **14Fxx** | **(Co)homology theory in algebraic geometry [See also 13Dxx]** | **** |  |
-| 14F06 | Sheaves in algebraic geometry [See also 14F08, 14H60, 14J60, 18F20, 32L10, 46M20] |  |  |
-| 14F08 | Derived categories of sheaves, dg categories, and related constructions in algebraic geometry [See also 14A30, 14F06, 18Gxx] |  |  |
-| 14F10 | Differentials and other special sheaves; D-modules; Bernstein-Sato ideals and polynomials [See also 13Nxx, 32C38] |  |  |
-| 14F17 | Vanishing theorems in algebraic geometry [See also 32L20] |  |  |
-| 14F18 | Multiplier ideals |  |  |
-| 14F20 | Étale and other Grothendieck topologies and (co)homologies |  |  |
-| 14F22 | Brauer groups of schemes [See also 12G05, 16K50] |  |  |
-| 14F25 | Classical real and complex (co)homology in algebraic geometry |  |  |
-| 14F30 | p-adic cohomology, crystalline cohomology |  |  |
-| 14F35 | Homotopy theory and fundamental groups in algebraic geometry [See also 14H30] |  |  |
-| 14F40 | de Rham cohomology and algebraic geometry [See also 14C30, 32C35, 32L10] |  |  |
-| 14F42 | Motivic cohomology; motivic homotopy theory [See also 19E15] |  |  |
-| 14F43 | Other algebro-geometric (co)homologies (e.g., intersection, equivariant, Lawson, Deligne (co)homologies) |  |  |
-| 14F45 | Topological properties in algebraic geometry |  |  |
+| **14Fxx** | **(Co)homology theory in algebraic geometry [See also 13Dxx]** | **Hendese-i cebriyyede (mukābil-)tecânüs nazariyesi [Ayrıca bakınız: 13Dxx]** |  |
+| 14F06 | Sheaves in algebraic geometry [See also 14F08, 14H60, 14J60, 18F20, 32L10, 46M20] | Hendese-i cebriyyede desteler [Ayrıca bakınız: 14F08, 14H60, 14J60, 18F20, 32L10, 46M20] |  |
+| 14F08 | Derived categories of sheaves, dg categories, and related constructions in algebraic geometry [See also 14A30, 14F06, 18Gxx] | Hendese-i cebriyyede destelerin müştak makûleleri, dg-makûleler ve alâkalı inşâlar [Ayrıca bakınız: 14A30, 14F06, 18Gxx] |  |
+| 14F10 | Differentials and other special sheaves; D-modules; Bernstein-Sato ideals and polynomials [See also 13Nxx, 32C38] | Tefâzuller ve sâir hususî desteler; D-modülleri; Bernstein-Sato misâliyeleri ve kesîrü'l-hudûdları [Ayrıca bakınız: 13Nxx, 32C38] |  |
+| 14F17 | Vanishing theorems in algebraic geometry [See also 32L20] | Hendese-i cebriyyede zevâl (sıfırlanma) kaziyyeleri [Ayrıca bakınız: 32L20] |  |
+| 14F18 | Multiplier ideals | Zârib (çarpan) misâliyeleri |  |
+| 14F20 | Étale and other Grothendieck topologies and (co)homologies | Étale ve sâir Grothendieck hendese-i vaz'iyyeleri ve (mukābil-)tecânüsleri |  |
+| 14F22 | Brauer groups of schemes [See also 12G05, 16K50] | Muhattatların Brauer zümreleri [Ayrıca bakınız: 12G05, 16K50] |  |
+| 14F25 | Classical real and complex (co)homology in algebraic geometry | Hendese-i cebriyyede klasik hakîkî ve mürekkeb (mukābil-)tecânüs |  |
+| 14F30 | p-adic cohomology, crystalline cohomology | p-adî mukābil-tecânüs, billûrî mukābil-tecânüs |  |
+| 14F35 | Homotopy theory and fundamental groups in algebraic geometry [See also 14H30] | Hendese-i cebriyyede tahavvül-i muttasıl (homotopi) nazariyesi ve esas zümreler [Ayrıca bakınız: 14H30] |  |
+| 14F40 | de Rham cohomology and algebraic geometry [See also 14C30, 32C35, 32L10] | de Rham mukābil-tecânüsü ve hendese-i cebriyye [Ayrıca bakınız: 14C30, 32C35, 32L10] |  |
+| 14F42 | Motivic cohomology; motivic homotopy theory [See also 19E15] | Motifî mukābil-tecânüs; motifî tahavvül-i muttasıl nazariyesi [Ayrıca bakınız: 19E15] |  |
+| 14F43 | Other algebro-geometric (co)homologies (e.g., intersection, equivariant, Lawson, Deligne (co)homologies) | Sâir cebrî-hendesî (mukābil-)tecânüsler (meselâ tekātu', hem-tegayyürlü, Lawson, Deligne (mukābil-)tecânüsleri) |  |
+| 14F45 | Topological properties in algebraic geometry | Hendese-i cebriyyede vaz'î hâsiyetler |  |
 | 14F99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **14Gxx** | **Arithmetic problems in algebraic geometry; Diophantine geometry [See also 11Dxx, 11Gxx]** | **** |  |
-| 14G05 | Rational points |  |  |
-| 14G10 | Zeta functions and related questions in algebraic geometry (e.g., Birch-Swinnerton-Dyer conjecture) [See also 11G40] |  |  |
-| 14G12 | Hasse principle, weak and strong approximation, Brauer-Manin obstruction [See also 14F22] |  |  |
-| 14G15 | Finite ground fields in algebraic geometry |  |  |
-| 14G17 | Positive characteristic ground fields in algebraic geometry |  |  |
-| 14G20 | Local ground fields in algebraic geometry |  |  |
-| 14G22 | Rigid analytic geometry |  |  |
-| 14G25 | Global ground fields in algebraic geometry |  |  |
-| 14G27 | Other nonalgebraically closed ground fields in algebraic geometry |  |  |
-| 14G32 | Universal profinite groups (relationship to moduli spaces, projective and moduli towers, Galois theory) |  |  |
-| 14G35 | Modular and Shimura varieties [See also 11F41, 11F46, 11G18] |  |  |
-| 14G40 | Arithmetic varieties and schemes; Arakelov theory; heights [See also 11G50, 37P30] |  |  |
-| 14G45 | Perfectoid spaces and mixed characteristic |  |  |
-| 14G50 | Applications to coding theory and cryptography of arithmetic geometry [See also 94A60, 94B27, 94B40] |  |  |
+| **14Gxx** | **Arithmetic problems in algebraic geometry; Diophantine geometry [See also 11Dxx, 11Gxx]** | **Hendese-i cebriyyede hesâbî meseleler; Diyofantos hendesesi [Ayrıca bakınız: 11Dxx, 11Gxx]** |  |
+| 14G05 | Rational points | Muntak noktalar |  |
+| 14G10 | Zeta functions and related questions in algebraic geometry (e.g., Birch-Swinnerton-Dyer conjecture) [See also 11G40] | Hendese-i cebriyyede zeta tâbileri ve alâkalı meseleler (meselâ Birch-Swinnerton-Dyer tahmini) [Ayrıca bakınız: 11G40] |  |
+| 14G12 | Hasse principle, weak and strong approximation, Brauer-Manin obstruction [See also 14F22] | Hasse mebdei, zayıf ve kavî takrîb, Brauer-Manin mâni'i [Ayrıca bakınız: 14F22] |  |
+| 14G15 | Finite ground fields in algebraic geometry | Hendese-i cebriyyede mütenâhî esas cisimler |  |
+| 14G17 | Positive characteristic ground fields in algebraic geometry | Hendese-i cebriyyede müsbet hâssalı esas cisimler |  |
+| 14G20 | Local ground fields in algebraic geometry | Hendese-i cebriyyede mahallî esas cisimler |  |
+| 14G22 | Rigid analytic geometry | Sulb tahlîlî hendese |  |
+| 14G25 | Global ground fields in algebraic geometry | Hendese-i cebriyyede küllî esas cisimler |  |
+| 14G27 | Other nonalgebraically closed ground fields in algebraic geometry | Hendese-i cebriyyede cebren mugalak olmayan sâir esas cisimler |  |
+| 14G32 | Universal profinite groups (relationship to moduli spaces, projective and moduli towers, Galois theory) | Küllî mütenâhî-nihâyetli (profinite) zümreler (mikyâs fezâlarıyla, irtisâmî ve mikyâs kuleleriyle, Galois nazariyesiyle münasebet) |  |
+| 14G35 | Modular and Shimura varieties [See also 11F41, 11F46, 11G18] | Mikyâsî ve Shimura mütenevviâtı [Ayrıca bakınız: 11F41, 11F46, 11G18] |  |
+| 14G40 | Arithmetic varieties and schemes; Arakelov theory; heights [See also 11G50, 37P30] | Hesâbî mütenevviât ve muhattatlar; Arakelov nazariyesi; irtifâlar [Ayrıca bakınız: 11G50, 37P30] |  |
+| 14G45 | Perfectoid spaces and mixed characteristic | Perfektoid fezâlar ve mahlût hâssa |  |
+| 14G50 | Applications to coding theory and cryptography of arithmetic geometry [See also 94A60, 94B27, 94B40] | Hesâbî hendesenin remzleme nazariyesine ve ilm-i ta'miyeye tatbîkleri [Ayrıca bakınız: 94A60, 94B27, 94B40] |  |
 | 14G99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **14Hxx** | **Curves in algebraic geometry** | **** |  |
-| 14H05 | Algebraic functions and function fields in algebraic geometry [See also 11R58] |  |  |
-| 14H10 | Families, moduli of curves (algebraic) |  |  |
-| 14H15 | Families, moduli of curves (analytic) [See also 30F10, 32G15] |  |  |
-| 14H20 | Singularities of curves, local rings [See also 13Hxx, 14B05] |  |  |
-| 14H25 | Arithmetic ground fields for curves [See also 11Dxx, 11G05, 14Gxx] |  |  |
-| 14H30 | Coverings of curves, fundamental group [See also 14E20, 14F35] |  |  |
-| 14H37 | Automorphisms of curves |  |  |
-| 14H40 | Jacobians, Prym varieties [See also 32G20] |  |  |
-| 14H42 | Theta functions and curves; Schottky problem [See also 14K25, 32G20] |  |  |
-| 14H45 | Special algebraic curves and curves of low genus |  |  |
-| 14H50 | Plane and space curves |  |  |
-| 14H51 | Special divisors on curves (gonality, Brill-Noether theory) |  |  |
-| 14H52 | Elliptic curves [See also 11G05, 11G07, 14Kxx] |  |  |
-| 14H55 | Riemann surfaces; Weierstrass points; gap sequences [See also 30Fxx] |  |  |
-| 14H57 | Dessins d’enfants theory {For arithmetic aspects, see 11G32} |  |  |
-| 14H60 | Vector bundles on curves and their moduli [See also 14D20, 14F06, 14J60] |  |  |
-| 14H70 | Relationships between algebraic curves and integrable systems |  |  |
-| 14H81 | Relationships between algebraic curves and physics |  |  |
+| **14Hxx** | **Curves in algebraic geometry** | **Hendese-i cebriyyede münhanîler** |  |
+| 14H05 | Algebraic functions and function fields in algebraic geometry [See also 11R58] | Hendese-i cebriyyede cebrî tâbiler ve tâbi cisimleri [Ayrıca bakınız: 11R58] |  |
+| 14H10 | Families, moduli of curves (algebraic) | Münhanîlerin âileleri, mikyâsları (cebrî) |  |
+| 14H15 | Families, moduli of curves (analytic) [See also 30F10, 32G15] | Münhanîlerin âileleri, mikyâsları (tahlîlî) [Ayrıca bakınız: 30F10, 32G15] |  |
+| 14H20 | Singularities of curves, local rings [See also 13Hxx, 14B05] | Münhanîlerin infirâdları, mahallî halkalar [Ayrıca bakınız: 13Hxx, 14B05] |  |
+| 14H25 | Arithmetic ground fields for curves [See also 11Dxx, 11G05, 14Gxx] | Münhanîler için hesâbî esas cisimler [Ayrıca bakınız: 11Dxx, 11G05, 14Gxx] |  |
+| 14H30 | Coverings of curves, fundamental group [See also 14E20, 14F35] | Münhanîlerin örtüleri, esas zümre [Ayrıca bakınız: 14E20, 14F35] |  |
+| 14H37 | Automorphisms of curves | Münhanîlerin zâtî temâsülleri |  |
+| 14H40 | Jacobians, Prym varieties [See also 32G20] | Jacobi mütenevviâtı, Prym mütenevviâtı [Ayrıca bakınız: 32G20] |  |
+| 14H42 | Theta functions and curves; Schottky problem [See also 14K25, 32G20] | Teta tâbileri ve münhanîler; Schottky meselesi [Ayrıca bakınız: 14K25, 32G20] |  |
+| 14H45 | Special algebraic curves and curves of low genus | Hususî cebrî münhanîler ve düşük cinsli münhanîler |  |
+| 14H50 | Plane and space curves | Müstevî ve fezâî münhanîler |  |
+| 14H51 | Special divisors on curves (gonality, Brill-Noether theory) | Münhanîler üzerinde hususî kāsımlar (gonalite, Brill-Noether nazariyesi) |  |
+| 14H52 | Elliptic curves [See also 11G05, 11G07, 14Kxx] | İhlîlecî münhanîler [Ayrıca bakınız: 11G05, 11G07, 14Kxx] |  |
+| 14H55 | Riemann surfaces; Weierstrass points; gap sequences [See also 30Fxx] | Riemann sathları; Weierstrass noktaları; boşluk tevâlîleri [Ayrıca bakınız: 30Fxx] |  |
+| 14H57 | Dessins d’enfants theory {For arithmetic aspects, see 11G32} | Çocuk resimleri (dessins d'enfants) nazariyesi {Hesâbî cihetler için bakınız: 11G32} |  |
+| 14H60 | Vector bundles on curves and their moduli [See also 14D20, 14F06, 14J60] | Münhanîler üzerinde müteveccihe huzmeleri ve bunların mikyâsları [Ayrıca bakınız: 14D20, 14F06, 14J60] |  |
+| 14H70 | Relationships between algebraic curves and integrable systems | Cebrî münhanîler ile kābil-i tamâmlama nizâmlar arasındaki münasebetler |  |
+| 14H81 | Relationships between algebraic curves and physics | Cebrî münhanîler ile hikmet-i tabîiyye arasındaki münasebetler |  |
 | 14H99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **14Jxx** | **Surfaces and higher-dimensional varieties {For analytic theory, see 32Jxx}** | **** |  |
-| 14J10 | Families, moduli, classification: algebraic theory |  |  |
-| 14J15 | Moduli, classification: analytic theory; relations with modular forms [See also 32G13] |  |  |
-| 14J17 | Singularities of surfaces or higher-dimensional varieties [See also 14B05, 14E15, 32S05, 32S25] |  |  |
-| 14J20 | Arithmetic ground fields for surfaces or higher-dimensional varieties [See also 11Dxx, 11G25, 11G35, 14Gxx] |  |  |
-| 14J25 | Special surfaces {For Hilbert modular surfaces, see 14G35} |  |  |
-| 14J26 | Rational and ruled surfaces |  |  |
-| 14J27 | Elliptic surfaces, elliptic or Calabi-Yau fibrations |  |  |
-| 14J28 | K3 surfaces and Enriques surfaces |  |  |
-| 14J29 | Surfaces of general type |  |  |
-| 14J30 | 3-folds |  |  |
-| 14J32 | Calabi-Yau manifolds (algebro-geometric aspects) [See also 32Q25] |  |  |
-| 14J33 | Mirror symmetry (algebro-geometric aspects) [See also 11G42, 53D37] |  |  |
-| 14J35 | 4-folds |  |  |
-| 14J40 | n-folds (n > 4) |  |  |
-| 14J42 | Holomorphic symplectic varieties, hyper-Kähler varieties |  |  |
-| 14J45 | Fano varieties |  |  |
-| 14J50 | Automorphisms of surfaces and higher-dimensional varieties |  |  |
-| 14J60 | Vector bundles on surfaces and higher-dimensional varieties, and their moduli [See also 14D20, 14F06, 14H60, 32Lxx] |  |  |
-| 14J70 | Hypersurfaces and algebraic geometry |  |  |
-| 14J80 | Topology of surfaces (Donaldson polynomials, Seiberg-Witten invariants) |  |  |
-| 14J81 | Relationships between surfaces, higher-dimensional varieties, and physics |  |  |
+| **14Jxx** | **Surfaces and higher-dimensional varieties {For analytic theory, see 32Jxx}** | **Sathlar ve yüksek buudlu mütenevviât {Tahlîlî nazariye için bakınız: 32Jxx}** |  |
+| 14J10 | Families, moduli, classification: algebraic theory | Âileler, mikyâslar, tasnif: cebrî nazariye |  |
+| 14J15 | Moduli, classification: analytic theory; relations with modular forms [See also 32G13] | Mikyâslar, tasnif: tahlîlî nazariye; mikyâsî şekillerle münasebetler [Ayrıca bakınız: 32G13] |  |
+| 14J17 | Singularities of surfaces or higher-dimensional varieties [See also 14B05, 14E15, 32S05, 32S25] | Sathların yahut yüksek buudlu mütenevviâtın infirâdları [Ayrıca bakınız: 14B05, 14E15, 32S05, 32S25] |  |
+| 14J20 | Arithmetic ground fields for surfaces or higher-dimensional varieties [See also 11Dxx, 11G25, 11G35, 14Gxx] | Sathlar yahut yüksek buudlu mütenevviât için hesâbî esas cisimler [Ayrıca bakınız: 11Dxx, 11G25, 11G35, 14Gxx] |  |
+| 14J25 | Special surfaces {For Hilbert modular surfaces, see 14G35} | Hususî sathlar {Hilbert mikyâsî sathları için bakınız: 14G35} |  |
+| 14J26 | Rational and ruled surfaces | Muntak ve mistarî (hatlı) sathlar |  |
+| 14J27 | Elliptic surfaces, elliptic or Calabi-Yau fibrations | İhlîlecî sathlar, ihlîlecî yahut Calabi-Yau telyîfleri |  |
+| 14J28 | K3 surfaces and Enriques surfaces | K3 sathları ve Enriques sathları |  |
+| 14J29 | Surfaces of general type | Umûmî nevi'den sathlar |  |
+| 14J30 | 3-folds | Üç buudlu mütenevviât (3-katlılar) |  |
+| 14J32 | Calabi-Yau manifolds (algebro-geometric aspects) [See also 32Q25] | Calabi-Yau müteşa'ibleri (cebrî-hendesî cihetler) [Ayrıca bakınız: 32Q25] |  |
+| 14J33 | Mirror symmetry (algebro-geometric aspects) [See also 11G42, 53D37] | Mir'ât tenâzuru (cebrî-hendesî cihetler) [Ayrıca bakınız: 11G42, 53D37] |  |
+| 14J35 | 4-folds | Dört buudlu mütenevviât (4-katlılar) |  |
+| 14J40 | n-folds (n > 4) | n buudlu mütenevviât (n > 4) |  |
+| 14J42 | Holomorphic symplectic varieties, hyper-Kähler varieties | Tâm-şekilli simplektik mütenevviât, hiper-Kähler mütenevviâtı |  |
+| 14J45 | Fano varieties | Fano mütenevviâtı |  |
+| 14J50 | Automorphisms of surfaces and higher-dimensional varieties | Sathların ve yüksek buudlu mütenevviâtın zâtî temâsülleri |  |
+| 14J60 | Vector bundles on surfaces and higher-dimensional varieties, and their moduli [See also 14D20, 14F06, 14H60, 32Lxx] | Sathlar ve yüksek buudlu mütenevviât üzerinde müteveccihe huzmeleri ve bunların mikyâsları [Ayrıca bakınız: 14D20, 14F06, 14H60, 32Lxx] |  |
+| 14J70 | Hypersurfaces and algebraic geometry | Fevk-sathlar ve hendese-i cebriyye |  |
+| 14J80 | Topology of surfaces (Donaldson polynomials, Seiberg-Witten invariants) | Sathların hendese-i vaz'iyyesi (Donaldson kesîrü'l-hudûdları, Seiberg-Witten lâyetegayyerleri) |  |
+| 14J81 | Relationships between surfaces, higher-dimensional varieties, and physics | Sathlar, yüksek buudlu mütenevviât ve hikmet-i tabîiyye arasındaki münasebetler |  |
 | 14J99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **14Kxx** | **Abelian varieties and schemes** | **** |  |
-| 14K02 | Isogeny |  |  |
-| 14K05 | Algebraic theory of abelian varieties |  |  |
-| 14K10 | Algebraic moduli of abelian varieties, classification [See also 11G15] |  |  |
-| 14K12 | Subvarieties of abelian varieties |  |  |
-| 14K15 | Arithmetic ground fields for abelian varieties [See also 11Dxx, 11Fxx, 11G10, 14Gxx] |  |  |
-| 14K20 | Analytic theory of abelian varieties; abelian integrals and differentials |  |  |
-| 14K22 | Complex multiplication and abelian varieties [See also 11G15] |  |  |
-| 14K25 | Theta functions and abelian varieties [See also 14H42] |  |  |
-| 14K30 | Picard schemes, higher Jacobians [See also 14H40, 32G20] |  |  |
+| **14Kxx** | **Abelian varieties and schemes** | **Abel mütenevviâtı ve muhattatları** |  |
+| 14K02 | Isogeny | Müşterek-menşelik (izojeni) | şüpheli: "isogeny" için teklif |
+| 14K05 | Algebraic theory of abelian varieties | Abel mütenevviâtının cebrî nazariyesi |  |
+| 14K10 | Algebraic moduli of abelian varieties, classification [See also 11G15] | Abel mütenevviâtının cebrî mikyâsları, tasnif [Ayrıca bakınız: 11G15] |  |
+| 14K12 | Subvarieties of abelian varieties | Abel mütenevviâtının alt mütenevviâtı |  |
+| 14K15 | Arithmetic ground fields for abelian varieties [See also 11Dxx, 11Fxx, 11G10, 14Gxx] | Abel mütenevviâtı için hesâbî esas cisimler [Ayrıca bakınız: 11Dxx, 11Fxx, 11G10, 14Gxx] |  |
+| 14K20 | Analytic theory of abelian varieties; abelian integrals and differentials | Abel mütenevviâtının tahlîlî nazariyesi; Abel tamâmîleri ve tefâzulleri |  |
+| 14K22 | Complex multiplication and abelian varieties [See also 11G15] | Mürekkeb zarb ve Abel mütenevviâtı [Ayrıca bakınız: 11G15] |  |
+| 14K25 | Theta functions and abelian varieties [See also 14H42] | Teta tâbileri ve Abel mütenevviâtı [Ayrıca bakınız: 14H42] |  |
+| 14K30 | Picard schemes, higher Jacobians [See also 14H40, 32G20] | Picard muhattatları, yüksek Jacobi mütenevviâtı [Ayrıca bakınız: 14H40, 32G20] |  |
 | 14K99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **14Lxx** | **Algebraic groups [See also 11E57] {For Lie algebras, see 17B45; for linear algebraic groups, see 20Gxx}** | **** |  |
-| 14L05 | Formal groups, p-divisible groups [See also 55N22] |  |  |
-| 14L10 | Group varieties |  |  |
-| 14L15 | Group schemes |  |  |
-| 14L17 | Affine algebraic groups, hyperalgebra constructions [See also 17B45, 18C40] |  |  |
-| 14L24 | Geometric invariant theory [See also 13A50] |  |  |
-| 14L30 | Group actions on varieties or schemes (quotients) [See also 13A50, 14L24, 14M17] |  |  |
-| 14L35 | Classical groups (algebro-geometric aspects) [See also 20Gxx, 51N30] |  |  |
-| 14L40 | Other algebraic groups (geometric aspects) |  |  |
+| **14Lxx** | **Algebraic groups [See also 11E57] {For Lie algebras, see 17B45; for linear algebraic groups, see 20Gxx}** | **Cebrî zümreler [Ayrıca bakınız: 11E57] {Lie cebirleri için bakınız: 17B45; hattî cebrî zümreler için bakınız: 20Gxx}** |  |
+| 14L05 | Formal groups, p-divisible groups [See also 55N22] | Sûrî zümreler, p-kābil-i taksim zümreler [Ayrıca bakınız: 55N22] |  |
+| 14L10 | Group varieties | Zümre mütenevviâtı |  |
+| 14L15 | Group schemes | Zümre muhattatları |  |
+| 14L17 | Affine algebraic groups, hyperalgebra constructions [See also 17B45, 18C40] | Te'âlüfî (afin) cebrî zümreler, fevk-cebir inşâları [Ayrıca bakınız: 17B45, 18C40] | şüpheli: "affine" için Arapça "ta'âlufî"den teklif |
+| 14L24 | Geometric invariant theory [See also 13A50] | Hendesî lâyetegayyerler nazariyesi [Ayrıca bakınız: 13A50] |  |
+| 14L30 | Group actions on varieties or schemes (quotients) [See also 13A50, 14L24, 14M17] | Mütenevviât yahut muhattatlar üzerinde zümre tesirleri (hâric-i kısmetler) [Ayrıca bakınız: 13A50, 14L24, 14M17] |  |
+| 14L35 | Classical groups (algebro-geometric aspects) [See also 20Gxx, 51N30] | Klasik zümreler (cebrî-hendesî cihetler) [Ayrıca bakınız: 20Gxx, 51N30] |  |
+| 14L40 | Other algebraic groups (geometric aspects) | Sâir cebrî zümreler (hendesî cihetler) |  |
 | 14L99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **14Mxx** | **Special varieties** | **** |  |
-| 14M05 | Varieties defined by ring conditions (factorial, Cohen-Macaulay, seminormal) [See also 13F15, 13F45, 13H10] |  |  |
-| 14M06 | Linkage [See also 13C40] |  |  |
-| 14M07 | Low codimension problems in algebraic geometry |  |  |
-| 14M10 | Complete intersections [See also 13C40] |  |  |
-| 14M12 | Determinantal varieties [See also 13C40] |  |  |
-| 14M15 | Grassmannians, Schubert varieties, flag manifolds [See also 32M10, 51M35] |  |  |
-| 14M17 | Homogeneous spaces and generalizations [See also 32M10, 53C30, 57T15] |  |  |
-| 14M20 | Rational and unirational varieties [See also 14E08] |  |  |
-| 14M22 | Rationally connected varieties |  |  |
-| 14M25 | Toric varieties, Newton polyhedra, Okounkov bodies [See also 52B20] |  |  |
-| 14M27 | Compactifications; symmetric and spherical varieties |  |  |
-| 14M30 | Supervarieties [See also 32C11, 58A50] |  |  |
-| 14M35 | Character varieties |  |  |
+| **14Mxx** | **Special varieties** | **Hususî mütenevviât** |  |
+| 14M05 | Varieties defined by ring conditions (factorial, Cohen-Macaulay, seminormal) [See also 13F15, 13F45, 13H10] | Halka şartlarıyla ta'rîf edilen mütenevviât (tahlîlî, Cohen-Macaulay, nîm-mutâd) [Ayrıca bakınız: 13F15, 13F45, 13H10] |  |
+| 14M06 | Linkage [See also 13C40] | Rabt [Ayrıca bakınız: 13C40] |  |
+| 14M07 | Low codimension problems in algebraic geometry | Hendese-i cebriyyede düşük mütemmim-buud meseleleri |  |
+| 14M10 | Complete intersections [See also 13C40] | Tam tekātu'lar [Ayrıca bakınız: 13C40] |  |
+| 14M12 | Determinantal varieties [See also 13C40] | Muhaddidî mütenevviât [Ayrıca bakınız: 13C40] |  |
+| 14M15 | Grassmannians, Schubert varieties, flag manifolds [See also 32M10, 51M35] | Grassmann mütenevviâtı, Schubert mütenevviâtı, sancak müteşa'ibleri [Ayrıca bakınız: 32M10, 51M35] |  |
+| 14M17 | Homogeneous spaces and generalizations [See also 32M10, 53C30, 57T15] | Mütecânis fezâlar ve umûmîleştirmeleri [Ayrıca bakınız: 32M10, 53C30, 57T15] |  |
+| 14M20 | Rational and unirational varieties [See also 14E08] | Muntak ve vâhid-muntak mütenevviât [Ayrıca bakınız: 14E08] |  |
+| 14M22 | Rationally connected varieties | Muntaken mürtabıt mütenevviât |  |
+| 14M25 | Toric varieties, Newton polyhedra, Okounkov bodies [See also 52B20] | Torik mütenevviât, Newton kesîrü'l-vücûhları, Okounkov mücessemleri [Ayrıca bakınız: 52B20] |  |
+| 14M27 | Compactifications; symmetric and spherical varieties | Mütarâslaştırmalar; mütenâzır ve kürevî mütenevviât |  |
+| 14M30 | Supervarieties [See also 32C11, 58A50] | Fevkânî (süper) mütenevviât [Ayrıca bakınız: 32C11, 58A50] |  |
+| 14M35 | Character varieties | Seciye mütenevviâtı |  |
 | 14M99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **14Nxx** | **Projective and enumerative algebraic geometry [See also 51-XX]** | **** |  |
-| 14N05 | Projective techniques in algebraic geometry [See also 51N35] |  |  |
-| 14N07 | Secant varieties, tensor rank, varieties of sums of powers |  |  |
-| 14N10 | Enumerative problems (combinatorial problems) in algebraic geometry |  |  |
-| 14N15 | Classical problems, Schubert calculus |  |  |
-| 14N20 | Configurations and arrangements of linear subspaces |  |  |
-| 14N25 | Varieties of low degree |  |  |
-| 14N30 | Adjunction problems |  |  |
-| 14N35 | Gromov-Witten invariants, quantum cohomology, Gopakumar-Vafa invariants, Donaldson-Thomas invariants (algebro-geometric aspects) [See also 53D45] |  |  |
+| **14Nxx** | **Projective and enumerative algebraic geometry [See also 51-XX]** | **İrtisâmî ve ta'dâdî hendese-i cebriyye [Ayrıca bakınız: 51-XX]** |  |
+| 14N05 | Projective techniques in algebraic geometry [See also 51N35] | Hendese-i cebriyyede irtisâmî usuller [Ayrıca bakınız: 51N35] |  |
+| 14N07 | Secant varieties, tensor rank, varieties of sums of powers | Kātı' mütenevviâtı, tansör rütbesi, kuvvet mecmû'ları mütenevviâtı |  |
+| 14N10 | Enumerative problems (combinatorial problems) in algebraic geometry | Hendese-i cebriyyede ta'dâdî meseleler (terkîbî meseleler) |  |
+| 14N15 | Classical problems, Schubert calculus | Klasik meseleler, Schubert hesabı |  |
+| 14N20 | Configurations and arrangements of linear subspaces | Hattî alt fezâların heyetleri ve tertipleri |  |
+| 14N25 | Varieties of low degree | Düşük dereceli mütenevviât |  |
+| 14N30 | Adjunction problems | İlhâk meseleleri |  |
+| 14N35 | Gromov-Witten invariants, quantum cohomology, Gopakumar-Vafa invariants, Donaldson-Thomas invariants (algebro-geometric aspects) [See also 53D45] | Gromov-Witten lâyetegayyerleri, kuantum mukābil-tecânüsü, Gopakumar-Vafa lâyetegayyerleri, Donaldson-Thomas lâyetegayyerleri (cebrî-hendesî cihetler) [Ayrıca bakınız: 53D45] |  |
 | 14N99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **14Pxx** | **Real algebraic and real-analytic geometry** | **** |  |
-| 14P05 | Real algebraic sets [See also 12D15, 13J30] |  |  |
-| 14P10 | Semialgebraic sets and related spaces |  |  |
-| 14P15 | Real-analytic and semi-analytic sets [See also 32B20, 32C05] |  |  |
-| 14P20 | Nash functions and manifolds [See also 32C07, 58A07] |  |  |
-| 14P25 | Topology of real algebraic varieties |  |  |
+| **14Pxx** | **Real algebraic and real-analytic geometry** | **Hakîkî cebrî ve hakîkî-tahlîlî hendese** |  |
+| 14P05 | Real algebraic sets [See also 12D15, 13J30] | Hakîkî cebrî mecmûalar [Ayrıca bakınız: 12D15, 13J30] |  |
+| 14P10 | Semialgebraic sets and related spaces | Nîm-cebrî mecmûalar ve alâkalı fezâlar |  |
+| 14P15 | Real-analytic and semi-analytic sets [See also 32B20, 32C05] | Hakîkî-tahlîlî ve nîm-tahlîlî mecmûalar [Ayrıca bakınız: 32B20, 32C05] |  |
+| 14P20 | Nash functions and manifolds [See also 32C07, 58A07] | Nash tâbileri ve müteşa'ibleri [Ayrıca bakınız: 32C07, 58A07] |  |
+| 14P25 | Topology of real algebraic varieties | Hakîkî cebrî mütenevviâtın hendese-i vaz'iyyesi |  |
 | 14P99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **14Qxx** | **Computational aspects in algebraic geometry {For software etc., see 14-04} [See also 12-08, 13Pxx, 68W30]** | **** |  |
-| 14Q05 | Computational aspects of algebraic curves [See also 14Hxx] |  |  |
-| 14Q10 | Computational aspects of algebraic surfaces [See also 14Jxx] |  |  |
-| 14Q15 | Computational aspects of higher-dimensional varieties [See also 14Jxx, 14Mxx] |  |  |
-| 14Q20 | Effectivity, complexity and computational aspects of algebraic geometry |  |  |
-| 14Q25 | Computational algebraic geometry over arithmetic ground fields [See also 14Gxx, 14H25, 14Kxx] |  |  |
-| 14Q30 | Computational real algebraic geometry [See also 14Pxx] |  |  |
-| 14Q65 | Geometric aspects of numerical algebraic geometry [See also 65H14] |  |  |
+| **14Qxx** | **Computational aspects in algebraic geometry {For software etc., see 14-04} [See also 12-08, 13Pxx, 68W30]** | **Hendese-i cebriyyede hesâbî cihetler {Programlar ve emsâli için bakınız: 14-04} [Ayrıca bakınız: 12-08, 13Pxx, 68W30]** |  |
+| 14Q05 | Computational aspects of algebraic curves [See also 14Hxx] | Cebrî münhanîlerin hesâbî cihetleri [Ayrıca bakınız: 14Hxx] |  |
+| 14Q10 | Computational aspects of algebraic surfaces [See also 14Jxx] | Cebrî sathların hesâbî cihetleri [Ayrıca bakınız: 14Jxx] |  |
+| 14Q15 | Computational aspects of higher-dimensional varieties [See also 14Jxx, 14Mxx] | Yüksek buudlu mütenevviâtın hesâbî cihetleri [Ayrıca bakınız: 14Jxx, 14Mxx] |  |
+| 14Q20 | Effectivity, complexity and computational aspects of algebraic geometry | Hendese-i cebriyyenin fiiliyeti, mürekkebiyeti ve hesâbî cihetleri |  |
+| 14Q25 | Computational algebraic geometry over arithmetic ground fields [See also 14Gxx, 14H25, 14Kxx] | Hesâbî esas cisimler üzerinde hesâbî hendese-i cebriyye [Ayrıca bakınız: 14Gxx, 14H25, 14Kxx] |  |
+| 14Q30 | Computational real algebraic geometry [See also 14Pxx] | Hesâbî hakîkî hendese-i cebriyye [Ayrıca bakınız: 14Pxx] |  |
+| 14Q65 | Geometric aspects of numerical algebraic geometry [See also 65H14] | Adedî hendese-i cebriyyenin hendesî cihetleri [Ayrıca bakınız: 65H14] |  |
 | 14Q99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **14Rxx** | **Affine geometry** | **** |  |
-| 14R05 | Classification of affine varieties |  |  |
-| 14R10 | Affine spaces (automorphisms, embeddings, exotic structures, cancellation problem) |  |  |
-| 14R15 | Jacobian problem [See also 13F20] |  |  |
-| 14R20 | Group actions on affine varieties [See also 13A50, 14L30] |  |  |
-| 14R25 | Affine fibrations [See also 14D06] |  |  |
+| **14Rxx** | **Affine geometry** | **Te'âlüfî (afin) hendese** |  |
+| 14R05 | Classification of affine varieties | Te'âlüfî mütenevviâtın tasnifi |  |
+| 14R10 | Affine spaces (automorphisms, embeddings, exotic structures, cancellation problem) | Te'âlüfî fezâlar (zâtî temâsüller, dercler, garîb bünyeler, hazf meselesi) |  |
+| 14R15 | Jacobian problem [See also 13F20] | Jacobi meselesi [Ayrıca bakınız: 13F20] |  |
+| 14R20 | Group actions on affine varieties [See also 13A50, 14L30] | Te'âlüfî mütenevviât üzerinde zümre tesirleri [Ayrıca bakınız: 13A50, 14L30] |  |
+| 14R25 | Affine fibrations [See also 14D06] | Te'âlüfî telyîfler [Ayrıca bakınız: 14D06] |  |
 | 14R99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **14Txx** | **Tropical geometry [See also 12K10, 14M25, 14N10, 52B20]** | **** |  |
-| 14T10 | Foundations of tropical geometry and relations with algebra {For algebraic aspects, see 15A80} |  |  |
-| 14T15 | Combinatorial aspects of tropical varieties |  |  |
-| 14T20 | Geometric aspects of tropical varieties |  |  |
-| 14T25 | Arithmetic aspects of tropical varieties |  |  |
-| 14T90 | Applications of tropical geometry |  |  |
+| **14Txx** | **Tropical geometry [See also 12K10, 14M25, 14N10, 52B20]** | **Tropikal hendese [Ayrıca bakınız: 12K10, 14M25, 14N10, 52B20]** | nakil: "tropikal" ismi Brezilyalı bir riyâziyatçının hatırasına verilmiştir; Osmanlıca karşılık aranmadı |
+| 14T10 | Foundations of tropical geometry and relations with algebra {For algebraic aspects, see 15A80} | Tropikal hendesenin esâsâtı ve cebirle münasebetleri {Cebrî cihetler için bakınız: 15A80} |  |
+| 14T15 | Combinatorial aspects of tropical varieties | Tropikal mütenevviâtın terkîbî cihetleri |  |
+| 14T20 | Geometric aspects of tropical varieties | Tropikal mütenevviâtın hendesî cihetleri |  |
+| 14T25 | Arithmetic aspects of tropical varieties | Tropikal mütenevviâtın hesâbî cihetleri |  |
+| 14T90 | Applications of tropical geometry | Tropikal hendesenin tatbîkleri |  |
 | 14T99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
-## 15-XX — Linear and multilinear algebra; matrix theory
+## 15-XX — Hattî ve kesîrü'l-hattiyye (çok hatlı) cebir; masfûfeler nazariyesi
 
 Linear and multilinear algebra; matrix theory
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 15-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to linear algebra |  |  |
-| 15-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to linear algebra |  |  |
-| 15-02 | Research exposition (monographs, survey articles) pertaining to linear algebra |  |  |
-| 15-03 | History of linear algebra [Consider also classification numbers from Section 01] |  |  |
-| 15-04 | Software, source code, etc. for problems pertaining to linear algebra |  |  |
-| 15-06 | Proceedings, conferences, collections, etc. pertaining to linear algebra |  |  |
-| 15-11 | Research data for problems pertaining to linear algebra |  |  |
-| **15Axx** | **Basic linear algebra** | **** |  |
-| 15A03 | Vector spaces, linear dependence, rank, lineability |  |  |
-| 15A04 | Linear transformations, semilinear transformations |  |  |
-| 15A06 | Linear equations (linear algebraic aspects) |  |  |
-| 15A09 | Theory of matrix inversion and generalized inverses |  |  |
-| 15A10 | Applications of generalized inverses |  |  |
-| 15A12 | Conditioning of matrices [See also 65F35] |  |  |
-| 15A15 | Determinants, permanents, traces, other special matrix functions [See also 19B10, 19B14] |  |  |
-| 15A16 | Matrix exponential and similar functions of matrices |  |  |
-| 15A18 | Eigenvalues, singular values, and eigenvectors |  |  |
-| 15A20 | Diagonalization, Jordan forms |  |  |
-| 15A21 | Canonical forms, reductions, classification |  |  |
-| 15A22 | Matrix pencils [See also 47A56] |  |  |
-| 15A23 | Factorization of matrices |  |  |
-| 15A24 | Matrix equations and identities |  |  |
-| 15A27 | Commutativity of matrices |  |  |
-| 15A29 | Inverse problems in linear algebra |  |  |
-| 15A30 | Algebraic systems of matrices [See also 16S50, 20Gxx, 20Hxx] |  |  |
-| 15A39 | Linear inequalities of matrices |  |  |
-| 15A42 | Inequalities involving eigenvalues and eigenvectors |  |  |
-| 15A45 | Miscellaneous inequalities involving matrices |  |  |
-| 15A54 | Matrices over function rings in one or more variables |  |  |
-| 15A60 | Norms of matrices, numerical range, applications of functional analysis to matrix theory [See also 65F35, 65J05] |  |  |
-| 15A63 | Quadratic and bilinear forms, inner products [See mainly 11Exx] |  |  |
-| 15A66 | Clifford algebras, spinors |  |  |
-| 15A67 | Applications of Clifford algebras to physics, etc. |  |  |
-| 15A69 | Multilinear algebra, tensor calculus |  |  |
-| 15A72 | Vector and tensor algebra, theory of invariants [See also 13A50, 14L24] |  |  |
-| 15A75 | Exterior algebra, Grassmann algebras |  |  |
-| 15A78 | Other algebras built from modules |  |  |
-| 15A80 | Max-plus and related algebras |  |  |
-| 15A83 | Matrix completion problems |  |  |
-| 15A86 | Linear preserver problems |  |  |
+| 15-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to linear algebra | hattî cebir hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 15-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to linear algebra | hattî cebir hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 15-02 | Research exposition (monographs, survey articles) pertaining to linear algebra | hattî cebir hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 15-03 | History of linear algebra [Consider also classification numbers from Section 01] | Hattî cebrin târihi [01. babın tasnif numaralarına da bakılsın] |  |
+| 15-04 | Software, source code, etc. for problems pertaining to linear algebra | hattî cebir sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 15-06 | Proceedings, conferences, collections, etc. pertaining to linear algebra | hattî cebir hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 15-11 | Research data for problems pertaining to linear algebra | hattî cebir sahasındaki meselelere dair tetkik verileri |  |
+| **15Axx** | **Basic linear algebra** | **Esas hattî cebir** |  |
+| 15A03 | Vector spaces, linear dependence, rank, lineability | Müteveccihe fezâları, hattî bağımlılık, rütbe, hattîleştirilebilirlik |  |
+| 15A04 | Linear transformations, semilinear transformations | Hattî tahvîller, nîm-hattî tahvîller |  |
+| 15A06 | Linear equations (linear algebraic aspects) | Hattî muâdeleler (hattî cebre ait cihetler) |  |
+| 15A09 | Theory of matrix inversion and generalized inverses | Masfûfe aksi nazariyesi ve umûmîleştirilmiş akisler |  |
+| 15A10 | Applications of generalized inverses | Umûmîleştirilmiş akislerin tatbîkleri |  |
+| 15A12 | Conditioning of matrices [See also 65F35] | Masfûfelerin şartlılığı (kondisyonu) [Ayrıca bakınız: 65F35] |  |
+| 15A15 | Determinants, permanents, traces, other special matrix functions [See also 19B10, 19B14] | Muhaddidler, dâimîler (permanentler), izler, sâir hususî masfûfe tâbileri [Ayrıca bakınız: 19B10, 19B14] |  |
+| 15A16 | Matrix exponential and similar functions of matrices | Masfûfe üssîsi ve masfûfelerin benzeri tâbileri |  |
+| 15A18 | Eigenvalues, singular values, and eigenvectors | Zâtî kıymetler (öz değerler), münferid kıymetler ve zâtî müteveccihler (öz vektörler) |  |
+| 15A20 | Diagonalization, Jordan forms | Kutrîleştirme (köşegenleştirme), Jordan şekilleri |  |
+| 15A21 | Canonical forms, reductions, classification | Kānûnî (kanonik) şekiller, irca'lar, tasnif |  |
+| 15A22 | Matrix pencils [See also 47A56] | Masfûfe demetleri [Ayrıca bakınız: 47A56] |  |
+| 15A23 | Factorization of matrices | Masfûfelerin mazrûblarına tahlîli |  |
+| 15A24 | Matrix equations and identities | Masfûfe muâdeleleri ve ayniyetleri |  |
+| 15A27 | Commutativity of matrices | Masfûfelerin tebdîliyeti (değişmeliliği) |  |
+| 15A29 | Inverse problems in linear algebra | Hattî cebirde makûs meseleler |  |
+| 15A30 | Algebraic systems of matrices [See also 16S50, 20Gxx, 20Hxx] | Masfûfelerin cebrî nizâmları [Ayrıca bakınız: 16S50, 20Gxx, 20Hxx] |  |
+| 15A39 | Linear inequalities of matrices | Masfûfelerin hattî adem-i müsâvâtları |  |
+| 15A42 | Inequalities involving eigenvalues and eigenvectors | Zâtî kıymetleri ve zâtî müteveccihleri ihtivâ eden adem-i müsâvâtlar |  |
+| 15A45 | Miscellaneous inequalities involving matrices | Masfûfeleri ihtivâ eden muhtelif adem-i müsâvâtlar |  |
+| 15A54 | Matrices over function rings in one or more variables | Bir yahut daha fazla mütehavvilli tâbi halkaları üzerinde masfûfeler |  |
+| 15A60 | Norms of matrices, numerical range, applications of functional analysis to matrix theory [See also 65F35, 65J05] | Masfûfelerin normları, adedî menzil, tâbiî tahlîlin masfûfeler nazariyesine tatbîkleri [Ayrıca bakınız: 65F35, 65J05] |  |
+| 15A63 | Quadratic and bilinear forms, inner products [See mainly 11Exx] | Murabba'î ve dü-hattî şekiller, dâhilî hâsıl-ı zarblar [Bilhassa bakınız: 11Exx] |  |
+| 15A66 | Clifford algebras, spinors | Clifford cebirleri, spinörler |  |
+| 15A67 | Applications of Clifford algebras to physics, etc. | Clifford cebirlerinin hikmet-i tabîiyyeye ve sâireye tatbîkleri |  |
+| 15A69 | Multilinear algebra, tensor calculus | Kesîrü'l-hattiyye cebir, tansör hesabı |  |
+| 15A72 | Vector and tensor algebra, theory of invariants [See also 13A50, 14L24] | Müteveccihe ve tansör cebri, lâyetegayyerler nazariyesi [Ayrıca bakınız: 13A50, 14L24] |  |
+| 15A75 | Exterior algebra, Grassmann algebras | Hâricî cebir, Grassmann cebirleri |  |
+| 15A78 | Other algebras built from modules | Modüllerden kurulan sâir cebirler |  |
+| 15A80 | Max-plus and related algebras | Azamî-cem' (max-plus) ve alâkalı cebirler |  |
+| 15A83 | Matrix completion problems | Masfûfe tetmîmi meseleleri |  |
+| 15A86 | Linear preserver problems | Hattî hâfız (koruyucu) meseleleri |  |
 | 15A99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **15Bxx** | **Special matrices** | **** |  |
-| 15B05 | Toeplitz, Cauchy, and related matrices |  |  |
-| 15B10 | Orthogonal matrices |  |  |
-| 15B15 | Fuzzy matrices |  |  |
-| 15B30 | Matrix Lie algebras |  |  |
-| 15B33 | Matrices over special rings (quaternions, finite fields, etc.) |  |  |
-| 15B34 | Boolean and Hadamard matrices |  |  |
-| 15B35 | Sign pattern matrices |  |  |
-| 15B36 | Matrices of integers [See also 11C20] |  |  |
-| 15B48 | Positive matrices and their generalizations; cones of matrices |  |  |
-| 15B51 | Stochastic matrices |  |  |
-| 15B52 | Random matrices (algebraic aspects) {For probabilistic aspects, see 60B20} |  |  |
-| 15B57 | Hermitian, skew-Hermitian, and related matrices |  |  |
+| **15Bxx** | **Special matrices** | **Hususî masfûfeler** |  |
+| 15B05 | Toeplitz, Cauchy, and related matrices | Toeplitz, Cauchy ve alâkalı masfûfeler |  |
+| 15B10 | Orthogonal matrices | Amûdî (ortogonal) masfûfeler |  |
+| 15B15 | Fuzzy matrices | Mübhem masfûfeler |  |
+| 15B30 | Matrix Lie algebras | Masfûfe Lie cebirleri |  |
+| 15B33 | Matrices over special rings (quaternions, finite fields, etc.) | Hususî halkalar üzerinde masfûfeler (rubâiyyeler, mütenâhî cisimler ve emsâli) |  |
+| 15B34 | Boolean and Hadamard matrices | Boole ve Hadamard masfûfeleri |  |
+| 15B35 | Sign pattern matrices | İşaret numûnesi masfûfeleri |  |
+| 15B36 | Matrices of integers [See also 11C20] | Tam a'dâd masfûfeleri [Ayrıca bakınız: 11C20] |  |
+| 15B48 | Positive matrices and their generalizations; cones of matrices | Müsbet masfûfeler ve umûmîleştirmeleri; masfûfe mahrûtları |  |
+| 15B51 | Stochastic matrices | İhtimâlî (stokastik) masfûfeler |  |
+| 15B52 | Random matrices (algebraic aspects) {For probabilistic aspects, see 60B20} | Tesâdüfî masfûfeler (cebrî cihetler) {İhtimâlî cihetler için bakınız: 60B20} |  |
+| 15B57 | Hermitian, skew-Hermitian, and related matrices | Hermite, mâil-Hermite ve alâkalı masfûfeler |  |
 | 15B99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
-## 16-XX — Associative rings and algebras {For the commutative case, see 13-XX}
+## 16-XX — Tecmîî (birleşmeli) halkalar ve cebirler {Tebdîlî hâl için bakınız: 13-XX}
 
 Associative rings and algebras {For the commutative case, see 13-XX}
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 16-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to associative rings and algebras |  |  |
-| 16-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to associative rings and algebras |  |  |
-| 16-02 | Research exposition (monographs, survey articles) pertaining to associative rings and algebras |  |  |
-| 16-03 | History of associative rings and algebras [Consider also classification numbers from Section 01] |  |  |
-| 16-04 | Software, source code, etc. for problems pertaining to associative rings and algebras |  |  |
-| 16-06 | Proceedings, conferences, collections, etc. pertaining to associative rings and algebras |  |  |
-| 16-11 | Research data for problems pertaining to associative rings and algebras |  |  |
-| **16Bxx** | **General and miscellaneous** | **** |  |
-| 16B50 | Category-theoretic methods and results in associative algebras (except as in 16D90) [See also 18-XX] |  |  |
-| 16B70 | Applications of logic in associative algebras [See also 03Cxx] |  |  |
+| 16-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to associative rings and algebras | tecmîî halkalar ve cebirler hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 16-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to associative rings and algebras | tecmîî halkalar ve cebirler hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 16-02 | Research exposition (monographs, survey articles) pertaining to associative rings and algebras | tecmîî halkalar ve cebirler hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 16-03 | History of associative rings and algebras [Consider also classification numbers from Section 01] | Tecmîî halkaların ve cebirlerin târihi [01. babın tasnif numaralarına da bakılsın] |  |
+| 16-04 | Software, source code, etc. for problems pertaining to associative rings and algebras | tecmîî halkalar ve cebirler sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 16-06 | Proceedings, conferences, collections, etc. pertaining to associative rings and algebras | tecmîî halkalar ve cebirler hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 16-11 | Research data for problems pertaining to associative rings and algebras | tecmîî halkalar ve cebirler sahasındaki meselelere dair tetkik verileri |  |
+| **16Bxx** | **General and miscellaneous** | **Umûmî ve muhtelif** |  |
+| 16B50 | Category-theoretic methods and results in associative algebras (except as in 16D90) [See also 18-XX] | Tecmîî cebirlerde makûlât nazariyesine ait usuller ve neticeler (16D90'dakiler hâriç) [Ayrıca bakınız: 18-XX] |  |
+| 16B70 | Applications of logic in associative algebras [See also 03Cxx] | Tecmîî cebirlerde mantığın tatbîkleri [Ayrıca bakınız: 03Cxx] |  |
 | 16B99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **16Dxx** | **Modules, bimodules and ideals in associative algebras** | **** |  |
-| 16D10 | General module theory in associative algebras |  |  |
-| 16D20 | Bimodules in associative algebras |  |  |
-| 16D25 | Ideals in associative algebras |  |  |
-| 16D30 | Infinite-dimensional simple rings (except as in 16Kxx) |  |  |
-| 16D40 | Free, projective, and flat modules and ideals in associative algebras [See also 19A13] |  |  |
-| 16D50 | Injective modules, self-injective associative rings [See also 16L60] |  |  |
-| 16D60 | Simple and semisimple modules, primitive rings and ideals in associative algebras |  |  |
-| 16D70 | Structure and classification for modules, bimodules and ideals (except as in 16Gxx), direct sum decomposition and cancellation in associative algebras) |  |  |
-| 16D80 | Other classes of modules and ideals in associative algebras [See also 16G50] |  |  |
-| 16D90 | Module categories in associative algebras [See also 16Gxx, 16S90]; module theory in a category-theoretic context; Morita equivalence and duality |  |  |
+| **16Dxx** | **Modules, bimodules and ideals in associative algebras** | **Tecmîî cebirlerde modüller, iki taraflı modüller ve misâliyeler** |  |
+| 16D10 | General module theory in associative algebras | Tecmîî cebirlerde umûmî modül nazariyesi |  |
+| 16D20 | Bimodules in associative algebras | Tecmîî cebirlerde iki taraflı modüller |  |
+| 16D25 | Ideals in associative algebras | Tecmîî cebirlerde misâliyeler |  |
+| 16D30 | Infinite-dimensional simple rings (except as in 16Kxx) | Gayr-ı mütenâhî buudlu basît halkalar (16Kxx'tekiler hâriç) |  |
+| 16D40 | Free, projective, and flat modules and ideals in associative algebras [See also 19A13] | Tecmîî cebirlerde serbest, irtisâmî ve musattah modüller ve misâliyeler [Ayrıca bakınız: 19A13] |  |
+| 16D50 | Injective modules, self-injective associative rings [See also 16L60] | Dercî modüller, kendinden-dercî tecmîî halkalar [Ayrıca bakınız: 16L60] |  |
+| 16D60 | Simple and semisimple modules, primitive rings and ideals in associative algebras | Tecmîî cebirlerde basît ve nîm-basît modüller, iptidâî halkalar ve misâliyeler |  |
+| 16D70 | Structure and classification for modules, bimodules and ideals (except as in 16Gxx), direct sum decomposition and cancellation in associative algebras) | Modüller, iki taraflı modüller ve misâliyeler için bünye ve tasnif (16Gxx'tekiler hâriç), tecmîî cebirlerde müstakîm mecmû' tecziyesi ve hazf |  |
+| 16D80 | Other classes of modules and ideals in associative algebras [See also 16G50] | Tecmîî cebirlerde sâir modül ve misâliye sınıfları [Ayrıca bakınız: 16G50] |  |
+| 16D90 | Module categories in associative algebras [See also 16Gxx, 16S90]; module theory in a category-theoretic context; Morita equivalence and duality | Tecmîî cebirlerde modül makûleleri [Ayrıca bakınız: 16Gxx, 16S90]; makûlât nazariyesi çerçevesinde modül nazariyesi; Morita tekâfüü ve mukābelesi |  |
 | 16D99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **16Exx** | **Homological methods in associative algebras {For commutative rings, see 13Dxx; for general categories, see 18Gxx}** | **** |  |
-| 16E05 | Syzygies, resolutions, complexes in associative algebras |  |  |
-| 16E10 | Homological dimension in associative algebras |  |  |
-| 16E20 | Grothendieck groups, K-theory, etc. [See also 18F30, 19Axx, 19D50] |  |  |
-| 16E30 | Homological functors on modules (Tor, Ext, etc.) in associative algebras |  |  |
-| 16E35 | Derived categories and associative algebras |  |  |
-| 16E40 | (Co)homology of rings and associative algebras (e.g., Hochschild, cyclic, dihedral, etc.) |  |  |
-| 16E45 | Differential graded algebras and applications (associative algebraic aspects) |  |  |
-| 16E50 | von Neumann regular rings and generalizations (associative algebraic aspects) |  |  |
-| 16E60 | Semihereditary and hereditary rings, free ideal rings, Sylvester rings, etc. |  |  |
-| 16E65 | Homological conditions on associative rings (generalizations of regular, Gorenstein, Cohen-Macaulay rings, etc.) |  |  |
+| **16Exx** | **Homological methods in associative algebras {For commutative rings, see 13Dxx; for general categories, see 18Gxx}** | **Tecmîî cebirlerde tecânüsî usuller {Tebdîlî halkalar için bakınız: 13Dxx; umûmî makûleler için bakınız: 18Gxx}** |  |
+| 16E05 | Syzygies, resolutions, complexes in associative algebras | Tecmîî cebirlerde iktirânlar, inhilâller, mürekkebât |  |
+| 16E10 | Homological dimension in associative algebras | Tecmîî cebirlerde tecânüsî buud |  |
+| 16E20 | Grothendieck groups, K-theory, etc. [See also 18F30, 19Axx, 19D50] | Grothendieck zümreleri, K-nazariyesi ve emsâli [Ayrıca bakınız: 18F30, 19Axx, 19D50] |  |
+| 16E30 | Homological functors on modules (Tor, Ext, etc.) in associative algebras | Tecmîî cebirlerde modüller üzerinde tecânüsî nâkiller (Tor, Ext ve emsâli) |  |
+| 16E35 | Derived categories and associative algebras | Müştak makûleler ve tecmîî cebirler |  |
+| 16E40 | (Co)homology of rings and associative algebras (e.g., Hochschild, cyclic, dihedral, etc.) | Halkaların ve tecmîî cebirlerin (mukābil-)tecânüsü (meselâ Hochschild, devrî, zû-vecheyn ve emsâli) |  |
+| 16E45 | Differential graded algebras and applications (associative algebraic aspects) | Tefâzulî müderrec cebirler ve tatbîkleri (tecmîî cebre ait cihetler) |  |
+| 16E50 | von Neumann regular rings and generalizations (associative algebraic aspects) | von Neumann muntazam halkaları ve umûmîleştirmeleri (tecmîî cebre ait cihetler) |  |
+| 16E60 | Semihereditary and hereditary rings, free ideal rings, Sylvester rings, etc. | Nîm-irsî ve irsî halkalar, serbest misâliye halkaları, Sylvester halkaları ve emsâli |  |
+| 16E65 | Homological conditions on associative rings (generalizations of regular, Gorenstein, Cohen-Macaulay rings, etc.) | Tecmîî halkalar üzerinde tecânüsî şartlar (muntazam, Gorenstein, Cohen-Macaulay halkalarının umûmîleştirmeleri ve emsâli) |  |
 | 16E99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **16Gxx** | **Representation theory of associative rings and algebras** | **** |  |
-| 16G10 | Representations of associative Artinian rings |  |  |
-| 16G20 | Representations of quivers and partially ordered sets |  |  |
-| 16G30 | Representations of orders, lattices, algebras over commutative rings [See also 16Hxx] |  |  |
-| 16G50 | Cohen-Macaulay modules in associative algebras |  |  |
-| 16G60 | Representation type (finite, tame, wild, etc.) of associative algebras |  |  |
-| 16G70 | Auslander-Reiten sequences (almost split sequences) and Auslander-Reiten quivers |  |  |
+| **16Gxx** | **Representation theory of associative rings and algebras** | **Tecmîî halkaların ve cebirlerin temsil nazariyesi** |  |
+| 16G10 | Representations of associative Artinian rings | Tecmîî Artin halkalarının temsilleri |  |
+| 16G20 | Representations of quivers and partially ordered sets | Terkeşlerin (okluk şekillerinin) ve kısmen müretteb mecmûaların temsilleri | şüpheli: "quiver" için "terkeş" teklif edildi |
+| 16G30 | Representations of orders, lattices, algebras over commutative rings [See also 16Hxx] | Tertîb halkalarının, kafeslerin, tebdîlî halkalar üzerindeki cebirlerin temsilleri [Ayrıca bakınız: 16Hxx] |  |
+| 16G50 | Cohen-Macaulay modules in associative algebras | Tecmîî cebirlerde Cohen-Macaulay modülleri |  |
+| 16G60 | Representation type (finite, tame, wild, etc.) of associative algebras | Tecmîî cebirlerin temsil nev'i (mütenâhî, ehlî, vahşî ve emsâli) |  |
+| 16G70 | Auslander-Reiten sequences (almost split sequences) and Auslander-Reiten quivers | Auslander-Reiten tevâlîleri (takrîben bölünmüş tevâlîler) ve Auslander-Reiten terkeşleri |  |
 | 16G99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **16Hxx** | **Associative algebras and orders {For arithmetic aspects, see 11R52, 11R54, 11S45; for representation theory, see 16G30}** | **** |  |
-| 16H05 | Separable algebras (e.g., quaternion algebras, Azumaya algebras, etc.) |  |  |
-| 16H10 | Orders in separable algebras |  |  |
-| 16H15 | Commutative orders |  |  |
-| 16H20 | Lattices over orders |  |  |
+| **16Hxx** | **Associative algebras and orders {For arithmetic aspects, see 11R52, 11R54, 11S45; for representation theory, see 16G30}** | **Tecmîî cebirler ve tertîb halkaları {Hesâbî cihetler için bakınız: 11R52, 11R54, 11S45; temsil nazariyesi için bakınız: 16G30}** |  |
+| 16H05 | Separable algebras (e.g., quaternion algebras, Azumaya algebras, etc.) | Kābil-i infikâk cebirler (meselâ rubâiyye cebirleri, Azumaya cebirleri ve emsâli) |  |
+| 16H10 | Orders in separable algebras | Kābil-i infikâk cebirlerde tertîb halkaları |  |
+| 16H15 | Commutative orders | Tebdîlî tertîb halkaları |  |
+| 16H20 | Lattices over orders | Tertîb halkaları üzerinde kafesler |  |
 | 16H99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **16Kxx** | **Division rings and semisimple Artin rings [See also 12E15, 15A30]** | **** |  |
-| 16K20 | Finite-dimensional division rings {For crossed products, see 16S35} |  |  |
-| 16K40 | Infinite-dimensional and general division rings |  |  |
-| 16K50 | Brauer groups (algebraic aspects) [See also 12G05, 14F22] |  |  |
+| **16Kxx** | **Division rings and semisimple Artin rings [See also 12E15, 15A30]** | **Taksim halkaları ve nîm-basît Artin halkaları [Ayrıca bakınız: 12E15, 15A30]** |  |
+| 16K20 | Finite-dimensional division rings {For crossed products, see 16S35} | Mütenâhî buudlu taksim halkaları {Mütekātı' (çapraz) hâsıl-ı zarblar için bakınız: 16S35} |  |
+| 16K40 | Infinite-dimensional and general division rings | Gayr-ı mütenâhî buudlu ve umûmî taksim halkaları |  |
+| 16K50 | Brauer groups (algebraic aspects) [See also 12G05, 14F22] | Brauer zümreleri (cebrî cihetler) [Ayrıca bakınız: 12G05, 14F22] |  |
 | 16K99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **16Lxx** | **Local rings and generalizations** | **** |  |
-| 16L30 | Noncommutative local and semilocal rings, perfect rings |  |  |
-| 16L60 | Quasi-Frobenius rings [See also 16D50] |  |  |
+| **16Lxx** | **Local rings and generalizations** | **Mahallî halkalar ve umûmîleştirmeleri** |  |
+| 16L30 | Noncommutative local and semilocal rings, perfect rings | Gayr-ı tebdîlî mahallî ve nîm-mahallî halkalar, kâmil halkalar |  |
+| 16L60 | Quasi-Frobenius rings [See also 16D50] | Şibh-i Frobenius halkaları [Ayrıca bakınız: 16D50] |  |
 | 16L99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **16Nxx** | **Radicals and radical properties of associative rings** | **** |  |
-| 16N20 | Jacobson radical, quasimultiplication |  |  |
-| 16N40 | Nil and nilpotent radicals, sets, ideals, associative rings |  |  |
-| 16N60 | Prime and semiprime associative rings [See also 16D60, 16U10] |  |  |
-| 16N80 | General radicals and associative rings {For radicals in module categories, see 16S90} |  |  |
+| **16Nxx** | **Radicals and radical properties of associative rings** | **Tecmîî halkaların cezrleri (radikalleri) ve cezrî hâsiyetleri** |  |
+| 16N20 | Jacobson radical, quasimultiplication | Jacobson cezri, şibh-i zarb |  |
+| 16N40 | Nil and nilpotent radicals, sets, ideals, associative rings | Sıfırlaşan (nil) ve kuvveti sıfıra müntehî (nilpotent) cezrler, mecmûalar, misâliyeler, tecmîî halkalar |  |
+| 16N60 | Prime and semiprime associative rings [See also 16D60, 16U10] | Evvelî ve nîm-evvelî tecmîî halkalar [Ayrıca bakınız: 16D60, 16U10] |  |
+| 16N80 | General radicals and associative rings {For radicals in module categories, see 16S90} | Umûmî cezrler ve tecmîî halkalar {Modül makûlelerindeki cezrler için bakınız: 16S90} |  |
 | 16N99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **16Pxx** | **Chain conditions, growth conditions, and other forms of finiteness for associative rings and algebras** | **** |  |
-| 16P10 | Finite rings and finite-dimensional associative algebras {For semisimple, see 16K20; for commutative, see 11Txx, 13Mxx} |  |  |
-| 16P20 | Artinian rings and modules (associative rings and algebras) |  |  |
-| 16P40 | Noetherian rings and modules (associative rings and algebras) |  |  |
-| 16P50 | Localization and associative Noetherian rings [See also 16U20] |  |  |
-| 16P60 | Chain conditions on annihilators and summands: Goldie-type conditions [See also 16U20], Krull dimension (associative rings and algebras) |  |  |
-| 16P70 | Chain conditions on other classes of submodules, ideals, subrings, etc.; coherence (associative rings and algebras) |  |  |
-| 16P90 | Growth rate, Gelfand-Kirillov dimension |  |  |
+| **16Pxx** | **Chain conditions, growth conditions, and other forms of finiteness for associative rings and algebras** | **Tecmîî halkalar ve cebirler için silsile şartları, nemâ şartları ve sâir mütenâhîlik şekilleri** |  |
+| 16P10 | Finite rings and finite-dimensional associative algebras {For semisimple, see 16K20; for commutative, see 11Txx, 13Mxx} | Mütenâhî halkalar ve mütenâhî buudlu tecmîî cebirler {Nîm-basît olanlar için bakınız: 16K20; tebdîlî olanlar için bakınız: 11Txx, 13Mxx} |  |
+| 16P20 | Artinian rings and modules (associative rings and algebras) | Artin halkaları ve modülleri (tecmîî halkalar ve cebirler) |  |
+| 16P40 | Noetherian rings and modules (associative rings and algebras) | Noether halkaları ve modülleri (tecmîî halkalar ve cebirler) |  |
+| 16P50 | Localization and associative Noetherian rings [See also 16U20] | Mahallîleştirme ve tecmîî Noether halkaları [Ayrıca bakınız: 16U20] |  |
+| 16P60 | Chain conditions on annihilators and summands: Goldie-type conditions [See also 16U20], Krull dimension (associative rings and algebras) | Sıfırlayıcılar ve mecmû' cüz'leri üzerinde silsile şartları: Goldie nev'inden şartlar [Ayrıca bakınız: 16U20], Krull buudu (tecmîî halkalar ve cebirler) |  |
+| 16P70 | Chain conditions on other classes of submodules, ideals, subrings, etc.; coherence (associative rings and algebras) | Sâir alt modül, misâliye, alt halka sınıfları ve emsâli üzerinde silsile şartları; insicâm (tecmîî halkalar ve cebirler) |  |
+| 16P90 | Growth rate, Gelfand-Kirillov dimension | Nemâ sür'ati, Gelfand-Kirillov buudu |  |
 | 16P99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **16Rxx** | **Rings with polynomial identity** | **** |  |
-| 16R10 | T -ideals, identities, varieties of associative rings and algebras |  |  |
-| 16R20 | Semiprime p.i. rings, rings embeddable in matrices over commutative rings |  |  |
-| 16R30 | Trace rings and invariant theory (associative rings and algebras) |  |  |
-| 16R40 | Identities other than those of matrices over commutative rings |  |  |
-| 16R50 | Other kinds of identities (generalized polynomial, rational, involution) |  |  |
-| 16R60 | Functional identities (associative rings and algebras) |  |  |
+| **16Rxx** | **Rings with polynomial identity** | **Kesîrü'l-hudûd ayniyetli halkalar** |  |
+| 16R10 | T -ideals, identities, varieties of associative rings and algebras | T-misâliyeleri, ayniyetler, tecmîî halkaların ve cebirlerin mütenevviâtı |  |
+| 16R20 | Semiprime p.i. rings, rings embeddable in matrices over commutative rings | Nîm-evvelî kesîrü'l-hudûd ayniyetli halkalar, tebdîlî halkalar üzerindeki masfûfelere derc edilebilen halkalar |  |
+| 16R30 | Trace rings and invariant theory (associative rings and algebras) | İz halkaları ve lâyetegayyerler nazariyesi (tecmîî halkalar ve cebirler) |  |
+| 16R40 | Identities other than those of matrices over commutative rings | Tebdîlî halkalar üzerindeki masfûfelerinkinden başka ayniyetler |  |
+| 16R50 | Other kinds of identities (generalized polynomial, rational, involution) | Sâir nevi ayniyetler (umûmîleştirilmiş kesîrü'l-hudûd, muntak, zâtî aks) |  |
+| 16R60 | Functional identities (associative rings and algebras) | Tâbiî ayniyetler (tecmîî halkalar ve cebirler) |  |
 | 16R99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **16Sxx** | **Associative rings and algebras arising under various constructions** | **** |  |
-| 16S10 | Associative rings determined by universal properties (free algebras, coproducts, adjunction of inverses, etc.) |  |  |
-| 16S15 | Finite generation, finite presentability, normal forms (diamond lemma, term-rewriting) |  |  |
-| 16S20 | Centralizing and normalizing extensions |  |  |
-| 16S30 | Universal enveloping algebras of Lie algebras [See mainly 17B35] |  |  |
-| 16S32 | Rings of differential operators (associative algebraic aspects) [See also 13N10, 32C38] |  |  |
-| 16S34 | Group rings [See also 20C05, 20C07], Laurent polynomial rings (associative algebraic aspects) |  |  |
-| 16S35 | Twisted and skew group rings, crossed products |  |  |
-| 16S36 | Ordinary and skew polynomial rings and semigroup rings [See also 20M25] |  |  |
-| 16S37 | Quadratic and Koszul algebras |  |  |
-| 16S38 | Rings arising from noncommutative algebraic geometry [See also 14A22] |  |  |
-| 16S40 | Smash products of general Hopf actions [See also 16T05] |  |  |
-| 16S50 | Endomorphism rings; matrix rings [See also 15-XX] |  |  |
-| 16S60 | Associative rings of functions, subdirect products, sheaves of rings |  |  |
-| 16S70 | Extensions of associative rings by ideals |  |  |
-| 16S80 | Deformations of associative rings [See also 13D10, 14D15] |  |  |
-| 16S85 | Associative rings of fractions and localizations [See also 13B30] |  |  |
-| 16S88 | Leavitt path algebras |  |  |
-| 16S90 | Torsion theories; radicals on module categories (associative algebraic aspects) [See also 13D30, 18E40] {For radicals of rings, see 16Nxx} |  |  |
+| **16Sxx** | **Associative rings and algebras arising under various constructions** | **Muhtelif inşâlar altında doğan tecmîî halkalar ve cebirler** |  |
+| 16S10 | Associative rings determined by universal properties (free algebras, coproducts, adjunction of inverses, etc.) | Küllî hâsiyetlerle tayin olunan tecmîî halkalar (serbest cebirler, mukābil hâsıl-ı zarblar, akislerin ilhâkı ve emsâli) |  |
+| 16S15 | Finite generation, finite presentability, normal forms (diamond lemma, term-rewriting) | Mütenâhî tevlîd, mütenâhî arz edilebilirlik, nizâmî şekiller (elmas mukaddimesi, haddin yeniden yazılması) |  |
+| 16S20 | Centralizing and normalizing extensions | Merkezleyici ve mutâdlaştırıcı tevsî'ler |  |
+| 16S30 | Universal enveloping algebras of Lie algebras [See mainly 17B35] | Lie cebirlerinin küllî muhît cebirleri [Bilhassa bakınız: 17B35] |  |
+| 16S32 | Rings of differential operators (associative algebraic aspects) [See also 13N10, 32C38] | Tefâzulî âmillerin halkaları (tecmîî cebre ait cihetler) [Ayrıca bakınız: 13N10, 32C38] |  |
+| 16S34 | Group rings [See also 20C05, 20C07], Laurent polynomial rings (associative algebraic aspects) | Zümre halkaları [Ayrıca bakınız: 20C05, 20C07], Laurent kesîrü'l-hudûd halkaları (tecmîî cebre ait cihetler) |  |
+| 16S35 | Twisted and skew group rings, crossed products | Mültevî (bükülmüş) ve mâil zümre halkaları, mütekātı' hâsıl-ı zarblar |  |
+| 16S36 | Ordinary and skew polynomial rings and semigroup rings [See also 20M25] | Âdî ve mâil kesîrü'l-hudûd halkaları ve nîm-zümre halkaları [Ayrıca bakınız: 20M25] |  |
+| 16S37 | Quadratic and Koszul algebras | Murabba'î ve Koszul cebirleri |  |
+| 16S38 | Rings arising from noncommutative algebraic geometry [See also 14A22] | Gayr-ı tebdîlî hendese-i cebriyyeden doğan halkalar [Ayrıca bakınız: 14A22] |  |
+| 16S40 | Smash products of general Hopf actions [See also 16T05] | Umûmî Hopf tesirlerinin ezme (smash) hâsıl-ı zarbları [Ayrıca bakınız: 16T05] |  |
+| 16S50 | Endomorphism rings; matrix rings [See also 15-XX] | Zâtî teşâkül halkaları; masfûfe halkaları [Ayrıca bakınız: 15-XX] |  |
+| 16S60 | Associative rings of functions, subdirect products, sheaves of rings | Tecmîî tâbi halkaları, tahte'l-müstakîm hâsıl-ı zarblar, halka desteleri |  |
+| 16S70 | Extensions of associative rings by ideals | Tecmîî halkaların misâliyelerle tevsî'leri |  |
+| 16S80 | Deformations of associative rings [See also 13D10, 14D15] | Tecmîî halkaların tagayyür-i şekilleri [Ayrıca bakınız: 13D10, 14D15] |  |
+| 16S85 | Associative rings of fractions and localizations [See also 13B30] | Tecmîî kesir halkaları ve mahallîleştirmeler [Ayrıca bakınız: 13B30] |  |
+| 16S88 | Leavitt path algebras | Leavitt yol cebirleri |  |
+| 16S90 | Torsion theories; radicals on module categories (associative algebraic aspects) [See also 13D30, 18E40] {For radicals of rings, see 16Nxx} | İltivâ nazariyeleri; modül makûleleri üzerinde cezrler (tecmîî cebre ait cihetler) {Halkaların cezrleri için bakınız: 16Nxx} [Ayrıca bakınız: 13D30, 18E40] |  |
 | 16S99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **16Txx** | **Hopf algebras, quantum groups and related topics** | **** |  |
-| 16T05 | Hopf algebras and their applications [See also 16S40, 57T05] |  |  |
-| 16T10 | Bialgebras |  |  |
-| 16T15 | Coalgebras and comodules; corings |  |  |
-| 16T20 | Ring-theoretic aspects of quantum groups [See also 17B37, 20G42, 81R50] |  |  |
-| 16T25 | Yang-Baxter equations |  |  |
-| 16T30 | Connections of Hopf algebras with combinatorics [See also 05Exx] |  |  |
+| **16Txx** | **Hopf algebras, quantum groups and related topics** | **Hopf cebirleri, kuantum zümreleri ve alâkalı mevzûlar** |  |
+| 16T05 | Hopf algebras and their applications [See also 16S40, 57T05] | Hopf cebirleri ve tatbîkleri [Ayrıca bakınız: 16S40, 57T05] |  |
+| 16T10 | Bialgebras | Dü-cebirler (bialgebralar) |  |
+| 16T15 | Coalgebras and comodules; corings | Mukābil-cebirler ve mukābil-modüller; mukābil-halkalar |  |
+| 16T20 | Ring-theoretic aspects of quantum groups [See also 17B37, 20G42, 81R50] | Kuantum zümrelerinin halkalar nazariyesine ait cihetleri [Ayrıca bakınız: 17B37, 20G42, 81R50] |  |
+| 16T25 | Yang-Baxter equations | Yang-Baxter muâdeleleri |  |
+| 16T30 | Connections of Hopf algebras with combinatorics [See also 05Exx] | Hopf cebirlerinin terkîbât ile irtibâtları [Ayrıca bakınız: 05Exx] |  |
 | 16T99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **16Uxx** | **Conditions on elements** | **** |  |
-| 16U10 | Integral domains (associative rings and algebras) |  |  |
-| 16U20 | Ore rings, multiplicative sets, Ore localization |  |  |
-| 16U30 | Divisibility, noncommutative UFDs |  |  |
-| 16U40 | Idempotent elements (associative rings and algebras) |  |  |
-| 16U60 | Units, groups of units (associative rings and algebras) |  |  |
-| 16U70 | Center, normalizer (invariant elements) (associative rings and algebras) |  |  |
-| 16U80 | Generalizations of commutativity (associative rings and algebras) |  |  |
-| 16U90 | Generalized inverses (associative rings and algebras) |  |  |
+| **16Uxx** | **Conditions on elements** | **Unsurlar üzerindeki şartlar** |  |
+| 16U10 | Integral domains (associative rings and algebras) | Tam mıntıkalar (tecmîî halkalar ve cebirler) |  |
+| 16U20 | Ore rings, multiplicative sets, Ore localization | Ore halkaları, zarbî mecmûalar, Ore mahallîleştirmesi |  |
+| 16U30 | Divisibility, noncommutative UFDs | Kābiliyyet-i taksim, mazrûblarına tek tarzda ayrılan gayr-ı tebdîlî mıntıkalar |  |
+| 16U40 | Idempotent elements (associative rings and algebras) | Sâbitü'l-kuvve (idempotent) unsurlar (tecmîî halkalar ve cebirler) |  |
+| 16U60 | Units, groups of units (associative rings and algebras) | Vâhidler, vâhid zümreleri (tecmîî halkalar ve cebirler) |  |
+| 16U70 | Center, normalizer (invariant elements) (associative rings and algebras) | Merkez, mutâdlaştırıcı (lâyetegayyer unsurlar) (tecmîî halkalar ve cebirler) |  |
+| 16U80 | Generalizations of commutativity (associative rings and algebras) | Tebdîliyetin umûmîleştirmeleri (tecmîî halkalar ve cebirler) |  |
+| 16U90 | Generalized inverses (associative rings and algebras) | Umûmîleştirilmiş akisler (tecmîî halkalar ve cebirler) |  |
 | 16U99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **16Wxx** | **Associative rings and algebras with additional structure** | **** |  |
-| 16W10 | Rings with involution; Lie, Jordan and other nonassociative structures [See also 17B60, 17C50, 46Kxx] |  |  |
-| 16W20 | Automorphisms and endomorphisms |  |  |
-| 16W22 | Actions of groups and semigroups; invariant theory (associative rings and algebras) |  |  |
-| 16W25 | Derivations, actions of Lie algebras |  |  |
-| 16W50 | Graded rings and modules (associative rings and algebras) |  |  |
-| 16W55 | “Super” (or “skew”) structure [See also 17A70, 17Bxx, 17C70] {For exterior algebras, see 15A75; for Clifford algebras, see 11E88, 15A66} |  |  |
-| 16W60 | Valuations, completions, formal power series and related constructions (associative rings and algebras) [See also 13Jxx] |  |  |
-| 16W70 | Filtered associative rings; filtrational and graded techniques |  |  |
-| 16W80 | Topological and ordered rings and modules [See also 06F25, 13Jxx] |  |  |
+| **16Wxx** | **Associative rings and algebras with additional structure** | **Zâid bünyeli tecmîî halkalar ve cebirler** |  |
+| 16W10 | Rings with involution; Lie, Jordan and other nonassociative structures [See also 17B60, 17C50, 46Kxx] | Zâtî akisli (involüsyonlu) halkalar; Lie, Jordan ve sâir gayr-ı tecmîî bünyeler [Ayrıca bakınız: 17B60, 17C50, 46Kxx] |  |
+| 16W20 | Automorphisms and endomorphisms | Zâtî temâsüller ve zâtî teşâküller |  |
+| 16W22 | Actions of groups and semigroups; invariant theory (associative rings and algebras) | Zümrelerin ve nîm-zümrelerin tesirleri; lâyetegayyerler nazariyesi (tecmîî halkalar ve cebirler) |  |
+| 16W25 | Derivations, actions of Lie algebras | İştikāklar, Lie cebirlerinin tesirleri |  |
+| 16W50 | Graded rings and modules (associative rings and algebras) | Müderrec halkalar ve modüller (tecmîî halkalar ve cebirler) |  |
+| 16W55 | “Super” (or “skew”) structure [See also 17A70, 17Bxx, 17C70] {For exterior algebras, see 15A75; for Clifford algebras, see 11E88, 15A66} | "Fevkânî" (yahut "mâil") bünye {Hâricî cebirler için bakınız: 15A75; Clifford cebirleri için bakınız: 11E88, 15A66} [Ayrıca bakınız: 17A70, 17Bxx, 17C70] |  |
+| 16W60 | Valuations, completions, formal power series and related constructions (associative rings and algebras) [See also 13Jxx] | Kıymetlendirmeler, tetmîmler, sûrî kuvvet silsileleri ve alâkalı inşâlar (tecmîî halkalar ve cebirler) [Ayrıca bakınız: 13Jxx] |  |
+| 16W70 | Filtered associative rings; filtrational and graded techniques | Müsaffâ (süzgeçli) tecmîî halkalar; tasfiye ve müderrec usulleri |  |
+| 16W80 | Topological and ordered rings and modules [See also 06F25, 13Jxx] | Vaz'î ve müretteb halkalar ve modüller [Ayrıca bakınız: 06F25, 13Jxx] |  |
 | 16W99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **16Yxx** | **Generalizations {For nonassociative rings, see 17-XX}** | **** |  |
-| 16Y20 | Hyperrings |  |  |
-| 16Y30 | Near-rings [See also 12K05] |  |  |
-| 16Y60 | Semirings [See also 12K10] |  |  |
-| 16Y80 | Γ and fuzzy structures |  |  |
+| **16Yxx** | **Generalizations {For nonassociative rings, see 17-XX}** | **Umûmîleştirmeler {Gayr-ı tecmîî halkalar için bakınız: 17-XX}** |  |
+| 16Y20 | Hyperrings | Fevk-halkalar |  |
+| 16Y30 | Near-rings [See also 12K05] | Karîb-halkalar (yakın halkalar) [Ayrıca bakınız: 12K05] |  |
+| 16Y60 | Semirings [See also 12K10] | Nîm-halkalar [Ayrıca bakınız: 12K10] |  |
+| 16Y80 | Γ and fuzzy structures | Γ-bünyeler ve mübhem bünyeler |  |
 | 16Y99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **16Zxx** | **Computational aspects of associative rings {For software etc., see 16-04}** | **** |  |
-| 16Z05 | Computational aspects of associative rings (general theory) [See also 68W30] |  |  |
-| 16Z10 | Gröbner-Shirshov bases |  |  |
+| **16Zxx** | **Computational aspects of associative rings {For software etc., see 16-04}** | **Tecmîî halkaların hesâbî cihetleri {Programlar ve emsâli için bakınız: 16-04}** |  |
+| 16Z05 | Computational aspects of associative rings (general theory) [See also 68W30] | Tecmîî halkaların hesâbî cihetleri (umûmî nazariye) [Ayrıca bakınız: 68W30] |  |
+| 16Z10 | Gröbner-Shirshov bases | Gröbner-Shirshov esasları |  |
 | 16Z99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
-## 17-XX — Nonassociative rings and algebras
+## 17-XX — Gayr-ı tecmîî (birleşmeli olmayan) halkalar ve cebirler
 
 Nonassociative rings and algebras
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 17-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to nonassociative rings and algebras |  |  |
-| 17-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to nonassociative rings and algebras |  |  |
-| 17-02 | Research exposition (monographs, survey articles) pertaining to nonassociative rings and algebras |  |  |
-| 17-03 | History of nonassociative rings and algebras [Consider also classification numbers from Section 01] |  |  |
-| 17-04 | Software, source code, etc. for problems pertaining to nonassociative rings and algebras |  |  |
-| 17-06 | Proceedings, conferences, collections, etc. pertaining to nonassociative rings and algebras |  |  |
-| 17-08 | Computational methods for problems pertaining to nonassociative rings and algebras [See also 68W30] |  |  |
-| 17-11 | Research data for problems pertaining to nonassociative rings and algebras |  |  |
-| **17Axx** | **General nonassociative rings** | **** |  |
-| 17A01 | General theory of nonassociative rings and algebras |  |  |
-| 17A05 | Power-associative rings |  |  |
-| 17A15 | Noncommutative Jordan algebras |  |  |
-| 17A20 | Flexible algebras |  |  |
-| 17A30 | Nonassociative algebras satisfying other identities |  |  |
-| 17A32 | Leibniz algebras |  |  |
-| 17A35 | Nonassociative division algebras |  |  |
-| 17A36 | Automorphisms, derivations, other operators (nonassociative rings and algebras) |  |  |
-| 17A40 | Ternary compositions |  |  |
-| 17A42 | Other n-ary compositions (n ≥ 3) |  |  |
-| 17A45 | Quadratic algebras (but not quadratic Jordan algebras) |  |  |
-| 17A50 | Free nonassociative algebras |  |  |
-| 17A60 | Structure theory for nonassociative algebras |  |  |
-| 17A61 | Gröbner-Shirshov bases in nonassociative algebras |  |  |
-| 17A65 | Radical theory (nonassociative rings and algebras) |  |  |
-| 17A70 | Superalgebras |  |  |
-| 17A75 | Composition algebras |  |  |
-| 17A80 | Valued algebras |  |  |
+| 17-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to nonassociative rings and algebras | gayr-ı tecmîî halkalar ve cebirler hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 17-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to nonassociative rings and algebras | gayr-ı tecmîî halkalar ve cebirler hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 17-02 | Research exposition (monographs, survey articles) pertaining to nonassociative rings and algebras | gayr-ı tecmîî halkalar ve cebirler hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 17-03 | History of nonassociative rings and algebras [Consider also classification numbers from Section 01] | Gayr-ı tecmîî halkaların ve cebirlerin târihi [01. babın tasnif numaralarına da bakılsın] |  |
+| 17-04 | Software, source code, etc. for problems pertaining to nonassociative rings and algebras | gayr-ı tecmîî halkalar ve cebirler sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 17-06 | Proceedings, conferences, collections, etc. pertaining to nonassociative rings and algebras | gayr-ı tecmîî halkalar ve cebirler hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 17-08 | Computational methods for problems pertaining to nonassociative rings and algebras [See also 68W30] | gayr-ı tecmîî halkalar ve cebirler sahasındaki meselelere dair hesap usulleri [Ayrıca bakınız: 68W30] |  |
+| 17-11 | Research data for problems pertaining to nonassociative rings and algebras | gayr-ı tecmîî halkalar ve cebirler sahasındaki meselelere dair tetkik verileri |  |
+| **17Axx** | **General nonassociative rings** | **Umûmî gayr-ı tecmîî halkalar** |  |
+| 17A01 | General theory of nonassociative rings and algebras | Gayr-ı tecmîî halkaların ve cebirlerin umûmî nazariyesi |  |
+| 17A05 | Power-associative rings | Kuvvetçe tecmîî halkalar |  |
+| 17A15 | Noncommutative Jordan algebras | Gayr-ı tebdîlî Jordan cebirleri |  |
+| 17A20 | Flexible algebras | Mürûnetli (esnek) cebirler |  |
+| 17A30 | Nonassociative algebras satisfying other identities | Sâir ayniyetleri sağlayan gayr-ı tecmîî cebirler |  |
+| 17A32 | Leibniz algebras | Leibniz cebirleri |  |
+| 17A35 | Nonassociative division algebras | Gayr-ı tecmîî taksim cebirleri |  |
+| 17A36 | Automorphisms, derivations, other operators (nonassociative rings and algebras) | Zâtî temâsüller, iştikāklar, sâir âmiller (gayr-ı tecmîî halkalar ve cebirler) |  |
+| 17A40 | Ternary compositions | Sülâsî (üç mevzi'li) terkipler |  |
+| 17A42 | Other n-ary compositions (n ≥ 3) | Sâir n mevzi'li terkipler (n ≥ 3) |  |
+| 17A45 | Quadratic algebras (but not quadratic Jordan algebras) | Murabba'î cebirler (murabba'î Jordan cebirleri hâriç) |  |
+| 17A50 | Free nonassociative algebras | Serbest gayr-ı tecmîî cebirler |  |
+| 17A60 | Structure theory for nonassociative algebras | Gayr-ı tecmîî cebirler için bünye nazariyesi |  |
+| 17A61 | Gröbner-Shirshov bases in nonassociative algebras | Gayr-ı tecmîî cebirlerde Gröbner-Shirshov esasları |  |
+| 17A65 | Radical theory (nonassociative rings and algebras) | Cezr nazariyesi (gayr-ı tecmîî halkalar ve cebirler) |  |
+| 17A70 | Superalgebras | Fevkânî (süper) cebirler |  |
+| 17A75 | Composition algebras | Terkip cebirleri |  |
+| 17A80 | Valued algebras | Kıymetlendirilmiş cebirler |  |
 | 17A99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **17Bxx** | **Lie algebras and Lie superalgebras {For Lie groups, see 22Exx}** | **** |  |
-| 17B01 | Identities, free Lie (super)algebras |  |  |
-| 17B05 | Structure theory for Lie algebras and superalgebras |  |  |
-| 17B08 | Coadjoint orbits; nilpotent varieties |  |  |
-| 17B10 | Representations of Lie algebras and Lie superalgebras, algebraic theory (weights) |  |  |
-| 17B15 | Representations of Lie algebras and Lie superalgebras, analytic theory |  |  |
-| 17B20 | Simple, semisimple, reductive (super)algebras |  |  |
-| 17B22 | Root systems |  |  |
-| 17B25 | Exceptional (super)algebras |  |  |
-| 17B30 | Solvable, nilpotent (super)algebras |  |  |
-| 17B35 | Universal enveloping (super)algebras [See also 16S30] |  |  |
-| 17B37 | Quantum groups (quantized enveloping algebras) and related deformations [See also 16T20, 20G42, 81R50, 82B23] |  |  |
-| 17B38 | Yang-Baxter equations and Rota-Baxter operators |  |  |
-| 17B40 | Automorphisms, derivations, other operators for Lie algebras and super algebras |  |  |
-| 17B45 | Lie algebras of linear algebraic groups [See also 14Lxx and 20Gxx] |  |  |
-| 17B50 | Modular Lie (super)algebras |  |  |
-| 17B55 | Homological methods in Lie (super)algebras |  |  |
-| 17B56 | Cohomology of Lie (super)algebras |  |  |
-| 17B60 | Lie (super)algebras associated with other structures (associative, Jordan, etc.) [See also 16W10, 17C40, 17C50] |  |  |
-| 17B61 | Hom-Lie and related algebras |  |  |
-| 17B62 | Lie bialgebras; Lie coalgebras |  |  |
-| 17B63 | Poisson algebras |  |  |
-| 17B65 | Infinite-dimensional Lie (super)algebras [See also 22E65] |  |  |
-| 17B66 | Lie algebras of vector fields and related (super) algebras |  |  |
-| 17B67 | Kac-Moody (super)algebras; extended affine Lie algebras; toroidal Lie algebras |  |  |
-| 17B68 | Virasoro and related algebras |  |  |
-| 17B69 | Vertex operators; vertex operator algebras and related structures |  |  |
-| 17B70 | Graded Lie (super)algebras |  |  |
-| 17B75 | Color Lie (super)algebras |  |  |
-| 17B80 | Applications of Lie algebras and superalgebras to integrable systems |  |  |
-| 17B81 | Applications of Lie (super)algebras to physics, etc. |  |  |
+| **17Bxx** | **Lie algebras and Lie superalgebras {For Lie groups, see 22Exx}** | **Lie cebirleri ve Lie fevkânî cebirleri {Lie zümreleri için bakınız: 22Exx}** |  |
+| 17B01 | Identities, free Lie (super)algebras | Ayniyetler, serbest Lie (fevkânî) cebirleri |  |
+| 17B05 | Structure theory for Lie algebras and superalgebras | Lie cebirleri ve fevkânî cebirleri için bünye nazariyesi |  |
+| 17B08 | Coadjoint orbits; nilpotent varieties | Mukābil-mülhak medârlar (yörüngeler); kuvveti sıfıra müntehî mütenevviât |  |
+| 17B10 | Representations of Lie algebras and Lie superalgebras, algebraic theory (weights) | Lie cebirlerinin ve Lie fevkânî cebirlerinin temsilleri, cebrî nazariye (sıkletler) |  |
+| 17B15 | Representations of Lie algebras and Lie superalgebras, analytic theory | Lie cebirlerinin ve Lie fevkânî cebirlerinin temsilleri, tahlîlî nazariye |  |
+| 17B20 | Simple, semisimple, reductive (super)algebras | Basît, nîm-basît, irca'î (redüktif) (fevkânî) cebirler |  |
+| 17B22 | Root systems | Cezr nizâmları (kök sistemleri) |  |
+| 17B25 | Exceptional (super)algebras | İstisnâî (fevkânî) cebirler |  |
+| 17B30 | Solvable, nilpotent (super)algebras | Kābil-i hall, kuvveti sıfıra müntehî (fevkânî) cebirler |  |
+| 17B35 | Universal enveloping (super)algebras [See also 16S30] | Küllî muhît (fevkânî) cebirler [Ayrıca bakınız: 16S30] |  |
+| 17B37 | Quantum groups (quantized enveloping algebras) and related deformations [See also 16T20, 20G42, 81R50, 82B23] | Kuantum zümreleri (kuantumlaştırılmış muhît cebirler) ve alâkalı tagayyür-i şekiller [Ayrıca bakınız: 16T20, 20G42, 81R50, 82B23] |  |
+| 17B38 | Yang-Baxter equations and Rota-Baxter operators | Yang-Baxter muâdeleleri ve Rota-Baxter âmilleri |  |
+| 17B40 | Automorphisms, derivations, other operators for Lie algebras and super algebras | Lie cebirleri ve fevkânî cebirleri için zâtî temâsüller, iştikāklar, sâir âmiller |  |
+| 17B45 | Lie algebras of linear algebraic groups [See also 14Lxx and 20Gxx] | Hattî cebrî zümrelerin Lie cebirleri [Ayrıca bakınız: 14Lxx ve 20Gxx] |  |
+| 17B50 | Modular Lie (super)algebras | Mikyâsî Lie (fevkânî) cebirleri |  |
+| 17B55 | Homological methods in Lie (super)algebras | Lie (fevkânî) cebirlerinde tecânüsî usuller |  |
+| 17B56 | Cohomology of Lie (super)algebras | Lie (fevkânî) cebirlerinin mukābil-tecânüsü |  |
+| 17B60 | Lie (super)algebras associated with other structures (associative, Jordan, etc.) [See also 16W10, 17C40, 17C50] | Sâir bünyelerle (tecmîî, Jordan ve emsâli) alâkalı Lie (fevkânî) cebirleri [Ayrıca bakınız: 16W10, 17C40, 17C50] |  |
+| 17B61 | Hom-Lie and related algebras | Hom-Lie ve alâkalı cebirler |  |
+| 17B62 | Lie bialgebras; Lie coalgebras | Lie dü-cebirleri; Lie mukābil-cebirleri |  |
+| 17B63 | Poisson algebras | Poisson cebirleri |  |
+| 17B65 | Infinite-dimensional Lie (super)algebras [See also 22E65] | Gayr-ı mütenâhî buudlu Lie (fevkânî) cebirleri [Ayrıca bakınız: 22E65] |  |
+| 17B66 | Lie algebras of vector fields and related (super) algebras | Müteveccihe sahalarının Lie cebirleri ve alâkalı (fevkânî) cebirler |  |
+| 17B67 | Kac-Moody (super)algebras; extended affine Lie algebras; toroidal Lie algebras | Kac-Moody (fevkânî) cebirleri; tevsî' edilmiş te'âlüfî Lie cebirleri; torusî Lie cebirleri |  |
+| 17B68 | Virasoro and related algebras | Virasoro ve alâkalı cebirler |  |
+| 17B69 | Vertex operators; vertex operator algebras and related structures | Re's (vertex) âmilleri; re's âmili cebirleri ve alâkalı bünyeler |  |
+| 17B70 | Graded Lie (super)algebras | Müderrec Lie (fevkânî) cebirleri |  |
+| 17B75 | Color Lie (super)algebras | Levnî (renkli) Lie (fevkânî) cebirleri |  |
+| 17B80 | Applications of Lie algebras and superalgebras to integrable systems | Lie cebirlerinin ve fevkânî cebirlerinin kābil-i tamâmlama nizâmlara tatbîkleri |  |
+| 17B81 | Applications of Lie (super)algebras to physics, etc. | Lie (fevkânî) cebirlerinin hikmet-i tabîiyyeye ve sâireye tatbîkleri |  |
 | 17B99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **17Cxx** | **Jordan algebras (algebras, triples and pairs)** | **** |  |
-| 17C05 | Identities and free Jordan structures |  |  |
-| 17C10 | Structure theory for Jordan algebras |  |  |
-| 17C17 | Radicals in Jordan algebras |  |  |
-| 17C20 | Simple, semisimple Jordan algebras |  |  |
-| 17C27 | Idempotents, Peirce decompositions |  |  |
-| 17C30 | Associated groups, automorphisms of Jordan algebras |  |  |
-| 17C36 | Associated manifolds of Jordan algebras |  |  |
-| 17C37 | Associated geometries of Jordan algebras |  |  |
-| 17C40 | Exceptional Jordan structures |  |  |
-| 17C50 | Jordan structures associated with other structures [See also 16W10] |  |  |
-| 17C55 | Finite-dimensional structures of Jordan algebras |  |  |
-| 17C60 | Division algebras and Jordan algebras |  |  |
-| 17C65 | Jordan structures on Banach spaces and algebras [See also 46H70, 46L70] |  |  |
-| 17C70 | Super structures |  |  |
-| 17C90 | Applications of Jordan algebras to physics, etc. |  |  |
+| **17Cxx** | **Jordan algebras (algebras, triples and pairs)** | **Jordan cebirleri (cebirler, üçlüler ve çiftler)** |  |
+| 17C05 | Identities and free Jordan structures | Ayniyetler ve serbest Jordan bünyeleri |  |
+| 17C10 | Structure theory for Jordan algebras | Jordan cebirleri için bünye nazariyesi |  |
+| 17C17 | Radicals in Jordan algebras | Jordan cebirlerinde cezrler |  |
+| 17C20 | Simple, semisimple Jordan algebras | Basît, nîm-basît Jordan cebirleri |  |
+| 17C27 | Idempotents, Peirce decompositions | Sâbitü'l-kuvve unsurlar, Peirce tecziyeleri |  |
+| 17C30 | Associated groups, automorphisms of Jordan algebras | Mensup zümreler, Jordan cebirlerinin zâtî temâsülleri |  |
+| 17C36 | Associated manifolds of Jordan algebras | Jordan cebirlerine mensup müteşa'ibler |  |
+| 17C37 | Associated geometries of Jordan algebras | Jordan cebirlerine mensup hendeseler |  |
+| 17C40 | Exceptional Jordan structures | İstisnâî Jordan bünyeleri |  |
+| 17C50 | Jordan structures associated with other structures [See also 16W10] | Sâir bünyelerle alâkalı Jordan bünyeleri [Ayrıca bakınız: 16W10] |  |
+| 17C55 | Finite-dimensional structures of Jordan algebras | Jordan cebirlerinin mütenâhî buudlu bünyeleri |  |
+| 17C60 | Division algebras and Jordan algebras | Taksim cebirleri ve Jordan cebirleri |  |
+| 17C65 | Jordan structures on Banach spaces and algebras [See also 46H70, 46L70] | Banach fezâları ve cebirleri üzerinde Jordan bünyeleri [Ayrıca bakınız: 46H70, 46L70] |  |
+| 17C70 | Super structures | Fevkânî bünyeler |  |
+| 17C90 | Applications of Jordan algebras to physics, etc. | Jordan cebirlerinin hikmet-i tabîiyyeye ve sâireye tatbîkleri |  |
 | 17C99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **17Dxx** | **Other nonassociative rings and algebras** | **** |  |
-| 17D05 | Alternative rings |  |  |
-| 17D10 | Mal’tsev rings and algebras |  |  |
-| 17D15 | Right alternative rings |  |  |
-| 17D20 | (γ, δ)-rings, including (1, −1)-rings |  |  |
-| 17D25 | Lie-admissible algebras |  |  |
-| 17D30 | (non-Lie) Hom algebras and topics |  |  |
-| 17D92 | Genetic algebras |  |  |
+| **17Dxx** | **Other nonassociative rings and algebras** | **Sâir gayr-ı tecmîî halkalar ve cebirler** |  |
+| 17D05 | Alternative rings | Tenâvübî (alternatif) halkalar |  |
+| 17D10 | Mal’tsev rings and algebras | Mal'tsev halkaları ve cebirleri |  |
+| 17D15 | Right alternative rings | Sağdan tenâvübî halkalar |  |
+| 17D20 | (γ, δ)-rings, including (1, −1)-rings | (γ, δ)-halkaları, (1, −1)-halkaları dahil |  |
+| 17D25 | Lie-admissible algebras | Lie'ye müsâid cebirler |  |
+| 17D30 | (non-Lie) Hom algebras and topics | (Lie olmayan) Hom cebirleri ve mevzûları |  |
+| 17D92 | Genetic algebras | Virâset (irsiyet) cebirleri |  |
 | 17D99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
-## 18-XX — Category theory; homological algebra {For commutative rings, see 13Dxx; for associative rings, see 16Exx; for groups, see 20Jxx; for topological groups and related structures, see 57Txx; for algebraic topology, see also 55Nxx, 55Uxx}
+## 18-XX — Makûlât nazariyesi (kategori nazariyesi); tecânüsî cebir {Tebdîlî halkalar için bakınız: 13Dxx; tecmîî halkalar için bakınız: 16Exx; zümreler için bakınız: 20Jxx; vaz'î zümreler ve alâkalı bünyeler için bakınız: 57Txx; cebrî hendese-i vaz'iyye için ayrıca bakınız: 55Nxx, 55Uxx}
 
 Category theory; homological algebra {For commutative rings, see 13Dxx; for associative rings, see 16Exx; for groups, see 20Jxx; for topological groups and related structures, see 57Txx; for algebraic topology, see also 55Nxx, 55Uxx}
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 18-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to category theory |  |  |
-| 18-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to category theory |  |  |
-| 18-02 | Research exposition (monographs, survey articles) pertaining to category theory |  |  |
-| 18-03 | History of category theory [Consider also classification numbers from Section 01] |  |  |
-| 18-04 | Software, source code, etc. for problems pertaining to category theory |  |  |
-| 18-06 | Proceedings, conferences, collections, etc. pertaining to category theory |  |  |
-| 18-08 | Computational methods for problems pertaining to category theory |  |  |
-| 18-11 | Research data for problems pertaining to category theory |  |  |
-| **18Axx** | **General theory of categories and functors** | **** |  |
-| 18A05 | Definitions and generalizations in theory of categories |  |  |
-| 18A10 | Graphs, diagram schemes, precategories |  |  |
-| 18A15 | Foundations, relations to logic and deductive systems [See also 03-XX] |  |  |
-| 18A20 | Epimorphisms, monomorphisms, special classes of morphisms, null morphisms |  |  |
-| 18A22 | Special properties of functors (faithful, full, etc.) |  |  |
-| 18A23 | Natural morphisms, dinatural morphisms |  |  |
-| 18A25 | Functor categories, comma categories |  |  |
-| 18A30 | Limits and colimits (products, sums, directed limits, pushouts, fiber products, equalizers, kernels, ends and coends, etc.) |  |  |
-| 18A32 | Factorization systems, substructures, quotient structures, congruences, amalgams |  |  |
-| 18A35 | Categories admitting limits (complete categories), functors preserving limits, completions |  |  |
-| 18A40 | Adjoint functors (universal constructions, reflective subcategories, Kan extensions, etc.) |  |  |
-| 18A50 | Graded categories (general) {For dg categories, see 18G35} |  |  |
+| 18-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to category theory | makûlât nazariyesi hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 18-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to category theory | makûlât nazariyesi hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 18-02 | Research exposition (monographs, survey articles) pertaining to category theory | makûlât nazariyesi hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 18-03 | History of category theory [Consider also classification numbers from Section 01] | Makûlât nazariyesinin târihi [01. babın tasnif numaralarına da bakılsın] |  |
+| 18-04 | Software, source code, etc. for problems pertaining to category theory | makûlât nazariyesi sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 18-06 | Proceedings, conferences, collections, etc. pertaining to category theory | makûlât nazariyesi hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 18-08 | Computational methods for problems pertaining to category theory | makûlât nazariyesi sahasındaki meselelere dair hesap usulleri |  |
+| 18-11 | Research data for problems pertaining to category theory | makûlât nazariyesi sahasındaki meselelere dair tetkik verileri |  |
+| **18Axx** | **General theory of categories and functors** | **Makûlelerin ve nâkillerin (funktorların) umûmî nazariyesi** |  |
+| 18A05 | Definitions and generalizations in theory of categories | Makûlât nazariyesinde ta'rîfler ve umûmîleştirmeler |  |
+| 18A10 | Graphs, diagram schemes, precategories | Rabıta şekilleri, şekil şemaları, makûle-öncesi bünyeler |  |
+| 18A15 | Foundations, relations to logic and deductive systems [See also 03-XX] | Esâsât, mantıkla ve istidlâl nizâmlarıyla münasebetler [Ayrıca bakınız: 03-XX] |  |
+| 18A20 | Epimorphisms, monomorphisms, special classes of morphisms, null morphisms | Şâmil teşâküller (epimorfizmler), dercî teşâküller (monomorfizmler), hususî teşâkül sınıfları, sıfır teşâküller |  |
+| 18A22 | Special properties of functors (faithful, full, etc.) | Nâkillerin hususî hâsiyetleri (sâdık, tâm ve emsâli) |  |
+| 18A23 | Natural morphisms, dinatural morphisms | Tabiî teşâküller, dü-tabiî teşâküller |  |
+| 18A25 | Functor categories, comma categories | Nâkil makûleleri, virgül makûleleri |  |
+| 18A30 | Limits and colimits (products, sums, directed limits, pushouts, fiber products, equalizers, kernels, ends and coends, etc.) | Nihâyetler ve mukābil-nihâyetler (hâsıl-ı zarblar, mecmû'lar, müteveccih nihâyetler, ileri lehimler, lîfî hâsıl-ı zarblar, müsâvîleyiciler, nüveler, gâyeler ve mukābil-gâyeler ve emsâli) | şüpheli: "pushout" için "ileri lehim", "end/coend" için "gâye/mukābil-gâye" teklif edildi |
+| 18A32 | Factorization systems, substructures, quotient structures, congruences, amalgams | Tecziye nizâmları, alt bünyeler, hâric-i kısmet bünyeleri, tevâfuklar, imtizâclar |  |
+| 18A35 | Categories admitting limits (complete categories), functors preserving limits, completions | Nihâyetleri kabul eden makûleler (tâm makûleler), nihâyetleri hıfzeden nâkiller, tetmîmler |  |
+| 18A40 | Adjoint functors (universal constructions, reflective subcategories, Kan extensions, etc.) | Mülhak nâkiller (küllî inşâlar, in'ikâsî alt makûleler, Kan tevsî'leri ve emsâli) |  |
+| 18A50 | Graded categories (general) {For dg categories, see 18G35} | Müderrec makûleler (umûmî) {dg-makûleler için bakınız: 18G35} |  |
 | 18A99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **18Bxx** | **Special categories** | **** |  |
-| 18B05 | Categories of sets, characterizations [See also 03-XX] |  |  |
-| 18B10 | Categories of spans/cospans, relations, or partial maps |  |  |
-| 18B15 | Embedding theorems, universal categories [See also 18E20] |  |  |
-| 18B20 | Categories of machines, automata [See also 03D05, 68Qxx] |  |  |
-| 18B25 | Topoi [See also 03G30, 18F10] |  |  |
-| 18B35 | Preorders, orders, domains and lattices (viewed as categories) [See also 06-XX] |  |  |
-| 18B40 | Groupoids, semigroupoids, semigroups, groups (viewed as categories) [See also 20Axx, 20L05, 20Mxx] |  |  |
-| 18B50 | Extensive, distributive, and adhesive categories |  |  |
+| **18Bxx** | **Special categories** | **Hususî makûleler** |  |
+| 18B05 | Categories of sets, characterizations [See also 03-XX] | Mecmûa makûleleri, tavsîfler [Ayrıca bakınız: 03-XX] |  |
+| 18B10 | Categories of spans/cospans, relations, or partial maps | Köprülerin ve mukābil-köprülerin, münasebetlerin yahut kısmî tatbîklerin makûleleri |  |
+| 18B15 | Embedding theorems, universal categories [See also 18E20] | Derc kaziyyeleri, küllî makûleler [Ayrıca bakınız: 18E20] |  |
+| 18B20 | Categories of machines, automata [See also 03D05, 68Qxx] | Makine ve zâtî âlet makûleleri [Ayrıca bakınız: 03D05, 68Qxx] |  |
+| 18B25 | Topoi [See also 03G30, 18F10] | Toposlar (mevâzi') [Ayrıca bakınız: 03G30, 18F10] |  |
+| 18B35 | Preorders, orders, domains and lattices (viewed as categories) [See also 06-XX] | Ön-tertîbler, tertîbler, mıntıkalar ve kafesler (makûle olarak telakki edilen) [Ayrıca bakınız: 06-XX] |  |
+| 18B40 | Groupoids, semigroupoids, semigroups, groups (viewed as categories) [See also 20Axx, 20L05, 20Mxx] | Zümremsiler (grupoidler), nîm-zümremsiler, nîm-zümreler, zümreler (makûle olarak telakki edilen) [Ayrıca bakınız: 20Axx, 20L05, 20Mxx] | şüpheli: "groupoid" için "zümremsi" teklif edildi |
+| 18B50 | Extensive, distributive, and adhesive categories | Münbasit, tevzîî ve lâsık (yapışkan) makûleler |  |
 | 18B99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **18Cxx** | **Categories and theories** | **** |  |
-| 18C05 | Equational categories [See also 03C05, 08C05] |  |  |
-| 18C10 | Theories (e.g., algebraic theories), structure, and semantics [See also 03G30] |  |  |
-| 18C15 | Monads (= standard construction, triple or triad), algebras for monads, homology and derived functors for monads [See also 18Gxx] {For functional programming, see also 68N18} |  |  |
-| 18C20 | Eilenberg-Moore and Kleisli constructions for monads |  |  |
-| 18C30 | Sketches and generalizations |  |  |
-| 18C35 | Accessible and locally presentable categories |  |  |
-| 18C40 | Structured objects in a category (group objects, etc.) |  |  |
-| 18C50 | Categorical semantics of formal languages [See also 68Q55, 68Q65] |  |  |
+| **18Cxx** | **Categories and theories** | **Makûleler ve nazariyeler** |  |
+| 18C05 | Equational categories [See also 03C05, 08C05] | Muâdelî makûleler [Ayrıca bakınız: 03C05, 08C05] |  |
+| 18C10 | Theories (e.g., algebraic theories), structure, and semantics [See also 03G30] | Nazariyeler (meselâ cebrî nazariyeler), bünye ve meânî (semantik) [Ayrıca bakınız: 03G30] |  |
+| 18C15 | Monads (= standard construction, triple or triad), algebras for monads, homology and derived functors for monads [See also 18Gxx] {For functional programming, see also 68N18} | Monadlar (= mi'yârî inşâ, üçlü yahut sülâsiye), monadlar için cebirler, monadlar için tecânüs ve müştak nâkiller [Ayrıca bakınız: 18Gxx] {Tâbiî programlama için ayrıca bakınız: 68N18} |  |
+| 18C20 | Eilenberg-Moore and Kleisli constructions for monads | Monadlar için Eilenberg-Moore ve Kleisli inşâları |  |
+| 18C30 | Sketches and generalizations | Müsveddeler (taslaklar) ve umûmîleştirmeleri |  |
+| 18C35 | Accessible and locally presentable categories | Vâsıl olunabilir ve mahallen arz edilebilir makûleler |  |
+| 18C40 | Structured objects in a category (group objects, etc.) | Bir makûlede bünyeli eşyâ (zümre eşyâsı ve emsâli) |  |
+| 18C50 | Categorical semantics of formal languages [See also 68Q55, 68Q65] | Sûrî lisanların makûlî meânîsi [Ayrıca bakınız: 68Q55, 68Q65] |  |
 | 18C99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **18Dxx** | **Categorical structures** | **** |  |
-| 18D15 | Closed categories (closed monoidal and Cartesian closed categories, etc.) |  |  |
-| 18D20 | Enriched categories (over closed or monoidal categories) |  |  |
-| 18D25 | Actions of a monoidal category, tensorial strength {For functional programming, see also 68N18} |  |  |
-| 18D30 | Fibered categories |  |  |
-| 18D40 | Internal categories and groupoids {For double categories, see 18N10; for topological groupoids, see 22A22; for Lie groupoids, see 58H05} |  |  |
-| 18D60 | Profunctors (= correspondences, distributors, modules) |  |  |
-| 18D65 | Proarrow equipments, Yoneda structures, KZ doctrines (lax idempotent monads) |  |  |
-| 18D70 | Formal category theory |  |  |
+| **18Dxx** | **Categorical structures** | **Makûlî bünyeler** |  |
+| 18D15 | Closed categories (closed monoidal and Cartesian closed categories, etc.) | Mugalak makûleler (mugalak monoidal ve Dekartî mugalak makûleler ve emsâli) |  |
+| 18D20 | Enriched categories (over closed or monoidal categories) | Zengin kılınmış makûleler (mugalak yahut monoidal makûleler üzerinde) |  |
+| 18D25 | Actions of a monoidal category, tensorial strength {For functional programming, see also 68N18} | Monoidal bir makûlenin tesirleri, tansörî kuvvet {Tâbiî programlama için ayrıca bakınız: 68N18} |  |
+| 18D30 | Fibered categories | Lîflenmiş makûleler |  |
+| 18D40 | Internal categories and groupoids {For double categories, see 18N10; for topological groupoids, see 22A22; for Lie groupoids, see 58H05} | Dâhilî makûleler ve zümremsiler {Çift makûleler için bakınız: 18N10; vaz'î zümremsiler için bakınız: 22A22; Lie zümremsileri için bakınız: 58H05} |  |
+| 18D60 | Profunctors (= correspondences, distributors, modules) | Ön-nâkiller (= tekābüller, tevzî' ediciler, modüller) |  |
+| 18D65 | Proarrow equipments, Yoneda structures, KZ doctrines (lax idempotent monads) | Ön-ok teçhizâtları, Yoneda bünyeleri, KZ mezhepleri (gevşek sâbitü'l-kuvve monadlar) |  |
+| 18D70 | Formal category theory | Sûrî makûlât nazariyesi |  |
 | 18D99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **18Exx** | **Categorical algebra** | **** |  |
-| 18E05 | Preadditive, additive categories |  |  |
-| 18E08 | Regular categories, Barr-exact categories |  |  |
-| 18E10 | Abelian categories, Grothendieck categories |  |  |
-| 18E13 | Protomodular categories, semi-abelian categories, Mal’tsev categories [See also 08B05 and 18B10] |  |  |
-| 18E20 | Categorical embedding theorems [See also 18B15] |  |  |
-| 18E35 | Localization of categories, calculus of fractions {For homotopical aspects, see also 18N55, 55P60} |  |  |
-| 18E40 | Torsion theories, radicals [See also 13D30, 16S90] |  |  |
-| 18E45 | Definable subcategories and connections with model theory [See also 13C60] |  |  |
-| 18E50 | Categorical Galois theory |  |  |
+| **18Exx** | **Categorical algebra** | **Makûlî cebir** |  |
+| 18E05 | Preadditive, additive categories | Cem'î-öncesi, cem'î makûleler |  |
+| 18E08 | Regular categories, Barr-exact categories | Muntazam makûleler, Barr-tam makûleler |  |
+| 18E10 | Abelian categories, Grothendieck categories | Abel makûleleri, Grothendieck makûleleri |  |
+| 18E13 | Protomodular categories, semi-abelian categories, Mal’tsev categories [See also 08B05 and 18B10] | İlk-mikyâsî (protomodüler) makûleler, nîm-Abel makûleleri, Mal'tsev makûleleri [Ayrıca bakınız: 08B05 ve 18B10] |  |
+| 18E20 | Categorical embedding theorems [See also 18B15] | Makûlî derc kaziyyeleri [Ayrıca bakınız: 18B15] |  |
+| 18E35 | Localization of categories, calculus of fractions {For homotopical aspects, see also 18N55, 55P60} | Makûlelerin mahallîleştirilmesi, kesirler hesabı {Tahavvül-i muttasıla ait cihetler için ayrıca bakınız: 18N55, 55P60} |  |
+| 18E40 | Torsion theories, radicals [See also 13D30, 16S90] | İltivâ nazariyeleri, cezrler [Ayrıca bakınız: 13D30, 16S90] |  |
+| 18E45 | Definable subcategories and connections with model theory [See also 13C60] | Ta'rîf edilebilen alt makûleler ve numûneler nazariyesiyle irtibâtlar [Ayrıca bakınız: 13C60] |  |
+| 18E50 | Categorical Galois theory | Makûlî Galois nazariyesi |  |
 | 18E99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **18Fxx** | **Categories in geometry and topology** | **** |  |
-| 18F05 | Local categories and functors |  |  |
-| 18F10 | Grothendieck topologies and Grothendieck topoi [See also 14F20, 18B25] |  |  |
-| 18F15 | Abstract manifolds and fiber bundles (category-theoretic aspects) [See also 55Rxx, 57Pxx] |  |  |
-| 18F20 | Presheaves and sheaves, stacks, descent conditions (category-theoretic aspects) [See also 14F06, 14F08, 32C35, 32L10, 54B40, 55N30] |  |  |
-| 18F25 | Algebraic K-theory and L-theory (category-theoretic aspects) [See also 11Exx, 11R70, 11S70, 12-XX, 13D15, 14Cxx, 16E20, 19-XX, 46L80, 57R65, 57R67] |  |  |
-| 18F30 | Grothendieck groups (category-theoretic aspects) [See also 13D15, 16E20, 19Axx] |  |  |
-| 18F40 | Synthetic differential geometry, tangent categories, differential categories |  |  |
-| 18F50 | Goodwillie calculus and functor calculus |  |  |
-| 18F60 | Categories of topological spaces and continuous mappings [See also 54-XX] |  |  |
-| 18F70 | Frames and locales, pointfree topology, Stone duality [See also 06D22, 18B35] |  |  |
-| 18F75 | Quantales [See also 06F07, 18B35] |  |  |
+| **18Fxx** | **Categories in geometry and topology** | **Hendese ve hendese-i vaz'iyyede makûleler** |  |
+| 18F05 | Local categories and functors | Mahallî makûleler ve nâkiller |  |
+| 18F10 | Grothendieck topologies and Grothendieck topoi [See also 14F20, 18B25] | Grothendieck hendese-i vaz'iyyeleri ve Grothendieck toposları [Ayrıca bakınız: 14F20, 18B25] |  |
+| 18F15 | Abstract manifolds and fiber bundles (category-theoretic aspects) [See also 55Rxx, 57Pxx] | Mücerred müteşa'ibler ve lîfî huzmeler (makûlât nazariyesine ait cihetler) [Ayrıca bakınız: 55Rxx, 57Pxx] |  |
+| 18F20 | Presheaves and sheaves, stacks, descent conditions (category-theoretic aspects) [See also 14F06, 14F08, 32C35, 32L10, 54B40, 55N30] | Ön-desteler ve desteler, istifler, nüzûl şartları (makûlât nazariyesine ait cihetler) [Ayrıca bakınız: 14F06, 14F08, 32C35, 32L10, 54B40, 55N30] |  |
+| 18F25 | Algebraic K-theory and L-theory (category-theoretic aspects) [See also 11Exx, 11R70, 11S70, 12-XX, 13D15, 14Cxx, 16E20, 19-XX, 46L80, 57R65, 57R67] | Cebrî K-nazariyesi ve L-nazariyesi (makûlât nazariyesine ait cihetler) [Ayrıca bakınız: 11Exx, 11R70, 11S70, 12-XX, 13D15, 14Cxx, 16E20, 19-XX, 46L80, 57R65, 57R67] |  |
+| 18F30 | Grothendieck groups (category-theoretic aspects) [See also 13D15, 16E20, 19Axx] | Grothendieck zümreleri (makûlât nazariyesine ait cihetler) [Ayrıca bakınız: 13D15, 16E20, 19Axx] |  |
+| 18F40 | Synthetic differential geometry, tangent categories, differential categories | Terkîbî tefâzulî hendese, mümâs makûleler, tefâzulî makûleler |  |
+| 18F50 | Goodwillie calculus and functor calculus | Goodwillie hesabı ve nâkil hesabı |  |
+| 18F60 | Categories of topological spaces and continuous mappings [See also 54-XX] | Vaz'î fezâların ve muttasıl tatbîklerin makûleleri [Ayrıca bakınız: 54-XX] |  |
+| 18F70 | Frames and locales, pointfree topology, Stone duality [See also 06D22, 18B35] | Çerçeveler ve mahaller, noktasız hendese-i vaz'iyye, Stone mukābelesi [Ayrıca bakınız: 06D22, 18B35] |  |
+| 18F75 | Quantales [See also 06F07, 18B35] | Kuantaller [Ayrıca bakınız: 06F07, 18B35] |  |
 | 18F99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **18Gxx** | **Homological algebra in category theory, derived categories and functors [See also 13Dxx, 16Exx, 20Jxx, 55Nxx, 55Uxx, 57Txx]** | **** |  |
-| 18G05 | Projectives and injectives (category-theoretic aspects) [See also 13C10, 13C11, 16D40, 16D50] |  |  |
-| 18G10 | Resolutions; derived functors (category-theoretic aspects) [See also 13D02, 16E05, 18Gxx] |  |  |
-| 18G15 | Ext and Tor, generalizations, Künneth formula (category-theoretic aspects) [See also 55U25] |  |  |
-| 18G20 | Homological dimension (category-theoretic aspects) [See also 13D05, 16E10] |  |  |
-| 18G25 | Relative homological algebra, projective classes (category-theoretic aspects) |  |  |
-| 18G31 | Simplicial modules and Dold-Kan correspondence |  |  |
-| 18G35 | Chain complexes (category-theoretic aspects), dg categories [See also 14F08, 18G80, 55U15] |  |  |
-| 18G40 | Spectral sequences, hypercohomology [See also 55Txx] |  |  |
-| 18G45 | 2-groups, crossed modules, crossed complexes |  |  |
-| 18G50 | Nonabelian homological algebra (category-theoretic aspects) |  |  |
-| 18G65 | Stable module categories [See also 20C20] |  |  |
-| 18G70 | A∞ -categories, relations with homological mirror symmetry [See also 14F08, 14J33, 53D37] |  |  |
-| 18G80 | Derived categories, triangulated categories |  |  |
-| 18G85 | Graph complexes and graph homology {For relations with deformation quantization, see 53D55} |  |  |
-| 18G90 | Other (co)homology theories (category-theoretic aspects) [See also 19D55, 46L80, 58J20, 58J22] |  |  |
+| **18Gxx** | **Homological algebra in category theory, derived categories and functors [See also 13Dxx, 16Exx, 20Jxx, 55Nxx, 55Uxx, 57Txx]** | **Makûlât nazariyesinde tecânüsî cebir, müştak makûleler ve nâkiller [Ayrıca bakınız: 13Dxx, 16Exx, 20Jxx, 55Nxx, 55Uxx, 57Txx]** |  |
+| 18G05 | Projectives and injectives (category-theoretic aspects) [See also 13C10, 13C11, 16D40, 16D50] | İrtisâmî ve dercî eşyâ (makûlât nazariyesine ait cihetler) [Ayrıca bakınız: 13C10, 13C11, 16D40, 16D50] |  |
+| 18G10 | Resolutions; derived functors (category-theoretic aspects) [See also 13D02, 16E05, 18Gxx] | İnhilâller; müştak nâkiller (makûlât nazariyesine ait cihetler) [Ayrıca bakınız: 13D02, 16E05, 18Gxx] |  |
+| 18G15 | Ext and Tor, generalizations, Künneth formula (category-theoretic aspects) [See also 55U25] | Ext ve Tor, umûmîleştirmeleri, Künneth düstûru (makûlât nazariyesine ait cihetler) [Ayrıca bakınız: 55U25] |  |
+| 18G20 | Homological dimension (category-theoretic aspects) [See also 13D05, 16E10] | Tecânüsî buud (makûlât nazariyesine ait cihetler) [Ayrıca bakınız: 13D05, 16E10] |  |
+| 18G25 | Relative homological algebra, projective classes (category-theoretic aspects) | Nisbî tecânüsî cebir, irtisâmî sınıflar (makûlât nazariyesine ait cihetler) |  |
+| 18G31 | Simplicial modules and Dold-Kan correspondence | Basît (simpleksî) modüller ve Dold-Kan tekābülü |  |
+| 18G35 | Chain complexes (category-theoretic aspects), dg categories [See also 14F08, 18G80, 55U15] | Silsile mürekkebâtı (makûlât nazariyesine ait cihetler), dg-makûleler [Ayrıca bakınız: 14F08, 18G80, 55U15] |  |
+| 18G40 | Spectral sequences, hypercohomology [See also 55Txx] | Tayfî tevâlîler, fevk-mukābil-tecânüs [Ayrıca bakınız: 55Txx] |  |
+| 18G45 | 2-groups, crossed modules, crossed complexes | 2-zümreler, mütekātı' modüller, mütekātı' mürekkebât |  |
+| 18G50 | Nonabelian homological algebra (category-theoretic aspects) | Gayr-ı Abel tecânüsî cebir (makûlât nazariyesine ait cihetler) |  |
+| 18G65 | Stable module categories [See also 20C20] | Müstakar modül makûleleri [Ayrıca bakınız: 20C20] |  |
+| 18G70 | A∞ -categories, relations with homological mirror symmetry [See also 14F08, 14J33, 53D37] | A∞-makûleleri, tecânüsî mir'ât tenâzuruyla münasebetler [Ayrıca bakınız: 14F08, 14J33, 53D37] |  |
+| 18G80 | Derived categories, triangulated categories | Müştak makûleler, müsellesleştirilmiş makûleler |  |
+| 18G85 | Graph complexes and graph homology {For relations with deformation quantization, see 53D55} | Rabıta şekli mürekkebâtı ve rabıta şekli tecânüsü {Tagayyür-i şekil kuantumlaştırmasıyla münasebetler için bakınız: 53D55} |  |
+| 18G90 | Other (co)homology theories (category-theoretic aspects) [See also 19D55, 46L80, 58J20, 58J22] | Sâir (mukābil-)tecânüs nazariyeleri (makûlât nazariyesine ait cihetler) [Ayrıca bakınız: 19D55, 46L80, 58J20, 58J22] |  |
 | 18G99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **18Mxx** | **Monoidal categories and operads** | **** |  |
-| 18M05 | Monoidal categories, symmetric monoidal categories [See also 19D23] |  |  |
-| 18M10 | Traced monoidal categories, compact closed categories, star-autonomous categories |  |  |
-| 18M15 | Braided monoidal categories and ribbon categories {For applications to knot theory, see also 57Kxx; for applications to quantum groups, see also 16T20, 17B37, 81R50} |  |  |
-| 18M20 | Fusion categories, modular tensor categories, modular functors {For applications to topological quantum field theories, see also 57R56; for applications to conformal field theories, see also 81T40} |  |  |
-| 18M25 | Tannakian categories {For applications to motives, see also 14C15, 19E15} |  |  |
-| 18M30 | String diagrams and graphical calculi |  |  |
-| 18M35 | Categories of networks and processes, compositionality |  |  |
-| 18M40 | Dagger categories, categorical quantum mechanics [See also 81P68] |  |  |
-| 18M45 | Categorical aspects of linear logic [See also 03B47] |  |  |
-| 18M50 | Bimonoidal, skew-monoidal, duoidal categories |  |  |
-| 18M60 | Operads (general) |  |  |
-| 18M65 | Non-symmetric operads, multicategories, generalized multicategories |  |  |
-| 18M70 | Algebraic operads, cooperads, and Koszul duality |  |  |
-| 18M75 | Topological and simplicial operads [See also 18N60] |  |  |
-| 18M80 | Species, Hopf monoids, operads in combinatorics |  |  |
-| 18M85 | Polycategories/dioperads, properads, PROPs, cyclic operads, modular operads |  |  |
-| 18M90 | Globular operads |  |  |
+| **18Mxx** | **Monoidal categories and operads** | **Monoidal makûleler ve operadlar** |  |
+| 18M05 | Monoidal categories, symmetric monoidal categories [See also 19D23] | Monoidal makûleler, mütenâzır monoidal makûleler [Ayrıca bakınız: 19D23] |  |
+| 18M10 | Traced monoidal categories, compact closed categories, star-autonomous categories | İzli monoidal makûleler, mütarâs mugalak makûleler, yıldız-müstakil makûleler |  |
+| 18M15 | Braided monoidal categories and ribbon categories {For applications to knot theory, see also 57Kxx; for applications to quantum groups, see also 16T20, 17B37, 81R50} | Zefîreli (örgülü) monoidal makûleler ve şerit makûleleri {Ukde (düğüm) nazariyesine tatbîkler için ayrıca bakınız: 57Kxx; kuantum zümrelerine tatbîkler için ayrıca bakınız: 16T20, 17B37, 81R50} |  |
+| 18M20 | Fusion categories, modular tensor categories, modular functors {For applications to topological quantum field theories, see also 57R56; for applications to conformal field theories, see also 81T40} | İmtizâc makûleleri, mikyâsî tansör makûleleri, mikyâsî nâkiller {Vaz'î kuantum sahası nazariyelerine tatbîkler için ayrıca bakınız: 57R56; zâviye-hâfız (konform) saha nazariyelerine tatbîkler için ayrıca bakınız: 81T40} |  |
+| 18M25 | Tannakian categories {For applications to motives, see also 14C15, 19E15} | Tanaka makûleleri {Motiflere tatbîkler için ayrıca bakınız: 14C15, 19E15} |  |
+| 18M30 | String diagrams and graphical calculi | İp şekilleri ve resmî hesaplar |  |
+| 18M35 | Categories of networks and processes, compositionality | Şebeke ve cereyan (süreç) makûleleri, terkîbîlik |  |
+| 18M40 | Dagger categories, categorical quantum mechanics [See also 81P68] | Hançer makûleleri, makûlî kuantum mihaniki [Ayrıca bakınız: 81P68] |  |
+| 18M45 | Categorical aspects of linear logic [See also 03B47] | Hattî mantığın makûlî cihetleri [Ayrıca bakınız: 03B47] |  |
+| 18M50 | Bimonoidal, skew-monoidal, duoidal categories | Dü-monoidal, mâil-monoidal, dü-oidal makûleler |  |
+| 18M60 | Operads (general) | Operadlar (umûmî) |  |
+| 18M65 | Non-symmetric operads, multicategories, generalized multicategories | Gayr-ı mütenâzır operadlar, kesîrü'l-makûleler (çok-makûleler), umûmîleştirilmiş kesîrü'l-makûleler |  |
+| 18M70 | Algebraic operads, cooperads, and Koszul duality | Cebrî operadlar, mukābil-operadlar ve Koszul mukābelesi |  |
+| 18M75 | Topological and simplicial operads [See also 18N60] | Vaz'î ve basît operadlar [Ayrıca bakınız: 18N60] |  |
+| 18M80 | Species, Hopf monoids, operads in combinatorics | Nevîler (türler), Hopf monoidleri, terkîbâtta operadlar |  |
+| 18M85 | Polycategories/dioperads, properads, PROPs, cyclic operads, modular operads | Kesîrü'l-makûleler/dü-operadlar, properadlar, PROP'lar (hâsıl-ı zarb ve tebdîl makûleleri), devrî operadlar, mikyâsî operadlar |  |
+| 18M90 | Globular operads | Küreyvî (globüler) operadlar |  |
 | 18M99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **18Nxx** | **Higher categories and homotopical algebra** | **** |  |
-| 18N10 | 2-categories, bicategories, double categories |  |  |
-| 18N15 | 2-dimensional monad theory [See also 18C15] |  |  |
-| 18N20 | Tricategories, weak n-categories, coherence, semi-strictification |  |  |
-| 18N25 | Categorification |  |  |
-| 18N30 | Strict omega-categories, computads, polygraphs |  |  |
-| 18N40 | Homotopical algebra, Quillen model categories, derivators [See also 55U35] |  |  |
-| 18N45 | Categories of fibrations, relations to K-theory, relations to type theory |  |  |
-| 18N50 | Simplicial sets, simplicial objects [See also 55U10] |  |  |
-| 18N55 | Localizations (e.g., simplicial localization, Bousfield localization) [See also 18E35, 55P60] |  |  |
-| 18N60 | (∞, 1)-categories (quasi-categories, Segal spaces, etc.); ∞-topoi, stable ∞-categories [See also 55U35, 55U40] |  |  |
-| 18N65 | (∞, n)-categories and (∞, ∞)-categories |  |  |
-| 18N70 | ∞-operads and higher algebra [See also 18M75] |  |  |
+| **18Nxx** | **Higher categories and homotopical algebra** | **Yüksek makûleler ve tahavvül-i muttasıla ait cebir** |  |
+| 18N10 | 2-categories, bicategories, double categories | 2-makûleler, dü-makûleler, çift makûleler |  |
+| 18N15 | 2-dimensional monad theory [See also 18C15] | İki buudlu monad nazariyesi [Ayrıca bakınız: 18C15] |  |
+| 18N20 | Tricategories, weak n-categories, coherence, semi-strictification | Sülâsî makûleler, zayıf n-makûleler, insicâm, nîm-kat'îleştirme |  |
+| 18N25 | Categorification | Makûleleştirme |  |
+| 18N30 | Strict omega-categories, computads, polygraphs | Kat'î omega-makûleleri, hesap şekilleri (komputadlar), kesîrü'l-hat şekiller (poligraflar) |  |
+| 18N40 | Homotopical algebra, Quillen model categories, derivators [See also 55U35] | Tahavvül-i muttasıla ait cebir, Quillen numûne makûleleri, iştikāk ediciler (derivatörler) [Ayrıca bakınız: 55U35] |  |
+| 18N45 | Categories of fibrations, relations to K-theory, relations to type theory | Telyîf makûleleri, K-nazariyesiyle münasebetler, enmât nazariyesiyle münasebetler |  |
+| 18N50 | Simplicial sets, simplicial objects [See also 55U10] | Basît mecmûalar, basît eşyâ [Ayrıca bakınız: 55U10] |  |
+| 18N55 | Localizations (e.g., simplicial localization, Bousfield localization) [See also 18E35, 55P60] | Mahallîleştirmeler (meselâ basît mahallîleştirme, Bousfield mahallîleştirmesi) [Ayrıca bakınız: 18E35, 55P60] |  |
+| 18N60 | (∞, 1)-categories (quasi-categories, Segal spaces, etc.); ∞-topoi, stable ∞-categories [See also 55U35, 55U40] | (∞, 1)-makûleler (şibh-i makûleler, Segal fezâları ve emsâli); ∞-toposlar, müstakar ∞-makûleler [Ayrıca bakınız: 55U35, 55U40] |  |
+| 18N65 | (∞, n)-categories and (∞, ∞)-categories | (∞, n)-makûleler ve (∞, ∞)-makûleler |  |
+| 18N70 | ∞-operads and higher algebra [See also 18M75] | ∞-operadlar ve yüksek cebir [Ayrıca bakınız: 18M75] |  |
 | 18N99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
-## 19-XX — K-theory [See also 16E20, 18F25]
+## 19-XX — K-nazariyesi [Ayrıca bakınız: 16E20, 18F25]
 
 K-theory [See also 16E20, 18F25]
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 19-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to K-theory |  |  |
-| 19-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to K-theory |  |  |
-| 19-02 | Research exposition (monographs, survey articles) pertaining to K-theory |  |  |
-| 19-03 | History of K-theory [Consider also classification numbers from Section 01] |  |  |
-| 19-04 | Software, source code, etc. for problems pertaining to K-theory |  |  |
-| 19-06 | Proceedings, conferences, collections, etc. pertaining to K-theory |  |  |
-| 19-08 | Computational methods for problems pertaining to K-theory |  |  |
-| 19-11 | Research data for problems pertaining to K-theory |  |  |
-| **19Axx** | **Grothendieck groups and K0 [See also 13D15, 18F30]** | **** |  |
-| 19A13 | Stability for projective modules [See also 13C10] |  |  |
-| 19A15 | Efficient generation of modules |  |  |
-| 19A22 | Frobenius induction, Burnside and representation rings |  |  |
-| 19A31 | K0 of group rings and orders |  |  |
-| 19A49 | K0 of other rings |  |  |
+| 19-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to K-theory | K-nazariyesi hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 19-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to K-theory | K-nazariyesi hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 19-02 | Research exposition (monographs, survey articles) pertaining to K-theory | K-nazariyesi hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 19-03 | History of K-theory [Consider also classification numbers from Section 01] | K-nazariyesinin târihi [01. babın tasnif numaralarına da bakılsın] |  |
+| 19-04 | Software, source code, etc. for problems pertaining to K-theory | K-nazariyesi sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 19-06 | Proceedings, conferences, collections, etc. pertaining to K-theory | K-nazariyesi hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 19-08 | Computational methods for problems pertaining to K-theory | K-nazariyesi sahasındaki meselelere dair hesap usulleri |  |
+| 19-11 | Research data for problems pertaining to K-theory | K-nazariyesi sahasındaki meselelere dair tetkik verileri |  |
+| **19Axx** | **Grothendieck groups and K0 [See also 13D15, 18F30]** | **Grothendieck zümreleri ve K0 [Ayrıca bakınız: 13D15, 18F30]** |  |
+| 19A13 | Stability for projective modules [See also 13C10] | İrtisâmî modüller için istikrâr [Ayrıca bakınız: 13C10] |  |
+| 19A15 | Efficient generation of modules | Modüllerin iktisatlı tevlîdi |  |
+| 19A22 | Frobenius induction, Burnside and representation rings | Frobenius istihrâcı, Burnside halkaları ve temsil halkaları |  |
+| 19A31 | K0 of group rings and orders | Zümre halkalarının ve tertîb halkalarının K0'ı |  |
+| 19A49 | K0 of other rings | Sâir halkaların K0'ı |  |
 | 19A99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **19Bxx** | **Whitehead groups and K1** | **** |  |
-| 19B10 | Stable range conditions |  |  |
-| 19B14 | Stability for linear groups |  |  |
-| 19B28 | K1 of group rings and orders [See also 57Q10] |  |  |
-| 19B37 | Congruence subgroup problems [See also 20H05] |  |  |
+| **19Bxx** | **Whitehead groups and K1** | **Whitehead zümreleri ve K1** |  |
+| 19B10 | Stable range conditions | Müstakar menzil şartları |  |
+| 19B14 | Stability for linear groups | Hattî zümreler için istikrâr |  |
+| 19B28 | K1 of group rings and orders [See also 57Q10] | Zümre halkalarının ve tertîb halkalarının K1'i [Ayrıca bakınız: 57Q10] |  |
+| 19B37 | Congruence subgroup problems [See also 20H05] | Tevâfuk alt zümresi meseleleri [Ayrıca bakınız: 20H05] |  |
 | 19B99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **19Cxx** | **Steinberg groups and K2** | **** |  |
-| 19C09 | Central extensions and Schur multipliers |  |  |
-| 19C20 | Symbols, presentations and stability of K2 |  |  |
-| 19C30 | K2 and the Brauer group |  |  |
-| 19C40 | Excision for K2 |  |  |
+| **19Cxx** | **Steinberg groups and K2** | **Steinberg zümreleri ve K2** |  |
+| 19C09 | Central extensions and Schur multipliers | Merkezî tevsî'ler ve Schur zâribleri |  |
+| 19C20 | Symbols, presentations and stability of K2 | K2'nin remizleri, arzları ve istikrârı |  |
+| 19C30 | K2 and the Brauer group | K2 ve Brauer zümresi |  |
+| 19C40 | Excision for K2 | K2 için istîsâl (kesip çıkarma) |  |
 | 19C99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **19Dxx** | **Higher algebraic K-theory** | **** |  |
-| 19D06 | Q- and plus-constructions |  |  |
-| 19D10 | Algebraic K-theory of spaces |  |  |
-| 19D23 | Symmetric monoidal categories [See also 18M05] |  |  |
-| 19D25 | Karoubi-Villamayor-Gersten K-theory |  |  |
-| 19D35 | Negative K-theory, NK and Nil |  |  |
-| 19D45 | Higher symbols, Milnor K-theory |  |  |
-| 19D50 | Computations of higher K-theory of rings [See also 13D15, 16E20] |  |  |
-| 19D55 | K-theory and homology; cyclic homology and cohomology [See also 18G90] |  |  |
+| **19Dxx** | **Higher algebraic K-theory** | **Yüksek cebrî K-nazariyesi** |  |
+| 19D06 | Q- and plus-constructions | Q-inşâları ve artı-inşâları |  |
+| 19D10 | Algebraic K-theory of spaces | Fezâların cebrî K-nazariyesi |  |
+| 19D23 | Symmetric monoidal categories [See also 18M05] | Mütenâzır monoidal makûleler [Ayrıca bakınız: 18M05] |  |
+| 19D25 | Karoubi-Villamayor-Gersten K-theory | Karoubi-Villamayor-Gersten K-nazariyesi |  |
+| 19D35 | Negative K-theory, NK and Nil | Menfî K-nazariyesi, NK ve Nil |  |
+| 19D45 | Higher symbols, Milnor K-theory | Yüksek remizler, Milnor K-nazariyesi |  |
+| 19D50 | Computations of higher K-theory of rings [See also 13D15, 16E20] | Halkaların yüksek K-nazariyesinin hesaplanması [Ayrıca bakınız: 13D15, 16E20] |  |
+| 19D55 | K-theory and homology; cyclic homology and cohomology [See also 18G90] | K-nazariyesi ve tecânüs; devrî tecânüs ve mukābil-tecânüs [Ayrıca bakınız: 18G90] |  |
 | 19D99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **19Exx** | **K-theory in geometry** | **** |  |
-| 19E08 | K-theory of schemes [See also 14C35] |  |  |
-| 19E15 | Algebraic cycles and motivic cohomology (K-theoretic aspects) [See also 14C25, 14C35, 14F42] |  |  |
-| 19E20 | Relations of K-theory with cohomology theories [See also 14Fxx] |  |  |
+| **19Exx** | **K-theory in geometry** | **Hendesede K-nazariyesi** |  |
+| 19E08 | K-theory of schemes [See also 14C35] | Muhattatların K-nazariyesi [Ayrıca bakınız: 14C35] |  |
+| 19E15 | Algebraic cycles and motivic cohomology (K-theoretic aspects) [See also 14C25, 14C35, 14F42] | Cebrî devreler ve motifî mukābil-tecânüs (K-nazariyesine ait cihetler) [Ayrıca bakınız: 14C25, 14C35, 14F42] |  |
+| 19E20 | Relations of K-theory with cohomology theories [See also 14Fxx] | K-nazariyesinin mukābil-tecânüs nazariyeleriyle münasebetleri [Ayrıca bakınız: 14Fxx] |  |
 | 19E99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **19Fxx** | **K-theory in number theory [See also 11R70, 11S70]** | **** |  |
-| 19F05 | Generalized class field theory (K-theoretic aspects) [See also 11G45] |  |  |
-| 19F15 | Symbols and arithmetic (K-theoretic aspects) [See also 11R37] |  |  |
-| 19F27 | Étale cohomology, higher regulators, zeta and L-functions (K-theoretic aspects) [See also 11G40, 11R42, 11S40, 14F20, 14G10] |  |  |
+| **19Fxx** | **K-theory in number theory [See also 11R70, 11S70]** | **Nazariye-i a'dâdda K-nazariyesi [Ayrıca bakınız: 11R70, 11S70]** |  |
+| 19F05 | Generalized class field theory (K-theoretic aspects) [See also 11G45] | Umûmîleştirilmiş sınıf cismi nazariyesi (K-nazariyesine ait cihetler) [Ayrıca bakınız: 11G45] |  |
+| 19F15 | Symbols and arithmetic (K-theoretic aspects) [See also 11R37] | Remizler ve hesap (K-nazariyesine ait cihetler) [Ayrıca bakınız: 11R37] |  |
+| 19F27 | Étale cohomology, higher regulators, zeta and L-functions (K-theoretic aspects) [See also 11G40, 11R42, 11S40, 14F20, 14G10] | Étale mukābil-tecânüsü, yüksek nâzımlar (regülatörler), zeta ve L-tâbileri (K-nazariyesine ait cihetler) [Ayrıca bakınız: 11G40, 11R42, 11S40, 14F20, 14G10] |  |
 | 19F99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **19Gxx** | **K-theory of forms [See also 11Exx]** | **** |  |
-| 19G05 | Stability for quadratic modules |  |  |
-| 19G12 | Witt groups of rings [See also 11E81] |  |  |
-| 19G24 | L-theory of group rings [See also 11E81] |  |  |
-| 19G38 | Hermitian K-theory, relations with K-theory of rings |  |  |
+| **19Gxx** | **K-theory of forms [See also 11Exx]** | **Şekillerin K-nazariyesi [Ayrıca bakınız: 11Exx]** |  |
+| 19G05 | Stability for quadratic modules | Murabba'î modüller için istikrâr |  |
+| 19G12 | Witt groups of rings [See also 11E81] | Halkaların Witt zümreleri [Ayrıca bakınız: 11E81] |  |
+| 19G24 | L-theory of group rings [See also 11E81] | Zümre halkalarının L-nazariyesi [Ayrıca bakınız: 11E81] |  |
+| 19G38 | Hermitian K-theory, relations with K-theory of rings | Hermite K-nazariyesi, halkaların K-nazariyesiyle münasebetler |  |
 | 19G99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **19Jxx** | **Obstructions from topology** | **** |  |
-| 19J05 | Finiteness and other obstructions in K0 |  |  |
-| 19J10 | Whitehead (and related) torsion |  |  |
-| 19J25 | Surgery obstructions (K-theoretic aspects) [See also 57R67] |  |  |
-| 19J35 | Obstructions to group actions (K-theoretic aspects) |  |  |
+| **19Jxx** | **Obstructions from topology** | **Hendese-i vaz'iyyeden gelen mâni'ler** |  |
+| 19J05 | Finiteness and other obstructions in K0 | K0'da mütenâhîlik mâni'leri ve sâir mâni'ler |  |
+| 19J10 | Whitehead (and related) torsion | Whitehead (ve alâkalı) iltivâsı |  |
+| 19J25 | Surgery obstructions (K-theoretic aspects) [See also 57R67] | Cerrâhî mâni'leri (K-nazariyesine ait cihetler) [Ayrıca bakınız: 57R67] |  |
+| 19J35 | Obstructions to group actions (K-theoretic aspects) | Zümre tesirlerine mâni'ler (K-nazariyesine ait cihetler) |  |
 | 19J99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **19Kxx** | **K-theory and operator algebras [See mainly 46L80, and also 46M20]** | **** |  |
-| 19K14 | K0 as an ordered group, traces |  |  |
-| 19K33 | Ext and K-homology [See also 55N22] |  |  |
-| 19K35 | Kasparov theory (KK-theory) [See also 58J22] |  |  |
-| 19K56 | Index theory [See also 58J20, 58J22] |  |  |
+| **19Kxx** | **K-theory and operator algebras [See mainly 46L80, and also 46M20]** | **K-nazariyesi ve âmil cebirleri [Bilhassa bakınız: 46L80, ve ayrıca 46M20]** |  |
+| 19K14 | K0 as an ordered group, traces | Müretteb zümre olarak K0, izler |  |
+| 19K33 | Ext and K-homology [See also 55N22] | Ext ve K-tecânüsü [Ayrıca bakınız: 55N22] |  |
+| 19K35 | Kasparov theory (KK-theory) [See also 58J22] | Kasparov nazariyesi (KK-nazariyesi) [Ayrıca bakınız: 58J22] |  |
+| 19K56 | Index theory [See also 58J20, 58J22] | Delîl (endeks) nazariyesi [Ayrıca bakınız: 58J20, 58J22] | şüpheli: âmilin "index"i için Arapça "dalîl"den teklif edildi |
 | 19K99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **19Lxx** | **Topological K-theory [See also 55N15, 55R50, 55S25]** | **** |  |
-| 19L10 | Riemann-Roch theorems, Chern characters |  |  |
-| 19L20 | J-homomorphism, Adams operations [See also 55Q50] |  |  |
-| 19L41 | Connective K-theory, cobordism [See also 55N22] |  |  |
-| 19L47 | Equivariant K-theory [See also 55N91, 55P91, 55Q91, 55R91, 55S91] |  |  |
-| 19L50 | Twisted K-theory; differential K-theory |  |  |
-| 19L64 | Geometric applications of topological K-theory |  |  |
+| **19Lxx** | **Topological K-theory [See also 55N15, 55R50, 55S25]** | **Vaz'î K-nazariyesi [Ayrıca bakınız: 55N15, 55R50, 55S25]** |  |
+| 19L10 | Riemann-Roch theorems, Chern characters | Riemann-Roch kaziyyeleri, Chern seciyeleri |  |
+| 19L20 | J-homomorphism, Adams operations [See also 55Q50] | J-teşâkülü, Adams ameliyeleri [Ayrıca bakınız: 55Q50] |  |
+| 19L41 | Connective K-theory, cobordism [See also 55N22] | Bağlayıcı K-nazariyesi, müşterek-hudutluluk (kobordizm) [Ayrıca bakınız: 55N22] |  |
+| 19L47 | Equivariant K-theory [See also 55N91, 55P91, 55Q91, 55R91, 55S91] | Hem-tegayyürlü K-nazariyesi [Ayrıca bakınız: 55N91, 55P91, 55Q91, 55R91, 55S91] |  |
+| 19L50 | Twisted K-theory; differential K-theory | Mültevî (bükülmüş) K-nazariyesi; tefâzulî K-nazariyesi |  |
+| 19L64 | Geometric applications of topological K-theory | Vaz'î K-nazariyesinin hendesî tatbîkleri |  |
 | 19L99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **19Mxx** | **Miscellaneous applications of K-theory** | **** |  |
-| 19M05 | Miscellaneous applications of K-theory |  |  |
+| **19Mxx** | **Miscellaneous applications of K-theory** | **K-nazariyesinin muhtelif tatbîkleri** |  |
+| 19M05 | Miscellaneous applications of K-theory | K-nazariyesinin muhtelif tatbîkleri |  |
 | 19M99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
 ## 20-XX — Group theory and generalizations
