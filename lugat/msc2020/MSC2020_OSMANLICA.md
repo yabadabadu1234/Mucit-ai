@@ -2,7 +2,7 @@
 
 Bu sahife `araclar/msc_birlestir.py` ile `kaynak.tsv` ve `ceviri/` dosyalarından üretilir; elle değiştirilmez.
 
-Toplam madde: 6603 · karşılığı bulunan: 6483 · kalan: 120
+Toplam madde: 6603 · karşılığı bulunan: 6603 · kalan: 0
 
 
 ## 00-XX — Umûmî ve şâmil mevzûlar; mecmualar
@@ -3032,7 +3032,7 @@ Partial differential equations
 | 35R10 | Partial functional-differential equations | Kısmî tâbi'-i tevâbi'-tefâzulî muâdeleler |  |
 | 35R11 | Fractional partial differential equations | Kesrî kısmî tefâzulî muâdeleler |  |
 | 35R12 | Impulsive partial differential equations | Def'î (darbeli) kısmî tefâzulî muâdeleler |  |
-| 35R13 | Fuzzy partial differential equations | Bulanık kısmî tefâzulî muâdeleler |  |
+| 35R13 | Fuzzy partial differential equations | Mübhem (bulanık) kısmî tefâzulî muâdeleler |  |
 | 35R15 | PDEs on infinite-dimensional (e.g., function) spaces (= PDEs in infinitely many variables) [See also 46Gxx, 58D25] | Gayr-ı mütenâhî buudlu (meselâ tâbi) fezâlarda kısmî tefâzulî muâdeleler (= gayr-ı mütenâhî adette mütehavvilli kısmî tefâzulî muâdeleler) [Ayrıca bakınız: 46Gxx, 58D25] |  |
 | 35R20 | Operator partial differential equations (= PDEs on finite-dimensional spaces for abstract space valued functions) [See also 34Gxx, 47A50, 47D03, 47D06, 47D09, 47H20, 47Jxx] | Âmil kısmî tefâzulî muâdeleleri (= mücerred fezâda kıymet alan tâbiler için mütenâhî buudlu fezâlarda kısmî tefâzulî muâdeleler) [Ayrıca bakınız: 34Gxx, 47A50, 47D03, 47D06, 47D09, 47H20, 47Jxx] |  |
 | 35R25 | Ill-posed problems for PDEs | Kısmî tefâzulî muâdeleler için kötü vaz' edilmiş meseleler |  |
@@ -3289,7 +3289,7 @@ Difference and functional equations
 | 39A22 | Growth, boundedness, comparison of solutions to difference equations | Fark muâdelelerinin hallerinin tezâyüdü, mahdûdiyeti, mukayesesi |  |
 | 39A23 | Periodic solutions of difference equations | Fark muâdelelerinin devrî halleri |  |
 | 39A24 | Almost periodic solutions of difference equations | Fark muâdelelerinin takrîben devrî halleri |  |
-| 39A26 | Fuzzy difference equations | Bulanık fark muâdeleleri |  |
+| 39A26 | Fuzzy difference equations | Mübhem (bulanık) fark muâdeleleri |  |
 | 39A27 | Boundary value problems for difference equations | Fark muâdeleleri için hudûd kıymeti meseleleri |  |
 | 39A28 | Bifurcation theory for difference equations | Fark muâdeleleri için çatallanma nazariyesi |  |
 | 39A30 | Stability theory for difference equations | Fark muâdeleleri için istikrar nazariyesi |  |
@@ -3790,7 +3790,7 @@ Functional analysis {For manifolds modeled on topological linear spaces, see 57N
 | 46S10 | Functional analysis over fields other than R or C or the quaternions; non-Archimedean functional analysis [See also 12J25, 32P05] | R, C yahut kuaterniyonlardan başka cisimler üzerinde tâbiî tahlîl; gayr-ı Arşimedî tâbiî tahlîl [Ayrıca bakınız: 12J25, 32P05] |  |
 | 46S20 | Nonstandard functional analysis [See also 03H05] | Gayr-ı mi'yârî tâbiî tahlîl [Ayrıca bakınız: 03H05] |  |
 | 46S30 | Constructive functional analysis [See also 03F60] | İnşâî (konstrüktif) tâbiî tahlîl [Ayrıca bakınız: 03F60] |  |
-| 46S40 | Fuzzy functional analysis [See also 03E72] | Bulanık tâbiî tahlîl [Ayrıca bakınız: 03E72] |  |
+| 46S40 | Fuzzy functional analysis [See also 03E72] | Mübhem (bulanık) tâbiî tahlîl [Ayrıca bakınız: 03E72] |  |
 | 46S50 | Functional analysis in probabilistic metric linear spaces | İhtimâlî mesâfeli hattî fezâlarda tâbiî tahlîl |  |
 | 46S60 | Functional analysis on superspaces (supermanifolds) or graded spaces [See also 58A50, 58C50] | Fevka'l-fezâlar (fevka'l-müteşa'ibler) yahut dereceli fezâlar üzerinde tâbiî tahlîl [Ayrıca bakınız: 58A50, 58C50] |  |
 | 46S99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
@@ -3982,7 +3982,7 @@ Operator theory
 | 47S10 | Operator theory over fields other than R, C or the quaternions; non-Archimedean operator theory | R, C yahut kuaterniyonlardan başka cisimler üzerinde âmiller nazariyesi; gayr-ı Arşimedî âmiller nazariyesi |  |
 | 47S20 | Nonstandard operator theory [See also 03H05] | Gayr-ı mi'yârî âmiller nazariyesi [Ayrıca bakınız: 03H05] |  |
 | 47S30 | Constructive operator theory [See also 03F60] | İnşâî âmiller nazariyesi [Ayrıca bakınız: 03F60] |  |
-| 47S40 | Fuzzy operator theory [See also 03E72] | Bulanık âmiller nazariyesi [Ayrıca bakınız: 03E72] |  |
+| 47S40 | Fuzzy operator theory [See also 03E72] | Mübhem (bulanık) âmiller nazariyesi [Ayrıca bakınız: 03E72] |  |
 | 47S50 | Operator theory in probabilistic metric linear spaces [See also 54E70] | İhtimâlî mesâfeli hattî fezâlarda âmiller nazariyesi [Ayrıca bakınız: 54E70] |  |
 | 47S99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
@@ -4391,7 +4391,7 @@ General topology {For the topology of manifolds of all dimensions, see 57Nxx}
 | 54A20 | Convergence in general topology (sequences, filters, limits, convergence spaces, nets, etc.) | Umûmî hendese-i vaz'iyyede tekārüb (tevâlîler, süzgeçler, nihâyetler, tekārüb fezâları, şebekeler ve emsâli) |  |
 | 54A25 | Cardinality properties (cardinal functions and inequalities, discrete subsets) [See also 03Exx] {For ultrafilters, see 54D80} | Aslî adet vasıfları (aslî adet tâbileri ve adem-i müsâvâtları, munfasıl alt mecmûalar) [Ayrıca bakınız: 03Exx] {Fevka'n-nihâye süzgeçler (ultrafiltreler) için bakınız: 54D80} |  |
 | 54A35 | Consistency and independence results in general topology [See also 03E35] | Umûmî hendese-i vaz'iyyede adem-i tenâkuz ve istiklâl neticeleri [Ayrıca bakınız: 03E35] |  |
-| 54A40 | Fuzzy topology [See also 03E72] | Bulanık hendese-i vaz'iyye [Ayrıca bakınız: 03E72] |  |
+| 54A40 | Fuzzy topology [See also 03E72] | Mübhem (bulanık) hendese-i vaz'iyye [Ayrıca bakınız: 03E72] |  |
 | 54A99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 | **54Bxx** | **Basic constructions in general topology** | **Umûmî hendese-i vaz'iyyede esâsî inşâlar** |  |
 | 54B05 | Subspaces in general topology | Umûmî hendese-i vaz'iyyede alt fezâlar |  |
@@ -4916,7 +4916,7 @@ Probability theory and stochastic processes {For additional applications, see 05
 | **60Axx** | **Foundations of probability theory** | **İhtimâl nazariyesinin esasları** |  |
 | 60A05 | Axioms; other general questions in probability | Mütearifeler; ihtimâlde sâir umûmî suâller |  |
 | 60A10 | Probabilistic measure theory {For ergodic theory, see 28Dxx, 60Fxx} | İhtimâlî mikyâs nazariyesi {Ergodik nazariye için bakınız: 28Dxx, 60Fxx} |  |
-| 60A86 | Fuzzy probability | Bulanık ihtimâl |  |
+| 60A86 | Fuzzy probability | Mübhem (bulanık) ihtimâl |  |
 | 60A99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 | **60Bxx** | **Probability theory on algebraic and topological structures** | **Cebrî ve vaz'î bünyeler üzerinde ihtimâl nazariyesi** |  |
 | 60B05 | Probability measures on topological spaces | Vaz'î fezâlar üzerinde ihtimâl mikyâsları |  |
@@ -5054,14 +5054,14 @@ Statistics
 | **62Axx** | **Foundational topics in statistics** | **İhsâiyyâtta esâsî mevzûlar** |  |
 | 62A01 | Foundations and philosophical topics in statistics | İhsâiyyâtta esaslar ve felsefî mevzûlar |  |
 | 62A09 | Graphical methods in statistics | İhsâiyyâtta tersîmî (grafik) usuller |  |
-| 62A86 | Fuzzy analysis in statistics | İhsâiyyâtta bulanık tahlîl |  |
+| 62A86 | Fuzzy analysis in statistics | İhsâiyyâtta mübhem (bulanık) tahlîl |  |
 | 62A99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 | **62Bxx** | **Sufficiency and information** | **Kifâyet ve malûmat** |  |
 | 62B05 | Sufficient statistics and fields | Kâfî ihsâiyeler ve sahalar |  |
 | 62B10 | Statistical aspects of information-theoretic topics [See also 94A17] | Malûmat nazariyesine ait mevzûların ihsâî cihetleri [Ayrıca bakınız: 94A17] |  |
 | 62B11 | Information geometry (statistical aspects) {For differential geometric aspects, see 53B12} | Malûmat hendesesi (ihsâî cihetler) {Tefâzulî hendesî cihetler için bakınız: 53B12} |  |
 | 62B15 | Theory of statistical experiments | İhsâî tecrübeler nazariyesi |  |
-| 62B86 | Statistical aspects of fuzziness, sufficiency, and information | Bulanıklığın, kifâyetin ve malûmatın ihsâî cihetleri |  |
+| 62B86 | Statistical aspects of fuzziness, sufficiency, and information | Mübhemliğin (bulanıklığın), kifâyetin ve malûmatın ihsâî cihetleri |  |
 | 62B99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 | **62Cxx** | **Statistical decision theory [See also 90B50, 91B06] {For game theory, see 91A35}** | **İhsâî karar nazariyesi [Ayrıca bakınız: 90B50, 91B06] {Oyunlar nazariyesi için bakınız: 91A35}** |  |
 | 62C05 | General considerations in statistical decision theory | İhsâî karar nazariyesinde umûmî mülâhazalar |  |
@@ -5071,7 +5071,7 @@ Statistics
 | 62C15 | Admissibility in statistical decision theory | İhsâî karar nazariyesinde kabûle şâyanlık |  |
 | 62C20 | Minimax procedures in statistical decision theory | İhsâî karar nazariyesinde asgarî-azamî usuller |  |
 | 62C25 | Compound decision problems in statistical decision theory | İhsâî karar nazariyesinde mürekkeb karar meseleleri |  |
-| 62C86 | Statistical decision theory and fuzziness | İhsâî karar nazariyesi ve bulanıklık |  |
+| 62C86 | Statistical decision theory and fuzziness | İhsâî karar nazariyesi ve mübhemlik (bulanıklık) |  |
 | 62C99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 | **62Dxx** | **Statistical sampling theory and related topics** | **İhsâî numûne alma nazariyesi ve alâkalı mevzûlar** |  |
 | 62D05 | Sampling theory, sample surveys | Numûne alma nazariyesi, numûne yoklamaları |  |
@@ -5083,7 +5083,7 @@ Statistics
 | 62E15 | Exact distribution theory in statistics | İhsâiyyâtta tam tevzî' nazariyesi |  |
 | 62E17 | Approximations to statistical distributions (nonasymptotic) | İhsâî tevzî'lere takrîbler (gayr-ı mukāribî) |  |
 | 62E20 | Asymptotic distribution theory in statistics | İhsâiyyâtta mukāribî tevzî' nazariyesi |  |
-| 62E86 | Fuzziness in connection with statistical distributions | İhsâî tevzî'lerle alâkalı bulanıklık |  |
+| 62E86 | Fuzziness in connection with statistical distributions | İhsâî tevzî'lerle alâkalı mübhemlik (bulanıklık) |  |
 | 62E99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 | **62Fxx** | **Parametric inference** | **Vasîtlı (parametrik) istidlâl** |  |
 | 62F03 | Parametric hypothesis testing | Vasîtlı farziye imtihanı |  |
@@ -5096,7 +5096,7 @@ Statistics
 | 62F30 | Parametric inference under constraints | Kayıtlar altında vasîtlı istidlâl |  |
 | 62F35 | Robustness and adaptive procedures (parametric inference) | Sağlamlık ve intibâk edici usuller (vasîtlı istidlâl) |  |
 | 62F40 | Bootstrap, jackknife and other resampling methods | Kendi kendini kaldırma (bootstrap), çakı (jackknife) ve sâir yeniden numûne alma usulleri | şüpheli: "bootstrap" ve "jackknife" lafzî tercümeyle verildi |
-| 62F86 | Parametric inference and fuzziness | Vasîtlı istidlâl ve bulanıklık |  |
+| 62F86 | Parametric inference and fuzziness | Vasîtlı istidlâl ve mübhemlik (bulanıklık) |  |
 | 62F99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 | **62Gxx** | **Nonparametric inference** | **Vasîtsız (parametrik olmayan) istidlâl** |  |
 | 62G05 | Nonparametric estimation | Vasîtsız tahmîn |  |
@@ -5109,7 +5109,7 @@ Statistics
 | 62G30 | Order statistics; empirical distribution functions | Tertip ihsâiyeleri; tecrübî tevzî' tâbileri |  |
 | 62G32 | Statistics of extreme values; tail inference | Uç kıymetlerin ihsâiyyâtı; kuyruk istidlâli |  |
 | 62G35 | Nonparametric robustness | Vasîtsız sağlamlık |  |
-| 62G86 | Nonparametric inference and fuzziness | Vasîtsız istidlâl ve bulanıklık |  |
+| 62G86 | Nonparametric inference and fuzziness | Vasîtsız istidlâl ve mübhemlik (bulanıklık) |  |
 | 62G99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 | **62Hxx** | **Multivariate analysis [See also 60Exx]** | **Çok mütehavvilli tahlîl [Ayrıca bakınız: 60Exx]** |  |
 | 62H05 | Characterization and structure theory for multivariate probability distributions; copulas | Çok mütehavvilli ihtimâl tevzî'lerinin tavsîfi ve bünye nazariyesi; rabıtalar (kopulalar) |  |
@@ -5123,7 +5123,7 @@ Statistics
 | 62H25 | Factor analysis and principal components; correspondence analysis | Âmil (faktör) tahlîli ve esas bileşenler; mutâbakat tahlîli |  |
 | 62H30 | Classification and discrimination; cluster analysis (statistical aspects) [See also 68T10, 91C20]; mixture models | Tasnif ve temyîz; kümeleme tahlîli (ihsâî cihetler) [Ayrıca bakınız: 68T10, 91C20]; karışım numûneleri |  |
 | 62H35 | Image analysis in multivariate analysis | Çok mütehavvilli tahlîlde sûret tahlîli |  |
-| 62H86 | Multivariate analysis and fuzziness | Çok mütehavvilli tahlîl ve bulanıklık |  |
+| 62H86 | Multivariate analysis and fuzziness | Çok mütehavvilli tahlîl ve mübhemlik (bulanıklık) |  |
 | 62H99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 | **62Jxx** | **Linear inference, regression** | **Hattî istidlâl, avdet (regresyon)** |  |
 | 62J02 | General nonlinear regression | Umûmî gayr-ı hattî avdet |  |
@@ -5133,7 +5133,7 @@ Statistics
 | 62J12 | Generalized linear models (logistic models) | Teşmîl edilmiş hattî numûneler (lojistik numûneler) |  |
 | 62J15 | Paired and multiple comparisons; multiple testing | Çiftli ve çoklu mukayeseler; çoklu imtihan |  |
 | 62J20 | Diagnostics, and linear inference and regression | Teşhîsler ve hattî istidlâl ve avdet |  |
-| 62J86 | Fuzziness, and linear inference and regression | Bulanıklık ve hattî istidlâl ve avdet |  |
+| 62J86 | Fuzziness, and linear inference and regression | Mübhemlik (mübhemlik (bulanıklık)) ve hattî istidlâl ve avdet |  |
 | 62J99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 | **62Kxx** | **Design of statistical experiments [See also 05Bxx]** | **İhsâî tecrübelerin tasmîmi [Ayrıca bakınız: 05Bxx]** |  |
 | 62K05 | Optimal statistical designs | En iyi ihsâî tasmîmler |  |
@@ -5141,7 +5141,7 @@ Statistics
 | 62K15 | Factorial statistical designs | Âmilli (faktöriyel) ihsâî tasmîmler |  |
 | 62K20 | Response surface designs | Cevap sathı tasmîmleri |  |
 | 62K25 | Robust parameter designs | Sağlam vasît tasmîmleri |  |
-| 62K86 | Fuzziness and design of statistical experiments | Bulanıklık ve ihsâî tecrübelerin tasmîmi |  |
+| 62K86 | Fuzziness and design of statistical experiments | Mübhemlik (mübhemlik (bulanıklık)) ve ihsâî tecrübelerin tasmîmi |  |
 | 62K99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 | **62Lxx** | **Sequential statistical methods** | **Ardışık ihsâî usuller** |  |
 | 62L05 | Sequential statistical design | Ardışık ihsâî tasmîm |  |
@@ -5149,7 +5149,7 @@ Statistics
 | 62L12 | Sequential estimation | Ardışık tahmîn |  |
 | 62L15 | Optimal stopping in statistics [See also 60G40, 91A60] | İhsâiyyâtta en iyi durma [Ayrıca bakınız: 60G40, 91A60] |  |
 | 62L20 | Stochastic approximation | İhtimâlî takrîb |  |
-| 62L86 | Fuzziness and sequential statistical methods | Bulanıklık ve ardışık ihsâî usuller |  |
+| 62L86 | Fuzziness and sequential statistical methods | Mübhemlik (mübhemlik (bulanıklık)) ve ardışık ihsâî usuller |  |
 | 62L99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 | **62Mxx** | **Inference from stochastic processes** | **İhtimâlî cereyanlardan istidlâl** |  |
 | 62M02 | Markov processes: hypothesis testing | Markov cereyanları: farziye imtihanı | nakil |
@@ -5162,14 +5162,14 @@ Statistics
 | 62M30 | Inference from spatial processes | Mekânî cereyanlardan istidlâl |  |
 | 62M40 | Random fields; image analysis | Tesâdüfî sahalar; sûret tahlîli |  |
 | 62M45 | Neural nets and related approaches to inference from stochastic processes | İhtimâlî cereyanlardan istidlâle sinir ağları ve alâkalı yaklaşımlar |  |
-| 62M86 | Inference from stochastic processes and fuzziness | İhtimâlî cereyanlardan istidlâl ve bulanıklık |  |
+| 62M86 | Inference from stochastic processes and fuzziness | İhtimâlî cereyanlardan istidlâl ve mübhemlik (bulanıklık) |  |
 | 62M99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 | **62Nxx** | **Survival analysis and censored data** | **Hayatta kalma tahlîli ve sansürlü (kırpılmış) veriler** |  |
 | 62N01 | Censored data models | Kırpılmış veri numûneleri |  |
 | 62N02 | Estimation in survival analysis and censored data | Hayatta kalma tahlîlinde ve kırpılmış verilerde tahmîn |  |
 | 62N03 | Testing in survival analysis and censored data | Hayatta kalma tahlîlinde ve kırpılmış verilerde imtihan |  |
 | 62N05 | Reliability and life testing [See also 90B25] | İtimâd edilirlik ve ömür imtihanı [Ayrıca bakınız: 90B25] |  |
-| 62N86 | Fuzziness, and survival analysis and censored data | Bulanıklık ve hayatta kalma tahlîli ve kırpılmış veriler |  |
+| 62N86 | Fuzziness, and survival analysis and censored data | Mübhemlik (mübhemlik (bulanıklık)) ve hayatta kalma tahlîli ve kırpılmış veriler |  |
 | 62N99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 | **62Pxx** | **Applications of statistics [See also 90-XX, 91-XX, 92-XX]** | **İhsâiyyâtın tatbîkleri [Ayrıca bakınız: 90-XX, 91-XX, 92-XX]** |  |
 | 62P05 | Applications of statistics to actuarial sciences and financial mathematics | İhsâiyyâtın sigortacılık ilimlerine ve mâlî riyâziyâta tatbîkleri |  |
@@ -6839,149 +6839,149 @@ Information and communication theory, circuits
 | 94C12 | Fault detection; testing in circuits and networks | Arıza tespiti; devrelerde ve şebekelerde yoklama |  |
 | 94C15 | Applications of graph theory to circuits and networks [See also 05Cxx, 68R10] | Rabıta şekilleri nazariyesinin devrelere ve şebekelere tatbîkleri [Ayrıca bakınız: 05Cxx, 68R10] |  |
 | 94C30 | Applications of design theory to circuits and networks [See also 05Bxx] | Tasmîm nazariyesinin devrelere ve şebekelere tatbîkleri [Ayrıca bakınız: 05Bxx] |  |
-| 94C60 | Circuits in qualitative investigation and simulation of models | Numûnelerin keyfî tetkikinde ve taklidinde (benzetiminde) devreler |  |
+| 94C60 | Circuits in qualitative investigation and simulation of models | Numûnelerin keyfiyete dair tetkikinde ve taklidinde (benzetiminde) devreler |  |
 | 94C99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 | **94Dxx** | **Miscellaneous topics in information and communication theory** | **Malûmat ve muhâbere nazariyesinde muhtelif mevzûlar** |  |
 | 94D05 | Fuzzy sets and logic (in connection with information, communication, or circuits theory) [See also 03B52, 03E72, 28E10] | Mübhem (bulanık) mecmûalar ve mantık (malûmat, muhâbere yahut devreler nazariyesiyle alâkalı olarak) [Ayrıca bakınız: 03B52, 03E72, 28E10] |  |
 | 94D10 | Boolean functions [See also 06E30] {For connections with circuits and networks, see 94C11} | Boole tâbileri [Ayrıca bakınız: 06E30] {Devreler ve şebekelerle münasebetleri için bakınız: 94C11} |  |
 | 94D99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
-## 97-XX — Mathematics education
+## 97-XX — Riyâziyât tedrîsi (talîmi)
 
 Mathematics education
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 97-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to mathematics education |  |  |
-| 97-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to mathematics education |  |  |
-| 97-02 | Research exposition (monographs, survey articles) pertaining to mathematics education |  |  |
-| 97-03 | History of mathematics education [Consider also classification numbers from Section 01] |  |  |
-| 97-06 | Proceedings, conferences, collections, etc. pertaining to mathematics education |  |  |
-| 97-11 | Research data for problems pertaining to mathematics education |  |  |
-| **97Axx** | **History and society (aspects of mathematics education)** | **** |  |
-| 97A30 | History in mathematics education {For mathematics history, see 01-XX; for biographies, see 01A70; for history of mathematics education, see 97-03} |  |  |
-| 97A40 | Mathematics education and society {For sociology (and profession) of mathematics, see 01A80} |  |  |
+| 97-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to mathematics education | Riyâziyât tedrîsi hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 97-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to mathematics education | Riyâziyât tedrîsi hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 97-02 | Research exposition (monographs, survey articles) pertaining to mathematics education | Riyâziyât tedrîsi hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 97-03 | History of mathematics education [Consider also classification numbers from Section 01] | Riyâziyât tedrîsinin târihi [01. babın tasnif numaralarına da bakılsın] |  |
+| 97-06 | Proceedings, conferences, collections, etc. pertaining to mathematics education | Riyâziyât tedrîsi hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 97-11 | Research data for problems pertaining to mathematics education | Riyâziyât tedrîsi sahasındaki meselelere dair tetkik verileri |  |
+| **97Axx** | **History and society (aspects of mathematics education)** | **Târih ve cemiyet (riyâziyât tedrîsine ait cihetler)** |  |
+| 97A30 | History in mathematics education {For mathematics history, see 01-XX; for biographies, see 01A70; for history of mathematics education, see 97-03} | Riyâziyât tedrîsinde târih {Riyâziyât târihi için bakınız: 01-XX; terâcim-i ahvâl için bakınız: 01A70; riyâziyât tedrîsinin târihi için bakınız: 97-03} |  |
+| 97A40 | Mathematics education and society {For sociology (and profession) of mathematics, see 01A80} | Riyâziyât tedrîsi ve cemiyet {Riyâziyâtın ilm-i içtimâsı (ve meslek olarak riyâziyât) için bakınız: 01A80} |  |
 | 97A99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **97Bxx** | **Educational policy and systems** | **** |  |
-| 97B10 | Mathematics educational research and planning |  |  |
-| 97B20 | Educational policy for general education |  |  |
-| 97B30 | Educational policy for vocational education |  |  |
-| 97B40 | Educational policy for higher education |  |  |
-| 97B50 | Mathematics teacher education |  |  |
-| 97B60 | Educational policy for adult and further education |  |  |
-| 97B70 | Syllabuses, educational standards |  |  |
+| **97Bxx** | **Educational policy and systems** | **Maârif siyâseti ve nizâmları** |  |
+| 97B10 | Mathematics educational research and planning | Riyâziyât tedrîsine dair tetkik ve plânlama |  |
+| 97B20 | Educational policy for general education | Umûmî tahsil için maârif siyâseti |  |
+| 97B30 | Educational policy for vocational education | Meslekî tahsil için maârif siyâseti |  |
+| 97B40 | Educational policy for higher education | Yüksek tahsil için maârif siyâseti |  |
+| 97B50 | Mathematics teacher education | Riyâziyât muallimlerinin yetiştirilmesi |  |
+| 97B60 | Educational policy for adult and further education | Kibârın (yetişkinlerin) tahsili ve tahsilin ilerletilmesi için maârif siyâseti |  |
+| 97B70 | Syllabuses, educational standards | Ders müfredâtı, maârif mi'yârları |  |
 | 97B99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **97Cxx** | **Psychology of mathematics education, research in mathematics education** | **** |  |
-| 97C10 | Comprehensive works on psychology of mathematics education |  |  |
-| 97C20 | Affective behavior and mathematics education |  |  |
-| 97C30 | Cognitive processes, learning theories (aspects of mathematics education) |  |  |
-| 97C40 | Intelligence and aptitudes (aspects of mathematics education) |  |  |
-| 97C50 | Language and verbal communities (aspects of mathematics education) |  |  |
-| 97C60 | Sociological aspects of learning (aspects of mathematics education) |  |  |
-| 97C70 | Teaching-learning processes in mathematics education |  |  |
+| **97Cxx** | **Psychology of mathematics education, research in mathematics education** | **Riyâziyât tedrîsinin ilm-i ruhu, riyâziyât tedrîsinde tetkik** |  |
+| 97C10 | Comprehensive works on psychology of mathematics education | Riyâziyât tedrîsinin ilm-i ruhu üzerine şâmil eserler |  |
+| 97C20 | Affective behavior and mathematics education | Hissî (duygusal) davranış ve riyâziyât tedrîsi |  |
+| 97C30 | Cognitive processes, learning theories (aspects of mathematics education) | İdrâk cereyanları, öğrenme nazariyeleri (riyâziyât tedrîsine ait cihetler) |  |
+| 97C40 | Intelligence and aptitudes (aspects of mathematics education) | Zekâ ve kābiliyetler (riyâziyât tedrîsine ait cihetler) |  |
+| 97C50 | Language and verbal communities (aspects of mathematics education) | Lisan ve sözlü cemâatler (riyâziyât tedrîsine ait cihetler) |  |
+| 97C60 | Sociological aspects of learning (aspects of mathematics education) | Öğrenmenin içtimaî cihetleri (riyâziyât tedrîsine ait cihetler) |  |
+| 97C70 | Teaching-learning processes in mathematics education | Riyâziyât tedrîsinde öğretme-öğrenme cereyanları |  |
 | 97C99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **97Dxx** | **Education and instruction in mathematics** | **** |  |
-| 97D10 | Comprehensive works and comparative studies on education and instruction in mathematics |  |  |
-| 97D20 | Philosophical and theoretical contributions (didactics of mathematics) |  |  |
-| 97D30 | Objectives and goals of mathematics teaching |  |  |
-| 97D40 | Mathematics teaching methods and classroom techniques |  |  |
-| 97D50 | Teaching mathematical problem solving and heuristic strategies |  |  |
-| 97D60 | Student assessment, achievement control, and rating (aspects of mathematics education) |  |  |
-| 97D70 | Learning difficulties and student errors (aspects of mathematics education) |  |  |
-| 97D80 | Mathematics teaching units and draft lessons |  |  |
+| **97Dxx** | **Education and instruction in mathematics** | **Riyâziyâtta tahsil ve tedrîs** |  |
+| 97D10 | Comprehensive works and comparative studies on education and instruction in mathematics | Riyâziyâtta tahsil ve tedrîs üzerine şâmil eserler ve mukayeseli tetkikler |  |
+| 97D20 | Philosophical and theoretical contributions (didactics of mathematics) | Hikmete ve nazariyeye dair katkılar (riyâziyât talîm usulü, yâni didaktik) |  |
+| 97D30 | Objectives and goals of mathematics teaching | Riyâziyât tedrîsinin maksatları ve gayeleri |  |
+| 97D40 | Mathematics teaching methods and classroom techniques | Riyâziyât tedrîs usulleri ve dershane teknikleri |  |
+| 97D50 | Teaching mathematical problem solving and heuristic strategies | Riyâzî mesele halli ve tecrübî kestirme siyasetlerinin öğretilmesi |  |
+| 97D60 | Student assessment, achievement control, and rating (aspects of mathematics education) | Talebenin kıymetlendirilmesi, muvaffakiyet kontrolü ve derecelendirme (riyâziyât tedrîsine ait cihetler) |  |
+| 97D70 | Learning difficulties and student errors (aspects of mathematics education) | Öğrenme güçlükleri ve talebe hataları (riyâziyât tedrîsine ait cihetler) |  |
+| 97D80 | Mathematics teaching units and draft lessons | Riyâziyât tedrîs üniteleri ve ders taslakları |  |
 | 97D99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **97Exx** | **Education of foundations of mathematics** | **** |  |
-| 97E10 | Comprehensive works on education of foundations of mathematics |  |  |
-| 97E20 | Philosophy and mathematics (educational aspects) |  |  |
-| 97E30 | Logic (educational aspects) |  |  |
-| 97E40 | Language of mathematics (educational aspects) |  |  |
-| 97E50 | Reasoning and proving in the mathematics classroom |  |  |
-| 97E60 | Sets, relations, set theory (educational aspects) |  |  |
+| **97Exx** | **Education of foundations of mathematics** | **Riyâziyâtın esâslarının tedrîsi** |  |
+| 97E10 | Comprehensive works on education of foundations of mathematics | Riyâziyâtın esâslarının tedrîsi üzerine şâmil eserler |  |
+| 97E20 | Philosophy and mathematics (educational aspects) | Hikmet ve riyâziyât (tedrîsî cihetler) |  |
+| 97E30 | Logic (educational aspects) | Mantık (tedrîsî cihetler) |  |
+| 97E40 | Language of mathematics (educational aspects) | Riyâziyâtın lisanı (tedrîsî cihetler) |  |
+| 97E50 | Reasoning and proving in the mathematics classroom | Riyâziyât dershanesinde istidlâl ve ispat |  |
+| 97E60 | Sets, relations, set theory (educational aspects) | Mecmûalar, münasebetler, mecmûalar nazariyesi (tedrîsî cihetler) |  |
 | 97E99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **97Fxx** | **Education of arithmetic and number theory** | **** |  |
-| 97F10 | Comprehensive works on education of arithmetic and number theory |  |  |
-| 97F20 | Pre-numerical stage, concept of numbers |  |  |
-| 97F30 | Natural numbers (educational aspects) |  |  |
-| 97F40 | Integers, rational numbers (educational aspects) |  |  |
-| 97F50 | Real numbers, complex numbers (educational aspects) |  |  |
-| 97F60 | Number theory (educational aspects) |  |  |
-| 97F70 | Measures and units (educational aspects) |  |  |
-| 97F80 | Ratio and proportion, percentages (educational aspects) |  |  |
-| 97F90 | Real-life mathematics, practical arithmetic (educational aspects) |  |  |
+| **97Fxx** | **Education of arithmetic and number theory** | **Hesap ve nazariye-i a'dâd tedrîsi** |  |
+| 97F10 | Comprehensive works on education of arithmetic and number theory | Hesap ve nazariye-i a'dâd tedrîsi üzerine şâmil eserler |  |
+| 97F20 | Pre-numerical stage, concept of numbers | Adet öncesi merhale, adet mefhûmu |  |
+| 97F30 | Natural numbers (educational aspects) | Tabiî adetler (tedrîsî cihetler) |  |
+| 97F40 | Integers, rational numbers (educational aspects) | Tam adetler, muntak adetler (tedrîsî cihetler) |  |
+| 97F50 | Real numbers, complex numbers (educational aspects) | Hakîkî adetler, mürekkeb adetler (tedrîsî cihetler) |  |
+| 97F60 | Number theory (educational aspects) | Nazariye-i a'dâd (tedrîsî cihetler) |  |
+| 97F70 | Measures and units (educational aspects) | Ölçüler ve birimler (tedrîsî cihetler) |  |
+| 97F80 | Ratio and proportion, percentages (educational aspects) | Nisbet ve tenâsüb, yüzdeler (tedrîsî cihetler) |  |
+| 97F90 | Real-life mathematics, practical arithmetic (educational aspects) | Gündelik hayatta riyâziyât, amelî hesap (tedrîsî cihetler) |  |
 | 97F99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **97Gxx** | **Geometry education** | **** |  |
-| 97G10 | Comprehensive works on geometry education |  |  |
-| 97G20 | Informal geometry (educational aspects) |  |  |
-| 97G30 | Area and volume (educational aspects) |  |  |
-| 97G40 | Plane and solid geometry (educational aspects) |  |  |
-| 97G50 | Transformation geometry (educational aspects) |  |  |
-| 97G60 | Plane and spherical trigonometry (educational aspects) |  |  |
-| 97G70 | Analytic geometry, vector algebra (educational aspects) |  |  |
-| 97G80 | Descriptive geometry (educational aspects) |  |  |
+| **97Gxx** | **Geometry education** | **Hendese tedrîsi** |  |
+| 97G10 | Comprehensive works on geometry education | Hendese tedrîsi üzerine şâmil eserler |  |
+| 97G20 | Informal geometry (educational aspects) | Gayr-ı sûrî hendese (tedrîsî cihetler) |  |
+| 97G30 | Area and volume (educational aspects) | Mesâha ve hacim (tedrîsî cihetler) |  |
+| 97G40 | Plane and solid geometry (educational aspects) | Müstevî hendese ve mücessem hendese (tedrîsî cihetler) |  |
+| 97G50 | Transformation geometry (educational aspects) | Tahvîl hendesesi (tedrîsî cihetler) |  |
+| 97G60 | Plane and spherical trigonometry (educational aspects) | Müstevî ve küre üzerindeki müsellesât (tedrîsî cihetler) |  |
+| 97G70 | Analytic geometry, vector algebra (educational aspects) | Tahlîlî hendese, müteveccihe cebri (tedrîsî cihetler) |  |
+| 97G80 | Descriptive geometry (educational aspects) | Tarîfî (resmî) hendese (tedrîsî cihetler) |  |
 | 97G99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **97Hxx** | **Algebra education** | **** |  |
-| 97H10 | Comprehensive works on algebra education |  |  |
-| 97H20 | Elementary algebra (educational aspects) |  |  |
-| 97H30 | Equations and inequalities (educational aspects) |  |  |
-| 97H40 | Groups, rings, fields (educational aspects) |  |  |
-| 97H50 | Ordered algebraic structures (educational aspects) |  |  |
-| 97H60 | Linear algebra (educational aspects) |  |  |
+| **97Hxx** | **Algebra education** | **Cebir tedrîsi** |  |
+| 97H10 | Comprehensive works on algebra education | Cebir tedrîsi üzerine şâmil eserler |  |
+| 97H20 | Elementary algebra (educational aspects) | İbtidâî cebir (tedrîsî cihetler) |  |
+| 97H30 | Equations and inequalities (educational aspects) | Muâdeleler ve adem-i müsâvâtlar (tedrîsî cihetler) |  |
+| 97H40 | Groups, rings, fields (educational aspects) | Zümreler, halkalar, cisimler (tedrîsî cihetler) |  |
+| 97H50 | Ordered algebraic structures (educational aspects) | Müretteb cebrî bünyeler (tedrîsî cihetler) |  |
+| 97H60 | Linear algebra (educational aspects) | Hattî cebir (tedrîsî cihetler) |  |
 | 97H99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **97Ixx** | **Analysis education** | **** |  |
-| 97I10 | Comprehensive works on analysis education |  |  |
-| 97I20 | Mappings and functions (educational aspects) |  |  |
-| 97I30 | Sequences and series (educational aspects) |  |  |
-| 97I40 | Differential calculus (educational aspects) |  |  |
-| 97I50 | Integral calculus (educational aspects) |  |  |
-| 97I60 | Functions of several variables (educational aspects) |  |  |
-| 97I70 | Functional equations (educational aspects) |  |  |
-| 97I80 | Complex analysis (educational aspects) |  |  |
+| **97Ixx** | **Analysis education** | **Tahlîl tedrîsi** |  |
+| 97I10 | Comprehensive works on analysis education | Tahlîl tedrîsi üzerine şâmil eserler |  |
+| 97I20 | Mappings and functions (educational aspects) | Tasvîrler ve tâbiler (tedrîsî cihetler) |  |
+| 97I30 | Sequences and series (educational aspects) | Tevâlîler ve silsileler (tedrîsî cihetler) |  |
+| 97I40 | Differential calculus (educational aspects) | Hesâb-ı tefâzulî (tedrîsî cihetler) |  |
+| 97I50 | Integral calculus (educational aspects) | Hesâb-ı tamâmî (tedrîsî cihetler) |  |
+| 97I60 | Functions of several variables (educational aspects) | Birden çok mütehavvilli tâbiler (tedrîsî cihetler) |  |
+| 97I70 | Functional equations (educational aspects) | Tâbiî muâdeleler (tedrîsî cihetler) |  |
+| 97I80 | Complex analysis (educational aspects) | Mürekkeb tahlîl (tedrîsî cihetler) |  |
 | 97I99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **97Kxx** | **Education of combinatorics, graph theory, probability theory, and statistics** | **** |  |
-| 97K10 | Comprehensive works on combinatorics, graph theory, and probability (educational aspects) |  |  |
-| 97K20 | Combinatorics (educational aspects) |  |  |
-| 97K30 | Graph theory (educational aspects) |  |  |
-| 97K40 | Descriptive statistics (educational aspects) |  |  |
-| 97K50 | Probability theory (educational aspects) |  |  |
-| 97K60 | Distributions and stochastic processes (educational aspects) |  |  |
-| 97K70 | Foundations and methodology of statistics (educational aspects) |  |  |
-| 97K80 | Applied statistics (educational aspects) |  |  |
+| **97Kxx** | **Education of combinatorics, graph theory, probability theory, and statistics** | **İlm-i terkîbât, rabıta şekilleri nazariyesi, ihtimâl nazariyesi ve ihsâiyyât tedrîsi** |  |
+| 97K10 | Comprehensive works on combinatorics, graph theory, and probability (educational aspects) | İlm-i terkîbât, rabıta şekilleri nazariyesi ve ihtimâl üzerine şâmil eserler (tedrîsî cihetler) |  |
+| 97K20 | Combinatorics (educational aspects) | İlm-i terkîbât (tedrîsî cihetler) |  |
+| 97K30 | Graph theory (educational aspects) | Rabıta şekilleri nazariyesi (tedrîsî cihetler) |  |
+| 97K40 | Descriptive statistics (educational aspects) | Tavsîfî ihsâiyyât (tedrîsî cihetler) |  |
+| 97K50 | Probability theory (educational aspects) | İhtimâl nazariyesi (tedrîsî cihetler) |  |
+| 97K60 | Distributions and stochastic processes (educational aspects) | Tevzîler ve ihtimâlî cereyanlar (tedrîsî cihetler) |  |
+| 97K70 | Foundations and methodology of statistics (educational aspects) | İhsâiyyâtın esâsları ve usul ilmi (tedrîsî cihetler) |  |
+| 97K80 | Applied statistics (educational aspects) | Tatbîkî ihsâiyyât (tedrîsî cihetler) |  |
 | 97K99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **97Mxx** | **Education of mathematical modeling and applications of mathematics** | **** |  |
-| 97M10 | Modeling and interdisciplinarity (aspects of mathematics education) |  |  |
-| 97M20 | Mathematics in vocational training and career education |  |  |
-| 97M30 | Financial and insurance mathematics (aspects of mathematics education) |  |  |
-| 97M40 | Operations research, economics (aspects of mathematics education) |  |  |
-| 97M50 | Physics, astronomy, technology, engineering (aspects of mathematics education) |  |  |
-| 97M60 | Biology, chemistry, medicine (aspects of mathematics education) |  |  |
-| 97M70 | Behavioral and social sciences (aspects of mathematics education) |  |  |
-| 97M80 | Arts, music, language, architecture (aspects of mathematics education) |  |  |
+| **97Mxx** | **Education of mathematical modeling and applications of mathematics** | **Riyâzî numûne kurma ve riyâziyâtın tatbîklerinin tedrîsi** |  |
+| 97M10 | Modeling and interdisciplinarity (aspects of mathematics education) | Numûne kurma ve ilimler arasılık (riyâziyât tedrîsine ait cihetler) |  |
+| 97M20 | Mathematics in vocational training and career education | Meslekî talîmde ve meslek tahsilinde riyâziyât |  |
+| 97M30 | Financial and insurance mathematics (aspects of mathematics education) | Mâliye ve sigorta riyâziyâtı (riyâziyât tedrîsine ait cihetler) |  |
+| 97M40 | Operations research, economics (aspects of mathematics education) | Ameliyat araştırması, iktisat (riyâziyât tedrîsine ait cihetler) |  |
+| 97M50 | Physics, astronomy, technology, engineering (aspects of mathematics education) | Hikmet-i tabîiyye, ilm-i hey'et, teknoloji, mühendislik (riyâziyât tedrîsine ait cihetler) |  |
+| 97M60 | Biology, chemistry, medicine (aspects of mathematics education) | Hayatiyyât, kimya, tıb (riyâziyât tedrîsine ait cihetler) |  |
+| 97M70 | Behavioral and social sciences (aspects of mathematics education) | Sülûkî ve içtimaî ilimler (riyâziyât tedrîsine ait cihetler) |  |
+| 97M80 | Arts, music, language, architecture (aspects of mathematics education) | Sanatlar, mûsikî, lisan, mi'mârî (riyâziyât tedrîsine ait cihetler) | şüpheli: mûsikînin hükmü hakkında ulemâ arasında ihtilaf vardır; burada yalnız tasnif başlığı tercüme edilmiştir |
 | 97M99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **97Nxx** | **Education of numerical mathematics** | **** |  |
-| 97N10 | Comprehensive works on education of numerical mathematics |  |  |
-| 97N20 | Rounding, estimation, theory of errors (educational aspects) |  |  |
-| 97N30 | Numerical algebra (educational aspects) |  |  |
-| 97N40 | Numerical analysis (educational aspects) |  |  |
-| 97N50 | Interpolation and approximation (educational aspects) |  |  |
-| 97N60 | Mathematical programming (educational aspects) |  |  |
-| 97N70 | Discrete mathematics (educational aspects) |  |  |
-| 97N80 | Mathematical software, computer programs (educational aspects) |  |  |
+| **97Nxx** | **Education of numerical mathematics** | **Adedî riyâziyât tedrîsi** |  |
+| 97N10 | Comprehensive works on education of numerical mathematics | Adedî riyâziyât tedrîsi üzerine şâmil eserler |  |
+| 97N20 | Rounding, estimation, theory of errors (educational aspects) | Yuvarlama, takdir, hatalar nazariyesi (tedrîsî cihetler) |  |
+| 97N30 | Numerical algebra (educational aspects) | Adedî cebir (tedrîsî cihetler) |  |
+| 97N40 | Numerical analysis (educational aspects) | Adedî tahlîl (tedrîsî cihetler) |  |
+| 97N50 | Interpolation and approximation (educational aspects) | Ara değer bulma (enterpolasyon) ve takrîb (tedrîsî cihetler) |  |
+| 97N60 | Mathematical programming (educational aspects) | Riyâzî programlama (tedrîsî cihetler) |  |
+| 97N70 | Discrete mathematics (educational aspects) | Munfasıl riyâziyât (tedrîsî cihetler) |  |
+| 97N80 | Mathematical software, computer programs (educational aspects) | Riyâzî yazılım, hâsib programları (tedrîsî cihetler) |  |
 | 97N99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **97Pxx** | **Computer science (educational aspects)** | **** |  |
-| 97P10 | Comprehensive works on computer science (educational aspects) |  |  |
-| 97P20 | Theoretical computer science (educational aspects) |  |  |
-| 97P30 | Systems, databases (educational aspects) |  |  |
-| 97P40 | Programming languages (educational aspects) |  |  |
-| 97P50 | Programming techniques (educational aspects) |  |  |
-| 97P80 | Artificial intelligence (educational aspects) |  |  |
+| **97Pxx** | **Computer science (educational aspects)** | **Hâsibât ilmi (tedrîsî cihetler)** |  |
+| 97P10 | Comprehensive works on computer science (educational aspects) | Hâsibât ilmi üzerine şâmil eserler (tedrîsî cihetler) |  |
+| 97P20 | Theoretical computer science (educational aspects) | Nazarî hâsibât ilmi (tedrîsî cihetler) |  |
+| 97P30 | Systems, databases (educational aspects) | Nizâmlar, veri tabanları (tedrîsî cihetler) |  |
+| 97P40 | Programming languages (educational aspects) | Programlama lisanları (tedrîsî cihetler) |  |
+| 97P50 | Programming techniques (educational aspects) | Programlama teknikleri (tedrîsî cihetler) |  |
+| 97P80 | Artificial intelligence (educational aspects) | Sun'î zekâ (tedrîsî cihetler) |  |
 | 97P99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **97Uxx** | **Educational material and media and educational technology in mathematics education** | **** |  |
-| 97U10 | Comprehensive works on educational material and media and educational technology in mathematics education |  |  |
-| 97U20 | Textbooks, textbook research (aspects of mathematics education) |  |  |
-| 97U30 | Teachers’ manuals and planning aids (aspects of mathematics education) |  |  |
-| 97U40 | Problem books, competitions, examinations (aspects of mathematics education) |  |  |
-| 97U50 | Computer-assisted instruction, e-learning (aspects of mathematics education) |  |  |
-| 97U60 | Manipulative materials (aspects of mathematics education) |  |  |
-| 97U70 | Technological tools, calculators (aspects of mathematics education) |  |  |
-| 97U80 | Audiovisual media (aspects of mathematics education) |  |  |
+| **97Uxx** | **Educational material and media and educational technology in mathematics education** | **Riyâziyât tedrîsinde talîm malzemesi ve vasıtaları ile talîm teknolojisi** |  |
+| 97U10 | Comprehensive works on educational material and media and educational technology in mathematics education | Riyâziyât tedrîsinde talîm malzemesi ve vasıtaları ile talîm teknolojisi üzerine şâmil eserler |  |
+| 97U20 | Textbooks, textbook research (aspects of mathematics education) | Ders kitapları, ders kitabı tetkiki (riyâziyât tedrîsine ait cihetler) |  |
+| 97U30 | Teachers’ manuals and planning aids (aspects of mathematics education) | Muallim kılavuzları ve plânlama yardımcıları (riyâziyât tedrîsine ait cihetler) |  |
+| 97U40 | Problem books, competitions, examinations (aspects of mathematics education) | Mesele kitapları, müsâbakalar, imtihanlar (riyâziyât tedrîsine ait cihetler) |  |
+| 97U50 | Computer-assisted instruction, e-learning (aspects of mathematics education) | Hâsib yardımıyla tedrîs, elektronik öğrenme (riyâziyât tedrîsine ait cihetler) |  |
+| 97U60 | Manipulative materials (aspects of mathematics education) | El ile kullanılan ders malzemesi (riyâziyât tedrîsine ait cihetler) |  |
+| 97U70 | Technological tools, calculators (aspects of mathematics education) | Teknolojik âletler, hesap makineleri (riyâziyât tedrîsine ait cihetler) |  |
+| 97U80 | Audiovisual media (aspects of mathematics education) | Sem'î ve basarî vasıtalar (riyâziyât tedrîsine ait cihetler) |  |
 | 97U99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
