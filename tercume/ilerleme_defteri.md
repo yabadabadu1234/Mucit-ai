@@ -50,34 +50,31 @@ Kullanıcı şöyle buyurdu: "O zaman evvela birebir tercüme etsin, üzerine ş
 
 ## Tercümelerin hâli
 
+Şaheser iş parçacığı, kullanıcının "en şaheseri neyse" emri üzerine cüzlerin sonundaki sırayı telif hâline bakmadan şaheserlik derecesine göre yeniden tertip etti. Aşağıdaki sıra o "Şaheserlik sırası"dır. Usul sütunu telif hâline göre tayin edilmiştir: telifi düşmüş eserde evvelâ birebir tam tercüme, sonra şerh; telifli yahut karışık eserde bab bab şerh.
+
+### Birinci cüz: Pusula (fizyoloji ve patoloji)
+
 | Sıra | Eser | Usul | Hâli |
 |---|---|---|---|
-| 1 | Harvey, De Motu Cordis | Tam metin tercüme | Nüsha bulundu; metne erişim bekleniyor |
-| 2 | Bernard, Introduction à l'étude de la médecine expérimentale | Tam metin tercüme (Fransızca asıldan) | Sırada |
-| 3 | Sherrington, The Integrative Action of the Nervous System | Tam metin tercüme | Sırada |
-| 4 | Virchow, Die Cellularpathologie | Tam metin tercüme | Sırada |
-| 5 | Cohnheim, Vorlesungen über allgemeine Pathologie | Tam metin tercüme | Sırada |
-| 6 | Metchnikoff, Leçons sur la pathologie comparée de l'inflammation | Tam metin tercüme | Sırada |
-| 7 | Cannon, The Wisdom of the Body | Şerh (bab bab) | Birinci müsvedde tamam: cannon_bedenin_hikmeti/serh.md. Asıl metne erişilemeden yazıldı; bab tertibi ve rakamlar şüpheli, asılla mukabele bekliyor. |
-| 8 | Guyton ile Hall, Textbook of Medical Physiology | Şerh | Sırada |
-| 9 | Robbins ile Cotran, Pathologic Basis of Disease | Şerh | Sırada |
-| 10 | OpenStax, Anatomy and Physiology | Tam metin tercüme, parça parça | Sırada |
+| 1 | Virchow, Die Cellularpathologie | Birebir tercüme, sonra şerh | Nüsha: "cellularpatholog00virc"; ağ izni bekleniyor |
+| 2 | Harvey, De Motu Cordis | Birebir tercüme, sonra şerh | Nüsha: Gutenberg 67065 (Willis); ağ izni bekleniyor |
+| 3 | Bernard, Introduction à l'étude de la médecine expérimentale | Fransızca asıldan birebir tercüme, sonra şerh | Ağ izni bekleniyor |
+| 4 | Cannon, The Wisdom of the Body | Bab bab şerh | Birinci müsvedde tamam (cannon_bedenin_hikmeti/serh.md); asılla mukabele bekliyor |
+| 5 | Morgagni, De Sedibus et Causis Morborum | Birebir tercüme, sonra şerh | Ağ izni bekleniyor |
+| 6 | Sherrington, The Integrative Action of the Nervous System | Birebir tercüme, sonra şerh | Ağ izni bekleniyor |
+| 7 | Cohnheim, Vorlesungen über allgemeine Pathologie | Birebir tercüme, sonra şerh | Ağ izni bekleniyor |
+| 8 | Koch, Die Ätiologie der Tuberkulose | Birebir tercüme, sonra şerh | Nüsha bulunmadı |
+| Ders kitabı 1 | Robbins ile Cotran, Pathologic Basis of Disease | Bab bab şerh | Asıl metne erişim gerekir |
+| Ders kitabı 2 | Guyton ile Hall, Textbook of Medical Physiology | Bab bab şerh | Asıl metne erişim gerekir |
+| Ders kitabı 3 | Boron ile Boulpaep, Medical Physiology | Bab bab şerh | Asıl metne erişim gerekir |
 
-### İkinci cüzden (Kadîm İslâm tıbbı) gelen eserler
+### İkinci cüz: Kadîm İslâm tıbbı
 
-İkinci cüz baştan sona okundu. Şaheser iş parçacığının tavsiye ettiği sıra ve nüsha hâli şöyledir; hepsi Internet Archive'e erişim bekliyor:
+Sıra: İbn Sînâ el-Kânûn; Râzî el-Hâvî; Zehrâvî et-Tasrîf; Sabuncuoğlu Cerrâhiyyetü'l-Hâniyye; İbnü'n-Nefîs Şerhu Teşrîhi'l-Kânûn; Mecûsî Kâmilü's-Sınâa; Şânîzâde Hamse; Râzî el-Cüderî ve'l-Hasbe; İbnü'l-Baytâr el-Câmi'; Râzî el-Mansûrî; İbn Rüşd el-Külliyyât; Huneyn el-Aşru Makâlât. Nüshası hazır olanlar yukarıdaki cedvelde.
 
-| Sıra | Eser | Nüsha | Not |
-|---|---|---|---|
-| 1 | Râzî, Kitâbü'l-Cüderî ve'l-Hasbe | Internet Archive "atreatiseonsmal00unkngoog" (Greenhill, 1848, Arapça ve İngilizce) | Arapça asıldan nakledilecek; Greenhill tercümesi mukabele için. |
-| 2 | İbn Sînâ, el-Kânûn, birinci kitap | Internet Archive "QanunAvicennae" (Roma, 1593) | Gruner tercümesi Türkiye'de korunduğu için kullanılmayacak. |
-| 3 | Zehrâvî, et-Tasrîf, otuzuncu makale | Internet Archive "b30411427" (Channell, Oxford, 1778) | |
-| 4 | Şânîzâde, Mir'âtü'l-Ebdân | Internet Archive "amseinzde01anizuoft" | Lügat iş parçacığıyla beraber yürütülecek. |
-| 5 | Sabuncuoğlu, Cerrâhiyyetü'l-Hâniyye | Nüsha bulunmadı | Gallica'da Paris nüshası aranacak. |
+### Üçüncü cüz: Teşrih
 
-Akşemseddin'in Maddetü'l-Hayât'ındaki "görünmez tohum" ibaresi hakkında, yazma nüshadan tahkik edilmeden hüküm yazılmayacak.
-
-Sıra, kullanıcının ilâve kaidesi üzerine şaheserlik derecesine göre yeniden tertip edilecektir; yukarıdaki sıra şimdilik şaheser cüzünün tavsiyesidir.
+Kurucu eserler sırası: Vesalius Fabrica ("2295005R.nlm.nih.gov"); Cajal Textura ("b28122100", İspanyolca asıldan); Schwann ("mikroskopischeu00schwgoog"); Gray 1858 ("anatomydescripti1858gray"; 1918 Lewis tâbı karışık, kullanılmayacak); von Baer ("berentwickelun01baer"); Malpighi De Pulmonibus; Brodmann ("b28062449"). Bugünkü ders kitapları (bab bab şerh): Gray's Anatomy Standring tâbı; Moore Clinically Oriented Anatomy; Netter Atlas; Langman; Junqueira.
 
 ## Kaldığı yer
 
