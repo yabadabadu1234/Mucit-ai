@@ -366,4 +366,400 @@ Yine, eğer `Cf`, `Fb`, `LA` mustatîlleri müşterekü'l-mikyâs değilse, yine
 
 Zîrâ evvelki mukaddimedeki tarzla, `O` topunun atıldığında `Do` üzerinde bir yerde, yâni `AD` ile `so` arasında durmasının ihtimali `Ao`'nun `AB`'ye nisbetidir. Fakat tek bir atıştan sonra topun `AD` ile `so` arasında durması, `M` hâdisesinin tek bir tecrübede vukû bulmasıdır. Binâenaleyh mukaddime aşikârdır.
 
+### Kaziyye 8
+
+Eğer `BA` üzerine `BghikmA` şeklini öyle bir hassa ile inşa ederseniz ki (`BA` kaidesi `Ab` ve `Bb` gibi herhangi iki cüz'e taksim edilip taksim noktası `b`'de bir amûd çıkılınca ve bu amûd şekil tarafından `m`'de nihâyetlendirilince; ve **tertîbî nisbeti**, **vukû ihtimali**, **adem ihtimali** sırasıyla `bm`'nin, `Ab`'nin ve `Bb`'nin `AB`'ye nisbetini gösterince, ve **terkîb emsali**,
+
+$$\left(\text{vukû ihtimali} + \text{adem ihtimali}\right)^{\text{vukû adedi} + \text{adem adedi}}$$
+
+dü-haddîsi açıldığında
+
+$$\text{vukû ihtimali}^{\,\text{vukû adedi}} \times \text{adem ihtimali}^{\,\text{adem adedi}}$$
+
+ifadesinin bulunduğu haddin emsali olunca)
+
+$$\text{tertîbî nisbeti} = \text{terkîb emsali} \times \text{vukû ihtimali}^{\,\text{vukû adedi}} \times \text{adem ihtimali}^{\,\text{adem adedi}}$$
+
+olsun; derim ki `W` topu atılmazdan evvel, `o` noktasının `AB` hattında adı konan herhangi iki nokta olan `f` ile `b` arasına düşmesinin, ve bununla beraber `M` hâdisesinin vukû adedi ile adem adedinin mecmû'u kadar tecrübede vukû adedi kadar defa vukû bulup adem adedi kadar defa vukû bulmamasının ihtimali, `BghikmA` şeklinin `AB` hattı üzerine çıkılan `fg`, `bm` amûdları arasında kalan cüz'ü olan `fghikmb`'nin, `AB` üzerindeki murabba' olan `CA`'ya nisbetidir.
+
+**Burhan.**
+
+Zîrâ böyle değilse; evvelâ `fghikmb`'den büyük bir `D` şeklinin `CA`'ya nisbeti olsun, ve `e`, `d`, `c` noktalarından `fb`'ye, `AmigB` münhanîsini `h`, `i`, `k`'de kesen amûdlar çizin; `d` noktası öyle konmuş olsun ki `di`, `fb` hattı ile `AmigB` münhanîsi tarafından nihâyetlendirilen amûdların en uzunu olsun; ve `e`, `d`, `c` noktaları o kadar çok ve öyle konmuş olsun ki `bk`, `ci`, `ei`, `fh` mustatîlleri beraberce `fghikmb`'den, `D`'nin farklı olduğundan daha az farklı olsun; bütün bunlar münhanînin muâdelesinin ve `D` ile `fghikmb` şekli arasındaki verilmiş farkın yardımıyla kolayca yapılabilir. O hâlde `di`, `fb` üzerinde duran amûdî tertîbîlerin en uzunu olduğundan, geri kalanlar her iki tarafta ondan uzaklaştıkça tedricen azalacaktır; bu, şeklin inşasından görünür; ve binâenaleyh `eh`, `gf`'den yahut `ef` üzerinde duran başka herhangi bir tertîbîden büyüktür.
+
+Şimdi eğer `Ao`, `Ae`'ye müsâvî olsaydı, ikinci mukaddime mûcibince `M` hâdisesinin tek bir tecrübedeki ihtimali `Ae`'nin `AB`'ye nisbeti olurdu, ve binâenaleyh birinci kaziyyenin neticesi mûcibince vukû bulmamasının ihtimali `Be`'nin `AB`'ye nisbeti olurdu. Binâenaleyh **vukû ihtimali** ve **adem ihtimali** sırasıyla evvelce zikredilen iki nisbet olursa, yedinci kaziyye mûcibince `M` hâdisesinin vukû adedi ile adem adedinin mecmû'u kadar tecrübede vukû adedi kadar defa vukû bulup adem adedi kadar defa vukû bulmamasının ihtimali
+
+$$\text{terkîb emsali} \times \text{vukû ihtimali}^{\,\text{vukû adedi}} \times \text{adem ihtimali}^{\,\text{adem adedi}}$$
+
+olurdu. Fakat vukû ihtimali ve adem ihtimali sırasıyla `Ae`'nin `AB`'ye ve `Be`'nin `AB`'ye nisbetleri olduğundan, eğer **tertîbî nisbeti** `eh`'nin `AB`'ye nisbeti ise, `AiB` şeklinin inşası mûcibince
+
+$$\text{tertîbî nisbeti} = \text{terkîb emsali} \times \text{vukû ihtimali}^{\,\text{vukû adedi}} \times \text{adem ihtimali}^{\,\text{adem adedi}}$$
+
+dir. Binâenaleyh eğer `Ao`, `Ae`'ye müsâvî olsaydı, `M` hâdisesinin vukû adedi ile adem adedinin mecmû'u kadar tecrübede vukû adedi kadar defa vukû bulup adem adedi kadar defa vukû bulmamasının ihtimali **tertîbî nisbeti**, yâni `eh`'nin `AB`'ye nisbeti olurdu. Ve eğer `Ao`, `Af`'ye müsâvî olsaydı, yahut `Ae` ile `Af` arasında herhangi bir vasat olsaydı, son zikredilen ihtimal aynı sebeplerle `fg`'nin yahut `ef` üzerinde duran öteki tertîbîlerden birinin `AB`'ye nisbeti olurdu. Fakat `eh`, `ef` üzerinde duran bütün tertîbîlerin en büyüğüdür. Binâenaleyh noktanın `f` ile `e` arasında herhangi bir yerde bulunduğu farz edildiğinde, `M` hâdisesinin vukû adedi ile adem adedinin mecmû'u kadar tecrübede vukû adedi kadar defa vukû bulup adem adedi kadar defa vukû bulmamasının ihtimali `eh`'nin `AB`'ye nisbetinden büyük olamaz. O hâlde birbirini takip eden şu iki hâdise bulunduğundan: birincisi `o` noktasının `e` ile `f` arasında bulunması, ikincisi `M` hâdisesinin vukû adedi ile adem adedinin mecmû'u kadar tecrübede vukû adedi kadar defa vukû bulup adem adedi kadar defa vukû bulmaması; ve birincinin ihtimali (birinci mukaddime mûcibince) `ef`'nin `AB`'ye nisbeti olup, birincinin vukû bulduğu farz edildiğinde, şimdi ispat edilen mûcibince, ikincinin ihtimali `eh`'nin `AB`'ye nisbetinden büyük olamadığından, açıkça lâzım gelir ki (üçüncü kaziyyeden) ikisinin beraber vukû bulma ihtimali, `ef`'nin `AB`'ye nisbeti ile `eh`'nin `AB`'ye nisbetinden mürekkeb nisbetten büyük olamaz; bu mürekkeb nisbet ise `fh`'nin `CA`'ya nisbetidir. Binâenaleyh `o` noktasının `f` ile `e` arasında bulunması ve `M` hâdisesinin vukû adedi kadar defa vukû bulup adem adedi kadar defa vukû bulmamasının ihtimali `fh`'nin `CA`'ya nisbetinden büyük değildir. Ve aynı tarzda `o` noktasının `e` ile `d` arasında bulunması ve `M` hâdisesinin evvelki gibi vukû bulup vukû bulmamasının ihtimali `ei`'nin `CA`'ya nisbetinden büyük olamaz. Ve yine `o` noktasının `d` ile `c` arasında bulunması ve `M` hâdisesinin evvelki gibi vukû bulup vukû bulmamasının ihtimali `ci`'nin `CA`'ya nisbetinden büyük olamaz. Ve nihayet `o` noktasının `c` ile `b` arasında bulunması ve `M` hâdisesinin evvelki gibi vukû bulup vukû bulmamasının ihtimali `bk`'nin `CA`'ya nisbetinden büyük olamaz. Şimdi bütün bu muhtelif ihtimalleri birbirine ekleyin; mecmû'ları (birinci kaziyye mûcibince) noktanın `f` ile `b` arasında bir yerde bulunması ve `M` hâdisesinin vukû adedi ile adem adedinin mecmû'u kadar tecrübede vukû adedi kadar defa vukû bulup adem adedi kadar defa vukû bulmamasının ihtimali olacaktır. Aynı şekilde mukābil nisbetleri birbirine ekleyin; mecmû'ları, mukaddemlerin mecmû'unun müşterek tâlîlerine nisbeti, yâni `fh`, `ei`, `ci`, `bk` beraberinin `CA`'ya nisbeti olacaktır; bu nisbet ise `D`'nin `CA`'ya nisbetinden küçüktür, çünkü `D`, `fh`, `ei`, `ci`, `bk` beraberinden büyüktür. Ve binâenaleyh `o` noktasının `f` ile `b` arasında bulunması ve bununla beraber `M` hâdisesinin vukû adedi ile adem adedinin mecmû'u kadar tecrübede vukû adedi kadar defa vukû bulup adem adedi kadar defa vukû bulmamasının ihtimali `D`'nin `CA`'ya nisbetinden küçüktür; fakat aynısı olduğu farz edilmişti; bu ise saçmadır. Ve aynı şekilde, şeklin içine `eg`, `dh`, `dk`, `cm` gibi mustatîller dahil ederek, son zikredilen ihtimalin `fghikmb`'den küçük herhangi bir şeklin `CA`'ya nisbetinden büyük olduğunu ispat edebilirsiniz.
+
+Binâenaleyh o ihtimal `fghikmb`'nin `CA`'ya nisbeti olmalıdır.
+
+**Netice.** `W` topu atılmazdan evvel, `o` noktasının `A` ile `B` arasında bir yerde, yahut `AB` hattı üzerinde bir yerde bulunması ve bununla beraber `M` hâdisesinin vukû adedi ile adem adedinin mecmû'u kadar tecrübede vukû adedi kadar defa vukû bulup adem adedi kadar defa vukû bulmamasının ihtimali, bütün `AiB` şeklinin `CA`'ya nisbetidir. Fakat `o` noktasının `AB` üzerinde bir yerde bulunacağı muhakkaktır. Binâenaleyh `W` topu atılmazdan evvel, `M` hâdisesinin vukû adedi ile adem adedinin mecmû'u kadar tecrübede vukû adedi kadar defa vukû bulup adem adedi kadar defa vukû bulmamasının ihtimali `AiB`'nin `CA`'ya nisbetidir.
+
+### Kaziyye 9
+
+Eğer `o` noktasının yeri hakkında herhangi bir şey keşfedilmezden evvel, `M` hâdisesinin vukû adedi ile adem adedinin mecmû'u kadar tecrübede vukû adedi kadar defa vukû bulup adem adedi kadar defa vukû bulmadığı anlaşılsa, ve bundan noktanın `AB` hattında herhangi iki nokta, meselâ `f` ile `b` arasında bulunduğunu, ve binâenaleyh `M` hâdisesinin tek bir tecrübedeki ihtimalinin `Ab`'nin `AB`'ye nisbeti ile `Af`'nin `AB`'ye nisbeti arasında bir yerde olduğunu tahmin etsem: haklı olmamın ihtimali, evvelki gibi tarif edilen `AiB` şeklinin `AB` üzerine `f` ve `b` noktalarında çıkılan amûdlar arasında kalan cüz'ünün bütün `AiB` şekline nisbetidir.
+
+Zîrâ birbirini takip eden şu iki hâdise bulunduğundan: birincisi `o` noktasının `f` ile `b` arasında bulunması; ikincisi `M` hâdisesinin vukû adedi ile adem adedinin mecmû'u kadar tecrübede vukû adedi kadar defa vukû bulup adem adedi kadar defa vukû bulmaması; ve (sekizinci kaziyyenin neticesi mûcibince) ikincinin asıl ihtimali `AiB`'nin `CA`'ya nisbeti, ve (sekizinci kaziyye mûcibince) ikisinin ihtimali `fghimb`'nin `CA`'ya nisbeti olduğundan; binâenaleyh (beşinci kaziyye mûcibince), evvelâ ikincinin vukû bulduğu keşfedilip bundan birincinin de vukû bulduğunu tahmin edersem, haklı olmamın ihtimali `fghimb`'nin `AiB`'ye nisbetidir; ispat edilecek nokta da bu idi.
+
+**Netice.** Aynı şeyler farz edildiğinde, eğer `M` hâdisesinin ihtimalinin sıfır ile `Ab`'nin `AB`'ye nisbeti arasında bir yerde bulunduğunu tahmin edersem, haklı olmamın tâlii `Abm`'nin `AiB`'ye nisbetidir.
+
+**Tenbîh.**
+
+Evvelki kaziyyeden açıktır ki orada `M` diye adlandırdığım cinsten bir hâdise hâlinde, onun muayyen sayıda tecrübede vukû bulduğu ve bulmadığı defaların sayısından, onun hakkında başka hiçbir şey bilmeden, ihtimalinin aşağı yukarı nerede olduğuna dair bir tahminde bulunulabilir ve orada zikredilen sathların büyüklüklerini mûtad usûllerle hesaplayarak tahminin doğru olmasının tâliini görebilir. Ve aynı kaidenin, ihtimali hakkında herhangi bir tecrübeden evvel mutlak surette hiçbir şey bilmediğimiz bir hâdise hâlinde kullanılacak münasip kaide olduğu, şu mülâhazadan görünüyor gibidir: yâni böyle bir hâdise hakkında, muayyen sayıda tecrübede onun mümkün herhangi bir defa sayısınca vukû bulmasını bir başkasınca vukû bulmasından ziyade düşünmek için hiçbir sebebim yoktur. Zîrâ bu sebeple, onun hakkında, sanki ihtimali evvelâ sabit değilmiş de sonra, muayyen sayıda tecrübede onun mümkün herhangi bir defa sayısınca vukû bulmasını bir başkasınca vukû bulmasından ziyade düşünmem için bana hiçbir sebep vermeyecek tarzda tâyin olunmuş gibi, haklı olarak istidlâl edebilirim. Fakat `M` hâdisesinin hâli tam olarak budur. Zîrâ onun tek bir tecrübedeki ihtimalini tâyin eden `W` topu atılmazdan evvel, (sekizinci kaziyyenin neticesi mûcibince) onun vukû adedi ile adem adedinin mecmû'u yahut tecrübe adedi kadar tecrübede vukû adedi kadar defa vukû bulup adem adedi kadar defa vukû bulmamasının ihtimali `AiB`'nin `CA`'ya nisbetidir; vukû adedi ile adem adedinin mecmû'u, yâni tecrübe adedi verildiğinde bu nisbet, vukû adedi hangi sayı olursa olsun aynıdır; bu, `AiB`'nin büyüklüğü müteseyyilât usûlüyle\* hesaplanarak görülecektir. Ve binâenaleyh `o` noktasının yeri yahut `M` hâdisesinin tecrübe adedi kadar tecrübede vukû bulduğu defaların sayısı keşfedilmezden evvel, onun mümkün bir defa sayısınca vukû bulmasını bir başkasınca vukû bulmasından ziyade düşünmek için hiçbir sebebim olamaz.
+
+> \* Burada zikredilen usûlle hesap yapılarak dördüncü maddede biraz sonra ispat edilecektir ki terkîb emsalinin bire nisbetinde büzülmüş olan `AiB`'nin `CA`'ya nisbeti, birin tecrübe adedi artı bir ile terkîb emsalinin hâsıl-ı zarbına nisbeti gibidir:
+>
+> $$\frac{\text{büzülmüş }\texttt{AiB}}{\texttt{CA}} = \frac{1}{\left(\text{tecrübe adedi} + 1\right) \times \text{terkîb emsali}};$$
+>
+> buradan açıkça lâzım gelir ki bu büzülmeden evvel `AiB`'nin `CA`'ya nisbeti, birin tecrübe adedi artı bire nisbeti olmalıdır; bu ise, tecrübe adedi verildiğinde, vukû adedi ne olursa olsun sabit bir nisbettir.
+
+Binâenaleyh bundan sonra şunu kabul edilmiş farz edeceğim: dokuzuncu kaziyyede `M` hâdisesi hakkında verilen kaide, ihtimali hakkında, onun hakkında yapılan yahut müşahede edilen herhangi bir tecrübeden evvel hiçbir şey bilinmeyen herhangi bir hâdiseye nisbetle kullanılacak kaidedir de. Ve böyle bir hâdiseye **meçhul hâdise** diyeceğim.
+
+**Netice.** Buradan, `AiB` şeklindeki tertîbîlerin terkîb emsalinin bire nisbetinde büzüldüğünü farz ederek, ki bu, aralarında kalan şekil cüz'lerinin nisbetinde hiçbir değişiklik yapmaz, ve `M` hâdisesi hakkında söyleneni meçhul bir hâdiseye tatbik ederek, bir hâdisenin fiilen vukû bulduğu ve bulmadığı defaların sayısından ihtimalini bulmanın kaidelerini veren şu kaziyyeyi elde ederiz.
+
+### Kaziyye 10
+
+Eğer herhangi bir `AH` kaidesi üzerinde (şekle bakınız), muâdelesi
+
+$$\text{tertîbî nisbeti} = \text{vukû ihtimali}^{\,\text{vukû adedi}} \times \text{adem ihtimali}^{\,\text{adem adedi}}$$
+
+olan bir şekil tarif edilse; burada **tertîbî nisbeti**, **vukû ihtimali**, **adem ihtimali** sırasıyla, şeklin kaide üzerine dik açılarla duran bir tertîbîsinin, kaidenin o tertîbî ile kaidenin başı olan `A` arasında kalan kıtasının, ve kaidenin tertîbî ile `H` noktası arasında bulunan öteki kıtasının, müşterek tâlîleri olan kaideye nisbetleridir; o hâlde derim ki eğer meçhul bir hâdise vukû adedi ile adem adedinin mecmû'u kadar tecrübede vukû adedi kadar defa vukû bulup adem adedi kadar defa vukû bulmamışsa, ve `AH` kaidesinde `f` ve `t` gibi herhangi iki nokta alıp onunla dik açılar teşkil eden `fC`, `tF` tertîbîlerini çıkarırsanız, hâdisenin ihtimalinin `Af`'nin `AH`'ye nisbeti ile `At`'nin `AH`'ye nisbeti arasında bir yerde bulunması tâlii, evvelce tarif edilen şeklin iki tertîbî arasında kalan cüz'ü olan `tFCf`'nin, `AH` kaidesi üzerinde duran bütün şekil `ACFH`'ye nisbetidir.
+
+Bu, dokuzuncu kaziyyeden ve evvelki tenbîh ile netice de yapılan mülâhazalardan aşikârdır.
+
+Şimdi, evvelki kaideyi amele irca etmek için, tarif edilen şeklin sathının ve kaidesine amûd olan tertîbîlerle ayrılmış muhtelif cüz'lerinin kıymetini bulmamız lâzımdır. Bu maksatla `AH` = 1 ve `AH` üzerindeki murabba' olan `HO` da aynı şekilde = 1 farz edilsin; o zaman `Cf` **tertîbî nisbeti**ne, `Af` **vukû ihtimali**ne ve `Hf` **adem ihtimali**ne müsâvî olur; çünkü tertîbî nisbeti, vukû ihtimali ve adem ihtimali sırasıyla `Cf`'nin, `Af`'nin ve `Hf`'nin `AH`'ye nisbetlerini gösterir. Ve münhanînin muâdelesi mûcibince
+
+$$\text{tertîbî nisbeti} = \text{vukû ihtimali}^{\,\text{vukû adedi}} \times \text{adem ihtimali}^{\,\text{adem adedi}}$$
+
+ve (`Af` + `fH` = `AH` olduğundan)
+
+$$\text{adem ihtimali} + \text{vukû ihtimali} = 1$$
+
+dir. Binâenaleyh
+
+$$\begin{aligned}
+\text{tertîbî nisbeti} &= \text{vukû ihtimali}^{\,\text{vukû adedi}} \times \left(1 - \text{vukû ihtimali}\right)^{\text{adem adedi}} \\
+&= \text{vukû ihtimali}^{\,\text{vukû adedi}} - \text{adem adedi} \times \text{vukû ihtimali}^{\,\text{vukû adedi}+1} \\
+&\quad + \text{adem adedi} \times \frac{\text{adem adedi}-1}{2} \times \text{vukû ihtimali}^{\,\text{vukû adedi}+2} \\
+&\quad - \text{adem adedi} \times \frac{\text{adem adedi}-1}{2} \times \frac{\text{adem adedi}-2}{3} \times \text{vukû ihtimali}^{\,\text{vukû adedi}+3} + \cdots
+\end{aligned}$$
+
+dir. Şimdi fâsıla **vukû ihtimali** ve tertîbî
+
+$$\text{vukû ihtimali}^{\,\text{vukû adedi}}$$
+
+olunca mukābil satıh (Newton'un *Tarbîü'l-münhaniyât*'ının onuncu kaziyyesinin birinci hâli mûcibince)\*
+
+$$\frac{\text{vukû ihtimali}^{\,\text{vukû adedi}+1}}{\text{vukû adedi}+1}$$
+
+dir; ve tertîbî
+
+$$\text{adem adedi} \times \text{vukû ihtimali}^{\,\text{vukû adedi}+1}$$
+
+olunca satıh
+
+$$\text{adem adedi} \times \frac{\text{vukû ihtimali}^{\,\text{vukû adedi}+2}}{\text{vukû adedi}+2}$$
+
+dir; ve geri kalanlar da aynı tarzdadır.
+
+> \* Burada Sir Isaac Newton'a müracaat etmeksizin gayet aşikârdır ki `ACf` sathının seyyâlesi (fluxion)
+>
+> $$\text{tertîbî nisbeti} \times \text{seyyâle}(\text{vukû ihtimali}) = \text{vukû ihtimali}^{\,\text{vukû adedi}} \times \text{seyyâle}(\text{vukû ihtimali}) - \text{adem adedi} \times \text{vukû ihtimali}^{\,\text{vukû adedi}+1} \times \text{seyyâle}(\text{vukû ihtimali}) + \text{adem adedi} \times \frac{\text{adem adedi}-1}{2} \times \text{vukû ihtimali}^{\,\text{vukû adedi}+2} \times \text{seyyâle}(\text{vukû ihtimali}) - \cdots$$
+>
+> olduğundan, müteseyyili (fluent), yâni sathın kendisi
+>
+> $$\frac{\text{vukû ihtimali}^{\,\text{vukû adedi}+1}}{\text{vukû adedi}+1} - \text{adem adedi} \times \frac{\text{vukû ihtimali}^{\,\text{vukû adedi}+2}}{\text{vukû adedi}+2} + \text{adem adedi} \times \frac{\text{adem adedi}-1}{2} \times \frac{\text{vukû ihtimali}^{\,\text{vukû adedi}+3}}{\text{vukû adedi}+3} - \cdots$$
+>
+> dir.
+
+Binâenaleyh fâsıla **vukû ihtimali** ve tertîbî **tertîbî nisbeti** yahut
+
+$$\text{vukû ihtimali}^{\,\text{vukû adedi}} - \text{adem adedi} \times \text{vukû ihtimali}^{\,\text{vukû adedi}+1} + \cdots$$
+
+olunca mukābil satıh
+
+$$\frac{\text{vukû ihtimali}^{\,\text{vukû adedi}+1}}{\text{vukû adedi}+1} - \frac{\text{adem adedi}}{1} \times \frac{\text{vukû ihtimali}^{\,\text{vukû adedi}+2}}{\text{vukû adedi}+2} + \text{adem adedi} \times \frac{\text{adem adedi}-1}{2} \times \frac{\text{vukû ihtimali}^{\,\text{vukû adedi}+3}}{\text{vukû adedi}+3} - \text{adem adedi} \times \frac{\text{adem adedi}-1}{2} \times \frac{\text{adem adedi}-2}{3} \times \frac{\text{vukû ihtimali}^{\,\text{vukû adedi}+4}}{\text{vukû adedi}+4} + \cdots$$
+
+dir. Binâenaleyh eğer
+
+$$\text{vukû ihtimali} = \texttt{Af} = \frac{\texttt{Af}}{\texttt{AH}} \qquad\text{ve}\qquad \text{tertîbî nisbeti} = \texttt{Cf} = \frac{\texttt{Cf}}{\texttt{AH}}$$
+
+ise, o zaman
+
+$$\texttt{ACf} = \frac{\texttt{ACf}}{\texttt{HO}} = \frac{\text{vukû ihtimali}^{\,\text{vukû adedi}+1}}{\text{vukû adedi}+1} - \text{adem adedi} \times \frac{\text{vukû ihtimali}^{\,\text{vukû adedi}+2}}{\text{vukû adedi}+2} + \text{adem adedi} \times \frac{\text{adem adedi}-1}{2} \times \frac{\text{vukû ihtimali}^{\,\text{vukû adedi}+3}}{\text{vukû adedi}+3} - \cdots$$
+
+dir.
+
+Bu muâdeleden, eğer adem adedi küçük bir sayı ise, `ACf`'nin `HO`'ya nisbetinin kıymetini bulmak kolaydır. Ve o nasıl bulunduysa aynı şekilde görünecektir ki `HCf`'nin `HO`'ya nisbeti
+
+$$\frac{\text{adem ihtimali}^{\,\text{adem adedi}+1}}{\text{adem adedi}+1} - \text{vukû adedi} \times \frac{\text{adem ihtimali}^{\,\text{adem adedi}+2}}{\text{adem adedi}+2} + \text{vukû adedi} \times \frac{\text{vukû adedi}-1}{2} \times \frac{\text{adem ihtimali}^{\,\text{adem adedi}+3}}{\text{adem adedi}+3} - \text{vukû adedi} \times \frac{\text{vukû adedi}-1}{2} \times \frac{\text{vukû adedi}-2}{3} \times \frac{\text{adem ihtimali}^{\,\text{adem adedi}+4}}{\text{adem adedi}+4} + \cdots$$
+
+dir; bu silsile az haddden ibaret olacaktır ve binâenaleyh vukû adedi küçük olduğunda kullanılmalıdır.
+
+**2.** Evvelki gibi aynı şeyler farz edildiğinde, `ACf`'nin `HO`'ya nisbeti
+
+$$\begin{aligned}
+&\frac{\text{vukû ihtimali}^{\,\text{vukû adedi}+1} \times \text{adem ihtimali}^{\,\text{adem adedi}}}{\text{vukû adedi}+1} + \frac{\text{adem adedi}}{\text{vukû adedi}+1} \times \frac{\text{vukû ihtimali}^{\,\text{vukû adedi}+2} \times \text{adem ihtimali}^{\,\text{adem adedi}-1}}{\text{vukû adedi}+2} \\
+&+ \frac{\text{adem adedi}}{\text{vukû adedi}+1} \times \frac{\text{adem adedi}-1}{\text{vukû adedi}+2} \times \frac{\text{vukû ihtimali}^{\,\text{vukû adedi}+3} \times \text{adem ihtimali}^{\,\text{adem adedi}-2}}{\text{vukû adedi}+3} \\
+&+ \frac{\text{adem adedi}}{\text{vukû adedi}+1} \times \frac{\text{adem adedi}-1}{\text{vukû adedi}+2} \times \frac{\text{adem adedi}-2}{\text{vukû adedi}+3} \times \frac{\text{vukû ihtimali}^{\,\text{vukû adedi}+4} \times \text{adem ihtimali}^{\,\text{adem adedi}-3}}{\text{vukû adedi}+4} + \cdots \\
+&+ \frac{\text{vukû ihtimali}^{\,\text{tecrübe adedi}+1}}{\text{tecrübe adedi}+1} \times \frac{\text{adem adedi}}{\text{vukû adedi}+1} \times \frac{\text{adem adedi}-1}{\text{vukû adedi}+2} \times \cdots \times \frac{1}{\text{tecrübe adedi}}
+\end{aligned}$$
+
+dir; burada
+
+$$\text{tecrübe adedi} = \text{vukû adedi} + \text{adem adedi}$$
+
+dir. Zîrâ bu silsile, birinci maddede `ACf`'nin `HO`'ya nisbetinin kıymeti olarak yazılan
+
+$$\frac{\text{vukû ihtimali}^{\,\text{vukû adedi}+1}}{\text{vukû adedi}+1} - \text{adem adedi} \times \frac{\text{vukû ihtimali}^{\,\text{vukû adedi}+2}}{\text{vukû adedi}+2} + \cdots$$
+
+silsilesinin aynısıdır; bu, evvelkinde adem ihtimali yerine onun kıymeti olan 1 − vukû ihtimali konup hadler açılarak ve vukû ihtimalinin kuvvetlerine göre tertip edilerek kolayca görülecektir. Yahut daha çabuk olarak, iki silsilenin seyyâleleri karşılaştırılarak ve evvelkinde adem ihtimalinin seyyâlesi yerine vukû ihtimalinin seyyâlesinin eksisi konarak\*.
+
+> \* Birinci silsilenin seyyâlesi
+>
+> $$\begin{aligned}
+> &\text{vukû ihtimali}^{\,\text{vukû adedi}} \times \text{adem ihtimali}^{\,\text{adem adedi}} \times \text{seyyâle}(\text{vukû ihtimali}) + \frac{\text{adem adedi} \times \text{vukû ihtimali}^{\,\text{vukû adedi}+1} \times \text{adem ihtimali}^{\,\text{adem adedi}-1} \times \text{seyyâle}(\text{adem ihtimali})}{\text{vukû adedi}+1} \\
+> &+ \frac{\text{adem adedi} \times \text{vukû ihtimali}^{\,\text{vukû adedi}+1} \times \text{adem ihtimali}^{\,\text{adem adedi}-1} \times \text{seyyâle}(\text{vukû ihtimali})}{\text{vukû adedi}+1} + \text{adem adedi} \times \frac{\text{adem adedi}-1}{\text{vukû adedi}+1} \times \frac{\text{vukû ihtimali}^{\,\text{vukû adedi}+2} \times \text{adem ihtimali}^{\,\text{adem adedi}-2} \times \text{seyyâle}(\text{adem ihtimali})}{\text{vukû adedi}+2} \\
+> &+ \text{adem adedi} \times \frac{\text{adem adedi}-1}{\text{vukû adedi}+1} \times \frac{\text{vukû ihtimali}^{\,\text{vukû adedi}+2} \times \text{adem ihtimali}^{\,\text{adem adedi}-2} \times \text{seyyâle}(\text{vukû ihtimali})}{\text{vukû adedi}+2} \\
+> &+ \frac{\text{adem adedi}}{\text{vukû adedi}+1} \times \frac{\text{adem adedi}-1}{\text{vukû adedi}+2} \times \frac{\text{adem adedi}-2}{\text{vukû adedi}+3} \times \text{vukû ihtimali}^{\,\text{vukû adedi}+3} \times \text{adem ihtimali}^{\,\text{adem adedi}-3} \times \text{seyyâle}(\text{adem ihtimali}) + \cdots
+> \end{aligned}$$
+>
+> dir; yahut adem ihtimalinin seyyâlesi yerine vukû ihtimalinin seyyâlesinin eksisi konunca
+>
+> $$\begin{aligned}
+> &\text{vukû ihtimali}^{\,\text{vukû adedi}} \times \text{adem ihtimali}^{\,\text{adem adedi}} \times \text{seyyâle}(\text{vukû ihtimali}) - \frac{\text{adem adedi} \times \text{vukû ihtimali}^{\,\text{vukû adedi}+1} \times \text{adem ihtimali}^{\,\text{adem adedi}-1} \times \text{seyyâle}(\text{vukû ihtimali})}{\text{vukû adedi}+1} \\
+> &+ \frac{\text{adem adedi} \times \text{vukû ihtimali}^{\,\text{vukû adedi}+1} \times \text{adem ihtimali}^{\,\text{adem adedi}-1} \times \text{seyyâle}(\text{vukû ihtimali})}{\text{vukû adedi}+1} - \text{adem adedi} \times \frac{\text{adem adedi}-1}{\text{vukû adedi}+1} \times \frac{\text{vukû ihtimali}^{\,\text{vukû adedi}+2} \times \text{adem ihtimali}^{\,\text{adem adedi}-2} \times \text{seyyâle}(\text{vukû ihtimali})}{\text{vukû adedi}+2} \\
+> &+ \text{adem adedi} \times \frac{\text{adem adedi}-1}{\text{vukû adedi}+1} \times \frac{\text{vukû ihtimali}^{\,\text{vukû adedi}+2} \times \text{adem ihtimali}^{\,\text{adem adedi}-2} \times \text{seyyâle}(\text{vukû ihtimali})}{\text{vukû adedi}+2} - \cdots
+> \end{aligned}$$
+>
+> dir; birinciden sonraki bütün hadler birbirini yok ettiğinden, bu
+>
+> $$\begin{aligned}
+> \text{vukû ihtimali}^{\,\text{vukû adedi}} \times \text{adem ihtimali}^{\,\text{adem adedi}} \times \text{seyyâle}(\text{vukû ihtimali}) &= \text{vukû ihtimali}^{\,\text{vukû adedi}} \times \left(1 - \text{vukû ihtimali}\right)^{\text{adem adedi}} \times \text{seyyâle}(\text{vukû ihtimali}) \\
+> &= \text{vukû ihtimali}^{\,\text{vukû adedi}} \times \text{seyyâle}(\text{vukû ihtimali}) \times \left(1 - \text{adem adedi} \times \text{vukû ihtimali} + \text{adem adedi} \times \frac{\text{adem adedi}-1}{2} \times \text{vukû ihtimali}^{2} - \cdots\right) \\
+> &= \text{vukû ihtimali}^{\,\text{vukû adedi}} \times \text{seyyâle}(\text{vukû ihtimali}) - \text{adem adedi} \times \text{vukû ihtimali}^{\,\text{vukû adedi}+1} \times \text{seyyâle}(\text{vukû ihtimali}) \\
+> &\quad + \text{adem adedi} \times \frac{\text{adem adedi}-1}{2} \times \text{vukû ihtimali}^{\,\text{vukû adedi}+2} \times \text{seyyâle}(\text{vukû ihtimali}) - \cdots
+> \end{aligned}$$
+>
+> ifadesine müsâvîdir ki sonraki silsilenin, yâni
+>
+> $$\frac{\text{vukû ihtimali}^{\,\text{vukû adedi}+1}}{\text{vukû adedi}+1} - \text{adem adedi} \times \frac{\text{vukû ihtimali}^{\,\text{vukû adedi}+2}}{\text{vukû adedi}+2} + \cdots$$
+>
+> silsilesinin seyyâlesidir. Binâenaleyh iki silsile aynıdır.
+
+**3.** Aynı tarzda `HCf`'nin `HO`'ya nisbeti
+
+$$\frac{\text{adem ihtimali}^{\,\text{adem adedi}+1} \times \text{vukû ihtimali}^{\,\text{vukû adedi}}}{\text{adem adedi}+1} + \frac{\text{vukû adedi}}{\text{adem adedi}+1} \times \frac{\text{adem ihtimali}^{\,\text{adem adedi}+2} \times \text{vukû ihtimali}^{\,\text{vukû adedi}-1}}{\text{adem adedi}+2} + \frac{\text{vukû adedi}}{\text{adem adedi}+1} \times \frac{\text{vukû adedi}-1}{\text{adem adedi}+2} \times \frac{\text{adem ihtimali}^{\,\text{adem adedi}+3} \times \text{vukû ihtimali}^{\,\text{vukû adedi}-2}}{\text{adem adedi}+3} + \cdots$$
+
+dir.
+
+**4.** Eğer **terkîb emsali**,
+
+$$\left(\text{vukû ihtimali} + \text{adem ihtimali}\right)^{\text{vukû adedi} + \text{adem adedi}}$$
+
+dü-haddîsi açıldığında
+
+$$\text{vukû ihtimali}^{\,\text{vukû adedi}} \times \text{adem ihtimali}^{\,\text{adem adedi}}$$
+
+ifadesinin bulunduğu haddin emsali ise, bütün `ACFH` şeklinin `HO`'ya nisbeti
+
+$$\frac{1}{\text{tecrübe adedi}+1} \times \frac{1}{\text{terkîb emsali}}$$
+
+dir; tecrübe adedi, vukû adedi ile adem adedinin mecmû'una müsâvî olmak üzere. Zîrâ `Af` = `AH` olduğunda vukû ihtimali = 1, adem ihtimali = 0 olur. Binâenaleyh ikinci maddede `ACf`'nin `HO`'ya nisbetini ifade eden diye yazılan silsilenin, sonuncusu müstesnâ, bütün hadleri yok olacak ve o sonuncu
+
+$$\frac{1}{\text{tecrübe adedi}+1} \times \frac{\text{adem adedi}}{\text{vukû adedi}+1} \times \frac{\text{adem adedi}-1}{\text{vukû adedi}+2} \times \cdots \times \frac{1}{\text{tecrübe adedi}}$$
+
+olacaktır. Fakat
+
+$$\left(\text{vukû ihtimali} + \text{adem ihtimali}\right)^{\text{tecrübe adedi}}$$
+
+dü-haddîsi açıldığında
+
+$$\text{vukû ihtimali}^{\,\text{vukû adedi}} \times \text{adem ihtimali}^{\,\text{adem adedi}}$$
+
+ifadesinin bulunduğu haddin emsali olan terkîb emsali
+
+$$\frac{\text{vukû adedi}+1}{\text{adem adedi}} \times \frac{\text{vukû adedi}+2}{\text{adem adedi}-1} \times \cdots \times \frac{\text{tecrübe adedi}}{1}$$
+
+ifadesine müsâvîdir. Ve `Af`'nin `AH`'ye müsâvî olduğu farz edildiğinden `ACf` = `ACH` olur. Buradan bu madde aşikârdır.
+
+**5.** `ACf`'nin bütün `ACFH` şekline nisbeti (birinci ve dördüncü maddeler mûcibince)
+
+$$\left(\text{tecrübe adedi}+1\right) \times \text{terkîb emsali} \times \left(\frac{\text{vukû ihtimali}^{\,\text{vukû adedi}+1}}{\text{vukû adedi}+1} - \text{adem adedi} \times \frac{\text{vukû ihtimali}^{\,\text{vukû adedi}+2}}{\text{vukû adedi}+2} + \text{adem adedi} \times \frac{\text{adem adedi}-1}{2} \times \frac{\text{vukû ihtimali}^{\,\text{vukû adedi}+3}}{\text{vukû adedi}+3} - \cdots\right)$$
+
+dir; ve eğer vukû ihtimali `Af`'nin `AH`'ye nisbetini ifade ettiği gibi **büyük hadd** de `At`'nin `AH`'ye nisbetini ifade etseydi, `AFt`'nin `ACFH`'ye nisbeti
+
+$$\left(\text{tecrübe adedi}+1\right) \times \text{terkîb emsali} \times \left(\frac{\text{büyük hadd}^{\,\text{vukû adedi}+1}}{\text{vukû adedi}+1} - \text{adem adedi} \times \frac{\text{büyük hadd}^{\,\text{vukû adedi}+2}}{\text{vukû adedi}+2} + \text{adem adedi} \times \frac{\text{adem adedi}-1}{2} \times \frac{\text{büyük hadd}^{\,\text{vukû adedi}+3}}{\text{vukû adedi}+3} - \cdots\right)$$
+
+olurdu; ve binâenaleyh `tFCf`'nin `ACFH`'ye nisbeti, (tecrübe adedi + 1) × terkîb emsali'nin, iki silsile arasındaki farkla zarb edilmişidir. Bunu onuncu kaziyye ile karşılaştırın, ve şu amelî kaideyi elde ederiz.
+
+### Birinci Kaide
+
+Eğer bir hâdise hakkında, onun vukû adedi ile adem adedinin mecmû'u yahut tecrübe adedi kadar tecrübede vukû adedi kadar defa vukû bulup adem adedi kadar defa vukû bulmamış olmasından başka hiçbir şey bilinmiyorsa, ve bundan, tek bir tecrübede vukû ihtimalinin **büyük hadd** ve **küçük hadd** gibi herhangi iki ihtimal derecesi arasında bir yerde bulunduğunu tahmin ediyorsam, tahminimde haklı olmamın tâlii
+
+$$\left(\text{tecrübe adedi}+1\right) \times \text{terkîb emsali} \times \left[\left(\frac{\text{büyük hadd}^{\,\text{vukû adedi}+1}}{\text{vukû adedi}+1} - \text{adem adedi} \times \frac{\text{büyük hadd}^{\,\text{vukû adedi}+2}}{\text{vukû adedi}+2} + \text{adem adedi} \times \frac{\text{adem adedi}-1}{2} \times \frac{\text{büyük hadd}^{\,\text{vukû adedi}+3}}{\text{vukû adedi}+3} - \cdots\right) - \left(\frac{\text{küçük hadd}^{\,\text{vukû adedi}+1}}{\text{vukû adedi}+1} - \text{adem adedi} \times \frac{\text{küçük hadd}^{\,\text{vukû adedi}+2}}{\text{vukû adedi}+2} + \text{adem adedi} \times \frac{\text{adem adedi}-1}{2} \times \frac{\text{küçük hadd}^{\,\text{vukû adedi}+3}}{\text{vukû adedi}+3} - \cdots\right)\right]$$
+
+dir; yâni (tecrübe adedi + 1) × terkîb emsali, bu iki silsile arasındaki farkla zarb edilmiştir; terkîb emsali,
+
+$$\left(\text{vukû ihtimali} + \text{adem ihtimali}\right)^{\text{tecrübe adedi}}$$
+
+açıldığında
+
+$$\text{vukû ihtimali}^{\,\text{vukû adedi}} \times \text{adem ihtimali}^{\,\text{adem adedi}}$$
+
+ifadesinin emsali olmak üzere.
+
+Adem adedi küçük bir sayı olduğunda kullanılacak münasip kaide budur; fakat adem adedi büyük ve vukû adedi küçük ise, burada yazılan silsilelerde her yerde vukû adedini adem adedine ve adem adedini vukû adedine, ve küçük haddi **küçük haddin mütemmimi**ne, yâni 1 − küçük hadd'e, ve büyük haddi
+
+$$\text{büyük haddin mütemmimi} = 1 - \text{büyük hadd}$$
+
+ifadesine çevirin; bu, iki silsile arasındaki farkta hiçbir değişiklik yapmayacaktır.
+
+Bay Bayes'in risâlesi buraya kadardır.
+
+Burada verilen kaide hakkında ayrıca şu da mülâhaza edilmelidir ki vukû adedi ve adem adedi ikisi birden pek büyük sayılar olduğunda, içindeki silsilelerin ihtiva edeceği hadlerin çokluğu sebebiyle onu amele tatbik etmek mümkün olmayacaktır. Bu sebeple Bay Bayes, burada vermek fazlasıyla usandırıcı olacak bir tetkikle, bu kaideden şöyle olan bir başkasını istihraç etmiştir.
+
+### İkinci Kaide
+
+Eğer bir hâdise hakkında, onun vukû adedi ile adem adedinin mecmû'u yahut tecrübe adedi kadar tecrübede vukû adedi kadar defa vukû bulup adem adedi kadar defa vukû bulmamış olmasından başka hiçbir şey bilinmiyorsa, ve bundan, tek bir tecrübede vukû ihtimalinin
+
+$$\frac{\text{vukû adedi}}{\text{tecrübe adedi}} + \text{inhirâf} \qquad\text{ile}\qquad \frac{\text{vukû adedi}}{\text{tecrübe adedi}} - \text{inhirâf}$$
+
+arasında bulunduğunu tahmin ediyorsam; eğer
+
+$$\text{mikyâs}^{2} = \frac{\text{tecrübe adedi}^{3}}{\text{vukû adedi} \times \text{adem adedi}}, \qquad \text{vukû nisbeti} = \frac{\text{vukû adedi}}{\text{tecrübe adedi}}, \qquad \text{adem nisbeti} = \frac{\text{adem adedi}}{\text{tecrübe adedi}}$$
+
+ise, **terkîb emsali**,
+
+$$\left(\text{vukû nisbeti} + \text{adem nisbeti}\right)^{\text{tecrübe adedi}}$$
+
+açıldığında
+
+$$\text{vukû nisbeti}^{\,\text{vukû adedi}} \times \text{adem nisbeti}^{\,\text{adem adedi}}$$
+
+ifadesinin bulunduğu haddin emsali ise, ve
+
+$$\begin{aligned}
+\text{silsile hâsılı} = \frac{\text{tecrübe adedi}+1}{\text{tecrübe adedi}} &\times \frac{\sqrt{2 \times \text{vukû adedi} \times \text{adem adedi}}}{\sqrt{\text{tecrübe adedi}}} \times \text{terkîb emsali} \times \text{vukû nisbeti}^{\,\text{vukû adedi}} \times \text{adem nisbeti}^{\,\text{adem adedi}} \\
+&\times \Bigg(\text{mikyâs} \times \text{inhirâf} - \frac{\text{mikyâs}^{3} \times \text{inhirâf}^{3}}{3} + \frac{\text{tecrübe adedi}-2}{2 \times \text{tecrübe adedi}} \times \frac{\text{mikyâs}^{5} \times \text{inhirâf}^{5}}{5} \\
+&\qquad - \frac{\left(\text{tecrübe adedi}-2\right) \times \left(\text{tecrübe adedi}-4\right)}{2 \times \text{tecrübe adedi} \times 3 \times \text{tecrübe adedi}} \times \frac{\text{mikyâs}^{7} \times \text{inhirâf}^{7}}{7} \\
+&\qquad + \frac{\text{tecrübe adedi}-2}{2 \times \text{tecrübe adedi}} \times \frac{\text{tecrübe adedi}-4}{3 \times \text{tecrübe adedi}} \times \frac{\text{tecrübe adedi}-6}{4 \times \text{tecrübe adedi}} \times \frac{\text{mikyâs}^{9} \times \text{inhirâf}^{9}}{9} - \cdots\Bigg)
+\end{aligned}$$
+
+ise, haklı olmamın tâlii
+
+$$\frac{2 \times \text{silsile hâsılı}}{1 + 2 \times \text{terkîb emsali} \times \text{vukû nisbeti}^{\,\text{vukû adedi}} \times \text{adem nisbeti}^{\,\text{adem adedi}} + \dfrac{2 \times \text{terkîb emsali} \times \text{vukû nisbeti}^{\,\text{vukû adedi}} \times \text{adem nisbeti}^{\,\text{adem adedi}}}{\text{tecrübe adedi}}}\,\text{\*}$$
+
+ifadesinden büyük ve
+
+$$\frac{2 \times \text{silsile hâsılı}}{1 - 2 \times \text{terkîb emsali} \times \text{vukû nisbeti}^{\,\text{vukû adedi}} \times \text{adem nisbeti}^{\,\text{adem adedi}} - \dfrac{2 \times \text{terkîb emsali} \times \text{vukû nisbeti}^{\,\text{vukû adedi}} \times \text{adem nisbeti}^{\,\text{adem adedi}}}{\text{tecrübe adedi}}}$$
+
+ifadesinden küçüktür. Ve eğer vukû adedi = adem adedi ise, tâliim tam olarak 2 × silsile hâsılı'dır.
+
+> \* Bay Bayes'in yazmasında bu tâliin
+>
+> $$\frac{2 \times \text{silsile hâsılı}}{1 + 2 \times \text{terkîb emsali} \times \text{vukû nisbeti}^{\,\text{vukû adedi}} \times \text{adem nisbeti}^{\,\text{adem adedi}}}$$
+>
+> ifadesinden büyük ve
+>
+> $$\frac{2 \times \text{silsile hâsılı}}{1 - 2 \times \text{terkîb emsali} \times \text{vukû nisbeti}^{\,\text{vukû adedi}} \times \text{adem nisbeti}^{\,\text{adem adedi}}}$$
+>
+> ifadesinden küçük olduğu yazılmıştır; benim verdiğim şekliyle iki bölendeki üçüncü had terk edilmiştir. Fakat bu, açıkça kaidenin istihracındaki küçük bir gözden kaçmadan ileri geldiğinden, ki Bay Bayes'in bunu bizzat fark etmiş olduğunu düşünmek için sebebim vardır, onun nüshasını tashih etmeye ve kaideyi, olması gerektiğine kani olduğum şekilde vermeye cesaret ettim.
+
+Bu kaideyi her hâlde kullanılmaya elverişli kılmak için, yalnız
+
+$$\text{terkîb emsali} \times \text{vukû nisbeti}^{\,\text{vukû adedi}} \times \text{adem nisbeti}^{\,\text{adem adedi}}$$
+
+ifadesinin ve
+
+$$\text{mikyâs} \times \text{inhirâf} - \frac{\text{mikyâs}^{3} \times \text{inhirâf}^{3}}{3} + \cdots$$
+
+silsilesinin kıymetini kâfi bir yakınlıkla nasıl bulacağını bilmek lâzımdır. Evvelkine gelince, Bay Bayes ispat etmiştir ki, **rub'-ı dâire nisbeti** rub'-ı dâire kavsinin nısf-ı kutruna nisbetini gösterdiği farz edilirse,
+
+$$\text{terkîb emsali} \times \text{vukû nisbeti}^{\,\text{vukû adedi}} \times \text{adem nisbeti}^{\,\text{adem adedi}} = \frac{\sqrt{\text{tecrübe adedi}}}{2\sqrt{\text{rub'-ı dâire nisbeti} \times \text{vukû adedi} \times \text{adem adedi}}} \times \text{birinci tashîh nisbeti}$$
+
+olacaktır; burada **birinci tashîh nisbeti**, *zâidî logaritması*
+
+$$\begin{aligned}
+\text{zâidî logaritma}(\text{birinci tashîh nisbeti}) = {}& \frac{1}{12} \times \left(\frac{1}{\text{tecrübe adedi}} - \frac{1}{\text{vukû adedi}} - \frac{1}{\text{adem adedi}}\right) - \frac{1}{360} \times \left(\frac{1}{\text{tecrübe adedi}^{3}} - \frac{1}{\text{vukû adedi}^{3}} - \frac{1}{\text{adem adedi}^{3}}\right) \\
+&+ \frac{1}{1260} \times \left(\frac{1}{\text{tecrübe adedi}^{5}} - \frac{1}{\text{vukû adedi}^{5}} - \frac{1}{\text{adem adedi}^{5}}\right) - \frac{1}{1680} \times \left(\frac{1}{\text{tecrübe adedi}^{7}} - \frac{1}{\text{vukû adedi}^{7}} - \frac{1}{\text{adem adedi}^{7}}\right) \\
+&+ \frac{1}{1188} \times \left(\frac{1}{\text{tecrübe adedi}^{9}} - \frac{1}{\text{vukû adedi}^{9}} - \frac{1}{\text{adem adedi}^{9}}\right) - \cdots
+\end{aligned}$$
+
+olan *nisbet*tir\*; burada adedî emsaller şu tarzda bulunabilir. Onlara **birinci emsal**, **ikinci emsal**, **üçüncü emsal**, **dördüncü emsal**, **beşinci emsal** ve saire deyin. O zaman
+
+$$\text{birinci emsal} = \frac{1}{2 \cdot 2 \cdot 3} = \frac{1}{3 \cdot 4}, \qquad \text{ikinci emsal} = \frac{1}{2 \cdot 4 \cdot 5} - \frac{\text{birinci emsal}}{3},$$
+
+$$\text{üçüncü emsal} = \frac{1}{2 \cdot 6 \cdot 7} - \frac{10 \times \text{ikinci emsal} + \text{birinci emsal}}{5},$$
+
+$$\text{dördüncü emsal} = \frac{1}{2 \cdot 8 \cdot 9} - \frac{35 \times \text{üçüncü emsal} + 21 \times \text{ikinci emsal} + \text{birinci emsal}}{7},$$
+
+$$\text{beşinci emsal} = \frac{1}{2 \cdot 10 \cdot 11} - \frac{126 \times \text{üçüncü emsal} + 84 \times \text{dördüncü emsal} + 36 \times \text{ikinci emsal} + \text{birinci emsal}}{9},$$
+
+$$\text{altıncı emsal} = \frac{1}{2 \cdot 12 \cdot 13} - \frac{462 \times \text{dördüncü emsal} + 330 \times \text{üçüncü emsal} + 165 \times \text{beşinci emsal} + 55 \times \text{ikinci emsal} + \text{birinci emsal}}{11}, \quad \cdots$$
+
+dir; burada dördüncü, beşinci, altıncı ve sairenin kıymetlerindeki ikinci, üçüncü, dördüncü, beşinci, altıncı ve sairenin emsalleri, açılmış
+
+$$\left(\text{vukû nisbeti} + \text{adem nisbeti}\right)^{7},\quad \left(\text{vukû nisbeti} + \text{adem nisbeti}\right)^{9},\quad \left(\text{vukû nisbeti} + \text{adem nisbeti}\right)^{11},\quad \cdots$$
+
+ifadelerindeki en yüksek 2, 3, 4 ve saire emsaldir; her hususî kıymette bu emsallerin en küçüğünü ikinci emsale, büyüklükte ondan sonrakini ikinci emsalden en uzak harfe, ondan sonrakini üçüncü emsale, ondan sonrakini en uzaktan bir öncekine, ondan sonrakini dördüncü emsale, ondan sonrakini en uzaktan iki öncekine iliştirerek, ve böyle devam ederek†.
+
+> \* Bu silsilenin pek az haddi umûmiyetle zâidî logaritmayı kâfi bir sıhhat derecesiyle verecektir. Benzer bir silsile Bay De Moivre, Bay Simpson ve sair meşhur riyâziyeciler tarafından 1, 2, 3, 4, 5 sayılarının **son adet**e kadar logaritmalarının mecmû'u için bir ifadede verilmiştir; o mecmû'un
+>
+> $$\frac{1}{2}\,\text{logaritma}(\text{muhît}) + \left(\text{son adet} + \frac{1}{2}\right) \times \text{logaritma}(\text{son adet}) - \text{son adet} + \frac{1}{12 \times \text{son adet}} - \frac{1}{360 \times \text{son adet}^{3}} + \frac{1}{1260 \times \text{son adet}^{5}} - \cdots$$
+>
+> ifadesine müsâvî olduğunu iddia etmişlerdir; **muhît**, nısf-ı kutru vâhid olan bir dâirenin muhîtini göstermek üzere. Fakat Bay Bayes, bu ciltteki evvelki bir makalede ispat etmiştir ki bu ifade, ilk hadlerin yalnız münasip bir sayısı alındığında bu mecmû'un kıymetine pek yakın yaklaşacak olsa da, bütün silsile hiçbir kemmiyeti asla ifade edemez; çünkü son adet ne olursa olsun, silsilenin daima mütebâid olmaya başlayacağı bir cüz'ü bulunacaktır. Bu müşahede, silsilenin kullanılışına pek tesir etmese de, riyâziyecilerin dikkatine fazlasıyla lâyık görünmektedir.
+>
+> † Bu emsalleri bulmanın bu usûlünü Bay Simpson'ın *İhtimalin Tabiatı ve Kanunları* adlı risâlesinin sonundaki üçüncü mukaddimenin burhanından istihraç ettim.
+
+Mikyâs × inhirâf − mikyâs³ × inhirâf³ ÷ 3 + (tecrübe adedi − 2) ÷ (2 × tecrübe adedi) × mikyâs⁵ × inhirâf⁵ ÷ 5 ve saire silsilesinin kıymetine gelince, o, mikyâs × inhirâf 1'den küçük, yahut hattâ 3'ün cezrinden büyük olmadığında doğrudan hesaplanabileceğini mülâhaza etmiştir; fakat mikyâs × inhirâf çok daha büyük olduğunda bunu yapmak imkânsız hâle gelir; bu hâlde, gerçek kıymetinin aralarında bulunması lâzım gelen, birbirine pek yakın iki kıymetini kolayca bulmanın bir yolunu gösterir.
+
+Bu maksatla verdiği kaziyye şudur.
+
+Evvelki gibi **rub'-ı dâire nisbeti** rub'-ı dâire kavsinin nısf-ı kutruna nisbetini göstersin, ve **ikinci tashîh nisbeti** de zâidî logaritması
+
+$$\text{zâidî logaritma}(\text{ikinci tashîh nisbeti}) = \frac{2^{2}-1}{2 \times \text{tecrübe adedi}} - \frac{2^{4}-1}{360 \times \text{tecrübe adedi}^{3}} + \frac{2^{6}-1}{1260 \times \text{tecrübe adedi}^{5}} - \frac{2^{8}-1}{1680 \times \text{tecrübe adedi}^{7}} + \cdots$$
+
+olan nisbeti göstersin. O zaman
+
+$$\text{mikyâs} \times \text{inhirâf} - \frac{\text{mikyâs}^{3} \times \text{inhirâf}^{3}}{3} + \cdots$$
+
+silsilesi,
+
+$$\begin{aligned}
+&\frac{\text{ikinci tashîh nisbeti} \times \text{tecrübe adedi}}{\text{tecrübe adedi}+1} \times \frac{\sqrt{\text{rub'-ı dâire nisbeti}}}{\sqrt{2}} - \frac{\text{tecrübe adedi}}{\text{tecrübe adedi}+2} \times \frac{\left(1 - \dfrac{2 \times \text{mikyâs}^{2} \times \text{inhirâf}^{2}}{\text{tecrübe adedi}}\right)^{\frac{\text{tecrübe adedi}}{2}+1}}{2 \times \text{mikyâs} \times \text{inhirâf}} \\
+&+ \frac{\text{tecrübe adedi}^{2}}{\text{tecrübe adedi}+2} \times \frac{\left(1 - \dfrac{2 \times \text{mikyâs}^{2} \times \text{inhirâf}^{2}}{\text{tecrübe adedi}}\right)^{\frac{\text{tecrübe adedi}}{2}+2}}{\left(\text{tecrübe adedi}+4\right) \times 4 \times \text{mikyâs}^{3} \times \text{inhirâf}^{3}} \\
+&+ \frac{3 \times \text{tecrübe adedi}^{3}}{\text{tecrübe adedi}+2} \times \frac{\left(1 - \dfrac{2 \times \text{mikyâs}^{2} \times \text{inhirâf}^{2}}{\text{tecrübe adedi}}\right)^{\frac{\text{tecrübe adedi}}{2}+3}}{\left(\text{tecrübe adedi}+4\right) \times \left(\text{tecrübe adedi}+6\right) \times 8 \times \text{mikyâs}^{5} \times \text{inhirâf}^{5}} \\
+&+ \frac{3 \times 5 \times \text{tecrübe adedi}^{4}}{\text{tecrübe adedi}+2} \times \frac{\left(1 - \dfrac{2 \times \text{mikyâs}^{2} \times \text{inhirâf}^{2}}{\text{tecrübe adedi}}\right)^{\frac{\text{tecrübe adedi}}{2}+4}}{\left(\text{tecrübe adedi}+4\right) \times \left(\text{tecrübe adedi}+6\right) \times \left(\text{tecrübe adedi}+8\right) \times 16 \times \text{inhirâf}^{7} \times \text{mikyâs}^{7}} - \cdots
+\end{aligned}$$
+
+silsilesinden, herhangi bir sayıda hadde kadar devam ettirilmiş olarak, son haddin önünde müsbet yahut menfî bir işaret bulunmasına göre, büyük yahut küçük olacaktır.
+
+Terkîb emsali × vukû nisbeti kuvvet vukû adedi × adem nisbeti kuvvet adem adedi ifadesinin ve mikyâs × inhirâf − mikyâs³ × inhirâf³ ÷ 3 + (tecrübe adedi − 2) ÷ (2 × tecrübe adedi) × mikyâs⁵ × inhirâf⁵ ÷ 5 ve saire silsilesinin bu kıymetlerini ikinci kaideye koymaktan bir üçüncü kaide doğar; mikyâs × inhirâf ehemmiyetli bir büyüklükte olduğunda kullanılacak kaide budur.
+
+### Üçüncü Kaide
+
+Eğer bir hâdise hakkında, onun vukû adedi ile adem adedinin mecmû'u yahut tecrübe adedi kadar tecrübede vukû adedi kadar defa vukû bulup adem adedi kadar defa vukû bulmamış olmasından başka hiçbir şey bilinmiyorsa, ve bundan, tek bir tecrübede vukû ihtimalinin
+
+$$\frac{\text{vukû adedi}}{\text{tecrübe adedi}} + \text{inhirâf} \qquad\text{ile}\qquad \frac{\text{vukû adedi}}{\text{tecrübe adedi}} - \text{inhirâf}$$
+
+arasında bulunduğuna hükmediyorsam, haklı olmamın tâlii
+
+$$\frac{\sqrt{\text{rub'-ı dâire nisbeti} \times \text{vukû adedi} \times \text{adem adedi}} \times \text{birinci tashîh nisbeti}}{2\sqrt{\text{rub'-ı dâire nisbeti} \times \text{vukû adedi} \times \text{adem adedi}} + \text{birinci tashîh nisbeti} \times \text{tecrübe adedi}^{\frac{1}{2}} + \text{birinci tashîh nisbeti} \times \text{tecrübe adedi}^{-\frac{1}{2}}} \times \left(2 \times \text{ikinci tashîh nisbeti} - \frac{\sqrt{2}}{\sqrt{\text{rub'-ı dâire nisbeti}}} \times \frac{\text{tecrübe adedi}+1}{\text{tecrübe adedi}+2} \times \frac{1}{\text{mikyâs} \times \text{inhirâf}} \times \left(1 - \frac{2 \times \text{mikyâs}^{2} \times \text{inhirâf}^{2}}{\text{tecrübe adedi}}\right)^{\frac{\text{tecrübe adedi}}{2}+1}\right)$$
+
+ifadesinden *büyük*, ve
+
+$$\frac{\sqrt{\text{rub'-ı dâire nisbeti} \times \text{vukû adedi} \times \text{adem adedi}} \times \text{birinci tashîh nisbeti}}{2\sqrt{\text{rub'-ı dâire nisbeti} \times \text{vukû adedi} \times \text{adem adedi}} - \text{birinci tashîh nisbeti} \times \text{tecrübe adedi}^{\frac{1}{2}} - \text{birinci tashîh nisbeti} \times \text{tecrübe adedi}^{-\frac{1}{2}}}$$
+
+ifadesinin şu üç hadle zarb edilmişinden *küçük*tür:
+
+$$2 \times \text{ikinci tashîh nisbeti} - \frac{\sqrt{2}}{\sqrt{\text{rub'-ı dâire nisbeti}}} \times \frac{\text{tecrübe adedi}+1}{\text{tecrübe adedi}+2} \times \frac{1}{\text{mikyâs} \times \text{inhirâf}} \times \left(1 - \frac{2 \times \text{mikyâs}^{2} \times \text{inhirâf}^{2}}{\text{tecrübe adedi}}\right)^{\frac{\text{tecrübe adedi}}{2}+1} + \frac{\sqrt{2}}{\sqrt{\text{rub'-ı dâire nisbeti}}} \times \frac{\text{tecrübe adedi}}{\text{tecrübe adedi}+2} \times \frac{\text{tecrübe adedi}+1}{\text{tecrübe adedi}+4} \times \frac{1}{2 \times \text{mikyâs}^{3} \times \text{inhirâf}^{3}} \times \left(1 - \frac{2 \times \text{mikyâs}^{2} \times \text{inhirâf}^{2}}{\text{tecrübe adedi}}\right)^{\frac{\text{tecrübe adedi}}{2}+2}$$
+
+burada mikyâsın murabbaı, rub'-ı dâire nisbeti, birinci tashîh nisbeti ve ikinci tashîh nisbeti evvelce izah edilen kemmiyetleri gösterir.
+
 <!-- DEVAM -->
