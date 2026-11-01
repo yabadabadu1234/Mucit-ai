@@ -14,6 +14,7 @@ Bu defter, iş kesilirse kaldığı yerden devam edebilmek için tutulur. Her c�
 - Her cüz bitince tercüme iş parçacığına haber verilir. Birinci cüz koordinatöre bildirilir; tercüme iş parçacığını o açacaktır.
 - Her cüz ayrı commit edilir.
 - Kullanıcının 1 Kasım 2026 tarihli emri: "Telifli telifsiz fark etmez, en şaheseri neyse onlar tercüme edilecek." Buna göre her cüzün sonunda, telif hâline bakılmaksızın, eserlerin şaheserlik sırası verilir. Telif hâli yine her eserde kaydedilir, çünkü Tercüme iş parçacığı birebir tercüme ile şerh arasındaki seçimi ona göre yapar.
+- Kullanıcının 1 Kasım 2026 saat 23.15 tarihli cevabı: "İznim var." Bu, Cannon'un The Wisdom of the Body eserinin (karışık) tercümesine izindir; Tercüme iş parçacığına iletildi. Diğer karışık eserleri kapsayıp kapsamadığı kullanıcıya soruldu.
 - Kullanıcının aynı tarihli ikinci emri (Tercüme iş parçacığına): "Evvelâ birebir tercüme etsin, üzerine şerhini sonradan koysun ki metin kaybı yaşanmasın." 
 
 ## Çalışma yeri
