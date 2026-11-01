@@ -2,7 +2,7 @@
 
 Bu sahife `araclar/msc_birlestir.py` ile `kaynak.tsv` ve `ceviri/` dosyalarından üretilir; elle değiştirilmez.
 
-Toplam madde: 6603 · karşılığı bulunan: 6096 · kalan: 507
+Toplam madde: 6603 · karşılığı bulunan: 6165 · kalan: 438
 
 
 ## 00-XX — Umûmî ve şâmil mevzûlar; mecmualar
@@ -6406,81 +6406,81 @@ Geophysics [See also 76U05, 76V05]
 | 86A70 | Vulcanology; magma and lava flow | Volkanlar ilmi; magma ve lâv seyelânı |  |
 | 86A99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
-## 90-XX — Operations research, mathematical programming
+## 90-XX — Ameliyat araştırması (harekât tetkiki), riyâzî programlama
 
 Operations research, mathematical programming
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 90-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to operations research and mathematical programming |  |  |
-| 90-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to operations research and mathematical programming |  |  |
-| 90-02 | Research exposition (monographs, survey articles) pertaining to operations research and mathematical programming |  |  |
-| 90-03 | History of operations research and mathematical programming [Consider also classification numbers from Section 01] |  |  |
-| 90-04 | Software, source code, etc. for problems pertaining to operations research and mathematical programming |  |  |
-| 90-05 | Experimental work for problems pertaining to operations research and mathematical programming |  |  |
-| 90-06 | Proceedings, conferences, collections, etc. pertaining to operations research and mathematical programming |  |  |
-| 90-08 | Computational methods for problems pertaining to operations research and mathematical programming |  |  |
-| 90-10 | Mathematical modeling or simulation for problems pertaining to operations research and mathematical programming |  |  |
-| 90-11 | Research data for problems pertaining to operations research and mathematical programming |  |  |
-| **90Bxx** | **Operations research and management science** | **** |  |
-| 90B05 | Inventory, storage, reservoirs |  |  |
-| 90B06 | Transportation, logistics and supply chain management |  |  |
-| 90B10 | Deterministic network models in operations research {For network control, see 93B70} |  |  |
-| 90B15 | Stochastic network models in operations research {For network control, see 93B70} |  |  |
-| 90B18 | Communication networks in operations research [See also 68M10, 68M12, 68M18, 94A05] {For networks as computational models, see 68Q06} |  |  |
-| 90B20 | Traffic problems in operations research |  |  |
-| 90B22 | Queues and service in operations research [See also 60K25, 68M20] |  |  |
-| 90B25 | Reliability, availability, maintenance, inspection in operations research [See also 60K10, 62N05] |  |  |
-| 90B30 | Production models |  |  |
-| 90B35 | Deterministic scheduling theory in operations research [See also 68M20] |  |  |
-| 90B36 | Stochastic scheduling theory in operations research [See also 68M20] |  |  |
-| 90B40 | Search theory |  |  |
-| 90B50 | Management decision making, including multiple objectives [See also 90C29, 90C31, 91A35, 91B06] |  |  |
-| 90B60 | Marketing, advertising [See also 91B60] |  |  |
-| 90B70 | Theory of organizations, manpower planning in operations research [See also 91D35] |  |  |
-| 90B80 | Discrete location and assignment [See also 90C10] |  |  |
-| 90B85 | Continuous location |  |  |
-| 90B90 | Case-oriented studies in operations research |  |  |
+| 90-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to operations research and mathematical programming | Ameliyat araştırması ve riyâzî programlama hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 90-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to operations research and mathematical programming | Ameliyat araştırması ve riyâzî programlama hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 90-02 | Research exposition (monographs, survey articles) pertaining to operations research and mathematical programming | Ameliyat araştırması ve riyâzî programlama hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 90-03 | History of operations research and mathematical programming [Consider also classification numbers from Section 01] | Ameliyat araştırmasının ve riyâzî programlamanın târihi [01. babın tasnif numaralarına da bakılsın] |  |
+| 90-04 | Software, source code, etc. for problems pertaining to operations research and mathematical programming | Ameliyat araştırması ve riyâzî programlama sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 90-05 | Experimental work for problems pertaining to operations research and mathematical programming | Ameliyat araştırması ve riyâzî programlama sahasındaki meselelere dair tecrübî çalışmalar |  |
+| 90-06 | Proceedings, conferences, collections, etc. pertaining to operations research and mathematical programming | Ameliyat araştırması ve riyâzî programlama hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 90-08 | Computational methods for problems pertaining to operations research and mathematical programming | Ameliyat araştırması ve riyâzî programlama sahasındaki meselelere dair hesap usulleri |  |
+| 90-10 | Mathematical modeling or simulation for problems pertaining to operations research and mathematical programming | Ameliyat araştırması ve riyâzî programlama sahasındaki meselelere dair riyâzî numûne kurma (temsil) yahut taklit (benzetim) |  |
+| 90-11 | Research data for problems pertaining to operations research and mathematical programming | Ameliyat araştırması ve riyâzî programlama sahasındaki meselelere dair tetkik verileri |  |
+| **90Bxx** | **Operations research and management science** | **Ameliyat araştırması ve idâre ilmi** |  |
+| 90B05 | Inventory, storage, reservoirs | Mevcûdât (stok), depolama, hazneler |  |
+| 90B06 | Transportation, logistics and supply chain management | Nakliyat, levâzımât ve tedârik zinciri idâresi |  |
+| 90B10 | Deterministic network models in operations research {For network control, see 93B70} | Ameliyat araştırmasında muayyen (gayr-ı tesâdüfî) şebeke numûneleri {Şebeke idâresi için bakınız: 93B70} |  |
+| 90B15 | Stochastic network models in operations research {For network control, see 93B70} | Ameliyat araştırmasında ihtimâlî şebeke numûneleri {Şebeke idâresi için bakınız: 93B70} |  |
+| 90B18 | Communication networks in operations research [See also 68M10, 68M12, 68M18, 94A05] {For networks as computational models, see 68Q06} | Ameliyat araştırmasında muhâbere şebekeleri [Ayrıca bakınız: 68M10, 68M12, 68M18, 94A05] {Hesap numûnesi olarak şebekeler için bakınız: 68Q06} |  |
+| 90B20 | Traffic problems in operations research | Ameliyat araştırmasında nakliyat (trafik) meseleleri |  |
+| 90B22 | Queues and service in operations research [See also 60K25, 68M20] | Ameliyat araştırmasında sıra bekleme (kuyruk) ve hizmet [Ayrıca bakınız: 60K25, 68M20] |  |
+| 90B25 | Reliability, availability, maintenance, inspection in operations research [See also 60K10, 62N05] | Ameliyat araştırmasında itimâd edilirlik, hazır bulunuşluk, bakım, muayene [Ayrıca bakınız: 60K10, 62N05] |  |
+| 90B30 | Production models | İstihsal numûneleri |  |
+| 90B35 | Deterministic scheduling theory in operations research [See also 68M20] | Ameliyat araştırmasında muayyen zaman tertibi nazariyesi [Ayrıca bakınız: 68M20] |  |
+| 90B36 | Stochastic scheduling theory in operations research [See also 68M20] | Ameliyat araştırmasında ihtimâlî zaman tertibi nazariyesi [Ayrıca bakınız: 68M20] |  |
+| 90B40 | Search theory | Arama nazariyesi |  |
+| 90B50 | Management decision making, including multiple objectives [See also 90C29, 90C31, 91A35, 91B06] | İdârî karar verme, çok gayeli olanlar dahil [Ayrıca bakınız: 90C29, 90C31, 91A35, 91B06] |  |
+| 90B60 | Marketing, advertising [See also 91B60] | Pazarlama, ilân ve reklam [Ayrıca bakınız: 91B60] |  |
+| 90B70 | Theory of organizations, manpower planning in operations research [See also 91D35] | Ameliyat araştırmasında teşkilât nazariyesi, insan kuvveti tanzîmi [Ayrıca bakınız: 91D35] |  |
+| 90B80 | Discrete location and assignment [See also 90C10] | Munfasıl mevki' tayini ve tahsîs [Ayrıca bakınız: 90C10] |  |
+| 90B85 | Continuous location | Muttasıl mevki' tayini |  |
+| 90B90 | Case-oriented studies in operations research | Ameliyat araştırmasında vak'aya mahsus tetkikler |  |
 | 90B99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **90Cxx** | **Mathematical programming {For numerical methods, see also 49Mxx, 65Kxx}** | **** |  |
-| 90C05 | Linear programming |  |  |
-| 90C06 | Large-scale problems in mathematical programming |  |  |
-| 90C08 | Special problems of linear programming (transportation, multi-index, data envelopment analysis, etc.) |  |  |
-| 90C09 | Boolean programming |  |  |
-| 90C10 | Integer programming |  |  |
-| 90C11 | Mixed integer programming |  |  |
-| 90C15 | Stochastic programming |  |  |
-| 90C17 | Robustness in mathematical programming |  |  |
-| 90C20 | Quadratic programming |  |  |
-| 90C22 | Semidefinite programming |  |  |
-| 90C23 | Polynomial optimization |  |  |
-| 90C24 | Tropical optimization (e.g., max-plus optimization) |  |  |
-| 90C25 | Convex programming |  |  |
-| 90C26 | Nonconvex programming, global optimization |  |  |
-| 90C27 | Combinatorial optimization |  |  |
-| 90C29 | Multi-objective and goal programming |  |  |
-| 90C30 | Nonlinear programming |  |  |
-| 90C31 | Sensitivity, stability, parametric optimization |  |  |
-| 90C32 | Fractional programming |  |  |
-| 90C33 | Complementarity and equilibrium problems and variational inequalities (finite dimensions) (aspects of mathematical programming) |  |  |
-| 90C34 | Semi-infinite programming |  |  |
-| 90C35 | Programming involving graphs or networks [See also 05C90, 90C27] |  |  |
-| 90C39 | Dynamic programming [See also 49L20] |  |  |
-| 90C40 | Markov and semi-Markov decision processes |  |  |
-| 90C46 | Optimality conditions and duality in mathematical programming [See also 49N15] |  |  |
-| 90C47 | Minimax problems in mathematical programming [See also 49K35] |  |  |
-| 90C48 | Programming in abstract spaces |  |  |
-| 90C49 | Extreme-point and pivoting methods |  |  |
-| 90C51 | Interior-point methods |  |  |
-| 90C52 | Methods of reduced gradient type |  |  |
-| 90C53 | Methods of quasi-Newton type |  |  |
-| 90C55 | Methods of successive quadratic programming type |  |  |
-| 90C56 | Derivative-free methods and methods using generalized derivatives [See also 49J52] |  |  |
-| 90C57 | Polyhedral combinatorics, branch-and-bound, branch-and-cut |  |  |
-| 90C59 | Approximation methods and heuristics in mathematical programming |  |  |
-| 90C60 | Abstract computational complexity for mathematical programming problems [See also 68Q25] |  |  |
-| 90C70 | Fuzzy and other nonstochastic uncertainty mathematical programming |  |  |
-| 90C90 | Applications of mathematical programming |  |  |
+| **90Cxx** | **Mathematical programming {For numerical methods, see also 49Mxx, 65Kxx}** | **Riyâzî programlama {Adedî usuller için ayrıca bakınız: 49Mxx, 65Kxx}** |  |
+| 90C05 | Linear programming | Hattî programlama |  |
+| 90C06 | Large-scale problems in mathematical programming | Riyâzî programlamada büyük mikyâslı meseleler |  |
+| 90C08 | Special problems of linear programming (transportation, multi-index, data envelopment analysis, etc.) | Hattî programlamanın hususî meseleleri (nakliyat, çok indisli, veri zarflama tahlîli ve emsâli) |  |
+| 90C09 | Boolean programming | Boole programlaması | nakil |
+| 90C10 | Integer programming | Tam adetli programlama |  |
+| 90C11 | Mixed integer programming | Karışık tam adetli programlama |  |
+| 90C15 | Stochastic programming | İhtimâlî programlama |  |
+| 90C17 | Robustness in mathematical programming | Riyâzî programlamada metânet (sağlamlık) |  |
+| 90C20 | Quadratic programming | Murabba'î programlama |  |
+| 90C22 | Semidefinite programming | Nîm-muayyen programlama |  |
+| 90C23 | Polynomial optimization | Kesîrü'l-hudûdlu ahseniyet |  |
+| 90C24 | Tropical optimization (e.g., max-plus optimization) | Tropikal ahseniyet (meselâ azamî-cem' ahseniyeti) |  |
+| 90C25 | Convex programming | Muhaddeb programlama |  |
+| 90C26 | Nonconvex programming, global optimization | Gayr-ı muhaddeb programlama, küllî ahseniyet |  |
+| 90C27 | Combinatorial optimization | Terkîbî ahseniyet |  |
+| 90C29 | Multi-objective and goal programming | Çok gayeli ve hedef programlaması |  |
+| 90C30 | Nonlinear programming | Gayr-ı hattî programlama |  |
+| 90C31 | Sensitivity, stability, parametric optimization | Hassâsiyet, istikrar, vasîtlı ahseniyet |  |
+| 90C32 | Fractional programming | Kesrî programlama |  |
+| 90C33 | Complementarity and equilibrium problems and variational inequalities (finite dimensions) (aspects of mathematical programming) | Mütemmimlik ve muvâzene meseleleri ile tehavvülî adem-i müsâvâtlar (mütenâhî buudlarda) (riyâzî programlamaya ait cihetler) |  |
+| 90C34 | Semi-infinite programming | Nîm-gayr-ı mütenâhî programlama |  |
+| 90C35 | Programming involving graphs or networks [See also 05C90, 90C27] | Rabıta şekillerini yahut şebekeleri ihtivâ eden programlama [Ayrıca bakınız: 05C90, 90C27] |  |
+| 90C39 | Dynamic programming [See also 49L20] | Harekî programlama [Ayrıca bakınız: 49L20] |  |
+| 90C40 | Markov and semi-Markov decision processes | Markov ve nîm-Markov karar cereyanları | nakil |
+| 90C46 | Optimality conditions and duality in mathematical programming [See also 49N15] | Riyâzî programlamada ahseniyet şartları ve müsennâlık (düalite) [Ayrıca bakınız: 49N15] |  |
+| 90C47 | Minimax problems in mathematical programming [See also 49K35] | Riyâzî programlamada asgarî-azamî (minimaks) meseleleri [Ayrıca bakınız: 49K35] |  |
+| 90C48 | Programming in abstract spaces | Mücerred fezâlarda programlama |  |
+| 90C49 | Extreme-point and pivoting methods | Uç nokta ve mihver (pivot) usulleri |  |
+| 90C51 | Interior-point methods | Dâhilî nokta usulleri |  |
+| 90C52 | Methods of reduced gradient type | İndirgenmiş meyil tarzındaki usuller |  |
+| 90C53 | Methods of quasi-Newton type | Şibh-i Newton tarzındaki usuller | nakil |
+| 90C55 | Methods of successive quadratic programming type | Ardışık murabba'î programlama tarzındaki usuller |  |
+| 90C56 | Derivative-free methods and methods using generalized derivatives [See also 49J52] | Müştaksız usuller ve umûmîleştirilmiş müştaklar kullanan usuller [Ayrıca bakınız: 49J52] |  |
+| 90C57 | Polyhedral combinatorics, branch-and-bound, branch-and-cut | Kesîrü'l-vücûhî terkîbât, dallandır ve sınırla, dallandır ve kes usulleri |  |
+| 90C59 | Approximation methods and heuristics in mathematical programming | Riyâzî programlamada takrîb usulleri ve tecrübî kestirmeler |  |
+| 90C60 | Abstract computational complexity for mathematical programming problems [See also 68Q25] | Riyâzî programlama meseleleri için mücerred hesap mürekkebiyeti [Ayrıca bakınız: 68Q25] |  |
+| 90C70 | Fuzzy and other nonstochastic uncertainty mathematical programming | Riyâzî programlamada mübhem (bulanık) ve sâir gayr-ı ihtimâlî belirsizlik |  |
+| 90C90 | Applications of mathematical programming | Riyâzî programlamanın tatbîkleri |  |
 | 90C99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
 ## 91-XX — Game theory, economics, finance, and other social and behavioral sciences
