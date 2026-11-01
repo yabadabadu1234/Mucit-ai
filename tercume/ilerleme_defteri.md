@@ -190,7 +190,7 @@ Telifli yahut karışık (yalnız kayıt): Ruh hastalıklarının teşhis ve ist
 
 ## Devir notu (1 Kasım 2026)
 
-Bu iş parçacığı, ayarı olmayan yerleşik muhitte (env_011111111111111111111119) çalıştığı için archive.org, gutenberg.org ve wikisource.org adreslerine erişemedi ("CONNECT tunnel failed, response 403"). Kullanıcının tam izinli muhiti "Benim Ortam"dır (env_01ViAcKYcs6eeuwaSbmf3C88). Proje bu muhite bağlanınca tercüme yeni bir iş parçacığında devam edecektir. Devralan iş parçacığı bu defteri baştan sona okuyup "Kaldığı yer" kısmından başlamalıdır.
+Bu iş parçacığı, ayarı olmayan yerleşik muhitte (env_011111111111111111111119) çalıştığı için archive.org, gutenberg.org ve wikisource.org adreslerine erişemedi ("CONNECT tunnel failed, response 403"). Kullanıcının tam izinli muhiti "Benim Ortam"dır (env_01ViAcKYcs6eeuwaSbmf3C88). Proje bu muhite bağlanınca tercüme yeni bir iş parçacığında devam edecektir. Devir 1 Kasım 2026'da yapıldı: iş, tam izinli muhitte açılan yeni iş parçacığına (cmsg_01A3eskXyY6uU4cdnPk3Varu2wwmz2oMofb9YC5P1xtmaj) devredildi; bu iş parçacığı durdu. Devralan iş parçacığı bu defteri baştan sona okuyup "Kaldığı yer" kısmından başlamalıdır.
 
 ## Kaldığı yer
 
