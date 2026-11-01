@@ -2,7 +2,7 @@
 
 Bu sahife `araclar/msc_birlestir.py` ile `kaynak.tsv` ve `ceviri/` dosyalarından üretilir; elle değiştirilmez.
 
-Toplam madde: 6603 · karşılığı bulunan: 3519 · kalan: 3084
+Toplam madde: 6603 · karşılığı bulunan: 3621 · kalan: 2982
 
 
 ## 00-XX — Umûmî ve şâmil mevzûlar; mecmualar
@@ -3415,129 +3415,129 @@ Approximations and expansions {For approximation theory in the complex domain, s
 | 41A81 | Weighted approximation | Ağırlıklı takrîb |  |
 | 41A99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
-## 42-XX — Harmonic analysis on Euclidean spaces
+## 42-XX — Öklid fezâlarında te'lîfî tahlîl (harmonik analiz)
 
 Harmonic analysis on Euclidean spaces
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 42-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to harmonic analysis on Euclidean spaces |  |  |
-| 42-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to harmonic analysis on Euclidean spaces |  |  |
-| 42-02 | Research exposition (monographs, survey articles) pertaining to harmonic analysis on Euclidean spaces |  |  |
-| 42-03 | History of harmonic analysis on Euclidean spaces [Consider also classification numbers from Section 01] |  |  |
-| 42-04 | Software, source code, etc. for problems pertaining to harmonic analysis on Euclidean spaces |  |  |
-| 42-06 | Proceedings, conferences, collections, etc. pertaining to harmonic analysis on Euclidean spaces |  |  |
-| 42-08 | Computational methods for problems pertaining to harmonic analysis on Euclidean spaces |  |  |
-| 42-11 | Research data for problems pertaining to harmonic analysis on Euclidean spaces |  |  |
-| **42Axx** | **Harmonic analysis in one variable** | **** |  |
-| 42A05 | Trigonometric polynomials, inequalities, extremal problems |  |  |
-| 42A10 | Trigonometric approximation |  |  |
-| 42A15 | Trigonometric interpolation |  |  |
-| 42A16 | Fourier coefficients, Fourier series of functions with special properties, special Fourier series {For automorphic theory, see mainly 11F30} |  |  |
-| 42A20 | Convergence and absolute convergence of Fourier and trigonometric series |  |  |
-| 42A24 | Summability and absolute summability of Fourier and trigonometric series |  |  |
-| 42A32 | Trigonometric series of special types (positive coefficients, monotonic coefficients, etc.) |  |  |
-| 42A38 | Fourier and Fourier-Stieltjes transforms and other transforms of Fourier type |  |  |
-| 42A45 | Multipliers in one variable harmonic analysis |  |  |
-| 42A50 | Conjugate functions, conjugate series, singular integrals |  |  |
-| 42A55 | Lacunary series of trigonometric and other functions; Riesz products |  |  |
-| 42A61 | Probabilistic methods for one variable harmonic analysis |  |  |
-| 42A63 | Uniqueness of trigonometric expansions, uniqueness of Fourier expansions, Riemann theory, localization |  |  |
-| 42A65 | Completeness of sets of functions in one variable harmonic analysis |  |  |
-| 42A70 | Trigonometric moment problems in one variable harmonic analysis |  |  |
-| 42A75 | Classical almost periodic functions, mean periodic functions [See also 43A60] |  |  |
-| 42A82 | Positive definite functions in one variable harmonic analysis |  |  |
-| 42A85 | Convolution, factorization for one variable harmonic analysis |  |  |
+| 42-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to harmonic analysis on Euclidean spaces | Öklid fezâlarında te'lîfî tahlîl hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 42-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to harmonic analysis on Euclidean spaces | Öklid fezâlarında te'lîfî tahlîl hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 42-02 | Research exposition (monographs, survey articles) pertaining to harmonic analysis on Euclidean spaces | Öklid fezâlarında te'lîfî tahlîl hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 42-03 | History of harmonic analysis on Euclidean spaces [Consider also classification numbers from Section 01] | Öklid fezâlarında te'lîfî tahlîlin târihi [01. babın tasnif numaralarına da bakılsın] |  |
+| 42-04 | Software, source code, etc. for problems pertaining to harmonic analysis on Euclidean spaces | Öklid fezâlarında te'lîfî tahlîl sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 42-06 | Proceedings, conferences, collections, etc. pertaining to harmonic analysis on Euclidean spaces | Öklid fezâlarında te'lîfî tahlîl hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 42-08 | Computational methods for problems pertaining to harmonic analysis on Euclidean spaces | Öklid fezâlarında te'lîfî tahlîl sahasındaki meselelere dair hesap usulleri |  |
+| 42-11 | Research data for problems pertaining to harmonic analysis on Euclidean spaces | Öklid fezâlarında te'lîfî tahlîl sahasındaki meselelere dair tetkik verileri |  |
+| **42Axx** | **Harmonic analysis in one variable** | **Tek mütehavvilde te'lîfî tahlîl** |  |
+| 42A05 | Trigonometric polynomials, inequalities, extremal problems | Müsellesâtî kesîrü'l-hudûdlar, adem-i müsâvâtlar, nihâyetî meseleler |  |
+| 42A10 | Trigonometric approximation | Müsellesâtî takrîb |  |
+| 42A15 | Trigonometric interpolation | Müsellesâtî dâhilî tahmîn (enterpolasyon) |  |
+| 42A16 | Fourier coefficients, Fourier series of functions with special properties, special Fourier series {For automorphic theory, see mainly 11F30} | Fourier emsali, hususî vasıflı tâbilerin Fourier silsileleri, hususî Fourier silsileleri {Zâtî-şekilli nazariye için bilhassa bakınız: 11F30} | nakil |
+| 42A20 | Convergence and absolute convergence of Fourier and trigonometric series | Fourier silsilelerinin ve müsellesâtî silsilelerin tekārübü ve mutlak tekārübü | nakil |
+| 42A24 | Summability and absolute summability of Fourier and trigonometric series | Fourier silsilelerinin ve müsellesâtî silsilelerin cem' kābiliyeti ve mutlak cem' kābiliyeti | nakil |
+| 42A32 | Trigonometric series of special types (positive coefficients, monotonic coefficients, etc.) | Hususî nev'den müsellesâtî silsileler (müsbet emsalli, yeknesak-tegayyürlü emsalli ve emsâli) |  |
+| 42A38 | Fourier and Fourier-Stieltjes transforms and other transforms of Fourier type | Fourier ve Fourier-Stieltjes tahvîlleri ve Fourier nev'inden sâir tahvîller | nakil |
+| 42A45 | Multipliers in one variable harmonic analysis | Tek mütehavvilli te'lîfî tahlîlde mazrûblar (çarpanlar) |  |
+| 42A50 | Conjugate functions, conjugate series, singular integrals | Mezdûc tâbiler, mezdûc silsileler, münferid tamâmîler |  |
+| 42A55 | Lacunary series of trigonometric and other functions; Riesz products | Müsellesâtî ve sâir tâbilerin boşluklu silsileleri; Riesz hâsıl-ı zarbları | nakil |
+| 42A61 | Probabilistic methods for one variable harmonic analysis | Tek mütehavvilli te'lîfî tahlîl için ihtimâlî usuller |  |
+| 42A63 | Uniqueness of trigonometric expansions, uniqueness of Fourier expansions, Riemann theory, localization | Müsellesâtî açılımların vahdeti, Fourier açılımlarının vahdeti, Riemann nazariyesi, mahallîleştirme | nakil |
+| 42A65 | Completeness of sets of functions in one variable harmonic analysis | Tek mütehavvilli te'lîfî tahlîlde tâbi mecmûalarının tamamiyeti |  |
+| 42A70 | Trigonometric moment problems in one variable harmonic analysis | Tek mütehavvilli te'lîfî tahlîlde müsellesâtî lahza (moment) meseleleri |  |
+| 42A75 | Classical almost periodic functions, mean periodic functions [See also 43A60] | Klasik takrîben devrî tâbiler, vasatça devrî tâbiler [Ayrıca bakınız: 43A60] |  |
+| 42A82 | Positive definite functions in one variable harmonic analysis | Tek mütehavvilli te'lîfî tahlîlde müsbet muayyen tâbiler |  |
+| 42A85 | Convolution, factorization for one variable harmonic analysis | Tek mütehavvilli te'lîfî tahlîl için iltifâf (konvolüsyon), tahlîl-i mazrûbât (çarpanlara ayırma) | şüpheli: "convolution" için "iltifâf" (dolanma) teklif edildi |
 | 42A99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **42Bxx** | **Harmonic analysis in several variables {For automorphic theory, see mainly 11F30}** | **** |  |
-| 42B05 | Fourier series and coefficients in several variables |  |  |
-| 42B08 | Summability in several variables |  |  |
-| 42B10 | Fourier and Fourier-Stieltjes transforms and other transforms of Fourier type |  |  |
-| 42B15 | Multipliers for harmonic analysis in several variables |  |  |
-| 42B20 | Singular and oscillatory integrals (Calderón-Zygmund, etc.) |  |  |
-| 42B25 | Maximal functions, Littlewood-Paley theory |  |  |
-| 42B30 | H p -spaces |  |  |
-| 42B35 | Function spaces arising in harmonic analysis |  |  |
-| 42B37 | Harmonic analysis and PDEs [See also 35-XX] |  |  |
+| **42Bxx** | **Harmonic analysis in several variables {For automorphic theory, see mainly 11F30}** | **Çok mütehavvilde te'lîfî tahlîl {Zâtî-şekilli nazariye için bilhassa bakınız: 11F30}** |  |
+| 42B05 | Fourier series and coefficients in several variables | Çok mütehavvilde Fourier silsileleri ve emsali | nakil |
+| 42B08 | Summability in several variables | Çok mütehavvilde cem' kābiliyeti |  |
+| 42B10 | Fourier and Fourier-Stieltjes transforms and other transforms of Fourier type | Fourier ve Fourier-Stieltjes tahvîlleri ve Fourier nev'inden sâir tahvîller | nakil |
+| 42B15 | Multipliers for harmonic analysis in several variables | Çok mütehavvilli te'lîfî tahlîl için mazrûblar |  |
+| 42B20 | Singular and oscillatory integrals (Calderón-Zygmund, etc.) | Münferid ve ihtizâzlı tamâmîler (Calderón-Zygmund ve emsâli) | nakil |
+| 42B25 | Maximal functions, Littlewood-Paley theory | Azamî tâbiler, Littlewood-Paley nazariyesi | nakil |
+| 42B30 | H p -spaces | H^p fezâları (Hardy fezâları) | nakil |
+| 42B35 | Function spaces arising in harmonic analysis | Te'lîfî tahlîlde zuhûr eden tâbi fezâları |  |
+| 42B37 | Harmonic analysis and PDEs [See also 35-XX] | Te'lîfî tahlîl ve kısmî tefâzulî muâdeleler [Ayrıca bakınız: 35-XX] |  |
 | 42B99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **42Cxx** | **Nontrigonometric harmonic analysis** | **** |  |
-| 42C05 | Orthogonal functions and polynomials, general theory of nontrigonometric harmonic analysis [See also 33C45, 33C50, 33D45] |  |  |
-| 42C10 | Fourier series in special orthogonal functions (Legendre polynomials, Walsh functions, etc.) |  |  |
-| 42C15 | General harmonic expansions, frames |  |  |
-| 42C20 | Other transformations of harmonic type |  |  |
-| 42C25 | Uniqueness and localization for orthogonal series |  |  |
-| 42C30 | Completeness of sets of functions in nontrigonometric harmonic analysis |  |  |
-| 42C40 | Nontrigonometric harmonic analysis involving wavelets and other special systems |  |  |
+| **42Cxx** | **Nontrigonometric harmonic analysis** | **Müsellesâtî olmayan te'lîfî tahlîl** |  |
+| 42C05 | Orthogonal functions and polynomials, general theory of nontrigonometric harmonic analysis [See also 33C45, 33C50, 33D45] | Amûdî tâbiler ve kesîrü'l-hudûdlar, müsellesâtî olmayan te'lîfî tahlîlin umûmî nazariyesi [Ayrıca bakınız: 33C45, 33C50, 33D45] |  |
+| 42C10 | Fourier series in special orthogonal functions (Legendre polynomials, Walsh functions, etc.) | Hususî amûdî tâbilere göre Fourier silsileleri (Legendre kesîrü'l-hudûdları, Walsh tâbileri ve emsâli) | nakil |
+| 42C15 | General harmonic expansions, frames | Umûmî te'lîfî açılımlar, çerçeveler |  |
+| 42C20 | Other transformations of harmonic type | Te'lîfî nev'den sâir tahvîller |  |
+| 42C25 | Uniqueness and localization for orthogonal series | Amûdî silsileler için vahdet ve mahallîleştirme |  |
+| 42C30 | Completeness of sets of functions in nontrigonometric harmonic analysis | Müsellesâtî olmayan te'lîfî tahlîlde tâbi mecmûalarının tamamiyeti |  |
+| 42C40 | Nontrigonometric harmonic analysis involving wavelets and other special systems | Mevcecikleri (dalgacıkları) ve sâir hususî nizâmları ihtivâ eden müsellesâtî olmayan te'lîfî tahlîl | şüpheli: "wavelet" için "mevcecik" teklif edildi |
 | 42C99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
-## 43-XX — Abstract harmonic analysis {For other analysis on topological and Lie groups, see 22Exx}
+## 43-XX — Mücerred te'lîfî tahlîl {Vaz'î zümreler ve Lie zümreleri üzerindeki sâir tahlîl için bakınız: 22Exx}
 
 Abstract harmonic analysis {For other analysis on topological and Lie groups, see 22Exx}
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 43-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to abstract harmonic analysis |  |  |
-| 43-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to abstract harmonic analysis |  |  |
-| 43-02 | Research exposition (monographs, survey articles) pertaining to abstract harmonic analysis |  |  |
-| 43-03 | History of abstract harmonic analysis [Consider also classification numbers from Section 01] |  |  |
-| 43-04 | Software, source code, etc. for problems pertaining to abstract harmonic analysis |  |  |
-| 43-06 | Proceedings, conferences, collections, etc. pertaining to abstract harmonic analysis |  |  |
-| 43-08 | Computational methods for problems pertaining to abstract harmonic analysis |  |  |
-| 43-11 | Research data for problems pertaining to abstract harmonic analysis |  |  |
-| **43Axx** | **Abstract harmonic analysis {For other analysis on topological and Lie groups, see 22Exx}** | **** |  |
-| 43A05 | Measures on groups and semigroups, etc. |  |  |
-| 43A07 | Means on groups, semigroups, etc.; amenable groups |  |  |
-| 43A10 | Measure algebras on groups, semigroups, etc. |  |  |
-| 43A15 | Lp -spaces and other function spaces on groups, semigroups, etc. |  |  |
-| 43A17 | Analysis on ordered groups, H p -theory |  |  |
-| 43A20 | L1 -algebras on groups, semigroups, etc. |  |  |
-| 43A22 | Homomorphisms and multipliers of function spaces on groups, semigroups, etc. |  |  |
-| 43A25 | Fourier and Fourier-Stieltjes transforms on locally compact and other abelian groups |  |  |
-| 43A30 | Fourier and Fourier-Stieltjes transforms on nonabelian groups and on semigroups, etc. |  |  |
-| 43A32 | Other transforms and operators of Fourier type |  |  |
-| 43A35 | Positive definite functions on groups, semigroups, etc. |  |  |
-| 43A40 | Character groups and dual objects |  |  |
-| 43A45 | Spectral synthesis on groups, semigroups, etc. |  |  |
-| 43A46 | Special sets (thin sets, Kronecker sets, Helson sets, Ditkin sets, Sidon sets, etc.) |  |  |
-| 43A50 | Convergence of Fourier series and of inverse transforms |  |  |
-| 43A55 | Summability methods on groups, semigroups, etc. [See also 40J05] |  |  |
-| 43A60 | Almost periodic functions on groups and semigroups and their generalizations (recurrent functions, distal functions, etc.); almost automorphic functions |  |  |
-| 43A62 | Harmonic analysis on hypergroups |  |  |
-| 43A65 | Representations of groups, semigroups, etc. (aspects of abstract harmonic analysis) [See also 22A10, 22A20, 22Dxx, 22E45] |  |  |
-| 43A70 | Analysis on specific locally compact and other abelian groups [See also 11R56, 22B05] |  |  |
-| 43A75 | Harmonic analysis on specific compact groups |  |  |
-| 43A77 | Harmonic analysis on general compact groups |  |  |
-| 43A80 | Analysis on other specific Lie groups [See also 22Exx] |  |  |
-| 43A85 | Harmonic analysis on homogeneous spaces |  |  |
-| 43A90 | Harmonic analysis and spherical functions [See also 22E45, 22E46, 33C55] |  |  |
-| 43A95 | Categorical methods for abstract harmonic analysis [See also 46Mxx] |  |  |
+| 43-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to abstract harmonic analysis | mücerred te'lîfî tahlîl hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 43-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to abstract harmonic analysis | mücerred te'lîfî tahlîl hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 43-02 | Research exposition (monographs, survey articles) pertaining to abstract harmonic analysis | mücerred te'lîfî tahlîl hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 43-03 | History of abstract harmonic analysis [Consider also classification numbers from Section 01] | Mücerred te'lîfî tahlîlin târihi [01. babın tasnif numaralarına da bakılsın] |  |
+| 43-04 | Software, source code, etc. for problems pertaining to abstract harmonic analysis | mücerred te'lîfî tahlîl sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 43-06 | Proceedings, conferences, collections, etc. pertaining to abstract harmonic analysis | mücerred te'lîfî tahlîl hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 43-08 | Computational methods for problems pertaining to abstract harmonic analysis | mücerred te'lîfî tahlîl sahasındaki meselelere dair hesap usulleri |  |
+| 43-11 | Research data for problems pertaining to abstract harmonic analysis | mücerred te'lîfî tahlîl sahasındaki meselelere dair tetkik verileri |  |
+| **43Axx** | **Abstract harmonic analysis {For other analysis on topological and Lie groups, see 22Exx}** | **Mücerred te'lîfî tahlîl {Vaz'î zümreler ve Lie zümreleri üzerindeki sâir tahlîl için bakınız: 22Exx}** |  |
+| 43A05 | Measures on groups and semigroups, etc. | Zümreler, nîm-zümreler ve emsâli üzerinde mikyâslar |  |
+| 43A07 | Means on groups, semigroups, etc.; amenable groups | Zümreler, nîm-zümreler ve emsâli üzerinde vasatlar; müsâid (amenable) zümreler | şüpheli: "amenable" için "müsâid" teklif edildi |
+| 43A10 | Measure algebras on groups, semigroups, etc. | Zümreler, nîm-zümreler ve emsâli üzerinde mikyâs cebirleri |  |
+| 43A15 | Lp -spaces and other function spaces on groups, semigroups, etc. | Zümreler, nîm-zümreler ve emsâli üzerinde L^p fezâları ve sâir tâbi fezâları | nakil |
+| 43A17 | Analysis on ordered groups, H p -theory | Müretteb zümreler üzerinde tahlîl, H^p nazariyesi |  |
+| 43A20 | L1 -algebras on groups, semigroups, etc. | Zümreler, nîm-zümreler ve emsâli üzerinde L^1 cebirleri | nakil |
+| 43A22 | Homomorphisms and multipliers of function spaces on groups, semigroups, etc. | Zümreler, nîm-zümreler ve emsâli üzerindeki tâbi fezâlarının teşâkülleri ve mazrûbları |  |
+| 43A25 | Fourier and Fourier-Stieltjes transforms on locally compact and other abelian groups | Mahallen mütarâs ve sâir Abel zümreleri üzerinde Fourier ve Fourier-Stieltjes tahvîlleri | nakil |
+| 43A30 | Fourier and Fourier-Stieltjes transforms on nonabelian groups and on semigroups, etc. | Gayr-ı Abel zümreler ve nîm-zümreler ve emsâli üzerinde Fourier ve Fourier-Stieltjes tahvîlleri | nakil |
+| 43A32 | Other transforms and operators of Fourier type | Fourier nev'inden sâir tahvîller ve âmiller |  |
+| 43A35 | Positive definite functions on groups, semigroups, etc. | Zümreler, nîm-zümreler ve emsâli üzerinde müsbet muayyen tâbiler |  |
+| 43A40 | Character groups and dual objects | Seciye zümreleri ve müsennâ (düal) nesneler |  |
+| 43A45 | Spectral synthesis on groups, semigroups, etc. | Zümreler, nîm-zümreler ve emsâli üzerinde tayfî terkib |  |
+| 43A46 | Special sets (thin sets, Kronecker sets, Helson sets, Ditkin sets, Sidon sets, etc.) | Hususî mecmûalar (ince mecmûalar, Kronecker mecmûaları, Helson mecmûaları, Ditkin mecmûaları, Sidon mecmûaları ve emsâli) | nakil |
+| 43A50 | Convergence of Fourier series and of inverse transforms | Fourier silsilelerinin ve makûs tahvîllerin tekārübü |  |
+| 43A55 | Summability methods on groups, semigroups, etc. [See also 40J05] | Zümreler, nîm-zümreler ve emsâli üzerinde cem' kābiliyeti usulleri [Ayrıca bakınız: 40J05] |  |
+| 43A60 | Almost periodic functions on groups and semigroups and their generalizations (recurrent functions, distal functions, etc.); almost automorphic functions | Zümreler ve nîm-zümreler üzerinde takrîben devrî tâbiler ve bunların umûmîleştirmeleri (âid tâbiler, mesâfe-hâfız tâbiler ve emsâli); takrîben zâtî-şekilli tâbiler |  |
+| 43A62 | Harmonic analysis on hypergroups | Fevk-zümreler üzerinde te'lîfî tahlîl |  |
+| 43A65 | Representations of groups, semigroups, etc. (aspects of abstract harmonic analysis) [See also 22A10, 22A20, 22Dxx, 22E45] | Zümrelerin, nîm-zümrelerin ve emsâlinin temsilleri (mücerred te'lîfî tahlîlin cihetleri) [Ayrıca bakınız: 22A10, 22A20, 22Dxx, 22E45] |  |
+| 43A70 | Analysis on specific locally compact and other abelian groups [See also 11R56, 22B05] | Muayyen mahallen mütarâs ve sâir Abel zümreleri üzerinde tahlîl [Ayrıca bakınız: 11R56, 22B05] |  |
+| 43A75 | Harmonic analysis on specific compact groups | Muayyen mütarâs zümreler üzerinde te'lîfî tahlîl |  |
+| 43A77 | Harmonic analysis on general compact groups | Umûmî mütarâs zümreler üzerinde te'lîfî tahlîl |  |
+| 43A80 | Analysis on other specific Lie groups [See also 22Exx] | Diğer muayyen Lie zümreleri üzerinde tahlîl [Ayrıca bakınız: 22Exx] |  |
+| 43A85 | Harmonic analysis on homogeneous spaces | Mütecânis fezâlar üzerinde te'lîfî tahlîl |  |
+| 43A90 | Harmonic analysis and spherical functions [See also 22E45, 22E46, 33C55] | Te'lîfî tahlîl ve kürevî tâbiler [Ayrıca bakınız: 22E45, 22E46, 33C55] |  |
+| 43A95 | Categorical methods for abstract harmonic analysis [See also 46Mxx] | Mücerred te'lîfî tahlîl için makûlî usuller [Ayrıca bakınız: 46Mxx] |  |
 | 43A99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
-## 44-XX — Integral transforms, operational calculus {For fractional derivatives and integrals, see 26A33; for Fourier transforms, see 42A38, 42B10; for integral transforms in distribution spaces, see 46F12; for numerical methods, see 65R10}
+## 44-XX — Tamâmî tahvîller, ameliyat hesabı {Kesrî müştaklar ve tamâmîler için bakınız: 26A33; Fourier tahvîlleri için bakınız: 42A38, 42B10; tevzî' fezâlarında tamâmî tahvîller için bakınız: 46F12; adedî usuller için bakınız: 65R10}
 
 Integral transforms, operational calculus {For fractional derivatives and integrals, see 26A33; for Fourier transforms, see 42A38, 42B10; for integral transforms in distribution spaces, see 46F12; for numerical methods, see 65R10}
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 44-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to integral transforms |  |  |
-| 44-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to integral transforms |  |  |
-| 44-02 | Research exposition (monographs, survey articles) pertaining to integral transforms |  |  |
-| 44-03 | History of integral transforms [Consider also classification numbers from Section 01] |  |  |
-| 44-04 | Software, source code, etc. for problems pertaining to integral transforms |  |  |
-| 44-06 | Proceedings, conferences, collections, etc. pertaining to integral transforms |  |  |
-| 44-11 | Research data for problems pertaining to integral transforms |  |  |
-| **44Axx** | **Integral transforms, operational calculus {For fractional derivatives and integrals, see 26A33; for Fourier transforms, see 42A38, 42B10; for integral transforms in distribution spaces, see 46F12; for numerical methods, see 65R10}** | **** |  |
-| 44A05 | General integral transforms [See also 42A38] |  |  |
-| 44A10 | Laplace transform |  |  |
-| 44A12 | Radon transform [See also 92C55] |  |  |
-| 44A15 | Special integral transforms (Legendre, Hilbert, etc.) |  |  |
-| 44A20 | Integral transforms of special functions |  |  |
-| 44A30 | Multiple integral transforms |  |  |
-| 44A35 | Convolution as an integral transform |  |  |
-| 44A40 | Calculus of Mikusiński and other operational calculi |  |  |
-| 44A45 | Classical operational calculus |  |  |
-| 44A55 | Discrete operational calculus |  |  |
-| 44A60 | Moment problems {For trigonometric moment problems, see 42A70} |  |  |
+| 44-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to integral transforms | tamâmî tahvîller ve ameliyat hesabı hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 44-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to integral transforms | tamâmî tahvîller ve ameliyat hesabı hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 44-02 | Research exposition (monographs, survey articles) pertaining to integral transforms | tamâmî tahvîller ve ameliyat hesabı hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 44-03 | History of integral transforms [Consider also classification numbers from Section 01] | Tamâmî tahvîllerin târihi [01. babın tasnif numaralarına da bakılsın] |  |
+| 44-04 | Software, source code, etc. for problems pertaining to integral transforms | tamâmî tahvîller ve ameliyat hesabı sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 44-06 | Proceedings, conferences, collections, etc. pertaining to integral transforms | tamâmî tahvîller ve ameliyat hesabı hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 44-11 | Research data for problems pertaining to integral transforms | tamâmî tahvîller ve ameliyat hesabı sahasındaki meselelere dair tetkik verileri |  |
+| **44Axx** | **Integral transforms, operational calculus {For fractional derivatives and integrals, see 26A33; for Fourier transforms, see 42A38, 42B10; for integral transforms in distribution spaces, see 46F12; for numerical methods, see 65R10}** | **Tamâmî tahvîller, ameliyat hesabı {Kesrî müştaklar ve tamâmîler için bakınız: 26A33; Fourier tahvîlleri için bakınız: 42A38, 42B10; tevzî' fezâlarında tamâmî tahvîller için bakınız: 46F12; adedî usuller için bakınız: 65R10}** |  |
+| 44A05 | General integral transforms [See also 42A38] | Umûmî tamâmî tahvîller [Ayrıca bakınız: 42A38] |  |
+| 44A10 | Laplace transform | Laplace tahvîli | nakil |
+| 44A12 | Radon transform [See also 92C55] | Radon tahvîli [Ayrıca bakınız: 92C55] | nakil |
+| 44A15 | Special integral transforms (Legendre, Hilbert, etc.) | Hususî tamâmî tahvîller (Legendre, Hilbert ve emsâli) | nakil |
+| 44A20 | Integral transforms of special functions | Hususî tâbilerin tamâmî tahvîlleri |  |
+| 44A30 | Multiple integral transforms | Çok katlı tamâmî tahvîller |  |
+| 44A35 | Convolution as an integral transform | Tamâmî tahvîl olarak iltifâf |  |
+| 44A40 | Calculus of Mikusiński and other operational calculi | Mikusiński hesabı ve sâir ameliyat hesapları | nakil |
+| 44A45 | Classical operational calculus | Klasik ameliyat hesabı |  |
+| 44A55 | Discrete operational calculus | Munfasıl ameliyat hesabı |  |
+| 44A60 | Moment problems {For trigonometric moment problems, see 42A70} | Lahza (moment) meseleleri {Müsellesâtî lahza meseleleri için bakınız: 42A70} |  |
 | 44A99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
 ## 45-XX — Integral equations
