@@ -3,12 +3,14 @@ import argparse
 import concurrent.futures as cf
 import csv
 import datetime
+import hashlib
 import io
 import json
 import os
 import sys
 import threading
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 import zipfile
@@ -16,6 +18,7 @@ import zipfile
 KOK = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 JETON_ADRESI = "https://icdaccessmanagement.who.int/connect/token"
 ARAYUZ = "https://id.who.int/icd/release/11"
+EN_YENI_ADRES = "https://icd.who.int/browse/latest-release/mms/en"
 VARSAYILAN_CEDVEL = "https://icdcdn.who.int/static/releasefiles/{surum}/SimpleTabulation-ICD-11-MMS-en.zip"
 
 
@@ -120,39 +123,80 @@ def arayuzden_indir(a, cikti):
     return surum, kok_adres, list(gorulen.values())
 
 
+def en_yeni_surum():
+    class Durdur(urllib.request.HTTPRedirectHandler):
+        def redirect_request(self, *args, **kw):
+            return None
+    try:
+        with urllib.request.build_opener(Durdur).open(EN_YENI_ADRES, timeout=60) as c:
+            son = c.geturl()
+    except urllib.error.HTTPError as e:
+        if e.code not in (301, 302, 303, 307, 308):
+            raise
+        son = e.headers.get("Location") or ""
+    parca = [p for p in son.split("/") if len(p) == 7 and p[4] == "-" and p[:4].isdigit()]
+    if not parca:
+        raise SystemExit("En yeni sürüm adresten okunamadı: " + son)
+    return parca[0]
+
+
+def asil_satir_mi(satir):
+    p = satir.split("\t")
+    return len(p) > 1 and p[1].startswith("http://id.who.int/icd/release/11/")
+
+
 def cedvelden_oku(a):
+    surum = a.surum
     if a.yerel:
         with open(a.yerel, "rb") as f:
             ham = f.read()
         adres = "yerel:" + a.yerel
     else:
-        adres = a.cedvel_adresi or VARSAYILAN_CEDVEL.format(surum=a.surum or "2025-01")
+        if not surum and not a.cedvel_adresi:
+            surum = en_yeni_surum()
+        adres = a.cedvel_adresi or VARSAYILAN_CEDVEL.format(surum=surum)
         print(f"indiriliyor: {adres}", file=sys.stderr)
         with urllib.request.urlopen(adres, timeout=300) as c:
             ham = c.read()
+        klasor = os.path.join(a.cikti, "indirilen")
+        os.makedirs(klasor, exist_ok=True)
+        with open(os.path.join(klasor, f"icd11_{surum or 'bilinmeyen'}_SimpleTabulation.zip"), "wb") as f:
+            f.write(ham)
+    ozet = hashlib.sha256(ham).hexdigest()
     if ham[:2] == b"PK":
         z = zipfile.ZipFile(io.BytesIO(ham))
-        adlar = [n for n in z.namelist() if n.lower().endswith((".txt", ".tsv"))]
-        if not adlar:
-            raise SystemExit("Arşivde sekmeyle ayrılmış metin dosyası yok: " + ", ".join(z.namelist()))
+        adlar = [n for n in z.namelist() if n.lower().endswith((".txt", ".tsv")) and "simpletabulation" in n.lower()]
+        if len(adlar) != 1:
+            raise SystemExit("Arşivde tek bir SimpleTabulation metin dosyası bulunamadı: " + ", ".join(z.namelist()))
         ham = z.read(adlar[0])
-    metin_ = ham.decode("utf-8-sig")
-    okuyucu = csv.DictReader(io.StringIO(metin_), delimiter="\t")
+    satirlar = ham.decode("utf-8-sig").split("\n")
+    birlesik, devam_satiri = [], 0
+    for s in satirlar[1:]:
+        if asil_satir_mi(s) or not birlesik:
+            birlesik.append(s.rstrip("\r"))
+        elif s.strip():
+            birlesik[-1] += " " + s.rstrip("\r")
+            devam_satiri += 1
+    birlesik = [s for s in birlesik if s.strip()]
+    okuyucu = csv.DictReader(io.StringIO(satirlar[0] + "\n" + "\n".join(birlesik)), delimiter="\t")
     kayitlar, yigin = [], []
+    temel_ebeveyn = {}
     for s in okuyucu:
+        if s.get("ClassKind") is None:
+            raise SystemExit("Eksik sütunlu kayıt: " + repr(s)[:300])
         baslik = s.get("Title") or ""
         derinlik = 0
         while baslik.startswith("- "):
             derinlik += 1
             baslik = baslik[2:]
-        adres = (s.get("Linearization URI") or s.get("Linearization (release) URI") or "").strip()
-        adres = adres.replace("http://", "https://", 1)
+        u_adres = (s.get("Linearization URI") or s.get("Linearization (release) URI") or "").strip()
+        u_adres = u_adres.replace("http://", "https://", 1)
         while yigin and yigin[-1][0] >= derinlik:
             yigin.pop()
         ebeveyn = yigin[-1][1] if yigin else None
         kayit = {
-            "adres": adres,
-            "kimlik": adres.split("/mms/")[-1] if "/mms/" in adres else adres,
+            "adres": u_adres,
+            "kimlik": u_adres.split("/mms/")[-1] if "/mms/" in u_adres else u_adres,
             "ebeveyn": ebeveyn,
             "ebeveynler": [ebeveyn] if ebeveyn else [],
             "kod": (s.get("Code") or "").strip() or None,
@@ -161,13 +205,24 @@ def cedvelden_oku(a):
             "sinif_nevi": (s.get("ClassKind") or "").strip() or None,
             "ad": baslik.strip(),
             "tarif": None,
+            "kodlama_notu": (s.get("CodingNote") or "").strip() or None,
             "temel_adres": (s.get("Foundation URI") or "").strip() or None,
             "artik": (s.get("IsResidual") or "").strip().lower() == "true",
             "bab_no": (s.get("ChapterNo") or "").strip() or None,
         }
+        temel_ebeveyn[u_adres] = (s.get("Parent") or "").strip() or None
         kayitlar.append(kayit)
-        yigin.append((derinlik, adres))
-    return a.surum, adres, kayitlar
+        yigin.append((derinlik, u_adres))
+    temel = {k["adres"]: k["temel_adres"] for k in kayitlar}
+    uyusmayan = 0
+    for k in kayitlar:
+        beklenen = temel_ebeveyn[k["adres"]]
+        bulunan = temel.get(k["ebeveyn"]) if k["ebeveyn"] else None
+        if beklenen != bulunan:
+            uyusmayan += 1
+    yoklama = {"birlestirilen_devam_satiri": devam_satiri, "sha256": ozet,
+               "ebeveyn_sutunuyla_uyusmayan": uyusmayan}
+    return surum, adres, kayitlar, yoklama
 
 
 def main():
@@ -183,9 +238,10 @@ def main():
     if not a.yerel and not a.cedvel_adresi and os.environ.get("ICD_CLIENT_ID") and os.environ.get("ICD_CLIENT_SECRET"):
         yol = "resmî uygulama arayüzü"
         surum, adres, kayitlar = arayuzden_indir(a, a.cikti)
+        yoklama = {}
     else:
         yol = "resmî neşir cedveli"
-        surum, adres, kayitlar = cedvelden_oku(a)
+        surum, adres, kayitlar, yoklama = cedvelden_oku(a)
 
     kimlikler = [k["adres"] for k in kayitlar]
     if len(set(kimlikler)) != len(kimlikler):
@@ -210,6 +266,8 @@ def main():
         "unsur_sayisi": len(kayitlar),
         "kodlu_unsur_sayisi": sum(1 for k in kayitlar if k["kod"]),
         "sinif_nevine_gore": nevi,
+        "artik_unsur_sayisi": sum(1 for k in kayitlar if k["artik"]),
+        "yoklama": yoklama,
     }
     with open(os.path.join(a.cikti, "icd11_kunye.json"), "w", encoding="utf-8") as f:
         json.dump(kunye, f, ensure_ascii=False, indent=2)

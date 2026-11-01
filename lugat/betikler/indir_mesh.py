@@ -41,6 +41,12 @@ def indir(adres, hedef):
             if not parca:
                 break
             f.write(parca)
+    with open(gecici, "rb") as f:
+        bas = f.read(64)
+    beklenen = b"\x1f\x8b" if hedef.endswith(".gz") else b"<?xml"
+    if not bas.lstrip().startswith(beklenen):
+        os.remove(gecici)
+        raise ValueError(f"sunucu dosya yerine başka bir şey döndürdü: {bas[:40]!r}")
     os.replace(gecici, hedef)
 
 
@@ -82,12 +88,21 @@ def ayristir(dosya):
                 "giris_terimleri": [],
                 "tavsif_sinifi": dugum.get("DescriptorClass"),
             }
+            kayit["diger_kavramlar"] = []
             for kavram in dugum.findall("ConceptList/Concept"):
+                terimler = sorted({t.text.strip() for t in kavram.findall("TermList/Term/String") if t.text})
                 if kavram.get("PreferredConceptYN") == "Y":
                     kayit["tarif"] = metin(kavram, "ScopeNote")
-                for terim in kavram.findall("TermList/Term/String"):
-                    if terim.text and terim.text.strip() != kayit["ad"]:
-                        kayit["giris_terimleri"].append(terim.text.strip())
+                    kayit["giris_terimleri"].extend(t for t in terimler if t != kayit["ad"])
+                    continue
+                kendi = metin(kavram, "ConceptUI")
+                munasebet = [r.get("RelationName") for r in kavram.findall("ConceptRelationList/ConceptRelation")
+                             if metin(r, "Concept2UI") == kendi]
+                kayit["diger_kavramlar"].append({
+                    "kavram": kendi, "ad": metin(kavram, "ConceptName/String"),
+                    "munasebet": munasebet[0] if munasebet else None,
+                    "tarif": metin(kavram, "ScopeNote"), "terimler": terimler,
+                })
             kayit["giris_terimleri"] = sorted(set(kayit["giris_terimleri"]))
             yield kayit
             dugum.clear()
@@ -109,7 +124,7 @@ def main():
         sene, adres, dosya = dosya_bul(a.sene, indirme_klasoru)
 
     hedef = os.path.join(a.cikti, "mesh_tavsifler.jsonl")
-    sayi, agacli, agac_numarasi = 0, 0, 0
+    sayi, agacli, agac_numarasi, dar_kavram = 0, 0, 0, 0
     kita_sayilari = {k: 0 for k in KITALAR}
     with open(hedef + ".yarim", "w", encoding="utf-8") as f:
         for k in ayristir(dosya):
@@ -117,6 +132,7 @@ def main():
             if k["agac_numaralari"]:
                 agacli += 1
             agac_numarasi += len(k["agac_numaralari"])
+            dar_kavram += len(k["diger_kavramlar"])
             for harf in {t[0] for t in k["agac_numaralari"]}:
                 kita_sayilari[harf] = kita_sayilari.get(harf, 0) + 1
             f.write(json.dumps(k, ensure_ascii=False) + "\n")
@@ -133,6 +149,7 @@ def main():
         "tavsif_sayisi": sayi,
         "agacta_yeri_olan_tavsif_sayisi": agacli,
         "agac_numarasi_sayisi": agac_numarasi,
+        "tercih_edilmeyen_kavram_sayisi": dar_kavram,
         "kitalar": KITALAR,
         "kita_basina_tavsif_sayisi": kita_sayilari,
     }

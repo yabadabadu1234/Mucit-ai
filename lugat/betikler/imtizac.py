@@ -77,6 +77,7 @@ def main(ham=os.path.join(KOK, "ham"), karsilik_klasoru=os.path.join(KOK, "karsi
             "ebeveynler": sorted(set(ebeveynler)),
             "kaynaklar": [dict(t, tasnif="MeSH")],
             "esanlamlilar": list(t["giris_terimleri"]), "tarif": t.get("tarif"),
+            "diger_kavramlar": list(t.get("diger_kavramlar", [])),
             "karsiliklar": [],
         }
 
