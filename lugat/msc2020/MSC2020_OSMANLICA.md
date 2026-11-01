@@ -2,7 +2,7 @@
 
 Bu sahife `araclar/msc_birlestir.py` ile `kaynak.tsv` ve `ceviri/` dosyalarından üretilir; elle değiştirilmez.
 
-Toplam madde: 6603 · karşılığı bulunan: 4336 · kalan: 2267
+Toplam madde: 6603 · karşılığı bulunan: 4556 · kalan: 2047
 
 
 ## 00-XX — Umûmî ve şâmil mevzûlar; mecmualar
@@ -3190,7 +3190,7 @@ Dynamical systems and ergodic theory [See also 26A18, 28Dxx, 34Cxx, 34Dxx, 35Bxx
 | 37J30 | Obstructions to integrability for finite-dimensional Hamiltonian and Lagrangian systems (nonintegrability criteria) | Mütenâhî buudlu Hamilton ve Lagrange nizâmları için kābiliyet-i tamâmiye (entegre edilebilirlik) mânileri (tamâmiye kābil olmayış mi'yârları) |  |
 | 37J35 | Completely integrable finite-dimensional Hamiltonian systems, integration methods, integrability tests | Tamâmen tamâmiye kābil mütenâhî buudlu Hamilton nizâmları, tamâmiye usulleri, tamâmiye kābiliyeti imtihanları |  |
 | 37J37 | Relations of finite-dimensional Hamiltonian and Lagrangian systems with Lie algebras and other algebraic structures | Mütenâhî buudlu Hamilton ve Lagrange nizâmlarının Lie cebirleri ve sâir cebrî bünyelerle münasebetleri |  |
-| 37J38 | Relations of finite-dimensional Hamiltonian and Lagrangian systems with algebraic geometry, complex analysis, special functions | Mütenâhî buudlu Hamilton ve Lagrange nizâmlarının cebrî hendese, mürekkeb tahlîl ve hususî tâbilerle münasebetleri |  |
+| 37J38 | Relations of finite-dimensional Hamiltonian and Lagrangian systems with algebraic geometry, complex analysis, special functions | Mütenâhî buudlu Hamilton ve Lagrange nizâmlarının hendese-i cebriyye, mürekkeb tahlîl ve hususî tâbilerle münasebetleri |  |
 | 37J39 | Relations of finite-dimensional Hamiltonian and Lagrangian systems with topology, geometry and differential geometry (symplectic geometry, Poisson geometry, etc.) [See also 53D20] | Mütenâhî buudlu Hamilton ve Lagrange nizâmlarının hendese-i vaz'iyye, hendese ve tefâzulî hendese (simplektik hendese, Poisson hendesesi ve emsâli) ile münasebetleri [Ayrıca bakınız: 53D20] |  |
 | 37J40 | Perturbations of finite-dimensional Hamiltonian systems, normal forms, small divisors, KAM theory, Arnol’d diffusion | Mütenâhî buudlu Hamilton nizâmlarının ihtilâlleri, kanonik sûretler, küçük maksûmun-aleyhler, Kolmogorov-Arnold-Moser nazariyesi, Arnol'd intişârı | nakil |
 | 37J46 | Periodic, homoclinic and heteroclinic orbits of finite-dimensional Hamiltonian systems | Mütenâhî buudlu Hamilton nizâmlarının devrî, homoklinik ve heteroklinik medârları |  |
@@ -3204,7 +3204,7 @@ Dynamical systems and ergodic theory [See also 26A18, 28Dxx, 34Cxx, 34Dxx, 35Bxx
 | 37K06 | General theory of infinite-dimensional Hamiltonian and Lagrangian systems, Hamiltonian and Lagrangian structures, symmetries, conservation laws | Gayr-ı mütenâhî buudlu Hamilton ve Lagrange nizâmlarının umûmî nazariyesi, Hamilton ve Lagrange bünyeleri, tenâzurlar, bekā kanunları |  |
 | 37K10 | Completely integrable infinite-dimensional Hamiltonian and Lagrangian systems, integration methods, integrability tests, integrable hierarchies (KdV, KP, Toda, etc.) | Tamâmen tamâmiye kābil gayr-ı mütenâhî buudlu Hamilton ve Lagrange nizâmları, tamâmiye usulleri, tamâmiye kābiliyeti imtihanları, tamâmiye kābil silsile-i merâtib (Korteweg-de Vries, Kadomtsev-Petviashvili, Toda ve emsâli) | nakil |
 | 37K15 | Inverse spectral and scattering methods for infinite-dimensional Hamiltonian and Lagrangian systems | Gayr-ı mütenâhî buudlu Hamilton ve Lagrange nizâmları için makûs tayf ve inteşâr usulleri |  |
-| 37K20 | Relations of infinite-dimensional Hamiltonian and Lagrangian dynamical systems with algebraic geometry, complex analysis, and special functions [See also 14H70] | Gayr-ı mütenâhî buudlu Hamilton ve Lagrange harekî nizâmlarının cebrî hendese, mürekkeb tahlîl ve hususî tâbilerle münasebetleri [Ayrıca bakınız: 14H70] |  |
+| 37K20 | Relations of infinite-dimensional Hamiltonian and Lagrangian dynamical systems with algebraic geometry, complex analysis, and special functions [See also 14H70] | Gayr-ı mütenâhî buudlu Hamilton ve Lagrange harekî nizâmlarının hendese-i cebriyye, mürekkeb tahlîl ve hususî tâbilerle münasebetleri [Ayrıca bakınız: 14H70] |  |
 | 37K25 | Relations of infinite-dimensional Hamiltonian and Lagrangian dynamical systems with topology, geometry and differential geometry | Gayr-ı mütenâhî buudlu Hamilton ve Lagrange harekî nizâmlarının hendese-i vaz'iyye, hendese ve tefâzulî hendese ile münasebetleri |  |
 | 37K30 | Relations of infinite-dimensional Hamiltonian and Lagrangian dynamical systems with infinite-dimensional Lie algebras and other algebraic structures | Gayr-ı mütenâhî buudlu Hamilton ve Lagrange harekî nizâmlarının gayr-ı mütenâhî buudlu Lie cebirleri ve sâir cebrî bünyelerle münasebetleri |  |
 | 37K35 | Lie-Bäcklund and other transformations for infinite-dimensional Hamiltonian and Lagrangian systems | Gayr-ı mütenâhî buudlu Hamilton ve Lagrange nizâmları için Lie-Bäcklund tahvîlleri ve sâir tahvîller | nakil |
@@ -4185,7 +4185,7 @@ Geometry {For algebraic geometry, see 14-XX; for differential geometry, see 53-X
 | 51N20 | Euclidean analytic geometry | Öklid tahlîlî hendesesi |  |
 | 51N25 | Analytic geometry with other transformation groups | Diğer tahvîl zümreleriyle tahlîlî hendese |  |
 | 51N30 | Geometry of classical groups [See also 14L35, 20Gxx] | Klasik zümrelerin hendesesi [Ayrıca bakınız: 14L35, 20Gxx] |  |
-| 51N35 | Questions of classical algebraic geometry [See also 14Nxx] | Klasik cebrî hendese suâlleri [Ayrıca bakınız: 14Nxx] |  |
+| 51N35 | Questions of classical algebraic geometry [See also 14Nxx] | Klasik hendese-i cebriyye suâlleri [Ayrıca bakınız: 14Nxx] |  |
 | 51N99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 | **51Pxx** | **Classical or axiomatic geometry and physics [Should also be assigned at least one other classification number from Sections 70 through 86]** | **Klasik yahut mütearifevî hendese ve hikmet-i tabîiyye [Buna 70. ilâ 86. bablardan en az bir başka tasnif numarası da verilmelidir]** |  |
 | 51P05 | Classical or axiomatic geometry and physics [Should also be assigned at least one other classification number from Sections 70 through 86] | Klasik yahut mütearifevî hendese ve hikmet-i tabîiyye [Buna 70. ilâ 86. bablardan en az bir başka tasnif numarası da verilmelidir] |  |
@@ -4231,7 +4231,7 @@ Convex and discrete geometry
 | 52B11 | n-dimensional polytopes | N buudlu politoplar |  |
 | 52B12 | Special polytopes (linear programming, centrally symmetric, etc.) | Hususî politoplar (hattî programlama, merkezce mütenâzır ve emsâli) |  |
 | 52B15 | Symmetry properties of polytopes | Politopların tenâzur vasıfları |  |
-| 52B20 | Lattice polytopes in convex geometry (including relations with commutative algebra and algebraic geometry) [See also 06A11, 13F20, 13F55, 13Hxx, 52C05, 52C07] | Muhaddeb hendesede kafes politopları (tebdîlî cebir ve cebrî hendeseyle münasebetleri dahil) [Ayrıca bakınız: 06A11, 13F20, 13F55, 13Hxx, 52C05, 52C07] |  |
+| 52B20 | Lattice polytopes in convex geometry (including relations with commutative algebra and algebraic geometry) [See also 06A11, 13F20, 13F55, 13Hxx, 52C05, 52C07] | Muhaddeb hendesede kafes politopları (tebdîlî cebir ve hendese-i cebriyyeyle münasebetleri dahil) [Ayrıca bakınız: 06A11, 13F20, 13F55, 13Hxx, 52C05, 52C07] |  |
 | 52B22 | Shellability for polytopes and polyhedra | Politoplar ve kesîrü'l-vücûh mücessemler için kabuklanabilirlik | şüpheli: "shellability" için lafzî karşılık teklif edildi |
 | 52B35 | Gale and other diagrams | Gale şemaları ve sâir şemalar | nakil |
 | 52B40 | Matroids in convex geometry (realizations in the context of convex polytopes, convexity in combinatorial structures, etc.) [See also 05B35, 52Cxx] | Muhaddeb hendesede matroidler (muhaddeb politoplar bağlamında tahakkuklar, terkîbî bünyelerde muhaddebiyet ve emsâli) [Ayrıca bakınız: 05B35, 52Cxx] | nakil |
@@ -4370,253 +4370,253 @@ Differential geometry {For differential topology, see 57Rxx; for foundational qu
 | 53Z50 | Applications of differential geometry to data and computer science | Tefâzulî hendesenin verilere ve hâsibât ilmine tatbîkleri |  |
 | 53Z99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
-## 54-XX — General topology {For the topology of manifolds of all dimensions, see 57Nxx}
+## 54-XX — Umûmî hendese-i vaz'iyye (genel topoloji) {Her buuddaki müteşa'iblerin hendese-i vaz'iyyesi için bakınız: 57Nxx}
 
 General topology {For the topology of manifolds of all dimensions, see 57Nxx}
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 54-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to general topology |  |  |
-| 54-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to general topology |  |  |
-| 54-02 | Research exposition (monographs, survey articles) pertaining to general topology |  |  |
-| 54-03 | History of general topology [Consider also classification numbers from Section 01] |  |  |
-| 54-04 | Software, source code, etc. for problems pertaining to general topology |  |  |
-| 54-06 | Proceedings, conferences, collections, etc. pertaining to general topology |  |  |
-| 54-08 | Computational methods for problems pertaining to general topology |  |  |
-| 54-11 | Research data for problems pertaining to general topology |  |  |
-| **54Axx** | **Generalities in topology** | **** |  |
-| 54A05 | Topological spaces and generalizations (closure spaces, etc.) |  |  |
-| 54A10 | Several topologies on one set (change of topology, comparison of topologies, lattices of topologies) |  |  |
-| 54A15 | Syntopogeneous structures |  |  |
-| 54A20 | Convergence in general topology (sequences, filters, limits, convergence spaces, nets, etc.) |  |  |
-| 54A25 | Cardinality properties (cardinal functions and inequalities, discrete subsets) [See also 03Exx] {For ultrafilters, see 54D80} |  |  |
-| 54A35 | Consistency and independence results in general topology [See also 03E35] |  |  |
-| 54A40 | Fuzzy topology [See also 03E72] |  |  |
+| 54-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to general topology | umûmî hendese-i vaz'iyye hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 54-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to general topology | umûmî hendese-i vaz'iyye hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 54-02 | Research exposition (monographs, survey articles) pertaining to general topology | umûmî hendese-i vaz'iyye hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 54-03 | History of general topology [Consider also classification numbers from Section 01] | Umûmî hendese-i vaz'iyyenin târihi [01. babın tasnif numaralarına da bakılsın] |  |
+| 54-04 | Software, source code, etc. for problems pertaining to general topology | umûmî hendese-i vaz'iyye sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 54-06 | Proceedings, conferences, collections, etc. pertaining to general topology | umûmî hendese-i vaz'iyye hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 54-08 | Computational methods for problems pertaining to general topology | umûmî hendese-i vaz'iyye sahasındaki meselelere dair hesap usulleri |  |
+| 54-11 | Research data for problems pertaining to general topology | umûmî hendese-i vaz'iyye sahasındaki meselelere dair tetkik verileri |  |
+| **54Axx** | **Generalities in topology** | **Hendese-i vaz'iyyede umûmî hususlar** |  |
+| 54A05 | Topological spaces and generalizations (closure spaces, etc.) | Vaz'î fezâlar ve umûmîleştirmeleri (kapanış fezâları ve emsâli) |  |
+| 54A10 | Several topologies on one set (change of topology, comparison of topologies, lattices of topologies) | Bir mecmûa üzerinde birden çok vaz'iyyet (vaz'iyyet tebdîli, vaz'iyyetlerin mukayesesi, vaz'iyyet kafesleri) |  |
+| 54A15 | Syntopogeneous structures | Müşterek-vaz'iyyet doğuran (sintopojen) bünyeler | şüpheli: "syntopogeneous" için lafzî terkip teklif edildi |
+| 54A20 | Convergence in general topology (sequences, filters, limits, convergence spaces, nets, etc.) | Umûmî hendese-i vaz'iyyede tekārüb (tevâlîler, süzgeçler, nihâyetler, tekārüb fezâları, şebekeler ve emsâli) |  |
+| 54A25 | Cardinality properties (cardinal functions and inequalities, discrete subsets) [See also 03Exx] {For ultrafilters, see 54D80} | Aslî adet vasıfları (aslî adet tâbileri ve adem-i müsâvâtları, munfasıl alt mecmûalar) [Ayrıca bakınız: 03Exx] {Fevka'n-nihâye süzgeçler (ultrafiltreler) için bakınız: 54D80} |  |
+| 54A35 | Consistency and independence results in general topology [See also 03E35] | Umûmî hendese-i vaz'iyyede adem-i tenâkuz ve istiklâl neticeleri [Ayrıca bakınız: 03E35] |  |
+| 54A40 | Fuzzy topology [See also 03E72] | Bulanık hendese-i vaz'iyye [Ayrıca bakınız: 03E72] |  |
 | 54A99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **54Bxx** | **Basic constructions in general topology** | **** |  |
-| 54B05 | Subspaces in general topology |  |  |
-| 54B10 | Product spaces in general topology |  |  |
-| 54B15 | Quotient spaces, decompositions in general topology |  |  |
-| 54B17 | Adjunction spaces and similar constructions in general topology |  |  |
-| 54B20 | Hyperspaces in general topology |  |  |
-| 54B30 | Categorical methods in general topology [See also 18F60] |  |  |
-| 54B35 | Spectra in general topology |  |  |
-| 54B40 | Presheaves and sheaves in general topology [See also 18F20] |  |  |
+| **54Bxx** | **Basic constructions in general topology** | **Umûmî hendese-i vaz'iyyede esâsî inşâlar** |  |
+| 54B05 | Subspaces in general topology | Umûmî hendese-i vaz'iyyede alt fezâlar |  |
+| 54B10 | Product spaces in general topology | Umûmî hendese-i vaz'iyyede hâsıl-ı zarb fezâları |  |
+| 54B15 | Quotient spaces, decompositions in general topology | Umûmî hendese-i vaz'iyyede bölüm fezâları, tahlîller (ayrışımlar) |  |
+| 54B17 | Adjunction spaces and similar constructions in general topology | Umûmî hendese-i vaz'iyyede ilhâk (yapıştırma) fezâları ve benzeri inşâlar |  |
+| 54B20 | Hyperspaces in general topology | Umûmî hendese-i vaz'iyyede fevka'l-fezâlar |  |
+| 54B30 | Categorical methods in general topology [See also 18F60] | Umûmî hendese-i vaz'iyyede makûlî usuller [Ayrıca bakınız: 18F60] |  |
+| 54B35 | Spectra in general topology | Umûmî hendese-i vaz'iyyede tayflar |  |
+| 54B40 | Presheaves and sheaves in general topology [See also 18F20] | Umûmî hendese-i vaz'iyyede ön-desteler ve desteler [Ayrıca bakınız: 18F20] |  |
 | 54B99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **54Cxx** | **Maps and general types of topological spaces defined by maps** | **** |  |
-| 54C05 | Continuous maps |  |  |
-| 54C08 | Weak and generalized continuity |  |  |
-| 54C10 | Special maps on topological spaces (open, closed, perfect, etc.) |  |  |
-| 54C15 | Retraction |  |  |
-| 54C20 | Extension of maps |  |  |
-| 54C25 | Embedding |  |  |
-| 54C30 | Real-valued functions in general topology [See also 26-XX] |  |  |
-| 54C35 | Function spaces in general topology [See also 46Exx, 58D15] |  |  |
-| 54C40 | Algebraic properties of function spaces in general topology [See also 46Exx] |  |  |
-| 54C45 | C- and C ∗ -embedding |  |  |
-| 54C50 | Topology of special sets defined by functions [See also 26A21] |  |  |
-| 54C55 | Absolute neighborhood extensor, absolute extensor, absolute neighborhood retract (ANR), absolute retract spaces (general properties) [See also 55M15] |  |  |
-| 54C56 | Shape theory in general topology [See also 55P55, 57N25] |  |  |
-| 54C60 | Set-valued maps in general topology [See also 26E25, 28B20, 47H04, 58C06] |  |  |
-| 54C65 | Selections in general topology [See also 28B20] |  |  |
-| 54C70 | Entropy in general topology |  |  |
+| **54Cxx** | **Maps and general types of topological spaces defined by maps** | **Tatbîkler ve tatbîklerle tarif edilen umûmî vaz'î fezâ nev'leri** |  |
+| 54C05 | Continuous maps | Muttasıl tatbîkler |  |
+| 54C08 | Weak and generalized continuity | Zayıf ve teşmîl edilmiş ittisal |  |
+| 54C10 | Special maps on topological spaces (open, closed, perfect, etc.) | Vaz'î fezâlar üzerinde hususî tatbîkler (açık, kapalı, kâmil ve emsâli) |  |
+| 54C15 | Retraction | Geri çekme (inkıbâz) |  |
+| 54C20 | Extension of maps | Tatbîklerin temdîdi |  |
+| 54C25 | Embedding | Gömme |  |
+| 54C30 | Real-valued functions in general topology [See also 26-XX] | Umûmî hendese-i vaz'iyyede hakîkî kıymetli tâbiler [Ayrıca bakınız: 26-XX] |  |
+| 54C35 | Function spaces in general topology [See also 46Exx, 58D15] | Umûmî hendese-i vaz'iyyede tâbi fezâları [Ayrıca bakınız: 46Exx, 58D15] |  |
+| 54C40 | Algebraic properties of function spaces in general topology [See also 46Exx] | Umûmî hendese-i vaz'iyyede tâbi fezâlarının cebrî vasıfları [Ayrıca bakınız: 46Exx] |  |
+| 54C45 | C- and C ∗ -embedding | C- ve C*-gömmesi | nakil |
+| 54C50 | Topology of special sets defined by functions [See also 26A21] | Tâbilerle tarif edilen hususî mecmûaların hendese-i vaz'iyyesi [Ayrıca bakınız: 26A21] |  |
+| 54C55 | Absolute neighborhood extensor, absolute extensor, absolute neighborhood retract (ANR), absolute retract spaces (general properties) [See also 55M15] | Mutlak civar temdîd edicisi, mutlak temdîd edici, mutlak civar geri çekmesi, mutlak geri çekme fezâları (umûmî vasıflar) [Ayrıca bakınız: 55M15] |  |
+| 54C56 | Shape theory in general topology [See also 55P55, 57N25] | Umûmî hendese-i vaz'iyyede şekil nazariyesi [Ayrıca bakınız: 55P55, 57N25] |  |
+| 54C60 | Set-valued maps in general topology [See also 26E25, 28B20, 47H04, 58C06] | Umûmî hendese-i vaz'iyyede mecmûa kıymetli tatbîkler [Ayrıca bakınız: 26E25, 28B20, 47H04, 58C06] |  |
+| 54C65 | Selections in general topology [See also 28B20] | Umûmî hendese-i vaz'iyyede intihâblar (seçimler) [Ayrıca bakınız: 28B20] |  |
+| 54C70 | Entropy in general topology | Umûmî hendese-i vaz'iyyede entropi |  |
 | 54C99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **54Dxx** | **Fairly general properties of topological spaces** | **** |  |
-| 54D05 | Connected and locally connected spaces (general aspects) |  |  |
-| 54D10 | Lower separation axioms (T0 –T3 , etc.) |  |  |
-| 54D15 | Higher separation axioms (completely regular, normal, perfectly or collectionwise normal, etc.) |  |  |
-| 54D20 | Noncompact covering properties (paracompact, Lindelöf, etc.) |  |  |
-| 54D25 | “P -minimal” and “P -closed” spaces |  |  |
-| 54D30 | Compactness |  |  |
-| 54D35 | Extensions of spaces (compactifications, supercompactifications, completions, etc.) |  |  |
-| 54D40 | Remainders in general topology |  |  |
-| 54D45 | Local compactness, σ-compactness |  |  |
-| 54D50 | k-spaces |  |  |
-| 54D55 | Sequential spaces |  |  |
-| 54D60 | Realcompactness and realcompactification |  |  |
-| 54D65 | Separability of topological spaces |  |  |
-| 54D70 | Base properties of topological spaces |  |  |
-| 54D80 | Special constructions of topological spaces (spaces of ultrafilters, etc.) |  |  |
+| **54Dxx** | **Fairly general properties of topological spaces** | **Vaz'î fezâların oldukça umûmî vasıfları** |  |
+| 54D05 | Connected and locally connected spaces (general aspects) | Muttasıl ve mahallen muttasıl fezâlar (umûmî cihetler) | şüpheli: "connected" için "muttasıl" kullanıldı; "continuous" ile aynı kelimedir, bağlamdan ayırt edilir |
+| 54D10 | Lower separation axioms (T0 –T3 , etc.) | Aşağı tefrîk mütearifeleri (T0–T3 ve emsâli) |  |
+| 54D15 | Higher separation axioms (completely regular, normal, perfectly or collectionwise normal, etc.) | Yukarı tefrîk mütearifeleri (tamâmen muntazam, mi'yârî, kâmilen yahut cümle hâlinde mi'yârî ve emsâli) |  |
+| 54D20 | Noncompact covering properties (paracompact, Lindelöf, etc.) | Mütarâs olmayan örtme vasıfları (şibh-i mütarâs, Lindelöf ve emsâli) |  |
+| 54D25 | “P -minimal” and “P -closed” spaces | "P-asgarî" ve "P-kapalı" fezâlar |  |
+| 54D30 | Compactness | Mütarâsiyet |  |
+| 54D35 | Extensions of spaces (compactifications, supercompactifications, completions, etc.) | Fezâların genişletmeleri (mütarâslaştırmalar, fevka'l-mütarâslaştırmalar, tetmîmler ve emsâli) |  |
+| 54D40 | Remainders in general topology | Umûmî hendese-i vaz'iyyede bâkîler (kalanlar) |  |
+| 54D45 | Local compactness, σ-compactness | Mahallî mütarâsiyet, σ-mütarâsiyet |  |
+| 54D50 | k-spaces | K-fezâları |  |
+| 54D55 | Sequential spaces | Tevâlî fezâları |  |
+| 54D60 | Realcompactness and realcompactification | Hakîkî-mütarâsiyet ve hakîkî-mütarâslaştırma |  |
+| 54D65 | Separability of topological spaces | Vaz'î fezâların ayrılabilirliği |  |
+| 54D70 | Base properties of topological spaces | Vaz'î fezâların esas (baz) vasıfları |  |
+| 54D80 | Special constructions of topological spaces (spaces of ultrafilters, etc.) | Vaz'î fezâların hususî inşâları (fevka'n-nihâye süzgeç fezâları ve emsâli) |  |
 | 54D99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **54Exx** | **Topological spaces with richer structures** | **** |  |
-| 54E05 | Proximity structures and generalizations |  |  |
-| 54E15 | Uniform structures and generalizations |  |  |
-| 54E17 | Nearness spaces |  |  |
-| 54E18 | p-spaces, M -spaces, σ-spaces, etc. |  |  |
-| 54E20 | Stratifiable spaces, cosmic spaces, etc. |  |  |
-| 54E25 | Semimetric spaces |  |  |
-| 54E30 | Moore spaces |  |  |
-| 54E35 | Metric spaces, metrizability |  |  |
-| 54E40 | Special maps on metric spaces |  |  |
-| 54E45 | Compact (locally compact) metric spaces |  |  |
-| 54E50 | Complete metric spaces |  |  |
-| 54E52 | Baire category, Baire spaces |  |  |
-| 54E55 | Bitopologies |  |  |
-| 54E70 | Probabilistic metric spaces |  |  |
+| **54Exx** | **Topological spaces with richer structures** | **Daha zengin bünyeli vaz'î fezâlar** |  |
+| 54E05 | Proximity structures and generalizations | Yakınlık bünyeleri ve umûmîleştirmeleri |  |
+| 54E15 | Uniform structures and generalizations | Yeknesak bünyeler ve umûmîleştirmeleri |  |
+| 54E17 | Nearness spaces | Kurbiyet fezâları |  |
+| 54E18 | p-spaces, M -spaces, σ-spaces, etc. | P-fezâları, M-fezâları, σ-fezâları ve emsâli |  |
+| 54E20 | Stratifiable spaces, cosmic spaces, etc. | Tabakalandırılabilir fezâlar, kevnî (kozmik) fezâlar ve emsâli |  |
+| 54E25 | Semimetric spaces | Nîm-mesâfeli fezâlar |  |
+| 54E30 | Moore spaces | Moore fezâları | nakil |
+| 54E35 | Metric spaces, metrizability | Mesâfeli fezâlar, mesâfelendirilebilirlik |  |
+| 54E40 | Special maps on metric spaces | Mesâfeli fezâlar üzerinde hususî tatbîkler |  |
+| 54E45 | Compact (locally compact) metric spaces | Mütarâs (mahallen mütarâs) mesâfeli fezâlar |  |
+| 54E50 | Complete metric spaces | Tam mesâfeli fezâlar |  |
+| 54E52 | Baire category, Baire spaces | Baire makûlesi, Baire fezâları | nakil |
+| 54E55 | Bitopologies | İki vaz'iyyetli bünyeler (bitopolojiler) |  |
+| 54E70 | Probabilistic metric spaces | İhtimâlî mesâfeli fezâlar |  |
 | 54E99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **54Fxx** | **Special properties of topological spaces** | **** |  |
-| 54F05 | Linearly ordered topological spaces, generalized ordered spaces, and partially ordered spaces [See also 06B30, 06F30] |  |  |
-| 54F15 | Continua and generalizations |  |  |
-| 54F16 | Hyperspaces of continua |  |  |
-| 54F17 | Inverse limits of set-valued functions |  |  |
-| 54F35 | Higher-dimensional local connectedness [See also 55Mxx, 55Nxx] |  |  |
-| 54F45 | Dimension theory in general topology [See also 55M10] |  |  |
-| 54F50 | Topological spaces of dimension ≤ 1; curves, dendrites [See also 26A03] |  |  |
-| 54F55 | Unicoherence, multicoherence |  |  |
-| 54F65 | Topological characterizations of particular spaces |  |  |
+| **54Fxx** | **Special properties of topological spaces** | **Vaz'î fezâların hususî vasıfları** |  |
+| 54F05 | Linearly ordered topological spaces, generalized ordered spaces, and partially ordered spaces [See also 06B30, 06F30] | Hattî müretteb vaz'î fezâlar, teşmîl edilmiş müretteb fezâlar ve kısmen müretteb fezâlar [Ayrıca bakınız: 06B30, 06F30] |  |
+| 54F15 | Continua and generalizations | Muttasıllar (kontinuumlar) ve umûmîleştirmeleri |  |
+| 54F16 | Hyperspaces of continua | Muttasılların fevka'l-fezâları |  |
+| 54F17 | Inverse limits of set-valued functions | Mecmûa kıymetli tâbilerin makûs nihâyetleri |  |
+| 54F35 | Higher-dimensional local connectedness [See also 55Mxx, 55Nxx] | Yüksek buudlu mahallî ittisal [Ayrıca bakınız: 55Mxx, 55Nxx] |  |
+| 54F45 | Dimension theory in general topology [See also 55M10] | Umûmî hendese-i vaz'iyyede buud nazariyesi [Ayrıca bakınız: 55M10] |  |
+| 54F50 | Topological spaces of dimension ≤ 1; curves, dendrites [See also 26A03] | Buudu ≤ 1 olan vaz'î fezâlar; münhanîler, dallı münhanîler (dendritler) [Ayrıca bakınız: 26A03] |  |
+| 54F55 | Unicoherence, multicoherence | Tek-irtibatlılık, çok-irtibatlılık (unikoherans, multikoherans) | şüpheli: "unicoherence" için lafzî terkip teklif edildi |
+| 54F65 | Topological characterizations of particular spaces | Muayyen fezâların vaz'î tavsîfleri |  |
 | 54F99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **54Gxx** | **Peculiar topological spaces** | **** |  |
-| 54G05 | Extremally disconnected spaces, F -spaces, etc. |  |  |
-| 54G10 | P -spaces |  |  |
-| 54G12 | Scattered spaces |  |  |
-| 54G15 | Pathological topological spaces |  |  |
-| 54G20 | Counterexamples in general topology |  |  |
+| **54Gxx** | **Peculiar topological spaces** | **Garîb vaz'î fezâlar** |  |
+| 54G05 | Extremally disconnected spaces, F -spaces, etc. | Nihâyet derecede gayr-ı muttasıl fezâlar, F-fezâları ve emsâli |  |
+| 54G10 | P -spaces | P-fezâları |  |
+| 54G12 | Scattered spaces | Dağınık fezâlar |  |
+| 54G15 | Pathological topological spaces | Marazî (patolojik) vaz'î fezâlar |  |
+| 54G20 | Counterexamples in general topology | Umûmî hendese-i vaz'iyyede aksi misaller |  |
 | 54G99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **54Hxx** | **Connections of general topology with other structures, applications** | **** |  |
-| 54H05 | Descriptive set theory (topological aspects of Borel, analytic, projective, etc. sets) [See also 03E15, 26A21, 28A05] |  |  |
-| 54H10 | Topological representations of algebraic systems [See also 22-XX] |  |  |
-| 54H11 | Topological groups (topological aspects) [See also 22A05] |  |  |
-| 54H12 | Topological lattices, etc. (topological aspects) [See also 06B30, 06F30] |  |  |
-| 54H13 | Topological fields, rings, etc. (topological aspects) [See also 12Jxx] {For algebraic aspects, see 13Jxx, 16W80} |  |  |
-| 54H15 | Transformation groups and semigroups (topological aspects) [See also 20M20, 22-XX, 57Sxx] |  |  |
-| 54H25 | Fixed-point and coincidence theorems (topological aspects) [See also 47H10, 55M20] |  |  |
-| 54H30 | Applications of general topology to computer science (e.g., digital topology, image processing) [See also 68U03] |  |  |
+| **54Hxx** | **Connections of general topology with other structures, applications** | **Umûmî hendese-i vaz'iyyenin diğer bünyelerle münasebetleri, tatbîkler** |  |
+| 54H05 | Descriptive set theory (topological aspects of Borel, analytic, projective, etc. sets) [See also 03E15, 26A21, 28A05] | Tasvîrî mecmûalar nazariyesi (Borel, tahlîlî, irtisâmî ve emsâli mecmûaların vaz'î cihetleri) [Ayrıca bakınız: 03E15, 26A21, 28A05] |  |
+| 54H10 | Topological representations of algebraic systems [See also 22-XX] | Cebrî nizâmların vaz'î temsilleri [Ayrıca bakınız: 22-XX] |  |
+| 54H11 | Topological groups (topological aspects) [See also 22A05] | Vaz'î zümreler (vaz'î cihetler) [Ayrıca bakınız: 22A05] |  |
+| 54H12 | Topological lattices, etc. (topological aspects) [See also 06B30, 06F30] | Vaz'î kafesler ve emsâli (vaz'î cihetler) [Ayrıca bakınız: 06B30, 06F30] |  |
+| 54H13 | Topological fields, rings, etc. (topological aspects) [See also 12Jxx] {For algebraic aspects, see 13Jxx, 16W80} | Vaz'î cisimler, halkalar ve emsâli (vaz'î cihetler) [Ayrıca bakınız: 12Jxx] {Cebrî cihetler için bakınız: 13Jxx, 16W80} |  |
+| 54H15 | Transformation groups and semigroups (topological aspects) [See also 20M20, 22-XX, 57Sxx] | Tahvîl zümreleri ve nîm-zümreleri (vaz'î cihetler) [Ayrıca bakınız: 20M20, 22-XX, 57Sxx] |  |
+| 54H25 | Fixed-point and coincidence theorems (topological aspects) [See also 47H10, 55M20] | Sâbit nokta ve tesâdüf (çakışma) kaziyyeleri (vaz'î cihetler) [Ayrıca bakınız: 47H10, 55M20] |  |
+| 54H30 | Applications of general topology to computer science (e.g., digital topology, image processing) [See also 68U03] | Umûmî hendese-i vaz'iyyenin hâsibât ilmine tatbîkleri (meselâ rakamî hendese-i vaz'iyye, sûret işleme) [Ayrıca bakınız: 68U03] |  |
 | 54H99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **54Jxx** | **Nonstandard topology [See also 03H05]** | **** |  |
-| 54J05 | Nonstandard topology [See also 03H05] |  |  |
+| **54Jxx** | **Nonstandard topology [See also 03H05]** | **Gayr-ı mi'yârî hendese-i vaz'iyye [Ayrıca bakınız: 03H05]** |  |
+| 54J05 | Nonstandard topology [See also 03H05] | Gayr-ı mi'yârî hendese-i vaz'iyye [Ayrıca bakınız: 03H05] |  |
 | 54J99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
-## 55-XX — Algebraic topology
+## 55-XX — Cebrî hendese-i vaz'iyye (cebirsel topoloji)
 
 Algebraic topology
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 55-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to algebraic topology |  |  |
-| 55-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to algebraic topology |  |  |
-| 55-02 | Research exposition (monographs, survey articles) pertaining to algebraic topology |  |  |
-| 55-03 | History of algebraic topology [Consider also classification numbers from Section 01] |  |  |
-| 55-04 | Software, source code, etc. for problems pertaining to algebraic topology |  |  |
-| 55-06 | Proceedings, conferences, collections, etc. pertaining to algebraic topology |  |  |
-| 55-08 | Computational methods for problems pertaining to algebraic topology |  |  |
-| 55-11 | Research data for problems pertaining to algebraic topology |  |  |
-| **55Mxx** | **Classical topics in algebraic topology {For the topology of Euclidean spaces and manifolds, see 57Nxx}** | **** |  |
-| 55M05 | Duality in algebraic topology |  |  |
-| 55M10 | Dimension theory in algebraic topology [See also 54F45] |  |  |
-| 55M15 | Absolute neighborhood retracts [See also 54C55] |  |  |
-| 55M20 | Fixed points and coincidences in algebraic topology [See also 54H25] |  |  |
-| 55M25 | Degree, winding number |  |  |
-| 55M30 | Lyusternik-Shnirel’man category of a space, topological complexity à la Farber, topological robotics (topological aspects) |  |  |
-| 55M35 | Finite groups of transformations in algebraic topology (including Smith theory) [See also 57S17] |  |  |
+| 55-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to algebraic topology | cebrî hendese-i vaz'iyye hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 55-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to algebraic topology | cebrî hendese-i vaz'iyye hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 55-02 | Research exposition (monographs, survey articles) pertaining to algebraic topology | cebrî hendese-i vaz'iyye hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 55-03 | History of algebraic topology [Consider also classification numbers from Section 01] | Cebrî hendese-i vaz'iyyenin târihi [01. babın tasnif numaralarına da bakılsın] |  |
+| 55-04 | Software, source code, etc. for problems pertaining to algebraic topology | cebrî hendese-i vaz'iyye sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 55-06 | Proceedings, conferences, collections, etc. pertaining to algebraic topology | cebrî hendese-i vaz'iyye hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 55-08 | Computational methods for problems pertaining to algebraic topology | cebrî hendese-i vaz'iyye sahasındaki meselelere dair hesap usulleri |  |
+| 55-11 | Research data for problems pertaining to algebraic topology | cebrî hendese-i vaz'iyye sahasındaki meselelere dair tetkik verileri |  |
+| **55Mxx** | **Classical topics in algebraic topology {For the topology of Euclidean spaces and manifolds, see 57Nxx}** | **Cebrî hendese-i vaz'iyyede klasik mevzûlar {Öklid fezâlarının ve müteşa'iblerin hendese-i vaz'iyyesi için bakınız: 57Nxx}** |  |
+| 55M05 | Duality in algebraic topology | Cebrî hendese-i vaz'iyyede müsennâlık |  |
+| 55M10 | Dimension theory in algebraic topology [See also 54F45] | Cebrî hendese-i vaz'iyyede buud nazariyesi [Ayrıca bakınız: 54F45] |  |
+| 55M15 | Absolute neighborhood retracts [See also 54C55] | Mutlak civar geri çekmeleri [Ayrıca bakınız: 54C55] |  |
+| 55M20 | Fixed points and coincidences in algebraic topology [See also 54H25] | Cebrî hendese-i vaz'iyyede sâbit noktalar ve tesâdüfler (çakışmalar) [Ayrıca bakınız: 54H25] |  |
+| 55M25 | Degree, winding number | Derece, dolanma adedi |  |
+| 55M30 | Lyusternik-Shnirel’man category of a space, topological complexity à la Farber, topological robotics (topological aspects) | Bir fezânın Lyusternik-Shnirel'man makûlesi, Farber tarzında vaz'î mürekkebiyet, vaz'î insan-nümâ âletler ilmi (robotik) (vaz'î cihetler) | nakil |
+| 55M35 | Finite groups of transformations in algebraic topology (including Smith theory) [See also 57S17] | Cebrî hendese-i vaz'iyyede mütenâhî tahvîl zümreleri (Smith nazariyesi dahil) [Ayrıca bakınız: 57S17] |  |
 | 55M99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **55Nxx** | **Homology and cohomology theories in algebraic topology {For homology and cohomology of topological groups and related structures, see 57Txx}** | **** |  |
-| 55N05 | Čech types |  |  |
-| 55N07 | Steenrod-Sitnikov homologies |  |  |
-| 55N10 | Singular homology and cohomology theory |  |  |
-| 55N15 | Topological K-theory [See also 19Lxx] {For algebraic K-theory, see 18F25, 19-XX} |  |  |
-| 55N20 | Generalized (extraordinary) homology and cohomology theories in algebraic topology |  |  |
-| 55N22 | Bordism and cobordism theories and formal group laws in algebraic topology [See also 14L05, 19L41, 57R75, 57R77, 57R85, 57R90] |  |  |
-| 55N25 | Homology with local coefficients, equivariant cohomology |  |  |
-| 55N30 | Sheaf cohomology in algebraic topology [See also 18F20, 32C35, 32L10] |  |  |
-| 55N31 | Persistent homology and applications, topological data analysis [See also 62R40, 68T09] |  |  |
-| 55N32 | Orbifold cohomology |  |  |
-| 55N33 | Intersection homology and cohomology in algebraic topology |  |  |
-| 55N34 | Elliptic cohomology |  |  |
-| 55N35 | Other homology theories in algebraic topology |  |  |
-| 55N40 | Axioms for homology theory and uniqueness theorems in algebraic topology |  |  |
-| 55N45 | Products and intersections in homology and cohomology |  |  |
-| 55N91 | Equivariant homology and cohomology in algebraic topology [See also 19L47] |  |  |
+| **55Nxx** | **Homology and cohomology theories in algebraic topology {For homology and cohomology of topological groups and related structures, see 57Txx}** | **Cebrî hendese-i vaz'iyyede tecânüs ve mukābil-tecânüs nazariyeleri {Vaz'î zümrelerin ve alâkalı bünyelerin tecânüsü ve mukābil-tecânüsü için bakınız: 57Txx}** |  |
+| 55N05 | Čech types | Čech nev'leri | nakil |
+| 55N07 | Steenrod-Sitnikov homologies | Steenrod-Sitnikov tecânüsleri | nakil |
+| 55N10 | Singular homology and cohomology theory | Münferid tecânüs ve mukābil-tecânüs nazariyesi |  |
+| 55N15 | Topological K-theory [See also 19Lxx] {For algebraic K-theory, see 18F25, 19-XX} | Vaz'î K-nazariyesi [Ayrıca bakınız: 19Lxx] {Cebrî K-nazariyesi için bakınız: 18F25, 19-XX} | nakil |
+| 55N20 | Generalized (extraordinary) homology and cohomology theories in algebraic topology | Cebrî hendese-i vaz'iyyede teşmîl edilmiş (fevka'l-âde) tecânüs ve mukābil-tecânüs nazariyeleri |  |
+| 55N22 | Bordism and cobordism theories and formal group laws in algebraic topology [See also 14L05, 19L41, 57R75, 57R77, 57R85, 57R90] | Cebrî hendese-i vaz'iyyede hudûdlaşma (bordizm) ve mukābil-hudûdlaşma nazariyeleri ve sûrî zümre kanunları [Ayrıca bakınız: 14L05, 19L41, 57R75, 57R77, 57R85, 57R90] | şüpheli: "bordism" için "hudûdlaşma" teklif edildi |
+| 55N25 | Homology with local coefficients, equivariant cohomology | Mahallî emsalli tecânüs, müsâvî-tegayyürlü mukābil-tecânüs |  |
+| 55N30 | Sheaf cohomology in algebraic topology [See also 18F20, 32C35, 32L10] | Cebrî hendese-i vaz'iyyede deste mukābil-tecânüsü [Ayrıca bakınız: 18F20, 32C35, 32L10] |  |
+| 55N31 | Persistent homology and applications, topological data analysis [See also 62R40, 68T09] | Müdâvim (ısrarlı) tecânüs ve tatbîkleri, vaz'î veri tahlîli [Ayrıca bakınız: 62R40, 68T09] |  |
+| 55N32 | Orbifold cohomology | Orbifold mukābil-tecânüsü | nakil |
+| 55N33 | Intersection homology and cohomology in algebraic topology | Cebrî hendese-i vaz'iyyede kesişme tecânüsü ve mukābil-tecânüsü |  |
+| 55N34 | Elliptic cohomology | İhlîlecî mukābil-tecânüs |  |
+| 55N35 | Other homology theories in algebraic topology | Cebrî hendese-i vaz'iyyede sâir tecânüs nazariyeleri |  |
+| 55N40 | Axioms for homology theory and uniqueness theorems in algebraic topology | Cebrî hendese-i vaz'iyyede tecânüs nazariyesi için mütearifeler ve vahdet kaziyyeleri |  |
+| 55N45 | Products and intersections in homology and cohomology | Tecânüs ve mukābil-tecânüste hâsıl-ı zarblar ve kesişmeler |  |
+| 55N91 | Equivariant homology and cohomology in algebraic topology [See also 19L47] | Cebrî hendese-i vaz'iyyede müsâvî-tegayyürlü tecânüs ve mukābil-tecânüs [Ayrıca bakınız: 19L47] |  |
 | 55N99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **55Pxx** | **Homotopy theory {For simple homotopy type, see 57Q10}** | **** |  |
-| 55P05 | Homotopy extension properties, cofibrations in algebraic topology |  |  |
-| 55P10 | Homotopy equivalences in algebraic topology |  |  |
-| 55P15 | Classification of homotopy type |  |  |
-| 55P20 | Eilenberg-Mac Lane spaces |  |  |
-| 55P25 | Spanier-Whitehead duality |  |  |
-| 55P30 | Eckmann-Hilton duality |  |  |
-| 55P35 | Loop spaces |  |  |
-| 55P40 | Suspensions |  |  |
-| 55P42 | Stable homotopy theory, spectra |  |  |
-| 55P43 | Spectra with additional structure (E∞ , A∞ , ring spectra, etc.) |  |  |
-| 55P45 | H-spaces and duals |  |  |
-| 55P47 | Infinite loop spaces |  |  |
-| 55P48 | Loop space machines and operads in algebraic topology [See also 18Mxx] |  |  |
-| 55P50 | String topology |  |  |
-| 55P55 | Shape theory [See also 54C56, 55Q07] |  |  |
-| 55P57 | Proper homotopy theory |  |  |
-| 55P60 | Localization and completion in homotopy theory |  |  |
-| 55P62 | Rational homotopy theory |  |  |
-| 55P65 | Homotopy functors in algebraic topology |  |  |
-| 55P91 | Equivariant homotopy theory in algebraic topology [See also 19L47] |  |  |
-| 55P92 | Relations between equivariant and nonequivariant homotopy theory in algebraic topology |  |  |
+| **55Pxx** | **Homotopy theory {For simple homotopy type, see 57Q10}** | **Tahavvül-i muttasıl (homotopi) nazariyesi {Basît tahavvül-i muttasıl nev'i için bakınız: 57Q10}** |  |
+| 55P05 | Homotopy extension properties, cofibrations in algebraic topology | Cebrî hendese-i vaz'iyyede tahavvül-i muttasıl temdîd vasıfları, mukābil-lîflenmeler |  |
+| 55P10 | Homotopy equivalences in algebraic topology | Cebrî hendese-i vaz'iyyede tahavvül-i muttasıl müsâvâtları |  |
+| 55P15 | Classification of homotopy type | Tahavvül-i muttasıl nev'inin tasnifi |  |
+| 55P20 | Eilenberg-Mac Lane spaces | Eilenberg-Mac Lane fezâları | nakil |
+| 55P25 | Spanier-Whitehead duality | Spanier-Whitehead müsennâlığı | nakil |
+| 55P30 | Eckmann-Hilton duality | Eckmann-Hilton müsennâlığı | nakil |
+| 55P35 | Loop spaces | Ilmık (halka-yol) fezâları |  |
+| 55P40 | Suspensions | Asmalar (süspansiyonlar) |  |
+| 55P42 | Stable homotopy theory, spectra | Müstakarr tahavvül-i muttasıl nazariyesi, tayflar |  |
+| 55P43 | Spectra with additional structure (E∞ , A∞ , ring spectra, etc.) | İlâve bünyeli tayflar (E∞, A∞, halka tayfları ve emsâli) |  |
+| 55P45 | H-spaces and duals | H-fezâları ve müsennâları | nakil |
+| 55P47 | Infinite loop spaces | Gayr-ı mütenâhî ılmık fezâları |  |
+| 55P48 | Loop space machines and operads in algebraic topology [See also 18Mxx] | Cebrî hendese-i vaz'iyyede ılmık fezâsı makineleri ve operadlar [Ayrıca bakınız: 18Mxx] | nakil |
+| 55P50 | String topology | Sicim hendese-i vaz'iyyesi |  |
+| 55P55 | Shape theory [See also 54C56, 55Q07] | Şekil nazariyesi [Ayrıca bakınız: 54C56, 55Q07] |  |
+| 55P57 | Proper homotopy theory | Hâs (proper) tahavvül-i muttasıl nazariyesi |  |
+| 55P60 | Localization and completion in homotopy theory | Tahavvül-i muttasıl nazariyesinde mahallîleştirme ve tetmîm |  |
+| 55P62 | Rational homotopy theory | Muntak tahavvül-i muttasıl nazariyesi |  |
+| 55P65 | Homotopy functors in algebraic topology | Cebrî hendese-i vaz'iyyede tahavvül-i muttasıl nâkilleri |  |
+| 55P91 | Equivariant homotopy theory in algebraic topology [See also 19L47] | Cebrî hendese-i vaz'iyyede müsâvî-tegayyürlü tahavvül-i muttasıl nazariyesi [Ayrıca bakınız: 19L47] |  |
+| 55P92 | Relations between equivariant and nonequivariant homotopy theory in algebraic topology | Cebrî hendese-i vaz'iyyede müsâvî-tegayyürlü ve müsâvî-tegayyürlü olmayan tahavvül-i muttasıl nazariyeleri arasındaki münasebetler |  |
 | 55P99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **55Qxx** | **Homotopy groups** | **** |  |
-| 55Q05 | Homotopy groups, general; sets of homotopy classes |  |  |
-| 55Q07 | Shape groups |  |  |
-| 55Q10 | Stable homotopy groups |  |  |
-| 55Q15 | Whitehead products and generalizations |  |  |
-| 55Q20 | Homotopy groups of wedges, joins, and simple spaces |  |  |
-| 55Q25 | Hopf invariants |  |  |
-| 55Q35 | Operations in homotopy groups |  |  |
-| 55Q40 | Homotopy groups of spheres |  |  |
-| 55Q45 | Stable homotopy of spheres |  |  |
-| 55Q50 | J-morphism [See also 19L20] |  |  |
-| 55Q51 | vn -periodicity |  |  |
-| 55Q52 | Homotopy groups of special spaces |  |  |
-| 55Q55 | Cohomotopy groups |  |  |
-| 55Q70 | Homotopy groups of special types [See also 55N05, 55N07] |  |  |
-| 55Q91 | Equivariant homotopy groups [See also 19L47] |  |  |
+| **55Qxx** | **Homotopy groups** | **Tahavvül-i muttasıl zümreleri** |  |
+| 55Q05 | Homotopy groups, general; sets of homotopy classes | Tahavvül-i muttasıl zümreleri, umûmî; tahavvül-i muttasıl sınıflarının mecmûaları |  |
+| 55Q07 | Shape groups | Şekil zümreleri |  |
+| 55Q10 | Stable homotopy groups | Müstakarr tahavvül-i muttasıl zümreleri |  |
+| 55Q15 | Whitehead products and generalizations | Whitehead hâsıl-ı zarbları ve umûmîleştirmeleri | nakil |
+| 55Q20 | Homotopy groups of wedges, joins, and simple spaces | Kamaların, birleştirmelerin ve basît fezâların tahavvül-i muttasıl zümreleri |  |
+| 55Q25 | Hopf invariants | Hopf lâyetegayyerleri | nakil |
+| 55Q35 | Operations in homotopy groups | Tahavvül-i muttasıl zümrelerinde ameliyeler |  |
+| 55Q40 | Homotopy groups of spheres | Kürelerin tahavvül-i muttasıl zümreleri |  |
+| 55Q45 | Stable homotopy of spheres | Kürelerin müstakarr tahavvül-i muttasılı |  |
+| 55Q50 | J-morphism [See also 19L20] | J-teşâkülü [Ayrıca bakınız: 19L20] | nakil |
+| 55Q51 | vn -periodicity | V_n-devriyeti | nakil |
+| 55Q52 | Homotopy groups of special spaces | Hususî fezâların tahavvül-i muttasıl zümreleri |  |
+| 55Q55 | Cohomotopy groups | Mukābil-tahavvül-i muttasıl zümreleri |  |
+| 55Q70 | Homotopy groups of special types [See also 55N05, 55N07] | Hususî nev'den tahavvül-i muttasıl zümreleri [Ayrıca bakınız: 55N05, 55N07] |  |
+| 55Q91 | Equivariant homotopy groups [See also 19L47] | Müsâvî-tegayyürlü tahavvül-i muttasıl zümreleri [Ayrıca bakınız: 19L47] |  |
 | 55Q99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **55Rxx** | **Fiber spaces and bundles in algebraic topology [See also 18F15, 32Lxx, 46M20, 57R20, 57R22, 57R25]** | **** |  |
-| 55R05 | Fiber spaces in algebraic topology |  |  |
-| 55R10 | Fiber bundles in algebraic topology |  |  |
-| 55R12 | Transfer for fiber spaces and bundles in algebraic topology |  |  |
-| 55R15 | Classification of fiber spaces or bundles in algebraic topology |  |  |
-| 55R20 | Spectral sequences and homology of fiber spaces in algebraic topology [See also 55Txx] |  |  |
-| 55R25 | Sphere bundles and vector bundles in algebraic topology |  |  |
-| 55R35 | Classifying spaces of groups and H-spaces in algebraic topology |  |  |
-| 55R37 | Maps between classifying spaces in algebraic topology |  |  |
-| 55R40 | Homology of classifying spaces and characteristic classes in algebraic topology [See also 57Txx, 57R20] |  |  |
-| 55R45 | Homology and homotopy of BO and BU; Bott periodicity |  |  |
-| 55R50 | Stable classes of vector space bundles in algebraic topology and relations to K-theory [See also 19Lxx] {For algebraic K-theory, see 18F25, 19-XX} |  |  |
-| 55R55 | Fiberings with singularities in algebraic topology |  |  |
-| 55R60 | Microbundles and block bundles in algebraic topology [See also 57N55, 57Q50] |  |  |
-| 55R65 | Generalizations of fiber spaces and bundles in algebraic topology |  |  |
-| 55R70 | Fibrewise topology |  |  |
-| 55R80 | Discriminantal varieties and configuration spaces in algebraic topology |  |  |
-| 55R91 | Equivariant fiber spaces and bundles in algebraic topology [See also 19L47] |  |  |
+| **55Rxx** | **Fiber spaces and bundles in algebraic topology [See also 18F15, 32Lxx, 46M20, 57R20, 57R22, 57R25]** | **Cebrî hendese-i vaz'iyyede lîfî fezâlar ve huzmeler [Ayrıca bakınız: 18F15, 32Lxx, 46M20, 57R20, 57R22, 57R25]** |  |
+| 55R05 | Fiber spaces in algebraic topology | Cebrî hendese-i vaz'iyyede lîfî fezâlar |  |
+| 55R10 | Fiber bundles in algebraic topology | Cebrî hendese-i vaz'iyyede lîfî huzmeler |  |
+| 55R12 | Transfer for fiber spaces and bundles in algebraic topology | Cebrî hendese-i vaz'iyyede lîfî fezâlar ve huzmeler için nakil (transfer) |  |
+| 55R15 | Classification of fiber spaces or bundles in algebraic topology | Cebrî hendese-i vaz'iyyede lîfî fezâların yahut huzmelerin tasnifi |  |
+| 55R20 | Spectral sequences and homology of fiber spaces in algebraic topology [See also 55Txx] | Cebrî hendese-i vaz'iyyede tayfî tevâlîler ve lîfî fezâların tecânüsü [Ayrıca bakınız: 55Txx] |  |
+| 55R25 | Sphere bundles and vector bundles in algebraic topology | Cebrî hendese-i vaz'iyyede küre huzmeleri ve müteveccihe huzmeleri |  |
+| 55R35 | Classifying spaces of groups and H-spaces in algebraic topology | Cebrî hendese-i vaz'iyyede zümrelerin ve H-fezâlarının tasnif edici fezâları |  |
+| 55R37 | Maps between classifying spaces in algebraic topology | Cebrî hendese-i vaz'iyyede tasnif edici fezâlar arasındaki tatbîkler |  |
+| 55R40 | Homology of classifying spaces and characteristic classes in algebraic topology [See also 57Txx, 57R20] | Cebrî hendese-i vaz'iyyede tasnif edici fezâların tecânüsü ve hâssa sınıfları [Ayrıca bakınız: 57Txx, 57R20] |  |
+| 55R45 | Homology and homotopy of BO and BU; Bott periodicity | BO ve BU'nun tecânüsü ve tahavvül-i muttasılı; Bott devriyeti | nakil |
+| 55R50 | Stable classes of vector space bundles in algebraic topology and relations to K-theory [See also 19Lxx] {For algebraic K-theory, see 18F25, 19-XX} | Cebrî hendese-i vaz'iyyede müteveccihe fezâsı huzmelerinin müstakarr sınıfları ve K-nazariyesiyle münasebetleri [Ayrıca bakınız: 19Lxx] {Cebrî K-nazariyesi için bakınız: 18F25, 19-XX} |  |
+| 55R55 | Fiberings with singularities in algebraic topology | Cebrî hendese-i vaz'iyyede infirâdlı lîflenmeler |  |
+| 55R60 | Microbundles and block bundles in algebraic topology [See also 57N55, 57Q50] | Cebrî hendese-i vaz'iyyede mikro-huzmeler ve blok huzmeler [Ayrıca bakınız: 57N55, 57Q50] |  |
+| 55R65 | Generalizations of fiber spaces and bundles in algebraic topology | Cebrî hendese-i vaz'iyyede lîfî fezâların ve huzmelerin umûmîleştirmeleri |  |
+| 55R70 | Fibrewise topology | Lîf lîf hendese-i vaz'iyye |  |
+| 55R80 | Discriminantal varieties and configuration spaces in algebraic topology | Cebrî hendese-i vaz'iyyede mümeyyiz mütenevviâtı ve heyet (konfigürasyon) fezâları |  |
+| 55R91 | Equivariant fiber spaces and bundles in algebraic topology [See also 19L47] | Cebrî hendese-i vaz'iyyede müsâvî-tegayyürlü lîfî fezâlar ve huzmeler [Ayrıca bakınız: 19L47] |  |
 | 55R99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **55Sxx** | **Operations and obstructions in algebraic topology** | **** |  |
-| 55S05 | Primary cohomology operations in algebraic topology |  |  |
-| 55S10 | Steenrod algebra |  |  |
-| 55S12 | Dyer-Lashof operations |  |  |
-| 55S15 | Symmetric products and cyclic products in algebraic topology |  |  |
-| 55S20 | Secondary and higher cohomology operations in algebraic topology |  |  |
-| 55S25 | K-theory operations and generalized cohomology operations in algebraic topology [See also 19D55, 19Lxx] |  |  |
-| 55S30 | Massey products |  |  |
-| 55S35 | Obstruction theory in algebraic topology |  |  |
-| 55S36 | Extension and compression of mappings in algebraic topology |  |  |
-| 55S37 | Classification of mappings in algebraic topology |  |  |
-| 55S40 | Sectioning fiber spaces and bundles in algebraic topology |  |  |
-| 55S45 | Postnikov systems, k-invariants |  |  |
-| 55S91 | Equivariant operations and obstructions in algebraic topology [See also 19L47] |  |  |
+| **55Sxx** | **Operations and obstructions in algebraic topology** | **Cebrî hendese-i vaz'iyyede ameliyeler ve mânialar** |  |
+| 55S05 | Primary cohomology operations in algebraic topology | Cebrî hendese-i vaz'iyyede ibtidâî mukābil-tecânüs ameliyeleri |  |
+| 55S10 | Steenrod algebra | Steenrod cebiri | nakil |
+| 55S12 | Dyer-Lashof operations | Dyer-Lashof ameliyeleri | nakil |
+| 55S15 | Symmetric products and cyclic products in algebraic topology | Cebrî hendese-i vaz'iyyede mütenâzır hâsıl-ı zarblar ve devrî hâsıl-ı zarblar |  |
+| 55S20 | Secondary and higher cohomology operations in algebraic topology | Cebrî hendese-i vaz'iyyede ikincil ve yüksek mukābil-tecânüs ameliyeleri |  |
+| 55S25 | K-theory operations and generalized cohomology operations in algebraic topology [See also 19D55, 19Lxx] | Cebrî hendese-i vaz'iyyede K-nazariyesi ameliyeleri ve teşmîl edilmiş mukābil-tecânüs ameliyeleri [Ayrıca bakınız: 19D55, 19Lxx] |  |
+| 55S30 | Massey products | Massey hâsıl-ı zarbları | nakil |
+| 55S35 | Obstruction theory in algebraic topology | Cebrî hendese-i vaz'iyyede mânia nazariyesi |  |
+| 55S36 | Extension and compression of mappings in algebraic topology | Cebrî hendese-i vaz'iyyede tatbîklerin temdîdi ve tazyîki |  |
+| 55S37 | Classification of mappings in algebraic topology | Cebrî hendese-i vaz'iyyede tatbîklerin tasnifi |  |
+| 55S40 | Sectioning fiber spaces and bundles in algebraic topology | Cebrî hendese-i vaz'iyyede lîfî fezâların ve huzmelerin kesitlenmesi |  |
+| 55S45 | Postnikov systems, k-invariants | Postnikov nizâmları, k-lâyetegayyerleri | nakil |
+| 55S91 | Equivariant operations and obstructions in algebraic topology [See also 19L47] | Cebrî hendese-i vaz'iyyede müsâvî-tegayyürlü ameliyeler ve mânialar [Ayrıca bakınız: 19L47] |  |
 | 55S99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **55Txx** | **Spectral sequences in algebraic topology [See also 18G40, 55R20]** | **** |  |
-| 55T05 | General theory of spectral sequences in algebraic topology |  |  |
-| 55T10 | Serre spectral sequences |  |  |
-| 55T15 | Adams spectral sequences |  |  |
-| 55T20 | Eilenberg-Moore spectral sequences [See also 57T35] |  |  |
-| 55T25 | Generalized cohomology and spectral sequences in algebraic topology |  |  |
+| **55Txx** | **Spectral sequences in algebraic topology [See also 18G40, 55R20]** | **Cebrî hendese-i vaz'iyyede tayfî tevâlîler [Ayrıca bakınız: 18G40, 55R20]** |  |
+| 55T05 | General theory of spectral sequences in algebraic topology | Cebrî hendese-i vaz'iyyede tayfî tevâlîlerin umûmî nazariyesi |  |
+| 55T10 | Serre spectral sequences | Serre tayfî tevâlîleri | nakil |
+| 55T15 | Adams spectral sequences | Adams tayfî tevâlîleri | nakil |
+| 55T20 | Eilenberg-Moore spectral sequences [See also 57T35] | Eilenberg-Moore tayfî tevâlîleri [Ayrıca bakınız: 57T35] | nakil |
+| 55T25 | Generalized cohomology and spectral sequences in algebraic topology | Cebrî hendese-i vaz'iyyede teşmîl edilmiş mukābil-tecânüs ve tayfî tevâlîler |  |
 | 55T99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **55Uxx** | **Applied homological algebra and category theory in algebraic topology [See also 18Gxx]** | **** |  |
-| 55U05 | Abstract complexes in algebraic topology |  |  |
-| 55U10 | Simplicial sets and complexes in algebraic topology |  |  |
-| 55U15 | Chain complexes in algebraic topology |  |  |
-| 55U20 | Universal coefficient theorems, Bockstein operator |  |  |
-| 55U25 | Homology of a product, Künneth formula |  |  |
-| 55U30 | Duality in applied homological algebra and category theory (aspects of algebraic topology) |  |  |
-| 55U35 | Abstract and axiomatic homotopy theory in algebraic topology |  |  |
-| 55U40 | Topological categories, foundations of homotopy theory |  |  |
+| **55Uxx** | **Applied homological algebra and category theory in algebraic topology [See also 18Gxx]** | **Cebrî hendese-i vaz'iyyede tatbîkî tecânüsî cebir ve makûlât nazariyesi [Ayrıca bakınız: 18Gxx]** |  |
+| 55U05 | Abstract complexes in algebraic topology | Cebrî hendese-i vaz'iyyede mücerred mürekkebât (kompleksler) |  |
+| 55U10 | Simplicial sets and complexes in algebraic topology | Cebrî hendese-i vaz'iyyede basît (simpleksî) mecmûalar ve mürekkebât |  |
+| 55U15 | Chain complexes in algebraic topology | Cebrî hendese-i vaz'iyyede zincir mürekkebâtı |  |
+| 55U20 | Universal coefficient theorems, Bockstein operator | Şümûlî emsal kaziyyeleri, Bockstein âmili | nakil |
+| 55U25 | Homology of a product, Künneth formula | Bir hâsıl-ı zarbın tecânüsü, Künneth düsturu | nakil |
+| 55U30 | Duality in applied homological algebra and category theory (aspects of algebraic topology) | Tatbîkî tecânüsî cebir ve makûlât nazariyesinde müsennâlık (cebrî hendese-i vaz'iyyeye ait cihetler) |  |
+| 55U35 | Abstract and axiomatic homotopy theory in algebraic topology | Cebrî hendese-i vaz'iyyede mücerred ve mütearifevî tahavvül-i muttasıl nazariyesi |  |
+| 55U40 | Topological categories, foundations of homotopy theory | Vaz'î makûleler, tahavvül-i muttasıl nazariyesinin esasları |  |
 | 55U99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
 ## 57-XX — Manifolds and cell complexes {For complex manifolds, see 32Qxx}
