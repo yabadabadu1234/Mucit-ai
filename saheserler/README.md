@@ -28,7 +28,7 @@ Dürüstlük îcâbı şunu da kaydedeyim: Vikipedi listeleri de nihâyetinde ik
 | Cüz | Sahalar | Dosya |
 | :-- | :-- | :-- |
 | Birinci | 00, 01, 03, 05, 06, 08, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22 | [01_temeller_cebir_sayilar.md](01_temeller_cebir_sayilar.md) |
-| İkinci | 26, 28, 30, 31, 32, 33, 34, 35, 37, 39, 40, 41, 42, 43, 44, 45, 46, 47, 49 | (hazırlanmaktadır) |
+| İkinci | 26, 28, 30, 31, 32, 33, 34, 35, 37, 39, 40, 41, 42, 43, 44, 45, 46, 47, 49 | [02_tahlil.md](02_tahlil.md) |
 | Üçüncü | 51, 52, 53, 54, 55, 57, 58 | (hazırlanmaktadır) |
 | Dördüncü | 60, 62, 65, 68, 70, 74, 76, 78, 80, 81, 82, 83, 85, 86, 90, 91, 92, 93, 94, 97 | (hazırlanmaktadır) |
 
