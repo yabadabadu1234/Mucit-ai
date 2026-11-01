@@ -99,6 +99,185 @@ Bu eserlerin hepsinin müellifi 1955'ten sonra vefat etmiştir yahut hayattadır
 
 ---
 
-## İkinci ve üçüncü cüz
+## İkinci, üçüncü ve dördüncü cüz (sahalar 26–97)
 
-Kardeş parçacık ikinci cüzü (sahalar 26–49, tahlil) ve üçüncü cüzü (sahalar 51–58, hendese ve topoloji) depoya yazdığını haber vermiştir. Bu cüzler baştan sona okunup buraya aynı usulle geçirilecektir.
+Kardeş parçacığın `saheserler/02_tahlil.md`, `03_hendese_topoloji.md` ve `04_ihtimal_tatbikat.md` dosyaları baştan sona okunmuştur. Aşağıda yalnız **Açık** ve **Karışık** olanlar tek tek yazılmıştır. Bu cüzlerde burada adı geçmeyen bütün eserler, müellifleri 1955'ten sonra vefat ettiği yahut hayatta olduğu **ve** 1930'dan sonra neşredildiği için **teliflidir**; tam metinleri depoya konmaz. Nüshalar henüz yoklanmamıştır ("aranacak"); yoklandıkça buraya adresleri yazılacaktır.
+
+### Açık eserler
+
+| Saha | Eser | Müellifin vefatı · neşir |
+| :-- | :-- | :-- |
+| 26 | Leibniz, *Nova methodus pro maximis et minimis* | 1716 · 1684 |
+| 26, 40 | Euler, *Introductio in analysin infinitorum* | 1783 · 1748 |
+| 26, 39 | Euler, *Institutiones calculi differentialis* | 1783 · 1755 |
+| 26, 39 | Cauchy, *Cours d'analyse* | 1857 · 1821 |
+| 26, 42 | Riemann, *Über die Darstellbarkeit einer Function durch eine trigonometrische Reihe* | 1866 · 1867 |
+| 26 | Dedekind, *Stetigkeit und irrationale Zahlen* | 1916 · 1872 |
+| 26 | Hardy, *A Course of Pure Mathematics* (1908 birinci baskı) | 1947 · 1908 |
+| 28 | Lebesgue, *Intégrale, longueur, aire* | 1941 · 1902 |
+| 28 | Carathéodory, *Vorlesungen über reelle Funktionen* | 1950 · 1918 |
+| 30 | Cauchy, *Mémoire sur les intégrales définies prises entre des limites imaginaires* | 1857 · 1825 |
+| 30 | Riemann, *Grundlagen für eine allgemeine Theorie der Functionen* (doktora tezi) | 1866 · 1851 |
+| 30 | Riemann, *Theorie der Abel'schen Functionen* | 1866 · 1857 |
+| 30 | Weyl, *Die Idee der Riemannschen Fläche* | 1955 · 1913 |
+| 31 | Green, *An Essay on the Application of Mathematical Analysis to the Theories of Electricity and Magnetism* | 1841 · 1828 |
+| 31 | Gauss, *Allgemeine Lehrsätze* (cazibe ve itme kuvvetleri) | 1855 · 1840 |
+| 31 | Kellogg, *Foundations of Potential Theory* | 1932 · 1929 |
+| 33 | Gauss, *Disquisitiones generales circa seriem infinitam* | 1855 · 1812 |
+| 33 | Jacobi, *Fundamenta nova theoriae functionum ellipticarum* | 1851 · 1829 |
+| 34 | Euler, *Institutionum calculi integralis* | 1783 · 1768–1770 |
+| 34 | Poincaré, *Mémoire sur les courbes définies par une équation différentielle* | 1912 · 1881–1886 |
+| 34 | Lyapunov, *Obshchaya zadacha ob ustoychivosti dvizheniya* | 1918 · 1892 |
+| 34 | Ince, *Ordinary Differential Equations* | 1941 · 1926 |
+| 35 | d'Alembert, *Recherches sur la courbe que forme une corde tenduë* | 1783 · 1747 |
+| 35, 42 | Fourier, *Mémoire sur la propagation de la chaleur* ve *Théorie analytique de la chaleur* | 1830 · 1807 ve 1822 |
+| 37, 85 | Poincaré, *Les méthodes nouvelles de la mécanique céleste* | 1912 · 1892–1899 |
+| 37 | Birkhoff, *Dynamical Systems* | 1944 · 1927 |
+| 39 | Boole, *A Treatise on the Calculus of Finite Differences* | 1864 · 1860 |
+| 40 | Jyeṣṭhadeva, *Yuktibhāṣā* | kadîm · takrîben 1530 |
+| 40 | Abel, iki terimli silsile makalesi | 1829 · 1826 |
+| 40 | Bromwich, *An Introduction to the Theory of Infinite Series* | 1929 · 1908 |
+| 41 | Kâşî, *er-Risâletü'l-muhîtiyye* | kadîm · 1424 |
+| 41 | Chebyshev, *Théorie des mécanismes connus sous le nom de parallélogrammes* | 1894 · 1854 |
+| 41 | Weierstrass, *Über die analytische Darstellbarkeit sogenannter willkürlicher Functionen* | 1897 · 1885 |
+| 42 | Dirichlet, *Sur la convergence des séries trigonométriques* | 1859 · 1829 |
+| 43 | Peter ve Weyl, *Die Vollständigkeit der primitiven Darstellungen* (Peter'in vefat yılı yoklanacak) | 1955 · 1927 |
+| 44, 60 | Laplace, *Théorie analytique des probabilités* | 1827 · 1812 |
+| 44 | Heaviside, *Electromagnetic Theory* | 1925 · 1893–1912 |
+| 45 | Abel, *Auflösung einer mechanischen Aufgabe* | 1829 · 1826 |
+| 45 | Volterra, 1896 makaleleri | 1940 · 1896 |
+| 45 | Fredholm, *Sur une classe d'équations fonctionnelles* | 1927 · 1903 |
+| 45 | Hilbert, *Grundzüge einer allgemeinen Theorie der linearen Integralgleichungen* | 1943 · 1912 |
+| 49 | Johann Bernoulli, brakistokron meselesi | 1748 · 1696 |
+| 49 | Euler, *Methodus inveniendi lineas curvas* | 1783 · 1744 |
+| 49 | Lagrange, *Essai d'une nouvelle méthode pour déterminer les maxima et les minima* | 1813 · 1761 |
+| 49 | Tonelli, *Fondamenti di calcolo delle variazioni* | 1946 · 1921–1923 |
+| 51 | Apollonios, *Kōnika* | kadîm |
+| 51 | Baudhāyana, *Śulbasūtra* | kadîm |
+| 51 | Ömer Hayyâm, müvâzîler risâlesi | kadîm · 1077 |
+| 51 | Tûsî, *Tahrîru Usûli Öklîdis* | kadîm |
+| 51 | Ebü'l-Vefâ el-Bûzcânî, hendesî inşalar kitabı | kadîm |
+| 51 | Descartes, *La Géométrie* | 1650 · 1637 |
+| 51 | Poncelet, *Traité des propriétés projectives des figures* | 1867 · 1822 |
+| 51 | Klein, *Erlangen Programı* | 1925 · 1872 |
+| 51 | Hilbert, *Grundlagen der Geometrie* | 1943 · 1899 |
+| 51 | Lobachevsky, *O nachalakh geometrii*; Bolyai, *Appendix* | 1856 ve 1860 · 1829–1832 |
+| 51, 97 | Kiselyov, *Geometriya* | 1940 · 1892 |
+| 52 | Dehn, Hilbert'in üçüncü meselesinin halli | 1952 · 1901 |
+| 53 | Euler, *Recherches sur la courbure des surfaces* | 1783 · 1767 |
+| 53 | Gauss, *Disquisitiones generales circa superficies curvas* | 1855 · 1827 |
+| 53 | Riemann, *Über die Hypothesen, welche der Geometrie zu Grunde liegen* | 1866 · 1867 |
+| 53 | Darboux, *Leçons sur la théorie générale des surfaces* | 1917 · 1887–1896 |
+| 53 | Ricci ve Levi-Civita, *Méthodes de calcul différentiel absolu* | 1925 ve 1941 · 1900 |
+| 53 | Élie Cartan, 1930'dan evvelki eserleri | 1951 · 1899–1930 |
+| 55 | Poincaré, *Analysis Situs* ve beş tamamlayıcısı | 1912 · 1895–1904 |
+| 60 | Cardano, *Liber de ludo aleae* | 1576 · 1663 |
+| 60 | Pascal ile Fermat mektupları | 1662 ve 1665 · 1654 |
+| 60 | Huygens, *De ratiociniis in ludo aleae* | 1695 · 1657 |
+| 60 | Jakob Bernoulli, *Ars Conjectandi* | 1705 · 1713 |
+| 60 | de Moivre, *The Doctrine of Chances* | 1754 · 1718 |
+| 60 | Markov, 1906 makalesi | 1922 · 1906 |
+| 62 | Legendre, *Nouvelles méthodes pour la détermination des orbites des comètes* | 1833 · 1805 |
+| 62, 85 | Gauss, *Theoria motus corporum coelestium* | 1855 · 1809 |
+| 62 | Karl Pearson, 1900 ki-kare makalesi ve 1904 tıbbî ihsâiyyât raporu | 1936 · 1900 ve 1904 |
+| 62 | Gosset ("Student"), *The Probable Error of a Mean* | 1937 · 1908 |
+| 62 | Bayes, *An Essay Towards Solving a Problem in the Doctrine of Chances* | 1761 · 1763 |
+| 62 | Peirce ve Jastrow, *On Small Differences in Sensation* | 1914 ve 1944 · 1885 |
+| 65 | Newton, *Method of Fluxions* | 1727 · 1736 |
+| 65 | Kâşî, *Risâletü'l-vetr ve'l-cîb* | kadîm |
+| 65 | Runge 1895; Kutta 1901 | 1927 ve 1944 |
+| 68, 94 | Hârizmî, *Algoritmi de numero Indorum*; Kindî, muammâ risâlesi | kadîm |
+| 70 | Stevin, *De Beghinselen der Weeghconst* | 1620 · 1586 |
+| 70, 74 | Galileo, *Discorsi … intorno a due nuove scienze* | 1642 · 1638 |
+| 70 | Hâzinî, *Mîzânü'l-hikme* | kadîm · 1121 |
+| 70 | Huygens, *Horologium oscillatorium* | 1695 · 1673 |
+| 70 | Newton, *Philosophiæ Naturalis Principia Mathematica* | 1727 · 1687 |
+| 70 | Lagrange, *Mécanique analytique* | 1813 · 1788 |
+| 70 | Hamilton, *On a General Method in Dynamics* | 1865 · 1834–1835 |
+| 70 | Noether, *Invariante Variationsprobleme* | 1935 · 1918 |
+| 70 | Jacobi, *Vorlesungen über Dynamik* | 1851 · 1866 |
+| 74 | Hooke, *Lectures de Potentia Restitutiva* | 1703 · 1678 |
+| 74 | Cauchy, gerilme hatıraları | 1857 · 1822–1828 |
+| 74 | Love, *A Treatise on the Mathematical Theory of Elasticity* | 1940 · 1892–1893 |
+| 76 | Arşimet, *Yüzen Cisimler Hakkında* | kadîm |
+| 76 | Daniel Bernoulli, *Hydrodynamica* | 1782 · 1738 |
+| 76 | Euler, *Principes généraux du mouvement des fluides* | 1783 · 1757 |
+| 76 | Navier 1822; Stokes 1845 | 1836 ve 1903 |
+| 76 | Reynolds 1883 | 1912 |
+| 76 | Prandtl, *Über Flüssigkeitsbewegung bei sehr kleiner Reibung* | 1953 · 1904 |
+| 76 | Lamb, *Hydrodynamics* (1930'dan evvelki baskılar) | 1934 · 1879–1924 |
+| 78 | İbnü'l-Heysem, *Kitâbü'l-Menâzır*; Fârisî, *Tenkîhu'l-Menâzır* | kadîm |
+| 78, 86 | Gilbert, *De Magnete* | 1603 · 1600 |
+| 78 | Huygens, *Traité de la lumière* | 1695 · 1690 |
+| 78 | Newton, *Opticks* | 1727 · 1704 |
+| 78 | Franklin, *Experiments and Observations on Electricity* | 1790 · 1751 |
+| 78 | Lambert, *Photometria* | 1777 · 1760 |
+| 78 | Faraday, *Experimental Researches in Electricity* | 1867 · 1839–1855 |
+| 78 | Maxwell, 1865 makalesi, 1873 ve 1881 kitapları | 1879 |
+| 80 | Carnot, *Réflexions sur la puissance motrice du feu* | 1832 · 1824 |
+| 80 | Clausius 1850 ve 1865 | 1888 |
+| 80 | Gibbs, *On the Equilibrium of Heterogeneous Substances* | 1903 · 1876–1878 |
+| 81 | Planck 1901 | 1947 |
+| 81, 82, 83 | Einstein, 1905 makaleleri ve 1916 umûmî izâfiyet makalesi | 1955 (2026 itibarıyla açık) |
+| 81 | Weyl, *Gruppentheorie und Quantenmechanik* | 1955 · 1928 |
+| 82 | Boltzmann 1872 ve *Vorlesungen über Gastheorie* | 1906 |
+| 82 | Gibbs, *Elementary Principles in Statistical Mechanics* | 1903 · 1902 |
+| 83 | Minkowski, *Raum und Zeit* | 1909 · 1909 |
+| 83 | Schwarzschild 1916 | 1916 |
+| 83 | Weyl, *Raum, Zeit, Materie* | 1955 · 1918 |
+| 85 | Batlamyus, *el-Mecistî*; Battânî, *ez-Zîcü's-Sâbî*; Bîrûnî, *el-Kânûnü'l-Mes'ûdî*; Tûsî, *et-Tezkire*; İbnü'ş-Şâtır, *Nihâyetü's-sûl*; *Zîc-i Uluğ Bey*; Ali Kuşçu, *er-Risâletü'l-Fethiyye* | kadîm |
+| 85 | Kopernik 1543; Kepler 1596, 1609, 1619; Galileo 1632 | |
+| 85 | Laplace, *Traité de mécanique céleste* | 1827 · 1799–1825 |
+| 86 | Bîrûnî, *Tahdîdü nihâyâti'l-emâkin* | kadîm · 1025 |
+| 86 | Richardson, *Weather Prediction by Numerical Process* | 1953 · 1922 |
+| 91 | Cournot 1838; Walras 1874 | 1877 ve 1910 |
+| 92 | Fibonacci, *Liber Abaci*; Malthus 1798; Verhulst 1838; Mendel 1866 | |
+| 92 | D'Arcy Thompson, *On Growth and Form* | 1948 · 1917 |
+| 92 | Lotka 1925; Volterra 1926 | 1949 ve 1940 |
+| 93 | Benû Mûsâ, *Kitâbü'l-hiyel*; Cezerî, *el-Câmi'* | kadîm |
+| 93 | Maxwell, *On Governors*; Routh 1877; Hurwitz 1895 | 1879, 1907, 1919 |
+| 97 | Klein, *Elementarmathematik vom höheren Standpunkte aus* | 1925 · 1908 |
+| 97 | Recorde 1542; Cocker 1678; Šilobod Bolšić 1758; Dilworth; Carr 1886 | |
+
+### Karışık eserler (tercümeden evvel Padişaha sorulacak)
+
+| Saha | Eser | Sebep |
+| :-- | :-- | :-- |
+| 28 | Saks, *Théorie de l'intégrale*, 1933 | Müellif 1942'de vefat etti (Türkiye'de açık); Amerika'da 1933 neşri teliflidir |
+| 30 | Hurwitz ve Courant, 1922 | Amerika'da açık; Courant 1972'de vefat etti (Türkiye'de telifli) |
+| 33 | Whittaker, *A Course of Modern Analysis*, 1902; Watson ile 1915 baskısı | Amerika'da açık; Whittaker 1956'da vefat etti (Türkiye'de 2027'de açılır), Watson 1965 |
+| 33 | Watson, *Bessel Functions*, 1922 | Amerika'da açık; Watson 1965 |
+| 35 | Hadamard, 1923; Courant ve Hilbert, 1924 birinci cilt | Amerika'da açık; Hadamard 1963, Courant 1972 |
+| 39 | Nörlund, 1924 | Amerika'da açık; Nörlund 1981 |
+| 40 | Knopp, 1922; Pólya ve Szegő, 1925 | Amerika'da açık; Knopp 1957, Pólya 1985 |
+| 41 | Bernstein, 1912 | Amerika'da açık; Bernstein 1968 |
+| 43 | Haar, 1933 | Haar 1933'te vefat etti (Türkiye'de açık); Amerika'da telifli |
+| 44 | Radon, 1917 | Amerika'da açık; Radon 1956 (Türkiye'de 2027'de açılır) |
+| 46 | Banach, *Théorie des opérations linéaires*, 1932 | Banach 1945'te vefat etti (Türkiye'de açık); Amerika'da telifli |
+| 46, 54 | Fréchet, 1906 | Amerika'da açık; Fréchet 1973 |
+| 51 | Hilbert ve Cohn-Vossen, *Anschauliche Geometrie*, 1932 | İki müellif de 1955'ten evvel vefat etti; Amerika'da telifli |
+| 60 | Wiener, *Differential-Space*, 1923 | Amerika'da açık; Wiener 1964 |
+| 60, 62 | Ramsey, *Truth and Probability*, 1931 | Ramsey 1930'da vefat etti; Amerika'da 1931 neşri 2027'de açılır |
+| 62 | Fisher, 1922 ve 1925 | Amerika'da açık; Fisher 1962 |
+| 65 | Courant, Friedrichs ve Lewy, 1928 | Amerika'da açık; müellifler 1955'ten sonra vefat etti |
+| 70 | Whittaker, *Analytical Dynamics*, 1904 | Amerika'da açık; Whittaker 1956 |
+| 80 | Fermi, *Thermodynamics*, 1937 | Fermi 1954'te vefat etti (Türkiye'de açık); Amerika'da telifli |
+| 81 | Heisenberg 1925; Schrödinger 1926; Dirac 1930 | Amerika'da açık; müellifler 1976, 1961, 1984 |
+| 82 | Ising, 1925 | Amerika'da açık; Ising 1998 |
+| 83 | Pauli, *Relativitätstheorie*, 1921 | Amerika'da açık; Pauli 1958 |
+| 86 | Jeffreys, *The Earth*, 1924 | Amerika'da açık; Jeffreys 1989 |
+| 91 | von Neumann, *Zur Theorie der Gesellschaftsspiele*, 1928 | Amerika'da açık; von Neumann 1957 |
+| 92 | Kermack ve McKendrick, 1927 | Amerika'da açık; Kermack 1970 |
+| 94 | Nyquist 1928; Hartley 1928 | Amerika'da açık; Nyquist 1976, Hartley 1970 |
+
+---
+
+## Alt sahalar defterinden gelen ilâveler
+
+Kardeş parçacığın haber verdiği `saheserler/alt/01_temeller_cebir_sayilar_alt.md` dosyasından (henüz baştan sona okunmadı; okununca bu bölük tamamlanacak):
+
+| Eser | Hâl |
+| :-- | :-- |
+| **Hüseyin Tevfik Paşa, *Linear Algebra*, İstanbul 1882** | Açık (müellif 1901'de vefat etti). Bir Osmanlı riyâziyecisinin eseri olduğu için bu projede **ayrıca ehemmiyetlidir**; künyesi ve nüshası öncelikle aranacak |
+| Gentzen 1935 | Karışık (Gentzen 1945'te vefat etti; Amerika'da 1935 neşri telifli) |
+| Hermite 1873; Lindemann 1882; Weyl 1916; Dehn 1911; Brandt 1927; Schubert 1879; Cantor 1874; Euler 1744; Gauss 1799 | Açık |
