@@ -32,7 +32,7 @@ Bu defter, iş kesilirse kaldığı yerden devam edebilmek için tutulur. Her c�
 | Cüz | Mevzu | Hâli | Tercümeye bildirildi mi |
 |---|---|---|---|
 | Birinci | Pusula: Fizyoloji ve Patoloji | Tamam (32 eser) | Koordinatöre bildirildi |
-| İkinci | Kadîm İslâm tıbbı | Sırada | Hayır |
+| İkinci | Kadîm İslâm tıbbı | Tamam (25 eser) | Bildirildi |
 | Üçüncü | Anatomi ("A" kıtası) | Sırada | Hayır |
 | Dördüncü | Hastalıklar ("C" kıtası) | Sırada | Hayır |
 | Beşinci | Kimyevî maddeler ve ilaçlar ("D" kıtası) | Sırada | Hayır |
@@ -43,10 +43,11 @@ Bu defter, iş kesilirse kaldığı yerden devam edebilmek için tutulur. Her c�
 
 ## Kaldığı yer
 
-Birinci cüz tamamlandı ve commit edildi. Sıradaki iş: ikinci cüz, Kadîm İslâm tıbbı.
+Birinci ve ikinci cüz tamamlandı ve commit edildi. Sıradaki iş: üçüncü cüz, Anatomi.
 
 ## Açık tahkikler
 
 - Birinci cüzde "tahkik edilecek" yahut "şüpheli" diye işaretlenen nüsha ve tâb bilgileri.
 - Gleb Vasilievich Anrep'in vefat yılı (1955 olarak bilinmektedir).
 - Cannon'un The Wisdom of the Body eserinin Amerika'da telif yenilenme hâli.
+- İkinci cüzde: Sabuncuoğlu'nun üç müellif hattı nüshasının raf numaraları; Akşemseddin'in Maddetü'l-Hayât ibaresinin yazmadan tahkiki; Bulak basma tarihleri; Şânîzâde künyesindeki 1810 tarihi.

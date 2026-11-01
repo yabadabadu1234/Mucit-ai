@@ -28,7 +28,7 @@ Bir bilgiden emin olunamadığı her yerde "şüpheli" kaydı düşülmüştür.
 | Cüz | Mevzu | Hâli |
 |---|---|---|
 | Birinci cüz | Pusula ilimleri: Fizyoloji ve Patoloji | Tamam |
-| İkinci cüz | Kadîm İslâm tıbbı | Sırada |
+| İkinci cüz | Kadîm İslâm tıbbı | Tamam |
 | Üçüncü cüz | Anatomi (Tıbbî Mevzu Başlıkları'nın "A" kıtası) | Sırada |
 | Dördüncü cüz | Hastalıklar (Tıbbî Mevzu Başlıkları'nın "C" kıtası) | Sırada |
 | Beşinci cüz | Kimyevî maddeler ve ilaçlar (Tıbbî Mevzu Başlıkları'nın "D" kıtası) | Sırada |
