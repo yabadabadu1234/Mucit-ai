@@ -2,7 +2,7 @@
 
 Bu sahife `araclar/msc_birlestir.py` ile `kaynak.tsv` ve `ceviri/` dosyalarından üretilir; elle değiştirilmez.
 
-Toplam madde: 6603 · karşılığı bulunan: 6165 · kalan: 438
+Toplam madde: 6603 · karşılığı bulunan: 6282 · kalan: 321
 
 
 ## 00-XX — Umûmî ve şâmil mevzûlar; mecmualar
@@ -6483,134 +6483,134 @@ Operations research, mathematical programming
 | 90C90 | Applications of mathematical programming | Riyâzî programlamanın tatbîkleri |  |
 | 90C99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
-## 91-XX — Game theory, economics, finance, and other social and behavioral sciences
+## 91-XX — Oyunlar nazariyesi, iktisat, mâliye ve sâir içtimaî ve sülûkî (davranışa ait) ilimler
 
 Game theory, economics, finance, and other social and behavioral sciences
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 91-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to game theory, economics, and finance |  |  |
-| 91-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to game theory, economics, and finance |  |  |
-| 91-02 | Research exposition (monographs, survey articles) pertaining to game theory, economics, and finance |  |  |
-| 91-03 | History of game theory, economics, and finance [Consider also classification numbers from Section 01] |  |  |
-| 91-04 | Software, source code, etc. for problems pertaining to game theory, economics, and finance |  |  |
-| 91-05 | Experimental work for problems pertaining to game theory, economics, and finance |  |  |
-| 91-06 | Proceedings, conferences, collections, etc. pertaining to game theory, economics, and finance |  |  |
-| 91-08 | Computational methods for problems pertaining to game theory, economics, and finance |  |  |
-| 91-10 | Mathematical modeling or simulation for problems pertaining to game theory, economics, and finance |  |  |
-| 91-11 | Research data for problems pertaining to game theory, economics, and finance |  |  |
-| **91Axx** | **Game theory** | **** |  |
-| 91A05 | 2-person games |  |  |
-| 91A06 | n-person games, n > 2 |  |  |
-| 91A07 | Games with infinitely many players |  |  |
-| 91A10 | Noncooperative games |  |  |
-| 91A11 | Equilibrium refinements |  |  |
-| 91A12 | Cooperative games |  |  |
-| 91A14 | Potential and congestion games |  |  |
-| 91A15 | Stochastic games, stochastic differential games |  |  |
-| 91A16 | Mean field games (aspects of game theory) {For partial differential equations, see 35Q89; for calculus of variations and optimal control, see 49N80} |  |  |
-| 91A18 | Games in extensive form |  |  |
-| 91A20 | Multistage and repeated games |  |  |
-| 91A22 | Evolutionary games |  |  |
-| 91A23 | Differential games (aspects of game theory) [See also 49N70] |  |  |
-| 91A24 | Positional games (pursuit and evasion, etc.) [See also 49N75] |  |  |
-| 91A25 | Dynamic games |  |  |
-| 91A26 | Rationality and learning in game theory |  |  |
-| 91A27 | Games with incomplete information, Bayesian games |  |  |
-| 91A28 | Signaling and communication in game theory |  |  |
-| 91A30 | Utility theory for games [See also 91B16] |  |  |
-| 91A35 | Decision theory for games [See also 62Cxx, 90B50, 91B06] |  |  |
-| 91A40 | Other game-theoretic models |  |  |
-| 91A43 | Games involving graphs {For games on graphs, see also 05C57} |  |  |
-| 91A44 | Games involving topology, set theory, or logic |  |  |
-| 91A46 | Combinatorial games |  |  |
-| 91A50 | Discrete-time games |  |  |
-| 91A55 | Games of timing |  |  |
-| 91A60 | Probabilistic games; gambling [See also 60G40] |  |  |
-| 91A65 | Hierarchical games (including Stackelberg games) |  |  |
-| 91A68 | Algorithmic game theory and complexity [See also 68Qxx, 68Wxx] |  |  |
-| 91A70 | Spaces of games |  |  |
-| 91A80 | Applications of game theory |  |  |
-| 91A81 | Quantum games |  |  |
-| 91A86 | Game theory and fuzziness |  |  |
-| 91A90 | Experimental studies |  |  |
+| 91-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to game theory, economics, and finance | Oyunlar nazariyesi, iktisat ve mâliye hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 91-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to game theory, economics, and finance | Oyunlar nazariyesi, iktisat ve mâliye hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 91-02 | Research exposition (monographs, survey articles) pertaining to game theory, economics, and finance | Oyunlar nazariyesi, iktisat ve mâliye hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 91-03 | History of game theory, economics, and finance [Consider also classification numbers from Section 01] | Oyunlar nazariyesinin, iktisadın ve mâliyenin târihi [01. babın tasnif numaralarına da bakılsın] |  |
+| 91-04 | Software, source code, etc. for problems pertaining to game theory, economics, and finance | Oyunlar nazariyesi, iktisat ve mâliye sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 91-05 | Experimental work for problems pertaining to game theory, economics, and finance | Oyunlar nazariyesi, iktisat ve mâliye sahasındaki meselelere dair tecrübî çalışmalar |  |
+| 91-06 | Proceedings, conferences, collections, etc. pertaining to game theory, economics, and finance | Oyunlar nazariyesi, iktisat ve mâliye hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 91-08 | Computational methods for problems pertaining to game theory, economics, and finance | Oyunlar nazariyesi, iktisat ve mâliye sahasındaki meselelere dair hesap usulleri |  |
+| 91-10 | Mathematical modeling or simulation for problems pertaining to game theory, economics, and finance | Oyunlar nazariyesi, iktisat ve mâliye sahasındaki meselelere dair riyâzî numûne kurma (temsil) yahut taklit (benzetim) |  |
+| 91-11 | Research data for problems pertaining to game theory, economics, and finance | Oyunlar nazariyesi, iktisat ve mâliye sahasındaki meselelere dair tetkik verileri |  |
+| **91Axx** | **Game theory** | **Oyunlar nazariyesi** |  |
+| 91A05 | 2-person games | İki kişilik oyunlar |  |
+| 91A06 | n-person games, n > 2 | N kişilik oyunlar, n > 2 |  |
+| 91A07 | Games with infinitely many players | Gayr-ı mütenâhî sayıda oyunculu oyunlar |  |
+| 91A10 | Noncooperative games | Teşrîk-i mesâîsiz (iş birliksiz) oyunlar |  |
+| 91A11 | Equilibrium refinements | Muvâzene inceltmeleri |  |
+| 91A12 | Cooperative games | Teşrîk-i mesâîli (iş birlikli) oyunlar |  |
+| 91A14 | Potential and congestion games | Kuvve-i kāmine (potansiyel) oyunları ve izdiham oyunları |  |
+| 91A15 | Stochastic games, stochastic differential games | İhtimâlî oyunlar, ihtimâlî tefâzulî oyunlar |  |
+| 91A16 | Mean field games (aspects of game theory) {For partial differential equations, see 35Q89; for calculus of variations and optimal control, see 49N80} | Vasatî sahâ oyunları (oyunlar nazariyesine ait cihetler) {Kısmî tefâzulî muâdeleler için bakınız: 35Q89; tehavvülât hesabı ve ahsen idâre için bakınız: 49N80} |  |
+| 91A18 | Games in extensive form | Mufassal sûretteki (ağaç şeklindeki) oyunlar |  |
+| 91A20 | Multistage and repeated games | Çok merhaleli ve tekrarlanan oyunlar |  |
+| 91A22 | Evolutionary games | Tekâmülî oyunlar |  |
+| 91A23 | Differential games (aspects of game theory) [See also 49N70] | Tefâzulî oyunlar (oyunlar nazariyesine ait cihetler) [Ayrıca bakınız: 49N70] |  |
+| 91A24 | Positional games (pursuit and evasion, etc.) [See also 49N75] | Mevki' oyunları (takip ve firar ve emsâli) [Ayrıca bakınız: 49N75] |  |
+| 91A25 | Dynamic games | Harekî oyunlar |  |
+| 91A26 | Rationality and learning in game theory | Oyunlar nazariyesinde akliyet (rasyonellik) ve öğrenme |  |
+| 91A27 | Games with incomplete information, Bayesian games | Nâkıs malûmatlı oyunlar, Bayes oyunları | nakil |
+| 91A28 | Signaling and communication in game theory | Oyunlar nazariyesinde işaret verme ve muhâbere |  |
+| 91A30 | Utility theory for games [See also 91B16] | Oyunlar için menfaat (fayda) nazariyesi [Ayrıca bakınız: 91B16] |  |
+| 91A35 | Decision theory for games [See also 62Cxx, 90B50, 91B06] | Oyunlar için karar nazariyesi [Ayrıca bakınız: 62Cxx, 90B50, 91B06] |  |
+| 91A40 | Other game-theoretic models | Sâir oyun nazariyesi numûneleri |  |
+| 91A43 | Games involving graphs {For games on graphs, see also 05C57} | Rabıta şekillerini ihtivâ eden oyunlar {Rabıta şekilleri üzerindeki oyunlar için ayrıca bakınız: 05C57} |  |
+| 91A44 | Games involving topology, set theory, or logic | Hendese-i vaz'iyye, mecmûalar nazariyesi yahut mantığı ihtivâ eden oyunlar |  |
+| 91A46 | Combinatorial games | Terkîbî oyunlar |  |
+| 91A50 | Discrete-time games | Munfasıl zamanlı oyunlar |  |
+| 91A55 | Games of timing | Zamanlama oyunları |  |
+| 91A60 | Probabilistic games; gambling [See also 60G40] | Şansa dayanan oyunlar; kumar [Ayrıca bakınız: 60G40] | şüpheli: 91A15 "stochastic" ile karışmasın diye "probabilistic" burada "şansa dayanan" diye karşılandı; kumarın şer'an haram olduğu hatırlatılır, burada yalnız riyâzî tahlîli kastedilir |
+| 91A65 | Hierarchical games (including Stackelberg games) | Silsile-i merâtibli oyunlar (Stackelberg oyunları dahil) | nakil |
+| 91A68 | Algorithmic game theory and complexity [See also 68Qxx, 68Wxx] | Hârizmî oyunlar nazariyesi ve mürekkebiyet [Ayrıca bakınız: 68Qxx, 68Wxx] |  |
+| 91A70 | Spaces of games | Oyun fezâları |  |
+| 91A80 | Applications of game theory | Oyunlar nazariyesinin tatbîkleri |  |
+| 91A81 | Quantum games | Kuantum oyunları |  |
+| 91A86 | Game theory and fuzziness | Oyunlar nazariyesi ve mübhemlik (bulanıklık) |  |
+| 91A90 | Experimental studies | Tecrübî tetkikler |  |
 | 91A99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **91Bxx** | **Mathematical economics {For econometrics, see 62P20}** | **** |  |
-| 91B02 | Fundamental topics (basic mathematics, methodology; applicable to economics in general) |  |  |
-| 91B03 | Mechanism design theory |  |  |
-| 91B05 | Risk models (general) {For actuarial and financial risk, see 91Gxx} |  |  |
-| 91B06 | Decision theory [See also 62Cxx, 90B50, 91A35] |  |  |
-| 91B08 | Individual preferences |  |  |
-| 91B10 | Group preferences |  |  |
-| 91B12 | Voting theory |  |  |
-| 91B14 | Social choice |  |  |
-| 91B15 | Welfare economics |  |  |
-| 91B16 | Utility theory [See also 91A30] |  |  |
-| 91B18 | Public goods |  |  |
-| 91B24 | Microeconomic theory (price theory and economic markets) |  |  |
-| 91B26 | Auctions, bargaining, bidding and selling, and other market models |  |  |
-| 91B32 | Resource and cost allocation (including fair division, apportionment, etc.) |  |  |
-| 91B38 | Production theory, theory of the firm |  |  |
-| 91B39 | Labor markets |  |  |
-| 91B41 | Contract theory (moral hazard, adverse selection) |  |  |
-| 91B42 | Consumer behavior, demand theory |  |  |
-| 91B43 | Principal-agent models |  |  |
-| 91B44 | Economics of information |  |  |
-| 91B50 | General equilibrium theory |  |  |
-| 91B51 | Dynamic stochastic general equilibrium theory |  |  |
-| 91B52 | Special types of economic equilibria |  |  |
-| 91B54 | Special types of economic markets (including Cournot, Bertrand) |  |  |
-| 91B55 | Economic dynamics |  |  |
-| 91B60 | Trade models |  |  |
-| 91B62 | Economic growth models |  |  |
-| 91B64 | Macroeconomic theory (monetary models, models of taxation) |  |  |
-| 91B66 | Multisectoral models in economics |  |  |
-| 91B68 | Matching models |  |  |
-| 91B69 | Heterogeneous agent models |  |  |
-| 91B70 | Stochastic models in economics |  |  |
-| 91B72 | Spatial models in economics [See also 91D25] |  |  |
-| 91B74 | Economic models of real-world systems (e.g., electricity markets, etc.) |  |  |
-| 91B76 | Environmental economics (natural resource models, harvesting, pollution, etc.) |  |  |
-| 91B80 | Applications of statistical and quantum mechanics to economics (econophysics) |  |  |
-| 91B82 | Statistical methods; economic indices and measures [See also 62P20] |  |  |
-| 91B84 | Economic time series analysis {For statistical theory of time series, see 62M10} |  |  |
-| 91B86 | Mathematical economics and fuzziness |  |  |
+| **91Bxx** | **Mathematical economics {For econometrics, see 62P20}** | **Riyâzî iktisat {İktisadî ölçüm ilmi (ekonometri) için bakınız: 62P20}** |  |
+| 91B02 | Fundamental topics (basic mathematics, methodology; applicable to economics in general) | Esas mevzûlar (temel riyâziyât, usul ilmi; umûmiyetle iktisada tatbik edilebilenler) |  |
+| 91B03 | Mechanism design theory | Mekanizma tasarımı nazariyesi |  |
+| 91B05 | Risk models (general) {For actuarial and financial risk, see 91Gxx} | Mahâtır (risk) numûneleri (umûmî) {Sigorta hesabına ve mâliyeye ait mahâtır için bakınız: 91Gxx} |  |
+| 91B06 | Decision theory [See also 62Cxx, 90B50, 91A35] | Karar nazariyesi [Ayrıca bakınız: 62Cxx, 90B50, 91A35] |  |
+| 91B08 | Individual preferences | Ferdî tercihler |  |
+| 91B10 | Group preferences | Cemâat tercihleri |  |
+| 91B12 | Voting theory | Rey verme nazariyesi |  |
+| 91B14 | Social choice | İçtimaî tercih |  |
+| 91B15 | Welfare economics | Refah iktisadı |  |
+| 91B16 | Utility theory [See also 91A30] | Menfaat (fayda) nazariyesi [Ayrıca bakınız: 91A30] |  |
+| 91B18 | Public goods | Âmme malları |  |
+| 91B24 | Microeconomic theory (price theory and economic markets) | Cüz'î iktisat nazariyesi (fiyat nazariyesi ve iktisadî pazarlar) |  |
+| 91B26 | Auctions, bargaining, bidding and selling, and other market models | Müzâyedeler, pazarlık, teklif verme ve satış ile sâir pazar numûneleri |  |
+| 91B32 | Resource and cost allocation (including fair division, apportionment, etc.) | Kaynak ve masraf tahsîsi (âdil taksim, nisbî taksim ve emsâli dahil) |  |
+| 91B38 | Production theory, theory of the firm | İstihsal nazariyesi, şirket nazariyesi |  |
+| 91B39 | Labor markets | Emek pazarları |  |
+| 91B41 | Contract theory (moral hazard, adverse selection) | Akit nazariyesi (ahlâkî mahâtır, ters intihab) |  |
+| 91B42 | Consumer behavior, demand theory | Müstehlik davranışı, talep nazariyesi |  |
+| 91B43 | Principal-agent models | Asîl-vekil numûneleri |  |
+| 91B44 | Economics of information | Malûmat iktisadı |  |
+| 91B50 | General equilibrium theory | Umûmî muvâzene nazariyesi |  |
+| 91B51 | Dynamic stochastic general equilibrium theory | Harekî ihtimâlî umûmî muvâzene nazariyesi |  |
+| 91B52 | Special types of economic equilibria | İktisadî muvâzenenin hususî nevileri |  |
+| 91B54 | Special types of economic markets (including Cournot, Bertrand) | İktisadî pazarların hususî nevileri (Cournot, Bertrand dahil) | nakil |
+| 91B55 | Economic dynamics | İktisadî harekiyyât |  |
+| 91B60 | Trade models | Ticaret numûneleri |  |
+| 91B62 | Economic growth models | İktisadî büyüme numûneleri |  |
+| 91B64 | Macroeconomic theory (monetary models, models of taxation) | Küllî iktisat nazariyesi (nakdî numûneler, vergilendirme numûneleri) |  |
+| 91B66 | Multisectoral models in economics | İktisatta çok kesimli numûneler |  |
+| 91B68 | Matching models | Eşleştirme numûneleri |  |
+| 91B69 | Heterogeneous agent models | Mütecânis olmayan fâil numûneleri |  |
+| 91B70 | Stochastic models in economics | İktisatta ihtimâlî numûneler |  |
+| 91B72 | Spatial models in economics [See also 91D25] | İktisatta mekânî numûneler [Ayrıca bakınız: 91D25] |  |
+| 91B74 | Economic models of real-world systems (e.g., electricity markets, etc.) | Hakîkî âlemdeki nizâmların iktisadî numûneleri (meselâ elektrik pazarları ve emsâli) |  |
+| 91B76 | Environmental economics (natural resource models, harvesting, pollution, etc.) | Muhit iktisadı (tabiî kaynak numûneleri, hasat, kirlilik ve emsâli) |  |
+| 91B80 | Applications of statistical and quantum mechanics to economics (econophysics) | İhsâî mekanik ve kuantum mekaniğinin iktisada tatbîkleri (iktisadî hikmet-i tabîiyye) |  |
+| 91B82 | Statistical methods; economic indices and measures [See also 62P20] | İhsâî usuller; iktisadî fihristler ve ölçüler [Ayrıca bakınız: 62P20] |  |
+| 91B84 | Economic time series analysis {For statistical theory of time series, see 62M10} | İktisadî zaman silsilelerinin tahlîli {Zaman silsilelerinin ihsâî nazariyesi için bakınız: 62M10} |  |
+| 91B86 | Mathematical economics and fuzziness | Riyâzî iktisat ve mübhemlik (bulanıklık) |  |
 | 91B99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **91Cxx** | **Social and behavioral sciences: general topics {For statistics, see 62P25}** | **** |  |
-| 91C05 | Measurement theory in the social and behavioral sciences |  |  |
-| 91C15 | One- and multidimensional scaling in the social and behavioral sciences |  |  |
-| 91C20 | Clustering in the social and behavioral sciences [See also 62H30] |  |  |
+| **91Cxx** | **Social and behavioral sciences: general topics {For statistics, see 62P25}** | **İçtimaî ve sülûkî ilimler: umûmî mevzûlar {İhsâiyyât için bakınız: 62P25}** |  |
+| 91C05 | Measurement theory in the social and behavioral sciences | İçtimaî ve sülûkî ilimlerde ölçme nazariyesi |  |
+| 91C15 | One- and multidimensional scaling in the social and behavioral sciences | İçtimaî ve sülûkî ilimlerde bir ve çok buudlu mikyâslandırma |  |
+| 91C20 | Clustering in the social and behavioral sciences [See also 62H30] | İçtimaî ve sülûkî ilimlerde kümeleme [Ayrıca bakınız: 62H30] |  |
 | 91C99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **91Dxx** | **Mathematical sociology (including anthropology)** | **** |  |
-| 91D10 | Models of societies, social and urban evolution |  |  |
-| 91D15 | Social learning |  |  |
-| 91D20 | Mathematical geography and demography |  |  |
-| 91D25 | Spatial models in sociology [See also 91B72] |  |  |
-| 91D30 | Social networks; opinion dynamics |  |  |
-| 91D35 | Manpower systems in sociology [See also 90B70, 91B39] |  |  |
+| **91Dxx** | **Mathematical sociology (including anthropology)** | **Riyâzî ilm-i içtimâ (insan ilmi, yâni antropoloji dahil)** |  |
+| 91D10 | Models of societies, social and urban evolution | Cemiyet numûneleri, içtimaî ve şehrî tekâmül |  |
+| 91D15 | Social learning | İçtimaî öğrenme |  |
+| 91D20 | Mathematical geography and demography | Riyâzî coğrafya ve nüfus ilmi (demografya) |  |
+| 91D25 | Spatial models in sociology [See also 91B72] | İlm-i içtimâda mekânî numûneler [Ayrıca bakınız: 91B72] |  |
+| 91D30 | Social networks; opinion dynamics | İçtimaî şebekeler; kanaat harekiyyâtı |  |
+| 91D35 | Manpower systems in sociology [See also 90B70, 91B39] | İlm-i içtimâda insan kuvveti nizâmları [Ayrıca bakınız: 90B70, 91B39] |  |
 | 91D99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **91Exx** | **Mathematical psychology {For psychometrics, see 62P15}** | **** |  |
-| 91E10 | Cognitive psychology |  |  |
-| 91E30 | Psychophysics and psychophysiology; perception |  |  |
-| 91E40 | Memory and learning in psychology [See also 68T05] |  |  |
-| 91E45 | Measurement and performance in psychology |  |  |
+| **91Exx** | **Mathematical psychology {For psychometrics, see 62P15}** | **Riyâzî ilm-i ruh (psikoloji) {Ruhî ölçüm ilmi (psikometri) için bakınız: 62P15}** |  |
+| 91E10 | Cognitive psychology | İdrâkî ilm-i ruh |  |
+| 91E30 | Psychophysics and psychophysiology; perception | Ruh ve beden hikmeti (psikofizik) ve ruh ve beden vezâifi ilmi (psikofizyoloji); idrâk-i hissî | şüpheli: teklif terkipler |
+| 91E40 | Memory and learning in psychology [See also 68T05] | İlm-i ruhta hâfıza ve öğrenme [Ayrıca bakınız: 68T05] |  |
+| 91E45 | Measurement and performance in psychology | İlm-i ruhta ölçme ve edâ |  |
 | 91E99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **91Fxx** | **Other social and behavioral sciences (mathematical treatment)** | **** |  |
-| 91F10 | History, political science |  |  |
-| 91F20 | Linguistics [See also 03B65, 68T50] |  |  |
+| **91Fxx** | **Other social and behavioral sciences (mathematical treatment)** | **Sâir içtimaî ve sülûkî ilimler (riyâzî muâmele)** |  |
+| 91F10 | History, political science | Târih, siyâset ilmi |  |
+| 91F20 | Linguistics [See also 03B65, 68T50] | Lisâniyat [Ayrıca bakınız: 03B65, 68T50] |  |
 | 91F99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **91Gxx** | **Actuarial science and mathematical finance {For statistics, see 62P05}** | **** |  |
-| 91G05 | Actuarial mathematics |  |  |
-| 91G10 | Portfolio theory |  |  |
-| 91G15 | Financial markets |  |  |
-| 91G20 | Derivative securities (option pricing, hedging, etc.) |  |  |
-| 91G30 | Interest rates, asset pricing, etc. (stochastic models) |  |  |
-| 91G40 | Credit risk |  |  |
-| 91G45 | Financial networks (including contagion, systemic risk, regulation) |  |  |
-| 91G50 | Corporate finance (dividends, real options, etc.) |  |  |
-| 91G60 | Numerical methods (including Monte Carlo methods) |  |  |
-| 91G70 | Statistical methods; risk measures [See also 62P05, 62P20] |  |  |
-| 91G80 | Financial applications of other theories [See also 35Q91, 37N40, 49N90, 60J70, 60K10, 60H30, 93E20] |  |  |
+| **91Gxx** | **Actuarial science and mathematical finance {For statistics, see 62P05}** | **Sigorta hesabı ilmi (aktüerya) ve riyâzî mâliye {İhsâiyyât için bakınız: 62P05}** |  |
+| 91G05 | Actuarial mathematics | Sigorta hesabı riyâziyâtı |  |
+| 91G10 | Portfolio theory | Hisse senedi mecmûası (portföy) nazariyesi |  |
+| 91G15 | Financial markets | Mâlî pazarlar |  |
+| 91G20 | Derivative securities (option pricing, hedging, etc.) | Müştak kıymetli evrak (opsiyon fiyatlandırması, mahâtırdan korunma ve emsâli) |  |
+| 91G30 | Interest rates, asset pricing, etc. (stochastic models) | Faiz hadleri, varlık fiyatlandırması ve emsâli (ihtimâlî numûneler) | şüpheli: ribânın şer'an haram olduğu hatırlatılır; burada yalnız riyâzî numûnenin tercümesidir |
+| 91G40 | Credit risk | İtibar (kredi) mahâtırı |  |
+| 91G45 | Financial networks (including contagion, systemic risk, regulation) | Mâlî şebekeler (sirâyet, nizâmî mahâtır, düzenleme dahil) |  |
+| 91G50 | Corporate finance (dividends, real options, etc.) | Şirket mâliyesi (temettüler, hakîkî opsiyonlar ve emsâli) |  |
+| 91G60 | Numerical methods (including Monte Carlo methods) | Adedî usuller (Monte Carlo usulleri dahil) | nakil |
+| 91G70 | Statistical methods; risk measures [See also 62P05, 62P20] | İhsâî usuller; mahâtır ölçüleri [Ayrıca bakınız: 62P05, 62P20] |  |
+| 91G80 | Financial applications of other theories [See also 35Q91, 37N40, 49N90, 60J70, 60K10, 60H30, 93E20] | Sâir nazariyelerin mâlî tatbîkleri [Ayrıca bakınız: 35Q91, 37N40, 49N90, 60J70, 60K10, 60H30, 93E20] |  |
 | 91G99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
 ## 92-XX — Biology and other natural sciences
