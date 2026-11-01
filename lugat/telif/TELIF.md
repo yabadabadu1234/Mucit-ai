@@ -9,6 +9,6 @@ Bu sahife `araclar/telif.py` ile üretilir; elle değiştirilmez. Ana kaynaklar 
 | Tekrar (birleştirilen) | 228 |
 | Telif mensubu | 52235 |
 | Üst başlığı tayin edilemeyen Vikipedi unsuru | 3473 |
-| Osmanlıca karşılığı henüz olmayan mensup | 45632 |
+| Osmanlıca karşılığı henüz olmayan mensup | 42266 |
 
 Doğrulama: 52235 = 6603 + 45860 − 228 tuttu.
