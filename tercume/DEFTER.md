@@ -21,6 +21,9 @@ Nüsha sütununda "yoklandı" yazılıysa, o adres bu oturumda Internet Archive'
 | 4 | Hârizmî, *el-Kitâbü'l-muhtasar fî hisâbi'l-cebr ve'l-mukābele* | **Tamam** (Rosen 1831 neşrinin İngilizcesinden vasıtalı tercüme, sahife 1–174: cebir, mesâha, vasâyâ ve devr; kırk beş mütercim kaydı; Arapça asılla mukabelesi henüz yapılmadı, M1) | [eserler/01_harizmi_cebr_ve_mukabele.md](eserler/01_harizmi_cebr_ve_mukabele.md) |
 | 5 | Riemann 1854, *Ueber die Hypothesen, welche der Geometrie zu Grunde liegen* | **Tamam** (ikinci tercüman; Wilkins istinsahından tam metin, düsturlar kelimeyle, yalnız aslın kendi hâşiyesi) | [eserler/53_riemann_1854_hendesenin_esasi_olan_faraziyeler.md](eserler/53_riemann_1854_hendesenin_esasi_olan_faraziyeler.md) |
 | 6 | Abel 1826, *Auflösung einer mechanischen Aufgabe* | **Tamam** (üçüncü tercüman; Crelle mecmuasının birinci cildinin taramasından tam metin, düsturlar kelimeyle) | [eserler/45_abel_1826_bir_mekanik_meselenin_halli.md](eserler/45_abel_1826_bir_mekanik_meselenin_halli.md) |
+| 7 | Dedekind 1872, *Stetigkeit und irrationale Zahlen* | **Tamam** (ikinci tercüman; birinci baskının taramasından tam metin) | [eserler/26_dedekind_1872_sureklilik_ve_gayri_muntazam_adedler.md](eserler/26_dedekind_1872_sureklilik_ve_gayri_muntazam_adedler.md) |
+| 8 | Leibniz 1684, *Nova methodus pro maximis et minimis* | **Tamam** (üçüncü tercüman; Acta Eruditorum taramasından tam metin) | [eserler/26_leibniz_1684_azami_ve_asgari_icin_yeni_usul.md](eserler/26_leibniz_1684_azami_ve_asgari_icin_yeni_usul.md) |
+| 9 | Univalent Foundations Program 2013, *Homotopy Type Theory*: Önsöz ve Medhal | **Tamam** (birinci tercüman; CC BY-SA 3.0, aynı lisansla) | [eserler/03_hott_2013_00_onsoz_ve_medhal.md](eserler/03_hott_2013_00_onsoz_ve_medhal.md) |
 
 Sıra tayininde ölçü: kısa ve kurucu eserler evvel (bir oturumda tamamı bitebilsin diye), uzun kitaplar bab bab sonra.
 
