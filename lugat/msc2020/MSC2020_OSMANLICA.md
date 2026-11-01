@@ -2,7 +2,7 @@
 
 Bu sahife `araclar/msc_birlestir.py` ile `kaynak.tsv` ve `ceviri/` dosyalarından üretilir; elle değiştirilmez.
 
-Toplam madde: 6603 · karşılığı bulunan: 5803 · kalan: 800
+Toplam madde: 6603 · karşılığı bulunan: 6051 · kalan: 552
 
 
 ## 00-XX — Umûmî ve şâmil mevzûlar; mecmualar
@@ -6064,287 +6064,287 @@ Classical thermodynamics, heat transfer {For thermodynamics of solids, see 74A15
 | 80M60 | Stochastic analysis in thermodynamics and heat transfer | Hararet-i hareket ilmi ve hararet naklinde ihtimâlî tahlîl |  |
 | 80M99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
-## 81-XX — Quantum theory
+## 81-XX — Kuantum nazariyesi
 
 Quantum theory
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 81-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to quantum theory |  |  |
-| 81-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to quantum theory |  |  |
-| 81-02 | Research exposition (monographs, survey articles) pertaining to quantum theory |  |  |
-| 81-03 | History of quantum theory [Consider also classification numbers from Section 01] |  |  |
-| 81-04 | Software, source code, etc. for problems pertaining to quantum theory |  |  |
-| 81-05 | Experimental work for problems pertaining to quantum theory |  |  |
-| 81-06 | Proceedings, conferences, collections, etc. pertaining to quantum theory |  |  |
-| 81-08 | Computational methods for problems pertaining to quantum theory |  |  |
-| 81-10 | Mathematical modeling or simulation for problems pertaining to quantum theory |  |  |
-| 81-11 | Research data for problems pertaining to quantum theory |  |  |
-| **81Pxx** | **Foundations, quantum information and its processing, quantum axioms, and philosophy** | **** |  |
-| 81P05 | General and philosophical questions in quantum theory |  |  |
-| 81P10 | Logical foundations of quantum mechanics; quantum logic (quantum-theoretic aspects) [See also 03G12, 06C15] |  |  |
-| 81P13 | Contextuality in quantum theory |  |  |
-| 81P15 | Quantum measurement theory, state operations, state preparations |  |  |
-| 81P16 | Quantum state spaces, operational and probabilistic concepts |  |  |
-| 81P17 | Quantum entropies |  |  |
-| 81P18 | Quantum state tomography, quantum state discrimination |  |  |
-| 81P20 | Stochastic mechanics (including stochastic electrodynamics) |  |  |
-| 81P40 | Quantum coherence, entanglement, quantum correlations |  |  |
-| 81P42 | Entanglement measures, concurrencies, separability criteria |  |  |
-| 81P43 | Quantum discord |  |  |
-| 81P45 | Quantum information, communication, networks (quantum-theoretic aspects) [See also 94A15, 94A17] |  |  |
-| 81P47 | Quantum channels, fidelity [See also 94A40] |  |  |
-| 81P48 | LOCC, teleportation, dense coding, remote state operations, distillation |  |  |
-| 81P50 | Quantum state estimation, approximate cloning |  |  |
-| 81P55 | Special bases (entangled, mutual unbiased, etc.) |  |  |
-| 81P65 | Quantum gates |  |  |
-| 81P68 | Quantum computation [See also 68Q09] {For algorithmic aspects, see 68Q12} |  |  |
-| 81P70 | Quantum coding (general) |  |  |
-| 81P73 | Computational stability and error-correcting codes for quantum computation and communication processing |  |  |
-| 81P94 | Quantum cryptography (quantum-theoretic aspects) [See also 94A60] |  |  |
+| 81-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to quantum theory | kuantum nazariyesi hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 81-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to quantum theory | kuantum nazariyesi hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 81-02 | Research exposition (monographs, survey articles) pertaining to quantum theory | kuantum nazariyesi hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 81-03 | History of quantum theory [Consider also classification numbers from Section 01] | Kuantum nazariyesinin târihi [01. babın tasnif numaralarına da bakılsın] |  |
+| 81-04 | Software, source code, etc. for problems pertaining to quantum theory | kuantum nazariyesi sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 81-05 | Experimental work for problems pertaining to quantum theory | kuantum nazariyesi sahasındaki meselelere dair tecrübî çalışmalar |  |
+| 81-06 | Proceedings, conferences, collections, etc. pertaining to quantum theory | kuantum nazariyesi hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 81-08 | Computational methods for problems pertaining to quantum theory | kuantum nazariyesi sahasındaki meselelere dair hesap usulleri |  |
+| 81-10 | Mathematical modeling or simulation for problems pertaining to quantum theory | kuantum nazariyesi sahasındaki meselelere dair riyâzî numûne kurma (temsil) yahut taklit (benzetim) |  |
+| 81-11 | Research data for problems pertaining to quantum theory | kuantum nazariyesi sahasındaki meselelere dair tetkik verileri |  |
+| **81Pxx** | **Foundations, quantum information and its processing, quantum axioms, and philosophy** | **Esaslar, kuantum malûmatı ve işlenmesi, kuantum mütearifeleri ve felsefe** |  |
+| 81P05 | General and philosophical questions in quantum theory | Kuantum nazariyesinde umûmî ve felsefî suâller |  |
+| 81P10 | Logical foundations of quantum mechanics; quantum logic (quantum-theoretic aspects) [See also 03G12, 06C15] | Kuantum mekaniğinin mantıkî esasları; kuantum mantığı (kuantum nazariyesine ait cihetler) [Ayrıca bakınız: 03G12, 06C15] |  |
+| 81P13 | Contextuality in quantum theory | Kuantum nazariyesinde bağlama tâbilik |  |
+| 81P15 | Quantum measurement theory, state operations, state preparations | Kuantum ölçme nazariyesi, hâl ameliyeleri, hâl hazırlamaları |  |
+| 81P16 | Quantum state spaces, operational and probabilistic concepts | Kuantum hâl fezâları, amelî ve ihtimâlî mefhumlar |  |
+| 81P17 | Quantum entropies | Kuantum entropileri |  |
+| 81P18 | Quantum state tomography, quantum state discrimination | Kuantum hâli kesit-resmi (tomografisi), kuantum hâllerinin temyîzi |  |
+| 81P20 | Stochastic mechanics (including stochastic electrodynamics) | İhtimâlî mekanik (ihtimâlî elektro-harekiyyât dahil) |  |
+| 81P40 | Quantum coherence, entanglement, quantum correlations | Kuantum ittisâk-ı tavrı (koheransı), dolanıklık, kuantum mütekābil münasebetleri |  |
+| 81P42 | Entanglement measures, concurrencies, separability criteria | Dolanıklık mikyâsları, beraberlikler, ayrılabilirlik mi'yârları |  |
+| 81P43 | Quantum discord | Kuantum ihtilâfı (discord) |  |
+| 81P45 | Quantum information, communication, networks (quantum-theoretic aspects) [See also 94A15, 94A17] | Kuantum malûmatı, muhâbere, şebekeler (kuantum nazariyesine ait cihetler) [Ayrıca bakınız: 94A15, 94A17] |  |
+| 81P47 | Quantum channels, fidelity [See also 94A40] | Kuantum kanalları, sadakat [Ayrıca bakınız: 94A40] |  |
+| 81P48 | LOCC, teleportation, dense coding, remote state operations, distillation | Mahallî ameliyeler ve klasik muhâbere, uzağa nakl-i hâl (teleportasyon), kesif remzleme, uzaktan hâl ameliyeleri, damıtma |  |
+| 81P50 | Quantum state estimation, approximate cloning | Kuantum hâli tahmîni, takrîbî kopyalama (istinsâh) |  |
+| 81P55 | Special bases (entangled, mutual unbiased, etc.) | Hususî esaslar (dolanık, mütekābilen tarafsız ve emsâli) |  |
+| 81P65 | Quantum gates | Kuantum kapıları |  |
+| 81P68 | Quantum computation [See also 68Q09] {For algorithmic aspects, see 68Q12} | Kuantum hesabı [Ayrıca bakınız: 68Q09] {Hârizmî cihetler için bakınız: 68Q12} |  |
+| 81P70 | Quantum coding (general) | Kuantum remzlemesi (umûmî) |  |
+| 81P73 | Computational stability and error-correcting codes for quantum computation and communication processing | Kuantum hesabı ve muhâbere işlemesi için hesâbî istikrar ve hatâ düzelten remzler |  |
+| 81P94 | Quantum cryptography (quantum-theoretic aspects) [See also 94A60] | Kuantum ta'miyesi (kuantum nazariyesine ait cihetler) [Ayrıca bakınız: 94A60] |  |
 | 81P99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **81Qxx** | **General mathematical topics and methods in quantum theory** | **** |  |
-| 81Q05 | Closed and approximate solutions to the Schrödinger, Dirac, Klein-Gordon and other equations of quantum mechanics |  |  |
-| 81Q10 | Selfadjoint operator theory in quantum theory, including spectral analysis |  |  |
-| 81Q12 | Nonselfadjoint operator theory in quantum theory including creation and destruction operators |  |  |
-| 81Q15 | Perturbation theories for operators and differential equations in quantum theory |  |  |
-| 81Q20 | Semiclassical techniques, including WKB and Maslov methods applied to problems in quantum theory |  |  |
-| 81Q30 | Feynman integrals and graphs; applications of algebraic topology and algebraic geometry [See also 05Cxx, 14D05, 32S40] |  |  |
-| 81Q35 | Quantum mechanics on special spaces: manifolds, fractals, graphs, lattices [See also 81R20] |  |  |
-| 81Q37 | Quantum dots, waveguides, ratchets, etc. [See also 82D20, 82D77] |  |  |
-| 81Q40 | Bethe-Salpeter and other integral equations arising in quantum theory |  |  |
-| 81Q50 | Quantum chaos [See also 37D45] |  |  |
-| 81Q60 | Supersymmetry and quantum mechanics |  |  |
-| 81Q65 | Alternative quantum mechanics (including hidden variables, etc.) |  |  |
-| 81Q70 | Differential geometric methods, including holonomy, Berry and Hannay phases, Aharonov-Bohm effect, etc. in quantum theory |  |  |
-| 81Q80 | Special quantum systems, such as solvable systems |  |  |
-| 81Q93 | Quantum control |  |  |
+| **81Qxx** | **General mathematical topics and methods in quantum theory** | **Kuantum nazariyesinde umûmî riyâzî mevzûlar ve usuller** |  |
+| 81Q05 | Closed and approximate solutions to the Schrödinger, Dirac, Klein-Gordon and other equations of quantum mechanics | Schrödinger, Dirac, Klein-Gordon ve kuantum mekaniğinin sâir muâdelelerinin kapalı ve takrîbî halleri | nakil |
+| 81Q10 | Selfadjoint operator theory in quantum theory, including spectral analysis | Kuantum nazariyesinde zâtî-mülhak âmiller nazariyesi, tayfî tahlîl dahil |  |
+| 81Q12 | Nonselfadjoint operator theory in quantum theory including creation and destruction operators | Kuantum nazariyesinde zâtî-mülhak olmayan âmiller nazariyesi, tevlîd ve imhâ âmilleri dahil |  |
+| 81Q15 | Perturbation theories for operators and differential equations in quantum theory | Kuantum nazariyesinde âmiller ve tefâzulî muâdeleler için ihtilâl nazariyeleri |  |
+| 81Q20 | Semiclassical techniques, including WKB and Maslov methods applied to problems in quantum theory | Kuantum nazariyesi meselelerine tatbîk edilen yarı-klasik teknikler, Wentzel-Kramers-Brillouin ve Maslov usulleri dahil | nakil |
+| 81Q30 | Feynman integrals and graphs; applications of algebraic topology and algebraic geometry [See also 05Cxx, 14D05, 32S40] | Feynman tamâmîleri ve şekilleri; cebrî hendese-i vaz'iyye ve hendese-i cebriyye tatbîkleri [Ayrıca bakınız: 05Cxx, 14D05, 32S40] | nakil |
+| 81Q35 | Quantum mechanics on special spaces: manifolds, fractals, graphs, lattices [See also 81R20] | Hususî fezâlar üzerinde kuantum mekaniği: müteşa'ibler, kesirliler (fraktallar), rabıta şekilleri, kafesler [Ayrıca bakınız: 81R20] |  |
+| 81Q37 | Quantum dots, waveguides, ratchets, etc. [See also 82D20, 82D77] | Kuantum noktaları, mevc kılavuzları, cırcırlar ve emsâli [Ayrıca bakınız: 82D20, 82D77] |  |
+| 81Q40 | Bethe-Salpeter and other integral equations arising in quantum theory | Bethe-Salpeter ve kuantum nazariyesinde zuhûr eden sâir tamâmî muâdeleler | nakil |
+| 81Q50 | Quantum chaos [See also 37D45] | Kuantum herc ü merci (kaosu) [Ayrıca bakınız: 37D45] |  |
+| 81Q60 | Supersymmetry and quantum mechanics | Fevka'l-tenâzur ve kuantum mekaniği |  |
+| 81Q65 | Alternative quantum mechanics (including hidden variables, etc.) | Badîl kuantum mekaniği (gizli mütehavviller ve emsâli dahil) |  |
+| 81Q70 | Differential geometric methods, including holonomy, Berry and Hannay phases, Aharonov-Bohm effect, etc. in quantum theory | Kuantum nazariyesinde tefâzulî hendesî usuller, holonomi, Berry ve Hannay safhaları, Aharonov-Bohm tesiri ve emsâli dahil | nakil |
+| 81Q80 | Special quantum systems, such as solvable systems | Hususî kuantum nizâmları, meselâ hal edilebilir nizâmlar |  |
+| 81Q93 | Quantum control | Kuantum idâresi |  |
 | 81Q99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **81Rxx** | **Groups and algebras in quantum theory** | **** |  |
-| 81R05 | Finite-dimensional groups and algebras motivated by physics and their representations [See also 20C35, 22E70] |  |  |
-| 81R10 | Infinite-dimensional groups and algebras motivated by physics, including Virasoro, Kac-Moody, W -algebras and other current algebras and their representations [See also 17B65, 17B67, 22E65, 22E67, 22E70] |  |  |
-| 81R12 | Groups and algebras in quantum theory and relations with integrable systems [See also 17Bxx, 37J35] |  |  |
-| 81R15 | Operator algebra methods applied to problems in quantum theory [See also 46Lxx, 81T05] |  |  |
-| 81R20 | Covariant wave equations in quantum theory, relativistic quantum mechanics [See also 81Q35] |  |  |
-| 81R25 | Spinor and twistor methods applied to problems in quantum theory [See also 32L25] |  |  |
-| 81R30 | Coherent states [See also 22E45]; squeezed states in quantum theory [See also 81V80] |  |  |
-| 81R40 | Symmetry breaking in quantum theory |  |  |
-| 81R50 | Quantum groups and related algebraic methods applied to problems in quantum theory [See also 16T20, 17B37] |  |  |
-| 81R60 | Noncommutative geometry in quantum theory |  |  |
+| **81Rxx** | **Groups and algebras in quantum theory** | **Kuantum nazariyesinde zümreler ve cebirler** |  |
+| 81R05 | Finite-dimensional groups and algebras motivated by physics and their representations [See also 20C35, 22E70] | Hikmet-i tabîiyyeden ilham alınan mütenâhî buudlu zümreler ve cebirler ve bunların temsilleri [Ayrıca bakınız: 20C35, 22E70] |  |
+| 81R10 | Infinite-dimensional groups and algebras motivated by physics, including Virasoro, Kac-Moody, W -algebras and other current algebras and their representations [See also 17B65, 17B67, 22E65, 22E67, 22E70] | Hikmet-i tabîiyyeden ilham alınan gayr-ı mütenâhî buudlu zümreler ve cebirler, Virasoro, Kac-Moody, W-cebirleri ve sâir tayyâr cebirleri ve bunların temsilleri dahil [Ayrıca bakınız: 17B65, 17B67, 22E65, 22E67, 22E70] | nakil |
+| 81R12 | Groups and algebras in quantum theory and relations with integrable systems [See also 17Bxx, 37J35] | Kuantum nazariyesinde zümreler ve cebirler ve tamâmiye kābil nizâmlarla münasebetleri [Ayrıca bakınız: 17Bxx, 37J35] |  |
+| 81R15 | Operator algebra methods applied to problems in quantum theory [See also 46Lxx, 81T05] | Kuantum nazariyesi meselelerine tatbîk edilen âmil cebiri usulleri [Ayrıca bakınız: 46Lxx, 81T05] |  |
+| 81R20 | Covariant wave equations in quantum theory, relativistic quantum mechanics [See also 81Q35] | Kuantum nazariyesinde mütegayyir-hâfız (kovaryant) mevc muâdeleleri, izâfî kuantum mekaniği [Ayrıca bakınız: 81Q35] |  |
+| 81R25 | Spinor and twistor methods applied to problems in quantum theory [See also 32L25] | Kuantum nazariyesi meselelerine tatbîk edilen spinor ve twistor usulleri [Ayrıca bakınız: 32L25] | nakil |
+| 81R30 | Coherent states [See also 22E45]; squeezed states in quantum theory [See also 81V80] | Ahenkli (koherent) hâller [Ayrıca bakınız: 22E45]; kuantum nazariyesinde sıkıştırılmış hâller [Ayrıca bakınız: 81V80] |  |
+| 81R40 | Symmetry breaking in quantum theory | Kuantum nazariyesinde tenâzur kırılması |  |
+| 81R50 | Quantum groups and related algebraic methods applied to problems in quantum theory [See also 16T20, 17B37] | Kuantum nazariyesi meselelerine tatbîk edilen kuantum zümreleri ve alâkalı cebrî usuller [Ayrıca bakınız: 16T20, 17B37] |  |
+| 81R60 | Noncommutative geometry in quantum theory | Kuantum nazariyesinde gayr-ı tebdîlî hendese |  |
 | 81R99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **81Sxx** | **General quantum mechanics and problems of quantization** | **** |  |
-| 81S05 | Commutation relations and statistics as related to quantum mechanics (general) |  |  |
-| 81S07 | Uncertainty relations, also entropic |  |  |
-| 81S08 | Canonical quantization |  |  |
-| 81S10 | Geometry and quantization, symplectic methods [See also 53D50] |  |  |
-| 81S20 | Stochastic quantization |  |  |
-| 81S22 | Open systems, reduced dynamics, master equations, decoherence [See also 82C31] |  |  |
-| 81S25 | Quantum stochastic calculus |  |  |
-| 81S30 | Phase-space methods including Wigner distributions, etc. applied to problems in quantum mechanics |  |  |
-| 81S40 | Path integrals in quantum mechanics [See also 58D30, 81Q30, 81T18] |  |  |
+| **81Sxx** | **General quantum mechanics and problems of quantization** | **Umûmî kuantum mekaniği ve kuantumlaştırma meseleleri** |  |
+| 81S05 | Commutation relations and statistics as related to quantum mechanics (general) | Kuantum mekaniğiyle alâkalı tebdîl nisbetleri ve ihsâiyyât (umûmî) |  |
+| 81S07 | Uncertainty relations, also entropic | Belirsizlik nisbetleri, entropiye dayananlar da |  |
+| 81S08 | Canonical quantization | Kanonik kuantumlaştırma |  |
+| 81S10 | Geometry and quantization, symplectic methods [See also 53D50] | Hendese ve kuantumlaştırma, simplektik usuller [Ayrıca bakınız: 53D50] |  |
+| 81S20 | Stochastic quantization | İhtimâlî kuantumlaştırma |  |
+| 81S22 | Open systems, reduced dynamics, master equations, decoherence [See also 82C31] | Açık nizâmlar, tenzîl edilmiş harekiyyât, ana muâdeleler, ittisâk-ı tavrın zevâli (dekoherans) [Ayrıca bakınız: 82C31] |  |
+| 81S25 | Quantum stochastic calculus | Kuantum ihtimâlî hesabı |  |
+| 81S30 | Phase-space methods including Wigner distributions, etc. applied to problems in quantum mechanics | Kuantum mekaniği meselelerine tatbîk edilen, Wigner tevzî'leri ve emsâli dahil safha fezâsı usulleri | nakil |
+| 81S40 | Path integrals in quantum mechanics [See also 58D30, 81Q30, 81T18] | Kuantum mekaniğinde yol tamâmîleri [Ayrıca bakınız: 58D30, 81Q30, 81T18] |  |
 | 81S99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **81Txx** | **Quantum field theory; related classical field theories [See also 70Sxx]** | **** |  |
-| 81T05 | Axiomatic quantum field theory; operator algebras |  |  |
-| 81T08 | Constructive quantum field theory |  |  |
-| 81T10 | Model quantum field theories |  |  |
-| 81T11 | Higher spin theories |  |  |
-| 81T12 | Effective quantum field theories |  |  |
-| 81T13 | Yang-Mills and other gauge theories in quantum field theory [See also 53C07, 58E15] |  |  |
-| 81T15 | Perturbative methods of renormalization applied to problems in quantum field theory |  |  |
-| 81T16 | Nonperturbative methods of renormalization applied to problems in quantum field theory |  |  |
-| 81T17 | Renormalization group methods applied to problems in quantum field theory |  |  |
-| 81T18 | Feynman diagrams |  |  |
-| 81T20 | Quantum field theory on curved space or space-time backgrounds |  |  |
-| 81T25 | Quantum field theory on lattices |  |  |
-| 81T27 | Continuum limits in quantum field theory |  |  |
-| 81T28 | Thermal quantum field theory [See also 82B30] |  |  |
-| 81T30 | String and superstring theories; other extended objects (e.g., branes) in quantum field theory [See also 83E30] |  |  |
-| 81T32 | Matrix models and tensor models for quantum field theory |  |  |
-| 81T33 | Dimensional compactification in quantum field theory |  |  |
-| 81T35 | Correspondence, duality, holography (AdS/CFT, gauge/gravity, etc.) [See also 83E05] |  |  |
-| 81T40 | Two-dimensional field theories, conformal field theories, etc. in quantum mechanics |  |  |
-| 81T45 | Topological field theories in quantum mechanics [See also 57R56, 58Dxx] |  |  |
-| 81T50 | Anomalies in quantum field theory |  |  |
-| 81T55 | Casimir effect in quantum field theory |  |  |
-| 81T60 | Supersymmetric field theories in quantum mechanics |  |  |
-| 81T70 | Quantization in field theory; cohomological methods [See also 58D29] |  |  |
-| 81T75 | Noncommutative geometry methods in quantum field theory [See also 46L85, 46L87, 58B34] |  |  |
+| **81Txx** | **Quantum field theory; related classical field theories [See also 70Sxx]** | **Kuantum sahâ nazariyesi; alâkalı klasik sahâ nazariyeleri [Ayrıca bakınız: 70Sxx]** |  |
+| 81T05 | Axiomatic quantum field theory; operator algebras | Mütearifevî kuantum sahâ nazariyesi; âmil cebirleri |  |
+| 81T08 | Constructive quantum field theory | İnşâî kuantum sahâ nazariyesi |  |
+| 81T10 | Model quantum field theories | Numûne kuantum sahâ nazariyeleri |  |
+| 81T11 | Higher spin theories | Yüksek spin nazariyeleri |  |
+| 81T12 | Effective quantum field theories | Fiilî (efektif) kuantum sahâ nazariyeleri |  |
+| 81T13 | Yang-Mills and other gauge theories in quantum field theory [See also 53C07, 58E15] | Kuantum sahâ nazariyesinde Yang-Mills ve sâir ayar nazariyeleri [Ayrıca bakınız: 53C07, 58E15] | nakil |
+| 81T15 | Perturbative methods of renormalization applied to problems in quantum field theory | Kuantum sahâ nazariyesi meselelerine tatbîk edilen ihtilâle dayanan yeniden ayarlama usulleri |  |
+| 81T16 | Nonperturbative methods of renormalization applied to problems in quantum field theory | Kuantum sahâ nazariyesi meselelerine tatbîk edilen ihtilâle dayanmayan yeniden ayarlama usulleri |  |
+| 81T17 | Renormalization group methods applied to problems in quantum field theory | Kuantum sahâ nazariyesi meselelerine tatbîk edilen yeniden ayarlama zümresi usulleri |  |
+| 81T18 | Feynman diagrams | Feynman şemaları | nakil |
+| 81T20 | Quantum field theory on curved space or space-time backgrounds | Münhanî fezâ yahut fezâ-zaman zeminleri üzerinde kuantum sahâ nazariyesi |  |
+| 81T25 | Quantum field theory on lattices | Kafesler üzerinde kuantum sahâ nazariyesi |  |
+| 81T27 | Continuum limits in quantum field theory | Kuantum sahâ nazariyesinde muttasıl nihâyetler |  |
+| 81T28 | Thermal quantum field theory [See also 82B30] | Hararî kuantum sahâ nazariyesi [Ayrıca bakınız: 82B30] |  |
+| 81T30 | String and superstring theories; other extended objects (e.g., branes) in quantum field theory [See also 83E30] | Sicim ve fevka'l-sicim nazariyeleri; kuantum sahâ nazariyesinde sâir mümted nesneler (meselâ zarlar) [Ayrıca bakınız: 83E30] |  |
+| 81T32 | Matrix models and tensor models for quantum field theory | Kuantum sahâ nazariyesi için masfûfe numûneleri ve tansör numûneleri |  |
+| 81T33 | Dimensional compactification in quantum field theory | Kuantum sahâ nazariyesinde buudî mütarâslaştırma |  |
+| 81T35 | Correspondence, duality, holography (AdS/CFT, gauge/gravity, etc.) [See also 83E05] | Mutâbakat, müsennâlık, holografi (Anti-de Sitter fezâsı ile zâviye-hâfız sahâ nazariyesi mutâbakatı, ayar/cazibe ve emsâli) [Ayrıca bakınız: 83E05] | nakil |
+| 81T40 | Two-dimensional field theories, conformal field theories, etc. in quantum mechanics | Kuantum mekaniğinde iki buudlu sahâ nazariyeleri, zâviye-hâfız sahâ nazariyeleri ve emsâli |  |
+| 81T45 | Topological field theories in quantum mechanics [See also 57R56, 58Dxx] | Kuantum mekaniğinde vaz'î sahâ nazariyeleri [Ayrıca bakınız: 57R56, 58Dxx] |  |
+| 81T50 | Anomalies in quantum field theory | Kuantum sahâ nazariyesinde şüzûzlar (anomaliler) |  |
+| 81T55 | Casimir effect in quantum field theory | Kuantum sahâ nazariyesinde Casimir tesiri | nakil |
+| 81T60 | Supersymmetric field theories in quantum mechanics | Kuantum mekaniğinde fevka'l-tenâzurlu sahâ nazariyeleri |  |
+| 81T70 | Quantization in field theory; cohomological methods [See also 58D29] | Sahâ nazariyesinde kuantumlaştırma; mukābil-tecânüsî usuller [Ayrıca bakınız: 58D29] |  |
+| 81T75 | Noncommutative geometry methods in quantum field theory [See also 46L85, 46L87, 58B34] | Kuantum sahâ nazariyesinde gayr-ı tebdîlî hendese usulleri [Ayrıca bakınız: 46L85, 46L87, 58B34] |  |
 | 81T99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **81Uxx** | **Quantum scattering theory [See also 34A55, 34L25, 34L40, 35P25, 47A40]** | **** |  |
-| 81U05 | 2-body potential quantum scattering theory {For WKB methods, see also 34E20} |  |  |
-| 81U10 | n-body potential quantum scattering theory |  |  |
-| 81U15 | Exactly and quasi-solvable systems arising in quantum theory |  |  |
-| 81U20 | S-matrix theory, etc. in quantum theory |  |  |
-| 81U24 | Resonances in quantum scattering theory |  |  |
-| 81U26 | Tunneling in quantum theory |  |  |
-| 81U30 | Dispersion theory, dispersion relations arising in quantum theory |  |  |
-| 81U35 | Inelastic and multichannel quantum scattering |  |  |
-| 81U40 | Inverse scattering problems in quantum theory |  |  |
-| 81U90 | Particle decays |  |  |
+| **81Uxx** | **Quantum scattering theory [See also 34A55, 34L25, 34L40, 35P25, 47A40]** | **Kuantum inteşâr (saçılma) nazariyesi [Ayrıca bakınız: 34A55, 34L25, 34L40, 35P25, 47A40]** |  |
+| 81U05 | 2-body potential quantum scattering theory {For WKB methods, see also 34E20} | İki cisim kuvve kuantum inteşâr nazariyesi {Wentzel-Kramers-Brillouin usulleri için ayrıca bakınız: 34E20} |  |
+| 81U10 | n-body potential quantum scattering theory | N cisim kuvve kuantum inteşâr nazariyesi |  |
+| 81U15 | Exactly and quasi-solvable systems arising in quantum theory | Kuantum nazariyesinde zuhûr eden tam ve şibh-i hal edilebilir nizâmlar |  |
+| 81U20 | S-matrix theory, etc. in quantum theory | Kuantum nazariyesinde S-masfûfesi nazariyesi ve emsâli |  |
+| 81U24 | Resonances in quantum scattering theory | Kuantum inteşâr nazariyesinde tanînler |  |
+| 81U26 | Tunneling in quantum theory | Kuantum nazariyesinde tünel geçişi |  |
+| 81U30 | Dispersion theory, dispersion relations arising in quantum theory | Kuantum nazariyesinde zuhûr eden tefrîk (dispersiyon) nazariyesi, tefrîk nisbetleri |  |
+| 81U35 | Inelastic and multichannel quantum scattering | Gayr-ı mürûnetli ve çok kanallı kuantum inteşârı |  |
+| 81U40 | Inverse scattering problems in quantum theory | Kuantum nazariyesinde makûs inteşâr meseleleri |  |
+| 81U90 | Particle decays | Zerre inhilâlleri (bozunmaları) |  |
 | 81U99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **81Vxx** | **Applications of quantum theory to specific physical systems** | **** |  |
-| 81V05 | Strong interaction, including quantum chromodynamics |  |  |
-| 81V10 | Electromagnetic interaction; quantum electrodynamics |  |  |
-| 81V15 | Weak interaction in quantum theory |  |  |
-| 81V17 | Gravitational interaction in quantum theory [See also 83Cxx, 83Exx] |  |  |
-| 81V19 | Other fundamental interactions in quantum theory |  |  |
-| 81V22 | Unified quantum theories |  |  |
-| 81V25 | Other elementary particle theory in quantum theory |  |  |
-| 81V27 | Anyons |  |  |
-| 81V35 | Nuclear physics |  |  |
-| 81V45 | Atomic physics |  |  |
-| 81V55 | Molecular physics [See also 92E10] |  |  |
-| 81V60 | Mono-, di- and multipole moments (EM and other), gyromagnetic relations |  |  |
-| 81V65 | Quantum dots as quasi particles [See also 82D20] |  |  |
-| 81V70 | Many-body theory; quantum Hall effect |  |  |
-| 81V72 | Particle exchange symmetries in quantum theory (general) |  |  |
-| 81V73 | Bosonic systems in quantum theory |  |  |
-| 81V74 | Fermionic systems in quantum theory |  |  |
-| 81V80 | Quantum optics |  |  |
+| **81Vxx** | **Applications of quantum theory to specific physical systems** | **Kuantum nazariyesinin muayyen tabiî nizâmlara tatbîkleri** |  |
+| 81V05 | Strong interaction, including quantum chromodynamics | Kavî mütekābil tesir, kuantum renk-harekiyyâtı (kromodinamik) dahil |  |
+| 81V10 | Electromagnetic interaction; quantum electrodynamics | Elektromıknatısî mütekābil tesir; kuantum elektro-harekiyyâtı |  |
+| 81V15 | Weak interaction in quantum theory | Kuantum nazariyesinde zayıf mütekābil tesir |  |
+| 81V17 | Gravitational interaction in quantum theory [See also 83Cxx, 83Exx] | Kuantum nazariyesinde cazibe mütekābil tesiri [Ayrıca bakınız: 83Cxx, 83Exx] |  |
+| 81V19 | Other fundamental interactions in quantum theory | Kuantum nazariyesinde sâir esâsî mütekābil tesirler |  |
+| 81V22 | Unified quantum theories | Birleşik kuantum nazariyeleri |  |
+| 81V25 | Other elementary particle theory in quantum theory | Kuantum nazariyesinde sâir unsurî zerre nazariyeleri |  |
+| 81V27 | Anyons | Her-türlü-istatistikli zerreler (anyonlar) |  |
+| 81V35 | Nuclear physics | Çekirdek hikmeti (nükleer fizik) |  |
+| 81V45 | Atomic physics | Cevher-i ferd (atom) hikmeti |  |
+| 81V55 | Molecular physics [See also 92E10] | Zerrecik (molekül) hikmeti [Ayrıca bakınız: 92E10] |  |
+| 81V60 | Mono-, di- and multipole moments (EM and other), gyromagnetic relations | Tek, çift ve çok kutuplu lahzalar (elektromıknatısî ve sâir), cayro-mıknatısî nisbetler |  |
+| 81V65 | Quantum dots as quasi particles [See also 82D20] | Şibh-i zerre olarak kuantum noktaları [Ayrıca bakınız: 82D20] |  |
+| 81V70 | Many-body theory; quantum Hall effect | Çok cisim nazariyesi; kuantum Hall tesiri | nakil |
+| 81V72 | Particle exchange symmetries in quantum theory (general) | Kuantum nazariyesinde zerre mübâdele tenâzurları (umûmî) |  |
+| 81V73 | Bosonic systems in quantum theory | Kuantum nazariyesinde Bose nizâmları | nakil |
+| 81V74 | Fermionic systems in quantum theory | Kuantum nazariyesinde Fermi nizâmları | nakil |
+| 81V80 | Quantum optics | Kuantum menâzırı |  |
 | 81V99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
-## 82-XX — Statistical mechanics, structure of matter
+## 82-XX — İhsâî mekanik (istatistiksel mekanik), maddenin bünyesi
 
 Statistical mechanics, structure of matter
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 82-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to statistical mechanics |  |  |
-| 82-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to statistical mechanics |  |  |
-| 82-02 | Research exposition (monographs, survey articles) pertaining to statistical mechanics |  |  |
-| 82-03 | History of statistical mechanics [Consider also classification numbers from Section 01] |  |  |
-| 82-04 | Software, source code, etc. for problems pertaining to statistical mechanics |  |  |
-| 82-05 | Experimental work for problems pertaining to statistical mechanics |  |  |
-| 82-06 | Proceedings, conferences, collections, etc. pertaining to statistical mechanics |  |  |
-| 82-10 | Mathematical modeling or simulation for problems pertaining to statistical mechanics |  |  |
-| 82-11 | Research data for problems pertaining to statistical mechanics |  |  |
-| **82Bxx** | **Equilibrium statistical mechanics** | **** |  |
-| 82B03 | Foundations of equilibrium statistical mechanics |  |  |
-| 82B05 | Classical equilibrium statistical mechanics (general) |  |  |
-| 82B10 | Quantum equilibrium statistical mechanics (general) |  |  |
-| 82B20 | Lattice systems (Ising, dimer, Potts, etc.) and systems on graphs arising in equilibrium statistical mechanics [See also 05Cxx] |  |  |
-| 82B21 | Continuum models (systems of particles, etc.) arising in equilibrium statistical mechanics |  |  |
-| 82B23 | Exactly solvable models; Bethe ansatz |  |  |
-| 82B24 | Interface problems; diffusion-limited aggregation arising in equilibrium statistical mechanics |  |  |
-| 82B26 | Phase transitions (general) in equilibrium statistical mechanics |  |  |
-| 82B27 | Critical phenomena in equilibrium statistical mechanics |  |  |
-| 82B28 | Renormalization group methods in equilibrium statistical mechanics [See also 81T17] |  |  |
-| 82B30 | Statistical thermodynamics [See also 80-XX] |  |  |
-| 82B31 | Stochastic methods applied to problems in equilibrium statistical mechanics |  |  |
-| 82B35 | Irreversible thermodynamics, including Onsager-Machlup theory [See also 92E20] |  |  |
-| 82B40 | Kinetic theory of gases in equilibrium statistical mechanics |  |  |
-| 82B41 | Random walks, random surfaces, lattice animals, etc. in equilibrium statistical mechanics [See also 60G50, 82C41] |  |  |
-| 82B43 | Percolation [See also 60K35] |  |  |
-| 82B44 | Disordered systems (random Ising models, random Schrödinger operators, etc.) in equilibrium statistical mechanics |  |  |
+| 82-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to statistical mechanics | ihsâî mekanik ve maddenin bünyesi hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 82-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to statistical mechanics | ihsâî mekanik ve maddenin bünyesi hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 82-02 | Research exposition (monographs, survey articles) pertaining to statistical mechanics | ihsâî mekanik ve maddenin bünyesi hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 82-03 | History of statistical mechanics [Consider also classification numbers from Section 01] | İhsâî mekaniğin târihi [01. babın tasnif numaralarına da bakılsın] |  |
+| 82-04 | Software, source code, etc. for problems pertaining to statistical mechanics | ihsâî mekanik ve maddenin bünyesi sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 82-05 | Experimental work for problems pertaining to statistical mechanics | ihsâî mekanik ve maddenin bünyesi sahasındaki meselelere dair tecrübî çalışmalar |  |
+| 82-06 | Proceedings, conferences, collections, etc. pertaining to statistical mechanics | ihsâî mekanik ve maddenin bünyesi hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 82-10 | Mathematical modeling or simulation for problems pertaining to statistical mechanics | ihsâî mekanik ve maddenin bünyesi sahasındaki meselelere dair riyâzî numûne kurma (temsil) yahut taklit (benzetim) |  |
+| 82-11 | Research data for problems pertaining to statistical mechanics | ihsâî mekanik ve maddenin bünyesi sahasındaki meselelere dair tetkik verileri |  |
+| **82Bxx** | **Equilibrium statistical mechanics** | **Muvâzene ihsâî mekaniği** |  |
+| 82B03 | Foundations of equilibrium statistical mechanics | Muvâzene ihsâî mekaniğinin esasları |  |
+| 82B05 | Classical equilibrium statistical mechanics (general) | Klasik muvâzene ihsâî mekaniği (umûmî) |  |
+| 82B10 | Quantum equilibrium statistical mechanics (general) | Kuantum muvâzene ihsâî mekaniği (umûmî) |  |
+| 82B20 | Lattice systems (Ising, dimer, Potts, etc.) and systems on graphs arising in equilibrium statistical mechanics [See also 05Cxx] | Muvâzene ihsâî mekaniğinde zuhûr eden kafes nizâmları (Ising, ikili (dimer), Potts ve emsâli) ve rabıta şekilleri üzerindeki nizâmlar [Ayrıca bakınız: 05Cxx] | nakil |
+| 82B21 | Continuum models (systems of particles, etc.) arising in equilibrium statistical mechanics | Muvâzene ihsâî mekaniğinde zuhûr eden muttasıl numûneler (zerre nizâmları ve emsâli) |  |
+| 82B23 | Exactly solvable models; Bethe ansatz | Tam olarak hal edilebilir numûneler; Bethe farzı (ansatz) | nakil |
+| 82B24 | Interface problems; diffusion-limited aggregation arising in equilibrium statistical mechanics | Muvâzene ihsâî mekaniğinde zuhûr eden ara yüz meseleleri; intişârla mahdûd yığılma |  |
+| 82B26 | Phase transitions (general) in equilibrium statistical mechanics | Muvâzene ihsâî mekaniğinde safha intikalleri (umûmî) |  |
+| 82B27 | Critical phenomena in equilibrium statistical mechanics | Muvâzene ihsâî mekaniğinde hâlî (kritik) hâdiseler |  |
+| 82B28 | Renormalization group methods in equilibrium statistical mechanics [See also 81T17] | Muvâzene ihsâî mekaniğinde yeniden ayarlama zümresi usulleri [Ayrıca bakınız: 81T17] |  |
+| 82B30 | Statistical thermodynamics [See also 80-XX] | İhsâî hararet-i hareket ilmi [Ayrıca bakınız: 80-XX] |  |
+| 82B31 | Stochastic methods applied to problems in equilibrium statistical mechanics | Muvâzene ihsâî mekaniği meselelerine tatbîk edilen ihtimâlî usuller |  |
+| 82B35 | Irreversible thermodynamics, including Onsager-Machlup theory [See also 92E20] | Geri dönülmez hararet-i hareket ilmi, Onsager-Machlup nazariyesi dahil [Ayrıca bakınız: 92E20] | nakil |
+| 82B40 | Kinetic theory of gases in equilibrium statistical mechanics | Muvâzene ihsâî mekaniğinde gazların harekî (kinetik) nazariyesi |  |
+| 82B41 | Random walks, random surfaces, lattice animals, etc. in equilibrium statistical mechanics [See also 60G50, 82C41] | Muvâzene ihsâî mekaniğinde tesâdüfî yürüyüşler, tesâdüfî sathlar, kafes hayvanları ve emsâli [Ayrıca bakınız: 60G50, 82C41] |  |
+| 82B43 | Percolation [See also 60K35] | Sızma (perkolasyon) [Ayrıca bakınız: 60K35] |  |
+| 82B44 | Disordered systems (random Ising models, random Schrödinger operators, etc.) in equilibrium statistical mechanics | Muvâzene ihsâî mekaniğinde nizâmsız manzûmeler (tesâdüfî Ising numûneleri, tesâdüfî Schrödinger âmilleri ve emsâli) |  |
 | 82B99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **82Cxx** | **Time-dependent statistical mechanics (dynamic and nonequilibrium)** | **** |  |
-| 82C03 | Foundations of time-dependent statistical mechanics |  |  |
-| 82C05 | Classical dynamic and nonequilibrium statistical mechanics (general) |  |  |
-| 82C10 | Quantum dynamics and nonequilibrium statistical mechanics (general) |  |  |
-| 82C20 | Dynamic lattice systems (kinetic Ising, etc.) and systems on graphs in time-dependent statistical mechanics [See also 05Cxx] |  |  |
-| 82C21 | Dynamic continuum models (systems of particles, etc.) in time-dependent statistical mechanics |  |  |
-| 82C22 | Interacting particle systems in time-dependent statistical mechanics [See also 60K35] |  |  |
-| 82C23 | Exactly solvable dynamic models in time-dependent statistical mechanics [See also 37K60] |  |  |
-| 82C24 | Interface problems; diffusion-limited aggregation in time-dependent statistical mechanics |  |  |
-| 82C26 | Dynamic and nonequilibrium phase transitions (general) in statistical mechanics |  |  |
-| 82C27 | Dynamic critical phenomena in statistical mechanics |  |  |
-| 82C28 | Dynamic renormalization group methods applied to problems in time-dependent statistical mechanics [See also 81T17] |  |  |
-| 82C31 | Stochastic methods (Fokker-Planck, Langevin, etc.) applied to problems in time-dependent statistical mechanics [See also 60H10] |  |  |
-| 82C32 | Neural nets applied to problems in time-dependent statistical mechanics [See also 68T05, 91E40, 92B20] |  |  |
-| 82C35 | Irreversible thermodynamics, including Onsager-Machlup theory |  |  |
-| 82C40 | Kinetic theory of gases in time-dependent statistical mechanics |  |  |
-| 82C41 | Dynamics of random walks, random surfaces, lattice animals, etc. in time-dependent statistical mechanics [See also 60G50] |  |  |
-| 82C43 | Time-dependent percolation in statistical mechanics [See also 60K35] |  |  |
-| 82C44 | Dynamics of disordered systems (random Ising systems, etc.) in time-dependent statistical mechanics |  |  |
-| 82C70 | Transport processes in time-dependent statistical mechanics |  |  |
+| **82Cxx** | **Time-dependent statistical mechanics (dynamic and nonequilibrium)** | **Zamana tâbi ihsâî mekanik (harekî ve muvâzene dışı)** |  |
+| 82C03 | Foundations of time-dependent statistical mechanics | Zamana tâbi ihsâî mekanikin esasları |  |
+| 82C05 | Classical dynamic and nonequilibrium statistical mechanics (general) | Klasik harekî ve muvâzene dışı ihsâî mekanik (umûmî) |  |
+| 82C10 | Quantum dynamics and nonequilibrium statistical mechanics (general) | Kuantum harekiyyâtı ve muvâzene dışı ihsâî mekanik (umûmî) |  |
+| 82C20 | Dynamic lattice systems (kinetic Ising, etc.) and systems on graphs in time-dependent statistical mechanics [See also 05Cxx] | Zamana tâbi ihsâî mekanikte harekî kafes nizâmları (harekî Ising ve emsâli) ve rabıta şekilleri üzerindeki nizâmlar [Ayrıca bakınız: 05Cxx] |  |
+| 82C21 | Dynamic continuum models (systems of particles, etc.) in time-dependent statistical mechanics | Zamana tâbi ihsâî mekanikte harekî muttasıl numûneler (zerre nizâmları ve emsâli) |  |
+| 82C22 | Interacting particle systems in time-dependent statistical mechanics [See also 60K35] | Zamana tâbi ihsâî mekanikte mütekābil tesirli zerre nizâmları [Ayrıca bakınız: 60K35] |  |
+| 82C23 | Exactly solvable dynamic models in time-dependent statistical mechanics [See also 37K60] | Zamana tâbi ihsâî mekanikte tam olarak hal edilebilir harekî numûneler [Ayrıca bakınız: 37K60] |  |
+| 82C24 | Interface problems; diffusion-limited aggregation in time-dependent statistical mechanics | Zamana tâbi ihsâî mekanikte ara yüz meseleleri; intişârla mahdûd yığılma |  |
+| 82C26 | Dynamic and nonequilibrium phase transitions (general) in statistical mechanics | İhsâî mekanikte harekî ve muvâzene dışı safha intikalleri (umûmî) |  |
+| 82C27 | Dynamic critical phenomena in statistical mechanics | İhsâî mekanikte harekî hâlî hâdiseler |  |
+| 82C28 | Dynamic renormalization group methods applied to problems in time-dependent statistical mechanics [See also 81T17] | Zamana tâbi ihsâî mekanik meselelerine tatbîk edilen harekî yeniden ayarlama zümresi usulleri [Ayrıca bakınız: 81T17] |  |
+| 82C31 | Stochastic methods (Fokker-Planck, Langevin, etc.) applied to problems in time-dependent statistical mechanics [See also 60H10] | Zamana tâbi ihsâî mekanik meselelerine tatbîk edilen ihtimâlî usuller (Fokker-Planck, Langevin ve emsâli) [Ayrıca bakınız: 60H10] | nakil |
+| 82C32 | Neural nets applied to problems in time-dependent statistical mechanics [See also 68T05, 91E40, 92B20] | Zamana tâbi ihsâî mekanik meselelerine tatbîk edilen sinir ağları [Ayrıca bakınız: 68T05, 91E40, 92B20] |  |
+| 82C35 | Irreversible thermodynamics, including Onsager-Machlup theory | Geri dönülmez hararet-i hareket ilmi, Onsager-Machlup nazariyesi dahil | nakil |
+| 82C40 | Kinetic theory of gases in time-dependent statistical mechanics | Zamana tâbi ihsâî mekanikte gazların harekî nazariyesi |  |
+| 82C41 | Dynamics of random walks, random surfaces, lattice animals, etc. in time-dependent statistical mechanics [See also 60G50] | Zamana tâbi ihsâî mekanikte tesâdüfî yürüyüşlerin, tesâdüfî sathların, kafes hayvanlarının ve emsâlinin harekiyyâtı [Ayrıca bakınız: 60G50] |  |
+| 82C43 | Time-dependent percolation in statistical mechanics [See also 60K35] | İhsâî mekanikte zamana tâbi sızma [Ayrıca bakınız: 60K35] |  |
+| 82C44 | Dynamics of disordered systems (random Ising systems, etc.) in time-dependent statistical mechanics | Zamana tâbi ihsâî mekanikte nizâmsız manzûmelerin harekiyyâtı (tesâdüfî Ising nizâmları ve emsâli) |  |
+| 82C70 | Transport processes in time-dependent statistical mechanics | Zamana tâbi ihsâî mekanikte nakil cereyanları |  |
 | 82C99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **82Dxx** | **Applications of statistical mechanics to specific types of physical systems** | **** |  |
-| 82D03 | Statistical mechanics in condensed matter (general) |  |  |
-| 82D05 | Statistical mechanics of gases |  |  |
-| 82D10 | Statistical mechanics of plasmas |  |  |
-| 82D15 | Statistical mechanics of liquids |  |  |
-| 82D20 | Statistical mechanics of solids |  |  |
-| 82D25 | Statistical mechanics of crystals {For crystallographic group theory, see 20H15} |  |  |
-| 82D30 | Statistical mechanics of random media, disordered materials (including liquid crystals and spin glasses) |  |  |
-| 82D35 | Statistical mechanics of metals |  |  |
-| 82D37 | Statistical mechanics of semiconductors |  |  |
-| 82D40 | Statistical mechanics of magnetic materials |  |  |
-| 82D45 | Statistical mechanics of ferroelectrics |  |  |
-| 82D50 | Statistical mechanics of superfluids |  |  |
-| 82D55 | Statistical mechanics of superconductors |  |  |
-| 82D60 | Statistical mechanics of polymers |  |  |
-| 82D75 | Nuclear reactor theory; neutron transport |  |  |
-| 82D77 | Quantum waveguides, quantum wires [See also 78A50] |  |  |
-| 82D80 | Statistical mechanics of nanostructures and nanoparticles |  |  |
+| **82Dxx** | **Applications of statistical mechanics to specific types of physical systems** | **İhsâî mekaniğin muayyen nev'den tabiî nizâmlara tatbîkleri** |  |
+| 82D03 | Statistical mechanics in condensed matter (general) | Yoğun maddede ihsâî mekanik (umûmî) |  |
+| 82D05 | Statistical mechanics of gases | Gazların ihsâî mekaniği |  |
+| 82D10 | Statistical mechanics of plasmas | Plazmaların ihsâî mekaniği |  |
+| 82D15 | Statistical mechanics of liquids | Mâyilerin ihsâî mekaniği |  |
+| 82D20 | Statistical mechanics of solids | Sulb cisimlerin ihsâî mekaniği |  |
+| 82D25 | Statistical mechanics of crystals {For crystallographic group theory, see 20H15} | Billûrların ihsâî mekaniği {Billûr ilmine ait zümreler nazariyesi için bakınız: 20H15} |  |
+| 82D30 | Statistical mechanics of random media, disordered materials (including liquid crystals and spin glasses) | Tesâdüfî ortamların, nizâmsız maddelerin ihsâî mekaniği (mâyi billûrlar ve spin camları dahil) |  |
+| 82D35 | Statistical mechanics of metals | Ma'denlerin ihsâî mekaniği |  |
+| 82D37 | Statistical mechanics of semiconductors | Nîm-nâkillerin ihsâî mekaniği |  |
+| 82D40 | Statistical mechanics of magnetic materials | Mıknatısî maddelerin ihsâî mekaniği |  |
+| 82D45 | Statistical mechanics of ferroelectrics | Demir-elektrik (ferroelektrik) maddelerin ihsâî mekaniği |  |
+| 82D50 | Statistical mechanics of superfluids | Fevka'l-mâyilerin ihsâî mekaniği |  |
+| 82D55 | Statistical mechanics of superconductors | Fevka'l-nâkillerin ihsâî mekaniği |  |
+| 82D60 | Statistical mechanics of polymers | Kesîrü'l-cüz' (polimer) maddelerin ihsâî mekaniği |  |
+| 82D75 | Nuclear reactor theory; neutron transport | Çekirdek mütemmimi (reaktör) nazariyesi; neutron nakli |  |
+| 82D77 | Quantum waveguides, quantum wires [See also 78A50] | Kuantum mevc kılavuzları, kuantum telleri [Ayrıca bakınız: 78A50] |  |
+| 82D80 | Statistical mechanics of nanostructures and nanoparticles | Nano-bünyelerin ve nano-zerrelerin ihsâî mekaniği |  |
 | 82D99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **82Mxx** | **Basic methods in statistical mechanics [See also 65-XX]** | **** |  |
-| 82M10 | Finite element, Galerkin and related methods applied to problems in statistical mechanics |  |  |
-| 82M12 | Finite volume methods applied to problems in statistical mechanics |  |  |
-| 82M15 | Boundary element methods applied to problems in statistical mechanics |  |  |
-| 82M20 | Finite difference methods applied to problems in statistical mechanics |  |  |
-| 82M22 | Spectral, collocation and related (meshless) methods applied to problems in statistical mechanics |  |  |
-| 82M30 | Variational methods applied to problems in statistical mechanics |  |  |
-| 82M31 | Monte Carlo methods applied to problems in statistical mechanics [See also 65C05] |  |  |
-| 82M36 | Computational density functional analysis in statistical mechanics |  |  |
-| 82M37 | Computational molecular dynamics in statistical mechanics |  |  |
-| 82M60 | Stochastic analysis in statistical mechanics [See also 65C35] |  |  |
+| **82Mxx** | **Basic methods in statistical mechanics [See also 65-XX]** | **İhsâî mekanikte esâsî usuller [Ayrıca bakınız: 65-XX]** |  |
+| 82M10 | Finite element, Galerkin and related methods applied to problems in statistical mechanics | İhsâî mekanik meselelerine tatbîk edilen mütenâhî unsur, Galerkin ve alâkalı usuller | nakil |
+| 82M12 | Finite volume methods applied to problems in statistical mechanics | İhsâî mekanik meselelerine tatbîk edilen mütenâhî hacim usulleri |  |
+| 82M15 | Boundary element methods applied to problems in statistical mechanics | İhsâî mekanik meselelerine tatbîk edilen hudûd unsuru usulleri |  |
+| 82M20 | Finite difference methods applied to problems in statistical mechanics | İhsâî mekanik meselelerine tatbîk edilen mütenâhî fark usulleri |  |
+| 82M22 | Spectral, collocation and related (meshless) methods applied to problems in statistical mechanics | İhsâî mekanik meselelerine tatbîk edilen tayfî, tertîb ve alâkalı (ağsız) usuller |  |
+| 82M30 | Variational methods applied to problems in statistical mechanics | İhsâî mekanik meselelerine tatbîk edilen tehavvülî usuller |  |
+| 82M31 | Monte Carlo methods applied to problems in statistical mechanics [See also 65C05] | İhsâî mekanik meselelerine tatbîk edilen Monte Carlo usulleri [Ayrıca bakınız: 65C05] | nakil |
+| 82M36 | Computational density functional analysis in statistical mechanics | İhsâî mekanikte hesâbî kesâfet tâbi'-i tevâbi'si tahlîli |  |
+| 82M37 | Computational molecular dynamics in statistical mechanics | İhsâî mekanikte hesâbî zerrecik harekiyyâtı |  |
+| 82M60 | Stochastic analysis in statistical mechanics [See also 65C35] | İhsâî mekanikte ihtimâlî tahlîl [Ayrıca bakınız: 65C35] |  |
 | 82M99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
-## 83-XX — Relativity and gravitational theory
+## 83-XX — İzâfiyet ve cazibe nazariyesi
 
 Relativity and gravitational theory
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 83-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to relativity and gravitational theory |  |  |
-| 83-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to relativity and gravitational theory |  |  |
-| 83-02 | Research exposition (monographs, survey articles) pertaining to relativity and gravitational theory |  |  |
-| 83-03 | History of relativity and gravitational theory [Consider also classification numbers from Section 01] |  |  |
-| 83-04 | Software, source code, etc. for problems pertaining to relativity and gravitational theory |  |  |
-| 83-05 | Experimental work for problems pertaining to relativity and gravitational theory |  |  |
-| 83-06 | Proceedings, conferences, collections, etc. pertaining to relativity and gravitational theory |  |  |
-| 83-08 | Computational methods for problems pertaining to relativity and gravitational theory |  |  |
-| 83-10 | Mathematical modeling or simulation for problems pertaining to relativity and gravitational theory |  |  |
-| 83-11 | Research data for problems pertaining to relativity and gravitational theory |  |  |
-| **83Axx** | **Special relativity** | **** |  |
-| 83A05 | Special relativity |  |  |
+| 83-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to relativity and gravitational theory | izâfiyet ve cazibe nazariyesi hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 83-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to relativity and gravitational theory | izâfiyet ve cazibe nazariyesi hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 83-02 | Research exposition (monographs, survey articles) pertaining to relativity and gravitational theory | izâfiyet ve cazibe nazariyesi hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 83-03 | History of relativity and gravitational theory [Consider also classification numbers from Section 01] | İzâfiyet ve cazibe nazariyesinin târihi [01. babın tasnif numaralarına da bakılsın] |  |
+| 83-04 | Software, source code, etc. for problems pertaining to relativity and gravitational theory | izâfiyet ve cazibe nazariyesi sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 83-05 | Experimental work for problems pertaining to relativity and gravitational theory | izâfiyet ve cazibe nazariyesi sahasındaki meselelere dair tecrübî çalışmalar |  |
+| 83-06 | Proceedings, conferences, collections, etc. pertaining to relativity and gravitational theory | izâfiyet ve cazibe nazariyesi hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 83-08 | Computational methods for problems pertaining to relativity and gravitational theory | izâfiyet ve cazibe nazariyesi sahasındaki meselelere dair hesap usulleri |  |
+| 83-10 | Mathematical modeling or simulation for problems pertaining to relativity and gravitational theory | izâfiyet ve cazibe nazariyesi sahasındaki meselelere dair riyâzî numûne kurma (temsil) yahut taklit (benzetim) |  |
+| 83-11 | Research data for problems pertaining to relativity and gravitational theory | izâfiyet ve cazibe nazariyesi sahasındaki meselelere dair tetkik verileri |  |
+| **83Axx** | **Special relativity** | **Hususî izâfiyet** |  |
+| 83A05 | Special relativity | Hususî izâfiyet |  |
 | 83A99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **83Bxx** | **Observational and experimental questions in relativity and gravitational theory** | **** |  |
-| 83B05 | Observational and experimental questions in relativity and gravitational theory |  |  |
+| **83Bxx** | **Observational and experimental questions in relativity and gravitational theory** | **İzâfiyet ve cazibe nazariyesinde rasadî ve tecrübî suâller** |  |
+| 83B05 | Observational and experimental questions in relativity and gravitational theory | İzâfiyet ve cazibe nazariyesinde rasadî ve tecrübî suâller |  |
 | 83B99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **83Cxx** | **General relativity** | **** |  |
-| 83C05 | Einstein’s equations (general structure, canonical formalism, Cauchy problems) |  |  |
-| 83C10 | Equations of motion in general relativity and gravitational theory |  |  |
-| 83C15 | Exact solutions to problems in general relativity and gravitational theory |  |  |
-| 83C20 | Classes of solutions; algebraically special solutions, metrics with symmetries for problems in general relativity and gravitational theory |  |  |
-| 83C22 | Einstein-Maxwell equations |  |  |
-| 83C25 | Approximation procedures, weak fields in general relativity and gravitational theory |  |  |
-| 83C27 | Lattice gravity, Regge calculus and other discrete methods in general relativity and gravitational theory |  |  |
-| 83C30 | Asymptotic procedures (radiation, news functions, H-spaces, etc.) in general relativity and gravitational theory |  |  |
-| 83C35 | Gravitational waves |  |  |
-| 83C40 | Gravitational energy and conservation laws; groups of motions |  |  |
-| 83C45 | Quantization of the gravitational field |  |  |
-| 83C47 | Methods of quantum field theory in general relativity and gravitational theory [See also 81T20] |  |  |
-| 83C50 | Electromagnetic fields in general relativity and gravitational theory |  |  |
-| 83C55 | Macroscopic interaction of the gravitational field with matter (hydrodynamics, etc.) |  |  |
-| 83C56 | Dark matter and dark energy |  |  |
-| 83C57 | Black holes |  |  |
-| 83C60 | Spinor and twistor methods in general relativity and gravitational theory; Newman-Penrose formalism |  |  |
-| 83C65 | Methods of noncommutative geometry in general relativity [See also 58B34] |  |  |
-| 83C75 | Space-time singularities, cosmic censorship, etc. |  |  |
-| 83C80 | Analogues of general relativity in lower dimensions |  |  |
+| **83Cxx** | **General relativity** | **Umûmî izâfiyet** |  |
+| 83C05 | Einstein’s equations (general structure, canonical formalism, Cauchy problems) | Einstein muâdeleleri (umûmî bünye, kanonik sûrîlik, Cauchy meseleleri) | nakil |
+| 83C10 | Equations of motion in general relativity and gravitational theory | Umûmî izâfiyet ve cazibe nazariyesinde hareket muâdeleleri |  |
+| 83C15 | Exact solutions to problems in general relativity and gravitational theory | Umûmî izâfiyet ve cazibe nazariyesi meselelerinin tam halleri |  |
+| 83C20 | Classes of solutions; algebraically special solutions, metrics with symmetries for problems in general relativity and gravitational theory | Hal sınıfları; cebrî bakımdan hususî haller, umûmî izâfiyet ve cazibe nazariyesi meseleleri için tenâzurlu mesâfeler |  |
+| 83C22 | Einstein-Maxwell equations | Einstein-Maxwell muâdeleleri | nakil |
+| 83C25 | Approximation procedures, weak fields in general relativity and gravitational theory | Umûmî izâfiyet ve cazibe nazariyesinde takrîb usulleri, zayıf sahalar |  |
+| 83C27 | Lattice gravity, Regge calculus and other discrete methods in general relativity and gravitational theory | Umûmî izâfiyet ve cazibe nazariyesinde kafes cazibesi, Regge hesabı ve sâir munfasıl usuller | nakil |
+| 83C30 | Asymptotic procedures (radiation, news functions, H-spaces, etc.) in general relativity and gravitational theory | Umûmî izâfiyet ve cazibe nazariyesinde mukāribî usuller (şuâ', haber tâbileri, H-fezâları ve emsâli) |  |
+| 83C35 | Gravitational waves | Cazibe mevcleri |  |
+| 83C40 | Gravitational energy and conservation laws; groups of motions | Cazibe enerjisi ve bekā kanunları; hareket zümreleri |  |
+| 83C45 | Quantization of the gravitational field | Cazibe sahasının kuantumlaştırılması |  |
+| 83C47 | Methods of quantum field theory in general relativity and gravitational theory [See also 81T20] | Umûmî izâfiyet ve cazibe nazariyesinde kuantum sahâ nazariyesi usulleri [Ayrıca bakınız: 81T20] |  |
+| 83C50 | Electromagnetic fields in general relativity and gravitational theory | Umûmî izâfiyet ve cazibe nazariyesinde elektromıknatısî sahalar |  |
+| 83C55 | Macroscopic interaction of the gravitational field with matter (hydrodynamics, etc.) | Cazibe sahasının madde ile cesîm mikyâsta mütekābil tesiri (mâyi harekiyyâtı ve emsâli) |  |
+| 83C56 | Dark matter and dark energy | Karanlık madde ve karanlık enerji |  |
+| 83C57 | Black holes | Kara delikler |  |
+| 83C60 | Spinor and twistor methods in general relativity and gravitational theory; Newman-Penrose formalism | Umûmî izâfiyet ve cazibe nazariyesinde spinor ve twistor usulleri; Newman-Penrose sûrîliği | nakil |
+| 83C65 | Methods of noncommutative geometry in general relativity [See also 58B34] | Umûmî izâfiyette gayr-ı tebdîlî hendese usulleri [Ayrıca bakınız: 58B34] |  |
+| 83C75 | Space-time singularities, cosmic censorship, etc. | Fezâ-zaman infirâdları, kevnî sansür ve emsâli |  |
+| 83C80 | Analogues of general relativity in lower dimensions | Umûmî izâfiyetin düşük buudlardaki nazîrleri |  |
 | 83C99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **83Dxx** | **Relativistic gravitational theories other than Einstein’s, including asymmetric field theories** | **** |  |
-| 83D05 | Relativistic gravitational theories other than Einstein’s, including asymmetric field theories |  |  |
+| **83Dxx** | **Relativistic gravitational theories other than Einstein’s, including asymmetric field theories** | **Einstein'ınkinden başka izâfî cazibe nazariyeleri, gayr-ı mütenâzır sahâ nazariyeleri dahil** |  |
+| 83D05 | Relativistic gravitational theories other than Einstein’s, including asymmetric field theories | Einstein'ınkinden başka izâfî cazibe nazariyeleri, gayr-ı mütenâzır sahâ nazariyeleri dahil |  |
 | 83D99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **83Exx** | **Unified, higher-dimensional and super field theories** | **** |  |
-| 83E05 | Geometrodynamics and the holographic principle [See also 81T35] |  |  |
-| 83E15 | Kaluza-Klein and other higher-dimensional theories |  |  |
-| 83E30 | String and superstring theories in gravitational theory [See also 81T30] |  |  |
-| 83E50 | Supergravity |  |  |
+| **83Exx** | **Unified, higher-dimensional and super field theories** | **Birleşik, yüksek buudlu ve fevka'l-sahâ nazariyeleri** |  |
+| 83E05 | Geometrodynamics and the holographic principle [See also 81T35] | Hendesî harekiyyât ve holografi prensibi [Ayrıca bakınız: 81T35] |  |
+| 83E15 | Kaluza-Klein and other higher-dimensional theories | Kaluza-Klein ve sâir yüksek buudlu nazariyeler | nakil |
+| 83E30 | String and superstring theories in gravitational theory [See also 81T30] | Cazibe nazariyesinde sicim ve fevka'l-sicim nazariyeleri [Ayrıca bakınız: 81T30] |  |
+| 83E50 | Supergravity | Fevka'l-cazibe |  |
 | 83E99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **83Fxx** | **Relativistic cosmology {For astrophysical cosmology, see 85A40}** | **** |  |
-| 83F05 | Relativistic cosmology {For astrophysical cosmology, see 85A40} |  |  |
+| **83Fxx** | **Relativistic cosmology {For astrophysical cosmology, see 85A40}** | **İzâfî kevniyyât (kozmoloji) {Hey'et-i tabîiyyeye ait kevniyyât için bakınız: 85A40}** |  |
+| 83F05 | Relativistic cosmology {For astrophysical cosmology, see 85A40} | İzâfî kevniyyât {Hey'et-i tabîiyyeye ait kevniyyât için bakınız: 85A40} |  |
 | 83F99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
 ## 85-XX — Astronomy and astrophysics {For celestial mechanics, see 70F15}

@@ -3,7 +3,7 @@ src, hedef = sys.argv[1], sys.argv[2]
 SESLI = 'aeıioöuüâîû'
 KALIN = 'aıouâû'
 JETON = {}
-KANON = {'nin': 'in', 'nın': 'in', 'ın': 'in', 'sı': 'si', 'nde': 'de', 'nda': 'de', 'da': 'de', 'ye': 'e', 'ya': 'e', 'ne': 'e', 'na': 'e', 'a': 'e', 'yi': 'i', 'yı': 'i', 'ı': 'i'}
+KANON = {'nin': 'in', 'nın': 'in', 'ın': 'in', 'sı': 'si', 'nde': 'de', 'nda': 'de', 'da': 'de', 'te': 'de', 'ta': 'de', 'ye': 'e', 'ya': 'e', 'ne': 'e', 'na': 'e', 'a': 'e', 'yi': 'i', 'yı': 'i', 'ı': 'i'}
 
 
 def ekle(b, ek):
@@ -23,6 +23,8 @@ def ekle(b, ek):
             return b + govde
         return b + ('n' if iyelikli else 'y') + govde
     if ek == 'de':
+        if son in 'çfhkpsşt':
+            return b + ('ta' if kalin else 'te')
         return b + ('n' if iyelikli else '') + ('da' if kalin else 'de')
     raise ValueError(ek)
 
@@ -35,7 +37,7 @@ for l in open(src, encoding='utf-8'):
         JETON[p[1]] = p[2]
         continue
     if not p[0].startswith('@'):
-        s = re.sub(r'§(\w)§(nin|nın|in|ın|si|sı|nde|nda|de|da|ye|ya|ne|na|e|a|yi|yı|i|ı)?(?![a-zçğıöşüâîû])', lambda m: ekle(JETON[m.group(1)], KANON.get(m.group(2), m.group(2))), p[1])
+        s = re.sub(r'§(\w)§(nin|nın|in|ın|si|sı|nde|nda|de|da|te|ta|ye|ya|ne|na|e|a|yi|yı|i|ı)?(?![a-zçğıöşüâîû])', lambda m: ekle(JETON[m.group(1)], KANON.get(m.group(2), m.group(2))), p[1])
         assert '§' not in s, l
         s = ('İ' + s[1:]) if s[0] == 'i' else (s[0].upper() + s[1:])
         p[1] = s
