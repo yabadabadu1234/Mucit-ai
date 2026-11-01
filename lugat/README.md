@@ -21,6 +21,7 @@ yürür:
 | `msc2020/msc2020_osmanlica.tsv` | Birleşik netice: `kod · İngilizce · Osmanlıca · kayıt`. `araclar/msc_birlestir.py` üretir. |
 | `msc2020/MSC2020_OSMANLICA.md` | Aynı neticenin okunaklı cedveli. |
 | `araclar/ham/NN.ham` ve `araclar/jeton_genislet.py` | Uzun ve tekrar eden tabirleri (meselâ "kısmî tefâzulî muâdeleler") bir kere yazmak için kullanılan ham tercüme dosyaları. `@jeton <sekme> H <sekme> harekî nizâmlar` satırı `§H§` jetonunu tanıtır; `§H§in`, `§H§e`, `§H§de` ekleri ses uyumuna göre açılır. `python3 -I araclar/jeton_genislet.py araclar/ham/37.ham msc2020/ceviri/37.tsv` ile `ceviri/` dosyası üretilir; tashih ham dosyada yapılır. Kısaltma kalmaz: jetonlar daima tam metne açılır. |
+| `araclar/telif.py` ve `telif/telif.tsv`, `telif/TELIF.md` | Telif (imtizâc) dosyası: bütün MSC2020 maddeleri ile Vikipedi unsurları tek cedvelde; Vikipedi unsuru bir MSC maddesinin aynı başlığıysa tek mensup sayılır (menşe: "MSC2020 + Vikipedi"). Her mensubun üst başlık kodu yazılır: MSC'de tasnifin kendisinden, Vikipedi unsurunda kelime örtüşmesiyle otomatik (kayıt sütununda öyle yazılır). Betik `mensup = MSC + Vikipedi − tekrar` eşitliğini yoklar, tutmazsa hata verip durur. |
 | `kok_istilahlar.tsv` | Bütün tercümelerde müşterek kullanılan esas ıstılahlar ve her birinin derecesi. |
 | `vikipedi/gezinti_defteri.tsv` | Ziyaret edilen her Vikipedi sahifesi: başlık, kimden gelindiği, derinlik, bulunan liste atıfları, hâl. İş kesilirse buradan devam edilir. |
 | `vikipedi/DIZIN.md` | Bulunan bütün listelerin dizini (listelerin listesi). |
