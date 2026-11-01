@@ -18,7 +18,7 @@ Nüsha sütununda "yoklandı" yazılıysa, o adres bu oturumda Internet Archive'
 | 1 | Riemann 1859, *Ueber die Anzahl der Primzahlen unter einer gegebenen Grösse* | **Tamam** (tam metin, düsturlar kelimeyle) | [eserler/11_riemann_1859_adad_i_evveliyye.md](eserler/11_riemann_1859_adad_i_evveliyye.md) |
 | 2 | Euler 1741, *Solutio problematis ad geometriam situs pertinentis* | **Tamam** (tam metin; aslında düstur yok, yer adları harf olarak bırakıldı, sebebi kayıtta) | [eserler/05_euler_1741_konigsberg_kopruleri.md](eserler/05_euler_1741_konigsberg_kopruleri.md) |
 | 3 | Hilbert 1900, *Mathematische Probleme* | **Tamam** (mukaddime, yirmi üç mesele, hâtime, kırk yedi hâşiye; düsturlar kelimeyle; aslın matbaa hataları M17'de) | [eserler/00_hilbert_1900_riyazi_meseleler.md](eserler/00_hilbert_1900_riyazi_meseleler.md) |
-| 4 | Hârizmî, *el-Kitâbü'l-muhtasar fî hisâbi'l-cebr ve'l-mukābele* | Sırada | |
+| 4 | Hârizmî, *el-Kitâbü'l-muhtasar fî hisâbi'l-cebr ve'l-mukābele* | **Tamam** (Rosen 1831 neşrinin İngilizcesinden vasıtalı tercüme, sahife 1–174: cebir, mesâha, vasâyâ ve devr; kırk beş mütercim kaydı; Arapça asılla mukabelesi henüz yapılmadı, M1) | [eserler/01_harizmi_cebr_ve_mukabele.md](eserler/01_harizmi_cebr_ve_mukabele.md) |
 
 Sıra tayininde ölçü: kısa ve kurucu eserler evvel (bir oturumda tamamı bitebilsin diye), uzun kitaplar bab bab sonra.
 
@@ -32,7 +32,7 @@ Sıra tayininde ölçü: kısa ve kurucu eserler evvel (bir oturumda tamamı bit
 | :-- | :-- | :-- | :-- | :-- |
 | 00 | Öklîdis, *Stoikheia* | kadîm | Açık | Yunanca asıl: Heiberg neşri (aranacak). İngilizce: Heath, *The Thirteen Books of Euclid's Elements*, 1908 (Heath 1940'ta vefat etti, açık); yoklandı: `archive.org/details/rcin.org.pl.WA35_113122_P261_TL-Heath_86950` (1912 kaydı). |
 | 00 | Hilbert, *Mathematische Probleme* | 1943 · 1900 | Açık | Almanca asıl: Göttinger Nachrichten 1900; yoklandı ve tercümede esas tutuldu: `de.wikisource.org/wiki/Mathematische_Probleme` (matbu nüshayla iki defa mukabele edilmiş). İngilizce: Newson tercümesi, Bulletin of the American Mathematical Society 1902; yoklandı: `archive.org/details/mathematical-problems-lecture-delivered-before-the-international-congress-of-mat` |
-| 01 | Hârizmî, *el-Cebr ve'l-mukābele* | kadîm | Açık | Rosen neşri ve tercümesi, London 1831; yoklandı: `archive.org/details/algebraofmohamme00khuwrich` |
+| 01 | Hârizmî, *el-Cebr ve'l-mukābele* | kadîm | Açık | Rosen neşri ve tercümesi, London 1831; yoklandı ve **tercüme edildi**: `archive.org/details/algebraofmohamme00khuwrich` |
 | 01 | Ömer Hayyâm, *Risâle fî'l-berâhîn* | kadîm | Açık | Woepcke neşri ve Fransızca tercümesi, Paris 1851 (aranacak). |
 | 01 | Tûsî, *Keşfü'l-kınâ'* | kadîm | Açık | Karatheodori Paşa neşri ve Fransızca tercümesi, İstanbul 1891 (aranacak). |
 | 01 | Kâşî, *Miftâhu'l-hisâb* | kadîm | Açık (asıl) | Yazma nüsha suretleri aranacak; modern tenkitli neşirler teliflidir. |
