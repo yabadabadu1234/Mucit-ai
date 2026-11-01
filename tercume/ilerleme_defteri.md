@@ -48,6 +48,39 @@ Kullanıcı şöyle buyurdu: "Şerhler berbat oluyor, hiç şerh ve not yazılma
 - Yerel nüsha: /home/claude/mucit-ai/tercume/.
 - Ortak proje klasöründe yedek: /mnt/project-files/tercume/.
 
+
+### Kullanıcının 1 Kasım 2026 tarihli dördüncü ilâve kaidesi (zaviye değişikliği)
+
+Kullanıcı şöyle buyurdu: "Diğer kitapları da kapsıyor. Lakin Şaheser deyince niye klasik olanı algılıyorsun, en modern, en güncel olanlardan en şaheseri kastediyorum, lütfen zaviyeni değiştir ve o tip eserlere yönel." Buna göre:
+
+- "İznim var" sözü bütün karışık hâldeki eserleri kapsar; onlar da tercüme edilebilir.
+- Öncelik en güncel, asrî şaheserlerdedir. Şaheser iş parçacığı yeni bir asrî sıra hazırlıyor; o gelinceye kadar açık lisanslı asrî kaynaklara (OpenStax, PubMed Central'ın açık kısmı ve benzerleri) öncelik verilir.
+- Telifli asrî eserlerin yalnız nüsha yeri ve telif hâli kaydedilir.
+- Klasik eserler (Virchow, Harvey ve diğerleri) terk edilmedi, sıranın gerisine alındı.
+
+## Yeni çalışma yeri (2 numaralı oturum, tam ağ izniyle)
+
+- Bu oturumda ağ açıktır: Project Gutenberg, Internet Archive, OpenStax ve GitHub erişilebilir.
+- Depo dalı: claude/project-thread-6eiib2 (tip-piri/tercume dalının üstüne kurulmuştur; bu oturuma yalnız bu dala itme izni verilmiştir).
+- Asıl nüshaların düz metni tercume/_nushalar/ klasöründedir.
+
+## Asrî eser 1: OpenStax, Anatomy and Physiology, ikinci tâb (2022)
+
+- Nüsha: github.com/openstax/osbooks-anatomy-physiology, collections/anatomy-and-physiology-2e.collection.xml; yüz doksan sekiz modül.
+- Telif hâli: Creative Commons Atıf-Gayriticarî-AynıLisanslaPaylaş 4.0 (CC BY-NC-SA 4.0). Tercümeye izin verir; şartları: müellife ve kaynağa atıf, ticarî olmayan kullanım, tercümenin aynı lisansla neşri.
+- Usul: Her modül düz metne çevrilir (betik: modül numarası sırasıyla 001 ilâ 198), sonra bütünüyle tercüme edilir. Şekiller resim olarak alınmaz, şekil yazıları tercüme edilir. Bab sonundaki hulâsa, sualler, cevaplar ve lügatçe de tercüme edilir; hiçbir şey eksiltilmez.
+- Dosyalar: tercume/openstax_anatomi_fizyoloji/NNN_modulnumarasi.md
+
+## Virchow, Hüceyrevî İlm-i Emrâz
+
+- Nüsha: Project Gutenberg 44921 (Almanca asıl, dördüncü tâb, 1871); düz metin tercume/_nushalar/ klasöründe.
+- Tercüme edilen: kaynak satırı 30 ilâ 627 (unvan, üç mukaddime, şekiller fihristi): tercume/virchow_hucre_patolojisi/00_unvan_mukaddimeler_ve_sekiller_fihristi.md
+- Kaldığı yer: kaynak satırı 628, Birinci Fasıl.
+
+## Harvey, De Motu Cordis
+
+- Nüsha indirildi: Project Gutenberg 67065, tercume/_nushalar/ klasöründe. Tercüme başlamadı.
+
 ## Ameliyat notları (engeller)
 
 - 1 Kasım 2026: Bu muhitin ağ siyaseti komut satırından şu adreslere erişimi kapatıyor: archive.org, en.wikisource.org, www.gutenberg.org, openstax.org, pmc.ncbi.nlm.nih.gov, gallica.bnf.fr, biodiversitylibrary.org, wellcomecollection.org. Açık olan yalnız GitHub.
