@@ -33,6 +33,17 @@ Dürüstlük îcâbı şunu da kaydedeyim: Vikipedi listeleri de nihâyetinde ik
 | Üçüncü | 51, 52, 53, 54, 55, 57, 58 | [03_hendese_topoloji.md](03_hendese_topoloji.md) |
 | Dördüncü | 60, 62, 65, 68, 70, 74, 76, 78, 80, 81, 82, 83, 85, 86, 90, 91, 92, 93, 94, 97 | [04_ihtimal_tatbikat.md](04_ihtimal_tatbikat.md) |
 
+## Üç haneli alt sahalar
+
+Ana cüzlerden sonra, Riyâziyyât Mevzû Tasnîfi 2020'nin **üç haneli** alt sahalarına (meselâ 03C model nazariyesi, 05C çizge nazariyesi) inilmektedir. Bu kısım `alt/` klasöründedir.
+
+| Kısım | Alt sahalar | Dosya |
+| :-- | :-- | :-- |
+| Birinci | 00A–22F (136 alt saha) | [alt/01_temeller_cebir_sayilar_alt.md](alt/01_temeller_cebir_sayilar_alt.md) |
+| İkinci | 26A–49Q | (hazırlanmaktadır) |
+| Üçüncü | 51A–58Z | (hazırlanmaktadır) |
+| Dördüncü | 60A–97U | (hazırlanmaktadır) |
+
 ## Öbür defterle münasebet
 
 Saha adlarının Osmanlıca karşılıkları, aynı depoda `lugat/` klasöründe ayrı bir çalışma olarak derlenmektedir. Bu defterdeki başlıklarda verilen Osmanlıca adlar **muvakkattir**; lügat tamamlandığında oradaki karşılıklar esas alınacak ve buradaki başlıklar ona uydurulacaktır.
