@@ -14,7 +14,8 @@ Bu defter, iş kesilirse kaldığı yerden devam edebilmek için tutulur. Her c�
 - Her cüz bitince tercüme iş parçacığına haber verilir. Birinci cüz koordinatöre bildirilir; tercüme iş parçacığını o açacaktır.
 - Her cüz ayrı commit edilir.
 - Kullanıcının 1 Kasım 2026 tarihli emri: "Telifli telifsiz fark etmez, en şaheseri neyse onlar tercüme edilecek." Buna göre her cüzün sonunda, telif hâline bakılmaksızın, eserlerin şaheserlik sırası verilir. Telif hâli yine her eserde kaydedilir, çünkü Tercüme iş parçacığı birebir tercüme ile şerh arasındaki seçimi ona göre yapar.
-- Kullanıcının 1 Kasım 2026 saat 23.15 tarihli cevabı: "İznim var." Bu, Cannon'un The Wisdom of the Body eserinin (karışık) tercümesine izindir; Tercüme iş parçacığına iletildi. Diğer karışık eserleri kapsayıp kapsamadığı kullanıcıya soruldu.
+- Kullanıcının 1 Kasım 2026 saat 23.15 tarihli cevabı: "İznim var." Bu, Cannon'un The Wisdom of the Body eserinin (karışık) tercümesine izindir; Tercüme iş parçacığına iletildi. Diğer karışık eserleri kapsayıp kapsamadığı kullanıcıya soruldu; kullanıcı "Diğer kitapları da kapsıyor" diye cevap verdi. Bu izin bütün karışık eserleri kapsar.
+- Kullanıcının aynı cevaptaki emri: "Şaheser deyince niye klasik olanı algılıyorsun, en modern, en güncel olanlardan en şaheseri kastediyorum, lütfen zaviyeni değiştir ve o tip eserlere yönel." Buna göre asri_saheserler.md yazıldı; klasikler silinmedi, dokuz cüzde ayrı duruyor. Tercümeye esas sıra asrî sıradır.
 - Tercüme iş parçacığının bildirdiğine göre kullanıcı sonradan "hiç şerh ve not yazılmasın artık, sadece tercüme" buyurmuştur; bu, Tercüme iş parçacığının usulüdür.
 - Kullanıcının aynı tarihli ikinci emri (Tercüme iş parçacığına): "Evvelâ birebir tercüme etsin, üzerine şerhini sonradan koysun ki metin kaybı yaşanmasın." 
 
@@ -49,7 +50,7 @@ Bu defter, iş kesilirse kaldığı yerden devam edebilmek için tutulur. Her c�
 
 ## Kaldığı yer
 
-Birinciden dördüncüye kadar cüzler tamamlandı ve commit edildi. Beşinci cüz de tamamlandı. Altıncı cüz de tamamlandı. Yedinci cüz de tamamlandı. Dokuz cüzün hepsi tamamlandı. Kalan iş: kullanıcının "karışık" eserler hakkındaki cevabını yeni Tercüme iş parçacığına iletmek; açık tahkikleri (aşağıda) ağ erişimi olan bir muhitte tamamlamak; kullanıcı isterse Türk tıp tarihi eserleri için ayrı bir cüz.
+Birinciden dördüncüye kadar cüzler tamamlandı ve commit edildi. Beşinci cüz de tamamlandı. Altıncı cüz de tamamlandı. Yedinci cüz de tamamlandı. Dokuz cüzün hepsi tamamlandı. Asrî şaheserler sırası (asri_saheserler.md) yazıldı, commit edildi ve yeni Tercüme iş parçacığına bildirildi. Kalan iş: asrî dosyada "şüpheli" kalan lisansları (StatPearls, Dünya Sıhhat Teşkilâtı neşirleri) tahkik etmek; açık tahkikleri (aşağıda) ağ erişimi olan bir muhitte tamamlamak; kullanıcı isterse Türk tıp tarihi eserleri için ayrı bir cüz.
 
 ## Açık tahkikler
 

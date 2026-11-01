@@ -36,5 +36,8 @@ Bir bilgiden emin olunamadığı her yerde "şüpheli" kaydı düşülmüştür.
 | Yedinci cüz | Teşhis, tedavi ve cerrahî usulleri ile âletler (Tıbbî Mevzu Başlıkları'nın "E" kıtası) | Tamam |
 | Sekizinci cüz | Ruh hekimliği ve ruhiyat (Tıbbî Mevzu Başlıkları'nın "F" kıtası) | Tamam |
 | Dokuzuncu cüz | Kalan kıtalar: "G", "H", "I", "J", "K", "L", "M", "N", "V", "Z" | Tamam |
+| Asrî şaheserler | Her kıtanın güncel tâblı en yetkin asrî eserleri ve açık lisanslı dengleri ([asri_saheserler.md](asri_saheserler.md)) | Tamam |
+
+Kullanıcının emri üzerine ("en modern, en güncel olanlardan en şaheseri kastediyorum") tercümeye esas olan sıra artık asrî şaheserler sırasıdır. Dokuz cüzdeki klasik eserler silinmemiş, ayrı tutulmuştur.
 
 İlerlemenin tafsilatı [ilerleme_defteri.md](ilerleme_defteri.md) dosyasındadır.
