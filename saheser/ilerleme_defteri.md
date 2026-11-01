@@ -33,7 +33,7 @@ Bu defter, iş kesilirse kaldığı yerden devam edebilmek için tutulur. Her c�
 |---|---|---|---|
 | Birinci | Pusula: Fizyoloji ve Patoloji | Tamam (32 eser) | Koordinatöre bildirildi |
 | İkinci | Kadîm İslâm tıbbı | Tamam (25 eser) | Bildirildi |
-| Üçüncü | Anatomi ("A" kıtası) | Sırada | Hayır |
+| Üçüncü | Anatomi ("A" kıtası) | Tamam (23 eser) | Bildirildi |
 | Dördüncü | Hastalıklar ("C" kıtası) | Sırada | Hayır |
 | Beşinci | Kimyevî maddeler ve ilaçlar ("D" kıtası) | Sırada | Hayır |
 | Altıncı | Canlılar ("B" kıtası) | Sırada | Hayır |
@@ -43,7 +43,7 @@ Bu defter, iş kesilirse kaldığı yerden devam edebilmek için tutulur. Her c�
 
 ## Kaldığı yer
 
-Birinci ve ikinci cüz tamamlandı ve commit edildi. Sıradaki iş: üçüncü cüz, Anatomi.
+Birinci, ikinci ve üçüncü cüz tamamlandı ve commit edildi. Sıradaki iş: dördüncü cüz, Hastalıklar ("C" kıtası).
 
 ## Açık tahkikler
 
@@ -51,3 +51,4 @@ Birinci ve ikinci cüz tamamlandı ve commit edildi. Sıradaki iş: üçüncü c
 - Gleb Vasilievich Anrep'in vefat yılı (1955 olarak bilinmektedir).
 - Cannon'un The Wisdom of the Body eserinin Amerika'da telif yenilenme hâli.
 - İkinci cüzde: Sabuncuoğlu'nun üç müellif hattı nüshasının raf numaraları; Akşemseddin'in Maddetü'l-Hayât ibaresinin yazmadan tahkiki; Bulak basma tarihleri; Şânîzâde künyesindeki 1810 tarihi.
+- Üçüncü cüzde: "A" kıtasının alt dallarının sayımı hafızadan yapıldı; Lügat iş parçacığının indirdiği resmî ağaçla teyit edilmeli. Léon Azoulay'ın vefat yılı.

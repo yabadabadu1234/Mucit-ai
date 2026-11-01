@@ -29,7 +29,7 @@ Bir bilgiden emin olunamadığı her yerde "şüpheli" kaydı düşülmüştür.
 |---|---|---|
 | Birinci cüz | Pusula ilimleri: Fizyoloji ve Patoloji | Tamam |
 | İkinci cüz | Kadîm İslâm tıbbı | Tamam |
-| Üçüncü cüz | Anatomi (Tıbbî Mevzu Başlıkları'nın "A" kıtası) | Sırada |
+| Üçüncü cüz | Anatomi (Tıbbî Mevzu Başlıkları'nın "A" kıtası) | Tamam |
 | Dördüncü cüz | Hastalıklar (Tıbbî Mevzu Başlıkları'nın "C" kıtası) | Sırada |
 | Beşinci cüz | Kimyevî maddeler ve ilaçlar (Tıbbî Mevzu Başlıkları'nın "D" kıtası) | Sırada |
 | Altıncı cüz | Canlılar: mikrop, tufeyli ve irsiyet bilgisi (Tıbbî Mevzu Başlıkları'nın "B" kıtası) | Sırada |
