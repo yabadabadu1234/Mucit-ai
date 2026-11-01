@@ -16,7 +16,7 @@ Nüsha sütununda "yoklandı" yazılıysa, o adres bu oturumda Internet Archive'
 | # | Eser | Durum | Dosya |
 | :-- | :-- | :-- | :-- |
 | 1 | Riemann 1859, *Ueber die Anzahl der Primzahlen unter einer gegebenen Grösse* | **Tamam** (tam metin, düsturlar kelimeyle) | [eserler/11_riemann_1859_adad_i_evveliyye.md](eserler/11_riemann_1859_adad_i_evveliyye.md) |
-| 2 | Euler 1741, *Solutio problematis ad geometriam situs pertinentis* | Sırada | |
+| 2 | Euler 1741, *Solutio problematis ad geometriam situs pertinentis* | **Tamam** (tam metin; aslında düstur yok, yer adları harf olarak bırakıldı, sebebi kayıtta) | [eserler/05_euler_1741_konigsberg_kopruleri.md](eserler/05_euler_1741_konigsberg_kopruleri.md) |
 | 3 | Hilbert 1900, *Mathematische Probleme* | Sırada | |
 | 4 | Hârizmî, *el-Kitâbü'l-muhtasar fî hisâbi'l-cebr ve'l-mukābele* | Sırada | |
 
@@ -44,7 +44,7 @@ Sıra tayininde ölçü: kısa ve kurucu eserler evvel (bir oturumda tamamı bit
 | 03 | Turing, *On Computable Numbers* | 1954 · 1936 | **Karışık**: Türkiye ve Avrupa'da açık (vefat 1954), Amerika'da 2032'ye kadar telifli | aranacak |
 | 03 | Russell ve Whitehead, *Principia Mathematica* | 1970 ve 1947 · 1910–1913 | **Karışık**: Amerika'da açık, Türkiye ve Avrupa'da 2040'a kadar telifli (Russell 1970) | aranacak |
 | 03 | Univalent Foundations Program, *Homotopy Type Theory* | 2013 | **Lisanslı** (Creative Commons Atıf-Aynı Lisansla Paylaş 3.0; mütercimin bilgisi, lisans metni aranacak) | `homotopytypetheory.org/book` (aranacak) |
-| 05 | Euler, *Solutio problematis ad geometriam situs pertinentis* | 1783 · 1741 | Açık | Euler Arşivi, E53 (aranacak) |
+| 05 | Euler, *Solutio problematis ad geometriam situs pertinentis* | 1783 · 1741 | Açık | yoklandı ve **tercüme edildi**: `archive.org/details/commentariiacade08impe`, sahife 128–140 (Euler Arşivi nüshası bu oturumda Cloudflare engeline takıldı) |
 | 06 | Dedekind, *Über die von drei Moduln erzeugte Dualgruppe* | 1916 · 1900 | Açık (künye şüpheli) | aranacak |
 | 11 | Diophantos, *Arithmetica* | kadîm | Açık | Heath, *Diophantus of Alexandria*, ikinci baskı 1910; yoklandı: `archive.org/details/in.ernet.dli.2015.156691` |
 | 11 | Gauss, *Disquisitiones Arithmeticae* | 1855 · 1801 | Açık | yoklandı: `archive.org/details/disquisitionesa00gaus` |
