@@ -40,13 +40,13 @@ Bu defter, iş kesilirse kaldığı yerden devam edebilmek için tutulur. Her c�
 | Dördüncü | Hastalıklar ("C" kıtası) | Tamam (39 madde) | Bildirildi |
 | Beşinci | Kimyevî maddeler ve ilaçlar ("D" kıtası) | Tamam (18 eser) | Bildirildi |
 | Altıncı | Canlılar ("B" kıtası) | Tamam (17 madde) | Bildirildi |
-| Yedinci | Teşhis ve tedavi usulleri ("E" kıtası) | Sırada | Hayır |
+| Yedinci | Teşhis ve tedavi usulleri ("E" kıtası) | Tamam (14 eser ve asrî liste) | Bildirildi |
 | Sekizinci | Ruh hekimliği ve ruhiyat ("F" kıtası) | Sırada | Hayır |
 | Dokuzuncu | Kalan kıtalar | Sırada | Hayır |
 
 ## Kaldığı yer
 
-Birinciden dördüncüye kadar cüzler tamamlandı ve commit edildi. Beşinci cüz de tamamlandı. Altıncı cüz de tamamlandı. Sıradaki iş: yedinci cüz, Teşhis ve tedavi usulleri ("E" kıtası).
+Birinciden dördüncüye kadar cüzler tamamlandı ve commit edildi. Beşinci cüz de tamamlandı. Altıncı cüz de tamamlandı. Yedinci cüz de tamamlandı. Sıradaki iş: sekizinci cüz, Ruh hekimliği ve ruhiyat ("F" kıtası).
 
 ## Açık tahkikler
 
@@ -58,3 +58,4 @@ Birinciden dördüncüye kadar cüzler tamamlandı ve commit edildi. Beşinci c�
 - Dördüncü cüzde: "C" kıtasının alt dallarının sayımı (virüs ve tufeylî dallarının birleştirilmesi) resmî ağaçla teyit edilmeli. Wilmer Cave Wright'ın vefat yılı (1951). Janeway'in neşredeni.
 - Beşinci cüzde: Langley 1905 makalesinin tam adı; Fleming 1929 makalesinin PubMed Central'daki yeri; Clark 1933 eserinin Amerika'da yenilenme hâli.
 - Altıncı cüzde: Bergey 1923 heyetinin vefat yılları; Pasteur 1861 risalesinin neşir yılı; Darwin eseri, kullanıcının "İslâm'a aykırı söz söyleme" kaidesi gereği tenbih notuyla kaydedildi.
+- Yedinci cüzde: Einthoven 1906 makalesinin künyesi; Lister, Bigelow, Snow ve Gram metinlerinin nüshaları.
