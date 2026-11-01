@@ -244,7 +244,7 @@ dir.
 
 **Netice.** Farz edelim ki evvelki kaziyyede bana verilen me'mûlden sonra, ve birinci hâdisenin vukû bulup bulmadığı henüz hiç bilinmezden evvel, ikinci hâdisenin vukû bulduğunu öğreniyorum; bundan ancak me'mûlümün bağlı olduğu hâdisenin müteayyin olduğu neticesini çıkarabilirim, ve me'mûlümün kıymetini evvelkinden ne büyük ne de küçük tahmin etmek için hiçbir sebebim yoktur. Zîrâ onu daha küçük düşünmek için sebebim olsaydı, evvelki hâlime iade edilmek için bir şey vermem makul olurdu, ve ikinci hâdisenin vukû bulduğu bana bildirildikçe bu, tekrar tekrar böyle olurdu; bu ise açıkça saçmadır. Ve me'mûlüme evvelkinden daha büyük bir kıymet biçmem gerektiğini söylerseniz, benzer saçmalık açıkça lâzım gelir; zîrâ o zaman, ondan vazgeçip evvelki hâlime iade edilmem şartıyla bana bir şey teklif edildiğinde onu reddetmem makul olurdu; ve bu da aynı şekilde, (birinci hâdise hakkında hiçbir şey bilinmezken) ikincinin vukû bulduğu göründükçe tekrar tekrar böyle olurdu. Binâenaleyh ikinci hâdisenin vukû bulduğunun bu keşfine rağmen, me'mûlüm kıymetçe evvelki gibi, yâni **me'mûlümün kıymeti** olarak tahmin edilmelidir; ve binâenaleyh meblağı elde etmemin ihtimali (beşinci tarif mûcibince) hâlâ
 
-$$\frac{\text{me'mûlümün kıymeti}}{\text{meblağ}} \quad\text{yahut}\quad \frac{\text{ikisinin kıymeti}}{\text{ikincinin kıymeti}}\,\text{\*}$$
+$$\frac{\text{me'mûlümün kıymeti}}{\text{meblağ}} \quad\text{yahut}\quad \frac{\text{ikisinin kıymeti}}{\text{ikincinin kıymeti}}^{\ast}$$
 
 dir. Fakat bu keşiften sonra meblağı elde etmemin ihtimali, ihtimalleri evvelce beyan edildiği gibi olan birbirini takip eden iki hâdiseden birincisinin, ikincinin vukû bulduğu farz edildiğinde vukû bulmuş olmasının ihtimalidir. Fakat bir hâdisenin vukû bulmuş olmasının ihtimali, onun vukû bulduğunu tahmin edersem doğru tahmin etmemin ihtimalinin aynıdır. Binâenaleyh aşağıdaki kaziyye aşikârdır.
 
@@ -260,7 +260,7 @@ $$\frac{\text{ikisinin kıymeti}}{\text{meblağ}}$$
 
 ise, ve evvelâ ikinci hâdisenin vukû bulduğu keşfedilip bundan birinci hâdisenin de vukû bulduğunu tahmin ediyorsam, haklı olmamın ihtimali
 
-$$\frac{\text{ikisinin kıymeti}}{\text{ikincinin kıymeti}}\,\text{†}$$
+$$\frac{\text{ikisinin kıymeti}}{\text{ikincinin kıymeti}}^{\dagger}$$
 
 dir.
 
@@ -653,7 +653,7 @@ $$\begin{aligned}
 
 ise, haklı olmamın tâlii
 
-$$\frac{2 \times \text{silsile hâsılı}}{1 + 2 \times \text{terkîb emsali} \times \text{vukû nisbeti}^{\,\text{vukû adedi}} \times \text{adem nisbeti}^{\,\text{adem adedi}} + \dfrac{2 \times \text{terkîb emsali} \times \text{vukû nisbeti}^{\,\text{vukû adedi}} \times \text{adem nisbeti}^{\,\text{adem adedi}}}{\text{tecrübe adedi}}}\,\text{\*}$$
+$$\frac{2 \times \text{silsile hâsılı}}{1 + 2 \times \text{terkîb emsali} \times \text{vukû nisbeti}^{\,\text{vukû adedi}} \times \text{adem nisbeti}^{\,\text{adem adedi}} + \dfrac{2 \times \text{terkîb emsali} \times \text{vukû nisbeti}^{\,\text{vukû adedi}} \times \text{adem nisbeti}^{\,\text{adem adedi}}}{\text{tecrübe adedi}}}^{\ast}$$
 
 ifadesinden büyük ve
 
@@ -762,4 +762,267 @@ $$2 \times \text{ikinci tashîh nisbeti} - \frac{\sqrt{2}}{\sqrt{\text{rub'-ı d
 
 burada mikyâsın murabbaı, rub'-ı dâire nisbeti, birinci tashîh nisbeti ve ikinci tashîh nisbeti evvelce izah edilen kemmiyetleri gösterir.
 
-<!-- DEVAM -->
+---
+
+## Zeyl
+
+### Evvelki Kaidelerin Bazı Hususî Hâllere Bir Tatbikini İhtiva Eder
+
+Birinci kaide her hâlde doğrudan ve mükemmel bir hal verir; ve onu takip eden iki kaide, birinci kaideyi tatbik etmenin zahmeti fazlasıyla büyüdüğünde, birinci kaidede verilen halle yaklaşmanın yalnız hususî usûlleridir.
+
+Birinci kaide, vukû adedi yahut adem adedinin sıfır olduğu yahut büyük olmadığı bütün hâllerde kullanılabilir. İkinci kaide, mikyâs × inhirâf'ın 3'ün cezrinden küçük olduğu bütün hâllerde kullanılabilir; ve üçüncüsü, mikyâsın murabbaı × inhirâfın murabbaı'nın 1'den büyük ve tecrübe adedinin yarısından küçük olduğu bütün hâllerde, eğer tecrübe adedi bir çift sayı ve pek büyük ise kullanılabilir. Eğer tecrübe adedi büyük değilse bu son kaideye pek ihtiyaç duyulamaz; çünkü tecrübe adedi küçüldükçe mikyâs da durmadan azaldığından, bu hâlde inhirâfın kıymeti büyük alınabilir (ve binâenaleyh
+
+$$\frac{\text{vukû adedi}}{\text{tecrübe adedi}} - \text{inhirâf} \qquad\text{ile}\qquad \frac{\text{vukû adedi}}{\text{tecrübe adedi}} + \text{inhirâf}$$
+
+arasında ehemmiyetli bir fâsıla elde edilebilir), ve yine de ameliye ikinci kaide ile yürütülebilir; yahut mikyâs × inhirâf 3'ün cezrini aşmaz.
+
+Fakat bu meselenin tabiatını ve Bay Bayes'in hallini ne kadar ileri götürdüğünü seçik ve tam olarak göstermek için, en aşağı ve en basitinden başlayarak, bu hallin neticesini birkaç hâlde vereceğim.
+
+O hâlde evvelâ farz edelim ki risâlede `M` denilen hâdise gibi bir hâdise, yahut tecrübelerden evvel ihtimali hakkında hiçbir şey bilmediğimiz bir hâdise, *bir kere* vukû bulmuştur, ve bundan onun *ikinci* bir tecrübede vukû ihtimaline dair hangi neticeyi çıkarabileceğimiz sorulmaktadır.
+
+Cevap şudur ki onun ikinci bir tecrübede vukû bulacağına dair müsâvî bir tâli'den biraz fazlası için üçe bir rüçhan bulunacaktır.
+
+Zîrâ bu hâlde, ve adem adedinin sıfır olduğu bütün öteki hâllerde,
+
+$$\left(\text{tecrübe adedi}+1\right) \times \left(\frac{\text{büyük hadd}^{\,\text{vukû adedi}+1}}{\text{vukû adedi}+1} - \frac{\text{küçük hadd}^{\,\text{vukû adedi}+1}}{\text{vukû adedi}+1}\right) \qquad\text{yahut}\qquad \text{büyük hadd}^{\,\text{vukû adedi}+1} - \text{küçük hadd}^{\,\text{vukû adedi}+1}$$
+
+ifadesi, birinci kaide mülâhaza edilince görüleceği üzere, halli verir. O hâlde bu ifadede vukû adedi + 1 = 2, büyük hadd = 1 ve küçük hadd = ½ konsun; o zaman
+
+$$1 - \left(\frac{1}{2}\right)^{2} \qquad\text{yahut}\qquad \frac{3}{4}$$
+
+olacaktır; bu, bir kere vukû bulmuş bir hâdisenin ihtimalinin 1 ile ½ arasında bir yerde bulunması için mevcut olan tâliî; yahut (aynı kapıya çıkan ifadeyle) onun ikinci bir tecrübede vukû bulacağına dair müsâvî bir tâli'den biraz fazlası bulunmasının rüçhanını gösterir\*.
+
+> \* Zannederim bu mevzûda vâhidin daima yakîni, ½'nin ise müsâvî bir tâliî temsil etmek için konduğunu mülâhaza ettirmeye hiçbir sebep bulunamaz.
+
+Aynı tarzda görülecektir ki hâdise iki kere vukû bulmuşsa, şimdi zikredilen rüçhan yediye bir olacak; üç kere ise on beşe bir; ve umûmî olarak, hâdise vukû adedi kadar defa vukû bulmuşsa, daha sonraki tecrübelerde onun vukû bulacağına dair müsâvî bir tâli'den *fazlası* için
+
+$$2^{\,\text{vukû adedi}+1} - 1$$
+
+e bir rüçhan bulunacaktır.
+
+Yine, farz edelim ki bir hâdise hakkında bütün bildiğim, onun on kere hiç vukû bulmamazlık etmeden vukû bulmuş olduğudur, ve sorulan şey şudur: tek bir tecrübede onun vukû ihtimalinin 16/17 ile 2/3 arasında bir yerde bulunduğunu, yahut vukû sebeplerinin vukû bulmama sebeplerine nisbetinin on altıya bir ile ikiye bir arasında bir nisbet olduğunu tahmin edersek, haklı olduğumuzu düşünmek için ne sebebimiz olacaktır?
+
+Burada vukû adedi + 1 = 11, büyük hadd = 16/17 ve küçük hadd = 2/3'tür, ve
+
+$$\text{büyük hadd}^{\,\text{vukû adedi}+1} - \text{küçük hadd}^{\,\text{vukû adedi}+1} = \left(\frac{16}{17}\right)^{11} - \left(\frac{2}{3}\right)^{11} = 0{,}5013\ldots$$
+
+dir. Binâenaleyh cevap şudur ki haklı olmak için aşağı yukarı müsâvî bir tâliimiz olacaktır.
+
+Bu tarzda, her hâlde, zıd tecrübelerle muaraza edilmemiş verilen bir tecrübe sayısından hangi neticeyi çıkarmamız gerektiğini tayin edebiliriz. Herkes umûmî olarak görür ki bir hâdiseyi, verilen şartlar altında hiç vukû bulmamazlık etmeden vukû bulduğu defaların sayısının çokluğuna yahut azlığına göre, az yahut çok bir itimadla beklemek için sebep vardır; fakat burada bu sebebin tam olarak ne olduğunu, hangi esaslar üzerine kurulduğunu ve beklentilerimizi nasıl tanzim etmemiz gerektiğini görüyoruz.
+
+Fakat bu mevzû üzerinde daha uzun durmak münasip olacaktır.
+
+Kenarlarının sayısı ve bünyesi hakkında hiçbir şey bilmediğimiz bir cisim yahut zar farz edin; ve bunlar hakkında onu atarak yapılan tecrübelerden hüküm vermemiz gerektiğini.
+
+Bu hâlde mülâhaza edilmelidir ki cismin birinci tecrübede, önceden tayin edilebilecek herhangi bir kenarını çevirmesi en yüksek derecede gayr-ı muhtemel olurdu; çünkü bir kenarını çevirmesi lâzım geldiği ve onun çevirmesinin aynı derecede muhtemel olduğu gayr-ı mütenâhî sayıda başka kenar, yahut başka türlü işaretlenmiş kenar bulunduğu bilinirdi. Birinci atış yalnız, o zaman atılan kenara *sahip olduğunu* gösterir; ona herhangi bir defa sayısınca, bir başkasından ziyade sahip olduğunu düşünmek için hiçbir sebep vermeksizin. Binâenaleyh görülecektir ki birinci atıştan evvel değil *sonra*, şimdiki meselenin şartlarının istediği hâlde bulunurduk, ve bu atışın bütün tesiri bizi bu hâle getirmek olurdu. Yâni: birinci defa atılan kenarın sonraki herhangi tek bir tecrübede çevrilmesi, ihtimali yahut gayr-ı muhtemelliği hakkında hiçbir hüküm teşkil edemeyeceğimiz ve hakkında hiçlik ile yakîn arasında bir yerde bulunmasından fazlasını bilmeyeceğimiz bir hâdise olurdu. O hâlde hesaplarımız ikinci tecrübe ile başlamalıdır; ve eğer bu tecrübede farz edilen cisim aynı kenarı tekrar çevirirse, onun o cins kenarlardan *bütün* ötekilerden daha fazlasına sahip olduğuna dair; yahut (aynı kapıya çıkan ifadeyle) bünyesinde o kenarı en sık çevirmeye meylettiren bir şey bulunduğuna dair üçe bir ihtimal doğacaktır: Ve bu ihtimal, evvelce izah edilen tarzda, o kenarın hiç vukû bulmamazlık etmeden atıldığı defaların sayısıyla artacaktır. Bununla beraber, bu türlü tecrübelerin herhangi bir sayısının, onun *hiçbir zaman* başka bir kenar çevirmeyeceğini düşünmek için kâfi sebep verebileceği zannedilmemelidir. Zîrâ farz edin ki her tecrübede bir milyon kere aynı kenarı çevirmiştir. Bu şartlarda, onun bu kenarlardan bütün ötekilerden 1.400.000 kattan *az* daha fazlasına sahip olmasının gayr-ı muhtemelliği bulunurdu; fakat 1.600.000 kattan *ziyade* daha fazlasına sahip olmasının da gayr-ı muhtemelliği bulunurdu. Sonrakinin tâlii,
+
+$$1 - \left(\frac{1600000}{1600001}\right)^{1000000}$$
+
+ile, yâni 1600000/1600001'in milyonuncu kuvvete yükseltilip vâhidden çıkarılmasıyla ifade edilir ki 0,4647 ve saireye müsâvîdir; ve evvelkinin tâlii aynı kuvvete yükseltilmiş
+
+$$\left(\frac{1400000}{1400001}\right)^{1000000}$$
+
+e, yâni 0,4895'e müsâvîdir; bunların ikisi de müsâvî bir tâli'den küçük olduğundan, söylediğimi ispat eder. Fakat onun bu kenarlardan bütün ötekilerden 1.600.000 kattan *ziyade* yahut 1.400.000 kattan *az* daha *fazla*sına sahip olması böylece gayr-ı muhtemel olsa da, bundan, bu hâlde gerçek nisbetin 1.600.000'e bir ile 1.400.000'e bir arasında bir yerde bulunduğuna hükmetmek için herhangi bir sebebimiz olduğu asla lâzım gelmez. Zîrâ hesabı yapmak zahmetine katlanan kimse bulacaktır ki onun 600.000'e bir ile üç milyona bir arasında bir yerde bulunması için aşağı yukarı 0,527 ile ifade edilen ihtimal, yâni müsâvî bir tâli'den ancak biraz fazlası vardır. Şunun ilâvesi de lâyık olabilir ki bu nisbetin 900.000'e 1 ile 1.900.000'e 1 arasında bir yerde bulunması, mukaddemleri birbirine 900.000'in 1.900.000'e nisbeti gibi olan ve tâlîleri vâhid olan başka herhangi iki nisbet arasında bulunmasından daha muhtemeldir.
+
+Bu müşahedeleri bilhassa, hepsi tabiatın hâdiselerine ve zâhirlerine harfiyyen tatbik edilebilir oldukları için yaptım. Bütün tecrübeden evvel, önceden tasavvur edilmiş herhangi hususî bir hâdisenin, herhangi bir tabiî cismin bir başkasına tatbikini takip etmesi, gayr-ı mütenâhînin bire nisbeti kadar gayr-ı muhtemel olurdu; çünkü gayr-ı mütenâhî sayıda başka hâdiselerden herhangi birisi için müsâvî bir tâli' bulunurdu. Fakat bir kere, odunun ateşe konunca yanması, yahut bir taşın bitişik bütün cisimlerden ayrılınca düşmesi gibi herhangi hususî tesirler görmüş olsaydık, o zaman aynı cinsten sonraki hâdiselerin herhangi bir sayısından çıkarılacak neticeler, farz ettiğim cismin bünyesine dair az evvel zikredilen neticelerle aynı tarzda tayin edilecek olurdu. Başka bir tabirle: herhangi bir tabiî cisim üzerinde yapıldığı farz edilen ilk tecrübe, bize yalnız o cisimlerin şartlarındaki hususî bir değişikliği takip edebilecek bir hâdiseyi bildirirdi; fakat bize tabiatta yeknesaklık hakkında hiçbir fikir telkin etmez, yahut onun, o misalde yahut başka herhangi birinde, fiillerinde düzensiz değil de düzenli olduğunu anlamak için bize en ufak bir sebep vermezdi. Fakat aynı hâdise sonraki bir yahut daha fazla tecrübede kesintisiz takip etmişse, o zaman bir derece yeknesaklık müşahede edilecek; daha sonraki tecrübelerde aynı muvaffakiyeti beklemek için sebep verilecek, ve bu meselenin halliyle tayin edilen hesaplar yapılabilecektir.
+
+Burada bir misal vermek münasebetsiz olmayacaktır. Bu âleme yeni doğmuş ve, içinde hangi kuvvetlerin ve sebeplerin cereyan ettiğini hâdiselerin nizâm ve seyrini müşahede etmesinden toplamaya bırakılmış bir kimsenin hâlini tasavvur edelim. Güneş muhtemelen onun dikkatini celbedecek ilk cisim olurdu; fakat onu ilk gece kaybettikten sonra onu bir daha görüp görmeyeceğini büsbütün bilmezdi. Binâenaleyh kendisine büsbütün meçhul bir hâdise hakkında ilk tecrübeyi yapan bir kimsenin hâlinde bulunurdu. Fakat Güneş'in ikinci bir zuhurunu yahut bir dönüşünü görsün; içinde ikinci bir dönüşün beklentisi uyanacak ve bunun *bir ihtimali* için üçe bir rüçhan bulunduğunu bilebilecekti. Bu rüçhan, evvelce tasvir edildiği gibi, şahit olduğu dönüşlerin sayısıyla artacaktı. Fakat hiçbir mütenâhî dönüş sayısı, mutlak yahut tabiî bir yakîn hâsıl etmeye kâfi olmayacaktı. Zîrâ onun, Güneş'in düzenli ve muayyen fâsılalarla bir milyon kere döndüğünü görmüş olduğu farz edilsin. Bunun teminat vereceği neticeler şunlar gibi olurdu: Güneş'in mûtad fâsılanın sonunda tekrar dönmesinin muhtemel olduğuna dair
+
+$$2^{1000000}$$
+
+e, yâni 2'nin milyonuncu kuvvetine bir rüçhan bulunurdu. Bunun rüçhanının 1.600.000'e 1'den *büyük* olmadığına dair 0,5352 ile ifade edilen ihtimal bulunurdu; ve 1.400.000'e 1'den *az* olmadığına dair 0,5105 ile ifade edilen ihtimal.
+
+Dikkatle hatırda tutulmalıdır ki bu istihraçlar tabiat hakkında evvelce tam bir cehaleti farz eder. Hâdiselerin seyrini bir müddet müşahede ettikten sonra bulunacaktır ki tabiatın fiilleri umûmiyetle düzenlidir ve onda hâkim olan kuvvetler ve kanunlar sâbit ve dâimîdir. Bunun mülâhazası, bir yahut birkaç tecrübenin, daha sonraki tecrübelerde muvaffakiyete dair, başka türlü makul olacak olandan çok daha kuvvetli bir beklenti hâsıl etmesine çoğu kere sebep olacaktır; tıpkı bir cins eşyanın herhangi bir yerde bir arada konmuş olduğunun sık müşahedesinin, orada hususî bir cinsten herhangi bir cisim keşfedince, onunla beraber aynı cinsten daha birçoklarının saklanmış olduğu neticesine bizi götürmesi gibi. Aşikârdır ki bu, evvelki istihraçlarla tenâkuz teşkil etmek şöyle dursun, onların tatbik edileceği hususî hâllerden yalnız biridir.
+
+Söylenmiş olan, *yeknesak* tecrübeden hangi neticeleri çıkaracağımızı bize göstermeye kâfi görünüyor. Bu, bilhassa, hâdiselerin *daima* ona uygun olarak vukû bulacağını ispat etmek şöyle dursun, bu neticenin aleyhine daima sebep bulunacağını burhanla gösterir. Başka bir tabirle, tabiatın seyrinin en sâbit olduğu yerde, ancak bu sâbitliğin derecesiyle mütenasip bir hâdiseler tekerrürüne güvenmek için sebebimiz olabilir; fakat tabiatta bu sâbitliğin kendilerinden geldiği sebeplerin fiillerine *hiçbir zaman* müdahale etmeyecek sebepler bulunmadığını, yahut âlemin onun bozulacağı hiçbir hâli bulunmadığını düşünmek için hiçbir sebebimiz olamaz. Ve eğer yegâne *verilerimiz* tecrübeden elde edilmiş farz edildiğinde bu doğru ise, başka esasları tatbik edersek yahut aklın tecrübeden müstakil olarak telkin edebileceği mülâhazalara müracaat edersek, böyle düşünmek için ilâve sebep bulacağız.
+
+Fakat burada niyet ettiğimden ileri gittim; ve düşüncelerimizi bu mevzûun bir başka şubesine, yâni bir tecrübenin bazen muvaffak olup bazen olmadığı hâllere çevirmenin vakti geldi.
+
+Burada yine, mümkün olduğu kadar açık ve sarih olmak için, düşünebildiğim en kolay ve en basit olan şu hâli vaz' etmek münasip olacaktır.
+
+O hâlde, bir piyangonun çekilişinde hazır bulunan ve onun tertibi yahut içindeki *boşların* *ikramiyelere* nisbeti hakkında hiçbir şey bilmeyen bir kimse tasavvur edelim. Ayrıca farz edilsin ki o bunu, çekildiğini işittiği *boşların* sayısını *ikramiyelerin* sayısıyla karşılaştırarak çıkarmaya mecburdur; ve sorulsun ki bu şartlarda hangi neticeleri makul olarak çıkarabilir.
+
+Evvelâ *on* boş ve *bir* ikramiye çekildiğini işitsin, ve sorulsun ki piyangoda *boşların* *ikramiyelere* nisbetinin 9'a 1 ile 11'e 1 nisbetleri arasında bir yerde bulunduğunu tahmin ederse, haklı olmak için ne tâlii olacaktır.
+
+Burada büyük hadd = 11/12, küçük hadd = 9/10, vukû adedi = 10, adem adedi = 1, tecrübe adedi = 11, terkîb emsali = 11 alınarak, aranan tâli' birinci kaideye göre (tecrübe adedi + 1) × terkîb emsali'nin şu iki ifade arasındaki farkla zarb edilmişidir:
+
+$$\frac{\text{büyük hadd}^{\,\text{vukû adedi}+1}}{\text{vukû adedi}+1} - \text{adem adedi} \times \frac{\text{büyük hadd}^{\,\text{vukû adedi}+2}}{\text{vukû adedi}+2} \qquad\text{ve}\qquad \frac{\text{küçük hadd}^{\,\text{vukû adedi}+1}}{\text{vukû adedi}+1} - \text{adem adedi} \times \frac{\text{küçük hadd}^{\,\text{vukû adedi}+2}}{\text{vukû adedi}+2};$$
+
+yâni
+
+$$12 \times 11 \times \left[\frac{\left(\frac{11}{12}\right)^{11}}{11} - \frac{\left(\frac{11}{12}\right)^{12}}{12} - \frac{\left(\frac{9}{10}\right)^{11}}{11} + \frac{\left(\frac{9}{10}\right)^{12}}{12}\right] = 0{,}07699\ldots$$
+
+Binâenaleyh onun haklı olmasının *aleyhine* aşağı yukarı 923'e 76, yahut takrîben 12'ye 1 rüçhan olacaktır. Yalnız umûmî olarak bir ikramiyeye 9'dan az boş bulunduğunu tahmin etmiş olsaydı, haklı olmasının 0,6589'a müsâvî bir ihtimali, yahut 65'e 34 rüçhan olurdu.
+
+Yine farz edin ki 20 *boş* ve 2 *ikramiye* çekildiğini işitmiştir; aynı tahmini yaparsa haklı olmak için ne tâlii olacaktır?
+
+Burada büyük hadd ve küçük hadd aynı olarak, tecrübe adedi = 22, vukû adedi = 20, adem adedi = 2, terkîb emsali = 231 elde ederiz, ve aranan tâli'
+
+$$\left(\text{tecrübe adedi}+1\right) \times \text{terkîb emsali} \times \left[\left(\frac{\text{büyük hadd}^{\,\text{vukû adedi}+1}}{\text{vukû adedi}+1} - \text{adem adedi} \times \frac{\text{büyük hadd}^{\,\text{vukû adedi}+2}}{\text{vukû adedi}+2} + \text{adem adedi} \times \frac{\text{adem adedi}-1}{2} \times \frac{\text{büyük hadd}^{\,\text{vukû adedi}+3}}{\text{vukû adedi}+3}\right) - \left(\frac{\text{küçük hadd}^{\,\text{vukû adedi}+1}}{\text{vukû adedi}+1} - \text{adem adedi} \times \frac{\text{küçük hadd}^{\,\text{vukû adedi}+2}}{\text{vukû adedi}+2} + \text{adem adedi} \times \frac{\text{adem adedi}-1}{2} \times \frac{\text{küçük hadd}^{\,\text{vukû adedi}+3}}{\text{vukû adedi}+3}\right)\right] = 0{,}10843\ldots$$
+
+ifadesine müsâvîdir.
+
+Binâenaleyh haklı olmak için evvelki misalde olduğundan daha iyi bir tâlii olacaktır; onun aleyhine rüçhan şimdi 892'ye 108, yahut takrîben 9'a 1'dir. Fakat yalnız umûmî olarak, evvelki gibi, bir ikramiyeye 9'dan az boş bulunduğunu tahmin ederse, haklı olmak için tâlii daha kötü olacaktır; zîrâ 0,6589 yahut ikiye bire yakın bir rüçhan yerine 0,584, yahut 584'e 415 bir rüçhan olacaktır.
+
+Ayrıca farz edin ki 40 *boş* ve 4 *ikramiye* çekildiğini işitmiştir; evvelce zikredilen tâli'ler ne olacaktır?
+
+Burada cevap, bu tâli'lerden evvelkisi için 0,1525; ve sonrakisi için 0,527'dir. Binâenaleyh şimdi boşların ikramiyelere nisbetinin 9'a 1 ile 11'e 1 arasında bulunmasının aleyhine ancak 5½'e 1 rüçhan olacak; ve 9'a 1'den az olmasına dair müsâvî bir tâli'den ancak biraz fazlası olacaktır.
+
+Bir kere daha, farz edin ki 100 *boş* ve 10 *ikramiye* çekildiğini işitmiştir.
+
+Burada cevap hâlâ birinci kaide ile bulunabilir; ve boşların ikramiyelere 9'a 1'den *az* bir nisbeti için tâli' 0,44109, ve 11'e 1'den *büyük* bir nisbet için 0,3082 olacaktır. Binâenaleyh bir ikramiyeye 9'dan az yahut 11'den fazla boş bulunmaması muhtemel olurdu. Fakat aynı zamanda gerçek nisbetin 9'a 1 ile 11'e 1 arasında bulunması gayr-ı muhtemel kalacaktır\*, bunun için tâli' 0,2506 ve saire olduğundan. Binâenaleyh bunun aleyhine hâlâ üçe bire yakın bir rüçhan olacaktır.
+
+> \* Zannederim hiçbir dikkatli kimse bunda bir güçlük bulmayacaktır. Bu yalnız şunu söylemektir ki hiçlik ile yakîn arasındaki fâsılanın yüz müsâvî tâli'ye taksim edildiği farz edildiğinde, boşların ikramiyelere 9'a 1'den az bir nisbeti için bunların 44'ü, 11'e 1'den büyük bir nisbet için 31'i, ve 9'a 1 ile 11'e 1 arasındaki bir nisbet için 25'i bulunacaktır; burada aşikârdır ki bu farzlardan biri doğru olmak lâzım gelse de, her birinin lehinde olandan daha fazla tâli' aleyhinde olduğundan, hepsi ayrı ayrı gayr-ı muhtemeldir.
+
+Bu hesaplardan görünür ki farz ettiğim şartlarda, boşların ikramiyelere nisbetini, verilen bir müddette çekilen boşların sayısının çekilen ikramiyelerin sayısına nisbetiyle aşağı yukarı aynı tahmin etmekte haklı olmanın tâlii, bu sayılar arttıkça durmadan artmaktadır; ve binâenaleyh bunlar ehemmiyetli derecede büyük olduğunda bu netice ahlâkan yakînî sayılabilir. Aynı istidlâlle, hakkında büyük sayıda tecrübe yapılmış her hâdiseye nisbetle umûmî olarak lâzım gelir ki onun vukû sebeplerinin vukû bulmama sebeplerine nisbeti, vukûların sayısının vukû bulmamaların sayısına nisbetinin aynıdır; ve eğer sebeplerinin bilindiği farz edilen bir hâdise bu neticeye uygun olandan daha sık yahut daha seyrek vukû bulursa, bilinen sebeplerin fiillerini bozan bazı meçhul sebepler bulunduğuna inanmak için sebep olacaktır. Binâenaleyh bilhassa tabiattaki hâdiselerin seyrine nisbetle görünür ki onların, tesâdüfün herhangi bir kuvvetinden değil, müşahede ettiğimiz hâdiseler nizâmını hâsıl etmek için tabiatın bünyesinde aslen vaz' edilmiş dâimî sebeplerden yahut kanunlardan geldiklerini ispat edecek burhânî bir delil vardır\*. Bu, üzerinde ısrar ettiğim hâlde, milyonlarca tecrübede ikramiyelerden 10 kat fazla boş çekilmesinin sebebinin, çarkta ikramiyelerden aşağı yukarı o kadar fazla boş bulunması olduğu ne kadar aşikâr olacaksa, o kadar aşikârdır.
+
+> \* Bakınız Bay De Moivre'in *Hesâb-ı İhtimâlât*'ı, sahife 250.
+
+Fakat bu noktanın burhanında biraz daha ileri gidelim.
+
+Gördük ki bir piyangonun bütün tertibinden habersiz bir kimse, 100 *boş* ve 10 *ikramiye* çekildiğini işitmekten, piyangoda *boşların* *ikramiyelere* nisbetinin 9'a 1 ile 11'e 1 arasında bir yerde olduğunu tahmine sevk edilseydi, onun haklı olmasının tâlii 0,2506 ve saire olurdu. Şimdi bu tâliin bazı daha yüksek hâllerde ne olacağını araştıralım.
+
+Farz edilsin ki 1100 tecrübede *boşlar* 1000 kere ve ikramiyeler 100 kere çekilmiştir.
+
+Bu hâlde büyük hadd ve küçük haddin kuvvetleri o kadar yükselir ve
+
+$$\frac{\text{büyük hadd}^{\,\text{vukû adedi}+1}}{\text{vukû adedi}+1} - \text{adem adedi} \times \frac{\text{büyük hadd}^{\,\text{vukû adedi}+1}}{\text{vukû adedi}+2} + \cdots \qquad\text{ve}\qquad \frac{\text{küçük hadd}^{\,\text{vukû adedi}+1}}{\text{vukû adedi}+1} - \text{adem adedi} \times \frac{\text{küçük hadd}^{\,\text{vukû adedi}+2}}{\text{vukû adedi}+2} + \cdots$$
+
+iki silsilesindeki hadlerin sayısı o kadar çok olur ki cevabı birinci kaide ile elde etmek muazzam bir emek isterdi. Binâenaleyh ikinci kaideye müracaat etmek zarurîdir. Fakat onu kullanabilmek için büyük hadd ile küçük hadd arasındaki fâsılanın biraz değiştirilmesi lâzımdır.
+
+$$\frac{10}{11} - \frac{9}{10} = \frac{1}{110}$$
+
+dur, ve binâenaleyh
+
+$$\frac{10}{11} - \frac{1}{110} \qquad\text{ile}\qquad \frac{10}{11} + \frac{1}{110}$$
+
+arasındaki fâsıla, 9/10 ile 11/12 arasındaki fâsıla ile aşağı yukarı aynı, yalnız biraz daha büyük olacaktır. O hâlde suâli şöyle kurarsak: (1100 tecrübede boşların 1000 kere ve ikramiyelerin 100 kere çekildiğinden fazlası bilinmediği farz edildiğinde) tek bir tecrübede bir boş çekmenin ihtimalinin 10/11 − 1/110 ile 10/11 + 1/110 arasında bir yerde bulunmasının tâlii ne olur; o zaman evvelki suâllerle aynı cinsten bir suâlimiz olacak ve onlarda tayin edilen hadlerden ancak biraz ayrılacağız.
+
+İkinci kaideye göre cevap şudur ki bu tâli'
+
+$$\frac{2 \times \text{silsile hâsılı}}{1 - 2 \times \text{terkîb emsali} \times \text{vukû nisbeti}^{\,\text{vukû adedi}} \times \text{adem nisbeti}^{\,\text{adem adedi}} + \dfrac{2 \times \text{terkîb emsali} \times \text{vukû nisbeti}^{\,\text{vukû adedi}} \times \text{adem nisbeti}^{\,\text{adem adedi}}}{\text{tecrübe adedi}}}$$
+
+ifadesinden büyük ve
+
+$$\frac{2 \times \text{silsile hâsılı}}{1 - 2 \times \text{terkîb emsali} \times \text{vukû nisbeti}^{\,\text{vukû adedi}} \times \text{adem nisbeti}^{\,\text{adem adedi}} - \dfrac{2 \times \text{terkîb emsali} \times \text{vukû nisbeti}^{\,\text{vukû adedi}} \times \text{adem nisbeti}^{\,\text{adem adedi}}}{\text{tecrübe adedi}}}$$
+
+ifadesinden küçüktür; silsile hâsılı
+
+$$\frac{\text{tecrübe adedi}+1}{\text{tecrübe adedi}} \times \frac{\sqrt{2 \times \text{vukû adedi} \times \text{adem adedi}}}{\sqrt{\text{tecrübe adedi}}} \times \text{terkîb emsali} \times \text{vukû nisbeti}^{\,\text{vukû adedi}} \times \text{adem nisbeti}^{\,\text{adem adedi}} \times \left(\text{mikyâs} \times \text{inhirâf} - \frac{\text{mikyâs}^{3} \times \text{inhirâf}^{3}}{3} + \frac{\text{tecrübe adedi}-2}{2 \times \text{tecrübe adedi}} \times \frac{\text{mikyâs}^{5} \times \text{inhirâf}^{5}}{5} - \cdots\right)$$
+
+olmak üzere. Burada vukû adedi = 1000, adem adedi = 100, tecrübe adedi = 1100,
+
+$$\text{inhirâf} = \frac{1}{110}, \qquad \text{mikyâs} = \frac{\sqrt{\text{tecrübe adedi}^{3}}}{\sqrt{\text{vukû adedi} \times \text{adem adedi}}} = 1{,}048808,$$
+
+$$\text{terkîb emsali} \times \text{vukû nisbeti}^{\,\text{vukû adedi}} \times \text{adem nisbeti}^{\,\text{adem adedi}} = \frac{\text{birinci tashîh nisbeti}}{2} \times \frac{\sqrt{\text{tecrübe adedi}}}{\sqrt{\text{rub'-ı dâire nisbeti} \times \text{vukû adedi} \times \text{adem adedi}}}$$
+
+yaparak; birinci tashîh nisbeti, zâidî logaritması
+
+$$\frac{1}{12} \times \left(\frac{1}{\text{tecrübe adedi}} - \frac{1}{\text{vukû adedi}} - \frac{1}{\text{adem adedi}}\right) - \frac{1}{360} \times \left(\frac{1}{\text{tecrübe adedi}^{3}} - \frac{1}{\text{vukû adedi}^{3}} - \frac{1}{\text{adem adedi}^{3}}\right) + \frac{1}{1260} \times \left(\frac{1}{\text{tecrübe adedi}^{5}} - \frac{1}{\text{vukû adedi}^{5}} - \frac{1}{\text{adem adedi}^{5}}\right) - \cdots$$
+
+olan nisbet, ve rub'-ı dâire nisbeti, rub'-ı dâire kavsinin nısf-ı kutra nisbeti olmak üzere; bu ifadelerden evvelkinin 0,7953, sonrakinin 0,9405 ve saire olduğu bulunacaktır. Binâenaleyh araştırılan tâli' 0,7953'ten büyük ve 0,9405'ten küçüktür. Yâni: boşların ikramiyelere nisbetinin *takrîben* 9'a 1 ile 11'e 1 arasında (yahut *tam olarak* 9'a 1 ile 1111'e 99 arasında) bulunduğunu tahmin etmekte haklı olmak için 4'e 1'den büyük ve 16'ya 1'den küçük bir rüçhan olacaktır.
+
+Yine farz edin ki 11000 tecrübede *boşların* 10.000 kere ve *ikramiyelerin* 1000 kere çekildiğinden fazlası bilinmiyor; şimdi zikredilen tâli' ne olacaktır?
+
+Burada birinci kaide gibi ikinci kaide de faydasız hâle gelir; mikyâs × inhirâf'ın kıymeti
+
+$$\text{mikyâs} \times \text{inhirâf} - \frac{\text{mikyâs}^{3} \times \text{inhirâf}^{3}}{3} + \frac{\text{tecrübe adedi}-2}{2 \times \text{tecrübe adedi}} \times \frac{\text{mikyâs}^{5} \times \text{inhirâf}}{5} - \cdots$$
+
+silsilesini doğrudan hesaplamayı güçlükle mümkün kılacak kadar büyük olduğundan. Binâenaleyh üçüncü kaide kullanılmalıdır; ve onun bize verdiği malûmat, aranan tâliin 0,97421'den büyük, yahut 40'a 1'den fazla bir rüçhan olduğudur.
+
+Bunlara benzer hesaplarla, herhangi tecrübelerin, muvaffak oldukları ve olmadıkları defaların farklı sayısına göre, hangi beklentilere teminat verdiği; yahut tabiatta, hakkında herhangi bir aşinalığımız bulunan herhangi hususî bir sebebin, herhangi tek bir tecrübede, kendisiyle birleşmiş olan bir tesiri hâsıl edip etmeyeceği ihtimali hakkında ne düşünülmesi gerektiği umûmî olarak tayin edilebilir.
+
+Çoğu kimse, muhtemelen, verdiğim numûnedeki tâli'lerin bulduğumdan daha büyük olacağını bekleyebilirdi. Fakat bu yalnız, bu mevzûda hesaptan müstakil olarak hüküm verdiğimizde hataya ne kadar maruz olduğumuzu gösterir. Bununla beraber burada bir şey hatırda tutulmalıdır; o da 9/10 ile 11/12 arasındaki, yahut 10/11 + 1/110 ile 10/11 − 1/110 arasındaki fâsılanın darlığıdır. Bu fâsıla biraz daha büyük alınmış olsaydı, hesapların neticelerinde ehemmiyetli bir fark olurdu. Meselâ iki kat alınmış olsaydı, yâni inhirâf = 1/55, dördüncü misalde, tek bir tecrübede bir boş çekmenin ihtimalinin 10/11 + 1/55 ile 10/11 − 1/55 arasında bulunduğuna hükmetmekte haklı olmanın aleyhine rüçhan yerine lehine rüçhan bulunduğu görülürdü.
+
+Evvelki hesaplar ayrıca risâlede vaz' edilen kaidelerin faydalarını ve kusurlarını da bize gösterir. Aşikârdır ki son iki kaide, aranan tâli'leri arzu edilebileceği kadar dar hadler içinde vermez. Fakat burada yine mülâhaza edilmelidir ki adem adedi vukû adedine nisbetle daha büyük alındıkça bu hadler daha dar ve daha dar olur; ve vukû adedi ile adem adedi müsâvî olduğunda tam hal, her hâlde ikinci kaide ile verilir. Binâenaleyh bu iki kaide, birisi birinci kaidedeki iki silsilenin kıymetine daha iyi bir yaklaşma keşfedinceye kadar, hükmümüze ehemmiyetli bir faydası olabilecek bir istikamet verir†.
+
+Fakat bu *risâle*deki halli her şeyden çok tavsiye eden şey, malûmatın en çok arandığı ve Bay De Moivre'in aksi meseleye dair hallinin pek az yahut hiç istikamet veremediği hâllerde; yâni vukû adedi yahut adem adedinin hiçbir ehemmiyetli büyüklükte olmadığı bütün hâllerde mükemmel olmasıdır. Öteki hâllerde, yahut vukû adedi ve adem adedi ikisi birden pek ehemmiyetli olduğunda, burada burhanla gösterilen şeyin doğruluğunu, yâni bir hâdisenin vukûu için olan tâli'lerin onun vukû bulmaması için olan tâli'lere, vukû adedinin adem adedine *nisbeti* ile aynı nisbette olduğuna umûmî olarak inanmak için sebep bulunduğunu idrak etmek güç değildir. Fakat vukû adedi yahut adem adedi küçük olduğunda bu tarzda hüküm verirsek büyük ölçüde aldanacağız. Ve bu türlü hâllerde *veriler* bir hâdisenin tam ihtimalini keşfetmeye kâfi olmasa da, onun aralarında bulunması gerektiğini düşünmenin makul olduğu hadleri bulabilmek, ve onlara dair herhangi neticelere yahut iddialara lâyık olan tasdikin tam derecesini de tayin edebilmek pek hoştur.
+
+> † Bu yazıldığından beri, ikinci ve üçüncü kaidelerdeki yaklaşmayı ehemmiyetli derecede ıslah etmenin bir usûlünü buldum; şunu burhanla göstererek ki
+>
+> $$1 + 2 \times \text{terkîb emsali} \times \text{vukû nisbeti}^{\,\text{vukû adedi}} \times \text{adem nisbeti}^{\,\text{adem adedi}} + \frac{2 \times \text{terkîb emsali} \times \text{vukû nisbeti}^{\,\text{vukû adedi}} \times \text{adem nisbeti}^{\,\text{adem adedi}}}{\text{tecrübe adedi}}$$
+>
+> ifadesi aranan gerçek kıymete, arzu etmek için sebep bulunduğu kadar yakın gelir, yalnız daima biraz küçük kalır. Bunu burada ima etmek zarurî görünüyor; burhanı verilemese de.
+
+---
+
+## İsimler cedveli
+
+Aslın harflerinin ve onların yerine konan kelimelerin cedveli. Aslın harfleri burada yalnız adlarıyla yazılmıştır.
+
+| Aslın harfi (adıyla) | Yer | Bu tercümedeki kelime |
+| :-- | :-- | :-- |
+| büyük en | Birinci–beşinci kaziyyeler | meblağ |
+| küçük a, be, ce | Birinci kaziyye | birinci kıymet, ikinci kıymet, üçüncü kıymet |
+| büyük pe | İkinci kaziyye ve birinci kaziyyenin neticesi | me'mûlün kıymeti |
+| büyük pe, küçük a, küçük be | Üçüncü kaziyye | ikisinin kıymeti, birincinin kıymeti, ikincinin kıymeti |
+| küçük be, büyük pe, küçük iks, küçük vay | Dördüncü ve beşinci kaziyyeler | ikincinin kıymeti, ikisinin kıymeti, me'mûlümün kıymeti, iade kıymeti |
+| küçük iks | Beşinci kaziyyeye Price'ın hâşiyesi | aranan ihtimal |
+| küçük a, küçük be | Altıncı kaziyyenin ikinci neticesi, yedinci kaziyye | vukû ihtimali, adem ihtimali |
+| küçük pe, küçük kû | Yedinci kaziyyeden itibaren | vukû adedi, adem adedi |
+| küçük en | İkinci bölükten itibaren | tecrübe adedi |
+| büyük e | Yedinci kaziyyeden itibaren | terkîb emsali |
+| küçük vay, küçük iks, küçük ar | Sekizinci ve onuncu kaziyyeler, hesap maddeleri | tertîbî nisbeti, vukû ihtimali, adem ihtimali |
+| noktalı küçük iks, noktalı küçük ar | Hesap maddelerinin hâşiyeleri | seyyâle (vukû ihtimali), seyyâle (adem ihtimali) |
+| büyük iks, küçük iks | Beşinci madde, birinci kaide, zeyl | büyük hadd, küçük hadd |
+| büyük ar, küçük ar | Birinci kaidenin sonu | büyük haddin mütemmimi, küçük haddin mütemmimi |
+| küçük em | İkinci ve üçüncü kaideler, zeyl | mikyâs |
+| küçük zet | İkinci ve üçüncü kaideler, zeyl | inhirâf |
+| küçük a, küçük be | İkinci kaide | vukû nisbeti, adem nisbeti |
+| büyük sigma | İkinci kaide, zeyl | silsile hâsılı |
+| büyük ka | İkinci ve üçüncü kaideler, zeyl | rub'-ı dâire nisbeti |
+| zâidî logaritması verilen adsız nisbet; zeylde küçük be | İkinci kaide, üçüncü kaide, zeyl | birinci tashîh nisbeti |
+| büyük ha | Üçüncü kaide | ikinci tashîh nisbeti |
+| büyük a, be, ce, de, e, ef | Price'ın emsal kaidesi | birinci emsal … altıncı emsal |
+| küçük iks, küçük ce | Price'ın logaritmalar mecmû'u hâşiyesi | son adet, muhît |
+
+Hendesî şekillerdeki `A`, `B`, `C`, `D`, `F`, `H`, `L`, `O`, `W`, `f`, `b`, `c`, `d`, `e`, `g`, `h`, `i`, `k`, `m`, `o`, `p`, `s`, `t` harfleri, `D` şekli ve `M` hâdisesi kemmiyet değil adlardır; aslındaki gibi bırakılmıştır.
+
+## Istılah cedveli
+
+| İngilizce | Bu tercümedeki karşılık | Dayanak |
+| :-- | :-- | :-- |
+| doctrine of chances | hesâb-ı ihtimâlât | lügat (probability: ihtimâl, hesâb-ı ihtimâlât; kadîm) |
+| probability | ihtimal | lügat (kadîm) |
+| chance | tâli' | teklif |
+| odds | rüçhan | teklif |
+| event | hâdise | |
+| to happen / to fail | vukû bulmak / vukû bulmamak | |
+| trial | tecrübe | |
+| expectation | me'mûl | teklif |
+| inconsistent events | mütenâfî hâdiseler | teklif |
+| contrary | zıd | |
+| determined | müteayyin | |
+| independent | müstakil | |
+| ratio compounded | mürekkeb nisbet | |
+| ratio of equality | müsâvât nisbeti | |
+| componendo inverse | tersine terkip | |
+| proposition | kaziyye | lügat (kadîm) |
+| corollary | netice | |
+| lemma | mukaddime | |
+| postulate | müsâdere | |
+| scholium | tenbîh | |
+| demonstration | burhan | lügat (kadîm) |
+| binomial | dü-haddî | lügat (teklif) |
+| coefficient | emsal | lügat (kadîm) |
+| permutation | tebdîl | lügat (kadîm) |
+| series | silsile | lügat (kadîm) |
+| term | had | |
+| abscissa / ordinate | fâsıla / tertîbî | |
+| area | satıh | lügat (surface: sath) |
+| rectangle | mustatîl | |
+| commensurable | müşterekü'l-mikyâs | |
+| perpendicular | amûd | lügat (kadîm) |
+| curve | münhanî | lügat (kadîm) |
+| method of fluxions | müteseyyilât usûlü | teklif |
+| fluxion / fluent | seyyâle / müteseyyil | teklif |
+| hyperbolic logarithm | zâidî logaritma | lügat (hyperbolic: zâidî; logarithm: logaritma) |
+| quadrantal arc | rub'-ı dâire kavsi | |
+| radius | nısf-ı kutr | |
+| diverge | mütebâid olmak | teklif |
+| experimental philosophy | hikmet-i tecrübiyye | |
+| analogical or inductive reasoning | temsîlî yahut istikrâî istidlâl | lügat (induction: istikrâ; kadîm) |
+| final causes | ilel-i gâiyye | |
+| the Deity | Bârî Teâlâ | |
+| lottery / blank / prize | piyango / boş / ikramiye | |
+| morally certain | ahlâkan yakînî | |
