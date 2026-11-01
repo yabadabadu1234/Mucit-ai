@@ -24,7 +24,8 @@ Bu defter, iş kesilirse kaldığı yerden devam edebilmek için tutulur. Her c�
 - Deponun varsayılan dalına doğrudan yazılmıyor; bu iş parçacığı kendi dalında çalışıyor.
 - Ortak proje klasörü (kalıcı nüsha): /mnt/project-files/saheser/ (asıl kayıt GitHub dalıdır)
 - Deponun kökündeki CLAUDE.md, Mucit-AI yazılım projesinin emirnâmesidir. Bu klasördeki işe dokunan hükümleri: grep ile arama yasağı ve dosyaların baştan sona okunması.
-- Tercüme iş parçacığı: cmsg_01A3eskXyY6uU4cdnPk3VaruYP1h8zbB8CWSe2LKTnQ89t. İkinci cüzden itibaren her cüz doğrudan ona bildirilir.
+- Tercüme iş parçacığı (yeni, tam izinli muhitte): cmsg_01A3eskXyY6uU4cdnPk3Varu2wwmz2oMofb9YC5P1xtmaj. Eskisi: cmsg_01A3eskXyY6uU4cdnPk3VaruYP1h8zbB8CWSe2LKTnQ89t.
+- Lügat iş parçacığı (yeni): cmsg_01A3eskXyY6uU4cdnPk3Varu47e9cTiL6Avjtce32Stoh7.
 - Lügat iş parçacığı: cmsg_01A3eskXyY6uU4cdnPk3VaruLJQGc3UG8Pt9gNrGaDMi1Q. Talebe notu iş parçacığı: cmsg_01A3eskXyY6uU4cdnPk3VaruPL54f9fyw74ZQQpJRJmc4g.
 
 ## Ameliyat notları
@@ -44,11 +45,11 @@ Bu defter, iş kesilirse kaldığı yerden devam edebilmek için tutulur. Her c�
 | Altıncı | Canlılar ("B" kıtası) | Tamam (17 madde) | Bildirildi |
 | Yedinci | Teşhis ve tedavi usulleri ("E" kıtası) | Tamam (14 eser ve asrî liste) | Bildirildi |
 | Sekizinci | Ruh hekimliği ve ruhiyat ("F" kıtası) | Tamam (11 eser ve asrî liste) | Bildirildi |
-| Dokuzuncu | Kalan kıtalar | Sırada | Hayır |
+| Dokuzuncu | Kalan kıtalar | Tamam (15 madde) | Bildirildi |
 
 ## Kaldığı yer
 
-Birinciden dördüncüye kadar cüzler tamamlandı ve commit edildi. Beşinci cüz de tamamlandı. Altıncı cüz de tamamlandı. Yedinci cüz de tamamlandı. Sekizinci cüz de tamamlandı. Sıradaki iş: dokuzuncu cüz, kalan kıtalar.
+Birinciden dördüncüye kadar cüzler tamamlandı ve commit edildi. Beşinci cüz de tamamlandı. Altıncı cüz de tamamlandı. Yedinci cüz de tamamlandı. Dokuz cüzün hepsi tamamlandı. Kalan iş: kullanıcının "karışık" eserler hakkındaki cevabını yeni Tercüme iş parçacığına iletmek; açık tahkikleri (aşağıda) ağ erişimi olan bir muhitte tamamlamak; kullanıcı isterse Türk tıp tarihi eserleri için ayrı bir cüz.
 
 ## Açık tahkikler
 
@@ -62,3 +63,4 @@ Birinciden dördüncüye kadar cüzler tamamlandı ve commit edildi. Beşinci c�
 - Altıncı cüzde: Bergey 1923 heyetinin vefat yılları; Pasteur 1861 risalesinin neşir yılı; Darwin eseri, kullanıcının "İslâm'a aykırı söz söyleme" kaidesi gereği tenbih notuyla kaydedildi.
 - Yedinci cüzde: Einthoven 1906 makalesinin künyesi; Lister, Bigelow, Snow ve Gram metinlerinin nüshaları.
 - Sekizinci cüzde: Belhî'nin yazma nüshasının raf numarası ve Sezgin tıpkıbasımı; Milletlerarası Hastalıklar Tasnifi'nin lisansı.
+- Dokuzuncu cüzde: Ruhâvî'nin Edirne Selimiye nüshasının raf numarası; Tıbbî Mevzu Başlıkları'nın kullanım şartları; Percival, Frank, Chadwick ve Flexner nüshaları.
