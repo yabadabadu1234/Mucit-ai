@@ -219,6 +219,7 @@
 | 33 | HF jetonunu yahut herhangi bir sırrı depodaki bir dosyaya yazmak (yalnız `${{ secrets.HF_TOKEN }}`) | Padişah emri |
 | 33-B | **Optimizasyonu (eğitim hızlandırma fikri) numpy'da sürdürmek.** Padişah: "Optimizasyonu asla numpy'da sürdürmeyelim"; optimizasyon modülü kübik tip teorisi çekirdeğini (`matematik/sonsuz_mertebeler_teorisi.py`) tamamen kullanır. Ayrıca Padişah, çekirdeğin 5086. satırından sonrasının silinip tip teorisine göre yeniden yazılmasını **teklif etti**; bu henüz **karar değil, fikirdir** ve hüküm bekler (F 179: silinecekse nakz açıkça yazılır) | Padişah emri (fastcan-parquet oturumu) |
 | 33-C | **TERCÜMEDE VE TALEBE NOTLARINDA DÜSTURU HARFLE YAZMAK.** Padişah: "formülleri asla harf olarak yazmasın, kelime olarak yazsın. Mesela: ağırlık*ehemmiyet=dikkat gibi, a*b=c olmaz!" Her kemmiyet mânâsını söyleyen kelimeyle adlandırılır; aslın harfleri yalnız eserin sonundaki isimler cedvelinde adlarıyla gösterilir (`tercume/README.md` kaide 1; `talebe_notlari/README.md` kaide 3) | Padişah emri (tercüme oturumu, 1 Teşrîn-i sânî 2026) |
+| 33-D | **ŞERH VE TALEBE NOTU ÇIKARMAK.** Padişah: "Şerh ve not asla çıkarılmayacak, onların yerine çokça tercüman vazifelendir, eserleri eşzamanlı tercüme etsinler." Yeni not ve şerh yazılmaz; mevcut `talebe_notlari/` dosyaları silinmez, olduğu gibi durur (F 179); emek tercümeye verilir | Padişah emri (talebe notları oturumu, 1 Teşrîn-i sânî 2026) |
 
 ## 2-B. İMHA VE TERTİP YASAKLARI
 
