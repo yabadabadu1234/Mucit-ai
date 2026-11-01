@@ -76,6 +76,23 @@ Her karşılığın yanında bir **kayıt** sütunu vardır:
 5. Sonra her listenin unsurları çıkarılıp `vikipedi/listeler/`e yazılır
    ve MSC2020'deki usulle Osmanlıca karşılıkları bulunur.
 
+## Telif (imtizâc) kaidesi — kullanıcı hükmü
+
+Karşılıklar bulununca MSC2020 ile Vikipedi listeleri tek bir **telif**
+dosyasında birleştirilir:
+
+1. Ana kaynaklar (`msc2020/kaynak.tsv`, `vikipedi/unsurlar.tsv`) ve
+   karşılık dosyaları (`msc2020/ceviri/`, `vikipedi/ceviri/`) **asla
+   silinmez**; telif ayrı bir dosyadır.
+2. Yalnız **tekrarlar** birleştirilir; tekrar olmayan hiçbir unsur düşmez.
+   Vikipedi'de 10, MSC'de 5 unsur varsa ve hiçbiri ötekinin tekrarı
+   değilse telifte mutlaka 15 mensup bulunur.
+3. Hiyerarşi kurulur: MSC başlıkları umûmiyetle Vikipedi unsurlarının
+   üst başlığı olur; her unsurun hangi başlığın altına girdiği yazılır.
+4. Telif betiği bu sayıyı kendisi doğrular:
+   `telif mensup sayısı = MSC unsur sayısı + Vikipedi unsur sayısı − tekrar sayısı`
+   tutmazsa betik hata verip durur.
+
 ## İmlâ
 
 Osmanlıca karşılıklar Latin harfleriyle, uzun sesliler için şapka
