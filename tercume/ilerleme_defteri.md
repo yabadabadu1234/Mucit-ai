@@ -108,6 +108,44 @@ Baştan sona okundu. Kurucu eserlerin şaheserlik sırası (hepsi telifi düşm�
 
 Telifli (yalnız kayıt, tercüme edilmez): Harrison, Davidson, Braunwald, Adams ile Victor, Mandell, DeVita, Williams, Nelson, Brenner ile Rector ve babların diğer asrî eserleri. Karışık (tercüme edilmez): Hutchison'ın Clinical Methods'u (1897), Joslin'in The Treatment of Diabetes Mellitus'u (1916).
 
+### Beşinci cüz: Kimyevî maddeler ve ilaçlar
+
+Baştan sona okundu. Kurucu eserlerin şaheserlik sırası:
+
+| Sıra | Eser | Telif | Nüsha |
+|---|---|---|---|
+| 1 | Dioskorides, De Materia Medica (Yunanca) | Telifi düşmüş | Sprengel neşri "BIUSante_dioscsprengelx01", "BIUSante_dioscsprengelx02" |
+| 2 | Withering, An Account of the Foxglove (1785) | Telifi düşmüş | "anaccountofthefo00with"; Gutenberg 24886 olabilir, şüpheli |
+| 3 | Ehrlich ile Hata, Die experimentelle Chemotherapie der Spirillosen (1910) | Telifi düşmüş | "dieexperimentell1910ehrl" |
+| 4 | Fleming, penisilin makalesi (1929) | Telifi düşmüş | PubMed Central'da aranacak |
+| 5 | Langley, reseptör makalesi (1905) | Telifi düşmüş | Tahkik edilecek; makale adı şüpheli |
+| 6 | Wöhler, üre sentezi (1828) | Telifi düşmüş | Tahkik edilecek |
+| 7 | Liebig, Die Thierchemie (1842) | Telifi düşmüş | "animalchemistryo00lieb" |
+| 8 | Magendie, Formulaire (1821) | Telifi düşmüş | Tahkik edilecek |
+| 9 | Michaelis ile Menten (1913) | Karışık; tercüme edilmez | |
+
+Clark, The Mode of Action of Drugs on Cells (1933) karışık; Krebs ile Johnson (1937) telifli. Asrî eserler telifli (yalnız kayıt): Goodman ile Gilman, Lehninger, Rang ile Dale, Katzung, Stryer, Harper.
+
+### Altıncı cüz: Canlılar (mikrop, tufeylî, irsiyet)
+
+Baştan sona okundu. Kurucu eserlerin şaheserlik sırası:
+
+| Sıra | Eser | Telif | Nüsha |
+|---|---|---|---|
+| 1 | Mendel, Versuche über Pflanzen-Hybriden (1866) | Telifi düşmüş | "versucheberpflan00mend"; Gutenberg 40854 olabilir, şüpheli |
+| 2 | Pasteur, Mémoire sur les corpuscules organisés (1861 yahut 1862) | Telifi düşmüş | "b30478248" |
+| 3 | Koch, şarbon (1876) ve yara enfeksiyonları (1878) | Telifi düşmüş | Bulunamadı |
+| 4 | Avery ile arkadaşları (1944); Watson ile Crick (1953) | Telifli; tercüme edilmez | |
+| 5 | Leeuwenhoek'in mektupları | Asılları telifi düşmüş; Dobell derlemesi (1932) karışık, kullanılmayacak | Tahkik edilecek |
+| 6 | Beijerinck, Contagium vivum fluidum (1898) | Telifi düşmüş | Tahkik edilecek |
+| 7 | Laveran (1880) ve Ross (1897), sıtma | Telifi düşmüş | Tahkik edilecek |
+| 8 | Morgan ve arkadaşları (1915) | Karışık; tercüme edilmez | |
+| 9 | Darwin, On the Origin of Species (1859) | Telifi düşmüş | "onoriginofspecie1859darw" |
+
+Darwin hakkında: Şaheser iş parçacığı, eserin menşe hakkındaki hükümlerinin İslâm itikadınca kabul edilmediğini tenbih etmiştir. Kullanıcının "İslâm'a aykırı söz söyleme" kaidesi ile "yalnız tercüme" emri bu eserde çatışabileceği için, sırası gelince tercümeye başlamadan kullanıcıya sorulacaktır.
+
+Bergey (1923) karışık; asrî eserler telifli (yalnız kayıt): Jawetz, Murray, Sherris ile Ryan, Fields, Markell ile Voge, Alberts.
+
 ## Kaldığı yer
 
-Kullanıcının son emriyle şerh usulü kaldırıldı; yalnız birebir tam tercüme yapılacak. Cannon şerhi terk edildi diye işaretlendi. Lügat iş parçacığının Cannon ıstılahlarına dair tashihleri (lugat/karsiliklar/003_tercume_cannon.tsv) terk edilen dosyaya işlenmişti; tercümelerde de bu karşılıklar esas alınacak. Bütün tam metin tercümeleri ağ iznine bağlı. İzin gelince sıra: Virchow, Harvey, Bernard, Morgagni, Sherrington, Cohnheim, Koch; sonra kadîm cüzden el-Kânûn ve diğerleri; sonra teşrih cüzünün kurucu eserleri; sonra hastalıklar cüzünün kurucu eserleri.
+Kullanıcının son emriyle şerh usulü kaldırıldı; yalnız birebir tam tercüme yapılacak. Cannon şerhi terk edildi diye işaretlendi. Lügat iş parçacığının Cannon ıstılahlarına dair tashihleri (lugat/karsiliklar/003_tercume_cannon.tsv) terk edilen dosyaya işlenmişti; tercümelerde de bu karşılıklar esas alınacak. Bütün tam metin tercümeleri ağ iznine bağlı. İzin gelince sıra: Virchow, Harvey, Bernard, Morgagni, Sherrington, Cohnheim, Koch; sonra kadîm cüzden el-Kânûn ve diğerleri; sonra teşrih cüzünün kurucu eserleri; sonra hastalıklar, ilaçlar ve canlılar cüzlerinin kurucu eserleri.
