@@ -23,7 +23,7 @@ Yeni terkipte Latince kelimenin harfi değil, mefhumun ne olduğu esas alınır.
 ## Dördüncü kaide: Terkip usulü
 
 1. Önce kadîm kelime aranır. el-Kânûn'un ıstılahları (mesela "maraz", "araz", "alâmet", "veram", "asab", "a'zâ", "ahlât", "mizâc") birinci derecede kaynaktır.
-2. Kadîm kelime yoksa Osmanlı tıbbının son devrinde, Mekteb-i Tıbbiye kitaplarında kullanılan ıstılah aranır.
+2. Kadîm kelime yoksa Osmanlı tıbbının sonraki devirlerinde kullanılan ıstılah aranır. Bunların başında Şânîzâde Mehmed Atâullah'ın Mir'âtü'l-Ebdân'ı gelir; zira Latince teşrih ıstılahına Arapça ve Türkçe köklerden karşılık terkip eden ilk basma eserdir ve bu lügatin terkip usulünün de örneğidir. Ondan sonra Mekteb-i Tıbbiye kitaplarına bakılır.
 3. İkisi de yoksa Arapça yahut Farsça terkip kaidelerine göre, izafet ve sıfat tamlamasıyla yeni terkip yapılır. Sıfat, mevsufuna müennes ve müzekker cihetinden uyar ("emrâz-ı cildiyye", "cihâz-ı asabî").
 4. Bir terkip, aynı mefhum ailesinde aynı kalıpla kurulur; mesela bir cihazın hastalıkları daima "emrâz-ı cihâz-ı ..." kalıbıyla yazılır.
 5. Uzun Latince ve İngilizce adlarda, madde adındaki her kayıt (mesela "başka yerde tasnif edilmemiş", "tabakası", "nev'i") karşılıkta da aynen bulunur; hiçbir kayıt düşürülmez.

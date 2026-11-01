@@ -43,6 +43,21 @@ Bu defter, iş kesilirse kaldığı yerden devam edebilmek içindir. Her oturum 
 
 **`karsilik_oku.py`.** Mühür yalnız "kadîm", "teklif", "şüpheli" olabilir; kadîm satırda delil boş olamaz. Yarı Latince yoklaması bir parça listesiyle (mesela "itis", "loji", "gastro") yapılır; bulunan satır reddedilmez, uyarılır, çünkü Osmanlıcaya asırlar önce girmiş kelimeler de bulunabilir.
 
+## Kadîm mührün kaynakları
+
+Şaheser iş parçacığının ikinci cüzü (`/mnt/project-files/saheser/cuz_02_kadim_islam_tibbi.md`) baştan sona okundu. "Kadîm" mührünün delili şu nüshalarda aranacaktır (hepsi Internet Archive'dedir; bu oturumda `archive.org` kapalıdır):
+
+| eser | nüsha künyesi | lügatteki vazifesi |
+|---|---|---|
+| İbn-i Sînâ, el-Kânûn fi't-Tıbb, Roma 1593, Arapça | `QanunAvicennae` | Bütün kıtalar için birinci kaynak; bilhassa A (teşrîh), C (emrâz), G (kuvvetler ve ef'âl) |
+| Zehrâvî, et-Tasrîf'in otuzuncu makalesi, Oxford 1778, Arapça ve Latince | `b30411427` | Cerrahî ıstılahı (E kıtası); Sabuncuoğlu'nun ana kaynağı |
+| Şânîzâde Mehmed Atâullah, Hamse-i Şânîzâde ve Mir'âtü'l-Ebdân, İstanbul, 1820 civarı | `amseinzde01anizuoft` | Teşrih ıstılahı (A kıtası) ve terkip usulünün esas örneği; künyedeki 1810 tarihi şüpheli, hangi cilt olduğu tahkik edilecek |
+| Râzî, Kitâbü'l-Cüderî ve'l-Hasbe, Greenhill tercümesi 1848 | `atreatiseonsmal00unkngoog` | Sâri hastalık ıstılahı |
+| İbnü'l-Baytâr, el-Câmi' li-Müfredâti'l-Edviye ve'l-Ağdiye | tahkik edilecek | İlaç adları (D kıtası) |
+| Sabuncuoğlu, Cerrâhiyyetü'l-Hâniyye | Internet Archive'de bulunamadı; Paris nüshası Gallica'da aranacak | Türkçe cerrahî ıstılahı |
+
+Kaide: Bir karşılığın delili bu nüshalardan birinde sahife yahut varak numarasıyla gösterilince delil sütununa o künye yazılır. Birinci oturumda vurulan üç kadîm mühür (teşrîh, emrâz, emrâz-ı cildiyye) eser ve bab künyesiyle yazılmıştır, sahife numarası yoktur; nüshalar açılınca tamamlanacaktır.
+
 ## Çalıştırma sırası
 
 ```
