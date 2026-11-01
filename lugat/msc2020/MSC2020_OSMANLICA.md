@@ -2,7 +2,7 @@
 
 Bu sahife `araclar/msc_birlestir.py` ile `kaynak.tsv` ve `ceviri/` dosyalarından üretilir; elle değiştirilmez.
 
-Toplam madde: 6603 · karşılığı bulunan: 4556 · kalan: 2047
+Toplam madde: 6603 · karşılığı bulunan: 4806 · kalan: 1797
 
 
 ## 00-XX — Umûmî ve şâmil mevzûlar; mecmualar
@@ -4619,284 +4619,284 @@ Algebraic topology
 | 55U40 | Topological categories, foundations of homotopy theory | Vaz'î makûleler, tahavvül-i muttasıl nazariyesinin esasları |  |
 | 55U99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
-## 57-XX — Manifolds and cell complexes {For complex manifolds, see 32Qxx}
+## 57-XX — Müteşa'ibler (manifoldlar) ve hücre mürekkebleri (hücre kompleksleri) {Mürekkeb müteşa'ibler için bakınız: 32Qxx}
 
 Manifolds and cell complexes {For complex manifolds, see 32Qxx}
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 57-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to manifolds and cell complexes |  |  |
-| 57-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to manifolds and cell complexes |  |  |
-| 57-02 | Research exposition (monographs, survey articles) pertaining to manifolds and cell complexes |  |  |
-| 57-03 | History of manifolds and cell complexes [Consider also classification numbers from Section 01] |  |  |
-| 57-04 | Software, source code, etc. for problems pertaining to manifolds and cell complexes |  |  |
-| 57-06 | Proceedings, conferences, collections, etc. pertaining to manifolds and cell complexes |  |  |
-| 57-08 | Computational methods for problems pertaining to manifolds and cell complexes |  |  |
-| 57-11 | Research data for problems pertaining to manifolds and cell complexes |  |  |
-| **57Kxx** | **Low-dimensional topology in specific dimensions** | **** |  |
-| 57K10 | Knot theory |  |  |
-| 57K12 | Generalized knots (virtual knots, welded knots, quandles, etc.) |  |  |
-| 57K14 | Knot polynomials |  |  |
-| 57K16 | Finite-type and quantum invariants, topological quantum field theories (TQFT) |  |  |
-| 57K18 | Homology theories in knot theory (Khovanov, Heegaard-Floer, etc.) |  |  |
-| 57K20 | 2-dimensional topology (including mapping class groups of surfaces, Teichmüller theory, curve complexes, etc.) |  |  |
-| 57K30 | General topology of 3-manifolds |  |  |
-| 57K31 | Invariants of 3-manifolds (including skein modules, character varieties) |  |  |
-| 57K32 | Hyperbolic 3-manifolds |  |  |
-| 57K33 | Contact structures in 3 dimensions [See also 57R17] |  |  |
-| 57K35 | Other geometric structures on 3-manifolds |  |  |
-| 57K40 | General topology of 4-manifolds |  |  |
-| 57K41 | Invariants of 4-manifolds (including Donaldson and Seiberg-Witten invariants) |  |  |
-| 57K43 | Symplectic structures in 4 dimensions [See also 57R17] |  |  |
-| 57K45 | Higher-dimensional knots and links |  |  |
-| 57K50 | Low-dimensional manifolds of specific dimension 5 or higher |  |  |
+| 57-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to manifolds and cell complexes | müteşa'ibler ve hücre mürekkebleri hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 57-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to manifolds and cell complexes | müteşa'ibler ve hücre mürekkebleri hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 57-02 | Research exposition (monographs, survey articles) pertaining to manifolds and cell complexes | müteşa'ibler ve hücre mürekkebleri hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 57-03 | History of manifolds and cell complexes [Consider also classification numbers from Section 01] | Müteşa'iblerin ve hücre mürekkeblerinin târihi [01. babın tasnif numaralarına da bakılsın] |  |
+| 57-04 | Software, source code, etc. for problems pertaining to manifolds and cell complexes | müteşa'ibler ve hücre mürekkebleri sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 57-06 | Proceedings, conferences, collections, etc. pertaining to manifolds and cell complexes | müteşa'ibler ve hücre mürekkebleri hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 57-08 | Computational methods for problems pertaining to manifolds and cell complexes | müteşa'ibler ve hücre mürekkebleri sahasındaki meselelere dair hesap usulleri |  |
+| 57-11 | Research data for problems pertaining to manifolds and cell complexes | müteşa'ibler ve hücre mürekkebleri sahasındaki meselelere dair tetkik verileri |  |
+| **57Kxx** | **Low-dimensional topology in specific dimensions** | **Muayyen buudlarda düşük buudlu hendese-i vaz'iyye** |  |
+| 57K10 | Knot theory | Ukdeler (düğümler) nazariyesi |  |
+| 57K12 | Generalized knots (virtual knots, welded knots, quandles, etc.) | Teşmîl edilmiş ukdeler (sanal ukdeler, kaynaklı ukdeler, kandleler ve emsâli) | şüpheli: "quandle" nakledildi |
+| 57K14 | Knot polynomials | Ukde kesîrü'l-hudûdları |  |
+| 57K16 | Finite-type and quantum invariants, topological quantum field theories (TQFT) | Mütenâhî nev'den ve kuantum lâyetegayyerleri, vaz'î kuantum sahâ nazariyeleri |  |
+| 57K18 | Homology theories in knot theory (Khovanov, Heegaard-Floer, etc.) | Ukdeler nazariyesinde tecânüs nazariyeleri (Khovanov, Heegaard-Floer ve emsâli) | nakil |
+| 57K20 | 2-dimensional topology (including mapping class groups of surfaces, Teichmüller theory, curve complexes, etc.) | 2 buudlu hendese-i vaz'iyye (sathların tatbîk sınıfı zümreleri, Teichmüller nazariyesi, münhanî mürekkebleri ve emsâli dahil) |  |
+| 57K30 | General topology of 3-manifolds | 3 buudlu müteşa'iblerin umûmî hendese-i vaz'iyyesi |  |
+| 57K31 | Invariants of 3-manifolds (including skein modules, character varieties) | 3 buudlu müteşa'iblerin lâyetegayyerleri (çile (skein) modülleri, seciye mütenevviâtı dahil) |  |
+| 57K32 | Hyperbolic 3-manifolds | Zâidî 3 buudlu müteşa'ibler |  |
+| 57K33 | Contact structures in 3 dimensions [See also 57R17] | 3 buudda temas bünyeleri [Ayrıca bakınız: 57R17] |  |
+| 57K35 | Other geometric structures on 3-manifolds | 3 buudlu müteşa'ibler üzerinde sâir hendesî bünyeler |  |
+| 57K40 | General topology of 4-manifolds | 4 buudlu müteşa'iblerin umûmî hendese-i vaz'iyyesi |  |
+| 57K41 | Invariants of 4-manifolds (including Donaldson and Seiberg-Witten invariants) | 4 buudlu müteşa'iblerin lâyetegayyerleri (Donaldson ve Seiberg-Witten lâyetegayyerleri dahil) | nakil |
+| 57K43 | Symplectic structures in 4 dimensions [See also 57R17] | 4 buudda simplektik bünyeler [Ayrıca bakınız: 57R17] |  |
+| 57K45 | Higher-dimensional knots and links | Yüksek buudlu ukdeler ve zincirler |  |
+| 57K50 | Low-dimensional manifolds of specific dimension 5 or higher | 5 yahut daha yüksek muayyen buudda düşük buudlu müteşa'ibler |  |
 | 57K99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **57Mxx** | **General low-dimensional topology** | **** |  |
-| 57M05 | Fundamental group, presentations, free differential calculus |  |  |
-| 57M07 | Topological methods in group theory |  |  |
-| 57M10 | Covering spaces and low-dimensional topology |  |  |
-| 57M12 | Low-dimensional topology of special (e.g., branched) coverings |  |  |
-| 57M15 | Relations of low-dimensional topology with graph theory [See also 05C10] |  |  |
-| 57M30 | Wild embeddings |  |  |
-| 57M50 | General geometric structures on low-dimensional manifolds |  |  |
-| 57M60 | Group actions on manifolds and cell complexes in low dimensions |  |  |
+| **57Mxx** | **General low-dimensional topology** | **Umûmî düşük buudlu hendese-i vaz'iyye** |  |
+| 57M05 | Fundamental group, presentations, free differential calculus | Esas zümre, takdîmler (prezantasyonlar), serbest tefâzulî hesap |  |
+| 57M07 | Topological methods in group theory | Zümreler nazariyesinde vaz'î usuller |  |
+| 57M10 | Covering spaces and low-dimensional topology | Örtme fezâları ve düşük buudlu hendese-i vaz'iyye |  |
+| 57M12 | Low-dimensional topology of special (e.g., branched) coverings | Hususî (meselâ dallanmış) örtmelerin düşük buudlu hendese-i vaz'iyyesi |  |
+| 57M15 | Relations of low-dimensional topology with graph theory [See also 05C10] | Düşük buudlu hendese-i vaz'iyyenin rabıta şekilleri nazariyesiyle münasebetleri [Ayrıca bakınız: 05C10] |  |
+| 57M30 | Wild embeddings | Vahşî gömmeler |  |
+| 57M50 | General geometric structures on low-dimensional manifolds | Düşük buudlu müteşa'ibler üzerinde umûmî hendesî bünyeler |  |
+| 57M60 | Group actions on manifolds and cell complexes in low dimensions | Düşük buudlarda müteşa'ibler ve hücre mürekkebleri üzerinde zümre tesirleri |  |
 | 57M99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **57Nxx** | **Topological manifolds** | **** |  |
-| 57N16 | Geometric structures on manifolds of high or arbitrary dimension [See also 57M50] |  |  |
-| 57N17 | Topology of topological vector spaces |  |  |
-| 57N20 | Topology of infinite-dimensional manifolds [See also 58Bxx] |  |  |
-| 57N25 | Shapes (aspects of topological manifolds) [See also 54C56, 55P55, 55Q07] |  |  |
-| 57N30 | Engulfing in topological manifolds |  |  |
-| 57N35 | Embeddings and immersions in topological manifolds |  |  |
-| 57N37 | Isotopy and pseudo-isotopy |  |  |
-| 57N40 | Neighborhoods of submanifolds |  |  |
-| 57N45 | Flatness and tameness of topological manifolds |  |  |
-| 57N50 | S n−1 ⊂ E n , Schoenflies problem |  |  |
-| 57N55 | Microbundles and block bundles [See also 55R60, 57Q50] |  |  |
-| 57N60 | Cellularity in topological manifolds |  |  |
-| 57N65 | Algebraic topology of manifolds |  |  |
-| 57N70 | Cobordism and concordance in topological manifolds |  |  |
-| 57N75 | General position and transversality |  |  |
-| 57N80 | Stratifications in topological manifolds |  |  |
+| **57Nxx** | **Topological manifolds** | **Vaz'î müteşa'ibler** |  |
+| 57N16 | Geometric structures on manifolds of high or arbitrary dimension [See also 57M50] | Yüksek yahut keyfî buudlu müteşa'ibler üzerinde hendesî bünyeler [Ayrıca bakınız: 57M50] |  |
+| 57N17 | Topology of topological vector spaces | Vaz'î müteveccihe fezâlarının hendese-i vaz'iyyesi |  |
+| 57N20 | Topology of infinite-dimensional manifolds [See also 58Bxx] | Gayr-ı mütenâhî buudlu müteşa'iblerin hendese-i vaz'iyyesi [Ayrıca bakınız: 58Bxx] |  |
+| 57N25 | Shapes (aspects of topological manifolds) [See also 54C56, 55P55, 55Q07] | Şekiller (vaz'î müteşa'iblere ait cihetler) [Ayrıca bakınız: 54C56, 55P55, 55Q07] |  |
+| 57N30 | Engulfing in topological manifolds | Vaz'î müteşa'iblerde yutma (iltihâm) |  |
+| 57N35 | Embeddings and immersions in topological manifolds | Vaz'î müteşa'iblerde gömmeler ve daldırmalar |  |
+| 57N37 | Isotopy and pseudo-isotopy | Eş-mevki'lik (izotopi) ve kâzib-eş-mevki'lik |  |
+| 57N40 | Neighborhoods of submanifolds | Alt müteşa'iblerin civarları |  |
+| 57N45 | Flatness and tameness of topological manifolds | Vaz'î müteşa'iblerin müsteviyeti ve münkādlığı (uysallığı) |  |
+| 57N50 | S n−1 ⊂ E n , Schoenflies problem | S^(n−1) ⊂ E^n, Schoenflies meselesi | nakil |
+| 57N55 | Microbundles and block bundles [See also 55R60, 57Q50] | Mikro-huzmeler ve blok huzmeler [Ayrıca bakınız: 55R60, 57Q50] |  |
+| 57N60 | Cellularity in topological manifolds | Vaz'î müteşa'iblerde hücreviyet |  |
+| 57N65 | Algebraic topology of manifolds | Müteşa'iblerin cebrî hendese-i vaz'iyyesi |  |
+| 57N70 | Cobordism and concordance in topological manifolds | Vaz'î müteşa'iblerde mukābil-hudûdlaşma ve tevâfuk |  |
+| 57N75 | General position and transversality | Umûmî vaz' ve kesenlik (transversallik) |  |
+| 57N80 | Stratifications in topological manifolds | Vaz'î müteşa'iblerde tabakalandırmalar |  |
 | 57N99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **57Pxx** | **Generalized manifolds [See also 18F15]** | **** |  |
-| 57P05 | Local properties of generalized manifolds |  |  |
-| 57P10 | Poincaré duality spaces |  |  |
+| **57Pxx** | **Generalized manifolds [See also 18F15]** | **Teşmîl edilmiş müteşa'ibler [Ayrıca bakınız: 18F15]** |  |
+| 57P05 | Local properties of generalized manifolds | Teşmîl edilmiş müteşa'iblerin mahallî vasıfları |  |
+| 57P10 | Poincaré duality spaces | Poincaré müsennâlığı fezâları | nakil |
 | 57P99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **57Qxx** | **PL-topology** | **** |  |
-| 57Q05 | General topology of complexes |  |  |
-| 57Q10 | Simple homotopy type, Whitehead torsion, Reidemeister-Franz torsion, etc. [See also 19B28] |  |  |
-| 57Q12 | Wall finiteness obstruction for CW-complexes |  |  |
-| 57Q15 | Triangulating manifolds |  |  |
-| 57Q20 | Cobordism in PL-topology |  |  |
-| 57Q25 | Comparison of PL-structures: classification, Hauptvermutung |  |  |
-| 57Q30 | Engulfing |  |  |
-| 57Q35 | Embeddings and immersions in PL-topology |  |  |
-| 57Q37 | Isotopy in PL-topology |  |  |
-| 57Q40 | Regular neighborhoods in PL-topology |  |  |
-| 57Q50 | Microbundles and block bundles [See also 55R60, 57N55] |  |  |
-| 57Q55 | Approximations in PL-topology |  |  |
-| 57Q60 | Cobordism and concordance in PL-topology |  |  |
-| 57Q65 | General position and transversality |  |  |
-| 57Q70 | Discrete Morse theory and related ideas in manifold topology |  |  |
-| 57Q91 | Equivariant PL-topology |  |  |
+| **57Qxx** | **PL-topology** | **Parça parça hattî hendese-i vaz'iyye** |  |
+| 57Q05 | General topology of complexes | Mürekkeblerin umûmî hendese-i vaz'iyyesi |  |
+| 57Q10 | Simple homotopy type, Whitehead torsion, Reidemeister-Franz torsion, etc. [See also 19B28] | Basît tahavvül-i muttasıl nev'i, Whitehead bükümü, Reidemeister-Franz bükümü ve emsâli [Ayrıca bakınız: 19B28] | nakil |
+| 57Q12 | Wall finiteness obstruction for CW-complexes | Kapanışça mütenâhî ve zayıf vaz'iyyetli (CW) hücre mürekkebleri için Wall mütenâhîlik mâniası | nakil |
+| 57Q15 | Triangulating manifolds | Müteşa'iblerin müselleslere taksîmi |  |
+| 57Q20 | Cobordism in PL-topology | Parça parça hattî hendese-i vaz'iyyede mukābil-hudûdlaşma |  |
+| 57Q25 | Comparison of PL-structures: classification, Hauptvermutung | Parça parça hattî bünyelerin mukayesesi: tasnif, "Hauptvermutung" (esas tahmîn) | nakil |
+| 57Q30 | Engulfing | Yutma (iltihâm) |  |
+| 57Q35 | Embeddings and immersions in PL-topology | Parça parça hattî hendese-i vaz'iyyede gömmeler ve daldırmalar |  |
+| 57Q37 | Isotopy in PL-topology | Parça parça hattî hendese-i vaz'iyyede eş-mevki'lik |  |
+| 57Q40 | Regular neighborhoods in PL-topology | Parça parça hattî hendese-i vaz'iyyede muntazam civarlar |  |
+| 57Q50 | Microbundles and block bundles [See also 55R60, 57N55] | Mikro-huzmeler ve blok huzmeler [Ayrıca bakınız: 55R60, 57N55] |  |
+| 57Q55 | Approximations in PL-topology | Parça parça hattî hendese-i vaz'iyyede takrîbler |  |
+| 57Q60 | Cobordism and concordance in PL-topology | Parça parça hattî hendese-i vaz'iyyede mukābil-hudûdlaşma ve tevâfuk |  |
+| 57Q65 | General position and transversality | Umûmî vaz' ve kesenlik |  |
+| 57Q70 | Discrete Morse theory and related ideas in manifold topology | Munfasıl Morse nazariyesi ve müteşa'ib hendese-i vaz'iyyesinde alâkalı fikirler | nakil |
+| 57Q91 | Equivariant PL-topology | Müsâvî-tegayyürlü parça parça hattî hendese-i vaz'iyye |  |
 | 57Q99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **57Rxx** | **Differential topology {For foundational questions of differentiable manifolds, see 58Axx; for infinite-dimensional manifolds, see 58Bxx}** | **** |  |
-| 57R05 | Triangulating |  |  |
-| 57R10 | Smoothing in differential topology |  |  |
-| 57R12 | Smooth approximations in differential topology |  |  |
-| 57R15 | Specialized structures on manifolds (spin manifolds, framed manifolds, etc.) |  |  |
-| 57R17 | Symplectic and contact topology in high or arbitrary dimension {For dimensions 3 and 4, see 57K33, 57K43} |  |  |
-| 57R18 | Topology and geometry of orbifolds |  |  |
-| 57R19 | Algebraic topology on manifolds and differential topology |  |  |
-| 57R20 | Characteristic classes and numbers in differential topology |  |  |
-| 57R22 | Topology of vector bundles and fiber bundles [See also 55Rxx] |  |  |
-| 57R25 | Vector fields, frame fields in differential topology |  |  |
-| 57R27 | Controllability of vector fields on C ∞ and real-analytic manifolds [See also 49Qxx, 37C10, 93B05] |  |  |
-| 57R30 | Foliations in differential topology; geometric theory [See also 53C12] |  |  |
-| 57R32 | Classifying spaces for foliations; Gelfand-Fuks cohomology [See also 58H10] |  |  |
-| 57R35 | Differentiable mappings in differential topology |  |  |
-| 57R40 | Embeddings in differential topology |  |  |
-| 57R42 | Immersions in differential topology |  |  |
-| 57R45 | Singularities of differentiable mappings in differential topology |  |  |
-| 57R50 | Differential topological aspects of diffeomorphisms |  |  |
-| 57R52 | Isotopy in differential topology |  |  |
-| 57R55 | Differentiable structures in differential topology |  |  |
-| 57R56 | Topological quantum field theories (aspects of differential topology) |  |  |
-| 57R57 | Applications of global analysis to structures on manifolds [See also 57K41, 58-XX] |  |  |
-| 57R58 | Floer homology |  |  |
-| 57R60 | Homotopy spheres, Poincaré conjecture |  |  |
-| 57R65 | Surgery and handlebodies |  |  |
-| 57R67 | Surgery obstructions, Wall groups [See also 19J25] |  |  |
-| 57R70 | Critical points and critical submanifolds in differential topology |  |  |
-| 57R75 | O- and SO-cobordism |  |  |
-| 57R77 | Complex cobordism (U- and SU-cobordism) [See also 55N22] |  |  |
-| 57R80 | h- and s-cobordism |  |  |
-| 57R85 | Equivariant cobordism |  |  |
-| 57R90 | Other types of cobordism [See also 55N22] |  |  |
-| 57R91 | Equivariant algebraic topology of manifolds |  |  |
-| 57R95 | Realizing cycles by submanifolds |  |  |
+| **57Rxx** | **Differential topology {For foundational questions of differentiable manifolds, see 58Axx; for infinite-dimensional manifolds, see 58Bxx}** | **Tefâzulî hendese-i vaz'iyye {Müştakı alınabilir müteşa'iblerin esâsî meseleleri için bakınız: 58Axx; gayr-ı mütenâhî buudlu müteşa'ibler için bakınız: 58Bxx}** |  |
+| 57R05 | Triangulating | Müselleslere taksîm |  |
+| 57R10 | Smoothing in differential topology | Tefâzulî hendese-i vaz'iyyede emlesleştirme |  |
+| 57R12 | Smooth approximations in differential topology | Tefâzulî hendese-i vaz'iyyede emles takrîbler |  |
+| 57R15 | Specialized structures on manifolds (spin manifolds, framed manifolds, etc.) | Müteşa'ibler üzerinde hususî bünyeler (spin müteşa'ibleri, çerçeveli müteşa'ibler ve emsâli) |  |
+| 57R17 | Symplectic and contact topology in high or arbitrary dimension {For dimensions 3 and 4, see 57K33, 57K43} | Yüksek yahut keyfî buudda simplektik ve temas hendese-i vaz'iyyesi {3 ve 4 buud için bakınız: 57K33, 57K43} |  |
+| 57R18 | Topology and geometry of orbifolds | Orbifoldların hendese-i vaz'iyyesi ve hendesesi | nakil |
+| 57R19 | Algebraic topology on manifolds and differential topology | Müteşa'ibler üzerinde cebrî hendese-i vaz'iyye ve tefâzulî hendese-i vaz'iyye |  |
+| 57R20 | Characteristic classes and numbers in differential topology | Tefâzulî hendese-i vaz'iyyede hâssa sınıfları ve hâssa adetleri |  |
+| 57R22 | Topology of vector bundles and fiber bundles [See also 55Rxx] | Müteveccihe huzmelerinin ve lîfî huzmelerin hendese-i vaz'iyyesi [Ayrıca bakınız: 55Rxx] |  |
+| 57R25 | Vector fields, frame fields in differential topology | Tefâzulî hendese-i vaz'iyyede müteveccihe sahaları, çerçeve sahaları |  |
+| 57R27 | Controllability of vector fields on C ∞ and real-analytic manifolds [See also 49Qxx, 37C10, 93B05] | C^∞ ve hakîkî-tahlîlî müteşa'ibler üzerinde müteveccihe sahalarının idâre edilebilirliği [Ayrıca bakınız: 49Qxx, 37C10, 93B05] |  |
+| 57R30 | Foliations in differential topology; geometric theory [See also 53C12] | Tefâzulî hendese-i vaz'iyyede tevrîkler; hendesî nazariye [Ayrıca bakınız: 53C12] |  |
+| 57R32 | Classifying spaces for foliations; Gelfand-Fuks cohomology [See also 58H10] | Tevrîkler için tasnif edici fezâlar; Gelfand-Fuks mukābil-tecânüsü [Ayrıca bakınız: 58H10] | nakil |
+| 57R35 | Differentiable mappings in differential topology | Tefâzulî hendese-i vaz'iyyede müştakı alınabilir tatbîkler |  |
+| 57R40 | Embeddings in differential topology | Tefâzulî hendese-i vaz'iyyede gömmeler |  |
+| 57R42 | Immersions in differential topology | Tefâzulî hendese-i vaz'iyyede daldırmalar |  |
+| 57R45 | Singularities of differentiable mappings in differential topology | Tefâzulî hendese-i vaz'iyyede müştakı alınabilir tatbîklerin infirâdları |  |
+| 57R50 | Differential topological aspects of diffeomorphisms | Tefâzulî temâsüllerin tefâzulî hendese-i vaz'iyyeye ait cihetleri |  |
+| 57R52 | Isotopy in differential topology | Tefâzulî hendese-i vaz'iyyede eş-mevki'lik |  |
+| 57R55 | Differentiable structures in differential topology | Tefâzulî hendese-i vaz'iyyede tefâzulî bünyeler |  |
+| 57R56 | Topological quantum field theories (aspects of differential topology) | Vaz'î kuantum sahâ nazariyeleri (tefâzulî hendese-i vaz'iyyeye ait cihetler) |  |
+| 57R57 | Applications of global analysis to structures on manifolds [See also 57K41, 58-XX] | Küllî tahlîlin müteşa'ibler üzerindeki bünyelere tatbîkleri [Ayrıca bakınız: 57K41, 58-XX] |  |
+| 57R58 | Floer homology | Floer tecânüsü | nakil |
+| 57R60 | Homotopy spheres, Poincaré conjecture | Tahavvül-i muttasıl küreleri, Poincaré tahmîni | nakil |
+| 57R65 | Surgery and handlebodies | Cerrâhî ameliye ve kulplu cisimler |  |
+| 57R67 | Surgery obstructions, Wall groups [See also 19J25] | Cerrâhî ameliye mânialar, Wall zümreleri [Ayrıca bakınız: 19J25] | nakil |
+| 57R70 | Critical points and critical submanifolds in differential topology | Tefâzulî hendese-i vaz'iyyede hâlî noktalar ve hâlî alt müteşa'ibler |  |
+| 57R75 | O- and SO-cobordism | O- ve SO-mukābil-hudûdlaşması | nakil |
+| 57R77 | Complex cobordism (U- and SU-cobordism) [See also 55N22] | Mürekkeb mukābil-hudûdlaşma (U- ve SU-mukābil-hudûdlaşması) [Ayrıca bakınız: 55N22] |  |
+| 57R80 | h- and s-cobordism | H- ve s-mukābil-hudûdlaşması | nakil |
+| 57R85 | Equivariant cobordism | Müsâvî-tegayyürlü mukābil-hudûdlaşma |  |
+| 57R90 | Other types of cobordism [See also 55N22] | Mukābil-hudûdlaşmanın sâir nev'leri [Ayrıca bakınız: 55N22] |  |
+| 57R91 | Equivariant algebraic topology of manifolds | Müteşa'iblerin müsâvî-tegayyürlü cebrî hendese-i vaz'iyyesi |  |
+| 57R95 | Realizing cycles by submanifolds | Devreleri alt müteşa'iblerle tahakkuk ettirmek |  |
 | 57R99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **57Sxx** | **Topological transformation groups [See also 20F34, 22-XX, 37-XX, 54H15, 58D05]** | **** |  |
-| 57S05 | Topological properties of groups of homeomorphisms or diffeomorphisms |  |  |
-| 57S10 | Compact groups of homeomorphisms |  |  |
-| 57S12 | Toric topology |  |  |
-| 57S15 | Compact Lie groups of differentiable transformations |  |  |
-| 57S17 | Finite transformation groups |  |  |
-| 57S20 | Noncompact Lie groups of transformations |  |  |
-| 57S25 | Groups acting on specific manifolds |  |  |
-| 57S30 | Discontinuous groups of transformations |  |  |
+| **57Sxx** | **Topological transformation groups [See also 20F34, 22-XX, 37-XX, 54H15, 58D05]** | **Vaz'î tahvîl zümreleri [Ayrıca bakınız: 20F34, 22-XX, 37-XX, 54H15, 58D05]** |  |
+| 57S05 | Topological properties of groups of homeomorphisms or diffeomorphisms | Vaz'î temâsül yahut tefâzulî temâsül zümrelerinin vaz'î vasıfları |  |
+| 57S10 | Compact groups of homeomorphisms | Vaz'î temâsüllerin mütarâs zümreleri |  |
+| 57S12 | Toric topology | Torik hendese-i vaz'iyye | nakil |
+| 57S15 | Compact Lie groups of differentiable transformations | Müştakı alınabilir tahvîllerin mütarâs Lie zümreleri | nakil |
+| 57S17 | Finite transformation groups | Mütenâhî tahvîl zümreleri |  |
+| 57S20 | Noncompact Lie groups of transformations | Tahvîllerin mütarâs olmayan Lie zümreleri | nakil |
+| 57S25 | Groups acting on specific manifolds | Muayyen müteşa'ibler üzerinde tesir eden zümreler |  |
+| 57S30 | Discontinuous groups of transformations | Tahvîllerin gayr-ı muttasıl zümreleri |  |
 | 57S99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **57Txx** | **Homology and homotopy of topological groups and related structures** | **** |  |
-| 57T05 | Hopf algebras (aspects of homology and homotopy of topological groups) [See also 16T05] |  |  |
-| 57T10 | Homology and cohomology of Lie groups |  |  |
-| 57T15 | Homology and cohomology of homogeneous spaces of Lie groups |  |  |
-| 57T20 | Homotopy groups of topological groups and homogeneous spaces |  |  |
-| 57T25 | Homology and cohomology of H-spaces |  |  |
-| 57T30 | Bar and cobar constructions [See also 18N40, 55Uxx] |  |  |
-| 57T35 | Applications of Eilenberg-Moore spectral sequences [See also 55R20, 55T20] |  |  |
+| **57Txx** | **Homology and homotopy of topological groups and related structures** | **Vaz'î zümrelerin ve alâkalı bünyelerin tecânüsü ve tahavvül-i muttasılı** |  |
+| 57T05 | Hopf algebras (aspects of homology and homotopy of topological groups) [See also 16T05] | Hopf cebirleri (vaz'î zümrelerin tecânüsüne ve tahavvül-i muttasılına ait cihetler) [Ayrıca bakınız: 16T05] | nakil |
+| 57T10 | Homology and cohomology of Lie groups | Lie zümrelerinin tecânüsü ve mukābil-tecânüsü | nakil |
+| 57T15 | Homology and cohomology of homogeneous spaces of Lie groups | Lie zümrelerinin mütecânis fezâlarının tecânüsü ve mukābil-tecânüsü | nakil |
+| 57T20 | Homotopy groups of topological groups and homogeneous spaces | Vaz'î zümrelerin ve mütecânis fezâların tahavvül-i muttasıl zümreleri |  |
+| 57T25 | Homology and cohomology of H-spaces | H-fezâlarının tecânüsü ve mukābil-tecânüsü | nakil |
+| 57T30 | Bar and cobar constructions [See also 18N40, 55Uxx] | Çubuk ve mukābil-çubuk inşâları [Ayrıca bakınız: 18N40, 55Uxx] |  |
+| 57T35 | Applications of Eilenberg-Moore spectral sequences [See also 55R20, 55T20] | Eilenberg-Moore tayfî tevâlîlerinin tatbîkleri [Ayrıca bakınız: 55R20, 55T20] | nakil |
 | 57T99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **57Zxx** | **Relations of manifolds and cell complexes with science and engineering** | **** |  |
-| 57Z05 | Relations of manifolds and cell complexes with physics |  |  |
-| 57Z10 | Relations of manifolds and cell complexes with biology |  |  |
-| 57Z15 | Relations of manifolds and cell complexes with chemistry |  |  |
-| 57Z20 | Relations of manifolds and cell complexes with engineering |  |  |
-| 57Z25 | Relations of manifolds and cell complexes with computer and data science |  |  |
+| **57Zxx** | **Relations of manifolds and cell complexes with science and engineering** | **Müteşa'iblerin ve hücre mürekkeblerinin ilim ve mühendislikle münasebetleri** |  |
+| 57Z05 | Relations of manifolds and cell complexes with physics | Müteşa'iblerin ve hücre mürekkeblerinin hikmet-i tabîiyye ile münasebetleri |  |
+| 57Z10 | Relations of manifolds and cell complexes with biology | Müteşa'iblerin ve hücre mürekkeblerinin hayatiyyât ile münasebetleri |  |
+| 57Z15 | Relations of manifolds and cell complexes with chemistry | Müteşa'iblerin ve hücre mürekkeblerinin kimya ile münasebetleri |  |
+| 57Z20 | Relations of manifolds and cell complexes with engineering | Müteşa'iblerin ve hücre mürekkeblerinin mühendislikle münasebetleri |  |
+| 57Z25 | Relations of manifolds and cell complexes with computer and data science | Müteşa'iblerin ve hücre mürekkeblerinin hâsibât ve veri ilmiyle münasebetleri |  |
 | 57Z99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
-## 58-XX — Global analysis, analysis on manifolds [See also 32Cxx, 32Fxx, 32Wxx, 46-XX, 53Cxx] {For nonlinear operators, see 47Hxx; for geometric integration theory, see 49Q15}
+## 58-XX — Küllî tahlîl, müteşa'ibler üzerinde tahlîl [Ayrıca bakınız: 32Cxx, 32Fxx, 32Wxx, 46-XX, 53Cxx] {Gayr-ı hattî âmiller için bakınız: 47Hxx; hendesî tamâmiye nazariyesi için bakınız: 49Q15}
 
 Global analysis, analysis on manifolds [See also 32Cxx, 32Fxx, 32Wxx, 46-XX, 53Cxx] {For nonlinear operators, see 47Hxx; for geometric integration theory, see 49Q15}
 
 | Kod | İngilizce | Osmanlıca | Kayıt |
 | :-- | :-- | :-- | :-- |
-| 58-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to global analysis |  |  |
-| 58-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to global analysis |  |  |
-| 58-02 | Research exposition (monographs, survey articles) pertaining to global analysis |  |  |
-| 58-03 | History of global analysis [Consider also classification numbers from Section 01] |  |  |
-| 58-04 | Software, source code, etc. for problems pertaining to global analysis |  |  |
-| 58-06 | Proceedings, conferences, collections, etc. pertaining to global analysis |  |  |
-| 58-08 | Computational methods for problems pertaining to global analysis |  |  |
-| 58-11 | Research data for problems pertaining to global analysis |  |  |
-| **58Axx** | **General theory of differentiable manifolds [See also 32Cxx]** | **** |  |
-| 58A03 | Topos-theoretic approach to differentiable manifolds |  |  |
-| 58A05 | Differentiable manifolds, foundations |  |  |
-| 58A07 | Real-analytic and Nash manifolds [See also 14P20, 32C07] |  |  |
-| 58A10 | Differential forms in global analysis |  |  |
-| 58A12 | de Rham theory in global analysis [See also 14Fxx] |  |  |
-| 58A14 | Hodge theory in global analysis [See also 14C30, 14Fxx, 32J25, 32S35] |  |  |
-| 58A15 | Exterior differential systems (Cartan theory) |  |  |
-| 58A17 | Pfaffian systems |  |  |
-| 58A20 | Jets in global analysis |  |  |
-| 58A25 | Currents in global analysis [See also 32C30, 53C65] |  |  |
-| 58A30 | Vector distributions (subbundles of the tangent bundles) |  |  |
-| 58A32 | Natural bundles |  |  |
-| 58A35 | Stratified sets [See also 32S60] |  |  |
-| 58A40 | Differential spaces |  |  |
-| 58A50 | Supermanifolds and graded manifolds [See also 14A22, 32C11] |  |  |
+| 58-00 | General reference works (handbooks, dictionaries, bibliographies, etc.) pertaining to global analysis | küllî tahlîl ve müteşa'ibler üzerinde tahlîl hakkında umûmî mürâcaat eserleri (el kitapları, lügatler, kitâbiyât fihristleri ve emsâli) |  |
+| 58-01 | Introductory exposition (textbooks, tutorial papers, etc.) pertaining to global analysis | küllî tahlîl ve müteşa'ibler üzerinde tahlîl hakkında medhal mâhiyetinde şerh ve beyan (ders kitapları, talîmî makaleler ve emsâli) |  |
+| 58-02 | Research exposition (monographs, survey articles) pertaining to global analysis | küllî tahlîl ve müteşa'ibler üzerinde tahlîl hakkında tetkik mâhiyetinde şerh ve beyan (müstakil risâleler, umûmî nazar makaleleri) |  |
+| 58-03 | History of global analysis [Consider also classification numbers from Section 01] | Küllî tahlîlin târihi [01. babın tasnif numaralarına da bakılsın] |  |
+| 58-04 | Software, source code, etc. for problems pertaining to global analysis | küllî tahlîl ve müteşa'ibler üzerinde tahlîl sahasındaki meselelere dair programlar (yazılımlar), menba metinleri ve emsâli |  |
+| 58-06 | Proceedings, conferences, collections, etc. pertaining to global analysis | küllî tahlîl ve müteşa'ibler üzerinde tahlîl hakkında ilmî meclis zabıtları, kongreler, mecmualar ve emsâli |  |
+| 58-08 | Computational methods for problems pertaining to global analysis | küllî tahlîl ve müteşa'ibler üzerinde tahlîl sahasındaki meselelere dair hesap usulleri |  |
+| 58-11 | Research data for problems pertaining to global analysis | küllî tahlîl ve müteşa'ibler üzerinde tahlîl sahasındaki meselelere dair tetkik verileri |  |
+| **58Axx** | **General theory of differentiable manifolds [See also 32Cxx]** | **Müştakı alınabilir müteşa'iblerin umûmî nazariyesi [Ayrıca bakınız: 32Cxx]** |  |
+| 58A03 | Topos-theoretic approach to differentiable manifolds | Müştakı alınabilir müteşa'iblere topos nazariyesi yoluyla yaklaşım |  |
+| 58A05 | Differentiable manifolds, foundations | Müştakı alınabilir müteşa'ibler, esaslar |  |
+| 58A07 | Real-analytic and Nash manifolds [See also 14P20, 32C07] | Hakîkî-tahlîlî müteşa'ibler ve Nash müteşa'ibleri [Ayrıca bakınız: 14P20, 32C07] | nakil |
+| 58A10 | Differential forms in global analysis | Küllî tahlîlde tefâzulî şekiller |  |
+| 58A12 | de Rham theory in global analysis [See also 14Fxx] | Küllî tahlîlde de Rham nazariyesi [Ayrıca bakınız: 14Fxx] | nakil |
+| 58A14 | Hodge theory in global analysis [See also 14C30, 14Fxx, 32J25, 32S35] | Küllî tahlîlde Hodge nazariyesi [Ayrıca bakınız: 14C30, 14Fxx, 32J25, 32S35] | nakil |
+| 58A15 | Exterior differential systems (Cartan theory) | Hâricî tefâzulî nizâmlar (Cartan nazariyesi) | nakil |
+| 58A17 | Pfaffian systems | Pfaff nizâmları | nakil |
+| 58A20 | Jets in global analysis | Küllî tahlîlde cetler (jetler) | şüpheli: "jet" için "cet" nakli teklif edildi |
+| 58A25 | Currents in global analysis [See also 32C30, 53C65] | Küllî tahlîlde cereyanlar (akımlar) [Ayrıca bakınız: 32C30, 53C65] |  |
+| 58A30 | Vector distributions (subbundles of the tangent bundles) | Müteveccihe tevzî'leri (mümâs huzmelerinin alt huzmeleri) |  |
+| 58A32 | Natural bundles | Tabiî huzmeler |  |
+| 58A35 | Stratified sets [See also 32S60] | Tabakalı mecmûalar [Ayrıca bakınız: 32S60] |  |
+| 58A40 | Differential spaces | Tefâzulî fezâlar |  |
+| 58A50 | Supermanifolds and graded manifolds [See also 14A22, 32C11] | Fevka'l-müteşa'ibler ve dereceli müteşa'ibler [Ayrıca bakınız: 14A22, 32C11] |  |
 | 58A99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **58Bxx** | **Infinite-dimensional manifolds** | **** |  |
-| 58B05 | Homotopy and topological questions for infinite-dimensional manifolds |  |  |
-| 58B10 | Differentiability questions for infinite-dimensional manifolds |  |  |
-| 58B12 | Questions of holomorphy and infinite-dimensional manifolds [See also 32-XX, 46G20] |  |  |
-| 58B15 | Fredholm structures on infinite-dimensional manifolds [See also 47A53] |  |  |
-| 58B20 | Riemannian, Finsler and other geometric structures on infinite-dimensional manifolds [See also 53C20, 53C60] |  |  |
-| 58B25 | Group structures and generalizations on infinite-dimensional manifolds [See also 22E65, 58D05] |  |  |
-| 58B32 | Geometry of quantum groups |  |  |
-| 58B34 | Noncommutative geometry (à la Connes) |  |  |
+| **58Bxx** | **Infinite-dimensional manifolds** | **Gayr-ı mütenâhî buudlu müteşa'ibler** |  |
+| 58B05 | Homotopy and topological questions for infinite-dimensional manifolds | Gayr-ı mütenâhî buudlu müteşa'ibler için tahavvül-i muttasıl ve vaz'î suâller |  |
+| 58B10 | Differentiability questions for infinite-dimensional manifolds | Gayr-ı mütenâhî buudlu müteşa'ibler için müştakı alınabilirlik suâlleri |  |
+| 58B12 | Questions of holomorphy and infinite-dimensional manifolds [See also 32-XX, 46G20] | Tâm-şekillilik suâlleri ve gayr-ı mütenâhî buudlu müteşa'ibler [Ayrıca bakınız: 32-XX, 46G20] |  |
+| 58B15 | Fredholm structures on infinite-dimensional manifolds [See also 47A53] | Gayr-ı mütenâhî buudlu müteşa'ibler üzerinde Fredholm bünyeleri [Ayrıca bakınız: 47A53] | nakil |
+| 58B20 | Riemannian, Finsler and other geometric structures on infinite-dimensional manifolds [See also 53C20, 53C60] | Gayr-ı mütenâhî buudlu müteşa'ibler üzerinde Riemann, Finsler ve sâir hendesî bünyeler [Ayrıca bakınız: 53C20, 53C60] | nakil |
+| 58B25 | Group structures and generalizations on infinite-dimensional manifolds [See also 22E65, 58D05] | Gayr-ı mütenâhî buudlu müteşa'ibler üzerinde zümre bünyeleri ve umûmîleştirmeleri [Ayrıca bakınız: 22E65, 58D05] |  |
+| 58B32 | Geometry of quantum groups | Kuantum zümrelerinin hendesesi |  |
+| 58B34 | Noncommutative geometry (à la Connes) | Gayr-ı tebdîlî hendese (Connes tarzında) | nakil |
 | 58B99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **58Cxx** | **Calculus on manifolds; nonlinear operators [See also 46Txx, 47Hxx, 47Jxx]** | **** |  |
-| 58C05 | Real-valued functions on manifolds |  |  |
-| 58C06 | Set-valued and function-space-valued mappings on manifolds [See also 47H04, 54C60] |  |  |
-| 58C07 | Continuity properties of mappings on manifolds |  |  |
-| 58C10 | Holomorphic maps on manifolds [See also 32-XX] |  |  |
-| 58C15 | Implicit function theorems; global Newton methods on manifolds |  |  |
-| 58C20 | Differentiation theory (Gateaux, Fréchet, etc.) on manifolds [See also 26Exx, 46G05] |  |  |
-| 58C25 | Differentiable maps on manifolds |  |  |
-| 58C30 | Fixed-point theorems on manifolds [See also 47H10] |  |  |
-| 58C35 | Integration on manifolds; measures on manifolds [See also 28Cxx] |  |  |
-| 58C40 | Spectral theory; eigenvalue problems on manifolds [See also 47J10, 58E07] |  |  |
-| 58C50 | Analysis on supermanifolds or graded manifolds |  |  |
+| **58Cxx** | **Calculus on manifolds; nonlinear operators [See also 46Txx, 47Hxx, 47Jxx]** | **Müteşa'ibler üzerinde hesap; gayr-ı hattî âmiller [Ayrıca bakınız: 46Txx, 47Hxx, 47Jxx]** |  |
+| 58C05 | Real-valued functions on manifolds | Müteşa'ibler üzerinde hakîkî kıymetli tâbiler |  |
+| 58C06 | Set-valued and function-space-valued mappings on manifolds [See also 47H04, 54C60] | Müteşa'ibler üzerinde mecmûa kıymetli ve tâbi fezâsı kıymetli tatbîkler [Ayrıca bakınız: 47H04, 54C60] |  |
+| 58C07 | Continuity properties of mappings on manifolds | Müteşa'ibler üzerindeki tatbîklerin ittisal vasıfları |  |
+| 58C10 | Holomorphic maps on manifolds [See also 32-XX] | Müteşa'ibler üzerinde tâm-şekilli tatbîkler [Ayrıca bakınız: 32-XX] |  |
+| 58C15 | Implicit function theorems; global Newton methods on manifolds | Kapalı (zımnî) tâbi kaziyyeleri; müteşa'ibler üzerinde küllî Newton usulleri | nakil |
+| 58C20 | Differentiation theory (Gateaux, Fréchet, etc.) on manifolds [See also 26Exx, 46G05] | Müteşa'ibler üzerinde müştak alma nazariyesi (Gateaux, Fréchet ve emsâli) [Ayrıca bakınız: 26Exx, 46G05] | nakil |
+| 58C25 | Differentiable maps on manifolds | Müteşa'ibler üzerinde müştakı alınabilir tatbîkler |  |
+| 58C30 | Fixed-point theorems on manifolds [See also 47H10] | Müteşa'ibler üzerinde sâbit nokta kaziyyeleri [Ayrıca bakınız: 47H10] |  |
+| 58C35 | Integration on manifolds; measures on manifolds [See also 28Cxx] | Müteşa'ibler üzerinde tamâmiye; müteşa'ibler üzerinde mikyâslar [Ayrıca bakınız: 28Cxx] |  |
+| 58C40 | Spectral theory; eigenvalue problems on manifolds [See also 47J10, 58E07] | Tayf nazariyesi; müteşa'ibler üzerinde hâs kıymet meseleleri [Ayrıca bakınız: 47J10, 58E07] |  |
+| 58C50 | Analysis on supermanifolds or graded manifolds | Fevka'l-müteşa'ibler yahut dereceli müteşa'ibler üzerinde tahlîl |  |
 | 58C99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **58Dxx** | **Spaces and manifolds of mappings (including nonlinear versions of 46Exx) [See also 46Txx, 53Cxx]** | **** |  |
-| 58D05 | Groups of diffeomorphisms and homeomorphisms as manifolds [See also 22E65, 57S05] |  |  |
-| 58D07 | Groups and semigroups of nonlinear operators [See also 17B65, 47H20] |  |  |
-| 58D10 | Spaces of embeddings and immersions |  |  |
-| 58D15 | Manifolds of mappings [See also 46T10, 54C35] |  |  |
-| 58D17 | Manifolds of metrics (especially Riemannian) |  |  |
-| 58D19 | Group actions and symmetry properties |  |  |
-| 58D20 | Measures (Gaussian, cylindrical, etc.) on manifolds of maps [See also 28Cxx, 46T12] |  |  |
-| 58D25 | Equations in function spaces; evolution equations [See also 34Gxx, 35K90, 35L90, 35R15, 37Lxx, 47Jxx] |  |  |
-| 58D27 | Moduli problems for differential geometric structures |  |  |
-| 58D29 | Moduli problems for topological structures |  |  |
-| 58D30 | Applications of manifolds of mappings to the sciences |  |  |
+| **58Dxx** | **Spaces and manifolds of mappings (including nonlinear versions of 46Exx) [See also 46Txx, 53Cxx]** | **Tatbîklerin fezâları ve müteşa'ibleri (46Exx'in gayr-ı hattî sûretleri dahil) [Ayrıca bakınız: 46Txx, 53Cxx]** |  |
+| 58D05 | Groups of diffeomorphisms and homeomorphisms as manifolds [See also 22E65, 57S05] | Müteşa'ib olarak tefâzulî temâsül ve vaz'î temâsül zümreleri [Ayrıca bakınız: 22E65, 57S05] |  |
+| 58D07 | Groups and semigroups of nonlinear operators [See also 17B65, 47H20] | Gayr-ı hattî âmillerin zümreleri ve nîm-zümreleri [Ayrıca bakınız: 17B65, 47H20] |  |
+| 58D10 | Spaces of embeddings and immersions | Gömme ve daldırma fezâları |  |
+| 58D15 | Manifolds of mappings [See also 46T10, 54C35] | Tatbîk müteşa'ibleri [Ayrıca bakınız: 46T10, 54C35] |  |
+| 58D17 | Manifolds of metrics (especially Riemannian) | Mesâfe (metrik) müteşa'ibleri (bilhassa Riemann mesâfeleri) |  |
+| 58D19 | Group actions and symmetry properties | Zümre tesirleri ve tenâzur vasıfları |  |
+| 58D20 | Measures (Gaussian, cylindrical, etc.) on manifolds of maps [See also 28Cxx, 46T12] | Tatbîk müteşa'ibleri üzerinde mikyâslar (Gauss, üstüvânî ve emsâli) [Ayrıca bakınız: 28Cxx, 46T12] | nakil |
+| 58D25 | Equations in function spaces; evolution equations [See also 34Gxx, 35K90, 35L90, 35R15, 37Lxx, 47Jxx] | Tâbi fezâlarında muâdeleler; tekâmül muâdeleleri [Ayrıca bakınız: 34Gxx, 35K90, 35L90, 35R15, 37Lxx, 47Jxx] |  |
+| 58D27 | Moduli problems for differential geometric structures | Tefâzulî hendesî bünyeler için modül meseleleri |  |
+| 58D29 | Moduli problems for topological structures | Vaz'î bünyeler için modül meseleleri |  |
+| 58D30 | Applications of manifolds of mappings to the sciences | Tatbîk müteşa'iblerinin ilimlere tatbîkleri |  |
 | 58D99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **58Exx** | **Variational problems in infinite-dimensional spaces** | **** |  |
-| 58E05 | Abstract critical point theory (Morse theory, Lyusternik-Shnirel’man theory, etc.) in infinite-dimensional spaces |  |  |
-| 58E07 | Variational problems in abstract bifurcation theory in infinite-dimensional spaces |  |  |
-| 58E09 | Group-invariant bifurcation theory in infinite-dimensional spaces |  |  |
-| 58E10 | Variational problems in applications to the theory of geodesics (problems in one independent variable) |  |  |
-| 58E11 | Critical metrics |  |  |
-| 58E12 | Variational problems concerning minimal surfaces (problems in two independent variables) [See also 49Q05] |  |  |
-| 58E15 | Variational problems concerning extremal problems in several variables; Yang-Mills functionals [See also 81T13], etc. |  |  |
-| 58E17 | Multiobjective variational problems, Pareto optimality, applications to economics, etc. [See also 90C29, 91Bxx] |  |  |
-| 58E20 | Harmonic maps, etc. [See also 53C43] |  |  |
-| 58E25 | Applications of variational problems to control theory [See also 49-XX, 93-XX] |  |  |
-| 58E30 | Variational principles in infinite-dimensional spaces |  |  |
-| 58E35 | Variational inequalities (global problems) in infinite-dimensional spaces |  |  |
-| 58E40 | Variational aspects of group actions in infinite-dimensional spaces |  |  |
-| 58E50 | Applications of variational problems in infinite-dimensional spaces to the sciences |  |  |
+| **58Exx** | **Variational problems in infinite-dimensional spaces** | **Gayr-ı mütenâhî buudlu fezâlarda tehavvülî meseleler** |  |
+| 58E05 | Abstract critical point theory (Morse theory, Lyusternik-Shnirel’man theory, etc.) in infinite-dimensional spaces | Gayr-ı mütenâhî buudlu fezâlarda mücerred hâlî nokta nazariyesi (Morse nazariyesi, Lyusternik-Shnirel'man nazariyesi ve emsâli) | nakil |
+| 58E07 | Variational problems in abstract bifurcation theory in infinite-dimensional spaces | Gayr-ı mütenâhî buudlu fezâlarda mücerred çatallanma nazariyesinde tehavvülî meseleler |  |
+| 58E09 | Group-invariant bifurcation theory in infinite-dimensional spaces | Gayr-ı mütenâhî buudlu fezâlarda zümreye karşı lâyetegayyer çatallanma nazariyesi |  |
+| 58E10 | Variational problems in applications to the theory of geodesics (problems in one independent variable) | Mesâfe-i aksarlar nazariyesine tatbîkte tehavvülî meseleler (tek müstakil mütehavvilli meseleler) |  |
+| 58E11 | Critical metrics | Hâlî mesâfeler (metrikler) |  |
+| 58E12 | Variational problems concerning minimal surfaces (problems in two independent variables) [See also 49Q05] | Asgarî sathlara dair tehavvülî meseleler (iki müstakil mütehavvilli meseleler) [Ayrıca bakınız: 49Q05] |  |
+| 58E15 | Variational problems concerning extremal problems in several variables; Yang-Mills functionals [See also 81T13], etc. | Çok mütehavvilli nihâyet meselelerine dair tehavvülî meseleler; Yang-Mills tâbi'-i tevâbi'leri [Ayrıca bakınız: 81T13] ve emsâli | nakil |
+| 58E17 | Multiobjective variational problems, Pareto optimality, applications to economics, etc. [See also 90C29, 91Bxx] | Çok gâyeli tehavvülî meseleler, Pareto en iyiliği, iktisada tatbîkleri ve emsâli [Ayrıca bakınız: 90C29, 91Bxx] | nakil |
+| 58E20 | Harmonic maps, etc. [See also 53C43] | Te'lîfî tatbîkler ve emsâli [Ayrıca bakınız: 53C43] |  |
+| 58E25 | Applications of variational problems to control theory [See also 49-XX, 93-XX] | Tehavvülî meselelerin idâre nazariyesine tatbîkleri [Ayrıca bakınız: 49-XX, 93-XX] |  |
+| 58E30 | Variational principles in infinite-dimensional spaces | Gayr-ı mütenâhî buudlu fezâlarda tehavvülî prensipler |  |
+| 58E35 | Variational inequalities (global problems) in infinite-dimensional spaces | Gayr-ı mütenâhî buudlu fezâlarda tehavvülî adem-i müsâvâtlar (küllî meseleler) |  |
+| 58E40 | Variational aspects of group actions in infinite-dimensional spaces | Gayr-ı mütenâhî buudlu fezâlarda zümre tesirlerinin tehavvülî cihetleri |  |
+| 58E50 | Applications of variational problems in infinite-dimensional spaces to the sciences | Gayr-ı mütenâhî buudlu fezâlardaki tehavvülî meselelerin ilimlere tatbîkleri |  |
 | 58E99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **58Hxx** | **Pseudogroups, differentiable groupoids and general structures on manifolds** | **** |  |
-| 58H05 | Pseudogroups and differentiable groupoids [See also 22A22, 22E65] |  |  |
-| 58H10 | Cohomology of classifying spaces for pseudogroup structures (Spencer, Gelfand-Fuks, etc.) [See also 57R32] |  |  |
-| 58H15 | Deformations of general structures on manifolds [See also 32Gxx, 58J10] |  |  |
+| **58Hxx** | **Pseudogroups, differentiable groupoids and general structures on manifolds** | **Kâzib-zümreler, müştakı alınabilir zümremsiler ve müteşa'ibler üzerinde umûmî bünyeler** |  |
+| 58H05 | Pseudogroups and differentiable groupoids [See also 22A22, 22E65] | Kâzib-zümreler ve müştakı alınabilir zümremsiler [Ayrıca bakınız: 22A22, 22E65] |  |
+| 58H10 | Cohomology of classifying spaces for pseudogroup structures (Spencer, Gelfand-Fuks, etc.) [See also 57R32] | Kâzib-zümre bünyeleri için tasnif edici fezâların mukābil-tecânüsü (Spencer, Gelfand-Fuks ve emsâli) [Ayrıca bakınız: 57R32] | nakil |
+| 58H15 | Deformations of general structures on manifolds [See also 32Gxx, 58J10] | Müteşa'ibler üzerindeki umûmî bünyelerin tağyîr-i şekilleri [Ayrıca bakınız: 32Gxx, 58J10] |  |
 | 58H99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **58Jxx** | **Partial differential equations on manifolds; differential operators [See also 32Wxx, 35-XX, 53Cxx]** | **** |  |
-| 58J05 | Elliptic equations on manifolds, general theory [See also 35Jxx] |  |  |
-| 58J10 | Differential complexes [See also 35Nxx]; elliptic complexes |  |  |
-| 58J15 | Relations of PDEs on manifolds with hyperfunctions |  |  |
-| 58J20 | Index theory and related fixed-point theorems on manifolds [See also 19K56, 46L80] |  |  |
-| 58J22 | Exotic index theories on manifolds [See also 19K56, 46L05, 46L10, 46L80, 46M20] |  |  |
-| 58J26 | Elliptic genera |  |  |
-| 58J28 | Eta-invariants, Chern-Simons invariants |  |  |
-| 58J30 | Spectral flows |  |  |
-| 58J32 | Boundary value problems on manifolds |  |  |
-| 58J35 | Heat and other parabolic equation methods for PDEs on manifolds |  |  |
-| 58J37 | Perturbations of PDEs on manifolds; asymptotics |  |  |
-| 58J40 | Pseudodifferential and Fourier integral operators on manifolds [See also 35Sxx] |  |  |
-| 58J42 | Noncommutative global analysis, noncommutative residues |  |  |
-| 58J45 | Hyperbolic equations on manifolds [See also 35Lxx] |  |  |
-| 58J47 | Propagation of singularities; initial value problems on manifolds |  |  |
-| 58J50 | Spectral problems; spectral geometry; scattering theory on manifolds [See also 35Pxx] |  |  |
-| 58J51 | Relations between spectral theory and ergodic theory, e.g., quantum unique ergodicity |  |  |
-| 58J52 | Determinants and determinant bundles, analytic torsion |  |  |
-| 58J53 | Isospectrality |  |  |
-| 58J55 | Bifurcation theory for PDEs on manifolds [See also 35B32] |  |  |
-| 58J60 | Relations of PDEs with special manifold structures (Riemannian, Finsler, etc.) |  |  |
-| 58J65 | Diffusion processes and stochastic analysis on manifolds [See also 35R60, 60H10, 60J60] |  |  |
-| 58J70 | Invariance and symmetry properties for PDEs on manifolds [See also 35A30] |  |  |
-| 58J72 | Correspondences and other transformation methods (e.g., Lie-Bäcklund) for PDEs on manifolds [See also 35A22] |  |  |
-| 58J90 | Applications of PDEs on manifolds |  |  |
+| **58Jxx** | **Partial differential equations on manifolds; differential operators [See also 32Wxx, 35-XX, 53Cxx]** | **Müteşa'ibler üzerinde kısmî tefâzulî muâdeleler; tefâzulî âmiller [Ayrıca bakınız: 32Wxx, 35-XX, 53Cxx]** |  |
+| 58J05 | Elliptic equations on manifolds, general theory [See also 35Jxx] | Müteşa'ibler üzerinde ihlîlecî muâdeleler, umûmî nazariye [Ayrıca bakınız: 35Jxx] |  |
+| 58J10 | Differential complexes [See also 35Nxx]; elliptic complexes | Tefâzulî mürekkebler [Ayrıca bakınız: 35Nxx]; ihlîlecî mürekkebler |  |
+| 58J15 | Relations of PDEs on manifolds with hyperfunctions | Müteşa'ibler üzerinde kısmî tefâzulî muâdelelerin fevk-tâbilerle münasebetleri |  |
+| 58J20 | Index theory and related fixed-point theorems on manifolds [See also 19K56, 46L80] | Müteşa'ibler üzerinde delîl nazariyesi ve alâkalı sâbit nokta kaziyyeleri [Ayrıca bakınız: 19K56, 46L80] |  |
+| 58J22 | Exotic index theories on manifolds [See also 19K56, 46L05, 46L10, 46L80, 46M20] | Müteşa'ibler üzerinde garîb (egzotik) delîl nazariyeleri [Ayrıca bakınız: 19K56, 46L05, 46L10, 46L80, 46M20] |  |
+| 58J26 | Elliptic genera | İhlîlecî cinsler |  |
+| 58J28 | Eta-invariants, Chern-Simons invariants | Eta-lâyetegayyerleri, Chern-Simons lâyetegayyerleri | nakil |
+| 58J30 | Spectral flows | Tayfî cereyanlar |  |
+| 58J32 | Boundary value problems on manifolds | Müteşa'ibler üzerinde hudûd kıymeti meseleleri |  |
+| 58J35 | Heat and other parabolic equation methods for PDEs on manifolds | Müteşa'ibler üzerinde kısmî tefâzulî muâdeleler için hararet usulleri ve sâir mükâfî muâdele usulleri |  |
+| 58J37 | Perturbations of PDEs on manifolds; asymptotics | Müteşa'ibler üzerinde kısmî tefâzulî muâdelelerin ihtilâlleri; mukāribiyyât |  |
+| 58J40 | Pseudodifferential and Fourier integral operators on manifolds [See also 35Sxx] | Müteşa'ibler üzerinde kâzib-tefâzulî âmiller ve Fourier tamâmî âmilleri [Ayrıca bakınız: 35Sxx] | nakil |
+| 58J42 | Noncommutative global analysis, noncommutative residues | Gayr-ı tebdîlî küllî tahlîl, gayr-ı tebdîlî bâkîler (rezidüler) |  |
+| 58J45 | Hyperbolic equations on manifolds [See also 35Lxx] | Müteşa'ibler üzerinde zâidî muâdeleler [Ayrıca bakınız: 35Lxx] |  |
+| 58J47 | Propagation of singularities; initial value problems on manifolds | İnfirâdların intişârı; müteşa'ibler üzerinde ibtidâî kıymet meseleleri |  |
+| 58J50 | Spectral problems; spectral geometry; scattering theory on manifolds [See also 35Pxx] | Tayfî meseleler; tayfî hendese; müteşa'ibler üzerinde inteşâr nazariyesi [Ayrıca bakınız: 35Pxx] |  |
+| 58J51 | Relations between spectral theory and ergodic theory, e.g., quantum unique ergodicity | Tayf nazariyesi ile ergodik nazariye arasındaki münasebetler, meselâ kuantum vahîd ergodikliği |  |
+| 58J52 | Determinants and determinant bundles, analytic torsion | Muhaddidler ve muhaddid huzmeleri, tahlîlî büküm |  |
+| 58J53 | Isospectrality | Eş-tayfîlik |  |
+| 58J55 | Bifurcation theory for PDEs on manifolds [See also 35B32] | Müteşa'ibler üzerinde kısmî tefâzulî muâdeleler için çatallanma nazariyesi [Ayrıca bakınız: 35B32] |  |
+| 58J60 | Relations of PDEs with special manifold structures (Riemannian, Finsler, etc.) | Kısmî tefâzulî muâdelelerin hususî müteşa'ib bünyeleriyle (Riemann, Finsler ve emsâli) münasebetleri |  |
+| 58J65 | Diffusion processes and stochastic analysis on manifolds [See also 35R60, 60H10, 60J60] | Müteşa'ibler üzerinde intişâr süreçleri ve tesâdüfî-süreçli tahlîl [Ayrıca bakınız: 35R60, 60H10, 60J60] |  |
+| 58J70 | Invariance and symmetry properties for PDEs on manifolds [See also 35A30] | Müteşa'ibler üzerinde kısmî tefâzulî muâdeleler için lâyetegayyerlik ve tenâzur vasıfları [Ayrıca bakınız: 35A30] |  |
+| 58J72 | Correspondences and other transformation methods (e.g., Lie-Bäcklund) for PDEs on manifolds [See also 35A22] | Müteşa'ibler üzerinde kısmî tefâzulî muâdeleler için mutâbakatlar ve sâir tahvîl usulleri (meselâ Lie-Bäcklund) [Ayrıca bakınız: 35A22] |  |
+| 58J90 | Applications of PDEs on manifolds | Müteşa'ibler üzerinde kısmî tefâzulî muâdelelerin tatbîkleri |  |
 | 58J99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **58Kxx** | **Theory of singularities and catastrophe theory [See also 32Sxx, 37-XX]** | **** |  |
-| 58K05 | Critical points of functions and mappings on manifolds |  |  |
-| 58K10 | Monodromy on manifolds |  |  |
-| 58K15 | Topological properties of mappings on manifolds |  |  |
-| 58K20 | Algebraic and analytic properties of mappings on manifolds |  |  |
-| 58K25 | Stability theory for manifolds |  |  |
-| 58K30 | Global theory of singularities |  |  |
-| 58K35 | Catastrophe theory |  |  |
-| 58K40 | Classification; finite determinacy of map germs |  |  |
-| 58K45 | Singularities of vector fields, topological aspects |  |  |
-| 58K50 | Normal forms on manifolds |  |  |
-| 58K55 | Asymptotic behavior of solutions to equations on manifolds |  |  |
-| 58K60 | Deformation of singularities |  |  |
-| 58K65 | Topological invariants on manifolds |  |  |
-| 58K70 | Symmetries, equivariance on manifolds |  |  |
+| **58Kxx** | **Theory of singularities and catastrophe theory [See also 32Sxx, 37-XX]** | **İnfirâdlar nazariyesi ve felâket (katastrof) nazariyesi [Ayrıca bakınız: 32Sxx, 37-XX]** |  |
+| 58K05 | Critical points of functions and mappings on manifolds | Müteşa'ibler üzerinde tâbilerin ve tatbîklerin hâlî noktaları |  |
+| 58K10 | Monodromy on manifolds | Müteşa'ibler üzerinde dolanma-zümresi (monodromi) |  |
+| 58K15 | Topological properties of mappings on manifolds | Müteşa'ibler üzerindeki tatbîklerin vaz'î vasıfları |  |
+| 58K20 | Algebraic and analytic properties of mappings on manifolds | Müteşa'ibler üzerindeki tatbîklerin cebrî ve tahlîlî vasıfları |  |
+| 58K25 | Stability theory for manifolds | Müteşa'ibler için istikrar nazariyesi |  |
+| 58K30 | Global theory of singularities | İnfirâdların küllî nazariyesi |  |
+| 58K35 | Catastrophe theory | Felâket nazariyesi |  |
+| 58K40 | Classification; finite determinacy of map germs | Tasnif; tatbîk tohumlarının mütenâhî tayin edilmişliği |  |
+| 58K45 | Singularities of vector fields, topological aspects | Müteveccihe sahalarının infirâdları, vaz'î cihetler |  |
+| 58K50 | Normal forms on manifolds | Müteşa'ibler üzerinde kanonik sûretler |  |
+| 58K55 | Asymptotic behavior of solutions to equations on manifolds | Müteşa'ibler üzerindeki muâdelelerin hallerinin mukāribî tavrı |  |
+| 58K60 | Deformation of singularities | İnfirâdların tağyîr-i şekli |  |
+| 58K65 | Topological invariants on manifolds | Müteşa'ibler üzerinde vaz'î lâyetegayyerler |  |
+| 58K70 | Symmetries, equivariance on manifolds | Müteşa'ibler üzerinde tenâzurlar, müsâvî-tegayyür |  |
 | 58K99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
-| **58Zxx** | **Applications of global analysis to the sciences** | **** |  |
-| 58Z05 | Applications of global analysis to the sciences |  |  |
+| **58Zxx** | **Applications of global analysis to the sciences** | **Küllî tahlîlin ilimlere tatbîkleri** |  |
+| 58Z05 | Applications of global analysis to the sciences | Küllî tahlîlin ilimlere tatbîkleri |  |
 | 58Z99 | None of the above, but in this section | Yukarıdakilerin hiçbiri olmayıp bu babda bulunanlar |  |
 
 ## 60-XX — Probability theory and stochastic processes {For additional applications, see 05Cxx, 11Kxx, 34-XX, 35-XX, 62-XX, 76-XX, 81-XX, 82-XX, 90-XX, 91-XX, 92-XX, 93-XX, 94-XX}
