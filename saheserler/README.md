@@ -42,7 +42,7 @@ Ana cüzlerden sonra, Riyâziyyât Mevzû Tasnîfi 2020'nin **üç haneli** alt 
 | Birinci | 00A–22F (136 alt saha) | [alt/01_temeller_cebir_sayilar_alt.md](alt/01_temeller_cebir_sayilar_alt.md) |
 | İkinci | 26A–49S | [alt/02_tahlil_alt.md](alt/02_tahlil_alt.md) |
 | Üçüncü | 51A–58Z | [alt/03_hendese_topoloji_alt.md](alt/03_hendese_topoloji_alt.md) |
-| Dördüncü | 60A–97U | (hazırlanmaktadır) |
+| Dördüncü | 60A–97U | [alt/04_ihtimal_tatbikat_alt.md](alt/04_ihtimal_tatbikat_alt.md) |
 
 ## Öbür defterle münasebet
 
