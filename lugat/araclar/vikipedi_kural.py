@@ -20,6 +20,13 @@ BAS = {
     'points': 'noktaları', 'line': 'hattı', 'measure': 'mikyâsı', 'process': 'cereyanı', 'category': 'makûlesi', 'complex': 'mürekkebi',
     'bundle': 'huzmesi', 'sheaf': 'destesi', 'variety': 'mütenevviası', 'lattice': 'kafesi', 'paradox': 'mugalatası',
 }
+HUSUSI = {'Q5': 'şahıs ismi', 'Q5633421': 'mecmua ismi', 'Q737498': 'mecmua ismi', 'Q1002697': 'mecmua ismi', 'Q41298': 'mecmua ismi',
+          'Q11424': 'film ismi', 'Q5398426': 'dizi ismi', 'Q7397': 'yazılım ismi', 'Q341': 'yazılım ismi', 'Q9143': 'programlama lisanı ismi',
+          'Q571': 'kitap ismi', 'Q7725634': 'eser ismi', 'Q47461344': 'eser ismi', 'Q3918': 'dârülfünun ismi', 'Q43229': 'teşkilât ismi',
+          'Q4830453': 'şirket ismi', 'Q618779': 'mükâfat ismi', 'Q1656682': 'hâdise ismi', 'Q2085381': 'neşriyatçı ismi',
+          'Q1194951': 'mükâfat ismi', 'Q15632617': 'hayâlî şahıs ismi', 'Q95074': 'hayâlî şahıs ismi'}
+MEKAN = {'Q6256', 'Q3624078', 'Q515', 'Q1549591', 'Q5119', 'Q1637706', 'Q35657', 'Q10864048', 'Q3957', 'Q532', 'Q15284', 'Q486972',
+         'Q107390', 'Q34876', 'Q1093829', 'Q484170', 'Q747074', 'Q123705', 'Q200250'}
 NAKIL_SEMT = re.compile(r"^((?:[A-Z][\w\-–'’.]*\s?)+?)('s|’s)? ([a-z]+)$")
 
 
@@ -35,8 +42,22 @@ def main():
     for u in metinler:
         kel = re.findall(r"[A-Za-zÀ-ɏ]+", u)
         ozel |= {w for w in kel[1:] if w[0].isupper()}
+    sifat = {}
+    yol = os.path.join(VIKI, 'sifatlar.tsv')
+    if os.path.exists(yol):
+        for r in open(yol, encoding='utf-8').read().rstrip('\n').split('\n')[1:]:
+            p = r.split('\t')
+            sifat[p[0]] = (set(p[3].split(',')) - {''}, p[4])
     cikti = []
     for u in rows:
+        tip, tr = sifat.get(u, (set(), ''))
+        hus = [HUSUSI[q] for q in sorted(tip) if q in HUSUSI]
+        if hus:
+            cikti.append((u, u, 'nakil: ' + hus[0] + ' (Vikiveri P31)'))
+            continue
+        if tip & MEKAN:
+            cikti.append((u, tr or u, ('Türkçe Vikipedi başlığından alındı; mekân ismi' if tr else 'nakil: mekân ismi') + ' (Vikiveri P31)'))
+            continue
         for desen, cevir, kayit in KURALLAR:
             m = desen.match(u)
             if m:
