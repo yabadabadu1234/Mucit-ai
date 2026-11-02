@@ -72,7 +72,7 @@ Kullanıcı şöyle buyurdu: "Diğer kitapları da kapsıyor. Lakin Şaheser dey
 - Dosyalar: tercume/openstax_anatomi_fizyoloji/NNN_modulnumarasi.md
 - Düz metne çevirme betiği: tercume/_betikler/cnxml_metin.py (kullanılışı: python3 -I cnxml_metin.py <osbooks-anatomy-physiology klonu> <çıktı klasörü>).
 - Istılah kararları (bu tercümede tutarlı kullanılır): anatomy teşrîh; physiology menâfi'-i a'zâ ilmi (şüpheli, lügate soruldu); homeostasis hıfz-ı i'tidâl; cell hüceyre; organelle hüceyre uzuvcuğu; cytoplasm hüceyre hamîresi; tissue nesîc (cem'i ensice); organ uzuv (cem'i a'zâ); organ system uzuv cihazı; organism canlı mahlûk; atom cevher-i ferd; molecule mürekkeb zerre; ion yüklü zerre; element unsur; energy kudret; metabolism istihâle; anabolism terkîbî istihâle; catabolism tahlîlî istihâle; microscope hurdebîn; hormone usâre-i dâhiliyye; gland gudde; membrane gışâ; adenosine triphosphate adenozin üç fosfat (kısaltma yazılmaz).
-- Kaldığı yer: 006 numaralı modül tercüme edildi; sıradaki 007_m45989 (Homeostasis).
+- Kaldığı yer: Birinci bab (modül 002 ilâ 009) tamamen tercüme edildi; sıradaki 010_m45996 (İkinci bab, Introduction).
 
 ## Virchow, Hüceyrevî İlm-i Emrâz
 
@@ -91,7 +91,7 @@ Kaide: Bir eserin tercümesine, asıldaki bab listesi tercümedekiyle karşıla�
 
 | Eser | Asıldaki birim | Tercüme edilen | Eksik | Hâli |
 |---|---|---|---|---|
-| OpenStax, Anatomy and Physiology 2e | 198 modül, takriben 595 bin kelime | Modül 001 ilâ 006 | Modül 007 ilâ 198 | Devam ediyor; modül modül cedvel: tercume/openstax_anatomi_fizyoloji_ilerleme_cedveli.md (betik: tercume/_betikler/ilerleme_olc.py) |
+| OpenStax, Anatomy and Physiology 2e | 198 modül, takriben 595 bin kelime | Modül 001 ilâ 009 (mukaddime ve birinci babın tamamı) | Modül 010 ilâ 198 | Devam ediyor; modül modül cedvel: tercume/openstax_anatomi_fizyoloji_ilerleme_cedveli.md (betik: tercume/_betikler/ilerleme_olc.py) |
 | Virchow, Die Cellularpathologie (1871) | Unvan, üç mukaddime, şekil fihristi ve yirmi fasıl; 21 626 satır | Satır 30 ilâ 627 (unvan, mukaddimeler, fihrist) | Yirmi faslın hepsi (satır 628 ilâ sonu) | Bitmedi; asrî eserlerin gerisine alındı |
 | Harvey, De Motu Cordis (Willis tercümesi) | Bütün eser | Hiçbir kısım | Bütün eser | Başlanmadı |
 | Cannon, The Wisdom of the Body | Bütün eser | Hiçbir kısım (eski oturumda yazılan şerh tercüme değildir ve terk edilmiştir) | Bütün eser | Başlanmadı; nüsha ağ üzerinden alınacak |

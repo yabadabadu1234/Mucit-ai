@@ -1,6 +1,6 @@
 # OpenStax Teşrîh ve Menâfi'-i A'zâ: Modül Modül İlerleme Cedveli
 
-Toplam modül: 198. Tercüme edilen: 6. Eksik: 192. Asıl kelime: 595092. Tercüme edilen modüllerin asıl kelimesi oranı: yüzde 1.6.
+Toplam modül: 198. Tercüme edilen: 9. Eksik: 189. Asıl kelime: 595092. Tercüme edilen modüllerin asıl kelimesi oranı: yüzde 2.8.
 
 | Sıra | Modül | Asıl başlık | Asıl kelime | Tercüme kelime | Nisbet | Hâli |
 |---|---|---|---|---|---|---|
@@ -10,9 +10,9 @@ Toplam modül: 198. Tercüme edilen: 6. Eksik: 192. Asıl kelime: 595092. Tercü
 | 004 | m45985 | Structural Organization of the Human Body | 1022 | 1020 | 1.00 | tercüme edildi |
 | 005 | m45986 | Functions of Human Life | 1491 | 1323 | 0.89 | tercüme edildi |
 | 006 | m45988 | Requirements for Human Life | 2468 | 2159 | 0.87 | tercüme edildi |
-| 007 | m45989 | Homeostasis | 1891 | 0 | 0 | eksik |
-| 008 | m45990 | Anatomical Terminology | 3136 | 0 | 0 | eksik |
-| 009 | m45991 | Medical Imaging | 2136 | 0 | 0 | eksik |
+| 007 | m45989 | Homeostasis | 1891 | 1702 | 0.90 | tercüme edildi |
+| 008 | m45990 | Anatomical Terminology | 3136 | 2773 | 0.88 | tercüme edildi |
+| 009 | m45991 | Medical Imaging | 2136 | 2166 | 1.01 | tercüme edildi |
 | 010 | m45996 | Introduction | 354 | 0 | 0 | eksik |
 | 011 | m45998 | Elements and Atoms: The Building Blocks of Matter | 3973 | 0 | 0 | eksik |
 | 012 | m46000 | Chemical Bonds | 2807 | 0 | 0 | eksik |
