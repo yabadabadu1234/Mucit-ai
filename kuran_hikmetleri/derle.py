@@ -408,6 +408,8 @@ th, td { border:1px solid #e2e8f0; padding:4px 6px; text-align:left; }
 th { background:#f8fafc; }
 td.ar { font-family:'Amiri',serif; font-size:13pt; direction:rtl; text-align:right; }
 tr.gizli { display:none; }
+.sarf { background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:4px 18px 12px; margin:12px 0 20px; }
+.sarf h1 { font-size:18pt; }
 .ara-sayi { font-size:10pt; color:#64748b; margin:6px 0; }
 """
 
@@ -417,15 +419,16 @@ function bolumAc(el, acik){ el.querySelectorAll('details').forEach(function(d){ 
 function sabitAc(cb){ hepsi(cb.checked); }
 var LG = { dizin: null, dizinYuk: null, parcalar: {}, zamanlayici: null };
 function tabloyuDoldur(d){
-  if (d.getAttribute('data-dolu') || d.getAttribute('data-yukleniyor') || !d.getAttribute('data-parca')) return;
+  if (d.getAttribute('data-dolu') || !d.getAttribute('data-parca')) return Promise.resolve();
+  if (d.getAttribute('data-yukleniyor')) return LG.parcalar[d.getAttribute('data-parca')];
   d.setAttribute('data-yukleniyor', '1');
   var ad = d.getAttribute('data-parca');
-  var ayet = d.getAttribute('data-ayet');
+  var mz = d.getAttribute('data-mevzu');
   if (!LG.parcalar[ad]) LG.parcalar[ad] = parcaGetir(ad);
-  LG.parcalar[ad].then(function(h){
+  return LG.parcalar[ad].then(function(h){
     var kutu = document.createElement('div');
     kutu.innerHTML = h;
-    var sab = kutu.querySelector('template[data-ayet="' + ayet + '"]');
+    var sab = kutu.querySelector('template[data-mevzu="' + mz + '"]');
     var govde = d.querySelector('.ayet-govde');
     if (sab && govde) govde.appendChild(sab.content.cloneNode(true));
     d.setAttribute('data-dolu', '1');
@@ -436,7 +439,7 @@ function tabloyuDoldur(d){
 }
 document.addEventListener('toggle', function(e){
   var d = e.target;
-  if (d.tagName === 'DETAILS' && d.classList.contains('ayet-d') && d.open) tabloyuDoldur(d);
+  if (d.tagName === 'DETAILS' && d.classList.contains('mevzu-d') && d.open) tabloyuDoldur(d);
 }, true);
 function dizinHazir(){
   if (LG.dizin) return Promise.resolve(LG.dizin);
@@ -445,12 +448,19 @@ function dizinHazir(){
   return LG.dizinYuk;
 }
 function dizinSonucu(sno, ayet){
-  var d = document.querySelector('details.ayet-d[data-sno="' + sno + '"][data-ayet="' + ayet + '"]');
+  var d = null, a = +ayet;
+  document.querySelectorAll('details.mevzu-d[data-sno="' + sno + '"]').forEach(function(m){
+    if (+m.getAttribute('data-bas') <= a && a <= +m.getAttribute('data-son')) d = m;
+  });
   if (!d) return;
   var p = d.parentElement;
   while (p) { if (p.tagName === 'DETAILS') p.open = true; p = p.parentElement; }
   d.open = true;
-  d.scrollIntoView({ block: 'center' });
+  Promise.resolve(tabloyuDoldur(d)).then(function(){
+    var tr = d.querySelector('tr[data-ayet="' + ayet + '"]') || d;
+    tr.scrollIntoView({ block: 'center' });
+    if (tr.tagName === 'TR') { tr.style.background = '#fef3c7'; }
+  });
 }
 function sonuclariGoster(q){
   var kutu = document.getElementById('sonuclar');
@@ -495,8 +505,10 @@ window.addEventListener('DOMContentLoaded', function(){
 
 
 def lugat_sayfasi(surahs_data):
-    """Lugat sayfası: sûre → mevzu → âyet. Tablolar açılınca oluşturulur (tembel); arama bir dizin üzerinden çalışır."""
+    """Lugat sayfası: başta sarf-nahiv (daima açık), sonra sûre → mevzu → kelime tablosu. Tablolar mevzu açılınca oluşturulur (tembel); arama bir dizin üzerinden çalışır."""
     from html import escape
+    md_conv = get_markdown_converter()
+    sarf_html = md_conv.convert((BASE_DIR / "kaynak/sozluk/SARF_NAHIV.md").read_text(encoding="utf-8"))
     kayitlar = json.loads((BASE_DIR / "kaynak/sozluk/kelimeler.json").read_text(encoding="utf-8"))
     karsiliklar = json.loads(kelime_mealli.SOZLUK.read_text(encoding="utf-8"))["translations"]
     kok_anlam = {x["kok"]: x["turkce"] for x in json.loads(
@@ -527,38 +539,33 @@ def lugat_sayfasi(surahs_data):
                 if not kelimeler:
                     continue
                 mevzu_kelime += len(kelimeler)
-                satirlar = "".join(
-                    f'<tr><td class="ar">{escape(k["kelime"])}</td><td>{escape(k["kok"]) or "—"}</td>'
+                mevzu_kutular.append("".join(
+                    f'<tr data-ayet="{ayet}"><td>{ayet}</td><td class="ar">{escape(k["kelime"])}</td><td>{escape(k["kok"]) or "—"}</td>'
                     f'<td>{k["kok_gecisi"] or "—"}</td><td>{escape(kok_anlam.get(k["kok"], "—"))}</td>'
                     f'<td>{escape(k["lugat"]) or "—"}</td>'
                     f'<td>{escape(k["tur"])}</td><td>{k["bab"] or "—"}</td><td>{k["zaman"] or "—"}</td>'
                     f'<td>{k["adet"]}</td></tr>'
                     for k in kelimeler
-                )
+                ))
                 for k in kelimeler:
                     dizin.append([sno, ayet, (k["kelime"] + " " + k["kok"] + " " + k["lugat"]
                                               + " " + kok_anlam.get(k["kok"], "")).lower(),
                                   k["kelime"], k["kok"]])
-                tablo = (
-                    f'<table><thead><tr><th>Kelime</th><th>Kök</th><th>Kök geçişi</th><th>Kök anlamı</th>'
-                    f'<th>Lugat</th><th>Tür</th><th>Kalıp</th><th>Zaman</th><th>Adet</th></tr></thead>'
-                    f'<tbody>{satirlar}</tbody></table>'
-                )
-                frag_parcalar.append(f'<template data-ayet="{ayet}">{tablo}</template>')
-                govde_icerik = "" if TEMBEL["acik"] else tablo
-                mevzu_kutular.append(
-                    f'<details class="ayet-d" data-sno="{sno}" data-ayet="{ayet}" data-parca="@@PARCA@@">'
-                    f'<summary>Âyet {ayet} · {len(kelimeler)} yeni kelime</summary>'
-                    f'<div class="ayet-govde">{govde_icerik}</div></details>'
-                )
             if not mevzu_kutular:
                 continue
             sure_kelime += mevzu_kelime
+            mz = len(frag_parcalar)
+            tablo = (
+                f'<table><thead><tr><th>Âyet</th><th>Kelime</th><th>Kök</th><th>Kök geçişi</th><th>Kök anlamı</th>'
+                f'<th>Lugat</th><th>Tür</th><th>Kalıp</th><th>Zaman</th><th>Adet</th></tr></thead>'
+                f'<tbody>{"".join(mevzu_kutular)}</tbody></table>'
+            )
+            frag_parcalar.append(f'<template data-mevzu="{mz}">{tablo}</template>')
             sure_satirlari.append(
-                f'<details class="mevzu-d"><summary>{escape(seg["title"])} · Âyet {seg["start"]}–{seg["end"]} · {mevzu_kelime} yeni kelime</summary>'
-                f'<div class="bolum-ac"><button onclick="bolumAc(this.closest(\'details\'),true)">Bu mevzunun tümünü aç</button> '
-                f'<button onclick="bolumAc(this.closest(\'details\'),false)">Kapat</button></div>'
-                f'{"".join(mevzu_kutular)}</details>'
+                f'<details class="mevzu-d" data-sno="{sno}" data-bas="{seg["start"]}" data-son="{seg["end"]}" '
+                f'data-mevzu="{mz}" data-parca="@@PARCA@@">'
+                f'<summary>{escape(seg["title"])} · Âyet {seg["start"]}–{seg["end"]} · {mevzu_kelime} yeni kelime</summary>'
+                f'<div class="ayet-govde">{"" if TEMBEL["acik"] else tablo}</div></details>'
             )
         if not sure_satirlari:
             continue
@@ -569,7 +576,7 @@ def lugat_sayfasi(surahs_data):
             sure_satirlari = [x.replace(' data-parca="@@PARCA@@"', '') for x in sure_satirlari]
         bolumler.append(
             f'<details class="sure-d" id="sure-{sno}"><summary>{sno}. {escape(s["name"])} Suresi · {sure_kelime} yeni kelime</summary>'
-            f'<div class="bolum-ac"><button onclick="bolumAc(this.closest(\'details\'),true)">Bu surenin tüm tablolarını aç</button> '
+            f'<div class="bolum-ac"><button onclick="bolumAc(this.closest(\'details\'),true)">Bu surenin tüm mevzularını aç</button> '
             f'<button onclick="bolumAc(this.closest(\'details\'),false)">Kapat</button></div>'
             f'{"".join(sure_satirlari)}</details>'
         )
@@ -603,9 +610,10 @@ def lugat_sayfasi(surahs_data):
 </header>
 <main class="kap">
   <h1>Lugat · Kur'ân'da ilk geçen kelimeler</h1>
-  <p>Toplam {toplam} kelime. Kelimeler sûre → mevzu → âyet sırasıyla, Kur'ân metnindeki ilk geçtikleri yere göre dizilmiştir. Tablolar, bir âyet açıldığında oluşturulur. Arama tüm kelimelerde çalışır; bir sonucu tıklayınca ilgili âyet açılır.</p>
+  <p>Toplam {toplam} kelime. Kelimeler sûre → mevzu sırasıyla, Kur'ân metnindeki ilk geçtikleri yere göre dizilmiştir. Bir mevzu açılınca o mevzunun bütün kelimeleri, âyet numarasıyla tek tabloda görünür. Arama tüm kelimelerde çalışır; bir sonucu tıklayınca ilgili âyet açılır.</p>
   <div class="not"><strong>Kök anlamı notu:</strong> Kök anlamları Türkçe karşılıklardır; doğrulanmamıştır. Belirsiz köklerde (?) işaretli kayıtlar için birden çok ihtimal sıralanmıştır; bu köklerin Arapça'daki varlığı meçhuldür.</div>
   <div class="not"><strong>Lugat notu:</strong> Lugat sütunundaki Türkçe karşılıklar, <em>veri_harici/eyupipler/word-translations-tr.json</em> dosyasından alınmıştır; hazır bir sözlük olup karşılıklar tek tek doğrulanmamıştır. Karşılığı olmayanlar "—" ile işaretlidir.</div>
+  <section class="sarf">{sarf_html}</section>
   <ul id="sonuclar" style="display:none"></ul>
   <div id="agac">{"".join(bolumler)}</div>
 </main>
