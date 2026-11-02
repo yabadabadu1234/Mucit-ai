@@ -25,7 +25,10 @@ yürür:
 | `kok_istilahlar.tsv` | Bütün tercümelerde müşterek kullanılan esas ıstılahlar ve her birinin derecesi. |
 | `vikipedi/gezinti_defteri.tsv` | Ziyaret edilen her Vikipedi sahifesi: başlık, kimden gelindiği, derinlik, bulunan liste atıfları, hâl. İş kesilirse buradan devam edilir. |
 | `vikipedi/DIZIN.md` | Bulunan bütün listelerin dizini (listelerin listesi). |
-| `vikipedi/listeler/` | Her listenin unsurları ve Osmanlıca karşılıkları. |
+| `vikipedi/unsurlar.tsv` | Bütün listelerin unsurları: unsur, geçtiği liste sayısı, geçtiği listeler. |
+| `vikipedi/sifatlar.tsv` | Her unsurun Vikiveri kimliği, tipi (P31), Türkçe Vikipedi başlığı ve İngilizce tarifi; tercümede yardımcıdır. |
+| `vikipedi/ceviri/00_kural.tsv` | `araclar/vikipedi_kural.py` ile kaideyle üretilen karşılıklar (şahıs, eser ve mekân isimleri nakil; adetler; hususî isimli ıstılahlar; sayılı hendesî aileler). Elle değiştirilmez. |
+| `vikipedi/ceviri/NNN.tsv` | Elle yazılan karşılıklar: `unsur <sekme> Osmanlıca <sekme> kayıt`. `araclar/vikipedi_yokla.py` boş, mükerrer ve unsurlarda olmayan satırı yakalar. |
 
 ## Kayıt biçimi ve dürüstlük kaidesi
 

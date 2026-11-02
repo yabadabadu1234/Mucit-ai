@@ -20,12 +20,38 @@ BAS = {
     'points': 'noktaları', 'line': 'hattı', 'measure': 'mikyâsı', 'process': 'cereyanı', 'category': 'makûlesi', 'complex': 'mürekkebi',
     'bundle': 'huzmesi', 'sheaf': 'destesi', 'variety': 'mütenevviası', 'lattice': 'kafesi', 'paradox': 'mugalatası',
 }
+SAYILI = [
+    (r'(\d+)-cube', '{0} buudlu mükâab (hiper-mükâab)'), (r'(\d+)-cubic', '{0} buudlu mükâabî'), (r'(\d+)-demicube', '{0} buudlu nîm-mükâab'),
+    (r'(\d+)-demicubic', '{0} buudlu nîm-mükâabî'), (r'(\d+)-simplex', '{0} buudlu basît (simpleks)'),
+    (r'(\d+)-orthoplex', '{0} buudlu ortopleks (çapraz politop)'), (r'(\d+)-polytopes?', '{0} buudlu politop'),
+    (r'(\d+)-cell', '{0} hücreli politop'), (r'(\d+)-manifolds?', '{0} buudlu müteşa\'ib'), (r'(\d+)-category', '{0}-makûle'),
+    (r'(\d+)-sphere', '{0} buudlu küre'), (r'(\d+)-torus', '{0} buudlu halka sathı (torus)'), (r'(\d+)-gon', '{0} dıl\'lı kesîrü\'l-adlâ\''),
+    (r'(\d+)-bit computing', '{0} bitlik hesap mimârîsi'), (r'(\d+)-bit', '{0} bitlik'), (r'(\d+) (\d+) polytope', '{0}_{{{1}}} politopu'),
+    (r'(\d+) (\d+) honeycomb', '{0}_{{{1}}} peteği'), (r'(\d+) symmetry', '{0} tenâzuru'),
+]
+SONEK = [(' honeycomb', ' peteği'), (' prism', ' menşûru')]
+
+
+def sayili(u):
+    for son, ek in SONEK:
+        if u.endswith(son):
+            ic = sayili(u[:-len(son)])
+            return ic + ek if ic else None
+    for desen, kalip in SAYILI:
+        m = re.fullmatch(desen, u)
+        if m:
+            return kalip.format(*m.groups())
+    return None
+
+
 HUSUSI = {'Q5': 'şahıs ismi', 'Q5633421': 'mecmua ismi', 'Q737498': 'mecmua ismi', 'Q1002697': 'mecmua ismi', 'Q41298': 'mecmua ismi',
           'Q11424': 'film ismi', 'Q5398426': 'dizi ismi', 'Q7397': 'yazılım ismi', 'Q341': 'yazılım ismi', 'Q9143': 'programlama lisanı ismi',
           'Q571': 'kitap ismi', 'Q7725634': 'eser ismi', 'Q47461344': 'eser ismi', 'Q3918': 'dârülfünun ismi', 'Q43229': 'teşkilât ismi',
           'Q4830453': 'şirket ismi', 'Q618779': 'mükâfat ismi', 'Q1656682': 'hâdise ismi', 'Q2085381': 'neşriyatçı ismi',
-          'Q1194951': 'mükâfat ismi', 'Q15632617': 'hayâlî şahıs ismi', 'Q95074': 'hayâlî şahıs ismi'}
-MEKAN = {'Q6256', 'Q3624078', 'Q515', 'Q1549591', 'Q5119', 'Q1637706', 'Q35657', 'Q10864048', 'Q3957', 'Q532', 'Q15284', 'Q486972',
+          'Q1194951': 'mükâfat ismi', 'Q11448906': 'mükâfat ismi', 'Q875538': 'dârülfünun ismi', 'Q23002039': 'dârülfünun ismi',
+          'Q902104': 'dârülfünun ismi', 'Q163740': 'teşkilât ismi', 'Q45400320': 'teşkilât ismi', 'Q480242': 'teşkilât ismi', 'Q3863': 'seyyârecik ismi',
+          'Q31855': 'tetkik müessesesi ismi', 'Q2659904': 'teşkilât ismi', 'Q13406463': 'liste sahifesi ismi', 'Q17524420': 'cemaat ismi', 'Q41710': 'cemaat ismi', 'Q15632617': 'hayâlî şahıs ismi', 'Q95074': 'hayâlî şahıs ismi'}
+MEKAN = {'Q839954', 'Q6256', 'Q3624078', 'Q515', 'Q1549591', 'Q5119', 'Q1637706', 'Q35657', 'Q10864048', 'Q3957', 'Q532', 'Q15284', 'Q486972',
          'Q107390', 'Q34876', 'Q1093829', 'Q484170', 'Q747074', 'Q123705', 'Q200250'}
 NAKIL_SEMT = re.compile(r"^((?:[A-Z][\w\-–'’.]*\s?)+?)('s|’s)? ([a-z]+)$")
 
@@ -57,6 +83,10 @@ def main():
             continue
         if tip & MEKAN:
             cikti.append((u, tr or u, ('Türkçe Vikipedi başlığından alındı; mekân ismi' if tr else 'nakil: mekân ismi') + ' (Vikiveri P31)'))
+            continue
+        s = sayili(u)
+        if s:
+            cikti.append((u, s, 'sayılı hendesî kalıpla karşılandı'))
             continue
         for desen, cevir, kayit in KURALLAR:
             m = desen.match(u)
