@@ -44,6 +44,28 @@ Ana cüzlerden sonra, Riyâziyyât Mevzû Tasnîfi 2020'nin **üç haneli** alt 
 | Üçüncü | 51A–58Z | [alt/03_hendese_topoloji_alt.md](alt/03_hendese_topoloji_alt.md) |
 | Dördüncü | 60A–97U | [alt/04_ihtimal_tatbikat_alt.md](alt/04_ihtimal_tatbikat_alt.md) |
 
+## Güncel şâheserler (yeni zaviye)
+
+Padişahın tashihi üzerine ("şâheser deyince en modern, en güncel olanlardan en şâheserini kastediyorum"), defterin yanına ikinci bir kol açılmıştır: `guncel/`. Klasik cüzler silinmemiştir; sahayı kuran eserin kaydı olarak durur. Güncel kol ise bugün bir sahada çalışanın elinden düşürmediği **çağdaş ders kitabını, son yirmi senenin çığır açan makalesini ve yaşayan mektebin mercî monografisini** arar.
+
+Güncel kolda her eserin **telif hâli** de yazılır. Lisanslar arXiv'in Açık Arşivler Müşterek Veri Hasadı Protokolü (OAI-PMH) kapısından, GitHub LICENSE dosyalarından yahut naşir sahifesinden fiilen yoklanmıştır.
+
+| Alâmet | Manası |
+| :-- | :-- |
+| **[Açık-Tercüme]** | Lisans tercümeye izin verir ve teyit edilmiştir; tercüme heyeti tam metni yalnız bunlardan tercüme eder |
+| **[Serbest-Okuma]** | Serbest okunur, tercüme hakkı verilmemiştir (arXiv gayri-münhasır ruhsatı dahil) |
+| **[Telifli]** | Ticarî naşirin malıdır |
+| **[Teyitsiz]** | Lisans beyanı bulunamadı yahut sahife açılmadı |
+
+| Cüz | Sahalar | Dosya |
+| :-- | :-- | :-- |
+| Birinci | 00–22 | [guncel/01_temeller_cebir_sayilar_guncel.md](guncel/01_temeller_cebir_sayilar_guncel.md) |
+| İkinci | 26–49 | hazırlanıyor |
+| Üçüncü | 51–58 | hazırlanıyor |
+| Dördüncü | 60–97 | hazırlanıyor |
+
+**Kendi tenkidim:** İlk defterde "şâheser" lafzını "klasik" diye anladım; bu benim hatamdı, Padişahın sözünde öyle bir kayıt yoktu. Güncel kolda da "niçin şâheser" hükümleri ekseriyetle hâfızamdandır ve [Hâfıza] mührü taşır; yalnız lisans sütunu fiilen yoklanmıştır.
+
 ## Öbür defterle münasebet
 
 Saha adlarının Osmanlıca karşılıkları, aynı depoda `lugat/` klasöründe ayrı bir çalışma olarak derlenmektedir. Bu defterdeki başlıklarda verilen Osmanlıca adlar **muvakkattir**; lügat tamamlandığında oradaki karşılıklar esas alınacak ve buradaki başlıklar ona uydurulacaktır.
