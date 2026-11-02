@@ -35,7 +35,7 @@ Eserlerin telif hâli ve nüshaları için: [DEFTER.md](DEFTER.md). Tercümenin 
 | 45 | Abel 1826, *Auflösung einer mechanischen Aufgabe* | Üçüncü | Tamam | `eserler/45_abel_1826_bir_mekanik_meselenin_halli.md` |
 | 26 | Leibniz 1684, *Nova methodus pro maximis et minimis* | Üçüncü | Tamam | `eserler/26_leibniz_1684_azami_ve_asgari_icin_yeni_usul.md` |
 | 41 | Weierstrass 1885, *Über die analytische Darstellbarkeit sogenannter willkürlicher Functionen* | Üçüncü | Düştü (klasik; README kaide 7) | |
-| 62 | Bayes 1763, *An Essay towards solving a Problem in the Doctrine of Chances* | Dördüncü | Sürüyor | `eserler/60_bayes_1763_…` |
+| 62 | Bayes 1763, *An Essay towards solving a Problem in the Doctrine of Chances* | Dördüncü | Tamam | `eserler/62_bayes_1763_hesab_i_ihtimalatta_bir_mesele.md` |
 | 62 | Gosset ("Student") 1908, *The Probable Error of a Mean* | Dördüncü | Düştü (klasik; README kaide 7) | |
 
 ## Güncel şâheserler (Padişahın 1 Teşrîn-i sânî 2026 emri: yalnız modern eserler)
@@ -56,7 +56,7 @@ Lisans: Creative Commons Atıf-Aynı Lisansla Paylaş 3.0 (deponun `README.md` d
 | 5. İstikrâ | `induction.tex` | 1402 | İkinci | Sırada | `eserler/03_hott_2013_05_istikra.md` |
 | 6. Yüksek istikrâî tipler | `hits.tex` | 2192 | Üçüncü | Sürüyor | `eserler/03_hott_2013_06_yuksek_istikrai_tipler.md` |
 | 7. Homotopi buud-sayısı tipleri | `hlevels.tex` | 2139 | Üçüncü | Sırada | `eserler/03_hott_2013_07_homotopi_tipleri.md` |
-| 8. Homotopi nazariyesi | `homotopy.tex` | 2892 | Dördüncü | Sırada (Bayes'ten sonra) | `eserler/03_hott_2013_08_homotopi_nazariyesi.md` |
+| 8. Homotopi nazariyesi | `homotopy.tex` | 2892 | Dördüncü | Sürüyor | `eserler/03_hott_2013_08_homotopi_nazariyesi.md` |
 | 9. Makûleler nazariyesi | `categories.tex` | 1854 | Dördüncü | Sırada | `eserler/03_hott_2013_09_makuleler_nazariyesi.md` |
 | 10. Mecmûalar nazariyesi | `setmath.tex` | 1970 | — | Boşta | |
 | 11. Hakîkî adetler | `reals.tex` | 3301 | — | Boşta | |

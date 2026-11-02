@@ -24,6 +24,7 @@ Nüsha sütununda "yoklandı" yazılıysa, o adres bu oturumda Internet Archive'
 | 7 | Dedekind 1872, *Stetigkeit und irrationale Zahlen* | **Tamam** (ikinci tercüman; birinci baskının taramasından tam metin) | [eserler/26_dedekind_1872_sureklilik_ve_gayri_muntazam_adedler.md](eserler/26_dedekind_1872_sureklilik_ve_gayri_muntazam_adedler.md) |
 | 8 | Leibniz 1684, *Nova methodus pro maximis et minimis* | **Tamam** (üçüncü tercüman; Acta Eruditorum taramasından tam metin) | [eserler/26_leibniz_1684_azami_ve_asgari_icin_yeni_usul.md](eserler/26_leibniz_1684_azami_ve_asgari_icin_yeni_usul.md) |
 | 9 | Univalent Foundations Program 2013, *Homotopy Type Theory*: Önsöz ve Medhal | **Tamam** (birinci tercüman; CC BY-SA 3.0, aynı lisansla) | [eserler/03_hott_2013_00_onsoz_ve_medhal.md](eserler/03_hott_2013_00_onsoz_ve_medhal.md) |
+| 10 | Bayes 1763, *An Essay towards solving a Problem in the Doctrine of Chances* | **Tamam** (dördüncü tercüman; Philosophical Transactions taramasından tam metin; Price'ın mektubu, iki bölük, üç kaide, zeyl ve aslın hâşiyeleri; düsturlar kelimeyle) | [eserler/62_bayes_1763_hesab_i_ihtimalatta_bir_mesele.md](eserler/62_bayes_1763_hesab_i_ihtimalatta_bir_mesele.md) |
 
 Sıra tayininde ölçü: kısa ve kurucu eserler evvel (bir oturumda tamamı bitebilsin diye), uzun kitaplar bab bab sonra.
 
