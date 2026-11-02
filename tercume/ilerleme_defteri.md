@@ -70,6 +70,9 @@ Kullanıcı şöyle buyurdu: "Diğer kitapları da kapsıyor. Lakin Şaheser dey
 - Telif hâli: Creative Commons Atıf-Gayriticarî-AynıLisanslaPaylaş 4.0 (CC BY-NC-SA 4.0). Tercümeye izin verir; şartları: müellife ve kaynağa atıf, ticarî olmayan kullanım, tercümenin aynı lisansla neşri.
 - Usul: Her modül düz metne çevrilir (betik: modül numarası sırasıyla 001 ilâ 198), sonra bütünüyle tercüme edilir. Şekiller resim olarak alınmaz, şekil yazıları tercüme edilir. Bab sonundaki hulâsa, sualler, cevaplar ve lügatçe de tercüme edilir; hiçbir şey eksiltilmez.
 - Dosyalar: tercume/openstax_anatomi_fizyoloji/NNN_modulnumarasi.md
+- Düz metne çevirme betiği: tercume/_betikler/cnxml_metin.py (kullanılışı: python3 -I cnxml_metin.py <osbooks-anatomy-physiology klonu> <çıktı klasörü>).
+- Istılah kararları (bu tercümede tutarlı kullanılır): anatomy teşrîh; physiology menâfi'-i a'zâ ilmi (şüpheli, lügate soruldu); homeostasis hıfz-ı i'tidâl; cell hüceyre; organelle hüceyre uzuvcuğu; cytoplasm hüceyre hamîresi; tissue nesîc (cem'i ensice); organ uzuv (cem'i a'zâ); organ system uzuv cihazı; organism canlı mahlûk; atom cevher-i ferd; molecule mürekkeb zerre; ion yüklü zerre; element unsur; energy kudret; metabolism istihâle; anabolism terkîbî istihâle; catabolism tahlîlî istihâle; microscope hurdebîn; hormone usâre-i dâhiliyye; gland gudde; membrane gışâ; adenosine triphosphate adenozin üç fosfat (kısaltma yazılmaz).
+- Kaldığı yer: 005 numaralı modül bitti; sıradaki 006_m45988 (Requirements for Human Life).
 
 ## Virchow, Hüceyrevî İlm-i Emrâz
 
