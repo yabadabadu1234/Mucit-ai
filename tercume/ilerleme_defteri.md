@@ -72,7 +72,7 @@ Kullanıcı şöyle buyurdu: "Diğer kitapları da kapsıyor. Lakin Şaheser dey
 - Dosyalar: tercume/openstax_anatomi_fizyoloji/NNN_modulnumarasi.md
 - Düz metne çevirme betiği: tercume/_betikler/cnxml_metin.py (kullanılışı: python3 -I cnxml_metin.py <osbooks-anatomy-physiology klonu> <çıktı klasörü>).
 - Istılah kararları (bu tercümede tutarlı kullanılır): anatomy teşrîh; physiology menâfi'-i a'zâ ilmi (şüpheli, lügate soruldu); homeostasis hıfz-ı i'tidâl; cell hüceyre; organelle hüceyre uzuvcuğu; cytoplasm hüceyre hamîresi; tissue nesîc (cem'i ensice); organ uzuv (cem'i a'zâ); organ system uzuv cihazı; organism canlı mahlûk; atom cevher-i ferd; molecule mürekkeb zerre; ion yüklü zerre; element unsur; energy kudret; metabolism istihâle; anabolism terkîbî istihâle; catabolism tahlîlî istihâle; microscope hurdebîn; hormone usâre-i dâhiliyye; gland gudde; membrane gışâ; adenosine triphosphate adenozin üç fosfat (kısaltma yazılmaz).
-- Kaldığı yer: 005 numaralı modül bitti; sıradaki 006_m45988 (Requirements for Human Life).
+- Kaldığı yer: 006 numaralı modül tercüme edildi; sıradaki 007_m45989 (Homeostasis).
 
 ## Virchow, Hüceyrevî İlm-i Emrâz
 
@@ -83,6 +83,20 @@ Kullanıcı şöyle buyurdu: "Diğer kitapları da kapsıyor. Lakin Şaheser dey
 ## Harvey, De Motu Cordis
 
 - Nüsha indirildi: Project Gutenberg 67065, tercume/_nushalar/ klasöründe. Tercüme başlamadı.
+
+
+## Eser eser tamlık hâli (kullanıcının 1 Kasım 2026 tarihli şikâyeti üzerine)
+
+Kaide: Bir eserin tercümesine, asıldaki bab listesi tercümedekiyle karşılaştırılıp kelime nisbeti yazılmadan "bitti" denmez. Eksik her bab "eksik" diye görünür. Oturum bitince "şu baba kadar tercüme edildi, kalanı şunlar" diye kayıt düşülür.
+
+| Eser | Asıldaki birim | Tercüme edilen | Eksik | Hâli |
+|---|---|---|---|---|
+| OpenStax, Anatomy and Physiology 2e | 198 modül, takriben 595 bin kelime | Modül 001 ilâ 006 | Modül 007 ilâ 198 | Devam ediyor; modül modül cedvel: tercume/openstax_anatomi_fizyoloji_ilerleme_cedveli.md (betik: tercume/_betikler/ilerleme_olc.py) |
+| Virchow, Die Cellularpathologie (1871) | Unvan, üç mukaddime, şekil fihristi ve yirmi fasıl; 21 626 satır | Satır 30 ilâ 627 (unvan, mukaddimeler, fihrist) | Yirmi faslın hepsi (satır 628 ilâ sonu) | Bitmedi; asrî eserlerin gerisine alındı |
+| Harvey, De Motu Cordis (Willis tercümesi) | Bütün eser | Hiçbir kısım | Bütün eser | Başlanmadı |
+| Cannon, The Wisdom of the Body | Bütün eser | Hiçbir kısım (eski oturumda yazılan şerh tercüme değildir ve terk edilmiştir) | Bütün eser | Başlanmadı; nüsha ağ üzerinden alınacak |
+
+Hiçbir eser için "bitti" denmemiştir.
 
 ## Ameliyat notları (engeller)
 
