@@ -175,9 +175,11 @@
   // Her blok bir sütun: üstte Arapça öbek, hemen altında Türkçe karşılığı.
   // Sütunlar sağdan sola dizilir (Arapça sırası); satır dolunca alt satıra geçer.
   function blokIsle(arEl, trEl, kayit) {
+    var ts = getComputedStyle(trEl), trBoy = 'font-size:' + ts.fontSize + ';line-height:' + ts.lineHeight +
+      ';color:' + ts.color + ';';
     arEl.innerHTML = '<div class="ayet-kutu">' + kayit.b.map(function (b) {
       return '<div class="blok" data-v="' + b[2] + '"><span class="blok-ar">' + kaçış(b[0]) +
-        '</span><span class="blok-tr">' + kaçış(b[1]) + '</span></div>';
+        '</span><span class="blok-tr" style="' + trBoy + '">' + kaçış(b[1]) + '</span></div>';
     }).join('') + '</div>';
     trEl.style.display = 'none';
     arEl.dataset.renk = '1';
@@ -318,10 +320,10 @@
     var s = document.createElement('style');
     s.textContent = Object.keys(VAZIFE_RENK).map(function (v) {
       return 'body.renk-acik .blok[data-v="' + v + '"]{background:' + VAZIFE_RENK[v] + ';}';
-    }).join('\n') + '\n' + '.ayet-kutu{display:flex;flex-direction:row;flex-wrap:wrap;gap:6px 4px;direction:rtl;}' +
-      '.blok{display:inline-flex;flex-direction:column;align-items:flex-end;border-radius:4px;padding:3px 6px;}' +
-      '.blok-ar{direction:rtl;font-size:1.25em;line-height:1.9;}' +
-      '.blok-tr{direction:ltr;font-size:.85em;color:#334155;text-align:left;}' + '\n' + PALET.map(function (c, i) {
+    }).join('\n') + '\n' + '.ayet-kutu{display:flex;flex-direction:row;flex-wrap:wrap;gap:0 2px;direction:rtl;}' +
+      '.blok{display:inline-flex;flex-direction:column;align-items:flex-end;border-radius:3px;padding:0 2px;}' +
+      '.blok-ar{direction:rtl;font-size:1em;line-height:inherit;}' +
+      '.blok-tr{direction:ltr;text-align:left;}' + '\n' + PALET.map(function (c, i) {
       return 'body.renk-acik .rk[data-c="' + i + '"]{background:' + c + ';border-radius:3px;}';
     }).join('\n') + '\nbody.renk-acik .rk{padding:0 1px;}';
     document.head.appendChild(s);
