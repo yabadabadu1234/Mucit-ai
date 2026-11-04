@@ -37,6 +37,7 @@ CONFIG_PATH = BASE_DIR / "derleme_yapilandirma.json"
 PARCA_DIR = BASE_DIR / "parcalar"
 MOD_AYAR = {"mod": "gelistirme"}
 TEMBEL = {"acik": False}
+SANAL_KATSAYI = 0.095
 
 PARCA_JS = """
 function parcaGetir(ad){
@@ -347,12 +348,7 @@ def detay_bolumu(segments, agac_segmentler, verse_dict):
             kartlar = "".join(_kart(renk, v, "", verse_dict) for v in range(seg["start"], seg["end"] + 1))
             govde = f'<div class="ag-yatay"><div class="ag-sutun" style="flex-grow:1;"><div class="ag-kart-stack ag-cok-sutun">{kartlar}</div></div></div>'
         bloklar.append(f'<div class="ag-blok">{ust}{govde}</div>')
-    ic = "".join(bloklar)
-    kart_say = ic.count('class="ag-kart"')
-    tahmin = kart_say * 54 + len(bloklar) * 100
-    ic = ic.replace("</script", "<\\/script")
-    return (f'<div class="ag-ayrintili ag-sanal" data-tahmin="{tahmin}">'
-            f'<script type="text/x-sanal">{ic}</script></div>')
+    return f'<div class="ag-ayrintili">{"".join(bloklar)}</div>'
 
 
 def lazy_metin(sno, ad, html_icerik):
@@ -901,9 +897,12 @@ def build_unified_html(config, surahs_data):
                             f'<div class="sure-detay">{detail_content}</div>')
                     sure_elements.append(chart_section_html)
 
+                sure_ic = "".join(sure_elements)
+                tahmin = int(1800 + len(sure_ic) * SANAL_KATSAYI)
+                sure_ic = sure_ic.replace("</script", "<\\/script")
                 body_sections.append(f"""
-                <div class="page sure-page" id="sure-{sno}">
-                  {"".join(sure_elements)}
+                <div class="page sure-page ag-sanal" id="sure-{sno}" data-tahmin="{tahmin}">
+                  <script type="text/x-sanal">{sure_ic}</script>
                 </div>
                 """)
 

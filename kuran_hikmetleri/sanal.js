@@ -68,5 +68,9 @@
     hazirla();
     gozle();
     hedefeGit();
+    if (location.hash) {
+      setTimeout(hedefeGit, 400);
+      setTimeout(hedefeGit, 1200);
+    }
   });
 })();
