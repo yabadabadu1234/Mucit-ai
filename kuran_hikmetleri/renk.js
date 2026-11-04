@@ -343,14 +343,25 @@
         if (!(n in SOZLUK)) SOZLUK[n] = veri[k];
       });
       stil();
-      var arlar = document.querySelectorAll('.verse-ar');
-      arlar.forEach(function (arEl) {
-        var kart = arEl.closest('.ag-kart, .ayet, .ayet-d, .verse') || arEl.parentElement;
-        var trEl = kart ? kart.querySelector('.verse-tr') : null;
-        if (trEl) ayetiIsle(arEl, trEl);
-      });
+      var arlar = Array.prototype.slice.call(document.querySelectorAll('.verse-ar'));
+      var i = 0;
       document.body.classList.add('renk-acik');
-      dugme.disabled = false; dugme.textContent = 'Renkli anlam: açık / kapalı';
+      function parca() {
+        var son = Math.min(i + 150, arlar.length);
+        for (; i < son; i++) {
+          var arEl = arlar[i];
+          var kart = arEl.closest('.ag-kart, .ayet, .ayet-d, .verse') || arEl.parentElement;
+          var trEl = kart ? kart.querySelector('.verse-tr') : null;
+          if (trEl) ayetiIsle(arEl, trEl);
+        }
+        if (i < arlar.length) {
+          dugme.textContent = 'Renkler işleniyor… ' + Math.round(100 * i / arlar.length) + '%';
+          setTimeout(parca, 0);
+        } else {
+          dugme.disabled = false; dugme.textContent = 'Renkli anlam: açık / kapalı';
+        }
+      }
+      parca();
     }).catch(function () {
       dugme.disabled = false; dugme.textContent = 'Renk verisi yüklenemedi';
     });
