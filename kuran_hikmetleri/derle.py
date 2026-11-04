@@ -347,7 +347,12 @@ def detay_bolumu(segments, agac_segmentler, verse_dict):
             kartlar = "".join(_kart(renk, v, "", verse_dict) for v in range(seg["start"], seg["end"] + 1))
             govde = f'<div class="ag-yatay"><div class="ag-sutun" style="flex-grow:1;"><div class="ag-kart-stack ag-cok-sutun">{kartlar}</div></div></div>'
         bloklar.append(f'<div class="ag-blok">{ust}{govde}</div>')
-    return f'<div class="ag-ayrintili">{"".join(bloklar)}</div>'
+    ic = "".join(bloklar)
+    kart_say = ic.count('class="ag-kart"')
+    tahmin = kart_say * 54 + len(bloklar) * 100
+    ic = ic.replace("</script", "<\\/script")
+    return (f'<div class="ag-ayrintili ag-sanal" data-tahmin="{tahmin}">'
+            f'<script type="text/x-sanal">{ic}</script></div>')
 
 
 def lazy_metin(sno, ad, html_icerik):
@@ -1595,6 +1600,7 @@ window.addEventListener('resize', kaydirmaIsle);
 gorunenleriYukle();
 </script>
 {SURUM_KONTROLU_SCRIPT}
+<script src="sanal.js" defer></script>
 <script src="renk.js" defer></script>
 </body>
 </html>

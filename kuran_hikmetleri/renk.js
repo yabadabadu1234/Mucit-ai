@@ -367,6 +367,17 @@
     });
   }
 
+  document.addEventListener('sanal-render', function (e) {
+    if (!SOZLUK) return;
+    var arlar = e.detail.querySelectorAll('.verse-ar');
+    for (var i = 0; i < arlar.length; i++) {
+      var arEl = arlar[i];
+      var kart = arEl.closest('.ag-kart, .ayet, .ayet-d, .verse') || arEl.parentElement;
+      var trEl = kart ? kart.querySelector('.verse-tr') : null;
+      if (trEl) ayetiIsle(arEl, trEl);
+    }
+  });
+
   document.addEventListener('DOMContentLoaded', function () {
     var dugme = document.createElement('button');
     dugme.textContent = 'Renkli anlam';
