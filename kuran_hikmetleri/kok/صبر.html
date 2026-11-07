@@ -89,6 +89,16 @@ ol.netice { padding-left:20px; } ol.netice li { margin:10px 0; }
 .sinir { background:#fffbeb; border-left:4px solid #d97706; padding:10px 14px; border-radius:6px; font-size:10.5pt; }
 @media (max-width:620px) { .formul .satir { grid-template-columns:1fr; gap:2px; } table.roller { font-size:9pt; } }
 @media (prefers-color-scheme:dark) { table.roller th { background:#1a2438; } table.roller tr.vur td { background:#1c1608; } .sinir { background:#1c1608; } svg.sema .K { stroke:#f87171; color:#f87171; } svg.sema .don { stroke:#34d399; color:#34d399; } }
+
+.gvtaban { display:flex; gap:14px; align-items:center; margin:12px 0; } .gvnot { color:var(--sessiz); font-size:10pt; }
+.gvizgara { display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:12px; margin:12px 0; }
+figure.gv { margin:0; background:#fff; border:1px solid var(--cizgi); border-radius:12px; padding:8px 8px 10px; }
+figure.gv .gvs svg { width:100%; height:auto; display:block; }
+figure.gv figcaption { text-align:center; padding-top:4px; color:#0f172a; }
+figure.gv .ar { font-family:'Amiri',serif; font-size:17pt; }
+.gvtaban .gvs { background:#fff; border:1px solid var(--cizgi); border-radius:12px; padding:8px; flex:0 1 210px; } .gvtaban .gvs svg { width:100%; height:auto; display:block; }
+.rz { font-size:8.5pt; padding:1px 8px; border-radius:99px; color:#fff; } .rz.y { background:#15803d; } .rz.t { background:#64748b; }
+pre.kod { white-space:pre-wrap; font-size:9pt; line-height:1.45; overflow:auto; }
 @media (max-width:560px) { .harfler { font-size:48pt; } .imge { font-size:15pt; } }
 @media (prefers-color-scheme:dark) {
   :root { --zemin:#0b1220; --kart:#111a2c; --yazi:#e2e8f0; --sessiz:#94a3b8; --cizgi:#243247; --vurgu:#fbbf24; }
@@ -180,6 +190,720 @@ ol.netice { padding-left:20px; } ol.netice li { margin:10px 0; }
 
 <p class="sinir"><b>Sınır.</b> Bu bir <i>düşünme aletidir</i>, hüküm değildir. Tablodaki «yazılı» satırlar lügatte açıkça geçer; «tahmin» satırları âyet bağlamından kuruldu. Formüllerdeki ε, λ, K ölçülmüş sayılar değildir; yalnız ilişkiyi gösterir. Asıl sınanacak şey, aynı rol şemasının başka köklerde de (cez', rızâ, şükür) bu kadar az kuralla işleyip işlemediğidir.</p>
 </div>
+
+<h2>Şema: tek graf, dokuz yeniden yazma <small>Graphviz · gvpr</small></h2><div class="cebir"><p class="giris">Aşağıdaki dokuz şeklin dokuzu de <b>aynı</b> sahne grafından çıkar. Graf bir kez çizildi; her mânâ onun <b>gvpr</b> ile yeniden yazılmasıdır. İki kural yeter: <b>(1) doldur</b>: dört rolün yerine o mânânın tutanı, tutulanı, yeri ve çekeni konur. <b>(2) birleştir</b>: tutan ile tutulan aynıysa iki düğüm tek düğüm olur ve «tutar» oku kendine döner. İşte sabır budur. <b>(3) kes</b>: tutma kenarı kesilir. Cez' budur: <i>sabır</i> grafına kesme kuralı uygulanmış hâli.</p><div class="gvtaban"><div class="gvs"><svg width="144pt" height="213pt"
+ viewBox="0.00 0.00 144.11 213.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(18 195)">
+<title>sahne</title>
+<polygon fill="#ffffff" stroke="transparent" points="-18,18 -18,-195 126.11,-195 126.11,18 -18,18"/>
+<!-- T -->
+<g id="node1" class="node">
+<title>T</title>
+<text text-anchor="middle" x="10.11" y="-165.8" font-family="Helvetica,sans-Serif" font-size="14.00">T</text>
+</g>
+<!-- M -->
+<g id="node2" class="node">
+<title>M</title>
+<text text-anchor="middle" x="51.11" y="-84.8" font-family="Helvetica,sans-Serif" font-size="14.00">M</text>
+</g>
+<!-- T&#45;&gt;M -->
+<g id="edge1" class="edge">
+<title>T&#45;&gt;M</title>
+<path fill="none" stroke="#0f766e" stroke-width="2.2" d="M6.72,-161.92C2.48,-152.68 -3.47,-135.61 3.11,-123 9.73,-110.3 23.61,-101.43 34.75,-96.02"/>
+<polygon fill="#0f766e" stroke="#0f766e" stroke-width="2.2" points="36.49,-99.08 44.26,-91.89 33.7,-92.66 36.49,-99.08"/>
+<text text-anchor="middle" x="17.11" y="-126.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#0f766e">tutar</text>
+</g>
+<!-- p -->
+<g id="node3" class="node">
+<title>p</title>
+<text text-anchor="middle" x="51.11" y="-3.8" font-family="Helvetica,sans-Serif" font-size="14.00">p</text>
+</g>
+<!-- M&#45;&gt;p -->
+<g id="edge3" class="edge">
+<title>M&#45;&gt;p</title>
+<path fill="none" stroke="#475569" stroke-dasharray="5,2" d="M51.11,-80.76C51.11,-68.64 51.11,-42.79 51.11,-25.52"/>
+<polygon fill="#475569" stroke="#475569" points="54.61,-25.22 51.11,-15.22 47.61,-25.22 54.61,-25.22"/>
+<text text-anchor="middle" x="79.61" y="-45.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#475569">p&#39;de durur</text>
+</g>
+<!-- K -->
+<g id="node4" class="node">
+<title>K</title>
+<text text-anchor="middle" x="93.11" y="-165.8" font-family="Helvetica,sans-Serif" font-size="14.00">K</text>
+</g>
+<!-- K&#45;&gt;M -->
+<g id="edge2" class="edge">
+<title>K&#45;&gt;M</title>
+<path fill="none" stroke="#b91c1c" stroke-width="2.2" d="M89.53,-161.76C82.89,-149.29 68.54,-122.29 59.38,-105.05"/>
+<polygon fill="#b91c1c" stroke="#b91c1c" stroke-width="2.2" points="62.46,-103.41 54.68,-96.22 56.28,-106.69 62.46,-103.41"/>
+<text text-anchor="middle" x="89.61" y="-126.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#b91c1c">çeker</text>
+</g>
+</g>
+</svg>
+</div><div class="gvnot">Taban graf: boş sahne</div></div><div class="gvizgara"><figure class="gv"><div class="gvs"><svg width="266pt" height="377pt"
+ viewBox="0.00 0.00 265.50 377.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(18 359)">
+<title>sahne</title>
+<polygon fill="#ffffff" stroke="transparent" points="-18,18 -18,-359 247.5,-359 247.5,18 -18,18"/>
+<text text-anchor="start" x="39.25" y="-326.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">ölüm için bağlamak</text>
+<!-- T -->
+<g id="node1" class="node">
+<title>T</title>
+<polygon fill="#ccfbf1" stroke="transparent" points="0,-287 0,-318 68,-318 68,-287 0,-287"/>
+<polygon fill="none" stroke="black" points="0,-287 0,-318 68,-318 68,-287 0,-287"/>
+<text text-anchor="start" x="8" y="-299.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">T</text>
+<text text-anchor="start" x="18" y="-299.8" font-family="Helvetica,sans-Serif" font-size="14.00"> tutan</text>
+<polygon fill="none" stroke="black" points="0,-256 0,-287 68,-287 68,-256 0,-256"/>
+<text text-anchor="start" x="12.5" y="-267.8" font-family="Helvetica,sans-Serif" font-size="14.00">hâkim</text>
+</g>
+<!-- M -->
+<g id="node2" class="node">
+<title>M</title>
+<polygon fill="#fde68a" stroke="transparent" points="61,-159 61,-190 147,-190 147,-159 61,-159"/>
+<polygon fill="none" stroke="black" points="61,-159 61,-190 147,-190 147,-159 61,-159"/>
+<text text-anchor="start" x="69" y="-171.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">M</text>
+<text text-anchor="start" x="84" y="-171.8" font-family="Helvetica,sans-Serif" font-size="14.00"> tutulan</text>
+<polygon fill="none" stroke="black" points="61,-128 61,-159 147,-159 147,-128 61,-128"/>
+<text text-anchor="start" x="84" y="-139.8" font-family="Helvetica,sans-Serif" font-size="14.00">adam</text>
+</g>
+<!-- T&#45;&gt;M -->
+<g id="edge1" class="edge">
+<title>T&#45;&gt;M</title>
+<path fill="none" stroke="#0f766e" stroke-width="2.2" d="M50.77,-255.82C60.14,-238.96 71.92,-217.74 82.02,-199.56"/>
+<polygon fill="#0f766e" stroke="#0f766e" stroke-width="2.2" points="85.33,-200.81 87.13,-190.37 79.21,-197.41 85.33,-200.81"/>
+<text text-anchor="middle" x="86" y="-220.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#0f766e">tutar</text>
+</g>
+<!-- p -->
+<g id="node3" class="node">
+<title>p</title>
+<polygon fill="#e2e8f0" stroke="transparent" points="63,-31 63,-62 145,-62 145,-31 63,-31"/>
+<polygon fill="none" stroke="black" points="63,-31 63,-62 145,-62 145,-31 63,-31"/>
+<text text-anchor="start" x="85" y="-43.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">p</text>
+<text text-anchor="start" x="95" y="-43.8" font-family="Helvetica,sans-Serif" font-size="14.00"> yer</text>
+<polygon fill="none" stroke="black" points="63,0 63,-31 145,-31 145,0 63,0"/>
+<text text-anchor="start" x="71" y="-11.8" font-family="Helvetica,sans-Serif" font-size="14.00">idam yeri</text>
+</g>
+<!-- M&#45;&gt;p -->
+<g id="edge2" class="edge">
+<title>M&#45;&gt;p</title>
+<path fill="none" stroke="#475569" stroke-dasharray="5,2" d="M104,-127.82C104,-111.27 104,-90.52 104,-72.56"/>
+<polygon fill="#475569" stroke="#475569" points="107.5,-72.37 104,-62.37 100.5,-72.37 107.5,-72.37"/>
+<text text-anchor="middle" x="132.5" y="-92.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#475569">p&#39;de durur</text>
+</g>
+<!-- K -->
+<g id="node4" class="node">
+<title>K</title>
+<polygon fill="#fecaca" stroke="transparent" points="119,-287 119,-318 230,-318 230,-287 119,-287"/>
+<polygon fill="none" stroke="black" points="119,-287 119,-318 230,-318 230,-287 119,-287"/>
+<text text-anchor="start" x="146" y="-299.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">K</text>
+<text text-anchor="start" x="157" y="-299.8" font-family="Helvetica,sans-Serif" font-size="14.00"> çeken</text>
+<polygon fill="none" stroke="black" points="119,-256 119,-287 230,-287 230,-256 119,-256"/>
+<text text-anchor="start" x="127" y="-267.8" font-family="Helvetica,sans-Serif" font-size="14.00">adamın kaçışı</text>
+</g>
+<!-- K&#45;&gt;M -->
+<g id="edge3" class="edge">
+<title>K&#45;&gt;M</title>
+<path fill="none" stroke="#b91c1c" stroke-width="2.2" d="M157.23,-255.82C147.86,-238.96 136.08,-217.74 125.98,-199.56"/>
+<polygon fill="#b91c1c" stroke="#b91c1c" stroke-width="2.2" points="128.79,-197.41 120.87,-190.37 122.67,-200.81 128.79,-197.41"/>
+<text text-anchor="middle" x="156.5" y="-220.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#b91c1c">çeker</text>
+</g>
+</g>
+</svg>
+</div><figcaption><span class="ar">قُتِلَ صَبْراً</span> <span class="rz y">yazılı</span></figcaption></figure><figure class="gv"><div class="gvs"><svg width="280pt" height="377pt"
+ viewBox="0.00 0.00 279.50 377.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(18 359)">
+<title>sahne</title>
+<polygon fill="#ffffff" stroke="transparent" points="-18,18 -18,-359 261.5,-359 261.5,18 -18,18"/>
+<text text-anchor="start" x="40.25" y="-326.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">yemin için alıkoymak</text>
+<!-- T -->
+<g id="node1" class="node">
+<title>T</title>
+<polygon fill="#ccfbf1" stroke="transparent" points="0,-287 0,-318 68,-318 68,-287 0,-287"/>
+<polygon fill="none" stroke="black" points="0,-287 0,-318 68,-318 68,-287 0,-287"/>
+<text text-anchor="start" x="8" y="-299.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">T</text>
+<text text-anchor="start" x="18" y="-299.8" font-family="Helvetica,sans-Serif" font-size="14.00"> tutan</text>
+<polygon fill="none" stroke="black" points="0,-256 0,-287 68,-287 68,-256 0,-256"/>
+<text text-anchor="start" x="12.5" y="-267.8" font-family="Helvetica,sans-Serif" font-size="14.00">hâkim</text>
+</g>
+<!-- M -->
+<g id="node2" class="node">
+<title>M</title>
+<polygon fill="#fde68a" stroke="transparent" points="64,-159 64,-190 150,-190 150,-159 64,-159"/>
+<polygon fill="none" stroke="black" points="64,-159 64,-190 150,-190 150,-159 64,-159"/>
+<text text-anchor="start" x="72" y="-171.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">M</text>
+<text text-anchor="start" x="87" y="-171.8" font-family="Helvetica,sans-Serif" font-size="14.00"> tutulan</text>
+<polygon fill="none" stroke="black" points="64,-128 64,-159 150,-159 150,-128 64,-128"/>
+<text text-anchor="start" x="95" y="-139.8" font-family="Helvetica,sans-Serif" font-size="14.00">kişi</text>
+</g>
+<!-- T&#45;&gt;M -->
+<g id="edge1" class="edge">
+<title>T&#45;&gt;M</title>
+<path fill="none" stroke="#0f766e" stroke-width="2.2" d="M51.49,-255.82C61.35,-238.8 73.77,-217.35 84.37,-199.06"/>
+<polygon fill="#0f766e" stroke="#0f766e" stroke-width="2.2" points="87.42,-200.78 89.4,-190.37 81.36,-197.27 87.42,-200.78"/>
+<text text-anchor="middle" x="87" y="-220.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#0f766e">tutar</text>
+</g>
+<!-- p -->
+<g id="node3" class="node">
+<title>p</title>
+<polygon fill="#e2e8f0" stroke="transparent" points="51,-31 51,-62 163,-62 163,-31 51,-31"/>
+<polygon fill="none" stroke="black" points="51,-31 51,-62 163,-62 163,-31 51,-31"/>
+<text text-anchor="start" x="88" y="-43.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">p</text>
+<text text-anchor="start" x="98" y="-43.8" font-family="Helvetica,sans-Serif" font-size="14.00"> yer</text>
+<polygon fill="none" stroke="black" points="51,0 51,-31 163,-31 163,0 51,0"/>
+<text text-anchor="start" x="59" y="-11.8" font-family="Helvetica,sans-Serif" font-size="14.00">yemin meclisi</text>
+</g>
+<!-- M&#45;&gt;p -->
+<g id="edge2" class="edge">
+<title>M&#45;&gt;p</title>
+<path fill="none" stroke="#475569" stroke-dasharray="5,2" d="M107,-127.82C107,-111.27 107,-90.52 107,-72.56"/>
+<polygon fill="#475569" stroke="#475569" points="110.5,-72.37 107,-62.37 103.5,-72.37 110.5,-72.37"/>
+<text text-anchor="middle" x="135.5" y="-92.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#475569">p&#39;de durur</text>
+</g>
+<!-- K -->
+<g id="node4" class="node">
+<title>K</title>
+<polygon fill="#fecaca" stroke="transparent" points="119,-287 119,-318 244,-318 244,-287 119,-287"/>
+<polygon fill="none" stroke="black" points="119,-287 119,-318 244,-318 244,-287 119,-287"/>
+<text text-anchor="start" x="153" y="-299.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">K</text>
+<text text-anchor="start" x="164" y="-299.8" font-family="Helvetica,sans-Serif" font-size="14.00"> çeken</text>
+<polygon fill="none" stroke="black" points="119,-256 119,-287 244,-287 244,-256 119,-256"/>
+<text text-anchor="start" x="127" y="-267.8" font-family="Helvetica,sans-Serif" font-size="14.00">kişinin dönmesi</text>
+</g>
+<!-- K&#45;&gt;M -->
+<g id="edge3" class="edge">
+<title>K&#45;&gt;M</title>
+<path fill="none" stroke="#b91c1c" stroke-width="2.2" d="M163.28,-255.82C153.28,-238.8 140.68,-217.35 129.94,-199.06"/>
+<polygon fill="#b91c1c" stroke="#b91c1c" stroke-width="2.2" points="132.92,-197.22 124.84,-190.37 126.88,-200.77 132.92,-197.22"/>
+<text text-anchor="middle" x="161.5" y="-220.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#b91c1c">çeker</text>
+</g>
+</g>
+</svg>
+</div><figcaption><span class="ar">حَلَفَ صَبْراً</span> <span class="rz y">yazılı</span></figcaption></figure><figure class="gv"><div class="gvs"><svg width="228pt" height="377pt"
+ viewBox="0.00 0.00 227.50 377.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(18 359)">
+<title>sahne</title>
+<polygon fill="#ffffff" stroke="transparent" points="-18,18 -18,-359 209.5,-359 209.5,18 -18,18"/>
+<text text-anchor="start" x="52.75" y="-326.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">kefil olmak</text>
+<!-- T -->
+<g id="node1" class="node">
+<title>T</title>
+<polygon fill="#ccfbf1" stroke="transparent" points="0,-287 0,-318 68,-318 68,-287 0,-287"/>
+<polygon fill="none" stroke="black" points="0,-287 0,-318 68,-318 68,-287 0,-287"/>
+<text text-anchor="start" x="8" y="-299.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">T</text>
+<text text-anchor="start" x="18" y="-299.8" font-family="Helvetica,sans-Serif" font-size="14.00"> tutan</text>
+<polygon fill="none" stroke="black" points="0,-256 0,-287 68,-287 68,-256 0,-256"/>
+<text text-anchor="start" x="19.5" y="-267.8" font-family="Helvetica,sans-Serif" font-size="14.00">kefil</text>
+</g>
+<!-- M -->
+<g id="node2" class="node">
+<title>M</title>
+<polygon fill="#fde68a" stroke="transparent" points="51,-159 51,-190 137,-190 137,-159 51,-159"/>
+<polygon fill="none" stroke="black" points="51,-159 51,-190 137,-190 137,-159 51,-159"/>
+<text text-anchor="start" x="59" y="-171.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">M</text>
+<text text-anchor="start" x="74" y="-171.8" font-family="Helvetica,sans-Serif" font-size="14.00"> tutulan</text>
+<polygon fill="none" stroke="black" points="51,-128 51,-159 137,-159 137,-128 51,-128"/>
+<text text-anchor="start" x="72.5" y="-139.8" font-family="Helvetica,sans-Serif" font-size="14.00">borçlu</text>
+</g>
+<!-- T&#45;&gt;M -->
+<g id="edge1" class="edge">
+<title>T&#45;&gt;M</title>
+<path fill="none" stroke="#0f766e" stroke-width="2.2" d="M47.11,-255.97C52.52,-243.81 58.93,-229.67 65,-217 67.77,-211.22 70.76,-205.14 73.74,-199.2"/>
+<polygon fill="#0f766e" stroke="#0f766e" stroke-width="2.2" points="76.99,-200.54 78.37,-190.04 70.74,-197.38 76.99,-200.54"/>
+<text text-anchor="middle" x="79" y="-220.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#0f766e">tutar</text>
+</g>
+<!-- p -->
+<g id="node3" class="node">
+<title>p</title>
+<polygon fill="#e2e8f0" stroke="transparent" points="50,-31 50,-62 139,-62 139,-31 50,-31"/>
+<polygon fill="none" stroke="black" points="50,-31 50,-62 139,-62 139,-31 50,-31"/>
+<text text-anchor="start" x="75.5" y="-43.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">p</text>
+<text text-anchor="start" x="85.5" y="-43.8" font-family="Helvetica,sans-Serif" font-size="14.00"> yer</text>
+<polygon fill="none" stroke="black" points="50,0 50,-31 139,-31 139,0 50,0"/>
+<text text-anchor="start" x="58" y="-11.8" font-family="Helvetica,sans-Serif" font-size="14.00">teslim yeri</text>
+</g>
+<!-- M&#45;&gt;p -->
+<g id="edge2" class="edge">
+<title>M&#45;&gt;p</title>
+<path fill="none" stroke="#475569" stroke-dasharray="5,2" d="M94,-127.82C94,-111.27 94,-90.52 94,-72.56"/>
+<polygon fill="#475569" stroke="#475569" points="97.5,-72.37 94,-62.37 90.5,-72.37 97.5,-72.37"/>
+<text text-anchor="middle" x="122.5" y="-92.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#475569">p&#39;de durur</text>
+</g>
+<!-- K -->
+<g id="node4" class="node">
+<title>K</title>
+<polygon fill="#fecaca" stroke="transparent" points="119,-287 119,-318 192,-318 192,-287 119,-287"/>
+<polygon fill="none" stroke="black" points="119,-287 119,-318 192,-318 192,-287 119,-287"/>
+<text text-anchor="start" x="127" y="-299.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">K</text>
+<text text-anchor="start" x="138" y="-299.8" font-family="Helvetica,sans-Serif" font-size="14.00"> çeken</text>
+<polygon fill="none" stroke="black" points="119,-256 119,-287 192,-287 192,-256 119,-256"/>
+<text text-anchor="start" x="132.5" y="-267.8" font-family="Helvetica,sans-Serif" font-size="14.00">kaçma</text>
+</g>
+<!-- K&#45;&gt;M -->
+<g id="edge3" class="edge">
+<title>K&#45;&gt;M</title>
+<path fill="none" stroke="#b91c1c" stroke-width="2.2" d="M140.39,-255.82C132.22,-238.96 121.95,-217.74 113.15,-199.56"/>
+<polygon fill="#b91c1c" stroke="#b91c1c" stroke-width="2.2" points="116.21,-197.85 108.7,-190.37 109.91,-200.9 116.21,-197.85"/>
+<text text-anchor="middle" x="141.5" y="-220.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#b91c1c">çeker</text>
+</g>
+</g>
+</svg>
+</div><figcaption><span class="ar">صَبِير</span> <span class="rz y">yazılı</span></figcaption></figure><figure class="gv"><div class="gvs"><svg width="224pt" height="377pt"
+ viewBox="0.00 0.00 223.50 377.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(18 359)">
+<title>sahne</title>
+<polygon fill="#ffffff" stroke="transparent" points="-18,18 -18,-359 205.5,-359 205.5,18 -18,18"/>
+<text text-anchor="start" x="13.75" y="-326.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">sabır: T ile M birleşir</text>
+<!-- T -->
+<g id="node1" class="node">
+<title>T</title>
+<polygon fill="#ccfbf1" stroke="transparent" points="5.5,-159 5.5,-190 67.5,-190 67.5,-159 5.5,-159"/>
+<polygon fill="none" stroke="black" points="5.5,-159 5.5,-190 67.5,-190 67.5,-159 5.5,-159"/>
+<text text-anchor="start" x="13.5" y="-171.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">T = M</text>
+<polygon fill="none" stroke="black" points="5.5,-128 5.5,-159 67.5,-159 67.5,-128 5.5,-128"/>
+<text text-anchor="start" x="21" y="-139.8" font-family="Helvetica,sans-Serif" font-size="14.00">nefs</text>
+</g>
+<!-- T&#45;&gt;T -->
+<g id="edge1" class="edge">
+<title>T&#45;&gt;T</title>
+<path fill="none" stroke="#0f766e" stroke-width="2.2" d="M67.67,-169.38C92.27,-173.4 117.5,-169.94 117.5,-159 117.5,-149.56 98.69,-145.69 77.73,-147.39"/>
+<polygon fill="#0f766e" stroke="#0f766e" stroke-width="2.2" points="77.17,-143.93 67.67,-148.62 78.02,-150.88 77.17,-143.93"/>
+<text text-anchor="middle" x="152.5" y="-156.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#0f766e">kendini tutar</text>
+</g>
+<!-- p -->
+<g id="node2" class="node">
+<title>p</title>
+<polygon fill="#e2e8f0" stroke="transparent" points="2.5,-31 2.5,-62 70.5,-62 70.5,-31 2.5,-31"/>
+<polygon fill="none" stroke="black" points="2.5,-31 2.5,-62 70.5,-62 70.5,-31 2.5,-31"/>
+<text text-anchor="start" x="17.5" y="-43.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">p</text>
+<text text-anchor="start" x="27.5" y="-43.8" font-family="Helvetica,sans-Serif" font-size="14.00"> yer</text>
+<polygon fill="none" stroke="black" points="2.5,0 2.5,-31 70.5,-31 70.5,0 2.5,0"/>
+<text text-anchor="start" x="10.5" y="-11.8" font-family="Helvetica,sans-Serif" font-size="14.00">maksat</text>
+</g>
+<!-- T&#45;&gt;p -->
+<g id="edge2" class="edge">
+<title>T&#45;&gt;p</title>
+<path fill="none" stroke="#475569" stroke-dasharray="5,2" d="M36.5,-127.82C36.5,-111.27 36.5,-90.52 36.5,-72.56"/>
+<polygon fill="#475569" stroke="#475569" points="40,-72.37 36.5,-62.37 33,-72.37 40,-72.37"/>
+<text text-anchor="middle" x="65" y="-92.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#475569">p&#39;de durur</text>
+</g>
+<!-- K -->
+<g id="node3" class="node">
+<title>K</title>
+<polygon fill="#fecaca" stroke="transparent" points="0.5,-287 0.5,-318 73.5,-318 73.5,-287 0.5,-287"/>
+<polygon fill="none" stroke="black" points="0.5,-287 0.5,-318 73.5,-318 73.5,-287 0.5,-287"/>
+<text text-anchor="start" x="8.5" y="-299.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">K</text>
+<text text-anchor="start" x="19.5" y="-299.8" font-family="Helvetica,sans-Serif" font-size="14.00"> çeken</text>
+<polygon fill="none" stroke="black" points="0.5,-256 0.5,-287 73.5,-287 73.5,-256 0.5,-256"/>
+<text text-anchor="start" x="23" y="-267.8" font-family="Helvetica,sans-Serif" font-size="14.00">cez&#39;</text>
+</g>
+<!-- K&#45;&gt;T -->
+<g id="edge3" class="edge">
+<title>K&#45;&gt;T</title>
+<path fill="none" stroke="#b91c1c" stroke-width="2.2" d="M36.5,-255.82C36.5,-239.27 36.5,-218.52 36.5,-200.56"/>
+<polygon fill="#b91c1c" stroke="#b91c1c" stroke-width="2.2" points="40,-200.37 36.5,-190.37 33,-200.37 40,-200.37"/>
+<text text-anchor="middle" x="52" y="-220.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#b91c1c">çeker</text>
+</g>
+</g>
+</svg>
+</div><figcaption><span class="ar">صَبْر</span> <span class="rz y">yazılı</span></figcaption></figure><figure class="gv"><div class="gvs"><svg width="352pt" height="377pt"
+ viewBox="0.00 0.00 352.00 377.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(18 359)">
+<title>sahne</title>
+<polygon fill="#ffffff" stroke="transparent" points="-18,18 -18,-359 334,-359 334,18 -18,18"/>
+<text text-anchor="start" x="8" y="-326.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">cez&#39;: sabır grafı, tutma kenarı kesilmiş</text>
+<!-- T -->
+<g id="node1" class="node">
+<title>T</title>
+<polygon fill="#ccfbf1" stroke="transparent" points="81.75,-159 81.75,-190 143.75,-190 143.75,-159 81.75,-159"/>
+<polygon fill="none" stroke="black" points="81.75,-159 81.75,-190 143.75,-190 143.75,-159 81.75,-159"/>
+<text text-anchor="start" x="89.75" y="-171.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">T = M</text>
+<polygon fill="none" stroke="black" points="81.75,-128 81.75,-159 143.75,-159 143.75,-128 81.75,-128"/>
+<text text-anchor="start" x="97.25" y="-139.8" font-family="Helvetica,sans-Serif" font-size="14.00">nefs</text>
+</g>
+<!-- T&#45;&gt;T -->
+<g id="edge1" class="edge">
+<title>T&#45;&gt;T</title>
+<path fill="none" stroke="#b91c1c" stroke-width="2.2" stroke-dasharray="5,2" d="M143.92,-169.38C168.52,-173.4 193.75,-169.94 193.75,-159 193.75,-149.56 174.94,-145.69 153.98,-147.39"/>
+<polygon fill="#b91c1c" stroke="#b91c1c" stroke-width="2.2" points="153.42,-143.93 143.92,-148.62 154.27,-150.88 153.42,-143.93"/>
+<text text-anchor="middle" x="216.75" y="-156.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#b91c1c">tutamaz</text>
+</g>
+<!-- p -->
+<g id="node2" class="node">
+<title>p</title>
+<polygon fill="#e2e8f0" stroke="transparent" points="78.75,-31 78.75,-62 146.75,-62 146.75,-31 78.75,-31"/>
+<polygon fill="none" stroke="black" points="78.75,-31 78.75,-62 146.75,-62 146.75,-31 78.75,-31"/>
+<text text-anchor="start" x="93.75" y="-43.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">p</text>
+<text text-anchor="start" x="103.75" y="-43.8" font-family="Helvetica,sans-Serif" font-size="14.00"> yer</text>
+<polygon fill="none" stroke="black" points="78.75,0 78.75,-31 146.75,-31 146.75,0 78.75,0"/>
+<text text-anchor="start" x="86.75" y="-11.8" font-family="Helvetica,sans-Serif" font-size="14.00">maksat</text>
+</g>
+<!-- T&#45;&gt;p -->
+<g id="edge2" class="edge">
+<title>T&#45;&gt;p</title>
+<path fill="none" stroke="#b91c1c" stroke-dasharray="1,5" d="M112.75,-127.82C112.75,-111.27 112.75,-90.52 112.75,-72.56"/>
+<polygon fill="#b91c1c" stroke="#b91c1c" points="116.25,-72.37 112.75,-62.37 109.25,-72.37 116.25,-72.37"/>
+<text text-anchor="middle" x="145.75" y="-92.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#b91c1c">p&#39;den ayrılır</text>
+</g>
+<!-- K -->
+<g id="node3" class="node">
+<title>K</title>
+<polygon fill="#fecaca" stroke="transparent" points="76.75,-287 76.75,-318 149.75,-318 149.75,-287 76.75,-287"/>
+<polygon fill="none" stroke="black" points="76.75,-287 76.75,-318 149.75,-318 149.75,-287 76.75,-287"/>
+<text text-anchor="start" x="84.75" y="-299.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">K</text>
+<text text-anchor="start" x="95.75" y="-299.8" font-family="Helvetica,sans-Serif" font-size="14.00"> çeken</text>
+<polygon fill="none" stroke="black" points="76.75,-256 76.75,-287 149.75,-287 149.75,-256 76.75,-256"/>
+<text text-anchor="start" x="99.25" y="-267.8" font-family="Helvetica,sans-Serif" font-size="14.00">cez&#39;</text>
+</g>
+<!-- K&#45;&gt;T -->
+<g id="edge3" class="edge">
+<title>K&#45;&gt;T</title>
+<path fill="none" stroke="#b91c1c" stroke-width="2.2" d="M112.75,-255.82C112.75,-239.27 112.75,-218.52 112.75,-200.56"/>
+<polygon fill="#b91c1c" stroke="#b91c1c" stroke-width="2.2" points="116.25,-200.37 112.75,-190.37 109.25,-200.37 116.25,-200.37"/>
+<text text-anchor="middle" x="128.25" y="-220.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#b91c1c">çeker</text>
+</g>
+</g>
+</svg>
+</div><figcaption><span class="ar">جَزَع</span> <span class="rz y">yazılı</span></figcaption></figure><figure class="gv"><div class="gvs"><svg width="360pt" height="377pt"
+ viewBox="0.00 0.00 360.00 377.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(18 359)">
+<title>sahne</title>
+<polygon fill="#ffffff" stroke="transparent" points="-18,18 -18,-359 342,-359 342,18 -18,18"/>
+<text text-anchor="start" x="101" y="-326.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">şikâyeti tutmak</text>
+<!-- T -->
+<g id="node1" class="node">
+<title>T</title>
+<polygon fill="#ccfbf1" stroke="transparent" points="0,-287 0,-318 68,-318 68,-287 0,-287"/>
+<polygon fill="none" stroke="black" points="0,-287 0,-318 68,-318 68,-287 0,-287"/>
+<text text-anchor="start" x="8" y="-299.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">T</text>
+<text text-anchor="start" x="18" y="-299.8" font-family="Helvetica,sans-Serif" font-size="14.00"> tutan</text>
+<polygon fill="none" stroke="black" points="0,-256 0,-287 68,-287 68,-256 0,-256"/>
+<text text-anchor="start" x="18.5" y="-267.8" font-family="Helvetica,sans-Serif" font-size="14.00">nefs</text>
+</g>
+<!-- M -->
+<g id="node2" class="node">
+<title>M</title>
+<polygon fill="#fde68a" stroke="transparent" points="84,-159 84,-190 170,-190 170,-159 84,-159"/>
+<polygon fill="none" stroke="black" points="84,-159 84,-190 170,-190 170,-159 84,-159"/>
+<text text-anchor="start" x="92" y="-171.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">M</text>
+<text text-anchor="start" x="107" y="-171.8" font-family="Helvetica,sans-Serif" font-size="14.00"> tutulan</text>
+<polygon fill="none" stroke="black" points="84,-128 84,-159 170,-159 170,-128 84,-128"/>
+<text text-anchor="start" x="102.5" y="-139.8" font-family="Helvetica,sans-Serif" font-size="14.00">şikâyet</text>
+</g>
+<!-- T&#45;&gt;M -->
+<g id="edge1" class="edge">
+<title>T&#45;&gt;M</title>
+<path fill="none" stroke="#0f766e" stroke-width="2.2" d="M56.28,-255.82C68.95,-238.65 84.96,-216.96 98.54,-198.56"/>
+<polygon fill="#0f766e" stroke="#0f766e" stroke-width="2.2" points="101.46,-200.49 104.58,-190.37 95.83,-196.34 101.46,-200.49"/>
+<text text-anchor="middle" x="98" y="-220.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#0f766e">tutar</text>
+</g>
+<!-- p -->
+<g id="node3" class="node">
+<title>p</title>
+<polygon fill="#e2e8f0" stroke="transparent" points="60,-31 60,-62 195,-62 195,-31 60,-31"/>
+<polygon fill="none" stroke="black" points="60,-31 60,-62 195,-62 195,-31 60,-31"/>
+<text text-anchor="start" x="108.5" y="-43.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">p</text>
+<text text-anchor="start" x="118.5" y="-43.8" font-family="Helvetica,sans-Serif" font-size="14.00"> yer</text>
+<polygon fill="none" stroke="black" points="60,0 60,-31 195,-31 195,0 60,0"/>
+<text text-anchor="start" x="68" y="-11.8" font-family="Helvetica,sans-Serif" font-size="14.00">Allah&#39;a yönelmek</text>
+</g>
+<!-- M&#45;&gt;p -->
+<g id="edge2" class="edge">
+<title>M&#45;&gt;p</title>
+<path fill="none" stroke="#475569" stroke-dasharray="5,2" d="M121.8,-127.81C120.29,-115.76 119.22,-101.74 120,-89 120.33,-83.53 120.85,-77.77 121.45,-72.12"/>
+<polygon fill="#475569" stroke="#475569" points="124.93,-72.45 122.6,-62.11 117.98,-71.64 124.93,-72.45"/>
+<text text-anchor="middle" x="148.5" y="-92.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#475569">p&#39;de durur</text>
+</g>
+<!-- M&#45;&gt;p -->
+<g id="edge3" class="edge">
+<title>M&#45;&gt;p</title>
+<path fill="none" stroke="#0f766e" stroke-width="2.2" d="M166.55,-127.76C174.05,-119.94 180.85,-110.9 185,-101 189.63,-89.95 186.31,-79.34 179.37,-69.89"/>
+<polygon fill="#0f766e" stroke="#0f766e" stroke-width="2.2" points="181.96,-67.54 172.79,-62.24 176.66,-72.11 181.96,-67.54"/>
+<text text-anchor="middle" x="238.5" y="-92.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#0f766e">şikâyet p&#39;ye döner</text>
+</g>
+<!-- K -->
+<g id="node4" class="node">
+<title>K</title>
+<polygon fill="#fecaca" stroke="transparent" points="118,-287 118,-318 324,-318 324,-287 118,-287"/>
+<polygon fill="none" stroke="black" points="118,-287 118,-318 324,-318 324,-287 118,-287"/>
+<text text-anchor="start" x="192.5" y="-299.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">K</text>
+<text text-anchor="start" x="203.5" y="-299.8" font-family="Helvetica,sans-Serif" font-size="14.00"> çeken</text>
+<polygon fill="none" stroke="black" points="118,-256 118,-287 324,-287 324,-256 118,-256"/>
+<text text-anchor="start" x="126" y="-267.8" font-family="Helvetica,sans-Serif" font-size="14.00">şikâyetin başkasına akması</text>
+</g>
+<!-- K&#45;&gt;M -->
+<g id="edge4" class="edge">
+<title>K&#45;&gt;M</title>
+<path fill="none" stroke="#b91c1c" stroke-width="2.2" d="M198.48,-255.82C185.67,-238.65 169.49,-216.96 155.77,-198.56"/>
+<polygon fill="#b91c1c" stroke="#b91c1c" stroke-width="2.2" points="158.44,-196.29 149.66,-190.37 152.83,-200.48 158.44,-196.29"/>
+<text text-anchor="middle" x="191.5" y="-220.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#b91c1c">çeker</text>
+</g>
+</g>
+</svg>
+</div><figcaption><span class="ar">صَبْرٌ جَمِيلٌ</span> <span class="rz t">tahmin</span></figcaption></figure><figure class="gv"><div class="gvs"><svg width="280pt" height="377pt"
+ viewBox="0.00 0.00 279.50 377.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(18 359)">
+<title>sahne</title>
+<polygon fill="#ffffff" stroke="transparent" points="-18,18 -18,-359 261.5,-359 261.5,18 -18,18"/>
+<text text-anchor="start" x="16.25" y="-326.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">düşman karşısında durmak</text>
+<!-- T -->
+<g id="node1" class="node">
+<title>T</title>
+<polygon fill="#ccfbf1" stroke="transparent" points="0,-287 0,-318 68,-318 68,-287 0,-287"/>
+<polygon fill="none" stroke="black" points="0,-287 0,-318 68,-318 68,-287 0,-287"/>
+<text text-anchor="start" x="8" y="-299.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">T</text>
+<text text-anchor="start" x="18" y="-299.8" font-family="Helvetica,sans-Serif" font-size="14.00"> tutan</text>
+<polygon fill="none" stroke="black" points="0,-256 0,-287 68,-287 68,-256 0,-256"/>
+<text text-anchor="start" x="8" y="-267.8" font-family="Helvetica,sans-Serif" font-size="14.00">cemaat</text>
+</g>
+<!-- M -->
+<g id="node2" class="node">
+<title>M</title>
+<polygon fill="#fde68a" stroke="transparent" points="63,-159 63,-190 151,-190 151,-159 63,-159"/>
+<polygon fill="none" stroke="black" points="63,-159 63,-190 151,-190 151,-159 63,-159"/>
+<text text-anchor="start" x="72" y="-171.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">M</text>
+<text text-anchor="start" x="87" y="-171.8" font-family="Helvetica,sans-Serif" font-size="14.00"> tutulan</text>
+<polygon fill="none" stroke="black" points="63,-128 63,-159 151,-159 151,-128 63,-128"/>
+<text text-anchor="start" x="71" y="-139.8" font-family="Helvetica,sans-Serif" font-size="14.00">saf, mevzi</text>
+</g>
+<!-- T&#45;&gt;M -->
+<g id="edge1" class="edge">
+<title>T&#45;&gt;M</title>
+<path fill="none" stroke="#0f766e" stroke-width="2.2" d="M51.49,-255.82C61.35,-238.8 73.77,-217.35 84.37,-199.06"/>
+<polygon fill="#0f766e" stroke="#0f766e" stroke-width="2.2" points="87.42,-200.78 89.4,-190.37 81.36,-197.27 87.42,-200.78"/>
+<text text-anchor="middle" x="87" y="-220.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#0f766e">tutar</text>
+</g>
+<!-- p -->
+<g id="node3" class="node">
+<title>p</title>
+<polygon fill="#e2e8f0" stroke="transparent" points="78,-31 78,-62 136,-62 136,-31 78,-31"/>
+<polygon fill="none" stroke="black" points="78,-31 78,-62 136,-62 136,-31 78,-31"/>
+<text text-anchor="start" x="88" y="-43.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">p</text>
+<text text-anchor="start" x="98" y="-43.8" font-family="Helvetica,sans-Serif" font-size="14.00"> yer</text>
+<polygon fill="none" stroke="black" points="78,0 78,-31 136,-31 136,0 78,0"/>
+<text text-anchor="start" x="86" y="-11.8" font-family="Helvetica,sans-Serif" font-size="14.00">mevzi</text>
+</g>
+<!-- M&#45;&gt;p -->
+<g id="edge2" class="edge">
+<title>M&#45;&gt;p</title>
+<path fill="none" stroke="#475569" stroke-dasharray="5,2" d="M107,-127.82C107,-111.27 107,-90.52 107,-72.56"/>
+<polygon fill="#475569" stroke="#475569" points="110.5,-72.37 107,-62.37 103.5,-72.37 110.5,-72.37"/>
+<text text-anchor="middle" x="135.5" y="-92.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#475569">p&#39;de durur</text>
+</g>
+<!-- K -->
+<g id="node4" class="node">
+<title>K</title>
+<polygon fill="#fecaca" stroke="transparent" points="119,-287 119,-318 244,-318 244,-287 119,-287"/>
+<polygon fill="none" stroke="black" points="119,-287 119,-318 244,-318 244,-287 119,-287"/>
+<text text-anchor="start" x="153" y="-299.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">K</text>
+<text text-anchor="start" x="164" y="-299.8" font-family="Helvetica,sans-Serif" font-size="14.00"> çeken</text>
+<polygon fill="none" stroke="black" points="119,-256 119,-287 244,-287 244,-256 119,-256"/>
+<text text-anchor="start" x="127" y="-267.8" font-family="Helvetica,sans-Serif" font-size="14.00">düşman baskısı</text>
+</g>
+<!-- K&#45;&gt;M -->
+<g id="edge3" class="edge">
+<title>K&#45;&gt;M</title>
+<path fill="none" stroke="#b91c1c" stroke-width="2.2" d="M163.28,-255.82C153.28,-238.8 140.68,-217.35 129.94,-199.06"/>
+<polygon fill="#b91c1c" stroke="#b91c1c" stroke-width="2.2" points="132.92,-197.22 124.84,-190.37 126.88,-200.77 132.92,-197.22"/>
+<text text-anchor="middle" x="161.5" y="-220.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#b91c1c">çeker</text>
+</g>
+</g>
+</svg>
+</div><figcaption><span class="ar">مُصَابَرَة</span> <span class="rz t">tahmin</span></figcaption></figure><figure class="gv"><div class="gvs"><svg width="265pt" height="377pt"
+ viewBox="0.00 0.00 264.50 377.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(18 359)">
+<title>sahne</title>
+<polygon fill="#ffffff" stroke="transparent" points="-18,18 -18,-359 246.5,-359 246.5,18 -18,18"/>
+<text text-anchor="start" x="71.75" y="-326.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">sürdürmek</text>
+<!-- T -->
+<g id="node1" class="node">
+<title>T</title>
+<polygon fill="#ccfbf1" stroke="transparent" points="46.5,-159 46.5,-190 108.5,-190 108.5,-159 46.5,-159"/>
+<polygon fill="none" stroke="black" points="46.5,-159 46.5,-190 108.5,-190 108.5,-159 46.5,-159"/>
+<text text-anchor="start" x="54.5" y="-171.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">T = M</text>
+<polygon fill="none" stroke="black" points="46.5,-128 46.5,-159 108.5,-159 108.5,-128 46.5,-128"/>
+<text text-anchor="start" x="62" y="-139.8" font-family="Helvetica,sans-Serif" font-size="14.00">nefs</text>
+</g>
+<!-- T&#45;&gt;T -->
+<g id="edge1" class="edge">
+<title>T&#45;&gt;T</title>
+<path fill="none" stroke="#0f766e" stroke-width="2.2" d="M108.67,-169.38C133.27,-173.4 158.5,-169.94 158.5,-159 158.5,-149.56 139.69,-145.69 118.73,-147.39"/>
+<polygon fill="#0f766e" stroke="#0f766e" stroke-width="2.2" points="118.17,-143.93 108.67,-148.62 119.02,-150.88 118.17,-143.93"/>
+<text text-anchor="middle" x="193.5" y="-156.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#0f766e">kendini tutar</text>
+</g>
+<!-- p -->
+<g id="node2" class="node">
+<title>p</title>
+<polygon fill="#e2e8f0" stroke="transparent" points="0.5,-31 0.5,-62 155.5,-62 155.5,-31 0.5,-31"/>
+<polygon fill="none" stroke="black" points="0.5,-31 0.5,-62 155.5,-62 155.5,-31 0.5,-31"/>
+<text text-anchor="start" x="59" y="-43.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">p</text>
+<text text-anchor="start" x="69" y="-43.8" font-family="Helvetica,sans-Serif" font-size="14.00"> yer</text>
+<polygon fill="none" stroke="black" points="0.5,0 0.5,-31 155.5,-31 155.5,0 0.5,0"/>
+<text text-anchor="start" x="8.5" y="-11.8" font-family="Helvetica,sans-Serif" font-size="14.00">sürdürülecek ibadet</text>
+</g>
+<!-- T&#45;&gt;p -->
+<g id="edge2" class="edge">
+<title>T&#45;&gt;p</title>
+<path fill="none" stroke="#475569" stroke-dasharray="5,2" d="M77.5,-127.82C77.5,-111.27 77.5,-90.52 77.5,-72.56"/>
+<polygon fill="#475569" stroke="#475569" points="81,-72.37 77.5,-62.37 74,-72.37 81,-72.37"/>
+<text text-anchor="middle" x="106" y="-92.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#475569">p&#39;de durur</text>
+</g>
+<!-- K -->
+<g id="node3" class="node">
+<title>K</title>
+<polygon fill="#fecaca" stroke="transparent" points="34.5,-287 34.5,-318 120.5,-318 120.5,-287 34.5,-287"/>
+<polygon fill="none" stroke="black" points="34.5,-287 34.5,-318 120.5,-318 120.5,-287 34.5,-287"/>
+<text text-anchor="start" x="49" y="-299.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">K</text>
+<text text-anchor="start" x="60" y="-299.8" font-family="Helvetica,sans-Serif" font-size="14.00"> çeken</text>
+<polygon fill="none" stroke="black" points="34.5,-256 34.5,-287 120.5,-287 120.5,-256 34.5,-256"/>
+<text text-anchor="start" x="42.5" y="-267.8" font-family="Helvetica,sans-Serif" font-size="14.00">yorgunluk</text>
+</g>
+<!-- K&#45;&gt;T -->
+<g id="edge3" class="edge">
+<title>K&#45;&gt;T</title>
+<path fill="none" stroke="#b91c1c" stroke-width="2.2" d="M77.5,-255.82C77.5,-239.27 77.5,-218.52 77.5,-200.56"/>
+<polygon fill="#b91c1c" stroke="#b91c1c" stroke-width="2.2" points="81,-200.37 77.5,-190.37 74,-200.37 81,-200.37"/>
+<text text-anchor="middle" x="93" y="-220.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#b91c1c">çeker</text>
+</g>
+</g>
+</svg>
+</div><figcaption><span class="ar">اصْطَبِرْ</span> <span class="rz t">tahmin</span></figcaption></figure><figure class="gv"><div class="gvs"><svg width="294pt" height="377pt"
+ viewBox="0.00 0.00 294.00 377.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(18 359)">
+<title>sahne</title>
+<polygon fill="#ffffff" stroke="transparent" points="-18,18 -18,-359 276,-359 276,18 -18,18"/>
+<text text-anchor="start" x="31" y="-326.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">şikâyet başkasına akınca</text>
+<!-- T -->
+<g id="node1" class="node">
+<title>T</title>
+<polygon fill="#ccfbf1" stroke="transparent" points="66,-159 66,-190 128,-190 128,-159 66,-159"/>
+<polygon fill="none" stroke="black" points="66,-159 66,-190 128,-190 128,-159 66,-159"/>
+<text text-anchor="start" x="74" y="-171.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">T = M</text>
+<polygon fill="none" stroke="black" points="66,-128 66,-159 128,-159 128,-128 66,-128"/>
+<text text-anchor="start" x="81.5" y="-139.8" font-family="Helvetica,sans-Serif" font-size="14.00">nefs</text>
+</g>
+<!-- T&#45;&gt;T -->
+<g id="edge1" class="edge">
+<title>T&#45;&gt;T</title>
+<path fill="none" stroke="#b91c1c" stroke-width="2.2" stroke-dasharray="5,2" d="M128.17,-169.38C152.77,-173.4 178,-169.94 178,-159 178,-149.56 159.19,-145.69 138.23,-147.39"/>
+<polygon fill="#b91c1c" stroke="#b91c1c" stroke-width="2.2" points="137.67,-143.93 128.17,-148.62 138.52,-150.88 137.67,-143.93"/>
+<text text-anchor="middle" x="201" y="-156.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#b91c1c">tutamaz</text>
+</g>
+<!-- p -->
+<g id="node2" class="node">
+<title>p</title>
+<polygon fill="#e2e8f0" stroke="transparent" points="0,-31 0,-62 68,-62 68,-31 0,-31"/>
+<polygon fill="none" stroke="black" points="0,-31 0,-62 68,-62 68,-31 0,-31"/>
+<text text-anchor="start" x="15" y="-43.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">p</text>
+<text text-anchor="start" x="25" y="-43.8" font-family="Helvetica,sans-Serif" font-size="14.00"> yer</text>
+<polygon fill="none" stroke="black" points="0,0 0,-31 68,-31 68,0 0,0"/>
+<text text-anchor="start" x="8" y="-11.8" font-family="Helvetica,sans-Serif" font-size="14.00">maksat</text>
+</g>
+<!-- T&#45;&gt;p -->
+<g id="edge2" class="edge">
+<title>T&#45;&gt;p</title>
+<path fill="none" stroke="#b91c1c" stroke-dasharray="1,5" d="M65.71,-139.23C52.72,-129.59 39.06,-116.59 32,-101 27.96,-92.09 26.7,-81.84 26.86,-72.02"/>
+<polygon fill="#b91c1c" stroke="#b91c1c" points="30.36,-72.21 27.48,-62.01 23.37,-71.78 30.36,-72.21"/>
+<text text-anchor="middle" x="65" y="-92.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#b91c1c">p&#39;den ayrılır</text>
+</g>
+<!-- O -->
+<g id="node3" class="node">
+<title>O</title>
+<polygon fill="#fecaca" stroke="transparent" points="119,-15 119,-46 202,-46 202,-15 119,-15"/>
+<polygon fill="none" stroke="black" points="119,-15 119,-46 202,-46 202,-15 119,-15"/>
+<text text-anchor="start" x="127" y="-27.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">o</text>
+<text text-anchor="start" x="137" y="-27.8" font-family="Helvetica,sans-Serif" font-size="14.00"> başkası</text>
+</g>
+<!-- T&#45;&gt;O -->
+<g id="edge3" class="edge">
+<title>T&#45;&gt;O</title>
+<path fill="none" stroke="#b91c1c" stroke-width="2.2" d="M112.09,-127.82C123.1,-105.8 137.83,-76.35 148.03,-55.94"/>
+<polygon fill="#b91c1c" stroke="#b91c1c" stroke-width="2.2" points="151.3,-57.23 152.64,-46.72 145.04,-54.09 151.3,-57.23"/>
+<text text-anchor="middle" x="194.5" y="-92.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#b91c1c">şikâyet başkasına akar</text>
+</g>
+<!-- K -->
+<g id="node4" class="node">
+<title>K</title>
+<polygon fill="#fecaca" stroke="transparent" points="61,-287 61,-318 134,-318 134,-287 61,-287"/>
+<polygon fill="none" stroke="black" points="61,-287 61,-318 134,-318 134,-287 61,-287"/>
+<text text-anchor="start" x="69" y="-299.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="14.00">K</text>
+<text text-anchor="start" x="80" y="-299.8" font-family="Helvetica,sans-Serif" font-size="14.00"> çeken</text>
+<polygon fill="none" stroke="black" points="61,-256 61,-287 134,-287 134,-256 61,-256"/>
+<text text-anchor="start" x="83.5" y="-267.8" font-family="Helvetica,sans-Serif" font-size="14.00">cez&#39;</text>
+</g>
+<!-- K&#45;&gt;T -->
+<g id="edge4" class="edge">
+<title>K&#45;&gt;T</title>
+<path fill="none" stroke="#b91c1c" stroke-width="2.2" d="M97,-255.82C97,-239.27 97,-218.52 97,-200.56"/>
+<polygon fill="#b91c1c" stroke="#b91c1c" stroke-width="2.2" points="100.5,-200.37 97,-190.37 93.5,-200.37 100.5,-200.37"/>
+<text text-anchor="middle" x="112.5" y="-220.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#b91c1c">çeker</text>
+</g>
+</g>
+</svg>
+</div><figcaption><span class="ar">شِكَايَة</span> <span class="rz t">tahmin</span></figcaption></figure></div><p class="sinir">Her şeklin altındaki işaret, o bağın lügatte yazılı mı yoksa âyet bağlamından kurulmuş bir tahmin mi olduğunu söyler. Şekiller elle çizilmedi; <code>gvpr</code> programı tabana uygulanıp <code>dot</code> ile yerleştirildi.</p><details class="serh"><summary>Yeniden yazma programını göster (gvpr)</summary><div class="ic"><pre class="kod">BEGIN {
+  string t, m, y, k, kes, sik, ad;
+  node_t nt, nm;
+  edge_t e, f, ne;
+  node_t d;
+}
+BEG_G {
+  t = gsub(gsub(ARGV[0], &quot;_&quot;, &quot; &quot;), &quot;~&quot;, &quot;&#x27;&quot;);
+  m = gsub(gsub(ARGV[1], &quot;_&quot;, &quot; &quot;), &quot;~&quot;, &quot;&#x27;&quot;);
+  y = gsub(gsub(ARGV[2], &quot;_&quot;, &quot; &quot;), &quot;~&quot;, &quot;&#x27;&quot;);
+  k = gsub(gsub(ARGV[3], &quot;_&quot;, &quot; &quot;), &quot;~&quot;, &quot;&#x27;&quot;);
+  kes = ARGV[4];
+  sik = ARGV[5];
+  ad = gsub(gsub(ARGV[6], &quot;_&quot;, &quot; &quot;), &quot;~&quot;, &quot;&#x27;&quot;);
+  $G.label = html($G, sprintf(&quot;&lt;B&gt;%s&lt;/B&gt;&quot;, ad));
+  $G.labelloc = &quot;t&quot;;
+  $G.fontname = &quot;Helvetica&quot;;
+  nt = isNode($G, &quot;T&quot;);
+  nm = isNode($G, &quot;M&quot;);
+  nt.label = html($G, sprintf(&quot;&lt;TABLE BORDER=\&quot;0\&quot; CELLBORDER=\&quot;1\&quot; CELLSPACING=\&quot;0\&quot; CELLPADDING=\&quot;7\&quot;&gt;&lt;TR&gt;&lt;TD BGCOLOR=\&quot;#ccfbf1\&quot;&gt;&lt;B&gt;T&lt;/B&gt; tutan&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;%s&lt;/TD&gt;&lt;/TR&gt;&lt;/TABLE&gt;&quot;, t));
+  nm.label = html($G, sprintf(&quot;&lt;TABLE BORDER=\&quot;0\&quot; CELLBORDER=\&quot;1\&quot; CELLSPACING=\&quot;0\&quot; CELLPADDING=\&quot;7\&quot;&gt;&lt;TR&gt;&lt;TD BGCOLOR=\&quot;#fde68a\&quot;&gt;&lt;B&gt;M&lt;/B&gt; tutulan&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;%s&lt;/TD&gt;&lt;/TR&gt;&lt;/TABLE&gt;&quot;, m));
+  d = isNode($G, &quot;p&quot;);
+  d.label = html($G, sprintf(&quot;&lt;TABLE BORDER=\&quot;0\&quot; CELLBORDER=\&quot;1\&quot; CELLSPACING=\&quot;0\&quot; CELLPADDING=\&quot;7\&quot;&gt;&lt;TR&gt;&lt;TD BGCOLOR=\&quot;#e2e8f0\&quot;&gt;&lt;B&gt;p&lt;/B&gt; yer&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;%s&lt;/TD&gt;&lt;/TR&gt;&lt;/TABLE&gt;&quot;, y));
+  d = isNode($G, &quot;K&quot;);
+  d.label = html($G, sprintf(&quot;&lt;TABLE BORDER=\&quot;0\&quot; CELLBORDER=\&quot;1\&quot; CELLSPACING=\&quot;0\&quot; CELLPADDING=\&quot;7\&quot;&gt;&lt;TR&gt;&lt;TD BGCOLOR=\&quot;#fecaca\&quot;&gt;&lt;B&gt;K&lt;/B&gt; çeken&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;%s&lt;/TD&gt;&lt;/TR&gt;&lt;/TABLE&gt;&quot;, k));
+  if (t == m) {
+    for (e = fstin(nm); e; e = f) {
+      f = nxtin(e);
+      if (e.tail.name != &quot;T&quot;) { ne = edge(e.tail, nt, &quot;&quot;); copyA(e, ne); }
+    }
+    for (e = fstout(nm); e; e = f) {
+      f = nxtout(e);
+      ne = edge(nt, e.head, &quot;&quot;); copyA(e, ne);
+    }
+    e = isEdge(nt, nm, &quot;&quot;);
+    if (e) { ne = edge(nt, nt, &quot;&quot;); copyA(e, ne); ne.label = &quot;kendini tutar&quot;; }
+    delete($G, nm);
+    nt.label = html($G, sprintf(&quot;&lt;TABLE BORDER=\&quot;0\&quot; CELLBORDER=\&quot;1\&quot; CELLSPACING=\&quot;0\&quot; CELLPADDING=\&quot;7\&quot;&gt;&lt;TR&gt;&lt;TD BGCOLOR=\&quot;#ccfbf1\&quot;&gt;&lt;B&gt;T = M&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;%s&lt;/TD&gt;&lt;/TR&gt;&lt;/TABLE&gt;&quot;, t));
+  }
+  nt = isNode($G, &quot;T&quot;);
+  nm = isNode($G, &quot;M&quot;);
+  if (!nm) nm = nt;
+  if (kes == &quot;1&quot;) {
+    for (e = fstout(nt); e; e = nxtout(e)) {
+      if (e.head == nm &amp;&amp; e.label == &quot;tutar&quot;) { e.style = &quot;dashed&quot;; e.color = &quot;#b91c1c&quot;; e.fontcolor = &quot;#b91c1c&quot;; e.label = &quot;tutamaz&quot;; }
+      if (e.head == nm &amp;&amp; e.label == &quot;kendini tutar&quot;) { e.style = &quot;dashed&quot;; e.color = &quot;#b91c1c&quot;; e.fontcolor = &quot;#b91c1c&quot;; e.label = &quot;tutamaz&quot;; }
+    }
+    d = isNode($G, &quot;p&quot;);
+    for (e = fstout(nm); e; e = nxtout(e)) {
+      if (e.head == d) { e.label = &quot;p&#x27;den ayrılır&quot;; e.color = &quot;#b91c1c&quot;; e.fontcolor = &quot;#b91c1c&quot;; e.style = &quot;dotted&quot;; }
+    }
+  }
+  if (sik == &quot;p&quot;) {
+    d = isNode($G, &quot;p&quot;);
+    e = edge(nm, d, &quot;sikayet&quot;);
+    e.label = &quot;şikâyet p&#x27;ye döner&quot;; e.color = &quot;#0f766e&quot;; e.fontcolor = &quot;#0f766e&quot;; e.penwidth = 2.2; e.constraint = &quot;false&quot;;
+  }
+  if (sik == &quot;o&quot;) {
+    d = node($G, &quot;O&quot;);
+    d.shape = &quot;plain&quot;;
+    d.label = html($G, &quot;&lt;TABLE BORDER=\&quot;0\&quot; CELLBORDER=\&quot;1\&quot; CELLSPACING=\&quot;0\&quot; CELLPADDING=\&quot;7\&quot;&gt;&lt;TR&gt;&lt;TD BGCOLOR=\&quot;#fecaca\&quot;&gt;&lt;B&gt;o&lt;/B&gt; başkası&lt;/TD&gt;&lt;/TR&gt;&lt;/TABLE&gt;&quot;);
+    e = edge(nm, d, &quot;sikayet&quot;);
+    e.label = &quot;şikâyet başkasına akar&quot;; e.color = &quot;#b91c1c&quot;; e.fontcolor = &quot;#b91c1c&quot;; e.penwidth = 2.2;
+  }
+}
+</pre></div></details></div>
 
 <h2>Şecere <small>bir dala dokun: kelimeyi, kaynağı ve âyetini gör</small></h2>
 <div class="gosterge"><span><i></i>lügatte yazılı bağ</span><span><i class="k"></i>tahmin ya da yazılı olmayan bağ</span></div>

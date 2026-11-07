@@ -1,0 +1,9 @@
+digraph sahne {
+  rankdir=TB; nodesep=0.7; ranksep=0.75; bgcolor="#ffffff"; pad=0.25;
+  node [shape=plain fontname="Helvetica"];
+  edge [fontname="Helvetica" fontsize=11];
+  T; M; p; K;
+  T -> M [label="tutar" color="#0f766e" fontcolor="#0f766e" penwidth=2.2];
+  K -> M [label="çeker" color="#b91c1c" fontcolor="#b91c1c" penwidth=2.2];
+  M -> p [label="p'de durur" style=dashed color="#475569" fontcolor="#475569"];
+}

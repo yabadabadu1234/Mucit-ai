@@ -8,6 +8,7 @@ Sayfa katmanları: kapsül · şecere · âyet haritası · komşu kökler · ge
 
 import json
 import re
+import subprocess
 from html import escape
 from pathlib import Path
 
@@ -103,6 +104,16 @@ ol.netice { padding-left:20px; } ol.netice li { margin:10px 0; }
 .sinir { background:#fffbeb; border-left:4px solid #d97706; padding:10px 14px; border-radius:6px; font-size:10.5pt; }
 @media (max-width:620px) { .formul .satir { grid-template-columns:1fr; gap:2px; } table.roller { font-size:9pt; } }
 @media (prefers-color-scheme:dark) { table.roller th { background:#1a2438; } table.roller tr.vur td { background:#1c1608; } .sinir { background:#1c1608; } svg.sema .K { stroke:#f87171; color:#f87171; } svg.sema .don { stroke:#34d399; color:#34d399; } }
+
+.gvtaban { display:flex; gap:14px; align-items:center; margin:12px 0; } .gvnot { color:var(--sessiz); font-size:10pt; }
+.gvizgara { display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:12px; margin:12px 0; }
+figure.gv { margin:0; background:#fff; border:1px solid var(--cizgi); border-radius:12px; padding:8px 8px 10px; }
+figure.gv .gvs svg { width:100%; height:auto; display:block; }
+figure.gv figcaption { text-align:center; padding-top:4px; color:#0f172a; }
+figure.gv .ar { font-family:'Amiri',serif; font-size:17pt; }
+.gvtaban .gvs { background:#fff; border:1px solid var(--cizgi); border-radius:12px; padding:8px; flex:0 1 210px; } .gvtaban .gvs svg { width:100%; height:auto; display:block; }
+.rz { font-size:8.5pt; padding:1px 8px; border-radius:99px; color:#fff; } .rz.y { background:#15803d; } .rz.t { background:#64748b; }
+pre.kod { white-space:pre-wrap; font-size:9pt; line-height:1.45; overflow:auto; }
 @media (max-width:560px) { .harfler { font-size:48pt; } .imge { font-size:15pt; } }
 @media (prefers-color-scheme:dark) {
   :root { --zemin:#0b1220; --kart:#111a2c; --yazi:#e2e8f0; --sessiz:#94a3b8; --cizgi:#243247; --vurgu:#fbbf24; }
@@ -162,6 +173,46 @@ def meal_oku(sure, ayet, onbellek):
         if v["verseNumber"] == ayet:
             return re.sub(r"<[^>]+>", "", v["turkish"].get(MEAL_ANAHTAR, "") or "")
     return ""
+
+
+SEMA_DIZIN = PILOT_DIZIN / "sema"
+
+
+def sema_html(kok):
+    yol = SEMA_DIZIN / f"{kok}.json"
+    if not yol.exists():
+        return ""
+    manalar = json.loads(yol.read_text(encoding="utf-8"))
+
+    def svg(komut):
+        gv = subprocess.run(komut, capture_output=True, check=True)
+        c = subprocess.run(["dot", "-Tsvg"], input=gv.stdout, capture_output=True, check=True)
+        t = c.stdout.decode("utf-8")
+        return t[t.index("<svg"):]
+
+    kartlar = []
+    for m in manalar:
+        ad = m["baslik"].replace(" ", "_").replace("'", "~")
+        komut = ["gvpr", "-c", "-f", str(SEMA_DIZIN / "yeniden_yaz.g"), "-a", f'{m["args"]} {ad}', str(SEMA_DIZIN / "sahne.dot")]
+        kartlar.append(
+            f'<figure class="gv"><div class="gvs">{svg(komut)}</div>'
+            f'<figcaption><span class="ar">{escape(m["ad"])}</span> <span class="rz {"y" if m["bag"] == "yazılı" else "t"}">{escape(m["bag"])}</span></figcaption></figure>'
+        )
+    taban = subprocess.run(["dot", "-Tsvg", str(SEMA_DIZIN / "sahne.dot")], capture_output=True, check=True).stdout.decode("utf-8")
+    taban = taban[taban.index("<svg"):]
+    kural = escape((SEMA_DIZIN / "yeniden_yaz.g").read_text(encoding="utf-8"))
+    return (
+        '<h2>Şema: tek graf, dokuz yeniden yazma <small>Graphviz · gvpr</small></h2>'
+        '<div class="cebir"><p class="giris">Aşağıdaki dokuz şeklin dokuzu de <b>aynı</b> sahne grafından çıkar. Graf bir kez çizildi; her mânâ onun <b>gvpr</b> ile yeniden yazılmasıdır. '
+        'İki kural yeter: <b>(1) doldur</b>: dört rolün yerine o mânânın tutanı, tutulanı, yeri ve çekeni konur. '
+        '<b>(2) birleştir</b>: tutan ile tutulan aynıysa iki düğüm tek düğüm olur ve «tutar» oku kendine döner. İşte sabır budur. '
+        '<b>(3) kes</b>: tutma kenarı kesilir. Cez\' budur: <i>sabır</i> grafına kesme kuralı uygulanmış hâli.</p>'
+        f'<div class="gvtaban"><div class="gvs">{taban}</div><div class="gvnot">Taban graf: boş sahne</div></div>'
+        f'<div class="gvizgara">{"".join(kartlar)}</div>'
+        '<p class="sinir">Her şeklin altındaki işaret, o bağın lügatte yazılı mı yoksa âyet bağlamından kurulmuş bir tahmin mi olduğunu söyler. '
+        'Şekiller elle çizilmedi; <code>gvpr</code> programı tabana uygulanıp <code>dot</code> ile yerleştirildi.</p>'
+        f'<details class="serh"><summary>Yeniden yazma programını göster (gvpr)</summary><div class="ic"><pre class="kod">{kural}</pre></div></details></div>'
+    )
 
 
 def dal_listesi(dallar, derinlik=0):
@@ -227,6 +278,7 @@ def sayfa_uret(kok, md_conv):
     serh = md_conv.convert((ETIM_DIZIN / f"{kok}.md").read_text(encoding="utf-8"))
     chips = "".join(f"<span>{s}:{a}</span>" for s, a in gecis)
     k = veri["kapsul"]
+    sema = sema_html(kok)
     cebir_yol = PILOT_DIZIN / f"{kok}.cebir.html"
     cebir = (f'<h2>Mana cebiri <small>sabır neyin fonksiyonudur</small></h2><div class="cebir">{cebir_yol.read_text(encoding="utf-8")}</div>') if cebir_yol.exists() else ""
     return f"""<!DOCTYPE html>
@@ -249,6 +301,8 @@ def sayfa_uret(kok, md_conv):
 <div class="sahne"><b>{escape(veri["sahne"]["baslik"])}.</b> {escape(veri["sahne"]["metin"])}</div>
 
 {cebir}
+
+{sema}
 
 <h2>Şecere <small>bir dala dokun: kelimeyi, kaynağı ve âyetini gör</small></h2>
 <div class="gosterge"><span><i></i>lügatte yazılı bağ</span><span><i class="k"></i>tahmin ya da yazılı olmayan bağ</span></div>
