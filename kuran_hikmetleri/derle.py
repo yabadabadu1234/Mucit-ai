@@ -27,6 +27,7 @@ except ImportError:
 
 from grafik_uretici import build_all_charts, load_all_surah_data, kelime_satiri_html
 import kelime_mealli
+import kok_sayfasi
 from mevzu_kumeleri import mevzu_pasta
 from konu_haritasi import harita_bolumu
 from konu_ag import ag_bolumu
@@ -409,6 +410,7 @@ th, td { border:1px solid #e2e8f0; padding:4px 6px; text-align:left; }
 th { background:#f8fafc; }
 td.ar { font-family:'Amiri',serif; font-size:13pt; direction:rtl; text-align:right; }
 tr.gizli { display:none; }
+a.kok-sayfa { font-size:8.5pt; padding:1px 6px; border:1px solid #0f766e; border-radius:5px; background:#ecfdf5; color:#0f766e; text-decoration:none; }
 button.etim { font-size:8.5pt; padding:1px 6px; border:1px solid #b45309; border-radius:5px; background:#fff7e6; color:#92400e; cursor:pointer; }
 tr.etim-satir td { background:#fffbeb; padding:8px 14px; font-size:10pt; line-height:1.6; }
 tr.etim-satir h2 { font-size:12pt; margin:10px 0 4px; color:#92400e; }
@@ -534,6 +536,7 @@ def lugat_sayfasi(surahs_data):
         md_conv.reset()
         (etim_cikti / f"{p.stem}.html").write_text(md_conv.convert(p.read_text(encoding="utf-8")), encoding="utf-8")
         etim_var.add(p.stem)
+    pilot_var = kok_sayfasi.hepsini_uret(md_conv)
     kayitlar = json.loads((BASE_DIR / "kaynak/sozluk/kelimeler.json").read_text(encoding="utf-8"))
     karsiliklar = json.loads(kelime_mealli.SOZLUK.read_text(encoding="utf-8"))["translations"]
     kok_anlam = {x["kok"]: x["turkce"] for x in json.loads(
@@ -565,7 +568,7 @@ def lugat_sayfasi(surahs_data):
                     continue
                 mevzu_kelime += len(kelimeler)
                 mevzu_kutular.append("".join(
-                    f'<tr data-ayet="{ayet}"><td>{ayet}</td><td class="ar">{escape(k["kelime"])}</td><td>{escape(k["kok"]) or "—"}{f' <button class="etim" data-kok="{escape(k["kok"])}">etimoloji</button>' if k["kok"] in etim_var else ""}</td>'
+                    f'<tr data-ayet="{ayet}"><td>{ayet}</td><td class="ar">{escape(k["kelime"])}</td><td>{escape(k["kok"]) or "—"}{f' <button class="etim" data-kok="{escape(k["kok"])}">etimoloji</button>' if k["kok"] in etim_var else ""}{f' <a class="kok-sayfa" href="kok/{escape(k["kok"])}.html">kök sayfası</a>' if k["kok"] in pilot_var else ""}</td>'
                     f'<td>{k["kok_gecisi"] or "—"}</td><td>{escape(kok_anlam.get(k["kok"], "—"))}</td>'
                     f'<td>{escape(k["lugat"]) or "—"}</td>'
                     f'<td>{escape(k["tur"])}</td><td>{k["bab"] or "—"}</td><td>{k["zaman"] or "—"}</td>'

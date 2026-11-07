@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="tr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>صبر · Kök sayfası</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root { --zemin:#f5f1e8; --kart:#fff; --yazi:#1e293b; --sessiz:#64748b; --cizgi:#e2e8f0; --vurgu:#92400e; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:'Plus Jakarta Sans',system-ui,sans-serif; background:var(--zemin); color:var(--yazi); line-height:1.65; }
+.ust { background:#0f172a; padding:10px 16px; }
+.ust a { color:#fbbf24; text-decoration:none; font-weight:700; }
+main { max-width:920px; margin:0 auto; padding:18px 16px 70px; }
+.ar { font-family:'Amiri',serif; direction:rtl; }
+.kapsul { background:var(--kart); border:1px solid var(--cizgi); border-radius:14px; padding:22px 20px; text-align:center; }
+.harfler { font-family:'Amiri',serif; font-size:64pt; line-height:1.1; letter-spacing:.3em; direction:rtl; color:#0f172a; }
+.imge { font-size:19pt; font-weight:700; margin:6px 0 10px; color:var(--vurgu); }
+.kapsul p { max-width:640px; margin:6px auto; color:#334155; }
+.sayi { color:var(--sessiz); font-size:10pt; margin-top:10px; }
+h2 { font-size:15pt; margin:34px 0 10px; color:var(--vurgu); }
+h2 small { font-weight:400; color:var(--sessiz); font-size:10pt; }
+.sahne { background:#fffbeb; border-left:4px solid #d97706; padding:12px 16px; border-radius:6px; }
+.sahne b { color:var(--vurgu); }
+/* şecere */
+.agac { margin:0; padding:0; list-style:none; }
+.agac ul { list-style:none; margin:0 0 0 22px; padding:0 0 0 18px; border-left:2px solid #cbd5e1; }
+.dal { position:relative; margin:10px 0; }
+.dal::before { content:''; position:absolute; left:-18px; top:20px; width:18px; border-top:2px solid #cbd5e1; }
+.agac > .dal::before { display:none; }
+.dugum { background:var(--kart); border:2px solid var(--renk,#94a3b8); border-radius:10px; padding:8px 12px; cursor:pointer; }
+.dugum.tahmin { border-style:dashed; background:#f8fafc; }
+.dugum .ad { font-weight:700; }
+.dugum .rozet { font-size:8.5pt; padding:1px 7px; border-radius:99px; margin-left:6px; color:#fff; background:#15803d; white-space:nowrap; }
+.dugum.tahmin .rozet { background:#64748b; }
+.dugum .mana { font-size:10.5pt; color:#334155; }
+.dugum .ayrinti { display:none; margin-top:6px; font-size:10pt; color:#475569; border-top:1px solid var(--cizgi); padding-top:6px; }
+.dal.acik > .dugum .ayrinti { display:block; }
+.dugum .kelime { font-family:'Amiri',serif; font-size:14pt; direction:rtl; display:block; text-align:right; color:#0f172a; }
+.gosterge { font-size:9.5pt; color:var(--sessiz); margin:6px 0 12px; }
+.gosterge span { margin-right:14px; display:inline-block; }
+.gosterge i { display:inline-block; width:26px; height:0; border-top:2px solid #475569; vertical-align:middle; margin-right:5px; }
+.gosterge i.k { border-top-style:dashed; }
+/* âyet haritası */
+.ayetler { display:grid; gap:12px; }
+.ayet { background:var(--kart); border:1px solid var(--cizgi); border-right:6px solid var(--renk,#94a3b8); border-radius:10px; padding:12px 14px; }
+.ayet.vurgulu { box-shadow:0 0 0 3px var(--renk,#f59e0b); }
+.ayet .ayar { font-family:'Amiri',serif; font-size:20pt; line-height:2; direction:rtl; text-align:right; }
+.ayet .ayar mark { background:var(--zemin-renk,#fde68a); color:inherit; border-radius:5px; padding:0 3px; }
+.ayet .meal { color:#334155; font-size:11pt; }
+.ayet .etiket { font-size:9.5pt; color:var(--sessiz); margin-bottom:4px; }
+.ayet .etiket b { color:var(--renk,#334155); }
+/* komşular */
+.komsu { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); }
+.komsu div { background:var(--kart); border:1px solid var(--cizgi); border-radius:10px; padding:10px 14px; }
+.komsu .kk { font-family:'Amiri',serif; font-size:20pt; direction:rtl; display:block; text-align:right; color:#0f172a; }
+/* sorular */
+details.soru { background:var(--kart); border:1px solid var(--cizgi); border-radius:8px; margin:8px 0; }
+details.soru > summary { cursor:pointer; padding:9px 14px; font-weight:600; }
+details.soru > div { padding:2px 14px 12px; color:#334155; }
+details.serh > summary { cursor:pointer; padding:10px 14px; font-weight:700; background:var(--kart); border:1px solid var(--cizgi); border-radius:8px; }
+details.serh .ic { background:var(--kart); border:1px solid var(--cizgi); border-top:0; padding:6px 18px 16px; }
+details.serh h2 { font-size:13pt; }
+.gecisler { display:flex; flex-wrap:wrap; gap:5px; margin-top:8px; }
+.gecisler span { font-size:9pt; background:#eef2f7; border-radius:6px; padding:2px 7px; color:#475569; }
+@media (max-width:560px) { .harfler { font-size:48pt; } .imge { font-size:15pt; } }
+@media (prefers-color-scheme:dark) {
+  :root { --zemin:#0b1220; --kart:#111a2c; --yazi:#e2e8f0; --sessiz:#94a3b8; --cizgi:#243247; --vurgu:#fbbf24; }
+  .harfler, .dugum .kelime, .komsu .kk { color:#f1f5f9; }
+  .dugum .mana, .ayet .meal, .kapsul p, details.soru > div { color:#cbd5e1; }
+  .dugum.tahmin { background:#0f172a; }
+  .sahne { background:#1c1608; }
+  .gecisler span { background:#1e293b; color:#cbd5e1; }
+}
+</style></head><body>
+<div class="ust"><a href="../kuran_hikmetleri_lugat.html">← Lugat</a></div>
+<main>
+<section class="kapsul">
+<div class="harfler">ص ب ر</div>
+<div class="imge">Kaçmasın diye bir şeyi yerinde tutmak.</div>
+<p>Arap, sabrı bir ipin gerginliği gibi düşündü: tutulan şey ya bir adam, ya bir yemin, ya da kişinin kendi nefsidir. Sabrın bütün kolları bu tek sahneden dallanır.</p>
+<div class="sayi">Kur&#x27;ân&#x27;da 103 geçiş, 93 âyet</div>
+</section>
+
+<h2>Gövde <small>kökün asıl sahnesi</small></h2>
+<div class="sahne"><b>Gövde: tutmak.</b> Sıhâh&#x27;ın ilk cümlesi: «الصَّبْرُ: حَبْسُ النَّفْسِ عَنِ الجَزَعِ». Fakat kelimenin maddî sahnesi daha serttir: «قُتِلَ صَبْراً», öldürülmek için bağlanıp bekletilen adam. Aynı kökte yemin için tutulan kişi de var, kefil olarak tutulan da. Sabır, bu sahnenin kişinin kendi içine çevrilmiş hâlidir: nefsi, feryada kaçmasın diye bağlı tutmak.</div>
+
+<h2>Şecere <small>bir dala dokun: kelimeyi, kaynağı ve âyetini gör</small></h2>
+<div class="gosterge"><span><i></i>lügatte yazılı bağ</span><span><i class="k"></i>tahmin ya da yazılı olmayan bağ</span></div>
+<ul class="agac"><li class="dal" data-id="d1"><div class="dugum" style="--renk:#b45309"><div><span class="ad">Ölüm için bağlamak</span><span class="rozet">yazılı</span></div><div class="mana">Birini öldürülmek üzere bağlayıp alıkoymak.</div><div class="ayrinti"><span class="kelime">قُتِلَ صَبْراً · اصْبِرُوا الصَّابِرَ</span>Kaynak: Sıhâh; hadis: «اقتلوا القاتل واصبروا الصابر»</div></div></li><li class="dal" data-id="d2"><div class="dugum" style="--renk:#7c3aed"><div><span class="ad">Yemin için alıkoymak</span><span class="rozet">yazılı</span></div><div class="mana">Yemin ettirmek için tutmak; «حلف صبراً» = yemine bağlanarak yemin etti.</div><div class="ayrinti"><span class="kelime">صَبَرْتُ الرجلَ · الصَّبْرُ في الأَيْمان</span>Kaynak: Sıhâh; Ayn</div></div></li><li class="dal" data-id="d3"><div class="dugum" style="--renk:#0f766e"><div><span class="ad">Nefsi tutmak</span><span class="rozet">yazılı</span></div><div class="mana">Nefsi cez&#x27;den (feryat, telaş) alıkoymak. Kökün Kur&#x27;ân&#x27;daki ana kolu.</div><div class="ayrinti"><span class="kelime">صَبَرَ · صَابِر · اصْبِرْ</span>Kaynak: Sıhâh: «حبس النفس عن الجزع»; Antere beyti</div></div><ul><li class="dal" data-id="d3a"><div class="dugum tahmin" style="--renk:#0f766e"><div><span class="ad">Şikâyeti tutmak</span><span class="rozet">tahmin</span></div><div class="mana">İçinde şikâyet karışığı olmayan sabra «sabr-ı cemîl» denir.</div><div class="ayrinti"><span class="kelime">فَصَبْرٌ جَمِيلٌ</span>Kaynak: Tarif Cürcânî&#x27;ye nisbet edilir; kesin değil</div></div></li><li class="dal" data-id="d3b"><div class="dugum" style="--renk:#0f766e"><div><span class="ad">Düşman karşısında durmak</span><span class="rozet">yazılı</span></div><div class="mana">Yerinden kıpırdamamak, sebat; karşılıklı sabırda yarışmak.</div><div class="ayrinti"><span class="kelime">مُصَابَرَة · صَابِرُوا · صَابِرَة</span>Kaynak: Müfâale bâbının mânâsı; 8:65-66, 3:200</div></div></li><li class="dal" data-id="d3c"><div class="dugum" style="--renk:#0f766e"><div><span class="ad">Allah&#x27;tan gelen destek</span><span class="rozet">yazılı</span></div><div class="mana">Sabır kulda hazır bir mal değil; istenen ve dökülen bir kuvvet.</div><div class="ayrinti"><span class="kelime">أَفْرِغْ عَلَيْنَا صَبْراً · وَمَا صَبْرُكَ إِلَّا بِاللَّهِ</span>Kaynak: Âyetin kendi ifadesi (2:250; 16:127)</div></div></li><li class="dal" data-id="d3d"><div class="dugum" style="--renk:#0f766e"><div><span class="ad">Kendini zorlayıp sürdürmek</span><span class="rozet">yazılı</span></div><div class="mana">İftiâl bâbı: sabrı kendine yüklenip müdavemet etmek.</div><div class="ayrinti"><span class="kelime">وَاصْطَبِرْ</span>Kaynak: İftiâl bâbının mânâsı; 19:65, 20:132, 54:27</div></div></li></ul></li><li class="dal" data-id="d4"><div class="dugum" style="--renk:#1d4ed8"><div><span class="ad">Kefil olmak</span><span class="rozet">yazılı</span></div><div class="mana">Birine kefil olmak; «الصَّبِيرُ» kefildir.</div><div class="ayrinti"><span class="kelime">صَبَرْتُ أَصْبُرُ صَبَارَةً</span>Kaynak: Sıhâh</div></div></li><li class="dal" data-id="d5"><div class="dugum tahmin" style="--renk:#6b7280"><div><span class="ad">Aynı maddede anılan ayrı şeyler</span><span class="rozet">tahmin</span></div><div class="mana">Acı ilaç (الصَّبِر), üst üste yığın (الصُّبْرَة), kabın kenarları (أَصْبَار), sert taş (الصُّبَارَة).</div><div class="ayrinti"><span class="kelime">الصَّبِر · الصُّبْرَة · أَصْبَار · صُبَارَة</span>Kaynak: Sıhâh, Ayn: aynı başlıkta anılır; kök ile bağı lügatlerde yazılı değildir</div></div></li></ul>
+
+<h2>Âyet haritası <small>renk, dalın rengidir; âyete dokununca dalına gidilir</small></h2>
+<div class="ayetler"><div class="ayet" data-dal="d3" style="--renk:#0f766e"><div class="etiket"><b>18:28</b> · Nefsi tutmak</div><div class="ayar"><mark>وَٱصْبِرْ</mark> نَفْسَكَ مَعَ ٱلَّذِينَ يَدْعُونَ رَبَّهُم بِٱلْغَدَوٰةِ وَٱلْعَشِىِّ يُرِيدُونَ وَجْهَهُۥ وَلَا تَعْدُ عَيْنَاكَ عَنْهُمْ تُرِيدُ زِينَةَ ٱلْحَيَوٰةِ ٱلدُّنْيَا وَلَا تُطِعْ مَنْ أَغْفَلْنَا قَلْبَهُۥ عَن ذِكْرِنَا وَٱتَّبَعَ هَوَىٰهُ وَكَانَ أَمْرُهُۥ فُرُطًا</div><div class="meal">Sabah akşam Rablerine, O’nun rızasını dileyerek dua edenlerle birlikte candan sebat et. Dünya hayatının süsünü isteyerek gözlerini onlardan çevirme. Kalbini bizi anmaktan gafil kıldığımız, kötü arzularına uymuş ve işi gücü aşırılık olan kimseye boyun eğme.</div></div><div class="ayet" data-dal="d3" style="--renk:#0f766e"><div class="etiket"><b>14:21</b> · Nefsi tutmak</div><div class="ayar">وَبَرَزُوا۟ لِلَّهِ جَمِيعًا فَقَالَ ٱلضُّعَفَٰٓؤُا۟ لِلَّذِينَ ٱسْتَكْبَرُوٓا۟ إِنَّا كُنَّا لَكُمْ تَبَعًا فَهَلْ أَنتُم مُّغْنُونَ عَنَّا مِنْ عَذَابِ ٱللَّهِ مِن شَىْءٍ قَالُوا۟ لَوْ هَدَىٰنَا ٱللَّهُ لَهَدَيْنَٰكُمْ سَوَآءٌ عَلَيْنَآ أَجَزِعْنَآ أَمْ <mark>صَبَرْنَا</mark> مَا لَنَا مِن مَّحِيصٍ</div><div class="meal">(Kıyamet gününde) hepsi Allah’ın huzuruna çıkacak ve zayıflar o büyüklük taslayanlara diyecekler ki: «Biz sizin tâbilerinizdik. Şimdi siz, Allah’ın azabından herhangi bir şeyi bizden savabilir misiniz?» Onlar da diyecekler ki: «(Ne yapalım) Allah bizi hidayete erdirseydi biz de sizi doğru yola iletirdik. Şimdi sızlansak da sabretsek de birdir. Çünkü bizim için sığınacak bir yer yoktur.»</div></div><div class="ayet" data-dal="d3" style="--renk:#0f766e"><div class="etiket"><b>2:153</b> · Nefsi tutmak</div><div class="ayar">يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱسْتَعِينُوا۟ <mark>بِٱلصَّبْرِ</mark> وَٱلصَّلَوٰةِ إِنَّ ٱللَّهَ مَعَ <mark>ٱلصَّٰبِرِينَ</mark></div><div class="meal">Ey iman edenler! Sabır ve namaz ile Allah’tan yardım isteyin. Çünkü Allah muhakkak sabredenlerle beraberdir.</div></div><div class="ayet" data-dal="d3" style="--renk:#0f766e"><div class="etiket"><b>2:155</b> · Nefsi tutmak</div><div class="ayar">وَلَنَبْلُوَنَّكُم بِشَىْءٍ مِّنَ ٱلْخَوْفِ وَٱلْجُوعِ وَنَقْصٍ مِّنَ ٱلْأَمْوَٰلِ وَٱلْأَنفُسِ وَٱلثَّمَرَٰتِ وَبَشِّرِ <mark>ٱلصَّٰبِرِينَ</mark></div><div class="meal">Andolsun ki sizi biraz korku ve açlık; mallardan, canlardan ve ürünlerden biraz azaltma (fakirlik) ile deneriz. (Ey Peygamber!) Sabredenleri müjdele!</div></div><div class="ayet" data-dal="d3" style="--renk:#0f766e"><div class="etiket"><b>39:10</b> · Nefsi tutmak</div><div class="ayar">قُلْ يَٰعِبَادِ ٱلَّذِينَ ءَامَنُوا۟ ٱتَّقُوا۟ رَبَّكُمْ لِلَّذِينَ أَحْسَنُوا۟ فِى هَٰذِهِ ٱلدُّنْيَا حَسَنَةٌ وَأَرْضُ ٱللَّهِ وَٰسِعَةٌ إِنَّمَا يُوَفَّى <mark>ٱلصَّٰبِرُونَ</mark> أَجْرَهُم بِغَيْرِ حِسَابٍ</div><div class="meal">(Resûlüm!) Söyle: Ey inanan kullarım! Rabbinize karşı gelmekten sakının. Bu dünyada iyilik yapanlara iyilik vardır. Allah’ın (yarattığı) yeryüzü geniştir. Yalnız sabredenlere, mükâfatları hesapsız ödenecektir.</div></div><div class="ayet" data-dal="d3a" style="--renk:#0f766e"><div class="etiket"><b>12:18</b> · Şikâyeti tutmak</div><div class="ayar">وَجَآءُو عَلَىٰ قَمِيصِهِۦ بِدَمٍ كَذِبٍ قَالَ بَلْ سَوَّلَتْ لَكُمْ أَنفُسُكُمْ أَمْرًا <mark>فَصَبْرٌ</mark> جَمِيلٌ وَٱللَّهُ ٱلْمُسْتَعَانُ عَلَىٰ مَا تَصِفُونَ</div><div class="meal">Gömleğinin üstünde sahte bir kan ile geldiler. (Ya’kub) dedi ki: Bilakis nefisleriniz size (kötü) bir işi güzel gösterdi. Artık (bana düşen) hakkıyla sabretmektir. Anlattığınız karşısında (bana) yardım edecek olan, ancak Allah’tır.</div></div><div class="ayet" data-dal="d3a" style="--renk:#0f766e"><div class="etiket"><b>70:5</b> · Şikâyeti tutmak</div><div class="ayar"><mark>فَٱصْبِرْ</mark> <mark>صَبْرًا</mark> جَمِيلًا</div><div class="meal">(Resûlüm!) Şimdi sen güzelce sabret.</div></div><div class="ayet" data-dal="d3b" style="--renk:#0f766e"><div class="etiket"><b>3:200</b> · Düşman karşısında durmak</div><div class="ayar">يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ <mark>ٱصْبِرُوا۟</mark> <mark>وَصَابِرُوا۟</mark> وَرَابِطُوا۟ وَٱتَّقُوا۟ ٱللَّهَ لَعَلَّكُمْ تُفْلِحُونَ</div><div class="meal">Ey iman edenler! Sabredin; (düşman karşısında) sebat gösterin; (cihad için) hazırlıklı ve uyanık bulunun ve Allah’tan korkun ki başarıya erişebilesiniz.</div></div><div class="ayet" data-dal="d3b" style="--renk:#0f766e"><div class="etiket"><b>8:66</b> · Düşman karşısında durmak</div><div class="ayar">ٱلْـَٰٔنَ خَفَّفَ ٱللَّهُ عَنكُمْ وَعَلِمَ أَنَّ فِيكُمْ ضَعْفًا فَإِن يَكُن مِّنكُم مِّا۟ئَةٌ <mark>صَابِرَةٌ</mark> يَغْلِبُوا۟ مِا۟ئَتَيْنِ وَإِن يَكُن مِّنكُمْ أَلْفٌ يَغْلِبُوٓا۟ أَلْفَيْنِ بِإِذْنِ ٱللَّهِ وَٱللَّهُ مَعَ <mark>ٱلصَّٰبِرِينَ</mark></div><div class="meal">Şimdi Allah, yükünüzü hafifletti; sizde zayıflık olduğunu bildi. O halde sizden sabırlı yüz kişi bulunursa, (onlardan) ikiyüz kişiye galip gelir. Ve eğer sizden bin kişi olursa, Allah’ın izniyle (onlardan) ikibin kişiye galip gelirler. Allah sabredenlerle beraberdir.</div></div><div class="ayet" data-dal="d3c" style="--renk:#0f766e"><div class="etiket"><b>2:250</b> · Allah&#x27;tan gelen destek</div><div class="ayar">وَلَمَّا بَرَزُوا۟ لِجَالُوتَ وَجُنُودِهِۦ قَالُوا۟ رَبَّنَآ أَفْرِغْ عَلَيْنَا <mark>صَبْرًا</mark> وَثَبِّتْ أَقْدَامَنَا وَٱنصُرْنَا عَلَى ٱلْقَوْمِ ٱلْكَٰفِرِينَ</div><div class="meal">Câlût ve askerleriyle savaşa tutuştuklarında: Ey Rabbimiz! Yüreğimizi sabırla doldur; bize direnme gücü ver; kâfir kavme karşı bize yardım et, dediler.</div></div><div class="ayet" data-dal="d3c" style="--renk:#0f766e"><div class="etiket"><b>16:127</b> · Allah&#x27;tan gelen destek</div><div class="ayar"><mark>وَٱصْبِرْ</mark> وَمَا <mark>صَبْرُكَ</mark> إِلَّا بِٱللَّهِ وَلَا تَحْزَنْ عَلَيْهِمْ وَلَا تَكُ فِى ضَيْقٍ مِّمَّا يَمْكُرُونَ</div><div class="meal">Sabret! Senin sabrın da ancak Allah’ın yardımı iledir. Onlardan dolayı kederlenme; kurmakta oldukları tuzaktan kaygı duyma!</div></div><div class="ayet" data-dal="d3d" style="--renk:#0f766e"><div class="etiket"><b>19:65</b> · Kendini zorlayıp sürdürmek</div><div class="ayar">رَّبُّ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضِ وَمَا بَيْنَهُمَا فَٱعْبُدْهُ <mark>وَٱصْطَبِرْ</mark> لِعِبَٰدَتِهِۦ هَلْ تَعْلَمُ لَهُۥ سَمِيًّا</div><div class="meal">(O) göklerin, yerin ve ikisi arasındaki şeylerin Rabbidir. Şu halde O’na kulluk et; O’na kulluk etmek için sabırlı ve metânetli ol. O’nun bir adaşı (benzeri) olduğunu biliyor musun? (Asla benzeri yoktur).</div></div></div>
+
+<h2>Komşu kökler <small>fark, karışmayı önler</small></h2>
+<div class="komsu"><div><span class="kk">جزع</span>Sabrın zıddı: tutamayıp kopmak. Sabır hüznün yokluğu değil, hüzne rağmen bağlı kalmaktır. <small>(14:21)</small></div><div><span class="kk">رضا</span>Sabır şikâyeti tutar; rızâ kazadan gönlün razı olmasıdır. Sabır her kulun harcı, rızâ daha yüksek bir hâl.</div><div><span class="kk">شكر</span>Kur&#x27;ân sabrı şükürle çift tutar: «صَبَّارٍ شَكُورٍ». Biri sıkıntıda, öteki nimette bağlılık. <small>(14:5)</small></div><div><span class="kk">تقوى</span>Sabır ile takvâ yan yana gelir: ikisi birlikte düşmanın hilesine karşı korur. <small>(3:120)</small></div></div>
+
+<h2>Önce kendin hatırla</h2>
+<details class="soru"><summary>Sabrın maddî sahnesi neydi?</summary><div>Bir şeyi (adamı, yemini, nefsi) kaçmasın diye bağlayıp yerinde tutmak.</div></details><details class="soru"><summary>«Sabır» ile «cez&#x27;» arasındaki fark nedir?</summary><div>Sabır hüzne rağmen bağlı kalmaktır; cez&#x27; hüznün insanı koparıp savurmasıdır.</div></details><details class="soru"><summary>Neden «Allah&#x27;tan gelen bir kuvvet» diyoruz?</summary><div>Çünkü 16:127 «sabrın ancak Allah&#x27;ladır» der, 2:250 de sabrın dökülmesini ister.</div></details>
+
+<h2>Tam şerh</h2>
+<details class="serh"><summary>Kaynak nakilleriyle uzun şerhi aç</summary><div class="ic"><h2 id="asl-mana">Asıl mana</h2>
+<p>ص ب ر kökünün Arapların dilindeki ilk, maddî karşılığı <strong>حبس</strong>, yani <em>tutmak, yerinden kıpırdatmamak, alıkoymak</em>tır. Sıhâh sahibi Cevherî ve Râzî'nin <em>Muhtâr</em>'ı bu mânâyı başa koyar: «الصَّبْرُ حَبْسُ النَّفْسِ عَنِ الجَزَعِ». Maddî kullanımı ise pek somuttur: Sıhâh'a göre «كل ذي روح يصبر حياً ثم يرمى حتى يقتل فقد قتل صبراً»: ruh sahibinin <strong>diri diri bağlanıp sonra öldürülmesi</strong> buradandır. Nitekim hadiste «اقتلوا القاتل واصبروا الصابر» buyurulmuş, «الصابر» yani adamı ölüme bağlayan, onun için onu alıkoyan kişi, idam edilinceye kadar hapsedilmekle emredilmiştir. Buradan «قُتِلَ صَبْرًا» tabiri doğmuştur: öldürülmek üzere bağlanıp alıkonulan kimse. Aynı ölçüyle insan kendi nefsini istediği bir işe bağladığında «صبرتُ نفسي» der; Antere'nin harb kasîdesindeki «فَصَبَرْتُ عارفةً لذلك حُرَّةً» mısraı da «nefsimi o işe bağladım, onu zaptettim» demektir.</p>
+<p>Görülüyor ki adlandırmanın sebebi <em>durmak</em> değil, <strong>zıddına meyledecek şeyi zorla yerinde tutmaktır</strong>. Bu yüzden lügatlerde aynı madde başlığında «الصَّبِر» (acı ilaç, bitki özü), «الصُّبْرَة» (ölçüsüz, tartısız üst üste konmuş tahıl yığını) gibi kelimeler de anılır; bunların kök mânâsıyla rabtı —acı ve sert şeyin ağızda tutulması, yığının bir arada durması — üzerinde lügatçiler sarih hüküm vermez; ben de kesin hüküm kurmuyorum. «الصَّنَوْبَر» ise nûn fazlalığıyla mücerred üçlüye benzeyen bir kelimedir, bu köke katmak doğru olmaz.</p>
+<h2 id="manadan-manaya-gecis">Manadan manaya geçiş</h2>
+<p>Geçiş bir <strong>kinâye</strong> ile başlar: nefsi cüz'î, maddî bir hapisten (bağlanmak) alıp <em>nefsi feryat ve telaşa</em> yani جَزَع'e teslim etmemek mânâsına çevirirler. Sabr ile cezâ arasında <em>bağlı kalmak / kopmak</em> mukabelesi kurulur (kesin değil, mantıkî bir yorumdur); sabır, insanı maksadından koparan hüznün ipi kesmesine izin vermemektir. Nitekim Kur'ân-ı Kerîm ikisini yan yana getirir: «سَوَاءٌ عَلَيْنَا أَجَزِعْنَا أَمْ صَبَرْنَا» (14:21).</p>
+<p>Sonra kinâye <strong>istiareye</strong> döner: tutulan şey dil ve şikâyet olur; bu yüzden sabır, «acı bir musibetin şikâyetini Allah'tan başkasına yapmamak» diye tarif edilir (kesin değil, Cürcânî'ye nisbet edilen bir tarif) ve Eyyûb aleyhisselâmın «إِنَّا وَجَدْنَاهُ صَابِرًا» medhi ile «أَنِّي مَسَّنِيَ الضُّرُّ» duâsının çelişmediğini söyler. Bir başka istiare, sabrı <em>dökülen bir su</em> gibi tasavvur etmektir: «رَبَّنَا أَفْرِغْ عَلَيْنَا صَبْرًا» (2:250) — yüreğimizi sabırla doldur. İçinde şikâyet karışığı olmayan sabra da «صَبْرٌ جَمِيلٌ» denir (12:18; 12:83).</p>
+<h2 id="mustaklar">Müştaklar</h2>
+<ul>
+<li><strong>صَبْر</strong> — masdar (فَعْل kalıbı; باب ضرب): sabır, dayanma; nefsin cüz'ini zıddına karşı tutulması.</li>
+<li><strong>صَابِر</strong> — ism-i fâil (فاعِل): sabreden, direnen kimse.</li>
+<li><strong>صَابِرُون / الصَّابِرُون</strong> — ism-i fâilin cemi-i müzekker-i sâlimi: sabırla sebat edenler topluluğu.</li>
+<li><strong>صَابِرَة</strong> — ism-i fâilin müennesi: sabırla direnen (topluluk/kişi); 8:66'da «مِائَةٌ صَابِرَةٌ».</li>
+<li><strong>صَبَّار</strong> — mübalağalı ism-i fâil (فَعَّال): çok sabreden; Kur'ân'da daima şükürle birlikte «صَبَّارٍ شَكُورٍ».</li>
+<li><strong>صَبُور</strong> — mübalağalı ism-i fâil (فَعُول): sabra devam eden, yumuşak huylu, uzun müsamahalı; lügatlerde صَبَّار ile birlikte zikredilir.</li>
+<li><strong>صَبَرَ</strong> — mâzî fiil (babı fe'ale): sabretti, katlandı, dayandı.</li>
+<li><strong>اِصْبِرْ / اِصْبِرُوا</strong> — emir sigası: sabret, diren; imtihan ve tebliğ yükü altında vazife buyruğu.</li>
+<li><strong>اِصْطَبِرْ</strong> — bab-ı iftiâl: sabrı kendine yüklenmek, sabra zorlanmak; tekellüf ve müdâveme ifâde eder.</li>
+<li><strong>مُصَابَرَة / صَابِرُوا</strong> — bab-ı müfâale: düşman karşısında sabırla durmak, sabırda yarışmak; 3:200'de «اصْبِرُوا وَصَابِرُوا».</li>
+<li><strong>تَصْبِير</strong> (صَبَّرَ) — bab-ı tef'îl: başkasını sabra alıştırmak, sevâb ümidiyle teselli etmek; başsağlığı verme budur.</li>
+<li><strong>تَصَبُّر</strong> — bab-ı tefa'ul: sabrı kendine zorla yaptırmak, sabredermiş gibi görünmek; lügatlerde «تَكَلُّفُ الصَّبْرِ» diye geçer.</li>
+</ul>
+<h2 id="kurandaki-kullanm">Kur'ân'daki kullanımı</h2>
+<p><strong>صَبَرَ fiili</strong> (mâzî ve muzâri/emir, listede en kalabalık grup) Kur'ân'da ekseriya <em>fiilî bir direniş</em> taşır: peygamberlerin yalanlanıp eziyet görmesine karşı duruşu (6:34), «فَاصْبِرْ كَمَا صَبَرَ أُولُو الْعَزْمِ مِنَ الرُّسُلِ» (46:35), «إِنْ تَصْبِرُوا وَتَتَّقُوا» (3:120). Burada sabır, olan bitene katlanmak değil, yolda kalmaktır.</p>
+<p><strong>صَابِر / الصَّابِرِين</strong> (ism-i fâil) bir <em>vasıf ve kimlik</em> hâline gelir: imtihan haberinden hemen sonra «وَبَشِّرِ الصَّابِرِينَ» (2:155) ve «إِنَّ اللَّهَ مَعَ الصَّابِرِينَ» (2:153). Mükâfat isme bağlanır: «إِنَّمَا يُوَفَّى الصَّابِرُونَ أَجْرَهُمْ بِغَيْرِ حِسَابٍ» (39:10).</p>
+<p><strong>صَبْر</strong> (masdar) ise <em>mâhiyeti ve kaynağı</em> anlatır: yardım istenen iki şeyden biri «وَاسْتَعِينُوا بِالصَّبْرِ وَالصَّلَاةِ» (2:45); talep edilen bir mevhibe «أَفْرِغْ عَلَيْنَا صَبْرًا»; ve kaydı «وَاصْبِرْ وَمَا صَبْرُكَ إِلَّا بِاللَّهِ» (16:127) — sabır kulun elinde bir sabit mal değil, Allah'tan gelen bir kuvvettir.</p>
+<p><strong>صَبَّار</strong> mübalağa kalıbıyla deniz ve rüzgâr âyetlerinde ibret alacak tarafı tarif eder: «لِكُلِّ صَبَّارٍ شَكُورٍ» (14:5; 31:31; 34:19; 42:33) — sabır ile şükür bir madalyonun iki yüzü.</p>
+<p><strong>اِصْطَبِرْ</strong> üç yerde (19:65; 20:132; 54:27) gelir ve iftiâl babının iktizâsıyla <em>kendine sabrı yük edip devam etme</em> mânâsı öne çıkar: kullukta ve namazda müdâveme.</p>
+<h2 id="osmanlca-ve-turkcedeki-emsal">Osmanlıca ve Türkçedeki emsal</h2>
+<p>Osmanlıcaya asıl geçenler <strong>sabr</strong> (masdar; «sabr-ı cemîl», «sabr u kanaat», «sabr eylemek»), <strong>sâbır/sabûr</strong> (kişi adı olarak canlı), <strong>sabrettirmek</strong> ve <strong>sabr-ı cemîl</strong> tabiridir; tasavvuf lügatinde «sabr-ı cemîl» şikâyet karışığı olmayan sabırdır. Türkçede mana kayması iki yönlü: birincisi, Arapçadaki <em>sebat, düşman karşısında durmak, yolda kalmak</em> mânâsı zayıflayıp yerini pasif bir «katlanma, beklemeye tahammül»e bırakmıştır. İkincisi, «sabrım taştı», «sabrım kalmadı» gibi deyimlerde sabır bir <em>kap</em> gibi tasavvur edilip tükenen bir şeye indirilmiştir; hâlbuki Kur'ânî kullanımda o, tükenmekle biten bir tahammül değil, Allah'tan istenen bir destektir. Bir de ihtâr: «sebr» (س ب ر: sınamak, hâlini yoklamak) ayrı köktendir.</p>
+<h2 id="sk-karstrlanlar">Sık karıştırılanlar</h2>
+<p><strong>جَزَع</strong>: Sabrın lügatçe zıddıdır. Cezâ, taşıdığı şeye dayanamayıp kopmak, insanı peşinde olduğu şeyden ayıran bir hüzündür; hüzün umumî, cezâ ise onu kesip atan husûsî bir hâldir. Sabır hüznün yokluğu değil, hüzne rağmen bağlı kalmaktır.</p>
+<p><strong>رِضَا</strong>: Rızâ, kaza olunana gönlün razı olmasıdır (kesin değil; Cürcânî'ye nisbet edilen «kalbin acı kazadan sürûr duyması» tabiri); sabır ise şikâyeti tutmaktır. Sabır farz ve medhedilmiş bir ahlâk olarak her kulun harcıdır; rızâ ise makamı yüksek, her sabredene lâzım olmayan bir hâl sayılmıştır. Nitekim Eyyûb aleyhisselâm «صَابِرًا» diye övülürken belânın kaldırılmasını duâ etmiştir; demek ki sabır, şikâyetin Allah'tan <em>başkasına</em> yapılmasıyla bozulur; duâ ile bozulmaz.</p></div></details>
+
+<h2>Kur'ân'daki bütün geçişler <small>93 âyet</small></h2>
+<div class="gecisler"><span>2:45</span><span>2:61</span><span>2:153</span><span>2:155</span><span>2:175</span><span>2:177</span><span>2:249</span><span>2:250</span><span>3:17</span><span>3:120</span><span>3:125</span><span>3:142</span><span>3:146</span><span>3:186</span><span>3:200</span><span>4:25</span><span>6:34</span><span>7:87</span><span>7:126</span><span>7:128</span><span>7:137</span><span>8:46</span><span>8:65</span><span>8:66</span><span>10:109</span><span>11:11</span><span>11:49</span><span>11:115</span><span>12:18</span><span>12:83</span><span>12:90</span><span>13:22</span><span>13:24</span><span>14:5</span><span>14:12</span><span>14:21</span><span>16:42</span><span>16:96</span><span>16:110</span><span>16:126</span><span>16:127</span><span>18:28</span><span>18:67</span><span>18:68</span><span>18:69</span><span>18:72</span><span>18:75</span><span>18:78</span><span>18:82</span><span>19:65</span><span>20:130</span><span>20:132</span><span>21:85</span><span>22:35</span><span>23:111</span><span>25:20</span><span>25:42</span><span>25:75</span><span>28:54</span><span>28:80</span><span>29:59</span><span>30:60</span><span>31:17</span><span>31:31</span><span>32:24</span><span>33:35</span><span>34:19</span><span>37:102</span><span>38:6</span><span>38:17</span><span>38:44</span><span>39:10</span><span>40:55</span><span>40:77</span><span>41:24</span><span>41:35</span><span>42:33</span><span>42:43</span><span>46:35</span><span>47:31</span><span>49:5</span><span>50:39</span><span>52:16</span><span>52:48</span><span>54:27</span><span>68:48</span><span>70:5</span><span>73:10</span><span>74:7</span><span>76:12</span><span>76:24</span><span>90:17</span><span>103:3</span></div>
+</main>
+<script>
+document.querySelectorAll('.dugum').forEach(function(d){
+  d.addEventListener('click', function(){
+    var dal = d.parentElement; dal.classList.toggle('acik');
+    var id = dal.getAttribute('data-id');
+    document.querySelectorAll('.ayet').forEach(function(a){
+      a.classList.toggle('vurgulu', dal.classList.contains('acik') && a.getAttribute('data-dal') === id);
+    });
+    var ilk = document.querySelector('.ayet.vurgulu');
+    if (ilk && dal.classList.contains('acik')) ilk.scrollIntoView({behavior:'smooth', block:'center'});
+  });
+});
+document.querySelectorAll('.ayet').forEach(function(a){
+  a.addEventListener('click', function(){
+    var id = a.getAttribute('data-dal');
+    var dal = document.querySelector('.dal[data-id="' + id + '"]');
+    if (dal) { dal.classList.add('acik'); dal.scrollIntoView({behavior:'smooth', block:'center'}); }
+  });
+});
+</script>
+</body></html>
