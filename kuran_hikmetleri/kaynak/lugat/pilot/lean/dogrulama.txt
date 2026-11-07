@@ -1,0 +1,20 @@
+araç: Lean (version 4.35.0, x86_64-unknown-linux-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)
+
+komut: lean Sabir.lean
+
+'Sabir.sabir_veya_cez' does not depend on any axioms
+'Sabir.sabir_cez_dislar' does not depend on any axioms
+'Sabir.destek_sabri_korur' does not depend on any axioms
+'Sabir.sikayet_baska_sabri_bozabilir' does not depend on any axioms
+'Sabir.cekim_artisi_garanti_degil' does not depend on any axioms
+'Sabir.cez_tutulan_ne_olursa_olsun' does not depend on any axioms
+
+reddedilen üç yanlış iddia (aynı tanımlar üzerinde; her satır bir kanıt denemesinin hatasıdır):
+  sabir_cez_birlikte: Sabır ve cez' aynı anda var
+  sikayet_baska_hep_bozar: başkasına şikâyet sabrı her zaman bozar
+  cekim_hep_bozar: çekimin her artışı sabrı bozar
+
+yanlis.lean:24:18: error: omega could not prove the goal:
+yanlis.lean:25:16: error: omega could not prove the goal:
+yanlis.lean:29:55: error: omega could not prove the goal:
+yanlis.lean:33:41: error: omega could not prove the goal:

@@ -215,6 +215,38 @@ def sema_html(kok):
     )
 
 
+LEAN_DIZIN = PILOT_DIZIN / "lean"
+
+
+def lean_html(kok):
+    yol = LEAN_DIZIN / f"{kok}.json"
+    if not yol.exists():
+        return ""
+    iddialar = json.loads(yol.read_text(encoding="utf-8"))
+    kaynak = (LEAN_DIZIN / "Sabir.lean").read_text(encoding="utf-8")
+    for i in iddialar:
+        assert f"theorem {i['teorem']}" in kaynak, f"Lean kaynağında teorem yok: {i['teorem']}"
+    log = (LEAN_DIZIN / "dogrulama.txt").read_text(encoding="utf-8")
+    satirlar = "".join(
+        f'<tr><td>{escape(i["iddia"])}</td><td><code>{escape(i["teorem"])}</code></td><td class="y">kanıtlandı</td></tr>'
+        for i in iddialar
+    )
+    return (
+        '<h2>Kanıt <small>Lean 4: modelin iddiaları makineye denetletildi</small></h2>'
+        '<div class="cebir"><p class="giris">Şimdiye kadar iddiaları <i>söyledik</i>, şekillerle gösterdik. Burada iddialar <b>teorem</b> olarak yazıldı ve '
+        'bir <b>kanıt yardımcısı</b> (Lean 4) her adımı denetledi. Yanlış bir iddia derlenmez. Üç yanlış iddia denendi ve üçü de reddedildi (aşağıdaki günlükte).</p>'
+        f'<table class="roller"><thead><tr><th>İddia</th><th>Lean teoremi</th><th>durum</th></tr></thead><tbody>{satirlar}</tbody></table>'
+        '<p class="sinir"><b>Ne kanıtlandı, ne kanıtlanmadı.</b> Kanıtlanan, <i>modelin kendi içinde</i> doğru olduğudur: tanımlar verilince bu iddialar zorunlu olarak çıkar. '
+        'Modelin sabrı doğru yakaladığı bu yolla kanıtlanamaz; o hüküm lügat ve âyet metnine bağlıdır. '
+        'Tutuş, çekim ve hudut burada doğal sayıdır (ölçüm değil). Bu sadeleştirme, ilişkinin biçimini tutar, sayıların büyüklüğünü iddia etmez.</p>'
+        '<p><b>Kanıtın bize öğrettiği.</b> Önceki bölümde «başkasına şikâyet sabrı bozar» yazmıştık. Bu iddiayı Lean’e kanıtlatmayı denedik ve <i>kanıtlanamadı</i> (<code>sikayet_baska_hep_bozar</code>, günlükte reddedilenler arasında; çünkü şikâyet kuvveti sıfırsa sabır bozulmaz): '
+        'doğrusu «bozabilir» (<code>sikayet_baska_sabri_bozabilir</code>) ve ters yönde «başkasına şikâyetten sonra sabır duruyorsa şikâyetten önce de vardı» (<code>sikayet_baska_geri</code>). '
+        'Yani şikâyetin yönü sabrı garanti kesmez; tutuşu eşiğin altına indirirse keser. Metni bu hâle düzelttik.</p>'
+        f'<details class="serh"><summary>Lean kaynağını göster</summary><div class="ic"><pre class="kod">{escape(kaynak)}</pre></div></details>'
+        f'<details class="serh"><summary>Doğrulama günlüğü (araç sürümü, çıktı, reddedilen yanlış iddialar)</summary><div class="ic"><pre class="kod">{escape(log)}</pre></div></details></div>'
+    )
+
+
 def dal_listesi(dallar, derinlik=0):
     for d in dallar:
         yield d, derinlik
@@ -279,6 +311,7 @@ def sayfa_uret(kok, md_conv):
     chips = "".join(f"<span>{s}:{a}</span>" for s, a in gecis)
     k = veri["kapsul"]
     sema = sema_html(kok)
+    lean = lean_html(kok)
     cebir_yol = PILOT_DIZIN / f"{kok}.cebir.html"
     cebir = (f'<h2>Mana cebiri <small>sabır neyin fonksiyonudur</small></h2><div class="cebir">{cebir_yol.read_text(encoding="utf-8")}</div>') if cebir_yol.exists() else ""
     return f"""<!DOCTYPE html>
@@ -303,6 +336,8 @@ def sayfa_uret(kok, md_conv):
 {cebir}
 
 {sema}
+
+{lean}
 
 <h2>Şecere <small>bir dala dokun: kelimeyi, kaynağı ve âyetini gör</small></h2>
 <div class="gosterge"><span><i></i>lügatte yazılı bağ</span><span><i class="k"></i>tahmin ya da yazılı olmayan bağ</span></div>

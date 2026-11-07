@@ -184,7 +184,7 @@ pre.kod { white-space:pre-wrap; font-size:9pt; line-height:1.45; overflow:auto; 
 <ol class="netice">
 <li><b>Sabır hüznün yokluğu değildir.</b> K = 0 ise tutmaya hâcet kalmaz; «sabır» denecek bir iş de kalmaz. Sabır K &gt; 0 iken ε içinde kalmaktır. Hüzün sabrı bozmaz. Sabrı bozan, tutuşun (λ) çekime yetmemesidir.</li>
 <li><b>Sabrın zıddı cez'dir ve ikisi aynı ölçüye bağlıdır.</b> Aynı K, aynı ε için ya ‖x*−p‖ ≤ ε (sabır) ya &gt; ε (cez'). Aralarında üçüncü bir hâl yoktur. Lügatin sabrı «حبس النفس عن الجزع» diye cez'e göre tarif etmesi bu ikiliğe uyar (yorum; lügat bu gerekçeyi yazmaz).</li>
-<li><b>Allah'a şikâyet sabrı bozmaz, başkasına şikâyet bozar.</b> Şikâyetin yönü p ise x'i p'ye yaklaştıran bir terim (+μ(p−x)) eklenir; uzaklık küçülür. Şikâyetin yönü p'den başkası ise x p'den uzaklaşır. Eyyûb'un «مَسَّنِيَ الضُّرُّ» duâsı (21:83) ile «صَابِرًا» övgüsünün (38:44) çelişmemesi budur. <small>(Bu, «şikâyeti Allah'tan başkasına yapmamak» tarifinin geometrik karşılığıdır; tarif Cürcânî'ye nisbet edilir, kesin değil.)</small></li>
+<li><b>Allah'a şikâyet sabrı bozmaz, başkasına şikâyet bozabilir.</b> Şikâyetin yönü p ise x'i p'ye yaklaştıran bir terim (+μ(p−x)) eklenir; uzaklık küçülür. Şikâyetin yönü p'den başkası ise x p'den uzaklaşır ve tutuşu eşiğin altına indirirse sabır kopar; eşiğin üstünde kalırsa kopmaz (aşağıdaki Lean kanıtı). Eyyûb'un «مَسَّنِيَ الضُّرُّ» duâsı (21:83) ile «صَابِرًا» övgüsünün (38:44) çelişmemesi budur. <small>(Bu, «şikâyeti Allah'tan başkasına yapmamak» tarifinin geometrik karşılığıdır; tarif Cürcânî'ye nisbet edilir, kesin değil.)</small></li>
 <li><b>Sabrın kaynağı kulda hazır bir mal değildir.</b> «وَمَا صَبْرُكَ إِلَّا بِاللَّهِ» (16:127): λ'nın kaynağı kulun dışındadır. «رَبَّنَا أَفْرِغْ عَلَيْنَا صَبْرًا» (2:250): λ ← λ + δ, yani dışarıdan eklenen tutuş. «Sabrım taştı» deyişi sabrı dolup taşan bir kap gibi gösterir. Model sabrı tükenen bir kap olarak değil, çekime karşı <i>desteklenen</i> bir tutuş olarak okur.</li>
 </ol>
 
@@ -903,6 +903,130 @@ BEG_G {
     e.label = &quot;şikâyet başkasına akar&quot;; e.color = &quot;#b91c1c&quot;; e.fontcolor = &quot;#b91c1c&quot;; e.penwidth = 2.2;
   }
 }
+</pre></div></details></div>
+
+<h2>Kanıt <small>Lean 4: modelin iddiaları makineye denetletildi</small></h2><div class="cebir"><p class="giris">Şimdiye kadar iddiaları <i>söyledik</i>, şekillerle gösterdik. Burada iddialar <b>teorem</b> olarak yazıldı ve bir <b>kanıt yardımcısı</b> (Lean 4) her adımı denetledi. Yanlış bir iddia derlenmez. Üç yanlış iddia denendi ve üçü de reddedildi (aşağıdaki günlükte).</p><table class="roller"><thead><tr><th>İddia</th><th>Lean teoremi</th><th>durum</th></tr></thead><tbody><tr><td>Her durumda ya sabır vardır ya cez&#x27;.</td><td><code>sabir_veya_cez</code></td><td class="y">kanıtlandı</td></tr><tr><td>Sabır ve cez&#x27; aynı anda olamaz.</td><td><code>sabir_cez_dislar</code></td><td class="y">kanıtlandı</td></tr><tr><td>Cez&#x27;, sabrın yokluğundan başka bir şey değildir.</td><td><code>cez_sabrin_yoklugu</code></td><td class="y">kanıtlandı</td></tr><tr><td>Dışarıdan tutuş eklenirse sabır bozulmaz (2:250).</td><td><code>destek_sabri_korur</code></td><td class="y">kanıtlandı</td></tr><tr><td>Allah&#x27;a şikâyet sabrı bozmaz.</td><td><code>sikayet_p_sabri_korur</code></td><td class="y">kanıtlandı</td></tr><tr><td>Başkasına şikâyetten sonra sabır duruyorsa, şikâyetten önce de vardı.</td><td><code>sikayet_baska_geri</code></td><td class="y">kanıtlandı</td></tr><tr><td>Başkasına şikâyet sabrı bozabilir.</td><td><code>sikayet_baska_sabri_bozabilir</code></td><td class="y">kanıtlandı</td></tr><tr><td>Çekimin artışı sabrı bozabilir.</td><td><code>cekim_artisi_bozabilir</code></td><td class="y">kanıtlandı</td></tr><tr><td>Sabır, çekimin artışına karşı kendiliğinden güvenceli değildir.</td><td><code>cekim_artisi_garanti_degil</code></td><td class="y">kanıtlandı</td></tr><tr><td>Çekim ne kadar büyük olursa olsun, yeterli tutuşla sabır mümkündür.</td><td><code>huzunle_sabir_mumkun</code></td><td class="y">kanıtlandı</td></tr><tr><td>Çekim yoksa her tutuş yeter: sabır denecek iş kalmaz.</td><td><code>cekimsiz_sabir_bos</code></td><td class="y">kanıtlandı</td></tr><tr><td>Tutuş kesilince çekim varsa cez&#x27; kaçınılmazdır.</td><td><code>kesilince_cez</code></td><td class="y">kanıtlandı</td></tr><tr><td>Birleştirme, tutan ile tutulanı aynı yapar.</td><td><code>birlestir_yansimali</code></td><td class="y">kanıtlandı</td></tr><tr><td>Birleştirmeyi iki kere uygulamak bir kereden farklı değildir.</td><td><code>birlestir_idempotent</code></td><td class="y">kanıtlandı</td></tr><tr><td>Kesmeyi iki kere uygulamak bir kereden farklı değildir.</td><td><code>kes_idempotent</code></td><td class="y">kanıtlandı</td></tr><tr><td>Birleştir ve kes kuralları sıradan bağımsızdır.</td><td><code>kes_birlestir_degisir</code></td><td class="y">kanıtlandı</td></tr><tr><td>Kesme, yansımalılığı bozmaz.</td><td><code>kes_yansimaliyi_korur</code></td><td class="y">kanıtlandı</td></tr><tr><td>Tutulan ne olursa olsun, nefsle birleşip kesilen sahne cez&#x27; sahnesidir.</td><td><code>cez_tutulan_ne_olursa_olsun</code></td><td class="y">kanıtlandı</td></tr><tr><td>Sabır sahnesi yansımalıdır.</td><td><code>sabir_sahnesi_yansimali</code></td><td class="y">kanıtlandı</td></tr></tbody></table><p class="sinir"><b>Ne kanıtlandı, ne kanıtlanmadı.</b> Kanıtlanan, <i>modelin kendi içinde</i> doğru olduğudur: tanımlar verilince bu iddialar zorunlu olarak çıkar. Modelin sabrı doğru yakaladığı bu yolla kanıtlanamaz; o hüküm lügat ve âyet metnine bağlıdır. Tutuş, çekim ve hudut burada doğal sayıdır (ölçüm değil). Bu sadeleştirme, ilişkinin biçimini tutar, sayıların büyüklüğünü iddia etmez.</p><p><b>Kanıtın bize öğrettiği.</b> Önceki bölümde «başkasına şikâyet sabrı bozar» yazmıştık. Bu iddiayı Lean’e kanıtlatmayı denedik ve <i>kanıtlanamadı</i> (<code>sikayet_baska_hep_bozar</code>, günlükte reddedilenler arasında; çünkü şikâyet kuvveti sıfırsa sabır bozulmaz): doğrusu «bozabilir» (<code>sikayet_baska_sabri_bozabilir</code>) ve ters yönde «başkasına şikâyetten sonra sabır duruyorsa şikâyetten önce de vardı» (<code>sikayet_baska_geri</code>). Yani şikâyetin yönü sabrı garanti kesmez; tutuşu eşiğin altına indirirse keser. Metni bu hâle düzelttik.</p><details class="serh"><summary>Lean kaynağını göster</summary><div class="ic"><pre class="kod">namespace Sabir
+
+structure Durum where
+  lam : Nat
+  cek : Nat
+  hudut : Nat
+
+def Sabir (d : Durum) : Prop := d.cek ≤ d.hudut * d.lam
+
+def Cez (d : Durum) : Prop := d.hudut * d.lam &lt; d.cek
+
+instance (d : Durum) : Decidable (Sabir d) := inferInstanceAs (Decidable (d.cek ≤ d.hudut * d.lam))
+
+instance (d : Durum) : Decidable (Cez d) := inferInstanceAs (Decidable (d.hudut * d.lam &lt; d.cek))
+
+theorem sabir_veya_cez (d : Durum) : Sabir d ∨ Cez d :=
+  (Nat.lt_or_ge (d.hudut * d.lam) d.cek).symm
+
+theorem sabir_cez_dislar (d : Durum) : ¬ (Sabir d ∧ Cez d) :=
+  fun ⟨h1, h2⟩ =&gt; absurd h1 (Nat.not_le.mpr h2)
+
+theorem cez_sabrin_yoklugu (d : Durum) : Cez d ↔ ¬ Sabir d :=
+  ⟨fun h1 h2 =&gt; sabir_cez_dislar d ⟨h2, h1⟩, fun h =&gt; Nat.not_le.mp h⟩
+
+def destekle (d : Durum) (delta : Nat) : Durum := { d with lam := d.lam + delta }
+
+theorem destek_sabri_korur (d : Durum) (delta : Nat) : Sabir d → Sabir (destekle d delta) :=
+  fun h =&gt; Nat.le_trans h (Nat.mul_le_mul_left _ (Nat.le_add_right _ _))
+
+def sikayet_p (d : Durum) (mu : Nat) : Durum := destekle d mu
+
+def sikayet_baska (d : Durum) (mu : Nat) : Durum := { d with lam := d.lam - mu }
+
+theorem sikayet_p_sabri_korur (d : Durum) (mu : Nat) : Sabir d → Sabir (sikayet_p d mu) :=
+  destek_sabri_korur d mu
+
+theorem sikayet_baska_geri (d : Durum) (mu : Nat) : Sabir (sikayet_baska d mu) → Sabir d :=
+  fun h =&gt; Nat.le_trans h (Nat.mul_le_mul_left _ (Nat.sub_le _ _))
+
+theorem sikayet_baska_sabri_bozabilir :
+    ∃ (d : Durum) (mu : Nat), Sabir d ∧ Cez (sikayet_baska d mu) :=
+  ⟨⟨1, 1, 1⟩, 1, by decide, by decide⟩
+
+theorem cekim_artisi_bozabilir :
+    ∃ (d : Durum) (delta : Nat), Sabir d ∧ Cez { d with cek := d.cek + delta } :=
+  ⟨⟨1, 1, 1⟩, 1, by decide, by decide⟩
+
+theorem cekim_artisi_garanti_degil :
+    ¬ (∀ (d : Durum) (delta : Nat), Sabir d → Sabir { d with cek := d.cek + delta }) := by
+  intro h
+  have := h ⟨1, 1, 1⟩ 1 (by decide)
+  exact absurd this (by decide)
+
+theorem huzunle_sabir_mumkun (cek hudut : Nat) (h : 0 &lt; hudut) : Sabir ⟨cek, cek, hudut⟩ :=
+  Nat.le_mul_of_pos_left cek h
+
+theorem cekimsiz_sabir_bos (d : Durum) (h : d.cek = 0) : Sabir d := by
+  unfold Sabir; rw [h]; exact Nat.zero_le _
+
+theorem kesilince_cez (d : Durum) (h : 0 &lt; d.cek) : Cez { d with lam := 0 } := by
+  unfold Cez; simpa using h
+
+structure Sahne where
+  tutan : String
+  tutulan : String
+  yer : String
+  ceken : String
+  tutma : Bool
+
+def Sahne.yansimali (s : Sahne) : Prop := s.tutan = s.tutulan
+
+def birlestir (s : Sahne) : Sahne := { s with tutulan := s.tutan }
+
+def kes (s : Sahne) : Sahne := { s with tutma := false }
+
+theorem birlestir_yansimali (s : Sahne) : (birlestir s).yansimali := rfl
+
+theorem birlestir_idempotent (s : Sahne) : birlestir (birlestir s) = birlestir s := rfl
+
+theorem kes_idempotent (s : Sahne) : kes (kes s) = kes s := rfl
+
+theorem kes_birlestir_degisir (s : Sahne) : kes (birlestir s) = birlestir (kes s) := rfl
+
+theorem kes_yansimaliyi_korur (s : Sahne) : s.yansimali → (kes s).yansimali := id
+
+def sabir_sahnesi : Sahne := ⟨&quot;nefs&quot;, &quot;nefs&quot;, &quot;maksat&quot;, &quot;cez&#x27;&quot;, true⟩
+
+def cez_sahnesi : Sahne := kes sabir_sahnesi
+
+theorem cez_tutulan_ne_olursa_olsun (m : String) :
+    kes (birlestir ⟨&quot;nefs&quot;, m, &quot;maksat&quot;, &quot;cez&#x27;&quot;, true⟩) = cez_sahnesi := rfl
+
+theorem sabir_sahnesi_yansimali : sabir_sahnesi.yansimali := rfl
+
+end Sabir
+
+#print axioms Sabir.sabir_veya_cez
+#print axioms Sabir.sabir_cez_dislar
+#print axioms Sabir.destek_sabri_korur
+#print axioms Sabir.sikayet_baska_sabri_bozabilir
+#print axioms Sabir.cekim_artisi_garanti_degil
+#print axioms Sabir.cez_tutulan_ne_olursa_olsun
+</pre></div></details><details class="serh"><summary>Doğrulama günlüğü (araç sürümü, çıktı, reddedilen yanlış iddialar)</summary><div class="ic"><pre class="kod">araç: Lean (version 4.35.0, x86_64-unknown-linux-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)
+
+komut: lean Sabir.lean
+
+&#x27;Sabir.sabir_veya_cez&#x27; does not depend on any axioms
+&#x27;Sabir.sabir_cez_dislar&#x27; does not depend on any axioms
+&#x27;Sabir.destek_sabri_korur&#x27; does not depend on any axioms
+&#x27;Sabir.sikayet_baska_sabri_bozabilir&#x27; does not depend on any axioms
+&#x27;Sabir.cekim_artisi_garanti_degil&#x27; does not depend on any axioms
+&#x27;Sabir.cez_tutulan_ne_olursa_olsun&#x27; does not depend on any axioms
+
+reddedilen üç yanlış iddia (aynı tanımlar üzerinde; her satır bir kanıt denemesinin hatasıdır):
+  sabir_cez_birlikte: Sabır ve cez&#x27; aynı anda var
+  sikayet_baska_hep_bozar: başkasına şikâyet sabrı her zaman bozar
+  cekim_hep_bozar: çekimin her artışı sabrı bozar
+
+yanlis.lean:24:18: error: omega could not prove the goal:
+yanlis.lean:25:16: error: omega could not prove the goal:
+yanlis.lean:29:55: error: omega could not prove the goal:
+yanlis.lean:33:41: error: omega could not prove the goal:
 </pre></div></details></div>
 
 <h2>Şecere <small>bir dala dokun: kelimeyi, kaynağı ve âyetini gör</small></h2>
