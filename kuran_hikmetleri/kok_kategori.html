@@ -1,0 +1,295 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mana Kategorisi</title><style>
+body{font-family:Georgia,serif;max-width:1100px;margin:auto;padding:16px;line-height:1.6;background:#fbf8f1;color:#222}
+table.m{border-collapse:collapse;font-size:12px}table.m td,table.m th{border:1px solid #ddd;padding:3px 5px;text-align:center}
+.sc{overflow-x:auto}code{background:#eee;padding:0 3px}svg{max-width:100%;height:auto}
+</style></head><body>
+<p><a href="kuran_hikmetleri_lugat.html">← Lugat</a></p>
+<h1>Mana Kategorisi: bir kavram, âyetlerinin bulutudur</h1>
+<p>Bu sayfada on üç kavram (kök), kendi geçtiği âyetlerin Türkçe mealinden <code>qwen3-embedding-8b</code> modeliyle (4096 boyutlu birim vektörler) çıkarılan birer <b>nokta bulutu</b> olarak alınır. Her kökten en çok 40 âyet, sıra korunarak eşit aralıkla seçilmiştir (adetler: sabır 40, şükür 40, rızâ 40, tevekkül 40, havf 40, recâ 27, hamd 40, takvâ 40, küfür 40, zulüm 40, adl 24, hidâyet 40, mağfiret 40). Kavramlar arası ilişki, bulutlar arası <b>yönlü açı mesafesi</b> ve <b>Gram matrisinin tersi</b>nden hesaplanır; çizim Graphviz'dir.</p>
+<h2>Kullanılan araçlar</h2>
+<ul>
+<li><b>Lawvere zenginleştirilmiş kategori.</b> Nesneler kavramlar; hom(A,B) = d(A→B) = bulut A'daki her noktanın B'deki en yakın noktaya açısının ortalaması. Kosinüs benzerliği üçgen eşitsizliğini sağlamadığı için ham kosinüs değil <b>arccos</b> (açı) kullanıldı. Üçgen eşitsizliği sınandı: ortalamalı sürümde 0/2197, azamî (Hausdorff) sürümünde 0/2197 ihlâl. Azamî sürüm için eşitsizlik ispatlıdır; ortalamalı sürüm için bu yalnız bu veride görülen bir sonuçtur, ispat değildir.</li>
+<li><b>Yoneda görünümü.</b> Her kavram, öbürlerine olan mesafe satırıyla (temsil edilebilir profil) tanıtılır; iki kavramın profili aynıysa ayırt edilemezler. Her kavramın profil bakımından en yakın komşusu JSON'da kayıtlıdır.</li>
+<li><b>Kısmî korelasyon (koşullu bağımsızlık).</b> Merkez vektörlerin Gram matrisi G'nin tersi P alınır, ρ_ij = −P_ij/√(P_ii·P_jj). Kondisyon sayısı 420: ters hesaplanabilir (13 vektör 4096 boyutta).</li>
+<li><b>Chow-Liu ağacı.</b> |ρ| ağırlıklı en büyük kapsayan ağaç, kesikli mavi çizgilerdir. Eşik konmaz, ağaç parametresizdir.</li>
+<li>Kahverengi oklar: her kavramdan en yakın kavrama giden ok (eşiksiz, düğüm başına bir ok).</li>
+</ul>
+<h2>Şema</h2><div class="sc"><svg width="607pt" height="492pt"
+ viewBox="0.00 0.00 607.00 492.34" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 488.34)">
+<title>K</title>
+<!-- n0 -->
+<g id="node1" class="node">
+<title>n0</title>
+<path fill="#f4efe3" stroke="black" d="M42,-416.34C42,-416.34 12,-416.34 12,-416.34 6,-416.34 0,-410.34 0,-404.34 0,-404.34 0,-390.34 0,-390.34 0,-384.34 6,-378.34 12,-378.34 12,-378.34 42,-378.34 42,-378.34 48,-378.34 54,-384.34 54,-390.34 54,-390.34 54,-404.34 54,-404.34 54,-410.34 48,-416.34 42,-416.34"/>
+<text text-anchor="middle" x="27" y="-401.14" font-family="Amiri" font-size="14.00">صبر</text>
+<text text-anchor="middle" x="27" y="-386.14" font-family="Amiri" font-size="14.00">sabır</text>
+</g>
+<!-- n3 -->
+<g id="node4" class="node">
+<title>n3</title>
+<path fill="#f4efe3" stroke="black" d="M185,-467.34C185,-467.34 137,-467.34 137,-467.34 131,-467.34 125,-461.34 125,-455.34 125,-455.34 125,-441.34 125,-441.34 125,-435.34 131,-429.34 137,-429.34 137,-429.34 185,-429.34 185,-429.34 191,-429.34 197,-435.34 197,-441.34 197,-441.34 197,-455.34 197,-455.34 197,-461.34 191,-467.34 185,-467.34"/>
+<text text-anchor="middle" x="161" y="-452.14" font-family="Amiri" font-size="14.00">وكل</text>
+<text text-anchor="middle" x="161" y="-437.14" font-family="Amiri" font-size="14.00">tevekkül</text>
+</g>
+<!-- n0&#45;&gt;n3 -->
+<g id="edge14" class="edge">
+<title>n0&#45;&gt;n3</title>
+<path fill="none" stroke="#2a5d7a" stroke-dasharray="5,2" d="M53.7,-416.34C59.51,-420.04 65.8,-423.61 72,-426.34 88.73,-433.68 108.36,-438.89 124.84,-442.39"/>
+<text text-anchor="middle" x="89.5" y="-440.34" font-family="Amiri" font-size="10.00">ρ=0.21</text>
+</g>
+<!-- n5 -->
+<g id="node6" class="node">
+<title>n5</title>
+<path fill="#f4efe3" stroke="black" d="M587,-238.34C587,-238.34 557,-238.34 557,-238.34 551,-238.34 545,-232.34 545,-226.34 545,-226.34 545,-212.34 545,-212.34 545,-206.34 551,-200.34 557,-200.34 557,-200.34 587,-200.34 587,-200.34 593,-200.34 599,-206.34 599,-212.34 599,-212.34 599,-226.34 599,-226.34 599,-232.34 593,-238.34 587,-238.34"/>
+<text text-anchor="middle" x="572" y="-223.14" font-family="Amiri" font-size="14.00">رجو</text>
+<text text-anchor="middle" x="572" y="-208.14" font-family="Amiri" font-size="14.00">recâ</text>
+</g>
+<!-- n0&#45;&gt;n5 -->
+<g id="edge15" class="edge">
+<title>n0&#45;&gt;n5</title>
+<path fill="none" stroke="#2a5d7a" stroke-dasharray="5,2" d="M38,-378.12C56.94,-344.68 101.44,-279.34 160,-279.34 160,-279.34 160,-279.34 439.5,-279.34 479.4,-279.34 520.46,-256.19 545.85,-238.65"/>
+<text text-anchor="middle" x="300.5" y="-282.34" font-family="Amiri" font-size="10.00">ρ=0.22</text>
+</g>
+<!-- n6 -->
+<g id="node7" class="node">
+<title>n6</title>
+<path fill="#f4efe3" stroke="black" d="M315.5,-374.34C315.5,-374.34 285.5,-374.34 285.5,-374.34 279.5,-374.34 273.5,-368.34 273.5,-362.34 273.5,-362.34 273.5,-348.34 273.5,-348.34 273.5,-342.34 279.5,-336.34 285.5,-336.34 285.5,-336.34 315.5,-336.34 315.5,-336.34 321.5,-336.34 327.5,-342.34 327.5,-348.34 327.5,-348.34 327.5,-362.34 327.5,-362.34 327.5,-368.34 321.5,-374.34 315.5,-374.34"/>
+<text text-anchor="middle" x="300.5" y="-359.14" font-family="Amiri" font-size="14.00">حمد</text>
+<text text-anchor="middle" x="300.5" y="-344.14" font-family="Amiri" font-size="14.00">hamd</text>
+</g>
+<!-- n0&#45;&gt;n6 -->
+<g id="edge1" class="edge">
+<title>n0&#45;&gt;n6</title>
+<path fill="none" stroke="#7a3b1d" d="M54.03,-393.31C102.66,-385.79 207.39,-369.59 263.03,-360.98"/>
+<polygon fill="#7a3b1d" stroke="#7a3b1d" points="263.8,-364.4 273.15,-359.41 262.73,-357.48 263.8,-364.4"/>
+<text text-anchor="middle" x="161" y="-384.34" font-family="Amiri" font-size="10.00">46.1°</text>
+</g>
+<!-- n1 -->
+<g id="node2" class="node">
+<title>n1</title>
+<path fill="#f4efe3" stroke="black" d="M176,-345.34C176,-345.34 146,-345.34 146,-345.34 140,-345.34 134,-339.34 134,-333.34 134,-333.34 134,-319.34 134,-319.34 134,-313.34 140,-307.34 146,-307.34 146,-307.34 176,-307.34 176,-307.34 182,-307.34 188,-313.34 188,-319.34 188,-319.34 188,-333.34 188,-333.34 188,-339.34 182,-345.34 176,-345.34"/>
+<text text-anchor="middle" x="161" y="-330.14" font-family="Amiri" font-size="14.00">شكر</text>
+<text text-anchor="middle" x="161" y="-315.14" font-family="Amiri" font-size="14.00">şükür</text>
+</g>
+<!-- n1&#45;&gt;n6 -->
+<g id="edge2" class="edge">
+<title>n1&#45;&gt;n6</title>
+<path fill="none" stroke="#7a3b1d" d="M188.37,-320.61C206.15,-317.84 229.95,-316.27 250,-322.34 256.23,-324.22 262.39,-327.18 268.14,-330.56"/>
+<polygon fill="#7a3b1d" stroke="#7a3b1d" points="266.48,-333.66 276.78,-336.15 270.28,-327.78 266.48,-333.66"/>
+<text text-anchor="middle" x="232.5" y="-325.34" font-family="Amiri" font-size="10.00">48.1°</text>
+</g>
+<!-- n1&#45;&gt;n6 -->
+<g id="edge16" class="edge">
+<title>n1&#45;&gt;n6</title>
+<path fill="none" stroke="#2a5d7a" stroke-dasharray="5,2" d="M188.19,-331.86C212.65,-337.02 248.98,-344.68 273.41,-349.83"/>
+<text text-anchor="middle" x="232.5" y="-346.34" font-family="Amiri" font-size="10.00">ρ=0.36</text>
+</g>
+<!-- n2 -->
+<g id="node3" class="node">
+<title>n2</title>
+<path fill="#f4efe3" stroke="black" d="M453.5,-237.34C453.5,-237.34 423.5,-237.34 423.5,-237.34 417.5,-237.34 411.5,-231.34 411.5,-225.34 411.5,-225.34 411.5,-211.34 411.5,-211.34 411.5,-205.34 417.5,-199.34 423.5,-199.34 423.5,-199.34 453.5,-199.34 453.5,-199.34 459.5,-199.34 465.5,-205.34 465.5,-211.34 465.5,-211.34 465.5,-225.34 465.5,-225.34 465.5,-231.34 459.5,-237.34 453.5,-237.34"/>
+<text text-anchor="middle" x="438.5" y="-222.14" font-family="Amiri" font-size="14.00">رضو</text>
+<text text-anchor="middle" x="438.5" y="-207.14" font-family="Amiri" font-size="14.00">rızâ</text>
+</g>
+<!-- n2&#45;&gt;n5 -->
+<g id="edge3" class="edge">
+<title>n2&#45;&gt;n5</title>
+<path fill="none" stroke="#7a3b1d" d="M465.71,-226.15C474.03,-228.28 483.33,-230.28 492,-231.34 507.44,-233.22 511.58,-233.4 527,-231.34 529.54,-231 532.14,-230.55 534.75,-230.03"/>
+<polygon fill="#7a3b1d" stroke="#7a3b1d" points="535.75,-233.39 544.71,-227.73 534.18,-226.57 535.75,-233.39"/>
+<text text-anchor="middle" x="509.5" y="-235.34" font-family="Amiri" font-size="10.00">47.2°</text>
+</g>
+<!-- n2&#45;&gt;n5 -->
+<g id="edge17" class="edge">
+<title>n2&#45;&gt;n5</title>
+<path fill="none" stroke="#2a5d7a" stroke-dasharray="5,2" d="M465.54,-218.18C482.94,-218.12 506.34,-218.1 527,-218.34 532.81,-218.4 539.04,-218.52 544.94,-218.65"/>
+<text text-anchor="middle" x="509.5" y="-221.34" font-family="Amiri" font-size="10.00">ρ=0.24</text>
+</g>
+<!-- n3&#45;&gt;n0 -->
+<g id="edge4" class="edge">
+<title>n3&#45;&gt;n0</title>
+<path fill="none" stroke="#7a3b1d" d="M133.15,-429.22C125.04,-424.12 115.92,-419.01 107,-415.34 93.52,-409.79 78.02,-405.79 64.33,-402.98"/>
+<polygon fill="#7a3b1d" stroke="#7a3b1d" points="64.76,-399.5 54.28,-401.07 63.45,-406.38 64.76,-399.5"/>
+<text text-anchor="middle" x="89.5" y="-418.34" font-family="Amiri" font-size="10.00">43.8°</text>
+</g>
+<!-- n3&#45;&gt;n6 -->
+<g id="edge18" class="edge">
+<title>n3&#45;&gt;n6</title>
+<path fill="none" stroke="#2a5d7a" stroke-dasharray="5,2" d="M193.32,-429.2C210.3,-418.63 231.52,-405.1 250,-392.34 258.21,-386.67 266.99,-380.23 274.84,-374.34"/>
+<text text-anchor="middle" x="232.5" y="-417.34" font-family="Amiri" font-size="10.00">ρ=0.29</text>
+</g>
+<!-- n11 -->
+<g id="node12" class="node">
+<title>n11</title>
+<path fill="#f4efe3" stroke="black" d="M321,-484.34C321,-484.34 280,-484.34 280,-484.34 274,-484.34 268,-478.34 268,-472.34 268,-472.34 268,-458.34 268,-458.34 268,-452.34 274,-446.34 280,-446.34 280,-446.34 321,-446.34 321,-446.34 327,-446.34 333,-452.34 333,-458.34 333,-458.34 333,-472.34 333,-472.34 333,-478.34 327,-484.34 321,-484.34"/>
+<text text-anchor="middle" x="300.5" y="-469.14" font-family="Amiri" font-size="14.00">هدي</text>
+<text text-anchor="middle" x="300.5" y="-454.14" font-family="Amiri" font-size="14.00">hidâyet</text>
+</g>
+<!-- n3&#45;&gt;n11 -->
+<g id="edge19" class="edge">
+<title>n3&#45;&gt;n11</title>
+<path fill="none" stroke="#2a5d7a" stroke-dasharray="5,2" d="M197.2,-457.15C203.11,-458.39 209.21,-459.52 215,-460.34 232.31,-462.79 251.79,-464.05 267.68,-464.68"/>
+<text text-anchor="middle" x="232.5" y="-466.34" font-family="Amiri" font-size="10.00">ρ=0.24</text>
+</g>
+<!-- n4 -->
+<g id="node5" class="node">
+<title>n4</title>
+<path fill="#f4efe3" stroke="black" d="M42,-145.34C42,-145.34 12,-145.34 12,-145.34 6,-145.34 0,-139.34 0,-133.34 0,-133.34 0,-119.34 0,-119.34 0,-113.34 6,-107.34 12,-107.34 12,-107.34 42,-107.34 42,-107.34 48,-107.34 54,-113.34 54,-119.34 54,-119.34 54,-133.34 54,-133.34 54,-139.34 48,-145.34 42,-145.34"/>
+<text text-anchor="middle" x="27" y="-130.14" font-family="Amiri" font-size="14.00">خوف</text>
+<text text-anchor="middle" x="27" y="-115.14" font-family="Amiri" font-size="14.00">havf</text>
+</g>
+<!-- n4&#45;&gt;n2 -->
+<g id="edge5" class="edge">
+<title>n4&#45;&gt;n2</title>
+<path fill="none" stroke="#7a3b1d" d="M44.17,-145.4C51.81,-153.15 61.54,-161.42 72,-166.34 183.21,-218.64 332.87,-221.76 401,-220.04"/>
+<polygon fill="#7a3b1d" stroke="#7a3b1d" points="401.32,-223.53 411.21,-219.73 401.11,-216.53 401.32,-223.53"/>
+<text text-anchor="middle" x="232.5" y="-215.34" font-family="Amiri" font-size="10.00">47.0°</text>
+</g>
+<!-- n4&#45;&gt;n5 -->
+<g id="edge20" class="edge">
+<title>n4&#45;&gt;n5</title>
+<path fill="none" stroke="#2a5d7a" stroke-dasharray="5,2" d="M54.25,-134.64C80.67,-142.24 122.75,-152.34 160,-152.34 160,-152.34 160,-152.34 439.5,-152.34 480.2,-152.34 491.65,-159.17 527,-179.34 536.68,-184.86 546.03,-192.85 553.6,-200.23"/>
+<text text-anchor="middle" x="300.5" y="-155.34" font-family="Amiri" font-size="10.00">ρ=0.23</text>
+</g>
+<!-- n7 -->
+<g id="node8" class="node">
+<title>n7</title>
+<path fill="#f4efe3" stroke="black" d="M176,-124.34C176,-124.34 146,-124.34 146,-124.34 140,-124.34 134,-118.34 134,-112.34 134,-112.34 134,-98.34 134,-98.34 134,-92.34 140,-86.34 146,-86.34 146,-86.34 176,-86.34 176,-86.34 182,-86.34 188,-92.34 188,-98.34 188,-98.34 188,-112.34 188,-112.34 188,-118.34 182,-124.34 176,-124.34"/>
+<text text-anchor="middle" x="161" y="-109.14" font-family="Amiri" font-size="14.00">وقي</text>
+<text text-anchor="middle" x="161" y="-94.14" font-family="Amiri" font-size="14.00">takvâ</text>
+</g>
+<!-- n4&#45;&gt;n7 -->
+<g id="edge21" class="edge">
+<title>n4&#45;&gt;n7</title>
+<path fill="none" stroke="#2a5d7a" stroke-dasharray="5,2" d="M53.89,-107.26C59.59,-103.99 65.79,-101.09 72,-99.34 92.19,-93.64 115.97,-95.76 133.72,-98.96"/>
+<text text-anchor="middle" x="89.5" y="-102.34" font-family="Amiri" font-size="10.00">ρ=0.45</text>
+</g>
+<!-- n9 -->
+<g id="node10" class="node">
+<title>n9</title>
+<path fill="#f4efe3" stroke="black" d="M177,-68.34C177,-68.34 145,-68.34 145,-68.34 139,-68.34 133,-62.34 133,-56.34 133,-56.34 133,-42.34 133,-42.34 133,-36.34 139,-30.34 145,-30.34 145,-30.34 177,-30.34 177,-30.34 183,-30.34 189,-36.34 189,-42.34 189,-42.34 189,-56.34 189,-56.34 189,-62.34 183,-68.34 177,-68.34"/>
+<text text-anchor="middle" x="161" y="-53.14" font-family="Amiri" font-size="14.00">ظلم</text>
+<text text-anchor="middle" x="161" y="-38.14" font-family="Amiri" font-size="14.00">zulüm</text>
+</g>
+<!-- n4&#45;&gt;n9 -->
+<g id="edge22" class="edge">
+<title>n4&#45;&gt;n9</title>
+<path fill="none" stroke="#2a5d7a" stroke-dasharray="5,2" d="M43.13,-107.3C50.97,-98.43 61.16,-88.32 72,-81.34 90.72,-69.27 114.6,-60.95 132.77,-55.83"/>
+<text text-anchor="middle" x="89.5" y="-84.34" font-family="Amiri" font-size="10.00">ρ=0.25</text>
+</g>
+<!-- n5&#45;&gt;n2 -->
+<g id="edge6" class="edge">
+<title>n5&#45;&gt;n2</title>
+<path fill="none" stroke="#7a3b1d" d="M551.11,-200.18C544.06,-194.6 535.7,-189.24 527,-186.34 512.24,-181.42 506.98,-182.13 492,-186.34 485.73,-188.1 479.46,-190.84 473.56,-193.99"/>
+<polygon fill="#7a3b1d" stroke="#7a3b1d" points="471.5,-191.14 464.62,-199.2 475.03,-197.19 471.5,-191.14"/>
+<text text-anchor="middle" x="509.5" y="-189.34" font-family="Amiri" font-size="10.00">45.9°</text>
+</g>
+<!-- n6&#45;&gt;n2 -->
+<g id="edge7" class="edge">
+<title>n6&#45;&gt;n2</title>
+<path fill="none" stroke="#7a3b1d" d="M320.41,-336.29C344.03,-312.5 384.56,-271.67 411.19,-244.84"/>
+<polygon fill="#7a3b1d" stroke="#7a3b1d" points="413.75,-247.23 418.31,-237.67 408.78,-242.3 413.75,-247.23"/>
+<text text-anchor="middle" x="368" y="-305.34" font-family="Amiri" font-size="10.00">45.1°</text>
+</g>
+<!-- n7&#45;&gt;n4 -->
+<g id="edge8" class="edge">
+<title>n7&#45;&gt;n4</title>
+<path fill="none" stroke="#7a3b1d" d="M133.98,-109.48C114.01,-112.65 86.22,-117.08 64.11,-120.59"/>
+<polygon fill="#7a3b1d" stroke="#7a3b1d" points="63.4,-117.16 54.08,-122.19 64.5,-124.07 63.4,-117.16"/>
+<text text-anchor="middle" x="89.5" y="-122.34" font-family="Amiri" font-size="10.00">46.6°</text>
+</g>
+<!-- n8 -->
+<g id="node9" class="node">
+<title>n8</title>
+<path fill="#f4efe3" stroke="black" d="M587,-50.34C587,-50.34 557,-50.34 557,-50.34 551,-50.34 545,-44.34 545,-38.34 545,-38.34 545,-24.34 545,-24.34 545,-18.34 551,-12.34 557,-12.34 557,-12.34 587,-12.34 587,-12.34 593,-12.34 599,-18.34 599,-24.34 599,-24.34 599,-38.34 599,-38.34 599,-44.34 593,-50.34 587,-50.34"/>
+<text text-anchor="middle" x="572" y="-35.14" font-family="Amiri" font-size="14.00">كفر</text>
+<text text-anchor="middle" x="572" y="-20.14" font-family="Amiri" font-size="14.00">küfür</text>
+</g>
+<!-- n8&#45;&gt;n9 -->
+<g id="edge9" class="edge">
+<title>n8&#45;&gt;n9</title>
+<path fill="none" stroke="#7a3b1d" d="M544.85,-28.75C508.89,-25.33 442.12,-19.48 385,-17.34 309.03,-14.48 289.66,-22 215,-36.34 209.84,-37.33 204.43,-38.5 199.12,-39.73"/>
+<polygon fill="#7a3b1d" stroke="#7a3b1d" points="198.03,-36.39 189.12,-42.12 199.66,-43.2 198.03,-36.39"/>
+<text text-anchor="middle" x="368" y="-20.34" font-family="Amiri" font-size="10.00">45.4°</text>
+</g>
+<!-- n8&#45;&gt;n9 -->
+<g id="edge23" class="edge">
+<title>n8&#45;&gt;n9</title>
+<path fill="none" stroke="#2a5d7a" stroke-dasharray="5,2" d="M544.59,-24.19C538.82,-22.78 532.73,-21.41 527,-20.34 413.82,0.91 381.16,7.97 268,-13.34 244.17,-17.83 237.98,-18.59 215,-26.34 206.45,-29.22 197.35,-32.92 189.16,-36.5"/>
+<text text-anchor="middle" x="368" y="-5.34" font-family="Amiri" font-size="10.00">ρ=0.58</text>
+</g>
+<!-- n9&#45;&gt;n8 -->
+<g id="edge10" class="edge">
+<title>n9&#45;&gt;n8</title>
+<path fill="none" stroke="#7a3b1d" d="M189.06,-49.09C249.65,-48.38 400.85,-45.74 527,-36.34 529.55,-36.15 532.18,-35.92 534.82,-35.67"/>
+<polygon fill="#7a3b1d" stroke="#7a3b1d" points="535.38,-39.14 544.97,-34.63 534.67,-32.17 535.38,-39.14"/>
+<text text-anchor="middle" x="368" y="-48.34" font-family="Amiri" font-size="10.00">45.0°</text>
+</g>
+<!-- n10 -->
+<g id="node11" class="node">
+<title>n10</title>
+<path fill="#f4efe3" stroke="black" d="M315.5,-116.34C315.5,-116.34 285.5,-116.34 285.5,-116.34 279.5,-116.34 273.5,-110.34 273.5,-104.34 273.5,-104.34 273.5,-90.34 273.5,-90.34 273.5,-84.34 279.5,-78.34 285.5,-78.34 285.5,-78.34 315.5,-78.34 315.5,-78.34 321.5,-78.34 327.5,-84.34 327.5,-90.34 327.5,-90.34 327.5,-104.34 327.5,-104.34 327.5,-110.34 321.5,-116.34 315.5,-116.34"/>
+<text text-anchor="middle" x="300.5" y="-101.14" font-family="Amiri" font-size="14.00">عدل</text>
+<text text-anchor="middle" x="300.5" y="-86.14" font-family="Amiri" font-size="14.00">adl</text>
+</g>
+<!-- n9&#45;&gt;n10 -->
+<g id="edge24" class="edge">
+<title>n9&#45;&gt;n10</title>
+<path fill="none" stroke="#2a5d7a" stroke-dasharray="5,2" d="M189.17,-58.82C213.58,-67.34 249.21,-79.78 273.32,-88.2"/>
+<text text-anchor="middle" x="232.5" y="-82.34" font-family="Amiri" font-size="10.00">ρ=0.28</text>
+</g>
+<!-- n10&#45;&gt;n2 -->
+<g id="edge11" class="edge">
+<title>n10&#45;&gt;n2</title>
+<path fill="none" stroke="#7a3b1d" d="M323.05,-116.51C346.13,-137.04 382.88,-169.74 408.49,-192.53"/>
+<polygon fill="#7a3b1d" stroke="#7a3b1d" points="406.25,-195.22 416.05,-199.25 410.91,-189.99 406.25,-195.22"/>
+<text text-anchor="middle" x="368" y="-172.34" font-family="Amiri" font-size="10.00">46.5°</text>
+</g>
+<!-- n12 -->
+<g id="node13" class="node">
+<title>n12</title>
+<path fill="#f4efe3" stroke="black" d="M462,-116.34C462,-116.34 415,-116.34 415,-116.34 409,-116.34 403,-110.34 403,-104.34 403,-104.34 403,-90.34 403,-90.34 403,-84.34 409,-78.34 415,-78.34 415,-78.34 462,-78.34 462,-78.34 468,-78.34 474,-84.34 474,-90.34 474,-90.34 474,-104.34 474,-104.34 474,-110.34 468,-116.34 462,-116.34"/>
+<text text-anchor="middle" x="438.5" y="-101.14" font-family="Amiri" font-size="14.00">غفر</text>
+<text text-anchor="middle" x="438.5" y="-86.14" font-family="Amiri" font-size="14.00">mağfiret</text>
+</g>
+<!-- n10&#45;&gt;n12 -->
+<g id="edge25" class="edge">
+<title>n10&#45;&gt;n12</title>
+<path fill="none" stroke="#2a5d7a" stroke-dasharray="5,2" d="M327.72,-97.34C349.1,-97.34 379.48,-97.34 402.86,-97.34"/>
+<text text-anchor="middle" x="368" y="-100.34" font-family="Amiri" font-size="10.00">ρ=0.21</text>
+</g>
+<!-- n11&#45;&gt;n3 -->
+<g id="edge12" class="edge">
+<title>n11&#45;&gt;n3</title>
+<path fill="none" stroke="#7a3b1d" d="M267.9,-453.57C262.02,-451.83 255.88,-450.3 250,-449.34 236.3,-447.1 221.24,-446.32 207.52,-446.25"/>
+<polygon fill="#7a3b1d" stroke="#7a3b1d" points="207.3,-442.75 197.32,-446.33 207.35,-449.75 207.3,-442.75"/>
+<text text-anchor="middle" x="232.5" y="-452.34" font-family="Amiri" font-size="10.00">47.1°</text>
+</g>
+<!-- n12&#45;&gt;n8 -->
+<g id="edge13" class="edge">
+<title>n12&#45;&gt;n8</title>
+<path fill="none" stroke="#7a3b1d" d="M474.15,-86.8C490.64,-81.16 510.35,-73.48 527,-64.34 531.27,-61.99 535.59,-59.27 539.77,-56.41"/>
+<polygon fill="#7a3b1d" stroke="#7a3b1d" points="542,-59.12 548.08,-50.44 537.92,-53.43 542,-59.12"/>
+<text text-anchor="middle" x="509.5" y="-83.34" font-family="Amiri" font-size="10.00">47.1°</text>
+</g>
+</g>
+</svg>
+</div>
+<h2>Ne çıktı</h2>
+<ul>
+<li>Şükür ile hamd birbirinin en yakını ve ağaçta bağlıdırlar; küfür ile zulüm karşılıklı en yakındır; havf takvâya bağlanır; sabır tevekküle bağlanır.</li>
+<li><b>Kapsama asimetrisi çıkmadı.</b> |d(A→B) − d(B→A)| ortalaması, mesafelerin ortalamasının yalnız %1.7'idir ve hiçbir çiftte 3 dereceyi geçmez. Yani bu ölçüyle "A, B'nin içindedir ama B, A'nın içinde değildir" diyebileceğimiz bir çift bulunamadı. Bunun sebebi bulutların hepsinin aynı mealden gelmesi ve modelin üslup boyutunun baskın olması olabilir; bu bir tahmindir, sınanmadı.</li>
+<li>Bu yüzden "kapsama" iddiası yapılmaz; kapsama için başka bir kaynak (kavramın tanım cümleleri, lügat metinleri) ayrıca denenmelidir.</li>
+</ul>
+<h2>Yapıştırılan metne tenkit</h2>
+<ul>
+<li>"Kosinüs benzerliği kapsamadır" yanlıştır: kosinüs simetriktir, kapsama asimetriktir. Yönlülük ancak bulutlar (kümeler) alınınca, yönlü mesafeyle gelir.</li>
+<li>Kosinüs üçgen eşitsizliğini sağlamaz; Lawvere kategorisi için açı mesafesi gerekir.</li>
+<li>Kesişim tensörü formülü ve "hacim ∝ ⟨x,y⟩" iddiaları metinde ispatsızdır; bu sayfada kullanılmadı.</li>
+<li>Kısmî korelasyon ile Gram tersi sağlam araçtır ve kullanıldı; fakat korelasyon nedensellik veya anlamsal bağımlılık değil, embedding uzayındaki doğrusal bağımlılık söyler.</li>
+</ul>
+<p>Veri: <a href="kaynak/lugat/pilot/kategori/kategori.json">kategori.json</a> · <a href="kaynak/lugat/pilot/kategori/kategori.dot">kategori.dot</a></p>
+<h3>Yönlü ortalama açı mesafesi d(satır → sütun), derece</h3><div class='sc'><table class='m'><tr><th></th><th>sabır</th><th>şükür</th><th>rızâ</th><th>tevekkül</th><th>havf</th><th>recâ</th><th>hamd</th><th>takvâ</th><th>küfür</th><th>zulüm</th><th>adl</th><th>hidâyet</th><th>mağfiret</th></tr><tr><th>sabır</th><td style='background:rgba(122,59,29,1.00)'>0.0</td><td style='background:rgba(122,59,29,0.06)'>49.8</td><td style='background:rgba(122,59,29,0.08)'>48.4</td><td style='background:rgba(122,59,29,0.12)'>46.6</td><td style='background:rgba(122,59,29,0.07)'>49.1</td><td style='background:rgba(122,59,29,0.06)'>49.5</td><td style='background:rgba(122,59,29,0.13)'>46.1</td><td style='background:rgba(122,59,29,0.08)'>48.7</td><td style='background:rgba(122,59,29,0.04)'>50.7</td><td style='background:rgba(122,59,29,0.02)'>51.9</td><td style='background:rgba(122,59,29,0.00)'>52.8</td><td style='background:rgba(122,59,29,0.03)'>51.5</td><td style='background:rgba(122,59,29,0.09)'>48.2</td></tr><tr><th>şükür</th><td style='background:rgba(122,59,29,0.04)'>50.5</td><td style='background:rgba(122,59,29,1.00)'>0.0</td><td style='background:rgba(122,59,29,0.07)'>48.9</td><td style='background:rgba(122,59,29,0.02)'>52.0</td><td style='background:rgba(122,59,29,0.07)'>49.2</td><td style='background:rgba(122,59,29,0.02)'>52.0</td><td style='background:rgba(122,59,29,0.09)'>48.1</td><td style='background:rgba(122,59,29,0.05)'>50.1</td><td style='background:rgba(122,59,29,0.02)'>51.7</td><td style='background:rgba(122,59,29,0.03)'>51.2</td><td style='background:rgba(122,59,29,0.01)'>52.1</td><td style='background:rgba(122,59,29,0.03)'>51.5</td><td style='background:rgba(122,59,29,0.04)'>50.7</td></tr><tr><th>rızâ</th><td style='background:rgba(122,59,29,0.08)'>48.6</td><td style='background:rgba(122,59,29,0.08)'>48.6</td><td style='background:rgba(122,59,29,1.00)'>0.0</td><td style='background:rgba(122,59,29,0.05)'>50.1</td><td style='background:rgba(122,59,29,0.11)'>47.3</td><td style='background:rgba(122,59,29,0.11)'>47.2</td><td style='background:rgba(122,59,29,0.11)'>47.3</td><td style='background:rgba(122,59,29,0.10)'>47.8</td><td style='background:rgba(122,59,29,0.06)'>49.6</td><td style='background:rgba(122,59,29,0.07)'>49.2</td><td style='background:rgba(122,59,29,0.07)'>49.3</td><td style='background:rgba(122,59,29,0.05)'>50.0</td><td style='background:rgba(122,59,29,0.08)'>48.6</td></tr><tr><th>tevekkül</th><td style='background:rgba(122,59,29,0.17)'>43.9</td><td style='background:rgba(122,59,29,0.03)'>51.1</td><td style='background:rgba(122,59,29,0.08)'>48.9</td><td style='background:rgba(122,59,29,1.00)'>0.0</td><td style='background:rgba(122,59,29,0.07)'>48.9</td><td style='background:rgba(122,59,29,0.07)'>49.2</td><td style='background:rgba(122,59,29,0.09)'>48.3</td><td style='background:rgba(122,59,29,0.06)'>49.5</td><td style='background:rgba(122,59,29,0.04)'>50.9</td><td style='background:rgba(122,59,29,0.04)'>50.6</td><td style='background:rgba(122,59,29,0.04)'>51.0</td><td style='background:rgba(122,59,29,0.11)'>47.0</td><td style='background:rgba(122,59,29,0.09)'>48.0</td></tr><tr><th>havf</th><td style='background:rgba(122,59,29,0.06)'>49.8</td><td style='background:rgba(122,59,29,0.05)'>50.2</td><td style='background:rgba(122,59,29,0.11)'>47.0</td><td style='background:rgba(122,59,29,0.05)'>50.2</td><td style='background:rgba(122,59,29,1.00)'>0.0</td><td style='background:rgba(122,59,29,0.08)'>48.7</td><td style='background:rgba(122,59,29,0.04)'>50.7</td><td style='background:rgba(122,59,29,0.10)'>47.8</td><td style='background:rgba(122,59,29,0.07)'>49.3</td><td style='background:rgba(122,59,29,0.05)'>50.4</td><td style='background:rgba(122,59,29,0.03)'>51.1</td><td style='background:rgba(122,59,29,0.05)'>50.4</td><td style='background:rgba(122,59,29,0.07)'>49.0</td></tr><tr><th>recâ</th><td style='background:rgba(122,59,29,0.06)'>49.7</td><td style='background:rgba(122,59,29,0.04)'>50.6</td><td style='background:rgba(122,59,29,0.13)'>45.9</td><td style='background:rgba(122,59,29,0.05)'>50.2</td><td style='background:rgba(122,59,29,0.12)'>46.4</td><td style='background:rgba(122,59,29,1.00)'>0.0</td><td style='background:rgba(122,59,29,0.05)'>50.0</td><td style='background:rgba(122,59,29,0.08)'>48.4</td><td style='background:rgba(122,59,29,0.06)'>49.6</td><td style='background:rgba(122,59,29,0.05)'>50.2</td><td style='background:rgba(122,59,29,0.03)'>51.1</td><td style='background:rgba(122,59,29,0.04)'>50.6</td><td style='background:rgba(122,59,29,0.09)'>48.1</td></tr><tr><th>hamd</th><td style='background:rgba(122,59,29,0.13)'>45.8</td><td style='background:rgba(122,59,29,0.11)'>47.2</td><td style='background:rgba(122,59,29,0.15)'>45.1</td><td style='background:rgba(122,59,29,0.09)'>48.3</td><td style='background:rgba(122,59,29,0.06)'>49.6</td><td style='background:rgba(122,59,29,0.07)'>49.2</td><td style='background:rgba(122,59,29,1.00)'>0.0</td><td style='background:rgba(122,59,29,0.06)'>49.9</td><td style='background:rgba(122,59,29,0.02)'>51.7</td><td style='background:rgba(122,59,29,0.04)'>50.7</td><td style='background:rgba(122,59,29,0.07)'>49.1</td><td style='background:rgba(122,59,29,0.03)'>51.2</td><td style='background:rgba(122,59,29,0.12)'>46.7</td></tr><tr><th>takvâ</th><td style='background:rgba(122,59,29,0.07)'>49.4</td><td style='background:rgba(122,59,29,0.05)'>50.3</td><td style='background:rgba(122,59,29,0.09)'>47.9</td><td style='background:rgba(122,59,29,0.06)'>49.6</td><td style='background:rgba(122,59,29,0.12)'>46.6</td><td style='background:rgba(122,59,29,0.07)'>49.1</td><td style='background:rgba(122,59,29,0.06)'>49.9</td><td style='background:rgba(122,59,29,1.00)'>0.0</td><td style='background:rgba(122,59,29,0.06)'>49.5</td><td style='background:rgba(122,59,29,0.06)'>49.6</td><td style='background:rgba(122,59,29,0.04)'>50.6</td><td style='background:rgba(122,59,29,0.05)'>50.3</td><td style='background:rgba(122,59,29,0.07)'>49.0</td></tr><tr><th>küfür</th><td style='background:rgba(122,59,29,0.04)'>50.7</td><td style='background:rgba(122,59,29,0.06)'>49.8</td><td style='background:rgba(122,59,29,0.08)'>48.6</td><td style='background:rgba(122,59,29,0.05)'>50.1</td><td style='background:rgba(122,59,29,0.08)'>48.5</td><td style='background:rgba(122,59,29,0.06)'>49.8</td><td style='background:rgba(122,59,29,0.05)'>50.3</td><td style='background:rgba(122,59,29,0.06)'>49.6</td><td style='background:rgba(122,59,29,1.00)'>0.0</td><td style='background:rgba(122,59,29,0.14)'>45.4</td><td style='background:rgba(122,59,29,0.04)'>50.7</td><td style='background:rgba(122,59,29,0.09)'>48.0</td><td style='background:rgba(122,59,29,0.09)'>48.1</td></tr><tr><th>zulüm</th><td style='background:rgba(122,59,29,0.06)'>49.7</td><td style='background:rgba(122,59,29,0.06)'>49.7</td><td style='background:rgba(122,59,29,0.09)'>48.4</td><td style='background:rgba(122,59,29,0.05)'>50.4</td><td style='background:rgba(122,59,29,0.07)'>49.1</td><td style='background:rgba(122,59,29,0.06)'>49.8</td><td style='background:rgba(122,59,29,0.05)'>50.1</td><td style='background:rgba(122,59,29,0.08)'>48.9</td><td style='background:rgba(122,59,29,0.15)'>45.0</td><td style='background:rgba(122,59,29,1.00)'>0.0</td><td style='background:rgba(122,59,29,0.04)'>50.6</td><td style='background:rgba(122,59,29,0.10)'>47.5</td><td style='background:rgba(122,59,29,0.05)'>50.2</td></tr><tr><th>adl</th><td style='background:rgba(122,59,29,0.00)'>52.9</td><td style='background:rgba(122,59,29,0.01)'>52.3</td><td style='background:rgba(122,59,29,0.12)'>46.5</td><td style='background:rgba(122,59,29,0.02)'>51.9</td><td style='background:rgba(122,59,29,0.07)'>49.0</td><td style='background:rgba(122,59,29,0.02)'>51.9</td><td style='background:rgba(122,59,29,0.04)'>50.6</td><td style='background:rgba(122,59,29,0.06)'>49.5</td><td style='background:rgba(122,59,29,0.04)'>50.8</td><td style='background:rgba(122,59,29,0.06)'>49.6</td><td style='background:rgba(122,59,29,1.00)'>0.0</td><td style='background:rgba(122,59,29,0.05)'>50.2</td><td style='background:rgba(122,59,29,0.09)'>48.0</td></tr><tr><th>hidâyet</th><td style='background:rgba(122,59,29,0.02)'>51.7</td><td style='background:rgba(122,59,29,0.05)'>50.5</td><td style='background:rgba(122,59,29,0.07)'>49.0</td><td style='background:rgba(122,59,29,0.11)'>47.1</td><td style='background:rgba(122,59,29,0.06)'>49.9</td><td style='background:rgba(122,59,29,0.05)'>50.1</td><td style='background:rgba(122,59,29,0.04)'>50.6</td><td style='background:rgba(122,59,29,0.07)'>49.2</td><td style='background:rgba(122,59,29,0.08)'>48.7</td><td style='background:rgba(122,59,29,0.08)'>48.9</td><td style='background:rgba(122,59,29,0.05)'>50.5</td><td style='background:rgba(122,59,29,1.00)'>0.0</td><td style='background:rgba(122,59,29,0.06)'>49.8</td></tr><tr><th>mağfiret</th><td style='background:rgba(122,59,29,0.08)'>48.5</td><td style='background:rgba(122,59,29,0.08)'>48.6</td><td style='background:rgba(122,59,29,0.09)'>47.9</td><td style='background:rgba(122,59,29,0.09)'>48.1</td><td style='background:rgba(122,59,29,0.11)'>47.3</td><td style='background:rgba(122,59,29,0.09)'>48.0</td><td style='background:rgba(122,59,29,0.10)'>47.4</td><td style='background:rgba(122,59,29,0.08)'>48.6</td><td style='background:rgba(122,59,29,0.11)'>47.1</td><td style='background:rgba(122,59,29,0.04)'>50.7</td><td style='background:rgba(122,59,29,0.07)'>49.0</td><td style='background:rgba(122,59,29,0.06)'>49.8</td><td style='background:rgba(122,59,29,1.00)'>0.0</td></tr></table></div>
+<h3>Kısmî korelasyon (öbür on iki merkez sabitken)</h3><div class='sc'><table class='m'><tr><th></th><th>sabır</th><th>şükür</th><th>rızâ</th><th>tevekkül</th><th>havf</th><th>recâ</th><th>hamd</th><th>takvâ</th><th>küfür</th><th>zulüm</th><th>adl</th><th>hidâyet</th><th>mağfiret</th></tr><tr><th>sabır</th><td style='background:rgba(42,93,122,1.00)'>1.00</td><td style='background:rgba(42,93,122,0.18)'>0.18</td><td style='background:rgba(42,93,122,0.13)'>0.13</td><td style='background:rgba(42,93,122,0.21)'>0.21</td><td style='background:rgba(42,93,122,0.05)'>0.05</td><td style='background:rgba(42,93,122,0.22)'>0.22</td><td style='background:rgba(42,93,122,0.04)'>0.04</td><td style='background:rgba(42,93,122,0.08)'>0.08</td><td style='background:rgba(160,40,40,0.04)'>-0.04</td><td style='background:rgba(42,93,122,0.03)'>0.03</td><td style='background:rgba(160,40,40,0.02)'>-0.02</td><td style='background:rgba(160,40,40,0.12)'>-0.12</td><td style='background:rgba(42,93,122,0.15)'>0.15</td></tr><tr><th>şükür</th><td style='background:rgba(42,93,122,0.18)'>0.18</td><td style='background:rgba(42,93,122,1.00)'>1.00</td><td style='background:rgba(42,93,122,0.16)'>0.16</td><td style='background:rgba(160,40,40,0.10)'>-0.10</td><td style='background:rgba(42,93,122,0.03)'>0.03</td><td style='background:rgba(160,40,40,0.05)'>-0.05</td><td style='background:rgba(42,93,122,0.36)'>0.36</td><td style='background:rgba(42,93,122,0.00)'>0.00</td><td style='background:rgba(42,93,122,0.04)'>0.04</td><td style='background:rgba(160,40,40,0.02)'>-0.02</td><td style='background:rgba(42,93,122,0.03)'>0.03</td><td style='background:rgba(42,93,122,0.09)'>0.09</td><td style='background:rgba(42,93,122,0.18)'>0.18</td></tr><tr><th>rızâ</th><td style='background:rgba(42,93,122,0.13)'>0.13</td><td style='background:rgba(42,93,122,0.16)'>0.16</td><td style='background:rgba(42,93,122,1.00)'>1.00</td><td style='background:rgba(42,93,122,0.02)'>0.02</td><td style='background:rgba(42,93,122,0.01)'>0.01</td><td style='background:rgba(42,93,122,0.24)'>0.24</td><td style='background:rgba(42,93,122,0.03)'>0.03</td><td style='background:rgba(42,93,122,0.12)'>0.12</td><td style='background:rgba(42,93,122,0.09)'>0.09</td><td style='background:rgba(160,40,40,0.00)'>-0.00</td><td style='background:rgba(42,93,122,0.17)'>0.17</td><td style='background:rgba(42,93,122,0.15)'>0.15</td><td style='background:rgba(42,93,122,0.13)'>0.13</td></tr><tr><th>tevekkül</th><td style='background:rgba(42,93,122,0.21)'>0.21</td><td style='background:rgba(160,40,40,0.10)'>-0.10</td><td style='background:rgba(42,93,122,0.02)'>0.02</td><td style='background:rgba(42,93,122,1.00)'>1.00</td><td style='background:rgba(42,93,122,0.10)'>0.10</td><td style='background:rgba(42,93,122,0.04)'>0.04</td><td style='background:rgba(42,93,122,0.29)'>0.29</td><td style='background:rgba(42,93,122,0.10)'>0.10</td><td style='background:rgba(42,93,122,0.01)'>0.01</td><td style='background:rgba(160,40,40,0.11)'>-0.11</td><td style='background:rgba(42,93,122,0.10)'>0.10</td><td style='background:rgba(42,93,122,0.24)'>0.24</td><td style='background:rgba(160,40,40,0.07)'>-0.07</td></tr><tr><th>havf</th><td style='background:rgba(42,93,122,0.05)'>0.05</td><td style='background:rgba(42,93,122,0.03)'>0.03</td><td style='background:rgba(42,93,122,0.01)'>0.01</td><td style='background:rgba(42,93,122,0.10)'>0.10</td><td style='background:rgba(42,93,122,1.00)'>1.00</td><td style='background:rgba(42,93,122,0.23)'>0.23</td><td style='background:rgba(160,40,40,0.15)'>-0.15</td><td style='background:rgba(42,93,122,0.45)'>0.45</td><td style='background:rgba(160,40,40,0.01)'>-0.01</td><td style='background:rgba(42,93,122,0.25)'>0.25</td><td style='background:rgba(160,40,40,0.06)'>-0.06</td><td style='background:rgba(160,40,40,0.09)'>-0.09</td><td style='background:rgba(42,93,122,0.08)'>0.08</td></tr><tr><th>recâ</th><td style='background:rgba(42,93,122,0.22)'>0.22</td><td style='background:rgba(160,40,40,0.05)'>-0.05</td><td style='background:rgba(42,93,122,0.24)'>0.24</td><td style='background:rgba(42,93,122,0.04)'>0.04</td><td style='background:rgba(42,93,122,0.23)'>0.23</td><td style='background:rgba(42,93,122,1.00)'>1.00</td><td style='background:rgba(42,93,122,0.10)'>0.10</td><td style='background:rgba(42,93,122,0.04)'>0.04</td><td style='background:rgba(42,93,122,0.14)'>0.14</td><td style='background:rgba(42,93,122,0.07)'>0.07</td><td style='background:rgba(160,40,40,0.05)'>-0.05</td><td style='background:rgba(42,93,122,0.08)'>0.08</td><td style='background:rgba(42,93,122,0.12)'>0.12</td></tr><tr><th>hamd</th><td style='background:rgba(42,93,122,0.04)'>0.04</td><td style='background:rgba(42,93,122,0.36)'>0.36</td><td style='background:rgba(42,93,122,0.03)'>0.03</td><td style='background:rgba(42,93,122,0.29)'>0.29</td><td style='background:rgba(160,40,40,0.15)'>-0.15</td><td style='background:rgba(42,93,122,0.10)'>0.10</td><td style='background:rgba(42,93,122,1.00)'>1.00</td><td style='background:rgba(42,93,122,0.14)'>0.14</td><td style='background:rgba(160,40,40,0.13)'>-0.13</td><td style='background:rgba(42,93,122,0.11)'>0.11</td><td style='background:rgba(160,40,40,0.10)'>-0.10</td><td style='background:rgba(42,93,122,0.06)'>0.06</td><td style='background:rgba(42,93,122,0.16)'>0.16</td></tr><tr><th>takvâ</th><td style='background:rgba(42,93,122,0.08)'>0.08</td><td style='background:rgba(42,93,122,0.00)'>0.00</td><td style='background:rgba(42,93,122,0.12)'>0.12</td><td style='background:rgba(42,93,122,0.10)'>0.10</td><td style='background:rgba(42,93,122,0.45)'>0.45</td><td style='background:rgba(42,93,122,0.04)'>0.04</td><td style='background:rgba(42,93,122,0.14)'>0.14</td><td style='background:rgba(42,93,122,1.00)'>1.00</td><td style='background:rgba(42,93,122,0.12)'>0.12</td><td style='background:rgba(160,40,40,0.13)'>-0.13</td><td style='background:rgba(42,93,122,0.19)'>0.19</td><td style='background:rgba(42,93,122,0.16)'>0.16</td><td style='background:rgba(42,93,122,0.02)'>0.02</td></tr><tr><th>küfür</th><td style='background:rgba(160,40,40,0.04)'>-0.04</td><td style='background:rgba(42,93,122,0.04)'>0.04</td><td style='background:rgba(42,93,122,0.09)'>0.09</td><td style='background:rgba(42,93,122,0.01)'>0.01</td><td style='background:rgba(160,40,40,0.01)'>-0.01</td><td style='background:rgba(42,93,122,0.14)'>0.14</td><td style='background:rgba(160,40,40,0.13)'>-0.13</td><td style='background:rgba(42,93,122,0.12)'>0.12</td><td style='background:rgba(42,93,122,1.00)'>1.00</td><td style='background:rgba(42,93,122,0.58)'>0.58</td><td style='background:rgba(160,40,40,0.15)'>-0.15</td><td style='background:rgba(42,93,122,0.17)'>0.17</td><td style='background:rgba(42,93,122,0.12)'>0.12</td></tr><tr><th>zulüm</th><td style='background:rgba(42,93,122,0.03)'>0.03</td><td style='background:rgba(160,40,40,0.02)'>-0.02</td><td style='background:rgba(160,40,40,0.00)'>-0.00</td><td style='background:rgba(160,40,40,0.11)'>-0.11</td><td style='background:rgba(42,93,122,0.25)'>0.25</td><td style='background:rgba(42,93,122,0.07)'>0.07</td><td style='background:rgba(42,93,122,0.11)'>0.11</td><td style='background:rgba(160,40,40,0.13)'>-0.13</td><td style='background:rgba(42,93,122,0.58)'>0.58</td><td style='background:rgba(42,93,122,1.00)'>1.00</td><td style='background:rgba(42,93,122,0.28)'>0.28</td><td style='background:rgba(42,93,122,0.10)'>0.10</td><td style='background:rgba(160,40,40,0.09)'>-0.09</td></tr><tr><th>adl</th><td style='background:rgba(160,40,40,0.02)'>-0.02</td><td style='background:rgba(42,93,122,0.03)'>0.03</td><td style='background:rgba(42,93,122,0.17)'>0.17</td><td style='background:rgba(42,93,122,0.10)'>0.10</td><td style='background:rgba(160,40,40,0.06)'>-0.06</td><td style='background:rgba(160,40,40,0.05)'>-0.05</td><td style='background:rgba(160,40,40,0.10)'>-0.10</td><td style='background:rgba(42,93,122,0.19)'>0.19</td><td style='background:rgba(160,40,40,0.15)'>-0.15</td><td style='background:rgba(42,93,122,0.28)'>0.28</td><td style='background:rgba(42,93,122,1.00)'>1.00</td><td style='background:rgba(42,93,122,0.11)'>0.11</td><td style='background:rgba(42,93,122,0.21)'>0.21</td></tr><tr><th>hidâyet</th><td style='background:rgba(160,40,40,0.12)'>-0.12</td><td style='background:rgba(42,93,122,0.09)'>0.09</td><td style='background:rgba(42,93,122,0.15)'>0.15</td><td style='background:rgba(42,93,122,0.24)'>0.24</td><td style='background:rgba(160,40,40,0.09)'>-0.09</td><td style='background:rgba(42,93,122,0.08)'>0.08</td><td style='background:rgba(42,93,122,0.06)'>0.06</td><td style='background:rgba(42,93,122,0.16)'>0.16</td><td style='background:rgba(42,93,122,0.17)'>0.17</td><td style='background:rgba(42,93,122,0.10)'>0.10</td><td style='background:rgba(42,93,122,0.11)'>0.11</td><td style='background:rgba(42,93,122,1.00)'>1.00</td><td style='background:rgba(160,40,40,0.07)'>-0.07</td></tr><tr><th>mağfiret</th><td style='background:rgba(42,93,122,0.15)'>0.15</td><td style='background:rgba(42,93,122,0.18)'>0.18</td><td style='background:rgba(42,93,122,0.13)'>0.13</td><td style='background:rgba(160,40,40,0.07)'>-0.07</td><td style='background:rgba(42,93,122,0.08)'>0.08</td><td style='background:rgba(42,93,122,0.12)'>0.12</td><td style='background:rgba(42,93,122,0.16)'>0.16</td><td style='background:rgba(42,93,122,0.02)'>0.02</td><td style='background:rgba(42,93,122,0.12)'>0.12</td><td style='background:rgba(160,40,40,0.09)'>-0.09</td><td style='background:rgba(42,93,122,0.21)'>0.21</td><td style='background:rgba(160,40,40,0.07)'>-0.07</td><td style='background:rgba(42,93,122,1.00)'>1.00</td></tr></table></div>
+</body></html>
