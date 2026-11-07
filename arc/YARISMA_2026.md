@@ -30,3 +30,27 @@ Dayanak: F 3-I 277, 288 (`CLAUDE.md`). Tarih: 2026-10-12.
 - H2 **Doğrulanabilir döngü:** model program/ızgara üretir, eğitim çiftlerinde sınanır, hata geri beslenir (2025 raporunun "iyileştirme döngüsü" teması; Poetiq'te 31 → 54).
 - H3 **Test anı eğitimi + artırma oyu** (NVARC çizgisi) taban modelin üstüne.
 - H4 **Veri sızıntısı / ezber:** genel ARC-AGI-2 görevleri açık modellerin eğitiminde olabilir (2025 raporu "bilgi aşırı uydurması" uyarısı veriyor). Tablo %50 üzerinden; final farklı çıkabilir.
+
+## 4. 76 puanlı defter: nguyennguyen599/dsv41-tools-submit-b32m-external-server (okundu: 2026-11-07)
+
+Okunan: defterin bütün 26 hücresi, içine gömülü çözücü/koşum kitinin (solver_dsv41.py, run_deepseek_tools.py, train_check.py) bütün metni, Kaggle Model sayfasının açıklaması (chankhavu/dsv41-flash-1017-arc-tool-e128-2bit). Defterde skor çıktısı yoktur; "76" rakamı [?] (padişahın sözü, yoklanmadı). Okunmayan: `vllm-wheels` ve `arc2-2026-src` veri kümeleri (403, kapalı), `auto_repair.py` ve `solve` gövdesinin 1200 sonrası kısmı kısmen.
+
+| # | Olgu | Kaynak | İşaret |
+| :-- | :-- | :-- | :-- |
+| 1 | Model: DeepSeek-V4.1-Flash-1017 (MIT); her katmanda 384 uzmandan 128'i tutulmuş (10M belirteçlik araçlı koşu izlerinde katkı puanıyla, araç çağrısı blokları 10 kat ağırlıklı); uzmanlar 2 bit GPTQ (Humming düzeni); 64 GiB sıkıştırılmış Engram; toplam 131 GB, 136 dosya | Model sayfası, defter hücre 7 | [Y] |
+| 2 | Aynı koşum, tam model (DeepSeek API): 120 değerlendirme görevi, pass@1 %74,5, pass@2 %84,9, ortalama 27,4K çıktı belirteci, 13,9 tur. Budanmış 2 bit: pass@1 %72,8, pass@2 %82,5, 35,2K belirteç, 17,1 tur | Model sayfası (yazarın kendi ölçümü; ben doğrulamadım) | [Y] yazar beyanı |
+| 3 | Yöntem tür: araçlı akıl yürütme. Kalıcı Python oturumu (`run_python`, `train`, `test_input`, numpy, scipy), `submit_answer` ile cevap `solve(test_input)` ifadesi olarak teslim; harness önce `solve`ü bütün eğitim çiftlerinde koşar | run_deepseek_tools.py | [Y] |
+| 4 | İstem (`lean2sub`): "gridleri elle okuma, kopyalama, sayma; kodla incele; hipotezi her eğitim çiftinde kodla sına; uymayan çifti açıklayıp geçme" | run_deepseek_tools.py | [Y] |
+| 5 | Cevap seçimi: her çiftin 2 denemesi; `train_check` her deneme bitince cevabı üreten programı eğitim girdilerinde yeniden koşar (4 yol: ifade, hücre, fonksiyon, transkript tekrarı); eğitimi geçenler önce, sonra deneme sırası, iki farklı ızgara | train_check.py | [Y] |
+| 6 | Bütçe: tur başına 64K, deneme başına 80K çıktı, 40K yumuşak, 40 tur, sıcaklık 1,0, çaba 50 | solver HARNESS, model sayfası | [Y] |
+| 7 | Çok test girdili görevde tek yürütme (liste cevap), bütçe (1+0,5(n−1)); 45 çok çiftli görevde pass@2 %83,1 (çift başına %77,5) ve %29 az belirteç | defter hücre 2 yorumu | [Y] yazar beyanı |
+| 8 | Sunucu: vLLM çatalı 0.28.1rc1 (cp313 tekerlekler, CUDA 13), tensör paralel 4 (GPU sırası 0,2,1,3), DCP, fp8 KV, KV'nin CPU'ya boşaltılması, 64 eşzamanlı dizi (80 işçi), bağlam 163 840, önek önbelleği, Humming 2 bit MoE çekirdekleri L4 için elle ayarlı karolar, host all-reduce | defter hücre 15, model sayfası | [Y] |
+| 9 | Hız (yazarın): 4×L4'te 40 akışta 340-350 üretim belirteci/sn, ~35 deneme/saat; `--token-exact` olmadan önek önbelleği bozulup 177'ye düşer; KV %0,89'da 381 → 196 | Model sayfası, solver yorumu | [Y] yazar beyanı |
+| 10 | Önlemler: ilk hücrede geçerli yedek submission; her deneme sonunda atomik yazım; sürücü güvenlik zamanlaması (yeni deneme durdurma, akış kesme, sert durdurma); gzip ile döngü bekçisi; sunucu denetçisi 3 yeniden başlatma; KV doluluğuna göre kabul | solver, hücre 15 | [Y] |
+
+Çıkarımlar [Ç] (padişahın sözü değil):
+- C1 Puanın ana kaynağı mühendislik hilesi değil, **güçlü bir taban model + araçlı akıl yürütme + eğitimde doğrulama**dır (tam modelin API'de %84,9 pass@2'si, budamanın kaybı 2,4 puan). 4×L4'e sığdırma işi ayrı ve ağır bir mühendislik (budama + 2 bit + çatal vLLM).
+- C2 Ortalama deneme 35K belirteç; 100K belirteç/görev (F 293) onların harcamasının ~3 katıdır. Puanı belirleyen şeyin belirteç miktarı mı, model kalitesi mi olduğu bu belgede ölçülmedi.
+- C3 Bizim F 289 donatımı (terminal, analiz araçları, eğitim çiftlerinde doğrulama) bu koşumun aynısı yönündedir; farklar: onlarda doğrulama harness'te zorunlu (`train_check`, `submit_answer` kapısı), model tokenizer'la tam belirteç geçmişi tutar (`--token-exact`).
+- C4 Bizim vLLM engelimiz (cp313, torch 2.11) için onların kullandığı `nguyennguyen599/vllm-wheels` (cp313) kapalı, yoklanamadı.
+- C5 Gizli test %50 üzerinden ölçülen 76 ile 120 görevlik değerlendirmede %82,5 arasındaki fark (taslak açıklama: dağılım farkı) ölçülmedi.
