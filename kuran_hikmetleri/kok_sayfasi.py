@@ -76,6 +76,33 @@ details.serh .ic { background:var(--kart); border:1px solid var(--cizgi); border
 details.serh h2 { font-size:13pt; }
 .gecisler { display:flex; flex-wrap:wrap; gap:5px; margin-top:8px; }
 .gecisler span { font-size:9pt; background:#eef2f7; border-radius:6px; padding:2px 7px; color:#475569; }
+
+.cebir h3 { font-size:12.5pt; margin:22px 0 8px; color:var(--vurgu); }
+.cebir .giris { font-size:11.5pt; }
+.formul { background:var(--kart); border:1px solid var(--cizgi); border-radius:12px; padding:6px 14px; margin:12px 0; }
+.formul .satir { display:grid; grid-template-columns:78px minmax(150px,230px) 1fr; gap:12px; align-items:baseline; padding:9px 0; border-bottom:1px solid var(--cizgi); }
+.formul .satir:last-child { border-bottom:0; }
+.formul .ad { font-weight:700; color:var(--vurgu); font-size:10.5pt; }
+.formul .f { font-family:'Cambria Math','STIX Two Math',Georgia,serif; font-size:13.5pt; }
+.formul .a { color:var(--sessiz); font-size:10pt; }
+table.roller { width:100%; border-collapse:collapse; font-size:10pt; background:var(--kart); border:1px solid var(--cizgi); border-radius:10px; overflow:hidden; }
+table.roller th, table.roller td { padding:7px 9px; text-align:left; border-bottom:1px solid var(--cizgi); vertical-align:top; }
+table.roller th { background:#f1ede1; font-size:9.5pt; }
+table.roller tr.vur td { background:#fffbeb; }
+table.roller td:first-child { font-family:'Amiri',serif; font-size:13pt; white-space:nowrap; }
+table.roller td.y { color:#15803d; font-weight:700; } table.roller td.t { color:var(--sessiz); }
+svg.sema { width:100%; height:auto; margin:14px 0; background:var(--kart); border:1px solid var(--cizgi); border-radius:12px; color:var(--yazi); }
+svg.sema .bas { font:700 13px 'Plus Jakarta Sans',sans-serif; text-anchor:middle; fill:var(--vurgu); }
+svg.sema .e { font:12px Georgia,serif; text-anchor:middle; fill:currentColor; }
+svg.sema .eks { stroke:var(--cizgi); stroke-width:1.5; }
+svg.sema .p { fill:#0f766e; } svg.sema .x { fill:#b45309; }
+svg.sema .yay { fill:none; stroke:#475569; stroke-width:2; } svg.sema .yay.kopuk { stroke-dasharray:3 4; opacity:.55; }
+svg.sema .K { stroke:#b91c1c; stroke-width:2.4; color:#b91c1c; } svg.sema .don { fill:none; stroke:#0f766e; stroke-width:2.2; color:#0f766e; }
+svg.sema .eps { stroke:#64748b; stroke-width:1.5; stroke-dasharray:4 3; }
+ol.netice { padding-left:20px; } ol.netice li { margin:10px 0; }
+.sinir { background:#fffbeb; border-left:4px solid #d97706; padding:10px 14px; border-radius:6px; font-size:10.5pt; }
+@media (max-width:620px) { .formul .satir { grid-template-columns:1fr; gap:2px; } table.roller { font-size:9pt; } }
+@media (prefers-color-scheme:dark) { table.roller th { background:#1a2438; } table.roller tr.vur td { background:#1c1608; } .sinir { background:#1c1608; } svg.sema .K { stroke:#f87171; color:#f87171; } svg.sema .don { stroke:#34d399; color:#34d399; } }
 @media (max-width:560px) { .harfler { font-size:48pt; } .imge { font-size:15pt; } }
 @media (prefers-color-scheme:dark) {
   :root { --zemin:#0b1220; --kart:#111a2c; --yazi:#e2e8f0; --sessiz:#94a3b8; --cizgi:#243247; --vurgu:#fbbf24; }
@@ -200,6 +227,8 @@ def sayfa_uret(kok, md_conv):
     serh = md_conv.convert((ETIM_DIZIN / f"{kok}.md").read_text(encoding="utf-8"))
     chips = "".join(f"<span>{s}:{a}</span>" for s, a in gecis)
     k = veri["kapsul"]
+    cebir_yol = PILOT_DIZIN / f"{kok}.cebir.html"
+    cebir = (f'<h2>Mana cebiri <small>sabır neyin fonksiyonudur</small></h2><div class="cebir">{cebir_yol.read_text(encoding="utf-8")}</div>') if cebir_yol.exists() else ""
     return f"""<!DOCTYPE html>
 <html lang="tr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -218,6 +247,8 @@ def sayfa_uret(kok, md_conv):
 
 <h2>Gövde <small>kökün asıl sahnesi</small></h2>
 <div class="sahne"><b>{escape(veri["sahne"]["baslik"])}.</b> {escape(veri["sahne"]["metin"])}</div>
+
+{cebir}
 
 <h2>Şecere <small>bir dala dokun: kelimeyi, kaynağı ve âyetini gör</small></h2>
 <div class="gosterge"><span><i></i>lügatte yazılı bağ</span><span><i class="k"></i>tahmin ya da yazılı olmayan bağ</span></div>

@@ -62,6 +62,33 @@ details.serh .ic { background:var(--kart); border:1px solid var(--cizgi); border
 details.serh h2 { font-size:13pt; }
 .gecisler { display:flex; flex-wrap:wrap; gap:5px; margin-top:8px; }
 .gecisler span { font-size:9pt; background:#eef2f7; border-radius:6px; padding:2px 7px; color:#475569; }
+
+.cebir h3 { font-size:12.5pt; margin:22px 0 8px; color:var(--vurgu); }
+.cebir .giris { font-size:11.5pt; }
+.formul { background:var(--kart); border:1px solid var(--cizgi); border-radius:12px; padding:6px 14px; margin:12px 0; }
+.formul .satir { display:grid; grid-template-columns:78px minmax(150px,230px) 1fr; gap:12px; align-items:baseline; padding:9px 0; border-bottom:1px solid var(--cizgi); }
+.formul .satir:last-child { border-bottom:0; }
+.formul .ad { font-weight:700; color:var(--vurgu); font-size:10.5pt; }
+.formul .f { font-family:'Cambria Math','STIX Two Math',Georgia,serif; font-size:13.5pt; }
+.formul .a { color:var(--sessiz); font-size:10pt; }
+table.roller { width:100%; border-collapse:collapse; font-size:10pt; background:var(--kart); border:1px solid var(--cizgi); border-radius:10px; overflow:hidden; }
+table.roller th, table.roller td { padding:7px 9px; text-align:left; border-bottom:1px solid var(--cizgi); vertical-align:top; }
+table.roller th { background:#f1ede1; font-size:9.5pt; }
+table.roller tr.vur td { background:#fffbeb; }
+table.roller td:first-child { font-family:'Amiri',serif; font-size:13pt; white-space:nowrap; }
+table.roller td.y { color:#15803d; font-weight:700; } table.roller td.t { color:var(--sessiz); }
+svg.sema { width:100%; height:auto; margin:14px 0; background:var(--kart); border:1px solid var(--cizgi); border-radius:12px; color:var(--yazi); }
+svg.sema .bas { font:700 13px 'Plus Jakarta Sans',sans-serif; text-anchor:middle; fill:var(--vurgu); }
+svg.sema .e { font:12px Georgia,serif; text-anchor:middle; fill:currentColor; }
+svg.sema .eks { stroke:var(--cizgi); stroke-width:1.5; }
+svg.sema .p { fill:#0f766e; } svg.sema .x { fill:#b45309; }
+svg.sema .yay { fill:none; stroke:#475569; stroke-width:2; } svg.sema .yay.kopuk { stroke-dasharray:3 4; opacity:.55; }
+svg.sema .K { stroke:#b91c1c; stroke-width:2.4; color:#b91c1c; } svg.sema .don { fill:none; stroke:#0f766e; stroke-width:2.2; color:#0f766e; }
+svg.sema .eps { stroke:#64748b; stroke-width:1.5; stroke-dasharray:4 3; }
+ol.netice { padding-left:20px; } ol.netice li { margin:10px 0; }
+.sinir { background:#fffbeb; border-left:4px solid #d97706; padding:10px 14px; border-radius:6px; font-size:10.5pt; }
+@media (max-width:620px) { .formul .satir { grid-template-columns:1fr; gap:2px; } table.roller { font-size:9pt; } }
+@media (prefers-color-scheme:dark) { table.roller th { background:#1a2438; } table.roller tr.vur td { background:#1c1608; } .sinir { background:#1c1608; } svg.sema .K { stroke:#f87171; color:#f87171; } svg.sema .don { stroke:#34d399; color:#34d399; } }
 @media (max-width:560px) { .harfler { font-size:48pt; } .imge { font-size:15pt; } }
 @media (prefers-color-scheme:dark) {
   :root { --zemin:#0b1220; --kart:#111a2c; --yazi:#e2e8f0; --sessiz:#94a3b8; --cizgi:#243247; --vurgu:#fbbf24; }
@@ -83,6 +110,76 @@ details.serh h2 { font-size:13pt; }
 
 <h2>Gövde <small>kökün asıl sahnesi</small></h2>
 <div class="sahne"><b>Gövde: tutmak.</b> Sıhâh&#x27;ın ilk cümlesi: «الصَّبْرُ: حَبْسُ النَّفْسِ عَنِ الجَزَعِ». Fakat kelimenin maddî sahnesi daha serttir: «قُتِلَ صَبْراً», öldürülmek için bağlanıp bekletilen adam. Aynı kökte yemin için tutulan kişi de var, kefil olarak tutulan da. Sabır, bu sahnenin kişinin kendi içine çevrilmiş hâlidir: nefsi, feryada kaçmasın diye bağlı tutmak.</div>
+
+<h2>Mana cebiri <small>sabır neyin fonksiyonudur</small></h2><div class="cebir"><p class="giris">Soru şu: sabır ne <i>yapar</i>? Lügatin başa koyduğu sahne "tutmak"tır. Tutmanın bir <b>tutan</b>, bir <b>tutulan</b>, tutulanı götürmeye çalışan bir <b>kuvvet</b> ve tutulacağı bir <b>yer</b> vardır. Sabrın bütün mânâları bu dört rolün farklı doldurulmasından çıkar.</p>
+
+<div class="formul">
+<div class="satir"><span class="ad">Sahne</span><span class="f">Tut(<b>T</b>, <b>M</b>, <b>p</b>, <b>K</b>)</span><span class="a">T, M'yi p'de tutar; K, M'yi p'den uzaklaştırmak ister</span></div>
+<div class="satir"><span class="ad">Hareket</span><span class="f">ẋ = −λ(x − p) + K</span><span class="a">x tutulanın yeri; λ tutma kuvveti; K çeken kuvvet</span></div>
+<div class="satir"><span class="ad">Denge</span><span class="f">x* − p = K / λ</span><span class="a">tutulan, çekimin tutuşa oranı kadar yerinden kayar</span></div>
+<div class="satir"><span class="ad">Sabır</span><span class="f">‖x* − p‖ ≤ ε ⇔ λ ≥ K / ε</span><span class="a">hudut ε içinde kalmak; K &gt; 0 iken</span></div>
+<div class="satir"><span class="ad">Cez'</span><span class="f">‖x* − p‖ &gt; ε</span><span class="a">aynı kuvvet, yetmeyen tutuş: kopmak</span></div>
+</div>
+
+<h3>Her mânâ, dört rolün bir doldurulmasıdır</h3>
+<table class="roller">
+<thead><tr><th>Mânâ</th><th>T tutan</th><th>M tutulan</th><th>p yer</th><th>K çeken</th><th>bağ</th></tr></thead>
+<tbody>
+<tr><td>قُتِلَ صَبْراً</td><td>hâkim, hasım</td><td>adam</td><td>idam yeri</td><td>adamın kaçışı</td><td class="y">yazılı</td></tr>
+<tr><td>حَلَفَ صَبْراً</td><td>hâkim</td><td>kişi</td><td>yemin meclisi</td><td>kişinin dönmesi</td><td class="y">yazılı</td></tr>
+<tr><td>صَبِير (kefil)</td><td>kefil</td><td>borçlu, mal</td><td>teslim yeri</td><td>kaçma</td><td class="y">yazılı</td></tr>
+<tr class="vur"><td><b>صَبْر (sabır)</b></td><td><b>nefs</b></td><td><b>nefs</b></td><td>maksat, vazife</td><td>cez' (telaş, hüzün)</td><td class="y">yazılı</td></tr>
+<tr><td>صَبْرٌ جَمِيلٌ</td><td>nefs</td><td>şikâyet (dil)</td><td>Allah'a yönelmek</td><td>şikâyetin başkasına akması</td><td class="t">tahmin</td></tr>
+<tr><td>مُصَابَرَة</td><td>cemaat</td><td>saf, mevzi</td><td>mevzi</td><td>düşman baskısı</td><td class="t">tahmin</td></tr>
+<tr><td>اصْطَبِرْ</td><td>nefs</td><td>nefs</td><td>sürdürülecek ibadet</td><td>yorgunluk, ihmal</td><td class="t">tahmin</td></tr>
+</tbody></table>
+
+<p>Dördüncü satır kökün kalbidir: <b>T = M</b>. Hâkimin başkasına yaptığını kişi kendi nefsine yapar. Sabır, tutma fiilinin <b>yansımalı</b> hâlidir. Bu yüzden Kur'ân'da «نَفْسَكَ» (18:28) ile gelir: <i>iṣbir nefseke</i>, nefsini bağlı tut.</p>
+
+<svg viewBox="0 0 660 170" class="sema" role="img" aria-label="Üç hâl: sabır, cez', Allah'a şikâyet">
+<defs>
+ <marker id="ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker>
+</defs>
+<g class="panel" transform="translate(0,0)">
+ <text x="100" y="16" class="bas">sabır</text>
+ <line x1="20" y1="100" x2="190" y2="100" class="eks"/>
+ <circle cx="50" cy="100" r="7" class="p"/><text x="50" y="126" class="e">p</text>
+ <path d="M57 100 l6 -9 l10 18 l10 -18 l10 18 l6 -9" class="yay"/>
+ <circle cx="96" cy="100" r="9" class="x"/><text x="96" y="126" class="e">x</text>
+ <line x1="107" y1="100" x2="150" y2="100" class="K" marker-end="url(#ok)"/><text x="132" y="86" class="e">K</text>
+ <line x1="50" y1="144" x2="132" y2="144" class="eps"/><text x="91" y="160" class="e">‖x−p‖ ≤ ε</text>
+</g>
+<g class="panel" transform="translate(220,0)">
+ <text x="100" y="16" class="bas">cez'</text>
+ <line x1="20" y1="100" x2="190" y2="100" class="eks"/>
+ <circle cx="50" cy="100" r="7" class="p"/><text x="50" y="126" class="e">p</text>
+ <path d="M57 100 l4 -5 l6 10 l6 -10 l6 10 l4 -5" class="yay kopuk"/>
+ <circle cx="162" cy="100" r="9" class="x"/><text x="162" y="126" class="e">x</text>
+ <line x1="173" y1="100" x2="196" y2="100" class="K" marker-end="url(#ok)"/>
+ <line x1="50" y1="144" x2="162" y2="144" class="eps"/><text x="106" y="160" class="e">‖x−p‖ &gt; ε</text>
+</g>
+<g class="panel" transform="translate(440,0)">
+ <text x="100" y="16" class="bas">Allah'a şikâyet</text>
+ <line x1="20" y1="100" x2="190" y2="100" class="eks"/>
+ <circle cx="50" cy="100" r="7" class="p"/><text x="50" y="126" class="e">p</text>
+ <path d="M57 100 l6 -9 l10 18 l10 -18 l10 18 l6 -9" class="yay"/>
+ <circle cx="104" cy="100" r="9" class="x"/><text x="104" y="126" class="e">x</text>
+ <line x1="115" y1="100" x2="158" y2="100" class="K" marker-end="url(#ok)"/>
+ <path d="M104 78 C 90 56, 66 56, 54 76" class="don" marker-end="url(#ok)"/><text x="80" y="52" class="e">+μ(p−x)</text>
+ <line x1="50" y1="144" x2="104" y2="144" class="eps"/><text x="77" y="160" class="e">uzaklık azalır</text>
+</g>
+</svg>
+
+<h3>Bu şemadan çıkan dört netice</h3>
+<ol class="netice">
+<li><b>Sabır hüznün yokluğu değildir.</b> K = 0 ise tutmaya hâcet kalmaz; «sabır» denecek bir iş de kalmaz. Sabır K &gt; 0 iken ε içinde kalmaktır. Hüzün sabrı bozmaz. Sabrı bozan, tutuşun (λ) çekime yetmemesidir.</li>
+<li><b>Sabrın zıddı cez'dir ve ikisi aynı ölçüye bağlıdır.</b> Aynı K, aynı ε için ya ‖x*−p‖ ≤ ε (sabır) ya &gt; ε (cez'). Aralarında üçüncü bir hâl yoktur. Lügatin sabrı «حبس النفس عن الجزع» diye cez'e göre tarif etmesi bu ikiliğe uyar (yorum; lügat bu gerekçeyi yazmaz).</li>
+<li><b>Allah'a şikâyet sabrı bozmaz, başkasına şikâyet bozar.</b> Şikâyetin yönü p ise x'i p'ye yaklaştıran bir terim (+μ(p−x)) eklenir; uzaklık küçülür. Şikâyetin yönü p'den başkası ise x p'den uzaklaşır. Eyyûb'un «مَسَّنِيَ الضُّرُّ» duâsı (21:83) ile «صَابِرًا» övgüsünün (38:44) çelişmemesi budur. <small>(Bu, «şikâyeti Allah'tan başkasına yapmamak» tarifinin geometrik karşılığıdır; tarif Cürcânî'ye nisbet edilir, kesin değil.)</small></li>
+<li><b>Sabrın kaynağı kulda hazır bir mal değildir.</b> «وَمَا صَبْرُكَ إِلَّا بِاللَّهِ» (16:127): λ'nın kaynağı kulun dışındadır. «رَبَّنَا أَفْرِغْ عَلَيْنَا صَبْرًا» (2:250): λ ← λ + δ, yani dışarıdan eklenen tutuş. «Sabrım taştı» deyişi sabrı dolup taşan bir kap gibi gösterir. Model sabrı tükenen bir kap olarak değil, çekime karşı <i>desteklenen</i> bir tutuş olarak okur.</li>
+</ol>
+
+<p class="sinir"><b>Sınır.</b> Bu bir <i>düşünme aletidir</i>, hüküm değildir. Tablodaki «yazılı» satırlar lügatte açıkça geçer; «tahmin» satırları âyet bağlamından kuruldu. Formüllerdeki ε, λ, K ölçülmüş sayılar değildir; yalnız ilişkiyi gösterir. Asıl sınanacak şey, aynı rol şemasının başka köklerde de (cez', rızâ, şükür) bu kadar az kuralla işleyip işlemediğidir.</p>
+</div>
 
 <h2>Şecere <small>bir dala dokun: kelimeyi, kaynağı ve âyetini gör</small></h2>
 <div class="gosterge"><span><i></i>lügatte yazılı bağ</span><span><i class="k"></i>tahmin ya da yazılı olmayan bağ</span></div>
