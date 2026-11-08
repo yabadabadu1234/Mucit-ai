@@ -1,0 +1,42 @@
+{
+ "makuliyet_AUC_ab_vs_digerleri": 0.995,
+ "korelasyon_AUC_ab_vs_digerleri": 0.6064,
+ "makuliyet_AUC_ab_vs_karisik": 0.996,
+ "korelasyon_AUC_ab_vs_karisik": 0.7123,
+ "yon_dogrulugu_ab": 1.0,
+ "yon_dogrulugu_ba_dogru_ters": 0.9975,
+ "iz_an_tabakalari": {
+  "3": {
+   "Lambda_nat": 8.83,
+   "sonsel_olasilik": 0.9994171645053184,
+   "elenme_ile": "Lambda=sonsuz, olasilik=1 tam"
+  },
+  "5": {
+   "Lambda_nat": 14.72,
+   "sonsel_olasilik": 0.999998384558316,
+   "elenme_ile": "Lambda=sonsuz, olasilik=1 tam"
+  },
+  "10": {
+   "Lambda_nat": 29.44,
+   "sonsel_olasilik": 0.9999999999993476,
+   "elenme_ile": "Lambda=sonsuz, olasilik=1 tam"
+  },
+  "20": {
+   "Lambda_nat": 58.89,
+   "sonsel_olasilik": 1.0,
+   "elenme_ile": "Lambda=sonsuz, olasilik=1 tam"
+  },
+  "40": {
+   "Lambda_nat": 117.78,
+   "sonsel_olasilik": 1.0,
+   "elenme_ile": "Lambda=sonsuz, olasilik=1 tam"
+  }
+ },
+ "adalet_kavrami": {
+  "egitim_bolgesinde_RMSE": 0.0,
+  "permute_edilmis_RMSE": 1.0922,
+  "simetrilestirilmis_permute_RMSE": 0.7738,
+  "degismezlik_kusuru_ogrenilen": 0.9782,
+  "degismezlik_kusuru_tanimdan": 0.0
+ }
+}
