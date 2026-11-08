@@ -630,7 +630,7 @@ def lugat_sayfasi(surahs_data):
 <body>
 <header class="ust">
   <a href="kuran_hikmetleri_kitap.html">&larr; Kitap</a>
-  <a href="kok_agi.html">Kök Ağı</a> <a href="kok_kategori.html">Mana Kategorisi</a>
+  <a href="kok_agi.html">Kök Ağı</a> <a href="kok_illiyet.html">Kök İlliyeti</a>
   <input type="search" id="ara" placeholder="Kelime, kök veya lugat ara…" oninput="araIsle(this.value)">
   <span id="ara-sayi" class="ara-sayi"></span>
   <button onclick="hepsi(true)">Tümünü aç</button>

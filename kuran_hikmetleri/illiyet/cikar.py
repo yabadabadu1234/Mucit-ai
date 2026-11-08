@@ -15,7 +15,7 @@ def ayetler():
 def kokler(parca):
     return [k for _, k, _ in parca if k]
 def cikar():
-    kenar = collections.defaultdict(lambda: collections.Counter())
+    kenar = collections.defaultdict(lambda: collections.Counter()); kutle = collections.Counter()
     delil = collections.defaultdict(list)
     for (s, a), tok in ayetler().items():
         n = len(tok)
@@ -34,18 +34,20 @@ def cikar():
                 sol = kokler(tok[max(0, i - PENCERE):i]); sag = kokler(tok[i + 1:i + 1 + PENCERE])
             else:
                 continue
-            for x in set(sol):
-                for y in set(sag):
+            sl, sg = set(sol), set(sag)
+            for x in sl:
+                for y in sg:
                     if x != y:
+                        kutle[(x, y)] += 1.0 / (len(sl) * len(sg)) ** 0.5
                         kenar[(x, y)][tur] += 1
                         if len(delil[(x, y)]) < 3:
                             delil[(x, y)].append(f"{s}:{a}")
-    return kenar, delil
+    return kenar, delil, kutle
 if __name__ == "__main__":
-    k, d = cikar()
+    k, d, ku = cikar()
     tum = collections.Counter()
     for (x, y), c in k.items():
         for t, n in c.items():
             tum[t] += n
     print(len(k), dict(tum))
-    json.dump({f"{x}|{y}": {"n": dict(c), "delil": d[(x, y)]} for (x, y), c in k.items()}, open(pathlib.Path(__file__).parent / "metin_kenarlari.json", "w", encoding="utf-8"), ensure_ascii=False)
+    json.dump({f"{x}|{y}": {"n": dict(c), "m": round(ku[(x, y)], 3), "delil": d[(x, y)]} for (x, y), c in k.items()}, open(pathlib.Path(__file__).parent / "metin_kenarlari.json", "w", encoding="utf-8"), ensure_ascii=False)
