@@ -2,7 +2,7 @@
 exec > /var/log/mucit-boot.log 2>&1
 set -x
 KOVA=mucit-vllm-088976930189
-KOK=${MUCIT_KOK:-سلسل}
+KOK=${MUCIT_KOK:-شدد}
 shutdown -P +300
 bitir() {
   mkdir -p /opt/sonuc
@@ -23,17 +23,16 @@ pip install -q -U vllm --extra-index-url https://wheels.vllm.ai/nightly
 export HF_HUB_ENABLE_HF_TRANSFER=1
 mkdir -p /opt/sonuc
 date +%s > /opt/sonuc/t_indirme_basla
-hf download Qwen/Qwen3.8-Flash-Next-FP8 --local-dir /opt/model
+hf download Qwen/Qwen3.8-27B-FP8 --local-dir /opt/model
 date +%s > /opt/sonuc/t_indirme_bitis
-nohup vllm serve /opt/model --served-model-name qwen --max-model-len 131072 --max-num-seqs 64 \
-  --gpu-memory-utilization 0.90 --enable-prefix-caching --enable-expert-parallel --tensor-parallel-size 4 \
-  --kv-cache-dtype fp8 --moe-backend triton --enable-auto-tool-choice --tool-call-parser qwen3_coder \
-  --reasoning-parser qwen3 --speculative-config '{"method":"mtp","num_speculative_tokens":3}' > /opt/vllm.log 2>&1 &
+nohup vllm serve /opt/model --served-model-name qwen --max-model-len 65536 --max-num-seqs 8 \
+  --gpu-memory-utilization 0.92 --enable-prefix-caching --kv-cache-dtype fp8 \
+  --enable-auto-tool-choice --tool-call-parser qwen3_coder --reasoning-parser qwen3 > /opt/vllm.log 2>&1 &
 for i in $(seq 1 360); do
   curl -s localhost:8000/health && break
   sleep 10
 done
 date +%s > /opt/sonuc/t_sunucu_hazir
-export LLM_URL=http://localhost:8000/v1/chat/completions LLM_MODEL=qwen LLM_BAGLAM=131072
+export LLM_URL=http://localhost:8000/v1/chat/completions LLM_MODEL=qwen LLM_BAGLAM=65536
 python /opt/harness/tek_madde.py "$KOK" > /opt/sonuc/tek_madde.log 2>&1
 date +%s > /opt/sonuc/t_madde_bitis
