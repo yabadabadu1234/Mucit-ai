@@ -34,5 +34,5 @@ for i in $(seq 1 360); do
 done
 date +%s > /opt/sonuc/t_sunucu_hazir
 export LLM_URL=http://localhost:8000/v1/chat/completions LLM_MODEL=qwen LLM_BAGLAM=65536
-python /opt/harness/tek_madde.py "$KOK" > /opt/sonuc/tek_madde.log 2>&1
+/opt/venv/bin/python3 /opt/harness/tek_madde.py "$KOK" > /opt/sonuc/tek_madde.log 2>&1
 date +%s > /opt/sonuc/t_madde_bitis
