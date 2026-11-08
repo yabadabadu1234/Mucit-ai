@@ -34,5 +34,8 @@ for i in $(seq 1 360); do
 done
 date +%s > /opt/sonuc/t_sunucu_hazir
 export LLM_URL=http://localhost:8000/v1/chat/completions LLM_MODEL=qwen LLM_BAGLAM=65536
-/opt/venv/bin/python3 /opt/harness/tek_madde.py "$KOK" > /opt/sonuc/tek_madde.log 2>&1
+PY=$(head -1 $(which vllm) | sed "s/^#!//")
+echo "PY=$PY" >> /opt/sonuc/py.txt
+$PY -m pip install -q beautifulsoup4 >> /opt/sonuc/pip2.log 2>&1
+$PY /opt/harness/tek_madde.py "$KOK" > /opt/sonuc/tek_madde.log 2>&1
 date +%s > /opt/sonuc/t_madde_bitis
