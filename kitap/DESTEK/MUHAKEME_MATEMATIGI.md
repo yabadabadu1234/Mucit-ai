@@ -1,5 +1,8 @@
 # MUHAKEME MATEMATİĞİ: MA'KÛLİYET, İSTİDLÂL, İZ'AN, KAVRAM
 
+> **NAKZ (padişah emri üzerine):** Aşağıdaki dört ek yapı (ahval ailesi, hasr, engel, grup) bu dosyada sistemin **girdisi** gibi okunabilir; bu okuma reddedilmiştir. Bebek malûmatla değil istidatla doğar. Dört yapı **ürün**dür, girdi değildir; kuruluşu `ISTIDAT_MATEMATIGI.md`dedir. Bu dosyadaki tarif ve teoremler yürürlüktedir, yalnız "dışarıdan verilir" iddiası kalkmıştır.
+
+
 Bu dosya, "insanda muhakeme illiyeti" diye tarif edilen dört hâli (ma'kûliyet · istidlâl · iz'an · kavramsallaştırma) matematik olarak kurar. Her hâl için **tarif → denenip bozulan ilk kuruluş → yeniden kuruluş → teorem → ölçü** sırası izlenir. Deneyler `muhakeme_deney.py` ile koşar, sayılar `muhakeme_olcu.json`dadır. Deneyler **sentetiktir**: kurulan çerçevenin ayırdığı şeyleri gösterir, Kur'ân kökleri üzerinde henüz koşulmamıştır.
 
 Dört hâlin ortak sonucu (§5): hiçbiri gözlem dağılımı `P₀`ın bir fonksiyonu değildir. Her biri `P₀`ın **ötesinde** ayrı bir yapı ister: müdahale ailesi, hasr, bir enerji engeli, bir grup. İstatistik ile muhakemeyi ayıran şey "makinenin türü" değil, **bu dört ek yapının verilip verilmediğidir**.
