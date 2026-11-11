@@ -1,0 +1,216 @@
+<!doctype html><html lang="tr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zübde</title><style>
+:root{--z:#0b1a38;--k:#f6ecc9;--a:#d4af37;--y:#2b1d05;--s:#7a4a00}
+*{box-sizing:border-box}body{margin:0;background:var(--z);color:var(--y);font:15px/1.4 Georgia,"DejaVu Serif",serif}
+header{position:sticky;top:0;z-index:3;background:var(--z);color:#ffe9a8;padding:8px 12px;border-bottom:2px solid var(--a)}
+header b{font-size:17px;letter-spacing:2px;margin-right:10px}
+button,label.d{font:13px sans-serif;background:#1d3a6b;color:#ffe9a8;border:1px solid var(--a);border-radius:6px;padding:5px 10px;margin:2px;cursor:pointer;display:inline-block}
+button.on{background:var(--a);color:#0b1a38;font-weight:bold}
+#ara{padding:5px 8px;border:1px solid var(--a);border-radius:6px;font:inherit;width:170px}
+#olcu{font:12px sans-serif;opacity:.9;margin-top:4px}
+main{padding:10px 12px}.p{display:none}.p.on{display:grid;gap:10px}
+#pc.on{grid-template-columns:minmax(0,5fr) minmax(0,7fr)}#ps.on{grid-template-columns:minmax(0,3fr) minmax(0,1fr)}
+@media(max-width:820px){#pc.on,#ps.on{grid-template-columns:1fr}}
+section{background:var(--k);border:2px solid var(--a);border-radius:10px;padding:10px;min-width:0;overflow:auto}
+h2{margin:0 0 6px;font:bold 13px sans-serif;letter-spacing:2px;color:var(--s)}
+ul{list-style:none;margin:0;padding-left:14px}#agac>ul{padding-left:0}li{margin:2px 0}
+.s{cursor:pointer;padding:2px 5px;border-radius:5px;display:inline-block;width:calc(100% - 20px);vertical-align:top}
+.s:hover{background:#e8d79c}.sec{background:#f0d98a}.ok{cursor:pointer;display:inline-block;width:16px;color:var(--s)}
+.ad{font:11px monospace;color:var(--s);margin-right:5px}
+.c{display:inline-block;min-width:18px;text-align:center;font:bold 11px sans-serif;color:#fff;border-radius:4px;margin-right:5px;padding:1px 4px}
+.dus{text-decoration:line-through;opacity:.45}.gz{display:none}
+#cephe{display:grid;grid-template-columns:1fr 1fr;grid-template-areas:"g g" "m t" "h h";gap:8px}
+.f{border-radius:8px;padding:8px;color:#fff;min-width:0}.f h3{margin:0 0 5px;font:bold 12px sans-serif;letter-spacing:2px}
+.f .s{width:100%;color:#fff}.f .s:hover{background:#ffffff33}.f .ad{color:#ffe9a8}
+.fm{grid-area:m;background:#1b4592}.ft{grid-area:t;background:#b05c0a}.fg{grid-area:g;background:#1d6d3b}
+.fh{grid-area:h;background:#fffaf0;color:var(--y);border:2px solid var(--a)}.fh h3{color:var(--s)}
+.fh .lv{font-size:19px;font-weight:bold}.gv{white-space:pre-wrap;overflow-wrap:anywhere;margin-top:4px}
+.bos{opacity:.7;font:12px sans-serif}.say{font:12px sans-serif;margin-top:6px}
+#seb{display:flex;gap:6px;align-items:flex-start;overflow:auto}.sut{display:flex;flex-direction:column;gap:3px;min-width:54px}
+.sut b{font:11px sans-serif;color:var(--s);text-align:center}
+.cp{font:11px monospace;border-radius:5px;padding:3px 4px;color:#fff;cursor:pointer;text-align:center;border:2px solid transparent}
+.cp.kn{border-color:#1b4592;box-shadow:0 0 0 2px #1b4592}.cp.gy{border-color:#1d6d3b;box-shadow:0 0 0 2px #1d6d3b}.cp.sc{border-color:#000;box-shadow:0 0 0 3px var(--a)}
+.cp.dus{background:#999!important;text-decoration:none;opacity:.5}
+.kok{display:block;font:12px sans-serif;margin:3px 0;cursor:pointer}
+textarea{width:100%;height:68vh;font:13px/1.45 "DejaVu Sans Mono",monospace;border:1px solid var(--a);border-radius:6px;padding:8px;background:#fffaf0;white-space:pre;overflow:auto}
+#ihl{font:12px sans-serif;color:#8f2222;white-space:pre-wrap}#ihl.tm{color:#1d6d3b}
+</style>
+<header><b>ZÜBDE</b><button data-t="c" class="on">CEPHE</button><button data-t="s">ŞEBEKE</button><button data-t="y">YAZI</button>
+<input id="ara" placeholder="ara"><label class="d">Aç<input type="file" id="ac" accept=".zbd,.txt" hidden></label><button id="kyd">Kaydet</button><button id="yeni">Yeni düğüm</button>
+<div id="olcu"></div></header>
+<main>
+<div id="pc" class="p on"><section><h2>UFUK</h2><div id="agac"></div></section><section><h2>DÖRT CEPHE</h2><div id="cephe"></div></section></div>
+<div id="ps" class="p"><section><h2>ŞEBEKE · dayanma derinliği soldan sağa</h2><div id="seb"></div></section><section><h2>KÖK ŞALTERİ</h2><div id="kokler"></div><div class="say" id="dusen"></div></section></div>
+<div id="py" class="p"><section><h2>YAZI · .zbd</h2><textarea id="yaz" spellcheck="false"></textarea><div id="ihl"></div></section></div>
+</main>
+<script id="kaynak" type="text/plain">0 K ZÜBDE: her metni taşıyan, sebebini içinde tutan, mercekle okunan temsil formatı
+1 B Maksat ve dert
+1.1 H* İlmin gayesi kâinatı anlamak ve Allah'ı tanımaktır; kitap bu gayenin vasıtasıdır
+1.2 V Düzyazı kitabın maksadı ve yapısı ancak baştan sona okununca görünür
+1.3 V Graf, kuruluş sebebini kendi içinde taşımazsa şerh için yine düzyazı ister
+1.4 S Maksadı bir bakışta görünen, sebebini içinde taşıyan, aranana en kısa yoldan vardıran temsil nedir <1.2 <1.3
+2 B Tarifler
+2.1 T Birim: tek başına tasavvur yahut tasdik edilebilen en küçük söz parçasıdır
+2.2 T Dayanma: u bilinmeden v anlaşılamıyor yahut tasdik edilemiyorsa v, u'ya dayanır <2.1
+2.3 T Muhteva: bir metnin birimleri ile aralarındaki dayanma bağlarının kümesidir <2.1 <2.2
+2.4 D Metin sonludur; öyleyse birimleri de bağları da sonludur <2.3
+2.5 D Karşılıklı dayanan birimler tek birimde toplanınca devir kalkar; çizgenin yoğuşması devirsizdir <2.2
+2.6 H Muhteva sonlu ve devirsiz bir yönlü çizgedir <2.4 <2.5
+2.7 T Koni: bir birimin, dayanma bağları geriye izlenince varılan bütün birimlerle beraber kendisidir <2.2
+2.8 T Düzyazı: muhtevanın, birimleri tek sıraya dizen ve bağları kelimeyle kuran yazılışıdır <2.3
+3 B Yazım
+3.1 U Her satır bir düğümdür: adres, cins harfi, levha, en sonda bağlar
+3.2 T Adres noktalı sayıdır; 2.3'ün babası 2'dir, 2'nin babası köktür (0); ağaç adresten doğar
+3.3 T Cins harfleri on birdir
+    | K kitap | B bâb | T tarif | H hüküm | D delil | M misal |
+    | S suâl | I itiraz yahut istisna | U usul | V veri | N nakil |
+3.4 T Hükmün damgası: H* evvelîdir, delil istemez; H? açıktır, delili henüz yoktur
+3.5 T Bağ işaretleri dörttür
+    | <a  a'ya dayanır | !a  a'ya itiraz eder | =a  a'nın misalidir | ~a  a'ya bakınız |
+3.6 U Levhaya sığmayan devam alt satırlara girintiyle yazılır; | ile başlayan satır cetveldir
+3.7 U Nakil düğümünün metni harfiyen korunur; âyet ve hadis yalnız N içinde, dokunulmadan durur
+4 B Kanunlar
+4.1 H* K1 Levha: her düğümün ilk satırı en çok 100 harftir ve tek başına mana verir
+4.2 H* K2 Dal: bir düğümün en çok 9 çocuğu olur
+4.3 H* K3 Niçin: her hüküm ya bir bağla dayanır, ya evvelî, ya açık diye damgalanır
+4.4 H* K4 Tek yer: her muhteva bir kere yazılır; başka her kullanımı adrestir
+4.5 H* K5 Çarpım: aynı kalıbı paylaşan hükümler tek cetvele çekilir
+4.6 H* K6 Sıra: bir düğüm ancak kendinden evvel yazılmış düğüme dayanabilir
+4.7 H* K7 Sadakat: bağ ancak hakikî dayanma varsa yazılır; levha altındakilerin hulâsasıdır
+5 B Burhanlar
+5.1 B Şümûl: her sonlu metin Zübde'ye çevrilir
+5.1.1 D Metin sonlu bir cümle dizisidir; her cümle bir düğüm olur, ilk 100 harfi levha, kalanı gövdedir <2.4 <4.1
+5.1.2 D Düğümler dokuzar dokuzar bâblara toplanır; bâb sayısı düğüm sayısının sekizde birini geçmez <4.2
+5.1.3 D Delili gösterilmeyen hüküm açık diye damgalanır; aynı cümleler tek düğüme iner <4.3 <4.4
+5.1.4 D Düğümler metindeki sırayla yazılır; bağ kurulmadığından sıra kanunu kendiliğinden tutar <4.6
+5.1.5 H Her sonlu metnin, muhtevası aynı kalan bir Zübde'si vardır; fazlası düğüm başına sabit işarettir <5.1.1 <5.1.2 <5.1.3 <5.1.4
+5.2 B Hacim: yarılamanın haddi ve şartı
+5.2.1 D σ harfli elifbada N boyunda σ^N metin vardır; boyu N/2'yi geçmeyenlerin sayısı bundan azdır
+5.2.2 H Hiçbir kayıpsız format istisnasız her metni yarıya indiremez: az yuvaya çok güvercin sığmaz <5.2.1
+5.2.3 T Öz, Zübde'nin işaretsiz boyudur; işaret adres, cins ve bağ harfleridir <2.8 <4.4 <4.5
+    Fazla: düzyazının özden artanıdır
+5.2.4 D Zübde = öz + işaret; düzyazı = öz + fazla. Zübde ≤ düzyazı/2 ⟺ 2öz + 2işaret ≤ öz + fazla <5.2.3
+5.2.5 H Zübde yarıya iner ⟺ fazla ≥ öz + 2·işaret; Zübde kısalır ⟺ fazla > işaret <5.2.4
+5.2.6 H Yarılama metnin fazlasına bağlı bir şarttır; fazlası az metin (cetvel, formül, şiir) yarılanmaz <5.2.2 <5.2.5
+5.3 B Bulma: aranana varışın bedeli
+5.3.1 D Kökten hedefe inen yolda her katta en çok 9 levha okunur; her levha en çok 100 harftir <4.1 <4.2
+5.3.2 D Levha altındakilerin hulâsası olduğundan, hedefin hangi dalda olduğu levhadan anlaşılır <4.7
+5.3.3 H Derinliği d olan Zübde'de aranan düğüme en çok 900·d harf okunarak varılır <5.3.1 <5.3.2
+5.3.4 D Dengeli ağaçta n düğümün derinliği log₉ n'dir; bir milyon düğümde yedi kat eder <4.2
+5.3.5 D Fihristsiz düz metinde okunmamış her yer hedefi saklayabilir; en kötü hâlde metnin tamamı okunur <2.8
+5.3.6 H Bulma bedeli düz metinde boyla, dengeli Zübde'de boyun logaritmasıyla büyür <5.3.3 <5.3.4 <5.3.5
+5.4 B Öğrenme: koninin iki haddi
+5.4.1 D Yeter: koni dışında dayanılan birim yoktur; koni yazılış sırasıyla okununca bilinmeyene rastlanmaz <2.7 <4.6
+5.4.2 D Gerek: konideki her birim hedefin dayandığı bir zincirin halkasıdır; biri atlanınca zincir kopar <2.2 <4.7
+5.4.3 H Bir birimi delilleriyle öğrenmenin bedeli tam konisinin boyudur <5.4.1 <5.4.2
+    Aynı muhtevayı hiçbir format daha azla öğretemez
+5.4.4 D Düzyazıda hedefe kadar okunan baş kısım koniyi içine alır; koniden olmayan her birim fazladan okunur <2.8 <2.7
+5.4.5 H Mercekle öğrenmenin bedeli hiçbir metinde düz okumayı geçmez <5.4.3 <5.4.4
+    Eşitlik ancak evvelki her şey konidense olur
+5.5 B Maksat ve yapı: ufkun bedeli
+5.5.1 H İlk d kat en çok 100·(9^(d+1) − 1)/8 harftir; bu had kitabın boyuna bağlı değildir <4.1 <4.2
+5.5.2 M d = 2 için had 9100 harftir: beş sayfa okuyan, hangi kitap olursa olsun maksadını ve yapısını görür =5.5.1
+5.6 B Öz-izah: şerh için dışarıya muhtaç olmamak
+5.6.1 D Her hükmün sebebi ya bir düğümdür ya yokluğu damgayla yazılıdır <4.3
+5.6.2 D Sonlu ve devirsiz çizgede geriye giden her zincir biter <2.6 <4.6
+    Bittiği yer evvelî, nakil, veri yahut açık düğümdür
+5.6.3 H Zübde, kuruluşunu ve sebeplerini şerh için kendi dışında düzyazıya muhtaç değildir <5.6.1 <5.6.2
+5.6.4 M Bu dosya Zübde'nin tarifini, kanun ve burhanlarını Zübde ile yazar, kendi denetçisinden geçer =5.6.3
+5.7 B Devir ve gizli öncül
+5.7.1 H Kısırdöngü yazılamaz: sıra kanunu devri kapatacak son bağı reddeder <4.6
+5.7.2 H Gizli öncül kalmaz: delilsiz hüküm ya evvelî ya açık damgasıyla görünür <4.3
+6 B Hareketli kullanım
+6.1 U Ufuk: yalnız ilk katlar gösterilir; okuyan istediği dalı açar <5.5.1
+6.2 U Mercek: bir düğüme dokununca yalnız konisi, yazılış sırasıyla ve toplam harfiyle gösterilir <5.4.3
+6.3 U Arama: levhalarda kelime aranır; bulunan düğümün yolu açılır <5.3.3
+6.4 U Denetçi K1, K2, K3, K4 ve K6'yı her yazışta yoklar; ihlâli adresiyle söyler <4.1 <4.2 <4.3 <4.4 <4.6
+6.5 T Dört cephe: mahiyet düğümün kendisi, mantık dayandıkları, gaye ona dayananlardır <2.2
+    Tatbikat misalleri ve usulleridir
+6.6 U Şalter: bir kök kapatılınca onu konisinde taşıyan her düğüm düşmüş gösterilir <2.7
+6.7 U Şebeke: düğümler dayanma derinliğine göre sütunlara dizilir <2.7
+    Seçilenin konisi ve hizmet ettikleri boyanır
+6.8 U Yazı: kaynak sayfada düzeltilir; her harfte denetçi yeniden koşar; yeni düğüm anında tartılır <6.4
+7 B Hudut ve açık kalanlar
+7.1 H? Sadakat kanununu (K7) makine denetleyemez; yazanın ve okuyanın tenkidine kalır <4.7
+7.2 H? Çarpım kanununun (K5) ihlâlini makine tam bulamaz <4.5
+7.3 H Üslûbu yahut lafzı maksat olan metin (şiir, hitabe, âyet, hadis) aslıyla durur <3.7
+    Zübde onu taşır, yerini tutmaz
+7.4 H Burhanların dayandığı tek kabul muhtevanın tarifidir <2.3
+    İlmî muhteva birimlerden ve dayanmalardan ibarettir
+7.5 H? Burhanlar okunan harfi tartar; insanın fiilen kaç kat hızlı öğrendiği riyâzî değil tecrübî suâldir <5.4.5
+</script>
+<script>
+const LH=100,DH=9,AN='zubde-kaynak';
+const R={K:'#0b1a38',B:'#555',T:'#1b6d8f',H:'#8f2222',D:'#1d6d3b',M:'#b05c0a',S:'#6a3d9a',I:'#a03060',U:'#345',V:'#665500',N:'#000'};
+const AD={K:'kitap',B:'bâb',T:'tarif',H:'hüküm',D:'delil',M:'misal',S:'suâl',I:'itiraz',U:'usul',V:'veri',N:'nakil'};
+let D={},S=[],C={},TERS={},MIS={},ITZ={},IH=[],kapali=new Set(),sec='0',acik=new Set(['0']),DR={};
+const $=x=>document.getElementById(x);
+function e(t){return t.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+function baba(a){return a=='0'?null:(a.includes('.')?a.slice(0,a.lastIndexOf('.')):'0')}
+function oku(src){D={};S=[];IH=[];let son=null;
+ src.split('\n').forEach((ham,i)=>{if(!ham.trim())return;
+  if(/^[ \t]/.test(ham)){if(son)D[son].govde.push(ham.trim());else IH.push('satır '+(i+1)+': gövde düğümsüz');return}
+  const m=ham.match(/^(\d+(?:\.\d+)*)\s+([A-Z])([*?]?)\s+(.*)$/);
+  if(!m||!R[m[2]]){IH.push('satır '+(i+1)+': düğüm satırı okunamadı');son=null;return}
+  if(D[m[1]]){IH.push('satır '+(i+1)+': adres iki kere '+m[1]);son=null;return}
+  const k=m[4].split(/\s+/),b=[];while(k.length){const x=k[k.length-1].match(/^([<!=~])(\d+(?:\.\d+)*)$/);if(!x)break;b.unshift([x[1],x[2]]);k.pop()}
+  D[m[1]]={adres:m[1],cins:m[2],damga:m[3],levha:k.join(' '),baglar:b,govde:[],sira:S.length};S.push(m[1]);son=m[1]})}
+function denetle(){C={};TERS={};MIS={};ITZ={};DR={};S.forEach(a=>{C[a]=[];TERS[a]=[];MIS[a]=[];ITZ[a]=[]});
+ if(S[0]!='0')IH.push('ilk düğüm kök (0) olmalı');const gor={};
+ S.forEach(a=>{const n=D[a],b=baba(a);
+  if(b!==null){if(!D[b]||D[b].sira>n.sira)IH.push('K6 '+a+': babası evvel yazılmamış');else C[b].push(a)}
+  if(n.levha.length>LH)IH.push('K1 '+a+': levha '+n.levha.length+' harf');if(!n.levha)IH.push('K1 '+a+': levha boş');
+  if(n.cins=='H'&&!n.damga&&!n.baglar.some(x=>x[0]=='<'))IH.push('K3 '+a+': hüküm dayanaksız ve damgasız');
+  const mt=(n.levha+' '+n.govde.join(' ')).toLocaleLowerCase('tr');if(gor[mt])IH.push('K4 '+a+': '+gor[mt]+' ile aynı muhteva');gor[mt]=a;
+  n.baglar.forEach(([t,h])=>{if(!D[h])IH.push('K6 '+a+': bağın ucu yok '+h);else if(t=='<'){if(D[h].sira>=n.sira)IH.push('K6 '+a+': sonra yazılana dayanıyor '+h);else TERS[h].push(a)}else if(t=='=')MIS[h].push(a);else if(t=='!')ITZ[h].push(a)})});
+ S.forEach(a=>{if(C[a].length>DH)IH.push('K2 '+a+': '+C[a].length+' çocuk')});
+ S.forEach(a=>{DR[a]=D[a].baglar.filter(x=>x[0]=='<'&&D[x[1]]&&D[x[1]].sira<D[a].sira).reduce((m,x)=>Math.max(m,DR[x[1]]+1),0)})}
+function boy(a){return D[a].levha.length+D[a].govde.reduce((t,x)=>t+x.length,0)}
+function koni(a,g){if(g.has(a))return g;g.add(a);D[a].baglar.forEach(b=>{if(b[0]=='<'&&D[b[1]]&&D[b[1]].sira<D[a].sira)koni(b[1],g)});return g}
+function hizmet(a,g){if(g.has(a))return g;g.add(a);TERS[a].forEach(x=>hizmet(x,g));return g}
+function dustu(a){return [...koni(a,new Set())].some(x=>kapali.has(x))}
+function rozet(a){const n=D[a];return '<span class="ad">'+a+'</span><span class="c" style="background:'+R[n.cins]+'" title="'+AD[n.cins]+'">'+n.cins+n.damga+'</span>'}
+function sat(a){return '<span class="s'+(dustu(a)?' dus':'')+'" data-a="'+a+'">'+rozet(a)+e(D[a].levha)+'</span>'}
+function liste(l){return l.length?l.map(a=>'<div>'+sat(a)+'</div>').join(''):'<div class="bos">yok</div>'}
+function agac(){const q=$('ara').value.toLocaleLowerCase('tr');
+ const uy=a=>!q||(D[a].levha+' '+D[a].govde.join(' ')).toLocaleLowerCase('tr').includes(q)||C[a].some(uy);
+ const dal=a=>{if(!uy(a))return '';const v=C[a].length>0,ac=q||acik.has(a);
+  return '<li><span class="ok" data-o="'+a+'">'+(v?(ac?'▾':'▸'):'')+'</span><span class="s'+(a==sec?' sec':'')+(dustu(a)?' dus':'')+'" data-a="'+a+'">'+rozet(a)+e(D[a].levha)+'</span>'+(v&&ac?'<ul>'+C[a].map(dal).join('')+'</ul>':'')+'</li>'};
+ $('agac').innerHTML=D['0']?'<ul>'+dal('0')+'</ul>':''}
+function cephe(){const n=D[sec];if(!n){$('cephe').innerHTML='';return}
+ const day=n.baglar.filter(x=>x[0]=='<'&&D[x[1]]).map(x=>x[1]),bak=n.baglar.filter(x=>x[0]=='~'&&D[x[1]]).map(x=>x[1]);
+ const kn=[...koni(sec,new Set())],kb=kn.reduce((t,x)=>t+boy(x),0);let bas=0;for(const x of S){bas+=boy(x);if(x==sec)break}
+ const tat=MIS[sec].concat(TERS[sec].filter(x=>D[x].cins=='U'||D[x].cins=='M')),gy=TERS[sec].filter(x=>!tat.includes(x));
+ const yol=[];for(let b=baba(sec);b!==null;b=baba(b))yol.unshift(b);
+ $('cephe').innerHTML='<div class="f fg"><h3>GAYE · neye hizmet eder</h3>'+liste(gy)+'<div class="say">yol: '+yol.map(a=>e(D[a].levha)).join(' › ')+'</div></div>'+
+ '<div class="f fm"><h3>MANTIK · neye dayanır</h3>'+liste(day)+(ITZ[sec].length?'<h3 style="margin-top:6px">İTİRAZLAR</h3>'+liste(ITZ[sec]):'')+'</div>'+
+ '<div class="f ft"><h3>TATBİKAT · misal ve usul</h3>'+liste(tat)+(bak.length?'<h3 style="margin-top:6px">BAKINIZ</h3>'+liste(bak):'')+'</div>'+
+ '<div class="f fh"><h3>MAHİYET · '+AD[n.cins]+(n.damga=='*'?' · evvelî':n.damga=='?'?' · açık':'')+(dustu(sec)?' · DÜŞTÜ':'')+'</h3><div class="lv">'+rozet(sec)+e(n.levha)+'</div>'+(n.govde.length?'<div class="gv">'+e(n.govde.join('\n'))+'</div>':'')+
+ '<div class="say">delilleriyle öğrenmek: '+kn.length+' düğüm, '+kb+' harf · baştan düz okuma: '+bas+' harf</div></div>'}
+function sebeke(){const kn=koni(sec,new Set()),hz=hizmet(sec,new Set()),mx=Math.max(0,...S.map(a=>DR[a])),sut=[];
+ for(let i=0;i<=mx;i++)sut.push('<div class="sut"><b>'+i+'</b>'+S.filter(a=>DR[a]==i&&D[a].cins!='B'&&D[a].cins!='K').map(a=>'<div class="cp'+(a==sec?' sc':kn.has(a)?' kn':hz.has(a)?' gy':'')+(dustu(a)?' dus':'')+'" style="background:'+R[D[a].cins]+'" data-a="'+a+'" title="'+e(D[a].levha)+'">'+a+'</div>').join('')+'</div>');
+ $('seb').innerHTML=sut.join('');
+ const kok=S.filter(a=>DR[a]==0&&!'BK'.includes(D[a].cins)&&TERS[a].length);
+ $('kokler').innerHTML=kok.map(a=>'<label class="kok"><input type="checkbox" data-k="'+a+'"'+(kapali.has(a)?'':' checked')+'> '+rozet(a)+e(D[a].levha)+'</label>').join('');
+ const ds=S.filter(a=>dustu(a)&&!kapali.has(a));$('dusen').textContent=kapali.size?kapali.size+' kök kapalı → '+ds.length+' düğüm düştü: '+ds.join(' '):'Bir kökü kapatın: ona dayanan her hüküm düşer.'}
+function ciz(){agac();cephe();sebeke();
+ const oz=S.reduce((t,a)=>t+boy(a),0),is=S.reduce((t,a)=>t+a.length+2+D[a].damga.length+D[a].baglar.reduce((u,b)=>u+b[1].length+2,0),0),dr=Math.max(0,...S.map(a=>a=='0'?0:a.split('.').length));
+ $('olcu').textContent=S.length+' düğüm · derinlik '+dr+' · hacim '+(oz+is)+' harf (öz '+oz+', işaret '+is+') · bulma haddi '+LH*DH*dr+' harf · ihlâl '+IH.length;
+ $('ihl').textContent=IH.length?IH.join('\n'):'Kanunlar tutuyor.';$('ihl').className=IH.length?'':'tm'}
+function yukle(src,yaz){oku(src);denetle();if(!D[sec])sec=S[0]||'0';kapali=new Set([...kapali].filter(a=>D[a]));if(yaz)$('yaz').value=src;ciz();try{localStorage.setItem(AN,src)}catch(h){}}
+function sec_(a){sec=a;for(let b=baba(a);b!==null;b=baba(b))acik.add(b);ciz()}
+document.addEventListener('click',ev=>{const t=ev.target.closest('[data-a],[data-o],[data-t]');if(!t)return;
+ if(t.dataset.t){document.querySelectorAll('header button[data-t]').forEach(b=>b.classList.toggle('on',b==t));['c','s','y'].forEach(x=>$('p'+x).classList.toggle('on',x==t.dataset.t));return}
+ if(t.dataset.o){acik.has(t.dataset.o)?acik.delete(t.dataset.o):acik.add(t.dataset.o);agac();return}
+ if(t.dataset.a)sec_(t.dataset.a)});
+document.addEventListener('change',ev=>{const k=ev.target.dataset.k;if(k){ev.target.checked?kapali.delete(k):kapali.add(k);ciz()}});
+$('ara').oninput=agac;$('yaz').oninput=()=>yukle($('yaz').value,false);
+$('ac').onchange=ev=>{const f=ev.target.files[0];if(f)f.text().then(t=>{kapali=new Set();sec='0';yukle(t,true)})};
+$('kyd').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([$('yaz').value],{type:'text/plain'}));a.download=((D['0']&&D['0'].levha.split(/[ :]/)[0])||'zubde')+'.zbd';a.click()};
+$('yeni').onclick=()=>{const b=D[sec]&&'BK'.includes(D[sec].cins)?sec:(baba(sec)||'0');let i=1;const on=b=='0'?'':b+'.';while(D[on+i])i++;
+ const son=C[b].length?C[b][C[b].length-1]:b;let alt=son;while(C[alt]&&C[alt].length)alt=C[alt][C[alt].length-1];
+ const sl=$('yaz').value.split('\n');let k=-1,g=-1;sl.forEach((x,j)=>{const m=x.match(/^(\d+(?:\.\d+)*)\s/);if(m){if(k>=0&&g<0)g=j;if(m[1]==alt)k=j}});
+ if(g<0)g=sl.length;sl.splice(g,0,on+i+' H? Yeni hüküm'+(sec!=b?' <'+sec:''));sec=on+i;acik.add(b);yukle(sl.join('\n'),true)};
+let ilk=$('kaynak').textContent;try{const s=localStorage.getItem(AN);if(s&&ilk.trim()=='')ilk=s}catch(h){}
+yukle(ilk.replace(/^\n/,''),true);
+</script></html>
