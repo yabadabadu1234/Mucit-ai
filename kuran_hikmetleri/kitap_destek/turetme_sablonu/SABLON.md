@@ -1,44 +1,69 @@
 # TÜREME ŞABLONU
 
-Bir türeme, kaynak S'den hedef T'ye giden **tek bir oktur**. Her okun beş cevabı vardır. Silsile, okların zinciridir; zincirde her halka beş cevabıyla yazılır, yazılamayan halka ispatsızdır.
+```
+ S ──(ok)──▶ T        bir türeme = bir ok; silsile = ok zinciri
+ her ok: K · L · D · M · Y   (beşi de yazılır, yazılamayan halka ispatsız)
+ silsile: önce BİÇİM kolları (L, D) → biçimler bitince MANA kolları (M, Y)
+```
 
-## K. KAYNAK
-- Cins (hasr: bu lisanın bir birimi mi, değil mi; birimse soyut çekirdek mi, müstakil lafız mı; değilse taklit edilmiş ses mi, başka lisanın lafzı mı): **kök** · **kelime** · **ses taklidi** · **yabancı lafız**.
-- Sayı: **bir** · **birden çok** (nahit).
+## K  KAYNAK
+```
+ cins : kök | kelime | ses taklidi | yabancı lafız
+ sayı : bir | çok (nahit)
+```
 
-## L. LAFIZ BAĞI
-Üç mukayese: (1) harfler: **eşit · ilave · hazf · karma (ibdâl) · ayrık**; (2) sesli dizisi (yeri ve uzunluğuyla): **aynı · farklı**; (3) ortak harflerin sırası: **aynı · farklı**. Harfler ayrıkken sıra sorulmaz.
-5×2×2 − 2 = 18 hâne.
+## L  LAFIZ BAĞI  (harf × sesli × sıra = 18 hâne)
+```
+ harf \ sesli,sıra   aynı,aynı   fark,aynı   aynı,fark   fark,fark
+ eşit                özdeş       vezin       kalb        kalb+vezin
+ ilave               salt ilave  ilave+vezin ilave+kalb  hepsi
+ hazf                hazf        hazf+vezin  hazf+kalb   hepsi
+ karma               ibdâl/nahit +vezin      +kalb       hepsi
+ ayrık               —           (sesli aynı/farklı: 2 hâne; sıra yok)
 
-| harfler | sesli | sıra | ad |
-| :-- | :-- | :-- | :-- |
-| eşit | aynı | aynı | özdeş: lafız değişmez (nakil, sesteş doğuşu) |
-| eşit | farklı | aynı | vezin türemesi (harekât, med) |
-| eşit | aynı | farklı | kalb (kebîr) |
-| eşit | farklı | farklı | kalb + vezin |
-| ilave | aynı | aynı | salt ilave |
-| ilave | farklı | aynı | ilave + vezin (sagîrin ana yolu) |
-| ilave | aynı | farklı | ilave + kalb |
-| ilave | farklı | farklı | ilave + kalb + vezin |
-| hazf | aynı/farklı | aynı/farklı | dört hâne: hazf, hazf + vezin, hazf + kalb, hepsi |
-| karma | aynı/farklı | aynı/farklı | dört hâne: ibdâl (ekber), nahit, karışıkları |
-| ayrık | aynı/farklı | — | iki hâne: harf bağı yok |
+ ilave : eklenen = kopya | zâid | yabancı      yeri = baş | orta | son
+ hazf  : yeri = baş | orta | son
+ ibdâl : mahrec yakını | değil
+```
 
-İlave inceliği: eklenen harf **kopya** (şedde, tekrar) · **zâid** (on harf) · **yabancı** (başka köke ait); yeri **baş · orta · son**. Hazf yeri: baş · orta · son. İbdâl: mahrec yakını · değil.
+## D  DELÂLET
+```
+ kaynak \ hedef    ism    fiil    harf
+ ism
+ fiil
+ harf
+ (kökten türemede yalnız hedef: ism | fiil | harf)
+```
 
-## D. DELÂLET
-Kelime ya müstakil mana + zaman (fiil), ya müstakil mana, zamansız (ism), ya müstakil mana yok (harf). Kaynak ve hedef birer tane: 3×3 = 9 hâne (kökten türemede 3).
+## M  MANA
+```
+ çekirdek korundu mu?
+ ├─ EVET → cephe: özdeş | fâil | mef'ûl | âlet | mekân | zaman | sebep
+ │                | netice-hâl | nev'-hey'et | miktar-derece | sayı | merre | …(açık sicil)
+ └─ HAYIR → çekirdekler arası:
+      tahsîs (T⊂S) | tevessü' (T⊃S) | kısmî örtüşme | ayrık
+      ayrık → bayraklar: benzerlik □  bitişiklik □  zıtlık □   (2³=8; üçü boşsa tesadüf)
+```
 
-## M. MANA
-Soru 1: hedef, kaynağın **çekirdeğini** muhafaza ediyor mu?
-- **Evet:** çekirdek aynı, **cephe** değişir: özdeş · fâil · mef'ûl · âlet · mekân · zaman · sebep · netice-hâl · nev'-hey'et · miktar-derece · sayı · merre · … (kapalı değil, sayılmış sicil).
-- **Hayır:** iki çekirdek arasında küme münasebeti: **tahsîs** (T ⊂ S) · **tevessü'** (T ⊃ S) · **kısmî örtüşme** · **ayrık**. Ayrıkta üç bağ bayrağı bağımsız sorulur (benzerlik · bitişiklik · zıtlık): 2³ = 8 hâne; hiçbiri yoksa **tesadüf** (türeme değildir).
+## Y  YERLEŞME
+```
+ ilk vâzı' (lügavî) | Şâri' (şer'î) | örf-i âmm | örf-i hâs
+```
 
-## Y. YERLEŞME
-Lafzı o manaya kim yerleştirdi: **ilk vâzı' (lügavî)** · **Şâri' (şer'î)** · **cemaatin tamamı (örf-i âmm)** · **cemaatin bir kısmı (örf-i hâs)**.
+## GEÇERLİK
+```
+ iştikak = (L ≠ ayrık) ∧ (M ≠ tesadüf)
+```
 
-## GEÇERLİK KAİDESİ
-İştikak = L ayrık değil **ve** M tesadüf değil. İkisinden biri düşerse iddia türeme değil tevâfuktur.
+## DAYANAK (ispat öncülleri)
+```
+ P0  türeme bağı K·L·D·M·Y dışına çıkmaz
+ P1  her eksen çelişik ikilem veya küme münasebeti (beş hâl) ile kapalı
+ P2  cephe sicili sayımla (istikrâî): tek açık kapı
+```
 
-## İSPAT
-Bkz. sohbet cevabı; öncüller: (P0) türeme bağı kaynak, lafız, mana ve yerleşmeden başka bir şeye dayanmaz; (P1) her eksen çelişik ikilem veya küme münasebetleri teoremi ile kapalıdır; (P2) cephe siciline dair hasr istikrâîdir (tek açık kapı).
+## GÜNCELLEME KAYDI
+```
+ 1  ilk şablon (K L D M Y, geçerlik kaidesi)
+ 2  mekânî yerleşim; silsile düzeni (önce biçim, sonra mana)
+```
