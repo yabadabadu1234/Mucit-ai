@@ -83,6 +83,24 @@
  fiil DEĞİL : tenvin ve nasb işareti ismin alâmetidir
 ```
 
+## B  İSİM BÂBLARI SİCİLİ  (internet taraması, F 355; i'râb hâlleri hariç)
+```
+ câmid | müştak
+ masdar     : sülâsî mücerred semâî vezinler (fa'l fi'l fu'l fa'al fu'ûl fi'âl fu'âl fa'âl fa'âle fu'ûle fi'âle fa'îl fa'lân fa'lâ …)
+              mezîd ve rubâ'î bâblar kıyâsî
+ masdar-ı mîmî : mef'al (mücerred) · mezîd: ism-i mef'ûl kalıbı
+ ism-i merre   : fa'le · mezîd: masdar + tâ
+ ism-i hey'et (nev') : fi'le
+ masdar-ı sınâî : ism + iyye/iyyet
+ ism-i masdar  : fiilin harflerinden eksik, masdar manalı (vudû', kelâm)
+ müştak (sekiz) : fâil · mef'ûl · sıfat-ı müşebbehe · mübalağa · tafdîl · zaman · mekân · âlet
+ ek    : mensûb · tasğîr · tesniye · cem' (sâlim/mükesser) · müzekker-müennes
+ ism-i cins : cem'î (tekili tâ/yâ ile) | ifrâdî
+ DIŞARIDA : ism-i fiil, ta'accüb, işâret, mevsûl (câmid/fiil sîgası, kökten türemez)
+ kaynak : TDV Sarf; fasiharapca; arabic-for-nerds ism-i masdar; Mehmet Akif tezi s.198–201 (mîmî, merre, hey'et)
+ ENGEL (yoklanamadı): ism-i masdar ve ism-i cins için dekk kökünde tanıklı örnek
+```
+
 ## GEÇERLİK
 ```
  iştikak = (L ≠ ayrık) ∧ (M ≠ tesadüf)
@@ -104,4 +122,5 @@
  5  ders notları denetimi: C cem'/tesniye, N cinsiyet, V vezin sicili eklendi; her müştak 4 eksenle (F 352)
  6  her ilavenin Türkçesi yazılır (F 353); kartlarda Türkçe mana eklendi
  7  H ekseni: tenvinli/mansûb masdar, tekrâr, ara adım zinciri (F 354)
+ 8  B ekseni: isim bâbları sicili (mîmî, merre, hey'et, sınâî, ism-i masdar, ism-i cins) (F 355)
 ```

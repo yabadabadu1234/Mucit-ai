@@ -95,6 +95,22 @@ PZ=('<section class="p o" style="grid-column:span 2"><h3>ARA ADIM ZİNCİRİ<sma
  '<div class="r"><span class="a">دَكًّا</span><span class="m">3 mansûb + tenvin → dekkan</span><span class="n">nasb sebebi: fiili tekit eden mef\'ûl-i mutlak</span></div>'
  '<div class="r"><span class="a">دَكًّا دَكًّا</span><span class="m">4 tekrâr → dekkan dekkan</span><span class="n">dukket fiilini pekiştirir: arz ezile ezile düzlenir</span></div></section>')
 pgi=frame(head+'<h2>Tenvinli biçim fiil değil, masdardır; kökün hâle geliş zinciri</h2><div class="orn">✦ ✦ ✦</div><div class="grid">'+PH+PZ+'</div><div class="leg">Fecr 89:21 · A\'râf 7:143 · Hâkka 69:14 · ● görüldü ○ türetildi</div>')
+
+TR.update({'medekk (mîmî)':'ezilme (mîmî masdar)','mudakk':'ezdirme (mîmî)','mundekak':'ezilme (mîmî)','mutedekkak':'ezile ezile olma (mîmî)','dikke':'ezilme tarzı','tedkîka':'tek çokça ezme','indikâka':'tek ezilme','dekkiyye':'ezicilik','dekûk':'çok ezen','dukake':'çok ezen (fu\'ale)'})
+Q1=panel('b','MASDAR-I MÎMÎ · MERRE','mef\'al · fa\'le · masdar+tâ',[
+ ('مَدَكّ','medekk (mîmî)','○ mücerred mîmî · mef\'al'),('مُدَكّ','mudakk','○ if\'âl mîmîsi'),
+ ('مُنْدَكّ','mundekak','○ infi\'âl mîmîsi'),('مُتَدَكَّك','mutedekkak','○ tefe\'\'ul mîmîsi'),
+ ('دَكَّة','dekke','● ism-i merre · fa\'le'),('انْدِكَاكَة','indikâka','○ merre · masdar+tâ')])
+Q2=panel('r',"İSM-İ HEY'ET · SINÂÎ · MÜBALAĞA",'fi\'le · +iyye · fa\'ûl',[
+ ('دِكَّة','dikke','○ ism-i hey\'et · fi\'le'),('دَكِّيَّة','dekkiyye','○ masdar-ı sınâî'),
+ ('دَكُوك','dekûk','○ mübalağa · fa\'ûl'),('دُكَكَة','dukake','○ mübalağa · fu\'ale'),
+ ('دَكَّاك','dekkâk','○ mübalağa · fa\'\'âl'),('دَكِيك','dekîk','○ sıfat-ı müşebbehe · fa\'îl')])
+Q3=('<section class="p g"><h3>YOKLANAMADI · KAPSAM DIŞI<small>engel sayıyla yazıldı</small></h3>'
+ '<div class="r"><span class="a">اسم المصدر</span><span class="m">ism-i masdar</span><span class="n">harfi eksik masdar manalı isim (vudû\', kelâm gibi); dekk kökünde tanıklı örnek yoklanamadı</span></div>'
+ '<div class="r"><span class="a">اسم الجنس</span><span class="m">ism-i cins</span><span class="n">cem\'î (tekili tâ/yâ ile) · ifrâdî; kökte tanıklı örnek yoklanamadı</span></div>'
+ '<div class="r"><span class="a">فُعَال / فَعَالة</span><span class="m">semâî masdar adayları</span><span class="n">fu\'âl · fa\'âle · fi\'âle · fu\'ûle; kökte tanık yoklanamadı</span></div>'
+ '<div class="r"><span class="a">اسم الفعل</span><span class="m">ism-i fiil, ta\'accüb, işâret, mevsûl</span><span class="n">câmid veya fiil sîgası, kapsam dışı</span></div></section>')
+pgq=frame(head+'<h2>Eksik kalan isim bâbları: mîmî masdar · merre · hey\'et · sınâî · mübalağa</h2><div class="orn">✦ ✦ ✦</div><div class="grid">'+Q1+Q2+Q3+'</div><div class="leg">Taranan kaynaklar: TDV Sarf · fasiharapca · arabic-for-nerds · Mehmet Akif tezi · ● görüldü ○ türetildi</div>')
 pg2=frame('<h1>CEM‘ VE TESNİYE · CİNSİYET</h1><h2>Dersin kaideleri dekk köküne vurulur</h2><div class="orn">✦ ✦ ✦</div>'+T+
  '<div class="leg">Uyum: akıl sahibi olmayan çoğul sıfatı müfred müennes alır · ● görüldü ○ türetildi</div>','k')
 from PIL import Image
@@ -104,7 +120,7 @@ def b6(x):
     f=io.BytesIO();x.save(f,'PNG');return base64.b64encode(f.getvalue()).decode()
 A=b6(im.crop((0,0,w,m+40)));B=b6(im.crop((0,m-40,w,h)))
 pg3=frame('<h1>SİLSİLE · BİÇİMDEN MANAYA</h1><h2>önce biçim kolları, sonra mana: hakîkî · mecâz · örfî</h2><div style="display:flex;gap:4mm;justify-content:center"><img class="im" style="max-width:48%;max-height:158mm" src="data:image/png;base64,'+A+'"><img class="im" style="max-width:48%;max-height:158mm" src="data:image/png;base64,'+B+'"></div>')
-html=f'<html><meta charset="utf-8"><style>{CSS}</style><body>{pg1}{pg1b}{pgi}{pg2}{pg3}</body></html>'
+html=f'<html><meta charset="utf-8"><style>{CSS}</style><body>{pg1}{pg1b}{pgi}{pgq}{pg2}{pg3}</body></html>'
 (D/'cafcaf.html').write_text(html,encoding='utf-8')
 with sync_playwright() as p:
     b=p.chromium.launch(executable_path='/opt/pw-browsers/chromium');pg=b.new_page(viewport={'width':1123,'height':794},device_scale_factor=2)
