@@ -49,6 +49,31 @@
  ilk vâzı' (lügavî) | Şâri' (şer'î) | örf-i âmm | örf-i hâs
 ```
 
+## C  CEM' VE TESNİYE  (ders notları, F 352)
+```
+ ferd → tesniye (-ân/-eyn)
+      → cem'-i sâlim : müzekker -ûn/-în · müennes -ât
+      → cem'-i mükesser : ef'âl fu'ûl fi'âl ef'ile fü'al fu'alâ' fu'ât fe'ale
+                          mefâ'il mefâ'îl fevâ'il fe'âil efâ'il   (kalıp adı yazılır)
+      → cem'u'l-cem' (+ât)
+```
+
+## N  CİNSİYET  (ders notları, F 352)
+```
+ müzekker | müennes
+ müennes : hakîkî | semâî | lafzî
+ alâmet  : tâ-i merbûta (ـة) | elif-i maksûre (ى) | elif-i memdûde (اء)
+ uyum    : sıfat-mevsûf · akıl sahibi olmayan çoğul → müfred müennes
+```
+
+## V  VEZİN ADI  (müştak sicili)
+```
+ fâil fâ'il · mef'ûl maf'ûl · mekân-zaman maf'al/maf'il/maf'ale
+ âlet mif'âl/mif'al/mif'ale · sıfat-ı müşebbehe fa'îl/fa'ul/fa'lân
+ tafdîl af'al (müennes fu'lâ) · mübalağa fa''âl/fa''âle/fa'ûl/mif'âl
+ her kayıt: vezin × tesniye × cem' × cinsiyet
+```
+
 ## GEÇERLİK
 ```
  iştikak = (L ≠ ayrık) ∧ (M ≠ tesadüf)
@@ -67,4 +92,5 @@
  2  mekânî yerleşim; silsile düzeni (önce biçim, sonra mana)
  3  D ekseni daraltıldı: hedef daima ism; fiil çekimleri ve harf dışarıda (F 350)
  4  mutâvaa/meçhul/rubâ'î bâblarının masdarları kapsamda; bütün bâblar ve müştaklar (F 351)
+ 5  ders notları denetimi: C cem'/tesniye, N cinsiyet, V vezin sicili eklendi; her müştak 4 eksenle (F 352)
 ```
