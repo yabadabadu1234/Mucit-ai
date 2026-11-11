@@ -74,6 +74,15 @@
  her kayıt: vezin × tesniye × cem' × cinsiyet
 ```
 
+## H  İ'RÂB HÂLİ  (tenvinli biçimler, F 354)
+```
+ ism hâli : merfû' (-un) | mansûb (-an) | mecrûr (-in)
+ mansûb masdar : mef'ûl-i mutlak  (tevkîd | nev' | adet) | hâl | mef'ûl sânî | temyîz
+ tekrâr : aynı biçim iki kez = ardı ardına, parça parça, tam tamına
+ ara adım : kök → bâb → masdar → hâl işareti (tenvin) → cümledeki vazife → tekrâr
+ fiil DEĞİL : tenvin ve nasb işareti ismin alâmetidir
+```
+
 ## GEÇERLİK
 ```
  iştikak = (L ≠ ayrık) ∧ (M ≠ tesadüf)
@@ -94,4 +103,5 @@
  4  mutâvaa/meçhul/rubâ'î bâblarının masdarları kapsamda; bütün bâblar ve müştaklar (F 351)
  5  ders notları denetimi: C cem'/tesniye, N cinsiyet, V vezin sicili eklendi; her müştak 4 eksenle (F 352)
  6  her ilavenin Türkçesi yazılır (F 353); kartlarda Türkçe mana eklendi
+ 7  H ekseni: tenvinli/mansûb masdar, tekrâr, ara adım zinciri (F 354)
 ```

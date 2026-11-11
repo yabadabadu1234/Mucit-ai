@@ -81,6 +81,20 @@ T=('<table><tr><th>Ferd</th><th>Tesniye</th><th>Cem\'-i sâlim</th><th>Cem\'-i m
  +row('دَكَّاء ●','دَكَّاوَانِ','—','دَكَاوَات ○','müennes, elif-i memdûde','düz yer; iki düz yer; düz yerler')
  +'</table>')
 pg1b=frame(head+'<h2>Mübalağa · tafdîl · masdarlar – bâb bâb</h2><div class="orn">✦ ✦ ✦</div><div class="grid">'+P4+P5+P6+'</div><div class="leg">● lügat veya Kur\'ân\'da görüldü &nbsp; ○ kalıptan türetildi, yoklanmadı</div>')
+
+PH=panel('g',"İ'RÂB HÂLİ · TENVİN",'masdar fiil değildir',[
+ ('دَكّ','dekk','● masdar · ezme · kök د ك ك, bâb mücerred'),
+ ('دَكٌّ','dekkun','○ merfû\' · ezme (fâil/mübtedâ)'),
+ ('دَكًّا','dekkan','● mansûb + tenvin · mef\'ûl-i mutlak: "ezme ile ezilmek"'),
+ ('دَكًّا دَكًّا','dekkan dekkan','● tekrâr: ardı ardına, parça parça, ezile ezile'),
+ ('دُكَّتِ','dukket','● fiil (meçhul mâzî) + tâ-i te\'nîs: ezildi (arz müennes)'),
+ ('دَكَّةً','dekketen','● merre masdarı · tek eziş · mansûb')])
+PZ=('<section class="p o" style="grid-column:span 2"><h3>ARA ADIM ZİNCİRİ<small>kök bu hâle nasıl geldi</small></h3>'
+ '<div class="r"><span class="a">د ك ك</span><span class="m">1 kök</span><span class="n">ezmek, düzlemek</span></div>'
+ '<div class="r"><span class="a">دَكّ</span><span class="m">2 mücerred bâbın masdarı dekk</span><span class="n">ism: fiil değil, hâl taşımaz</span></div>'
+ '<div class="r"><span class="a">دَكًّا</span><span class="m">3 mansûb + tenvin → dekkan</span><span class="n">nasb sebebi: fiili tekit eden mef\'ûl-i mutlak</span></div>'
+ '<div class="r"><span class="a">دَكًّا دَكًّا</span><span class="m">4 tekrâr → dekkan dekkan</span><span class="n">dukket fiilini pekiştirir: arz ezile ezile düzlenir</span></div></section>')
+pgi=frame(head+'<h2>Tenvinli biçim fiil değil, masdardır; kökün hâle geliş zinciri</h2><div class="orn">✦ ✦ ✦</div><div class="grid">'+PH+PZ+'</div><div class="leg">Fecr 89:21 · A\'râf 7:143 · Hâkka 69:14 · ● görüldü ○ türetildi</div>')
 pg2=frame('<h1>CEM‘ VE TESNİYE · CİNSİYET</h1><h2>Dersin kaideleri dekk köküne vurulur</h2><div class="orn">✦ ✦ ✦</div>'+T+
  '<div class="leg">Uyum: akıl sahibi olmayan çoğul sıfatı müfred müennes alır · ● görüldü ○ türetildi</div>','k')
 from PIL import Image
@@ -90,7 +104,7 @@ def b6(x):
     f=io.BytesIO();x.save(f,'PNG');return base64.b64encode(f.getvalue()).decode()
 A=b6(im.crop((0,0,w,m+40)));B=b6(im.crop((0,m-40,w,h)))
 pg3=frame('<h1>SİLSİLE · BİÇİMDEN MANAYA</h1><h2>önce biçim kolları, sonra mana: hakîkî · mecâz · örfî</h2><div style="display:flex;gap:4mm;justify-content:center"><img class="im" style="max-width:48%;max-height:158mm" src="data:image/png;base64,'+A+'"><img class="im" style="max-width:48%;max-height:158mm" src="data:image/png;base64,'+B+'"></div>')
-html=f'<html><meta charset="utf-8"><style>{CSS}</style><body>{pg1}{pg1b}{pg2}{pg3}</body></html>'
+html=f'<html><meta charset="utf-8"><style>{CSS}</style><body>{pg1}{pg1b}{pgi}{pg2}{pg3}</body></html>'
 (D/'cafcaf.html').write_text(html,encoding='utf-8')
 with sync_playwright() as p:
     b=p.chromium.launch(executable_path='/opt/pw-browsers/chromium');pg=b.new_page(viewport={'width':1123,'height':794},device_scale_factor=2)
