@@ -1,7 +1,9 @@
 import base64,pathlib
 from playwright.sync_api import sync_playwright
 D=pathlib.Path(__file__).parent
+TR={'dâkk': 'ezen', 'dâkka': 'ezen (dişil)', 'dâkkân / dâkkeyn': 'iki ezen', 'dâkkûn / dâkkîn': 'ezenler (eril)', 'dâkkât': 'ezenler (dişil)', 'dukkâk': 'ezenler (kırık çoğul)', 'medkûk': 'ezilen', 'medkûka': 'ezilen (dişil)', 'medkûkân': 'iki ezilen', 'medkûkûn': 'ezilenler', 'medkûkât': 'ezilenler (dişil)', 'mündekk': 'kendiliğinden ezilen', 'medekk': 'ezme yeri/zamanı', 'medikk': 'ezme yeri/zamanı', 'midekk': 'ezme aleti', 'midekka': 'ezme aleti (dişil)', 'dekîk': 'ezik', 'dekîka': 'ezik (dişil)', 'dekkâk': 'çok ezen', 'dekkâka': 'çok ezen (dişil)', 'edekk': 'en ezici', 'dukkâ': 'en ezici (dişil)', "dekkâ'": 'düz yer', 'dekke': 'tek eziş', 'dekk': 'ezme', 'dukûk / dikâk': 'ezmeler', 'tedkîk': 'çokça ezme', 'mudâkka': 'karşılıklı ezişme', 'idkâk': 'ezdirme', 'tedekkuk': 'ezile ezile olma', 'tedâkk': 'birbirine çarpıp ezişme', 'indikâk': 'kendiliğinden ezilme', 'iddikâk': 'ezilip düzelme', 'istidkâk': 'ezilmesini isteme', 'dekdeke': 'sarsıp ezme', 'tedekdük': 'darbeyle dökülüp çökme'}
 def ar(a,m,note=''):
+    if m in TR: note=note+' — <b>'+TR[m]+'</b>'
     return f'<div class="r"><span class="a">{a}</span><span class="m">{m}</span><span class="n">{note}</span></div>'
 def panel(cls,title,sub,rows):
     return f'<section class="p {cls}"><h3>{title}<small>{sub}</small></h3>'+''.join(ar(*r) for r in rows)+'</section>'
@@ -71,12 +73,12 @@ def frame(inner,cls=''):
 head='<h1>دَكّ · DEKK KÖKÜ MÜŞTAKLARI</h1>'
 pg1=frame(head+'<h2>Kök müştakları – ism-i fâil · mef‘ûl · mekân · âlet · sıfat · mübalağa · tafdîl</h2><div class="orn">✦ ✦ ✦</div><div class="grid">'+P1+P2+P3+'</div><div class="leg">● lügat veya Kur\'ân\'da görüldü &nbsp; ○ kalıptan türetildi, yoklanmadı</div>')
 def row(*c): return '<tr>'+''.join(f'<td class="x">{x}</td>' if i==0 else f'<td>{x}</td>' for i,x in enumerate(c))+'</tr>'
-T=('<table><tr><th>Ferd</th><th>Tesniye</th><th>Cem\'-i sâlim</th><th>Cem\'-i mükesser (kalıp)</th><th>Cinsiyet</th></tr>'
- +row('دَاكّ','دَاكَّانِ / دَاكَّيْنِ','دَاكُّونَ / دَاكِّينَ','دُكَّاك – fu‘‘âl ○','müzekker, hakîkî')
- +row('دَاكَّة','دَاكَّتَانِ / دَاكَّتَيْنِ','دَاكَّات','دَوَاكّ – fevâ‘il ○','müennes, tâ-i merbûta')
- +row('مَدْكُوك','مَدْكُوكَانِ','مَدْكُوكُونَ','مَدَاكِيك – mefâ‘îl ○','müzekker')
- +row('دَكّ (masdar)','دَكَّانِ','—','دُكُوك / دِكَاك ●','masdar: tesniye/cem‘ ancak kalıpla')
- +row('دَكَّاء ●','دَكَّاوَانِ','—','دَكَاوَات ○','müennes, elif-i memdûde')
+T=('<table><tr><th>Ferd</th><th>Tesniye</th><th>Cem\'-i sâlim</th><th>Cem\'-i mükesser (kalıp)</th><th>Cinsiyet</th><th>Türkçesi</th></tr>'
+ +row('دَاكّ','دَاكَّانِ / دَاكَّيْنِ','دَاكُّونَ / دَاكِّينَ','دُكَّاك – fu‘‘âl ○','müzekker, hakîkî','ezen; iki ezen; ezenler; kırık çoğul')
+ +row('دَاكَّة','دَاكَّتَانِ / دَاكَّتَيْنِ','دَاكَّات','دَوَاكّ – fevâ‘il ○','müennes, tâ-i merbûta','ezen (dişil); iki ezen; ezenler; kırık çoğul')
+ +row('مَدْكُوك','مَدْكُوكَانِ','مَدْكُوكُونَ','مَدَاكِيك – mefâ‘îl ○','müzekker','ezilen; iki ezilen; ezilenler; kırık çoğul')
+ +row('دَكّ (masdar)','دَكَّانِ','—','دُكُوك / دِكَاك ●','masdar: tesniye/cem‘ ancak kalıpla','ezme; iki ezme; ezmeler')
+ +row('دَكَّاء ●','دَكَّاوَانِ','—','دَكَاوَات ○','müennes, elif-i memdûde','düz yer; iki düz yer; düz yerler')
  +'</table>')
 pg1b=frame(head+'<h2>Mübalağa · tafdîl · masdarlar – bâb bâb</h2><div class="orn">✦ ✦ ✦</div><div class="grid">'+P4+P5+P6+'</div><div class="leg">● lügat veya Kur\'ân\'da görüldü &nbsp; ○ kalıptan türetildi, yoklanmadı</div>')
 pg2=frame('<h1>CEM‘ VE TESNİYE · CİNSİYET</h1><h2>Dersin kaideleri dekk köküne vurulur</h2><div class="orn">✦ ✦ ✦</div>'+T+

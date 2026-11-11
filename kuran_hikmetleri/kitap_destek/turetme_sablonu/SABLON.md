@@ -51,7 +51,7 @@
 
 ## C  CEM' VE TESNİYE  (ders notları, F 352)
 ```
- ferd → tesniye (-ân/-eyn)
+ ferd (tek) → tesniye (ikili) (-ân/-eyn)
       → cem'-i sâlim : müzekker -ûn/-în · müennes -ât
       → cem'-i mükesser : ef'âl fu'ûl fi'âl ef'ile fü'al fu'alâ' fu'ât fe'ale
                           mefâ'il mefâ'îl fevâ'il fe'âil efâ'il   (kalıp adı yazılır)
@@ -93,4 +93,5 @@
  3  D ekseni daraltıldı: hedef daima ism; fiil çekimleri ve harf dışarıda (F 350)
  4  mutâvaa/meçhul/rubâ'î bâblarının masdarları kapsamda; bütün bâblar ve müştaklar (F 351)
  5  ders notları denetimi: C cem'/tesniye, N cinsiyet, V vezin sicili eklendi; her müştak 4 eksenle (F 352)
+ 6  her ilavenin Türkçesi yazılır (F 353); kartlarda Türkçe mana eklendi
 ```
