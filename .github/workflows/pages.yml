@@ -57,6 +57,14 @@ jobs:
           mkdir -p "$GITHUB_WORKSPACE/lora-ders"
           cp -r site/. "$GITHUB_WORKSPACE/lora-ders/"
 
+      - name: Zübde uygulamasını /zubde/ altına ekle
+        run: |
+          mkdir -p _site/zubde/misal
+          cp zubde/ZUBDE.html _site/zubde/index.html
+          cp zubde/uygulama.html _site/zubde/uygulama.html
+          cp zubde/ZUBDE.zbd _site/zubde/
+          cp zubde/misal/*.html zubde/misal/*.zbd _site/zubde/misal/
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
