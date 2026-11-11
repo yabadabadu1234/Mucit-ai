@@ -30,7 +30,8 @@
 ```
  hedef  : ism  (müştak isimler + fiil bâblarının masdarları)
  kaynak : kök | ism | fiil bâbı
- DIŞARIDA: fiil çekimleri (mâzî · muzâri' · emir · nehy · meçhul), harf
+ masdar: her bâbın (mücerred · mezîd · rubâ'î · mutâvaa · meçhul)
+ DIŞARIDA: fiil çekim sîgaları (mâzî · muzâri' · emir · nehy), harf
 ```
 
 ## M  MANA
@@ -65,4 +66,5 @@
  1  ilk şablon (K L D M Y, geçerlik kaidesi)
  2  mekânî yerleşim; silsile düzeni (önce biçim, sonra mana)
  3  D ekseni daraltıldı: hedef daima ism; fiil çekimleri ve harf dışarıda (F 350)
+ 4  mutâvaa/meçhul/rubâ'î bâblarının masdarları kapsamda; bütün bâblar ve müştaklar (F 351)
 ```
