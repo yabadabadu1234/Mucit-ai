@@ -302,6 +302,33 @@ def uret():
     return {'sema': SEMA, 'sayilar': sayi, 'kaliplar': kaliplar, 'kokler': kokler, 'kelimeler': kelimeler, 'kaikki_koksuz': kk_koksuz, 'kelime_dosyalari': kelime_dosyalari}
 
 
+MAHREC = {'halkiyye': 'ءهعحغخ', 'lehaviyye': 'قك', 'şeceriyye': 'جشض', 'esaliyye': 'صسز', 'nit‘iyye': 'طدت', 'lessiyye': 'ظذث', 'zelakiyye': 'رلن', 'şefeviyye': 'فبم', 'cevfiyye': 'ويا'}
+BOLGE = {'halk': ('halkiyye',), 'dil': ('lehaviyye', 'şeceriyye', 'esaliyye', 'nit‘iyye', 'lessiyye', 'zelakiyye'), 'dudak ve cevf': ('şefeviyye', 'cevfiyye')}
+
+
+def tasnif_ozeti(agac):
+    def say(x):
+        return sum(say(v) for v in x.values()) if isinstance(x, dict) else len(x)
+    d = {}
+    for b, ms in sorted(agac.items()):
+        d[b] = {'kok': say(ms), 'mahrec_sayisi': len(ms), 'mahrec': {}}
+        for m, hs in sorted(ms.items()):
+            d[b]['mahrec'][m] = {'kok': say(hs), 'harf_sayisi': len(hs), 'harf': {h: {'kok': say(fs), 'fasil_sayisi': len(fs), 'fasil': {f: len(v) for f, v in sorted(fs.items())}} for h, fs in sorted(hs.items())}}
+    return {'seviyeler': 'bölge → mahreç → harf → fasıl (ilk iki illetsiz harf) → kök → kelime', 'kok': say(agac), 'bolge': len(agac),
+            'mahrec': sum(len(v) for v in agac.values()), 'harf': sum(len(h) for v in agac.values() for h in v.values()),
+            'fasil': sum(len(f) for v in agac.values() for h in v.values() for f in h.values()), 'agac': d}
+
+
+def tasnif(kok):
+    k = I.normala(kok)
+    ilk = k[0]
+    mahrec = next((m for m, h in MAHREC.items() if ilk in h), 'diğer')
+    bolge = next((b for b, ms in BOLGE.items() if mahrec in ms), 'diğer')
+    sade = ''.join(c for c in k if c not in 'ويا' + 'ء') or k
+    fasil = (sade + sade[-1:])[:2]
+    return {'fasil': fasil, 'harf': ilk, 'mahrec': mahrec, 'bolge': bolge}
+
+
 def yaz():
     d = uret()
     taban = os.path.join(KOK, 'kelime_kaydi')
@@ -317,6 +344,7 @@ def yaz():
     for e in d['kelimeler']:
         (gruplar[e['kok']] if e['kok'] else koksuz).append(e)
     fih = {'kuranda_var': [], 'kuranda_yok': []}
+    agac = {}
     kelime_kok = {}
     toplam = collections.Counter()
     for k, r in d['kokler'].items():
@@ -325,6 +353,7 @@ def yaz():
         os.makedirs(klasor, exist_ok=True)
         dugum = dict(r)
         dugum['sema'] = SEMA
+        dugum['tasnif'] = tasnif(k)
         used = sorted({x[0] for v in r.get('mustaklar', {}).values() for x in v})
         dugum['kaliplar'] = {str(i): d['kaliplar'][i] for i in used}
         dugum['kelimeler'] = gruplar.get(k, [])
@@ -333,6 +362,8 @@ def yaz():
             f.write(okunur(dugum))
         toplam[ad] += os.path.getsize(yol)
         fih[ad].append([k + '.json', k, len(dugum['kelimeler']), sum(len(v) for v in r.get('mustaklar', {}).values())])
+        t = dugum['tasnif']
+        agac.setdefault(t['bolge'], {}).setdefault(t['mahrec'], {}).setdefault(t['harf'], {}).setdefault(t['fasil'], []).append(k)
         for e in dugum['kelimeler']:
             kelime_kok[e['kelime']] = k
     with open(os.path.join(taban, 'kuranda_var', 'koksuz.json'), 'w', encoding='utf-8') as f:
@@ -346,7 +377,7 @@ def yaz():
     for ad in ('kuranda_var', 'kuranda_yok'):
         with open(os.path.join(taban, ad, 'FIHRIST.json'), 'w', encoding='utf-8') as f:
             f.write(okunur({'sema': SEMA, 'sayilar': d['sayilar'], 'alanlar_kokler': ['dosya', 'kok', 'kelime_sayisi', 'mustak_satiri'], 'kokler': fih[ad],
-                            'kelime_kok': kelime_kok if ad == 'kuranda_var' else {}}))
+                            'tasnif_agaci': tasnif_ozeti(agac), 'kelime_kok': kelime_kok if ad == 'kuranda_var' else {}}))
     print(d['sayilar'], {k: len(v) for k, v in fih.items()}, {k: v // 1024 // 1024 for k, v in toplam.items()}, 'MB')
 
 
