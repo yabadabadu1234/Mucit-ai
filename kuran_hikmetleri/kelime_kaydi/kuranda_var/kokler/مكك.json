@@ -853,7 +853,7 @@
     ]
   },
   "kuran_gecisleri": 0,
-  "kuranda_var": false,
+  "kuranda_var": true,
   "sema": {
     "sema": "graf-ic-graf",
     "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
@@ -1388,5 +1388,24 @@
     "497": ["cem‘u’l-cem‘ (aday)", "fe'âil + ât", "semâî aday", ""],
     "498": ["cem‘u’l-cem‘ (aday)", "fu'ayl(cem') + ât", "semâî aday", ""]
   },
-  "kelimeler": []
+  "kelimeler": [
+    {
+      "kelime": "مَكَّةَ",
+      "kok": "مكك",
+      "lemma": "مَكَّة",
+      "tur": "İsim",
+      "bab": "",
+      "zaman": "",
+      "ilk_gecis": "48:24",
+      "adet": 1,
+      "turkce": {
+        "yuzey": "Mekke",
+        "lemma": "Mekke",
+        "lemma_durum": "model-üretimi, doğrulanmadı",
+        "eyupipler": ""
+      },
+      "kok_durumu": "kök (Arapça asıllı ad; lügat usulüyle, kayıt ihtilaflı olabilir)",
+      "asil": "Of uncertain etymology. Variously explained as * From a similar name بَكَّة (bakka) appearing in the Quran * Possibly from Ge'ez ምኵራብ (məkʷrab, “sanctuary, temple”), doublet of مِحْرَاب (miḥrāb); compare Greek Μακοράβα ("
+    }
+  ]
 }

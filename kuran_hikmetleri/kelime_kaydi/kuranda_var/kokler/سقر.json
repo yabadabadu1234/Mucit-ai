@@ -772,7 +772,7 @@
     }
   },
   "kuran_gecisleri": 0,
-  "kuranda_var": false,
+  "kuranda_var": true,
   "sema": {
     "sema": "graf-ic-graf",
     "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
@@ -1297,5 +1297,40 @@
     "515": ["masdar · bâb XII", "if'iv'āl", "kıyâsî", "XII"],
     "516": ["masdar · bâb XIII", "if'ivvāl", "kıyâsî", "XIII"]
   },
-  "kelimeler": []
+  "kelimeler": [
+    {
+      "kelime": "سَقَرَ",
+      "kok": "سقر",
+      "lemma": "سَقَر",
+      "tur": "İsim",
+      "bab": "",
+      "zaman": "",
+      "ilk_gecis": "54:48",
+      "adet": 3,
+      "turkce": {
+        "yuzey": "cehennem",
+        "lemma": "cehennem",
+        "lemma_durum": "model-üretimi, doğrulanmadı",
+        "eyupipler": ""
+      },
+      "kok_durumu": "kök (Vikisözlük kök kutusu veya menşe yazısı)"
+    },
+    {
+      "kelime": "سَقَرُ",
+      "kok": "سقر",
+      "lemma": "سَقَر",
+      "tur": "İsim",
+      "bab": "",
+      "zaman": "",
+      "ilk_gecis": "74:27",
+      "adet": 1,
+      "turkce": {
+        "yuzey": "cehennem",
+        "lemma": "cehennem",
+        "lemma_durum": "model-üretimi, doğrulanmadı",
+        "eyupipler": ""
+      },
+      "kok_durumu": "kök (Vikisözlük kök kutusu veya menşe yazısı)"
+    }
+  ]
 }

@@ -938,6 +938,9 @@
         "yol": "müştak"
       }
     ],
+    "renk_sozluk": {
+      "ببكة": "Mekke"
+    },
     "arabic_ontology": [
       {
         "id": "46244",
@@ -1051,7 +1054,7 @@
     ]
   },
   "kuran_gecisleri": 0,
-  "kuranda_var": false,
+  "kuranda_var": true,
   "sema": {
     "sema": "graf-ic-graf",
     "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
@@ -1586,5 +1589,24 @@
     "497": ["cem‘u’l-cem‘ (aday)", "fe'âil + ât", "semâî aday", ""],
     "498": ["cem‘u’l-cem‘ (aday)", "fu'ayl(cem') + ât", "semâî aday", ""]
   },
-  "kelimeler": []
+  "kelimeler": [
+    {
+      "kelime": "بِبَكَّةَ",
+      "kok": "بكك",
+      "lemma": "بَكَّة",
+      "tur": "İsim",
+      "bab": "",
+      "zaman": "",
+      "ilk_gecis": "3:96",
+      "adet": 1,
+      "turkce": {
+        "yuzey": "Mekke",
+        "lemma": "Mekke",
+        "lemma_durum": "model-üretimi, doğrulanmadı",
+        "eyupipler": ""
+      },
+      "kok_durumu": "kök (Vikisözlük kök kutusu veya menşe yazısı)",
+      "asil": "According to Ibn Manzor the name derives from the root بكَّ (“to be crowded, to throng, to pester”). Popular etymology has it that it comes instead from the vb. بَكَى (bakā, “to cry”)"
+    }
+  ]
 }

@@ -952,7 +952,8 @@
       }
     ],
     "renk_sozluk": {
-      "ثم": "sonra, sonra da"
+      "ثم": "sonra, sonra da",
+      "فثم": "sonra, sonra da"
     },
     "arabic_ontology": [
       {
@@ -1000,7 +1001,7 @@
     ]
   },
   "kuran_gecisleri": 0,
-  "kuranda_var": false,
+  "kuranda_var": true,
   "sema": {
     "sema": "graf-ic-graf",
     "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
@@ -1535,5 +1536,78 @@
     "497": ["cem‘u’l-cem‘ (aday)", "fe'âil + ât", "semâî aday", ""],
     "498": ["cem‘u’l-cem‘ (aday)", "fu'ayl(cem') + ât", "semâî aday", ""]
   },
-  "kelimeler": []
+  "kelimeler": [
+    {
+      "kelime": "ثُمَّ",
+      "kok": "ثمم",
+      "lemma": "ثُمّ",
+      "tur": "Harf",
+      "bab": "",
+      "zaman": "",
+      "ilk_gecis": "2:28",
+      "adet": 337,
+      "turkce": {
+        "yuzey": "sonra, sonra da",
+        "lemma": "sonra, sonra da",
+        "lemma_durum": "model-üretimi, doğrulanmadı",
+        "eyupipler": "sonra, ardından"
+      },
+      "kok_durumu": "kök (Vikisözlük kök kutusu veya menşe yazısı)",
+      "asil": "Compare Hebrew שָׁם (šām), שָׁמָּה (šā́mmā), Aramaic תַּמָּה (tammā), תַּמָּן (tammān), Ugaritic 𐎘𐎎 (ṯm)."
+    },
+    {
+      "kelime": "فَثَمَّ",
+      "kok": "ثمم",
+      "lemma": "ثَمّ",
+      "tur": "İsim",
+      "bab": "",
+      "zaman": "",
+      "ilk_gecis": "2:115",
+      "adet": 1,
+      "turkce": {
+        "yuzey": "sonra, sonra da",
+        "lemma": "",
+        "lemma_durum": "",
+        "eyupipler": ""
+      },
+      "kok_durumu": "kök (Vikisözlük kök kutusu veya menşe yazısı)",
+      "asil": "Compare Hebrew שָׁם (šām), שָׁמָּה (šā́mmā), Aramaic תַּמָּה (tammā), תַּמָּן (tammān), Ugaritic 𐎘𐎎 (ṯm)."
+    },
+    {
+      "kelime": "أَثُمَّ",
+      "kok": "ثمم",
+      "lemma": "ثُمّ",
+      "tur": "Harf",
+      "bab": "",
+      "zaman": "",
+      "ilk_gecis": "10:51",
+      "adet": 1,
+      "turkce": {
+        "yuzey": "sonra, sonra da",
+        "lemma": "sonra, sonra da",
+        "lemma_durum": "model-üretimi, doğrulanmadı",
+        "eyupipler": "sonra, ardından"
+      },
+      "kok_durumu": "kök (Vikisözlük kök kutusu veya menşe yazısı)",
+      "asil": "Compare Hebrew שָׁם (šām), שָׁמָּה (šā́mmā), Aramaic תַּמָּה (tammā), תַּמָּן (tammān), Ugaritic 𐎘𐎎 (ṯm)."
+    },
+    {
+      "kelime": "ثَمَّ",
+      "kok": "ثمم",
+      "lemma": "ثَمّ",
+      "tur": "İsim",
+      "bab": "",
+      "zaman": "",
+      "ilk_gecis": "26:64",
+      "adet": 3,
+      "turkce": {
+        "yuzey": "sonra, sonra da",
+        "lemma": "",
+        "lemma_durum": "",
+        "eyupipler": ""
+      },
+      "kok_durumu": "kök (Vikisözlük kök kutusu veya menşe yazısı)",
+      "asil": "Compare Hebrew שָׁם (šām), שָׁמָּה (šā́mmā), Aramaic תַּמָּה (tammā), תַּמָּן (tammān), Ugaritic 𐎘𐎎 (ṯm)."
+    }
+  ]
 }

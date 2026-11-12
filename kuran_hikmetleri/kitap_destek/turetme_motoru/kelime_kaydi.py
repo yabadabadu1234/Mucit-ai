@@ -189,6 +189,9 @@ def uret():
              'zaman': k['zaman'], 'ilk_gecis': k['ilk'], 'adet': k['adet'],
              'turkce': {'yuzey': y.get('tr', ''), 'lemma': l.get('tr', ''), 'lemma_durum': l.get('durum', ''),
                         'eyupipler': wtr.get('translations', {}).get(k['lem'], '')}}
+        for ek in ('kok_durumu', 'asil'):
+            if k.get(ek):
+                e[ek] = k[ek]
         kelimeler.append(e)
     kk_kok = collections.defaultdict(list)
     kk_koksuz = []

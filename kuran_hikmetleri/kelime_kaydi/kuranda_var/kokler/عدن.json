@@ -1708,7 +1708,7 @@
     ]
   },
   "kuran_gecisleri": 0,
-  "kuranda_var": false,
+  "kuranda_var": true,
   "sema": {
     "sema": "graf-ic-graf",
     "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
@@ -2233,5 +2233,24 @@
     "515": ["masdar · bâb XII", "if'iv'āl", "kıyâsî", "XII"],
     "516": ["masdar · bâb XIII", "if'ivvāl", "kıyâsî", "XIII"]
   },
-  "kelimeler": []
+  "kelimeler": [
+    {
+      "kelime": "عَدْنٍ",
+      "kok": "عدن",
+      "lemma": "عَدْن",
+      "tur": "İsim",
+      "bab": "",
+      "zaman": "",
+      "ilk_gecis": "9:72",
+      "adet": 11,
+      "turkce": {
+        "yuzey": "Adn cenneti, yerleşim",
+        "lemma": "Adn cenneti, yerleşim",
+        "lemma_durum": "model-üretimi, doğrulanmadı",
+        "eyupipler": ""
+      },
+      "kok_durumu": "kök (Arapça asıllı ad; lügat usulüyle, kayıt ihtilaflı olabilir)",
+      "asil": "Borrowed from Biblical Hebrew עֵדֶן (ʿḗden)."
+    }
+  ]
 }
