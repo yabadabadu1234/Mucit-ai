@@ -2,7 +2,7 @@
 
 Arapça ve Latin sütunları **motorun çıktısıdır**; Türkçe ve mana sütunları **elle yazılacak** (boş).
 
-Sayım: **424 satır · 339 ayrı Arapça biçim · 0 satırda idgam · 0 satırda ilal kaidesi · 9 reddedilen**
+Sayım: **432 satır · 346 ayrı Arapça biçim · 0 satırda idgam · 0 satırda ilal kaidesi · 8 reddedilen**
 
 
 ## masdar · sülâsî mücerred (23)
@@ -270,6 +270,24 @@ Sayım: **424 satır · 339 ayrı Arapça biçim · 0 satırda idgam · 0 satır
 | munfa'il + cem‘-i sâlim müzekker (-ûn) | مُنْكَتِبُون | munkatibūn | kıyâsî |  |  |
 | munfa'il + cem‘-i sâlim müzekker (-în) | مُنْكَتِبِين | munkatibīn | kıyâsî |  |  |
 | munfa'il + cem‘-i sâlim müennes (-ât) | مُنْكَتِبَات | munkatibāt | kıyâsî |  |  |
+
+## ism-i mef‘ûl · bâb VII (7)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| munfa'al | مُنْكَتَب | munkatab | aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) |  |  |
+| munfa'al + müennes | مُنْكَتَبَة | munkataba | aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) |  |  |
+| munfa'al + tesniye | مُنْكَتَبَان | munkatabān | aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) |  |  |
+| munfa'al + müennes tesniye | مُنْكَتَبَتَان | munkatabatān | aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) |  |  |
+| munfa'al + cem‘-i sâlim müzekker (-ûn) | مُنْكَتَبُون | munkatabūn | aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) |  |  |
+| munfa'al + cem‘-i sâlim müzekker (-în) | مُنْكَتَبِين | munkatabīn | aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) |  |  |
+| munfa'al + cem‘-i sâlim müennes (-ât) | مُنْكَتَبَات | munkatabāt | aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) |  |  |
+
+## mekân/zaman/masdar-ı mîmî · bâb VII (1)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| munfa'al | مُنْكَتَب | munkatab | aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) |  |  |
 
 ## masdar · bâb VIII (1)
 
@@ -753,11 +771,10 @@ Sayım: **424 satır · 339 ayrı Arapça biçim · 0 satırda idgam · 0 satır
 
 | grup | kalıp | sebep |
 | :-- | :-- | :-- |
-| ism-i mef‘ûl · bâb VII | infi'âl (mutâvaa, lâzım) | YOK (kitap tablosunda işaretli, F 360) |
-| ism-i mef‘ûl · bâb IX | if'ilâl (renk/ayıp, lâzım) | YOK (kitap tablosunda işaretli, F 360) |
-| ism-i mef‘ûl · bâb XI | if'îlâl (lâzım) | YOK (lâzım fiil, kıyâsen; kitap tablosunda işaretli olduğu yoklanamadı) |
-| ism-i mef‘ûl · bâb XII | if'iv'âl (lâzım) | YOK (lâzım fiil, kıyâsen; kitap tablosunda işaretli olduğu yoklanamadı) |
-| ism-i mef‘ûl · bâb XIII | if'ivvâl (lâzım) | YOK (lâzım fiil, kıyâsen; kitap tablosunda işaretli olduğu yoklanamadı) |
+| ism-i mef‘ûl · bâb IX | if'ilâl (renk/ayıp, lâzım) | YOK (kitap tablosunda işaretli, F 360; Wiktionary ek tablosunda IX için N/A; harf-i cerli mef‘ûl için tanık bulunamadı) |
+| ism-i mef‘ûl · bâb XI | if'îlâl (lâzım) | YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı) |
+| ism-i mef‘ûl · bâb XII | if'iv'âl (lâzım) | YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı) |
+| ism-i mef‘ûl · bâb XIII | if'ivvâl (lâzım) | YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı) |
 | rubâ‘î | dört harfli bâblar | muzâ‘af olmayan üç harfli kökte kök ikilenmez; rubâ‘î kök ayrı bir köktür |
 | mübalağa | fa''āle + müennes | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |
 | mübalağa | fa''āle + cem‘-i sâlim müzekker (-ûn) | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |

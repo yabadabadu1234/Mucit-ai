@@ -45,9 +45,7 @@ Bu karşılaştırma bilinen biçimlerledir; tam sarf sicili sınaması değildi
 
 ## Hâlâ reddedilen hâller ve sebepleri
 
-- YOK (kitap tablosunda işaretli, F 360): VII, IX
-- YOK (lâzım fiil, kıyâsen; kitap tablosunda işaretli olduğu yoklanamadı): XI, XII, XIII
-
+- YOK: kitap tablosunda (Vezinler Tablosu) infi'âl ve if'ilâl için işaretli (F 360). Tablo dokuz vezindir; XI, XII, XIII tabloda yoktur. İnternet taraması: lâzım fiilden ism-i mef'ûl yalnız harf-i cerle kurulur (mujtahad fîhi); Wiktionary eki VII için munfa'al'ı, IX için N/A verir. Bu yüzden VII'de munfa'al aday olarak üretildi; IX ve XI–XIII'te tanık bulunamadı, reddedildi.
 - bu kök sınıfında bu kalıp yok (lefîf-makrûn, lefîf-makrûn (ayn ve lâm aynı harf), lefîf-mefrûk, nâkıs, üç harfi illetli (birleşik))
 - bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz (ecvef, ecvef+mehmûz-lâm (birleşik), lefîf-makrûn, lefîf-makrûn (ayn ve lâm aynı harf), lefîf-mefrûk, mehmûz, misâl, misâl+ecvef (birleşik), muzâ‘af, nâkıs, sâlim, üç harfi illetli (birleşik))
 - muzâ‘af olmayan üç harfli kökte kök ikilenmez; rubâ‘î kök ayrı bir köktür (ecvef, ecvef+mehmûz-lâm (birleşik), lefîf-makrûn, lefîf-makrûn (ayn ve lâm aynı harf), lefîf-mefrûk, mehmûz, misâl, misâl+ecvef (birleşik), nâkıs, sâlim, üç harfi illetli (birleşik))

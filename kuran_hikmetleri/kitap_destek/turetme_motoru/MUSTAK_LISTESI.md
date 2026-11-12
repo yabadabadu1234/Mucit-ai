@@ -21,7 +21,7 @@ hemze yazımı (elif, vâv, yâ kürsüsü; medde) · iki hemzenin medde veya y�
 
 ## E. REDDEDİLEN (sayıyla, sebebiyle)
 - IX, XI, XII, XIII: bütün kök sınıflarında üretilir. Sâlim, mehmûz, muzâ‘af, ecvef ve misâlde illet harfi izharlıdır (isvidâd, müsved). Lâmı illetli kökte (nâkıs, lefîf) masdarın sonundaki illetli lâm elifden sonra hemzeye döner (irʿiwâʾ, iḥliwlâʾ) ve ism-i fâil lâmı kesre ile uzun yâ ile biter (murʿawî); bunlar kıyâsîdir. Tanıklı olan yalnız irʿiwâʾ'dır (Fîrûzâbâdî, ارعواء); XI, XII ve XIII'ün lâmı illetli hâlleri için tanık bulunamadı ve 'semâî aday' kalır. Fiil sîgası kapsam dışıdır. XIII masdar kalıbındaki fazladan lâm hatası düzeltildi (ifʿiwwâl).
-- mef‘ûl "YOK": VII, IX (kitap tablosu, F 360); XI, XII, XIII kıyâsen (tabloda işaretli olduğu yoklanamadı)
+- mef‘ûl "YOK": IX (tablo F 360; tanık yok); XI, XII, XIII (tabloda yok, tanık bulunamadı). VII: tabloda YOK, fakat lâzım fiilden harf-i cerle kurulan munfa‘al aday üretildi (internet: Wiktionary VII için verir).
 - rubâ'î: yalnız muzâ‘af kökte
 - fiil çekimleri, harf, i'râb hâlleri: kapsam dışı
 - ism-i masdar ve ism-i cins: kıyâsî kural yok; kalıp adayları `semâî aday` etiketiyle üretilir

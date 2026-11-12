@@ -84,6 +84,7 @@ ECVEF = {
     "mu 10 2a 3": "mu 1a A 3",
     "Wi n0 1i 2a A 3": "Wi n0 1i ya A 3",
     "mu n0 1a 2i 3": "mu n0 1a A 3",
+    "mu n0 1a 2a 3": "mu n0 1a A 3",
     "Wi 10 Xi 2a A 3": "Wi 10 Xi ya A 3",
     "mu 10 Xa 2i 3": "mu 10 Xa A 3",
     "mu 10 Xa 2a 3": "mu 10 Xa A 3",
@@ -144,6 +145,7 @@ NAKIS = {
     "mu ta 1a A 2a 3": "mu ta 1a A 2a Y",
     "Wi n0 1i 2a A 3": "Wi n0 1i 2a A Q",
     "mu n0 1a 2i 3": "mu n0 1a 2i I",
+    "mu n0 1a 2a 3": "mu n0 1a 2a Y",
     "Wi 10 Xi 2a A 3": "Wi 10 Xi 2a A Q",
     "mu 10 Xa 2i 3": "mu 10 Xa 2i I",
     "mu 10 Xa 2a 3": "mu 10 Xa 2a Y",
@@ -522,7 +524,7 @@ BAB = [
     ('VI', "tefâ'ul", [("tafā'ul", "ta 1a A 2u 3")],
      ("mutafā'il", "mu ta 1a A 2i 3"), ("mutafā'al", "mu ta 1a A 2a 3")),
     ('VII', "infi'âl (mutâvaa, lâzım)", [("infi'āl", "Wi n0 1i 2a A 3")],
-     ("munfa'il", "mu n0 1a 2i 3"), None),
+     ("munfa'il", "mu n0 1a 2i 3"), ("munfa'al", "mu n0 1a 2a 3")),
     ('VIII', "ifti'âl", [("ifti'āl", "Wi 10 Xi 2a A 3")],
      ("muftaʿil", "mu 10 Xa 2i 3"), ("muftaʿal", "mu 10 Xa 2a 3")),
     ('IX', "if'ilâl (renk/ayıp, lâzım)", [("if'ilāl", "Wi 10 2i 3a A 3")],
@@ -645,15 +647,16 @@ def tablo(kok):
             if fail:
                 turevler('ism-i fâil · bâb ' + rom + suf, fail[0], fail[1], True, 'kıyâsî', rom, var)
             if mef:
-                turevler('ism-i mef‘ûl · bâb ' + rom + suf, mef[0], mef[1], True, 'kıyâsî', rom, var)
-                tek('mekân/zaman/masdar-ı mîmî · bâb ' + rom + suf, mef[0], mef[1], 'kıyâsî', rom, var)
+                et = 'aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)' if rom == 'VII' else 'kıyâsî'
+                turevler('ism-i mef‘ûl · bâb ' + rom + suf, mef[0], mef[1], True, et, rom, var)
+                tek('mekân/zaman/masdar-ı mîmî · bâb ' + rom + suf, mef[0], mef[1], et, rom, var)
         if rom == 'X' and bay['ecvef'] and kok[1] == 'و':
             ekle('masdar · bâb X (vâvı muhafaza: semâî istisnâ)', "istif'āl", parse("Wi s0 ti 10 2a A 3"), kok, 'semâî aday', rom)
             ekle('ism-i fâil · bâb X (vâvı muhafaza: semâî istisnâ)', "mustaf'il", parse("mu s0 ta 10 2i 3"), kok, 'semâî aday', rom)
             ekle('ism-i mef‘ûl · bâb X (vâvı muhafaza: semâî istisnâ)', "mustaf'al", parse("mu s0 ta 10 2a 3"), kok, 'semâî aday', rom)
         raw[0] = False
         if mef is None:
-            red.append(('ism-i mef‘ûl · bâb ' + rom, ad, 'YOK (kitap tablosunda işaretli, F 360)' if rom in ('VII', 'IX') else 'YOK (lâzım fiil, kıyâsen; kitap tablosunda işaretli olduğu yoklanamadı)'))
+            red.append(('ism-i mef‘ûl · bâb ' + rom, ad, 'YOK (kitap tablosunda işaretli, F 360; Wiktionary ek tablosunda IX için N/A; harf-i cerli mef‘ûl için tanık bulunamadı)' if rom == 'IX' else 'YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)'))
     if mudaaf:
         kok4 = kok[0] + kok[1] + kok[0] + kok[1]
         for grp, ad, masdarlar, fail, mef in BAB_RUBAI:

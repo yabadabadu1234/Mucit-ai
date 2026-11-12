@@ -2,7 +2,7 @@
 
 Arapça ve Latin sütunları **motorun çıktısıdır**; Türkçe ve mana sütunları **elle yazılacak** (boş).
 
-Sayım: **432 satır · 345 ayrı Arapça biçim · 0 satırda idgam · 121 satırda ilal kaidesi · 11 reddedilen**
+Sayım: **440 satır · 345 ayrı Arapça biçim · 0 satırda idgam · 129 satırda ilal kaidesi · 10 reddedilen**
 
 
 ## masdar · sülâsî mücerred (23)
@@ -264,6 +264,24 @@ Sayım: **432 satır · 345 ayrı Arapça biçim · 0 satırda idgam · 121 sat�
 | munfa'il + cem‘-i sâlim müzekker (-ûn) | مُنْيَامُون | munyāmūn | kıyâsî · ilal |  |  |
 | munfa'il + cem‘-i sâlim müzekker (-în) | مُنْيَامِين | munyāmīn | kıyâsî · ilal |  |  |
 | munfa'il + cem‘-i sâlim müennes (-ât) | مُنْيَامَات | munyāmāt | kıyâsî · ilal |  |  |
+
+## ism-i mef‘ûl · bâb VII (7)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| munfa'al | مُنْيَام | munyām | aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal |  |  |
+| munfa'al + müennes | مُنْيَامَة | munyāma | aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal |  |  |
+| munfa'al + tesniye | مُنْيَامَان | munyāmān | aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal |  |  |
+| munfa'al + müennes tesniye | مُنْيَامَتَان | munyāmatān | aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal |  |  |
+| munfa'al + cem‘-i sâlim müzekker (-ûn) | مُنْيَامُون | munyāmūn | aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal |  |  |
+| munfa'al + cem‘-i sâlim müzekker (-în) | مُنْيَامِين | munyāmīn | aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal |  |  |
+| munfa'al + cem‘-i sâlim müennes (-ât) | مُنْيَامَات | munyāmāt | aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal |  |  |
+
+## mekân/zaman/masdar-ı mîmî · bâb VII (1)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| munfa'al | مُنْيَام | munyām | aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal |  |  |
 
 ## masdar · bâb VIII (1)
 
@@ -767,12 +785,11 @@ Sayım: **432 satır · 345 ayrı Arapça biçim · 0 satırda idgam · 121 sat�
 | grup | kalıp | sebep |
 | :-- | :-- | :-- |
 | ism-i merre · bâb IV | if'āl + tâ | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |
-| ism-i mef‘ûl · bâb VII | infi'âl (mutâvaa, lâzım) | YOK (kitap tablosunda işaretli, F 360) |
-| ism-i mef‘ûl · bâb IX | if'ilâl (renk/ayıp, lâzım) | YOK (kitap tablosunda işaretli, F 360) |
+| ism-i mef‘ûl · bâb IX | if'ilâl (renk/ayıp, lâzım) | YOK (kitap tablosunda işaretli, F 360; Wiktionary ek tablosunda IX için N/A; harf-i cerli mef‘ûl için tanık bulunamadı) |
 | ism-i merre · bâb X | istif'āl + tâ | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |
-| ism-i mef‘ûl · bâb XI | if'îlâl (lâzım) | YOK (lâzım fiil, kıyâsen; kitap tablosunda işaretli olduğu yoklanamadı) |
-| ism-i mef‘ûl · bâb XII | if'iv'âl (lâzım) | YOK (lâzım fiil, kıyâsen; kitap tablosunda işaretli olduğu yoklanamadı) |
-| ism-i mef‘ûl · bâb XIII | if'ivvâl (lâzım) | YOK (lâzım fiil, kıyâsen; kitap tablosunda işaretli olduğu yoklanamadı) |
+| ism-i mef‘ûl · bâb XI | if'îlâl (lâzım) | YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı) |
+| ism-i mef‘ûl · bâb XII | if'iv'âl (lâzım) | YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı) |
+| ism-i mef‘ûl · bâb XIII | if'ivvâl (lâzım) | YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı) |
 | rubâ‘î | dört harfli bâblar | muzâ‘af olmayan üç harfli kökte kök ikilenmez; rubâ‘î kök ayrı bir köktür |
 | mübalağa | fa''āle + müennes | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |
 | mübalağa | fa''āle + cem‘-i sâlim müzekker (-ûn) | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |

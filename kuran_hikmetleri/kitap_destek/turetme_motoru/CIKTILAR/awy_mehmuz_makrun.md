@@ -2,7 +2,7 @@
 
 Arapça ve Latin sütunları **motorun çıktısıdır**; Türkçe ve mana sütunları **elle yazılacak** (boş).
 
-Sayım: **413 satır · 323 ayrı Arapça biçim · 0 satırda idgam · 348 satırda ilal kaidesi · 25 reddedilen**
+Sayım: **419 satır · 328 ayrı Arapça biçim · 0 satırda idgam · 354 satırda ilal kaidesi · 25 reddedilen**
 
 
 ## masdar · sülâsî mücerred (23)
@@ -247,6 +247,22 @@ Sayım: **413 satır · 323 ayrı Arapça biçim · 0 satırda idgam · 348 sat�
 | munfa'il + cem‘-i sâlim müzekker (-ûn) | مُنْأَوُون | munʾawūn | kıyâsî · ilal |  |  |
 | munfa'il + cem‘-i sâlim müzekker (-în) | مُنْأَوِين | munʾawīn | kıyâsî · ilal |  |  |
 | munfa'il + cem‘-i sâlim müennes (-ât) | مُنْأَوِيَات | munʾawiyāt | kıyâsî · ilal |  |  |
+
+## ism-i mef‘ûl · bâb VII (5)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| munfa'al | مُنْأَوَى | munʾawā | aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal |  |  |
+| munfa'al + tesniye | مُنْأَوَيَان | munʾawayān | aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal |  |  |
+| munfa'al + cem‘-i sâlim müzekker (-ûn) | مُنْأَوَوْن | munʾawawn | aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal |  |  |
+| munfa'al + cem‘-i sâlim müzekker (-în) | مُنْأَوَيْن | munʾawayn | aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal |  |  |
+| munfa'al + cem‘-i sâlim müennes (-ât) | مُنْأَوَيَات | munʾawayāt | aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal |  |  |
+
+## mekân/zaman/masdar-ı mîmî · bâb VII (1)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| munfa'al | مُنْأَوَى | munʾawā | aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal |  |  |
 
 ## masdar · bâb VIII (1)
 
@@ -760,14 +776,14 @@ Sayım: **413 satır · 323 ayrı Arapça biçim · 0 satırda idgam · 348 sat�
 | ism-i mef‘ûl · bâb V | mutafa''al + müennes | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |
 | ism-i merre · bâb VI | tafā'ul + tâ | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |
 | ism-i mef‘ûl · bâb VI | mutafā'al + müennes | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |
-| ism-i mef‘ûl · bâb VII | infi'âl (mutâvaa, lâzım) | YOK (kitap tablosunda işaretli, F 360) |
+| ism-i mef‘ûl · bâb VII | munfa'al + müennes | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |
 | ism-i mef‘ûl · bâb VIII | muftaʿal + müennes | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |
 | ism-i mef‘ûl · bâb VIII (hemze idgamlı) | muftaʿal + müennes | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |
-| ism-i mef‘ûl · bâb IX | if'ilâl (renk/ayıp, lâzım) | YOK (kitap tablosunda işaretli, F 360) |
+| ism-i mef‘ûl · bâb IX | if'ilâl (renk/ayıp, lâzım) | YOK (kitap tablosunda işaretli, F 360; Wiktionary ek tablosunda IX için N/A; harf-i cerli mef‘ûl için tanık bulunamadı) |
 | ism-i mef‘ûl · bâb X | mustaf'al + müennes | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |
-| ism-i mef‘ûl · bâb XI | if'îlâl (lâzım) | YOK (lâzım fiil, kıyâsen; kitap tablosunda işaretli olduğu yoklanamadı) |
-| ism-i mef‘ûl · bâb XII | if'iv'âl (lâzım) | YOK (lâzım fiil, kıyâsen; kitap tablosunda işaretli olduğu yoklanamadı) |
-| ism-i mef‘ûl · bâb XIII | if'ivvâl (lâzım) | YOK (lâzım fiil, kıyâsen; kitap tablosunda işaretli olduğu yoklanamadı) |
+| ism-i mef‘ûl · bâb XI | if'îlâl (lâzım) | YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı) |
+| ism-i mef‘ûl · bâb XII | if'iv'âl (lâzım) | YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı) |
+| ism-i mef‘ûl · bâb XIII | if'ivvâl (lâzım) | YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı) |
 | rubâ‘î | dört harfli bâblar | muzâ‘af olmayan üç harfli kökte kök ikilenmez; rubâ‘î kök ayrı bir köktür |
 | sıfat-ı müşebbehe | fa'al + müennes | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |
 | mübalağa | fa''āle + müennes | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |
