@@ -45,7 +45,9 @@ Bu karşılaştırma bilinen biçimlerledir; tam sarf sicili sınaması değildi
 
 ## Hâlâ reddedilen hâller ve sebepleri
 
-- YOK (lâzım fiil; kitapta mef‘ûl işaretli değil) (ecvef, ecvef+mehmûz-lâm (birleşik), lefîf-makrûn, lefîf-makrûn (ayn ve lâm aynı harf), lefîf-mefrûk, mehmûz, misâl, misâl+ecvef (birleşik), muzâ‘af, nâkıs, sâlim, üç harfi illetli (birleşik))
+- YOK (kitap tablosunda işaretli, F 360): VII, IX
+- YOK (lâzım fiil, kıyâsen; kitap tablosunda işaretli olduğu yoklanamadı): XI, XII, XIII
+
 - bu kök sınıfında bu kalıp yok (lefîf-makrûn, lefîf-makrûn (ayn ve lâm aynı harf), lefîf-mefrûk, nâkıs, üç harfi illetli (birleşik))
 - bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz (ecvef, ecvef+mehmûz-lâm (birleşik), lefîf-makrûn, lefîf-makrûn (ayn ve lâm aynı harf), lefîf-mefrûk, mehmûz, misâl, misâl+ecvef (birleşik), muzâ‘af, nâkıs, sâlim, üç harfi illetli (birleşik))
 - muzâ‘af olmayan üç harfli kökte kök ikilenmez; rubâ‘î kök ayrı bir köktür (ecvef, ecvef+mehmûz-lâm (birleşik), lefîf-makrûn, lefîf-makrûn (ayn ve lâm aynı harf), lefîf-mefrûk, mehmûz, misâl, misâl+ecvef (birleşik), nâkıs, sâlim, üç harfi illetli (birleşik))

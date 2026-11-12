@@ -653,7 +653,7 @@ def tablo(kok):
             ekle('ism-i mef‘ûl · bâb X (vâvı muhafaza: semâî istisnâ)', "mustaf'al", parse("mu s0 ta 10 2a 3"), kok, 'semâî aday', rom)
         raw[0] = False
         if mef is None:
-            red.append(('ism-i mef‘ûl · bâb ' + rom, ad, 'YOK (lâzım fiil; kitapta mef‘ûl işaretli değil)'))
+            red.append(('ism-i mef‘ûl · bâb ' + rom, ad, 'YOK (kitap tablosunda işaretli, F 360)' if rom in ('VII', 'IX') else 'YOK (lâzım fiil, kıyâsen; kitap tablosunda işaretli olduğu yoklanamadı)'))
     if mudaaf:
         kok4 = kok[0] + kok[1] + kok[0] + kok[1]
         for grp, ad, masdarlar, fail, mef in BAB_RUBAI:

@@ -808,11 +808,11 @@ Sayım: **434 satır · 300 ayrı Arapça biçim · 212 satırda idgam · 0 sat�
 
 | grup | kalıp | sebep |
 | :-- | :-- | :-- |
-| ism-i mef‘ûl · bâb VII | infi'âl (mutâvaa, lâzım) | YOK (lâzım fiil; kitapta mef‘ûl işaretli değil) |
-| ism-i mef‘ûl · bâb IX | if'ilâl (renk/ayıp, lâzım) | YOK (lâzım fiil; kitapta mef‘ûl işaretli değil) |
-| ism-i mef‘ûl · bâb XI | if'îlâl (lâzım) | YOK (lâzım fiil; kitapta mef‘ûl işaretli değil) |
-| ism-i mef‘ûl · bâb XII | if'iv'âl (lâzım) | YOK (lâzım fiil; kitapta mef‘ûl işaretli değil) |
-| ism-i mef‘ûl · bâb XIII | if'ivvâl (lâzım) | YOK (lâzım fiil; kitapta mef‘ûl işaretli değil) |
+| ism-i mef‘ûl · bâb VII | infi'âl (mutâvaa, lâzım) | YOK (kitap tablosunda işaretli, F 360) |
+| ism-i mef‘ûl · bâb IX | if'ilâl (renk/ayıp, lâzım) | YOK (kitap tablosunda işaretli, F 360) |
+| ism-i mef‘ûl · bâb XI | if'îlâl (lâzım) | YOK (lâzım fiil, kıyâsen; kitap tablosunda işaretli olduğu yoklanamadı) |
+| ism-i mef‘ûl · bâb XII | if'iv'âl (lâzım) | YOK (lâzım fiil, kıyâsen; kitap tablosunda işaretli olduğu yoklanamadı) |
+| ism-i mef‘ûl · bâb XIII | if'ivvâl (lâzım) | YOK (lâzım fiil, kıyâsen; kitap tablosunda işaretli olduğu yoklanamadı) |
 | mübalağa | fa''āle + müennes | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |
 | mübalağa | fa''āle + cem‘-i sâlim müzekker (-ûn) | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |
 | mübalağa | fa''āle + cem‘-i sâlim müzekker (-în) | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |

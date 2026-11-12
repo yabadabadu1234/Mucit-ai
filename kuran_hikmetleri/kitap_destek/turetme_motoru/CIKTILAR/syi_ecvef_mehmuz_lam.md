@@ -749,12 +749,12 @@ Sayım: **429 satır · 336 ayrı Arapça biçim · 0 satırda idgam · 121 sat�
 | grup | kalıp | sebep |
 | :-- | :-- | :-- |
 | ism-i merre · bâb IV | if'āl + tâ | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |
-| ism-i mef‘ûl · bâb VII | infi'âl (mutâvaa, lâzım) | YOK (lâzım fiil; kitapta mef‘ûl işaretli değil) |
-| ism-i mef‘ûl · bâb IX | if'ilâl (renk/ayıp, lâzım) | YOK (lâzım fiil; kitapta mef‘ûl işaretli değil) |
+| ism-i mef‘ûl · bâb VII | infi'âl (mutâvaa, lâzım) | YOK (kitap tablosunda işaretli, F 360) |
+| ism-i mef‘ûl · bâb IX | if'ilâl (renk/ayıp, lâzım) | YOK (kitap tablosunda işaretli, F 360) |
 | ism-i merre · bâb X | istif'āl + tâ | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |
-| ism-i mef‘ûl · bâb XI | if'îlâl (lâzım) | YOK (lâzım fiil; kitapta mef‘ûl işaretli değil) |
-| ism-i mef‘ûl · bâb XII | if'iv'âl (lâzım) | YOK (lâzım fiil; kitapta mef‘ûl işaretli değil) |
-| ism-i mef‘ûl · bâb XIII | if'ivvâl (lâzım) | YOK (lâzım fiil; kitapta mef‘ûl işaretli değil) |
+| ism-i mef‘ûl · bâb XI | if'îlâl (lâzım) | YOK (lâzım fiil, kıyâsen; kitap tablosunda işaretli olduğu yoklanamadı) |
+| ism-i mef‘ûl · bâb XII | if'iv'âl (lâzım) | YOK (lâzım fiil, kıyâsen; kitap tablosunda işaretli olduğu yoklanamadı) |
+| ism-i mef‘ûl · bâb XIII | if'ivvâl (lâzım) | YOK (lâzım fiil, kıyâsen; kitap tablosunda işaretli olduğu yoklanamadı) |
 | rubâ‘î | dört harfli bâblar | muzâ‘af olmayan üç harfli kökte kök ikilenmez; rubâ‘î kök ayrı bir köktür |
 | mübalağa | fa''āle + müennes | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |
 | mübalağa | fa''āle + cem‘-i sâlim müzekker (-ûn) | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |
