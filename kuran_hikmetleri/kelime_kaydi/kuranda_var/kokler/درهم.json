@@ -1,1 +1,69 @@
-{"kok":"درهم","sinif":"reddedildi","turkce_fiil":{"sap":"para ol","kaynak":"ad","guven":"kontrol"},"mustaklar":{},"reddedilen":[["kök","درهم","üç harfli değil"]],"sozlukler":{"kok_anlamlari":{"kok":"درهم","turkce":"Dirhem: para, gümüş para"},"osmanlica_lugatler":{"دَراهِم":{"sorgular":["darahim"],"maddeler":[]}},"renk_sozluk":{"درهم":"gümüş paralar"},"arabic_ontology":[{"id":"51306","arapca":["دِرْهَمٌ"],"ingilizce":[],"tanim":"وحدة نقدية معدنية ذات قيمة شرائية محددة ومتفق عليها وتختلف قيمتها باختلاف المكان المتدأولة فيه","misal":"يستخدم ال_ كعملة نقدية في بلدان عربية متعددة منها اليمن والمغرب والخليج العربي","veri_kaynagi":"43","ust":[],"kunye":"Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"}]},"kuran_gecisleri":1,"kuranda_var":true,"sema":{"sema":"graf-ic-graf","kok_dosyasi":"kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler","kok_alt_grafi":"kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder","sozluk_dali":"kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler","kelime_dali":"kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri","satir_alanlari":["kalip","arapca","latin","turkce","guven","tanik"]},"kaliplar":{},"kelimeler":[{"kelime":"دَرَٰهِمَ","kok":"درهم","lemma":"دَراهِم","tur":"İsim","bab":"","zaman":"","ilk_gecis":"12:20","adet":1,"turkce":{"yuzey":"gümüş paralar","lemma":"gümüş paralar","lemma_durum":"model-üretimi, doğrulanmadı","eyupipler":""}}]}
+{
+  "kok": "درهم",
+  "sinif": "reddedildi",
+  "turkce_fiil": {
+    "sap": "para ol",
+    "kaynak": "ad",
+    "guven": "kontrol"
+  },
+  "mustaklar": {},
+  "reddedilen": [
+    ["kök", "درهم", "üç harfli değil"]
+  ],
+  "sozlukler": {
+    "kok_anlamlari": {
+      "kok": "درهم",
+      "turkce": "Dirhem: para, gümüş para"
+    },
+    "osmanlica_lugatler": {
+      "دَراهِم": {
+        "sorgular": ["darahim"],
+        "maddeler": []
+      }
+    },
+    "renk_sozluk": {
+      "درهم": "gümüş paralar"
+    },
+    "arabic_ontology": [
+      {
+        "id": "51306",
+        "arapca": ["دِرْهَمٌ"],
+        "ingilizce": [],
+        "tanim": "وحدة نقدية معدنية ذات قيمة شرائية محددة ومتفق عليها وتختلف قيمتها باختلاف المكان المتدأولة فيه",
+        "misal": "يستخدم ال_ كعملة نقدية في بلدان عربية متعددة منها اليمن والمغرب والخليج العربي",
+        "veri_kaynagi": "43",
+        "ust": [],
+        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
+      }
+    ]
+  },
+  "kuran_gecisleri": 1,
+  "kuranda_var": true,
+  "sema": {
+    "sema": "graf-ic-graf",
+    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
+    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
+    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
+    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
+    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
+  },
+  "kaliplar": {},
+  "kelimeler": [
+    {
+      "kelime": "دَرَٰهِمَ",
+      "kok": "درهم",
+      "lemma": "دَراهِم",
+      "tur": "İsim",
+      "bab": "",
+      "zaman": "",
+      "ilk_gecis": "12:20",
+      "adet": 1,
+      "turkce": {
+        "yuzey": "gümüş paralar",
+        "lemma": "gümüş paralar",
+        "lemma_durum": "model-üretimi, doğrulanmadı",
+        "eyupipler": ""
+      }
+    }
+  ]
+}

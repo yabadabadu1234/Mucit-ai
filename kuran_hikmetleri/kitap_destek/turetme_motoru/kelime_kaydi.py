@@ -27,6 +27,25 @@ SEMA = {
 }
 
 
+def okunur(o, g=0, en=110):
+    ic = '  ' * (g + 1)
+    dis = '  ' * g
+    if isinstance(o, dict):
+        if not o:
+            return '{}'
+        return '{\n' + ',\n'.join('%s%s: %s' % (ic, json.dumps(k, ensure_ascii=False), okunur(v, g + 1, en)) for k, v in o.items()) + '\n' + dis + '}'
+    if isinstance(o, (list, tuple)):
+        if not o:
+            return '[]'
+        if all(not isinstance(x, (dict, list, tuple)) for x in o):
+            satir = '[' + ', '.join(json.dumps(x, ensure_ascii=False) for x in o) + ']'
+            if len(satir) <= en:
+                return satir
+        return '[\n' + ',\n'.join(ic + okunur(x, g + 1, en) for x in o) + '\n' + dis + ']'
+    return json.dumps(o, ensure_ascii=False)
+
+
+
 def oku_json(p):
     return json.load(open(p, encoding='utf-8'))
 
@@ -311,23 +330,23 @@ def yaz():
         dugum['kelimeler'] = gruplar.get(k, [])
         yol = os.path.join(klasor, k + '.json')
         with open(yol, 'w', encoding='utf-8') as f:
-            json.dump(dugum, f, ensure_ascii=False, separators=(',', ':'))
+            f.write(okunur(dugum))
         toplam[ad] += os.path.getsize(yol)
         fih[ad].append([k + '.json', k, len(dugum['kelimeler']), sum(len(v) for v in r.get('mustaklar', {}).values())])
         for e in dugum['kelimeler']:
             kelime_kok[e['kelime']] = k
     with open(os.path.join(taban, 'kuranda_var', 'koksuz.json'), 'w', encoding='utf-8') as f:
-        json.dump({'aciklama': 'Kökü olmayan kelimeler (harf, zamir, özel ad vb.)', 'kelimeler': koksuz}, f, ensure_ascii=False, separators=(',', ':'))
+        f.write(okunur({'aciklama': 'Kökü olmayan kelimeler (harf, zamir, özel ad vb.)', 'kelimeler': koksuz}))
     kd = os.path.join(taban, 'kuranda_yok', 'kelimeler')
     os.makedirs(kd, exist_ok=True)
     for ad_, dugum in d['kelime_dosyalari'].items():
         with open(os.path.join(kd, ad_ + '.json'), 'w', encoding='utf-8') as f:
-            json.dump(dugum, f, ensure_ascii=False, separators=(',', ':'))
+            f.write(okunur(dugum))
     d['sayilar']['kelime_dosyasi'] = len(d['kelime_dosyalari'])
     for ad in ('kuranda_var', 'kuranda_yok'):
         with open(os.path.join(taban, ad, 'FIHRIST.json'), 'w', encoding='utf-8') as f:
-            json.dump({'sema': SEMA, 'sayilar': d['sayilar'], 'alanlar_kokler': ['dosya', 'kok', 'kelime_sayisi', 'mustak_satiri'], 'kokler': fih[ad],
-                       'kelime_kok': kelime_kok if ad == 'kuranda_var' else {}}, f, ensure_ascii=False, separators=(',', ':'))
+            f.write(okunur({'sema': SEMA, 'sayilar': d['sayilar'], 'alanlar_kokler': ['dosya', 'kok', 'kelime_sayisi', 'mustak_satiri'], 'kokler': fih[ad],
+                            'kelime_kok': kelime_kok if ad == 'kuranda_var' else {}}))
     print(d['sayilar'], {k: len(v) for k, v in fih.items()}, {k: v // 1024 // 1024 for k, v in toplam.items()}, 'MB')
 
 
