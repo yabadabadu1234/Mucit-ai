@@ -173,15 +173,96 @@ def uret():
         kelimeler.append(e)
     kk_kok = collections.defaultdict(list)
     kk_koksuz = []
+    kelime_dosyalari = {}
+
+    def kd_ad(u):
+        return re.sub(r'[^\w]+', '_', u, flags=re.U).strip('_')[:80] or 'adsiz'
+
+    def kd_ekle(u, kaynak, kayit):
+        d_ = kelime_dosyalari.setdefault(kd_ad(u), {'kelime': u, 'sozlukler': collections.OrderedDict()})
+        d_['sozlukler'].setdefault(kaynak, []).append(kayit)
     for i, e in enumerate(kk):
         e['yol'] = kk_yol[i]
         if kk_atama[i]:
             kk_kok[kk_atama[i]].append(e)
         else:
             kk_koksuz.append(e)
+            kd_ekle(e['u'], 'kaikki_vikisozluk', e)
     for k, r in kokler.items():
         if k in kk_kok:
             r.setdefault('sozlukler', {})['kaikki_vikisozluk'] = kk_kok[k]
+    kel_kok = {sade_ad(x['kelime']): I.normala(x['kok']) for x in kel if x['kok']}
+    kel_kok.update({sade_ad(x['lem']): I.normala(x['kok']) for x in kel if x['kok'] and x.get('lem')})
+
+    def kok_bul_kelime(ar):
+        a = sade_ad(ar)
+        if a in kel_kok:
+            return kel_kok[a]
+        if a in mustak_kok:
+            return mustak_kok[a]
+        if a.startswith('ال') and a[2:] in mustak_kok:
+            return mustak_kok[a[2:]]
+        return None
+
+    renk = oku_json(os.path.join(SOZ, 'renk_sozluk.json'))
+    renk_yer = collections.Counter()
+    for ar, tr in renk.items():
+        k = kok_bul_kelime(ar)
+        if k and k in kokler:
+            kokler[k].setdefault('sozlukler', {}).setdefault('renk_sozluk', {})[ar] = tr
+            renk_yer['kök'] += 1
+        else:
+            kd_ekle(sade_ad(ar), 'renk_sozluk', {'kelime': ar, 'turkce': tr})
+            renk_yer['kelime'] += 1
+
+    import csv
+    ont_yol = os.path.join(KOK, 'kaynak', 'Concepts.csv')
+    ont_iliski = os.path.join(KOK, 'kaynak', 'Relations.csv')
+    ont = {}
+    for ln in csv.DictReader(open(ont_yol, encoding='utf-8')):
+        ont[ln['conceptId']] = ln
+    ust = collections.defaultdict(list)
+    for ln in csv.DictReader(open(ont_iliski, encoding='utf-8')):
+        for alan, ad in (('subTypeOfID', 'alt_tur_of'), ('partOfID', 'parca_of'), ('instanceOfID', 'ornek_of')):
+            v = ln[alan]
+            if v and v != 'NULL':
+                ust[ln['concept_id']].append([ad, v])
+    ont_yer = collections.Counter()
+    ont_kunye = 'Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB'
+    for cid, c in ont.items():
+        kayit = {'id': cid, 'arapca': [x.strip() for x in c['arabicSynset'].split('|') if x.strip()],
+                 'ingilizce': [x.strip() for x in c['englishSynset'].split('|') if x.strip() and x.strip() != 'NULL'],
+                 'tanim': c['gloss'], 'misal': (c['example'] if c['example'] != 'NULL' else ''), 'veri_kaynagi': c['dataSourceId'],
+                 'ust': [[ad, v, (ont[v]['englishSynset'] if v in ont and ont[v]['englishSynset'] != 'NULL' else (ont[v]['arabicSynset'] if v in ont else ''))] for ad, v in ust.get(cid, [])],
+                 'kunye': ont_kunye}
+        yerler = set()
+        for ar in kayit['arapca']:
+            k = kok_bul_kelime(ar)
+            if k and k in kokler:
+                yerler.add(('k', k))
+            else:
+                yerler.add(('w', sade_ad(ar)))
+        if not yerler:
+            yerler.add(('w', 'concept_' + cid))
+        for t, y in yerler:
+            if t == 'k':
+                kokler[y].setdefault('sozlukler', {}).setdefault('arabic_ontology', []).append(kayit)
+                ont_yer['kök'] += 1
+            else:
+                kd_ekle(y, 'arabic_ontology', kayit)
+                ont_yer['kelime'] += 1
+
+    pilot = os.path.join(KOK, 'kaynak', 'lugat', 'pilot')
+    pilot_say = 0
+    for alt, ad in (('kategori', 'kategori.json'), ('lean', 'صبر.json'), ('sema', 'صبر.json')):
+        yol = os.path.join(pilot, alt, ad)
+        if os.path.exists(yol) and 'صبر' in kokler:
+            kokler['صبر'].setdefault('sozlukler', {}).setdefault('pilot', {})[alt] = oku_json(yol)
+            pilot_say += 1
+    yol = os.path.join(pilot, 'صبر.json')
+    if os.path.exists(yol) and 'صبر' in kokler:
+        kokler['صبر'].setdefault('sozlukler', {}).setdefault('pilot', {})['cebir'] = oku_json(yol)
+        pilot_say += 1
     sayi = {'kelime': len(kelimeler), 'kok': len(kokler), 'kalip': len(kaliplar),
             'mustak_satiri': sum(len(v) for r in kokler.values() for v in r.get('mustaklar', {}).values()),
             'etimolojili_kok': sum(1 for r in kokler.values() if 'etimoloji' in r.get('sozlukler', {})),
@@ -195,9 +276,11 @@ def uret():
             'kaikki_girdi': len(kk), 'kaikki_koke_yerlesen': sum(len(v) for v in kk_kok.values()), 'kaikki_koksuz': len(kk_koksuz),
             'kaikki_yeni_kok': len(kk_kokleri - kuran_kokleri - set(mk)),
             'kaikki_kok_yolu': dict(collections.Counter(kk_yol)),
+            'renk_sozluk_girdi': len(renk), 'renk_sozluk_yer': dict(renk_yer), 'ontoloji_kavram': len(ont), 'ontoloji_yer': dict(ont_yer), 'pilot_dosya': pilot_say,
             'motorun_reddettigi_kok': sum(hata.values()), 'kokü_olmayan_kelime': sum(1 for e in kelimeler if not e['kok'])}
+    assert sayi['renk_sozluk_girdi'] == sum(renk_yer.values()), 'renk sözlüğü maddesi yerleşmedi'
     assert sayi['kaikki_girdi'] == sayi['kaikki_koke_yerlesen'] + sayi['kaikki_koksuz'], 'kaikki maddesi yerleşmedi'
-    return {'sema': SEMA, 'sayilar': sayi, 'kaliplar': kaliplar, 'kokler': kokler, 'kelimeler': kelimeler, 'kaikki_koksuz': kk_koksuz}
+    return {'sema': SEMA, 'sayilar': sayi, 'kaliplar': kaliplar, 'kokler': kokler, 'kelimeler': kelimeler, 'kaikki_koksuz': kk_koksuz, 'kelime_dosyalari': kelime_dosyalari}
 
 
 def yaz():
@@ -237,14 +320,10 @@ def yaz():
         json.dump({'aciklama': 'Kökü olmayan kelimeler (harf, zamir, özel ad vb.)', 'kelimeler': koksuz}, f, ensure_ascii=False, separators=(',', ':'))
     kd = os.path.join(taban, 'kuranda_yok', 'kelimeler')
     os.makedirs(kd, exist_ok=True)
-    kw = collections.defaultdict(list)
-    for e in d['kaikki_koksuz']:
-        ad_ = re.sub(r'[^\w]+', '_', e['u'], flags=re.U).strip('_')[:80] or 'adsiz'
-        kw[ad_].append(e)
-    for ad_, liste in kw.items():
+    for ad_, dugum in d['kelime_dosyalari'].items():
         with open(os.path.join(kd, ad_ + '.json'), 'w', encoding='utf-8') as f:
-            json.dump({'kelime': liste[0]['u'], 'maddeler': liste}, f, ensure_ascii=False, separators=(',', ':'))
-    d['sayilar']['kaikki_koksuz_kelime_dosyasi'] = len(kw)
+            json.dump(dugum, f, ensure_ascii=False, separators=(',', ':'))
+    d['sayilar']['kelime_dosyasi'] = len(d['kelime_dosyalari'])
     for ad in ('kuranda_var', 'kuranda_yok'):
         with open(os.path.join(taban, ad, 'FIHRIST.json'), 'w', encoding='utf-8') as f:
             json.dump({'sema': SEMA, 'sayilar': d['sayilar'], 'alanlar_kokler': ['dosya', 'kok', 'kelime_sayisi', 'mustak_satiri'], 'kokler': fih[ad],
