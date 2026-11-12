@@ -2,7 +2,7 @@
 
 Arapça ve Latin sütunları **motorun çıktısıdır**; Türkçe ve mana sütunları **elle yazılacak** (boş).
 
-Sayım: **382 satır · 321 ayrı Arapça biçim · 0 satırda idgam · 0 satırda ilal kaidesi · 9 reddedilen**
+Sayım: **425 satır · 340 ayrı Arapça biçim · 0 satırda idgam · 0 satırda ilal kaidesi · 9 reddedilen**
 
 
 ## masdar · sülâsî mücerred (24)
@@ -314,6 +314,24 @@ Sayım: **382 satır · 321 ayrı Arapça biçim · 0 satırda idgam · 0 satır
 | :-- | :-- | :-- | :-- | :-- | :-- |
 | muftaʿal | مُتَّعَد | muttaʿad | kıyâsî |  |  |
 
+## masdar · bâb IX (illet harfi izhar) (1)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| if'ilāl | اِيعِدَاد | īʿidād | semâî aday |  |  |
+
+## ism-i fâil · bâb IX (illet harfi izhar) (7)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| muf'all | مُوعَدّ | mūʿadd | kıyâsî |  |  |
+| muf'all + müennes | مُوعَدَّة | mūʿadda | kıyâsî |  |  |
+| muf'all + tesniye | مُوعَدَّان | mūʿaddān | kıyâsî |  |  |
+| muf'all + müennes tesniye | مُوعَدَّتَان | mūʿaddatān | kıyâsî |  |  |
+| muf'all + cem‘-i sâlim müzekker (-ûn) | مُوعَدُّون | mūʿaddūn | kıyâsî |  |  |
+| muf'all + cem‘-i sâlim müzekker (-în) | مُوعَدِّين | mūʿaddīn | kıyâsî |  |  |
+| muf'all + cem‘-i sâlim müennes (-ât) | مُوعَدَّات | mūʿaddāt | kıyâsî |  |  |
+
 ## masdar · bâb X (1)
 
 | kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
@@ -355,6 +373,36 @@ Sayım: **382 satır · 321 ayrı Arapça biçim · 0 satırda idgam · 0 satır
 | kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- |
 | mustaf'al | مُسْتَوْعَد | mustawʿad | kıyâsî |  |  |
+
+## masdar · bâb XI (illet harfi izhar) (1)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| if'īlāl | اِيعِيدَاد | īʿīdād | semâî aday |  |  |
+
+## ism-i fâil · bâb XI (illet harfi izhar) (7)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| muf'āll | مُوعَادّ | mūʿādd | kıyâsî |  |  |
+| muf'āll + müennes | مُوعَادَّة | mūʿādda | kıyâsî |  |  |
+| muf'āll + tesniye | مُوعَادَّان | mūʿāddān | kıyâsî |  |  |
+| muf'āll + müennes tesniye | مُوعَادَّتَان | mūʿāddatān | kıyâsî |  |  |
+| muf'āll + cem‘-i sâlim müzekker (-ûn) | مُوعَادُّون | mūʿāddūn | kıyâsî |  |  |
+| muf'āll + cem‘-i sâlim müzekker (-în) | مُوعَادِّين | mūʿāddīn | kıyâsî |  |  |
+| muf'āll + cem‘-i sâlim müennes (-ât) | مُوعَادَّات | mūʿāddāt | kıyâsî |  |  |
+
+## masdar · bâb XII (illet harfi izhar) (1)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| if'iv'āl | اِيعِوْعَاد | īʿiwʿād | semâî aday |  |  |
+
+## masdar · bâb XIII (illet harfi izhar) (1)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| if'ivvāl | اِيعِوّْدَاد | īʿiwwdād | semâî aday |  |  |
 
 ## ism-i fâil · sülâsî (7)
 
@@ -612,6 +660,46 @@ Sayım: **382 satır · 321 ayrı Arapça biçim · 0 satırda idgam · 0 satır
 | maf'ûl + iyye | مَوْعُودِيَّة | mawʿūdiyya | kıyâsî |  |  |
 | fa'īl + iyye | وَعِيدِيَّة | waʿīdiyya | kıyâsî |  |  |
 
+## ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı) (9)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| fa'âl (kelâm, selâm) | وَعَاد | waʿād | semâî aday |  |  |
+| fu'ûl (vudû') | وُعُود | wuʿūd | semâî aday |  |  |
+| fi'âl | وِعَاد | wiʿād | semâî aday |  |  |
+| fu'l (şükr) | وُعْد | wuʿd | semâî aday |  |  |
+| fa'âle (belâğa) | وَعَادَة | waʿāda | semâî aday |  |  |
+| fi'âle | وِعَادَة | wiʿāda | semâî aday |  |  |
+| fu'ûle | وُعُودَة | wuʿūda | semâî aday |  |  |
+| fa'l | وَعْد | waʿd | semâî aday |  |  |
+| fi'l | وِعْد | wiʿd | semâî aday |  |  |
+
+## ism-i cins · ifrâdî (aday) (8)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| fa'l | وَعْد | waʿd | semâî aday |  |  |
+| fa'al | وَعَد | waʿad | semâî aday |  |  |
+| fi'l | وِعْد | wiʿd | semâî aday |  |  |
+| fu'l | وُعْد | wuʿd | semâî aday |  |  |
+| fa'îl | وَعِيد | waʿīd | semâî aday |  |  |
+| fi'al | وِعَد | wiʿad | semâî aday |  |  |
+| fu'ul | وُعُد | wuʿud | semâî aday |  |  |
+| fa'âl | وَعَاد | waʿād | semâî aday |  |  |
+
+## ism-i cins · cem‘î ve tekili (+tâ) (8)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| fa'l + tâ (tekili) | وَعْدَة | waʿda | semâî aday |  |  |
+| fa'al + tâ (tekili) | وَعَدَة | waʿada | semâî aday |  |  |
+| fi'l + tâ (tekili) | وِعْدَة | wiʿda | semâî aday |  |  |
+| fu'l + tâ (tekili) | وُعْدَة | wuʿda | semâî aday |  |  |
+| fa'îl + tâ (tekili) | وَعِيدَة | waʿīda | semâî aday |  |  |
+| fi'al + tâ (tekili) | وِعَدَة | wiʿada | semâî aday |  |  |
+| fu'ul + tâ (tekili) | وُعُدَة | wuʿuda | semâî aday |  |  |
+| fa'âl + tâ (tekili) | وَعَادَة | waʿāda | semâî aday |  |  |
+
 ## cem‘-i mükesser (aday) (20)
 
 | kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
@@ -667,10 +755,10 @@ Sayım: **382 satır · 321 ayrı Arapça biçim · 0 satırda idgam · 0 satır
 | grup | kalıp | sebep |
 | :-- | :-- | :-- |
 | ism-i mef‘ûl · bâb VII | infi'âl (mutâvaa, lâzım) | YOK (lâzım fiil; kitapta mef‘ûl işaretli değil) |
-| bâb IX | if'ilâl (renk/ayıp, lâzım) | bu bâb yalnız sâlim ve mehmûz kökte üretilir; illetli ve muzâ‘afta idgam/ilal semâîdir |
-| bâb XI | if'îlâl (lâzım) | bu bâb yalnız sâlim ve mehmûz kökte üretilir; illetli ve muzâ‘afta idgam/ilal semâîdir |
-| bâb XII | if'iv'âl (lâzım) | bu bâb yalnız sâlim ve mehmûz kökte üretilir; illetli ve muzâ‘afta idgam/ilal semâîdir |
-| bâb XIII | if'ivvâl (lâzım) | bu bâb yalnız sâlim ve mehmûz kökte üretilir; illetli ve muzâ‘afta idgam/ilal semâîdir |
+| ism-i mef‘ûl · bâb IX | if'ilâl (renk/ayıp, lâzım) | YOK (lâzım fiil; kitapta mef‘ûl işaretli değil) |
+| ism-i mef‘ûl · bâb XI | if'îlâl (lâzım) | YOK (lâzım fiil; kitapta mef‘ûl işaretli değil) |
+| ism-i mef‘ûl · bâb XII | if'iv'âl (lâzım) | YOK (lâzım fiil; kitapta mef‘ûl işaretli değil) |
+| ism-i mef‘ûl · bâb XIII | if'ivvâl (lâzım) | YOK (lâzım fiil; kitapta mef‘ûl işaretli değil) |
 | rubâ‘î | dört harfli bâblar | muzâ‘af olmayan üç harfli kökte kök ikilenmez; rubâ‘î kök ayrı bir köktür |
 | mübalağa | fa''āle + müennes | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |
 | mübalağa | fa''āle + cem‘-i sâlim müzekker (-ûn) | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |

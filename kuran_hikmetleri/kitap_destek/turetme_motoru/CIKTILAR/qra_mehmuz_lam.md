@@ -2,7 +2,7 @@
 
 Arapça ve Latin sütunları **motorun çıktısıdır**; Türkçe ve mana sütunları **elle yazılacak** (boş).
 
-Sayım: **399 satır · 336 ayrı Arapça biçim · 0 satırda idgam · 0 satırda ilal kaidesi · 9 reddedilen**
+Sayım: **424 satır · 337 ayrı Arapça biçim · 0 satırda idgam · 0 satırda ilal kaidesi · 9 reddedilen**
 
 
 ## masdar · sülâsî mücerred (23)
@@ -659,6 +659,46 @@ Sayım: **399 satır · 336 ayrı Arapça biçim · 0 satırda idgam · 0 satır
 | maf'ûl + iyye | مَقْرُوءِيَّة | maqrūʾiyya | kıyâsî |  |  |
 | fa'īl + iyye | قَرِيئِيَّة | qarīʾiyya | kıyâsî |  |  |
 
+## ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı) (9)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| fa'âl (kelâm, selâm) | قَرَاء | qarāʾ | semâî aday |  |  |
+| fu'ûl (vudû') | قُرُوء | qurūʾ | semâî aday |  |  |
+| fi'âl | قِرَاء | qirāʾ | semâî aday |  |  |
+| fu'l (şükr) | قُرْء | qurʾ | semâî aday |  |  |
+| fa'âle (belâğa) | قَرَاءَة | qarāʾa | semâî aday |  |  |
+| fi'âle | قِرَاءَة | qirāʾa | semâî aday |  |  |
+| fu'ûle | قُرُوءَة | qurūʾa | semâî aday |  |  |
+| fa'l | قَرْء | qarʾ | semâî aday |  |  |
+| fi'l | قِرْء | qirʾ | semâî aday |  |  |
+
+## ism-i cins · ifrâdî (aday) (8)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| fa'l | قَرْء | qarʾ | semâî aday |  |  |
+| fa'al | قَرَأ | qaraʾ | semâî aday |  |  |
+| fi'l | قِرْء | qirʾ | semâî aday |  |  |
+| fu'l | قُرْء | qurʾ | semâî aday |  |  |
+| fa'îl | قَرِيء | qarīʾ | semâî aday |  |  |
+| fi'al | قِرَأ | qiraʾ | semâî aday |  |  |
+| fu'ul | قُرُؤ | quruʾ | semâî aday |  |  |
+| fa'âl | قَرَاء | qarāʾ | semâî aday |  |  |
+
+## ism-i cins · cem‘î ve tekili (+tâ) (8)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| fa'l + tâ (tekili) | قَرْأَة | qarʾa | semâî aday |  |  |
+| fa'al + tâ (tekili) | قَرَأَة | qaraʾa | semâî aday |  |  |
+| fi'l + tâ (tekili) | قِرْأَة | qirʾa | semâî aday |  |  |
+| fu'l + tâ (tekili) | قُرْأَة | qurʾa | semâî aday |  |  |
+| fa'îl + tâ (tekili) | قَرِيئَة | qarīʾa | semâî aday |  |  |
+| fi'al + tâ (tekili) | قِرَأَة | qiraʾa | semâî aday |  |  |
+| fu'ul + tâ (tekili) | قُرُؤَة | quruʾa | semâî aday |  |  |
+| fa'âl + tâ (tekili) | قَرَاءَة | qarāʾa | semâî aday |  |  |
+
 ## cem‘-i mükesser (aday) (20)
 
 | kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
@@ -681,7 +721,7 @@ Sayım: **399 satır · 336 ayrı Arapça biçim · 0 satırda idgam · 0 satır
 | mefâ'il | مَقَارِئ | maqāriʾ | semâî aday |  |  |
 | mefâ'îl | مَقَارِيء | maqārīʾ | semâî aday |  |  |
 | fevâ'il | قَوَارِئ | qawāriʾ | semâî aday |  |  |
-| fe'âil | قَرَائِئ | qarāʾiʾ | semâî aday |  |  |
+| fe'âil | قَرَاءِ | qarāʾi | semâî aday |  |  |
 | fu'ayl(cem') | قُرَيْء | qurayʾ | semâî aday |  |  |
 
 ## cem‘u’l-cem‘ (aday) (20)

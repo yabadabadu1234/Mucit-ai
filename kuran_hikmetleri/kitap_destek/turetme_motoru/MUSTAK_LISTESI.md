@@ -2,9 +2,9 @@
 
 Hedef daima ism (F 350, 351). Kaynak kalıp listesi: padişahın verdiği Osmanlı Türkçesi ders kitabı içindekiler sayfaları ve Vezinler Tablosu (F 360).
 
-## A. KÖK SINIFLARI (aksâm-ı seb'a)
-sâlim · mehmûz (fâ, ayn, lâm hemzeli) · muzâ‘af · misâl (vâv, yâ) · ecvef (vâv, yâ) · nâkıs (vâv, yâ) · lefîf-mefrûk (vaqy) · lefîf-makrûn (tavy)
-Reddedilen: fâ ve ayn illetli kökler, üç harfi illetli kökler, ayn-lâm aynı illet (hayye), ecvef-lâm hemzeli (şey', cî'e).
+## A. KÖK SINIFLARI (aksâm-ı seb'a ve birleşikler)
+sâlim · mehmûz (fâ, ayn, lâm) · muzâ‘af · misâl (vâv, yâ) · ecvef (vâv, yâ) · nâkıs (vâv, yâ) · lefîf-mefrûk · lefîf-makrûn · birleşikler: misâl+ecvef (yawm, wayl), ayn ve lâm aynı illet (hayye), üç harfi illetli, ecvef+lâmı hemzeli (cî'e, şey'), hemzeli+nâkıs (etâ, reâ), hemzeli+makrûn (evâ)
+Reddedilen kök: kök harfi elif veya üç harften başka sayı. Başka kök türü yoktur.
 
 ## B. MASDARLAR
 sülâsî mücerred 23 kalıp (fa'l fi'l fu'l fa'al fi'al fu'ul fu'ûl fi'âl fu'âl fa'âl fa'âle fu'ûle fi'âle fa'îl fa'ûl fa'alân fu'lân fi'lân fa'lâ fu'lâ fi'lâ fa'ale fi'ale) · misâl-vâvda fâ hazfiyle fi'a (‘ide)
@@ -20,11 +20,11 @@ ekler: müennes · tesniye · cem'-i sâlim (-ûn -în -ât) · cem'-i mükesser
 hemze yazımı (elif, vâv, yâ kürsüsü; medde) · iki hemzenin medde veya yâya dönmesi (âmin, îmân, ûmin) · misâlde fâ'nın uzun ünlüye dönmesi (îâd) · misâlde ifti'âlde ta'ya idgam (ittiâd) · ecvefte mef'ûl, fâil (hemze), mekân, if'âl, istif'âl, infi'âl, ifti'âl kaideleri · nâkısta fâil, mef'ûl (şeddeli), maksûre, elifin hemzeye dönmesi, bütün mezîd bâblar · lefîfte iki kaidenin bileşkesi · ifti'âlde ز → د, ص ض → ط, د ذ ط ظ idgamı · muzâ‘afta idgam ve hareke nakli
 
 ## E. REDDEDİLEN (sayıyla, sebebiyle)
-- IX, XI, XII, XIII: yalnız sâlim ve mehmûz kökte
+- IX, XI, XII, XIII: lâmı illetli kökte (nâkıs, lefîf) üretilmez; irʿivâ türü ayrı kalıba girer ve Maksûd ilâl bahsinde yoktur. Sâlim, mehmûz, muzâ‘af (izhar), ecvef ve misâlde üretilir (illet harfi izharlı: isvidâd, müsved).
 - mef'ûl "YOK": VII, IX, XI, XII, XIII (kitap)
-- ecvefte nâdir istisnâ (istecvâb gibi vâvı muhafaza eden X. bâb): yok; semâî
-- ism-i masdar, ism-i cins: kıyâsî kural yok
+- rubâ'î: yalnız muzâ‘af kökte
 - fiil çekimleri, harf, i'râb hâlleri: kapsam dışı
+- ism-i masdar ve ism-i cins: kıyâsî kural yok; kalıp adayları `semâî aday` etiketiyle üretilir
 
 ## F. DOĞRULAMA (F 361)
 - `dogrula.py`: Maksûd ilâl bahsi tariflerindeki ve yaygın sarf misallerindeki 72 ism biçimi motorun çıktısıyla karşılaştırıldı; 72 tuttu, 0 tutmadı (`DOGRULAMA.md`).

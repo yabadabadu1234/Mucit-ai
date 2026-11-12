@@ -2,7 +2,7 @@
 
 Arapça ve Latin sütunları **motorun çıktısıdır**; Türkçe ve mana sütunları **elle yazılacak** (boş).
 
-Sayım: **399 satır · 338 ayrı Arapça biçim · 0 satırda idgam · 0 satırda ilal kaidesi · 9 reddedilen**
+Sayım: **424 satır · 339 ayrı Arapça biçim · 0 satırda idgam · 0 satırda ilal kaidesi · 9 reddedilen**
 
 
 ## masdar · sülâsî mücerred (23)
@@ -658,6 +658,46 @@ Sayım: **399 satır · 338 ayrı Arapça biçim · 0 satırda idgam · 0 satır
 | fâ'il + iyye | كَاتِبِيَّة | kātibiyya | kıyâsî |  |  |
 | maf'ûl + iyye | مَكْتُوبِيَّة | maktūbiyya | kıyâsî |  |  |
 | fa'īl + iyye | كَتِيبِيَّة | katībiyya | kıyâsî |  |  |
+
+## ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı) (9)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| fa'âl (kelâm, selâm) | كَتَاب | katāb | semâî aday |  |  |
+| fu'ûl (vudû') | كُتُوب | kutūb | semâî aday |  |  |
+| fi'âl | كِتَاب | kitāb | semâî aday |  |  |
+| fu'l (şükr) | كُتْب | kutb | semâî aday |  |  |
+| fa'âle (belâğa) | كَتَابَة | katāba | semâî aday |  |  |
+| fi'âle | كِتَابَة | kitāba | semâî aday |  |  |
+| fu'ûle | كُتُوبَة | kutūba | semâî aday |  |  |
+| fa'l | كَتْب | katb | semâî aday |  |  |
+| fi'l | كِتْب | kitb | semâî aday |  |  |
+
+## ism-i cins · ifrâdî (aday) (8)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| fa'l | كَتْب | katb | semâî aday |  |  |
+| fa'al | كَتَب | katab | semâî aday |  |  |
+| fi'l | كِتْب | kitb | semâî aday |  |  |
+| fu'l | كُتْب | kutb | semâî aday |  |  |
+| fa'îl | كَتِيب | katīb | semâî aday |  |  |
+| fi'al | كِتَب | kitab | semâî aday |  |  |
+| fu'ul | كُتُب | kutub | semâî aday |  |  |
+| fa'âl | كَتَاب | katāb | semâî aday |  |  |
+
+## ism-i cins · cem‘î ve tekili (+tâ) (8)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| fa'l + tâ (tekili) | كَتْبَة | katba | semâî aday |  |  |
+| fa'al + tâ (tekili) | كَتَبَة | kataba | semâî aday |  |  |
+| fi'l + tâ (tekili) | كِتْبَة | kitba | semâî aday |  |  |
+| fu'l + tâ (tekili) | كُتْبَة | kutba | semâî aday |  |  |
+| fa'îl + tâ (tekili) | كَتِيبَة | katība | semâî aday |  |  |
+| fi'al + tâ (tekili) | كِتَبَة | kitaba | semâî aday |  |  |
+| fu'ul + tâ (tekili) | كُتُبَة | kutuba | semâî aday |  |  |
+| fa'âl + tâ (tekili) | كَتَابَة | katāba | semâî aday |  |  |
 
 ## cem‘-i mükesser (aday) (20)
 

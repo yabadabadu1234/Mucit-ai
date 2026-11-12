@@ -2,7 +2,7 @@
 
 Arapça ve Latin sütunları **motorun çıktısıdır**; Türkçe ve mana sütunları **elle yazılacak** (boş).
 
-Sayım: **399 satır · 336 ayrı Arapça biçim · 0 satırda idgam · 0 satırda ilal kaidesi · 9 reddedilen**
+Sayım: **424 satır · 337 ayrı Arapça biçim · 0 satırda idgam · 0 satırda ilal kaidesi · 9 reddedilen**
 
 
 ## masdar · sülâsî mücerred (23)
@@ -659,6 +659,46 @@ Sayım: **399 satır · 336 ayrı Arapça biçim · 0 satırda idgam · 0 satır
 | maf'ûl + iyye | مَبْدُوءِيَّة | mabdūʾiyya | kıyâsî |  |  |
 | fa'īl + iyye | بَدِيئِيَّة | badīʾiyya | kıyâsî |  |  |
 
+## ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı) (9)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| fa'âl (kelâm, selâm) | بَدَاء | badāʾ | semâî aday |  |  |
+| fu'ûl (vudû') | بُدُوء | budūʾ | semâî aday |  |  |
+| fi'âl | بِدَاء | bidāʾ | semâî aday |  |  |
+| fu'l (şükr) | بُدْء | budʾ | semâî aday |  |  |
+| fa'âle (belâğa) | بَدَاءَة | badāʾa | semâî aday |  |  |
+| fi'âle | بِدَاءَة | bidāʾa | semâî aday |  |  |
+| fu'ûle | بُدُوءَة | budūʾa | semâî aday |  |  |
+| fa'l | بَدْء | badʾ | semâî aday |  |  |
+| fi'l | بِدْء | bidʾ | semâî aday |  |  |
+
+## ism-i cins · ifrâdî (aday) (8)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| fa'l | بَدْء | badʾ | semâî aday |  |  |
+| fa'al | بَدَأ | badaʾ | semâî aday |  |  |
+| fi'l | بِدْء | bidʾ | semâî aday |  |  |
+| fu'l | بُدْء | budʾ | semâî aday |  |  |
+| fa'îl | بَدِيء | badīʾ | semâî aday |  |  |
+| fi'al | بِدَأ | bidaʾ | semâî aday |  |  |
+| fu'ul | بُدُؤ | buduʾ | semâî aday |  |  |
+| fa'âl | بَدَاء | badāʾ | semâî aday |  |  |
+
+## ism-i cins · cem‘î ve tekili (+tâ) (8)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| fa'l + tâ (tekili) | بَدْأَة | badʾa | semâî aday |  |  |
+| fa'al + tâ (tekili) | بَدَأَة | badaʾa | semâî aday |  |  |
+| fi'l + tâ (tekili) | بِدْأَة | bidʾa | semâî aday |  |  |
+| fu'l + tâ (tekili) | بُدْأَة | budʾa | semâî aday |  |  |
+| fa'îl + tâ (tekili) | بَدِيئَة | badīʾa | semâî aday |  |  |
+| fi'al + tâ (tekili) | بِدَأَة | bidaʾa | semâî aday |  |  |
+| fu'ul + tâ (tekili) | بُدُؤَة | buduʾa | semâî aday |  |  |
+| fa'âl + tâ (tekili) | بَدَاءَة | badāʾa | semâî aday |  |  |
+
 ## cem‘-i mükesser (aday) (20)
 
 | kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
@@ -681,7 +721,7 @@ Sayım: **399 satır · 336 ayrı Arapça biçim · 0 satırda idgam · 0 satır
 | mefâ'il | مَبَادِئ | mabādiʾ | semâî aday |  |  |
 | mefâ'îl | مَبَادِيء | mabādīʾ | semâî aday |  |  |
 | fevâ'il | بَوَادِئ | bawādiʾ | semâî aday |  |  |
-| fe'âil | بَدَائِئ | badāʾiʾ | semâî aday |  |  |
+| fe'âil | بَدَاءِ | badāʾi | semâî aday |  |  |
 | fu'ayl(cem') | بُدَيْء | budayʾ | semâî aday |  |  |
 
 ## cem‘u’l-cem‘ (aday) (20)

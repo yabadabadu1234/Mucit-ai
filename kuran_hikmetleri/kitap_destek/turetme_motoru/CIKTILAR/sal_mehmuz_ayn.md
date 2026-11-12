@@ -2,7 +2,7 @@
 
 Arapça ve Latin sütunları **motorun çıktısıdır**; Türkçe ve mana sütunları **elle yazılacak** (boş).
 
-Sayım: **399 satır · 331 ayrı Arapça biçim · 0 satırda idgam · 0 satırda ilal kaidesi · 9 reddedilen**
+Sayım: **424 satır · 332 ayrı Arapça biçim · 0 satırda idgam · 0 satırda ilal kaidesi · 9 reddedilen**
 
 
 ## masdar · sülâsî mücerred (23)
@@ -658,6 +658,46 @@ Sayım: **399 satır · 331 ayrı Arapça biçim · 0 satırda idgam · 0 satır
 | fâ'il + iyye | سَائِلِيَّة | sāʾiliyya | kıyâsî |  |  |
 | maf'ûl + iyye | مَسْؤُولِيَّة | masʾūliyya | kıyâsî |  |  |
 | fa'īl + iyye | سَئِيلِيَّة | saʾīliyya | kıyâsî |  |  |
+
+## ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı) (9)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| fa'âl (kelâm, selâm) | سَآل | saʾāl | semâî aday |  |  |
+| fu'ûl (vudû') | سُؤُول | suʾūl | semâî aday |  |  |
+| fi'âl | سِئَال | siʾāl | semâî aday |  |  |
+| fu'l (şükr) | سُؤْل | suʾl | semâî aday |  |  |
+| fa'âle (belâğa) | سَآلَة | saʾāla | semâî aday |  |  |
+| fi'âle | سِئَالَة | siʾāla | semâî aday |  |  |
+| fu'ûle | سُؤُولَة | suʾūla | semâî aday |  |  |
+| fa'l | سَأْل | saʾl | semâî aday |  |  |
+| fi'l | سِئْل | siʾl | semâî aday |  |  |
+
+## ism-i cins · ifrâdî (aday) (8)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| fa'l | سَأْل | saʾl | semâî aday |  |  |
+| fa'al | سَأَل | saʾal | semâî aday |  |  |
+| fi'l | سِئْل | siʾl | semâî aday |  |  |
+| fu'l | سُؤْل | suʾl | semâî aday |  |  |
+| fa'îl | سَئِيل | saʾīl | semâî aday |  |  |
+| fi'al | سِئَل | siʾal | semâî aday |  |  |
+| fu'ul | سُؤُل | suʾul | semâî aday |  |  |
+| fa'âl | سَآل | saʾāl | semâî aday |  |  |
+
+## ism-i cins · cem‘î ve tekili (+tâ) (8)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| fa'l + tâ (tekili) | سَأْلَة | saʾla | semâî aday |  |  |
+| fa'al + tâ (tekili) | سَأَلَة | saʾala | semâî aday |  |  |
+| fi'l + tâ (tekili) | سِئْلَة | siʾla | semâî aday |  |  |
+| fu'l + tâ (tekili) | سُؤْلَة | suʾla | semâî aday |  |  |
+| fa'îl + tâ (tekili) | سَئِيلَة | saʾīla | semâî aday |  |  |
+| fi'al + tâ (tekili) | سِئَلَة | siʾala | semâî aday |  |  |
+| fu'ul + tâ (tekili) | سُؤُلَة | suʾula | semâî aday |  |  |
+| fa'âl + tâ (tekili) | سَآلَة | saʾāla | semâî aday |  |  |
 
 ## cem‘-i mükesser (aday) (20)
 

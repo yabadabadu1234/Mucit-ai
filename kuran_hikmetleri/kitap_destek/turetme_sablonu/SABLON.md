@@ -126,4 +126,5 @@
  9  iştikak motoru kuruldu: `turetme_motoru/istikak.py`; Arapça otomatik, Türkçe ve mana elle (F 359)
  10 iştikak motoru: aksâm-ı seb'a ve ilal kaideleri, mef'ile, mef'ûl YOK bâbları (F 360)
  11 Maksûd ilâl sayfaları: 72 biçimlik doğrulama, 24 kök tablosu (F 361)
+ 12 birleşik kök sınıfları, IX-XIII izharlı, ism-i masdar ve ism-i cins aday kalıpları, 75 biçimlik doğrulama (F 362)
 ```

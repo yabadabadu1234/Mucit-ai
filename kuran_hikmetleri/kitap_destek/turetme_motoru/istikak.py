@@ -51,7 +51,7 @@ def kok_sinifi(k):
             return 'misâl', ''
         if z[1]:
             if k[2] == 'ء':
-                return None, 'ecvef kökün lâmı hemze (cî’e, şey’ türü): iki hemze ve ilal birlikte, motorda yok'
+                return 'ecvef+mehmûz-lâm (birleşik)', ''
             return 'ecvef', ''
         return 'nâkıs', ''
     if n == 2:
@@ -59,10 +59,10 @@ def kok_sinifi(k):
             return 'lefîf-mefrûk', ''
         if z[1] and z[2]:
             if k[1] == k[2]:
-                return None, 'lâm ve ayn aynı illet harfi (hayye türü): motorda yok'
+                return 'lefîf-makrûn (ayn ve lâm aynı harf)', ''
             return 'lefîf-makrûn', ''
-        return None, 'fâ ve ayn illetli (vâv-vâv, vâv-yâ): motorda yok'
-    return None, 'üç harfi de illetli: motorda yok'
+        return 'misâl+ecvef (birleşik)', ''
+    return 'üç harfi illetli (birleşik)', ''
 
 
 ECVEF = {
@@ -270,6 +270,16 @@ def hemze_gecisi(L):
     return out
 
 
+def cift_hemze(L):
+    for i in range(len(L) - 1):
+        if L[i]['ch'] in 'ءأإؤئ' and L[i + 1]['ch'] in 'ءأإؤئ' and L[i]['slot'] != '1' and L[i + 1]['slot'] == '3' \
+                and L[i + 1]['v'] == '':
+            L[i]['ch'] = 'ء'
+            del L[i + 1]
+            break
+    return L
+
+
 def idgham(L):
     n = 0
     i = 0
@@ -333,7 +343,11 @@ def uret(ts, kok, var=None):
     L = harfle(ts, kok, var)
     L = misal_gecisi(L)
     L = hemze_gecisi(L)
-    L, n = idgham(L)
+    L = cift_hemze(L)
+    if var == 'izhar':
+        n = 0
+    else:
+        L, n = idgham(L)
     return arapca(L), latin(L), n
 
 
@@ -481,6 +495,12 @@ CEMI_MUKESSER = [
     ("fe'âil", "1a 2a A Qi 3"), ("fu'ayl(cem')", "1u 2a y0 3"),
 ]
 
+ISM_MASDAR = [("fa'âl (kelâm, selâm)", "1a 2a A 3"), ("fu'ûl (vudû')", "1u 2u U 3"), ("fi'âl", "1i 2a A 3"),
+              ("fu'l (şükr)", "1u 20 3"), ("fa'âle (belâğa)", "1a 2a A 3a T"), ("fi'âle", "1i 2a A 3a T"),
+              ("fu'ûle", "1u 2u U 3a T"), ("fa'l", "1a 20 3"), ("fi'l", "1i 20 3")]
+ISM_CINS = [("fa'l", "1a 20 3"), ("fa'al", "1a 2a 3"), ("fi'l", "1i 20 3"), ("fu'l", "1u 20 3"),
+            ("fa'îl", "1a 2i I 3"), ("fi'al", "1i 2a 3"), ("fu'ul", "1u 2u 3"), ("fa'âl", "1a 2a A 3")]
+
 BAB = [
     ('II', "tef'îl", [("taf'īl", "ta 10 2i I 3"), ("taf'ila", "ta 10 2i 3a T"), ("fi''āl", "1i 2+i A 3")],
      ("mufa''il", "mu 1a 2+i 3"), ("mufa''al", "mu 1a 2+a 3")),
@@ -542,7 +562,11 @@ def tablo(kok):
     mudaaf = sinif == 'muzâ‘af'
     sagl = sinif in ('sâlim', 'mehmûz', 'muzâ‘af')
 
+    raw = [False]
+
     def P(spec):
+        if raw[0]:
+            return parse(spec), False
         s = ozel_spec(spec, kok, bay)
         if s is SKIP:
             return None
@@ -587,11 +611,17 @@ def tablo(kok):
         tek('masdar · sülâsî mücerred', "fi'a (fâ hazfi: ‘ide, sıle)", "2i 3a T", 'semâî aday')
     for rom, ad, masdarlar, fail, mef in BAB:
         agir = rom in ('IX', 'XI', 'XII', 'XIII')
-        if agir and not (sagl and not mudaaf):
-            red.append(('bâb ' + rom, ad, 'bu bâb yalnız sâlim ve mehmûz kökte üretilir; illetli ve muzâ‘afta idgam/ilal semâîdir'))
-            continue
+        raw[0] = False
+        izh = None
+        if agir:
+            if bay['nakis']:
+                red.append(('bâb ' + rom, ad, 'lâmı illetli kökte bu bâb irʿivâ türü ayrı kalıba girer; Maksûd ilâl bahsinde yok, kıyâsî kural yok'))
+                continue
+            if not (sagl and not mudaaf):
+                raw[0] = True
+                izh = 'izhar'
         for mad_ad, sp in masdarlar:
-            tek('masdar · bâb ' + rom, mad_ad, sp, 'kıyâsî', rom)
+            tek('masdar · bâb ' + rom + (' (illet harfi izhar)' if izh else ''), mad_ad, sp, 'semâî aday' if izh else 'kıyâsî', rom, izh)
             if rom == 'VIII' and kok[0] == 'ء':
                 tek('masdar · bâb VIII (hemze idgamlı)', mad_ad, sp, 'kıyâsî', rom, 'asim')
         for mad_ad, sp in masdarlar:
@@ -600,10 +630,10 @@ def tablo(kok):
                 if p is None:
                     continue
                 ekle('ism-i merre · bâb ' + rom, mad_ad + ' + tâ', merre(p[0]), kok, 'aday', rom, None, p[1])
-        for var in (None, 'asim'):
+        for var in (izh, 'asim'):
             if var == 'asim' and not (rom == 'VIII' and kok[0] == 'ء'):
                 continue
-            suf = ' (hemze idgamlı)' if var else ''
+            suf = ' (hemze idgamlı)' if var == 'asim' else (' (illet harfi izhar)' if var else '')
             if fail:
                 turevler('ism-i fâil · bâb ' + rom + suf, fail[0], fail[1], True, 'kıyâsî', rom, var)
             if mef:
@@ -613,6 +643,7 @@ def tablo(kok):
             ekle('masdar · bâb X (vâvı muhafaza: semâî istisnâ)', "istif'āl", parse("Wi s0 ti 10 2a A 3"), kok, 'semâî aday', rom)
             ekle('ism-i fâil · bâb X (vâvı muhafaza: semâî istisnâ)', "mustaf'il", parse("mu s0 ta 10 2i 3"), kok, 'semâî aday', rom)
             ekle('ism-i mef‘ûl · bâb X (vâvı muhafaza: semâî istisnâ)', "mustaf'al", parse("mu s0 ta 10 2a 3"), kok, 'semâî aday', rom)
+        raw[0] = False
         if mef is None:
             red.append(('ism-i mef‘ûl · bâb ' + rom, ad, 'YOK (lâzım fiil; kitapta mef‘ûl işaretli değil)'))
     if mudaaf:
@@ -643,6 +674,14 @@ def tablo(kok):
             continue
         ekle('mensûb', ad + ' + iyy', mensub(p[0]), kok, 'kıyâsî', '', None, p[1])
         ekle('masdar-ı sınâî', ad + ' + iyye', sinai(p[0]), kok, 'kıyâsî', '', None, p[1])
+    for ad, sp in ISM_MASDAR:
+        tek('ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)', ad, sp, 'semâî aday')
+    for ad, sp in ISM_CINS:
+        p = P(sp)
+        if p is None:
+            continue
+        ekle('ism-i cins · ifrâdî (aday)', ad, p[0], kok, 'semâî aday', '', None, p[1])
+        ekle('ism-i cins · cem‘î ve tekili (+tâ)', ad + ' + tâ (tekili)', muennes(p[0]), kok, 'semâî aday', '', None, p[1])
     for ad, sp in CEMI_MUKESSER:
         p = P(sp)
         if p is None:

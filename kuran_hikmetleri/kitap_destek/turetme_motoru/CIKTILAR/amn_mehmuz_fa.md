@@ -2,7 +2,7 @@
 
 Arapça ve Latin sütunları **motorun çıktısıdır**; Türkçe ve mana sütunları **elle yazılacak** (boş).
 
-Sayım: **415 satır · 351 ayrı Arapça biçim · 0 satırda idgam · 0 satırda ilal kaidesi · 9 reddedilen**
+Sayım: **440 satır · 352 ayrı Arapça biçim · 0 satırda idgam · 0 satırda ilal kaidesi · 9 reddedilen**
 
 
 ## masdar · sülâsî mücerred (23)
@@ -694,6 +694,46 @@ Sayım: **415 satır · 351 ayrı Arapça biçim · 0 satırda idgam · 0 satır
 | fâ'il + iyye | آمِنِيَّة | ʾāminiyya | kıyâsî |  |  |
 | maf'ûl + iyye | مَأْمُونِيَّة | maʾmūniyya | kıyâsî |  |  |
 | fa'īl + iyye | أَمِينِيَّة | ʾamīniyya | kıyâsî |  |  |
+
+## ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı) (9)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| fa'âl (kelâm, selâm) | أَمَان | ʾamān | semâî aday |  |  |
+| fu'ûl (vudû') | أُمُون | ʾumūn | semâî aday |  |  |
+| fi'âl | إِمَان | ʾimān | semâî aday |  |  |
+| fu'l (şükr) | أُمْن | ʾumn | semâî aday |  |  |
+| fa'âle (belâğa) | أَمَانَة | ʾamāna | semâî aday |  |  |
+| fi'âle | إِمَانَة | ʾimāna | semâî aday |  |  |
+| fu'ûle | أُمُونَة | ʾumūna | semâî aday |  |  |
+| fa'l | أَمْن | ʾamn | semâî aday |  |  |
+| fi'l | إِمْن | ʾimn | semâî aday |  |  |
+
+## ism-i cins · ifrâdî (aday) (8)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| fa'l | أَمْن | ʾamn | semâî aday |  |  |
+| fa'al | أَمَن | ʾaman | semâî aday |  |  |
+| fi'l | إِمْن | ʾimn | semâî aday |  |  |
+| fu'l | أُمْن | ʾumn | semâî aday |  |  |
+| fa'îl | أَمِين | ʾamīn | semâî aday |  |  |
+| fi'al | إِمَن | ʾiman | semâî aday |  |  |
+| fu'ul | أُمُن | ʾumun | semâî aday |  |  |
+| fa'âl | أَمَان | ʾamān | semâî aday |  |  |
+
+## ism-i cins · cem‘î ve tekili (+tâ) (8)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| fa'l + tâ (tekili) | أَمْنَة | ʾamna | semâî aday |  |  |
+| fa'al + tâ (tekili) | أَمَنَة | ʾamana | semâî aday |  |  |
+| fi'l + tâ (tekili) | إِمْنَة | ʾimna | semâî aday |  |  |
+| fu'l + tâ (tekili) | أُمْنَة | ʾumna | semâî aday |  |  |
+| fa'îl + tâ (tekili) | أَمِينَة | ʾamīna | semâî aday |  |  |
+| fi'al + tâ (tekili) | إِمَنَة | ʾimana | semâî aday |  |  |
+| fu'ul + tâ (tekili) | أُمُنَة | ʾumuna | semâî aday |  |  |
+| fa'âl + tâ (tekili) | أَمَانَة | ʾamāna | semâî aday |  |  |
 
 ## cem‘-i mükesser (aday) (20)
 

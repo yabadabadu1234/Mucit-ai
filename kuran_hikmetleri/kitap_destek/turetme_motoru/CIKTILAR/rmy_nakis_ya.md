@@ -2,7 +2,7 @@
 
 Arapça ve Latin sütunları **motorun çıktısıdır**; Türkçe ve mana sütunları **elle yazılacak** (boş).
 
-Sayım: **358 satır · 293 ayrı Arapça biçim · 0 satırda idgam · 302 satırda ilal kaidesi · 22 reddedilen**
+Sayım: **381 satır · 294 ayrı Arapça biçim · 0 satırda idgam · 316 satırda ilal kaidesi · 24 reddedilen**
 
 
 ## masdar · sülâsî mücerred (23)
@@ -582,6 +582,44 @@ Sayım: **358 satır · 293 ayrı Arapça biçim · 0 satırda idgam · 302 sat�
 | maf'ûl + iyye | مَرْمِيِّيَّة | marmiyyiyya | kıyâsî · ilal |  |  |
 | fa'īl + iyye | رَمِيِّيَّة | ramiyyiyya | kıyâsî · ilal |  |  |
 
+## ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı) (9)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| fa'âl (kelâm, selâm) | رَمَاء | ramāʾ | semâî aday · ilal |  |  |
+| fu'ûl (vudû') | رُمِيّ | rumiyy | semâî aday · ilal |  |  |
+| fi'âl | رِمَاء | rimāʾ | semâî aday · ilal |  |  |
+| fu'l (şükr) | رُمْي | rumy | semâî aday |  |  |
+| fa'âle (belâğa) | رَمَاة | ramā | semâî aday · ilal |  |  |
+| fi'âle | رِمَايَة | rimāya | semâî aday · ilal |  |  |
+| fu'ûle | رُمِيَّة | rumiyya | semâî aday · ilal |  |  |
+| fa'l | رَمْي | ramy | semâî aday |  |  |
+| fi'l | رِمْي | rimy | semâî aday |  |  |
+
+## ism-i cins · ifrâdî (aday) (8)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| fa'l | رَمْي | ramy | semâî aday |  |  |
+| fa'al | رَمَى | ramā | semâî aday · ilal |  |  |
+| fi'l | رِمْي | rimy | semâî aday |  |  |
+| fu'l | رُمْي | rumy | semâî aday |  |  |
+| fa'îl | رَمِيّ | ramiyy | semâî aday · ilal |  |  |
+| fi'al | رِمَى | rimā | semâî aday · ilal |  |  |
+| fu'ul | رُمِيّ | rumiyy | semâî aday · ilal |  |  |
+| fa'âl | رَمَاء | ramāʾ | semâî aday · ilal |  |  |
+
+## ism-i cins · cem‘î ve tekili (+tâ) (6)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| fa'l + tâ (tekili) | رَمْيَة | ramya | semâî aday |  |  |
+| fi'l + tâ (tekili) | رِمْيَة | rimya | semâî aday |  |  |
+| fu'l + tâ (tekili) | رُمْيَة | rumya | semâî aday |  |  |
+| fa'îl + tâ (tekili) | رَمِيَّة | ramiyya | semâî aday · ilal |  |  |
+| fu'ul + tâ (tekili) | رُمِيَّة | rumiyya | semâî aday · ilal |  |  |
+| fa'âl + tâ (tekili) | رَمَاءَة | ramāʾa | semâî aday · ilal |  |  |
+
 ## cem‘-i mükesser (aday) (18)
 
 | kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
@@ -642,15 +680,17 @@ Sayım: **358 satır · 293 ayrı Arapça biçim · 0 satırda idgam · 302 sat�
 | ism-i mef‘ûl · bâb VI | mutafā'al + müennes | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |
 | ism-i mef‘ûl · bâb VII | infi'âl (mutâvaa, lâzım) | YOK (lâzım fiil; kitapta mef‘ûl işaretli değil) |
 | ism-i mef‘ûl · bâb VIII | muftaʿal + müennes | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |
-| bâb IX | if'ilâl (renk/ayıp, lâzım) | bu bâb yalnız sâlim ve mehmûz kökte üretilir; illetli ve muzâ‘afta idgam/ilal semâîdir |
+| bâb IX | if'ilâl (renk/ayıp, lâzım) | lâmı illetli kökte bu bâb irʿivâ türü ayrı kalıba girer; Maksûd ilâl bahsinde yok, kıyâsî kural yok |
 | ism-i mef‘ûl · bâb X | mustaf'al + müennes | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |
-| bâb XI | if'îlâl (lâzım) | bu bâb yalnız sâlim ve mehmûz kökte üretilir; illetli ve muzâ‘afta idgam/ilal semâîdir |
-| bâb XII | if'iv'âl (lâzım) | bu bâb yalnız sâlim ve mehmûz kökte üretilir; illetli ve muzâ‘afta idgam/ilal semâîdir |
-| bâb XIII | if'ivvâl (lâzım) | bu bâb yalnız sâlim ve mehmûz kökte üretilir; illetli ve muzâ‘afta idgam/ilal semâîdir |
+| bâb XI | if'îlâl (lâzım) | lâmı illetli kökte bu bâb irʿivâ türü ayrı kalıba girer; Maksûd ilâl bahsinde yok, kıyâsî kural yok |
+| bâb XII | if'iv'âl (lâzım) | lâmı illetli kökte bu bâb irʿivâ türü ayrı kalıba girer; Maksûd ilâl bahsinde yok, kıyâsî kural yok |
+| bâb XIII | if'ivvâl (lâzım) | lâmı illetli kökte bu bâb irʿivâ türü ayrı kalıba girer; Maksûd ilâl bahsinde yok, kıyâsî kural yok |
 | rubâ‘î | dört harfli bâblar | muzâ‘af olmayan üç harfli kökte kök ikilenmez; rubâ‘î kök ayrı bir köktür |
 | sıfat-ı müşebbehe | fa'al + müennes | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |
 | mübalağa | fa''āle + müennes | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |
 | mübalağa | fa''āle + cem‘-i sâlim müzekker (-ûn) | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |
 | mübalağa | fa''āle + cem‘-i sâlim müzekker (-în) | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |
+| ism-i cins · cem‘î ve tekili (+tâ) | fa'al + tâ (tekili) | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |
+| ism-i cins · cem‘î ve tekili (+tâ) | fi'al + tâ (tekili) | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |
 | cem‘-i mükesser (aday) | fu'alā' | bu kök sınıfında bu kalıp yok |
 | cem‘-i mükesser (aday) | fe'âil | bu kök sınıfında bu kalıp yok |

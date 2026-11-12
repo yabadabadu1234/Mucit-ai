@@ -1,8 +1,8 @@
-# DOĞRULAMA (F 361)
+# DOĞRULAMA (F 361, 362)
 
 Motorun çıktısı, bilinen biçimlerle (Maksûd ilâl bahsi tarifleri ve sarf kitaplarındaki yaygın misaller) karşılaştırıldı.
 
-Sonuç: **72 tuttu · 0 tutmadı** (72 karşılaştırma).
+Sonuç: **75 tuttu · 0 tutmadı** (75 karşılaştırma).
 
 Bu karşılaştırma bilinen biçimlerledir; tam sarf sicili sınaması değildir.
 
@@ -11,30 +11,45 @@ Bu karşılaştırma bilinen biçimlerledir; tam sarf sicili sınaması değildi
 
 | dosya | sınıf | satır | ayrı biçim | red |
 | :-- | :-- | :-- | :-- | :-- |
-| dkk_muzaaf | muzâ‘af | 391 | 282 | 8 |
-| frr_muzaaf | muzâ‘af | 391 | 282 | 8 |
-| ktb_salim | sâlim | 399 | 338 | 9 |
-| drb_salim | sâlim | 399 | 338 | 9 |
-| amn_mehmuz_fa | mehmûz | 415 | 351 | 9 |
-| akl_mehmuz_fa | mehmûz | 415 | 351 | 9 |
-| sal_mehmuz_ayn | mehmûz | 399 | 331 | 9 |
-| qra_mehmuz_lam | mehmûz | 399 | 336 | 9 |
-| bda_mehmuz_lam | mehmûz | 399 | 336 | 9 |
-| wad_misal_vav | misâl | 382 | 321 | 9 |
-| ysr_misal_ya | misâl | 381 | 320 | 9 |
-| wzn_misal_vav | misâl | 382 | 321 | 9 |
-| qwl_ecvef_vav | ecvef | 389 | 325 | 11 |
-| qwm_ecvef_vav | ecvef | 389 | 325 | 11 |
-| byi_ecvef_ya | ecvef | 386 | 317 | 11 |
-| kyl_ecvef_ya | ecvef | 386 | 317 | 11 |
-| gzw_nakis_vav | nâkıs | 356 | 291 | 24 |
-| rmy_nakis_ya | nâkıs | 358 | 293 | 22 |
-| xsy_nakis_ya | nâkıs | 358 | 293 | 22 |
-| wqy_lefif_mefruk | lefîf-mefrûk | 358 | 293 | 22 |
-| twy_lefif_makrun | lefîf-makrûn | 358 | 293 | 22 |
-| aty_mehmuz_nakis | nâkıs | 372 | 304 | 23 |
-| ray_mehmuz_nakis | nâkıs | 358 | 286 | 22 |
-| awy_mehmuz_makrun | lefîf-makrûn | 372 | 304 | 23 |
+| dkk_muzaaf | muzâ‘af | 434 | 300 | 8 |
+| frr_muzaaf | muzâ‘af | 434 | 300 | 8 |
+| ktb_salim | sâlim | 424 | 339 | 9 |
+| drb_salim | sâlim | 424 | 339 | 9 |
+| amn_mehmuz_fa | mehmûz | 440 | 352 | 9 |
+| akl_mehmuz_fa | mehmûz | 440 | 352 | 9 |
+| sal_mehmuz_ayn | mehmûz | 424 | 332 | 9 |
+| qra_mehmuz_lam | mehmûz | 424 | 337 | 9 |
+| bda_mehmuz_lam | mehmûz | 424 | 337 | 9 |
+| wad_misal_vav | misâl | 425 | 340 | 9 |
+| ysr_misal_ya | misâl | 424 | 339 | 9 |
+| wzn_misal_vav | misâl | 425 | 340 | 9 |
+| qwl_ecvef_vav | ecvef | 432 | 345 | 11 |
+| qwm_ecvef_vav | ecvef | 432 | 345 | 11 |
+| byi_ecvef_ya | ecvef | 429 | 336 | 11 |
+| kyl_ecvef_ya | ecvef | 429 | 336 | 11 |
+| swd_ecvef_vav | ecvef | 432 | 345 | 11 |
+| gzw_nakis_vav | nâkıs | 379 | 292 | 26 |
+| rmy_nakis_ya | nâkıs | 381 | 294 | 24 |
+| xsy_nakis_ya | nâkıs | 381 | 294 | 24 |
+| wqy_lefif_mefruk | lefîf-mefrûk | 381 | 294 | 24 |
+| twy_lefif_makrun | lefîf-makrûn | 381 | 294 | 24 |
+| aty_mehmuz_nakis | nâkıs | 395 | 305 | 25 |
+| ray_mehmuz_nakis | nâkıs | 381 | 287 | 24 |
+| awy_mehmuz_makrun | lefîf-makrûn | 395 | 305 | 25 |
+| ywm_misal_ecvef | misâl+ecvef (birleşik) | 432 | 345 | 11 |
+| wyl_misal_ecvef | misâl+ecvef (birleşik) | 430 | 337 | 11 |
+| hyy_lefif_ayn_lam_ayni | lefîf-makrûn (ayn ve lâm aynı harf) | 381 | 294 | 24 |
+| wwy_uc_illet | üç harfi illetli (birleşik) | 381 | 294 | 24 |
+| jyi_ecvef_mehmuz_lam | ecvef+mehmûz-lâm (birleşik) | 429 | 336 | 11 |
+| syi_ecvef_mehmuz_lam | ecvef+mehmûz-lâm (birleşik) | 429 | 336 | 11 |
+
+## Hâlâ reddedilen hâller ve sebepleri
+
+- YOK (lâzım fiil; kitapta mef‘ûl işaretli değil) (ecvef, ecvef+mehmûz-lâm (birleşik), lefîf-makrûn, lefîf-makrûn (ayn ve lâm aynı harf), lefîf-mefrûk, mehmûz, misâl, misâl+ecvef (birleşik), muzâ‘af, nâkıs, sâlim, üç harfi illetli (birleşik))
+- bu kök sınıfında bu kalıp yok (lefîf-makrûn, lefîf-makrûn (ayn ve lâm aynı harf), lefîf-mefrûk, nâkıs, üç harfi illetli (birleşik))
+- bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz (ecvef, ecvef+mehmûz-lâm (birleşik), lefîf-makrûn, lefîf-makrûn (ayn ve lâm aynı harf), lefîf-mefrûk, mehmûz, misâl, misâl+ecvef (birleşik), muzâ‘af, nâkıs, sâlim, üç harfi illetli (birleşik))
+- lâmı illetli kökte bu bâb irʿivâ türü ayrı kalıba girer; Maksûd ilâl bahsinde yok, kıyâsî kural yok (lefîf-makrûn, lefîf-makrûn (ayn ve lâm aynı harf), lefîf-mefrûk, nâkıs, üç harfi illetli (birleşik))
+- muzâ‘af olmayan üç harfli kökte kök ikilenmez; rubâ‘î kök ayrı bir köktür (ecvef, ecvef+mehmûz-lâm (birleşik), lefîf-makrûn, lefîf-makrûn (ayn ve lâm aynı harf), lefîf-mefrûk, mehmûz, misâl, misâl+ecvef (birleşik), nâkıs, sâlim, üç harfi illetli (birleşik))
 
 ## Karşılaştırılan biçimler
 
@@ -107,6 +122,9 @@ Bu karşılaştırma bilinen biçimlerledir; tam sarf sicili sınaması değildi
 | كتب | istif'āl | اِسْتِكْتَاب |
 | كتب | mufā'ale | مُكَاتَبَة |
 | كتب | tafa''ul | تَكَتُّب |
+| سود | if'ilāl | اِسْوِدَاد |
+| سود | muf'all | مُسْوَدّ |
+| جيء | maf'ûl | مَجِيء |
 | دكك | fâ'il | دَاكّ |
 | دكك | maf'ûl | مَدْكُوك |
 | دكك | if'āl | إِدْكَاك |

@@ -2,7 +2,7 @@
 
 Arapça ve Latin sütunları **motorun çıktısıdır**; Türkçe ve mana sütunları **elle yazılacak** (boş).
 
-Sayım: **399 satır · 338 ayrı Arapça biçim · 0 satırda idgam · 0 satırda ilal kaidesi · 9 reddedilen**
+Sayım: **424 satır · 339 ayrı Arapça biçim · 0 satırda idgam · 0 satırda ilal kaidesi · 9 reddedilen**
 
 
 ## masdar · sülâsî mücerred (23)
@@ -658,6 +658,46 @@ Sayım: **399 satır · 338 ayrı Arapça biçim · 0 satırda idgam · 0 satır
 | fâ'il + iyye | ضَارِبِيَّة | ḍāribiyya | kıyâsî |  |  |
 | maf'ûl + iyye | مَضْرُوبِيَّة | maḍrūbiyya | kıyâsî |  |  |
 | fa'īl + iyye | ضَرِيبِيَّة | ḍarībiyya | kıyâsî |  |  |
+
+## ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı) (9)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| fa'âl (kelâm, selâm) | ضَرَاب | ḍarāb | semâî aday |  |  |
+| fu'ûl (vudû') | ضُرُوب | ḍurūb | semâî aday |  |  |
+| fi'âl | ضِرَاب | ḍirāb | semâî aday |  |  |
+| fu'l (şükr) | ضُرْب | ḍurb | semâî aday |  |  |
+| fa'âle (belâğa) | ضَرَابَة | ḍarāba | semâî aday |  |  |
+| fi'âle | ضِرَابَة | ḍirāba | semâî aday |  |  |
+| fu'ûle | ضُرُوبَة | ḍurūba | semâî aday |  |  |
+| fa'l | ضَرْب | ḍarb | semâî aday |  |  |
+| fi'l | ضِرْب | ḍirb | semâî aday |  |  |
+
+## ism-i cins · ifrâdî (aday) (8)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| fa'l | ضَرْب | ḍarb | semâî aday |  |  |
+| fa'al | ضَرَب | ḍarab | semâî aday |  |  |
+| fi'l | ضِرْب | ḍirb | semâî aday |  |  |
+| fu'l | ضُرْب | ḍurb | semâî aday |  |  |
+| fa'îl | ضَرِيب | ḍarīb | semâî aday |  |  |
+| fi'al | ضِرَب | ḍirab | semâî aday |  |  |
+| fu'ul | ضُرُب | ḍurub | semâî aday |  |  |
+| fa'âl | ضَرَاب | ḍarāb | semâî aday |  |  |
+
+## ism-i cins · cem‘î ve tekili (+tâ) (8)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| fa'l + tâ (tekili) | ضَرْبَة | ḍarba | semâî aday |  |  |
+| fa'al + tâ (tekili) | ضَرَبَة | ḍaraba | semâî aday |  |  |
+| fi'l + tâ (tekili) | ضِرْبَة | ḍirba | semâî aday |  |  |
+| fu'l + tâ (tekili) | ضُرْبَة | ḍurba | semâî aday |  |  |
+| fa'îl + tâ (tekili) | ضَرِيبَة | ḍarība | semâî aday |  |  |
+| fi'al + tâ (tekili) | ضِرَبَة | ḍiraba | semâî aday |  |  |
+| fu'ul + tâ (tekili) | ضُرُبَة | ḍuruba | semâî aday |  |  |
+| fa'âl + tâ (tekili) | ضَرَابَة | ḍarāba | semâî aday |  |  |
 
 ## cem‘-i mükesser (aday) (20)
 
