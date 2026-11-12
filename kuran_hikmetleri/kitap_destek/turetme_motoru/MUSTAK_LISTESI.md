@@ -30,4 +30,4 @@ hemze yazımı (elif, vâv, yâ kürsüsü; medde) · iki hemzenin medde veya y�
 - `dogrula.py`: Maksûd ilâl bahsi tariflerindeki ve yaygın sarf misallerindeki 72 ism biçimi motorun çıktısıyla karşılaştırıldı; 72 tuttu, 0 tutmadı (`DOGRULAMA.md`).
 - Bu, bilinen biçimlerle sınamadır; tam sarf sicili sınaması değildir.
 - Eklenenler: ecvef-vâv onuncu bâbda vâvı muhafaza eden semâî istisnâ (istecvâb türü); ifti'âlde ط ظ idgamı; hemze kürsüsü ve medde kaideleri; mef'ile.
-- Ayrı ayrı tablolar `CIKTILAR/` altında 24 kök için: muzâ‘af 2, sâlim 2, mehmûz (fâ, ayn, lâm) 5, misâl 3, ecvef 4, nâkıs 3, lefîf 2, mehmûz+nâkıs 3.
+- Ayrı ayrı kök tabloları artık `kelime_kaydi/kokler/` altında bütün köklerin dosyasındadır (eski `CIKTILAR/` 24 kök tablosu silindi, F 3-I 370); evvelki sayım 24 kök için: muzâ‘af 2, sâlim 2, mehmûz (fâ, ayn, lâm) 5, misâl 3, ecvef 4, nâkıs 3, lefîf 2, mehmûz+nâkıs 3.
