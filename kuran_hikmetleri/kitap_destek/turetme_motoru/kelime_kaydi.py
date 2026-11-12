@@ -42,10 +42,15 @@ def etimoloji():
 import kaikki_suz as KS
 
 
+HAM_KAIKKI = os.path.join(KOK, 'kaynak', 'lugat', 'ham', 'kaikki_arabic.jsonl.xz')
+
+
 def kaikki_yukle(yol):
-    assert yol and os.path.exists(yol), 'ham Kaikki dökümü verilmedi: python3 kelime_kaydi.py <kaikki-arabic.jsonl>'
+    yol = yol or HAM_KAIKKI
+    assert os.path.exists(yol), 'ham Kaikki dökümü yok: %s' % yol
+    import lzma
     liste = []
-    for ln in open(yol, encoding='utf-8'):
+    for ln in (lzma.open(yol, 'rt', encoding='utf-8') if yol.endswith('.xz') else open(yol, encoding='utf-8')):
         d = json.loads(ln)
         e = KS.siki(d)
         k = KS.kok_bul(d)
