@@ -124,4 +124,5 @@
  7  H ekseni: tenvinli/mansûb masdar, tekrâr, ara adım zinciri (F 354)
  8  B ekseni: isim bâbları sicili (mîmî, merre, hey'et, sınâî, ism-i masdar, ism-i cins) (F 355)
  9  iştikak motoru kuruldu: `turetme_motoru/istikak.py`; Arapça otomatik, Türkçe ve mana elle (F 359)
+ 10 iştikak motoru: aksâm-ı seb'a ve ilal kaideleri, mef'ile, mef'ûl YOK bâbları (F 360)
 ```

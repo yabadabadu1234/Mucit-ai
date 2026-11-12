@@ -1,8 +1,8 @@
-# İŞTİKAK MOTORU ÇIKTISI — kök د ك ك (müdaaf)
+# İŞTİKAK MOTORU ÇIKTISI — kök د ك ك (muzâ‘af)
 
 Arapça ve Latin sütunları **motorun çıktısıdır**; Türkçe ve mana sütunları **elle yazılacak** (boş).
 
-Sayım: **397 satır · 280 ayrı Arapça biçim · 203 satırda idgham uygulandı · 7 reddedilen**
+Sayım: **391 satır · 282 ayrı Arapça biçim · 197 satırda idgam · 0 satırda ilal kaidesi · 8 reddedilen**
 
 
 ## masdar · sülâsî mücerred (23)
@@ -271,24 +271,6 @@ Sayım: **397 satır · 280 ayrı Arapça biçim · 203 satırda idgham uyguland
 | munfa'il + cem‘-i sâlim müzekker (-în) | مُنْدَكِّين | mundakkīn | kıyâsî |  |  |
 | munfa'il + cem‘-i sâlim müennes (-ât) | مُنْدَكَّات | mundakkāt | kıyâsî |  |  |
 
-## ism-i mef‘ûl · bâb VII (7)
-
-| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
-| :-- | :-- | :-- | :-- | :-- | :-- |
-| munfa'al | مُنْدَكّ | mundakk | kıyâsî |  |  |
-| munfa'al + müennes | مُنْدَكَّة | mundakka | kıyâsî |  |  |
-| munfa'al + tesniye | مُنْدَكَّان | mundakkān | kıyâsî |  |  |
-| munfa'al + müennes tesniye | مُنْدَكَّتَان | mundakkatān | kıyâsî |  |  |
-| munfa'al + cem‘-i sâlim müzekker (-ûn) | مُنْدَكُّون | mundakkūn | kıyâsî |  |  |
-| munfa'al + cem‘-i sâlim müzekker (-în) | مُنْدَكِّين | mundakkīn | kıyâsî |  |  |
-| munfa'al + cem‘-i sâlim müennes (-ât) | مُنْدَكَّات | mundakkāt | kıyâsî |  |  |
-
-## mekân/zaman/masdar-ı mîmî · bâb VII (1)
-
-| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
-| :-- | :-- | :-- | :-- | :-- | :-- |
-| munfa'al | مُنْدَكّ | mundakk | kıyâsî |  |  |
-
 ## masdar · bâb VIII (1)
 
 | kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
@@ -452,7 +434,7 @@ Sayım: **397 satır · 280 ayrı Arapça biçim · 203 satırda idgham uyguland
 | maf'ûl + cem‘-i sâlim müzekker (-în) | مَدْكُوكِين | madkūkīn | kıyâsî |  |  |
 | maf'ûl + cem‘-i sâlim müennes (-ât) | مَدْكُوكَات | madkūkāt | kıyâsî |  |  |
 
-## mekân/zaman · sülâsî (6)
+## mekân/zaman · sülâsî (8)
 
 | kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- |
@@ -462,6 +444,8 @@ Sayım: **397 satır · 280 ayrı Arapça biçim · 203 satırda idgham uyguland
 | maf'il + tesniye | مَدِكَّان | madikkān | kıyâsî |  |  |
 | maf'ale | مَدَكَّة | madakka | kıyâsî |  |  |
 | maf'ale + tesniye | مَدَكَّتَان | madakkatān | kıyâsî |  |  |
+| maf'ile | مَدِكَّة | madikka | kıyâsî |  |  |
+| maf'ile + tesniye | مَدِكَّتَان | madikkatān | kıyâsî |  |  |
 
 ## âlet · sülâsî (6)
 
@@ -703,8 +687,8 @@ Sayım: **397 satır · 280 ayrı Arapça biçim · 203 satırda idgham uyguland
 | fa'al | دَكّ | dakk | semâî aday |  |  |
 | mefâ'il | مَدَاكّ | madākk | semâî aday |  |  |
 | mefâ'îl | مَدَاكِيك | madākīk | semâî aday |  |  |
-| fevâ'il | دَوَاكّ | davākk | semâî aday |  |  |
-| fe'âil | دَكَاءِك | dakāʾik | semâî aday |  |  |
+| fevâ'il | دَوَاكّ | dawākk | semâî aday |  |  |
+| fe'âil | دَكَائِك | dakāʾik | semâî aday |  |  |
 | fu'ayl(cem') | دُكَيْك | dukayk | semâî aday |  |  |
 
 ## cem‘u’l-cem‘ (aday) (20)
@@ -721,25 +705,26 @@ Sayım: **397 satır · 280 ayrı Arapça biçim · 203 satırda idgham uyguland
 | fi'al + ât | دِكَّات | dikkāt | semâî aday |  |  |
 | fi'ale + ât | دِكَّات | dikkāt | semâî aday |  |  |
 | fu'al + ât | دُكَّات | dukkāt | semâî aday |  |  |
-| fu'alā' + ât | دُكّاءَات | dukkāʾāt | semâî aday |  |  |
+| fu'alā' + ât | دُكّاآت | dukkāʾāt | semâî aday |  |  |
 | fa'ale + ât | دَكَّات | dakkāt | semâî aday |  |  |
 | fu''āl + ât | دُكَّاكَات | dukkākāt | semâî aday |  |  |
 | fa'āl + ât | دَكَاكَات | dakākāt | semâî aday |  |  |
 | fa'al + ât | دَكَّات | dakkāt | semâî aday |  |  |
 | mefâ'il + ât | مَدَاكَّات | madākkāt | semâî aday |  |  |
 | mefâ'îl + ât | مَدَاكِيكَات | madākīkāt | semâî aday |  |  |
-| fevâ'il + ât | دَوَاكَّات | davākkāt | semâî aday |  |  |
-| fe'âil + ât | دَكَاءِكَات | dakāʾikāt | semâî aday |  |  |
+| fevâ'il + ât | دَوَاكَّات | dawākkāt | semâî aday |  |  |
+| fe'âil + ât | دَكَائِكَات | dakāʾikāt | semâî aday |  |  |
 | fu'ayl(cem') + ât | دُكَيْكَات | dukaykāt | semâî aday |  |  |
 
 ## Reddedilenler ve sebebi
 
 | grup | kalıp | sebep |
 | :-- | :-- | :-- |
-| bâb IX | if'ilâl (renk/ayıp) | müdaaf kökte bu bâb idgham yaptırır veya yaptırmaz; semâîdir, motor üretmez |
-| bâb XI | if'îlâl | müdaaf kökte bu bâb idgham yaptırır veya yaptırmaz; semâîdir, motor üretmez |
-| bâb XII | if'iv'âl | müdaaf kökte bu bâb idgham yaptırır veya yaptırmaz; semâîdir, motor üretmez |
-| bâb XIII | if'ivvâl | müdaaf kökte bu bâb idgham yaptırır veya yaptırmaz; semâîdir, motor üretmez |
-| mübalağa | fa''āle + müennes | uygulanamaz (sondaki harf bu eki almaz) |
-| mübalağa | fa''āle + cem‘-i sâlim müzekker (-ûn) | uygulanamaz (sondaki harf bu eki almaz) |
-| mübalağa | fa''āle + cem‘-i sâlim müzekker (-în) | uygulanamaz (sondaki harf bu eki almaz) |
+| ism-i mef‘ûl · bâb VII | infi'âl (mutâvaa, lâzım) | YOK (lâzım fiil; kitapta mef‘ûl işaretli değil) |
+| bâb IX | if'ilâl (renk/ayıp, lâzım) | bu bâb yalnız sâlim ve mehmûz kökte üretilir; illetli ve muzâ‘afta idgam/ilal semâîdir |
+| bâb XI | if'îlâl (lâzım) | bu bâb yalnız sâlim ve mehmûz kökte üretilir; illetli ve muzâ‘afta idgam/ilal semâîdir |
+| bâb XII | if'iv'âl (lâzım) | bu bâb yalnız sâlim ve mehmûz kökte üretilir; illetli ve muzâ‘afta idgam/ilal semâîdir |
+| bâb XIII | if'ivvâl (lâzım) | bu bâb yalnız sâlim ve mehmûz kökte üretilir; illetli ve muzâ‘afta idgam/ilal semâîdir |
+| mübalağa | fa''āle + müennes | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |
+| mübalağa | fa''āle + cem‘-i sâlim müzekker (-ûn) | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |
+| mübalağa | fa''āle + cem‘-i sâlim müzekker (-în) | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |

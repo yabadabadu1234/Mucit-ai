@@ -1,8 +1,8 @@
-# İŞTİKAK MOTORU ÇIKTISI — kök ك ت ب (sahîh)
+# İŞTİKAK MOTORU ÇIKTISI — kök ك ت ب (sâlim)
 
 Arapça ve Latin sütunları **motorun çıktısıdır**; Türkçe ve mana sütunları **elle yazılacak** (boş).
 
-Sayım: **405 satır · 343 ayrı Arapça biçim · 0 satırda idgham uygulandı · 4 reddedilen**
+Sayım: **399 satır · 338 ayrı Arapça biçim · 0 satırda idgam · 0 satırda ilal kaidesi · 9 reddedilen**
 
 
 ## masdar · sülâsî mücerred (23)
@@ -271,24 +271,6 @@ Sayım: **405 satır · 343 ayrı Arapça biçim · 0 satırda idgham uygulandı
 | munfa'il + cem‘-i sâlim müzekker (-în) | مُنْكَتِبِين | munkatibīn | kıyâsî |  |  |
 | munfa'il + cem‘-i sâlim müennes (-ât) | مُنْكَتِبَات | munkatibāt | kıyâsî |  |  |
 
-## ism-i mef‘ûl · bâb VII (7)
-
-| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
-| :-- | :-- | :-- | :-- | :-- | :-- |
-| munfa'al | مُنْكَتَب | munkatab | kıyâsî |  |  |
-| munfa'al + müennes | مُنْكَتَبَة | munkataba | kıyâsî |  |  |
-| munfa'al + tesniye | مُنْكَتَبَان | munkatabān | kıyâsî |  |  |
-| munfa'al + müennes tesniye | مُنْكَتَبَتَان | munkatabatān | kıyâsî |  |  |
-| munfa'al + cem‘-i sâlim müzekker (-ûn) | مُنْكَتَبُون | munkatabūn | kıyâsî |  |  |
-| munfa'al + cem‘-i sâlim müzekker (-în) | مُنْكَتَبِين | munkatabīn | kıyâsî |  |  |
-| munfa'al + cem‘-i sâlim müennes (-ât) | مُنْكَتَبَات | munkatabāt | kıyâsî |  |  |
-
-## mekân/zaman/masdar-ı mîmî · bâb VII (1)
-
-| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
-| :-- | :-- | :-- | :-- | :-- | :-- |
-| munfa'al | مُنْكَتَب | munkatab | kıyâsî |  |  |
-
 ## masdar · bâb VIII (1)
 
 | kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
@@ -413,13 +395,13 @@ Sayım: **405 satır · 343 ayrı Arapça biçim · 0 satırda idgham uygulandı
 
 | kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- |
-| if'iv'āl | اِكْتِوْتَاب | iktivtāb | kıyâsî |  |  |
+| if'iv'āl | اِكْتِوْتَاب | iktiwtāb | kıyâsî |  |  |
 
 ## masdar · bâb XIII (1)
 
 | kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- |
-| if'ivvāl | اِكْتِوّْبَاب | iktivvbāb | kıyâsî |  |  |
+| if'ivvāl | اِكْتِوّْبَاب | iktiwwbāb | kıyâsî |  |  |
 
 ## ism-i fâil · sülâsî (7)
 
@@ -445,7 +427,7 @@ Sayım: **405 satır · 343 ayrı Arapça biçim · 0 satırda idgham uygulandı
 | maf'ûl + cem‘-i sâlim müzekker (-în) | مَكْتُوبِين | maktūbīn | kıyâsî |  |  |
 | maf'ûl + cem‘-i sâlim müennes (-ât) | مَكْتُوبَات | maktūbāt | kıyâsî |  |  |
 
-## mekân/zaman · sülâsî (6)
+## mekân/zaman · sülâsî (8)
 
 | kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- |
@@ -455,6 +437,8 @@ Sayım: **405 satır · 343 ayrı Arapça biçim · 0 satırda idgham uygulandı
 | maf'il + tesniye | مَكْتِبَان | maktibān | kıyâsî |  |  |
 | maf'ale | مَكْتَبَة | maktaba | kıyâsî |  |  |
 | maf'ale + tesniye | مَكْتَبَتَان | maktabatān | kıyâsî |  |  |
+| maf'ile | مَكْتِبَة | maktiba | kıyâsî |  |  |
+| maf'ile + tesniye | مَكْتِبَتَان | maktibatān | kıyâsî |  |  |
 
 ## âlet · sülâsî (6)
 
@@ -696,8 +680,8 @@ Sayım: **405 satır · 343 ayrı Arapça biçim · 0 satırda idgham uygulandı
 | fa'al | كَتَب | katab | semâî aday |  |  |
 | mefâ'il | مَكَاتِب | makātib | semâî aday |  |  |
 | mefâ'îl | مَكَاتِيب | makātīb | semâî aday |  |  |
-| fevâ'il | كَوَاتِب | kavātib | semâî aday |  |  |
-| fe'âil | كَتَاءِب | katāʾib | semâî aday |  |  |
+| fevâ'il | كَوَاتِب | kawātib | semâî aday |  |  |
+| fe'âil | كَتَائِب | katāʾib | semâî aday |  |  |
 | fu'ayl(cem') | كُتَيْب | kutayb | semâî aday |  |  |
 
 ## cem‘u’l-cem‘ (aday) (20)
@@ -714,22 +698,27 @@ Sayım: **405 satır · 343 ayrı Arapça biçim · 0 satırda idgham uygulandı
 | fi'al + ât | كِتَبَات | kitabāt | semâî aday |  |  |
 | fi'ale + ât | كِتَبَات | kitabāt | semâî aday |  |  |
 | fu'al + ât | كُتَبَات | kutabāt | semâî aday |  |  |
-| fu'alā' + ât | كُتَباءَات | kutabāʾāt | semâî aday |  |  |
+| fu'alā' + ât | كُتَباآت | kutabāʾāt | semâî aday |  |  |
 | fa'ale + ât | كَتَبَات | katabāt | semâî aday |  |  |
 | fu''āl + ât | كُتَّابَات | kuttābāt | semâî aday |  |  |
 | fa'āl + ât | كَتَابَات | katābāt | semâî aday |  |  |
 | fa'al + ât | كَتَبَات | katabāt | semâî aday |  |  |
 | mefâ'il + ât | مَكَاتِبَات | makātibāt | semâî aday |  |  |
 | mefâ'îl + ât | مَكَاتِيبَات | makātībāt | semâî aday |  |  |
-| fevâ'il + ât | كَوَاتِبَات | kavātibāt | semâî aday |  |  |
-| fe'âil + ât | كَتَاءِبَات | katāʾibāt | semâî aday |  |  |
+| fevâ'il + ât | كَوَاتِبَات | kawātibāt | semâî aday |  |  |
+| fe'âil + ât | كَتَائِبَات | katāʾibāt | semâî aday |  |  |
 | fu'ayl(cem') + ât | كُتَيْبَات | kutaybāt | semâî aday |  |  |
 
 ## Reddedilenler ve sebebi
 
 | grup | kalıp | sebep |
 | :-- | :-- | :-- |
-| rubâ‘î | dört harfli bâblar | sahîh üç harfli kökte kök ikilenmez; rubâ‘î kök ayrı bir köktür |
-| mübalağa | fa''āle + müennes | uygulanamaz (sondaki harf bu eki almaz) |
-| mübalağa | fa''āle + cem‘-i sâlim müzekker (-ûn) | uygulanamaz (sondaki harf bu eki almaz) |
-| mübalağa | fa''āle + cem‘-i sâlim müzekker (-în) | uygulanamaz (sondaki harf bu eki almaz) |
+| ism-i mef‘ûl · bâb VII | infi'âl (mutâvaa, lâzım) | YOK (lâzım fiil; kitapta mef‘ûl işaretli değil) |
+| ism-i mef‘ûl · bâb IX | if'ilâl (renk/ayıp, lâzım) | YOK (lâzım fiil; kitapta mef‘ûl işaretli değil) |
+| ism-i mef‘ûl · bâb XI | if'îlâl (lâzım) | YOK (lâzım fiil; kitapta mef‘ûl işaretli değil) |
+| ism-i mef‘ûl · bâb XII | if'iv'âl (lâzım) | YOK (lâzım fiil; kitapta mef‘ûl işaretli değil) |
+| ism-i mef‘ûl · bâb XIII | if'ivvâl (lâzım) | YOK (lâzım fiil; kitapta mef‘ûl işaretli değil) |
+| rubâ‘î | dört harfli bâblar | muzâ‘af olmayan üç harfli kökte kök ikilenmez; rubâ‘î kök ayrı bir köktür |
+| mübalağa | fa''āle + müennes | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |
+| mübalağa | fa''āle + cem‘-i sâlim müzekker (-ûn) | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |
+| mübalağa | fa''āle + cem‘-i sâlim müzekker (-în) | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |
