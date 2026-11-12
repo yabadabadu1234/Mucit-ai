@@ -47,9 +47,11 @@ def getir(x):
 
 
 def yaz(kayit):
-    with lzma.open(HAM, 'wt', encoding='utf-8') as f:
+    gecici = HAM + '.yeni'
+    with lzma.open(gecici, 'wt', encoding='utf-8') as f:
         for r in kayit.values():
             f.write(json.dumps(r, ensure_ascii=False) + '\n')
+    os.replace(gecici, HAM)
 
 
 def main(isci=3):
