@@ -162,6 +162,15 @@ NAKIS = {
     "1a 2a A Qi 3": None,
 }
 
+NAKIS_AGIR = {
+    "Wi 10 2i 3a A 3": "Wi 10 2i 3a A Q",
+    "mu 10 2a 3+": "mu 10 2a 3i I",
+    "Wi 10 2i I 3a A 3": "Wi 10 2i I 3a A Q",
+    "mu 10 2a A 3+": "mu 10 2a A 3i I",
+    "Wi 10 2i w0 2a A 3": "Wi 10 2i w0 2a A Q",
+    "Wi 10 2i w+a A 3": "Wi 10 2i w+a A Q",
+}
+
 SKIP = object()
 
 
@@ -522,7 +531,7 @@ BAB = [
      ("mustaf'il", "mu s0 ta 10 2i 3"), ("mustaf'al", "mu s0 ta 10 2a 3")),
     ('XI', "if'îlâl (lâzım)", [("if'īlāl", "Wi 10 2i I 3a A 3")], ("muf'āll", "mu 10 2a A 3+"), None),
     ('XII', "if'iv'âl (lâzım)", [("if'iv'āl", "Wi 10 2i w0 2a A 3")], None, None),
-    ('XIII', "if'ivvâl (lâzım)", [("if'ivvāl", "Wi 10 2i w+0 3a A 3")], None, None),
+    ('XIII', "if'ivvâl (lâzım)", [("if'ivvāl", "Wi 10 2i w+a A 3")], None, None),
 ]
 BAB_RUBAI = [
     ('Rubâ‘î mücerred', "fa'lale", [("fa'lale", "1a 20 3a 4a T"), ("fi'lāl", "1i 20 3a A 4")],
@@ -566,6 +575,8 @@ def tablo(kok):
 
     def P(spec):
         if raw[0]:
+            if bay['nakis'] and spec in NAKIS_AGIR:
+                return parse(NAKIS_AGIR[spec]), True
             return parse(spec), False
         s = ozel_spec(spec, kok, bay)
         if s is SKIP:
@@ -614,9 +625,6 @@ def tablo(kok):
         raw[0] = False
         izh = None
         if agir:
-            if bay['nakis']:
-                red.append(('bâb ' + rom, ad, 'lâmı illetli kökte bu bâb irʿivâ türü ayrı kalıba girer; Maksûd ilâl bahsinde yok, kıyâsî kural yok'))
-                continue
             if not (sagl and not mudaaf):
                 raw[0] = True
                 izh = 'izhar'

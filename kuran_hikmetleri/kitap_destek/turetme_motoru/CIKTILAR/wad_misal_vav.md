@@ -402,7 +402,7 @@ Sayım: **425 satır · 340 ayrı Arapça biçim · 0 satırda idgam · 0 satır
 
 | kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- |
-| if'ivvāl | اِيعِوّْدَاد | īʿiwwdād | semâî aday |  |  |
+| if'ivvāl | اِيعِوَّاد | īʿiwwād | semâî aday |  |  |
 
 ## ism-i fâil · sülâsî (7)
 

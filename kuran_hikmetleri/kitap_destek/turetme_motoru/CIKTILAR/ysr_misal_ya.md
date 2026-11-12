@@ -401,7 +401,7 @@ Sayım: **424 satır · 339 ayrı Arapça biçim · 0 satırda idgam · 0 satır
 
 | kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- |
-| if'ivvāl | اِيسِوّْرَار | īsiwwrār | semâî aday |  |  |
+| if'ivvāl | اِيسِوَّار | īsiwwār | semâî aday |  |  |
 
 ## ism-i fâil · sülâsî (7)
 

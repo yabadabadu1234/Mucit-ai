@@ -437,7 +437,7 @@ Sayım: **440 satır · 352 ayrı Arapça biçim · 0 satırda idgam · 0 satır
 
 | kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- |
-| if'ivvāl | اِئْكِوّْلَال | iʾkiwwlāl | kıyâsî |  |  |
+| if'ivvāl | اِئْكِوَّال | iʾkiwwāl | kıyâsî |  |  |
 
 ## ism-i fâil · sülâsî (7)
 

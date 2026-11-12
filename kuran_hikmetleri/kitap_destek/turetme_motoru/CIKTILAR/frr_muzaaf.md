@@ -401,7 +401,7 @@ Sayım: **434 satır · 300 ayrı Arapça biçim · 212 satırda idgam · 0 sat�
 
 | kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- |
-| if'ivvāl | اِفْرِوّْرَار | ifriwwrār | semâî aday |  |  |
+| if'ivvāl | اِفْرِوَّار | ifriwwār | semâî aday |  |  |
 
 ## masdar · Rubâ‘î mücerred (2)
 

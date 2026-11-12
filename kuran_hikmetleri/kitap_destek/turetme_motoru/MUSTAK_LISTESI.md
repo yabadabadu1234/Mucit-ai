@@ -20,7 +20,7 @@ ekler: müennes · tesniye · cem'-i sâlim (-ûn -în -ât) · cem'-i mükesser
 hemze yazımı (elif, vâv, yâ kürsüsü; medde) · iki hemzenin medde veya yâya dönmesi (âmin, îmân, ûmin) · misâlde fâ'nın uzun ünlüye dönmesi (îâd) · misâlde ifti'âlde ta'ya idgam (ittiâd) · ecvefte mef'ûl, fâil (hemze), mekân, if'âl, istif'âl, infi'âl, ifti'âl kaideleri · nâkısta fâil, mef'ûl (şeddeli), maksûre, elifin hemzeye dönmesi, bütün mezîd bâblar · lefîfte iki kaidenin bileşkesi · ifti'âlde ز → د, ص ض → ط, د ذ ط ظ idgamı · muzâ‘afta idgam ve hareke nakli
 
 ## E. REDDEDİLEN (sayıyla, sebebiyle)
-- IX, XI, XII, XIII: lâmı illetli kökte (nâkıs, lefîf) üretilmez; irʿivâ türü ayrı kalıba girer ve Maksûd ilâl bahsinde yoktur. Sâlim, mehmûz, muzâ‘af (izhar), ecvef ve misâlde üretilir (illet harfi izharlı: isvidâd, müsved).
+- IX, XI, XII, XIII: bütün kök sınıflarında üretilir. Sâlim, mehmûz, muzâ‘af, ecvef ve misâlde illet harfi izharlıdır (isvidâd, müsved). Lâmı illetli kökte (nâkıs, lefîf) masdarın sonundaki illetli lâm elifden sonra hemzeye döner (irʿiwâʾ, iḥliwlâʾ) ve ism-i fâil lâmı kesre ile uzun yâ ile biter (murʿawî); bunlar kıyâsîdir. Tanıklı olan yalnız irʿiwâʾ'dır (Fîrûzâbâdî, ارعواء); XI, XII ve XIII'ün lâmı illetli hâlleri için tanık bulunamadı ve 'semâî aday' kalır. Fiil sîgası kapsam dışıdır. XIII masdar kalıbındaki fazladan lâm hatası düzeltildi (ifʿiwwâl).
 - mef'ûl "YOK": VII, IX, XI, XII, XIII (kitap)
 - rubâ'î: yalnız muzâ‘af kökte
 - fiil çekimleri, harf, i'râb hâlleri: kapsam dışı

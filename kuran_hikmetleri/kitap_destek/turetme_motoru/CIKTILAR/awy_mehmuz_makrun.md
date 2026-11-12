@@ -2,7 +2,7 @@
 
 Arapça ve Latin sütunları **motorun çıktısıdır**; Türkçe ve mana sütunları **elle yazılacak** (boş).
 
-Sayım: **395 satır · 305 ayrı Arapça biçim · 0 satırda idgam · 330 satırda ilal kaidesi · 25 reddedilen**
+Sayım: **413 satır · 323 ayrı Arapça biçim · 0 satırda idgam · 348 satırda ilal kaidesi · 25 reddedilen**
 
 
 ## masdar · sülâsî mücerred (23)
@@ -322,6 +322,24 @@ Sayım: **395 satır · 305 ayrı Arapça biçim · 0 satırda idgam · 330 sat�
 | :-- | :-- | :-- | :-- | :-- | :-- |
 | muftaʿal | مُتَّوَى | muttawā | kıyâsî · ilal |  |  |
 
+## masdar · bâb IX (illet harfi izhar) (1)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| if'ilāl | اِئْوِيَاء | iʾwiyāʾ | semâî aday · ilal |  |  |
+
+## ism-i fâil · bâb IX (illet harfi izhar) (7)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| muf'all | مُؤْوَيِي | muʾwayī | kıyâsî · ilal |  |  |
+| muf'all + müennes | مُؤْوَيِيَة | muʾwayiya | kıyâsî · ilal |  |  |
+| muf'all + tesniye | مُؤْوَيِيَان | muʾwayiyān | kıyâsî · ilal |  |  |
+| muf'all + müennes tesniye | مُؤْوَيِيَتَان | muʾwayiyatān | kıyâsî · ilal |  |  |
+| muf'all + cem‘-i sâlim müzekker (-ûn) | مُؤْوَيُون | muʾwayūn | kıyâsî · ilal |  |  |
+| muf'all + cem‘-i sâlim müzekker (-în) | مُؤْوَيِين | muʾwayīn | kıyâsî · ilal |  |  |
+| muf'all + cem‘-i sâlim müennes (-ât) | مُؤْوَيِيَات | muʾwayiyāt | kıyâsî · ilal |  |  |
+
 ## masdar · bâb X (1)
 
 | kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
@@ -361,6 +379,36 @@ Sayım: **395 satır · 305 ayrı Arapça biçim · 0 satırda idgam · 330 sat�
 | kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- |
 | mustaf'al | مُسْتَأْوَى | mustaʾwā | kıyâsî · ilal |  |  |
+
+## masdar · bâb XI (illet harfi izhar) (1)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| if'īlāl | اِئْوِييَاء | iʾwīyāʾ | semâî aday · ilal |  |  |
+
+## ism-i fâil · bâb XI (illet harfi izhar) (7)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| muf'āll | مُؤْوَايِي | muʾwāyī | kıyâsî · ilal |  |  |
+| muf'āll + müennes | مُؤْوَايِيَة | muʾwāyiya | kıyâsî · ilal |  |  |
+| muf'āll + tesniye | مُؤْوَايِيَان | muʾwāyiyān | kıyâsî · ilal |  |  |
+| muf'āll + müennes tesniye | مُؤْوَايِيَتَان | muʾwāyiyatān | kıyâsî · ilal |  |  |
+| muf'āll + cem‘-i sâlim müzekker (-ûn) | مُؤْوَايُون | muʾwāyūn | kıyâsî · ilal |  |  |
+| muf'āll + cem‘-i sâlim müzekker (-în) | مُؤْوَايِين | muʾwāyīn | kıyâsî · ilal |  |  |
+| muf'āll + cem‘-i sâlim müennes (-ât) | مُؤْوَايِيَات | muʾwāyiyāt | kıyâsî · ilal |  |  |
+
+## masdar · bâb XII (illet harfi izhar) (1)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| if'iv'āl | اِئْوِوْوَاء | iʾwiwwāʾ | semâî aday · ilal |  |  |
+
+## masdar · bâb XIII (illet harfi izhar) (1)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| if'ivvāl | اِئْوِوَّاء | iʾwiwwāʾ | semâî aday · ilal |  |  |
 
 ## ism-i fâil · sülâsî (7)
 
@@ -715,11 +763,11 @@ Sayım: **395 satır · 305 ayrı Arapça biçim · 0 satırda idgam · 330 sat�
 | ism-i mef‘ûl · bâb VII | infi'âl (mutâvaa, lâzım) | YOK (lâzım fiil; kitapta mef‘ûl işaretli değil) |
 | ism-i mef‘ûl · bâb VIII | muftaʿal + müennes | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |
 | ism-i mef‘ûl · bâb VIII (hemze idgamlı) | muftaʿal + müennes | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |
-| bâb IX | if'ilâl (renk/ayıp, lâzım) | lâmı illetli kökte bu bâb irʿivâ türü ayrı kalıba girer; Maksûd ilâl bahsinde yok, kıyâsî kural yok |
+| ism-i mef‘ûl · bâb IX | if'ilâl (renk/ayıp, lâzım) | YOK (lâzım fiil; kitapta mef‘ûl işaretli değil) |
 | ism-i mef‘ûl · bâb X | mustaf'al + müennes | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |
-| bâb XI | if'îlâl (lâzım) | lâmı illetli kökte bu bâb irʿivâ türü ayrı kalıba girer; Maksûd ilâl bahsinde yok, kıyâsî kural yok |
-| bâb XII | if'iv'âl (lâzım) | lâmı illetli kökte bu bâb irʿivâ türü ayrı kalıba girer; Maksûd ilâl bahsinde yok, kıyâsî kural yok |
-| bâb XIII | if'ivvâl (lâzım) | lâmı illetli kökte bu bâb irʿivâ türü ayrı kalıba girer; Maksûd ilâl bahsinde yok, kıyâsî kural yok |
+| ism-i mef‘ûl · bâb XI | if'îlâl (lâzım) | YOK (lâzım fiil; kitapta mef‘ûl işaretli değil) |
+| ism-i mef‘ûl · bâb XII | if'iv'âl (lâzım) | YOK (lâzım fiil; kitapta mef‘ûl işaretli değil) |
+| ism-i mef‘ûl · bâb XIII | if'ivvâl (lâzım) | YOK (lâzım fiil; kitapta mef‘ûl işaretli değil) |
 | rubâ‘î | dört harfli bâblar | muzâ‘af olmayan üç harfli kökte kök ikilenmez; rubâ‘î kök ayrı bir köktür |
 | sıfat-ı müşebbehe | fa'al + müennes | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |
 | mübalağa | fa''āle + müennes | bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz |
