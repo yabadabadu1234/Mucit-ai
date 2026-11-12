@@ -6,6 +6,7 @@ import re
 import sys
 
 import istikak as I
+import mana_tasnif as MT
 import turkce as T
 import mekayis as MK
 import osmanlica_lugat as OS
@@ -309,6 +310,25 @@ MAHREC = {'halkiyye': 'ءهعحغخ', 'lehaviyye': 'قك', 'şeceriyye': 'جشض
 BOLGE = {'halk': ('halkiyye',), 'dil': ('lehaviyye', 'şeceriyye', 'esaliyye', 'nit‘iyye', 'lessiyye', 'zelakiyye'), 'dudak ve cevf': ('şefeviyye', 'cevfiyye')}
 
 
+def mana_agaci(mt):
+    ag = {}
+    ihlal = 0
+    gor = {}
+    for k, x in mt.items():
+        u, o, i = x['ust'], x['orta'], x['ince']
+        un = ag.setdefault(u['kume'], {'merkez_kok': u['merkez_kok'], 'merkez_mana': u['merkez_mana'], 'kok': 0, 'orta': {}})
+        un['kok'] += 1
+        on = un['orta'].setdefault(o['kume'], {'merkez_kok': o['merkez_kok'], 'merkez_mana': o['merkez_mana'], 'kok': 0, 'ince': {}})
+        on['kok'] += 1
+        inn = on['ince'].setdefault(i['kume'], {'merkez_kok': i['merkez_kok'], 'merkez_mana': i['merkez_mana'], 'kok': 0})
+        inn['kok'] += 1
+        ust_ata = gor.setdefault(('o', o['kume']), u['kume'])
+        ihlal += ust_ata != u['kume']
+        ihlal += gor.setdefault(('i', i['kume']), o['kume']) != o['kume']
+    return {'yontem': 'çok dilli gömme (' + MT.MODEL + ') + Ward kümeleme; kök başına Türkçe/İngilizce/Arapça mana metinleri (kök anlamı, Vikisözlük, Arabic Ontology, Cebel, Mekâyîs) ayrı gömülüp ortalanır',
+            'kesimler': list(MT.KESIMLER), 'ic_ice_olmayan_kok_sayisi': ihlal, 'kok': len(mt), 'agac': ag}
+
+
 def tasnif_ozeti(agac):
     def say(x):
         return sum(say(v) for v in x.values()) if isinstance(x, dict) else len(x)
@@ -347,6 +367,7 @@ def yaz():
     for e in d['kelimeler']:
         (gruplar[e['kok']] if e['kok'] else koksuz).append(e)
     fih = {'kuranda_var': [], 'kuranda_yok': []}
+    mt = MT.sinifla(d['kokler'])
     agac = {}
     kelime_kok = {}
     toplam = collections.Counter()
@@ -357,6 +378,7 @@ def yaz():
         dugum = dict(r)
         dugum['sema'] = SEMA
         dugum['tasnif'] = tasnif(k)
+        dugum['mana_tasnif'] = mt.get(k) or {'durum': 'tasnif edilemedi (köke ait mana metni yok)'}
         used = sorted({x[0] for v in r.get('mustaklar', {}).values() for x in v})
         dugum['kaliplar'] = {str(i): d['kaliplar'][i] for i in used}
         dugum['kelimeler'] = gruplar.get(k, [])
@@ -380,7 +402,7 @@ def yaz():
     for ad in ('kuranda_var', 'kuranda_yok'):
         with open(os.path.join(taban, ad, 'FIHRIST.json'), 'w', encoding='utf-8') as f:
             f.write(okunur({'sema': SEMA, 'sayilar': d['sayilar'], 'alanlar_kokler': ['dosya', 'kok', 'kelime_sayisi', 'mustak_satiri'], 'kokler': fih[ad],
-                            'tasnif_agaci': tasnif_ozeti(agac), 'kelime_kok': kelime_kok if ad == 'kuranda_var' else {}}))
+                            'tasnif_agaci': tasnif_ozeti(agac), 'mana_tasnif_agaci': mana_agaci(mt), 'kelime_kok': kelime_kok if ad == 'kuranda_var' else {}}))
     print(d['sayilar'], {k: len(v) for k, v in fih.items()}, {k: v // 1024 // 1024 for k, v in toplam.items()}, 'MB')
 
 
