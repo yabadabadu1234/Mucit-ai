@@ -112,9 +112,50 @@ def uret():
     return {'sema': SEMA, 'sayilar': sayi, 'kaliplar': kaliplar, 'kokler': kokler, 'kelimeler': kelimeler}
 
 
-if __name__ == '__main__':
+def dosya_adi(n, kelime):
+    h = re.sub(r'[^\u0621-\u064a]', '', kelime)
+    return '%05d_%s.json' % (n, h or 'x')
+
+
+def yaz():
     d = uret()
-    os.makedirs(os.path.dirname(CIKTI), exist_ok=True)
-    with gzip.open(CIKTI, 'wt', encoding='utf-8', compresslevel=9) as f:
-        json.dump(d, f, ensure_ascii=False, separators=(',', ':'))
-    print(d['sayilar'], os.path.getsize(CIKTI) // 1024 // 1024, 'MB')
+    klasor = os.path.join(KOK, 'kelime_kaydi', 'kelimeler')
+    os.makedirs(klasor, exist_ok=True)
+    for f in os.listdir(klasor):
+        os.remove(os.path.join(klasor, f))
+    grup_kok = collections.defaultdict(list)
+    adlar = []
+    for n, e in enumerate(d['kelimeler'], 1):
+        adlar.append(dosya_adi(n, e['kelime']))
+        if e['kok']:
+            grup_kok[e['kok']].append(adlar[-1])
+    fihrist = []
+    toplam = 0
+    for e, ad in zip(d['kelimeler'], adlar):
+        kok = d['kokler'].get(e['kok']) if e['kok'] else None
+        lem = e['lemma']
+        kayit = dict(e)
+        kayit['dosya'] = ad
+        kayit['sema'] = SEMA
+        kayit['kaliplar_ayrintisi'] = d['kaliplar'] if False else None
+        if kok:
+            kok = dict(kok)
+            kok['kalip_tablosu'] = sorted({r[0] for v in kok['mustaklar'].values() for r in v})
+            kok['kaliplar'] = {i: d['kaliplar'][i] for i in kok['kalip_tablosu']}
+            wl = kok.get('sozlukler', {}).get('vikisozluk_ingilizce', [])
+            kok['bu_lemmaya_ozel_vikisozluk'] = [x for x in wl if I.normala(x['lemma']) == I.normala(lem)]
+            kok['kardes_kelimeler'] = [x for x in grup_kok[e['kok']] if x != ad]
+        kayit['kok_grafi'] = kok
+        del kayit['kaliplar_ayrintisi']
+        yol = os.path.join(klasor, ad)
+        with open(yol, 'w', encoding='utf-8') as f:
+            json.dump(kayit, f, ensure_ascii=False, separators=(',', ':'))
+        toplam += os.path.getsize(yol)
+        fihrist.append([ad, e['kelime'], e['kok'], e['lemma'], e['tur']])
+    with open(os.path.join(KOK, 'kelime_kaydi', 'FIHRIST.json'), 'w', encoding='utf-8') as f:
+        json.dump({'sema': SEMA, 'sayilar': d['sayilar'], 'alanlar': ['dosya', 'kelime', 'kok', 'lemma', 'tur'], 'kelimeler': fihrist}, f, ensure_ascii=False, separators=(',', ':'))
+    print(d['sayilar'], len(adlar), 'dosya', toplam // 1024 // 1024, 'MB')
+
+
+if __name__ == '__main__':
+    yaz()
