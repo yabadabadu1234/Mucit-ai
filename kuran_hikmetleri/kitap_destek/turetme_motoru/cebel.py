@@ -25,13 +25,21 @@ def yukle():
     sonuc = {}
     for n, (s, e, ad) in enumerate(kokler):
         son = kokler[n + 1][0] if n + 1 < len(kokler) else len(ham)
+        for bs_, _ in basliklar:
+            if e < bs_ < son:
+                son = bs_
+                break
         blok = ham[e:son]
         fasil = ''
+        giris = ''
         for bs, bad in basliklar:
             if bs < s:
                 fasil = bad
+                ilk = next((k_[0] for k_ in kokler if k_[0] > bs), len(ham))
+                giris = ham[bs:ilk]
             else:
                 break
+        giris = re.sub(r'\n\(\d+/\d+\)', '', giris).strip()
         mih = ''
         m = re.search(r'°\s*المعنى المحوري\s*\n?', blok)
         if m:
@@ -45,5 +53,12 @@ def yukle():
         for r in re.split(r'\s*-\s*', ad):
             k = I.normala(re.sub(r'[\s()]', '', r))
             if 2 <= len(k) <= 4 and k not in sonuc or (k in sonuc and mih and not sonuc[k]['mihveri']):
-                sonuc[k] = {'kaynak': "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)", 'fasil': fasil, 'baslik': ad, 'mihveri': mih, 'sesler': ses}
+                sonuc[k] = {'kaynak': "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)", 'fasil': fasil, 'baslik': ad, 'mihveri': mih, 'sesler': ses, 'tam_metin': blok.strip()}
+    ozet = {}
+    for v in sonuc.values():
+        m = re.search(r'°\s*معنى الفصل المعجمي[^\n]*\n?(.{20,1500})', v['tam_metin'], flags=re.S)
+        if m:
+            ozet[v['fasil']] = re.sub(r'\s+', ' ', re.split(r'\n\(\d+/\d+\)', m.group(0))[0]).strip()
+    for v in sonuc.values():
+        v['fasil_ozeti'] = ozet.get(v['fasil'], '')
     return sonuc

@@ -1,0 +1,72 @@
+{
+  "kok": "نلنل",
+  "sinif": "reddedildi",
+  "turkce_fiil": null,
+  "mustaklar": {},
+  "reddedilen": [
+    ["kök", "نلنل", "üç harfli değil"]
+  ],
+  "sozlukler": {
+    "cebel_mihveri": {
+      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
+      "fasil": "النون واللام",
+      "baslik": "نلنل",
+      "mihveri": "ضعف أورقة في أثناء الجرم (1).",
+      "sesler": "",
+      "tam_metin": "\"النُلنُل- كهُدْهُد: الرجلُ الضعيف \" [ق].\n° المعنى المحوري\nضعف أورقة في أثناء الجرم (1).",
+      "fasil_ozeti": "° معنى الفصل المعجمي (نل) : دقة في الشيء الحاصل أو التحصيل كالرجل الضعيف لقلة ما لديه من قوة -في (نلل)، وكتحصيل النول ما ينسج من الثوب قليلًا قليلًا، وشَغْل أهل الدار باحتها حينًا بعد حين لا دائمًا، وامتداد النيل دقيقًا بالنسبة لطوله- في (نول نيل)."
+    }
+  },
+  "kuran_gecisleri": 0,
+  "kuranda_var": false,
+  "sema": {
+    "sema": "graf-ic-graf",
+    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
+    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
+    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
+    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
+    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
+  },
+  "tasnif": {
+    "fasil": "نل",
+    "harf": "ن",
+    "mahrec": "zelakiyye",
+    "bolge": "dil"
+  },
+  "mana_tasnif": {
+    "durum": "Arabic WordNet v2 kaydı yok"
+  },
+  "ses_mana_tasnif": {
+    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+    "fasil": "النون واللام",
+    "mihveri": "ضعف أورقة في أثناء الجرم (1).",
+    "sesler": "",
+    "fasil_ozeti": "° معنى الفصل المعجمي (نل) : دقة في الشيء الحاصل أو التحصيل كالرجل الضعيف لقلة ما لديه من قوة -في (نلل)، وكتحصيل النول ما ينسج من الثوب قليلًا قليلًا، وشَغْل أهل الدار باحتها حينًا بعد حين لا دائمًا، وامتداد النيل دقيقًا بالنسبة لطوله- في (نول نيل).",
+    "tam_metin": "\"النُلنُل- كهُدْهُد: الرجلُ الضعيف \" [ق].\n° المعنى المحوري\nضعف أورقة في أثناء الجرم (1)."
+  },
+  "muhassas_tasnif": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "mana_tasnif_gomme": {
+    "ust": {
+      "kume": 6,
+      "merkez_kok": "لقلق",
+      "merkez_mana": "",
+      "boy": 440
+    },
+    "orta": {
+      "kume": 24,
+      "merkez_kok": "هضهض",
+      "merkez_mana": "",
+      "boy": 97
+    },
+    "ince": {
+      "kume": 144,
+      "merkez_kok": "كفكف",
+      "merkez_mana": "",
+      "boy": 10
+    }
+  },
+  "kaliplar": {},
+  "kelimeler": []
+}

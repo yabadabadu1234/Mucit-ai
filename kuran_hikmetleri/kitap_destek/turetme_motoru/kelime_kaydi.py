@@ -428,7 +428,7 @@ def yaz():
         dugum['sema'] = SEMA
         dugum['tasnif'] = tasnif(k)
         dugum['mana_tasnif'] = aw.get(k) or {'durum': 'Arabic WordNet v2 kaydı yok'}
-        dugum['ses_mana_tasnif'] = ({'kaynak': 'Cebel, el-Mu\'cemü\'l-İştikâkıyyü\'l-Mü\'asssal', 'fasil': cb_[k]['fasil'], 'mihveri': cb_[k]['mihveri'], 'sesler': cb_[k]['sesler']} if k in cb_ else {'durum': 'Cebel mu\'cemlerinde kök yok'})
+        dugum['ses_mana_tasnif'] = ({'kaynak': 'Cebel, el-Mu\'cemü\'l-İştikâkıyyü\'l-Mü\'asssal', 'fasil': cb_[k]['fasil'], 'mihveri': cb_[k]['mihveri'], 'sesler': cb_[k]['sesler'], 'fasil_ozeti': cb_[k]['fasil_ozeti'], 'tam_metin': cb_[k]['tam_metin']} if k in cb_ else {'durum': 'Cebel mu\'cemlerinde kök yok'})
         dugum['muhassas_tasnif'] = mh.get(k) or {'durum': 'el-Muhassas metninde yeterince geçmiyor'}
         dugum['mana_tasnif_gomme'] = mt.get(k) or {'durum': 'tasnif edilemedi (köke ait mana metni yok)'}
         used = sorted({x[0] for v in r.get('mustaklar', {}).values() for x in v})

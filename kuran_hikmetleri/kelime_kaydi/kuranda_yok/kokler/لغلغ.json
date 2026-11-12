@@ -1,0 +1,72 @@
+{
+  "kok": "لغلغ",
+  "sinif": "reddedildi",
+  "turkce_fiil": null,
+  "mustaklar": {},
+  "reddedilen": [
+    ["kök", "لغلغ", "üç harfli değil"]
+  ],
+  "sozlukler": {
+    "cebel_mihveri": {
+      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
+      "fasil": "اللام والغين",
+      "baslik": "لغلغ",
+      "mihveri": "تخلُّل الشيء المتسيب بمائع ثَخين يجعله كالمتماسك (1): كالثريد الموصوف. والمقصود بالعُجمة هنا -أخذًا من هذا- تداخُلُ الكلماتِ وحروفها بعضِها في بعض؛ فلا تتميَّز مفاصلُها.",
+      "sesler": "",
+      "tam_metin": "\"لَغْلَغ ثريدَه: روّاه من الأُدْم، أو بالسَمن والوَدَك. وفي كلامه لَغلَغةٌ: أي عُجمة \".\n(4/1981)\n° المعنى المحوري\nتخلُّل الشيء المتسيب بمائع ثَخين يجعله كالمتماسك (1): كالثريد الموصوف. والمقصود بالعُجمة هنا -أخذًا من هذا- تداخُلُ الكلماتِ وحروفها بعضِها في بعض؛ فلا تتميَّز مفاصلُها.",
+      "fasil_ozeti": "° معنى الفصل المعجمي (لغ): تخلل الشيء بمائع ثخين أو كثيف -كما في لغلغة الثريد بالأُدم- في (لغغ)، وفي كثرة الأصوات التي تخرج من الفم- في (لغو)، وفي تخلل البدن بما يضعفه ويثقله ويقلل نشاطه، وكذلك فساد حال السهم بما يضعف أو يعوق عمله- في (لغب)."
+    }
+  },
+  "kuran_gecisleri": 0,
+  "kuranda_var": false,
+  "sema": {
+    "sema": "graf-ic-graf",
+    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
+    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
+    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
+    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
+    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
+  },
+  "tasnif": {
+    "fasil": "لغ",
+    "harf": "ل",
+    "mahrec": "zelakiyye",
+    "bolge": "dil"
+  },
+  "mana_tasnif": {
+    "durum": "Arabic WordNet v2 kaydı yok"
+  },
+  "ses_mana_tasnif": {
+    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+    "fasil": "اللام والغين",
+    "mihveri": "تخلُّل الشيء المتسيب بمائع ثَخين يجعله كالمتماسك (1): كالثريد الموصوف. والمقصود بالعُجمة هنا -أخذًا من هذا- تداخُلُ الكلماتِ وحروفها بعضِها في بعض؛ فلا تتميَّز مفاصلُها.",
+    "sesler": "",
+    "fasil_ozeti": "° معنى الفصل المعجمي (لغ): تخلل الشيء بمائع ثخين أو كثيف -كما في لغلغة الثريد بالأُدم- في (لغغ)، وفي كثرة الأصوات التي تخرج من الفم- في (لغو)، وفي تخلل البدن بما يضعفه ويثقله ويقلل نشاطه، وكذلك فساد حال السهم بما يضعف أو يعوق عمله- في (لغب).",
+    "tam_metin": "\"لَغْلَغ ثريدَه: روّاه من الأُدْم، أو بالسَمن والوَدَك. وفي كلامه لَغلَغةٌ: أي عُجمة \".\n(4/1981)\n° المعنى المحوري\nتخلُّل الشيء المتسيب بمائع ثَخين يجعله كالمتماسك (1): كالثريد الموصوف. والمقصود بالعُجمة هنا -أخذًا من هذا- تداخُلُ الكلماتِ وحروفها بعضِها في بعض؛ فلا تتميَّز مفاصلُها."
+  },
+  "muhassas_tasnif": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "mana_tasnif_gomme": {
+    "ust": {
+      "kume": 6,
+      "merkez_kok": "لقلق",
+      "merkez_mana": "",
+      "boy": 440
+    },
+    "orta": {
+      "kume": 25,
+      "merkez_kok": "سعسع",
+      "merkez_mana": "",
+      "boy": 85
+    },
+    "ince": {
+      "kume": 148,
+      "merkez_kok": "جعد",
+      "merkez_mana": "crease, crumple, curl, wrinkle",
+      "boy": 14
+    }
+  },
+  "kaliplar": {},
+  "kelimeler": []
+}
