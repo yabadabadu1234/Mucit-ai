@@ -134,3 +134,15 @@ Bu karşılaştırma bilinen biçimlerledir; tam sarf sicili sınaması değildi
 | علط | if'ivvāl | اِعْلِوَّاط |
 | حمر | if'ilāl | اِحْمِرَار |
 | حمر | if'īlāl | اِحْمِيرَار |
+
+## Türkçe müştak motoru (F 364) — `turkce.py`, `turkce_dogrula.py`
+
+Veri: `kaynak/lugat/kok_anlamlari.json` (1651 kök, serbest metin).
+
+**Kök karşılığından fiil sapı çıkarımı (1651 kök):** 695 kökte fiil var (%42) · 159 kökte `-lık` soyut isim, sıfata çevrilip "… ol-" sapı kuruldu (%10) · 797 kökte yalnız isim var (%48; "kontrol" güveniyle işaretlenir) · 0 kök tamamen boş.
+
+**Ek zinciri doğrulaması (Vezinler Tablosu, 20 fiil × fâil ve mef'ûl = 40 biçim):** 37 tuttu · 3 tutmadı. Tutmayanlar kural hatası değil, tablonun kendi anlam kaymasıdır: `ders ver` → tabloda mef'ûl "ders görmüş" (kural "ders verilmiş" der), `ilim öğret` → "ilim görmüş" (kural "ilim öğretilmiş"), `gülümse` → tabloda "gülümsenen" (kural "gülümsenmiş"). Bu üçü mekanik türetmenin sınırıdır: anlam kayması kuralla bulunamaz.
+
+**Neyi doğrulamıyor:** tablo son Türkçe fiili verir, Form I kökünü vermez; bu yüzden bâb anlam kuralları (ettirgen, işteşlik, dönüşlülük, isteme) bu tabloyla sınanamadı, yalnız ek zinciri sınandı.
+
+**Güven işareti (31 kök tablosu, 13 256 satır):** kural 107 · orta 7694 · kontrol 4616 · veri yok 843. "Kural" yalnız fiil kökü kesin, kalıp kıyâsî ve Türkçe karşılığı mekanik olan satırlardır; "orta" karşılığın yaklaşık olduğu (tafdîl, mübalağa, âlet, mekân, cem', bâb anlamı); "kontrol" kökte fiil olmadığı veya geçişliliğin tahmin edildiği satırlardır. Elle kontrol yükü: kontrol + veri yok = %41 satır; bunun büyük kısmı isim karşılıklı köklerdir.

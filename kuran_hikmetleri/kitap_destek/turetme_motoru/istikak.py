@@ -712,7 +712,7 @@ def md(kok, sinif, satir, red):
     idg = sum(1 for s in satir if s['idg'])
     il = sum(1 for s in satir if 'ilal' in s['etiket'])
     out = ['# İŞTİKAK MOTORU ÇIKTISI — kök %s (%s)\n' % (' '.join(kok), sinif),
-           'Arapça ve Latin sütunları **motorun çıktısıdır**; Türkçe ve mana sütunları **elle yazılacak** (boş).\n',
+           'Arapça ve Latin sütunları **motorun çıktısıdır**. Türkçe sütunu `turkce.py` motorunun mekanik karşılığıdır; güven: **kural** (kural doğru uygulandı) · **orta** (karşılık yaklaşık) · **kontrol** (insan gözü lazım). Mana değişmesi sütunu elle yazılır.\n',
            'Sayım: **%d satır · %d ayrı Arapça biçim · %d satırda idgam · %d satırda ilal kaidesi · %d reddedilen**\n' % (
                len(satir), benzersiz, idg, il, len(red))]
     grup = {}
@@ -720,10 +720,10 @@ def md(kok, sinif, satir, red):
         grup.setdefault(s['grup'], []).append(s)
     for g, rows in grup.items():
         out.append('\n## %s (%d)\n' % (g, len(rows)))
-        out.append('| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |')
-        out.append('| :-- | :-- | :-- | :-- | :-- | :-- |')
+        out.append('| kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | mana değişmesi |')
+        out.append('| :-- | :-- | :-- | :-- | :-- | :-- | :-- |')
         for r in rows:
-            out.append('| %s | %s | %s | %s |  |  |' % (r['ad'], r['ar'], r['lat'], r['etiket']))
+            out.append('| %s | %s | %s | %s | %s | %s |  |' % (r['ad'], r['ar'], r['lat'], r['etiket'], r.get('tr', ''), r.get('guven', '')))
     if red:
         out.append('\n## Reddedilenler ve sebebi\n')
         out.append('| grup | kalıp | sebep |')

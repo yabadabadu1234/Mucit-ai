@@ -128,4 +128,5 @@
  11 Maksûd ilâl sayfaları: 72 biçimlik doğrulama, 24 kök tablosu (F 361)
  12 birleşik kök sınıfları, IX-XIII izharlı, ism-i masdar ve ism-i cins aday kalıpları, 75 biçimlik doğrulama (F 362)
  13 lâmı illetli kökte IX, XI, XII, XIII masdar ve müştakları (irʿiwâʾ, murʿawî); XIII masdar hatası düzeltildi; 80 biçimlik doğrulama (F 363)
+ 14 Türkçe müştak motoru: kök karşılığından fiil sapı, ek zinciri, güven işareti (kural · orta · kontrol) (F 364)
 ```
