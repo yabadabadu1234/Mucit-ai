@@ -2,9 +2,9 @@
   "kok": "ذمم",
   "sinif": "muzâ‘af",
   "turkce_fiil": {
-    "sap": "ahit ol",
-    "kaynak": "ad",
-    "guven": "kontrol"
+    "sap": "yer",
+    "kaynak": "fiil",
+    "guven": "kural"
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
@@ -12,738 +12,724 @@
         0,
         "ذَمّ",
         "ẕamm",
-        "ahit",
-        "kontrol",
+        "yerme",
+        "orta",
         "Vikisözlük: masdar (bâb I): to dispraise, discommend, disesteem, denigrate, decry, degrade, cry do"
       ],
-      [1, "ذِمّ", "ẕimm", "ahit", "kontrol", ""],
-      [2, "ذُمّ", "ẕumm", "ahit", "kontrol", ""],
+      [1, "ذِمّ", "ẕimm", "yerme", "orta", ""],
+      [2, "ذُمّ", "ẕumm", "yerme", "orta", ""],
       [
         3,
         "ذَمّ",
         "ẕamm",
-        "ahit",
-        "kontrol",
+        "yerme",
+        "orta",
         "Vikisözlük: masdar (bâb I): to dispraise, discommend, disesteem, denigrate, decry, degrade, cry do"
       ],
-      [4, "ذِمّ", "ẕimm", "ahit", "kontrol", ""],
-      [5, "ذُمّ", "ẕumm", "ahit", "kontrol", ""],
-      [6, "ذُمُوم", "ẕumūm", "ahit", "kontrol", ""],
-      [7, "ذِمَام", "ẕimām", "ahit", "kontrol", ""],
-      [8, "ذُمَام", "ẕumām", "ahit", "kontrol", ""],
-      [9, "ذَمَام", "ẕamām", "ahit", "kontrol", ""],
-      [10, "ذَمَامَة", "ẕamāma", "ahit", "kontrol", ""],
-      [11, "ذُمُومَة", "ẕumūma", "ahit", "kontrol", ""],
-      [12, "ذِمَامَة", "ẕimāma", "ahit", "kontrol", ""],
-      [13, "ذَمِيم", "ẕamīm", "ahit", "kontrol", "Vikisözlük: obnoxious"],
-      [14, "ذَمُوم", "ẕamūm", "ahit", "kontrol", ""],
-      [15, "ذَمَّان", "ẕammān", "ahit", "kontrol", ""],
-      [16, "ذُمَّان", "ẕummān", "ahit", "kontrol", ""],
-      [17, "ذِمَّان", "ẕimmān", "ahit", "kontrol", ""],
-      [18, "ذَمَّى", "ẕammā", "ahit", "kontrol", ""],
-      [19, "ذُمَّى", "ẕummā", "ahit", "kontrol", ""],
-      [20, "ذِمَّى", "ẕimmā", "ahit", "kontrol", ""],
-      [21, "ذَمَّة", "ẕamma", "ahit", "kontrol", ""],
-      [22, "ذِمَّة", "ẕimma", "ahit", "kontrol", "Vikisözlük: peace, custody, guardianship, care"],
-      [23, "ذَمُّومَة", "ẕammūma", "ahit", "kontrol", ""],
-      [24, "تُذْمُوم", "tuẕmūm", "ahit", "kontrol", ""],
-      [25, "تَذِمَّة", "taẕimma", "ahit", "kontrol", ""],
-      [26, "تَذَمَّة", "taẕamma", "ahit", "kontrol", ""],
-      [27, "مَذُمَّة", "maẕumma", "ahit", "kontrol", ""],
-      [28, "مَذِمَّة", "maẕimma", "ahit", "kontrol", ""]
+      [4, "ذِمّ", "ẕimm", "yerme", "orta", ""],
+      [5, "ذُمّ", "ẕumm", "yerme", "orta", ""],
+      [6, "ذُمُوم", "ẕumūm", "yerme", "orta", ""],
+      [7, "ذِمَام", "ẕimām", "yerme", "orta", ""],
+      [8, "ذُمَام", "ẕumām", "yerme", "orta", ""],
+      [9, "ذَمَام", "ẕamām", "yerme", "orta", ""],
+      [10, "ذَمَامَة", "ẕamāma", "yerme", "orta", ""],
+      [11, "ذُمُومَة", "ẕumūma", "yerme", "orta", ""],
+      [12, "ذِمَامَة", "ẕimāma", "yerme", "orta", ""],
+      [13, "ذَمِيم", "ẕamīm", "yerme", "orta", "Vikisözlük: obnoxious"],
+      [14, "ذَمُوم", "ẕamūm", "yerme", "orta", ""],
+      [15, "ذَمَّان", "ẕammān", "yerme", "orta", ""],
+      [16, "ذُمَّان", "ẕummān", "yerme", "orta", ""],
+      [17, "ذِمَّان", "ẕimmān", "yerme", "orta", ""],
+      [18, "ذَمَّى", "ẕammā", "yerme", "orta", ""],
+      [19, "ذُمَّى", "ẕummā", "yerme", "orta", ""],
+      [20, "ذِمَّى", "ẕimmā", "yerme", "orta", ""],
+      [21, "ذَمَّة", "ẕamma", "yerme", "orta", ""],
+      [22, "ذِمَّة", "ẕimma", "yerme", "orta", "Vikisözlük: peace, custody, guardianship, care"],
+      [23, "ذَمُّومَة", "ẕammūma", "yerme", "orta", ""],
+      [24, "تُذْمُوم", "tuẕmūm", "yerme", "orta", ""],
+      [25, "تَذِمَّة", "taẕimma", "yerme", "orta", ""],
+      [26, "تَذَمَّة", "taẕamma", "yerme", "orta", ""],
+      [27, "مَذُمَّة", "maẕumma", "yerme", "orta", ""],
+      [28, "مَذِمَّة", "maẕimma", "yerme", "orta", ""]
     ],
     "masdar · bâb II": [
-      [29, "تَذْمِيم", "taẕmīm", "ahit olma", "kontrol", ""],
-      [30, "تَذِمَّة", "taẕimma", "ahit olma", "kontrol", ""],
-      [31, "ذِمِّام", "ẕimmām", "ahit olma", "kontrol", ""]
+      [29, "تَذْمِيم", "taẕmīm", "yerme", "orta", ""],
+      [30, "تَذِمَّة", "taẕimma", "yerme", "orta", ""],
+      [31, "ذِمِّام", "ẕimmām", "yerme", "orta", ""]
     ],
     "ism-i merre · bâb II": [
-      [32, "تَذْمِيمَة", "taẕmīma", "bir kere ahit olma", "kontrol", ""],
-      [33, "ذِمِّامَة", "ẕimmāma", "bir kere ahit olma", "kontrol", ""]
+      [32, "تَذْمِيمَة", "taẕmīma", "bir kere yerme", "orta", ""],
+      [33, "ذِمِّامَة", "ẕimmāma", "bir kere yerme", "orta", ""]
     ],
     "ism-i fâil · bâb II": [
-      [34, "مُذَمِّم", "muẕammim", "ahit olan", "kontrol", ""],
-      [35, "مُذَمِّمَة", "muẕammima", "ahit olan (dişi)", "kontrol", ""],
-      [36, "مُذَمِّمَان", "muẕammimān", "iki ahit olan", "kontrol", ""],
-      [37, "مُذَمِّمَتَان", "muẕammimatān", "iki ahit olan (dişi)", "kontrol", ""],
-      [38, "مُذَمِّمُون", "muẕammimūn", "ahit olanlar", "kontrol", ""],
-      [39, "مُذَمِّمِين", "muẕammimīn", "ahit olanlar", "kontrol", ""],
-      [40, "مُذَمِّمَات", "muẕammimāt", "ahit olanlar (dişi)", "kontrol", ""]
+      [34, "مُذَمِّم", "muẕammim", "yeren", "orta", ""],
+      [35, "مُذَمِّمَة", "muẕammima", "yeren (dişi)", "orta", ""],
+      [36, "مُذَمِّمَان", "muẕammimān", "iki yeren", "orta", ""],
+      [37, "مُذَمِّمَتَان", "muẕammimatān", "iki yeren (dişi)", "orta", ""],
+      [38, "مُذَمِّمُون", "muẕammimūn", "yerenler", "orta", ""],
+      [39, "مُذَمِّمِين", "muẕammimīn", "yerenler", "orta", ""],
+      [40, "مُذَمِّمَات", "muẕammimāt", "yerenler (dişi)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb II": [
-      [41, "مُذَمَّم", "muẕammam", "ahit olunmuş", "kontrol", ""],
-      [42, "مُذَمَّمَة", "muẕammama", "ahit olunmuş (dişi)", "kontrol", ""],
-      [43, "مُذَمَّمَان", "muẕammamān", "iki ahit olunmuş", "kontrol", ""],
-      [44, "مُذَمَّمَتَان", "muẕammamatān", "iki ahit olunmuş (dişi)", "kontrol", ""],
-      [45, "مُذَمَّمُون", "muẕammamūn", "ahit olunmuşlar", "kontrol", ""],
-      [46, "مُذَمَّمِين", "muẕammamīn", "ahit olunmuşlar", "kontrol", ""],
-      [47, "مُذَمَّمَات", "muẕammamāt", "ahit olunmuşlar (dişi)", "kontrol", ""]
+      [41, "مُذَمَّم", "muẕammam", "yerilmiş", "orta", ""],
+      [42, "مُذَمَّمَة", "muẕammama", "yerilmiş (dişi)", "orta", ""],
+      [43, "مُذَمَّمَان", "muẕammamān", "iki yerilmiş", "orta", ""],
+      [44, "مُذَمَّمَتَان", "muẕammamatān", "iki yerilmiş (dişi)", "orta", ""],
+      [45, "مُذَمَّمُون", "muẕammamūn", "yerilmişler", "orta", ""],
+      [46, "مُذَمَّمِين", "muẕammamīn", "yerilmişler", "orta", ""],
+      [47, "مُذَمَّمَات", "muẕammamāt", "yerilmişler (dişi)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb II": [
-      [48, "مُذَمَّم", "muẕammam", "ahit olma (yeri/zamanı)", "kontrol", ""]
+      [48, "مُذَمَّم", "muẕammam", "yerme (yeri/zamanı)", "orta", ""]
     ],
     "masdar · bâb III": [
-      [49, "مُذَامَّة", "muẕāmma", "ahit oluşma", "kontrol", ""],
-      [50, "ذِمَام", "ẕimām", "ahit oluşma", "kontrol", ""]
+      [49, "مُذَامَّة", "muẕāmma", "yerişme", "orta", ""],
+      [50, "ذِمَام", "ẕimām", "yerişme", "orta", ""]
     ],
     "ism-i merre · bâb III": [
-      [51, "ذِمَامَة", "ẕimāma", "bir kere ahit oluşma", "kontrol", ""]
+      [51, "ذِمَامَة", "ẕimāma", "bir kere yerişme", "orta", ""]
     ],
     "ism-i fâil · bâb III": [
-      [52, "مُذَامّ", "muẕāmm", "ahit oluşan", "kontrol", ""],
-      [53, "مُذَامَّة", "muẕāmma", "ahit oluşan (dişi)", "kontrol", ""],
-      [54, "مُذَامَّان", "muẕāmmān", "iki ahit oluşan", "kontrol", ""],
-      [55, "مُذَامَّتَان", "muẕāmmatān", "iki ahit oluşan (dişi)", "kontrol", ""],
-      [56, "مُذَامُّون", "muẕāmmūn", "ahit oluşanlar", "kontrol", ""],
-      [57, "مُذَامِّين", "muẕāmmīn", "ahit oluşanlar", "kontrol", ""],
-      [58, "مُذَامَّات", "muẕāmmāt", "ahit oluşanlar (dişi)", "kontrol", ""]
+      [52, "مُذَامّ", "muẕāmm", "yerişen", "orta", ""],
+      [53, "مُذَامَّة", "muẕāmma", "yerişen (dişi)", "orta", ""],
+      [54, "مُذَامَّان", "muẕāmmān", "iki yerişen", "orta", ""],
+      [55, "مُذَامَّتَان", "muẕāmmatān", "iki yerişen (dişi)", "orta", ""],
+      [56, "مُذَامُّون", "muẕāmmūn", "yerişenler", "orta", ""],
+      [57, "مُذَامِّين", "muẕāmmīn", "yerişenler", "orta", ""],
+      [58, "مُذَامَّات", "muẕāmmāt", "yerişenler (dişi)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb III": [
-      [59, "مُذَامّ", "muẕāmm", "ahit oluşmuş", "kontrol", ""],
-      [60, "مُذَامَّة", "muẕāmma", "ahit oluşmuş (dişi)", "kontrol", ""],
-      [61, "مُذَامَّان", "muẕāmmān", "iki ahit oluşmuş", "kontrol", ""],
-      [62, "مُذَامَّتَان", "muẕāmmatān", "iki ahit oluşmuş (dişi)", "kontrol", ""],
-      [63, "مُذَامُّون", "muẕāmmūn", "ahit oluşmuşlar", "kontrol", ""],
-      [64, "مُذَامِّين", "muẕāmmīn", "ahit oluşmuşlar", "kontrol", ""],
-      [65, "مُذَامَّات", "muẕāmmāt", "ahit oluşmuşlar (dişi)", "kontrol", ""]
+      [59, "مُذَامّ", "muẕāmm", "yerişmiş", "orta", ""],
+      [60, "مُذَامَّة", "muẕāmma", "yerişmiş (dişi)", "orta", ""],
+      [61, "مُذَامَّان", "muẕāmmān", "iki yerişmiş", "orta", ""],
+      [62, "مُذَامَّتَان", "muẕāmmatān", "iki yerişmiş (dişi)", "orta", ""],
+      [63, "مُذَامُّون", "muẕāmmūn", "yerişmişler", "orta", ""],
+      [64, "مُذَامِّين", "muẕāmmīn", "yerişmişler", "orta", ""],
+      [65, "مُذَامَّات", "muẕāmmāt", "yerişmişler (dişi)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb III": [
-      [66, "مُذَامّ", "muẕāmm", "ahit oluşma (yeri/zamanı)", "kontrol", ""]
+      [66, "مُذَامّ", "muẕāmm", "yerişme (yeri/zamanı)", "orta", ""]
     ],
     "masdar · bâb IV": [
-      [67, "إِذْمَام", "ʾiẕmām", "ahit olma", "kontrol", ""]
+      [67, "إِذْمَام", "ʾiẕmām", "yerme", "orta", ""]
     ],
     "ism-i merre · bâb IV": [
-      [68, "إِذْمَامَة", "ʾiẕmāma", "bir kere ahit olma", "kontrol", ""]
+      [68, "إِذْمَامَة", "ʾiẕmāma", "bir kere yerme", "orta", ""]
     ],
     "ism-i fâil · bâb IV": [
-      [69, "مُذِمّ", "muẕimm", "ahit olan", "kontrol", ""],
-      [70, "مُذِمَّة", "muẕimma", "ahit olan (dişi)", "kontrol", ""],
-      [71, "مُذِمَّان", "muẕimmān", "iki ahit olan", "kontrol", ""],
-      [72, "مُذِمَّتَان", "muẕimmatān", "iki ahit olan (dişi)", "kontrol", ""],
-      [73, "مُذِمُّون", "muẕimmūn", "ahit olanlar", "kontrol", ""],
-      [74, "مُذِمِّين", "muẕimmīn", "ahit olanlar", "kontrol", ""],
-      [75, "مُذِمَّات", "muẕimmāt", "ahit olanlar (dişi)", "kontrol", ""]
+      [69, "مُذِمّ", "muẕimm", "yeren", "orta", ""],
+      [70, "مُذِمَّة", "muẕimma", "yeren (dişi)", "orta", ""],
+      [71, "مُذِمَّان", "muẕimmān", "iki yeren", "orta", ""],
+      [72, "مُذِمَّتَان", "muẕimmatān", "iki yeren (dişi)", "orta", ""],
+      [73, "مُذِمُّون", "muẕimmūn", "yerenler", "orta", ""],
+      [74, "مُذِمِّين", "muẕimmīn", "yerenler", "orta", ""],
+      [75, "مُذِمَّات", "muẕimmāt", "yerenler (dişi)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb IV": [
-      [76, "مُذَمّ", "muẕamm", "ahit olunmuş", "kontrol", ""],
-      [77, "مُذَمَّة", "muẕamma", "ahit olunmuş (dişi)", "kontrol", ""],
-      [78, "مُذَمَّان", "muẕammān", "iki ahit olunmuş", "kontrol", ""],
-      [79, "مُذَمَّتَان", "muẕammatān", "iki ahit olunmuş (dişi)", "kontrol", ""],
-      [80, "مُذَمُّون", "muẕammūn", "ahit olunmuşlar", "kontrol", ""],
-      [81, "مُذَمِّين", "muẕammīn", "ahit olunmuşlar", "kontrol", ""],
-      [82, "مُذَمَّات", "muẕammāt", "ahit olunmuşlar (dişi)", "kontrol", ""]
+      [76, "مُذَمّ", "muẕamm", "yerilmiş", "orta", ""],
+      [77, "مُذَمَّة", "muẕamma", "yerilmiş (dişi)", "orta", ""],
+      [78, "مُذَمَّان", "muẕammān", "iki yerilmiş", "orta", ""],
+      [79, "مُذَمَّتَان", "muẕammatān", "iki yerilmiş (dişi)", "orta", ""],
+      [80, "مُذَمُّون", "muẕammūn", "yerilmişler", "orta", ""],
+      [81, "مُذَمِّين", "muẕammīn", "yerilmişler", "orta", ""],
+      [82, "مُذَمَّات", "muẕammāt", "yerilmişler (dişi)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb IV": [
-      [83, "مُذَمّ", "muẕamm", "ahit olma (yeri/zamanı)", "kontrol", ""]
+      [83, "مُذَمّ", "muẕamm", "yerme (yeri/zamanı)", "orta", ""]
     ],
     "masdar · bâb V": [
-      [84, "تَذَمُّم", "taẕammum", "ahit olunma", "kontrol", ""]
+      [84, "تَذَمُّم", "taẕammum", "yerinme", "orta", ""]
     ],
     "ism-i merre · bâb V": [
-      [85, "تَذَمُّمَة", "taẕammuma", "bir kere ahit olunma", "kontrol", ""]
+      [85, "تَذَمُّمَة", "taẕammuma", "bir kere yerinme", "orta", ""]
     ],
     "ism-i fâil · bâb V": [
-      [86, "مُتَذَمِّم", "mutaẕammim", "ahit olunan", "kontrol", ""],
-      [87, "مُتَذَمِّمَة", "mutaẕammima", "ahit olunan (dişi)", "kontrol", ""],
-      [88, "مُتَذَمِّمَان", "mutaẕammimān", "iki ahit olunan", "kontrol", ""],
-      [89, "مُتَذَمِّمَتَان", "mutaẕammimatān", "iki ahit olunan (dişi)", "kontrol", ""],
-      [90, "مُتَذَمِّمُون", "mutaẕammimūn", "ahit olunanlar", "kontrol", ""],
-      [91, "مُتَذَمِّمِين", "mutaẕammimīn", "ahit olunanlar", "kontrol", ""],
-      [92, "مُتَذَمِّمَات", "mutaẕammimāt", "ahit olunanlar (dişi)", "kontrol", ""]
+      [86, "مُتَذَمِّم", "mutaẕammim", "yerinen", "orta", ""],
+      [87, "مُتَذَمِّمَة", "mutaẕammima", "yerinen (dişi)", "orta", ""],
+      [88, "مُتَذَمِّمَان", "mutaẕammimān", "iki yerinen", "orta", ""],
+      [89, "مُتَذَمِّمَتَان", "mutaẕammimatān", "iki yerinen (dişi)", "orta", ""],
+      [90, "مُتَذَمِّمُون", "mutaẕammimūn", "yerinenler", "orta", ""],
+      [91, "مُتَذَمِّمِين", "mutaẕammimīn", "yerinenler", "orta", ""],
+      [92, "مُتَذَمِّمَات", "mutaẕammimāt", "yerinenler (dişi)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb V": [
-      [93, "مُتَذَمَّم", "mutaẕammam", "ahit olunmuş", "kontrol", ""],
-      [94, "مُتَذَمَّمَة", "mutaẕammama", "ahit olunmuş (dişi)", "kontrol", ""],
-      [95, "مُتَذَمَّمَان", "mutaẕammamān", "iki ahit olunmuş", "kontrol", ""],
-      [96, "مُتَذَمَّمَتَان", "mutaẕammamatān", "iki ahit olunmuş (dişi)", "kontrol", ""],
-      [97, "مُتَذَمَّمُون", "mutaẕammamūn", "ahit olunmuşlar", "kontrol", ""],
-      [98, "مُتَذَمَّمِين", "mutaẕammamīn", "ahit olunmuşlar", "kontrol", ""],
-      [99, "مُتَذَمَّمَات", "mutaẕammamāt", "ahit olunmuşlar (dişi)", "kontrol", ""]
+      [93, "مُتَذَمَّم", "mutaẕammam", "yerinmiş", "orta", ""],
+      [94, "مُتَذَمَّمَة", "mutaẕammama", "yerinmiş (dişi)", "orta", ""],
+      [95, "مُتَذَمَّمَان", "mutaẕammamān", "iki yerinmiş", "orta", ""],
+      [96, "مُتَذَمَّمَتَان", "mutaẕammamatān", "iki yerinmiş (dişi)", "orta", ""],
+      [97, "مُتَذَمَّمُون", "mutaẕammamūn", "yerinmişler", "orta", ""],
+      [98, "مُتَذَمَّمِين", "mutaẕammamīn", "yerinmişler", "orta", ""],
+      [99, "مُتَذَمَّمَات", "mutaẕammamāt", "yerinmişler (dişi)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb V": [
-      [100, "مُتَذَمَّم", "mutaẕammam", "ahit olunma (yeri/zamanı)", "kontrol", ""]
+      [100, "مُتَذَمَّم", "mutaẕammam", "yerinme (yeri/zamanı)", "orta", ""]
     ],
     "masdar · bâb VI": [
-      [
-        101,
-        "تَذَامّ",
-        "taẕāmm",
-        "ahit oluşma",
-        "kontrol",
-        "Vikisözlük: masdar (bâb VI): to defame, slander each other"
-      ]
+      [101, "تَذَامّ", "taẕāmm", "yerişme", "orta", "Vikisözlük: masdar (bâb VI): to defame, slander each other"]
     ],
     "ism-i merre · bâb VI": [
-      [102, "تَذَامَّة", "taẕāmma", "bir kere ahit oluşma", "kontrol", ""]
+      [102, "تَذَامَّة", "taẕāmma", "bir kere yerişme", "orta", ""]
     ],
     "ism-i fâil · bâb VI": [
-      [103, "مُتَذَامّ", "mutaẕāmm", "ahit oluşan", "kontrol", ""],
-      [104, "مُتَذَامَّة", "mutaẕāmma", "ahit oluşan (dişi)", "kontrol", ""],
-      [105, "مُتَذَامَّان", "mutaẕāmmān", "iki ahit oluşan", "kontrol", ""],
-      [106, "مُتَذَامَّتَان", "mutaẕāmmatān", "iki ahit oluşan (dişi)", "kontrol", ""],
-      [107, "مُتَذَامُّون", "mutaẕāmmūn", "ahit oluşanlar", "kontrol", ""],
-      [108, "مُتَذَامِّين", "mutaẕāmmīn", "ahit oluşanlar", "kontrol", ""],
-      [109, "مُتَذَامَّات", "mutaẕāmmāt", "ahit oluşanlar (dişi)", "kontrol", ""]
+      [103, "مُتَذَامّ", "mutaẕāmm", "yerişen", "orta", ""],
+      [104, "مُتَذَامَّة", "mutaẕāmma", "yerişen (dişi)", "orta", ""],
+      [105, "مُتَذَامَّان", "mutaẕāmmān", "iki yerişen", "orta", ""],
+      [106, "مُتَذَامَّتَان", "mutaẕāmmatān", "iki yerişen (dişi)", "orta", ""],
+      [107, "مُتَذَامُّون", "mutaẕāmmūn", "yerişenler", "orta", ""],
+      [108, "مُتَذَامِّين", "mutaẕāmmīn", "yerişenler", "orta", ""],
+      [109, "مُتَذَامَّات", "mutaẕāmmāt", "yerişenler (dişi)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VI": [
-      [110, "مُتَذَامّ", "mutaẕāmm", "ahit oluşmuş", "kontrol", ""],
-      [111, "مُتَذَامَّة", "mutaẕāmma", "ahit oluşmuş (dişi)", "kontrol", ""],
-      [112, "مُتَذَامَّان", "mutaẕāmmān", "iki ahit oluşmuş", "kontrol", ""],
-      [113, "مُتَذَامَّتَان", "mutaẕāmmatān", "iki ahit oluşmuş (dişi)", "kontrol", ""],
-      [114, "مُتَذَامُّون", "mutaẕāmmūn", "ahit oluşmuşlar", "kontrol", ""],
-      [115, "مُتَذَامِّين", "mutaẕāmmīn", "ahit oluşmuşlar", "kontrol", ""],
-      [116, "مُتَذَامَّات", "mutaẕāmmāt", "ahit oluşmuşlar (dişi)", "kontrol", ""]
+      [110, "مُتَذَامّ", "mutaẕāmm", "yerişmiş", "orta", ""],
+      [111, "مُتَذَامَّة", "mutaẕāmma", "yerişmiş (dişi)", "orta", ""],
+      [112, "مُتَذَامَّان", "mutaẕāmmān", "iki yerişmiş", "orta", ""],
+      [113, "مُتَذَامَّتَان", "mutaẕāmmatān", "iki yerişmiş (dişi)", "orta", ""],
+      [114, "مُتَذَامُّون", "mutaẕāmmūn", "yerişmişler", "orta", ""],
+      [115, "مُتَذَامِّين", "mutaẕāmmīn", "yerişmişler", "orta", ""],
+      [116, "مُتَذَامَّات", "mutaẕāmmāt", "yerişmişler (dişi)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VI": [
-      [117, "مُتَذَامّ", "mutaẕāmm", "ahit oluşma (yeri/zamanı)", "kontrol", ""]
+      [117, "مُتَذَامّ", "mutaẕāmm", "yerişme (yeri/zamanı)", "orta", ""]
     ],
     "masdar · bâb VII": [
-      [118, "اِنْذِمَام", "inẕimām", "ahit olunma", "kontrol", ""]
+      [118, "اِنْذِمَام", "inẕimām", "yerilme", "orta", ""]
     ],
     "ism-i merre · bâb VII": [
-      [119, "اِنْذِمَامَة", "inẕimāma", "bir kere ahit olunma", "kontrol", ""]
+      [119, "اِنْذِمَامَة", "inẕimāma", "bir kere yerilme", "orta", ""]
     ],
     "ism-i fâil · bâb VII": [
-      [120, "مُنْذَمّ", "munẕamm", "ahit olunan", "kontrol", ""],
-      [121, "مُنْذَمَّة", "munẕamma", "ahit olunan (dişi)", "kontrol", ""],
-      [122, "مُنْذَمَّان", "munẕammān", "iki ahit olunan", "kontrol", ""],
-      [123, "مُنْذَمَّتَان", "munẕammatān", "iki ahit olunan (dişi)", "kontrol", ""],
-      [124, "مُنْذَمُّون", "munẕammūn", "ahit olunanlar", "kontrol", ""],
-      [125, "مُنْذَمِّين", "munẕammīn", "ahit olunanlar", "kontrol", ""],
-      [126, "مُنْذَمَّات", "munẕammāt", "ahit olunanlar (dişi)", "kontrol", ""]
+      [120, "مُنْذَمّ", "munẕamm", "yerilen", "orta", ""],
+      [121, "مُنْذَمَّة", "munẕamma", "yerilen (dişi)", "orta", ""],
+      [122, "مُنْذَمَّان", "munẕammān", "iki yerilen", "orta", ""],
+      [123, "مُنْذَمَّتَان", "munẕammatān", "iki yerilen (dişi)", "orta", ""],
+      [124, "مُنْذَمُّون", "munẕammūn", "yerilenler", "orta", ""],
+      [125, "مُنْذَمِّين", "munẕammīn", "yerilenler", "orta", ""],
+      [126, "مُنْذَمَّات", "munẕammāt", "yerilenler (dişi)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VII": [
-      [127, "مُنْذَمّ", "munẕamm", "ahit olunmuş", "kontrol", ""],
-      [128, "مُنْذَمَّة", "munẕamma", "ahit olunmuş (dişi)", "kontrol", ""],
-      [129, "مُنْذَمَّان", "munẕammān", "iki ahit olunmuş", "kontrol", ""],
-      [130, "مُنْذَمَّتَان", "munẕammatān", "iki ahit olunmuş (dişi)", "kontrol", ""],
-      [131, "مُنْذَمُّون", "munẕammūn", "ahit olunmuşlar", "kontrol", ""],
-      [132, "مُنْذَمِّين", "munẕammīn", "ahit olunmuşlar", "kontrol", ""],
-      [133, "مُنْذَمَّات", "munẕammāt", "ahit olunmuşlar (dişi)", "kontrol", ""]
+      [127, "مُنْذَمّ", "munẕamm", "yerilmiş", "orta", ""],
+      [128, "مُنْذَمَّة", "munẕamma", "yerilmiş (dişi)", "orta", ""],
+      [129, "مُنْذَمَّان", "munẕammān", "iki yerilmiş", "orta", ""],
+      [130, "مُنْذَمَّتَان", "munẕammatān", "iki yerilmiş (dişi)", "orta", ""],
+      [131, "مُنْذَمُّون", "munẕammūn", "yerilmişler", "orta", ""],
+      [132, "مُنْذَمِّين", "munẕammīn", "yerilmişler", "orta", ""],
+      [133, "مُنْذَمَّات", "munẕammāt", "yerilmişler (dişi)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VII": [
-      [134, "مُنْذَمّ", "munẕamm", "ahit olunma (yeri/zamanı)", "kontrol", ""]
+      [134, "مُنْذَمّ", "munẕamm", "yerilme (yeri/zamanı)", "orta", ""]
     ],
     "masdar · bâb VIII": [
-      [135, "اِدِّمَام", "iddimām", "ahit olunma", "kontrol", ""]
+      [135, "اِدِّمَام", "iddimām", "yerinme", "orta", ""]
     ],
     "ism-i merre · bâb VIII": [
-      [137, "اِدِّمَامَة", "iddimāma", "bir kere ahit olunma", "kontrol", ""]
+      [137, "اِدِّمَامَة", "iddimāma", "bir kere yerinme", "orta", ""]
     ],
     "ism-i fâil · bâb VIII": [
-      [138, "مُدَّمّ", "muddamm", "ahit olunan", "kontrol", ""],
-      [139, "مُدَّمَّة", "muddamma", "ahit olunan (dişi)", "kontrol", ""],
-      [140, "مُدَّمَّان", "muddammān", "iki ahit olunan", "kontrol", ""],
-      [141, "مُدَّمَّتَان", "muddammatān", "iki ahit olunan (dişi)", "kontrol", ""],
-      [142, "مُدَّمُّون", "muddammūn", "ahit olunanlar", "kontrol", ""],
-      [143, "مُدَّمِّين", "muddammīn", "ahit olunanlar", "kontrol", ""],
-      [144, "مُدَّمَّات", "muddammāt", "ahit olunanlar (dişi)", "kontrol", ""]
+      [138, "مُدَّمّ", "muddamm", "yerinen", "orta", ""],
+      [139, "مُدَّمَّة", "muddamma", "yerinen (dişi)", "orta", ""],
+      [140, "مُدَّمَّان", "muddammān", "iki yerinen", "orta", ""],
+      [141, "مُدَّمَّتَان", "muddammatān", "iki yerinen (dişi)", "orta", ""],
+      [142, "مُدَّمُّون", "muddammūn", "yerinenler", "orta", ""],
+      [143, "مُدَّمِّين", "muddammīn", "yerinenler", "orta", ""],
+      [144, "مُدَّمَّات", "muddammāt", "yerinenler (dişi)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VIII": [
-      [145, "مُدَّمّ", "muddamm", "ahit olunmuş", "kontrol", ""],
-      [146, "مُدَّمَّة", "muddamma", "ahit olunmuş (dişi)", "kontrol", ""],
-      [147, "مُدَّمَّان", "muddammān", "iki ahit olunmuş", "kontrol", ""],
-      [148, "مُدَّمَّتَان", "muddammatān", "iki ahit olunmuş (dişi)", "kontrol", ""],
-      [149, "مُدَّمُّون", "muddammūn", "ahit olunmuşlar", "kontrol", ""],
-      [150, "مُدَّمِّين", "muddammīn", "ahit olunmuşlar", "kontrol", ""],
-      [151, "مُدَّمَّات", "muddammāt", "ahit olunmuşlar (dişi)", "kontrol", ""]
+      [145, "مُدَّمّ", "muddamm", "yerinmiş", "orta", ""],
+      [146, "مُدَّمَّة", "muddamma", "yerinmiş (dişi)", "orta", ""],
+      [147, "مُدَّمَّان", "muddammān", "iki yerinmiş", "orta", ""],
+      [148, "مُدَّمَّتَان", "muddammatān", "iki yerinmiş (dişi)", "orta", ""],
+      [149, "مُدَّمُّون", "muddammūn", "yerinmişler", "orta", ""],
+      [150, "مُدَّمِّين", "muddammīn", "yerinmişler", "orta", ""],
+      [151, "مُدَّمَّات", "muddammāt", "yerinmişler (dişi)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VIII": [
-      [152, "مُدَّمّ", "muddamm", "ahit olunma (yeri/zamanı)", "kontrol", ""]
+      [152, "مُدَّمّ", "muddamm", "yerinme (yeri/zamanı)", "orta", ""]
     ],
     "masdar · bâb IX (illet harfi izhar)": [
-      [168, "اِذْمِمَام", "iẕmimām", "ahitleşme", "kontrol", ""]
+      [168, "اِذْمِمَام", "iẕmimām", "yerleşme", "kontrol", ""]
     ],
     "ism-i fâil · bâb IX (illet harfi izhar)": [
-      [169, "مُذْمَمّ", "muẕmamm", "ahitleşen", "kontrol", ""],
-      [170, "مُذْمَمَّة", "muẕmamma", "ahitleşen (dişi)", "kontrol", ""],
-      [171, "مُذْمَمَّان", "muẕmammān", "iki ahitleşen", "kontrol", ""],
-      [172, "مُذْمَمَّتَان", "muẕmammatān", "iki ahitleşen (dişi)", "kontrol", ""],
-      [173, "مُذْمَمُّون", "muẕmammūn", "ahitleşenler", "kontrol", ""],
-      [174, "مُذْمَمِّين", "muẕmammīn", "ahitleşenler", "kontrol", ""],
-      [175, "مُذْمَمَّات", "muẕmammāt", "ahitleşenler (dişi)", "kontrol", ""]
+      [169, "مُذْمَمّ", "muẕmamm", "yerleşen", "kontrol", ""],
+      [170, "مُذْمَمَّة", "muẕmamma", "yerleşen (dişi)", "kontrol", ""],
+      [171, "مُذْمَمَّان", "muẕmammān", "iki yerleşen", "kontrol", ""],
+      [172, "مُذْمَمَّتَان", "muẕmammatān", "iki yerleşen (dişi)", "kontrol", ""],
+      [173, "مُذْمَمُّون", "muẕmammūn", "yerleşenler", "kontrol", ""],
+      [174, "مُذْمَمِّين", "muẕmammīn", "yerleşenler", "kontrol", ""],
+      [175, "مُذْمَمَّات", "muẕmammāt", "yerleşenler (dişi)", "kontrol", ""]
     ],
     "masdar · bâb X": [
-      [176, "اِسْتِذْمَام", "istiẕmām", "ahit olmayı isteme", "kontrol", "Vikisözlük: masdar (bâb X): to be blamed"]
+      [176, "اِسْتِذْمَام", "istiẕmām", "yermeyi isteme", "orta", "Vikisözlük: masdar (bâb X): to be blamed"]
     ],
     "ism-i merre · bâb X": [
-      [177, "اِسْتِذْمَامَة", "istiẕmāma", "bir kere ahit olma", "kontrol", ""]
+      [177, "اِسْتِذْمَامَة", "istiẕmāma", "bir kere yerme", "orta", ""]
     ],
     "ism-i fâil · bâb X": [
-      [178, "مُسْتَذِمّ", "mustaẕimm", "ahit olmayı isteyen", "kontrol", ""],
-      [179, "مُسْتَذِمَّة", "mustaẕimma", "ahit olmayı isteyen (dişi)", "kontrol", ""],
-      [180, "مُسْتَذِمَّان", "mustaẕimmān", "iki ahit olmayı isteyen", "kontrol", ""],
-      [181, "مُسْتَذِمَّتَان", "mustaẕimmatān", "iki ahit olmayı isteyen (dişi)", "kontrol", ""],
-      [182, "مُسْتَذِمُّون", "mustaẕimmūn", "ahit olmayı isteyenler", "kontrol", ""],
-      [183, "مُسْتَذِمِّين", "mustaẕimmīn", "ahit olmayı isteyenler", "kontrol", ""],
-      [184, "مُسْتَذِمَّات", "mustaẕimmāt", "ahit olmayı isteyenler (dişi)", "kontrol", ""]
+      [178, "مُسْتَذِمّ", "mustaẕimm", "yermeyi isteyen", "orta", ""],
+      [179, "مُسْتَذِمَّة", "mustaẕimma", "yermeyi isteyen (dişi)", "orta", ""],
+      [180, "مُسْتَذِمَّان", "mustaẕimmān", "iki yermeyi isteyen", "orta", ""],
+      [181, "مُسْتَذِمَّتَان", "mustaẕimmatān", "iki yermeyi isteyen (dişi)", "orta", ""],
+      [182, "مُسْتَذِمُّون", "mustaẕimmūn", "yermeyi isteyenler", "orta", ""],
+      [183, "مُسْتَذِمِّين", "mustaẕimmīn", "yermeyi isteyenler", "orta", ""],
+      [184, "مُسْتَذِمَّات", "mustaẕimmāt", "yermeyi isteyenler (dişi)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb X": [
-      [185, "مُسْتَذَمّ", "mustaẕamm", "ahit olmayı istenen", "kontrol", ""],
-      [186, "مُسْتَذَمَّة", "mustaẕamma", "ahit olmayı istenen (dişi)", "kontrol", ""],
-      [187, "مُسْتَذَمَّان", "mustaẕammān", "iki ahit olmayı istenen", "kontrol", ""],
-      [188, "مُسْتَذَمَّتَان", "mustaẕammatān", "iki ahit olmayı istenen (dişi)", "kontrol", ""],
-      [189, "مُسْتَذَمُّون", "mustaẕammūn", "ahit olmayı istenenler", "kontrol", ""],
-      [190, "مُسْتَذَمِّين", "mustaẕammīn", "ahit olmayı istenenler", "kontrol", ""],
-      [191, "مُسْتَذَمَّات", "mustaẕammāt", "ahit olmayı istenenler (dişi)", "kontrol", ""]
+      [185, "مُسْتَذَمّ", "mustaẕamm", "yermeyi istenen", "orta", ""],
+      [186, "مُسْتَذَمَّة", "mustaẕamma", "yermeyi istenen (dişi)", "orta", ""],
+      [187, "مُسْتَذَمَّان", "mustaẕammān", "iki yermeyi istenen", "orta", ""],
+      [188, "مُسْتَذَمَّتَان", "mustaẕammatān", "iki yermeyi istenen (dişi)", "orta", ""],
+      [189, "مُسْتَذَمُّون", "mustaẕammūn", "yermeyi istenenler", "orta", ""],
+      [190, "مُسْتَذَمِّين", "mustaẕammīn", "yermeyi istenenler", "orta", ""],
+      [191, "مُسْتَذَمَّات", "mustaẕammāt", "yermeyi istenenler (dişi)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb X": [
-      [192, "مُسْتَذَمّ", "mustaẕamm", "ahit olma (yeri/zamanı)", "kontrol", ""]
+      [192, "مُسْتَذَمّ", "mustaẕamm", "yerme (yeri/zamanı)", "orta", ""]
     ],
     "masdar · bâb XI (illet harfi izhar)": [
-      [193, "اِذْمِيمَام", "iẕmīmām", "iyice ahitleşme", "kontrol", ""]
+      [193, "اِذْمِيمَام", "iẕmīmām", "iyice yerleşme", "kontrol", ""]
     ],
     "ism-i fâil · bâb XI (illet harfi izhar)": [
-      [194, "مُذْمَامّ", "muẕmāmm", "iyice ahitleşen", "kontrol", ""],
-      [195, "مُذْمَامَّة", "muẕmāmma", "iyice ahitleşen (dişi)", "kontrol", ""],
-      [196, "مُذْمَامَّان", "muẕmāmmān", "iki iyice ahitleşen", "kontrol", ""],
-      [197, "مُذْمَامَّتَان", "muẕmāmmatān", "iki iyice ahitleşen (dişi)", "kontrol", ""],
-      [198, "مُذْمَامُّون", "muẕmāmmūn", "iyice ahitleşenler", "kontrol", ""],
-      [199, "مُذْمَامِّين", "muẕmāmmīn", "iyice ahitleşenler", "kontrol", ""],
-      [200, "مُذْمَامَّات", "muẕmāmmāt", "iyice ahitleşenler (dişi)", "kontrol", ""]
+      [194, "مُذْمَامّ", "muẕmāmm", "iyice yerleşen", "kontrol", ""],
+      [195, "مُذْمَامَّة", "muẕmāmma", "iyice yerleşen (dişi)", "kontrol", ""],
+      [196, "مُذْمَامَّان", "muẕmāmmān", "iki iyice yerleşen", "kontrol", ""],
+      [197, "مُذْمَامَّتَان", "muẕmāmmatān", "iki iyice yerleşen (dişi)", "kontrol", ""],
+      [198, "مُذْمَامُّون", "muẕmāmmūn", "iyice yerleşenler", "kontrol", ""],
+      [199, "مُذْمَامِّين", "muẕmāmmīn", "iyice yerleşenler", "kontrol", ""],
+      [200, "مُذْمَامَّات", "muẕmāmmāt", "iyice yerleşenler (dişi)", "kontrol", ""]
     ],
     "masdar · bâb XII (illet harfi izhar)": [
-      [201, "اِذْمِوْمَام", "iẕmiwmām", "aşırı ahit olma", "kontrol", ""]
+      [201, "اِذْمِوْمَام", "iẕmiwmām", "aşırı yerme", "orta", ""]
     ],
     "masdar · bâb XIII (illet harfi izhar)": [
-      [202, "اِذْمِوَّام", "iẕmiwwām", "aşırı ahit olma", "kontrol", ""]
+      [202, "اِذْمِوَّام", "iẕmiwwām", "aşırı yerme", "orta", ""]
     ],
     "masdar · Rubâ‘î mücerred": [
-      [203, "ذَمْذَمَة", "ẕamẕama", "ardı ardına ahit olma", "kontrol", ""],
-      [204, "ذِمْذَام", "ẕimẕām", "ardı ardına ahit olma", "kontrol", ""]
+      [203, "ذَمْذَمَة", "ẕamẕama", "ardı ardına yerme", "orta", ""],
+      [204, "ذِمْذَام", "ẕimẕām", "ardı ardına yerme", "orta", ""]
     ],
     "ism-i fâil · Rubâ‘î mücerred": [
-      [205, "مُذَمْذِم", "muẕamẕim", "ardı ardına ahit olan", "kontrol", ""]
+      [205, "مُذَمْذِم", "muẕamẕim", "ardı ardına yeren", "orta", ""]
     ],
     "ism-i mef‘ûl · Rubâ‘î mücerred": [
-      [206, "مُذَمْذَم", "muẕamẕam", "ardı ardına ahit olunmuş", "kontrol", ""]
+      [206, "مُذَمْذَم", "muẕamẕam", "ardı ardına yerilmiş", "orta", ""]
     ],
     "masdar · Rubâ‘î mutâvaa": [
-      [207, "تَذَمْذُم", "taẕamẕum", "ardı ardına ahit olma", "kontrol", ""]
+      [207, "تَذَمْذُم", "taẕamẕum", "ardı ardına yerme", "orta", ""]
     ],
     "ism-i fâil · Rubâ‘î mutâvaa": [
-      [208, "مُتَذَمْذِم", "mutaẕamẕim", "ardı ardına ahit olan", "kontrol", ""]
+      [208, "مُتَذَمْذِم", "mutaẕamẕim", "ardı ardına yeren", "orta", ""]
     ],
     "ism-i mef‘ûl · Rubâ‘î mutâvaa": [
-      [209, "مُتَذَمْذَم", "mutaẕamẕam", "ardı ardına ahit olunmuş", "kontrol", ""]
+      [209, "مُتَذَمْذَم", "mutaẕamẕam", "ardı ardına yerilmiş", "orta", ""]
     ],
     "masdar · Rubâ‘î mezîd": [
-      [210, "اِذْمِنْذَام", "iẕminẕām", "ardı ardına ahit olma", "kontrol", ""]
+      [210, "اِذْمِنْذَام", "iẕminẕām", "ardı ardına yerme", "orta", ""]
     ],
     "ism-i fâil · Rubâ‘î mezîd": [
-      [211, "مُذْمَنْذِم", "muẕmanẕim", "ardı ardına ahit olan", "kontrol", ""]
+      [211, "مُذْمَنْذِم", "muẕmanẕim", "ardı ardına yeren", "orta", ""]
     ],
     "ism-i mef‘ûl · Rubâ‘î mezîd": [
-      [212, "مُذْمَنْذَم", "muẕmanẕam", "ardı ardına ahit olunmuş", "kontrol", ""]
+      [212, "مُذْمَنْذَم", "muẕmanẕam", "ardı ardına yerilmiş", "orta", ""]
     ],
     "ism-i fâil · sülâsî": [
-      [213, "ذَامّ", "ẕāmm", "ahit olan", "kontrol", ""],
-      [214, "ذَامَّة", "ẕāmma", "ahit olan (dişi)", "kontrol", ""],
-      [215, "ذَامَّان", "ẕāmmān", "iki ahit olan", "kontrol", ""],
-      [216, "ذَامَّتَان", "ẕāmmatān", "iki ahit olan (dişi)", "kontrol", ""],
-      [217, "ذَامُّون", "ẕāmmūn", "ahit olanlar", "kontrol", ""],
-      [218, "ذَامِّين", "ẕāmmīn", "ahit olanlar", "kontrol", ""],
-      [219, "ذَامَّات", "ẕāmmāt", "ahit olanlar (dişi)", "kontrol", ""]
+      [213, "ذَامّ", "ẕāmm", "yeren", "kural", ""],
+      [214, "ذَامَّة", "ẕāmma", "yeren (dişi)", "kural", ""],
+      [215, "ذَامَّان", "ẕāmmān", "iki yeren", "kural", ""],
+      [216, "ذَامَّتَان", "ẕāmmatān", "iki yeren (dişi)", "kural", ""],
+      [217, "ذَامُّون", "ẕāmmūn", "yerenler", "kural", ""],
+      [218, "ذَامِّين", "ẕāmmīn", "yerenler", "kural", ""],
+      [219, "ذَامَّات", "ẕāmmāt", "yerenler (dişi)", "kural", ""]
     ],
     "ism-i mef‘ûl · sülâsî": [
-      [220, "مَذْمُوم", "maẕmūm", "ahit olunmuş", "kontrol", ""],
-      [221, "مَذْمُومَة", "maẕmūma", "ahit olunmuş (dişi)", "kontrol", ""],
-      [222, "مَذْمُومَان", "maẕmūmān", "iki ahit olunmuş", "kontrol", ""],
-      [223, "مَذْمُومَتَان", "maẕmūmatān", "iki ahit olunmuş (dişi)", "kontrol", ""],
-      [224, "مَذْمُومُون", "maẕmūmūn", "ahit olunmuşlar", "kontrol", ""],
-      [225, "مَذْمُومِين", "maẕmūmīn", "ahit olunmuşlar", "kontrol", ""],
-      [226, "مَذْمُومَات", "maẕmūmāt", "ahit olunmuşlar (dişi)", "kontrol", ""]
+      [220, "مَذْمُوم", "maẕmūm", "yerilmiş", "kural", ""],
+      [221, "مَذْمُومَة", "maẕmūma", "yerilmiş (dişi)", "kural", ""],
+      [222, "مَذْمُومَان", "maẕmūmān", "iki yerilmiş", "kural", ""],
+      [223, "مَذْمُومَتَان", "maẕmūmatān", "iki yerilmiş (dişi)", "kural", ""],
+      [224, "مَذْمُومُون", "maẕmūmūn", "yerilmişler", "kural", ""],
+      [225, "مَذْمُومِين", "maẕmūmīn", "yerilmişler", "kural", ""],
+      [226, "مَذْمُومَات", "maẕmūmāt", "yerilmişler (dişi)", "kural", ""]
     ],
     "mekân/zaman · sülâsî": [
-      [227, "مَذَمّ", "maẕamm", "ahit olma (yeri/zamanı)", "kontrol", ""],
-      [228, "مَذَمَّان", "maẕammān", "iki ahit olma (yeri/zamanı)", "kontrol", ""],
-      [229, "مَذِمّ", "maẕimm", "ahit olma (yeri/zamanı)", "kontrol", ""],
-      [230, "مَذِمَّان", "maẕimmān", "iki ahit olma (yeri/zamanı)", "kontrol", ""],
+      [227, "مَذَمّ", "maẕamm", "yerme (yeri/zamanı)", "orta", ""],
+      [228, "مَذَمَّان", "maẕammān", "iki yerme (yeri/zamanı)", "orta", ""],
+      [229, "مَذِمّ", "maẕimm", "yerme (yeri/zamanı)", "orta", ""],
+      [230, "مَذِمَّان", "maẕimmān", "iki yerme (yeri/zamanı)", "orta", ""],
       [
         231,
         "مَذَمَّة",
         "maẕamma",
-        "ahit olma (yeri/zamanı)",
-        "kontrol",
+        "yerme (yeri/zamanı)",
+        "orta",
         "Vikisözlük: masdar (bâb I): to dispraise, discommend, disesteem, denigrate, decry, degrade, cry do"
       ],
-      [232, "مَذَمَّتَان", "maẕammatān", "iki ahit olma (yeri/zamanı)", "kontrol", ""],
-      [233, "مَذِمَّة", "maẕimma", "ahit olma (yeri/zamanı)", "kontrol", ""],
-      [234, "مَذِمَّتَان", "maẕimmatān", "iki ahit olma (yeri/zamanı)", "kontrol", ""],
-      [247, "مَذُمَّة", "maẕumma", "ahit olma (yeri/zamanı)", "kontrol", ""],
-      [248, "مَذُمَّتَان", "maẕummatān", "iki ahit olma (yeri/zamanı)", "kontrol", ""]
+      [232, "مَذَمَّتَان", "maẕammatān", "iki yerme (yeri/zamanı)", "orta", ""],
+      [233, "مَذِمَّة", "maẕimma", "yerme (yeri/zamanı)", "orta", ""],
+      [234, "مَذِمَّتَان", "maẕimmatān", "iki yerme (yeri/zamanı)", "orta", ""],
+      [247, "مَذُمَّة", "maẕumma", "yerme (yeri/zamanı)", "orta", ""],
+      [248, "مَذُمَّتَان", "maẕummatān", "iki yerme (yeri/zamanı)", "orta", ""]
     ],
     "âlet · sülâsî": [
-      [235, "مِذَمّ", "miẕamm", "ahit olmaya yarayan araç", "kontrol", ""],
-      [236, "مِذَمَّان", "miẕammān", "iki ahit olmaya yarayan araç", "kontrol", ""],
-      [237, "مِذْمَام", "miẕmām", "ahit olmaya yarayan araç", "kontrol", ""],
-      [238, "مِذْمَامَان", "miẕmāmān", "iki ahit olmaya yarayan araç", "kontrol", ""],
-      [239, "مِذَمَّة", "miẕamma", "ahit olmaya yarayan araç", "kontrol", ""],
-      [240, "مِذَمَّتَان", "miẕammatān", "iki ahit olmaya yarayan araç", "kontrol", ""]
+      [235, "مِذَمّ", "miẕamm", "yermeye yarayan araç", "orta", ""],
+      [236, "مِذَمَّان", "miẕammān", "iki yermeye yarayan araç", "orta", ""],
+      [237, "مِذْمَام", "miẕmām", "yermeye yarayan araç", "orta", ""],
+      [238, "مِذْمَامَان", "miẕmāmān", "iki yermeye yarayan araç", "orta", ""],
+      [239, "مِذَمَّة", "miẕamma", "yermeye yarayan araç", "orta", ""],
+      [240, "مِذَمَّتَان", "miẕammatān", "iki yermeye yarayan araç", "orta", ""]
     ],
     "tafdîl · sülâsî": [
-      [241, "أَذَمّ", "ʾaẕamm", "daha çok ahit olan", "kontrol", ""],
-      [242, "أَذَمَّان", "ʾaẕammān", "iki daha çok ahit olan", "kontrol", ""]
+      [241, "أَذَمّ", "ʾaẕamm", "daha çok yeren", "orta", ""],
+      [242, "أَذَمَّان", "ʾaẕammān", "iki daha çok yeren", "orta", ""]
     ],
     "tafdîl (müennes) · sülâsî": [
-      [243, "ذُمَّى", "ẕummā", "daha çok ahit olan", "kontrol", ""],
-      [244, "ذُمَّيَان", "ẕummayān", "iki daha çok ahit olan", "kontrol", ""],
-      [245, "ذَمَّاء", "ẕammāʾ", "daha çok ahit olan", "kontrol", ""],
-      [246, "ذَمَّاآن", "ẕammāʾān", "iki daha çok ahit olan", "kontrol", ""]
+      [243, "ذُمَّى", "ẕummā", "daha çok yeren", "orta", ""],
+      [244, "ذُمَّيَان", "ẕummayān", "iki daha çok yeren", "orta", ""],
+      [245, "ذَمَّاء", "ẕammāʾ", "daha çok yeren", "orta", ""],
+      [246, "ذَمَّاآن", "ẕammāʾān", "iki daha çok yeren", "orta", ""]
     ],
     "tasğîr · sülâsî": [
-      [249, "ذُمَيْم", "ẕumaym", "küçük ahit olma", "kontrol", ""],
-      [250, "ذُمَيْمَان", "ẕumaymān", "iki küçük ahit olma", "kontrol", ""],
-      [251, "ذُمَيْمَة", "ẕumayma", "küçük ahit olma", "kontrol", ""],
-      [252, "ذُمَيْمَتَان", "ẕumaymatān", "iki küçük ahit olma", "kontrol", ""]
+      [249, "ذُمَيْم", "ẕumaym", "küçük yerme", "orta", ""],
+      [250, "ذُمَيْمَان", "ẕumaymān", "iki küçük yerme", "orta", ""],
+      [251, "ذُمَيْمَة", "ẕumayma", "küçük yerme", "orta", ""],
+      [252, "ذُمَيْمَتَان", "ẕumaymatān", "iki küçük yerme", "orta", ""]
     ],
     "masdar-ı mîmî · sülâsî": [
-      [253, "مَذَمّ", "maẕamm", "ahit olma", "kontrol", ""],
-      [254, "مَذَمَّان", "maẕammān", "iki ahit olma", "kontrol", ""]
+      [253, "مَذَمّ", "maẕamm", "yerme", "kural", ""],
+      [254, "مَذَمَّان", "maẕammān", "iki yerme", "kural", ""]
     ],
     "ism-i merre · sülâsî": [
-      [255, "ذَمَّة", "ẕamma", "bir kere ahit olma", "kontrol", ""],
-      [256, "ذَمَّتَان", "ẕammatān", "iki bir kere ahit olma", "kontrol", ""]
+      [255, "ذَمَّة", "ẕamma", "bir kere yerme", "orta", ""],
+      [256, "ذَمَّتَان", "ẕammatān", "iki bir kere yerme", "orta", ""]
     ],
     "ism-i hey'et · sülâsî": [
-      [257, "ذِمَّة", "ẕimma", "ahit olma tarzı", "kontrol", "Vikisözlük: peace, custody, guardianship, care"],
-      [258, "ذِمَّتَان", "ẕimmatān", "iki ahit olma tarzı", "kontrol", ""]
+      [257, "ذِمَّة", "ẕimma", "yerme tarzı", "orta", "Vikisözlük: peace, custody, guardianship, care"],
+      [258, "ذِمَّتَان", "ẕimmatān", "iki yerme tarzı", "orta", ""]
     ],
     "sıfat-ı müşebbehe": [
-      [259, "ذَمِيم", "ẕamīm", "sürekli ahit olan", "kontrol", "Vikisözlük: obnoxious"],
-      [260, "ذَمِيمَة", "ẕamīma", "sürekli ahit olan (dişi)", "kontrol", ""],
-      [261, "ذَمِيمَان", "ẕamīmān", "iki sürekli ahit olan", "kontrol", ""],
-      [262, "ذَمِيمَتَان", "ẕamīmatān", "iki sürekli ahit olan (dişi)", "kontrol", ""],
-      [263, "ذَمِيمُون", "ẕamīmūn", "sürekli ahit olanlar", "kontrol", ""],
-      [264, "ذَمِيمِين", "ẕamīmīn", "sürekli ahit olanlar", "kontrol", ""],
-      [265, "ذَمِيمَات", "ẕamīmāt", "sürekli ahit olanlar (dişi)", "kontrol", ""],
-      [266, "ذَمُوم", "ẕamūm", "sürekli ahit olan", "kontrol", ""],
-      [267, "ذَمُومَة", "ẕamūma", "sürekli ahit olan (dişi)", "kontrol", ""],
-      [268, "ذَمُومَان", "ẕamūmān", "iki sürekli ahit olan", "kontrol", ""],
-      [269, "ذَمُومَتَان", "ẕamūmatān", "iki sürekli ahit olan (dişi)", "kontrol", ""],
-      [270, "ذَمُومُون", "ẕamūmūn", "sürekli ahit olanlar", "kontrol", ""],
-      [271, "ذَمُومِين", "ẕamūmīn", "sürekli ahit olanlar", "kontrol", ""],
-      [272, "ذَمُومَات", "ẕamūmāt", "sürekli ahit olanlar (dişi)", "kontrol", ""],
+      [259, "ذَمِيم", "ẕamīm", "sürekli yeren", "orta", "Vikisözlük: obnoxious"],
+      [260, "ذَمِيمَة", "ẕamīma", "sürekli yeren (dişi)", "orta", ""],
+      [261, "ذَمِيمَان", "ẕamīmān", "iki sürekli yeren", "orta", ""],
+      [262, "ذَمِيمَتَان", "ẕamīmatān", "iki sürekli yeren (dişi)", "orta", ""],
+      [263, "ذَمِيمُون", "ẕamīmūn", "sürekli yerenler", "orta", ""],
+      [264, "ذَمِيمِين", "ẕamīmīn", "sürekli yerenler", "orta", ""],
+      [265, "ذَمِيمَات", "ẕamīmāt", "sürekli yerenler (dişi)", "orta", ""],
+      [266, "ذَمُوم", "ẕamūm", "sürekli yeren", "orta", ""],
+      [267, "ذَمُومَة", "ẕamūma", "sürekli yeren (dişi)", "orta", ""],
+      [268, "ذَمُومَان", "ẕamūmān", "iki sürekli yeren", "orta", ""],
+      [269, "ذَمُومَتَان", "ẕamūmatān", "iki sürekli yeren (dişi)", "orta", ""],
+      [270, "ذَمُومُون", "ẕamūmūn", "sürekli yerenler", "orta", ""],
+      [271, "ذَمُومِين", "ẕamūmīn", "sürekli yerenler", "orta", ""],
+      [272, "ذَمُومَات", "ẕamūmāt", "sürekli yerenler (dişi)", "orta", ""],
       [
         273,
         "ذَمّ",
         "ẕamm",
-        "sürekli ahit olan",
-        "kontrol",
+        "sürekli yeren",
+        "orta",
         "Vikisözlük: masdar (bâb I): to dispraise, discommend, disesteem, denigrate, decry, degrade, cry do"
       ],
-      [274, "ذَمَّة", "ẕamma", "sürekli ahit olan (dişi)", "kontrol", ""],
-      [275, "ذَمَّان", "ẕammān", "iki sürekli ahit olan", "kontrol", ""],
-      [276, "ذَمَّتَان", "ẕammatān", "iki sürekli ahit olan (dişi)", "kontrol", ""],
-      [277, "ذَمُّون", "ẕammūn", "sürekli ahit olanlar", "kontrol", ""],
-      [278, "ذَمِّين", "ẕammīn", "sürekli ahit olanlar", "kontrol", ""],
-      [279, "ذَمَّات", "ẕammāt", "sürekli ahit olanlar (dişi)", "kontrol", ""],
+      [274, "ذَمَّة", "ẕamma", "sürekli yeren (dişi)", "orta", ""],
+      [275, "ذَمَّان", "ẕammān", "iki sürekli yeren", "orta", ""],
+      [276, "ذَمَّتَان", "ẕammatān", "iki sürekli yeren (dişi)", "orta", ""],
+      [277, "ذَمُّون", "ẕammūn", "sürekli yerenler", "orta", ""],
+      [278, "ذَمِّين", "ẕammīn", "sürekli yerenler", "orta", ""],
+      [279, "ذَمَّات", "ẕammāt", "sürekli yerenler (dişi)", "orta", ""],
       [
         280,
         "ذَمّ",
         "ẕamm",
-        "sürekli ahit olan",
-        "kontrol",
+        "sürekli yeren",
+        "orta",
         "Vikisözlük: masdar (bâb I): to dispraise, discommend, disesteem, denigrate, decry, degrade, cry do"
       ],
-      [281, "ذَمَّة", "ẕamma", "sürekli ahit olan (dişi)", "kontrol", ""],
-      [282, "ذَمَّان", "ẕammān", "iki sürekli ahit olan", "kontrol", ""],
-      [283, "ذَمَّتَان", "ẕammatān", "iki sürekli ahit olan (dişi)", "kontrol", ""],
-      [284, "ذَمُّون", "ẕammūn", "sürekli ahit olanlar", "kontrol", ""],
-      [285, "ذَمِّين", "ẕammīn", "sürekli ahit olanlar", "kontrol", ""],
-      [286, "ذَمَّات", "ẕammāt", "sürekli ahit olanlar (dişi)", "kontrol", ""],
+      [281, "ذَمَّة", "ẕamma", "sürekli yeren (dişi)", "orta", ""],
+      [282, "ذَمَّان", "ẕammān", "iki sürekli yeren", "orta", ""],
+      [283, "ذَمَّتَان", "ẕammatān", "iki sürekli yeren (dişi)", "orta", ""],
+      [284, "ذَمُّون", "ẕammūn", "sürekli yerenler", "orta", ""],
+      [285, "ذَمِّين", "ẕammīn", "sürekli yerenler", "orta", ""],
+      [286, "ذَمَّات", "ẕammāt", "sürekli yerenler (dişi)", "orta", ""],
       [
         287,
         "ذَمّ",
         "ẕamm",
-        "sürekli ahit olan",
-        "kontrol",
+        "sürekli yeren",
+        "orta",
         "Vikisözlük: masdar (bâb I): to dispraise, discommend, disesteem, denigrate, decry, degrade, cry do"
       ],
-      [288, "ذَمَّة", "ẕamma", "sürekli ahit olan (dişi)", "kontrol", ""],
-      [289, "ذَمَّان", "ẕammān", "iki sürekli ahit olan", "kontrol", ""],
-      [290, "ذَمَّتَان", "ẕammatān", "iki sürekli ahit olan (dişi)", "kontrol", ""],
-      [291, "ذَمُّون", "ẕammūn", "sürekli ahit olanlar", "kontrol", ""],
-      [292, "ذَمِّين", "ẕammīn", "sürekli ahit olanlar", "kontrol", ""],
-      [293, "ذَمَّات", "ẕammāt", "sürekli ahit olanlar (dişi)", "kontrol", ""],
+      [288, "ذَمَّة", "ẕamma", "sürekli yeren (dişi)", "orta", ""],
+      [289, "ذَمَّان", "ẕammān", "iki sürekli yeren", "orta", ""],
+      [290, "ذَمَّتَان", "ẕammatān", "iki sürekli yeren (dişi)", "orta", ""],
+      [291, "ذَمُّون", "ẕammūn", "sürekli yerenler", "orta", ""],
+      [292, "ذَمِّين", "ẕammīn", "sürekli yerenler", "orta", ""],
+      [293, "ذَمَّات", "ẕammāt", "sürekli yerenler (dişi)", "orta", ""],
       [
         294,
         "ذَمّ",
         "ẕamm",
-        "sürekli ahit olan",
-        "kontrol",
+        "sürekli yeren",
+        "orta",
         "Vikisözlük: masdar (bâb I): to dispraise, discommend, disesteem, denigrate, decry, degrade, cry do"
       ],
-      [295, "ذَمَّة", "ẕamma", "sürekli ahit olan (dişi)", "kontrol", ""],
-      [296, "ذَمَّان", "ẕammān", "iki sürekli ahit olan", "kontrol", ""],
-      [297, "ذَمَّتَان", "ẕammatān", "iki sürekli ahit olan (dişi)", "kontrol", ""],
-      [298, "ذَمُّون", "ẕammūn", "sürekli ahit olanlar", "kontrol", ""],
-      [299, "ذَمِّين", "ẕammīn", "sürekli ahit olanlar", "kontrol", ""],
-      [300, "ذَمَّات", "ẕammāt", "sürekli ahit olanlar (dişi)", "kontrol", ""],
-      [301, "ذُمّ", "ẕumm", "sürekli ahit olan", "kontrol", ""],
-      [302, "ذُمَّة", "ẕumma", "sürekli ahit olan (dişi)", "kontrol", ""],
-      [303, "ذُمَّان", "ẕummān", "iki sürekli ahit olan", "kontrol", ""],
-      [304, "ذُمَّتَان", "ẕummatān", "iki sürekli ahit olan (dişi)", "kontrol", ""],
-      [305, "ذُمُّون", "ẕummūn", "sürekli ahit olanlar", "kontrol", ""],
-      [306, "ذُمِّين", "ẕummīn", "sürekli ahit olanlar", "kontrol", ""],
-      [307, "ذُمَّات", "ẕummāt", "sürekli ahit olanlar (dişi)", "kontrol", ""],
-      [308, "ذَمَّان", "ẕammān", "sürekli ahit olan", "kontrol", ""],
-      [309, "ذَمَّانَة", "ẕammāna", "sürekli ahit olan (dişi)", "kontrol", ""],
-      [310, "ذَمَّانَان", "ẕammānān", "iki sürekli ahit olan", "kontrol", ""],
-      [311, "ذَمَّانَتَان", "ẕammānatān", "iki sürekli ahit olan (dişi)", "kontrol", ""],
-      [312, "ذَمَّانُون", "ẕammānūn", "sürekli ahit olanlar", "kontrol", ""],
-      [313, "ذَمَّانِين", "ẕammānīn", "sürekli ahit olanlar", "kontrol", ""],
-      [314, "ذَمَّانَات", "ẕammānāt", "sürekli ahit olanlar (dişi)", "kontrol", ""],
-      [315, "ذُمَام", "ẕumām", "sürekli ahit olan", "kontrol", ""],
-      [316, "ذُمَامَة", "ẕumāma", "sürekli ahit olan (dişi)", "kontrol", ""],
-      [317, "ذُمَامَان", "ẕumāmān", "iki sürekli ahit olan", "kontrol", ""],
-      [318, "ذُمَامَتَان", "ẕumāmatān", "iki sürekli ahit olan (dişi)", "kontrol", ""],
-      [319, "ذُمَامُون", "ẕumāmūn", "sürekli ahit olanlar", "kontrol", ""],
-      [320, "ذُمَامِين", "ẕumāmīn", "sürekli ahit olanlar", "kontrol", ""],
-      [321, "ذُمَامَات", "ẕumāmāt", "sürekli ahit olanlar (dişi)", "kontrol", ""],
-      [322, "ذَمَام", "ẕamām", "sürekli ahit olan", "kontrol", ""],
-      [323, "ذَمَامَة", "ẕamāma", "sürekli ahit olan (dişi)", "kontrol", ""],
-      [324, "ذَمَامَان", "ẕamāmān", "iki sürekli ahit olan", "kontrol", ""],
-      [325, "ذَمَامَتَان", "ẕamāmatān", "iki sürekli ahit olan (dişi)", "kontrol", ""],
-      [326, "ذَمَامُون", "ẕamāmūn", "sürekli ahit olanlar", "kontrol", ""],
-      [327, "ذَمَامِين", "ẕamāmīn", "sürekli ahit olanlar", "kontrol", ""],
-      [328, "ذَمَامَات", "ẕamāmāt", "sürekli ahit olanlar (dişi)", "kontrol", ""]
+      [295, "ذَمَّة", "ẕamma", "sürekli yeren (dişi)", "orta", ""],
+      [296, "ذَمَّان", "ẕammān", "iki sürekli yeren", "orta", ""],
+      [297, "ذَمَّتَان", "ẕammatān", "iki sürekli yeren (dişi)", "orta", ""],
+      [298, "ذَمُّون", "ẕammūn", "sürekli yerenler", "orta", ""],
+      [299, "ذَمِّين", "ẕammīn", "sürekli yerenler", "orta", ""],
+      [300, "ذَمَّات", "ẕammāt", "sürekli yerenler (dişi)", "orta", ""],
+      [301, "ذُمّ", "ẕumm", "sürekli yeren", "orta", ""],
+      [302, "ذُمَّة", "ẕumma", "sürekli yeren (dişi)", "orta", ""],
+      [303, "ذُمَّان", "ẕummān", "iki sürekli yeren", "orta", ""],
+      [304, "ذُمَّتَان", "ẕummatān", "iki sürekli yeren (dişi)", "orta", ""],
+      [305, "ذُمُّون", "ẕummūn", "sürekli yerenler", "orta", ""],
+      [306, "ذُمِّين", "ẕummīn", "sürekli yerenler", "orta", ""],
+      [307, "ذُمَّات", "ẕummāt", "sürekli yerenler (dişi)", "orta", ""],
+      [308, "ذَمَّان", "ẕammān", "sürekli yeren", "orta", ""],
+      [309, "ذَمَّانَة", "ẕammāna", "sürekli yeren (dişi)", "orta", ""],
+      [310, "ذَمَّانَان", "ẕammānān", "iki sürekli yeren", "orta", ""],
+      [311, "ذَمَّانَتَان", "ẕammānatān", "iki sürekli yeren (dişi)", "orta", ""],
+      [312, "ذَمَّانُون", "ẕammānūn", "sürekli yerenler", "orta", ""],
+      [313, "ذَمَّانِين", "ẕammānīn", "sürekli yerenler", "orta", ""],
+      [314, "ذَمَّانَات", "ẕammānāt", "sürekli yerenler (dişi)", "orta", ""],
+      [315, "ذُمَام", "ẕumām", "sürekli yeren", "orta", ""],
+      [316, "ذُمَامَة", "ẕumāma", "sürekli yeren (dişi)", "orta", ""],
+      [317, "ذُمَامَان", "ẕumāmān", "iki sürekli yeren", "orta", ""],
+      [318, "ذُمَامَتَان", "ẕumāmatān", "iki sürekli yeren (dişi)", "orta", ""],
+      [319, "ذُمَامُون", "ẕumāmūn", "sürekli yerenler", "orta", ""],
+      [320, "ذُمَامِين", "ẕumāmīn", "sürekli yerenler", "orta", ""],
+      [321, "ذُمَامَات", "ẕumāmāt", "sürekli yerenler (dişi)", "orta", ""],
+      [322, "ذَمَام", "ẕamām", "sürekli yeren", "orta", ""],
+      [323, "ذَمَامَة", "ẕamāma", "sürekli yeren (dişi)", "orta", ""],
+      [324, "ذَمَامَان", "ẕamāmān", "iki sürekli yeren", "orta", ""],
+      [325, "ذَمَامَتَان", "ẕamāmatān", "iki sürekli yeren (dişi)", "orta", ""],
+      [326, "ذَمَامُون", "ẕamāmūn", "sürekli yerenler", "orta", ""],
+      [327, "ذَمَامِين", "ẕamāmīn", "sürekli yerenler", "orta", ""],
+      [328, "ذَمَامَات", "ẕamāmāt", "sürekli yerenler (dişi)", "orta", ""]
     ],
     "mübalağa": [
-      [329, "ذَمَّام", "ẕammām", "çok ahit olan", "kontrol", ""],
-      [330, "ذَمَّامَة", "ẕammāma", "çok ahit olan (dişi)", "kontrol", ""],
-      [331, "ذَمَّامَان", "ẕammāmān", "iki çok ahit olan", "kontrol", ""],
-      [332, "ذَمَّامَتَان", "ẕammāmatān", "iki çok ahit olan (dişi)", "kontrol", ""],
-      [333, "ذَمَّامُون", "ẕammāmūn", "çok ahit olanlar", "kontrol", ""],
-      [334, "ذَمَّامِين", "ẕammāmīn", "çok ahit olanlar", "kontrol", ""],
-      [335, "ذَمَّامَات", "ẕammāmāt", "çok ahit olanlar (dişi)", "kontrol", ""],
-      [336, "ذَمَّامَة", "ẕammāma", "çok ahit olan", "kontrol", ""],
-      [337, "ذَمَّامَتَان", "ẕammāmatān", "iki çok ahit olan", "kontrol", ""],
-      [338, "ذَمَّامَات", "ẕammāmāt", "çok ahit olanlar (dişi)", "kontrol", ""],
-      [339, "ذَمُوم", "ẕamūm", "çok ahit olan", "kontrol", ""],
-      [340, "ذَمُومَة", "ẕamūma", "çok ahit olan (dişi)", "kontrol", ""],
-      [341, "ذَمُومَان", "ẕamūmān", "iki çok ahit olan", "kontrol", ""],
-      [342, "ذَمُومَتَان", "ẕamūmatān", "iki çok ahit olan (dişi)", "kontrol", ""],
-      [343, "ذَمُومُون", "ẕamūmūn", "çok ahit olanlar", "kontrol", ""],
-      [344, "ذَمُومِين", "ẕamūmīn", "çok ahit olanlar", "kontrol", ""],
-      [345, "ذَمُومَات", "ẕamūmāt", "çok ahit olanlar (dişi)", "kontrol", ""],
-      [346, "ذَمُّوم", "ẕammūm", "çok ahit olan", "kontrol", ""],
-      [347, "ذَمُّومَة", "ẕammūma", "çok ahit olan (dişi)", "kontrol", ""],
-      [348, "ذَمُّومَان", "ẕammūmān", "iki çok ahit olan", "kontrol", ""],
-      [349, "ذَمُّومَتَان", "ẕammūmatān", "iki çok ahit olan (dişi)", "kontrol", ""],
-      [350, "ذَمُّومُون", "ẕammūmūn", "çok ahit olanlar", "kontrol", ""],
-      [351, "ذَمُّومِين", "ẕammūmīn", "çok ahit olanlar", "kontrol", ""],
-      [352, "ذَمُّومَات", "ẕammūmāt", "çok ahit olanlar (dişi)", "kontrol", ""],
-      [353, "ذِمِّيم", "ẕimmīm", "çok ahit olan", "kontrol", ""],
-      [354, "ذِمِّيمَة", "ẕimmīma", "çok ahit olan (dişi)", "kontrol", ""],
-      [355, "ذِمِّيمَان", "ẕimmīmān", "iki çok ahit olan", "kontrol", ""],
-      [356, "ذِمِّيمَتَان", "ẕimmīmatān", "iki çok ahit olan (dişi)", "kontrol", ""],
-      [357, "ذِمِّيمُون", "ẕimmīmūn", "çok ahit olanlar", "kontrol", ""],
-      [358, "ذِمِّيمِين", "ẕimmīmīn", "çok ahit olanlar", "kontrol", ""],
-      [359, "ذِمِّيمَات", "ẕimmīmāt", "çok ahit olanlar (dişi)", "kontrol", ""],
-      [360, "ذُمَّام", "ẕummām", "çok ahit olan", "kontrol", ""],
-      [361, "ذُمَّامَة", "ẕummāma", "çok ahit olan (dişi)", "kontrol", ""],
-      [362, "ذُمَّامَان", "ẕummāmān", "iki çok ahit olan", "kontrol", ""],
-      [363, "ذُمَّامَتَان", "ẕummāmatān", "iki çok ahit olan (dişi)", "kontrol", ""],
-      [364, "ذُمَّامُون", "ẕummāmūn", "çok ahit olanlar", "kontrol", ""],
-      [365, "ذُمَّامِين", "ẕummāmīn", "çok ahit olanlar", "kontrol", ""],
-      [366, "ذُمَّامَات", "ẕummāmāt", "çok ahit olanlar (dişi)", "kontrol", ""],
-      [367, "مِذْمَام", "miẕmām", "çok ahit olan", "kontrol", ""],
-      [368, "مِذْمَامَة", "miẕmāma", "çok ahit olan (dişi)", "kontrol", ""],
-      [369, "مِذْمَامَان", "miẕmāmān", "iki çok ahit olan", "kontrol", ""],
-      [370, "مِذْمَامَتَان", "miẕmāmatān", "iki çok ahit olan (dişi)", "kontrol", ""],
-      [371, "مِذْمَامُون", "miẕmāmūn", "çok ahit olanlar", "kontrol", ""],
-      [372, "مِذْمَامِين", "miẕmāmīn", "çok ahit olanlar", "kontrol", ""],
-      [373, "مِذْمَامَات", "miẕmāmāt", "çok ahit olanlar (dişi)", "kontrol", ""],
-      [374, "مِذْمِيم", "miẕmīm", "çok ahit olan", "kontrol", ""],
-      [375, "مِذْمِيمَة", "miẕmīma", "çok ahit olan (dişi)", "kontrol", ""],
-      [376, "مِذْمِيمَان", "miẕmīmān", "iki çok ahit olan", "kontrol", ""],
-      [377, "مِذْمِيمَتَان", "miẕmīmatān", "iki çok ahit olan (dişi)", "kontrol", ""],
-      [378, "مِذْمِيمُون", "miẕmīmūn", "çok ahit olanlar", "kontrol", ""],
-      [379, "مِذْمِيمِين", "miẕmīmīn", "çok ahit olanlar", "kontrol", ""],
-      [380, "مِذْمِيمَات", "miẕmīmāt", "çok ahit olanlar (dişi)", "kontrol", ""],
-      [381, "ذَمِيم", "ẕamīm", "çok ahit olan", "kontrol", "Vikisözlük: obnoxious"],
-      [382, "ذَمِيمَة", "ẕamīma", "çok ahit olan (dişi)", "kontrol", ""],
-      [383, "ذَمِيمَان", "ẕamīmān", "iki çok ahit olan", "kontrol", ""],
-      [384, "ذَمِيمَتَان", "ẕamīmatān", "iki çok ahit olan (dişi)", "kontrol", ""],
-      [385, "ذَمِيمُون", "ẕamīmūn", "çok ahit olanlar", "kontrol", ""],
-      [386, "ذَمِيمِين", "ẕamīmīn", "çok ahit olanlar", "kontrol", ""],
-      [387, "ذَمِيمَات", "ẕamīmāt", "çok ahit olanlar (dişi)", "kontrol", ""],
-      [388, "ذَمَّم", "ẕammam", "çok ahit olan", "kontrol", ""],
-      [389, "ذَمَّمَة", "ẕammama", "çok ahit olan (dişi)", "kontrol", ""],
-      [390, "ذَمَّمَان", "ẕammamān", "iki çok ahit olan", "kontrol", ""],
-      [391, "ذَمَّمَتَان", "ẕammamatān", "iki çok ahit olan (dişi)", "kontrol", ""],
-      [392, "ذَمَّمُون", "ẕammamūn", "çok ahit olanlar", "kontrol", ""],
-      [393, "ذَمَّمِين", "ẕammamīn", "çok ahit olanlar", "kontrol", ""],
-      [394, "ذَمَّمَات", "ẕammamāt", "çok ahit olanlar (dişi)", "kontrol", ""]
+      [329, "ذَمَّام", "ẕammām", "çok yeren", "orta", ""],
+      [330, "ذَمَّامَة", "ẕammāma", "çok yeren (dişi)", "orta", ""],
+      [331, "ذَمَّامَان", "ẕammāmān", "iki çok yeren", "orta", ""],
+      [332, "ذَمَّامَتَان", "ẕammāmatān", "iki çok yeren (dişi)", "orta", ""],
+      [333, "ذَمَّامُون", "ẕammāmūn", "çok yerenler", "orta", ""],
+      [334, "ذَمَّامِين", "ẕammāmīn", "çok yerenler", "orta", ""],
+      [335, "ذَمَّامَات", "ẕammāmāt", "çok yerenler (dişi)", "orta", ""],
+      [336, "ذَمَّامَة", "ẕammāma", "çok yeren", "orta", ""],
+      [337, "ذَمَّامَتَان", "ẕammāmatān", "iki çok yeren", "orta", ""],
+      [338, "ذَمَّامَات", "ẕammāmāt", "çok yerenler (dişi)", "orta", ""],
+      [339, "ذَمُوم", "ẕamūm", "çok yeren", "orta", ""],
+      [340, "ذَمُومَة", "ẕamūma", "çok yeren (dişi)", "orta", ""],
+      [341, "ذَمُومَان", "ẕamūmān", "iki çok yeren", "orta", ""],
+      [342, "ذَمُومَتَان", "ẕamūmatān", "iki çok yeren (dişi)", "orta", ""],
+      [343, "ذَمُومُون", "ẕamūmūn", "çok yerenler", "orta", ""],
+      [344, "ذَمُومِين", "ẕamūmīn", "çok yerenler", "orta", ""],
+      [345, "ذَمُومَات", "ẕamūmāt", "çok yerenler (dişi)", "orta", ""],
+      [346, "ذَمُّوم", "ẕammūm", "çok yeren", "orta", ""],
+      [347, "ذَمُّومَة", "ẕammūma", "çok yeren (dişi)", "orta", ""],
+      [348, "ذَمُّومَان", "ẕammūmān", "iki çok yeren", "orta", ""],
+      [349, "ذَمُّومَتَان", "ẕammūmatān", "iki çok yeren (dişi)", "orta", ""],
+      [350, "ذَمُّومُون", "ẕammūmūn", "çok yerenler", "orta", ""],
+      [351, "ذَمُّومِين", "ẕammūmīn", "çok yerenler", "orta", ""],
+      [352, "ذَمُّومَات", "ẕammūmāt", "çok yerenler (dişi)", "orta", ""],
+      [353, "ذِمِّيم", "ẕimmīm", "çok yeren", "orta", ""],
+      [354, "ذِمِّيمَة", "ẕimmīma", "çok yeren (dişi)", "orta", ""],
+      [355, "ذِمِّيمَان", "ẕimmīmān", "iki çok yeren", "orta", ""],
+      [356, "ذِمِّيمَتَان", "ẕimmīmatān", "iki çok yeren (dişi)", "orta", ""],
+      [357, "ذِمِّيمُون", "ẕimmīmūn", "çok yerenler", "orta", ""],
+      [358, "ذِمِّيمِين", "ẕimmīmīn", "çok yerenler", "orta", ""],
+      [359, "ذِمِّيمَات", "ẕimmīmāt", "çok yerenler (dişi)", "orta", ""],
+      [360, "ذُمَّام", "ẕummām", "çok yeren", "orta", ""],
+      [361, "ذُمَّامَة", "ẕummāma", "çok yeren (dişi)", "orta", ""],
+      [362, "ذُمَّامَان", "ẕummāmān", "iki çok yeren", "orta", ""],
+      [363, "ذُمَّامَتَان", "ẕummāmatān", "iki çok yeren (dişi)", "orta", ""],
+      [364, "ذُمَّامُون", "ẕummāmūn", "çok yerenler", "orta", ""],
+      [365, "ذُمَّامِين", "ẕummāmīn", "çok yerenler", "orta", ""],
+      [366, "ذُمَّامَات", "ẕummāmāt", "çok yerenler (dişi)", "orta", ""],
+      [367, "مِذْمَام", "miẕmām", "çok yeren", "orta", ""],
+      [368, "مِذْمَامَة", "miẕmāma", "çok yeren (dişi)", "orta", ""],
+      [369, "مِذْمَامَان", "miẕmāmān", "iki çok yeren", "orta", ""],
+      [370, "مِذْمَامَتَان", "miẕmāmatān", "iki çok yeren (dişi)", "orta", ""],
+      [371, "مِذْمَامُون", "miẕmāmūn", "çok yerenler", "orta", ""],
+      [372, "مِذْمَامِين", "miẕmāmīn", "çok yerenler", "orta", ""],
+      [373, "مِذْمَامَات", "miẕmāmāt", "çok yerenler (dişi)", "orta", ""],
+      [374, "مِذْمِيم", "miẕmīm", "çok yeren", "orta", ""],
+      [375, "مِذْمِيمَة", "miẕmīma", "çok yeren (dişi)", "orta", ""],
+      [376, "مِذْمِيمَان", "miẕmīmān", "iki çok yeren", "orta", ""],
+      [377, "مِذْمِيمَتَان", "miẕmīmatān", "iki çok yeren (dişi)", "orta", ""],
+      [378, "مِذْمِيمُون", "miẕmīmūn", "çok yerenler", "orta", ""],
+      [379, "مِذْمِيمِين", "miẕmīmīn", "çok yerenler", "orta", ""],
+      [380, "مِذْمِيمَات", "miẕmīmāt", "çok yerenler (dişi)", "orta", ""],
+      [381, "ذَمِيم", "ẕamīm", "çok yeren", "orta", "Vikisözlük: obnoxious"],
+      [382, "ذَمِيمَة", "ẕamīma", "çok yeren (dişi)", "orta", ""],
+      [383, "ذَمِيمَان", "ẕamīmān", "iki çok yeren", "orta", ""],
+      [384, "ذَمِيمَتَان", "ẕamīmatān", "iki çok yeren (dişi)", "orta", ""],
+      [385, "ذَمِيمُون", "ẕamīmūn", "çok yerenler", "orta", ""],
+      [386, "ذَمِيمِين", "ẕamīmīn", "çok yerenler", "orta", ""],
+      [387, "ذَمِيمَات", "ẕamīmāt", "çok yerenler (dişi)", "orta", ""],
+      [388, "ذَمَّم", "ẕammam", "çok yeren", "orta", ""],
+      [389, "ذَمَّمَة", "ẕammama", "çok yeren (dişi)", "orta", ""],
+      [390, "ذَمَّمَان", "ẕammamān", "iki çok yeren", "orta", ""],
+      [391, "ذَمَّمَتَان", "ẕammamatān", "iki çok yeren (dişi)", "orta", ""],
+      [392, "ذَمَّمُون", "ẕammamūn", "çok yerenler", "orta", ""],
+      [393, "ذَمَّمِين", "ẕammamīn", "çok yerenler", "orta", ""],
+      [394, "ذَمَّمَات", "ẕammamāt", "çok yerenler (dişi)", "orta", ""]
     ],
     "mensûb": [
-      [395, "ذَمِّيّ", "ẕammiyy", "ahit olmaya ilgili", "kontrol", ""],
-      [397, "ذَمِّيّ", "ẕammiyy", "ahit olmaya ilgili", "kontrol", ""],
-      [399, "ذِمِّيّ", "ẕimmiyy", "ahit olmaya ilgili", "kontrol", ""],
-      [401, "ذُمِّيّ", "ẕummiyy", "ahit olmaya ilgili", "kontrol", ""],
-      [403, "ذِمَامِيّ", "ẕimāmiyy", "ahit olmaya ilgili", "kontrol", ""],
-      [405, "ذَامِّيّ", "ẕāmmiyy", "ahit olmaya ilgili", "kontrol", ""],
-      [407, "مَذْمُومِيّ", "maẕmūmiyy", "ahit olmaya ilgili", "kontrol", ""],
-      [409, "ذَمِيمِيّ", "ẕamīmiyy", "ahit olmaya ilgili", "kontrol", ""],
-      [411, "مَذَمِّيّ", "maẕammiyy", "ahit olmaya ilgili", "kontrol", ""],
-      [413, "تَذْمِيمِيّ", "taẕmīmiyy", "ahit olmaya ilgili", "kontrol", ""],
-      [415, "تَذَامِّيّ", "taẕāmmiyy", "ahit olmaya ilgili", "kontrol", ""],
-      [417, "إِذْمَامِيّ", "ʾiẕmāmiyy", "ahit olmaya ilgili", "kontrol", ""],
-      [419, "اِدِّمَامِيّ", "iddimāmiyy", "ahit olmaya ilgili", "kontrol", ""]
+      [395, "ذَمِّيّ", "ẕammiyy", "yermeye ilgili", "orta", ""],
+      [397, "ذَمِّيّ", "ẕammiyy", "yermeye ilgili", "orta", ""],
+      [399, "ذِمِّيّ", "ẕimmiyy", "yermeye ilgili", "orta", ""],
+      [401, "ذُمِّيّ", "ẕummiyy", "yermeye ilgili", "orta", ""],
+      [403, "ذِمَامِيّ", "ẕimāmiyy", "yermeye ilgili", "orta", ""],
+      [405, "ذَامِّيّ", "ẕāmmiyy", "yermeye ilgili", "orta", ""],
+      [407, "مَذْمُومِيّ", "maẕmūmiyy", "yermeye ilgili", "orta", ""],
+      [409, "ذَمِيمِيّ", "ẕamīmiyy", "yermeye ilgili", "orta", ""],
+      [411, "مَذَمِّيّ", "maẕammiyy", "yermeye ilgili", "orta", ""],
+      [413, "تَذْمِيمِيّ", "taẕmīmiyy", "yermeye ilgili", "orta", ""],
+      [415, "تَذَامِّيّ", "taẕāmmiyy", "yermeye ilgili", "orta", ""],
+      [417, "إِذْمَامِيّ", "ʾiẕmāmiyy", "yermeye ilgili", "orta", ""],
+      [419, "اِدِّمَامِيّ", "iddimāmiyy", "yermeye ilgili", "orta", ""]
     ],
     "masdar-ı sınâî": [
-      [396, "ذَمِّيَّة", "ẕammiyya", "ahit olanlık", "kontrol", ""],
-      [398, "ذَمِّيَّة", "ẕammiyya", "ahit olanlık", "kontrol", ""],
-      [400, "ذِمِّيَّة", "ẕimmiyya", "ahit olanlık", "kontrol", ""],
-      [402, "ذُمِّيَّة", "ẕummiyya", "ahit olanlık", "kontrol", ""],
-      [404, "ذِمَامِيَّة", "ẕimāmiyya", "ahit olanlık", "kontrol", ""],
-      [406, "ذَامِّيَّة", "ẕāmmiyya", "ahit olanlık", "kontrol", ""],
-      [408, "مَذْمُومِيَّة", "maẕmūmiyya", "ahit olanlık", "kontrol", ""],
-      [410, "ذَمِيمِيَّة", "ẕamīmiyya", "ahit olanlık", "kontrol", ""],
-      [412, "مَذَمِّيَّة", "maẕammiyya", "ahit olanlık", "kontrol", ""],
-      [414, "تَذْمِيمِيَّة", "taẕmīmiyya", "ahit olanlık", "kontrol", ""],
-      [416, "تَذَامِّيَّة", "taẕāmmiyya", "ahit olanlık", "kontrol", ""],
-      [418, "إِذْمَامِيَّة", "ʾiẕmāmiyya", "ahit olanlık", "kontrol", ""],
-      [420, "اِدِّمَامِيَّة", "iddimāmiyya", "ahit olanlık", "kontrol", ""]
+      [396, "ذَمِّيَّة", "ẕammiyya", "yerenlik", "orta", ""],
+      [398, "ذَمِّيَّة", "ẕammiyya", "yerenlik", "orta", ""],
+      [400, "ذِمِّيَّة", "ẕimmiyya", "yerenlik", "orta", ""],
+      [402, "ذُمِّيَّة", "ẕummiyya", "yerenlik", "orta", ""],
+      [404, "ذِمَامِيَّة", "ẕimāmiyya", "yerenlik", "orta", ""],
+      [406, "ذَامِّيَّة", "ẕāmmiyya", "yerenlik", "orta", ""],
+      [408, "مَذْمُومِيَّة", "maẕmūmiyya", "yerenlik", "orta", ""],
+      [410, "ذَمِيمِيَّة", "ẕamīmiyya", "yerenlik", "orta", ""],
+      [412, "مَذَمِّيَّة", "maẕammiyya", "yerenlik", "orta", ""],
+      [414, "تَذْمِيمِيَّة", "taẕmīmiyya", "yerenlik", "orta", ""],
+      [416, "تَذَامِّيَّة", "taẕāmmiyya", "yerenlik", "orta", ""],
+      [418, "إِذْمَامِيَّة", "ʾiẕmāmiyya", "yerenlik", "orta", ""],
+      [420, "اِدِّمَامِيَّة", "iddimāmiyya", "yerenlik", "orta", ""]
     ],
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
-      [421, "ذَمَام", "ẕamām", "ahit olma", "kontrol", ""],
-      [422, "ذُمُوم", "ẕumūm", "ahit olma", "kontrol", ""],
-      [423, "ذِمَام", "ẕimām", "ahit olma", "kontrol", ""],
-      [424, "ذُمّ", "ẕumm", "ahit olma", "kontrol", ""],
-      [425, "ذَمَامَة", "ẕamāma", "ahit olma", "kontrol", ""],
-      [426, "ذِمَامَة", "ẕimāma", "ahit olma", "kontrol", ""],
-      [427, "ذُمُومَة", "ẕumūma", "ahit olma", "kontrol", ""],
+      [421, "ذَمَام", "ẕamām", "yerme", "orta", ""],
+      [422, "ذُمُوم", "ẕumūm", "yerme", "orta", ""],
+      [423, "ذِمَام", "ẕimām", "yerme", "orta", ""],
+      [424, "ذُمّ", "ẕumm", "yerme", "orta", ""],
+      [425, "ذَمَامَة", "ẕamāma", "yerme", "orta", ""],
+      [426, "ذِمَامَة", "ẕimāma", "yerme", "orta", ""],
+      [427, "ذُمُومَة", "ẕumūma", "yerme", "orta", ""],
       [
         428,
         "ذَمّ",
         "ẕamm",
-        "ahit olma",
-        "kontrol",
+        "yerme",
+        "orta",
         "Vikisözlük: masdar (bâb I): to dispraise, discommend, disesteem, denigrate, decry, degrade, cry do"
       ],
-      [429, "ذِمّ", "ẕimm", "ahit olma", "kontrol", ""]
+      [429, "ذِمّ", "ẕimm", "yerme", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
-      [430, "ذَامُوم", "ẕāmūm", "ahit olanlar (topluluk adı)", "kontrol", ""],
-      [432, "ذَمَّة", "ẕamma", "ahit olanlar (topluluk adı)", "kontrol", ""],
-      [433, "ذُمَّة", "ẕumma", "ahit olanlar (topluluk adı)", "kontrol", ""],
-      [434, "أُذْمُومَة", "ʾuẕmūma", "ahit olanlar (topluluk adı)", "kontrol", ""],
-      [435, "ذَوَمّ", "ẕawamm", "ahit olanlar (topluluk adı)", "kontrol", ""],
-      [437, "ذَيَمّ", "ẕayamm", "ahit olanlar (topluluk adı)", "kontrol", ""],
+      [430, "ذَامُوم", "ẕāmūm", "yerenler (topluluk adı)", "orta", ""],
+      [432, "ذَمَّة", "ẕamma", "yerenler (topluluk adı)", "orta", ""],
+      [433, "ذُمَّة", "ẕumma", "yerenler (topluluk adı)", "orta", ""],
+      [434, "أُذْمُومَة", "ʾuẕmūma", "yerenler (topluluk adı)", "orta", ""],
+      [435, "ذَوَمّ", "ẕawamm", "yerenler (topluluk adı)", "orta", ""],
+      [437, "ذَيَمّ", "ẕayamm", "yerenler (topluluk adı)", "orta", ""],
       [
         439,
         "ذَمّ",
         "ẕamm",
-        "ahit olanlar (topluluk adı)",
-        "kontrol",
+        "yerenler (topluluk adı)",
+        "orta",
         "Vikisözlük: masdar (bâb I): to dispraise, discommend, disesteem, denigrate, decry, degrade, cry do"
       ],
       [
         441,
         "ذَمّ",
         "ẕamm",
-        "ahit olanlar (topluluk adı)",
-        "kontrol",
+        "yerenler (topluluk adı)",
+        "orta",
         "Vikisözlük: masdar (bâb I): to dispraise, discommend, disesteem, denigrate, decry, degrade, cry do"
       ],
-      [443, "ذِمّ", "ẕimm", "ahit olanlar (topluluk adı)", "kontrol", ""],
-      [445, "ذُمّ", "ẕumm", "ahit olanlar (topluluk adı)", "kontrol", ""],
-      [447, "ذَمِيم", "ẕamīm", "ahit olanlar (topluluk adı)", "kontrol", "Vikisözlük: obnoxious"],
-      [449, "ذِمّ", "ẕimm", "ahit olanlar (topluluk adı)", "kontrol", ""],
-      [451, "ذُمّ", "ẕumm", "ahit olanlar (topluluk adı)", "kontrol", ""],
-      [453, "ذَمَام", "ẕamām", "ahit olanlar (topluluk adı)", "kontrol", ""]
+      [443, "ذِمّ", "ẕimm", "yerenler (topluluk adı)", "orta", ""],
+      [445, "ذُمّ", "ẕumm", "yerenler (topluluk adı)", "orta", ""],
+      [447, "ذَمِيم", "ẕamīm", "yerenler (topluluk adı)", "orta", "Vikisözlük: obnoxious"],
+      [449, "ذِمّ", "ẕimm", "yerenler (topluluk adı)", "orta", ""],
+      [451, "ذُمّ", "ẕumm", "yerenler (topluluk adı)", "orta", ""],
+      [453, "ذَمَام", "ẕamām", "yerenler (topluluk adı)", "orta", ""]
     ],
     "ism-i cins · cem‘î ve tekili (+tâ)": [
-      [431, "ذَامُومَة", "ẕāmūma", "bir tane ahit olanlar (topluluk adı)", "kontrol", ""],
-      [436, "ذَوَمَّة", "ẕawamma", "bir tane ahit olanlar (topluluk adı)", "kontrol", ""],
-      [438, "ذَيَمَّة", "ẕayamma", "bir tane ahit olanlar (topluluk adı)", "kontrol", ""],
-      [440, "ذَمَّة", "ẕamma", "bir tane ahit olanlar (topluluk adı)", "kontrol", ""],
-      [442, "ذَمَّة", "ẕamma", "bir tane ahit olanlar (topluluk adı)", "kontrol", ""],
+      [431, "ذَامُومَة", "ẕāmūma", "bir tane yerenler (topluluk adı)", "orta", ""],
+      [436, "ذَوَمَّة", "ẕawamma", "bir tane yerenler (topluluk adı)", "orta", ""],
+      [438, "ذَيَمَّة", "ẕayamma", "bir tane yerenler (topluluk adı)", "orta", ""],
+      [440, "ذَمَّة", "ẕamma", "bir tane yerenler (topluluk adı)", "orta", ""],
+      [442, "ذَمَّة", "ẕamma", "bir tane yerenler (topluluk adı)", "orta", ""],
       [
         444,
         "ذِمَّة",
         "ẕimma",
-        "bir tane ahit olanlar (topluluk adı)",
-        "kontrol",
+        "bir tane yerenler (topluluk adı)",
+        "orta",
         "Vikisözlük: peace, custody, guardianship, care"
       ],
-      [446, "ذُمَّة", "ẕumma", "bir tane ahit olanlar (topluluk adı)", "kontrol", ""],
-      [448, "ذَمِيمَة", "ẕamīma", "bir tane ahit olanlar (topluluk adı)", "kontrol", ""],
+      [446, "ذُمَّة", "ẕumma", "bir tane yerenler (topluluk adı)", "orta", ""],
+      [448, "ذَمِيمَة", "ẕamīma", "bir tane yerenler (topluluk adı)", "orta", ""],
       [
         450,
         "ذِمَّة",
         "ẕimma",
-        "bir tane ahit olanlar (topluluk adı)",
-        "kontrol",
+        "bir tane yerenler (topluluk adı)",
+        "orta",
         "Vikisözlük: peace, custody, guardianship, care"
       ],
-      [452, "ذُمَّة", "ẕumma", "bir tane ahit olanlar (topluluk adı)", "kontrol", ""],
-      [454, "ذَمَامَة", "ẕamāma", "bir tane ahit olanlar (topluluk adı)", "kontrol", ""]
+      [452, "ذُمَّة", "ẕumma", "bir tane yerenler (topluluk adı)", "orta", ""],
+      [454, "ذَمَامَة", "ẕamāma", "bir tane yerenler (topluluk adı)", "orta", ""]
     ],
     "cem‘-i mükesser (aday)": [
-      [455, "أَذْمَام", "ʾaẕmām", "ahit olanlar (kırık çoğul)", "kontrol", ""],
-      [456, "أَذِمَّة", "ʾaẕimma", "ahit olanlar (kırık çoğul)", "kontrol", ""],
-      [457, "أَذَامّ", "ʾaẕāmm", "ahit olanlar (kırık çoğul)", "kontrol", ""],
-      [458, "أَذَامِيم", "ʾaẕāmīm", "ahit olanlar (kırık çoğul)", "kontrol", ""],
-      [459, "ذُمُوم", "ẕumūm", "ahit olanlar (kırık çoğul)", "kontrol", ""],
-      [460, "ذُمّ", "ẕumm", "ahit olanlar (kırık çoğul)", "kontrol", ""],
-      [461, "ذِمَام", "ẕimām", "ahit olanlar (kırık çoğul)", "kontrol", ""],
-      [462, "ذِمّ", "ẕimm", "ahit olanlar (kırık çoğul)", "kontrol", ""],
-      [
-        463,
-        "ذِمَّة",
-        "ẕimma",
-        "ahit olanlar (kırık çoğul)",
-        "kontrol",
-        "Vikisözlük: peace, custody, guardianship, care"
-      ],
-      [464, "ذُمّ", "ẕumm", "ahit olanlar (kırık çoğul)", "kontrol", ""],
-      [465, "ذُمّاء", "ẕummāʾ", "ahit olanlar (kırık çoğul)", "kontrol", ""],
-      [466, "ذَمَّة", "ẕamma", "ahit olanlar (kırık çoğul)", "kontrol", ""],
-      [467, "ذُمَّام", "ẕummām", "ahit olanlar (kırık çoğul)", "kontrol", ""],
-      [468, "ذَمَام", "ẕamām", "ahit olanlar (kırık çoğul)", "kontrol", ""],
+      [455, "أَذْمَام", "ʾaẕmām", "yerenler (kırık çoğul)", "orta", ""],
+      [456, "أَذِمَّة", "ʾaẕimma", "yerenler (kırık çoğul)", "orta", ""],
+      [457, "أَذَامّ", "ʾaẕāmm", "yerenler (kırık çoğul)", "orta", ""],
+      [458, "أَذَامِيم", "ʾaẕāmīm", "yerenler (kırık çoğul)", "orta", ""],
+      [459, "ذُمُوم", "ẕumūm", "yerenler (kırık çoğul)", "orta", ""],
+      [460, "ذُمّ", "ẕumm", "yerenler (kırık çoğul)", "orta", ""],
+      [461, "ذِمَام", "ẕimām", "yerenler (kırık çoğul)", "orta", ""],
+      [462, "ذِمّ", "ẕimm", "yerenler (kırık çoğul)", "orta", ""],
+      [463, "ذِمَّة", "ẕimma", "yerenler (kırık çoğul)", "orta", "Vikisözlük: peace, custody, guardianship, care"],
+      [464, "ذُمّ", "ẕumm", "yerenler (kırık çoğul)", "orta", ""],
+      [465, "ذُمّاء", "ẕummāʾ", "yerenler (kırık çoğul)", "orta", ""],
+      [466, "ذَمَّة", "ẕamma", "yerenler (kırık çoğul)", "orta", ""],
+      [467, "ذُمَّام", "ẕummām", "yerenler (kırık çoğul)", "orta", ""],
+      [468, "ذَمَام", "ẕamām", "yerenler (kırık çoğul)", "orta", ""],
       [
         469,
         "ذَمّ",
         "ẕamm",
-        "ahit olanlar (kırık çoğul)",
-        "kontrol",
+        "yerenler (kırık çoğul)",
+        "orta",
         "Vikisözlük: masdar (bâb I): to dispraise, discommend, disesteem, denigrate, decry, degrade, cry do"
       ],
-      [470, "مَذَامّ", "maẕāmm", "ahit olanlar (kırık çoğul)", "kontrol", ""],
-      [471, "مَذَامِيم", "maẕāmīm", "ahit olanlar (kırık çoğul)", "kontrol", ""],
-      [472, "ذَوَامّ", "ẕawāmm", "ahit olanlar (kırık çoğul)", "kontrol", ""],
-      [473, "أَذُمّ", "ʾaẕumm", "ahit olanlar (kırık çoğul)", "kontrol", ""],
-      [474, "ذُمَّم", "ẕummam", "ahit olanlar (kırık çoğul)", "kontrol", ""],
-      [475, "ذَمَائِم", "ẕamāʾim", "ahit olanlar (kırık çoğul)", "kontrol", ""],
-      [476, "ذُمَيْم", "ẕumaym", "ahit olanlar (kırık çoğul)", "kontrol", ""]
+      [470, "مَذَامّ", "maẕāmm", "yerenler (kırık çoğul)", "orta", ""],
+      [471, "مَذَامِيم", "maẕāmīm", "yerenler (kırık çoğul)", "orta", ""],
+      [472, "ذَوَامّ", "ẕawāmm", "yerenler (kırık çoğul)", "orta", ""],
+      [473, "أَذُمّ", "ʾaẕumm", "yerenler (kırık çoğul)", "orta", ""],
+      [474, "ذُمَّم", "ẕummam", "yerenler (kırık çoğul)", "orta", ""],
+      [475, "ذَمَائِم", "ẕamāʾim", "yerenler (kırık çoğul)", "orta", ""],
+      [476, "ذُمَيْم", "ẕumaym", "yerenler (kırık çoğul)", "orta", ""]
     ],
     "cem‘u’l-cem‘ (aday)": [
-      [477, "أَذْمَامَات", "ʾaẕmāmāt", "ahit olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [478, "أَذِمَّات", "ʾaẕimmāt", "ahit olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [479, "أَذَامَّات", "ʾaẕāmmāt", "ahit olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [480, "أَذَامِيمَات", "ʾaẕāmīmāt", "ahit olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [481, "ذُمُومَات", "ẕumūmāt", "ahit olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [482, "ذُمَّات", "ẕummāt", "ahit olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [483, "ذِمَامَات", "ẕimāmāt", "ahit olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [484, "ذِمَّات", "ẕimmāt", "ahit olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [485, "ذِمَّات", "ẕimmāt", "ahit olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [486, "ذُمَّات", "ẕummāt", "ahit olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [487, "ذُمّاآت", "ẕummāʾāt", "ahit olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [488, "ذَمَّات", "ẕammāt", "ahit olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [489, "ذُمَّامَات", "ẕummāmāt", "ahit olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [490, "ذَمَامَات", "ẕamāmāt", "ahit olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [491, "ذَمَّات", "ẕammāt", "ahit olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [492, "مَذَامَّات", "maẕāmmāt", "ahit olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [493, "مَذَامِيمَات", "maẕāmīmāt", "ahit olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [494, "ذَوَامَّات", "ẕawāmmāt", "ahit olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [495, "أَذُمَّات", "ʾaẕummāt", "ahit olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [496, "ذُمَّمَات", "ẕummamāt", "ahit olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [497, "ذَمَائِمَات", "ẕamāʾimāt", "ahit olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [498, "ذُمَيْمَات", "ẕumaymāt", "ahit olanlar (çoğulun çoğulu)", "kontrol", ""]
+      [477, "أَذْمَامَات", "ʾaẕmāmāt", "yerenler (çoğulun çoğulu)", "orta", ""],
+      [478, "أَذِمَّات", "ʾaẕimmāt", "yerenler (çoğulun çoğulu)", "orta", ""],
+      [479, "أَذَامَّات", "ʾaẕāmmāt", "yerenler (çoğulun çoğulu)", "orta", ""],
+      [480, "أَذَامِيمَات", "ʾaẕāmīmāt", "yerenler (çoğulun çoğulu)", "orta", ""],
+      [481, "ذُمُومَات", "ẕumūmāt", "yerenler (çoğulun çoğulu)", "orta", ""],
+      [482, "ذُمَّات", "ẕummāt", "yerenler (çoğulun çoğulu)", "orta", ""],
+      [483, "ذِمَامَات", "ẕimāmāt", "yerenler (çoğulun çoğulu)", "orta", ""],
+      [484, "ذِمَّات", "ẕimmāt", "yerenler (çoğulun çoğulu)", "orta", ""],
+      [485, "ذِمَّات", "ẕimmāt", "yerenler (çoğulun çoğulu)", "orta", ""],
+      [486, "ذُمَّات", "ẕummāt", "yerenler (çoğulun çoğulu)", "orta", ""],
+      [487, "ذُمّاآت", "ẕummāʾāt", "yerenler (çoğulun çoğulu)", "orta", ""],
+      [488, "ذَمَّات", "ẕammāt", "yerenler (çoğulun çoğulu)", "orta", ""],
+      [489, "ذُمَّامَات", "ẕummāmāt", "yerenler (çoğulun çoğulu)", "orta", ""],
+      [490, "ذَمَامَات", "ẕamāmāt", "yerenler (çoğulun çoğulu)", "orta", ""],
+      [491, "ذَمَّات", "ẕammāt", "yerenler (çoğulun çoğulu)", "orta", ""],
+      [492, "مَذَامَّات", "maẕāmmāt", "yerenler (çoğulun çoğulu)", "orta", ""],
+      [493, "مَذَامِيمَات", "maẕāmīmāt", "yerenler (çoğulun çoğulu)", "orta", ""],
+      [494, "ذَوَامَّات", "ẕawāmmāt", "yerenler (çoğulun çoğulu)", "orta", ""],
+      [495, "أَذُمَّات", "ʾaẕummāt", "yerenler (çoğulun çoğulu)", "orta", ""],
+      [496, "ذُمَّمَات", "ẕummamāt", "yerenler (çoğulun çoğulu)", "orta", ""],
+      [497, "ذَمَائِمَات", "ẕamāʾimāt", "yerenler (çoğulun çoğulu)", "orta", ""],
+      [498, "ذُمَيْمَات", "ẕumaymāt", "yerenler (çoğulun çoğulu)", "orta", ""]
     ]
   },
   "reddedilen": [

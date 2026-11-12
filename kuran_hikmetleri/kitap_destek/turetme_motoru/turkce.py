@@ -142,19 +142,24 @@ def ayristir(metin):
     fiiller, adlar = [], []
     for n, s in enumerate(seg):
         s = s.strip()
+        yalniz_fiil = False
         if ':' in s:
             on, arka = s.split(':', 1)
             if n > 0 and ' ' not in on.strip():
-                continue
+                yalniz_fiil = True
             s = arka
+        s = re.sub(r'\([^)]*\)', '', s)
         for it in re.split(r',| / | veya ', s):
-            it = re.sub(r'\([^)]*\)', '', it).strip(" '\"?.")
+            it = re.sub(r'\([^)]*\)', '', it)
+            if ':' in it:
+                it = it.split(':', 1)[1]
+            it = re.sub(r'[()?]', '', it).strip(" '\"?.")
             if len(it) < 2:
                 continue
             son = it.split()[-1]
             if son.endswith(('mek', 'mak')) and len(son) > 4:
                 fiiller.append(it[:-3])
-            else:
+            elif not yalniz_fiil:
                 adlar.append(it)
     return fiiller, adlar
 

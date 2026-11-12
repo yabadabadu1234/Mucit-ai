@@ -2,684 +2,614 @@
   "kok": "حقق",
   "sinif": "muzâ‘af",
   "turkce_fiil": {
-    "sap": "hak olduğunu göster",
-    "kaynak": "kuran-fiil",
-    "guven": "orta"
+    "sap": "araştır",
+    "kaynak": "fiil",
+    "guven": "kural"
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "حَقّ", "ḥaqq", "hak olduğunu gösterme", "orta", "Vikisözlük: verbal noun of حُقَّ (ḥuqqa) (form I)"],
-      [1, "حِقّ", "ḥiqq", "hak olduğunu gösterme", "orta", ""],
-      [2, "حُقّ", "ḥuqq", "hak olduğunu gösterme", "orta", ""],
-      [3, "حَقّ", "ḥaqq", "hak olduğunu gösterme", "orta", "Vikisözlük: verbal noun of حُقَّ (ḥuqqa) (form I)"],
-      [4, "حِقّ", "ḥiqq", "hak olduğunu gösterme", "orta", ""],
-      [5, "حُقّ", "ḥuqq", "hak olduğunu gösterme", "orta", ""],
-      [6, "حُقُوق", "ḥuqūq", "hak olduğunu gösterme", "orta", ""],
-      [
-        7,
-        "حِقَاق",
-        "ḥiqāq",
-        "hak olduğunu gösterme",
-        "orta",
-        "Vikisözlük: verbal noun of حَاقَّ (ḥāqqa) (form III)"
-      ],
-      [8, "حُقَاق", "ḥuqāq", "hak olduğunu gösterme", "orta", ""],
-      [9, "حَقَاق", "ḥaqāq", "hak olduğunu gösterme", "orta", ""],
-      [10, "حَقَاقَة", "ḥaqāqa", "hak olduğunu gösterme", "orta", ""],
-      [11, "حُقُوقَة", "ḥuqūqa", "hak olduğunu gösterme", "orta", ""],
-      [12, "حِقَاقَة", "ḥiqāqa", "hak olduğunu gösterme", "orta", ""],
-      [13, "حَقِيق", "ḥaqīq", "hak olduğunu gösterme", "orta", "Vikisözlük: deserving, worthy"],
-      [14, "حَقُوق", "ḥaqūq", "hak olduğunu gösterme", "orta", ""],
-      [15, "حَقَّان", "ḥaqqān", "hak olduğunu gösterme", "orta", ""],
-      [16, "حُقَّان", "ḥuqqān", "hak olduğunu gösterme", "orta", ""],
-      [17, "حِقَّان", "ḥiqqān", "hak olduğunu gösterme", "orta", ""],
-      [18, "حَقَّى", "ḥaqqā", "hak olduğunu gösterme", "orta", ""],
-      [19, "حُقَّى", "ḥuqqā", "hak olduğunu gösterme", "orta", ""],
-      [20, "حِقَّى", "ḥiqqā", "hak olduğunu gösterme", "orta", ""],
-      [21, "حَقَّة", "ḥaqqa", "hak olduğunu gösterme", "orta", ""],
-      [22, "حِقَّة", "ḥiqqa", "hak olduğunu gösterme", "orta", ""],
-      [23, "حَقُّوقَة", "ḥaqqūqa", "hak olduğunu gösterme", "orta", ""],
-      [24, "تُحْقُوق", "tuḥqūq", "hak olduğunu gösterme", "orta", ""],
-      [25, "تَحِقَّة", "taḥiqqa", "hak olduğunu gösterme", "orta", ""],
-      [26, "تَحَقَّة", "taḥaqqa", "hak olduğunu gösterme", "orta", ""],
-      [27, "مَحُقَّة", "maḥuqqa", "hak olduğunu gösterme", "orta", ""],
-      [28, "مَحِقَّة", "maḥiqqa", "hak olduğunu gösterme", "orta", ""]
+      [0, "حَقّ", "ḥaqq", "araştırma", "orta", "Vikisözlük: verbal noun of حُقَّ (ḥuqqa) (form I)"],
+      [1, "حِقّ", "ḥiqq", "araştırma", "orta", ""],
+      [2, "حُقّ", "ḥuqq", "araştırma", "orta", ""],
+      [3, "حَقّ", "ḥaqq", "araştırma", "orta", "Vikisözlük: verbal noun of حُقَّ (ḥuqqa) (form I)"],
+      [4, "حِقّ", "ḥiqq", "araştırma", "orta", ""],
+      [5, "حُقّ", "ḥuqq", "araştırma", "orta", ""],
+      [6, "حُقُوق", "ḥuqūq", "araştırma", "orta", ""],
+      [7, "حِقَاق", "ḥiqāq", "araştırma", "orta", "Vikisözlük: verbal noun of حَاقَّ (ḥāqqa) (form III)"],
+      [8, "حُقَاق", "ḥuqāq", "araştırma", "orta", ""],
+      [9, "حَقَاق", "ḥaqāq", "araştırma", "orta", ""],
+      [10, "حَقَاقَة", "ḥaqāqa", "araştırma", "orta", ""],
+      [11, "حُقُوقَة", "ḥuqūqa", "araştırma", "orta", ""],
+      [12, "حِقَاقَة", "ḥiqāqa", "araştırma", "orta", ""],
+      [13, "حَقِيق", "ḥaqīq", "araştırma", "orta", "Vikisözlük: deserving, worthy"],
+      [14, "حَقُوق", "ḥaqūq", "araştırma", "orta", ""],
+      [15, "حَقَّان", "ḥaqqān", "araştırma", "orta", ""],
+      [16, "حُقَّان", "ḥuqqān", "araştırma", "orta", ""],
+      [17, "حِقَّان", "ḥiqqān", "araştırma", "orta", ""],
+      [18, "حَقَّى", "ḥaqqā", "araştırma", "orta", ""],
+      [19, "حُقَّى", "ḥuqqā", "araştırma", "orta", ""],
+      [20, "حِقَّى", "ḥiqqā", "araştırma", "orta", ""],
+      [21, "حَقَّة", "ḥaqqa", "araştırma", "orta", ""],
+      [22, "حِقَّة", "ḥiqqa", "araştırma", "orta", ""],
+      [23, "حَقُّوقَة", "ḥaqqūqa", "araştırma", "orta", ""],
+      [24, "تُحْقُوق", "tuḥqūq", "araştırma", "orta", ""],
+      [25, "تَحِقَّة", "taḥiqqa", "araştırma", "orta", ""],
+      [26, "تَحَقَّة", "taḥaqqa", "araştırma", "orta", ""],
+      [27, "مَحُقَّة", "maḥuqqa", "araştırma", "orta", ""],
+      [28, "مَحِقَّة", "maḥiqqa", "araştırma", "orta", ""]
     ],
     "masdar · bâb II": [
       [
         29,
         "تَحْقِيق",
         "taḥqīq",
-        "hak olduğunu gösterme",
+        "araştırma",
         "orta",
         "Vikisözlük: masdar (bâb II): to realize, to actualize, to make a reality or an actuality"
       ],
-      [30, "تَحِقَّة", "taḥiqqa", "hak olduğunu gösterme", "orta", ""],
-      [31, "حِقِّاق", "ḥiqqāq", "hak olduğunu gösterme", "orta", ""]
+      [30, "تَحِقَّة", "taḥiqqa", "araştırma", "orta", ""],
+      [31, "حِقِّاق", "ḥiqqāq", "araştırma", "orta", ""]
     ],
     "ism-i merre · bâb II": [
-      [32, "تَحْقِيقَة", "taḥqīqa", "bir kere hak olduğunu gösterme", "orta", ""],
-      [33, "حِقِّاقَة", "ḥiqqāqa", "bir kere hak olduğunu gösterme", "orta", ""]
+      [32, "تَحْقِيقَة", "taḥqīqa", "bir kere araştırma", "orta", ""],
+      [33, "حِقِّاقَة", "ḥiqqāqa", "bir kere araştırma", "orta", ""]
     ],
     "ism-i fâil · bâb II": [
-      [34, "مُحَقِّق", "muḥaqqiq", "hak olduğunu gösteren", "orta", ""],
-      [35, "مُحَقِّقَة", "muḥaqqiqa", "hak olduğunu gösteren (dişi)", "orta", ""],
-      [36, "مُحَقِّقَان", "muḥaqqiqān", "iki hak olduğunu gösteren", "orta", ""],
-      [37, "مُحَقِّقَتَان", "muḥaqqiqatān", "iki hak olduğunu gösteren (dişi)", "orta", ""],
-      [38, "مُحَقِّقُون", "muḥaqqiqūn", "hak olduğunu gösterenler", "orta", ""],
-      [39, "مُحَقِّقِين", "muḥaqqiqīn", "hak olduğunu gösterenler", "orta", ""],
-      [40, "مُحَقِّقَات", "muḥaqqiqāt", "hak olduğunu gösterenler (dişi)", "orta", ""]
+      [34, "مُحَقِّق", "muḥaqqiq", "araştıran", "orta", ""],
+      [35, "مُحَقِّقَة", "muḥaqqiqa", "araştıran (dişi)", "orta", ""],
+      [36, "مُحَقِّقَان", "muḥaqqiqān", "iki araştıran", "orta", ""],
+      [37, "مُحَقِّقَتَان", "muḥaqqiqatān", "iki araştıran (dişi)", "orta", ""],
+      [38, "مُحَقِّقُون", "muḥaqqiqūn", "araştıranlar", "orta", ""],
+      [39, "مُحَقِّقِين", "muḥaqqiqīn", "araştıranlar", "orta", ""],
+      [40, "مُحَقِّقَات", "muḥaqqiqāt", "araştıranlar (dişi)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb II": [
-      [41, "مُحَقَّق", "muḥaqqaq", "hak olduğunu gösterilmiş", "orta", ""],
-      [42, "مُحَقَّقَة", "muḥaqqaqa", "hak olduğunu gösterilmiş (dişi)", "orta", ""],
-      [43, "مُحَقَّقَان", "muḥaqqaqān", "iki hak olduğunu gösterilmiş", "orta", ""],
-      [44, "مُحَقَّقَتَان", "muḥaqqaqatān", "iki hak olduğunu gösterilmiş (dişi)", "orta", ""],
-      [45, "مُحَقَّقُون", "muḥaqqaqūn", "hak olduğunu gösterilmişler", "orta", ""],
-      [46, "مُحَقَّقِين", "muḥaqqaqīn", "hak olduğunu gösterilmişler", "orta", ""],
-      [47, "مُحَقَّقَات", "muḥaqqaqāt", "hak olduğunu gösterilmişler (dişi)", "orta", ""]
+      [41, "مُحَقَّق", "muḥaqqaq", "araştırılmış", "orta", ""],
+      [42, "مُحَقَّقَة", "muḥaqqaqa", "araştırılmış (dişi)", "orta", ""],
+      [43, "مُحَقَّقَان", "muḥaqqaqān", "iki araştırılmış", "orta", ""],
+      [44, "مُحَقَّقَتَان", "muḥaqqaqatān", "iki araştırılmış (dişi)", "orta", ""],
+      [45, "مُحَقَّقُون", "muḥaqqaqūn", "araştırılmışlar", "orta", ""],
+      [46, "مُحَقَّقِين", "muḥaqqaqīn", "araştırılmışlar", "orta", ""],
+      [47, "مُحَقَّقَات", "muḥaqqaqāt", "araştırılmışlar (dişi)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb II": [
-      [48, "مُحَقَّق", "muḥaqqaq", "hak olduğunu gösterme (yeri/zamanı)", "orta", ""]
+      [48, "مُحَقَّق", "muḥaqqaq", "araştırma (yeri/zamanı)", "orta", ""]
     ],
     "masdar · bâb III": [
-      [
-        49,
-        "مُحَاقَّة",
-        "muḥāqqa",
-        "hak olduğunu gösterişme",
-        "orta",
-        "Vikisözlük: verbal noun of حَاقَّ (ḥāqqa) (form III)"
-      ],
-      [
-        50,
-        "حِقَاق",
-        "ḥiqāq",
-        "hak olduğunu gösterişme",
-        "orta",
-        "Vikisözlük: verbal noun of حَاقَّ (ḥāqqa) (form III)"
-      ]
+      [49, "مُحَاقَّة", "muḥāqqa", "araştırışma", "orta", "Vikisözlük: verbal noun of حَاقَّ (ḥāqqa) (form III)"],
+      [50, "حِقَاق", "ḥiqāq", "araştırışma", "orta", "Vikisözlük: verbal noun of حَاقَّ (ḥāqqa) (form III)"]
     ],
     "ism-i merre · bâb III": [
-      [51, "حِقَاقَة", "ḥiqāqa", "bir kere hak olduğunu gösterişme", "orta", ""]
+      [51, "حِقَاقَة", "ḥiqāqa", "bir kere araştırışma", "orta", ""]
     ],
     "ism-i fâil · bâb III": [
-      [52, "مُحَاقّ", "muḥāqq", "hak olduğunu gösterişen", "orta", ""],
+      [52, "مُحَاقّ", "muḥāqq", "araştırışan", "orta", ""],
       [
         53,
         "مُحَاقَّة",
         "muḥāqqa",
-        "hak olduğunu gösterişen (dişi)",
+        "araştırışan (dişi)",
         "orta",
         "Vikisözlük: verbal noun of حَاقَّ (ḥāqqa) (form III)"
       ],
-      [54, "مُحَاقَّان", "muḥāqqān", "iki hak olduğunu gösterişen", "orta", ""],
-      [55, "مُحَاقَّتَان", "muḥāqqatān", "iki hak olduğunu gösterişen (dişi)", "orta", ""],
-      [56, "مُحَاقُّون", "muḥāqqūn", "hak olduğunu gösterişenler", "orta", ""],
-      [57, "مُحَاقِّين", "muḥāqqīn", "hak olduğunu gösterişenler", "orta", ""],
-      [58, "مُحَاقَّات", "muḥāqqāt", "hak olduğunu gösterişenler (dişi)", "orta", ""]
+      [54, "مُحَاقَّان", "muḥāqqān", "iki araştırışan", "orta", ""],
+      [55, "مُحَاقَّتَان", "muḥāqqatān", "iki araştırışan (dişi)", "orta", ""],
+      [56, "مُحَاقُّون", "muḥāqqūn", "araştırışanlar", "orta", ""],
+      [57, "مُحَاقِّين", "muḥāqqīn", "araştırışanlar", "orta", ""],
+      [58, "مُحَاقَّات", "muḥāqqāt", "araştırışanlar (dişi)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb III": [
-      [59, "مُحَاقّ", "muḥāqq", "hak olduğunu gösterişmiş", "orta", ""],
+      [59, "مُحَاقّ", "muḥāqq", "araştırışmış", "orta", ""],
       [
         60,
         "مُحَاقَّة",
         "muḥāqqa",
-        "hak olduğunu gösterişmiş (dişi)",
+        "araştırışmış (dişi)",
         "orta",
         "Vikisözlük: verbal noun of حَاقَّ (ḥāqqa) (form III)"
       ],
-      [61, "مُحَاقَّان", "muḥāqqān", "iki hak olduğunu gösterişmiş", "orta", ""],
-      [62, "مُحَاقَّتَان", "muḥāqqatān", "iki hak olduğunu gösterişmiş (dişi)", "orta", ""],
-      [63, "مُحَاقُّون", "muḥāqqūn", "hak olduğunu gösterişmişler", "orta", ""],
-      [64, "مُحَاقِّين", "muḥāqqīn", "hak olduğunu gösterişmişler", "orta", ""],
-      [65, "مُحَاقَّات", "muḥāqqāt", "hak olduğunu gösterişmişler (dişi)", "orta", ""]
+      [61, "مُحَاقَّان", "muḥāqqān", "iki araştırışmış", "orta", ""],
+      [62, "مُحَاقَّتَان", "muḥāqqatān", "iki araştırışmış (dişi)", "orta", ""],
+      [63, "مُحَاقُّون", "muḥāqqūn", "araştırışmışlar", "orta", ""],
+      [64, "مُحَاقِّين", "muḥāqqīn", "araştırışmışlar", "orta", ""],
+      [65, "مُحَاقَّات", "muḥāqqāt", "araştırışmışlar (dişi)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb III": [
-      [66, "مُحَاقّ", "muḥāqq", "hak olduğunu gösterişme (yeri/zamanı)", "orta", ""]
+      [66, "مُحَاقّ", "muḥāqq", "araştırışma (yeri/zamanı)", "orta", ""]
     ],
     "masdar · bâb IV": [
-      [
-        67,
-        "إِحْقَاق",
-        "ʾiḥqāq",
-        "hak olduğunu gösterme",
-        "orta",
-        "Vikisözlük: verbal noun of أَحَقَّ (ʔaḥaqqa) (form IV)"
-      ]
+      [67, "إِحْقَاق", "ʾiḥqāq", "araştırma", "orta", "Vikisözlük: verbal noun of أَحَقَّ (ʔaḥaqqa) (form IV)"]
     ],
     "ism-i merre · bâb IV": [
-      [68, "إِحْقَاقَة", "ʾiḥqāqa", "bir kere hak olduğunu gösterme", "orta", ""]
+      [68, "إِحْقَاقَة", "ʾiḥqāqa", "bir kere araştırma", "orta", ""]
     ],
     "ism-i fâil · bâb IV": [
-      [69, "مُحِقّ", "muḥiqq", "hak olduğunu gösteren", "orta", ""],
-      [70, "مُحِقَّة", "muḥiqqa", "hak olduğunu gösteren (dişi)", "orta", ""],
-      [71, "مُحِقَّان", "muḥiqqān", "iki hak olduğunu gösteren", "orta", ""],
-      [72, "مُحِقَّتَان", "muḥiqqatān", "iki hak olduğunu gösteren (dişi)", "orta", ""],
-      [73, "مُحِقُّون", "muḥiqqūn", "hak olduğunu gösterenler", "orta", ""],
-      [74, "مُحِقِّين", "muḥiqqīn", "hak olduğunu gösterenler", "orta", ""],
-      [75, "مُحِقَّات", "muḥiqqāt", "hak olduğunu gösterenler (dişi)", "orta", ""]
+      [69, "مُحِقّ", "muḥiqq", "araştıran", "orta", ""],
+      [70, "مُحِقَّة", "muḥiqqa", "araştıran (dişi)", "orta", ""],
+      [71, "مُحِقَّان", "muḥiqqān", "iki araştıran", "orta", ""],
+      [72, "مُحِقَّتَان", "muḥiqqatān", "iki araştıran (dişi)", "orta", ""],
+      [73, "مُحِقُّون", "muḥiqqūn", "araştıranlar", "orta", ""],
+      [74, "مُحِقِّين", "muḥiqqīn", "araştıranlar", "orta", ""],
+      [75, "مُحِقَّات", "muḥiqqāt", "araştıranlar (dişi)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb IV": [
-      [76, "مُحَقّ", "muḥaqq", "hak olduğunu gösterilmiş", "orta", ""],
-      [77, "مُحَقَّة", "muḥaqqa", "hak olduğunu gösterilmiş (dişi)", "orta", ""],
-      [78, "مُحَقَّان", "muḥaqqān", "iki hak olduğunu gösterilmiş", "orta", ""],
-      [79, "مُحَقَّتَان", "muḥaqqatān", "iki hak olduğunu gösterilmiş (dişi)", "orta", ""],
-      [80, "مُحَقُّون", "muḥaqqūn", "hak olduğunu gösterilmişler", "orta", ""],
-      [81, "مُحَقِّين", "muḥaqqīn", "hak olduğunu gösterilmişler", "orta", ""],
-      [82, "مُحَقَّات", "muḥaqqāt", "hak olduğunu gösterilmişler (dişi)", "orta", ""]
+      [76, "مُحَقّ", "muḥaqq", "araştırılmış", "orta", ""],
+      [77, "مُحَقَّة", "muḥaqqa", "araştırılmış (dişi)", "orta", ""],
+      [78, "مُحَقَّان", "muḥaqqān", "iki araştırılmış", "orta", ""],
+      [79, "مُحَقَّتَان", "muḥaqqatān", "iki araştırılmış (dişi)", "orta", ""],
+      [80, "مُحَقُّون", "muḥaqqūn", "araştırılmışlar", "orta", ""],
+      [81, "مُحَقِّين", "muḥaqqīn", "araştırılmışlar", "orta", ""],
+      [82, "مُحَقَّات", "muḥaqqāt", "araştırılmışlar (dişi)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb IV": [
-      [83, "مُحَقّ", "muḥaqq", "hak olduğunu gösterme (yeri/zamanı)", "orta", ""]
+      [83, "مُحَقّ", "muḥaqq", "araştırma (yeri/zamanı)", "orta", ""]
     ],
     "masdar · bâb V": [
       [
         84,
         "تَحَقُّق",
         "taḥaqquq",
-        "hak olduğunu gösterinme",
+        "araştırınma",
         "orta",
         "Vikisözlük: masdar (bâb V): to come true, to materialize"
       ]
     ],
     "ism-i merre · bâb V": [
-      [85, "تَحَقُّقَة", "taḥaqquqa", "bir kere hak olduğunu gösterinme", "orta", ""]
+      [85, "تَحَقُّقَة", "taḥaqquqa", "bir kere araştırınma", "orta", ""]
     ],
     "ism-i fâil · bâb V": [
-      [86, "مُتَحَقِّق", "mutaḥaqqiq", "hak olduğunu gösterinen", "orta", ""],
-      [87, "مُتَحَقِّقَة", "mutaḥaqqiqa", "hak olduğunu gösterinen (dişi)", "orta", ""],
-      [88, "مُتَحَقِّقَان", "mutaḥaqqiqān", "iki hak olduğunu gösterinen", "orta", ""],
-      [89, "مُتَحَقِّقَتَان", "mutaḥaqqiqatān", "iki hak olduğunu gösterinen (dişi)", "orta", ""],
-      [90, "مُتَحَقِّقُون", "mutaḥaqqiqūn", "hak olduğunu gösterinenler", "orta", ""],
-      [91, "مُتَحَقِّقِين", "mutaḥaqqiqīn", "hak olduğunu gösterinenler", "orta", ""],
-      [92, "مُتَحَقِّقَات", "mutaḥaqqiqāt", "hak olduğunu gösterinenler (dişi)", "orta", ""]
+      [86, "مُتَحَقِّق", "mutaḥaqqiq", "araştırınan", "orta", ""],
+      [87, "مُتَحَقِّقَة", "mutaḥaqqiqa", "araştırınan (dişi)", "orta", ""],
+      [88, "مُتَحَقِّقَان", "mutaḥaqqiqān", "iki araştırınan", "orta", ""],
+      [89, "مُتَحَقِّقَتَان", "mutaḥaqqiqatān", "iki araştırınan (dişi)", "orta", ""],
+      [90, "مُتَحَقِّقُون", "mutaḥaqqiqūn", "araştırınanlar", "orta", ""],
+      [91, "مُتَحَقِّقِين", "mutaḥaqqiqīn", "araştırınanlar", "orta", ""],
+      [92, "مُتَحَقِّقَات", "mutaḥaqqiqāt", "araştırınanlar (dişi)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb V": [
-      [93, "مُتَحَقَّق", "mutaḥaqqaq", "hak olduğunu gösterinmiş", "orta", ""],
-      [94, "مُتَحَقَّقَة", "mutaḥaqqaqa", "hak olduğunu gösterinmiş (dişi)", "orta", ""],
-      [95, "مُتَحَقَّقَان", "mutaḥaqqaqān", "iki hak olduğunu gösterinmiş", "orta", ""],
-      [96, "مُتَحَقَّقَتَان", "mutaḥaqqaqatān", "iki hak olduğunu gösterinmiş (dişi)", "orta", ""],
-      [97, "مُتَحَقَّقُون", "mutaḥaqqaqūn", "hak olduğunu gösterinmişler", "orta", ""],
-      [98, "مُتَحَقَّقِين", "mutaḥaqqaqīn", "hak olduğunu gösterinmişler", "orta", ""],
-      [99, "مُتَحَقَّقَات", "mutaḥaqqaqāt", "hak olduğunu gösterinmişler (dişi)", "orta", ""]
+      [93, "مُتَحَقَّق", "mutaḥaqqaq", "araştırınmış", "orta", ""],
+      [94, "مُتَحَقَّقَة", "mutaḥaqqaqa", "araştırınmış (dişi)", "orta", ""],
+      [95, "مُتَحَقَّقَان", "mutaḥaqqaqān", "iki araştırınmış", "orta", ""],
+      [96, "مُتَحَقَّقَتَان", "mutaḥaqqaqatān", "iki araştırınmış (dişi)", "orta", ""],
+      [97, "مُتَحَقَّقُون", "mutaḥaqqaqūn", "araştırınmışlar", "orta", ""],
+      [98, "مُتَحَقَّقِين", "mutaḥaqqaqīn", "araştırınmışlar", "orta", ""],
+      [99, "مُتَحَقَّقَات", "mutaḥaqqaqāt", "araştırınmışlar (dişi)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb V": [
-      [100, "مُتَحَقَّق", "mutaḥaqqaq", "hak olduğunu gösterinme (yeri/zamanı)", "orta", ""]
+      [100, "مُتَحَقَّق", "mutaḥaqqaq", "araştırınma (yeri/zamanı)", "orta", ""]
     ],
     "masdar · bâb VI": [
-      [101, "تَحَاقّ", "taḥāqq", "hak olduğunu gösterişme", "orta", ""]
+      [101, "تَحَاقّ", "taḥāqq", "araştırışma", "orta", ""]
     ],
     "ism-i merre · bâb VI": [
-      [102, "تَحَاقَّة", "taḥāqqa", "bir kere hak olduğunu gösterişme", "orta", ""]
+      [102, "تَحَاقَّة", "taḥāqqa", "bir kere araştırışma", "orta", ""]
     ],
     "ism-i fâil · bâb VI": [
-      [103, "مُتَحَاقّ", "mutaḥāqq", "hak olduğunu gösterişen", "orta", ""],
-      [104, "مُتَحَاقَّة", "mutaḥāqqa", "hak olduğunu gösterişen (dişi)", "orta", ""],
-      [105, "مُتَحَاقَّان", "mutaḥāqqān", "iki hak olduğunu gösterişen", "orta", ""],
-      [106, "مُتَحَاقَّتَان", "mutaḥāqqatān", "iki hak olduğunu gösterişen (dişi)", "orta", ""],
-      [107, "مُتَحَاقُّون", "mutaḥāqqūn", "hak olduğunu gösterişenler", "orta", ""],
-      [108, "مُتَحَاقِّين", "mutaḥāqqīn", "hak olduğunu gösterişenler", "orta", ""],
-      [109, "مُتَحَاقَّات", "mutaḥāqqāt", "hak olduğunu gösterişenler (dişi)", "orta", ""]
+      [103, "مُتَحَاقّ", "mutaḥāqq", "araştırışan", "orta", ""],
+      [104, "مُتَحَاقَّة", "mutaḥāqqa", "araştırışan (dişi)", "orta", ""],
+      [105, "مُتَحَاقَّان", "mutaḥāqqān", "iki araştırışan", "orta", ""],
+      [106, "مُتَحَاقَّتَان", "mutaḥāqqatān", "iki araştırışan (dişi)", "orta", ""],
+      [107, "مُتَحَاقُّون", "mutaḥāqqūn", "araştırışanlar", "orta", ""],
+      [108, "مُتَحَاقِّين", "mutaḥāqqīn", "araştırışanlar", "orta", ""],
+      [109, "مُتَحَاقَّات", "mutaḥāqqāt", "araştırışanlar (dişi)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VI": [
-      [110, "مُتَحَاقّ", "mutaḥāqq", "hak olduğunu gösterişmiş", "orta", ""],
-      [111, "مُتَحَاقَّة", "mutaḥāqqa", "hak olduğunu gösterişmiş (dişi)", "orta", ""],
-      [112, "مُتَحَاقَّان", "mutaḥāqqān", "iki hak olduğunu gösterişmiş", "orta", ""],
-      [113, "مُتَحَاقَّتَان", "mutaḥāqqatān", "iki hak olduğunu gösterişmiş (dişi)", "orta", ""],
-      [114, "مُتَحَاقُّون", "mutaḥāqqūn", "hak olduğunu gösterişmişler", "orta", ""],
-      [115, "مُتَحَاقِّين", "mutaḥāqqīn", "hak olduğunu gösterişmişler", "orta", ""],
-      [116, "مُتَحَاقَّات", "mutaḥāqqāt", "hak olduğunu gösterişmişler (dişi)", "orta", ""]
+      [110, "مُتَحَاقّ", "mutaḥāqq", "araştırışmış", "orta", ""],
+      [111, "مُتَحَاقَّة", "mutaḥāqqa", "araştırışmış (dişi)", "orta", ""],
+      [112, "مُتَحَاقَّان", "mutaḥāqqān", "iki araştırışmış", "orta", ""],
+      [113, "مُتَحَاقَّتَان", "mutaḥāqqatān", "iki araştırışmış (dişi)", "orta", ""],
+      [114, "مُتَحَاقُّون", "mutaḥāqqūn", "araştırışmışlar", "orta", ""],
+      [115, "مُتَحَاقِّين", "mutaḥāqqīn", "araştırışmışlar", "orta", ""],
+      [116, "مُتَحَاقَّات", "mutaḥāqqāt", "araştırışmışlar (dişi)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VI": [
-      [117, "مُتَحَاقّ", "mutaḥāqq", "hak olduğunu gösterişme (yeri/zamanı)", "orta", ""]
+      [117, "مُتَحَاقّ", "mutaḥāqq", "araştırışma (yeri/zamanı)", "orta", ""]
     ],
     "masdar · bâb VII": [
-      [118, "اِنْحِقَاق", "inḥiqāq", "hak olduğunu gösterilme", "orta", ""]
+      [118, "اِنْحِقَاق", "inḥiqāq", "araştırılma", "orta", ""]
     ],
     "ism-i merre · bâb VII": [
-      [119, "اِنْحِقَاقَة", "inḥiqāqa", "bir kere hak olduğunu gösterilme", "orta", ""]
+      [119, "اِنْحِقَاقَة", "inḥiqāqa", "bir kere araştırılma", "orta", ""]
     ],
     "ism-i fâil · bâb VII": [
-      [120, "مُنْحَقّ", "munḥaqq", "hak olduğunu gösterilen", "orta", ""],
-      [121, "مُنْحَقَّة", "munḥaqqa", "hak olduğunu gösterilen (dişi)", "orta", ""],
-      [122, "مُنْحَقَّان", "munḥaqqān", "iki hak olduğunu gösterilen", "orta", ""],
-      [123, "مُنْحَقَّتَان", "munḥaqqatān", "iki hak olduğunu gösterilen (dişi)", "orta", ""],
-      [124, "مُنْحَقُّون", "munḥaqqūn", "hak olduğunu gösterilenler", "orta", ""],
-      [125, "مُنْحَقِّين", "munḥaqqīn", "hak olduğunu gösterilenler", "orta", ""],
-      [126, "مُنْحَقَّات", "munḥaqqāt", "hak olduğunu gösterilenler (dişi)", "orta", ""]
+      [120, "مُنْحَقّ", "munḥaqq", "araştırılan", "orta", ""],
+      [121, "مُنْحَقَّة", "munḥaqqa", "araştırılan (dişi)", "orta", ""],
+      [122, "مُنْحَقَّان", "munḥaqqān", "iki araştırılan", "orta", ""],
+      [123, "مُنْحَقَّتَان", "munḥaqqatān", "iki araştırılan (dişi)", "orta", ""],
+      [124, "مُنْحَقُّون", "munḥaqqūn", "araştırılanlar", "orta", ""],
+      [125, "مُنْحَقِّين", "munḥaqqīn", "araştırılanlar", "orta", ""],
+      [126, "مُنْحَقَّات", "munḥaqqāt", "araştırılanlar (dişi)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VII": [
-      [127, "مُنْحَقّ", "munḥaqq", "hak olduğunu gösterilmiş", "orta", ""],
-      [128, "مُنْحَقَّة", "munḥaqqa", "hak olduğunu gösterilmiş (dişi)", "orta", ""],
-      [129, "مُنْحَقَّان", "munḥaqqān", "iki hak olduğunu gösterilmiş", "orta", ""],
-      [130, "مُنْحَقَّتَان", "munḥaqqatān", "iki hak olduğunu gösterilmiş (dişi)", "orta", ""],
-      [131, "مُنْحَقُّون", "munḥaqqūn", "hak olduğunu gösterilmişler", "orta", ""],
-      [132, "مُنْحَقِّين", "munḥaqqīn", "hak olduğunu gösterilmişler", "orta", ""],
-      [133, "مُنْحَقَّات", "munḥaqqāt", "hak olduğunu gösterilmişler (dişi)", "orta", ""]
+      [127, "مُنْحَقّ", "munḥaqq", "araştırılmış", "orta", ""],
+      [128, "مُنْحَقَّة", "munḥaqqa", "araştırılmış (dişi)", "orta", ""],
+      [129, "مُنْحَقَّان", "munḥaqqān", "iki araştırılmış", "orta", ""],
+      [130, "مُنْحَقَّتَان", "munḥaqqatān", "iki araştırılmış (dişi)", "orta", ""],
+      [131, "مُنْحَقُّون", "munḥaqqūn", "araştırılmışlar", "orta", ""],
+      [132, "مُنْحَقِّين", "munḥaqqīn", "araştırılmışlar", "orta", ""],
+      [133, "مُنْحَقَّات", "munḥaqqāt", "araştırılmışlar (dişi)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VII": [
-      [134, "مُنْحَقّ", "munḥaqq", "hak olduğunu gösterilme (yeri/zamanı)", "orta", ""]
+      [134, "مُنْحَقّ", "munḥaqq", "araştırılma (yeri/zamanı)", "orta", ""]
     ],
     "masdar · bâb VIII": [
-      [135, "اِحْتِقَاق", "iḥtiqāq", "hak olduğunu gösterinme", "orta", ""]
+      [135, "اِحْتِقَاق", "iḥtiqāq", "araştırınma", "orta", ""]
     ],
     "ism-i merre · bâb VIII": [
-      [137, "اِحْتِقَاقَة", "iḥtiqāqa", "bir kere hak olduğunu gösterinme", "orta", ""]
+      [137, "اِحْتِقَاقَة", "iḥtiqāqa", "bir kere araştırınma", "orta", ""]
     ],
     "ism-i fâil · bâb VIII": [
-      [138, "مُحْتَقّ", "muḥtaqq", "hak olduğunu gösterinen", "orta", ""],
-      [139, "مُحْتَقَّة", "muḥtaqqa", "hak olduğunu gösterinen (dişi)", "orta", ""],
-      [140, "مُحْتَقَّان", "muḥtaqqān", "iki hak olduğunu gösterinen", "orta", ""],
-      [141, "مُحْتَقَّتَان", "muḥtaqqatān", "iki hak olduğunu gösterinen (dişi)", "orta", ""],
-      [142, "مُحْتَقُّون", "muḥtaqqūn", "hak olduğunu gösterinenler", "orta", ""],
-      [143, "مُحْتَقِّين", "muḥtaqqīn", "hak olduğunu gösterinenler", "orta", ""],
-      [144, "مُحْتَقَّات", "muḥtaqqāt", "hak olduğunu gösterinenler (dişi)", "orta", ""]
+      [138, "مُحْتَقّ", "muḥtaqq", "araştırınan", "orta", ""],
+      [139, "مُحْتَقَّة", "muḥtaqqa", "araştırınan (dişi)", "orta", ""],
+      [140, "مُحْتَقَّان", "muḥtaqqān", "iki araştırınan", "orta", ""],
+      [141, "مُحْتَقَّتَان", "muḥtaqqatān", "iki araştırınan (dişi)", "orta", ""],
+      [142, "مُحْتَقُّون", "muḥtaqqūn", "araştırınanlar", "orta", ""],
+      [143, "مُحْتَقِّين", "muḥtaqqīn", "araştırınanlar", "orta", ""],
+      [144, "مُحْتَقَّات", "muḥtaqqāt", "araştırınanlar (dişi)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VIII": [
-      [145, "مُحْتَقّ", "muḥtaqq", "hak olduğunu gösterinmiş", "orta", ""],
-      [146, "مُحْتَقَّة", "muḥtaqqa", "hak olduğunu gösterinmiş (dişi)", "orta", ""],
-      [147, "مُحْتَقَّان", "muḥtaqqān", "iki hak olduğunu gösterinmiş", "orta", ""],
-      [148, "مُحْتَقَّتَان", "muḥtaqqatān", "iki hak olduğunu gösterinmiş (dişi)", "orta", ""],
-      [149, "مُحْتَقُّون", "muḥtaqqūn", "hak olduğunu gösterinmişler", "orta", ""],
-      [150, "مُحْتَقِّين", "muḥtaqqīn", "hak olduğunu gösterinmişler", "orta", ""],
-      [151, "مُحْتَقَّات", "muḥtaqqāt", "hak olduğunu gösterinmişler (dişi)", "orta", ""]
+      [145, "مُحْتَقّ", "muḥtaqq", "araştırınmış", "orta", ""],
+      [146, "مُحْتَقَّة", "muḥtaqqa", "araştırınmış (dişi)", "orta", ""],
+      [147, "مُحْتَقَّان", "muḥtaqqān", "iki araştırınmış", "orta", ""],
+      [148, "مُحْتَقَّتَان", "muḥtaqqatān", "iki araştırınmış (dişi)", "orta", ""],
+      [149, "مُحْتَقُّون", "muḥtaqqūn", "araştırınmışlar", "orta", ""],
+      [150, "مُحْتَقِّين", "muḥtaqqīn", "araştırınmışlar", "orta", ""],
+      [151, "مُحْتَقَّات", "muḥtaqqāt", "araştırınmışlar (dişi)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VIII": [
-      [152, "مُحْتَقّ", "muḥtaqq", "hak olduğunu gösterinme (yeri/zamanı)", "orta", ""]
+      [152, "مُحْتَقّ", "muḥtaqq", "araştırınma (yeri/zamanı)", "orta", ""]
     ],
     "masdar · bâb IX (illet harfi izhar)": [
-      [168, "اِحْقِقَاق", "iḥqiqāq", "hak olduğunu gösterleşme", "kontrol", ""]
+      [168, "اِحْقِقَاق", "iḥqiqāq", "araştırlaşma", "kontrol", ""]
     ],
     "ism-i fâil · bâb IX (illet harfi izhar)": [
-      [169, "مُحْقَقّ", "muḥqaqq", "hak olduğunu gösterleşen", "kontrol", ""],
-      [170, "مُحْقَقَّة", "muḥqaqqa", "hak olduğunu gösterleşen (dişi)", "kontrol", ""],
-      [171, "مُحْقَقَّان", "muḥqaqqān", "iki hak olduğunu gösterleşen", "kontrol", ""],
-      [172, "مُحْقَقَّتَان", "muḥqaqqatān", "iki hak olduğunu gösterleşen (dişi)", "kontrol", ""],
-      [173, "مُحْقَقُّون", "muḥqaqqūn", "hak olduğunu gösterleşenler", "kontrol", ""],
-      [174, "مُحْقَقِّين", "muḥqaqqīn", "hak olduğunu gösterleşenler", "kontrol", ""],
-      [175, "مُحْقَقَّات", "muḥqaqqāt", "hak olduğunu gösterleşenler (dişi)", "kontrol", ""]
+      [169, "مُحْقَقّ", "muḥqaqq", "araştırlaşan", "kontrol", ""],
+      [170, "مُحْقَقَّة", "muḥqaqqa", "araştırlaşan (dişi)", "kontrol", ""],
+      [171, "مُحْقَقَّان", "muḥqaqqān", "iki araştırlaşan", "kontrol", ""],
+      [172, "مُحْقَقَّتَان", "muḥqaqqatān", "iki araştırlaşan (dişi)", "kontrol", ""],
+      [173, "مُحْقَقُّون", "muḥqaqqūn", "araştırlaşanlar", "kontrol", ""],
+      [174, "مُحْقَقِّين", "muḥqaqqīn", "araştırlaşanlar", "kontrol", ""],
+      [175, "مُحْقَقَّات", "muḥqaqqāt", "araştırlaşanlar (dişi)", "kontrol", ""]
     ],
     "masdar · bâb X": [
       [
         176,
         "اِسْتِحْقَاق",
         "istiḥqāq",
-        "hak olduğunu göstermeyi isteme",
+        "araştırmayı isteme",
         "orta",
         "Vikisözlük: masdar (bâb X): to be worthy, to deserve, to merit"
       ]
     ],
     "ism-i merre · bâb X": [
-      [177, "اِسْتِحْقَاقَة", "istiḥqāqa", "bir kere hak olduğunu gösterme", "orta", ""]
+      [177, "اِسْتِحْقَاقَة", "istiḥqāqa", "bir kere araştırma", "orta", ""]
     ],
     "ism-i fâil · bâb X": [
-      [178, "مُسْتَحِقّ", "mustaḥiqq", "hak olduğunu göstermeyi isteyen", "orta", ""],
-      [179, "مُسْتَحِقَّة", "mustaḥiqqa", "hak olduğunu göstermeyi isteyen (dişi)", "orta", ""],
-      [180, "مُسْتَحِقَّان", "mustaḥiqqān", "iki hak olduğunu göstermeyi isteyen", "orta", ""],
-      [181, "مُسْتَحِقَّتَان", "mustaḥiqqatān", "iki hak olduğunu göstermeyi isteyen (dişi)", "orta", ""],
-      [182, "مُسْتَحِقُّون", "mustaḥiqqūn", "hak olduğunu göstermeyi isteyenler", "orta", ""],
-      [183, "مُسْتَحِقِّين", "mustaḥiqqīn", "hak olduğunu göstermeyi isteyenler", "orta", ""],
-      [184, "مُسْتَحِقَّات", "mustaḥiqqāt", "hak olduğunu göstermeyi isteyenler (dişi)", "orta", ""]
+      [178, "مُسْتَحِقّ", "mustaḥiqq", "araştırmayı isteyen", "orta", ""],
+      [179, "مُسْتَحِقَّة", "mustaḥiqqa", "araştırmayı isteyen (dişi)", "orta", ""],
+      [180, "مُسْتَحِقَّان", "mustaḥiqqān", "iki araştırmayı isteyen", "orta", ""],
+      [181, "مُسْتَحِقَّتَان", "mustaḥiqqatān", "iki araştırmayı isteyen (dişi)", "orta", ""],
+      [182, "مُسْتَحِقُّون", "mustaḥiqqūn", "araştırmayı isteyenler", "orta", ""],
+      [183, "مُسْتَحِقِّين", "mustaḥiqqīn", "araştırmayı isteyenler", "orta", ""],
+      [184, "مُسْتَحِقَّات", "mustaḥiqqāt", "araştırmayı isteyenler (dişi)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb X": [
-      [185, "مُسْتَحَقّ", "mustaḥaqq", "hak olduğunu göstermeyi istenen", "orta", ""],
-      [186, "مُسْتَحَقَّة", "mustaḥaqqa", "hak olduğunu göstermeyi istenen (dişi)", "orta", ""],
-      [187, "مُسْتَحَقَّان", "mustaḥaqqān", "iki hak olduğunu göstermeyi istenen", "orta", ""],
-      [188, "مُسْتَحَقَّتَان", "mustaḥaqqatān", "iki hak olduğunu göstermeyi istenen (dişi)", "orta", ""],
-      [189, "مُسْتَحَقُّون", "mustaḥaqqūn", "hak olduğunu göstermeyi istenenler", "orta", ""],
-      [190, "مُسْتَحَقِّين", "mustaḥaqqīn", "hak olduğunu göstermeyi istenenler", "orta", ""],
-      [191, "مُسْتَحَقَّات", "mustaḥaqqāt", "hak olduğunu göstermeyi istenenler (dişi)", "orta", ""]
+      [185, "مُسْتَحَقّ", "mustaḥaqq", "araştırmayı istenen", "orta", ""],
+      [186, "مُسْتَحَقَّة", "mustaḥaqqa", "araştırmayı istenen (dişi)", "orta", ""],
+      [187, "مُسْتَحَقَّان", "mustaḥaqqān", "iki araştırmayı istenen", "orta", ""],
+      [188, "مُسْتَحَقَّتَان", "mustaḥaqqatān", "iki araştırmayı istenen (dişi)", "orta", ""],
+      [189, "مُسْتَحَقُّون", "mustaḥaqqūn", "araştırmayı istenenler", "orta", ""],
+      [190, "مُسْتَحَقِّين", "mustaḥaqqīn", "araştırmayı istenenler", "orta", ""],
+      [191, "مُسْتَحَقَّات", "mustaḥaqqāt", "araştırmayı istenenler (dişi)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb X": [
-      [192, "مُسْتَحَقّ", "mustaḥaqq", "hak olduğunu gösterme (yeri/zamanı)", "orta", ""]
+      [192, "مُسْتَحَقّ", "mustaḥaqq", "araştırma (yeri/zamanı)", "orta", ""]
     ],
     "masdar · bâb XI (illet harfi izhar)": [
-      [193, "اِحْقِيقَاق", "iḥqīqāq", "iyice hak olduğunu gösterleşme", "kontrol", ""]
+      [193, "اِحْقِيقَاق", "iḥqīqāq", "iyice araştırlaşma", "kontrol", ""]
     ],
     "ism-i fâil · bâb XI (illet harfi izhar)": [
-      [194, "مُحْقَاقّ", "muḥqāqq", "iyice hak olduğunu gösterleşen", "kontrol", ""],
-      [195, "مُحْقَاقَّة", "muḥqāqqa", "iyice hak olduğunu gösterleşen (dişi)", "kontrol", ""],
-      [196, "مُحْقَاقَّان", "muḥqāqqān", "iki iyice hak olduğunu gösterleşen", "kontrol", ""],
-      [197, "مُحْقَاقَّتَان", "muḥqāqqatān", "iki iyice hak olduğunu gösterleşen (dişi)", "kontrol", ""],
-      [198, "مُحْقَاقُّون", "muḥqāqqūn", "iyice hak olduğunu gösterleşenler", "kontrol", ""],
-      [199, "مُحْقَاقِّين", "muḥqāqqīn", "iyice hak olduğunu gösterleşenler", "kontrol", ""],
-      [200, "مُحْقَاقَّات", "muḥqāqqāt", "iyice hak olduğunu gösterleşenler (dişi)", "kontrol", ""]
+      [194, "مُحْقَاقّ", "muḥqāqq", "iyice araştırlaşan", "kontrol", ""],
+      [195, "مُحْقَاقَّة", "muḥqāqqa", "iyice araştırlaşan (dişi)", "kontrol", ""],
+      [196, "مُحْقَاقَّان", "muḥqāqqān", "iki iyice araştırlaşan", "kontrol", ""],
+      [197, "مُحْقَاقَّتَان", "muḥqāqqatān", "iki iyice araştırlaşan (dişi)", "kontrol", ""],
+      [198, "مُحْقَاقُّون", "muḥqāqqūn", "iyice araştırlaşanlar", "kontrol", ""],
+      [199, "مُحْقَاقِّين", "muḥqāqqīn", "iyice araştırlaşanlar", "kontrol", ""],
+      [200, "مُحْقَاقَّات", "muḥqāqqāt", "iyice araştırlaşanlar (dişi)", "kontrol", ""]
     ],
     "masdar · bâb XII (illet harfi izhar)": [
-      [201, "اِحْقِوْقَاق", "iḥqiwqāq", "aşırı hak olduğunu gösterme", "orta", ""]
+      [201, "اِحْقِوْقَاق", "iḥqiwqāq", "aşırı araştırma", "orta", ""]
     ],
     "masdar · bâb XIII (illet harfi izhar)": [
-      [202, "اِحْقِوَّاق", "iḥqiwwāq", "aşırı hak olduğunu gösterme", "orta", ""]
+      [202, "اِحْقِوَّاق", "iḥqiwwāq", "aşırı araştırma", "orta", ""]
     ],
     "masdar · Rubâ‘î mücerred": [
-      [203, "حَقْحَقَة", "ḥaqḥaqa", "ardı ardına hak olduğunu gösterme", "orta", ""],
-      [204, "حِقْحَاق", "ḥiqḥāq", "ardı ardına hak olduğunu gösterme", "orta", ""]
+      [203, "حَقْحَقَة", "ḥaqḥaqa", "ardı ardına araştırma", "orta", ""],
+      [204, "حِقْحَاق", "ḥiqḥāq", "ardı ardına araştırma", "orta", ""]
     ],
     "ism-i fâil · Rubâ‘î mücerred": [
-      [205, "مُحَقْحِق", "muḥaqḥiq", "ardı ardına hak olduğunu gösteren", "orta", ""]
+      [205, "مُحَقْحِق", "muḥaqḥiq", "ardı ardına araştıran", "orta", ""]
     ],
     "ism-i mef‘ûl · Rubâ‘î mücerred": [
-      [206, "مُحَقْحَق", "muḥaqḥaq", "ardı ardına hak olduğunu gösterilmiş", "orta", ""]
+      [206, "مُحَقْحَق", "muḥaqḥaq", "ardı ardına araştırılmış", "orta", ""]
     ],
     "masdar · Rubâ‘î mutâvaa": [
-      [207, "تَحَقْحُق", "taḥaqḥuq", "ardı ardına hak olduğunu gösterme", "orta", ""]
+      [207, "تَحَقْحُق", "taḥaqḥuq", "ardı ardına araştırma", "orta", ""]
     ],
     "ism-i fâil · Rubâ‘î mutâvaa": [
-      [208, "مُتَحَقْحِق", "mutaḥaqḥiq", "ardı ardına hak olduğunu gösteren", "orta", ""]
+      [208, "مُتَحَقْحِق", "mutaḥaqḥiq", "ardı ardına araştıran", "orta", ""]
     ],
     "ism-i mef‘ûl · Rubâ‘î mutâvaa": [
-      [209, "مُتَحَقْحَق", "mutaḥaqḥaq", "ardı ardına hak olduğunu gösterilmiş", "orta", ""]
+      [209, "مُتَحَقْحَق", "mutaḥaqḥaq", "ardı ardına araştırılmış", "orta", ""]
     ],
     "masdar · Rubâ‘î mezîd": [
-      [210, "اِحْقِنْحَاق", "iḥqinḥāq", "ardı ardına hak olduğunu gösterme", "orta", ""]
+      [210, "اِحْقِنْحَاق", "iḥqinḥāq", "ardı ardına araştırma", "orta", ""]
     ],
     "ism-i fâil · Rubâ‘î mezîd": [
-      [211, "مُحْقَنْحِق", "muḥqanḥiq", "ardı ardına hak olduğunu gösteren", "orta", ""]
+      [211, "مُحْقَنْحِق", "muḥqanḥiq", "ardı ardına araştıran", "orta", ""]
     ],
     "ism-i mef‘ûl · Rubâ‘î mezîd": [
-      [212, "مُحْقَنْحَق", "muḥqanḥaq", "ardı ardına hak olduğunu gösterilmiş", "orta", ""]
+      [212, "مُحْقَنْحَق", "muḥqanḥaq", "ardı ardına araştırılmış", "orta", ""]
     ],
     "ism-i fâil · sülâsî": [
-      [213, "حَاقّ", "ḥāqq", "hak olduğunu gösteren", "orta", ""],
-      [214, "حَاقَّة", "ḥāqqa", "hak olduğunu gösteren (dişi)", "orta", ""],
-      [215, "حَاقَّان", "ḥāqqān", "iki hak olduğunu gösteren", "orta", ""],
-      [216, "حَاقَّتَان", "ḥāqqatān", "iki hak olduğunu gösteren (dişi)", "orta", ""],
-      [217, "حَاقُّون", "ḥāqqūn", "hak olduğunu gösterenler", "orta", ""],
-      [218, "حَاقِّين", "ḥāqqīn", "hak olduğunu gösterenler", "orta", ""],
-      [219, "حَاقَّات", "ḥāqqāt", "hak olduğunu gösterenler (dişi)", "orta", ""]
+      [213, "حَاقّ", "ḥāqq", "araştıran", "kural", ""],
+      [214, "حَاقَّة", "ḥāqqa", "araştıran (dişi)", "kural", ""],
+      [215, "حَاقَّان", "ḥāqqān", "iki araştıran", "kural", ""],
+      [216, "حَاقَّتَان", "ḥāqqatān", "iki araştıran (dişi)", "kural", ""],
+      [217, "حَاقُّون", "ḥāqqūn", "araştıranlar", "kural", ""],
+      [218, "حَاقِّين", "ḥāqqīn", "araştıranlar", "kural", ""],
+      [219, "حَاقَّات", "ḥāqqāt", "araştıranlar (dişi)", "kural", ""]
     ],
     "ism-i mef‘ûl · sülâsî": [
-      [220, "مَحْقُوق", "maḥqūq", "hak olduğunu gösterilmiş", "orta", ""],
-      [221, "مَحْقُوقَة", "maḥqūqa", "hak olduğunu gösterilmiş (dişi)", "orta", ""],
-      [222, "مَحْقُوقَان", "maḥqūqān", "iki hak olduğunu gösterilmiş", "orta", ""],
-      [223, "مَحْقُوقَتَان", "maḥqūqatān", "iki hak olduğunu gösterilmiş (dişi)", "orta", ""],
-      [224, "مَحْقُوقُون", "maḥqūqūn", "hak olduğunu gösterilmişler", "orta", ""],
-      [225, "مَحْقُوقِين", "maḥqūqīn", "hak olduğunu gösterilmişler", "orta", ""],
-      [226, "مَحْقُوقَات", "maḥqūqāt", "hak olduğunu gösterilmişler (dişi)", "orta", ""]
+      [220, "مَحْقُوق", "maḥqūq", "araştırılmış", "kural", ""],
+      [221, "مَحْقُوقَة", "maḥqūqa", "araştırılmış (dişi)", "kural", ""],
+      [222, "مَحْقُوقَان", "maḥqūqān", "iki araştırılmış", "kural", ""],
+      [223, "مَحْقُوقَتَان", "maḥqūqatān", "iki araştırılmış (dişi)", "kural", ""],
+      [224, "مَحْقُوقُون", "maḥqūqūn", "araştırılmışlar", "kural", ""],
+      [225, "مَحْقُوقِين", "maḥqūqīn", "araştırılmışlar", "kural", ""],
+      [226, "مَحْقُوقَات", "maḥqūqāt", "araştırılmışlar (dişi)", "kural", ""]
     ],
     "mekân/zaman · sülâsî": [
-      [227, "مَحَقّ", "maḥaqq", "hak olduğunu gösterme (yeri/zamanı)", "orta", ""],
-      [228, "مَحَقَّان", "maḥaqqān", "iki hak olduğunu gösterme (yeri/zamanı)", "orta", ""],
-      [229, "مَحِقّ", "maḥiqq", "hak olduğunu gösterme (yeri/zamanı)", "orta", ""],
-      [230, "مَحِقَّان", "maḥiqqān", "iki hak olduğunu gösterme (yeri/zamanı)", "orta", ""],
-      [231, "مَحَقَّة", "maḥaqqa", "hak olduğunu gösterme (yeri/zamanı)", "orta", ""],
-      [232, "مَحَقَّتَان", "maḥaqqatān", "iki hak olduğunu gösterme (yeri/zamanı)", "orta", ""],
-      [233, "مَحِقَّة", "maḥiqqa", "hak olduğunu gösterme (yeri/zamanı)", "orta", ""],
-      [234, "مَحِقَّتَان", "maḥiqqatān", "iki hak olduğunu gösterme (yeri/zamanı)", "orta", ""],
-      [247, "مَحُقَّة", "maḥuqqa", "hak olduğunu gösterme (yeri/zamanı)", "orta", ""],
-      [248, "مَحُقَّتَان", "maḥuqqatān", "iki hak olduğunu gösterme (yeri/zamanı)", "orta", ""]
+      [227, "مَحَقّ", "maḥaqq", "araştırma (yeri/zamanı)", "orta", ""],
+      [228, "مَحَقَّان", "maḥaqqān", "iki araştırma (yeri/zamanı)", "orta", ""],
+      [229, "مَحِقّ", "maḥiqq", "araştırma (yeri/zamanı)", "orta", ""],
+      [230, "مَحِقَّان", "maḥiqqān", "iki araştırma (yeri/zamanı)", "orta", ""],
+      [231, "مَحَقَّة", "maḥaqqa", "araştırma (yeri/zamanı)", "orta", ""],
+      [232, "مَحَقَّتَان", "maḥaqqatān", "iki araştırma (yeri/zamanı)", "orta", ""],
+      [233, "مَحِقَّة", "maḥiqqa", "araştırma (yeri/zamanı)", "orta", ""],
+      [234, "مَحِقَّتَان", "maḥiqqatān", "iki araştırma (yeri/zamanı)", "orta", ""],
+      [247, "مَحُقَّة", "maḥuqqa", "araştırma (yeri/zamanı)", "orta", ""],
+      [248, "مَحُقَّتَان", "maḥuqqatān", "iki araştırma (yeri/zamanı)", "orta", ""]
     ],
     "âlet · sülâsî": [
-      [235, "مِحَقّ", "miḥaqq", "hak olduğunu göstermeye yarayan araç", "orta", ""],
-      [236, "مِحَقَّان", "miḥaqqān", "iki hak olduğunu göstermeye yarayan araç", "orta", ""],
-      [237, "مِحْقَاق", "miḥqāq", "hak olduğunu göstermeye yarayan araç", "orta", ""],
-      [238, "مِحْقَاقَان", "miḥqāqān", "iki hak olduğunu göstermeye yarayan araç", "orta", ""],
-      [239, "مِحَقَّة", "miḥaqqa", "hak olduğunu göstermeye yarayan araç", "orta", ""],
-      [240, "مِحَقَّتَان", "miḥaqqatān", "iki hak olduğunu göstermeye yarayan araç", "orta", ""]
+      [235, "مِحَقّ", "miḥaqq", "araştırmaya yarayan araç", "orta", ""],
+      [236, "مِحَقَّان", "miḥaqqān", "iki araştırmaya yarayan araç", "orta", ""],
+      [237, "مِحْقَاق", "miḥqāq", "araştırmaya yarayan araç", "orta", ""],
+      [238, "مِحْقَاقَان", "miḥqāqān", "iki araştırmaya yarayan araç", "orta", ""],
+      [239, "مِحَقَّة", "miḥaqqa", "araştırmaya yarayan araç", "orta", ""],
+      [240, "مِحَقَّتَان", "miḥaqqatān", "iki araştırmaya yarayan araç", "orta", ""]
     ],
     "tafdîl · sülâsî": [
-      [
-        241,
-        "أَحَقّ",
-        "ʾaḥaqq",
-        "daha çok hak olduğunu gösteren",
-        "orta",
-        "Vikisözlük: elative degree of حَقِيق (ḥaqīq)"
-      ],
-      [242, "أَحَقَّان", "ʾaḥaqqān", "iki daha çok hak olduğunu gösteren", "orta", ""]
+      [241, "أَحَقّ", "ʾaḥaqq", "daha çok araştıran", "orta", "Vikisözlük: elative degree of حَقِيق (ḥaqīq)"],
+      [242, "أَحَقَّان", "ʾaḥaqqān", "iki daha çok araştıran", "orta", ""]
     ],
     "tafdîl (müennes) · sülâsî": [
-      [243, "حُقَّى", "ḥuqqā", "daha çok hak olduğunu gösteren", "orta", ""],
-      [244, "حُقَّيَان", "ḥuqqayān", "iki daha çok hak olduğunu gösteren", "orta", ""],
-      [245, "حَقَّاء", "ḥaqqāʾ", "daha çok hak olduğunu gösteren", "orta", ""],
-      [246, "حَقَّاآن", "ḥaqqāʾān", "iki daha çok hak olduğunu gösteren", "orta", ""]
+      [243, "حُقَّى", "ḥuqqā", "daha çok araştıran", "orta", ""],
+      [244, "حُقَّيَان", "ḥuqqayān", "iki daha çok araştıran", "orta", ""],
+      [245, "حَقَّاء", "ḥaqqāʾ", "daha çok araştıran", "orta", ""],
+      [246, "حَقَّاآن", "ḥaqqāʾān", "iki daha çok araştıran", "orta", ""]
     ],
     "tasğîr · sülâsî": [
-      [249, "حُقَيْق", "ḥuqayq", "küçük hak olduğunu gösterme", "orta", ""],
-      [250, "حُقَيْقَان", "ḥuqayqān", "iki küçük hak olduğunu gösterme", "orta", ""],
-      [251, "حُقَيْقَة", "ḥuqayqa", "küçük hak olduğunu gösterme", "orta", ""],
-      [252, "حُقَيْقَتَان", "ḥuqayqatān", "iki küçük hak olduğunu gösterme", "orta", ""]
+      [249, "حُقَيْق", "ḥuqayq", "küçük araştırma", "orta", ""],
+      [250, "حُقَيْقَان", "ḥuqayqān", "iki küçük araştırma", "orta", ""],
+      [251, "حُقَيْقَة", "ḥuqayqa", "küçük araştırma", "orta", ""],
+      [252, "حُقَيْقَتَان", "ḥuqayqatān", "iki küçük araştırma", "orta", ""]
     ],
     "masdar-ı mîmî · sülâsî": [
-      [253, "مَحَقّ", "maḥaqq", "hak olduğunu gösterme", "orta", ""],
-      [254, "مَحَقَّان", "maḥaqqān", "iki hak olduğunu gösterme", "orta", ""]
+      [253, "مَحَقّ", "maḥaqq", "araştırma", "kural", ""],
+      [254, "مَحَقَّان", "maḥaqqān", "iki araştırma", "kural", ""]
     ],
     "ism-i merre · sülâsî": [
-      [255, "حَقَّة", "ḥaqqa", "bir kere hak olduğunu gösterme", "orta", ""],
-      [256, "حَقَّتَان", "ḥaqqatān", "iki bir kere hak olduğunu gösterme", "orta", ""]
+      [255, "حَقَّة", "ḥaqqa", "bir kere araştırma", "orta", ""],
+      [256, "حَقَّتَان", "ḥaqqatān", "iki bir kere araştırma", "orta", ""]
     ],
     "ism-i hey'et · sülâsî": [
-      [257, "حِقَّة", "ḥiqqa", "hak olduğunu gösterme tarzı", "orta", ""],
-      [258, "حِقَّتَان", "ḥiqqatān", "iki hak olduğunu gösterme tarzı", "orta", ""]
+      [257, "حِقَّة", "ḥiqqa", "araştırma tarzı", "orta", ""],
+      [258, "حِقَّتَان", "ḥiqqatān", "iki araştırma tarzı", "orta", ""]
     ],
     "sıfat-ı müşebbehe": [
-      [259, "حَقِيق", "ḥaqīq", "sürekli hak olduğunu gösteren", "orta", "Vikisözlük: deserving, worthy"],
-      [260, "حَقِيقَة", "ḥaqīqa", "sürekli hak olduğunu gösteren (dişi)", "orta", "Vikisözlük: truth, reality"],
-      [261, "حَقِيقَان", "ḥaqīqān", "iki sürekli hak olduğunu gösteren", "orta", ""],
-      [262, "حَقِيقَتَان", "ḥaqīqatān", "iki sürekli hak olduğunu gösteren (dişi)", "orta", ""],
-      [263, "حَقِيقُون", "ḥaqīqūn", "sürekli hak olduğunu gösterenler", "orta", ""],
-      [264, "حَقِيقِين", "ḥaqīqīn", "sürekli hak olduğunu gösterenler", "orta", ""],
-      [265, "حَقِيقَات", "ḥaqīqāt", "sürekli hak olduğunu gösterenler (dişi)", "orta", ""],
-      [266, "حَقُوق", "ḥaqūq", "sürekli hak olduğunu gösteren", "orta", ""],
-      [267, "حَقُوقَة", "ḥaqūqa", "sürekli hak olduğunu gösteren (dişi)", "orta", ""],
-      [268, "حَقُوقَان", "ḥaqūqān", "iki sürekli hak olduğunu gösteren", "orta", ""],
-      [269, "حَقُوقَتَان", "ḥaqūqatān", "iki sürekli hak olduğunu gösteren (dişi)", "orta", ""],
-      [270, "حَقُوقُون", "ḥaqūqūn", "sürekli hak olduğunu gösterenler", "orta", ""],
-      [271, "حَقُوقِين", "ḥaqūqīn", "sürekli hak olduğunu gösterenler", "orta", ""],
-      [272, "حَقُوقَات", "ḥaqūqāt", "sürekli hak olduğunu gösterenler (dişi)", "orta", ""],
-      [
-        273,
-        "حَقّ",
-        "ḥaqq",
-        "sürekli hak olduğunu gösteren",
-        "orta",
-        "Vikisözlük: verbal noun of حُقَّ (ḥuqqa) (form I)"
-      ],
-      [274, "حَقَّة", "ḥaqqa", "sürekli hak olduğunu gösteren (dişi)", "orta", ""],
-      [275, "حَقَّان", "ḥaqqān", "iki sürekli hak olduğunu gösteren", "orta", ""],
-      [276, "حَقَّتَان", "ḥaqqatān", "iki sürekli hak olduğunu gösteren (dişi)", "orta", ""],
-      [277, "حَقُّون", "ḥaqqūn", "sürekli hak olduğunu gösterenler", "orta", ""],
-      [278, "حَقِّين", "ḥaqqīn", "sürekli hak olduğunu gösterenler", "orta", ""],
-      [279, "حَقَّات", "ḥaqqāt", "sürekli hak olduğunu gösterenler (dişi)", "orta", ""],
-      [
-        280,
-        "حَقّ",
-        "ḥaqq",
-        "sürekli hak olduğunu gösteren",
-        "orta",
-        "Vikisözlük: verbal noun of حُقَّ (ḥuqqa) (form I)"
-      ],
-      [281, "حَقَّة", "ḥaqqa", "sürekli hak olduğunu gösteren (dişi)", "orta", ""],
-      [282, "حَقَّان", "ḥaqqān", "iki sürekli hak olduğunu gösteren", "orta", ""],
-      [283, "حَقَّتَان", "ḥaqqatān", "iki sürekli hak olduğunu gösteren (dişi)", "orta", ""],
-      [284, "حَقُّون", "ḥaqqūn", "sürekli hak olduğunu gösterenler", "orta", ""],
-      [285, "حَقِّين", "ḥaqqīn", "sürekli hak olduğunu gösterenler", "orta", ""],
-      [286, "حَقَّات", "ḥaqqāt", "sürekli hak olduğunu gösterenler (dişi)", "orta", ""],
-      [
-        287,
-        "حَقّ",
-        "ḥaqq",
-        "sürekli hak olduğunu gösteren",
-        "orta",
-        "Vikisözlük: verbal noun of حُقَّ (ḥuqqa) (form I)"
-      ],
-      [288, "حَقَّة", "ḥaqqa", "sürekli hak olduğunu gösteren (dişi)", "orta", ""],
-      [289, "حَقَّان", "ḥaqqān", "iki sürekli hak olduğunu gösteren", "orta", ""],
-      [290, "حَقَّتَان", "ḥaqqatān", "iki sürekli hak olduğunu gösteren (dişi)", "orta", ""],
-      [291, "حَقُّون", "ḥaqqūn", "sürekli hak olduğunu gösterenler", "orta", ""],
-      [292, "حَقِّين", "ḥaqqīn", "sürekli hak olduğunu gösterenler", "orta", ""],
-      [293, "حَقَّات", "ḥaqqāt", "sürekli hak olduğunu gösterenler (dişi)", "orta", ""],
-      [
-        294,
-        "حَقّ",
-        "ḥaqq",
-        "sürekli hak olduğunu gösteren",
-        "orta",
-        "Vikisözlük: verbal noun of حُقَّ (ḥuqqa) (form I)"
-      ],
-      [295, "حَقَّة", "ḥaqqa", "sürekli hak olduğunu gösteren (dişi)", "orta", ""],
-      [296, "حَقَّان", "ḥaqqān", "iki sürekli hak olduğunu gösteren", "orta", ""],
-      [297, "حَقَّتَان", "ḥaqqatān", "iki sürekli hak olduğunu gösteren (dişi)", "orta", ""],
-      [298, "حَقُّون", "ḥaqqūn", "sürekli hak olduğunu gösterenler", "orta", ""],
-      [299, "حَقِّين", "ḥaqqīn", "sürekli hak olduğunu gösterenler", "orta", ""],
-      [300, "حَقَّات", "ḥaqqāt", "sürekli hak olduğunu gösterenler (dişi)", "orta", ""],
-      [301, "حُقّ", "ḥuqq", "sürekli hak olduğunu gösteren", "orta", ""],
-      [302, "حُقَّة", "ḥuqqa", "sürekli hak olduğunu gösteren (dişi)", "orta", ""],
-      [303, "حُقَّان", "ḥuqqān", "iki sürekli hak olduğunu gösteren", "orta", ""],
-      [304, "حُقَّتَان", "ḥuqqatān", "iki sürekli hak olduğunu gösteren (dişi)", "orta", ""],
-      [305, "حُقُّون", "ḥuqqūn", "sürekli hak olduğunu gösterenler", "orta", ""],
-      [306, "حُقِّين", "ḥuqqīn", "sürekli hak olduğunu gösterenler", "orta", ""],
-      [307, "حُقَّات", "ḥuqqāt", "sürekli hak olduğunu gösterenler (dişi)", "orta", ""],
-      [308, "حَقَّان", "ḥaqqān", "sürekli hak olduğunu gösteren", "orta", ""],
-      [309, "حَقَّانَة", "ḥaqqāna", "sürekli hak olduğunu gösteren (dişi)", "orta", ""],
-      [310, "حَقَّانَان", "ḥaqqānān", "iki sürekli hak olduğunu gösteren", "orta", ""],
-      [311, "حَقَّانَتَان", "ḥaqqānatān", "iki sürekli hak olduğunu gösteren (dişi)", "orta", ""],
-      [312, "حَقَّانُون", "ḥaqqānūn", "sürekli hak olduğunu gösterenler", "orta", ""],
-      [313, "حَقَّانِين", "ḥaqqānīn", "sürekli hak olduğunu gösterenler", "orta", ""],
-      [314, "حَقَّانَات", "ḥaqqānāt", "sürekli hak olduğunu gösterenler (dişi)", "orta", ""],
-      [315, "حُقَاق", "ḥuqāq", "sürekli hak olduğunu gösteren", "orta", ""],
-      [316, "حُقَاقَة", "ḥuqāqa", "sürekli hak olduğunu gösteren (dişi)", "orta", ""],
-      [317, "حُقَاقَان", "ḥuqāqān", "iki sürekli hak olduğunu gösteren", "orta", ""],
-      [318, "حُقَاقَتَان", "ḥuqāqatān", "iki sürekli hak olduğunu gösteren (dişi)", "orta", ""],
-      [319, "حُقَاقُون", "ḥuqāqūn", "sürekli hak olduğunu gösterenler", "orta", ""],
-      [320, "حُقَاقِين", "ḥuqāqīn", "sürekli hak olduğunu gösterenler", "orta", ""],
-      [321, "حُقَاقَات", "ḥuqāqāt", "sürekli hak olduğunu gösterenler (dişi)", "orta", ""],
-      [322, "حَقَاق", "ḥaqāq", "sürekli hak olduğunu gösteren", "orta", ""],
-      [323, "حَقَاقَة", "ḥaqāqa", "sürekli hak olduğunu gösteren (dişi)", "orta", ""],
-      [324, "حَقَاقَان", "ḥaqāqān", "iki sürekli hak olduğunu gösteren", "orta", ""],
-      [325, "حَقَاقَتَان", "ḥaqāqatān", "iki sürekli hak olduğunu gösteren (dişi)", "orta", ""],
-      [326, "حَقَاقُون", "ḥaqāqūn", "sürekli hak olduğunu gösterenler", "orta", ""],
-      [327, "حَقَاقِين", "ḥaqāqīn", "sürekli hak olduğunu gösterenler", "orta", ""],
-      [328, "حَقَاقَات", "ḥaqāqāt", "sürekli hak olduğunu gösterenler (dişi)", "orta", ""]
+      [259, "حَقِيق", "ḥaqīq", "sürekli araştıran", "orta", "Vikisözlük: deserving, worthy"],
+      [260, "حَقِيقَة", "ḥaqīqa", "sürekli araştıran (dişi)", "orta", "Vikisözlük: truth, reality"],
+      [261, "حَقِيقَان", "ḥaqīqān", "iki sürekli araştıran", "orta", ""],
+      [262, "حَقِيقَتَان", "ḥaqīqatān", "iki sürekli araştıran (dişi)", "orta", ""],
+      [263, "حَقِيقُون", "ḥaqīqūn", "sürekli araştıranlar", "orta", ""],
+      [264, "حَقِيقِين", "ḥaqīqīn", "sürekli araştıranlar", "orta", ""],
+      [265, "حَقِيقَات", "ḥaqīqāt", "sürekli araştıranlar (dişi)", "orta", ""],
+      [266, "حَقُوق", "ḥaqūq", "sürekli araştıran", "orta", ""],
+      [267, "حَقُوقَة", "ḥaqūqa", "sürekli araştıran (dişi)", "orta", ""],
+      [268, "حَقُوقَان", "ḥaqūqān", "iki sürekli araştıran", "orta", ""],
+      [269, "حَقُوقَتَان", "ḥaqūqatān", "iki sürekli araştıran (dişi)", "orta", ""],
+      [270, "حَقُوقُون", "ḥaqūqūn", "sürekli araştıranlar", "orta", ""],
+      [271, "حَقُوقِين", "ḥaqūqīn", "sürekli araştıranlar", "orta", ""],
+      [272, "حَقُوقَات", "ḥaqūqāt", "sürekli araştıranlar (dişi)", "orta", ""],
+      [273, "حَقّ", "ḥaqq", "sürekli araştıran", "orta", "Vikisözlük: verbal noun of حُقَّ (ḥuqqa) (form I)"],
+      [274, "حَقَّة", "ḥaqqa", "sürekli araştıran (dişi)", "orta", ""],
+      [275, "حَقَّان", "ḥaqqān", "iki sürekli araştıran", "orta", ""],
+      [276, "حَقَّتَان", "ḥaqqatān", "iki sürekli araştıran (dişi)", "orta", ""],
+      [277, "حَقُّون", "ḥaqqūn", "sürekli araştıranlar", "orta", ""],
+      [278, "حَقِّين", "ḥaqqīn", "sürekli araştıranlar", "orta", ""],
+      [279, "حَقَّات", "ḥaqqāt", "sürekli araştıranlar (dişi)", "orta", ""],
+      [280, "حَقّ", "ḥaqq", "sürekli araştıran", "orta", "Vikisözlük: verbal noun of حُقَّ (ḥuqqa) (form I)"],
+      [281, "حَقَّة", "ḥaqqa", "sürekli araştıran (dişi)", "orta", ""],
+      [282, "حَقَّان", "ḥaqqān", "iki sürekli araştıran", "orta", ""],
+      [283, "حَقَّتَان", "ḥaqqatān", "iki sürekli araştıran (dişi)", "orta", ""],
+      [284, "حَقُّون", "ḥaqqūn", "sürekli araştıranlar", "orta", ""],
+      [285, "حَقِّين", "ḥaqqīn", "sürekli araştıranlar", "orta", ""],
+      [286, "حَقَّات", "ḥaqqāt", "sürekli araştıranlar (dişi)", "orta", ""],
+      [287, "حَقّ", "ḥaqq", "sürekli araştıran", "orta", "Vikisözlük: verbal noun of حُقَّ (ḥuqqa) (form I)"],
+      [288, "حَقَّة", "ḥaqqa", "sürekli araştıran (dişi)", "orta", ""],
+      [289, "حَقَّان", "ḥaqqān", "iki sürekli araştıran", "orta", ""],
+      [290, "حَقَّتَان", "ḥaqqatān", "iki sürekli araştıran (dişi)", "orta", ""],
+      [291, "حَقُّون", "ḥaqqūn", "sürekli araştıranlar", "orta", ""],
+      [292, "حَقِّين", "ḥaqqīn", "sürekli araştıranlar", "orta", ""],
+      [293, "حَقَّات", "ḥaqqāt", "sürekli araştıranlar (dişi)", "orta", ""],
+      [294, "حَقّ", "ḥaqq", "sürekli araştıran", "orta", "Vikisözlük: verbal noun of حُقَّ (ḥuqqa) (form I)"],
+      [295, "حَقَّة", "ḥaqqa", "sürekli araştıran (dişi)", "orta", ""],
+      [296, "حَقَّان", "ḥaqqān", "iki sürekli araştıran", "orta", ""],
+      [297, "حَقَّتَان", "ḥaqqatān", "iki sürekli araştıran (dişi)", "orta", ""],
+      [298, "حَقُّون", "ḥaqqūn", "sürekli araştıranlar", "orta", ""],
+      [299, "حَقِّين", "ḥaqqīn", "sürekli araştıranlar", "orta", ""],
+      [300, "حَقَّات", "ḥaqqāt", "sürekli araştıranlar (dişi)", "orta", ""],
+      [301, "حُقّ", "ḥuqq", "sürekli araştıran", "orta", ""],
+      [302, "حُقَّة", "ḥuqqa", "sürekli araştıran (dişi)", "orta", ""],
+      [303, "حُقَّان", "ḥuqqān", "iki sürekli araştıran", "orta", ""],
+      [304, "حُقَّتَان", "ḥuqqatān", "iki sürekli araştıran (dişi)", "orta", ""],
+      [305, "حُقُّون", "ḥuqqūn", "sürekli araştıranlar", "orta", ""],
+      [306, "حُقِّين", "ḥuqqīn", "sürekli araştıranlar", "orta", ""],
+      [307, "حُقَّات", "ḥuqqāt", "sürekli araştıranlar (dişi)", "orta", ""],
+      [308, "حَقَّان", "ḥaqqān", "sürekli araştıran", "orta", ""],
+      [309, "حَقَّانَة", "ḥaqqāna", "sürekli araştıran (dişi)", "orta", ""],
+      [310, "حَقَّانَان", "ḥaqqānān", "iki sürekli araştıran", "orta", ""],
+      [311, "حَقَّانَتَان", "ḥaqqānatān", "iki sürekli araştıran (dişi)", "orta", ""],
+      [312, "حَقَّانُون", "ḥaqqānūn", "sürekli araştıranlar", "orta", ""],
+      [313, "حَقَّانِين", "ḥaqqānīn", "sürekli araştıranlar", "orta", ""],
+      [314, "حَقَّانَات", "ḥaqqānāt", "sürekli araştıranlar (dişi)", "orta", ""],
+      [315, "حُقَاق", "ḥuqāq", "sürekli araştıran", "orta", ""],
+      [316, "حُقَاقَة", "ḥuqāqa", "sürekli araştıran (dişi)", "orta", ""],
+      [317, "حُقَاقَان", "ḥuqāqān", "iki sürekli araştıran", "orta", ""],
+      [318, "حُقَاقَتَان", "ḥuqāqatān", "iki sürekli araştıran (dişi)", "orta", ""],
+      [319, "حُقَاقُون", "ḥuqāqūn", "sürekli araştıranlar", "orta", ""],
+      [320, "حُقَاقِين", "ḥuqāqīn", "sürekli araştıranlar", "orta", ""],
+      [321, "حُقَاقَات", "ḥuqāqāt", "sürekli araştıranlar (dişi)", "orta", ""],
+      [322, "حَقَاق", "ḥaqāq", "sürekli araştıran", "orta", ""],
+      [323, "حَقَاقَة", "ḥaqāqa", "sürekli araştıran (dişi)", "orta", ""],
+      [324, "حَقَاقَان", "ḥaqāqān", "iki sürekli araştıran", "orta", ""],
+      [325, "حَقَاقَتَان", "ḥaqāqatān", "iki sürekli araştıran (dişi)", "orta", ""],
+      [326, "حَقَاقُون", "ḥaqāqūn", "sürekli araştıranlar", "orta", ""],
+      [327, "حَقَاقِين", "ḥaqāqīn", "sürekli araştıranlar", "orta", ""],
+      [328, "حَقَاقَات", "ḥaqāqāt", "sürekli araştıranlar (dişi)", "orta", ""]
     ],
     "mübalağa": [
-      [329, "حَقَّاق", "ḥaqqāq", "çok hak olduğunu gösteren", "orta", ""],
-      [330, "حَقَّاقَة", "ḥaqqāqa", "çok hak olduğunu gösteren (dişi)", "orta", ""],
-      [331, "حَقَّاقَان", "ḥaqqāqān", "iki çok hak olduğunu gösteren", "orta", ""],
-      [332, "حَقَّاقَتَان", "ḥaqqāqatān", "iki çok hak olduğunu gösteren (dişi)", "orta", ""],
-      [333, "حَقَّاقُون", "ḥaqqāqūn", "çok hak olduğunu gösterenler", "orta", ""],
-      [334, "حَقَّاقِين", "ḥaqqāqīn", "çok hak olduğunu gösterenler", "orta", ""],
-      [335, "حَقَّاقَات", "ḥaqqāqāt", "çok hak olduğunu gösterenler (dişi)", "orta", ""],
-      [336, "حَقَّاقَة", "ḥaqqāqa", "çok hak olduğunu gösteren", "orta", ""],
-      [337, "حَقَّاقَتَان", "ḥaqqāqatān", "iki çok hak olduğunu gösteren", "orta", ""],
-      [338, "حَقَّاقَات", "ḥaqqāqāt", "çok hak olduğunu gösterenler (dişi)", "orta", ""],
-      [339, "حَقُوق", "ḥaqūq", "çok hak olduğunu gösteren", "orta", ""],
-      [340, "حَقُوقَة", "ḥaqūqa", "çok hak olduğunu gösteren (dişi)", "orta", ""],
-      [341, "حَقُوقَان", "ḥaqūqān", "iki çok hak olduğunu gösteren", "orta", ""],
-      [342, "حَقُوقَتَان", "ḥaqūqatān", "iki çok hak olduğunu gösteren (dişi)", "orta", ""],
-      [343, "حَقُوقُون", "ḥaqūqūn", "çok hak olduğunu gösterenler", "orta", ""],
-      [344, "حَقُوقِين", "ḥaqūqīn", "çok hak olduğunu gösterenler", "orta", ""],
-      [345, "حَقُوقَات", "ḥaqūqāt", "çok hak olduğunu gösterenler (dişi)", "orta", ""],
-      [346, "حَقُّوق", "ḥaqqūq", "çok hak olduğunu gösteren", "orta", ""],
-      [347, "حَقُّوقَة", "ḥaqqūqa", "çok hak olduğunu gösteren (dişi)", "orta", ""],
-      [348, "حَقُّوقَان", "ḥaqqūqān", "iki çok hak olduğunu gösteren", "orta", ""],
-      [349, "حَقُّوقَتَان", "ḥaqqūqatān", "iki çok hak olduğunu gösteren (dişi)", "orta", ""],
-      [350, "حَقُّوقُون", "ḥaqqūqūn", "çok hak olduğunu gösterenler", "orta", ""],
-      [351, "حَقُّوقِين", "ḥaqqūqīn", "çok hak olduğunu gösterenler", "orta", ""],
-      [352, "حَقُّوقَات", "ḥaqqūqāt", "çok hak olduğunu gösterenler (dişi)", "orta", ""],
-      [353, "حِقِّيق", "ḥiqqīq", "çok hak olduğunu gösteren", "orta", ""],
-      [354, "حِقِّيقَة", "ḥiqqīqa", "çok hak olduğunu gösteren (dişi)", "orta", ""],
-      [355, "حِقِّيقَان", "ḥiqqīqān", "iki çok hak olduğunu gösteren", "orta", ""],
-      [356, "حِقِّيقَتَان", "ḥiqqīqatān", "iki çok hak olduğunu gösteren (dişi)", "orta", ""],
-      [357, "حِقِّيقُون", "ḥiqqīqūn", "çok hak olduğunu gösterenler", "orta", ""],
-      [358, "حِقِّيقِين", "ḥiqqīqīn", "çok hak olduğunu gösterenler", "orta", ""],
-      [359, "حِقِّيقَات", "ḥiqqīqāt", "çok hak olduğunu gösterenler (dişi)", "orta", ""],
-      [360, "حُقَّاق", "ḥuqqāq", "çok hak olduğunu gösteren", "orta", ""],
-      [361, "حُقَّاقَة", "ḥuqqāqa", "çok hak olduğunu gösteren (dişi)", "orta", ""],
-      [362, "حُقَّاقَان", "ḥuqqāqān", "iki çok hak olduğunu gösteren", "orta", ""],
-      [363, "حُقَّاقَتَان", "ḥuqqāqatān", "iki çok hak olduğunu gösteren (dişi)", "orta", ""],
-      [364, "حُقَّاقُون", "ḥuqqāqūn", "çok hak olduğunu gösterenler", "orta", ""],
-      [365, "حُقَّاقِين", "ḥuqqāqīn", "çok hak olduğunu gösterenler", "orta", ""],
-      [366, "حُقَّاقَات", "ḥuqqāqāt", "çok hak olduğunu gösterenler (dişi)", "orta", ""],
-      [367, "مِحْقَاق", "miḥqāq", "çok hak olduğunu gösteren", "orta", ""],
-      [368, "مِحْقَاقَة", "miḥqāqa", "çok hak olduğunu gösteren (dişi)", "orta", ""],
-      [369, "مِحْقَاقَان", "miḥqāqān", "iki çok hak olduğunu gösteren", "orta", ""],
-      [370, "مِحْقَاقَتَان", "miḥqāqatān", "iki çok hak olduğunu gösteren (dişi)", "orta", ""],
-      [371, "مِحْقَاقُون", "miḥqāqūn", "çok hak olduğunu gösterenler", "orta", ""],
-      [372, "مِحْقَاقِين", "miḥqāqīn", "çok hak olduğunu gösterenler", "orta", ""],
-      [373, "مِحْقَاقَات", "miḥqāqāt", "çok hak olduğunu gösterenler (dişi)", "orta", ""],
-      [374, "مِحْقِيق", "miḥqīq", "çok hak olduğunu gösteren", "orta", ""],
-      [375, "مِحْقِيقَة", "miḥqīqa", "çok hak olduğunu gösteren (dişi)", "orta", ""],
-      [376, "مِحْقِيقَان", "miḥqīqān", "iki çok hak olduğunu gösteren", "orta", ""],
-      [377, "مِحْقِيقَتَان", "miḥqīqatān", "iki çok hak olduğunu gösteren (dişi)", "orta", ""],
-      [378, "مِحْقِيقُون", "miḥqīqūn", "çok hak olduğunu gösterenler", "orta", ""],
-      [379, "مِحْقِيقِين", "miḥqīqīn", "çok hak olduğunu gösterenler", "orta", ""],
-      [380, "مِحْقِيقَات", "miḥqīqāt", "çok hak olduğunu gösterenler (dişi)", "orta", ""],
-      [381, "حَقِيق", "ḥaqīq", "çok hak olduğunu gösteren", "orta", "Vikisözlük: deserving, worthy"],
-      [382, "حَقِيقَة", "ḥaqīqa", "çok hak olduğunu gösteren (dişi)", "orta", "Vikisözlük: truth, reality"],
-      [383, "حَقِيقَان", "ḥaqīqān", "iki çok hak olduğunu gösteren", "orta", ""],
-      [384, "حَقِيقَتَان", "ḥaqīqatān", "iki çok hak olduğunu gösteren (dişi)", "orta", ""],
-      [385, "حَقِيقُون", "ḥaqīqūn", "çok hak olduğunu gösterenler", "orta", ""],
-      [386, "حَقِيقِين", "ḥaqīqīn", "çok hak olduğunu gösterenler", "orta", ""],
-      [387, "حَقِيقَات", "ḥaqīqāt", "çok hak olduğunu gösterenler (dişi)", "orta", ""],
-      [388, "حَقَّق", "ḥaqqaq", "çok hak olduğunu gösteren", "orta", ""],
-      [389, "حَقَّقَة", "ḥaqqaqa", "çok hak olduğunu gösteren (dişi)", "orta", ""],
-      [390, "حَقَّقَان", "ḥaqqaqān", "iki çok hak olduğunu gösteren", "orta", ""],
-      [391, "حَقَّقَتَان", "ḥaqqaqatān", "iki çok hak olduğunu gösteren (dişi)", "orta", ""],
-      [392, "حَقَّقُون", "ḥaqqaqūn", "çok hak olduğunu gösterenler", "orta", ""],
-      [393, "حَقَّقِين", "ḥaqqaqīn", "çok hak olduğunu gösterenler", "orta", ""],
-      [394, "حَقَّقَات", "ḥaqqaqāt", "çok hak olduğunu gösterenler (dişi)", "orta", ""]
+      [329, "حَقَّاق", "ḥaqqāq", "çok araştıran", "orta", ""],
+      [330, "حَقَّاقَة", "ḥaqqāqa", "çok araştıran (dişi)", "orta", ""],
+      [331, "حَقَّاقَان", "ḥaqqāqān", "iki çok araştıran", "orta", ""],
+      [332, "حَقَّاقَتَان", "ḥaqqāqatān", "iki çok araştıran (dişi)", "orta", ""],
+      [333, "حَقَّاقُون", "ḥaqqāqūn", "çok araştıranlar", "orta", ""],
+      [334, "حَقَّاقِين", "ḥaqqāqīn", "çok araştıranlar", "orta", ""],
+      [335, "حَقَّاقَات", "ḥaqqāqāt", "çok araştıranlar (dişi)", "orta", ""],
+      [336, "حَقَّاقَة", "ḥaqqāqa", "çok araştıran", "orta", ""],
+      [337, "حَقَّاقَتَان", "ḥaqqāqatān", "iki çok araştıran", "orta", ""],
+      [338, "حَقَّاقَات", "ḥaqqāqāt", "çok araştıranlar (dişi)", "orta", ""],
+      [339, "حَقُوق", "ḥaqūq", "çok araştıran", "orta", ""],
+      [340, "حَقُوقَة", "ḥaqūqa", "çok araştıran (dişi)", "orta", ""],
+      [341, "حَقُوقَان", "ḥaqūqān", "iki çok araştıran", "orta", ""],
+      [342, "حَقُوقَتَان", "ḥaqūqatān", "iki çok araştıran (dişi)", "orta", ""],
+      [343, "حَقُوقُون", "ḥaqūqūn", "çok araştıranlar", "orta", ""],
+      [344, "حَقُوقِين", "ḥaqūqīn", "çok araştıranlar", "orta", ""],
+      [345, "حَقُوقَات", "ḥaqūqāt", "çok araştıranlar (dişi)", "orta", ""],
+      [346, "حَقُّوق", "ḥaqqūq", "çok araştıran", "orta", ""],
+      [347, "حَقُّوقَة", "ḥaqqūqa", "çok araştıran (dişi)", "orta", ""],
+      [348, "حَقُّوقَان", "ḥaqqūqān", "iki çok araştıran", "orta", ""],
+      [349, "حَقُّوقَتَان", "ḥaqqūqatān", "iki çok araştıran (dişi)", "orta", ""],
+      [350, "حَقُّوقُون", "ḥaqqūqūn", "çok araştıranlar", "orta", ""],
+      [351, "حَقُّوقِين", "ḥaqqūqīn", "çok araştıranlar", "orta", ""],
+      [352, "حَقُّوقَات", "ḥaqqūqāt", "çok araştıranlar (dişi)", "orta", ""],
+      [353, "حِقِّيق", "ḥiqqīq", "çok araştıran", "orta", ""],
+      [354, "حِقِّيقَة", "ḥiqqīqa", "çok araştıran (dişi)", "orta", ""],
+      [355, "حِقِّيقَان", "ḥiqqīqān", "iki çok araştıran", "orta", ""],
+      [356, "حِقِّيقَتَان", "ḥiqqīqatān", "iki çok araştıran (dişi)", "orta", ""],
+      [357, "حِقِّيقُون", "ḥiqqīqūn", "çok araştıranlar", "orta", ""],
+      [358, "حِقِّيقِين", "ḥiqqīqīn", "çok araştıranlar", "orta", ""],
+      [359, "حِقِّيقَات", "ḥiqqīqāt", "çok araştıranlar (dişi)", "orta", ""],
+      [360, "حُقَّاق", "ḥuqqāq", "çok araştıran", "orta", ""],
+      [361, "حُقَّاقَة", "ḥuqqāqa", "çok araştıran (dişi)", "orta", ""],
+      [362, "حُقَّاقَان", "ḥuqqāqān", "iki çok araştıran", "orta", ""],
+      [363, "حُقَّاقَتَان", "ḥuqqāqatān", "iki çok araştıran (dişi)", "orta", ""],
+      [364, "حُقَّاقُون", "ḥuqqāqūn", "çok araştıranlar", "orta", ""],
+      [365, "حُقَّاقِين", "ḥuqqāqīn", "çok araştıranlar", "orta", ""],
+      [366, "حُقَّاقَات", "ḥuqqāqāt", "çok araştıranlar (dişi)", "orta", ""],
+      [367, "مِحْقَاق", "miḥqāq", "çok araştıran", "orta", ""],
+      [368, "مِحْقَاقَة", "miḥqāqa", "çok araştıran (dişi)", "orta", ""],
+      [369, "مِحْقَاقَان", "miḥqāqān", "iki çok araştıran", "orta", ""],
+      [370, "مِحْقَاقَتَان", "miḥqāqatān", "iki çok araştıran (dişi)", "orta", ""],
+      [371, "مِحْقَاقُون", "miḥqāqūn", "çok araştıranlar", "orta", ""],
+      [372, "مِحْقَاقِين", "miḥqāqīn", "çok araştıranlar", "orta", ""],
+      [373, "مِحْقَاقَات", "miḥqāqāt", "çok araştıranlar (dişi)", "orta", ""],
+      [374, "مِحْقِيق", "miḥqīq", "çok araştıran", "orta", ""],
+      [375, "مِحْقِيقَة", "miḥqīqa", "çok araştıran (dişi)", "orta", ""],
+      [376, "مِحْقِيقَان", "miḥqīqān", "iki çok araştıran", "orta", ""],
+      [377, "مِحْقِيقَتَان", "miḥqīqatān", "iki çok araştıran (dişi)", "orta", ""],
+      [378, "مِحْقِيقُون", "miḥqīqūn", "çok araştıranlar", "orta", ""],
+      [379, "مِحْقِيقِين", "miḥqīqīn", "çok araştıranlar", "orta", ""],
+      [380, "مِحْقِيقَات", "miḥqīqāt", "çok araştıranlar (dişi)", "orta", ""],
+      [381, "حَقِيق", "ḥaqīq", "çok araştıran", "orta", "Vikisözlük: deserving, worthy"],
+      [382, "حَقِيقَة", "ḥaqīqa", "çok araştıran (dişi)", "orta", "Vikisözlük: truth, reality"],
+      [383, "حَقِيقَان", "ḥaqīqān", "iki çok araştıran", "orta", ""],
+      [384, "حَقِيقَتَان", "ḥaqīqatān", "iki çok araştıran (dişi)", "orta", ""],
+      [385, "حَقِيقُون", "ḥaqīqūn", "çok araştıranlar", "orta", ""],
+      [386, "حَقِيقِين", "ḥaqīqīn", "çok araştıranlar", "orta", ""],
+      [387, "حَقِيقَات", "ḥaqīqāt", "çok araştıranlar (dişi)", "orta", ""],
+      [388, "حَقَّق", "ḥaqqaq", "çok araştıran", "orta", ""],
+      [389, "حَقَّقَة", "ḥaqqaqa", "çok araştıran (dişi)", "orta", ""],
+      [390, "حَقَّقَان", "ḥaqqaqān", "iki çok araştıran", "orta", ""],
+      [391, "حَقَّقَتَان", "ḥaqqaqatān", "iki çok araştıran (dişi)", "orta", ""],
+      [392, "حَقَّقُون", "ḥaqqaqūn", "çok araştıranlar", "orta", ""],
+      [393, "حَقَّقِين", "ḥaqqaqīn", "çok araştıranlar", "orta", ""],
+      [394, "حَقَّقَات", "ḥaqqaqāt", "çok araştıranlar (dişi)", "orta", ""]
     ],
     "mensûb": [
-      [395, "حَقِّيّ", "ḥaqqiyy", "hak olduğunu göstermeye ilgili", "orta", ""],
-      [397, "حَقِّيّ", "ḥaqqiyy", "hak olduğunu göstermeye ilgili", "orta", ""],
-      [399, "حِقِّيّ", "ḥiqqiyy", "hak olduğunu göstermeye ilgili", "orta", ""],
-      [401, "حُقِّيّ", "ḥuqqiyy", "hak olduğunu göstermeye ilgili", "orta", ""],
-      [403, "حِقَاقِيّ", "ḥiqāqiyy", "hak olduğunu göstermeye ilgili", "orta", ""],
-      [405, "حَاقِّيّ", "ḥāqqiyy", "hak olduğunu göstermeye ilgili", "orta", ""],
-      [407, "مَحْقُوقِيّ", "maḥqūqiyy", "hak olduğunu göstermeye ilgili", "orta", ""],
-      [409, "حَقِيقِيّ", "ḥaqīqiyy", "hak olduğunu göstermeye ilgili", "orta", ""],
-      [411, "مَحَقِّيّ", "maḥaqqiyy", "hak olduğunu göstermeye ilgili", "orta", ""],
-      [413, "تَحْقِيقِيّ", "taḥqīqiyy", "hak olduğunu göstermeye ilgili", "orta", ""],
-      [415, "تَحَاقِّيّ", "taḥāqqiyy", "hak olduğunu göstermeye ilgili", "orta", ""],
-      [417, "إِحْقَاقِيّ", "ʾiḥqāqiyy", "hak olduğunu göstermeye ilgili", "orta", ""],
-      [419, "اِحْتِقَاقِيّ", "iḥtiqāqiyy", "hak olduğunu göstermeye ilgili", "orta", ""]
+      [395, "حَقِّيّ", "ḥaqqiyy", "araştırmaya ilgili", "orta", ""],
+      [397, "حَقِّيّ", "ḥaqqiyy", "araştırmaya ilgili", "orta", ""],
+      [399, "حِقِّيّ", "ḥiqqiyy", "araştırmaya ilgili", "orta", ""],
+      [401, "حُقِّيّ", "ḥuqqiyy", "araştırmaya ilgili", "orta", ""],
+      [403, "حِقَاقِيّ", "ḥiqāqiyy", "araştırmaya ilgili", "orta", ""],
+      [405, "حَاقِّيّ", "ḥāqqiyy", "araştırmaya ilgili", "orta", ""],
+      [407, "مَحْقُوقِيّ", "maḥqūqiyy", "araştırmaya ilgili", "orta", ""],
+      [409, "حَقِيقِيّ", "ḥaqīqiyy", "araştırmaya ilgili", "orta", ""],
+      [411, "مَحَقِّيّ", "maḥaqqiyy", "araştırmaya ilgili", "orta", ""],
+      [413, "تَحْقِيقِيّ", "taḥqīqiyy", "araştırmaya ilgili", "orta", ""],
+      [415, "تَحَاقِّيّ", "taḥāqqiyy", "araştırmaya ilgili", "orta", ""],
+      [417, "إِحْقَاقِيّ", "ʾiḥqāqiyy", "araştırmaya ilgili", "orta", ""],
+      [419, "اِحْتِقَاقِيّ", "iḥtiqāqiyy", "araştırmaya ilgili", "orta", ""]
     ],
     "masdar-ı sınâî": [
-      [396, "حَقِّيَّة", "ḥaqqiyya", "hak olduğunu gösterenlik", "orta", ""],
-      [398, "حَقِّيَّة", "ḥaqqiyya", "hak olduğunu gösterenlik", "orta", ""],
-      [400, "حِقِّيَّة", "ḥiqqiyya", "hak olduğunu gösterenlik", "orta", ""],
-      [402, "حُقِّيَّة", "ḥuqqiyya", "hak olduğunu gösterenlik", "orta", ""],
-      [404, "حِقَاقِيَّة", "ḥiqāqiyya", "hak olduğunu gösterenlik", "orta", ""],
-      [406, "حَاقِّيَّة", "ḥāqqiyya", "hak olduğunu gösterenlik", "orta", ""],
-      [408, "مَحْقُوقِيَّة", "maḥqūqiyya", "hak olduğunu gösterenlik", "orta", ""],
-      [410, "حَقِيقِيَّة", "ḥaqīqiyya", "hak olduğunu gösterenlik", "orta", ""],
-      [412, "مَحَقِّيَّة", "maḥaqqiyya", "hak olduğunu gösterenlik", "orta", ""],
-      [414, "تَحْقِيقِيَّة", "taḥqīqiyya", "hak olduğunu gösterenlik", "orta", ""],
-      [416, "تَحَاقِّيَّة", "taḥāqqiyya", "hak olduğunu gösterenlik", "orta", ""],
-      [418, "إِحْقَاقِيَّة", "ʾiḥqāqiyya", "hak olduğunu gösterenlik", "orta", ""],
-      [420, "اِحْتِقَاقِيَّة", "iḥtiqāqiyya", "hak olduğunu gösterenlik", "orta", ""]
+      [396, "حَقِّيَّة", "ḥaqqiyya", "araştıranlık", "orta", ""],
+      [398, "حَقِّيَّة", "ḥaqqiyya", "araştıranlık", "orta", ""],
+      [400, "حِقِّيَّة", "ḥiqqiyya", "araştıranlık", "orta", ""],
+      [402, "حُقِّيَّة", "ḥuqqiyya", "araştıranlık", "orta", ""],
+      [404, "حِقَاقِيَّة", "ḥiqāqiyya", "araştıranlık", "orta", ""],
+      [406, "حَاقِّيَّة", "ḥāqqiyya", "araştıranlık", "orta", ""],
+      [408, "مَحْقُوقِيَّة", "maḥqūqiyya", "araştıranlık", "orta", ""],
+      [410, "حَقِيقِيَّة", "ḥaqīqiyya", "araştıranlık", "orta", ""],
+      [412, "مَحَقِّيَّة", "maḥaqqiyya", "araştıranlık", "orta", ""],
+      [414, "تَحْقِيقِيَّة", "taḥqīqiyya", "araştıranlık", "orta", ""],
+      [416, "تَحَاقِّيَّة", "taḥāqqiyya", "araştıranlık", "orta", ""],
+      [418, "إِحْقَاقِيَّة", "ʾiḥqāqiyya", "araştıranlık", "orta", ""],
+      [420, "اِحْتِقَاقِيَّة", "iḥtiqāqiyya", "araştıranlık", "orta", ""]
     ],
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
-      [421, "حَقَاق", "ḥaqāq", "hak olduğunu gösterme", "orta", ""],
-      [422, "حُقُوق", "ḥuqūq", "hak olduğunu gösterme", "orta", ""],
-      [
-        423,
-        "حِقَاق",
-        "ḥiqāq",
-        "hak olduğunu gösterme",
-        "orta",
-        "Vikisözlük: verbal noun of حَاقَّ (ḥāqqa) (form III)"
-      ],
-      [424, "حُقّ", "ḥuqq", "hak olduğunu gösterme", "orta", ""],
-      [425, "حَقَاقَة", "ḥaqāqa", "hak olduğunu gösterme", "orta", ""],
-      [426, "حِقَاقَة", "ḥiqāqa", "hak olduğunu gösterme", "orta", ""],
-      [427, "حُقُوقَة", "ḥuqūqa", "hak olduğunu gösterme", "orta", ""],
-      [428, "حَقّ", "ḥaqq", "hak olduğunu gösterme", "orta", "Vikisözlük: verbal noun of حُقَّ (ḥuqqa) (form I)"],
-      [429, "حِقّ", "ḥiqq", "hak olduğunu gösterme", "orta", ""]
+      [421, "حَقَاق", "ḥaqāq", "araştırma", "orta", ""],
+      [422, "حُقُوق", "ḥuqūq", "araştırma", "orta", ""],
+      [423, "حِقَاق", "ḥiqāq", "araştırma", "orta", "Vikisözlük: verbal noun of حَاقَّ (ḥāqqa) (form III)"],
+      [424, "حُقّ", "ḥuqq", "araştırma", "orta", ""],
+      [425, "حَقَاقَة", "ḥaqāqa", "araştırma", "orta", ""],
+      [426, "حِقَاقَة", "ḥiqāqa", "araştırma", "orta", ""],
+      [427, "حُقُوقَة", "ḥuqūqa", "araştırma", "orta", ""],
+      [428, "حَقّ", "ḥaqq", "araştırma", "orta", "Vikisözlük: verbal noun of حُقَّ (ḥuqqa) (form I)"],
+      [429, "حِقّ", "ḥiqq", "araştırma", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
-      [430, "حَاقُوق", "ḥāqūq", "hak olduğunu gösterenler (topluluk adı)", "orta", ""],
-      [432, "حَقَّة", "ḥaqqa", "hak olduğunu gösterenler (topluluk adı)", "orta", ""],
-      [433, "حُقَّة", "ḥuqqa", "hak olduğunu gösterenler (topluluk adı)", "orta", ""],
-      [434, "أُحْقُوقَة", "ʾuḥqūqa", "hak olduğunu gösterenler (topluluk adı)", "orta", ""],
-      [435, "حَوَقّ", "ḥawaqq", "hak olduğunu gösterenler (topluluk adı)", "orta", ""],
-      [437, "حَيَقّ", "ḥayaqq", "hak olduğunu gösterenler (topluluk adı)", "orta", ""],
+      [430, "حَاقُوق", "ḥāqūq", "araştıranlar (topluluk adı)", "orta", ""],
+      [432, "حَقَّة", "ḥaqqa", "araştıranlar (topluluk adı)", "orta", ""],
+      [433, "حُقَّة", "ḥuqqa", "araştıranlar (topluluk adı)", "orta", ""],
+      [434, "أُحْقُوقَة", "ʾuḥqūqa", "araştıranlar (topluluk adı)", "orta", ""],
+      [435, "حَوَقّ", "ḥawaqq", "araştıranlar (topluluk adı)", "orta", ""],
+      [437, "حَيَقّ", "ḥayaqq", "araştıranlar (topluluk adı)", "orta", ""],
       [
         439,
         "حَقّ",
         "ḥaqq",
-        "hak olduğunu gösterenler (topluluk adı)",
+        "araştıranlar (topluluk adı)",
         "orta",
         "Vikisözlük: verbal noun of حُقَّ (ḥuqqa) (form I)"
       ],
@@ -687,98 +617,91 @@
         441,
         "حَقّ",
         "ḥaqq",
-        "hak olduğunu gösterenler (topluluk adı)",
+        "araştıranlar (topluluk adı)",
         "orta",
         "Vikisözlük: verbal noun of حُقَّ (ḥuqqa) (form I)"
       ],
-      [443, "حِقّ", "ḥiqq", "hak olduğunu gösterenler (topluluk adı)", "orta", ""],
-      [445, "حُقّ", "ḥuqq", "hak olduğunu gösterenler (topluluk adı)", "orta", ""],
-      [447, "حَقِيق", "ḥaqīq", "hak olduğunu gösterenler (topluluk adı)", "orta", "Vikisözlük: deserving, worthy"],
-      [449, "حِقّ", "ḥiqq", "hak olduğunu gösterenler (topluluk adı)", "orta", ""],
-      [451, "حُقّ", "ḥuqq", "hak olduğunu gösterenler (topluluk adı)", "orta", ""],
-      [453, "حَقَاق", "ḥaqāq", "hak olduğunu gösterenler (topluluk adı)", "orta", ""]
+      [443, "حِقّ", "ḥiqq", "araştıranlar (topluluk adı)", "orta", ""],
+      [445, "حُقّ", "ḥuqq", "araştıranlar (topluluk adı)", "orta", ""],
+      [447, "حَقِيق", "ḥaqīq", "araştıranlar (topluluk adı)", "orta", "Vikisözlük: deserving, worthy"],
+      [449, "حِقّ", "ḥiqq", "araştıranlar (topluluk adı)", "orta", ""],
+      [451, "حُقّ", "ḥuqq", "araştıranlar (topluluk adı)", "orta", ""],
+      [453, "حَقَاق", "ḥaqāq", "araştıranlar (topluluk adı)", "orta", ""]
     ],
     "ism-i cins · cem‘î ve tekili (+tâ)": [
-      [431, "حَاقُوقَة", "ḥāqūqa", "bir tane hak olduğunu gösterenler (topluluk adı)", "orta", ""],
-      [436, "حَوَقَّة", "ḥawaqqa", "bir tane hak olduğunu gösterenler (topluluk adı)", "orta", ""],
-      [438, "حَيَقَّة", "ḥayaqqa", "bir tane hak olduğunu gösterenler (topluluk adı)", "orta", ""],
-      [440, "حَقَّة", "ḥaqqa", "bir tane hak olduğunu gösterenler (topluluk adı)", "orta", ""],
-      [442, "حَقَّة", "ḥaqqa", "bir tane hak olduğunu gösterenler (topluluk adı)", "orta", ""],
-      [444, "حِقَّة", "ḥiqqa", "bir tane hak olduğunu gösterenler (topluluk adı)", "orta", ""],
-      [446, "حُقَّة", "ḥuqqa", "bir tane hak olduğunu gösterenler (topluluk adı)", "orta", ""],
-      [
-        448,
-        "حَقِيقَة",
-        "ḥaqīqa",
-        "bir tane hak olduğunu gösterenler (topluluk adı)",
-        "orta",
-        "Vikisözlük: truth, reality"
-      ],
-      [450, "حِقَّة", "ḥiqqa", "bir tane hak olduğunu gösterenler (topluluk adı)", "orta", ""],
-      [452, "حُقَّة", "ḥuqqa", "bir tane hak olduğunu gösterenler (topluluk adı)", "orta", ""],
-      [454, "حَقَاقَة", "ḥaqāqa", "bir tane hak olduğunu gösterenler (topluluk adı)", "orta", ""]
+      [431, "حَاقُوقَة", "ḥāqūqa", "bir tane araştıranlar (topluluk adı)", "orta", ""],
+      [436, "حَوَقَّة", "ḥawaqqa", "bir tane araştıranlar (topluluk adı)", "orta", ""],
+      [438, "حَيَقَّة", "ḥayaqqa", "bir tane araştıranlar (topluluk adı)", "orta", ""],
+      [440, "حَقَّة", "ḥaqqa", "bir tane araştıranlar (topluluk adı)", "orta", ""],
+      [442, "حَقَّة", "ḥaqqa", "bir tane araştıranlar (topluluk adı)", "orta", ""],
+      [444, "حِقَّة", "ḥiqqa", "bir tane araştıranlar (topluluk adı)", "orta", ""],
+      [446, "حُقَّة", "ḥuqqa", "bir tane araştıranlar (topluluk adı)", "orta", ""],
+      [448, "حَقِيقَة", "ḥaqīqa", "bir tane araştıranlar (topluluk adı)", "orta", "Vikisözlük: truth, reality"],
+      [450, "حِقَّة", "ḥiqqa", "bir tane araştıranlar (topluluk adı)", "orta", ""],
+      [452, "حُقَّة", "ḥuqqa", "bir tane araştıranlar (topluluk adı)", "orta", ""],
+      [454, "حَقَاقَة", "ḥaqāqa", "bir tane araştıranlar (topluluk adı)", "orta", ""]
     ],
     "cem‘-i mükesser (aday)": [
-      [455, "أَحْقَاق", "ʾaḥqāq", "hak olduğunu gösterenler (kırık çoğul)", "orta", ""],
-      [456, "أَحِقَّة", "ʾaḥiqqa", "hak olduğunu gösterenler (kırık çoğul)", "orta", ""],
-      [457, "أَحَاقّ", "ʾaḥāqq", "hak olduğunu gösterenler (kırık çoğul)", "orta", ""],
-      [458, "أَحَاقِيق", "ʾaḥāqīq", "hak olduğunu gösterenler (kırık çoğul)", "orta", ""],
-      [459, "حُقُوق", "ḥuqūq", "hak olduğunu gösterenler (kırık çoğul)", "orta", ""],
-      [460, "حُقّ", "ḥuqq", "hak olduğunu gösterenler (kırık çoğul)", "orta", ""],
+      [455, "أَحْقَاق", "ʾaḥqāq", "araştıranlar (kırık çoğul)", "orta", ""],
+      [456, "أَحِقَّة", "ʾaḥiqqa", "araştıranlar (kırık çoğul)", "orta", ""],
+      [457, "أَحَاقّ", "ʾaḥāqq", "araştıranlar (kırık çoğul)", "orta", ""],
+      [458, "أَحَاقِيق", "ʾaḥāqīq", "araştıranlar (kırık çoğul)", "orta", ""],
+      [459, "حُقُوق", "ḥuqūq", "araştıranlar (kırık çoğul)", "orta", ""],
+      [460, "حُقّ", "ḥuqq", "araştıranlar (kırık çoğul)", "orta", ""],
       [
         461,
         "حِقَاق",
         "ḥiqāq",
-        "hak olduğunu gösterenler (kırık çoğul)",
+        "araştıranlar (kırık çoğul)",
         "orta",
         "Vikisözlük: verbal noun of حَاقَّ (ḥāqqa) (form III)"
       ],
-      [462, "حِقّ", "ḥiqq", "hak olduğunu gösterenler (kırık çoğul)", "orta", ""],
-      [463, "حِقَّة", "ḥiqqa", "hak olduğunu gösterenler (kırık çoğul)", "orta", ""],
-      [464, "حُقّ", "ḥuqq", "hak olduğunu gösterenler (kırık çoğul)", "orta", ""],
-      [465, "حُقّاء", "ḥuqqāʾ", "hak olduğunu gösterenler (kırık çoğul)", "orta", ""],
-      [466, "حَقَّة", "ḥaqqa", "hak olduğunu gösterenler (kırık çoğul)", "orta", ""],
-      [467, "حُقَّاق", "ḥuqqāq", "hak olduğunu gösterenler (kırık çoğul)", "orta", ""],
-      [468, "حَقَاق", "ḥaqāq", "hak olduğunu gösterenler (kırık çoğul)", "orta", ""],
+      [462, "حِقّ", "ḥiqq", "araştıranlar (kırık çoğul)", "orta", ""],
+      [463, "حِقَّة", "ḥiqqa", "araştıranlar (kırık çoğul)", "orta", ""],
+      [464, "حُقّ", "ḥuqq", "araştıranlar (kırık çoğul)", "orta", ""],
+      [465, "حُقّاء", "ḥuqqāʾ", "araştıranlar (kırık çoğul)", "orta", ""],
+      [466, "حَقَّة", "ḥaqqa", "araştıranlar (kırık çoğul)", "orta", ""],
+      [467, "حُقَّاق", "ḥuqqāq", "araştıranlar (kırık çoğul)", "orta", ""],
+      [468, "حَقَاق", "ḥaqāq", "araştıranlar (kırık çoğul)", "orta", ""],
       [
         469,
         "حَقّ",
         "ḥaqq",
-        "hak olduğunu gösterenler (kırık çoğul)",
+        "araştıranlar (kırık çoğul)",
         "orta",
         "Vikisözlük: verbal noun of حُقَّ (ḥuqqa) (form I)"
       ],
-      [470, "مَحَاقّ", "maḥāqq", "hak olduğunu gösterenler (kırık çoğul)", "orta", ""],
-      [471, "مَحَاقِيق", "maḥāqīq", "hak olduğunu gösterenler (kırık çoğul)", "orta", ""],
-      [472, "حَوَاقّ", "ḥawāqq", "hak olduğunu gösterenler (kırık çoğul)", "orta", ""],
-      [473, "أَحُقّ", "ʾaḥuqq", "hak olduğunu gösterenler (kırık çoğul)", "orta", ""],
-      [474, "حُقَّق", "ḥuqqaq", "hak olduğunu gösterenler (kırık çoğul)", "orta", ""],
-      [475, "حَقَائِق", "ḥaqāʾiq", "hak olduğunu gösterenler (kırık çoğul)", "orta", ""],
-      [476, "حُقَيْق", "ḥuqayq", "hak olduğunu gösterenler (kırık çoğul)", "orta", ""]
+      [470, "مَحَاقّ", "maḥāqq", "araştıranlar (kırık çoğul)", "orta", ""],
+      [471, "مَحَاقِيق", "maḥāqīq", "araştıranlar (kırık çoğul)", "orta", ""],
+      [472, "حَوَاقّ", "ḥawāqq", "araştıranlar (kırık çoğul)", "orta", ""],
+      [473, "أَحُقّ", "ʾaḥuqq", "araştıranlar (kırık çoğul)", "orta", ""],
+      [474, "حُقَّق", "ḥuqqaq", "araştıranlar (kırık çoğul)", "orta", ""],
+      [475, "حَقَائِق", "ḥaqāʾiq", "araştıranlar (kırık çoğul)", "orta", ""],
+      [476, "حُقَيْق", "ḥuqayq", "araştıranlar (kırık çoğul)", "orta", ""]
     ],
     "cem‘u’l-cem‘ (aday)": [
-      [477, "أَحْقَاقَات", "ʾaḥqāqāt", "hak olduğunu gösterenler (çoğulun çoğulu)", "orta", ""],
-      [478, "أَحِقَّات", "ʾaḥiqqāt", "hak olduğunu gösterenler (çoğulun çoğulu)", "orta", ""],
-      [479, "أَحَاقَّات", "ʾaḥāqqāt", "hak olduğunu gösterenler (çoğulun çoğulu)", "orta", ""],
-      [480, "أَحَاقِيقَات", "ʾaḥāqīqāt", "hak olduğunu gösterenler (çoğulun çoğulu)", "orta", ""],
-      [481, "حُقُوقَات", "ḥuqūqāt", "hak olduğunu gösterenler (çoğulun çoğulu)", "orta", ""],
-      [482, "حُقَّات", "ḥuqqāt", "hak olduğunu gösterenler (çoğulun çoğulu)", "orta", ""],
-      [483, "حِقَاقَات", "ḥiqāqāt", "hak olduğunu gösterenler (çoğulun çoğulu)", "orta", ""],
-      [484, "حِقَّات", "ḥiqqāt", "hak olduğunu gösterenler (çoğulun çoğulu)", "orta", ""],
-      [485, "حِقَّات", "ḥiqqāt", "hak olduğunu gösterenler (çoğulun çoğulu)", "orta", ""],
-      [486, "حُقَّات", "ḥuqqāt", "hak olduğunu gösterenler (çoğulun çoğulu)", "orta", ""],
-      [487, "حُقّاآت", "ḥuqqāʾāt", "hak olduğunu gösterenler (çoğulun çoğulu)", "orta", ""],
-      [488, "حَقَّات", "ḥaqqāt", "hak olduğunu gösterenler (çoğulun çoğulu)", "orta", ""],
-      [489, "حُقَّاقَات", "ḥuqqāqāt", "hak olduğunu gösterenler (çoğulun çoğulu)", "orta", ""],
-      [490, "حَقَاقَات", "ḥaqāqāt", "hak olduğunu gösterenler (çoğulun çoğulu)", "orta", ""],
-      [491, "حَقَّات", "ḥaqqāt", "hak olduğunu gösterenler (çoğulun çoğulu)", "orta", ""],
-      [492, "مَحَاقَّات", "maḥāqqāt", "hak olduğunu gösterenler (çoğulun çoğulu)", "orta", ""],
-      [493, "مَحَاقِيقَات", "maḥāqīqāt", "hak olduğunu gösterenler (çoğulun çoğulu)", "orta", ""],
-      [494, "حَوَاقَّات", "ḥawāqqāt", "hak olduğunu gösterenler (çoğulun çoğulu)", "orta", ""],
-      [495, "أَحُقَّات", "ʾaḥuqqāt", "hak olduğunu gösterenler (çoğulun çoğulu)", "orta", ""],
-      [496, "حُقَّقَات", "ḥuqqaqāt", "hak olduğunu gösterenler (çoğulun çoğulu)", "orta", ""],
-      [497, "حَقَائِقَات", "ḥaqāʾiqāt", "hak olduğunu gösterenler (çoğulun çoğulu)", "orta", ""],
-      [498, "حُقَيْقَات", "ḥuqayqāt", "hak olduğunu gösterenler (çoğulun çoğulu)", "orta", ""]
+      [477, "أَحْقَاقَات", "ʾaḥqāqāt", "araştıranlar (çoğulun çoğulu)", "orta", ""],
+      [478, "أَحِقَّات", "ʾaḥiqqāt", "araştıranlar (çoğulun çoğulu)", "orta", ""],
+      [479, "أَحَاقَّات", "ʾaḥāqqāt", "araştıranlar (çoğulun çoğulu)", "orta", ""],
+      [480, "أَحَاقِيقَات", "ʾaḥāqīqāt", "araştıranlar (çoğulun çoğulu)", "orta", ""],
+      [481, "حُقُوقَات", "ḥuqūqāt", "araştıranlar (çoğulun çoğulu)", "orta", ""],
+      [482, "حُقَّات", "ḥuqqāt", "araştıranlar (çoğulun çoğulu)", "orta", ""],
+      [483, "حِقَاقَات", "ḥiqāqāt", "araştıranlar (çoğulun çoğulu)", "orta", ""],
+      [484, "حِقَّات", "ḥiqqāt", "araştıranlar (çoğulun çoğulu)", "orta", ""],
+      [485, "حِقَّات", "ḥiqqāt", "araştıranlar (çoğulun çoğulu)", "orta", ""],
+      [486, "حُقَّات", "ḥuqqāt", "araştıranlar (çoğulun çoğulu)", "orta", ""],
+      [487, "حُقّاآت", "ḥuqqāʾāt", "araştıranlar (çoğulun çoğulu)", "orta", ""],
+      [488, "حَقَّات", "ḥaqqāt", "araştıranlar (çoğulun çoğulu)", "orta", ""],
+      [489, "حُقَّاقَات", "ḥuqqāqāt", "araştıranlar (çoğulun çoğulu)", "orta", ""],
+      [490, "حَقَاقَات", "ḥaqāqāt", "araştıranlar (çoğulun çoğulu)", "orta", ""],
+      [491, "حَقَّات", "ḥaqqāt", "araştıranlar (çoğulun çoğulu)", "orta", ""],
+      [492, "مَحَاقَّات", "maḥāqqāt", "araştıranlar (çoğulun çoğulu)", "orta", ""],
+      [493, "مَحَاقِيقَات", "maḥāqīqāt", "araştıranlar (çoğulun çoğulu)", "orta", ""],
+      [494, "حَوَاقَّات", "ḥawāqqāt", "araştıranlar (çoğulun çoğulu)", "orta", ""],
+      [495, "أَحُقَّات", "ʾaḥuqqāt", "araştıranlar (çoğulun çoğulu)", "orta", ""],
+      [496, "حُقَّقَات", "ḥuqqaqāt", "araştıranlar (çoğulun çoğulu)", "orta", ""],
+      [497, "حَقَائِقَات", "ḥaqāʾiqāt", "araştıranlar (çoğulun çoğulu)", "orta", ""],
+      [498, "حُقَيْقَات", "ḥuqayqāt", "araştıranlar (çoğulun çoğulu)", "orta", ""]
     ]
   },
   "reddedilen": [
