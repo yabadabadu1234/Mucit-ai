@@ -204,13 +204,13 @@ def harfle(ts, kok, var=None):
     f = kok[0]
     for i, x in enumerate(out):
         if x['c'] == 'X':
-            asim = f in 'دذوينطظ' or (f == 'ء' and var == 'asim')
+            asim = f in 'دذويطظتث' or (f == 'ء' and var == 'asim')
             if f == 'ز':
                 x['ch'] = 'د'
             elif f in 'صض':
                 x['ch'] = 'ط'
             if asim:
-                x['ch'] = 'د' if f in 'دذ' else ('ط' if f == 'ط' else ('ظ' if f == 'ظ' else 'ت'))
+                x['ch'] = 'د' if f in 'دذ' else ('ط' if f == 'ط' else ('ظ' if f == 'ظ' else ('ث' if f == 'ث' else 'ت')))
                 x['sh'] = True
                 if out[i - 1]['slot'] == '1':
                     out.pop(i - 1)
@@ -485,7 +485,8 @@ MASDAR_SULASI = [
     ("fi'āle", "1i 2a A 3a T"), ("fa'īl", "1a 2i I 3"), ("fa'ūl", "1a 2u U 3"),
     ("fa'alān", "1a 2a 3a A n"), ("fu'lān", "1u 20 3a A n"), ("fi'lān", "1i 20 3a A n"),
     ("fa'lā", "1a 20 3a Y"), ("fu'lā", "1u 20 3a Y"), ("fi'lā", "1i 20 3a Y"),
-    ("fa'ale", "1a 2a 3a T"), ("fi'ale", "1i 2a 3a T"),
+    ("fa'ale", "1a 2a 3a T"), ("fi'ale", "1i 2a 3a T"), ("fa'lūla", "1a 20 3u U 3a T"), ("tuf'ūl", "tu 10 2u U 3"),
+    ("taf'ila", "ta 10 2i 3a T"), ("taf'ala", "ta 10 2a 3a T"), ("maf'ula", "ma 10 2u 3a T"), ("maf'ila", "ma 10 2i 3a T"),
 ]
 SIFAT_MUSEBBEHE = [
     ("fa'īl", "1a 2i I 3"), ("fa'ūl", "1a 2u U 3"), ("fa'il", "1a 2i 3"), ("fa'ul", "1a 2u 3"),
@@ -502,14 +503,15 @@ CEMI_MUKESSER = [
     ("efâ'îl", "Ea 1a A 2i I 3"), ("fu'ūl", "1u 2u U 3"), ("fu'ul", "1u 2u 3"), ("fi'āl", "1i 2a A 3"),
     ("fi'al", "1i 2a 3"), ("fi'ale", "1i 2a 3a T"), ("fu'al", "1u 2a 3"), ("fu'alā'", "1u 2a 3 A Q"),
     ("fa'ale", "1a 2a 3a T"), ("fu''āl", "1u 2+a A 3"), ("fa'āl", "1a 2a A 3"), ("fa'al", "1a 2a 3"),
-    ("mefâ'il", "ma 1a A 2i 3"), ("mefâ'îl", "ma 1a A 2i I 3"), ("fevâ'il", "1a wa A 2i 3"),
+    ("mefâ'il", "ma 1a A 2i 3"), ("mefâ'îl", "ma 1a A 2i I 3"), ("fevâ'il", "1a wa A 2i 3"), ("af'ul", "Ea 10 2u 3"), ("fu''al", "1u 2+a 3"),
     ("fe'âil", "1a 2a A Qi 3"), ("fu'ayl(cem')", "1u 2a y0 3"),
 ]
 
 ISM_MASDAR = [("fa'âl (kelâm, selâm)", "1a 2a A 3"), ("fu'ûl (vudû')", "1u 2u U 3"), ("fi'âl", "1i 2a A 3"),
               ("fu'l (şükr)", "1u 20 3"), ("fa'âle (belâğa)", "1a 2a A 3a T"), ("fi'âle", "1i 2a A 3a T"),
               ("fu'ûle", "1u 2u U 3a T"), ("fa'l", "1a 20 3"), ("fi'l", "1i 20 3")]
-ISM_CINS = [("fa'l", "1a 20 3"), ("fa'al", "1a 2a 3"), ("fi'l", "1i 20 3"), ("fu'l", "1u 20 3"),
+ISM_CINS = [("fâ'ûl", "1a A 2u U 3"), ("fa'ala", "1a 2a 3a T"), ("fu'ala", "1u 2a 3a T"), ("uf'ûla", "Eu 10 2u U 3a T"),
+            ("faw'al", "1a w0 2a 3"), ("fay'al", "1a y0 2a 3"), ("fa'l", "1a 20 3"), ("fa'al", "1a 2a 3"), ("fi'l", "1i 20 3"), ("fu'l", "1u 20 3"),
             ("fa'îl", "1a 2i I 3"), ("fi'al", "1i 2a 3"), ("fu'ul", "1u 2u 3"), ("fa'âl", "1a 2a A 3")]
 
 BAB = [
@@ -555,6 +557,8 @@ SULASI_MUSTAK = [
     ('âlet', "mif'ale", "mi 10 2a 3a T", None),
     ('tafdîl', "af'al", "Ea 10 2a 3", None),
     ('tafdîl (müennes)', "fu'lâ", "1u 20 3a Y", None),
+    ('tafdîl (müennes)', "fa'lâ'", "1a 20 3a A Q", None),
+    ('mekân/zaman', "maf'ula", "ma 10 2u 3a T", None),
     ('tasğîr', "fu'ayl", "1u 2a y0 3", None),
     ('tasğîr', "fu'ayle", "1u 2a y0 3a T", None),
     ('masdar-ı mîmî', "maf'al", "ma 10 2a 3", None),
@@ -679,7 +683,9 @@ def tablo(kok):
         turevler('sıfat-ı müşebbehe', "fay'il (ecvef: seyyid, meyyit, tayyib)", "1a y+i 3", True, 'ecvef kıyâsı')
     for ad, sp in MUBALAGA:
         turevler('mübalağa', ad, sp, True, 'semâî aday')
-    for ad, sp in (("fa'l", "1a 20 3"), ("fâ'il", "1a A 2i 3"), ("maf'ûl", "ma 10 2u U 3"), ("fa'īl", "1a 2i I 3")):
+    for ad, sp in (("fa'l", "1a 20 3"), ("fa'al", "1a 2a 3"), ("fi'l", "1i 20 3"), ("fu'l", "1u 20 3"), ("fi'āl", "1i 2a A 3"),
+                   ("fâ'il", "1a A 2i 3"), ("maf'ûl", "ma 10 2u U 3"), ("fa'īl", "1a 2i I 3"), ("maf'al", "ma 10 2a 3"),
+                   ("taf'īl", "ta 10 2i I 3"), ("tafā'ul", "ta 1a A 2u 3"), ("if'āl", "Ei 10 2a A 3"), ("ifti'āl", "Wi 10 Xi 2a A 3")):
         p = P(sp)
         if p is None:
             continue
@@ -711,6 +717,7 @@ def md(kok, sinif, satir, red):
     benzersiz = len({s['ar'] for s in satir})
     idg = sum(1 for s in satir if s['idg'])
     il = sum(1 for s in satir if 'ilal' in s['etiket'])
+    tk = sum(1 for s in satir if s.get('tanik'))
     out = ['# İŞTİKAK MOTORU ÇIKTISI — kök %s (%s)\n' % (' '.join(kok), sinif),
            'Arapça ve Latin sütunları **motorun çıktısıdır**. Türkçe sütunu `turkce.py` motorunun mekanik karşılığıdır; güven: **kural** (kural doğru uygulandı) · **orta** (karşılık yaklaşık) · **kontrol** (insan gözü lazım). Mana değişmesi sütunu elle yazılır.\n',
            'Sayım: **%d satır · %d ayrı Arapça biçim · %d satırda idgam · %d satırda ilal kaidesi · %d reddedilen**\n' % (
@@ -720,10 +727,10 @@ def md(kok, sinif, satir, red):
         grup.setdefault(s['grup'], []).append(s)
     for g, rows in grup.items():
         out.append('\n## %s (%d)\n' % (g, len(rows)))
-        out.append('| kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | mana değişmesi |')
-        out.append('| :-- | :-- | :-- | :-- | :-- | :-- | :-- |')
+        out.append('| kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |')
+        out.append('| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |')
         for r in rows:
-            out.append('| %s | %s | %s | %s | %s | %s |  |' % (r['ad'], r['ar'], r['lat'], r['etiket'], r.get('tr', ''), r.get('guven', '')))
+            out.append('| %s | %s | %s | %s | %s | %s | %s |  |' % (r['ad'], r['ar'], r['lat'], r['etiket'], r.get('tr', ''), r.get('guven', ''), r.get('tanik', '')))
     if red:
         out.append('\n## Reddedilenler ve sebebi\n')
         out.append('| grup | kalıp | sebep |')

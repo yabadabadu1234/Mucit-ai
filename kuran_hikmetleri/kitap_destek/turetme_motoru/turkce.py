@@ -158,6 +158,14 @@ def ayristir(metin):
     return fiiller, adlar
 
 
+def wikt_gecis(kok):
+    import wikt
+    g = wikt.gecislilik(kok)
+    if g and len(set(g)) == 1:
+        return 'tr' if g[0] == 'tr' else 'intr'
+    return None
+
+
 def kok_bilgisi(kok):
     x = db().get(I.normala(kok))
     if x is None:
@@ -182,6 +190,9 @@ def kok_bilgisi(kok):
     else:
         return {'stem': '', 'tr': '?', 'trk': False, 'kaynak': 'yok', 'guven': 'kontrol', 'ham': x['turkce'], 'adlar': []}
     tr, trk = gecislilik(stem)
+    wg = wikt_gecis(kok)
+    if wg:
+        tr, trk = wg, True
     return {'stem': stem, 'tr': tr, 'trk': trk, 'kaynak': kaynak, 'guven': guven, 'ham': x['turkce'], 'adlar': adlar}
 
 

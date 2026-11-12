@@ -2,7 +2,7 @@
 
 Motorun çıktısı, bilinen biçimlerle (Maksûd ilâl bahsi tarifleri ve sarf kitaplarındaki yaygın misaller) karşılaştırıldı.
 
-Sonuç: **80 tuttu · 0 tutmadı** (80 karşılaştırma). (75 karşılaştırma).
+Sonuç: **83 tuttu · 0 tutmadı** (83 karşılaştırma). (80 karşılaştırma). (75 karşılaştırma).
 
 Bu karşılaştırma bilinen biçimlerledir; tam sarf sicili sınaması değildir.
 
@@ -11,37 +11,37 @@ Bu karşılaştırma bilinen biçimlerledir; tam sarf sicili sınaması değildi
 
 | dosya | sınıf | satır | ayrı biçim | red |
 | :-- | :-- | :-- | :-- | :-- |
-| akl_mehmuz_fa | mehmûz | 440 | 352 | 9 |
-| amn_mehmuz_fa | mehmûz | 440 | 352 | 9 |
-| aty_mehmuz_nakis | nâkıs | 413 | 323 | 25 |
-| awy_mehmuz_makrun | lefîf-makrûn | 413 | 323 | 25 |
-| bda_mehmuz_lam | mehmûz | 424 | 337 | 9 |
-| byi_ecvef_ya | ecvef | 429 | 336 | 11 |
-| dkk_muzaaf | muzâ‘af | 434 | 300 | 8 |
-| drb_salim | sâlim | 424 | 339 | 9 |
-| frr_muzaaf | muzâ‘af | 434 | 300 | 8 |
-| gzw_nakis_vav | nâkıs | 397 | 310 | 26 |
-| hyy_lefif_ayn_lam_ayni | lefîf-makrûn (ayn ve lâm aynı harf) | 399 | 312 | 24 |
-| jyi_ecvef_mehmuz_lam | ecvef+mehmûz-lâm (birleşik) | 429 | 336 | 11 |
-| ktb_salim | sâlim | 424 | 339 | 9 |
-| kyl_ecvef_ya | ecvef | 429 | 336 | 11 |
-| qra_mehmuz_lam | mehmûz | 424 | 337 | 9 |
-| qwl_ecvef_vav | ecvef | 432 | 345 | 11 |
-| qwm_ecvef_vav | ecvef | 432 | 345 | 11 |
-| ray_mehmuz_nakis | nâkıs | 399 | 305 | 24 |
-| rmy_nakis_ya | nâkıs | 399 | 312 | 24 |
-| sal_mehmuz_ayn | mehmûz | 424 | 332 | 9 |
-| swd_ecvef_vav | ecvef | 432 | 345 | 11 |
-| syi_ecvef_mehmuz_lam | ecvef+mehmûz-lâm (birleşik) | 429 | 336 | 11 |
-| twy_lefif_makrun | lefîf-makrûn | 399 | 312 | 24 |
-| wad_misal_vav | misâl | 425 | 340 | 9 |
-| wqy_lefif_mefruk | lefîf-mefrûk | 399 | 312 | 24 |
-| wwy_uc_illet | üç harfi illetli (birleşik) | 399 | 312 | 24 |
-| wyl_misal_ecvef | misâl+ecvef (birleşik) | 430 | 337 | 11 |
-| wzn_misal_vav | misâl | 425 | 340 | 9 |
-| xsy_nakis_ya | nâkıs | 399 | 312 | 24 |
-| ysr_misal_ya | misâl | 424 | 339 | 9 |
-| ywm_misal_ecvef | misâl+ecvef (birleşik) | 432 | 345 | 11 |
+| akl_mehmuz_fa | mehmûz | 489 | 396 | 11 |
+| amn_mehmuz_fa | mehmûz | 489 | 396 | 11 |
+| aty_mehmuz_nakis | nâkıs | 460 | 365 | 28 |
+| awy_mehmuz_makrun | lefîf-makrûn | 460 | 365 | 28 |
+| bda_mehmuz_lam | mehmûz | 473 | 381 | 11 |
+| byi_ecvef_ya | ecvef | 478 | 373 | 13 |
+| dkk_muzaaf | muzâ‘af | 483 | 333 | 10 |
+| drb_salim | sâlim | 473 | 383 | 11 |
+| frr_muzaaf | muzâ‘af | 483 | 333 | 10 |
+| gzw_nakis_vav | nâkıs | 442 | 350 | 31 |
+| hyy_lefif_ayn_lam_ayni | lefîf-makrûn (ayn ve lâm aynı harf) | 446 | 350 | 27 |
+| jyi_ecvef_mehmuz_lam | ecvef+mehmûz-lâm (birleşik) | 478 | 373 | 13 |
+| ktb_salim | sâlim | 473 | 383 | 11 |
+| kyl_ecvef_ya | ecvef | 478 | 373 | 13 |
+| qra_mehmuz_lam | mehmûz | 473 | 381 | 11 |
+| qwl_ecvef_vav | ecvef | 481 | 382 | 13 |
+| qwm_ecvef_vav | ecvef | 481 | 382 | 13 |
+| ray_mehmuz_nakis | nâkıs | 446 | 347 | 27 |
+| rmy_nakis_ya | nâkıs | 446 | 354 | 27 |
+| sal_mehmuz_ayn | mehmûz | 473 | 376 | 11 |
+| swd_ecvef_vav | ecvef | 481 | 382 | 13 |
+| syi_ecvef_mehmuz_lam | ecvef+mehmûz-lâm (birleşik) | 478 | 373 | 13 |
+| twy_lefif_makrun | lefîf-makrûn | 446 | 354 | 27 |
+| wad_misal_vav | misâl | 474 | 384 | 11 |
+| wqy_lefif_mefruk | lefîf-mefrûk | 446 | 354 | 27 |
+| wwy_uc_illet | üç harfi illetli (birleşik) | 446 | 354 | 27 |
+| wyl_misal_ecvef | misâl+ecvef (birleşik) | 479 | 374 | 13 |
+| wzn_misal_vav | misâl | 474 | 384 | 11 |
+| xsy_nakis_ya | nâkıs | 446 | 354 | 27 |
+| ysr_misal_ya | misâl | 473 | 383 | 11 |
+| ywm_misal_ecvef | misâl+ecvef (birleşik) | 481 | 382 | 13 |
 
 ## Hâlâ reddedilen hâller ve sebepleri
 
@@ -146,3 +146,15 @@ Veri: `kaynak/lugat/kok_anlamlari.json` (1651 kök, serbest metin).
 **Neyi doğrulamıyor:** tablo son Türkçe fiili verir, Form I kökünü vermez; bu yüzden bâb anlam kuralları (ettirgen, işteşlik, dönüşlülük, isteme) bu tabloyla sınanamadı, yalnız ek zinciri sınandı.
 
 **Güven işareti (31 kök tablosu, 13 256 satır):** kural 107 · orta 7694 · kontrol 4616 · veri yok 843. "Kural" yalnız fiil kökü kesin, kalıp kıyâsî ve Türkçe karşılığı mekanik olan satırlardır; "orta" karşılığın yaklaşık olduğu (tafdîl, mübalağa, âlet, mekân, cem', bâb anlamı); "kontrol" kökte fiil olmadığı veya geçişliliğin tahmin edildiği satırlardır. Elle kontrol yükü: kontrol + veri yok = %41 satır; bunun büyük kısmı isim karşılıklı köklerdir.
+
+## Vikisözlük ile bağımsız doğrulama (F 365) — `wikt.py`, `wikt_dogrula.py`, `veri/`
+
+Kaynak: kaikki.org İngilizce Vikisözlük'ün Arapça dökümü (233 417 madde; kökü belli 12 505) ve Türkçe Vikisözlük dökümü. Ayrıntı: `veri/README.md`.
+
+**Motorun kapsamı:** bizim 1651 kökten Vikisözlük'te müştak ve masdar maddesi bulunan 1409 kökte 8150 tanıklı biçimin **6980**'ini motor üretiyor (**%85.6**). Kaçan biçimlerin çoğu müştak değil: i'râbî tenvinli zarflar (tab'an, mesela), kırık çoğullar, özel adlar, bitki ve hayvan adları.
+
+**Bu doğrulamanın bulduğu hata:** ifti'âl bâbında fâ'sı nûn olan köklerde (nazara → intizâr) motor te'yi idgam ediyordu (ittizâr); nûn idgam harfi değildir. Düzeltildi; te ve sâ idgam listesine eklendi (ittijâr, ittiʿâr). Oran %82,7'den %85,6'ya çıktı; kalıp eksikleri (fa'alî, fâ'ûl, maf'ula, taf'ala, tuf'ûl, fa'lûla, fa'lâ' ve nisbe tabanları) eklendi.
+
+**Tanık sütunu:** her kök tablosunda "tanık (Vikisözlük, İngilizce)" sütunu, üretilen biçimin Vikisözlük'te bulunduğunu ve İngilizce tanımını gösterir; 31 kök tablosunda 430/14529 satır tanıklıdır (kalan satırlar kıyâsî türevdir, Vikisözlük'te yoktur, yanlış demek değildir).
+
+**Türkçe karşılık için ölçüm:** Vikisözlük'ten Türkçe fiil bulma (Arapça fiil → Türkçe çeviri bağı ve İngilizce tanım → Türkçe karşılık) bizim 1651 kökün fiil sapı bulunamayan 956'sından 609'una aday verdi; fakat bizim fiil karşılığı bilinen köklerde aynı yolların bizim karşılıkla uyuşması düşüktür (İngilizce yolu 71/226, Arapça doğrudan çeviri yolu 3/9). Bu yüzden Vikisözlük'ten gelen Türkçe fiil **otomatik karşılık olarak kullanılmadı**; yalnız geçişlilik ve tanık için kullanıldı.
