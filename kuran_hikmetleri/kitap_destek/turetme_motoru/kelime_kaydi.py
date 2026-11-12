@@ -7,6 +7,7 @@ import sys
 
 import istikak as I
 import turkce as T
+import mekayis as MK
 import osmanlica_lugat as OS
 import wikt
 
@@ -65,7 +66,10 @@ def uret():
     for anahtar, v in osm.items():
         kk, ll = anahtar.split('|', 1)
         osm_kok[kk][ll] = v
-    kokler_ad = sorted({I.normala(k['kok']) for k in kel if k['kok']} | set(kokdb))
+    kuran_kokleri = {I.normala(k['kok']) for k in kel if k['kok']} | set(kokdb)
+    mk = MK.yukle()
+    cb = oku_json(os.path.join(KOK, 'kaynak', 'lugat', 'cebel_mihveri.json'))['kokler']
+    kokler_ad = sorted(kuran_kokleri | set(mk))
     kaliplar, kidx = [], {}
     kokler = {}
     hata = collections.Counter()
@@ -96,12 +100,16 @@ def uret():
             soz['vikisozluk_ingilizce'] = [{'lemma': e['l'], 'tur': e['p'], 'bab': e['f'], 'tanim': e['g']} for e in wl]
         if k in osm_kok:
             soz['osmanlica_lugatler'] = {ll: {'sorgular': v['sorgular'], 'maddeler': v['maddeler']} for ll, v in osm_kok[k].items()}
+        if k in mk:
+            soz['mekayis'] = mk[k]
+        if k in cb:
+            soz['cebel_mihveri_ocr'] = cb[k]
         rm = wtr.get('rootMeanings', {}).get(k)
         if rm:
             soz['eyupipler_kok_anlami'] = rm
         kokler[k] = {'kok': k, 'sinif': sinif, 'turkce_fiil': ({'sap': bil['stem'], 'kaynak': bil['kaynak'], 'guven': bil['guven']} if bil else None),
                      'mustaklar': gruplar, 'reddedilen': [list(r) for r in red], 'sozlukler': soz,
-                     'kuran_gecisleri': len(morf.get(k, []))}
+                     'kuran_gecisleri': len(morf.get(k, [])), 'kuranda_var': k in kuran_kokleri}
     kelimeler = []
     for k in kel:
         y = yuzey.get(k['kelime'], {})
@@ -117,6 +125,9 @@ def uret():
             'vikisozluklu_kok': sum(1 for r in kokler.values() if 'vikisozluk_ingilizce' in r.get('sozlukler', {})),
             'osmanlica_lugatli_kok': sum(1 for r in kokler.values() if any(v['maddeler'] for v in r.get('sozlukler', {}).get('osmanlica_lugatler', {}).values())),
             'osmanlica_madde': sum(len(v['maddeler']) for r in kokler.values() for v in r.get('sozlukler', {}).get('osmanlica_lugatler', {}).values()),
+            'mekayisli_kok': sum(1 for r in kokler.values() if 'mekayis' in r.get('sozlukler', {})),
+            'kuranda_yok_kok': sum(1 for r in kokler.values() if not r.get('kuranda_var', True)),
+            'cebel_mihverili_kok': sum(1 for r in kokler.values() if 'cebel_mihveri_ocr' in r.get('sozlukler', {})),
             'kok_anlamli_kok': sum(1 for r in kokler.values() if 'kok_anlamlari' in r.get('sozlukler', {})),
             'motorun_reddettigi_kok': sum(hata.values()), 'kokü_olmayan_kelime': sum(1 for e in kelimeler if not e['kok'])}
     return {'sema': SEMA, 'sayilar': sayi, 'kaliplar': kaliplar, 'kokler': kokler, 'kelimeler': kelimeler}
@@ -125,22 +136,24 @@ def uret():
 def yaz():
     d = uret()
     taban = os.path.join(KOK, 'kelime_kaydi')
-    klasor = os.path.join(taban, 'kokler')
-    eski = os.path.join(taban, 'kelimeler')
-    for kl in (klasor, eski):
-        if os.path.isdir(kl):
-            for f in os.listdir(kl):
-                os.remove(os.path.join(kl, f))
-    if os.path.isdir(eski):
-        os.rmdir(eski)
-    os.makedirs(klasor, exist_ok=True)
+    import shutil
+    for eski in ('kokler', 'kelimeler', 'koksuz.json', 'FIHRIST.json', 'kuranda_var', 'kuranda_yok'):
+        yol = os.path.join(taban, eski)
+        if os.path.isdir(yol):
+            shutil.rmtree(yol)
+        elif os.path.exists(yol):
+            os.remove(yol)
     gruplar = collections.defaultdict(list)
     koksuz = []
     for e in d['kelimeler']:
         (gruplar[e['kok']] if e['kok'] else koksuz).append(e)
-    fihrist = {'kokler': [], 'kelime_kok': {}}
-    toplam = 0
+    fih = {'kuranda_var': [], 'kuranda_yok': []}
+    kelime_kok = {}
+    toplam = collections.Counter()
     for k, r in d['kokler'].items():
+        ad = 'kuranda_var' if r.get('kuranda_var') else 'kuranda_yok'
+        klasor = os.path.join(taban, ad, 'kokler')
+        os.makedirs(klasor, exist_ok=True)
         dugum = dict(r)
         dugum['sema'] = SEMA
         used = sorted({x[0] for v in r.get('mustaklar', {}).values() for x in v})
@@ -149,15 +162,17 @@ def yaz():
         yol = os.path.join(klasor, k + '.json')
         with open(yol, 'w', encoding='utf-8') as f:
             json.dump(dugum, f, ensure_ascii=False, separators=(',', ':'))
-        toplam += os.path.getsize(yol)
-        fihrist['kokler'].append([k + '.json', k, len(dugum['kelimeler']), sum(len(v) for v in r.get('mustaklar', {}).values())])
+        toplam[ad] += os.path.getsize(yol)
+        fih[ad].append([k + '.json', k, len(dugum['kelimeler']), sum(len(v) for v in r.get('mustaklar', {}).values())])
         for e in dugum['kelimeler']:
-            fihrist['kelime_kok'][e['kelime']] = k
-    with open(os.path.join(taban, 'koksuz.json'), 'w', encoding='utf-8') as f:
+            kelime_kok[e['kelime']] = k
+    with open(os.path.join(taban, 'kuranda_var', 'koksuz.json'), 'w', encoding='utf-8') as f:
         json.dump({'aciklama': 'Kökü olmayan kelimeler (harf, zamir, özel ad vb.)', 'kelimeler': koksuz}, f, ensure_ascii=False, separators=(',', ':'))
-    with open(os.path.join(taban, 'FIHRIST.json'), 'w', encoding='utf-8') as f:
-        json.dump({'sema': SEMA, 'sayilar': d['sayilar'], 'alanlar_kokler': ['dosya', 'kok', 'kelime_sayisi', 'mustak_satiri'], **fihrist}, f, ensure_ascii=False, separators=(',', ':'))
-    print(d['sayilar'], len(fihrist['kokler']), 'kök dosyası', toplam // 1024 // 1024, 'MB')
+    for ad in ('kuranda_var', 'kuranda_yok'):
+        with open(os.path.join(taban, ad, 'FIHRIST.json'), 'w', encoding='utf-8') as f:
+            json.dump({'sema': SEMA, 'sayilar': d['sayilar'], 'alanlar_kokler': ['dosya', 'kok', 'kelime_sayisi', 'mustak_satiri'], 'kokler': fih[ad],
+                       'kelime_kok': kelime_kok if ad == 'kuranda_var' else {}}, f, ensure_ascii=False, separators=(',', ':'))
+    print(d['sayilar'], {k: len(v) for k, v in fih.items()}, {k: v // 1024 // 1024 for k, v in toplam.items()}, 'MB')
 
 
 if __name__ == '__main__':
