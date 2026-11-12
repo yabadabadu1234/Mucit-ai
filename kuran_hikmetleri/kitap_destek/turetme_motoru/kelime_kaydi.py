@@ -316,11 +316,11 @@ def mana_agaci(mt):
     gor = {}
     for k, x in mt.items():
         u, o, i = x['ust'], x['orta'], x['ince']
-        un = ag.setdefault(u['kume'], {'merkez_kok': u['merkez_kok'], 'merkez_mana': u['merkez_mana'], 'kok': 0, 'orta': {}})
+        un = ag.setdefault(str(u['kume']), {'merkez_kok': u['merkez_kok'], 'merkez_mana': u['merkez_mana'], 'kok': 0, 'orta': {}})
         un['kok'] += 1
-        on = un['orta'].setdefault(o['kume'], {'merkez_kok': o['merkez_kok'], 'merkez_mana': o['merkez_mana'], 'kok': 0, 'ince': {}})
+        on = un['orta'].setdefault(str(o['kume']), {'merkez_kok': o['merkez_kok'], 'merkez_mana': o['merkez_mana'], 'kok': 0, 'ince': {}})
         on['kok'] += 1
-        inn = on['ince'].setdefault(i['kume'], {'merkez_kok': i['merkez_kok'], 'merkez_mana': i['merkez_mana'], 'kok': 0})
+        inn = on['ince'].setdefault(str(i['kume']), {'merkez_kok': i['merkez_kok'], 'merkez_mana': i['merkez_mana'], 'kok': 0})
         inn['kok'] += 1
         ust_ata = gor.setdefault(('o', o['kume']), u['kume'])
         ihlal += ust_ata != u['kume']
