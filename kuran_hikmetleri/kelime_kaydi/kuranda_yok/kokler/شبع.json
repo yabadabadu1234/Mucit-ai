@@ -1419,16 +1419,59 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "fill.v.01",
-    "orta": "verb.change",
-    "ust": "fiil ve hadise",
-    "dayanak_synset": "fill.v.01",
-    "dayanak_tanim": "make full, also in a metaphorical sense",
+    "ince": "be_full.v.01",
+    "orta": "verb.consumption",
+    "ust": "canlı ve beden",
+    "dayanak_synset": "be_full.v.01",
+    "dayanak_tanim": "be sated, have enough to eat",
     "synset_sayisi": 19
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "رجل شبعان، وامرأة شبعى، وقوم شباع، وتقول: قوم إذا جاعوا كاعوا، وتراهم سباعاً إذا كانوا شباعاً، وقد شبع شبعاً، وأصاب شبعا لبطنه وهو القدر الذي يشبع منه، وتروّوا وتشبّعوا.",
+    "mecaz": "شبعت من هذا الأمر ورويت إذا مللته وكرهته. وأشبع الثوب صبغاً، وثوب شبيع الغزل: كثيره. وأشبع الرجل كلامه. وساق في هذا المعنى فصلاً مشبعاً. وكل ما وفّرته فقد أشبعته. وتشبع بأكثر مما عنده. وامرأة شبعى الوشاح والخلخال والدرع إذا كانت سمينة. وهذا بلد قد شبعت غنمه أي خصيب.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "رجل شبعان، وامرأة شبعى، وقوم شباع، وتقول: قوم إذا جاعوا كاعوا، وتراهم سباعاً إذا كانوا شباعاً، وقد شبع شبعاً، وأصاب شبعا لبطنه وهو القدر الذي يشبع منه، وتروّوا وتشبّعوا.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "شبعت من هذا الأمر ورويت إذا مللته وكرهته. وأشبع الثوب صبغاً، وثوب شبيع الغزل: كثيره. وأشبع الرجل كلامه. وساق في هذا المعنى فصلاً مشبعاً. وكل ما وفّرته فقد أشبعته. وتشبع بأكثر مما عنده. وامرأة شبعى الوشاح والخلخال والدرع إذا كانت سمينة. وهذا بلد قد شبعت غنمه أي خصيب.",
+        "prototipe_benzerlik": 0.685,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.685,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "appoint.v.02",
+    "be_full.v.01",
+    "charge.v.02",
+    "charge.v.03",
+    "charge.v.08",
+    "charge.v.23",
+    "commit.v.03",
+    "feed.v.06",
+    "fill.v.01",
+    "flood.v.02",
+    "impregnate.v.02",
+    "please.v.01",
+    "please.v.02",
+    "relieve.v.01",
+    "run.v.06",
+    "satisfy.v.02",
+    "steep.v.01",
+    "victimize.v.01",
+    "whine.v.03"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
@@ -1439,22 +1482,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 17,
+      "kume": 24,
       "merkez_kok": "زين",
       "merkez_mana": "Zîne: süs, güzellik; zeyn: güzelleştirmek",
-      "boy": 177
+      "boy": 123
     },
     "ince": {
-      "kume": 94,
-      "merkez_kok": "زين",
-      "merkez_mana": "Zîne: süs, güzellik; zeyn: güzelleştirmek",
-      "boy": 44
+      "kume": 141,
+      "merkez_kok": "متع",
+      "merkez_mana": "Metâ': yararlanma, geçici nimet",
+      "boy": 26
     }
   },
   "kaliplar": {

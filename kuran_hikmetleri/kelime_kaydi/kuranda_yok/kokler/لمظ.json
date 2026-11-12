@@ -688,6 +688,49 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "لمظ الرجل يلمظ وتلمّظ إذا تتّبع بلسانه بقيّة الطعام بعد الأكل أو مسح به شفتيه واسم تلك البقية: اللماظة، وألقى لماظة من فيه، وما تلمّظت اليوم بشيء أي ما ذقت شيأ، وما ذقت اليوم لماظاً، ولمّظه كذا: أذاقه إياه، وشرب الماء لماظاً بالكسر: ذاقه بطرف لسانه. وفرس ألمظ: في جحفلته بياض فإن جاوز إلى الأنف فهو: أرثم، وبه لمظة.",
+    "mecaz": "تلمّظت الحيّة: أخرجت لسانها. وتلمّظ بذكره. قال رجل من بني حنيفة:\nفدع عربيّاً لا تلمّظ بذكره ... فألأم منه حين ينسب عائبه\nلقد كان متلافاً وصاحب نجدة ... ومرتفعاً عن جفن عينيه حاجبه\nأي لم يأت بخزية يغضّ لها بصره. وما الدنيا إلا\nلماظة أيام. وقال:\nوما زالت الدّنيا يخون نعيمها ... وتصبح بالأمر العظيم تمخّض\nلماظة أيام كأحلام نائم ... يذعذع من لذّاتها المتبرّض\nالمتبلّغ. وعنده لمظةٌ من سمنٍ: يسيرٌ تأخذه بإصبعك كالجوزة. وألمظ الفوق وتر القوس.\nولمظه من حقّه: أعطاه شيأ قليلاص منه.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "لمظ الرجل يلمظ وتلمّظ إذا تتّبع بلسانه بقيّة الطعام بعد الأكل أو مسح به شفتيه واسم تلك البقية: اللماظة، وألقى لماظة من فيه، وما تلمّظت اليوم بشيء أي ما ذقت شيأ، وما ذقت اليوم لماظاً، ولمّظه كذا: أذاقه إياه، وشرب الماء لماظاً بالكسر: ذاقه بطرف لسانه. وفرس ألمظ:",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "تلمّظت الحيّة: أخرجت لسانها. وتلمّظ بذكره. قال رجل من بني حنيفة:",
+        "prototipe_benzerlik": 0.298,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "أي لم يأت بخزية يغضّ لها بصره. وما الدنيا إلا",
+        "prototipe_benzerlik": 0.386,
+        "halka": "orta"
+      },
+      {
+        "cumle": "لماظة أيام. وقال:",
+        "prototipe_benzerlik": 0.507,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "المتبلّغ. وعنده لمظةٌ من سمنٍ: يسيرٌ تأخذه بإصبعك كالجوزة. وألمظ الفوق وتر القوس.",
+        "prototipe_benzerlik": 0.614,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "ولمظه من حقّه: أعطاه شيأ قليلاص منه.",
+        "prototipe_benzerlik": 0.613,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.483,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
@@ -701,16 +744,16 @@
       "kume": 3,
       "merkez_kok": "فقص",
       "merkez_mana": "",
-      "boy": 563
+      "boy": 568
     },
     "orta": {
       "kume": 6,
       "merkez_kok": "شبص",
       "merkez_mana": "",
-      "boy": 400
+      "boy": 403
     },
     "ince": {
-      "kume": 29,
+      "kume": 27,
       "merkez_kok": "كضض",
       "merkez_mana": "",
       "boy": 38

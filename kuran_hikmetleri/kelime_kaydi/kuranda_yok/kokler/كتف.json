@@ -984,6 +984,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "أخذه فكتفه، وكتّفهم، ومرّوا به مكتوفاً، وبهم مكتّفين، وخذ الكتاف فاكتفه. وشدّهم كتافاً. ورجلٌ أكتف: عظيم الكتف وقال ابن الأقيصر الأسديّ في نعت فرس: إنّها مشت فكتفت، وخبّت فوجفت، وعدت فنسفت؛ الكتف: مشيٌ رويد يحرّك فيه منكبيه، والنسف: أن يدني منكبيه من الأرض.",
+    "mecaz": "كتف الحنوين: شدّهما بالكتاف. وكتف الباب والإناء: ضبّبه، وباب وإناء مكتوف بالكتيفة وهي الضبة، وبالكتائف والكتيف.\nومن مجاز المجاز: في قلبه كتيفة وكتائف: حقد.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "أخذه فكتفه، وكتّفهم، ومرّوا به مكتوفاً، وبهم مكتّفين، وخذ الكتاف فاكتفه. وشدّهم كتافاً. ورجلٌ أكتف: عظيم الكتف وقال ابن الأقيصر الأسديّ في نعت فرس: إنّها مشت فكتفت، وخبّت فوجفت، وعدت فنسفت؛ الكتف: مشيٌ رويد يحرّك فيه منكبيه، والنسف: أن يدني منكبيه من الأرض.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "كتف الحنوين: شدّهما بالكتاف. وكتف الباب والإناء: ضبّبه، وباب وإناء مكتوف بالكتيفة وهي الضبة، وبالكتائف والكتيف.",
+        "prototipe_benzerlik": 0.32,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "ومن مجاز المجاز: في قلبه كتيفة وكتائف: حقد.",
+        "prototipe_benzerlik": 0.273,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.296,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["body_part.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "خلق الإنسان",
@@ -995,18 +1023,18 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 509
     },
     "orta": {
-      "kume": 11,
-      "merkez_kok": "دحر",
-      "merkez_mana": "Dahr: itmek, uzaklaştırmak",
-      "boy": 179
+      "kume": 9,
+      "merkez_kok": "وغر",
+      "merkez_mana": "to become enraged, to become angry, to be filled with malice",
+      "boy": 108
     },
     "ince": {
-      "kume": 57,
+      "kume": 59,
       "merkez_kok": "لسع",
       "merkez_mana": "to bite, to hurt, to sting",
       "boy": 13

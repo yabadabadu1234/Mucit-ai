@@ -688,6 +688,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "جشروا دوابهم، وجشروها: رعوها قريباً من البيوت. ومنه حديث ابن مسعود \" لا يغرنكم جشركم من صلاتكم فإنّما هي من كوفتكم \" ونعم جشر، وهو جشار أنعامنا. وأصبح بنو فلان جشراً إذا باتوا مع النعم لا يروحون إلى بيوتهم. وجشر المال عن أهله: خرج إلى الرعي.",
+    "mecaz": "جشر الرجل عن أهله إذا سافر. وجشر الصبح: خرج، ولاح أبلق جاشر. واصطبحوا الجاشرية وهي الشربة مع جشور الصبح نسيت إلى الصبح الجاشر. قال:\nإذا ما شربنا الجاشرية لم نبل ... أميراً وإن كان الأمير من الأزد",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "جشروا دوابهم، وجشروها: رعوها قريباً من البيوت. ومنه حديث ابن مسعود \" لا يغرنكم جشركم من صلاتكم فإنّما هي من كوفتكم \" ونعم جشر، وهو جشار أنعامنا. وأصبح بنو فلان جشراً إذا باتوا مع النعم لا يروحون إلى بيوتهم. وجشر المال عن أهله: خرج إلى الرعي.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "جشر الرجل عن أهله إذا سافر. وجشر الصبح: خرج، ولاح أبلق جاشر. واصطبحوا الجاشرية وهي الشربة مع جشور الصبح نسيت إلى الصبح الجاشر. قال:",
+        "prototipe_benzerlik": 0.612,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.612,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الأنواء",
@@ -698,19 +721,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 2,
+      "kume": 1,
       "merkez_kok": "قره",
       "merkez_mana": "",
       "boy": 759
     },
     "orta": {
-      "kume": 4,
+      "kume": 2,
       "merkez_kok": "فلص",
       "merkez_mana": "",
       "boy": 494
     },
     "ince": {
-      "kume": 21,
+      "kume": 3,
       "merkez_kok": "مرت",
       "merkez_mana": "",
       "boy": 241

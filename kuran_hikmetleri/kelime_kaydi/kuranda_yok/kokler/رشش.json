@@ -1184,16 +1184,39 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "spatter.v.01",
-    "orta": "verb.contact",
-    "ust": "fiil ve hadise",
-    "dayanak_synset": "spatter.v.01",
-    "dayanak_tanim": "dash a liquid upon or against",
+    "ince": "whole.n.02",
+    "orta": "noun.artifact",
+    "ust": "cisim ve eşya",
+    "dayanak_synset": "machine_gun.n.01",
+    "dayanak_tanim": "a rapidly firing automatic gun (often mounted)",
     "synset_sayisi": 4
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "رشّ عليه الماء. ورش البيت، ومكان مرشوش. ورشت السماء وأرشّت. وأصابنا رش من مطر. وترشش عليه الماء، وأصابه رشاش منه. ورش الحائك النسج بالمرشة. وأرشت الطعنة، وطعنة مرشة، ولها رشاش من الدم. وشواء وشراش: يقطر ودكه. وقد ترشرش. وأرشّ فرسه إرشاشاً: عرّقه بالركض.",
+    "mecaz": "من لم يدخل في الشر أصابه من رشاشه. وتقول: قد ألحّ بنا العطاش، ومالنا منك إلا الرّشاش.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "رشّ عليه الماء. ورش البيت، ومكان مرشوش. ورشت السماء وأرشّت. وأصابنا رش من مطر. وترشش عليه الماء، وأصابه رشاش منه. ورش الحائك النسج بالمرشة. وأرشت الطعنة، وطعنة مرشة، ولها رشاش من الدم. وشواء وشراش: يقطر ودكه. وقد ترشرش. وأرشّ فرسه إرشاشاً: عرّقه بالركض.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "من لم يدخل في الشر أصابه من رشاشه. وتقول: قد ألحّ بنا العطاش، ومالنا منك إلا الرّشاش.",
+        "prototipe_benzerlik": 0.656,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.656,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["artifact.n.01", "scatter.v.03", "spatter.v.01", "splash.v.07"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطير",
@@ -1204,22 +1227,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 7,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 331
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 31,
+      "kume": 36,
       "merkez_kok": "سكب",
       "merkez_mana": "Sakb: dökmek, boşaltmak",
-      "boy": 76
+      "boy": 101
     },
     "ince": {
-      "kume": 206,
+      "kume": 239,
       "merkez_kok": "ذرف",
       "merkez_mana": "to flow (tears)",
-      "boy": 26
+      "boy": 30
     }
   },
   "kaliplar": {

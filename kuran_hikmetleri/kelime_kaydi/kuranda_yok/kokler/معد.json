@@ -745,6 +745,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "\" تمعددوا \": تشّبهوا بمعدّ في خشونة المطعم والملبس وتصلّبوا. قال حسان:\nفحاضرنا يكفوننا ساكن القرى ... وأعرابنا يكفوننا من تمعددا\nورجل ممعود: دوي المعدة، وقد معد.",
+    "mecaz": "تمعدد الصبي: غلظ وصلب وذهبت عنه رطوبة الصبا.\nقال:\nربّيته حتى إذا تمعددا ... وآض نهداً كالحصان أجردا",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "\" تمعددوا \": تشّبهوا بمعدّ في خشونة المطعم والملبس وتصلّبوا. قال حسان: فحاضرنا يكفوننا ساكن القرى ... وأعرابنا يكفوننا من تمعددا ورجل ممعود: دوي المعدة، وقد معد.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "تمعدد الصبي: غلظ وصلب وذهبت عنه رطوبة الصبا.",
+        "prototipe_benzerlik": 0.672,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.672,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["body_part.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الأضداد",
@@ -755,21 +778,21 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 20,
-      "merkez_kok": "وثن",
-      "merkez_mana": "Vesen: put, tapılan şey",
-      "boy": 116
+      "kume": 21,
+      "merkez_kok": "نجل",
+      "merkez_mana": "to be covered with vegetation",
+      "boy": 107
     },
     "ince": {
-      "kume": 112,
-      "merkez_kok": "عفج",
-      "merkez_mana": "guts, insides",
+      "kume": 126,
+      "merkez_kok": "صدن",
+      "merkez_mana": "",
       "boy": 14
     }
   },

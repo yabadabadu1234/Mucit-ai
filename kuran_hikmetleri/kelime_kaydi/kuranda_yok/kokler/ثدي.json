@@ -1287,6 +1287,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "امرأة ثدياء: عظيمة الثديين، ونساء ثدي. وكأن هذه اليديه، يد ذي الثدية؛ وهو رأس الخوارج. واجعله في الثدية وهيوعاء يتعلقه الفارس قدر جمع الكف يجعل فيه الريش والعقب.",
+    "mecaz": "قد ارتضع فلان ثديّ الكرم.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "امرأة ثدياء: عظيمة الثديين، ونساء ثدي. وكأن هذه اليديه، يد ذي الثدية؛ وهو رأس الخوارج. واجعله في الثدية وهيوعاء يتعلقه الفارس قدر جمع الكف يجعل فيه الريش والعقب.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "قد ارتضع فلان ثديّ الكرم.",
+        "prototipe_benzerlik": 0.481,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.481,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["body_part.n.01", "living_thing.n.01", "mammalian.a.01", "taxonomic_group.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النساء",
@@ -1298,18 +1321,18 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
       "kume": 40,
-      "merkez_kok": "بلع",
-      "merkez_mana": "Bel': yutmak; bel'a: yutkunma",
-      "boy": 85
+      "merkez_kok": "ثعع",
+      "merkez_mana": "",
+      "boy": 49
     },
     "ince": {
-      "kume": 259,
+      "kume": 261,
       "merkez_kok": "معز",
       "merkez_mana": "Maaz: keçi; me'ziz: keçi",
       "boy": 10

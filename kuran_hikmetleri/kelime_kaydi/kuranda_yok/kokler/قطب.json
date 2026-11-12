@@ -2105,6 +2105,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "دارت الرّحى على قطبها، والأرحاء على أقطابها. وأصابت الغرض القطبة وهي سهم النّضال. وقطب الشراب قطباً وقطاباً، وشراب كثير القطاب وهو مزاجه. وراح قطيب. قال عمر بن أبي ربيعة:\nطيّب الرّيقة والنك ... هة كالراح القطيب\nوقطب ما بين عينيه قطوباً وقطّب. ورأيته غضبان قاطباً ومقطّباً.",
+    "mecaz": "هو قطب قومه: لسيدّهم، وهم أقطاب بني فلان. وجاءت تميم قاطبة. وقطب الحمار عانته: جمعها. وأدخلت يدي في قطاب جيبه. قال طرفة:\nرحيب قطاب الجيب منها رفيقة ... بجسّ الندامى بضّة المتجرد",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "دارت الرّحى على قطبها، والأرحاء على أقطابها. وأصابت الغرض القطبة وهي سهم النّضال. وقطب الشراب قطباً وقطاباً، وشراب كثير القطاب وهو مزاجه. وراح قطيب. قال عمر بن أبي ربيعة: طيّب الرّيقة والنك ... هة كالراح القطيب وقطب ما بين عينيه قطوباً وقطّب. ورأيته غضبان قاطب",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "هو قطب قومه: لسيدّهم، وهم أقطاب بني فلان. وجاءت تميم قاطبة. وقطب الحمار عانته: جمعها. وأدخلت يدي في قطاب جيبه. قال طرفة:",
+        "prototipe_benzerlik": 0.069,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.069,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["gather.v.01", "grimace.v.01", "meet.v.07", "natural_phenomenon.n.01", "polarity.n.02", "sew.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السلاح",
@@ -2115,22 +2138,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 22,
+      "kume": 16,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 193
+      "boy": 287
     },
     "ince": {
-      "kume": 126,
+      "kume": 92,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 29
+      "boy": 80
     }
   },
   "kaliplar": {

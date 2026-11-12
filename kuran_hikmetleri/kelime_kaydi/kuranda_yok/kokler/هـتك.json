@@ -1,0 +1,73 @@
+{
+  "kok": "هـتك",
+  "sinif": "reddedildi",
+  "turkce_fiil": null,
+  "mustaklar": {},
+  "reddedilen": [
+    ["kök", "هـتك", "üç harfli değil"]
+  ],
+  "sozlukler": {},
+  "kuran_gecisleri": 0,
+  "kuranda_var": false,
+  "sema": {
+    "sema": "graf-ic-graf",
+    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
+    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
+    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
+    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
+    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
+  },
+  "tasnif": {
+    "fasil": "هـ",
+    "harf": "ه",
+    "mahrec": "halkiyye",
+    "bolge": "halk"
+  },
+  "mana_tasnif": {
+    "durum": "Arabic WordNet v2 kaydı yok"
+  },
+  "ses_mana_tasnif": {
+    "durum": "Cebel mu'cemlerinde kök yok"
+  },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "هتك السّتر هتكاً وهو أن تجذبه حتى تنزعه من مكانه أو تشقّه حتى يظهر ما وراءه. وهتك الثوب: شقّه طولاً. وانهتك الستر وتهتّك.",
+    "mecaz": "هتك الله تعالى ستر الفاجر: فضحه. وصبّحوهم فهتكوا أستارهم. وتهتّك في البطالة: أهمل نفسه فيها. ورجل مستهتك: لا يبالي هتك ستره. وهتك عرشه. كقولك: ثلّ عرشه إذا ذهب عزّه. وهاتكنا اللّبّة: هتكنا سدولها. قال رؤبة:\nهاتكته حتى انجلت أكراؤه\nجمع الكرى، ومنه: سرنا هتكةً من الليل: طائفةً منه.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "هتك السّتر هتكاً وهو أن تجذبه حتى تنزعه من مكانه أو تشقّه حتى يظهر ما وراءه. وهتك الثوب: شقّه طولاً. وانهتك الستر وتهتّك.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "هتك الله تعالى ستر الفاجر: فضحه. وصبّحوهم فهتكوا أستارهم. وتهتّك في البطالة: أهمل نفسه فيها. ورجل مستهتك: لا يبالي هتك ستره. وهتك عرشه. كقولك: ثلّ عرشه إذا ذهب عزّه. وهاتكنا اللّبّة: هتكنا سدولها. قال رؤبة:",
+        "prototipe_benzerlik": 0.166,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "هاتكته حتى انجلت أكراؤه",
+        "prototipe_benzerlik": 0.402,
+        "halka": "orta"
+      },
+      {
+        "cumle": "جمع الكرى، ومنه: سرنا هتكةً من الليل: طائفةً منه.",
+        "prototipe_benzerlik": 0.461,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.343,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
+  "muhassas_tasnif": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "mana_tasnif_gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
+  },
+  "kaliplar": {},
+  "kelimeler": []
+}

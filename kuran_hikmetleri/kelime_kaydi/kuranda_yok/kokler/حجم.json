@@ -1348,13 +1348,36 @@
     "ince": "property.n.02",
     "orta": "noun.attribute",
     "ust": "hâl ve vasıf",
-    "dayanak_synset": "extent.n.02",
-    "dayanak_tanim": "the distance or area or volume over which something extends",
+    "dayanak_synset": "size.n.01",
+    "dayanak_tanim": "the physical magnitude of something (how big it is)",
     "synset_sayisi": 9
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "أحجم عن القتال وغيره إذا نكص عنه، وأردته على كذا فأحجم عنه، وفيه إحجام. وحسبته مقدماً فوجدته محجماً. وحجم البعير: شد فمه بالحجامة. واحتجم، وحجمه الحجام، وأعضه المحاجم. وكتاب ضخم الحجم. وقد حجم الثدي وأحجم: تفلك ونهد. قال الأعشى:\nقد حجم الثدي على نحرها ... في مشرق ذي بهجة نائر\nوثدي حاجم: منير، ومعنى أحجم صار ذا حجم، وقيل: أمكن أن يحجمه الرضيع. ولبعضهم:\nرمانتا نحرها لم يبد حجمهما ... بلى بدا لهما حجم كلابادي",
+    "mecaz": "حجم طرفه عنه: صرفه. وحجمته الحية: نهشته. وحجمت الفحول البعير: عضته. وما حجم الصبي ثدي أمه.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "أحجم عن القتال وغيره إذا نكص عنه، وأردته على كذا فأحجم عنه، وفيه إحجام. وحسبته مقدماً فوجدته محجماً. وحجم البعير: شد فمه بالحجامة. واحتجم، وحجمه الحجام، وأعضه المحاجم. وكتاب ضخم الحجم. وقد حجم الثدي وأحجم: تفلك ونهد. قال الأعشى: قد حجم الثدي على نحرها ... في م",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "حجم طرفه عنه: صرفه. وحجمته الحية: نهشته. وحجمت الفحول البعير: عضته. وما حجم الصبي ثدي أمه.",
+        "prototipe_benzerlik": 0.728,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.728,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["abstain.v.02", "magnitude.n.01", "refrain.v.01", "volume.n.01", "volumetric.a.01", "volumetrically.r.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "خلق الإنسان",
@@ -1365,22 +1388,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 14,
-      "merkez_kok": "جهد",
-      "merkez_mana": "Cehd: gayret, çaba; cehd: yorgunluk",
-      "boy": 135
+      "kume": 16,
+      "merkez_kok": "درك",
+      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
+      "boy": 287
     },
     "ince": {
-      "kume": 78,
-      "merkez_kok": "صوب",
-      "merkez_mana": "Savb: doğrultmak, yönelmek; sevâb: doğru yol",
-      "boy": 43
+      "kume": 100,
+      "merkez_kok": "بغغ",
+      "merkez_mana": "transgression, injustice, wrong",
+      "boy": 30
     }
   },
   "kaliplar": {

@@ -688,6 +688,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "امتخط وتمخّط. ومخطت الصبي ومخّطته. ومخط الراعي السّخلة ومخطها: مسح أنفها. قال الكميت:\nبيبابٍ من التنائف مرت ... لم تمخّط به أنوف السخال",
+    "mecaz": "ما أولك إلا بصقة أو مخطة. وهذه الناقة مخطت عندنا أي نتجت وأصله أن الناتج يمخط الغرس من أنف المنتوج أي بمسحه عنه. قال ذو الرمة:\nوانم القتود على عيرانة حرجٍ ... مهرية مخطتها غرسها العيد\nويقال: نحن مخطناك غرسك أي نحن ربيناك\nوقمنا عليك. هذا أمر أنا مخطت غرسه أي قمت به. ومخط السيف وامتخطه: سلّه، وامتخط ما في يده: انتزعه، ومرّ برمحه مركوزاً فامتخطه. ورماه بسهم فأمخطه منه إذا أمرقه، ومخط السهم بنفسه، وسهم ماخط: مارق. وسال مخاط الشيطان، ومخاط الشمس: للعابها.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "امتخط وتمخّط. ومخطت الصبي ومخّطته. ومخط الراعي السّخلة ومخطها: مسح أنفها. قال الكميت: بيبابٍ من التنائف مرت ... لم تمخّط به أنوف السخال",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "ما أولك إلا بصقة أو مخطة. وهذه الناقة مخطت عندنا أي نتجت وأصله أن الناتج يمخط الغرس من أنف المنتوج أي بمسحه عنه. قال ذو الرمة:",
+        "prototipe_benzerlik": 0.207,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "ويقال: نحن مخطناك غرسك أي نحن ربيناك",
+        "prototipe_benzerlik": 0.375,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وقمنا عليك. هذا أمر أنا مخطت غرسه أي قمت به. ومخط السيف وامتخطه: سلّه، وامتخط ما في يده: انتزعه، ومرّ برمحه مركوزاً فامتخطه. ورماه بسهم فأمخطه منه إذا أمرقه، ومخط السهم بنفسه، وسهم ماخط: مارق. وسال مخاط الشيطان، ومخاط الشمس: للعابها.",
+        "prototipe_benzerlik": 0.28,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.287,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "اللباس",
@@ -698,19 +731,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 2,
+      "kume": 1,
       "merkez_kok": "قره",
       "merkez_mana": "",
       "boy": 759
     },
     "orta": {
-      "kume": 4,
+      "kume": 2,
       "merkez_kok": "فلص",
       "merkez_mana": "",
       "boy": 494
     },
     "ince": {
-      "kume": 22,
+      "kume": 4,
       "merkez_kok": "شعف",
       "merkez_mana": "",
       "boy": 183

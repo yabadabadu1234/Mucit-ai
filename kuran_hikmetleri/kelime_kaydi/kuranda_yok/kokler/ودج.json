@@ -1487,6 +1487,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "قطع الودجين وهما الوريدان. وودج الذبيحة يدجها، ودج ذبيحتك.",
+    "mecaz": "حزّ على الفائت الودج إذا اشتدّ تلهفه عليه. قال عبد الله بن الزبير بفتح الزاي الأسديّ الشاعر:\nلا أحسب الشرذ جاراً لا يفارقني ... ولا أحُزّ على ما فاتني الودجا\nوكان فلان ودجي إلى كذا أي سببي إليه ووصلتي. ويقال للمتواصلين: هما ودجان: شبّها بالعرقين في تصاحبهما. وقال زيد الخيل:\nفقبّحتما من وافدين اصطفيتما ... ومن ودجي حرب تلقّح حائل\nأي من أخوي حربٍ أو تحيا بكما الحرب كما يحيا الحيوان بودجيه. وودجت بين القوم: أصلحت وقطعت الشرّ وأمتّه. ووادجه موادجة: سالمه. قال الكميت:\nالصّادعون صفا من لا يوادجهم ... والمرأبون بإذن الله ما شعبوا",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "قطع الودجين وهما الوريدان. وودج الذبيحة يدجها، ودج ذبيحتك.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "حزّ على الفائت الودج إذا اشتدّ تلهفه عليه. قال عبد الله بن الزبير بفتح الزاي الأسديّ الشاعر:",
+        "prototipe_benzerlik": 0.332,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وكان فلان ودجي إلى كذا أي سببي إليه ووصلتي. ويقال للمتواصلين: هما ودجان: شبّها بالعرقين في تصاحبهما. وقال زيد الخيل:",
+        "prototipe_benzerlik": 0.371,
+        "halka": "orta"
+      },
+      {
+        "cumle": "أي من أخوي حربٍ أو تحيا بكما الحرب كما يحيا الحيوان بودجيه. وودجت بين القوم: أصلحت وقطعت الشرّ وأمتّه. ووادجه موادجة: سالمه. قال الكميت:",
+        "prototipe_benzerlik": 0.248,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.317,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "المكنيات والمبنيات والمثنيات",
@@ -1497,22 +1530,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
-      "merkez_kok": "حنج",
-      "merkez_mana": "",
-      "boy": 426
-    },
-    "orta": {
       "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 261
+      "boy": 466
+    },
+    "orta": {
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 11,
-      "merkez_kok": "خرت",
-      "merkez_mana": "to pierce, to bore, to perforate",
-      "boy": 18
+      "kume": 15,
+      "merkez_kok": "دلق",
+      "merkez_mana": "to pour out, spill (e.g. a liquid)",
+      "boy": 58
     }
   },
   "kaliplar": {

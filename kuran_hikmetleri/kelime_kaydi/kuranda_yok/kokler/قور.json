@@ -758,6 +758,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "هذه قوارة القميص ولابطيخ وغيرهما ويقع على الخرق والقطعة. وحكى الجاحظ في كلام بعض الشطّار: لا يكون الفتى مقوّراً وهو الذي يقوّر الجرادق فيألك أوساطها ويدع حروفها. ودار قوراء، وقورت داره قوراً، واقورّ الجلد: تشانّ هزالاً. وناقة مقورّة: مهزولة. قال رؤبة:\nبعد اقورار الجلد والتشنن\n\" ولقيت منه الأقورين \": الدواهي. وقال نهار ابن توسعة:\nوكنا قبل ملك بني سليم ... نسومهم الدواهي الأقورينا\nأي المتناهيات في الشدّة، من قولهم: بلغت من الأمر أطوريه وأقوريه: نهايته. وزها السراب القارة والقور وهي أصاغر الجبال.",
+    "mecaz": "تقوّر الليلوتهوّر: أدبر. قال ذو الرمة:\nوخوضهن الليل حين يسكر ... حتى ترى أعجازه تقوّر\nوقال جران العود:\nلقد طرقت دهقانه الركب بعد ما ... تفوّر نصف الليل وانصدع الفجر\nورويَ تقوّر بمعنى تقوّض.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "هذه قوارة القميص ولابطيخ وغيرهما ويقع على الخرق والقطعة. وحكى الجاحظ في كلام بعض الشطّار: لا يكون الفتى مقوّراً وهو الذي يقوّر الجرادق فيألك أوساطها ويدع حروفها. ودار قوراء، وقورت داره قوراً، واقورّ الجلد: تشانّ هزالاً. وناقة مقورّة: مهزولة. قال رؤبة: بعد اقور",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "تقوّر الليلوتهوّر: أدبر. قال ذو الرمة:",
+        "prototipe_benzerlik": 0.497,
+        "halka": "orta"
+      },
+      {
+        "cumle": "ورويَ تقوّر بمعنى تقوّض.",
+        "prototipe_benzerlik": 0.174,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.336,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["maim.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطير",
@@ -768,22 +796,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
+      "kume": 8,
       "merkez_kok": "قبب",
       "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "boy": 604
     },
     "orta": {
-      "kume": 43,
-      "merkez_kok": "خرز",
-      "merkez_mana": "awl",
-      "boy": 104
+      "kume": 32,
+      "merkez_kok": "دثر",
+      "merkez_mana": "Tedsîr: örtmek, bürümek; desr: örtü",
+      "boy": 148
     },
     "ince": {
-      "kume": 279,
-      "merkez_kok": "لزب",
-      "merkez_mana": "Lezb: yapışkan, bağlı",
-      "boy": 27
+      "kume": 211,
+      "merkez_kok": "قرط",
+      "merkez_mana": "to cut into minute morsels, to chop or mince, to chef",
+      "boy": 32
     }
   },
   "kaliplar": {

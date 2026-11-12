@@ -725,32 +725,55 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "خاض حومة القتال، ولم يزل خوّاضاً حومات الحروب. وحام حول الماء.",
+    "mecaz": "هو يحوم حول غرض له. ورجل حائم: عطشان.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "خاض حومة القتال، ولم يزل خوّاضاً حومات الحروب. وحام حول الماء.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "هو يحوم حول غرض له. ورجل حائم: عطشان.",
+        "prototipe_benzerlik": 0.282,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.282,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["artifact.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطير",
     "bab": "",
-    "kok_gecis": 32.5,
-    "kitapta_gecis": 4.5,
-    "zenginlesme": 7.64
+    "kok_gecis": 31.0,
+    "kitapta_gecis": 4.0,
+    "zenginlesme": 7.12
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
-      "merkez_kok": "حنج",
-      "merkez_mana": "",
-      "boy": 426
-    },
-    "orta": {
       "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 261
+      "boy": 466
+    },
+    "orta": {
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 18,
-      "merkez_kok": "لدم",
-      "merkez_mana": "Dammam (the capital city of the Eastern Province, Saudi Arabia)",
-      "boy": 53
+      "kume": 24,
+      "merkez_kok": "لوت",
+      "merkez_mana": "Levt: bükmek, eğmek",
+      "boy": 63
     }
   },
   "kaliplar": {

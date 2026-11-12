@@ -1193,6 +1193,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "صلفت عند زوجها: قل حظها، وهي صلفة وهن صلفات وصلائف.\nوأصلف الرجل نساءه فطلقهن: مقتهنّ وأقل حظّهن منه. قال:\nغدت ناقتي من عند سعد كأنها ... مطلقة كانت حليلة مصلف\nوتقول العرب: أصلف الله تعالى رفغك إلى زوجك. وضربه على صليفيه: على صفقي عنقه.",
+    "mecaz": "\" من يبغ في الدين يصلف \": لم يحظ عند الناس. وطعام صلف: قليل الريع. وصلف حرثهم. وصلفت السحابة: قل مطرها،\nوسحابة صلفة. وفي مثل \" رب صلف تحت الراعدة \" وحوض صلف. وإناء صلف: قليل الأخذ. وأخذه بصليفه إذا أخذه كله.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "صلفت عند زوجها: قل حظها، وهي صلفة وهن صلفات وصلائف. وأصلف الرجل نساءه فطلقهن: مقتهنّ وأقل حظّهن منه. قال: غدت ناقتي من عند سعد كأنها ... مطلقة كانت حليلة مصلف وتقول العرب: أصلف الله تعالى رفغك إلى زوجك. وضربه على صليفيه: على صفقي عنقه.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "\" من يبغ في الدين يصلف \": لم يحظ عند الناس. وطعام صلف: قليل الريع. وصلف حرثهم. وصلفت السحابة: قل مطرها،",
+        "prototipe_benzerlik": 0.169,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وسحابة صلفة. وفي مثل \" رب صلف تحت الراعدة \" وحوض صلف. وإناء صلف: قليل الأخذ. وأخذه بصليفه إذا أخذه كله.",
+        "prototipe_benzerlik": 0.082,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.125,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النساء",
@@ -1203,22 +1231,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 17,
-      "merkez_kok": "زين",
-      "merkez_mana": "Zîne: süs, güzellik; zeyn: güzelleştirmek",
-      "boy": 177
+      "kume": 15,
+      "merkez_kok": "زور",
+      "merkez_mana": "Zûr: yalan, sahtelik",
+      "boy": 133
     },
     "ince": {
-      "kume": 96,
-      "merkez_kok": "فخر",
-      "merkez_mana": "Fahr: övünme; fahîr: övünen",
-      "boy": 17
+      "kume": 86,
+      "merkez_kok": "عتو",
+      "merkez_mana": "Utüvv: azgınlık, büyüklenme",
+      "boy": 42
     }
   },
   "kaliplar": {

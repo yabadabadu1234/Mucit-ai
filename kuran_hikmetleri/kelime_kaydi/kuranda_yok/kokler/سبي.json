@@ -829,7 +829,7 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "person.n.01",
+    "ince": "whole.n.02",
     "orta": "noun.person",
     "ust": "insan ve toplum",
     "dayanak_synset": "prisoner.n.01",
@@ -839,6 +839,44 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "سبيت النساء سبياً وسباء، ووقع عليهن السباء، وهذه سبية فلان: للجارية المسبية، وتقول: خرجت السرايا، فجاءت بالسبايا. وتلاقوا فتآسروا وتسابوا. وبها أسابي الدماء: طرائقها. قال سلامة بن جندل:\nوالعاديات أسابيّ الدماء بها ... كأن أعناقها أنصاب ترجيب",
+    "mecaz": "هن يسبين القلوب ويستبين. وماله سباه الله أي غربه. قال امرؤ القيس:\nفقالت سباك الله إنك قاتلي ... ألست ترى السمار والناس أحوالي\nويقولون: طال عليّ الليل ولا أسب له ولا أسبي له: دعاء لنفسه بأن لا يقاسي فيه من الشدة ما يكون بسببه مثل المسبي لليل. وجاءوا بسبي كثير: بسبايا. وجاء السيل يعود سبيّ: حمله من بلد إلى بلد. ودرع كسبي الهلال: كسلخ الحية. قال كثير:\nيجرّر سربالاً عليه كأنه ... سبيّ هلال لم تخرق شرانقه\nوعندي سبيه، كأنها سبيّه: درة. قال مزاحم:\nبدت حسراً لم تحتجب أو سبيةً ... من البحر نحّى القفل عنها مفيدها\nبائعها. وهو يتجر في السابياء: في المواشي، وبنو فلان يروح عليهم سابياء من أموالهم. وفي الحديث \" تسعة أعشار الرزق في التجارة والجزء الباقي في السابياء \" وأصلها الجلدة التي يخرج فيها الولد. قال ذو الرمة:\nيحلّون من يبرين أو من سويقة ... مشق السوابي عن أنوف الجآذر",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "سبيت النساء سبياً وسباء، ووقع عليهن السباء، وهذه سبية فلان: للجارية المسبية، وتقول: خرجت السرايا، فجاءت بالسبايا. وتلاقوا فتآسروا وتسابوا. وبها أسابي الدماء: طرائقها. قال سلامة بن جندل: والعاديات أسابيّ الدماء بها ... كأن أعناقها أنصاب ترجيب",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "هن يسبين القلوب ويستبين. وماله سباه الله أي غربه. قال امرؤ القيس:",
+        "prototipe_benzerlik": 0.54,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "ويقولون: طال عليّ الليل ولا أسب له ولا أسبي له: دعاء لنفسه بأن لا يقاسي فيه من الشدة ما يكون بسببه مثل المسبي لليل. وجاءوا بسبي كثير: بسبايا. وجاء السيل يعود سبيّ: حمله من بلد إلى بلد. ودرع كسبي الهلال: كسلخ الحية. قال كثير:",
+        "prototipe_benzerlik": 0.301,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وعندي سبيه، كأنها سبيّه: درة. قال مزاحم:",
+        "prototipe_benzerlik": 0.552,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "بائعها. وهو يتجر في السابياء: في المواشي، وبنو فلان يروح عليهم سابياء من أموالهم. وفي الحديث \" تسعة أعشار الرزق في التجارة والجزء الباقي في السابياء \" وأصلها الجلدة التي يخرج فيها الولد. قال ذو الرمة:",
+        "prototipe_benzerlik": 0.438,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.458,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["capture.v.02", "capture.v.06", "enchant.v.01", "get.v.11", "living_thing.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السلاح",
@@ -849,22 +887,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
+      "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 426
+      "boy": 466
     },
     "orta": {
-      "kume": 1,
-      "merkez_kok": "جنح",
-      "merkez_mana": "Cünûh: meyletmek, eğilmek; cenâh: kanat",
-      "boy": 165
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 5,
+      "kume": 12,
       "merkez_kok": "ديث",
       "merkez_mana": "to be submissive, to be compliant, to be cucked, to be tame",
-      "boy": 23
+      "boy": 27
     }
   },
   "kaliplar": {

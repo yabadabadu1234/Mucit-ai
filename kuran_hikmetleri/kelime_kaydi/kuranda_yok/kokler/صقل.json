@@ -2061,16 +2061,70 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "polish.v.03",
-    "orta": "verb.change",
+    "ince": "polish.v.01",
+    "orta": "verb.contact",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "polish.v.03",
-    "dayanak_tanim": "bring to a highly developed, finished, or refined state",
+    "dayanak_synset": "polish.v.01",
+    "dayanak_tanim": "make (a surface) shine",
     "synset_sayisi": 10
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "هو صقل من الصياقل والصياقلة، وصقل السيف والمرآة والثوب والورق بالمصقلة صقلاً وصقالاً. وشيء صقيل. وفرس لاحق الصقلين، وصقل: طويل الصقلين. ويقولون: قلما طالت صقلة الفرس إلا قصر جنباه، وقد صقل صقلاً. وفي الحديث \" لم تعبه ثجلة، ولم تزر به صقله \".",
+    "mecaz": "الفرس في صقاله: في صوانه وصنعته. قال أبو النجم:\nحتى إذا أثنى جعلنا نصقله\nوتقول العرب: هل لك في مصقول الكساء؟: في لبن مدو ذي دوابة وهي جليدة تعلو الحليب. قال:\nفبات له دون الصبا وهي قرة ... لحاف ومصقول الكساء رقيق\nوقال:\nفهو إذا ما اهتاف أو تهيفاً ... ينفي الدوايات إذا ترشفا\nعن كل مصقول الكساء قد صفا\nوصقله بالعصا: ضربه وأدّبه.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "هو صقل من الصياقل والصياقلة، وصقل السيف والمرآة والثوب والورق بالمصقلة صقلاً وصقالاً. وشيء صقيل. وفرس لاحق الصقلين، وصقل: طويل الصقلين. ويقولون: قلما طالت صقلة الفرس إلا قصر جنباه، وقد صقل صقلاً. وفي الحديث \" لم تعبه ثجلة، ولم تزر به صقله \".",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "الفرس في صقاله: في صوانه وصنعته. قال أبو النجم:",
+        "prototipe_benzerlik": 0.405,
+        "halka": "orta"
+      },
+      {
+        "cumle": "حتى إذا أثنى جعلنا نصقله",
+        "prototipe_benzerlik": 0.131,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وتقول العرب: هل لك في مصقول الكساء؟: في لبن مدو ذي دوابة وهي جليدة تعلو الحليب. قال:",
+        "prototipe_benzerlik": 0.523,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "عن كل مصقول الكساء قد صفا",
+        "prototipe_benzerlik": 0.156,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وصقله بالعصا: ضربه وأدّبه.",
+        "prototipe_benzerlik": 0.093,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.262,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "burn.v.05",
+    "grate.v.04",
+    "grind.v.05",
+    "material.n.01",
+    "perfect.v.01",
+    "polish.v.01",
+    "polish.v.02",
+    "polish.v.03",
+    "region.n.03",
+    "smooth.v.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السلاح",
@@ -2081,22 +2135,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
+      "kume": 8,
       "merkez_kok": "قبب",
       "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "boy": 604
     },
     "orta": {
-      "kume": 43,
-      "merkez_kok": "خرز",
-      "merkez_mana": "awl",
-      "boy": 104
+      "kume": 32,
+      "merkez_kok": "دثر",
+      "merkez_mana": "Tedsîr: örtmek, bürümek; desr: örtü",
+      "boy": 148
     },
     "ince": {
-      "kume": 281,
-      "merkez_kok": "خرز",
-      "merkez_mana": "awl",
-      "boy": 42
+      "kume": 211,
+      "merkez_kok": "قرط",
+      "merkez_mana": "to cut into minute morsels, to chop or mince, to chef",
+      "boy": 32
     }
   },
   "kaliplar": {

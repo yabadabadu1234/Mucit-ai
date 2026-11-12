@@ -1943,16 +1943,53 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "event.n.01",
-    "orta": "noun.act",
-    "ust": "fiil ve hadise",
-    "dayanak_synset": "effort.n.02",
-    "dayanak_tanim": "use of physical or mental energy; hard work",
+    "ince": "exert.v.01",
+    "orta": "verb.consumption",
+    "ust": "canlı ve beden",
+    "dayanak_synset": "exert.v.01",
+    "dayanak_tanim": "put to use",
     "synset_sayisi": 13
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "هم مباذيل للمعروف. قال قدامة بن موسى:\nمباذيل للمولى محاشيد للقرى ... وفي الروع عند النائبات أسود\nوخرج علينا في مباذله وفي ثياب بذلته. والرجل يتبذل في منزله، وفلان ماله مصون وعرضه مبتذل. وابتذل نفسه في كذا إذا امتهنها. قال:\nومن يبتذل عينيه في الناس لا يزل ... يرى حاجة محجوبة لا ينالها\nوهذا كلام ومثل مبتذل أي ملهوج بذكره مستعمل. وسألته فأعطاني بذل يمينه أي ما قدر عليه.",
+    "mecaz": "لهذا الفرس صون وبذل أي يصون بعض جريه ويبذل بعضه لا يخرجه كله دفعة، وذلك محمود. ومنه قولهم: صونه خير من بذله أي باطنه خير من ظاهره.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "هم مباذيل للمعروف. قال قدامة بن موسى: مباذيل للمولى محاشيد للقرى ... وفي الروع عند النائبات أسود وخرج علينا في مباذله وفي ثياب بذلته. والرجل يتبذل في منزله، وفلان ماله مصون وعرضه مبتذل. وابتذل نفسه في كذا إذا امتهنها. قال: ومن يبتذل عينيه في الناس لا يزل ... ي",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "لهذا الفرس صون وبذل أي يصون بعض جريه ويبذل بعضه لا يخرجه كله دفعة، وذلك محمود. ومنه قولهم: صونه خير من بذله أي باطنه خير من ظاهره.",
+        "prototipe_benzerlik": 0.27,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.27,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "act.n.02",
+    "act.v.02",
+    "artifact.n.01",
+    "cause.v.01",
+    "cover.v.03",
+    "do.v.03",
+    "exert.v.01",
+    "make.v.01",
+    "perform.v.01",
+    "spend.v.01",
+    "spend.v.02",
+    "stretch.v.02",
+    "suffice.v.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "اللباس",
@@ -1963,22 +2000,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
-      "merkez_kok": "درك",
-      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "kume": 4,
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 509
     },
     "orta": {
-      "kume": 18,
-      "merkez_kok": "همم",
-      "merkez_mana": "Hemm: istek, gayret; himmet",
-      "boy": 116
+      "kume": 8,
+      "merkez_kok": "بءس",
+      "merkez_mana": "Be'es: azap, şiddet, zorluk",
+      "boy": 142
     },
     "ince": {
-      "kume": 98,
-      "merkez_kok": "ملق",
-      "merkez_mana": "Mellak: dalkavukluk yapmak, yağcılık",
-      "boy": 32
+      "kume": 49,
+      "merkez_kok": "وهن",
+      "merkez_mana": "Vehn: zayıflık, gevşeklik",
+      "boy": 21
     }
   },
   "kaliplar": {

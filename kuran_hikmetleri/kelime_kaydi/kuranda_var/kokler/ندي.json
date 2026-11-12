@@ -2007,6 +2007,44 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "جلس في نادي قومه ونديّهم وندوتهم ومنتداهم، ولهم أندية وأنديات. قال كثير:\nلهم أنديات بالعشيّ وبالضحى ... بهاليل يرجو الراغبون نهالها\nوانتدوا وتنادوا: تجالسوا، وناديتهم: جالستهم. وندى المكان وتندّى، ومكان ندٍ، وأرض نديّة، وفيه ندوة ونداوةٌ وندّى. ووقع الندى. وأنا أنادي، ولا أناجيك. و\" ونودي للصلاة \"، وإذا سمعت ابيداء فأجب.",
+    "mecaz": "رجل ند: جوادٌ. وتقول: كم نعشتني يداك، وكم أعاشني نداك. وإن يده لندية بالمعروف، وهو يتندّى على أصحابه: يتسخّى عليه، وما رأيت أندى منك يداً. وما تنديت من فلان وما انتديت منه: ما أصبت منه خيراً. وفلان لا تندى صفاته. وما تندّى إحدى يديه الأخرى: للبخيل، وما نديت كفّي لك بشرٍّ، ولا نديت بشيء تكرهه. قال النابغبة:\nما إن نديت بشيء أنت تكرهه ... إذن فلا رفعت سوطي إليّ يدي\nوجاء بالمنديات: بالمخزيات لأنّها إذا ذكرت ندى جبين صاحبها حياء. قال الكميت:\nوعاديّ حلمٍ إذا المندبا ... ت أنسين أهل الوقار الوقارا\nوشرب حتّى تندّى أي تروّى، وندّيت الفرس:\nسقيته. وندّيته: ركضته حتى عرق. وهذا مسرح بهمنا ومندّى خيلنا. وهو أندى صوتاً منك، وندى صوته، وهو نديّ الصوت. وهو في أمر لا ينادى وليده.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "جلس في نادي قومه ونديّهم وندوتهم ومنتداهم، ولهم أندية وأنديات. قال كثير: لهم أنديات بالعشيّ وبالضحى ... بهاليل يرجو الراغبون نهالها وانتدوا وتنادوا: تجالسوا، وناديتهم: جالستهم. وندى المكان وتندّى، ومكان ندٍ، وأرض نديّة، وفيه ندوة ونداوةٌ وندّى. ووقع الندى. وأن",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "رجل ند: جوادٌ. وتقول: كم نعشتني يداك، وكم أعاشني نداك. وإن يده لندية بالمعروف، وهو يتندّى على أصحابه: يتسخّى عليه، وما رأيت أندى منك يداً. وما تنديت من فلان وما انتديت منه: ما أصبت منه خيراً. وفلان لا تندى صفاته. وما تندّى إحدى يديه الأخرى: للبخيل، وما نديت كفّي لك بشرٍّ، ولا نديت بشيء تكرهه. قال ال",
+        "prototipe_benzerlik": 0.579,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وجاء بالمنديات: بالمخزيات لأنّها إذا ذكرت ندى جبين صاحبها حياء. قال الكميت:",
+        "prototipe_benzerlik": 0.707,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وشرب حتّى تندّى أي تروّى، وندّيت الفرس:",
+        "prototipe_benzerlik": 0.585,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "سقيته. وندّيته: ركضته حتى عرق. وهذا مسرح بهمنا ومندّى خيلنا. وهو أندى صوتاً منك، وندى صوته، وهو نديّ الصوت. وهو في أمر لا ينادى وليده.",
+        "prototipe_benzerlik": 0.603,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.618,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["happening.n.01", "organization.n.01", "wet.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "المكنيات والمبنيات والمثنيات",
@@ -2018,21 +2056,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "merkez_kok": "قبب",
+      "merkez_mana": "canopy, pavilion; dome, cupola",
+      "boy": 604
     },
     "orta": {
-      "kume": 38,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 203
+      "kume": 33,
+      "merkez_kok": "صبب",
+      "merkez_mana": "Sabb: dökmek, akıtmak; sabîb: akan",
+      "boy": 201
     },
     "ince": {
-      "kume": 245,
-      "merkez_kok": "روج",
-      "merkez_mana": "to have currency, to circulate, to sell well, to be in demand, to burg",
-      "boy": 23
+      "kume": 216,
+      "merkez_kok": "هدك",
+      "merkez_mana": "",
+      "boy": 34
     }
   },
   "kaliplar": {

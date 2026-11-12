@@ -702,6 +702,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "رفل في ثيابه ورفل وأرفل وترفل، وله رفل ورفول وهو جر الذيل والركض بالرجل. وأرفل ذيله ورفله: أسبله. قال ذو الرمة:\nكستها عجاج البرقتين وراوحت ... بذيل من الدهنا على الدار مرفل\nوثوب رفال. ورجل رفل. وامرأة رفلة ومرفال، وهي ترفل المرافل أي كل ضرب من الرفول كقولك تمشي المماشي. وخرج إلينا في مرفلة: في حلة طويلة يرفل فيها. قال المتلمس:\nإني كساني أبو قابوس مرفلة ... كأنها سلخ أبكار المخاريط\nالحيّات التي خرطت خراشيها أي سلختها، جمع مخراط. وشمر رفله أي ذيله. وقميص سابغ الرفل بوزن الطفل.",
+    "mecaz": "عيش رفلة: واسعة سابغة. وفرس رفل: ذيّال. ورفّل الملك فلاناً: سوده وأمره. قال ذو الرمة:\nكما ذببت عذراء غير مشيحة ... بعوض القرى عن فارسيّ مرفل\nوحكمته ورفلته: زدته على ما احتكم. ورفلت الركية: أجمعتها، وهذا رفل الركية: مكلتها بوزن تفل.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "رفل في ثيابه ورفل وأرفل وترفل، وله رفل ورفول وهو جر الذيل والركض بالرجل. وأرفل ذيله ورفله: أسبله. قال ذو الرمة: كستها عجاج البرقتين وراوحت ... بذيل من الدهنا على الدار مرفل وثوب رفال. ورجل رفل. وامرأة رفلة ومرفال، وهي ترفل المرافل أي كل ضرب من الرفول كقولك تمش",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "عيش رفلة: واسعة سابغة. وفرس رفل: ذيّال. ورفّل الملك فلاناً: سوده وأمره. قال ذو الرمة:",
+        "prototipe_benzerlik": 0.864,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وحكمته ورفلته: زدته على ما احتكم. ورفلت الركية: أجمعتها، وهذا رفل الركية: مكلتها بوزن تفل.",
+        "prototipe_benzerlik": 0.582,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.723,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النساء",
@@ -712,19 +740,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 7,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 331
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 32,
-      "merkez_kok": "دمس",
-      "merkez_mana": "pocket bread, pita",
-      "boy": 61
+      "kume": 42,
+      "merkez_kok": "سحم",
+      "merkez_mana": "to become black, to be blackened",
+      "boy": 97
     },
     "ince": {
-      "kume": 212,
+      "kume": 274,
       "merkez_kok": "رءء",
       "merkez_mana": "to hold a mirror up to",
       "boy": 11

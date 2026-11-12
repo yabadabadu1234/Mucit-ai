@@ -1526,8 +1526,8 @@
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "mix.n.03",
-    "dayanak_tanim": "the act of mixing together",
+    "dayanak_synset": "combination.n.06",
+    "dayanak_tanim": "the act of arranging elements into specified groups without regard to order",
     "synset_sayisi": 15
   },
   "ses_mana_tasnif": {
@@ -1538,32 +1538,73 @@
     "fasil_ozeti": "° معنى الفصل المعجمي (مز) : تجمع شيئين (أو أكثر) معًا كما في المُزّ ما كان طعمه يجمع بين الحموضة والحلاوة- في (مزز)، وكما في تمييز الشيء عن غيره أو تميزه فيكون هناك شيئان منفصلان- في (ميز)، وكما في مزج نوعين معًا كالعسل بالشراب - في (مزج)، وكما في تمزيق الثوب وغيره فيكون هناك كثر من قطعة منه- في (مزق)، وكما في احتواء السحاب ماء (وبعض السحاب صَلِف) - في (مزن).",
     "tam_metin": "{وَمِزَاجُهُ مِنْ تَسْنِيمٍ} [المطففين: 27]\n\"المِزْج -بالكسر والفتح: العَسَل. وشراب مَزْج- بالفتح: ممزوج. ومزَاج الشراب -ككتاب: ما يُمْزَج به. ومنوعين امتزجا فكل واحد منهما لصاحبه مِزْج- بالكسر. وقد مزج الشرابَ (نصر): خلطه بغيره \".\n° المعنى المحوري\nخَلْط (مائعين) مختلفين (أو أكثر) بعضهما ببعض وجعلهما شيئًا واحدًا. (والعسل مِزْج لأنهم كانوا يمزجون به ما يراد تحليته أي قبل أن يتخذوا السُكّر لذلك. وقد أدركت من رآهم يحلّون بالعسل الأسود أيضًا، والعرب كانوا يحلّون بأنواع من التمر). {إِنَّ الْأَبْرَارَ يَشْرَبُونَ مِنْ كَأْسٍ كَانَ مِزَاجُهَا كَافُورًا} [الإنسان: 5 وكذا ما في 17 منها]."
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "مزج الشراب بالماء فامتزج، ومازجه وتمازجا وامتزجا. ومزاجه عسل، وكأن طعمه طعم المزج وهو الشهد. وقال:\nفجاء بمزجٍ لم ير الناس مثله ... هو الضحك إلا أنه عمل النحل\nوفي اللوز المزيج وهو المرّ منه. وهو صحيح المزاج وفاسد المزاج وهو ما أسس عليه البدن من الأخلاط، وأمزجة الناس مختلفة. والنساء يلبسن الموازج والموازجة، وتقول: فلان يبيع الموازج، ويأخذ الطرازج.",
+    "mecaz": "تمازج الزوجان تمازج الماء والصهباء. ومزّج السنبل: لون. وطبع عطارد متمزّج. وقال حكم بن زهرة:\nفأعقبك الزمان ممزّجات ... لهنّ بكل منزلة خليل\nومزّجته على صاحبه: غظته وحرّشته عليه.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Cebel mihverî mana",
+    "prototip": "خَلْط (مائعين) مختلفين (أو أكثر) بعضهما ببعض وجعلهما شيئًا واحدًا. (والعسل مِزْج لأنهم كانوا يمزجون به ما يراد تحليته أي قبل أن يتخذوا السُكّر لذلك. وقد أدركت من رآهم يحلّون بالعسل الأسود أيضًا، والعرب كانوا يحلّون بأنواع من التمر). {إِنَّ الْأَبْرَارَ يَشْرَب",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "تمازج الزوجان تمازج الماء والصهباء. ومزّج السنبل: لون. وطبع عطارد متمزّج. وقال حكم بن زهرة:",
+        "prototipe_benzerlik": 0.231,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "ومزّجته على صاحبه: غظته وحرّشته عليه.",
+        "prototipe_benzerlik": 0.317,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.274,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "act.n.02",
+    "blend.v.01",
+    "blend.v.03",
+    "compound.v.02",
+    "compound.v.05",
+    "disposition.n.04",
+    "feeling.n.01",
+    "food.n.01",
+    "mix.v.04",
+    "mix.v.05",
+    "mixture.n.01",
+    "nature.n.04"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
     "bab": "المزاج والتصفية",
-    "kok_gecis": 22.6,
-    "kitapta_gecis": 10.5,
-    "zenginlesme": 3.75
+    "kok_gecis": 22.3,
+    "kitapta_gecis": 10.3,
+    "zenginlesme": 3.73
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 23,
+      "kume": 18,
       "merkez_kok": "وشج",
       "merkez_mana": "",
-      "boy": 67
+      "boy": 63
     },
     "ince": {
-      "kume": 134,
+      "kume": 106,
       "merkez_kok": "عصب",
       "merkez_mana": "Asab: sinir, yakınlık; asabe: topluluk",
-      "boy": 26
+      "boy": 22
     }
   },
   "kaliplar": {

@@ -781,32 +781,55 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "امرأة عظيمة المآكم. والمأكمتان اللحمتان الوثيرتان من العجز من الأكمة وهي التل.",
+    "mecaz": "لا تبل على أكمه، ولا تفش سرك إلى أمه.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "امرأة عظيمة المآكم. والمأكمتان اللحمتان الوثيرتان من العجز من الأكمة وهي التل.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "لا تبل على أكمه، ولا تفش سرك إلى أمه.",
+        "prototipe_benzerlik": 0.07,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.07,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["artifact.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
     "bab": "ما دون الجبال من الأرض المرتفعة",
-    "kok_gecis": 59.2,
+    "kok_gecis": 58.8,
     "kitapta_gecis": 24.3,
-    "zenginlesme": 3.32
+    "zenginlesme": 3.34
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 37,
+      "kume": 43,
       "merkez_kok": "عقم",
       "merkez_mana": "Akm: kısır olmak; akim: kısır",
-      "boy": 70
+      "boy": 106
     },
     "ince": {
-      "kume": 234,
-      "merkez_kok": "هضب",
-      "merkez_mana": "hard shower of rain",
-      "boy": 9
+      "kume": 277,
+      "merkez_kok": "كثب",
+      "merkez_mana": "Kesîb: kum tepesi, kum yığını",
+      "boy": 18
     }
   },
   "kaliplar": {

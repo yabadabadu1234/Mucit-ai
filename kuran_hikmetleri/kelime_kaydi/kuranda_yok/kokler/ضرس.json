@@ -1558,6 +1558,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "ضرسه وضرّسه: عضه عضاً شديداً. وضرس السبع فريسته إذا مضغ لحمها ولم يبتلعه. وضرس قدحه: أثر فيه بأضراسه، وقدح مضروس. وضرست أسنانه من الحموضة، وأضرستها، وبي ضرس. وناقة ضروس: تعض حالبها.",
+    "mecaz": "وقعت في الأرض ضروس من مطر، وأصابهم ضرس من الوسمي وضروس: للقليل المتفرق. وضرسهم الزمان وضرسهم: عضهم. ورجل مجرس مضرس: مجرب، وقد ضرسته الخطوب والحروب، كما تقول: منجذٌ: من الناجذ. وحرب ضروس: من الناقة الضروس كما يقال: زبون، وقد ضرس نابها. وبفلان ضرس وضرم وهو غضب الجوع، وإنه لضرس من الجوع. وفلان ضرس شرس: صعب الخلق. واتق الناقة بجنّ ضراسها: بحدثان نتاجها وسوء خلقها على من يدنو منها لولوعها بولدها. وفي الياقوتة تضريس وهو تحزيز. وتضارس البناء إذا لم يستو ولم يتسق.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "ضرسه وضرّسه: عضه عضاً شديداً. وضرس السبع فريسته إذا مضغ لحمها ولم يبتلعه. وضرس قدحه: أثر فيه بأضراسه، وقدح مضروس. وضرست أسنانه من الحموضة، وأضرستها، وبي ضرس. وناقة ضروس: تعض حالبها.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "وقعت في الأرض ضروس من مطر، وأصابهم ضرس من الوسمي وضروس: للقليل المتفرق. وضرسهم الزمان وضرسهم: عضهم. ورجل مجرس مضرس: مجرب، وقد ضرسته الخطوب والحروب، كما تقول: منجذٌ: من الناجذ. وحرب ضروس: من الناقة الضروس كما يقال: زبون، وقد ضرس نابها. وبفلان ضرس وضرم وهو غضب الجوع، وإنه لضرس من الجوع. وفلان ضرس شرس:",
+        "prototipe_benzerlik": 0.969,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.969,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["body_part.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "خلق الإنسان",
@@ -1569,18 +1592,18 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 40,
+      "kume": 41,
       "merkez_kok": "بلع",
       "merkez_mana": "Bel': yutmak; bel'a: yutkunma",
-      "boy": 85
+      "boy": 61
     },
     "ince": {
-      "kume": 260,
+      "kume": 262,
       "merkez_kok": "بلع",
       "merkez_mana": "Bel': yutmak; bel'a: yutkunma",
       "boy": 17

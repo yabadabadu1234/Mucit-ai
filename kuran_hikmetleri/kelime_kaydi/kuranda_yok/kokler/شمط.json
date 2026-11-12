@@ -711,6 +711,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "رجل أشمط، وامرأة شمطاء، وقالوا: شمط الرجل في لحيته وشمط المرأة في رأسها، يقال: شمطاء، ولا يقال: شيباء. وشمط بين الماء واللبن: خلط. وشمط ماله: خلط حلاله بحرامه. وإياك أن تشمط أبا عرك إلى أباعر فلان. وإنه لشميط الذنابي: فيها سواد وبياض. وطرح في برمته الشمط بالفتح والكسر أي التابل. وهذه قدر تسع الشاة بشمطها. وجاءت الخيل شماطيط: فرقاً.",
+    "mecaz": "طلع الشميط وهو الصبح. قال:\nوأعجلها عن حاجة لم تفه بها ... شميط يتلى آخر الليل ساطع\nوكان يقول أبو عمرو لأصحابه: أشمطوا أي خوضوا في الفنون، مرة في نحو ومرة في فقه ومرة في ديث.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "رجل أشمط، وامرأة شمطاء، وقالوا: شمط الرجل في لحيته وشمط المرأة في رأسها، يقال: شمطاء، ولا يقال: شيباء. وشمط بين الماء واللبن: خلط. وشمط ماله: خلط حلاله بحرامه. وإياك أن تشمط أبا عرك إلى أباعر فلان. وإنه لشميط الذنابي: فيها سواد وبياض. وطرح في برمته الشمط بالفت",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "طلع الشميط وهو الصبح. قال:",
+        "prototipe_benzerlik": 0.543,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وكان يقول أبو عمرو لأصحابه: أشمطوا أي خوضوا في الفنون، مرة في نحو ومرة في فقه ومرة في ديث.",
+        "prototipe_benzerlik": 0.492,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.517,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "خلق الإنسان",
@@ -722,21 +750,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
       "kume": 42,
-      "merkez_kok": "وبر",
-      "merkez_mana": "Vaber: yün, deve tüyü; vebr: tavşan",
-      "boy": 84
+      "merkez_kok": "سحم",
+      "merkez_mana": "to become black, to be blackened",
+      "boy": 97
     },
     "ince": {
-      "kume": 266,
-      "merkez_kok": "صلع",
-      "merkez_mana": "bald pate, bald head",
-      "boy": 9
+      "kume": 269,
+      "merkez_kok": "هدب",
+      "merkez_mana": "to cull, to abscind, to pluck",
+      "boy": 10
     }
   },
   "kaliplar": {

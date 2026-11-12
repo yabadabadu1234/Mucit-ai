@@ -2361,11 +2361,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "state.n.02",
-    "orta": "noun.feeling",
+    "ince": "repent.v.02",
+    "orta": "verb.emotion",
     "ust": "his ve nefis",
-    "dayanak_synset": "sorrow.n.02",
-    "dayanak_tanim": "sadness associated with some wrong done or some disappointment",
+    "dayanak_synset": "repent.v.02",
+    "dayanak_tanim": "feel remorse for; feel sorry for; be contrite about",
     "synset_sayisi": 3
   },
   "ses_mana_tasnif": {
@@ -2376,6 +2376,29 @@
     "fasil_ozeti": "° معنى الفصل المعجمي (سف): نفاذ دقاق جافة من أثناء مع ظهورها. ويتمثل ذلك - في (سفف) في مرور الدقيق من المنخل والغبار في أثناء الهواء، وفي (سوف) في شم الجمل والدليل تراب وجه الأرض، ونفاذ المدماك ممتدًّا في أثناء البناء، وفي (أسف) يتمثل في نفاذ الندى والخصوبة من الأرض أي خلوها منهما، وكذلك نفاذ السِمَن من البدن والرقة من جلد الكف. وفي (سفر) يتمثل في زوال ما يعرو وجه الأرض كنسًا أو سفَرًا، وفي (سفع) يتمثل في لصوق السواد ونحوه بظاهر الحجارة",
     "tam_metin": "{فَلَعَلَّكَ بَاخِعٌ نَفْسَكَ عَلَى آثَارِهِمْ إِنْ لَمْ يُؤْمِنُوا بِهَذَا الْحَدِيثِ أَسَفًا} [الكهف: 6]\n\"الأرض الأَسيفة: الرقيقة التي لا تكاد تُنبت شيئًا/ البلد الذي لا يُنبت شيئًا. والأَسِيف: من لا يكاد يَسْمَن (المنجد)، والشيخ الفاني. وتأسَّفتْ يدُه: تشعَّثت \".\n° المعنى المحوري\nجفافُ أثناءِ الشيء وذهابُ نحوِ البَلال منها: كالأرض التي لا تنبت - فقدت خيرها وخصوبتها، وكالذي لا يسمن، وكالشيخ الفاني. وتشعُّث اليد يكون من جفاف جلد باطنها فتخشُن وتتشقق.\nوجفاف الجوف والأثناء يؤخذ منه حرقة الغضب والغيظ والحزن وما أشبه ذلك، مما فسّر به الأسف فكل ذلك من جفاف الباطن والأثناء، ويفسر الأسف في كل سياق بحسبه. \"أَسِفَ (تعب): حَزِنَ حُزنًا بالغًا لفوات شيء \". {وَلَمَّا رَجَعَ مُوسَى إِلَى قَوْمِهِ غَضْبَانَ أَسِفًا} [الأعراف: 150] شديد الغضب. حزينًا [قر\n(2/1021)\n7/ 286]. {وَقَالَ يَاأَسَفَى عَلَى يُوسُفَ} [يوسف: 84] فهذا حزن بالغ لأنه لا يملك غيره، والغضب موقف القادر {فَلَمَّا آسَفُونَا انْتَقَمْنَا مِنْهُمْ} [الزخرف: 55] أغضبونا (أي أشد الغضب، فجف حظُّهم من الرحمة) - فأوقع الله بهم نقمته."
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "\" يا أسفى على يوسف \" وآسفني ما قلت: أغضبني وأحزنني.",
+    "mecaz": "أرض أسيفة: لا تموج بالنبات.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Cebel mihverî mana",
+    "prototip": "جفافُ أثناءِ الشيء وذهابُ نحوِ البَلال منها: كالأرض التي لا تنبت - فقدت خيرها وخصوبتها، وكالذي لا يسمن، وكالشيخ الفاني. وتشعُّث اليد يكون من جفاف جلد باطنها فتخشُن وتتشقق. وجفاف الجوف والأثناء يؤخذ منه حرقة الغضب والغيظ والحزن وما أشبه ذلك، مما فسّر به الأسف ف",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "أرض أسيفة: لا تموج بالنبات.",
+        "prototipe_benzerlik": 0.464,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.464,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["explode.v.01", "feeling.n.01", "repent.v.02"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطير",
@@ -2387,18 +2410,18 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 509
     },
     "orta": {
-      "kume": 7,
-      "merkez_kok": "كرب",
-      "merkez_mana": "Karb: sıkıntı, keder; kurbet: sıkıntı",
-      "boy": 139
+      "kume": 8,
+      "merkez_kok": "بءس",
+      "merkez_mana": "Be'es: azap, şiddet, zorluk",
+      "boy": 142
     },
     "ince": {
-      "kume": 35,
+      "kume": 45,
       "merkez_kok": "حزن",
       "merkez_mana": "Huzn: üzüntü, keder; hazen: keder",
       "boy": 33

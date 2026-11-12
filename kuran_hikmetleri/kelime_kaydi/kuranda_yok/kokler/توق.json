@@ -1157,16 +1157,6 @@
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       },
       {
-        "id": "48366",
-        "arapca": ["مُشْرَئِبٌّ", "مُتَطَلِّعٌ", "مُشْتَهٍ", "طامِعٌ", "رَاغِبٌ", "مُشْتاقٌ", "تَائِقٌ", "نَزِعٌ"],
-        "ingilizce": [],
-        "tanim": "وصف لمن كان يملك نزعة قوية تجاه شيء ما أو الحصول عليه بلهفة وشدة",
-        "misal": "كان السجين _اً الى الحرية",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
         "id": "48549",
         "arapca": ["مُتَطَلِّعٌ", "صَبٌّ", "شَيِّقٌ", "مُشْتاقٌ", "شائِقٌ", "تَائِقٌ", "تَوَّاقٌ", "نَزْعٌ", "صَبَّ إلى"],
         "ingilizce": [],
@@ -1325,42 +1315,79 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "ache.v.02",
+    "ince": "hanker.v.01",
     "orta": "verb.emotion",
     "ust": "his ve nefis",
-    "dayanak_synset": "ache.v.02",
-    "dayanak_tanim": "have a desire for something or someone who is not present",
+    "dayanak_synset": "hanker.v.01",
+    "dayanak_tanim": "desire strongly or persistently",
     "synset_sayisi": 13
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "تاقت نفسي إلى كذا، وإن نفسي لتتوق إلى معالي الأمور، وهي تواقة إليها، وأنا تائق إليك.",
+    "mecaz": "تاق إلى الغاية: أسرع إليها وخف. وتاقت عينه بالدموع: بدرت بها. وتق إليّ: أسرع.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "تاقت نفسي إلى كذا، وإن نفسي لتتوق إلى معالي الأمور، وهي تواقة إليها، وأنا تائق إليك.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "تاق إلى الغاية: أسرع إليها وخف. وتاقت عينه بالدموع: بدرت بها. وتق إليّ: أسرع.",
+        "prototipe_benzerlik": 0.55,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.55,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "ache.v.02",
+    "condition.n.01",
+    "crave.v.01",
+    "desire.v.01",
+    "desirous.a.01",
+    "draw_a_bead_on.v.02",
+    "feeling.n.01",
+    "hanker.v.01",
+    "hurt.v.06",
+    "tell.v.02",
+    "wish.v.01",
+    "wish.v.02",
+    "wish.v.04"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النخل",
     "bab": "النذور",
-    "kok_gecis": 6.3,
+    "kok_gecis": 6.2,
     "kitapta_gecis": 2.0,
-    "zenginlesme": 1.79
+    "zenginlesme": 1.81
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 17,
-      "merkez_kok": "زين",
-      "merkez_mana": "Zîne: süs, güzellik; zeyn: güzelleştirmek",
-      "boy": 177
+      "kume": 25,
+      "merkez_kok": "وسل",
+      "merkez_mana": "Vesîle: aracı, yol",
+      "boy": 130
     },
     "ince": {
-      "kume": 90,
+      "kume": 145,
       "merkez_kok": "رغب",
       "merkez_mana": "Rağbet: istek, arzu",
-      "boy": 18
+      "boy": 20
     }
   },
   "kaliplar": {

@@ -1080,6 +1080,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "دليل خريت. وأضيق من خرت الإبرة، ووقعوا في مضايق مثل أخرات الإبر، واجعل العود في خرت الفأس. والخيط في خرت القرط، وجمل مخروت الأنف، وقد خرته الخشاش.",
+    "mecaz": "قلق خرت فلان إذا فسد عليه أمره. قال الأعشى:\nفإني وجدّك لو لم تجيء ... لقد قلق الخرت إلا قليلاً\nوراد خرت القوم، ورأدت أخراتهم إذا كانوا غرضين بمنزلتهم لا يقرون.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "دليل خريت. وأضيق من خرت الإبرة، ووقعوا في مضايق مثل أخرات الإبر، واجعل العود في خرت الفأس. والخيط في خرت القرط، وجمل مخروت الأنف، وقد خرته الخشاش.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "قلق خرت فلان إذا فسد عليه أمره. قال الأعشى:",
+        "prototipe_benzerlik": 0.439,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وراد خرت القوم، ورأدت أخراتهم إذا كانوا غرضين بمنزلتهم لا يقرون.",
+        "prototipe_benzerlik": 0.429,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.434,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "المثنيات",
@@ -1090,22 +1118,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
-      "merkez_kok": "حنج",
-      "merkez_mana": "",
-      "boy": 426
-    },
-    "orta": {
       "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 261
+      "boy": 466
+    },
+    "orta": {
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 11,
-      "merkez_kok": "خرت",
-      "merkez_mana": "to pierce, to bore, to perforate",
-      "boy": 18
+      "kume": 15,
+      "merkez_kok": "دلق",
+      "merkez_mana": "to pour out, spill (e.g. a liquid)",
+      "boy": 58
     }
   },
   "kaliplar": {

@@ -857,7 +857,7 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "part.n.01",
+    "ince": "substance.n.01",
     "orta": "noun.substance",
     "ust": "tabiat",
     "dayanak_synset": "alloy.n.01",
@@ -867,6 +867,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "سبك الفضة: خلصها من الخبث سبكاً، وسبكها تسبيكاً، وأفرغها في المسبكة، وعندي سبيكة من السبائك.",
+    "mecaz": "هذا كلام لا يثبت على السب، وهو سباك للكلام. وفلان قد سبكته التجارب. وسبك الدقيق: أخذ خالصه وحوّاراه، ورأيت على خوانه السبائك: الخبز الأبيض. وأراد أعرابي رقي جبل صعب فقال: أيّ سبيكة هذا، فسماه سبيكة لإملاسه.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "سبك الفضة: خلصها من الخبث سبكاً، وسبكها تسبيكاً، وأفرغها في المسبكة، وعندي سبيكة من السبائك.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "هذا كلام لا يثبت على السب، وهو سباك للكلام. وفلان قد سبكته التجارب. وسبك الدقيق: أخذ خالصه وحوّاراه، ورأيت على خوانه السبائك: الخبز الأبيض. وأراد أعرابي رقي جبل صعب فقال: أيّ سبيكة هذا، فسماه سبيكة لإملاسه.",
+        "prototipe_benzerlik": 0.61,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.61,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["cast.v.07", "mixture.n.01", "model.v.02"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النخل",
@@ -878,21 +901,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "merkez_kok": "قبب",
+      "merkez_mana": "canopy, pavilion; dome, cupola",
+      "boy": 604
     },
     "orta": {
-      "kume": 36,
-      "merkez_kok": "نجس",
-      "merkez_mana": "Nicis: pislik, necis",
-      "boy": 123
+      "kume": 33,
+      "merkez_kok": "صبب",
+      "merkez_mana": "Sabb: dökmek, akıtmak; sabîb: akan",
+      "boy": 201
     },
     "ince": {
-      "kume": 229,
-      "merkez_kok": "دلك",
-      "merkez_mana": "Delk: ovmak, sürtmek",
-      "boy": 29
+      "kume": 217,
+      "merkez_kok": "قطر",
+      "merkez_mana": "Katr: damla; kıtar: boru, katran",
+      "boy": 30
     }
   },
   "kaliplar": {

@@ -1559,16 +1559,39 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "location.n.01",
-    "orta": "noun.location",
-    "ust": "ölçü, mekân ve zaman",
-    "dayanak_synset": "lawn.n.01",
-    "dayanak_tanim": "a field of cultivated and mowed grass",
+    "ince": "whole.n.02",
+    "orta": "noun.person",
+    "ust": "insan ve toplum",
+    "dayanak_synset": "child.n.02",
+    "dayanak_tanim": "a human offspring (son or daughter) of any age",
     "synset_sayisi": 2
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "نجلت الشيء نجلاً: رميت به. والناقة تنجل الحصى بمناسمها، ومنه: المنجل يقضب به العود من الشجرة ويرمى به. وعين نجلاء، وعيون نجل. والأسد أنجل.",
+    "mecaz": "نجله أب كريم، ونجل به. وفحل ناجل: منجب. وهو نجل فلان. وقبّح الله تعالى ناجليه. وطعنة نجلاء.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "نجلت الشيء نجلاً: رميت به. والناقة تنجل الحصى بمناسمها، ومنه: المنجل يقضب به العود من الشجرة ويرمى به. وعين نجلاء، وعيون نجل. والأسد أنجل.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "نجله أب كريم، ونجل به. وفحل ناجل: منجب. وهو نجل فلان. وقبّح الله تعالى ناجليه. وطعنة نجلاء.",
+        "prototipe_benzerlik": 0.919,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.919,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["living_thing.n.01", "region.n.03"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النخل",
@@ -1579,22 +1602,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 19,
+      "kume": 21,
       "merkez_kok": "نجل",
       "merkez_mana": "to be covered with vegetation",
-      "boy": 65
+      "boy": 107
     },
     "ince": {
-      "kume": 102,
+      "kume": 123,
       "merkez_kok": "نمر",
       "merkez_mana": "tiger",
-      "boy": 17
+      "boy": 21
     }
   },
   "kaliplar": {

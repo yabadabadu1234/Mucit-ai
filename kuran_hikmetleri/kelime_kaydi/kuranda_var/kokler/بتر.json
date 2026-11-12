@@ -1455,11 +1455,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "event.n.01",
-    "orta": "noun.act",
+    "ince": "cut_off.v.03",
+    "orta": "verb.contact",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "ablation.n.01",
-    "dayanak_tanim": "surgical removal of a body part or tissue",
+    "dayanak_synset": "cut_off.v.03",
+    "dayanak_tanim": "remove by or as if by cutting",
     "synset_sayisi": 5
   },
   "ses_mana_tasnif": {
@@ -1470,6 +1470,17 @@
     "fasil_ozeti": "",
     "tam_metin": "{إِنَّ شَانِئَكَ هُوَ الْأَبْتَرُ} [الكوثر: 3]\n\"الأَبترُ: المقطوعُ الذَنَب من أي موضع كان من جميع الدواب، والذي لا عُرْوة له من المزاد، ومن الحيَّات: الذي يقال له الشيطانُ قصيرُ الذَّنَب \".\n(1/67)\n° المعنى المحوري\nقطع ما يمتد من الشيء دقيقًا أو ضعيفًا: كقطع الذنب من الدواب. وعُدَّ قِصَرُ الذنب بَتْرًا، لأن الشأنَ استطالةُ ذَنَب الحية، وكذا عدّ عدمُ وجود العروة - وهي تمتد من المزادة - بترًا. ولأجل وقوع القطع في هذا التركيب على ما يمتد من الشيء قالوا: \"بترتُ الشيء: قَطعتُه قبلَ الإتْمام \" (كأنما قطعتَ استرساله وامتداده الطبيعي). والأُباتر - كتماضر: القصيرُ (كأنه انقطع امتداده). وكان له - صلى الله عليه وسلم - دِرْع تُسمَّى البتراء لقصرها. والأبتر من الناس هو المقطوع السلالة، وهي تتفرع ممتدة منه نامية {إِنَّ شَانِئَكَ هُوَ الْأَبْتَرُ (3)} نَعَم. شائنه - صلى الله عليه وسلم - هو المقطوع الذِكْر والأثَر، أما ذِكْرُه - صلى الله عليه وسلم - وأثرهُ فيحملهما اليوم أكثر من ألف مليون مسلم، بل إن ذريته من أولاد سيدتنا فاطمة بنته - صلى الله عليه وسلم - ربما جاوز عددهم (مليون) نسمة.\nأما قولهم: \"تَبَتَّر لحمُه: انْمار (1) \"فهو من المعنى المحوري؛ أي صار كتلا متميزة، لذهاب تماسك لحمه. والصيغة تعبر عن كثرة."
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "ما هم م إلا كالحمر البتر. وليته أعارنا أبتريه وهما عبده وعيره لقلة خيرهما. وطلعت البتيراء وهي الشمس في أول النهار، وخطب زياد خطبته البتراء وهي التي ما حمد فيها ولا صلى. ورجل أباتر: قاطع رحم. قال أبو الربيس:\nشديد وكاء الوطب ضب ضغينة ... على قطع ذي القربى أحد أباتر",
+    "mecaz": "",
+    "kinaye": "",
+    "mecaz_var": false
+  },
+  "prototip_yayilim_tasnif": {
+    "durum": "prototip veya mecaz kolu yok"
+  },
+  "kolekzifikasyon_kavramlari": ["act.n.02", "amputate.v.01", "cut.v.01", "cut_off.v.03", "maim.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الحشرات",
@@ -1480,22 +1491,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "kume": 5,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 375
     },
     "orta": {
-      "kume": 36,
-      "merkez_kok": "نجس",
-      "merkez_mana": "Nicis: pislik, necis",
-      "boy": 123
+      "kume": 12,
+      "merkez_kok": "ردم",
+      "merkez_mana": "Redm: kapatmak, doldurmak; sedd: set",
+      "boy": 61
     },
     "ince": {
-      "kume": 232,
-      "merkez_kok": "جذذ",
-      "merkez_mana": "Cezz: kesmek, parçalamak; cezâ: kesik",
-      "boy": 12
+      "kume": 71,
+      "merkez_kok": "جثث",
+      "merkez_mana": "Cesed: ceset, cisim; cesse: cüsse",
+      "boy": 28
     }
   },
   "kaliplar": {

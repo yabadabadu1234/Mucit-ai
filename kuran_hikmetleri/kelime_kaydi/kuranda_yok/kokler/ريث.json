@@ -1041,16 +1041,27 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "event.n.01",
-    "orta": "noun.act",
-    "ust": "fiil ve hadise",
-    "dayanak_synset": "pause.n.02",
-    "dayanak_tanim": "temporary inactivity",
+    "ince": "wait.v.02",
+    "orta": "verb.stative",
+    "ust": "hâl ve vasıf",
+    "dayanak_synset": "wait.v.02",
+    "dayanak_tanim": "wait before acting",
     "synset_sayisi": 2
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "راث عليّ خبرك، وفي مثل \" رب عجلة تعقب ريثا \" واسترثته: استبطأته. قال:\nفشمر أروع لا عاجزا ... جباناً ولا مستراثاً خذولاً\nوما فلان بمستراث النصرة. وتقول: قد استغثته، فما استرثته. وهو رائث وريث، وما ريثك وما بطأ بك. ورجل مريث العينين: بطيء النظر. وما قعدت لفلان إلا ريثما قال كذا. وما يستمع لموعظتي إلا ريث أتكلم. قال الراعي:\nفقلت ما أنا ممن لا يواصلني ... وما ثوائي إلا ريث أرتحل",
+    "mecaz": "",
+    "kinaye": "",
+    "mecaz_var": false
+  },
+  "prototip_yayilim_tasnif": {
+    "durum": "prototip veya mecaz kolu yok"
+  },
+  "kolekzifikasyon_kavramlari": ["act.n.02", "wait.v.02"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السلاح",
@@ -1061,21 +1072,21 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "kume": 5,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 375
     },
     "orta": {
       "kume": 13,
       "merkez_kok": "صدد",
       "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
-      "boy": 93
+      "boy": 76
     },
     "ince": {
-      "kume": 69,
-      "merkez_kok": "كسل",
-      "merkez_mana": "Kesel: tembellik",
+      "kume": 75,
+      "merkez_kok": "قعس",
+      "merkez_mana": "to make one's chest to stick out",
       "boy": 14
     }
   },

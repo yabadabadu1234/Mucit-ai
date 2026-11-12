@@ -688,6 +688,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "جأر إلى الله ونأج، وبتّ أناجي ربي وأنأج إليه وهو أضرع ما يكون من الدعاء وأحزنه. وفي الحديث: \" ادع ربك بأنأج ما تقدر عليه \" قال:\nأنت الغياث إذا المضطر في كرب ... نادى بصوتٍ ضعيف الركز نأج\nوريح نؤوج: لها حفيف، وقد نأجت، ورياح نوائج. وقال ذو الرمة:\nوصوّح البقل نأج تجيء به ... هيف يمانيّة في مرها نكب",
+    "mecaz": "نأجت الرائحة كما يقال: عجت. قال:\nكأن نأج نفحة من سنبل ... من طيّب الكافور والقرنفل\nيجيب جمّاء العظام عيطل\nوتقول: جاء بيلنجوج له أريحٌ وعجيج، في البيت ونئيج.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "جأر إلى الله ونأج، وبتّ أناجي ربي وأنأج إليه وهو أضرع ما يكون من الدعاء وأحزنه. وفي الحديث: \" ادع ربك بأنأج ما تقدر عليه \" قال: أنت الغياث إذا المضطر في كرب ... نادى بصوتٍ ضعيف الركز نأج وريح نؤوج: لها حفيف، وقد نأجت، ورياح نوائج. وقال ذو الرمة: وصوّح البقل نأ",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "نأجت الرائحة كما يقال: عجت. قال:",
+        "prototipe_benzerlik": 0.523,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "يجيب جمّاء العظام عيطل",
+        "prototipe_benzerlik": 0.297,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وتقول: جاء بيلنجوج له أريحٌ وعجيج، في البيت ونئيج.",
+        "prototipe_benzerlik": 0.494,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.438,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الأضداد",
@@ -698,19 +731,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 2,
+      "kume": 1,
       "merkez_kok": "قره",
       "merkez_mana": "",
       "boy": 759
     },
     "orta": {
-      "kume": 4,
+      "kume": 2,
       "merkez_kok": "فلص",
       "merkez_mana": "",
       "boy": 494
     },
     "ince": {
-      "kume": 22,
+      "kume": 4,
       "merkez_kok": "شعف",
       "merkez_mana": "",
       "boy": 183

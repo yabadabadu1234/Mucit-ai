@@ -727,6 +727,44 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "ضع القتب على الحمولة، وضع القتب على السانية، فالقتب: واحد الأقتاب وهي الأكف التي توضع على تقالة الأحمال، والقتب بالكسر: واحد الأقتاب وهي أكفٌ صغار توضع على السواني. قال لبيد:\nحتى تحيرت الدبار كأنها ... زلف والقى قتبها المحزوم\nوأقتبت البعير إذا شدّدت عليه القتب، أو القتب لغة تميم، وقيس على قتبت: ولفلان قتوبة: إبل تقتب. وفلان مبعوج يجرّ أقتابه: أمعاءه جمع قتب بالكسر.",
+    "mecaz": "قولهم للملح: هو قتب يعض بالغارب، وقتب ملحاح. قال النابغة الذبيانيّ:\nفاستبق ودّك للصديق ولا تكن ... قتباً يعضّ بغارب ملحاحاً\nوقال البعيث:\nألد إذا لاقيت قوماً بخطة ... ألح على أكتافهم قتب عقر\nوأقتبت زيداً يميناً، وأقتبته في اليمين إذا غلظت عليه وألححت كأنما وضعت عليه قتباً. وأقتبه الدّين: فدحه. قال:\nإليك أشكو ثقل دينٍ أقتبا ... ظهري بأقتابٍ تركن جلبا\nوتقول: كأني لهم قتوبه، وكأن مؤنهم عليّ مكتوبه. وفي كاهل الفرس تقتيب: جنّأٌ. قال:\nوكاهل أفرغ فيه مع الإ ... فراغ إشراف وتقتيب\nورجل مقتب الكاهل.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "ضع القتب على الحمولة، وضع القتب على السانية، فالقتب: واحد الأقتاب وهي الأكف التي توضع على تقالة الأحمال، والقتب بالكسر: واحد الأقتاب وهي أكفٌ صغار توضع على السواني. قال لبيد: حتى تحيرت الدبار كأنها ... زلف والقى قتبها المحزوم وأقتبت البعير إذا شدّدت عليه القتب",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "قولهم للملح: هو قتب يعض بالغارب، وقتب ملحاح. قال النابغة الذبيانيّ:",
+        "prototipe_benzerlik": 0.622,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وأقتبت زيداً يميناً، وأقتبته في اليمين إذا غلظت عليه وألححت كأنما وضعت عليه قتباً. وأقتبه الدّين: فدحه. قال:",
+        "prototipe_benzerlik": 0.306,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وتقول: كأني لهم قتوبه، وكأن مؤنهم عليّ مكتوبه. وفي كاهل الفرس تقتيب: جنّأٌ. قال:",
+        "prototipe_benzerlik": 0.331,
+        "halka": "orta"
+      },
+      {
+        "cumle": "ورجل مقتب الكاهل.",
+        "prototipe_benzerlik": 0.256,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.379,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الإبل",
@@ -737,22 +775,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
-      "merkez_kok": "حنج",
-      "merkez_mana": "",
-      "boy": 426
-    },
-    "orta": {
       "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 261
+      "boy": 466
+    },
+    "orta": {
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 18,
-      "merkez_kok": "لدم",
-      "merkez_mana": "Dammam (the capital city of the Eastern Province, Saudi Arabia)",
-      "boy": 53
+      "kume": 24,
+      "merkez_kok": "لوت",
+      "merkez_mana": "Levt: bükmek, eğmek",
+      "boy": 63
     }
   },
   "kaliplar": {

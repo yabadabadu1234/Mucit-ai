@@ -1738,16 +1738,57 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "freshen.v.02",
-    "orta": "verb.body",
-    "ust": "canlı ve beden",
-    "dayanak_synset": "freshen.v.02",
-    "dayanak_tanim": "become or make oneself fresh again",
+    "ince": "re-create.v.01",
+    "orta": "verb.creation",
+    "ust": "fiil ve hadise",
+    "dayanak_synset": "re-create.v.01",
+    "dayanak_tanim": "create anew",
     "synset_sayisi": 7
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "حُمِل على النّعش. وميت منعوش، وقد نعشوه. وانتعش العاثر من عثرته.",
+    "mecaz": "نشعته وانتعش إذا تداركته من ورطةٍ. وانتعش نعشك الله. ونعشني نعشة كريم والربيع ينعش النّاس. قال النابغة:\nوإنّك غيث ينعش الناس سيبه ... وسيف أعيرته المنية قاطع\nومن مجاز المجاز: قول لبيد:\nومنّي على السيباق فضل ونعمة ... كما نعش الدكداك صوب البوارق\nوهو أخفى من نعيش، في بنات نعش؛ هو السهى أوسط البنات.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "حُمِل على النّعش. وميت منعوش، وقد نعشوه. وانتعش العاثر من عثرته.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "نشعته وانتعش إذا تداركته من ورطةٍ. وانتعش نعشك الله. ونعشني نعشة كريم والربيع ينعش النّاس. قال النابغة:",
+        "prototipe_benzerlik": 0.652,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "ومن مجاز المجاز: قول لبيد:",
+        "prototipe_benzerlik": 0.414,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وهو أخفى من نعيش، في بنات نعش؛ هو السهى أوسط البنات.",
+        "prototipe_benzerlik": 0.36,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.476,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "act.n.02",
+    "activeness.n.02",
+    "boom.v.05",
+    "freshen.v.02",
+    "inspire.v.01",
+    "re-create.v.01",
+    "recuperate.v.04"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السلاح",
@@ -1758,22 +1799,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 18,
-      "merkez_kok": "همم",
-      "merkez_mana": "Hemm: istek, gayret; himmet",
-      "boy": 116
+      "kume": 25,
+      "merkez_kok": "وسل",
+      "merkez_mana": "Vesîle: aracı, yol",
+      "boy": 130
     },
     "ince": {
-      "kume": 98,
-      "merkez_kok": "ملق",
-      "merkez_mana": "Mellak: dalkavukluk yapmak, yağcılık",
-      "boy": 32
+      "kume": 148,
+      "merkez_kok": "وسل",
+      "merkez_mana": "Vesîle: aracı, yol",
+      "boy": 42
     }
   },
   "kaliplar": {

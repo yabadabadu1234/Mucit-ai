@@ -688,6 +688,44 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "هم أجور من الترك والديلم، وجوارهم من الإد الصنيلم؛ ورجل أدلم: أسود طويل، ورجال دلم. والدلمة: لون الفيل.",
+    "mecaz": "فلان من الديلم، وهو ديلميّ من الديالمة أي عدوّ من الأعداء، لشهرة هذا الجيل بالشرارة والعداوة. قال رؤبة يصف جيشاً:\nفي ذي قدامى مرجحنّ ديلمه ... إذا تدانى لم تفرّج أجمه\nوبه فسر قول عنترة:\nشربت بماء الدحرضين فأصبحت ... زوراء تنفر عن حياض الديلم\nومن ثم قالوا للنمل والقردان: الديلم. لأنها أعداء الإبل. ويقال: ليل أدلم. وقال عنترة:\nولقد هممت بغارة في ليلة ... سوداء حالكة كلون الأدلم\nفهذا تشبيه وذاك استعارة.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "هم أجور من الترك والديلم، وجوارهم من الإد الصنيلم؛ ورجل أدلم: أسود طويل، ورجال دلم. والدلمة: لون الفيل.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "فلان من الديلم، وهو ديلميّ من الديالمة أي عدوّ من الأعداء، لشهرة هذا الجيل بالشرارة والعداوة. قال رؤبة يصف جيشاً:",
+        "prototipe_benzerlik": 0.208,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وبه فسر قول عنترة:",
+        "prototipe_benzerlik": 0.175,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "ومن ثم قالوا للنمل والقردان: الديلم. لأنها أعداء الإبل. ويقال: ليل أدلم. وقال عنترة:",
+        "prototipe_benzerlik": 0.347,
+        "halka": "orta"
+      },
+      {
+        "cumle": "فهذا تشبيه وذاك استعارة.",
+        "prototipe_benzerlik": 0.306,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.259,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الحشرات",
@@ -698,19 +736,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 2,
+      "kume": 1,
       "merkez_kok": "قره",
       "merkez_mana": "",
       "boy": 759
     },
     "orta": {
-      "kume": 4,
+      "kume": 2,
       "merkez_kok": "فلص",
       "merkez_mana": "",
       "boy": 494
     },
     "ince": {
-      "kume": 22,
+      "kume": 4,
       "merkez_kok": "شعف",
       "merkez_mana": "",
       "boy": 183

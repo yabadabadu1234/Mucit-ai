@@ -865,11 +865,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "trait.n.01",
-    "orta": "noun.attribute",
-    "ust": "hâl ve vasıf",
-    "dayanak_synset": "trust.n.03",
-    "dayanak_tanim": "the trait of believing in the honesty and reliability of others",
+    "ince": "state.n.02",
+    "orta": "noun.feeling",
+    "ust": "his ve nefis",
+    "dayanak_synset": "confidence.n.02",
+    "dayanak_tanim": "a feeling of trust (in someone or something)",
     "synset_sayisi": 4
   },
   "ses_mana_tasnif": {
@@ -880,6 +880,13 @@
     "fasil_ozeti": "° معنى الفصل المعجمي (ثق): الغلظ أو الشدة في الشيء (الخارج): كما في __________ (1) وهذا تكييف عربي أصيل. قال النابغة أو زهير يمدح النعمان بن المنذر: تراك الأرض إمامِتّ خِفًّا ... وتحيا إن حييت بها ثقيلا وللبيت قصة تنظر في الموشح 47 - 48، والمعنى اللغوي د. محمد حسن جبل 23.",
     "tam_metin": "\"ثقثق: تكلم بكلام الحماقة \".\n(1/241)\n° المعنى المحوري\nلهذا التركيب هو: خروج كلام فِجٍّ غليظ يوحي بثقل الذهن (1): ككلام الحماقة، وهو ثقيل غليظ يكشف عن غلظ فهم."
   },
+  "hakikat_mecaz_tasnif": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "prototip_yayilim_tasnif": {
+    "durum": "prototip veya mecaz kolu yok"
+  },
+  "kolekzifikasyon_kavramlari": ["condition.n.01", "content.n.05", "feeling.n.01", "trust.n.03"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطير",
@@ -890,22 +897,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 14,
-      "merkez_kok": "جهد",
-      "merkez_mana": "Cehd: gayret, çaba; cehd: yorgunluk",
-      "boy": 135
+      "kume": 16,
+      "merkez_kok": "درك",
+      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
+      "boy": 287
     },
     "ince": {
-      "kume": 76,
-      "merkez_kok": "حلف",
-      "merkez_mana": "Hilf: yemin, ittifak; halef",
-      "boy": 20
+      "kume": 100,
+      "merkez_kok": "بغغ",
+      "merkez_mana": "transgression, injustice, wrong",
+      "boy": 30
     }
   },
   "kaliplar": {

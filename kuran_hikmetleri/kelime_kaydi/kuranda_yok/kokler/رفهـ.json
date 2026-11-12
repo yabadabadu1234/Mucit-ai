@@ -1,0 +1,68 @@
+{
+  "kok": "رفهـ",
+  "sinif": "reddedildi",
+  "turkce_fiil": null,
+  "mustaklar": {},
+  "reddedilen": [
+    ["kök", "رفهـ", "üç harfli değil"]
+  ],
+  "sozlukler": {},
+  "kuran_gecisleri": 0,
+  "kuranda_var": false,
+  "sema": {
+    "sema": "graf-ic-graf",
+    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
+    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
+    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
+    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
+    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
+  },
+  "tasnif": {
+    "fasil": "رف",
+    "harf": "ر",
+    "mahrec": "zelakiyye",
+    "bolge": "dil"
+  },
+  "mana_tasnif": {
+    "durum": "Arabic WordNet v2 kaydı yok"
+  },
+  "ses_mana_tasnif": {
+    "durum": "Cebel mu'cemlerinde kök yok"
+  },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "الإبل ترد رفها متى شاءت، وإبل روافه وقد رفهت رفوها وقد أرفهتها. وبيننا ليلة رافهة، وليال روافه: لينة السير. ورجل رافه ومترفه: مستريح متنعم. وهو في رفاهة ورفاهية، وعيش رافه. ورفه نفسه. ورفه عني: نفس، ورفه عن أنفاسي.\nر ف\nورفوت الثوب ورفأته.",
+    "mecaz": "فزع فلان فرفوته إذا أزلت فزعه وسكنته كما يزال الخرق بالرفو. قال أبو خراش الهذلي:\nرفوتي وقالوا يا خويلد لا ترع ... قلت وأنكرت الوجوه هم هم\nورافيته ورافأته: وافقته مرافأة ورفاء، ومنه بالرفاء والبنين. ورفّيت فلاناً ورفأته: قلت له ذلك. وفي الحديث \" كان إذا رفأ رجلاً قال له بارك الله عليك وبارك فيك وجمع بينكما في خير \" وتبدل من الهمزة الحاء فيقال: رفحته. ورافأني في البيع: سامحني وحاباني. وترافوا على الأمر وترافؤا: توافقوا وتظاهروا. وخرق فلان ثوب المودة بالإساءة ثم رفأه بالإحسان.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "الإبل ترد رفها متى شاءت، وإبل روافه وقد رفهت رفوها وقد أرفهتها. وبيننا ليلة رافهة، وليال روافه: لينة السير. ورجل رافه ومترفه: مستريح متنعم. وهو في رفاهة ورفاهية، وعيش رافه. ورفه نفسه. ورفه عني: نفس، ورفه عن أنفاسي. ر ف ورفوت الثوب ورفأته.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "فزع فلان فرفوته إذا أزلت فزعه وسكنته كما يزال الخرق بالرفو. قال أبو خراش الهذلي:",
+        "prototipe_benzerlik": 0.631,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "ورافيته ورافأته: وافقته مرافأة ورفاء، ومنه بالرفاء والبنين. ورفّيت فلاناً ورفأته: قلت له ذلك. وفي الحديث \" كان إذا رفأ رجلاً قال له بارك الله عليك وبارك فيك وجمع بينكما في خير \" وتبدل من الهمزة الحاء فيقال: رفحته. ورافأني في البيع: سامحني وحاباني. وترافوا على الأمر وترافؤا: توافقوا وتظاهروا. وخرق فل",
+        "prototipe_benzerlik": 0.707,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.669,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
+  "muhassas_tasnif": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "mana_tasnif_gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
+  },
+  "kaliplar": {},
+  "kelimeler": []
+}

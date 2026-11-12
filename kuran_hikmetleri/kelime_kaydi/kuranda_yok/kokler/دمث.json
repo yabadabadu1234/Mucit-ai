@@ -1086,6 +1086,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "دمث المكان فهو دمث ودميث. ومال إلى دمثٍ من الأرض فبال. ودمّث الشيء بيده: مرسه حتى يلين. ودمّث لخبزتك: وطيء مكانها. ونزلنا بأرض ميثاء دمثاء.",
+    "mecaz": "رجل دمث الأخلاق: وطيئها. وفي خلقه دمث ودماثة. وقال:\nلنا جانب منه دميث وجانب ... إذا رامه الأعداء ممتنع صعب\nوفي مثل: \" دمّث لنفسك قبل النوم مضطجعاً \" أي استعد للأمر قبل وقوعه. ويقال: دمث لي ذلك الحديث حتى أطعن في حوصه أي اذكر لي أوله حتى أعرف وجهه فأعلم كيف آخذ فيه.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "دمث المكان فهو دمث ودميث. ومال إلى دمثٍ من الأرض فبال. ودمّث الشيء بيده: مرسه حتى يلين. ودمّث لخبزتك: وطيء مكانها. ونزلنا بأرض ميثاء دمثاء.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "رجل دمث الأخلاق: وطيئها. وفي خلقه دمث ودماثة. وقال:",
+        "prototipe_benzerlik": 0.616,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وفي مثل: \" دمّث لنفسك قبل النوم مضطجعاً \" أي استعد للأمر قبل وقوعه. ويقال: دمث لي ذلك الحديث حتى أطعن في حوصه أي اذكر لي أوله حتى أعرف وجهه فأعلم كيف آخذ فيه.",
+        "prototipe_benzerlik": 0.422,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.519,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -1096,22 +1124,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 17,
+      "kume": 24,
       "merkez_kok": "زين",
       "merkez_mana": "Zîne: süs, güzellik; zeyn: güzelleştirmek",
-      "boy": 177
+      "boy": 123
     },
     "ince": {
-      "kume": 94,
+      "kume": 140,
       "merkez_kok": "زين",
       "merkez_mana": "Zîne: süs, güzellik; zeyn: güzelleştirmek",
-      "boy": 44
+      "boy": 30
     }
   },
   "kaliplar": {

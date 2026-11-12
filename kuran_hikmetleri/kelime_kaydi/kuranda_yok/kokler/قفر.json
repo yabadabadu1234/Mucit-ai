@@ -1499,6 +1499,59 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "أقفرت الأرض: خلت من النبات والماء، وأرض مقفرة وقفر وقفرة، وأرضون وبلاد قفر وقفار. وبتنا بقفرة.",
+    "mecaz": "بات فلان القفر والوحش إذا لم يقر، ونزلنا ببني فلان فبتنا القفر. وقال ذو الرمّة:\nتخطّ على القفر امرأ القيس إنه ... سواء على الضيف امرؤ القيس والقفر\nوأقفر فلان من أهله: تفرد عنهم وبقي وحده. قال عبيد:\nأقفر من أهله عبيد\nوأقفر جسده من اللحم ورأسه من الشّعر، وإنه لقفر الجسد والرأس. قال:\nتفلي له الريح وإن لم يفتل ... لمّة قفرٍ كشعاع السنبل\nتخفيف قفرٍ. وأقفرت العظم: لم أبق عليه شيئاً. أنشد الكسائيّ:\nكأنّ المحالة فيها الرّدا ... ح لم يعرها الناحضون اقتفارا\nومنه اقتفرت أثره وتقّفرته: اتبعته. قال:\nلا يتأرّى لما في القدر يرقبه ... ولايزال أمام القوم يقتفر\nوأكل خبزاً قفاراً: بلا أدم، وأقفر الرجل: أكله، ومنه: \" ما أقفر بيت فيه خلّ \".",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "أقفرت الأرض: خلت من النبات والماء، وأرض مقفرة وقفر وقفرة، وأرضون وبلاد قفر وقفار. وبتنا بقفرة.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "بات فلان القفر والوحش إذا لم يقر، ونزلنا ببني فلان فبتنا القفر. وقال ذو الرمّة:",
+        "prototipe_benzerlik": 0.485,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وأقفر فلان من أهله: تفرد عنهم وبقي وحده. قال عبيد:",
+        "prototipe_benzerlik": 0.24,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "أقفر من أهله عبيد",
+        "prototipe_benzerlik": 0.398,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وأقفر جسده من اللحم ورأسه من الشّعر، وإنه لقفر الجسد والرأس. قال:",
+        "prototipe_benzerlik": 0.344,
+        "halka": "orta"
+      },
+      {
+        "cumle": "تخفيف قفرٍ. وأقفرت العظم: لم أبق عليه شيئاً. أنشد الكسائيّ:",
+        "prototipe_benzerlik": 0.394,
+        "halka": "orta"
+      },
+      {
+        "cumle": "ومنه اقتفرت أثره وتقّفرته: اتبعته. قال:",
+        "prototipe_benzerlik": 0.329,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وأكل خبزاً قفاراً: بلا أدم، وأقفر الرجل: أكله، ومنه: \" ما أقفر بيت فيه خلّ \".",
+        "prototipe_benzerlik": 0.35,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.363,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["tumble.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -1510,21 +1563,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 509
     },
     "orta": {
-      "kume": 12,
-      "merkez_kok": "خيب",
-      "merkez_mana": "Hayb: boşa çıkmak, umutsuz olmak; hâib: hayal kırıklığı",
-      "boy": 58
+      "kume": 8,
+      "merkez_kok": "بءس",
+      "merkez_mana": "Be'es: azap, şiddet, zorluk",
+      "boy": 142
     },
     "ince": {
-      "kume": 64,
+      "kume": 48,
       "merkez_kok": "قفر",
       "merkez_mana": "to trace, to track",
-      "boy": 20
+      "boy": 23
     }
   },
   "kaliplar": {

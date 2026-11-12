@@ -1254,6 +1254,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "خرم الشيء: خرقه. وخرم الخرز: أثآه. هو مخروم الشفة والأنف. ورجل أخرم: مخروم وترة الأنف. واخترمهم الدهر وتخرمهم. قال أبو ذؤيب:\nسبقوا هوى وأعنقوا لهواهم ... فتخرموا ولكل جنب مصرع\nوطلع مخرم الجبل وهو أنفه. وهو طلاع المخارم. وعيش خرم: ناعم. وعن بعض العرب: كان أخي معها بعيش خرم، فقيل له ما الخرم، فقال العيش الرغد. وقال:\nفخص بها أوطان خود غريرة ... منعمة لاقت من العيش خرماً\nلها قدم مخصورة غير شثنة ... وكعب تراه وارى الحجم أدرما\nسنام وار: سمين. وتخرم فلان: ذهب مذهب الخرمية.",
+    "mecaz": "تخرم أنف فلان: سكن غضبه. وذهب فلان دليلاً فما خرم عن الطريق، إذا لم يعدل عنه. وخرمته الخوارم، إذا مات. وهذ السورة هذاً ما خرم منها حرفاً. ورجل أخرم الرأي: ضعيفه. ويمين ذات مخارم، ولا خير في يمين لا مخارم لها وهي المخارج، وهذه يمين طلعت في المخارم إذا كانت لها مخارج. قال:\nولا خير في مال بغير رزية ... ولا في يمين غير ذات مخارم",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "خرم الشيء: خرقه. وخرم الخرز: أثآه. هو مخروم الشفة والأنف. ورجل أخرم: مخروم وترة الأنف. واخترمهم الدهر وتخرمهم. قال أبو ذؤيب: سبقوا هوى وأعنقوا لهواهم ... فتخرموا ولكل جنب مصرع وطلع مخرم الجبل وهو أنفه. وهو طلاع المخارم. وعيش خرم: ناعم. وعن بعض العرب: كان أخي م",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "تخرم أنف فلان: سكن غضبه. وذهب فلان دليلاً فما خرم عن الطريق، إذا لم يعدل عنه. وخرمته الخوارم، إذا مات. وهذ السورة هذاً ما خرم منها حرفاً. ورجل أخرم الرأي: ضعيفه. ويمين ذات مخارم، ولا خير في يمين لا مخارم لها وهي المخارج، وهذه يمين طلعت في المخارم إذا كانت لها مخارج. قال:",
+        "prototipe_benzerlik": 0.963,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.963,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["artifact.n.01", "exploit.v.02", "penetrate.v.01", "pierce.v.05", "punch.v.03"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -1265,21 +1288,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "merkez_kok": "قبب",
+      "merkez_mana": "canopy, pavilion; dome, cupola",
+      "boy": 604
     },
     "orta": {
-      "kume": 36,
-      "merkez_kok": "نجس",
-      "merkez_mana": "Nicis: pislik, necis",
-      "boy": 123
+      "kume": 32,
+      "merkez_kok": "دثر",
+      "merkez_mana": "Tedsîr: örtmek, bürümek; desr: örtü",
+      "boy": 148
     },
     "ince": {
-      "kume": 228,
-      "merkez_kok": "خرم",
-      "merkez_mana": "to make a hole by digging",
-      "boy": 23
+      "kume": 209,
+      "merkez_kok": "قبب",
+      "merkez_mana": "canopy, pavilion; dome, cupola",
+      "boy": 35
     }
   },
   "kaliplar": {

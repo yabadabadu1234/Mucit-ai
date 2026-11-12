@@ -2115,6 +2115,59 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "رجحت إحدى الكفّتين على الأخرى، وأرجح الميزان، وإذا وزنت فأرجح، ورجحت الشيء: وزنته بيدي ونظرت ما ثقله.",
+    "mecaz": "امرأة رجاح: رزان، ونساء رواجح الأكفال ورجّح الأكفال. وجفان رجحٌ. وكتائب رجح. قال لبيد:\nبكتائب رجح تعوّد كبشها ... نطح الكباش كأنهن نجوم\nونخل مراجيح ومواقير: ثقال الأحمال. ورجّح أحد قوليه على الآخر، وترجح في القول: تميّل فيه. وترجّحت الأرجوحة بالغلامين. وللإبل أراجيح وهي هزّاتها في رتكانها. وبيننا أراجيح أي مفاوز ترجحت بركبانها. قال ذو الرمة:\nبلالٍ أبي عمرو وقد كان بيننا ... أراجيح يحسرن القلاص النواجيا\nورجل راجح العقل. وفلان في عقله رجاحه، وفي خلقه سجاحه. وقوم مراجيح الحلم. وارجحنّ: مال ووقع بمرّة. وفي مثل: \" إذا ارجحنّ شاصياً فارفع يدا \".\nومن المجاز: هذه رحى مرجحنّة: للسحابة المستديرة الثقيلة. قال:\nإذا رجفت فيه رحى مرجحِنة ... تبعج ثجاجاً غزير الحوافل\nوإن عليك لليلاً مرجحناً: ثقيلاً لا يتحرك.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "رجحت إحدى الكفّتين على الأخرى، وأرجح الميزان، وإذا وزنت فأرجح، ورجحت الشيء: وزنته بيدي ونظرت ما ثقله.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "امرأة رجاح: رزان، ونساء رواجح الأكفال ورجّح الأكفال. وجفان رجحٌ. وكتائب رجح. قال لبيد:",
+        "prototipe_benzerlik": 0.375,
+        "halka": "orta"
+      },
+      {
+        "cumle": "ونخل مراجيح ومواقير: ثقال الأحمال. ورجّح أحد قوليه على الآخر، وترجح في القول: تميّل فيه. وترجّحت الأرجوحة بالغلامين. وللإبل أراجيح وهي هزّاتها في رتكانها. وبيننا أراجيح أي مفاوز ترجحت بركبانها. قال ذو الرمة:",
+        "prototipe_benzerlik": 0.039,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "ورجل راجح العقل. وفلان في عقله رجاحه، وفي خلقه سجاحه. وقوم مراجيح الحلم. وارجحنّ: مال ووقع بمرّة. وفي مثل: \" إذا ارجحنّ شاصياً فارفع يدا \".",
+        "prototipe_benzerlik": 0.422,
+        "halka": "orta"
+      },
+      {
+        "cumle": "ومن المجاز: هذه رحى مرجحنّة: للسحابة المستديرة الثقيلة. قال:",
+        "prototipe_benzerlik": 0.305,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وإن عليك لليلاً مرجحناً: ثقيلاً لا يتحرك.",
+        "prototipe_benzerlik": 0.466,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.321,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "appearance.n.01",
+    "balance.v.01",
+    "being.n.01",
+    "irregularity.n.02",
+    "move_back_and_forth.v.01",
+    "probably.r.01",
+    "rock.v.01",
+    "swing.v.02",
+    "swing.v.04"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الغرائز",
@@ -2125,19 +2178,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 15,
+      "kume": 19,
       "merkez_kok": "فوق",
       "merkez_mana": "Fevk: üst, yukarı (zarf)",
-      "boy": 107
+      "boy": 76
     },
     "ince": {
-      "kume": 84,
+      "kume": 109,
       "merkez_kok": "حصف",
       "merkez_mana": "of sense, sober, realistic",
       "boy": 31

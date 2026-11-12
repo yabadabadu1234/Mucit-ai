@@ -1740,11 +1740,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "fall_asleep.v.01",
-    "orta": "verb.body",
-    "ust": "canlı ve beden",
-    "dayanak_synset": "fall_asleep.v.01",
-    "dayanak_tanim": "change from a waking to a sleeping state",
+    "ince": "state.n.02",
+    "orta": "noun.cognition",
+    "ust": "zihin ve ilim",
+    "dayanak_synset": "sleeping.n.01",
+    "dayanak_tanim": "the state of being asleep",
     "synset_sayisi": 2
   },
   "ses_mana_tasnif": {
@@ -1755,6 +1755,29 @@
     "fasil_ozeti": "° معنى الفصل المعجمي (فع): الرخاوة والطراءة وما إلى ذلك من رقة الأثناء -كما يتمثل ذلك في النُعاع: النبات الغض الناعم في أول نباته قبل أن يكتهل- في (نعع)، وكما في يُنْع الثمر ونُضجه فإن ذلك يتم بلين أثنائه ماديًّا أو باللين المعنوي",
     "tam_metin": "{إِذْ يُغَشِّيكُمُ النُّعَاسَ أَمَنَةً مِنْهُ} [الأنفال: 11]\n\"النَعْس -بالفتح: بين الجسم والرأي وضعفُهما. ناقة نَعُوس: غزيرة تُغْمِضُ عينها عند الحلْب. وأَنعَسَ الرجلُ: جاء ببنين كسالى \".\n° المعنى المحوري\nثقل أو فتور في الجسم للينة وامتلائه بالرخاوة. كما في الجسم والناقة والكَسالى. ومنه \"النعاس- كغراب: ثَقلَةُ النوم السِنَة من غير نوم \"-كما في آية التركيب وكذا ما في [آل عمران: 154]. ومنه \"نَعَتْ السوق: كَسَدت \" (ذهبت حدة الحركة والتبايع منها)."
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "نعس ينعس نعاساً، وركبته نعسة شديدة، وتناعس الرجل. وناقة نعوس: سمحة الدّرّ إذا درّت نعست.",
+    "mecaz": "تناعس البرق إذا فتر. وجدّه ناعس تاعس.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Cebel mihverî mana",
+    "prototip": "ثقل أو فتور في الجسم للينة وامتلائه بالرخاوة. كما في الجسم والناقة والكَسالى. ومنه \"النعاس- كغراب: ثَقلَةُ النوم السِنَة من غير نوم \"-كما في آية التركيب وكذا ما في [آل عمران: 154]. ومنه \"نَعَتْ السوق: كَسَدت \" (ذهبت حدة الحركة والتبايع منها).",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "تناعس البرق إذا فتر. وجدّه ناعس تاعس.",
+        "prototipe_benzerlik": 0.433,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.433,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["condition.n.01", "fall_asleep.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
@@ -1765,19 +1788,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "kume": 5,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 375
     },
     "orta": {
-      "kume": 35,
-      "merkez_kok": "حين",
-      "merkez_mana": "Hîn: zaman, bir süre",
-      "boy": 54
+      "kume": 11,
+      "merkez_kok": "ليل",
+      "merkez_mana": "Leyl: gece",
+      "boy": 29
     },
     "ince": {
-      "kume": 224,
+      "kume": 66,
       "merkez_kok": "نوم",
       "merkez_mana": "Nevm: uyku; nâim: uyuyan",
       "boy": 12

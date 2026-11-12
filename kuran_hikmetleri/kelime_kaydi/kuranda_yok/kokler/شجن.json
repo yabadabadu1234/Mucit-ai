@@ -1012,6 +1012,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "هو أخو شجن وأشجان وشجون وهي الهموم والحاجات التي تهم. وأنشد ابن الأعرابي:\nمن كان يرجو بقاء لا نفاد له ... فلا يكن عرض الدنيا له شجنا\nوأنشد أبو زيد:\nذكرتك حيث استأمن الوحش والتقت ... رفاق من الآفاق شتّى شجونها\nو\" الحديث ذو شجون \": ذو شعب وبينهما شجنة رحم، والرحم شجنة من الله. والشجنة: الشعبة.\nش ج\nوشجاه الهم شجوا. وأمر شاج: محزن. وبكى فلان شجوه، وبكت الحمامة شجوّها. وتشاجت فلانة على زوجها: تحازنت عليه. وشجي بالعظم وغيره شجي. قال:\nفي حلقكم عظم وقد شجينا\nوتقول: عليك بالكظم، وإن شجيت بالعظم. ورجل شج. وفي مثل \" ويل للشجي من الخلي \" وروي مشدداً بمعنى المشجو، وعزي إلى الأصمعيّ وأنشد:\nويل الشجي من الخليّ فإنه ... نصب الفؤاد بحزنه مهموم\nوقال أبو داود:\nمن لعين بدمعها موليه ... ولنفس بما عناها شجية\nوأشجاه بكذا: أغصه به. قال:\nإني أتاني خبر فأشجان ... أن الغواة قتلوا ابن عفان\nخليفة الله بغير برهان",
+    "mecaz": "في حلقه شجاً ما ينتزع وهو ما يشجى به. قال سويد:\nويراني كالشجا في حلقه ... عسراً مخرجه ما ينتزع",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "هو أخو شجن وأشجان وشجون وهي الهموم والحاجات التي تهم. وأنشد ابن الأعرابي: من كان يرجو بقاء لا نفاد له ... فلا يكن عرض الدنيا له شجنا وأنشد أبو زيد: ذكرتك حيث استأمن الوحش والتقت ... رفاق من الآفاق شتّى شجونها و\" الحديث ذو شجون \": ذو شعب وبينهما شجنة رحم، والرح",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "في حلقه شجاً ما ينتزع وهو ما يشجى به. قال سويد:",
+        "prototipe_benzerlik": 0.737,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.737,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["feeling.n.01", "grieve.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -1023,18 +1046,18 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 509
     },
     "orta": {
-      "kume": 7,
-      "merkez_kok": "كرب",
-      "merkez_mana": "Karb: sıkıntı, keder; kurbet: sıkıntı",
-      "boy": 139
+      "kume": 8,
+      "merkez_kok": "بءس",
+      "merkez_mana": "Be'es: azap, şiddet, zorluk",
+      "boy": 142
     },
     "ince": {
-      "kume": 35,
+      "kume": 45,
       "merkez_kok": "حزن",
       "merkez_mana": "Huzn: üzüntü, keder; hazen: keder",
       "boy": 33

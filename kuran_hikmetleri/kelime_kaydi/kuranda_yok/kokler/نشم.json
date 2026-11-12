@@ -748,6 +748,44 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "نشّم اللحم: أخذ يروح. قال علقمة:\nوقد أصاحب فتياناً طعامهم ... خضر المزاد ولحم فيه تنشيم\nأي يطعمون الماء المطحلب أو الفظوظ واللحم المروح، غلّب فقال: طعامهم. ومعه زوراء من نشمٍ وهو شجر تعمل منه القسيّ.",
+    "mecaz": "نشّموا في الشرّ. \" ودقّوا بينهم عطر منشم \". وتقول: نشّموا وأنبضوا النّشم، ليدقّوا بينهم عطر منشم.\nن ش\nورجل نشوان بيّن النشوة، وامرأة نشوى، وقوم نشاوى، وقد انتشوا، ووجدت منه نشوة المسك بالكسر ونشا المسك. قال:\nوينشى نشا المسك في فأرة ... وريح الخزامى على الأجرع\nونشيت منه ريحاً طيّبة واستنشيت. قال:\nونشيت ريح الموت من تلقائهم ... ةوخشيت وقع مهندٍ قرضاب\nومن المجاز: من أين نشيت هذا الخبر؟ وهو نشيان للأخبار ونشوان، وإنه لذو نشوة للأخبار بالكسر.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "نشّم اللحم: أخذ يروح. قال علقمة: وقد أصاحب فتياناً طعامهم ... خضر المزاد ولحم فيه تنشيم أي يطعمون الماء المطحلب أو الفظوظ واللحم المروح، غلّب فقال: طعامهم. ومعه زوراء من نشمٍ وهو شجر تعمل منه القسيّ.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "نشّموا في الشرّ. \" ودقّوا بينهم عطر منشم \". وتقول: نشّموا وأنبضوا النّشم، ليدقّوا بينهم عطر منشم.",
+        "prototipe_benzerlik": 0.356,
+        "halka": "orta"
+      },
+      {
+        "cumle": "ورجل نشوان بيّن النشوة، وامرأة نشوى، وقوم نشاوى، وقد انتشوا، ووجدت منه نشوة المسك بالكسر ونشا المسك. قال:",
+        "prototipe_benzerlik": 0.584,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "ونشيت منه ريحاً طيّبة واستنشيت. قال:",
+        "prototipe_benzerlik": 0.506,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "ومن المجاز: من أين نشيت هذا الخبر؟ وهو نشيان للأخبار ونشوان، وإنه لذو نشوة للأخبار بالكسر.",
+        "prototipe_benzerlik": 0.288,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.434,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
@@ -758,22 +796,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
-      "merkez_kok": "حنج",
-      "merkez_mana": "",
-      "boy": 426
-    },
-    "orta": {
       "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 261
+      "boy": 466
+    },
+    "orta": {
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 18,
-      "merkez_kok": "لدم",
-      "merkez_mana": "Dammam (the capital city of the Eastern Province, Saudi Arabia)",
-      "boy": 53
+      "kume": 24,
+      "merkez_kok": "لوت",
+      "merkez_mana": "Levt: bükmek, eğmek",
+      "boy": 63
     }
   },
   "kaliplar": {

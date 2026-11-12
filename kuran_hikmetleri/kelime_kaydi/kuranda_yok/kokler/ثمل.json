@@ -1580,6 +1580,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "شرب حتى ثمل، وهو نشوان ثمل. قال الأعشى:\nأقول للركب في درنا وقد ثملوا ... شيموا وكيف يشيم الشارب الثمل\nوأثملهم الشراب. وأنا لا أشرب إلا على ثميلة وهي بقية العلف في البطن. وما بقي من الماء إلا ثمل وهو الثمد. وشرب ثمالة اللبن وهو رغوته، وأثمل اللبن وثمل إذا رغا. وسقاء السم المثمل وهو المنقع. وثمل السم: ترك في الإنقاع أياماً حتى اختمر وهو الثمال. وهو ثمال قومه أي قوامهم وغياثهم، وقد ثملهم يثملهم.",
+    "mecaz": "رنحه ثمل الكرى. قال:\nوفتية أرقتهم من مهجع ... والنوم أحلى عندهم من العسل\nفنهضوا مائلة عماتهم ... كأنهم من الكلال والثمل\nشرب تساقوا قرقفا حمصية ... كرت عليهم عللا بعد نهل\nوأثملة النعاس، وهو ثمل مما غلبه الوسن. ووطب ثمل: ملآن ثقيل. وأصبحت نفسي ثملة غائية أي مسترخية خبيثة. وثمل الحمام، وحمام مثمل، وهو المطرب الذي يكاد يثمل من يسمع صوته.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "شرب حتى ثمل، وهو نشوان ثمل. قال الأعشى: أقول للركب في درنا وقد ثملوا ... شيموا وكيف يشيم الشارب الثمل وأثملهم الشراب. وأنا لا أشرب إلا على ثميلة وهي بقية العلف في البطن. وما بقي من الماء إلا ثمل وهو الثمد. وشرب ثمالة اللبن وهو رغوته، وأثمل اللبن وثمل إذا رغا. ",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "رنحه ثمل الكرى. قال:",
+        "prototipe_benzerlik": 0.555,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وأثملة النعاس، وهو ثمل مما غلبه الوسن. ووطب ثمل: ملآن ثقيل. وأصبحت نفسي ثملة غائية أي مسترخية خبيثة. وثمل الحمام، وحمام مثمل، وهو المطرب الذي يكاد يثمل من يسمع صوته.",
+        "prototipe_benzerlik": 0.495,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.525,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السباع",
@@ -1591,18 +1619,18 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
       "kume": 40,
-      "merkez_kok": "بلع",
-      "merkez_mana": "Bel': yutmak; bel'a: yutkunma",
-      "boy": 85
+      "merkez_kok": "ثعع",
+      "merkez_mana": "",
+      "boy": 49
     },
     "ince": {
-      "kume": 256,
+      "kume": 258,
       "merkez_kok": "كمت",
       "merkez_mana": "bay (color)",
       "boy": 10

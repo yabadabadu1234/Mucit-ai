@@ -1147,13 +1147,41 @@
     "ince": "possession.n.02",
     "orta": "noun.possession",
     "ust": "insan ve toplum",
-    "dayanak_synset": "stock.n.01",
-    "dayanak_tanim": "the capital raised by a corporation through the issue of shares entitling holders to an ownership interest (equity)",
+    "dayanak_synset": "assets.n.01",
+    "dayanak_tanim": "anything of material value or usefulness that is owned by a person or company",
     "synset_sayisi": 2
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "صال على قرنه صولة: حمل عليه. قال:\nفصالوا صولهم فيمن يليهم ... وصلنا صولنا فيمن يلينا\nولا أنسى صولات عليّ في ملاحمه. وفي مثل \" رب قول، أشد من صول \". وصال العير على العانة: يكدمها ويرمحها. وجمل صؤول: يأكل راعيه ويواثب الناس. وقد صال عليهم صولاً\nوصيالاً. وما كان صؤولاً. وقد صؤل صآلة بالهمز استصحاباً لحال الواو المنقلبة في صؤول.",
+    "mecaz": "صال فلان على فلان صولة منكرة إذا استطال عليه وقهه. وصاوله مصلولة وتصاولا. قال الفرزدق:\nقبيلان دون المحصنات تصاولا ... تصاول أعناق المصاعب من علِ\nولقيته أول صول: أول وهلة وصول.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "صال على قرنه صولة: حمل عليه. قال: فصالوا صولهم فيمن يليهم ... وصلنا صولنا فيمن يلينا ولا أنسى صولات عليّ في ملاحمه. وفي مثل \" رب قول، أشد من صول \". وصال العير على العانة: يكدمها ويرمحها. وجمل صؤول: يأكل راعيه ويواثب الناس. وقد صال عليهم صولاً وصيالاً. وما كان ",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "صال فلان على فلان صولة منكرة إذا استطال عليه وقهه. وصاوله مصلولة وتصاولا. قال الفرزدق:",
+        "prototipe_benzerlik": 0.344,
+        "halka": "orta"
+      },
+      {
+        "cumle": "ولقيته أول صول: أول وهلة وصول.",
+        "prototipe_benzerlik": 0.036,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.19,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["assets.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -1164,22 +1192,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
+      "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 426
+      "boy": 466
     },
     "orta": {
-      "kume": 1,
-      "merkez_kok": "جنح",
-      "merkez_mana": "Cünûh: meyletmek, eğilmek; cenâh: kanat",
-      "boy": 165
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 6,
+      "kume": 10,
       "merkez_kok": "خمع",
       "merkez_mana": "to limp, to be lame, to hobble",
-      "boy": 28
+      "boy": 35
     }
   },
   "kaliplar": {

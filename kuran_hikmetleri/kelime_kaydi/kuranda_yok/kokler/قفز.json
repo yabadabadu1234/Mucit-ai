@@ -1452,13 +1452,36 @@
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "jump.n.05",
-    "dayanak_tanim": "descent with a parachute",
+    "dayanak_synset": "jump.n.06",
+    "dayanak_tanim": "the act of jumping; propelling yourself off the ground",
     "synset_sayisi": 7
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "هو فقّاز نقّاز. ويا ابن القفّازة وهي الأمة لقلة استقرارها. وخيلٌ قوافز. والدعاميص تتقافز على الماء. وتقافز الصبيان. وهم يلعبون القفّيزى: ينصبون خشبات يقفزون عليها. ولبس الصائد القفازين وتقفّز.",
+    "mecaz": "قفز الرجل: مات. وتقفّزت المرأة بالحنّاء: تخضّبت إلى رسغيها. وفرس مقفّز: لم يجاوز تحجيله أشاعره وهو المنعل.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "هو فقّاز نقّاز. ويا ابن القفّازة وهي الأمة لقلة استقرارها. وخيلٌ قوافز. والدعاميص تتقافز على الماء. وتقافز الصبيان. وهم يلعبون القفّيزى: ينصبون خشبات يقفزون عليها. ولبس الصائد القفازين وتقفّز.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "قفز الرجل: مات. وتقفّزت المرأة بالحنّاء: تخضّبت إلى رسغيها. وفرس مقفّز: لم يجاوز تحجيله أشاعره وهو المنعل.",
+        "prototipe_benzerlik": 0.294,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.294,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["act.n.02", "control.v.02", "happening.n.01", "jump.v.01", "leap_out.v.01", "rise.v.11"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الأضداد",
@@ -1469,22 +1492,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 6,
+      "kume": 7,
       "merkez_kok": "لقلق",
       "merkez_mana": "",
-      "boy": 440
+      "boy": 386
     },
     "orta": {
-      "kume": 28,
+      "kume": 29,
       "merkez_kok": "دبب",
       "merkez_mana": "debbe: sürünmek, hareket / debbe: uğraşmak (?)",
-      "boy": 81
+      "boy": 73
     },
     "ince": {
-      "kume": 182,
+      "kume": 188,
       "merkez_kok": "دبب",
       "merkez_mana": "debbe: sürünmek, hareket / debbe: uğraşmak (?)",
-      "boy": 14
+      "boy": 16
     }
   },
   "kaliplar": {

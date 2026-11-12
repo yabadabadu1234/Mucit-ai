@@ -1437,6 +1437,45 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "ربك الثريد ولبكه: خلطه وأصلحه فارتبك. وصنعوا له الربيكة وهي طعام يعمل من تمر وأقط وسمن إلا أنه رخو ليس كالحيس. ومنهال المثل: \" غرثان فاربكوا له \" أي اعملوا له الربيكة.",
+    "mecaz": "ارتبك في الوحل: نشب فيه. وارتبك في الأمر، وارتبك في كلامه: تتعتع فيه. والصيد يرتبك في الحبالة.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "ربك الثريد ولبكه: خلطه وأصلحه فارتبك. وصنعوا له الربيكة وهي طعام يعمل من تمر وأقط وسمن إلا أنه رخو ليس كالحيس. ومنهال المثل: \" غرثان فاربكوا له \" أي اعملوا له الربيكة.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "ارتبك في الوحل: نشب فيه. وارتبك في الأمر، وارتبك في كلامه: تتعتع فيه. والصيد يرتبك في الحبالة.",
+        "prototipe_benzerlik": 0.479,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.479,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "act.n.02",
+    "annoy.v.01",
+    "barricade.v.01",
+    "confuse.v.03",
+    "corrupt.v.01",
+    "discontinue.v.01",
+    "disturb.v.01",
+    "embarrass.v.01",
+    "end.v.01",
+    "harass.v.01",
+    "interrupt.v.02",
+    "obstruct.v.01",
+    "overwhelm.v.01",
+    "put.v.01",
+    "upset.v.02"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
@@ -1448,21 +1487,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 509
     },
     "orta": {
       "kume": 7,
-      "merkez_kok": "كرب",
-      "merkez_mana": "Karb: sıkıntı, keder; kurbet: sıkıntı",
-      "boy": 139
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 259
     },
     "ince": {
-      "kume": 39,
+      "kume": 34,
       "merkez_kok": "كلح",
       "merkez_mana": "Kalh: asık yüzlülük, surat ekşitme",
-      "boy": 24
+      "boy": 23
     }
   },
   "kaliplar": {

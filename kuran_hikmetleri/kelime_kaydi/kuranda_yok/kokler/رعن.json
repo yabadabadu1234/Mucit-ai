@@ -1464,6 +1464,44 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "بدا رعن الجبل ورعانه وهو أنف شاخص منه. وبتصغيره سمّى الحصن الذي قيل لملكه: ذو رعين. وجبل أرعن: ذو رعان طوال.",
+    "mecaz": "رجل أرعن: طويل الأنف. ولقوهم بأعرن: يجيش كالجبل الأرعن.\nألا ترى إلى قول عارق:\nومن أجأ حولي رعان كأنها ... قنابل خيل من كميت ومن ورد\nكيف شبه الرعان بالجيوش. وفيه رعن ورعونة: طول في حمق، ورجل أرعن وامرأة رعناء وقوم رعن. وقال الفرزدق:\nلولا ابن عتبة عمرو والرجاء له ... ما كانت البصرة الرعناء لي وطناً\nأراد رعن أهلها.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "بدا رعن الجبل ورعانه وهو أنف شاخص منه. وبتصغيره سمّى الحصن الذي قيل لملكه: ذو رعين. وجبل أرعن: ذو رعان طوال.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "رجل أرعن: طويل الأنف. ولقوهم بأعرن: يجيش كالجبل الأرعن.",
+        "prototipe_benzerlik": 0.623,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "ألا ترى إلى قول عارق:",
+        "prototipe_benzerlik": 0.369,
+        "halka": "orta"
+      },
+      {
+        "cumle": "كيف شبه الرعان بالجيوش. وفيه رعن ورعونة: طول في حمق، ورجل أرعن وامرأة رعناء وقوم رعن. وقال الفرزدق:",
+        "prototipe_benzerlik": 0.626,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "أراد رعن أهلها.",
+        "prototipe_benzerlik": 0.251,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.467,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الغرائز",
@@ -1475,21 +1513,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
-    },
-    "orta": {
-      "kume": 9,
       "merkez_kok": "خون",
       "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
-      "boy": 168
+      "boy": 509
+    },
+    "orta": {
+      "kume": 7,
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 259
     },
     "ince": {
-      "kume": 49,
+      "kume": 33,
       "merkez_kok": "طيش",
       "merkez_mana": "to be wild, to be frivolous, to be light-headed",
-      "boy": 19
+      "boy": 24
     }
   },
   "kaliplar": {

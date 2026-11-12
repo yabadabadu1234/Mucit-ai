@@ -2219,11 +2219,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "natural_process.n.01",
-    "orta": "noun.process",
-    "ust": "fiil ve hadise",
-    "dayanak_synset": "fire.n.03",
-    "dayanak_tanim": "the process of combustion of inflammable materials producing heat and light and (often) smoke",
+    "ince": "erupt.v.03",
+    "orta": "verb.weather",
+    "ust": "tabiat",
+    "dayanak_synset": "erupt.v.03",
+    "dayanak_tanim": "start to burn or burst into flames",
     "synset_sayisi": 4
   },
   "ses_mana_tasnif": {
@@ -2234,6 +2234,13 @@
     "fasil_ozeti": "° معنى الفصل المعجمي (ت) : الامتداد - مع عدم الغلظ -كما يتمثل في مَت الحبل مع دقته النسبية - في (متت)، وفي تمدد المت وامتداد الأرض الموات والضعف هنا عدم جاة وعدم نتاج - في (موت)، وفي المَتْوفي الأرض وهو امتداد وكذا متْو الحبل - في (متو متى)، وفي ارتخاء القربة التي لم يتم ملؤها، وكذلك الوَهْدة بين النشزين - ولا يتبينان إلَّا بامتداد - في (أمت)، وفي ارتفاع الجبل الماتع والارتفاع امتداد إلى أعلى، وكذلك صور الامتداد الزمني - في (متع)، وفي امتداد متني الظهر والمستوى من الأرض المرتفعة - في (متن).",
     "tam_metin": "{تَبَّتْ يَدَا أَبِي لَهَبٍ وَتَبَّ (1)} [المسد: 1]\n\"اللَهَب- محركة: لسان النار / اشتعالها إذا خَلَصَ من الدخَان، والغبارُ الساطع إذا اضطرم جَرىُ الفرس. واللِهب- بالكسر: السَرَب في الأرض، والفُرْجة بين جبلين \".\n° المعنى المحوري\nامتداد لطيف المادة نافذًا من أثناء بحدة أو قوة: كلهب النار، وكفراغ السَرَب، وما بين الجبلين {سَيَصْلَى نَارًا ذَاتَ لَهَبٍ} [المسد: 3] {لَا ظَلِيلٍ وَلَا يُغْنِي مِنَ اللَّهَبِ} [المرسلات: 31]."
   },
+  "hakikat_mecaz_tasnif": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "prototip_yayilim_tasnif": {
+    "durum": "prototip veya mecaz kolu yok"
+  },
+  "kolekzifikasyon_kavramlari": ["chemical_process.n.01", "erupt.v.03", "information.n.02", "inspire.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -2244,19 +2251,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 7,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 331
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 33,
+      "kume": 37,
       "merkez_kok": "وقد",
       "merkez_mana": "Vakd: ateş yakmak; vakîd: ateş",
-      "boy": 44
+      "boy": 45
     },
     "ince": {
-      "kume": 214,
+      "kume": 243,
       "merkez_kok": "لهب",
       "merkez_mana": "Lehb: alev, ateş",
       "boy": 28

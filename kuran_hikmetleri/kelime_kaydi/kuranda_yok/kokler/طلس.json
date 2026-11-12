@@ -1686,6 +1686,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "ذئب أطلس: أغبر، وذئاب طلس، وذئبة طلساء. وطلست الكتاب طلساً، وطلسته تطليساً وهو أن تمحوه لتفسد خطه، فإذا أعمت محوه وصيرته من الفضول التي يستغنى عنها وصيرته طرساً: فقد طرسته. ومحا اللوح بالطلاسة وهي الخرقة. وجاء البرد والطيالسة. وخرج القاضي متقلسا متطلسا.",
+    "mecaz": "طلس بصره وطمسه: ذهب به. وشققت طيالس الظلام. قال أبو النجم:\nكم في لجيم من أغر كأنه ... صبح يشق طيالس الظلماء\nوتقول العرب: يا ابن الطيلسان: يريدون يا عجميّ.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "ذئب أطلس: أغبر، وذئاب طلس، وذئبة طلساء. وطلست الكتاب طلساً، وطلسته تطليساً وهو أن تمحوه لتفسد خطه، فإذا أعمت محوه وصيرته من الفضول التي يستغنى عنها وصيرته طرساً: فقد طرسته. ومحا اللوح بالطلاسة وهي الخرقة. وجاء البرد والطيالسة. وخرج القاضي متقلسا متطلسا.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "طلس بصره وطمسه: ذهب به. وشققت طيالس الظلام. قال أبو النجم:",
+        "prototipe_benzerlik": 0.458,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وتقول العرب: يا ابن الطيلسان: يريدون يا عجميّ.",
+        "prototipe_benzerlik": 0.402,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.43,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["content.n.05"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السباع",
@@ -1696,22 +1724,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "kume": 5,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 375
     },
     "orta": {
-      "kume": 38,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 203
+      "kume": 12,
+      "merkez_kok": "ردم",
+      "merkez_mana": "Redm: kapatmak, doldurmak; sedd: set",
+      "boy": 61
     },
     "ince": {
-      "kume": 250,
-      "merkez_kok": "هلك",
-      "merkez_mana": "Helâk: yok olmak, ölmek",
-      "boy": 16
+      "kume": 71,
+      "merkez_kok": "جثث",
+      "merkez_mana": "Cesed: ceset, cisim; cesse: cüsse",
+      "boy": 28
     }
   },
   "kaliplar": {

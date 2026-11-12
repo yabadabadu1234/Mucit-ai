@@ -1896,16 +1896,48 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "cognition.n.01",
-    "orta": "noun.cognition",
-    "ust": "zihin ve ilim",
-    "dayanak_synset": "contrivance.n.03",
-    "dayanak_tanim": "an elaborate or deceitful scheme contrived to deceive or evade",
+    "ince": "fabricate.v.02",
+    "orta": "verb.creation",
+    "ust": "fiil ve hadise",
+    "dayanak_synset": "fabricate.v.02",
+    "dayanak_tanim": "make up something artificial or untrue",
     "synset_sayisi": 8
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "ثوب ملفق وملفوق. وقد لفّقت بين ثوبين، ولفقت أحدهما بالآخر إذا لاءمت بينهما بالخياطة كشقّتي الملاءة، وهما لفقان ما داما متضامين فإذا فتقت الخياطة ذهب اسم اللفق، وملاءة ذات لفقين ولفاقين.",
+    "mecaz": "تلافق القوم: تلاءمت أحوالهم وهذا لفق فلان، وهما لفقان. وما هذا بطباق لذا ولفاق. وقد تلفّق ما بينهما. وحديث ملفّق، وقد لفّقت هذه الأحاديث.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "ثوب ملفق وملفوق. وقد لفّقت بين ثوبين، ولفقت أحدهما بالآخر إذا لاءمت بينهما بالخياطة كشقّتي الملاءة، وهما لفقان ما داما متضامين فإذا فتقت الخياطة ذهب اسم اللفق، وملاءة ذات لفقين ولفاقين.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "تلافق القوم: تلاءمت أحوالهم وهذا لفق فلان، وهما لفقان. وما هذا بطباق لذا ولفاق. وقد تلفّق ما بينهما. وحديث ملفّق، وقد لفّقت هذه الأحاديث.",
+        "prototipe_benzerlik": 0.554,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.554,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "content.n.05",
+    "create.v.05",
+    "fabricate.v.02",
+    "make.v.03",
+    "produce.v.02",
+    "sew.v.01",
+    "shape.v.02",
+    "think_up.v.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "اللباس",
@@ -1916,19 +1948,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "kume": 6,
+      "merkez_kok": "درك",
+      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
+      "boy": 1364
     },
     "orta": {
-      "kume": 9,
-      "merkez_kok": "خون",
-      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
-      "boy": 168
+      "kume": 15,
+      "merkez_kok": "زور",
+      "merkez_mana": "Zûr: yalan, sahtelik",
+      "boy": 133
     },
     "ince": {
-      "kume": 45,
+      "kume": 87,
       "merkez_kok": "روغ",
       "merkez_mana": "rivâğ: yalan, aldatma / rovâğ: kaçmak, hile (?)",
       "boy": 22

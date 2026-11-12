@@ -1093,13 +1093,46 @@
     "ince": "social_group.n.01",
     "orta": "noun.group",
     "ust": "insan ve toplum",
-    "dayanak_synset": "troop.n.01",
-    "dayanak_tanim": "a group of soldiers",
+    "dayanak_synset": "military.n.01",
+    "dayanak_tanim": "the military forces of a nation",
     "synset_sayisi": 3
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "جاشت القدر واستجاشت: غلت. وكأن صدره مرجل جياش. وجيش فلان: جمع جيشاً. واستجاش الأمير من مكان كذا: طلب الجيوش.",
+    "mecaz": "جاش البحر بالأمواج. وإن صدره ليجيش عليّ بالغلّ. وجاشت إليه نفسه. قال ذو الرمة:\nتجيش إليّ النفس في كل دمنة ... لمىً ويرتاح الفؤاد المشوّق\nوجاشت الحرب بينهم. قال:\nتجيش علينا قدرهم فنديمها ... ونهنؤها عنا إذا حميها غلا\nوفرس جياش العنان. قال حسان:\nتعادى بنا أفراسنا كل شطبة ... عنود وجياش العنان مناقل",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "جاشت القدر واستجاشت: غلت. وكأن صدره مرجل جياش. وجيش فلان: جمع جيشاً. واستجاش الأمير من مكان كذا: طلب الجيوش.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "جاش البحر بالأمواج. وإن صدره ليجيش عليّ بالغلّ. وجاشت إليه نفسه. قال ذو الرمة:",
+        "prototipe_benzerlik": 0.174,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وجاشت الحرب بينهم. قال:",
+        "prototipe_benzerlik": 0.653,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وفرس جياش العنان. قال حسان:",
+        "prototipe_benzerlik": 0.544,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.457,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["organization.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السلاح",
@@ -1110,22 +1143,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "kume": 6,
+      "merkez_kok": "درك",
+      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
+      "boy": 1364
     },
     "orta": {
-      "kume": 11,
-      "merkez_kok": "دحر",
-      "merkez_mana": "Dahr: itmek, uzaklaştırmak",
-      "boy": 179
+      "kume": 23,
+      "merkez_kok": "جلد",
+      "merkez_mana": "Cild: deri; cellâd: vurucu",
+      "boy": 125
     },
     "ince": {
-      "kume": 61,
-      "merkez_kok": "قحم",
-      "merkez_mana": "Kuhm: ateşe atmak, kendini atmak",
-      "boy": 24
+      "kume": 135,
+      "merkez_kok": "عصو",
+      "merkez_mana": "Isyân: karşı gelmek",
+      "boy": 50
     }
   },
   "kaliplar": {

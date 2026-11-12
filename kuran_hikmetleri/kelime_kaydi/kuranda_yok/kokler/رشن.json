@@ -688,6 +688,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "فلان أرشم راشن: متشمم للطعام متحين له. وقد رشن فلان يرشن إذا تطفل وتحين. ورشن الكلب في الإناء: ولغ.\nر ش\nوفلان يرتشي في حكمه ويأخذ الرشوة والرشى. والرشى رشاء النجاح. و\" لعن الله الراشي والمرتشي \". ورشوته أرشوه، وعن ثعلب هو من رشا الفرخ إذا مدّ رأسه إلى أمه لتزقّه. واسترشى الفصيل: طلب الرضاع.",
+    "mecaz": "امتدت أرشية الحنظل والبطيخ وسيورها وهي أغصانها. وقد أرشى الحنظل. وترشّيت فلاناً: لا ينته كما يصانع الحاكم بالرشوة. ورشوت الدهر صبراً حتى قضى لي عليكم. ولقد أبدع من قال:\nترشو أجنتها المطيّ سرابها ... طمعاً بأن ينتاشهن من الصدى",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "فلان أرشم راشن: متشمم للطعام متحين له. وقد رشن فلان يرشن إذا تطفل وتحين. ورشن الكلب في الإناء: ولغ. ر ش وفلان يرتشي في حكمه ويأخذ الرشوة والرشى. والرشى رشاء النجاح. و\" لعن الله الراشي والمرتشي \". ورشوته أرشوه، وعن ثعلب هو من رشا الفرخ إذا مدّ رأسه إلى أمه لتزق",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "امتدت أرشية الحنظل والبطيخ وسيورها وهي أغصانها. وقد أرشى الحنظل. وترشّيت فلاناً: لا ينته كما يصانع الحاكم بالرشوة. ورشوت الدهر صبراً حتى قضى لي عليكم. ولقد أبدع من قال:",
+        "prototipe_benzerlik": 0.887,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.887,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الغرائز",
@@ -698,19 +721,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 2,
+      "kume": 1,
       "merkez_kok": "قره",
       "merkez_mana": "",
       "boy": 759
     },
     "orta": {
-      "kume": 4,
+      "kume": 2,
       "merkez_kok": "فلص",
       "merkez_mana": "",
       "boy": 494
     },
     "ince": {
-      "kume": 20,
+      "kume": 2,
       "merkez_kok": "جررب",
       "merkez_mana": "",
       "boy": 70

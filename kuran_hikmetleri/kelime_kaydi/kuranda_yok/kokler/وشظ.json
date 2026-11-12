@@ -689,6 +689,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "شعب الإناء بوشيظةٍ: بشظيّة.",
+    "mecaz": "فلان وشيظ في قومه ووشيظة، وهو من وشائظهم. قال جرير:\nيخزي الوشيظ إذا قال الصميم لهم ... عدّوا الحصى ثم قيسوا بالمقاييس\nوقال الأخطل:\nهم أهل بطحاوي قريشٍ كليهما ... هم صلبها ليس الوشائظ كالصلب\nذكّر البطحاء على تأويل الأبطح أجعل كلاً مثل كل حيث يقول: كلّهنّ فعلت، وعن ناس من العرب: كلّتهنّ.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "شعب الإناء بوشيظةٍ: بشظيّة.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "فلان وشيظ في قومه ووشيظة، وهو من وشائظهم. قال جرير:",
+        "prototipe_benzerlik": 0.545,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "ذكّر البطحاء على تأويل الأبطح أجعل كلاً مثل كل حيث يقول: كلّهنّ فعلت، وعن ناس من العرب: كلّتهنّ.",
+        "prototipe_benzerlik": 0.468,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.506,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الغرائز",
@@ -699,19 +727,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 2,
+      "kume": 1,
       "merkez_kok": "قره",
       "merkez_mana": "",
       "boy": 759
     },
     "orta": {
-      "kume": 4,
+      "kume": 2,
       "merkez_kok": "فلص",
       "merkez_mana": "",
       "boy": 494
     },
     "ince": {
-      "kume": 21,
+      "kume": 3,
       "merkez_kok": "مرت",
       "merkez_mana": "",
       "boy": 241

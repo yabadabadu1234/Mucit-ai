@@ -1837,6 +1837,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "رصف الحجارة ورصفها ورجى الماء على الرصف والرصاف وهي الصخر المرصوف. قال العجاج:\nمن رصف نازع سيلاً رصفاً\nوتراصفوا في الصلاة وفي القتال. وتقول: تراصفوا ثم تقاصفوا. وشدّ فوق سهمه وأصل نصله بالرصاف وهو ما يرصف به من العقب وهو الرصافة والرصفة. ورصف إحدى قدميه إلى الأخرى: ضمها. وتراصفت أسنانه تراصفاً وهو تنضدها. اصطكت رصفتاهما وهما عينا الركبتين.",
+    "mecaz": "امرأة رصوف: ضيقة الهن. ورجل رصيف: محكم العمل، وقد رصف رصافة ويقال: أجاب بجواب مترص حصيف، بين رصيف، ليس بسخيف ولا خفيف. وهذا أمر لا يرصف بك. وهو راصف بفلان: لائق به.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "رصف الحجارة ورصفها ورجى الماء على الرصف والرصاف وهي الصخر المرصوف. قال العجاج: من رصف نازع سيلاً رصفاً وتراصفوا في الصلاة وفي القتال. وتقول: تراصفوا ثم تقاصفوا. وشدّ فوق سهمه وأصل نصله بالرصاف وهو ما يرصف به من العقب وهو الرصافة والرصفة. ورصف إحدى قدميه إلى ال",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "امرأة رصوف: ضيقة الهن. ورجل رصيف: محكم العمل، وقد رصف رصافة ويقال: أجاب بجواب مترص حصيف، بين رصيف، ليس بسخيف ولا خفيف. وهذا أمر لا يرصف بك. وهو راصف بفلان: لائق به.",
+        "prototipe_benzerlik": 0.252,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.252,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["act.n.02", "artifact.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السلاح",
@@ -1847,22 +1870,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
-      "merkez_kok": "درك",
-      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "kume": 8,
+      "merkez_kok": "قبب",
+      "merkez_mana": "canopy, pavilion; dome, cupola",
+      "boy": 604
     },
     "orta": {
-      "kume": 22,
-      "merkez_kok": "درك",
-      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 193
+      "kume": 33,
+      "merkez_kok": "صبب",
+      "merkez_mana": "Sabb: dökmek, akıtmak; sabîb: akan",
+      "boy": 201
     },
     "ince": {
-      "kume": 126,
-      "merkez_kok": "درك",
-      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 29
+      "kume": 222,
+      "merkez_kok": "سلك",
+      "merkez_mana": "Sülûk: yol tutmak; silk: sıra, iplik",
+      "boy": 28
     }
   },
   "kaliplar": {

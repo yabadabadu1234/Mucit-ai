@@ -838,6 +838,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "في أنفه الخشاش، وفي أنوفهم الأخشة. وبعير مخشوش. وصدت من خشاش الطير، وخشاش الأرض وهي صغار الطير والدواب. ورجل خشاش: صغير الرأس. وضربه على خششاويه وهما العظمان وراء الأذنين. وهو مخش ليل: دخال في ظلمته. وانخش في القوم وفي الشجر. وسمعت خشخشة السلاح.",
+    "mecaz": "جعل الخشاش في أنفه، وقاده إلى الطاعة بعنفه.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "في أنفه الخشاش، وفي أنوفهم الأخشة. وبعير مخشوش. وصدت من خشاش الطير، وخشاش الأرض وهي صغار الطير والدواب. ورجل خشاش: صغير الرأس. وضربه على خششاويه وهما العظمان وراء الأذنين. وهو مخش ليل: دخال في ظلمته. وانخش في القوم وفي الشجر. وسمعت خشخشة السلاح.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "جعل الخشاش في أنفه، وقاده إلى الطاعة بعنفه.",
+        "prototipe_benzerlik": 0.462,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.462,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["living_thing.n.01", "taxonomic_group.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الحشرات",
@@ -848,19 +871,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
-      "merkez_kok": "درك",
-      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 21,
-      "merkez_kok": "همس",
-      "merkez_mana": "Hamis: fısıldamak, gizlice konuşmak",
-      "boy": 97
+      "kume": 39,
+      "merkez_kok": "صرخ",
+      "merkez_mana": "Sarih: bağırmak, feryat",
+      "boy": 34
     },
     "ince": {
-      "kume": 115,
+      "kume": 257,
       "merkez_kok": "صرخ",
       "merkez_mana": "Sarih: bağırmak, feryat",
       "boy": 27

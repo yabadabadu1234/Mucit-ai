@@ -1263,16 +1263,27 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "infuriate.v.01",
+    "ince": "annoy.v.01",
     "orta": "verb.emotion",
     "ust": "his ve nefis",
-    "dayanak_synset": "infuriate.v.01",
-    "dayanak_tanim": "make furious",
+    "dayanak_synset": "annoy.v.01",
+    "dayanak_tanim": "cause annoyance in; disturb, especially by minor irritations",
     "synset_sayisi": 4
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "حنق على أخيه حنقاً وأحنقته عليه فهو حنق وحنيق ومحنق، ومالك مغيظاً محنقاً. وأحنق الفرس وغيره إذا التصق بطنه بصلبه ضمراً. قال لبيد:\nبطليح أسفار تركن بقية ... منها فأحنق صلبها وسنامها\nوقال أبو النجم:\nقد قالت الأنساع للبطن الحقي ... قدماً فآضت كالفنيق المحنق\nوخيل محانق ومحانيق. وعن ابن الأعرابي: قنبع الزرع، ثم أحنق، ثم مد الحب أعناقه، ثم حمل الدقيق، أي صار السنبل كهيئة الدحاريج في رأسه مجتمعاً، ثم بدت أطراف سفاه، ثم بدت أنابيبه العلى، ثم أخذ ينمي ويصير كرءوس الطير.",
+    "mecaz": "",
+    "kinaye": "",
+    "mecaz_var": false
+  },
+  "prototip_yayilim_tasnif": {
+    "durum": "prototip veya mecaz kolu yok"
+  },
+  "kolekzifikasyon_kavramlari": ["angry.a.01", "annoy.v.01", "infuriate.v.01", "resent.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السلاح",
@@ -1284,18 +1295,18 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 509
     },
     "orta": {
-      "kume": 8,
+      "kume": 9,
       "merkez_kok": "وغر",
       "merkez_mana": "to become enraged, to become angry, to be filled with malice",
-      "boy": 80
+      "boy": 108
     },
     "ince": {
-      "kume": 42,
+      "kume": 61,
       "merkez_kok": "سخط",
       "merkez_mana": "Sohat: öfke, kızgınlık",
       "boy": 19

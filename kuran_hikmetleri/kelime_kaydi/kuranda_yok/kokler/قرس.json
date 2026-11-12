@@ -847,6 +847,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "قرس البرد يقرس قرساً وقرس يقرس قرساً: اشتدّ. قال أوس:\nمطاعين في الهيجا مطاعيم في القرى ... إذا اصفرّ آفاق السماء من القرس\nوقال أبو زبيد:\nوقد تصلّيت حرذ نارهم ... كما تصلّى المقرور من قرس\nويوم قارس، وغداة قارسة. وماء قارس وقريس. ويقولون: شربت قارساً، وحلبت جالساً؛ أي ماء قراحاً وحلبت الغنم. وأقرس البرد أصابعه: يبّسها من الخصر فلا يستطيع أن يعمل، وقرست قرساً. وقرّس الماء: برّده. وفي الحديث: \" قرّسوا الماء في الشّنان \" وقرّسوا قريساً وهو مرق بلحم بقرٍ أو بأكارع يبرّد. قال مزرّد بن مزرّد:\nومغمّم طامٍ كأنّ فضاله ... في كل منثلم الإناء قريس\nوجمل قراسية: قويّ، وتقول: أنتم هنيدة سواسيه، ليس فيها قراسيه. وقرقست بالكلب: دعوت به. وعضّه القرقس. وختم الكتاب بالقرقس وهو طينة الختم. وتقول: عضّة القرقس، أهون من فضّة القرقس.",
+    "mecaz": "ملك قراسية، وعزّ قراسية. قال الطرماح:\nوالأزد تعلم أن تحت لوائها ... ملكاً قراسية وموت أحمر\nأي وثمّ موت. وقال:\nكم عدوّ لنا قراسية العرّ تركنا لحماً على أوفاض أو ضام.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "قرس البرد يقرس قرساً وقرس يقرس قرساً: اشتدّ. قال أوس: مطاعين في الهيجا مطاعيم في القرى ... إذا اصفرّ آفاق السماء من القرس وقال أبو زبيد: وقد تصلّيت حرذ نارهم ... كما تصلّى المقرور من قرس ويوم قارس، وغداة قارسة. وماء قارس وقريس. ويقولون: شربت قارساً، وحلبت جالس",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "ملك قراسية، وعزّ قراسية. قال الطرماح:",
+        "prototipe_benzerlik": 0.697,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "أي وثمّ موت. وقال:",
+        "prototipe_benzerlik": 0.307,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "كم عدوّ لنا قراسية العرّ تركنا لحماً على أوفاض أو ضام.",
+        "prototipe_benzerlik": 0.307,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.437,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -857,19 +890,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 7,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 331
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 33,
+      "kume": 37,
       "merkez_kok": "وقد",
       "merkez_mana": "Vakd: ateş yakmak; vakîd: ateş",
-      "boy": 44
+      "boy": 45
     },
     "ince": {
-      "kume": 215,
+      "kume": 244,
       "merkez_kok": "صرد",
       "merkez_mana": "",
       "boy": 6

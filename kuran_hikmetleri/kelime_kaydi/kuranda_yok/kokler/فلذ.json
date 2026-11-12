@@ -756,6 +756,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "تقول: هو فلذة من كبدي، وفلذت له من مالي: قطعت. وافتلذت منه حقّي: اقتطعته وانتزعته. قال:\nإذا المال لم يوجب عليك عطاءه ... صنيعة قربي أو حبيب توامقه\nمنعت وبعض المنع حرم وقوة ... ولم يفتلذك المال إلا حقائقه\nأي لم يفتلذ منك. وتقول: الضرب بالفواليذ، غير الضرب بالفواليذ، جمع: فولاذ وفالوذ.",
+    "mecaz": "إن من أشراط الساعة أن ترمي الأرض بأفلاذ كبدها.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "تقول: هو فلذة من كبدي، وفلذت له من مالي: قطعت. وافتلذت منه حقّي: اقتطعته وانتزعته. قال: إذا المال لم يوجب عليك عطاءه ... صنيعة قربي أو حبيب توامقه منعت وبعض المنع حرم وقوة ... ولم يفتلذك المال إلا حقائقه أي لم يفتلذ منك. وتقول: الضرب بالفواليذ، غير الضرب بالفو",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "إن من أشراط الساعة أن ترمي الأرض بأفلاذ كبدها.",
+        "prototipe_benzerlik": 0.06,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.06,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
@@ -766,19 +789,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
-      "merkez_kok": "حنج",
-      "merkez_mana": "",
-      "boy": 426
-    },
-    "orta": {
       "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 261
+      "boy": 466
+    },
+    "orta": {
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 17,
+      "kume": 23,
       "merkez_kok": "خدج",
       "merkez_mana": "feminine singular of خَدِيج (ḵadīj)",
       "boy": 25

@@ -1695,16 +1695,39 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "event.n.01",
-    "orta": "noun.act",
+    "ince": "press.v.01",
+    "orta": "verb.contact",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "compression.n.04",
-    "dayanak_tanim": "applying pressure",
+    "dayanak_synset": "press.v.01",
+    "dayanak_tanim": "exert pressure or force to or upon",
     "synset_sayisi": 4
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "كبس الحفرة: طمّها. وكبس رأسه في جيب قميصه: أدخله فيه؛ وهو عابس كابس. وإنه لكباس، غير خباس؛ إذا التجئ إليه كبس رأسه ولم يغتنم السعي. قال:\nهو الرزء المبين لا كباسٌ ... ثقيل الرأس يحلم بالنعيق\nلأنه راعي غنم. ولها قلادة من الكبيس وهو حليٌ مجوّف يكبس طيباً. ورجل أكبس: رؤاسيّ، ورأس أكبس، وهامة كبساء: عظيمة مستديرة. ووقع عليه الكابوس. وعنده كباسةٌ من بسر وكبائس وهي العذف التامّ بشماريخه.",
+    "mecaz": "جبهته كبستها الناصية، وناصية كابسة: مقبلة على الجبهة، وأرنبة كابسة: مقبلة على الشفة. وكبسوا عليهم وكبّسوا: اقتحموا عليهم. وسمعتهم يقولون: أدخله الله في الكبس، ولأدخلنّه في الكبس إذا قهره وأذلّه.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "كبس الحفرة: طمّها. وكبس رأسه في جيب قميصه: أدخله فيه؛ وهو عابس كابس. وإنه لكباس، غير خباس؛ إذا التجئ إليه كبس رأسه ولم يغتنم السعي. قال: هو الرزء المبين لا كباسٌ ... ثقيل الرأس يحلم بالنعيق لأنه راعي غنم. ولها قلادة من الكبيس وهو حليٌ مجوّف يكبس طيباً. ورجل أك",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "جبهته كبستها الناصية، وناصية كابسة: مقبلة على الجبهة، وأرنبة كابسة: مقبلة على الشفة. وكبسوا عليهم وكبّسوا: اقتحموا عليهم. وسمعتهم يقولون: أدخله الله في الكبس، ولأدخلنّه في الكبس إذا قهره وأذلّه.",
+        "prototipe_benzerlik": 0.762,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.762,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["act.n.02", "compress.v.02", "press.v.01", "talk_of.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "اللباس",
@@ -1715,22 +1738,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
-      "merkez_kok": "درك",
-      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "kume": 8,
+      "merkez_kok": "قبب",
+      "merkez_mana": "canopy, pavilion; dome, cupola",
+      "boy": 604
     },
     "orta": {
-      "kume": 22,
-      "merkez_kok": "درك",
-      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 193
+      "kume": 33,
+      "merkez_kok": "صبب",
+      "merkez_mana": "Sabb: dökmek, akıtmak; sabîb: akan",
+      "boy": 201
     },
     "ince": {
-      "kume": 124,
-      "merkez_kok": "نصص",
-      "merkez_mana": "text, document",
-      "boy": 47
+      "kume": 218,
+      "merkez_kok": "دلك",
+      "merkez_mana": "Delk: ovmak, sürtmek",
+      "boy": 33
     }
   },
   "kaliplar": {

@@ -1,0 +1,73 @@
+{
+  "kok": "صهـب",
+  "sinif": "reddedildi",
+  "turkce_fiil": null,
+  "mustaklar": {},
+  "reddedilen": [
+    ["kök", "صهـب", "üç harfli değil"]
+  ],
+  "sozlukler": {},
+  "kuran_gecisleri": 0,
+  "kuranda_var": false,
+  "sema": {
+    "sema": "graf-ic-graf",
+    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
+    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
+    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
+    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
+    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
+  },
+  "tasnif": {
+    "fasil": "صه",
+    "harf": "ص",
+    "mahrec": "esaliyye",
+    "bolge": "dil"
+  },
+  "mana_tasnif": {
+    "durum": "Arabic WordNet v2 kaydı yok"
+  },
+  "ses_mana_tasnif": {
+    "durum": "Cebel mu'cemlerinde kök yok"
+  },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "شعر أصهب: بيّن الصهب والصهبة وهي حمرة في سواد. ويقال: مسك أصهب، وعنبر أشهب. وجمل أصهب وصهابي وناقة صهباء وصهابية وإبل صهب وصهابية. قال ذو الرمة:\nصهابية غلب الرقاب كأنما ... تناط بألحيها فراعلة غثر\nوقيل منسوبة إلى صهاب: فحل.",
+    "mecaz": "يوم أصهب: شديد البرد. وموت صهابي، كقولهم: موت أحمر. قال النابغة:\nفجئنا إلى الموت الصهابي بعدما ... تجرد عريان من الشر أحدب\n\" وهو أصهب السبال \": للعدو. قال:\nفظلال السيوف شيّبن رأسي ... واعتناقي في الحرب صهب السبال\nوشربوا الصهباء. وأكلوا المصهب وهو اللحم المختلط بالشحم.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "شعر أصهب: بيّن الصهب والصهبة وهي حمرة في سواد. ويقال: مسك أصهب، وعنبر أشهب. وجمل أصهب وصهابي وناقة صهباء وصهابية وإبل صهب وصهابية. قال ذو الرمة: صهابية غلب الرقاب كأنما ... تناط بألحيها فراعلة غثر وقيل منسوبة إلى صهاب: فحل.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "يوم أصهب: شديد البرد. وموت صهابي، كقولهم: موت أحمر. قال النابغة:",
+        "prototipe_benzerlik": 0.262,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "\" وهو أصهب السبال \": للعدو. قال:",
+        "prototipe_benzerlik": 0.267,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وشربوا الصهباء. وأكلوا المصهب وهو اللحم المختلط بالشحم.",
+        "prototipe_benzerlik": -0.048,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.16,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
+  "muhassas_tasnif": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "mana_tasnif_gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
+  },
+  "kaliplar": {},
+  "kelimeler": []
+}

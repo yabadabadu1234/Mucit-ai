@@ -754,6 +754,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "ظلف نفسه: كفّها عما لا يجمل. قال ربيعة بن مقروم:\nوظلفت نفسي عن لئيم المأكل\nوقال آخر:\nوقد أظلف النفس عن مطمع ... إذا ما تهافت ذبانه\nورجل ظلف النفس، وفيه ظلف، وطريق ظلف، وأرض ظلفة: غليظة لا تؤدّي أثراً، ووقعوا في ظلف من الأرض. وظلفت أثري: أخفيته. قال عوف بن الأحوص:\nألم أظلف على الشعراء عرضي ... كما ظلف الوسيقة بالكراع\nأي عميت عليهم أثري. وأدبرت جنبيه ظلفات القتب وهي قوائمه شبهت بالأظلاف إلا أن البناء قد غير.",
+    "mecaz": "\" هو يأكله بضرس ويطؤه بظلف \". وهو في ظلف من العيش وشظف. ووجدت الدابة ظلفها: ما يظلفها ويكف شهوتها، وما وجدت عند فلان ظلفي: شهوتي. وفلان له الخف والظلف: الأنعام. وقال عمرو بن معد يكرب:\nوخيل تطأكم بأظلافها\nأي بحوافرها. وجاءت الإبل على ظلف واحد: متتابعة. وقاموا على ظلفاتهم: على أطرافهم. ونحن على ظلفات أمر وشفا أمر.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "ظلف نفسه: كفّها عما لا يجمل. قال ربيعة بن مقروم: وظلفت نفسي عن لئيم المأكل وقال آخر: وقد أظلف النفس عن مطمع ... إذا ما تهافت ذبانه ورجل ظلف النفس، وفيه ظلف، وطريق ظلف، وأرض ظلفة: غليظة لا تؤدّي أثراً، ووقعوا في ظلف من الأرض. وظلفت أثري: أخفيته. قال عوف بن الأح",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "\" هو يأكله بضرس ويطؤه بظلف \". وهو في ظلف من العيش وشظف. ووجدت الدابة ظلفها: ما يظلفها ويكف شهوتها، وما وجدت عند فلان ظلفي: شهوتي. وفلان له الخف والظلف: الأنعام. وقال عمرو بن معد يكرب:",
+        "prototipe_benzerlik": 0.642,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وخيل تطأكم بأظلافها",
+        "prototipe_benzerlik": 0.164,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "أي بحوافرها. وجاءت الإبل على ظلف واحد: متتابعة. وقاموا على ظلفاتهم: على أطرافهم. ونحن على ظلفات أمر وشفا أمر.",
+        "prototipe_benzerlik": 0.141,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.316,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السباع",
@@ -765,18 +798,18 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 42,
-      "merkez_kok": "وبر",
-      "merkez_mana": "Vaber: yün, deve tüyü; vebr: tavşan",
-      "boy": 84
+      "kume": 45,
+      "merkez_kok": "نسر",
+      "merkez_mana": "Nesr: kartal",
+      "boy": 54
     },
     "ince": {
-      "kume": 274,
+      "kume": 293,
       "merkez_kok": "بزز",
       "merkez_mana": "hawk",
       "boy": 18

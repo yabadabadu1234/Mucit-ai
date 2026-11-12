@@ -1613,16 +1613,48 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "lie.v.04",
+    "ince": "inhere_in.v.01",
     "orta": "verb.stative",
     "ust": "hâl ve vasıf",
-    "dayanak_synset": "lie.v.04",
-    "dayanak_tanim": "be and remain in a particular state or condition",
+    "dayanak_synset": "inhere_in.v.01",
+    "dayanak_tanim": "be part of",
     "synset_sayisi": 8
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "استخرجه من مكمنه ومكامنه، واختفى في مكمن حريز، وسر كامن ومكتمن، وتقول: حبك في الفراد كمين، وأنت بذاك قمين، وقد كمن الشيء واكتمن. وناقة كمون: كتوم للّقاح إذا لقحت ولم تبشّر به أي لم تشل بذنبها، وقد كمنت لقاحها تكمنه.",
+    "mecaz": "هذا أمر فيه كمين أي دغلٌ لا يفطن له.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "استخرجه من مكمنه ومكامنه، واختفى في مكمن حريز، وسر كامن ومكتمن، وتقول: حبك في الفراد كمين، وأنت بذاك قمين، وقد كمن الشيء واكتمن. وناقة كمون: كتوم للّقاح إذا لقحت ولم تبشّر به أي لم تشل بذنبها، وقد كمنت لقاحها تكمنه.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "هذا أمر فيه كمين أي دغلٌ لا يفطن له.",
+        "prototipe_benzerlik": 0.412,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.412,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "act.n.02",
+    "belong_to.v.01",
+    "inhere_in.v.01",
+    "lie.v.01",
+    "lie.v.04",
+    "populate.v.01",
+    "position.v.01",
+    "put.v.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "المكنيات والمبنيات والمثنيات",
@@ -1633,19 +1665,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "kume": 5,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 375
     },
     "orta": {
-      "kume": 36,
-      "merkez_kok": "نجس",
-      "merkez_mana": "Nicis: pislik, necis",
-      "boy": 123
+      "kume": 12,
+      "merkez_kok": "ردم",
+      "merkez_mana": "Redm: kapatmak, doldurmak; sedd: set",
+      "boy": 61
     },
     "ince": {
-      "kume": 227,
+      "kume": 69,
       "merkez_kok": "ستر",
       "merkez_mana": "Setr: örtmek, saklamak; setr: perde",
       "boy": 23

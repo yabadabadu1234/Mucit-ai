@@ -1450,6 +1450,65 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "جذب الحبل وغيره، واجتذبه إذا مده، وجاذبه الثوب وتجاذبوه.",
+    "mecaz": "جذب المهر عن أمه: فطمه. قال أبو النجم:\nثم جذبناه فطاماً نفصله\nوجذبت المرأة صبيها. وخطبت فلانة فجذبت خاطبها أي ردته، كأنخها جاذبته فجذبته أي غلبته فبان منها مغلوباً. وناقة فلان تجذب لبنها إذا حلبت أي تسرقه. وجذب فلان الحبل بيننا إذا قاطع. وجذبت الماء نفساً أو نفسين. وتجذب الراعي اللبن، وناقة جاذب: مدت وقت حملها إلى أحد عشر شهراً. وجذب الشهر: مضت عامته. وانجذبوا في السير، وانجذب بهم السير إذا ساروا مسيراً بعيداص. ومنه: وقعوا في وادي جذبات، وما أعطاه جذبة غزل أي شيئاً. وتجاذبوا أطراف\nالكلام، وكانت بينهم مجاذبات ثم اتفقوا.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "جذب الحبل وغيره، واجتذبه إذا مده، وجاذبه الثوب وتجاذبوه.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "جذب المهر عن أمه: فطمه. قال أبو النجم:",
+        "prototipe_benzerlik": 0.145,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "ثم جذبناه فطاماً نفصله",
+        "prototipe_benzerlik": 0.529,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وجذبت المرأة صبيها. وخطبت فلانة فجذبت خاطبها أي ردته، كأنخها جاذبته فجذبته أي غلبته فبان منها مغلوباً. وناقة فلان تجذب لبنها إذا حلبت أي تسرقه. وجذب فلان الحبل بيننا إذا قاطع. وجذبت الماء نفساً أو نفسين. وتجذب الراعي اللبن، وناقة جاذب: مدت وقت حملها إلى أحد عشر شهراً. وجذب الشهر: مضت عامته. وانجذبوا",
+        "prototipe_benzerlik": 0.153,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "الكلام، وكانت بينهم مجاذبات ثم اتفقوا.",
+        "prototipe_benzerlik": 0.145,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.243,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "act.n.02",
+    "bring.v.01",
+    "bring.v.04",
+    "bring.v.05",
+    "capture.v.02",
+    "capture.v.06",
+    "catch.v.02",
+    "catch.v.04",
+    "compress.v.02",
+    "concentrate.v.02",
+    "draw.v.10",
+    "draw.v.16",
+    "get.v.11",
+    "lend.v.01",
+    "natural_phenomenon.n.01",
+    "press.v.01",
+    "pull.v.01",
+    "talk_of.v.01",
+    "tempt.v.03",
+    "trip_up.v.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الإبل",
@@ -1460,22 +1519,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 14,
-      "merkez_kok": "جهد",
-      "merkez_mana": "Cehd: gayret, çaba; cehd: yorgunluk",
-      "boy": 135
+      "kume": 23,
+      "merkez_kok": "جلد",
+      "merkez_mana": "Cild: deri; cellâd: vurucu",
+      "boy": 125
     },
     "ince": {
-      "kume": 78,
-      "merkez_kok": "صوب",
-      "merkez_mana": "Savb: doğrultmak, yönelmek; sevâb: doğru yol",
-      "boy": 43
+      "kume": 134,
+      "merkez_kok": "غلب",
+      "merkez_mana": "Galebe: üstün gelmek; gâlib: üstün",
+      "boy": 36
     }
   },
   "kaliplar": {

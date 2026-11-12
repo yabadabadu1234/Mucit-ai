@@ -752,6 +752,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "طار زغبه وهو ما لان وصغر من الشعر والريش أول ما ينبت، وزغب الفرخ: نبت زغبه، وفرغ أزغب وأزيغب، وفراخ زغب ورقبة زغباء.",
+    "mecaz": "ما أعطاني زغبة، وا أصبت منه زغابة أي أدنى شيء. وقثّلاء زغباء وقثاء زغب، و\" أهدي إلى رسول الله صلى الله تعالى عليه وسلم أجر زغب \".\nز غ ز غ\nزغزغ به: سخر منه. وزغزغ كلامه: لم يلخص معناه. يقال: لا تزغزغ الكلام وبين الحق.\nز غ قال: صب عليه الزغفة وهي الدرع الواسعة، ولبسوا الزغف. وتقول: لا تشهدوا الزحف، حتى تلبسوا الزغف.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "طار زغبه وهو ما لان وصغر من الشعر والريش أول ما ينبت، وزغب الفرخ: نبت زغبه، وفرغ أزغب وأزيغب، وفراخ زغب ورقبة زغباء.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "ما أعطاني زغبة، وا أصبت منه زغابة أي أدنى شيء. وقثّلاء زغباء وقثاء زغب، و\" أهدي إلى رسول الله صلى الله تعالى عليه وسلم أجر زغب \".",
+        "prototipe_benzerlik": 0.633,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "زغزغ به: سخر منه. وزغزغ كلامه: لم يلخص معناه. يقال: لا تزغزغ الكلام وبين الحق.",
+        "prototipe_benzerlik": 0.34,
+        "halka": "orta"
+      },
+      {
+        "cumle": "ز غ قال: صب عليه الزغفة وهي الدرع الواسعة، ولبسوا الزغف. وتقول: لا تشهدوا الزحف، حتى تلبسوا الزغف.",
+        "prototipe_benzerlik": 0.314,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.429,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطير",
@@ -762,22 +795,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "kume": 5,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 375
     },
     "orta": {
-      "kume": 39,
-      "merkez_kok": "هضض",
-      "merkez_mana": "recurrence of sadness",
-      "boy": 52
+      "kume": 14,
+      "merkez_kok": "غدر",
+      "merkez_mana": "Gadr: ihanet, hile",
+      "boy": 153
     },
     "ince": {
-      "kume": 253,
-      "merkez_kok": "عفس",
-      "merkez_mana": "",
-      "boy": 21
+      "kume": 78,
+      "merkez_kok": "خبط",
+      "merkez_mana": "Habt: karanlıkta yürümek, şaşırmak",
+      "boy": 40
     }
   },
   "kaliplar": {

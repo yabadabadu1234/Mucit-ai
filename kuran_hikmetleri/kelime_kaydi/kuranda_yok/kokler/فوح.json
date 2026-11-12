@@ -786,6 +786,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "تفاوح مسك الغانيات ورنده\nوتقول: نزلنا في بستان تناوحت أطياره، وتفاوحت أنواره.\nف\nود\nحل الشّيب بفوديه وهما جانبا الرأس.",
+    "mecaz": "ارفع فود الخباء أي جانبه. وألقت العقاب فوديها على الهيثم أي جناحيها. ونزلوا بين فودي الوادي. واستلمت فود البيت أي ركنه. وما هذه العلاوة بني الفودين أي العكمين. وجعلت الكتاب فودين إذا طويت أعلاه وأسفله حتى صار نصفين. وتقول: وفد الشيب على فودك، فاستحي من وفدك.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "تفاوح مسك الغانيات ورنده وتقول: نزلنا في بستان تناوحت أطياره، وتفاوحت أنواره. ف ود حل الشّيب بفوديه وهما جانبا الرأس.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "ارفع فود الخباء أي جانبه. وألقت العقاب فوديها على الهيثم أي جناحيها. ونزلوا بين فودي الوادي. واستلمت فود البيت أي ركنه. وما هذه العلاوة بني الفودين أي العكمين. وجعلت الكتاب فودين إذا طويت أعلاه وأسفله حتى صار نصفين. وتقول: وفد الشيب على فودك، فاستحي من وفدك.",
+        "prototipe_benzerlik": 0.489,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.489,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["smell.v.02"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النخل",
@@ -796,22 +819,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "kume": 6,
+      "merkez_kok": "درك",
+      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
+      "boy": 1364
     },
     "orta": {
-      "kume": 10,
+      "kume": 22,
       "merkez_kok": "ذعن",
       "merkez_mana": "Za'n: boyun eğmek, kabul etmek",
-      "boy": 183
+      "boy": 82
     },
     "ince": {
-      "kume": 50,
-      "merkez_kok": "كرم",
-      "merkez_mana": "Kerem: cömertlik, şeref; kerîm: cömert",
-      "boy": 32
+      "kume": 130,
+      "merkez_kok": "جهد",
+      "merkez_mana": "Cehd: gayret, çaba; cehd: yorgunluk",
+      "boy": 37
     }
   },
   "kaliplar": {

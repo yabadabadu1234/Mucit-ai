@@ -765,7 +765,7 @@
   },
   "mana_tasnif": {
     "yontem": "Vikisözlük/Arabic Ontology İngilizce karşılığı → Princeton WordNet ilk anlam (makine eşlemesi, AWN kaydı yok)",
-    "ince": "person.n.01",
+    "ince": "whole.n.02",
     "orta": "noun.person",
     "ust": "insan ve toplum",
     "dayanak_synset": "director.n.01",
@@ -775,6 +775,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "نتح العرق من مناتحه، ورشح من مراشحه. ونحيٌ نتّاح: رشّاح.\nقال جرير:\nبأغبر وهّاج السّموم ترى به ... دفوف المهاري والذّفاري تنتّح\nأي ترشح عرقاً",
+    "mecaz": "فلان ينتح نتح الحميت إذا كان سميناً",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "نتح العرق من مناتحه، ورشح من مراشحه. ونحيٌ نتّاح: رشّاح. قال جرير: بأغبر وهّاج السّموم ترى به ... دفوف المهاري والذّفاري تنتّح أي ترشح عرقاً",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "فلان ينتح نتح الحميت إذا كان سميناً",
+        "prototipe_benzerlik": 0.141,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.141,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -785,22 +808,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 7,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 331
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 31,
+      "kume": 36,
       "merkez_kok": "سكب",
       "merkez_mana": "Sakb: dökmek, boşaltmak",
-      "boy": 76
+      "boy": 101
     },
     "ince": {
-      "kume": 206,
+      "kume": 239,
       "merkez_kok": "ذرف",
       "merkez_mana": "to flow (tears)",
-      "boy": 26
+      "boy": 30
     }
   },
   "kaliplar": {

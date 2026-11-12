@@ -1718,13 +1718,36 @@
     "ince": "event.n.01",
     "orta": "noun.event",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "nerve_impulse.n.01",
-    "dayanak_tanim": "the electrical discharge that travels along a nerve fiber",
+    "dayanak_synset": "pulsation.n.01",
+    "dayanak_tanim": "(electronics) a sharp transient wave in the normal electrical state (or a series of such transients)",
     "synset_sayisi": 4
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "نبض عرقه نبضاً ونبضاناً. وأنبضته\nالحمّى. وتقول: رأيت ومضة برق، كنبضة عرق. وأنبضَ عن القوس وأنبضها. قال أوس:\nإذا ما تعاطوها سمعت لصوتها ... إذا أنبضوا عنها نئيماً وأزملاً\nوقال مهلهلٌ:\nأنبضوا معجس القسيّ وأبرق ... نا كما أوعد الفحول الفحولا\nوأنبض بالوتر. ووضع يده على منبض قلبه حيث تراه ينبض وتجد همس نبضانه. وجس الطبيب منبضه ومنابضهم. وأنبض النّدّاف منبضه وهو مندفته.",
+    "mecaz": "فلان ما نبض له عرق عصبيّةٍ إذا لم يتعصّب، وما دام فيّ عريق نابض لم أخذلك أي ما دمت حياً. ونبض نابضه أي هاج غضبه. وله فؤاد نبض: شهم رواعٌ. ويقال لمن ينتحل ما ليس عنده: أداته إنباض من غير توتير. وما يعرف له منبض عسلة كقولهم: مضرب عسلةٍ إذا لم يكن له أصل.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "نبض عرقه نبضاً ونبضاناً. وأنبضته الحمّى. وتقول: رأيت ومضة برق، كنبضة عرق. وأنبضَ عن القوس وأنبضها. قال أوس: إذا ما تعاطوها سمعت لصوتها ... إذا أنبضوا عنها نئيماً وأزملاً وقال مهلهلٌ: أنبضوا معجس القسيّ وأبرق ... نا كما أوعد الفحول الفحولا وأنبض بالوتر. ووضع يد",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "فلان ما نبض له عرق عصبيّةٍ إذا لم يتعصّب، وما دام فيّ عريق نابض لم أخذلك أي ما دمت حياً. ونبض نابضه أي هاج غضبه. وله فؤاد نبض: شهم رواعٌ. ويقال لمن ينتحل ما ليس عنده: أداته إنباض من غير توتير. وما يعرف له منبض عسلة كقولهم: مضرب عسلةٍ إذا لم يكن له أصل.",
+        "prototipe_benzerlik": 0.909,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.909,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["beat.v.04", "happening.n.01", "pulsate.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السلاح",
@@ -1735,22 +1758,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 6,
+      "kume": 7,
       "merkez_kok": "لقلق",
       "merkez_mana": "",
-      "boy": 440
+      "boy": 386
     },
     "orta": {
-      "kume": 28,
-      "merkez_kok": "دبب",
-      "merkez_mana": "debbe: sürünmek, hareket / debbe: uğraşmak (?)",
-      "boy": 81
+      "kume": 31,
+      "merkez_kok": "وجف",
+      "merkez_mana": "Vecf: titremek, çarpmak",
+      "boy": 65
     },
     "ince": {
-      "kume": 182,
-      "merkez_kok": "دبب",
-      "merkez_mana": "debbe: sürünmek, hareket / debbe: uğraşmak (?)",
-      "boy": 14
+      "kume": 202,
+      "merkez_kok": "هزز",
+      "merkez_mana": "Hazz: sallamak, sarsmak",
+      "boy": 18
     }
   },
   "kaliplar": {

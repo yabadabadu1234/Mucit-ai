@@ -1405,16 +1405,39 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "cram.v.04",
-    "orta": "verb.change",
+    "ince": "march.v.01",
+    "orta": "verb.motion",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "cram.v.04",
-    "dayanak_tanim": "prepare (students) hastily for an impending exam",
+    "dayanak_synset": "march.v.01",
+    "dayanak_tanim": "march in a procession",
     "synset_sayisi": 2
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "\" ملعون من غير تخوم الأرض \". قال:\nيا بني التخوم لا تظلموها ... إن ظلم التخوم ذو عقال\nوبلاد عمان تتاخم بلاد الشحر. وبلادنا متاخمة لبلادهم أي محادة.",
+    "mecaz": "فلان طيب التخوم أي طيب العروق. وقد جعلت سرك على تخوم قلبي: لا أغفله. واجعل لي فيما أمرتني تخوماً انتهى إليه لا أجاوزه. قال عدي:\nجاعل همك التخوم فما أح ... فل قول الوشاة والأنذال",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "\" ملعون من غير تخوم الأرض \". قال: يا بني التخوم لا تظلموها ... إن ظلم التخوم ذو عقال وبلاد عمان تتاخم بلاد الشحر. وبلادنا متاخمة لبلادهم أي محادة.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "فلان طيب التخوم أي طيب العروق. وقد جعلت سرك على تخوم قلبي: لا أغفله. واجعل لي فيما أمرتني تخوماً انتهى إليه لا أجاوزه. قال عدي:",
+        "prototipe_benzerlik": 0.487,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.487,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["cram.v.04", "march.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
@@ -1425,22 +1448,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 18,
-      "merkez_kok": "همم",
-      "merkez_mana": "Hemm: istek, gayret; himmet",
-      "boy": 116
+      "kume": 16,
+      "merkez_kok": "درك",
+      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
+      "boy": 287
     },
     "ince": {
-      "kume": 99,
-      "merkez_kok": "هذب",
-      "merkez_mana": "to discipline",
-      "boy": 19
+      "kume": 100,
+      "merkez_kok": "بغغ",
+      "merkez_mana": "transgression, injustice, wrong",
+      "boy": 30
     }
   },
   "kaliplar": {

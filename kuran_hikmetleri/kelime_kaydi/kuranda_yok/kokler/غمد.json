@@ -1253,6 +1253,49 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "سيف مغمود ومغمد.",
+    "mecaz": "أغمد الحلس: جعله تحت الرحل ليقي به الظهر.\nقال الأعشى:\nووضع سقاء وأحقابه ... وحل حلوسٍ وأغمادها\nوأغمد الراكب متاعه إذا ركبه. وغمّده كذا: غطاه به كأنه جعله غمداً له. وقال العجاج:\nيغمّد الأعداء حوزاً مردسا\nأي يلقى عليهم كلكله كالأسد فيجعلهم تحت وتغمّده الله برحمته: ستره، ودخل عليه وبين يديه ثوب فتغمّده إذا جعله تحته ليغطّيه عن العيون. وقال ابن مقبل:\nإذا كان جري العين جوداً وديمة ... تغمد جري العين في الوعث وإبله\nوقال أبو النجم:\nصديء القباء من الحديد كأنه ... جملٌ تغمّده عصيم هناء\nوتغمد المكيال: ملأه. وركيٌ غامدٌ: ماؤه مغطّى بالتراب، وعكسه: ركيٌّ مبدٍ، وهو من باب: عيشة راضية. واغتمد الليل: دخل فيه وجعله لنفسه غمداً.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "سيف مغمود ومغمد.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "أغمد الحلس: جعله تحت الرحل ليقي به الظهر.",
+        "prototipe_benzerlik": 0.517,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وأغمد الراكب متاعه إذا ركبه. وغمّده كذا: غطاه به كأنه جعله غمداً له. وقال العجاج:",
+        "prototipe_benzerlik": 0.481,
+        "halka": "orta"
+      },
+      {
+        "cumle": "يغمّد الأعداء حوزاً مردسا",
+        "prototipe_benzerlik": 0.504,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "أي يلقى عليهم كلكله كالأسد فيجعلهم تحت وتغمّده الله برحمته: ستره، ودخل عليه وبين يديه ثوب فتغمّده إذا جعله تحته ليغطّيه عن العيون. وقال ابن مقبل:",
+        "prototipe_benzerlik": 0.452,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وتغمد المكيال: ملأه. وركيٌ غامدٌ: ماؤه مغطّى بالتراب، وعكسه: ركيٌّ مبدٍ، وهو من باب: عيشة راضية. واغتمد الليل: دخل فيه وجعله لنفسه غمداً.",
+        "prototipe_benzerlik": 0.508,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.492,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السلاح",
@@ -1263,22 +1306,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "kume": 6,
+      "merkez_kok": "درك",
+      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
+      "boy": 1364
     },
     "orta": {
-      "kume": 13,
-      "merkez_kok": "صدد",
-      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
-      "boy": 93
+      "kume": 23,
+      "merkez_kok": "جلد",
+      "merkez_mana": "Cild: deri; cellâd: vurucu",
+      "boy": 125
     },
     "ince": {
-      "kume": 66,
-      "merkez_kok": "صدد",
-      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
-      "boy": 22
+      "kume": 136,
+      "merkez_kok": "متن",
+      "merkez_mana": "Metn: sağlam yer, metin; metîn: sağlam",
+      "boy": 30
     }
   },
   "kaliplar": {

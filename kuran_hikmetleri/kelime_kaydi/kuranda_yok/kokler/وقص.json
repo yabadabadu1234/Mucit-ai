@@ -1299,6 +1299,60 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "وقصت عنقه: دقت، وهو موقوص العنق، وبه وقص وهو قصر العنق. وهو وهي أوقص ووقصاء.",
+    "mecaz": "وقصت الدّواب الإكام. كسرت رءوسها. قال ابن مقبل:\nفبعثتها تقص المقاصر بعد ما ... كربت حياة النار للمتنّور\nوالدابة تذب بذنبها فتقص عنها الذباب. وتوقّصت الرّكاب توقصاً وهو نزوها مع القرمطة كأنها تكسر الخطو، ومنه: خذ أوقص الطّريقين: أخصرهما. ووقّص على نارك من دقّ الحطب: ألق عليها الوقص وهو الدقاق التي تشبّع بها. ولا شيء في الأوقاص وهي الأشناق.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "وقصت عنقه: دقت، وهو موقوص العنق، وبه وقص وهو قصر العنق. وهو وهي أوقص ووقصاء.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "وقصت الدّواب الإكام. كسرت رءوسها. قال ابن مقبل:",
+        "prototipe_benzerlik": 0.556,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "والدابة تذب بذنبها فتقص عنها الذباب. وتوقّصت الرّكاب توقصاً وهو نزوها مع القرمطة كأنها تكسر الخطو، ومنه: خذ أوقص الطّريقين: أخصرهما. ووقّص على نارك من دقّ الحطب: ألق عليها الوقص وهو الدقاق التي تشبّع بها. ولا شيء في الأوقاص وهي الأشناق.",
+        "prototipe_benzerlik": 0.129,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.343,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "abate.v.02",
+    "abridge.v.01",
+    "act.n.02",
+    "announce.v.01",
+    "boil_down.v.02",
+    "condition.n.01",
+    "control.v.02",
+    "cut.v.01",
+    "decline.n.01",
+    "decrease.n.02",
+    "decrease.v.01",
+    "decrease.v.02",
+    "drop.v.07",
+    "happening.n.01",
+    "ignore.v.01",
+    "imperfection.n.01",
+    "limit.v.02",
+    "miss.v.06",
+    "reduce.v.01",
+    "reduce.v.18",
+    "reduce.v.20",
+    "refer.v.02",
+    "relate.v.05",
+    "shave.v.03",
+    "shrink.v.03"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النخل",
@@ -1309,22 +1363,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
+      "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 426
+      "boy": 466
     },
     "orta": {
-      "kume": 1,
-      "merkez_kok": "جنح",
-      "merkez_mana": "Cünûh: meyletmek, eğilmek; cenâh: kanat",
-      "boy": 165
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 2,
-      "merkez_kok": "لحس",
-      "merkez_mana": "to lick, to lap",
-      "boy": 31
+      "kume": 10,
+      "merkez_kok": "خمع",
+      "merkez_mana": "to limp, to be lame, to hobble",
+      "boy": 35
     }
   },
   "kaliplar": {

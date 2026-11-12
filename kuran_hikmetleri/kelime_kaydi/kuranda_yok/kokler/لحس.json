@@ -1151,16 +1151,44 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "talk.v.02",
-    "orta": "verb.communication",
-    "ust": "söz ve haber",
-    "dayanak_synset": "talk.v.02",
-    "dayanak_tanim": "express in speech",
+    "ince": "solve.v.01",
+    "orta": "verb.cognition",
+    "ust": "zihin ve ilim",
+    "dayanak_synset": "solve.v.01",
+    "dayanak_tanim": "find the solution to (a problem or question) or understand the meaning of",
     "synset_sayisi": 2
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "لحس الشيء بلسانه. وفي مثل \" أسرع من لحس الكلب أنفه \" ولحس الدود الصوف والجراد الخضر.",
+    "mecaz": "\" تركته بملاحس البقر أولاده \" إذا تركه بفلاة. ورجل ملحس: حريص يأخذ كلّ ما قدر عليه. وفلان أليس، ألدّ ملحس. وألحست الأرض: أنبتت ما تلحسه الدوابّ. وفلان لحوسٌ: يتتبّع الحلاوات كالذباب، وتقول: فلان لحوس، يحوس في المائدة ويحوس، وأخذتهم لواحس: سنون شداد، وسنة لاحسة: تلحس كلّ شيء من النبات. قال الكميت:\nوأنت ربيع الناس وابن ربيعهم ... إذا لقيت فيها السنون اللواحس\nوالتحست منه حقّي: أخذته. ورجل لاحوس: مشئوم يلحس قومه، كقولهم: قاشور.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "لحس الشيء بلسانه. وفي مثل \" أسرع من لحس الكلب أنفه \" ولحس الدود الصوف والجراد الخضر.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "\" تركته بملاحس البقر أولاده \" إذا تركه بفلاة. ورجل ملحس: حريص يأخذ كلّ ما قدر عليه. وفلان أليس، ألدّ ملحس. وألحست الأرض: أنبتت ما تلحسه الدوابّ. وفلان لحوسٌ: يتتبّع الحلاوات كالذباب، وتقول: فلان لحوس، يحوس في المائدة ويحوس، وأخذتهم لواحس: سنون شداد، وسنة لاحسة: تلحس كلّ شيء من النبات. قال الكميت:",
+        "prototipe_benzerlik": 0.285,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "والتحست منه حقّي: أخذته. ورجل لاحوس: مشئوم يلحس قومه، كقولهم: قاشور.",
+        "prototipe_benzerlik": 0.63,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.457,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["solve.v.01", "talk.v.02"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطير",
@@ -1171,22 +1199,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
+      "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 426
+      "boy": 466
     },
     "orta": {
-      "kume": 1,
-      "merkez_kok": "جنح",
-      "merkez_mana": "Cünûh: meyletmek, eğilmek; cenâh: kanat",
-      "boy": 165
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 2,
-      "merkez_kok": "لحس",
-      "merkez_mana": "to lick, to lap",
-      "boy": 31
+      "kume": 10,
+      "merkez_kok": "خمع",
+      "merkez_mana": "to limp, to be lame, to hobble",
+      "boy": 35
     }
   },
   "kaliplar": {

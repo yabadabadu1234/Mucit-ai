@@ -1626,16 +1626,74 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "person.n.01",
-    "orta": "noun.person",
-    "ust": "insan ve toplum",
-    "dayanak_synset": "user.n.01",
-    "dayanak_tanim": "a person who makes use of a thing; someone who uses or employs something",
+    "ince": "event.n.01",
+    "orta": "noun.act",
+    "ust": "fiil ve hadise",
+    "dayanak_synset": "service.n.05",
+    "dayanak_tanim": "employment in or work for another",
     "synset_sayisi": 46
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "هي ريّا المخدم وهو المخلخل. وفي مثل \" كالممهورة إحدى خدمتيها \" وفي سوقهن الخدم والخدام. وخدمها زوجها، وامرأة مخدمة مخدمة: من الخدمة والخدمة. وخدمه\nخدمة. وهو مؤدب الخدام والخدم، وهو من المقدمين المخدمين. قال:\nمخدمون ثقال في مجالسهم ... وفي الرحال إذا وافيتهم خدم\nواستخدمته، وتخدّمت خادماً: اتخذته، ولا بد لمن ليس له خادم أن يختدم أي يخدم نفسه، وهذا خادمنا، وهذه خادمنا، للغلام والجارية.",
+    "mecaz": "فض الله خدمتكم. وأبدت الحرب عن خدام المخدرات إذا اشتدت. ومخدم سراويله يتذبذب، وكذلك خدمة سراويله، وخدمة إزاره وهي أسفله عند الكعب. وفرس مخدم: تحجيله فوق أرساغه. وطاحت خدام الإبل وهي سيور فوق أرساغها تشد إليها الشرائج، الواحدة خدمة. وشاة خدماء: بينة الخدمة بوزن اعلحمرة وهي بياض في الأوظفة. وسقى أعرابي ماء المزمل فقال: هو ماء مخدوم. وسمعتهم يقولون: هذا القميص يخدم سنة، وهذا ثوب سخيف لا يخدم.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "هي ريّا المخدم وهو المخلخل. وفي مثل \" كالممهورة إحدى خدمتيها \" وفي سوقهن الخدم والخدام. وخدمها زوجها، وامرأة مخدمة مخدمة: من الخدمة والخدمة. وخدمه خدمة. وهو مؤدب الخدام والخدم، وهو من المقدمين المخدمين. قال: مخدمون ثقال في مجالسهم ... وفي الرحال إذا وافيتهم خد",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "فض الله خدمتكم. وأبدت الحرب عن خدام المخدرات إذا اشتدت. ومخدم سراويله يتذبذب، وكذلك خدمة سراويله، وخدمة إزاره وهي أسفله عند الكعب. وفرس مخدم: تحجيله فوق أرساغه. وطاحت خدام الإبل وهي سيور فوق أرساغها تشد إليها الشرائج، الواحدة خدمة. وشاة خدماء: بينة الخدمة بوزن اعلحمرة وهي بياض في الأوظفة. وسقى أعراب",
+        "prototipe_benzerlik": 0.691,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.691,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "accept.v.05",
+    "act.n.02",
+    "act.v.01",
+    "act.v.02",
+    "act.v.05",
+    "admit.v.03",
+    "applied.a.01",
+    "consume.v.02",
+    "dissemble.v.03",
+    "drill.v.03",
+    "employment.n.01",
+    "engage.v.08",
+    "exert.v.01",
+    "hire.v.01",
+    "imply.v.05",
+    "living_thing.n.01",
+    "meet.v.10",
+    "minister.v.02",
+    "necessitate.v.01",
+    "organization.n.01",
+    "recruit.v.02",
+    "serve.v.02",
+    "serve.v.03",
+    "serve.v.07",
+    "serve.v.09",
+    "service.v.01",
+    "spend.v.01",
+    "spend.v.02",
+    "suffice.v.01",
+    "undertake.v.02",
+    "use.v.01",
+    "use.v.02",
+    "use.v.03",
+    "used.a.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الغرائز",
@@ -1646,22 +1704,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 14,
-      "merkez_kok": "جهد",
-      "merkez_mana": "Cehd: gayret, çaba; cehd: yorgunluk",
-      "boy": 135
+      "kume": 17,
+      "merkez_kok": "رحب",
+      "merkez_mana": "Rahb: geniş, ferah; rahabe: genişlik",
+      "boy": 51
     },
     "ince": {
-      "kume": 75,
+      "kume": 102,
       "merkez_kok": "فءء",
       "merkez_mana": "group, band, division, class",
-      "boy": 8
+      "boy": 18
     }
   },
   "kaliplar": {

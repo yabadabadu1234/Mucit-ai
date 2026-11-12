@@ -1786,11 +1786,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "escape.v.01",
+    "ince": "scat.v.01",
     "orta": "verb.motion",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "escape.v.01",
-    "dayanak_tanim": "run away from confinement",
+    "dayanak_synset": "scat.v.01",
+    "dayanak_tanim": "flee; take to one's heels; cut and run",
     "synset_sayisi": 2
   },
   "ses_mana_tasnif": {
@@ -1801,32 +1801,43 @@
     "fasil_ozeti": "° معنى الفصل المعجمي (فل): هو نوع من الانفصال نُدورا أو نتوءًا مع ضعف كما يتمثل في ثلم حدَّ السيف ونحوه فهو نُدُور كِسرة دقيقة من حدّه ويسبب ضعفَه أى ذهابَ حدته - في (فلل)، وكما يتمثل في انتبار لحم الورك مع رخاوته - في (فيل)، وفي أفول الشمس والقمر والنجم أي ذهاب ضوئهن بغيابهن في فجوة مغيبهن وكذا في انفصال الأفيل من أمه وإضافته إلى الحوزة مع صغره - في (أفل)، وفي شق الأرض - والشق من جنس الانفصال - في (فلح)، وفي شق الجبل وكسر الجفنة - في (فلق)، وفي نتوء فلكة المغزل مع لطف استدارتها - في (فلك)، وفي انفراد الحي المكني عنه بفلان أو جهالته في (فلن).",
     "tam_metin": "{...... رَأَى كَوْكَبًا قَالَ هَذَا رَبِّي فَلَمَّا أَفَلَ قَالَ لَا أُحِبُّ الْآفِلِينَ} [الأنعام: 76]\n\"أَفَل الحَمْل في الرَحِم: استَقَرّ في قَراره. ويقال للحامل: آفل. وأَفَلَت الشمسُ والقمرُ وسائرُ الكواكب: غَابَت. والأَفِيل: الفصيلُ/ ابن المخاض فما فوقه \".\n° المعنى المحوري\nغياب الشيء (الحادّ) في مقره مع ضَعْفٍ ما: كالحمل في الرحم، والشمس والكواكب في مغيبها. وأما الأفيل فهو إضافة شيء زائد (منفصل) إلى حوزتهم مع الضعف (صغره أو لطف هذه الإضافة). وليس في القرآن الكريم من التركيب إلا أفول الكواكب والقمر والشمس."
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "نجوم أفل وأفول. وفلان كعبه سافل، ونجمه آفل. والقرم من الأفيل أي الكبير من الصغير. وتقول: ما الشيوخ كالأطفال، ولا البزل كالإفال.",
+    "mecaz": "",
+    "kinaye": "",
+    "mecaz_var": false
+  },
+  "prototip_yayilim_tasnif": {
+    "durum": "prototip veya mecaz kolu yok"
+  },
+  "kolekzifikasyon_kavramlari": ["escape.v.01", "scat.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الإبل",
     "bab": "",
-    "kok_gecis": 15.5,
+    "kok_gecis": 14.3,
     "kitapta_gecis": 7.0,
-    "zenginlesme": 6.93
+    "zenginlesme": 7.5
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "kume": 5,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 375
     },
     "orta": {
-      "kume": 38,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 203
+      "kume": 12,
+      "merkez_kok": "ردم",
+      "merkez_mana": "Redm: kapatmak, doldurmak; sedd: set",
+      "boy": 61
     },
     "ince": {
-      "kume": 250,
-      "merkez_kok": "هلك",
-      "merkez_mana": "Helâk: yok olmak, ölmek",
-      "boy": 16
+      "kume": 71,
+      "merkez_kok": "جثث",
+      "merkez_mana": "Cesed: ceset, cisim; cesse: cüsse",
+      "boy": 28
     }
   },
   "kaliplar": {

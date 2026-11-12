@@ -688,6 +688,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "غلت برمتكم ففثأتها أي سكّنت غليانها.",
+    "mecaz": "فثأت غضبه، وكان فلان مغتاظاً عليك ففثأته عنك، وفي المثل \" إن الرثيئة مما يفثأ الغضب \" وتقول: أطفأ فلان النائره، وفتأ القدور الفائره. قال:\nتفور علينا قدرهم فنديمها ... ونفثؤها عنّا إذا حميها غلا\nوما فثأك عنّا؟: ما حبسك. وفثأته عن رأيه: صرفته. وفثأت الشمس من برد الماء: كسرت منه. ولقد نويتم المسير ثم أقمتم عنه وأفثأتم. وأطبقت السماء ثم أفثأت أي أجهت. وما يفثؤ يفعل كذا بمعنى التاء.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "غلت برمتكم ففثأتها أي سكّنت غليانها.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "فثأت غضبه، وكان فلان مغتاظاً عليك ففثأته عنك، وفي المثل \" إن الرثيئة مما يفثأ الغضب \" وتقول: أطفأ فلان النائره، وفتأ القدور الفائره. قال:",
+        "prototipe_benzerlik": 0.576,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وما فثأك عنّا؟: ما حبسك. وفثأته عن رأيه: صرفته. وفثأت الشمس من برد الماء: كسرت منه. ولقد نويتم المسير ثم أقمتم عنه وأفثأتم. وأطبقت السماء ثم أفثأت أي أجهت. وما يفثؤ يفعل كذا بمعنى التاء.",
+        "prototipe_benzerlik": 0.624,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.6,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "المقصور والممدود",
@@ -698,19 +726,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 2,
+      "kume": 1,
       "merkez_kok": "قره",
       "merkez_mana": "",
       "boy": 759
     },
     "orta": {
-      "kume": 4,
+      "kume": 2,
       "merkez_kok": "فلص",
       "merkez_mana": "",
       "boy": 494
     },
     "ince": {
-      "kume": 20,
+      "kume": 2,
       "merkez_kok": "جررب",
       "merkez_mana": "",
       "boy": 70

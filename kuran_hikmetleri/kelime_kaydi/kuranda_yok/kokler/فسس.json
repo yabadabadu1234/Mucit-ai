@@ -872,16 +872,23 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "location.n.01",
-    "orta": "noun.location",
-    "ust": "ölçü, mekân ve zaman",
-    "dayanak_synset": "fez.n.01",
-    "dayanak_tanim": "a city in north central Morocco; religious center",
+    "ince": "whole.n.02",
+    "orta": "noun.artifact",
+    "ust": "cisim ve eşya",
+    "dayanak_synset": "dress.n.01",
+    "dayanak_tanim": "a one-piece garment for a woman; has skirt and bodice",
     "synset_sayisi": 2
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "prototip_yayilim_tasnif": {
+    "durum": "prototip veya mecaz kolu yok"
+  },
+  "kolekzifikasyon_kavramlari": ["artifact.n.01", "region.n.03"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الحشرات",
@@ -893,21 +900,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "merkez_kok": "قبب",
+      "merkez_mana": "canopy, pavilion; dome, cupola",
+      "boy": 604
     },
     "orta": {
-      "kume": 36,
-      "merkez_kok": "نجس",
-      "merkez_mana": "Nicis: pislik, necis",
-      "boy": 123
+      "kume": 32,
+      "merkez_kok": "دثر",
+      "merkez_mana": "Tedsîr: örtmek, bürümek; desr: örtü",
+      "boy": 148
     },
     "ince": {
-      "kume": 228,
-      "merkez_kok": "خرم",
-      "merkez_mana": "to make a hole by digging",
-      "boy": 23
+      "kume": 209,
+      "merkez_kok": "قبب",
+      "merkez_mana": "canopy, pavilion; dome, cupola",
+      "boy": 35
     }
   },
   "kaliplar": {

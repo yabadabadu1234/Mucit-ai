@@ -767,6 +767,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "رجل أشوس، وامرأة شوساء، وقوم شوس. وفيه شوس وهو النظر بشق العين وقيل: أن يصغر عينه ويضم الأجفان، وقد تشاوس. قال أوس بن حجر:\nرأيت يزيداً يدّريني بعينه ... تشاوس رويداً إنني من تأمل",
+    "mecaz": "بلي فلان بشوس الخطوب. وصرى مشاوس: بعيد الغور قليل لا يكاد يرى كأنه يشاوس الوارد. وأنشد أبو عمرو:\nأدليت دلوي في صرًى مشاوس",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "رجل أشوس، وامرأة شوساء، وقوم شوس. وفيه شوس وهو النظر بشق العين وقيل: أن يصغر عينه ويضم الأجفان، وقد تشاوس. قال أوس بن حجر: رأيت يزيداً يدّريني بعينه ... تشاوس رويداً إنني من تأمل",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "بلي فلان بشوس الخطوب. وصرى مشاوس: بعيد الغور قليل لا يكاد يرى كأنه يشاوس الوارد. وأنشد أبو عمرو:",
+        "prototipe_benzerlik": 0.78,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "أدليت دلوي في صرًى مشاوس",
+        "prototipe_benzerlik": 0.542,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.661,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الغرائز",
@@ -777,22 +805,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
+      "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 426
+      "boy": 466
     },
     "orta": {
-      "kume": 1,
-      "merkez_kok": "جنح",
-      "merkez_mana": "Cünûh: meyletmek, eğilmek; cenâh: kanat",
-      "boy": 165
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 5,
+      "kume": 12,
       "merkez_kok": "ديث",
       "merkez_mana": "to be submissive, to be compliant, to be cucked, to be tame",
-      "boy": 23
+      "boy": 27
     }
   },
   "kaliplar": {

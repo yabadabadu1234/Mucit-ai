@@ -852,16 +852,23 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "whole.n.02",
-    "orta": "noun.artifact",
-    "ust": "cisim ve eşya",
-    "dayanak_synset": "conduit.n.01",
-    "dayanak_tanim": "a passage (a pipe or tunnel) through which water or electric wires can pass",
+    "ince": "body_of_water.n.01",
+    "orta": "noun.object",
+    "ust": "tabiat",
+    "dayanak_synset": "channel.n.04",
+    "dayanak_tanim": "a deep and relatively narrow body of water (as in a river or a harbor or a strait linking two larger bodies) that allows the best passage for vessels",
     "synset_sayisi": 4
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "prototip_yayilim_tasnif": {
+    "durum": "prototip veya mecaz kolu yok"
+  },
+  "kolekzifikasyon_kavramlari": ["artifact.n.01", "body_part.n.01", "channel.n.04", "get.v.22"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السلاح",
@@ -872,22 +879,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "kume": 7,
+      "merkez_kok": "لقلق",
+      "merkez_mana": "",
+      "boy": 386
     },
     "orta": {
-      "kume": 43,
-      "merkez_kok": "خرز",
-      "merkez_mana": "awl",
-      "boy": 104
+      "kume": 26,
+      "merkez_kok": "طعل",
+      "merkez_mana": "to come upon, befall",
+      "boy": 91
     },
     "ince": {
-      "kume": 281,
-      "merkez_kok": "خرز",
-      "merkez_mana": "awl",
-      "boy": 42
+      "kume": 152,
+      "merkez_kok": "بوب",
+      "merkez_mana": "Bâb: kapı; bölüm, başlık",
+      "boy": 9
     }
   },
   "kaliplar": {

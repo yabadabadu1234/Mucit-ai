@@ -826,6 +826,44 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "ثوب أمسل، وثياب ملس. وصخرة ملساء، وملس الشيء ملاسة واملاس وتملّس، وملسته. وملس أرضه بالملاسة والمملسة وهي الخشبة التي يملس بها.",
+    "mecaz": "قهوة ملساء: سلسة الجرع، كما قيل للماء: زلال وسلسال. قال أبو النجم:\nتسقى الأراك النضر من زلالها ... برد الفراتيّة في قلالها\nبالقهوة الملساء من جريالها\nأي تسقي المساويك ريقتها التي هي كماء الفرات ممزوجاً بالخمر. وأرض ملساء. وسنة ملساء: بلا نبات. وبعير أملس: خلاف الأجرب: وبيد أماليس. وجلد فلان أملس إذا لم يتعلق به ذمّ. قال المتلمّس:\nفلا تقبلن ضيماً مخافة ميتة ... وموتن بها حراً وجلدك أملس\n\" وبايعتك الملسى \": البيعة التي لا تتعلّق بها تبعةٌ ولا عهدة. وتملّس من الأمر: تخلّص منه. وتملس فلان من يدي وانملس. وتملّس من بين القوم. وملسته: خلّصته. واختلسن بصره وامتلس. وملست الإبل ملساً: أسرعت.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "ثوب أمسل، وثياب ملس. وصخرة ملساء، وملس الشيء ملاسة واملاس وتملّس، وملسته. وملس أرضه بالملاسة والمملسة وهي الخشبة التي يملس بها.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "قهوة ملساء: سلسة الجرع، كما قيل للماء: زلال وسلسال. قال أبو النجم:",
+        "prototipe_benzerlik": 0.244,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "بالقهوة الملساء من جريالها",
+        "prototipe_benzerlik": 0.385,
+        "halka": "orta"
+      },
+      {
+        "cumle": "أي تسقي المساويك ريقتها التي هي كماء الفرات ممزوجاً بالخمر. وأرض ملساء. وسنة ملساء: بلا نبات. وبعير أملس: خلاف الأجرب: وبيد أماليس. وجلد فلان أملس إذا لم يتعلق به ذمّ. قال المتلمّس:",
+        "prototipe_benzerlik": 0.312,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "\" وبايعتك الملسى \": البيعة التي لا تتعلّق بها تبعةٌ ولا عهدة. وتملّس من الأمر: تخلّص منه. وتملس فلان من يدي وانملس. وتملّس من بين القوم. وملسته: خلّصته. واختلسن بصره وامتلس. وملست الإبل ملساً: أسرعت.",
+        "prototipe_benzerlik": 0.219,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.29,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["smooth.a.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -837,21 +875,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 45,
-      "merkez_kok": "متن",
-      "merkez_mana": "Metn: sağlam yer, metin; metîn: sağlam",
-      "boy": 268
+      "kume": 36,
+      "merkez_kok": "سكب",
+      "merkez_mana": "Sakb: dökmek, boşaltmak",
+      "boy": 101
     },
     "ince": {
-      "kume": 299,
-      "merkez_kok": "جيد",
-      "merkez_mana": "Cid: boyun; cevâd: iyi cins at",
-      "boy": 19
+      "kume": 242,
+      "merkez_kok": "فرت",
+      "merkez_mana": "Ferd: tek, eşsiz; fertin: tekil",
+      "boy": 20
     }
   },
   "kaliplar": {

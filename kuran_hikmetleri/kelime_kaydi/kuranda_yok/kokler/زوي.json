@@ -1046,13 +1046,36 @@
     "ince": "whole.n.02",
     "orta": "noun.artifact",
     "ust": "cisim ve eşya",
-    "dayanak_synset": "corner.n.11",
-    "dayanak_tanim": "(architecture) solid exterior angle of a building; especially one formed by a cornerstone",
+    "dayanak_synset": "edge.n.03",
+    "dayanak_tanim": "a sharp side formed by the intersection of two surfaces of an object",
     "synset_sayisi": 8
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "أدركه زوّ المنية: قدرها. وكان تواً، فصار زواً: زوجاً. وركبوا في الزو وهو اسم لمجموع سفينتين تقرنان. وزوى وجهه، وفي وجهه مزاو. وأسمعه كلاماً فانزوى له ما بين عينيه، وزوى ما بين عينيه. وانزوت الجلدة في النار وتزوت: تقبضت. وزويت لي الأرض. وتزوى في الزاوية. وتقول: لا تزال في الزاوية، كأنك من أهل الزاوية؛ وهو موضع بالبصرة.",
+    "mecaz": "زوى المال وغيره: اختاره. وزوى عني حقه. وزوى الرجل الميراث عن ورثته: عدل به عنهم. وقد انزويت عنا أي انقبضت فلا تباسطنا.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "أدركه زوّ المنية: قدرها. وكان تواً، فصار زواً: زوجاً. وركبوا في الزو وهو اسم لمجموع سفينتين تقرنان. وزوى وجهه، وفي وجهه مزاو. وأسمعه كلاماً فانزوى له ما بين عينيه، وزوى ما بين عينيه. وانزوت الجلدة في النار وتزوت: تقبضت. وزويت لي الأرض. وتزوى في الزاوية. وتقول:",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "زوى المال وغيره: اختاره. وزوى عني حقه. وزوى الرجل الميراث عن ورثته: عدل به عنهم. وقد انزويت عنا أي انقبضت فلا تباسطنا.",
+        "prototipe_benzerlik": 0.989,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.989,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["angular.a.01", "angular_shape.n.01", "artifact.n.01", "point.n.02", "space.n.02"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
@@ -1063,22 +1086,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
+      "kume": 8,
       "merkez_kok": "قبب",
       "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "boy": 604
     },
     "orta": {
-      "kume": 43,
-      "merkez_kok": "خرز",
-      "merkez_mana": "awl",
-      "boy": 104
+      "kume": 32,
+      "merkez_kok": "دثر",
+      "merkez_mana": "Tedsîr: örtmek, bürümek; desr: örtü",
+      "boy": 148
     },
     "ince": {
-      "kume": 281,
-      "merkez_kok": "خرز",
-      "merkez_mana": "awl",
-      "boy": 42
+      "kume": 206,
+      "merkez_kok": "طنف",
+      "merkez_mana": "overhang of a mountain, projectory part of a peak in a landscape, knol",
+      "boy": 13
     }
   },
   "kaliplar": {

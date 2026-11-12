@@ -1578,6 +1578,54 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "نعر الرجل نعيراً ونعرة شديدة. قال:\nكلا وربّ الكعبة المستورة ... وما تلا محمد من سوره\nوالنعرات من أبي محذوره\nوهو صوت في الخيشوم. وامرأة نعارة: صخّابة، ومنه: نعرة الحمار. قال:\nوالأخدريّات تغنّيها النعر\nونعر اعلحمار فهو نعر. وقيل للدّولاب: النّاعور: لنعيره، وما أكثر النّواعير على شطّ الفرات!.",
+    "mecaz": "ما كانت فتنةٌ إلاّ نعر فيها فلان إذا نهض فيها وتكلّم، وإنّه لنعّار في الفتن. ويقال: قد أطرت بهذا صوتاً نعّاراً أي أشعته. ونعر العرق بالدّم إذا فار وصوّت عند خروجه، وجرح نعور ونعّار. قال:\nصرت نظرةً لو صادفت جوز دارع ... غدا والعواصي من دم الجوف تنعر\nوسفر تعور: بعيد. قال عش بن نذير:\nتسائل أم قيس بني معان ... أيأتي الشأم عشّ أم نذير\nوهل مستنكر لي أم عمرو ... إذا ما اعتادني السفر النعور\nوإن في رأسه لنعرةً: للمتكبّر، ولأطيّرنّ نعرتك. قال:\nصعصع لا تغررك مني الخزره ... إذا غضبت واعترتني النّعره\nالخزرة: الزلخة وهي وجع في الصلب، وقد استعار العجذاج النعر في قوله:\nوالشّدنيّات يساقطن النّعر\nللأجنة. ويقال أنعر الأراك: أثمر شبّه ثمره بالنعر كما قيل. أدبي الرّمث: من الدّبا. ونعر فلان في قفا الإفلاس إذا استغنى.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "نعر الرجل نعيراً ونعرة شديدة. قال: كلا وربّ الكعبة المستورة ... وما تلا محمد من سوره والنعرات من أبي محذوره وهو صوت في الخيشوم. وامرأة نعارة: صخّابة، ومنه: نعرة الحمار. قال: والأخدريّات تغنّيها النعر ونعر اعلحمار فهو نعر. وقيل للدّولاب: النّاعور: لنعيره، وما أ",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "ما كانت فتنةٌ إلاّ نعر فيها فلان إذا نهض فيها وتكلّم، وإنّه لنعّار في الفتن. ويقال: قد أطرت بهذا صوتاً نعّاراً أي أشعته. ونعر العرق بالدّم إذا فار وصوّت عند خروجه، وجرح نعور ونعّار. قال:",
+        "prototipe_benzerlik": 0.839,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وسفر تعور: بعيد. قال عش بن نذير:",
+        "prototipe_benzerlik": 0.558,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وإن في رأسه لنعرةً: للمتكبّر، ولأطيّرنّ نعرتك. قال:",
+        "prototipe_benzerlik": 0.833,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "الخزرة: الزلخة وهي وجع في الصلب، وقد استعار العجذاج النعر في قوله:",
+        "prototipe_benzerlik": 0.282,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "والشّدنيّات يساقطن النّعر",
+        "prototipe_benzerlik": 0.194,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "للأجنة. ويقال أنعر الأراك: أثمر شبّه ثمره بالنعر كما قيل. أدبي الرّمث: من الدّبا. ونعر فلان في قفا الإفلاس إذا استغنى.",
+        "prototipe_benzerlik": 0.154,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.477,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["grunt.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطير",
@@ -1588,22 +1636,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
-      "merkez_kok": "درك",
-      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 21,
-      "merkez_kok": "همس",
-      "merkez_mana": "Hamis: fısıldamak, gizlice konuşmak",
-      "boy": 97
+      "kume": 39,
+      "merkez_kok": "صرخ",
+      "merkez_mana": "Sarih: bağırmak, feryat",
+      "boy": 34
     },
     "ince": {
-      "kume": 116,
-      "merkez_kok": "نعر",
-      "merkez_mana": "to emit a sound through the nose, to snort, to grunt",
-      "boy": 12
+      "kume": 256,
+      "merkez_kok": "شخر",
+      "merkez_mana": "to snore",
+      "boy": 7
     }
   },
   "kaliplar": {

@@ -1639,29 +1639,78 @@
     "fasil_ozeti": "° معنى الفصل المعجمي (رن): مادة تغطي على الحس وتمنع النفاذ - كالصوت الشديد - في (رنن)، فإنه يمنع الأذن أي يحجبها عن سماع غيره، وكالصدأ الذي يعلو السيف والمرآة - في (رين) فيحجب جوهرهما ويعوق عملهما.",
     "tam_metin": "\"الرَنَّة - بالفتح: الصيحة الحزينة. والرَنَّة والرَنين والإرْنان: الصيحة الشديدة والصوت الحزين عند الغناء أو البكاء. أطيارٌ مُرِنّة. وأرنّت القوس في إنباضها، والمرأة في نَوْحها، والحمامةُ في سَجْعها، والحمارُ في نهيقه، والسحابةُ في رَعْدها، والماءُ في خريره \".\n° المعنى المحوري\nصوت حادّ أو مؤثر يصدر عن حيّ أو غيره (1) كتلك الأصوات المختلفة من مصادرها (رنين المرأة هو صراخها عند المصيبة) وفي سامعها."
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "سمعت له رنة ورنيناً: صبحة حزينة، وقد رنّ وأرنّ.",
+    "mecaz": "أرنت القوس والسحابة، وقوس وسحابة مرنان. وعود ذو رنة.\nر ن\nورنا إليه ورنا له رنواً: أدام إليه النظر وظل رانياً إليه. وكأس رنوناة: دائمة. قال ابن أحمر:\nمدت عليه الملك أطنابه ... كأس رنوناة وطرف طمز\nومن المجاز: حدّثني فرنوت إلى حديثه. ورنوت عنه: تغافلت. وأسأل الله أن يرنيكم إلى الطاعة أي يصيّركم تسكنون إليها لا إلى غيرها. وله شرف يراني الكواكب، سمعته من العرب.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Cebel mihverî mana",
+    "prototip": "صوت حادّ أو مؤثر يصدر عن حيّ أو غيره (1) كتلك الأصوات المختلفة من مصادرها (رنين المرأة هو صراخها عند المصيبة) وفي سامعها.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "أرنت القوس والسحابة، وقوس وسحابة مرنان. وعود ذو رنة.",
+        "prototipe_benzerlik": 0.263,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "ورنا إليه ورنا له رنواً: أدام إليه النظر وظل رانياً إليه. وكأس رنوناة: دائمة. قال ابن أحمر:",
+        "prototipe_benzerlik": 0.209,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "ومن المجاز: حدّثني فرنوت إلى حديثه. ورنوت عنه: تغافلت. وأسأل الله أن يرنيكم إلى الطاعة أي يصيّركم تسكنون إليها لا إلى غيرها. وله شرف يراني الكواكب، سمعته من العرب.",
+        "prototipe_benzerlik": 0.164,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.212,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "affect.v.05",
+    "happening.n.01",
+    "hit.v.02",
+    "hit.v.05",
+    "make_noise.v.01",
+    "resonate.v.01",
+    "resound.v.01",
+    "ring.v.01",
+    "rinse.v.01",
+    "sound.v.02",
+    "sound_property.n.01",
+    "strike.v.01",
+    "surround.v.01",
+    "teach.v.01",
+    "tinkle.v.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "خلق الإنسان",
     "bab": "الفصاحة",
-    "kok_gecis": 43.0,
+    "kok_gecis": 40.2,
     "kitapta_gecis": 12.5,
-    "zenginlesme": 3.4
+    "zenginlesme": 3.64
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
-      "merkez_kok": "درك",
-      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 21,
-      "merkez_kok": "همس",
-      "merkez_mana": "Hamis: fısıldamak, gizlice konuşmak",
-      "boy": 97
+      "kume": 39,
+      "merkez_kok": "صرخ",
+      "merkez_mana": "Sarih: bağırmak, feryat",
+      "boy": 34
     },
     "ince": {
-      "kume": 115,
+      "kume": 257,
       "merkez_kok": "صرخ",
       "merkez_mana": "Sarih: bağırmak, feryat",
       "boy": 27

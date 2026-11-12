@@ -1420,6 +1420,54 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "تقول: رجل فاتك، وسيف باتك؛ وهو القاتل على غرّة. قال المخبل:\nوإذ فتك النعمان بالناس محرماً ... فملئ من عوف ين كعب سلاسله\nوتقول: أقدم فلان إقادامه متفتّك، واقتحم اقتحامه متهوك.",
+    "mecaz": "حيّة فاتكة اللسع. أنشد أبو عبيد:\nقرى السم حتى انماز فروة رأسه ... من الصم صلٌّ فاتك اللسع مارده\nوفلان فاتك القلب إذا كان جرياً ماضياً.\nقال:\nوأمضى على هول إذا ما تهزهزت ... من الخوف أحشاء القلوب الفواتك\nوهذه إنسانة فاتكة: ماجنة، وقد فتكت. وفتك في الأمر فتكاً، وما أفتكه وهو اللجاج. قال:\nقد فتكت في كذب ولطّ\nوفتك في صناعته: مهر فيها، وفاتك صاحبه: ماهره. وفاتك التاجر البيع: اشتط في سومه. قال الحطيئة:\nكأن سليطاً نشرت فيه بزّها ... بروداً ورقماً فاتك البيع تاجره\nوفاتك الإبل الحمض إذا لم ترع معه عقبة من الخلة.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "تقول: رجل فاتك، وسيف باتك؛ وهو القاتل على غرّة. قال المخبل: وإذ فتك النعمان بالناس محرماً ... فملئ من عوف ين كعب سلاسله وتقول: أقدم فلان إقادامه متفتّك، واقتحم اقتحامه متهوك.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "حيّة فاتكة اللسع. أنشد أبو عبيد:",
+        "prototipe_benzerlik": 0.451,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وفلان فاتك القلب إذا كان جرياً ماضياً.",
+        "prototipe_benzerlik": 0.545,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وهذه إنسانة فاتكة: ماجنة، وقد فتكت. وفتك في الأمر فتكاً، وما أفتكه وهو اللجاج. قال:",
+        "prototipe_benzerlik": 0.736,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "قد فتكت في كذب ولطّ",
+        "prototipe_benzerlik": 0.485,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وفتك في صناعته: مهر فيها، وفاتك صاحبه: ماهره. وفاتك التاجر البيع: اشتط في سومه. قال الحطيئة:",
+        "prototipe_benzerlik": 0.575,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وفاتك الإبل الحمض إذا لم ترع معه عقبة من الخلة.",
+        "prototipe_benzerlik": 0.574,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.561,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["kill.v.09"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "اللباس",
@@ -1430,22 +1478,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "kume": 6,
+      "merkez_kok": "درك",
+      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
+      "boy": 1364
     },
     "orta": {
-      "kume": 38,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 203
+      "kume": 23,
+      "merkez_kok": "جلد",
+      "merkez_mana": "Cild: deri; cellâd: vurucu",
+      "boy": 125
     },
     "ince": {
-      "kume": 249,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 14
+      "kume": 135,
+      "merkez_kok": "عصو",
+      "merkez_mana": "Isyân: karşı gelmek",
+      "boy": 50
     }
   },
   "kaliplar": {

@@ -707,6 +707,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "رجل أنجل عثجل، والثجل عظم البطن واسترخاؤه. واطلبها لي خمصاء نجلاء، لا خوصاء ثجلاء.",
+    "mecaz": "حلة ثجلاء، ومزادة ثجلاء: واسعة. قال أبو النجم:\nتمشي من الردة مشي الحفّل ... مشيَ الروايا بالمزاد الأثجل\nالردة، من قولهم شاة مرد إذا أضرعت. وطعنّا أثجل الليل إذا سروا في وسطه. قال العجاج:\nوأطعن الأثجل بعد الأثجل ... من حومة الليل بهادي جملي\nوقال أبو النجم:\nحتى إذا الليل تولّى أثجله",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "رجل أنجل عثجل، والثجل عظم البطن واسترخاؤه. واطلبها لي خمصاء نجلاء، لا خوصاء ثجلاء.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "حلة ثجلاء، ومزادة ثجلاء: واسعة. قال أبو النجم:",
+        "prototipe_benzerlik": 0.583,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "الردة، من قولهم شاة مرد إذا أضرعت. وطعنّا أثجل الليل إذا سروا في وسطه. قال العجاج:",
+        "prototipe_benzerlik": 0.6,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "حتى إذا الليل تولّى أثجله",
+        "prototipe_benzerlik": 0.442,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.542,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "خلق الإنسان",
@@ -717,22 +750,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
-      "merkez_kok": "حنج",
-      "merkez_mana": "",
-      "boy": 426
-    },
-    "orta": {
       "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 261
+      "boy": 466
+    },
+    "orta": {
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 18,
-      "merkez_kok": "لدم",
-      "merkez_mana": "Dammam (the capital city of the Eastern Province, Saudi Arabia)",
-      "boy": 53
+      "kume": 24,
+      "merkez_kok": "لوت",
+      "merkez_mana": "Levt: bükmek, eğmek",
+      "boy": 63
     }
   },
   "kaliplar": {

@@ -723,6 +723,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "ما فيه إلا وشلٌ وأوشال وهو ما يتحلّب من صخرة قليلاً قليلاً. قال لبيد يصف فرساً:\nوعلاه زبد المحض كما ... زلّ عن ظهر الصفا ماء الوشل\nوماء واشل، وقد وشل يشل. وحفر بئراً فأوشلها: وجد ماءها وشلاً.",
+    "mecaz": "ما أصاب إلا وشلاً من الدنيا وأوشالاً منها: وإنه لواشل الحظّ: ناقصه، وفي مثل \" هل بالرمل أوشال \" يضرب للنّكد. وهو من أشال القوم وأوشابهم: لفيفهم.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "ما فيه إلا وشلٌ وأوشال وهو ما يتحلّب من صخرة قليلاً قليلاً. قال لبيد يصف فرساً: وعلاه زبد المحض كما ... زلّ عن ظهر الصفا ماء الوشل وماء واشل، وقد وشل يشل. وحفر بئراً فأوشلها: وجد ماءها وشلاً.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "ما أصاب إلا وشلاً من الدنيا وأوشالاً منها: وإنه لواشل الحظّ: ناقصه، وفي مثل \" هل بالرمل أوشال \" يضرب للنّكد. وهو من أشال القوم وأوشابهم: لفيفهم.",
+        "prototipe_benzerlik": 0.619,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.619,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["content.n.05"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -733,19 +756,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
-      "merkez_kok": "حنج",
-      "merkez_mana": "",
-      "boy": 426
-    },
-    "orta": {
       "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 261
+      "boy": 466
+    },
+    "orta": {
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 17,
+      "kume": 23,
       "merkez_kok": "خدج",
       "merkez_mana": "feminine singular of خَدِيج (ḵadīj)",
       "boy": 25

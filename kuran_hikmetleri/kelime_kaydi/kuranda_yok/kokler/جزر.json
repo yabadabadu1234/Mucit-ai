@@ -1610,6 +1610,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "جزر لهم الجزار: نحر لهم جزوراً، واجتزروا: جزر لهم، وهم نحارون للجزر. وأخذ الجازر جزارته وهي حقه، كما يقال: أخذ العامل عمالته، وهي الأطراف والعنق. \" وإياكم وهذه المجازر \". وذبح جزرة وهي الشاة، وقد أجزرتك بعيراً أو شاة: دفعته إليك لتجزره.",
+    "mecaz": "جزر الماء عن الأرض: انفرج وحسر. قال أبو ذؤيب:\nحتى إذا جزرت مياه زرانه ... وبأيّ حزملاوة يتقطع\nومنه الجزر والمد، والجزيرة والجزائر. ويقال جزيرة العرب: لأرضها ومحلتها، لأن بحر فارس وبحر الحبش ودجلة والفرات قد أحدقت بها.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "جزر لهم الجزار: نحر لهم جزوراً، واجتزروا: جزر لهم، وهم نحارون للجزر. وأخذ الجازر جزارته وهي حقه، كما يقال: أخذ العامل عمالته، وهي الأطراف والعنق. \" وإياكم وهذه المجازر \". وذبح جزرة وهي الشاة، وقد أجزرتك بعيراً أو شاة: دفعته إليك لتجزره.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "جزر الماء عن الأرض: انفرج وحسر. قال أبو ذؤيب:",
+        "prototipe_benzerlik": 0.299,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "ومنه الجزر والمد، والجزيرة والجزائر. ويقال جزيرة العرب: لأرضها ومحلتها، لأن بحر فارس وبحر الحبش ودجلة والفرات قد أحدقت بها.",
+        "prototipe_benzerlik": 0.187,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.243,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["insular.a.01", "island.n.01", "point.n.02", "region.n.03"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الإبل",
@@ -1620,19 +1648,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "kume": 2,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 466
     },
     "orta": {
-      "kume": 44,
-      "merkez_kok": "زرب",
-      "merkez_mana": "Zerb: sürü ağılı; zerâbî: halı",
-      "boy": 63
+      "kume": 3,
+      "merkez_kok": "قمح",
+      "merkez_mana": "Kamh: buğday",
+      "boy": 64
     },
     "ince": {
-      "kume": 285,
+      "kume": 6,
       "merkez_kok": "سمد",
       "merkez_mana": "Samed: sonsuz, tüm ihtiyaçların giderildiği; el-Samed: Allah",
       "boy": 17

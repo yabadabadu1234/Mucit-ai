@@ -1539,16 +1539,65 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "breathe.v.01",
-    "orta": "verb.body",
-    "ust": "canlı ve beden",
-    "dayanak_synset": "breathe.v.01",
-    "dayanak_tanim": "draw air into, and expel out of, the lungs",
+    "ince": "event.n.01",
+    "orta": "noun.act",
+    "ust": "fiil ve hadise",
+    "dayanak_synset": "sniff.n.01",
+    "dayanak_tanim": "sensing an odor by inhaling through the nose",
     "synset_sayisi": 10
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "نشق الظبي في الحبالة: نشب فيها، وأنشقه الصائد، وأنشقته الحبالة. قال:\nمناتين أبرام كأنّ أكفّهم ... أكف ضباب أنشقت في الحبائل",
+    "mecaz": "نشق فلان في حبالة فلان إذا وقع منه فيما لا يتخلّص منه. وعن أبي زيد: نشق فلان إذا عطب. ونشق الريح نشقاً ونشقاً. قال:\nحراً من الخردل مكروه النشق\nواستنشقتها وتنشّقتها. قال المتلمّس:\nفلو أن محموماً بخيبر مدنفاً ... تنشّق ريّاها لأقلع صالبه\nوأنشقه اعلدواء وهو النشوق، وأنشقته الخردل والمسك.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "نشق الظبي في الحبالة: نشب فيها، وأنشقه الصائد، وأنشقته الحبالة. قال: مناتين أبرام كأنّ أكفّهم ... أكف ضباب أنشقت في الحبائل",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "نشق فلان في حبالة فلان إذا وقع منه فيما لا يتخلّص منه. وعن أبي زيد: نشق فلان إذا عطب. ونشق الريح نشقاً ونشقاً. قال:",
+        "prototipe_benzerlik": 0.732,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "حراً من الخردل مكروه النشق",
+        "prototipe_benzerlik": 0.52,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "واستنشقتها وتنشّقتها. قال المتلمّس:",
+        "prototipe_benzerlik": 0.569,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وأنشقه اعلدواء وهو النشوق، وأنشقته الخردل والمسك.",
+        "prototipe_benzerlik": 0.419,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.56,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "act.n.02",
+    "break_up.v.16",
+    "breathe.v.01",
+    "burst.v.01",
+    "crack.v.12",
+    "deflect.v.02",
+    "interrupt.v.01",
+    "separate.v.08",
+    "separate.v.09",
+    "smell.v.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "خلق الإنسان",
@@ -1560,18 +1609,18 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 40,
+      "kume": 41,
       "merkez_kok": "بلع",
       "merkez_mana": "Bel': yutmak; bel'a: yutkunma",
-      "boy": 85
+      "boy": 61
     },
     "ince": {
-      "kume": 260,
+      "kume": 262,
       "merkez_kok": "بلع",
       "merkez_mana": "Bel': yutmak; bel'a: yutkunma",
       "boy": 17

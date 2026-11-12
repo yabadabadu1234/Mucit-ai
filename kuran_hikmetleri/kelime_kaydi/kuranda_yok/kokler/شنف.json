@@ -725,6 +725,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "في آذانهن الشنوف والقرطة. وشنفت له شنفاً: أبغضته. ورجل شنف.",
+    "mecaz": "شنف كلامه وقطره: حلاه.\nش\nن\nق\nحل شناق القربة وهو عصامها الذي يشد به فوهاً، واشنق القربة: شدّها. ولا زكاة في الشنق والأشناق وهو ما بين الفريضتين. ولحم مشنق: مشرح مقطع. وشنق الجزار الجزور، وقل للقصاب يشنق اللحم تشنيقاً حسناً. وعجين مشنق: يقطع ويعمل بالزيت. وهو من أشناق الديات.\nومن المجاز: شنق الناقة بالزمام أو الخطام إذا جذب به رأسها ليكفها كما يكبح الدابة بالعنان، وبعير مشنوق. وأنشد طلحة بن عبيد الله قصيدة فمازال شانقاً ناقته حتى كتبت له. وشنقت رأس الدابة إذا شدّدتها إلى شجرة أو شيء مرتفع.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "في آذانهن الشنوف والقرطة. وشنفت له شنفاً: أبغضته. ورجل شنف.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "شنف كلامه وقطره: حلاه.",
+        "prototipe_benzerlik": 0.676,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "حل شناق القربة وهو عصامها الذي يشد به فوهاً، واشنق القربة: شدّها. ولا زكاة في الشنق والأشناق وهو ما بين الفريضتين. ولحم مشنق: مشرح مقطع. وشنق الجزار الجزور، وقل للقصاب يشنق اللحم تشنيقاً حسناً. وعجين مشنق: يقطع ويعمل بالزيت. وهو من أشناق الديات.",
+        "prototipe_benzerlik": 0.251,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "ومن المجاز: شنق الناقة بالزمام أو الخطام إذا جذب به رأسها ليكفها كما يكبح الدابة بالعنان، وبعير مشنوق. وأنشد طلحة بن عبيد الله قصيدة فمازال شانقاً ناقته حتى كتبت له. وشنقت رأس الدابة إذا شدّدتها إلى شجرة أو شيء مرتفع.",
+        "prototipe_benzerlik": 0.372,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.433,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النساء",
@@ -735,22 +768,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 17,
+      "kume": 24,
       "merkez_kok": "زين",
       "merkez_mana": "Zîne: süs, güzellik; zeyn: güzelleştirmek",
-      "boy": 177
+      "boy": 123
     },
     "ince": {
-      "kume": 94,
-      "merkez_kok": "زين",
-      "merkez_mana": "Zîne: süs, güzellik; zeyn: güzelleştirmek",
-      "boy": 44
+      "kume": 141,
+      "merkez_kok": "متع",
+      "merkez_mana": "Metâ': yararlanma, geçici nimet",
+      "boy": 26
     }
   },
   "kaliplar": {

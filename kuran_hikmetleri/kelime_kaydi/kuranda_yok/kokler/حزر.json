@@ -1545,6 +1545,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "حزر النخل: خرصه. وحزر اللبن فهو حازر، وفي مثل \" عدا القارص فحزر \" وغلام حزور، وحزور: بلغ القوة. قال الفرزدق:\nسيوفاً بها كانت حنيفة تبتني ... مكارم أيام أشب الحزورا\nوغلمان حزاور وحزاورة. وهذا جزرة ما عندي من المال أي خياره لأنه يعدده ويقدّره، ولا تأخذ من حزرات أموال الناس. قال:\nإن السراة روقة الرجال ... وحزرة النفس خيار المال",
+    "mecaz": "حزرت قدومه يوم كذا: قدّرته، وحزرت قراءته عشري آية. واحزر نفسك هل تقدر عليه.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "حزر النخل: خرصه. وحزر اللبن فهو حازر، وفي مثل \" عدا القارص فحزر \" وغلام حزور، وحزور: بلغ القوة. قال الفرزدق: سيوفاً بها كانت حنيفة تبتني ... مكارم أيام أشب الحزورا وغلمان حزاور وحزاورة. وهذا جزرة ما عندي من المال أي خياره لأنه يعدده ويقدّره، ولا تأخذ من حزرات ",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "حزرت قدومه يوم كذا: قدّرته، وحزرت قراءته عشري آية. واحزر نفسك هل تقدر عليه.",
+        "prototipe_benzerlik": 0.157,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.157,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["chew_over.v.01", "estimate.v.01", "inform.v.01", "time_period.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
@@ -1555,22 +1578,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "kume": 5,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 375
     },
     "orta": {
-      "kume": 35,
-      "merkez_kok": "حين",
-      "merkez_mana": "Hîn: zaman, bir süre",
-      "boy": 54
+      "kume": 10,
+      "merkez_kok": "ءخر",
+      "merkez_mana": "Âhir: son; teehhür: gecikmek",
+      "boy": 56
     },
     "ince": {
-      "kume": 225,
-      "merkez_kok": "خرف",
-      "merkez_mana": "lamb (mammal)",
-      "boy": 8
+      "kume": 64,
+      "merkez_kok": "ظنن",
+      "merkez_mana": "Zann: sanmak, tahmin etmek",
+      "boy": 7
     }
   },
   "kaliplar": {

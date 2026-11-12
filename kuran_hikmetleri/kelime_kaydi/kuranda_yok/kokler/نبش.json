@@ -1809,6 +1809,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "نبش الأرض عمّا تحتها نبشاً، ومنه: نبش القبر.",
+    "mecaz": "هو ينبش الأسرار. قال:\nمهلاً بنى عمّنا مهلاً موالينا ... لا تبشوا بيننا ما كان مدفوناً\nوهو ينبش لعياله ويحترش إذا استخرج رزقهم من هنا وهنا واحتال. وانتبش العروق من الأرض: استخرجها. قال الكميت:\nموتهنّ انتباشهنّ من الأر ... ض ويحيين ما سكنّ القبورا\nأي ما دامت العروق تحت الأرض كانت حيّةً فإذا نبشت ماتت.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "نبش الأرض عمّا تحتها نبشاً، ومنه: نبش القبر.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "هو ينبش الأسرار. قال:",
+        "prototipe_benzerlik": 0.319,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وهو ينبش لعياله ويحترش إذا استخرج رزقهم من هنا وهنا واحتال. وانتبش العروق من الأرض: استخرجها. قال الكميت:",
+        "prototipe_benzerlik": 0.57,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "أي ما دامت العروق تحت الأرض كانت حيّةً فإذا نبشت ماتت.",
+        "prototipe_benzerlik": 0.438,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.442,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السباع",
@@ -1819,19 +1852,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 15,
-      "merkez_kok": "فوق",
-      "merkez_mana": "Fevk: üst, yukarı (zarf)",
-      "boy": 107
+      "kume": 16,
+      "merkez_kok": "درك",
+      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
+      "boy": 287
     },
     "ince": {
-      "kume": 85,
+      "kume": 98,
       "merkez_kok": "بحث",
       "merkez_mana": "Bahs: araştırmak, incelemek",
       "boy": 20

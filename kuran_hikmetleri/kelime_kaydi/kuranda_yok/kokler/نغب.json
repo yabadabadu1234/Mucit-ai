@@ -745,6 +745,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "نغب من الماء نغباً: جرع منه جرعاً. قال ذو الرمة:\nحتى إذا زلجت عن كلّ غلصمة ... إلى الغليل ولم يقصعنه نغب\nوسقاه نغبةً من اللبن.",
+    "mecaz": "قول العرب إذا سمعت بموت عدوّ أو بلاء نزل به: واهاً ما أبردها من نغبة، ما أبردها على الفؤاد، تعساً لليدين والفم.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "نغب من الماء نغباً: جرع منه جرعاً. قال ذو الرمة: حتى إذا زلجت عن كلّ غلصمة ... إلى الغليل ولم يقصعنه نغب وسقاه نغبةً من اللبن.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "قول العرب إذا سمعت بموت عدوّ أو بلاء نزل به: واهاً ما أبردها من نغبة، ما أبردها على الفؤاد، تعساً لليدين والفم.",
+        "prototipe_benzerlik": 0.541,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.541,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["drill.v.03"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -755,22 +778,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 7,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 331
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 30,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 103
+      "kume": 36,
+      "merkez_kok": "سكب",
+      "merkez_mana": "Sakb: dökmek, boşaltmak",
+      "boy": 101
     },
     "ince": {
-      "kume": 204,
+      "kume": 241,
       "merkez_kok": "شرب",
       "merkez_mana": "Şürb: içmek; şarâb: içecek",
-      "boy": 27
+      "boy": 15
     }
   },
   "kaliplar": {

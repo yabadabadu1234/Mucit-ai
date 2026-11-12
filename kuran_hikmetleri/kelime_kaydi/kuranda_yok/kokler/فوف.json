@@ -755,6 +755,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "تقول: شعر كأنه أفواف الوشى. وحلّة أفواف، وبرد مفوّف: أصله من الفوف وهو نقط بياض في أظفار الأحداث الواحدة: فوفة.",
+    "mecaz": "رأيت كفاً عن الخير مكفوفه، لا تعطي أحداً أبداً فوفه. وقال:\nفأرسلت إلى سلمى ... بأن النفس مشغوفه\nفما جادت لنا سلمى ... بزنجير ولا فوفه\nويقولون: ما فاف فلان لفلان ولا زنجر وهو أن يقول بظفر إبهامه على ظفر سبّابته ثم يقرع بينهما، وتقول: شكونا إلى سنجر، فما فاف لنا ولا زنجر.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "تقول: شعر كأنه أفواف الوشى. وحلّة أفواف، وبرد مفوّف: أصله من الفوف وهو نقط بياض في أظفار الأحداث الواحدة: فوفة.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "رأيت كفاً عن الخير مكفوفه، لا تعطي أحداً أبداً فوفه. وقال:",
+        "prototipe_benzerlik": 0.362,
+        "halka": "orta"
+      },
+      {
+        "cumle": "ويقولون: ما فاف فلان لفلان ولا زنجر وهو أن يقول بظفر إبهامه على ظفر سبّابته ثم يقرع بينهما، وتقول: شكونا إلى سنجر، فما فاف لنا ولا زنجر.",
+        "prototipe_benzerlik": 0.485,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.423,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "اللباس",
@@ -765,22 +793,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 7,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 331
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 30,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 103
+      "kume": 35,
+      "merkez_kok": "نقع",
+      "merkez_mana": "Nak': su birikintisi; nakî': ıslak",
+      "boy": 47
     },
     "ince": {
-      "kume": 202,
-      "merkez_kok": "جرز",
-      "merkez_mana": "Cerz: kuraklık, kurumuş toprak",
-      "boy": 15
+      "kume": 237,
+      "merkez_kok": "رطط",
+      "merkez_mana": "",
+      "boy": 29
     }
   },
   "kaliplar": {

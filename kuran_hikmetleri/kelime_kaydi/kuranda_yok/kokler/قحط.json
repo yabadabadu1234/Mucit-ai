@@ -1654,6 +1654,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "قحط البلد وقحِطَ وقُحِطَ فهو قاحط وقَحِطٌ وقحيط ومقحوط، وبلاد مقاحيط، وأقحطها الله، وأقحط القوم وقحطوا وقُحِطوا وأقحطوا، وأرض مقحطة. ونحن في مقحطة، وهي بيّنة القحوط والقحط والقحط.",
+    "mecaz": "أقحط الرجل وأكسل: خالط ولم ينزل. وفي الحديث \" من أتى أهله فأقحط فلا غسل عليه \" وفي آخر \" ليس في الإكسال إلا الطّهور \" ورجل قحطيّ: أكول لا يبقي شيئاً.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "قحط البلد وقحِطَ وقُحِطَ فهو قاحط وقَحِطٌ وقحيط ومقحوط، وبلاد مقاحيط، وأقحطها الله، وأقحط القوم وقحطوا وقُحِطوا وأقحطوا، وأرض مقحطة. ونحن في مقحطة، وهي بيّنة القحوط والقحط والقحط.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "أقحط الرجل وأكسل: خالط ولم ينزل. وفي الحديث \" من أتى أهله فأقحط فلا غسل عليه \" وفي آخر \" ليس في الإكسال إلا الطّهور \" ورجل قحطيّ: أكول لا يبقي شيئاً.",
+        "prototipe_benzerlik": 0.53,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.53,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["condition.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -1665,21 +1688,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 509
     },
     "orta": {
-      "kume": 12,
-      "merkez_kok": "خيب",
-      "merkez_mana": "Hayb: boşa çıkmak, umutsuz olmak; hâib: hayal kırıklığı",
-      "boy": 58
+      "kume": 8,
+      "merkez_kok": "بءس",
+      "merkez_mana": "Be'es: azap, şiddet, zorluk",
+      "boy": 142
     },
     "ince": {
-      "kume": 64,
+      "kume": 48,
       "merkez_kok": "قفر",
       "merkez_mana": "to trace, to track",
-      "boy": 20
+      "boy": 23
     }
   },
   "kaliplar": {

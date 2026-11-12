@@ -1635,6 +1635,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "في البيت صخب وهو اختلاط الأصوات، وقد صخب فلان يصخب فهو صخب وصاخب. وتقول: ما هو صاحب، إنما هو\nصاخب. وهو صخاب في الأسواق. واصطخبوا وتصاخبوا. وسمعت اصطخاب الطير. وصاخبه مصاخبةً.",
+    "mecaz": "واد صخب الآذيّ، واصطخبت أمواجه. قال:\nمفعوعم صخب الآذي منبعق\nوعين صخبة إذا اصطفقت عند الجيشان. وعود صخب الأوتار.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "في البيت صخب وهو اختلاط الأصوات، وقد صخب فلان يصخب فهو صخب وصاخب. وتقول: ما هو صاحب، إنما هو صاخب. وهو صخاب في الأسواق. واصطخبوا وتصاخبوا. وسمعت اصطخاب الطير. وصاخبه مصاخبةً.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "واد صخب الآذيّ، واصطخبت أمواجه. قال:",
+        "prototipe_benzerlik": 0.596,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "مفعوعم صخب الآذي منبعق",
+        "prototipe_benzerlik": 0.535,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وعين صخبة إذا اصطفقت عند الجيشان. وعود صخب الأوتار.",
+        "prototipe_benzerlik": 0.371,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.501,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["happening.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النساء",
@@ -1645,19 +1678,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
-      "merkez_kok": "درك",
-      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 21,
-      "merkez_kok": "همس",
-      "merkez_mana": "Hamis: fısıldamak, gizlice konuşmak",
-      "boy": 97
+      "kume": 39,
+      "merkez_kok": "صرخ",
+      "merkez_mana": "Sarih: bağırmak, feryat",
+      "boy": 34
     },
     "ince": {
-      "kume": 115,
+      "kume": 257,
       "merkez_kok": "صرخ",
       "merkez_mana": "Sarih: bağırmak, feryat",
       "boy": 27

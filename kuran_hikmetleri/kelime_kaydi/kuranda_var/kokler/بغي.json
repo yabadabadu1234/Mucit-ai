@@ -2018,6 +2018,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "بغيته وابتغيته، وطال بي البغاء فما وجدته. وفلان بغيتي: أي طلبتي وظنتي. وعند فلان بغيتي. وابغني ضالتي: اطلبها لي. وأبغني ضالتي: أعني على طلبها. قال رؤبة:\nواذكر بخير وابغني ما يبتغى\nأي اصنع بي ما يحب أن يصنع. وخرجوا بغياناً لضوالهم. وبغت فلانة بغاء وهي بغي: طلوب للرجال وهن بغايا. ومنه قيل للإماء البغايا، لأنهن كن يباغين في الجاهلية. يقال: قامت البغايا على رءوسهم وقال الأعشى:\nوالبغايا يركضن أكسية الإض ... ريح والشرعي ذا الأذيال\nوخرجت أمة فلان تباغي، وهو ابن بغية وغية بمعنى. وإنك لعالم ولا تباغ أي لا تصبك عين فتباغيك بسوء. وروي ولا تبغ ولا تباغ بالرفع، من تبيغ الدم أي لا تبيغت بك عين فتؤذيك، كما يتبيغ الدم فيؤذى. وأقبلت البغايا وهي الطلائع. وبغى علينا فلان: خرج علينا طالباً أذاناً وظلمنا. وهي الفئة الباغية وهم البغاة وأهل البغي والفساد. وقد تباغوا: تظالموا.",
+    "mecaz": "بغي الجرح: ترامى إلى الفساد. وبغت السماء: ألح مطرها. ودفعنا بغي السماء خلفنا. ويقال للفرس إنه لذو بغي في عدوه أي ذو مرح، وفرس باغ.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "بغيته وابتغيته، وطال بي البغاء فما وجدته. وفلان بغيتي: أي طلبتي وظنتي. وعند فلان بغيتي. وابغني ضالتي: اطلبها لي. وأبغني ضالتي: أعني على طلبها. قال رؤبة: واذكر بخير وابغني ما يبتغى أي اصنع بي ما يحب أن يصنع. وخرجوا بغياناً لضوالهم. وبغت فلانة بغاء وهي بغي: طلوب",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "بغي الجرح: ترامى إلى الفساد. وبغت السماء: ألح مطرها. ودفعنا بغي السماء خلفنا. ويقال للفرس إنه لذو بغي في عدوه أي ذو مرح، وفرس باغ.",
+        "prototipe_benzerlik": 0.645,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.645,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["act.n.02", "feeling.n.01", "wanted.a.01", "wish.v.01", "wish.v.02", "wish.v.04"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النساء",
@@ -2029,18 +2052,18 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
-    },
-    "orta": {
-      "kume": 9,
       "merkez_kok": "خون",
       "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
-      "boy": 168
+      "boy": 509
+    },
+    "orta": {
+      "kume": 7,
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 259
     },
     "ince": {
-      "kume": 48,
+      "kume": 36,
       "merkez_kok": "دعر",
       "merkez_mana": "immoral or criminal sexual behaviour, conduct or practices",
       "boy": 9

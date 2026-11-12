@@ -1731,6 +1731,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "طمر طمور الأخيل. وفرس طمر وهوى من طمار: من مكان مرتفع. وانصب عليه من طمار. قال يصف صقراً:\nلثق الريش تدلى غدوة ... من أعالي صعبة المرقى ضمار\nوعليه طمر وأطمار، وهو ذو طمرين. وقوم البناء بالمطمر. وخبأ الطعام في المطمورة والمطامير. وطمر نفسه ومتاعه: أخفاه. وكتب في الطومار والطوامير.",
+    "mecaz": "أسهره طامر بن طامر وهو البرغوث و\" وقع في بنات طمار \": في شدائد. ويقال للمحدّث: أقم المطمر: قوم الحديث. وفلا يطمر على مطمار أبيه أي يقتدي بفعاله. قال أبو وجزة:\nيسعى مساعي آباء له سلفوا ... من آل قين على مطمارهم طمروا\nعلى مثالهم احتذوا. ومتاع مطمر: مركوم. وتقول: المال عنده مطمر، والخير بين يديه مصير. وأتان مطمرة: مدمجة طويت عليّ الطومار.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "طمر طمور الأخيل. وفرس طمر وهوى من طمار: من مكان مرتفع. وانصب عليه من طمار. قال يصف صقراً: لثق الريش تدلى غدوة ... من أعالي صعبة المرقى ضمار وعليه طمر وأطمار، وهو ذو طمرين. وقوم البناء بالمطمر. وخبأ الطعام في المطمورة والمطامير. وطمر نفسه ومتاعه: أخفاه. وكتب في",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "أسهره طامر بن طامر وهو البرغوث و\" وقع في بنات طمار \": في شدائد. ويقال للمحدّث: أقم المطمر: قوم الحديث. وفلا يطمر على مطمار أبيه أي يقتدي بفعاله. قال أبو وجزة:",
+        "prototipe_benzerlik": 0.827,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "على مثالهم احتذوا. ومتاع مطمر: مركوم. وتقول: المال عنده مطمر، والخير بين يديه مصير. وأتان مطمرة: مدمجة طويت عليّ الطومار.",
+        "prototipe_benzerlik": 0.1,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.464,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["bury.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "المكنيات والمبنيات والمثنيات",
@@ -1741,19 +1769,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "kume": 5,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 375
     },
     "orta": {
-      "kume": 36,
-      "merkez_kok": "نجس",
-      "merkez_mana": "Nicis: pislik, necis",
-      "boy": 123
+      "kume": 12,
+      "merkez_kok": "ردم",
+      "merkez_mana": "Redm: kapatmak, doldurmak; sedd: set",
+      "boy": 61
     },
     "ince": {
-      "kume": 227,
+      "kume": 69,
       "merkez_kok": "ستر",
       "merkez_mana": "Setr: örtmek, saklamak; setr: perde",
       "boy": 23

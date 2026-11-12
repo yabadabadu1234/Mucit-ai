@@ -1448,13 +1448,50 @@
     "ince": "system_of_measurement.n.01",
     "orta": "noun.possession",
     "ust": "insan ve toplum",
-    "dayanak_synset": "cash.n.01",
-    "dayanak_tanim": "money in the form of bills or coins",
+    "dayanak_synset": "tender.n.01",
+    "dayanak_tanim": "something that can be used as an official medium of payment",
     "synset_sayisi": 10
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "نقده الثّمن، ونقده له فانتقده. ونقد النقّاد الدراهم. ميّز جيدها من رديئها. ونقدٌ جيد، ونقود جياد. وتنوقد الورق. قال:\nكما تنوقد عند الجهبذ الورق\nو\" أسرى من أنقد \" و\" بات بليلة أنقد \" وهو القنفذ. وتقول: إن جعلتم ليلتكم ليلة أنقد، فقد وصلتم وكأن قد. والطائر ينقد الفخ: ينقره. ونقد الصبيّ الجوزة بإصبعه. ونقدت رأسه بإصبعي نقدةً. قال خلف بن خليفة:\nوأرنبة لك محمرّة ... تكاد تقطّرها نقده\nونقدته الحيّة: لدغته. وله نقد ونقاد وهي صغار الغنم، وصاحبها: النّقّاد. قال أبو زبيد:\nكأن أثواب نقّاد قدرن له ... يعلو بخملتها كهباء هدّابا",
+    "mecaz": "هو من نقّادة قومه: من خيارهم. ونقد الكلام. وهو من نقدة الشعر ونقّاده. وتقول:\nهو أشبه بالنّقّاد، منه بالنّقّاد؛ من النّقد والنّقد. وتقول: النّقدة إليهم كأنهم النّقد، وقد عاث فيها الذئب الأعقد. وانتقد الشعر على قائله. وهو ينقد بعينه إلى الشيء: يديم النظر إليه باختلاس حتى لا يفطّن له، وما زال بصره ينقد إلى ذلك نقوداً: شبّه بنظر الاقد إلى ما ينقده.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "نقده الثّمن، ونقده له فانتقده. ونقد النقّاد الدراهم. ميّز جيدها من رديئها. ونقدٌ جيد، ونقود جياد. وتنوقد الورق. قال: كما تنوقد عند الجهبذ الورق و\" أسرى من أنقد \" و\" بات بليلة أنقد \" وهو القنفذ. وتقول: إن جعلتم ليلتكم ليلة أنقد، فقد وصلتم وكأن قد. والطائر ينقد ",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "هو من نقّادة قومه: من خيارهم. ونقد الكلام. وهو من نقدة الشعر ونقّاده. وتقول:",
+        "prototipe_benzerlik": 0.607,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "هو أشبه بالنّقّاد، منه بالنّقّاد؛ من النّقد والنّقد. وتقول: النّقدة إليهم كأنهم النّقد، وقد عاث فيها الذئب الأعقد. وانتقد الشعر على قائله. وهو ينقد بعينه إلى الشيء: يديم النظر إليه باختلاس حتى لا يفطّن له، وما زال بصره ينقد إلى ذلك نقوداً: شبّه بنظر الاقد إلى ما ينقده.",
+        "prototipe_benzerlik": 0.649,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.628,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "act.n.02",
+    "converse.v.01",
+    "disapproval.n.02",
+    "knock.v.06",
+    "rescue.v.01",
+    "salvage.v.01",
+    "save.v.03",
+    "standard.n.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الحشرات",
@@ -1465,22 +1502,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "kume": 6,
+      "merkez_kok": "درك",
+      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
+      "boy": 1364
     },
     "orta": {
-      "kume": 9,
-      "merkez_kok": "خون",
-      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
-      "boy": 168
+      "kume": 15,
+      "merkez_kok": "زور",
+      "merkez_mana": "Zûr: yalan, sahtelik",
+      "boy": 133
     },
     "ince": {
-      "kume": 44,
-      "merkez_kok": "خطف",
-      "merkez_mana": "Hatf: kapmak, kaçırmak",
-      "boy": 12
+      "kume": 85,
+      "merkez_kok": "وشش",
+      "merkez_mana": "",
+      "boy": 19
     }
   },
   "kaliplar": {

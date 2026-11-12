@@ -830,6 +830,44 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "لقت الدواة، وألقتها فلاقت، وهذه ليقة الدّواة. ولاق به الشيء: لزق، وهذا لا يليق.",
+    "mecaz": "رأيت في السماء ليقةً: قزعة من السحاب. وهو أهون من ليقة وهي طينة تليّن باليد ثم يرمى بها الحائط فتليق به. وجعل في\nالكحل الليقة والليق وهو بعض أخلاطه. وفلان لا يليق بكفّه درهم، ولا تليق كفه درهماً: لسخائه. قال:\nكفّاك كفّ لا تليق درهماً ... جوداً وأخرى تعط بالسيف دما\nوهذا سيف لا يليق شيئاً أي لا يمرّ بشيء إلا قطعه. قال:\nبأفلّ عضبٍ لا يليق ضريبة ... في متنه دخن وأثر أحلس\nوهذا أمر لا يليق بك ولا يليقك أي لا يعلق بك ولا يحسن. وتقول: هذه خلائق، غيرها بك لائق.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "لقت الدواة، وألقتها فلاقت، وهذه ليقة الدّواة. ولاق به الشيء: لزق، وهذا لا يليق.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "رأيت في السماء ليقةً: قزعة من السحاب. وهو أهون من ليقة وهي طينة تليّن باليد ثم يرمى بها الحائط فتليق به. وجعل في",
+        "prototipe_benzerlik": 0.538,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "الكحل الليقة والليق وهو بعض أخلاطه. وفلان لا يليق بكفّه درهم، ولا تليق كفه درهماً: لسخائه. قال:",
+        "prototipe_benzerlik": 0.572,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وهذا سيف لا يليق شيئاً أي لا يمرّ بشيء إلا قطعه. قال:",
+        "prototipe_benzerlik": 0.574,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وهذا أمر لا يليق بك ولا يليقك أي لا يعلق بك ولا يحسن. وتقول: هذه خلائق، غيرها بك لائق.",
+        "prototipe_benzerlik": 0.506,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.548,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["suitability.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النساء",
@@ -840,22 +878,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 17,
+      "kume": 24,
       "merkez_kok": "زين",
       "merkez_mana": "Zîne: süs, güzellik; zeyn: güzelleştirmek",
-      "boy": 177
+      "boy": 123
     },
     "ince": {
-      "kume": 94,
+      "kume": 140,
       "merkez_kok": "زين",
       "merkez_mana": "Zîne: süs, güzellik; zeyn: güzelleştirmek",
-      "boy": 44
+      "boy": 30
     }
   },
   "kaliplar": {

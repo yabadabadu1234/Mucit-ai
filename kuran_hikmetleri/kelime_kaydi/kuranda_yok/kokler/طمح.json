@@ -1161,16 +1161,39 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "trait.n.01",
-    "orta": "noun.attribute",
-    "ust": "hâl ve vasıf",
-    "dayanak_synset": "ambition.n.02",
-    "dayanak_tanim": "a strong drive for success",
+    "ince": "state.n.02",
+    "orta": "noun.feeling",
+    "ust": "his ve nefis",
+    "dayanak_synset": "ambition.n.01",
+    "dayanak_tanim": "a cherished desire",
     "synset_sayisi": 4
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "طمحت ببصري إليه، ونساء طوامح إلى الرجال. وطمح المتكبر بعينه: شخص بها.\nوفرس طامح الطرف. وطمح الفرس طموحاً وطماحاً: ركب رأسه في عدوه رافعاً بصره، وهو طماح وطموح، وفيه طماحٌ وجماح.",
+    "mecaz": "أصابته طمحات الدهر: شدائده وطمحت المرأة على زوجها: جمحت. وبحر طموح الموج. وطمحت بالشيء في الهواء: رميت به.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "طمحت ببصري إليه، ونساء طوامح إلى الرجال. وطمح المتكبر بعينه: شخص بها. وفرس طامح الطرف. وطمح الفرس طموحاً وطماحاً: ركب رأسه في عدوه رافعاً بصره، وهو طماح وطموح، وفيه طماحٌ وجماح.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "أصابته طمحات الدهر: شدائده وطمحت المرأة على زوجها: جمحت. وبحر طموح الموج. وطمحت بالشيء في الهواء: رميت به.",
+        "prototipe_benzerlik": 0.041,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.041,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["construct.v.01", "draw_a_bead_on.v.02", "drive.n.05", "feeling.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النساء",
@@ -1181,22 +1204,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 14,
-      "merkez_kok": "جهد",
-      "merkez_mana": "Cehd: gayret, çaba; cehd: yorgunluk",
-      "boy": 135
+      "kume": 23,
+      "merkez_kok": "جلد",
+      "merkez_mana": "Cild: deri; cellâd: vurucu",
+      "boy": 125
     },
     "ince": {
-      "kume": 78,
-      "merkez_kok": "صوب",
-      "merkez_mana": "Savb: doğrultmak, yönelmek; sevâb: doğru yol",
-      "boy": 43
+      "kume": 134,
+      "merkez_kok": "غلب",
+      "merkez_mana": "Galebe: üstün gelmek; gâlib: üstün",
+      "boy": 36
     }
   },
   "kaliplar": {

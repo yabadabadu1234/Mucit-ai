@@ -1634,16 +1634,39 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "person.n.01",
+    "ince": "whole.n.02",
     "orta": "noun.person",
     "ust": "insan ve toplum",
-    "dayanak_synset": "insurgent.n.01",
-    "dayanak_tanim": "a person who takes part in an armed rebellion against the constituted authority (especially in the hope of improving conditions)",
+    "dayanak_synset": "revolutionist.n.01",
+    "dayanak_tanim": "a radical supporter of political or social revolution",
     "synset_sayisi": 2
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "ثأرت فلاناً بحميمي إذا قتلته به. وثأرت حميمي وبحميمي إذا قتلت قاتله، فعدوّك مثئور وحميمك مثئور به. قال قيس بن الخطيم:\nثأرت عدياً والخطيم فلم أضع ... وصية أشياخ جعلت إزاءها\nوقال كبشة:\nفإن أنتم لم تأثروا بأخيكم ... فمشوا بآذان النعام المصلم\nوثأري عند فلان. أي ذحلي، وأنا أطلب ثأري عنده. قال الفرزدق:\nوقوفاً بها صحبي عليّ كأنني ... بها سلم في كف صاحبه ثأر\nوفلان ثأري أي الذي عنده ذحلي وهو قاتل حميمه. قال:\nقتلت به ثأري وأدركت ثؤرتي ... إذا ما تناسى ذحله كل غيهب\nويقال للثائر أيضاً: ثأر، فكل واحد من الطالب\nوالمطلوب ثأر صاحبه، وكل واحد منهما يقول فلان ثأري، أحدهما كالصيد والثاني كالعدل. ويجوز أن يكون الذي بمعنى الثائر محذوفاً من الثائر، كالشاك واللاث من الشائك واللائث، فلا تهمز ألفه كما لا تهمز ألفاهما لأنها ألف فاعل.\nوأدرك فلان ثأراً منيماً وأصاب الثأر المنيم إذا قتل نبيلاً فيه وفاء لطلبته. وجمع الثأر الذي هو معنًى فقيل: يا لثارات الحسين، أريد: تعالين يا ثاراته أي يا ذحوله فهو أوان طلبكن. قال حسان:\nإني لمنهم وإن غابوا وإن شهدوا ... حتى الممات وما سميت حسانا\nلتسمعن وشيكاً في دياركم ... الله أكبر يا ثارات عثماناً\nوأثأإرت من فلان إذا أخذت ثأرك. واستثأر ولي القتيل إذا استغاث ليثأر بمقتوله. قال:\nإذا جاءهم مستثئر كان نصره ... دعاء ألا طيروا بكل وأي نهد",
+    "mecaz": "لا ثأرت فلاناً يداه أي لا نفعتاه، مستعار من ثأرت حميمي إذا قتلت به.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "ثأرت فلاناً بحميمي إذا قتلته به. وثأرت حميمي وبحميمي إذا قتلت قاتله، فعدوّك مثئور وحميمك مثئور به. قال قيس بن الخطيم: ثأرت عدياً والخطيم فلم أضع ... وصية أشياخ جعلت إزاءها وقال كبشة: فإن أنتم لم تأثروا بأخيكم ... فمشوا بآذان النعام المصلم وثأري عند فلان. أي ذح",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "لا ثأرت فلاناً يداه أي لا نفعتاه، مستعار من ثأرت حميمي إذا قتلت به.",
+        "prototipe_benzerlik": 0.282,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.282,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["living_thing.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الأنواء",
@@ -1655,21 +1678,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 509
     },
     "orta": {
-      "kume": 8,
+      "kume": 9,
       "merkez_kok": "وغر",
       "merkez_mana": "to become enraged, to become angry, to be filled with malice",
-      "boy": 80
+      "boy": 108
     },
     "ince": {
-      "kume": 41,
+      "kume": 60,
       "merkez_kok": "خصم",
       "merkez_mana": "Husûmet: düşmanlık; hasm: düşman, rakip",
-      "boy": 17
+      "boy": 18
     }
   },
   "kaliplar": {

@@ -1716,16 +1716,54 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "warm.v.02",
+    "ince": "warm.v.01",
     "orta": "verb.change",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "warm.v.02",
-    "dayanak_tanim": "make warm or warmer",
+    "dayanak_synset": "warm.v.01",
+    "dayanak_tanim": "get warm or warmer",
     "synset_sayisi": 7
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "ماء سخن وسخين، وسخنته وأسخنته في المسخنة، وسخن الماء سخونة، ويوم سخن وسخنان، وليلة سخن وسخنانة، وقد سخن يومنا وسخنت ليلتنا. وقروناً بالسخينة وهي حساء عملته قريش في قحط فنبزوا به. قال كعب بن مالك:\nزعمت سخينة أن ستغلب ربها ... وليغلبن مغالب الغلاب\nولبسوا التساخين وهي الخفاف.",
+    "mecaz": "سخنت الدابة في سيرها إذا انبسطت فيه. قال لبيد:\nرفعتها طرد النعام وفوقه ... حتى إذا سخنت وخف عظامها\nوسخنت عينه بالكسر، وهذا سخنة لعينه، وعين سخينة، وأسخن الله تعالى عينك. وعليك بالأمر في سخنته أي في أوله قبل أن يبرد. وسخنه بالضرب إذا ضربه ضرباً موجعاً. وقد سخن ضربه سخونة، وما أسخن ضربك.\nس خ\nورجل سخيّ وقوم أسخياء، وفيه سخاء، وقد سخا وسخو، وهو يتسخى على أصحابه ويتندى. وأسخيت الجمر تحت القدر وسخيته وسخوته إذا فرجته لتجعل فيه مذهباً للنار.\nومن المجاز: سخيت نفسي وبنفسي عن هذا الأمر إذا تركته ولم تنازعك إليه نفسك. قال الخليل بن أحمد:\nسخى بنفسي أني لا أرى أحداً ... يموت هزلاً ولا يبقى على حال",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "ماء سخن وسخين، وسخنته وأسخنته في المسخنة، وسخن الماء سخونة، ويوم سخن وسخنان، وليلة سخن وسخنانة، وقد سخن يومنا وسخنت ليلتنا. وقروناً بالسخينة وهي حساء عملته قريش في قحط فنبزوا به. قال كعب بن مالك: زعمت سخينة أن ستغلب ربها ... وليغلبن مغالب الغلاب ولبسوا التساخي",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "سخنت الدابة في سيرها إذا انبسطت فيه. قال لبيد:",
+        "prototipe_benzerlik": 0.29,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وسخنت عينه بالكسر، وهذا سخنة لعينه، وعين سخينة، وأسخن الله تعالى عينك. وعليك بالأمر في سخنته أي في أوله قبل أن يبرد. وسخنه بالضرب إذا ضربه ضرباً موجعاً. وقد سخن ضربه سخونة، وما أسخن ضربك.",
+        "prototipe_benzerlik": 0.342,
+        "halka": "orta"
+      },
+      {
+        "cumle": "ورجل سخيّ وقوم أسخياء، وفيه سخاء، وقد سخا وسخو، وهو يتسخى على أصحابه ويتندى. وأسخيت الجمر تحت القدر وسخيته وسخوته إذا فرجته لتجعل فيه مذهباً للنار.",
+        "prototipe_benzerlik": 0.238,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "ومن المجاز: سخيت نفسي وبنفسي عن هذا الأمر إذا تركته ولم تنازعك إليه نفسك. قال الخليل بن أحمد:",
+        "prototipe_benzerlik": 0.336,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.302,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["artifact.n.01", "heat.v.01", "hot.a.01", "hot.a.03", "temperature_change.n.01", "warm.v.01", "warm.v.02"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -1736,22 +1774,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 7,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 331
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 33,
+      "kume": 37,
       "merkez_kok": "وقد",
       "merkez_mana": "Vakd: ateş yakmak; vakîd: ateş",
-      "boy": 44
+      "boy": 45
     },
     "ince": {
-      "kume": 216,
-      "merkez_kok": "سخن",
-      "merkez_mana": "masculine plural of سَاخِن (sāḵin)",
-      "boy": 10
+      "kume": 243,
+      "merkez_kok": "لهب",
+      "merkez_mana": "Lehb: alev, ateş",
+      "boy": 28
     }
   },
   "kaliplar": {

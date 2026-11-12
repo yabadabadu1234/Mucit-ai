@@ -1050,16 +1050,52 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "harmonize.v.01",
-    "orta": "verb.stative",
+    "ince": "state.n.02",
+    "orta": "noun.state",
     "ust": "hâl ve vasıf",
-    "dayanak_synset": "harmonize.v.01",
-    "dayanak_tanim": "go together",
+    "dayanak_synset": "harmony.n.03",
+    "dayanak_tanim": "a harmonious state of things in general and of their properties (as of colors and sounds); congruity of parts with one another and with the whole",
     "synset_sayisi": 7
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "دمع ساجم ومسجوم ومنسجم، ودموع سواجم، وعيون سواجم، وسجمت العين دمعها سجماً، وسجم الدمع سجوماً.",
+    "mecaz": "مطر وسحاب ساجم وسجام. قال جرير:\nضربت معارفها الرواسم بعدنا ... وسجال كل مجلجل سجام\nوأرض مسجومة: ممطورة. وناقة سجوم ومسجام: درور، وقد سجمت. وسجم عن الأمر: أبطأ وانقبض. ورجل سجوم عن المكارم، ومنه بعير أسجم: لا يرغو.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "دمع ساجم ومسجوم ومنسجم، ودموع سواجم، وعيون سواجم، وسجمت العين دمعها سجماً، وسجم الدمع سجوماً.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "مطر وسحاب ساجم وسجام. قال جرير:",
+        "prototipe_benzerlik": 0.408,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وأرض مسجومة: ممطورة. وناقة سجوم ومسجام: درور، وقد سجمت. وسجم عن الأمر: أبطأ وانقبض. ورجل سجوم عن المكارم، ومنه بعير أسجم: لا يرغو.",
+        "prototipe_benzerlik": 0.305,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.357,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "answer.v.08",
+    "confirm.v.01",
+    "consort.v.01",
+    "harmonize.v.01",
+    "match.v.01",
+    "order.n.03",
+    "regularity.n.02"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "خلق الإنسان",
@@ -1070,22 +1106,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 23,
+      "kume": 18,
       "merkez_kok": "وشج",
       "merkez_mana": "",
-      "boy": 67
+      "boy": 63
     },
     "ince": {
-      "kume": 132,
-      "merkez_kok": "وشج",
-      "merkez_mana": "",
-      "boy": 14
+      "kume": 107,
+      "merkez_kok": "وءم",
+      "merkez_mana": "one who was born of a multiple birth, i.e. a twin, triplet, quadruplet",
+      "boy": 11
     }
   },
   "kaliplar": {

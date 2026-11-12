@@ -689,6 +689,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "بسر موكّت: بدت فيه نقط من الإرطاب\nمن قبل رأسه كالمذنّب من قبل ذنبه، وقد وكّتت البسرة، وبدت فيها وكتةٌ: نقطة.",
+    "mecaz": "في عينه وكتةٌ من حمرة أو بياض، وعين موكوتة. وفي قلبي وكتةٌ مما قلت: أثر يسير.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "بسر موكّت: بدت فيه نقط من الإرطاب من قبل رأسه كالمذنّب من قبل ذنبه، وقد وكّتت البسرة، وبدت فيها وكتةٌ: نقطة.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "في عينه وكتةٌ من حمرة أو بياض، وعين موكوتة. وفي قلبي وكتةٌ مما قلت: أثر يسير.",
+        "prototipe_benzerlik": 0.661,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.661,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "خلق الإنسان",
@@ -699,19 +722,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 2,
+      "kume": 1,
       "merkez_kok": "قره",
       "merkez_mana": "",
       "boy": 759
     },
     "orta": {
-      "kume": 4,
+      "kume": 2,
       "merkez_kok": "فلص",
       "merkez_mana": "",
       "boy": 494
     },
     "ince": {
-      "kume": 20,
+      "kume": 2,
       "merkez_kok": "جررب",
       "merkez_mana": "",
       "boy": 70

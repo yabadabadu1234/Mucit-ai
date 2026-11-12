@@ -2011,16 +2011,49 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "person.n.01",
+    "ince": "whole.n.02",
     "orta": "noun.person",
     "ust": "insan ve toplum",
-    "dayanak_synset": "female_aristocrat.n.01",
-    "dayanak_tanim": "a woman who is an aristocrat",
+    "dayanak_synset": "dame.n.02",
+    "dayanak_tanim": "a woman of refinement",
     "synset_sayisi": 7
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "رجل نبيل، وقوم نبلاء، ونبل، وفيه نبل: فضيلة، وقد نبل نبالة، وتنبّل: تشبّه بالنبلاء. ورجل نابل ونبّال: معه نبل. قال امرؤ القيس:\nوليس بذي سيفٍ فيقتلني به ... وليس بذي رمح وليس بنبّال\nوهو نبّالٌ ونابل: حسن النبّالة لصانعها. ونبلته نبلاً: رميته بالنبل، وأنبلته: أعطيتهإيّاه، واستنبلني فأنبلته. وهو أنبل النّاس: أعلمهم بعمل النّبل. قال أبو ذؤيب:\nترّص أفواقها وقوّمها ... أنبل عدوان كلّها صنعاً\nوتنابلوا فنبلهم فلان: تنافروا أيّهم أجود نبلاً أو أيّهم أصنع للنّبل. ورجل تنبال: قصير. وتنبّل البعير: مات.",
+    "mecaz": "فرس نبيل المحزم: عظيمه. قال عنترة:\nوحشيّتي سرجٌ على عبل الشّوى ... نهدٍ مراكله نبيل المحزم\nوإبل نبال الأعجاز. قال ذو الرمة:\nبنائية الأخفاف من قمع الذرى ... نبال تواليها رحاب جنوبها\nويقال: كعبها نبيل: على وجه الذّم. وأنبل قداحه: جعلها غليظة جافية. وتنبّل الخطب: عظم. ورجل نابل بالأمر: حاذق به استعير من الحاذق بالنّبالة. ونبلني حجارةً أتطهر بها وهي النبل والنبل. وفي الحديث: \" أبعدوا المذهب واتّقوا الملاعن وأعدّوا النبل \" وما انتبل نبله إلاّ بآخرة أي ما أخذ عدّته إلا بعد فوات الوقت.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "رجل نبيل، وقوم نبلاء، ونبل، وفيه نبل: فضيلة، وقد نبل نبالة، وتنبّل: تشبّه بالنبلاء. ورجل نابل ونبّال: معه نبل. قال امرؤ القيس: وليس بذي سيفٍ فيقتلني به ... وليس بذي رمح وليس بنبّال وهو نبّالٌ ونابل: حسن النبّالة لصانعها. ونبلته نبلاً: رميته بالنبل، وأنبلته: أع",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "فرس نبيل المحزم: عظيمه. قال عنترة:",
+        "prototipe_benzerlik": 0.392,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وإبل نبال الأعجاز. قال ذو الرمة:",
+        "prototipe_benzerlik": 0.662,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "ويقال: كعبها نبيل: على وجه الذّم. وأنبل قداحه: جعلها غليظة جافية. وتنبّل الخطب: عظم. ورجل نابل بالأمر: حاذق به استعير من الحاذق بالنّبالة. ونبلني حجارةً أتطهر بها وهي النبل والنبل. وفي الحديث: \" أبعدوا المذهب واتّقوا الملاعن وأعدّوا النبل \" وما انتبل نبله إلاّ بآخرة أي ما أخذ عدّته إلا بعد فوات الوق",
+        "prototipe_benzerlik": 0.982,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.679,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["artifact.n.01", "living_thing.n.01", "status.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السلاح",
@@ -2031,22 +2064,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 17,
+      "kume": 24,
       "merkez_kok": "زين",
       "merkez_mana": "Zîne: süs, güzellik; zeyn: güzelleştirmek",
-      "boy": 177
+      "boy": 123
     },
     "ince": {
-      "kume": 93,
-      "merkez_kok": "رقق",
-      "merkez_mana": "Rakîk: ince, yumuşak; rak'a: incelik",
-      "boy": 24
+      "kume": 142,
+      "merkez_kok": "ءبه",
+      "merkez_mana": "greatness, majesty, grandeur",
+      "boy": 22
     }
   },
   "kaliplar": {

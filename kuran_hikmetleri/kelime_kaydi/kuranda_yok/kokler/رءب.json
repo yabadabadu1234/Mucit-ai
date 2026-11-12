@@ -872,6 +872,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "رأب الشعاب الصدع. ورجل مرأب صنع: يحسن رأب الأشياء. وقوم مرائيب وهات رؤبة أرأب بها قدحي. قال ذو الرمة:\nتدهدي فطاحت رؤبة من صميمه ... فبدل أخرى بالغراء وبالشعب",
+    "mecaz": "فلان يرأب أمور الناس، وهو رئاب أمور ومرآب أمور: مصلحها. وهو رءّاب بني فلان. وهو مرآب من مرائيب الثأي: قال الطرماح:\nنصر للذليل في ندوة الحي ... مرائيب للثأي المنهاض\nوفي بني فلان ثلاثون رأباً أي سادات يرأبون أمورهم. وأنشد الأصمعي:\nثلاثون رأباً أو تزيد ثلاثة ... يقابلنا بالقرن ألف مقنع\nوقال الكميت:\nوفي حسن كانت مصاديق لاسمه ... ورأب لصدعيها المهمّين مرأب\nوكفى بفلان رأباً لأمرك بمعنى رائباً وهو وصف بالمصدر. وتقول: هو أربة عقد الإخاء، ورؤبة صدع الصفاء؛ والأربة العقدة المحكمة من التأريب. ورأب الله بينهم: أصلح ذات بينهم. واللهم ارأب بينهم. وتقول: إن رأي أن يرأ بينهم الثأي فعل.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "رأب الشعاب الصدع. ورجل مرأب صنع: يحسن رأب الأشياء. وقوم مرائيب وهات رؤبة أرأب بها قدحي. قال ذو الرمة: تدهدي فطاحت رؤبة من صميمه ... فبدل أخرى بالغراء وبالشعب",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "فلان يرأب أمور الناس، وهو رئاب أمور ومرآب أمور: مصلحها. وهو رءّاب بني فلان. وهو مرآب من مرائيب الثأي: قال الطرماح:",
+        "prototipe_benzerlik": 0.838,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وفي بني فلان ثلاثون رأباً أي سادات يرأبون أمورهم. وأنشد الأصمعي:",
+        "prototipe_benzerlik": 0.629,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وكفى بفلان رأباً لأمرك بمعنى رائباً وهو وصف بالمصدر. وتقول: هو أربة عقد الإخاء، ورؤبة صدع الصفاء؛ والأربة العقدة المحكمة من التأريب. ورأب الله بينهم: أصلح ذات بينهم. واللهم ارأب بينهم. وتقول: إن رأي أن يرأ بينهم الثأي فعل.",
+        "prototipe_benzerlik": 0.728,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.732,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["artifact.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "المكنيات والمبنيات والمثنيات",
@@ -882,22 +915,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
+      "kume": 8,
       "merkez_kok": "قبب",
       "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "boy": 604
     },
     "orta": {
-      "kume": 43,
-      "merkez_kok": "خرز",
-      "merkez_mana": "awl",
-      "boy": 104
+      "kume": 32,
+      "merkez_kok": "دثر",
+      "merkez_mana": "Tedsîr: örtmek, bürümek; desr: örtü",
+      "boy": 148
     },
     "ince": {
-      "kume": 279,
-      "merkez_kok": "لزب",
-      "merkez_mana": "Lezb: yapışkan, bağlı",
-      "boy": 27
+      "kume": 210,
+      "merkez_kok": "قلم",
+      "merkez_mana": "Kalem: kalem; kalm: kesmek",
+      "boy": 10
     }
   },
   "kaliplar": {

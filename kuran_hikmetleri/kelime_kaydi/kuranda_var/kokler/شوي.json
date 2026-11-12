@@ -917,31 +917,64 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "سمعت كذا فاقشعرت منه شواتي: جلدة رأسي. قال:\nقالت فتيلة ماله ... قد جللت شيباً شواته\nورمي الصيد فأشواه إذا أصاب شواه وما ليس بمقتل. وشويت اللحم، واشتويته لنفسي، وأشويت أصحابي: أطعمتهم شواء.",
+    "mecaz": "أعطاني من الشوى وهو رذال المال. قال:\nأكلنا الشوى حتى إذا لم ندع شوًى ... أشرنا إلى خيراتها بالأصابع\nويقال: كلّ ذلك شوًى ما سلم ديني أي هو حقير. قال:\nوكنت إذا الأيام أحدثن هالكاً ... أقول شوًى ما لم يصبن صميمي\nوتعشّى فلان فأشوى من عشائه أي أبق شوًى منه. وما بقي من الشاء إلا شواية: بقية يسيرة. ويقال: القتل الخطة التي لا شوى لها أي لا بقيا لها أي لا تشوى ولا تبقى.\nوقال الهذلي:\nفإن من القول التي لا شوى لها ... إذا زل عن ظهر اللسان انفلاتها",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "سمعت كذا فاقشعرت منه شواتي: جلدة رأسي. قال: قالت فتيلة ماله ... قد جللت شيباً شواته ورمي الصيد فأشواه إذا أصاب شواه وما ليس بمقتل. وشويت اللحم، واشتويته لنفسي، وأشويت أصحابي: أطعمتهم شواء.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "أعطاني من الشوى وهو رذال المال. قال:",
+        "prototipe_benzerlik": 0.712,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "ويقال: كلّ ذلك شوًى ما سلم ديني أي هو حقير. قال:",
+        "prototipe_benzerlik": 0.674,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وتعشّى فلان فأشوى من عشائه أي أبق شوًى منه. وما بقي من الشاء إلا شواية: بقية يسيرة. ويقال: القتل الخطة التي لا شوى لها أي لا بقيا لها أي لا تشوى ولا تبقى.",
+        "prototipe_benzerlik": 0.545,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.644,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["fire.v.03", "grill.v.01", "happening.n.01", "ridicule.v.01", "statement.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
     "bab": "",
-    "kok_gecis": 116.5,
-    "kitapta_gecis": 37.5,
-    "zenginlesme": 6.2
+    "kok_gecis": 109.0,
+    "kitapta_gecis": 37.0,
+    "zenginlesme": 6.54
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 6,
-      "merkez_kok": "لقلق",
-      "merkez_mana": "",
-      "boy": 440
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 27,
-      "merkez_kok": "عجو",
-      "merkez_mana": "beikost",
-      "boy": 82
-    },
-    "ince": {
-      "kume": 172,
+      "kume": 38,
       "merkez_kok": "خبز",
       "merkez_mana": "Habz: ekmek yapmak, ekmek",
+      "boy": 50
+    },
+    "ince": {
+      "kume": 252,
+      "merkez_kok": "طبخ",
+      "merkez_mana": "kitchen",
       "boy": 8
     }
   },

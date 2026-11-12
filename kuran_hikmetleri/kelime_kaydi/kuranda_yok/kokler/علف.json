@@ -1591,13 +1591,41 @@
     "ince": "substance.n.07",
     "orta": "noun.food",
     "ust": "canlı ve beden",
-    "dayanak_synset": "feed.n.01",
-    "dayanak_tanim": "food for domestic livestock",
+    "dayanak_synset": "fodder.n.02",
+    "dayanak_tanim": "coarse food (especially for livestock) composed of entire plants or the leaves and stalks of a cereal crop",
     "synset_sayisi": 3
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "علف الدابة والدجاجة والحمام وغيرها، واعتلفت. وهو يبيع العلوفة والعلوفات. وله العلوفة والعلائف.",
+    "mecaz": "قولهم للأكول: معتلف، وقد اعتلف. قال الحماسيّ:\nإذا كنت في قوم عدّى لست منهم ... فكل ما علفت من خبيثٍ وطيّب\nوهو علف السباع وجزر السباع.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "علف الدابة والدجاجة والحمام وغيرها، واعتلفت. وهو يبيع العلوفة والعلوفات. وله العلوفة والعلائف.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "قولهم للأكول: معتلف، وقد اعتلف. قال الحماسيّ:",
+        "prototipe_benzerlik": 0.225,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وهو علف السباع وجزر السباع.",
+        "prototipe_benzerlik": 0.337,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.281,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["feed.v.06", "food.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الإبل",
@@ -1608,19 +1636,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "kume": 2,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 466
     },
     "orta": {
-      "kume": 44,
-      "merkez_kok": "زرب",
-      "merkez_mana": "Zerb: sürü ağılı; zerâbî: halı",
-      "boy": 63
+      "kume": 3,
+      "merkez_kok": "قمح",
+      "merkez_mana": "Kamh: buğday",
+      "boy": 64
     },
     "ince": {
-      "kume": 285,
+      "kume": 6,
       "merkez_kok": "سمد",
       "merkez_mana": "Samed: sonsuz, tüm ihtiyaçların giderildiği; el-Samed: Allah",
       "boy": 17

@@ -1272,6 +1272,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "عمله الخرازة. وكلام فلان كخرز الإماء أي متفاوت، درة وودعة. ووال بين الخرز. وطائر مخرز: على جناحيه نمنمة تشبه بالخرز.",
+    "mecaz": "أوتي خرزات الملك إذا ملك. قال لبيد:\nرعى خرزات الملك ستين حجة ... وعشرين حتى فاد والشيب شامل\nوقال:\nلن تدركا خرزات أر ... بد فابكيا حتى تفودا\nوضربه على خرز ظهره وهي فقاره: وفي مثل \"\nسيرين في خرزة \" لمن طلب حاجتين في حاجة.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "عمله الخرازة. وكلام فلان كخرز الإماء أي متفاوت، درة وودعة. ووال بين الخرز. وطائر مخرز: على جناحيه نمنمة تشبه بالخرز.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "أوتي خرزات الملك إذا ملك. قال لبيد:",
+        "prototipe_benzerlik": 0.534,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وضربه على خرز ظهره وهي فقاره: وفي مثل \"",
+        "prototipe_benzerlik": 0.41,
+        "halka": "orta"
+      },
+      {
+        "cumle": "سيرين في خرزة \" لمن طلب حاجتين في حاجة.",
+        "prototipe_benzerlik": 0.331,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.425,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["artifact.n.01", "penetrate.v.01", "string.n.09"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النساء",
@@ -1282,22 +1315,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
+      "kume": 8,
       "merkez_kok": "قبب",
       "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "boy": 604
     },
     "orta": {
-      "kume": 43,
-      "merkez_kok": "خرز",
-      "merkez_mana": "awl",
-      "boy": 104
+      "kume": 32,
+      "merkez_kok": "دثر",
+      "merkez_mana": "Tedsîr: örtmek, bürümek; desr: örtü",
+      "boy": 148
     },
     "ince": {
-      "kume": 281,
-      "merkez_kok": "خرز",
-      "merkez_mana": "awl",
-      "boy": 42
+      "kume": 211,
+      "merkez_kok": "قرط",
+      "merkez_mana": "to cut into minute morsels, to chop or mince, to chef",
+      "boy": 32
     }
   },
   "kaliplar": {

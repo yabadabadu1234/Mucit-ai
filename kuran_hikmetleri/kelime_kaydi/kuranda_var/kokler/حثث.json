@@ -1302,11 +1302,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "induce.v.02",
+    "ince": "propose.v.01",
     "orta": "verb.communication",
     "ust": "söz ve haber",
-    "dayanak_synset": "induce.v.02",
-    "dayanak_tanim": "cause to do; cause to act in a specified manner",
+    "dayanak_synset": "recommend.v.01",
+    "dayanak_tanim": "push for something",
     "synset_sayisi": 24
   },
   "ses_mana_tasnif": {
@@ -1317,32 +1317,67 @@
     "fasil_ozeti": "° معنى الفصل المعجمي (حث) : تسيب الشيء قطعًا جافة صغيرة كالرمل اليابس الخشن -في (حثث)، وكالتراب المتراكم- في (حوث).",
     "tam_metin": "{يُغْشِي اللَّيْلَ النَّهَارَ يَطْلُبُهُ حَثِيثًا} [الأعراف: 54]\n\"الحُثّ -بالضم: الرمْلُ الغليظُ اليابسُ الخَشِنُ، وحُطامُ التِبْن، والمدْقُوقُ من\n(1/373)\nكل شيء. وسويق حُثٌّ ليس بدقيق الطحن، وكُحْل حُثٌّ كذلك، وتمر حُثٌّ: لا يلزق بعضه ببعض \".\n° المعنى المحوري\nتسيب الشيء قطعًا جافة خشنة -أو نفاذه ونشوءه كذلك (1): كما هو واضح في الحُثّ بمعانيه، ومنه \"حَثّه: أعجله في اتصال (كأنما جعله أو دفعه ليتسيب أي يسرع، فالبطيء كالمقيد، وقد يُؤَوَّل الحث بالمخاشنة). وحثْحَثه كحَثه وحَثَّثه: حَضَّه. والحثحثة: الحَرَكة المتداركة (تسيب متوال) وقَرَب حثحثات: شديد ليس فيه فتور. {ولَّىَ حَثِيثًا}: مسرعًا حريصًا. ورجل حثيث ومحثوث: جادٌّ سريع {يَطْلُبُهُ حَثِيثًا}. ومن الحركة الخشنة: \"حثحثت المِيلَ في العَيْن: حَرّكه \" (حساسية العين تجعل كل حركة فيها خشنة) [المِيل: قضيب من الزجاج دقيق ناعم].\nثم قالوا: \"ما ذقت حَثاثًا أي نومًا \"وأرى أن المقصود به النومُ القليل بدليل قوله \"نَومٌ حِثاث -ككتاب أي قليل \"فمثل هذا النوم متقطع عن قلق أو انزعاج أو تعب."
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "حثه على الأمر واحتثه وحثحثه، وفلان محثوث على الخير. وحث دابته وحثحثها بالسوط والزجر. قال تأبط شراً:\nكأنما حثحثوا حصاً قوادمه ... أو أم خشف بذي شث وطباق\nوحثحث الميل في العين: حركه. وفرس حثيث السير، ومضى حثيثاً. وما جعلت في عيني حثاثاً أي غماضاً، والتقوى أفضل ما تحاث الناس عليه، وتداعوا إليه.",
+    "mecaz": "",
+    "kinaye": "",
+    "mecaz_var": false
+  },
+  "prototip_yayilim_tasnif": {
+    "durum": "prototip veya mecaz kolu yok"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "act.n.02",
+    "arouse.v.01",
+    "arouse.v.07",
+    "compress.v.02",
+    "encourage.v.02",
+    "encourage.v.03",
+    "harass.v.01",
+    "induce.v.01",
+    "induce.v.02",
+    "information.n.02",
+    "interest.v.01",
+    "persuade.v.02",
+    "precipitate.v.03",
+    "press.v.01",
+    "prod.v.02",
+    "raise.v.07",
+    "recommend.v.01",
+    "stimulate.v.01",
+    "stimulate.v.03",
+    "stimulate.v.04",
+    "talk_of.v.01",
+    "tempt.v.03",
+    "travel_rapidly.v.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الأضداد",
     "bab": "ما خالفت العامة فيه لغات العرب من الكلام",
-    "kok_gecis": 116.0,
+    "kok_gecis": 113.0,
     "kitapta_gecis": 11.3,
-    "zenginlesme": 1.96
+    "zenginlesme": 2.01
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 17,
-      "merkez_kok": "زين",
-      "merkez_mana": "Zîne: süs, güzellik; zeyn: güzelleştirmek",
-      "boy": 177
-    },
-    "ince": {
-      "kume": 89,
+      "kume": 25,
       "merkez_kok": "وسل",
       "merkez_mana": "Vesîle: aracı, yol",
-      "boy": 20
+      "boy": 130
+    },
+    "ince": {
+      "kume": 148,
+      "merkez_kok": "وسل",
+      "merkez_mana": "Vesîle: aracı, yol",
+      "boy": 42
     }
   },
   "kaliplar": {

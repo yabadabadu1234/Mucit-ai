@@ -1,0 +1,51 @@
+{
+  "kok": "شكهـ",
+  "sinif": "reddedildi",
+  "turkce_fiil": null,
+  "mustaklar": {},
+  "reddedilen": [
+    ["kök", "شكهـ", "üç harfli değil"]
+  ],
+  "sozlukler": {},
+  "kuran_gecisleri": 0,
+  "kuranda_var": false,
+  "sema": {
+    "sema": "graf-ic-graf",
+    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
+    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
+    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
+    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
+    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
+  },
+  "tasnif": {
+    "fasil": "شك",
+    "harf": "ش",
+    "mahrec": "şeceriyye",
+    "bolge": "dil"
+  },
+  "mana_tasnif": {
+    "durum": "Arabic WordNet v2 kaydı yok"
+  },
+  "ses_mana_tasnif": {
+    "durum": "Cebel mu'cemlerinde kök yok"
+  },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "بينهما مشابهة ومشاكهة. وشاكه أبا فلان: قارب.\nش ك\nوشكوت إليه واشتكيت وتشكيت، وبلغته شكايتي وشكواي وشكوتي وشكاتي. وما شكيتك؟: مم تشكو، فتقول: شكيتي مرض أو غم وهي كالرمية اسم للمشكو كما أنها اسم للمرميّ، ويقال: أشكاني فشكوته، وشكوته فأشكاني الأول حمل على الشكاية وإلجاء إليها والثاني إزالة لها. قال جرير:\nأشكو إليك فأشكني ذرية ... لا يشبعون وأمهم لا تشعب\nوقال آخر:\nتمد بالأعناق أو تثنيهاوتشتكي لو أننا نشكيها ونحوه أطلبته بمعنى الإحواج إلى الطلب والإسعاف بالطلبة. وشكوت إليه فلاناً فأشكاني منه أي أخذ لي منه ما أرضاني به. وشكّيت شاكيَ فلان: طيبت نفسه. وفلان شكي: شاك أو مشكو، فعيل أو فعول. ورأيت معه ركوة وشكوة وهي سقاء صغير. وكأنه مصباح في مشكاة وهي طويق في الحائط غير نافذ.",
+    "mecaz": "",
+    "kinaye": "",
+    "mecaz_var": false
+  },
+  "prototip_yayilim_tasnif": {
+    "durum": "prototip veya mecaz kolu yok"
+  },
+  "kolekzifikasyon_kavramlari": [],
+  "muhassas_tasnif": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "mana_tasnif_gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
+  },
+  "kaliplar": {},
+  "kelimeler": []
+}

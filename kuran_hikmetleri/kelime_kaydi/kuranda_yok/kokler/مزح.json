@@ -1169,13 +1169,41 @@
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "jest.n.02",
-    "dayanak_tanim": "activity characterized by good humor",
+    "dayanak_synset": "play.n.14",
+    "dayanak_tanim": "gay or light-hearted recreational activity for diversion or amusement",
     "synset_sayisi": 4
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "إياك والمزح والمزاح والمزاحة والممازحة والمزاح، وهما يتمازحان، ورجل مزّاح.",
+    "mecaz": "مزّح السنبل والعنب: لون قالوا: وهو الصحيح دون الجيم\nوأنشدوا قول ابن هرمة:\nوصاحت مسامير الرحال وكلفت ... على الجهد بالموماة سيراً مطحطحاً\nكما صاح سرب من عصافير صيفة ... تواعدن كرماً بالسّراة ممزّحاً\nوروى: ممرّحاً بمعنى معرّشاً.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "إياك والمزح والمزاح والمزاحة والممازحة والمزاح، وهما يتمازحان، ورجل مزّاح.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "مزّح السنبل والعنب: لون قالوا: وهو الصحيح دون الجيم",
+        "prototipe_benzerlik": 0.339,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وروى: ممرّحاً بمعنى معرّشاً.",
+        "prototipe_benzerlik": 0.254,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.297,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["act.n.02", "laugh.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النخل",
@@ -1186,19 +1214,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 17,
+      "kume": 24,
       "merkez_kok": "زين",
       "merkez_mana": "Zîne: süs, güzellik; zeyn: güzelleştirmek",
-      "boy": 177
+      "boy": 123
     },
     "ince": {
-      "kume": 88,
+      "kume": 137,
       "merkez_kok": "زحح",
       "merkez_mana": "jester, jokester, frolicker",
       "boy": 11

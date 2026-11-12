@@ -1089,16 +1089,54 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "welter.v.03",
+    "ince": "plunge.v.05",
     "orta": "verb.cognition",
     "ust": "zihin ve ilim",
-    "dayanak_synset": "welter.v.03",
-    "dayanak_tanim": "be immersed in",
+    "dayanak_synset": "plunge.v.05",
+    "dayanak_tanim": "cause to be immersed",
     "synset_sayisi": 5
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "غمسه في الماء فانغمس واغتمس. وغمس السنان في ثغرته. وغمس اللقمة في الخل. واختضبت المرأة غمساً إذا غمست يدها في الحناء من غير نقش. وغمس النجم: غاب غموساً. قال عبد الله بن سليمان الغامديّ:\nولقد سريت الليل حتى أشرقت ... أخرى النجوم وقد دنت لغموس",
+    "mecaz": "شجاع مغامس: مغامر.\nوفارس في غمار الموت منغمس\nووقعوا في أمر غموس أي شديد غمسهم في البلاء، ومنه: اليمين الغموس: لشدّتها. وطعنة غموس: نافذة وصفت بصفة طاعنها لأنه يغمس السنان حتى ينفذ. قال أبو زبيد:\nثم أنفذته ونفّست عنه ... بغموس أو ضربة أخدود\nوهي التي تشقّ اللحم شقاً.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "غمسه في الماء فانغمس واغتمس. وغمس السنان في ثغرته. وغمس اللقمة في الخل. واختضبت المرأة غمساً إذا غمست يدها في الحناء من غير نقش. وغمس النجم: غاب غموساً. قال عبد الله بن سليمان الغامديّ: ولقد سريت الليل حتى أشرقت ... أخرى النجوم وقد دنت لغموس",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "شجاع مغامس: مغامر.",
+        "prototipe_benzerlik": 0.409,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وفارس في غمار الموت منغمس",
+        "prototipe_benzerlik": 0.526,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "ووقعوا في أمر غموس أي شديد غمسهم في البلاء، ومنه: اليمين الغموس: لشدّتها. وطعنة غموس: نافذة وصفت بصفة طاعنها لأنه يغمس السنان حتى ينفذ. قال أبو زبيد:",
+        "prototipe_benzerlik": 0.533,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وهي التي تشقّ اللحم شقاً.",
+        "prototipe_benzerlik": 0.224,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.423,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["ability.n.02", "indulge.v.01", "plunge.v.05", "steep.v.01", "welter.v.03"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -1109,22 +1147,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 7,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 331
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 30,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 103
-    },
-    "ince": {
-      "kume": 205,
+      "kume": 35,
       "merkez_kok": "نقع",
       "merkez_mana": "Nak': su birikintisi; nakî': ıslak",
-      "boy": 33
+      "boy": 47
+    },
+    "ince": {
+      "kume": 236,
+      "merkez_kok": "نقع",
+      "merkez_mana": "Nak': su birikintisi; nakî': ıslak",
+      "boy": 18
     }
   },
   "kaliplar": {

@@ -1575,6 +1575,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "قلس: قاء ملء الفم قلساً. في الحديث \" القلس حدث \" والقلس محركاً: اسم ما يقلس. وقلست نفسه ولقست: غثت. وتقول: قلست فقلست اي غشت فقاءت. وقلسته فتقلّس من القلنسوة. وجرّوا السفينة بالقلس والسّفين بالقلوس. أنشد ابن الأعرابيّ:\nفي شعشعان كعمود القلس\nأي كالدقل. وقلّس المقلّسون وهم الذين يلعبون في الأعياد بين يدي الأمراء بالسيوف والحراب ويضربون الطّبول، وفي الحديث لما قدم عمر الشام: لقيه المقلّسون بالسيوف والريحان. قال الكميت:\nثم استمرّ يغنيه الذّياب كما ... غنى المقلّس بطريقاً بمزمار\nوقلّس الذّمّيّ: وضع يديه على صدره قبل التّكفير. وقلّس فلان: خضع لأمير أو كبير. قال:\nإذا ما رأونا قلّسوا من مهابة ... ويسعى علينا بالطعام جرير",
+    "mecaz": "قلست السحابة النذدى من غير مطر شديد. قال ذو الرمة:\nتبسّمن عن غرّ كأن رضابها ... ندى الرمل مجّته السحاب القوالس\nوقلست الكأس: قذفت الشراب لفرط امتلائها. قال:\nأبا حسن ما زرتكم منذ سنبة ... من الدهر إلا والزّجاجة تقلس\nوقلست الطّعنة بالدم، وطعنة قالسة وقلاّسة.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "قلس: قاء ملء الفم قلساً. في الحديث \" القلس حدث \" والقلس محركاً: اسم ما يقلس. وقلست نفسه ولقست: غثت. وتقول: قلست فقلست اي غشت فقاءت. وقلسته فتقلّس من القلنسوة. وجرّوا السفينة بالقلس والسّفين بالقلوس. أنشد ابن الأعرابيّ: في شعشعان كعمود القلس أي كالدقل. وقلّس ال",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "قلست السحابة النذدى من غير مطر شديد. قال ذو الرمة:",
+        "prototipe_benzerlik": 0.205,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وقلست الكأس: قذفت الشراب لفرط امتلائها. قال:",
+        "prototipe_benzerlik": 0.123,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وقلست الطّعنة بالدم، وطعنة قالسة وقلاّسة.",
+        "prototipe_benzerlik": -0.041,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.095,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
@@ -1585,22 +1618,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
-      "merkez_kok": "حنج",
-      "merkez_mana": "",
-      "boy": 426
-    },
-    "orta": {
       "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 261
+      "boy": 466
+    },
+    "orta": {
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 11,
-      "merkez_kok": "خرت",
-      "merkez_mana": "to pierce, to bore, to perforate",
-      "boy": 18
+      "kume": 15,
+      "merkez_kok": "دلق",
+      "merkez_mana": "to pour out, spill (e.g. a liquid)",
+      "boy": 58
     }
   },
   "kaliplar": {

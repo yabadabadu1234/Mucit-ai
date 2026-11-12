@@ -2081,8 +2081,8 @@
     "ince": "whole.n.02",
     "orta": "noun.artifact",
     "ust": "cisim ve eşya",
-    "dayanak_synset": "shot.n.02",
-    "dayanak_tanim": "a solid missile discharged from a firearm",
+    "dayanak_synset": "bullet.n.01",
+    "dayanak_tanim": "a projectile that is fired from a gun",
     "synset_sayisi": 9
   },
   "ses_mana_tasnif": {
@@ -2093,6 +2093,38 @@
     "fasil_ozeti": "° معنى الفصل المعجمي (رص) : الالتحام بغلظ أو متانة كما يتمثل في التحام الرصاص وحال المرأة الرتقاء -في (رصص)، والغلظ هنا أن هذا عيب يحرم المرأة من الأمومة، وكما في لزوم المترصد مكانه مع تحفز ليهجم أو ياخذ، والزبية مرصدة للأخذ أيضًا -في (رصد).",
     "tam_metin": "{إِنَّ اللَّهَ يُحِبُّ الَّذِينَ يُقَاتِلُونَ فِي سَبِيلِهِ صَفًّا كَأَنَّهُمْ بُنْيَانٌ مَرْصُوصٌ} [الصف: 4] \"الرَصَاص من المعدنيات معروف. والرَصّاء والرَصُوص من النساء: الرَتْقاء \".\n° المعنى المحوري\nالْتِحام المادة (اللينة) مع غلظ وقوة (1) كحال الرتقاء، والرَصَاصُ ثقيل جدًّا وليّن (طري) وثقله يوحي بامتلاء أثنائه أي شدة اكتنازه. ومنه \"رصّ البنيانَ ورَصْرَصه: أحكمه وجَمَعه وضمّ بعضَه إلى بعض، والشيءَ: ألصق بعضه ببعض. وكل ما أُحْكِم وضُمَّ فقد رُصّ \" {صَفًّا كَأَنَّهُمْ بُنْيَانٌ مَرْصُوصٌ} ومنه \"الرَصَّاصة -كنَشَّابة والرَصْرَاصة: حجارة لازمة لما حوالَيْ العين الجارية \". (بالغة الصلابة لا يؤثر فيها الماء الجاري)."
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "بنيان مرصوص ومرصّص. وقد ارتصّت الجنادل وترصصت. وفي أسنانه رصص. ورجل أرص وامرأة رصاء. وتراصوا في الصلاة وارتصّوا. ورصت الدجاجة والنعامة بيضها: سوّته بمنقارها ورجليها لتقعد عليه. وبيض رصيص. قال امرؤ القيس:\nعلى نقنق هيق له ولعرسه ... بمنعرج الوعساء بيض رصيص\nوامرأة رصاء الفخذين: خلاف بدّاء. ورصت على القبر الرصائص: ركمت عليه الحجارة جمع رصاصة.",
+    "mecaz": "إن فلاناً لرصاصة إذا كان بخيلاً يشبه بالحجر أو بهذا الجوهر كما قيل: رجل فلز.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Cebel mihverî mana",
+    "prototip": "الْتِحام المادة (اللينة) مع غلظ وقوة (1) كحال الرتقاء، والرَصَاصُ ثقيل جدًّا وليّن (طري) وثقله يوحي بامتلاء أثنائه أي شدة اكتنازه. ومنه \"رصّ البنيانَ ورَصْرَصه: أحكمه وجَمَعه وضمّ بعضَه إلى بعض، والشيءَ: ألصق بعضه ببعض. وكل ما أُحْكِم وضُمَّ فقد رُصّ \" {صَفًّا",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "إن فلاناً لرصاصة إذا كان بخيلاً يشبه بالحجر أو بهذا الجوهر كما قيل: رجل فلز.",
+        "prototipe_benzerlik": 0.494,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.494,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "artifact.n.01",
+    "chemical_element.n.01",
+    "consistency.n.01",
+    "ensconce.v.01",
+    "reconcile.v.03",
+    "settle.v.01",
+    "settle.v.13",
+    "sink.v.04"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
@@ -2103,19 +2135,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 15,
+      "kume": 19,
       "merkez_kok": "فوق",
       "merkez_mana": "Fevk: üst, yukarı (zarf)",
-      "boy": 107
+      "boy": 76
     },
     "ince": {
-      "kume": 84,
+      "kume": 109,
       "merkez_kok": "حصف",
       "merkez_mana": "of sense, sober, realistic",
       "boy": 31

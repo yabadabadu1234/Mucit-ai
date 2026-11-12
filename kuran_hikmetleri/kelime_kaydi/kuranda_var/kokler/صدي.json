@@ -1193,6 +1193,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "رجل صد وصاد وصديان، وامرأة صديا، وقد صدى، وقتله الصدى وهو العطش الشديد. وتصديت له. وصدّى بيديه: صفق، ولهم مكاء وتصدية. وصاديته، وظللت أصاديه: أداريه، وتقول: من صاداك فقد صادك.",
+    "mecaz": "أنا صديان إلى حديثك. ولي أحشاء صواد إليك. وصم صداه، وأصم الله تعالى صداه: دعاء بالهلاك لأنه إذا هلك لم يجبه الصدى وتقول: أنت غداً صدًى. وتقول: هم اليوم أعداء، وهم غداً أصداء؛ أي موتى.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "رجل صد وصاد وصديان، وامرأة صديا، وقد صدى، وقتله الصدى وهو العطش الشديد. وتصديت له. وصدّى بيديه: صفق، ولهم مكاء وتصدية. وصاديته، وظللت أصاديه: أداريه، وتقول: من صاداك فقد صادك.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "أنا صديان إلى حديثك. ولي أحشاء صواد إليك. وصم صداه، وأصم الله تعالى صداه: دعاء بالهلاك لأنه إذا هلك لم يجبه الصدى وتقول: أنت غداً صدًى. وتقول: هم اليوم أعداء، وهم غداً أصداء؛ أي موتى.",
+        "prototipe_benzerlik": 0.601,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.601,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["confront.v.02", "repeat.v.04"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "المقصور والممدود",
@@ -1203,22 +1226,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
-      "merkez_kok": "درك",
-      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "kume": 7,
+      "merkez_kok": "لقلق",
+      "merkez_mana": "",
+      "boy": 386
     },
     "orta": {
-      "kume": 21,
-      "merkez_kok": "همس",
-      "merkez_mana": "Hamis: fısıldamak, gizlice konuşmak",
-      "boy": 97
+      "kume": 26,
+      "merkez_kok": "طعل",
+      "merkez_mana": "to come upon, befall",
+      "boy": 91
     },
     "ince": {
-      "kume": 120,
-      "merkez_kok": "قول",
-      "merkez_mana": "Kavl: söz, söyleme",
-      "boy": 18
+      "kume": 150,
+      "merkez_kok": "سمع",
+      "merkez_mana": "Sem': işitmek, kulak",
+      "boy": 7
     }
   },
   "kaliplar": {

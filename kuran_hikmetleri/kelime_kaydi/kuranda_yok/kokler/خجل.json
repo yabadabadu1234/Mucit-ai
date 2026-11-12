@@ -1728,6 +1728,44 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "كأني بك وقد جاء أجلك، واجتمع عليك خجلك ووجلك؛ وهو التحير والاضطراب من الحياء، وأخجله كذا وخجله.",
+    "mecaz": "خجل فلان بأمره إذا بعل به لا يدري كيف يصنع. وخجل البعير بحمله. وخجل الجمل في الطين والوعث: ارتطم وتحير. قال:\nقلت بلى إني إذا الليل شمل ... ولزم الفتيان أثباج الإبل\nقد يهتدي بصوتي الحادي الخجل\nأي المتحير. وثوب خجل: طويل مضطرب، وأخجل ثوبه. قال:\nعليه ثوب خجل خبيث ... مدرعة كساؤها مثلوث\nوجلل فرسه جلاً خجلاً: واسعاً يضطرب عليه ويدنو من الأرض. وفي الحديث \" إذا جعتن دقعتن وإذا شبعتن خجلتن \" أي فعلتن ما يوجب الخجل والحياء. وخجل النبات: كثر والتف، وواد خجل: مخصب معشب. وفي الحديث \" أنه أتى على واد خجل مغن \".",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "كأني بك وقد جاء أجلك، واجتمع عليك خجلك ووجلك؛ وهو التحير والاضطراب من الحياء، وأخجله كذا وخجله.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "خجل فلان بأمره إذا بعل به لا يدري كيف يصنع. وخجل البعير بحمله. وخجل الجمل في الطين والوعث: ارتطم وتحير. قال:",
+        "prototipe_benzerlik": 0.677,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "قد يهتدي بصوتي الحادي الخجل",
+        "prototipe_benzerlik": 0.704,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "أي المتحير. وثوب خجل: طويل مضطرب، وأخجل ثوبه. قال:",
+        "prototipe_benzerlik": 0.701,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وجلل فرسه جلاً خجلاً: واسعاً يضطرب عليه ويدنو من الأرض. وفي الحديث \" إذا جعتن دقعتن وإذا شبعتن خجلتن \" أي فعلتن ما يوجب الخجل والحياء. وخجل النبات: كثر والتف، وواد خجل: مخصب معشب. وفي الحديث \" أنه أتى على واد خجل مغن \".",
+        "prototipe_benzerlik": 0.737,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.705,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["blush.v.01", "embarrass.v.01", "feeling.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "اللباس",
@@ -1738,22 +1776,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 17,
-      "merkez_kok": "زين",
-      "merkez_mana": "Zîne: süs, güzellik; zeyn: güzelleştirmek",
-      "boy": 177
+      "kume": 25,
+      "merkez_kok": "وسل",
+      "merkez_mana": "Vesîle: aracı, yol",
+      "boy": 130
     },
     "ince": {
-      "kume": 93,
-      "merkez_kok": "رقق",
-      "merkez_mana": "Rakîk: ince, yumuşak; rak'a: incelik",
-      "boy": 24
+      "kume": 143,
+      "merkez_kok": "شكم",
+      "merkez_mana": "bit, snaffle",
+      "boy": 32
     }
   },
   "kaliplar": {

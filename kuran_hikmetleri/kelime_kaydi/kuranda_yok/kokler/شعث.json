@@ -738,6 +738,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "رجل أشعث، وامرأة شعثاء، وبه شعث\nوهو انتشار الشعر وتغيره لقلة التعهد.",
+    "mecaz": "قولهم للوتد: أشعث، لتشعث رأسه وشعث رأس السواك. ولم الله تعالى شعثكم، وجمع شعبكم، ولم الله تعالى شعوثكم. قال الطرماح:\nولمهم شعوث الحي حتى ... يصير معاً معاً بعد الشتات\nوتشعث القوم: تفرقوا. وشعث مني فلان إذا غضّ منك. وشعثت من فلان شيئاً إذا انتشت منه. وشعثه بخير: أصابه به.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "رجل أشعث، وامرأة شعثاء، وبه شعث وهو انتشار الشعر وتغيره لقلة التعهد.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "قولهم للوتد: أشعث، لتشعث رأسه وشعث رأس السواك. ولم الله تعالى شعثكم، وجمع شعبكم، ولم الله تعالى شعوثكم. قال الطرماح:",
+        "prototipe_benzerlik": 0.229,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وتشعث القوم: تفرقوا. وشعث مني فلان إذا غضّ منك. وشعثت من فلان شيئاً إذا انتشت منه. وشعثه بخير: أصابه به.",
+        "prototipe_benzerlik": 0.32,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.275,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "خلق الإنسان",
@@ -748,22 +776,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "kume": 2,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 466
     },
     "orta": {
-      "kume": 39,
-      "merkez_kok": "هضض",
-      "merkez_mana": "recurrence of sadness",
-      "boy": 52
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 253,
-      "merkez_kok": "عفس",
+      "kume": 18,
+      "merkez_kok": "جهو",
       "merkez_mana": "",
-      "boy": 21
+      "boy": 7
     }
   },
   "kaliplar": {

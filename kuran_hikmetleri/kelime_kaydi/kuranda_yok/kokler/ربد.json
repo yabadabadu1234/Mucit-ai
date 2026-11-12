@@ -1781,6 +1781,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "نعامة ربداء ونعام ربد وظليم أربد ونمر أربد. وفيه ربدة وهي نحو الرمدة وهي لون الرماد. وتربّدت السماء، والسماء متربدة: متغيمة. وربدت الشاة: أضرعت فرؤيَ في ضرعها لمع سواد. وقد تربد ضرعها. قال:\nإذا والد منها تربّد ضرعها ... جعلت لها السكين إحدى القلائد\nأراد ذات ولد هو في بطنها. وتربد وجهه من الغضب. واربدّ وارمدّ. وأبيض في متنه ربد وهي فرنده. وربدت الإبل: ربطتها، والإبل في المربد وهو الموضع الذي تربد فيه، جعل حابساً حيث بني على مفعل. وقيل: مربد البصرة، ومربد المدينة وهو متسع كانت الإبل تربد فيه للبيع وهو مجتمع العرب ومتحدّثهم. والتمر في المربد وهو البيدر لأن التعمر يربد فيه فيشمس. يقال: ربدت تمرك بداً حسناً.",
+    "mecaz": "داهية ربداء: منكرة. وعام أربد: مقحط. قال الركّاض:\nإني إذا ما كان عام أربد ... وابتعد السعر وخف المرفد\nعندي مواساة لها لا تنفد\nأي للفرس. والمرفد القدح الكبير.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "نعامة ربداء ونعام ربد وظليم أربد ونمر أربد. وفيه ربدة وهي نحو الرمدة وهي لون الرماد. وتربّدت السماء، والسماء متربدة: متغيمة. وربدت الشاة: أضرعت فرؤيَ في ضرعها لمع سواد. وقد تربد ضرعها. قال: إذا والد منها تربّد ضرعها ... جعلت لها السكين إحدى القلائد أراد ذات ول",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "داهية ربداء: منكرة. وعام أربد: مقحط. قال الركّاض:",
+        "prototipe_benzerlik": 0.916,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "عندي مواساة لها لا تنفد",
+        "prototipe_benzerlik": 0.117,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "أي للفرس. والمرفد القدح الكبير.",
+        "prototipe_benzerlik": 0.16,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.397,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الإبل",
@@ -1791,19 +1824,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 7,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 331
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 34,
-      "merkez_kok": "غبر",
-      "merkez_mana": "Gubr: toz, gübre; gâbir",
-      "boy": 47
+      "kume": 43,
+      "merkez_kok": "عقم",
+      "merkez_mana": "Akm: kısır olmak; akim: kısır",
+      "boy": 106
     },
     "ince": {
-      "kume": 220,
+      "kume": 283,
       "merkez_kok": "غبر",
       "merkez_mana": "Gubr: toz, gübre; gâbir",
       "boy": 11

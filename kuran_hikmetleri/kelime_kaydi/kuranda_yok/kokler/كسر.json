@@ -2342,16 +2342,71 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "break.v.02",
-    "orta": "verb.change",
+    "ince": "chip.v.01",
+    "orta": "verb.contact",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "break.v.02",
-    "dayanak_tanim": "become separated into pieces or fragments",
+    "dayanak_synset": "chip.v.01",
+    "dayanak_tanim": "break off (a piece from a whole)",
     "synset_sayisi": 26
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "كسر الشيء وكسّره، وانكسر وتكسّر، واكتسرت منه طرفاً، وهذه كسرةٌ منه وكسرٌ. وهذا كسار الزجاج والكوز. وألقى على النار كسار العود، وأعطني كسارةً منه، وعود صلب المكسر إذا عرفت جودته بكسره. وجناحٌ كسير. وناقة وشاة كسير. وافع كسر الخباء: شقّته السفلى. وهو جاري مكاسري.",
+    "mecaz": "الله صلب المكسر، وهم صلاب المكاسر. وكسر الطائر جناحيه كسراً: ضمهما للوقوع. وبازٍ كاسر، وعقاب كاسر. وقد كسر كسوراً إذا لم تذكر الجناحين وهذا يدلّ أن الفعل إذا نُسيَ مفعوله وقصد الحدث نفسه جرى مجرى الفعل غير المتعدّى. وكسر الكتاب على عدّة أبواب وفصول. وكسرت خصمي فانكسر، وكسرت من سورته. وكسر حميّا الخمر بالمزاج. ورأيته متكسراً: فاتراً. وفيه تخنّث وتكسر. وأرض ذات كسور: ذات صعود وهبوط. وضرب الحسّاب الكسور بعضها في بعض. والملوك لا تعرف الكسور. وكسر عينه، وبعينه كسرة من السهر أي انكسار وغلبة نعاس. قال ذو الرمة:\nغدا وهو لا يعتاد عينيه كسرةً ... إذا ظلمة الليل استقلّت فضولها\nنقيّ المآقي سامي الطّرف غدوةً ... إلى كلّ أشباح بدت يستحيلها\nاستحل ذلك الشيء: انظر هل يتحرّك، يصف صاحبه. وفلان يكسر عليك الفوق إذا غضب عليه. ورجل ذو كسراتٍ: يغبن في كلّ شيء. \" ولا يزال أحدهم كاسراً وساده عند النساء يتحدّث إليهن \".",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "كسر الشيء وكسّره، وانكسر وتكسّر، واكتسرت منه طرفاً، وهذه كسرةٌ منه وكسرٌ. وهذا كسار الزجاج والكوز. وألقى على النار كسار العود، وأعطني كسارةً منه، وعود صلب المكسر إذا عرفت جودته بكسره. وجناحٌ كسير. وناقة وشاة كسير. وافع كسر الخباء: شقّته السفلى. وهو جاري مكاسري",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "الله صلب المكسر، وهم صلاب المكاسر. وكسر الطائر جناحيه كسراً: ضمهما للوقوع. وبازٍ كاسر، وعقاب كاسر. وقد كسر كسوراً إذا لم تذكر الجناحين وهذا يدلّ أن الفعل إذا نُسيَ مفعوله وقصد الحدث نفسه جرى مجرى الفعل غير المتعدّى. وكسر الكتاب على عدّة أبواب وفصول. وكسرت خصمي فانكسر، وكسرت من سورته. وكسر حميّا الخم",
+        "prototipe_benzerlik": 0.301,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "استحل ذلك الشيء: انظر هل يتحرّك، يصف صاحبه. وفلان يكسر عليك الفوق إذا غضب عليه. ورجل ذو كسراتٍ: يغبن في كلّ شيء. \" ولا يزال أحدهم كاسراً وساده عند النساء يتحدّث إليهن \".",
+        "prototipe_benzerlik": 0.518,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.409,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "act.n.02",
+    "break.v.02",
+    "break.v.04",
+    "break.v.05",
+    "break_up.v.16",
+    "broken.a.01",
+    "chemical_process.n.01",
+    "chip.v.01",
+    "close_up.v.01",
+    "condition.n.01",
+    "consume.v.03",
+    "crack.v.12",
+    "crumble.v.02",
+    "divide.v.02",
+    "double.v.04",
+    "fold.v.01",
+    "fracture.v.05",
+    "fracture.v.06",
+    "number.n.02",
+    "oppress.v.01",
+    "photograph.v.01",
+    "separate.v.08",
+    "snap.v.01",
+    "taxonomic_group.n.01",
+    "tear.v.01",
+    "tell.v.02"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "المثنيات",
@@ -2363,20 +2418,20 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 509
     },
     "orta": {
-      "kume": 7,
-      "merkez_kok": "كرب",
-      "merkez_mana": "Karb: sıkıntı, keder; kurbet: sıkıntı",
-      "boy": 139
+      "kume": 8,
+      "merkez_kok": "بءس",
+      "merkez_mana": "Be'es: azap, şiddet, zorluk",
+      "boy": 142
     },
     "ince": {
-      "kume": 36,
-      "merkez_kok": "كرث",
-      "merkez_mana": "catastrophe, disaster",
+      "kume": 49,
+      "merkez_kok": "وهن",
+      "merkez_mana": "Vehn: zayıflık, gevşeklik",
       "boy": 21
     }
   },

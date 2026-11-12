@@ -1146,16 +1146,57 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "abridged.a.01",
-    "orta": "adj.all",
-    "ust": "hâl ve vasıf",
-    "dayanak_synset": "abridged.a.01",
-    "dayanak_tanim": "(used of texts) shortened by condensing or rewriting",
+    "ince": "part.n.03",
+    "orta": "noun.animal",
+    "ust": "canlı ve beden",
+    "dayanak_synset": "loin.n.02",
+    "dayanak_tanim": "either side of the backbone between the hipbone and the ribs in humans as well as quadrupeds",
     "synset_sayisi": 12
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "دق خصره وخاصرته ومخصره، ودقت خصورهم وخواصرهم. ورجل مخصر ومخصور البطن. وخاصر المرأة في البضع: قبض على خاصرتيها. وخاصره في الطريق. قال عبد الرحمن بن حسان:\nثم خاصرتها إلى القبة الخض ... راء تمشي في مرمرٍ مسنون\nوخرجوا متخاصرين. واختصر الرجل وتخاصر: وضع يده على خصره. واختصر الكلام واختصر الطريق: أخذ في أقربه. وهذا أخصر من ذاك وأقصر. واختصر الجزّ إذا لم يستأصل. واختصر بالعصا: اعتمد عليها في مشيه. ونكت الأرض بالمخصرة وهي قضيب كان الملك يأخذه بيده، يشير به ويصل به كلامه. قال حسان:\nيصيبون فصل القول في كل خطبة ... إذا وصلوا أيمانهم بالمخاصر\nوتخصر الملك به. قال سهم بن حنظلة:\nخذها أبا عبد المليك بحها ... وارفع يمينك بالعصا فتخصر\nوخصر يومنا، ويوم خصر. وثغر خصر: بارد المقبل. وخصرت أنامله من البرد، وأخصرها القر.",
+    "mecaz": "هو تحت خصر قدمه وهو أخمصها. ودقق خصر نعلك، وقدم ونعل مخصرة. وأخذوا خصر الرمل ومخصره: أسفله وما رق منه. قال الراعي:\nإذا الرمل لم يعرض له بخصوره ... تعسفن منه كل كبداء عاقر\nوقال زهير:\nأخدن خصور الرمل ثم جرعنه ... على كل قيني قشيب ومفأم\nولطف خصر السهم وهو ما تحت الفوق.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "دق خصره وخاصرته ومخصره، ودقت خصورهم وخواصرهم. ورجل مخصر ومخصور البطن. وخاصر المرأة في البضع: قبض على خاصرتيها. وخاصره في الطريق. قال عبد الرحمن بن حسان: ثم خاصرتها إلى القبة الخض ... راء تمشي في مرمرٍ مسنون وخرجوا متخاصرين. واختصر الرجل وتخاصر: وضع يده على خصر",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "هو تحت خصر قدمه وهو أخمصها. ودقق خصر نعلك، وقدم ونعل مخصرة. وأخذوا خصر الرمل ومخصره: أسفله وما رق منه. قال الراعي:",
+        "prototipe_benzerlik": 0.109,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "ولطف خصر السهم وهو ما تحت الفوق.",
+        "prototipe_benzerlik": 0.109,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.109,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "abridge.v.01",
+    "abridged.a.01",
+    "analyze.v.01",
+    "body_part.n.01",
+    "boil_down.v.02",
+    "control.v.02",
+    "limit.v.02",
+    "reduce.v.01",
+    "reduce.v.18",
+    "shorten.v.01",
+    "shrink.v.03",
+    "statement.n.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النساء",
@@ -1166,19 +1207,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 7,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 331
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 33,
+      "kume": 37,
       "merkez_kok": "وقد",
       "merkez_mana": "Vakd: ateş yakmak; vakîd: ateş",
-      "boy": 44
+      "boy": 45
     },
     "ince": {
-      "kume": 215,
+      "kume": 244,
       "merkez_kok": "صرد",
       "merkez_mana": "",
       "boy": 6

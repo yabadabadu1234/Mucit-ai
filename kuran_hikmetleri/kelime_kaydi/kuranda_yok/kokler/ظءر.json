@@ -1092,6 +1092,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "هي ظئره، وهو ظئره، وهم وهنّ أظآره، وبنو سعد أظآر رسول الله صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ. وطاءرت المرأة مظاءرة: أخذت ولداً ترضعه، وانطلقت فلانة تظائر. واظأرت ظئراً. وظئرت الناقة على غير ولدها أو على البوّ فهي ظئور، هنّ أظآر وظؤار، وظأرها بالظئار وهو ما تظأر به من غمامة في أنفها لئلا تشم ريح المظئور عليه.",
+    "mecaz": "ظأرته على أمر كان يأباه. وما ظأرني عليه غيرك. وظأرني فلان على ذلك وما كان من بالي. وفي مثل \" الطعن يظأر \": يعطف على الصلح. وظأر على عدوّه: كرّ عليه. والأثافي ظؤار للرّماد.\nومن المجاز في الإسناد: ظأرت: اتخذت ظئراً لولدي.\nظ ب ظ ب\nما به ظبظاب، كقولك: ما به قلبة.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "هي ظئره، وهو ظئره، وهم وهنّ أظآره، وبنو سعد أظآر رسول الله صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ. وطاءرت المرأة مظاءرة: أخذت ولداً ترضعه، وانطلقت فلانة تظائر. واظأرت ظئراً. وظئرت الناقة على غير ولدها أو على البوّ فهي ظئور، هنّ أظآر وظؤار، وظأرها بالظئار وهو ما تظأر ",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "ظأرته على أمر كان يأباه. وما ظأرني عليه غيرك. وظأرني فلان على ذلك وما كان من بالي. وفي مثل \" الطعن يظأر \": يعطف على الصلح. وظأر على عدوّه: كرّ عليه. والأثافي ظؤار للرّماد.",
+        "prototipe_benzerlik": 0.86,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "ومن المجاز في الإسناد: ظأرت: اتخذت ظئراً لولدي.",
+        "prototipe_benzerlik": 0.235,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "ما به ظبظاب، كقولك: ما به قلبة.",
+        "prototipe_benzerlik": 0.277,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.457,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الأضداد",
@@ -1102,22 +1135,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
+      "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 426
+      "boy": 466
     },
     "orta": {
-      "kume": 1,
-      "merkez_kok": "جنح",
-      "merkez_mana": "Cünûh: meyletmek, eğilmek; cenâh: kanat",
-      "boy": 165
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 1,
+      "kume": 15,
       "merkez_kok": "دلق",
       "merkez_mana": "to pour out, spill (e.g. a liquid)",
-      "boy": 41
+      "boy": 58
     }
   },
   "kaliplar": {

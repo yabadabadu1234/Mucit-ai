@@ -1,0 +1,63 @@
+{
+  "kok": "هـوي",
+  "sinif": "reddedildi",
+  "turkce_fiil": null,
+  "mustaklar": {},
+  "reddedilen": [
+    ["kök", "هـوي", "üç harfli değil"]
+  ],
+  "sozlukler": {},
+  "kuran_gecisleri": 0,
+  "kuranda_var": false,
+  "sema": {
+    "sema": "graf-ic-graf",
+    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
+    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
+    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
+    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
+    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
+  },
+  "tasnif": {
+    "fasil": "هـ",
+    "harf": "ه",
+    "mahrec": "halkiyye",
+    "bolge": "halk"
+  },
+  "mana_tasnif": {
+    "durum": "Arabic WordNet v2 kaydı yok"
+  },
+  "ses_mana_tasnif": {
+    "durum": "Cebel mu'cemlerinde kök yok"
+  },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "هويه يهواه، وهوَ هوٍ، وهي هويةٌ. قال:\nأراك إذا لم أهو أمراً هويته ... ولست لما أهوى من الأمر بالهوي\nوهو من أهل الأهواء \" ولا تتّبع الهوى \" ومن هويَ هوَى. وهوى من الجبل. وهوت الدلو في البئر هوياص بالفتح. وهوى إلى الجبل، وهوى الجبل: صعده هوياً. قال:\nيهوي مخارمها هويّ الأجدل\nوقال الشماخ:\nعلى طريق كظهر الأيم مطّردٍ ... يهوي إلى قنّة في منهل عالي\nوالناقة تهوي براكبها: تسرع به. وطاح في المهواة والهاوية وهي ما بين الجبلين. وتهاووا فيها: تساقطوا. وأهوى بيده إلى الشيء ليأخه. وهذه هوّةٌ عميقة وهوًى. وهوى الرجل: مات، وهوت أمّه، و\" أمُّهُ هاويةٌ \" وجلست عنده هويّاً: مليّاً. ومضى هويٌّ من الليل. و\" استهوته الشياطين \".",
+    "mecaz": "قولهم للجبان: إنه لهواء: خالي القلب عن الجرأة. \" وأفئدتهم هواء \" والأصل الجوّ.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "هويه يهواه، وهوَ هوٍ، وهي هويةٌ. قال: أراك إذا لم أهو أمراً هويته ... ولست لما أهوى من الأمر بالهوي وهو من أهل الأهواء \" ولا تتّبع الهوى \" ومن هويَ هوَى. وهوى من الجبل. وهوت الدلو في البئر هوياص بالفتح. وهوى إلى الجبل، وهوى الجبل: صعده هوياً. قال: يهوي مخارمها",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "قولهم للجبان: إنه لهواء: خالي القلب عن الجرأة. \" وأفئدتهم هواء \" والأصل الجوّ.",
+        "prototipe_benzerlik": 0.534,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.534,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
+  "muhassas_tasnif": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "mana_tasnif_gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
+  },
+  "kaliplar": {},
+  "kelimeler": []
+}

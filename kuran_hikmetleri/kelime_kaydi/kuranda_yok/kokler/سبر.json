@@ -1283,16 +1283,44 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "probe.v.01",
-    "orta": "verb.communication",
-    "ust": "söz ve haber",
-    "dayanak_synset": "probe.v.01",
-    "dayanak_tanim": "question or examine thoroughly and closely",
+    "ince": "search.v.04",
+    "orta": "verb.contact",
+    "ust": "fiil ve hadise",
+    "dayanak_synset": "search.v.04",
+    "dayanak_tanim": "subject to a search",
     "synset_sayisi": 4
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "سبر الجرح بالمسبار والسبار: قاس مقدار قعره بالحديدة أو بغيرها. وفي مثل \" لولا المسبار ما عرف غور الجرح \" وأتيته في حد السبرة وهي الغداة الباردة.",
+    "mecaz": "خبرت فلاناً وسبرته، وفيه خير كثير لا يسبر، وهذا أمر عظيم لا يسبر، وهذه مفازة لا تسبر: لا يعرف قدر سعتها. قال أبو نخيلة:\nومقفر قد جبته لا يسبر ... والقور في بحر السراب تمهر\nتسبح. وعرفته بسبره: بما عرف وخبر من هيئته ولونه. وجاءت الإبل حسنة الأسبار والأحبار.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "سبر الجرح بالمسبار والسبار: قاس مقدار قعره بالحديدة أو بغيرها. وفي مثل \" لولا المسبار ما عرف غور الجرح \" وأتيته في حد السبرة وهي الغداة الباردة.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "خبرت فلاناً وسبرته، وفيه خير كثير لا يسبر، وهذا أمر عظيم لا يسبر، وهذه مفازة لا تسبر: لا يعرف قدر سعتها. قال أبو نخيلة:",
+        "prototipe_benzerlik": 0.33,
+        "halka": "orta"
+      },
+      {
+        "cumle": "تسبح. وعرفته بسبره: بما عرف وخبر من هيئته ولونه. وجاءت الإبل حسنة الأسبار والأحبار.",
+        "prototipe_benzerlik": 0.246,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.288,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["probe.v.01", "search.v.01", "search.v.04", "sound.v.02"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
@@ -1303,19 +1331,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 15,
-      "merkez_kok": "فوق",
-      "merkez_mana": "Fevk: üst, yukarı (zarf)",
-      "boy": 107
+      "kume": 16,
+      "merkez_kok": "درك",
+      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
+      "boy": 287
     },
     "ince": {
-      "kume": 85,
+      "kume": 98,
       "merkez_kok": "بحث",
       "merkez_mana": "Bahs: araştırmak, incelemek",
       "boy": 20

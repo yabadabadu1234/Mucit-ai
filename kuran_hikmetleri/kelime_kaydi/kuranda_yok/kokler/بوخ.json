@@ -700,24 +700,52 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "باخت النار وأباخها مطفئها. وباخ الحر: سكن، وأباخه الله.",
+    "mecaz": "عدا فلان حتى باخ، وشاخ حتى باخ. وبينهم حرب ما يبوخ سعيرها. وباخ غضبه. وباخ\nعنه الورد: فترت عنه الحمى. وأباخ النائرة بينهم.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "باخت النار وأباخها مطفئها. وباخ الحر: سكن، وأباخه الله.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "عدا فلان حتى باخ، وشاخ حتى باخ. وبينهم حرب ما يبوخ سعيرها. وباخ غضبه. وباخ",
+        "prototipe_benzerlik": 0.226,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "عنه الورد: فترت عنه الحمى. وأباخ النائرة بينهم.",
+        "prototipe_benzerlik": 0.175,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.2,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 2,
+      "kume": 1,
       "merkez_kok": "قره",
       "merkez_mana": "",
       "boy": 759
     },
     "orta": {
-      "kume": 4,
+      "kume": 2,
       "merkez_kok": "فلص",
       "merkez_mana": "",
       "boy": 494
     },
     "ince": {
-      "kume": 20,
+      "kume": 2,
       "merkez_kok": "جررب",
       "merkez_mana": "",
       "boy": 70

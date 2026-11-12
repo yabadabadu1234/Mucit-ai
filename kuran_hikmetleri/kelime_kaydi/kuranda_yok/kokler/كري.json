@@ -871,6 +871,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "أكراني داره أو دابّته، وهو يكري الدوابّ ويكاريها، وهو كريٌّ من الأكرياء، ومكارٍ من المكارين، ويقال: كريّ الإبل ومكاري الدواب. واكتريت منه داراً أو دابة واستكريت. وكريت النّهر: حفرته. وأمر الأمير بطيّ الآبار، وكري الأنهار. وكروت بالكرة: لعبت بها، والغلام يكرو، وكأنها كرات غلام وكرو غلام. والظلّ يكري: ينقص. قال ابن أحمر:\nفتواهقت أخفافها طبقاً ... والظلّ لم يفضل ولم يكر\nوأكرى الزّاد، وأكراه صاحبه.\nقال لبيد:\nكذي زادٍ متى ما يكرِ منه ... فليس وراءه ثقةٌ بزاد\nوهو يحتمل الأمرين. وأكرى الأمر: أخّره. قال الحطيئة:\nوأكريت العشاء إلى سهيل ... أو الشّعرى فطال بي الأناء\nوفي الحديث \" من أراد النّساء ولا نساء فليكر العشاء وليباكر الغداء \" وكرّى الرجل وتكرّى: نام. قال جندل:\nظلّت على فراشها تكرّى ... لم يحطها النّيّ ولا المهرّى\nفهي لكلّ سوأة تحرّى\nوتمضمض الكرى في عينيه. ويقال للكروان: \" أطرق كرى، إنّك لن ترى \" فإذا سمعها لبد بالأرض فيلقى عليه ثوبٌ فيصاد.",
+    "mecaz": "فلان طويل الكرى أي غافل، وتقول للغافللا: يا كرى، إنك لطويل الكرى.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "أكراني داره أو دابّته، وهو يكري الدوابّ ويكاريها، وهو كريٌّ من الأكرياء، ومكارٍ من المكارين، ويقال: كريّ الإبل ومكاري الدواب. واكتريت منه داراً أو دابة واستكريت. وكريت النّهر: حفرته. وأمر الأمير بطيّ الآبار، وكري الأنهار. وكروت بالكرة: لعبت بها، والغلام يكرو، ",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "فلان طويل الكرى أي غافل، وتقول للغافللا: يا كرى، إنك لطويل الكرى.",
+        "prototipe_benzerlik": 0.273,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.273,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["act.n.02", "food.n.01", "living_thing.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطير",
@@ -881,22 +904,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
+      "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 426
+      "boy": 466
     },
     "orta": {
-      "kume": 1,
-      "merkez_kok": "جنح",
-      "merkez_mana": "Cünûh: meyletmek, eğilmek; cenâh: kanat",
-      "boy": 165
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 5,
+      "kume": 12,
       "merkez_kok": "ديث",
       "merkez_mana": "to be submissive, to be compliant, to be cucked, to be tame",
-      "boy": 23
+      "boy": 27
     }
   },
   "kaliplar": {

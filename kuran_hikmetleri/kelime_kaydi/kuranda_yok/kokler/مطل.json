@@ -902,6 +902,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "مطل فلان حقي، وماطلني به مطلاً ومطالاً، ورجل مطّال ومطول. وتقول: هو مسوّف مطول، وله سوق يطول. ومطل حديدة البيضة: مدّها. قال العجاج:\nبمرهفات مطلت سبائكا ... تقضّ أمّ الهام والترائكا\nوله مطيلة ومطائل: حدائد ممطولة.\nم ط\nومطوت بهم في السير. ومطا الرّشاء من البئر. ورأيته قد مطي في الشمس. وركب المطية والمطيّ والمطايا، وامتطاها. وركب مطاها: ظهرها. وتمطّى في مشيته: تبختر، وهو يتثاءب ويتمطّى، وبه ثؤباء ومطواء. قال المسيب:\nبمحالة تقص الذباب بطرفها ... خلقت معاقمها على مطوائها\nأي لم تلقح فهي حائل وكأنها تمطّت فخلقت على ذلك.",
+    "mecaz": "تمطّى الليل إذا طال. قال بيهس:\nكلّما قلت قد تقضّى تمطّى ... حالك اللون دامساً يحموماً",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "مطل فلان حقي، وماطلني به مطلاً ومطالاً، ورجل مطّال ومطول. وتقول: هو مسوّف مطول، وله سوق يطول. ومطل حديدة البيضة: مدّها. قال العجاج: بمرهفات مطلت سبائكا ... تقضّ أمّ الهام والترائكا وله مطيلة ومطائل: حدائد ممطولة. م ط ومطوت بهم في السير. ومطا الرّشاء من البئر. ",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "تمطّى الليل إذا طال. قال بيهس:",
+        "prototipe_benzerlik": 0.137,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.137,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["delay.v.02"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -912,22 +935,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "kume": 5,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 375
     },
     "orta": {
-      "kume": 35,
-      "merkez_kok": "حين",
-      "merkez_mana": "Hîn: zaman, bir süre",
-      "boy": 54
+      "kume": 10,
+      "merkez_kok": "ءخر",
+      "merkez_mana": "Âhir: son; teehhür: gecikmek",
+      "boy": 56
     },
     "ince": {
-      "kume": 223,
+      "kume": 62,
       "merkez_kok": "حين",
       "merkez_mana": "Hîn: zaman, bir süre",
-      "boy": 23
+      "boy": 28
     }
   },
   "kaliplar": {

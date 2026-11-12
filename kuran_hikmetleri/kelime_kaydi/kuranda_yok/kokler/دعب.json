@@ -893,6 +893,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "فيه دعابة، وقد دعب ودعب بالفتح\nوالكسر يدعب بالفتح فيهما. ورجل داعب ودعب إذا مزح وتكلم بما يستملح. ويقال: المؤمن دعب لعب، والمنافق عبس قطب؛ وداعبه مداعبة، وتداعبوا.",
+    "mecaz": "ماء داعب: يستن في جريه، ومياه دواعب. قال أبو صخر الهذلي:\nولكن تقر العين والنفس أن ترى ... بعقدته فضلات زرق دواعب\nوريح داعبة: تذهب بكل شيء، ورياح دواعب، كما تقول: لعبت بها الرياح.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "فيه دعابة، وقد دعب ودعب بالفتح والكسر يدعب بالفتح فيهما. ورجل داعب ودعب إذا مزح وتكلم بما يستملح. ويقال: المؤمن دعب لعب، والمنافق عبس قطب؛ وداعبه مداعبة، وتداعبوا.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "ماء داعب: يستن في جريه، ومياه دواعب. قال أبو صخر الهذلي:",
+        "prototipe_benzerlik": 0.322,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وريح داعبة: تذهب بكل شيء، ورياح دواعب، كما تقول: لعبت بها الرياح.",
+        "prototipe_benzerlik": 0.443,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.382,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["act.n.02", "caress.v.01", "stroke.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النخل",
@@ -903,19 +931,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 17,
+      "kume": 24,
       "merkez_kok": "زين",
       "merkez_mana": "Zîne: süs, güzellik; zeyn: güzelleştirmek",
-      "boy": 177
+      "boy": 123
     },
     "ince": {
-      "kume": 88,
+      "kume": 137,
       "merkez_kok": "زحح",
       "merkez_mana": "jester, jokester, frolicker",
       "boy": 11

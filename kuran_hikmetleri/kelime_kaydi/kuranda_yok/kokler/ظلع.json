@@ -726,6 +726,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "دابة ظالع وبها ظلع. قال كثير:\nوكنت كذات الظلع لما تحاملت ... على ظلعها يوم العشار استقلّت\nوظلعت تظلع ظلعاً، كقولك: منعت تمنع منعاً، وأدبر مطيته وأظلعها: أعرجها. وقال الضريس ابن أبي الضريس لعبد الملك حين قتل الأشدق:\nهم قومك الأدنون فارأب صدوعهم ... بحلمك حتى ينهض المتظالع\nولا أنام حتى ينام ظالع الكلاب: لا تأخذه عينه لما به من الوجع، وقيل: ينبح الكلاب الليلة كلها: يطردها عنه، وقيل: الظالع: الصارف، وظلعت الكلبة تظلع ظلوعاً.",
+    "mecaz": "\" ارق على ظلعك \" أي ارفق\nبنفسك. وظلعت الأرض بأهلها: ضاقت بهم من كثرتهم وهذا تمثيل معناه لا تحملهم لكثرتهم فهي كالدابة تظلع بحملها لثقله.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "دابة ظالع وبها ظلع. قال كثير: وكنت كذات الظلع لما تحاملت ... على ظلعها يوم العشار استقلّت وظلعت تظلع ظلعاً، كقولك: منعت تمنع منعاً، وأدبر مطيته وأظلعها: أعرجها. وقال الضريس ابن أبي الضريس لعبد الملك حين قتل الأشدق: هم قومك الأدنون فارأب صدوعهم ... بحلمك حتى ين",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "\" ارق على ظلعك \" أي ارفق",
+        "prototipe_benzerlik": 0.387,
+        "halka": "orta"
+      },
+      {
+        "cumle": "بنفسك. وظلعت الأرض بأهلها: ضاقت بهم من كثرتهم وهذا تمثيل معناه لا تحملهم لكثرتهم فهي كالدابة تظلع بحملها لثقله.",
+        "prototipe_benzerlik": 0.137,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.262,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["limp.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الإبل",
@@ -736,22 +764,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "kume": 6,
+      "merkez_kok": "درك",
+      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
+      "boy": 1364
     },
     "orta": {
-      "kume": 10,
-      "merkez_kok": "ذعن",
-      "merkez_mana": "Za'n: boyun eğmek, kabul etmek",
-      "boy": 183
+      "kume": 20,
+      "merkez_kok": "لحد",
+      "merkez_mana": "Lahd: mezar çukuru; lehd: meyil, eğilme",
+      "boy": 187
     },
     "ince": {
-      "kume": 55,
-      "merkez_kok": "لتت",
-      "merkez_mana": "not to be",
-      "boy": 27
+      "kume": 114,
+      "merkez_kok": "كيد",
+      "merkez_mana": "Keyd: hile, tuzak",
+      "boy": 32
     }
   },
   "kaliplar": {

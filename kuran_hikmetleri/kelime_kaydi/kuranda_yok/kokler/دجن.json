@@ -1446,36 +1446,59 @@
     "ince": "whole.n.02",
     "orta": "noun.animal",
     "ust": "canlı ve beden",
-    "dayanak_synset": "domestic_fowl.n.01",
-    "dayanak_tanim": "a domesticated gallinaceous bird thought to be descended from the red jungle fowl",
+    "dayanak_synset": "livestock.n.01",
+    "dayanak_tanim": "any animals kept for use or profit",
     "synset_sayisi": 2
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "تقول: جعل الدجنة جنة وهي الظلمة. قال رحمه الله:\nجعلوا الدجنة جنةً فتطايروا ... هوناً فلا خبب ولا إعناق\nونحن في دجن منذ أيام. وهو إظلال الغيم\nوالدى، وهذا يوم دجن وداجنة وهي السحابة ذات الدجن، ودجنت السماء وأدجنت، وأدجن المطر: دام أياماً.",
+    "mecaz": "دجن بالمكان: أقام فلم يرم، ومنه دواجن البيوت، وهي ما ألف من كلب أو شاة أو طائر. ودجن في فسقه، ودجنوا في لؤمهم: ألقوه فما يتركونه.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "تقول: جعل الدجنة جنة وهي الظلمة. قال رحمه الله: جعلوا الدجنة جنةً فتطايروا ... هوناً فلا خبب ولا إعناق ونحن في دجن منذ أيام. وهو إظلال الغيم والدى، وهذا يوم دجن وداجنة وهي السحابة ذات الدجن، ودجنت السماء وأدجنت، وأدجن المطر: دام أياماً.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "دجن بالمكان: أقام فلم يرم، ومنه دواجن البيوت، وهي ما ألف من كلب أو شاة أو طائر. ودجن في فسقه، ودجنوا في لؤمهم: ألقوه فما يتركونه.",
+        "prototipe_benzerlik": 0.549,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.549,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["living_thing.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
     "bab": "العرق",
-    "kok_gecis": 40.0,
+    "kok_gecis": 39.8,
     "kitapta_gecis": 16.0,
-    "zenginlesme": 3.23
+    "zenginlesme": 3.25
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 7,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 331
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 32,
-      "merkez_kok": "دمس",
-      "merkez_mana": "pocket bread, pita",
-      "boy": 61
+      "kume": 42,
+      "merkez_kok": "سحم",
+      "merkez_mana": "to become black, to be blackened",
+      "boy": 97
     },
     "ince": {
-      "kume": 211,
+      "kume": 273,
       "merkez_kok": "حلك",
       "merkez_mana": "blackness, intense darkness",
       "boy": 16

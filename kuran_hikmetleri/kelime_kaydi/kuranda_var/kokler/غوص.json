@@ -871,8 +871,8 @@
     "ince": "whole.n.02",
     "orta": "noun.artifact",
     "ust": "cisim ve eşya",
-    "dayanak_synset": "submersible.n.02",
-    "dayanak_tanim": "a warship designed to operate under water",
+    "dayanak_synset": "submarine.n.01",
+    "dayanak_tanim": "a submersible warship usually armed with torpedoes",
     "synset_sayisi": 5
   },
   "ses_mana_tasnif": {
@@ -883,6 +883,29 @@
     "fasil_ozeti": "° معنى الفصل المعجمي (غص) : النفاذ بغلظ أو ضيق أو عسر: كالغَصَص بالطعام حيث يتعسر نفاذه لضيق المنفذ أو غلظ اللقمة -في (غصص)، وكالغوص في الماء وفيه من العسر ما فيه من كتم النفس ومقاومة الماء نزولًا وطلوعًا والتعرض للغرق -في (غوص)، وكما في نزع الشعر والوبر من الجلد بلا تهيئة -في (غصب) وخروج الشعر من الجلد نفاذ له منه.",
     "tam_metin": "{وَمِنَ الشَّيَاطِينِ مَنْ يَغُوصُونَ لَهُ وَيَعْمَلُونَ عَمَلًا دُونَ ذَلِكَ} [الأنبياء: 82]\n\"غاص في الماء غَوْصًا: نزل تحته. . / دخل فيه. .، وغاص في البحر على الأصداف فهو غَوّاص وغَائص والمكان مَغَاص \".\n° المعنى المحوري\nنفاذ الكتلة الغليظة في عمق ماء كثيف أو نحوه إلى قاعه: كما في الغوص: {يَغُوصُونَ لَهُ}، {كُلَّ بَنَّاءٍ وَغَوَّاصٍ} [ص: 37]. ومنه: \"الغَوْصُ: الهجوم على الشيء (كأنما انحط عليه من حيث لا يتوقع)، والغائصة: الحائض \" (كأنها غارقة في دمها - كما يعبّر أحيانًا)."
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "هذا مغاص اللؤلؤ، وهو من الغوّاص\nوالغاصة. وغاص في الماء، وغوّصه غيره.",
+    "mecaz": "فلان يغوص على حقائق العلم، وما أحسن غوصه عليها. وما غاص غوصة إلا أخرج درّة. وخير ما يغاص عليه فوائد العلم. وتقول: هو من صاغة الفقر، وغاصة الدرر. وقال عمر لابن عبّاس رضي الله عنهما: غص يا غوّاص.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Cebel mihverî mana",
+    "prototip": "نفاذ الكتلة الغليظة في عمق ماء كثيف أو نحوه إلى قاعه: كما في الغوص: {يَغُوصُونَ لَهُ}، {كُلَّ بَنَّاءٍ وَغَوَّاصٍ} [ص: 37]. ومنه: \"الغَوْصُ: الهجوم على الشيء (كأنما انحط عليه من حيث لا يتوقع)، والغائصة: الحائض \" (كأنها غارقة في دمها - كما يعبّر أحيانًا).",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "فلان يغوص على حقائق العلم، وما أحسن غوصه عليها. وما غاص غوصة إلا أخرج درّة. وخير ما يغاص عليه فوائد العلم. وتقول: هو من صاغة الفقر، وغاصة الدرر. وقال عمر لابن عبّاس رضي الله عنهما: غص يا غوّاص.",
+        "prototipe_benzerlik": 0.486,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.486,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["artifact.n.01", "living_thing.n.01", "sink.v.04", "sink.v.05"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "خلق الإنسان",
@@ -893,22 +916,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 7,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 331
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 30,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 103
-    },
-    "ince": {
-      "kume": 205,
+      "kume": 35,
       "merkez_kok": "نقع",
       "merkez_mana": "Nak': su birikintisi; nakî': ıslak",
-      "boy": 33
+      "boy": 47
+    },
+    "ince": {
+      "kume": 236,
+      "merkez_kok": "نقع",
+      "merkez_mana": "Nak': su birikintisi; nakî': ıslak",
+      "boy": 18
     }
   },
   "kaliplar": {

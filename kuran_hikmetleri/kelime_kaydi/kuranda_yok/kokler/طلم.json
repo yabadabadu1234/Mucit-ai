@@ -715,24 +715,47 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "لما أقبل الليل بظلمته، أقبل بطلمته؛ وهي الخبزة.\nط ل\nوهذا كلام غث لا طلاوة له. واطّلى بالدهن وتطلّى به. وطلى البعير بالطلاء: بالهناء. وشرب الطلاء المثلث: شبه في خثورته بالقطران. وربطت الطلي: الجدي. وهم يضربون الطلى، ويطعنون في الكلى.",
+    "mecaz": "عود مطلي: غير مقشور. وطلى الليل الآفاق إذا أظلم. وليل طال. قال ابن مقبل:\nألا طرقتنا في المدينة بعدما ... طلى الليل أذناب النجاد فأظلما",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "لما أقبل الليل بظلمته، أقبل بطلمته؛ وهي الخبزة. ط ل وهذا كلام غث لا طلاوة له. واطّلى بالدهن وتطلّى به. وطلى البعير بالطلاء: بالهناء. وشرب الطلاء المثلث: شبه في خثورته بالقطران. وربطت الطلي: الجدي. وهم يضربون الطلى، ويطعنون في الكلى.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "عود مطلي: غير مقشور. وطلى الليل الآفاق إذا أظلم. وليل طال. قال ابن مقبل:",
+        "prototipe_benzerlik": 0.419,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.419,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
-      "merkez_kok": "حنج",
-      "merkez_mana": "",
-      "boy": 426
-    },
-    "orta": {
       "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 261
+      "boy": 466
+    },
+    "orta": {
+      "kume": 3,
+      "merkez_kok": "قمح",
+      "merkez_mana": "Kamh: buğday",
+      "boy": 64
     },
     "ince": {
-      "kume": 8,
+      "kume": 9,
       "merkez_kok": "مءد",
       "merkez_mana": "dining table",
       "boy": 8

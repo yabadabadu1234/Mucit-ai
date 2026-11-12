@@ -1755,13 +1755,54 @@
     "ince": "quality.n.01",
     "orta": "noun.attribute",
     "ust": "hâl ve vasıf",
-    "dayanak_synset": "suitability.n.01",
-    "dayanak_tanim": "the quality of having the properties that are right for a specific purpose",
+    "dayanak_synset": "fitness.n.01",
+    "dayanak_tanim": "the quality of being suitable",
     "synset_sayisi": 18
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "صدعٌ ملتئم ومتلائم، وقد لاءمته ملاءمة ولأمته، وفلان لا يلائمني: لا يوافقني. وريش لؤام: خلاف لغاب إذا التقى بطن قذّة وظهر أخرى، وسهمٌ لأمٌ: مريش باللؤام وبه فسّر: كرّك لأمين على نابل. ولبس لأمته وهي الدّرع المحكمة الملتئمة، ولبسوا اللأم، وقيل: اللؤم كقرية وقرًى. وقال المتلمس:\nوعليه من لأم الكتائب لأمةٌ ... فضفاضة فيما يقوم ويجلس\nواستلأم: تدرّع. ولؤم فلان لؤماً ولآمةً، وهو من اللئام واللؤماء، وهو لئيم ملأمٌ: ملوم منسوب إلى اللؤم. ورجل ملأم: للذي يعذر اللئام ويذبّ عنهم.",
+    "mecaz": "والكناية: هذا طعام لا يلائمني. وما التأمت عيني حتى فعل كذا أي ما ثقفه بصري. وهذا كلام لا يلتئم على لساني. ورجل لؤمة: يحكى ما يصنع غيره. واستلأم الرجل الخال لابنه: إذا تزوج في اللئام، ونقيضه: استكرم الخال لابنه.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "صدعٌ ملتئم ومتلائم، وقد لاءمته ملاءمة ولأمته، وفلان لا يلائمني: لا يوافقني. وريش لؤام: خلاف لغاب إذا التقى بطن قذّة وظهر أخرى، وسهمٌ لأمٌ: مريش باللؤام وبه فسّر: كرّك لأمين على نابل. ولبس لأمته وهي الدّرع المحكمة الملتئمة، ولبسوا اللأم، وقيل: اللؤم كقرية وقرًى",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "والكناية: هذا طعام لا يلائمني. وما التأمت عيني حتى فعل كذا أي ما ثقفه بصري. وهذا كلام لا يلتئم على لساني. ورجل لؤمة: يحكى ما يصنع غيره. واستلأم الرجل الخال لابنه: إذا تزوج في اللئام، ونقيضه: استكرم الخال لابنه.",
+        "prototipe_benzerlik": 0.187,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.187,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "adapt.v.01",
+    "adjust.v.01",
+    "adjust.v.03",
+    "befit.v.01",
+    "condition.n.01",
+    "equal.v.03",
+    "equip.v.01",
+    "lend.v.03",
+    "match.v.01",
+    "match.v.05",
+    "meet.v.05",
+    "meet.v.06",
+    "mend.v.02",
+    "pit.v.01",
+    "suit.v.01",
+    "suit.v.02",
+    "suitability.n.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الغرائز",
@@ -1772,22 +1813,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
       "kume": 18,
-      "merkez_kok": "همم",
-      "merkez_mana": "Hemm: istek, gayret; himmet",
-      "boy": 116
+      "merkez_kok": "وشج",
+      "merkez_mana": "",
+      "boy": 63
     },
     "ince": {
-      "kume": 99,
-      "merkez_kok": "هذب",
-      "merkez_mana": "to discipline",
-      "boy": 19
+      "kume": 107,
+      "merkez_kok": "وءم",
+      "merkez_mana": "one who was born of a multiple birth, i.e. a twin, triplet, quadruplet",
+      "boy": 11
     }
   },
   "kaliplar": {

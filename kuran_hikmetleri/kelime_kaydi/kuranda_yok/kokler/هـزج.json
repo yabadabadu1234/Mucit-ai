@@ -1,0 +1,63 @@
+{
+  "kok": "هـزج",
+  "sinif": "reddedildi",
+  "turkce_fiil": null,
+  "mustaklar": {},
+  "reddedilen": [
+    ["kök", "هـزج", "üç harfli değil"]
+  ],
+  "sozlukler": {},
+  "kuran_gecisleri": 0,
+  "kuranda_var": false,
+  "sema": {
+    "sema": "graf-ic-graf",
+    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
+    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
+    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
+    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
+    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
+  },
+  "tasnif": {
+    "fasil": "هـ",
+    "harf": "ه",
+    "mahrec": "halkiyye",
+    "bolge": "halk"
+  },
+  "mana_tasnif": {
+    "durum": "Arabic WordNet v2 kaydı yok"
+  },
+  "ses_mana_tasnif": {
+    "durum": "Cebel mu'cemlerinde kök yok"
+  },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "هزج المغنّى في غنائه والقارئ في قراءته إذا طرّبا في تدارك الصوت وتقاربه. وله هزجٌ مطّربٌ وأهازيج، كقولك: أغانيّ. قال الشمّاخ:\nيكلّفها أن لا يخفّض جأشها ... أهازيج ذبّانٍ على غصن عرفج\nالأتان تسكن إلى أغانيّ الذبّان فتقف عندها فلا يدعها العير ويطردها. ومغنٍّ هزجٌ. قال عنترة:\nوخلا الذباب بها فليس ببارح ... هزجاً كفعل الشارب المترنّم\nوهزذج صوته تهزيجاً: داركه وقاربه فتهزّج.",
+    "mecaz": "سحاب هزجٌ بالرعد. وسمعت هزج الرعد والعود، وقد هزج وتهزّج. وتهزّجت القوس: أرنّت. وعودٌ هزجٌ، وللقوس أهازيج. قال الكميت يصف القوس:\nلم يعب ربّها ولا الناس منها ... غير إنذارها عليها الحميرا\nبأهازيج من أغانيّها الج ... شّ وإتباعها الحنين الزفيرا",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "هزج المغنّى في غنائه والقارئ في قراءته إذا طرّبا في تدارك الصوت وتقاربه. وله هزجٌ مطّربٌ وأهازيج، كقولك: أغانيّ. قال الشمّاخ: يكلّفها أن لا يخفّض جأشها ... أهازيج ذبّانٍ على غصن عرفج الأتان تسكن إلى أغانيّ الذبّان فتقف عندها فلا يدعها العير ويطردها. ومغنٍّ هزج",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "سحاب هزجٌ بالرعد. وسمعت هزج الرعد والعود، وقد هزج وتهزّج. وتهزّجت القوس: أرنّت. وعودٌ هزجٌ، وللقوس أهازيج. قال الكميت يصف القوس:",
+        "prototipe_benzerlik": 0.488,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.488,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
+  "muhassas_tasnif": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "mana_tasnif_gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
+  },
+  "kaliplar": {},
+  "kelimeler": []
+}

@@ -688,24 +688,57 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "هو صنديد من الصناديد وهو السيد الضخم.",
+    "mecaz": "أصابهم برد صنديد، وحرّ صنديد، ومرت علينا صناديد من البرد، ويوم حامي الصناديد وهي ما اشتدّ منها، ورمت السماء بصناديد البرد: بكباره. وغيث صنديد: عظيم القطر، وغيوث صناديد. قال ابن مقبل:\nعفته صناديد السماكين وانتحت ... عليه رياح الصيف غبراً مجاوله\nوريح صنديد. وقال أبو وجزة:\nدعتنا لمسرى ليلة رجبية ... جلا برقها جون الصناديد مظلماً\nأراد معاظم السحاب وأعاليها.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "هو صنديد من الصناديد وهو السيد الضخم.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "أصابهم برد صنديد، وحرّ صنديد، ومرت علينا صناديد من البرد، ويوم حامي الصناديد وهي ما اشتدّ منها، ورمت السماء بصناديد البرد: بكباره. وغيث صنديد: عظيم القطر، وغيوث صناديد. قال ابن مقبل:",
+        "prototipe_benzerlik": 0.402,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وريح صنديد. وقال أبو وجزة:",
+        "prototipe_benzerlik": 0.421,
+        "halka": "orta"
+      },
+      {
+        "cumle": "أراد معاظم السحاب وأعاليها.",
+        "prototipe_benzerlik": 0.379,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.401,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 2,
+      "kume": 1,
       "merkez_kok": "قره",
       "merkez_mana": "",
       "boy": 759
     },
     "orta": {
-      "kume": 4,
+      "kume": 2,
       "merkez_kok": "فلص",
       "merkez_mana": "",
       "boy": 494
     },
     "ince": {
-      "kume": 21,
+      "kume": 3,
       "merkez_kok": "مرت",
       "merkez_mana": "",
       "boy": 241

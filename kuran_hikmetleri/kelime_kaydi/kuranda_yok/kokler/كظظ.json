@@ -796,11 +796,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "crowd.v.03",
-    "orta": "verb.motion",
-    "ust": "fiil ve hadise",
-    "dayanak_synset": "crowd.v.03",
-    "dayanak_tanim": "to gather together in large numbers",
+    "ince": "teem.v.01",
+    "orta": "verb.stative",
+    "ust": "hâl ve vasıf",
+    "dayanak_synset": "teem.v.01",
+    "dayanak_tanim": "be teeming, be abuzz",
     "synset_sayisi": 3
   },
   "ses_mana_tasnif": {
@@ -811,6 +811,29 @@
     "fasil_ozeti": "° معنى الفصل المعجمي (كظ): امتلاء الجوف امتلاء شديدًا - كما يتمثل في قولهم كظه الطعام والشراب: ملأه حتى لا يطيق التنفس - في (كظظ)، وفي الكظامة مخرج البول من المرأة (اعتبر فيه أنه سِداد يحبس لكنه ليس بقوة محبس الرجُل)، وفي الكَظَم: مخرج النفَس (هو أيضًا سداد يحبس حينيًّا) - في (كظم).",
     "tam_metin": "\"الكِظَّة - بالكسر: البِطْنة: كَظَّه الطعامُ والشرابُ: ملأه حتي لا يُطيق التنفس \".\n° المعنى المحوري\nامتلاء البطن ونحوها امتلاء شديدًا بغليظ نَفَذَ إليها (1) كالكِظّة المذكورة.\n__________\n(1) (صوتيًّا): تعبّر الكاف عن ضغط غُئوري حاد يتأتّى منه القلعُ والامتساكُ، والظاء عن غِلَظ، والفصل منهما يعبّر عن امتلاء البطن ونحوها امتلاءً شديدًا بغليظ نَفَذَ إليها وامتَسَكَ، كما في الكِظّة في كظظ. وفي (كظم) تعبِّر الميم عن التئامِ ظاهر، ويعبِّر الفصل المختوم بها عن الالتئام على ذلك الغليظ في الجوف كما في الكظامة وكَظْم الغيظ.\n(4/1898)"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "علته البطنة وأخذته الكظة، وكظّه الطعام، وطعام مكظّةٌ، واكتظّ بطنه. ورأيت على باب داره كظيظاً. زحاماً. وفي ذكر باب الجنة: يأتي عليه زمان وله كظيظ. واكتظّ القوم في المسجد: ازدحموا.",
+    "mecaz": "كظّني الأمر: غمّني وملأني غيظاً. واكتظّ الوادي بثجيجه.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Cebel mihverî mana",
+    "prototip": "امتلاء البطن ونحوها امتلاء شديدًا بغليظ نَفَذَ إليها (1) كالكِظّة المذكورة.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "كظّني الأمر: غمّني وملأني غيظاً. واكتظّ الوادي بثجيجه.",
+        "prototipe_benzerlik": 0.358,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.358,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["cram.v.04", "crowd.v.03", "teem.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النخل",
@@ -822,21 +845,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "merkez_kok": "قبب",
+      "merkez_mana": "canopy, pavilion; dome, cupola",
+      "boy": 604
     },
     "orta": {
-      "kume": 38,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 203
+      "kume": 33,
+      "merkez_kok": "صبب",
+      "merkez_mana": "Sabb: dökmek, akıtmak; sabîb: akan",
+      "boy": 201
     },
     "ince": {
-      "kume": 242,
-      "merkez_kok": "محش",
-      "merkez_mana": "",
-      "boy": 29
+      "kume": 221,
+      "merkez_kok": "ترع",
+      "merkez_mana": "gate, portal",
+      "boy": 24
     }
   },
   "kaliplar": {

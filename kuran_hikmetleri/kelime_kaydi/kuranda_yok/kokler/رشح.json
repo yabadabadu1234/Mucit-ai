@@ -1760,16 +1760,71 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "purify.v.01",
-    "orta": "verb.change",
+    "ince": "trickle.v.01",
+    "orta": "verb.motion",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "purify.v.01",
-    "dayanak_tanim": "remove impurities from, increase the concentration of, and separate through the process of distillation",
+    "dayanak_synset": "trickle.v.01",
+    "dayanak_tanim": "run or flow slowly, as in drops or in an unsteady stream",
     "synset_sayisi": 16
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "رشح جبينه، وبجبينه رشح. وتقول: لرشحة في الجبين، أحسن من شمم بالعرنين. وجلده راشح بالعرق.",
+    "mecaz": "هو مرشح للخلافة وأصله ترشيخ الظبية ولدها تعوّده المشي فترشّح. وغزال راشح، وقد رشح إذا مشى ونزا، وأمه مرشح، وقد أرشحت، كما يقال: مشدن وأشدنت. ورشح فلان لأمر كذا وترشح له. ورشح الندى النبات.\nورشح ماله: أحسن القيام عليه. واسترشح البهمى: علا وارتفع. قال ذو الرمة:\nيقلّب أشباها كأن متونها ... بمسترشح البهمى ظهور المداوك\nورشحت القربة بالماء. ورشح الكوز. و\" كل إناء يرشح بما فيه \". وتقول: كم بين الفرات الطافح، والوشل الراشح. قال الأخطل:\nوإذا عدلت به رجالاً لم تجد ... فيض الفرات كراشح الأوشال\nوأصابني بنفحة من عطائه، ورشحة من سمائه.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "رشح جبينه، وبجبينه رشح. وتقول: لرشحة في الجبين، أحسن من شمم بالعرنين. وجلده راشح بالعرق.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "هو مرشح للخلافة وأصله ترشيخ الظبية ولدها تعوّده المشي فترشّح. وغزال راشح، وقد رشح إذا مشى ونزا، وأمه مرشح، وقد أرشحت، كما يقال: مشدن وأشدنت. ورشح فلان لأمر كذا وترشح له. ورشح الندى النبات.",
+        "prototipe_benzerlik": 0.477,
+        "halka": "orta"
+      },
+      {
+        "cumle": "ورشح ماله: أحسن القيام عليه. واسترشح البهمى: علا وارتفع. قال ذو الرمة:",
+        "prototipe_benzerlik": 0.47,
+        "halka": "orta"
+      },
+      {
+        "cumle": "ورشحت القربة بالماء. ورشح الكوز. و\" كل إناء يرشح بما فيه \". وتقول: كم بين الفرات الطافح، والوشل الراشح. قال الأخطل:",
+        "prototipe_benzerlik": 0.666,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وأصابني بنفحة من عطائه، ورشحة من سمائه.",
+        "prototipe_benzerlik": 0.494,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.527,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "allocate.v.01",
+    "digest.v.03",
+    "filtration.n.01",
+    "fluid.n.01",
+    "give.v.08",
+    "leak.v.04",
+    "living_thing.n.01",
+    "melt.v.01",
+    "present.v.02",
+    "purify.v.01",
+    "run.v.01",
+    "run.v.06",
+    "scat.v.01",
+    "stand.v.10",
+    "trickle.v.01",
+    "vote.v.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الإبل",
@@ -1780,22 +1835,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 7,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 331
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 31,
+      "kume": 36,
       "merkez_kok": "سكب",
       "merkez_mana": "Sakb: dökmek, boşaltmak",
-      "boy": 76
+      "boy": 101
     },
     "ince": {
-      "kume": 206,
+      "kume": 239,
       "merkez_kok": "ذرف",
       "merkez_mana": "to flow (tears)",
-      "boy": 26
+      "boy": 30
     }
   },
   "kaliplar": {

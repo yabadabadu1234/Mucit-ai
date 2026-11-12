@@ -1417,7 +1417,7 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "agent.n.03",
+    "ince": "substance.n.07",
     "orta": "noun.artifact",
     "ust": "cisim ve eşya",
     "dayanak_synset": "medicine.n.02",
@@ -1427,6 +1427,50 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "خرجوا من الدوّ والدويّة والداوية وهي المفازة. وما بالدار دوي: أحد. قال:\nدوية ليس بها دوي ... للجن في حافاتها دوي\nللنحل والفحل الهادر والريح والموج وغيرها دوي. وقد دوى تدوية. ودوّى الطائر: دار في الجو ولم يحرك جناحيه. وداء دوي: شديد. وقد دويَ الرجل دوى فهو دوٍ، وامرأة دوية. وداويته بالدواء والأدوية. واستمد من الدواة، وجمعها الدوي والدويّ. وتقول: إن في بعض الدوي، كل داء دوي؛ وما على لبنك دواية وهي جلدة تعلوه وتعلو المرق والماء الراكد. ودوي اللبن مثل رغى. وادويت إذا أكلتها.",
+    "mecaz": "داويت الفرس: سقيته اللبن وصنعته. قال:\nوداويتها حتى شبتت حبشية ... كأن عليها سندساً وسدوساً\nورجل دوي: أحمق، سمي بمصدر دويَ وحق له.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "خرجوا من الدوّ والدويّة والداوية وهي المفازة. وما بالدار دوي: أحد. قال: دوية ليس بها دوي ... للجن في حافاتها دوي للنحل والفحل الهادر والريح والموج وغيرها دوي. وقد دوى تدوية. ودوّى الطائر: دار في الجو ولم يحرك جناحيه. وداء دوي: شديد. وقد دويَ الرجل دوى فهو دوٍ،",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "داويت الفرس: سقيته اللبن وصنعته. قال:",
+        "prototipe_benzerlik": 0.348,
+        "halka": "orta"
+      },
+      {
+        "cumle": "ورجل دوي: أحمق، سمي بمصدر دويَ وحق له.",
+        "prototipe_benzerlik": 0.391,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.37,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "act.n.02",
+    "agent.n.03",
+    "condition.n.01",
+    "happening.n.01",
+    "honk.v.01",
+    "make_noise.v.01",
+    "medicate.v.02",
+    "mend.v.02",
+    "resound.v.01",
+    "ring.v.01",
+    "roll.v.07",
+    "roll.v.12",
+    "shriek.v.01",
+    "treat.v.03",
+    "wheel.v.03"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
@@ -1438,18 +1482,18 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 39,
-      "merkez_kok": "هضض",
-      "merkez_mana": "recurrence of sadness",
-      "boy": 52
+      "kume": 41,
+      "merkez_kok": "بلع",
+      "merkez_mana": "Bel': yutmak; bel'a: yutkunma",
+      "boy": 61
     },
     "ince": {
-      "kume": 251,
+      "kume": 266,
       "merkez_kok": "حقن",
       "merkez_mana": "injected substance",
       "boy": 5

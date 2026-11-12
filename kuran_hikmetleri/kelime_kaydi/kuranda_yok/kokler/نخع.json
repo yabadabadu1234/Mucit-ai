@@ -1216,6 +1216,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "تنخم وتنخّع. ورمى بالنخامة والنخاعة. ونخع الذبيحة: جاز بالذبح إلى النخاع. وأصاب المنخع وهو مفصل الفهقة بين العنق والرأس.",
+    "mecaz": "نخعته طاعتي وودّي ونصيحتي إذا بالغت له فيها. ونخع الأمر علماً، وفلان ناخع. قال:\nإن الذي ربّضتما أمره ... سراً وقد بيّن للناخع\nلكالتي يحسبها أهلها ... عذراء بكراً وهي في التاسع\nوفي الحديث: \" إن أنخع الأسماء عند الله أن يتسعّى الرجل باسم ملك الأملاك \" أي أشدّها إهلاكاً. وتنخع السحاب: قاء ما فيه من المطر.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "تنخم وتنخّع. ورمى بالنخامة والنخاعة. ونخع الذبيحة: جاز بالذبح إلى النخاع. وأصاب المنخع وهو مفصل الفهقة بين العنق والرأس.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "نخعته طاعتي وودّي ونصيحتي إذا بالغت له فيها. ونخع الأمر علماً، وفلان ناخع. قال:",
+        "prototipe_benzerlik": 0.397,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وفي الحديث: \" إن أنخع الأسماء عند الله أن يتسعّى الرجل باسم ملك الأملاك \" أي أشدّها إهلاكاً. وتنخع السحاب: قاء ما فيه من المطر.",
+        "prototipe_benzerlik": 0.346,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.371,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السلاح",
@@ -1227,18 +1255,18 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 509
     },
     "orta": {
-      "kume": 11,
-      "merkez_kok": "دحر",
-      "merkez_mana": "Dahr: itmek, uzaklaştırmak",
-      "boy": 179
+      "kume": 9,
+      "merkez_kok": "وغر",
+      "merkez_mana": "to become enraged, to become angry, to be filled with malice",
+      "boy": 108
     },
     "ince": {
-      "kume": 56,
+      "kume": 58,
       "merkez_kok": "نكز",
       "merkez_mana": "",
       "boy": 14

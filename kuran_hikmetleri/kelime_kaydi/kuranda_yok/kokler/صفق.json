@@ -1927,6 +1927,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "ضربه على صفقي عنقه: على جانبيها. وأنا أحب أهل ذلك الصفق وهو الناحية. وهذه صفقة مباركة وهي ضرب اليد على اليد في البيع والبيعة، ومنها: أصفقوا على أمر واحد: اجتمعوا عليه. وصفقت رأسه وعينه صفقة: ضربته، وصفقت به الأرض. وصفقت الريح الأغصان فاصطفقت. وتصفقت الريح. قال الراعي:\nإذا أتى جانباً منها يصرّفه ... تصفق الريح تحت الديمة الدرر\nأتى الوحش جانباً من الشجرة ليكتنس تحتها. والنساء يصطفقن على الميت. قال قيس بن عنبس الفزاريّ:\nكرام يصطفقن على كريم ... بأيديهن أخلاق النعال\nواصطفقت المزاهر لما صفقت. وصفق الباب: رده. وباب داره صفق واحد إذا لم يكن مصراعين. وباب مصفوق. وصفقته عما يريد: رددته. والثوب المعلق واللواء تصفقه الرياح وتصفقه كل مصفق. ورجل صفاق: أفاق متصرف في النواحي. وأصفقت يدي بكذا بلت به. قال النمر:\nحتى إذا طرح النصيب وأصفقت ... يده بجلدة ضرعها وحوارها\nوالناقة الحامل تصافق مصافقة وهي تقلبها على صفقيها، وهي مصافق. وبات فلان يصافق. وصفق الشراب: حوله من إناء إلى إناء ليصفو. وصفق الإبل: حوّلها من مرعًى إلى مرعًى وهو من الصفق. وانشق صفاق بطنه وهو الجلد الباطن عند سواد البطن. وثوب صفيق، وقد صفق صفاقة، وأصفقه الناسج.",
+    "mecaz": "له وجه صفيق. وأعوذ بالله من صفاقة الوجه. ولك عندي ود مصفق، ونصح مروق.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "ضربه على صفقي عنقه: على جانبيها. وأنا أحب أهل ذلك الصفق وهو الناحية. وهذه صفقة مباركة وهي ضرب اليد على اليد في البيع والبيعة، ومنها: أصفقوا على أمر واحد: اجتمعوا عليه. وصفقت رأسه وعينه صفقة: ضربته، وصفقت به الأرض. وصفقت الريح الأغصان فاصطفقت. وتصفقت الريح. قال",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "له وجه صفيق. وأعوذ بالله من صفاقة الوجه. ولك عندي ود مصفق، ونصح مروق.",
+        "prototipe_benzerlik": 0.503,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.503,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["act.n.02", "beat.v.08", "group_action.n.01", "slam.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "اللباس",
@@ -1937,22 +1960,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "kume": 5,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 375
     },
     "orta": {
-      "kume": 11,
-      "merkez_kok": "دحر",
-      "merkez_mana": "Dahr: itmek, uzaklaştırmak",
-      "boy": 179
+      "kume": 14,
+      "merkez_kok": "غدر",
+      "merkez_mana": "Gadr: ihanet, hile",
+      "boy": 153
     },
     "ince": {
-      "kume": 63,
+      "kume": 78,
       "merkez_kok": "خبط",
       "merkez_mana": "Habt: karanlıkta yürümek, şaşırmak",
-      "boy": 22
+      "boy": 40
     }
   },
   "kaliplar": {

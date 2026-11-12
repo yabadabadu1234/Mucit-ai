@@ -689,6 +689,44 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "أوضمت اللحم وأوضمت له: جعلت له وضماً وهو كلّ ما وُقيَ به من الأرض من خشبة أو خصفة أو يغرهما. ووضمته أضمه وضماً: إذا وضعته على الوضم ورويَ على العكس. وأطعموا الوضيمة: طعام المأتم.",
+    "mecaz": "هو لحم على وضم: للذليل.\nواستضمت فلاناص واستوضمته: ظلمته وجعلته كالوضم في الذل. قال:\nإن لا يكن جسم فإنّ قلباً ... أصمع للضيم أبياً شغباً\nيستوضم الجبّاءة الجخبا\nالجبّأ والجبّاء والجبّاءة: الضعيف، والجخب مثله، وتوضّم المرأة: وقع عليها.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "أوضمت اللحم وأوضمت له: جعلت له وضماً وهو كلّ ما وُقيَ به من الأرض من خشبة أو خصفة أو يغرهما. ووضمته أضمه وضماً: إذا وضعته على الوضم ورويَ على العكس. وأطعموا الوضيمة: طعام المأتم.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "هو لحم على وضم: للذليل.",
+        "prototipe_benzerlik": 0.763,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "واستضمت فلاناص واستوضمته: ظلمته وجعلته كالوضم في الذل. قال:",
+        "prototipe_benzerlik": 0.436,
+        "halka": "orta"
+      },
+      {
+        "cumle": "يستوضم الجبّاءة الجخبا",
+        "prototipe_benzerlik": 0.408,
+        "halka": "orta"
+      },
+      {
+        "cumle": "الجبّأ والجبّاء والجبّاءة: الضعيف، والجخب مثله، وتوضّم المرأة: وقع عليها.",
+        "prototipe_benzerlik": 0.422,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.507,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
@@ -699,19 +737,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 2,
+      "kume": 1,
       "merkez_kok": "قره",
       "merkez_mana": "",
       "boy": 759
     },
     "orta": {
-      "kume": 4,
+      "kume": 2,
       "merkez_kok": "فلص",
       "merkez_mana": "",
       "boy": 494
     },
     "ince": {
-      "kume": 21,
+      "kume": 3,
       "merkez_kok": "مرت",
       "merkez_mana": "",
       "boy": 241

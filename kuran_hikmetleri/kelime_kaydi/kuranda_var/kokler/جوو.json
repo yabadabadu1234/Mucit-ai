@@ -1179,11 +1179,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "state.n.02",
-    "orta": "noun.state",
-    "ust": "hâl ve vasıf",
-    "dayanak_synset": "atmosphere.n.01",
-    "dayanak_tanim": "a particular environment or surrounding influence",
+    "ince": "phenomenon.n.01",
+    "orta": "noun.phenomenon",
+    "ust": "tabiat",
+    "dayanak_synset": "weather.n.01",
+    "dayanak_tanim": "the atmospheric conditions that comprise the state of the atmosphere in terms of temperature and wind and clouds and precipitation",
     "synset_sayisi": 2
   },
   "ses_mana_tasnif": {
@@ -1194,29 +1194,36 @@
     "fasil_ozeti": "° معنى الفصل المعجمي (ثن): تبطُّن الشيء شيئًا كما في ثُنّة الإنسان وغيره - في (ثنن)، وثِنْى الثوب المطوي إلى الداخل - في (ثنى)، والسِمَن الذي في باطن المال (: الماشية) - في (وثن). __________ (1) ينظر: المفردات للراغب، والمصباح المنير للفيومي، و [تاج] العروس (صنم، وثن).",
     "tam_metin": "{أَلَمْ يَرَوْا إِلَى الطَّيْرِ مُسَخَّرَاتٍ فِي جَوِّ السَّمَاءِ مَا يُمْسِكُهُنَّ إِلَّا اللَّهُ} [النحل: 79].\n\"الجُوّة - بالضم: نُقْرةٌ في الجبل وغيره. والجَوّ والجَوّة - بالفتح: المنخفِض من الأرض. والجِواء - ككتاب: البطن من الأرض، والواسع من الأودية. وجوُّ كل شيء وجَوّته - بالفتح: بَطْنُه وداخله. قال: (يجرى بجَوّته موجُ الفرات) .. أي ببطن ذلك الموضع \".\n° المعنى المحوري\nتجوف قوي مُكتنَف الجوانب في جرم شيء: كما في النقرة الخ. ومنه الجوّ: ما بين السماء والأرض كما في آية التركيب (حيث يبدو فجوة عظيمة بينهما) وفي حديث علي - رضي الله عنه -: \"ثم فَتَقَ الأجواء \". ويطلق على الهواء الذي بين السماء والأرض {مُسَخَّرَاتٍ فِي جَوِّ السَّمَاءِ} [النحل: 79] وليس في القرآن من التركيب إلا هذا.\nوالفعل (جَوِى) كالمطاوع لـ (جوو) فمنه: \"الجوَى: السُلّ وتطاول المرض، وكل داء يأخذ في الباطن لا يُسْتَمْرأ معه الطعام، أو داءٌ يأخذ في الصدر وفعله (كتعب)، والماء المتغير المُنْتِن جَوٍ: فاسدٌ (فهن من فساد الجوف أي هلاكه وخرابه). جَوِيَت نفسي من الطعام وعنه (تعب): كرِهَتْه. وجَوِىَ الرجل الأرضَ والطعامَ (تعب) واجتواه: لم يوافقه وكَرِهَه. (كأنما فسد منهما جوفه). وفي حديث العُرَنيين: فاجْتَوَوْا المدينة أي أصابهم الجَوَى: وهو المرض وداء\n(1/263)\nالجوف إذا تطاول \". (ويعبر عن المعنوى من هذا بالحُرْقة وشدة الوجد أي مرجعه إلى تجوف الباطن كأنما احترق أو تآكل)."
   },
+  "hakikat_mecaz_tasnif": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "prototip_yayilim_tasnif": {
+    "durum": "prototip veya mecaz kolu yok"
+  },
+  "kolekzifikasyon_kavramlari": ["condition.n.01", "natural_phenomenon.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
     "bab": "داء الوجه",
-    "kok_gecis": 32.5,
-    "kitapta_gecis": 9.2,
-    "zenginlesme": 5.43
+    "kok_gecis": 31.5,
+    "kitapta_gecis": 8.7,
+    "zenginlesme": 5.3
   },
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 7,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 331
+      "merkez_kok": "لقلق",
+      "merkez_mana": "",
+      "boy": 386
     },
     "orta": {
-      "kume": 30,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 103
+      "kume": 27,
+      "merkez_kok": "عجو",
+      "merkez_mana": "beikost",
+      "boy": 41
     },
     "ince": {
-      "kume": 201,
+      "kume": 167,
       "merkez_kok": "جوو",
       "merkez_mana": "cev: iç, derinlik / cevv: hava, boşluk (?)",
       "boy": 7

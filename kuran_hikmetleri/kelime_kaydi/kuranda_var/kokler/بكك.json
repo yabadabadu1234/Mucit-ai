@@ -803,16 +803,6 @@
         "yol": "müştak"
       },
       {
-        "w": "بكاء",
-        "u": "بكاء",
-        "p": "adj",
-        "h": "ar-adj+",
-        "e": "بَكَّاء • (bakkāʔ) (feminine بَكَّاءَة (bakkāʔa), masculine plural بَكَّاؤُون (bakkāʔūn), feminine plural بَكَّاءَات (bakkāʔāt))",
-        "g": ["crying frequently"],
-        "r": ["bakkāʔ"],
-        "yol": "müştak"
-      },
-      {
         "w": "بكي",
         "u": "بكي",
         "p": "adj",
@@ -953,29 +943,6 @@
     },
     "arabic_ontology": [
       {
-        "id": "46244",
-        "arapca": [
-          "إِعْوَالٌ",
-          "تَوَجُّعٌ",
-          "صُرَاخٌ",
-          "تَأَلُّمٌ",
-          "عَوِيلٌ",
-          "تَأَوُّهٌ",
-          "أَنِينٌ",
-          "نُوَاحٌ",
-          "نَشِيجٌ",
-          "نَحيبٌ",
-          "شَهِيقٌ",
-          "بُكَاءٌ"
-        ],
-        "ingilizce": [],
-        "tanim": "عملية سيلان وخروج الدمع من العيون استجابةً لعاطفة ما",
-        "misal": "سُمِعَ _ أمّ الشهيد على فقدان ابنها",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
         "id": "46260",
         "arapca": [
           "نَاحَ",
@@ -1081,11 +1048,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "location.n.01",
-    "orta": "noun.location",
-    "ust": "ölçü, mekân ve zaman",
-    "dayanak_synset": "beijing.n.01",
-    "dayanak_tanim": "capital of the People's Republic of China in the Hebei province in northeastern China; 2nd largest Chinese city",
+    "ince": "cry.v.02",
+    "orta": "verb.body",
+    "ust": "canlı ve beden",
+    "dayanak_synset": "cry.v.02",
+    "dayanak_tanim": "shed tears because of sadness, rage, or pain",
     "synset_sayisi": 5
   },
   "ses_mana_tasnif": {
@@ -1096,32 +1063,43 @@
     "fasil_ozeti": "° معنى الفصل المعجمي (بك): الانضغاط والاندكاك بدقة أو حدّة: كما في البكّ: المزاحمة - في (بكك)، وكما في ما يشبه العصر الذي يتولد عنه مائع قليل - في (بكى)، وكما في بدء وجود الشيء أي تكونه صغيرًا كأنه مضغوط قبل أن يتزايد مسترسلًا - في (بكر)، وكما في انضمام أثناء الشيء على ما فيها فلا تتفتح في (بكم).",
     "tam_metin": "{إِنَّ أَوَّلَ بَيْتٍ وُضِعَ لِلنَّاسِ لَلَّذِي بِبَكَّةَ مُبَارَكًا وَهُدًى لِلْعَالَمِينَ} [آل عمران: 96].\n\"البَكْبَاك - بالفتح: القصير جدًّا إذا مشى تَدَحْرج من قِصَره. والبُكُك - بضمتين: الأحداث الأشداء. بَكَّهُ: زاحمه، وتباكّ القوم: تزاحموا. والبَكْبَكة: طرحُ بعض الشيء. وتباكّ: تراكم \".\n° المعنى المحوري\nهو: ضغط يؤدي إلى تداخل جرم الشيء وانضغاطه بعضه في بعض (1): كما في المزاحمة، والقصيرُ يُتَوَهّم أنه مضغوط، كما عبروا عنه بالمتكاكئ.\n__________\n(1) (صوتيَّا): الباء للتجمع مع رخاوة والتصاق ما، والكاف للضغط الغئورى الدقيق، والفصل منهما يعبر عن تضاغط واندكاك يُشْبه احتباس الأشياء بعضها ببعض. وفي (بكى) تعبر الباء عن الاتصال، ويعبر التركيب عن خروج مائع من الشيء قليلا قليلا كأنما باعتصار وضغط كالبكاء. وفي (بكر) تعبر الراء عن استرسال، ويعبر التركيب عن أن يصدر أو يخرج من =\n(1/159)\nومن ذلك: \"بَكَّ الرجلُ: خَشُن بدنُه شجاعةً \" (هذا الاستعمال اللازم غريب، لكن يتأتى قبوله باعتبار أن الشجاع كالمصمت المدكوك ليس فيه خور)، وافتَقَر (انسحق بالشدة). ومنه: بَكّه: خَرَقَه (كأنه ضغطه بشدة حتى خرق جرمه)، وفلانًا: رَدَّ نخوته ووضَعَه (دَكَّه - كَبَسه)، وعنقَهُ: دقها. و \"بكّة \"يطلق هذا الاسم على مكة المكرمة، أو ما بين جَبَلَيْها، أو المَطاف، للزحام، أو لدق أعناق الجبابرة: {لَلَّذِي بِبَكَّةَ}. وأرى أنه أطلق على ما بين جبليها حيث يبدو موضعُها وكأنه دُكَّ دَكًّا عن مستوى ما حوله، أو لمكانة زمزم منها؛ إذ نشأت بهَزْمَة (أي بَكّة) من جناح الملَك. والقصة معروفة."
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "تباكت الإبل على الحوض: تزاحمت. وتقول: تباكوا، فتداكوا. وسميت بكة لأنها كانت تبك أعناق الجبابرة، إذا ألحدوا فيها بظلم لم يناظروا أي لم ينتظر بهم. وتقول أحمق باك، من هو في الحق شاك.",
+    "mecaz": "",
+    "kinaye": "",
+    "mecaz_var": false
+  },
+  "prototip_yayilim_tasnif": {
+    "durum": "prototip veya mecaz kolu yok"
+  },
+  "kolekzifikasyon_kavramlari": ["cry.v.02", "mourn.v.01", "region.n.03", "shout.v.02", "wail.v.02"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الأضداد",
     "bab": "ما خالفت العامة فيه لغات العرب من الكلام",
-    "kok_gecis": 169.7,
-    "kitapta_gecis": 20.0,
-    "zenginlesme": 2.36
+    "kok_gecis": 157.7,
+    "kitapta_gecis": 19.7,
+    "zenginlesme": 2.5
   },
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 509
     },
     "orta": {
-      "kume": 7,
-      "merkez_kok": "كرب",
-      "merkez_mana": "Karb: sıkıntı, keder; kurbet: sıkıntı",
-      "boy": 139
+      "kume": 8,
+      "merkez_kok": "بءس",
+      "merkez_mana": "Be'es: azap, şiddet, zorluk",
+      "boy": 142
     },
     "ince": {
-      "kume": 37,
+      "kume": 43,
       "merkez_kok": "دمع",
       "merkez_mana": "Dem': gözyaşı; dâmi': ağlayan",
-      "boy": 9
+      "boy": 8
     }
   },
   "kaliplar": {

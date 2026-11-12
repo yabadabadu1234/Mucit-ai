@@ -873,6 +873,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "امرأة جائلة الوشاح والوشاحين، ولها وشح وأوشحة، وتوشّحت واتشحت، ووشّحتها.",
+    "mecaz": "توشّح بثوبه وبنجاده: وخرج متوشّحاً بسيفه ومتّشحاً به، وظبية موشّحة: في جنبيها طرّتان مسكّيتان. قال أبو ذؤيب:\nموشّحةٌ بالطرّتين دنا لها ... جنى أيكة يضفو عليها قصارها\nوقال الطرمّاح:\nونبّه ذا العفاء الموشّج\nوتوشّحت الجبل: سلكته. وتوشّح المرأة: جامعها. وقال:\nجعلت يديّ وشاحاً له ... وبعض الفوارس لا يعتنق\nأي عانقته.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "امرأة جائلة الوشاح والوشاحين، ولها وشح وأوشحة، وتوشّحت واتشحت، ووشّحتها.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "توشّح بثوبه وبنجاده: وخرج متوشّحاً بسيفه ومتّشحاً به، وظبية موشّحة: في جنبيها طرّتان مسكّيتان. قال أبو ذؤيب:",
+        "prototipe_benzerlik": 0.226,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "ونبّه ذا العفاء الموشّج",
+        "prototipe_benzerlik": 0.394,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وتوشّحت الجبل: سلكته. وتوشّح المرأة: جامعها. وقال:",
+        "prototipe_benzerlik": 0.237,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.286,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "اللباس",
@@ -883,19 +916,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
+      "kume": 8,
       "merkez_kok": "قبب",
       "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "boy": 604
     },
     "orta": {
-      "kume": 43,
-      "merkez_kok": "خرز",
-      "merkez_mana": "awl",
-      "boy": 104
+      "kume": 32,
+      "merkez_kok": "دثر",
+      "merkez_mana": "Tedsîr: örtmek, bürümek; desr: örtü",
+      "boy": 148
     },
     "ince": {
-      "kume": 278,
+      "kume": 208,
       "merkez_kok": "زنر",
       "merkez_mana": "to belt, to gird",
       "boy": 16

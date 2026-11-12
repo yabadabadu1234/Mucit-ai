@@ -698,24 +698,57 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "طأطأ رأسه: صوّبه. وطأطأت يدي بعنان الفرس إذا خفضت يدك ولم ترفعها للكبح وأرخيت العنان ليحضر، وطأطأت الفرس: تركت كبحه لأنك إذا كبحته رفعت رأسه ألا ترى إلى قوله:\nشندف أشدف ما ورعته ... وإذا طؤطيء طيّارٌ طمِرّْ\nأي هو مائل في أحد الشقين ما كبحته بغياً ونشاطاً فإذا خفضت عنانه طار.",
+    "mecaz": "طأطأت المرأة سترها: حطته. قال:\nأرادت لتنتاش الرواق فلم تقم ... إليه ولكن طأطأته الولائد\nوطأطأ الحفرة: عمقها، وحفرة مطأطأة، قال أبو ذؤيب يصف حفرته:\nمطأطأة لم ينبطوها وإنها ... لترضى بها فرّاطهم أم واحد\nويقال: حجبه الطأطاء فلم أره وهو الغيب من الأرض المتطامن. ويقال للمسرف: قد طأطأ الركض في ماله. وفي مثل \" تطأطأ لها تخطّك \" وطأطأ فلان من خصمه، وتطاول عليّ فطأطأت منه.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "طأطأ رأسه: صوّبه. وطأطأت يدي بعنان الفرس إذا خفضت يدك ولم ترفعها للكبح وأرخيت العنان ليحضر، وطأطأت الفرس: تركت كبحه لأنك إذا كبحته رفعت رأسه ألا ترى إلى قوله: شندف أشدف ما ورعته ... وإذا طؤطيء طيّارٌ طمِرّْ أي هو مائل في أحد الشقين ما كبحته بغياً ونشاطاً فإذا ",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "طأطأت المرأة سترها: حطته. قال:",
+        "prototipe_benzerlik": 0.461,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وطأطأ الحفرة: عمقها، وحفرة مطأطأة، قال أبو ذؤيب يصف حفرته:",
+        "prototipe_benzerlik": 0.389,
+        "halka": "orta"
+      },
+      {
+        "cumle": "ويقال: حجبه الطأطاء فلم أره وهو الغيب من الأرض المتطامن. ويقال للمسرف: قد طأطأ الركض في ماله. وفي مثل \" تطأطأ لها تخطّك \" وطأطأ فلان من خصمه، وتطاول عليّ فطأطأت منه.",
+        "prototipe_benzerlik": 0.726,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.525,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["duck.v.01"],
   "muhassas_tasnif": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 6,
+      "kume": 7,
       "merkez_kok": "لقلق",
       "merkez_mana": "",
-      "boy": 440
+      "boy": 386
     },
     "orta": {
-      "kume": 28,
+      "kume": 29,
       "merkez_kok": "دبب",
       "merkez_mana": "debbe: sürünmek, hareket / debbe: uğraşmak (?)",
-      "boy": 81
+      "boy": 73
     },
     "ince": {
-      "kume": 177,
+      "kume": 183,
       "merkez_kok": "جلعب",
       "merkez_mana": "to lie down on one's side and stretch oneself out",
       "boy": 10

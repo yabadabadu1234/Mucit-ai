@@ -1178,11 +1178,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "cognition.n.01",
-    "orta": "noun.cognition",
-    "ust": "zihin ve ilim",
-    "dayanak_synset": "impartiality.n.01",
-    "dayanak_tanim": "an inclination to weigh both views or opinions equally",
+    "ince": "neutralize.v.01",
+    "orta": "verb.social",
+    "ust": "insan ve toplum",
+    "dayanak_synset": "neutralize.v.01",
+    "dayanak_tanim": "make politically neutral and thus inoffensive",
     "synset_sayisi": 3
   },
   "ses_mana_tasnif": {
@@ -1193,6 +1193,17 @@
     "fasil_ozeti": "° معنى الفصل المعجمي (حر) : الخلوص من الغلظ (أي أنه نوع من النقص) كما يتمثل في حر الأرض -في (حرر)، وفي إذهاب غلظ الشيء (جلادة سطحه) باللذع- في (حرو)، وبتجويفه -في (حرى)، وكما فِي الانتقاص من الظاهر .. مع الاستدارة- في (حور)، وكما في التجوف الذي يتحير فيه الماء- في (حير)، وكما في دقة سن الحربة مع زيادة عِرَض أصلها عن المعتاد -في (حرب)، وكما في شَق وجه",
     "tam_metin": "{ذَلِكَ مَا كُنْتَ مِنْهُ تَحِيدُ} [ق: 19]\n\"الحَيْد -بالفتح: حرفٌ شاخص يخرج من الجبل فيتقدم كأنه جَناح. وجَبل ذو حُيُود وأحياد. وحُيود العُودِ: عُجَره. وحُيود القَرن: ما تلَوَّى منه- وحَيْد الرأس: ما شخص من نواحيه \".\n(1/386)\n° المعنى المحوري\nشخوص متباعد عن الاتجاه الأصلي: كحُيود الجبل والعود والقرن. ومنه \"حادَ عن الطريق والشيء يَحُود ويَحِيد: عَدَل (شخص عنه جانبًا) {ذَلِكَ مَا كُنْتَ مِنْهُ تَحِيدُ} و \"حايَده: جانَبه \"."
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "حاد عنه وحايده: مال عنه حياداً. قال رؤبة:\nواخشى سهام القدر المصايدا ... والموت قرن يغلب المحايدا\nوتقول: ما عليه مزيد، وما عنه محيد. وحيدى حياد: أمر بالحيدودة والروغان. وما نظر إليّ إلا الحيدة وهي نظر سوء فيه حيدودة. وقعد تحت حيد الجبل، وهو نادر كالجناح. وفي قرن الظبي حيود وهي عقده. وضربه على حيدة رأسه اليمنى، وعلى حيدتي رأسه وهما العجرتان في جانبيه. واعلوا بنا ذل الطريق، ولا تعلوا بنا حيدة الطريق؛ وهي غلظة.",
+    "mecaz": "",
+    "kinaye": "",
+    "mecaz_var": false
+  },
+  "prototip_yayilim_tasnif": {
+    "durum": "prototip veya mecaz kolu yok"
+  },
+  "kolekzifikasyon_kavramlari": ["attitude.n.01", "leave.v.08", "neutralize.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "المقصور والممدود",
@@ -1203,22 +1214,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "kume": 5,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 375
     },
     "orta": {
-      "kume": 38,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 203
+      "kume": 14,
+      "merkez_kok": "غدر",
+      "merkez_mana": "Gadr: ihanet, hile",
+      "boy": 153
     },
     "ince": {
-      "kume": 247,
-      "merkez_kok": "قلع",
-      "merkez_mana": "Kal': sökmek, kökünden koparmak",
-      "boy": 36
+      "kume": 77,
+      "merkez_kok": "حيد",
+      "merkez_mana": "Hayd: sapmak, uzaklaşmak; hayd: uzak",
+      "boy": 39
     }
   },
   "kaliplar": {

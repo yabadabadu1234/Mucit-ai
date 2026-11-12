@@ -1179,6 +1179,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "أزم الفرس على فأس اللجام: عض عليه وأمسكه، وفرس أزوم، وأخذ مالي فأزم عليه، ومنه قيل للحمية الأزم. وتقول العرب: أصل كل داء البردة، وأصل كل دواء الأزم. ويقال للمحتمي الآزم. ورجل أزوم: قليل الرزء من الطعام.",
+    "mecaz": "أزم الدهر علينا، وأزمتنا أزمة، وسنة آزمة وأزوم، وسنون أوازم، وأصابتهم أزمة، وتتابعت عليهم الأزمات. وأزم بالضيعة وعليها إذا حافظ. وقال:\nجذام سيوف الله في كل موطن ... إذا أزمت يوم اللقاء أزام\nوإن قصرت يوماً أكف قبيلة ... على المجد نالته أكف جذام\nأي إذا عضت كريهة عضوض. والتقينا في مأزم الطريق أي في مضيقه. قال ساعدة:\nومقامهن إذا حبسن بمأزم ... ضيق ألف وصدهن الأخشب",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "أزم الفرس على فأس اللجام: عض عليه وأمسكه، وفرس أزوم، وأخذ مالي فأزم عليه، ومنه قيل للحمية الأزم. وتقول العرب: أصل كل داء البردة، وأصل كل دواء الأزم. ويقال للمحتمي الآزم. ورجل أزوم: قليل الرزء من الطعام.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "أزم الدهر علينا، وأزمتنا أزمة، وسنة آزمة وأزوم، وسنون أوازم، وأصابتهم أزمة، وتتابعت عليهم الأزمات. وأزم بالضيعة وعليها إذا حافظ. وقال:",
+        "prototipe_benzerlik": 0.789,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "أي إذا عضت كريهة عضوض. والتقينا في مأزم الطريق أي في مضيقه. قال ساعدة:",
+        "prototipe_benzerlik": 0.233,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.511,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["act.n.02", "condition.n.01", "happening.n.01", "worsen.v.02"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -1190,21 +1218,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 509
     },
     "orta": {
-      "kume": 7,
-      "merkez_kok": "كرب",
-      "merkez_mana": "Karb: sıkıntı, keder; kurbet: sıkıntı",
-      "boy": 139
+      "kume": 8,
+      "merkez_kok": "بءس",
+      "merkez_mana": "Be'es: azap, şiddet, zorluk",
+      "boy": 142
     },
     "ince": {
-      "kume": 36,
+      "kume": 44,
       "merkez_kok": "كرث",
       "merkez_mana": "catastrophe, disaster",
-      "boy": 21
+      "boy": 16
     }
   },
   "kaliplar": {

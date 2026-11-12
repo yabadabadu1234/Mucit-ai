@@ -691,29 +691,52 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "خاس اللحم: تغير، ولحم خائس. وجوزة خائسة. وإبل مخيسة: محببسة للنحر أو للقسم لا تسرح. قال النابغة:\nوالأدم قد خيست فتلاً مرافقها ... مشدودة برحال الحيرة الجدد\nوخيّس فلان في السجن، وهو المخيّس. وكأنه أسامة في خيسه أي في أجمته، وكأنه جمع أخيس من قولهم: عيص أخيس: ملتف. قال جندل:\nوإن عيصى عيص عزّ أخيس ... ألف تحميه صفاة عريس",
+    "mecaz": "خاس بوعده وبعهده إذا نكث وأخلف، وخاس بما كان عليه. قال ابن الدمينة:\nفيا رب إن خاست بما كان بيننا ... من الود فابعث لي بما فعلت صبراً",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "خاس اللحم: تغير، ولحم خائس. وجوزة خائسة. وإبل مخيسة: محببسة للنحر أو للقسم لا تسرح. قال النابغة: والأدم قد خيست فتلاً مرافقها ... مشدودة برحال الحيرة الجدد وخيّس فلان في السجن، وهو المخيّس. وكأنه أسامة في خيسه أي في أجمته، وكأنه جمع أخيس من قولهم: عيص أخيس: مل",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "خاس بوعده وبعهده إذا نكث وأخلف، وخاس بما كان عليه. قال ابن الدمينة:",
+        "prototipe_benzerlik": 0.458,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.458,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
     "bab": "أسماء جماعة الشجر وذكر الشجر الكثير الملتف من الآجام ونحوها",
-    "kok_gecis": 10.8,
+    "kok_gecis": 10.7,
     "kitapta_gecis": 6.0,
-    "zenginlesme": 4.47
+    "zenginlesme": 4.54
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 2,
+      "kume": 1,
       "merkez_kok": "قره",
       "merkez_mana": "",
       "boy": 759
     },
     "orta": {
-      "kume": 4,
+      "kume": 2,
       "merkez_kok": "فلص",
       "merkez_mana": "",
       "boy": 494
     },
     "ince": {
-      "kume": 21,
+      "kume": 3,
       "merkez_kok": "مرت",
       "merkez_mana": "",
       "boy": 241

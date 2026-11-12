@@ -1608,16 +1608,39 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "natural_process.n.01",
-    "orta": "noun.process",
+    "ince": "clot.v.01",
+    "orta": "verb.change",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "curdling.n.01",
-    "dayanak_tanim": "the process of forming semisolid lumps in a liquid",
+    "dayanak_synset": "clot.v.01",
+    "dayanak_tanim": "change from a liquid to a thickened or solid state",
     "synset_sayisi": 4
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "لبن وطلاء خاثر، وفيه خثورة، وقد خَثَرَ وخَثِرَ وخَثُرَ، وأخثره وخثره، وذهب صفوه وبقيت خثارته أي عكارته ووسخه.",
+    "mecaz": "خثرت نفسه: غثت، وهو خاثر النفس إذا لم تكن طيبة. وفي الحديث. \" فاستيقظ وهو خاثر وأخبر صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ بموت الحسين \" وأجدني خاثراً: متكسراً فاتراً، وإنه لخاثر العظام. وخثر فلان في الحيّ: أقام فلم يبرح. ورأيت خاثرة من الناس أي جماعة كثيفة. وسأل معاوية يزيد من كان يؤنسك البارحة قال: خاثر. قال: فأخثر له العطاء.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "لبن وطلاء خاثر، وفيه خثورة، وقد خَثَرَ وخَثِرَ وخَثُرَ، وأخثره وخثره، وذهب صفوه وبقيت خثارته أي عكارته ووسخه.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "خثرت نفسه: غثت، وهو خاثر النفس إذا لم تكن طيبة. وفي الحديث. \" فاستيقظ وهو خاثر وأخبر صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ بموت الحسين \" وأجدني خاثراً: متكسراً فاتراً، وإنه لخاثر العظام. وخثر فلان في الحيّ: أقام فلم يبرح. ورأيت خاثرة من الناس أي جماعة كثيفة. وسأل معاوية يزيد من كان يؤنسك البارحة قال: خاثر",
+        "prototipe_benzerlik": 0.053,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.053,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["clot.v.01", "curdling.n.01", "freeze.v.04", "taxonomic_group.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
@@ -1628,22 +1651,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 7,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 331
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 31,
+      "kume": 36,
       "merkez_kok": "سكب",
       "merkez_mana": "Sakb: dökmek, boşaltmak",
-      "boy": 76
+      "boy": 101
     },
     "ince": {
-      "kume": 206,
+      "kume": 239,
       "merkez_kok": "ذرف",
       "merkez_mana": "to flow (tears)",
-      "boy": 26
+      "boy": 30
     }
   },
   "kaliplar": {

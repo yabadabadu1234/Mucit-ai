@@ -711,6 +711,54 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "أعطاه حفنة من الدقيق وهي ملء الكفين. وحفنت له حفنتين، وثلاث حفناتٍ. واحتفنته: أخذته لنفسي.",
+    "mecaz": "في الحديث: \" إنما نحن حفنة من حفنات ربنا \". واحتفنت الرجل: اقتلعته من مكانه. واحتفن من كذا: استكثر منه.\nح ف\nوهو حاف بين الحفوة والحفاء، وهم حفاة. وهو أفضل من كل حاف وناعل. وهو حف بين الحفا. وقد حفي من كثرة المشي.\nوحفي الفرس: انسحج حافره. وأحفى الراكب: حفي دابته. وأحفى شاربه: ألزق حزّه. واحتفى القوم المرعى: لم يتركوا منه شيئاً.\nومن المجاز: أحفى في السؤال: ألحف، وسائل محف مجحف: ملح ملحف. وأحفيت إليه في الوصية: بالغت. وهو حفيٌّ عن الأمر: بليغ في السوال عنه \" كأنك حفيٌّ عنها \" وقال الأعشى:\nفإن تسألي عني فيا رب سائل ... حفي عن الأعشى به حيث أصعدا\nواستحفيته عن كذا: استخبرته على وجه المبالغة. وتحفي بي فلان، وحفي بي حفاوة إذا تطلف بك، وبالغ في إكرامك، وهو حسن التحفي بقومه، وحفي بهم. وأنشد الأصمعي:\nفتحفّى به ووحّى قراه ... فأتاه به غريضاً نضيجاً\nوفلان وفيٌّ حفيٌّ، خيره جليٌّ خفيٌّ.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "أعطاه حفنة من الدقيق وهي ملء الكفين. وحفنت له حفنتين، وثلاث حفناتٍ. واحتفنته: أخذته لنفسي.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "في الحديث: \" إنما نحن حفنة من حفنات ربنا \". واحتفنت الرجل: اقتلعته من مكانه. واحتفن من كذا: استكثر منه.",
+        "prototipe_benzerlik": 0.512,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وهو حاف بين الحفوة والحفاء، وهم حفاة. وهو أفضل من كل حاف وناعل. وهو حف بين الحفا. وقد حفي من كثرة المشي.",
+        "prototipe_benzerlik": 0.314,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وحفي الفرس: انسحج حافره. وأحفى الراكب: حفي دابته. وأحفى شاربه: ألزق حزّه. واحتفى القوم المرعى: لم يتركوا منه شيئاً.",
+        "prototipe_benzerlik": 0.414,
+        "halka": "orta"
+      },
+      {
+        "cumle": "ومن المجاز: أحفى في السؤال: ألحف، وسائل محف مجحف: ملح ملحف. وأحفيت إليه في الوصية: بالغت. وهو حفيٌّ عن الأمر: بليغ في السوال عنه \" كأنك حفيٌّ عنها \" وقال الأعشى:",
+        "prototipe_benzerlik": 0.537,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "واستحفيته عن كذا: استخبرته على وجه المبالغة. وتحفي بي فلان، وحفي بي حفاوة إذا تطلف بك، وبالغ في إكرامك، وهو حسن التحفي بقومه، وحفي بهم. وأنشد الأصمعي:",
+        "prototipe_benzerlik": 0.532,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وفلان وفيٌّ حفيٌّ، خيره جليٌّ خفيٌّ.",
+        "prototipe_benzerlik": 0.222,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.422,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الإبل",
@@ -721,22 +769,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
-      "merkez_kok": "حنج",
-      "merkez_mana": "",
-      "boy": 426
-    },
-    "orta": {
       "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 261
+      "boy": 466
+    },
+    "orta": {
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 18,
-      "merkez_kok": "لدم",
-      "merkez_mana": "Dammam (the capital city of the Eastern Province, Saudi Arabia)",
-      "boy": 53
+      "kume": 24,
+      "merkez_kok": "لوت",
+      "merkez_mana": "Levt: bükmek, eğmek",
+      "boy": 63
     }
   },
   "kaliplar": {

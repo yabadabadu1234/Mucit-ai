@@ -1705,13 +1705,51 @@
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "blot.n.02",
-    "dayanak_tanim": "an act that brings discredit to the person who does it",
+    "dayanak_synset": "contamination.n.03",
+    "dayanak_tanim": "the act of contaminating or polluting; including (either intentionally or accidentally) unwanted substances or factors",
     "synset_sayisi": 8
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "لاث العمامة على رأسه. قال:\nعقيليّة أمّا ملاث إزارها ... فدعصٌ وأمّا خصرها فبتيل\nولوّث الأمر: لبّسه. ولوّث التبن بالقت: خلطه، وتلوث بالطّين. وتلوث بفلان رجاء منفعة: لاذ به وتلبّس بصحبته: والتاثت عليه الأمور: التبست. والتاثت بالقلم شعرة. والتاث في عمله: أبطأ. والتاث في كلامه: عيّ بحجته. والتاث بالدم: تلطّخ به. قال أبو دؤاد:\nلا تكونّن كملتاث الضحى ... بدم القتل وما كان قتل\nجعل الضحى ملتاثاً والالتياث للرجل. وبه لوثة: مسّ جنون. قال:\nوإني على ما فيّ من عنجهيّتي ... ولوثة أعرابيّتي لأديب\nوناقة ذات لوثٍ: سمن وقوة. وفيه لوثة: استرخاء.",
+    "mecaz": "هو ملاث من الملاوث: للسيد الذي\nتلاث به الأمور. قال:\nهلا بكيت ملاوثاً ... من آل عبد مناف\nوكان يقال لحمزة: ابن الملاوث. ولاث الضّباب بالجبل. قال المرّار الفقعسي:\nتضمن ماءها متمرّدات ... من اللائي يلوث بها الضباب\nوقال الأعشى:\nوإذا يلوث لغامه بسديسه ... ثنيّ وهب هبابه وتزيّدا\nأي جاء بسير بعد سير وتكلّف الزيادة فيه.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "لاث العمامة على رأسه. قال: عقيليّة أمّا ملاث إزارها ... فدعصٌ وأمّا خصرها فبتيل ولوّث الأمر: لبّسه. ولوّث التبن بالقت: خلطه، وتلوث بالطّين. وتلوث بفلان رجاء منفعة: لاذ به وتلبّس بصحبته: والتاثت عليه الأمور: التبست. والتاثت بالقلم شعرة. والتاث في عمله: أبطأ. وا",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "هو ملاث من الملاوث: للسيد الذي",
+        "prototipe_benzerlik": 0.201,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "تلاث به الأمور. قال:",
+        "prototipe_benzerlik": 0.203,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وكان يقال لحمزة: ابن الملاوث. ولاث الضّباب بالجبل. قال المرّار الفقعسي:",
+        "prototipe_benzerlik": 0.365,
+        "halka": "orta"
+      },
+      {
+        "cumle": "أي جاء بسير بعد سير وتكلّف الزيادة فيه.",
+        "prototipe_benzerlik": 0.02,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.197,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["act.n.02", "degrade.v.03", "dirty.v.01", "disbelieve.v.01", "material.n.01", "take_down.v.02"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السباع",
@@ -1722,19 +1760,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "kume": 6,
+      "merkez_kok": "درك",
+      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
+      "boy": 1364
     },
     "orta": {
-      "kume": 36,
-      "merkez_kok": "نجس",
-      "merkez_mana": "Nicis: pislik, necis",
-      "boy": 123
+      "kume": 15,
+      "merkez_kok": "زور",
+      "merkez_mana": "Zûr: yalan, sahtelik",
+      "boy": 133
     },
     "ince": {
-      "kume": 231,
+      "kume": 89,
       "merkez_kok": "قذر",
       "merkez_mana": "to be dirty, unclean",
       "boy": 8

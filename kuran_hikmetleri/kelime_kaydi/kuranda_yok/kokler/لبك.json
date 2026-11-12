@@ -768,7 +768,7 @@
   },
   "mana_tasnif": {
     "yontem": "Vikisözlük/Arabic Ontology İngilizce karşılığı → Princeton WordNet ilk anlam (makine eşlemesi, AWN kaydı yok)",
-    "ince": "part.n.01",
+    "ince": "substance.n.01",
     "orta": "noun.substance",
     "ust": "tabiat",
     "dayanak_synset": "alpaca.n.01",
@@ -778,6 +778,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "لبك الثريد: خلطه.",
+    "mecaz": "لبكت عليّ الأمر، والتبك عليّ الأمر: التبس، وأمر ملتبك ولبك. وما ذقت عنده عبكة ولا لبكة: حبة سويق ولا لقمة ثريد.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "لبك الثريد: خلطه.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "لبكت عليّ الأمر، والتبك عليّ الأمر: التبس، وأمر ملتبك ولبك. وما ذقت عنده عبكة ولا لبكة: حبة سويق ولا لقمة ثريد.",
+        "prototipe_benzerlik": 0.699,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.699,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "المثنيات",
@@ -788,22 +811,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "kume": 6,
+      "merkez_kok": "درك",
+      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
+      "boy": 1364
     },
     "orta": {
-      "kume": 10,
-      "merkez_kok": "ذعن",
-      "merkez_mana": "Za'n: boyun eğmek, kabul etmek",
-      "boy": 183
+      "kume": 20,
+      "merkez_kok": "لحد",
+      "merkez_mana": "Lahd: mezar çukuru; lehd: meyil, eğilme",
+      "boy": 187
     },
     "ince": {
-      "kume": 55,
-      "merkez_kok": "لتت",
-      "merkez_mana": "not to be",
-      "boy": 27
+      "kume": 114,
+      "merkez_kok": "كيد",
+      "merkez_mana": "Keyd: hile, tuzak",
+      "boy": 32
     }
   },
   "kaliplar": {

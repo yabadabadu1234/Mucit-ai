@@ -689,6 +689,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "ليلةٌ ومدة، وذات ومدٍ وهو ندًى يجيء في صميم الحرّ من قبل البحر. وأنشدني بعض العرب:\nيا صاحبيّ حلّئاها لا ترد ... وخلّياها والسجال تبترد\nمن حرّ أيام ومن ليل ومد",
+    "mecaz": "ومد عليه، وهو عليه ومد: غضبان.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "ليلةٌ ومدة، وذات ومدٍ وهو ندًى يجيء في صميم الحرّ من قبل البحر. وأنشدني بعض العرب: يا صاحبيّ حلّئاها لا ترد ... وخلّياها والسجال تبترد من حرّ أيام ومن ليل ومد",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "ومد عليه، وهو عليه ومد: غضبان.",
+        "prototipe_benzerlik": 0.093,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.093,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السلاح",
@@ -702,16 +725,16 @@
       "kume": 3,
       "merkez_kok": "فقص",
       "merkez_mana": "",
-      "boy": 563
+      "boy": 568
     },
     "orta": {
       "kume": 6,
       "merkez_kok": "شبص",
       "merkez_mana": "",
-      "boy": 400
+      "boy": 403
     },
     "ince": {
-      "kume": 25,
+      "kume": 29,
       "merkez_kok": "ءوى",
       "merkez_mana": "",
       "boy": 46

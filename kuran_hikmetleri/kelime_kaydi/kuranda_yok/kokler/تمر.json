@@ -936,6 +936,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "أعط أخاك تمره، فإن أبى فجمره. وعليك بالتمران والسمنان. وأتمرت النخلة. وتمرني فلان: أطعمني التمر. وعن أبي الجراح: ما نعجز عن ضيف في بدونا إن ذبحنا له وإلا تمرناه\nولبناه. وقال:\nإذا نحن لم نقر المضاف ذبيحة ... تمرناه تمراً أو لبناه راغياً\nأي لبناً له رغوة. وفلان تامر، مثمر، تمار، تمري: أي ذو تمر، مكثر منه، بياع تمر، محب له.",
+    "mecaz": "تمر اللحم: قدده ولحم متمر وقد تتمر. وقال الأبيرد بن المعذر:\nلعبد العصا ما كان أهلاً لذلكم ... تقدد لحمي عندكم وتتمرا\nونفسه تمرة بكذا أي طيبة. ودعني إن نفسي ليست بتمرة. ووجد عنده تمرة الغراب أي ما أرضاه. وبارك الله فيه وملح وأتمر. قال:\nفلعمر نعمتي التي لم تجزها ... ولعمر طعنتك التي لم تتمر\nأي لم يبارك فيها.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "أعط أخاك تمره، فإن أبى فجمره. وعليك بالتمران والسمنان. وأتمرت النخلة. وتمرني فلان: أطعمني التمر. وعن أبي الجراح: ما نعجز عن ضيف في بدونا إن ذبحنا له وإلا تمرناه ولبناه. وقال: إذا نحن لم نقر المضاف ذبيحة ... تمرناه تمراً أو لبناه راغياً أي لبناً له رغوة. وفلان ",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "تمر اللحم: قدده ولحم متمر وقد تتمر. وقال الأبيرد بن المعذر:",
+        "prototipe_benzerlik": 0.694,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "ونفسه تمرة بكذا أي طيبة. ودعني إن نفسي ليست بتمرة. ووجد عنده تمرة الغراب أي ما أرضاه. وبارك الله فيه وملح وأتمر. قال:",
+        "prototipe_benzerlik": 0.321,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "أي لم يبارك فيها.",
+        "prototipe_benzerlik": 0.152,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.389,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["act.n.02", "natural_object.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
@@ -946,22 +979,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
+      "kume": 8,
       "merkez_kok": "قبب",
       "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "boy": 604
     },
     "orta": {
-      "kume": 45,
-      "merkez_kok": "متن",
-      "merkez_mana": "Metn: sağlam yer, metin; metîn: sağlam",
-      "boy": 268
+      "kume": 34,
+      "merkez_kok": "نقق",
+      "merkez_mana": "to croak (of frogs)",
+      "boy": 255
     },
     "ince": {
-      "kume": 296,
-      "merkez_kok": "جذع",
-      "merkez_mana": "Cizz': hurma kütüğü, gövde; ciz'",
-      "boy": 48
+      "kume": 229,
+      "merkez_kok": "حبل",
+      "merkez_mana": "Habl: ip; hubl: ahit",
+      "boy": 25
     }
   },
   "kaliplar": {

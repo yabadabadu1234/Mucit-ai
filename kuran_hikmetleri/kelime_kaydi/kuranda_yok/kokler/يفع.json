@@ -771,16 +771,39 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "person.n.01",
-    "orta": "noun.person",
-    "ust": "insan ve toplum",
-    "dayanak_synset": "adolescent.n.01",
-    "dayanak_tanim": "a juvenile between the onset of puberty and maturity",
+    "ince": "young.a.01",
+    "orta": "adj.all",
+    "ust": "hâl ve vasıf",
+    "dayanak_synset": "young.a.01",
+    "dayanak_tanim": "(used of living things especially persons) in an early period of life or development or growth",
     "synset_sayisi": 2
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "علوت اليفاع. قال النابغة:\nوحلّت بيوتي في يفاعٍ ممنّعٍ ... تخال به راعي الحمولة طائرا\nويفعت الجبل: صعدته. وأيفع الغلام وتيفّع، وغلام يافع ويفعة، وغلمان يفعة وأيفاع. وهم أيفاع صدق. قال:\nكهول ومرد من بني عمّ مالك ... وأيفاع صدق لو تملّيتهم رضا\nوترفّع فلان وتيفّع. قال:\nحتى إذا قالوا تيفّع مالك ... سلقت أميمة مالكاً لقفاه",
+    "mecaz": "مجد يافع. قال سليم بن محرز:\nوعمّيَ جبّار وجدّيَ مالكٌ ... هما رفعا البيت الطويل نصائبه\nلنا وأحلاّنا بأرعن يافع ... من المجد لا يسطيعه من يطالبه",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "علوت اليفاع. قال النابغة: وحلّت بيوتي في يفاعٍ ممنّعٍ ... تخال به راعي الحمولة طائرا ويفعت الجبل: صعدته. وأيفع الغلام وتيفّع، وغلام يافع ويفعة، وغلمان يفعة وأيفاع. وهم أيفاع صدق. قال: كهول ومرد من بني عمّ مالك ... وأيفاع صدق لو تملّيتهم رضا وترفّع فلان وتيفّع.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "مجد يافع. قال سليم بن محرز:",
+        "prototipe_benzerlik": 0.737,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.737,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["living_thing.n.01", "young.a.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "خلق الإنسان",
@@ -791,22 +814,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
-      "merkez_kok": "درك",
-      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "kume": 8,
+      "merkez_kok": "قبب",
+      "merkez_mana": "canopy, pavilion; dome, cupola",
+      "boy": 604
     },
     "orta": {
-      "kume": 17,
-      "merkez_kok": "زين",
-      "merkez_mana": "Zîne: süs, güzellik; zeyn: güzelleştirmek",
-      "boy": 177
+      "kume": 34,
+      "merkez_kok": "نقق",
+      "merkez_mana": "to croak (of frogs)",
+      "boy": 255
     },
     "ince": {
-      "kume": 96,
-      "merkez_kok": "فخر",
-      "merkez_mana": "Fahr: övünme; fahîr: övünen",
-      "boy": 17
+      "kume": 227,
+      "merkez_kok": "نحل",
+      "merkez_mana": "Nahl: arı; nahl: hediye",
+      "boy": 18
     }
   },
   "kaliplar": {

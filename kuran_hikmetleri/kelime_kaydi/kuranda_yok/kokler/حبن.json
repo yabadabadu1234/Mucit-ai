@@ -1114,6 +1114,54 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "رجل أحبن: منتفخ البطن خلقة أو من داء، وبه حبن، وقد أحبنه كثرة أكله أو داء اعتراه وخرجت به حبون وهي دماميل مقيحة، الواحد حبن. ولتهنيء أم حبين العافية، وهي دويبة يقال لها حبينة، \" وكان رسول الله صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ يقول لبلال أم حبين \" لخروج بطنه.\nح ب\nوحبا الصبي يحبو إذا زحف، والبعير المعقول يحبو إذا زحف. ولو عرفوا فضله لأتوه ولو حبواً. واحتبى بنجاده، وحل حبوته، وأطلقوا حباهم. وحباه العطاء وبالعطاء. وهو مكرم محبو، وهو حباء كريم، وهذه حبوة جزيلة، وبنو فلان إذا عقدوا الحبى، أطلقوا الحبى أي العطايا. وحاباه في البيع محاباة.",
+    "mecaz": "سهم حاب، وهو الذي يزلج على الأرض ثم يصيب الهدف، وسهام مقرطسات وحواب. وحبوت للخمسين: دنوت منها، كما تقول العرب ناطحت الخمسين وناهزتها. وسقاكم الحبيّ وهو السحاب المسف قال امرؤ القيس:\nكلمع اليدين في حبي مكلل\nوسبحان من ينشىء الحبي ويخرج الخبي. وحبا\nالرمل: عرض وأشرف. قال امرؤ القيس:\nفلما حبا وادي القرى من ورائنا\nأي جاوزناه. وفرس حابى الشراسيف أي مشرف الأضلاع.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "رجل أحبن: منتفخ البطن خلقة أو من داء، وبه حبن، وقد أحبنه كثرة أكله أو داء اعتراه وخرجت به حبون وهي دماميل مقيحة، الواحد حبن. ولتهنيء أم حبين العافية، وهي دويبة يقال لها حبينة، \" وكان رسول الله صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ يقول لبلال أم حبين \" لخروج بطنه. ح ",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "سهم حاب، وهو الذي يزلج على الأرض ثم يصيب الهدف، وسهام مقرطسات وحواب. وحبوت للخمسين: دنوت منها، كما تقول العرب ناطحت الخمسين وناهزتها. وسقاكم الحبيّ وهو السحاب المسف قال امرؤ القيس:",
+        "prototipe_benzerlik": 0.615,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "كلمع اليدين في حبي مكلل",
+        "prototipe_benzerlik": 0.402,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وسبحان من ينشىء الحبي ويخرج الخبي. وحبا",
+        "prototipe_benzerlik": 0.417,
+        "halka": "orta"
+      },
+      {
+        "cumle": "الرمل: عرض وأشرف. قال امرؤ القيس:",
+        "prototipe_benzerlik": 0.754,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "فلما حبا وادي القرى من ورائنا",
+        "prototipe_benzerlik": 0.202,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "أي جاوزناه. وفرس حابى الشراسيف أي مشرف الأضلاع.",
+        "prototipe_benzerlik": 0.135,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.421,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الحشرات",
@@ -1124,22 +1172,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
-      "merkez_kok": "حنج",
-      "merkez_mana": "",
-      "boy": 426
-    },
-    "orta": {
       "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 261
+      "boy": 466
+    },
+    "orta": {
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 14,
-      "merkez_kok": "قرت",
-      "merkez_mana": "omnivorous",
-      "boy": 14
+      "kume": 20,
+      "merkez_kok": "حبن",
+      "merkez_mana": "to be inflated, to be tumid",
+      "boy": 22
     }
   },
   "kaliplar": {

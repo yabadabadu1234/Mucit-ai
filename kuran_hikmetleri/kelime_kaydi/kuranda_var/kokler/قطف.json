@@ -1861,11 +1861,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "collection.n.01",
-    "orta": "noun.group",
-    "ust": "insan ve toplum",
-    "dayanak_synset": "bunch.n.03",
-    "dayanak_tanim": "any collection in its entirety",
+    "ince": "pick.v.02",
+    "orta": "verb.contact",
+    "ust": "fiil ve hadise",
+    "dayanak_synset": "pick.v.02",
+    "dayanak_tanim": "look for and gather",
     "synset_sayisi": 5
   },
   "ses_mana_tasnif": {
@@ -1876,6 +1876,29 @@
     "fasil_ozeti": "° معنى الفصل المعجمي (قط): نوع من القطع باستواء وتسوية أو توال كما يفعل القَطّاط الذي يصنع الحقق - في (قطط)، وكقطر المطر وغيره في دقة حَبّاته وتواليها - في (قطر)، وكما في القَطيع: الغصن تقطعه من الشجرة - في (قطع)، وكما في القِطف العنقود (الذى شأنه أن يقطف)، وكذلك القطيفة التي تُقَصّ الخيوط الممتدة على وجهها - في (قطف)، وكما في القطمير الخُيَيْط القصير الذي في شق النواة في (قطمر) وكلزوم المكان - في قطن، إذ لزوم مكان ما هو انقطاعٌ عن سائر الأمكنة.",
     "tam_metin": "{وَدَانِيَةً عَلَيْهِمْ ظِلَالُهَا وَذُلِّلَتْ قُطُوفُهَا تَذْلِيلًا} [الإنسان: 14]\n\"القِطْف - بالكسر: العُنْقُود، وما قُطِفَ من الثمر. قَطَفْت الثمرة (ضرب) \".\n(4/1806)\n° المعنى المحوري\nقَطْع الطرَف (الدقيق) للشيء أو ما هو في طرفه: كقطع عناقيد العنب وهي في الأطراف وشأنها أن تقطع {وَذُلِّلَتْ قُطُوفُهَا} [الإنسان: 14] {قُطُوفُهَا دَانِيَةٌ} [الحاقة: 23] (مقطوفاتها من الثمر متاحة لأيديهم كلما أرادوها) ومنه \"القَطيفة دِثارُ مُخْمَل \". وقد رأيت السجاجيد تصنع ذات خَمْل وأَهداب طوال مختلفة الطول تغطي وجهها كله ثم تُقَصّ أطراف تلك الأهداب المتكاثفة على وجه السجادة فيبقى على وجهها ما يشبه أن يكون جذور هذه الأهداب متساوية الطول فيكون لها ذلك الشكل الجميل، ولعل القطيفة كذلك تصنع فهي من القَطْف: قطع الأطراف. فإن لم تكن تصنع كذلك فإن اسمها على التشبيه.\nأما \"القِطَاف: تقارُبُ الخَطْو أو ضِيقه في سُرْعة \"فهو من ذلك كأن القَطُوف يقطع بسيره من المسافة قليلًا قليلًا فهي من القطع بدقة."
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "هو زمن القطاف. وجنة دانية القطوف.",
+    "mecaz": "قطف رأسه. قال أبو النجم:\nنشقّ عنه بالعراقي والدّلا ... فطائف الأجن الذي تجلّلا",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Cebel mihverî mana",
+    "prototip": "قَطْع الطرَف (الدقيق) للشيء أو ما هو في طرفه: كقطع عناقيد العنب وهي في الأطراف وشأنها أن تقطع {وَذُلِّلَتْ قُطُوفُهَا} [الإنسان: 14] {قُطُوفُهَا دَانِيَةٌ} [الحاقة: 23] (مقطوفاتها من الثمر متاحة لأيديهم كلما أرادوها) ومنه \"القَطيفة دِثارُ مُخْمَل \". وقد رأيت ا",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "قطف رأسه. قال أبو النجم:",
+        "prototipe_benzerlik": 0.405,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.405,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["bunch.n.03", "pick.v.01", "pick.v.02", "reap.v.01", "victimize.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "اللباس",
@@ -1886,22 +1909,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
+      "kume": 8,
       "merkez_kok": "قبب",
       "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "boy": 604
     },
     "orta": {
-      "kume": 43,
-      "merkez_kok": "خرز",
-      "merkez_mana": "awl",
-      "boy": 104
+      "kume": 32,
+      "merkez_kok": "دثر",
+      "merkez_mana": "Tedsîr: örtmek, bürümek; desr: örtü",
+      "boy": 148
     },
     "ince": {
-      "kume": 279,
-      "merkez_kok": "لزب",
-      "merkez_mana": "Lezb: yapışkan, bağlı",
-      "boy": 27
+      "kume": 211,
+      "merkez_kok": "قرط",
+      "merkez_mana": "to cut into minute morsels, to chop or mince, to chef",
+      "boy": 32
     }
   },
   "kaliplar": {

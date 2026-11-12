@@ -1488,6 +1488,44 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "رشقه بالسهم: رماه رشقاً، وخرجوا يتراشقون: يتناضلون. ورمينا رشقاً ورشقين وأرشاقاً وهو الوجه من الرمي، يرمي المتناضلون بما معهم من السهام كله ثم يعودون فكل شوط رشق. وسمعت رشق قلمه ورشقه وهو صوته. وغلام رشيق، وجارية رشيقة إذا كانا في اعتدال ودقة، وقد رشقا رشاقة.",
+    "mecaz": "رشقتني بعينها. وأرشقت الظبية إلى\nمارابها: أحدّت النظر. قال ذو الرمة:\nكما أرشقت من تحت أرطى صريمة ... إلى نبأة الصوت الظباء الكوانس\nورشقه بلسانه. وإياك ورشقات اللسان. وتراشقوا بألسنتهم. وتراشقوني بأعينهم. وراشقني مقصدي: باراني في المسير إليه. قال كثير:\nإذا ما رمى قصد الملا لحقت به ... علاة كمرداة القذاف تراشقه\nكأنها ترامي راكبها فيقع سيرها حيث يقع قصده وإرادته. ورجل رشيق: ظريف. وخط رشيق. وقوس رشيقة: سريعة النبل.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "رشقه بالسهم: رماه رشقاً، وخرجوا يتراشقون: يتناضلون. ورمينا رشقاً ورشقين وأرشاقاً وهو الوجه من الرمي، يرمي المتناضلون بما معهم من السهام كله ثم يعودون فكل شوط رشق. وسمعت رشق قلمه ورشقه وهو صوته. وغلام رشيق، وجارية رشيقة إذا كانا في اعتدال ودقة، وقد رشقا رشاقة.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "رشقتني بعينها. وأرشقت الظبية إلى",
+        "prototipe_benzerlik": 0.462,
+        "halka": "orta"
+      },
+      {
+        "cumle": "مارابها: أحدّت النظر. قال ذو الرمة:",
+        "prototipe_benzerlik": 0.594,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "ورشقه بلسانه. وإياك ورشقات اللسان. وتراشقوا بألسنتهم. وتراشقوني بأعينهم. وراشقني مقصدي: باراني في المسير إليه. قال كثير:",
+        "prototipe_benzerlik": 0.756,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "كأنها ترامي راكبها فيقع سيرها حيث يقع قصده وإرادته. ورجل رشيق: ظريف. وخط رشيق. وقوس رشيقة: سريعة النبل.",
+        "prototipe_benzerlik": 0.625,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.609,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["act.n.02", "dart.v.02", "elegance.n.01", "lean.v.01", "pour.v.06"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السلاح",
@@ -1498,22 +1536,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "kume": 7,
+      "merkez_kok": "لقلق",
+      "merkez_mana": "",
+      "boy": 386
     },
     "orta": {
-      "kume": 45,
-      "merkez_kok": "متن",
-      "merkez_mana": "Metn: sağlam yer, metin; metîn: sağlam",
-      "boy": 268
+      "kume": 29,
+      "merkez_kok": "دبب",
+      "merkez_mana": "debbe: sürünmek, hareket / debbe: uğraşmak (?)",
+      "boy": 73
     },
     "ince": {
-      "kume": 292,
-      "merkez_kok": "نحل",
-      "merkez_mana": "Nahl: arı; nahl: hediye",
-      "boy": 15
+      "kume": 186,
+      "merkez_kok": "مشق",
+      "merkez_mana": "to pull out, to draw out, to withdraw",
+      "boy": 7
     }
   },
   "kaliplar": {

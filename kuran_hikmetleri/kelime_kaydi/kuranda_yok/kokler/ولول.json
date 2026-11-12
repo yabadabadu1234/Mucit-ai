@@ -44,27 +44,55 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "ولولت النائحة.",
+    "mecaz": "عود مولول. قال الطرماح:\nيقصّر مغداهنّ كلّ مولول ... عليهن تستبكيه أيدي الكرائن\nالمغنيّات، يريد أن اللهو يقصّر نهارهنّ.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "ولولت النائحة.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "عود مولول. قال الطرماح:",
+        "prototipe_benzerlik": 0.416,
+        "halka": "orta"
+      },
+      {
+        "cumle": "المغنيّات، يريد أن اللهو يقصّر نهارهنّ.",
+        "prototipe_benzerlik": 0.232,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.324,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "kume": 7,
+      "merkez_kok": "لقلق",
+      "merkez_mana": "",
+      "boy": 386
     },
     "orta": {
-      "kume": 7,
-      "merkez_kok": "كرب",
-      "merkez_mana": "Karb: sıkıntı, keder; kurbet: sıkıntı",
-      "boy": 139
+      "kume": 29,
+      "merkez_kok": "دبب",
+      "merkez_mana": "debbe: sürünmek, hareket / debbe: uğraşmak (?)",
+      "boy": 73
     },
     "ince": {
-      "kume": 37,
-      "merkez_kok": "دمع",
-      "merkez_mana": "Dem': gözyaşı; dâmi': ağlayan",
-      "boy": 9
+      "kume": 181,
+      "merkez_kok": "طقطق",
+      "merkez_mana": "to crack, to burst, to shatter, to rattle, to clack",
+      "boy": 4
     }
   },
   "kaliplar": {},

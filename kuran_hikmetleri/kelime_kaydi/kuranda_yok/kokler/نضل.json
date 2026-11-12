@@ -893,16 +893,75 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "person.n.01",
-    "orta": "noun.person",
-    "ust": "insan ve toplum",
-    "dayanak_synset": "militant.n.01",
-    "dayanak_tanim": "a militant reformer",
+    "ince": "event.n.01",
+    "orta": "noun.act",
+    "ust": "fiil ve hadise",
+    "dayanak_synset": "struggle.n.01",
+    "dayanak_tanim": "an energetic attempt to achieve something",
     "synset_sayisi": 10
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "ناضلته فضلته. وخرجوا إلى النضال، وهم يتناضلون وينتضلون: وانتضلت من الكنانة سهماً: اخترته.",
+    "mecaz": "هو يناضل عن قومه. وقعدوا ينتضلون: يفتخرون. وانتضلت منهم رجلاً: اخترته. والإبل تنتضل في سيرها: ترمى بأيديها.\nقال الطرماح:\nتناضل رجلاها يديها من الحصى ... بمصعنفر يهوى خلال الفراسن\nبذاهب سريع. وقال ذو الرمة:\nإذا فرقد الموماة لاح انتضلته ... بمكحولة الأرجاء بيض المواكف\nن ض\nوركبت نضواً من الأنضاء. وقد أنضته الأسفار. ونضا الخضاب. وأعطيني نضاوة حنائك وهي سلاتته. ونضوت الثوب عنّى والجّل عن الفرس. ونضوت السيف من غمده وانتضيته. ورماه بالنّضيّ وهو السهم. قال الأعشى:\nفمرّ نضيّ السهم تحت لبانه ... وجال على وحشيّه لم يعتمّ\nوطعنه بنضيّ الرّمح وهو صدره. قال:\nفظلّ لثيران الصّريم غماغم ... إذا دعموها بالنّضيّ المعلّب\nومن المجاز: الفرس ينضو الخيل إذا تقدّمها. قال زهير:\nورحنا به ينضو الجياد عشية ... مخضّبةً أرساغه وعوامله\nوأنضبت الثوب: أبليته.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "ناضلته فضلته. وخرجوا إلى النضال، وهم يتناضلون وينتضلون: وانتضلت من الكنانة سهماً: اخترته.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "هو يناضل عن قومه. وقعدوا ينتضلون: يفتخرون. وانتضلت منهم رجلاً: اخترته. والإبل تنتضل في سيرها: ترمى بأيديها.",
+        "prototipe_benzerlik": 0.688,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "بذاهب سريع. وقال ذو الرمة:",
+        "prototipe_benzerlik": 0.395,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وركبت نضواً من الأنضاء. وقد أنضته الأسفار. ونضا الخضاب. وأعطيني نضاوة حنائك وهي سلاتته. ونضوت الثوب عنّى والجّل عن الفرس. ونضوت السيف من غمده وانتضيته. ورماه بالنّضيّ وهو السهم. قال الأعشى:",
+        "prototipe_benzerlik": 0.119,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وطعنه بنضيّ الرّمح وهو صدره. قال:",
+        "prototipe_benzerlik": 0.433,
+        "halka": "orta"
+      },
+      {
+        "cumle": "ومن المجاز: الفرس ينضو الخيل إذا تقدّمها. قال زهير:",
+        "prototipe_benzerlik": 0.478,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وأنضبت الثوب: أبليته.",
+        "prototipe_benzerlik": 0.396,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.418,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "act.n.02",
+    "advertise.v.02",
+    "battle.v.01",
+    "compete.v.01",
+    "contend.v.06",
+    "converse.v.01",
+    "fight.v.02",
+    "living_thing.n.01",
+    "pursue.v.02",
+    "push.v.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السلاح",
@@ -913,22 +972,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "kume": 6,
+      "merkez_kok": "درك",
+      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
+      "boy": 1364
     },
     "orta": {
-      "kume": 11,
-      "merkez_kok": "دحر",
-      "merkez_mana": "Dahr: itmek, uzaklaştırmak",
-      "boy": 179
+      "kume": 23,
+      "merkez_kok": "جلد",
+      "merkez_mana": "Cild: deri; cellâd: vurucu",
+      "boy": 125
     },
     "ince": {
-      "kume": 61,
-      "merkez_kok": "قحم",
-      "merkez_mana": "Kuhm: ateşe atmak, kendini atmak",
-      "boy": 24
+      "kume": 135,
+      "merkez_kok": "عصو",
+      "merkez_mana": "Isyân: karşı gelmek",
+      "boy": 50
     }
   },
   "kaliplar": {

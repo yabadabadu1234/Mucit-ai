@@ -774,6 +774,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "ثردت الخبز أثرده وهو أن تفته ثم تبله بمرق وتشرفه في وسط الصحفة وتجعل له وقبة، وهو الثريد، والثريدة، والثردة. يقال: جاء بثريدة كربضة الأرنب، وهن الثرد، والثرد، والثرائد. وقال:\nألا يا خبز يا ابنة أثردان ... أبي الحلقوم دونك أن يناما",
+    "mecaz": "في شفتيك تثريد أي تشقيق.\nوثردت ذبيحتك إذا كانت مديته كالة ففت ولم يفر.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "ثردت الخبز أثرده وهو أن تفته ثم تبله بمرق وتشرفه في وسط الصحفة وتجعل له وقبة، وهو الثريد، والثريدة، والثردة. يقال: جاء بثريدة كربضة الأرنب، وهن الثرد، والثرد، والثرائد. وقال: ألا يا خبز يا ابنة أثردان ... أبي الحلقوم دونك أن يناما",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "في شفتيك تثريد أي تشقيق.",
+        "prototipe_benzerlik": 0.327,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وثردت ذبيحتك إذا كانت مديته كالة ففت ولم يفر.",
+        "prototipe_benzerlik": 0.441,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.384,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
@@ -784,19 +812,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
-      "merkez_kok": "حنج",
-      "merkez_mana": "",
-      "boy": 426
-    },
-    "orta": {
       "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 261
+      "boy": 466
+    },
+    "orta": {
+      "kume": 3,
+      "merkez_kok": "قمح",
+      "merkez_mana": "Kamh: buğday",
+      "boy": 64
     },
     "ince": {
-      "kume": 8,
+      "kume": 9,
       "merkez_kok": "مءد",
       "merkez_mana": "dining table",
       "boy": 8

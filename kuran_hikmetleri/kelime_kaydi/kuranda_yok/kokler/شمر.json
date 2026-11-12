@@ -1613,6 +1613,54 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "شمر أذياله. وتشمر للعمل. ونزف ماء البئر وانشمر: ذهب. ولثة منشمرة: لازقة بأسناخ الأسنان. وأجاءه الخوف إلى شر شمر أي خاف شراً فرده الخوف إلى شر منه. قال طلق بن حنظلة:\nوالهقل قد أيقن بالشر الشمر ... يفري بهن في الخبار والصحر\nيدف بين الطيران والحضر",
+    "mecaz": "شمر للأمر، وشمر له أذياله، ومنه:\nرجل شمري. وشمر هذا الشيء: أرسله. وشمرت السهم: أرسلته. قال الشماخ:\nكما سطع المريخ شمّره الغالي\nوشمر الملاح السفينة. ونجاء مشمر: جاد. قال النمر:\nوقال أخو جرم ألا لا هوادة ... ولا وزر إلا النجاء المشمر وقال النابغة:\nمشمرين على خوص مزممة ... ترجو الإله وترجو البر والطعما\nالأرزاق، مشمرين: جادين. وشمرت الحرب، وشمرت عن ساقها. قال بشر:\nإذا ما شمرت حرب عوان ... يخاف الناس عرتها كفاها\nوشمر النخل: صرمه. وشمر الصقر: أرسله.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "شمر أذياله. وتشمر للعمل. ونزف ماء البئر وانشمر: ذهب. ولثة منشمرة: لازقة بأسناخ الأسنان. وأجاءه الخوف إلى شر شمر أي خاف شراً فرده الخوف إلى شر منه. قال طلق بن حنظلة: والهقل قد أيقن بالشر الشمر ... يفري بهن في الخبار والصحر يدف بين الطيران والحضر",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "شمر للأمر، وشمر له أذياله، ومنه:",
+        "prototipe_benzerlik": 0.657,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "رجل شمري. وشمر هذا الشيء: أرسله. وشمرت السهم: أرسلته. قال الشماخ:",
+        "prototipe_benzerlik": 0.518,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "كما سطع المريخ شمّره الغالي",
+        "prototipe_benzerlik": 0.191,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وشمر الملاح السفينة. ونجاء مشمر: جاد. قال النمر:",
+        "prototipe_benzerlik": 0.706,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "الأرزاق، مشمرين: جادين. وشمرت الحرب، وشمرت عن ساقها. قال بشر:",
+        "prototipe_benzerlik": 0.636,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وشمر النخل: صرمه. وشمر الصقر: أرسله.",
+        "prototipe_benzerlik": 0.61,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.553,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الغرائز",
@@ -1623,22 +1671,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 14,
-      "merkez_kok": "جهد",
-      "merkez_mana": "Cehd: gayret, çaba; cehd: yorgunluk",
-      "boy": 135
+      "kume": 22,
+      "merkez_kok": "ذعن",
+      "merkez_mana": "Za'n: boyun eğmek, kabul etmek",
+      "boy": 82
     },
     "ince": {
-      "kume": 78,
-      "merkez_kok": "صوب",
-      "merkez_mana": "Savb: doğrultmak, yönelmek; sevâb: doğru yol",
-      "boy": 43
+      "kume": 130,
+      "merkez_kok": "جهد",
+      "merkez_mana": "Cehd: gayret, çaba; cehd: yorgunluk",
+      "boy": 37
     }
   },
   "kaliplar": {

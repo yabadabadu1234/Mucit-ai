@@ -1626,13 +1626,69 @@
     "ince": "cognition.n.01",
     "orta": "noun.cognition",
     "ust": "zihin ve ilim",
-    "dayanak_synset": "kind.n.01",
-    "dayanak_tanim": "a category of things distinguished by some common characteristic or quality",
+    "dayanak_synset": "category.n.02",
+    "dayanak_tanim": "a general concept that marks divisions or coordinations in a conceptual scheme",
     "synset_sayisi": 25
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "عنده صنوف من المتاع وأصناف؛ وصنف الأشياء: جعلها صنوفاً وميز بعضها من بعض، ومنه: تصنيف الكتب. وصنف النبات والشجر وتصنف: صار أصنافاً. وشجر مصنف مختلف الألوان والثمر. قال ابن الرقيات:\nسقياً لحلوان ذي الكروم وما ... صنف من تينه ومن عنبه\nويقال: صنف الأرطي إذا تفطر بالورق. ومسحه بصنفه ثوبه: بحاشيته. قال ابن مقبل يصف القدح:\nجلا صنفات الريط عنه قوابه ... وأخلصنه مما يصان ويمسح\nص ن\nوشجر صنوان: من أصل واحد، وكل واحد: صنو.",
+    "mecaz": "هو شقيقه وصنوه. قال:\nأتتركني وأنت أخي وصنوي ... فيا للناس للأمر العجيب\nوركيتان صنوان: متقاربتان، وتصغيره: صنيٌّ.\nقالت ليلى الأخيلية:\nأنابغ لم تنبغ ولم تك أولاً ... وكنت صنياً بين صدين مجهلاً\nأي ركياً مجهولاً بين جبلين.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "عنده صنوف من المتاع وأصناف؛ وصنف الأشياء: جعلها صنوفاً وميز بعضها من بعض، ومنه: تصنيف الكتب. وصنف النبات والشجر وتصنف: صار أصنافاً. وشجر مصنف مختلف الألوان والثمر. قال ابن الرقيات: سقياً لحلوان ذي الكروم وما ... صنف من تينه ومن عنبه ويقال: صنف الأرطي إذا تفطر ",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "هو شقيقه وصنوه. قال:",
+        "prototipe_benzerlik": 0.383,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وركيتان صنوان: متقاربتان، وتصغيره: صنيٌّ.",
+        "prototipe_benzerlik": 0.518,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "أي ركياً مجهولاً بين جبلين.",
+        "prototipe_benzerlik": 0.285,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.395,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "act.n.02",
+    "arrangement.n.02",
+    "artifact.n.01",
+    "categorize.v.01",
+    "class.n.01",
+    "classification.n.02",
+    "classificatory.a.01",
+    "classify.v.01",
+    "content.n.05",
+    "delegate.v.02",
+    "distinguish.v.01",
+    "distribute.v.01",
+    "identify.v.01",
+    "label.v.01",
+    "process.n.02",
+    "pronounce.v.02",
+    "put.v.01",
+    "rate.v.01",
+    "sameness.n.01",
+    "set.n.01",
+    "station.v.01",
+    "taxonomic_group.n.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "(giriş)",
@@ -1643,22 +1699,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
-      "merkez_kok": "درك",
-      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "kume": 8,
+      "merkez_kok": "قبب",
+      "merkez_mana": "canopy, pavilion; dome, cupola",
+      "boy": 604
     },
     "orta": {
-      "kume": 22,
-      "merkez_kok": "درك",
-      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 193
+      "kume": 32,
+      "merkez_kok": "دثر",
+      "merkez_mana": "Tedsîr: örtmek, bürümek; desr: örtü",
+      "boy": 148
     },
     "ince": {
-      "kume": 127,
+      "kume": 214,
       "merkez_kok": "طرز",
       "merkez_mana": "a stitch, suture",
-      "boy": 11
+      "boy": 12
     }
   },
   "kaliplar": {

@@ -1013,16 +1013,48 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "shiver.v.02",
-    "orta": "verb.body",
-    "ust": "canlı ve beden",
-    "dayanak_synset": "shiver.v.02",
-    "dayanak_tanim": "shake, as from cold",
+    "ince": "hesitate.v.01",
+    "orta": "verb.stative",
+    "ust": "hâl ve vasıf",
+    "dayanak_synset": "hesitate.v.01",
+    "dayanak_tanim": "pause or hold back in uncertainty or unwillingness",
     "synset_sayisi": 8
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "شيخ رعش ومرعش وقد رعش رعشاً، وأرعشه الكبر ورعشه، وأرعشت يداه. وتقول: ارتعدت مفاصله، وارتعشت أنامله؛ وفلان\nيرتعش رأسه من الكبر ويرجف، وبه رعشة ورعاش.",
+    "mecaz": "فلان رعش اليدين: جبان. وإنه لرعش إلى القتال وإلى المعروف: سريع إليه. وبه رعشة إلى لقاء العدوّ. وأرعشته الحرب: أعجلته. ودابة رعشاء: متنفضة من شهامتها ونشاطها.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "شيخ رعش ومرعش وقد رعش رعشاً، وأرعشه الكبر ورعشه، وأرعشت يداه. وتقول: ارتعدت مفاصله، وارتعشت أنامله؛ وفلان يرتعش رأسه من الكبر ويرجف، وبه رعشة ورعاش.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "فلان رعش اليدين: جبان. وإنه لرعش إلى القتال وإلى المعروف: سريع إليه. وبه رعشة إلى لقاء العدوّ. وأرعشته الحرب: أعجلته. ودابة رعشاء: متنفضة من شهامتها ونشاطها.",
+        "prototipe_benzerlik": 0.331,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.331,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "feeling.n.01",
+    "hesitate.v.01",
+    "shake.v.01",
+    "shiver.v.02",
+    "shudder.v.02",
+    "stimulate.v.03",
+    "tremble.v.01",
+    "twitch.v.05"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الإبل",
@@ -1034,21 +1066,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 509
     },
     "orta": {
-      "kume": 7,
-      "merkez_kok": "كرب",
-      "merkez_mana": "Karb: sıkıntı, keder; kurbet: sıkıntı",
-      "boy": 139
+      "kume": 8,
+      "merkez_kok": "بءس",
+      "merkez_mana": "Be'es: azap, şiddet, zorluk",
+      "boy": 142
     },
     "ince": {
-      "kume": 32,
-      "merkez_kok": "هزز",
-      "merkez_mana": "Hazz: sallamak, sarsmak",
-      "boy": 11
+      "kume": 41,
+      "merkez_kok": "رعش",
+      "merkez_mana": "shaking, shivering, vibration, tremor",
+      "boy": 9
     }
   },
   "kaliplar": {

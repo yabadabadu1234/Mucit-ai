@@ -1417,16 +1417,27 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "quality.n.01",
-    "orta": "noun.attribute",
-    "ust": "hâl ve vasıf",
-    "dayanak_synset": "unrighteousness.n.01",
-    "dayanak_tanim": "failure to adhere to moral principles",
+    "ince": "event.n.01",
+    "orta": "noun.act",
+    "ust": "fiil ve hadise",
+    "dayanak_synset": "sin.n.02",
+    "dayanak_tanim": "an act that is regarded by theologians as a transgression of God's will",
     "synset_sayisi": 5
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "تعصّى عليّ فلان واستعصى، وهو عصّاء وعصيّ. قال الطرماح:\nملك تدين له الملو ... ك أشمّ عصّاء العواذل\nوبعلت بمعاناته، وأراني العجب من معاصاته. ويقال: عصا بالعصا وعصيَ بالسيف إذا ضرب بهما. وتوكّأ على عصاه واعتصى عليها، واعتصى الشيء: اتخذه عصا. قال جرير:\nولا نعتصي الأرطى ولكن سيوفنا ... رقاق النواحي لا يبلّ كليمها\nومن المستعار: عرق عاصٍ وعاند: لا يرفأ. واعتصب النواة: اشتدت. \" وشقّ فلان عصا المسلمين \" إذا فرق جماعتهم. وألقى عصاه إذا أقام \" ولا ترفع عصاك عن أهلك \" لا تخلهم من التأديب. قال:\nقد طال هذا الظل من عصاكا\nأي لاتزال تزجرني. ويقال للرّاعي: إنه لضعيف العصا وليّن العصا وإنه لشديد العصا وصلب العصا: يراد الرفق والعنف. قال الراعي:\nضعيف العصا بادي العروق ترى له ... عليها إذا ما أجدب الناس إصبعاً\nوقال معن بن أوس:\nعليه شريب وادع ليّن العصا ... يساجلها جمّاته وتساجله\nوقال أبو النجم:\nصلب العصا جاف عن التغزل\nوقرعني بعصا اللوم. وفلان يصلّي عصا فلان أي يدبر أمره. قال قيس بن زهير:\nولا تعجل بأمرك واستدمه ... فما صلّى عصاك كمستديم\nالاستدامة: التأني. ويقال للصغير الرأس: رأس العصا. قال يهجو عمر بن هبيرة وكان صعلاً\nمن مبلغ رأس العصا أن بيننا ... ضغائن لا تنثى وإن هي سلّت\nوالناس عبيد العصا أي إنما يهابون من\nآذاهم \" وقشرت له العصا \" أبديت له ما في ضميري.",
+    "mecaz": "",
+    "kinaye": "",
+    "mecaz_var": false
+  },
+  "prototip_yayilim_tasnif": {
+    "durum": "prototip veya mecaz kolu yok"
+  },
+  "kolekzifikasyon_kavramlari": ["abort.v.01", "act.n.02", "complain.v.01", "immorality.n.01", "tense.v.04"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -1438,21 +1449,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
-    },
-    "orta": {
-      "kume": 9,
       "merkez_kok": "خون",
       "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
-      "boy": 168
+      "boy": 509
+    },
+    "orta": {
+      "kume": 7,
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 259
     },
     "ince": {
-      "kume": 47,
+      "kume": 40,
       "merkez_kok": "ءثم",
       "merkez_mana": "İsm: günah, suç; âsim: günahkâr",
-      "boy": 38
+      "boy": 46
     }
   },
   "kaliplar": {

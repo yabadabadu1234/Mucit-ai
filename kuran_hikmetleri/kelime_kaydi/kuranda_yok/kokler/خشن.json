@@ -1879,6 +1879,44 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "خشن الشيء واخشوشن، وهو خشن وخشين. واخشوشنوا: كونوا خشنين في ملابسكم.",
+    "mecaz": "خشن على صاحبه، وتخشن عليه، وخاشنه مخاشنة، وتخاشن القوم، وفي أخلافه خشونة. ورجل أخشن: شكس. وخشن صدره وبصدره. قال:\nوخشنت صدرا جيبه لك ناصح\nوخشّن كلامه معه. واستخشن مسه فأعرض عنه. وفلان خشن في دينه إذا كان متشدّداً فيه. وسنة خشناء: قحطة. وأرض خشناء: فيها رمل وحجارة. يقال: أنبط بئره في خشناء من\nالأرض. ولفلان سياسة خشناء. وكتيبة خشناء: كثيرة السلاح.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "خشن الشيء واخشوشن، وهو خشن وخشين. واخشوشنوا: كونوا خشنين في ملابسكم.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "خشن على صاحبه، وتخشن عليه، وخاشنه مخاشنة، وتخاشن القوم، وفي أخلافه خشونة. ورجل أخشن: شكس. وخشن صدره وبصدره. قال:",
+        "prototipe_benzerlik": 0.443,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وخشنت صدرا جيبه لك ناصح",
+        "prototipe_benzerlik": 0.504,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وخشّن كلامه معه. واستخشن مسه فأعرض عنه. وفلان خشن في دينه إذا كان متشدّداً فيه. وسنة خشناء: قحطة. وأرض خشناء: فيها رمل وحجارة. يقال: أنبط بئره في خشناء من",
+        "prototipe_benzerlik": 0.324,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "الأرض. ولفلان سياسة خشناء. وكتيبة خشناء: كثيرة السلاح.",
+        "prototipe_benzerlik": 0.444,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.429,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["act.n.02", "difficulty.n.04", "shrivel.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "اللباس",
@@ -1890,18 +1928,18 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 509
     },
     "orta": {
-      "kume": 7,
-      "merkez_kok": "كرب",
-      "merkez_mana": "Karb: sıkıntı, keder; kurbet: sıkıntı",
-      "boy": 139
+      "kume": 8,
+      "merkez_kok": "بءس",
+      "merkez_mana": "Be'es: azap, şiddet, zorluk",
+      "boy": 142
     },
     "ince": {
-      "kume": 31,
+      "kume": 46,
       "merkez_kok": "خشن",
       "merkez_mana": "to be coarse, to be rude, to be uncouth, to be rough, to be hoarse",
       "boy": 9

@@ -744,32 +744,60 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "\" أجرأ من اللبؤة \". ولبأت القوم: سقيتهم اللّبأ. وألبأوا: كثر عندهم، وهم ملبنون ملبؤن، والتبأوه: شربوه. وعشار ملابيء: دنا نتاجها، ومهم الألبان والألباء. والتبأت الشاة ولبأتها: احتلبت لبأها. قال ابن هرمة:\nلست بذي ثلّة مؤبلّة ... آخذ ألبانها وألباءها",
+    "mecaz": "لبأت الفسيل وغيره من الأغراس: سقيته حين غرسته. وفي الحديث \" إذا غرست فسيلةً وقيل إن الساعة تقوم فلا يمنعك ذلك أن تلبأها \" ولبأتهم الكمأة وغيرها: ألأطعمتهم قال ذو الرمة:\nوربعية مربوعة قد لبأتها ... بكفيّ في دوّية سفراً سفرا\nأراد: وكمأة نابتة في الربيع ممطورة أطعمتها وقت الصباح قوماً مسافرين. والتبأت لبأ فلان إذا كنت أول من ابتكر خبره.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "\" أجرأ من اللبؤة \". ولبأت القوم: سقيتهم اللّبأ. وألبأوا: كثر عندهم، وهم ملبنون ملبؤن، والتبأوه: شربوه. وعشار ملابيء: دنا نتاجها، ومهم الألبان والألباء. والتبأت الشاة ولبأتها: احتلبت لبأها. قال ابن هرمة: لست بذي ثلّة مؤبلّة ... آخذ ألبانها وألباءها",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "لبأت الفسيل وغيره من الأغراس: سقيته حين غرسته. وفي الحديث \" إذا غرست فسيلةً وقيل إن الساعة تقوم فلا يمنعك ذلك أن تلبأها \" ولبأتهم الكمأة وغيرها: ألأطعمتهم قال ذو الرمة:",
+        "prototipe_benzerlik": 0.197,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "أراد: وكمأة نابتة في الربيع ممطورة أطعمتها وقت الصباح قوماً مسافرين. والتبأت لبأ فلان إذا كنت أول من ابتكر خبره.",
+        "prototipe_benzerlik": -0.017,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.09,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السباع",
     "bab": "",
-    "kok_gecis": 51.0,
+    "kok_gecis": 50.7,
     "kitapta_gecis": 7.0,
-    "zenginlesme": 15.92
+    "zenginlesme": 16.02
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
-      "merkez_kok": "حنج",
-      "merkez_mana": "",
-      "boy": 426
-    },
-    "orta": {
       "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 261
+      "boy": 466
+    },
+    "orta": {
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 16,
-      "merkez_kok": "كدن",
-      "merkez_mana": "a beast of burden, particularly a mule or hinny",
-      "boy": 26
+      "kume": 22,
+      "merkez_kok": "زرف",
+      "merkez_mana": "giraffe (mammal)",
+      "boy": 19
     }
   },
   "kaliplar": {

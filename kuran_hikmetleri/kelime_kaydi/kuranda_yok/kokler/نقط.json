@@ -1622,16 +1622,55 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "cognition.n.01",
-    "orta": "noun.cognition",
-    "ust": "zihin ve ilim",
-    "dayanak_synset": "respect.n.01",
-    "dayanak_tanim": "(usually preceded by `in') a detail or point",
+    "ince": "shape.n.02",
+    "orta": "noun.shape",
+    "ust": "ölçü, mekân ve zaman",
+    "dayanak_synset": "point.n.08",
+    "dayanak_tanim": "a V shape",
     "synset_sayisi": 16
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "نقط المصحف ونقّطه. ويقال: رأس الخطّ النقطة. وكتاب منقوط: مشكول. ونقّطت المرأة وجهها بالسواد: تتحسّن بذلك.",
+    "mecaz": "أعطاه نقطة من العسل. ولفلان نقطة من النخل: قطعة منه. ووجدنا نقطة من الكلإ ونقطاً منه ونقاطاً. والتّنوم ينبت نقاطاً: في أماكن تعثر على نقطة ثم تقطعها فتجد نقطة أخرى. وفي حديث عائشة رضي الله تعالى عنها: ما اختلف الناس في نقطة إلا طار أبي بحظها وغنائها في الإسلام: وتنقّطت الخبز: أكلته نقطة نقطة أي شيأ شيأ.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "نقط المصحف ونقّطه. ويقال: رأس الخطّ النقطة. وكتاب منقوط: مشكول. ونقّطت المرأة وجهها بالسواد: تتحسّن بذلك.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "أعطاه نقطة من العسل. ولفلان نقطة من النخل: قطعة منه. ووجدنا نقطة من الكلإ ونقطاً منه ونقاطاً. والتّنوم ينبت نقاطاً: في أماكن تعثر على نقطة ثم تقطعها فتجد نقطة أخرى. وفي حديث عائشة رضي الله تعالى عنها: ما اختلف الناس في نقطة إلا طار أبي بحظها وغنائها في الإسلام: وتنقّطت الخبز: أكلته نقطة نقطة أي شيأ ",
+        "prototipe_benzerlik": 0.358,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.358,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "content.n.05",
+    "degree.n.02",
+    "direction.n.02",
+    "information.n.02",
+    "item.n.01",
+    "meaning.n.01",
+    "pit.v.01",
+    "point.n.02",
+    "point.n.06",
+    "punctuate.v.01",
+    "round_shape.n.01",
+    "scatter.v.03",
+    "solid.n.03",
+    "tell.v.02",
+    "trickle.v.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الحشرات",
@@ -1642,22 +1681,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 22,
+      "kume": 16,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 193
+      "boy": 287
     },
     "ince": {
-      "kume": 128,
-      "merkez_kok": "سطر",
-      "merkez_mana": "Satr: çizgi, satır; kitap yazmak",
-      "boy": 13
+      "kume": 96,
+      "merkez_kok": "ءشر",
+      "merkez_mana": "Eşer: kibir, şımarıklık; eşir: kendini beğenmiş",
+      "boy": 28
     }
   },
   "kaliplar": {

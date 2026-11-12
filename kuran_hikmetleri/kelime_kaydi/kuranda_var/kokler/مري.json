@@ -1171,32 +1171,70 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "مريت الناقة وأمريتها: حلبتها فأمرت وناقة مريٌّ: درور، وأخذت مرية الناقة وهي ما حلب منها. ومرى في الأمر وامترى وتمارى، وما فيه مريةٌ: شك.",
+    "mecaz": "قرع مروته. قال أبو ذؤيب:\nحتى كأني للحوادث مروة ... بصفا المشرق كل يوم تقرع\nوالمرو: حجارة بيض رقاق. والريح تمري السحاب وتمتريه وتستمريه: تستدرّه. وبالشكر تمترى النعم. وتقول: ما زلت أعيش بأحاليب درّك، وأستمري أخلاف برّك. ومرّ بمرى دابته بساقه: يركضه. وأخذت مرية الفرس، ومرى الفرس يمري إذا قام على ثلاث وهو يمسح الأرض بالرابعة. والناقة تمري في سيرها: تسرع، ونوق موار. أنشد ابن الأعرابي:\nإذا هبطن غائطاً مواري ... حسبتها من غير ما تماري\nقواصداً وهي به مواري\nموارٍ: ساتر، تحسبها يقصدن في السير وهنّ سراع. ومريت فلاناً فما درّ. ومرى مقلته بإنسانه: بأنملته. وماريته مماراة: جادلته ولاججته، وتماروا، ومعناه المحالبة كأن كلّ واحد يحلب ما عند صاحبه \" أفتمارونه على ما يرى \": أفتلاجّونه مع ما يرى من الآيات المبينة بنبوّته ومثله لا يلاجّ، وقريء \" أفتمرونه \" أي أفتغلبونه في المماراة مع ما يرى أي أفتطمعون في الغلبة أو تدّعونها، أو هو إنكار لتأتّي الغلبة. وتقول: خذ هذه الجارية، ولو بقرطي ماريه.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "مريت الناقة وأمريتها: حلبتها فأمرت وناقة مريٌّ: درور، وأخذت مرية الناقة وهي ما حلب منها. ومرى في الأمر وامترى وتمارى، وما فيه مريةٌ: شك.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "قرع مروته. قال أبو ذؤيب:",
+        "prototipe_benzerlik": 0.487,
+        "halka": "orta"
+      },
+      {
+        "cumle": "والمرو: حجارة بيض رقاق. والريح تمري السحاب وتمتريه وتستمريه: تستدرّه. وبالشكر تمترى النعم. وتقول: ما زلت أعيش بأحاليب درّك، وأستمري أخلاف برّك. ومرّ بمرى دابته بساقه: يركضه. وأخذت مرية الفرس، ومرى الفرس يمري إذا قام على ثلاث وهو يمسح الأرض بالرابعة. والناقة تمري في سيرها: تسرع، ونوق موار. أنشد ابن ا",
+        "prototipe_benzerlik": 0.207,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "قواصداً وهي به مواري",
+        "prototipe_benzerlik": 0.511,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "موارٍ: ساتر، تحسبها يقصدن في السير وهنّ سراع. ومريت فلاناً فما درّ. ومرى مقلته بإنسانه: بأنملته. وماريته مماراة: جادلته ولاججته، وتماروا، ومعناه المحالبة كأن كلّ واحد يحلب ما عند صاحبه \" أفتمارونه على ما يرى \": أفتلاجّونه مع ما يرى من الآيات المبينة بنبوّته ومثله لا يلاجّ، وقريء \" أفتمرونه \" أي أفتغ",
+        "prototipe_benzerlik": 0.183,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.347,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["converse.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الإبل",
     "bab": "",
-    "kok_gecis": 43.8,
+    "kok_gecis": 43.4,
     "kitapta_gecis": 6.7,
-    "zenginlesme": 2.36
+    "zenginlesme": 2.38
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
-      "merkez_kok": "درك",
-      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "kume": 4,
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 509
     },
     "orta": {
-      "kume": 21,
-      "merkez_kok": "همس",
-      "merkez_mana": "Hamis: fısıldamak, gizlice konuşmak",
-      "boy": 97
+      "kume": 7,
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 259
     },
     "ince": {
-      "kume": 117,
-      "merkez_kok": "لسن",
-      "merkez_mana": "Lisân: dil; lehçe",
-      "boy": 17
+      "kume": 35,
+      "merkez_kok": "مري",
+      "merkez_mana": "Mürâ: tartışmak, şüphe etmek",
+      "boy": 36
     }
   },
   "kaliplar": {

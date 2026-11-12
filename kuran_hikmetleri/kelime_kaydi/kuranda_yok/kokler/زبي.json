@@ -722,29 +722,57 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "زبي زبية وتزباها: اتخذها وهي حفرة يصاد فيها السيبع. وكأن يديه الزابيان وهما نهران في سافلة الفرات. ويقال: الزوابي لهما ولما حولهما وقد يقال للواحد: الزاب بطرح الياء كما يقال للبازي: الباز.",
+    "mecaz": "زبيت لفلان إذا عملت له منصوبة.\nوفي مثل \" بلغ السيل الزبى \" إذا اشتد الأمر.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "زبي زبية وتزباها: اتخذها وهي حفرة يصاد فيها السيبع. وكأن يديه الزابيان وهما نهران في سافلة الفرات. ويقال: الزوابي لهما ولما حولهما وقد يقال للواحد: الزاب بطرح الياء كما يقال للبازي: الباز.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "زبيت لفلان إذا عملت له منصوبة.",
+        "prototipe_benzerlik": 0.091,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وفي مثل \" بلغ السيل الزبى \" إذا اشتد الأمر.",
+        "prototipe_benzerlik": 0.199,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.145,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السباع",
     "bab": "الذئاب إرادة إناث الذئاب",
-    "kok_gecis": 21.0,
+    "kok_gecis": 19.7,
     "kitapta_gecis": 1.5,
-    "zenginlesme": 8.28
+    "zenginlesme": 8.85
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 2,
+      "kume": 1,
       "merkez_kok": "قره",
       "merkez_mana": "",
       "boy": 759
     },
     "orta": {
-      "kume": 4,
+      "kume": 2,
       "merkez_kok": "فلص",
       "merkez_mana": "",
       "boy": 494
     },
     "ince": {
-      "kume": 22,
+      "kume": 4,
       "merkez_kok": "شعف",
       "merkez_mana": "",
       "boy": 183

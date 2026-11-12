@@ -1666,16 +1666,44 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "burst.v.04",
-    "orta": "verb.motion",
+    "ince": "bubble.v.01",
+    "orta": "verb.change",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "burst.v.04",
-    "dayanak_tanim": "move suddenly, energetically, or violently",
+    "dayanak_synset": "bubble.v.01",
+    "dayanak_tanim": "form, produce, or emit bubbles",
     "synset_sayisi": 3
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "نهر وحض وإناء طافح، وقد طفح طفوحاً، وأضفحته وطفحته: ملأته حتى يفيض. وأخذت طفاحة القدر: زبدها.",
+    "mecaz": "سكران طافح: ملآن من الشراب. وفرس طفاح القوائم: عدّاء. وطفحت فلانة بالأولاد: فاضت وأكثرت. قال النابغة:\nلم يحرموا حسن الغذاء وأمهم ... طفحت عليك بناتق مذكار\nأي نفسها ناتق وهي التي تدارك الأولاد من نتق السقاء، يقال انتق سقاءك: انفض ما فيه.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "نهر وحض وإناء طافح، وقد طفح طفوحاً، وأضفحته وطفحته: ملأته حتى يفيض. وأخذت طفاحة القدر: زبدها.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "سكران طافح: ملآن من الشراب. وفرس طفاح القوائم: عدّاء. وطفحت فلانة بالأولاد: فاضت وأكثرت. قال النابغة:",
+        "prototipe_benzerlik": 0.132,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "أي نفسها ناتق وهي التي تدارك الأولاد من نتق السقاء، يقال انتق سقاءك: انفض ما فيه.",
+        "prototipe_benzerlik": 0.378,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.255,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["bubble.v.01", "burst.v.01", "burst.v.04"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -1687,21 +1715,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "merkez_kok": "قبب",
+      "merkez_mana": "canopy, pavilion; dome, cupola",
+      "boy": 604
     },
     "orta": {
-      "kume": 38,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 203
+      "kume": 33,
+      "merkez_kok": "صبب",
+      "merkez_mana": "Sabb: dökmek, akıtmak; sabîb: akan",
+      "boy": 201
     },
     "ince": {
-      "kume": 245,
-      "merkez_kok": "روج",
-      "merkez_mana": "to have currency, to circulate, to sell well, to be in demand, to burg",
-      "boy": 23
+      "kume": 221,
+      "merkez_kok": "ترع",
+      "merkez_mana": "gate, portal",
+      "boy": 24
     }
   },
   "kaliplar": {

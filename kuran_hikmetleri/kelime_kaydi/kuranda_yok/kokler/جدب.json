@@ -948,6 +948,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "جدب المكان جدوبة، وجدب وأجدب، نحو خصب وأخصب. ومكان جدب وجديب، وأرض جدبة وجديبة، وبلد مجدب وبلاد مجادب. وفلان ربيع في المجادب. قال حرام بن وابصة:\nألا مات أهل الحلم والباع والندى ... ربيع اليتامى صوبه في المجادب\nوأجدب القوم: أصابهم الجدب، وأجدبت السنة، ومرت عليهم سنو جدب، وسنون جدبات. وأجدبنا أرض بني فلان: وجدناها جدبة. وجادبت الإبل العام إذا لم تصادف إلا\nالدرين لجدوبته. وإبل مجادبة ومجاديب. وجدب عمر رضي الله عنه السمر بعد العتمة أي ذمه وعابه. ودعا رجل عتبة بن غزوان إلى منزله، فقال: امض في رشد الله وصحبته فما أتجدب أن اصحبك أي لا أتذمم.",
+    "mecaz": "نزلنا ببني فلان فأجدبناهم إذا لم يجدوا عندهم قزّي وإن كانوا مخصبين. وعن الحسن: \" أجدب قلوب وأخصب ألسنة \". ورحل فلان جديب. وفي نوابغ الكلم: من كان آدب، كان رحله أجدب.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "جدب المكان جدوبة، وجدب وأجدب، نحو خصب وأخصب. ومكان جدب وجديب، وأرض جدبة وجديبة، وبلد مجدب وبلاد مجادب. وفلان ربيع في المجادب. قال حرام بن وابصة: ألا مات أهل الحلم والباع والندى ... ربيع اليتامى صوبه في المجادب وأجدب القوم: أصابهم الجدب، وأجدبت السنة، ومرت عليه",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "نزلنا ببني فلان فأجدبناهم إذا لم يجدوا عندهم قزّي وإن كانوا مخصبين. وعن الحسن: \" أجدب قلوب وأخصب ألسنة \". ورحل فلان جديب. وفي نوابغ الكلم: من كان آدب، كان رحله أجدب.",
+        "prototipe_benzerlik": 0.935,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.935,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["dry.a.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -959,21 +982,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 509
     },
     "orta": {
-      "kume": 12,
-      "merkez_kok": "خيب",
-      "merkez_mana": "Hayb: boşa çıkmak, umutsuz olmak; hâib: hayal kırıklığı",
-      "boy": 58
+      "kume": 8,
+      "merkez_kok": "بءس",
+      "merkez_mana": "Be'es: azap, şiddet, zorluk",
+      "boy": 142
     },
     "ince": {
-      "kume": 64,
+      "kume": 48,
       "merkez_kok": "قفر",
       "merkez_mana": "to trace, to track",
-      "boy": 20
+      "boy": 23
     }
   },
   "kaliplar": {

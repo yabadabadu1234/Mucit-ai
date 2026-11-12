@@ -1507,16 +1507,39 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "person.n.01",
+    "ince": "whole.n.02",
     "orta": "noun.person",
     "ust": "insan ve toplum",
-    "dayanak_synset": "female_offspring.n.01",
-    "dayanak_tanim": "a child who is female",
+    "dayanak_synset": "son.n.01",
+    "dayanak_tanim": "a male human offspring",
     "synset_sayisi": 5
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "قضيب كثير الأبن وهي العقد.",
+    "mecaz": "بينهم أبن أي عداوات وإحن، وفي حسبه أبن أي عيوب. ومنه الحديث: لا تؤبن فيه الحرم يقال أبنه إذا عابه. وأبنه: مدحه وعد محاسنه، وهو من باب التفزيع. وقد غلب في مدح النادب. تقول: لم يزل يقرظ أحياكم، ويؤبن موتاكم.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "قضيب كثير الأبن وهي العقد.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "بينهم أبن أي عداوات وإحن، وفي حسبه أبن أي عيوب. ومنه الحديث: لا تؤبن فيه الحرم يقال أبنه إذا عابه. وأبنه: مدحه وعد محاسنه، وهو من باب التفزيع. وقد غلب في مدح النادب. تقول: لم يزل يقرظ أحياكم، ويؤبن موتاكم.",
+        "prototipe_benzerlik": 0.205,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.205,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["act.n.02", "food.n.01", "living_thing.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "المكنيات والمبنيات والمثنيات",
@@ -1527,22 +1550,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 18,
-      "merkez_kok": "همم",
-      "merkez_mana": "Hemm: istek, gayret; himmet",
-      "boy": 116
+      "kume": 20,
+      "merkez_kok": "لحد",
+      "merkez_mana": "Lahd: mezar çukuru; lehd: meyil, eğilme",
+      "boy": 187
     },
     "ince": {
-      "kume": 101,
-      "merkez_kok": "تفف",
-      "merkez_mana": "Sonchus gen. et spp.",
-      "boy": 31
+      "kume": 117,
+      "merkez_kok": "وثن",
+      "merkez_mana": "Vesen: put, tapılan şey",
+      "boy": 32
     }
   },
   "kaliplar": {

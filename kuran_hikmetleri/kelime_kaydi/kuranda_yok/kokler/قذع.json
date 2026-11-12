@@ -1194,6 +1194,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "بثوبه قذر وقذع بمعنى، وقذّر ثوبه وقذّعه.",
+    "mecaz": "إياك والقذع وهو الخنا والرفث، وكلام قذع، وأقذع في كلامه: أفحش. وفي الحديث: \" من قال في الإسلام شعراً مقذعاً فلسانه هدرٌ \". وقال بشر:\nإذا ما شئت جاءك مقذعات ... ولم تعمل بهنّ إليك ساقي\nورماه بالمقذعات والمقذعات، وقذعني فلان بلسانه وأقذعني: شتمني وأسمعني المكروه. وتقول: قذعه بلسانه، فقذعه بسنانه؛ وقاذعه: شاتمه وفاحشه، وبينهما مقاذفة ومقاذعة. وقال طرفة:\nوإن يقذفوا بالقذع عرضك أسقهم ... بكأس حياض الموت قبل التهدّد\nوهو مصدر قذعه قذعاً، وسمعت منه قذيعةً: شتيمة. قال ابن مقبل:\nولا يأمن الأعداء منّي قذيعةً ... ولا أشتم الحيّ الذي أنا شاعره\nورويَ: قذيفةً.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "بثوبه قذر وقذع بمعنى، وقذّر ثوبه وقذّعه.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "إياك والقذع وهو الخنا والرفث، وكلام قذع، وأقذع في كلامه: أفحش. وفي الحديث: \" من قال في الإسلام شعراً مقذعاً فلسانه هدرٌ \". وقال بشر:",
+        "prototipe_benzerlik": 0.299,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "ورماه بالمقذعات والمقذعات، وقذعني فلان بلسانه وأقذعني: شتمني وأسمعني المكروه. وتقول: قذعه بلسانه، فقذعه بسنانه؛ وقاذعه: شاتمه وفاحشه، وبينهما مقاذفة ومقاذعة. وقال طرفة:",
+        "prototipe_benzerlik": 0.651,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وهو مصدر قذعه قذعاً، وسمعت منه قذيعةً: شتيمة. قال ابن مقبل:",
+        "prototipe_benzerlik": 0.701,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.55,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["knock.v.06"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النخل",
@@ -1205,21 +1238,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 509
     },
     "orta": {
-      "kume": 8,
-      "merkez_kok": "وغر",
-      "merkez_mana": "to become enraged, to become angry, to be filled with malice",
-      "boy": 80
+      "kume": 7,
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 259
     },
     "ince": {
-      "kume": 40,
+      "kume": 32,
       "merkez_kok": "عير",
       "merkez_mana": "Ayr: merkep, eşek; ğayr: başka",
-      "boy": 44
+      "boy": 33
     }
   },
   "kaliplar": {

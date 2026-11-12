@@ -821,6 +821,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "سافه وتسيفقه: ضربه بالسيف، وسايفه وتسايفوا، وهو مسيف سائف: ذو سيف ضارب به، وهو سياف الأمير: للذي يضرب أعناق الجناة. وأقبلت السيافة وهي المقاتلة بالسيوف. وجارية سيفانة: شطبة كأنها تصل سيف. وبردٌ\nسيف: عريض الخطوط كالسيوف. ونزلوا بالسيف: بالساحل. وهم أهل أسياف وأرياف.",
+    "mecaz": "بين فكيه سيف صارم. ولبعضهم:\nتقلقل بين فكيك ابن غمد ... صليل غراره الكلم الفصاح\nتقط به مفاصل كل قول ... ونت عنها المهندة الصفاح",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "سافه وتسيفقه: ضربه بالسيف، وسايفه وتسايفوا، وهو مسيف سائف: ذو سيف ضارب به، وهو سياف الأمير: للذي يضرب أعناق الجناة. وأقبلت السيافة وهي المقاتلة بالسيوف. وجارية سيفانة: شطبة كأنها تصل سيف. وبردٌ سيف: عريض الخطوط كالسيوف. ونزلوا بالسيف: بالساحل. وهم أهل أسياف وأ",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "بين فكيه سيف صارم. ولبعضهم:",
+        "prototipe_benzerlik": 0.532,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.532,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["artifact.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السلاح",
@@ -831,22 +854,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
-      "merkez_kok": "حنج",
-      "merkez_mana": "",
-      "boy": 426
-    },
-    "orta": {
       "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 261
+      "boy": 466
+    },
+    "orta": {
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 18,
-      "merkez_kok": "لدم",
-      "merkez_mana": "Dammam (the capital city of the Eastern Province, Saudi Arabia)",
-      "boy": 53
+      "kume": 24,
+      "merkez_kok": "لوت",
+      "merkez_mana": "Levt: bükmek, eğmek",
+      "boy": 63
     }
   },
   "kaliplar": {

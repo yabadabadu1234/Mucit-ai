@@ -2858,11 +2858,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "state.n.02",
-    "orta": "noun.state",
+    "ince": "correct.a.01",
+    "orta": "adj.all",
     "ust": "hâl ve vasıf",
-    "dayanak_synset": "truth.n.02",
-    "dayanak_tanim": "conformity to reality or actuality",
+    "dayanak_synset": "correct.a.01",
+    "dayanak_tanim": "free from error; especially conforming to fact or truth",
     "synset_sayisi": 19
   },
   "ses_mana_tasnif": {
@@ -2873,6 +2873,63 @@
     "fasil_ozeti": "° معنى الفصل المعجمي (صح) : هو كون الشيء على حاله الأصلي مع عِرَضه وجفافه -كما في الصَحْصاح: ما استوى من الأرض وجُرِدَ -في (صحح)، وكما في الصُوْح وجه الجبل القائم كأنه حائط -في (صوح)، وكما في الأديم المُصحِب والماء المصحِب اللذين يعلوهما ما يدل على بقائهما على حالهما -في (صحب)، وكما في الصحيف وجه الأرض -كما هو ممتدًّا منبسطًا، وصحيفة الوجه في (صحف).",
     "tam_metin": "\"صَحَاح الطريق - كسحاب: ما اشتدّ منه ولم يَسْهُلْ ولم يُوطَأ والصَحِيح والصَحْصَاح والصَحْصَحَان -بالفتح فيهن: ما استوى من الأرض وجُرِد. الصحصح -بالفتح: الأرض الجرداء المستوية ذات حصى صغار/ ليس بها شيء ولا شَجَرٌ ولا قرارٌ للماء. . والصحراء أشد استواء منها \".\n° المعنى المحوري\nكون الشيء متماسكًا على ما ينبغي من حاله عِرَضًا وجفافًا دون تشقُّقٍ أو نحوه (1): كالأرض والطريق المذكورين يتميزان بالتماسك\n__________\n(1) (صوتيًّا): تعبر الصاد عن امتداد بغلظ والحاء عن عِرَض مع جفاف، والفصل منهما يعبر عن كون الشيء على حاله الأصلى مع جفاف وعرض كما في الطريق الصَحَاح. وفي (صوح صيح) يزيد (اشتمال) الواو و (اتصال) الياء معنى الامتداد بغلظ كما في صُوْح =\n(3/1195)\nوالجفاف وبعض الاستواء. والمهم أنه ليس فيها تسيب أو رخاوة كما هو واضح.\nومنه \"الصحة خلاف السَقَم، وذهاب المرض \"، لأنها تماسك وسلامة وخلو من الضعف (الرخاوة)."
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "صحّ من علته، ورجل صحيح وصحاح، وقوم صحاح وأصحاء وأصحّة. \" والسفر مصحة \". وهو صحيح مصح: صحيح أهله وماله، وقد أصح القوم وهم مصحون. وفي الحديث \" لا يوردنّ ذو عاهة على مصح \" وأصحّه الله تعالى وصحّحه، وأصح الله تعالى بدنك وصحّح جسمك. وسرنا في صحصح من الأرض وصحصحان وفي صحاصح.",
+    "mecaz": "صحّ عند القاضي حقه وصحت شهادته. وصح لي على فلان كذا. وصح قوله، وأنا أستصح ما يقول. وتقول: مذهب أهل العدل هو المذهب الصحيح، وهو الحق الصريح. وسائر المذاهب ترهات صحاصح، لا سدائد ولا\nصحائح. قال ابن مقبل:\nوما ذكره دهماء بعد مزارها ... بنجران إلا الترهات الصحاصح\nوهي الأباطيل التي لا أصل لها، ومثله: \" جاء بالترهات البسابس \"، وفلان مصحصح: يأتي بالأباطيل. قال مليح الهذلي:\nويلحاك في ليلى العريف المصحصح",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Cebel mihverî mana",
+    "prototip": "كون الشيء متماسكًا على ما ينبغي من حاله عِرَضًا وجفافًا دون تشقُّقٍ أو نحوه (1): كالأرض والطريق المذكورين يتميزان بالتماسك",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "صحّ عند القاضي حقه وصحت شهادته. وصح لي على فلان كذا. وصح قوله، وأنا أستصح ما يقول. وتقول: مذهب أهل العدل هو المذهب الصحيح، وهو الحق الصريح. وسائر المذاهب ترهات صحاصح، لا سدائد ولا",
+        "prototipe_benzerlik": 0.271,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "صحائح. قال ابن مقبل:",
+        "prototipe_benzerlik": 0.294,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وهي الأباطيل التي لا أصل لها، ومثله: \" جاء بالترهات البسابس \"، وفلان مصحصح: يأتي بالأباطيل. قال مليح الهذلي:",
+        "prototipe_benzerlik": 0.461,
+        "halka": "orta"
+      },
+      {
+        "cumle": "ويلحاك في ليلى العريف المصحصح",
+        "prototipe_benzerlik": 0.231,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.314,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "accompany.v.02",
+    "act.n.02",
+    "adjust.v.01",
+    "being.n.01",
+    "call.v.25",
+    "correct.a.01",
+    "correct.v.01",
+    "credibility.n.01",
+    "cry.v.02",
+    "knock.v.06",
+    "name.v.01",
+    "process.n.02",
+    "request.v.01",
+    "right.a.04",
+    "shout.v.01",
+    "shout.v.02",
+    "shriek.v.01",
+    "true.a.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "(giriş)",
@@ -2883,22 +2940,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
+      "kume": 8,
       "merkez_kok": "قبب",
       "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "boy": 604
     },
     "orta": {
-      "kume": 45,
-      "merkez_kok": "متن",
-      "merkez_mana": "Metn: sağlam yer, metin; metîn: sağlam",
-      "boy": 268
+      "kume": 34,
+      "merkez_kok": "نقق",
+      "merkez_mana": "to croak (of frogs)",
+      "boy": 255
     },
     "ince": {
-      "kume": 296,
-      "merkez_kok": "جذع",
-      "merkez_mana": "Cizz': hurma kütüğü, gövde; ciz'",
-      "boy": 48
+      "kume": 232,
+      "merkez_kok": "نقق",
+      "merkez_mana": "to croak (of frogs)",
+      "boy": 53
     }
   },
   "kaliplar": {

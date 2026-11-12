@@ -1192,6 +1192,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "نخس الدابة، ومنه: الخاس. ونخسوا بفلان: نخسوا دابته وطردوه. قال:\nالناخسين بمروان بذي خشبٍ ... والمقحمين على عثمان في الدار\nأي نخسوا به من خلفه حتى سيّروه في البلاد. ونخس البكرة: جعل لها نخاساً وهو ما يلقمه ثقبها إذا اتسع. وبكرة نخيس.",
+    "mecaz": "رأيت غدراً تناخس كقولهم: الأمواج تناطح. وهو ابن نخسة أي ابن زنية. قال الشماخ:\nأنا الجحاشيّ شماخ وليس أبي ... بنخسة لدعيّ غير موجود\nغير معلوم \" ووجدك ضالاً \" وانخس به أي أبعده. وتكلّم فنخّسوا به. ووعلٌ ناخس: طويل القرنين لأنهما ينخسان ذنبه. قال ابن هرمة:\nكأن فقاره اشتبكت عليه ... قرون الناخسات من الوعول",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "نخس الدابة، ومنه: الخاس. ونخسوا بفلان: نخسوا دابته وطردوه. قال: الناخسين بمروان بذي خشبٍ ... والمقحمين على عثمان في الدار أي نخسوا به من خلفه حتى سيّروه في البلاد. ونخس البكرة: جعل لها نخاساً وهو ما يلقمه ثقبها إذا اتسع. وبكرة نخيس.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "رأيت غدراً تناخس كقولهم: الأمواج تناطح. وهو ابن نخسة أي ابن زنية. قال الشماخ:",
+        "prototipe_benzerlik": 0.164,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "غير معلوم \" ووجدك ضالاً \" وانخس به أي أبعده. وتكلّم فنخّسوا به. ووعلٌ ناخس: طويل القرنين لأنهما ينخسان ذنبه. قال ابن هرمة:",
+        "prototipe_benzerlik": 0.258,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.211,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["jab.v.01", "prick.v.02"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السلاح",
@@ -1203,18 +1231,18 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 509
     },
     "orta": {
-      "kume": 11,
-      "merkez_kok": "دحر",
-      "merkez_mana": "Dahr: itmek, uzaklaştırmak",
-      "boy": 179
+      "kume": 9,
+      "merkez_kok": "وغر",
+      "merkez_mana": "to become enraged, to become angry, to be filled with malice",
+      "boy": 108
     },
     "ince": {
-      "kume": 56,
+      "kume": 58,
       "merkez_kok": "نكز",
       "merkez_mana": "",
       "boy": 14

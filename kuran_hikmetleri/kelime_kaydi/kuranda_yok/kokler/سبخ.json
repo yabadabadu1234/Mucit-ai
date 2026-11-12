@@ -756,6 +756,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "طارت سبائخ القطن. وفي الأرض سبخة وسباخ، وأرض سبخة وقد سبخت وأسبخت، وفيها سباخ بيض كالسبائخ.",
+    "mecaz": "وردت ماء محوله سبيخ الطير وسبائخه: ما نسل من ريشه. وسبخ الله عنك الحمى: خففها، وسبخ عنا الحر: خفف.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "طارت سبائخ القطن. وفي الأرض سبخة وسباخ، وأرض سبخة وقد سبخت وأسبخت، وفيها سباخ بيض كالسبائخ.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "وردت ماء محوله سبيخ الطير وسبائخه: ما نسل من ريشه. وسبخ الله عنك الحمى: خففها، وسبخ عنا الحر: خفف.",
+        "prototipe_benzerlik": 0.427,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.427,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["plain.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "اللباس",
@@ -766,22 +789,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 7,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 331
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 30,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 103
-    },
-    "ince": {
-      "kume": 205,
+      "kume": 35,
       "merkez_kok": "نقع",
       "merkez_mana": "Nak': su birikintisi; nakî': ıslak",
-      "boy": 33
+      "boy": 47
+    },
+    "ince": {
+      "kume": 236,
+      "merkez_kok": "نقع",
+      "merkez_mana": "Nak': su birikintisi; nakî': ıslak",
+      "boy": 18
     }
   },
   "kaliplar": {

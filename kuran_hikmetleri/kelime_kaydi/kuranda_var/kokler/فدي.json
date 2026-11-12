@@ -1198,16 +1198,44 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "avoid.v.01",
-    "orta": "verb.communication",
-    "ust": "söz ve haber",
-    "dayanak_synset": "avoid.v.01",
-    "dayanak_tanim": "stay clear from; keep away from; keep out of the way of someone or something",
+    "ince": "avoid.v.03",
+    "orta": "verb.social",
+    "ust": "insan ve toplum",
+    "dayanak_synset": "avoid.v.03",
+    "dayanak_tanim": "refrain from doing something",
     "synset_sayisi": 4
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "فدت الأسير وافتديته وفاديته، وافتديت أنا منه، وبذلت له الفدية فلم تقبل وهي اسم ما يفدى منه. وفدّيته تفدية: قلت له: جعلت فداك.",
+    "mecaz": "تفادى منهخ: تحاماه. قال ذو الرمّة:\nتفادى الأسود الغلب منه تفاديا",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "فدت الأسير وافتديته وفاديته، وافتديت أنا منه، وبذلت له الفدية فلم تقبل وهي اسم ما يفدى منه. وفدّيته تفدية: قلت له: جعلت فداك.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "تفادى منهخ: تحاماه. قال ذو الرمّة:",
+        "prototipe_benzerlik": 0.46,
+        "halka": "orta"
+      },
+      {
+        "cumle": "تفادى الأسود الغلب منه تفاديا",
+        "prototipe_benzerlik": 0.336,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.398,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["avoid.v.01", "avoid.v.03", "prevent.v.01", "sacrifice.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "المقصور والممدود",
@@ -1218,22 +1246,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "kume": 5,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 375
     },
     "orta": {
-      "kume": 38,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 203
+      "kume": 14,
+      "merkez_kok": "غدر",
+      "merkez_mana": "Gadr: ihanet, hile",
+      "boy": 153
     },
     "ince": {
-      "kume": 247,
-      "merkez_kok": "قلع",
-      "merkez_mana": "Kal': sökmek, kökünden koparmak",
-      "boy": 36
+      "kume": 80,
+      "merkez_kok": "هدم",
+      "merkez_mana": "Hadm: yıkmak, yıkılmak",
+      "boy": 43
     }
   },
   "kaliplar": {

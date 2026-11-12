@@ -940,11 +940,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "person.n.01",
+    "ince": "whole.n.02",
     "orta": "noun.person",
     "ust": "insan ve toplum",
-    "dayanak_synset": "boy.n.02",
-    "dayanak_tanim": "a friendly informal reference to a grown man",
+    "dayanak_synset": "young_buck.n.01",
+    "dayanak_tanim": "a teenager or a young adult male",
     "synset_sayisi": 3
   },
   "ses_mana_tasnif": {
@@ -955,32 +955,55 @@
     "fasil_ozeti": "° معنى الفصل المعجمي (شب) : هو تجمع (عن انتشار أو ضعف) مع تركز كما تتجمع قوة الشابّ والشَبَبَ -في (شبب)، وكما يخالط الشيء غيره فيمتزج به- في (شوب)، وكما ينتشر الشعر الأبيض في مكان الأسود وخلاله -في (شيب)، وكما يحمل الشيء مشابه من غيره تكثر وتنتشر فيه حتى يقال أنه مثله -في (شبه).",
     "tam_metin": "{قَالَ رَبِّ إِنِّي وَهَنَ الْعَظْمُ مِنِّي وَاشْتَعَلَ الرَّأْسُ شَيْبًا وَلَمْ أَكُنْ بِدُعَائِكَ رَبِّ شَقِيًّا} [مريم: 4]\n\"الشَيْب: بياضُ الشعر إذ يخالط سوادَه. شاب يشيب \".\n° المعنى المحوري\nتحول سواد شعر الرأس إلى بياض تأثرًا بضعف الشيخوخة. {وَاشْتَعَلَ الرَّأْسُ شَيْبًا}، {ثُمَّ جَعَلَ مِنْ بَعْدِ قُوَّةٍ ضَعْفًا وَشَيْبَةً} [الروم: 54] {يَوْمًا يَجْعَلُ الْوِلْدَانَ شِيبًا} [المزمل: 17] كناية عن شدة ذلك اليوم، وقيل تشيب رءوسهم حقيقة من شدة الهول [بحر 8/ 357] أي أنه يشيّب الولدان من هوله. وهو\n(2/1101)\nحقيقة الاول. وهناك من قال إن الأطفال يبلغون في أوان الثيخوخة من طوله. وأقول إنه ليس يوم نمو. وهناك تخصيصات أخرى لا وجه لها."
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "شيبه الحزن وأشابه، وبدا فيه الشيب\nوالمشيب، وشاب شيبة، ورجل أشيب، وقوم شيب. وشيب شائب. قال:\nعجائز يطلبن شيئاً ذاهباً ... يخضبن بالحناء شيباً شائباً\nيقلن كنا مرة شبائبا",
+    "mecaz": "شابت رءوس الإكام. ورأيت الجبال شيباً: يريد بياض الصقيع والثلج. وذهب شيبان وملحان: لشهري الشتاء وهما شهرا قماح. و\" باتت بليلة شيباء \" إذا غلبها على نفسها الزوج ليلة هدائها كأنها دهيت بأمر شديد تشيب منه الذوائب.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Cebel mihverî mana",
+    "prototip": "تحول سواد شعر الرأس إلى بياض تأثرًا بضعف الشيخوخة. {وَاشْتَعَلَ الرَّأْسُ شَيْبًا}، {ثُمَّ جَعَلَ مِنْ بَعْدِ قُوَّةٍ ضَعْفًا وَشَيْبَةً} [الروم: 54] {يَوْمًا يَجْعَلُ الْوِلْدَانَ شِيبًا} [المزمل: 17] كناية عن شدة ذلك اليوم، وقيل تشيب رءوسهم حقيقة من شدة الهو",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "شابت رءوس الإكام. ورأيت الجبال شيباً: يريد بياض الصقيع والثلج. وذهب شيبان وملحان: لشهري الشتاء وهما شهرا قماح. و\" باتت بليلة شيباء \" إذا غلبها على نفسها الزوج ليلة هدائها كأنها دهيت بأمر شديد تشيب منه الذوائب.",
+        "prototipe_benzerlik": 0.247,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.247,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["living_thing.n.01", "young.a.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "خلق الإنسان",
     "bab": "التشعث",
-    "kok_gecis": 57.7,
-    "kitapta_gecis": 24.1,
+    "kok_gecis": 57.4,
+    "kitapta_gecis": 23.9,
     "zenginlesme": 4.88
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "kume": 2,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 466
     },
     "orta": {
-      "kume": 42,
-      "merkez_kok": "وبر",
-      "merkez_mana": "Vaber: yün, deve tüyü; vebr: tavşan",
-      "boy": 84
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 266,
-      "merkez_kok": "صلع",
-      "merkez_mana": "bald pate, bald head",
-      "boy": 9
+      "kume": 18,
+      "merkez_kok": "جهو",
+      "merkez_mana": "",
+      "boy": 7
     }
   },
   "kaliplar": {

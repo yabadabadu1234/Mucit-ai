@@ -1688,6 +1688,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "فسخ المجبّر يده إذا فك مفصلها، وسقط فانفسخت يده. وتفسّخ الشّعر عن الجلد واللحم عن العظم. وتفسّخت الفأرة في البئر. وتفسّخ فلان تحت العبء الثقيل. ودخل يفسخ ثيابه، وافسخ ثيابك.",
+    "mecaz": "فسخ البيع، وفاسخه البيع، وتفاسخاه.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "فسخ المجبّر يده إذا فك مفصلها، وسقط فانفسخت يده. وتفسّخ الشّعر عن الجلد واللحم عن العظم. وتفسّخت الفأرة في البئر. وتفسّخ فلان تحت العبء الثقيل. ودخل يفسخ ثيابه، وافسخ ثيابك.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "فسخ البيع، وفاسخه البيع، وتفاسخاه.",
+        "prototipe_benzerlik": 0.358,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.358,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["act.n.02", "crumble.v.01", "decay.v.02", "devolve.v.03", "disintegrate.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "خلق الإنسان",
@@ -1698,22 +1721,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "kume": 5,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 375
     },
     "orta": {
-      "kume": 36,
-      "merkez_kok": "نجس",
-      "merkez_mana": "Nicis: pislik, necis",
-      "boy": 123
+      "kume": 14,
+      "merkez_kok": "غدر",
+      "merkez_mana": "Gadr: ihanet, hile",
+      "boy": 153
     },
     "ince": {
-      "kume": 233,
+      "kume": 80,
       "merkez_kok": "هدم",
       "merkez_mana": "Hadm: yıkmak, yıkılmak",
-      "boy": 19
+      "boy": 43
     }
   },
   "kaliplar": {

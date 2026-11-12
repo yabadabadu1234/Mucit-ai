@@ -1630,16 +1630,54 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "immigrate.v.03",
+    "ince": "emigrate.v.01",
     "orta": "verb.change",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "immigrate.v.03",
-    "dayanak_tanim": "come into a new country and change residency",
+    "dayanak_synset": "emigrate.v.01",
+    "dayanak_tanim": "leave one's country of residence for a new one",
     "synset_sayisi": 6
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "نزحت البئر، وبئر نزوح ونزح: قليلة الماء. وبلد نازح، وقد نزح نزوحاً، وانتزح انتزاحاً: بعد. وإبل منازيح: من بلاد بعيدة. قال أبو ذؤيب:\nوصرّح الموت عن غلب كأنهم ... جرب يدافعها الساقي منازيح",
+    "mecaz": "أنت من الذّم بمنتزح. قال:\nوأنت من الغوائل حين ترمى ... ومن ذم الرجال بمنتزاح\nويقال: إن شرّك لسرح، وخيرك نزح؛ قليل.\nن\nز\nر\nمال نزر: قليل. وقد نزل نزارة. وتنزّر من الشيء تقلّل منه، وعطاء منزور: نزر. ونزرت الرجل. ألححت عليه في مسألة العلم والعطاء فهو منزور. وفلان لا يعطى حتى ينزر، ولا يطيع حتى يهزر. قال:\nفخذ عفو من آتاك لا تنزرنه ... فعند بلغوه الكدّ رنق المشارب\nوتنزّر فلان: انتمى إلى نزار.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "نزحت البئر، وبئر نزوح ونزح: قليلة الماء. وبلد نازح، وقد نزح نزوحاً، وانتزح انتزاحاً: بعد. وإبل منازيح: من بلاد بعيدة. قال أبو ذؤيب: وصرّح الموت عن غلب كأنهم ... جرب يدافعها الساقي منازيح",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "أنت من الذّم بمنتزح. قال:",
+        "prototipe_benzerlik": 0.183,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "ويقال: إن شرّك لسرح، وخيرك نزح؛ قليل.",
+        "prototipe_benzerlik": 0.194,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "مال نزر: قليل. وقد نزل نزارة. وتنزّر من الشيء تقلّل منه، وعطاء منزور: نزر. ونزرت الرجل. ألححت عليه في مسألة العلم والعطاء فهو منزور. وفلان لا يعطى حتى ينزر، ولا يطيع حتى يهزر. قال:",
+        "prototipe_benzerlik": 0.635,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وتنزّر فلان: انتمى إلى نزار.",
+        "prototipe_benzerlik": 0.187,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.3,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["drain.v.03", "emigrate.v.01", "exit.v.01", "immigrate.v.03", "living_thing.n.01", "migrate.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -1650,22 +1688,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "kume": 5,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 375
     },
     "orta": {
-      "kume": 38,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 203
+      "kume": 14,
+      "merkez_kok": "غدر",
+      "merkez_mana": "Gadr: ihanet, hile",
+      "boy": 153
     },
     "ince": {
-      "kume": 246,
-      "merkez_kok": "رحل",
-      "merkez_mana": "Rahl: göç, yolculuk; rahîl: göç",
-      "boy": 18
+      "kume": 77,
+      "merkez_kok": "حيد",
+      "merkez_mana": "Hayd: sapmak, uzaklaşmak; hayd: uzak",
+      "boy": 39
     }
   },
   "kaliplar": {

@@ -830,6 +830,54 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "زند النار يزندها: قدحها.",
+    "mecaz": "قولهم للحقير: \" زندان في مرقعة \" وهما الزند الأعلى والزندة السفلى. وزندوا نار الحرب. قال الكميت:\nإذا زندوا ناراً ليوم كريهةٍ ... سبقنا إلى إيقادها من تنورا\nوفلان زند: متين، ومزند: بخيل لا يبض بشيء. وعطاء مزند: متين، ومزند: بخيل لا يبض بشيء. وعطاء مزند: قليل مضيق. وثوب مزند: ضيق العرض قصيف. ومزادة مزندة: دقيقة في طول بينما ترى فيها شيئاً إذ لا شيء فيها. وتزند في أمر كذا: تضيق وحرج صدره. وسألته مسألة فتزند إذا\nضاق بالجواب وغضب. قال عديّ:\nإذا أنت فاكهت الرجال فلا تلع ... وقل مثل ما قالوا ولا تتزند\nالولع: الكذب وقد ولع يلع. وللفرس منخر لم يزند: لم يضيق حين خلق. قال طلق بن عدي:\nومنخر إذ قيض لم يزند\nوفلان وارى الزناد \" وكابي الزناد \". و\" وريت بك زنادي \" وأنا مقتدح بزندك، وكل خير عندي من عندك. وما رأيت من يديها إلا كفيها وزنديها وهما عظما الساعد شبها بزندي القدح.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "زند النار يزندها: قدحها.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "قولهم للحقير: \" زندان في مرقعة \" وهما الزند الأعلى والزندة السفلى. وزندوا نار الحرب. قال الكميت:",
+        "prototipe_benzerlik": 0.539,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وفلان زند: متين، ومزند: بخيل لا يبض بشيء. وعطاء مزند: متين، ومزند: بخيل لا يبض بشيء. وعطاء مزند: قليل مضيق. وثوب مزند: ضيق العرض قصيف. ومزادة مزندة: دقيقة في طول بينما ترى فيها شيئاً إذ لا شيء فيها. وتزند في أمر كذا: تضيق وحرج صدره. وسألته مسألة فتزند إذا",
+        "prototipe_benzerlik": 0.394,
+        "halka": "orta"
+      },
+      {
+        "cumle": "ضاق بالجواب وغضب. قال عديّ:",
+        "prototipe_benzerlik": 0.429,
+        "halka": "orta"
+      },
+      {
+        "cumle": "الولع: الكذب وقد ولع يلع. وللفرس منخر لم يزند: لم يضيق حين خلق. قال طلق بن عدي:",
+        "prototipe_benzerlik": 0.459,
+        "halka": "orta"
+      },
+      {
+        "cumle": "ومنخر إذ قيض لم يزند",
+        "prototipe_benzerlik": 0.481,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وفلان وارى الزناد \" وكابي الزناد \". و\" وريت بك زنادي \" وأنا مقتدح بزندك، وكل خير عندي من عندك. وما رأيت من يديها إلا كفيها وزنديها وهما عظما الساعد شبها بزندي القدح.",
+        "prototipe_benzerlik": 0.447,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.458,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["artifact.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -840,22 +888,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 11,
-      "merkez_kok": "دحر",
-      "merkez_mana": "Dahr: itmek, uzaklaştırmak",
-      "boy": 179
+      "kume": 37,
+      "merkez_kok": "وقد",
+      "merkez_mana": "Vakd: ateş yakmak; vakîd: ateş",
+      "boy": 45
     },
     "ince": {
-      "kume": 61,
-      "merkez_kok": "قحم",
-      "merkez_mana": "Kuhm: ateşe atmak, kendini atmak",
-      "boy": 24
+      "kume": 243,
+      "merkez_kok": "لهب",
+      "merkez_mana": "Lehb: alev, ateş",
+      "boy": 28
     }
   },
   "kaliplar": {

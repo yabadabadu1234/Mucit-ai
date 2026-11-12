@@ -764,6 +764,17 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "به طحال وهو داء الطحال، وطحلته: أصبت طحاله، وقد طحل وطحل فهو مطحول وطحل. ورماد أطحل، وشراب أطحل: كدر على لون الطحال، وفيه طحلة. وماء طحل. وقد طحل إذا فسد وتغير وعلاه الطحلب. قال زهير:\nيعمن في شربات ماؤها طحل ... على الجذوع يخفن الغم والغرقا\nوفيه وجهان أن يكون من الطحال أو من معنى الطحلب. وطحلب الماء. وعين مطحلبة. قال ذو الرمة:\nعيناً مطحلبة الأرجاء طامية\nوفي مثل \" ضيعت البكار على طحال \" يضرب لمن طلب حاجة إلى من أساء إليه، وذلك أن سويد ابن أبي كاهل هجا بني الغبر بقوله:\nمن سره النيك بغير مال ... فالغبريات على طحال\nشواغر يلمعن بالرجال\nوهو مكان ثم طلب إليهم بعد أن يفتكوه من أسر وقع فيه.",
+    "mecaz": "",
+    "kinaye": "",
+    "mecaz_var": false
+  },
+  "prototip_yayilim_tasnif": {
+    "durum": "prototip veya mecaz kolu yok"
+  },
+  "kolekzifikasyon_kavramlari": ["living_thing.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الحشرات",
@@ -774,19 +785,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
-      "merkez_kok": "حنج",
-      "merkez_mana": "",
-      "boy": 426
-    },
-    "orta": {
       "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 261
+      "boy": 466
+    },
+    "orta": {
+      "kume": 3,
+      "merkez_kok": "قمح",
+      "merkez_mana": "Kamh: buğday",
+      "boy": 64
     },
     "ince": {
-      "kume": 9,
+      "kume": 5,
       "merkez_kok": "قمح",
       "merkez_mana": "Kamh: buğday",
       "boy": 11

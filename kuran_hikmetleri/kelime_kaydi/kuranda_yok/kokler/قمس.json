@@ -771,6 +771,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "قمسه في الماء: غمسه. والصبيان يتقامسون في الماء: يتغاطّون. وغرق في قاموس البحر: في قعره الأقصى، وقال فلان قولاً بلغ قاموس البحر.",
+    "mecaz": "قولهم للرجل إذا خاصم قرنه: إنما يقامس حوتاً.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "قمسه في الماء: غمسه. والصبيان يتقامسون في الماء: يتغاطّون. وغرق في قاموس البحر: في قعره الأقصى، وقال فلان قولاً بلغ قاموس البحر.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "قولهم للرجل إذا خاصم قرنه: إنما يقامس حوتاً.",
+        "prototipe_benzerlik": 0.545,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.545,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["vocabulary.n.02"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -781,22 +804,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 7,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 331
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 30,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 103
+      "kume": 35,
+      "merkez_kok": "نقع",
+      "merkez_mana": "Nak': su birikintisi; nakî': ıslak",
+      "boy": 47
     },
     "ince": {
-      "kume": 202,
-      "merkez_kok": "جرز",
-      "merkez_mana": "Cerz: kuraklık, kurumuş toprak",
-      "boy": 15
+      "kume": 237,
+      "merkez_kok": "رطط",
+      "merkez_mana": "",
+      "boy": 29
     }
   },
   "kaliplar": {

@@ -1669,8 +1669,8 @@
     "ince": "whole.n.02",
     "orta": "noun.artifact",
     "ust": "cisim ve eşya",
-    "dayanak_synset": "weaponry.n.01",
-    "dayanak_tanim": "weapons considered collectively",
+    "dayanak_synset": "armament.n.01",
+    "dayanak_tanim": "weaponry used by military or naval force",
     "synset_sayisi": 8
   },
   "ses_mana_tasnif": {
@@ -1681,6 +1681,29 @@
     "fasil_ozeti": "° معنى الفصل المعجمي (سل): هو انسحاب الشيء ممتدًّا من أثناء أو فيها",
     "tam_metin": "{فَلْتَقُمْ طَائِفَةٌ مِنْهُمْ مَعَكَ وَلْيَأْخُذُوا أَسْلِحَتَهُمْ} [النساء: 102]\n\"السلاح - ككتاب: اسم جامع لآلة الحرب، وخُصَّ به ما كان من الحديد، ويطلق على السيف وحده. والإسْليح: شجرة تغزُر عليها الإبل \".\n° المعنى المحوري\nنفاذ بحدّة وامتداد: كالسيف يُنفَذ به في بدن العدو بامتداد. {وَلْيَأْخُذُوا حِذْرَهُمْ وَأَسْلِحَتَهُمْ} [النساء: 102]. وغزارة اللبن نفاذٌ بقوة وتوالٍ. ومنه: \"سَلَح (فتح): راث \" (نفاذ ما في الجوف من مادة حادة الوقع على الحس)."
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "أخذ سلاحه، وخذوا أسلحتكم وتسلح فلان، وسلحته، وكل عدة للحرب فهو سلاح. وفي موضع كذا مسلحة ومسالح وهم قوم وكلوا بمرصد معهم السلاح، وفلان مسلحي. وهذه الحشيشة تسلح الإبل. و\" أسلح من حبارى \".",
+    "mecaz": "أخذت إليّ الإبل سلاحها، وتسلحت بأسلحتها إذا سمنت في عينك وحسنت. وطلع ذو السلاح وهو السماك الرامح.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Cebel mihverî mana",
+    "prototip": "نفاذ بحدّة وامتداد: كالسيف يُنفَذ به في بدن العدو بامتداد. {وَلْيَأْخُذُوا حِذْرَهُمْ وَأَسْلِحَتَهُمْ} [النساء: 102]. وغزارة اللبن نفاذٌ بقوة وتوالٍ. ومنه: \"سَلَح (فتح): راث \" (نفاذ ما في الجوف من مادة حادة الوقع على الحس).",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "أخذت إليّ الإبل سلاحها، وتسلحت بأسلحتها إذا سمنت في عينك وحسنت. وطلع ذو السلاح وهو السماك الرامح.",
+        "prototipe_benzerlik": 0.542,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.542,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["act.n.02", "arm.v.01", "arm.v.02", "armed.a.01", "artifact.n.01", "group_action.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السلاح",
@@ -1691,22 +1714,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
+      "kume": 8,
       "merkez_kok": "قبب",
       "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "boy": 604
     },
     "orta": {
-      "kume": 43,
-      "merkez_kok": "خرز",
-      "merkez_mana": "awl",
-      "boy": 104
+      "kume": 34,
+      "merkez_kok": "نقق",
+      "merkez_mana": "to croak (of frogs)",
+      "boy": 255
     },
     "ince": {
-      "kume": 281,
-      "merkez_kok": "خرز",
-      "merkez_mana": "awl",
-      "boy": 42
+      "kume": 229,
+      "merkez_kok": "حبل",
+      "merkez_mana": "Habl: ip; hubl: ahit",
+      "boy": 25
     }
   },
   "kaliplar": {

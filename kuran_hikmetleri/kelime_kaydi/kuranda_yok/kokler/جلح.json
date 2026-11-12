@@ -728,6 +728,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "رجل أجلح، وبرأسه جلحة.",
+    "mecaz": "هودج أجلح: لا قبة له. وتيس وثور أجلح، وعنز وبقرة جلحاء: بلا قرن. وقرية جلحاء: لا حصن لها. وهضبة جلحاء ملساء. ويوم أجلح وأصلع: شديد. قال:\nقد لاحها يوم سموم ملهاب ... أجلح ما لشمسه من جلباب\nوجالحني فلان وجلح عليّ: كاشفني بالعداوة، ولا تجلح علينا يا فلان، وجلح فلان تجليح الذئب. وفلان وقع مجلح. وفي وجهه تجيح وهو الإقدام على الشر وتكشيف العداوة وتصريحها. وقال العجاج:\nوقول لا تهلكن وقول ... جلح ولا تحصر ومن لا يحتل\nيضعف ويقتل بالليالي القتل\nأي صمم.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "رجل أجلح، وبرأسه جلحة.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "هودج أجلح: لا قبة له. وتيس وثور أجلح، وعنز وبقرة جلحاء: بلا قرن. وقرية جلحاء: لا حصن لها. وهضبة جلحاء ملساء. ويوم أجلح وأصلع: شديد. قال:",
+        "prototipe_benzerlik": 0.261,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وجالحني فلان وجلح عليّ: كاشفني بالعداوة، ولا تجلح علينا يا فلان، وجلح فلان تجليح الذئب. وفلان وقع مجلح. وفي وجهه تجيح وهو الإقدام على الشر وتكشيف العداوة وتصريحها. وقال العجاج:",
+        "prototipe_benzerlik": 0.39,
+        "halka": "orta"
+      },
+      {
+        "cumle": "يضعف ويقتل بالليالي القتل",
+        "prototipe_benzerlik": 0.227,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.293,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السباع",
@@ -738,22 +771,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "kume": 2,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 466
     },
     "orta": {
-      "kume": 42,
-      "merkez_kok": "وبر",
-      "merkez_mana": "Vaber: yün, deve tüyü; vebr: tavşan",
-      "boy": 84
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 266,
-      "merkez_kok": "صلع",
-      "merkez_mana": "bald pate, bald head",
-      "boy": 9
+      "kume": 18,
+      "merkez_kok": "جهو",
+      "merkez_mana": "",
+      "boy": 7
     }
   },
   "kaliplar": {

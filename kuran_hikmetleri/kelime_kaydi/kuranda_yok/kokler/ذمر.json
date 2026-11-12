@@ -760,16 +760,39 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "event.n.01",
+    "ince": "message.n.02",
     "orta": "noun.communication",
     "ust": "söz ve haber",
-    "dayanak_synset": "grumble.n.02",
-    "dayanak_tanim": "a complaint uttered in a low and indistinct tone",
+    "dayanak_synset": "charge.n.02",
+    "dayanak_tanim": "(criminal law) a pleading describing some wrong or offense",
     "synset_sayisi": 5
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "ذمره على الأمر: حضّه مع لوم ليجدّ فيه. يقال: القائد يذمر أصحابه في الحرب: يسمعهم المكروه ليشحذهم، ورأيتهم يتذامرون في الحرب. وأقبل يتذمر: يلوم نفسه على التفريط في فعله وهو ينشطها لئلا تفرط ثانية، وفلان يتذمم ويتذمر، ويرفع أذياله ويتشمر. وهو ذمر من الأذمار: شجاع. وذمر الراعي السليل: مسّ فهقته وهي مغرز الرأس في العنق. وتسمى المذمر ليعلم أذكر هو أم أنثى. قال أحيحة:\nوما تدري إذا ذمرت سقباً ... لغيرك أم يكون لك الفصيل\nوالمذمر للإبل كالقابلة للناس. وهو حامي الذمار إذا حمي ما لو لم يحمه ليم وعنف من حماه وحريمه كقولهم: حامي الحقيقة.",
+    "mecaz": "بلغ الأمر المذمر. كقولهم: بلغ المخنق. قال الجعديّ:\nوحيّ أبي بكر ولا حيّ مثلهم ... إذا بلغ الأمر العماس المذمرا",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "ذمره على الأمر: حضّه مع لوم ليجدّ فيه. يقال: القائد يذمر أصحابه في الحرب: يسمعهم المكروه ليشحذهم، ورأيتهم يتذامرون في الحرب. وأقبل يتذمر: يلوم نفسه على التفريط في فعله وهو ينشطها لئلا تفرط ثانية، وفلان يتذمم ويتذمر، ويرفع أذياله ويتشمر. وهو ذمر من الأذمار: شجا",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "بلغ الأمر المذمر. كقولهم: بلغ المخنق. قال الجعديّ:",
+        "prototipe_benzerlik": 0.158,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.158,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["act.n.02", "complain.v.01", "murmur.v.01", "statement.n.01", "wail.v.02"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الغرائز",
@@ -781,18 +804,18 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 509
     },
     "orta": {
-      "kume": 7,
-      "merkez_kok": "كرب",
-      "merkez_mana": "Karb: sıkıntı, keder; kurbet: sıkıntı",
-      "boy": 139
+      "kume": 8,
+      "merkez_kok": "بءس",
+      "merkez_mana": "Be'es: azap, şiddet, zorluk",
+      "boy": 142
     },
     "ince": {
-      "kume": 35,
+      "kume": 45,
       "merkez_kok": "حزن",
       "merkez_mana": "Huzn: üzüntü, keder; hazen: keder",
       "boy": 33

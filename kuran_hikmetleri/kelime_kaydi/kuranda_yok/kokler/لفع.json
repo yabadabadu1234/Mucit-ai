@@ -700,6 +700,44 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "تلفّعت المرأة بمرطها والتفعت: اشتملت، وما لها لفاع: ما تتلفّع به، ولفّعت رأسها.",
+    "mecaz": "لفّع الشيب رأسه ولحيته: شملهما، وتلفّع بالمشيب. قال سويد:\nكيف يرجون سقاطي بعدما ... لفّع الرأس مشيبٌ وصلع\nوتلفّع الشجر والأرض بالخضرة؛ وتلفّعت القارة بالسّراب. قال كعب بن زهير:\nكأن أوب ذراعيها إذا عرقت ... وقد تلفّع بالقور العساقيل\nوتلفّعنا على جيشهم: اشتملنا واستبحناه. قال الحطيئة:\nفنحن تلفّعنا على عسكريهم ... جهاراً وما طبّي ببغي ولا فخر\nوالرجل يلفع الطعام. يلفّه لفاً وهو الأكل الكثير.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "تلفّعت المرأة بمرطها والتفعت: اشتملت، وما لها لفاع: ما تتلفّع به، ولفّعت رأسها.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "لفّع الشيب رأسه ولحيته: شملهما، وتلفّع بالمشيب. قال سويد:",
+        "prototipe_benzerlik": 0.558,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وتلفّع الشجر والأرض بالخضرة؛ وتلفّعت القارة بالسّراب. قال كعب بن زهير:",
+        "prototipe_benzerlik": 0.326,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وتلفّعنا على جيشهم: اشتملنا واستبحناه. قال الحطيئة:",
+        "prototipe_benzerlik": 0.312,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "والرجل يلفع الطعام. يلفّه لفاً وهو الأكل الكثير.",
+        "prototipe_benzerlik": 0.235,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.358,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "اللباس",
@@ -711,21 +749,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 509
     },
     "orta": {
-      "kume": 10,
-      "merkez_kok": "ذعن",
-      "merkez_mana": "Za'n: boyun eğmek, kabul etmek",
-      "boy": 183
+      "kume": 7,
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 259
     },
     "ince": {
-      "kume": 53,
-      "merkez_kok": "ذعن",
-      "merkez_mana": "Za'n: boyun eğmek, kabul etmek",
-      "boy": 27
+      "kume": 38,
+      "merkez_kok": "طيع",
+      "merkez_mana": "",
+      "boy": 14
     }
   },
   "kaliplar": {

@@ -730,29 +730,52 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "دفعه يجؤجؤه وهو عظم الصدر، وقيل وسطه، وعليك بجأجىء الطير. قال:\nكعقيلة الأدحيّ بات يحفها ... ريش النعام وزال عنها الجؤجؤ",
+    "mecaz": "شقت السفينة الماء بجؤجؤها. وحيززومها.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "دفعه يجؤجؤه وهو عظم الصدر، وقيل وسطه، وعليك بجأجىء الطير. قال: كعقيلة الأدحيّ بات يحفها ... ريش النعام وزال عنها الجؤجؤ",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "شقت السفينة الماء بجؤجؤها. وحيززومها.",
+        "prototipe_benzerlik": 0.34,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.34,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الأفعال والمصادر",
     "bab": "",
-    "kok_gecis": 349.7,
+    "kok_gecis": 349.2,
     "kitapta_gecis": 63.0,
-    "zenginlesme": 2.33
+    "zenginlesme": 2.34
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 2,
+      "kume": 1,
       "merkez_kok": "قره",
       "merkez_mana": "",
       "boy": 759
     },
     "orta": {
-      "kume": 4,
+      "kume": 2,
       "merkez_kok": "فلص",
       "merkez_mana": "",
       "boy": 494
     },
     "ince": {
-      "kume": 22,
+      "kume": 4,
       "merkez_kok": "شعف",
       "merkez_mana": "",
       "boy": 183

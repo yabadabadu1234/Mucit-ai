@@ -1200,6 +1200,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "رجل أقعس، وبه قعس وهو دخول الظهر وخروج الصدر، وتقاعس الرجل: أخرج صدره. وتقول: إذا رأيت أبكاراً لعساً، وعجائز قعساً، فقل لعاً وتعساً.",
+    "mecaz": "عن أقعس، وعزة قعساء. وتقاعس عن الأمر. وليلٌ أقعس: كأنه لا يبرح طولاً، وقد تقاعس الليل، كقولك: برك الليل. قال النابغة:\nتقاعس حتى قلت ليس بمنقض ... وليس الذي يرعى النجوم بآيب\nكما يؤوب راعي الماشية إذا أمسى.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "رجل أقعس، وبه قعس وهو دخول الظهر وخروج الصدر، وتقاعس الرجل: أخرج صدره. وتقول: إذا رأيت أبكاراً لعساً، وعجائز قعساً، فقل لعاً وتعساً.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "عن أقعس، وعزة قعساء. وتقاعس عن الأمر. وليلٌ أقعس: كأنه لا يبرح طولاً، وقد تقاعس الليل، كقولك: برك الليل. قال النابغة:",
+        "prototipe_benzerlik": 0.6,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "كما يؤوب راعي الماشية إذا أمسى.",
+        "prototipe_benzerlik": 0.311,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.455,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "المثنيات",
@@ -1210,21 +1238,21 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "kume": 5,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 375
     },
     "orta": {
       "kume": 13,
       "merkez_kok": "صدد",
       "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
-      "boy": 93
+      "boy": 76
     },
     "ince": {
-      "kume": 69,
-      "merkez_kok": "كسل",
-      "merkez_mana": "Kesel: tembellik",
+      "kume": 75,
+      "merkez_kok": "قعس",
+      "merkez_mana": "to make one's chest to stick out",
       "boy": 14
     }
   },

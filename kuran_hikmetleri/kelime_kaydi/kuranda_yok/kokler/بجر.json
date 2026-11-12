@@ -714,6 +714,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "لقيت منه البجاري أي الدواهي. قال:\nتزبدها حداء يعلم أنه ... هو الكاذب الآتي الأمور البجاريا\nوجاء فلان بأمر بجر. قال:\nتعجبت من أم حصان رأيتها ... لها ولد من زوجها وهي عاقر\nفقلت لها بجراً فقالت مجيبتي ... أتعجب من هذا ولي زوج آخر",
+    "mecaz": "ألقيت إليه عجري وبجري إذا أطلعته على معائبك لثقتك به. وأصل العجر العروق المتعقدة الناتئة، والبجر ما تعقد منها على البطن خاصة. وتقول: صرر بجر، وأكياس عجر.\nأنشد سيبويه:\nيمرّون بالدهنا خفافاً عيابهم ... ويخرجن من دارين بجر الحقائب",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "لقيت منه البجاري أي الدواهي. قال: تزبدها حداء يعلم أنه ... هو الكاذب الآتي الأمور البجاريا وجاء فلان بأمر بجر. قال: تعجبت من أم حصان رأيتها ... لها ولد من زوجها وهي عاقر فقلت لها بجراً فقالت مجيبتي ... أتعجب من هذا ولي زوج آخر",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "ألقيت إليه عجري وبجري إذا أطلعته على معائبك لثقتك به. وأصل العجر العروق المتعقدة الناتئة، والبجر ما تعقد منها على البطن خاصة. وتقول: صرر بجر، وأكياس عجر.",
+        "prototipe_benzerlik": 0.448,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.448,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["point.n.02"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "خلق الإنسان",
@@ -724,22 +747,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
-      "merkez_kok": "حنج",
-      "merkez_mana": "",
-      "boy": 426
-    },
-    "orta": {
       "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 261
+      "boy": 466
+    },
+    "orta": {
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 18,
-      "merkez_kok": "لدم",
-      "merkez_mana": "Dammam (the capital city of the Eastern Province, Saudi Arabia)",
-      "boy": 53
+      "kume": 24,
+      "merkez_kok": "لوت",
+      "merkez_mana": "Levt: bükmek, eğmek",
+      "boy": 63
     }
   },
   "kaliplar": {

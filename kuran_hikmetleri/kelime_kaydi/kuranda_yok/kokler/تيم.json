@@ -740,32 +740,60 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "هو تيم الله أي عبد الله. وتيمه: عبده.",
+    "mecaz": "تامت فلانة قلبه وتيمته، وهو متيم وقرأت شعر المتيمين. قال لقيط بن زرارة:\nتامت فؤادك لو تجزيك ما صنعت ... إحدى نساء بني ذهل بن شهباناً\nوعن ابن الأعرابيّ: تيمت قلبه: علقته، من التيمة وهي التميمة. وقيل ضللته، من التيماء وهي المفازة المضلة.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "هو تيم الله أي عبد الله. وتيمه: عبده.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "تامت فلانة قلبه وتيمته، وهو متيم وقرأت شعر المتيمين. قال لقيط بن زرارة:",
+        "prototipe_benzerlik": 0.502,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وعن ابن الأعرابيّ: تيمت قلبه: علقته، من التيمة وهي التميمة. وقيل ضللته، من التيماء وهي المفازة المضلة.",
+        "prototipe_benzerlik": 0.526,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.514,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["capture.v.02"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النساء",
     "bab": "",
-    "kok_gecis": 52.3,
-    "kitapta_gecis": 7.0,
-    "zenginlesme": 7.02
+    "kok_gecis": 35.8,
+    "kitapta_gecis": 4.5,
+    "zenginlesme": 6.59
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 17,
-      "merkez_kok": "زين",
-      "merkez_mana": "Zîne: süs, güzellik; zeyn: güzelleştirmek",
-      "boy": 177
+      "kume": 25,
+      "merkez_kok": "وسل",
+      "merkez_mana": "Vesîle: aracı, yol",
+      "boy": 130
     },
     "ince": {
-      "kume": 92,
+      "kume": 144,
       "merkez_kok": "ولع",
       "merkez_mana": "ablaze, on fire",
-      "boy": 6
+      "boy": 8
     }
   },
   "kaliplar": {

@@ -1883,7 +1883,7 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "part.n.01",
+    "ince": "substance.n.01",
     "orta": "noun.substance",
     "ust": "tabiat",
     "dayanak_synset": "manure.n.01",
@@ -1893,6 +1893,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "وقفوا على دمنة الدار وهي البقعة التي سوّدها أهلها وبالت فيها وبعرت مواشيهم. ودمّنوا المكان، وهو مدمّنهم، وفي دمنتهم دمن كثير وهو السرقين نفسه. ودمن الماء: وقع فيه الدمن. ودمن أرضه. وأرض مدمونة: مسرقته.",
+    "mecaz": "في قلبه دمنة وهو الحقد الثابت اللابد، وقد دمن قلبه عليه. ودمن فناء فلان غشيه ولزمه. ولا أدمن بابك: لا أغشاه. قال كعب بن زهير:\nأرعى الأمانة لا أخون ولا أرى ... أبداً أدمّن عرصة الإخوان\nوفلان مدمن خمر: لا يقلع عن شربها وهو يدمن شربها. وأدمن الأمر وأدمن عليه: واظب.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "وقفوا على دمنة الدار وهي البقعة التي سوّدها أهلها وبالت فيها وبعرت مواشيهم. ودمّنوا المكان، وهو مدمّنهم، وفي دمنتهم دمن كثير وهو السرقين نفسه. ودمن الماء: وقع فيه الدمن. ودمن أرضه. وأرض مدمونة: مسرقته.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "في قلبه دمنة وهو الحقد الثابت اللابد، وقد دمن قلبه عليه. ودمن فناء فلان غشيه ولزمه. ولا أدمن بابك: لا أغشاه. قال كعب بن زهير:",
+        "prototipe_benzerlik": 0.7,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وفلان مدمن خمر: لا يقلع عن شربها وهو يدمن شربها. وأدمن الأمر وأدمن عليه: واظب.",
+        "prototipe_benzerlik": 0.322,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.511,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["elate.v.01", "material.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النساء",
@@ -1904,21 +1932,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 509
     },
     "orta": {
-      "kume": 12,
-      "merkez_kok": "خيب",
-      "merkez_mana": "Hayb: boşa çıkmak, umutsuz olmak; hâib: hayal kırıklığı",
-      "boy": 58
+      "kume": 7,
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 259
     },
     "ince": {
-      "kume": 65,
-      "merkez_kok": "خيب",
-      "merkez_mana": "Hayb: boşa çıkmak, umutsuz olmak; hâib: hayal kırıklığı",
-      "boy": 38
+      "kume": 39,
+      "merkez_kok": "سلب",
+      "merkez_mana": "Selb: soymak, çalmak; selb: yoksun bırakmak",
+      "boy": 24
     }
   },
   "kaliplar": {

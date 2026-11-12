@@ -1408,16 +1408,27 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "message.n.02",
-    "orta": "noun.communication",
+    "ince": "assert.v.01",
+    "orta": "verb.communication",
     "ust": "söz ve haber",
-    "dayanak_synset": "assertion.n.01",
-    "dayanak_tanim": "a declaration that is made emphatically (as if no supporting evidence were necessary)",
+    "dayanak_synset": "assert.v.01",
+    "dayanak_tanim": "state categorically",
     "synset_sayisi": 7
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "جزمت ما بيني وبينه: قطعته، وجزم اليمين: قطعها البتة. وجزم على كذا: عزم عليه. وأمرته أمراً جزماً، وحلف يميناً جزماً. وتقول: هذا حكم جزم، وقضاء حتم. وقلم جزم: مستوى القط لا حرف له. و\" التكبير جزم والسلام جزم \" وهو ترك الإفراط في الهمز والمدّ.",
+    "mecaz": "",
+    "kinaye": "",
+    "mecaz_var": false
+  },
+  "prototip_yayilim_tasnif": {
+    "durum": "prototip veya mecaz kolu yok"
+  },
+  "kolekzifikasyon_kavramlari": ["affirm.v.02", "affirm.v.03", "assert.v.01", "assert.v.03", "confirm.v.01", "measure.v.04", "statement.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الأضداد",
@@ -1428,22 +1439,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "kume": 5,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 375
     },
     "orta": {
-      "kume": 38,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 203
+      "kume": 14,
+      "merkez_kok": "غدر",
+      "merkez_mana": "Gadr: ihanet, hile",
+      "boy": 153
     },
     "ince": {
-      "kume": 247,
-      "merkez_kok": "قلع",
-      "merkez_mana": "Kal': sökmek, kökünden koparmak",
-      "boy": 36
+      "kume": 80,
+      "merkez_kok": "هدم",
+      "merkez_mana": "Hadm: yıkmak, yıkılmak",
+      "boy": 43
     }
   },
   "kaliplar": {

@@ -841,11 +841,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "spend.v.01",
-    "orta": "verb.stative",
-    "ust": "hâl ve vasıf",
-    "dayanak_synset": "spend.v.01",
-    "dayanak_tanim": "pass time in a specific way",
+    "ince": "die.v.01",
+    "orta": "verb.change",
+    "ust": "fiil ve hadise",
+    "dayanak_synset": "die.v.01",
+    "dayanak_tanim": "pass from physical life and lose all bodily attributes and functions necessary to sustain life",
     "synset_sayisi": 13
   },
   "ses_mana_tasnif": {
@@ -856,6 +856,43 @@
     "fasil_ozeti": "° معنى الفصل المعجمي (غط) : هو دس الشيء في أثناء شيء فيُغَطَّي. كغط الشيء في الماء غَمْسه فيه -في (غطط)، وكالغطاء الذي يغطّي به الشيء فيستره -في (غطو غطى)، وكالغَوْطة الوهدة في الأرض المطمئنة -في (غوط) - والاستتار لازم لمعنى الانخفاض؛ لأن ما يكون في المنخفَضَ يستتر.",
     "tam_metin": "{أَوْ جَاءَ أَحَدٌ مِنْكُمْ مِنَ الْغَائِطِ} [المائدة: 6]\n\"الغَوْطة -بالفتح: الوَهْدة في الأرض المطمئنة. والغائط: المتسع من الأرض مع طمأنينة. وقال رجل: \"قل لأهل الغائط يحسنوا مخالطتي \"أراد أهل الوادي، \"وربما كان فرسخًا وكانت به الرياض \".\n° المعنى المحوري\nغئور في شيء غليظ (كالأرض) منبسط عَرْضًا أو طولًا: كالغَوْطة والغائط الموصوفين. ومنه: \"غاط يغوط: حَفَر (أخفض). ويقال أغوِطْ بئرك: أَبْعِدْ قَعْرها. وهي بئر غويطة: بعيدة القعر. وغاط الرجل في الطين \" (غاص) (مع التجاوز عن الانبساط الأفقي في كلٍّ). ومن الغائط: الوادي المنخفض عُبِّر في {أَوْ جَاءَ أَحَدٌ مِنْكُمْ مِنَ الْغَائِطِ} عن الانتهاء من عملية الإخراج، حيث كانوا يقصدون الوديان لذلك لأنها أَسْتَر."
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "تقول: إذا نمنم في قرطاسه المشق، فكأنا في غوطة دمشق.",
+    "mecaz": "فلان يضرب الغائط.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Cebel mihverî mana",
+    "prototip": "غئور في شيء غليظ (كالأرض) منبسط عَرْضًا أو طولًا: كالغَوْطة والغائط الموصوفين. ومنه: \"غاط يغوط: حَفَر (أخفض). ويقال أغوِطْ بئرك: أَبْعِدْ قَعْرها. وهي بئر غويطة: بعيدة القعر. وغاط الرجل في الطين \" (غاص) (مع التجاوز عن الانبساط الأفقي في كلٍّ). ومن الغائط: الوا",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "فلان يضرب الغائط.",
+        "prototipe_benzerlik": 0.234,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.234,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "authorize.v.01",
+    "communicate.v.01",
+    "die.v.01",
+    "elapse.v.01",
+    "evanesce.v.01",
+    "gesticulate.v.01",
+    "happen.v.01",
+    "material.n.01",
+    "pass.v.01",
+    "pass.v.05",
+    "pass.v.22",
+    "spend.v.01",
+    "travel_by.v.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
@@ -866,22 +903,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "kume": 5,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 375
     },
     "orta": {
-      "kume": 45,
-      "merkez_kok": "متن",
-      "merkez_mana": "Metn: sağlam yer, metin; metîn: sağlam",
-      "boy": 268
+      "kume": 14,
+      "merkez_kok": "غدر",
+      "merkez_mana": "Gadr: ihanet, hile",
+      "boy": 153
     },
     "ince": {
-      "kume": 297,
-      "merkez_kok": "هضم",
-      "merkez_mana": "Hadm: sindirmek, yutmak",
-      "boy": 22
+      "kume": 78,
+      "merkez_kok": "خبط",
+      "merkez_mana": "Habt: karanlıkta yürümek, şaşırmak",
+      "boy": 40
     }
   },
   "kaliplar": {

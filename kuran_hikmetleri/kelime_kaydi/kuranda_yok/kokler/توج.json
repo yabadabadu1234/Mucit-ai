@@ -1204,16 +1204,27 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "crown.v.01",
-    "orta": "verb.social",
-    "ust": "insan ve toplum",
-    "dayanak_synset": "crown.v.01",
-    "dayanak_tanim": "invest with regal power; enthrone",
+    "ince": "location.n.01",
+    "orta": "noun.body",
+    "ust": "canlı ve beden",
+    "dayanak_synset": "crown.n.02",
+    "dayanak_tanim": "the part of a tooth above the gum that is covered with enamel",
     "synset_sayisi": 5
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "عقد عليه التاج، وملك متوج، وتوجوه فتتوج. وفي صفة العرب: العمائم تيجانها، والسيوف سيجانها. وتقول: خرج تحته الأعوجي، وعلى يده التوجي أي الصقر\nالمنسوب إلى توج، من قرى فارس. قال الشمردل اليربوعي:\nأحم من توج محض حسبه ... ممكن على الشمال مركبه",
+    "mecaz": "",
+    "kinaye": "",
+    "mecaz_var": false
+  },
+  "prototip_yayilim_tasnif": {
+    "durum": "prototip veya mecaz kolu yok"
+  },
+  "kolekzifikasyon_kavramlari": ["advertise.v.02", "crown.v.01", "promote.v.02", "region.n.01", "social_event.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الغرائز",
@@ -1224,22 +1235,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 14,
-      "merkez_kok": "جهد",
-      "merkez_mana": "Cehd: gayret, çaba; cehd: yorgunluk",
-      "boy": 135
+      "kume": 25,
+      "merkez_kok": "وسل",
+      "merkez_mana": "Vesîle: aracı, yol",
+      "boy": 130
     },
     "ince": {
-      "kume": 77,
-      "merkez_kok": "فضل",
-      "merkez_mana": "Fazl: üstünlük, ihsan, bağış",
-      "boy": 25
+      "kume": 147,
+      "merkez_kok": "رءس",
+      "merkez_mana": "Re's: baş; reîs: başkan",
+      "boy": 13
     }
   },
   "kaliplar": {

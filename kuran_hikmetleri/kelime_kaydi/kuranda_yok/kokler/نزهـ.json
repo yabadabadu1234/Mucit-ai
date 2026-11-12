@@ -1,0 +1,78 @@
+{
+  "kok": "نزهـ",
+  "sinif": "reddedildi",
+  "turkce_fiil": null,
+  "mustaklar": {},
+  "reddedilen": [
+    ["kök", "نزهـ", "üç harfli değil"]
+  ],
+  "sozlukler": {},
+  "kuran_gecisleri": 0,
+  "kuranda_var": false,
+  "sema": {
+    "sema": "graf-ic-graf",
+    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
+    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
+    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
+    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
+    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
+  },
+  "tasnif": {
+    "fasil": "نز",
+    "harf": "ن",
+    "mahrec": "zelakiyye",
+    "bolge": "dil"
+  },
+  "mana_tasnif": {
+    "durum": "Arabic WordNet v2 kaydı yok"
+  },
+  "ses_mana_tasnif": {
+    "durum": "Cebel mu'cemlerinde kök yok"
+  },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "سقيت إبلي ثم نزّهتها عن الماء: باعدتها. ويقال: تنزّهوا بحرمكم عن القوم: أبعدوها. ومكان نزه ونزيه: بعيد من الغمق ونحوه، وقد نزه نزاهة. وفي الحديث: \" إن الأردنّ أرض غمقة وإن الجابية أرض نزهة \" وأرض ذات نزهةٍ. وخرجوا يتنزّهون: يطلبون الأماكن النزهة، وهم في نزهة ونزهٍ.",
+    "mecaz": "رجل نزهٌ ونزيه عن الريب. ونزّه الله تنزيهاً. وهو يتنزه عن المطامع.\nن ز\nوفحل نزّاء، وفيه نزاء، ونزا على طروقته. ونزا الفارس على فرسه.\nومن المجاز: قلبه ينزو إلى كذا: ينازع إليه. وهو يتنزّى إلى الشرّ: يتسرّع إليه. ونزا الطعام: غلا. وعن النضر قال أبو طيبة رجل من بلعدوية:\nقد نزا البرّ في القنبع وهو وعاء الحبّ إذا جرى فيه. وأكمة نازية: مرتفعة عما حولها كأنّها نزت عن وجه الأرض. وقصعة نازية: قريبة القعر.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "سقيت إبلي ثم نزّهتها عن الماء: باعدتها. ويقال: تنزّهوا بحرمكم عن القوم: أبعدوها. ومكان نزه ونزيه: بعيد من الغمق ونحوه، وقد نزه نزاهة. وفي الحديث: \" إن الأردنّ أرض غمقة وإن الجابية أرض نزهة \" وأرض ذات نزهةٍ. وخرجوا يتنزّهون: يطلبون الأماكن النزهة، وهم في نزهة و",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "رجل نزهٌ ونزيه عن الريب. ونزّه الله تنزيهاً. وهو يتنزه عن المطامع.",
+        "prototipe_benzerlik": 0.239,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وفحل نزّاء، وفيه نزاء، ونزا على طروقته. ونزا الفارس على فرسه.",
+        "prototipe_benzerlik": 0.09,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "ومن المجاز: قلبه ينزو إلى كذا: ينازع إليه. وهو يتنزّى إلى الشرّ: يتسرّع إليه. ونزا الطعام: غلا. وعن النضر قال أبو طيبة رجل من بلعدوية:",
+        "prototipe_benzerlik": 0.95,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "قد نزا البرّ في القنبع وهو وعاء الحبّ إذا جرى فيه. وأكمة نازية: مرتفعة عما حولها كأنّها نزت عن وجه الأرض. وقصعة نازية: قريبة القعر.",
+        "prototipe_benzerlik": 0.267,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.386,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
+  "muhassas_tasnif": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "mana_tasnif_gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
+  },
+  "kaliplar": {},
+  "kelimeler": []
+}

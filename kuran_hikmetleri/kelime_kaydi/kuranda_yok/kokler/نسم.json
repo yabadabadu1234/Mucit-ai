@@ -956,6 +956,64 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "وجدت نسيم الريح: نفسها، وقد نسمت نسيماً ونسماناً. وتنسّمتها: تتّبعت نسيمها. \" تنكّبوا الغبار فإنّ منه تكون النّسمة \" أي النّفس وهو الرّبو. وهذه نسمةٌ مباركة. وأعتق نسمةً. والله باريء النّسم. وأملصت الناقة ولدها قبل أن تنسّم أي تجسّد وتمّ وصار نسمةً.",
+    "mecaz": "من أين منسمك؟: وجهك، وأصله: منسم البعير. وفي الحديث: \" قد استقام المنسم \" ووجدت منسماً من الأمر: علامةً وأثراً. قال الأحوص:\nوإن أظلمت يوماً من الناس طخية ... أضاء بكم يا آل مروان منسم\nوفي الحديث: \" بعثت في نسيم الساعة \": في\nنفسها وأوّلها. قال ذو الرمة:\nبجرعاء دهناوية التّرب طيّب ... بها نسم الأرواح من كل منسم\nوتنسّمت الخبر. وتنسمت أثر فلان حتى استبنته. وتنسّمت منه علماً: أخذته. وقال:\nأحبّك حبّ العود ماءً بقفرة ... تنسّم تحت الليل سمت الموارد\nونسم لي خبر وأثر: تبيّن. وناسمته. وهو طيّب المناسمة والمنامسة. قال:\nسقياً لها وحبذا نسامها ... لو كان لي ميسّراً كلامها\nوإن فلاناً لباقي النسيم إذا كان باقي القوّة والصلابة. قال:\nهيّجها أروع ذو نسيم\nوإن فلاناً ثقيل الظلّ بارد النسيم: للثقيل.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "وجدت نسيم الريح: نفسها، وقد نسمت نسيماً ونسماناً. وتنسّمتها: تتّبعت نسيمها. \" تنكّبوا الغبار فإنّ منه تكون النّسمة \" أي النّفس وهو الرّبو. وهذه نسمةٌ مباركة. وأعتق نسمةً. والله باريء النّسم. وأملصت الناقة ولدها قبل أن تنسّم أي تجسّد وتمّ وصار نسمةً.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "من أين منسمك؟: وجهك، وأصله: منسم البعير. وفي الحديث: \" قد استقام المنسم \" ووجدت منسماً من الأمر: علامةً وأثراً. قال الأحوص:",
+        "prototipe_benzerlik": 0.514,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وفي الحديث: \" بعثت في نسيم الساعة \": في",
+        "prototipe_benzerlik": 0.559,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "نفسها وأوّلها. قال ذو الرمة:",
+        "prototipe_benzerlik": 0.666,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وتنسّمت الخبر. وتنسمت أثر فلان حتى استبنته. وتنسّمت منه علماً: أخذته. وقال:",
+        "prototipe_benzerlik": 0.429,
+        "halka": "orta"
+      },
+      {
+        "cumle": "ونسم لي خبر وأثر: تبيّن. وناسمته. وهو طيّب المناسمة والمنامسة. قال:",
+        "prototipe_benzerlik": 0.377,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وإن فلاناً لباقي النسيم إذا كان باقي القوّة والصلابة. قال:",
+        "prototipe_benzerlik": 0.47,
+        "halka": "orta"
+      },
+      {
+        "cumle": "هيّجها أروع ذو نسيم",
+        "prototipe_benzerlik": 0.505,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وإن فلاناً ثقيل الظلّ بارد النسيم: للثقيل.",
+        "prototipe_benzerlik": 0.358,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.485,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الإبل",
@@ -966,22 +1024,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 19,
+      "kume": 21,
       "merkez_kok": "نجل",
       "merkez_mana": "to be covered with vegetation",
-      "boy": 65
+      "boy": 107
     },
     "ince": {
-      "kume": 102,
+      "kume": 123,
       "merkez_kok": "نمر",
       "merkez_mana": "tiger",
-      "boy": 17
+      "boy": 21
     }
   },
   "kaliplar": {

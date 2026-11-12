@@ -2184,13 +2184,59 @@
     "ince": "collection.n.01",
     "orta": "noun.group",
     "ust": "insan ve toplum",
-    "dayanak_synset": "package.n.01",
-    "dayanak_tanim": "a collection of things wrapped or boxed together",
+    "dayanak_synset": "bunch.n.03",
+    "dayanak_tanim": "any collection in its entirety",
     "synset_sayisi": 12
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "حزم الدابة بالحزام، وفرس غليظ المحزم، وقد استرخى حزامه ومحزمه. وحزم المتاع، وحزم الحطب: شده حزماً. وحزمت وسطي بالحبل، واحتزمت، وتحزمت. ورجل حازم بين الحزم، وهو ضبط الأمر والأخذ فيه بالثقة، وقد حزم حزامة. وتقول: ربما كان من الحزامة، أن تجعل أنفك في الخزامة.",
+    "mecaz": "شددت لهذا الأمر حزيمي وحيزومي وحيازيمي. قال لبيد:\nوكم لاقيت بعدك من أمور ... وأهوال أشد لها حزيمي\nوقال آخر:\nحيازيمك للموت ... فإن الموت لاقيك\nولا بدّ من الموت ... إذا حل بواديك\nوتحزم للأمر وتلبب، وشد له الحزام: استعد له وتشمر. قال امرؤ القيس:\nأقصر إليك من الوعيد فإنني ... مما ألاقي لا أشد حزامي\nأي لا أبالي به فأتشزن له وأتهيأ. وآخذ حزام الطريق أي وسطه ومحجته.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "حزم الدابة بالحزام، وفرس غليظ المحزم، وقد استرخى حزامه ومحزمه. وحزم المتاع، وحزم الحطب: شده حزماً. وحزمت وسطي بالحبل، واحتزمت، وتحزمت. ورجل حازم بين الحزم، وهو ضبط الأمر والأخذ فيه بالثقة، وقد حزم حزامة. وتقول: ربما كان من الحزامة، أن تجعل أنفك في الخزامة.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "شددت لهذا الأمر حزيمي وحيزومي وحيازيمي. قال لبيد:",
+        "prototipe_benzerlik": 0.355,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وتحزم للأمر وتلبب، وشد له الحزام: استعد له وتشمر. قال امرؤ القيس:",
+        "prototipe_benzerlik": 0.68,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "أي لا أبالي به فأتشزن له وأتهيأ. وآخذ حزام الطريق أي وسطه ومحجته.",
+        "prototipe_benzerlik": 0.26,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.431,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "artifact.n.01",
+    "assortment.n.01",
+    "bend.v.01",
+    "bind.v.03",
+    "bind.v.04",
+    "bunch.n.03",
+    "decide.v.01",
+    "line.n.11",
+    "pack.v.01",
+    "package.n.01",
+    "tie.v.01",
+    "tie_down.v.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "المثنيات",
@@ -2201,22 +2247,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "kume": 6,
+      "merkez_kok": "درك",
+      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
+      "boy": 1364
     },
     "orta": {
-      "kume": 11,
-      "merkez_kok": "دحر",
-      "merkez_mana": "Dahr: itmek, uzaklaştırmak",
-      "boy": 179
+      "kume": 23,
+      "merkez_kok": "جلد",
+      "merkez_mana": "Cild: deri; cellâd: vurucu",
+      "boy": 125
     },
     "ince": {
-      "kume": 61,
-      "merkez_kok": "قحم",
-      "merkez_mana": "Kuhm: ateşe atmak, kendini atmak",
-      "boy": 24
+      "kume": 135,
+      "merkez_kok": "عصو",
+      "merkez_mana": "Isyân: karşı gelmek",
+      "boy": 50
     }
   },
   "kaliplar": {

@@ -1205,6 +1205,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "سمط الجدي: نقاه من الصوف وشواه، وجديٌ مسموط. ومعه سمط من لؤلؤ وسموط. وعلقه بسموط سرحه وهي معاليقه من السيور. وأرسل سموط عمامته وهي ما فضل منها فناس. وقام بين السماطين. وخذوا سماطي الطريق: جانبيه. وقال أبو النجم:\nحتى إذا الشمس اجتلاها المجتلى ... بين سماطي شفق مهول\nملون من تهاويل الوشي. وسمط قصيدته، وقصيدة مسمطة: شبهت أبياتها المقفاة بالسموط. ولك \" حكمك مسمطاً \": مرسلاً لا اعتراض عليك. وقال الفرزدق للهذم حين عاذ بقبر أبيه: يا لهذم لك حكمك مسمطاً فقال: ناقة كوماء سوداء الحدقة. ورأيته متسمطاً لحماً يحمله. ورأيت سميطاً من الآجر وهو القائم بعضه على بعض. ونعل سمط وأسماط: لا رقعة عليها. وأنشد أبو زيد:\nبيض السواعد أسماط نعالهم ... بكل ساحة قوم منهم أثر\nوسراويل أسماط: غير محشوة. قال:\nيلحن من ذي زجل شرواط ... محتجز بخلق شمطاط\nعلى سراويل له أسماط\nورجل سمط: خفيف في جسمه داهية في أمره.",
+    "mecaz": "قول الطرماح:\nفلما غدا استذرى له سمط رملة ... لحولين أدنى عهده بالدواهن\nأراد الصائد جعله في لزومه للرملة كالسمط اللازم للعنق.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "سمط الجدي: نقاه من الصوف وشواه، وجديٌ مسموط. ومعه سمط من لؤلؤ وسموط. وعلقه بسموط سرحه وهي معاليقه من السيور. وأرسل سموط عمامته وهي ما فضل منها فناس. وقام بين السماطين. وخذوا سماطي الطريق: جانبيه. وقال أبو النجم: حتى إذا الشمس اجتلاها المجتلى ... بين سماطي شفق ",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "أراد الصائد جعله في لزومه للرملة كالسمط اللازم للعنق.",
+        "prototipe_benzerlik": -0.001,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": -0.001,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "اللباس",
@@ -1215,19 +1238,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
-      "merkez_kok": "حنج",
-      "merkez_mana": "",
-      "boy": 426
-    },
-    "orta": {
       "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 261
+      "boy": 466
+    },
+    "orta": {
+      "kume": 3,
+      "merkez_kok": "قمح",
+      "merkez_mana": "Kamh: buğday",
+      "boy": 64
     },
     "ince": {
-      "kume": 8,
+      "kume": 9,
       "merkez_kok": "مءد",
       "merkez_mana": "dining table",
       "boy": 8

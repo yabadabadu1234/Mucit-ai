@@ -1186,7 +1186,7 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "part.n.01",
+    "ince": "substance.n.01",
     "orta": "noun.substance",
     "ust": "tabiat",
     "dayanak_synset": "manure.n.01",
@@ -1196,6 +1196,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "عنده زبل من التمر وزنابيل. وزبلت الأرض: سمدتها أزبلها بالكسر. واجتمع له زبل كثير. والدنيا كالمزبلة، والذين اطمأنوا إلها كلاب المزابل.",
+    "mecaz": "ما قطعت له قبالا، ولا رزأته زبالا أي أدنى شيء وأصله ما تحمله النملة بفيها. قال ابن أحمر:\nكريم النجار حمى ظهره ... فلم يرتزيء بركوب زبالا",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "عنده زبل من التمر وزنابيل. وزبلت الأرض: سمدتها أزبلها بالكسر. واجتمع له زبل كثير. والدنيا كالمزبلة، والذين اطمأنوا إلها كلاب المزابل.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "ما قطعت له قبالا، ولا رزأته زبالا أي أدنى شيء وأصله ما تحمله النملة بفيها. قال ابن أحمر:",
+        "prototipe_benzerlik": 0.098,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.098,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["material.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -1206,19 +1229,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "kume": 2,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 466
     },
     "orta": {
-      "kume": 44,
-      "merkez_kok": "زرب",
-      "merkez_mana": "Zerb: sürü ağılı; zerâbî: halı",
-      "boy": 63
+      "kume": 3,
+      "merkez_kok": "قمح",
+      "merkez_mana": "Kamh: buğday",
+      "boy": 64
     },
     "ince": {
-      "kume": 285,
+      "kume": 6,
       "merkez_kok": "سمد",
       "merkez_mana": "Samed: sonsuz, tüm ihtiyaçların giderildiği; el-Samed: Allah",
       "boy": 17

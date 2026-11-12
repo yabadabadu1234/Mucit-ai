@@ -799,20 +799,6 @@
           ["طُبَّاق", "طباق#Arabic"]
         ],
         "yol": "müştak"
-      },
-      {
-        "w": "أطيان",
-        "u": "أطيان",
-        "p": "noun",
-        "h": "ar-head",
-        "e": "أَطْيَان • (ʔaṭyān) m pl",
-        "t": "See the etymology of the corresponding lemma form.",
-        "g": ["plural of طِين (ṭīn)"],
-        "tag": ["form-of", "plural"],
-        "fo": ["طِين"],
-        "r": ["ʔaṭyān"],
-        "ipa": ["/ʔatˤ.jaːn/"],
-        "yol": "müştak"
       }
     ],
     "renk_sozluk": {
@@ -863,16 +849,6 @@
         "veri_kaynagi": "43",
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "52605",
-        "arapca": ["طِينِيٌّ", "تُرَابِيٌّ"],
-        "ingilizce": [],
-        "tanim": "وصف لما هو منسوب إلى التراب وغيره ويشمل تراب أو رمل وكلس الذي يجبل بالماء",
-        "misal": "قامَ بعمل جدار _",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
     ]
   },
@@ -894,11 +870,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "part.n.01",
+    "ince": "substance.n.01",
     "orta": "noun.substance",
     "ust": "tabiat",
-    "dayanak_synset": "clay.n.01",
-    "dayanak_tanim": "a very fine-grained soil that is plastic when moist but hard when fired",
+    "dayanak_synset": "mud.n.01",
+    "dayanak_tanim": "water soaked soil; soft wet earth",
     "synset_sayisi": 2
   },
   "ses_mana_tasnif": {
@@ -909,32 +885,55 @@
     "fasil_ozeti": "° معنى الفصل المعجمي (طن) : هو اللزوم أو التلازم كتلة كتلازم القصب والحطب في الحزمة، وككتلة البدن -في (طنن)، وكتلازب الطين -في (طين)، وكلزوم الشخص وطنه أي منزله أي الإقامة فيه والعَوْد إليه بعد السعي -في (وطن).",
     "tam_metin": "{وَبَدَأَ خَلْقَ الْإِنْسَانِ مِنْ طِينٍ} [السجدة: 7]\n\"الطين معروف. . \"\n° المعنى المحوري\nالطين/ تراب يخالط أثناءَه ماءٌ أو نَدًى فيجعله كتلة لينة تتلاصق وتتماسك. ويلزم ذلك قابلية التشكيل. فمن الطين نفسه {هُوَ الَّذِي خَلَقَكُمْ مِنْ طِينٍ} [الأنعام: 2]. وليس في القرآن من التركيب إلا (الطين) هذه المادة المعروفة. ومن قابلية الشكيل \"طانه اللَّه على الخير: جَبَله عليه، والطينة -بالكسر \": الخِلْقَة والجِبِلّة \" (تكون كتلة متماسكة)."
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "طينت البيت. ورجل طيان: ماهر في طيانته. وطنت الكتاب: جعلت عليه طينة الختم.",
+    "mecaz": "طانه الله على الخير: جبله عليه، وكل إنسان على ما طانه الله، وله طينة طيبة: جبلّة وخليقة، ولو تركت وطينتك",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Cebel mihverî mana",
+    "prototip": "الطين/ تراب يخالط أثناءَه ماءٌ أو نَدًى فيجعله كتلة لينة تتلاصق وتتماسك. ويلزم ذلك قابلية التشكيل. فمن الطين نفسه {هُوَ الَّذِي خَلَقَكُمْ مِنْ طِينٍ} [الأنعام: 2]. وليس في القرآن من التركيب إلا (الطين) هذه المادة المعروفة. ومن قابلية الشكيل \"طانه اللَّه على ا",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "طانه الله على الخير: جبله عليه، وكل إنسان على ما طانه الله، وله طينة طيبة: جبلّة وخليقة، ولو تركت وطينتك",
+        "prototipe_benzerlik": 0.416,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.416,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["material.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
     "bab": "الطين",
-    "kok_gecis": 98.0,
+    "kok_gecis": 97.0,
     "kitapta_gecis": 49.2,
-    "zenginlesme": 4.05
+    "zenginlesme": 4.1
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 7,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 331
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 30,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 103
+      "kume": 36,
+      "merkez_kok": "سكب",
+      "merkez_mana": "Sakb: dökmek, boşaltmak",
+      "boy": 101
     },
     "ince": {
-      "kume": 205,
-      "merkez_kok": "نقع",
-      "merkez_mana": "Nak': su birikintisi; nakî': ıslak",
-      "boy": 33
+      "kume": 239,
+      "merkez_kok": "ذرف",
+      "merkez_mana": "to flow (tears)",
+      "boy": 30
     }
   },
   "kaliplar": {

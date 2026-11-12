@@ -1881,16 +1881,27 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "part.n.01",
+    "ince": "substance.n.01",
     "orta": "noun.substance",
     "ust": "tabiat",
-    "dayanak_synset": "steam.n.01",
-    "dayanak_tanim": "water at boiling temperature diffused in the atmosphere",
+    "dayanak_synset": "vapor.n.01",
+    "dayanak_tanim": "a visible suspension in the air of particles of some substance",
     "synset_sayisi": 6
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "ثياب مبخرة: مطيبة. وتبخر بالبخور، وفلان يتبخر ويتبختر. ويقال: بخرت لنا: طيبت، وبخرت علينا: نتنت، وأردنا أن تبخر لنا فبخرت علينا. وبه بخر شديد. وفي كلام الدؤلي: لا يصلح للخلافة من لا يصبر على سرار الشيوخ البخر.",
+    "mecaz": "",
+    "kinaye": "",
+    "mecaz_var": false
+  },
+  "prototip_yayilim_tasnif": {
+    "durum": "prototip veya mecaz kolu yok"
+  },
+  "kolekzifikasyon_kavramlari": ["artifact.n.01", "evaporate.v.01", "material.n.01", "mixture.n.01", "phase_change.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النخل",
@@ -1901,19 +1912,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 7,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 331
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 34,
-      "merkez_kok": "غبر",
-      "merkez_mana": "Gubr: toz, gübre; gâbir",
-      "boy": 47
+      "kume": 38,
+      "merkez_kok": "خبز",
+      "merkez_mana": "Habz: ekmek yapmak, ekmek",
+      "boy": 50
     },
     "ince": {
-      "kume": 218,
+      "kume": 251,
       "merkez_kok": "دخن",
       "merkez_mana": "Duhan: duman, buğu",
       "boy": 9

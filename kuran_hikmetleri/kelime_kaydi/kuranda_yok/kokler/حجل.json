@@ -1638,6 +1638,44 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "في ساقها حجل أي خلخال، وخرج يجر رجليه، ويطابق في حجليه؛ وهما حلقتا القيد. وتقول: الحجول حجول الرجال، والحجول لربات الحجال؛ أي القيود خلاخيل الرجال، والخلاخيل للنساء. وحجل بعيره: قيده. وأحجله: أزال قيده. وحجل الغراب حجلاناً. وحجل العقير على ثلاث. وفرس محجل، وفي قوائمه حجول. والمرأة في حجلتها، والنساء في حجالهن، وامرأة محجبة محجلة. ورأيت بيضة الحجلة، تمشي مشي الحجلة؛ وهي القبحة، ورأيت بيضة الحجلة تأكل أختها أي تأكل بيضة القبجة.",
+    "mecaz": "بنو فلان يحجلون قدورهم، أي يسترونها كما تستر العرائس. ويوم أغر محجل، وأمر أغر محجل: مشهور. قال الجعدي:\nفقد ركبت أمراً أغر محجلاً\nوحجل أمره: شهره. وحجلت المرأة بنانها، وقصبته إذا ضمدت برجمة بعجين وأخرى بحناء، فخرج بعضه أحمر وبعضه أبيض. ويقال للشيخ: طابق في الحجلين إذا حوقل. قال عدي:\nأعاذل قد لاقيت ما يزع الفتى ... وطابقت في الحجلين مشي المقيد\nومر يحجل في مشيته إذا تبختر.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "في ساقها حجل أي خلخال، وخرج يجر رجليه، ويطابق في حجليه؛ وهما حلقتا القيد. وتقول: الحجول حجول الرجال، والحجول لربات الحجال؛ أي القيود خلاخيل الرجال، والخلاخيل للنساء. وحجل بعيره: قيده. وأحجله: أزال قيده. وحجل الغراب حجلاناً. وحجل العقير على ثلاث. وفرس محجل، وفي",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "بنو فلان يحجلون قدورهم، أي يسترونها كما تستر العرائس. ويوم أغر محجل، وأمر أغر محجل: مشهور. قال الجعدي:",
+        "prototipe_benzerlik": 0.658,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "فقد ركبت أمراً أغر محجلاً",
+        "prototipe_benzerlik": 0.391,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وحجل أمره: شهره. وحجلت المرأة بنانها، وقصبته إذا ضمدت برجمة بعجين وأخرى بحناء، فخرج بعضه أحمر وبعضه أبيض. ويقال للشيخ: طابق في الحجلين إذا حوقل. قال عدي:",
+        "prototipe_benzerlik": 0.776,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "ومر يحجل في مشيته إذا تبختر.",
+        "prototipe_benzerlik": 0.517,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.586,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطير",
@@ -1648,22 +1686,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
+      "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 426
+      "boy": 466
     },
     "orta": {
-      "kume": 1,
-      "merkez_kok": "جنح",
-      "merkez_mana": "Cünûh: meyletmek, eğilmek; cenâh: kanat",
-      "boy": 165
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 1,
+      "kume": 15,
       "merkez_kok": "دلق",
       "merkez_mana": "to pour out, spill (e.g. a liquid)",
-      "boy": 41
+      "boy": 58
     }
   },
   "kaliplar": {

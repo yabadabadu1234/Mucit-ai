@@ -1831,16 +1831,66 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "state.n.02",
-    "orta": "noun.state",
-    "ust": "hâl ve vasıf",
-    "dayanak_synset": "sanitary_condition.n.01",
-    "dayanak_tanim": "the state of sanitation (clean or dirty)",
+    "ince": "order.v.05",
+    "orta": "verb.change",
+    "ust": "fiil ve hadise",
+    "dayanak_synset": "make.v.27",
+    "dayanak_tanim": "put in order or neaten",
     "synset_sayisi": 28
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "نظف الإناء، ونظّفته فهو نظيف.",
+    "mecaz": "استنظف الوالي الخراج: استوفاه نحو قولهم: استصفى الخراج، وعن بعض أهل اللغة الصواب بالضاد من انتضف الفصيل ما في الضرع والإبل ما في الحوض إذا اشتفّته. ورجل نظيف الأخلاق: مهذّب، وهو يتنظّف: يتنزّه من المساويء.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "نظف الإناء، ونظّفته فهو نظيف.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "استنظف الوالي الخراج: استوفاه نحو قولهم: استصفى الخراج، وعن بعض أهل اللغة الصواب بالضاد من انتضف الفصيل ما في الضرع والإبل ما في الحوض إذا اشتفّته. ورجل نظيف الأخلاق: مهذّب، وهو يتنظّف: يتنزّه من المساويء.",
+        "prototipe_benzerlik": 0.239,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.239,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "acquit.v.01",
+    "act.n.02",
+    "act.v.02",
+    "agent.n.03",
+    "authorize.v.01",
+    "brush.v.03",
+    "cause.v.01",
+    "clean.a.01",
+    "clean.v.01",
+    "clean.v.02",
+    "cleanse.v.01",
+    "cleanse.v.02",
+    "clear.v.05",
+    "clear.v.20",
+    "condition.n.01",
+    "do.v.03",
+    "groom.v.03",
+    "make.v.01",
+    "material.n.01",
+    "perform.v.01",
+    "purify.v.01",
+    "rub.v.01",
+    "scavenge.v.04",
+    "suffice.v.01",
+    "tidy.v.01",
+    "unclutter.v.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "اللباس",
@@ -1851,22 +1901,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "kume": 5,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 375
     },
     "orta": {
-      "kume": 38,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 203
+      "kume": 14,
+      "merkez_kok": "غدر",
+      "merkez_mana": "Gadr: ihanet, hile",
+      "boy": 153
     },
     "ince": {
-      "kume": 247,
-      "merkez_kok": "قلع",
-      "merkez_mana": "Kal': sökmek, kökünden koparmak",
-      "boy": 36
+      "kume": 80,
+      "merkez_kok": "هدم",
+      "merkez_mana": "Hadm: yıkmak, yıkılmak",
+      "boy": 43
     }
   },
   "kaliplar": {

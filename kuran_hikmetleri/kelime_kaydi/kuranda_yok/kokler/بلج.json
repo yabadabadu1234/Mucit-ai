@@ -1117,6 +1117,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "انبلج الفجر وتبلج. ولقيته عند البلجة، وسريت الدلجة والبلجة حتى وصلت. قال:\nأغدو عليها وأشد أزري ... ببلجة قبل طلوع الفجر\nورجل أبلج: بين البلج والبلجة.\nقال:\nأبلج بين حاجبيه نوره ... إذا تغدى رفعت ستوره\nوما أحسن بلجته!",
+    "mecaz": "صباح أبلج. قال العجاج:\nحتى بدت أعناق صبح أبلجا ... تسور في أعجاز ليل أدعجا\nوالحق أبلج وقد أبلج الحق إبلاجاً.\nويقال للرجل الطلق الوجه ذي الكرم والمعروف: هو أبلج وإن كان أقرن. وبلجت به الصدور فرحاً إذا انشرحت، تقول: ثلج به صدري وبلج، بعدما حر وحرج.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "انبلج الفجر وتبلج. ولقيته عند البلجة، وسريت الدلجة والبلجة حتى وصلت. قال: أغدو عليها وأشد أزري ... ببلجة قبل طلوع الفجر ورجل أبلج: بين البلج والبلجة. قال: أبلج بين حاجبيه نوره ... إذا تغدى رفعت ستوره وما أحسن بلجته!",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "صباح أبلج. قال العجاج:",
+        "prototipe_benzerlik": 0.207,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "والحق أبلج وقد أبلج الحق إبلاجاً.",
+        "prototipe_benzerlik": 0.098,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "ويقال للرجل الطلق الوجه ذي الكرم والمعروف: هو أبلج وإن كان أقرن. وبلجت به الصدور فرحاً إذا انشرحت، تقول: ثلج به صدري وبلج، بعدما حر وحرج.",
+        "prototipe_benzerlik": 0.496,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.267,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["dawn.v.03"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الأنواء",
@@ -1127,19 +1160,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 7,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 331
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 32,
-      "merkez_kok": "دمس",
-      "merkez_mana": "pocket bread, pita",
-      "boy": 61
+      "kume": 42,
+      "merkez_kok": "سحم",
+      "merkez_mana": "to become black, to be blackened",
+      "boy": 97
     },
     "ince": {
-      "kume": 213,
+      "kume": 275,
       "merkez_kok": "نور",
       "merkez_mana": "Nûr: ışık, aydınlık",
       "boy": 31

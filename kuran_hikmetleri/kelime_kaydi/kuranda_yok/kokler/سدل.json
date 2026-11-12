@@ -1233,6 +1233,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "سدل الثوب سدلاً: أرخاه، وسدلت سترها وشعرها، وستر وشعر مسدول، وقد انسدل فهو منسدل.",
+    "mecaz": "أرخى الليل سدوله. قال:\nبأطيب من ريّاك يا أم سالم ... تنفّح والظلماء مرخًى سدولها\nوجئته وستر الليل مسدول.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "سدل الثوب سدلاً: أرخاه، وسدلت سترها وشعرها، وستر وشعر مسدول، وقد انسدل فهو منسدل.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "أرخى الليل سدوله. قال:",
+        "prototipe_benzerlik": 0.299,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وجئته وستر الليل مسدول.",
+        "prototipe_benzerlik": 0.325,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.312,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["body_part.n.01", "interlock.v.03", "lock.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "اللباس",
@@ -1243,19 +1271,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "kume": 5,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 375
     },
     "orta": {
-      "kume": 36,
-      "merkez_kok": "نجس",
-      "merkez_mana": "Nicis: pislik, necis",
-      "boy": 123
+      "kume": 12,
+      "merkez_kok": "ردم",
+      "merkez_mana": "Redm: kapatmak, doldurmak; sedd: set",
+      "boy": 61
     },
     "ince": {
-      "kume": 227,
+      "kume": 69,
       "merkez_kok": "ستر",
       "merkez_mana": "Setr: örtmek, saklamak; setr: perde",
       "boy": 23

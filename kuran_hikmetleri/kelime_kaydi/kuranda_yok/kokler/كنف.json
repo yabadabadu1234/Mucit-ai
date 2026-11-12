@@ -1399,6 +1399,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "هو في كنف فلان، وهم في أكناف الحجاز: في نواحيه، وتكنفوه واكتنفوه: أحاطوا به من كل جانب. وكنفته: حفظته. وكانفته: عاونته. وفلان مخذول لا تكنفه من الله كانفة. واتخذ للإبل كنيفاً: حظيرة. قال متمّم:\nفعينيّ هلاّ تبكيان لمالك ... إذا أذرت الريح الكنيف المنزّعا\nوكنف الكيذال اعلحبّ: جعل يديه على رأس المكيال يمسك بهما المكيل. يقال: كله كيلاً غير مكنوف. وإنه لمكنّف اللحية إذا كانت عظيمة ذات أكنافٍ.",
+    "mecaz": "حرّك الطائر كنفيه: جناحيه. وتقول: في حفظ الله وكنفه. وعن عمر بن أبي ربيعة: ما علم الله أني طالعت كنف حرامٍ قط. وفي الحديث \" كنيف مليء علماً \".",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "هو في كنف فلان، وهم في أكناف الحجاز: في نواحيه، وتكنفوه واكتنفوه: أحاطوا به من كل جانب. وكنفته: حفظته. وكانفته: عاونته. وفلان مخذول لا تكنفه من الله كانفة. واتخذ للإبل كنيفاً: حظيرة. قال متمّم: فعينيّ هلاّ تبكيان لمالك ... إذا أذرت الريح الكنيف المنزّعا وكنف ا",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "حرّك الطائر كنفيه: جناحيه. وتقول: في حفظ الله وكنفه. وعن عمر بن أبي ربيعة: ما علم الله أني طالعت كنف حرامٍ قط. وفي الحديث \" كنيف مليء علماً \".",
+        "prototipe_benzerlik": 0.98,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.98,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["artifact.n.01", "illumination.n.02"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
@@ -1409,22 +1432,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "kume": 6,
+      "merkez_kok": "درك",
+      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
+      "boy": 1364
     },
     "orta": {
-      "kume": 13,
-      "merkez_kok": "صدد",
-      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
-      "boy": 93
+      "kume": 23,
+      "merkez_kok": "جلد",
+      "merkez_mana": "Cild: deri; cellâd: vurucu",
+      "boy": 125
     },
     "ince": {
-      "kume": 66,
-      "merkez_kok": "صدد",
-      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
-      "boy": 22
+      "kume": 136,
+      "merkez_kok": "متن",
+      "merkez_mana": "Metn: sağlam yer, metin; metîn: sağlam",
+      "boy": 30
     }
   },
   "kaliplar": {

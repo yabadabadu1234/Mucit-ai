@@ -1113,7 +1113,7 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "person.n.01",
+    "ince": "whole.n.02",
     "orta": "noun.person",
     "ust": "insan ve toplum",
     "dayanak_synset": "inventor.n.01",
@@ -1123,6 +1123,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "في العود خرجع أي لين ورخاوة، وعود خرع، وشيء خريع: لين متثن، ومنه قيل للفاجرة، الخريع. قال:\nيزين جمال الدلّ منها رزانة ... وحلم إذا خف النساء الخرائع\nوتقول: هو خلع: بين الخلاعة، وامرأته خريع: بيّنة الخراعة، وهو رخو كالخروع. واخترع باطلاً: اخترصه. واخترع الله الأشياء: ابتدعها من غير سبب.",
+    "mecaz": "في فلان خرع أي جبن وخور. وعيش خروع، وشباب خروع: ناعم.\nقال:\nفظل أصحابي بعيش خروع ... بين النشيل الرخص والمشعشع\nوقال أبو النجم:\nفهي تمطّى في شباب خروع\nوغصن خرعوب: متثن. وامرأة خرعوبة.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "في العود خرجع أي لين ورخاوة، وعود خرع، وشيء خريع: لين متثن، ومنه قيل للفاجرة، الخريع. قال: يزين جمال الدلّ منها رزانة ... وحلم إذا خف النساء الخرائع وتقول: هو خلع: بين الخلاعة، وامرأته خريع: بيّنة الخراعة، وهو رخو كالخروع. واخترع باطلاً: اخترصه. واخترع الله ال",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "في فلان خرع أي جبن وخور. وعيش خروع، وشباب خروع: ناعم.",
+        "prototipe_benzerlik": 0.511,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "فهي تمطّى في شباب خروع",
+        "prototipe_benzerlik": 0.393,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وغصن خرعوب: متثن. وامرأة خرعوبة.",
+        "prototipe_benzerlik": 0.894,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.599,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["ability.n.02", "act.n.02", "fabricate.v.02", "living_thing.n.01", "think_up.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النساء",
@@ -1133,22 +1166,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
-      "merkez_kok": "درك",
-      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "kume": 4,
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 509
     },
     "orta": {
-      "kume": 18,
-      "merkez_kok": "همم",
-      "merkez_mana": "Hemm: istek, gayret; himmet",
-      "boy": 116
+      "kume": 8,
+      "merkez_kok": "بءس",
+      "merkez_mana": "Be'es: azap, şiddet, zorluk",
+      "boy": 142
     },
     "ince": {
-      "kume": 98,
-      "merkez_kok": "ملق",
-      "merkez_mana": "Mellak: dalkavukluk yapmak, yağcılık",
-      "boy": 32
+      "kume": 49,
+      "merkez_kok": "وهن",
+      "merkez_mana": "Vehn: zayıflık, gevşeklik",
+      "boy": 21
     }
   },
   "kaliplar": {

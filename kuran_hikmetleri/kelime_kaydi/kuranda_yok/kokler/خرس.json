@@ -1226,6 +1226,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "أخرسه الله. وإذا شهدت من لا يفهم عنك فتخارس، وهو من خرس المجلس إذا لم يتكلم. ودعوا إلى الخرس، وهو طعام الولادة وأطعموا النفساء خرستها، وهو طعامها خاصة، وقد خرست فتخرست. قال:\nفلله عينا من رأى مثل مقبس ... إذا النفساء أصبحت لم تخرس\nوفي مثل \" تخرسي لا مخرسة لك \".",
+    "mecaz": "كتيبة خرساء: ليس لها جلبة، ورماه الله بخرساء وهي الداهية. قال الأخطل:\nوكم أنقذتني من جرور حبالكم ... وخرساء لو يرمى بها الفيل بلداً\nوأصلها الأفعى. قال عنترة:\nعليهم كل محكمة دلاص ... كأن قتيرها أعيان خرس\nوعلم أخرس: لا يسمع منه صدى. وسحابة خرساء: لا ترعد. ولبن أخرس: خائر لا يتخضخض في إنائه. ونزلنا ببني أخنس، فسقثونا لبناً أخرس.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "أخرسه الله. وإذا شهدت من لا يفهم عنك فتخارس، وهو من خرس المجلس إذا لم يتكلم. ودعوا إلى الخرس، وهو طعام الولادة وأطعموا النفساء خرستها، وهو طعامها خاصة، وقد خرست فتخرست. قال: فلله عينا من رأى مثل مقبس ... إذا النفساء أصبحت لم تخرس وفي مثل \" تخرسي لا مخرسة لك \".",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "كتيبة خرساء: ليس لها جلبة، ورماه الله بخرساء وهي الداهية. قال الأخطل:",
+        "prototipe_benzerlik": 0.882,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وأصلها الأفعى. قال عنترة:",
+        "prototipe_benzerlik": 0.446,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وعلم أخرس: لا يسمع منه صدى. وسحابة خرساء: لا ترعد. ولبن أخرس: خائر لا يتخضخض في إنائه. ونزلنا ببني أخنس، فسقثونا لبناً أخرس.",
+        "prototipe_benzerlik": 0.372,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.567,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["artifact.n.01", "close_up.v.04"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "المثنيات",
@@ -1237,18 +1270,18 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 5,
-      "merkez_kok": "درك",
-      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 375
     },
     "orta": {
-      "kume": 21,
-      "merkez_kok": "همس",
-      "merkez_mana": "Hamis: fısıldamak, gizlice konuşmak",
-      "boy": 97
+      "kume": 13,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 76
     },
     "ince": {
-      "kume": 119,
+      "kume": 74,
       "merkez_kok": "صمت",
       "merkez_mana": "Samt: susmak, sessizlik",
       "boy": 7

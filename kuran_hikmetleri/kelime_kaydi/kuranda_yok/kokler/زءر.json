@@ -1760,6 +1760,49 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "ليث زائر وله زئير وزأر. قال النابغة:\nنبئت أن أبا قابوس أوعدني ... ولا قرار على زأر من الأسد\nوتقول: له زفير كأنه زئير. وزأر الأسد يزأر ويزئر، والأسد في زأرته: في أجمته. ويقال: له مرزبان الزأرة.",
+    "mecaz": "سمع زئير الحرب فطار إليها. قال:\nفلا من بغاة الخير في عينه فدى ... ولا من زئير الحرب في أذنه وقر\nوالفحل يزأر في هديره إذا ردده في جوفه ثم مده. ولفلان زأرة عامرة. وهو في زأرته وهي البستان. وأنشد اصمعي:\nزأرة جبار من النخل بسق\nوتركته في زأرة من الإبل وزأرة من الغنم: في جماعة كثيفة منها كالأحمة كما قال:\nعاين حياً كالحراج نعمه",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "ليث زائر وله زئير وزأر. قال النابغة: نبئت أن أبا قابوس أوعدني ... ولا قرار على زأر من الأسد وتقول: له زفير كأنه زئير. وزأر الأسد يزأر ويزئر، والأسد في زأرته: في أجمته. ويقال: له مرزبان الزأرة.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "سمع زئير الحرب فطار إليها. قال:",
+        "prototipe_benzerlik": 0.297,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "والفحل يزأر في هديره إذا ردده في جوفه ثم مده. ولفلان زأرة عامرة. وهو في زأرته وهي البستان. وأنشد اصمعي:",
+        "prototipe_benzerlik": 0.116,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "زأرة جبار من النخل بسق",
+        "prototipe_benzerlik": 0.108,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وتركته في زأرة من الإبل وزأرة من الغنم: في جماعة كثيفة منها كالأحمة كما قال:",
+        "prototipe_benzerlik": 0.361,
+        "halka": "orta"
+      },
+      {
+        "cumle": "عاين حياً كالحراج نعمه",
+        "prototipe_benzerlik": 0.214,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.219,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["roar.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السباع",
@@ -1770,19 +1813,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 17,
+      "kume": 24,
       "merkez_kok": "زين",
       "merkez_mana": "Zîne: süs, güzellik; zeyn: güzelleştirmek",
-      "boy": 177
+      "boy": 123
     },
     "ince": {
-      "kume": 88,
+      "kume": 137,
       "merkez_kok": "زحح",
       "merkez_mana": "jester, jokester, frolicker",
       "boy": 11

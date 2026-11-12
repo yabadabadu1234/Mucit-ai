@@ -688,6 +688,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "أسنف البعير: شده بالسناف وهو نحو اللبب للفرس.",
+    "mecaz": "عيّ فلان بالإسناف إذا دهش من الفرزع كمن لا يدري أين يشد السناف. قال:\nإذا ما عيّ بالإسناف قوم ... من الهول المشبه أن يكونا\nوأسنف القوم أمرهم: أحكموه. وبعير مسناف: يقدم رحله. قال:\nومسناف يقدم كل سرج ... يصير دفتيه على القذال",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "أسنف البعير: شده بالسناف وهو نحو اللبب للفرس.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "عيّ فلان بالإسناف إذا دهش من الفرزع كمن لا يدري أين يشد السناف. قال:",
+        "prototipe_benzerlik": 0.542,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وأسنف القوم أمرهم: أحكموه. وبعير مسناف: يقدم رحله. قال:",
+        "prototipe_benzerlik": 0.601,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.571,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الإبل",
@@ -698,19 +726,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 2,
+      "kume": 1,
       "merkez_kok": "قره",
       "merkez_mana": "",
       "boy": 759
     },
     "orta": {
-      "kume": 4,
+      "kume": 2,
       "merkez_kok": "فلص",
       "merkez_mana": "",
       "boy": 494
     },
     "ince": {
-      "kume": 22,
+      "kume": 4,
       "merkez_kok": "شعف",
       "merkez_mana": "",
       "boy": 183

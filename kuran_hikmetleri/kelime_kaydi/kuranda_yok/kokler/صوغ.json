@@ -793,16 +793,64 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "shape.v.03",
-    "orta": "verb.change",
+    "ince": "model.v.02",
+    "orta": "verb.creation",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "shape.v.03",
-    "dayanak_tanim": "give shape or form to",
+    "dayanak_synset": "model.v.02",
+    "dayanak_tanim": "form in clay, wax, etc",
     "synset_sayisi": 9
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "هو يحسن الصوغ والصياغة، ولفلانة صوغ من الذهب والفضة. قال ابن مقبل:\nتباهي بصوغ من كروم وفضة ... معطفة يكسونها قصباً خدلاً",
+    "mecaz": "فلان حسن الصيغة وهي الخلقة، وصاغه الله تعالى صيغة حسنة. وفلان من صيغة كريمة: من أصل كريم: وصاغ فلان الكلام:\nحبره، وهو من صاغه الكلام. وصاغ كذباً وزوراً، وهو يصوغ الأحاديث: يخلقها. وقيل لأبي هريرة رضي الله تعالى عنه: خرج الدجال، فقال: كذبة كذبها الصواغوان. وعنده صيغة من السهام. ورميتهم بستين سهماً صيغة أي من صنعة رجل واحد. قال:\nوصيغة قد راشها وركباً\nوهما صوغان: سيان. وهو صوغه وهي صوغه وصوغته: مثله في الميلاد. وهذا صوغ هذا إذا كان على قدره.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "هو يحسن الصوغ والصياغة، ولفلانة صوغ من الذهب والفضة. قال ابن مقبل: تباهي بصوغ من كروم وفضة ... معطفة يكسونها قصباً خدلاً",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "فلان حسن الصيغة وهي الخلقة، وصاغه الله تعالى صيغة حسنة. وفلان من صيغة كريمة: من أصل كريم: وصاغ فلان الكلام:",
+        "prototipe_benzerlik": 0.309,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "حبره، وهو من صاغه الكلام. وصاغ كذباً وزوراً، وهو يصوغ الأحاديث: يخلقها. وقيل لأبي هريرة رضي الله تعالى عنه: خرج الدجال، فقال: كذبة كذبها الصواغوان. وعنده صيغة من السهام. ورميتهم بستين سهماً صيغة أي من صنعة رجل واحد. قال:",
+        "prototipe_benzerlik": 0.265,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وصيغة قد راشها وركباً",
+        "prototipe_benzerlik": 0.252,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وهما صوغان: سيان. وهو صوغه وهي صوغه وصوغته: مثله في الميلاد. وهذا صوغ هذا إذا كان على قدره.",
+        "prototipe_benzerlik": 0.529,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.339,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "artifact.n.01",
+    "class.n.01",
+    "determine.v.02",
+    "express.v.04",
+    "forge.v.01",
+    "happening.n.01",
+    "material.n.01",
+    "model.v.02",
+    "shape.v.03"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "(giriş)",
@@ -814,21 +862,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "merkez_kok": "قبب",
+      "merkez_mana": "canopy, pavilion; dome, cupola",
+      "boy": 604
     },
     "orta": {
-      "kume": 37,
-      "merkez_kok": "عقم",
-      "merkez_mana": "Akm: kısır olmak; akim: kısır",
-      "boy": 70
+      "kume": 34,
+      "merkez_kok": "نقق",
+      "merkez_mana": "to croak (of frogs)",
+      "boy": 255
     },
     "ince": {
-      "kume": 236,
-      "merkez_kok": "حنف",
-      "merkez_mana": "Hanîf: meyleden, doğru yola dönen",
-      "boy": 8
+      "kume": 233,
+      "merkez_kok": "خصل",
+      "merkez_mana": "lock of hair, tress",
+      "boy": 18
     }
   },
   "kaliplar": {

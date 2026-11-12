@@ -1360,6 +1360,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "قوّض الخيمة، وقوّض البناء: نقضه من غير هدم، وتقوّض البيت.",
+    "mecaz": "تقوّض المجلس، وتقوّضت الحلق والصفوف وقوّضوها. وبنى فلان ثم قوّض إذا أحسن ثم أساء. قال:\nفتبّاً لمن لم يبن خيراً لنفسه ... وتباً لأقوام بنوا ثم قوّضوا",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "قوّض الخيمة، وقوّض البناء: نقضه من غير هدم، وتقوّض البيت.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "تقوّض المجلس، وتقوّضت الحلق والصفوف وقوّضوها. وبنى فلان ثم قوّض إذا أحسن ثم أساء. قال:",
+        "prototipe_benzerlik": 0.357,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.357,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["crumble.v.01", "decay.v.02"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطير",
@@ -1370,22 +1393,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "kume": 5,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 375
     },
     "orta": {
-      "kume": 36,
-      "merkez_kok": "نجس",
-      "merkez_mana": "Nicis: pislik, necis",
-      "boy": 123
+      "kume": 14,
+      "merkez_kok": "غدر",
+      "merkez_mana": "Gadr: ihanet, hile",
+      "boy": 153
     },
     "ince": {
-      "kume": 233,
+      "kume": 80,
       "merkez_kok": "هدم",
       "merkez_mana": "Hadm: yıkmak, yıkılmak",
-      "boy": 19
+      "boy": 43
     }
   },
   "kaliplar": {

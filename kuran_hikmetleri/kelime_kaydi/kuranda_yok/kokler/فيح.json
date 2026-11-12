@@ -721,6 +721,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "مكان أفيح، ومهامه فيح.",
+    "mecaz": "الحمّى من فيح جهنم أي مما فار من حرها، من فاحت الشجة إذا فارت بالدم الكثير. وطعنة فيّاحة. ورجل فيّاحٌ فيّاض بالعطاء الواسع الكثير. ولو ملكت الدنيا لفيّحتها في يوم واحد أي لفرّقتها بسعة وكثرة. وناقة فيّاحة: غزيرة. قال:\nذاك أبي يا كرماً وجودا ... قد يمنح الفيّاحة الرّفودا\nيحسبها حالبها صعوداً ... وهي تبيت لا تعشّى عودا\nومن قول مغاويرهم: فيحي فياح أي اتسعي يا غارة وانتشري. قال:\nشددنا شدّة لا عيب فيها ... وقلنا بالضحى فيحي فياح",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "مكان أفيح، ومهامه فيح.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "الحمّى من فيح جهنم أي مما فار من حرها، من فاحت الشجة إذا فارت بالدم الكثير. وطعنة فيّاحة. ورجل فيّاحٌ فيّاض بالعطاء الواسع الكثير. ولو ملكت الدنيا لفيّحتها في يوم واحد أي لفرّقتها بسعة وكثرة. وناقة فيّاحة: غزيرة. قال:",
+        "prototipe_benzerlik": 0.061,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "ومن قول مغاويرهم: فيحي فياح أي اتسعي يا غارة وانتشري. قال:",
+        "prototipe_benzerlik": 0.363,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.212,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النخل",
@@ -731,22 +759,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
-      "merkez_kok": "حنج",
-      "merkez_mana": "",
-      "boy": 426
-    },
-    "orta": {
       "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 261
+      "boy": 466
+    },
+    "orta": {
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 18,
-      "merkez_kok": "لدم",
-      "merkez_mana": "Dammam (the capital city of the Eastern Province, Saudi Arabia)",
-      "boy": 53
+      "kume": 24,
+      "merkez_kok": "لوت",
+      "merkez_mana": "Levt: bükmek, eğmek",
+      "boy": 63
     }
   },
   "kaliplar": {

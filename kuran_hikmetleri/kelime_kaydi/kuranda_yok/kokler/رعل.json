@@ -717,6 +717,54 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "رأيت رعلة من الخيل ورعيلاً وهي الجماعة المتقدمة، وأقبلت الخيل رعالاً وأراعيل. وجئت في الرعيل الأول. واسترعل: خرج في الرعيل الأول في الغزو. قال تأبط شراً:\nمتى تبغني مادمت حياً مسلماً ... تهجدني مع المسترعل المتعبهل\nوجاء القوم مسترعلين أرسالاً.",
+    "mecaz": "أقبلت أراعيل الرياح، ونشأت أراعيل السحاب. قال رؤبة:\nتزجى أراعيل الجهام الخور\nوفلان يجرّ أراعيله: ما تهدّل من ثيابه. وثوب أرعل: طويل مسترخ. وعشب أرعل: طال حتى انثنى. قال:\nأرعل مجاج الندى مثاثاً\nيمث بالندى: يرشح. وضرب أرعل: يقطع اللحم فيدليه. قال الفرزدق:\nيحمى إذا اخترط السيوف نساءنا ... ضرب تطير له السواعد أرعل\nوتركت عيالاً رعلة: كثيراً.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "رأيت رعلة من الخيل ورعيلاً وهي الجماعة المتقدمة، وأقبلت الخيل رعالاً وأراعيل. وجئت في الرعيل الأول. واسترعل: خرج في الرعيل الأول في الغزو. قال تأبط شراً: متى تبغني مادمت حياً مسلماً ... تهجدني مع المسترعل المتعبهل وجاء القوم مسترعلين أرسالاً.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "أقبلت أراعيل الرياح، ونشأت أراعيل السحاب. قال رؤبة:",
+        "prototipe_benzerlik": 0.219,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "تزجى أراعيل الجهام الخور",
+        "prototipe_benzerlik": 0.249,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وفلان يجرّ أراعيله: ما تهدّل من ثيابه. وثوب أرعل: طويل مسترخ. وعشب أرعل: طال حتى انثنى. قال:",
+        "prototipe_benzerlik": 0.944,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "أرعل مجاج الندى مثاثاً",
+        "prototipe_benzerlik": 0.161,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "يمث بالندى: يرشح. وضرب أرعل: يقطع اللحم فيدليه. قال الفرزدق:",
+        "prototipe_benzerlik": 0.395,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وتركت عيالاً رعلة: كثيراً.",
+        "prototipe_benzerlik": 0.093,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.343,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السلاح",
@@ -727,22 +775,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
-      "merkez_kok": "حنج",
-      "merkez_mana": "",
-      "boy": 426
-    },
-    "orta": {
       "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 261
+      "boy": 466
+    },
+    "orta": {
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 16,
-      "merkez_kok": "كدن",
-      "merkez_mana": "a beast of burden, particularly a mule or hinny",
-      "boy": 26
+      "kume": 22,
+      "merkez_kok": "زرف",
+      "merkez_mana": "giraffe (mammal)",
+      "boy": 19
     }
   },
   "kaliplar": {

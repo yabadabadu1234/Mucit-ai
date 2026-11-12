@@ -1512,6 +1512,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "رأيت به ردعاً من الطيب، وردعاً من الحناء ومن الدم. وردعته بالطيب ردعاً فارتدع به، وردعته ترديعاً فتردع به. وهو مردوع بالزعفران ومردع ومرتدع ومتردع. وردعته عن كذا فارتدع. وأصاب السهم الهدف فارتدع إذا انفضخ عوده. وردع فلان فهو مردوع إذا وجع جسده كله. وبه رداع. قال قيس بن ذريح:\nفواحزني وعاودني رداعي ... وكان فراق لبني كالخداع\nوتقول: من شكا الرداع، شكر الصداع.",
+    "mecaz": "ردعته روادع الشيب. وطعنته فركب ردعه. قال الأصمعي: سال دمه فوقع عليه، شبه الدم بردع الزعفران وهو أثره، وقيل هو أن يجرّ لوجهه ورأسه. يقال: وقع في البئر فركب ردعه، من ردعت السهم ردعاً إذا ضربت به الأرض حتى ثبت في رعظه لأنك إذا فعلت به ذلك نكشته على رأسه وهو نصله ومعناه ركب موضع ردعه، ويقال: ركب فلان ردعه إذا ردع فلم يرتدع أي فعل\nما ردع عنه، كما تقول: ركب النهى إذا فعل ما نهي عنه.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "رأيت به ردعاً من الطيب، وردعاً من الحناء ومن الدم. وردعته بالطيب ردعاً فارتدع به، وردعته ترديعاً فتردع به. وهو مردوع بالزعفران ومردع ومرتدع ومتردع. وردعته عن كذا فارتدع. وأصاب السهم الهدف فارتدع إذا انفضخ عوده. وردع فلان فهو مردوع إذا وجع جسده كله. وبه رداع. ق",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "ردعته روادع الشيب. وطعنته فركب ردعه. قال الأصمعي: سال دمه فوقع عليه، شبه الدم بردع الزعفران وهو أثره، وقيل هو أن يجرّ لوجهه ورأسه. يقال: وقع في البئر فركب ردعه، من ردعت السهم ردعاً إذا ضربت به الأرض حتى ثبت في رعظه لأنك إذا فعلت به ذلك نكشته على رأسه وهو نصله ومعناه ركب موضع ردعه، ويقال: ركب فلان رد",
+        "prototipe_benzerlik": 0.15,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "ما ردع عنه، كما تقول: ركب النهى إذا فعل ما نهي عنه.",
+        "prototipe_benzerlik": 0.56,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.355,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["act.n.02", "rational_motive.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السلاح",
@@ -1522,22 +1550,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "kume": 5,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 375
     },
     "orta": {
       "kume": 13,
       "merkez_kok": "صدد",
       "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
-      "boy": 93
+      "boy": 76
     },
     "ince": {
-      "kume": 72,
+      "kume": 76,
       "merkez_kok": "عوق",
       "merkez_mana": "Avk: engellemek; avâk: engel",
-      "boy": 19
+      "boy": 17
     }
   },
   "kaliplar": {

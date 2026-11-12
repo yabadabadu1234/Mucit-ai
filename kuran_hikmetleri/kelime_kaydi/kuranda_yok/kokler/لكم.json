@@ -1261,7 +1261,7 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "person.n.01",
+    "ince": "whole.n.02",
     "orta": "noun.person",
     "ust": "insan ve toplum",
     "dayanak_synset": "boxer.n.01",
@@ -1271,6 +1271,38 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "لكمه بجمع كفّه، ولا يألوه لكمةً ولطمةً، ولاكمه، وتلاكما، وتقول: رب مكالمه، أوقعت في ملاكمه؛ ومماطلة، جرت إلى ملاطمة.",
+    "mecaz": "خبزة ملكّمة: مضروبة باليد. وخف ملكّم. شديد. ولكم السيل عرض الجبل: أثر فيه.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "لكمه بجمع كفّه، ولا يألوه لكمةً ولطمةً، ولاكمه، وتلاكما، وتقول: رب مكالمه، أوقعت في ملاكمه؛ ومماطلة، جرت إلى ملاطمة.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "خبزة ملكّمة: مضروبة باليد. وخف ملكّم. شديد. ولكم السيل عرض الجبل: أثر فيه.",
+        "prototipe_benzerlik": 0.619,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.619,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "act.n.02",
+    "affect.v.05",
+    "contend.v.06",
+    "fight.v.02",
+    "hit.v.02",
+    "hit.v.05",
+    "living_thing.n.01",
+    "strike.v.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "المثنيات",
@@ -1282,18 +1314,18 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 509
     },
     "orta": {
-      "kume": 11,
-      "merkez_kok": "دحر",
-      "merkez_mana": "Dahr: itmek, uzaklaştırmak",
-      "boy": 179
+      "kume": 9,
+      "merkez_kok": "وغر",
+      "merkez_mana": "to become enraged, to become angry, to be filled with malice",
+      "boy": 108
     },
     "ince": {
-      "kume": 56,
+      "kume": 58,
       "merkez_kok": "نكز",
       "merkez_mana": "",
       "boy": 14

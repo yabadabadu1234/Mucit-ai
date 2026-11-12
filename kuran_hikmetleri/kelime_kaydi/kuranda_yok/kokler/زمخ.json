@@ -688,6 +688,44 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "فلان زامخ: شامخ بأنفه، وأنوف زمخ: شمخ.",
+    "mecaz": "جبال لها أنوف زمخ. ونية زموخ: بعيدة، وسار عقبة زموخاً.\nقال رجل من هذيل في بعير شرد له:\nلك الله عندي صحبة وكرامة ... وقيد وثيق في الضريع الأباهر\nاليبس جمع الأبهر\nوحمل ثقيل بعد ذاك وعقبة ... زموخ وحاد في الرقاق قراقر\nصياح. وكيل زامخ: وافر. قال:\nحتى إذا ما ملت المناوخا ... كال لها بالوزن كيلا زامخا\nأي كال لها السير.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "فلان زامخ: شامخ بأنفه، وأنوف زمخ: شمخ.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "جبال لها أنوف زمخ. ونية زموخ: بعيدة، وسار عقبة زموخاً.",
+        "prototipe_benzerlik": 0.503,
+        "halka": "orta"
+      },
+      {
+        "cumle": "اليبس جمع الأبهر",
+        "prototipe_benzerlik": 0.688,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "صياح. وكيل زامخ: وافر. قال:",
+        "prototipe_benzerlik": 0.75,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "أي كال لها السير.",
+        "prototipe_benzerlik": 0.307,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.562,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النخل",
@@ -698,22 +736,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 20,
-      "merkez_kok": "وثن",
-      "merkez_mana": "Vesen: put, tapılan şey",
-      "boy": 116
+      "kume": 21,
+      "merkez_kok": "نجل",
+      "merkez_mana": "to be covered with vegetation",
+      "boy": 107
     },
     "ince": {
-      "kume": 110,
+      "kume": 129,
       "merkez_kok": "بجج",
       "merkez_mana": "beige",
-      "boy": 28
+      "boy": 27
     }
   },
   "kaliplar": {

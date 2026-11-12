@@ -688,6 +688,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "فلان يضرب القوانس. قال:\nأضرب عنك الهموم طارقها ... ضربك بالسوط قونس الفرس\nوهو ما بين الأذنين. وقونس البيضة: ما قابله منها.",
+    "mecaz": "خذ قونس الطريق: قصده وجادته. وضربوا قونس الليل: سروا في أوله. وتقول: فلان واحد من جنسك، وشعبة من قنسك؛ من أصلك.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "فلان يضرب القوانس. قال: أضرب عنك الهموم طارقها ... ضربك بالسوط قونس الفرس وهو ما بين الأذنين. وقونس البيضة: ما قابله منها.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "خذ قونس الطريق: قصده وجادته. وضربوا قونس الليل: سروا في أوله. وتقول: فلان واحد من جنسك، وشعبة من قنسك؛ من أصلك.",
+        "prototipe_benzerlik": 0.433,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.433,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السلاح",
@@ -701,16 +724,16 @@
       "kume": 3,
       "merkez_kok": "فقص",
       "merkez_mana": "",
-      "boy": 563
+      "boy": 568
     },
     "orta": {
       "kume": 5,
       "merkez_kok": "عجد",
       "merkez_mana": "",
-      "boy": 163
+      "boy": 165
     },
     "ince": {
-      "kume": 23,
+      "kume": 25,
       "merkez_kok": "جشب",
       "merkez_mana": "",
       "boy": 75

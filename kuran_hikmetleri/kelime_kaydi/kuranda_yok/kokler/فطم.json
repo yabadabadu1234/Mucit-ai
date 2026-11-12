@@ -1152,6 +1152,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "الصبيّ في فطامه بمعنى الفعل والوقت. ولها ولد فطيم، وأفطم الصبي: حان وقت فطامه. وما يملك فلان فطيمةً وهي العناق التي تفطم. قال:\nوكيف على زهد العطاء تلومهم ... وهم يتقاوون الفطيمة في الدم",
+    "mecaz": "فطمته عن عادة السوء. ولأفطمنك عما أنت عليه. وفي الحديث: \" الإمارة حلوة الرضاع مرّة الفطام \" وناقة فاطم: فطم عنها ولدها.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "الصبيّ في فطامه بمعنى الفعل والوقت. ولها ولد فطيم، وأفطم الصبي: حان وقت فطامه. وما يملك فلان فطيمةً وهي العناق التي تفطم. قال: وكيف على زهد العطاء تلومهم ... وهم يتقاوون الفطيمة في الدم",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "فطمته عن عادة السوء. ولأفطمنك عما أنت عليه. وفي الحديث: \" الإمارة حلوة الرضاع مرّة الفطام \" وناقة فاطم: فطم عنها ولدها.",
+        "prototipe_benzerlik": 0.646,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.646,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الإبل",
@@ -1162,19 +1185,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
-      "merkez_kok": "حنج",
-      "merkez_mana": "",
-      "boy": 426
-    },
-    "orta": {
       "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 261
+      "boy": 466
+    },
+    "orta": {
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 17,
+      "kume": 23,
       "merkez_kok": "خدج",
       "merkez_mana": "feminine singular of خَدِيج (ḵadīj)",
       "boy": 25

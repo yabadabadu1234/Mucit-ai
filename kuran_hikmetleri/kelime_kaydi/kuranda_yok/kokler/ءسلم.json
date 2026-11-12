@@ -706,37 +706,44 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "event.n.01",
-    "orta": "noun.act",
-    "ust": "fiil ve hadise",
-    "dayanak_synset": "reception.n.04",
-    "dayanak_tanim": "the act of receiving",
+    "ince": "receive.v.01",
+    "orta": "verb.possession",
+    "ust": "insan ve toplum",
+    "dayanak_synset": "receive.v.01",
+    "dayanak_tanim": "get something; come into possession of",
     "synset_sayisi": 3
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "prototip_yayilim_tasnif": {
+    "durum": "prototip veya mecaz kolu yok"
+  },
+  "kolekzifikasyon_kavramlari": ["act.n.02", "receive.v.01", "undergo.v.01"],
   "muhassas_tasnif": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 6,
+      "kume": 7,
       "merkez_kok": "لقلق",
       "merkez_mana": "",
-      "boy": 440
+      "boy": 386
     },
     "orta": {
-      "kume": 26,
-      "merkez_kok": "قرش",
-      "merkez_mana": "Kureyş: bir kabile adı; kırş: nakil",
-      "boy": 27
+      "kume": 28,
+      "merkez_kok": "هدن",
+      "merkez_mana": "truce, peace, cease-fire",
+      "boy": 52
     },
     "ince": {
-      "kume": 159,
+      "kume": 169,
       "merkez_kok": "شاع",
       "merkez_mana": "female equivalent of شِيعِيّ (šīʕiyy)",
-      "boy": 4
+      "boy": 8
     }
   },
   "kaliplar": {},

@@ -1,0 +1,78 @@
+{
+  "kok": "هـزز",
+  "sinif": "reddedildi",
+  "turkce_fiil": null,
+  "mustaklar": {},
+  "reddedilen": [
+    ["kök", "هـزز", "üç harfli değil"]
+  ],
+  "sozlukler": {},
+  "kuran_gecisleri": 0,
+  "kuranda_var": false,
+  "sema": {
+    "sema": "graf-ic-graf",
+    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
+    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
+    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
+    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
+    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
+  },
+  "tasnif": {
+    "fasil": "هـ",
+    "harf": "ه",
+    "mahrec": "halkiyye",
+    "bolge": "halk"
+  },
+  "mana_tasnif": {
+    "durum": "Arabic WordNet v2 kaydı yok"
+  },
+  "ses_mana_tasnif": {
+    "durum": "Cebel mu'cemlerinde kök yok"
+  },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "هزّ السّيف والقناة وغيرهما \" وهزّي إليك بجذع النّخلة \" وهزّت الريح الأغصان. وسيفٌ هزهاز. قال:\nفوردت مثل اليماني الهزهاز ... تدفع عن أعناقها بالأعجاز\nأي ماءً كالسيف. وهزهز الثور قرنه فتهزهز. وفي الحديث: \" ما تهزهزت رءوسكما \" وفلان يشهد الهزاهز وهي الحروب والشدائد التي تهزهز.",
+    "mecaz": "هو يهتز للمعروف. وهززته وهززت منه. وقد هزّ عطفيه لكذا، وهزّ منكبيه. وهزّ الحادي الإبل بحدائه فاهتزّت، ولها هزيز عند الحداء: نشاط في السير وحركة. وللريح هزيز. قال امرؤ القيس:\nإذا ما جرى شأوين وابتل عطفه ... تقول هزيز الريح مرّت بأثأب\nوهو حفيفها وسرعة هبوبها.\nقال الطرمّاح:\nيظلّ هزيز الريح بين مسامعي ... بها كالتجاج المأتم المتنوّح\nواهتزّ الماء في جريانه والكوكب في انقضاضه. ويقال: قد هزّ الكوكب إذا انقضّ. قال:\nكأنّ من يأخذ وهو مذنب ... يخرّ من حيث يهزّ الكوكب\nواهتزّ النبات إذا طال. وهزّته الرياح والأمطار. واهتزت الأرض إذا أنبتت. وامرأة هزّةٌ: نشيطة للشرّ مرتاحة له، ونساءٌ هزّاتٌ.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "هزّ السّيف والقناة وغيرهما \" وهزّي إليك بجذع النّخلة \" وهزّت الريح الأغصان. وسيفٌ هزهاز. قال: فوردت مثل اليماني الهزهاز ... تدفع عن أعناقها بالأعجاز أي ماءً كالسيف. وهزهز الثور قرنه فتهزهز. وفي الحديث: \" ما تهزهزت رءوسكما \" وفلان يشهد الهزاهز وهي الحروب والشدا",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "هو يهتز للمعروف. وهززته وهززت منه. وقد هزّ عطفيه لكذا، وهزّ منكبيه. وهزّ الحادي الإبل بحدائه فاهتزّت، ولها هزيز عند الحداء: نشاط في السير وحركة. وللريح هزيز. قال امرؤ القيس:",
+        "prototipe_benzerlik": 0.716,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وهو حفيفها وسرعة هبوبها.",
+        "prototipe_benzerlik": 0.202,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "واهتزّ الماء في جريانه والكوكب في انقضاضه. ويقال: قد هزّ الكوكب إذا انقضّ. قال:",
+        "prototipe_benzerlik": 0.396,
+        "halka": "orta"
+      },
+      {
+        "cumle": "واهتزّ النبات إذا طال. وهزّته الرياح والأمطار. واهتزت الأرض إذا أنبتت. وامرأة هزّةٌ: نشيطة للشرّ مرتاحة له، ونساءٌ هزّاتٌ.",
+        "prototipe_benzerlik": 0.247,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.39,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
+  "muhassas_tasnif": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "mana_tasnif_gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
+  },
+  "kaliplar": {},
+  "kelimeler": []
+}

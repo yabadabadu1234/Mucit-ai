@@ -1898,15 +1898,56 @@
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
     "ince": "event.n.01",
-    "orta": "noun.act",
+    "orta": "noun.event",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "ceremony.n.02",
-    "dayanak_tanim": "any activity that is performed in an especially solemn elaborate or formal way",
+    "dayanak_synset": "ceremony.n.01",
+    "dayanak_tanim": "a formal event performed on a special occasion",
     "synset_sayisi": 11
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "حفل القوم واحتفلوا: اجتمعوا. ولا تنكر على أحد في الحفل. وهذا محفل القوم ومحتفلهم. وشاع الحديث في المحافل. وحفل الماء في الوادي، وحفل الوادي إذا كثر ماؤه. وضرع حافل، وضروع حفل وحوافل. وحفل الشاة: جمع اللبن في ضرعها ليرى حافلاً. ونهى عن بيع المحفّلة.",
+    "mecaz": "إحتفل في الأمر إذا احتشد واجتهد. واحتفل الفرس في حضره: جد فيه كما يقال: جمع نفسه. قال امرؤ القيس:\nكأنها حين فاض الماء واحتفلت ... صقعاء لاح لها بالصرحة الذيب\nوحفلت السماء: حدّ وقعها. وطريق محتفل: عظيم مستبين. وهذا ثوب يحفل الوجه أي يظهر حسنه ويجمعه. قال بشر:\nرأى درّة بيضاء يحفل لونها ... صخام كغربان البرير مقصب\nوقال ابن مقبل:\nبتني بعيني جؤذر حفلتهما ... رعاث وبراق من اللون واضح\nواحتفل وتحفل: تزين، ولبس ثياب الحفلة أي الزينة.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "حفل القوم واحتفلوا: اجتمعوا. ولا تنكر على أحد في الحفل. وهذا محفل القوم ومحتفلهم. وشاع الحديث في المحافل. وحفل الماء في الوادي، وحفل الوادي إذا كثر ماؤه. وضرع حافل، وضروع حفل وحوافل. وحفل الشاة: جمع اللبن في ضرعها ليرى حافلاً. ونهى عن بيع المحفّلة.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "إحتفل في الأمر إذا احتشد واجتهد. واحتفل الفرس في حضره: جد فيه كما يقال: جمع نفسه. قال امرؤ القيس:",
+        "prototipe_benzerlik": 0.806,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وحفلت السماء: حدّ وقعها. وطريق محتفل: عظيم مستبين. وهذا ثوب يحفل الوجه أي يظهر حسنه ويجمعه. قال بشر:",
+        "prototipe_benzerlik": 0.451,
+        "halka": "orta"
+      },
+      {
+        "cumle": "واحتفل وتحفل: تزين، ولبس ثياب الحفلة أي الزينة.",
+        "prototipe_benzerlik": 0.646,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.634,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "act.n.02",
+    "artifact.n.01",
+    "celebrate.v.02",
+    "exuberate.v.01",
+    "gathering.n.01",
+    "observe.v.06",
+    "social_event.n.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الإبل",
@@ -1917,19 +1958,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 23,
+      "kume": 18,
       "merkez_kok": "وشج",
       "merkez_mana": "",
-      "boy": 67
+      "boy": 63
     },
     "ince": {
-      "kume": 129,
+      "kume": 105,
       "merkez_kok": "حشد",
       "merkez_mana": "to gather, to concentrate, to mass, to assemble",
       "boy": 12

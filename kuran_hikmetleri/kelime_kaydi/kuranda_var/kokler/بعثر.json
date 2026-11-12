@@ -432,11 +432,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "spend.v.02",
-    "orta": "verb.consumption",
-    "ust": "canlı ve beden",
-    "dayanak_synset": "consume.v.03",
-    "dayanak_tanim": "spend extravagantly",
+    "ince": "position.n.07",
+    "orta": "noun.attribute",
+    "ust": "hâl ve vasıf",
+    "dayanak_synset": "distribution.n.02",
+    "dayanak_tanim": "the spatial or geographic property of being scattered about over a range, area, or volume",
     "synset_sayisi": 5
   },
   "ses_mana_tasnif": {
@@ -447,27 +447,34 @@
     "fasil_ozeti": "° معنى الفصل المعجمي (بع): تجمع مائع أو متسيب (ومنه المتهيئ للحركة) في حيّز يخرج منه: كما يتمثل في الماء الذي يبعه السحاب - في (بعع)، والسِلعة التي في حوزة صاحبها وتخرج منها - في (بيع)، والبعير البارك قبل أن يبعث - في (بعث)، والأشياء الكثيرة قبل أن تخرج متفرقة بلا نظام في (بعثر)، وفي الشيء قبل أن يحتبس بسعة المفارقة في (بعد)، وفي البعير من حيث استعداده للسفر به - في (بعر)، والشيء القابل للانفصال في (بعض)، والماء الباطن الذي ينجذب إلى عروق النخل - في (بعل).",
     "tam_metin": "{وَإِذَا الْقُبُورُ بُعْثِرَتْ} [الانفطار: 4]\n\"بعثرت التراب: قلّبته، والمتاعَ: قلته وفرَّقته وبدّدته، والحوضَ: هدمته وجعلت أسفله أعلاه \".\n° المعنى المحوري\nهو تفريق الشيء المستقر أو تقليبه بلا نظام: كبعثرة التراب والمتاع والحوض بمعانيها المذكورة. {أَفَلَا يَعْلَمُ إِذَا بُعْثِرَ مَا فِي الْقُبُورِ} [العاديات: 9]: أثير؛ فخرجوا على أحوال مختلفة. وكذلك بعثرة القبور نفسها فهو قلبها وإخراج من فيها."
   },
+  "hakikat_mecaz_tasnif": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "prototip_yayilim_tasnif": {
+    "durum": "prototip veya mecaz kolu yok"
+  },
+  "kolekzifikasyon_kavramlari": ["consume.v.03", "disturb.v.01", "placement.n.01", "scatter.v.03", "spread.v.07"],
   "muhassas_tasnif": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "kume": 5,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 375
     },
     "orta": {
-      "kume": 11,
-      "merkez_kok": "دحر",
-      "merkez_mana": "Dahr: itmek, uzaklaştırmak",
-      "boy": 179
+      "kume": 14,
+      "merkez_kok": "غدر",
+      "merkez_mana": "Gadr: ihanet, hile",
+      "boy": 153
     },
     "ince": {
-      "kume": 59,
-      "merkez_kok": "بعثر",
-      "merkez_mana": "Bu'sîr: dağıtmak, savurmak",
-      "boy": 22
+      "kume": 80,
+      "merkez_kok": "هدم",
+      "merkez_mana": "Hadm: yıkmak, yıkılmak",
+      "boy": 43
     }
   },
   "kaliplar": {},

@@ -770,16 +770,23 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "float.v.01",
+    "ince": "float.v.02",
     "orta": "verb.motion",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "float.v.01",
-    "dayanak_tanim": "be in motion due to some air or water current",
+    "dayanak_synset": "float.v.02",
+    "dayanak_tanim": "be afloat either on or below a liquid surface and not sink to the bottom",
     "synset_sayisi": 6
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "prototip_yayilim_tasnif": {
+    "durum": "prototip veya mecaz kolu yok"
+  },
+  "kolekzifikasyon_kavramlari": ["float.v.01", "float.v.02", "ride.v.01", "ride.v.02", "roll.v.12", "swim.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -790,22 +797,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 7,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 331
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 30,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 103
-    },
-    "ince": {
-      "kume": 205,
+      "kume": 35,
       "merkez_kok": "نقع",
       "merkez_mana": "Nak': su birikintisi; nakî': ıslak",
-      "boy": 33
+      "boy": 47
+    },
+    "ince": {
+      "kume": 236,
+      "merkez_kok": "نقع",
+      "merkez_mana": "Nak': su birikintisi; nakî': ıslak",
+      "boy": 18
     }
   },
   "kaliplar": {

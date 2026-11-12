@@ -1128,23 +1128,51 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "hurt.v.02",
+    "ince": "injure.v.01",
     "orta": "verb.body",
     "ust": "canlı ve beden",
-    "dayanak_synset": "hurt.v.02",
-    "dayanak_tanim": "give trouble or pain to",
+    "dayanak_synset": "harm.v.01",
+    "dayanak_tanim": "cause or do harm to",
     "synset_sayisi": 3
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "سبع ضار وقد ضريَ بالصيد وعلى الصيد ضراوة. وأضرى الصائد الكلب والجارح وضراه، وجرو ضرو: ضارٍ، وجراء ضراء. قال ذو الرمة:\nمقزع أطلس الأطمار ليس له ... إلا الضراء وإلا صيدها نشب",
+    "mecaz": "ضريَ فلان بكذا وعلى كذا: لهيج به. وأضريته به، وضريته وعليه. وقال زهير:\nمتى تبعثوها تبعثوها ذميمة ... وتضر إذا ضريتموها فتضرم\nوجرة ضارية، وقد ضريت بالخل وغيره. وعرق ضار وضريٌ: سيال لا ينقطع كأنه ضريَ بالسيلان، وقد ضرا يضرو غيّروا البناء لتغيّر المعنى. وهو يمشي لك الضراء، وإنه ليثب الضراء وهو الخمر أي يختلك. قال الكميت:\nوإني على حبي لهم وتطلعي ... إذلى نصرهم أمشي الضراء وأختل\nوقال خفاف:\nالمرء يسعي وله راصد ... تنذره العين وثوب الضراء",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "سبع ضار وقد ضريَ بالصيد وعلى الصيد ضراوة. وأضرى الصائد الكلب والجارح وضراه، وجرو ضرو: ضارٍ، وجراء ضراء. قال ذو الرمة: مقزع أطلس الأطمار ليس له ... إلا الضراء وإلا صيدها نشب",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "ضريَ فلان بكذا وعلى كذا: لهيج به. وأضريته به، وضريته وعليه. وقال زهير:",
+        "prototipe_benzerlik": 0.676,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وجرة ضارية، وقد ضريت بالخل وغيره. وعرق ضار وضريٌ: سيال لا ينقطع كأنه ضريَ بالسيلان، وقد ضرا يضرو غيّروا البناء لتغيّر المعنى. وهو يمشي لك الضراء، وإنه ليثب الضراء وهو الخمر أي يختلك. قال الكميت:",
+        "prototipe_benzerlik": 0.569,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.622,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["damage.v.01", "harm.v.01", "hurt.v.02"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السباع",
     "bab": "الذئاب إرادة إناث الذئاب",
-    "kok_gecis": 25.2,
+    "kok_gecis": 24.9,
     "kitapta_gecis": 2.0,
-    "zenginlesme": 9.19
+    "zenginlesme": 9.31
   },
   "mana_tasnif_gomme": {
     "durum": "tasnif edilemedi (köke ait mana metni yok)"

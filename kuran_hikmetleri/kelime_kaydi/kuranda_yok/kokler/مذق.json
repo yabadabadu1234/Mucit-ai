@@ -1040,6 +1040,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "مذق اللبن بالماء يمذقه، ومذق الشراب: مزجه فأكثر ماءه، ولبن مذيق. وسقاني مذقاً ومذقة. قال أعرابي:\nإذا ما أصبنا كل يوم مذيقة ... وخمس تميرات صغار خوانز\nفنحن ملوك الأرض خصباً ونعمةً ... ونحن أسود الغيل عند الهزاهز",
+    "mecaz": "فلان يمذق الودّ، وودّه ممذوق، وهو ممذوق الود، وماذقه في الوداد مذاقاً، وهو مماذق في ودّه ومذّاق. وفلان مذّاق: كذاب. قال:\nما وجز معروفك بالرماق ... ولا مؤاخاتك بالمذاق\nما معجّل معروفك بالقليل، أوجز العطيّة: عجّلها.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "مذق اللبن بالماء يمذقه، ومذق الشراب: مزجه فأكثر ماءه، ولبن مذيق. وسقاني مذقاً ومذقة. قال أعرابي: إذا ما أصبنا كل يوم مذيقة ... وخمس تميرات صغار خوانز فنحن ملوك الأرض خصباً ونعمةً ... ونحن أسود الغيل عند الهزاهز",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "فلان يمذق الودّ، وودّه ممذوق، وهو ممذوق الود، وماذقه في الوداد مذاقاً، وهو مماذق في ودّه ومذّاق. وفلان مذّاق: كذاب. قال:",
+        "prototipe_benzerlik": 0.712,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "ما معجّل معروفك بالقليل، أوجز العطيّة: عجّلها.",
+        "prototipe_benzerlik": 0.271,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.491,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "المكنيات والمبنيات والمثنيات",
@@ -1051,21 +1079,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 509
     },
     "orta": {
-      "kume": 9,
+      "kume": 7,
       "merkez_kok": "خون",
       "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
-      "boy": 168
+      "boy": 259
     },
     "ince": {
-      "kume": 46,
+      "kume": 37,
       "merkez_kok": "خون",
       "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
-      "boy": 39
+      "boy": 50
     }
   },
   "kaliplar": {

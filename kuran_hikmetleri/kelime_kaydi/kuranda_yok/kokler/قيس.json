@@ -1021,13 +1021,62 @@
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "standardization.n.02",
-    "dayanak_tanim": "the imposition of standards or regulations",
+    "dayanak_synset": "measurement.n.01",
+    "dayanak_tanim": "the act or process of assigning numbers to phenomena according to a rule",
     "synset_sayisi": 16
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "قاسه وبه وعليه وإليه قيساً وقياساً واقتاسه. ورجل قيّاس، وهو مقيس عليه. وقاسه بالمقياس والمقاييس الصحيحة. وقايست بين الشيئين. وقبح الله قوماً يسودونك ويقايسون برأيك. وهذه مسئلة لا تنقاس. وقاس الطبيب الشّجّة بالمقياس: بالمحراف: قدّر غورها به. وتقيّس: انتمى إلى قيسٍ أو تعلّق منهم بحلف أو ولاء أو جوار. قال العجاج:\nوقيس عيلان ومن تقيّسا",
+    "mecaz": "بينهما قيس رمح. وقيس إصبع. وجارية تميس ميساً، وتخطو قيساً؛ تأتي بخطاها مستوية. وفلان يأتي بما يأتي قيساً. وقاسه: سبقه. قال:\nلعمري لقد قاس الجميع أبوكم ... فهلا تقيسون الذي كان قائسا\nوقايسه إلى كذا: سابقه. قال:\nإذا نحن قايسنا أناساً إلى العلى ... وإن كرموا لم يستطعنا المقايس\nوقال الطرمّاح:\nتمرّ على الوراك إذا المطايا ... تقايست النجاد من الوجين\nخريع النّعو مضطرب النواحي ... كأخلاق الغريفة ذا غضون\nأي نظرت أيّ تلك النجاد أسهل مسلكا.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "قاسه وبه وعليه وإليه قيساً وقياساً واقتاسه. ورجل قيّاس، وهو مقيس عليه. وقاسه بالمقياس والمقاييس الصحيحة. وقايست بين الشيئين. وقبح الله قوماً يسودونك ويقايسون برأيك. وهذه مسئلة لا تنقاس. وقاس الطبيب الشّجّة بالمقياس: بالمحراف: قدّر غورها به. وتقيّس: انتمى إلى ق",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "بينهما قيس رمح. وقيس إصبع. وجارية تميس ميساً، وتخطو قيساً؛ تأتي بخطاها مستوية. وفلان يأتي بما يأتي قيساً. وقاسه: سبقه. قال:",
+        "prototipe_benzerlik": 0.605,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وقايسه إلى كذا: سابقه. قال:",
+        "prototipe_benzerlik": 0.584,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "أي نظرت أيّ تلك النجاد أسهل مسلكا.",
+        "prototipe_benzerlik": 0.394,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.527,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "act.n.02",
+    "deliberate.s.01",
+    "estimate.v.01",
+    "group_action.n.01",
+    "hard.a.03",
+    "magnitude.n.01",
+    "measure.n.02",
+    "measure.v.01",
+    "measure.v.04",
+    "mensural.a.01",
+    "normal.a.01",
+    "quantify.v.02",
+    "regularity.n.02",
+    "standard.n.01",
+    "try_on.v.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "المثنيات",
@@ -1038,19 +1087,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 15,
+      "kume": 19,
       "merkez_kok": "فوق",
       "merkez_mana": "Fevk: üst, yukarı (zarf)",
-      "boy": 107
+      "boy": 76
     },
     "ince": {
-      "kume": 82,
+      "kume": 110,
       "merkez_kok": "حصي",
       "merkez_mana": "Hasâ: çakıl taşı; ihsâ: saymak",
       "boy": 8

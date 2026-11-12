@@ -1964,6 +1964,55 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "لمع البرق والصبح غيرهما لمعاً ولمعاناً وكأنه لمع البرق، وبرقٌ لامع ولمّاع، وبروقٌ لمع ولوامع. \" وأخدع من يلمع \" وهو البرق الخلب والسراب. وفلاة لمّاعة: تلمع بالسّراب. وبه لمعة ولمع من سواد أو بياض أو أيّ لونٍ كان. وثوبٌ ملمّع، وقد لمّع، ولمّعه ناسجه، وفيه تلميع وتلاميع إذا كانت فيه ألوان شتّى. قال لبيد:\nإن استه من برصٍ ملمّعه\nوفرسٌ ملمّع: فيه سواد وبياض. وتلمّع ضرع الناقة: تغيّر لونها إلى سواد، ورجل ألمعيّ ويلمعيّ: فرّاس.",
+    "mecaz": "لمع الزّمام: خفق لمعاناً، وزمام لامع ولموع. قال ذو الرمة:\nفعاجا علندًى ناجياً ذا براية ... وعوّجت مذعاناً لموعاً زمامها\nوالطائر يلمع بجناحيه: يخفق بهما، وخفق بملمعيه: بجناحيه. ولمع بثوبه ويده وسيفه: أشار، ومنه: ما بالدار لامع. وألمعت الناقة بذنبها عند اللقاح. وبه لمعة من العيش: ما يكتفى به. قال عديّ:\nتكذب النفوس لمعتها ... وتعود بعد آثارا\nأي يذهب عنها العيش ويرجع آثاراً وأحاديث. وتلمعت السنة كما قيل: عامٌ أبقع. قال:\nعلى دبر الشهر الحرام بأرضنا ... وما حولنا جدب سنون تلمّع",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "لمع البرق والصبح غيرهما لمعاً ولمعاناً وكأنه لمع البرق، وبرقٌ لامع ولمّاع، وبروقٌ لمع ولوامع. \" وأخدع من يلمع \" وهو البرق الخلب والسراب. وفلاة لمّاعة: تلمع بالسّراب. وبه لمعة ولمع من سواد أو بياض أو أيّ لونٍ كان. وثوبٌ ملمّع، وقد لمّع، ولمّعه ناسجه، وفيه تلميع",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "لمع الزّمام: خفق لمعاناً، وزمام لامع ولموع. قال ذو الرمة:",
+        "prototipe_benzerlik": 0.736,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "والطائر يلمع بجناحيه: يخفق بهما، وخفق بملمعيه: بجناحيه. ولمع بثوبه ويده وسيفه: أشار، ومنه: ما بالدار لامع. وألمعت الناقة بذنبها عند اللقاح. وبه لمعة من العيش: ما يكتفى به. قال عديّ:",
+        "prototipe_benzerlik": 0.981,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "أي يذهب عنها العيش ويرجع آثاراً وأحاديث. وتلمعت السنة كما قيل: عامٌ أبقع. قال:",
+        "prototipe_benzerlik": 0.927,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.881,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "appearance.n.01",
+    "beat.v.02",
+    "beat.v.04",
+    "beat.v.05",
+    "dart.v.02",
+    "elegance.n.01",
+    "exhaust.v.01",
+    "living_thing.n.01",
+    "material.n.01",
+    "physical_property.n.01",
+    "polish.v.01",
+    "polish.v.02",
+    "radiate.v.05",
+    "shine.v.04",
+    "unit_of_measurement.n.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السباع",
@@ -1974,19 +2023,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 7,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 331
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 32,
-      "merkez_kok": "دمس",
-      "merkez_mana": "pocket bread, pita",
-      "boy": 61
+      "kume": 42,
+      "merkez_kok": "سحم",
+      "merkez_mana": "to become black, to be blackened",
+      "boy": 97
     },
     "ince": {
-      "kume": 213,
+      "kume": 275,
       "merkez_kok": "نور",
       "merkez_mana": "Nûr: ışık, aydınlık",
       "boy": 31

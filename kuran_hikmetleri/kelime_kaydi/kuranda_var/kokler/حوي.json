@@ -1615,6 +1615,60 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "حويت المال حواية، واحتويته لنفسي. وتحوّى الشيء: تجمع. وتحوت الحية: ترحت. ونحن في أرض محواة: كثيرة الحيات. وركبت الحوية، وركبن الحوايا وهي كساء يحوي حول السنام تركبه المرأة. وتقول: يوماً على الحشايا، ويوماً على الحوايا. وحوى الكساء حول السنام. وحوّى التراب حول الماء ليحبسه. وقد شحمت حوايا الجزور، جمع حوية وهي المعي. وفلان عظيم الحاوية. ورمى به في حاويائه أي أكله. وقعدوا في الحواء، وهم أهل حواء وهي أخبية متدانية، وكنا في أحوية بني فلان. وشعر أحوى: أسود، ورجل أحوى: شاب أسود الشعر. وشفة ولثة حواء، ونساء حو اللثات.",
+    "mecaz": "احتوى على الشيء: استولى عليه. واحتوى القوم: تجاوروا، وهذا محتوى بني فلان ومحواهم أي متجاورهم. قال يصف قدراً:\nودهماء تستوفي الجزور كأنها ... بأفنية المحوى حصان مقيد\nوهذه محاويهم.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "حويت المال حواية، واحتويته لنفسي. وتحوّى الشيء: تجمع. وتحوت الحية: ترحت. ونحن في أرض محواة: كثيرة الحيات. وركبت الحوية، وركبن الحوايا وهي كساء يحوي حول السنام تركبه المرأة. وتقول: يوماً على الحشايا، ويوماً على الحوايا. وحوى الكساء حول السنام. وحوّى التراب حول ",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "احتوى على الشيء: استولى عليه. واحتوى القوم: تجاوروا، وهذا محتوى بني فلان ومحواهم أي متجاورهم. قال يصف قدراً:",
+        "prototipe_benzerlik": 0.426,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.426,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "act.n.02",
+    "agree.v.01",
+    "animate.a.02",
+    "artifact.n.01",
+    "bear.v.11",
+    "biological.a.01",
+    "content.n.01",
+    "content.n.05",
+    "control.v.02",
+    "declare.v.04",
+    "deem.v.01",
+    "gathering.n.01",
+    "greet.v.01",
+    "have.v.01",
+    "hold.v.11",
+    "hold.v.14",
+    "hold.v.22",
+    "hold.v.36",
+    "house.v.01",
+    "incorporate.v.02",
+    "keep.v.01",
+    "living.a.01",
+    "living.n.02",
+    "living_thing.n.01",
+    "message.n.02",
+    "nod.v.01",
+    "regenerate.v.01",
+    "region.n.01",
+    "region.n.03",
+    "restrain.v.03"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الحشرات",
@@ -1625,19 +1679,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 15,
+      "kume": 19,
       "merkez_kok": "فوق",
       "merkez_mana": "Fevk: üst, yukarı (zarf)",
-      "boy": 107
+      "boy": 76
     },
     "ince": {
-      "kume": 83,
+      "kume": 111,
       "merkez_kok": "حصل",
       "merkez_mana": "Hasl: elde etmek, sonuçlanmak; hâsıl",
       "boy": 37

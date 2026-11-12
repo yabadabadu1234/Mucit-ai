@@ -1616,8 +1616,8 @@
     "ince": "whole.n.02",
     "orta": "noun.artifact",
     "ust": "cisim ve eşya",
-    "dayanak_synset": "obstacle.n.02",
-    "dayanak_tanim": "an obstruction that stands in the way (and must be removed or surmounted or circumvented)",
+    "dayanak_synset": "hindrance.n.02",
+    "dayanak_tanim": "any obstruction that impedes or is burdensome",
     "synset_sayisi": 39
   },
   "ses_mana_tasnif": {
@@ -1628,6 +1628,53 @@
     "fasil_ozeti": "° معنى الفصل المعجمي (عق) : هو وجود غلظ أو تعقد في عمق الشيء كما يتمثل ذلك في عمق العقيق -في (عقق)، وفي الجانب المرتفع من الوادي عندما ينعرج وذلك بالنسبة لمجري الوادي -في (عوق)، وكالعَقَب العصب في المتنين والساقين إلخ -في (عقب)، وفي عَقْد البناء والجل وتعقد الثرى -في (عقد)، وفي تجمع الرمل الذي لا ينبت -في (عقر)، وفي العَقْل شد البعير، والحصن، والعقيلة الدُرّة -في (عقل)، وفي طرف عظم الرسغ وعظم الرجل من عند الركبة -في (عقم).",
     "tam_metin": "{قَدْ يَعْلَمُ اللَّهُ الْمُعَوِّقِينَ مِنْكُمْ} [الأحزاب: 18]\n\"العَوْقُ -بالفتح: مُنْعَرَجُ الوادي \".\n° المعنى المحوري\nاعتراض الاطراد والاستقامة بالتواء أو حُيُود. كمُنْعَرَج الوادي بالنسبة لما هو الأصل من استقامته. ومنه \"أعْوَقَت به الدابةُ: قَطَعَت، وعاقه وعَوَّقه: حَبَسه، وثَبَّطه (إيقاف أو تعطيل لاستمرار السير والعمل) {قَدْ يَعْلَمُ اللَّهُ الْمُعَوِّقِينَ} المثبطين والصادّين الناسَ عن نصرة النبي -صلى اللَّه عليه وسلم- والقتال معه [انظر قر 14/ 121]. وأما \"العَوَقُ -محركة: الجُوعُ، والمُعْوِقُ كمحسن الجائع \"فمن نفاد القوة على الاستمرار تعبيرًا بالسبب.\n__________\n= امتساك مع استقلال ويعبر التركيب عن امتساك في الحوزة مع غلظ واستقلال كالمعقل الحصن وكالعقية: الدُرّة في صَدَفتها. وفي (عقم) تعبر الميم عن التئام ظاهر واستوائه على شيء ويعبر الفصل المختوم بها عن استواء الظاهر أي التئامه على شدة ويبس في الباطن كالمعاقم.\n(3/1495)"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "أخرتني عائقة من عوائق الدهر. قال أبو ذؤيب:\nألا هل إلى أمّ الخويلد مرسل ... بلى خالد إن لم تعقه العوائق\nوعاقه واعتاقه وعوّقه \" قد يعلم الله المعوقين منكم \". وتقول: فلان صبحه التعويق، فهجره التوفيق. ورجل عوقة: ذو تعويق وترييث عن الخير. وتقول: يا من عن الخير يعوق، إن أحقّ أسمائك يعوق.",
+    "mecaz": "",
+    "kinaye": "",
+    "mecaz_var": false
+  },
+  "prototip_yayilim_tasnif": {
+    "durum": "prototip veya mecaz kolu yok"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "act.n.02",
+    "artifact.n.01",
+    "barricade.v.01",
+    "condition.n.01",
+    "confine.v.05",
+    "control.v.02",
+    "cook.v.02",
+    "delay.v.02",
+    "deter.v.01",
+    "disable.v.02",
+    "disabled.n.01",
+    "discourage.v.02",
+    "disturb.v.01",
+    "embarrass.v.01",
+    "fasten.v.01",
+    "fix.v.12",
+    "hurt.v.02",
+    "hurt.v.05",
+    "hurt.v.06",
+    "impede.v.01",
+    "interrupt.v.04",
+    "living_thing.n.01",
+    "natural_object.n.01",
+    "obstruct.v.01",
+    "obstruct.v.02",
+    "pain.v.02",
+    "predominate.v.01",
+    "prevent.v.01",
+    "prevent.v.02",
+    "quantify.v.02",
+    "repair.v.01",
+    "sterilize.v.02",
+    "suffer.v.06",
+    "trap.v.02",
+    "trap.v.04"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النخل",
@@ -1638,22 +1685,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "kume": 5,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 375
     },
     "orta": {
       "kume": 13,
       "merkez_kok": "صدد",
       "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
-      "boy": 93
+      "boy": 76
     },
     "ince": {
-      "kume": 72,
+      "kume": 76,
       "merkez_kok": "عوق",
       "merkez_mana": "Avk: engellemek; avâk: engel",
-      "boy": 19
+      "boy": 17
     }
   },
   "kaliplar": {

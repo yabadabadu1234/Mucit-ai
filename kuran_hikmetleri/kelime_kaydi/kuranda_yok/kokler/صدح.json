@@ -1622,6 +1622,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "ديك صدوح وصداح: رفيع الصوت.",
+    "mecaz": "قينة صادحة. وحاد صيدح. ومزهر صداح. قال لبيد:\nوقينة ومزهر صداح",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "ديك صدوح وصداح: رفيع الصوت.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "قينة صادحة. وحاد صيدح. ومزهر صداح. قال لبيد:",
+        "prototipe_benzerlik": 0.481,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وقينة ومزهر صداح",
+        "prototipe_benzerlik": 0.448,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.465,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطير",
@@ -1632,19 +1660,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
-      "merkez_kok": "درك",
-      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 21,
-      "merkez_kok": "همس",
-      "merkez_mana": "Hamis: fısıldamak, gizlice konuşmak",
-      "boy": 97
+      "kume": 39,
+      "merkez_kok": "صرخ",
+      "merkez_mana": "Sarih: bağırmak, feryat",
+      "boy": 34
     },
     "ince": {
-      "kume": 115,
+      "kume": 257,
       "merkez_kok": "صرخ",
       "merkez_mana": "Sarih: bağırmak, feryat",
       "boy": 27

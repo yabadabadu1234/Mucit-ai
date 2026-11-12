@@ -796,6 +796,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "قصع الصؤاب بين ظفريه: قتله. وقصعت الرحى الحب: فضخته. وصبيٌّ قصيع: قميء لا يشبّ، وقصع قصاعة.",
+    "mecaz": "قصع صارّته: قتل عطشه. وقصع الله شبابه. وقصّع الرجل: لزم بيته، من تقصيع اليربوع وهو دخوله في قاصعائه. قال ابن الرقيات:\nإني لأخلي لها الفراش إذا ... قصّع في حضن عرسه الفرق\nوقصّع في ثوبه: تدثّر. وقصّع الشيطان في قفاه: ساء خلقه وغضب. قال:\nإذا الشيطان قصّع في قفاها ... تنقّفناه بالحبل التّؤام",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "قصع الصؤاب بين ظفريه: قتله. وقصعت الرحى الحب: فضخته. وصبيٌّ قصيع: قميء لا يشبّ، وقصع قصاعة.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "قصع صارّته: قتل عطشه. وقصع الله شبابه. وقصّع الرجل: لزم بيته، من تقصيع اليربوع وهو دخوله في قاصعائه. قال ابن الرقيات:",
+        "prototipe_benzerlik": 0.841,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وقصّع في ثوبه: تدثّر. وقصّع الشيطان في قفاه: ساء خلقه وغضب. قال:",
+        "prototipe_benzerlik": 0.843,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.842,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الحشرات",
@@ -806,22 +834,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 6,
-      "merkez_kok": "لقلق",
-      "merkez_mana": "",
-      "boy": 440
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 27,
-      "merkez_kok": "عجو",
-      "merkez_mana": "beikost",
-      "boy": 82
+      "kume": 40,
+      "merkez_kok": "ثعع",
+      "merkez_mana": "",
+      "boy": 49
     },
     "ince": {
-      "kume": 172,
-      "merkez_kok": "خبز",
-      "merkez_mana": "Habz: ekmek yapmak, ekmek",
-      "boy": 8
+      "kume": 259,
+      "merkez_kok": "علعل",
+      "merkez_mana": "",
+      "boy": 13
     }
   },
   "kaliplar": {

@@ -898,6 +898,40 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "رنح فلان وترنح إذا دير به وتمايل كالأسن والسكران، ورنحه الشراب. قال:\nوكأس شربت على لذة ... دهاق ترنح من ذاقها\nوقال:\nضرب إذا ما رنح الطرف اسمدر",
+    "mecaz": "رنحت الريح الغصن فترنح. واستجمر بالمرنح وهو الألوة ترنح برائحتها الذكية. ولقد ترنح عليّ فلان إذا مال عليك بالتطاول والترقّع. قال أبو الغريب البصريّ:\nترنح بالكلام عليّ جهلاً ... كأنك ماجد من آل بدر وهو يترجّح بين أمرين ويترنح.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "رنح فلان وترنح إذا دير به وتمايل كالأسن والسكران، ورنحه الشراب. قال: وكأس شربت على لذة ... دهاق ترنح من ذاقها وقال: ضرب إذا ما رنح الطرف اسمدر",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "رنحت الريح الغصن فترنح. واستجمر بالمرنح وهو الألوة ترنح برائحتها الذكية. ولقد ترنح عليّ فلان إذا مال عليك بالتطاول والترقّع. قال أبو الغريب البصريّ:",
+        "prototipe_benzerlik": 0.11,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.11,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "bumble.v.03",
+    "hesitate.v.01",
+    "limp.v.01",
+    "rock.v.01",
+    "shake.v.01",
+    "sleep_together.v.01",
+    "stagger.v.01",
+    "stimulate.v.03",
+    "swing.v.02",
+    "weave.v.04"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "خلق الإنسان",
@@ -908,22 +942,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "kume": 7,
+      "merkez_kok": "لقلق",
+      "merkez_mana": "",
+      "boy": 386
     },
     "orta": {
-      "kume": 11,
-      "merkez_kok": "دحر",
-      "merkez_mana": "Dahr: itmek, uzaklaştırmak",
-      "boy": 179
+      "kume": 29,
+      "merkez_kok": "دبب",
+      "merkez_mana": "debbe: sürünmek, hareket / debbe: uğraşmak (?)",
+      "boy": 73
     },
     "ince": {
-      "kume": 58,
-      "merkez_kok": "ءته",
-      "merkez_mana": "",
-      "boy": 23
+      "kume": 188,
+      "merkez_kok": "دبب",
+      "merkez_mana": "debbe: sürünmek, hareket / debbe: uğraşmak (?)",
+      "boy": 16
     }
   },
   "kaliplar": {

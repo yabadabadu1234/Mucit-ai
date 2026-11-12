@@ -688,6 +688,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "لجفت البئر حفرت في جوانبها، وفي البئر لجفٌ وهو ما حفر في جانب منها أو أكله الاء حتى صار كالكهف، وبئر ذات لجفٍ وألجافٍ، وقد تلجّف البئر، ولجّفها مخض الدلاء.",
+    "mecaz": "لجّف القوم مكيالهم: وسّعوا أسفله. ولجّف الوحشيّ كناسه.\nقال العجاج:\nإذا انتحى معتقماً أو لجفاً\nأي حافراً سفلاً أو حفر في جانب، ونظير الاعتقام والتلجيف: الضّرح واللّحد في القبر.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "لجفت البئر حفرت في جوانبها، وفي البئر لجفٌ وهو ما حفر في جانب منها أو أكله الاء حتى صار كالكهف، وبئر ذات لجفٍ وألجافٍ، وقد تلجّف البئر، ولجّفها مخض الدلاء.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "لجّف القوم مكيالهم: وسّعوا أسفله. ولجّف الوحشيّ كناسه.",
+        "prototipe_benzerlik": 0.377,
+        "halka": "orta"
+      },
+      {
+        "cumle": "إذا انتحى معتقماً أو لجفاً",
+        "prototipe_benzerlik": 0.333,
+        "halka": "orta"
+      },
+      {
+        "cumle": "أي حافراً سفلاً أو حفر في جانب، ونظير الاعتقام والتلجيف: الضّرح واللّحد في القبر.",
+        "prototipe_benzerlik": 0.353,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.354,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -701,16 +734,16 @@
       "kume": 3,
       "merkez_kok": "فقص",
       "merkez_mana": "",
-      "boy": 563
+      "boy": 568
     },
     "orta": {
       "kume": 5,
       "merkez_kok": "عجد",
       "merkez_mana": "",
-      "boy": 163
+      "boy": 165
     },
     "ince": {
-      "kume": 23,
+      "kume": 25,
       "merkez_kok": "جشب",
       "merkez_mana": "",
       "boy": 75

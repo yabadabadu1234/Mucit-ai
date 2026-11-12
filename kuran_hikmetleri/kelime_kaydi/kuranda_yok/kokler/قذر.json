@@ -1729,6 +1729,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "قذر الشيء قذراً فهو قذر، وقذر قذارة فهو قذر كضخم وصعب. وتطهر من الأقذار والقاذورات. ورجل قذر، وقوم أقذار، وقذرت الشيء واستقذرته وتقذّرت منه وأقذرته: وجدته قذراً.",
+    "mecaz": "قذرت الشيء وتقذّرت منه إذا كرهته. وقال العجاج:\nوقذري ما ليس بالمقذور\nورجل قاذورة: متبرم بالناس لا يجلس إلا وحده ولا ينزل إلا وحده. ورجل قذرة: يتنزّه عما يلام عليه. وناقة قذور: تبرك ناحية من الإبل لا تخالطها. وامرأة قذور: تجتنب الرّيب. وأقذرتنا رحمك الله: أضجرتنا. وفي الحديث: \" ومن أتى منكم شيئاً من هذه القاذورات فليستر على نفسه \" أراد الفواحش. قال متمّم:\nوإن تلقه في الشّرب لا تلق فاحشاً ... على الكأس ذا قاذورة متزبّعاً",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "قذر الشيء قذراً فهو قذر، وقذر قذارة فهو قذر كضخم وصعب. وتطهر من الأقذار والقاذورات. ورجل قذر، وقوم أقذار، وقذرت الشيء واستقذرته وتقذّرت منه وأقذرته: وجدته قذراً.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "قذرت الشيء وتقذّرت منه إذا كرهته. وقال العجاج:",
+        "prototipe_benzerlik": 0.547,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وقذري ما ليس بالمقذور",
+        "prototipe_benzerlik": 0.54,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "ورجل قاذورة: متبرم بالناس لا يجلس إلا وحده ولا ينزل إلا وحده. ورجل قذرة: يتنزّه عما يلام عليه. وناقة قذور: تبرك ناحية من الإبل لا تخالطها. وامرأة قذور: تجتنب الرّيب. وأقذرتنا رحمك الله: أضجرتنا. وفي الحديث: \" ومن أتى منكم شيئاً من هذه القاذورات فليستر على نفسه \" أراد الفواحش. قال متمّم:",
+        "prototipe_benzerlik": 0.048,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.378,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "اللباس",
@@ -1739,19 +1772,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "kume": 6,
+      "merkez_kok": "درك",
+      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
+      "boy": 1364
     },
     "orta": {
-      "kume": 36,
-      "merkez_kok": "نجس",
-      "merkez_mana": "Nicis: pislik, necis",
-      "boy": 123
+      "kume": 15,
+      "merkez_kok": "زور",
+      "merkez_mana": "Zûr: yalan, sahtelik",
+      "boy": 133
     },
     "ince": {
-      "kume": 231,
+      "kume": 89,
       "merkez_kok": "قذر",
       "merkez_mana": "to be dirty, unclean",
       "boy": 8

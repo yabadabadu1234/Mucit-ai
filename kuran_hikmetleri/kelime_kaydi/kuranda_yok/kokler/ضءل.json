@@ -1841,6 +1841,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "رجل ضئيل وامرأة ضئيلة، وقد ضؤل ضؤلة وتضاءل، وتقول: فلان ضئيل بئيل: دقيق صغير. وقال النابغة:\nفبتّ كأني ساورتني ضئيلة ... من الرقش في أنيابها السم ناقع\nدقيقة من الحيّات كالأفعى. وجاء يضائل شخصه، يصغره لئلا يستبين. قال زهير:\nفبينا نبغّي الوحش جاء غلامنا ... يدب ويخفى شخصه ويضائله",
+    "mecaz": "ضؤل رأيه، وهو ضئيل الرأي. وما عليك في ذلك ضؤولة أي ضعف ومذلة. وهو يتضاءل عن ذلك: يتقاصر عنه. وعن بعضهم: القياس يتضاءل عند السماع.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "رجل ضئيل وامرأة ضئيلة، وقد ضؤل ضؤلة وتضاءل، وتقول: فلان ضئيل بئيل: دقيق صغير. وقال النابغة: فبتّ كأني ساورتني ضئيلة ... من الرقش في أنيابها السم ناقع دقيقة من الحيّات كالأفعى. وجاء يضائل شخصه، يصغره لئلا يستبين. قال زهير: فبينا نبغّي الوحش جاء غلامنا ... يدب و",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "ضؤل رأيه، وهو ضئيل الرأي. وما عليك في ذلك ضؤولة أي ضعف ومذلة. وهو يتضاءل عن ذلك: يتقاصر عنه. وعن بعضهم: القياس يتضاءل عند السماع.",
+        "prototipe_benzerlik": 0.302,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.302,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["act.n.02", "decline.v.04", "evanesce.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "خلق الإنسان",
@@ -1851,22 +1874,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
+      "kume": 8,
       "merkez_kok": "قبب",
       "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "boy": 604
     },
     "orta": {
-      "kume": 45,
-      "merkez_kok": "متن",
-      "merkez_mana": "Metn: sağlam yer, metin; metîn: sağlam",
-      "boy": 268
+      "kume": 34,
+      "merkez_kok": "نقق",
+      "merkez_mana": "to croak (of frogs)",
+      "boy": 255
     },
     "ince": {
-      "kume": 292,
+      "kume": 227,
       "merkez_kok": "نحل",
       "merkez_mana": "Nahl: arı; nahl: hediye",
-      "boy": 15
+      "boy": 18
     }
   },
   "kaliplar": {

@@ -2035,6 +2035,94 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "قضى له القاضي وعليه. وعدل في قضائه وقضيّته وقضاياه وأقضيته. وقضاء الله تردّ له الأقضية. وقاضيته حاكمته. وقد استقضي علينا فلان. واستقضاه السلطان. وقضى الله أمراً. وقضى فلان حاجته، وقضّى حوائجه. قال امرؤ القيس:\nخليليّ مرا بي إلى أمّ جندب ... نقضّ لبانات الفؤاد المعذّب\nوانقضى عمره وتقضّى. وتقاضيته ديني وبديني، واقتضيته ديني واستقضيته، واقتضيت منه حقّي: أخذته.",
+    "mecaz": "بنى داراً فقضاها واسعة. وعمل ثوباً فقضاه صفيقاً. وقضى درعاً. وقضى إليه أمراً وعهداً: وصّاه به وأمره. وقضى المريض، وقضى نحبه، وقضي عليه. وقضى عليه بضربه. وقضي قضاؤه. وأتت عليه القاضية: المنيّة. وحاربوا فقضوا بينهم قواضي وقضّوا. وافعل ما يقتضيه كرمك أي يطالبك به.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "قضى له القاضي وعليه. وعدل في قضائه وقضيّته وقضاياه وأقضيته. وقضاء الله تردّ له الأقضية. وقاضيته حاكمته. وقد استقضي علينا فلان. واستقضاه السلطان. وقضى الله أمراً. وقضى فلان حاجته، وقضّى حوائجه. قال امرؤ القيس: خليليّ مرا بي إلى أمّ جندب ... نقضّ لبانات الفؤاد ا",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "بنى داراً فقضاها واسعة. وعمل ثوباً فقضاه صفيقاً. وقضى درعاً. وقضى إليه أمراً وعهداً: وصّاه به وأمره. وقضى المريض، وقضى نحبه، وقضي عليه. وقضى عليه بضربه. وقضي قضاؤه. وأتت عليه القاضية: المنيّة. وحاربوا فقضوا بينهم قواضي وقضّوا. وافعل ما يقتضيه كرمك أي يطالبك به.",
+        "prototipe_benzerlik": 0.309,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.309,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "abolish.v.01",
+    "accept.v.02",
+    "accept.v.05",
+    "achieve.v.01",
+    "admit.v.03",
+    "bring.v.01",
+    "carry_through.v.01",
+    "cause.v.01",
+    "choose.v.01",
+    "content.n.05",
+    "continue.v.02",
+    "digest.v.03",
+    "draw.v.06",
+    "draw.v.10",
+    "draw.v.12",
+    "draw.v.16",
+    "draw.v.20",
+    "draw.v.22",
+    "draw.v.35",
+    "elapse.v.01",
+    "end.v.01",
+    "end.v.02",
+    "ensconce.v.01",
+    "erase.v.01",
+    "evidence.n.02",
+    "execute.v.01",
+    "execute.v.02",
+    "film.v.01",
+    "give.v.05",
+    "glide.v.01",
+    "group_action.n.01",
+    "imply.v.05",
+    "induce.v.02",
+    "judge.v.05",
+    "lead.v.01",
+    "learn.v.04",
+    "living_thing.n.01",
+    "name.v.01",
+    "necessitate.v.01",
+    "neutralize.v.04",
+    "ordain.v.01",
+    "pay.v.01",
+    "perform.v.01",
+    "proceed.v.02",
+    "proceed.v.04",
+    "pull.v.01",
+    "reconcile.v.03",
+    "region.n.01",
+    "remove.v.01",
+    "request.v.01",
+    "serve.v.09",
+    "settle.v.01",
+    "settle.v.13",
+    "shout.v.02",
+    "sink.v.04",
+    "spend.v.01",
+    "spend.v.02",
+    "statement.n.01",
+    "subject.n.01",
+    "take.v.06",
+    "take.v.08",
+    "take.v.21",
+    "temporal_property.n.01",
+    "yield.v.10"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "المقصور والممدود",
@@ -2045,22 +2133,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "kume": 5,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 375
     },
     "orta": {
       "kume": 13,
       "merkez_kok": "صدد",
       "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
-      "boy": 93
+      "boy": 76
     },
     "ince": {
-      "kume": 72,
+      "kume": 76,
       "merkez_kok": "عوق",
       "merkez_mana": "Avk: engellemek; avâk: engel",
-      "boy": 19
+      "boy": 17
     }
   },
   "kaliplar": {

@@ -1147,6 +1147,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "عليّ بالسيف والنطع. ولجار الله العلامة رضي الله عنه:\nخيّم العزّ حيث لم ينم الضّر ... غام إلا بجفني المرتاع\nعلم الملك ليس يخفق إلا ... حيث ذكر السيوف والأنطاع\nوكسا أبو كرب بيت الله الأنطاع.",
+    "mecaz": "دلك التمرة على نطع فيه وهو ظهر الغار الأعلى. وهذا من الحروف النّطّعية وهي الطا والدال والتاء، ومنه: تنطّع في كلامه إذا تفصّح فيه وتعمّق. ورمى بلسانه إلى نطع الفم.\nومن مجاز المجاز: تنطّع الصانع: تحذّق في صناعته. قال أوس:\nوحشو جفير من فروع غرائب ... تنطّع فيها صانع وتأملاً",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "عليّ بالسيف والنطع. ولجار الله العلامة رضي الله عنه: خيّم العزّ حيث لم ينم الضّر ... غام إلا بجفني المرتاع علم الملك ليس يخفق إلا ... حيث ذكر السيوف والأنطاع وكسا أبو كرب بيت الله الأنطاع.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "دلك التمرة على نطع فيه وهو ظهر الغار الأعلى. وهذا من الحروف النّطّعية وهي الطا والدال والتاء، ومنه: تنطّع في كلامه إذا تفصّح فيه وتعمّق. ورمى بلسانه إلى نطع الفم.",
+        "prototipe_benzerlik": 0.429,
+        "halka": "orta"
+      },
+      {
+        "cumle": "ومن مجاز المجاز: تنطّع الصانع: تحذّق في صناعته. قال أوس:",
+        "prototipe_benzerlik": 0.498,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.463,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "اللباس",
@@ -1157,22 +1185,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
-      "merkez_kok": "حنج",
-      "merkez_mana": "",
-      "boy": 426
-    },
-    "orta": {
       "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 261
+      "boy": 466
+    },
+    "orta": {
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 16,
+      "kume": 21,
       "merkez_kok": "كدن",
       "merkez_mana": "a beast of burden, particularly a mule or hinny",
-      "boy": 26
+      "boy": 15
     }
   },
   "kaliplar": {

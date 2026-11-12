@@ -1168,13 +1168,36 @@
     "ince": "auditory_communication.n.01",
     "orta": "noun.communication",
     "ust": "söz ve haber",
-    "dayanak_synset": "profanity.n.01",
-    "dayanak_tanim": "vulgar or irreverent speech or action",
+    "dayanak_synset": "curse.n.01",
+    "dayanak_tanim": "profane or obscene expression usually of surprise or anger",
     "synset_sayisi": 3
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "دنس الثوب دنساً، وتدنّس، ودنسته.",
+    "mecaz": "تدنس عرضه. ودنسه سوء خلقه. وهو دنس المروءة، ودنس الثياب، ودنس الجيب والأردان. وهو يتصون من الأدناس والمدانس.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "دنس الثوب دنساً، وتدنّس، ودنسته.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "تدنس عرضه. ودنسه سوء خلقه. وهو دنس المروءة، ودنس الثياب، ودنس الجيب والأردان. وهو يتصون من الأدناس والمدانس.",
+        "prototipe_benzerlik": 0.537,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.537,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["dirty.v.01", "utterance.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "اللباس",
@@ -1185,19 +1208,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "kume": 6,
+      "merkez_kok": "درك",
+      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
+      "boy": 1364
     },
     "orta": {
-      "kume": 36,
-      "merkez_kok": "نجس",
-      "merkez_mana": "Nicis: pislik, necis",
-      "boy": 123
+      "kume": 15,
+      "merkez_kok": "زور",
+      "merkez_mana": "Zûr: yalan, sahtelik",
+      "boy": 133
     },
     "ince": {
-      "kume": 231,
+      "kume": 89,
       "merkez_kok": "قذر",
       "merkez_mana": "to be dirty, unclean",
       "boy": 8

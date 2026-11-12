@@ -724,6 +724,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "أذن خطلاء: طويلة مسترخية. وثلة خطل.",
+    "mecaz": "رمح خطل: مضطرب. وسهم خطل: يذهب يميناً وشمالاً لا يقصد قصد الهدف. ورجل خطل اليدين: خضل بالمعروف. وثوب خطل: طويل ينسحب بالأرض، وقيل هو الجافي الغليظ. وخرج الصائد في أخطال له وأسمال. وفي خطوه خطل: بعد وطول. قال القطامي:\nحتى ترى الحرة الوجناء لاغبةً ... والأرحبي الذي في خطوه خطل\nورجل خطل وأخطل: أحمق. ومنطق خطل: مضطرب. وفي كلامه خطل، وخطل في كلامه وأخطل. ودهر أخطل. وامرأة خطلاء الثديين، ونسوة خطل. وأرى في مشيته خطلاً: ضعفاً واختلافاً. وامرأة خطالة: ذات ريبة.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "أذن خطلاء: طويلة مسترخية. وثلة خطل.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "رمح خطل: مضطرب. وسهم خطل: يذهب يميناً وشمالاً لا يقصد قصد الهدف. ورجل خطل اليدين: خضل بالمعروف. وثوب خطل: طويل ينسحب بالأرض، وقيل هو الجافي الغليظ. وخرج الصائد في أخطال له وأسمال. وفي خطوه خطل: بعد وطول. قال القطامي:",
+        "prototipe_benzerlik": 0.171,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "ورجل خطل وأخطل: أحمق. ومنطق خطل: مضطرب. وفي كلامه خطل، وخطل في كلامه وأخطل. ودهر أخطل. وامرأة خطلاء الثديين، ونسوة خطل. وأرى في مشيته خطلاً: ضعفاً واختلافاً. وامرأة خطالة: ذات ريبة.",
+        "prototipe_benzerlik": 0.237,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.204,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الغرائز",
@@ -735,21 +763,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
-    },
-    "orta": {
-      "kume": 9,
       "merkez_kok": "خون",
       "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
-      "boy": 168
+      "boy": 509
+    },
+    "orta": {
+      "kume": 7,
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 259
     },
     "ince": {
-      "kume": 49,
-      "merkez_kok": "طيش",
-      "merkez_mana": "to be wild, to be frivolous, to be light-headed",
-      "boy": 19
+      "kume": 38,
+      "merkez_kok": "طيع",
+      "merkez_mana": "",
+      "boy": 14
     }
   },
   "kaliplar": {

@@ -2127,6 +2127,85 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "ما بقيت منهم باقية، ولا وقتهم من الله واقية. وما لفلان مبقى أي بقاء. وأين للإنسان المبقى؟ وأين للناس المباقي؟ وعليهم بواقي الخراج. واستبقى الأمير الجاني واستحياه إذا عفا عنه فلم يقتله. واستبقى أخاه إذا عفا عن زلله لتبقى مودته. قال النابغة:\nولست بمستبق أخاً لا تلمسه ... على شعث، أي الرجال المهذب؟\nوتبقاه بمعنى استبقاه. وفي مثل: \" لا ينفعك من زاد تبق، ولا مما هو واقع توق \". وأبقى عليه بقيا وبقية، وهم مباق على قومهم. قال النابغة:\nوأخبرتهم أبقوا على الأصل إذ علوا ... على أنهم قدماً مباقٍ على الأصل\nومالي عليه بقيا وبقية، ومالي عليه رعوى ولا بقوى، قال لبيد:\nفما بقيا على تركتماني ... ولكن خفتما صرد النبال\nوقال:\nوما صد عني خالد من بقية ... ولكن أتت دوني الأسود الهواصر\nوقال:\nكلفني حبي للدراهم ... وقلة البقوى على المغارم\nخدمة من لست له بخادم\nويقولون: أنشدك الله والبقيا أي أسألك بالله أن تبقي عليّ. وبقينا رسول الله صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ: انتظرناه. وابن المؤذن: انتظره.",
+    "mecaz": "ركبوا المبقيات، وجنبوا المنقيات، وهي الخيل التي لا يخرجن ما عندهن من الجري فهن أحرى أن لا يلغبن. قال بشر بن أبي حازم:\nلدن غدوة حتى أتى الليل دونهم ... وأدرك جري المبقيات لغوبها\nوناقة مبقية: لا تعطي الدركلة. قال النضر: هي التي لا تستفرغ غزراً، تحلب نصف العلبة، ليست بصاحبة إثراع المحلب. فإذا نضبت الإبل وبكأت كانت على حالها ذات بقية. والمنقيات السمان ذوات النقي.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "ما بقيت منهم باقية، ولا وقتهم من الله واقية. وما لفلان مبقى أي بقاء. وأين للإنسان المبقى؟ وأين للناس المباقي؟ وعليهم بواقي الخراج. واستبقى الأمير الجاني واستحياه إذا عفا عنه فلم يقتله. واستبقى أخاه إذا عفا عن زلله لتبقى مودته. قال النابغة: ولست بمستبق أخاً لا ",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "ركبوا المبقيات، وجنبوا المنقيات، وهي الخيل التي لا يخرجن ما عندهن من الجري فهن أحرى أن لا يلغبن. قال بشر بن أبي حازم:",
+        "prototipe_benzerlik": 0.509,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وناقة مبقية: لا تعطي الدركلة. قال النضر: هي التي لا تستفرغ غزراً، تحلب نصف العلبة، ليست بصاحبة إثراع المحلب. فإذا نضبت الإبل وبكأت كانت على حالها ذات بقية. والمنقيات السمان ذوات النقي.",
+        "prototipe_benzerlik": 0.522,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.516,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "act.n.02",
+    "agree.v.01",
+    "assert.v.01",
+    "barricade.v.01",
+    "be.v.01",
+    "be.v.03",
+    "bear.v.11",
+    "bide.v.01",
+    "confirm.v.01",
+    "continue.v.01",
+    "continue.v.02",
+    "continue.v.03",
+    "control.v.02",
+    "declare.v.04",
+    "deem.v.01",
+    "digest.v.03",
+    "discontinue.v.01",
+    "end.v.01",
+    "exist.v.01",
+    "exist.v.02",
+    "have.v.01",
+    "have.v.10",
+    "hold.v.11",
+    "hold.v.14",
+    "hold.v.22",
+    "hold.v.36",
+    "keep.v.01",
+    "keep.v.03",
+    "last.v.01",
+    "lodge.v.01",
+    "persist.v.03",
+    "piece.n.01",
+    "populate.v.01",
+    "proceed.v.02",
+    "remainder.n.01",
+    "remains.n.01",
+    "residue.n.01",
+    "rest.v.01",
+    "rest.v.05",
+    "restrain.v.03",
+    "retain.v.03",
+    "ride.v.01",
+    "seat.v.01",
+    "sit.v.01",
+    "stay.v.01",
+    "stay.v.04",
+    "suffer.v.02",
+    "survive.v.01",
+    "sustain.v.04",
+    "temporal_property.n.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الأنواء",
@@ -2137,22 +2216,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "kume": 6,
+      "merkez_kok": "درك",
+      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
+      "boy": 1364
     },
     "orta": {
-      "kume": 38,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 203
+      "kume": 20,
+      "merkez_kok": "لحد",
+      "merkez_mana": "Lahd: mezar çukuru; lehd: meyil, eğilme",
+      "boy": 187
     },
     "ince": {
-      "kume": 250,
-      "merkez_kok": "هلك",
-      "merkez_mana": "Helâk: yok olmak, ölmek",
-      "boy": 16
+      "kume": 115,
+      "merkez_kok": "مصل",
+      "merkez_mana": "prayer (“One who prays”)",
+      "boy": 13
     }
   },
   "kaliplar": {

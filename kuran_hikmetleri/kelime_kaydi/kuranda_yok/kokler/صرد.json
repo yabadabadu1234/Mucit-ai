@@ -791,6 +791,44 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "هذا يوم صرد وصرد، ويوم صرد، وقد صرد يومنا، وليلة صردة. ورجل صرد، وقوم صردى، وقد صردت اليوم صدراً شديداً، وريح مصراد: باردة. قال:\nإذا رأين حرجفاً مصراداً ... ولينها أكسية جيادا\nورجل مصراد: جزوع من البرد، وقيل: قوي عليه. وسهم صارد: خرجت شباة حدّه من الرمية، ونافذ: خرج بعضه، ومارق: خرج كله. ونبل صوارد، وقد صرد من الرمية يصرد فهو صارد، وصرد صرداً فهو صرد. قال الصلتان:\nفما بقيا عليّ تركتماني ... ولكن خفتما صرد النبال\nوقد أصرده الرامي. وصرد السقي: قطعه دون\nالري. وشرب مصرد. وسقاه سقياً غير تصريد. وصردت الشارب عن الماء: قطعت عليه شربه. قال النابغة:\nوتسقى إذا ما شئت غير مصرد ... بصهباء في حافاتها المسك كارع\nوصرد شرابه: قلله.",
+    "mecaz": "قولك إذا انتهى قلبك عن الشيء: قد صرد قلبي عنه. قال:\nأصبح قلبي صرداً ... لا يشتهي أن يردا\nوجيش صرد وصرد: كأنه من تؤدة سيره جامد. قال خفاف:\nصرد يوقص بالأقدام جمهور\nوبظهر دابتك صردان وهي البقع البيض من الشعر النابت على الدبرة، الواحد: صرد شبه ذلك بلون الصرد وهو طائر أبقع أبيض البطن. وفرس مصرد. وصرد له العطاء: قلله.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "هذا يوم صرد وصرد، ويوم صرد، وقد صرد يومنا، وليلة صردة. ورجل صرد، وقوم صردى، وقد صردت اليوم صدراً شديداً، وريح مصراد: باردة. قال: إذا رأين حرجفاً مصراداً ... ولينها أكسية جيادا ورجل مصراد: جزوع من البرد، وقيل: قوي عليه. وسهم صارد: خرجت شباة حدّه من الرمية، وناف",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "قولك إذا انتهى قلبك عن الشيء: قد صرد قلبي عنه. قال:",
+        "prototipe_benzerlik": 0.425,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وجيش صرد وصرد: كأنه من تؤدة سيره جامد. قال خفاف:",
+        "prototipe_benzerlik": 0.474,
+        "halka": "orta"
+      },
+      {
+        "cumle": "صرد يوقص بالأقدام جمهور",
+        "prototipe_benzerlik": 0.259,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وبظهر دابتك صردان وهي البقع البيض من الشعر النابت على الدبرة، الواحد: صرد شبه ذلك بلون الصرد وهو طائر أبقع أبيض البطن. وفرس مصرد. وصرد له العطاء: قلله.",
+        "prototipe_benzerlik": 0.2,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.339,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطير",
@@ -801,19 +839,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 7,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 331
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 33,
+      "kume": 37,
       "merkez_kok": "وقد",
       "merkez_mana": "Vakd: ateş yakmak; vakîd: ateş",
-      "boy": 44
+      "boy": 45
     },
     "ince": {
-      "kume": 215,
+      "kume": 244,
       "merkez_kok": "صرد",
       "merkez_mana": "",
       "boy": 6

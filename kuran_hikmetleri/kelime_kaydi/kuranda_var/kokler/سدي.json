@@ -815,6 +815,54 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "جمل سدّي، وإبل سدًى: مهملة، وقوم سدًى، وأرض سدًى: لا تعمر. ووقع الندى والسدى وهو ما يقع بالليل. وهذا الثوب سداه حرير، وأسديته، وأسدى الحائك الثوب وسداه.",
+    "mecaz": "قد أسديت فألحم، وأسرجت فألجم، وأسدى إليه معروفاً. وسدى منطقاً حسناً. وسدى عليه الوشاة. قال عمر بن أبي ربيعة:\nوإنا لمحقوقون أن لا تردنا ... أقاويل ما سدوا علينا ولصقوا\nويقال: أمر مبرم، مسدى ملحم. قال أبو النجم:\nرام بها أمراً مسدًى ملحماً\nوأسدى بين القوم: أصلح وما أنت بلحمة ولا سداة: لا تضر ولا تنفع. والريح تسدي المعالم وتنيرها. قال عمر بن أبي ربيعة:\nلمن الديار كأنه سطورتسدي معالمها الصبا وتنير وتسدّاه: علاه وأخذه من فوقه كما يفعل سدى الليل. قال:\nوما أبو ضمرة بالرث ألوان ... يوم تسدّى الحكم بن مروان\nوذلك أنه أخذ بناصيته وهو على فرس.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "جمل سدّي، وإبل سدًى: مهملة، وقوم سدًى، وأرض سدًى: لا تعمر. ووقع الندى والسدى وهو ما يقع بالليل. وهذا الثوب سداه حرير، وأسديته، وأسدى الحائك الثوب وسداه.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "قد أسديت فألحم، وأسرجت فألجم، وأسدى إليه معروفاً. وسدى منطقاً حسناً. وسدى عليه الوشاة. قال عمر بن أبي ربيعة:",
+        "prototipe_benzerlik": 0.394,
+        "halka": "orta"
+      },
+      {
+        "cumle": "ويقال: أمر مبرم، مسدى ملحم. قال أبو النجم:",
+        "prototipe_benzerlik": 0.343,
+        "halka": "orta"
+      },
+      {
+        "cumle": "رام بها أمراً مسدًى ملحماً",
+        "prototipe_benzerlik": 0.296,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وأسدى بين القوم: أصلح وما أنت بلحمة ولا سداة: لا تضر ولا تنفع. والريح تسدي المعالم وتنيرها. قال عمر بن أبي ربيعة:",
+        "prototipe_benzerlik": 0.133,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "لمن الديار كأنه سطورتسدي معالمها الصبا وتنير وتسدّاه: علاه وأخذه من فوقه كما يفعل سدى الليل. قال:",
+        "prototipe_benzerlik": 0.541,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وذلك أنه أخذ بناصيته وهو على فرس.",
+        "prototipe_benzerlik": 0.243,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.325,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "المقصور والممدود",
@@ -826,21 +874,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 509
     },
     "orta": {
-      "kume": 12,
-      "merkez_kok": "خيب",
-      "merkez_mana": "Hayb: boşa çıkmak, umutsuz olmak; hâib: hayal kırıklığı",
-      "boy": 58
+      "kume": 8,
+      "merkez_kok": "بءس",
+      "merkez_mana": "Be'es: azap, şiddet, zorluk",
+      "boy": 142
     },
     "ince": {
-      "kume": 64,
+      "kume": 48,
       "merkez_kok": "قفر",
       "merkez_mana": "to trace, to track",
-      "boy": 20
+      "boy": 23
     }
   },
   "kaliplar": {

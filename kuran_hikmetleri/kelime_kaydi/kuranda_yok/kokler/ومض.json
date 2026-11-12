@@ -1285,6 +1285,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "ومض البرق ومضاً ووميضاً وومضاناً. قال الأشتر:\nحمى الحديد عليهم فكأنه ... ومضان برقٍ أو شعاع شموس\nوبرق وامض وأومض إيماضاً وهو لمع خفيّ، وشمت ومضة برق، كنبضة عرق.",
+    "mecaz": "أومضت المرأة: تبسّمت، شبّه لمع ثناياها بإيماض البرق. وفي أمثلة سيبويه: تبسّمت وميض البرق. وأومضت بعينها: سارقت النظر. وقال النابغة:\nقل للهمام وخير القول أصدقه ... والدهر يومض بعد الحال بالحال",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "ومض البرق ومضاً ووميضاً وومضاناً. قال الأشتر: حمى الحديد عليهم فكأنه ... ومضان برقٍ أو شعاع شموس وبرق وامض وأومض إيماضاً وهو لمع خفيّ، وشمت ومضة برق، كنبضة عرق.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "أومضت المرأة: تبسّمت، شبّه لمع ثناياها بإيماض البرق. وفي أمثلة سيبويه: تبسّمت وميض البرق. وأومضت بعينها: سارقت النظر. وقال النابغة:",
+        "prototipe_benzerlik": 0.514,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.514,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["happening.n.01", "pain.v.02"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -1295,19 +1318,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 7,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 331
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 32,
-      "merkez_kok": "دمس",
-      "merkez_mana": "pocket bread, pita",
-      "boy": 61
+      "kume": 42,
+      "merkez_kok": "سحم",
+      "merkez_mana": "to become black, to be blackened",
+      "boy": 97
     },
     "ince": {
-      "kume": 213,
+      "kume": 275,
       "merkez_kok": "نور",
       "merkez_mana": "Nûr: ışık, aydınlık",
       "boy": 31

@@ -1168,6 +1168,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "ثوب رحيض: غسيل، ورحض ثوبه في المرحاض وهو ما يرحض فيه من طست أو إجّانة. ويقال للخشبة التي يضرب بها الغسال: مرحاض. وتوضأ بالمرحضة وهي الميضأة لأنه يرحض بها أعضاءه، وتقول جاء بالمحرضة، مع المرحضة.",
+    "mecaz": "والكناية: هذه سوأة لا ترحضها عنك. ورحض المحموم: أخذته رحضاء الحمّى وهي عرقها كأنها ترحضه، ألا ترى إلى قوله:\nإذا ما فارقتني غسّلتني\nوتقول: إذا سالت الرحضاء، زالت العرواء. وذهب إلى المرحاض وهي المخرج وفي الحديث \" وجدنا مراحيضهم قد استقبل بها القبلة \".",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "ثوب رحيض: غسيل، ورحض ثوبه في المرحاض وهو ما يرحض فيه من طست أو إجّانة. ويقال للخشبة التي يضرب بها الغسال: مرحاض. وتوضأ بالمرحضة وهي الميضأة لأنه يرحض بها أعضاءه، وتقول جاء بالمحرضة، مع المرحضة.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "والكناية: هذه سوأة لا ترحضها عنك. ورحض المحموم: أخذته رحضاء الحمّى وهي عرقها كأنها ترحضه، ألا ترى إلى قوله:",
+        "prototipe_benzerlik": 0.793,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "إذا ما فارقتني غسّلتني",
+        "prototipe_benzerlik": 0.18,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وتقول: إذا سالت الرحضاء، زالت العرواء. وذهب إلى المرحاض وهي المخرج وفي الحديث \" وجدنا مراحيضهم قد استقبل بها القبلة \".",
+        "prototipe_benzerlik": 0.601,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.525,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["artifact.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
@@ -1178,21 +1211,21 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 7,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 331
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 31,
+      "kume": 36,
       "merkez_kok": "سكب",
       "merkez_mana": "Sakb: dökmek, boşaltmak",
-      "boy": 76
+      "boy": 101
     },
     "ince": {
-      "kume": 207,
-      "merkez_kok": "طست",
-      "merkez_mana": "",
+      "kume": 242,
+      "merkez_kok": "فرت",
+      "merkez_mana": "Ferd: tek, eşsiz; fertin: tekil",
       "boy": 20
     }
   },

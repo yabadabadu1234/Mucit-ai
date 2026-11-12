@@ -1296,6 +1296,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "خرجوا للانتجاع والنجعة وهي طلب الكف وقد انتجعوا ونجعوا. ومرّت بنا ناجعة ونواجع: قوم منتجعون. قال:\nوأعلم أنني سأصير رسماً ... إذا انتجع النواجع لا أسير\nونجعت البعير: سقيته النّجوع المديد وهو الخبط يضرب بالدقيق والماء. ودخل المقداد على عليّ رضوان الله تعالى عليهما وهو ينجع بكراتٍ له. ونجع فيه طعامه: هنأه، ونجع فيه الدواء: نفعه. وماء نجوع: نمير. وطعنة تمجّ النجيع وهو دم الجوف. وتنجّع بالدم: تلطّخ به. قال أسد بن باعصة:\nولربّ كبش كتيبة غادرته ... يكبو لجبهته صريعاً أطحلا\nمتنجّعاً قد دقّ في حيزومه ... صدر القناة على العزاز مجدّلا",
+    "mecaz": "انتجعت فلاناً: طلبت معروفه. وعن معاوية رضي الله تعالى عنه: أن رجلاً تغدى معه فتناول من مخّة معاوية شيأ فقال له: إنك لبعيد النجعة فقال: \" من أجدب جنابهُ انتجع \". قال ذو الرمة:\nرأيت الناس ينتجعون غيثاً ... فقلت لصيدح انتجعي بلالاً\nونجع الصبيّ لبن الشاة وبلبن الشاة: غذيَ به وسقيه. وسئل أبيّ عن النبيذ فقال: عليك بالماء عليك بالسويق الذي نجعت به أي غذيت به في الغصر. وفلان لا ينجع فيه القول.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "خرجوا للانتجاع والنجعة وهي طلب الكف وقد انتجعوا ونجعوا. ومرّت بنا ناجعة ونواجع: قوم منتجعون. قال: وأعلم أنني سأصير رسماً ... إذا انتجع النواجع لا أسير ونجعت البعير: سقيته النّجوع المديد وهو الخبط يضرب بالدقيق والماء. ودخل المقداد على عليّ رضوان الله تعالى عليه",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "انتجعت فلاناً: طلبت معروفه. وعن معاوية رضي الله تعالى عنه: أن رجلاً تغدى معه فتناول من مخّة معاوية شيأ فقال له: إنك لبعيد النجعة فقال: \" من أجدب جنابهُ انتجع \". قال ذو الرمة:",
+        "prototipe_benzerlik": 0.954,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "ونجع الصبيّ لبن الشاة وبلبن الشاة: غذيَ به وسقيه. وسئل أبيّ عن النبيذ فقال: عليك بالماء عليك بالسويق الذي نجعت به أي غذيت به في الغصر. وفلان لا ينجع فيه القول.",
+        "prototipe_benzerlik": 0.394,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.674,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["region.n.03"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
@@ -1306,22 +1334,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 17,
+      "kume": 24,
       "merkez_kok": "زين",
       "merkez_mana": "Zîne: süs, güzellik; zeyn: güzelleştirmek",
-      "boy": 177
+      "boy": 123
     },
     "ince": {
-      "kume": 94,
-      "merkez_kok": "زين",
-      "merkez_mana": "Zîne: süs, güzellik; zeyn: güzelleştirmek",
-      "boy": 44
+      "kume": 141,
+      "merkez_kok": "متع",
+      "merkez_mana": "Metâ': yararlanma, geçici nimet",
+      "boy": 26
     }
   },
   "kaliplar": {

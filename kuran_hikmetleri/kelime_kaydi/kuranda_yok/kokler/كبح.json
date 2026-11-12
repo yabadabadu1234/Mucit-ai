@@ -1505,27 +1505,78 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "كبح فرسه: جذب عنانه حتى يصير منتصب الرأس، وقيل: منعه ليقف، ويقال: ليس كبح الصعب الشرس، إلا باللجام الشكس.",
+    "mecaz": "كبحته عن حاجته: رددته. وكبح الحائط السهم: ردّه عن وجهه. وكبّح الحجر حافر الدابة: صكّه. وتطيّر من الكابح وهو التطيح لأنه يكبحه عن وجهه. قال البعيث:\nومرّ عراقيب الوحوش أمامهم ... ومغتديات بالنحوس كوابح\nوقال أعرابيّ لآخر: ما للصقر يحبّ الأرنب ما لا يحب الخرب، قال: لأنه يكبح سبلته ويردّه أي يصيب سبلته بذرقه فيلثقه، حكاه الأصمعيّ ثم قال: رأيت صقراً كأنما صبّ عليه الوخاف من خطميّ.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "كبح فرسه: جذب عنانه حتى يصير منتصب الرأس، وقيل: منعه ليقف، ويقال: ليس كبح الصعب الشرس، إلا باللجام الشكس.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "كبحته عن حاجته: رددته. وكبح الحائط السهم: ردّه عن وجهه. وكبّح الحجر حافر الدابة: صكّه. وتطيّر من الكابح وهو التطيح لأنه يكبحه عن وجهه. قال البعيث:",
+        "prototipe_benzerlik": 0.307,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.307,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "act.n.02",
+    "agree.v.01",
+    "artifact.n.01",
+    "bear.v.11",
+    "check.v.01",
+    "compress.v.02",
+    "control.v.01",
+    "control.v.02",
+    "declare.v.04",
+    "deem.v.01",
+    "have.v.01",
+    "hold.v.11",
+    "hold.v.14",
+    "hold.v.22",
+    "hold.v.36",
+    "impede.v.01",
+    "inhibited.a.01",
+    "keep.v.01",
+    "match.v.01",
+    "obstruct.v.01",
+    "oppress.v.01",
+    "press.v.01",
+    "prevent.v.01",
+    "prevent.v.02",
+    "restrain.v.01",
+    "restrain.v.03",
+    "talk_of.v.01"
+  ],
   "muhassas_tasnif": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "kume": 5,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 375
     },
     "orta": {
       "kume": 13,
       "merkez_kok": "صدد",
       "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
-      "boy": 93
+      "boy": 76
     },
     "ince": {
-      "kume": 67,
-      "merkez_kok": "نكل",
-      "merkez_mana": "Nekl: caydırmak, ibret vermek",
-      "boy": 15
+      "kume": 73,
+      "merkez_kok": "حصر",
+      "merkez_mana": "Hasr: sınırlamak, kuşatmak; hasîr: hasır",
+      "boy": 27
     }
   },
   "kaliplar": {

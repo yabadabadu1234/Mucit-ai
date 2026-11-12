@@ -1165,6 +1165,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "لعق أصابعه، ولعق العسل بالملعقة والملاعق، ولعق لعقة واحدة، وألعقه لعقة وهي اسم ما تأخذه بالملعقة. وعنده لعوق: لما يلعق. وما فيّ لعاق من طعامك.",
+    "mecaz": "بالأرض لعقةٌ من الربيع. وقد لعقه المال لعقاً. وما معنا من الزاد إلا لعوق: شيء يسير. \" وأحمق من لاعق الماء \" وممّن يلعق الماء. قال:\nوأحمق ممن يلعق الماء قال لي ... تدع الخمر واشرب من نفاخٍ مبرّد\nولعق إصبعه: مات. وألعق النّساج الثوب: خفّف غزله.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "لعق أصابعه، ولعق العسل بالملعقة والملاعق، ولعق لعقة واحدة، وألعقه لعقة وهي اسم ما تأخذه بالملعقة. وعنده لعوق: لما يلعق. وما فيّ لعاق من طعامك.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "بالأرض لعقةٌ من الربيع. وقد لعقه المال لعقاً. وما معنا من الزاد إلا لعوق: شيء يسير. \" وأحمق من لاعق الماء \" وممّن يلعق الماء. قال:",
+        "prototipe_benzerlik": 0.581,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "ولعق إصبعه: مات. وألعق النّساج الثوب: خفّف غزله.",
+        "prototipe_benzerlik": 0.55,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.566,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["artifact.n.01", "cleanse.v.01", "lay_waste_to.v.01", "solve.v.01", "wash.v.03", "waste.v.02"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الغرائز",
@@ -1176,18 +1204,18 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 40,
+      "kume": 41,
       "merkez_kok": "بلع",
       "merkez_mana": "Bel': yutmak; bel'a: yutkunma",
-      "boy": 85
+      "boy": 61
     },
     "ince": {
-      "kume": 260,
+      "kume": 262,
       "merkez_kok": "بلع",
       "merkez_mana": "Bel': yutmak; bel'a: yutkunma",
       "boy": 17

@@ -2346,13 +2346,78 @@
     "ince": "possession.n.02",
     "orta": "noun.possession",
     "ust": "insan ve toplum",
-    "dayanak_synset": "fee.n.01",
-    "dayanak_tanim": "a fixed charge for a privilege or for professional services",
+    "dayanak_synset": "fee.n.02",
+    "dayanak_tanim": "an interest in land capable of being inherited",
     "synset_sayisi": 43
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "عفت رسوم الدار، وما بقي منها طلل ولا رسم. وترسمت الدار: نظرت إلى رسومها. قال ذو الرمة:\nأأن ترسمت من خرقاء منزلةً ... ماء الصبابة من عينيك مسجوم\nوثوب مرسم: مخطط. قال كثير:\nكأن الرياح الذاريات عشيةً ... بأطلالها ينسجن ريطاً مرسماً\nوختم الطعام بالروسم والروشم وهو لويح فيه كتاب منقور، وطعام مرسوم ومرشوم. وقد رسمه ورشمه بفعله. ورسمت الإبل رسيماً وهو ضرب من العدو، وإبل رواسم.",
+    "mecaz": "أدركتم من الدين رسماً دائراً. والمكارم عفت رسومها، وانمحت رقومها. ورسمت له أن يفعل كذا فارتسمه. وأنا أرتسم مراسمك: لا أتخطاها، ومنه ارتسم إذا دعا، كأنه أخذ بما رسم الله له من الالتجاء إليه. قال القطامي:\nفي ذي جلول يقضى الموت صاحبه ... إذا الصراري من أهواله ارتسما\nوترسم الشيء: تبصره. وترسم القناقن الأرض: تبصر أين يحفر منها. وترسم هذه القصيدة: تبصرها وتأمل كيف هي؟ وأنا أترسم من ذلك الأمر شيئاً أي أتذكره ولا أحققه.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "عفت رسوم الدار، وما بقي منها طلل ولا رسم. وترسمت الدار: نظرت إلى رسومها. قال ذو الرمة: أأن ترسمت من خرقاء منزلةً ... ماء الصبابة من عينيك مسجوم وثوب مرسم: مخطط. قال كثير: كأن الرياح الذاريات عشيةً ... بأطلالها ينسجن ريطاً مرسماً وختم الطعام بالروسم والروشم وهو",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "أدركتم من الدين رسماً دائراً. والمكارم عفت رسومها، وانمحت رقومها. ورسمت له أن يفعل كذا فارتسمه. وأنا أرتسم مراسمك: لا أتخطاها، ومنه ارتسم إذا دعا، كأنه أخذ بما رسم الله له من الالتجاء إليه. قال القطامي:",
+        "prototipe_benzerlik": 0.334,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وترسم الشيء: تبصره. وترسم القناقن الأرض: تبصر أين يحفر منها. وترسم هذه القصيدة: تبصرها وتأمل كيف هي؟ وأنا أترسم من ذلك الأمر شيئاً أي أتذكره ولا أحققه.",
+        "prototipe_benzerlik": 0.172,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.253,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "act.n.02",
+    "artifact.n.01",
+    "artwork.n.01",
+    "assets.n.01",
+    "clearness.n.02",
+    "design.v.02",
+    "design.v.03",
+    "draw.v.06",
+    "draw.v.10",
+    "draw.v.12",
+    "draw.v.16",
+    "draw.v.20",
+    "draw.v.22",
+    "draw.v.35",
+    "explain.v.01",
+    "expose.v.03",
+    "formal.a.01",
+    "lay.v.02",
+    "liabilities.n.01",
+    "living_thing.n.01",
+    "official.a.01",
+    "ordain.v.03",
+    "paint.v.01",
+    "paint.v.03",
+    "picture.v.02",
+    "poison.v.03",
+    "poison.v.05",
+    "portray.v.02",
+    "pull.v.01",
+    "put.v.01",
+    "social_event.n.01",
+    "trace.v.02",
+    "transferred_property.n.01",
+    "visualize.v.01",
+    "weave.v.04",
+    "writing.n.02"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "(giriş)",
@@ -2363,22 +2428,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 14,
-      "merkez_kok": "جهد",
-      "merkez_mana": "Cehd: gayret, çaba; cehd: yorgunluk",
-      "boy": 135
+      "kume": 25,
+      "merkez_kok": "وسل",
+      "merkez_mana": "Vesîle: aracı, yol",
+      "boy": 130
     },
     "ince": {
-      "kume": 76,
-      "merkez_kok": "حلف",
-      "merkez_mana": "Hilf: yemin, ittifak; halef",
-      "boy": 20
+      "kume": 148,
+      "merkez_kok": "وسل",
+      "merkez_mana": "Vesîle: aracı, yol",
+      "boy": 42
     }
   },
   "kaliplar": {

@@ -756,13 +756,46 @@
     "ince": "cognition.n.01",
     "orta": "noun.cognition",
     "ust": "zihin ve ilim",
-    "dayanak_synset": "statistics.n.01",
-    "dayanak_tanim": "a branch of applied mathematics concerned with the collection and interpretation of quantitative data and the use of probability theory to estimate population parameters",
+    "dayanak_synset": "statistic.n.01",
+    "dayanak_tanim": "a datum that can be represented numerically",
     "synset_sayisi": 4
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "هم أكثر من الحصي. ورمى بسبع حصيات. ووقعت الحصاة في مثانته. وحصي فهو محصي. وأرض محصاة: كثيرة الحصى. وحسناتك لا تحصى. وهذا أمر لا أحصيه: لا أطيقه ولا أضبطه.",
+    "mecaz": "لم أر أكثر منهم حصىً أي عدداً. قال الأعشى:\nفلست بالأكثر منهم حصّي ... وإنما العزة للكاثر\nوفلان ذو حصاة: وقور. وما له حصاة ولا أصاة أي رزانة. قال طرفة:\nوإن لسان المرء ما لم تكن له ... حصاة على عوراته لدليل\nوعنده حصاة من المسك أي قطعة.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "هم أكثر من الحصي. ورمى بسبع حصيات. ووقعت الحصاة في مثانته. وحصي فهو محصي. وأرض محصاة: كثيرة الحصى. وحسناتك لا تحصى. وهذا أمر لا أحصيه: لا أطيقه ولا أضبطه.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "لم أر أكثر منهم حصىً أي عدداً. قال الأعشى:",
+        "prototipe_benzerlik": 0.393,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وفلان ذو حصاة: وقور. وما له حصاة ولا أصاة أي رزانة. قال طرفة:",
+        "prototipe_benzerlik": 0.542,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وعنده حصاة من المسك أي قطعة.",
+        "prototipe_benzerlik": 0.479,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.471,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["content.n.05", "count.v.01", "information.n.02", "living_thing.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -773,19 +806,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 15,
+      "kume": 19,
       "merkez_kok": "فوق",
       "merkez_mana": "Fevk: üst, yukarı (zarf)",
-      "boy": 107
+      "boy": 76
     },
     "ince": {
-      "kume": 82,
+      "kume": 110,
       "merkez_kok": "حصي",
       "merkez_mana": "Hasâ: çakıl taşı; ihsâ: saymak",
       "boy": 8

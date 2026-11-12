@@ -689,6 +689,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "عنده وطابٌ من لبن وأوطاب، ومنه: الوطباء: العظيمة الثديين.",
+    "mecaz": "رجل وطبٌ: جافٍ. قال:\nأفي أن سرى كلبٌ فبيّت علبةً ... وجبجبةً للوطب سلمى تطلّق",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "عنده وطابٌ من لبن وأوطاب، ومنه: الوطباء: العظيمة الثديين.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "رجل وطبٌ: جافٍ. قال:",
+        "prototipe_benzerlik": 0.319,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.319,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "اللباس",
@@ -699,19 +722,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 2,
+      "kume": 1,
       "merkez_kok": "قره",
       "merkez_mana": "",
       "boy": 759
     },
     "orta": {
-      "kume": 3,
+      "kume": 1,
       "merkez_kok": "تيع",
       "merkez_mana": "",
       "boy": 265
     },
     "ince": {
-      "kume": 19,
+      "kume": 1,
       "merkez_kok": "تيع",
       "merkez_mana": "",
       "boy": 265

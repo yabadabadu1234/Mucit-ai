@@ -748,6 +748,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "جاؤا بجمال كأنها أفدان أي قصور. قال القطاميّ:\nفلما أن جرى سمنٌ عليها ... كما بطّنت بالفدن السيّاعا\nوتقول: لولا الفدّان، لم تبن الأفدان.",
+    "mecaz": "جمل مفدّن، وقد فدّنه الرعي تفيديناً أي سمّه وصيّره كالفدن.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "جاؤا بجمال كأنها أفدان أي قصور. قال القطاميّ: فلما أن جرى سمنٌ عليها ... كما بطّنت بالفدن السيّاعا وتقول: لولا الفدّان، لم تبن الأفدان.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "جمل مفدّن، وقد فدّنه الرعي تفيديناً أي سمّه وصيّره كالفدن.",
+        "prototipe_benzerlik": 0.588,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.588,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["unit_of_measurement.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -758,22 +781,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
       "kume": 20,
-      "merkez_kok": "وثن",
-      "merkez_mana": "Vesen: put, tapılan şey",
-      "boy": 116
+      "merkez_kok": "لحد",
+      "merkez_mana": "Lahd: mezar çukuru; lehd: meyil, eğilme",
+      "boy": 187
     },
     "ince": {
-      "kume": 114,
-      "merkez_kok": "كول",
-      "merkez_mana": "desert papyrus (Cyperus conglomeratus)",
-      "boy": 27
+      "kume": 117,
+      "merkez_kok": "وثن",
+      "merkez_mana": "Vesen: put, tapılan şey",
+      "boy": 32
     }
   },
   "kaliplar": {

@@ -688,6 +688,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "نقلوا خرثي متاعهم وهو سقطه.",
+    "mecaz": "فلان يسمع خرثيّ الكلام وهو ما لا خير فيه. وتقول: ألفى فلان خراشي صدره، وخراثيّ قوله.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "نقلوا خرثي متاعهم وهو سقطه.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "فلان يسمع خرثيّ الكلام وهو ما لا خير فيه. وتقول: ألفى فلان خراشي صدره، وخراثيّ قوله.",
+        "prototipe_benzerlik": 0.333,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.333,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الحشرات",
@@ -701,19 +724,19 @@
       "kume": 3,
       "merkez_kok": "فقص",
       "merkez_mana": "",
-      "boy": 563
+      "boy": 568
     },
     "orta": {
       "kume": 6,
       "merkez_kok": "شبص",
       "merkez_mana": "",
-      "boy": 400
+      "boy": 403
     },
     "ince": {
-      "kume": 26,
-      "merkez_kok": "بعص",
+      "kume": 28,
+      "merkez_kok": "كمز",
       "merkez_mana": "",
-      "boy": 50
+      "boy": 111
     }
   },
   "kaliplar": {

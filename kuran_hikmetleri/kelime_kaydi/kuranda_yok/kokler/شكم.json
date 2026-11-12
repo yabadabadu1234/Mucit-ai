@@ -1518,6 +1518,54 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "عض الفرس على الشكيمة والشكيم، وعضت الخيل على الشكائم والشكيم. قال:\nيلح على كرائمنا بقتل ... كإلحاح الجواد على الشكيم\nأراد بكرائمهم نفوسهم.",
+    "mecaz": "إن فلاناً لشديد الشكيمة إذا كان ذا حدّ وعارضة. وصقر ذو شكيمة. قال الراعي:\nضوارب بالأذقان من ذي شكيمة ... إذا ما هوى كالنيزك المتوقد\nوقال:\nأنا ابن سيّار على شكيمه ... إن الشراك قد من أديمه\nأي على ما كان عليه سيار من حده وشدته وعزيمته. وقال جرير:\nفأبقوا عليكم واتقوا ناب حية ... أصاب ابن حمراء العجان شكيمها\nحدّها وشدتها. وارفع القدر بشكيمها وهي عراها. قال الراعي:\nوكانت جديراً أن يقسم لحمها ... إذا صلّ بين الملجمين شكيمها\nوهذا من إيماضهم في الاستعارة إلى أصلها حيث جعل المزاولين للقدر ملجمين ووصف الشكيم بالصليل كما يصل شكيم الدابة عند إلجامها. وفي الحديث \" اشكموه \" أي أعطوه حتى تلجموه،\nكما قال: اقطعوا لسانه، والشكم: العطاء على سبيل المكافأة. قال:\nوما خير معروف إذا كان للشكم\nوقال كثير:\nأويت لوامق لم تشكميه ... بوافدة تلذع بالزناد",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "عض الفرس على الشكيمة والشكيم، وعضت الخيل على الشكائم والشكيم. قال: يلح على كرائمنا بقتل ... كإلحاح الجواد على الشكيم أراد بكرائمهم نفوسهم.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "إن فلاناً لشديد الشكيمة إذا كان ذا حدّ وعارضة. وصقر ذو شكيمة. قال الراعي:",
+        "prototipe_benzerlik": 0.606,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "أي على ما كان عليه سيار من حده وشدته وعزيمته. وقال جرير:",
+        "prototipe_benzerlik": 0.627,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "حدّها وشدتها. وارفع القدر بشكيمها وهي عراها. قال الراعي:",
+        "prototipe_benzerlik": 0.401,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وهذا من إيماضهم في الاستعارة إلى أصلها حيث جعل المزاولين للقدر ملجمين ووصف الشكيم بالصليل كما يصل شكيم الدابة عند إلجامها. وفي الحديث \" اشكموه \" أي أعطوه حتى تلجموه،",
+        "prototipe_benzerlik": 0.49,
+        "halka": "orta"
+      },
+      {
+        "cumle": "كما قال: اقطعوا لسانه، والشكم: العطاء على سبيل المكافأة. قال:",
+        "prototipe_benzerlik": 0.647,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وما خير معروف إذا كان للشكم",
+        "prototipe_benzerlik": 0.305,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.513,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["artifact.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السلاح",
@@ -1528,22 +1576,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "kume": 6,
+      "merkez_kok": "درك",
+      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
+      "boy": 1364
     },
     "orta": {
-      "kume": 7,
-      "merkez_kok": "كرب",
-      "merkez_mana": "Karb: sıkıntı, keder; kurbet: sıkıntı",
-      "boy": 139
+      "kume": 25,
+      "merkez_kok": "وسل",
+      "merkez_mana": "Vesîle: aracı, yol",
+      "boy": 130
     },
     "ince": {
-      "kume": 33,
+      "kume": 143,
       "merkez_kok": "شكم",
       "merkez_mana": "bit, snaffle",
-      "boy": 11
+      "boy": 32
     }
   },
   "kaliplar": {

@@ -1258,6 +1258,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "وديت القتيل: أدّيت ديته، واتّدى وليّ القتيل: أخذ الدية. يقال: اتّدى فلان ولم يثأر. وقالت أخت عمرو:\nفإن أنتم لم تثأروا واتّديتم ... فمشّوا بآذان النّعام المصلّم\nوغرس الوديّ: الفسيل. وودى الرجل ودياً.",
+    "mecaz": "حلّ بواديك أي نزل بك المكروه وضاق بك الأمر.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "وديت القتيل: أدّيت ديته، واتّدى وليّ القتيل: أخذ الدية. يقال: اتّدى فلان ولم يثأر. وقالت أخت عمرو: فإن أنتم لم تثأروا واتّديتم ... فمشّوا بآذان النّعام المصلّم وغرس الوديّ: الفسيل. وودى الرجل ودياً.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "حلّ بواديك أي نزل بك المكروه وضاق بك الأمر.",
+        "prototipe_benzerlik": 0.315,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.315,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["natural_depression.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -1268,22 +1291,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 37,
+      "kume": 43,
       "merkez_kok": "عقم",
       "merkez_mana": "Akm: kısır olmak; akim: kısır",
-      "boy": 70
+      "boy": 106
     },
     "ince": {
-      "kume": 237,
-      "merkez_kok": "عقم",
-      "merkez_mana": "Akm: kısır olmak; akim: kısır",
-      "boy": 17
+      "kume": 279,
+      "merkez_kok": "بيد",
+      "merkez_mana": "Beyd: boş, yok; beyde: beyaz",
+      "boy": 16
     }
   },
   "kaliplar": {

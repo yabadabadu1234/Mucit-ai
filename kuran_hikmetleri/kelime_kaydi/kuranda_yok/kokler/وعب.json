@@ -970,6 +970,46 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "أوعبت الشيء واستوعبته إذا استنظفته.",
+    "mecaz": "استوعب الجراب الدقيق. وفي الحديث: \" إن النّعمة الواحدة تستوعب عمل العبد يوم القيامة \" وأوعب الجدع أنفه، وجدعه جدعاً موعباً. وركض وعيب وهو أقصى ما عند الفرس. قال بعض العبديّين:\nأخال بها كفّه مدبراً ... وهل ينجينك ركض وعيت\nوأتبعه طعنةً ثرةً ... يسيل على السرج منها صبيب\nوبيت وعيب: واسع يستوعب ما يجعل فيه، وأوعب بنو فلان لبني فلان: جاءوهم بأجمعهم. وأوعبوا جلاءً: لم يبق في بلدهم أحد.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "أوعبت الشيء واستوعبته إذا استنظفته.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "استوعب الجراب الدقيق. وفي الحديث: \" إن النّعمة الواحدة تستوعب عمل العبد يوم القيامة \" وأوعب الجدع أنفه، وجدعه جدعاً موعباً. وركض وعيب وهو أقصى ما عند الفرس. قال بعض العبديّين:",
+        "prototipe_benzerlik": 0.364,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وبيت وعيب: واسع يستوعب ما يجعل فيه، وأوعب بنو فلان لبني فلان: جاءوهم بأجمعهم. وأوعبوا جلاءً: لم يبق في بلدهم أحد.",
+        "prototipe_benzerlik": 0.27,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.317,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "absorb.v.02",
+    "absorb.v.04",
+    "accommodate.v.04",
+    "digest.v.03",
+    "drink.v.01",
+    "grok.v.01",
+    "make_out.v.03",
+    "realize.v.03",
+    "steep.v.01",
+    "swallow.v.01",
+    "swallow.v.04"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الأفعال والمصادر",
@@ -980,22 +1020,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 22,
+      "kume": 16,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 193
+      "boy": 287
     },
     "ince": {
-      "kume": 126,
+      "kume": 92,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 29
+      "boy": 80
     }
   },
   "kaliplar": {

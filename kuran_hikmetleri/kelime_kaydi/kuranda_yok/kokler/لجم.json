@@ -1751,16 +1751,39 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "whole.n.02",
-    "orta": "noun.artifact",
-    "ust": "cisim ve eşya",
-    "dayanak_synset": "curb.n.02",
-    "dayanak_tanim": "a horse's bit with an attached chain or strap to check the horse",
+    "ince": "event.n.01",
+    "orta": "noun.act",
+    "ust": "fiil ve hadise",
+    "dayanak_synset": "bridle.n.02",
+    "dayanak_tanim": "the act of restraining power or action or limiting excess",
     "synset_sayisi": 2
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "استلجمته فرسي فألجمه لي، وعلك الفرس اللجام، والخيل اللجم، وصك باللجام ملجّمه: فاه وموضع لجامه.",
+    "mecaz": "ألجموا القدر إذا جعلوا في عروتها خشبةً فرفعوها بها، ويقال: حملوها بلجامها. وتلجّمت الحائض. استثفرت باللجام واللّجة وهو خرقتها التي كالثّفر، وأما التي تحملها في فرجها فهي الفرام، يقال: استفرمت بالفرام، وتلجّمت باللّجام، وفي الحديث: \" تلجّمي في علم الله ستاً أو سبعاً \" وألجمه عن حاجته: كفّه؛ وتكلّم فلان فألجمته وألقمته الحجر. وفي مثل \" التّقيّ ملجمٌ \" وجاء فلان وقد لفظ لجامه إذا جاء مجهوداً. وأتبع الفرس لجامها أي أتمّ الحاجة. وضربه على ملجّمه: على فيه. قال:\nلم استثرتم أسداً من أجمه ... ترى زجاج الموت في ملجّمه",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "استلجمته فرسي فألجمه لي، وعلك الفرس اللجام، والخيل اللجم، وصك باللجام ملجّمه: فاه وموضع لجامه.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "ألجموا القدر إذا جعلوا في عروتها خشبةً فرفعوها بها، ويقال: حملوها بلجامها. وتلجّمت الحائض. استثفرت باللجام واللّجة وهو خرقتها التي كالثّفر، وأما التي تحملها في فرجها فهي الفرام، يقال: استفرمت بالفرام، وتلجّمت باللّجام، وفي الحديث: \" تلجّمي في علم الله ستاً أو سبعاً \" وألجمه عن حاجته: كفّه؛ وتكلّم فل",
+        "prototipe_benzerlik": 0.016,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.016,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["act.n.02", "artifact.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السلاح",
@@ -1771,22 +1794,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "kume": 5,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 375
     },
     "orta": {
       "kume": 13,
       "merkez_kok": "صدد",
       "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
-      "boy": 93
+      "boy": 76
     },
     "ince": {
-      "kume": 67,
-      "merkez_kok": "نكل",
-      "merkez_mana": "Nekl: caydırmak, ibret vermek",
-      "boy": 15
+      "kume": 73,
+      "merkez_kok": "حصر",
+      "merkez_mana": "Hasr: sınırlamak, kuşatmak; hasîr: hasır",
+      "boy": 27
     }
   },
   "kaliplar": {

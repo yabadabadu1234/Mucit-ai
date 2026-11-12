@@ -1201,6 +1201,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "هذا مرفأ السفن وقد أرفؤها إلى الشط.\nر قال: ت رفت الشيء: فتّه بيده كما يرفت المدر والعظم البالي حتى يترفت. وعظم رفات. وفي ملاعبهن رفات المسك وفتاته. وضربه فرفت عنقه. ويقال فيمن يتحمل ما يتعذر عليه التقصي منه: \" الضّبع ترفت العظام ولا تعرف قدر استها \": تأكل العظام ثم يعسر عليها خروجها. وارفتّ الحبل: انقطع.",
+    "mecaz": "هو الذي أعاد المكارم فأحيا رفاتها، وأنشر أمواتها.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "هذا مرفأ السفن وقد أرفؤها إلى الشط. ر قال: ت رفت الشيء: فتّه بيده كما يرفت المدر والعظم البالي حتى يترفت. وعظم رفات. وفي ملاعبهن رفات المسك وفتاته. وضربه فرفت عنقه. ويقال فيمن يتحمل ما يتعذر عليه التقصي منه: \" الضّبع ترفت العظام ولا تعرف قدر استها \": تأكل العظ",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "هو الذي أعاد المكارم فأحيا رفاتها، وأنشر أمواتها.",
+        "prototipe_benzerlik": 0.263,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.263,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["point.n.02"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "المقصور والممدود",
@@ -1212,21 +1235,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 7,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 331
+      "merkez_kok": "لقلق",
+      "merkez_mana": "",
+      "boy": 386
     },
     "orta": {
-      "kume": 30,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 103
+      "kume": 27,
+      "merkez_kok": "عجو",
+      "merkez_mana": "beikost",
+      "boy": 41
     },
     "ince": {
-      "kume": 200,
+      "kume": 168,
       "merkez_kok": "مخر",
       "merkez_mana": "Mahr: gemi yüzmesi, su yarmak",
-      "boy": 7
+      "boy": 10
     }
   },
   "kaliplar": {

@@ -710,6 +710,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "نسوة مائلات العقائص، والعقيصة: خصلة تأخذها المرأة من شعرها فتلويها ثم تعقدها حتى يبقى فيها التواء ثم ترسلها، وقد عقصت شعرها. قال ذو الرمة:\nفعيناك منها والدلال دلالها ... وجيد إلا أنه في العقائص\nوقال رجل من الأزد:\nليالي لا أزال كأن حقاً ... عليّ لكلّ مائلة العقاص\nأي العقائص، والعقاص أيضاً: ما يعقص به. وفي قرن الشاة عقص أي التواء، وهي عقصاء القرن.",
+    "mecaz": "عقّص أمره تعقيصاً: لواه. وهو عقص الخلق: ملتويه. وقال ذو الرمة:\nولا عقصاً بجاجته ولكن ... عطاء لم يكن عدةً مطالا\nوقد عقصت على دابتي إذا حرنت.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "نسوة مائلات العقائص، والعقيصة: خصلة تأخذها المرأة من شعرها فتلويها ثم تعقدها حتى يبقى فيها التواء ثم ترسلها، وقد عقصت شعرها. قال ذو الرمة: فعيناك منها والدلال دلالها ... وجيد إلا أنه في العقائص وقال رجل من الأزد: ليالي لا أزال كأن حقاً ... عليّ لكلّ مائلة العق",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "عقّص أمره تعقيصاً: لواه. وهو عقص الخلق: ملتويه. وقال ذو الرمة:",
+        "prototipe_benzerlik": 0.305,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وقد عقصت على دابتي إذا حرنت.",
+        "prototipe_benzerlik": 0.15,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.228,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "خلق الإنسان",
@@ -721,21 +749,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
       "kume": 42,
-      "merkez_kok": "وبر",
-      "merkez_mana": "Vaber: yün, deve tüyü; vebr: tavşan",
-      "boy": 84
+      "merkez_kok": "سحم",
+      "merkez_mana": "to become black, to be blackened",
+      "boy": 97
     },
     "ince": {
       "kume": 269,
       "merkez_kok": "هدب",
       "merkez_mana": "to cull, to abscind, to pluck",
-      "boy": 7
+      "boy": 10
     }
   },
   "kaliplar": {

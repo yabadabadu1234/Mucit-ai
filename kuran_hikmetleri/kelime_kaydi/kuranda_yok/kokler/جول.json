@@ -1021,6 +1021,68 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "جال الفرس في الميدان جولاناً، وجالوا في الحرب جولة، وكانت لهم جولة. وجول في البلاد وطوف، وهو جوالة جوابة، وكانت بينهما مجاولة ومطاردة. قال العباس بن مرداس:\nبكل الحجاز قد ضربنا كتيبة ... تجاولنا عن أرضها ونجيلها\nوتجاولوا في الحرب. قال النابغة:\nوالخيل تعلم أنا في تجاولنا ... يوم الحفاظ أولو بؤسي وإنعام\nوأجال القداح. وخذ ما جال على غربالك، وخذ جوالة غربالك. واستهجالت الريح السحاب. واستجالت الخيل ما مرت به. واجتالتهم الشياطين: صرفتهم عن هداهم إلى ضلالتها، وأخذتهم بأن يجولوا معها واختارتهم لأنفسها. وفي الحديث: \" خلق الله عباده حنفاء فاجتالتهم الشياطين \" وقال الأعشى:\nتراها كأحقب ذي جدتين ... يجمع جوناً ويجتالها\nوبرزت في مجولها وهو ثوب تلبسه الفتاة قبل التخدير تجول فيه.",
+    "mecaz": "ماله جول ولا معقول أي رأى وتماسك، وأصله جانب البئر. يقال: انهدم جول البئر وجالها. وأجالوا الرأي فيما بينهم. ويجول في صدري أن أفعل كذا، ولم يبق له مجال في هذا\nالأمر. وامرأة جائلة الوشاحين: هيفاء، وقد جال وشاحاها. وفي قلبه جولان الهموم وهو ما يجول فيه. قال:\nأقاذف جولان الهموم كأنني ... شبوب أصابته حبالة صياد\nواستجلنا الجهام أي رأينا الجائل في الأفق هو الجهام لا غير أي لم ينشأ غيره.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "جال الفرس في الميدان جولاناً، وجالوا في الحرب جولة، وكانت لهم جولة. وجول في البلاد وطوف، وهو جوالة جوابة، وكانت بينهما مجاولة ومطاردة. قال العباس بن مرداس: بكل الحجاز قد ضربنا كتيبة ... تجاولنا عن أرضها ونجيلها وتجاولوا في الحرب. قال النابغة: والخيل تعلم أنا ف",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "ماله جول ولا معقول أي رأى وتماسك، وأصله جانب البئر. يقال: انهدم جول البئر وجالها. وأجالوا الرأي فيما بينهم. ويجول في صدري أن أفعل كذا، ولم يبق له مجال في هذا",
+        "prototipe_benzerlik": 0.421,
+        "halka": "orta"
+      },
+      {
+        "cumle": "الأمر. وامرأة جائلة الوشاحين: هيفاء، وقد جال وشاحاها. وفي قلبه جولان الهموم وهو ما يجول فيه. قال:",
+        "prototipe_benzerlik": 0.581,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "واستجلنا الجهام أي رأينا الجائل في الأفق هو الجهام لا غير أي لم ينشأ غيره.",
+        "prototipe_benzerlik": 0.384,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.462,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "act.n.02",
+    "act.v.01",
+    "affect.v.05",
+    "artifact.n.01",
+    "content.n.05",
+    "cycle.n.01",
+    "group_action.n.01",
+    "living_thing.n.01",
+    "magnitude.n.01",
+    "move.v.02",
+    "move.v.03",
+    "move.v.15",
+    "move.v.16",
+    "organization.n.01",
+    "region.n.01",
+    "region.n.03",
+    "roll.v.12",
+    "room.n.02",
+    "situation.n.01",
+    "space.n.02",
+    "stroll.v.01",
+    "tour.v.01",
+    "travel.v.01",
+    "travel.v.02",
+    "travel.v.03",
+    "travel.v.04",
+    "unit_of_measurement.n.01",
+    "weave.v.04"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النساء",
@@ -1031,22 +1093,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "kume": 5,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 375
     },
     "orta": {
-      "kume": 38,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 203
+      "kume": 14,
+      "merkez_kok": "غدر",
+      "merkez_mana": "Gadr: ihanet, hile",
+      "boy": 153
     },
     "ince": {
-      "kume": 246,
-      "merkez_kok": "رحل",
-      "merkez_mana": "Rahl: göç, yolculuk; rahîl: göç",
-      "boy": 18
+      "kume": 77,
+      "merkez_kok": "حيد",
+      "merkez_mana": "Hayd: sapmak, uzaklaşmak; hayd: uzak",
+      "boy": 39
     }
   },
   "kaliplar": {

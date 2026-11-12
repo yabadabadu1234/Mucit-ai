@@ -904,6 +904,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "دعاني فجئته مغدّاً. وبت أغذّ، والسماء ترذ. قال:\nأغذّ بها الإدلاج كل شمردل ... من القوم ضرب اللحم عاري الأشاجع\nورأيت مهزوماً يغذّ، وجرحه يغذّ؛ أي يسيل، يقال: به غاذٌّ أي جرح لا يرقأز وفي الحديث في ذكر المدينة \" لتدعنها أربعين عاماً حتى يدخل الكلب أو الذئب فيغذّى على سواري المسجد \" يقال: غدّي ببوله إذا رمى به دفعة دفعة. وعن أبي البيداء: سمعت شيخاً بالبادية يقول: لا تقبل شهادة العبد ولا شهادة العذيوط ولا شهادة المغدّى. وتيس غذوان.",
+    "mecaz": "غذّيَ فلان بلبان الكرم. والنار تغذّى بالحطب. وفلان خيره يتغذّى كلّ يوم أي ينمى ويزيد. قال:\nعن وجه وهّاب تغذّى شيمه",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "دعاني فجئته مغدّاً. وبت أغذّ، والسماء ترذ. قال: أغذّ بها الإدلاج كل شمردل ... من القوم ضرب اللحم عاري الأشاجع ورأيت مهزوماً يغذّ، وجرحه يغذّ؛ أي يسيل، يقال: به غاذٌّ أي جرح لا يرقأز وفي الحديث في ذكر المدينة \" لتدعنها أربعين عاماً حتى يدخل الكلب أو الذئب فيغذّ",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "غذّيَ فلان بلبان الكرم. والنار تغذّى بالحطب. وفلان خيره يتغذّى كلّ يوم أي ينمى ويزيد. قال:",
+        "prototipe_benzerlik": 0.459,
+        "halka": "orta"
+      },
+      {
+        "cumle": "عن وجه وهّاب تغذّى شيمه",
+        "prototipe_benzerlik": 0.359,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.409,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "خلق الإنسان",
@@ -915,18 +943,18 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 40,
+      "kume": 41,
       "merkez_kok": "بلع",
       "merkez_mana": "Bel': yutmak; bel'a: yutkunma",
-      "boy": 85
+      "boy": 61
     },
     "ince": {
-      "kume": 260,
+      "kume": 262,
       "merkez_kok": "بلع",
       "merkez_mana": "Bel': yutmak; bel'a: yutkunma",
       "boy": 17

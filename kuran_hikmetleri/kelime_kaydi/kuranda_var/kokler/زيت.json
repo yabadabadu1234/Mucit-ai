@@ -1255,11 +1255,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "unit.n.05",
-    "orta": "noun.food",
-    "ust": "canlı ve beden",
-    "dayanak_synset": "vegetable_oil.n.01",
-    "dayanak_tanim": "any of a group of liquid edible fats that are obtained from plants",
+    "ince": "substance.n.01",
+    "orta": "noun.substance",
+    "ust": "tabiat",
+    "dayanak_synset": "oil.n.01",
+    "dayanak_tanim": "a slippery or viscous liquid or liquefiable substance not miscible with water",
     "synset_sayisi": 3
   },
   "ses_mana_tasnif": {
@@ -1270,6 +1270,17 @@
     "fasil_ozeti": "° معنى الفصل المعجمي (زت): شيء يَعْلَق زائدًا بشيء كما في زينة العروس وجهاز المسافر - في (زتت)، والدهن المعتصر - في (زيت).",
     "tam_metin": "{شَجَرَةٍ مُبَارَكَةٍ زَيْتُونَةٍ لَا شَرْقِيَّةٍ وَلَا غَرْبِيَّةٍ يَكَادُ زَيْتُهَا يُضِيءُ وَلَوْ لَمْ تَمْسَسْهُ نَارٌ} [النور: 35]\n\"الزَيْتون: شجر معروف ويقال لثَمره زيتون أيضًا، ونونه زائدة كنون قَيْعُون من القاع. والزَيْت هو الدُهْن الذي يُعْتَصَر من الزيتون \".\n° المعنى المحوري\nدُهْنٌ ذو كثافة: كالزيت يُعتصر من الزيتون. تأمل: {وَشَجَرَةً تَخْرُجُ مِنْ طُورِ سَيْنَاءَ تَنْبُتُ بِالدُّهْنِ وَصِبْغٍ لِلْآكِلِينَ} [المؤمنون: 20]، {فَأَنْبَتْنَا فِيهَا حَبًّا (27) وَعِنَبًا وَقَضْبًا (28) وَزَيْتُونًا وَنَخْلًا} [عبس: 27 - 29]، ومن الزيت: قيل زِتُّ الخبزَ والفَتُوت (باع): لَتَتُّه بزيت \". ولم يأت في القرآن من\n__________\n(1) (صوتيًّا): الزاي تعبر عن وازدحام، والتاء عن ضغط دقيق، والفصل منهما يعبر عن إضافة أشياء (مواد) كالحَلْى والأمتعة - إلى ما تَعْلَق به كزينة العروس وجهاز المسافر. وفي \n(زيت)\n تعبر الياء عن نوع من الاتصال، ويعبر التركيب عن مادة ذات تماسكٍ ما تُعْتَصر أي تخرج بالضغط وهي الزيت. والاتصال هنا تماسك الزيت أو كونه في أثناء ثمرة الزيتون.\n(2/874)\nالتركيب إلا (الزيت) و (الزيتون) و {زَيْتُونَةٍ} شجرة الزيتون.\n° معنى الفصل المعجمي (زت): شيء يَعْلَق زائدًا بشيء كما في زينة العروس وجهاز المسافر - في (زتت)، والدهن المعتصر - في (زيت)."
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "الزيت مخ الزيتون، والحواشي محخة المتون. وطعام مزيت ومزيوت: جعل فيه الزيت. قال أبو ذؤيب:\nأتتكم بعير لم تكن هجرية ... ولا حنطة الشأم المزيت خميرها\nوسوبق مزيوت، بالزيت ملتوت. وزت رأس الصبيّ: دهنته. وتقول خيراً زدتني، متى ما زتني. وزيته: زوّده الزيت. وجاؤوا يستزيتون: يطلبون الزيت. وجاءنا في ثياب الزيات: في ثياب وسخة.",
+    "mecaz": "",
+    "kinaye": "",
+    "mecaz_var": false
+  },
+  "prototip_yayilim_tasnif": {
+    "durum": "prototip veya mecaz kolu yok"
+  },
+  "kolekzifikasyon_kavramlari": ["lubricate.v.03", "material.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
@@ -1280,19 +1291,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "kume": 2,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 466
     },
     "orta": {
-      "kume": 44,
-      "merkez_kok": "زرب",
-      "merkez_mana": "Zerb: sürü ağılı; zerâbî: halı",
-      "boy": 63
+      "kume": 3,
+      "merkez_kok": "قمح",
+      "merkez_mana": "Kamh: buğday",
+      "boy": 64
     },
     "ince": {
-      "kume": 285,
+      "kume": 6,
       "merkez_kok": "سمد",
       "merkez_mana": "Samed: sonsuz, tüm ihtiyaçların giderildiği; el-Samed: Allah",
       "boy": 17

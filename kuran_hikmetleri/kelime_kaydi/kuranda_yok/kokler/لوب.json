@@ -679,38 +679,6 @@
     ],
     "kaikki_vikisozluk": [
       {
-        "w": "ليبي",
-        "u": "ليبي",
-        "p": "adj",
-        "h": "ar-adj+",
-        "e": "لِيبِيّ • (lībiyy) (feminine لِيبِيَّة (lībiyya), masculine plural لِيبِيُّون (lībiyyūn), feminine plural لِيبِيَّات (lībiyyāt))",
-        "t": "Etymology tree\nArabic لِيبِيَا (lībiyā)\nProto-Afroasiatic\nProto-Semitic\nArabic ـِيّ (-iyy)\nArabic ليبي\nFrom لِيبِيَا (lībiyā, “Libya”) + ـِيّ (-iyy).",
-        "g": ["Libyan"],
-        "r": ["lībiyy"],
-        "el": [
-          ["لِيبِيَا", "ليبيا#Arabic"],
-          ["ـِيّ", "ي#Arabic:_nisba"],
-          ["Libya", "Libya"],
-          ["لِيبِيَا", "ليبيا#Arabic"],
-          ["Libya", "Libya"],
-          ["ـِيّ", "ي#Arabic:_nisba"]
-        ],
-        "yol": "müştak"
-      },
-      {
-        "w": "ليبية",
-        "u": "ليبية",
-        "p": "adj",
-        "h": "ar-head",
-        "e": "لِيبِيَّة • (lībiyya)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "g": ["feminine singular of لِيبِيّ (lībiyy)"],
-        "tag": ["feminine", "form-of", "singular"],
-        "fo": ["لِيبِيّ"],
-        "r": ["lībiyya"],
-        "yol": "müştak"
-      },
-      {
         "w": "لابة",
         "u": "لابة",
         "p": "noun",
@@ -761,39 +729,62 @@
   },
   "mana_tasnif": {
     "yontem": "Vikisözlük/Arabic Ontology İngilizce karşılığı → Princeton WordNet ilk anlam (makine eşlemesi, AWN kaydı yok)",
-    "ince": "libyan.a.01",
-    "orta": "adj.pert",
-    "ust": "hâl ve vasıf",
-    "dayanak_synset": "libyan.a.01",
-    "dayanak_tanim": "of or relating to Libya or its people",
-    "dayanak_karsilik": "libyan"
+    "ince": "whole.n.02",
+    "orta": "noun.object",
+    "ust": "tabiat",
+    "dayanak_synset": "rock.n.01",
+    "dayanak_tanim": "a lump or mass of hard consolidated mineral matter",
+    "dayanak_karsilik": "black volcanic rock"
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "الإبل تلوب حول الماء: تحوم عطشاً. وتطيّب بالملاب وهو ضرب من الطيب، وطيب ملوب: جعل فيه الملاب. أنشد سيبويه للمتنخل:\nأبيت على معاري واضحات ... بهن ملوّب كدم العباط\nجمع عبيط.",
+    "mecaz": "رأيت لابةً. جماعة من الإبل شبّه سوادها باللابة الحرّة، وما بين لابتيها مثل فلان: أصله في المدينة وهي بين لابتين ثمّ جرى على أفواه الناس في كلّ بلدة.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "الإبل تلوب حول الماء: تحوم عطشاً. وتطيّب بالملاب وهو ضرب من الطيب، وطيب ملوب: جعل فيه الملاب. أنشد سيبويه للمتنخل: أبيت على معاري واضحات ... بهن ملوّب كدم العباط جمع عبيط.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "رأيت لابةً. جماعة من الإبل شبّه سوادها باللابة الحرّة، وما بين لابتيها مثل فلان: أصله في المدينة وهي بين لابتين ثمّ جرى على أفواه الناس في كلّ بلدة.",
+        "prototipe_benzerlik": 0.858,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.858,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الأفعال والمصادر",
     "bab": "فعل وفعل",
-    "kok_gecis": 23.0,
-    "kitapta_gecis": 8.5,
-    "zenginlesme": 4.78
+    "kok_gecis": 22.0,
+    "kitapta_gecis": 8.0,
+    "zenginlesme": 4.71
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 37,
+      "kume": 43,
       "merkez_kok": "عقم",
       "merkez_mana": "Akm: kısır olmak; akim: kısır",
-      "boy": 70
+      "boy": 106
     },
     "ince": {
-      "kume": 235,
+      "kume": 276,
       "merkez_kok": "صخر",
       "merkez_mana": "Sahr: kaya, taş; sahra: çöl",
       "boy": 7

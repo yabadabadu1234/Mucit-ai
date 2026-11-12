@@ -1,0 +1,88 @@
+{
+  "kok": "بهـي",
+  "sinif": "reddedildi",
+  "turkce_fiil": null,
+  "mustaklar": {},
+  "reddedilen": [
+    ["kök", "بهـي", "üç harfli değil"]
+  ],
+  "sozlukler": {},
+  "kuran_gecisleri": 0,
+  "kuranda_var": false,
+  "sema": {
+    "sema": "graf-ic-graf",
+    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
+    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
+    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
+    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
+    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
+  },
+  "tasnif": {
+    "fasil": "به",
+    "harf": "ب",
+    "mahrec": "şefeviyye",
+    "bolge": "dudak ve cevf"
+  },
+  "mana_tasnif": {
+    "durum": "Arabic WordNet v2 kaydı yok"
+  },
+  "ses_mana_tasnif": {
+    "durum": "Cebel mu'cemlerinde kök yok"
+  },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "شيء بهي إذا علا العين حسنه وروعته، وقد بهو الشيء وبهيَ. وقد ملأ عيني بهاؤه. وفلان\nيفتخر بكذا ويبتهي به، ولي به افتخار وابتهاء. قال أبو النجم:\nليس المحاذر أن يعد قديمه ... والمبتهي بقديمه بسواء\nوتقول: باهيته فبهوته. وكيف تباهيه، ولا تضاهيه. وتباهوا به، وأنا أتباهى به. وقعدوا في البهو وهو مقدم البيوت.",
+    "mecaz": "حلب اللبن فعلاه البهاء، يريد وبيص الرغوة. وفي قول امرىء القيس:\nوبهو هواء تحت صلب كأنه ... من الهضبة الخلقاء زحلوق ملعب\nأراد الجوف. وكل فجو يستعار لها البهو.\nب\nي\nت\nماله بيت ليلة وبيته ليلة. وفلان لا يستبيت أي لا يملك البيتة. وتبيت الطعام: أكلته عند المضجع، وشر الطعام المتبيت. وبيته العدو، ومن عادته البيات. وبيت الأمر: دبره ليلاً \" إذ يبيتون ما لا يرضى من القول \" وهذا أمر قد بيت بليل. وخفت بيوت أمر. قال جرير\nأعد لبيوت الهموم إذا سرت ... جمالية حرفاً وميساً مفرداً\nوبت عنده في مبيت صدق، وبيتوتة طيبة. وأباتك الله إباتة حسنة، وبيتك الله في عافية. وفلان من أهل البيوتات، وهو من بيت كريم. وقلت أبياتاً من الشعر وبيوتاً. ولي في هذا المعنى أبيات. وكم من أبا بيت ملاح للعرب.\nومن المجاز: قال بدوي لآخر: هل لك بيت أي امرأة. وقال:\nمالي إذا أنزعها صأيت ... أكبر غيرني أم بيت\nوقال:\nهنيئاً لأرباب البيوت بيوتهم ... سوى بعل جمل لا هنيئاً له جمل\nوبات فلان إذا تزوج. وبني فلان عليه بيتاً إذا أعرس. وتزوجت فلانة على بيت أي على فرش يكفي البيت.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "شيء بهي إذا علا العين حسنه وروعته، وقد بهو الشيء وبهيَ. وقد ملأ عيني بهاؤه. وفلان يفتخر بكذا ويبتهي به، ولي به افتخار وابتهاء. قال أبو النجم: ليس المحاذر أن يعد قديمه ... والمبتهي بقديمه بسواء وتقول: باهيته فبهوته. وكيف تباهيه، ولا تضاهيه. وتباهوا به، وأنا أتب",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "حلب اللبن فعلاه البهاء، يريد وبيص الرغوة. وفي قول امرىء القيس:",
+        "prototipe_benzerlik": 0.526,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "أراد الجوف. وكل فجو يستعار لها البهو.",
+        "prototipe_benzerlik": 0.419,
+        "halka": "orta"
+      },
+      {
+        "cumle": "ماله بيت ليلة وبيته ليلة. وفلان لا يستبيت أي لا يملك البيتة. وتبيت الطعام: أكلته عند المضجع، وشر الطعام المتبيت. وبيته العدو، ومن عادته البيات. وبيت الأمر: دبره ليلاً \" إذ يبيتون ما لا يرضى من القول \" وهذا أمر قد بيت بليل. وخفت بيوت أمر. قال جرير",
+        "prototipe_benzerlik": 0.397,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وبت عنده في مبيت صدق، وبيتوتة طيبة. وأباتك الله إباتة حسنة، وبيتك الله في عافية. وفلان من أهل البيوتات، وهو من بيت كريم. وقلت أبياتاً من الشعر وبيوتاً. ولي في هذا المعنى أبيات. وكم من أبا بيت ملاح للعرب.",
+        "prototipe_benzerlik": 0.664,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "ومن المجاز: قال بدوي لآخر: هل لك بيت أي امرأة. وقال:",
+        "prototipe_benzerlik": 0.384,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وبات فلان إذا تزوج. وبني فلان عليه بيتاً إذا أعرس. وتزوجت فلانة على بيت أي على فرش يكفي البيت.",
+        "prototipe_benzerlik": 0.24,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.438,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
+  "muhassas_tasnif": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "mana_tasnif_gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
+  },
+  "kaliplar": {},
+  "kelimeler": []
+}

@@ -790,13 +790,36 @@
     "ince": "whole.n.02",
     "orta": "noun.artifact",
     "ust": "cisim ve eşya",
-    "dayanak_synset": "bathtub.n.01",
-    "dayanak_tanim": "a relatively large open container that you fill with water and use to wash the body",
+    "dayanak_synset": "pool.n.01",
+    "dayanak_tanim": "an excavation that is (usually) filled with water",
     "synset_sayisi": 2
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "سقاك الله بحوض الرسول، ومن\nحوض الرسول. وحاض الرجل حوضاً: عمله، وحوض لإبله، وتحوضوا حياضاً. وحضت الماء: جمعته.",
+    "mecaz": "أنا أحوض حول ذلك الأمر فما تم بعد أي أدور، وفلان يحوض حول فلانة: دار حلوها يجمشها. وملأ حوض أذنه بكثرة الكلام وهو محارتها وصدفتها. وانصب عليهم حوض الغمام وحياض الغمام. وليته بحوض الثعلب وهو مكان خلف عمان: فيمن يتمنّى بعده.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "سقاك الله بحوض الرسول، ومن حوض الرسول. وحاض الرجل حوضاً: عمله، وحوض لإبله، وتحوضوا حياضاً. وحضت الماء: جمعته.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "أنا أحوض حول ذلك الأمر فما تم بعد أي أدور، وفلان يحوض حول فلانة: دار حلوها يجمشها. وملأ حوض أذنه بكثرة الكلام وهو محارتها وصدفتها. وانصب عليهم حوض الغمام وحياض الغمام. وليته بحوض الثعلب وهو مكان خلف عمان: فيمن يتمنّى بعده.",
+        "prototipe_benzerlik": 0.392,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.392,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["artifact.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -808,18 +831,18 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 39,
-      "merkez_kok": "هضض",
-      "merkez_mana": "recurrence of sadness",
-      "boy": 52
+      "kume": 41,
+      "merkez_kok": "بلع",
+      "merkez_mana": "Bel': yutmak; bel'a: yutkunma",
+      "boy": 61
     },
     "ince": {
-      "kume": 252,
+      "kume": 267,
       "merkez_kok": "فصد",
       "merkez_mana": "to make bleed",
       "boy": 8

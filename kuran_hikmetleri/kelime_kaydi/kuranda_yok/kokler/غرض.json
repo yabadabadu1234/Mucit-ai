@@ -1639,13 +1639,36 @@
     "ince": "cognition.n.01",
     "orta": "noun.cognition",
     "ust": "zihin ve ilim",
-    "dayanak_synset": "aim.n.02",
-    "dayanak_tanim": "the goal intended to be attained (and which is believed to be attainable)",
+    "dayanak_synset": "purpose.n.01",
+    "dayanak_tanim": "an anticipated outcome that is intended or that guides your planned actions",
     "synset_sayisi": 6
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "إبل منفجّة المغارض، جمع: مغرض وهو المحزم. والغرض والغرضة: حزام الرحل. قال:\nيشربن حتى تنتأ المغارض\nوإبل جائلة الغروض. قال جرير:\nوالعيس جائلة الغروض كأنها ... بقر حوافل أو رعيل نعام\nوتقول: إذا فاته الغرض، فتّه الغرض؛ وهو الضجر، ومنه: غرضت إلى لقائك، وعدّيَ بالي لتضمينه معنى اشتقت وحننت. أنشد ابن الأعرابي:\nفمن يك لم يغرض فإني وناقتي بحجر إلى أهل الحمى غرضان\nوهذا بحر لا ينزف ولا يغرض، ولا ينكف ولا يغضغض.\nقال أبو الوليد الكلابيّ:\nلا تفرغي سمّ أنياب مذكّرة ... في عرض من ليس مرفوعاً به راس\nهذا ابن يوسف بحر لا يغضغضه ... ولا يغرّضه أن يكثر الناس\nوطويت الثوب على غروضه وغروره، وتقول: كأن ثغرها إغريض، وريقها ريّق غريض، يشفى بترشّفه المريض الإغريض: ما ينشقّ عنه الطّلع من الحبيبات البيض؛ وريّق الغيث: أوله، والغريض: الطريّ.",
+    "mecaz": "اغترض فلان: مات شاباً، نحو: اختضر. وغرضت للضيف غريضاً أي أطعمتهم طعاماً غير بائت أو سقيتهم لبناً صريفاً. وغارضت إبلي: أوردتها باكراً.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "إبل منفجّة المغارض، جمع: مغرض وهو المحزم. والغرض والغرضة: حزام الرحل. قال: يشربن حتى تنتأ المغارض وإبل جائلة الغروض. قال جرير: والعيس جائلة الغروض كأنها ... بقر حوافل أو رعيل نعام وتقول: إذا فاته الغرض، فتّه الغرض؛ وهو الضجر، ومنه: غرضت إلى لقائك، وعدّيَ بالي ",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "اغترض فلان: مات شاباً، نحو: اختضر. وغرضت للضيف غريضاً أي أطعمتهم طعاماً غير بائت أو سقيتهم لبناً صريفاً. وغارضت إبلي: أوردتها باكراً.",
+        "prototipe_benzerlik": 0.476,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.476,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["artifact.n.01", "content.n.05", "good.n.03", "property.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "(giriş)",
@@ -1657,18 +1680,18 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 509
     },
     "orta": {
-      "kume": 7,
-      "merkez_kok": "كرب",
-      "merkez_mana": "Karb: sıkıntı, keder; kurbet: sıkıntı",
-      "boy": 139
+      "kume": 8,
+      "merkez_kok": "بءس",
+      "merkez_mana": "Be'es: azap, şiddet, zorluk",
+      "boy": 142
     },
     "ince": {
-      "kume": 35,
+      "kume": 45,
       "merkez_kok": "حزن",
       "merkez_mana": "Huzn: üzüntü, keder; hazen: keder",
       "boy": 33

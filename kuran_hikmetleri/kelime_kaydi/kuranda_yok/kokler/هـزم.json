@@ -1,0 +1,63 @@
+{
+  "kok": "هـزم",
+  "sinif": "reddedildi",
+  "turkce_fiil": null,
+  "mustaklar": {},
+  "reddedilen": [
+    ["kök", "هـزم", "üç harfli değil"]
+  ],
+  "sozlukler": {},
+  "kuran_gecisleri": 0,
+  "kuranda_var": false,
+  "sema": {
+    "sema": "graf-ic-graf",
+    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
+    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
+    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
+    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
+    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
+  },
+  "tasnif": {
+    "fasil": "هـ",
+    "harf": "ه",
+    "mahrec": "halkiyye",
+    "bolge": "halk"
+  },
+  "mana_tasnif": {
+    "durum": "Arabic WordNet v2 kaydı yok"
+  },
+  "ses_mana_tasnif": {
+    "durum": "Cebel mu'cemlerinde kök yok"
+  },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "هزم الجيش وانهزم. وجيش مهزوم وهزيم، وهزمته واستهزمته، وهو يستهم الجيوش. وهو هزّام فرّاس. ووقعت عليهم الهزيمة. وهزمت البئر: حفرتها. وهزمت في الأرض هزمةً. وهزمت في البطيخة والقربة إذا غمزتها بيدك فانهزمت إلى جوفها، وفي القربة هزمة وهزومٌ، وتهزّم السقاء: ثني بعضه على بعض وهو جاف فتكسّر وتصدّع. وتهزّم البناء: تهدّم. وشجّةٌ هازمة. وفي الحديث: \" إن زمزم هزمة جبريل \" وغيث هزيم: منبعق. وسمعت هزمة الرعد وهزيمه: صوته، وتهزّم الرعد. وللسنّور هزمة وهي صوت حلقه.",
+    "mecaz": "فرس هزمٌ: له صهيل مثل هزمة الرعد. وهزمت على زيد: عطفت عليه. وهزم عني معروفك نوائب الدهر. ولقاؤك يهزم الأحزان.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "هزم الجيش وانهزم. وجيش مهزوم وهزيم، وهزمته واستهزمته، وهو يستهم الجيوش. وهو هزّام فرّاس. ووقعت عليهم الهزيمة. وهزمت البئر: حفرتها. وهزمت في الأرض هزمةً. وهزمت في البطيخة والقربة إذا غمزتها بيدك فانهزمت إلى جوفها، وفي القربة هزمة وهزومٌ، وتهزّم السقاء: ثني بعضه",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "فرس هزمٌ: له صهيل مثل هزمة الرعد. وهزمت على زيد: عطفت عليه. وهزم عني معروفك نوائب الدهر. ولقاؤك يهزم الأحزان.",
+        "prototipe_benzerlik": 0.728,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.728,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
+  "muhassas_tasnif": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "mana_tasnif_gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
+  },
+  "kaliplar": {},
+  "kelimeler": []
+}

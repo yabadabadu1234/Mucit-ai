@@ -1648,7 +1648,7 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "part.n.01",
+    "ince": "substance.n.01",
     "orta": "noun.substance",
     "ust": "tabiat",
     "dayanak_synset": "sand.n.01",
@@ -1658,6 +1658,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "نزلوا بين رمال وجبال. وحبذا تلك الرمال العفر، والبلاد القفر. وهذه رملة حضنتني أحشاؤها. ورمل الطعام: جعل فيه الرمل. وهذا حب مرمل، ورمله بالدم، وترمل به وارتمل.\nقالت كبشة:\nولا تردوا إلا فضول نسائكم ... إذا ارتملت أعقابهن من الدم\nوالرمل في الطواف سنة، وقد رمل رملاً ورملانا إذا هرول. ورمل الحصير والسرير وأرمل: سف، وحصير مرمول ومرمل، ونساء روامل: سواف.",
+    "mecaz": "قول أبي النجم:\nهيف تضيق الأزر عن رمالها\nوأرمل: افتقر وفني زاده وهو من الرمل كأدقع من الدقعاء، ومنه الأرملة والأرامل، وفي كتاب العين: ولا يقال شيخ أرمل إلا أن يشاء شاعر في تمليح كلامه كقول جرير:\nهذي الأرامل قد قضّيت حاجتهافمن لحاجة هذا الأرمل الذكر وأرملت المرأة ورملت من زوجها ولا يكون إلا مع الحاجة. وعام أرمل، وسنة رملاء: جدبة وكلام مرسل: مزيف كالطعام المرمّل. قال:\nوقافية قد بتّ أعدل زيفها ... إذا أنشدت في مجلس لم ترمل",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "نزلوا بين رمال وجبال. وحبذا تلك الرمال العفر، والبلاد القفر. وهذه رملة حضنتني أحشاؤها. ورمل الطعام: جعل فيه الرمل. وهذا حب مرمل، ورمله بالدم، وترمل به وارتمل. قالت كبشة: ولا تردوا إلا فضول نسائكم ... إذا ارتملت أعقابهن من الدم والرمل في الطواف سنة، وقد رمل رمل",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "هيف تضيق الأزر عن رمالها",
+        "prototipe_benzerlik": 0.505,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وأرمل: افتقر وفني زاده وهو من الرمل كأدقع من الدقعاء، ومنه الأرملة والأرامل، وفي كتاب العين: ولا يقال شيخ أرمل إلا أن يشاء شاعر في تمليح كلامه كقول جرير:",
+        "prototipe_benzerlik": 0.161,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "هذي الأرامل قد قضّيت حاجتهافمن لحاجة هذا الأرمل الذكر وأرملت المرأة ورملت من زوجها ولا يكون إلا مع الحاجة. وعام أرمل، وسنة رملاء: جدبة وكلام مرسل: مزيف كالطعام المرمّل. قال:",
+        "prototipe_benzerlik": 0.089,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.252,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["material.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -1668,22 +1701,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 37,
+      "kume": 43,
       "merkez_kok": "عقم",
       "merkez_mana": "Akm: kısır olmak; akim: kısır",
-      "boy": 70
+      "boy": 106
     },
     "ince": {
-      "kume": 238,
+      "kume": 277,
       "merkez_kok": "كثب",
       "merkez_mana": "Kesîb: kum tepesi, kum yığını",
-      "boy": 7
+      "boy": 18
     }
   },
   "kaliplar": {

@@ -764,7 +764,7 @@
   },
   "mana_tasnif": {
     "yontem": "Vikisözlük/Arabic Ontology İngilizce karşılığı → Princeton WordNet ilk anlam (makine eşlemesi, AWN kaydı yok)",
-    "ince": "person.n.01",
+    "ince": "whole.n.02",
     "orta": "noun.person",
     "ust": "insan ve toplum",
     "dayanak_synset": "sovereign.n.01",
@@ -774,6 +774,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "باع الثوب يبوعه إذا قدره بباعه، نحو ذرعه إذا قدره بذراعه. وتقول: كم بوع ثوبك وكم ذرع ثوبك وباع البعير والفرس وتبوع إذا مد باعه في سيره. وفرس طيع بيع: بعيد الخطو. قال العباس بن مرداس:\nعلى متن جرداء السراة نبيلة ... كعالية المران بيعة القدر\nومر يتبوع. وناقة بائعة، ونوق بوائع. وما بيعت هذه الثياب حتى بيعت.",
+    "mecaz": "لفلان سابقة وباع. وقال العجاج:\nإذا الكرام ابتدروا الباع بدر\nوتبوع للمساعي: مد باعه.\nقال الطرماح:\nيماني تبوع للمساعي ... يداه وكل ذي حسب يماني",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "باع الثوب يبوعه إذا قدره بباعه، نحو ذرعه إذا قدره بذراعه. وتقول: كم بوع ثوبك وكم ذرع ثوبك وباع البعير والفرس وتبوع إذا مد باعه في سيره. وفرس طيع بيع: بعيد الخطو. قال العباس بن مرداس: على متن جرداء السراة نبيلة ... كعالية المران بيعة القدر ومر يتبوع. وناقة بائع",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "لفلان سابقة وباع. وقال العجاج:",
+        "prototipe_benzerlik": 0.241,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "إذا الكرام ابتدروا الباع بدر",
+        "prototipe_benzerlik": 0.476,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وتبوع للمساعي: مد باعه.",
+        "prototipe_benzerlik": 0.366,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.361,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النخل",
@@ -784,22 +817,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
-      "merkez_kok": "حنج",
-      "merkez_mana": "",
-      "boy": 426
+      "kume": 6,
+      "merkez_kok": "درك",
+      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
+      "boy": 1364
     },
     "orta": {
-      "kume": 1,
-      "merkez_kok": "جنح",
-      "merkez_mana": "Cünûh: meyletmek, eğilmek; cenâh: kanat",
-      "boy": 165
+      "kume": 17,
+      "merkez_kok": "رحب",
+      "merkez_mana": "Rahb: geniş, ferah; rahabe: genişlik",
+      "boy": 51
     },
     "ince": {
-      "kume": 4,
-      "merkez_kok": "سغل",
-      "merkez_mana": "utilizing",
-      "boy": 15
+      "kume": 102,
+      "merkez_kok": "فءء",
+      "merkez_mana": "group, band, division, class",
+      "boy": 18
     }
   },
   "kaliplar": {

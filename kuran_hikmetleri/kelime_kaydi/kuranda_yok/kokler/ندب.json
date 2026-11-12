@@ -1483,7 +1483,7 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "person.n.01",
+    "ince": "whole.n.02",
     "orta": "noun.person",
     "ust": "insan ve toplum",
     "dayanak_synset": "caller.n.01",
@@ -1493,6 +1493,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "به ندب من الجرح وندوب وأنداب.\nقال:\nعلى طليح عضّها الأقتاب ... فهي بها من عضّها أنداب\nوضربه فأندبه: أثّر بجلده. وندب لكذا وإلى كذا فانتدب له، وفلان مندوب لأمر عظيم ومندّب له. وأهل مكّة يسمّون الرسل إلى دار الخلافة: المندّبة. وتكلّم فانتدب له فلان إذا عارضه. وندبت الميّت النّادبة والنّوادب، وأطلن النّدبة. ورجل ندب إذا ندب لأمر خف له، وأراك ندباً في الحوائج. وقد ندبت ندابة. وفرس ندب: ماض. ويقول أهل النّضال: ندبنا يوم كذا أي انتدابنا للرّمي. وبينهم ندب: خطر ورهان، ومنه: أقام فلان على ندب: على خطر، وأندب نفسه: أخطرها. قال عروة بن الورد:\nأيهلك معتم وزيد ولم أقم ... على ندبٍ يوماً ولي نفس مخطر",
+    "mecaz": "أضرّت به الحاجة فأندبته إنداباً شديداً أي أثرت فيه: وما ندبني إلى ما فعلت إلا النصح لك.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "به ندب من الجرح وندوب وأنداب. قال: على طليح عضّها الأقتاب ... فهي بها من عضّها أنداب وضربه فأندبه: أثّر بجلده. وندب لكذا وإلى كذا فانتدب له، وفلان مندوب لأمر عظيم ومندّب له. وأهل مكّة يسمّون الرسل إلى دار الخلافة: المندّبة. وتكلّم فانتدب له فلان إذا عارضه. وند",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "أضرّت به الحاجة فأندبته إنداباً شديداً أي أثرت فيه: وما ندبني إلى ما فعلت إلا النصح لك.",
+        "prototipe_benzerlik": 0.042,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.042,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "cry.v.02",
+    "delegate.v.02",
+    "living_thing.n.01",
+    "mandate.v.01",
+    "mend.v.02",
+    "mourn.v.01",
+    "organization.n.01",
+    "representation.n.04",
+    "wail.v.02"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
@@ -1503,22 +1536,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "kume": 6,
+      "merkez_kok": "درك",
+      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
+      "boy": 1364
     },
     "orta": {
-      "kume": 10,
+      "kume": 22,
       "merkez_kok": "ذعن",
       "merkez_mana": "Za'n: boyun eğmek, kabul etmek",
-      "boy": 183
+      "boy": 82
     },
     "ince": {
-      "kume": 55,
-      "merkez_kok": "لتت",
-      "merkez_mana": "not to be",
-      "boy": 27
+      "kume": 130,
+      "merkez_kok": "جهد",
+      "merkez_mana": "Cehd: gayret, çaba; cehd: yorgunluk",
+      "boy": 37
     }
   },
   "kaliplar": {

@@ -1157,16 +1157,54 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "eager.a.01",
-    "orta": "adj.all",
-    "ust": "hâl ve vasıf",
-    "dayanak_synset": "eager.a.01",
-    "dayanak_tanim": "having or showing keen interest or intense desire or impatient expectancy",
+    "ince": "state.n.02",
+    "orta": "noun.feeling",
+    "ust": "his ve nefis",
+    "dayanak_synset": "enthusiasm.n.01",
+    "dayanak_tanim": "a feeling of excitement",
     "synset_sayisi": 6
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "رجل أحمس من رجال حمس، وحمس: بين الحماسة، وقد حمس. وهم أهل السماحة والحماسة. وهو رجل من الحمس. وهم قريش لتحمسهم في دينهم وهو تصلبهم.",
+    "mecaz": "حس الوغى وحمى. وعام أحمس. وأرض أحامس: جدبة، صفة بالجمع. ومكان أحمس: غليظ شديد.\nقال العجاج:\nكم قد قطعنا من قفاف حمس\nووقعوا في هند الأحامس إذا وقعوا في شدّة وبلية. ولقي فلان هند الأحامس إذا مات. وبنو هند قوم من العرب فيهم حماسة. ومعنى إضافتهم إلى الأحامس إضافتهم إلى شجعانهم، أو إلى جنس الشجعان وإنهم منهم. وأنشد الأصمعي:\nطمعت بنا حتى إذا ما لقيتنا ... لقيت بنا يا عمرو هند الأحامسا\nفجعل الأحامس صفة لهم، ويحتمل أن يكون قد ابتلي رجل بامرأة يقال لها: هند الأحامس لحماسة قومها، ولقي منها شراً فسار ذلك مثلاً في لقاء الشدائد، أو كان رجل يقال له هند الأحامس، لشجاعته وشجاعة قومه يبلو الناس بالشر، فقيل. فيه ذلك وسير مثلاً.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "رجل أحمس من رجال حمس، وحمس: بين الحماسة، وقد حمس. وهم أهل السماحة والحماسة. وهو رجل من الحمس. وهم قريش لتحمسهم في دينهم وهو تصلبهم.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "حس الوغى وحمى. وعام أحمس. وأرض أحامس: جدبة، صفة بالجمع. ومكان أحمس: غليظ شديد.",
+        "prototipe_benzerlik": 0.467,
+        "halka": "orta"
+      },
+      {
+        "cumle": "كم قد قطعنا من قفاف حمس",
+        "prototipe_benzerlik": 0.297,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "ووقعوا في هند الأحامس إذا وقعوا في شدّة وبلية. ولقي فلان هند الأحامس إذا مات. وبنو هند قوم من العرب فيهم حماسة. ومعنى إضافتهم إلى الأحامس إضافتهم إلى شجعانهم، أو إلى جنس الشجعان وإنهم منهم. وأنشد الأصمعي:",
+        "prototipe_benzerlik": 0.538,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "فجعل الأحامس صفة لهم، ويحتمل أن يكون قد ابتلي رجل بامرأة يقال لها: هند الأحامس لحماسة قومها، ولقي منها شراً فسار ذلك مثلاً في لقاء الشدائد، أو كان رجل يقال له هند الأحامس، لشجاعته وشجاعة قومه يبلو الناس بالشر، فقيل. فيه ذلك وسير مثلاً.",
+        "prototipe_benzerlik": 0.591,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.473,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["crispen.v.01", "eager.a.01", "encourage.v.02", "enthuse.v.02", "feeling.n.01", "warm.v.02"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الأفعال والمصادر",
@@ -1177,22 +1215,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 17,
-      "merkez_kok": "زين",
-      "merkez_mana": "Zîne: süs, güzellik; zeyn: güzelleştirmek",
-      "boy": 177
+      "kume": 25,
+      "merkez_kok": "وسل",
+      "merkez_mana": "Vesîle: aracı, yol",
+      "boy": 130
     },
     "ince": {
-      "kume": 90,
+      "kume": 145,
       "merkez_kok": "رغب",
       "merkez_mana": "Rağbet: istek, arzu",
-      "boy": 18
+      "boy": 20
     }
   },
   "kaliplar": {

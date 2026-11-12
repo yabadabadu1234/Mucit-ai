@@ -841,13 +841,36 @@
     "ince": "whole.n.02",
     "orta": "noun.artifact",
     "ust": "cisim ve eşya",
-    "dayanak_synset": "opening.n.10",
-    "dayanak_tanim": "a vacant or unobstructed space that is man-made",
+    "dayanak_synset": "iron.n.03",
+    "dayanak_tanim": "implement used to brand live stock",
     "synset_sayisi": 7
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "نظرت من الكوة، ونظن من الكوى والكواء، وكوّيت في داري كوًى. وكواء بالمكواة والمكاوي.",
+    "mecaz": "كوته العقرب: لدغته.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "نظرت من الكوة، ونظن من الكوى والكواء، وكوّيت في داري كوًى. وكواء بالمكواة والمكاوي.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "كوته العقرب: لدغته.",
+        "prototipe_benzerlik": 0.485,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.485,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["artifact.n.01", "burn.v.05", "cauterize.v.01", "compress.v.02", "press.v.01", "talk_of.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
@@ -858,19 +881,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 7,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 331
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 33,
+      "kume": 37,
       "merkez_kok": "وقد",
       "merkez_mana": "Vakd: ateş yakmak; vakîd: ateş",
-      "boy": 44
+      "boy": 45
     },
     "ince": {
-      "kume": 214,
+      "kume": 243,
       "merkez_kok": "لهب",
       "merkez_mana": "Lehb: alev, ateş",
       "boy": 28

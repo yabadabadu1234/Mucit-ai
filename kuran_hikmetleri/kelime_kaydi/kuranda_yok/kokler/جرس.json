@@ -1178,6 +1178,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "ما سمعنا له جرساً ولا همساً وهما الخفي من الصوت، وسمعت جرس الطير وهو صوت مناقيرها إذا نقرت، وأجرس الطائر، وأجرس لإبلك: ارفع جرسك بالحداء. قال:\nتنجو إذا ما الحاديان أجرسا ... تسير فيها القوم خمساً أملسا\nوجرس الكلام: نغم به. والحروف كلها مجروسة إلا أحرف اللين. وفلان مجرس لي أي موضع للكلام معه. قال:\nأنت لي مجرس إذا ... ما نبا كل مجرس\nوجرس بالقوم: صوت بهم. وأجرسني السبع: سمع جرسي. وجرست النحل نور الشجر: أكلته، ولها عند ذلك جرس وهي جوارس. قال أبو ذؤيب:\nتظل على الثمراء منها جوارس ... مراضيع صهب الريش زغب رقابها",
+    "mecaz": "رجل مضرس مجرس أي عضته الأمور بأضراسها وأكلته حتى عرفته. وأجرس الحلي والجرس، واجرس به صاحبه. قال العجاج:\nتسمع للحلي إذا ما وسوسا ... والتج في أجيادها وأجرسا\nزفزفة الريح الحصاد اليبسا",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "ما سمعنا له جرساً ولا همساً وهما الخفي من الصوت، وسمعت جرس الطير وهو صوت مناقيرها إذا نقرت، وأجرس الطائر، وأجرس لإبلك: ارفع جرسك بالحداء. قال: تنجو إذا ما الحاديان أجرسا ... تسير فيها القوم خمساً أملسا وجرس الكلام: نغم به. والحروف كلها مجروسة إلا أحرف اللين. و",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "رجل مضرس مجرس أي عضته الأمور بأضراسها وأكلته حتى عرفته. وأجرس الحلي والجرس، واجرس به صاحبه. قال العجاج:",
+        "prototipe_benzerlik": 0.523,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "زفزفة الريح الحصاد اليبسا",
+        "prototipe_benzerlik": 0.272,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.398,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["happening.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطير",
@@ -1188,22 +1216,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 21,
-      "merkez_kok": "همس",
-      "merkez_mana": "Hamis: fısıldamak, gizlice konuşmak",
-      "boy": 97
+      "kume": 20,
+      "merkez_kok": "لحد",
+      "merkez_mana": "Lahd: mezar çukuru; lehd: meyil, eğilme",
+      "boy": 187
     },
     "ince": {
-      "kume": 120,
-      "merkez_kok": "قول",
-      "merkez_mana": "Kavl: söz, söyleme",
-      "boy": 18
+      "kume": 112,
+      "merkez_kok": "سقم",
+      "merkez_mana": "Sukm: hastalık; sakîm: hasta",
+      "boy": 26
     }
   },
   "kaliplar": {

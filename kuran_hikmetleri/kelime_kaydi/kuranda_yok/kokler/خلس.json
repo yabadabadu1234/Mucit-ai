@@ -1181,6 +1181,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "خلس الشيء من يده واختلسه، وأسرع من قبلة الخلس، وطعنة خلس، ولا قطع في الخلسة، وأخذها بين الحذيّا والخلسة، وهذه خلسة فانتهزها أي فرصة. وخالسته الشيء وتخالساه، والقرنان يتخالسان نفسيهما. قال أبو ذؤيب:\nفتخالسا نفسيهما بنوافذ ... كنوافذ العبط التي لا ترقع\nوشعر خليس ومخلس، وقد خلس وأخلس: اختلط شمطه وسواده.",
+    "mecaz": "نبات خليس ومخلس: اختلط يابسه\nوأخضره، ومنه الدجاج الخلاسي الذي بين الهندي والفارسي، والولد الخلاسي الذي بين أبوين أسود وأبيض.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "خلس الشيء من يده واختلسه، وأسرع من قبلة الخلس، وطعنة خلس، ولا قطع في الخلسة، وأخذها بين الحذيّا والخلسة، وهذه خلسة فانتهزها أي فرصة. وخالسته الشيء وتخالساه، والقرنان يتخالسان نفسيهما. قال أبو ذؤيب: فتخالسا نفسيهما بنوافذ ... كنوافذ العبط التي لا ترقع وشعر خليس",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "نبات خليس ومخلس: اختلط يابسه",
+        "prototipe_benzerlik": 0.332,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وأخضره، ومنه الدجاج الخلاسي الذي بين الهندي والفارسي، والولد الخلاسي الذي بين أبوين أسود وأبيض.",
+        "prototipe_benzerlik": 0.229,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.281,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["handle.v.04", "steal.v.01", "victimize.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الغرائز",
@@ -1192,21 +1220,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
-    },
-    "orta": {
-      "kume": 9,
       "merkez_kok": "خون",
       "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
-      "boy": 168
+      "boy": 509
+    },
+    "orta": {
+      "kume": 7,
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 259
     },
     "ince": {
-      "kume": 44,
-      "merkez_kok": "خطف",
-      "merkez_mana": "Hatf: kapmak, kaçırmak",
-      "boy": 12
+      "kume": 39,
+      "merkez_kok": "سلب",
+      "merkez_mana": "Selb: soymak, çalmak; selb: yoksun bırakmak",
+      "boy": 24
     }
   },
   "kaliplar": {

@@ -787,6 +787,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "أدنى من اشسع. قال:\nوأدنى إلى المرء من شسعه ... وأبعد وصلاً من الكوكب\nوشسع النعل: جعل لها شسوعاً. وسفر شاسع، وقد شسع شسوعاً.",
+    "mecaz": "له شسع من المال: قليل منه، وقيل: ذهب بشسع ماله: بأكثره. قال بعض بني سعد:\nعداني عن بنيّ وشسع مالي ... حفاظ شفني ودم ثقيل\nورجل شسع مال: قائم عليه لازم لرعيته. ونزلنا بشسع من الوادي: بطرف منه، ورأيتهم حلولاً بشسعي الدهناء: بطرفها. وشسع بعض أعضائه من الثوب: نتأ. قال بلال بن جرير:\nلها شاسع تحت الثياب كأنه ... قفا الديك أوفى غرفةً ثم طرباً",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "أدنى من اشسع. قال: وأدنى إلى المرء من شسعه ... وأبعد وصلاً من الكوكب وشسع النعل: جعل لها شسوعاً. وسفر شاسع، وقد شسع شسوعاً.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "له شسع من المال: قليل منه، وقيل: ذهب بشسع ماله: بأكثره. قال بعض بني سعد:",
+        "prototipe_benzerlik": 0.654,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "ورجل شسع مال: قائم عليه لازم لرعيته. ونزلنا بشسع من الوادي: بطرف منه، ورأيتهم حلولاً بشسعي الدهناء: بطرفها. وشسع بعض أعضائه من الثوب: نتأ. قال بلال بن جرير:",
+        "prototipe_benzerlik": 0.45,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.552,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الأنواء",
@@ -798,21 +826,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "merkez_kok": "قبب",
+      "merkez_mana": "canopy, pavilion; dome, cupola",
+      "boy": 604
     },
     "orta": {
-      "kume": 38,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 203
+      "kume": 33,
+      "merkez_kok": "صبب",
+      "merkez_mana": "Sabb: dökmek, akıtmak; sabîb: akan",
+      "boy": 201
     },
     "ince": {
-      "kume": 242,
-      "merkez_kok": "محش",
-      "merkez_mana": "",
-      "boy": 29
+      "kume": 221,
+      "merkez_kok": "ترع",
+      "merkez_mana": "gate, portal",
+      "boy": 24
     }
   },
   "kaliplar": {

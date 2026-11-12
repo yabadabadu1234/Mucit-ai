@@ -1311,6 +1311,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "حطب جزل، وأنشد ثعلب:\nفويهاً لقدرك ويهاً لها ... إذا اختير في المحل جزل الحطب\nلأن اللحم غث يبطىء نضجه. وأنشد سيبويه:\nمتى تأتنا تلمم بنا في ديارنا ... تجد حطباً جزلاً وناراً تأججا\nوضرب الصيد فجزله جزلتين أي قطعتين. وأعطاه جزلة من رغيف، وعنده حمامة بجواز لها.",
+    "mecaz": "رجل جزل: ذو عقل ورأي، وقد جزل، وما أبين الجزالة فيه، وقد استجزلت رأيك في هذا الأمر. وهو جزل العطاء، وله عطاء جزل وجزيل، وأجزل عطيته، وأجزل له في العطاء. وإن فعلت كذا فلك الذكر الجميل، والثواب الجزيل. وامرأة جزلة: ذات أرداف. وإن قيل لك: فلان جزل الرأي فأردت إنكاره فقل: بل\nجزل الرأي أي فاسده، من الجزل في الغارب وهو حدوث دبرة فيه تهجم على الجوف فتهلكه.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "حطب جزل، وأنشد ثعلب: فويهاً لقدرك ويهاً لها ... إذا اختير في المحل جزل الحطب لأن اللحم غث يبطىء نضجه. وأنشد سيبويه: متى تأتنا تلمم بنا في ديارنا ... تجد حطباً جزلاً وناراً تأججا وضرب الصيد فجزله جزلتين أي قطعتين. وأعطاه جزلة من رغيف، وعنده حمامة بجواز لها.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "رجل جزل: ذو عقل ورأي، وقد جزل، وما أبين الجزالة فيه، وقد استجزلت رأيك في هذا الأمر. وهو جزل العطاء، وله عطاء جزل وجزيل، وأجزل عطيته، وأجزل له في العطاء. وإن فعلت كذا فلك الذكر الجميل، والثواب الجزيل. وامرأة جزلة: ذات أرداف. وإن قيل لك: فلان جزل الرأي فأردت إنكاره فقل: بل",
+        "prototipe_benzerlik": 0.907,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "جزل الرأي أي فاسده، من الجزل في الغارب وهو حدوث دبرة فيه تهجم على الجوف فتهلكه.",
+        "prototipe_benzerlik": 0.087,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.497,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النساء",
@@ -1321,19 +1349,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 15,
+      "kume": 19,
       "merkez_kok": "فوق",
       "merkez_mana": "Fevk: üst, yukarı (zarf)",
-      "boy": 107
+      "boy": 76
     },
     "ince": {
-      "kume": 84,
+      "kume": 109,
       "merkez_kok": "حصف",
       "merkez_mana": "of sense, sober, realistic",
       "boy": 31

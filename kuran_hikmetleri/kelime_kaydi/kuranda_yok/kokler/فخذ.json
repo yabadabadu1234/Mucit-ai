@@ -1076,6 +1076,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "فخذ الرجل: كسرت فخذه فهو مفخوذ.",
+    "mecaz": "هذا فخذي بالتذكير أي أدنى عشيرتي. وفلان من فخذ من أفخاذ بني تميم، وفخّذ قبيلته: جعلهم فخذاً فخذاً. وفخذت بني فلان فلم أرَ عندهم خيراً أي أتيتهم فخذاً فخذاً فسألتهم في حمالة أو غيرها. ولما أنزل على رسول الله صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ قوله تعالى: \" وأنذر عشيرتك الأقربين \" بات يفخّذ عشيرته أي يدعوهم فخذاً فخذاً.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "فخذ الرجل: كسرت فخذه فهو مفخوذ.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "هذا فخذي بالتذكير أي أدنى عشيرتي. وفلان من فخذ من أفخاذ بني تميم، وفخّذ قبيلته: جعلهم فخذاً فخذاً. وفخذت بني فلان فلم أرَ عندهم خيراً أي أتيتهم فخذاً فخذاً فسألتهم في حمالة أو غيرها. ولما أنزل على رسول الله صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ قوله تعالى: \" وأنذر عشيرتك الأقربين \" بات يفخّذ عشيرته أي يدع",
+        "prototipe_benzerlik": 0.392,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.392,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["body_part.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "خلق الإنسان",
@@ -1086,22 +1109,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
-      "merkez_kok": "حنج",
-      "merkez_mana": "",
-      "boy": 426
-    },
-    "orta": {
       "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 261
+      "boy": 466
+    },
+    "orta": {
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 13,
-      "merkez_kok": "فحج",
-      "merkez_mana": "bow-legged",
-      "boy": 9
+      "kume": 20,
+      "merkez_kok": "حبن",
+      "merkez_mana": "to be inflated, to be tumid",
+      "boy": 22
     }
   },
   "kaliplar": {

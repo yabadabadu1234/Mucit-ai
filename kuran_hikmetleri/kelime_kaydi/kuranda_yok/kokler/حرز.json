@@ -1646,13 +1646,63 @@
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "acquiring.n.01",
-    "dayanak_tanim": "the act of acquiring something",
+    "dayanak_synset": "attainment.n.01",
+    "dayanak_tanim": "the act of achieving an aim",
     "synset_sayisi": 12
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "أحرز الشيء في وعائه، وأحرز فلان نصيبه. ومكان حريز: حصين. وهتك السارق الحرز. واستحرز: حصل في الحرز. قال الطرماح يخاطب الذئب:\nولا تعو واستحرز وإن تعو عيةً ... تصادف قرى الظلماء وهو شنيع\nأراد بالقرى السهم القاتل. وقال ابن مقبل:\nمستحرز الرحل منها مفرع سند ... وشمرت عن فياف واجهت خلفا\nأي سنامها رفيع، وأراد بالفيافي والخلف وهي الطرق بين الجبال، ما بين إبطيها من السعة. واحترز من العدوّ وتحرز: تحفظ. وحرزوا أنفسكم: احفظوها. وعنده إبل حرائز: لا تباع نفاسة بها. قال الشماخ:\nتباع إذا بيع التلاد الحرائز\nوفلان حريز من هذا الأمر: نزيه، وفيه حرازة. \" ولا حريز من بيع \" أي إن أعطيتني ثمناً أرضاه بعتك.",
+    "mecaz": "عملت له حرزاً من الأحراز وهو العوذة. وأحرز قصبة السبق إذا سبق. وقال الأعشى:\nفي ظلال الكناس من وهج القي ... ظ إذا الظل أحرزته الساق\nأي صار تحت ساق الشجرة عند استواء النهار. وأخذ فلان حرزه أي نصيبه، وأخذ القوم أحرازهم قال أبو العميثل:\nأحرزت من رأيه فيّ الجميل على ... رغم العدا حرزاً حسبي به حرزاً\nوهو في الأصل اسم للخطر. قال:\nإذا أخذت حرزي فلا لوم ... قد كنت أخّاذاً لأحراز القوم\nوفي الثل \" واحرزا وأبتغي النّوافلا \".",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "أحرز الشيء في وعائه، وأحرز فلان نصيبه. ومكان حريز: حصين. وهتك السارق الحرز. واستحرز: حصل في الحرز. قال الطرماح يخاطب الذئب: ولا تعو واستحرز وإن تعو عيةً ... تصادف قرى الظلماء وهو شنيع أراد بالقرى السهم القاتل. وقال ابن مقبل: مستحرز الرحل منها مفرع سند ... وشمر",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "عملت له حرزاً من الأحراز وهو العوذة. وأحرز قصبة السبق إذا سبق. وقال الأعشى:",
+        "prototipe_benzerlik": -0.027,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "أي صار تحت ساق الشجرة عند استواء النهار. وأخذ فلان حرزه أي نصيبه، وأخذ القوم أحرازهم قال أبو العميثل:",
+        "prototipe_benzerlik": 0.078,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وهو في الأصل اسم للخطر. قال:",
+        "prototipe_benzerlik": 0.064,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وفي الثل \" واحرزا وأبتغي النّوافلا \".",
+        "prototipe_benzerlik": 0.314,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.107,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "achieve.v.01",
+    "act.n.02",
+    "gain.v.05",
+    "get.v.01",
+    "guess.v.04",
+    "observe.v.04",
+    "reach.v.01",
+    "reach.v.02",
+    "score.v.01",
+    "speculate.v.01",
+    "uncommunicativeness.n.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النساء",
@@ -1664,21 +1714,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 509
     },
     "orta": {
-      "kume": 12,
-      "merkez_kok": "خيب",
-      "merkez_mana": "Hayb: boşa çıkmak, umutsuz olmak; hâib: hayal kırıklığı",
-      "boy": 58
+      "kume": 7,
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 259
     },
     "ince": {
-      "kume": 65,
-      "merkez_kok": "خيب",
-      "merkez_mana": "Hayb: boşa çıkmak, umutsuz olmak; hâib: hayal kırıklığı",
-      "boy": 38
+      "kume": 39,
+      "merkez_kok": "سلب",
+      "merkez_mana": "Selb: soymak, çalmak; selb: yoksun bırakmak",
+      "boy": 24
     }
   },
   "kaliplar": {

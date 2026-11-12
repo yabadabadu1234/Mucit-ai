@@ -827,16 +827,54 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "person.n.01",
+    "ince": "whole.n.02",
     "orta": "noun.person",
     "ust": "insan ve toplum",
-    "dayanak_synset": "young_person.n.01",
-    "dayanak_tanim": "a young person (especially a young man or boy)",
+    "dayanak_synset": "young_buck.n.01",
+    "dayanak_tanim": "a teenager or a young adult male",
     "synset_sayisi": 5
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "هذا فتي بيّن الفتوة وهي الحرية والكرم. قال عبد الرحمن بن حسان:\nإن الفتى لفتى المكارم والعلى ... ليس الفتى بمغملج الصبيان\nوقال آخر:\nيا عزّ هل لك في شيخ فتًى أبداً ... وقد يكون شبابٌ غير فتيان\nوتقول العرب: فتًى من صفته كيت وكيت من غير تمييز بين الشيخ والشاب، وهذا فتًى بيّن الفتاء وهو طراءة السنّ. قال:\nإذا عاش الفتى مائتين عاماً ... فقد ذهب البشاشة والفتاء\nوهذا ثور فتي وهذه بقرة فتية: بيّنا الفتاء. وهما فتاي وفتاتي أي غلامي وجاريتي، وسئل أبو يوسف عمن قال: أنا فتى فلانٍ فقال: هو إقرار منه بالرق. \" وقال لفتيته \" و\" لفتيانه \". قال قتادة: لغلمانه. وفتّيت بنت فلان: منعت من الخروج وسترت وهي صغيرة وألحقت بالفتيات، وتفتت هي. وأبرد من شيخ يتفتّى أي يتشبّه بالفتيان. وتقول: هؤلاء فتوٌّ ما فيهم فتوة وهو جمع: فتًى. قال:\nوفتوّ هجّروا ثم أروا ... ليلهم حتى إذا انجاب حلواً\nوفلان من أهل الفتوى والفتيا. وتعالوا ففاتونا. وتفاتوا إليه: تحاكموا. قال الطّرمّاح:\nهلمّ إلى قضاة الغوث فاسأل ... برهطك والبيان لدى القضاة\nأنخ بفناء أشدق من عديّ ... ومن جرمٍ وهم أهل التّفاتي\nوقال عمر بن أبي ربيعة:\nفبتّ أفاتيها فلا هي ترعوي ... بجود ولا تبدي إباءً فتبخلا\nأي أسائلها.",
+    "mecaz": "\" لا أفعل ذلك ماكر الفتيان \". قال:\nغدا فتياً دهرٍ وراحا عليهم ... نهار وليل يلحقان التواليا\nوهذا كقلوهم: الجديدان. وتقول: بارك الله في فتوتك وفتائك، وأدام مادام الفتيان بركة إفتائك. وأقمت عنده فتًى من نهار أي صدرا منه. قال:\nفما لبثوا إلا فتًى من نهارهم ... مماصعةً حتى أبارهم القتل\nوشرب فلان بالفتيِّ وهو قدح الشطّار سمّي\nلصغره، ويجوز أن يقال في الغمر: هو من الصبيّ الغمر. وأفتى الرجل: شرب به. وتقول: فلان يظل مفتياً، ويبيت مفتياً.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "هذا فتي بيّن الفتوة وهي الحرية والكرم. قال عبد الرحمن بن حسان: إن الفتى لفتى المكارم والعلى ... ليس الفتى بمغملج الصبيان وقال آخر: يا عزّ هل لك في شيخ فتًى أبداً ... وقد يكون شبابٌ غير فتيان وتقول العرب: فتًى من صفته كيت وكيت من غير تمييز بين الشيخ والشاب، وهذ",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "\" لا أفعل ذلك ماكر الفتيان \". قال:",
+        "prototipe_benzerlik": 0.313,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وهذا كقلوهم: الجديدان. وتقول: بارك الله في فتوتك وفتائك، وأدام مادام الفتيان بركة إفتائك. وأقمت عنده فتًى من نهار أي صدرا منه. قال:",
+        "prototipe_benzerlik": 0.298,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وشرب فلان بالفتيِّ وهو قدح الشطّار سمّي",
+        "prototipe_benzerlik": 0.221,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "لصغره، ويجوز أن يقال في الغمر: هو من الصبيّ الغمر. وأفتى الرجل: شرب به. وتقول: فلان يظل مفتياً، ويبيت مفتياً.",
+        "prototipe_benzerlik": 0.23,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.266,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["age_group.n.01", "living_thing.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النساء",
@@ -847,22 +885,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 19,
-      "merkez_kok": "نجل",
-      "merkez_mana": "to be covered with vegetation",
-      "boy": 65
+      "kume": 25,
+      "merkez_kok": "وسل",
+      "merkez_mana": "Vesîle: aracı, yol",
+      "boy": 130
     },
     "ince": {
-      "kume": 104,
-      "merkez_kok": "صبو",
-      "merkez_mana": "Sabve: heves, sevda; sabî: çocuk",
-      "boy": 10
+      "kume": 143,
+      "merkez_kok": "شكم",
+      "merkez_mana": "bit, snaffle",
+      "boy": 32
     }
   },
   "kaliplar": {

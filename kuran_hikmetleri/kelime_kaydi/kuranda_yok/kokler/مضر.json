@@ -730,6 +730,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "لبن مضير وماضر. حامض يحذي السان، وقد مضر يمضر ومضر يمضر، ومنه: المضيرة. وتقول: عليّ مع الحال المضيرة، خير من معاوية مع المضيره. وتمضّر فلان: تعصّب لمضر، ومضّرناه فتمضّر، وقيّسناه فتقيّس أي صيّرناه منهم بالنسب إليهم، وتمضّروا: تشبهوا بمضر. قال:\nولولا رجال من ربيعة لم تكن ... نزارٌ نزارا لا ولا من تمضّرا\nوذهب دمه خضراً مضراً: هنيئاً مريئاً للقاتل.",
+    "mecaz": "مصّر الله لك الثناء: طيّبه. وتمضّر المال: سمن.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "لبن مضير وماضر. حامض يحذي السان، وقد مضر يمضر ومضر يمضر، ومنه: المضيرة. وتقول: عليّ مع الحال المضيرة، خير من معاوية مع المضيره. وتمضّر فلان: تعصّب لمضر، ومضّرناه فتمضّر، وقيّسناه فتقيّس أي صيّرناه منهم بالنسب إليهم، وتمضّروا: تشبهوا بمضر. قال: ولولا رجال من رب",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "مصّر الله لك الثناء: طيّبه. وتمضّر المال: سمن.",
+        "prototipe_benzerlik": 0.224,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.224,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
@@ -740,19 +763,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
-      "merkez_kok": "حنج",
-      "merkez_mana": "",
-      "boy": 426
-    },
-    "orta": {
       "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 261
+      "boy": 466
+    },
+    "orta": {
+      "kume": 3,
+      "merkez_kok": "قمح",
+      "merkez_mana": "Kamh: buğday",
+      "boy": 64
     },
     "ince": {
-      "kume": 7,
+      "kume": 8,
       "merkez_kok": "مضر",
       "merkez_mana": "a medieval dish of fat meat cooked in sour milk with shallots, lemon, ",
       "boy": 8

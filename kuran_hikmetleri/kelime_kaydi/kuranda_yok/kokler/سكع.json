@@ -709,6 +709,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "فلان يتسكع لا يدري أين يتوجه من أرض الله تعالى: يتعسف. وتسكع في الظلمة: خبط فيها. قال:\nأيادي بيضاً بيضت وجه مطلبي ... وقد كنت في ظلمائه أتسكع",
+    "mecaz": "فلان يتسكع في أمره: لا يهتدي لوجهه، وأراك متسكعاً في ضلالك. وسئل بعض العرب عن قوله تعالى \" في طغيانهم يعمهون \" فقال: في عمههم يتسكعون.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "فلان يتسكع لا يدري أين يتوجه من أرض الله تعالى: يتعسف. وتسكع في الظلمة: خبط فيها. قال: أيادي بيضاً بيضت وجه مطلبي ... وقد كنت في ظلمائه أتسكع",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "فلان يتسكع في أمره: لا يهتدي لوجهه، وأراك متسكعاً في ضلالك. وسئل بعض العرب عن قوله تعالى \" في طغيانهم يعمهون \" فقال: في عمههم يتسكعون.",
+        "prototipe_benzerlik": 0.744,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.744,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["roll.v.12", "weave.v.04"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الغرائز",
@@ -719,22 +742,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 6,
+      "kume": 7,
       "merkez_kok": "لقلق",
       "merkez_mana": "",
-      "boy": 440
+      "boy": 386
     },
     "orta": {
-      "kume": 28,
-      "merkez_kok": "دبب",
-      "merkez_mana": "debbe: sürünmek, hareket / debbe: uğraşmak (?)",
-      "boy": 81
+      "kume": 26,
+      "merkez_kok": "طعل",
+      "merkez_mana": "to come upon, befall",
+      "boy": 91
     },
     "ince": {
-      "kume": 187,
-      "merkez_kok": "بحثر",
-      "merkez_mana": "to take, uncover something out",
-      "boy": 8
+      "kume": 159,
+      "merkez_kok": "طعل",
+      "merkez_mana": "to come upon, befall",
+      "boy": 14
     }
   },
   "kaliplar": {

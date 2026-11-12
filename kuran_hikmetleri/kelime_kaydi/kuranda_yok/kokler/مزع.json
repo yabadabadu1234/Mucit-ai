@@ -744,7 +744,7 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "person.n.01",
+    "ince": "whole.n.02",
     "orta": "noun.person",
     "ust": "insan ve toplum",
     "dayanak_synset": "distributor.n.01",
@@ -754,6 +754,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "ألحم البازي مزعةً وهي اللحمة التي يضرّى بها، وماله مزعةٌ ولا جزعة: قطيعة لحم. ووزع المال بينهم ومزعه، وتوزّعوه وتمزعوه: تقسّموه. وقال:\nتلوم امرأً لو كان لحمك عنده ... لآواه مجموعاً له أو ممزّعاً\nوقال جرير:\nهلاّ سألت مجاشعاً زبد استها ... أين الزبير ورحله المتمزّع\nوقال:\nبني صامت هلاّ زجرتم كلابكم ... عن اللحم بالخبراء أن يتمزّعا\nوالمرأة تمزع القطن وتمزّعه بيدها وتزبّده: تقطّعه ثم تؤلّفه وتجوّده.",
+    "mecaz": "إنه ليتمزّع من الغيظ: يتطاير شققاً. وفلان يمزّق عرضه ويتمزّع لحمه.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "ألحم البازي مزعةً وهي اللحمة التي يضرّى بها، وماله مزعةٌ ولا جزعة: قطيعة لحم. ووزع المال بينهم ومزعه، وتوزّعوه وتمزعوه: تقسّموه. وقال: تلوم امرأً لو كان لحمك عنده ... لآواه مجموعاً له أو ممزّعاً وقال جرير: هلاّ سألت مجاشعاً زبد استها ... أين الزبير ورحله المتم",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "إنه ليتمزّع من الغيظ: يتطاير شققاً. وفلان يمزّق عرضه ويتمزّع لحمه.",
+        "prototipe_benzerlik": 0.442,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.442,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["living_thing.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
@@ -764,22 +787,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 14,
-      "merkez_kok": "جهد",
-      "merkez_mana": "Cehd: gayret, çaba; cehd: yorgunluk",
-      "boy": 135
+      "kume": 17,
+      "merkez_kok": "رحب",
+      "merkez_mana": "Rahb: geniş, ferah; rahabe: genişlik",
+      "boy": 51
     },
     "ince": {
-      "kume": 74,
-      "merkez_kok": "بيع",
-      "merkez_mana": "Beyâ': satış, ticaret",
-      "boy": 6
+      "kume": 102,
+      "merkez_kok": "فءء",
+      "merkez_mana": "group, band, division, class",
+      "boy": 18
     }
   },
   "kaliplar": {

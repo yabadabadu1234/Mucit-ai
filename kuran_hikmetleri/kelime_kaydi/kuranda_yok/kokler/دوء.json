@@ -839,13 +839,24 @@
     "ince": "state.n.02",
     "orta": "noun.state",
     "ust": "hâl ve vasıf",
-    "dayanak_synset": "illness.n.01",
-    "dayanak_tanim": "impairment of normal physiological function affecting part or all of an organism",
+    "dayanak_synset": "disease.n.01",
+    "dayanak_tanim": "an impairment of health or a condition of abnormal functioning",
     "synset_sayisi": 7
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "به داء وأدواء. وداء الرجل يداء. وأداء جوفك. ورجل داء وامرأة داء وداءة.\nوأي داء أدوأ من البخل.",
+    "mecaz": "",
+    "kinaye": "",
+    "mecaz_var": false
+  },
+  "prototip_yayilim_tasnif": {
+    "durum": "prototip veya mecaz kolu yok"
+  },
+  "kolekzifikasyon_kavramlari": ["act.n.02", "condition.n.01", "operation.n.08", "social_event.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
@@ -857,18 +868,18 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 39,
-      "merkez_kok": "هضض",
-      "merkez_mana": "recurrence of sadness",
-      "boy": 52
+      "kume": 41,
+      "merkez_kok": "بلع",
+      "merkez_mana": "Bel': yutmak; bel'a: yutkunma",
+      "boy": 61
     },
     "ince": {
-      "kume": 254,
+      "kume": 264,
       "merkez_kok": "شفي",
       "merkez_mana": "Şifâ: iyileşme, şifa",
       "boy": 9

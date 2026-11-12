@@ -1245,16 +1245,75 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "decrease.v.01",
+    "ince": "shrink.v.03",
     "orta": "verb.change",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "decrease.v.01",
-    "dayanak_tanim": "decrease in size, extent, or range",
+    "dayanak_synset": "shrink.v.03",
+    "dayanak_tanim": "reduce in size; reduce physically",
     "synset_sayisi": 15
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "قلص الشيء وقلّص وتقلّص: ارتفع. ويقال: قلّص الثوب، وقميص مقلّص: قصير. وقلص الظلّ، وظلّ قالص. وقلصت شفته: انزوت علواً. قال:\nوقد عجمتني العاجمات فأسأرت ... صليب العصا جلداً على الحدثان\nصبوراً على عضّ الحروب وضرسها ... إذا قلصت عن الفم الشّفتان\nوقلصوا عن الدار: خفّوا، وحان منهم قلوص. وقلص ماء البئر: ارتفع بمعنى ذهب وبمعنى تصعّد لجمومه. وفرس مقلّص: مرتفع نهد. وقلصت الإبل. ارتفعت في سيرها. وتحته قلوص مهريّة، وله قلصٌ وقلائص.",
+    "mecaz": "رأيت ظليماً وقلوصه وهي أنثاه.\nوقال لبيد:\nذعرت قلاص الثلج تحت ظلاله ... بمثنى الأيادي والمنيح المعقب\nيعني أنه طرد البرد وكل الشتاء بالقرى، وقلاص الثلج: السحاب الذي يأتي به.\nق ل ع قلع الشجرة واقتلعه. وتقلّع المدر عن إثارة الأرض، ورماه بقلاعة بالتخفيف والتثقيل: بمدرة يقتلعها من الأرض، ورماه بالمقلاع. وسيف قلعيّ بفتح اللام: عتيق نسب إلى معدن بالقلع وهو جبل بالشام. قال أوس:\nيعلون بالقلع البصريّ هامهم ... ويخرج الفسو من تحت الدّقارير\nوهو جمع القلعيّ كالعرك والعركيّ والعرب والعربيّ. وله جام من القلعيّ وهو الرّصاص الجيد. وتحصّنوا بالقلعة والقلاع. وسميت بالقلعة واحدة القلع وهي السحاب العظام.\nومن المجاز: فلان يقلع الناس بسفهه وشتائمه. واستعمل عليهم فقلعهم ظلماً وإجحافاً. وقلع الأمير: عزل، وتقول: لم يزل يقلع الناس حتى قلع. ورجل قلع: يتقلّع عن سرجه لا يثبت فيه. وقلع القدم إذا لم يثبت عند الصّراع. وهذا منزل قلعة إذا لم يكن وطيئاً، وشرّ المجالس مجلس قلعة وهو الذي يقلع عنه الجالس إذا جاء من هو أعزّ منه. والقوم على قلعة: على رحلة. وأقلع عن الأمر: تركه. وأقلعت عنه الحمّى وقلعت. وتركته في قلع من حمّاه. \" وإنه لضب قلعة \" وهي الصخرة العظيمة يحتفر فيها فيكون أمنع له يضرب لمن يمنع ما وراء ظهره.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "قلص الشيء وقلّص وتقلّص: ارتفع. ويقال: قلّص الثوب، وقميص مقلّص: قصير. وقلص الظلّ، وظلّ قالص. وقلصت شفته: انزوت علواً. قال: وقد عجمتني العاجمات فأسأرت ... صليب العصا جلداً على الحدثان صبوراً على عضّ الحروب وضرسها ... إذا قلصت عن الفم الشّفتان وقلصوا عن الدار: خف",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "رأيت ظليماً وقلوصه وهي أنثاه.",
+        "prototipe_benzerlik": 0.009,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "يعني أنه طرد البرد وكل الشتاء بالقرى، وقلاص الثلج: السحاب الذي يأتي به.",
+        "prototipe_benzerlik": 0.092,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "ق ل ع قلع الشجرة واقتلعه. وتقلّع المدر عن إثارة الأرض، ورماه بقلاعة بالتخفيف والتثقيل: بمدرة يقتلعها من الأرض، ورماه بالمقلاع. وسيف قلعيّ بفتح اللام: عتيق نسب إلى معدن بالقلع وهو جبل بالشام. قال أوس:",
+        "prototipe_benzerlik": 0.969,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وهو جمع القلعيّ كالعرك والعركيّ والعرب والعربيّ. وله جام من القلعيّ وهو الرّصاص الجيد. وتحصّنوا بالقلعة والقلاع. وسميت بالقلعة واحدة القلع وهي السحاب العظام.",
+        "prototipe_benzerlik": 0.384,
+        "halka": "orta"
+      },
+      {
+        "cumle": "ومن المجاز: فلان يقلع الناس بسفهه وشتائمه. واستعمل عليهم فقلعهم ظلماً وإجحافاً. وقلع الأمير: عزل، وتقول: لم يزل يقلع الناس حتى قلع. ورجل قلع: يتقلّع عن سرجه لا يثبت فيه. وقلع القدم إذا لم يثبت عند الصّراع. وهذا منزل قلعة إذا لم يكن وطيئاً، وشرّ المجالس مجلس قلعة وهو الذي يقلع عنه الجالس إذا جاء من ه",
+        "prototipe_benzerlik": 0.922,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.475,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "abridge.v.01",
+    "boil_down.v.02",
+    "compress.v.02",
+    "contract.v.01",
+    "cut.v.01",
+    "decrease.v.01",
+    "decrease.v.02",
+    "ignore.v.01",
+    "minimize.v.01",
+    "reduce.v.01",
+    "reduce.v.18",
+    "shrink.v.03",
+    "shrink.v.04",
+    "shrivel.v.01",
+    "understate.v.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الإبل",
@@ -1265,22 +1324,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "kume": 7,
+      "merkez_kok": "لقلق",
+      "merkez_mana": "",
+      "boy": 386
     },
     "orta": {
-      "kume": 45,
-      "merkez_kok": "متن",
-      "merkez_mana": "Metn: sağlam yer, metin; metîn: sağlam",
-      "boy": 268
+      "kume": 29,
+      "merkez_kok": "دبب",
+      "merkez_mana": "debbe: sürünmek, hareket / debbe: uğraşmak (?)",
+      "boy": 73
     },
     "ince": {
-      "kume": 292,
-      "merkez_kok": "نحل",
-      "merkez_mana": "Nahl: arı; nahl: hediye",
-      "boy": 15
+      "kume": 186,
+      "merkez_kok": "مشق",
+      "merkez_mana": "to pull out, to draw out, to withdraw",
+      "boy": 7
     }
   },
   "kaliplar": {

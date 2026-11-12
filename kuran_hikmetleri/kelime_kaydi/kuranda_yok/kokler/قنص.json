@@ -1149,7 +1149,7 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "person.n.01",
+    "ince": "whole.n.02",
     "orta": "noun.person",
     "ust": "insan ve toplum",
     "dayanak_synset": "marksman.n.01",
@@ -1159,6 +1159,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "هو قانص من القنّاص، وقنص الوحش واقتنصه وتقنّصه، وجاء يقنص وقنيص كثير، و\" جاء القنيص بالقنيص \" أي الصائد بالمصيد، ونحوه: القدير في القادر، وتقول: يؤكل الطير وما لقانصه، إلاّ فضلات قوانصه؛ جمع: قانصةٍ وهي هنة كأنها حجيرٌ في بطن الطائر.",
+    "mecaz": "هو يقتنص الفرسان ويصطادهم.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "هو قانص من القنّاص، وقنص الوحش واقتنصه وتقنّصه، وجاء يقنص وقنيص كثير، و\" جاء القنيص بالقنيص \" أي الصائد بالمصيد، ونحوه: القدير في القادر، وتقول: يؤكل الطير وما لقانصه، إلاّ فضلات قوانصه؛ جمع: قانصةٍ وهي هنة كأنها حجيرٌ في بطن الطائر.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "هو يقتنص الفرسان ويصطادهم.",
+        "prototipe_benzerlik": 0.52,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.52,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["act.n.02", "living_thing.n.01", "sharpshoot.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السباع",
@@ -1169,22 +1192,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "kume": 6,
+      "merkez_kok": "درك",
+      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
+      "boy": 1364
     },
     "orta": {
-      "kume": 11,
-      "merkez_kok": "دحر",
-      "merkez_mana": "Dahr: itmek, uzaklaştırmak",
-      "boy": 179
+      "kume": 23,
+      "merkez_kok": "جلد",
+      "merkez_mana": "Cild: deri; cellâd: vurucu",
+      "boy": 125
     },
     "ince": {
-      "kume": 61,
-      "merkez_kok": "قحم",
-      "merkez_mana": "Kuhm: ateşe atmak, kendini atmak",
-      "boy": 24
+      "kume": 135,
+      "merkez_kok": "عصو",
+      "merkez_mana": "Isyân: karşı gelmek",
+      "boy": 50
     }
   },
   "kaliplar": {

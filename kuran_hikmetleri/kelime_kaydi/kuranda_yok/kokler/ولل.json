@@ -767,31 +767,6 @@
         "yol": "müştak"
       },
       {
-        "w": "مستول",
-        "u": "مستول",
-        "p": "adj",
-        "h": "ar-adj+",
-        "e": "مُسْتَوْلٍ • (mustawlin) (informal مُسْتَوْلِي (mustawlī), feminine مُسْتَوْلِيَة (mustawliya), masculine plural مُسْتَوْلُون (mustawlūn), feminine plural مُسْتَوْلِيَات (mustawliyāt))",
-        "t": "Derived from the active participle of اِسْتَوْلَى (istawlā, “to seize”).",
-        "s": [
-          ["if-ar-lect", ""],
-          ["ar-active participle", "Derived from the active participle"]
-        ],
-        "g": ["seizing, confiscating", "occupying, invading"],
-        "r": ["mustawlin"],
-        "ipa": ["/mus.taw.lin/"],
-        "ds": [
-          ["az", "müstövli", ""],
-          ["ota", "مستولی", "müstevli"],
-          ["fa", "مستولی", ""]
-        ],
-        "el": [
-          ["اِسْتَوْلَى", "استولى#Arabic"],
-          ["seize", "seize"]
-        ],
-        "yol": "müştak"
-      },
-      {
         "w": "ويل",
         "u": "ويل",
         "p": "verb",
@@ -933,16 +908,23 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "person.n.01",
+    "ince": "cognition.n.01",
     "orta": "noun.person",
     "ust": "insan ve toplum",
-    "dayanak_synset": "saint.n.02",
-    "dayanak_tanim": "person of exceptional holiness",
+    "dayanak_synset": "saint.n.01",
+    "dayanak_tanim": "a person who has died and has been declared a saint by canonization",
     "synset_sayisi": 5
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "prototip_yayilim_tasnif": {
+    "durum": "prototip veya mecaz kolu yok"
+  },
+  "kolekzifikasyon_kavramlari": ["ability.n.02", "content.n.05", "living_thing.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الأنواء",
@@ -953,22 +935,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 20,
-      "merkez_kok": "وثن",
-      "merkez_mana": "Vesen: put, tapılan şey",
-      "boy": 116
+      "kume": 25,
+      "merkez_kok": "وسل",
+      "merkez_mana": "Vesîle: aracı, yol",
+      "boy": 130
     },
     "ince": {
-      "kume": 111,
-      "merkez_kok": "وثن",
-      "merkez_mana": "Vesen: put, tapılan şey",
-      "boy": 25
+      "kume": 147,
+      "merkez_kok": "رءس",
+      "merkez_mana": "Re's: baş; reîs: başkan",
+      "boy": 13
     }
   },
   "kaliplar": {

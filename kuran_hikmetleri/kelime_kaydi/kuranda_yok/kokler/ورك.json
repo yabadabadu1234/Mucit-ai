@@ -1542,13 +1542,91 @@
     "ince": "location.n.01",
     "orta": "noun.location",
     "ust": "ölçü, mekân ve zaman",
-    "dayanak_synset": "corner.n.01",
-    "dayanak_tanim": "a place off to the side of an area",
+    "dayanak_synset": "corner.n.05",
+    "dayanak_tanim": "the point where three areas or surfaces meet or intersect",
     "synset_sayisi": 46
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "ورّك على الدابة وتورّك: ركبها واضعاً رجله بين يدي الواسط وهو مقدّم الرحل على الموركة وهي شبه مصدغة يجعلها تحت رجله\nويحتضن الواسط بمأبضها وهو منثني الركبة. وزيّن رحله بالوراك وهو قطعة من حبرة أو أديم يحفّ بها الرحل وقد تجعل على الموركة: وسجد متورّكاً وهو أن يلصق وركيه بعقبيه ولا يتجافى. وعن ابن مسعود رضي الله تعالى عنه: \" أنه كره أن يسجد الرجل متوركاً أو مضطجعاً \". ونام متورّكاً متكئاً على أحد وركيه.",
+    "mecaz": "قعد الملاّح على ورك السفينة، وهم عليّ وركٌ واحد إذا تألبوا عليه. وورّكوا في الوادي: عدلوا. قال زهير:\nوورّكن في السّوبان يعلون متنه ... عليهن دلّ الناعم المتنعّم\nوورّك عليه السيف: حمله عليه. قال ساعدة ابن جؤيّة:\nفورّك لينا لا يثمثم نصله ... إذا صاب أوساط العظام صميم\nلا يردّ. وورّك عليه ذنبه. وعن الحسن: من أنكر القدر فقد فجر، ومن ورّك ذنبه على الله فقد كفر. وتورّك عن الحاجة: تبطّأ عنها. وقال القطاميّ:\nوقد تعرّجت لما ورّكت أركاً ... ذات الشمال عن أيماننا الرحل\nأي خلّفته.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "ورّك على الدابة وتورّك: ركبها واضعاً رجله بين يدي الواسط وهو مقدّم الرحل على الموركة وهي شبه مصدغة يجعلها تحت رجله ويحتضن الواسط بمأبضها وهو منثني الركبة. وزيّن رحله بالوراك وهو قطعة من حبرة أو أديم يحفّ بها الرحل وقد تجعل على الموركة: وسجد متورّكاً وهو أن يلص",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "قعد الملاّح على ورك السفينة، وهم عليّ وركٌ واحد إذا تألبوا عليه. وورّكوا في الوادي: عدلوا. قال زهير:",
+        "prototipe_benzerlik": 0.294,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وورّك عليه السيف: حمله عليه. قال ساعدة ابن جؤيّة:",
+        "prototipe_benzerlik": 0.834,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "لا يردّ. وورّك عليه ذنبه. وعن الحسن: من أنكر القدر فقد فجر، ومن ورّك ذنبه على الله فقد كفر. وتورّك عن الحاجة: تبطّأ عنها. وقال القطاميّ:",
+        "prototipe_benzerlik": 0.963,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.697,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "abandon.v.01",
+    "abandon.v.02",
+    "abandon.v.04",
+    "abstain.v.02",
+    "artifact.n.01",
+    "bequeath.v.01",
+    "break.v.02",
+    "break.v.04",
+    "break.v.05",
+    "break.v.10",
+    "devolve.v.03",
+    "digest.v.03",
+    "discontinue.v.01",
+    "drop.v.02",
+    "drop.v.03",
+    "drop.v.07",
+    "drop_out.v.01",
+    "entrust.v.02",
+    "exit.v.01",
+    "fail.v.01",
+    "flatten.v.03",
+    "hurt.v.06",
+    "leave.v.01",
+    "leave.v.02",
+    "leave.v.04",
+    "leave.v.06",
+    "leave.v.07",
+    "leave.v.08",
+    "leave.v.12",
+    "leave_behind.v.01",
+    "leave_office.v.01",
+    "let.v.05",
+    "neglect.v.01",
+    "point.n.02",
+    "region.n.03",
+    "release.v.08",
+    "separate.v.08",
+    "shed.v.01",
+    "spend.v.02",
+    "suffer.v.02",
+    "suffer.v.06",
+    "surrender.v.02",
+    "tell.v.02",
+    "waive.v.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "خلق الإنسان",
@@ -1559,22 +1637,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
-      "merkez_kok": "حنج",
-      "merkez_mana": "",
-      "boy": 426
-    },
-    "orta": {
       "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 261
+      "boy": 466
+    },
+    "orta": {
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 13,
-      "merkez_kok": "فحج",
-      "merkez_mana": "bow-legged",
-      "boy": 9
+      "kume": 20,
+      "merkez_kok": "حبن",
+      "merkez_mana": "to be inflated, to be tumid",
+      "boy": 22
     }
   },
   "kaliplar": {

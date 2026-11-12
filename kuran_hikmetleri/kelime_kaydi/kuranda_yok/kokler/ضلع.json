@@ -2075,6 +2075,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "هو منتفخ الضلوع والأضلع والأضلاع والأضالع. ودابة ضليع: بين الضلاعة مجفر الجنبين. وأكل وشرب حتى تضلع.\nقال:\nفناولته من رسل كوماء جلدة ... وأغضيت عنه الطرف حتى تضلعا\nإذا قال قدني قلت بالله حلفة ... لتغني عني ذا إنائك أجمعا\nوحمل مضلع: ثقيل على الأضلاع، ولا أضطلع به. وثوب مضلع: وشيه كهيئة الأضلاع. وقال امرؤ القيس:\nتجافي عن المأثور بيني وبينها ... وتثني عليّ السابريّ المضلعا\nوكلّمت فلاناً وكان ضلعك عليّ أي ميلك. ولا تنقش الشوكة بالشوكة فإن ضلعها معها.",
+    "mecaz": "انزل بتلك الضلع وهي مكان مستدق من الجنبل. وفي الحديث \" كأنكم يا أعداء الله بهذه الضلع الحمراء مقتلين \" وهم عليه ضلع جائرة أي مجتمعون عليه بالعداوة. قال ابن هرمة:\nوهي علينا في حكمها ضلع ... جائرة في قضائها جنفه\nونصب ضلعاً للطير وهي الفخ لاحديداً به. وضلع الشيء ضلعاً: اعوج حتى صار كالضلع. ورمح ضلع.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "هو منتفخ الضلوع والأضلع والأضلاع والأضالع. ودابة ضليع: بين الضلاعة مجفر الجنبين. وأكل وشرب حتى تضلع. قال: فناولته من رسل كوماء جلدة ... وأغضيت عنه الطرف حتى تضلعا إذا قال قدني قلت بالله حلفة ... لتغني عني ذا إنائك أجمعا وحمل مضلع: ثقيل على الأضلاع، ولا أضطلع ب",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "انزل بتلك الضلع وهي مكان مستدق من الجنبل. وفي الحديث \" كأنكم يا أعداء الله بهذه الضلع الحمراء مقتلين \" وهم عليه ضلع جائرة أي مجتمعون عليه بالعداوة. قال ابن هرمة:",
+        "prototipe_benzerlik": 0.215,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "ونصب ضلعاً للطير وهي الفخ لاحديداً به. وضلع الشيء ضلعاً: اعوج حتى صار كالضلع. ورمح ضلع.",
+        "prototipe_benzerlik": 0.007,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.111,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["assume.v.06", "body_part.n.01", "figure.n.06", "touch.v.05"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السلاح",
@@ -2085,19 +2113,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 15,
+      "kume": 19,
       "merkez_kok": "فوق",
       "merkez_mana": "Fevk: üst, yukarı (zarf)",
-      "boy": 107
+      "boy": 76
     },
     "ince": {
-      "kume": 84,
+      "kume": 109,
       "merkez_kok": "حصف",
       "merkez_mana": "of sense, sober, realistic",
       "boy": 31

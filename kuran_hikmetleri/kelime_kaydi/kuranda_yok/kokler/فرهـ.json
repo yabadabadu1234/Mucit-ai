@@ -1,0 +1,63 @@
+{
+  "kok": "فرهـ",
+  "sinif": "reddedildi",
+  "turkce_fiil": null,
+  "mustaklar": {},
+  "reddedilen": [
+    ["kök", "فرهـ", "üç harfli değil"]
+  ],
+  "sozlukler": {},
+  "kuran_gecisleri": 0,
+  "kuranda_var": false,
+  "sema": {
+    "sema": "graf-ic-graf",
+    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
+    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
+    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
+    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
+    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
+  },
+  "tasnif": {
+    "fasil": "فر",
+    "harf": "ف",
+    "mahrec": "şefeviyye",
+    "bolge": "dudak ve cevf"
+  },
+  "mana_tasnif": {
+    "durum": "Arabic WordNet v2 kaydı yok"
+  },
+  "ses_mana_tasnif": {
+    "durum": "Cebel mu'cemlerinde kök yok"
+  },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "رجل وجمل فاره. قال:\nلا أستكين إذا ما أزمة أزمت ... ولا تراني إلا فاره اللبب\nوقيل: لا توصف الخيل بالفراهة. وغلمان فرهٌ وفرهةٌ. وناقة مفرهة: ولدت فرهاً، وقد أفرهت. وفلان يستفره الدواب.\nف ر\nولأسلخنّ فروة رأسك. وفي الحديث: \" إن الأمة ألفت فروة رأسها من وراء الجدار \" أي تبدّلت وخرجت من غير أن تتلفّع كالحرة. وضربه على أمّ فروته وهي هامته. وتقول: هو فقير\nوإن كنز الإبريز، ولبس فروة إبرويز، وهي تاجه. وتقول: المفتري لا يجد البرد: تريد لابس الفرو. وقال العجاج:\nقلب الخراسانيّ فرو المفتري\nوقد افترى فلان فرواً حسناً، وعليه فروة دافئة وهي نحو الجبة. وفلان يفري الفريّ إذا أتى بالعجب. ويقال: قد أفريت وما فريت أي أفسدت وما أصلحت.",
+    "mecaz": "تفرّى الليل عن بياض النهار. وتفرّت الأرض بالعيون.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "رجل وجمل فاره. قال: لا أستكين إذا ما أزمة أزمت ... ولا تراني إلا فاره اللبب وقيل: لا توصف الخيل بالفراهة. وغلمان فرهٌ وفرهةٌ. وناقة مفرهة: ولدت فرهاً، وقد أفرهت. وفلان يستفره الدواب. ف ر ولأسلخنّ فروة رأسك. وفي الحديث: \" إن الأمة ألفت فروة رأسها من وراء الجدار",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "تفرّى الليل عن بياض النهار. وتفرّت الأرض بالعيون.",
+        "prototipe_benzerlik": -0.035,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": -0.035,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
+  "muhassas_tasnif": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "mana_tasnif_gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
+  },
+  "kaliplar": {},
+  "kelimeler": []
+}

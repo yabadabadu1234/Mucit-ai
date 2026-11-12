@@ -1230,6 +1230,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "في أرض بني فلان مأسدة، وأكثر المآسد في بلاد اليمن.",
+    "mecaz": "استأسد عليه أي صار كالأسد في جرأته. واستأسد النبت: طال وجن وذهب كل مذهب. قال أبو النجم:\nمستأسد ذبانه في غيطل\nوآسد الكلب بالصيد: أغراه به. وآسد بين الكلاب: هارش بينها. وآسد بين القوم: أفسد.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "في أرض بني فلان مأسدة، وأكثر المآسد في بلاد اليمن.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "استأسد عليه أي صار كالأسد في جرأته. واستأسد النبت: طال وجن وذهب كل مذهب. قال أبو النجم:",
+        "prototipe_benzerlik": 0.293,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "مستأسد ذبانه في غيطل",
+        "prototipe_benzerlik": 0.278,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وآسد الكلب بالصيد: أغراه به. وآسد بين الكلاب: هارش بينها. وآسد بين القوم: أفسد.",
+        "prototipe_benzerlik": 0.121,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.231,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["black.a.01", "living_thing.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السباع",
@@ -1240,22 +1273,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 19,
+      "kume": 21,
       "merkez_kok": "نجل",
       "merkez_mana": "to be covered with vegetation",
-      "boy": 65
+      "boy": 107
     },
     "ince": {
-      "kume": 102,
+      "kume": 123,
       "merkez_kok": "نمر",
       "merkez_mana": "tiger",
-      "boy": 17
+      "boy": 21
     }
   },
   "kaliplar": {

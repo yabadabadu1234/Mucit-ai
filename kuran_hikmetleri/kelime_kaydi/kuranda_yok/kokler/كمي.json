@@ -810,41 +810,52 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "quantitative.a.01",
-    "orta": "adj.all",
+    "ince": "quantitative.a.02",
+    "orta": "adj.pert",
     "ust": "hâl ve vasıf",
-    "dayanak_synset": "quantitative.a.01",
-    "dayanak_tanim": "expressible as a quantity or relating to or susceptible of measurement",
+    "dayanak_synset": "quantitative.a.02",
+    "dayanak_tanim": "relating to the measurement of quantity",
     "synset_sayisi": 2
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "هو كميّ من الكماة وهو الذي كمى نفسه بالسلاح أي سترها. وكمى فلان شهادته: كتمها. وقال:\nكم كاعب منهم قطعت لسانها ... وتركتهاع تكمى الجليّة بالعلل\nاقتضّها بالفجور فهي تغتلّ لزوجها وتريد أن تستر خالها الظاهرة من ذهاب عذرتها بتلفيق العاذير، وقطع لسانها: أنها لا تقدر على الحجّة.",
+    "mecaz": "",
+    "kinaye": "",
+    "mecaz_var": false
+  },
+  "prototip_yayilim_tasnif": {
+    "durum": "prototip veya mecaz kolu yok"
+  },
+  "kolekzifikasyon_kavramlari": ["quantitative.a.01", "quantitative.a.02"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السلاح",
     "bab": "",
-    "kok_gecis": 33.0,
-    "kitapta_gecis": 5.0,
-    "zenginlesme": 3.1
+    "kok_gecis": 30.8,
+    "kitapta_gecis": 4.8,
+    "zenginlesme": 3.21
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "kume": 2,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 466
     },
     "orta": {
-      "kume": 45,
-      "merkez_kok": "متن",
-      "merkez_mana": "Metn: sağlam yer, metin; metîn: sağlam",
-      "boy": 268
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 289,
-      "merkez_kok": "ترس",
-      "merkez_mana": "shield, scutum",
+      "kume": 16,
+      "merkez_kok": "جبذ",
+      "merkez_mana": "",
       "boy": 7
     }
   },

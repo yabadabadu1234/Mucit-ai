@@ -1748,13 +1748,56 @@
     "ince": "collection.n.01",
     "orta": "noun.group",
     "ust": "insan ve toplum",
-    "dayanak_synset": "collection.n.01",
-    "dayanak_tanim": "several things grouped together or considered as a whole",
+    "dayanak_synset": "agglomeration.n.01",
+    "dayanak_tanim": "a jumbled collection or mass",
     "synset_sayisi": 6
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "له كدس من الطعام وأكداس. وقال المتلمس:\nلم تدر بصرى بما آليت من قسم ... ولا دمشق إذا ديس الكداديس\nأراد الأكداس وهو اسم جمع، وكدس الطعام فتكدّس.",
+    "mecaz": "عنده من الدراهم والثياب كدسٌ مكدّس وأكداس مكدّسة. ومررت بأكداس من التراب. وتكردست الخيل وتكدّست: اجتمعت وركب بعضها بعضاً في سيرها. قالت الخنساء:\nوخيل تكدّس مشي الوعو ... ل نازلت بالسيف أبطالها\nوجاءت الخيل كراديس: كردوساً بعد كردوس وهو الجمع العظيم. وكردس القائد الخيل. ورجل ضخم الكراديس وهي رءوس المنكبين والركبتني والوركين والقطع العظام من اللحم. قال:\nضخم الكراديس إذا اللحم ذبل\nوفيما كتب إليّ الأمير الشريف أدام الله مجده:\nتقيك شذا الردى منّا نفوس ... تكدّس دون مغضبة الوليّ\nوحبسته الكوادس: الطّير من العطاس والسعال ونحوه لأنها تكدس عندهم أي تصرع بشرمها. قال أبو ذؤيب:\nفلو أنني كنت السليم لعدتني ... سريعاً ولم تحسبك عنّي الكوادس",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "له كدس من الطعام وأكداس. وقال المتلمس: لم تدر بصرى بما آليت من قسم ... ولا دمشق إذا ديس الكداديس أراد الأكداس وهو اسم جمع، وكدس الطعام فتكدّس.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "عنده من الدراهم والثياب كدسٌ مكدّس وأكداس مكدّسة. ومررت بأكداس من التراب. وتكردست الخيل وتكدّست: اجتمعت وركب بعضها بعضاً في سيرها. قالت الخنساء:",
+        "prototipe_benzerlik": 0.424,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وجاءت الخيل كراديس: كردوساً بعد كردوس وهو الجمع العظيم. وكردس القائد الخيل. ورجل ضخم الكراديس وهي رءوس المنكبين والركبتني والوركين والقطع العظام من اللحم. قال:",
+        "prototipe_benzerlik": 0.409,
+        "halka": "orta"
+      },
+      {
+        "cumle": "ضخم الكراديس إذا اللحم ذبل",
+        "prototipe_benzerlik": 0.508,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وفيما كتب إليّ الأمير الشريف أدام الله مجده:",
+        "prototipe_benzerlik": 0.464,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وحبسته الكوادس: الطّير من العطاس والسعال ونحوه لأنها تكدس عندهم أي تصرع بشرمها. قال أبو ذؤيب:",
+        "prototipe_benzerlik": 0.505,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.462,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["accrue.v.01", "accumulate.v.02", "act.n.02", "agglomeration.n.01", "collection.n.01", "obstruct.v.02"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -1765,21 +1808,21 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
-      "merkez_kok": "درك",
-      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "kume": 8,
+      "merkez_kok": "قبب",
+      "merkez_mana": "canopy, pavilion; dome, cupola",
+      "boy": 604
     },
     "orta": {
-      "kume": 23,
-      "merkez_kok": "وشج",
-      "merkez_mana": "",
-      "boy": 67
+      "kume": 34,
+      "merkez_kok": "نقق",
+      "merkez_mana": "to croak (of frogs)",
+      "boy": 255
     },
     "ince": {
-      "kume": 134,
-      "merkez_kok": "عصب",
-      "merkez_mana": "Asab: sinir, yakınlık; asabe: topluluk",
+      "kume": 235,
+      "merkez_kok": "جمع",
+      "merkez_mana": "Cem': toplamak, bir araya getirmek",
       "boy": 26
     }
   },

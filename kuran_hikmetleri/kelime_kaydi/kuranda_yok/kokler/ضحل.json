@@ -718,16 +718,54 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "shallow.a.01",
-    "orta": "adj.all",
-    "ust": "hâl ve vasıf",
-    "dayanak_synset": "shallow.a.01",
-    "dayanak_tanim": "lacking physical depth; having little spatial extension downward or inward from an outer surface or backward or outward from a center",
+    "ince": "body_of_water.n.01",
+    "orta": "noun.object",
+    "ust": "tabiat",
+    "dayanak_synset": "shoal.n.02",
+    "dayanak_tanim": "a stretch of shallow water",
     "synset_sayisi": 2
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "بلدكم محل، وماؤكم ضحل؛ قليل، ومنه قولهم: كأتان الضحل وهي الصخرة في الماء.\nض ح\nوجئته ضحوة وضحًى وضحاء وضحياً، وضاحيته: أتيته ضحوة، نحو: غاديته وراوحته. وضاحاني رسولك، وضحينا بني فلان، نحو: صبحناهم، وضحّى قومه: غداهم فتضحوا، ودعاهم إلى ضحائه. وضحى إبله: رعاها صحاء. ورأيت ناقتكم تتضحّى بأسفل الجبل. وضح غنم فلان، ويقال: ضحّيت الإبل عن الورد وعشيتها عنه أي رعيتها الضحاء والعشاء حتى ترد وقد شبعت. وضحيت للشمس وضحيت. وأنا أضحي كل نهار. واضحَ يا رجل. ونزلوا بضاحية البلد وضواحيه: بظاهره. وهم ينزلون الضواحي. وهو من قريش البطاح، لا من قريش الضواحي. وبدا ضاحي رأسه وضواحي رأسه. وفعل ذلك ضاحية: علانية. قال:\nفقد جزتكم بنو ذبيان ضاحية ... بما فعلتم ككيل الصاع بالصاع\nوأنشدني بيت شعر ليس فيه حلاوة ولا ضحاء أي ليس بواضح المعنى. وفرس أضحى وجمل هجان ولا يقال: أبيض. وليلة إضحيانة ويوم إضحيان وضحيانة وضحيان. وسراج ضحيان. وقيل للقمر: ما أنت ابن ثمان، قال: قمر إضحيان. وجاء بأضحية سمينة وبضحية وبأضحاة وبأضاحي وضحايا وأضاحي.",
+    "mecaz": "ضحى عن الأمر وعشى عنه إذا تأنى عنه اتأد ولم يعجل إليه. وفي مثل \" ضحِّ يويداً، وعشِّ رويداً \". قال زيد الخيل:\nفلو أن نضراً أصلحت ذات بينهالضحت رويداً عن مطالبها عمرو وأصله: من تضحية الإبل عن الورد. وأضحى عن الأمر: بعد عنه. والقطا تضحي عن الماء. وضحا\nظلة إذا مات، من قولهم: شجرة ضاحية الظل أي لا ظل لها، ومفازة ضاحية الظلال. قال:\nوقحم سيرنا من قور حسمى ... مروت الرعي ضاحية الظلال\nوفي الدعاء: لا أضحى الله تعالى لنا ظلك.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "بلدكم محل، وماؤكم ضحل؛ قليل، ومنه قولهم: كأتان الضحل وهي الصخرة في الماء. ض ح وجئته ضحوة وضحًى وضحاء وضحياً، وضاحيته: أتيته ضحوة، نحو: غاديته وراوحته. وضاحاني رسولك، وضحينا بني فلان، نحو: صبحناهم، وضحّى قومه: غداهم فتضحوا، ودعاهم إلى ضحائه. وضحى إبله: رعاها صح",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "ضحى عن الأمر وعشى عنه إذا تأنى عنه اتأد ولم يعجل إليه. وفي مثل \" ضحِّ يويداً، وعشِّ رويداً \". قال زيد الخيل:",
+        "prototipe_benzerlik": 0.347,
+        "halka": "orta"
+      },
+      {
+        "cumle": "فلو أن نضراً أصلحت ذات بينهالضحت رويداً عن مطالبها عمرو وأصله: من تضحية الإبل عن الورد. وأضحى عن الأمر: بعد عنه. والقطا تضحي عن الماء. وضحا",
+        "prototipe_benzerlik": 0.945,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "ظلة إذا مات، من قولهم: شجرة ضاحية الظل أي لا ظل لها، ومفازة ضاحية الظلال. قال:",
+        "prototipe_benzerlik": 0.241,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وفي الدعاء: لا أضحى الله تعالى لنا ظلك.",
+        "prototipe_benzerlik": 0.346,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.47,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["shallow.a.01", "shoal.n.02"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -738,22 +776,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 7,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 331
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 30,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 103
+      "kume": 35,
+      "merkez_kok": "نقع",
+      "merkez_mana": "Nak': su birikintisi; nakî': ıslak",
+      "boy": 47
     },
     "ince": {
-      "kume": 202,
-      "merkez_kok": "جرز",
-      "merkez_mana": "Cerz: kuraklık, kurumuş toprak",
-      "boy": 15
+      "kume": 237,
+      "merkez_kok": "رطط",
+      "merkez_mana": "",
+      "boy": 29
     }
   },
   "kaliplar": {

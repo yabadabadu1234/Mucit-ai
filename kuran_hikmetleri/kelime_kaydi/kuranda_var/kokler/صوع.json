@@ -784,6 +784,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "عنده أصوع من التمر وأصواع وصيعان. ورأيت التمر يصاع: يكال بالصاع.",
+    "mecaz": "الراعي يصوع إبله، والكميّ يصوع أقرانه: يحوذهم، كما يصوع الكائل المكيل. ومنه: انصاع القوم إذا مروا سراعاً. والصبيان يلعبون بالكرة في صاعٍ من الأرض وهو مكان مطمئن. قال المسيب:\nمرحت يداها للنجاء كأنما ... تكرو بكفّي لاعبٍ في صاع\nوضربه في صاع جؤجؤه، وفي صاع صدره وهو وسطه. وصوع الطارق موضعاً للطرق: هيأه وسواه. ويقال: اتخذ لصوفك صاعة.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "عنده أصوع من التمر وأصواع وصيعان. ورأيت التمر يصاع: يكال بالصاع.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "الراعي يصوع إبله، والكميّ يصوع أقرانه: يحوذهم، كما يصوع الكائل المكيل. ومنه: انصاع القوم إذا مروا سراعاً. والصبيان يلعبون بالكرة في صاعٍ من الأرض وهو مكان مطمئن. قال المسيب:",
+        "prototipe_benzerlik": 0.524,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وضربه في صاع جؤجؤه، وفي صاع صدره وهو وسطه. وصوع الطارق موضعاً للطرق: هيأه وسواه. ويقال: اتخذ لصوفك صاعة.",
+        "prototipe_benzerlik": 0.551,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.537,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النخل",
@@ -794,22 +822,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "kume": 6,
+      "merkez_kok": "درك",
+      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
+      "boy": 1364
     },
     "orta": {
-      "kume": 10,
-      "merkez_kok": "ذعن",
-      "merkez_mana": "Za'n: boyun eğmek, kabul etmek",
-      "boy": 183
+      "kume": 20,
+      "merkez_kok": "لحد",
+      "merkez_mana": "Lahd: mezar çukuru; lehd: meyil, eğilme",
+      "boy": 187
     },
     "ince": {
-      "kume": 50,
-      "merkez_kok": "كرم",
-      "merkez_mana": "Kerem: cömertlik, şeref; kerîm: cömert",
-      "boy": 32
+      "kume": 116,
+      "merkez_kok": "تبر",
+      "merkez_mana": "Tebr: yok etmek, helâk; tebâr: helâk",
+      "boy": 22
     }
   },
   "kaliplar": {

@@ -1238,32 +1238,67 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "شيء نقيٌّ. ونقّيت الثوب وأنقيته حتى نقي نقاءً. وغسل حتى ظهر نقاؤه. وانتقيت العظم: أخرجت نقيه. وأنقى البعير. وإبل منقيات. قال:\nلا يشتكين عملاً ما أنقين\nوحللنا في نقاً من الأنقياء وهي الكثبان.",
+    "mecaz": "انتقيت أجودها. وأنقى البرّ: سمن وجرى فيه الدقيق.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "شيء نقيٌّ. ونقّيت الثوب وأنقيته حتى نقي نقاءً. وغسل حتى ظهر نقاؤه. وانتقيت العظم: أخرجت نقيه. وأنقى البعير. وإبل منقيات. قال: لا يشتكين عملاً ما أنقين وحللنا في نقاً من الأنقياء وهي الكثبان.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "انتقيت أجودها. وأنقى البرّ: سمن وجرى فيه الدقيق.",
+        "prototipe_benzerlik": 0.312,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.312,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "act.n.02",
+    "choose.v.01",
+    "clean.v.10",
+    "pick.v.01",
+    "polish.v.02",
+    "process.n.02",
+    "purify.v.01",
+    "refine.v.04",
+    "refining.n.01",
+    "scavenge.v.04",
+    "selected.a.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
     "bab": "الرمال منبتها وغير منبتها",
     "kok_gecis": 31.4,
     "kitapta_gecis": 9.7,
-    "zenginlesme": 2.48
+    "zenginlesme": 2.49
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 18,
-      "merkez_kok": "همم",
-      "merkez_mana": "Hemm: istek, gayret; himmet",
-      "boy": 116
+      "kume": 15,
+      "merkez_kok": "زور",
+      "merkez_mana": "Zûr: yalan, sahtelik",
+      "boy": 133
     },
     "ince": {
-      "kume": 99,
+      "kume": 88,
       "merkez_kok": "هذب",
       "merkez_mana": "to discipline",
-      "boy": 19
+      "boy": 10
     }
   },
   "kaliplar": {

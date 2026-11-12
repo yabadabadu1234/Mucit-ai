@@ -793,6 +793,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "ناقة خادج: ألقت ولدها قبل الوقت وإن تم خلقه، ومخدج جاءت به ناقص الخلق وإن كان لوقته، ومخداج ذلك عادتها، وهي ذات خداج، وولد مخدج وخديج.",
+    "mecaz": "خدج الرجل فهو خادج إذا نقص عضو منه، وأخدجه الله فهو مخدج، وكان ذو الثدية مخدج اليد. وأخدج صلاته: نقص بعض أركانها، وصلاته مخدجة وخادجة\nوخداج وصفاً بالمصدر. وأخد أمره لم يحكمه، وأنضجه أحكمه، مستعار من إخداج الناقة وإنضاجها ولدها. تقول: أنضج رأيك إنضاجاً، ولا تخدجه إخداجاً؛ وأخدجت الصيفة: قل مطرها، وكان نقصان في شيء يستعار له الخداج.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "ناقة خادج: ألقت ولدها قبل الوقت وإن تم خلقه، ومخدج جاءت به ناقص الخلق وإن كان لوقته، ومخداج ذلك عادتها، وهي ذات خداج، وولد مخدج وخديج.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "خدج الرجل فهو خادج إذا نقص عضو منه، وأخدجه الله فهو مخدج، وكان ذو الثدية مخدج اليد. وأخدج صلاته: نقص بعض أركانها، وصلاته مخدجة وخادجة",
+        "prototipe_benzerlik": 0.545,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وخداج وصفاً بالمصدر. وأخد أمره لم يحكمه، وأنضجه أحكمه، مستعار من إخداج الناقة وإنضاجها ولدها. تقول: أنضج رأيك إنضاجاً، ولا تخدجه إخداجاً؛ وأخدجت الصيفة: قل مطرها، وكان نقصان في شيء يستعار له الخداج.",
+        "prototipe_benzerlik": 0.677,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.611,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الإبل",
@@ -803,19 +831,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
-      "merkez_kok": "حنج",
-      "merkez_mana": "",
-      "boy": 426
-    },
-    "orta": {
       "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 261
+      "boy": 466
+    },
+    "orta": {
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 17,
+      "kume": 23,
       "merkez_kok": "خدج",
       "merkez_mana": "feminine singular of خَدِيج (ḵadīj)",
       "boy": 25

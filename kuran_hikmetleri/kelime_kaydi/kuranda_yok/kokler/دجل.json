@@ -1116,16 +1116,39 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "person.n.01",
+    "ince": "whole.n.02",
     "orta": "noun.person",
     "ust": "insan ve toplum",
-    "dayanak_synset": "quack.n.01",
-    "dayanak_tanim": "an untrained person who pretends to be a physician and who dispenses medical advice",
+    "dayanak_synset": "mountebank.n.01",
+    "dayanak_tanim": "a flamboyant deceiver; one who attracts customers with tricks or jokes",
     "synset_sayisi": 2
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "عندي رجل ورجيل، أنهما دجلة ودجيل، وهو نهر صغير يأخذ من دجلة.",
+    "mecaz": "رجل دجال: كذاب شبه بالدجال. ودجل فلان إذا لبّس وموّه وفعل فعل الدجّال، كما يقال طفّل إذا فعل فعل طفيل، ومنه: سيف مدجل: مموه بالذهب. وبعير مدجل: مموّه بالذهب. وبعير مدجّل: مطليّ بالقطران. ورفقة دجالة: عظيمة كثيرة الزحمة، شبهت بالدجّال ومن معه وكثرتهم.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "عندي رجل ورجيل، أنهما دجلة ودجيل، وهو نهر صغير يأخذ من دجلة.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "رجل دجال: كذاب شبه بالدجال. ودجل فلان إذا لبّس وموّه وفعل فعل الدجّال، كما يقال طفّل إذا فعل فعل طفيل، ومنه: سيف مدجل: مموه بالذهب. وبعير مدجل: مموّه بالذهب. وبعير مدجّل: مطليّ بالقطران. ورفقة دجالة: عظيمة كثيرة الزحمة، شبهت بالدجّال ومن معه وكثرتهم.",
+        "prototipe_benzerlik": 0.12,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.12,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["living_thing.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الإبل",
@@ -1137,21 +1160,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 509
     },
     "orta": {
-      "kume": 10,
-      "merkez_kok": "ذعن",
-      "merkez_mana": "Za'n: boyun eğmek, kabul etmek",
-      "boy": 183
+      "kume": 7,
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 259
     },
     "ince": {
-      "kume": 54,
-      "merkez_kok": "طرد",
-      "merkez_mana": "Tard: kovmak, uzaklaştırmak",
-      "boy": 35
+      "kume": 40,
+      "merkez_kok": "ءثم",
+      "merkez_mana": "İsm: günah, suç; âsim: günahkâr",
+      "boy": 46
     }
   },
   "kaliplar": {

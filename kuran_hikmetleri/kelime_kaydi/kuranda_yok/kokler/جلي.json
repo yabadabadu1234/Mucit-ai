@@ -792,6 +792,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "جليت فلانة على زوجها أحسن جلوة، فاجتلاها وتجلاّها، وأعطى العروس جلوتها وجلوتها وهي ما يعطيها عند الزفاف. ويقال: ما جلوتك؟ فتقول: وصيف. ونظرت إلى مجاليها. وجلا الصقل السيف والمرآة جلاء. ومرآة مجلوة. وسيفي عند الجلاء. وهذا دواء يجلو البصر. وجلا لي الشيء وانجلى وتجلّى، وجلاّه لي فلان. وجلوا عن بلادهم جلاءً. ووقع عليهم الجلاء. وأجليناهم عنها وجلوناهم. ويقال للقوم إذا كانوا مقبلين على شيء محدقين به ثم انكشفوا عنه: قد أفرجوا عنه وأجلوا عنه. يقال: أجلوا عن قتيل. ورجل أجلى الجبين، وبه جلاً.",
+    "mecaz": "هو ابن جلا: للرجل المشهور أي ابن رجل قد وضح أمره وشهر. وما جلاؤك؟ أي ما اسمك. وما أقمت عنده إلا جلاء يوم واحد أي\nبياضه. وانجلت عنه الهموم. وقد أجلوا الهموم بكذا. وجلا الله عنك المرض. وهذا أمر جلي غير خفيّ. وأخبرني عن جلية الأمر وهي ما ظهر من حقيقته.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "جليت فلانة على زوجها أحسن جلوة، فاجتلاها وتجلاّها، وأعطى العروس جلوتها وجلوتها وهي ما يعطيها عند الزفاف. ويقال: ما جلوتك؟ فتقول: وصيف. ونظرت إلى مجاليها. وجلا الصقل السيف والمرآة جلاء. ومرآة مجلوة. وسيفي عند الجلاء. وهذا دواء يجلو البصر. وجلا لي الشيء وانجلى و",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "هو ابن جلا: للرجل المشهور أي ابن رجل قد وضح أمره وشهر. وما جلاؤك؟ أي ما اسمك. وما أقمت عنده إلا جلاء يوم واحد أي",
+        "prototipe_benzerlik": 0.154,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "بياضه. وانجلت عنه الهموم. وقد أجلوا الهموم بكذا. وجلا الله عنك المرض. وهذا أمر جلي غير خفيّ. وأخبرني عن جلية الأمر وهي ما ظهر من حقيقته.",
+        "prototipe_benzerlik": 0.062,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.108,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["clearness.n.02", "noticed.a.01", "polish.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النساء",
@@ -802,19 +830,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 7,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 331
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 31,
+      "kume": 36,
       "merkez_kok": "سكب",
       "merkez_mana": "Sakb: dökmek, boşaltmak",
-      "boy": 76
+      "boy": 101
     },
     "ince": {
-      "kume": 208,
+      "kume": 240,
       "merkez_kok": "ذوي",
       "merkez_mana": "nominative plural of ذُو (ḏū)",
       "boy": 13

@@ -1,0 +1,63 @@
+{
+  "kok": "كهـف",
+  "sinif": "reddedildi",
+  "turkce_fiil": null,
+  "mustaklar": {},
+  "reddedilen": [
+    ["kök", "كهـف", "üç harfli değil"]
+  ],
+  "sozlukler": {},
+  "kuran_gecisleri": 0,
+  "kuranda_var": false,
+  "sema": {
+    "sema": "graf-ic-graf",
+    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
+    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
+    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
+    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
+    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
+  },
+  "tasnif": {
+    "fasil": "كه",
+    "harf": "ك",
+    "mahrec": "lehaviyye",
+    "bolge": "dil"
+  },
+  "mana_tasnif": {
+    "durum": "Arabic WordNet v2 kaydı yok"
+  },
+  "ses_mana_tasnif": {
+    "durum": "Cebel mu'cemlerinde kök yok"
+  },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "لجأوا إلى كهف وإلى كهوف وهي الغيران. وتكهّف الجبل: صارت فيه كهوف.",
+    "mecaz": "فلان كهف قومه: ملجؤهم، وتقول: أولئك معاقلهم وكهوفهم، وإليه يأوي ملهوفهم. وناقة ذات أرداف وكهوف وهي ما تراكب في ترائبها وجنبيها من كراديس اللحم والشحم. قال:\nحسّر منه الخمس عن كهوف ... مثل أعالي الظعن الوقوف",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "لجأوا إلى كهف وإلى كهوف وهي الغيران. وتكهّف الجبل: صارت فيه كهوف.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "فلان كهف قومه: ملجؤهم، وتقول: أولئك معاقلهم وكهوفهم، وإليه يأوي ملهوفهم. وناقة ذات أرداف وكهوف وهي ما تراكب في ترائبها وجنبيها من كراديس اللحم والشحم. قال:",
+        "prototipe_benzerlik": 0.077,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.077,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
+  "muhassas_tasnif": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "mana_tasnif_gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
+  },
+  "kaliplar": {},
+  "kelimeler": []
+}

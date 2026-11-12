@@ -1111,6 +1111,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "أبدى ناجذه إذا بالغ في ضحكه أو غضبه، وعن النبيّ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ: \" أنه ضحك حتى بدت نواجذه \".",
+    "mecaz": "أبدت الحرب ناجذيها. قال بشر:\nإذا ما الحرب أبدت ناجذيها ... غداة الرّوع والتقت الجموع\nوعضّ على ناجذه إذا بلغ أشدّه استحكم. وعض في العلم وغيره بناجذه إذا أتقنه، ومنه: جّذته التجارب: أحكمته. قال:\nأخو خمسين مجتمع أشدّى ... ونجّذني مداورة الشؤون",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "أبدى ناجذه إذا بالغ في ضحكه أو غضبه، وعن النبيّ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ: \" أنه ضحك حتى بدت نواجذه \".",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "أبدت الحرب ناجذيها. قال بشر:",
+        "prototipe_benzerlik": 0.334,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وعضّ على ناجذه إذا بلغ أشدّه استحكم. وعض في العلم وغيره بناجذه إذا أتقنه، ومنه: جّذته التجارب: أحكمته. قال:",
+        "prototipe_benzerlik": 0.594,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.464,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "خلق الإنسان",
@@ -1122,18 +1150,18 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 40,
+      "kume": 41,
       "merkez_kok": "بلع",
       "merkez_mana": "Bel': yutmak; bel'a: yutkunma",
-      "boy": 85
+      "boy": 61
     },
     "ince": {
-      "kume": 260,
+      "kume": 262,
       "merkez_kok": "بلع",
       "merkez_mana": "Bel': yutmak; bel'a: yutkunma",
       "boy": 17

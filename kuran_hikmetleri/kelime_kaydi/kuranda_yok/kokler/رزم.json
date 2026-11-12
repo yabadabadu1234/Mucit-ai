@@ -806,13 +806,41 @@
     "ince": "collection.n.01",
     "orta": "noun.group",
     "ust": "insan ve toplum",
-    "dayanak_synset": "pack.n.02",
-    "dayanak_tanim": "a complete collection of similar things",
+    "dayanak_synset": "package.n.01",
+    "dayanak_tanim": "a collection of things wrapped or boxed together",
     "synset_sayisi": 3
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "عنده رزمة من الثياب وهي ما شد منها في ثوب واحد. وجاؤا بالسياط رزماً، وبالعصي حزماً، وقال رافع بن هريم اليربوعيّ:\nفينا بقيات من الخيل صرم ... سبعة آلاف وأدراع رزم\nورزمت ثيابي ترزيماً، وحزمتها تحزيماً؛ وهي من رزمت الشيء إذا جمعته رزماً. وفلان يرازم بين المطاعم: يخالط بينها فيأكل خبزاً مع لحم وأقطاً مع تمر: وقيل هو أن يناوب بينها فيتناول مرة لحماً ومرة لبناً ومرة حاراً ومرة بارداً. والإبل ترازم بن الحمض والخلة: تناوب بينهما. وقال الراعي:\nكلي الحمض بعد المقحمين ورازمي ... إلى قابل ثم اعذري بعد قابل\nبعد الذين أقحمتهم السنة إلى الأمصار. و\" لا أفعل ذلك ما أرزمت أم حائل \": ما حنت. ولها رزمة شديدة. وفي مثل \" رزمة ولا درة \" لمن يمنّى ولا يفعل. وبعير رازم رازح: شديد الإعياء. وهبت أم مرزم وهي الشمال لأنها تأتي بنوء المرزم ومعه المطر والبرد. قال صخر الغيّ:\nكأني أراه بالحلاءة شاتياً ... تقشّر أعلى أنفه أم مرزم\nوقال آخر:\nأعددت للمرزم والذراعين ... فرواً عكاظياً وأيّ خفّين",
+    "mecaz": "أرزم الرعد، وأرزمت الريح، وسمعت رزمة الرعد والريح. وسماء رزمة ومرزمة، وأتاك خير له رغاء وخير له رزمة أي خير كثير. وقال جرير:\nواللؤم قد خطم البعيث وأرزمت ... أم الفرزدق عند شرّ حوار\nأراد بالحوار الفرزدق. وفي الحيدث \" إذا أكلتم فرازموا \" أي ناوبوا بين الأكل والحمد كما ترازمون بين الطعامين، كما جاء: أكل وحمد خير من أكل وصمت.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "عنده رزمة من الثياب وهي ما شد منها في ثوب واحد. وجاؤا بالسياط رزماً، وبالعصي حزماً، وقال رافع بن هريم اليربوعيّ: فينا بقيات من الخيل صرم ... سبعة آلاف وأدراع رزم ورزمت ثيابي ترزيماً، وحزمتها تحزيماً؛ وهي من رزمت الشيء إذا جمعته رزماً. وفلان يرازم بين المطاعم: ",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "أرزم الرعد، وأرزمت الريح، وسمعت رزمة الرعد والريح. وسماء رزمة ومرزمة، وأتاك خير له رغاء وخير له رزمة أي خير كثير. وقال جرير:",
+        "prototipe_benzerlik": 0.266,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "أراد بالحوار الفرزدق. وفي الحيدث \" إذا أكلتم فرازموا \" أي ناوبوا بين الأكل والحمد كما ترازمون بين الطعامين، كما جاء: أكل وحمد خير من أكل وصمت.",
+        "prototipe_benzerlik": 0.589,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.427,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["artifact.n.01", "pack.n.02", "package.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السباع",
@@ -823,22 +851,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 23,
+      "kume": 18,
       "merkez_kok": "وشج",
       "merkez_mana": "",
-      "boy": 67
+      "boy": 63
     },
     "ince": {
-      "kume": 134,
+      "kume": 106,
       "merkez_kok": "عصب",
       "merkez_mana": "Asab: sinir, yakınlık; asabe: topluluk",
-      "boy": 26
+      "boy": 22
     }
   },
   "kaliplar": {

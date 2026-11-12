@@ -1157,11 +1157,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "substance.n.07",
-    "orta": "noun.substance",
-    "ust": "tabiat",
-    "dayanak_synset": "denaturant.n.01",
-    "dayanak_tanim": "any substance that serves as a denaturing agent",
+    "ince": "injure.v.01",
+    "orta": "verb.body",
+    "ust": "canlı ve beden",
+    "dayanak_synset": "maim.v.01",
+    "dayanak_tanim": "injure or wound seriously and leave permanent disfiguration or mutilation",
     "synset_sayisi": 4
   },
   "ses_mana_tasnif": {
@@ -1172,6 +1172,29 @@
     "fasil_ozeti": "° معنى الفصل المعجمي (مش) : النفاذ بانتشار من أثناء الشيء كما يتمثل في رشح الماء من جَبَل الركية أي حَجَرها الذي في قاعها، وكذلك امتشاش الودك من مسامّ مُشاش العظم - في (مشش)، وكمفارقة المكان بالمشي وانتشار النسل - في (مشى)، وكخيوط أمشاج الغزول التي تمتد لتتداخل مع غيرها - في (مشج).",
     "tam_metin": "{وَلَوْ نَشَاءُ لَمَسَخْنَاهُمْ عَلَى مَكَانَتِهِمْ} [يس: 67]\n\"المَسِيخ من الطعام: الذي لا مِلْح له ولا طَعْم ولا لَوْن، ومن الفاكهة واللحم الذي لا طعم له. وفرس مَمْسُوخ: قليلُ لحم الكَفَل. ومَسَخْتُ الناقة (فتح): هزلتها وأدبرتها من التعب والاستعمال. وأمْسَخَ الورمُ: انْحَلَّ \".\n° المعنى المحوري\nاختلالُ (= انتقاص) ما به قِوام هيأة الشيء أو طبيعته منه - كخُلُوّ الطعام من الملح الخ، وكذلك لحم الكفل فيلصق جلده بعظمه فيفقد هيئته، وكذهاب الشحم من الجسم. وذهاب الانتفاخ من الورم محمول\n(4/2077)\nعلى هذا. ومنه نحو \"مَسَخَه الله قردًا: حَوّل خَلْقه إلى صورته وهو مَسْخ - بالفتح، ومَسيخ: مشوه الخلقة \" {وَلَوْ نَشَاءُ لَمَسَخْنَاهُمْ} لأَزْمنّاهم وأقعدناهم في مكانهم فلا يستطيعون تصرفا [بحر 7/ 329]، ... [وانظر قر 15/ 50]."
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "مسخهم الله مسخاً، وما نسخه، بل مسخه. وفلان مسخٌ من المسوخ. وشيء مسيخ: لا طعم له. وطعام مسيخ: لا ملح فيه. وفي يده ماسخيّة: قوس نسبت إلى ماسخة وهو اسم قوّاسٍ، والماسخيّ: القوّاس. قال النابغة:\nكقوس الماسخيّ يرنّ فيها ... من الشّرعيّ مربوع متين",
+    "mecaz": "مسخت الناقة. ورجل مسيخ: لا ملاحة له. قال:\nمسيخ مليخ كلحم الحوا ... ر لا أنت حلو ولا أنت مر",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Cebel mihverî mana",
+    "prototip": "اختلالُ (= انتقاص) ما به قِوام هيأة الشيء أو طبيعته منه - كخُلُوّ الطعام من الملح الخ، وكذلك لحم الكفل فيلصق جلده بعظمه فيفقد هيئته، وكذهاب الشحم من الجسم. وذهاب الانتفاخ من الورم محمول (4/2077) على هذا. ومنه نحو \"مَسَخَه الله قردًا: حَوّل خَلْقه إلى صورته وهو",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "مسخت الناقة. ورجل مسيخ: لا ملاحة له. قال:",
+        "prototipe_benzerlik": 0.542,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.542,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["denaturant.n.01", "happening.n.01", "maim.v.01", "transform.v.03"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السلاح",
@@ -1183,21 +1206,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "merkez_kok": "قبب",
+      "merkez_mana": "canopy, pavilion; dome, cupola",
+      "boy": 604
     },
     "orta": {
-      "kume": 36,
-      "merkez_kok": "نجس",
-      "merkez_mana": "Nicis: pislik, necis",
-      "boy": 123
+      "kume": 32,
+      "merkez_kok": "دثر",
+      "merkez_mana": "Tedsîr: örtmek, bürümek; desr: örtü",
+      "boy": 148
     },
     "ince": {
-      "kume": 228,
-      "merkez_kok": "خرم",
-      "merkez_mana": "to make a hole by digging",
-      "boy": 23
+      "kume": 209,
+      "merkez_kok": "قبب",
+      "merkez_mana": "canopy, pavilion; dome, cupola",
+      "boy": 35
     }
   },
   "kaliplar": {

@@ -767,13 +767,56 @@
     "ince": "whole.n.02",
     "orta": "noun.artifact",
     "ust": "cisim ve eşya",
-    "dayanak_synset": "bugle.n.01",
-    "dayanak_tanim": "a brass instrument without valves; used for military calls and fanfares",
+    "dayanak_synset": "french_horn.n.01",
+    "dayanak_tanim": "a brass musical instrument consisting of a conical tube that is coiled into a spiral and played by means of valves",
     "synset_sayisi": 6
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "أصابته بائقة وبوائق. وهو كثير البوائق أي الشرور. و\" لا يدخل الجنة من لا يأمن جاره بوائقه \". وفلان يعمل البوائق وهي عظام الذنوب.",
+    "mecaz": "فلان ينفخ في البوق إذا نطق بالكذب والباطل وما لا طائل تحته. وجاء بالبوق، ونطق بوقاً أي باطلاً. قال حسان:\nإلا الذي نطقوا بوقاً ولم يكن\nوتبوق فلان: تكذب. قال رويشد:\nفمن قائل يأتي بمثل مقالتي ... من القول قول صادق وتبوق\nوتبوق الوباء في الماشية: فشا فيها وانتشر كأنما نفخ فيها. وقال أبو النجم:\nإذا زفى أبواقه ترسلا\nأي رفع أصواته.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "أصابته بائقة وبوائق. وهو كثير البوائق أي الشرور. و\" لا يدخل الجنة من لا يأمن جاره بوائقه \". وفلان يعمل البوائق وهي عظام الذنوب.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "فلان ينفخ في البوق إذا نطق بالكذب والباطل وما لا طائل تحته. وجاء بالبوق، ونطق بوقاً أي باطلاً. قال حسان:",
+        "prototipe_benzerlik": 0.511,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "إلا الذي نطقوا بوقاً ولم يكن",
+        "prototipe_benzerlik": 0.349,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وتبوق فلان: تكذب. قال رويشد:",
+        "prototipe_benzerlik": 0.486,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وتبوق الوباء في الماشية: فشا فيها وانتشر كأنما نفخ فيها. وقال أبو النجم:",
+        "prototipe_benzerlik": 0.451,
+        "halka": "orta"
+      },
+      {
+        "cumle": "إذا زفى أبواقه ترسلا",
+        "prototipe_benzerlik": 0.464,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.452,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["artifact.n.01", "bunch.n.03", "olfactory_property.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -784,22 +827,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "kume": 6,
+      "merkez_kok": "درك",
+      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
+      "boy": 1364
     },
     "orta": {
-      "kume": 45,
-      "merkez_kok": "متن",
-      "merkez_mana": "Metn: sağlam yer, metin; metîn: sağlam",
-      "boy": 268
+      "kume": 24,
+      "merkez_kok": "زين",
+      "merkez_mana": "Zîne: süs, güzellik; zeyn: güzelleştirmek",
+      "boy": 123
     },
     "ince": {
-      "kume": 300,
-      "merkez_kok": "ثوب",
-      "merkez_mana": "Sevb: elbise; sevâb: karşılık, mükâfat",
-      "boy": 23
+      "kume": 141,
+      "merkez_kok": "متع",
+      "merkez_mana": "Metâ': yararlanma, geçici nimet",
+      "boy": 26
     }
   },
   "kaliplar": {

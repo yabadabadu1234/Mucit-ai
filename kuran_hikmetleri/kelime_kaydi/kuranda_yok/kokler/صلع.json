@@ -747,6 +747,49 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "رأس أصلع وصليع. قال عمرو ابن معد يكرب:\nوسوق كتيبة دلفت لأخرى ... كأن زهاءها رأس صليع هامة صلعاء، وهام صلع. وصكه على صلعته.",
+    "mecaz": "نزلوا بالصلعاء: بالصحراء الخالية. قال عمارة بن عقيل:\nترى الضيف بالصلعاء تغسق عينه ... من الجوع حتى تحسب الضيف أرمداً\nورملة صلعاء: بلا شجر. وشجرة صلعاء. قال الشماخ:\nإن تمس في عرفط صلع جماجمه ... من الأسالق عاري الشوك مجرود\nأكلت أغصانها. وجاؤا بسوأة صلعاء: مكشوفة وحلت بهم صلعاء صيلم. قال:\nفلما أحلوني بصلعاء صليم ... بإحدى زبى ذي اللبدتين أبي الشبل\nويوم أصلع: شديد الحر. قال:\nيا قردة خشيت على أظفارها ... حر الظهيرة تحت يوم أصلع\nوصلعت الشمس: بزغت. وصلع رأسه: حلقه.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "رأس أصلع وصليع. قال عمرو ابن معد يكرب: وسوق كتيبة دلفت لأخرى ... كأن زهاءها رأس صليع هامة صلعاء، وهام صلع. وصكه على صلعته.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "نزلوا بالصلعاء: بالصحراء الخالية. قال عمارة بن عقيل:",
+        "prototipe_benzerlik": 0.855,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "ورملة صلعاء: بلا شجر. وشجرة صلعاء. قال الشماخ:",
+        "prototipe_benzerlik": 0.438,
+        "halka": "orta"
+      },
+      {
+        "cumle": "أكلت أغصانها. وجاؤا بسوأة صلعاء: مكشوفة وحلت بهم صلعاء صيلم. قال:",
+        "prototipe_benzerlik": 0.559,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "ويوم أصلع: شديد الحر. قال:",
+        "prototipe_benzerlik": 0.869,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وصلعت الشمس: بزغت. وصلع رأسه: حلقه.",
+        "prototipe_benzerlik": 0.509,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.646,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "خلق الإنسان",
@@ -757,22 +800,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "kume": 2,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 466
     },
     "orta": {
-      "kume": 42,
-      "merkez_kok": "وبر",
-      "merkez_mana": "Vaber: yün, deve tüyü; vebr: tavşan",
-      "boy": 84
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 266,
-      "merkez_kok": "صلع",
-      "merkez_mana": "bald pate, bald head",
-      "boy": 9
+      "kume": 18,
+      "merkez_kok": "جهو",
+      "merkez_mana": "",
+      "boy": 7
     }
   },
   "kaliplar": {

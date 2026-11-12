@@ -1295,6 +1295,49 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "نضح عليه الماء، ونضح البيت بالماء نضحاً وهو الرّشّ. ونضح جلده بالعرق.",
+    "mecaz": "قد نضح الشجر: تفطّر. ورأيت نضح الرمّان وغيره. قال أبو طالب:\nبورك الميّت الغريب كما بو ... رك نضح الرمّان والزّيتون\nونضح غلّته بالماء: بلّها، ومنه: النضيح والنّضّح: للحوض لبلّه عطش الإبل وكذلك البعير الناضح، ونواضح يثرب، ونضح أديم الودّ بينهم. قال الكميت:\nنضحت أديم الودّ بيني وبينهم ... بآصرة الأرحام لو يتبلّل\nونضحناهم بالنّبل. فرّقناهم كما يفرّق الماء بالرّش، ومنه: نضح عن نفسه: دفع عنها.\nن ض خ عين نضّاخة: فوّارة بالماء، وغيث نضاخ: غزير، وأرسلت السّماء نضخاً، وأصابتهم نضخة من مطر. قال حكيم بن مصعب:\nتشكّى إليّ الكلب شدّة جوعه ... وبي مثل ما بالكلب أو بي أكثر\nفقلت لعلّ الله يرسل نضخة ... فيضحى كلانا قائماً يتذمّر\nوأنشد أبو عمرو:\nلا يفرحون إذا ما نضخةٌ وقعت ... وهم كرام إذا اشتد الملازيب\nوتقول: طلبنا رضخه، فأصبنا نضخه.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "نضح عليه الماء، ونضح البيت بالماء نضحاً وهو الرّشّ. ونضح جلده بالعرق.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "قد نضح الشجر: تفطّر. ورأيت نضح الرمّان وغيره. قال أبو طالب:",
+        "prototipe_benzerlik": 0.193,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "ونضح غلّته بالماء: بلّها، ومنه: النضيح والنّضّح: للحوض لبلّه عطش الإبل وكذلك البعير الناضح، ونواضح يثرب، ونضح أديم الودّ بينهم. قال الكميت:",
+        "prototipe_benzerlik": 0.356,
+        "halka": "orta"
+      },
+      {
+        "cumle": "ونضحناهم بالنّبل. فرّقناهم كما يفرّق الماء بالرّش، ومنه: نضح عن نفسه: دفع عنها.",
+        "prototipe_benzerlik": 0.624,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "ن ض خ عين نضّاخة: فوّارة بالماء، وغيث نضاخ: غزير، وأرسلت السّماء نضخاً، وأصابتهم نضخة من مطر. قال حكيم بن مصعب:",
+        "prototipe_benzerlik": 0.647,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وتقول: طلبنا رضخه، فأصبنا نضخه.",
+        "prototipe_benzerlik": 0.308,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.426,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["scatter.v.03"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -1305,22 +1348,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 7,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 331
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 31,
+      "kume": 36,
       "merkez_kok": "سكب",
       "merkez_mana": "Sakb: dökmek, boşaltmak",
-      "boy": 76
+      "boy": 101
     },
     "ince": {
-      "kume": 206,
+      "kume": 239,
       "merkez_kok": "ذرف",
       "merkez_mana": "to flow (tears)",
-      "boy": 26
+      "boy": 30
     }
   },
   "kaliplar": {

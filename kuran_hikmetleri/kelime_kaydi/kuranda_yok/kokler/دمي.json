@@ -1156,13 +1156,46 @@
     "ince": "whole.n.02",
     "orta": "noun.artifact",
     "ust": "cisim ve eşya",
-    "dayanak_synset": "doll.n.01",
-    "dayanak_tanim": "a small replica of a person; used as a toy",
+    "dayanak_synset": "plaything.n.01",
+    "dayanak_tanim": "an artifact designed to be played with",
     "synset_sayisi": 7
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "دميت يده، وأدميتها ودمّيتها. وشجة دامية. وإذا ترشّش على الرجل دم قالوا: دامي خير إن شاء الله تعالى. واستدمى الرجل: طأطأ رأسه يقطر منه الدم. وجارية كدمية القصر، وجوارٍ كالدمى وهي الصورة المنقشة وفيها حمرة كالدم.",
+    "mecaz": "لا يلائم دمي دمك. وكميت مدمى: شديد الحمرة كأنما دمّي. قال طفيل:\nوكمتاً مدماة كان متونها ... جرى فوقها واستشعرت لون مذهب\nوسهم مدمًّى، وسهم أسود مبارك: رميَ به الصيد مراراً حتى اسودّ من الدم. ومنه تركتهم في الدّامياء\nأي في البركة والنعمة. واستدم من غريمك ما دمّى لك أي خذ منه ما طفّ لك. وفلان دامي الشفة: حريص على الطلب. ودميَ فوه من الحرص، كما يقال: ضبّ فوه، وضبت لثاته.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "دميت يده، وأدميتها ودمّيتها. وشجة دامية. وإذا ترشّش على الرجل دم قالوا: دامي خير إن شاء الله تعالى. واستدمى الرجل: طأطأ رأسه يقطر منه الدم. وجارية كدمية القصر، وجوارٍ كالدمى وهي الصورة المنقشة وفيها حمرة كالدم.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "لا يلائم دمي دمك. وكميت مدمى: شديد الحمرة كأنما دمّي. قال طفيل:",
+        "prototipe_benzerlik": 0.719,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وسهم مدمًّى، وسهم أسود مبارك: رميَ به الصيد مراراً حتى اسودّ من الدم. ومنه تركتهم في الدّامياء",
+        "prototipe_benzerlik": 0.672,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "أي في البركة والنعمة. واستدم من غريمك ما دمّى لك أي خذ منه ما طفّ لك. وفلان دامي الشفة: حريص على الطلب. ودميَ فوه من الحرص، كما يقال: ضبّ فوه، وضبت لثاته.",
+        "prototipe_benzerlik": 0.696,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.696,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["artifact.n.01", "body_substance.n.01", "feeling.n.01", "repent.v.02"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السلاح",
@@ -1174,18 +1207,18 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 39,
-      "merkez_kok": "هضض",
-      "merkez_mana": "recurrence of sadness",
-      "boy": 52
+      "kume": 41,
+      "merkez_kok": "بلع",
+      "merkez_mana": "Bel': yutmak; bel'a: yutkunma",
+      "boy": 61
     },
     "ince": {
-      "kume": 252,
+      "kume": 267,
       "merkez_kok": "فصد",
       "merkez_mana": "to make bleed",
       "boy": 8

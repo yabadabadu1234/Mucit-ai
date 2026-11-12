@@ -1242,32 +1242,55 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "خوي المنزل: خلا خواءً، ودار خاوية، وخوى البطن خوى: خلا من الطعام، وأصابه الخوى أي الجوع. وخوى رأسه من الدم لكثرة الرعاف. وخوّى البعير: تجافى في بروكه. وخوّى الرجل في سجوده. وخوّى عند جلوسه على المجمر وهو أن يبقى بينه وبين الأرض خواء. يقال: هذا مخوّى بعيرك. ودخل في خواء فرسه وهو ما بين يديه ورجليه. قال أبو النجم يصف الظليم:\nهاوٍ تضلّ الريح في خوائه\nوخوّى الطائر: بسط جناحيه ومدّ رجليه عند الوقوع.",
+    "mecaz": "خوى النوء. وخوت النجوم: خلت من المطر وأخلفت. ويقال: أخوت وخوّت. قال:\nوأخوت نجوم الأخذ إلا أنضّةً ... أنضّة محل ليس قاطرها يثرى",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "خوي المنزل: خلا خواءً، ودار خاوية، وخوى البطن خوى: خلا من الطعام، وأصابه الخوى أي الجوع. وخوى رأسه من الدم لكثرة الرعاف. وخوّى البعير: تجافى في بروكه. وخوّى الرجل في سجوده. وخوّى عند جلوسه على المجمر وهو أن يبقى بينه وبين الأرض خواء. يقال: هذا مخوّى بعيرك. ودخ",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "خوى النوء. وخوت النجوم: خلت من المطر وأخلفت. ويقال: أخوت وخوّت. قال:",
+        "prototipe_benzerlik": 0.339,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.339,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["condition.n.01", "empty.a.01", "region.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
     "bab": "التحسي",
-    "kok_gecis": 24.0,
+    "kok_gecis": 23.5,
     "kitapta_gecis": 3.0,
-    "zenginlesme": 2.41
+    "zenginlesme": 2.46
   },
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 509
     },
     "orta": {
-      "kume": 12,
-      "merkez_kok": "خيب",
-      "merkez_mana": "Hayb: boşa çıkmak, umutsuz olmak; hâib: hayal kırıklığı",
-      "boy": 58
+      "kume": 8,
+      "merkez_kok": "بءس",
+      "merkez_mana": "Be'es: azap, şiddet, zorluk",
+      "boy": 142
     },
     "ince": {
-      "kume": 64,
+      "kume": 48,
       "merkez_kok": "قفر",
       "merkez_mana": "to trace, to track",
-      "boy": 20
+      "boy": 23
     }
   },
   "kaliplar": {

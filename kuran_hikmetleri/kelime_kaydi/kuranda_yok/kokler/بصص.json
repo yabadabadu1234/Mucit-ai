@@ -868,11 +868,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "definite_quantity.n.01",
-    "orta": "noun.quantity",
-    "ust": "ölçü, mekân ve zaman",
-    "dayanak_synset": "inch.n.01",
-    "dayanak_tanim": "a unit of length equal to one twelfth of a foot",
+    "ince": "whole.n.02",
+    "orta": "noun.artifact",
+    "ust": "cisim ve eşya",
+    "dayanak_synset": "bus.n.01",
+    "dayanak_tanim": "a vehicle carrying many passengers; used for public transport",
     "synset_sayisi": 2
   },
   "ses_mana_tasnif": {
@@ -883,6 +883,29 @@
     "fasil_ozeti": "° معنى الفصل المعجمي (بص): نفاذ شيء قوي (أو حادّ) في (أو من) أثناء الشيء كما يتمثل ذلك في بصيص العين - في (بصص)، وفي شعاع التقاط المرئيات وكذلك عرق التماسك في أثناء البُصْر - في (بصر)، والحرافة - في (بصل).",
     "tam_metin": "\"البَصيصُ: البريقُ. والبَصَّاصة: العين لأنها تَبِصّ. بَصّ الشيءُ يَبِصّ - بكسر عينه: بَرَق وتلألأ ولمع. وبَصّ كذلك: أضاء. وبَصَّصَ الجِرْو، وبَصْبَص: فتح عَيْنيه. وبَصْبَصَت البراعيمُ: تفتَّحتْ أَكِمَّة الرياض، والشجرُ: تفتح للإيراق \".\n° المعنى المحوري\nهو انبعاث بريقٍ أو شيء. جديد من مصدره أو ما كان يحتويه بقوة (1): كالبريق، والتلألؤ، والزهور، وجوهرة العين."
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "له بصيص أي بريق. ورماه بالبصاصة وهي العين. وتقول: طرقته في السنة الحصاصة وهي العين. وتقول: طرقته في السنة الحصاصه، فما رمقني بذنب البصاصة. وبصص الجرو وبصر: فتح عينيه.",
+    "mecaz": "بصص النور إذا تفتح. وبصبص عندي بذنبه إذا تملق.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Cebel mihverî mana",
+    "prototip": "هو انبعاث بريقٍ أو شيء. جديد من مصدره أو ما كان يحتويه بقوة (1): كالبريق، والتلألؤ، والزهور، وجوهرة العين.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "بصص النور إذا تفتح. وبصبص عندي بذنبه إذا تملق.",
+        "prototipe_benzerlik": 0.339,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.339,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["artifact.n.01", "unit_of_measurement.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السباع",
@@ -893,19 +916,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 6,
-      "merkez_kok": "لقلق",
-      "merkez_mana": "",
-      "boy": 440
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 24,
-      "merkez_kok": "هضهض",
-      "merkez_mana": "",
-      "boy": 97
+      "kume": 43,
+      "merkez_kok": "عقم",
+      "merkez_mana": "Akm: kısır olmak; akim: kısır",
+      "boy": 106
     },
     "ince": {
-      "kume": 141,
+      "kume": 285,
       "merkez_kok": "لءلء",
       "merkez_mana": "Lü'lü': inci",
       "boy": 9

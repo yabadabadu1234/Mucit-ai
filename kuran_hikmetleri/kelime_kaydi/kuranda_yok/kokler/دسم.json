@@ -1636,6 +1636,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "طعام كثير الدسم وهو ودك اللحم والشحم. وقد دسم الطعام دسماً، ومرقة دسمة، وجوز دسم، وتدسموا: أكلوا الدسم. قال:\nوقدر ككفّ القرد لا مستعيرها ... يعار ولا من يأتها يتدسم\nودسم ثيابه، فتدسمت، وهو أدسم الثياب: وسخها، وقوم دسم الثياب. ودسم الخرق: سدّه بالدّسام وهو السّداد. وقارورة مدسومة الفم. ودسم الجرح: جعل فيه فتيلة. ويقال للمستحاضة: أدسمي وصلّى.",
+    "mecaz": "ما في ديسم دسم: لمن لا فائدة فيه. ودسموا سبالهم: أطعموهم. وفلان أدسم الثوبين ودنس الثوبين وأطلس الثوبين: للذي يعاب في دينه أو مروءته. قال:\nلا هم إن عامر بن جهم ... أوذم جحاً في ثياب دسم\nوما أنت إلا دسمة أي لا خير فيك، وهي مصدر الأدسم كالحمرة ونحوها. ودسم المرأة: جامعها.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "طعام كثير الدسم وهو ودك اللحم والشحم. وقد دسم الطعام دسماً، ومرقة دسمة، وجوز دسم، وتدسموا: أكلوا الدسم. قال: وقدر ككفّ القرد لا مستعيرها ... يعار ولا من يأتها يتدسم ودسم ثيابه، فتدسمت، وهو أدسم الثياب: وسخها، وقوم دسم الثياب. ودسم الخرق: سدّه بالدّسام وهو السّ",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "ما في ديسم دسم: لمن لا فائدة فيه. ودسموا سبالهم: أطعموهم. وفلان أدسم الثوبين ودنس الثوبين وأطلس الثوبين: للذي يعاب في دينه أو مروءته. قال:",
+        "prototipe_benzerlik": 0.972,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وما أنت إلا دسمة أي لا خير فيك، وهي مصدر الأدسم كالحمرة ونحوها. ودسم المرأة: جامعها.",
+        "prototipe_benzerlik": 0.217,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.595,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
@@ -1647,18 +1675,18 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
       "kume": 40,
-      "merkez_kok": "بلع",
-      "merkez_mana": "Bel': yutmak; bel'a: yutkunma",
-      "boy": 85
+      "merkez_kok": "ثعع",
+      "merkez_mana": "",
+      "boy": 49
     },
     "ince": {
-      "kume": 259,
+      "kume": 261,
       "merkez_kok": "معز",
       "merkez_mana": "Maaz: keçi; me'ziz: keçi",
       "boy": 10

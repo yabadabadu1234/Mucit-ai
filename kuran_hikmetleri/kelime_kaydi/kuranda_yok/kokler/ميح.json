@@ -691,6 +691,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "ماح الماء يميحه وامتاحه. ورجل مائح، وقوم ماحةٌ. وفي مثل: \" إني لأعلم من المائح، باست الماتح \".",
+    "mecaz": "محته ميحاً: أعطيته. وامتاحه واستماحه: استعطاه. وامتاحه الحرّ والعمل: عرّقه. قال ابن فسوة:\nإذا امتاح حرّ الشمس ذفراه أسهلت ... بأصفر منها قاطراً كلّ مقطر\nوماح فاه بالسّواك إذا استاك. ومحني عند السلطان: اشفع لي، واستمحته عند السلطان: استشفعته. وماح في مشيته: مال متبختراً، وتميح وتمايح، والسكران يتميح ويتمايح، ومرّ يتميح: يتبختر وينظر في ظلّه. ومايحت السلطان والنساء: ما يلتُ وخالطت ممايحةً. وبيني وبين فلان ممالحة وممايحة.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "ماح الماء يميحه وامتاحه. ورجل مائح، وقوم ماحةٌ. وفي مثل: \" إني لأعلم من المائح، باست الماتح \".",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "محته ميحاً: أعطيته. وامتاحه واستماحه: استعطاه. وامتاحه الحرّ والعمل: عرّقه. قال ابن فسوة:",
+        "prototipe_benzerlik": 0.35,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وماح فاه بالسّواك إذا استاك. ومحني عند السلطان: اشفع لي، واستمحته عند السلطان: استشفعته. وماح في مشيته: مال متبختراً، وتميح وتمايح، والسكران يتميح ويتمايح، ومرّ يتميح: يتبختر وينظر في ظلّه. ومايحت السلطان والنساء: ما يلتُ وخالطت ممايحةً. وبيني وبين فلان ممالحة وممايحة.",
+        "prototipe_benzerlik": 0.281,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.316,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الغرائز",
@@ -701,19 +729,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 2,
+      "kume": 1,
       "merkez_kok": "قره",
       "merkez_mana": "",
       "boy": 759
     },
     "orta": {
-      "kume": 3,
+      "kume": 1,
       "merkez_kok": "تيع",
       "merkez_mana": "",
       "boy": 265
     },
     "ince": {
-      "kume": 19,
+      "kume": 1,
       "merkez_kok": "تيع",
       "merkez_mana": "",
       "boy": 265

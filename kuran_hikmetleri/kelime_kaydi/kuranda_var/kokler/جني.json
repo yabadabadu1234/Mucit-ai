@@ -1507,13 +1507,46 @@
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "crime.n.01",
-    "dayanak_tanim": "(criminal law) an act punishable by law; usually considered an evil act",
+    "dayanak_synset": "felony.n.01",
+    "dayanak_tanim": "a serious crime (such as murder or arson)",
     "synset_sayisi": 10
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "هات جناة من جناك، وهذه شجرة طيبة الجناة. وثمر جني: جني آنفاً. وأجنى الشجر: حان أن يجنى ثمره. وأجنيته الثمر: مكنته من اجتنائه. وأجنت الأرض وأخلت: صار فيها الجنى والخلى. وأجنى الله الماشية: أنبت لها الجنى. وجنى على أهله: جر عليهم. وتجنى على أخيه ما لم يجن.",
+    "mecaz": "اجتنى العسل. وتقول العرب: جنيت الجراد وصدت ماء المطر، وقد وقع لي:\nقطف الحلم من شماريخ رضوي ... وجنى اللين من قنا الخيزران",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "هات جناة من جناك، وهذه شجرة طيبة الجناة. وثمر جني: جني آنفاً. وأجنى الشجر: حان أن يجنى ثمره. وأجنيته الثمر: مكنته من اجتنائه. وأجنت الأرض وأخلت: صار فيها الجنى والخلى. وأجنى الله الماشية: أنبت لها الجنى. وجنى على أهله: جر عليهم. وتجنى على أخيه ما لم يجن.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "اجتنى العسل. وتقول العرب: جنيت الجراد وصدت ماء المطر، وقد وقع لي:",
+        "prototipe_benzerlik": 0.473,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.473,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "act.n.02",
+    "earn.v.02",
+    "gain.v.08",
+    "gather.v.01",
+    "guilty.a.01",
+    "living_thing.n.01",
+    "meet.v.07",
+    "pick.v.02",
+    "reap.v.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السباع",
@@ -1525,21 +1558,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
-    },
-    "orta": {
-      "kume": 9,
       "merkez_kok": "خون",
       "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
-      "boy": 168
+      "boy": 509
+    },
+    "orta": {
+      "kume": 7,
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 259
     },
     "ince": {
-      "kume": 47,
+      "kume": 40,
       "merkez_kok": "ءثم",
       "merkez_mana": "İsm: günah, suç; âsim: günahkâr",
-      "boy": 38
+      "boy": 46
     }
   },
   "kaliplar": {

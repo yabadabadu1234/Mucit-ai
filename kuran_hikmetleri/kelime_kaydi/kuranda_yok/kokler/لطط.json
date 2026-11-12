@@ -848,7 +848,7 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "part.n.01",
+    "ince": "whole.n.02",
     "orta": "noun.substance",
     "ust": "tabiat",
     "dayanak_synset": "plaster.n.01",
@@ -863,32 +863,65 @@
     "fasil_ozeti": "° معنى الفصل المعجمي (لط): حجب الثغرة أو سدها بشيء خارجي -كما يتمثل في لط الناقة بذبها إذا ألصقته علي حيائها- في (لطط)، وفي الاحتيال لإدخال قلم الجمل في موضع ضراب الناقة- في (لطف).",
     "tam_metin": "\"الناقة تَلِطُّ بذَنَبها -بكسر اللام: إذا ألزقَتْه بفَرجها، وأدخلَتْه بين فخِذَيها. ولَطّ البابَ: أغلقه، والسِتْرَ والحجابَ: أرخاه وسَدَلَه، والشيءَ: ألزقه وأخفاه \".\n° المعنى المحوري\nحَجْب الثغرة وسدُّها بإلصاق شيء فوقها (1): كلط الناقة بذنبها ولط الباب."
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "لطّ الشيء وألطه: ستره. وفلان لا يلطّ قدره: لا يسترها من الضّيفان. وعن بعض العرب: لطّ السّحاب أسفل الحمرّة. ولطّ الحجاب وألطّه وبالحجاب: أرخاه. قال عبّاد بن عمرو الباهليّ:\nوإذا أتاني سائل لم أعتلل ... لألط من دون السّوام حجابي\nوقال الأعشى:\nولقد ساءها البياض فلطّت ... بحجابٍ من دونها مسدوف\nولطّت الناقة بذنبها: جعلته بين فخذيها في عدوها. وهي تلطّ بعينها الكحل: تلزقه. ومشوا على الملطاط وهو حافة الوادي. وعرّض الخبز بالملطاط: بالمحور.",
+    "mecaz": "لطّ فلانٌ دون الحقّ بالباطل وألطّ. قال الربيع بن الحقيق:\nلا تجعل الباطل حقاً ولا ... تلطّ دون الحقّ بالباطل\nولطّ سرّه: كتمه. قال:\nتعالى لا ألطّ ولا تلطّى ... ونبدي ما نكنّ ولا نغطّي\nولطّه بالعصا: ضربه.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Cebel mihverî mana",
+    "prototip": "حَجْب الثغرة وسدُّها بإلصاق شيء فوقها (1): كلط الناقة بذنبها ولط الباب.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "لطّ فلانٌ دون الحقّ بالباطل وألطّ. قال الربيع بن الحقيق:",
+        "prototipe_benzerlik": 0.402,
+        "halka": "orta"
+      },
+      {
+        "cumle": "ولطّ سرّه: كتمه. قال:",
+        "prototipe_benzerlik": 0.419,
+        "halka": "orta"
+      },
+      {
+        "cumle": "ولطّه بالعصا: ضربه.",
+        "prototipe_benzerlik": 0.486,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.435,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["artifact.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النخل",
     "bab": "الرقص",
-    "kok_gecis": 34.2,
-    "kitapta_gecis": 10.5,
-    "zenginlesme": 1.74
+    "kok_gecis": 28.8,
+    "kitapta_gecis": 9.5,
+    "zenginlesme": 1.87
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
+      "kume": 8,
       "merkez_kok": "قبب",
       "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "boy": 604
     },
     "orta": {
-      "kume": 43,
-      "merkez_kok": "خرز",
-      "merkez_mana": "awl",
-      "boy": 104
+      "kume": 32,
+      "merkez_kok": "دثر",
+      "merkez_mana": "Tedsîr: örtmek, bürümek; desr: örtü",
+      "boy": 148
     },
     "ince": {
-      "kume": 281,
-      "merkez_kok": "خرز",
-      "merkez_mana": "awl",
-      "boy": 42
+      "kume": 209,
+      "merkez_kok": "قبب",
+      "merkez_mana": "canopy, pavilion; dome, cupola",
+      "boy": 35
     }
   },
   "kaliplar": {

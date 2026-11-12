@@ -1779,16 +1779,53 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "culinary.a.01",
-    "orta": "adj.pert",
+    "ince": "cooked.a.01",
+    "orta": "adj.all",
     "ust": "hâl ve vasıf",
-    "dayanak_synset": "culinary.a.01",
-    "dayanak_tanim": "of or relating to or used in cooking",
+    "dayanak_synset": "cooked.a.01",
+    "dayanak_tanim": "having been prepared for eating by the application of heat",
     "synset_sayisi": 9
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "طبخ اللحم والمرق، وخبزة جيدة الطبخ، وآجرة جيدة الطبخ، ويقال: أتطبخون قديراً أم مليلاً، واطّبخ واشتوى لنفسه، وهذا مطّبخهم ومشتواهم، وما أطيب طبيخهم، وهو يشرب الطبيخ المنصف، وطبخ الصباغ البقم وغيره، وأخذ طباخة البقم فصبغ بها وطرح سائرها وهي اسم ما يحتاج إليه مما يطبخ كالصهارة والعصارة. وتطبخ الرجل: أكل البطيخ، وأكل الطبيخ: لغة أهل المدينة.",
+    "mecaz": "طبختهم الهواجر، وخرجوا في طبيخة الحرّ وطبائخه وهي سمائمه وقت الهجير. وطبخه الجدريّ والحصبة. قال:\nطبيخ نحاز أو طبيخ أميهة ... صغير العظام سيء القشم أملط\nومنه: الحمى الطابخ: الصالب. وما به طباخ: قوّة. وما في كلامه طباخ: فائدة وأصله اللحم الأعجف الذي ما فيه جدوى لطابخه. وهو أبيض المطبخ، وهم بيض المطابخ. وقال:\nأما الملوك فأنت اليوم ألأمهم ... لؤماً وأبيضهم سربال طباخ",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "طبخ اللحم والمرق، وخبزة جيدة الطبخ، وآجرة جيدة الطبخ، ويقال: أتطبخون قديراً أم مليلاً، واطّبخ واشتوى لنفسه، وهذا مطّبخهم ومشتواهم، وما أطيب طبيخهم، وهو يشرب الطبيخ المنصف، وطبخ الصباغ البقم وغيره، وأخذ طباخة البقم فصبغ بها وطرح سائرها وهي اسم ما يحتاج إليه مما",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "طبختهم الهواجر، وخرجوا في طبيخة الحرّ وطبائخه وهي سمائمه وقت الهجير. وطبخه الجدريّ والحصبة. قال:",
+        "prototipe_benzerlik": 0.163,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "ومنه: الحمى الطابخ: الصالب. وما به طباخ: قوّة. وما في كلامه طباخ: فائدة وأصله اللحم الأعجف الذي ما فيه جدوى لطابخه. وهو أبيض المطبخ، وهم بيض المطابخ. وقال:",
+        "prototipe_benzerlik": 0.724,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.443,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "act.n.02",
+    "artifact.n.01",
+    "cook.v.01",
+    "cook.v.02",
+    "cook.v.03",
+    "cook.v.05",
+    "cooked.a.01",
+    "culinary.a.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الحشرات",
@@ -1799,21 +1836,21 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 6,
-      "merkez_kok": "لقلق",
-      "merkez_mana": "",
-      "boy": 440
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 27,
-      "merkez_kok": "عجو",
-      "merkez_mana": "beikost",
-      "boy": 82
-    },
-    "ince": {
-      "kume": 172,
+      "kume": 38,
       "merkez_kok": "خبز",
       "merkez_mana": "Habz: ekmek yapmak, ekmek",
+      "boy": 50
+    },
+    "ince": {
+      "kume": 252,
+      "merkez_kok": "طبخ",
+      "merkez_mana": "kitchen",
       "boy": 8
     }
   },

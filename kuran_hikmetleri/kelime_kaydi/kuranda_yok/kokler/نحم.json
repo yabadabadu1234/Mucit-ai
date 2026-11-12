@@ -730,6 +730,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "نحم الفهد نحيماً: صوّت. والحمّال ينحم ويستعين بنحيمه على حمله وكذلك نازع الدلو. قال:\nمالك لا تنحم يا رواحه ... إن النحيم للسقاة راحه\nورجل نحّامٌ: بخيل إذا سئل نحم.\nن ح\nوهو على أنحاء شتّى: لا يثبت على نحوٍ واحد. ونحوت نحوه. وعنده نحوٌ من مائة رجل. وإنكم لتنظرون في نحوّ كثيرة: وفلان نحويٌّ من النحاة. وانتحاه: قصده. وانتحى لقرنه: عرض له. وانتحى على شقّه الأيسر: اعتمد عليه. وانتحى على سيفه. قال متمم:\nوهوّن وجدي بعد ما كدت أنتحي ... على السيف حتى يخرج الجوف والحشا\nونحّاه عن مكانه تنحيةً فتنحّى عنه، وتنحّ عني. ونحّ الدمع عن خدّك. وناحيته مناحاة: صرت نحوه وصار نحوي. وأنحى عليه بالسوط والسيف.",
+    "mecaz": "هو نحيّة القوارع أي تنحيه الشدائد، ونحن نحايا الأحزان. قال البعيث:\nنحيّة أحزان جرت من جفونه ... نفاضة دمع مثل ما دمع الوشل\nوأنحى عليه باللوائم إذا أقبل عليه. وأنا في ناحية فلان. وضربه بناحية سوطه. وأتاه من ناحية الكرم فوجده كريماً. ومن أيّ النواحي أتيته وجدته مرضياً.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "نحم الفهد نحيماً: صوّت. والحمّال ينحم ويستعين بنحيمه على حمله وكذلك نازع الدلو. قال: مالك لا تنحم يا رواحه ... إن النحيم للسقاة راحه ورجل نحّامٌ: بخيل إذا سئل نحم. ن ح وهو على أنحاء شتّى: لا يثبت على نحوٍ واحد. ونحوت نحوه. وعنده نحوٌ من مائة رجل. وإنكم لتنظرون",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "هو نحيّة القوارع أي تنحيه الشدائد، ونحن نحايا الأحزان. قال البعيث:",
+        "prototipe_benzerlik": 0.341,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وأنحى عليه باللوائم إذا أقبل عليه. وأنا في ناحية فلان. وضربه بناحية سوطه. وأتاه من ناحية الكرم فوجده كريماً. ومن أيّ النواحي أتيته وجدته مرضياً.",
+        "prototipe_benzerlik": 0.085,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.213,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطير",
@@ -741,21 +769,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 7,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 331
+      "merkez_kok": "لقلق",
+      "merkez_mana": "",
+      "boy": 386
     },
     "orta": {
-      "kume": 33,
-      "merkez_kok": "وقد",
-      "merkez_mana": "Vakd: ateş yakmak; vakîd: ateş",
-      "boy": 44
+      "kume": 31,
+      "merkez_kok": "وجف",
+      "merkez_mana": "Vecf: titremek, çarpmak",
+      "boy": 65
     },
     "ince": {
-      "kume": 214,
-      "merkez_kok": "لهب",
-      "merkez_mana": "Lehb: alev, ateş",
-      "boy": 28
+      "kume": 203,
+      "merkez_kok": "صءصء",
+      "merkez_mana": "to squeak",
+      "boy": 5
     }
   },
   "kaliplar": {

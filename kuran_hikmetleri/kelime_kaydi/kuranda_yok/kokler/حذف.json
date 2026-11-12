@@ -1768,13 +1768,36 @@
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "expunction.n.01",
-    "dayanak_tanim": "deletion by an act of expunging or erasing",
+    "dayanak_synset": "write-off.n.02",
+    "dayanak_tanim": "the act of cancelling from an account a bad debt or a worthless asset",
     "synset_sayisi": 8
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "حذف ذنب فرسه إذا قطع طرفه وفرس محذوف الذنب. وزق محذوف: مقطوع القوائم. وحذف رأسه بالسيف: ضربه فقطع منه قطعة. وحذف الأرنب بالعصا: رماها بها. يقال: الحذف بالعصا، والخذف بالحصى.",
+    "mecaz": "حذفه بجائزة: وصله بها. وما في رحله حذافة أي شيء يسير من طعام وغيره، وهي ما حذف من وشائظ الأديم وما أشبهه. وتقول: أكل فما أبقى حذافه، وشرب فما ترك شفافه. وحذف الصانع الشيء: سواه تسوية حسنة، كأنه حذف كل ما يحب حذفه، حتى خلا من كل عيب وتهذب، ومنه فلان محذف الكلام، وقيل بنت الخس: أي الصبيان شر؟ فقالت المحذفة الكلام، الذي يطيع أمه، ويعصي عمه؛ والتاء للمبالغة. وقال امرؤ القيس:\nلها حبهة كسراة المجن ... حذفه الصانع المقتدر",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "حذف ذنب فرسه إذا قطع طرفه وفرس محذوف الذنب. وزق محذوف: مقطوع القوائم. وحذف رأسه بالسيف: ضربه فقطع منه قطعة. وحذف الأرنب بالعصا: رماها بها. يقال: الحذف بالعصا، والخذف بالحصى.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "حذفه بجائزة: وصله بها. وما في رحله حذافة أي شيء يسير من طعام وغيره، وهي ما حذف من وشائظ الأديم وما أشبهه. وتقول: أكل فما أبقى حذافه، وشرب فما ترك شفافه. وحذف الصانع الشيء: سواه تسوية حسنة، كأنه حذف كل ما يحب حذفه، حتى خلا من كل عيب وتهذب، ومنه فلان محذف الكلام، وقيل بنت الخس: أي الصبيان شر؟ فقالت ال",
+        "prototipe_benzerlik": 0.417,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.417,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["act.n.02", "cross_off.v.01", "erase.v.03", "neglect.v.01", "process.n.02", "rule_out.v.03"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "المكنيات والمبنيات والمثنيات",
@@ -1785,22 +1808,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "kume": 5,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 375
     },
     "orta": {
-      "kume": 36,
-      "merkez_kok": "نجس",
-      "merkez_mana": "Nicis: pislik, necis",
-      "boy": 123
+      "kume": 12,
+      "merkez_kok": "ردم",
+      "merkez_mana": "Redm: kapatmak, doldurmak; sedd: set",
+      "boy": 61
     },
     "ince": {
-      "kume": 232,
-      "merkez_kok": "جذذ",
-      "merkez_mana": "Cezz: kesmek, parçalamak; cezâ: kesik",
-      "boy": 12
+      "kume": 71,
+      "merkez_kok": "جثث",
+      "merkez_mana": "Cesed: ceset, cisim; cesse: cüsse",
+      "boy": 28
     }
   },
   "kaliplar": {

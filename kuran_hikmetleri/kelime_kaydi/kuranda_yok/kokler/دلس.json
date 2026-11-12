@@ -1342,6 +1342,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "أتانا دلس الظلام. وخرج في الدلس والغلس، ودلّس فلان لفلان في البيع، ودلّس عليه إذا كتم عيب السلعة، وهذا من تدليس فلان. ودلّس عليّ كذا: أخفى عليّ عيبه. وفلان: لا يدالس، ولا يؤالس؛ لا يعامل بالتدليس والألس وهو الخيانة.",
+    "mecaz": "دلّس المحدّث. والمدلس لا يقبل حديثه وهو الذي لا يذكر في حديثه من سمعه منه، ويذكر من هو أعلى ممن حدّثه يوهم أنه سمعه منه.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "أتانا دلس الظلام. وخرج في الدلس والغلس، ودلّس فلان لفلان في البيع، ودلّس عليه إذا كتم عيب السلعة، وهذا من تدليس فلان. ودلّس عليّ كذا: أخفى عليّ عيبه. وفلان: لا يدالس، ولا يؤالس؛ لا يعامل بالتدليس والألس وهو الخيانة.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "دلّس المحدّث. والمدلس لا يقبل حديثه وهو الذي لا يذكر في حديثه من سمعه منه، ويذكر من هو أعلى ممن حدّثه يوهم أنه سمعه منه.",
+        "prototipe_benzerlik": 0.512,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.512,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["victimize.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الغرائز",
@@ -1353,21 +1376,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 509
     },
     "orta": {
-      "kume": 10,
-      "merkez_kok": "ذعن",
-      "merkez_mana": "Za'n: boyun eğmek, kabul etmek",
-      "boy": 183
+      "kume": 7,
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 259
     },
     "ince": {
-      "kume": 54,
-      "merkez_kok": "طرد",
-      "merkez_mana": "Tard: kovmak, uzaklaştırmak",
-      "boy": 35
+      "kume": 40,
+      "merkez_kok": "ءثم",
+      "merkez_mana": "İsm: günah, suç; âsim: günahkâr",
+      "boy": 46
     }
   },
   "kaliplar": {

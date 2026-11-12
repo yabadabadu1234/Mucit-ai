@@ -2731,13 +2731,67 @@
     "ince": "quality.n.01",
     "orta": "noun.attribute",
     "ust": "hâl ve vasıf",
-    "dayanak_synset": "equivalence.n.02",
-    "dayanak_tanim": "essential equality and interchangeability",
+    "dayanak_synset": "equatability.n.01",
+    "dayanak_tanim": "capability of being equated",
     "synset_sayisi": 33
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "إستوى الشيئان وتساويا، وساوى أحدهما صاعحبه، وفلان يساويك في العلم. وساوى بين الشيئين، وسوّى بينهما، وساويت هذا بهذا وسوّيته. قال الرا عي:\nيجرد عليهن الأجلة سويت ... بضيف الشتاء والبنين الأصاغر\nأي يصونها صيانة الضيوف والأطفال. وسويت المعوج فاستوى، وهو سويّ. ورزقك الله تعالى ولداً سوياً: لا داء به ولا عيب. وهما على سوية من الأمر وسواء. ويه النصفة والسوية. وهما سواء، وهم سواسية في الشر، وأنتما سيان. وما هو بسيٍّ لك. وفعل القوم كذا ولا سيما زيد. ومكان سوى: وسط بين الحدين. وجاؤا سوى فلان وسواءه \" فرآه في سواء الجحيم \": في وسطها، وضرب سواءه: وسطه. وضربه على مستوى مفرقه. قال بعض بني أزنم:\nنحن من خير معد حسباً ... ولنا قدماً على الناس المهل\nإذا ضربنا الصمة الخير على ... مستوى مفرقه حتى انجدل\nورجل سواء القدم: مستويها ليس لها أخمص. وأسوى برزخاص من القرآن: أسقطه وسها عنه.",
+    "mecaz": "إذا صليت الفجر استويت إليك. قصدتك قصداً لا ألوي على شيء. \" ثم استوى إلى السماء \" واستوى على الدابة وعلى السري والفراش. وانتهى شبابه واستوى. واستوى على البلد. وهذا المتاع لا يساوي هذا الثمن. وسو أخدعيك.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "إستوى الشيئان وتساويا، وساوى أحدهما صاعحبه، وفلان يساويك في العلم. وساوى بين الشيئين، وسوّى بينهما، وساويت هذا بهذا وسوّيته. قال الرا عي: يجرد عليهن الأجلة سويت ... بضيف الشتاء والبنين الأصاغر أي يصونها صيانة الضيوف والأطفال. وسويت المعوج فاستوى، وهو سويّ. ورز",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "إذا صليت الفجر استويت إليك. قصدتك قصداً لا ألوي على شيء. \" ثم استوى إلى السماء \" واستوى على الدابة وعلى السري والفراش. وانتهى شبابه واستوى. واستوى على البلد. وهذا المتاع لا يساوي هذا الثمن. وسو أخدعيك.",
+        "prototipe_benzerlik": 0.561,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.561,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "adapt.v.01",
+    "adjust.v.01",
+    "artifact.n.01",
+    "compound.v.02",
+    "degree.n.02",
+    "dispose.v.03",
+    "ensconce.v.01",
+    "equal.a.01",
+    "equal.v.01",
+    "equal.v.03",
+    "equate.v.02",
+    "equivalent.n.01",
+    "flatten.v.01",
+    "flatten.v.03",
+    "flush.v.04",
+    "iron_out.v.01",
+    "like.a.02",
+    "living_thing.n.01",
+    "patch.v.03",
+    "plane.n.02",
+    "polish.v.01",
+    "reconcile.v.03",
+    "roll_out.v.01",
+    "sameness.n.01",
+    "settle.v.01",
+    "settle.v.13",
+    "settle.v.14",
+    "sink.v.04",
+    "smooth.v.01",
+    "together.r.04"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النساء",
@@ -2748,22 +2802,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 22,
+      "kume": 16,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 193
+      "boy": 287
     },
     "ince": {
-      "kume": 125,
-      "merkez_kok": "ءثر",
-      "merkez_mana": "Eser: iz, yansıma; te'sîr",
-      "boy": 30
+      "kume": 92,
+      "merkez_kok": "درك",
+      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
+      "boy": 80
     }
   },
   "kaliplar": {

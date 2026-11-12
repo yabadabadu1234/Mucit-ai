@@ -688,6 +688,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "رئمت الناقة الولد أو البوّ رأما ورئماناً، وناقة رائمة ورائم ورءوم، ونوق روائم. وأما لناقتكم رأم أي شيء ترأمه من بوّ أو ولد ناقة أخرى. وأرأمنا الناقة ولدها: عطفناها عليه، وترأمت عليه: أرزمت وحنت. وكأنها رئم، وكأنهن أرآم الصريم. قال النابغة:\nعليهن شعث عامدون لبرهم ... فهن كأرآم الصريم خواضع",
+    "mecaz": "رئمت ما أنا عليه إذا ألفته وأحببته.\nوفلان رءوم للضيم: ذليل راض بالخسف. قال:\nرئمت لسلمى بوّ ضيم وإنني ... قديماً لآبى الضيم وابن أباة\nورئم الجرح رئماناً حسناً إذا التأم. وأرأمه الطبيب: داواه حتى لأمه. والأثافي روائم الأورق وهو الرماد. ومرت بنا الآرام: تريد النساء الملاح. ومرّ بي ريم، في خصره بريم.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "رئمت الناقة الولد أو البوّ رأما ورئماناً، وناقة رائمة ورائم ورءوم، ونوق روائم. وأما لناقتكم رأم أي شيء ترأمه من بوّ أو ولد ناقة أخرى. وأرأمنا الناقة ولدها: عطفناها عليه، وترأمت عليه: أرزمت وحنت. وكأنها رئم، وكأنهن أرآم الصريم. قال النابغة: عليهن شعث عامدون لبر",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "رئمت ما أنا عليه إذا ألفته وأحببته.",
+        "prototipe_benzerlik": 0.302,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وفلان رءوم للضيم: ذليل راض بالخسف. قال:",
+        "prototipe_benzerlik": 0.64,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "ورئم الجرح رئماناً حسناً إذا التأم. وأرأمه الطبيب: داواه حتى لأمه. والأثافي روائم الأورق وهو الرماد. ومرت بنا الآرام: تريد النساء الملاح. ومرّ بي ريم، في خصره بريم.",
+        "prototipe_benzerlik": 0.628,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.523,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الإبل",
@@ -698,19 +731,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 2,
+      "kume": 1,
       "merkez_kok": "قره",
       "merkez_mana": "",
       "boy": 759
     },
     "orta": {
-      "kume": 4,
+      "kume": 2,
       "merkez_kok": "فلص",
       "merkez_mana": "",
       "boy": 494
     },
     "ince": {
-      "kume": 21,
+      "kume": 3,
       "merkez_kok": "مرت",
       "merkez_mana": "",
       "boy": 241

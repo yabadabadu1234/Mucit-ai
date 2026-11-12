@@ -805,6 +805,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "ذبل البقل ذبولاً. وروي الذبال بالسليط، ولا تكن كالذابةل تضيء للناس وهي تحترق.",
+    "mecaz": "ذبلت شفتاه ولسانه من عطش أو كرب. وقناً ذابل ورماح ذوابل. وفرس جيّاش على ذبله أي على ضموره وهزاله. وماله ذبل ذبله أي ذبل ما هو غضّ من شبابه. وقيل له: ذبل لأنه إذا استوى شارف الذبول. ويقال للصبي: ما\nأكيسه ذبل ذبله. ومر يتذبل في مشيه: يتفتر فيه ويتبختر.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "ذبل البقل ذبولاً. وروي الذبال بالسليط، ولا تكن كالذابةل تضيء للناس وهي تحترق.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "ذبلت شفتاه ولسانه من عطش أو كرب. وقناً ذابل ورماح ذوابل. وفرس جيّاش على ذبله أي على ضموره وهزاله. وماله ذبل ذبله أي ذبل ما هو غضّ من شبابه. وقيل له: ذبل لأنه إذا استوى شارف الذبول. ويقال للصبي: ما",
+        "prototipe_benzerlik": 0.281,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "أكيسه ذبل ذبله. ومر يتذبل في مشيه: يتفتر فيه ويتبختر.",
+        "prototipe_benzerlik": 0.182,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.231,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["shrivel.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النساء",
@@ -816,21 +844,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "merkez_kok": "قبب",
+      "merkez_mana": "canopy, pavilion; dome, cupola",
+      "boy": 604
     },
     "orta": {
-      "kume": 36,
-      "merkez_kok": "نجس",
-      "merkez_mana": "Nicis: pislik, necis",
-      "boy": 123
+      "kume": 33,
+      "merkez_kok": "صبب",
+      "merkez_mana": "Sabb: dökmek, akıtmak; sabîb: akan",
+      "boy": 201
     },
     "ince": {
-      "kume": 228,
-      "merkez_kok": "خرم",
-      "merkez_mana": "to make a hole by digging",
-      "boy": 23
+      "kume": 218,
+      "merkez_kok": "دلك",
+      "merkez_mana": "Delk: ovmak, sürtmek",
+      "boy": 33
     }
   },
   "kaliplar": {

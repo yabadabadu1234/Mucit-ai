@@ -797,6 +797,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "لي عندهم تبل وهو الوغم في القلب. وبينهم تبول وذحول. قال المقدام التميمي:\nأبى الله أن الغدر منكم وأنكم ... بني مالك لا تدركون لكم تبلاً\nوتقول: لم يزل إضمار التبول، سبب إظهار الحبول، وهي الدواهي. وتبلني فلان: أصابني بالتبل. وتوبل قدره: ألقى فيها التوابل.\nقال لبيد:\nفسافت قديماً عهده بأنيسه ... كما خالط الخل العتيق التوابلا\nوفي مثل \" أهون من تبالة على الحجاج و\" ما حللت بطن تبالة لتحرم الأضياف \".",
+    "mecaz": "تبلته فلانة إذا هيمته كأنما أصابته بتبل، وقلب متبول. قال كعب:\nبانت سعاد فقلبي اليوم متبول ... متيم إثرها لم يفد مكبول\nوتبلهم الدهر وأتبلهم. ودهر خابل تابل. وقزح كلامه وتوبله.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "لي عندهم تبل وهو الوغم في القلب. وبينهم تبول وذحول. قال المقدام التميمي: أبى الله أن الغدر منكم وأنكم ... بني مالك لا تدركون لكم تبلاً وتقول: لم يزل إضمار التبول، سبب إظهار الحبول، وهي الدواهي. وتبلني فلان: أصابني بالتبل. وتوبل قدره: ألقى فيها التوابل. قال لبي",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "تبلته فلانة إذا هيمته كأنما أصابته بتبل، وقلب متبول. قال كعب:",
+        "prototipe_benzerlik": 0.395,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وتبلهم الدهر وأتبلهم. ودهر خابل تابل. وقزح كلامه وتوبله.",
+        "prototipe_benzerlik": 0.685,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.54,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["food.n.01", "season.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النساء",
@@ -807,19 +835,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
-      "merkez_kok": "حنج",
-      "merkez_mana": "",
-      "boy": 426
-    },
-    "orta": {
       "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 261
+      "boy": 466
+    },
+    "orta": {
+      "kume": 3,
+      "merkez_kok": "قمح",
+      "merkez_mana": "Kamh: buğday",
+      "boy": 64
     },
     "ince": {
-      "kume": 7,
+      "kume": 8,
       "merkez_kok": "مضر",
       "merkez_mana": "a medieval dish of fat meat cooked in sour milk with shallots, lemon, ",
       "boy": 8

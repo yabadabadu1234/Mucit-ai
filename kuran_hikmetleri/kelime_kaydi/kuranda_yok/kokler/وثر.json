@@ -1790,6 +1790,57 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "فراش وثير: وطيء، وقد وثر وثارة، وما أوثر فراشك! واستوثر الفراش. ووثر مركبك: وطّئه، ومنه: ميثرة السّرج. وجمعها مواثر ومياثر.",
+    "mecaz": "إنّها لوثيرة، ووثيرة العجز، وقد وثرت وثارةً إذا سمنت. قال القطامي:\nوكأنما اشتمل الضّجيع بريطةٍ ... لا بل تزيد وثارةً ولياناً\nوإذا تزوجت امرأةً فاستوثرها.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "فراش وثير: وطيء، وقد وثر وثارة، وما أوثر فراشك! واستوثر الفراش. ووثر مركبك: وطّئه، ومنه: ميثرة السّرج. وجمعها مواثر ومياثر.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "إنّها لوثيرة، ووثيرة العجز، وقد وثرت وثارةً إذا سمنت. قال القطامي:",
+        "prototipe_benzerlik": 0.435,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وإذا تزوجت امرأةً فاستوثرها.",
+        "prototipe_benzerlik": 0.212,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.324,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "affect.v.01",
+    "affect.v.02",
+    "affect.v.05",
+    "artifact.n.01",
+    "content.n.05",
+    "count.v.01",
+    "cover.v.03",
+    "disperse.v.04",
+    "distribute.v.01",
+    "drill.v.03",
+    "happening.n.01",
+    "influence.v.01",
+    "information.n.02",
+    "line.n.11",
+    "mark.n.04",
+    "scatter.v.03",
+    "sink.v.04",
+    "sink.v.05",
+    "sow.v.01",
+    "spread.v.07",
+    "stretch.v.02",
+    "writing_style.n.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "اللباس",
@@ -1800,22 +1851,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
-      "merkez_kok": "حنج",
-      "merkez_mana": "",
-      "boy": 426
-    },
-    "orta": {
       "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 261
+      "boy": 466
+    },
+    "orta": {
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 11,
-      "merkez_kok": "خرت",
-      "merkez_mana": "to pierce, to bore, to perforate",
-      "boy": 18
+      "kume": 17,
+      "merkez_kok": "وثر",
+      "merkez_mana": "a kind of shabrack or saddle-pillow made of silk, or other silk blanke",
+      "boy": 12
     }
   },
   "kaliplar": {

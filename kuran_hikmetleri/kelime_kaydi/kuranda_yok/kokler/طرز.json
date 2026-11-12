@@ -1792,6 +1792,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "عمل هذا الثوب في طراز فلان وهو الموضع الذي تنسج فيه الثياب الجياد.",
+    "mecaz": "قولهم للوجه المليح: هو مما عمل في طراز الله تعالى، وهذا الكلام الحسن من طراز فلان، وهو من الطراز الأول. وما أحسن طرز فلان، وطرزه طرز حسن وهو طريقته في عمله ونيقته. قال:\nفاخترت من جيد كل طرز\nوهو يتطرز في اللباس ويتطرس في المطعم أي يتنوق فلا يلبس إلا فاخراً ولا يأكل إلا طيباً. وطرز ثوبه: علمه.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "عمل هذا الثوب في طراز فلان وهو الموضع الذي تنسج فيه الثياب الجياد.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "قولهم للوجه المليح: هو مما عمل في طراز الله تعالى، وهذا الكلام الحسن من طراز فلان، وهو من الطراز الأول. وما أحسن طرز فلان، وطرزه طرز حسن وهو طريقته في عمله ونيقته. قال:",
+        "prototipe_benzerlik": 0.151,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "فاخترت من جيد كل طرز",
+        "prototipe_benzerlik": 0.158,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وهو يتطرز في اللباس ويتطرس في المطعم أي يتنوق فلا يلبس إلا فاخراً ولا يأكل إلا طيباً. وطرز ثوبه: علمه.",
+        "prototipe_benzerlik": 0.448,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.252,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["artifact.n.01", "content.n.05", "process.n.02", "sew.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
@@ -1802,22 +1835,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
-      "merkez_kok": "درك",
-      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "kume": 8,
+      "merkez_kok": "قبب",
+      "merkez_mana": "canopy, pavilion; dome, cupola",
+      "boy": 604
     },
     "orta": {
-      "kume": 22,
-      "merkez_kok": "درك",
-      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 193
+      "kume": 32,
+      "merkez_kok": "دثر",
+      "merkez_mana": "Tedsîr: örtmek, bürümek; desr: örtü",
+      "boy": 148
     },
     "ince": {
-      "kume": 127,
+      "kume": 214,
       "merkez_kok": "طرز",
       "merkez_mana": "a stitch, suture",
-      "boy": 11
+      "boy": 12
     }
   },
   "kaliplar": {

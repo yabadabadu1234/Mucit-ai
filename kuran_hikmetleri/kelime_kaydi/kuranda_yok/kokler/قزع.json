@@ -1480,6 +1480,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "كأنهم قزع السحاب وهي القطع المتفرقة. قال ذو الرمة:\nترى عصب القطا هملاً عليه ... كأن رعاله قزع الجهام\nوتقزّع السحاب وتقشّع. وقوزع الديم فرّ من صاحبه.",
+    "mecaz": "نهيَ عن القزع والقنازع وهي بعض الشعر يترك غير محلوق. قال زهير:\nوأشعث قد طالت قنازع رأسه ... دعوت على طول الكرى ودعاني\nلطول اعتمامه في السفر. ورجل مقزّع. وذهب ماله ولم يبق إلا قزع وهي صغار الإبل. ورمى الوادي بالقزع. والفحل يرمي بالقزع وهو الغثاء والزبد وقطع اللغام. قال الأعشى:\nطابت له الريح فامتدت غواربه ... ترى حواليه من تيّاره قزعاً\nوقال ذو الرمة:\nإذا استردف الحادي وقد آل صوته ... إلى النزر واعتمّت بذي قزعٍ شكل\nورسول مقزّعٌ: مستعجل، وقزّعوا إلى فلان رسولاً. وتقزّع القوم: تفرّقوا.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "كأنهم قزع السحاب وهي القطع المتفرقة. قال ذو الرمة: ترى عصب القطا هملاً عليه ... كأن رعاله قزع الجهام وتقزّع السحاب وتقشّع. وقوزع الديم فرّ من صاحبه.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "نهيَ عن القزع والقنازع وهي بعض الشعر يترك غير محلوق. قال زهير:",
+        "prototipe_benzerlik": 0.478,
+        "halka": "orta"
+      },
+      {
+        "cumle": "لطول اعتمامه في السفر. ورجل مقزّع. وذهب ماله ولم يبق إلا قزع وهي صغار الإبل. ورمى الوادي بالقزع. والفحل يرمي بالقزع وهو الغثاء والزبد وقطع اللغام. قال الأعشى:",
+        "prototipe_benzerlik": 0.35,
+        "halka": "orta"
+      },
+      {
+        "cumle": "ورسول مقزّعٌ: مستعجل، وقزّعوا إلى فلان رسولاً. وتقزّع القوم: تفرّقوا.",
+        "prototipe_benzerlik": 0.481,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.436,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الإبل",
@@ -1490,22 +1523,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
+      "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 426
+      "boy": 466
     },
     "orta": {
-      "kume": 1,
-      "merkez_kok": "جنح",
-      "merkez_mana": "Cünûh: meyletmek, eğilmek; cenâh: kanat",
-      "boy": 165
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 5,
+      "kume": 12,
       "merkez_kok": "ديث",
       "merkez_mana": "to be submissive, to be compliant, to be cucked, to be tame",
-      "boy": 23
+      "boy": 27
     }
   },
   "kaliplar": {

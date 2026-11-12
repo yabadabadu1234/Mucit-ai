@@ -688,6 +688,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "خذمه: قطعه بسرعة. وسيف مخذم وخذم. وخذمت الدلو والنمل خذماً وهو انقطاع العري والشوع. وعنز خذماء: مشقوقة الأذن عرضاً.",
+    "mecaz": "مر يخذم: يسرع في سيره. وفرس خذم. ورجل خذم بالعطاء: سمح سهل ببذله.\nخ ذ\nوأذن خذواء: مسترخية من أصلها على الخدين، وقد خذيت أذنه، وهو أخذى الأذن. وفرس أخذى. وتقول: في عينه قذى، وفي أذنه خذي، وحل به كذا فلم تقد له عينه، ولم تخذله أذنه. ويقال للحمار خذي لخدي أذنيه، ومنه استخذى له: إذا خضع.\nومن المجاز: ينمة خذواء: لينة وهي بقلة.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "خذمه: قطعه بسرعة. وسيف مخذم وخذم. وخذمت الدلو والنمل خذماً وهو انقطاع العري والشوع. وعنز خذماء: مشقوقة الأذن عرضاً.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "مر يخذم: يسرع في سيره. وفرس خذم. ورجل خذم بالعطاء: سمح سهل ببذله.",
+        "prototipe_benzerlik": 0.478,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وأذن خذواء: مسترخية من أصلها على الخدين، وقد خذيت أذنه، وهو أخذى الأذن. وفرس أخذى. وتقول: في عينه قذى، وفي أذنه خذي، وحل به كذا فلم تقد له عينه، ولم تخذله أذنه. ويقال للحمار خذي لخدي أذنيه، ومنه استخذى له: إذا خضع.",
+        "prototipe_benzerlik": 0.724,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "ومن المجاز: ينمة خذواء: لينة وهي بقلة.",
+        "prototipe_benzerlik": 0.6,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.601,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السلاح",
@@ -698,19 +731,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 2,
+      "kume": 1,
       "merkez_kok": "قره",
       "merkez_mana": "",
       "boy": 759
     },
     "orta": {
-      "kume": 4,
+      "kume": 2,
       "merkez_kok": "فلص",
       "merkez_mana": "",
       "boy": 494
     },
     "ince": {
-      "kume": 20,
+      "kume": 2,
       "merkez_kok": "جررب",
       "merkez_mana": "",
       "boy": 70

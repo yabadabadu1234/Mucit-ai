@@ -911,6 +911,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "لذعته النار والحرّ فالتذع، وتلذعت النار: تضرّمت.",
+    "mecaz": "لذع الحب قلبه. قال أبو دؤاد:\nفدمعي من ذكرها مسبلٌ ... وفي الصدر لذعٌ كلذع الغضا\nولذعته بلساني. والقيح يلذع القرحة، والتذعت القرحة من القيح. وأجد لذعةً ولوعةً. وإنك لمذّاع لذّاعٌ: لمن يعد بلسانه خيراً ثم يلذع بالخلف. وكلمته فإذا هو غضبان يتلذّع. ورأيته راكب بعيرٍ يتلذّع تحته. قال:\nتلذّع تحته أجذٌ طوتها ... نسوع الرّحل عارفةٌ صبور\nورجل لوذعيّ: ذكيّ حديد النفس. قال يرثي ابن لبنى:\nأذلّت هذيل يا ابن لبنى وجدّعت ... أنوفهم باللوذعيّ الحلاحل",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "لذعته النار والحرّ فالتذع، وتلذعت النار: تضرّمت.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "لذع الحب قلبه. قال أبو دؤاد:",
+        "prototipe_benzerlik": 0.491,
+        "halka": "orta"
+      },
+      {
+        "cumle": "ولذعته بلساني. والقيح يلذع القرحة، والتذعت القرحة من القيح. وأجد لذعةً ولوعةً. وإنك لمذّاع لذّاعٌ: لمن يعد بلسانه خيراً ثم يلذع بالخلف. وكلمته فإذا هو غضبان يتلذّع. ورأيته راكب بعيرٍ يتلذّع تحته. قال:",
+        "prototipe_benzerlik": 0.447,
+        "halka": "orta"
+      },
+      {
+        "cumle": "ورجل لوذعيّ: ذكيّ حديد النفس. قال يرثي ابن لبنى:",
+        "prototipe_benzerlik": 0.588,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.509,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الإبل",
@@ -922,21 +955,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 509
     },
     "orta": {
-      "kume": 8,
-      "merkez_kok": "وغر",
-      "merkez_mana": "to become enraged, to become angry, to be filled with malice",
-      "boy": 80
+      "kume": 7,
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 259
     },
     "ince": {
-      "kume": 40,
+      "kume": 32,
       "merkez_kok": "عير",
       "merkez_mana": "Ayr: merkep, eşek; ğayr: başka",
-      "boy": 44
+      "boy": 33
     }
   },
   "kaliplar": {

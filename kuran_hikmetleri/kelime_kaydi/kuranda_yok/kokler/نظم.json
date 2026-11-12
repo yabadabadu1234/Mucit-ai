@@ -2728,6 +2728,96 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "نظمت الدر ونظّمته، ودر منظوم ومنظّم، وقد انتظم وتنظّم وتناظم، وله نظم منه ونظام ونظمٌ.",
+    "mecaz": "نظم الكلام. وهذا نظم حسن، وانتظم كلامه وأمره. وليس لأمره نظام إذا لم تستقم طريقته، وتقول: هذه أمور عظام، لو كان لها نظام، ورمى صيداً افنتظمه بسهم. وطعنه فانتظم ساقيه أو جنبيه. قال الأفوه:\nتخلى الجماجم والأكفّ سيوفنا ... ورماحنا بالطعن تنتظم الكلى\nوهذان البيتان ينتظمهما معنًى واحدٌ. وجاءنا نظم من جراد ونظام منه: صف. ونظمت الضبّة والسمكة ونظّمت فهي ناظم ومنظّم: امتلأت من البيض: ونظمت النخلة: قبلت اللقاح، خردلت إذا لم تقبل. وفي بطنها إنظامان وهما الكشيتان وأناظيم:",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "نظمت الدر ونظّمته، ودر منظوم ومنظّم، وقد انتظم وتنظّم وتناظم، وله نظم منه ونظام ونظمٌ.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "نظم الكلام. وهذا نظم حسن، وانتظم كلامه وأمره. وليس لأمره نظام إذا لم تستقم طريقته، وتقول: هذه أمور عظام، لو كان لها نظام، ورمى صيداً افنتظمه بسهم. وطعنه فانتظم ساقيه أو جنبيه. قال الأفوه:",
+        "prototipe_benzerlik": 0.476,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وهذان البيتان ينتظمهما معنًى واحدٌ. وجاءنا نظم من جراد ونظام منه: صف. ونظمت الضبّة والسمكة ونظّمت فهي ناظم ومنظّم: امتلأت من البيض: ونظمت النخلة: قبلت اللقاح، خردلت إذا لم تقبل. وفي بطنها إنظامان وهما الكشيتان وأناظيم:",
+        "prototipe_benzerlik": 0.597,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.536,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "ability.n.02",
+    "act.n.02",
+    "adjust.v.01",
+    "arrange.v.01",
+    "arrange.v.02",
+    "arrange.v.07",
+    "artifact.n.01",
+    "cast.v.07",
+    "classify.v.01",
+    "condition.n.01",
+    "construct.v.01",
+    "content.n.05",
+    "control.v.01",
+    "control.v.02",
+    "cook.v.02",
+    "correct.v.01",
+    "direction.n.06",
+    "dispose.v.03",
+    "dress.v.01",
+    "dress.v.02",
+    "ensconce.v.01",
+    "fasten.v.01",
+    "fix.v.12",
+    "form.v.01",
+    "group_action.n.01",
+    "lay.v.02",
+    "living_thing.n.01",
+    "measure.v.04",
+    "normal.a.01",
+    "order.n.03",
+    "order.v.05",
+    "ordering.n.01",
+    "organization.n.01",
+    "organizationally.r.01",
+    "organize.v.02",
+    "organize.v.04",
+    "plan.v.01",
+    "plan.v.02",
+    "put.v.01",
+    "reconcile.v.03",
+    "register.v.01",
+    "regular.a.08",
+    "regularity.n.02",
+    "regularize.v.02",
+    "regulate.v.02",
+    "repair.v.01",
+    "roll.v.12",
+    "settle.v.01",
+    "settle.v.13",
+    "shape.v.02",
+    "shape.v.03",
+    "shed.v.01",
+    "sink.v.04",
+    "sow.v.01",
+    "sterilize.v.02",
+    "structure.n.03",
+    "system.n.02",
+    "system.n.03",
+    "system_of_measurement.n.01",
+    "system_of_weights_and_measures.n.01",
+    "write.v.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النساء",
@@ -2738,22 +2828,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 22,
+      "kume": 16,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 193
+      "boy": 287
     },
     "ince": {
-      "kume": 128,
-      "merkez_kok": "سطر",
-      "merkez_mana": "Satr: çizgi, satır; kitap yazmak",
-      "boy": 13
+      "kume": 96,
+      "merkez_kok": "ءشر",
+      "merkez_mana": "Eşer: kibir, şımarıklık; eşir: kendini beğenmiş",
+      "boy": 28
     }
   },
   "kaliplar": {

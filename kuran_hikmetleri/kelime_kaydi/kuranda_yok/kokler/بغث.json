@@ -688,6 +688,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "صفر أبغث، والبغث الغبرة، وهو من أباغث الطير. وشاة بغثاء وغثم بغث: فيها سواد وبياض.",
+    "mecaz": "خرج فلان في البغثاء والغثراء وهم أخلاط الناس. وتقول: هم من بغثاء الخيل، وغثاء السيل. وفي مثل: \" إن البغاث بأرضنا تستنسر \".",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "صفر أبغث، والبغث الغبرة، وهو من أباغث الطير. وشاة بغثاء وغثم بغث: فيها سواد وبياض.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "خرج فلان في البغثاء والغثراء وهم أخلاط الناس. وتقول: هم من بغثاء الخيل، وغثاء السيل. وفي مثل: \" إن البغاث بأرضنا تستنسر \".",
+        "prototipe_benzerlik": 0.44,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.44,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطير",
@@ -698,19 +721,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 2,
+      "kume": 1,
       "merkez_kok": "قره",
       "merkez_mana": "",
       "boy": 759
     },
     "orta": {
-      "kume": 3,
+      "kume": 1,
       "merkez_kok": "تيع",
       "merkez_mana": "",
       "boy": 265
     },
     "ince": {
-      "kume": 19,
+      "kume": 1,
       "merkez_kok": "تيع",
       "merkez_mana": "",
       "boy": 265

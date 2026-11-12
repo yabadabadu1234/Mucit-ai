@@ -1223,6 +1223,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "نشب العظم في الحلق والصيد في الحبالة ومخالب الجارح في الأخيذة، وتنشّب. وأنشب فيه مخالبه. ورماه بنشّابة، وتراموا بالنّشّاب والنشاشيب. ومعهم ناشبة: رماة بالنشّاب. وبرد منشّب نحو: مسهّم وشيه يشبه أفاويق السهام. قال:\nلكلّ حال قد لبست أثوباً ... رياطه واليمنة المنشّبا\nوقال كثير:\nهضيم الحشا رود المطا بختريّة ... جميل عليها الأتحميّ المنشّب\nوله نشبٌ: مال أصيل. وتقول: لكم نسب، وما لكم نشب، ما أنتم إلا خشب.",
+    "mecaz": "نشب الشرّ والحرب بينهم نشوباً. وناشب عدوّه مناشبةً. وما نشبت أقول ذاك، نحو: ما علقت، بمعنى: ما زلت. وما نشب أن قال كذا، ولم ينشب أن قال، بمعنى: ما لبث. ونشب فلان منشب سوء إذا وقع موقعاً لا يتخلّص منه. وسمعت الأمير الشريف:\nقد نشبت رجل حيضيٍّ منشب\nورجل نشبة إذا نشب في أمرٍ لم يكد ينحلّ عنه وإن كان غيّاً. وتنشّب في قلبي حبها. قال عمر بن أبي ربيعة:\nفأرى القلب قد تنشب فيه ... حبٌّ هند فما يطيق نزوعاً",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "نشب العظم في الحلق والصيد في الحبالة ومخالب الجارح في الأخيذة، وتنشّب. وأنشب فيه مخالبه. ورماه بنشّابة، وتراموا بالنّشّاب والنشاشيب. ومعهم ناشبة: رماة بالنشّاب. وبرد منشّب نحو: مسهّم وشيه يشبه أفاويق السهام. قال: لكلّ حال قد لبست أثوباً ... رياطه واليمنة المنش",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "نشب الشرّ والحرب بينهم نشوباً. وناشب عدوّه مناشبةً. وما نشبت أقول ذاك، نحو: ما علقت، بمعنى: ما زلت. وما نشب أن قال كذا، ولم ينشب أن قال، بمعنى: ما لبث. ونشب فلان منشب سوء إذا وقع موقعاً لا يتخلّص منه. وسمعت الأمير الشريف:",
+        "prototipe_benzerlik": 0.975,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "قد نشبت رجل حيضيٍّ منشب",
+        "prototipe_benzerlik": 0.081,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "ورجل نشبة إذا نشب في أمرٍ لم يكد ينحلّ عنه وإن كان غيّاً. وتنشّب في قلبي حبها. قال عمر بن أبي ربيعة:",
+        "prototipe_benzerlik": 0.452,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.503,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["artifact.n.01", "engage.v.07", "happening.n.01", "thrust.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السلاح",
@@ -1233,22 +1266,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
+      "kume": 8,
       "merkez_kok": "قبب",
       "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "boy": 604
     },
     "orta": {
-      "kume": 43,
-      "merkez_kok": "خرز",
-      "merkez_mana": "awl",
-      "boy": 104
+      "kume": 32,
+      "merkez_kok": "دثر",
+      "merkez_mana": "Tedsîr: örtmek, bürümek; desr: örtü",
+      "boy": 148
     },
     "ince": {
-      "kume": 281,
-      "merkez_kok": "خرز",
-      "merkez_mana": "awl",
-      "boy": 42
+      "kume": 206,
+      "merkez_kok": "طنف",
+      "merkez_mana": "overhang of a mountain, projectory part of a peak in a landscape, knol",
+      "boy": 13
     }
   },
   "kaliplar": {

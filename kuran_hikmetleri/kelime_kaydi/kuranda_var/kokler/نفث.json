@@ -1254,11 +1254,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "erupt.v.05",
-    "orta": "verb.change",
-    "ust": "fiil ve hadise",
-    "dayanak_synset": "erupt.v.05",
-    "dayanak_tanim": "become active and spew forth lava and rocks",
+    "ince": "emit.v.01",
+    "orta": "verb.body",
+    "ust": "canlı ve beden",
+    "dayanak_synset": "emit.v.01",
+    "dayanak_tanim": "expel (gases or odors)",
     "synset_sayisi": 9
   },
   "ses_mana_tasnif": {
@@ -1269,6 +1269,39 @@
     "fasil_ozeti": "° معنى الفصل المعجمي (نف) : نفاذ أو إبعاد بانتشار كنف الأرض: بَذرها في (نقف)، وكنفِي الرِّيح وهو ما نُفى من التراب من أصول الحيطان- في (نفى)، وكنفْث الشظيّة من السواك من الفم- في (نفث)، وكما تنفح القوس السهم فتبِعدُه- في (نفح)، وكما ينفُخ كيرُ الحداد الهواء الذي تُلْهب به النَّار- في (نفخ)، وكذهاب ماء الركية وزاد القوم دون بقية منه- في (نفد)، وكامتداد سموم البدن (أي ثقويه) من ظاهره إلى داخله أو العكس والنفاذ من الشيء ابتعاد - في (نفذ)، وكاندفاع النفير من",
     "tam_metin": "{وَمِنْ شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ} [الفلق: 4]\n\"النُفَاثَة -كرُخامة: ما تَنْفُثُه من فيك، والشَظِيَّة من السواك تبقى في فم الرجل فيَنْفُثُها. الحية تَنفُث السُمَّ حين تَنْكُز. ويقال دَمٌ نفيث، وسُمٌّ نفيث \".\n° المعنى المحوري\nتَفْلُ البريق ونحوه من الفم أي إخراجه بنحو النَفّخ. كالريق وشظايا السواك. ونفيث الدم والسُم، ومنه \"الجُرْح يَنْفُث الدم \". ومنه \"النَفَّاثات والنَوَافث في العقد: السواحِرُ حين يَنفُثْن في عُقَد الخيط (حين يرقين عليها) بلا ريق. {وَمِنْ شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ} [قر 20/ 257]."
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "نفث الشيء من فيه: رمى به ونفث ريقه. ونفث في العقدة. ونفث عليه عند الرقية. قال:\nفإن يبرأ فلم أنفث عليه ... وإن يهلك فذلك كان قدري\nأي تقديري. ولو نفث عليك فلان لقطّرك: تقوله لمن يقاوي من فوقه. ولو سألتني نفاثة سواك ما أعطيتك. ودم نفيث: نفثه العرق.",
+    "mecaz": "امرا نفّاثة: سحّارة. ورجل منفوث: مسحور. وهذامن نفاثات فلان: من شعره. \" ولا بدّ للمصدور أن ينفث \"، وهذه نفثه مصدور، ونفث في روعي كذا: ألهمته.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Cebel mihverî mana",
+    "prototip": "تَفْلُ البريق ونحوه من الفم أي إخراجه بنحو النَفّخ. كالريق وشظايا السواك. ونفيث الدم والسُم، ومنه \"الجُرْح يَنْفُث الدم \". ومنه \"النَفَّاثات والنَوَافث في العقد: السواحِرُ حين يَنفُثْن في عُقَد الخيط (حين يرقين عليها) بلا ريق. {وَمِنْ شَرِّ النَّفَّاثَاتِ فِي ",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "امرا نفّاثة: سحّارة. ورجل منفوث: مسحور. وهذامن نفاثات فلان: من شعره. \" ولا بدّ للمصدور أن ينفث \"، وهذه نفثه مصدور، ونفث في روعي كذا: ألهمته.",
+        "prototipe_benzerlik": 0.478,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.478,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "breathe.v.01",
+    "eject.v.01",
+    "emit.v.01",
+    "erupt.v.05",
+    "exhaust.v.05",
+    "expel.v.01",
+    "express.v.02",
+    "talk.v.02",
+    "utter.v.02"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الحشرات",
@@ -1279,22 +1312,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "kume": 5,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 375
     },
     "orta": {
-      "kume": 11,
-      "merkez_kok": "دحر",
-      "merkez_mana": "Dahr: itmek, uzaklaştırmak",
-      "boy": 179
+      "kume": 14,
+      "merkez_kok": "غدر",
+      "merkez_mana": "Gadr: ihanet, hile",
+      "boy": 153
     },
     "ince": {
-      "kume": 63,
+      "kume": 78,
       "merkez_kok": "خبط",
       "merkez_mana": "Habt: karanlıkta yürümek, şaşırmak",
-      "boy": 22
+      "boy": 40
     }
   },
   "kaliplar": {

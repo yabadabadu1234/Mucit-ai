@@ -1073,6 +1073,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "شذ عن الجماعة شذوذاَ: انفرد عنهم. وهو من شذاذ القوم: من الذين هم فيهم وليسوا منهم. وجاءني شذان الناس: متفرقوهم.",
+    "mecaz": "هو شاذ عن القياس. وهذا مما شذ عن الأصول. وكلمة شاذة. وأصابه شذان الحصى: ما تفرق منه.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "شذ عن الجماعة شذوذاَ: انفرد عنهم. وهو من شذاذ القوم: من الذين هم فيهم وليسوا منهم. وجاءني شذان الناس: متفرقوهم.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "هو شاذ عن القياس. وهذا مما شذ عن الأصول. وكلمة شاذة. وأصابه شذان الحصى: ما تفرق منه.",
+        "prototipe_benzerlik": 0.457,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.457,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["condition.n.01", "living_thing.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "المثنيات",
@@ -1083,22 +1106,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "kume": 6,
+      "merkez_kok": "درك",
+      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
+      "boy": 1364
     },
     "orta": {
-      "kume": 38,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 203
+      "kume": 15,
+      "merkez_kok": "زور",
+      "merkez_mana": "Zûr: yalan, sahtelik",
+      "boy": 133
     },
     "ince": {
-      "kume": 242,
-      "merkez_kok": "محش",
-      "merkez_mana": "",
-      "boy": 29
+      "kume": 86,
+      "merkez_kok": "عتو",
+      "merkez_mana": "Utüvv: azgınlık, büyüklenme",
+      "boy": 42
     }
   },
   "kaliplar": {

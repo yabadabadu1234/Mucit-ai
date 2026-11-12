@@ -951,6 +951,44 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "أرتج الباب: أغلقه إغلاقاً وثيقاً، ورباب مرتج، وبيت مرتج.",
+    "mecaz": "صعد المنبر فأرتج عليه إذا استغلق عليه الكلام، وفي كلامه رتج: تتعتع، وربح في منطقه رتجاً. وسكة رتج: لا منفذ لها. ومال رتج: لا سبيل إليه. وأرتجت الناقة: حملت فأغلقت رحمها على الماء، وناقة مرتج، ونوق مراتج ومراتيج. قال ذو الرمة:\nكأنا نشد الرحل فوق مراتج ... من الحقب أسفى حزنها وسهولها\nأي خرج سفا بهماها. وأرتجت الدّجاجة: امتلأ بطنها بيضاً. وزلّوا عن المناهج، فوقعوا في المراتج؛ وهي الطرق الضيقة. وناقة رتاج الصّلا: موثقته كأنه رتاج: قال حميد بن ثور:\nرتاج الصّلا معروشة الزّور أشرفت ... على عسب تعلو بها وتصوب\nوقال ذو الرمة:\nرتاج الصلا مكنوزة الحاذ يستوي ... على مثل خلقاء الصفاة شليلها\nوجعل ماله في رتاج الكعبة إذا جعله هدياً إليها. قال:\nإذا أحلفوني في عليّة أجنحت ... يميني إلى شطر الرتاج المضبب\nأي حلفت بالكعبة.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "أرتج الباب: أغلقه إغلاقاً وثيقاً، ورباب مرتج، وبيت مرتج.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "صعد المنبر فأرتج عليه إذا استغلق عليه الكلام، وفي كلامه رتج: تتعتع، وربح في منطقه رتجاً. وسكة رتج: لا منفذ لها. ومال رتج: لا سبيل إليه. وأرتجت الناقة: حملت فأغلقت رحمها على الماء، وناقة مرتج، ونوق مراتج ومراتيج. قال ذو الرمة:",
+        "prototipe_benzerlik": 0.368,
+        "halka": "orta"
+      },
+      {
+        "cumle": "أي خرج سفا بهماها. وأرتجت الدّجاجة: امتلأ بطنها بيضاً. وزلّوا عن المناهج، فوقعوا في المراتج؛ وهي الطرق الضيقة. وناقة رتاج الصّلا: موثقته كأنه رتاج: قال حميد بن ثور:",
+        "prototipe_benzerlik": 0.443,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وجعل ماله في رتاج الكعبة إذا جعله هدياً إليها. قال:",
+        "prototipe_benzerlik": 0.08,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "أي حلفت بالكعبة.",
+        "prototipe_benzerlik": 0.261,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.288,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "خلق الإنسان",
@@ -961,22 +999,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "kume": 7,
+      "merkez_kok": "لقلق",
+      "merkez_mana": "",
+      "boy": 386
     },
     "orta": {
-      "kume": 7,
-      "merkez_kok": "كرب",
-      "merkez_mana": "Karb: sıkıntı, keder; kurbet: sıkıntı",
-      "boy": 139
+      "kume": 31,
+      "merkez_kok": "وجف",
+      "merkez_mana": "Vecf: titremek, çarpmak",
+      "boy": 65
     },
     "ince": {
-      "kume": 32,
+      "kume": 202,
       "merkez_kok": "هزز",
       "merkez_mana": "Hazz: sallamak, sarsmak",
-      "boy": 11
+      "boy": 18
     }
   },
   "kaliplar": {

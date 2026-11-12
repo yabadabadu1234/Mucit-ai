@@ -1536,13 +1536,64 @@
     "ince": "event.n.01",
     "orta": "noun.event",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "shock.n.06",
-    "dayanak_tanim": "an unpleasant or disappointing surprise",
+    "dayanak_synset": "collision.n.01",
+    "dayanak_tanim": "(physics) a brief event in which two or more bodies come together",
     "synset_sayisi": 30
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "صدمه الحمار. وصدمته الغرارة وصادمته. والفارسان يتصادمان. وتصادم الفحلان والجيشان واصطدما. وضربه على صدمته وهما العظمان بينهما الجبهة.",
+    "mecaz": "صدمت الشرّ بالشرّ. وصدمهم أمر شديد. \" والصبر عند الصدمة الأولى \". وأتيت على الأمرين صدمةً واحدة، كما تقول: ضربة، وأعطاه رزق شهرين صدمة. وقال عبد الملك للحجاج: إني استعملتك على العراقين صدمة فاخرج إليهما كميش الإزار. وصدمته حميّا الكأس. ورجل مصدم: مجرب:",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "صدمه الحمار. وصدمته الغرارة وصادمته. والفارسان يتصادمان. وتصادم الفحلان والجيشان واصطدما. وضربه على صدمته وهما العظمان بينهما الجبهة.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "صدمت الشرّ بالشرّ. وصدمهم أمر شديد. \" والصبر عند الصدمة الأولى \". وأتيت على الأمرين صدمةً واحدة، كما تقول: ضربة، وأعطاه رزق شهرين صدمة. وقال عبد الملك للحجاج: إني استعملتك على العراقين صدمة فاخرج إليهما كميش الإزار. وصدمته حميّا الكأس. ورجل مصدم: مجرب:",
+        "prototipe_benzerlik": 0.339,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.339,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "act.n.02",
+    "affect.v.01",
+    "affect.v.05",
+    "bump.v.01",
+    "collide.v.02",
+    "collide.v.03",
+    "feeling.n.01",
+    "group_action.n.01",
+    "happening.n.01",
+    "hit.v.02",
+    "hit.v.03",
+    "hit.v.05",
+    "hurt.v.05",
+    "intervene.v.01",
+    "meet.v.01",
+    "meet.v.02",
+    "meet.v.04",
+    "meet.v.05",
+    "meet.v.06",
+    "meet.v.07",
+    "meet.v.10",
+    "reach.v.01",
+    "reach.v.02",
+    "score.v.01",
+    "strike.v.01",
+    "touch.v.05",
+    "traumatize.v.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السلاح",
@@ -1553,22 +1604,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "kume": 5,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 375
     },
     "orta": {
       "kume": 13,
       "merkez_kok": "صدد",
       "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
-      "boy": 93
+      "boy": 76
     },
     "ince": {
-      "kume": 72,
+      "kume": 76,
       "merkez_kok": "عوق",
       "merkez_mana": "Avk: engellemek; avâk: engel",
-      "boy": 19
+      "boy": 17
     }
   },
   "kaliplar": {

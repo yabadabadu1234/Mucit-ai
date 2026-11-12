@@ -1,0 +1,63 @@
+{
+  "kok": "ذهـب",
+  "sinif": "reddedildi",
+  "turkce_fiil": null,
+  "mustaklar": {},
+  "reddedilen": [
+    ["kök", "ذهـب", "üç harfli değil"]
+  ],
+  "sozlukler": {},
+  "kuran_gecisleri": 0,
+  "kuranda_var": false,
+  "sema": {
+    "sema": "graf-ic-graf",
+    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
+    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
+    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
+    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
+    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
+  },
+  "tasnif": {
+    "fasil": "ذه",
+    "harf": "ذ",
+    "mahrec": "lessiyye",
+    "bolge": "dil"
+  },
+  "mana_tasnif": {
+    "durum": "Arabic WordNet v2 kaydı yok"
+  },
+  "ses_mana_tasnif": {
+    "durum": "Cebel mu'cemlerinde kök yok"
+  },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "ذهب من داره إلى المسجد ذهاباً ومذهباً. وذهب مذهباً بعيداً. وأذهبه: جعله ذاهباً. وذهب به: مرّ به مع نفسه. وكثر عنده الذهب وكثرت عند أهل الحجاز. ويقولون: أعطني ذهيبتي. وعندي ذهبة: قطعة من الذهب. ولفلان ذهبان وأذهاب كثيرة. ورجل ذهب: يرى الذهب فيدهش ويبرق بصره من عظمه في عينه. ولوح مذهب ومذهب. واطلب لي المذاهب وهي السيور المموهة بالذهب. وكميت مذهب: تعلو حمرته صفرة. ووقعت الذهاب في أرضنا جمع ذهبة وهي أمطار غزار.",
+    "mecaz": "والكناية: ذهب فلان مذهباً حسناً. وذهب عليّ كذا: نسبته. وذهب الرجل في القوم والماء في اللبن: ضل. وفلان يذهب إلى قول أبي حنيفة أي يأخذ به. وذهبت به الخيلاء. وخرج إلى المذهب وهو المتوضأ عند أهل الحجاز. وتقول: مثل مذهبكم وقدره، مثل مذهبكم وقذره؛ وذهب في الأرض: كناية عن الإبداء. وأبعد فلان المذهب وأبعد الأثر. تنحى للإبداء.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "ذهب من داره إلى المسجد ذهاباً ومذهباً. وذهب مذهباً بعيداً. وأذهبه: جعله ذاهباً. وذهب به: مرّ به مع نفسه. وكثر عنده الذهب وكثرت عند أهل الحجاز. ويقولون: أعطني ذهيبتي. وعندي ذهبة: قطعة من الذهب. ولفلان ذهبان وأذهاب كثيرة. ورجل ذهب: يرى الذهب فيدهش ويبرق بصره من ",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "والكناية: ذهب فلان مذهباً حسناً. وذهب عليّ كذا: نسبته. وذهب الرجل في القوم والماء في اللبن: ضل. وفلان يذهب إلى قول أبي حنيفة أي يأخذ به. وذهبت به الخيلاء. وخرج إلى المذهب وهو المتوضأ عند أهل الحجاز. وتقول: مثل مذهبكم وقدره، مثل مذهبكم وقذره؛ وذهب في الأرض: كناية عن الإبداء. وأبعد فلان المذهب وأبعد ا",
+        "prototipe_benzerlik": 0.529,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.529,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
+  "muhassas_tasnif": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "mana_tasnif_gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
+  },
+  "kaliplar": {},
+  "kelimeler": []
+}

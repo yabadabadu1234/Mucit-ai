@@ -1255,7 +1255,7 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "part.n.01",
+    "ince": "substance.n.01",
     "orta": "noun.substance",
     "ust": "tabiat",
     "dayanak_synset": "solvent.n.01",
@@ -1265,6 +1265,64 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "ذاب الشحم والثلج وغيرهما ذوباً وذوباناً. وأذبته أنا وذوّبته. وشحم مذاب ومذوب.",
+    "mecaz": "ذاب دمعه، وله دموع ذوائب. ونحن لا نجمد في الحق ولا نذوب في الباطل. وهذا الكلام ذوب الروح. وذابت الشمس: اشتد حرّها. قال ذو الرمة:\nإذا ذابت الشمس اتقى صفراتها ... بأفنان مربوع الصريمة معبل\nوهاجرة ذوّابة. قال:\nوظلماء من جرّي نوار سريتها ... وهاجرة ذؤابة لا أقيلها\nوقال الطرماح:\nفيها ابن بجدتها يكاد يذيبه ... وقد النهار إذا استذاب الصيخد\nوذاب لي عليه حق: ثبت ووجب. ويقال لمن أنضج حاجته وأتمها: قد أذاب حاجته واستذابها. وأذاب عليهم العدو: أغار وانتهب. ويقال للثقيل: إنه لذائب النفس. وهو أحلى من الذوب بالإذوابة أي من العسل الذي أذيب حتى خلص من الشمع بالزبدة التي أذيبت وخلص منها السمن. وذاب جسم الرجل: هزل. يقال: ثاب بعد ما ذاب. وناقة ذءوب: سمينة لأنه يجمع منها ما يذاب. يقال: إن كانت جزوركم لذءوباً. وذابت حدقته: همعت. قال الجعدي:\nيرمين بالحدق الذواب أميالاً\nوأذابه الهم. والهم يشيب ويذيب.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "ذاب الشحم والثلج وغيرهما ذوباً وذوباناً. وأذبته أنا وذوّبته. وشحم مذاب ومذوب.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "ذاب دمعه، وله دموع ذوائب. ونحن لا نجمد في الحق ولا نذوب في الباطل. وهذا الكلام ذوب الروح. وذابت الشمس: اشتد حرّها. قال ذو الرمة:",
+        "prototipe_benzerlik": 0.492,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وهاجرة ذوّابة. قال:",
+        "prototipe_benzerlik": 0.433,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وذاب لي عليه حق: ثبت ووجب. ويقال لمن أنضج حاجته وأتمها: قد أذاب حاجته واستذابها. وأذاب عليهم العدو: أغار وانتهب. ويقال للثقيل: إنه لذائب النفس. وهو أحلى من الذوب بالإذوابة أي من العسل الذي أذيب حتى خلص من الشمع بالزبدة التي أذيبت وخلص منها السمن. وذاب جسم الرجل: هزل. يقال: ثاب بعد ما ذاب. وناقة ذءوب",
+        "prototipe_benzerlik": 0.052,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "يرمين بالحدق الذواب أميالاً",
+        "prototipe_benzerlik": 0.476,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وأذابه الهم. والهم يشيب ويذيب.",
+        "prototipe_benzerlik": 0.415,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.374,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "dissolve.v.02",
+    "dissolve.v.08",
+    "dissolve.v.09",
+    "liquefy.v.03",
+    "material.n.01",
+    "medium.n.07",
+    "melt.v.01",
+    "melted.a.01",
+    "render.v.01",
+    "soluble.a.01",
+    "solvate.v.02",
+    "solve.v.01",
+    "supply.v.01",
+    "temperature_change.n.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
@@ -1275,22 +1333,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 7,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 331
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 31,
+      "kume": 36,
       "merkez_kok": "سكب",
       "merkez_mana": "Sakb: dökmek, boşaltmak",
-      "boy": 76
+      "boy": 101
     },
     "ince": {
-      "kume": 206,
+      "kume": 239,
       "merkez_kok": "ذرف",
       "merkez_mana": "to flow (tears)",
-      "boy": 26
+      "boy": 30
     }
   },
   "kaliplar": {

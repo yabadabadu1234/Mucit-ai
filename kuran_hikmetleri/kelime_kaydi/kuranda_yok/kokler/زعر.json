@@ -721,6 +721,59 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "فيه زعر: قلة شعر وريش وتفرّق حتى يبدو الجلد. قال ذو الرمة:\nكأنها خاضب زعر قوادمه ... أجنى له باللوى آءٌ وتنوم\nوهو أزعر وهي زعراء، وقد زعر وازعار.",
+    "mecaz": "مكان أزعر: قليل النبات كقولهم: أكمة صلعاء. وزعر الرجل زعراً إذا ساء خلقه وقل خيره، وخلق زعر معر، وفيه زعر وزعارة بالتخفيف والتشديد. وتقول: فلان تدعيه الدعارة، وتشهد له الزعارة.\nز ع ز ع\nزعزعت الريح الشجر وهو التحريك بشدة، وأزعزع الشيء وتزعزع قالت:\nفوالله لولا الله لا شيء غيره ... لزعزع من هذا السرير وجوانبه\nوريح زعزع وزعزاع ورياح زعازع.\nومن المجاز: جريٌ زعزع: شديد. قال:\nوبه إلى أخرى الصحاب تلفت ... وبه إلى المكروب حريّ زعزع\nونزلت به زعازع الدهر: شدائده. قال سلمان ابن محيي البولان:\nإنا لتحل الفضاء بيوتنا ... إذا زعزعت مولى الذليل الزعازع\nوزعزعت الإبل في السير فتزعزعت: حثثتها. قال الأخطل:\nوما خفت منها البين حتى تزعزعت ... هماليجها وآروز عني دليلها\nر ع فب زعفر الثوب: صبغه الزعفران. وثوب مزعفر. وتقول: لا يستوي الأعفر بالصريمه. والمزعفر ذو الصريمة. والأسد ذو الجدّ والعزيمة.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "فيه زعر: قلة شعر وريش وتفرّق حتى يبدو الجلد. قال ذو الرمة: كأنها خاضب زعر قوادمه ... أجنى له باللوى آءٌ وتنوم وهو أزعر وهي زعراء، وقد زعر وازعار.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "مكان أزعر: قليل النبات كقولهم: أكمة صلعاء. وزعر الرجل زعراً إذا ساء خلقه وقل خيره، وخلق زعر معر، وفيه زعر وزعارة بالتخفيف والتشديد. وتقول: فلان تدعيه الدعارة، وتشهد له الزعارة.",
+        "prototipe_benzerlik": 0.255,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "زعزعت الريح الشجر وهو التحريك بشدة، وأزعزع الشيء وتزعزع قالت:",
+        "prototipe_benzerlik": 0.213,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وريح زعزع وزعزاع ورياح زعازع.",
+        "prototipe_benzerlik": 0.106,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "ومن المجاز: جريٌ زعزع: شديد. قال:",
+        "prototipe_benzerlik": 0.32,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "ونزلت به زعازع الدهر: شدائده. قال سلمان ابن محيي البولان:",
+        "prototipe_benzerlik": 0.93,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وزعزعت الإبل في السير فتزعزعت: حثثتها. قال الأخطل:",
+        "prototipe_benzerlik": 0.513,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "ر ع فب زعفر الثوب: صبغه الزعفران. وثوب مزعفر. وتقول: لا يستوي الأعفر بالصريمه. والمزعفر ذو الصريمة. والأسد ذو الجدّ والعزيمة.",
+        "prototipe_benzerlik": 0.787,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.446,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "خلق الإنسان",
@@ -731,22 +784,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "kume": 2,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 466
     },
     "orta": {
-      "kume": 42,
-      "merkez_kok": "وبر",
-      "merkez_mana": "Vaber: yün, deve tüyü; vebr: tavşan",
-      "boy": 84
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 266,
-      "merkez_kok": "صلع",
-      "merkez_mana": "bald pate, bald head",
-      "boy": 9
+      "kume": 18,
+      "merkez_kok": "جهو",
+      "merkez_mana": "",
+      "boy": 7
     }
   },
   "kaliplar": {

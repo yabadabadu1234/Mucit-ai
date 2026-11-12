@@ -1038,11 +1038,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "person.n.01",
+    "ince": "whole.n.02",
     "orta": "noun.person",
     "ust": "insan ve toplum",
-    "dayanak_synset": "monarchist.n.01",
-    "dayanak_tanim": "an advocate of the principles of monarchy",
+    "dayanak_synset": "sovereign.n.01",
+    "dayanak_tanim": "a nation's ruler or head of state usually by hereditary right",
     "synset_sayisi": 42
   },
   "ses_mana_tasnif": {
@@ -1053,32 +1053,90 @@
     "fasil_ozeti": "° معنى الفصل المعجمي (لك): نوع من التراكم يتمثل في الاكتناز باللحم في (لكك) كالجمل اللُكالِك: الضخم، وفي ضغط الماضغ العلوك ومضغ الفرس اللجام في (ألك).",
     "tam_metin": "\"جمل لُكَالِك - كتُماضِر: عظيم ضخم. ورجل لُكِّيّ - كلُجِّى: مكتنز اللحم. وناقة لُكِّيّة ولِكَاك - ككتاب: شديدة اللحم مرميّةٌ به رميًا. واللَكِيك فرسًا أو غيره: الصُلْب المكتنز من اللحم \".\n° المعنى المحوري\nتراكم اللحم ونحوه على بدن الحيّ مع تلازُب واشتداد (1) -كما هو واضح في تلك الاستعمالات. ومنه: \"اللِكَاك: الزِحام. الْتَكَّ الورْدُ: ازدحم وضرب بعضُه بعضًا. واللُكّ -بالضم صِبْغ أحمر (يُمسك لدة) وثُفْله أو عُصارته يُرَكَّب به النَصْل في النِصاب (إمساك بشدة). والْتَكَّ في حُجّته: أبطأ (عدم تسيُّب) وفي كلامه: أَخْطأ (جفاء وغلظ). ولَكَّه: ضربه بجُمْعه في قفاه \" (رَكْم شديد)."
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "لحم لكيكٌ: مكتنز، وفرس لكيك اللحم. وجملٌ لكّيٌّ، وناقة لكّيةٌ، ولكّ لحمها إذا كانا حادرين لحيمين. قال:\nإن لها سانيةً لكّياً ... مداجناً ما يخبط الصبيّا\nوقال العبديّ:\nحتى تلاقيت بلكّيّةٍ ... تامكة الحارك والمقحد\nوصبغ الجلد بالّلكّ بالفتح وهو صبغ أحمر، وجلد ملكوك: مصبوغ به. قال الأخطل:\nبأحمر من لكّ العراق وأسودا\nوشد نصاب السكين باللّكّ بالضم وهو ما ينحت من ذلك الجلد الملكوك.",
+    "mecaz": "عسكر لكيكٌ، وقد التكت جماعتهم، ولهم لكاك: زحام. واصطك الورد والتكّ. قال ذو الرمة:\nإذا التكّت الأوراد فرّجت بينها ... بعدل ولم تعجز عليك المصادر",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Cebel mihverî mana",
+    "prototip": "تراكم اللحم ونحوه على بدن الحيّ مع تلازُب واشتداد (1) -كما هو واضح في تلك الاستعمالات. ومنه: \"اللِكَاك: الزِحام. الْتَكَّ الورْدُ: ازدحم وضرب بعضُه بعضًا. واللُكّ -بالضم صِبْغ أحمر (يُمسك لدة) وثُفْله أو عُصارته يُرَكَّب به النَصْل في النِصاب (إمساك بشدة). وال",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "عسكر لكيكٌ، وقد التكت جماعتهم، ولهم لكاك: زحام. واصطك الورد والتكّ. قال ذو الرمة:",
+        "prototipe_benzerlik": 0.583,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.583,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "ability.n.02",
+    "accept.v.02",
+    "act.n.02",
+    "agree.v.01",
+    "bear.v.11",
+    "content.n.05",
+    "control.v.02",
+    "declare.v.04",
+    "deem.v.01",
+    "exuberate.v.01",
+    "give_birth.v.01",
+    "have.v.01",
+    "have.v.02",
+    "hold.v.03",
+    "hold.v.11",
+    "hold.v.14",
+    "hold.v.22",
+    "hold.v.36",
+    "induce.v.02",
+    "keep.v.01",
+    "living_thing.n.01",
+    "own.v.01",
+    "ownership.n.01",
+    "ownership.n.03",
+    "political_system.n.01",
+    "possess.v.01",
+    "possession.n.02",
+    "predominate.v.01",
+    "property.n.01",
+    "proprietorship.n.01",
+    "region.n.03",
+    "restrain.v.03",
+    "suffer.v.02",
+    "undergo.v.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الغرائز",
     "bab": "السر",
-    "kok_gecis": 481.2,
+    "kok_gecis": 480.9,
     "kitapta_gecis": 50.3,
     "zenginlesme": 2.18
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 18,
-      "merkez_kok": "همم",
-      "merkez_mana": "Hemm: istek, gayret; himmet",
-      "boy": 116
+      "kume": 15,
+      "merkez_kok": "زور",
+      "merkez_mana": "Zûr: yalan, sahtelik",
+      "boy": 133
     },
     "ince": {
-      "kume": 99,
+      "kume": 88,
       "merkez_kok": "هذب",
       "merkez_mana": "to discipline",
-      "boy": 19
+      "boy": 10
     }
   },
   "kaliplar": {

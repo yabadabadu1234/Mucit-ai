@@ -1073,16 +1073,54 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "substance.n.07",
-    "orta": "noun.food",
-    "ust": "canlı ve beden",
-    "dayanak_synset": "piece_de_resistance.n.02",
-    "dayanak_tanim": "the most important dish of a meal",
+    "ince": "whole.n.02",
+    "orta": "noun.artifact",
+    "ust": "cisim ve eşya",
+    "dayanak_synset": "crockery.n.01",
+    "dayanak_tanim": "tableware (eating and serving dishes) collectively",
     "synset_sayisi": 2
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "قعد في صحن الدار وهو ساحة وسطها ومستواه ومتسعه. وسرنا في صحن الفلاة وصحون الفلا. وما بصحن العراق مثله. وسقاهم في الصحن وهو عس عريض قصير الجدار كالجام. وأطعمهم الصحناة والحصناء.",
+    "mecaz": "جرى الدمع على صحني وجنتيه. وفرس واسع الصحن وهو جوف الحافر الذي يقال له: السكرجة.\nص ح\nوصحا من سكره صحواً وصحوا، وأصحيته أنا من سكره. قال:\nوجدتني ألوي بعيد القسر ... شغباً وأصحى نشوات الخمر\nوأصحت السماء، والسماء مصحية، وأصحى يومنا، ويومنا، ويوم مصح، وهذا يوم صحو: ووجهه كمصحاة اللجين وهي نحو الجام يشرب به.\nومن المجاز: صحا العاشق من عشقه إذا سلا وتقول: فيه مسلاة من كرب الهم، ومصحاة من سكر الغنم.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "قعد في صحن الدار وهو ساحة وسطها ومستواه ومتسعه. وسرنا في صحن الفلاة وصحون الفلا. وما بصحن العراق مثله. وسقاهم في الصحن وهو عس عريض قصير الجدار كالجام. وأطعمهم الصحناة والحصناء.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "جرى الدمع على صحني وجنتيه. وفرس واسع الصحن وهو جوف الحافر الذي يقال له: السكرجة.",
+        "prototipe_benzerlik": 0.51,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وصحا من سكره صحواً وصحوا، وأصحيته أنا من سكره. قال:",
+        "prototipe_benzerlik": 0.272,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وأصحت السماء، والسماء مصحية، وأصحى يومنا، ويومنا، ويوم مصح، وهذا يوم صحو: ووجهه كمصحاة اللجين وهي نحو الجام يشرب به.",
+        "prototipe_benzerlik": 0.454,
+        "halka": "orta"
+      },
+      {
+        "cumle": "ومن المجاز: صحا العاشق من عشقه إذا سلا وتقول: فيه مسلاة من كرب الهم، ومصحاة من سكر الغنم.",
+        "prototipe_benzerlik": 0.306,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.386,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["artifact.n.01", "food.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
@@ -1093,22 +1131,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
+      "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 426
+      "boy": 466
     },
     "orta": {
-      "kume": 1,
-      "merkez_kok": "جنح",
-      "merkez_mana": "Cünûh: meyletmek, eğilmek; cenâh: kanat",
-      "boy": 165
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 2,
-      "merkez_kok": "لحس",
-      "merkez_mana": "to lick, to lap",
-      "boy": 31
+      "kume": 15,
+      "merkez_kok": "دلق",
+      "merkez_mana": "to pour out, spill (e.g. a liquid)",
+      "boy": 58
     }
   },
   "kaliplar": {

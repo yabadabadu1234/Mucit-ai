@@ -1340,6 +1340,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "أصحروا: برزوا إلى الصحراء، ورأيتهم مصحرين. وأخبرني بالأمر صحرة بحرة، \" ولقيته صحرة بحرة \": بغير سترة. وسقوه صحيرة: حليباً سخن حتى احترق. وصحرته الشمس مثل صهرته، وقد صحروه. وحمار أصحر، وفيه صحرة وهي غبرة في حمرة، ولحمارك صحير: صوت شديد.",
+    "mecaz": "أصحر بالأمر وأصحره: أظهره، ولا تصحر أمرك. وأصحر بما في قلبك. وألقى زوره بصحراء التمرد. وفي مثل \" مالي ذنب إلا ذنب صحر \" وهي بنت لقمان بن عاد.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "أصحروا: برزوا إلى الصحراء، ورأيتهم مصحرين. وأخبرني بالأمر صحرة بحرة، \" ولقيته صحرة بحرة \": بغير سترة. وسقوه صحيرة: حليباً سخن حتى احترق. وصحرته الشمس مثل صهرته، وقد صحروه. وحمار أصحر، وفيه صحرة وهي غبرة في حمرة، ولحمارك صحير: صوت شديد.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "أصحر بالأمر وأصحره: أظهره، ولا تصحر أمرك. وأصحر بما في قلبك. وألقى زوره بصحراء التمرد. وفي مثل \" مالي ذنب إلا ذنب صحر \" وهي بنت لقمان بن عاد.",
+        "prototipe_benzerlik": 0.667,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.667,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["region.n.03"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الحشرات",
@@ -1350,22 +1373,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 37,
+      "kume": 43,
       "merkez_kok": "عقم",
       "merkez_mana": "Akm: kısır olmak; akim: kısır",
-      "boy": 70
+      "boy": 106
     },
     "ince": {
-      "kume": 237,
-      "merkez_kok": "عقم",
-      "merkez_mana": "Akm: kısır olmak; akim: kısır",
-      "boy": 17
+      "kume": 279,
+      "merkez_kok": "بيد",
+      "merkez_mana": "Beyd: boş, yok; beyde: beyaz",
+      "boy": 16
     }
   },
   "kaliplar": {

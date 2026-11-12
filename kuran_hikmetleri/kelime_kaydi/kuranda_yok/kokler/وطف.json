@@ -689,6 +689,44 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "في أشفاره وطفٌ: طول شعر واسترخاء.",
+    "mecaz": "سحابة وطفاء: لها هيدب، وسحاب وطف. وعيش أوطف: رخيّ.\nوط ن كلّ يحب وطنه وأوطانه وموطنه ومواطنه، والإبل تحن إلى أوطانها. وأطن الأرض ووطذنها وتوطذنها واستوطنها. وأرسلت الخيل من الميطان: من حيث توطّن للسباق.\nومن المجاز: هذه أوطان الغنم: لمرابضها. وثبت في موطن القتال ومواطنه وهي مشاهده. وإذا أتيت مكة فوقفت في تلك المواطن فادع لي ولإخواني أي في تلك المشاهد. ووطّنت نفسي على ذا فتوطّنت. قال:\nولا يخر فيمن لا يوطّن نفسه ... على نائبات الدهر حين تنوب\nوواطنته على الأمر: وافقته.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "في أشفاره وطفٌ: طول شعر واسترخاء.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "سحابة وطفاء: لها هيدب، وسحاب وطف. وعيش أوطف: رخيّ.",
+        "prototipe_benzerlik": 0.439,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وط ن كلّ يحب وطنه وأوطانه وموطنه ومواطنه، والإبل تحن إلى أوطانها. وأطن الأرض ووطذنها وتوطذنها واستوطنها. وأرسلت الخيل من الميطان: من حيث توطّن للسباق.",
+        "prototipe_benzerlik": 0.318,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "ومن المجاز: هذه أوطان الغنم: لمرابضها. وثبت في موطن القتال ومواطنه وهي مشاهده. وإذا أتيت مكة فوقفت في تلك المواطن فادع لي ولإخواني أي في تلك المشاهد. ووطّنت نفسي على ذا فتوطّنت. قال:",
+        "prototipe_benzerlik": 0.714,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وواطنته على الأمر: وافقته.",
+        "prototipe_benzerlik": 0.33,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.45,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "خلق الإنسان",
@@ -699,19 +737,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 2,
+      "kume": 1,
       "merkez_kok": "قره",
       "merkez_mana": "",
       "boy": 759
     },
     "orta": {
-      "kume": 4,
+      "kume": 2,
       "merkez_kok": "فلص",
       "merkez_mana": "",
       "boy": 494
     },
     "ince": {
-      "kume": 21,
+      "kume": 3,
       "merkez_kok": "مرت",
       "merkez_mana": "",
       "boy": 241

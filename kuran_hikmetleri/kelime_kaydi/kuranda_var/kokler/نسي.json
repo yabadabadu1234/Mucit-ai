@@ -1580,6 +1580,44 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "رأيت نسيّةً ونسيّاتٍ، ونسيته وتناسيته، وأنسانيه الشيطان ونسّانيه. وناساه العداوة. وشيء منسيّ، وتركته نسياً من الأنساء. وتتبّعوا أنساءكم. ورجل نسّاء وامرأة نسيٌّ. قال:\nونسيت وصاته وهي نسيّ\nوضربته فنسيته: أصبت نساه، وهو منسيٌّ.",
+    "mecaz": "نسيت الشيء: تركته \" نسوا الله فنسيهم \" وكرمك ينسّى كرم البرامكة.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "رأيت نسيّةً ونسيّاتٍ، ونسيته وتناسيته، وأنسانيه الشيطان ونسّانيه. وناساه العداوة. وشيء منسيّ، وتركته نسياً من الأنساء. وتتبّعوا أنساءكم. ورجل نسّاء وامرأة نسيٌّ. قال: ونسيت وصاته وهي نسيّ وضربته فنسيته: أصبت نساه، وهو منسيٌّ.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "نسيت الشيء: تركته \" نسوا الله فنسيهم \" وكرمك ينسّى كرم البرامكة.",
+        "prototipe_benzerlik": 0.259,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.259,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "bequeath.v.01",
+    "exit.v.01",
+    "forget.v.01",
+    "forget.v.02",
+    "forget.v.04",
+    "leave.v.01",
+    "leave.v.04",
+    "leave.v.08",
+    "leave.v.12",
+    "miss.v.02",
+    "neglect.v.01",
+    "sink.v.04",
+    "sink.v.05",
+    "slip.v.10"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النساء",
@@ -1590,22 +1628,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "kume": 5,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 375
     },
     "orta": {
       "kume": 13,
       "merkez_kok": "صدد",
       "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
-      "boy": 93
+      "boy": 76
     },
     "ince": {
-      "kume": 72,
+      "kume": 76,
       "merkez_kok": "عوق",
       "merkez_mana": "Avk: engellemek; avâk: engel",
-      "boy": 19
+      "boy": 17
     }
   },
   "kaliplar": {

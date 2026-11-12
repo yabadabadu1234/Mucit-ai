@@ -721,16 +721,23 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "whole.n.02",
-    "orta": "noun.artifact",
-    "ust": "cisim ve eşya",
-    "dayanak_synset": "edge.n.03",
-    "dayanak_tanim": "a sharp side formed by the intersection of two surfaces of an object",
+    "ince": "location.n.01",
+    "orta": "noun.location",
+    "ust": "ölçü, mekân ve zaman",
+    "dayanak_synset": "edge.n.01",
+    "dayanak_tanim": "the boundary of a surface",
     "synset_sayisi": 4
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "prototip_yayilim_tasnif": {
+    "durum": "prototip veya mecaz kolu yok"
+  },
+  "kolekzifikasyon_kavramlari": ["artifact.n.01", "line.n.04", "region.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "اللباس",
@@ -741,21 +748,21 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 6,
-      "merkez_kok": "لقلق",
-      "merkez_mana": "",
-      "boy": 440
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 24,
-      "merkez_kok": "هضهض",
-      "merkez_mana": "",
-      "boy": 97
+      "kume": 43,
+      "merkez_kok": "عقم",
+      "merkez_mana": "Akm: kısır olmak; akim: kısır",
+      "boy": 106
     },
     "ince": {
-      "kume": 138,
-      "merkez_kok": "حلي",
-      "merkez_mana": "Hilye: süs, takı; halâ: süslemek",
+      "kume": 287,
+      "merkez_kok": "طلي",
+      "merkez_mana": "tar, pitch, paint, liniment, oil, ointment, varnish, plaster, etc. (an",
       "boy": 7
     }
   },

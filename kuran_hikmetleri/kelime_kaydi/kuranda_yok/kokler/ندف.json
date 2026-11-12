@@ -730,6 +730,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "قطن مندوف ونديف ومندّف.",
+    "mecaz": "الدابة تندف في سيرها: تسرع رجع يديها. وندفت السماء علينا بمطر أو ثلج. وندف العوّاد بمزهره، وفلان ندّاف: عوّاد. قال الأعشى:\nجالس حوله النّدامى فما ين ... فك يؤتى بمزهر مندوف\nورجل نداف: كثير الأكل. ورأيته يندف الطعام ندفاً. وسقاني ندفة من لبن: شيئاً منه.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "قطن مندوف ونديف ومندّف.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "الدابة تندف في سيرها: تسرع رجع يديها. وندفت السماء علينا بمطر أو ثلج. وندف العوّاد بمزهره، وفلان ندّاف: عوّاد. قال الأعشى:",
+        "prototipe_benzerlik": 0.442,
+        "halka": "orta"
+      },
+      {
+        "cumle": "ورجل نداف: كثير الأكل. ورأيته يندف الطعام ندفاً. وسقاني ندفة من لبن: شيئاً منه.",
+        "prototipe_benzerlik": 0.327,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.384,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["victimize.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "اللباس",
@@ -740,22 +768,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "kume": 5,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 375
     },
     "orta": {
-      "kume": 39,
-      "merkez_kok": "هضض",
-      "merkez_mana": "recurrence of sadness",
-      "boy": 52
+      "kume": 14,
+      "merkez_kok": "غدر",
+      "merkez_mana": "Gadr: ihanet, hile",
+      "boy": 153
     },
     "ince": {
-      "kume": 253,
-      "merkez_kok": "عفس",
-      "merkez_mana": "",
-      "boy": 21
+      "kume": 78,
+      "merkez_kok": "خبط",
+      "merkez_mana": "Habt: karanlıkta yürümek, şaşırmak",
+      "boy": 40
     }
   },
   "kaliplar": {

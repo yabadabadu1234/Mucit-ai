@@ -1691,16 +1691,68 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "curl.v.04",
+    "ince": "furrow.v.02",
     "orta": "verb.contact",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "curl.v.04",
-    "dayanak_tanim": "twist or roll into coils or ringlets",
+    "dayanak_synset": "furrow.v.02",
+    "dayanak_tanim": "make wrinkled or creased",
     "synset_sayisi": 8
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "شعر جعد، وقد جعد جعودة، ورجل\nجعد الشعر، وقوم جعاد، وجعد شعره تجعيداً. قال:\nقد يتمتني طفلة أملود ... بفاحم زينه التجعيد",
+    "mecaz": "ثرًى جعد، ونبات جعد. ورجل جعد الأصابع، وجعد البنان: للبخيل. وأما قولهم: جعد للجواد فمن للكناية عن كونه عربياً سخياً، لأن العرب موصوفون بالجعودة. قال:\nهل يروين ذودك نزع معد ... وساقيان سبط وجعد\nأي عجمي وعهربي، لأنهما لا يتفاهمان فلا يشتغلان بالكلام عن السقي. وزبد جعد: متراكم. قال ذو الرمة:\nتنجو إذا جعلت تدمى أخشتها ... واعتم بالزيد الجعد الخراطم\nورجل جعد القفا: لئيم الحسب. قال:\nامسح من الدرمك عندي فاكاً ... إني أراك رجلاً كذاكا\nجعد القفا قصيرة رجلاكا\nوقدم جعدة: قصيرة. وقال شريح لرجل: إنك لسبط الشهادة، قال: إنها لم تجعد عني.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "شعر جعد، وقد جعد جعودة، ورجل جعد الشعر، وقوم جعاد، وجعد شعره تجعيداً. قال: قد يتمتني طفلة أملود ... بفاحم زينه التجعيد",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "ثرًى جعد، ونبات جعد. ورجل جعد الأصابع، وجعد البنان: للبخيل. وأما قولهم: جعد للجواد فمن للكناية عن كونه عربياً سخياً، لأن العرب موصوفون بالجعودة. قال:",
+        "prototipe_benzerlik": 0.215,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "أي عجمي وعهربي، لأنهما لا يتفاهمان فلا يشتغلان بالكلام عن السقي. وزبد جعد: متراكم. قال ذو الرمة:",
+        "prototipe_benzerlik": 0.319,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "ورجل جعد القفا: لئيم الحسب. قال:",
+        "prototipe_benzerlik": 0.739,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "جعد القفا قصيرة رجلاكا",
+        "prototipe_benzerlik": 0.46,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وقدم جعدة: قصيرة. وقال شريح لرجل: إنك لسبط الشهادة، قال: إنها لم تجعد عني.",
+        "prototipe_benzerlik": 0.529,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.452,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "assume.v.06",
+    "curl.v.04",
+    "furrow.v.02",
+    "oppress.v.01",
+    "seize.v.01",
+    "shrivel.v.01",
+    "solid.n.03",
+    "wrinkle.v.02"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "المكنيات والمبنيات والمثنيات",
@@ -1712,18 +1764,18 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 6,
-      "merkez_kok": "لقلق",
-      "merkez_mana": "",
-      "boy": 440
+      "merkez_kok": "درك",
+      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
+      "boy": 1364
     },
     "orta": {
-      "kume": 25,
-      "merkez_kok": "سعسع",
-      "merkez_mana": "",
-      "boy": 85
+      "kume": 15,
+      "merkez_kok": "زور",
+      "merkez_mana": "Zûr: yalan, sahtelik",
+      "boy": 133
     },
     "ince": {
-      "kume": 148,
+      "kume": 84,
       "merkez_kok": "جعد",
       "merkez_mana": "crease, crumple, curl, wrinkle",
       "boy": 14

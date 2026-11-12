@@ -1770,6 +1770,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "لها ساق كالجمارة وهي شحمة النخلة. وجمر النخلة تجميراً: قطع جمارها. وجمرت المرأة شعرها: جمعته وعقدته على قفاها. وشعر مجمر: ملبد. وجمر الأمير الغزاة: حبسهم في الثغر وفي نحر العدو ولا يقفلهم. قال سهم بن حنظلة الغنويّ:\nمعاوي إما أن تجهّز أهلنا ... إلينا وإمّا أن نزور الأهاليا\nورُوي: وإما أن نؤوب معاويا.\nأجمرتنا تجمير كسرى جنوده ... ومنيتنا حتى نسينا الأمانيا\nوجمر ثيابه. واستجمر بالعود. واستجمر المستطيب. وحافر ومنسم مجمر: نكبته الجمار حتى صلب واشتد، وقيل هو المجموع المدار. وتجمر بنو فلان: تجمعوا. وجمرات القبائل ثلاث كجمرات المناسك، طفئت منها ثنتان: ضبة بن أد لمحالفتها الررباب، والحارث بن كعب لمحالفتها مذحج، وبقيت نمير بن عامر. قال الفرزدق:\nوإذا كلاب بني المراغة ربضت ... خطرت ورائي دارمي وجمارى\nأراد بني ضبة وهم أخواله وسمى أمهم المراغة وهي الموضع الذي تتمرغ فيه الدواب، يعني أن الحمير تتمرغ بها كما تتمرغ بالأتان. وذبحوا فجمروا أي ألقوا اللحم على الجمر، ولحم مجمر. وجمر الحاج، وهو يوم التجمير.",
+    "mecaz": "الجمر في كبدي والجمار في خلاخلهن.\nومن مجاز المجاز: قول أبي صخر الهذليّ:\nإذا عطفت خلاخلهن غصت ... مجمارات بردي خدال\nشبه أسؤق البرديّ الغضة بشحم النخل فسماه جماراً ثم استعاره لأسؤق النساء.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "لها ساق كالجمارة وهي شحمة النخلة. وجمر النخلة تجميراً: قطع جمارها. وجمرت المرأة شعرها: جمعته وعقدته على قفاها. وشعر مجمر: ملبد. وجمر الأمير الغزاة: حبسهم في الثغر وفي نحر العدو ولا يقفلهم. قال سهم بن حنظلة الغنويّ: معاوي إما أن تجهّز أهلنا ... إلينا وإمّا أن ن",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "الجمر في كبدي والجمار في خلاخلهن.",
+        "prototipe_benzerlik": 0.31,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "ومن مجاز المجاز: قول أبي صخر الهذليّ:",
+        "prototipe_benzerlik": 0.355,
+        "halka": "orta"
+      },
+      {
+        "cumle": "شبه أسؤق البرديّ الغضة بشحم النخل فسماه جماراً ثم استعاره لأسؤق النساء.",
+        "prototipe_benzerlik": -0.026,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.213,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["audience.n.02", "fuel.n.01", "gathering.n.01", "multitude.n.03", "political_system.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الأنواء",
@@ -1780,19 +1813,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 7,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 331
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 34,
-      "merkez_kok": "غبر",
-      "merkez_mana": "Gubr: toz, gübre; gâbir",
-      "boy": 47
+      "kume": 38,
+      "merkez_kok": "خبز",
+      "merkez_mana": "Habz: ekmek yapmak, ekmek",
+      "boy": 50
     },
     "ince": {
-      "kume": 218,
+      "kume": 251,
       "merkez_kok": "دخن",
       "merkez_mana": "Duhan: duman, buğu",
       "boy": 9

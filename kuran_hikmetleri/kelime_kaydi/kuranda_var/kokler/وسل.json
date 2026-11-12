@@ -913,11 +913,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "communicate.v.01",
-    "orta": "verb.communication",
-    "ust": "söz ve haber",
-    "dayanak_synset": "solicit.v.01",
-    "dayanak_tanim": "make a solicitation or entreaty for something; request urgently or persistently",
+    "ince": "event.n.01",
+    "orta": "noun.act",
+    "ust": "fiil ve hadise",
+    "dayanak_synset": "instrument.n.02",
+    "dayanak_tanim": "the means whereby some act is accomplished",
     "synset_sayisi": 8
   },
   "ses_mana_tasnif": {
@@ -928,6 +928,17 @@
     "fasil_ozeti": "° معنى الفصل المعجمي (سل): هو انسحاب الشيء ممتدًّا من أثناء أو فيها",
     "tam_metin": "{يَاأَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَابْتَغُوا إِلَيْهِ الْوَسِيلَةَ} [المائدة: 35].\n\"الوسيلة: الوُصْلة/ ما يُتَوَصَّل به إلى الشيء.\nإذا غَفَل الواشون عدنا لوَصْلنا ... وعاد التصابي بيننا والوسائل [طب]\n° المعنى المحوري\nشيء يُتَلطف (1) به للوصول إلى مطلوب أو القرب منه. كاتصال المحبين بعضهم ببعض بتلطف واحتيال: تَخَفًّ أو نحوه. ومنه الوسيلة: ما يُتَوصل به إلى الشيء ويُتَقَرب به. والواسل: الطالب الذي يطلب، والراغب إلى الله، بمعنى أنه ذو وُصْلة (2) اهـ. واستُعمل اللفظ في الساعي إلى تحصيل الاتصال (فالوسيلة سبب ممتد بين هذا وذاك، والتوسل اجتهاد في تحصيل ذلك)\n__________\n(1) التلطف يصدق بالتخفي، وبالتقرب واستدرار الرحمة، وبالاستشفاع، وبالاحتيال.\n(2) خزانة الأدب 2/ 54.\n(2/1052)\nتوسَّل إليه بكذا: تقرب إليه بحُرْمة آصرةٍ تَعْطِفُه عليه. وقد وَسَّل فلانٌ إلى الله وسيلة - ض: إذا عَمِل عملًا تقرب به إليه. فالوسيلة: الوُصْلة والقربى {أُولَئِكَ الَّذِينَ يَدْعُونَ يَبْتَغُونَ إِلَى رَبِّهِمُ الْوَسِيلَةَ أَيُّهُمْ أَقْرَبُ} [الإسراء: 57].\nوفي الحديث: \"اللهم آت محمدًا - صلى الله عليه وسلم - الوسيلة \"، قالوا: المراد بها القرب، أو الشفاعة، وقيل: منزلة من منازل الجنة. وفي قول رؤبة: (وأنت لا تَنْهَرُ حظًّا واسِلا) قالوا: أي واجبًا. ولعل الأدق أنه المتصل أو الجاري، وهذا يعطي معنى اللزوم، وهي لا تصل بذلك إلى ثقل المعنى الكلي للوجوب. وليس في المعاجم وكتب الغريب والتفسير ما يخرج أو يزيد [وانظر: قر 6/ 159]."
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "لي إليه وسيلة ووسائل. وأنا متوسّل إليه بكذا وواسل، ووسلت إليه، وتوسّلت إلى الله بالعمل: تقرّبت. قال لبيد:\nأرى الناس لا يدرون ما قدر أمرهم ... بلى كلّ ذي دينٍ إلى الله واسل",
+    "mecaz": "",
+    "kinaye": "",
+    "mecaz_var": false
+  },
+  "prototip_yayilim_tasnif": {
+    "durum": "prototip veya mecaz kolu yok"
+  },
+  "kolekzifikasyon_kavramlari": ["act.n.02", "artifact.n.01", "request.v.01", "utility.n.02"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النخل",
@@ -938,22 +949,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 17,
-      "merkez_kok": "زين",
-      "merkez_mana": "Zîne: süs, güzellik; zeyn: güzelleştirmek",
-      "boy": 177
-    },
-    "ince": {
-      "kume": 89,
+      "kume": 25,
       "merkez_kok": "وسل",
       "merkez_mana": "Vesîle: aracı, yol",
-      "boy": 20
+      "boy": 130
+    },
+    "ince": {
+      "kume": 148,
+      "merkez_kok": "وسل",
+      "merkez_mana": "Vesîle: aracı, yol",
+      "boy": 42
     }
   },
   "kaliplar": {

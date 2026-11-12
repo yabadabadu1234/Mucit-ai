@@ -1018,13 +1018,46 @@
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "course.n.04",
-    "dayanak_tanim": "a mode of action",
+    "dayanak_synset": "attempt.n.01",
+    "dayanak_tanim": "earnest and conscientious activity intended to do or accomplish something",
     "synset_sayisi": 9
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "سعى إلى المسجد. وهو يسعى إلى الغاية، وتساعوا إليها. وساعيته: سعيت معه.",
+    "mecaz": "هو يسعى على عياله: يكسب لهم ويقوم بمصالحهم. قال قيس بن الأسلت:\nأسعى على جل بني مالك ... كل امريء في شأنه ساع\nوهو من أهل المساعي وهي المكارم، وهل مسعاة\nجميلة. وسعى العيد في قيمته سعاية، واستسعاه سيده. وسعى به إلى السلطان: وشى به سعاية. وهو ساع من السعاة. وسعى على قومه سعاية. وبعث على السعاية وهي العمل على الصدقات. وأسعاه السلطان عليهم وعلى صدقاتهم. وأمة فلان مساعية: زانية، وكان الإماء يساعين في الجاهلية، وفلان يساعي اماء: يزانيهن.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "سعى إلى المسجد. وهو يسعى إلى الغاية، وتساعوا إليها. وساعيته: سعيت معه.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "هو يسعى على عياله: يكسب لهم ويقوم بمصالحهم. قال قيس بن الأسلت:",
+        "prototipe_benzerlik": 0.6,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وهو من أهل المساعي وهي المكارم، وهل مسعاة",
+        "prototipe_benzerlik": 0.461,
+        "halka": "orta"
+      },
+      {
+        "cumle": "جميلة. وسعى العيد في قيمته سعاية، واستسعاه سيده. وسعى به إلى السلطان: وشى به سعاية. وهو ساع من السعاة. وسعى على قومه سعاية. وبعث على السعاية وهي العمل على الصدقات. وأسعاه السلطان عليهم وعلى صدقاتهم. وأمة فلان مساعية: زانية، وكان الإماء يساعين في الجاهلية، وفلان يساعي اماء: يزانيهن.",
+        "prototipe_benzerlik": 0.258,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.44,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["act.n.02", "horary.a.01", "living_thing.n.01", "ordering.n.01", "pursue.v.02", "tell.v.02", "try.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الغرائز",
@@ -1035,22 +1068,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "kume": 7,
+      "merkez_kok": "لقلق",
+      "merkez_mana": "",
+      "boy": 386
     },
     "orta": {
-      "kume": 13,
-      "merkez_kok": "صدد",
-      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
-      "boy": 93
+      "kume": 29,
+      "merkez_kok": "دبب",
+      "merkez_mana": "debbe: sürünmek, hareket / debbe: uğraşmak (?)",
+      "boy": 73
     },
     "ince": {
-      "kume": 68,
-      "merkez_kok": "بدر",
-      "merkez_mana": "Bedr: dolunay; bedr: erken, acele",
-      "boy": 7
+      "kume": 188,
+      "merkez_kok": "دبب",
+      "merkez_mana": "debbe: sürünmek, hareket / debbe: uğraşmak (?)",
+      "boy": 16
     }
   },
   "kaliplar": {

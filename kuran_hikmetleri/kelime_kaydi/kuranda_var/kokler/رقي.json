@@ -1924,13 +1924,58 @@
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "aggrandizement.n.01",
-    "dayanak_tanim": "the act of increasing the wealth or prestige or power or scope of something",
+    "dayanak_synset": "promotion.n.02",
+    "dayanak_tanim": "act of raising in rank or position",
     "synset_sayisi": 12
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "رقي في السلم وارتقى وترقّى، ورقي السطح والجبل وارتقاه وترقّاه، وهذا جبل لا مرقي فيه ولا مرتقى، وهو صعب الرقي والرقي. قال:\nأنت الذي كلفتني رقي الدرج ... على الكلال والمشيب والعرج\nوهو راق من الرقاة، ورقاء نافع الرقي، ورقاني برقية كذا، ويقال: باسم الله أرقيك، والله يشفيك؛ وقد رقي وسقى حتى شفي وعوفي، وسليم مرقيٌّ، ولدغته حية لا تقبل الرُّقَى، واسترقاه لداء به.",
+    "mecaz": "مازال فلان يترقى به الأمر حتى بلغ غايته. والجود مرقاة إلى الشرف. والمجد صعب المراقي. ولقد ارتقيت يا فلان مرتقى صعباً، ورقاك الله أعلى الرتب.\nوقال:\nوارق إلى الخيرات زنأً في الجبل\nورقّى عليه كلاماً: رفع، ورقيَ إلى سمعه كذا وترقّى في العلم والملك: رقي درجة درجة. وتراقى أمرهم إلى الفساد وترامى. وارتقى بطن البعير: امتلأ شبعاً. وارتقى القراد في جنب البعير. ورقيت فلاناً إذا تملّقت له وسللت حقده بالرفق كما ترقى الحية حتى تجيب، وقال كثير لعبد الملك بن مروان:\nومازالت رقاك تسل ضغني ... وتخرج من مكامنها ضبابي\nويرقيني لك الحاوون حتى ... أجابك حيةٌ تحت الحجاب",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "رقي في السلم وارتقى وترقّى، ورقي السطح والجبل وارتقاه وترقّاه، وهذا جبل لا مرقي فيه ولا مرتقى، وهو صعب الرقي والرقي. قال: أنت الذي كلفتني رقي الدرج ... على الكلال والمشيب والعرج وهو راق من الرقاة، ورقاء نافع الرقي، ورقاني برقية كذا، ويقال: باسم الله أرقيك، وال",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "مازال فلان يترقى به الأمر حتى بلغ غايته. والجود مرقاة إلى الشرف. والمجد صعب المراقي. ولقد ارتقيت يا فلان مرتقى صعباً، ورقاك الله أعلى الرتب.",
+        "prototipe_benzerlik": 0.587,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وارق إلى الخيرات زنأً في الجبل",
+        "prototipe_benzerlik": 0.515,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "ورقّى عليه كلاماً: رفع، ورقيَ إلى سمعه كذا وترقّى في العلم والملك: رقي درجة درجة. وتراقى أمرهم إلى الفساد وترامى. وارتقى بطن البعير: امتلأ شبعاً. وارتقى القراد في جنب البعير. ورقيت فلاناً إذا تملّقت له وسللت حقده بالرفق كما ترقى الحية حتى تجيب، وقال كثير لعبد الملك بن مروان:",
+        "prototipe_benzerlik": 0.611,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.571,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "act.n.02",
+    "advance.v.01",
+    "advertise.v.02",
+    "arouse.v.01",
+    "ascend.v.01",
+    "elate.v.01",
+    "happening.n.01",
+    "promote.v.02",
+    "raise.v.02",
+    "raise.v.07",
+    "temporary_state.n.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -1942,18 +1987,18 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "merkez_kok": "قبب",
+      "merkez_mana": "canopy, pavilion; dome, cupola",
+      "boy": 604
     },
     "orta": {
-      "kume": 38,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 203
+      "kume": 33,
+      "merkez_kok": "صبب",
+      "merkez_mana": "Sabb: dökmek, akıtmak; sabîb: akan",
+      "boy": 201
     },
     "ince": {
-      "kume": 241,
+      "kume": 219,
       "merkez_kok": "سنم",
       "merkez_mana": "Sinâm: hörgüç, tepe",
       "boy": 13

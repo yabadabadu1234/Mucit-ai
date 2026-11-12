@@ -1083,29 +1083,62 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "عود أحجن، وعصا حجناء بينة الحجن. قال يصف قوساً:\nوفي شمالي قضبة من تألب ... في سيتيها حجن كالعقرب\nوله حجنة كحجنة المغزل وهي عقافته والطرف المعوج بعينه، وأما الحجن فالعوج، وعصاً محجنة. وجذبه بالمحجن وهو الصولجان. واحتجنت الشيء: اجتذبته بالمحجن.",
+    "mecaz": "إحتجن فلان مالي. وحجنته عن كذا: صرفته. وفلان يغزو الغزوة الحجون وهي المورّى عنها بغيرها، يظهر أنه يغزو جهة، ثم يخالف عنها إلى أخرى. وفلان محجن مال: حسن القيام بالإبل ضام لقواصيها المنتشرة. قال:\nمحجن مال أينما تصفا\nوفي وصية قيس بن عاصم: عليكم بالال واحتجانه أي استصلاحه. وشعر أحجن: جعودته في أطرافه، وفي ذؤابته حجنة.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "عود أحجن، وعصا حجناء بينة الحجن. قال يصف قوساً: وفي شمالي قضبة من تألب ... في سيتيها حجن كالعقرب وله حجنة كحجنة المغزل وهي عقافته والطرف المعوج بعينه، وأما الحجن فالعوج، وعصاً محجنة. وجذبه بالمحجن وهو الصولجان. واحتجنت الشيء: اجتذبته بالمحجن.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "إحتجن فلان مالي. وحجنته عن كذا: صرفته. وفلان يغزو الغزوة الحجون وهي المورّى عنها بغيرها، يظهر أنه يغزو جهة، ثم يخالف عنها إلى أخرى. وفلان محجن مال: حسن القيام بالإبل ضام لقواصيها المنتشرة. قال:",
+        "prototipe_benzerlik": 0.715,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "محجن مال أينما تصفا",
+        "prototipe_benzerlik": 0.246,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وفي وصية قيس بن عاصم: عليكم بالال واحتجانه أي استصلاحه. وشعر أحجن: جعودته في أطرافه، وفي ذؤابته حجنة.",
+        "prototipe_benzerlik": 0.803,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.588,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطير",
     "bab": "",
-    "kok_gecis": 68.5,
+    "kok_gecis": 68.3,
     "kitapta_gecis": 4.0,
-    "zenginlesme": 3.22
+    "zenginlesme": 3.23
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
+      "kume": 8,
       "merkez_kok": "قبب",
       "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "boy": 604
     },
     "orta": {
-      "kume": 43,
-      "merkez_kok": "خرز",
-      "merkez_mana": "awl",
-      "boy": 104
+      "kume": 32,
+      "merkez_kok": "دثر",
+      "merkez_mana": "Tedsîr: örtmek, bürümek; desr: örtü",
+      "boy": 148
     },
     "ince": {
-      "kume": 280,
+      "kume": 205,
       "merkez_kok": "فءس",
       "merkez_mana": "axe, hatchet, cleaver (tool)",
       "boy": 7

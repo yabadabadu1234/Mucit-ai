@@ -1593,6 +1593,49 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "مرن الرمح، ورمح مارن، وما أحسن مرانته ومرونته، وتطاعنوا بالمران. وقطع مارن أنفه: ما لان منه وفضل عن قصبته. وثوب مارن، وقد مرن ثوبه: لان وامّلس. ومرّن الأديم تمريناً: ليّنه. ومرن أظلّ بعيره: دهنه من الحفا.",
+    "mecaz": "مرن على الأمر مروناً، ومرّنته على كذا، ومرنت يده على العمل. ومرّن وجهه على الخصام والسؤال، وإنه لممرّن الوجه. قال:\nلزاز خصم معك ممرّن\nومنه: هم على مرنٍ واحدة. وما زال ذلك مرني. ويقول الرجل: لأقتلن فلاناً فيقال له: أو مرنٌ ما أخرى يعني أو لتكونن حالٌ أخرى غير ما تقول.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "مرن الرمح، ورمح مارن، وما أحسن مرانته ومرونته، وتطاعنوا بالمران. وقطع مارن أنفه: ما لان منه وفضل عن قصبته. وثوب مارن، وقد مرن ثوبه: لان وامّلس. ومرّن الأديم تمريناً: ليّنه. ومرن أظلّ بعيره: دهنه من الحفا.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "مرن على الأمر مروناً، ومرّنته على كذا، ومرنت يده على العمل. ومرّن وجهه على الخصام والسؤال، وإنه لممرّن الوجه. قال:",
+        "prototipe_benzerlik": 0.429,
+        "halka": "orta"
+      },
+      {
+        "cumle": "لزاز خصم معك ممرّن",
+        "prototipe_benzerlik": 0.631,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "ومنه: هم على مرنٍ واحدة. وما زال ذلك مرني. ويقول الرجل: لأقتلن فلاناً فيقال له: أو مرنٌ ما أخرى يعني أو لتكونن حالٌ أخرى غير ما تقول.",
+        "prototipe_benzerlik": 0.564,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.541,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "act.n.02",
+    "drill.v.03",
+    "exercise.v.04",
+    "exert.v.01",
+    "living_thing.n.01",
+    "physical_property.n.01",
+    "practice.v.01",
+    "rehearse.v.01",
+    "teach.v.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السلاح",
@@ -1603,19 +1646,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 15,
+      "kume": 19,
       "merkez_kok": "فوق",
       "merkez_mana": "Fevk: üst, yukarı (zarf)",
-      "boy": 107
+      "boy": 76
     },
     "ince": {
-      "kume": 84,
+      "kume": 109,
       "merkez_kok": "حصف",
       "merkez_mana": "of sense, sober, realistic",
       "boy": 31

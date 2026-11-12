@@ -1267,6 +1267,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "زرد اللقمة وازدردها وتزردها. وهذا دواء صعب المزدرد. وتقول: قد تبين فيه الدرد، فأطعمه ما يزدرد؛ وزرّدته اللقمة. قال مزرد:\nفقلت تزردها عبيد فإنني ... لدرد الموالي في السنين مزرد\nوزرد حلقه: عصره. وهو زراد: خناق، ومنه قيل للهن الضيق: الزردان كأنه يخنق. وزرد الدرع: سردها لأنها حلق فيه ضيق.\nوهو زراد جيد الزرادة. ولبسوا الزرد والزرد تسمية بالمصدر وفعل بمعنى مفعول.",
+    "mecaz": "أخذ بمزدرد إذا ضيق عليه كما يقال: أخذ بمخنقه. وزرد فلان عينه على صاحبه إذا غضب عليه وتجهمه ومعناه ضيقها عليه لا يفتحها حتى يملأها منه. وظن فلا أني زردة له أي أكلة. وتقول للحالف: تزردها حصاء، وتزبدها حذاء.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "زرد اللقمة وازدردها وتزردها. وهذا دواء صعب المزدرد. وتقول: قد تبين فيه الدرد، فأطعمه ما يزدرد؛ وزرّدته اللقمة. قال مزرد: فقلت تزردها عبيد فإنني ... لدرد الموالي في السنين مزرد وزرد حلقه: عصره. وهو زراد: خناق، ومنه قيل للهن الضيق: الزردان كأنه يخنق. وزرد الدرع:",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "أخذ بمزدرد إذا ضيق عليه كما يقال: أخذ بمخنقه. وزرد فلان عينه على صاحبه إذا غضب عليه وتجهمه ومعناه ضيقها عليه لا يفتحها حتى يملأها منه. وظن فلا أني زردة له أي أكلة. وتقول للحالف: تزردها حصاء، وتزبدها حذاء.",
+        "prototipe_benzerlik": 0.36,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.36,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["artifact.n.01", "bodily_process.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السلاح",
@@ -1278,18 +1301,18 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 40,
+      "kume": 41,
       "merkez_kok": "بلع",
       "merkez_mana": "Bel': yutmak; bel'a: yutkunma",
-      "boy": 85
+      "boy": 61
     },
     "ince": {
-      "kume": 260,
+      "kume": 262,
       "merkez_kok": "بلع",
       "merkez_mana": "Bel': yutmak; bel'a: yutkunma",
       "boy": 17

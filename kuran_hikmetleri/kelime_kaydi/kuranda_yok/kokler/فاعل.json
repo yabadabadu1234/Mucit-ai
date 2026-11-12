@@ -478,37 +478,44 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "interact.v.01",
-    "orta": "verb.social",
-    "ust": "insan ve toplum",
-    "dayanak_synset": "interact.v.01",
-    "dayanak_tanim": "act together or towards others or with others",
+    "ince": "reactive.a.01",
+    "orta": "adj.all",
+    "ust": "hâl ve vasıf",
+    "dayanak_synset": "reactive.a.01",
+    "dayanak_tanim": "participating readily in reactions",
     "synset_sayisi": 6
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "prototip_yayilim_tasnif": {
+    "durum": "prototip veya mecaz kolu yok"
+  },
+  "kolekzifikasyon_kavramlari": ["act.n.02", "chemical_process.n.01", "interact.v.01", "react.v.01", "react.v.03", "reactive.a.01"],
   "muhassas_tasnif": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 6,
+      "kume": 7,
       "merkez_kok": "لقلق",
       "merkez_mana": "",
-      "boy": 440
+      "boy": 386
     },
     "orta": {
-      "kume": 27,
-      "merkez_kok": "عجو",
-      "merkez_mana": "beikost",
-      "boy": 82
+      "kume": 26,
+      "merkez_kok": "طعل",
+      "merkez_mana": "to come upon, befall",
+      "boy": 91
     },
     "ince": {
-      "kume": 166,
-      "merkez_kok": "حاور",
-      "merkez_mana": "discussion",
-      "boy": 5
+      "kume": 149,
+      "merkez_kok": "مع",
+      "merkez_mana": "",
+      "boy": 7
     }
   },
   "kaliplar": {},

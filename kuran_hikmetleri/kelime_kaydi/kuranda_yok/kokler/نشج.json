@@ -819,6 +819,49 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "نشج الباكي نشيجاً وهو الغصص بالبكاء وتردّده في الصدر.",
+    "mecaz": "سمعت نشيج الطعنة: عند خروج الدم، ونشيج القدر والزّقّ: عند الغليان، ونشيج الحمار: عند شحيجة.\nن ش د سمعت صوت النّشّاد وهو الذي ينشد الضّوالّ. وأصاخ الناشد للمنشد: الطالب\nللمعترف. وقال يصف ثوراً:\nيصيخ للنبأة أسماعه ... أصاخة الناشد للمنشد\nومن المجاز: نشدتك الله وناشدتك الله ونشدك الله أي سألتك به. وقال الأعشى:\nربّي كريم لا يكدر نعمة ... وإذا تنوشد بالمهارق أنشدا\nأي إذا تناشده العباد بمعنى تداعوه وطلبوا منه بحقّ الكتب المنزّلة أطلبهم وأجابهم. وتنشّدت الأخبار إذا كنت تريغ أن تعلمها من حيث لا يعلمها الناس. وأنشدني شعراً إنشاداً حسناً لأن المنشد يرفع بالمنشد صوته كما يفعل المعرف. واستنشدته إياه. وله أناشيد ملاح. وسمعت منهم نشيداً مليحاً وهو الشعر المتناشد بين القوم ينشده بعضهم بعضاً.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "نشج الباكي نشيجاً وهو الغصص بالبكاء وتردّده في الصدر.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "سمعت نشيج الطعنة: عند خروج الدم، ونشيج القدر والزّقّ: عند الغليان، ونشيج الحمار: عند شحيجة.",
+        "prototipe_benzerlik": 0.456,
+        "halka": "orta"
+      },
+      {
+        "cumle": "ن ش د سمعت صوت النّشّاد وهو الذي ينشد الضّوالّ. وأصاخ الناشد للمنشد: الطالب",
+        "prototipe_benzerlik": 0.364,
+        "halka": "orta"
+      },
+      {
+        "cumle": "للمعترف. وقال يصف ثوراً:",
+        "prototipe_benzerlik": 0.305,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "ومن المجاز: نشدتك الله وناشدتك الله ونشدك الله أي سألتك به. وقال الأعشى:",
+        "prototipe_benzerlik": 0.201,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "أي إذا تناشده العباد بمعنى تداعوه وطلبوا منه بحقّ الكتب المنزّلة أطلبهم وأجابهم. وتنشّدت الأخبار إذا كنت تريغ أن تعلمها من حيث لا يعلمها الناس. وأنشدني شعراً إنشاداً حسناً لأن المنشد يرفع بالمنشد صوته كما يفعل المعرف. واستنشدته إياه. وله أناشيد ملاح. وسمعت منهم نشيداً مليحاً وهو الشعر المتناشد بين ا",
+        "prototipe_benzerlik": 0.241,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.313,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["wail.v.02"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "خلق الإنسان",
@@ -830,21 +873,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 509
     },
     "orta": {
-      "kume": 7,
-      "merkez_kok": "كرب",
-      "merkez_mana": "Karb: sıkıntı, keder; kurbet: sıkıntı",
-      "boy": 139
+      "kume": 8,
+      "merkez_kok": "بءس",
+      "merkez_mana": "Be'es: azap, şiddet, zorluk",
+      "boy": 142
     },
     "ince": {
-      "kume": 37,
+      "kume": 43,
       "merkez_kok": "دمع",
       "merkez_mana": "Dem': gözyaşı; dâmi': ağlayan",
-      "boy": 9
+      "boy": 8
     }
   },
   "kaliplar": {

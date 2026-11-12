@@ -2019,16 +2019,39 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "difficult.a.01",
-    "orta": "adj.all",
-    "ust": "hâl ve vasıf",
-    "dayanak_synset": "difficult.a.01",
-    "dayanak_tanim": "not easy; requiring great physical or mental effort to accomplish or comprehend or endure",
+    "ince": "cognition.n.01",
+    "orta": "noun.cognition",
+    "ust": "zihin ve ilim",
+    "dayanak_synset": "difficulty.n.02",
+    "dayanak_tanim": "a factor causing trouble in achieving a positive result or tending to produce a negative result",
     "synset_sayisi": 5
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "أمر صعب، وخطة صعبة، وعقبة صعبة، وهي من العقاب الصعاب، ووقع في خطط صعاب، وصعب عليه الأمر وتصعب واستصعب، وأصعبت الأمر. وجمل صعب: غير ذلول، وأصعب الجمل: لم يركب ولم يمسسه حبل فهو مصعب، وأصعبنا جملنا فتركناه.",
+    "mecaz": "فلان مصعب من المصاعب، كما تقول: قرم من القروم.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "أمر صعب، وخطة صعبة، وعقبة صعبة، وهي من العقاب الصعاب، ووقع في خطط صعاب، وصعب عليه الأمر وتصعب واستصعب، وأصعبت الأمر. وجمل صعب: غير ذلول، وأصعب الجمل: لم يركب ولم يمسسه حبل فهو مصعب، وأصعبنا جملنا فتركناه.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "فلان مصعب من المصاعب، كما تقول: قرم من القروم.",
+        "prototipe_benzerlik": 0.529,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.529,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["cognitive_factor.n.01", "condition.n.01", "difficult.a.01", "difficulty.n.04", "worsen.v.02"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "المكنيات والمبنيات والمثنيات",
@@ -2040,21 +2063,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 509
     },
     "orta": {
-      "kume": 12,
-      "merkez_kok": "خيب",
-      "merkez_mana": "Hayb: boşa çıkmak, umutsuz olmak; hâib: hayal kırıklığı",
-      "boy": 58
+      "kume": 8,
+      "merkez_kok": "بءس",
+      "merkez_mana": "Be'es: azap, şiddet, zorluk",
+      "boy": 142
     },
     "ince": {
-      "kume": 64,
+      "kume": 48,
       "merkez_kok": "قفر",
       "merkez_mana": "to trace, to track",
-      "boy": 20
+      "boy": 23
     }
   },
   "kaliplar": {

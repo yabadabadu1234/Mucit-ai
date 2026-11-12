@@ -1494,6 +1494,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "فلان بذيء اللسان، وقد بذؤ علي وبذأ بذاءة وبذاء. وبذىء فلان: عيب وازدرى. وسألته عن رجل فبذأه. وقد أبذأت يا رجل أي جئت بالبذاء، كما تقول أفحشت وأقدعت. وباذأني فلان فبذأني. وبينهم مباذأة: مفاحشة. قال ابن مقبل:\nهل كنت إلا مجناً تتقون به ... قد لاح في عرض من باذاكم علبي",
+    "mecaz": "بذأت عيني فلاناً: ازدرته ولم تقبله. ووصفت لي أرض بني فلان فأبصرتها فما بذأتها عيني.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "فلان بذيء اللسان، وقد بذؤ علي وبذأ بذاءة وبذاء. وبذىء فلان: عيب وازدرى. وسألته عن رجل فبذأه. وقد أبذأت يا رجل أي جئت بالبذاء، كما تقول أفحشت وأقدعت. وباذأني فلان فبذأني. وبينهم مباذأة: مفاحشة. قال ابن مقبل: هل كنت إلا مجناً تتقون به ... قد لاح في عرض من باذاكم",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "بذأت عيني فلاناً: ازدرته ولم تقبله. ووصفت لي أرض بني فلان فأبصرتها فما بذأتها عيني.",
+        "prototipe_benzerlik": 0.532,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.532,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النخل",
@@ -1505,18 +1528,18 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
-    },
-    "orta": {
-      "kume": 9,
       "merkez_kok": "خون",
       "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
-      "boy": 168
+      "boy": 509
+    },
+    "orta": {
+      "kume": 7,
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 259
     },
     "ince": {
-      "kume": 48,
+      "kume": 36,
       "merkez_kok": "دعر",
       "merkez_mana": "immoral or criminal sexual behaviour, conduct or practices",
       "boy": 9

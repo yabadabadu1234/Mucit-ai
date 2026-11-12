@@ -810,16 +810,23 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "run.v.06",
+    "ince": "flow.v.01",
     "orta": "verb.motion",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "run.v.06",
-    "dayanak_tanim": "move along, of liquids",
+    "dayanak_synset": "flow.v.01",
+    "dayanak_tanim": "move or progress freely as if in a stream",
     "synset_sayisi": 2
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "prototip_yayilim_tasnif": {
+    "durum": "prototip veya mecaz kolu yok"
+  },
+  "kolekzifikasyon_kavramlari": ["flow.v.01", "run.v.06"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطير",
@@ -830,22 +837,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 6,
+      "kume": 7,
       "merkez_kok": "لقلق",
       "merkez_mana": "",
-      "boy": 440
+      "boy": 386
     },
     "orta": {
-      "kume": 28,
-      "merkez_kok": "دبب",
-      "merkez_mana": "debbe: sürünmek, hareket / debbe: uğraşmak (?)",
-      "boy": 81
+      "kume": 31,
+      "merkez_kok": "وجف",
+      "merkez_mana": "Vecf: titremek, çarpmak",
+      "boy": 65
     },
     "ince": {
-      "kume": 182,
-      "merkez_kok": "دبب",
-      "merkez_mana": "debbe: sürünmek, hareket / debbe: uğraşmak (?)",
-      "boy": 14
+      "kume": 202,
+      "merkez_kok": "هزز",
+      "merkez_mana": "Hazz: sallamak, sarsmak",
+      "boy": 18
     }
   },
   "kaliplar": {

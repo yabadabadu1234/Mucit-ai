@@ -808,42 +808,99 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "development.n.02",
-    "orta": "noun.process",
+    "ince": "develop.v.12",
+    "orta": "verb.change",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "development.n.02",
-    "dayanak_tanim": "a process in which something passes by degrees to a different stage (especially a more advanced or mature stage)",
+    "dayanak_synset": "develop.v.12",
+    "dayanak_tanim": "cause to grow and differentiate in ways conforming to its natural development",
     "synset_sayisi": 15
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "نميَ المال نماءً وأنماه الله تعالى، ومنه: نامية الله: خلقه لأنّهم ينمون. وما على الأرض نامٍ وصامت، فالنّامي: نحو النبّات، والصامت: كالحجر. ونمى الشيء وتنمّى: ارتفع، ونميته. قال القطاميّ:\nفأصبح سيل ذلك قد تنمّى ... إلى من كان منزله يفاعا\nونميت الرحل على البعير.",
+    "mecaz": "فلان ينميه حسبه، وقد نماه جد كريم. قال النابغة:\nإلى صعب المقادة منذريٍّ ... نماه في فروع المجد نامي\nيمدح المنذر بن المنذر بن ماء السماء. ونميت الحديث إلى فلانٍ: رفعته وأسندته، ونميَ إليه الحديث. قال:\nمن حديثٍ نُمِي إليّ فما تر ... قأ عيني ولا يسوغ شرابي\nويقال: نميت الحديث: بلغته على جهة الإصلاح، ونمّيته تنميةً: بلّغته على جهة الإفساد، وفلان ينمّى أحاديث الناس. ونمّيت النار تنميةً: ألقيت عليها شيوعها، ونمت الناقة: سمنت، وناقة نامية: ناوية. ورجل نامٍ وقد نمى. ونمت الرّمية إذا تحاملت بالسّهم، وأنماها الصائد. قال امرؤ القيس:\nفهو لا تنمى رميّته\nويروى لا ينمي رميّته. ونمى الخضاب في اليد والشعر إذا ازداد سواداً. ونمى الحبر في الكتاب: اشتدّ سواده وزاد بعد ما كتب. قال:\nيا حبّ ليلى لا تغيّر وازدد ... وانم كما ينمي الخضاب في اليد",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "نميَ المال نماءً وأنماه الله تعالى، ومنه: نامية الله: خلقه لأنّهم ينمون. وما على الأرض نامٍ وصامت، فالنّامي: نحو النبّات، والصامت: كالحجر. ونمى الشيء وتنمّى: ارتفع، ونميته. قال القطاميّ: فأصبح سيل ذلك قد تنمّى ... إلى من كان منزله يفاعا ونميت الرحل على البعير.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "فلان ينميه حسبه، وقد نماه جد كريم. قال النابغة:",
+        "prototipe_benzerlik": 0.379,
+        "halka": "orta"
+      },
+      {
+        "cumle": "يمدح المنذر بن المنذر بن ماء السماء. ونميت الحديث إلى فلانٍ: رفعته وأسندته، ونميَ إليه الحديث. قال:",
+        "prototipe_benzerlik": 0.912,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "ويقال: نميت الحديث: بلغته على جهة الإصلاح، ونمّيته تنميةً: بلّغته على جهة الإفساد، وفلان ينمّى أحاديث الناس. ونمّيت النار تنميةً: ألقيت عليها شيوعها، ونمت الناقة: سمنت، وناقة نامية: ناوية. ورجل نامٍ وقد نمى. ونمت الرّمية إذا تحاملت بالسّهم، وأنماها الصائد. قال امرؤ القيس:",
+        "prototipe_benzerlik": 0.975,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "فهو لا تنمى رميّته",
+        "prototipe_benzerlik": 0.172,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "ويروى لا ينمي رميّته. ونمى الخضاب في اليد والشعر إذا ازداد سواداً. ونمى الحبر في الكتاب: اشتدّ سواده وزاد بعد ما كتب. قال:",
+        "prototipe_benzerlik": 0.916,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.671,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "advertise.v.02",
+    "belong.v.02",
+    "belong.v.03",
+    "develop.v.10",
+    "develop.v.12",
+    "develop.v.15",
+    "development.n.02",
+    "grow.v.04",
+    "grow.v.08",
+    "growing.a.01",
+    "increase.v.01",
+    "increase.v.02",
+    "promote.v.02"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
-    "kitap": "الأضداد",
-    "bab": "الاتباع",
-    "kok_gecis": 15.6,
-    "kitapta_gecis": 2.3,
-    "zenginlesme": 3.0
+    "kitap": "الدهور والأزمنة والأهوية والرياح",
+    "bab": "صفة الكرم ونباته",
+    "kok_gecis": 14.8,
+    "kitapta_gecis": 3.2,
+    "zenginlesme": 1.77
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 6,
+      "kume": 7,
       "merkez_kok": "لقلق",
       "merkez_mana": "",
-      "boy": 440
+      "boy": 386
     },
     "orta": {
-      "kume": 29,
-      "merkez_kok": "عربد",
-      "merkez_mana": "to revel, to be boisterous, to be noisy, to be quarrelsome",
-      "boy": 68
+      "kume": 26,
+      "merkez_kok": "طعل",
+      "merkez_mana": "to come upon, befall",
+      "boy": 91
     },
     "ince": {
-      "kume": 188,
+      "kume": 162,
       "merkez_kok": "شخبط",
       "merkez_mana": "to scribble, to scrawl, to scratch, to doodle",
-      "boy": 8
+      "boy": 7
     }
   },
   "kaliplar": {

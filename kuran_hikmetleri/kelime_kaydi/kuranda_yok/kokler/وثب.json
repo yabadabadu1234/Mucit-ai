@@ -1333,6 +1333,43 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "وثب من مكان إلى مكان وثباً ووثوباً ووثيباً، ووثب إليه، وواثبه، وتواثبوا. وظبي وثّاب.",
+    "mecaz": "توثّب على منزلته، وتوثّب على أخيه في أرضه: استولى عليها ظلماً. وقد وثب إلى الشّرف وثبةً. قال الكميت:\nووثبةٍ لك في الأحساب بالغةٍ ... كذاك إنّك في المعروف ذو وثب\nكنوبة ونوبٍ. وفرس وثّابة: سريعة.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "وثب من مكان إلى مكان وثباً ووثوباً ووثيباً، ووثب إليه، وواثبه، وتواثبوا. وظبي وثّاب.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "توثّب على منزلته، وتوثّب على أخيه في أرضه: استولى عليها ظلماً. وقد وثب إلى الشّرف وثبةً. قال الكميت:",
+        "prototipe_benzerlik": 0.326,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "كنوبة ونوبٍ. وفرس وثّابة: سريعة.",
+        "prototipe_benzerlik": 0.516,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.421,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "act.n.02",
+    "authorize.v.01",
+    "clear.v.05",
+    "clear.v.20",
+    "control.v.02",
+    "dance.v.02",
+    "jump.v.01",
+    "unclutter.v.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "اللباس",
@@ -1343,22 +1380,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 6,
+      "kume": 7,
       "merkez_kok": "لقلق",
       "merkez_mana": "",
-      "boy": 440
+      "boy": 386
     },
     "orta": {
-      "kume": 28,
+      "kume": 29,
       "merkez_kok": "دبب",
       "merkez_mana": "debbe: sürünmek, hareket / debbe: uğraşmak (?)",
-      "boy": 81
+      "boy": 73
     },
     "ince": {
-      "kume": 182,
+      "kume": 188,
       "merkez_kok": "دبب",
       "merkez_mana": "debbe: sürünmek, hareket / debbe: uğraşmak (?)",
-      "boy": 14
+      "boy": 16
     }
   },
   "kaliplar": {

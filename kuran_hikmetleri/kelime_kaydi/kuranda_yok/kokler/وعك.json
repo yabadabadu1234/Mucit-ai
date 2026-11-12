@@ -824,7 +824,7 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "person.n.01",
+    "ince": "whole.n.02",
     "orta": "noun.person",
     "ust": "insan ve toplum",
     "dayanak_synset": "sick_person.n.01",
@@ -834,6 +834,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "إذا أخذت الكلاب الصيد فمرّغته قيل: وعكته وعكاً.",
+    "mecaz": "وعكته الحمّى: دكّته، ووعك فهو موعوك، وبه وعك الحمّى، ووعكة الحمّى. ويوم وعكٌ: شديد الحر. قال الأخطل:\nرعاها بصحراوين حتّى تقيّظت ... وأقبل شهراً وقدةٍ وعكان",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "إذا أخذت الكلاب الصيد فمرّغته قيل: وعكته وعكاً.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "وعكته الحمّى: دكّته، ووعك فهو موعوك، وبه وعك الحمّى، ووعكة الحمّى. ويوم وعكٌ: شديد الحر. قال الأخطل:",
+        "prototipe_benzerlik": 0.042,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.042,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["indispose.v.03", "living_thing.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
@@ -844,22 +867,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "kume": 4,
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 509
     },
     "orta": {
-      "kume": 39,
-      "merkez_kok": "هضض",
-      "merkez_mana": "recurrence of sadness",
-      "boy": 52
+      "kume": 8,
+      "merkez_kok": "بءس",
+      "merkez_mana": "Be'es: azap, şiddet, zorluk",
+      "boy": 142
     },
     "ince": {
-      "kume": 255,
-      "merkez_kok": "جعع",
-      "merkez_mana": "hunger",
-      "boy": 9
+      "kume": 47,
+      "merkez_kok": "ضني",
+      "merkez_mana": "",
+      "boy": 8
     }
   },
   "kaliplar": {

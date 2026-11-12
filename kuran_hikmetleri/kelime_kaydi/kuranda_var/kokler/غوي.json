@@ -1485,6 +1485,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "استغواهم بالأماني الكاذبة، وهو من الغواة ومن أهل الغواية. وتقول: هو في غياية الضّلال، وغواية الضّلال. وتغاوولا عليه فقتلوه: تألبوا عليه تألب الغواة. قال:\nتغاوت عليه ذئاب الحجاز ... بنو بهثةٍ وبنو جعفر\nولألقينك في أغويّة. وتقول: من استمع إلى أغنيّه، فقد وقع في أغويّه.",
+    "mecaz": "رأس غاوٍ: كثير التلفّت.\nقال مرار بن منقذ:\nعنقاً يقلّبها ورأساً غاوياً ... صعلاً وقد يسمو على الصّعل\nأي يزيد عليه في الصّغر، كقوله تعالى: \" بعوضة فما فوقها \". وقال زهير:\nألم تريا النّعمان كان بنجوة ... من الشر لو أن امرأً كان ناجياً\nفغيّر عنه ملك عشرين حجّةً ... وعشرين يومٌ واحد كان غاوياً\nوحفر لأخيه مغوّاةً إذا ورّطه.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "استغواهم بالأماني الكاذبة، وهو من الغواة ومن أهل الغواية. وتقول: هو في غياية الضّلال، وغواية الضّلال. وتغاوولا عليه فقتلوه: تألبوا عليه تألب الغواة. قال: تغاوت عليه ذئاب الحجاز ... بنو بهثةٍ وبنو جعفر ولألقينك في أغويّة. وتقول: من استمع إلى أغنيّه، فقد وقع في ",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "رأس غاوٍ: كثير التلفّت.",
+        "prototipe_benzerlik": 0.123,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "أي يزيد عليه في الصّغر، كقوله تعالى: \" بعوضة فما فوقها \". وقال زهير:",
+        "prototipe_benzerlik": 0.462,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وحفر لأخيه مغوّاةً إذا ورّطه.",
+        "prototipe_benzerlik": 0.191,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.259,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["act.n.02", "capture.v.02", "content.n.05", "good.n.03", "madly.r.03", "tempt.v.03"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "المقصور والممدود",
@@ -1495,22 +1528,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "kume": 5,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 375
     },
     "orta": {
-      "kume": 10,
-      "merkez_kok": "ذعن",
-      "merkez_mana": "Za'n: boyun eğmek, kabul etmek",
-      "boy": 183
+      "kume": 14,
+      "merkez_kok": "غدر",
+      "merkez_mana": "Gadr: ihanet, hile",
+      "boy": 153
     },
     "ince": {
-      "kume": 54,
-      "merkez_kok": "طرد",
-      "merkez_mana": "Tard: kovmak, uzaklaştırmak",
-      "boy": 35
+      "kume": 79,
+      "merkez_kok": "خيب",
+      "merkez_mana": "Hayb: boşa çıkmak, umutsuz olmak; hâib: hayal kırıklığı",
+      "boy": 31
     }
   },
   "kaliplar": {

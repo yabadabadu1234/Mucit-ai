@@ -758,6 +758,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "ما رأيت عنده إلا الحاكة والحوكة، وأتيته في محاكته.",
+    "mecaz": "الشاعر يحوك الشعر حوكاً، والمطر يحول الرياض. وهذا على حوك هذا إذا كان مثله في السن أو الهيئة. وهم ناس ليست عليهم حوكة قريش أي لا يشبهونهم.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "ما رأيت عنده إلا الحاكة والحوكة، وأتيته في محاكته.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "الشاعر يحوك الشعر حوكاً، والمطر يحول الرياض. وهذا على حوك هذا إذا كان مثله في السن أو الهيئة. وهم ناس ليست عليهم حوكة قريش أي لا يشبهونهم.",
+        "prototipe_benzerlik": 0.148,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.148,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["weave.v.04"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الغرائز",
@@ -768,19 +791,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
+      "kume": 8,
       "merkez_kok": "قبب",
       "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "boy": 604
     },
     "orta": {
-      "kume": 43,
-      "merkez_kok": "خرز",
-      "merkez_mana": "awl",
-      "boy": 104
+      "kume": 32,
+      "merkez_kok": "دثر",
+      "merkez_mana": "Tedsîr: örtmek, bürümek; desr: örtü",
+      "boy": 148
     },
     "ince": {
-      "kume": 278,
+      "kume": 208,
       "merkez_kok": "زنر",
       "merkez_mana": "to belt, to gird",
       "boy": 16

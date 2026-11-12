@@ -737,7 +737,7 @@
   },
   "mana_tasnif": {
     "yontem": "Vikisözlük/Arabic Ontology İngilizce karşılığı → Princeton WordNet ilk anlam (makine eşlemesi, AWN kaydı yok)",
-    "ince": "person.n.01",
+    "ince": "whole.n.02",
     "orta": "noun.person",
     "ust": "insan ve toplum",
     "dayanak_synset": "enthusiast.n.01",
@@ -747,6 +747,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "ناقة ميلع: تملع في سيرها ملعاً أي تسرع. قال الكميت:\nعنتريس شملة ذات لوث ... هوجل ميلع كتوم البغام\nوتقول: طار إلى بعض القلاع، كأنه عقاب ملاع. قال أبو زيد: ملاع اسم أرض ويجوز أن يكون وصفاً على تقدير: عقاب قادمة ملاع، أو خفقة ملاع بمعنى مالعة سريعة. قال المسيّب:\nأنت الوفيّ فما تذمّ وبعضهم ... تودي بذمّته عقاب ملاع\nوقيل: \" لأنت أخفّ يداً من عقيب ملاع \".\nم\nل\nق\nقام على الملقة وهي الصخرة الملساء. وسرنا في الملق والملقات وهي القيعان الملس الصّلاب. وملق الأرض بالمملقة: ملسها بالمملسة. وملّق الجدار بالمالق والمملق. وخاتم قلق: ملق. وأزلقت المرأة وأملقت.",
+    "mecaz": "أملق الدهر ماله: أذهبه وأخرجه من يده. وأملق الرجل: أنفق ماله حتى افتقر. ورجل مملق. وقال أعرابيّ: قاتل الله النساء كيف يمتلقن العلل لأكأنها تخرج من تحت أقدامهن أي يستخرجنها. ورجل متملّق وملق وملاق: يظهر الودّ واللطف وفيه ملق شديد. قال:\nإياك أدعو فتقبّل ملقى ... واغفر خطاياي وثمّر ورقي\nوفرس ملق: يقفز ويضرب الأرض بحوافره ولا جرى عنده. قال الجعديّ:\nولا ملق ينزو ويندر روثه ... أحاد إذا فاس اللجام تصلصلا",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "ناقة ميلع: تملع في سيرها ملعاً أي تسرع. قال الكميت: عنتريس شملة ذات لوث ... هوجل ميلع كتوم البغام وتقول: طار إلى بعض القلاع، كأنه عقاب ملاع. قال أبو زيد: ملاع اسم أرض ويجوز أن يكون وصفاً على تقدير: عقاب قادمة ملاع، أو خفقة ملاع بمعنى مالعة سريعة. قال المسيّب: ",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "أملق الدهر ماله: أذهبه وأخرجه من يده. وأملق الرجل: أنفق ماله حتى افتقر. ورجل مملق. وقال أعرابيّ: قاتل الله النساء كيف يمتلقن العلل لأكأنها تخرج من تحت أقدامهن أي يستخرجنها. ورجل متملّق وملق وملاق: يظهر الودّ واللطف وفيه ملق شديد. قال:",
+        "prototipe_benzerlik": 0.962,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وفرس ملق: يقفز ويضرب الأرض بحوافره ولا جرى عنده. قال الجعديّ:",
+        "prototipe_benzerlik": 0.308,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.635,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الإبل",
@@ -757,22 +785,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 17,
+      "kume": 24,
       "merkez_kok": "زين",
       "merkez_mana": "Zîne: süs, güzellik; zeyn: güzelleştirmek",
-      "boy": 177
+      "boy": 123
     },
     "ince": {
-      "kume": 94,
-      "merkez_kok": "زين",
-      "merkez_mana": "Zîne: süs, güzellik; zeyn: güzelleştirmek",
-      "boy": 44
+      "kume": 141,
+      "merkez_kok": "متع",
+      "merkez_mana": "Metâ': yararlanma, geçici nimet",
+      "boy": 26
     }
   },
   "kaliplar": {

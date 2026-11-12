@@ -2283,13 +2283,51 @@
     "ince": "property.n.02",
     "orta": "noun.attribute",
     "ust": "hâl ve vasıf",
-    "dayanak_synset": "symmetry.n.01",
-    "dayanak_tanim": "(mathematics) an attribute of a shape or relation; exact reflection of form on opposite sides of a dividing line or plane",
+    "dayanak_synset": "asymmetry.n.01",
+    "dayanak_tanim": "(mathematics) a lack of symmetry",
     "synset_sayisi": 16
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "نسق الدرّ وغيره ونسّقه، ودرّ منسوق ومنسّق ونسقٌ، وتنسّقت هذه الأشياء وتناسقت.",
+    "mecaz": "كلام متناسق، وقد تناسق كلامه، وجاء على نسقٍ ونظامٍ. وثغر نسقٌ. وقام القوم نسقاً. ويقال لكواكب الجوزاء: النّسق،\nقال ريحان بن معقل:\nزارت بريح خزامى طلّةٍ أنفٍ ... جاءت بها الدّلو فالأشراط فالنّسق",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "نسق الدرّ وغيره ونسّقه، ودرّ منسوق ومنسّق ونسقٌ، وتنسّقت هذه الأشياء وتناسقت.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "كلام متناسق، وقد تناسق كلامه، وجاء على نسقٍ ونظامٍ. وثغر نسقٌ. وقام القوم نسقاً. ويقال لكواكب الجوزاء: النّسق،",
+        "prototipe_benzerlik": 0.403,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.403,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "act.n.02",
+    "array.n.01",
+    "assortment.n.01",
+    "consistency.n.01",
+    "equal.v.03",
+    "harmonize.v.01",
+    "match.v.01",
+    "match.v.05",
+    "meet.v.06",
+    "order.n.03",
+    "ordering.n.01",
+    "pit.v.01",
+    "spatial_property.n.01",
+    "structure.n.03"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -2300,22 +2338,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 23,
+      "kume": 18,
       "merkez_kok": "وشج",
       "merkez_mana": "",
-      "boy": 67
+      "boy": 63
     },
     "ince": {
-      "kume": 132,
-      "merkez_kok": "وشج",
-      "merkez_mana": "",
-      "boy": 14
+      "kume": 107,
+      "merkez_kok": "وءم",
+      "merkez_mana": "one who was born of a multiple birth, i.e. a twin, triplet, quadruplet",
+      "boy": 11
     }
   },
   "kaliplar": {

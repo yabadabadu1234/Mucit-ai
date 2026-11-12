@@ -2628,13 +2628,81 @@
     "ince": "cognition.n.01",
     "orta": "noun.cognition",
     "ust": "zihin ve ilim",
-    "dayanak_synset": "design.n.02",
-    "dayanak_tanim": "an arrangement scheme",
+    "dayanak_synset": "category.n.02",
+    "dayanak_tanim": "a general concept that marks divisions or coordinations in a conceptual scheme",
     "synset_sayisi": 51
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "رتب الشيء: ثبت ودام. وله عز راتب وترتب. قال الكميت:\nوعمّى عمرو بن الخثارم قوله ... بني من يفاع المجد ما هو ترتب\nكان عمه نسابة فيقول: قوله يرفعني. والصبي يترب الكعب: يقيمه. وقد رتب الكعب رتوباً.\nوتقول: رتب فلان رتوب الكعب، في المقام الصعب. ورتب في الصلاة: انتصب قائماً. ورتب في الأمر حتى كفاه. ورقي في رُتب الدرج ومراتبها. ورتّب الأشياء ورتّب الطلائع في المراتب والمراقب وهي مواضع الرقباء في الجبال. قال الشماخ:\nومرتبة لا يستقال بها الردى ... تلافى بها حلمي عن الجهل حاجز\nوما في عيشه رتب: شدة. وما في أمره رتب ولا عتب إذا كان سهلاً مستقيماً.",
+    "mecaz": "لفلان مرتبة عند السلطان ومنزلة. وهو من أهل المراتب، وهو في أعلى الرتب.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "رتب الشيء: ثبت ودام. وله عز راتب وترتب. قال الكميت: وعمّى عمرو بن الخثارم قوله ... بني من يفاع المجد ما هو ترتب كان عمه نسابة فيقول: قوله يرفعني. والصبي يترب الكعب: يقيمه. وقد رتب الكعب رتوباً. وتقول: رتب فلان رتوب الكعب، في المقام الصعب. ورتب في الصلاة: انتصب",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "لفلان مرتبة عند السلطان ومنزلة. وهو من أهل المراتب، وهو في أعلى الرتب.",
+        "prototipe_benzerlik": 0.194,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.194,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "act.n.02",
+    "act.v.02",
+    "adjust.v.01",
+    "arrange.v.01",
+    "arrange.v.02",
+    "arrange.v.07",
+    "cause.v.01",
+    "classification.n.02",
+    "classify.v.01",
+    "clean.v.01",
+    "cleanse.v.01",
+    "construct.v.01",
+    "content.n.05",
+    "degree.n.01",
+    "degree.n.02",
+    "dispose.v.03",
+    "do.v.03",
+    "fix.v.12",
+    "form.v.01",
+    "get_the_better_of.v.01",
+    "groom.v.03",
+    "make.v.01",
+    "ordain.v.02",
+    "order.v.05",
+    "ordering.n.01",
+    "organize.v.02",
+    "pack.v.01",
+    "perform.v.01",
+    "placement.n.01",
+    "plant.v.01",
+    "process.n.02",
+    "put.v.01",
+    "rate.v.01",
+    "reduce.v.01",
+    "roll.v.12",
+    "settle.v.11",
+    "shape.v.02",
+    "shape.v.03",
+    "status.n.01",
+    "structure.n.03",
+    "suffice.v.01",
+    "taxonomic_group.n.01",
+    "tidy.v.01",
+    "transferred_property.n.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "(giriş)",
@@ -2645,19 +2713,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 15,
+      "kume": 19,
       "merkez_kok": "فوق",
       "merkez_mana": "Fevk: üst, yukarı (zarf)",
-      "boy": 107
+      "boy": 76
     },
     "ince": {
-      "kume": 83,
+      "kume": 111,
       "merkez_kok": "حصل",
       "merkez_mana": "Hasl: elde etmek, sonuçlanmak; hâsıl",
       "boy": 37

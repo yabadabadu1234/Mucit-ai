@@ -1200,6 +1200,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "غدا إلى الرمس، كأن لم يغن بالأمس؛ وهو القبر وما يحثى على الميت من التراب وأصله الدفن وحثى التراب عليه، يقال: رمسه بالتراب.",
+    "mecaz": "الريح ترمس الآثار بما تثيره، وعفتها الرامسات والروامس، ورمست علي الأمر: كتمته، ورمس الخبر. قال لقيط بن زرارة:\nيا ليت شعري اليوم دختنوس ... إذا أتاها الخبر المرموس\nأتحلق القرون أم تميس ... لا بل تميس إنها عروس\nورمست حبك في قلبي. قال:\nإذا ألحم الواشون للشرّ بيننا ... تبلغ رمس الحب غير المكذب\nاشتد واستحكم من تبلغ به المرض. ويقال: ألحم الحرب والشر واللام صله.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "غدا إلى الرمس، كأن لم يغن بالأمس؛ وهو القبر وما يحثى على الميت من التراب وأصله الدفن وحثى التراب عليه، يقال: رمسه بالتراب.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "الريح ترمس الآثار بما تثيره، وعفتها الرامسات والروامس، ورمست علي الأمر: كتمته، ورمس الخبر. قال لقيط بن زرارة:",
+        "prototipe_benzerlik": 0.454,
+        "halka": "orta"
+      },
+      {
+        "cumle": "ورمست حبك في قلبي. قال:",
+        "prototipe_benzerlik": 0.303,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "اشتد واستحكم من تبلغ به المرض. ويقال: ألحم الحرب والشر واللام صله.",
+        "prototipe_benzerlik": 0.476,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.411,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النساء",
@@ -1210,19 +1243,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "kume": 6,
+      "merkez_kok": "درك",
+      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
+      "boy": 1364
     },
     "orta": {
-      "kume": 38,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 203
+      "kume": 20,
+      "merkez_kok": "لحد",
+      "merkez_mana": "Lahd: mezar çukuru; lehd: meyil, eğilme",
+      "boy": 187
     },
     "ince": {
-      "kume": 248,
+      "kume": 118,
       "merkez_kok": "قبر",
       "merkez_mana": "Kabr: mezar; kubûr",
       "boy": 9

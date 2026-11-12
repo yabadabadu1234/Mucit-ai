@@ -1089,6 +1089,56 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "خلا زمن فزمن، وخرجنا ذات الزمين. وأنشد أبو زيد لمعقل بن ريحان:\nفكأن دمعك إذ عرفت محلّها ... ذات الزمين فضا جمان مرسل\nالفضا: المتبدد. وأزمن الشيء: مضى عليه الزمان فهو مزمن. وأزمن الله فلاناً فهو زمن وزمين، وهم زمنة وزمني، وقد زمن زمناً وزمانة. وتقول معي نكايات الزمن، وشكايات الزمن.",
+    "mecaz": "أزمن عني عطاؤك: أبطأ عليّ. قال الكميت:\nللنسوة العاطلات والصبية ال ... مزمن عنهم ما كان يكتسب\nوفلان فاتر النشاط زمن الرغبة.\nز ن ج ر\nزنجر فلان لفلان إذا قرع بظفر إبهامه ظفر سبّابته، يريد ولا أعطيك مثل هذا.\nوأرسلت إلى سلمى ... بأن النفس مشغوفهْ\nفما جادت لنا سلمى ... بزنجير ولا فوفهْ\nتقول: طلبت العدل من سنجر، فما فوف ولا زنجر.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "خلا زمن فزمن، وخرجنا ذات الزمين. وأنشد أبو زيد لمعقل بن ريحان: فكأن دمعك إذ عرفت محلّها ... ذات الزمين فضا جمان مرسل الفضا: المتبدد. وأزمن الشيء: مضى عليه الزمان فهو مزمن. وأزمن الله فلاناً فهو زمن وزمين، وهم زمنة وزمني، وقد زمن زمناً وزمانة. وتقول معي نكايات ",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "أزمن عني عطاؤك: أبطأ عليّ. قال الكميت:",
+        "prototipe_benzerlik": 0.805,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وفلان فاتر النشاط زمن الرغبة.",
+        "prototipe_benzerlik": 0.114,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "زنجر فلان لفلان إذا قرع بظفر إبهامه ظفر سبّابته، يريد ولا أعطيك مثل هذا.",
+        "prototipe_benzerlik": 0.193,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "تقول: طلبت العدل من سنجر، فما فوف ولا زنجر.",
+        "prototipe_benzerlik": 0.256,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.342,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "agree.v.01",
+    "class.n.01",
+    "coincide.v.01",
+    "magnitude.n.01",
+    "overlap.v.01",
+    "synchronism.n.01",
+    "synchronous.a.01",
+    "temporal_property.n.01",
+    "temporally.r.01",
+    "time.n.05",
+    "time_period.n.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "(giriş)",
@@ -1099,22 +1149,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "kume": 5,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 375
     },
     "orta": {
-      "kume": 35,
-      "merkez_kok": "حين",
-      "merkez_mana": "Hîn: zaman, bir süre",
-      "boy": 54
+      "kume": 10,
+      "merkez_kok": "ءخر",
+      "merkez_mana": "Âhir: son; teehhür: gecikmek",
+      "boy": 56
     },
     "ince": {
-      "kume": 223,
+      "kume": 62,
       "merkez_kok": "حين",
       "merkez_mana": "Hîn: zaman, bir süre",
-      "boy": 23
+      "boy": 28
     }
   },
   "kaliplar": {

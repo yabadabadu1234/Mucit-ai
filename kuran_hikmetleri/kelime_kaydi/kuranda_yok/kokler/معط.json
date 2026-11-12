@@ -714,32 +714,65 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "معطت الشعر: مددته نتفاً، وانمعط وتمعط. وذئب أمعط. وذئاب معط. وقد معط الئب معطاً. ومعط في القوس: نزع.",
+    "mecaz": "أرض معطاء، ورملة معطاء، ورمال معط: لا نبت فيها. ولص أمعط. ولصوص معط: شبّهت بالذئاب في خبثها فوصفت بصفتها.\nم ع م ع سمعت معمعة الحريق: صوته. قال امرؤ القيس:\nسبوحاً جموحاً وإحضارها ... كعمعة السعف الموقد\nوجاء في معمعان الصيف. وامرأة معمع: لا تعطى من مالها شيأ. ويقال: منهنذ معمع، لها شيئها أجمع. ويقال لمن يكثر استعمال \" مع \": إلى كم تمعمع. وفلان معمعيّ: لا رأي له يقول لكل أحد: أنا معك. وصاروا معاً معاً إذا اجتمعوا واتفقوا. قال الطّرماح:\nولمّهم شعوب الأمر حتى ... تصير معاً معاً بعد الشتات",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "معطت الشعر: مددته نتفاً، وانمعط وتمعط. وذئب أمعط. وذئاب معط. وقد معط الئب معطاً. ومعط في القوس: نزع.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "أرض معطاء، ورملة معطاء، ورمال معط: لا نبت فيها. ولص أمعط. ولصوص معط: شبّهت بالذئاب في خبثها فوصفت بصفتها.",
+        "prototipe_benzerlik": 0.482,
+        "halka": "orta"
+      },
+      {
+        "cumle": "م ع م ع سمعت معمعة الحريق: صوته. قال امرؤ القيس:",
+        "prototipe_benzerlik": 0.43,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وجاء في معمعان الصيف. وامرأة معمع: لا تعطى من مالها شيأ. ويقال: منهنذ معمع، لها شيئها أجمع. ويقال لمن يكثر استعمال \" مع \": إلى كم تمعمع. وفلان معمعيّ: لا رأي له يقول لكل أحد: أنا معك. وصاروا معاً معاً إذا اجتمعوا واتفقوا. قال الطّرماح:",
+        "prototipe_benzerlik": 0.967,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.626,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السباع",
     "bab": "الذئاب إرادة إناث الذئاب",
-    "kok_gecis": 23.5,
+    "kok_gecis": 22.9,
     "kitapta_gecis": 3.0,
-    "zenginlesme": 14.81
+    "zenginlesme": 15.18
   },
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
       "kume": 42,
-      "merkez_kok": "وبر",
-      "merkez_mana": "Vaber: yün, deve tüyü; vebr: tavşan",
-      "boy": 84
+      "merkez_kok": "سحم",
+      "merkez_mana": "to become black, to be blackened",
+      "boy": 97
     },
     "ince": {
       "kume": 269,
       "merkez_kok": "هدب",
       "merkez_mana": "to cull, to abscind, to pluck",
-      "boy": 7
+      "boy": 10
     }
   },
   "kaliplar": {

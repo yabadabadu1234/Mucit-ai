@@ -1010,6 +1010,42 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "حكى لي عنه كذا. وهو يحكي فلاناً ويحاكيه، وهو حكاء. وتقول العرب: هذه حكايتنا أي لغتنا. وامرأة حكيٌّ: حاكية لكلام الناس مهذار.",
+    "mecaz": "وجهه يحكي الشمس ويحاكيها.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "حكى لي عنه كذا. وهو يحكي فلاناً ويحاكيه، وهو حكاء. وتقول العرب: هذه حكايتنا أي لغتنا. وامرأة حكيٌّ: حاكية لكلام الناس مهذار.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "وجهه يحكي الشمس ويحاكيها.",
+        "prototipe_benzerlik": 0.206,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.206,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "act.n.02",
+    "artifact.n.01",
+    "content.n.05",
+    "copy.v.04",
+    "evidence.n.02",
+    "imitate.v.01",
+    "imitate.v.02",
+    "narrative.n.01",
+    "refer.v.02",
+    "relate.v.05",
+    "simulate.v.03",
+    "weave.v.04"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطير",
@@ -1020,22 +1056,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 6,
+      "kume": 7,
       "merkez_kok": "لقلق",
       "merkez_mana": "",
-      "boy": 440
+      "boy": 386
     },
     "orta": {
-      "kume": 29,
-      "merkez_kok": "عربد",
-      "merkez_mana": "to revel, to be boisterous, to be noisy, to be quarrelsome",
-      "boy": 68
+      "kume": 26,
+      "merkez_kok": "طعل",
+      "merkez_mana": "to come upon, befall",
+      "boy": 91
     },
     "ince": {
-      "kume": 188,
-      "merkez_kok": "شخبط",
-      "merkez_mana": "to scribble, to scrawl, to scratch, to doodle",
-      "boy": 8
+      "kume": 149,
+      "merkez_kok": "مع",
+      "merkez_mana": "",
+      "boy": 7
     }
   },
   "kaliplar": {

@@ -720,6 +720,44 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "هو يمشي في الوعث والوعوث: في دهاسٍ يشق فيه المشيُ، وقد أوعثوا، كقولك: أسهلوا.",
+    "mecaz": "\" أعوذ بالله من وعثاء السفر \": من شدّته. وركب فلان الوعثاء إذا أذنب. قال الكميت:\nوأين ابنها منكم ومنّا وبعلها ... خزيمة والأرحام وعثاء حوبها\nويده وعثة: منكسرة. قال:\nألستم تغضبون إذا رأيتم ... يميني وعثةً وفمي رتاما\nورجل وعث اللسان إذا عجز عن الكلام. قال ابن هرمة:\nومغوثٍ بعد الهدوّ أجبته ... ولسانه وعث اللهاة قطيع\nوأوعث المتكلم. وامرأة وعثة الأرداف: عجزاء. قال ابن هرمة:\nثم قامت حولها أترابها ... وعثة الأرداف غرثى الملتزم",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "هو يمشي في الوعث والوعوث: في دهاسٍ يشق فيه المشيُ، وقد أوعثوا، كقولك: أسهلوا.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "\" أعوذ بالله من وعثاء السفر \": من شدّته. وركب فلان الوعثاء إذا أذنب. قال الكميت:",
+        "prototipe_benzerlik": 0.232,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "ويده وعثة: منكسرة. قال:",
+        "prototipe_benzerlik": 0.547,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "ورجل وعث اللسان إذا عجز عن الكلام. قال ابن هرمة:",
+        "prototipe_benzerlik": 0.489,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وأوعث المتكلم. وامرأة وعثة الأرداف: عجزاء. قال ابن هرمة:",
+        "prototipe_benzerlik": 0.416,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.421,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -731,21 +769,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 509
     },
     "orta": {
-      "kume": 7,
-      "merkez_kok": "كرب",
-      "merkez_mana": "Karb: sıkıntı, keder; kurbet: sıkıntı",
-      "boy": 139
+      "kume": 8,
+      "merkez_kok": "بءس",
+      "merkez_mana": "Be'es: azap, şiddet, zorluk",
+      "boy": 142
     },
     "ince": {
-      "kume": 34,
-      "merkez_kok": "وني",
-      "merkez_mana": "Vehen: gevşemek, zayıflamak",
-      "boy": 9
+      "kume": 49,
+      "merkez_kok": "وهن",
+      "merkez_mana": "Vehn: zayıflık, gevşeklik",
+      "boy": 21
     }
   },
   "kaliplar": {

@@ -778,7 +778,7 @@
   },
   "mana_tasnif": {
     "yontem": "Vikisözlük/Arabic Ontology İngilizce karşılığı → Princeton WordNet ilk anlam (makine eşlemesi, AWN kaydı yok)",
-    "ince": "agent.n.03",
+    "ince": "substance.n.07",
     "orta": "noun.food",
     "ust": "canlı ve beden",
     "dayanak_synset": "wine.n.01",
@@ -793,6 +793,34 @@
     "fasil_ozeti": "° معنى الفصل المعجمي (رح) : الاتساع والانبساط مع نوع من الرقة -كما يتمثل في القدم الأرحّ مع رقة باطنه -في (رحح)، وفي تخلخل الريح وخفتها وانتشارها، وانبساط الكف ونعومتها ودقة سمكها -في (روح)، وفي اتساع الرحبة وخلوها -في (رحب)، وفي صفاء الرحيق (وهو تخلخل أثناء) مع سهولته وعدم لذعه -في (رحق)، وفي بعد مسافة المفارقة مع راحة الركوب -في (رحل)، وفي اتساع مسامّ جلد السقاء وكيس الجنين مع بَلالهما -في (رحم).",
     "tam_metin": "{يُسْقَوْنَ مِنْ رَحِيقٍ مَخْتُومٍ (25) خِتَامُهُ مِسْكٌ} [المطففين: 25 - 26]\n\"الرحيق من أسماء الخمر وهو من أعتقها وأفضلها صَفْوةُ الخمر السَهْل من الخمر، الشَرَاب الذي لا غِشَّ فيه. والرحيق والرُحاق -كغراب: الصافي \".\n° المعنى المحوري\nصفاء الشيء وسهولته بذهاب غلظه وحِدّته من أثنائه: كتلك الخمر بصفاتها المذكورة، فهي صافية سلسة ليس فيها حُمُوزة -كما قال تعالى عنها: {وَأَنْهَارٌ مِنْ خَمْرٍ لَذَّةٍ لِلشَّارِبِينَ}، وأيضًا {لَا فِيهَا غَوْلٌ} [الصافات: 47]، {يُسْقَوْنَ مِنْ رَحِيقٍ مَخْتُومٍ (25) خِتَامُهُ مِسْكٌ} [المطففين: 25 - 26]، فهذه هي خمر الجنة."
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "سقاه الرحيق وهو الخالص من الخمر. وتقول: يا شارب الرحيق، أبشر بعذاب الحريق.",
+    "mecaz": "مسك رحيق: لا غش فيه. قال يصف شعراً:\nيسقى الدهان والرحيق والكتم ... حتى استوت نبتته وما ظلم\nوما نقص. وحسب رحيق: لا شوب فيه.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Cebel mihverî mana",
+    "prototip": "صفاء الشيء وسهولته بذهاب غلظه وحِدّته من أثنائه: كتلك الخمر بصفاتها المذكورة، فهي صافية سلسة ليس فيها حُمُوزة -كما قال تعالى عنها: {وَأَنْهَارٌ مِنْ خَمْرٍ لَذَّةٍ لِلشَّارِبِينَ}، وأيضًا {لَا فِيهَا غَوْلٌ} [الصافات: 47]، {يُسْقَوْنَ مِنْ رَحِيقٍ مَخْتُومٍ (2",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "مسك رحيق: لا غش فيه. قال يصف شعراً:",
+        "prototipe_benzerlik": 0.548,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وما نقص. وحسب رحيق: لا شوب فيه.",
+        "prototipe_benzerlik": 0.422,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.485,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الغرائز",
@@ -804,21 +832,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 42,
-      "merkez_kok": "وبر",
-      "merkez_mana": "Vaber: yün, deve tüyü; vebr: tavşan",
-      "boy": 84
+      "kume": 40,
+      "merkez_kok": "ثعع",
+      "merkez_mana": "",
+      "boy": 49
     },
     "ince": {
-      "kume": 270,
-      "merkez_kok": "شقر",
-      "merkez_mana": "yellowish; fair, blond",
-      "boy": 11
+      "kume": 260,
+      "merkez_kok": "ثعع",
+      "merkez_mana": "",
+      "boy": 16
     }
   },
   "kaliplar": {

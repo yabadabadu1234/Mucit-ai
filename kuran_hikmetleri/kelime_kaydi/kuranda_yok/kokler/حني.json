@@ -754,6 +754,44 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "حتى العود يحنيه. وانحنى ظهره وتحنى. ونزلوا في محنية الوادي، وحنو الوادي، ومنحناه ومنعطفه، وفي محانيه وأحنائه. وأصلح أحناء سرجك. وخرجوا بالحنايا، يتبعون الرماا؛ وهي القسي الواحدة حنية. وفي أيديهم الحني المعطف، واللدن المثقف.",
+    "mecaz": "هو يحنو عليّ حنو الأب البرّ، ويتحنى علي، وحنت المرأة على ولدها حنواً إذا لم تتزوج بعد أبيه، وهذه أم حانية. وطوى عليه أحناء صدره. وهو أعرف بأثناء الأمور وأحنائها. وهو يتقلب بين أحناء الحق، ويتحرّى أنحاء الصدق. قال الكميت:\nوآلو الأمور وأحناءها ... فلم يبهلوها ولم يهملوا من الإيالة. وضربت حنو عينه أي حجاجها.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "حتى العود يحنيه. وانحنى ظهره وتحنى. ونزلوا في محنية الوادي، وحنو الوادي، ومنحناه ومنعطفه، وفي محانيه وأحنائه. وأصلح أحناء سرجك. وخرجوا بالحنايا، يتبعون الرماا؛ وهي القسي الواحدة حنية. وفي أيديهم الحني المعطف، واللدن المثقف.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "هو يحنو عليّ حنو الأب البرّ، ويتحنى علي، وحنت المرأة على ولدها حنواً إذا لم تتزوج بعد أبيه، وهذه أم حانية. وطوى عليه أحناء صدره. وهو أعرف بأثناء الأمور وأحنائها. وهو يتقلب بين أحناء الحق، ويتحرّى أنحاء الصدق. قال الكميت:",
+        "prototipe_benzerlik": 0.493,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.493,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "act.n.02",
+    "angular_shape.n.01",
+    "artifact.n.01",
+    "bend.v.01",
+    "bend.v.02",
+    "bow.v.01",
+    "decline.v.04",
+    "double.v.04",
+    "duck.v.01",
+    "lean.v.01",
+    "line.n.04",
+    "physical_property.n.01",
+    "refuse.v.01",
+    "spatial_property.n.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -764,19 +802,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 6,
+      "kume": 7,
       "merkez_kok": "لقلق",
       "merkez_mana": "",
-      "boy": 440
+      "boy": 386
     },
     "orta": {
-      "kume": 28,
+      "kume": 29,
       "merkez_kok": "دبب",
       "merkez_mana": "debbe: sürünmek, hareket / debbe: uğraşmak (?)",
-      "boy": 81
+      "boy": 73
     },
     "ince": {
-      "kume": 177,
+      "kume": 183,
       "merkez_kok": "جلعب",
       "merkez_mana": "to lie down on one's side and stretch oneself out",
       "boy": 10

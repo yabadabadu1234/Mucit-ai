@@ -758,7 +758,7 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "part.n.01",
+    "ince": "whole.n.02",
     "orta": "noun.substance",
     "ust": "tabiat",
     "dayanak_synset": "plaster.n.01",
@@ -768,32 +768,55 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "رجل أملط: أجرد لا شعر على جسده إلا شعر الرأس واللحية. وكان الأحنف أملط. وخذا يا بني ملاطه: بعضديه. وبنى الحائط باللبن والملاط وهو الطين بين الساقين. وملطه البناء وملّطه. وأملطت المرأة: أملصت.",
+    "mecaz": "أن يقول الشاعر مصراعاً ويقول لآخر: أملط أي أجر المصراع الثاني. ومالطه، وبينهما ممالطة وهو من إملاط الحامل.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "رجل أملط: أجرد لا شعر على جسده إلا شعر الرأس واللحية. وكان الأحنف أملط. وخذا يا بني ملاطه: بعضديه. وبنى الحائط باللبن والملاط وهو الطين بين الساقين. وملطه البناء وملّطه. وأملطت المرأة: أملصت.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "أن يقول الشاعر مصراعاً ويقول لآخر: أملط أي أجر المصراع الثاني. ومالطه، وبينهما ممالطة وهو من إملاط الحامل.",
+        "prototipe_benzerlik": 0.571,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.571,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["artifact.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
-    "kitap": "المكنيات والمبنيات والمثنيات",
-    "bab": "الأبناء",
-    "kok_gecis": 21.7,
-    "kitapta_gecis": 2.5,
-    "zenginlesme": 6.24
+    "kitap": "الأضداد",
+    "bab": "الإبدال",
+    "kok_gecis": 19.5,
+    "kitapta_gecis": 4.0,
+    "zenginlesme": 4.11
   },
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
       "kume": 42,
-      "merkez_kok": "وبر",
-      "merkez_mana": "Vaber: yün, deve tüyü; vebr: tavşan",
-      "boy": 84
+      "merkez_kok": "سحم",
+      "merkez_mana": "to become black, to be blackened",
+      "boy": 97
     },
     "ince": {
       "kume": 269,
       "merkez_kok": "هدب",
       "merkez_mana": "to cull, to abscind, to pluck",
-      "boy": 7
+      "boy": 10
     }
   },
   "kaliplar": {

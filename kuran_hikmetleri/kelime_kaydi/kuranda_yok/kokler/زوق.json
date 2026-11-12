@@ -1076,32 +1076,55 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "أنت \" أثقل عليّ من الزاووق \" وهو الزئبق. يقال: درهم مزأبق ومزوق بمعنى، ومنه: زوقوا المساجد: زينوها بالنقوش لأن الناقش يجعله في أصباغه. ويقال للمرأة: تزيني وتزيقي، وهو تفيعل نحو تديّن ويجوز أن يكون تفعل من زيق البناء لأن المتحسنة تسوّي أمرها وتثقفه بالزينة.",
+    "mecaz": "كلام مزوق، وقد زوقته تزويقاً. وعن يونس: قال لي رؤبة حتى متى تسألني عن هذه الأباطيل وأزوقها لك أما ترى الشيب قد بلّع في رأسك. وتقول: هذا شعر مزوّق، لو أنه مروّق؛ إذا كان محبراً غير منفح.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "أنت \" أثقل عليّ من الزاووق \" وهو الزئبق. يقال: درهم مزأبق ومزوق بمعنى، ومنه: زوقوا المساجد: زينوها بالنقوش لأن الناقش يجعله في أصباغه. ويقال للمرأة: تزيني وتزيقي، وهو تفيعل نحو تديّن ويجوز أن يكون تفعل من زيق البناء لأن المتحسنة تسوّي أمرها وتثقفه بالزينة.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "كلام مزوق، وقد زوقته تزويقاً. وعن يونس: قال لي رؤبة حتى متى تسألني عن هذه الأباطيل وأزوقها لك أما ترى الشيب قد بلّع في رأسك. وتقول: هذا شعر مزوّق، لو أنه مروّق؛ إذا كان محبراً غير منفح.",
+        "prototipe_benzerlik": 0.579,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.579,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["enjoy.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
-    "kitap": "اللباس",
-    "bab": "المخطط من الثياب",
-    "kok_gecis": 6.7,
-    "kitapta_gecis": 1.7,
-    "zenginlesme": 16.55
+    "kitap": "الطعام",
+    "bab": "داء الوجه",
+    "kok_gecis": 5.8,
+    "kitapta_gecis": 2.5,
+    "zenginlesme": 8.37
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
+      "kume": 8,
       "merkez_kok": "قبب",
       "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "boy": 604
     },
     "orta": {
-      "kume": 43,
-      "merkez_kok": "خرز",
-      "merkez_mana": "awl",
-      "boy": 104
+      "kume": 32,
+      "merkez_kok": "دثر",
+      "merkez_mana": "Tedsîr: örtmek, bürümek; desr: örtü",
+      "boy": 148
     },
     "ince": {
-      "kume": 277,
+      "kume": 212,
       "merkez_kok": "رصع",
       "merkez_mana": "to inlay, to adorn, to embroider",
-      "boy": 12
+      "boy": 13
     }
   },
   "kaliplar": {

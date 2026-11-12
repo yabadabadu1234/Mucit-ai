@@ -1273,16 +1273,39 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "cry.v.02",
+    "ince": "shed.v.04",
     "orta": "verb.body",
     "ust": "canlı ve beden",
-    "dayanak_synset": "cry.v.02",
-    "dayanak_tanim": "shed tears because of sadness, rage, or pain",
+    "dayanak_synset": "shed.v.04",
+    "dayanak_tanim": "cast off hair, skin, horn, or feathers",
     "synset_sayisi": 3
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "دمع ذارف ومذروف وذريف. ودموع وعيون ذوارف. وقد ذرف دمعه ذروفاً، وذرفت عينه الدمع ذرفاً. وسالت مذارف عينه أي مدامعها. وسمعت من يقول: رأيت دمعه يتذارف: وذرفت على الستين زدت عليها.",
+    "mecaz": "مطر وسحاب ذارف. ورأيت في يده قدحاً يتذارف.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "دمع ذارف ومذروف وذريف. ودموع وعيون ذوارف. وقد ذرف دمعه ذروفاً، وذرفت عينه الدمع ذرفاً. وسالت مذارف عينه أي مدامعها. وسمعت من يقول: رأيت دمعه يتذارف: وذرفت على الستين زدت عليها.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "مطر وسحاب ذارف. ورأيت في يده قدحاً يتذارف.",
+        "prototipe_benzerlik": 0.587,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.587,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["cry.v.02", "shed.v.01", "shed.v.04"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "خلق الإنسان",
@@ -1293,22 +1316,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 7,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 331
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 31,
+      "kume": 36,
       "merkez_kok": "سكب",
       "merkez_mana": "Sakb: dökmek, boşaltmak",
-      "boy": 76
+      "boy": 101
     },
     "ince": {
-      "kume": 206,
+      "kume": 239,
       "merkez_kok": "ذرف",
       "merkez_mana": "to flow (tears)",
-      "boy": 26
+      "boy": 30
     }
   },
   "kaliplar": {

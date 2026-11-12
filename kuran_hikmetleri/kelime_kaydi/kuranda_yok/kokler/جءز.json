@@ -925,16 +925,27 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "potential.a.01",
-    "orta": "adj.all",
-    "ust": "hâl ve vasıf",
-    "dayanak_synset": "potential.a.01",
-    "dayanak_tanim": "existing in possibility",
+    "ince": "possession.n.02",
+    "orta": "noun.possession",
+    "ust": "insan ve toplum",
+    "dayanak_synset": "prize.n.01",
+    "dayanak_tanim": "something given for victory or superiority in a contest or competition or for winning a lottery",
     "synset_sayisi": 3
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "فلان جئز شئز أي شرق قلق. وتقول: يا ماء إن أجأزت، فكم أجزت، من أجاز الغصة.",
+    "mecaz": "",
+    "kinaye": "",
+    "mecaz_var": false
+  },
+  "prototip_yayilim_tasnif": {
+    "durum": "prototip veya mecaz kolu yok"
+  },
+  "kolekzifikasyon_kavramlari": ["possible.a.01", "potential.a.01", "transferred_property.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
@@ -945,22 +956,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 14,
-      "merkez_kok": "جهد",
-      "merkez_mana": "Cehd: gayret, çaba; cehd: yorgunluk",
-      "boy": 135
+      "kume": 25,
+      "merkez_kok": "وسل",
+      "merkez_mana": "Vesîle: aracı, yol",
+      "boy": 130
     },
     "ince": {
-      "kume": 73,
-      "merkez_kok": "نول",
-      "merkez_mana": "to bestow, to give, to grant",
-      "boy": 13
+      "kume": 146,
+      "merkez_kok": "منح",
+      "merkez_mana": "gift, donation",
+      "boy": 15
     }
   },
   "kaliplar": {

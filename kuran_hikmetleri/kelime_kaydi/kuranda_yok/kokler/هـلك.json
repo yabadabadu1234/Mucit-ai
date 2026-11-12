@@ -1,0 +1,83 @@
+{
+  "kok": "هـلك",
+  "sinif": "reddedildi",
+  "turkce_fiil": null,
+  "mustaklar": {},
+  "reddedilen": [
+    ["kök", "هـلك", "üç harfli değil"]
+  ],
+  "sozlukler": {},
+  "kuran_gecisleri": 0,
+  "kuranda_var": false,
+  "sema": {
+    "sema": "graf-ic-graf",
+    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
+    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
+    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
+    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
+    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
+  },
+  "tasnif": {
+    "fasil": "هـ",
+    "harf": "ه",
+    "mahrec": "halkiyye",
+    "bolge": "halk"
+  },
+  "mana_tasnif": {
+    "durum": "Arabic WordNet v2 kaydı yok"
+  },
+  "ses_mana_tasnif": {
+    "durum": "Cebel mu'cemlerinde kök yok"
+  },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "فيه الهلاك والهلك والهلكة: ووقعوا في المهلكة والمهالك. وألقى بيده إلى التّهلُكة. وهلكوا مهلكاً واحداً. وفلان هالك في الهوالك. واهتلك فلان: ألقى نفسه في التّهلكة. وأهلك الشيء واستهلكه. وهوى في هلكٍ وهو مهوًى بين جبلين. قال ذو الرمة:\nترى قرطها في واضح اللّيت مشرفاً ... على هلكٍ في نفنفٍ يتطوّح",
+    "mecaz": "مفازة تهلك فيها الأرواح. قال زهير:\nوخرقٍ تهلك الأرواح فيه ... بعيد الغور مشتبه المتان\nوهلك على الشيء وتهالك عليه إذا اشتدّ حرصه وشرهه. وأنا متهالك في مودّتك ومستهلك. قال القطاميّ:\nلمستهلك قد كاد من شدّة الهوى ... يموت ومن طول العدات الكواذب\nوتهالكت في هذا الأمر واستهلكت فيه إذا كنت مجداً فيه مستعجلاً. قال الحطيئة يصف طريقاً:\nمستهلك الورد كالأسديّ قد جعلت ... أيدي المطيّ به عاديةً رغباً\nومرّ يهتلك في عدوه ويتهالك: يجدّ. قال الحارث ابن حرجة:\nفلما يئست نسأت القلوص ... تهالك في سبسبٍ أغبر\nوتهالك على الفراش: تساقط عليه. وتهالكت في مشيتها: تفيّأت وتكسّرت، ومنه الهلوك: للفاجرة، والجمع الهلك. وقوم هلاّكٌ: صعاليك سيئو الحال. قال أبو طالب في مدح رسول الله صلى الله تعالى عليه وسلم:\nيلوذ به الهلاّك من آل هاشم ... فهم عنده في نعمة وفواضل\nوقال جميل:\nأبيت مع الهلاّك ضيفاً لأهلها ... وأهلي قريبٌ موسعون ذوو فضل",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "فيه الهلاك والهلك والهلكة: ووقعوا في المهلكة والمهالك. وألقى بيده إلى التّهلُكة. وهلكوا مهلكاً واحداً. وفلان هالك في الهوالك. واهتلك فلان: ألقى نفسه في التّهلكة. وأهلك الشيء واستهلكه. وهوى في هلكٍ وهو مهوًى بين جبلين. قال ذو الرمة: ترى قرطها في واضح اللّيت مشر",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "مفازة تهلك فيها الأرواح. قال زهير:",
+        "prototipe_benzerlik": 0.78,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وهلك على الشيء وتهالك عليه إذا اشتدّ حرصه وشرهه. وأنا متهالك في مودّتك ومستهلك. قال القطاميّ:",
+        "prototipe_benzerlik": 0.564,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وتهالكت في هذا الأمر واستهلكت فيه إذا كنت مجداً فيه مستعجلاً. قال الحطيئة يصف طريقاً:",
+        "prototipe_benzerlik": 0.624,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "ومرّ يهتلك في عدوه ويتهالك: يجدّ. قال الحارث ابن حرجة:",
+        "prototipe_benzerlik": 0.768,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وتهالك على الفراش: تساقط عليه. وتهالكت في مشيتها: تفيّأت وتكسّرت، ومنه الهلوك: للفاجرة، والجمع الهلك. وقوم هلاّكٌ: صعاليك سيئو الحال. قال أبو طالب في مدح رسول الله صلى الله تعالى عليه وسلم:",
+        "prototipe_benzerlik": 0.484,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.644,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
+  "muhassas_tasnif": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "mana_tasnif_gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
+  },
+  "kaliplar": {},
+  "kelimeler": []
+}

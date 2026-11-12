@@ -1620,6 +1620,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "شبره يشبره: قدّره بشبره، وهو أشبر من صاحبه: أوسع شبراً.",
+    "mecaz": "هو قصير الشبر مقارب الخلق. قالت الخنساء:\nمعاذ الله ينكحني حبركي ... قصير الشبر من جشم بن بكر\nوشبره مالاً وأشبره: أعطاه، والشبر العطاء وهو من الشبر كما قيل: الباع واليد: للكرم والنعمة. ومن لك بان تشبر البسيطة: لمن يتكلّف ما لا يطيق.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "شبره يشبره: قدّره بشبره، وهو أشبر من صاحبه: أوسع شبراً.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "هو قصير الشبر مقارب الخلق. قالت الخنساء:",
+        "prototipe_benzerlik": 0.346,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وشبره مالاً وأشبره: أعطاه، والشبر العطاء وهو من الشبر كما قيل: الباع واليد: للكرم والنعمة. ومن لك بان تشبر البسيطة: لمن يتكلّف ما لا يطيق.",
+        "prototipe_benzerlik": 0.839,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.592,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الحشرات",
@@ -1630,22 +1658,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
+      "kume": 8,
       "merkez_kok": "قبب",
       "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "boy": 604
     },
     "orta": {
-      "kume": 45,
-      "merkez_kok": "متن",
-      "merkez_mana": "Metn: sağlam yer, metin; metîn: sağlam",
-      "boy": 268
+      "kume": 32,
+      "merkez_kok": "دثر",
+      "merkez_mana": "Tedsîr: örtmek, bürümek; desr: örtü",
+      "boy": 148
     },
     "ince": {
-      "kume": 300,
-      "merkez_kok": "ثوب",
-      "merkez_mana": "Sevb: elbise; sevâb: karşılık, mükâfat",
-      "boy": 23
+      "kume": 209,
+      "merkez_kok": "قبب",
+      "merkez_mana": "canopy, pavilion; dome, cupola",
+      "boy": 35
     }
   },
   "kaliplar": {

@@ -689,6 +689,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "وخطه بالرّمح، ووخطته بالسّيف: تناولته به من بعيد. ومرّ الظليم يخط وخطاً وهو سعة خطوه.",
+    "mecaz": "وخطه الشيب. ووخط فلان فهو موخوط، وبها وخطٌ من الوحش ووخزٌ: نبذٌ منها. قال رجلٌ من بني ذهل:\nغدونا إلى وخطٍ من الوحش آمن ... فصبّحه منا عذاب معجّل",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "وخطه بالرّمح، ووخطته بالسّيف: تناولته به من بعيد. ومرّ الظليم يخط وخطاً وهو سعة خطوه.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "وخطه الشيب. ووخط فلان فهو موخوط، وبها وخطٌ من الوحش ووخزٌ: نبذٌ منها. قال رجلٌ من بني ذهل:",
+        "prototipe_benzerlik": 0.633,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.633,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "المكنيات والمبنيات والمثنيات",
@@ -699,19 +722,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 2,
+      "kume": 1,
       "merkez_kok": "قره",
       "merkez_mana": "",
       "boy": 759
     },
     "orta": {
-      "kume": 4,
+      "kume": 2,
       "merkez_kok": "فلص",
       "merkez_mana": "",
       "boy": 494
     },
     "ince": {
-      "kume": 21,
+      "kume": 3,
       "merkez_kok": "مرت",
       "merkez_mana": "",
       "boy": 241

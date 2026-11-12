@@ -1,0 +1,68 @@
+{
+  "kok": "رهـب",
+  "sinif": "reddedildi",
+  "turkce_fiil": null,
+  "mustaklar": {},
+  "reddedilen": [
+    ["kök", "رهـب", "üç harfli değil"]
+  ],
+  "sozlukler": {},
+  "kuran_gecisleri": 0,
+  "kuranda_var": false,
+  "sema": {
+    "sema": "graf-ic-graf",
+    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
+    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
+    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
+    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
+    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
+  },
+  "tasnif": {
+    "fasil": "ره",
+    "harf": "ر",
+    "mahrec": "zelakiyye",
+    "bolge": "dil"
+  },
+  "mana_tasnif": {
+    "durum": "Arabic WordNet v2 kaydı yok"
+  },
+  "ses_mana_tasnif": {
+    "durum": "Cebel mu'cemlerinde kök yok"
+  },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "رهبته وفي قلبي منه رهبة ورهب ورهبوت. وهو رجل مرهوب، عدوّه منه مرعوب. قالت ليلى:\nوقد كان مرهوب السنان وبيّن ال ... لسان ومجذام السري غير فاتر\nويقال: الرهباء من الله والرغباء إلى الله والنعماء بيد الله. وأرهبته ورهبته واسترهبته: أزعجت نفسه بالإخافة. وتقول: يقشعرّ الإهاب، إذا وقع منه الإرهاب. وترهب فلان: تعبد في صومعته، وهو راهب بين الرهبانية، وهؤلاء رهبان ورهبة ورهابين ورهابنة. قال رجل من الضباب:\nقد أدببر الليل وقضّى أربه ... وارتفعت في فلكيها الكوكبه\nكأنها مصباح دير الرهبة\nورماه فأصاب رهابته وهي عظيم في الصدر مطل على البطن كأنه طرف لسان الكلب.",
+    "mecaz": "أرهب الإبل عن الحوض: ذادها. وأرهب عنه الناس بأسه ونجدته. قال رجل من جرم:\nإنا إذا الحرب نساقيها المال ... وجعلت تلقح ثم تحتال\nيرهب عنا الناس طعن إبغال ... شزر كأفواه المزاد الشلشال\nأي ننفق عليها المال وهو من فصيح الكلام وإنما فصّحه ملح الاستعارة. ويقال: لم أرهب بك: لم أسترب بك.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "رهبته وفي قلبي منه رهبة ورهب ورهبوت. وهو رجل مرهوب، عدوّه منه مرعوب. قالت ليلى: وقد كان مرهوب السنان وبيّن ال ... لسان ومجذام السري غير فاتر ويقال: الرهباء من الله والرغباء إلى الله والنعماء بيد الله. وأرهبته ورهبته واسترهبته: أزعجت نفسه بالإخافة. وتقول: يقشعر",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "أرهب الإبل عن الحوض: ذادها. وأرهب عنه الناس بأسه ونجدته. قال رجل من جرم:",
+        "prototipe_benzerlik": 0.727,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "أي ننفق عليها المال وهو من فصيح الكلام وإنما فصّحه ملح الاستعارة. ويقال: لم أرهب بك: لم أسترب بك.",
+        "prototipe_benzerlik": 0.422,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.575,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
+  "muhassas_tasnif": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "mana_tasnif_gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
+  },
+  "kaliplar": {},
+  "kelimeler": []
+}

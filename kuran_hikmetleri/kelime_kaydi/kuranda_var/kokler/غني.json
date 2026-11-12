@@ -2306,6 +2306,41 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "لي عن هذا غنية. وأنا عنه غنيّ. \" وهو أغنى عنه من الأقرع عن المشط \". وقد تغانوا. قال:\nكلانا غنيّ عن أخيه حياته ... ونحن إذا متنا أشدّ تغانيا\nوأغنى فلان في الحرب غناءً حسناً. وأغنى عني فلان غناءً أي كفى في الدفع. وتقول: لأغنينّ عنك مغناه، ولأكفينك ما كفاه \" وما يغني عنه ماله \" وأغناني الحلال عن الحرام. وغنوا في ديارهم ثم فنوا. وخربت مبانيهم، وخلت مغانيهم، \" كأن لم يغنوا فيها \". وقال بشر:\nوقد تغنى بنا حينا ونغنىبها والدهر ليس له دوام الضمير للمرأة أي تلزم صحبتنا ونلزم صحبتها، ومنه: من لم يتغنّ بالقرآن \" وغنّاه وتغنى نحو: كلّمه وتكلّم، وتقول: كان أمنية من أمانيه، أن يسمع أغنيةً من أغانيه. وهذا غناء، ما فيه غناء.",
+    "mecaz": "تغنّته القيود. وقال عتيبة بن الحارث اليربوعي:\nقاظ الشربة في قيد وسلسلة ... صوت الحديد يغنّيه إذا قاما",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "لي عن هذا غنية. وأنا عنه غنيّ. \" وهو أغنى عنه من الأقرع عن المشط \". وقد تغانوا. قال: كلانا غنيّ عن أخيه حياته ... ونحن إذا متنا أشدّ تغانيا وأغنى فلان في الحرب غناءً حسناً. وأغنى عني فلان غناءً أي كفى في الدفع. وتقول: لأغنينّ عنك مغناه، ولأكفينك ما كفاه \" وما ",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "تغنّته القيود. وقال عتيبة بن الحارث اليربوعي:",
+        "prototipe_benzerlik": 0.544,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.544,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "condition.n.01",
+    "do.v.03",
+    "enrich.v.02",
+    "music.n.01",
+    "music_genre.n.01",
+    "perform.v.01",
+    "perform.v.03",
+    "render.v.01",
+    "sing.v.01",
+    "sing.v.02",
+    "supply.v.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "المثنيات",
@@ -2316,19 +2351,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 16,
-      "merkez_kok": "ثرر",
-      "merkez_mana": "chandelier",
-      "boy": 20
+      "kume": 17,
+      "merkez_kok": "رحب",
+      "merkez_mana": "Rahb: geniş, ferah; rahabe: genişlik",
+      "boy": 51
     },
     "ince": {
-      "kume": 86,
+      "kume": 101,
       "merkez_kok": "ثرر",
       "merkez_mana": "chandelier",
       "boy": 20

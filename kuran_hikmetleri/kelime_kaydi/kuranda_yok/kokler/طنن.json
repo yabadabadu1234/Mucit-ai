@@ -1630,11 +1630,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "whizz.v.01",
-    "orta": "verb.perception",
-    "ust": "zihin ve ilim",
-    "dayanak_synset": "whizz.v.01",
-    "dayanak_tanim": "make a soft swishing sound",
+    "ince": "definite_quantity.n.01",
+    "orta": "noun.quantity",
+    "ust": "ölçü, mekân ve zaman",
+    "dayanak_synset": "short_ton.n.01",
+    "dayanak_tanim": "a United States unit of weight equivalent to 2000 pounds",
     "synset_sayisi": 11
   },
   "ses_mana_tasnif": {
@@ -1645,31 +1645,75 @@
     "fasil_ozeti": "° معنى الفصل المعجمي (طن) : هو اللزوم أو التلازم كتلة كتلازم القصب والحطب في الحزمة، وككتلة البدن -في (طنن)، وكتلازب الطين -في (طين)، وكلزوم الشخص وطنه أي منزله أي الإقامة فيه والعَوْد إليه بعد السعي -في (وطن).",
     "tam_metin": "\"الطُنُّ -بالضم: بَدَن الإنسان وغيره، والحُزْمَة من القصب والحطب. والعِدْل من القطن \".\n° المعنى المحوري\nتكتلٌ باكتناز باطن أو أثناءٍ بما هو غَيْرُ صُلْب أو مُصْمت (1)\n__________\n(1) (صوتيًّا): الطاء تعبر عن ضغط تجمع وتمدد والنون تعبر عن امتداد في الباطن، والفصل منهما يعبر عن امتداد لطيف في باطن جرم متجمع كما في الطنّ البدن، وطُنّ القصب. وفي (طين) تزيد الياء التعبير عن الامتداد، ويعبر التركيب عن تجمع أي تماسك الشيء =\n(3/1357)\nكالبدن وحُزمة القَصَب (غير مصمت) والقُطْن رخو الأثناء. ومنه \"الطنطنة والطنين: صوت نحو الذباب والجبل \" (يملأ الرأس رغم لطفه أي عدم حدته)."
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "طن الذباب والبعوض والطست، وطنت أذنه طنيناً، وطنطنت طنطنة، وأطننت الطست.",
+    "mecaz": "ضربه فأطن ذراعه، وطنت ذراعه إذا ندرت لأنها تطن عند ذلك، وطنت من العود شظية، وطنت بكرات لي في البرية إذا هامت، وطن ذكرك في البلاد، ولفلان ذكر طنان، وقال قصيدة طنانة، وصوت صوتاً طن له القاع. وفلان لا يقوم بطن نفسه: لمن لا يكفي خويصته. والطن: العلاوة وهي البرواز بين الجوالقين. قال:\nمعترضاً مثل اعتراض الطن\nويقال للحزمة من القصب: الطن أيضاً.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Cebel mihverî mana",
+    "prototip": "تكتلٌ باكتناز باطن أو أثناءٍ بما هو غَيْرُ صُلْب أو مُصْمت (1)",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "ضربه فأطن ذراعه، وطنت ذراعه إذا ندرت لأنها تطن عند ذلك، وطنت من العود شظية، وطنت بكرات لي في البرية إذا هامت، وطن ذكرك في البلاد، ولفلان ذكر طنان، وقال قصيدة طنانة، وصوت صوتاً طن له القاع. وفلان لا يقوم بطن نفسه: لمن لا يكفي خويصته. والطن: العلاوة وهي البرواز بين الجوالقين. قال:",
+        "prototipe_benzerlik": 0.655,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "معترضاً مثل اعتراض الطن",
+        "prototipe_benzerlik": 0.267,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "ويقال للحزمة من القصب: الطن أيضاً.",
+        "prototipe_benzerlik": 0.466,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.463,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "act.n.02",
+    "hum.v.02",
+    "material.n.01",
+    "pink.v.02",
+    "ring.v.01",
+    "rinse.v.01",
+    "surround.v.01",
+    "tell.v.02",
+    "unit_of_measurement.n.01",
+    "whizz.v.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
     "bab": "الطين",
-    "kok_gecis": 113.5,
-    "kitapta_gecis": 48.0,
-    "zenginlesme": 3.41
+    "kok_gecis": 99.0,
+    "kitapta_gecis": 47.0,
+    "zenginlesme": 3.83
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 18,
-      "merkez_kok": "همم",
-      "merkez_mana": "Hemm: istek, gayret; himmet",
-      "boy": 116
+      "kume": 21,
+      "merkez_kok": "نجل",
+      "merkez_mana": "to be covered with vegetation",
+      "boy": 107
     },
     "ince": {
-      "kume": 97,
-      "merkez_kok": "طنن",
-      "merkez_mana": "feminine singular of طَنَّان (ṭannān, “buzzing, ringing”)",
+      "kume": 127,
+      "merkez_kok": "غرز",
+      "merkez_mana": "instinct, urge, drive",
       "boy": 12
     }
   },

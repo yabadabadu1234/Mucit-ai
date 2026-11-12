@@ -713,6 +713,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "نشع الصبيّ الدواء وأنشعه: أوجره وهو النشوع فانتشعه. وهذا منشع الصبيّ: لمسعطه.",
+    "mecaz": "نشع فلان كذا وبكذا. قال مرار بن منقذ:\nإليكم يا لئام الناس إني ... نشعت العز في أنفي نشوعاً\nوقال مغلس الرّبعي:\nخليليّ إن أصعدتما أو مررتما ... على أهل حنفاء الغضا فاذكرانيا\nوقولا أثيبي يا عليّ متيماً ... أخا الموت منشوعاً بذكراك عانيا\nوقال عبدة بن الطبيب:\nلا تأمنوا قوماً يشبّ صبيّهم ... بين القوابل بالعداوة ينشع\nوإنه لمنشوع يأكل اللحم إذا كان مشغوفاً به مولعاً. ونشع الكاهن نشعاً: جعل له جعلاً.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "نشع الصبيّ الدواء وأنشعه: أوجره وهو النشوع فانتشعه. وهذا منشع الصبيّ: لمسعطه.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "نشع فلان كذا وبكذا. قال مرار بن منقذ:",
+        "prototipe_benzerlik": 0.542,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وإنه لمنشوع يأكل اللحم إذا كان مشغوفاً به مولعاً. ونشع الكاهن نشعاً: جعل له جعلاً.",
+        "prototipe_benzerlik": 0.552,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.547,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الأضداد",
@@ -726,16 +754,16 @@
       "kume": 3,
       "merkez_kok": "فقص",
       "merkez_mana": "",
-      "boy": 563
+      "boy": 568
     },
     "orta": {
       "kume": 5,
       "merkez_kok": "عجد",
       "merkez_mana": "",
-      "boy": 163
+      "boy": 165
     },
     "ince": {
-      "kume": 23,
+      "kume": 25,
       "merkez_kok": "جشب",
       "merkez_mana": "",
       "boy": 75

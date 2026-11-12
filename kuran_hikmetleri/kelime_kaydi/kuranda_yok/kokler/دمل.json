@@ -1229,6 +1229,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "دمل الجرح فاندمل. ودمل الدواء المريض فاندمل. وامرأة ذات دملج ودملوج، ودمالج ودماليج.",
+    "mecaz": "دمل الأرض بالدمال: أصلحها بما تستصلح به من القوة، وهذا دمال هذا أي صلاحه. دمل السقاء. ودمل بين الرجلين. وداملت فلاناً: داريته لأصلح ما بيني وبينه. قال أبو الأسود:\nشنئت من الإخوان من لست زائلاً ... أدامله دمل السقاء المخرّق\nوما قدّم إلينا إلا دمالاً وهو التمر العفن. وألقى عليه دماليجه أي ثقله.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "دمل الجرح فاندمل. ودمل الدواء المريض فاندمل. وامرأة ذات دملج ودملوج، ودمالج ودماليج.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "دمل الأرض بالدمال: أصلحها بما تستصلح به من القوة، وهذا دمال هذا أي صلاحه. دمل السقاء. ودمل بين الرجلين. وداملت فلاناً: داريته لأصلح ما بيني وبينه. قال أبو الأسود:",
+        "prototipe_benzerlik": 0.261,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وما قدّم إلينا إلا دمالاً وهو التمر العفن. وألقى عليه دماليجه أي ثقله.",
+        "prototipe_benzerlik": 0.297,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.279,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["mend.v.02"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
@@ -1240,18 +1268,18 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 40,
+      "kume": 41,
       "merkez_kok": "بلع",
       "merkez_mana": "Bel': yutmak; bel'a: yutkunma",
-      "boy": 85
+      "boy": 61
     },
     "ince": {
-      "kume": 261,
+      "kume": 263,
       "merkez_kok": "شءف",
       "merkez_mana": "",
       "boy": 11

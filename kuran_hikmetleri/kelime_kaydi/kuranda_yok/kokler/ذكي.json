@@ -1146,6 +1146,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "أذكيت النار وذكّيتها. وذكت النار تذكو ذكاء. وأصابه ذكاء النار. وذكّ النار بالذكوة وهي اتذكّى به. ودخلت والمصابيح تذكو. قال ذو الرمة:\nوقد جرّد الأبطال بيضاً كأنها ... مصابيح تذكو في الذبال المفتل\nوفرس مذكّ: أتت على قروحه سنة. وخيل مذكيات ومذاك. وقد ذكّى الفرس وبلغ الذكاء. قال زهير:\nيفضله إذا اجتهدا عليه ... تمام السن منه والذكاء\nوذكيت الذبيحة. وشاة ذكيّ. وبلغت ذكاتها.",
+    "mecaz": "ذكت الشمس ذكاء، ومنه قيل لها: ذكاء، وللصبح ابن ذكاء لأنه من ضوئها. وذكت الحرب، وأذكيتها. قال القطامي:\nحتى إذا ذكت النيران بينهم ... للحرب يوقدن لا يوقدن للزاد\nوفيه ذكاء: فطنة وتوقد. وقد ذكا يذكو، وذكي يذكى، وذكو فلان بعد البلادة، ورجل ذكيٌّ، وقلب ذكي، وقوم أذكياء. وذكا المسك ذكاء، ومسك ذكيٌّ: أذفر. وفي الحديث \" ذكاة الأرض يبسها \" وسحابة مذكية: مطرت مراراً. وسحاب مذاك. قال الراعي:\nوترعى القرار الحوّ حيث تجاوبت ... مذاك وأبكار من المزن دلح\nواستذكى الفحل على العانة: اشتدّ عليها وتوقّد.\nقال الشماخ:\nتفادي إذا استذكى عليها وتتقي ... كما تتقي الفحل المخاض الجوامز\nوله:\nإذا ما جدّ واستذكى عليها ... أثرن عليه من رهج عصارا",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "أذكيت النار وذكّيتها. وذكت النار تذكو ذكاء. وأصابه ذكاء النار. وذكّ النار بالذكوة وهي اتذكّى به. ودخلت والمصابيح تذكو. قال ذو الرمة: وقد جرّد الأبطال بيضاً كأنها ... مصابيح تذكو في الذبال المفتل وفرس مذكّ: أتت على قروحه سنة. وخيل مذكيات ومذاك. وقد ذكّى الفرس و",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "ذكت الشمس ذكاء، ومنه قيل لها: ذكاء، وللصبح ابن ذكاء لأنه من ضوئها. وذكت الحرب، وأذكيتها. قال القطامي:",
+        "prototipe_benzerlik": 0.719,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وفيه ذكاء: فطنة وتوقد. وقد ذكا يذكو، وذكي يذكى، وذكو فلان بعد البلادة، ورجل ذكيٌّ، وقلب ذكي، وقوم أذكياء. وذكا المسك ذكاء، ومسك ذكيٌّ: أذفر. وفي الحديث \" ذكاة الأرض يبسها \" وسحابة مذكية: مطرت مراراً. وسحاب مذاك. قال الراعي:",
+        "prototipe_benzerlik": 0.718,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "واستذكى الفحل على العانة: اشتدّ عليها وتوقّد.",
+        "prototipe_benzerlik": 0.431,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.623,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["elegance.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الأنواء",
@@ -1156,22 +1189,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 6,
+      "kume": 7,
       "merkez_kok": "لقلق",
       "merkez_mana": "",
-      "boy": 440
+      "boy": 386
     },
     "orta": {
-      "kume": 29,
-      "merkez_kok": "عربد",
-      "merkez_mana": "to revel, to be boisterous, to be noisy, to be quarrelsome",
-      "boy": 68
+      "kume": 26,
+      "merkez_kok": "طعل",
+      "merkez_mana": "to come upon, befall",
+      "boy": 91
     },
     "ince": {
-      "kume": 192,
-      "merkez_kok": "حذلق",
-      "merkez_mana": "to feign erudition, qualification or skill",
-      "boy": 6
+      "kume": 159,
+      "merkez_kok": "طعل",
+      "merkez_mana": "to come upon, befall",
+      "boy": 14
     }
   },
   "kaliplar": {

@@ -1550,13 +1550,50 @@
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "merging.n.01",
-    "dayanak_tanim": "the act of joining together as one",
+    "dayanak_synset": "socialization.n.03",
+    "dayanak_tanim": "the adoption of the behavior patterns of the surrounding culture",
     "synset_sayisi": 15
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "دمج الوحشي في الكناس واندمج: دخل. قال الراعي:\nغداة تراءت لابن ستين حجة ... سقية غيل في الحجال دموج\nودمج الشيء دموجاً واندمج اندماجاً إذا استحكم والتأم. قال يصف فرساً طويلاً:\nشرجب سلهب كأن رماحاً ... حلمته وفي السراة دموج\nيقال: اندمج الثعلب في الجبة والسيلان في النصاب. وأدمجت الماشطة ضفائر المرأة: أدرجتها وملستها. وله أعضاء مدمجة. وأدرج هذا الطومار وأدمجه أي شدّ أدراجه.",
+    "mecaz": "دمج أمرهم: صلح والتأم. وصلح دِماج ودُماج: محكم. وقال ذو الرمة:\nوإذا نحن أسباب المودة بيننا ... دماج قواها لم يخنها وصولها\nأي مدمجة. ودامجتك على هذا الأمر: وافقتك عليه. وتدامجوا عليه: توافقوا. وتدامج القوم عليّ: تألبوا. ووجد البرد فتدمج في ثيابه: تلفف. وليل دامج دامس: ملتفّ الظلام، قد دمج بعضه في بعض. وأدمج كلامه: أتى به متراصف النظم. واندمج الفرس: انطوى بطنه وضمر. قال النابغة يصف إبل الحاجّ:\nقود براها قياد الشعث فاندمجت ... تنكي دوابرها محذوة خدما",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "دمج الوحشي في الكناس واندمج: دخل. قال الراعي: غداة تراءت لابن ستين حجة ... سقية غيل في الحجال دموج ودمج الشيء دموجاً واندمج اندماجاً إذا استحكم والتأم. قال يصف فرساً طويلاً: شرجب سلهب كأن رماحاً ... حلمته وفي السراة دموج يقال: اندمج الثعلب في الجبة والسيلان في",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "دمج أمرهم: صلح والتأم. وصلح دِماج ودُماج: محكم. وقال ذو الرمة:",
+        "prototipe_benzerlik": 0.54,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "أي مدمجة. ودامجتك على هذا الأمر: وافقتك عليه. وتدامجوا عليه: توافقوا. وتدامج القوم عليّ: تألبوا. ووجد البرد فتدمج في ثيابه: تلفف. وليل دامج دامس: ملتفّ الظلام، قد دمج بعضه في بعض. وأدمج كلامه: أتى به متراصف النظم. واندمج الفرس: انطوى بطنه وضمر. قال النابغة يصف إبل الحاجّ:",
+        "prototipe_benzerlik": 0.722,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.631,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "act.n.02",
+    "blend.v.03",
+    "combinative.a.01",
+    "compound.v.02",
+    "group_action.n.01",
+    "mix.v.05",
+    "socialize.v.01",
+    "union.n.04"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الأنواء",
@@ -1567,22 +1604,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
+      "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 426
+      "boy": 466
     },
     "orta": {
-      "kume": 1,
-      "merkez_kok": "جنح",
-      "merkez_mana": "Cünûh: meyletmek, eğilmek; cenâh: kanat",
-      "boy": 165
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 2,
-      "merkez_kok": "لحس",
-      "merkez_mana": "to lick, to lap",
-      "boy": 31
+      "kume": 15,
+      "merkez_kok": "دلق",
+      "merkez_mana": "to pour out, spill (e.g. a liquid)",
+      "boy": 58
     }
   },
   "kaliplar": {

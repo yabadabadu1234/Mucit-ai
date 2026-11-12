@@ -1250,6 +1250,44 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "شيط اللحم في الشيّ إذا دخنه وأحرق بعضه ولم ينضجه، وشاط لحم الشاوي وتشيط.",
+    "mecaz": "شاط دمه إذا بطل. قال الأعشى:\nوقد يشيط على أرماحنا البطل\nوأشاط السلطان دمه: أهدره. وأشاطوا لحم الجزور. إذا بضعوه وقسموه، وشاط لحم الجزور: ذهب مقسماً لم يبق منه شيء، ويقال: أشيط فلان كما يشاط لحم الجزور. وشيط الصقيع النبت. وشيط الدواء الجرح: أحرقه. وتشيط فلان من الهبة: نحل من كثرة الجماع وهلك. واستشاط غضباً. واستشاط في الحرب: استقتل. قال:\nأشاط دماء المستشيطين كلهم ... وغل رءوس القوم فيها وسلسلوا\nوناقة مشياط: يطير فيها السمن أي يسرع سمنها وهو من إسراع المشيط وعجلته، لا يصبر بالشواء حتى يسكن لسان النار.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "شيط اللحم في الشيّ إذا دخنه وأحرق بعضه ولم ينضجه، وشاط لحم الشاوي وتشيط.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "شاط دمه إذا بطل. قال الأعشى:",
+        "prototipe_benzerlik": 0.305,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وقد يشيط على أرماحنا البطل",
+        "prototipe_benzerlik": 0.24,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وأشاط السلطان دمه: أهدره. وأشاطوا لحم الجزور. إذا بضعوه وقسموه، وشاط لحم الجزور: ذهب مقسماً لم يبق منه شيء، ويقال: أشيط فلان كما يشاط لحم الجزور. وشيط الصقيع النبت. وشيط الدواء الجرح: أحرقه. وتشيط فلان من الهبة: نحل من كثرة الجماع وهلك. واستشاط غضباً. واستشاط في الحرب: استقتل. قال:",
+        "prototipe_benzerlik": -0.005,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وناقة مشياط: يطير فيها السمن أي يسرع سمنها وهو من إسراع المشيط وعجلته، لا يصبر بالشواء حتى يسكن لسان النار.",
+        "prototipe_benzerlik": 0.496,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.259,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["content.n.05", "madly.r.03", "seethe.v.02", "spirited.a.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الحشرات",
@@ -1260,22 +1298,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
+      "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 426
+      "boy": 466
     },
     "orta": {
-      "kume": 1,
-      "merkez_kok": "جنح",
-      "merkez_mana": "Cünûh: meyletmek, eğilmek; cenâh: kanat",
-      "boy": 165
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 1,
+      "kume": 15,
       "merkez_kok": "دلق",
       "merkez_mana": "to pour out, spill (e.g. a liquid)",
-      "boy": 41
+      "boy": 58
     }
   },
   "kaliplar": {

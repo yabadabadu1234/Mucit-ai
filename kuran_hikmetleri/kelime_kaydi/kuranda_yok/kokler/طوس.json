@@ -823,6 +823,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "طوس المصور: صور الطواويس.",
+    "mecaz": "إن فلاناً لطاوس إذا كان جميلاً. ووجه مطوس. قال أبو صخر الهذلي:\nومطوس سهل مدامعه ... لا شاحب عار ولا جهم\nوتطوست المرأة: تزينت. وعنده الطاوس أي الفضة بلسان اليمن. وقال الجاحظ الحمام يكسح بذنبه حول الحمامة ويتطوس لها أي يتنفّش. وتقول: كان خلق طاوس، يحكي خلق الطاوس؛ وهو طاوس اليماني. وشرب فلان الطوس أي الأذريطوس. قال رؤبة:\nلو كنت بعض الشاربين الطوسا",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "طوس المصور: صور الطواويس.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "إن فلاناً لطاوس إذا كان جميلاً. ووجه مطوس. قال أبو صخر الهذلي:",
+        "prototipe_benzerlik": 0.481,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وتطوست المرأة: تزينت. وعنده الطاوس أي الفضة بلسان اليمن. وقال الجاحظ الحمام يكسح بذنبه حول الحمامة ويتطوس لها أي يتنفّش. وتقول: كان خلق طاوس، يحكي خلق الطاوس؛ وهو طاوس اليماني. وشرب فلان الطوس أي الأذريطوس. قال رؤبة:",
+        "prototipe_benzerlik": 0.247,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "لو كنت بعض الشاربين الطوسا",
+        "prototipe_benzerlik": 0.332,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.353,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["artifact.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "المقصور والممدود",
@@ -833,22 +866,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "kume": 2,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 466
     },
     "orta": {
-      "kume": 42,
-      "merkez_kok": "وبر",
-      "merkez_mana": "Vaber: yün, deve tüyü; vebr: tavşan",
-      "boy": 84
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 276,
-      "merkez_kok": "ءرن",
-      "merkez_mana": "Iran (a country in West Asia)",
-      "boy": 8
+      "kume": 22,
+      "merkez_kok": "زرف",
+      "merkez_mana": "giraffe (mammal)",
+      "boy": 19
     }
   },
   "kaliplar": {

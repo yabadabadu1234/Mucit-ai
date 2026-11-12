@@ -769,6 +769,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "أسعطته الدواء وسعطته فاستعطه، وعليك بالسعوط، واستسعطني فأسعطته واجعل الدواء في المسعط فأسعطه. وروت قرونها بالسليط والسعيط: بدهن الزيت والخردل.",
+    "mecaz": "أسعطته الرمح كقولك: أوجرته. وكقول المتنبي:\nإذا وصفوا له داء بثغر ... سقاه أسنة الأسل النهال\nوأسعطته كلكمة فما فهمها إذا بالغت في تفهيمه وأكثرت عليه.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "أسعطته الدواء وسعطته فاستعطه، وعليك بالسعوط، واستسعطني فأسعطته واجعل الدواء في المسعط فأسعطه. وروت قرونها بالسليط والسعيط: بدهن الزيت والخردل.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "أسعطته الرمح كقولك: أوجرته. وكقول المتنبي:",
+        "prototipe_benzerlik": 0.7,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وأسعطته كلكمة فما فهمها إذا بالغت في تفهيمه وأكثرت عليه.",
+        "prototipe_benzerlik": 0.534,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.617,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
@@ -779,22 +807,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 14,
-      "merkez_kok": "جهد",
-      "merkez_mana": "Cehd: gayret, çaba; cehd: yorgunluk",
-      "boy": 135
+      "kume": 23,
+      "merkez_kok": "جلد",
+      "merkez_mana": "Cild: deri; cellâd: vurucu",
+      "boy": 125
     },
     "ince": {
-      "kume": 79,
-      "merkez_kok": "ءزر",
-      "merkez_mana": "Ezr: güç, destek; ezâr: sırt elbisesi",
-      "boy": 20
+      "kume": 133,
+      "merkez_kok": "غوث",
+      "merkez_mana": "Gavs: yardım, imdat; gavs: yardım istemek",
+      "boy": 9
     }
   },
   "kaliplar": {

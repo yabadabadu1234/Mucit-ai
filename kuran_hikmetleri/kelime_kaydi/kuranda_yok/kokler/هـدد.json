@@ -1,0 +1,73 @@
+{
+  "kok": "هـدد",
+  "sinif": "reddedildi",
+  "turkce_fiil": null,
+  "mustaklar": {},
+  "reddedilen": [
+    ["kök", "هـدد", "üç harfli değil"]
+  ],
+  "sozlukler": {},
+  "kuran_gecisleri": 0,
+  "kuranda_var": false,
+  "sema": {
+    "sema": "graf-ic-graf",
+    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
+    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
+    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
+    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
+    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
+  },
+  "tasnif": {
+    "fasil": "هـ",
+    "harf": "ه",
+    "mahrec": "halkiyye",
+    "bolge": "halk"
+  },
+  "mana_tasnif": {
+    "durum": "Arabic WordNet v2 kaydı yok"
+  },
+  "ses_mana_tasnif": {
+    "durum": "Cebel mu'cemlerinde kök yok"
+  },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "هدّ البيت فانهدّ وهو هدم بشدّة صوت. وسمعت هدّةً: صوت وقع حائط أو صخرة. وسمع أهل الساحل هادّاً من قبل البحر: صوتاً له هديدٌ أي دويّ وربما كانت منه الزلزلة. قال:\nداع شديد الصوت ذي هديد\nوهد هدّ يهدّ. وهدّده وتهدّده: أوعده. وهدهدت المرأة ولدها: حركته لينام. وهدهد الحمام: صوّت.",
+    "mecaz": "هدّني هذا الأمر، هدّ ركني إذا بلغ منك وكسرك. قال النمر:\nعلى فاجع هدّ العشيرة فقده ... به أعلن الناعي الحديث المجمجما\nوهذا رجل هدّك من رجل إذا وُصف بجلد وشدّة أي غلبك وكسرك، وهذه امرأة هدّتك من امرأة. وعن أبي عمر الجرميّ: مررت برجل هدّك من رجل وبامرأة هدّك من امرأة بمعنى هادّك وهادّتك والأوّل هو الكثير. وقال يعقوب: لهدّ الرجل هو إذا أُثني عليه بالجلد والشدّة. وأنشد الأصمعيّ لدكين:\nولي صاحب بالقاع هدّك صاحباً ... أخو الجون إلا أنه لا يعلّل\nوإن فؤادي منه في طول صحبتي ... وأنسى به في الفينتين لأوجل\nهرب من مروان والتجأ إلى عماية فألفه الأسد، والجون: الليل لأنه يصطاد بالليل. وجاءوا متهادّين ومتساتلين أي متتابعين كأن بعضهم يهدّ بعضاً.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "هدّ البيت فانهدّ وهو هدم بشدّة صوت. وسمعت هدّةً: صوت وقع حائط أو صخرة. وسمع أهل الساحل هادّاً من قبل البحر: صوتاً له هديدٌ أي دويّ وربما كانت منه الزلزلة. قال: داع شديد الصوت ذي هديد وهد هدّ يهدّ. وهدّده وتهدّده: أوعده. وهدهدت المرأة ولدها: حركته لينام. وهدهد ",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "هدّني هذا الأمر، هدّ ركني إذا بلغ منك وكسرك. قال النمر:",
+        "prototipe_benzerlik": 0.372,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وهذا رجل هدّك من رجل إذا وُصف بجلد وشدّة أي غلبك وكسرك، وهذه امرأة هدّتك من امرأة. وعن أبي عمر الجرميّ: مررت برجل هدّك من رجل وبامرأة هدّك من امرأة بمعنى هادّك وهادّتك والأوّل هو الكثير. وقال يعقوب: لهدّ الرجل هو إذا أُثني عليه بالجلد والشدّة. وأنشد الأصمعيّ لدكين:",
+        "prototipe_benzerlik": 0.608,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "هرب من مروان والتجأ إلى عماية فألفه الأسد، والجون: الليل لأنه يصطاد بالليل. وجاءوا متهادّين ومتساتلين أي متتابعين كأن بعضهم يهدّ بعضاً.",
+        "prototipe_benzerlik": 0.08,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.354,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
+  "muhassas_tasnif": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "mana_tasnif_gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
+  },
+  "kaliplar": {},
+  "kelimeler": []
+}

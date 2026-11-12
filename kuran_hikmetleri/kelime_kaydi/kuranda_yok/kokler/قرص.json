@@ -1532,16 +1532,59 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "pinch.v.01",
-    "orta": "verb.contact",
-    "ust": "fiil ve hadise",
-    "dayanak_synset": "pinch.v.01",
-    "dayanak_tanim": "squeeze tightly between the fingers",
+    "ince": "whole.n.02",
+    "orta": "noun.artifact",
+    "ust": "cisim ve eşya",
+    "dayanak_synset": "phonograph_record.n.01",
+    "dayanak_tanim": "sound recording consisting of a disk with a continuous groove; used to reproduce music by rotating while a phonograph needle tracks in the groove",
     "synset_sayisi": 6
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "قرص جلده بظفريه، وقرصه قرصة مؤلمة وقرصات. وقرّصت المرأة العجين إذا قطعته لتبسطه. والقرصة والقرص: اسم ما تقرصه كما أن الخبزة والخبز اسم ما تخبزه. وقرّصته تقريصاً: قطعته قرصة قرصة",
+    "mecaz": "لاتزال تقرصني منك قارصة: كلمة مؤذية. وأتتني منك قوارص. قال الفرزدق:\nقوارص تأتيني وتحتقرونها ... وقد يملأ القطر الإناء فيفعم\nوكانت بينهما مقارصات. ورأيتهما يتقارظان، ثم\nرأيتهما يتقارصان. ولبن ونبيذ قارص: يحذي اللسان، وفيه قروصة. قال:\nثم استقوا بشفارهم للهاتها ... كالزّيت فيه قروصة وسواد\nوهو داء يأخذ عن الماء الآجن. وفي الحديث \" اقرصيه \" ولجام قرّاص وقروص: يؤذي الدابة. وأنشد المازنيّ:\nولولا هذيل أن أسوء سراتها ... لألجمت بالقرّاص بشر بن عائذ\nوقرصة البعوض. وتقول: قرصهم البعوض قرصات، رقصوا منها رقصات. وقرصه البرد، وبرد قارس: قارص. وقرّص الماء: برّده حتى صار يقرص ببرده. وغاب قرص الشمس.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "قرص جلده بظفريه، وقرصه قرصة مؤلمة وقرصات. وقرّصت المرأة العجين إذا قطعته لتبسطه. والقرصة والقرص: اسم ما تقرصه كما أن الخبزة والخبز اسم ما تخبزه. وقرّصته تقريصاً: قطعته قرصة قرصة",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "لاتزال تقرصني منك قارصة: كلمة مؤذية. وأتتني منك قوارص. قال الفرزدق:",
+        "prototipe_benzerlik": 0.438,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وكانت بينهما مقارصات. ورأيتهما يتقارظان، ثم",
+        "prototipe_benzerlik": 0.38,
+        "halka": "orta"
+      },
+      {
+        "cumle": "رأيتهما يتقارصان. ولبن ونبيذ قارص: يحذي اللسان، وفيه قروصة. قال:",
+        "prototipe_benzerlik": 0.539,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وهو داء يأخذ عن الماء الآجن. وفي الحديث \" اقرصيه \" ولجام قرّاص وقروص: يؤذي الدابة. وأنشد المازنيّ:",
+        "prototipe_benzerlik": 0.372,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وقرصة البعوض. وتقول: قرصهم البعوض قرصات، رقصوا منها رقصات. وقرصه البرد، وبرد قارس: قارص. وقرّص الماء: برّده حتى صار يقرص ببرده. وغاب قرص الشمس.",
+        "prototipe_benzerlik": 0.445,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.435,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["artifact.n.01", "commandeer.v.01", "living_thing.n.01", "pinch.v.01", "prick.v.02", "round_shape.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
@@ -1553,21 +1596,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 509
     },
     "orta": {
-      "kume": 8,
-      "merkez_kok": "وغر",
-      "merkez_mana": "to become enraged, to become angry, to be filled with malice",
-      "boy": 80
+      "kume": 7,
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 259
     },
     "ince": {
-      "kume": 40,
+      "kume": 32,
       "merkez_kok": "عير",
       "merkez_mana": "Ayr: merkep, eşek; ğayr: başka",
-      "boy": 44
+      "boy": 33
     }
   },
   "kaliplar": {

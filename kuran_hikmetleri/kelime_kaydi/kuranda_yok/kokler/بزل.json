@@ -1188,6 +1188,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "بزل ناب البعير مثل شق وفطر. وبزل الشراب من المبزل: أساله منه وهو شبه طبي في الدن ونحوه يسيل منه. وقد تبزل الشراب: سال من المبزل. وجمل بازل، وقد بزل بزولاً، وإبل بزل وبوازل.",
+    "mecaz": "بزل الأمر والرأي: استحكم، وأمر بازل. وتقول: خطب بازل لا يكفيه إلا رأي قارح. وإنه لذو بزلاء أي ذو صريمة محكمة. وهو نهاض ببزلاء أي بخطة عظيمة. قال:\nإني إذا شغلت قوماً فروجهم ... رحب المسالك نهاض ببزلاء\nوقال:\nمن أمر ذي بدوات لا تزال له ... بزلاء يعيا بها الجثامة اللبد\nوقال زهير:\nسعى ساعياً غيظ بن مرة بعدما ... تبزل ما بين العشيرة بالدم\nوبزل القضاء كما يقال فصله، وفتحه. وتقول: نزلت بي نازله، وما عندي بازله: أي بلغة تبزل حاجتي أي تقضيها وتفصلها.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "بزل ناب البعير مثل شق وفطر. وبزل الشراب من المبزل: أساله منه وهو شبه طبي في الدن ونحوه يسيل منه. وقد تبزل الشراب: سال من المبزل. وجمل بازل، وقد بزل بزولاً، وإبل بزل وبوازل.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "بزل الأمر والرأي: استحكم، وأمر بازل. وتقول: خطب بازل لا يكفيه إلا رأي قارح. وإنه لذو بزلاء أي ذو صريمة محكمة. وهو نهاض ببزلاء أي بخطة عظيمة. قال:",
+        "prototipe_benzerlik": 0.494,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وبزل القضاء كما يقال فصله، وفتحه. وتقول: نزلت بي نازله، وما عندي بازله: أي بلغة تبزل حاجتي أي تقضيها وتفصلها.",
+        "prototipe_benzerlik": 0.433,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.464,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الإبل",
@@ -1198,22 +1226,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
+      "kume": 8,
       "merkez_kok": "قبب",
       "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "boy": 604
     },
     "orta": {
-      "kume": 43,
-      "merkez_kok": "خرز",
-      "merkez_mana": "awl",
-      "boy": 104
+      "kume": 32,
+      "merkez_kok": "دثر",
+      "merkez_mana": "Tedsîr: örtmek, bürümek; desr: örtü",
+      "boy": 148
     },
     "ince": {
-      "kume": 281,
-      "merkez_kok": "خرز",
-      "merkez_mana": "awl",
-      "boy": 42
+      "kume": 211,
+      "merkez_kok": "قرط",
+      "merkez_mana": "to cut into minute morsels, to chop or mince, to chef",
+      "boy": 32
     }
   },
   "kaliplar": {

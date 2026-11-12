@@ -977,11 +977,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "event.n.01",
-    "orta": "noun.event",
+    "ince": "change_shape.v.01",
+    "orta": "verb.change",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "deformation.n.02",
-    "dayanak_tanim": "alteration in the shape or dimensions of an object as a result of the application of stress to it",
+    "dayanak_synset": "change_shape.v.01",
+    "dayanak_tanim": "assume a different shape or form",
     "synset_sayisi": 4
   },
   "ses_mana_tasnif": {
@@ -992,6 +992,13 @@
     "fasil_ozeti": "° معنى الفصل المعجمي (سخ): لين الجسم أي عدم صلادته فيمكن اختراقه كما في الأرض السَخاخ الحُرّة (الخالية من الحجارة) اللينة - في (سخخ)، وكما تجري السفن في الماء وتمخره بلا مقاومة - في (سخر).",
     "tam_metin": "\"السَخَاخ - كسحاب: الأرض الحُرّة اللينة وجمعت على سخاسِخ \".\n° المعنى المحوري\nلين الأرض (= الشيء الكثيف) وضَعْفُ جِرْمها، بحيث يُنْفَذُ فيه؛ لخلوه من الصلادة (1) كالسَخاخ. ومنه: سَخَّت الجرادةُ: غَرَزتْ ذنبها في الأرض. ويقال: سُخّ في أسفل البئر، أي: احْفِر (أي في الأرض اللينة الرخوة لا الصلبة)."
   },
+  "hakikat_mecaz_tasnif": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "prototip_yayilim_tasnif": {
+    "durum": "prototip veya mecaz kolu yok"
+  },
+  "kolekzifikasyon_kavramlari": ["change_shape.v.01", "happening.n.01", "maim.v.01", "transform.v.03"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الغرائز",
@@ -1002,22 +1009,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "kume": 6,
+      "merkez_kok": "درك",
+      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
+      "boy": 1364
     },
     "orta": {
-      "kume": 10,
-      "merkez_kok": "ذعن",
-      "merkez_mana": "Za'n: boyun eğmek, kabul etmek",
-      "boy": 183
+      "kume": 24,
+      "merkez_kok": "زين",
+      "merkez_mana": "Zîne: süs, güzellik; zeyn: güzelleştirmek",
+      "boy": 123
     },
     "ince": {
-      "kume": 50,
-      "merkez_kok": "كرم",
-      "merkez_mana": "Kerem: cömertlik, şeref; kerîm: cömert",
-      "boy": 32
+      "kume": 141,
+      "merkez_kok": "متع",
+      "merkez_mana": "Metâ': yararlanma, geçici nimet",
+      "boy": 26
     }
   },
   "kaliplar": {

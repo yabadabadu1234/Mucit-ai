@@ -981,11 +981,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "point.n.06",
-    "orta": "noun.time",
-    "ust": "ölçü, mekân ve zaman",
-    "dayanak_synset": "death.n.05",
-    "dayanak_tanim": "the time at which life ends; continuing until dead",
+    "ince": "see.v.05",
+    "orta": "verb.cognition",
+    "ust": "zihin ve ilim",
+    "dayanak_synset": "see.v.05",
+    "dayanak_tanim": "deem to be",
     "synset_sayisi": 18
   },
   "ses_mana_tasnif": {
@@ -996,27 +996,53 @@
     "fasil_ozeti": "° معنى الفصل المعجمي (جل): الاتساع انبساطًا أو انكشافًا وابتعادًا كما في الجِلال: الغِطاء للحجلة - في (جلل)، وكما في الجلا انحسار الشعر عن مساحة واسعة",
     "tam_metin": "{لَا يُجَلِّيهَا لِوَقْتِهَا إِلَّا هُوَ} [الأعراف: 187].\n\"الجَلَى - كالفتى: انحسار مقدَّم الشعر. والمَجَالى: مقاديم الرأس وهي مواضع الصَلعَ. جَلا القومُ عن أوطانهم: خرجوا من بلد إلى بلد، واجْتَلَيْتُ العِمامة عن رأسي: رفعتُها مع طيّها عن جبينك. والجَلا - كفتى (ورضا) وسماء: الكُحل. جلا الصيقلُ السيفَ والمرآة ونحوهما: صَقَلهما. وجلوت بصري بالكحل \".\n° المعنى المحوري\nانزياح ما هو كالطبقة (الواسعة) عما يغطيه فينكشف. كانحسار مقدَّم الشعر، وجَلاءِ المَوم عن أوطانهم، وزحزحة العمامة عن الجبهة. وإزالة الصدأ عن المِرآة والسيف، وما هو كالغشاء عن العين. ومن الجلاء عن الوطن {وَلَوْلَا أَنْ كَتَبَ اللَّهُ عَلَيْهِمُ الْجَلَاءَ لَعَذَّبَهُمْ فِي الدُّنْيَا} [الحشر: 3] و \"جلا الأمرَ وجلّاه - ض، وجلّى عنه - ض: كشفه وأظهره {لَا يُجَلِّيهَا لِوَقْتِهَا إِلَّا هُوَ} وتجلي الشيءُ تكشف {فَلَمَّا تَجَلَّى رَبُّهُ لِلْجَبَلِ جَعَلَهُ دَكًّا} [الأعراف: 143]. {وَالنَّهَارِ إِذَا جَلَّاهَا} [الشمس: 3 ومثلها ما في الليل 2] أي جلّي الظلمة - ض، كما يقال أصبَحَتْ باردة وهَبَّت شَمَالًا دون ذكر مرجع الضمير لأن معناه معروف -[ل 166/ 10]. والجِلْيُ - بالكسر - كعِذْى: الكَوَّة من السطح لا غير (جزء أزيل ويَكْشِف). وجَلَيت الفضة: جَلَوتها - والمُجَلِّى من الخيل: السابق في الحَلْبة (ينفذ\n(1/324)\nمن بين الخيل أمامَها فينكشف) وقولهم \"أجلى يعدو: أسرع بعض الإسراع \". هو أيضًا زوال عن المكان مع قيد السرعة. وليس في سائر الاستعمالات ما يحتاج تفصيلًا."
   },
+  "hakikat_mecaz_tasnif": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "prototip_yayilim_tasnif": {
+    "durum": "prototip veya mecaz kolu yok"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "allocate.v.01",
+    "continue.v.02",
+    "continue.v.03",
+    "deadline.n.01",
+    "delay.v.02",
+    "end.n.02",
+    "give.v.08",
+    "laud.v.01",
+    "living_thing.n.01",
+    "measure.v.04",
+    "noticed.a.01",
+    "postpone.v.01",
+    "present.v.02",
+    "prize.v.01",
+    "proceed.v.02",
+    "respect.v.01",
+    "see.v.05",
+    "think_of.v.03"
+  ],
   "muhassas_tasnif": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
       "kume": 42,
-      "merkez_kok": "وبر",
-      "merkez_mana": "Vaber: yün, deve tüyü; vebr: tavşan",
-      "boy": 84
+      "merkez_kok": "سحم",
+      "merkez_mana": "to become black, to be blackened",
+      "boy": 97
     },
     "ince": {
       "kume": 269,
       "merkez_kok": "هدب",
       "merkez_mana": "to cull, to abscind, to pluck",
-      "boy": 7
+      "boy": 10
     }
   },
   "kaliplar": {},

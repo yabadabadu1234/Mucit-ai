@@ -1181,11 +1181,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "permit.v.01",
-    "orta": "verb.communication",
-    "ust": "söz ve haber",
-    "dayanak_synset": "cover.v.14",
-    "dayanak_tanim": "protect by insurance",
+    "ince": "smother.v.01",
+    "orta": "verb.contact",
+    "ust": "fiil ve hadise",
+    "dayanak_synset": "smother.v.01",
+    "dayanak_tanim": "envelop completely",
     "synset_sayisi": 14
   },
   "ses_mana_tasnif": {
@@ -1196,29 +1196,55 @@
     "fasil_ozeti": "° معنى الفصل المعجمي (غط) : هو دس الشيء في أثناء شيء فيُغَطَّي. كغط الشيء في الماء غَمْسه فيه -في (غطط)، وكالغطاء الذي يغطّي به الشيء فيستره -في (غطو غطى)، وكالغَوْطة الوهدة في الأرض المطمئنة -في (غوط) - والاستتار لازم لمعنى الانخفاض؛ لأن ما يكون في المنخفَضَ يستتر.",
     "tam_metin": "\"غطه في الماء (رد): غَطَّسه وغَمَسه \".\n° المعنى المحوري\nدسّ الشيء في مائع بدفع وغلظ حتى يغطيه أو يكاد (1):\n__________\n(1) (صوتيًّا): تعبر الغين عن نحو تخلخل مع رخاوة ما، والطاء عن ضغط بغلظ وامتداد، =\n(3/1589)\nكما في غط الشيء في الماء."
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "نام حتى سمع غطيطه وهو نخيره. وغطّ المذبوح. وغطّ البعير في شقشقته فإن لم يكن فيها فهو هدير، والناقة تهدر ولا تغط لأنه لا شقشقة لها. وتقول: أقبل وله نحيط كنحيط المهر المزنوق، وغطيط كغطيط البكر المخنوق. قال امرؤ القيس:\nيغط غطيط البكر شدّ خناقه ... ليقتلني والمرء ليس بقتال",
+    "mecaz": "",
+    "kinaye": "",
+    "mecaz_var": false
+  },
+  "prototip_yayilim_tasnif": {
+    "durum": "prototip veya mecaz kolu yok"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "authorize.v.01",
+    "coat.v.01",
+    "confront.v.02",
+    "cover.v.01",
+    "cover.v.02",
+    "cover.v.03",
+    "cover.v.04",
+    "cover.v.09",
+    "encase.v.01",
+    "invest.v.04",
+    "line.n.11",
+    "region.n.03",
+    "smother.v.01",
+    "snore.v.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطير",
     "bab": "",
-    "kok_gecis": 42.2,
+    "kok_gecis": 37.3,
     "kitapta_gecis": 11.0,
-    "zenginlesme": 14.39
+    "zenginlesme": 16.25
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "kume": 5,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 375
     },
     "orta": {
-      "kume": 36,
-      "merkez_kok": "نجس",
-      "merkez_mana": "Nicis: pislik, necis",
-      "boy": 123
+      "kume": 12,
+      "merkez_kok": "ردم",
+      "merkez_mana": "Redm: kapatmak, doldurmak; sedd: set",
+      "boy": 61
     },
     "ince": {
-      "kume": 227,
+      "kume": 69,
       "merkez_kok": "ستر",
       "merkez_mana": "Setr: örtmek, saklamak; setr: perde",
       "boy": 23

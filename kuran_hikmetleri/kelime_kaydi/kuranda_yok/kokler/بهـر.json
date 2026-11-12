@@ -1,0 +1,73 @@
+{
+  "kok": "بهـر",
+  "sinif": "reddedildi",
+  "turkce_fiil": null,
+  "mustaklar": {},
+  "reddedilen": [
+    ["kök", "بهـر", "üç harfli değil"]
+  ],
+  "sozlukler": {},
+  "kuran_gecisleri": 0,
+  "kuranda_var": false,
+  "sema": {
+    "sema": "graf-ic-graf",
+    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
+    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
+    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
+    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
+    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
+  },
+  "tasnif": {
+    "fasil": "به",
+    "harf": "ب",
+    "mahrec": "şefeviyye",
+    "bolge": "dudak ve cevf"
+  },
+  "mana_tasnif": {
+    "durum": "Arabic WordNet v2 kaydı yok"
+  },
+  "ses_mana_tasnif": {
+    "durum": "Cebel mu'cemlerinde kök yok"
+  },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "بهره: غلبه. وبهراً له: دعاء عليه بأن يغلب. قال ابن ميادة:\nفبهراً لقومي إذ يبيعون مهجتي ... بجارية بهراً لهم بعدها بهراً\nويقولون: بهراً له ما أسخاه، كما يقولون: تعساً له جميماً. وسرينا حتى ابهار الليل إذا انتصف من بهرة الشيء وهو وسطه.",
+    "mecaz": "قمر باهر وهو الذي بهر ضوءه ضوء الكواكب. وطاول الرجل صاحبه فبهره أي طاله. وبهره الحمل أو العدو فانبهر، وعلاه البهر فهو مبهور وبهير ومنبهر. وبهرت السيف فما حاك فيه أي أكرهته في الضرب. ومازال يراجعه الألم حتى قطع أبهره أي أهلكه، وهو عرق مستبطن الصلب إذا انقطع لم يبق صاحبه. قال بشر بن أبي حازم:\nعلى كل ذي ميعة سابح ... يقطع ذو أبهريه الحزاما\nأي بطنه.\nب هـ ر ج\nدرهم بهرج ومبهرج: رديء الفضة.\nومن المجاز: كلام بهرج، وعمل بهرج. وكذلك كل موصوف بالرداءة. ودم بهرج: هدر. وبهرج بهم الطريق إذا أخذ بهم في غير المحجة. وماء مبهرج: مهمل للواردة. قال ثعلبة ابن أوس الكلابي:\nفلو كنت ثوباً كنت سبعاً وأربعاً ... ولو كنت ماء كنت ماء له نخل\nمبهرجةً للواردين حياضه ... وليس له أهل فيمنعه الأهل",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "بهره: غلبه. وبهراً له: دعاء عليه بأن يغلب. قال ابن ميادة: فبهراً لقومي إذ يبيعون مهجتي ... بجارية بهراً لهم بعدها بهراً ويقولون: بهراً له ما أسخاه، كما يقولون: تعساً له جميماً. وسرينا حتى ابهار الليل إذا انتصف من بهرة الشيء وهو وسطه.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "قمر باهر وهو الذي بهر ضوءه ضوء الكواكب. وطاول الرجل صاحبه فبهره أي طاله. وبهره الحمل أو العدو فانبهر، وعلاه البهر فهو مبهور وبهير ومنبهر. وبهرت السيف فما حاك فيه أي أكرهته في الضرب. ومازال يراجعه الألم حتى قطع أبهره أي أهلكه، وهو عرق مستبطن الصلب إذا انقطع لم يبق صاحبه. قال بشر بن أبي حازم:",
+        "prototipe_benzerlik": 0.823,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "درهم بهرج ومبهرج: رديء الفضة.",
+        "prototipe_benzerlik": 0.254,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "ومن المجاز: كلام بهرج، وعمل بهرج. وكذلك كل موصوف بالرداءة. ودم بهرج: هدر. وبهرج بهم الطريق إذا أخذ بهم في غير المحجة. وماء مبهرج: مهمل للواردة. قال ثعلبة ابن أوس الكلابي:",
+        "prototipe_benzerlik": 0.776,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.618,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
+  "muhassas_tasnif": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "mana_tasnif_gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
+  },
+  "kaliplar": {},
+  "kelimeler": []
+}

@@ -1591,39 +1591,62 @@
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "literature.n.04",
-    "dayanak_tanim": "the profession or art of a writer",
+    "dayanak_synset": "discipline.n.05",
+    "dayanak_tanim": "the act of punishing",
     "synset_sayisi": 5
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "هو من آدب الناس، وقد أدب فلان وأرب. وتقول: الأدب مأدبه، ما لأحد فيها مأربه. وأدبهم على الأمر: جمعهم عليه يأدبهم. يقال: إيدب جيرانك لتشاورهم. قال:\nوكيف قتالي مشعراً يأدبونكم ... على الحق أن لا تأشبوه بباطل\nوتقول: أدبهم عليه، وندبهم إليه. وإذا انتقر الآدب، نقره الجادب.",
+    "mecaz": "جاش أدب البحر إذا كثر ماؤه.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "هو من آدب الناس، وقد أدب فلان وأرب. وتقول: الأدب مأدبه، ما لأحد فيها مأربه. وأدبهم على الأمر: جمعهم عليه يأدبهم. يقال: إيدب جيرانك لتشاورهم. قال: وكيف قتالي مشعراً يأدبونكم ... على الحق أن لا تأشبوه بباطل وتقول: أدبهم عليه، وندبهم إليه. وإذا انتقر الآدب، نقره ",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "جاش أدب البحر إذا كثر ماؤه.",
+        "prototipe_benzerlik": 0.218,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.218,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["act.n.02", "educate.v.03", "group_action.n.01", "literary.a.01", "writing.n.02"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
     "bab": "",
-    "kok_gecis": 24.5,
+    "kok_gecis": 22.5,
     "kitapta_gecis": 7.0,
-    "zenginlesme": 5.5
+    "zenginlesme": 5.99
   },
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
-    },
-    "orta": {
-      "kume": 9,
       "merkez_kok": "خون",
       "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
-      "boy": 168
+      "boy": 509
+    },
+    "orta": {
+      "kume": 7,
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 259
     },
     "ince": {
-      "kume": 47,
+      "kume": 40,
       "merkez_kok": "ءثم",
       "merkez_mana": "İsm: günah, suç; âsim: günahkâr",
-      "boy": 38
+      "boy": 46
     }
   },
   "kaliplar": {

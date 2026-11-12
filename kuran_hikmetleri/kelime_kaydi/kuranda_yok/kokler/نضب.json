@@ -1235,6 +1235,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "نضب الماء ينضب وينضُبُ نُضوباً: ذهب في الأرض، وغدير ناضب، وعين منضّبة: غار ماؤها. قال الكميت:\nضفادع جيئةٍ حسبت أضاةً ... منضّبةً ستمنعها وطيناً\nونضبت عيون الطائف. ونوق كقداح التنضب. قال:\nفحثّ خوضاً كقداح التّنضب\nوكأنه حرباء تنضبةٍ: للدّاهي.",
+    "mecaz": "نضب القوم: بعدوا. ونضبت المفازة، وخرق ناضب: بعيد. ونضب الدّبر: اشتدّ أثره في الظهر وغار فيه. ونضب ماء وجهه إذا لم يستحي. وإن فلاناً لناضب الخير، وقد نضب بخيره.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "نضب الماء ينضب وينضُبُ نُضوباً: ذهب في الأرض، وغدير ناضب، وعين منضّبة: غار ماؤها. قال الكميت: ضفادع جيئةٍ حسبت أضاةً ... منضّبةً ستمنعها وطيناً ونضبت عيون الطائف. ونوق كقداح التنضب. قال: فحثّ خوضاً كقداح التّنضب وكأنه حرباء تنضبةٍ: للدّاهي.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "نضب القوم: بعدوا. ونضبت المفازة، وخرق ناضب: بعيد. ونضب الدّبر: اشتدّ أثره في الظهر وغار فيه. ونضب ماء وجهه إذا لم يستحي. وإن فلاناً لناضب الخير، وقد نضب بخيره.",
+        "prototipe_benzerlik": 0.776,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.776,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -1246,21 +1269,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "merkez_kok": "قبب",
+      "merkez_mana": "canopy, pavilion; dome, cupola",
+      "boy": 604
     },
     "orta": {
-      "kume": 36,
-      "merkez_kok": "نجس",
-      "merkez_mana": "Nicis: pislik, necis",
-      "boy": 123
+      "kume": 33,
+      "merkez_kok": "صبب",
+      "merkez_mana": "Sabb: dökmek, akıtmak; sabîb: akan",
+      "boy": 201
     },
     "ince": {
-      "kume": 228,
-      "merkez_kok": "خرم",
-      "merkez_mana": "to make a hole by digging",
-      "boy": 23
+      "kume": 218,
+      "merkez_kok": "دلك",
+      "merkez_mana": "Delk: ovmak, sürtmek",
+      "boy": 33
     }
   },
   "kaliplar": {

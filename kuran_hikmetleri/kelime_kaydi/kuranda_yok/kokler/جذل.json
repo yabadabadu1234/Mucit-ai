@@ -896,6 +896,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "انتصب كالجذل وهو أصل الشجرة. وهو جذل بكذا، وجذلان، ونفسه جذلى بذلك، وهو شديد الجذل به، وقد ابتهج بالأمر واجتذل.",
+    "mecaz": "إنه لجذل حكاك، وأنا جذيلها المحكك. قال:\nلاقت على الماء جذيلاً واتدا\nوعاد الشيء إلى جذله أي إلى أصله. وفلان جذل مال إذا كان قائماً به. واشتق منه على طريق المجاز: قد جذل الحرباء، واستجذل إذا انتصب. وبات فلان جاذلاً على ظهر دابته، وبات يستجذل على ظهرها إذا نام منصباً لا يضطرب. وقد جذل للقوم يخاصمهم. وتجاذلوا في الحرب.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "انتصب كالجذل وهو أصل الشجرة. وهو جذل بكذا، وجذلان، ونفسه جذلى بذلك، وهو شديد الجذل به، وقد ابتهج بالأمر واجتذل.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "إنه لجذل حكاك، وأنا جذيلها المحكك. قال:",
+        "prototipe_benzerlik": 0.568,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "لاقت على الماء جذيلاً واتدا",
+        "prototipe_benzerlik": 0.366,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وعاد الشيء إلى جذله أي إلى أصله. وفلان جذل مال إذا كان قائماً به. واشتق منه على طريق المجاز: قد جذل الحرباء، واستجذل إذا انتصب. وبات فلان جاذلاً على ظهر دابته، وبات يستجذل على ظهرها إذا نام منصباً لا يضطرب. وقد جذل للقوم يخاصمهم. وتجاذلوا في الحرب.",
+        "prototipe_benzerlik": 0.434,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.456,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -906,22 +939,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 17,
+      "kume": 24,
       "merkez_kok": "زين",
       "merkez_mana": "Zîne: süs, güzellik; zeyn: güzelleştirmek",
-      "boy": 177
+      "boy": 123
     },
     "ince": {
-      "kume": 87,
+      "kume": 138,
       "merkez_kok": "فرح",
       "merkez_mana": "Ferâh: sevinç; ferih: sevinçli",
-      "boy": 15
+      "boy": 27
     }
   },
   "kaliplar": {

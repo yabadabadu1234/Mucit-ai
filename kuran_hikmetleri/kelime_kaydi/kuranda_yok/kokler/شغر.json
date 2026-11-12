@@ -1333,6 +1333,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "كلب شاغر. وشغرت الناقة: رفعت رجلها فضربت الفصيل. واشتغر عليه حسابه إذا لم يهتد له. واشتغرت عليه ضيعته: فشت و\" لا شغار في الإسلام \" وهو أن يزوجه أخته على أن يزوجه الآخر أخته ولا مهر إلا ذاك.",
+    "mecaz": "بلدة شاغر برجلها: لا تمتنع من غارة. وشغر السعر إذا نقص.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "كلب شاغر. وشغرت الناقة: رفعت رجلها فضربت الفصيل. واشتغر عليه حسابه إذا لم يهتد له. واشتغرت عليه ضيعته: فشت و\" لا شغار في الإسلام \" وهو أن يزوجه أخته على أن يزوجه الآخر أخته ولا مهر إلا ذاك.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "بلدة شاغر برجلها: لا تمتنع من غارة. وشغر السعر إذا نقص.",
+        "prototipe_benzerlik": 0.255,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.255,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["being.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النساء",
@@ -1343,22 +1366,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "kume": 5,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 375
     },
     "orta": {
-      "kume": 38,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 203
+      "kume": 12,
+      "merkez_kok": "ردم",
+      "merkez_mana": "Redm: kapatmak, doldurmak; sedd: set",
+      "boy": 61
     },
     "ince": {
-      "kume": 242,
-      "merkez_kok": "محش",
-      "merkez_mana": "",
-      "boy": 29
+      "kume": 71,
+      "merkez_kok": "جثث",
+      "merkez_mana": "Cesed: ceset, cisim; cesse: cüsse",
+      "boy": 28
     }
   },
   "kaliplar": {

@@ -133,3 +133,40 @@ def ingilizce_sinifla(kokler, hazir, derinlik=3):
         sonuc[k] = {'yontem': 'Vikisözlük/Arabic Ontology İngilizce karşılığı → Princeton WordNet ilk anlam (makine eşlemesi, AWN kaydı yok)', 'ince': a, 'orta': lex,
                     'ust': UST.get(lex, 'hâl ve vasıf'), 'dayanak_synset': ornek[(a, lex)][0], 'dayanak_tanim': ornek[(a, lex)][1], 'dayanak_karsilik': ornek[(a, lex)][2]}
     return sonuc
+
+
+def kavramlar(kokler, derinlik=4):
+    kok_syn, lem_syn = yukle()
+    sonuc = {}
+    for k, r in kokler.items():
+        oy = set(kok_syn.get(k, ()))
+        for e in r.get('kelimeler', []):
+            oy |= lem_syn.get(K.sade(e['lemma']), set())
+        for x in r.get('sozlukler', {}).get('kaikki_vikisozluk') or []:
+            oy |= lem_syn.get(x['u'], set())
+        ks = set()
+        for o in oy:
+            s = synset(o)
+            if s is not None:
+                ks.add(ata(s, derinlik).name())
+        if len(ks) >= 1:
+            sonuc[k] = sorted(ks)
+    return sonuc
+
+
+def kolekzifikasyon(kok_kavram, en_az_kok=3, en_cok_kavram=300):
+    import math
+    f = collections.Counter()
+    for ks in kok_kavram.values():
+        f.update(ks)
+    sayac = collections.defaultdict(list)
+    for k, ks in kok_kavram.items():
+        ks = [x for x in ks if f[x] <= en_cok_kavram]
+        for i, a in enumerate(ks):
+            for b in ks[i + 1:]:
+                sayac[(a, b)].append(k)
+    sonuc = []
+    for (a, b), v in sayac.items():
+        if len(v) >= en_az_kok and a.split('.')[0] != b.split('.')[0]:
+            sonuc.append((a, b, len(v), round(len(v) / math.sqrt(f[a] * f[b]), 3), v[:12]))
+    return sorted(sonuc, key=lambda x: (-x[3], -x[2]))

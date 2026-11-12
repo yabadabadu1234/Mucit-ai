@@ -1183,6 +1183,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "أغامت السماء وتغيمت وغيّمت. وتقول: هو كالسماء غيّمت فديّمت. وفلان عيمان غيمان. قال مالك بن نويرة:\nلعمري إني وابن جارود كالذي ... أراق شعيب الماء والآل يبرق\nفلما بغاه خيّب الله سعيه ... فأمسى يغضّ الطرف غيمان يشهق\nوفي الحديث: أنه كان يتعوّذ من العيمة والغيمة والأيمة. ويقولون: أفاق غيم الإبل إذا ذهب عطشها، ورجعت من الورد بغيمها إذا لم ترو.",
+    "mecaz": "غيّم علينا الليل إذا أظلم.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "أغامت السماء وتغيمت وغيّمت. وتقول: هو كالسماء غيّمت فديّمت. وفلان عيمان غيمان. قال مالك بن نويرة: لعمري إني وابن جارود كالذي ... أراق شعيب الماء والآل يبرق فلما بغاه خيّب الله سعيه ... فأمسى يغضّ الطرف غيمان يشهق وفي الحديث: أنه كان يتعوّذ من العيمة والغيمة وا",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "غيّم علينا الليل إذا أظلم.",
+        "prototipe_benzerlik": 0.067,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.067,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["natural_phenomenon.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -1193,22 +1216,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 7,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 331
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 34,
-      "merkez_kok": "غبر",
-      "merkez_mana": "Gubr: toz, gübre; gâbir",
-      "boy": 47
+      "kume": 43,
+      "merkez_kok": "عقم",
+      "merkez_mana": "Akm: kısır olmak; akim: kısır",
+      "boy": 106
     },
     "ince": {
-      "kume": 219,
-      "merkez_kok": "غيم",
-      "merkez_mana": "cloudy, overcast, clouded",
-      "boy": 8
+      "kume": 282,
+      "merkez_kok": "ندى",
+      "merkez_mana": "",
+      "boy": 11
     }
   },
   "kaliplar": {

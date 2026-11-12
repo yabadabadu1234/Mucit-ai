@@ -843,16 +843,39 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "disapprove.v.02",
-    "orta": "verb.communication",
-    "ust": "söz ve haber",
-    "dayanak_synset": "disapprove.v.02",
-    "dayanak_tanim": "deem wrong or inappropriate",
+    "ince": "reject.v.01",
+    "orta": "verb.cognition",
+    "ust": "zihin ve ilim",
+    "dayanak_synset": "reject.v.01",
+    "dayanak_tanim": "refuse to accept or acknowledge",
     "synset_sayisi": 2
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "تقيّأ واستقاء: تكلّف القيء. وفي الحديث: \" لو يعلم الشارب قائماً ماذا عليه لاستقاء ما شرب \" وقيّأته أنا، وقيّأه الدواء. وشربت القيوء فما قيّأني وهو دواء القيء.",
+    "mecaz": "قاءت الطعنة الدم. وهذا ثوب يقيء الصبغ إذا كان مشبعاً، وعليه إزار ورداء يقيئان الزّعفران. وأكلت مال الله فعليك أن تقيئه. وقاء نفسه ولفظ نفسه إذا مات. قال أبو الطمحان القيني يصف الكلاب والأروية:\nفعاسفنها حتى إذا ابتلّ روقها ... وقئن عليه أنفساً ولعابا",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "تقيّأ واستقاء: تكلّف القيء. وفي الحديث: \" لو يعلم الشارب قائماً ماذا عليه لاستقاء ما شرب \" وقيّأته أنا، وقيّأه الدواء. وشربت القيوء فما قيّأني وهو دواء القيء.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "قاءت الطعنة الدم. وهذا ثوب يقيء الصبغ إذا كان مشبعاً، وعليه إزار ورداء يقيئان الزّعفران. وأكلت مال الله فعليك أن تقيئه. وقاء نفسه ولفظ نفسه إذا مات. قال أبو الطمحان القيني يصف الكلاب والأروية:",
+        "prototipe_benzerlik": 0.45,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.45,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["disapprove.v.02", "reject.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
@@ -864,21 +887,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 39,
-      "merkez_kok": "هضض",
-      "merkez_mana": "recurrence of sadness",
-      "boy": 52
+      "kume": 41,
+      "merkez_kok": "بلع",
+      "merkez_mana": "Bel': yutmak; bel'a: yutkunma",
+      "boy": 61
     },
     "ince": {
-      "kume": 253,
-      "merkez_kok": "عفس",
-      "merkez_mana": "",
-      "boy": 21
+      "kume": 265,
+      "merkez_kok": "هضض",
+      "merkez_mana": "recurrence of sadness",
+      "boy": 11
     }
   },
   "kaliplar": {

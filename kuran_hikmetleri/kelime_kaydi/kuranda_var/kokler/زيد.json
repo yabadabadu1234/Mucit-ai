@@ -2294,13 +2294,69 @@
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "bid.n.02",
-    "dayanak_tanim": "an attempt to get something",
+    "dayanak_synset": "summation.n.04",
+    "dayanak_tanim": "the arithmetic operation of summing; calculating the sum of two or more numbers",
     "synset_sayisi": 37
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "زاد الماء والمال وازداد، وازددت مالاً. وازداد الأمر صعوبة. وازدد من الخير ازدياداً، وزاده الله مالاً، وزاد في ماله، وزاد على ما أراد، وزاد على الشيء ضعفه. وأخذته بدرهم فزائداً. واستزاد: طلب الزيادة. ولا مستزاد على ما فعلت ولا مزيد عليه. وتزايد السعر وتزيد. وتزايدوا في ثمن السلعة حتى بلغ منتهاه. وزايد أحد المبتاعين الآخر مزايدة. وهو يتزيد في حديثه. وتزيدت الناقة: مدت بالعنق وسارت فوق العنق كأنها تعوم براكبها. قال:\nوأتلع نهاض إذا ما تزيدت ... به مد أثناء الجديل المضفر\nوهذه مزادة وفراء زمزايد وفر وهي الراوية تفأم بجلد ثالث يزاد بين الجلدين. وتقول: الولد كبد ذي الولد، وولد الولد زيادة الكبد؛ وهي قطعة معلقة بها وجمعها زبايد. ويقال: إن زكّيت مالك زيد أي زاد كثيراً.",
+    "mecaz": "فلان يستزيد فلاناً: يستقصره ويشكوه، وهو مستزيد. وكتب إليه كتاب استزادة. وهم زيد على مائة وزيادة. قال ذو الإصبع العدوانيّ:\nوأنتم معشر زيد على مائة ... فأجمعوا أمركم طراً فكيدوني\nأي زائدون.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "زاد الماء والمال وازداد، وازددت مالاً. وازداد الأمر صعوبة. وازدد من الخير ازدياداً، وزاده الله مالاً، وزاد في ماله، وزاد على ما أراد، وزاد على الشيء ضعفه. وأخذته بدرهم فزائداً. واستزاد: طلب الزيادة. ولا مستزاد على ما فعلت ولا مزيد عليه. وتزايد السعر وتزيد. وتز",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "فلان يستزيد فلاناً: يستقصره ويشكوه، وهو مستزيد. وكتب إليه كتاب استزادة. وهم زيد على مائة وزيادة. قال ذو الإصبع العدوانيّ:",
+        "prototipe_benzerlik": 0.084,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.084,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "act.n.02",
+    "addition.n.03",
+    "advance.v.12",
+    "body_part.n.01",
+    "climb.v.01",
+    "compound.v.02",
+    "cover.v.03",
+    "develop.v.10",
+    "expand.v.02",
+    "food.n.01",
+    "gain.v.09",
+    "group_action.n.01",
+    "grow.v.02",
+    "grow.v.08",
+    "happening.n.01",
+    "increase.n.03",
+    "increase.v.01",
+    "increase.v.02",
+    "increased.a.01",
+    "increasing.a.01",
+    "jump.v.01",
+    "leap_out.v.01",
+    "magnitude.n.01",
+    "multiply.v.01",
+    "multiply.v.02",
+    "overbid.v.02",
+    "piece.n.01",
+    "raise.v.01",
+    "reach.v.01",
+    "reproduce.v.02",
+    "stretch.v.02",
+    "wax.v.02"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الغرائز",
@@ -2311,22 +2367,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 17,
-      "merkez_kok": "زين",
-      "merkez_mana": "Zîne: süs, güzellik; zeyn: güzelleştirmek",
-      "boy": 177
+      "kume": 16,
+      "merkez_kok": "درك",
+      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
+      "boy": 287
     },
     "ince": {
-      "kume": 96,
-      "merkez_kok": "فخر",
-      "merkez_mana": "Fahr: övünme; fahîr: övünen",
-      "boy": 17
+      "kume": 90,
+      "merkez_kok": "غرق",
+      "merkez_mana": "Garak: batmak; ğarık: batan",
+      "boy": 19
     }
   },
   "kaliplar": {

@@ -1588,6 +1588,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "خضل الشيء: ندي حتى ترشرش نداه، فهو خضل، واخضل فهو مخضل، وأخضله وخضّله: ندّاه. وأخضلتنا السماء. واخضلّت لحيته بالدموع. وسنان خضل: ند من الدم. قال أبو النجم:\nومجرب خضل السنان إذا التقى ... رهج بخاطره الصدور ظماء\nوبأرضهم خضيلة وهي الروضة الغمقة. ونبات خضل: ناعم. ويومنا يوم خضلة وهي النعيم. قال مرداس الدبيري:\nإذا قلت هذا اليوم يوم خضلة ... ولا شرز لاقيت الأمور البجاريا\nوطلعت الخضلة وهي قوس قزح.",
+    "mecaz": "درة خضلة: صافية كأنها قطرة ماء. وخضلة الرجل: امرأته، كما يقال طلّته.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "خضل الشيء: ندي حتى ترشرش نداه، فهو خضل، واخضل فهو مخضل، وأخضله وخضّله: ندّاه. وأخضلتنا السماء. واخضلّت لحيته بالدموع. وسنان خضل: ند من الدم. قال أبو النجم: ومجرب خضل السنان إذا التقى ... رهج بخاطره الصدور ظماء وبأرضهم خضيلة وهي الروضة الغمقة. ونبات خضل: ناعم. ",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "درة خضلة: صافية كأنها قطرة ماء. وخضلة الرجل: امرأته، كما يقال طلّته.",
+        "prototipe_benzerlik": 0.216,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.216,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["wet.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النساء",
@@ -1598,22 +1621,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 7,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 331
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 30,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 103
-    },
-    "ince": {
-      "kume": 205,
+      "kume": 35,
       "merkez_kok": "نقع",
       "merkez_mana": "Nak': su birikintisi; nakî': ıslak",
-      "boy": 33
+      "boy": 47
+    },
+    "ince": {
+      "kume": 236,
+      "merkez_kok": "نقع",
+      "merkez_mana": "Nak': su birikintisi; nakî': ıslak",
+      "boy": 18
     }
   },
   "kaliplar": {

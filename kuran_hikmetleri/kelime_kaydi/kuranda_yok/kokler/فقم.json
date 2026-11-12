@@ -1337,6 +1337,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "تفقّمته: أخذت بفُقمه وهو لحيه. وفي الحديث: \" من حفظ ما بين فُقميه ورجليه دخل الجنة \" يعني لسانه وفرجه. ورجلٌ أفقم، وبه فقم، ورجال فقم إذا كان في الفقم الأسفل تقدّم فلم تقع الثنايا العليا على\nالسفلى. ويقولون: زوّجتموني فقماء دقماء؛ وهي الساقطة مقدّم الفم. وإذا اجتمع الفقم والدقم، فقد حلّت النقم.",
+    "mecaz": "هذا أمر أفقم أي أعوج مخالف، ومنه: تفاقم الأمر. وفيه صدع متفاقم.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "تفقّمته: أخذت بفُقمه وهو لحيه. وفي الحديث: \" من حفظ ما بين فُقميه ورجليه دخل الجنة \" يعني لسانه وفرجه. ورجلٌ أفقم، وبه فقم، ورجال فقم إذا كان في الفقم الأسفل تقدّم فلم تقع الثنايا العليا على السفلى. ويقولون: زوّجتموني فقماء دقماء؛ وهي الساقطة مقدّم الفم. وإذا ",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "هذا أمر أفقم أي أعوج مخالف، ومنه: تفاقم الأمر. وفيه صدع متفاقم.",
+        "prototipe_benzerlik": 0.142,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.142,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["act.n.02", "worsen.v.02"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "المثنيات",
@@ -1348,21 +1371,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "merkez_kok": "قبب",
+      "merkez_mana": "canopy, pavilion; dome, cupola",
+      "boy": 604
     },
     "orta": {
-      "kume": 36,
-      "merkez_kok": "نجس",
-      "merkez_mana": "Nicis: pislik, necis",
-      "boy": 123
+      "kume": 33,
+      "merkez_kok": "صبب",
+      "merkez_mana": "Sabb: dökmek, akıtmak; sabîb: akan",
+      "boy": 201
     },
     "ince": {
-      "kume": 233,
-      "merkez_kok": "هدم",
-      "merkez_mana": "Hadm: yıkmak, yıkılmak",
-      "boy": 19
+      "kume": 218,
+      "merkez_kok": "دلك",
+      "merkez_mana": "Delk: ovmak, sürtmek",
+      "boy": 33
     }
   },
   "kaliplar": {

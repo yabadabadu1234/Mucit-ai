@@ -1165,32 +1165,55 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "بكى على الميت وبكاه وبكى له وبكي عليه وبكاه. وفعلت به ما أبكاه وبكاه. قال:\nسمية قومي ولا تعجزي ... وبكي النساء على حمزة\nواستبكيته فبكى، وباكيته فبكيته: كنت أبكى منه. قال جرير:\nالشمس طالعة ليست بكاسفة ... تبكي عليك نجوم الليل والقمرا\nوفي الحديث: \" لكن حمزة لا بواكي له \" وهو من البكائين.",
+    "mecaz": "بكت السحابة في أرضهم \" فما بكت عليهم السماء والأرض \".",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "بكى على الميت وبكاه وبكى له وبكي عليه وبكاه. وفعلت به ما أبكاه وبكاه. قال: سمية قومي ولا تعجزي ... وبكي النساء على حمزة واستبكيته فبكى، وباكيته فبكيته: كنت أبكى منه. قال جرير: الشمس طالعة ليست بكاسفة ... تبكي عليك نجوم الليل والقمرا وفي الحديث: \" لكن حمزة لا ب",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "بكت السحابة في أرضهم \" فما بكت عليهم السماء والأرض \".",
+        "prototipe_benzerlik": 0.342,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.342,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["cry.v.02", "mourn.v.01", "shout.v.02", "wail.v.02"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "خلق الإنسان",
     "bab": "التشعث",
-    "kok_gecis": 64.2,
-    "kitapta_gecis": 12.5,
-    "zenginlesme": 2.28
+    "kok_gecis": 51.2,
+    "kitapta_gecis": 9.5,
+    "zenginlesme": 2.17
   },
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 509
     },
     "orta": {
-      "kume": 8,
-      "merkez_kok": "وغر",
-      "merkez_mana": "to become enraged, to become angry, to be filled with malice",
-      "boy": 80
+      "kume": 7,
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 259
     },
     "ince": {
-      "kume": 40,
+      "kume": 32,
       "merkez_kok": "عير",
       "merkez_mana": "Ayr: merkep, eşek; ğayr: başka",
-      "boy": 44
+      "boy": 33
     }
   },
   "kaliplar": {

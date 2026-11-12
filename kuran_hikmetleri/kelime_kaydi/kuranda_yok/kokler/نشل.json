@@ -1328,16 +1328,27 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "handle.v.04",
+    "ince": "pick.v.02",
     "orta": "verb.contact",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "handle.v.04",
-    "dayanak_tanim": "touch, lift, or hold with the hands",
+    "dayanak_synset": "pick.v.02",
+    "dayanak_tanim": "look for and gather",
     "synset_sayisi": 5
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "أطعموه النّشيل وهو اللحم المطبوخ بلا توابل. وتقول: فلان ألف النّشيل، وما عرف الطّفشيل. قال:\nولو أني أشاء نعمت بالاً ... وباكرني صبوحٌ أو نشيل\nونشل اللحم من القدر بالمنشل والمنشال وهو\nحديدة في رأسها عقّافة، وانتشله: أخرجه لنفسه وأخذه. قال الكميت:\nولانتشلت عضوين منها يحابر ... وكان لعبد القيس عضو مؤرّب\nوانتشل ما على العظم بفيه: انتهسه. وفخذٌ ناشلة: قليلة اللحم. وقد نشل الرجل نشولاً: قلّ لحمه. وفي الحديث: \" عليك بالمغفلة والمنشلة \": بالعنفقة وموضع الخاتم.",
+    "mecaz": "",
+    "kinaye": "",
+    "mecaz_var": false
+  },
+  "prototip_yayilim_tasnif": {
+    "durum": "prototip veya mecaz kolu yok"
+  },
+  "kolekzifikasyon_kavramlari": ["handle.v.04", "pick.v.01", "pick.v.02", "pinch.v.01", "twitch.v.05"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
@@ -1349,21 +1360,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
-    },
-    "orta": {
-      "kume": 9,
       "merkez_kok": "خون",
       "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
-      "boy": 168
+      "boy": 509
+    },
+    "orta": {
+      "kume": 7,
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 259
     },
     "ince": {
-      "kume": 44,
-      "merkez_kok": "خطف",
-      "merkez_mana": "Hatf: kapmak, kaçırmak",
-      "boy": 12
+      "kume": 39,
+      "merkez_kok": "سلب",
+      "merkez_mana": "Selb: soymak, çalmak; selb: yoksun bırakmak",
+      "boy": 24
     }
   },
   "kaliplar": {

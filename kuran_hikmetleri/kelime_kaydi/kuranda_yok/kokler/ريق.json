@@ -751,7 +751,7 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "agent.n.03",
+    "ince": "substance.n.07",
     "orta": "noun.artifact",
     "ust": "cisim ve eşya",
     "dayanak_synset": "antidote.n.01",
@@ -761,6 +761,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "مص ريقها وريقتها. وراق الماء يريق وأراقه وهراقه وأهراقه وهو يريقه ويهريقه ويهريقه إراقة وهراقة وإهراقة، وماء مراق ومهراق ومهراق.",
+    "mecaz": "راق الشراب. وكأن وعده ريق السراب، وبرق السحاب. وهو يريق بنفسه: يريقها كما يقال: دفق روحه. وهريقوا عنكم من الظهيرة. وأهريقوا: أبردوا. وقال ذو الرمة:\nإذا حال شخص في الرهاء استحلنه ... بخوص هراقت ماءهن الهواجر\nوأنا على الريق لم أذق طعاماً، وشربت على الريق، وعلى ريق النفس وريقة النفس، ودخلت عليه على ريق نفسي. وسمعت مرشداً الخفاجي. تريقت الماء وريقته الشراب: سقيته إياه على غير ثفل. وماء رائق: مشروب على الريق. وفي يده صل ريقه ترياق. وفي نصحه ريق الحية وضربه\nبذي الريقة وهو سيف كان لمرة بن ربيعة القريعي قيل له ذلك لكثرة مائه.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "مص ريقها وريقتها. وراق الماء يريق وأراقه وهراقه وأهراقه وهو يريقه ويهريقه ويهريقه إراقة وهراقة وإهراقة، وماء مراق ومهراق ومهراق.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "راق الشراب. وكأن وعده ريق السراب، وبرق السحاب. وهو يريق بنفسه: يريقها كما يقال: دفق روحه. وهريقوا عنكم من الظهيرة. وأهريقوا: أبردوا. وقال ذو الرمة:",
+        "prototipe_benzerlik": 0.467,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وأنا على الريق لم أذق طعاماً، وشربت على الريق، وعلى ريق النفس وريقة النفس، ودخلت عليه على ريق نفسي. وسمعت مرشداً الخفاجي. تريقت الماء وريقته الشراب: سقيته إياه على غير ثفل. وماء رائق: مشروب على الريق. وفي يده صل ريقه ترياق. وفي نصحه ريق الحية وضربه",
+        "prototipe_benzerlik": 0.496,
+        "halka": "orta"
+      },
+      {
+        "cumle": "بذي الريقة وهو سيف كان لمرة بن ربيعة القريعي قيل له ذلك لكثرة مائه.",
+        "prototipe_benzerlik": 0.293,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.419,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["agent.n.03"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
@@ -771,19 +804,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
-      "merkez_kok": "حنج",
-      "merkez_mana": "",
-      "boy": 426
-    },
-    "orta": {
       "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 261
+      "boy": 466
+    },
+    "orta": {
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 12,
+      "kume": 19,
       "merkez_kok": "حنجر",
       "merkez_mana": "Hanacır: boğaz; hancere: boğaz",
       "boy": 16

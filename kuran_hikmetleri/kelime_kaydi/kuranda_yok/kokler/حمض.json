@@ -1692,16 +1692,39 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "develop.v.15",
-    "orta": "verb.perception",
-    "ust": "zihin ve ilim",
-    "dayanak_synset": "develop.v.15",
-    "dayanak_tanim": "make visible by means of chemical solutions",
+    "ince": "substance.n.01",
+    "orta": "noun.substance",
+    "ust": "tabiat",
+    "dayanak_synset": "acid.n.01",
+    "dayanak_tanim": "any of various water-soluble compounds having a sour taste and capable of turning litmus red and reacting with a base to form a salt",
     "synset_sayisi": 6
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "حمض الشيء وحمش. وحمضت الإبل وأحمضت: رعت الحمض وهو نبت فيه ملوحة تتفكه به وتشرب عليه. ويقولون: الخلة خبز الإبل، والحمض فاكهتها. وكأنه حماض الأترج وهو ما في جوفه، الواحدة حماضة. وأنا أستلذ حماضة الأترجة.",
+    "mecaz": "أحمض القوم: أفاضوا فيما يؤنسهم من الحديث: وكان ابن عباس رضي الله تعالى عنهما يقول لأصحابه: أحمضوا فيأخذون في الأشعار وأيام العرب. ويقال للتهدد: أنت مختل فتحمض.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "حمض الشيء وحمش. وحمضت الإبل وأحمضت: رعت الحمض وهو نبت فيه ملوحة تتفكه به وتشرب عليه. ويقولون: الخلة خبز الإبل، والحمض فاكهتها. وكأنه حماض الأترج وهو ما في جوفه، الواحدة حماضة. وأنا أستلذ حماضة الأترجة.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "أحمض القوم: أفاضوا فيما يؤنسهم من الحديث: وكان ابن عباس رضي الله تعالى عنهما يقول لأصحابه: أحمضوا فيأخذون في الأشعار وأيام العرب. ويقال للتهدد: أنت مختل فتحمض.",
+        "prototipe_benzerlik": 0.162,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.162,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["acidic.a.01", "acidify.v.02", "develop.v.15", "development.n.08", "material.n.01", "sour.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النخل",
@@ -1712,19 +1735,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 6,
-      "merkez_kok": "لقلق",
-      "merkez_mana": "",
-      "boy": 440
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 26,
-      "merkez_kok": "قرش",
-      "merkez_mana": "Kureyş: bir kabile adı; kırş: nakil",
-      "boy": 27
+      "kume": 38,
+      "merkez_kok": "خبز",
+      "merkez_mana": "Habz: ekmek yapmak, ekmek",
+      "boy": 50
     },
     "ince": {
-      "kume": 156,
+      "kume": 247,
       "merkez_kok": "قلو",
       "merkez_mana": "to hate, to loathe, to detest",
       "boy": 4

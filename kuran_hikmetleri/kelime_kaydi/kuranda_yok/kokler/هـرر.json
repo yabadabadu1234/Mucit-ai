@@ -1,0 +1,88 @@
+{
+  "kok": "هـرر",
+  "sinif": "reddedildi",
+  "turkce_fiil": null,
+  "mustaklar": {},
+  "reddedilen": [
+    ["kök", "هـرر", "üç harfli değil"]
+  ],
+  "sozlukler": {},
+  "kuran_gecisleri": 0,
+  "kuranda_var": false,
+  "sema": {
+    "sema": "graf-ic-graf",
+    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
+    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
+    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
+    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
+    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
+  },
+  "tasnif": {
+    "fasil": "هـ",
+    "harf": "ه",
+    "mahrec": "halkiyye",
+    "bolge": "halk"
+  },
+  "mana_tasnif": {
+    "durum": "Arabic WordNet v2 kaydı yok"
+  },
+  "ses_mana_tasnif": {
+    "durum": "Cebel mu'cemlerinde kök yok"
+  },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "له هرّ وهرّةٌ: ذكر وأنثى. وكلب هرّار، وهرّ هريراً وهو دون النباح، وهرّت إليّ الكلاب، وهرّتني الكلاب.",
+    "mecaz": "قول حرام بن وابصة الفزاري:\nوإن الكناز اللحم من بكراتكم ... تهرّ عليها أمكم وتكالب\nيريد أنها ترضعها للؤمها فتشق عليها وتؤذيها. وهرّ في وجه السائل: تجهّمه. وفلان هرّه الناس إذا كرهوا ناحيته. قال:\nأرى الناس هرّوني وشهّر مدخلي ... وفي كلّ ممشًى أرصد النّاس عقربا\nوهرّ الكأس إذا كرهها. وهرّ الحرب. وقال ابن\nالدمينة:\nنهاري نهار الناس حتى إذا دنا ... ليَ الليل هرّتني إليك المضاجع\nوهرّ الشوك إذا يبس فاجتنبته الراعية كأنه يهرّ في وجهها، وقيل معناه: صار كأنه أظفار هرّ. قال:\nرعين الشّبرق الريّان حتى ... إذا ما هر وامتنع المذاقا\nوأنشد المبرّد:\nحلفت لهم والخيل تردي بنا معاً ... نفارقهم حتى يهرّوا العواليا\nعوالي زرقاً من رماح ردينةٍ ... هرير الكلاب يتّقين الأفاعيا\nوهذا يدلك على وجه المجاز دلالة مكشوفة. وهرّه الشتاء، وللشتاء هرير، كما يقال: كلب الشتاء والبرد. وطلع الهرّاران وهما قلب العقرب والنّسر الواقع لأن هرير الشتاء عند طلوعهما. و\" فلان لا يعرف هرّاً من برّ \" أي لا يميزّ فعل من يهرّ في وجهه من فعل من يبرّ به. ويقال: هلك من لا هرّار له أي لا سفيه له يهرّ عنه عدوّه. كما قال:\nلا بدّ للسؤدد من أرماح ... ومن عديد يتّقى بالراح\nمن سفيه دائم النّباح",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "له هرّ وهرّةٌ: ذكر وأنثى. وكلب هرّار، وهرّ هريراً وهو دون النباح، وهرّت إليّ الكلاب، وهرّتني الكلاب.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "قول حرام بن وابصة الفزاري:",
+        "prototipe_benzerlik": 0.286,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "يريد أنها ترضعها للؤمها فتشق عليها وتؤذيها. وهرّ في وجه السائل: تجهّمه. وفلان هرّه الناس إذا كرهوا ناحيته. قال:",
+        "prototipe_benzerlik": 0.307,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وهرّ الكأس إذا كرهها. وهرّ الحرب. وقال ابن",
+        "prototipe_benzerlik": 0.275,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وهرّ الشوك إذا يبس فاجتنبته الراعية كأنه يهرّ في وجهها، وقيل معناه: صار كأنه أظفار هرّ. قال:",
+        "prototipe_benzerlik": 0.416,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وهذا يدلك على وجه المجاز دلالة مكشوفة. وهرّه الشتاء، وللشتاء هرير، كما يقال: كلب الشتاء والبرد. وطلع الهرّاران وهما قلب العقرب والنّسر الواقع لأن هرير الشتاء عند طلوعهما. و\" فلان لا يعرف هرّاً من برّ \" أي لا يميزّ فعل من يهرّ في وجهه من فعل من يبرّ به. ويقال: هلك من لا هرّار له أي لا سفيه له يهرّ عن",
+        "prototipe_benzerlik": 0.545,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "من سفيه دائم النّباح",
+        "prototipe_benzerlik": 0.356,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.364,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
+  "muhassas_tasnif": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "mana_tasnif_gomme": {
+    "durum": "tasnif edilemedi (köke ait mana metni yok)"
+  },
+  "kaliplar": {},
+  "kelimeler": []
+}

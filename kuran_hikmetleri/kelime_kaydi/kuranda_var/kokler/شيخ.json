@@ -1053,7 +1053,7 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "person.n.01",
+    "ince": "whole.n.02",
     "orta": "noun.person",
     "ust": "insan ve toplum",
     "dayanak_synset": "head.n.04",
@@ -1068,6 +1068,29 @@
     "fasil_ozeti": "° معنى الفصل المعجمي (شخ) : هو الجفاف مع التجسم كما يتمثل في لازم خروج المائع من البدن بقوة ودفع -في (شخخ)، وفي جفاف بدن الشيخ وذبول نضرته -في (شيخ)، وفي تجسم الشيء، مع ارتفاعه -في (شخص).",
     "tam_metin": "{ثُمَّ لِتَبْلُغُوا أَشُدَّكُمْ ثُمَّ لِتَكُونُوا شُيُوخًا} [غافر: 67]\n\"الشيخ: الذي استبانت فيه السِنُّ، وظهر عليه الشَيْب. . من الخمسين إلى الثمانين \".\n° المعنى المحوري\nفي ضوء ما في تركيب (شخخ) يمكن أن يكون معنى هذا التركيب: جفاف البدن وذبول نضارته؛ لذهاب طَراءة الشباب وغَضاضته من أثنائه: كحال الشيخ {ثُمَّ لِتَكُونُوا شُيُوخًا} وليس في القرآن من هذا التركيب إلا \n(شيخ)\n و (شيوخ). ومنه الشاخة: المعتدل (كأن المقصود: الضامر، والضمور درجة من جفاف البدن).\nوأمّا قولهم: \"شيّخ عليه - ض: عابه وفضحه \"، فمن الأصل، كأن المقصود: ضعّفه، أي رماه بالضعف، أو أظهر عَواره، فالعَوَر والعَوَار فراغ."
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "شاخ شيخوخة وشيخ تشييخاً، وهو شيخ، وهي شيخة: عجوز، وهم شيوخ وأشياخ ومشيخة ومشايخ ومشيوخاء وشيخان، وفي حديث رقيقة \" شيخان قريش \". وأنشد المفضل:\nفلا تصرمي الشيخان يا حمز إنهم ... هم يعصمون الناس في اليوم ذي الوغى\nوقال:\nبني لي به الشيخان من آل دارم ... بناء يرى عند المجرة عالياً",
+    "mecaz": "ورث من شيخه الكرم ومن أشياخه: من آبائه.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Cebel mihverî mana",
+    "prototip": "في ضوء ما في تركيب (شخخ) يمكن أن يكون معنى هذا التركيب: جفاف البدن وذبول نضارته؛ لذهاب طَراءة الشباب وغَضاضته من أثنائه: كحال الشيخ {ثُمَّ لِتَكُونُوا شُيُوخًا} وليس في القرآن من هذا التركيب إلا (شيخ) و (شيوخ). ومنه الشاخة: المعتدل (كأن المقصود: الضامر، والضمو",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "ورث من شيخه الكرم ومن أشياخه: من آبائه.",
+        "prototipe_benzerlik": 0.559,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.559,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["age.v.03", "living_thing.n.01", "sow.v.01", "time_period.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "خلق الإنسان",
@@ -1078,22 +1101,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
+      "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 426
+      "boy": 466
     },
     "orta": {
-      "kume": 1,
-      "merkez_kok": "جنح",
-      "merkez_mana": "Cünûh: meyletmek, eğilmek; cenâh: kanat",
-      "boy": 165
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 3,
+      "kume": 11,
       "merkez_kok": "نتق",
       "merkez_mana": "Natk: sallamak, kaldırmak",
-      "boy": 27
+      "boy": 30
     }
   },
   "kaliplar": {

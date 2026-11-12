@@ -1029,6 +1029,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "واريته فتوارى. ووري الزند يرى ووريَ يرى، نحو: وليَ يلي. وأوريته. وهل عندك ريّةٌ؟: شيء تورَى به النار من بعرة أو قطنة. ووراه الداء. وبعير موريٌّ. قال:\nوراهنّ ربّي مثل ما قد ورينني ... وأحمى على أكبادهنّ المكاويا\nقال النضر: الوريُ شرقق يقع في قصب الرئتين فيقتل. وكان رسول الله صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ إذا أراد سفراً ورّى بغيره. وما أدري أيّ الورى هو؟. ويقال: \"\nوراءك أوسع لك \". وقيل للمخبّل: قاوم الزبرقان فقال: إنه أندى مني صوتاً وأكثر مني ريقاً وإني لا أقوم له في المواجهة ولكن دعوني أهاديه الشعر من وراء وراء.",
+    "mecaz": "\" ورت بك زنادي \" ووريت. قال:\nورت بعمرو بن عليّ ناري ... ساعة تبدو أسؤق العذارى\nوفلان كثير الرماد، وارى الزناد. واستوريت فلاناً رأياً: سألته أن يورِيه لي، كما يقال: استضيء برأيه. وسمعتهم يقولون: أورنيه. بمعنى أرنيه وهو من الورى أي أبرزه لي. وورى النّقيُ ورياً: خرج منه ودك كثير. وسنامٌ وارٍ. قال الأخطل:\nوالمطعمين إذا هبت شآمية ... تزجي الجهام سديف المربع الواري\nالناقة التي لقحت أوّل الربيع، والواري وصفٌ للسّديف منصوبٌ أو مجرور على الجوار أو وصفٌ للمربع على معنى النسب أي ذات ورى.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "واريته فتوارى. ووري الزند يرى ووريَ يرى، نحو: وليَ يلي. وأوريته. وهل عندك ريّةٌ؟: شيء تورَى به النار من بعرة أو قطنة. ووراه الداء. وبعير موريٌّ. قال: وراهنّ ربّي مثل ما قد ورينني ... وأحمى على أكبادهنّ المكاويا قال النضر: الوريُ شرقق يقع في قصب الرئتين فيقتل. ",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "\" ورت بك زنادي \" ووريت. قال:",
+        "prototipe_benzerlik": 0.693,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وفلان كثير الرماد، وارى الزناد. واستوريت فلاناً رأياً: سألته أن يورِيه لي، كما يقال: استضيء برأيه. وسمعتهم يقولون: أورنيه. بمعنى أرنيه وهو من الورى أي أبرزه لي. وورى النّقيُ ورياً: خرج منه ودك كثير. وسنامٌ وارٍ. قال الأخطل:",
+        "prototipe_benzerlik": 0.645,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "الناقة التي لقحت أوّل الربيع، والواري وصفٌ للسّديف منصوبٌ أو مجرور على الجوار أو وصفٌ للمربع على معنى النسب أي ذات ورى.",
+        "prototipe_benzerlik": 0.196,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.511,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["disappear.v.01", "disguise.v.01", "hide.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "المكنيات والمبنيات والمثنيات",
@@ -1039,19 +1072,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "kume": 5,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 375
     },
     "orta": {
-      "kume": 36,
-      "merkez_kok": "نجس",
-      "merkez_mana": "Nicis: pislik, necis",
-      "boy": 123
+      "kume": 12,
+      "merkez_kok": "ردم",
+      "merkez_mana": "Redm: kapatmak, doldurmak; sedd: set",
+      "boy": 61
     },
     "ince": {
-      "kume": 227,
+      "kume": 69,
       "merkez_kok": "ستر",
       "merkez_mana": "Setr: örtmek, saklamak; setr: perde",
       "boy": 23

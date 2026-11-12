@@ -1699,39 +1699,67 @@
     "ince": "substance.n.07",
     "orta": "noun.food",
     "ust": "canlı ve beden",
-    "dayanak_synset": "broth.n.02",
-    "dayanak_tanim": "a thin soup of meat or fish or vegetable stock",
+    "dayanak_synset": "broth.n.01",
+    "dayanak_tanim": "liquid in which meat and vegetables are simmered; used as a basis for e.g. soups or sauces",
     "synset_sayisi": 8
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "مرق السهم من الرمية مروقاً، وأمرقته أنا. وأمرقت القدر ومرّقتها: أكثرت مرقها، وأطعمنا فلان مرقة مرقين وهي ماء القدر يعاد عليه اللحم مرتين فصاعداً، ولحم ممرق: دسم جداً يكثر المرق وهو الماء الذي يمرق من اللحم. ومرقت الإهاب: نتفت صوفه فانمرق، ومرقت شعره فانمرق وتمرق. وأعطني مراقة إهابك. وادفن مراقة شعرك ومراطته ومشاقته وهي ما يخرج على المشط. و\" أنتن من المرق \" وهو العطين من الأهب لينمرق شعره. قال يصف نساء:\nيتضوّعن لو تضمخن بالمس ... ك صناناً كأنه ريح مرق\nوثوب متموق: مصبوغ بالمريق وهو العصفر. قال:\nيا ليتني لك مئزر متمرّق ... بالزعفران لبسته أياماً\nومرقت السفلة والإماء تمريقاً إذا غنّت، وفلان ممرّق، وغناء ممرّق كأنه المخرج من جملة ألحان المغنين. قال:\nمن نوحها طوراً ومن تمريقها ... بقبقة الصالف من تطليقها\nوقال لقيط بن زرارة:\nذهبت معدّ بالعلاء ونهشل ... من بين تالي شعره وممرّق\nوقال: الممزق في الممرق:\nممن مبلغ النعمان أن ابن أخته ... على العين يعتاد الصفا ويمرّق",
+    "mecaz": "هو مارق من المراق والمارقة، ومرق من الدين مروقاً. وامترقت الحمامة من الكوّة. وامترق من البيت: أسرع الخروج. وأمرق: أبدى عورته. ومرقت الصبغ من العصفر: أخرجته. ويقال: \" ما أنت بأنجاهم مرقة \" ومرقاً، \" وما أنت بأحرزهم مرقاً \" أي ما أنت بأسلمهم نفساً، وأصله أن رجلاً أفلت من بين قوم أخذوا فقيل له ذلك، وهو من باب قوله:\nيا جفنةً كإزاء الحوض قد كفئت",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "مرق السهم من الرمية مروقاً، وأمرقته أنا. وأمرقت القدر ومرّقتها: أكثرت مرقها، وأطعمنا فلان مرقة مرقين وهي ماء القدر يعاد عليه اللحم مرتين فصاعداً، ولحم ممرق: دسم جداً يكثر المرق وهو الماء الذي يمرق من اللحم. ومرقت الإهاب: نتفت صوفه فانمرق، ومرقت شعره فانمرق وتم",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "هو مارق من المراق والمارقة، ومرق من الدين مروقاً. وامترقت الحمامة من الكوّة. وامترق من البيت: أسرع الخروج. وأمرق: أبدى عورته. ومرقت الصبغ من العصفر: أخرجته. ويقال: \" ما أنت بأنجاهم مرقة \" ومرقاً، \" وما أنت بأحرزهم مرقاً \" أي ما أنت بأسلمهم نفساً، وأصله أن رجلاً أفلت من بين قوم أخذوا فقيل له ذلك، وهو",
+        "prototipe_benzerlik": 0.914,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "يا جفنةً كإزاء الحوض قد كفئت",
+        "prototipe_benzerlik": 0.443,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.679,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["apostatize.v.01", "food.n.01", "living_thing.n.01", "roll.v.07", "roll.v.12", "wheel.v.03"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "اللباس",
     "bab": "المخطط من الثياب",
-    "kok_gecis": 48.9,
+    "kok_gecis": 47.7,
     "kitapta_gecis": 3.2,
-    "zenginlesme": 4.4
+    "zenginlesme": 4.51
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
-      "merkez_kok": "قبب",
-      "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "kume": 5,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 375
     },
     "orta": {
-      "kume": 45,
-      "merkez_kok": "متن",
-      "merkez_mana": "Metn: sağlam yer, metin; metîn: sağlam",
-      "boy": 268
+      "kume": 14,
+      "merkez_kok": "غدر",
+      "merkez_mana": "Gadr: ihanet, hile",
+      "boy": 153
     },
     "ince": {
-      "kume": 297,
-      "merkez_kok": "هضم",
-      "merkez_mana": "Hadm: sindirmek, yutmak",
-      "boy": 22
+      "kume": 78,
+      "merkez_kok": "خبط",
+      "merkez_mana": "Habt: karanlıkta yürümek, şaşırmak",
+      "boy": 40
     }
   },
   "kaliplar": {

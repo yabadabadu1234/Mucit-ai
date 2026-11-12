@@ -1145,32 +1145,74 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "مشيت ومشّيت وتمشّيت، وماشيته، وتماشوا، وهي حسنة المشية والمشي، ورجل مشّاء إلى المساجد \" بشر المشّائين \". وقال النابغة:\nسهل الخليقة مشاء بأقدحه ... إلى أولات الذرى حمّال أثقال\nوجاء الحاج حتى المشاة.",
+    "mecaz": "مشى بطنه، وأمشاه الدّواء، واستمشيت بالدواء، وشربت مشواً، ومشيت مشياً كثيراً من الدواء، ومنه: مشت المرأة: كثرت أولادها مشاءً. وناقة ماشية: ولادة، ومنه: الماشية والمواشي على التفاؤل. وإن فلاناً لذو مشاءٍ. ومال ذو مشاء: ذو نماء. ومشى على فلانٍ ماله: تناتج. وأمشى القوم: كثرت مواشيهم. وتقول: أمشينا وما أمشينا. وهو يمشي بينهم بالنمائم مشياً. ومشّى الأمر تمشيةً. وتمشّت فيه الحميا. قال زهير:\nيجرّون البرود وقد تمشّت ... حميا الكأس فيهم والغثاء",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "مشيت ومشّيت وتمشّيت، وماشيته، وتماشوا، وهي حسنة المشية والمشي، ورجل مشّاء إلى المساجد \" بشر المشّائين \". وقال النابغة: سهل الخليقة مشاء بأقدحه ... إلى أولات الذرى حمّال أثقال وجاء الحاج حتى المشاة.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "مشى بطنه، وأمشاه الدّواء، واستمشيت بالدواء، وشربت مشواً، ومشيت مشياً كثيراً من الدواء، ومنه: مشت المرأة: كثرت أولادها مشاءً. وناقة ماشية: ولادة، ومنه: الماشية والمواشي على التفاؤل. وإن فلاناً لذو مشاءٍ. ومال ذو مشاء: ذو نماء. ومشى على فلانٍ ماله: تناتج. وأمشى القوم: كثرت مواشيهم. وتقول: أمشينا وما أ",
+        "prototipe_benzerlik": 0.832,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.832,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "act.n.02",
+    "artifact.n.01",
+    "equal.v.03",
+    "foot.v.02",
+    "go.v.28",
+    "hike.v.02",
+    "living_thing.n.01",
+    "march.v.01",
+    "match.v.01",
+    "match.v.05",
+    "meet.v.06",
+    "mixture.n.01",
+    "organization.n.01",
+    "pit.v.01",
+    "step.v.01",
+    "stroll.v.01",
+    "walk.v.01",
+    "walk.v.10"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الغرائز",
     "bab": "السر",
-    "kok_gecis": 277.6,
-    "kitapta_gecis": 85.8,
-    "zenginlesme": 6.44
+    "kok_gecis": 261.9,
+    "kitapta_gecis": 77.2,
+    "zenginlesme": 6.13
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "kume": 5,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 375
     },
     "orta": {
-      "kume": 38,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 203
+      "kume": 14,
+      "merkez_kok": "غدر",
+      "merkez_mana": "Gadr: ihanet, hile",
+      "boy": 153
     },
     "ince": {
-      "kume": 246,
-      "merkez_kok": "رحل",
-      "merkez_mana": "Rahl: göç, yolculuk; rahîl: göç",
-      "boy": 18
+      "kume": 77,
+      "merkez_kok": "حيد",
+      "merkez_mana": "Hayd: sapmak, uzaklaşmak; hayd: uzak",
+      "boy": 39
     }
   },
   "kaliplar": {

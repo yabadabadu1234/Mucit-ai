@@ -697,6 +697,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "عنز تيساء إذا كان قرناها طويلين كقرني التيس.",
+    "mecaz": "تتايس الماء: تناطحت أمواجه. وتايس قرنه: مارسه. وبينهم متايسة وتياس. وتيّس البعير وخيسه: ذلَّله. \" وتيسي جعار \" أي كوني كالتيس في حمقه يا ضبع، مثل في الأحمق. \" وعنز استتيست \" مثل في ذليل عز. ويقال للنكاح: هو من متيوساء بني حمان.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "عنز تيساء إذا كان قرناها طويلين كقرني التيس.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "تتايس الماء: تناطحت أمواجه. وتايس قرنه: مارسه. وبينهم متايسة وتياس. وتيّس البعير وخيسه: ذلَّله. \" وتيسي جعار \" أي كوني كالتيس في حمقه يا ضبع، مثل في الأحمق. \" وعنز استتيست \" مثل في ذليل عز. ويقال للنكاح: هو من متيوساء بني حمان.",
+        "prototipe_benzerlik": 0.093,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.093,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["living_thing.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الإبل",
@@ -707,19 +730,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 2,
+      "kume": 1,
       "merkez_kok": "قره",
       "merkez_mana": "",
       "boy": 759
     },
     "orta": {
-      "kume": 4,
+      "kume": 2,
       "merkez_kok": "فلص",
       "merkez_mana": "",
       "boy": 494
     },
     "ince": {
-      "kume": 22,
+      "kume": 4,
       "merkez_kok": "شعف",
       "merkez_mana": "",
       "boy": 183

@@ -12,6 +12,8 @@ import muhassas as MH
 import cebel as CB
 import jeffery as JF
 import etymarab as EA
+import asas as AS
+import prototip as PT
 import turkce as T
 import mekayis as MK
 import osmanlica_lugat as OS
@@ -126,7 +128,7 @@ def uret():
     cb = CB.yukle()
     kk = kaikki_yukle(sys.argv[1] if len(sys.argv) > 1 else '')
     kk_kokleri = {kaikki_kok(e) for e in kk if e.get('k')}
-    kokler_ad = sorted(kuran_kokleri | set(mk) | kk_kokleri | set(EA.yukle()) | set(CB.yukle()))
+    kokler_ad = sorted(kuran_kokleri | set(mk) | kk_kokleri | set(EA.yukle()) | set(CB.yukle()) | set(AS.yukle()))
     kk_atama = [kaikki_kok(e) for e in kk]
     kk_yol = ['kök' if a else '' for a in kk_atama]
     lemma_kok = {}
@@ -413,6 +415,11 @@ def yaz():
     aw.update(AW.ingilizce_sinifla(d['kokler'], aw, 3))
     mh = MH.sinifla(d['kokler'])
     cb_ = CB.yukle()
+    as_ = AS.yukle()
+    pt = PT.sinifla(d['kokler'], cb_, as_)
+    kv = AW.kavramlar(d['kokler'], 4)
+    from nltk.corpus import wordnet as WN_
+    col = [c for c in AW.kolekzifikasyon(kv, 4, 150) if WN_.synset(c[0]).lexname() != WN_.synset(c[1]).lexname()][:3000]
     cbag = {}
     for k_, x_ in cb_.items():
         if k_ in d['kokler']:
@@ -429,6 +436,9 @@ def yaz():
         dugum['tasnif'] = tasnif(k)
         dugum['mana_tasnif'] = aw.get(k) or {'durum': 'Arabic WordNet v2 kaydı yok'}
         dugum['ses_mana_tasnif'] = ({'kaynak': 'Cebel, el-Mu\'cemü\'l-İştikâkıyyü\'l-Mü\'asssal', 'fasil': cb_[k]['fasil'], 'mihveri': cb_[k]['mihveri'], 'sesler': cb_[k]['sesler'], 'fasil_ozeti': cb_[k]['fasil_ozeti'], 'tam_metin': cb_[k]['tam_metin']} if k in cb_ else {'durum': 'Cebel mu\'cemlerinde kök yok'})
+        dugum['hakikat_mecaz_tasnif'] = ({'kaynak': AS.KAYNAK, 'hakikat': as_[k]['hakikat'], 'mecaz': as_[k]['mecaz'], 'kinaye': as_[k]['kinaye'], 'mecaz_var': as_[k]['mecaz_var']} if k in as_ else {'durum': "Esâsü'l-Belâğa'da madde yok"})
+        dugum['prototip_yayilim_tasnif'] = pt.get(k) or {'durum': 'prototip veya mecaz kolu yok'}
+        dugum['kolekzifikasyon_kavramlari'] = kv.get(k, [])
         dugum['muhassas_tasnif'] = mh.get(k) or {'durum': 'el-Muhassas metninde yeterince geçmiyor'}
         dugum['mana_tasnif_gomme'] = mt.get(k) or {'durum': 'tasnif edilemedi (köke ait mana metni yok)'}
         used = sorted({x[0] for v in r.get('mustaklar', {}).values() for x in v})
@@ -454,7 +464,7 @@ def yaz():
     for ad in ('kuranda_var', 'kuranda_yok'):
         with open(os.path.join(taban, ad, 'FIHRIST.json'), 'w', encoding='utf-8') as f:
             f.write(okunur({'sema': SEMA, 'sayilar': d['sayilar'], 'alanlar_kokler': ['dosya', 'kok', 'kelime_sayisi', 'mustak_satiri'], 'kokler': fih[ad],
-                            'tasnif_agaci': tasnif_ozeti(agac), 'mana_tasnif_agaci': awn_agaci(aw), 'mana_tasnif_gomme_agaci': mana_agaci(mt), 'muhassas_agaci': muhassas_agaci(mh), 'ses_mana_agaci': {'kaynak': 'Cebel (fasıl = ilk iki harf; her fasılın ortak mihverî manası ve ses izahı kök dosyalarında)', 'fasil_sayisi': len(cbag), 'kok': sum(len(v) for v in cbag.values()), 'fasil': {f: len(v) for f, v in sorted(cbag.items())}}, 'kelime_kok': kelime_kok if ad == 'kuranda_var' else {}}))
+                            'tasnif_agaci': tasnif_ozeti(agac), 'mana_tasnif_agaci': awn_agaci(aw), 'mana_tasnif_gomme_agaci': mana_agaci(mt), 'muhassas_agaci': muhassas_agaci(mh), 'kolekzifikasyon_agi': {'yontem': 'bir kökün altında birlikte görülen WordNet kavram çiftleri (4. ata basamağı), dizelge adları farklı kavramlar, en az 4 kökte, ilk 3000 çift (ilk geçiş)', 'cift_sayisi': len(col), 'ciftler': [{'a': a_, 'b': b_, 'kok_sayisi': n_, 'benzerlik': sc_, 'ornek_kokler': ks_} for a_, b_, n_, sc_, ks_ in col]}, 'hakikat_mecaz_ozeti': {'kok': len(as_), 'mecazli_kok': sum(1 for v in as_.values() if v['mecaz_var'])}, 'prototip_yayilim_ozeti': {'kok': len(pt), 'halka_dagilimi': dict(collections.Counter(y['halka'] for v in pt.values() for y in v['yayilim']))}, 'ses_mana_agaci': {'kaynak': 'Cebel (fasıl = ilk iki harf; her fasılın ortak mihverî manası ve ses izahı kök dosyalarında)', 'fasil_sayisi': len(cbag), 'kok': sum(len(v) for v in cbag.values()), 'fasil': {f: len(v) for f, v in sorted(cbag.items())}}, 'kelime_kok': kelime_kok if ad == 'kuranda_var' else {}}))
     print(d['sayilar'], {k: len(v) for k, v in fih.items()}, {k: v // 1024 // 1024 for k, v in toplam.items()}, 'MB')
 
 

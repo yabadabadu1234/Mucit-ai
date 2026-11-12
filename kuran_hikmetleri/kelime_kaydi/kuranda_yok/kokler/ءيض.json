@@ -726,22 +726,6 @@
         "yol": "asıl madde"
       },
       {
-        "w": "أيض",
-        "u": "أيض",
-        "p": "verb",
-        "h": "ar-verb",
-        "e": "أَيَّضَ • (ʔayyaḍa) II (non-past يُؤَيِّضُ (yuʔayyiḍu), verbal noun تَأْيِيض (taʔyīḍ))",
-        "t": "From آضَ (ʔāḍa, “to return, to revert”).",
-        "g": ["to metabolize"],
-        "r": ["ʔayyaḍa"],
-        "el": [
-          ["آضَ", "آض#Arabic"],
-          ["return", "return"],
-          ["revert", "revert"]
-        ],
-        "yol": "müştak"
-      },
-      {
         "w": "آض",
         "u": "آض",
         "p": "verb",
@@ -821,28 +805,6 @@
         "t": "See the etymology of the corresponding lemma form.",
         "tag": ["form-i", "no-gloss"],
         "r": ["taʔīḍī", "ʔāḍa"],
-        "yol": "müştak"
-      },
-      {
-        "w": "أئض",
-        "u": "أئض",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أَئِضْ • (ʔaʔiḍ) (form I) /ʔa.ʔidˤ/\n# first-person singular non-past active jussive of آضَ (ʔāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔaʔiḍ", "ʔāḍa"],
-        "yol": "müştak"
-      },
-      {
-        "w": "إض",
-        "u": "إض",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "إِضْ • (ʔiḍ) (form I) /ʔidˤ/\n# second-person masculine singular imperative of آضَ (ʔāḍa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔiḍ", "ʔāḍa"],
         "yol": "müştak"
       },
       {
@@ -1144,38 +1106,6 @@
         "k": "أيض",
         "yol": "kök"
       }
-    ],
-    "arabic_ontology": [
-      {
-        "id": "46009",
-        "arapca": [
-          "أَضْحَى",
-          "أَضْحَى في",
-          "تَبَدَّلَ",
-          "اِرْتَدَّ",
-          "اِرْتَدَّ عن",
-          "اِسْتَحَالَ",
-          "آضَ",
-          "آضَ إلى",
-          "غَدا2",
-          "غَدا إلى",
-          "غَدا على",
-          "بَاتَ1",
-          "صَارَ1",
-          "صَارَ1 إلى",
-          "تَغَيَّرَ",
-          "تَحَوَّلَ",
-          "تَحَوَّلَ إلى",
-          "تَحَوَّلَ عن",
-          "أَصْبَحَ"
-        ],
-        "ingilizce": [],
-        "tanim": "انتقل من حال إلى أخرى",
-        "misal": "بعد مضي عشر سنوات على هجر المنزل _ كمقبرة لذكريات أصحابه",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      }
     ]
   },
   "kuran_gecisleri": 0,
@@ -1196,42 +1126,48 @@
   },
   "mana_tasnif": {
     "yontem": "Vikisözlük/Arabic Ontology İngilizce karşılığı → Princeton WordNet ilk anlam (makine eşlemesi, AWN kaydı yok)",
-    "ince": "metabolize.v.01",
-    "orta": "verb.consumption",
-    "ust": "canlı ve beden",
-    "dayanak_synset": "metabolize.v.01",
-    "dayanak_tanim": "produce by metabolism",
-    "dayanak_karsilik": "metabolize"
+    "ince": "return.v.01",
+    "orta": "verb.motion",
+    "ust": "fiil ve hadise",
+    "dayanak_synset": "return.v.01",
+    "dayanak_tanim": "go or come back to place, condition, or activity where one has been before",
+    "dayanak_karsilik": "return"
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "آض سواد شعره بياضاً، وفعل ذلك أيضاً.",
+    "mecaz": "",
+    "kinaye": "",
+    "mecaz_var": false
+  },
+  "prototip_yayilim_tasnif": {
+    "durum": "prototip veya mecaz kolu yok"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
-    "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
-    "kitap": "النخل",
-    "bab": "أشجار الجبال",
-    "kok_gecis": 4.0,
-    "kitapta_gecis": 3.0,
-    "zenginlesme": 4.25
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "kume": 2,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 466
     },
     "orta": {
-      "kume": 38,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 203
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 247,
-      "merkez_kok": "قلع",
-      "merkez_mana": "Kal': sökmek, kökünden koparmak",
-      "boy": 36
+      "kume": 15,
+      "merkez_kok": "دلق",
+      "merkez_mana": "to pour out, spill (e.g. a liquid)",
+      "boy": 58
     }
   },
   "kaliplar": {

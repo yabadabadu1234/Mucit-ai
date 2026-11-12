@@ -1660,16 +1660,66 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "freeze.v.03",
-    "orta": "verb.body",
-    "ust": "canlı ve beden",
-    "dayanak_synset": "freeze.v.03",
-    "dayanak_tanim": "be cold",
+    "ince": "solid.n.01",
+    "orta": "noun.substance",
+    "ust": "tabiat",
+    "dayanak_synset": "ice.n.01",
+    "dayanak_tanim": "water frozen in the solid state",
     "synset_sayisi": 6
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "وقعت الثلوج في بلادهم، وثلجتنا السماء تثلُج وتثلِج، وثُلِجنا العام ثلجاً كثيراً، وأثلج عامنا، وأثلج الناس بمكان كذا، وثلجت الأرض فهي مثلوجة.",
+    "mecaz": "ثلج فؤاده، وهو مثلوج الفؤاد. قال كعب بن لؤي:\nلئن كنت مثلوج الفؤاد لقد بدا ... لجميع لؤي منك ذلة ذي غمض\nوهو الأحمق البليد، وهو كما يقال: ماء القلب، قال:\nإنك يا جهضم ماء القلب\nلأن الذكي يوصف بالأشتعال والتوقد، ولفظ الذكاء شاهد لذلك، وثلجت فؤاده بالخير فثلج. وثلجت نفسه بكذا: بردت وسرت، تثلج ثلجاً، وثلجت تثلج وتثلج ثلوجاً، وأثلجت تثلج. والحمد لله على بلج الحق وثلج اليقين. وأثلجت صدري بخبرك. قال:\nفقرّت بهم عيني وأفنيت جمعهم ... وأثلجت لما أن قتلتهم صدري\nوحفر حتى أثلج إذا باشر برد الثرى وقرب من الماء. وأثلجت الركية: بلغ حفرها الندى، وأنبطت إذا بلغ حفرها الماء. وأثلجت عنه الحمّى وثلجت: أقلعت. وأثلج ماء البئر: انقطع. ونصل ثلاجي، وحديدة ثلاجية: شديدة البياض.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "وقعت الثلوج في بلادهم، وثلجتنا السماء تثلُج وتثلِج، وثُلِجنا العام ثلجاً كثيراً، وأثلج عامنا، وأثلج الناس بمكان كذا، وثلجت الأرض فهي مثلوجة.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "ثلج فؤاده، وهو مثلوج الفؤاد. قال كعب بن لؤي:",
+        "prototipe_benzerlik": 0.479,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وهو الأحمق البليد، وهو كما يقال: ماء القلب، قال:",
+        "prototipe_benzerlik": 0.148,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "إنك يا جهضم ماء القلب",
+        "prototipe_benzerlik": 0.181,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "لأن الذكي يوصف بالأشتعال والتوقد، ولفظ الذكاء شاهد لذلك، وثلجت فؤاده بالخير فثلج. وثلجت نفسه بكذا: بردت وسرت، تثلج ثلجاً، وثلجت تثلج وتثلج ثلوجاً، وأثلجت تثلج. والحمد لله على بلج الحق وثلج اليقين. وأثلجت صدري بخبرك. قال:",
+        "prototipe_benzerlik": 0.32,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وحفر حتى أثلج إذا باشر برد الثرى وقرب من الماء. وأثلجت الركية: بلغ حفرها الندى، وأنبطت إذا بلغ حفرها الماء. وأثلجت عنه الحمّى وثلجت: أقلعت. وأثلج ماء البئر: انقطع. ونصل ثلاجي، وحديدة ثلاجية: شديدة البياض.",
+        "prototipe_benzerlik": 0.591,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.344,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "crystal.n.01",
+    "freeze.v.03",
+    "natural_phenomenon.n.01",
+    "phase_change.n.01",
+    "region.n.01",
+    "victimize.v.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",
@@ -1680,22 +1730,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 7,
-      "merkez_kok": "غدق",
-      "merkez_mana": "Gadak: bol, bereketli",
-      "boy": 331
+      "kume": 9,
+      "merkez_kok": "مصص",
+      "merkez_mana": "to suck, to sip up",
+      "boy": 682
     },
     "orta": {
-      "kume": 33,
-      "merkez_kok": "وقد",
-      "merkez_mana": "Vakd: ateş yakmak; vakîd: ateş",
-      "boy": 44
+      "kume": 38,
+      "merkez_kok": "خبز",
+      "merkez_mana": "Habz: ekmek yapmak, ekmek",
+      "boy": 50
     },
     "ince": {
-      "kume": 216,
-      "merkez_kok": "سخن",
-      "merkez_mana": "masculine plural of سَاخِن (sāḵin)",
-      "boy": 10
+      "kume": 252,
+      "merkez_kok": "طبخ",
+      "merkez_mana": "kitchen",
+      "boy": 8
     }
   },
   "kaliplar": {

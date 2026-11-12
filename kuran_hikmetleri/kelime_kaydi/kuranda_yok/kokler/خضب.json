@@ -1619,6 +1619,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "خضب شعره ويده بالخضاب، وكف خضيب، وبنان مخضب. وطلعت الكف الخضيب وهي نجم. واختضب الرجل وتخضّب. وامرأة خضبة: كثيرة الاختضاب، وقد خضبت تخضب. وأعطني من مخاضب حنائك وهي خرق الخضاب. وغسلت ثيابها في المخضب وهي الإجانة.",
+    "mecaz": "ظليم خاضب: أكل الربيع فاحمرت ساقاه وقوادمه: وخضبت العضاه: اخضرت وتفطرت. وخضبت الأرض وأخضبت وتخضبت: ظهر نبتها. وتقول: رأيت الأرض مخضبة، ويوشك أن تكون مخصبه.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "خضب شعره ويده بالخضاب، وكف خضيب، وبنان مخضب. وطلعت الكف الخضيب وهي نجم. واختضب الرجل وتخضّب. وامرأة خضبة: كثيرة الاختضاب، وقد خضبت تخضب. وأعطني من مخاضب حنائك وهي خرق الخضاب. وغسلت ثيابها في المخضب وهي الإجانة.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "ظليم خاضب: أكل الربيع فاحمرت ساقاه وقوادمه: وخضبت العضاه: اخضرت وتفطرت. وخضبت الأرض وأخضبت وتخضبت: ظهر نبتها. وتقول: رأيت الأرض مخضبة، ويوشك أن تكون مخصبه.",
+        "prototipe_benzerlik": 0.211,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.211,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["color.v.04", "paint.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الإبل",
@@ -1629,22 +1652,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
+      "kume": 8,
       "merkez_kok": "قبب",
       "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "boy": 604
     },
     "orta": {
-      "kume": 43,
-      "merkez_kok": "خرز",
-      "merkez_mana": "awl",
-      "boy": 104
+      "kume": 32,
+      "merkez_kok": "دثر",
+      "merkez_mana": "Tedsîr: örtmek, bürümek; desr: örtü",
+      "boy": 148
     },
     "ince": {
-      "kume": 279,
-      "merkez_kok": "لزب",
-      "merkez_mana": "Lezb: yapışkan, bağlı",
-      "boy": 27
+      "kume": 210,
+      "merkez_kok": "قلم",
+      "merkez_mana": "Kalem: kalem; kalm: kesmek",
+      "boy": 10
     }
   },
   "kaliplar": {

@@ -1768,6 +1768,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "ضمد رأسه بمنديل أو عصابة وهي الضمادة. وضمد الجرح وموضع الريح من جسده بضماد: بدواء يسكنه. ويقال: الضماد مقراة للمدة. واضمد عليك ثيابك وعمامتك: شدها عليك، وأجد ضمد هذا العدل. وضمد عليه إذا اغتاظ. قال النابغة:\nومن عصاك فعاقبه معاقبة ... تنهى الظلوم ولا تقعد على ضمد",
+    "mecaz": "ضمدت فلانة: جمعت بين زوجها وخدنها أو اتخذت خدنين. قال الهذليّ:\nأردت لكيما تضمديني وصاحبي ... ألا لا أحبّي صاحبي ودعيني\nومن شأنها الضماد. وضمد رأسه بالسيف، مثل: عممه.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "ضمد رأسه بمنديل أو عصابة وهي الضمادة. وضمد الجرح وموضع الريح من جسده بضماد: بدواء يسكنه. ويقال: الضماد مقراة للمدة. واضمد عليك ثيابك وعمامتك: شدها عليك، وأجد ضمد هذا العدل. وضمد عليه إذا اغتاظ. قال النابغة: ومن عصاك فعاقبه معاقبة ... تنهى الظلوم ولا تقعد على ض",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "ضمدت فلانة: جمعت بين زوجها وخدنها أو اتخذت خدنين. قال الهذليّ:",
+        "prototipe_benzerlik": 0.803,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "ومن شأنها الضماد. وضمد رأسه بالسيف، مثل: عممه.",
+        "prototipe_benzerlik": 0.04,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.421,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["bind.v.04", "dress.v.01", "dress.v.02"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النساء",
@@ -1778,19 +1806,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
+      "kume": 8,
       "merkez_kok": "قبب",
       "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "boy": 604
     },
     "orta": {
-      "kume": 43,
-      "merkez_kok": "خرز",
-      "merkez_mana": "awl",
-      "boy": 104
+      "kume": 32,
+      "merkez_kok": "دثر",
+      "merkez_mana": "Tedsîr: örtmek, bürümek; desr: örtü",
+      "boy": 148
     },
     "ince": {
-      "kume": 278,
+      "kume": 208,
       "merkez_kok": "زنر",
       "merkez_mana": "to belt, to gird",
       "boy": 16

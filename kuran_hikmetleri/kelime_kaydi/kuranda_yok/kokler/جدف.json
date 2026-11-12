@@ -1517,16 +1517,27 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "boat.v.01",
-    "orta": "verb.motion",
-    "ust": "fiil ve hadise",
-    "dayanak_synset": "row.v.01",
-    "dayanak_tanim": "propel with oars",
+    "ince": "curse.v.03",
+    "orta": "verb.communication",
+    "ust": "söz ve haber",
+    "dayanak_synset": "curse.v.03",
+    "dayanak_tanim": "wish harm upon; invoke evil upon",
     "synset_sayisi": 6
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "جدف الملاح السفينة إذا دفعها بالمجداف. قال أعشى همدان:\nلمن الظعائن سيرهن تزحف ... عوم السفين إذا تقاعس تجدف\nوخفق الطائر بمدافيه أي بجناحيه، وجدف بهما: ردهما إلى خلفه في طيرانه كما يفعل الملاح بمجدافيه.",
+    "mecaz": "",
+    "kinaye": "",
+    "mecaz_var": false
+  },
+  "prototip_yayilim_tasnif": {
+    "durum": "prototip veya mecaz kolu yok"
+  },
+  "kolekzifikasyon_kavramlari": ["artifact.n.01", "condition.n.01", "curse.v.01", "curse.v.03", "row.v.01", "utterance.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطير",
@@ -1537,22 +1548,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
       "kume": 20,
-      "merkez_kok": "وثن",
-      "merkez_mana": "Vesen: put, tapılan şey",
-      "boy": 116
+      "merkez_kok": "لحد",
+      "merkez_mana": "Lahd: mezar çukuru; lehd: meyil, eğilme",
+      "boy": 187
     },
     "ince": {
-      "kume": 111,
+      "kume": 117,
       "merkez_kok": "وثن",
       "merkez_mana": "Vesen: put, tapılan şey",
-      "boy": 25
+      "boy": 32
     }
   },
   "kaliplar": {

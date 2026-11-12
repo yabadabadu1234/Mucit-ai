@@ -1108,6 +1108,39 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "تلك المكارم لا قعبان من لبن\nوفي مثل \" أتاك ريّان بقعب من لبن \".",
+    "mecaz": "حافرٌ مقعّب: مدوّر كالقعب كما قال امرؤ القيس:\nلها حافر مثل قعب الولي ... د ركّب فيه وظيف عجر\nوحجر مقعّب: فيه نقرة كأنه قعب، وسرّةٌ مقعّبة. وقال الأغلب:\nجارية من قيس بن ثعلبة ... قبّاء ذات سرّة مقعّبه\nوإياك والتقعيب في الكلام. فلان مقعّبٌ: للمتشدّق الذي يتكلم بأقصى حلقه ويفتح فاه كأنه قعب.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "تلك المكارم لا قعبان من لبن وفي مثل \" أتاك ريّان بقعب من لبن \".",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "حافرٌ مقعّب: مدوّر كالقعب كما قال امرؤ القيس:",
+        "prototipe_benzerlik": 0.531,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وحجر مقعّب: فيه نقرة كأنه قعب، وسرّةٌ مقعّبة. وقال الأغلب:",
+        "prototipe_benzerlik": 0.546,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "وإياك والتقعيب في الكلام. فلان مقعّبٌ: للمتشدّق الذي يتكلم بأقصى حلقه ويفتح فاه كأنه قعب.",
+        "prototipe_benzerlik": 0.52,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.532,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السلاح",
@@ -1118,22 +1151,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 6,
+      "kume": 7,
       "merkez_kok": "لقلق",
       "merkez_mana": "",
-      "boy": 440
+      "boy": 386
     },
     "orta": {
-      "kume": 27,
-      "merkez_kok": "عجو",
-      "merkez_mana": "beikost",
-      "boy": 82
+      "kume": 26,
+      "merkez_kok": "طعل",
+      "merkez_mana": "to come upon, befall",
+      "boy": 91
     },
     "ince": {
-      "kume": 165,
-      "merkez_kok": "قشد",
-      "merkez_mana": "creamy",
-      "boy": 6
+      "kume": 150,
+      "merkez_kok": "سمع",
+      "merkez_mana": "Sem': işitmek, kulak",
+      "boy": 7
     }
   },
   "kaliplar": {

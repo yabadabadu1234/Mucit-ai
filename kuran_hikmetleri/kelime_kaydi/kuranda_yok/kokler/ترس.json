@@ -1223,13 +1223,36 @@
     "ince": "whole.n.02",
     "orta": "noun.artifact",
     "ust": "cisim ve eşya",
-    "dayanak_synset": "rampart.n.01",
-    "dayanak_tanim": "an embankment built around a space for defensive purposes",
+    "dayanak_synset": "shield.n.02",
+    "dayanak_tanim": "armor carried on the arm to intercept blows",
     "synset_sayisi": 3
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "رجل تارس وتراس: ذو ترس.\nتقول: لا يستوي الراجل والفارس، والأكشف والتارس. واترس وتترس.",
+    "mecaz": "تسترت بك من الحدثان، وتترست من نبال الزمان. وهو مترسة لك. وأخذت إيلي سلاحها، وتترست بترستها إذا سمنت وحسنت، ومنعت بذلك صاحبها من العقر. وغاب ترس الشمس. وواجهنا ترساً من الأرض، وهو القاع الأملس المستدير. قال ابن ميادة:\nسفين تراب الأرض حتى أبدنه ... وواجهن ترساً من متون صحاري",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "رجل تارس وتراس: ذو ترس. تقول: لا يستوي الراجل والفارس، والأكشف والتارس. واترس وتترس.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "تسترت بك من الحدثان، وتترست من نبال الزمان. وهو مترسة لك. وأخذت إيلي سلاحها، وتترست بترستها إذا سمنت وحسنت، ومنعت بذلك صاحبها من العقر. وغاب ترس الشمس. وواجهنا ترساً من الأرض، وهو القاع الأملس المستدير. قال ابن ميادة:",
+        "prototipe_benzerlik": 0.554,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.554,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["artifact.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السلاح",
@@ -1240,22 +1263,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
+      "kume": 8,
       "merkez_kok": "قبب",
       "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "boy": 604
     },
     "orta": {
-      "kume": 45,
-      "merkez_kok": "متن",
-      "merkez_mana": "Metn: sağlam yer, metin; metîn: sağlam",
-      "boy": 268
+      "kume": 32,
+      "merkez_kok": "دثر",
+      "merkez_mana": "Tedsîr: örtmek, bürümek; desr: örtü",
+      "boy": 148
     },
     "ince": {
-      "kume": 289,
-      "merkez_kok": "ترس",
-      "merkez_mana": "shield, scutum",
-      "boy": 7
+      "kume": 206,
+      "merkez_kok": "طنف",
+      "merkez_mana": "overhang of a mountain, projectory part of a peak in a landscape, knol",
+      "boy": 13
     }
   },
   "kaliplar": {

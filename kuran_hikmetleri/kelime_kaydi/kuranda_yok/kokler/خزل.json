@@ -1227,6 +1227,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "ضربه فخزله نصفين. وقال الأعشى:\nملء الشعار وصفر الدرع بهكنة ... إذا تقوم يكاد الخصر ينخزل\nورجل أخزل ومخزول الظهر: مكسوره.",
+    "mecaz": "كلمته فخجل وانخزل، وانخزل في مشيته: استرخى كأن الشوك شاك قدمه. وهي تنخزل في مشيتها: تنقطع إذا رفلت. وأقدم على الأمر ثم انخزل عنه أي ارتد وضعف. وانخزل عن جواب ما قلت له. والسحاب إذا رأيته متثاقلاً كأنه يتراجع، قالوا: تراه ينخزل. وخزله إذا عابه. واختزل شيئاً من المال.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "ضربه فخزله نصفين. وقال الأعشى: ملء الشعار وصفر الدرع بهكنة ... إذا تقوم يكاد الخصر ينخزل ورجل أخزل ومخزول الظهر: مكسوره.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "كلمته فخجل وانخزل، وانخزل في مشيته: استرخى كأن الشوك شاك قدمه. وهي تنخزل في مشيتها: تنقطع إذا رفلت. وأقدم على الأمر ثم انخزل عنه أي ارتد وضعف. وانخزل عن جواب ما قلت له. والسحاب إذا رأيته متثاقلاً كأنه يتراجع، قالوا: تراه ينخزل. وخزله إذا عابه. واختزل شيئاً من المال.",
+        "prototipe_benzerlik": 0.528,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.528,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["abridge.v.01", "boil_down.v.02", "reduce.v.01", "reduce.v.18", "shrink.v.03"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الغرائز",
@@ -1237,22 +1260,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
+      "kume": 8,
       "merkez_kok": "قبب",
       "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "boy": 604
     },
     "orta": {
-      "kume": 43,
-      "merkez_kok": "خرز",
-      "merkez_mana": "awl",
-      "boy": 104
+      "kume": 32,
+      "merkez_kok": "دثر",
+      "merkez_mana": "Tedsîr: örtmek, bürümek; desr: örtü",
+      "boy": 148
     },
     "ince": {
-      "kume": 279,
-      "merkez_kok": "لزب",
-      "merkez_mana": "Lezb: yapışkan, bağlı",
-      "boy": 27
+      "kume": 210,
+      "merkez_kok": "قلم",
+      "merkez_mana": "Kalem: kalem; kalm: kesmek",
+      "boy": 10
     }
   },
   "kaliplar": {

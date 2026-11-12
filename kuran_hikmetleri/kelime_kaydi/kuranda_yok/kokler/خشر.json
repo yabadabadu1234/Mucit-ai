@@ -688,6 +688,29 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "ما بقي على المائدة إلا خشارة وهي ما لا خير فيه. وهذه خشارة الشعير وهي ما لا لب فيه، وخشارة التمر وهي رديئه والشيص منه.\nقال الحطيئة:\nوباع بنيه بعضهم بخشارة ... وبعت لذبيان العلاء بمالكا\nأي اشتريت.",
+    "mecaz": "هو من الخشارة أي من الدون. وفي الحديث \" ذهب الخيار وبقيت خشارة كخشارة الشعير \".",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "ما بقي على المائدة إلا خشارة وهي ما لا خير فيه. وهذه خشارة الشعير وهي ما لا لب فيه، وخشارة التمر وهي رديئه والشيص منه. قال الحطيئة: وباع بنيه بعضهم بخشارة ... وبعت لذبيان العلاء بمالكا أي اشتريت.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "هو من الخشارة أي من الدون. وفي الحديث \" ذهب الخيار وبقيت خشارة كخشارة الشعير \".",
+        "prototipe_benzerlik": 0.713,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.713,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الغرائز",
@@ -698,19 +721,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 2,
+      "kume": 1,
       "merkez_kok": "قره",
       "merkez_mana": "",
       "boy": 759
     },
     "orta": {
-      "kume": 4,
+      "kume": 2,
       "merkez_kok": "فلص",
       "merkez_mana": "",
       "boy": 494
     },
     "ince": {
-      "kume": 21,
+      "kume": 3,
       "merkez_kok": "مرت",
       "merkez_mana": "",
       "boy": 241

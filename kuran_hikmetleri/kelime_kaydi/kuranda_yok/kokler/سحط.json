@@ -688,6 +688,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "سحط الشاة سحطاً وهو ذبح وحيّ.",
+    "mecaz": "أنا كالشجي في مسحطه أي في حلقه. قال:\nوساخط من غير شيء مسخطه ... كنت له مثل الشجي في مسحطه\nوتقول: غم لا أبالك ساحط، ان تبيت والمولى عليك ساخط.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "سحط الشاة سحطاً وهو ذبح وحيّ.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "أنا كالشجي في مسحطه أي في حلقه. قال:",
+        "prototipe_benzerlik": 0.281,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "وتقول: غم لا أبالك ساحط، ان تبيت والمولى عليك ساخط.",
+        "prototipe_benzerlik": 0.48,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.381,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
@@ -696,19 +724,19 @@
       "kume": 3,
       "merkez_kok": "فقص",
       "merkez_mana": "",
-      "boy": 563
+      "boy": 568
     },
     "orta": {
       "kume": 6,
       "merkez_kok": "شبص",
       "merkez_mana": "",
-      "boy": 400
+      "boy": 403
     },
     "ince": {
-      "kume": 27,
-      "merkez_kok": "قلخ",
+      "kume": 28,
+      "merkez_kok": "كمز",
       "merkez_mana": "",
-      "boy": 61
+      "boy": 111
     }
   },
   "kaliplar": {

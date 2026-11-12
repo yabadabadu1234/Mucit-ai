@@ -1298,13 +1298,36 @@
     "ince": "whole.n.02",
     "orta": "noun.artifact",
     "ust": "cisim ve eşya",
-    "dayanak_synset": "armor.n.01",
-    "dayanak_tanim": "protective covering made of metal and used in combat",
+    "dayanak_synset": "shield.n.01",
+    "dayanak_tanim": "a protective covering or structure",
     "synset_sayisi": 4
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "له درع سابغة، ولها درع واسع، ورجل دارع، وتدرّع وادّرع، ودرّعه غيره، ولبس مدرعةً ومدرعاً. وشاة درعاء: سوداء المقدّم، وشاء درعٌ. واندرع في اليسر: تقدم.",
+    "mecaz": "ادّرع الليل، وادّرع الخوف.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "له درع سابغة، ولها درع واسع، ورجل دارع، وتدرّع وادّرع، ودرّعه غيره، ولبس مدرعةً ومدرعاً. وشاة درعاء: سوداء المقدّم، وشاء درعٌ. واندرع في اليسر: تقدم.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "ادّرع الليل، وادّرع الخوف.",
+        "prototipe_benzerlik": 0.391,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.391,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["armored.a.01", "artifact.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السلاح",
@@ -1315,22 +1338,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
+      "kume": 8,
       "merkez_kok": "قبب",
       "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "boy": 604
     },
     "orta": {
-      "kume": 45,
-      "merkez_kok": "متن",
-      "merkez_mana": "Metn: sağlam yer, metin; metîn: sağlam",
-      "boy": 268
+      "kume": 32,
+      "merkez_kok": "دثر",
+      "merkez_mana": "Tedsîr: örtmek, bürümek; desr: örtü",
+      "boy": 148
     },
     "ince": {
-      "kume": 289,
-      "merkez_kok": "ترس",
-      "merkez_mana": "shield, scutum",
-      "boy": 7
+      "kume": 206,
+      "merkez_kok": "طنف",
+      "merkez_mana": "overhang of a mountain, projectory part of a peak in a landscape, knol",
+      "boy": 13
     }
   },
   "kaliplar": {

@@ -1101,6 +1101,44 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "أثفر الدابة، ودابة مثفار: يرمي بسرجه إلى مؤخره.",
+    "mecaz": "استثفرت المستحاضة: تلجمت. واستثفر المصارع: رد طرف ثوبه إلى خلفه فغرزه في حجزته. واستثفر الكلب بذنبه. قال:\nتعدو الذئاب على من لا كلاب له وتتقي مربض المستثفر الحامي\nوقيل: كان أبو جهل مثفاراً وكذب قائله. وأثفره: ساقه من ورائه. وأثفروه بيعة سوء: ألزقوه باسته.\nث ف ر ق\nأقل جدً من الثقاريق، وصول المال بالتفاريق؛ جمع ثفروق وهو علاقة قمع التمرة.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "أثفر الدابة، ودابة مثفار: يرمي بسرجه إلى مؤخره.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "استثفرت المستحاضة: تلجمت. واستثفر المصارع: رد طرف ثوبه إلى خلفه فغرزه في حجزته. واستثفر الكلب بذنبه. قال:",
+        "prototipe_benzerlik": 0.32,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "تعدو الذئاب على من لا كلاب له وتتقي مربض المستثفر الحامي",
+        "prototipe_benzerlik": 0.429,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وقيل: كان أبو جهل مثفاراً وكذب قائله. وأثفره: ساقه من ورائه. وأثفروه بيعة سوء: ألزقوه باسته.",
+        "prototipe_benzerlik": 0.259,
+        "halka": "uzak"
+      },
+      {
+        "cumle": "أقل جدً من الثقاريق، وصول المال بالتفاريق؛ جمع ثفروق وهو علاقة قمع التمرة.",
+        "prototipe_benzerlik": 0.353,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.34,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "اللباس",
@@ -1111,22 +1149,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 1,
+      "kume": 2,
       "merkez_kok": "حنج",
       "merkez_mana": "",
-      "boy": 426
+      "boy": 466
     },
     "orta": {
-      "kume": 1,
-      "merkez_kok": "جنح",
-      "merkez_mana": "Cünûh: meyletmek, eğilmek; cenâh: kanat",
-      "boy": 165
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 402
     },
     "ince": {
-      "kume": 1,
+      "kume": 15,
       "merkez_kok": "دلق",
       "merkez_mana": "to pour out, spill (e.g. a liquid)",
-      "boy": 41
+      "boy": 58
     }
   },
   "kaliplar": {

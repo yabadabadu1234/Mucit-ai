@@ -1958,16 +1958,54 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "agent.n.03",
+    "ince": "substance.n.07",
     "orta": "noun.artifact",
     "ust": "cisim ve eşya",
-    "dayanak_synset": "opiate.n.01",
-    "dayanak_tanim": "a narcotic drug that contains opium or an opium derivative",
+    "dayanak_synset": "narcotic.n.01",
+    "dayanak_tanim": "a drug that produces numbness or stupor; often taken for pleasure or to reduce pain; extensive use can lead to addiction",
     "synset_sayisi": 8
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "جارية مخدرة، وقد خدرها أهلها وأخدروها، وتخدرت؛ وهي من ربات الخدور. وهو من الأخدريات وهي الحمر نسبت إل أخدر حصان كان لأردشير بن بابك توحش فضرب فيها. تقول في الأحمق: هو من بنات أخدر، أو من بنات أكدر؛ وهو فحل من حمر الوحش. وخدرت رجله، وبها خدر، ورجل خدرة. وخدرته المقاعد إذا قعد طويلاً حتى خدرت رجلاه. قال الهذلي يصف صائداً:\nفجاء وقد أوجت من الموت نفسه ... به شغف قد خدرته المقاعد\nأوجت: ارتعدت.",
+    "mecaz": "ليث خادر ومخدر. قال الفرزدق:\nبقي الشامتين الصخر إن كان هدني ... رزية شبلي مخدر في الضراغم\nوقد خدر الأسد في عرينه وأخدر. وليل مخدر وخداري: مظلم. وشعر خداري وجارية خدارية الشعر. وهودج مخدور. مستور. وإنه ليساترني ويخادرني. وخدر النهار إذا لم تتحرك فيه ريح ولم\nيوجد فيه روح. قال طرفة:\nومكان زعل ظلمانه ... كالمخاض الجرب في اليوم الخدر\nويعفور خدر: كأنه ناعس من سجو طرفه وضعفه. وخدرت عظامه: فترت. وخدرت عينه: ثقلت من حكة وقدى.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "جارية مخدرة، وقد خدرها أهلها وأخدروها، وتخدرت؛ وهي من ربات الخدور. وهو من الأخدريات وهي الحمر نسبت إل أخدر حصان كان لأردشير بن بابك توحش فضرب فيها. تقول في الأحمق: هو من بنات أخدر، أو من بنات أكدر؛ وهو فحل من حمر الوحش. وخدرت رجله، وبها خدر، ورجل خدرة. وخدرته ",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "ليث خادر ومخدر. قال الفرزدق:",
+        "prototipe_benzerlik": 0.392,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وقد خدر الأسد في عرينه وأخدر. وليل مخدر وخداري: مظلم. وشعر خداري وجارية خدارية الشعر. وهودج مخدور. مستور. وإنه ليساترني ويخادرني. وخدر النهار إذا لم تتحرك فيه ريح ولم",
+        "prototipe_benzerlik": 0.557,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "يوجد فيه روح. قال طرفة:",
+        "prototipe_benzerlik": 0.524,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "ويعفور خدر: كأنه ناعس من سجو طرفه وضعفه. وخدرت عظامه: فترت. وخدرت عينه: ثقلت من حكة وقدى.",
+        "prototipe_benzerlik": 0.574,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.512,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["agent.n.03", "barricade.v.01", "feeling.n.01", "obstruct.v.01", "obstruct.v.02"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "السباع",
@@ -1978,19 +2016,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "kume": 5,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 375
     },
     "orta": {
-      "kume": 35,
-      "merkez_kok": "حين",
-      "merkez_mana": "Hîn: zaman, bir süre",
-      "boy": 54
+      "kume": 11,
+      "merkez_kok": "ليل",
+      "merkez_mana": "Leyl: gece",
+      "boy": 29
     },
     "ince": {
-      "kume": 224,
+      "kume": 66,
       "merkez_kok": "نوم",
       "merkez_mana": "Nevm: uyku; nâim: uyuyan",
       "boy": 12

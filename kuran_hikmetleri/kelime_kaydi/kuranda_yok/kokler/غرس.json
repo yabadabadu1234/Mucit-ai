@@ -1227,16 +1227,39 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "collection.n.01",
-    "orta": "noun.group",
-    "ust": "insan ve toplum",
-    "dayanak_synset": "planting.n.02",
-    "dayanak_tanim": "a collection of plants (trees or shrubs or flowers) in a particular area",
+    "ince": "event.n.01",
+    "orta": "noun.act",
+    "ust": "fiil ve hadise",
+    "dayanak_synset": "planting.n.03",
+    "dayanak_tanim": "putting seeds or young plants in the ground to grow",
     "synset_sayisi": 6
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "هذا وقت الغراس وهو غرس الشجر: تقول في حائطه غراس كثيرة وهي الفسلان جمع: غرسٍ. وغرائس، كأنها عرائس؛ جمع غريسة وهي النخلة تغرس حديثاً كالوليدة: للصبية الحديثة العهد بالولاد.",
+    "mecaz": "أنا غرس يدك، ونحن غرس يدك على لفظ المصدر وإذا كسرت كان فعلاً بمعنى مفعول كالذبح والحمل، فقلت: ونحن أغراس يدك. وتقول: هذا مسقط رأسه، ومكان غراسه. ويمن فلان يوم غرسه، وبخت وهو في غرسه؛ وهو جليدة رقيقة تكون على رأس المولود.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "هذا وقت الغراس وهو غرس الشجر: تقول في حائطه غراس كثيرة وهي الفسلان جمع: غرسٍ. وغرائس، كأنها عرائس؛ جمع غريسة وهي النخلة تغرس حديثاً كالوليدة: للصبية الحديثة العهد بالولاد.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "أنا غرس يدك، ونحن غرس يدك على لفظ المصدر وإذا كسرت كان فعلاً بمعنى مفعول كالذبح والحمل، فقلت: ونحن أغراس يدك. وتقول: هذا مسقط رأسه، ومكان غراسه. ويمن فلان يوم غرسه، وبخت وهو في غرسه؛ وهو جليدة رقيقة تكون على رأس المولود.",
+        "prototipe_benzerlik": 0.578,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.578,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["group_action.n.01", "living_thing.n.01", "plant.v.01", "plant.v.05", "planting.n.02", "sleep_together.v.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النخل",
@@ -1248,21 +1271,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 8,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 450
+      "merkez_kok": "قبب",
+      "merkez_mana": "canopy, pavilion; dome, cupola",
+      "boy": 604
     },
     "orta": {
-      "kume": 38,
-      "merkez_kok": "كفت",
-      "merkez_mana": "kefet: toplamak, yer / kefet: çekmek (?)",
-      "boy": 203
+      "kume": 33,
+      "merkez_kok": "صبب",
+      "merkez_mana": "Sabb: dökmek, akıtmak; sabîb: akan",
+      "boy": 201
     },
     "ince": {
-      "kume": 243,
-      "merkez_kok": "طور",
-      "merkez_mana": "Tûr: dağ; sıra, durum",
-      "boy": 25
+      "kume": 222,
+      "merkez_kok": "سلك",
+      "merkez_mana": "Sülûk: yol tutmak; silk: sıra, iplik",
+      "boy": 28
     }
   },
   "kaliplar": {

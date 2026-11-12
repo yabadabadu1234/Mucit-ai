@@ -1356,13 +1356,36 @@
     "ince": "state.n.02",
     "orta": "noun.feeling",
     "ust": "his ve nefis",
-    "dayanak_synset": "nostalgia.n.01",
-    "dayanak_tanim": "longing for something past",
+    "dayanak_synset": "longing.n.01",
+    "dayanak_tanim": "prolonged unfulfilled desire or need",
     "synset_sayisi": 5
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "شقتني إليك وشوقتني، واشتقت إليك واشتقتك، وبرح بي الشوق، وبلغت مني الأشواق، وما أشوقني إليك. وقلب شيق.",
+    "mecaz": "شقت الطنب إلى الوتد: نطته به.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "شقتني إليك وشوقتني، واشتقت إليك واشتقتك، وبرح بي الشوق، وبلغت مني الأشواق، وما أشوقني إليك. وقلب شيق.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "شقت الطنب إلى الوتد: نطته به.",
+        "prototipe_benzerlik": 0.398,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.398,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["ache.v.02", "feeling.n.01", "hanker.v.01", "power.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النخل",
@@ -1373,22 +1396,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 17,
-      "merkez_kok": "زين",
-      "merkez_mana": "Zîne: süs, güzellik; zeyn: güzelleştirmek",
-      "boy": 177
+      "kume": 25,
+      "merkez_kok": "وسل",
+      "merkez_mana": "Vesîle: aracı, yol",
+      "boy": 130
     },
     "ince": {
-      "kume": 90,
+      "kume": 145,
       "merkez_kok": "رغب",
       "merkez_mana": "Rağbet: istek, arzu",
-      "boy": 18
+      "boy": 20
     }
   },
   "kaliplar": {

@@ -702,6 +702,34 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "أطعمهم النحض، وسقاهم المحض، وهو اللحم المكتنز، واشو لنا هذه النّحضة وهي القطعة منه. وامرأة نحيضة: لحيمة، ومنحوضة: مهزولة كأنما نحضت أي عرقت.",
+    "mecaz": "سنان نحيض بمعنى منحوض، وقد نحضه إذا رقّقه. قال امرؤ القيس:\nيبارى شباة الرمح خدّ مذلّق ... كحد السنان الصّلّي النحيض\nونحضت فلاناً: نهكته بالسؤال. وناحضته: ماحكته ولاحيته.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "أطعمهم النحض، وسقاهم المحض، وهو اللحم المكتنز، واشو لنا هذه النّحضة وهي القطعة منه. وامرأة نحيضة: لحيمة، ومنحوضة: مهزولة كأنما نحضت أي عرقت.",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "سنان نحيض بمعنى منحوض، وقد نحضه إذا رقّقه. قال امرؤ القيس:",
+        "prototipe_benzerlik": 0.581,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "ونحضت فلاناً: نهكته بالسؤال. وناحضته: ماحكته ولاحيته.",
+        "prototipe_benzerlik": 0.171,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.376,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
@@ -712,19 +740,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 2,
+      "kume": 1,
       "merkez_kok": "قره",
       "merkez_mana": "",
       "boy": 759
     },
     "orta": {
-      "kume": 4,
+      "kume": 2,
       "merkez_kok": "فلص",
       "merkez_mana": "",
       "boy": 494
     },
     "ince": {
-      "kume": 21,
+      "kume": 3,
       "merkez_kok": "مرت",
       "merkez_mana": "",
       "boy": 241

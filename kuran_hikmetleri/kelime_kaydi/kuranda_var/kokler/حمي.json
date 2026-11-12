@@ -2118,32 +2118,77 @@
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "حماه حماية، وحامى عليه، وهو يحمي أنفه وعرضه محمية ومحمية. قال الفرزدق:\nشاهد إذا ما كنت ذا محمية ... برجل مشل أبي مكية\nوقال أيضاً:\nبنو السيد الأشاثم للأعادي ... نموني للعلى وبنو ضرار\nوناجية الذي كانت تميم ... تقدمه لمحمية الذمار\nوفعل ذ محمية لعرضه. وهو حميُّ الأنف، وله أنف حميٌّ. وحميت المكان: منعته أن يقرب، فإذا امتنع وعزّ، قلت أحميته أي صيرته حمًى: فلا يكون الإحماء إلا بعد الحماية، ولفلان حمًى لا يقرب. واحتمى الرجل من كذا: اتقاه. قال:\nيذب عن حريمه بنبله ... ورمحه وسيفه ويحتمى\nوقال حسان:\nحمت كل واد من تهامة واحتمت ... بصم القنا والمرهفات البواتر\nيقال: احتميت منه وتحاميته، وهو يتحامى كما يتحامى الأجرب، وحميت المريض الطعام حمية. قال:\nتقول ابنتي لما رأتني شاحباً ... كأنك يحميك الشراب طبيب\nواحتمى المريض فهو حميٌّ ومحتم. وحميت القدر. وحميَ النهار حمّى شديداً وحمياً. وحميَ بدن المحموم، وبه حميٌ. وكأنه حمي مرجل. وأتاني في حمي الظهيرة. وأحميت الميسم. وفيه\nحمية وأنفة، وقد حمي من الأمر، وفي بني فلان حمايا. وقرعته حميّا الكأس أي سورته. وفلان يرى في النصح حمة العقرب وهي فوعة السم وسورته.",
+    "mecaz": "حميته أن يفعل كذا إذا منعته، وحميَ عليه إذا غضب، ولا تكلمه في حميّا غضبه، وإنه لشديد الحميّا إذا كان عزيز النفس أبياً. قال الفرزدق:\nشديد الحميا لا يخاتل قرنه ... ولكنه بالصحصحان ينازله",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "حماه حماية، وحامى عليه، وهو يحمي أنفه وعرضه محمية ومحمية. قال الفرزدق: شاهد إذا ما كنت ذا محمية ... برجل مشل أبي مكية وقال أيضاً: بنو السيد الأشاثم للأعادي ... نموني للعلى وبنو ضرار وناجية الذي كانت تميم ... تقدمه لمحمية الذمار وفعل ذ محمية لعرضه. وهو حميُّ ال",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "حميته أن يفعل كذا إذا منعته، وحميَ عليه إذا غضب، ولا تكلمه في حميّا غضبه، وإنه لشديد الحميّا إذا كان عزيز النفس أبياً. قال الفرزدق:",
+        "prototipe_benzerlik": 0.446,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.446,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": [
+    "act.n.02",
+    "artifact.n.01",
+    "condition.n.01",
+    "content.n.05",
+    "continue.v.03",
+    "converse.v.01",
+    "cover.v.01",
+    "cover.v.02",
+    "cover.v.03",
+    "cover.v.09",
+    "defend.v.02",
+    "fight.v.02",
+    "group_action.n.01",
+    "happening.n.01",
+    "heat.v.01",
+    "living_thing.n.01",
+    "protect.v.01",
+    "protect.v.02",
+    "roll.v.12",
+    "warm.v.01",
+    "warm.v.02"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",
     "bab": "التحسي",
-    "kok_gecis": 77.8,
+    "kok_gecis": 77.7,
     "kitapta_gecis": 15.8,
-    "zenginlesme": 3.92
+    "zenginlesme": 3.93
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 4,
-      "merkez_kok": "هيج",
-      "merkez_mana": "Heyecan: coşku, çalkalanma",
-      "boy": 900
+      "kume": 6,
+      "merkez_kok": "درك",
+      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
+      "boy": 1364
     },
     "orta": {
-      "kume": 7,
-      "merkez_kok": "كرب",
-      "merkez_mana": "Karb: sıkıntı, keder; kurbet: sıkıntı",
-      "boy": 139
+      "kume": 25,
+      "merkez_kok": "وسل",
+      "merkez_mana": "Vesîle: aracı, yol",
+      "boy": 130
     },
     "ince": {
-      "kume": 33,
+      "kume": 143,
       "merkez_kok": "شكم",
       "merkez_mana": "bit, snaffle",
-      "boy": 11
+      "boy": 32
     }
   },
   "kaliplar": {

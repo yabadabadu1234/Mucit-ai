@@ -1774,16 +1774,79 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "part.n.03",
-    "orta": "noun.body",
+    "ince": "substance.n.07",
+    "orta": "noun.food",
     "ust": "canlı ve beden",
-    "dayanak_synset": "ankle.n.01",
-    "dayanak_tanim": "a gliding joint between the distal ends of the tibia and fibula and the proximal end of the talus",
+    "dayanak_synset": "alcohol.n.01",
+    "dayanak_tanim": "a liquor or brew containing alcohol as the active agent",
     "synset_sayisi": 3
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "عين كحلاء: بينة الكحل، وكحيل، وكحلت عينه، وكحل عينه وكحّلها، وهو مكحّل العين، واكتحل وتكحّل، \" وليس التكحل كالكحل \". وتقول: في عينها كحل، وفي صوتها صحل، وكحله بالمكحل وبالمكحال: بالميل، والكحل في المكحلة، والأكحال في المكاحل. قال أبو النجم:\nقتلتنا في المشي باختيالها ... وبالحديث اللهو من بطالها\nوبالعيون النجل في أكحالها\nوتقول: يمتاح من مكاحله، بمكاحله.",
+    "mecaz": "هو أسود كالكحيل المعقد وهو القطران شبّه بالكحل في سواده. ولفلان كحل: مال كثير، كما يقال: لفلان سواد. ورأيت في الأرض حلاً: شيئاً من خضرة، واكتحلت الأرض بالخضرة وتكحّلت. وما اكتحلت عيني\nبك أي ما رأيتك. قال:\nإن اكتحالاً بالنّقيّ الأفلج ... ونظرا في الحاجب المزجّج\nمئنّةٌ من الفعال الأعوج\nواكتحل وجهك بالهمّ إذا ظهر فيه أثره. قال الراعي:\nإذا اكتحلت بعد اللّقاح نحورها ... بنسء حمت أغبارها وازمهرّت\nواكتحل فلان بسوء حال: ظهر فيه أثره. وجذب كاحل. قال بشير بن النّكث:\nإن كحل الجدب وعضّت لزبه ... كفاه من كلّ طعام يجلبه\nكوم الذرى يطلبها وتلطبه\nوقد كحلتهم السنة، وسنة كاحلة وكحلاء وكحلٌ. قال مسكين الدارميّ:\nلسنا كأقوام إذا كحلت ... إحدى السنين فجارهم تمر\nأي يؤكل جارهم كما يؤكل التمر. وقال المرّار الفقعسيّ:\nإن قبرين بالقنان لقبرا ... ن هما ما هما لدى الكحلاء\nوصرّحت هذه السنة كحلاً أي صرّحت سنةً منكرةً. وأصابهم كحلٌ ومحلٌ، وتقول: قد أناخ بهم المحل، وخانتهم كحل، مؤنثاً معرفة مخيراً في صرفه ومنعه. وفي مثل \" باءت عرار بكحل \" وهما بقرتان كانتا في بني إسرائيل عقرت إحداهما فعقرت بها الأخرى.",
+    "kinaye": "",
+    "mecaz_var": true
+  },
+  "prototip_yayilim_tasnif": {
+    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
+    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
+    "prototip": "عين كحلاء: بينة الكحل، وكحيل، وكحلت عينه، وكحل عينه وكحّلها، وهو مكحّل العين، واكتحل وتكحّل، \" وليس التكحل كالكحل \". وتقول: في عينها كحل، وفي صوتها صحل، وكحله بالمكحل وبالمكحال: بالميل، والكحل في المكحلة، والأكحال في المكاحل. قال أبو النجم: قتلتنا في المشي باخ",
+    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "yayilim": [
+      {
+        "cumle": "هو أسود كالكحيل المعقد وهو القطران شبّه بالكحل في سواده. ولفلان كحل: مال كثير، كما يقال: لفلان سواد. ورأيت في الأرض حلاً: شيئاً من خضرة، واكتحلت الأرض بالخضرة وتكحّلت. وما اكتحلت عيني",
+        "prototipe_benzerlik": 0.475,
+        "halka": "orta"
+      },
+      {
+        "cumle": "بك أي ما رأيتك. قال:",
+        "prototipe_benzerlik": 0.661,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "مئنّةٌ من الفعال الأعوج",
+        "prototipe_benzerlik": 0.511,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "واكتحل وجهك بالهمّ إذا ظهر فيه أثره. قال الراعي:",
+        "prototipe_benzerlik": 0.513,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "واكتحل فلان بسوء حال: ظهر فيه أثره. وجذب كاحل. قال بشير بن النّكث:",
+        "prototipe_benzerlik": 0.575,
+        "halka": "yakın"
+      },
+      {
+        "cumle": "كوم الذرى يطلبها وتلطبه",
+        "prototipe_benzerlik": 0.427,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وقد كحلتهم السنة، وسنة كاحلة وكحلاء وكحلٌ. قال مسكين الدارميّ:",
+        "prototipe_benzerlik": 0.451,
+        "halka": "orta"
+      },
+      {
+        "cumle": "أي يؤكل جارهم كما يؤكل التمر. وقال المرّار الفقعسيّ:",
+        "prototipe_benzerlik": 0.495,
+        "halka": "orta"
+      },
+      {
+        "cumle": "وصرّحت هذه السنة كحلاً أي صرّحت سنةً منكرةً. وأصابهم كحلٌ ومحلٌ، وتقول: قد أناخ بهم المحل، وخانتهم كحل، مؤنثاً معرفة مخيراً في صرفه ومنعه. وفي مثل \" باءت عرار بكحل \" وهما بقرتان كانتا في بني إسرائيل عقرت إحداهما فعقرت بها الأخرى.",
+        "prototipe_benzerlik": 0.383,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.499,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+  },
+  "kolekzifikasyon_kavramlari": ["body_part.n.01", "fluid.n.01", "food.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النساء",
@@ -1794,22 +1857,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
+      "kume": 8,
       "merkez_kok": "قبب",
       "merkez_mana": "canopy, pavilion; dome, cupola",
-      "boy": 678
+      "boy": 604
     },
     "orta": {
-      "kume": 42,
-      "merkez_kok": "وبر",
-      "merkez_mana": "Vaber: yün, deve tüyü; vebr: tavşan",
-      "boy": 84
+      "kume": 32,
+      "merkez_kok": "دثر",
+      "merkez_mana": "Tedsîr: örtmek, bürümek; desr: örtü",
+      "boy": 148
     },
     "ince": {
-      "kume": 270,
-      "merkez_kok": "شقر",
-      "merkez_mana": "yellowish; fair, blond",
-      "boy": 11
+      "kume": 211,
+      "merkez_kok": "قرط",
+      "merkez_mana": "to cut into minute morsels, to chop or mince, to chef",
+      "boy": 32
     }
   },
   "kaliplar": {

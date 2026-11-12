@@ -2222,16 +2222,27 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "person.n.01",
+    "ince": "whole.n.02",
     "orta": "noun.person",
     "ust": "insan ve toplum",
-    "dayanak_synset": "father.n.01",
-    "dayanak_tanim": "a male parent (also used as a term of address to your father)",
+    "dayanak_synset": "genitor.n.01",
+    "dayanak_tanim": "a natural father or mother",
     "synset_sayisi": 6
   },
   "ses_mana_tasnif": {
     "durum": "Cebel mu'cemlerinde kök yok"
   },
+  "hakikat_mecaz_tasnif": {
+    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+    "hakikat": "هو نجيب من النجباء والأنجاب. قال:\nقد اغتدى بفتية أنجاب ... عكارميّين ذوي أحساب\nوقد نجب نجابة، وله نجيبة ونجائب ونجب. وفحل منجب، وامرأة منجبة ومنجاب، ونساء مناجيب، وأنجب به أبواه. قال الأعشى:\nأنجب أيام والداه به ... إذ نجلاه فنعم ما نجلا\nوانتجبته واستنجبته. ونجبت الشجرة: أخذت نجبها: قشرها. قال ذو الرمة:\nكأن رجليه مسماكان من عشر ... صقبان لم يتفرّق عنهما النجب",
+    "mecaz": "",
+    "kinaye": "",
+    "mecaz_var": false
+  },
+  "prototip_yayilim_tasnif": {
+    "durum": "prototip veya mecaz kolu yok"
+  },
+  "kolekzifikasyon_kavramlari": ["act.n.02", "bodily_process.n.01", "engender.v.01", "living_thing.n.01", "reproduce.v.02"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "المكنيات والمبنيات والمثنيات",
@@ -2242,19 +2253,19 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
+      "kume": 6,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 1093
+      "boy": 1364
     },
     "orta": {
-      "kume": 15,
+      "kume": 19,
       "merkez_kok": "فوق",
       "merkez_mana": "Fevk: üst, yukarı (zarf)",
-      "boy": 107
+      "boy": 76
     },
     "ince": {
-      "kume": 84,
+      "kume": 109,
       "merkez_kok": "حصف",
       "merkez_mana": "of sense, sober, realistic",
       "boy": 31
