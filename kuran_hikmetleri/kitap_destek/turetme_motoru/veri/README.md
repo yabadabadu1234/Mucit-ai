@@ -11,3 +11,6 @@ Ham dökümler depoya alınmaz (3,4 GB ve 0,9 GB); süzme betikleri aynen koştu
 
 **Atıf (CC BY-SA):** Veri, Vikisözlük (en.wiktionary.org) katkıcılarına aittir; Tatu Ylonen'in wiktextract aracıyla çıkarılan kaikki.org dökümünden alınmıştır. Aynı lisansla (CC BY-SA 4.0) paylaşılır; yapılan değişiklik: alan süzme ve kök dosyalarına dağıtma.
 `ar_kok.jsonl` yalnız köklü maddelerin eski ve dar süzmesidir; müştak tanıklığı (`wikt.py`) onu okur, kök dosyalarındaki `kaikki_vikisozluk` alanı onun yerini tutar.
+
+## Arabic WordNet v2 (AWN)
+Kaynak: Open Multilingual Wordnet 1.4, `arb/wn-data-arb.tab` (Arabic WordNet v2, http://www.globalwordnet.org/AWN/, CC BY-SA 3.0). Kök etiketli synset'ler Princeton WordNet'e bağlanır; kök dosyalarındaki `mana_tasnif` bundan türer. Ham dosya depoya alınmadı (nltk `omw-1.4` paketinden okunur).

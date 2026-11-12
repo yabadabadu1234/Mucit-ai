@@ -7,6 +7,7 @@ import sys
 
 import istikak as I
 import mana_tasnif as MT
+import awn_tasnif as AW
 import turkce as T
 import mekayis as MK
 import osmanlica_lugat as OS
@@ -310,6 +311,19 @@ MAHREC = {'halkiyye': 'ءهعحغخ', 'lehaviyye': 'قك', 'şeceriyye': 'جشض
 BOLGE = {'halk': ('halkiyye',), 'dil': ('lehaviyye', 'şeceriyye', 'esaliyye', 'nit‘iyye', 'lessiyye', 'zelakiyye'), 'dudak ve cevf': ('şefeviyye', 'cevfiyye')}
 
 
+def awn_agaci(aw):
+    ag = {}
+    for k, x in aw.items():
+        u = ag.setdefault(x['ust'], {'kok': 0, 'orta': {}})
+        u['kok'] += 1
+        o = u['orta'].setdefault(x['orta'], {'kok': 0, 'ince': {}})
+        o['kok'] += 1
+        i = o['ince'].setdefault(x['ince'], {'kok': 0, 'dayanak_tanim': x['dayanak_tanim'], 'kokler': []})
+        i['kok'] += 1
+        i['kokler'].append(k)
+    return {'yontem': x['yontem'], 'derinlik': 'Princeton WordNet üst-ata zincirinde 3. basamak (ince) → sözlük dosyası (orta, 44) → on ana bölüm (ust)', 'kok': len(aw), 'agac': ag}
+
+
 def mana_agaci(mt):
     ag = {}
     ihlal = 0
@@ -368,6 +382,7 @@ def yaz():
         (gruplar[e['kok']] if e['kok'] else koksuz).append(e)
     fih = {'kuranda_var': [], 'kuranda_yok': []}
     mt = MT.sinifla(d['kokler'])
+    aw = AW.sinifla(d['kokler'], 3)
     agac = {}
     kelime_kok = {}
     toplam = collections.Counter()
@@ -378,7 +393,8 @@ def yaz():
         dugum = dict(r)
         dugum['sema'] = SEMA
         dugum['tasnif'] = tasnif(k)
-        dugum['mana_tasnif'] = mt.get(k) or {'durum': 'tasnif edilemedi (köke ait mana metni yok)'}
+        dugum['mana_tasnif'] = aw.get(k) or {'durum': 'Arabic WordNet v2 kaydı yok'}
+        dugum['mana_tasnif_gomme'] = mt.get(k) or {'durum': 'tasnif edilemedi (köke ait mana metni yok)'}
         used = sorted({x[0] for v in r.get('mustaklar', {}).values() for x in v})
         dugum['kaliplar'] = {str(i): d['kaliplar'][i] for i in used}
         dugum['kelimeler'] = gruplar.get(k, [])
@@ -402,7 +418,7 @@ def yaz():
     for ad in ('kuranda_var', 'kuranda_yok'):
         with open(os.path.join(taban, ad, 'FIHRIST.json'), 'w', encoding='utf-8') as f:
             f.write(okunur({'sema': SEMA, 'sayilar': d['sayilar'], 'alanlar_kokler': ['dosya', 'kok', 'kelime_sayisi', 'mustak_satiri'], 'kokler': fih[ad],
-                            'tasnif_agaci': tasnif_ozeti(agac), 'mana_tasnif_agaci': mana_agaci(mt), 'kelime_kok': kelime_kok if ad == 'kuranda_var' else {}}))
+                            'tasnif_agaci': tasnif_ozeti(agac), 'mana_tasnif_agaci': awn_agaci(aw), 'mana_tasnif_gomme_agaci': mana_agaci(mt), 'kelime_kok': kelime_kok if ad == 'kuranda_var' else {}}))
     print(d['sayilar'], {k: len(v) for k, v in fih.items()}, {k: v // 1024 // 1024 for k, v in toplam.items()}, 'MB')
 
 
