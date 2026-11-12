@@ -8,6 +8,7 @@ import sys
 import istikak as I
 import mana_tasnif as MT
 import awn_tasnif as AW
+import muhassas as MH
 import turkce as T
 import mekayis as MK
 import osmanlica_lugat as OS
@@ -311,6 +312,16 @@ MAHREC = {'halkiyye': 'ءهعحغخ', 'lehaviyye': 'قك', 'şeceriyye': 'جشض
 BOLGE = {'halk': ('halkiyye',), 'dil': ('lehaviyye', 'şeceriyye', 'esaliyye', 'nit‘iyye', 'lessiyye', 'zelakiyye'), 'dudak ve cevf': ('şefeviyye', 'cevfiyye')}
 
 
+def muhassas_agaci(mh):
+    ag = {}
+    for k, x in mh.items():
+        t = ag.setdefault(x['kitap'], {'kok': 0, 'bab': {}})
+        t['kok'] += 1
+        b = t['bab'].setdefault(x['bab'] or '(bab başlığı yok)', [])
+        b.append(k)
+    return {'kaynak': 'İbn Sîde, el-Muhassas (Şâmile HTML; arşiv: archive.org/details/2564Htm); kök, kitabın kelimeleriyle kök dosyalarındaki biçimler eşlenerek bulundu, zenginleşme oranı en yüksek kitap seçildi', 'kok': len(mh), 'agac': ag}
+
+
 def awn_agaci(aw):
     ag = {}
     for k, x in aw.items():
@@ -321,7 +332,7 @@ def awn_agaci(aw):
         i = o['ince'].setdefault(x['ince'], {'kok': 0, 'dayanak_tanim': x['dayanak_tanim'], 'kokler': []})
         i['kok'] += 1
         i['kokler'].append(k)
-    return {'yontem': x['yontem'], 'derinlik': 'Princeton WordNet üst-ata zincirinde 3. basamak (ince) → sözlük dosyası (orta, 44) → on ana bölüm (ust)', 'kok': len(aw), 'agac': ag}
+    return {'yontem': 'Arabic WordNet v2; AWN kaydı olmayan köklerde İngilizce karşılık → WordNet (her kökte yontem alanı yazılı)', 'derinlik': 'Princeton WordNet üst-ata zincirinde 3. basamak (ince) → sözlük dosyası (orta, 44) → on ana bölüm (ust)', 'kok': len(aw), 'agac': ag}
 
 
 def mana_agaci(mt):
@@ -383,6 +394,8 @@ def yaz():
     fih = {'kuranda_var': [], 'kuranda_yok': []}
     mt = MT.sinifla(d['kokler'])
     aw = AW.sinifla(d['kokler'], 3)
+    aw.update(AW.ingilizce_sinifla(d['kokler'], aw, 3))
+    mh = MH.sinifla(d['kokler'])
     agac = {}
     kelime_kok = {}
     toplam = collections.Counter()
@@ -394,6 +407,7 @@ def yaz():
         dugum['sema'] = SEMA
         dugum['tasnif'] = tasnif(k)
         dugum['mana_tasnif'] = aw.get(k) or {'durum': 'Arabic WordNet v2 kaydı yok'}
+        dugum['muhassas_tasnif'] = mh.get(k) or {'durum': 'el-Muhassas metninde yeterince geçmiyor'}
         dugum['mana_tasnif_gomme'] = mt.get(k) or {'durum': 'tasnif edilemedi (köke ait mana metni yok)'}
         used = sorted({x[0] for v in r.get('mustaklar', {}).values() for x in v})
         dugum['kaliplar'] = {str(i): d['kaliplar'][i] for i in used}
@@ -418,7 +432,7 @@ def yaz():
     for ad in ('kuranda_var', 'kuranda_yok'):
         with open(os.path.join(taban, ad, 'FIHRIST.json'), 'w', encoding='utf-8') as f:
             f.write(okunur({'sema': SEMA, 'sayilar': d['sayilar'], 'alanlar_kokler': ['dosya', 'kok', 'kelime_sayisi', 'mustak_satiri'], 'kokler': fih[ad],
-                            'tasnif_agaci': tasnif_ozeti(agac), 'mana_tasnif_agaci': awn_agaci(aw), 'mana_tasnif_gomme_agaci': mana_agaci(mt), 'kelime_kok': kelime_kok if ad == 'kuranda_var' else {}}))
+                            'tasnif_agaci': tasnif_ozeti(agac), 'mana_tasnif_agaci': awn_agaci(aw), 'mana_tasnif_gomme_agaci': mana_agaci(mt), 'muhassas_agaci': muhassas_agaci(mh), 'kelime_kok': kelime_kok if ad == 'kuranda_var' else {}}))
     print(d['sayilar'], {k: len(v) for k, v in fih.items()}, {k: v // 1024 // 1024 for k, v in toplam.items()}, 'MB')
 
 

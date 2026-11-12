@@ -81,3 +81,55 @@ def sinifla(kokler, derinlik=5):
         sonuc[k] = {'yontem': 'Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet', 'ince': a, 'orta': lex, 'ust': UST.get(lex, 'hâl ve vasıf'),
                     'dayanak_synset': ornek[(a, lex)][0], 'dayanak_tanim': ornek[(a, lex)][1], 'synset_sayisi': len(oy)}
     return sonuc
+
+
+ATLA = ('verbal noun of', 'plural of', 'active participle', 'passive participle', 'inflection', 'alternative', 'singular of', 'dual of', 'defective spelling', 'diminutive of', 'comparative', 'elative', 'form of', 'nisba')
+
+
+def ingilizce_adaylar(r):
+    import re
+    s = r.get('sozlukler', {})
+    c = []
+    for o in s.get('arabic_ontology') or []:
+        for e in o.get('ingilizce', []):
+            c.append((e, None, 3.0))
+    for x in s.get('kaikki_vikisozluk') or []:
+        agirlik = 3 if x.get('p') == 'verb' else 1
+        for i, g in enumerate(x.get('g', [])[:6]):
+            g0 = g.strip().lower()
+            if g0.startswith(ATLA) or re.match(r'.{0,25}\b(of|form) [^\s]*[؀-ۿ]', g0):
+                continue
+            g1 = re.split(r'[;,:]', re.sub(r'\([^)]*\)', '', g0))[0].strip()
+            m = re.match(r'to (.+)', g1)
+            if m:
+                c.append((m.group(1).strip(), 'v', agirlik / (1 + i)))
+            elif g1:
+                c.append((g1, {'verb': 'v', 'noun': 'n', 'name': 'n', 'adj': 'a', 'adv': 'r'}.get(x.get('p'), 'n'), agirlik / (1 + i)))
+    return c
+
+
+def ingilizce_sinifla(kokler, hazir, derinlik=3):
+    sonuc = {}
+    for k, r in kokler.items():
+        if k in hazir:
+            continue
+        grup = collections.Counter()
+        ornek = {}
+        for kel, poz, w in ingilizce_adaylar(r):
+            t = kel.replace(' ', '_')
+            ss = W.synsets(t, pos=poz) if poz else W.synsets(t)
+            if not ss and kel.split():
+                ss = W.synsets(kel.split()[-1], pos=poz) if poz else W.synsets(kel.split()[-1])
+            if not ss:
+                continue
+            s = ss[0]
+            a = ata(s, derinlik)
+            anahtar = (a.name(), s.lexname())
+            grup[anahtar] += w
+            ornek.setdefault(anahtar, (s.name(), s.definition(), kel))
+        if not grup:
+            continue
+        (a, lex), _ = grup.most_common(1)[0]
+        sonuc[k] = {'yontem': 'Vikisözlük/Arabic Ontology İngilizce karşılığı → Princeton WordNet ilk anlam (makine eşlemesi, AWN kaydı yok)', 'ince': a, 'orta': lex,
+                    'ust': UST.get(lex, 'hâl ve vasıf'), 'dayanak_synset': ornek[(a, lex)][0], 'dayanak_tanim': ornek[(a, lex)][1], 'dayanak_karsilik': ornek[(a, lex)][2]}
+    return sonuc

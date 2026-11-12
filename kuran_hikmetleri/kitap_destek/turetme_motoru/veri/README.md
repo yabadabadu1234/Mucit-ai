@@ -14,3 +14,6 @@ Ham dökümler depoya alınmaz (3,4 GB ve 0,9 GB); süzme betikleri aynen koştu
 
 ## Arabic WordNet v2 (AWN)
 Kaynak: Open Multilingual Wordnet 1.4, `arb/wn-data-arb.tab` (Arabic WordNet v2, http://www.globalwordnet.org/AWN/, CC BY-SA 3.0). Kök etiketli synset'ler Princeton WordNet'e bağlanır; kök dosyalarındaki `mana_tasnif` bundan türer. Ham dosya depoya alınmadı (nltk `omw-1.4` paketinden okunur).
+
+## İbn Sîde, el-Muhassas
+Kaynak: archive.org/details/2564Htm (Şâmile HTML dışa aktarımı; neşir: Halîl İbrâhîm Cefâl, Dâru İhyâi't-Türâs). Tek ham nüsha `kaynak/lugat/ham/muhassas_ibn_sida_shamile_htm.zip`. Konu sıralı lügat; kök dosyalarındaki `muhassas_tasnif` kök biçimlerinin kitap/bâblardaki geçişinden türer.
