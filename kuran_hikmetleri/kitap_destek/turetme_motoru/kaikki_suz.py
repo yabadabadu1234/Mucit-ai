@@ -1,4 +1,3 @@
-import gzip
 import json
 import re
 import sys
@@ -103,23 +102,3 @@ def siki(d):
     if d.get('wikipedia'):
         r['wp'] = d['wikipedia']
     return r
-
-
-def main(girdi, cikti):
-    n = 0
-    kokte = 0
-    with open(girdi, encoding='utf-8') as f, gzip.open(cikti, 'wt', encoding='utf-8', compresslevel=9) as o:
-        for line in f:
-            d = json.loads(line)
-            r = siki(d)
-            k = kok_bul(d)
-            if k:
-                r['k'] = k
-                kokte += 1
-            o.write(json.dumps(r, ensure_ascii=False, separators=(',', ':')) + '\n')
-            n += 1
-    print('girdi', n, 'kök bilinen', kokte)
-
-
-if __name__ == '__main__':
-    main(sys.argv[1], sys.argv[2])

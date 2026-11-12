@@ -39,13 +39,18 @@ def etimoloji():
     return d
 
 
-KAIKKI = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'veri', 'kaikki_siki.jsonl.gz')
+import kaikki_suz as KS
 
 
-def kaikki_yukle():
+def kaikki_yukle(yol):
+    assert yol and os.path.exists(yol), 'ham Kaikki dökümü verilmedi: python3 kelime_kaydi.py <kaikki-arabic.jsonl>'
     liste = []
-    for ln in gzip.open(KAIKKI, 'rt', encoding='utf-8'):
-        e = json.loads(ln)
+    for ln in open(yol, encoding='utf-8'):
+        d = json.loads(ln)
+        e = KS.siki(d)
+        k = KS.kok_bul(d)
+        if k:
+            e['k'] = k
         liste.append(e)
     return liste
 
@@ -89,7 +94,7 @@ def uret():
     kuran_kokleri = {I.normala(k['kok']) for k in kel if k['kok']} | set(kokdb)
     mk = MK.yukle()
     cb = oku_json(os.path.join(KOK, 'kaynak', 'lugat', 'cebel_mihveri.json'))['kokler']
-    kk = kaikki_yukle()
+    kk = kaikki_yukle(sys.argv[1] if len(sys.argv) > 1 else '')
     kk_kokleri = {kaikki_kok(e) for e in kk if e.get('k')}
     kokler_ad = sorted(kuran_kokleri | set(mk) | kk_kokleri)
     kk_atama = [kaikki_kok(e) for e in kk]
@@ -225,19 +230,16 @@ def yaz():
             kelime_kok[e['kelime']] = k
     with open(os.path.join(taban, 'kuranda_var', 'koksuz.json'), 'w', encoding='utf-8') as f:
         json.dump({'aciklama': 'Kökü olmayan kelimeler (harf, zamir, özel ad vb.)', 'kelimeler': koksuz}, f, ensure_ascii=False, separators=(',', ':'))
-    ks = collections.defaultdict(list)
-    for e in d['kaikki_koksuz']:
-        ks[e['u'][:1] or '_'].append(e)
-    kd = os.path.join(taban, 'kuranda_yok', 'kaikki_koksuz')
+    kd = os.path.join(taban, 'kuranda_yok', 'kelimeler')
     os.makedirs(kd, exist_ok=True)
-    kfih = []
-    for h, liste in sorted(ks.items()):
-        ad_ = 'u%04x.json' % ord(h[0])
-        with open(os.path.join(kd, ad_), 'w', encoding='utf-8') as f:
-            json.dump({'ilk_harf': h, 'madde_sayisi': len(liste), 'maddeler': liste}, f, ensure_ascii=False, separators=(',', ':'))
-        kfih.append([ad_, h, len(liste)])
-    with open(os.path.join(kd, 'FIHRIST.json'), 'w', encoding='utf-8') as f:
-        json.dump({'aciklama': 'Kaikki Vikisözlük maddeleri; kökü ne maddede ne asıl maddede ne müştakta bulunanlar (yeni kelimeler)', 'alanlar': ['dosya', 'ilk_harf', 'madde_sayisi'], 'dosyalar': kfih}, f, ensure_ascii=False, separators=(',', ':'))
+    kw = collections.defaultdict(list)
+    for e in d['kaikki_koksuz']:
+        ad_ = re.sub(r'[^\w]+', '_', e['u'], flags=re.U).strip('_')[:80] or 'adsiz'
+        kw[ad_].append(e)
+    for ad_, liste in kw.items():
+        with open(os.path.join(kd, ad_ + '.json'), 'w', encoding='utf-8') as f:
+            json.dump({'kelime': liste[0]['u'], 'maddeler': liste}, f, ensure_ascii=False, separators=(',', ':'))
+    d['sayilar']['kaikki_koksuz_kelime_dosyasi'] = len(kw)
     for ad in ('kuranda_var', 'kuranda_yok'):
         with open(os.path.join(taban, ad, 'FIHRIST.json'), 'w', encoding='utf-8') as f:
             json.dump({'sema': SEMA, 'sayilar': d['sayilar'], 'alanlar_kokler': ['dosya', 'kok', 'kelime_sayisi', 'mustak_satiri'], 'kokler': fih[ad],

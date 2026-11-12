@@ -7,7 +7,7 @@
 
 Ham dökümler depoya alınmaz (3,4 GB ve 0,9 GB); süzme betikleri aynen koşturulursa aynı dosyalar çıkar.
 
-| `kaikki_siki.jsonl.gz` | kaikki.org İngilizce Vikisözlük'ün Arapça dökümünün **233 417 maddesinin hepsi** (`kaikki_suz.py` ile süzüldü; çekim tabloları ve ses dosyaları düşer, etimoloji metni, soy bağları, tanımlar, asıl madde, soyundan gelenler ve akrabalar kalır) | kelime · etimoloji metni · etimoloji kalıpları (cog, bor, der, inh …) · tanım · etiket · asıl madde · Latin yazım · IPA · inen/türeyen/akraba kelimeler | CC BY-SA 4.0 |
+| (dosya yok) | kaikki.org İngilizce Vikisözlük'ün Arapça dökümü, 233 417 madde: https://kaikki.org/dictionary/Arabic/kaikki.org-dictionary-Arabic.jsonl | `kelime_kaydi.py <ham döküm>` doğrudan okur (`kaikki_suz.py` yalnız madde süzme kütüphanesi); ara dosya açılmaz. Maddeler `kokler/<kök>.json` içinde `sozlukler.kaikki_vikisozluk`, köksüzler `kuranda_yok/kelimeler/<kelime>.json` | CC BY-SA 4.0 |
 
 **Atıf (CC BY-SA):** Veri, Vikisözlük (en.wiktionary.org) katkıcılarına aittir; Tatu Ylonen'in wiktextract aracıyla çıkarılan kaikki.org dökümünden alınmıştır. Aynı lisansla (CC BY-SA 4.0) paylaşılır; yapılan değişiklik: alan süzme ve kök dosyalarına dağıtma.
 `ar_kok.jsonl` yalnız köklü maddelerin eski ve dar süzmesidir; müştak tanıklığı (`wikt.py`) onu okur, kök dosyalarındaki `kaikki_vikisozluk` alanı onun yerini tutar.
