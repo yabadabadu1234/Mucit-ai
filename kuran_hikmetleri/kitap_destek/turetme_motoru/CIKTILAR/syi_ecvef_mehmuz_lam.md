@@ -9,799 +9,799 @@ Sayım: **478 satır · 373 ayrı Arapça biçim · 0 satırda idgam · 144 sat�
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| fa'l | شَيْء | şayʾ | semâî aday | şey | kontrol | Vikisözlük: thing |  |
-| fi'l | شِيء | şīʾ | semâî aday · ilal | şey | kontrol |  |  |
-| fu'l | شُوء | şūʾ | semâî aday · ilal | şey | kontrol |  |  |
-| fa'al | شَاء | şāʾ | semâî aday · ilal | şey | kontrol |  |  |
-| fi'al | شِيَأ | şiyaʾ | semâî aday · ilal | şey | kontrol |  |  |
-| fu'ul | شُيُؤ | şuyuʾ | semâî aday | şey | kontrol |  |  |
-| fu'ūl | شُيُوء | şuyūʾ | semâî aday | şey | kontrol |  |  |
-| fi'āl | شِيَاء | şiyāʾ | semâî aday · ilal | şey | kontrol |  |  |
-| fu'āl | شُيَاء | şuyāʾ | semâî aday | şey | kontrol |  |  |
-| fa'āl | شَيَاء | şayāʾ | semâî aday | şey | kontrol |  |  |
-| fa'āle | شَيَاءَة | şayāʾa | semâî aday | şey | kontrol |  |  |
-| fu'ūle | شُيُوءَة | şuyūʾa | semâî aday | şey | kontrol |  |  |
-| fi'āle | شِيَاءَة | şiyāʾa | semâî aday · ilal | şey | kontrol |  |  |
-| fa'īl | شَيِيء | şayīʾ | semâî aday | şey | kontrol |  |  |
-| fa'ūl | شَيُوء | şayūʾ | semâî aday | şey | kontrol |  |  |
-| fa'alān | شَيَآن | şayaʾān | semâî aday | şey | kontrol |  |  |
-| fu'lān | شُيْآن | şuyʾān | semâî aday | şey | kontrol |  |  |
-| fi'lān | شِيْآن | şiyʾān | semâî aday | şey | kontrol |  |  |
-| fa'lā | شَيْأَى | şayʾā | semâî aday | şey | kontrol |  |  |
-| fu'lā | شُيْأَى | şuyʾā | semâî aday | şey | kontrol |  |  |
-| fi'lā | شِيْأَى | şiyʾā | semâî aday | şey | kontrol |  |  |
-| fa'ale | شَيَأَة | şayaʾa | semâî aday | şey | kontrol |  |  |
-| fi'ale | شِيَأَة | şiyaʾa | semâî aday | şey | kontrol |  |  |
-| fa'lūla | شَيْؤُوءَة | şayʾūʾa | semâî aday | şey | kontrol |  |  |
-| tuf'ūl | تُشْيُوء | tuşyūʾ | semâî aday | şey | kontrol |  |  |
-| taf'ila | تَشْيِئَة | taşyiʾa | semâî aday | şey | kontrol |  |  |
-| taf'ala | تَشْيَأَة | taşyaʾa | semâî aday | şey | kontrol |  |  |
-| maf'ula | مَشْيُؤَة | maşyuʾa | semâî aday | şey | kontrol |  |  |
-| maf'ila | مَشِيئَة | maşīʾa | semâî aday · ilal | şey | kontrol | Vikisözlük: masdar (bâb I): to will, to want, to intend, to wish |  |
+| fa'l | شَيْء | şayʾ | semâî aday | dileme | orta | Vikisözlük: thing |  |
+| fi'l | شِيء | şīʾ | semâî aday · ilal | dileme | orta |  |  |
+| fu'l | شُوء | şūʾ | semâî aday · ilal | dileme | orta |  |  |
+| fa'al | شَاء | şāʾ | semâî aday · ilal | dileme | orta |  |  |
+| fi'al | شِيَأ | şiyaʾ | semâî aday · ilal | dileme | orta |  |  |
+| fu'ul | شُيُؤ | şuyuʾ | semâî aday | dileme | orta |  |  |
+| fu'ūl | شُيُوء | şuyūʾ | semâî aday | dileme | orta |  |  |
+| fi'āl | شِيَاء | şiyāʾ | semâî aday · ilal | dileme | orta |  |  |
+| fu'āl | شُيَاء | şuyāʾ | semâî aday | dileme | orta |  |  |
+| fa'āl | شَيَاء | şayāʾ | semâî aday | dileme | orta |  |  |
+| fa'āle | شَيَاءَة | şayāʾa | semâî aday | dileme | orta |  |  |
+| fu'ūle | شُيُوءَة | şuyūʾa | semâî aday | dileme | orta |  |  |
+| fi'āle | شِيَاءَة | şiyāʾa | semâî aday · ilal | dileme | orta |  |  |
+| fa'īl | شَيِيء | şayīʾ | semâî aday | dileme | orta |  |  |
+| fa'ūl | شَيُوء | şayūʾ | semâî aday | dileme | orta |  |  |
+| fa'alān | شَيَآن | şayaʾān | semâî aday | dileme | orta |  |  |
+| fu'lān | شُيْآن | şuyʾān | semâî aday | dileme | orta |  |  |
+| fi'lān | شِيْآن | şiyʾān | semâî aday | dileme | orta |  |  |
+| fa'lā | شَيْأَى | şayʾā | semâî aday | dileme | orta |  |  |
+| fu'lā | شُيْأَى | şuyʾā | semâî aday | dileme | orta |  |  |
+| fi'lā | شِيْأَى | şiyʾā | semâî aday | dileme | orta |  |  |
+| fa'ale | شَيَأَة | şayaʾa | semâî aday | dileme | orta |  |  |
+| fi'ale | شِيَأَة | şiyaʾa | semâî aday | dileme | orta |  |  |
+| fa'lūla | شَيْؤُوءَة | şayʾūʾa | semâî aday | dileme | orta |  |  |
+| tuf'ūl | تُشْيُوء | tuşyūʾ | semâî aday | dileme | orta |  |  |
+| taf'ila | تَشْيِئَة | taşyiʾa | semâî aday | dileme | orta |  |  |
+| taf'ala | تَشْيَأَة | taşyaʾa | semâî aday | dileme | orta |  |  |
+| maf'ula | مَشْيُؤَة | maşyuʾa | semâî aday | dileme | orta |  |  |
+| maf'ila | مَشِيئَة | maşīʾa | semâî aday · ilal | dileme | orta | Vikisözlük: masdar (bâb I): to will, to want, to intend, to wish |  |
 
 ## masdar · bâb II (3)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| taf'īl | تَشْيِيء | taşyīʾ | kıyâsî | şey olma | kontrol | Vikisözlük: masdar (bâb II): to objectify |  |
-| taf'ila | تَشْيِئَة | taşyiʾa | kıyâsî | şey olma | kontrol |  |  |
-| fi''āl | شِيِّاء | şiyyāʾ | kıyâsî | şey olma | kontrol |  |  |
+| taf'īl | تَشْيِيء | taşyīʾ | kıyâsî | dileme | orta | Vikisözlük: masdar (bâb II): to objectify |  |
+| taf'ila | تَشْيِئَة | taşyiʾa | kıyâsî | dileme | orta |  |  |
+| fi''āl | شِيِّاء | şiyyāʾ | kıyâsî | dileme | orta |  |  |
 
 ## ism-i merre · bâb II (2)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| taf'īl + tâ | تَشْيِيئَة | taşyīʾa | aday | bir kere şey olma | kontrol |  |  |
-| fi''āl + tâ | شِيِّاءَة | şiyyāʾa | aday | bir kere şey olma | kontrol |  |  |
+| taf'īl + tâ | تَشْيِيئَة | taşyīʾa | aday | bir kere dileme | orta |  |  |
+| fi''āl + tâ | شِيِّاءَة | şiyyāʾa | aday | bir kere dileme | orta |  |  |
 
 ## ism-i fâil · bâb II (7)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| mufa''il | مُشَيِّئ | muşayyiʾ | kıyâsî | şey olan | kontrol |  |  |
-| mufa''il + müennes | مُشَيِّئَة | muşayyiʾa | kıyâsî | şey olan (dişi) | kontrol |  |  |
-| mufa''il + tesniye | مُشَيِّئَان | muşayyiʾān | kıyâsî | iki şey olan | kontrol |  |  |
-| mufa''il + müennes tesniye | مُشَيِّئَتَان | muşayyiʾatān | kıyâsî | iki şey olan (dişi) | kontrol |  |  |
-| mufa''il + cem‘-i sâlim müzekker (-ûn) | مُشَيِّئُون | muşayyiʾūn | kıyâsî | şey olanlar | kontrol |  |  |
-| mufa''il + cem‘-i sâlim müzekker (-în) | مُشَيِّئِين | muşayyiʾīn | kıyâsî | şey olanlar | kontrol |  |  |
-| mufa''il + cem‘-i sâlim müennes (-ât) | مُشَيِّئَات | muşayyiʾāt | kıyâsî | şey olanlar (dişi) | kontrol |  |  |
+| mufa''il | مُشَيِّئ | muşayyiʾ | kıyâsî | dileyen | orta |  |  |
+| mufa''il + müennes | مُشَيِّئَة | muşayyiʾa | kıyâsî | dileyen (dişi) | orta |  |  |
+| mufa''il + tesniye | مُشَيِّئَان | muşayyiʾān | kıyâsî | iki dileyen | orta |  |  |
+| mufa''il + müennes tesniye | مُشَيِّئَتَان | muşayyiʾatān | kıyâsî | iki dileyen (dişi) | orta |  |  |
+| mufa''il + cem‘-i sâlim müzekker (-ûn) | مُشَيِّئُون | muşayyiʾūn | kıyâsî | dileyenler | orta |  |  |
+| mufa''il + cem‘-i sâlim müzekker (-în) | مُشَيِّئِين | muşayyiʾīn | kıyâsî | dileyenler | orta |  |  |
+| mufa''il + cem‘-i sâlim müennes (-ât) | مُشَيِّئَات | muşayyiʾāt | kıyâsî | dileyenler (dişi) | orta |  |  |
 
 ## ism-i mef‘ûl · bâb II (7)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| mufa''al | مُشَيَّأ | muşayyaʾ | kıyâsî | şey olunmuş | kontrol |  |  |
-| mufa''al + müennes | مُشَيَّأَة | muşayyaʾa | kıyâsî | şey olunmuş (dişi) | kontrol |  |  |
-| mufa''al + tesniye | مُشَيَّآن | muşayyaʾān | kıyâsî | iki şey olunmuş | kontrol |  |  |
-| mufa''al + müennes tesniye | مُشَيَّأَتَان | muşayyaʾatān | kıyâsî | iki şey olunmuş (dişi) | kontrol |  |  |
-| mufa''al + cem‘-i sâlim müzekker (-ûn) | مُشَيَّؤُون | muşayyaʾūn | kıyâsî | şey olunmuşlar | kontrol |  |  |
-| mufa''al + cem‘-i sâlim müzekker (-în) | مُشَيَّئِين | muşayyaʾīn | kıyâsî | şey olunmuşlar | kontrol |  |  |
-| mufa''al + cem‘-i sâlim müennes (-ât) | مُشَيَّآت | muşayyaʾāt | kıyâsî | şey olunmuşlar (dişi) | kontrol |  |  |
+| mufa''al | مُشَيَّأ | muşayyaʾ | kıyâsî | dilenmiş | orta |  |  |
+| mufa''al + müennes | مُشَيَّأَة | muşayyaʾa | kıyâsî | dilenmiş (dişi) | orta |  |  |
+| mufa''al + tesniye | مُشَيَّآن | muşayyaʾān | kıyâsî | iki dilenmiş | orta |  |  |
+| mufa''al + müennes tesniye | مُشَيَّأَتَان | muşayyaʾatān | kıyâsî | iki dilenmiş (dişi) | orta |  |  |
+| mufa''al + cem‘-i sâlim müzekker (-ûn) | مُشَيَّؤُون | muşayyaʾūn | kıyâsî | dilenmişler | orta |  |  |
+| mufa''al + cem‘-i sâlim müzekker (-în) | مُشَيَّئِين | muşayyaʾīn | kıyâsî | dilenmişler | orta |  |  |
+| mufa''al + cem‘-i sâlim müennes (-ât) | مُشَيَّآت | muşayyaʾāt | kıyâsî | dilenmişler (dişi) | orta |  |  |
 
 ## mekân/zaman/masdar-ı mîmî · bâb II (1)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| mufa''al | مُشَيَّأ | muşayyaʾ | kıyâsî | şey olma (yeri/zamanı) | kontrol |  |  |
+| mufa''al | مُشَيَّأ | muşayyaʾ | kıyâsî | dileme (yeri/zamanı) | orta |  |  |
 
 ## masdar · bâb III (2)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| mufā'ale | مُشَايَأَة | muşāyaʾa | kıyâsî | şey oluşma | kontrol |  |  |
-| fi'āl | شِيَاء | şiyāʾ | kıyâsî · ilal | şey oluşma | kontrol |  |  |
+| mufā'ale | مُشَايَأَة | muşāyaʾa | kıyâsî | dileşme | orta |  |  |
+| fi'āl | شِيَاء | şiyāʾ | kıyâsî · ilal | dileşme | orta |  |  |
 
 ## ism-i merre · bâb III (1)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| fi'āl + tâ | شِيَاءَة | şiyāʾa | aday · ilal | bir kere şey oluşma | kontrol |  |  |
+| fi'āl + tâ | شِيَاءَة | şiyāʾa | aday · ilal | bir kere dileşme | orta |  |  |
 
 ## ism-i fâil · bâb III (7)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| mufā'il | مُشَايِئ | muşāyiʾ | kıyâsî | şey oluşan | kontrol |  |  |
-| mufā'il + müennes | مُشَايِئَة | muşāyiʾa | kıyâsî | şey oluşan (dişi) | kontrol |  |  |
-| mufā'il + tesniye | مُشَايِئَان | muşāyiʾān | kıyâsî | iki şey oluşan | kontrol |  |  |
-| mufā'il + müennes tesniye | مُشَايِئَتَان | muşāyiʾatān | kıyâsî | iki şey oluşan (dişi) | kontrol |  |  |
-| mufā'il + cem‘-i sâlim müzekker (-ûn) | مُشَايِئُون | muşāyiʾūn | kıyâsî | şey oluşanlar | kontrol |  |  |
-| mufā'il + cem‘-i sâlim müzekker (-în) | مُشَايِئِين | muşāyiʾīn | kıyâsî | şey oluşanlar | kontrol |  |  |
-| mufā'il + cem‘-i sâlim müennes (-ât) | مُشَايِئَات | muşāyiʾāt | kıyâsî | şey oluşanlar (dişi) | kontrol |  |  |
+| mufā'il | مُشَايِئ | muşāyiʾ | kıyâsî | dileşen | orta |  |  |
+| mufā'il + müennes | مُشَايِئَة | muşāyiʾa | kıyâsî | dileşen (dişi) | orta |  |  |
+| mufā'il + tesniye | مُشَايِئَان | muşāyiʾān | kıyâsî | iki dileşen | orta |  |  |
+| mufā'il + müennes tesniye | مُشَايِئَتَان | muşāyiʾatān | kıyâsî | iki dileşen (dişi) | orta |  |  |
+| mufā'il + cem‘-i sâlim müzekker (-ûn) | مُشَايِئُون | muşāyiʾūn | kıyâsî | dileşenler | orta |  |  |
+| mufā'il + cem‘-i sâlim müzekker (-în) | مُشَايِئِين | muşāyiʾīn | kıyâsî | dileşenler | orta |  |  |
+| mufā'il + cem‘-i sâlim müennes (-ât) | مُشَايِئَات | muşāyiʾāt | kıyâsî | dileşenler (dişi) | orta |  |  |
 
 ## ism-i mef‘ûl · bâb III (7)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| mufā'al | مُشَايَأ | muşāyaʾ | kıyâsî | şey oluşmuş | kontrol |  |  |
-| mufā'al + müennes | مُشَايَأَة | muşāyaʾa | kıyâsî | şey oluşmuş (dişi) | kontrol |  |  |
-| mufā'al + tesniye | مُشَايَآن | muşāyaʾān | kıyâsî | iki şey oluşmuş | kontrol |  |  |
-| mufā'al + müennes tesniye | مُشَايَأَتَان | muşāyaʾatān | kıyâsî | iki şey oluşmuş (dişi) | kontrol |  |  |
-| mufā'al + cem‘-i sâlim müzekker (-ûn) | مُشَايَؤُون | muşāyaʾūn | kıyâsî | şey oluşmuşlar | kontrol |  |  |
-| mufā'al + cem‘-i sâlim müzekker (-în) | مُشَايَئِين | muşāyaʾīn | kıyâsî | şey oluşmuşlar | kontrol |  |  |
-| mufā'al + cem‘-i sâlim müennes (-ât) | مُشَايَآت | muşāyaʾāt | kıyâsî | şey oluşmuşlar (dişi) | kontrol |  |  |
+| mufā'al | مُشَايَأ | muşāyaʾ | kıyâsî | dileşmiş | orta |  |  |
+| mufā'al + müennes | مُشَايَأَة | muşāyaʾa | kıyâsî | dileşmiş (dişi) | orta |  |  |
+| mufā'al + tesniye | مُشَايَآن | muşāyaʾān | kıyâsî | iki dileşmiş | orta |  |  |
+| mufā'al + müennes tesniye | مُشَايَأَتَان | muşāyaʾatān | kıyâsî | iki dileşmiş (dişi) | orta |  |  |
+| mufā'al + cem‘-i sâlim müzekker (-ûn) | مُشَايَؤُون | muşāyaʾūn | kıyâsî | dileşmişler | orta |  |  |
+| mufā'al + cem‘-i sâlim müzekker (-în) | مُشَايَئِين | muşāyaʾīn | kıyâsî | dileşmişler | orta |  |  |
+| mufā'al + cem‘-i sâlim müennes (-ât) | مُشَايَآت | muşāyaʾāt | kıyâsî | dileşmişler (dişi) | orta |  |  |
 
 ## mekân/zaman/masdar-ı mîmî · bâb III (1)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| mufā'al | مُشَايَأ | muşāyaʾ | kıyâsî | şey oluşma (yeri/zamanı) | kontrol |  |  |
+| mufā'al | مُشَايَأ | muşāyaʾ | kıyâsî | dileşme (yeri/zamanı) | orta |  |  |
 
 ## masdar · bâb IV (1)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| if'āl | إِشَاءَة | ʾişāʾa | kıyâsî · ilal | şey olma | kontrol |  |  |
+| if'āl | إِشَاءَة | ʾişāʾa | kıyâsî · ilal | dileme | orta |  |  |
 
 ## ism-i fâil · bâb IV (7)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| muf'il | مُشِيء | muşīʾ | kıyâsî · ilal | şey olan | kontrol |  |  |
-| muf'il + müennes | مُشِيئَة | muşīʾa | kıyâsî · ilal | şey olan (dişi) | kontrol |  |  |
-| muf'il + tesniye | مُشِيئَان | muşīʾān | kıyâsî · ilal | iki şey olan | kontrol |  |  |
-| muf'il + müennes tesniye | مُشِيئَتَان | muşīʾatān | kıyâsî · ilal | iki şey olan (dişi) | kontrol |  |  |
-| muf'il + cem‘-i sâlim müzekker (-ûn) | مُشِيئُون | muşīʾūn | kıyâsî · ilal | şey olanlar | kontrol |  |  |
-| muf'il + cem‘-i sâlim müzekker (-în) | مُشِيئِين | muşīʾīn | kıyâsî · ilal | şey olanlar | kontrol |  |  |
-| muf'il + cem‘-i sâlim müennes (-ât) | مُشِيئَات | muşīʾāt | kıyâsî · ilal | şey olanlar (dişi) | kontrol |  |  |
+| muf'il | مُشِيء | muşīʾ | kıyâsî · ilal | dileyen | orta |  |  |
+| muf'il + müennes | مُشِيئَة | muşīʾa | kıyâsî · ilal | dileyen (dişi) | orta |  |  |
+| muf'il + tesniye | مُشِيئَان | muşīʾān | kıyâsî · ilal | iki dileyen | orta |  |  |
+| muf'il + müennes tesniye | مُشِيئَتَان | muşīʾatān | kıyâsî · ilal | iki dileyen (dişi) | orta |  |  |
+| muf'il + cem‘-i sâlim müzekker (-ûn) | مُشِيئُون | muşīʾūn | kıyâsî · ilal | dileyenler | orta |  |  |
+| muf'il + cem‘-i sâlim müzekker (-în) | مُشِيئِين | muşīʾīn | kıyâsî · ilal | dileyenler | orta |  |  |
+| muf'il + cem‘-i sâlim müennes (-ât) | مُشِيئَات | muşīʾāt | kıyâsî · ilal | dileyenler (dişi) | orta |  |  |
 
 ## ism-i mef‘ûl · bâb IV (7)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| muf'al | مُشَاء | muşāʾ | kıyâsî · ilal | şey olunmuş | kontrol |  |  |
-| muf'al + müennes | مُشَاءَة | muşāʾa | kıyâsî · ilal | şey olunmuş (dişi) | kontrol |  |  |
-| muf'al + tesniye | مُشَاآن | muşāʾān | kıyâsî · ilal | iki şey olunmuş | kontrol |  |  |
-| muf'al + müennes tesniye | مُشَاءَتَان | muşāʾatān | kıyâsî · ilal | iki şey olunmuş (dişi) | kontrol |  |  |
-| muf'al + cem‘-i sâlim müzekker (-ûn) | مُشَاؤُون | muşāʾūn | kıyâsî · ilal | şey olunmuşlar | kontrol |  |  |
-| muf'al + cem‘-i sâlim müzekker (-în) | مُشَائِين | muşāʾīn | kıyâsî · ilal | şey olunmuşlar | kontrol |  |  |
-| muf'al + cem‘-i sâlim müennes (-ât) | مُشَاآت | muşāʾāt | kıyâsî · ilal | şey olunmuşlar (dişi) | kontrol |  |  |
+| muf'al | مُشَاء | muşāʾ | kıyâsî · ilal | dilenmiş | orta |  |  |
+| muf'al + müennes | مُشَاءَة | muşāʾa | kıyâsî · ilal | dilenmiş (dişi) | orta |  |  |
+| muf'al + tesniye | مُشَاآن | muşāʾān | kıyâsî · ilal | iki dilenmiş | orta |  |  |
+| muf'al + müennes tesniye | مُشَاءَتَان | muşāʾatān | kıyâsî · ilal | iki dilenmiş (dişi) | orta |  |  |
+| muf'al + cem‘-i sâlim müzekker (-ûn) | مُشَاؤُون | muşāʾūn | kıyâsî · ilal | dilenmişler | orta |  |  |
+| muf'al + cem‘-i sâlim müzekker (-în) | مُشَائِين | muşāʾīn | kıyâsî · ilal | dilenmişler | orta |  |  |
+| muf'al + cem‘-i sâlim müennes (-ât) | مُشَاآت | muşāʾāt | kıyâsî · ilal | dilenmişler (dişi) | orta |  |  |
 
 ## mekân/zaman/masdar-ı mîmî · bâb IV (1)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| muf'al | مُشَاء | muşāʾ | kıyâsî · ilal | şey olma (yeri/zamanı) | kontrol |  |  |
+| muf'al | مُشَاء | muşāʾ | kıyâsî · ilal | dileme (yeri/zamanı) | orta |  |  |
 
 ## masdar · bâb V (1)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| tafa''ul | تَشَيُّؤ | taşayyuʾ | kıyâsî | şey olunma | kontrol | Vikisözlük: masdar (bâb V): to reify |  |
+| tafa''ul | تَشَيُّؤ | taşayyuʾ | kıyâsî | dilenme | orta | Vikisözlük: masdar (bâb V): to reify |  |
 
 ## ism-i merre · bâb V (1)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| tafa''ul + tâ | تَشَيُّؤَة | taşayyuʾa | aday | bir kere şey olunma | kontrol |  |  |
+| tafa''ul + tâ | تَشَيُّؤَة | taşayyuʾa | aday | bir kere dilenme | orta |  |  |
 
 ## ism-i fâil · bâb V (7)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| mutafa''il | مُتَشَيِّئ | mutaşayyiʾ | kıyâsî | şey olunan | kontrol |  |  |
-| mutafa''il + müennes | مُتَشَيِّئَة | mutaşayyiʾa | kıyâsî | şey olunan (dişi) | kontrol |  |  |
-| mutafa''il + tesniye | مُتَشَيِّئَان | mutaşayyiʾān | kıyâsî | iki şey olunan | kontrol |  |  |
-| mutafa''il + müennes tesniye | مُتَشَيِّئَتَان | mutaşayyiʾatān | kıyâsî | iki şey olunan (dişi) | kontrol |  |  |
-| mutafa''il + cem‘-i sâlim müzekker (-ûn) | مُتَشَيِّئُون | mutaşayyiʾūn | kıyâsî | şey olunanlar | kontrol |  |  |
-| mutafa''il + cem‘-i sâlim müzekker (-în) | مُتَشَيِّئِين | mutaşayyiʾīn | kıyâsî | şey olunanlar | kontrol |  |  |
-| mutafa''il + cem‘-i sâlim müennes (-ât) | مُتَشَيِّئَات | mutaşayyiʾāt | kıyâsî | şey olunanlar (dişi) | kontrol |  |  |
+| mutafa''il | مُتَشَيِّئ | mutaşayyiʾ | kıyâsî | dilenen | orta |  |  |
+| mutafa''il + müennes | مُتَشَيِّئَة | mutaşayyiʾa | kıyâsî | dilenen (dişi) | orta |  |  |
+| mutafa''il + tesniye | مُتَشَيِّئَان | mutaşayyiʾān | kıyâsî | iki dilenen | orta |  |  |
+| mutafa''il + müennes tesniye | مُتَشَيِّئَتَان | mutaşayyiʾatān | kıyâsî | iki dilenen (dişi) | orta |  |  |
+| mutafa''il + cem‘-i sâlim müzekker (-ûn) | مُتَشَيِّئُون | mutaşayyiʾūn | kıyâsî | dilenenler | orta |  |  |
+| mutafa''il + cem‘-i sâlim müzekker (-în) | مُتَشَيِّئِين | mutaşayyiʾīn | kıyâsî | dilenenler | orta |  |  |
+| mutafa''il + cem‘-i sâlim müennes (-ât) | مُتَشَيِّئَات | mutaşayyiʾāt | kıyâsî | dilenenler (dişi) | orta |  |  |
 
 ## ism-i mef‘ûl · bâb V (7)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| mutafa''al | مُتَشَيَّأ | mutaşayyaʾ | kıyâsî | şey olunmuş | kontrol |  |  |
-| mutafa''al + müennes | مُتَشَيَّأَة | mutaşayyaʾa | kıyâsî | şey olunmuş (dişi) | kontrol |  |  |
-| mutafa''al + tesniye | مُتَشَيَّآن | mutaşayyaʾān | kıyâsî | iki şey olunmuş | kontrol |  |  |
-| mutafa''al + müennes tesniye | مُتَشَيَّأَتَان | mutaşayyaʾatān | kıyâsî | iki şey olunmuş (dişi) | kontrol |  |  |
-| mutafa''al + cem‘-i sâlim müzekker (-ûn) | مُتَشَيَّؤُون | mutaşayyaʾūn | kıyâsî | şey olunmuşlar | kontrol |  |  |
-| mutafa''al + cem‘-i sâlim müzekker (-în) | مُتَشَيَّئِين | mutaşayyaʾīn | kıyâsî | şey olunmuşlar | kontrol |  |  |
-| mutafa''al + cem‘-i sâlim müennes (-ât) | مُتَشَيَّآت | mutaşayyaʾāt | kıyâsî | şey olunmuşlar (dişi) | kontrol |  |  |
+| mutafa''al | مُتَشَيَّأ | mutaşayyaʾ | kıyâsî | dilenmiş | orta |  |  |
+| mutafa''al + müennes | مُتَشَيَّأَة | mutaşayyaʾa | kıyâsî | dilenmiş (dişi) | orta |  |  |
+| mutafa''al + tesniye | مُتَشَيَّآن | mutaşayyaʾān | kıyâsî | iki dilenmiş | orta |  |  |
+| mutafa''al + müennes tesniye | مُتَشَيَّأَتَان | mutaşayyaʾatān | kıyâsî | iki dilenmiş (dişi) | orta |  |  |
+| mutafa''al + cem‘-i sâlim müzekker (-ûn) | مُتَشَيَّؤُون | mutaşayyaʾūn | kıyâsî | dilenmişler | orta |  |  |
+| mutafa''al + cem‘-i sâlim müzekker (-în) | مُتَشَيَّئِين | mutaşayyaʾīn | kıyâsî | dilenmişler | orta |  |  |
+| mutafa''al + cem‘-i sâlim müennes (-ât) | مُتَشَيَّآت | mutaşayyaʾāt | kıyâsî | dilenmişler (dişi) | orta |  |  |
 
 ## mekân/zaman/masdar-ı mîmî · bâb V (1)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| mutafa''al | مُتَشَيَّأ | mutaşayyaʾ | kıyâsî | şey olunma (yeri/zamanı) | kontrol |  |  |
+| mutafa''al | مُتَشَيَّأ | mutaşayyaʾ | kıyâsî | dilenme (yeri/zamanı) | orta |  |  |
 
 ## masdar · bâb VI (1)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| tafā'ul | تَشَايُؤ | taşāyuʾ | kıyâsî | şey oluşma | kontrol |  |  |
+| tafā'ul | تَشَايُؤ | taşāyuʾ | kıyâsî | dileşme | orta |  |  |
 
 ## ism-i merre · bâb VI (1)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| tafā'ul + tâ | تَشَايُؤَة | taşāyuʾa | aday | bir kere şey oluşma | kontrol |  |  |
+| tafā'ul + tâ | تَشَايُؤَة | taşāyuʾa | aday | bir kere dileşme | orta |  |  |
 
 ## ism-i fâil · bâb VI (7)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| mutafā'il | مُتَشَايِئ | mutaşāyiʾ | kıyâsî | şey oluşan | kontrol |  |  |
-| mutafā'il + müennes | مُتَشَايِئَة | mutaşāyiʾa | kıyâsî | şey oluşan (dişi) | kontrol |  |  |
-| mutafā'il + tesniye | مُتَشَايِئَان | mutaşāyiʾān | kıyâsî | iki şey oluşan | kontrol |  |  |
-| mutafā'il + müennes tesniye | مُتَشَايِئَتَان | mutaşāyiʾatān | kıyâsî | iki şey oluşan (dişi) | kontrol |  |  |
-| mutafā'il + cem‘-i sâlim müzekker (-ûn) | مُتَشَايِئُون | mutaşāyiʾūn | kıyâsî | şey oluşanlar | kontrol |  |  |
-| mutafā'il + cem‘-i sâlim müzekker (-în) | مُتَشَايِئِين | mutaşāyiʾīn | kıyâsî | şey oluşanlar | kontrol |  |  |
-| mutafā'il + cem‘-i sâlim müennes (-ât) | مُتَشَايِئَات | mutaşāyiʾāt | kıyâsî | şey oluşanlar (dişi) | kontrol |  |  |
+| mutafā'il | مُتَشَايِئ | mutaşāyiʾ | kıyâsî | dileşen | orta |  |  |
+| mutafā'il + müennes | مُتَشَايِئَة | mutaşāyiʾa | kıyâsî | dileşen (dişi) | orta |  |  |
+| mutafā'il + tesniye | مُتَشَايِئَان | mutaşāyiʾān | kıyâsî | iki dileşen | orta |  |  |
+| mutafā'il + müennes tesniye | مُتَشَايِئَتَان | mutaşāyiʾatān | kıyâsî | iki dileşen (dişi) | orta |  |  |
+| mutafā'il + cem‘-i sâlim müzekker (-ûn) | مُتَشَايِئُون | mutaşāyiʾūn | kıyâsî | dileşenler | orta |  |  |
+| mutafā'il + cem‘-i sâlim müzekker (-în) | مُتَشَايِئِين | mutaşāyiʾīn | kıyâsî | dileşenler | orta |  |  |
+| mutafā'il + cem‘-i sâlim müennes (-ât) | مُتَشَايِئَات | mutaşāyiʾāt | kıyâsî | dileşenler (dişi) | orta |  |  |
 
 ## ism-i mef‘ûl · bâb VI (7)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| mutafā'al | مُتَشَايَأ | mutaşāyaʾ | kıyâsî | şey oluşmuş | kontrol |  |  |
-| mutafā'al + müennes | مُتَشَايَأَة | mutaşāyaʾa | kıyâsî | şey oluşmuş (dişi) | kontrol |  |  |
-| mutafā'al + tesniye | مُتَشَايَآن | mutaşāyaʾān | kıyâsî | iki şey oluşmuş | kontrol |  |  |
-| mutafā'al + müennes tesniye | مُتَشَايَأَتَان | mutaşāyaʾatān | kıyâsî | iki şey oluşmuş (dişi) | kontrol |  |  |
-| mutafā'al + cem‘-i sâlim müzekker (-ûn) | مُتَشَايَؤُون | mutaşāyaʾūn | kıyâsî | şey oluşmuşlar | kontrol |  |  |
-| mutafā'al + cem‘-i sâlim müzekker (-în) | مُتَشَايَئِين | mutaşāyaʾīn | kıyâsî | şey oluşmuşlar | kontrol |  |  |
-| mutafā'al + cem‘-i sâlim müennes (-ât) | مُتَشَايَآت | mutaşāyaʾāt | kıyâsî | şey oluşmuşlar (dişi) | kontrol |  |  |
+| mutafā'al | مُتَشَايَأ | mutaşāyaʾ | kıyâsî | dileşmiş | orta |  |  |
+| mutafā'al + müennes | مُتَشَايَأَة | mutaşāyaʾa | kıyâsî | dileşmiş (dişi) | orta |  |  |
+| mutafā'al + tesniye | مُتَشَايَآن | mutaşāyaʾān | kıyâsî | iki dileşmiş | orta |  |  |
+| mutafā'al + müennes tesniye | مُتَشَايَأَتَان | mutaşāyaʾatān | kıyâsî | iki dileşmiş (dişi) | orta |  |  |
+| mutafā'al + cem‘-i sâlim müzekker (-ûn) | مُتَشَايَؤُون | mutaşāyaʾūn | kıyâsî | dileşmişler | orta |  |  |
+| mutafā'al + cem‘-i sâlim müzekker (-în) | مُتَشَايَئِين | mutaşāyaʾīn | kıyâsî | dileşmişler | orta |  |  |
+| mutafā'al + cem‘-i sâlim müennes (-ât) | مُتَشَايَآت | mutaşāyaʾāt | kıyâsî | dileşmişler (dişi) | orta |  |  |
 
 ## mekân/zaman/masdar-ı mîmî · bâb VI (1)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| mutafā'al | مُتَشَايَأ | mutaşāyaʾ | kıyâsî | şey oluşma (yeri/zamanı) | kontrol |  |  |
+| mutafā'al | مُتَشَايَأ | mutaşāyaʾ | kıyâsî | dileşme (yeri/zamanı) | orta |  |  |
 
 ## masdar · bâb VII (1)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| infi'āl | اِنْشِيَاء | inşiyāʾ | kıyâsî · ilal | şey olunma | kontrol |  |  |
+| infi'āl | اِنْشِيَاء | inşiyāʾ | kıyâsî · ilal | dilenme | orta |  |  |
 
 ## ism-i merre · bâb VII (1)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| infi'āl + tâ | اِنْشِيَاءَة | inşiyāʾa | aday · ilal | bir kere şey olunma | kontrol |  |  |
+| infi'āl + tâ | اِنْشِيَاءَة | inşiyāʾa | aday · ilal | bir kere dilenme | orta |  |  |
 
 ## ism-i fâil · bâb VII (7)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| munfa'il | مُنْشَاء | munşāʾ | kıyâsî · ilal | şey olunan | kontrol |  |  |
-| munfa'il + müennes | مُنْشَاءَة | munşāʾa | kıyâsî · ilal | şey olunan (dişi) | kontrol |  |  |
-| munfa'il + tesniye | مُنْشَاآن | munşāʾān | kıyâsî · ilal | iki şey olunan | kontrol |  |  |
-| munfa'il + müennes tesniye | مُنْشَاءَتَان | munşāʾatān | kıyâsî · ilal | iki şey olunan (dişi) | kontrol |  |  |
-| munfa'il + cem‘-i sâlim müzekker (-ûn) | مُنْشَاؤُون | munşāʾūn | kıyâsî · ilal | şey olunanlar | kontrol |  |  |
-| munfa'il + cem‘-i sâlim müzekker (-în) | مُنْشَائِين | munşāʾīn | kıyâsî · ilal | şey olunanlar | kontrol |  |  |
-| munfa'il + cem‘-i sâlim müennes (-ât) | مُنْشَاآت | munşāʾāt | kıyâsî · ilal | şey olunanlar (dişi) | kontrol |  |  |
+| munfa'il | مُنْشَاء | munşāʾ | kıyâsî · ilal | dilenen | orta |  |  |
+| munfa'il + müennes | مُنْشَاءَة | munşāʾa | kıyâsî · ilal | dilenen (dişi) | orta |  |  |
+| munfa'il + tesniye | مُنْشَاآن | munşāʾān | kıyâsî · ilal | iki dilenen | orta |  |  |
+| munfa'il + müennes tesniye | مُنْشَاءَتَان | munşāʾatān | kıyâsî · ilal | iki dilenen (dişi) | orta |  |  |
+| munfa'il + cem‘-i sâlim müzekker (-ûn) | مُنْشَاؤُون | munşāʾūn | kıyâsî · ilal | dilenenler | orta |  |  |
+| munfa'il + cem‘-i sâlim müzekker (-în) | مُنْشَائِين | munşāʾīn | kıyâsî · ilal | dilenenler | orta |  |  |
+| munfa'il + cem‘-i sâlim müennes (-ât) | مُنْشَاآت | munşāʾāt | kıyâsî · ilal | dilenenler (dişi) | orta |  |  |
 
 ## ism-i mef‘ûl · bâb VII (7)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| munfa'al | مُنْشَاء | munşāʾ | aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal | şey olunmuş | kontrol |  |  |
-| munfa'al + müennes | مُنْشَاءَة | munşāʾa | aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal | şey olunmuş (dişi) | kontrol |  |  |
-| munfa'al + tesniye | مُنْشَاآن | munşāʾān | aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal | iki şey olunmuş | kontrol |  |  |
-| munfa'al + müennes tesniye | مُنْشَاءَتَان | munşāʾatān | aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal | iki şey olunmuş (dişi) | kontrol |  |  |
-| munfa'al + cem‘-i sâlim müzekker (-ûn) | مُنْشَاؤُون | munşāʾūn | aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal | şey olunmuşlar | kontrol |  |  |
-| munfa'al + cem‘-i sâlim müzekker (-în) | مُنْشَائِين | munşāʾīn | aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal | şey olunmuşlar | kontrol |  |  |
-| munfa'al + cem‘-i sâlim müennes (-ât) | مُنْشَاآت | munşāʾāt | aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal | şey olunmuşlar (dişi) | kontrol |  |  |
+| munfa'al | مُنْشَاء | munşāʾ | aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal | dilenmiş | orta |  |  |
+| munfa'al + müennes | مُنْشَاءَة | munşāʾa | aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal | dilenmiş (dişi) | orta |  |  |
+| munfa'al + tesniye | مُنْشَاآن | munşāʾān | aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal | iki dilenmiş | orta |  |  |
+| munfa'al + müennes tesniye | مُنْشَاءَتَان | munşāʾatān | aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal | iki dilenmiş (dişi) | orta |  |  |
+| munfa'al + cem‘-i sâlim müzekker (-ûn) | مُنْشَاؤُون | munşāʾūn | aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal | dilenmişler | orta |  |  |
+| munfa'al + cem‘-i sâlim müzekker (-în) | مُنْشَائِين | munşāʾīn | aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal | dilenmişler | orta |  |  |
+| munfa'al + cem‘-i sâlim müennes (-ât) | مُنْشَاآت | munşāʾāt | aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal | dilenmişler (dişi) | orta |  |  |
 
 ## mekân/zaman/masdar-ı mîmî · bâb VII (1)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| munfa'al | مُنْشَاء | munşāʾ | aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal | şey olunma (yeri/zamanı) | kontrol |  |  |
+| munfa'al | مُنْشَاء | munşāʾ | aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal | dilenme (yeri/zamanı) | orta |  |  |
 
 ## masdar · bâb VIII (1)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| ifti'āl | اِشْتِيَاء | iştiyāʾ | kıyâsî · ilal | şey olunma | kontrol |  |  |
+| ifti'āl | اِشْتِيَاء | iştiyāʾ | kıyâsî · ilal | dilenme | orta |  |  |
 
 ## ism-i merre · bâb VIII (1)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| ifti'āl + tâ | اِشْتِيَاءَة | iştiyāʾa | aday · ilal | bir kere şey olunma | kontrol |  |  |
+| ifti'āl + tâ | اِشْتِيَاءَة | iştiyāʾa | aday · ilal | bir kere dilenme | orta |  |  |
 
 ## ism-i fâil · bâb VIII (7)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| muftaʿil | مُشْتَاء | muştāʾ | kıyâsî · ilal | şey olunan | kontrol |  |  |
-| muftaʿil + müennes | مُشْتَاءَة | muştāʾa | kıyâsî · ilal | şey olunan (dişi) | kontrol |  |  |
-| muftaʿil + tesniye | مُشْتَاآن | muştāʾān | kıyâsî · ilal | iki şey olunan | kontrol |  |  |
-| muftaʿil + müennes tesniye | مُشْتَاءَتَان | muştāʾatān | kıyâsî · ilal | iki şey olunan (dişi) | kontrol |  |  |
-| muftaʿil + cem‘-i sâlim müzekker (-ûn) | مُشْتَاؤُون | muştāʾūn | kıyâsî · ilal | şey olunanlar | kontrol |  |  |
-| muftaʿil + cem‘-i sâlim müzekker (-în) | مُشْتَائِين | muştāʾīn | kıyâsî · ilal | şey olunanlar | kontrol |  |  |
-| muftaʿil + cem‘-i sâlim müennes (-ât) | مُشْتَاآت | muştāʾāt | kıyâsî · ilal | şey olunanlar (dişi) | kontrol |  |  |
+| muftaʿil | مُشْتَاء | muştāʾ | kıyâsî · ilal | dilenen | orta |  |  |
+| muftaʿil + müennes | مُشْتَاءَة | muştāʾa | kıyâsî · ilal | dilenen (dişi) | orta |  |  |
+| muftaʿil + tesniye | مُشْتَاآن | muştāʾān | kıyâsî · ilal | iki dilenen | orta |  |  |
+| muftaʿil + müennes tesniye | مُشْتَاءَتَان | muştāʾatān | kıyâsî · ilal | iki dilenen (dişi) | orta |  |  |
+| muftaʿil + cem‘-i sâlim müzekker (-ûn) | مُشْتَاؤُون | muştāʾūn | kıyâsî · ilal | dilenenler | orta |  |  |
+| muftaʿil + cem‘-i sâlim müzekker (-în) | مُشْتَائِين | muştāʾīn | kıyâsî · ilal | dilenenler | orta |  |  |
+| muftaʿil + cem‘-i sâlim müennes (-ât) | مُشْتَاآت | muştāʾāt | kıyâsî · ilal | dilenenler (dişi) | orta |  |  |
 
 ## ism-i mef‘ûl · bâb VIII (7)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| muftaʿal | مُشْتَاء | muştāʾ | kıyâsî · ilal | şey olunmuş | kontrol |  |  |
-| muftaʿal + müennes | مُشْتَاءَة | muştāʾa | kıyâsî · ilal | şey olunmuş (dişi) | kontrol |  |  |
-| muftaʿal + tesniye | مُشْتَاآن | muştāʾān | kıyâsî · ilal | iki şey olunmuş | kontrol |  |  |
-| muftaʿal + müennes tesniye | مُشْتَاءَتَان | muştāʾatān | kıyâsî · ilal | iki şey olunmuş (dişi) | kontrol |  |  |
-| muftaʿal + cem‘-i sâlim müzekker (-ûn) | مُشْتَاؤُون | muştāʾūn | kıyâsî · ilal | şey olunmuşlar | kontrol |  |  |
-| muftaʿal + cem‘-i sâlim müzekker (-în) | مُشْتَائِين | muştāʾīn | kıyâsî · ilal | şey olunmuşlar | kontrol |  |  |
-| muftaʿal + cem‘-i sâlim müennes (-ât) | مُشْتَاآت | muştāʾāt | kıyâsî · ilal | şey olunmuşlar (dişi) | kontrol |  |  |
+| muftaʿal | مُشْتَاء | muştāʾ | kıyâsî · ilal | dilenmiş | orta |  |  |
+| muftaʿal + müennes | مُشْتَاءَة | muştāʾa | kıyâsî · ilal | dilenmiş (dişi) | orta |  |  |
+| muftaʿal + tesniye | مُشْتَاآن | muştāʾān | kıyâsî · ilal | iki dilenmiş | orta |  |  |
+| muftaʿal + müennes tesniye | مُشْتَاءَتَان | muştāʾatān | kıyâsî · ilal | iki dilenmiş (dişi) | orta |  |  |
+| muftaʿal + cem‘-i sâlim müzekker (-ûn) | مُشْتَاؤُون | muştāʾūn | kıyâsî · ilal | dilenmişler | orta |  |  |
+| muftaʿal + cem‘-i sâlim müzekker (-în) | مُشْتَائِين | muştāʾīn | kıyâsî · ilal | dilenmişler | orta |  |  |
+| muftaʿal + cem‘-i sâlim müennes (-ât) | مُشْتَاآت | muştāʾāt | kıyâsî · ilal | dilenmişler (dişi) | orta |  |  |
 
 ## mekân/zaman/masdar-ı mîmî · bâb VIII (1)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| muftaʿal | مُشْتَاء | muştāʾ | kıyâsî · ilal | şey olunma (yeri/zamanı) | kontrol |  |  |
+| muftaʿal | مُشْتَاء | muştāʾ | kıyâsî · ilal | dilenme (yeri/zamanı) | orta |  |  |
 
 ## masdar · bâb IX (illet harfi izhar) (1)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| if'ilāl | اِشْيِئَاء | işyiʾāʾ | semâî aday | şeyleşme | kontrol |  |  |
+| if'ilāl | اِشْيِئَاء | işyiʾāʾ | semâî aday | dileleşme | kontrol |  |  |
 
 ## ism-i fâil · bâb IX (illet harfi izhar) (7)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| muf'all | مُشْيَأّ | muşyaʾʾ | kıyâsî | şeyleşen | kontrol |  |  |
-| muf'all + müennes | مُشْيَأَّة | muşyaʾʾa | kıyâsî | şeyleşen (dişi) | kontrol |  |  |
-| muf'all + tesniye | مُشْيَآن | muşyaʾān | kıyâsî | iki şeyleşen | kontrol |  |  |
-| muf'all + müennes tesniye | مُشْيَأَّتَان | muşyaʾʾatān | kıyâsî | iki şeyleşen (dişi) | kontrol |  |  |
-| muf'all + cem‘-i sâlim müzekker (-ûn) | مُشْيَؤُّون | muşyaʾʾūn | kıyâsî | şeyleşenler | kontrol |  |  |
-| muf'all + cem‘-i sâlim müzekker (-în) | مُشْيَئِّين | muşyaʾʾīn | kıyâsî | şeyleşenler | kontrol |  |  |
-| muf'all + cem‘-i sâlim müennes (-ât) | مُشْيَآت | muşyaʾāt | kıyâsî | şeyleşenler (dişi) | kontrol |  |  |
+| muf'all | مُشْيَأّ | muşyaʾʾ | kıyâsî | dileleşen | kontrol |  |  |
+| muf'all + müennes | مُشْيَأَّة | muşyaʾʾa | kıyâsî | dileleşen (dişi) | kontrol |  |  |
+| muf'all + tesniye | مُشْيَآن | muşyaʾān | kıyâsî | iki dileleşen | kontrol |  |  |
+| muf'all + müennes tesniye | مُشْيَأَّتَان | muşyaʾʾatān | kıyâsî | iki dileleşen (dişi) | kontrol |  |  |
+| muf'all + cem‘-i sâlim müzekker (-ûn) | مُشْيَؤُّون | muşyaʾʾūn | kıyâsî | dileleşenler | kontrol |  |  |
+| muf'all + cem‘-i sâlim müzekker (-în) | مُشْيَئِّين | muşyaʾʾīn | kıyâsî | dileleşenler | kontrol |  |  |
+| muf'all + cem‘-i sâlim müennes (-ât) | مُشْيَآت | muşyaʾāt | kıyâsî | dileleşenler (dişi) | kontrol |  |  |
 
 ## masdar · bâb X (1)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| istif'āl | اِسْتِشَاءَة | istişāʾa | kıyâsî · ilal | şey olmayı isteme | kontrol |  |  |
+| istif'āl | اِسْتِشَاءَة | istişāʾa | kıyâsî · ilal | dilemeyi isteme | orta |  |  |
 
 ## ism-i fâil · bâb X (7)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| mustaf'il | مُسْتَشِيء | mustaşīʾ | kıyâsî · ilal | şey olmayı isteyen | kontrol |  |  |
-| mustaf'il + müennes | مُسْتَشِيئَة | mustaşīʾa | kıyâsî · ilal | şey olmayı isteyen (dişi) | kontrol |  |  |
-| mustaf'il + tesniye | مُسْتَشِيئَان | mustaşīʾān | kıyâsî · ilal | iki şey olmayı isteyen | kontrol |  |  |
-| mustaf'il + müennes tesniye | مُسْتَشِيئَتَان | mustaşīʾatān | kıyâsî · ilal | iki şey olmayı isteyen (dişi) | kontrol |  |  |
-| mustaf'il + cem‘-i sâlim müzekker (-ûn) | مُسْتَشِيئُون | mustaşīʾūn | kıyâsî · ilal | şey olmayı isteyenler | kontrol |  |  |
-| mustaf'il + cem‘-i sâlim müzekker (-în) | مُسْتَشِيئِين | mustaşīʾīn | kıyâsî · ilal | şey olmayı isteyenler | kontrol |  |  |
-| mustaf'il + cem‘-i sâlim müennes (-ât) | مُسْتَشِيئَات | mustaşīʾāt | kıyâsî · ilal | şey olmayı isteyenler (dişi) | kontrol |  |  |
+| mustaf'il | مُسْتَشِيء | mustaşīʾ | kıyâsî · ilal | dilemeyi isteyen | orta |  |  |
+| mustaf'il + müennes | مُسْتَشِيئَة | mustaşīʾa | kıyâsî · ilal | dilemeyi isteyen (dişi) | orta |  |  |
+| mustaf'il + tesniye | مُسْتَشِيئَان | mustaşīʾān | kıyâsî · ilal | iki dilemeyi isteyen | orta |  |  |
+| mustaf'il + müennes tesniye | مُسْتَشِيئَتَان | mustaşīʾatān | kıyâsî · ilal | iki dilemeyi isteyen (dişi) | orta |  |  |
+| mustaf'il + cem‘-i sâlim müzekker (-ûn) | مُسْتَشِيئُون | mustaşīʾūn | kıyâsî · ilal | dilemeyi isteyenler | orta |  |  |
+| mustaf'il + cem‘-i sâlim müzekker (-în) | مُسْتَشِيئِين | mustaşīʾīn | kıyâsî · ilal | dilemeyi isteyenler | orta |  |  |
+| mustaf'il + cem‘-i sâlim müennes (-ât) | مُسْتَشِيئَات | mustaşīʾāt | kıyâsî · ilal | dilemeyi isteyenler (dişi) | orta |  |  |
 
 ## ism-i mef‘ûl · bâb X (7)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| mustaf'al | مُسْتَشَاء | mustaşāʾ | kıyâsî · ilal | şey olmayı istenen | kontrol |  |  |
-| mustaf'al + müennes | مُسْتَشَاءَة | mustaşāʾa | kıyâsî · ilal | şey olmayı istenen (dişi) | kontrol |  |  |
-| mustaf'al + tesniye | مُسْتَشَاآن | mustaşāʾān | kıyâsî · ilal | iki şey olmayı istenen | kontrol |  |  |
-| mustaf'al + müennes tesniye | مُسْتَشَاءَتَان | mustaşāʾatān | kıyâsî · ilal | iki şey olmayı istenen (dişi) | kontrol |  |  |
-| mustaf'al + cem‘-i sâlim müzekker (-ûn) | مُسْتَشَاؤُون | mustaşāʾūn | kıyâsî · ilal | şey olmayı istenenler | kontrol |  |  |
-| mustaf'al + cem‘-i sâlim müzekker (-în) | مُسْتَشَائِين | mustaşāʾīn | kıyâsî · ilal | şey olmayı istenenler | kontrol |  |  |
-| mustaf'al + cem‘-i sâlim müennes (-ât) | مُسْتَشَاآت | mustaşāʾāt | kıyâsî · ilal | şey olmayı istenenler (dişi) | kontrol |  |  |
+| mustaf'al | مُسْتَشَاء | mustaşāʾ | kıyâsî · ilal | dilemeyi istenen | orta |  |  |
+| mustaf'al + müennes | مُسْتَشَاءَة | mustaşāʾa | kıyâsî · ilal | dilemeyi istenen (dişi) | orta |  |  |
+| mustaf'al + tesniye | مُسْتَشَاآن | mustaşāʾān | kıyâsî · ilal | iki dilemeyi istenen | orta |  |  |
+| mustaf'al + müennes tesniye | مُسْتَشَاءَتَان | mustaşāʾatān | kıyâsî · ilal | iki dilemeyi istenen (dişi) | orta |  |  |
+| mustaf'al + cem‘-i sâlim müzekker (-ûn) | مُسْتَشَاؤُون | mustaşāʾūn | kıyâsî · ilal | dilemeyi istenenler | orta |  |  |
+| mustaf'al + cem‘-i sâlim müzekker (-în) | مُسْتَشَائِين | mustaşāʾīn | kıyâsî · ilal | dilemeyi istenenler | orta |  |  |
+| mustaf'al + cem‘-i sâlim müennes (-ât) | مُسْتَشَاآت | mustaşāʾāt | kıyâsî · ilal | dilemeyi istenenler (dişi) | orta |  |  |
 
 ## mekân/zaman/masdar-ı mîmî · bâb X (1)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| mustaf'al | مُسْتَشَاء | mustaşāʾ | kıyâsî · ilal | şey olma (yeri/zamanı) | kontrol |  |  |
+| mustaf'al | مُسْتَشَاء | mustaşāʾ | kıyâsî · ilal | dileme (yeri/zamanı) | orta |  |  |
 
 ## masdar · bâb XI (illet harfi izhar) (1)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| if'īlāl | اِشْيِيئَاء | işyīʾāʾ | semâî aday | iyice şeyleşme | kontrol |  |  |
+| if'īlāl | اِشْيِيئَاء | işyīʾāʾ | semâî aday | iyice dileleşme | kontrol |  |  |
 
 ## ism-i fâil · bâb XI (illet harfi izhar) (7)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| muf'āll | مُشْيَاءّ | muşyāʾʾ | kıyâsî | iyice şeyleşen | kontrol |  |  |
-| muf'āll + müennes | مُشْيَاءَّة | muşyāʾʾa | kıyâsî | iyice şeyleşen (dişi) | kontrol |  |  |
-| muf'āll + tesniye | مُشْيَاآن | muşyāʾān | kıyâsî | iki iyice şeyleşen | kontrol |  |  |
-| muf'āll + müennes tesniye | مُشْيَاءَّتَان | muşyāʾʾatān | kıyâsî | iki iyice şeyleşen (dişi) | kontrol |  |  |
-| muf'āll + cem‘-i sâlim müzekker (-ûn) | مُشْيَاؤُّون | muşyāʾʾūn | kıyâsî | iyice şeyleşenler | kontrol |  |  |
-| muf'āll + cem‘-i sâlim müzekker (-în) | مُشْيَائِّين | muşyāʾʾīn | kıyâsî | iyice şeyleşenler | kontrol |  |  |
-| muf'āll + cem‘-i sâlim müennes (-ât) | مُشْيَاآت | muşyāʾāt | kıyâsî | iyice şeyleşenler (dişi) | kontrol |  |  |
+| muf'āll | مُشْيَاءّ | muşyāʾʾ | kıyâsî | iyice dileleşen | kontrol |  |  |
+| muf'āll + müennes | مُشْيَاءَّة | muşyāʾʾa | kıyâsî | iyice dileleşen (dişi) | kontrol |  |  |
+| muf'āll + tesniye | مُشْيَاآن | muşyāʾān | kıyâsî | iki iyice dileleşen | kontrol |  |  |
+| muf'āll + müennes tesniye | مُشْيَاءَّتَان | muşyāʾʾatān | kıyâsî | iki iyice dileleşen (dişi) | kontrol |  |  |
+| muf'āll + cem‘-i sâlim müzekker (-ûn) | مُشْيَاؤُّون | muşyāʾʾūn | kıyâsî | iyice dileleşenler | kontrol |  |  |
+| muf'āll + cem‘-i sâlim müzekker (-în) | مُشْيَائِّين | muşyāʾʾīn | kıyâsî | iyice dileleşenler | kontrol |  |  |
+| muf'āll + cem‘-i sâlim müennes (-ât) | مُشْيَاآت | muşyāʾāt | kıyâsî | iyice dileleşenler (dişi) | kontrol |  |  |
 
 ## masdar · bâb XII (illet harfi izhar) (1)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| if'iv'āl | اِشْيِوْيَاء | işyiwyāʾ | semâî aday | aşırı şey olma | kontrol |  |  |
+| if'iv'āl | اِشْيِوْيَاء | işyiwyāʾ | semâî aday | aşırı dileme | orta |  |  |
 
 ## masdar · bâb XIII (illet harfi izhar) (1)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| if'ivvāl | اِشْيِوَّاء | işyiwwāʾ | semâî aday | aşırı şey olma | kontrol |  |  |
+| if'ivvāl | اِشْيِوَّاء | işyiwwāʾ | semâî aday | aşırı dileme | orta |  |  |
 
 ## ism-i fâil · sülâsî (7)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| fâ'il | شَاءِ | şāʾi | kıyâsî · ilal | şey olan | kontrol |  |  |
-| fâ'il + müennes | شَائِئَة | şāʾiʾa | kıyâsî · ilal | şey olan (dişi) | kontrol |  |  |
-| fâ'il + tesniye | شَائِئَان | şāʾiʾān | kıyâsî · ilal | iki şey olan | kontrol |  |  |
-| fâ'il + müennes tesniye | شَائِئَتَان | şāʾiʾatān | kıyâsî · ilal | iki şey olan (dişi) | kontrol |  |  |
-| fâ'il + cem‘-i sâlim müzekker (-ûn) | شَائِئُون | şāʾiʾūn | kıyâsî · ilal | şey olanlar | kontrol |  |  |
-| fâ'il + cem‘-i sâlim müzekker (-în) | شَائِئِين | şāʾiʾīn | kıyâsî · ilal | şey olanlar | kontrol |  |  |
-| fâ'il + cem‘-i sâlim müennes (-ât) | شَائِئَات | şāʾiʾāt | kıyâsî · ilal | şey olanlar (dişi) | kontrol |  |  |
+| fâ'il | شَاءِ | şāʾi | kıyâsî · ilal | dileyen | orta |  |  |
+| fâ'il + müennes | شَائِئَة | şāʾiʾa | kıyâsî · ilal | dileyen (dişi) | orta |  |  |
+| fâ'il + tesniye | شَائِئَان | şāʾiʾān | kıyâsî · ilal | iki dileyen | orta |  |  |
+| fâ'il + müennes tesniye | شَائِئَتَان | şāʾiʾatān | kıyâsî · ilal | iki dileyen (dişi) | orta |  |  |
+| fâ'il + cem‘-i sâlim müzekker (-ûn) | شَائِئُون | şāʾiʾūn | kıyâsî · ilal | dileyenler | orta |  |  |
+| fâ'il + cem‘-i sâlim müzekker (-în) | شَائِئِين | şāʾiʾīn | kıyâsî · ilal | dileyenler | orta |  |  |
+| fâ'il + cem‘-i sâlim müennes (-ât) | شَائِئَات | şāʾiʾāt | kıyâsî · ilal | dileyenler (dişi) | orta |  |  |
 
 ## ism-i mef‘ûl · sülâsî (7)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| maf'ûl | مَشِيء | maşīʾ | kıyâsî · ilal | şey olunmuş | kontrol |  |  |
-| maf'ûl + müennes | مَشِيئَة | maşīʾa | kıyâsî · ilal | şey olunmuş (dişi) | kontrol | Vikisözlük: masdar (bâb I): to will, to want, to intend, to wish |  |
-| maf'ûl + tesniye | مَشِيئَان | maşīʾān | kıyâsî · ilal | iki şey olunmuş | kontrol |  |  |
-| maf'ûl + müennes tesniye | مَشِيئَتَان | maşīʾatān | kıyâsî · ilal | iki şey olunmuş (dişi) | kontrol |  |  |
-| maf'ûl + cem‘-i sâlim müzekker (-ûn) | مَشِيئُون | maşīʾūn | kıyâsî · ilal | şey olunmuşlar | kontrol |  |  |
-| maf'ûl + cem‘-i sâlim müzekker (-în) | مَشِيئِين | maşīʾīn | kıyâsî · ilal | şey olunmuşlar | kontrol |  |  |
-| maf'ûl + cem‘-i sâlim müennes (-ât) | مَشِيئَات | maşīʾāt | kıyâsî · ilal | şey olunmuşlar (dişi) | kontrol |  |  |
+| maf'ûl | مَشِيء | maşīʾ | kıyâsî · ilal | dilenmiş | orta |  |  |
+| maf'ûl + müennes | مَشِيئَة | maşīʾa | kıyâsî · ilal | dilenmiş (dişi) | orta | Vikisözlük: masdar (bâb I): to will, to want, to intend, to wish |  |
+| maf'ûl + tesniye | مَشِيئَان | maşīʾān | kıyâsî · ilal | iki dilenmiş | orta |  |  |
+| maf'ûl + müennes tesniye | مَشِيئَتَان | maşīʾatān | kıyâsî · ilal | iki dilenmiş (dişi) | orta |  |  |
+| maf'ûl + cem‘-i sâlim müzekker (-ûn) | مَشِيئُون | maşīʾūn | kıyâsî · ilal | dilenmişler | orta |  |  |
+| maf'ûl + cem‘-i sâlim müzekker (-în) | مَشِيئِين | maşīʾīn | kıyâsî · ilal | dilenmişler | orta |  |  |
+| maf'ûl + cem‘-i sâlim müennes (-ât) | مَشِيئَات | maşīʾāt | kıyâsî · ilal | dilenmişler (dişi) | orta |  |  |
 
 ## mekân/zaman · sülâsî (10)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| maf'al | مَشَاء | maşāʾ | kıyâsî · ilal | şey olma (yeri/zamanı) | kontrol |  |  |
-| maf'al + tesniye | مَشَاآن | maşāʾān | kıyâsî · ilal | iki şey olma (yeri/zamanı) | kontrol |  |  |
-| maf'il | مَشِيء | maşīʾ | kıyâsî · ilal | şey olma (yeri/zamanı) | kontrol |  |  |
-| maf'il + tesniye | مَشِيئَان | maşīʾān | kıyâsî · ilal | iki şey olma (yeri/zamanı) | kontrol |  |  |
-| maf'ale | مَشَاءَة | maşāʾa | kıyâsî · ilal | şey olma (yeri/zamanı) | kontrol |  |  |
-| maf'ale + tesniye | مَشَاءَتَان | maşāʾatān | kıyâsî · ilal | iki şey olma (yeri/zamanı) | kontrol |  |  |
-| maf'ile | مَشِيئَة | maşīʾa | kıyâsî · ilal | şey olma (yeri/zamanı) | kontrol | Vikisözlük: masdar (bâb I): to will, to want, to intend, to wish |  |
-| maf'ile + tesniye | مَشِيئَتَان | maşīʾatān | kıyâsî · ilal | iki şey olma (yeri/zamanı) | kontrol |  |  |
-| maf'ula | مَشْيُؤَة | maşyuʾa | kıyâsî | şey olma (yeri/zamanı) | kontrol |  |  |
-| maf'ula + tesniye | مَشْيُؤَتَان | maşyuʾatān | kıyâsî | iki şey olma (yeri/zamanı) | kontrol |  |  |
+| maf'al | مَشَاء | maşāʾ | kıyâsî · ilal | dileme (yeri/zamanı) | orta |  |  |
+| maf'al + tesniye | مَشَاآن | maşāʾān | kıyâsî · ilal | iki dileme (yeri/zamanı) | orta |  |  |
+| maf'il | مَشِيء | maşīʾ | kıyâsî · ilal | dileme (yeri/zamanı) | orta |  |  |
+| maf'il + tesniye | مَشِيئَان | maşīʾān | kıyâsî · ilal | iki dileme (yeri/zamanı) | orta |  |  |
+| maf'ale | مَشَاءَة | maşāʾa | kıyâsî · ilal | dileme (yeri/zamanı) | orta |  |  |
+| maf'ale + tesniye | مَشَاءَتَان | maşāʾatān | kıyâsî · ilal | iki dileme (yeri/zamanı) | orta |  |  |
+| maf'ile | مَشِيئَة | maşīʾa | kıyâsî · ilal | dileme (yeri/zamanı) | orta | Vikisözlük: masdar (bâb I): to will, to want, to intend, to wish |  |
+| maf'ile + tesniye | مَشِيئَتَان | maşīʾatān | kıyâsî · ilal | iki dileme (yeri/zamanı) | orta |  |  |
+| maf'ula | مَشْيُؤَة | maşyuʾa | kıyâsî | dileme (yeri/zamanı) | orta |  |  |
+| maf'ula + tesniye | مَشْيُؤَتَان | maşyuʾatān | kıyâsî | iki dileme (yeri/zamanı) | orta |  |  |
 
 ## âlet · sülâsî (6)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| mif'al | مِشْيَأ | mişyaʾ | kıyâsî | şey olmaya yarayan araç | kontrol |  |  |
-| mif'al + tesniye | مِشْيَآن | mişyaʾān | kıyâsî | iki şey olmaya yarayan araç | kontrol |  |  |
-| mif'âl | مِشْيَاء | mişyāʾ | kıyâsî | şey olmaya yarayan araç | kontrol |  |  |
-| mif'âl + tesniye | مِشْيَاآن | mişyāʾān | kıyâsî | iki şey olmaya yarayan araç | kontrol |  |  |
-| mif'ale | مِشْيَأَة | mişyaʾa | kıyâsî | şey olmaya yarayan araç | kontrol |  |  |
-| mif'ale + tesniye | مِشْيَأَتَان | mişyaʾatān | kıyâsî | iki şey olmaya yarayan araç | kontrol |  |  |
+| mif'al | مِشْيَأ | mişyaʾ | kıyâsî | dilemeye yarayan araç | orta |  |  |
+| mif'al + tesniye | مِشْيَآن | mişyaʾān | kıyâsî | iki dilemeye yarayan araç | orta |  |  |
+| mif'âl | مِشْيَاء | mişyāʾ | kıyâsî | dilemeye yarayan araç | orta |  |  |
+| mif'âl + tesniye | مِشْيَاآن | mişyāʾān | kıyâsî | iki dilemeye yarayan araç | orta |  |  |
+| mif'ale | مِشْيَأَة | mişyaʾa | kıyâsî | dilemeye yarayan araç | orta |  |  |
+| mif'ale + tesniye | مِشْيَأَتَان | mişyaʾatān | kıyâsî | iki dilemeye yarayan araç | orta |  |  |
 
 ## tafdîl · sülâsî (2)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| af'al | أَشْيَأ | ʾaşyaʾ | kıyâsî | daha çok şey olan | kontrol |  |  |
-| af'al + tesniye | أَشْيَآن | ʾaşyaʾān | kıyâsî | iki daha çok şey olan | kontrol |  |  |
+| af'al | أَشْيَأ | ʾaşyaʾ | kıyâsî | daha çok dileyen | orta |  |  |
+| af'al + tesniye | أَشْيَآن | ʾaşyaʾān | kıyâsî | iki daha çok dileyen | orta |  |  |
 
 ## tafdîl (müennes) · sülâsî (4)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| fu'lâ | شُيْأَى | şuyʾā | kıyâsî | daha çok şey olan | kontrol |  |  |
-| fu'lâ + tesniye | شُيْأَيَان | şuyʾayān | kıyâsî | iki daha çok şey olan | kontrol |  |  |
-| fa'lâ' | شَيْآء | şayʾāʾ | kıyâsî | daha çok şey olan | kontrol |  |  |
-| fa'lâ' + tesniye | شَيْآآن | şayʾāʾān | kıyâsî | iki daha çok şey olan | kontrol |  |  |
+| fu'lâ | شُيْأَى | şuyʾā | kıyâsî | daha çok dileyen | orta |  |  |
+| fu'lâ + tesniye | شُيْأَيَان | şuyʾayān | kıyâsî | iki daha çok dileyen | orta |  |  |
+| fa'lâ' | شَيْآء | şayʾāʾ | kıyâsî | daha çok dileyen | orta |  |  |
+| fa'lâ' + tesniye | شَيْآآن | şayʾāʾān | kıyâsî | iki daha çok dileyen | orta |  |  |
 
 ## tasğîr · sülâsî (4)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| fu'ayl | شُيَيْء | şuyayʾ | kıyâsî | küçük şey olma | kontrol |  |  |
-| fu'ayl + tesniye | شُيَيْآن | şuyayʾān | kıyâsî | iki küçük şey olma | kontrol |  |  |
-| fu'ayle | شُيَيْأَة | şuyayʾa | kıyâsî | küçük şey olma | kontrol |  |  |
-| fu'ayle + tesniye | شُيَيْأَتَان | şuyayʾatān | kıyâsî | iki küçük şey olma | kontrol |  |  |
+| fu'ayl | شُيَيْء | şuyayʾ | kıyâsî | küçük dileme | orta |  |  |
+| fu'ayl + tesniye | شُيَيْآن | şuyayʾān | kıyâsî | iki küçük dileme | orta |  |  |
+| fu'ayle | شُيَيْأَة | şuyayʾa | kıyâsî | küçük dileme | orta |  |  |
+| fu'ayle + tesniye | شُيَيْأَتَان | şuyayʾatān | kıyâsî | iki küçük dileme | orta |  |  |
 
 ## masdar-ı mîmî · sülâsî (2)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| maf'al | مَشَاء | maşāʾ | kıyâsî · ilal | şey olma | kontrol |  |  |
-| maf'al + tesniye | مَشَاآن | maşāʾān | kıyâsî · ilal | iki şey olma | kontrol |  |  |
+| maf'al | مَشَاء | maşāʾ | kıyâsî · ilal | dileme | orta |  |  |
+| maf'al + tesniye | مَشَاآن | maşāʾān | kıyâsî · ilal | iki dileme | orta |  |  |
 
 ## ism-i merre · sülâsî (2)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| fa'le | شَيْأَة | şayʾa | aday | bir kere şey olma | kontrol |  |  |
-| fa'le + tesniye | شَيْأَتَان | şayʾatān | aday | iki bir kere şey olma | kontrol |  |  |
+| fa'le | شَيْأَة | şayʾa | aday | bir kere dileme | orta |  |  |
+| fa'le + tesniye | شَيْأَتَان | şayʾatān | aday | iki bir kere dileme | orta |  |  |
 
 ## ism-i hey'et · sülâsî (2)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| fi'le | شِيئَة | şīʾa | aday · ilal | şey olma tarzı | kontrol |  |  |
-| fi'le + tesniye | شِيئَتَان | şīʾatān | aday · ilal | iki şey olma tarzı | kontrol |  |  |
+| fi'le | شِيئَة | şīʾa | aday · ilal | dileme tarzı | orta |  |  |
+| fi'le + tesniye | شِيئَتَان | şīʾatān | aday · ilal | iki dileme tarzı | orta |  |  |
 
 ## sıfat-ı müşebbehe (77)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| fa'īl | شَيِيء | şayīʾ | semâî aday | sürekli şey olan | kontrol |  |  |
-| fa'īl + müennes | شَيِيئَة | şayīʾa | semâî aday | sürekli şey olan (dişi) | kontrol |  |  |
-| fa'īl + tesniye | شَيِيئَان | şayīʾān | semâî aday | iki sürekli şey olan | kontrol |  |  |
-| fa'īl + müennes tesniye | شَيِيئَتَان | şayīʾatān | semâî aday | iki sürekli şey olan (dişi) | kontrol |  |  |
-| fa'īl + cem‘-i sâlim müzekker (-ûn) | شَيِيئُون | şayīʾūn | semâî aday | sürekli şey olanlar | kontrol |  |  |
-| fa'īl + cem‘-i sâlim müzekker (-în) | شَيِيئِين | şayīʾīn | semâî aday | sürekli şey olanlar | kontrol |  |  |
-| fa'īl + cem‘-i sâlim müennes (-ât) | شَيِيئَات | şayīʾāt | semâî aday | sürekli şey olanlar (dişi) | kontrol |  |  |
-| fa'ūl | شَيُوء | şayūʾ | semâî aday | sürekli şey olan | kontrol |  |  |
-| fa'ūl + müennes | شَيُوءَة | şayūʾa | semâî aday | sürekli şey olan (dişi) | kontrol |  |  |
-| fa'ūl + tesniye | شَيُوءَان | şayūʾān | semâî aday | iki sürekli şey olan | kontrol |  |  |
-| fa'ūl + müennes tesniye | شَيُوءَتَان | şayūʾatān | semâî aday | iki sürekli şey olan (dişi) | kontrol |  |  |
-| fa'ūl + cem‘-i sâlim müzekker (-ûn) | شَيُوءُون | şayūʾūn | semâî aday | sürekli şey olanlar | kontrol |  |  |
-| fa'ūl + cem‘-i sâlim müzekker (-în) | شَيُوءِين | şayūʾīn | semâî aday | sürekli şey olanlar | kontrol |  |  |
-| fa'ūl + cem‘-i sâlim müennes (-ât) | شَيُوءَات | şayūʾāt | semâî aday | sürekli şey olanlar (dişi) | kontrol |  |  |
-| fa'il | شَيِئ | şayiʾ | semâî aday | sürekli şey olan | kontrol |  |  |
-| fa'il + müennes | شَيِئَة | şayiʾa | semâî aday | sürekli şey olan (dişi) | kontrol |  |  |
-| fa'il + tesniye | شَيِئَان | şayiʾān | semâî aday | iki sürekli şey olan | kontrol |  |  |
-| fa'il + müennes tesniye | شَيِئَتَان | şayiʾatān | semâî aday | iki sürekli şey olan (dişi) | kontrol |  |  |
-| fa'il + cem‘-i sâlim müzekker (-ûn) | شَيِئُون | şayiʾūn | semâî aday | sürekli şey olanlar | kontrol |  |  |
-| fa'il + cem‘-i sâlim müzekker (-în) | شَيِئِين | şayiʾīn | semâî aday | sürekli şey olanlar | kontrol |  |  |
-| fa'il + cem‘-i sâlim müennes (-ât) | شَيِئَات | şayiʾāt | semâî aday | sürekli şey olanlar (dişi) | kontrol |  |  |
-| fa'ul | شَيُؤ | şayuʾ | semâî aday | sürekli şey olan | kontrol |  |  |
-| fa'ul + müennes | شَيُؤَة | şayuʾa | semâî aday | sürekli şey olan (dişi) | kontrol |  |  |
-| fa'ul + tesniye | شَيُؤَان | şayuʾān | semâî aday | iki sürekli şey olan | kontrol |  |  |
-| fa'ul + müennes tesniye | شَيُؤَتَان | şayuʾatān | semâî aday | iki sürekli şey olan (dişi) | kontrol |  |  |
-| fa'ul + cem‘-i sâlim müzekker (-ûn) | شَيُؤُون | şayuʾūn | semâî aday | sürekli şey olanlar | kontrol |  |  |
-| fa'ul + cem‘-i sâlim müzekker (-în) | شَيُئِين | şayuʾīn | semâî aday | sürekli şey olanlar | kontrol |  |  |
-| fa'ul + cem‘-i sâlim müennes (-ât) | شَيُؤَات | şayuʾāt | semâî aday | sürekli şey olanlar (dişi) | kontrol |  |  |
-| fa'al | شَاء | şāʾ | semâî aday · ilal | sürekli şey olan | kontrol |  |  |
-| fa'al + müennes | شَاءَة | şāʾa | semâî aday · ilal | sürekli şey olan (dişi) | kontrol |  |  |
-| fa'al + tesniye | شَاآن | şāʾān | semâî aday · ilal | iki sürekli şey olan | kontrol |  |  |
-| fa'al + müennes tesniye | شَاءَتَان | şāʾatān | semâî aday · ilal | iki sürekli şey olan (dişi) | kontrol |  |  |
-| fa'al + cem‘-i sâlim müzekker (-ûn) | شَاؤُون | şāʾūn | semâî aday · ilal | sürekli şey olanlar | kontrol |  |  |
-| fa'al + cem‘-i sâlim müzekker (-în) | شَائِين | şāʾīn | semâî aday · ilal | sürekli şey olanlar | kontrol |  |  |
-| fa'al + cem‘-i sâlim müennes (-ât) | شَاآت | şāʾāt | semâî aday · ilal | sürekli şey olanlar (dişi) | kontrol |  |  |
-| fa'l | شَيْء | şayʾ | semâî aday | sürekli şey olan | kontrol | Vikisözlük: thing |  |
-| fa'l + müennes | شَيْأَة | şayʾa | semâî aday | sürekli şey olan (dişi) | kontrol |  |  |
-| fa'l + tesniye | شَيْآن | şayʾān | semâî aday | iki sürekli şey olan | kontrol |  |  |
-| fa'l + müennes tesniye | شَيْأَتَان | şayʾatān | semâî aday | iki sürekli şey olan (dişi) | kontrol |  |  |
-| fa'l + cem‘-i sâlim müzekker (-ûn) | شَيْؤُون | şayʾūn | semâî aday | sürekli şey olanlar | kontrol |  |  |
-| fa'l + cem‘-i sâlim müzekker (-în) | شَيْئِين | şayʾīn | semâî aday | sürekli şey olanlar | kontrol |  |  |
-| fa'l + cem‘-i sâlim müennes (-ât) | شَيْآت | şayʾāt | semâî aday | sürekli şey olanlar (dişi) | kontrol |  |  |
-| fu'ul | شُيُؤ | şuyuʾ | semâî aday | sürekli şey olan | kontrol |  |  |
-| fu'ul + müennes | شُيُؤَة | şuyuʾa | semâî aday | sürekli şey olan (dişi) | kontrol |  |  |
-| fu'ul + tesniye | شُيُؤَان | şuyuʾān | semâî aday | iki sürekli şey olan | kontrol |  |  |
-| fu'ul + müennes tesniye | شُيُؤَتَان | şuyuʾatān | semâî aday | iki sürekli şey olan (dişi) | kontrol |  |  |
-| fu'ul + cem‘-i sâlim müzekker (-ûn) | شُيُؤُون | şuyuʾūn | semâî aday | sürekli şey olanlar | kontrol |  |  |
-| fu'ul + cem‘-i sâlim müzekker (-în) | شُيُئِين | şuyuʾīn | semâî aday | sürekli şey olanlar | kontrol |  |  |
-| fu'ul + cem‘-i sâlim müennes (-ât) | شُيُؤَات | şuyuʾāt | semâî aday | sürekli şey olanlar (dişi) | kontrol |  |  |
-| fa'lān | شَيْآن | şayʾān | semâî aday | sürekli şey olan | kontrol |  |  |
-| fa'lān + müennes | شَيْآنَة | şayʾāna | semâî aday | sürekli şey olan (dişi) | kontrol |  |  |
-| fa'lān + tesniye | شَيْآنَان | şayʾānān | semâî aday | iki sürekli şey olan | kontrol |  |  |
-| fa'lān + müennes tesniye | شَيْآنَتَان | şayʾānatān | semâî aday | iki sürekli şey olan (dişi) | kontrol |  |  |
-| fa'lān + cem‘-i sâlim müzekker (-ûn) | شَيْآنُون | şayʾānūn | semâî aday | sürekli şey olanlar | kontrol |  |  |
-| fa'lān + cem‘-i sâlim müzekker (-în) | شَيْآنِين | şayʾānīn | semâî aday | sürekli şey olanlar | kontrol |  |  |
-| fa'lān + cem‘-i sâlim müennes (-ât) | شَيْآنَات | şayʾānāt | semâî aday | sürekli şey olanlar (dişi) | kontrol |  |  |
-| fu'āl | شُيَاء | şuyāʾ | semâî aday | sürekli şey olan | kontrol |  |  |
-| fu'āl + müennes | شُيَاءَة | şuyāʾa | semâî aday | sürekli şey olan (dişi) | kontrol |  |  |
-| fu'āl + tesniye | شُيَاآن | şuyāʾān | semâî aday | iki sürekli şey olan | kontrol |  |  |
-| fu'āl + müennes tesniye | شُيَاءَتَان | şuyāʾatān | semâî aday | iki sürekli şey olan (dişi) | kontrol |  |  |
-| fu'āl + cem‘-i sâlim müzekker (-ûn) | شُيَاؤُون | şuyāʾūn | semâî aday | sürekli şey olanlar | kontrol |  |  |
-| fu'āl + cem‘-i sâlim müzekker (-în) | شُيَائِين | şuyāʾīn | semâî aday | sürekli şey olanlar | kontrol |  |  |
-| fu'āl + cem‘-i sâlim müennes (-ât) | شُيَاآت | şuyāʾāt | semâî aday | sürekli şey olanlar (dişi) | kontrol |  |  |
-| fa'āl | شَيَاء | şayāʾ | semâî aday | sürekli şey olan | kontrol |  |  |
-| fa'āl + müennes | شَيَاءَة | şayāʾa | semâî aday | sürekli şey olan (dişi) | kontrol |  |  |
-| fa'āl + tesniye | شَيَاآن | şayāʾān | semâî aday | iki sürekli şey olan | kontrol |  |  |
-| fa'āl + müennes tesniye | شَيَاءَتَان | şayāʾatān | semâî aday | iki sürekli şey olan (dişi) | kontrol |  |  |
-| fa'āl + cem‘-i sâlim müzekker (-ûn) | شَيَاؤُون | şayāʾūn | semâî aday | sürekli şey olanlar | kontrol |  |  |
-| fa'āl + cem‘-i sâlim müzekker (-în) | شَيَائِين | şayāʾīn | semâî aday | sürekli şey olanlar | kontrol |  |  |
-| fa'āl + cem‘-i sâlim müennes (-ât) | شَيَاآت | şayāʾāt | semâî aday | sürekli şey olanlar (dişi) | kontrol |  |  |
-| fay'il (ecvef: seyyid, meyyit, tayyib) | شَيِّئ | şayyiʾ | ecvef kıyâsı | sürekli şey olan | kontrol |  |  |
-| fay'il (ecvef: seyyid, meyyit, tayyib) + müennes | شَيِّئَة | şayyiʾa | ecvef kıyâsı | sürekli şey olan (dişi) | kontrol |  |  |
-| fay'il (ecvef: seyyid, meyyit, tayyib) + tesniye | شَيِّئَان | şayyiʾān | ecvef kıyâsı | iki sürekli şey olan | kontrol |  |  |
-| fay'il (ecvef: seyyid, meyyit, tayyib) + müennes tesniye | شَيِّئَتَان | şayyiʾatān | ecvef kıyâsı | iki sürekli şey olan (dişi) | kontrol |  |  |
-| fay'il (ecvef: seyyid, meyyit, tayyib) + cem‘-i sâlim müzekker (-ûn) | شَيِّئُون | şayyiʾūn | ecvef kıyâsı | sürekli şey olanlar | kontrol |  |  |
-| fay'il (ecvef: seyyid, meyyit, tayyib) + cem‘-i sâlim müzekker (-în) | شَيِّئِين | şayyiʾīn | ecvef kıyâsı | sürekli şey olanlar | kontrol |  |  |
-| fay'il (ecvef: seyyid, meyyit, tayyib) + cem‘-i sâlim müennes (-ât) | شَيِّئَات | şayyiʾāt | ecvef kıyâsı | sürekli şey olanlar (dişi) | kontrol |  |  |
+| fa'īl | شَيِيء | şayīʾ | semâî aday | sürekli dileyen | orta |  |  |
+| fa'īl + müennes | شَيِيئَة | şayīʾa | semâî aday | sürekli dileyen (dişi) | orta |  |  |
+| fa'īl + tesniye | شَيِيئَان | şayīʾān | semâî aday | iki sürekli dileyen | orta |  |  |
+| fa'īl + müennes tesniye | شَيِيئَتَان | şayīʾatān | semâî aday | iki sürekli dileyen (dişi) | orta |  |  |
+| fa'īl + cem‘-i sâlim müzekker (-ûn) | شَيِيئُون | şayīʾūn | semâî aday | sürekli dileyenler | orta |  |  |
+| fa'īl + cem‘-i sâlim müzekker (-în) | شَيِيئِين | şayīʾīn | semâî aday | sürekli dileyenler | orta |  |  |
+| fa'īl + cem‘-i sâlim müennes (-ât) | شَيِيئَات | şayīʾāt | semâî aday | sürekli dileyenler (dişi) | orta |  |  |
+| fa'ūl | شَيُوء | şayūʾ | semâî aday | sürekli dileyen | orta |  |  |
+| fa'ūl + müennes | شَيُوءَة | şayūʾa | semâî aday | sürekli dileyen (dişi) | orta |  |  |
+| fa'ūl + tesniye | شَيُوءَان | şayūʾān | semâî aday | iki sürekli dileyen | orta |  |  |
+| fa'ūl + müennes tesniye | شَيُوءَتَان | şayūʾatān | semâî aday | iki sürekli dileyen (dişi) | orta |  |  |
+| fa'ūl + cem‘-i sâlim müzekker (-ûn) | شَيُوءُون | şayūʾūn | semâî aday | sürekli dileyenler | orta |  |  |
+| fa'ūl + cem‘-i sâlim müzekker (-în) | شَيُوءِين | şayūʾīn | semâî aday | sürekli dileyenler | orta |  |  |
+| fa'ūl + cem‘-i sâlim müennes (-ât) | شَيُوءَات | şayūʾāt | semâî aday | sürekli dileyenler (dişi) | orta |  |  |
+| fa'il | شَيِئ | şayiʾ | semâî aday | sürekli dileyen | orta |  |  |
+| fa'il + müennes | شَيِئَة | şayiʾa | semâî aday | sürekli dileyen (dişi) | orta |  |  |
+| fa'il + tesniye | شَيِئَان | şayiʾān | semâî aday | iki sürekli dileyen | orta |  |  |
+| fa'il + müennes tesniye | شَيِئَتَان | şayiʾatān | semâî aday | iki sürekli dileyen (dişi) | orta |  |  |
+| fa'il + cem‘-i sâlim müzekker (-ûn) | شَيِئُون | şayiʾūn | semâî aday | sürekli dileyenler | orta |  |  |
+| fa'il + cem‘-i sâlim müzekker (-în) | شَيِئِين | şayiʾīn | semâî aday | sürekli dileyenler | orta |  |  |
+| fa'il + cem‘-i sâlim müennes (-ât) | شَيِئَات | şayiʾāt | semâî aday | sürekli dileyenler (dişi) | orta |  |  |
+| fa'ul | شَيُؤ | şayuʾ | semâî aday | sürekli dileyen | orta |  |  |
+| fa'ul + müennes | شَيُؤَة | şayuʾa | semâî aday | sürekli dileyen (dişi) | orta |  |  |
+| fa'ul + tesniye | شَيُؤَان | şayuʾān | semâî aday | iki sürekli dileyen | orta |  |  |
+| fa'ul + müennes tesniye | شَيُؤَتَان | şayuʾatān | semâî aday | iki sürekli dileyen (dişi) | orta |  |  |
+| fa'ul + cem‘-i sâlim müzekker (-ûn) | شَيُؤُون | şayuʾūn | semâî aday | sürekli dileyenler | orta |  |  |
+| fa'ul + cem‘-i sâlim müzekker (-în) | شَيُئِين | şayuʾīn | semâî aday | sürekli dileyenler | orta |  |  |
+| fa'ul + cem‘-i sâlim müennes (-ât) | شَيُؤَات | şayuʾāt | semâî aday | sürekli dileyenler (dişi) | orta |  |  |
+| fa'al | شَاء | şāʾ | semâî aday · ilal | sürekli dileyen | orta |  |  |
+| fa'al + müennes | شَاءَة | şāʾa | semâî aday · ilal | sürekli dileyen (dişi) | orta |  |  |
+| fa'al + tesniye | شَاآن | şāʾān | semâî aday · ilal | iki sürekli dileyen | orta |  |  |
+| fa'al + müennes tesniye | شَاءَتَان | şāʾatān | semâî aday · ilal | iki sürekli dileyen (dişi) | orta |  |  |
+| fa'al + cem‘-i sâlim müzekker (-ûn) | شَاؤُون | şāʾūn | semâî aday · ilal | sürekli dileyenler | orta |  |  |
+| fa'al + cem‘-i sâlim müzekker (-în) | شَائِين | şāʾīn | semâî aday · ilal | sürekli dileyenler | orta |  |  |
+| fa'al + cem‘-i sâlim müennes (-ât) | شَاآت | şāʾāt | semâî aday · ilal | sürekli dileyenler (dişi) | orta |  |  |
+| fa'l | شَيْء | şayʾ | semâî aday | sürekli dileyen | orta | Vikisözlük: thing |  |
+| fa'l + müennes | شَيْأَة | şayʾa | semâî aday | sürekli dileyen (dişi) | orta |  |  |
+| fa'l + tesniye | شَيْآن | şayʾān | semâî aday | iki sürekli dileyen | orta |  |  |
+| fa'l + müennes tesniye | شَيْأَتَان | şayʾatān | semâî aday | iki sürekli dileyen (dişi) | orta |  |  |
+| fa'l + cem‘-i sâlim müzekker (-ûn) | شَيْؤُون | şayʾūn | semâî aday | sürekli dileyenler | orta |  |  |
+| fa'l + cem‘-i sâlim müzekker (-în) | شَيْئِين | şayʾīn | semâî aday | sürekli dileyenler | orta |  |  |
+| fa'l + cem‘-i sâlim müennes (-ât) | شَيْآت | şayʾāt | semâî aday | sürekli dileyenler (dişi) | orta |  |  |
+| fu'ul | شُيُؤ | şuyuʾ | semâî aday | sürekli dileyen | orta |  |  |
+| fu'ul + müennes | شُيُؤَة | şuyuʾa | semâî aday | sürekli dileyen (dişi) | orta |  |  |
+| fu'ul + tesniye | شُيُؤَان | şuyuʾān | semâî aday | iki sürekli dileyen | orta |  |  |
+| fu'ul + müennes tesniye | شُيُؤَتَان | şuyuʾatān | semâî aday | iki sürekli dileyen (dişi) | orta |  |  |
+| fu'ul + cem‘-i sâlim müzekker (-ûn) | شُيُؤُون | şuyuʾūn | semâî aday | sürekli dileyenler | orta |  |  |
+| fu'ul + cem‘-i sâlim müzekker (-în) | شُيُئِين | şuyuʾīn | semâî aday | sürekli dileyenler | orta |  |  |
+| fu'ul + cem‘-i sâlim müennes (-ât) | شُيُؤَات | şuyuʾāt | semâî aday | sürekli dileyenler (dişi) | orta |  |  |
+| fa'lān | شَيْآن | şayʾān | semâî aday | sürekli dileyen | orta |  |  |
+| fa'lān + müennes | شَيْآنَة | şayʾāna | semâî aday | sürekli dileyen (dişi) | orta |  |  |
+| fa'lān + tesniye | شَيْآنَان | şayʾānān | semâî aday | iki sürekli dileyen | orta |  |  |
+| fa'lān + müennes tesniye | شَيْآنَتَان | şayʾānatān | semâî aday | iki sürekli dileyen (dişi) | orta |  |  |
+| fa'lān + cem‘-i sâlim müzekker (-ûn) | شَيْآنُون | şayʾānūn | semâî aday | sürekli dileyenler | orta |  |  |
+| fa'lān + cem‘-i sâlim müzekker (-în) | شَيْآنِين | şayʾānīn | semâî aday | sürekli dileyenler | orta |  |  |
+| fa'lān + cem‘-i sâlim müennes (-ât) | شَيْآنَات | şayʾānāt | semâî aday | sürekli dileyenler (dişi) | orta |  |  |
+| fu'āl | شُيَاء | şuyāʾ | semâî aday | sürekli dileyen | orta |  |  |
+| fu'āl + müennes | شُيَاءَة | şuyāʾa | semâî aday | sürekli dileyen (dişi) | orta |  |  |
+| fu'āl + tesniye | شُيَاآن | şuyāʾān | semâî aday | iki sürekli dileyen | orta |  |  |
+| fu'āl + müennes tesniye | شُيَاءَتَان | şuyāʾatān | semâî aday | iki sürekli dileyen (dişi) | orta |  |  |
+| fu'āl + cem‘-i sâlim müzekker (-ûn) | شُيَاؤُون | şuyāʾūn | semâî aday | sürekli dileyenler | orta |  |  |
+| fu'āl + cem‘-i sâlim müzekker (-în) | شُيَائِين | şuyāʾīn | semâî aday | sürekli dileyenler | orta |  |  |
+| fu'āl + cem‘-i sâlim müennes (-ât) | شُيَاآت | şuyāʾāt | semâî aday | sürekli dileyenler (dişi) | orta |  |  |
+| fa'āl | شَيَاء | şayāʾ | semâî aday | sürekli dileyen | orta |  |  |
+| fa'āl + müennes | شَيَاءَة | şayāʾa | semâî aday | sürekli dileyen (dişi) | orta |  |  |
+| fa'āl + tesniye | شَيَاآن | şayāʾān | semâî aday | iki sürekli dileyen | orta |  |  |
+| fa'āl + müennes tesniye | شَيَاءَتَان | şayāʾatān | semâî aday | iki sürekli dileyen (dişi) | orta |  |  |
+| fa'āl + cem‘-i sâlim müzekker (-ûn) | شَيَاؤُون | şayāʾūn | semâî aday | sürekli dileyenler | orta |  |  |
+| fa'āl + cem‘-i sâlim müzekker (-în) | شَيَائِين | şayāʾīn | semâî aday | sürekli dileyenler | orta |  |  |
+| fa'āl + cem‘-i sâlim müennes (-ât) | شَيَاآت | şayāʾāt | semâî aday | sürekli dileyenler (dişi) | orta |  |  |
+| fay'il (ecvef: seyyid, meyyit, tayyib) | شَيِّئ | şayyiʾ | ecvef kıyâsı | sürekli dileyen | orta |  |  |
+| fay'il (ecvef: seyyid, meyyit, tayyib) + müennes | شَيِّئَة | şayyiʾa | ecvef kıyâsı | sürekli dileyen (dişi) | orta |  |  |
+| fay'il (ecvef: seyyid, meyyit, tayyib) + tesniye | شَيِّئَان | şayyiʾān | ecvef kıyâsı | iki sürekli dileyen | orta |  |  |
+| fay'il (ecvef: seyyid, meyyit, tayyib) + müennes tesniye | شَيِّئَتَان | şayyiʾatān | ecvef kıyâsı | iki sürekli dileyen (dişi) | orta |  |  |
+| fay'il (ecvef: seyyid, meyyit, tayyib) + cem‘-i sâlim müzekker (-ûn) | شَيِّئُون | şayyiʾūn | ecvef kıyâsı | sürekli dileyenler | orta |  |  |
+| fay'il (ecvef: seyyid, meyyit, tayyib) + cem‘-i sâlim müzekker (-în) | شَيِّئِين | şayyiʾīn | ecvef kıyâsı | sürekli dileyenler | orta |  |  |
+| fay'il (ecvef: seyyid, meyyit, tayyib) + cem‘-i sâlim müennes (-ât) | شَيِّئَات | şayyiʾāt | ecvef kıyâsı | sürekli dileyenler (dişi) | orta |  |  |
 
 ## mübalağa (66)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| fa''āl | شَيَّاء | şayyāʾ | semâî aday | çok şey olan | kontrol |  |  |
-| fa''āl + müennes | شَيَّاءَة | şayyāʾa | semâî aday | çok şey olan (dişi) | kontrol |  |  |
-| fa''āl + tesniye | شَيَّاآن | şayyāʾān | semâî aday | iki çok şey olan | kontrol |  |  |
-| fa''āl + müennes tesniye | شَيَّاءَتَان | şayyāʾatān | semâî aday | iki çok şey olan (dişi) | kontrol |  |  |
-| fa''āl + cem‘-i sâlim müzekker (-ûn) | شَيَّاؤُون | şayyāʾūn | semâî aday | çok şey olanlar | kontrol |  |  |
-| fa''āl + cem‘-i sâlim müzekker (-în) | شَيَّائِين | şayyāʾīn | semâî aday | çok şey olanlar | kontrol |  |  |
-| fa''āl + cem‘-i sâlim müennes (-ât) | شَيَّاآت | şayyāʾāt | semâî aday | çok şey olanlar (dişi) | kontrol |  |  |
-| fa''āle | شَيَّاءَة | şayyāʾa | semâî aday | çok şey olan | kontrol |  |  |
-| fa''āle + tesniye | شَيَّاءَتَان | şayyāʾatān | semâî aday | iki çok şey olan | kontrol |  |  |
-| fa''āle + cem‘-i sâlim müennes (-ât) | شَيَّاآت | şayyāʾāt | semâî aday | çok şey olanlar (dişi) | kontrol |  |  |
-| fa'ūl | شَيُوء | şayūʾ | semâî aday | çok şey olan | kontrol |  |  |
-| fa'ūl + müennes | شَيُوءَة | şayūʾa | semâî aday | çok şey olan (dişi) | kontrol |  |  |
-| fa'ūl + tesniye | شَيُوءَان | şayūʾān | semâî aday | iki çok şey olan | kontrol |  |  |
-| fa'ūl + müennes tesniye | شَيُوءَتَان | şayūʾatān | semâî aday | iki çok şey olan (dişi) | kontrol |  |  |
-| fa'ūl + cem‘-i sâlim müzekker (-ûn) | شَيُوءُون | şayūʾūn | semâî aday | çok şey olanlar | kontrol |  |  |
-| fa'ūl + cem‘-i sâlim müzekker (-în) | شَيُوءِين | şayūʾīn | semâî aday | çok şey olanlar | kontrol |  |  |
-| fa'ūl + cem‘-i sâlim müennes (-ât) | شَيُوءَات | şayūʾāt | semâî aday | çok şey olanlar (dişi) | kontrol |  |  |
-| fa''ūl | شَيُّوء | şayyūʾ | semâî aday | çok şey olan | kontrol |  |  |
-| fa''ūl + müennes | شَيُّوءَة | şayyūʾa | semâî aday | çok şey olan (dişi) | kontrol |  |  |
-| fa''ūl + tesniye | شَيُّوءَان | şayyūʾān | semâî aday | iki çok şey olan | kontrol |  |  |
-| fa''ūl + müennes tesniye | شَيُّوءَتَان | şayyūʾatān | semâî aday | iki çok şey olan (dişi) | kontrol |  |  |
-| fa''ūl + cem‘-i sâlim müzekker (-ûn) | شَيُّوءُون | şayyūʾūn | semâî aday | çok şey olanlar | kontrol |  |  |
-| fa''ūl + cem‘-i sâlim müzekker (-în) | شَيُّوءِين | şayyūʾīn | semâî aday | çok şey olanlar | kontrol |  |  |
-| fa''ūl + cem‘-i sâlim müennes (-ât) | شَيُّوءَات | şayyūʾāt | semâî aday | çok şey olanlar (dişi) | kontrol |  |  |
-| fi''īl | شِيِّيء | şiyyīʾ | semâî aday | çok şey olan | kontrol |  |  |
-| fi''īl + müennes | شِيِّيئَة | şiyyīʾa | semâî aday | çok şey olan (dişi) | kontrol |  |  |
-| fi''īl + tesniye | شِيِّيئَان | şiyyīʾān | semâî aday | iki çok şey olan | kontrol |  |  |
-| fi''īl + müennes tesniye | شِيِّيئَتَان | şiyyīʾatān | semâî aday | iki çok şey olan (dişi) | kontrol |  |  |
-| fi''īl + cem‘-i sâlim müzekker (-ûn) | شِيِّيئُون | şiyyīʾūn | semâî aday | çok şey olanlar | kontrol |  |  |
-| fi''īl + cem‘-i sâlim müzekker (-în) | شِيِّيئِين | şiyyīʾīn | semâî aday | çok şey olanlar | kontrol |  |  |
-| fi''īl + cem‘-i sâlim müennes (-ât) | شِيِّيئَات | şiyyīʾāt | semâî aday | çok şey olanlar (dişi) | kontrol |  |  |
-| fu''āl | شُيَّاء | şuyyāʾ | semâî aday | çok şey olan | kontrol |  |  |
-| fu''āl + müennes | شُيَّاءَة | şuyyāʾa | semâî aday | çok şey olan (dişi) | kontrol |  |  |
-| fu''āl + tesniye | شُيَّاآن | şuyyāʾān | semâî aday | iki çok şey olan | kontrol |  |  |
-| fu''āl + müennes tesniye | شُيَّاءَتَان | şuyyāʾatān | semâî aday | iki çok şey olan (dişi) | kontrol |  |  |
-| fu''āl + cem‘-i sâlim müzekker (-ûn) | شُيَّاؤُون | şuyyāʾūn | semâî aday | çok şey olanlar | kontrol |  |  |
-| fu''āl + cem‘-i sâlim müzekker (-în) | شُيَّائِين | şuyyāʾīn | semâî aday | çok şey olanlar | kontrol |  |  |
-| fu''āl + cem‘-i sâlim müennes (-ât) | شُيَّاآت | şuyyāʾāt | semâî aday | çok şey olanlar (dişi) | kontrol |  |  |
-| mif'āl | مِشْيَاء | mişyāʾ | semâî aday | çok şey olan | kontrol |  |  |
-| mif'āl + müennes | مِشْيَاءَة | mişyāʾa | semâî aday | çok şey olan (dişi) | kontrol |  |  |
-| mif'āl + tesniye | مِشْيَاآن | mişyāʾān | semâî aday | iki çok şey olan | kontrol |  |  |
-| mif'āl + müennes tesniye | مِشْيَاءَتَان | mişyāʾatān | semâî aday | iki çok şey olan (dişi) | kontrol |  |  |
-| mif'āl + cem‘-i sâlim müzekker (-ûn) | مِشْيَاؤُون | mişyāʾūn | semâî aday | çok şey olanlar | kontrol |  |  |
-| mif'āl + cem‘-i sâlim müzekker (-în) | مِشْيَائِين | mişyāʾīn | semâî aday | çok şey olanlar | kontrol |  |  |
-| mif'āl + cem‘-i sâlim müennes (-ât) | مِشْيَاآت | mişyāʾāt | semâî aday | çok şey olanlar (dişi) | kontrol |  |  |
-| mif'īl | مِشْيِيء | mişyīʾ | semâî aday | çok şey olan | kontrol |  |  |
-| mif'īl + müennes | مِشْيِيئَة | mişyīʾa | semâî aday | çok şey olan (dişi) | kontrol |  |  |
-| mif'īl + tesniye | مِشْيِيئَان | mişyīʾān | semâî aday | iki çok şey olan | kontrol |  |  |
-| mif'īl + müennes tesniye | مِشْيِيئَتَان | mişyīʾatān | semâî aday | iki çok şey olan (dişi) | kontrol |  |  |
-| mif'īl + cem‘-i sâlim müzekker (-ûn) | مِشْيِيئُون | mişyīʾūn | semâî aday | çok şey olanlar | kontrol |  |  |
-| mif'īl + cem‘-i sâlim müzekker (-în) | مِشْيِيئِين | mişyīʾīn | semâî aday | çok şey olanlar | kontrol |  |  |
-| mif'īl + cem‘-i sâlim müennes (-ât) | مِشْيِيئَات | mişyīʾāt | semâî aday | çok şey olanlar (dişi) | kontrol |  |  |
-| fa'īl | شَيِيء | şayīʾ | semâî aday | çok şey olan | kontrol |  |  |
-| fa'īl + müennes | شَيِيئَة | şayīʾa | semâî aday | çok şey olan (dişi) | kontrol |  |  |
-| fa'īl + tesniye | شَيِيئَان | şayīʾān | semâî aday | iki çok şey olan | kontrol |  |  |
-| fa'īl + müennes tesniye | شَيِيئَتَان | şayīʾatān | semâî aday | iki çok şey olan (dişi) | kontrol |  |  |
-| fa'īl + cem‘-i sâlim müzekker (-ûn) | شَيِيئُون | şayīʾūn | semâî aday | çok şey olanlar | kontrol |  |  |
-| fa'īl + cem‘-i sâlim müzekker (-în) | شَيِيئِين | şayīʾīn | semâî aday | çok şey olanlar | kontrol |  |  |
-| fa'īl + cem‘-i sâlim müennes (-ât) | شَيِيئَات | şayīʾāt | semâî aday | çok şey olanlar (dişi) | kontrol |  |  |
-| fa''al | شَيَّأ | şayyaʾ | semâî aday | çok şey olan | kontrol |  |  |
-| fa''al + müennes | شَيَّأَة | şayyaʾa | semâî aday | çok şey olan (dişi) | kontrol |  |  |
-| fa''al + tesniye | شَيَّآن | şayyaʾān | semâî aday | iki çok şey olan | kontrol |  |  |
-| fa''al + müennes tesniye | شَيَّأَتَان | şayyaʾatān | semâî aday | iki çok şey olan (dişi) | kontrol |  |  |
-| fa''al + cem‘-i sâlim müzekker (-ûn) | شَيَّؤُون | şayyaʾūn | semâî aday | çok şey olanlar | kontrol |  |  |
-| fa''al + cem‘-i sâlim müzekker (-în) | شَيَّئِين | şayyaʾīn | semâî aday | çok şey olanlar | kontrol |  |  |
-| fa''al + cem‘-i sâlim müennes (-ât) | شَيَّآت | şayyaʾāt | semâî aday | çok şey olanlar (dişi) | kontrol |  |  |
+| fa''āl | شَيَّاء | şayyāʾ | semâî aday | çok dileyen | orta |  |  |
+| fa''āl + müennes | شَيَّاءَة | şayyāʾa | semâî aday | çok dileyen (dişi) | orta |  |  |
+| fa''āl + tesniye | شَيَّاآن | şayyāʾān | semâî aday | iki çok dileyen | orta |  |  |
+| fa''āl + müennes tesniye | شَيَّاءَتَان | şayyāʾatān | semâî aday | iki çok dileyen (dişi) | orta |  |  |
+| fa''āl + cem‘-i sâlim müzekker (-ûn) | شَيَّاؤُون | şayyāʾūn | semâî aday | çok dileyenler | orta |  |  |
+| fa''āl + cem‘-i sâlim müzekker (-în) | شَيَّائِين | şayyāʾīn | semâî aday | çok dileyenler | orta |  |  |
+| fa''āl + cem‘-i sâlim müennes (-ât) | شَيَّاآت | şayyāʾāt | semâî aday | çok dileyenler (dişi) | orta |  |  |
+| fa''āle | شَيَّاءَة | şayyāʾa | semâî aday | çok dileyen | orta |  |  |
+| fa''āle + tesniye | شَيَّاءَتَان | şayyāʾatān | semâî aday | iki çok dileyen | orta |  |  |
+| fa''āle + cem‘-i sâlim müennes (-ât) | شَيَّاآت | şayyāʾāt | semâî aday | çok dileyenler (dişi) | orta |  |  |
+| fa'ūl | شَيُوء | şayūʾ | semâî aday | çok dileyen | orta |  |  |
+| fa'ūl + müennes | شَيُوءَة | şayūʾa | semâî aday | çok dileyen (dişi) | orta |  |  |
+| fa'ūl + tesniye | شَيُوءَان | şayūʾān | semâî aday | iki çok dileyen | orta |  |  |
+| fa'ūl + müennes tesniye | شَيُوءَتَان | şayūʾatān | semâî aday | iki çok dileyen (dişi) | orta |  |  |
+| fa'ūl + cem‘-i sâlim müzekker (-ûn) | شَيُوءُون | şayūʾūn | semâî aday | çok dileyenler | orta |  |  |
+| fa'ūl + cem‘-i sâlim müzekker (-în) | شَيُوءِين | şayūʾīn | semâî aday | çok dileyenler | orta |  |  |
+| fa'ūl + cem‘-i sâlim müennes (-ât) | شَيُوءَات | şayūʾāt | semâî aday | çok dileyenler (dişi) | orta |  |  |
+| fa''ūl | شَيُّوء | şayyūʾ | semâî aday | çok dileyen | orta |  |  |
+| fa''ūl + müennes | شَيُّوءَة | şayyūʾa | semâî aday | çok dileyen (dişi) | orta |  |  |
+| fa''ūl + tesniye | شَيُّوءَان | şayyūʾān | semâî aday | iki çok dileyen | orta |  |  |
+| fa''ūl + müennes tesniye | شَيُّوءَتَان | şayyūʾatān | semâî aday | iki çok dileyen (dişi) | orta |  |  |
+| fa''ūl + cem‘-i sâlim müzekker (-ûn) | شَيُّوءُون | şayyūʾūn | semâî aday | çok dileyenler | orta |  |  |
+| fa''ūl + cem‘-i sâlim müzekker (-în) | شَيُّوءِين | şayyūʾīn | semâî aday | çok dileyenler | orta |  |  |
+| fa''ūl + cem‘-i sâlim müennes (-ât) | شَيُّوءَات | şayyūʾāt | semâî aday | çok dileyenler (dişi) | orta |  |  |
+| fi''īl | شِيِّيء | şiyyīʾ | semâî aday | çok dileyen | orta |  |  |
+| fi''īl + müennes | شِيِّيئَة | şiyyīʾa | semâî aday | çok dileyen (dişi) | orta |  |  |
+| fi''īl + tesniye | شِيِّيئَان | şiyyīʾān | semâî aday | iki çok dileyen | orta |  |  |
+| fi''īl + müennes tesniye | شِيِّيئَتَان | şiyyīʾatān | semâî aday | iki çok dileyen (dişi) | orta |  |  |
+| fi''īl + cem‘-i sâlim müzekker (-ûn) | شِيِّيئُون | şiyyīʾūn | semâî aday | çok dileyenler | orta |  |  |
+| fi''īl + cem‘-i sâlim müzekker (-în) | شِيِّيئِين | şiyyīʾīn | semâî aday | çok dileyenler | orta |  |  |
+| fi''īl + cem‘-i sâlim müennes (-ât) | شِيِّيئَات | şiyyīʾāt | semâî aday | çok dileyenler (dişi) | orta |  |  |
+| fu''āl | شُيَّاء | şuyyāʾ | semâî aday | çok dileyen | orta |  |  |
+| fu''āl + müennes | شُيَّاءَة | şuyyāʾa | semâî aday | çok dileyen (dişi) | orta |  |  |
+| fu''āl + tesniye | شُيَّاآن | şuyyāʾān | semâî aday | iki çok dileyen | orta |  |  |
+| fu''āl + müennes tesniye | شُيَّاءَتَان | şuyyāʾatān | semâî aday | iki çok dileyen (dişi) | orta |  |  |
+| fu''āl + cem‘-i sâlim müzekker (-ûn) | شُيَّاؤُون | şuyyāʾūn | semâî aday | çok dileyenler | orta |  |  |
+| fu''āl + cem‘-i sâlim müzekker (-în) | شُيَّائِين | şuyyāʾīn | semâî aday | çok dileyenler | orta |  |  |
+| fu''āl + cem‘-i sâlim müennes (-ât) | شُيَّاآت | şuyyāʾāt | semâî aday | çok dileyenler (dişi) | orta |  |  |
+| mif'āl | مِشْيَاء | mişyāʾ | semâî aday | çok dileyen | orta |  |  |
+| mif'āl + müennes | مِشْيَاءَة | mişyāʾa | semâî aday | çok dileyen (dişi) | orta |  |  |
+| mif'āl + tesniye | مِشْيَاآن | mişyāʾān | semâî aday | iki çok dileyen | orta |  |  |
+| mif'āl + müennes tesniye | مِشْيَاءَتَان | mişyāʾatān | semâî aday | iki çok dileyen (dişi) | orta |  |  |
+| mif'āl + cem‘-i sâlim müzekker (-ûn) | مِشْيَاؤُون | mişyāʾūn | semâî aday | çok dileyenler | orta |  |  |
+| mif'āl + cem‘-i sâlim müzekker (-în) | مِشْيَائِين | mişyāʾīn | semâî aday | çok dileyenler | orta |  |  |
+| mif'āl + cem‘-i sâlim müennes (-ât) | مِشْيَاآت | mişyāʾāt | semâî aday | çok dileyenler (dişi) | orta |  |  |
+| mif'īl | مِشْيِيء | mişyīʾ | semâî aday | çok dileyen | orta |  |  |
+| mif'īl + müennes | مِشْيِيئَة | mişyīʾa | semâî aday | çok dileyen (dişi) | orta |  |  |
+| mif'īl + tesniye | مِشْيِيئَان | mişyīʾān | semâî aday | iki çok dileyen | orta |  |  |
+| mif'īl + müennes tesniye | مِشْيِيئَتَان | mişyīʾatān | semâî aday | iki çok dileyen (dişi) | orta |  |  |
+| mif'īl + cem‘-i sâlim müzekker (-ûn) | مِشْيِيئُون | mişyīʾūn | semâî aday | çok dileyenler | orta |  |  |
+| mif'īl + cem‘-i sâlim müzekker (-în) | مِشْيِيئِين | mişyīʾīn | semâî aday | çok dileyenler | orta |  |  |
+| mif'īl + cem‘-i sâlim müennes (-ât) | مِشْيِيئَات | mişyīʾāt | semâî aday | çok dileyenler (dişi) | orta |  |  |
+| fa'īl | شَيِيء | şayīʾ | semâî aday | çok dileyen | orta |  |  |
+| fa'īl + müennes | شَيِيئَة | şayīʾa | semâî aday | çok dileyen (dişi) | orta |  |  |
+| fa'īl + tesniye | شَيِيئَان | şayīʾān | semâî aday | iki çok dileyen | orta |  |  |
+| fa'īl + müennes tesniye | شَيِيئَتَان | şayīʾatān | semâî aday | iki çok dileyen (dişi) | orta |  |  |
+| fa'īl + cem‘-i sâlim müzekker (-ûn) | شَيِيئُون | şayīʾūn | semâî aday | çok dileyenler | orta |  |  |
+| fa'īl + cem‘-i sâlim müzekker (-în) | شَيِيئِين | şayīʾīn | semâî aday | çok dileyenler | orta |  |  |
+| fa'īl + cem‘-i sâlim müennes (-ât) | شَيِيئَات | şayīʾāt | semâî aday | çok dileyenler (dişi) | orta |  |  |
+| fa''al | شَيَّأ | şayyaʾ | semâî aday | çok dileyen | orta |  |  |
+| fa''al + müennes | شَيَّأَة | şayyaʾa | semâî aday | çok dileyen (dişi) | orta |  |  |
+| fa''al + tesniye | شَيَّآن | şayyaʾān | semâî aday | iki çok dileyen | orta |  |  |
+| fa''al + müennes tesniye | شَيَّأَتَان | şayyaʾatān | semâî aday | iki çok dileyen (dişi) | orta |  |  |
+| fa''al + cem‘-i sâlim müzekker (-ûn) | شَيَّؤُون | şayyaʾūn | semâî aday | çok dileyenler | orta |  |  |
+| fa''al + cem‘-i sâlim müzekker (-în) | شَيَّئِين | şayyaʾīn | semâî aday | çok dileyenler | orta |  |  |
+| fa''al + cem‘-i sâlim müennes (-ât) | شَيَّآت | şayyaʾāt | semâî aday | çok dileyenler (dişi) | orta |  |  |
 
 ## mensûb (13)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| fa'l + iyy | شَيْئِيّ | şayʾiyy | kıyâsî | şey olmaya ilgili | kontrol |  |  |
-| fa'al + iyy | شَائِيّ | şāʾiyy | kıyâsî · ilal | şey olmaya ilgili | kontrol |  |  |
-| fi'l + iyy | شِيئِيّ | şīʾiyy | kıyâsî · ilal | şey olmaya ilgili | kontrol |  |  |
-| fu'l + iyy | شُوءِيّ | şūʾiyy | kıyâsî · ilal | şey olmaya ilgili | kontrol |  |  |
-| fi'āl + iyy | شِيَائِيّ | şiyāʾiyy | kıyâsî · ilal | şey olmaya ilgili | kontrol |  |  |
-| fâ'il + iyy | شَائِئِيّ | şāʾiʾiyy | kıyâsî · ilal | şey olmaya ilgili | kontrol |  |  |
-| maf'ûl + iyy | مَشِيئِيّ | maşīʾiyy | kıyâsî · ilal | şey olmaya ilgili | kontrol |  |  |
-| fa'īl + iyy | شَيِيئِيّ | şayīʾiyy | kıyâsî | şey olmaya ilgili | kontrol |  |  |
-| maf'al + iyy | مَشَائِيّ | maşāʾiyy | kıyâsî · ilal | şey olmaya ilgili | kontrol |  |  |
-| taf'īl + iyy | تَشْيِيئِيّ | taşyīʾiyy | kıyâsî | şey olmaya ilgili | kontrol |  |  |
-| tafā'ul + iyy | تَشَايُئِيّ | taşāyuʾiyy | kıyâsî | şey olmaya ilgili | kontrol |  |  |
-| if'āl + iyy | إِشَائِيّ | ʾişāʾiyy | kıyâsî · ilal | şey olmaya ilgili | kontrol |  |  |
-| ifti'āl + iyy | اِشْتِيَائِيّ | iştiyāʾiyy | kıyâsî · ilal | şey olmaya ilgili | kontrol |  |  |
+| fa'l + iyy | شَيْئِيّ | şayʾiyy | kıyâsî | dilemeye ilgili | orta |  |  |
+| fa'al + iyy | شَائِيّ | şāʾiyy | kıyâsî · ilal | dilemeye ilgili | orta |  |  |
+| fi'l + iyy | شِيئِيّ | şīʾiyy | kıyâsî · ilal | dilemeye ilgili | orta |  |  |
+| fu'l + iyy | شُوءِيّ | şūʾiyy | kıyâsî · ilal | dilemeye ilgili | orta |  |  |
+| fi'āl + iyy | شِيَائِيّ | şiyāʾiyy | kıyâsî · ilal | dilemeye ilgili | orta |  |  |
+| fâ'il + iyy | شَائِئِيّ | şāʾiʾiyy | kıyâsî · ilal | dilemeye ilgili | orta |  |  |
+| maf'ûl + iyy | مَشِيئِيّ | maşīʾiyy | kıyâsî · ilal | dilemeye ilgili | orta |  |  |
+| fa'īl + iyy | شَيِيئِيّ | şayīʾiyy | kıyâsî | dilemeye ilgili | orta |  |  |
+| maf'al + iyy | مَشَائِيّ | maşāʾiyy | kıyâsî · ilal | dilemeye ilgili | orta |  |  |
+| taf'īl + iyy | تَشْيِيئِيّ | taşyīʾiyy | kıyâsî | dilemeye ilgili | orta |  |  |
+| tafā'ul + iyy | تَشَايُئِيّ | taşāyuʾiyy | kıyâsî | dilemeye ilgili | orta |  |  |
+| if'āl + iyy | إِشَائِيّ | ʾişāʾiyy | kıyâsî · ilal | dilemeye ilgili | orta |  |  |
+| ifti'āl + iyy | اِشْتِيَائِيّ | iştiyāʾiyy | kıyâsî · ilal | dilemeye ilgili | orta |  |  |
 
 ## masdar-ı sınâî (13)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| fa'l + iyye | شَيْئِيَّة | şayʾiyya | kıyâsî | şey olanlık | kontrol |  |  |
-| fa'al + iyye | شَائِيَّة | şāʾiyya | kıyâsî · ilal | şey olanlık | kontrol |  |  |
-| fi'l + iyye | شِيئِيَّة | şīʾiyya | kıyâsî · ilal | şey olanlık | kontrol |  |  |
-| fu'l + iyye | شُوءِيَّة | şūʾiyya | kıyâsî · ilal | şey olanlık | kontrol |  |  |
-| fi'āl + iyye | شِيَائِيَّة | şiyāʾiyya | kıyâsî · ilal | şey olanlık | kontrol |  |  |
-| fâ'il + iyye | شَائِئِيَّة | şāʾiʾiyya | kıyâsî · ilal | şey olanlık | kontrol |  |  |
-| maf'ûl + iyye | مَشِيئِيَّة | maşīʾiyya | kıyâsî · ilal | şey olanlık | kontrol |  |  |
-| fa'īl + iyye | شَيِيئِيَّة | şayīʾiyya | kıyâsî | şey olanlık | kontrol |  |  |
-| maf'al + iyye | مَشَائِيَّة | maşāʾiyya | kıyâsî · ilal | şey olanlık | kontrol |  |  |
-| taf'īl + iyye | تَشْيِيئِيَّة | taşyīʾiyya | kıyâsî | şey olanlık | kontrol |  |  |
-| tafā'ul + iyye | تَشَايُئِيَّة | taşāyuʾiyya | kıyâsî | şey olanlık | kontrol |  |  |
-| if'āl + iyye | إِشَائِيَّة | ʾişāʾiyya | kıyâsî · ilal | şey olanlık | kontrol |  |  |
-| ifti'āl + iyye | اِشْتِيَائِيَّة | iştiyāʾiyya | kıyâsî · ilal | şey olanlık | kontrol |  |  |
+| fa'l + iyye | شَيْئِيَّة | şayʾiyya | kıyâsî | dileyenlik | orta |  |  |
+| fa'al + iyye | شَائِيَّة | şāʾiyya | kıyâsî · ilal | dileyenlik | orta |  |  |
+| fi'l + iyye | شِيئِيَّة | şīʾiyya | kıyâsî · ilal | dileyenlik | orta |  |  |
+| fu'l + iyye | شُوءِيَّة | şūʾiyya | kıyâsî · ilal | dileyenlik | orta |  |  |
+| fi'āl + iyye | شِيَائِيَّة | şiyāʾiyya | kıyâsî · ilal | dileyenlik | orta |  |  |
+| fâ'il + iyye | شَائِئِيَّة | şāʾiʾiyya | kıyâsî · ilal | dileyenlik | orta |  |  |
+| maf'ûl + iyye | مَشِيئِيَّة | maşīʾiyya | kıyâsî · ilal | dileyenlik | orta |  |  |
+| fa'īl + iyye | شَيِيئِيَّة | şayīʾiyya | kıyâsî | dileyenlik | orta |  |  |
+| maf'al + iyye | مَشَائِيَّة | maşāʾiyya | kıyâsî · ilal | dileyenlik | orta |  |  |
+| taf'īl + iyye | تَشْيِيئِيَّة | taşyīʾiyya | kıyâsî | dileyenlik | orta |  |  |
+| tafā'ul + iyye | تَشَايُئِيَّة | taşāyuʾiyya | kıyâsî | dileyenlik | orta |  |  |
+| if'āl + iyye | إِشَائِيَّة | ʾişāʾiyya | kıyâsî · ilal | dileyenlik | orta |  |  |
+| ifti'āl + iyye | اِشْتِيَائِيَّة | iştiyāʾiyya | kıyâsî · ilal | dileyenlik | orta |  |  |
 
 ## ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı) (9)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| fa'âl (kelâm, selâm) | شَيَاء | şayāʾ | semâî aday | şey olma | kontrol |  |  |
-| fu'ûl (vudû') | شُيُوء | şuyūʾ | semâî aday | şey olma | kontrol |  |  |
-| fi'âl | شِيَاء | şiyāʾ | semâî aday · ilal | şey olma | kontrol |  |  |
-| fu'l (şükr) | شُوء | şūʾ | semâî aday · ilal | şey olma | kontrol |  |  |
-| fa'âle (belâğa) | شَيَاءَة | şayāʾa | semâî aday | şey olma | kontrol |  |  |
-| fi'âle | شِيَاءَة | şiyāʾa | semâî aday · ilal | şey olma | kontrol |  |  |
-| fu'ûle | شُيُوءَة | şuyūʾa | semâî aday | şey olma | kontrol |  |  |
-| fa'l | شَيْء | şayʾ | semâî aday | şey olma | kontrol | Vikisözlük: thing |  |
-| fi'l | شِيء | şīʾ | semâî aday · ilal | şey olma | kontrol |  |  |
+| fa'âl (kelâm, selâm) | شَيَاء | şayāʾ | semâî aday | dileme | orta |  |  |
+| fu'ûl (vudû') | شُيُوء | şuyūʾ | semâî aday | dileme | orta |  |  |
+| fi'âl | شِيَاء | şiyāʾ | semâî aday · ilal | dileme | orta |  |  |
+| fu'l (şükr) | شُوء | şūʾ | semâî aday · ilal | dileme | orta |  |  |
+| fa'âle (belâğa) | شَيَاءَة | şayāʾa | semâî aday | dileme | orta |  |  |
+| fi'âle | شِيَاءَة | şiyāʾa | semâî aday · ilal | dileme | orta |  |  |
+| fu'ûle | شُيُوءَة | şuyūʾa | semâî aday | dileme | orta |  |  |
+| fa'l | شَيْء | şayʾ | semâî aday | dileme | orta | Vikisözlük: thing |  |
+| fi'l | شِيء | şīʾ | semâî aday · ilal | dileme | orta |  |  |
 
 ## ism-i cins · ifrâdî (aday) (14)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| fâ'ûl | شَايُوء | şāyūʾ | semâî aday | şey olanlar (topluluk adı) | kontrol |  |  |
-| fa'ala | شَيَأَة | şayaʾa | semâî aday | şey olanlar (topluluk adı) | kontrol |  |  |
-| fu'ala | شُيَأَة | şuyaʾa | semâî aday | şey olanlar (topluluk adı) | kontrol |  |  |
-| uf'ûla | أُشْيُوءَة | ʾuşyūʾa | semâî aday | şey olanlar (topluluk adı) | kontrol |  |  |
-| faw'al | شَوْيَأ | şawyaʾ | semâî aday | şey olanlar (topluluk adı) | kontrol |  |  |
-| fay'al | شَيْيَأ | şayyaʾ | semâî aday | şey olanlar (topluluk adı) | kontrol |  |  |
-| fa'l | شَيْء | şayʾ | semâî aday | şey olanlar (topluluk adı) | kontrol | Vikisözlük: thing |  |
-| fa'al | شَاء | şāʾ | semâî aday · ilal | şey olanlar (topluluk adı) | kontrol |  |  |
-| fi'l | شِيء | şīʾ | semâî aday · ilal | şey olanlar (topluluk adı) | kontrol |  |  |
-| fu'l | شُوء | şūʾ | semâî aday · ilal | şey olanlar (topluluk adı) | kontrol |  |  |
-| fa'îl | شَيِيء | şayīʾ | semâî aday | şey olanlar (topluluk adı) | kontrol |  |  |
-| fi'al | شِيَأ | şiyaʾ | semâî aday · ilal | şey olanlar (topluluk adı) | kontrol |  |  |
-| fu'ul | شُيُؤ | şuyuʾ | semâî aday | şey olanlar (topluluk adı) | kontrol |  |  |
-| fa'âl | شَيَاء | şayāʾ | semâî aday | şey olanlar (topluluk adı) | kontrol |  |  |
+| fâ'ûl | شَايُوء | şāyūʾ | semâî aday | dileyenler (topluluk adı) | orta |  |  |
+| fa'ala | شَيَأَة | şayaʾa | semâî aday | dileyenler (topluluk adı) | orta |  |  |
+| fu'ala | شُيَأَة | şuyaʾa | semâî aday | dileyenler (topluluk adı) | orta |  |  |
+| uf'ûla | أُشْيُوءَة | ʾuşyūʾa | semâî aday | dileyenler (topluluk adı) | orta |  |  |
+| faw'al | شَوْيَأ | şawyaʾ | semâî aday | dileyenler (topluluk adı) | orta |  |  |
+| fay'al | شَيْيَأ | şayyaʾ | semâî aday | dileyenler (topluluk adı) | orta |  |  |
+| fa'l | شَيْء | şayʾ | semâî aday | dileyenler (topluluk adı) | orta | Vikisözlük: thing |  |
+| fa'al | شَاء | şāʾ | semâî aday · ilal | dileyenler (topluluk adı) | orta |  |  |
+| fi'l | شِيء | şīʾ | semâî aday · ilal | dileyenler (topluluk adı) | orta |  |  |
+| fu'l | شُوء | şūʾ | semâî aday · ilal | dileyenler (topluluk adı) | orta |  |  |
+| fa'îl | شَيِيء | şayīʾ | semâî aday | dileyenler (topluluk adı) | orta |  |  |
+| fi'al | شِيَأ | şiyaʾ | semâî aday · ilal | dileyenler (topluluk adı) | orta |  |  |
+| fu'ul | شُيُؤ | şuyuʾ | semâî aday | dileyenler (topluluk adı) | orta |  |  |
+| fa'âl | شَيَاء | şayāʾ | semâî aday | dileyenler (topluluk adı) | orta |  |  |
 
 ## ism-i cins · cem‘î ve tekili (+tâ) (11)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| fâ'ûl + tâ (tekili) | شَايُوءَة | şāyūʾa | semâî aday | bir tane şey olanlar (topluluk adı) | kontrol |  |  |
-| faw'al + tâ (tekili) | شَوْيَأَة | şawyaʾa | semâî aday | bir tane şey olanlar (topluluk adı) | kontrol |  |  |
-| fay'al + tâ (tekili) | شَيْيَأَة | şayyaʾa | semâî aday | bir tane şey olanlar (topluluk adı) | kontrol |  |  |
-| fa'l + tâ (tekili) | شَيْأَة | şayʾa | semâî aday | bir tane şey olanlar (topluluk adı) | kontrol |  |  |
-| fa'al + tâ (tekili) | شَاءَة | şāʾa | semâî aday · ilal | bir tane şey olanlar (topluluk adı) | kontrol |  |  |
-| fi'l + tâ (tekili) | شِيئَة | şīʾa | semâî aday · ilal | bir tane şey olanlar (topluluk adı) | kontrol |  |  |
-| fu'l + tâ (tekili) | شُوءَة | şūʾa | semâî aday · ilal | bir tane şey olanlar (topluluk adı) | kontrol |  |  |
-| fa'îl + tâ (tekili) | شَيِيئَة | şayīʾa | semâî aday | bir tane şey olanlar (topluluk adı) | kontrol |  |  |
-| fi'al + tâ (tekili) | شِيَأَة | şiyaʾa | semâî aday · ilal | bir tane şey olanlar (topluluk adı) | kontrol |  |  |
-| fu'ul + tâ (tekili) | شُيُؤَة | şuyuʾa | semâî aday | bir tane şey olanlar (topluluk adı) | kontrol |  |  |
-| fa'âl + tâ (tekili) | شَيَاءَة | şayāʾa | semâî aday | bir tane şey olanlar (topluluk adı) | kontrol |  |  |
+| fâ'ûl + tâ (tekili) | شَايُوءَة | şāyūʾa | semâî aday | bir tane dileyenler (topluluk adı) | orta |  |  |
+| faw'al + tâ (tekili) | شَوْيَأَة | şawyaʾa | semâî aday | bir tane dileyenler (topluluk adı) | orta |  |  |
+| fay'al + tâ (tekili) | شَيْيَأَة | şayyaʾa | semâî aday | bir tane dileyenler (topluluk adı) | orta |  |  |
+| fa'l + tâ (tekili) | شَيْأَة | şayʾa | semâî aday | bir tane dileyenler (topluluk adı) | orta |  |  |
+| fa'al + tâ (tekili) | شَاءَة | şāʾa | semâî aday · ilal | bir tane dileyenler (topluluk adı) | orta |  |  |
+| fi'l + tâ (tekili) | شِيئَة | şīʾa | semâî aday · ilal | bir tane dileyenler (topluluk adı) | orta |  |  |
+| fu'l + tâ (tekili) | شُوءَة | şūʾa | semâî aday · ilal | bir tane dileyenler (topluluk adı) | orta |  |  |
+| fa'îl + tâ (tekili) | شَيِيئَة | şayīʾa | semâî aday | bir tane dileyenler (topluluk adı) | orta |  |  |
+| fi'al + tâ (tekili) | شِيَأَة | şiyaʾa | semâî aday · ilal | bir tane dileyenler (topluluk adı) | orta |  |  |
+| fu'ul + tâ (tekili) | شُيُؤَة | şuyuʾa | semâî aday | bir tane dileyenler (topluluk adı) | orta |  |  |
+| fa'âl + tâ (tekili) | شَيَاءَة | şayāʾa | semâî aday | bir tane dileyenler (topluluk adı) | orta |  |  |
 
 ## cem‘-i mükesser (aday) (22)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| ef'āl | أَشْيَاء | ʾaşyāʾ | semâî aday | şey olanlar (kırık çoğul) | kontrol |  |  |
-| ef'ile | أَشْيِئَة | ʾaşyiʾa | semâî aday | şey olanlar (kırık çoğul) | kontrol |  |  |
-| efâ'il | أَشَايِئ | ʾaşāyiʾ | semâî aday | şey olanlar (kırık çoğul) | kontrol |  |  |
-| efâ'îl | أَشَايِيء | ʾaşāyīʾ | semâî aday | şey olanlar (kırık çoğul) | kontrol |  |  |
-| fu'ūl | شُيُوء | şuyūʾ | semâî aday | şey olanlar (kırık çoğul) | kontrol |  |  |
-| fu'ul | شُيُؤ | şuyuʾ | semâî aday | şey olanlar (kırık çoğul) | kontrol |  |  |
-| fi'āl | شِيَاء | şiyāʾ | semâî aday · ilal | şey olanlar (kırık çoğul) | kontrol |  |  |
-| fi'al | شِيَأ | şiyaʾ | semâî aday · ilal | şey olanlar (kırık çoğul) | kontrol |  |  |
-| fi'ale | شِيَأَة | şiyaʾa | semâî aday | şey olanlar (kırık çoğul) | kontrol |  |  |
-| fu'al | شُيَأ | şuyaʾ | semâî aday | şey olanlar (kırık çoğul) | kontrol |  |  |
-| fu'alā' | شُيَأاء | şuyaʾāʾ | semâî aday | şey olanlar (kırık çoğul) | kontrol |  |  |
-| fa'ale | شَيَأَة | şayaʾa | semâî aday | şey olanlar (kırık çoğul) | kontrol |  |  |
-| fu''āl | شُيَّاء | şuyyāʾ | semâî aday | şey olanlar (kırık çoğul) | kontrol |  |  |
-| fa'āl | شَيَاء | şayāʾ | semâî aday | şey olanlar (kırık çoğul) | kontrol |  |  |
-| fa'al | شَاء | şāʾ | semâî aday · ilal | şey olanlar (kırık çoğul) | kontrol |  |  |
-| mefâ'il | مَشَايِئ | maşāyiʾ | semâî aday | şey olanlar (kırık çoğul) | kontrol |  |  |
-| mefâ'îl | مَشَايِيء | maşāyīʾ | semâî aday | şey olanlar (kırık çoğul) | kontrol |  |  |
-| fevâ'il | شَوَايِئ | şawāyiʾ | semâî aday | şey olanlar (kırık çoğul) | kontrol |  |  |
-| af'ul | أَشْيُؤ | ʾaşyuʾ | semâî aday | şey olanlar (kırık çoğul) | kontrol |  |  |
-| fu''al | شُيَّأ | şuyyaʾ | semâî aday | şey olanlar (kırık çoğul) | kontrol |  |  |
-| fe'âil | شَيَاءِ | şayāʾi | semâî aday | şey olanlar (kırık çoğul) | kontrol |  |  |
-| fu'ayl(cem') | شُيَيْء | şuyayʾ | semâî aday | şey olanlar (kırık çoğul) | kontrol |  |  |
+| ef'āl | أَشْيَاء | ʾaşyāʾ | semâî aday | dileyenler (kırık çoğul) | orta |  |  |
+| ef'ile | أَشْيِئَة | ʾaşyiʾa | semâî aday | dileyenler (kırık çoğul) | orta |  |  |
+| efâ'il | أَشَايِئ | ʾaşāyiʾ | semâî aday | dileyenler (kırık çoğul) | orta |  |  |
+| efâ'îl | أَشَايِيء | ʾaşāyīʾ | semâî aday | dileyenler (kırık çoğul) | orta |  |  |
+| fu'ūl | شُيُوء | şuyūʾ | semâî aday | dileyenler (kırık çoğul) | orta |  |  |
+| fu'ul | شُيُؤ | şuyuʾ | semâî aday | dileyenler (kırık çoğul) | orta |  |  |
+| fi'āl | شِيَاء | şiyāʾ | semâî aday · ilal | dileyenler (kırık çoğul) | orta |  |  |
+| fi'al | شِيَأ | şiyaʾ | semâî aday · ilal | dileyenler (kırık çoğul) | orta |  |  |
+| fi'ale | شِيَأَة | şiyaʾa | semâî aday | dileyenler (kırık çoğul) | orta |  |  |
+| fu'al | شُيَأ | şuyaʾ | semâî aday | dileyenler (kırık çoğul) | orta |  |  |
+| fu'alā' | شُيَأاء | şuyaʾāʾ | semâî aday | dileyenler (kırık çoğul) | orta |  |  |
+| fa'ale | شَيَأَة | şayaʾa | semâî aday | dileyenler (kırık çoğul) | orta |  |  |
+| fu''āl | شُيَّاء | şuyyāʾ | semâî aday | dileyenler (kırık çoğul) | orta |  |  |
+| fa'āl | شَيَاء | şayāʾ | semâî aday | dileyenler (kırık çoğul) | orta |  |  |
+| fa'al | شَاء | şāʾ | semâî aday · ilal | dileyenler (kırık çoğul) | orta |  |  |
+| mefâ'il | مَشَايِئ | maşāyiʾ | semâî aday | dileyenler (kırık çoğul) | orta |  |  |
+| mefâ'îl | مَشَايِيء | maşāyīʾ | semâî aday | dileyenler (kırık çoğul) | orta |  |  |
+| fevâ'il | شَوَايِئ | şawāyiʾ | semâî aday | dileyenler (kırık çoğul) | orta |  |  |
+| af'ul | أَشْيُؤ | ʾaşyuʾ | semâî aday | dileyenler (kırık çoğul) | orta |  |  |
+| fu''al | شُيَّأ | şuyyaʾ | semâî aday | dileyenler (kırık çoğul) | orta |  |  |
+| fe'âil | شَيَاءِ | şayāʾi | semâî aday | dileyenler (kırık çoğul) | orta |  |  |
+| fu'ayl(cem') | شُيَيْء | şuyayʾ | semâî aday | dileyenler (kırık çoğul) | orta |  |  |
 
 ## cem‘u’l-cem‘ (aday) (22)
 
 | kalıp | Arapça | Latin | etiket | Türkçe (motor) | güven | tanık (Vikisözlük, İngilizce) | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| ef'āl + ât | أَشْيَاآت | ʾaşyāʾāt | semâî aday | şey olanlar (çoğulun çoğulu) | kontrol |  |  |
-| ef'ile + ât | أَشْيِئَات | ʾaşyiʾāt | semâî aday | şey olanlar (çoğulun çoğulu) | kontrol |  |  |
-| efâ'il + ât | أَشَايِئَات | ʾaşāyiʾāt | semâî aday | şey olanlar (çoğulun çoğulu) | kontrol |  |  |
-| efâ'îl + ât | أَشَايِيئَات | ʾaşāyīʾāt | semâî aday | şey olanlar (çoğulun çoğulu) | kontrol |  |  |
-| fu'ūl + ât | شُيُوءَات | şuyūʾāt | semâî aday | şey olanlar (çoğulun çoğulu) | kontrol |  |  |
-| fu'ul + ât | شُيُؤَات | şuyuʾāt | semâî aday | şey olanlar (çoğulun çoğulu) | kontrol |  |  |
-| fi'āl + ât | شِيَاآت | şiyāʾāt | semâî aday · ilal | şey olanlar (çoğulun çoğulu) | kontrol |  |  |
-| fi'al + ât | شِيَآت | şiyaʾāt | semâî aday · ilal | şey olanlar (çoğulun çoğulu) | kontrol |  |  |
-| fi'ale + ât | شِيَآت | şiyaʾāt | semâî aday | şey olanlar (çoğulun çoğulu) | kontrol |  |  |
-| fu'al + ât | شُيَآت | şuyaʾāt | semâî aday | şey olanlar (çoğulun çoğulu) | kontrol |  |  |
-| fu'alā' + ât | شُيَأاآت | şuyaʾāʾāt | semâî aday | şey olanlar (çoğulun çoğulu) | kontrol |  |  |
-| fa'ale + ât | شَيَآت | şayaʾāt | semâî aday | şey olanlar (çoğulun çoğulu) | kontrol |  |  |
-| fu''āl + ât | شُيَّاآت | şuyyāʾāt | semâî aday | şey olanlar (çoğulun çoğulu) | kontrol |  |  |
-| fa'āl + ât | شَيَاآت | şayāʾāt | semâî aday | şey olanlar (çoğulun çoğulu) | kontrol |  |  |
-| fa'al + ât | شَاآت | şāʾāt | semâî aday · ilal | şey olanlar (çoğulun çoğulu) | kontrol |  |  |
-| mefâ'il + ât | مَشَايِئَات | maşāyiʾāt | semâî aday | şey olanlar (çoğulun çoğulu) | kontrol |  |  |
-| mefâ'îl + ât | مَشَايِيئَات | maşāyīʾāt | semâî aday | şey olanlar (çoğulun çoğulu) | kontrol |  |  |
-| fevâ'il + ât | شَوَايِئَات | şawāyiʾāt | semâî aday | şey olanlar (çoğulun çoğulu) | kontrol |  |  |
-| af'ul + ât | أَشْيُؤَات | ʾaşyuʾāt | semâî aday | şey olanlar (çoğulun çoğulu) | kontrol |  |  |
-| fu''al + ât | شُيَّآت | şuyyaʾāt | semâî aday | şey olanlar (çoğulun çoğulu) | kontrol |  |  |
-| fe'âil + ât | شَيَائِئَات | şayāʾiʾāt | semâî aday | şey olanlar (çoğulun çoğulu) | kontrol |  |  |
-| fu'ayl(cem') + ât | شُيَيْآت | şuyayʾāt | semâî aday | şey olanlar (çoğulun çoğulu) | kontrol |  |  |
+| ef'āl + ât | أَشْيَاآت | ʾaşyāʾāt | semâî aday | dileyenler (çoğulun çoğulu) | orta |  |  |
+| ef'ile + ât | أَشْيِئَات | ʾaşyiʾāt | semâî aday | dileyenler (çoğulun çoğulu) | orta |  |  |
+| efâ'il + ât | أَشَايِئَات | ʾaşāyiʾāt | semâî aday | dileyenler (çoğulun çoğulu) | orta |  |  |
+| efâ'îl + ât | أَشَايِيئَات | ʾaşāyīʾāt | semâî aday | dileyenler (çoğulun çoğulu) | orta |  |  |
+| fu'ūl + ât | شُيُوءَات | şuyūʾāt | semâî aday | dileyenler (çoğulun çoğulu) | orta |  |  |
+| fu'ul + ât | شُيُؤَات | şuyuʾāt | semâî aday | dileyenler (çoğulun çoğulu) | orta |  |  |
+| fi'āl + ât | شِيَاآت | şiyāʾāt | semâî aday · ilal | dileyenler (çoğulun çoğulu) | orta |  |  |
+| fi'al + ât | شِيَآت | şiyaʾāt | semâî aday · ilal | dileyenler (çoğulun çoğulu) | orta |  |  |
+| fi'ale + ât | شِيَآت | şiyaʾāt | semâî aday | dileyenler (çoğulun çoğulu) | orta |  |  |
+| fu'al + ât | شُيَآت | şuyaʾāt | semâî aday | dileyenler (çoğulun çoğulu) | orta |  |  |
+| fu'alā' + ât | شُيَأاآت | şuyaʾāʾāt | semâî aday | dileyenler (çoğulun çoğulu) | orta |  |  |
+| fa'ale + ât | شَيَآت | şayaʾāt | semâî aday | dileyenler (çoğulun çoğulu) | orta |  |  |
+| fu''āl + ât | شُيَّاآت | şuyyāʾāt | semâî aday | dileyenler (çoğulun çoğulu) | orta |  |  |
+| fa'āl + ât | شَيَاآت | şayāʾāt | semâî aday | dileyenler (çoğulun çoğulu) | orta |  |  |
+| fa'al + ât | شَاآت | şāʾāt | semâî aday · ilal | dileyenler (çoğulun çoğulu) | orta |  |  |
+| mefâ'il + ât | مَشَايِئَات | maşāyiʾāt | semâî aday | dileyenler (çoğulun çoğulu) | orta |  |  |
+| mefâ'îl + ât | مَشَايِيئَات | maşāyīʾāt | semâî aday | dileyenler (çoğulun çoğulu) | orta |  |  |
+| fevâ'il + ât | شَوَايِئَات | şawāyiʾāt | semâî aday | dileyenler (çoğulun çoğulu) | orta |  |  |
+| af'ul + ât | أَشْيُؤَات | ʾaşyuʾāt | semâî aday | dileyenler (çoğulun çoğulu) | orta |  |  |
+| fu''al + ât | شُيَّآت | şuyyaʾāt | semâî aday | dileyenler (çoğulun çoğulu) | orta |  |  |
+| fe'âil + ât | شَيَائِئَات | şayāʾiʾāt | semâî aday | dileyenler (çoğulun çoğulu) | orta |  |  |
+| fu'ayl(cem') + ât | شُيَيْآت | şuyayʾāt | semâî aday | dileyenler (çoğulun çoğulu) | orta |  |  |
 
 ## Reddedilenler ve sebebi
 

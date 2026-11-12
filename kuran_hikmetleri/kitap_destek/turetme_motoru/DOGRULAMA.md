@@ -158,3 +158,15 @@ Kaynak: kaikki.org İngilizce Vikisözlük'ün Arapça dökümü (233 417 madde;
 **Tanık sütunu:** her kök tablosunda "tanık (Vikisözlük, İngilizce)" sütunu, üretilen biçimin Vikisözlük'te bulunduğunu ve İngilizce tanımını gösterir; 31 kök tablosunda 430/14529 satır tanıklıdır (kalan satırlar kıyâsî türevdir, Vikisözlük'te yoktur, yanlış demek değildir).
 
 **Türkçe karşılık için ölçüm:** Vikisözlük'ten Türkçe fiil bulma (Arapça fiil → Türkçe çeviri bağı ve İngilizce tanım → Türkçe karşılık) bizim 1651 kökün fiil sapı bulunamayan 956'sından 609'una aday verdi; fakat bizim fiil karşılığı bilinen köklerde aynı yolların bizim karşılıkla uyuşması düşüktür (İngilizce yolu 71/226, Arapça doğrudan çeviri yolu 3/9). Bu yüzden Vikisözlük'ten gelen Türkçe fiil **otomatik karşılık olarak kullanılmadı**; yalnız geçişlilik ve tanık için kullanıldı.
+
+## Türkçe fiil darboğazı (F 366) — `kuran_fiil.py`
+
+**Darboğaz:** `kok_anlamlari.json`daki 1651 kökün 956'sında Türkçe fiil yoktu (yalnız isim karşılığı).
+
+**Bulunan çare:** projenin kendi `kaynak/sozluk/` dizininde Kur'ân fiil lemmalarının Türkçe karşılığı vardı (`lemma_karsilik_uretim.json`: 4256 lemma; `kelimeler.json`: kelime·kök·tür·bâb). Bu iki dosya kök üzerinden birleştirilir; "indirdi", "bağışlar", "iman etti" gibi çekimli karşılıklardan fiil sapı çıkarılır (geçmiş ve geniş zaman ekleri, ünsüz yumuşaması d→t, edilgen ve "değil/var/yok" ayıklanır); aday sapların sıralanması kök_anlamlari'ndaki isim karşılığına uyuma, tek kelimeliliğe ve sıklığa göredir. `turkce.py` önce kök_anlamlari fiilini, yoksa bu kaynağı, yoksa isim karşılığını kullanır.
+
+**Ölçü:** 541 kök için fiil sapı çıkarıldı; fiilsiz 956 kökten **240**'ı fiil kazandı (fiilli kök 695→935; isim karşılıklı kök 956→716). 31 kök tablosunda güven dağılımı: kontrol 5024→**2275**, orta 8445→11194, kural 135, veri yok 925 (aynı). Elle sınanan: Vezinler Tablosu 37/40 (değişmedi), Arapça doğrulama 83/83.
+
+**Kaynağın zaafı:** karşılıklar model üretimidir ("model-üretimi, doğrulanmadı" damgalı); kök_anlamlari fiiliyle örtüşen 301 kökte seçilen sap, ortak köklerde %51 uyuşuyor (kalanı eş anlamlı seçim: yap/kıl/koy gibi). Bu yüzden kaynaktan gelen sap **orta** güvenle işaretlidir, "kural" olamaz.
+
+**Aşılamayanlar (sayıyla):** (1) 716 kök hâlâ yalnız isim karşılıklı (kontrol): Kur'ân'da fiil çekimi geçmeyen kökler (isim köklü: ör. satış, savaş, söz), bunlara fiil üretmek uydurmadır. (2) 925 satır (2 kök: ووي, ويل) hiçbir kaynakta yok: ووي Kur'ân'da kök olarak kayıtlı değil, ويل yalnız "vay" ünlemi. (3) quran.com kelime kelime çeviri İngilizce, eyupipler Türkçe kelime çevirisi 483 lemma, etimoloji notları yalnız 34 ortak kök: katkısı sınırlı bulundu. 

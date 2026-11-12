@@ -3,6 +3,7 @@ import os
 import re
 
 import istikak as I
+import kuran_fiil
 
 VOW = 'aeıioöuü'
 ARKA = 'aıou'
@@ -176,6 +177,10 @@ def kok_bilgisi(kok):
         stem = fiiller[0].lower()
         kaynak = 'fiil'
         guven = 'kural' if len(set(fiiller)) == 1 and not meçhul else 'orta'
+    elif kuran_fiil.stem(kok, x['turkce']):
+        stem = kuran_fiil.stem(kok, x['turkce'])
+        kaynak = 'kuran-fiil'
+        guven = 'orta'
     elif adlar:
         ad = adlar[0].lower()
         kaynak = 'ad'
@@ -322,7 +327,7 @@ def olc():
     fiil = ad_orta = ad_kontrol = yok = 0
     for k in d:
         b = kok_bilgisi(k)
-        if b['kaynak'] == 'fiil':
+        if b['kaynak'] in ('fiil', 'kuran-fiil'):
             fiil += 1
         elif b['kaynak'] == 'ad' and b['guven'] == 'orta':
             ad_orta += 1
