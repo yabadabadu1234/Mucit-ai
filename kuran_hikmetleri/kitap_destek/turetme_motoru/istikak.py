@@ -609,6 +609,10 @@ def tablo(kok):
             if mef:
                 turevler('ism-i mef‘ûl · bâb ' + rom + suf, mef[0], mef[1], True, 'kıyâsî', rom, var)
                 tek('mekân/zaman/masdar-ı mîmî · bâb ' + rom + suf, mef[0], mef[1], 'kıyâsî', rom, var)
+        if rom == 'X' and bay['ecvef'] and kok[1] == 'و':
+            ekle('masdar · bâb X (vâvı muhafaza: semâî istisnâ)', "istif'āl", parse("Wi s0 ti 10 2a A 3"), kok, 'semâî aday', rom)
+            ekle('ism-i fâil · bâb X (vâvı muhafaza: semâî istisnâ)', "mustaf'il", parse("mu s0 ta 10 2i 3"), kok, 'semâî aday', rom)
+            ekle('ism-i mef‘ûl · bâb X (vâvı muhafaza: semâî istisnâ)', "mustaf'al", parse("mu s0 ta 10 2a 3"), kok, 'semâî aday', rom)
         if mef is None:
             red.append(('ism-i mef‘ûl · bâb ' + rom, ad, 'YOK (lâzım fiil; kitapta mef‘ûl işaretli değil)'))
     if mudaaf:

@@ -2,7 +2,7 @@
 
 Arapça ve Latin sütunları **motorun çıktısıdır**; Türkçe ve mana sütunları **elle yazılacak** (boş).
 
-Sayım: **386 satır · 322 ayrı Arapça biçim · 0 satırda idgam · 109 satırda ilal kaidesi · 11 reddedilen**
+Sayım: **389 satır · 325 ayrı Arapça biçim · 0 satırda idgam · 109 satırda ilal kaidesi · 11 reddedilen**
 
 
 ## masdar · sülâsî mücerred (23)
@@ -342,6 +342,24 @@ Sayım: **386 satır · 322 ayrı Arapça biçim · 0 satırda idgam · 109 sat�
 | kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
 | :-- | :-- | :-- | :-- | :-- | :-- |
 | mustaf'al | مُسْتَقَال | mustaqāl | kıyâsî · ilal |  |  |
+
+## masdar · bâb X (vâvı muhafaza: semâî istisnâ) (1)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| istif'āl | اِسْتِقْوَال | istiqwāl | semâî aday |  |  |
+
+## ism-i fâil · bâb X (vâvı muhafaza: semâî istisnâ) (1)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| mustaf'il | مُسْتَقْوِل | mustaqwil | semâî aday |  |  |
+
+## ism-i mef‘ûl · bâb X (vâvı muhafaza: semâî istisnâ) (1)
+
+| kalıp | Arapça | Latin | etiket | Türkçe | mana değişmesi |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| mustaf'al | مُسْتَقْوَل | mustaqwal | semâî aday |  |  |
 
 ## ism-i fâil · sülâsî (7)
 

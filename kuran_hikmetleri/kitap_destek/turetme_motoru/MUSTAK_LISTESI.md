@@ -26,6 +26,8 @@ hemze yazımı (elif, vâv, yâ kürsüsü; medde) · iki hemzenin medde veya y�
 - ism-i masdar, ism-i cins: kıyâsî kural yok
 - fiil çekimleri, harf, i'râb hâlleri: kapsam dışı
 
-## F. DOĞRULAMA
-- Aynı kökler ve kalıplar bilinen biçimlerle göz kontrolüyle denendi (qāʾil, maqūl, mabīʿ, iqāma, istiqāma, mustaqīm, īʿād, ittiʿād, istīʿād, ākil, īmān, iʾtimān, muʾmin, sāʾil, masʾūl, qāriʾ, ghāzī, maghzūw, marmiyy, taghziya, taghazzī, iṣṭibār, iddikār).
-- Çevrimiçi kaynaklarla yalnız şunlar karşılaştırıldı: hollow fâilin hemzeli oluşu, mef'ûlde maqūl/mabīʿ ayrımı, X. bâbın IV gibi yürümesi, nâkıs mezîd müştakların qāḍin gibi yürümesi. Sicile karşı tam sınama yapılmadı.
+## F. DOĞRULAMA (F 361)
+- `dogrula.py`: Maksûd ilâl bahsi tariflerindeki ve yaygın sarf misallerindeki 72 ism biçimi motorun çıktısıyla karşılaştırıldı; 72 tuttu, 0 tutmadı (`DOGRULAMA.md`).
+- Bu, bilinen biçimlerle sınamadır; tam sarf sicili sınaması değildir.
+- Eklenenler: ecvef-vâv onuncu bâbda vâvı muhafaza eden semâî istisnâ (istecvâb türü); ifti'âlde ط ظ idgamı; hemze kürsüsü ve medde kaideleri; mef'ile.
+- Ayrı ayrı tablolar `CIKTILAR/` altında 24 kök için: muzâ‘af 2, sâlim 2, mehmûz (fâ, ayn, lâm) 5, misâl 3, ecvef 4, nâkıs 3, lefîf 2, mehmûz+nâkıs 3.
