@@ -178,7 +178,11 @@ def kok_bilgisi(kok):
         return None
     fiiller, adlar = ayristir(x['turkce'])
     meçhul = 'varlik' in x or '(?)' in x['turkce']
-    if fiiller:
+    if x.get('fiil') and not fiiller:
+        stem = x['fiil']
+        kaynak = 'elle'
+        guven = 'orta'
+    elif fiiller:
         stem = fiiller[0].lower()
         kaynak = 'fiil'
         guven = 'kural' if len(set(fiiller)) == 1 and not meçhul else 'orta'
