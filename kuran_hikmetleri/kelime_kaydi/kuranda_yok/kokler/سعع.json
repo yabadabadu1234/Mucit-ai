@@ -692,12 +692,13 @@
         "metin": "(سَعَّ) السِّينُ وَالْعَيْنُ فِي الْمُضَاعَفِ وَالْمُطَابَقِ يَدُلُّ عَلَى أَصْلٍ وَاحِدٍ، وَهُوَ ذَهَابُ الشَّيْءِ. قَالَ الْخَلِيلُ: يُقَالُ تَسَعْسَعَ الشَّهْرُ، إِذَا ذَهَبَ أَكْثَرُهُ، وَيُقَالُ: تَسَعْسَعَ الرَّجُلُ مِنَ الْكِبَرِ، إِذَا اضْطَرَبَ جِسْمُهُ. قَالَ:\nيَا هِنْدُ مَا أَسْرَعَ مَا تَسَعْسَعَا"
       }
     ],
-    "cebel_mihveri_ocr": [
-      {
-        "kokler": ["سعع", "سعسع"],
-        "mihveri": "المعنى المحوري: انحسارٌ وذهابٌ من جرم الشيء\": كشأن الزؤان"
-      }
-    ],
+    "cebel_mihveri": {
+      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
+      "fasil": "السين والعين",
+      "baslik": "سعع - سعسع",
+      "mihveri": "انحسارٌ وذهابٌ من جرم الشيء (1): كشأن الزؤان",
+      "sesler": "السين تعبّر عن النفاذ بدقة وامتداد، والعين تعبّر عن جرم ملتحم غض، والفصل منهما يعبّر عن حركة انحسار وزوال (: نفاذ من الشيء) مع ضعف (تقابله العين) كالزؤان والهرم وارتخاء الشفة. وفي (سعو سعى) تزيد الواو معنى الاشتمال والياء معنى الاتصال والإمساك، فيعبرّ (سعو) عن المتجمع (المشتمِل) على ما شأنه ="
+    },
     "kaikki_vikisozluk": [
       {
         "w": "مستعان",
@@ -842,12 +843,18 @@
   },
   "mana_tasnif": {
     "yontem": "Vikisözlük/Arabic Ontology İngilizce karşılığı → Princeton WordNet ilk anlam (makine eşlemesi, AWN kaydı yok)",
-    "ince": "whole.n.02",
+    "ince": "person.n.01",
     "orta": "noun.person",
     "ust": "insan ve toplum",
     "dayanak_synset": "messenger.n.01",
     "dayanak_tanim": "a person who carries a message",
     "dayanak_karsilik": "Couriers and Messenger"
+  },
+  "ses_mana_tasnif": {
+    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+    "fasil": "السين والعين",
+    "mihveri": "انحسارٌ وذهابٌ من جرم الشيء (1): كشأن الزؤان",
+    "sesler": "السين تعبّر عن النفاذ بدقة وامتداد، والعين تعبّر عن جرم ملتحم غض، والفصل منهما يعبّر عن حركة انحسار وزوال (: نفاذ من الشيء) مع ضعف (تقابله العين) كالزؤان والهرم وارتخاء الشفة. وفي (سعو سعى) تزيد الواو معنى الاشتمال والياء معنى الاتصال والإمساك، فيعبرّ (سعو) عن المتجمع (المشتمِل) على ما شأنه ="
   },
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
@@ -860,21 +867,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 9,
-      "merkez_kok": "درك",
-      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 875
+      "merkez_kok": "غرق",
+      "merkez_mana": "Garak: batmak; ğarık: batan",
+      "boy": 1144
     },
     "orta": {
       "kume": 40,
-      "merkez_kok": "زهد",
-      "merkez_mana": "Zühd: dünyadan el çekmek",
-      "boy": 104
+      "merkez_kok": "هبب",
+      "merkez_mana": "haboob, gale, strong wind",
+      "boy": 154
     },
     "ince": {
-      "kume": 280,
-      "merkez_kok": "وسل",
-      "merkez_mana": "Vesîle: aracı, yol",
-      "boy": 37
+      "kume": 267,
+      "merkez_kok": "ربب",
+      "merkez_mana": "Rabb: Allah; rubûbiyet: rablik",
+      "boy": 16
     }
   },
   "kaliplar": {

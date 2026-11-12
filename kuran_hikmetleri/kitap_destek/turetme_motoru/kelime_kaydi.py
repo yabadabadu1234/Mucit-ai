@@ -9,6 +9,9 @@ import istikak as I
 import mana_tasnif as MT
 import awn_tasnif as AW
 import muhassas as MH
+import cebel as CB
+import jeffery as JF
+import etymarab as EA
 import turkce as T
 import mekayis as MK
 import osmanlica_lugat as OS
@@ -120,10 +123,10 @@ def uret():
         osm_kok[kk][ll] = v
     kuran_kokleri = {I.normala(k['kok']) for k in kel if k['kok']} | set(kokdb)
     mk = MK.yukle()
-    cb = oku_json(os.path.join(KOK, 'kaynak', 'lugat', 'cebel_mihveri.json'))['kokler']
+    cb = CB.yukle()
     kk = kaikki_yukle(sys.argv[1] if len(sys.argv) > 1 else '')
     kk_kokleri = {kaikki_kok(e) for e in kk if e.get('k')}
-    kokler_ad = sorted(kuran_kokleri | set(mk) | kk_kokleri)
+    kokler_ad = sorted(kuran_kokleri | set(mk) | kk_kokleri | set(EA.yukle()) | set(CB.yukle()))
     kk_atama = [kaikki_kok(e) for e in kk]
     kk_yol = ['kök' if a else '' for a in kk_atama]
     lemma_kok = {}
@@ -171,7 +174,7 @@ def uret():
         if k in mk:
             soz['mekayis'] = mk[k]
         if k in cb:
-            soz['cebel_mihveri_ocr'] = cb[k]
+            soz['cebel_mihveri'] = cb[k]
         rm = wtr.get('rootMeanings', {}).get(k)
         if rm:
             soz['eyupipler_kok_anlami'] = rm
@@ -196,6 +199,14 @@ def uret():
             if k.get(ek):
                 e[ek] = k[ek]
         kelimeler.append(e)
+    jf = JF.yukle()
+    jf_kullanildi = set()
+    for e in kelimeler:
+        a_ = JF.sade(e['lemma']) if e['lemma'] else ''
+        if a_ in jf and a_ not in jf_kullanildi:
+            e['jeffery'] = jf[a_]
+            jf_kullanildi.add(a_)
+    jf_eslesmeyen = [v for a_, v in jf.items() if a_ not in jf_kullanildi]
     kk_kok = collections.defaultdict(list)
     kk_koksuz = []
     kelime_dosyalari = {}
@@ -206,6 +217,8 @@ def uret():
     def kd_ekle(u, kaynak, kayit):
         d_ = kelime_dosyalari.setdefault(kd_ad(u), {'kelime': u, 'sozlukler': collections.OrderedDict()})
         d_['sozlukler'].setdefault(kaynak, []).append(kayit)
+    for v in jf_eslesmeyen:
+        kd_ekle(v['arapca'], 'jeffery', v)
     for i, e in enumerate(kk):
         e['yol'] = kk_yol[i]
         if kk_atama[i]:
@@ -213,7 +226,10 @@ def uret():
         else:
             kk_koksuz.append(e)
             kd_ekle(e['u'], 'kaikki_vikisozluk', e)
+    ea = EA.yukle()
     for k, r in kokler.items():
+        if k in ea:
+            r.setdefault('sozlukler', {})['etymarab'] = ea[k]
         if k in kk_kok:
             r.setdefault('sozlukler', {})['kaikki_vikisozluk'] = kk_kok[k]
     kel_kok = {sade_ad(x['kelime']): I.normala(x['kok']) for x in kel if x['kok']}
@@ -296,7 +312,7 @@ def uret():
             'osmanlica_madde': sum(len(v['maddeler']) for r in kokler.values() for v in r.get('sozlukler', {}).get('osmanlica_lugatler', {}).values()),
             'mekayisli_kok': sum(1 for r in kokler.values() if 'mekayis' in r.get('sozlukler', {})),
             'kuranda_yok_kok': sum(1 for r in kokler.values() if not r.get('kuranda_var', True)),
-            'cebel_mihverili_kok': sum(1 for r in kokler.values() if 'cebel_mihveri_ocr' in r.get('sozlukler', {})),
+            'jeffery_girdi': len(jf), 'jeffery_eslesmeyen': len(jf_eslesmeyen), 'etymarab_kok': len(ea), 'cebel_mihverili_kok': sum(1 for r in kokler.values() if 'cebel_mihveri' in r.get('sozlukler', {})),
             'kok_anlamli_kok': sum(1 for r in kokler.values() if 'kok_anlamlari' in r.get('sozlukler', {})),
             'kaikki_girdi': len(kk), 'kaikki_koke_yerlesen': sum(len(v) for v in kk_kok.values()), 'kaikki_koksuz': len(kk_koksuz),
             'kaikki_yeni_kok': len(kk_kokleri - kuran_kokleri - set(mk)),
@@ -396,6 +412,11 @@ def yaz():
     aw = AW.sinifla(d['kokler'], 3)
     aw.update(AW.ingilizce_sinifla(d['kokler'], aw, 3))
     mh = MH.sinifla(d['kokler'])
+    cb_ = CB.yukle()
+    cbag = {}
+    for k_, x_ in cb_.items():
+        if k_ in d['kokler']:
+            cbag.setdefault(x_['fasil'], []).append(k_)
     agac = {}
     kelime_kok = {}
     toplam = collections.Counter()
@@ -407,6 +428,7 @@ def yaz():
         dugum['sema'] = SEMA
         dugum['tasnif'] = tasnif(k)
         dugum['mana_tasnif'] = aw.get(k) or {'durum': 'Arabic WordNet v2 kaydı yok'}
+        dugum['ses_mana_tasnif'] = ({'kaynak': 'Cebel, el-Mu\'cemü\'l-İştikâkıyyü\'l-Mü\'asssal', 'fasil': cb_[k]['fasil'], 'mihveri': cb_[k]['mihveri'], 'sesler': cb_[k]['sesler']} if k in cb_ else {'durum': 'Cebel mu\'cemlerinde kök yok'})
         dugum['muhassas_tasnif'] = mh.get(k) or {'durum': 'el-Muhassas metninde yeterince geçmiyor'}
         dugum['mana_tasnif_gomme'] = mt.get(k) or {'durum': 'tasnif edilemedi (köke ait mana metni yok)'}
         used = sorted({x[0] for v in r.get('mustaklar', {}).values() for x in v})
@@ -432,7 +454,7 @@ def yaz():
     for ad in ('kuranda_var', 'kuranda_yok'):
         with open(os.path.join(taban, ad, 'FIHRIST.json'), 'w', encoding='utf-8') as f:
             f.write(okunur({'sema': SEMA, 'sayilar': d['sayilar'], 'alanlar_kokler': ['dosya', 'kok', 'kelime_sayisi', 'mustak_satiri'], 'kokler': fih[ad],
-                            'tasnif_agaci': tasnif_ozeti(agac), 'mana_tasnif_agaci': awn_agaci(aw), 'mana_tasnif_gomme_agaci': mana_agaci(mt), 'muhassas_agaci': muhassas_agaci(mh), 'kelime_kok': kelime_kok if ad == 'kuranda_var' else {}}))
+                            'tasnif_agaci': tasnif_ozeti(agac), 'mana_tasnif_agaci': awn_agaci(aw), 'mana_tasnif_gomme_agaci': mana_agaci(mt), 'muhassas_agaci': muhassas_agaci(mh), 'ses_mana_agaci': {'kaynak': 'Cebel (fasıl = ilk iki harf; her fasılın ortak mihverî manası ve ses izahı kök dosyalarında)', 'fasil_sayisi': len(cbag), 'kok': sum(len(v) for v in cbag.values()), 'fasil': {f: len(v) for f, v in sorted(cbag.items())}}, 'kelime_kok': kelime_kok if ad == 'kuranda_var' else {}}))
     print(d['sayilar'], {k: len(v) for k, v in fih.items()}, {k: v // 1024 // 1024 for k, v in toplam.items()}, 'MB')
 
 

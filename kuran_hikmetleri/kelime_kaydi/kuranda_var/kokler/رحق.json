@@ -712,12 +712,13 @@
         "metin": "(رَحَقَ) الرَّاءُ وَالْحَاءُ وَالْقَافُ كَلِمَةٌ وَاحِدَةٌ. وَهِيَ الرَّحِيقُ: اسْمٌ مِنْ أَسْمَاءِ الْخَمْرِ، وَيُقَالُ هِيَ أَفْضَلُهَا."
       }
     ],
-    "cebel_mihveri_ocr": [
-      {
-        "kokler": ["رحق"],
-        "mihveri": "المعنى المحوري: صفاء الشيء وسهولته بذهاب غلظه وجدته من أثنائه: كتلك الخمر بصفاتها المذكورة» فهي صافية سلسة ليس فيها حمُوزة - كا قال تعالی عنها: ‏ وار هَن خر َد ريون 4 » وأيضاً ( لا فا عُولٌ 4 [الصافات: ۷ « َون ن ريق مَخْنُوم() حم مسك ) [الطففین: ۲۵ - ]۲١‏ فهذه هي خر الجنة. ۰ (رحل):"
-      }
-    ],
+    "cebel_mihveri": {
+      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
+      "fasil": "الراء والحاء",
+      "baslik": "رحق",
+      "mihveri": "صفاء الشيء وسهولته بذهاب غلظه وحِدّته من أثنائه: كتلك الخمر بصفاتها المذكورة، فهي صافية سلسة ليس فيها حُمُوزة -كما قال تعالى عنها: {وَأَنْهَارٌ مِنْ خَمْرٍ لَذَّةٍ لِلشَّارِبِينَ}، وأيضًا {لَا فِيهَا غَوْلٌ} [الصافات: 47]، {يُسْقَوْنَ مِنْ رَحِيقٍ مَخْتُومٍ (25) خِتَامُهُ مِسْكٌ} [المطففين: 25 - 26]، فهذه هي خمر الجنة.",
+      "sesler": ""
+    },
     "kaikki_vikisozluk": [
       {
         "w": "رحيق",
@@ -775,12 +776,18 @@
   },
   "mana_tasnif": {
     "yontem": "Vikisözlük/Arabic Ontology İngilizce karşılığı → Princeton WordNet ilk anlam (makine eşlemesi, AWN kaydı yok)",
-    "ince": "substance.n.07",
+    "ince": "agent.n.03",
     "orta": "noun.food",
     "ust": "canlı ve beden",
     "dayanak_synset": "wine.n.01",
     "dayanak_tanim": "fermented juice (of grapes especially)",
     "dayanak_karsilik": "choicest wine"
+  },
+  "ses_mana_tasnif": {
+    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+    "fasil": "الراء والحاء",
+    "mihveri": "صفاء الشيء وسهولته بذهاب غلظه وحِدّته من أثنائه: كتلك الخمر بصفاتها المذكورة، فهي صافية سلسة ليس فيها حُمُوزة -كما قال تعالى عنها: {وَأَنْهَارٌ مِنْ خَمْرٍ لَذَّةٍ لِلشَّارِبِينَ}، وأيضًا {لَا فِيهَا غَوْلٌ} [الصافات: 47]، {يُسْقَوْنَ مِنْ رَحِيقٍ مَخْتُومٍ (25) خِتَامُهُ مِسْكٌ} [المطففين: 25 - 26]، فهذه هي خمر الجنة.",
+    "sesler": ""
   },
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
@@ -793,21 +800,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 6,
-      "merkez_kok": "حدق",
-      "merkez_mana": "Hadak: göz bebeği; hadaka: bakmak",
-      "boy": 578
+      "merkez_kok": "قبب",
+      "merkez_mana": "canopy, pavilion; dome, cupola",
+      "boy": 802
     },
     "orta": {
-      "kume": 24,
-      "merkez_kok": "نمر",
-      "merkez_mana": "tiger",
-      "boy": 145
+      "kume": 18,
+      "merkez_kok": "بزق",
+      "merkez_mana": "spit, spittle, saliva",
+      "boy": 82
     },
     "ince": {
-      "kume": 167,
-      "merkez_kok": "ثوب",
-      "merkez_mana": "Sevb: elbise; sevâb: karşılık, mükâfat",
-      "boy": 19
+      "kume": 139,
+      "merkez_kok": "ثعع",
+      "merkez_mana": "",
+      "boy": 18
     }
   },
   "kaliplar": {
@@ -1335,6 +1342,14 @@
         "lemma": "saf şarap",
         "lemma_durum": "model-üretimi, doğrulanmadı",
         "eyupipler": ""
+      },
+      "jeffery": {
+        "kaynak": "Arthur Jeffery, The Foreign Vocabulary of the Qur'ān (Baroda 1938; Brill yeniden basımı, yazıya geçirilmiş metin; Arapça yazılar yazı tipi bozuk olduğundan alınmadı)",
+        "translit": "Rahīq",
+        "ayet_atiflari": "lxxxiii, 25",
+        "ilk_baslik_dilleri": [],
+        "metin": "lxxxiii, 25. Strong wine. 1 Schwally, Idioticon, 88; Schulthess, Lex, 193, and see Wellhausen, ZDMG, lxvii, 630. Müller, ZDMG, xxx, 672; Osiander, ZDMG, x, 61; CIS, iv, No. 6; and particularly Fell in ZDMG, liv, 252, who gives a list of texts where it occurs. 3 Halévy, JA, viiie sér, xx, 326, however, takes it as an adjective and not as a divine name. (Note also Ahrens, Christliches, 35; Ryckmans, Noms propres, i, 31.) 4 Grimme, ZA, xxvi, 161; Bell, Origin, 52; Lidzbarski in SBAW, Berlin, 1916, p. 1218. 5 Halévy, REJ, xxiii, in discussing the inscription, thinks that it is of purely pagan origin. See also Margoliouth, Schweich Lectures, 67 ff. 6 So Pautz, Offenbarung, 171 n., and vide Fell, ZDMG, liv, 252. Mingana, Syriac Influence, 89. 7 So Massignon, Lexique, 52. Sacco, Credenze, 18, apparently agrees with the Jewish theory. See also Horovitz, JPN, 201–3. 8 Div. Hudh. (ed. Wellhausen), clxv, 6; Mufadda liyāt (ed. Thorbecke), 34, l. 60; al-Ashā, Dīvān, lxvi, 8. 9 at -Tabarī, Annales, i, 1933–7. Ibn Hishām, 200. 10 Beladhorī, 105, l. 6. 2 142 foreign vocabulary of the qurn The passage is early Meccan describing the delights of Paradise. The word is an unusual one and the Lexicons do not know quite what to make of it. They admit that it has no root in Arabic, and though they are agreed that it refers to some kind of wine, they are uncertain as to the exact meaning or even the exact spelling, i.e. or (cf. LA, xi, 404).1 whether it should be Ibn Sīda was doubtless not far from the mark when he said that . That old, well matured wine was a favourite among it meant the ancient Arabs, Fraenkel, Fremdw, 171, has illustrated by many is the Syr. examples from the old poetry, and I suspect that 2 A-\" = Aram.  far, remote, which was borrowed as an ¤ ~\"C < |<\"@ ~ & ~\" ideogram into Phlv. as old, antique (PPGl, 192). |¤ > C (Rizq). Of very frequent occurrence, cf. ii, 60; xx, 131. Bounty. It means anything granted to another form which he finds benefit, and in the Qurān refers particularly to the bounty of God, being used frequently as almost a technical religious term. we find in the Qurān the verb (ii, Besides the noun 57, etc.), the part. , he who provides (v, 114, etc.), and the Provider, one of the names of God. The verb, of course, is denominative and the other forms have developed from it. It has long been recognized by Western scholarship that the | | |< < < | word is a borrowing from Iranian through Aramaic. Phlv. rōčik means daily bread3 (cf. Paz. rōžī) from rōč, day, the Mod. 1 It occurs in the old poetry. Cf. Labīd (ed. Chalidi, p. 33); and D. H. Müller, WZKM, i, 27, notes its occurrence in the South Arabian inscriptions. 2 But note the S. Arabian remotus, and Eth. [ (Rossini, Glossarium, 240). 3 Vide Shikand, Glossary, p. 266. foreign vocabulary of the qurn Pers. * , which is connected with Av. 143 raočah, light,1 O.Pers. rauča, day2; Skt.   ‫ٸ‬shining, radiant. The Phlv. was borrowed into Arm. as ‫ רפ׬ױ׵‬daily provision, and then bread,3 and Syr. 5]  daily ration,4 which translates τροϕαί in 1 Macc. i, 35, and also stipendium (ZDMG, xl, 452). In Mod. Pers. by regular change of daily need, e.g. “eating the daily bread”. to we get It was from the Syr. that the word came into Arabic,5 and thence .6 It was an was borrowed back into Pers. in Islamic times as early borrowing and occurs frequently in the old poetry. ) )* * t )* |",
+        "arapca": "رحيق"
       }
     }
   ]

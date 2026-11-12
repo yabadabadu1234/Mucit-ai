@@ -856,12 +856,13 @@
         "metin": "(خَمَدَ) الْخَاءُ وَالْمِيمُ وَالدَّالُ أَصْلٌ وَاحِدٌ، يَدُلُّ عَلَى سُكُونِ الْحَرَكَةِ وَالسُّقُوطِ. خَمَدَتِ النَّارُ خُمُودًا، إِذَا سَكَنَ لَهَبُهَا. وَخَمَدَتِ الْحُمَّى إِذَا سَكَنَ وَهَجُهَا. وَيُقَالُ لِلْمُغْمَى عَلَيْهِ: خَمَدَ."
       }
     ],
-    "cebel_mihveri_ocr": [
-      {
-        "kokler": ["خمد"],
-        "mihveri": "المعنى المحوري: انقطاعٌ للحا الذي شأنه أن ينفذ من الشيء - كانقطاع اللهب الذي كان ينفذ من النار بالدفن أو غيره مع عدم انطفاء الجمرء وانقطاع الكلام مع بقاء القدرة عليه."
-      }
-    ],
+    "cebel_mihveri": {
+      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
+      "fasil": "الخاء والميم",
+      "baslik": "خمد",
+      "mihveri": "انقطاعٌ للحادّ الذي شأنه أن ينفذ من الشيء -كانقطاع اللهب الذي كان ينفذ من النار بالدفن أو غيره مع عدم انطفاء الجمر، وانقطاع الكلام مع بقاء القدرة عليه. ومنه \"خَمَد المريض: أُغْمِى عليه أو مات {إِنْ كَانَتْ إِلَّا صَيْحَةً وَاحِدَةً فَإِذَا هُمْ خَامِدُونَ}، {حَتَّى جَعَلْنَاهُمْ حَصِيدًا خَامِدِينَ} [الأنبياء: 15]، \"قوم خامدون: لا تَسْمع لهم حِسًّا. وخَمَدَت الحمَّى: سكنَ فورانها \". (1/606)",
+      "sesler": ""
+    },
     "kaikki_vikisozluk": [
       {
         "w": "تخمدان",
@@ -1589,12 +1590,18 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "abate.v.02",
+    "ince": "deaden.v.05",
     "orta": "verb.change",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "abate.v.02",
-    "dayanak_tanim": "become less in amount or intensity",
+    "dayanak_synset": "deaden.v.05",
+    "dayanak_tanim": "become lifeless, less lively, intense, or active; lose life, force, or vigor",
     "synset_sayisi": 15
+  },
+  "ses_mana_tasnif": {
+    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+    "fasil": "الخاء والميم",
+    "mihveri": "انقطاعٌ للحادّ الذي شأنه أن ينفذ من الشيء -كانقطاع اللهب الذي كان ينفذ من النار بالدفن أو غيره مع عدم انطفاء الجمر، وانقطاع الكلام مع بقاء القدرة عليه. ومنه \"خَمَد المريض: أُغْمِى عليه أو مات {إِنْ كَانَتْ إِلَّا صَيْحَةً وَاحِدَةً فَإِذَا هُمْ خَامِدُونَ}، {حَتَّى جَعَلْنَاهُمْ حَصِيدًا خَامِدِينَ} [الأنبياء: 15]، \"قوم خامدون: لا تَسْمع لهم حِسًّا. وخَمَدَت الحمَّى: سكنَ فورانها \". (1/606)",
+    "sesler": ""
   },
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
@@ -1606,22 +1613,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "صدد",
-      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
-      "boy": 523
+      "kume": 9,
+      "merkez_kok": "غرق",
+      "merkez_mana": "Garak: batmak; ğarık: batan",
+      "boy": 1144
     },
     "orta": {
-      "kume": 35,
-      "merkez_kok": "طرد",
-      "merkez_mana": "Tard: kovmak, uzaklaştırmak",
-      "boy": 140
+      "kume": 37,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 100
     },
     "ince": {
-      "kume": 245,
-      "merkez_kok": "خمد",
-      "merkez_mana": "Humûd: sönmek, sakinleşmek",
-      "boy": 9
+      "kume": 251,
+      "merkez_kok": "بغت",
+      "merkez_mana": "Bagte: ansızın, birden",
+      "boy": 24
     }
   },
   "kaliplar": {

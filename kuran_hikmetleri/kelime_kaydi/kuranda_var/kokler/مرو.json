@@ -702,12 +702,13 @@
         "maddeler": []
       }
     },
-    "cebel_mihveri_ocr": [
-      {
-        "kokler": ["مرو"],
-        "mihveri": "المعنى المحوري: جذة محتواة في الجرم (تنتشر منه) بتجدد: كالنار والرائحة في المرو بمعنييه. ومن ذلك: «المروة: الجبل الذي هو ناية السعي في مكة شرفها الله تعالى» سمي بتلك الحجارة؛ إن الصا وَاَلمَروَة من سَعَآپ ر اله 4 ومن ذلك الأصل: «الَرَوراة: الأرض أو المغازة التي لا شيء فیها/ قمر مُتو/ لا يهتدى فيها إلا الجرّيت؛ (= ذو الخبرة العظيمة بمسالك الصحراء) (والحدة فيها جفافٌ باطنها فهي قفر لا نبات فيها)."
-      }
-    ],
+    "cebel_mihveri": {
+      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
+      "fasil": "الميم والراء",
+      "baslik": "مرو",
+      "mihveri": "حِدّة محتواة في الجِرم (تنتشر منه) بتجدد: كالنار والرائحة في المرو بمعنييه. ومن ذلك: \"المروة: الجبل الذي هو نهاية السعي في مكة شرّفها الله تعالى، سُمِّي بتلك الحجارة \" {إِنَّ الصَّفَا وَالْمَرْوَةَ مِنْ شَعَائِرِ اللَّهِ} ومن ذلك الأصل: \"المَرَوْراة: الأرض أو المفازة التي لا شيء فيها / قَفْر مُسْتوٍ / لا يَهتدى فيها إلا الخِرِّيت \" (= ذو الخبرة العظيمة بمسالك الصحراء) (والحدة فيها جفافُ باطنها فهي قفر لا نبات فيها). (4/2052)",
+      "sesler": ""
+    },
     "kaikki_vikisozluk": [
       {
         "w": "مرو",
@@ -849,12 +850,18 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "substance.n.01",
+    "ince": "part.n.01",
     "orta": "noun.substance",
     "ust": "tabiat",
     "dayanak_synset": "quartz.n.02",
     "dayanak_tanim": "a hard glossy mineral consisting of silicon dioxide in crystal form; present in most rocks (especially sandstone and granite); yellow sand is quartz with iron oxide impurities",
     "synset_sayisi": 1
+  },
+  "ses_mana_tasnif": {
+    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+    "fasil": "الميم والراء",
+    "mihveri": "حِدّة محتواة في الجِرم (تنتشر منه) بتجدد: كالنار والرائحة في المرو بمعنييه. ومن ذلك: \"المروة: الجبل الذي هو نهاية السعي في مكة شرّفها الله تعالى، سُمِّي بتلك الحجارة \" {إِنَّ الصَّفَا وَالْمَرْوَةَ مِنْ شَعَائِرِ اللَّهِ} ومن ذلك الأصل: \"المَرَوْراة: الأرض أو المفازة التي لا شيء فيها / قَفْر مُسْتوٍ / لا يَهتدى فيها إلا الخِرِّيت \" (= ذو الخبرة العظيمة بمسالك الصحراء) (والحدة فيها جفافُ باطنها فهي قفر لا نبات فيها). (4/2052)",
+    "sesler": ""
   },
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
@@ -866,21 +873,21 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
-      "merkez_kok": "سفك",
-      "merkez_mana": "Safk: dökmek, akıtmak (kan)",
-      "boy": 479
+      "kume": 6,
+      "merkez_kok": "قبب",
+      "merkez_mana": "canopy, pavilion; dome, cupola",
+      "boy": 802
     },
     "orta": {
-      "kume": 13,
-      "merkez_kok": "قزز",
-      "merkez_mana": "silk, silkware",
-      "boy": 114
+      "kume": 14,
+      "merkez_kok": "خرز",
+      "merkez_mana": "awl",
+      "boy": 97
     },
     "ince": {
-      "kume": 95,
-      "merkez_kok": "صخر",
-      "merkez_mana": "Sahr: kaya, taş; sahra: çöl",
+      "kume": 117,
+      "merkez_kok": "عدن",
+      "merkez_mana": "mine, lode, place where a mineral is found",
       "boy": 10
     }
   },

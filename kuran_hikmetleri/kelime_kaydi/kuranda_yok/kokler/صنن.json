@@ -720,12 +720,13 @@
         "metin": "(صَنَّ) الصَّادُ وَالنُّونُ أَصْلَانِ: أَحَدُهُمَا يَدُلُّ عَلَى إِبَاءٍ وَصَعَرٍ مِنْ كِبَرٍ. مِنْ ذَلِكَ الرَّجُلُ الْمُصِنُّ، قَالُوا: هُوَ الرَّافِعُ رَأْسَهُ لَا يَلْتَفِتُ إِلَى أَحَدٍ. وَقَالُوا: هُوَ السَّاكِتُ. وَقَالُوا: هُوَ الْمُمْتَلِئُ غَيْظًا. قَالَ الرَّاجِزُ:\nأَإِبِلِي تَأْخُذُهَا مُصِنَّا\nأَيْ: أَتَأْخُذُ إِبِلِي لَا يَمْنَعُكَ زَجْرُ زَاجِرٍ وَلَا تَلْتَفِتُ إِلَى أَحَدٍ.\nوَالْأَصْلُ الْآخَرُ يَدُلُّ عَلَى خُبْثِ رَائِحَةٍ. مِنْ ذَلِكَ الصِّنُّ، وَهُوَ بَوْلُ الْوَبْرِ، فِي قَوْلِ جَرِيرٍ:\nتَطَلَّى وَهِيَ سَيِّئَةُ الْمُعَرَّى ... بِصِنِّ الْوَبْرِ تَحْسَِبُهُ مَلَابَا\nثُمَّ اشْتُقَّ مِنْهُ [الصُّنَانُ] : ذَفَرُ الْإِبِطِ. فَأَمَّا قَوْلُهُمْ إِنَّ أَحَدَ أَيَّامِ الْعَجُوزِ يُقَالُ لَهُ الصِّنُّ فَهَذَا شَيْءٌ مَا رَأَيْتُ أَحَدًا يَضْبِطُهُ وَلَا يَعْلَمُ حَقِيقَتَهُ، فَلِذَلِكَ لَمْ أَذْكُرْهُ.\n(صَهْ) الصَّادُ وَالْهَاءُ كَلِمَةٌ تُقَالُ عِنْدَ الْإِسْكَاتِ، وَهِيَ صَهٍ، وَلَا قِيَاسَ لَهَا."
       }
     ],
-    "cebel_mihveri_ocr": [
-      {
-        "kokler": ["صنن"],
-        "mihveri": "المعنى المحوري: احتواءٌ في الجوف متمكن أو دائم (على غلاظ“"
-      }
-    ],
+    "cebel_mihveri": {
+      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
+      "fasil": "الصاد والنون",
+      "baslik": "صنن",
+      "mihveri": "احتواءٌ في الجوف متمكّن أو دائم (على غلظ) (1)",
+      "sesler": "الصاد تعبر عن غلظ ممتد، والنون تعبر عن امتداد في الباطن لطيف، ="
+    },
     "kaikki_vikisozluk": [
       {
         "w": "صين",
@@ -1232,12 +1233,18 @@
   },
   "mana_tasnif": {
     "yontem": "Vikisözlük/Arabic Ontology İngilizce karşılığı → Princeton WordNet ilk anlam (makine eşlemesi, AWN kaydı yok)",
-    "ince": "substance.n.01",
+    "ince": "part.n.01",
     "orta": "noun.substance",
     "ust": "tabiat",
     "dayanak_synset": "granite.n.01",
     "dayanak_tanim": "plutonic igneous rock having visibly crystalline texture; generally composed of feldspar and mica and quartz",
     "dayanak_karsilik": "granite"
+  },
+  "ses_mana_tasnif": {
+    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+    "fasil": "الصاد والنون",
+    "mihveri": "احتواءٌ في الجوف متمكّن أو دائم (على غلظ) (1)",
+    "sesler": "الصاد تعبر عن غلظ ممتد، والنون تعبر عن امتداد في الباطن لطيف، ="
   },
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
@@ -1249,22 +1256,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
-      "merkez_kok": "سفك",
-      "merkez_mana": "Safk: dökmek, akıtmak (kan)",
-      "boy": 479
+      "kume": 9,
+      "merkez_kok": "غرق",
+      "merkez_mana": "Garak: batmak; ğarık: batan",
+      "boy": 1144
     },
     "orta": {
-      "kume": 16,
-      "merkez_kok": "بلع",
-      "merkez_mana": "Bel': yutmak; bel'a: yutkunma",
-      "boy": 111
+      "kume": 41,
+      "merkez_kok": "نقر",
+      "merkez_mana": "Nakr: vurmak, çalmak; nakîr: çukur",
+      "boy": 227
     },
     "ince": {
-      "kume": 118,
-      "merkez_kok": "سيب",
-      "merkez_mana": "Sayb: serbest bırakmak; sâib: serbest",
-      "boy": 22
+      "kume": 278,
+      "merkez_kok": "نقر",
+      "merkez_mana": "Nakr: vurmak, çalmak; nakîr: çukur",
+      "boy": 31
     }
   },
   "kaliplar": {

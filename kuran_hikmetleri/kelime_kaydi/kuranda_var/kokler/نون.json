@@ -758,16 +758,13 @@
         ]
       }
     },
-    "cebel_mihveri_ocr": [
-      {
-        "kokler": ["نون"],
-        "mihveri": "المعنى المحوري: عَوْص أو غثور إلى داخل شيء أو باطنه بأطف. كنوئّة الصبِيّ في لحم ذقنه وكالدَوّاة للحبر وكالحوت: السمك يغوص في الماءء وطَرَف الظبَة المعطوفُ يكوّن تجويقًا هو من باب الغئور. وسُمّي يونس - عليه وعلى نبينا أفضل الصلاة والسلام - في آية التركيب - ذا النون كا سمي صاحب"
-      },
-      {
-        "kokler": ["نون"],
-        "mihveri": "المعنى المحوري:تجوفٌ وعُئُور أو عَوْص إلى الداخل: كالنونة التي في ذقن الصبي فهي غائرة في لحم ذقنه. والسيف ذو النونين يفترق طرفه وهو الظبة إلى شريحتين مُسسَدقتين كل منهها تنحني إلى الخارج ثم يتجه طرفها المحدّد راجِعًا إلى قرب جسم السیف مکرَنًا تجوقًا: ټیگون طرف السيف فيه حَنْيّان كل حَنية نون على شكل نونة الصبي. والسمكة تغوص في الماء» وبهذا الغوص سميت نونة» وسمي الحوت نونا. ( ودا لون إذ ذَهَّبَ مُعَضبًا 4 هو يونس النبي صلى الله وسلم على نبينا وعليه. سماه الله ذا النون؛ لأنه حفظ في جوف الحوت الذي التقمه إلى أن أَلْقَيّ على الشط. أما رت وَالَْلَّمِوَمَايَسطَرُونَ 4 [القلم: ]١‏ فمن العلاء من فسر (نون) هنا بالدواةء فهي وعاء عميق التجوف نسبيًا ليحفظ المدادء فهو كنونة الصبي ونون السيف. ويؤيدهم ذكر القلم وتسطير الكتابة في السياق. وقال آخرون إن الكلمة هنا مراد بها حرف المعجم الذي يتلو الميم في الألفبائية. وحجتهم أنها رسمت قي المصحف (ن) على شكل حرف المجاء فهي"
-      }
-    ],
+    "cebel_mihveri": {
+      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
+      "fasil": "الميم والهاء",
+      "baslik": "نون",
+      "mihveri": "غَوْص أو غئور إلى داخل شيء أو باطنه بلُطف. كنُونَة الصَبِيّ في لحم ذقنه وكالدَوَاة للحبر وكالحوت: السمك يغوص في الماء، وطَرَفُ الظُبَةِ المعطوفُ يكوّن تجويفًا هو من باب الغئور. وسُمِّي يونس -عليه وعلى نبينا أفضل الصلاة والسلام - في آية التركيب- ذا النون كما سمي صاحب الحوت.",
+      "sesler": ""
+    },
     "kaikki_vikisozluk": [
       {
         "w": "نيون",
@@ -1187,12 +1184,18 @@
   },
   "mana_tasnif": {
     "yontem": "Vikisözlük/Arabic Ontology İngilizce karşılığı → Princeton WordNet ilk anlam (makine eşlemesi, AWN kaydı yok)",
-    "ince": "substance.n.01",
+    "ince": "part.n.01",
     "orta": "noun.substance",
     "ust": "tabiat",
     "dayanak_synset": "neon.n.01",
     "dayanak_tanim": "a colorless odorless gaseous element that give a red glow in a vacuum tube; one of the six inert gasses; occurs in the air in small amounts",
     "dayanak_karsilik": "neon"
+  },
+  "ses_mana_tasnif": {
+    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+    "fasil": "الميم والهاء",
+    "mihveri": "غَوْص أو غئور إلى داخل شيء أو باطنه بلُطف. كنُونَة الصَبِيّ في لحم ذقنه وكالدَوَاة للحبر وكالحوت: السمك يغوص في الماء، وطَرَفُ الظُبَةِ المعطوفُ يكوّن تجويفًا هو من باب الغئور. وسُمِّي يونس -عليه وعلى نبينا أفضل الصلاة والسلام - في آية التركيب- ذا النون كما سمي صاحب الحوت.",
+    "sesler": ""
   },
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
@@ -1204,22 +1207,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 2,
-      "merkez_kok": "هنا",
-      "merkez_mana": "",
-      "boy": 415
+      "kume": 9,
+      "merkez_kok": "غرق",
+      "merkez_mana": "Garak: batmak; ğarık: batan",
+      "boy": 1144
     },
     "orta": {
-      "kume": 3,
-      "merkez_kok": "حنث",
-      "merkez_mana": "Hinş: yemini bozmak, söz bozmak",
-      "boy": 181
+      "kume": 45,
+      "merkez_kok": "حسك",
+      "merkez_mana": "puncture-vine, caltrop (Tribulus terrestris)",
+      "boy": 146
     },
     "ince": {
-      "kume": 8,
-      "merkez_kok": "حنث",
-      "merkez_mana": "Hinş: yemini bozmak, söz bozmak",
-      "boy": 54
+      "kume": 300,
+      "merkez_kok": "نقق",
+      "merkez_mana": "to croak (of frogs)",
+      "boy": 49
     }
   },
   "kaliplar": {
@@ -1775,6 +1778,14 @@
         "lemma": "nun harfi",
         "lemma_durum": "model-üretimi, doğrulanmadı",
         "eyupipler": ""
+      },
+      "jeffery": {
+        "kaynak": "Arthur Jeffery, The Foreign Vocabulary of the Qur'ān (Baroda 1938; Brill yeniden basımı, yazıya geçirilmiş metin; Arapça yazılar yazı tipi bozuk olduğundan alınmadı)",
+        "translit": "Nūn",
+        "ayet_atiflari": "xxi, 87",
+        "ilk_baslik_dilleri": ["Syriac"],
+        "metin": "xxi, 87. Fish. given to Jonah, so that it is the Only in the title in lxviii, 48, whence came the theory equivalent of (Rāghib, Mufradāt, 531; LA, xvii, 320). J * ^{ #\"z x$ ^{ J It is a N. Semitic word, cf. Akk. nunu; Aram.  2; Syr.  , and Phon. and late Heb. . Guidi, Della Sede, 591, recognized that it was a loan-word in Arabic, and there can be little doubt that it was from the Syriac that it entered Arabic, though as the word is used in the early poetry it must have been an early borrowing.5 @ B<@ *< ^* @ B@ < (Hārūt wa Mārūt). ^* ii, 102. Hārūt and Mārūt are the two fallen angels at Babylon who teach men Magic. 1 Vide Goldziher, ZDMG, xxiv, 209. Vide also Jawharī, s.v. . 3 Horovitz, KU, 146. 4 Margoliouth, ERE, x, 540; Mingana, Syriac Influence, 82. 5 It possibly occurs as a proper name in the Safaite inscriptions; cf. Ryckmans, Noms propres, i, 138. 2 Æ foreign vocabulary of the qurn 283 The philologers recognized the names as non-Arabic, as is clear from al-Jawālīqī, Muarrab, 140.1 Lagarde, GA, 15 and 169, identified them with the Haurvatāt and Amәrәtāt of the Avesta,2 who were known in later Persia as Khurdād and Murdād,3 and from being nature spirits became names of archangels and were revered by the ancient Armenians as gods. This identification has been generally accepted,4 though Nestle, ZDMG, lv, 692, wants to compare them with Khillīt and Millīt,5 and Halévy, JA, ixe ser., vol. xix, 148 ff., claims that Mārūt is the Ἄρμαρος of Enoch vi, 7, which he thinks in the original text may have read . This, however, is unlikely in itself and is practically put out of the question by the fact that the better reading in that passage of Enoch Φαρμαρός. It is curious, however, that in the Slavonic Enoch (xxxiii, 11, b), we find appearing the two angel names Orioch and Marioch.6 Margoliouth, ERE, viii, 252, thought that the form of the names pointed to an Aramaic origin and would look on them as Aramaic personifications of mischief and rebellion, and Wensinck, EI, ii, 273, notes that )#  is a common Syriac word for power or dominion, so it may be that there has been Aramaic influence on the transmission of the names to Muhammad. @ @ Ì (Hārūn). * Occurs some twenty times, e.g. ii, 248; iv, 163; xxxvii, 114. Aaron. 1 Vide Sachau’s notes, p. 63, and al-Khafājī, 183. It had been earlier recognized; cf. Boetticher, Horae aramaicae, Berlin, 1847, p. 9, and Littmann says that Andreas independently of Lagarde had come to the same conclusion. On the spirits see Darmesteter, Haurvatad et Ameretad, 1875. 3 On this form of the name see Marquart, Untersuchungen zur Geschichte von Eran, ii, 214, n. 6. 4 Littmann in Andreas Festschrift, 84; Tisdall, Sources, 99; Rudolph, Abhängigkeit, 67, 75; Fr. Müller, in WZKM, viii, 278. Marquart, Untersuchungen zur Geschichte von Eran, Philol. Suppl. x, i, 1905, p. 214, n. 6, suggests Phlv. harōt, and amurt, which he would derive from O.Pers. haruvatāh and amrtatāh. See Herzfeld, Paikuli, Glossary, 144. 5 Burton, Nights, x, 130, claimed these as Zoroastrian, but Bergmann, MGWJ, xlvi, 531, 2 compared them with the Talmudic . Horovitz, KU, 148, rightly insists that they could have had no influence on the Qurānic forms. 6 See Littmann, op. cit., 83; Horovitz, KU, 147; JPN, 164, 165. 284 foreign vocabulary of the qurn It always refers to the O.T. Aaron, though in xix, 28, where Muhammad makes his well-known confusion between Miriam the sister of Moses and Mary the mother of Jesus, the exegetes endeavour to show that some other Aaron is meant. The name was commonly recognized as foreign (LA, xvii, 326; al-Jawālīqī, Muarrab, 151; TA, ix, 367), but its origin is not at once apparent. The Hebrew form is &!, which by interchange of the first and second letters, would give us * , as some have 1 suggested. This interchange, however, is not necessary to explain it, for in the Christian-Palestinian dialect we find that the usual F   has become F  by dropping the lightly pronounced initial ,2 and it was doubtless from this source that the word came into Arabic. It seems to have been known and used by the Arabs long before Islam.3 @ B < (Hāmān). B< xxviii, 6, 8, 38; xxix, 39; xl, 24, 36. Haman. In the Qurān, instead of being concerned in the story of Esther, he figures as a dignitary at the court of Pharaoh in Egypt during the time of Moses. Many of the early authorities recognized it as a foreign name (al-Jawālīqī, Muarrab, 153; al-Khafājī, 207). There was an attempt was a different by some of the exegetes to make out that this person from the Haman of the Esther story, whom they call , B<B < as Geiger, 156, notes. There is no doubt, however, that by is meant the  of Esth. iii,4 and we may find the source of the confusion in xxix, 39; xl, 24, where he is associated with Korah, for in Rabbinic legends Haman and Korah were bracketed together. The probabilities are that the word came to the Arabs from Jewish sources. 1 Sycz, Eigennamen, 43; but see Horovitz, JPN, 161. Schulthess, Lex, 3, and cf. the Palestinian Syriac Lectionary, p. 51. Horovitz, KU, 149; JPN, 162. 4 Sycz, Eigennamen, 41; Horovitz, KU, 149; Eisenberg, EI, ii, 245. 2 3 foreign vocabulary of the qurn 285",
+        "arapca": "نون"
       }
     }
   ]

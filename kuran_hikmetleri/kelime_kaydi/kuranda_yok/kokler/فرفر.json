@@ -7,12 +7,13 @@
     ["kök", "فرفر", "üç harfli değil"]
   ],
   "sozlukler": {
-    "cebel_mihveri_ocr": [
-      {
-        "kokler": ["فرر", "فرفر"],
-        "mihveri": "المعنى المحوري: مباعدة بخفة مع استرسالٍ تکرار أو دوا : كالفصل"
-      }
-    ],
+    "cebel_mihveri": {
+      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
+      "fasil": "الفاء والراء",
+      "baslik": "فرر - فرفر",
+      "mihveri": "مباعدة بخفة مع استرسالٍ تكرارٍ أو دوام (1): كالفصل",
+      "sesler": "تعبر الفاء عن نفي وإبعاد، والراء عن استرسال جرم أو حركة، والفصل ="
+    },
     "kaikki_vikisozluk": [
       {
         "w": "فرفر",
@@ -365,27 +366,33 @@
     "dayanak_tanim": "move or pull with a sudden motion",
     "synset_sayisi": 1
   },
+  "ses_mana_tasnif": {
+    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+    "fasil": "الفاء والراء",
+    "mihveri": "مباعدة بخفة مع استرسالٍ تكرارٍ أو دوام (1): كالفصل",
+    "sesler": "تعبر الفاء عن نفي وإبعاد، والراء عن استرسال جرم أو حركة، والفصل ="
+  },
   "muhassas_tasnif": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 4,
-      "merkez_kok": "قول",
-      "merkez_mana": "Kavl: söz, söyleme",
-      "boy": 351
+      "kume": 5,
+      "merkez_kok": "وجف",
+      "merkez_mana": "Vecf: titremek, çarpmak",
+      "boy": 219
     },
     "orta": {
-      "kume": 8,
-      "merkez_kok": "عتل",
-      "merkez_mana": "Utul: zorba, kaba, sert",
-      "boy": 71
+      "kume": 9,
+      "merkez_kok": "وجف",
+      "merkez_mana": "Vecf: titremek, çarpmak",
+      "boy": 69
     },
     "ince": {
-      "kume": 37,
-      "merkez_kok": "قلقل",
-      "merkez_mana": "to move, commove, shake, convulse, unsettle",
-      "boy": 12
+      "kume": 47,
+      "merkez_kok": "نبض",
+      "merkez_mana": "to beat, to pulsate, to be in a state of phase-wise commotion, to flas",
+      "boy": 6
     }
   },
   "kaliplar": {},

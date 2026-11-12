@@ -692,12 +692,13 @@
         "metin": "(فَخَّ) الْفَاءُ وَالْخَاءُ كَلِمَاتٌ لَا تَنْقَاسُ. مِنْ [ذَلِكَ] الْفَخِيخُ كَالْغَطِيطِ فِي النَّوْمِ. وَالْفَخَّةُ: اسْتِرْخَاءٌ فِي الرِجْلَيْنِ. وَيُقَالُ الْفَخَّةُ: الْمَرْأَةُ الضَّخْمَةُ. وَالْفَخُّ لِلصَّيْدِ مَعْرُوفٌ."
       }
     ],
-    "cebel_mihveri_ocr": [
-      {
-        "kokler": ["فخخ", "فخفخ"],
-        "mihveri": "المعنى المحوري: نفاذ النفس بقوة من الجوف عن غلظ أي امتلاء“ [يلحظ أن خروج النمس بقوة يوحي بأن الامتلاء إنا هو باهواء]: كنفخ ذاك النائم مع شِبّعه (أو سقوط أقصى الحنك عاثقا في طريق الهواء). ومنه «فَحْمُحَ الرجل: فَحّر بالباطل» (قال قولا كبيرًا خاليًا من القيمة لا شيء وراءه إلا اشوا"
-      }
-    ],
+    "cebel_mihveri": {
+      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
+      "fasil": "الفاء والخاء",
+      "baslik": "فخخ - فخفخ",
+      "mihveri": "نفاذ النفَس بقوة من الجوف عن غلظ أي امتلاء (1) [يلحظ أن خروج النفَس بقوة يوحي بأن الامتلاء إنما هو بالهواء]: كنفخ ذاك النائم مع شِبَعه (أو سقوط أقصى الحنك عائقًا في طريق الهواء). ومنه \"فَخْفَخَ الرجل: فَخَر بالباطل \" (قال قولًا كبيرًا خاليًا من القيمة لا شيء وراءه إلا الهواء).",
+      "sesler": "تعبر الفاء عن نفي وإبعاد، والخاء عن التخلخل في الجرم مع خشونة وحدة، والفصل منهما يعبر عن نفاذ بحدة مع فراغ كالفخيخ. وفي (فخر) تعبر الراء عن الاسترسال، ويعبر التركيب عن عظم الجرم مع خلو من المعتاد أو المتوقع (أي استرسال الفراغ) كالبسر الفاخر."
+    },
     "kaikki_vikisozluk": [
       {
         "w": "فخ",
@@ -1263,12 +1264,18 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "cognition.n.01",
-    "orta": "noun.cognition",
-    "ust": "zihin ve ilim",
-    "dayanak_synset": "plant.n.04",
-    "dayanak_tanim": "something planted secretly for discovery by another",
+    "ince": "event.n.01",
+    "orta": "noun.act",
+    "ust": "fiil ve hadise",
+    "dayanak_synset": "ambush.n.01",
+    "dayanak_tanim": "the act of concealing yourself and lying in wait to attack by surprise",
     "synset_sayisi": 2
+  },
+  "ses_mana_tasnif": {
+    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+    "fasil": "الفاء والخاء",
+    "mihveri": "نفاذ النفَس بقوة من الجوف عن غلظ أي امتلاء (1) [يلحظ أن خروج النفَس بقوة يوحي بأن الامتلاء إنما هو بالهواء]: كنفخ ذاك النائم مع شِبَعه (أو سقوط أقصى الحنك عائقًا في طريق الهواء). ومنه \"فَخْفَخَ الرجل: فَخَر بالباطل \" (قال قولًا كبيرًا خاليًا من القيمة لا شيء وراءه إلا الهواء).",
+    "sesler": "تعبر الفاء عن نفي وإبعاد، والخاء عن التخلخل في الجرم مع خشونة وحدة، والفصل منهما يعبر عن نفاذ بحدة مع فراغ كالفخيخ. وفي (فخر) تعبر الراء عن الاسترسال، ويعبر التركيب عن عظم الجرم مع خلو من المعتاد أو المتوقع (أي استرسال الفراغ) كالبسر الفاخر."
   },
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
@@ -1280,22 +1287,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "صدد",
-      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
-      "boy": 523
+      "kume": 9,
+      "merkez_kok": "غرق",
+      "merkez_mana": "Garak: batmak; ğarık: batan",
+      "boy": 1144
     },
     "orta": {
-      "kume": 32,
-      "merkez_kok": "نقر",
-      "merkez_mana": "Nakr: vurmak, çalmak; nakîr: çukur",
-      "boy": 154
+      "kume": 38,
+      "merkez_kok": "صرخ",
+      "merkez_mana": "Sarih: bağırmak, feryat",
+      "boy": 54
     },
     "ince": {
-      "kume": 226,
-      "merkez_kok": "قرع",
-      "merkez_mana": "Kar': vurmak, çalmak",
-      "boy": 11
+      "kume": 258,
+      "merkez_kok": "لحن",
+      "merkez_mana": "Lahn: yanlışlık; lahn: melodi",
+      "boy": 24
     }
   },
   "kaliplar": {

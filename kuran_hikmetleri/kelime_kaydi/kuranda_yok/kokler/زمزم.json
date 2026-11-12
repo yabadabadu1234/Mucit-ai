@@ -7,12 +7,13 @@
     ["kök", "زمزم", "üç harfli değil"]
   ],
   "sozlukler": {
-    "cebel_mihveri_ocr": [
-      {
-        "kokler": ["زمم", "زمزم"],
-        "mihveri": "المعنى المحوري: انضمام الشيء على كثير لطيف حتى يمتلئ به (ويستوي ظاهره)\"\"\" (= ضم كثير) كال اء الذي يملا البئرء وبجس ظاهرًا في امتلاء القربة وكثرة ماء البئر."
-      }
-    ],
+    "cebel_mihveri": {
+      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
+      "fasil": "الزاي والميم",
+      "baslik": "زمم - زمزم",
+      "mihveri": "انضمام الشيء على كثير لطيف حتى يمتلئ به (ويستوي ظاهره) (1) (= ضم كثير) كالماء الذي يملأ البئر، ويُحَس ظاهرًا في امتلاء القربة وكثرة ماء البئر.",
+      "sesler": "الزاي تعبر عن اكتناز أو ازدحام، والميم تعبر عن استواء الظاهر، والفصل منهما يعبر عن كثرة ما ينضم عليه الشيء من اللطيف حتى يظهر أو يستوي ظاهره. وفي (زمر) تزيد الراء التعبير عن استرسال هذا التضام والتماسك، ويعبر التركيب عن ضم أو تضام يستمر كالزمرة والرجل الزمير، وفي (زمل) تعبر اللام عن استقلال ويعبر التركيب عن تقارن شيئين أو أكثر في الاحتمال، كأن كلا منهما قائم بذاته كما في الزميل العديل، أما (زمهرير) فينظر الكلام عنها في تركيبها."
+    },
     "kaikki_vikisozluk": [
       {
         "w": "زمزم",
@@ -378,34 +379,40 @@
   },
   "mana_tasnif": {
     "yontem": "Vikisözlük/Arabic Ontology İngilizce karşılığı → Princeton WordNet ilk anlam (makine eşlemesi, AWN kaydı yok)",
-    "ince": "substance.n.01",
+    "ince": "fluid.n.02",
     "orta": "noun.substance",
     "ust": "tabiat",
     "dayanak_synset": "water.n.01",
     "dayanak_tanim": "binary compound that occurs at room temperature as a clear colorless odorless tasteless liquid; freezes into ice below 0 degrees centigrade and boils above 100 degrees centigrade; widely used as a solvent",
     "dayanak_karsilik": "abundant water"
   },
+  "ses_mana_tasnif": {
+    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+    "fasil": "الزاي والميم",
+    "mihveri": "انضمام الشيء على كثير لطيف حتى يمتلئ به (ويستوي ظاهره) (1) (= ضم كثير) كالماء الذي يملأ البئر، ويُحَس ظاهرًا في امتلاء القربة وكثرة ماء البئر.",
+    "sesler": "الزاي تعبر عن اكتناز أو ازدحام، والميم تعبر عن استواء الظاهر، والفصل منهما يعبر عن كثرة ما ينضم عليه الشيء من اللطيف حتى يظهر أو يستوي ظاهره. وفي (زمر) تزيد الراء التعبير عن استرسال هذا التضام والتماسك، ويعبر التركيب عن ضم أو تضام يستمر كالزمرة والرجل الزمير، وفي (زمل) تعبر اللام عن استقلال ويعبر التركيب عن تقارن شيئين أو أكثر في الاحتمال، كأن كلا منهما قائم بذاته كما في الزميل العديل، أما (زمهرير) فينظر الكلام عنها في تركيبها."
+  },
   "muhassas_tasnif": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
-      "merkez_kok": "سفك",
-      "merkez_mana": "Safk: dökmek, akıtmak (kan)",
-      "boy": 479
+      "kume": 6,
+      "merkez_kok": "قبب",
+      "merkez_mana": "canopy, pavilion; dome, cupola",
+      "boy": 802
     },
     "orta": {
-      "kume": 18,
-      "merkez_kok": "سفك",
-      "merkez_mana": "Safk: dökmek, akıtmak (kan)",
-      "boy": 117
+      "kume": 17,
+      "merkez_kok": "سكب",
+      "merkez_mana": "Sakb: dökmek, boşaltmak",
+      "boy": 80
     },
     "ince": {
-      "kume": 131,
-      "merkez_kok": "نبع",
-      "merkez_mana": "Nebu': kaynamak, fışkırmak",
-      "boy": 27
+      "kume": 132,
+      "merkez_kok": "ءبس",
+      "merkez_mana": "shrew (ill-tempered woman)",
+      "boy": 17
     }
   },
   "kaliplar": {},

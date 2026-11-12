@@ -7,12 +7,13 @@
     ["kök", "مضمض", "üç harfli değil"]
   ],
   "sozlukler": {
-    "cebel_mihveri_ocr": [
-      {
-        "kokler": ["مضض", "مضمض"],
-        "mihveri": "المعنى المحوري: حدة بالغة تتغلغل في باطن الشيء أو جوفه\"“ كحدّة"
-      }
-    ],
+    "cebel_mihveri": {
+      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
+      "fasil": "الميم والضاد",
+      "baslik": "مضض- مضمض",
+      "mihveri": "حدّة بالغة تتغلغل في باطن الشيء أو جوفه (1) كحدّة",
+      "sesler": "تعبر الميم عن تضام الظاهر، والضاد عن تجمع كثيف أو غليظ في الجوف، والفصل منهما يعبر عن احتواء الجِرم في أثنائه على غليط (حدة بالغة أو ما إليها) كالمُضَاض: الماء الذي لا يطاق ملوحة. وفي (مضى) تعبر الياء عن امتداد واتصال، ويعبر التركيب عن امتداد الحدة في الأثناء حتى النفاذ كنفاذ السيف في أثناء الضريبة. وفي (مضغ) تعبر الغين عن نحو الغشاء القوي الأثناء، والتركيب يعبر عن صيرورة ="
+    },
     "kaikki_vikisozluk": [
       {
         "w": "تمضمض",
@@ -351,27 +352,33 @@
   "mana_tasnif": {
     "durum": "Arabic WordNet v2 kaydı yok"
   },
+  "ses_mana_tasnif": {
+    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+    "fasil": "الميم والضاد",
+    "mihveri": "حدّة بالغة تتغلغل في باطن الشيء أو جوفه (1) كحدّة",
+    "sesler": "تعبر الميم عن تضام الظاهر، والضاد عن تجمع كثيف أو غليظ في الجوف، والفصل منهما يعبر عن احتواء الجِرم في أثنائه على غليط (حدة بالغة أو ما إليها) كالمُضَاض: الماء الذي لا يطاق ملوحة. وفي (مضى) تعبر الياء عن امتداد واتصال، ويعبر التركيب عن امتداد الحدة في الأثناء حتى النفاذ كنفاذ السيف في أثناء الضريبة. وفي (مضغ) تعبر الغين عن نحو الغشاء القوي الأثناء، والتركيب يعبر عن صيرورة ="
+  },
   "muhassas_tasnif": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "صدد",
-      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
-      "boy": 523
+      "kume": 9,
+      "merkez_kok": "غرق",
+      "merkez_mana": "Garak: batmak; ğarık: batan",
+      "boy": 1144
     },
     "orta": {
-      "kume": 32,
+      "kume": 41,
       "merkez_kok": "نقر",
       "merkez_mana": "Nakr: vurmak, çalmak; nakîr: çukur",
-      "boy": 154
+      "boy": 227
     },
     "ince": {
-      "kume": 226,
-      "merkez_kok": "قرع",
-      "merkez_mana": "Kar': vurmak, çalmak",
-      "boy": 11
+      "kume": 277,
+      "merkez_kok": "هدك",
+      "merkez_mana": "",
+      "boy": 29
     }
   },
   "kaliplar": {},

@@ -877,12 +877,13 @@
         "metin": "(سَرُعَ) السِّينُ وَالرَّاءُ وَالْعَيْنُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى خِلَافِ الْبُطْءِ. فَالسَّرِيعُ: خِلَافُ الْبَطِيءِ. وَسَرَْعَانُ النَّاسِ: أَوَائِلُهُمُ الَّذِينَ يَتَقَدَّمُونَ\nسِرَاعًا. وَتَقُولُ الْعَرَبُ: لَسَرْعَانُ مَا صَنَعْتَ كَذَا، أَيْ مَا أَسْرَعَ مَا صَنَعْتَهُ. وَأَمَّا السَِّرْعُ مِنْ قُضْبَانِ الْكَرْمِ، [فَهُوَ] أَسْرَعُ مَا يَطْلُعُ مِنْهُ. وَمِثْلُهُ السَّرَعْرَعُ، ثُمَّ يُشَبَّهُ بِهِ الْإِنْسَانُ الرَّطِيبُ النَّاعِمُ."
       }
     ],
-    "cebel_mihveri_ocr": [
-      {
-        "kokler": ["سرع"],
-        "mihveri": "المعنى المحوري: اختراق أو امتداد بقوة ودقة أو حدّة: كتلك العروق والدود وعَقَبُ المتنين تمتد نافذة غائصة في الرمل واللحم مع دقتها. وعلى التشبيه بها: أساريع القوس: الطرق والخطوط التي في سِيتها (= ما عطِف من .طرفيها)."
-      }
-    ],
+    "cebel_mihveri": {
+      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
+      "fasil": "السين والراء",
+      "baslik": "سرع",
+      "mihveri": "اختراق أو امتداد بقوة ودقة أو حدّة: كتلك العروق والدود وعَقَبُ المتنين تمتد نافذة غائصة في الرمل واللحم مع دقتها. وعلى التشبيه بها: أساريع القوس: الطرق والخطوط التي في سِيَتها (= ما عُطِف من طرفيها). والسرعة (ضد البطء) جاء معناها من قوة النفاذ والاختراق في مادة رخوة \"سَرِعُ (فرح، وكرم) وأسرع: عَجِل {يَوْمَ يَخْرُجُونَ مِنَ الْأَجْدَاثِ سِرَاعًا} [المعارج: 43]، {وَسَارِعُوا إِلَى مَغْفِرَةٍ مِنْ رَبِّكُمْ}. وكل ما في القرآن من التركيب هو من السرعة ضد البطء. (2/999)",
+      "sesler": ""
+    },
     "kaikki_vikisozluk": [
       {
         "w": "سرعت",
@@ -2240,12 +2241,18 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "fast.a.01",
-    "orta": "adj.all",
-    "ust": "hâl ve vasıf",
-    "dayanak_synset": "fast.a.01",
-    "dayanak_tanim": "acting or moving or capable of acting or moving quickly",
+    "ince": "part.n.01",
+    "orta": "noun.substance",
+    "ust": "tabiat",
+    "dayanak_synset": "catalyst.n.01",
+    "dayanak_tanim": "(chemistry) a substance that initiates or accelerates a chemical reaction without itself being affected",
     "synset_sayisi": 27
+  },
+  "ses_mana_tasnif": {
+    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+    "fasil": "السين والراء",
+    "mihveri": "اختراق أو امتداد بقوة ودقة أو حدّة: كتلك العروق والدود وعَقَبُ المتنين تمتد نافذة غائصة في الرمل واللحم مع دقتها. وعلى التشبيه بها: أساريع القوس: الطرق والخطوط التي في سِيَتها (= ما عُطِف من طرفيها). والسرعة (ضد البطء) جاء معناها من قوة النفاذ والاختراق في مادة رخوة \"سَرِعُ (فرح، وكرم) وأسرع: عَجِل {يَوْمَ يَخْرُجُونَ مِنَ الْأَجْدَاثِ سِرَاعًا} [المعارج: 43]، {وَسَارِعُوا إِلَى مَغْفِرَةٍ مِنْ رَبِّكُمْ}. وكل ما في القرآن من التركيب هو من السرعة ضد البطء. (2/999)",
+    "sesler": ""
   },
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
@@ -2257,22 +2264,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "صدد",
-      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
-      "boy": 523
+      "kume": 5,
+      "merkez_kok": "وجف",
+      "merkez_mana": "Vecf: titremek, çarpmak",
+      "boy": 219
     },
     "orta": {
-      "kume": 33,
-      "merkez_kok": "مهل",
-      "merkez_mana": "Mehl: süre, mühlet",
-      "boy": 60
+      "kume": 9,
+      "merkez_kok": "وجف",
+      "merkez_mana": "Vecf: titremek, çarpmak",
+      "boy": 69
     },
     "ince": {
-      "kume": 235,
-      "merkez_kok": "سرع",
-      "merkez_mana": "Sür'at: hız; serî': çabuk",
-      "boy": 6
+      "kume": 45,
+      "merkez_kok": "بدر",
+      "merkez_mana": "Bedr: dolunay; bedr: erken, acele",
+      "boy": 7
     }
   },
   "kaliplar": {

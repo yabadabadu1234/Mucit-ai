@@ -688,12 +688,13 @@
     ["cem‘-i mükesser (aday)", "fe'âil", "bu kök sınıfında bu kalıp yok"]
   ],
   "sozlukler": {
-    "cebel_mihveri_ocr": [
-      {
-        "kokler": ["منو", "مني"],
-        "mihveri": "المعنى المحوري: توقيت لإمساك الباطن ما ينضمَ عليه فيخرج شينًا بعد شيء. كالمكيل في المكيال. مرة بعد أآخرى» وكالَنِىَ بخرج دفقًا (لا يتوقف إذا بدأ أو لأن خروجه موقوت بداعيه) « أَقَرَعَيَمّ ما تَمْنُونَ ¢ [الواقعة: ۸ وکذا ما في النجم: ١4ء‏ القيامة: ۳۷] وقد سميت مى لإراقة دماء الهذى فيها؛\". (أي لكثرة ذلك والكثرة هنا مقابل الثوالي» ثم إن ذلك مؤقت بموسم الحج كل عام)."
-      }
-    ],
+    "cebel_mihveri": {
+      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
+      "fasil": "الميم والنون",
+      "baslik": "منو- منى",
+      "mihveri": "توقيت لإمساك الباطن ما ينضمّ عليه فيخرج شيئًا بعد شيء. كالمكيل في المكيال. مرة بعد أخرى، وكالمَنِيّ يخرج دفْقًا (لا يتوقف إذا بدأ، أو لأن خروجه موقوت بداعيه) {أَفَرَأَيتُمْ مَا تُمْنُونَ} [الواقعة: 58 وكذا ما في النجم: 46، القيامة: 37] وقد سميت مِنَى \"لإراقة دماء الهدْى فيها \" (1). (أي لكثرة ذلك، والكثرة هنا مقابل التوالي، ثم إن ذلك مؤقت بموسم الحج كل عام). ومن مادي ذلك أيضًا \"المُنْية- بالضم: (مدة سبعة إلى خمسة عشر يومًا تبدأ من ضرب الفحل الناقة يتبين بعدها حقيقة باطنها أَلَقِحَت أم لا بأن تُردّ إلى الفحل فإن قرّت عُلِم أنها لم تحمل. ينظر [تاج] (فهذا توقيت إمساك النطفة، فإن",
+      "sesler": ""
+    },
     "kaikki_vikisozluk": [
       {
         "w": "استمناء",
@@ -940,12 +941,18 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "event.n.01",
-    "orta": "noun.communication",
-    "ust": "söz ve haber",
-    "dayanak_synset": "wish.n.02",
-    "dayanak_tanim": "an expression of some desire or inclination",
+    "ince": "wish.v.01",
+    "orta": "verb.emotion",
+    "ust": "his ve nefis",
+    "dayanak_synset": "wish.v.01",
+    "dayanak_tanim": "hope for; have a wish",
     "synset_sayisi": 6
+  },
+  "ses_mana_tasnif": {
+    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+    "fasil": "الميم والنون",
+    "mihveri": "توقيت لإمساك الباطن ما ينضمّ عليه فيخرج شيئًا بعد شيء. كالمكيل في المكيال. مرة بعد أخرى، وكالمَنِيّ يخرج دفْقًا (لا يتوقف إذا بدأ، أو لأن خروجه موقوت بداعيه) {أَفَرَأَيتُمْ مَا تُمْنُونَ} [الواقعة: 58 وكذا ما في النجم: 46، القيامة: 37] وقد سميت مِنَى \"لإراقة دماء الهدْى فيها \" (1). (أي لكثرة ذلك، والكثرة هنا مقابل التوالي، ثم إن ذلك مؤقت بموسم الحج كل عام). ومن مادي ذلك أيضًا \"المُنْية- بالضم: (مدة سبعة إلى خمسة عشر يومًا تبدأ من ضرب الفحل الناقة يتبين بعدها حقيقة باطنها أَلَقِحَت أم لا بأن تُردّ إلى الفحل فإن قرّت عُلِم أنها لم تحمل. ينظر [تاج] (فهذا توقيت إمساك النطفة، فإن",
+    "sesler": ""
   },
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
@@ -957,22 +964,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 7,
-      "merkez_kok": "وقع",
-      "merkez_mana": "Vuku': olmak, düşmek; vak'a: olay",
-      "boy": 704
+      "kume": 9,
+      "merkez_kok": "غرق",
+      "merkez_mana": "Garak: batmak; ğarık: batan",
+      "boy": 1144
     },
     "orta": {
-      "kume": 27,
-      "merkez_kok": "شوق",
-      "merkez_mana": "to excite desire in",
-      "boy": 129
+      "kume": 37,
+      "merkez_kok": "صدد",
+      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
+      "boy": 100
     },
     "ince": {
-      "kume": 189,
-      "merkez_kok": "ودد",
-      "merkez_mana": "Vedd: sevmek, dostluk",
-      "boy": 18
+      "kume": 251,
+      "merkez_kok": "بغت",
+      "merkez_mana": "Bagte: ansızın, birden",
+      "boy": 24
     }
   },
   "kaliplar": {

@@ -762,12 +762,13 @@
         "metin": "(مَيَلَ) الْمِيمُ وَالْيَاءُ وَاللَّامُ كَلِمَةٌ صَحِيحَةٌ تَدُلُّ عَلَى انْحِرَافٍ فِي الشَّيْءِ إِلَى جَانِبٍ مِنْهُ. مَالَ يَمِيلُ مَيْلًا. فَإِنْ كَانَ خِلْقَةً فِي الشَّيْءِ فَمَيَلٌ. يُقَالُ مَالَ يَمِيلُ مَيَلًا. وَالْمَيْلَاءُ مِنَ الرَّمْلِ: عُقْدَةٌ ضَخْمَةٌ تَعْتَزِلُ وَتَمِيلُ نَاحِيَةً. وَالْمَيْلَاءُ: الشَّجَرَةُ الْكَثِيرَةُ الْفُرُوعِ، وَهِيَ مِنْ قِيَاسِ الْبَابِ. وَالْأَمْيَلُ مِنَ الرِّجَالِ، يُقَالُ إِنَّهُ الَّذِي لَا يَثْبُتُ عَلَى الْفَرَسِ. وَإِنْ كَانَ كَذَا فَلِأَنَّهُ يَمِيلُ عَنْ سَرْجِهِ. وَيُقَالُ الَّذِي لَا رُمْحَ مَعَهُ. وَإِنْ كَانَ كَذَا فَشَاذٌّ عَنِ الْبَابِ. وَجَمْعُ الْأَمْيَلِ مِيلٌ. قَالَ:\nغَيْرُ مِيلٍ وَلَا عَوَاوِيرَ فِي الْهَيْ ... جَا وَلَا عُزَّلٍ وَلَا أَكْفَالِ."
       }
     ],
-    "cebel_mihveri_ocr": [
-      {
-        "kokler": ["ميل"],
-        "mihveri": "المعنى المحوري: انحراف الشيء في قيامه إلى أعلى أو مُقامه مع غيره عن الاعتدال الطبيعي المتوقع. كا يميل السّنام والعنق والحائط عن الاستقامة إلى"
-      }
-    ],
+    "cebel_mihveri": {
+      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
+      "fasil": "الميم واللام",
+      "baslik": "ميل",
+      "mihveri": "انحراف الشيء في قيامه إلى أعلى أو مُقامه مع غيره عن الاعتدال الطبيعي المتوقع. كما يميل السَنام والعُنُق والحائط عن الاستقامة إلى",
+      "sesler": ""
+    },
     "kaikki_vikisozluk": [
       {
         "w": "مال",
@@ -2581,12 +2582,18 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "lean.v.01",
-    "orta": "verb.motion",
-    "ust": "fiil ve hadise",
-    "dayanak_synset": "slope.v.01",
-    "dayanak_tanim": "be at an angle",
+    "ince": "property.n.02",
+    "orta": "noun.attribute",
+    "ust": "hâl ve vasıf",
+    "dayanak_synset": "tendency.n.03",
+    "dayanak_tanim": "a characteristic likelihood of or natural disposition toward a certain condition or character or effect",
     "synset_sayisi": 33
+  },
+  "ses_mana_tasnif": {
+    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+    "fasil": "الميم واللام",
+    "mihveri": "انحراف الشيء في قيامه إلى أعلى أو مُقامه مع غيره عن الاعتدال الطبيعي المتوقع. كما يميل السَنام والعُنُق والحائط عن الاستقامة إلى",
+    "sesler": ""
   },
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
@@ -2598,22 +2605,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 7,
-      "merkez_kok": "وقع",
-      "merkez_mana": "Vuku': olmak, düşmek; vak'a: olay",
-      "boy": 704
+      "kume": 9,
+      "merkez_kok": "غرق",
+      "merkez_mana": "Garak: batmak; ğarık: batan",
+      "boy": 1144
     },
     "orta": {
-      "kume": 30,
-      "merkez_kok": "زور",
-      "merkez_mana": "Zûr: yalan, sahtelik",
-      "boy": 262
+      "kume": 41,
+      "merkez_kok": "نقر",
+      "merkez_mana": "Nakr: vurmak, çalmak; nakîr: çukur",
+      "boy": 227
     },
     "ince": {
-      "kume": 203,
-      "merkez_kok": "فشل",
-      "merkez_mana": "Fişl: başarısızlık, bozgun",
-      "boy": 45
+      "kume": 279,
+      "merkez_kok": "خور",
+      "merkez_mana": "Hevr: boşluk, yıkım; hâvir: boş",
+      "boy": 43
     }
   },
   "kaliplar": {

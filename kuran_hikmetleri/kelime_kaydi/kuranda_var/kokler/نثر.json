@@ -764,12 +764,13 @@
         "metin": "(نَثَرَ) النُّونُ وَالثَّاءُ وَالرَّاءُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى إِلْقَاءِ شَيْءٍ مُتَفَرِّقٍ. وَنَثَرَ الدَّرَاهِمَ وَغَيْرَهَا. وَنَثَرَتِ الشَّاةُ: طَرَحَتْ مِنْ أَنْفِهَا الْأَذَى. وَسُمِّيَ الْأَنْفُ النَّثْرَةَ مِنْ هَذَا، لِأَنَّهُ يَنْثُرُ مَا فِيهِ مِنَ الْأَذَى. وَجَاءَ فِي الْحَدِيثِ: «إِذَا تَوَضَّأْتَ فَانْتَثِرْ» أَوْ &quot; فَانْثِرْ &quot;، مَعْنَاهُ اجْعَلِ الْمَاءَ فِي نَثْرَتِكَ. [وَ] النَّثْرَةُ: نَجْمٌ\nيُقَالُ إِنَّهُ أَنْفُ الْأَسَدِ يَنْزِلُهُ الْقَمَرُ. وَطَعَنَهُ فَأَنْثَرَهُ: أَلْقَاهُ عَلَى خَيْشُومِهِ. وَهَذَا هُوَ الْقِيَاسُ. قَالَ:\nإِنَّ عَلَيْهَا فَارِسًا كَعَشَرَهْ ... إِذَا رَأَى فَارِسَ قَوْمٍ أَنْثَرَهْ\n[وَيُقَالُ: أَنْثَرَهُ] : أَرْعَفَهُ الدَّمُ. وَالنَّثْرَةُ: الدِّرْعُ، وَهَذَا مُمْكِنٌ أَنْ يَكُونَ شَاذًّا مِنَ الْأَصْلِ الَّذِي ذَكَرْنَا."
       }
     ],
-    "cebel_mihveri_ocr": [
-      {
-        "kokler": ["نثر"],
-        "mihveri": "المعنى المحوري: تفرُق الدقاق الكثيفة المتجمعة منتشرة كالجنطة والشعير المنتشر إلخ. وطرَف الأَف منه يكون الانثار والفرجة المذكورة كأنا"
-      }
-    ],
+    "cebel_mihveri": {
+      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
+      "fasil": "النون والثاء",
+      "baslik": "نثر",
+      "mihveri": "تفرُّق الدقاق الكثيفة المتجمعة متشرة كالحِنْطة والشَعير المنتشر إلخ. وطرَفُ الأنْف منه يكون الانتثار والفُرجة المذكورة كأنها",
+      "sesler": "النون تعبر عن امتداد لطيف في الجوف، والثاء للانتشار في الخارج بكثافة أو غلظ، والفصل منهما يعبر عن انتشار الكثيف الذي في باطن الشيء على سطحه كالنثيثة: رشح الزق. وتضيف الراء في (نثر) العبير عن ابتعاد هذا الخارج عما خرج منه مسترسلًا متباعدًا."
+    },
     "kaikki_vikisozluk": [
       {
         "w": "نثر",
@@ -1853,12 +1854,18 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "expressive_style.n.01",
-    "orta": "noun.communication",
-    "ust": "söz ve haber",
-    "dayanak_synset": "prose.n.01",
-    "dayanak_tanim": "ordinary writing as distinguished from verse",
+    "ince": "spread.v.07",
+    "orta": "verb.motion",
+    "ust": "fiil ve hadise",
+    "dayanak_synset": "spread.v.07",
+    "dayanak_tanim": "strew or distribute over an area",
     "synset_sayisi": 9
+  },
+  "ses_mana_tasnif": {
+    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+    "fasil": "النون والثاء",
+    "mihveri": "تفرُّق الدقاق الكثيفة المتجمعة متشرة كالحِنْطة والشَعير المنتشر إلخ. وطرَفُ الأنْف منه يكون الانتثار والفُرجة المذكورة كأنها",
+    "sesler": "النون تعبر عن امتداد لطيف في الجوف، والثاء للانتشار في الخارج بكثافة أو غلظ، والفصل منهما يعبر عن انتشار الكثيف الذي في باطن الشيء على سطحه كالنثيثة: رشح الزق. وتضيف الراء في (نثر) العبير عن ابتعاد هذا الخارج عما خرج منه مسترسلًا متباعدًا."
   },
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
@@ -1871,21 +1878,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 9,
-      "merkez_kok": "درك",
-      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 875
+      "merkez_kok": "غرق",
+      "merkez_mana": "Garak: batmak; ğarık: batan",
+      "boy": 1144
     },
     "orta": {
-      "kume": 39,
-      "merkez_kok": "درك",
-      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 253
+      "kume": 41,
+      "merkez_kok": "نقر",
+      "merkez_mana": "Nakr: vurmak, çalmak; nakîr: çukur",
+      "boy": 227
     },
     "ince": {
-      "kume": 269,
-      "merkez_kok": "عبء",
-      "merkez_mana": "Ta'bi'e: hazırlamak, donatmak; ibâ': yük",
-      "boy": 28
+      "kume": 278,
+      "merkez_kok": "نقر",
+      "merkez_mana": "Nakr: vurmak, çalmak; nakîr: çukur",
+      "boy": 31
     }
   },
   "kaliplar": {

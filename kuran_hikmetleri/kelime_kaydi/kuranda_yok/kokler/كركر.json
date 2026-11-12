@@ -7,12 +7,13 @@
     ["kök", "كركر", "üç harfli değil"]
   ],
   "sozlukler": {
-    "cebel_mihveri_ocr": [
-      {
-        "kokler": ["كرر", "كركر"],
-        "mihveri": "المعنى المحوري: معاودة الشيء إتيانًا أو انتقالا إليه مرةٌ بعد أخرى لتحصيله: كما يُفعل بالك المذكور: إما لأنه يُعاد الصعود به مع أنه ليس سَلّ؛"
-      }
-    ],
+    "cebel_mihveri": {
+      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
+      "fasil": "الكاف والراء",
+      "baslik": "كرر - كركر",
+      "mihveri": "معاودة الشيء إتيانًا أو انتقالًا إليه مرةً بعد أخرى لتحصيله (1): كما يُفعل بالكَرّ المذكور: إما لأنه يُعاد الصعود به مع أنه ليس سُلَّمًا؛",
+      "sesler": "تعبّر الكاف عن ضغط غئوري دقيق يتأتّى منه القلع والامتساك، والراء عن استرسال، والفصل منهما يعبّر عن معاودة بجهد وقوة كما في الكَرّ الذي يُصعد به على النخلة. وفي (كرب) تعبّر الباء عن تجمُّع رِخو وتلاصق، ويعبّر التركيب عن لصوق ما يعرو ظاهرَ الشيء من كشف مثل كَرَبِ النخل، وفي (كرس) تعبّر السين عن نفاذ بدقة ="
+    },
     "kaikki_vikisozluk": [
       {
         "w": "تكركر",
@@ -347,27 +348,33 @@
   "mana_tasnif": {
     "durum": "Arabic WordNet v2 kaydı yok"
   },
+  "ses_mana_tasnif": {
+    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+    "fasil": "الكاف والراء",
+    "mihveri": "معاودة الشيء إتيانًا أو انتقالًا إليه مرةً بعد أخرى لتحصيله (1): كما يُفعل بالكَرّ المذكور: إما لأنه يُعاد الصعود به مع أنه ليس سُلَّمًا؛",
+    "sesler": "تعبّر الكاف عن ضغط غئوري دقيق يتأتّى منه القلع والامتساك، والراء عن استرسال، والفصل منهما يعبّر عن معاودة بجهد وقوة كما في الكَرّ الذي يُصعد به على النخلة. وفي (كرب) تعبّر الباء عن تجمُّع رِخو وتلاصق، ويعبّر التركيب عن لصوق ما يعرو ظاهرَ الشيء من كشف مثل كَرَبِ النخل، وفي (كرس) تعبّر السين عن نفاذ بدقة ="
+  },
   "muhassas_tasnif": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 8,
-      "merkez_kok": "صدد",
-      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
-      "boy": 523
+      "merkez_kok": "درك",
+      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
+      "boy": 799
     },
     "orta": {
-      "kume": 35,
-      "merkez_kok": "طرد",
-      "merkez_mana": "Tard: kovmak, uzaklaştırmak",
-      "boy": 140
+      "kume": 30,
+      "merkez_kok": "حصل",
+      "merkez_mana": "Hasl: elde etmek, sonuçlanmak; hâsıl",
+      "boy": 127
     },
     "ince": {
-      "kume": 249,
-      "merkez_kok": "ذهب",
-      "merkez_mana": "Zehâb: gitmek, gidiş; zeheb: altın",
-      "boy": 14
+      "kume": 220,
+      "merkez_kok": "شيد",
+      "merkez_mana": "Teşyîd: sağlamca yapmak; şîd: sağlam yapı",
+      "boy": 13
     }
   },
   "kaliplar": {},

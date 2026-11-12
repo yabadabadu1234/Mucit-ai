@@ -762,12 +762,13 @@
         "metin": "(رَنَّ) الرَّاءُ وَالنُّونُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى صَوْتٍ. فَالْإِرْنَانُ: الصَّوْتُ وَالرَّنَّةُ وَالرَّنِينُ: صَيْحَةُ ذِي الْحُزْنِ. وَيُقَالُ أَرَنَّتِ الْقَوْسُ عِنْدَ إِنْبَاضِ الرَّامِي عَنْهَا. قَالَ:\nتُرِنُّ إِرْنَانًا إِذَا مَا أَنْضَبَا\nأَيْ أَنْبَضَ. وَالْمِرْنَانُ: الْقَوْسُ; لِأَنَّ لَهَا رَنِينًا. وَيُقَالُ إِنَّ الرَّنَنَ دُوَيْبَّةٌ تَكُونُ فِي الْمَاءِ تَصِيحُ أَيَّامَ الصَّيْفِ. قَالَ:\nوَلَا الْيَمَامُ وَلَمْ يَصْدَحْ لَهُ الرَّنَنُ\nفَهَذَا مُعْظَمُ الْبَابِ، وَهُوَ قِيَاسٌ مُطَّرِدٌ. وَحُكِيَتْ كَلِمَةٌ مَا أَدْرِي مَا هِيَ، وَهِيَ شَاذَّةٌ إِنْ صَحَّتْ، وَلَمْ أَسْمَعْهَا سَمَاعًا. قَالُوا: كَانَ يُقَالُ لِجُمَادَى الْأُولَى رُنَّى، بِوَزْنِ حُبْلَى. وَهَذَا مِمَّا لَا يَنْبَغِي أَنْ يُعَوَّلَ عَلَيْهِ."
       }
     ],
-    "cebel_mihveri_ocr": [
-      {
-        "kokler": ["رنن"],
-        "mihveri": "المعنى المحوري: تكون طبقة غريبة شيئًا فشيئًا على ظاهر الشيء حتى تحجب جوهره. كذلك الصدأ الذي يعلو السيف والمرآة. ۾ گل بل ران عل لوهم ما كاتُوأ يَكيِبُونَ ) في الحديث الصحيح أن كل ذنب لم يتب صاحبه منه"
-      }
-    ],
+    "cebel_mihveri": {
+      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
+      "fasil": "الراء والنون",
+      "baslik": "رنن",
+      "mihveri": "صوت حادّ أو مؤثر يصدر عن حيّ أو غيره (1) كتلك الأصوات المختلفة من مصادرها (رنين المرأة هو صراخها عند المصيبة) وفي سامعها.",
+      "sesler": ""
+    },
     "kaikki_vikisozluk": [
       {
         "w": "ران",
@@ -1621,12 +1622,18 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "ring.v.01",
+    "ince": "tinkle.v.01",
     "orta": "verb.perception",
     "ust": "zihin ve ilim",
-    "dayanak_synset": "ring.v.01",
-    "dayanak_tanim": "sound loudly and sonorously",
+    "dayanak_synset": "tinkle.v.01",
+    "dayanak_tanim": "make or emit a high sound",
     "synset_sayisi": 17
+  },
+  "ses_mana_tasnif": {
+    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+    "fasil": "الراء والنون",
+    "mihveri": "صوت حادّ أو مؤثر يصدر عن حيّ أو غيره (1) كتلك الأصوات المختلفة من مصادرها (رنين المرأة هو صراخها عند المصيبة) وفي سامعها.",
+    "sesler": ""
   },
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
@@ -1638,22 +1645,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
-      "merkez_kok": "سفك",
-      "merkez_mana": "Safk: dökmek, akıtmak (kan)",
-      "boy": 479
+      "kume": 9,
+      "merkez_kok": "غرق",
+      "merkez_mana": "Garak: batmak; ğarık: batan",
+      "boy": 1144
     },
     "orta": {
-      "kume": 16,
-      "merkez_kok": "بلع",
-      "merkez_mana": "Bel': yutmak; bel'a: yutkunma",
-      "boy": 111
+      "kume": 38,
+      "merkez_kok": "صرخ",
+      "merkez_mana": "Sarih: bağırmak, feryat",
+      "boy": 54
     },
     "ince": {
-      "kume": 119,
-      "merkez_kok": "صبب",
-      "merkez_mana": "Sabb: dökmek, akıtmak; sabîb: akan",
-      "boy": 25
+      "kume": 258,
+      "merkez_kok": "لحن",
+      "merkez_mana": "Lahn: yanlışlık; lahn: melodi",
+      "boy": 24
     }
   },
   "kaliplar": {

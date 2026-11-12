@@ -692,12 +692,13 @@
         "metin": "(خَضَّ) الْخَاءُ وَالضَّادُ أَصْلَانِ: أَحَدُهُمَا قِلَّةُ الشَّيْءِ وَسَخَافَتُهُ، وَالْآخَرُ الِاضْطِرَابُ فِي الشَّيْءِ مَعَ رُطُوبَةٍ.\nفَالْأَوَّلُ الْخَضَضُ: [الْخَرَزُ] الْأَبْيَضُ يَلْبَسُهُ الْإِمَاءُ. وَالرَّجُلُ الْأَحْمَقُ خَضَّاضٌ. وَيُقَالُ لِلسَّقَطِ مِنَ الْكَلَامِ خَضَضٌ. وَيُقَالُ: مَا عَلَى الْجَارِيَةِ خَضَاضٌ، أَيْ لَيْسَ عَلَيْهَا شَيْءٌ مِنْ حَلْيٍ. وَالْمَعْنَى أَنَّهُ لَيْسَ عَلَيْهَا شَيْءٌ حَتَّى الْخَضَضَ الَّذِي بَدَأْنَا بِذِكْرِهِ. قَالَ الشَّاعِرُ:\nوَلَوْ بَرَزَتْ مِنْ كُفَّةِ السَّتْرِ عَاطِلًا ... لَقُلْتَ غَزَالٌ مَا عَلَيْهِ خَضَاضُ\nوَأَمَّا الْأَصْلُ الْآخَرُ فَتَخَضْخَضَ الْمَاءُ. وَالْخَضْخَاضُ: ضَرْبٌ مِنَ الْقَطِرَانِ. وَيُقَالُ نَبْتٌ خُضَخِضٌ، أَيْ كَثِيرُ الْمَاءِ. تَقُولُ: كَأَنَّهُ يَتَخَضْخَضُ مِنْ رِيِّهِ.\nوَقَدْ شَذَّ عَنِ الْبَابِ حَرْفٌ وَاحِدٌ إِنْ كَانَ صَحِيحًا، قَالُوا: خَاضَضْتُ فُلَانًا إِذَا بَايَعْتَهُ مُعَارَضَةً. وَهُوَ بَعِيدٌ مِنَ الْقِيَاسِ الَّذِي ذَكَرْنَاهُ."
       }
     ],
-    "cebel_mihveri_ocr": [
-      {
-        "kokler": ["خضض", "خضخض"],
-        "mihveri": "المعنى المحوري: رخاوة مع خشورة\". كالنفط والمكان المذكور» وجسم البعير الموصوف."
-      }
-    ],
+    "cebel_mihveri": {
+      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
+      "fasil": "الخاء والضاد",
+      "baslik": "خضض - خضخض",
+      "mihveri": "رخاوة مع خثورة (1). كالِنفْط، والمكان المذكور، وجسم البعير الموصوف.",
+      "sesler": ""
+    },
     "kaikki_vikisozluk": [
       {
         "w": "انخض",
@@ -824,12 +825,18 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "event.n.01",
-    "orta": "noun.act",
+    "ince": "shake.v.01",
+    "orta": "verb.motion",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "wag.n.02",
-    "dayanak_tanim": "causing to move repeatedly from side to side",
+    "dayanak_synset": "shake.v.01",
+    "dayanak_tanim": "move or cause to move back and forth",
     "synset_sayisi": 3
+  },
+  "ses_mana_tasnif": {
+    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+    "fasil": "الخاء والضاد",
+    "mihveri": "رخاوة مع خثورة (1). كالِنفْط، والمكان المذكور، وجسم البعير الموصوف.",
+    "sesler": ""
   },
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
@@ -841,22 +848,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "صدد",
-      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
-      "boy": 523
+      "kume": 9,
+      "merkez_kok": "غرق",
+      "merkez_mana": "Garak: batmak; ğarık: batan",
+      "boy": 1144
     },
     "orta": {
-      "kume": 32,
+      "kume": 41,
       "merkez_kok": "نقر",
       "merkez_mana": "Nakr: vurmak, çalmak; nakîr: çukur",
-      "boy": 154
+      "boy": 227
     },
     "ince": {
-      "kume": 225,
-      "merkez_kok": "خضض",
-      "merkez_mana": "to get shaken",
-      "boy": 21
+      "kume": 279,
+      "merkez_kok": "خور",
+      "merkez_mana": "Hevr: boşluk, yıkım; hâvir: boş",
+      "boy": 43
     }
   },
   "kaliplar": {

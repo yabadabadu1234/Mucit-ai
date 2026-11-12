@@ -7,6 +7,13 @@
     ["kök", "غنى", "kök harfi elif veya elif-i maksûre"]
   ],
   "sozlukler": {
+    "cebel_mihveri": {
+      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
+      "fasil": "الغين والنون",
+      "baslik": "غنى",
+      "mihveri": "وجود الكفاية مما يعمرُ الحيّز بطيبه ويقيم أمره. كالمال في الحوزة - وهو مطلوب يلطف الحياة، وكالناس ووجودهم عُمْران وأُنْس - في المنازل. فمن الإقامة في الحوزة: {كَأَنْ لَمْ يَغْنَوْا فِيهَا} [الأعراف: 92]: كأن لم يقيموا (أي بادوا كأنهم لم يكونوا فيها أبدًا)، {فَجَعَلْنَاهَا حَصِيدًا كَأَنْ لَمْ تَغْنَ",
+      "sesler": "تعبر الغين عن تخلخل مع رخاوة ما، والنون عن امتداد لطيف في باطن، والفصل منهما يعبر عن امتلاء ظرف أو مكان (باطن أو تجوف) بأشياء كثيرة لطيفة كالروضة العَنّاء بالعشب والقِربة بالماء. وفي (غنى) تعبر الياء عن اتصال وامتداد، ويعبر التركيب عن امتداد وجود الشيء اللطيف بوفرة في الحوزة كما في الغِنَى: الوفر/ ضد الفقر؛ وكما في المغاني. وفي (غنم) تعبر الميم عن التئام ظاهر واستوائه ضامًا ما دونه، ويعبر التركيب عن ضم لطيف في الحوزة اسْتحداثًا - كالغُنْم -بالضم: الفوز بالشيء."
+    },
     "kaikki_vikisozluk": [
       {
         "w": "غني",
@@ -482,18 +489,41 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "add.v.01",
-    "orta": "verb.possession",
-    "ust": "insan ve toplum",
-    "dayanak_synset": "enrich.v.02",
-    "dayanak_tanim": "make wealthy or richer",
+    "ince": "talk.v.02",
+    "orta": "verb.creation",
+    "ust": "fiil ve hadise",
+    "dayanak_synset": "sing.v.02",
+    "dayanak_tanim": "produce tones with the voice",
     "synset_sayisi": 2
+  },
+  "ses_mana_tasnif": {
+    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+    "fasil": "الغين والنون",
+    "mihveri": "وجود الكفاية مما يعمرُ الحيّز بطيبه ويقيم أمره. كالمال في الحوزة - وهو مطلوب يلطف الحياة، وكالناس ووجودهم عُمْران وأُنْس - في المنازل. فمن الإقامة في الحوزة: {كَأَنْ لَمْ يَغْنَوْا فِيهَا} [الأعراف: 92]: كأن لم يقيموا (أي بادوا كأنهم لم يكونوا فيها أبدًا)، {فَجَعَلْنَاهَا حَصِيدًا كَأَنْ لَمْ تَغْنَ",
+    "sesler": "تعبر الغين عن تخلخل مع رخاوة ما، والنون عن امتداد لطيف في باطن، والفصل منهما يعبر عن امتلاء ظرف أو مكان (باطن أو تجوف) بأشياء كثيرة لطيفة كالروضة العَنّاء بالعشب والقِربة بالماء. وفي (غنى) تعبر الياء عن اتصال وامتداد، ويعبر التركيب عن امتداد وجود الشيء اللطيف بوفرة في الحوزة كما في الغِنَى: الوفر/ ضد الفقر؛ وكما في المغاني. وفي (غنم) تعبر الميم عن التئام ظاهر واستوائه ضامًا ما دونه، ويعبر التركيب عن ضم لطيف في الحوزة اسْتحداثًا - كالغُنْم -بالضم: الفوز بالشيء."
   },
   "muhassas_tasnif": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
   "mana_tasnif_gomme": {
-    "durum": "tasnif edilemedi (köke ait mana metni yok)"
+    "ust": {
+      "kume": 9,
+      "merkez_kok": "غرق",
+      "merkez_mana": "Garak: batmak; ğarık: batan",
+      "boy": 1144
+    },
+    "orta": {
+      "kume": 44,
+      "merkez_kok": "عقم",
+      "merkez_mana": "Akm: kısır olmak; akim: kısır",
+      "boy": 67
+    },
+    "ince": {
+      "kume": 291,
+      "merkez_kok": "ثوي",
+      "merkez_mana": "Sevâ: kalmak, yerleşmek; metvâ: konaklama yeri",
+      "boy": 8
+    }
   },
   "kaliplar": {},
   "kelimeler": []

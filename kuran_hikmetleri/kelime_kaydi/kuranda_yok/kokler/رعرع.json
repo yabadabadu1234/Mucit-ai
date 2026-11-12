@@ -7,12 +7,13 @@
     ["kök", "رعرع", "üç harfli değil"]
   ],
   "sozlukler": {
-    "cebel_mihveri_ocr": [
-      {
-        "kokler": ["رعع", "رعرع"],
-        "mihveri": "المعنى المحوري: امتداد الحرم مع رقته (أي عدم کثافته) ورخاوته أو ضعفه\"\": كذلك القصب (وهو فارغ الجوف) يطول مع رطوبة» وكذلك الماء"
-      }
-    ],
+    "cebel_mihveri": {
+      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
+      "fasil": "الراء والعين",
+      "baslik": "رعع- رعرع",
+      "mihveri": "امتداد الجرم مع رقته (أي عدم كثافته) ورخاوته أو ضعفه (1): كذلك القصب (وهو فارغ الجوف) يطول مع رطوبة، وكذلك الماء",
+      "sesler": "تعبر الراء عن استرسال، والعين عن التحام الرقيق، فعبر الفصل منهما عن امتداد على رقة وضعف كالرعرعة اضطراب الماء الرقيق على وجه الأرض وكالقصب الرعراع. وفي (رعى) أضافت الياء معنى الاتصال (وهو هنا الاستمداد)، فعبر التركيب عن نحو أكل المرعى. وفي (روع) عبرت الواو عن نحو الاشتمال، فعبر التركيب عن الاشتمال على رقة في الباطن لها حِدّةٌ ما (أخذًا من الرقة لأنها دقة) ="
+    },
     "kaikki_vikisozluk": [
       {
         "w": "ترعرع",
@@ -389,27 +390,33 @@
     "dayanak_tanim": "pass into a condition gradually, take on a specific property or attribute; become",
     "dayanak_karsilik": "grow"
   },
+  "ses_mana_tasnif": {
+    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+    "fasil": "الراء والعين",
+    "mihveri": "امتداد الجرم مع رقته (أي عدم كثافته) ورخاوته أو ضعفه (1): كذلك القصب (وهو فارغ الجوف) يطول مع رطوبة، وكذلك الماء",
+    "sesler": "تعبر الراء عن استرسال، والعين عن التحام الرقيق، فعبر الفصل منهما عن امتداد على رقة وضعف كالرعرعة اضطراب الماء الرقيق على وجه الأرض وكالقصب الرعراع. وفي (رعى) أضافت الياء معنى الاتصال (وهو هنا الاستمداد)، فعبر التركيب عن نحو أكل المرعى. وفي (روع) عبرت الواو عن نحو الاشتمال، فعبر التركيب عن الاشتمال على رقة في الباطن لها حِدّةٌ ما (أخذًا من الرقة لأنها دقة) ="
+  },
   "muhassas_tasnif": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 2,
-      "merkez_kok": "هنا",
-      "merkez_mana": "",
-      "boy": 415
+      "kume": 5,
+      "merkez_kok": "وجف",
+      "merkez_mana": "Vecf: titremek, çarpmak",
+      "boy": 219
     },
     "orta": {
-      "kume": 3,
-      "merkez_kok": "حنث",
-      "merkez_mana": "Hinş: yemini bozmak, söz bozmak",
-      "boy": 181
+      "kume": 9,
+      "merkez_kok": "وجف",
+      "merkez_mana": "Vecf: titremek, çarpmak",
+      "boy": 69
     },
     "ince": {
-      "kume": 8,
-      "merkez_kok": "حنث",
-      "merkez_mana": "Hinş: yemini bozmak, söz bozmak",
-      "boy": 54
+      "kume": 46,
+      "merkez_kok": "خلخل",
+      "merkez_mana": "anklet",
+      "boy": 13
     }
   },
   "kaliplar": {},

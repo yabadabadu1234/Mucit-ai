@@ -860,12 +860,13 @@
         "metin": "(خَبَأَ) الْخَاءُ وَالْبَاءُ وَالْحَرْفُ الْمُعْتَلُّ وَالْهَمْزَةُ يَدُلُّ عَلَى سَتْرِ الشَّيْءِ. فَمِنْ ذَلِكَ خَبَأْتُ الشَّيْءَ أَخْبَؤُهُ خَبْأً. وَالْخُبَأَةُ: الْجَارِيَةُ تُخْبَأُ. وَمِنَ الْبَابِ الْخِبَاءُ ; تَقُولُ أَخْبَيْتُ إِخْبَاءً، وَخَبَّيْتُ، وَتَخَبَّيْتُ، كُلُّ ذَلِكَ إِذَا اتَّخَذْتَ خِبَاءً.\n[بَابُ الْخَاءِ وَالتَّاءِ وَمَا يَثْلِثُهُمَا]"
       }
     ],
-    "cebel_mihveri_ocr": [
-      {
-        "kokler": ["خبء"],
-        "mihveri": "المعنى المحوري: إخفاء الئيء وتغطيته في كن مناسب التجوّف: كا بخفي الخباء من بداخله» وکا يتر غِشاءٌ الْْرَّة ما ني جوفه سرا تامًا. ومنه ححبأت الشيء (فتح): سَرنّه. والحَبءٌ - بالفتح: ما خبئ» وكذلك الخبيء والخبيئة. اذى سرح الْحَبء فى آلسَمَوّت وَالأزض 4 : هو كل ما غاب واستتر. فيصدق على الغيب» والمطر في السماء وعلى النبت والمعادن في الأرض."
-      }
-    ],
+    "cebel_mihveri": {
+      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
+      "fasil": "الخاء والباء",
+      "baslik": "خبأ",
+      "mihveri": "إخفاء الشيء وتغطيته في كِنٌّ مناسب التجوّف: كما يخفي الخباء مَن بداخله، وكما يَسْتُر غِشاءُ البُرّة ما في جوفه سَتْرًا تامًّا. ومنه خَبأت الشيء (فتح): سَتَرْتُه. والخَبْءُ -بالفتح: ما خُبِئَ، وكذلك الخبيء والخبيئة. {الَّذِي يُخْرِجُ الْخَبْءَ فِي السَّمَاوَاتِ وَالْأَرْضِ}: هو كل ما غاب واستتر. فيصدق على الغيب، والمطر في السماء، وعلى النبت والمعادن في الأرض.",
+      "sesler": ""
+    },
     "kaikki_vikisozluk": [
       {
         "w": "مخبأ",
@@ -2240,12 +2241,18 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "dissemble.v.02",
-    "orta": "verb.perception",
-    "ust": "zihin ve ilim",
-    "dayanak_synset": "dissemble.v.02",
-    "dayanak_tanim": "hide under a false appearance",
+    "ince": "location.n.01",
+    "orta": "noun.location",
+    "ust": "ölçü, mekân ve zaman",
+    "dayanak_synset": "hiding_place.n.01",
+    "dayanak_tanim": "a place suitable for hiding something (such as yourself)",
     "synset_sayisi": 5
+  },
+  "ses_mana_tasnif": {
+    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+    "fasil": "الخاء والباء",
+    "mihveri": "إخفاء الشيء وتغطيته في كِنٌّ مناسب التجوّف: كما يخفي الخباء مَن بداخله، وكما يَسْتُر غِشاءُ البُرّة ما في جوفه سَتْرًا تامًّا. ومنه خَبأت الشيء (فتح): سَتَرْتُه. والخَبْءُ -بالفتح: ما خُبِئَ، وكذلك الخبيء والخبيئة. {الَّذِي يُخْرِجُ الْخَبْءَ فِي السَّمَاوَاتِ وَالْأَرْضِ}: هو كل ما غاب واستتر. فيصدق على الغيب، والمطر في السماء، وعلى النبت والمعادن في الأرض.",
+    "sesler": ""
   },
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
@@ -2257,22 +2264,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "صدد",
-      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
-      "boy": 523
+      "kume": 9,
+      "merkez_kok": "غرق",
+      "merkez_mana": "Garak: batmak; ğarık: batan",
+      "boy": 1144
     },
     "orta": {
-      "kume": 34,
-      "merkez_kok": "نجس",
-      "merkez_mana": "Nicis: pislik, necis",
-      "boy": 122
+      "kume": 35,
+      "merkez_kok": "ستر",
+      "merkez_mana": "Setr: örtmek, saklamak; setr: perde",
+      "boy": 91
     },
     "ince": {
-      "kume": 240,
-      "merkez_kok": "غلف",
-      "merkez_mana": "Gılâf: kılıf, örtü; gılf: kılıfla kapamak",
-      "boy": 21
+      "kume": 244,
+      "merkez_kok": "كتم",
+      "merkez_mana": "Ketm: gizlemek; kitmân: gizlilik",
+      "boy": 10
     }
   },
   "kaliplar": {

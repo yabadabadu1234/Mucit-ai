@@ -24,9 +24,9 @@ def metinler(r):
     for o in (s.get('arabic_ontology') or [])[:3]:
         if o.get('tanim'):
             t.append(o['tanim'][:200])
-    for c in s.get('cebel_mihveri_ocr') or []:
-        if c.get('mihveri'):
-            t.append(c['mihveri'][:250])
+    c = s.get('cebel_mihveri')
+    if c and c.get('mihveri'):
+        t.append(c['mihveri'][:250])
     for m in (s.get('mekayis') or [])[:1]:
         m0 = m.get('metin', '')
         m0 = re.split(r'قَالَ|قَالَ|\n', m0, 1)[0] if m0 else ''

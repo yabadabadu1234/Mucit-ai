@@ -692,12 +692,13 @@
         "metin": "(جَفَّ) الْجِيمُ وَالْفَاءُ أَصْلَانِ: فَالْأَوَّلُ قَوْلُكَ جَفَّ الشَّيْءُ جُفُوفًا يَجِفُّ. وَالثَّانِي الْجُفُّ جُفُّ الطَّلْعَةِ، وَهُوَ وِعَاؤُهَا. وَيُقَالُ الْجُفُّ شَيْءٌ يُنْقَرُ مِنْ جُذُوعِ النَّخْلِ. وَالْجُفُّ: نِصْفُ قِرْبَةٍ يُتَّخَذُ دَلْوًا. وَأَمَّا قَوْلُهُمْ لِلْجَمَاعَةِ الْكَثِيرِ مِنَ النَّاسِ جُفٌّ، وَهُوَ فِي قَوْلِ النَّابِغَةِ:\nفِي جُفِّ ثَعْلَبَ وَارِدِي الْأَمْرَارِ\nفَهُوَ مِنْ هَذَا، لِأَنَّ الْجَمَاعَةَ يُنْضَوَى إِلَيْهَا وَيُجْتَمَعُ، فَكَأَنَّهَا مَجْمَعُ مَنْ يَأْوِي إِلَيْهَا.\nفَأَمَّا الْجَفْجَفُ الْأَرْضُ الْمُرْتَفِعَةُ فَهُوَ مِنَ الْبَابِ الْأَوَّلِ ; لِأَنَّهَا إِذَا كَانَتْ كَذَا كَانَ أَقَلَّ لِنَدَاهَا.\nوَجُفَافُ الطَّيْرِ: مَكَانٌ. قَالَ الشَّاعِرُ:\nفَمَا أَبْصَرَ النَّارَ الَّتِي وَضَحَتْ لَهُ ... وَرَاءَ جُفَافِ الطَّيْرِ إِلَّا تَمَارَيَا"
       }
     ],
-    "cebel_mihveri_ocr": [
-      {
-        "kokler": ["جفف", "جفجف"],
-        "mihveri": "المعنى المحوري: ببس الشيء المحيط برقيق وغلظّه بحيث لا يكون في أثنائه أو ينتح منه بال أو ما إليه\"\": كالدلوء والجذع النقورء والقاع المذكورات"
-      }
-    ],
+    "cebel_mihveri": {
+      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
+      "fasil": "الجيم والفاء",
+      "baslik": "جفف - جفجف",
+      "mihveri": "يُبْس الشيء المحيط برقيقٍ وغلظُه بحيث لا يكون في أثنائه أو ينتَح منه بَلَلٌ أو ما إليه (1): كالدلو، والجذع المَنْقُور، والقاع المذكورات",
+      "sesler": "تعبر الجيم عن جسم هش له حدة ما، والفاء عن نفاذ بإبعاد وطرد، والفصل منهما يعبر عن نفي البلل وما إليه من أثناء الشيء كما في انسداد مسام الجُف وكجفاف ="
+    },
     "kaikki_vikisozluk": [
       {
         "w": "جوف",
@@ -1731,12 +1732,18 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "dry.v.02",
-    "orta": "verb.change",
-    "ust": "fiil ve hadise",
-    "dayanak_synset": "dry.v.02",
-    "dayanak_tanim": "become dry or drier",
+    "ince": "property.n.02",
+    "orta": "noun.attribute",
+    "ust": "hâl ve vasıf",
+    "dayanak_synset": "inanimateness.n.01",
+    "dayanak_tanim": "not having life",
     "synset_sayisi": 15
+  },
+  "ses_mana_tasnif": {
+    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+    "fasil": "الجيم والفاء",
+    "mihveri": "يُبْس الشيء المحيط برقيقٍ وغلظُه بحيث لا يكون في أثنائه أو ينتَح منه بَلَلٌ أو ما إليه (1): كالدلو، والجذع المَنْقُور، والقاع المذكورات",
+    "sesler": "تعبر الجيم عن جسم هش له حدة ما، والفاء عن نفاذ بإبعاد وطرد، والفصل منهما يعبر عن نفي البلل وما إليه من أثناء الشيء كما في انسداد مسام الجُف وكجفاف ="
   },
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
@@ -1748,22 +1755,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 4,
-      "merkez_kok": "قول",
-      "merkez_mana": "Kavl: söz, söyleme",
-      "boy": 351
+      "kume": 7,
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 595
     },
     "orta": {
-      "kume": 8,
-      "merkez_kok": "عتل",
-      "merkez_mana": "Utul: zorba, kaba, sert",
-      "boy": 71
+      "kume": 25,
+      "merkez_kok": "كرب",
+      "merkez_mana": "Karb: sıkıntı, keder; kurbet: sıkıntı",
+      "boy": 93
     },
     "ince": {
-      "kume": 35,
+      "kume": 177,
       "merkez_kok": "خشن",
       "merkez_mana": "to be coarse, to be rude, to be uncouth, to be rough, to be hoarse",
-      "boy": 10
+      "boy": 9
     }
   },
   "kaliplar": {

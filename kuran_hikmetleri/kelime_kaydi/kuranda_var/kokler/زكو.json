@@ -878,12 +878,13 @@
         "maddeler": []
       }
     },
-    "cebel_mihveri_ocr": [
-      {
-        "kokler": ["زكو"],
-        "mihveri": "المعنى المحوري: زيادة الشيء في ذاته مع جودة نوعه. كالزكا فهو أزيد"
-      }
-    ],
+    "cebel_mihveri": {
+      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
+      "fasil": "الزاي والكاف",
+      "baslik": "زكو",
+      "mihveri": "زيادة الشيء في ذاته مع جودة نوعه. كالزكا فهو أزيد",
+      "sesler": "الزاي تعبر عن ازدحام واكتناز، والكاف تعبر عن ضغط غئوري دقيق، والفصل منهما يعبر عن امتلاء باطن الشيء بمائع أو لطيف. وفي (زكو): زادت الواو معنى الاشتمال، وعبر التركيب عن اشتمال الشئ على ما يزيده ذاتيًا وهو قوة النماء، مع الجودة (مقابل اللطف). وفي (زكر) تزيد الراء معنى الاسترسال، ويعبر التركيب عن ظرف كالكيس يملأ بالمائع ونحوه للإيعاء."
+    },
     "eyupipler_kok_anlami": "arınmak, zekat",
     "kaikki_vikisozluk": [
       {
@@ -1493,6 +1494,12 @@
     "dayanak_tanim": "express approval of",
     "synset_sayisi": 1
   },
+  "ses_mana_tasnif": {
+    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+    "fasil": "الزاي والكاف",
+    "mihveri": "زيادة الشيء في ذاته مع جودة نوعه. كالزكا فهو أزيد",
+    "sesler": "الزاي تعبر عن ازدحام واكتناز، والكاف تعبر عن ضغط غئوري دقيق، والفصل منهما يعبر عن امتلاء باطن الشيء بمائع أو لطيف. وفي (زكو): زادت الواو معنى الاشتمال، وعبر التركيب عن اشتمال الشئ على ما يزيده ذاتيًا وهو قوة النماء، مع الجودة (مقابل اللطف). وفي (زكر) تزيد الراء معنى الاسترسال، ويعبر التركيب عن ظرف كالكيس يملأ بالمائع ونحوه للإيعاء."
+  },
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الأضداد",
@@ -1503,22 +1510,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
+      "kume": 8,
       "merkez_kok": "درك",
       "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 875
+      "boy": 799
     },
     "orta": {
-      "kume": 45,
-      "merkez_kok": "فضل",
-      "merkez_mana": "Fazl: üstünlük, ihsan, bağış",
-      "boy": 122
+      "kume": 30,
+      "merkez_kok": "حصل",
+      "merkez_mana": "Hasl: elde etmek, sonuçlanmak; hâsıl",
+      "boy": 127
     },
     "ince": {
-      "kume": 297,
-      "merkez_kok": "ءفد",
-      "merkez_mana": "",
-      "boy": 26
+      "kume": 217,
+      "merkez_kok": "هذب",
+      "merkez_mana": "to discipline",
+      "boy": 35
     }
   },
   "kaliplar": {
@@ -2015,6 +2022,14 @@
         "lemma": "zekât, arınma",
         "lemma_durum": "model-üretimi, doğrulanmadı",
         "eyupipler": "Zekat"
+      },
+      "jeffery": {
+        "kaynak": "Arthur Jeffery, The Foreign Vocabulary of the Qur'ān (Baroda 1938; Brill yeniden basımı, yazıya geçirilmiş metin; Arapça yazılar yazı tipi bozuk olduğundan alınmadı)",
+        "translit": "Zakāt",
+        "ayet_atiflari": "ii, 43, 83, 110, 177, 276; iv, 77, etc",
+        "ilk_baslik_dilleri": [],
+        "metin": "ii, 43, 83, 110, 177, 276; iv, 77, etc. Legal Alms. Occurs only in Madinan passages. , Naturally the Muslim authorities explain this word from and tell us that an Alms is so called because it purifies the soul from meanness, or even because it purifies wealth itself (cf. Baid. on ii, 43, etc.),2 though some sought to derive it from the primitive meaning of to increase (see Rāghib, Mufradāt, 212, and the Lexicons). Zakāt, however, is another of the technical religious terms taken over from the older faiths. Fraenkel, Vocab, 23, suggested that it was from the Aram. . The primary sense of , is puritas, innocentia, from which developed the secondary meaning of meritum as in the Targum on Ruth iv, 21, but it does not seem that  , or its Syr. equivalent )#], ever meant alms, though this meaning could easily be derived from it. Fraenkel is inclined to believe that the Jews of Arabia had already given it this meaning before Islam—“sed fortasse Iudaei Arabici  sensu eleemosynarum adhibuerunt” (so Torrey, Foundation, 48, 141). Nöldeke, however (Neue Beiträge, 25), is inclined to believe that the specializing of the word for alms was due to Muhammad himself.3 9w",
+        "arapca": "زكاة"
       }
     },
     {

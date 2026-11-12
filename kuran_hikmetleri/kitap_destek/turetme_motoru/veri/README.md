@@ -17,3 +17,12 @@ Kaynak: Open Multilingual Wordnet 1.4, `arb/wn-data-arb.tab` (Arabic WordNet v2,
 
 ## İbn Sîde, el-Muhassas
 Kaynak: archive.org/details/2564Htm (Şâmile HTML dışa aktarımı; neşir: Halîl İbrâhîm Cefâl, Dâru İhyâi't-Türâs). Tek ham nüsha `kaynak/lugat/ham/muhassas_ibn_sida_shamile_htm.zip`. Konu sıralı lügat; kök dosyalarındaki `muhassas_tasnif` kök biçimlerinin kitap/bâblardaki geçişinden türer.
+
+## Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal
+Kaynak: archive.org/details/2703Htm (Şâmile HTML dışa aktarımı, yazıya geçirilmiş metin; OCR değil). Tek ham nüsha `kaynak/lugat/ham/cebel_mu_cem_istikaki_muassal_shamile_htm.zip`. Eski OCR özeti (`cebel_mihveri.json`) bu metin bulununca silindi.
+
+## Jeffery, The Foreign Vocabulary of the Qur'ān
+Kaynak: Brill yeniden basımı (Texts and Studies on the Qur'ān 3), almuslih.org kütüphanesi; metin katmanı yazı tipli, Arapça yazılar bozuk olduğu için Arapça başlıklar elle eşlendi. Ham nüsha `kaynak/lugat/ham/jeffery_foreign_vocabulary_of_the_quran_brill_reprint.pdf`.
+
+## EtymArab (Oslo Üniversitesi)
+Kaynak: Bibliotheca Polyglotta, Etymological Dictionary of Arabic (polyglotta.uio.no, vid=1268). Çalışma sürüyor; birçok madde yer tutucudur. Çekim betiği `etymarab_cek.py`, ham kopya `kaynak/lugat/ham/etymarab_polyglotta.jsonl.xz`.

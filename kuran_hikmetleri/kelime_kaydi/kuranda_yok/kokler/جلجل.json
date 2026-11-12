@@ -7,12 +7,13 @@
     ["kök", "جلجل", "üç harfli değil"]
   ],
   "sozlukler": {
-    "cebel_mihveri_ocr": [
-      {
-        "kokler": ["جلل", "جلجل"],
-        "mihveri": "المعنى المحوري: تغطية عظيمة أي واسعة (يقصد بها الصون)\" كاب ئلة"
-      }
-    ],
+    "cebel_mihveri": {
+      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
+      "fasil": "الجيم واللام",
+      "baslik": "جلل - جلجل",
+      "mihveri": "تغطية عظيمة أي واسعة (يقصد بها الصون) (1) كالجُلة",
+      "sesler": "تعبر الجيم عن جرم عظيم غير كثيف، واللام عن امتداد واستقلال، والفصل منهما يعبر عن تغطية عظيمة متسعة. وفي (جلو) تصبر الواو عن اشتمال، ويعبر التركيب عن نحو انزياح شامل كالطيّ والحوز إلى بعيد لمتسع عظيم كما في جلاء القوم ="
+    },
     "kaikki_vikisozluk": [
       {
         "w": "جلجلتا",
@@ -346,34 +347,40 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "event.n.01",
-    "orta": "noun.event",
-    "ust": "fiil ve hadise",
-    "dayanak_synset": "peal.n.01",
-    "dayanak_tanim": "a deep prolonged sound (as of thunder or large bells)",
+    "ince": "ring.v.01",
+    "orta": "verb.perception",
+    "ust": "zihin ve ilim",
+    "dayanak_synset": "ring.v.01",
+    "dayanak_tanim": "sound loudly and sonorously",
     "synset_sayisi": 2
+  },
+  "ses_mana_tasnif": {
+    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+    "fasil": "الجيم واللام",
+    "mihveri": "تغطية عظيمة أي واسعة (يقصد بها الصون) (1) كالجُلة",
+    "sesler": "تعبر الجيم عن جرم عظيم غير كثيف، واللام عن امتداد واستقلال، والفصل منهما يعبر عن تغطية عظيمة متسعة. وفي (جلو) تصبر الواو عن اشتمال، ويعبر التركيب عن نحو انزياح شامل كالطيّ والحوز إلى بعيد لمتسع عظيم كما في جلاء القوم ="
   },
   "muhassas_tasnif": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 4,
-      "merkez_kok": "قول",
-      "merkez_mana": "Kavl: söz, söyleme",
-      "boy": 351
+      "kume": 6,
+      "merkez_kok": "قبب",
+      "merkez_mana": "canopy, pavilion; dome, cupola",
+      "boy": 802
     },
     "orta": {
-      "kume": 12,
-      "merkez_kok": "كبكب",
-      "merkez_mana": "Kabkab: atmak, yuvarlamak",
-      "boy": 77
+      "kume": 13,
+      "merkez_kok": "طست",
+      "merkez_mana": "",
+      "boy": 55
     },
     "ince": {
-      "kume": 81,
-      "merkez_kok": "نمرق",
-      "merkez_mana": "Nemrukat: yastık, minder",
-      "boy": 14
+      "kume": 106,
+      "merkez_kok": "برقع",
+      "merkez_mana": "cover",
+      "boy": 4
     }
   },
   "kaliplar": {},

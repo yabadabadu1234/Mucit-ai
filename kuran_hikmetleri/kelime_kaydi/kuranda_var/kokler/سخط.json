@@ -807,12 +807,13 @@
         "maddeler": []
       }
     },
-    "cebel_mihveri_ocr": [
-      {
-        "kokler": ["سخط"],
-        "mihveri": "المعنى المحوري: الغضب (الشديد) استنقاصا لا يمَدَم من عمل أو عطاء. وقد جاء في [بحر ۸۸/۳] «السُخط: الكراهة المفرطة). والطاء في آخر الكلمة توجه هذه الصفةء فإن «السُحْدَ ماء ثخين / غليظ يخرج مع الولد عندما ينتج والطاء أغلظ من الدال كثيرًاء وليس في القرآن من التركيب إلا السُخْط بمعناه المذكور."
-      }
-    ],
+    "cebel_mihveri": {
+      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
+      "fasil": "الهاء والنون",
+      "baslik": "سخط",
+      "mihveri": "الغضب (الشديد) استنقاصا لما يُقَدّم من عمل أو عطاء. وقد جاء في [بحر 3/ 88] \"السُخط: الكراهة المفرطة \". والطاء في آخر الكلمة توجه هذه الصفة، فإن \"السُخْدَ ماء ثخين غليظ يخرج مع الولد عندما ينتج \"والطاء أغلظ من الدال كثيرًا، وليس في القرآن من التركيب إلا السُخْط بمعناه المذكور.",
+      "sesler": ""
+    },
     "kaikki_vikisozluk": [
       {
         "w": "سخط",
@@ -1803,12 +1804,18 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "state.n.02",
-    "orta": "noun.feeling",
+    "ince": "annoy.v.01",
+    "orta": "verb.emotion",
     "ust": "his ve nefis",
-    "dayanak_synset": "anger.n.01",
-    "dayanak_tanim": "a strong emotion; a feeling that is oriented toward some real or supposed grievance",
+    "dayanak_synset": "annoy.v.01",
+    "dayanak_tanim": "cause annoyance in; disturb, especially by minor irritations",
     "synset_sayisi": 6
+  },
+  "ses_mana_tasnif": {
+    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+    "fasil": "الهاء والنون",
+    "mihveri": "الغضب (الشديد) استنقاصا لما يُقَدّم من عمل أو عطاء. وقد جاء في [بحر 3/ 88] \"السُخط: الكراهة المفرطة \". والطاء في آخر الكلمة توجه هذه الصفة، فإن \"السُخْدَ ماء ثخين غليظ يخرج مع الولد عندما ينتج \"والطاء أغلظ من الدال كثيرًا، وليس في القرآن من التركيب إلا السُخْط بمعناه المذكور.",
+    "sesler": ""
   },
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
@@ -1821,21 +1828,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 7,
-      "merkez_kok": "وقع",
-      "merkez_mana": "Vuku': olmak, düşmek; vak'a: olay",
-      "boy": 704
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 595
     },
     "orta": {
-      "kume": 29,
-      "merkez_kok": "قدح",
-      "merkez_mana": "Kadh: çakmak; kadh: suçlamak",
-      "boy": 57
+      "kume": 26,
+      "merkez_kok": "وغر",
+      "merkez_mana": "to become enraged, to become angry, to be filled with malice",
+      "boy": 63
     },
     "ince": {
-      "kume": 200,
-      "merkez_kok": "غيظ",
-      "merkez_mana": "Gayz: öfke, kızgınlık",
-      "boy": 14
+      "kume": 185,
+      "merkez_kok": "سخط",
+      "merkez_mana": "Sohat: öfke, kızgınlık",
+      "boy": 12
     }
   },
   "kaliplar": {

@@ -7,12 +7,13 @@
     ["kök", "لملم", "üç harfli değil"]
   ],
   "sozlukler": {
-    "cebel_mihveri_ocr": [
-      {
-        "kokler": ["لمم", "لملم"],
-        "mihveri": "المعنى المحوري: تجمّع الشيء المتسع عند أطرافه فيلتقي ولا ينتف \"."
-      }
-    ],
+    "cebel_mihveri": {
+      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
+      "fasil": "اللام والميم",
+      "baslik": "لمم - لملم - لم - لما",
+      "mihveri": "تجمع الشيء المتسع عند أطرافه فيلتقي ولا ينتشر (1).",
+      "sesler": "تعبّر اللام عن امتداد واستقلال, والميم عن التئام وتضام ظاهري، والفصل منهما يعبّر عن تجمُّع طَرَفي لمنتشر أو ما شأنه الانتشار كما في اللِمّة (شعر الرأس). وفي (لوم) زادت الواو معنى الاشتمال, ويعبّر التركيب عن اشتداد في الأثناء وما هو من بابه - كاللُّومة الشَّدة واللام. وفي (لمح) تعبّر الحاء عن عِرَض، ويعبّر التركيب بها عن لُمع في سطح الشيء وظاهره تُلتَقط كما في لمح البرق. وفي (لمز) تعبّر الزاي عن نفاذ باكتناز ="
+    },
     "kaikki_vikisozluk": [
       {
         "w": "لملم",
@@ -400,27 +401,33 @@
     "dayanak_tanim": "assemble or get together",
     "dayanak_karsilik": "gather"
   },
+  "ses_mana_tasnif": {
+    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+    "fasil": "اللام والميم",
+    "mihveri": "تجمع الشيء المتسع عند أطرافه فيلتقي ولا ينتشر (1).",
+    "sesler": "تعبّر اللام عن امتداد واستقلال, والميم عن التئام وتضام ظاهري، والفصل منهما يعبّر عن تجمُّع طَرَفي لمنتشر أو ما شأنه الانتشار كما في اللِمّة (شعر الرأس). وفي (لوم) زادت الواو معنى الاشتمال, ويعبّر التركيب عن اشتداد في الأثناء وما هو من بابه - كاللُّومة الشَّدة واللام. وفي (لمح) تعبّر الحاء عن عِرَض، ويعبّر التركيب بها عن لُمع في سطح الشيء وظاهره تُلتَقط كما في لمح البرق. وفي (لمز) تعبّر الزاي عن نفاذ باكتناز ="
+  },
   "muhassas_tasnif": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "صدد",
-      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
-      "boy": 523
+      "kume": 6,
+      "merkez_kok": "قبب",
+      "merkez_mana": "canopy, pavilion; dome, cupola",
+      "boy": 802
     },
     "orta": {
-      "kume": 32,
-      "merkez_kok": "نقر",
-      "merkez_mana": "Nakr: vurmak, çalmak; nakîr: çukur",
-      "boy": 154
+      "kume": 12,
+      "merkez_kok": "دلك",
+      "merkez_mana": "Delk: ovmak, sürtmek",
+      "boy": 187
     },
     "ince": {
-      "kume": 224,
-      "merkez_kok": "دكك",
-      "merkez_mana": "Dekk: ezmek, parçalamak; dekkâ: düz",
-      "boy": 32
+      "kume": 91,
+      "merkez_kok": "ذبل",
+      "merkez_mana": "wilt, withering, decay",
+      "boy": 5
     }
   },
   "kaliplar": {},

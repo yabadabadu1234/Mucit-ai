@@ -697,12 +697,13 @@
         "metin": "(شَيَخَ) الشِّينُ وَالْيَاءُ وَالْخَاءُ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ الشَّيْخُ. تَقُولُ: هُوَ شَيْخٌ، وَهُوَ مَعْرُوفٌ، بَيِّنُ الشَّيْخُوخَةِ وَالشَّيَخِ وَالتَّشْيِيخِ. وَقَدْ قَالُوا أَيْضًا كَلِمَةً، قَالُوا: شَيَّخْتُ عَلَيْهِ."
       }
     ],
-    "cebel_mihveri_ocr": [
-      {
-        "kokler": ["شيخ"],
-        "mihveri": "المعنى المحوري: نتوء الشيء جرمًا جسيمًا منتيرًا (علنى هيئة ما): كشخص الإنسان وغيره وكشخوص الشيء. ومن التتوء والانتبار - الارتفاع: «شخَص السهمّ: علا المدف. وشحْص ببصره عند الموت: رفعه فلم يَطْرف"
-      }
-    ],
+    "cebel_mihveri": {
+      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
+      "fasil": "الشين والخاء",
+      "baslik": "شيخ",
+      "mihveri": "في ضوء ما في تركيب (شخخ) يمكن أن يكون معنى هذا التركيب: جفاف البدن وذبول نضارته؛ لذهاب طَراءة الشباب وغَضاضته من أثنائه: كحال الشيخ {ثُمَّ لِتَكُونُوا شُيُوخًا} وليس في القرآن من هذا التركيب إلا (شيخ) و (شيوخ). ومنه الشاخة: المعتدل (كأن المقصود: الضامر، والضمور درجة من جفاف البدن). وأمّا قولهم: \"شيّخ عليه - ض: عابه وفضحه \"، فمن الأصل، كأن المقصود: ضعّفه، أي رماه بالضعف، أو أظهر عَواره، فالعَوَر والعَوَار فراغ.",
+      "sesler": ""
+    },
     "kaikki_vikisozluk": [
       {
         "w": "شيخ",
@@ -1050,12 +1051,18 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "whole.n.02",
+    "ince": "person.n.01",
     "orta": "noun.person",
     "ust": "insan ve toplum",
-    "dayanak_synset": "senator.n.01",
-    "dayanak_tanim": "a member of a senate",
+    "dayanak_synset": "old_man.n.01",
+    "dayanak_tanim": "a man who is very old",
     "synset_sayisi": 6
+  },
+  "ses_mana_tasnif": {
+    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+    "fasil": "الشين والخاء",
+    "mihveri": "في ضوء ما في تركيب (شخخ) يمكن أن يكون معنى هذا التركيب: جفاف البدن وذبول نضارته؛ لذهاب طَراءة الشباب وغَضاضته من أثنائه: كحال الشيخ {ثُمَّ لِتَكُونُوا شُيُوخًا} وليس في القرآن من هذا التركيب إلا (شيخ) و (شيوخ). ومنه الشاخة: المعتدل (كأن المقصود: الضامر، والضمور درجة من جفاف البدن). وأمّا قولهم: \"شيّخ عليه - ض: عابه وفضحه \"، فمن الأصل، كأن المقصود: ضعّفه، أي رماه بالضعف، أو أظهر عَواره، فالعَوَر والعَوَار فراغ.",
+    "sesler": ""
   },
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
@@ -1067,21 +1074,21 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 9,
-      "merkez_kok": "درك",
-      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 875
+      "kume": 2,
+      "merkez_kok": "جنح",
+      "merkez_mana": "Cünûh: meyletmek, eğilmek; cenâh: kanat",
+      "boy": 449
     },
     "orta": {
-      "kume": 41,
-      "merkez_kok": "غيي",
-      "merkez_mana": "to set up, make or hoist (of flag, banner or standard)",
-      "boy": 133
+      "kume": 3,
+      "merkez_kok": "جنح",
+      "merkez_mana": "Cünûh: meyletmek, eğilmek; cenâh: kanat",
+      "boy": 184
     },
     "ince": {
-      "kume": 286,
-      "merkez_kok": "ولي",
-      "merkez_mana": "Velî: dost, koruyucu; velâyet",
+      "kume": 12,
+      "merkez_kok": "خطب",
+      "merkez_mana": "Hitâb: konuşma; hatb: iş, mesele",
       "boy": 17
     }
   },

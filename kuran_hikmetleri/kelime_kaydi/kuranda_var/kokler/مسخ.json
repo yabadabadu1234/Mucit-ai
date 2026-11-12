@@ -679,12 +679,13 @@
         "metin": "(مَسَخَ) الْمِيمُ وَالسِّينُ وَالْخَاءُ كَلِمَتَانِ: إِحْدَاهُمَا الْمَسْخُ، وَهُوَ يَدُلُّ عَلَى تَشْوِيهٍ وَقِلَّةِ طَعْمِ الشَّيْءِ، وَمَسَخَهُ اللَّهُ: شَوَّهَ خَلْقَهُ مِنْ صُورَةٍ حَسَنَةٍ إِلَى قَبِيحَةٍ. وَرَجُلٌ مَسِيخٌ: لَا مَلَاحَةَ لَهُ. وَطَعَامٌ مَسِيخٌ: لَا مِلْحَ لَهُ وَلَا طَعْمَ. قَالَ:\nوَأَنْتَ مَسِيخٌ كَلَحْمِ الْحُوَارِ ... فَلَا أَنْتَ حُلْوٌ وَلَا أَنْتَ مُرُّ\nوَيَقُولُونَ: مَسَخْتُ النَّاقَةَ، إِذَا أَدْبَرْتَهَا بِالْإِنْعَابِ.\nوَالْكَلِمَةُ الْأُخْرَى: الْقِسِيُّ الْمَاسِخِيَّةُ، تُنْسَبُ إِلَى مَاسِخَةَ: رَجُلٍ مِنَ الْأَسْدِ. قَالَ:\nفَقَرَّبْتُ مُبْرَاةً تَخَالُ ضُلُوعَهَا ... مِنَ الْمَاسِخِيَّاتِ الْقِسِيَّ الْمُوَتَّرَا."
       }
     ],
-    "cebel_mihveri_ocr": [
-      {
-        "kokler": ["مسخ"],
-        "mihveri": "المعنى المحوري: اختلال (= انتقاص) ما به وام هيأة الشيء أو طبيعته منه - كلو الطعام من الملح الخ» وكذلك لحم الكفل فيلصق جلده بعظمه فيفقد هيئته» وكذهاب الشحم من الجسم. وذهاب الانتفاخ من الورم محمول"
-      }
-    ],
+    "cebel_mihveri": {
+      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
+      "fasil": "الميم والسين",
+      "baslik": "مسخ",
+      "mihveri": "اختلالُ (= انتقاص) ما به قِوام هيأة الشيء أو طبيعته منه - كخُلُوّ الطعام من الملح الخ، وكذلك لحم الكفل فيلصق جلده بعظمه فيفقد هيئته، وكذهاب الشحم من الجسم. وذهاب الانتفاخ من الورم محمول (4/2077) على هذا. ومنه نحو \"مَسَخَه الله قردًا: حَوّل خَلْقه إلى صورته وهو مَسْخ - بالفتح، ومَسيخ: مشوه الخلقة \" {وَلَوْ نَشَاءُ لَمَسَخْنَاهُمْ} لأَزْمنّاهم وأقعدناهم في مكانهم فلا يستطيعون تصرفا [بحر 7/ 329]، ... [وانظر قر 15/ 50].",
+      "sesler": ""
+    },
     "kaikki_vikisozluk": [
       {
         "w": "أمسوخ",
@@ -1154,12 +1155,18 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "substance.n.07",
-    "orta": "noun.substance",
-    "ust": "tabiat",
-    "dayanak_synset": "denaturant.n.01",
-    "dayanak_tanim": "any substance that serves as a denaturing agent",
+    "ince": "transform.v.03",
+    "orta": "verb.change",
+    "ust": "fiil ve hadise",
+    "dayanak_synset": "transform.v.03",
+    "dayanak_tanim": "change in outward structure or looks",
     "synset_sayisi": 4
+  },
+  "ses_mana_tasnif": {
+    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+    "fasil": "الميم والسين",
+    "mihveri": "اختلالُ (= انتقاص) ما به قِوام هيأة الشيء أو طبيعته منه - كخُلُوّ الطعام من الملح الخ، وكذلك لحم الكفل فيلصق جلده بعظمه فيفقد هيئته، وكذهاب الشحم من الجسم. وذهاب الانتفاخ من الورم محمول (4/2077) على هذا. ومنه نحو \"مَسَخَه الله قردًا: حَوّل خَلْقه إلى صورته وهو مَسْخ - بالفتح، ومَسيخ: مشوه الخلقة \" {وَلَوْ نَشَاءُ لَمَسَخْنَاهُمْ} لأَزْمنّاهم وأقعدناهم في مكانهم فلا يستطيعون تصرفا [بحر 7/ 329]، ... [وانظر قر 15/ 50].",
+    "sesler": ""
   },
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
@@ -1171,22 +1178,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 8,
-      "merkez_kok": "صدد",
-      "merkez_mana": "Sudûd: engel olmak, yüz çevirmek; sadd: engel",
-      "boy": 523
+      "kume": 6,
+      "merkez_kok": "قبب",
+      "merkez_mana": "canopy, pavilion; dome, cupola",
+      "boy": 802
     },
     "orta": {
-      "kume": 32,
-      "merkez_kok": "نقر",
-      "merkez_mana": "Nakr: vurmak, çalmak; nakîr: çukur",
-      "boy": 154
+      "kume": 12,
+      "merkez_kok": "دلك",
+      "merkez_mana": "Delk: ovmak, sürtmek",
+      "boy": 187
     },
     "ince": {
-      "kume": 227,
-      "merkez_kok": "وكز",
-      "merkez_mana": "Vekz: itmek, vurmak",
-      "boy": 20
+      "kume": 93,
+      "merkez_kok": "كشط",
+      "merkez_mana": "Keşt: sıyırmak, soymak",
+      "boy": 22
     }
   },
   "kaliplar": {

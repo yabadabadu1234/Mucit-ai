@@ -21,12 +21,13 @@
         "maddeler": []
       }
     },
-    "cebel_mihveri_ocr": [
-      {
-        "kokler": ["عسس", "عسعس"],
-        "mihveri": "المعنى المحوري: نفاذ في الكثيف أو منه مع صعوبة”' كالعَس السير في"
-      }
-    ],
+    "cebel_mihveri": {
+      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
+      "fasil": "العين والسين",
+      "baslik": "عسس - عسعس",
+      "mihveri": "نفاذ في الكثيف أو منه مع صعوبة (2) كالعَسّ السير في",
+      "sesler": "تعبر العين عن التحام على رقة مع عرض وحدة ما، والسين عن امتداد بدقة وحدة. ويعبر الفصل منهما عن نفاذ (امتداد) في الكثيف كالسير في ظلام الليل، ="
+    },
     "kaikki_vikisozluk": [
       {
         "w": "عسعس",
@@ -441,27 +442,33 @@
     "dayanak_tanim": "become dark or darker",
     "dayanak_karsilik": "darken"
   },
+  "ses_mana_tasnif": {
+    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+    "fasil": "العين والسين",
+    "mihveri": "نفاذ في الكثيف أو منه مع صعوبة (2) كالعَسّ السير في",
+    "sesler": "تعبر العين عن التحام على رقة مع عرض وحدة ما، والسين عن امتداد بدقة وحدة. ويعبر الفصل منهما عن نفاذ (امتداد) في الكثيف كالسير في ظلام الليل، ="
+  },
   "muhassas_tasnif": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 6,
-      "merkez_kok": "حدق",
-      "merkez_mana": "Hadak: göz bebeği; hadaka: bakmak",
-      "boy": 578
+      "merkez_kok": "قبب",
+      "merkez_mana": "canopy, pavilion; dome, cupola",
+      "boy": 802
     },
     "orta": {
       "kume": 19,
-      "merkez_kok": "دمس",
-      "merkez_mana": "pocket bread, pita",
-      "boy": 112
-    },
-    "ince": {
-      "kume": 135,
       "merkez_kok": "حلك",
       "merkez_mana": "blackness, intense darkness",
-      "boy": 18
+      "boy": 19
+    },
+    "ince": {
+      "kume": 141,
+      "merkez_kok": "حلك",
+      "merkez_mana": "blackness, intense darkness",
+      "boy": 16
     }
   },
   "kaliplar": {},

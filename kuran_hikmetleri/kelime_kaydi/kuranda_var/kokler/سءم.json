@@ -743,12 +743,13 @@
         "maddeler": []
       }
     },
-    "cebel_mihveri_ocr": [
-      {
-        "kokler": ["سءم"],
-        "mihveri": "المعنى المحوري: الملل ونحوه. وحقيقته عدم الصبر علل استمرار أمر. (وليس هناك استحالات مادية). قال الراغب «السآمة: الملالة ما يكثر لبشه فعلا کان أو انفعالا؛ « وَل تَسْعَمُوا أن بوه صَغيرا أو كيرا إل أجلو 4 [البقرة: ۲ لا يَسَقَم آلإنسن من دَعَاء اَلَخَيَرٍوَإِن مه الث قبعو قوط € [فمبلت: ۹ وکذا ما في [فصلت: ۳۸]."
-      }
-    ],
+    "cebel_mihveri": {
+      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
+      "fasil": "السين والميم",
+      "baslik": "سأم",
+      "mihveri": "الملل ونحوه. وحقيقته عدم الصبر على استمرار أمر. (وليس هناك استعمالات مادية). قال الراغب \"السآمة: الملالة مما يكثر لُبثه فعلًا كان أو انفعالًا \" {وَلَا تَسْأَمُوا أَنْ تَكْتُبُوهُ صَغِيرًا أَوْ كَبِيرًا إِلَى أَجَلِهِ} [البقرة: 282]، {لَا يَسْأَمُ الْإِنْسَانُ مِنْ دُعَاءِ الْخَيْرِ وَإِنْ مَسَّهُ الشَّرُّ فَيَئُوسٌ قَنُوطٌ} [فصلت: 49] وكذا ما في [فصلت: 38]. (2/1071)",
+      "sesler": ""
+    },
     "kaikki_vikisozluk": [
       {
         "w": "أسأم",
@@ -1339,12 +1340,18 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "tire.v.02",
+    "ince": "sicken.v.02",
     "orta": "verb.body",
     "ust": "canlı ve beden",
-    "dayanak_synset": "tire.v.02",
-    "dayanak_tanim": "exhaust or get tired through overuse or great strain or stress",
+    "dayanak_synset": "sicken.v.02",
+    "dayanak_tanim": "get sick",
     "synset_sayisi": 2
+  },
+  "ses_mana_tasnif": {
+    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+    "fasil": "السين والميم",
+    "mihveri": "الملل ونحوه. وحقيقته عدم الصبر على استمرار أمر. (وليس هناك استعمالات مادية). قال الراغب \"السآمة: الملالة مما يكثر لُبثه فعلًا كان أو انفعالًا \" {وَلَا تَسْأَمُوا أَنْ تَكْتُبُوهُ صَغِيرًا أَوْ كَبِيرًا إِلَى أَجَلِهِ} [البقرة: 282]، {لَا يَسْأَمُ الْإِنْسَانُ مِنْ دُعَاءِ الْخَيْرِ وَإِنْ مَسَّهُ الشَّرُّ فَيَئُوسٌ قَنُوطٌ} [فصلت: 49] وكذا ما في [فصلت: 38]. (2/1071)",
+    "sesler": ""
   },
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
@@ -1357,21 +1364,21 @@
   "mana_tasnif_gomme": {
     "ust": {
       "kume": 7,
-      "merkez_kok": "وقع",
-      "merkez_mana": "Vuku': olmak, düşmek; vak'a: olay",
-      "boy": 704
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 595
     },
     "orta": {
-      "kume": 28,
-      "merkez_kok": "شقو",
-      "merkez_mana": "Şakâ: felâket, mutsuzluk; şakî: mutsuz",
-      "boy": 106
+      "kume": 25,
+      "merkez_kok": "كرب",
+      "merkez_mana": "Karb: sıkıntı, keder; kurbet: sıkıntı",
+      "boy": 93
     },
     "ince": {
-      "kume": 196,
-      "merkez_kok": "شقو",
-      "merkez_mana": "Şakâ: felâket, mutsuzluk; şakî: mutsuz",
-      "boy": 30
+      "kume": 176,
+      "merkez_kok": "حزن",
+      "merkez_mana": "Huzn: üzüntü, keder; hazen: keder",
+      "boy": 33
     }
   },
   "kaliplar": {

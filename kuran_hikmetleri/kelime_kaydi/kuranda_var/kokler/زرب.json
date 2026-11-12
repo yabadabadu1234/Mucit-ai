@@ -700,12 +700,13 @@
         "metin": "(زَرِبَ) الزَّاءُ وَالرَّاءُ وَالْبَاءُ أَصْلٌ يَدُلُّ عَلَى بَعْضِ الْمَأْوَى. فَالزَّرْبُ زَرْبُ الْغَنَمِ، وَهِيَ حَظِيرَتُهَا. وَيُقَالُ الزَّرِيبَةُ الزُّبْيَةُ. وَالزَّرِيبَةُ: قُتْرَةُ الصَّائِدِ."
       }
     ],
-    "cebel_mihveri_ocr": [
-      {
-        "kokler": ["زرب"],
-        "mihveri": "المعنى المحوري: مكمن ضيق يجحتبس فيه الشيء آو يتخزن ليْحَمَظ. كال اء والغنم والسبع في أماكنها المذكورة. ومنه «رَرَبْتٌ الغنم فانزربت: أدخلتّها الززب فدخحلت. وانزرب الصائد في حفرته»."
-      }
-    ],
+    "cebel_mihveri": {
+      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
+      "fasil": "الزاي والراء",
+      "baslik": "زرب",
+      "mihveri": "مكمن ضيق يحتبس فيه الشيء أو يتخزن ليُحْفَظ. كالماء والغنم والسبع في أماكنها المذكورة. ومنه \"زَرَبْتُ الغنم فانزربت: أدخلتُها الزِرْب فدخلت. وانزرب الصائد في حفرته \". ومن ذلك \"زُرْبِىّ النبات - بالضم: ما بدا فيه اليبس فاحمرّ أو اصفرّ وفيه خضرة (كأن سر هذه التسمية قربه من أن يحصد ويختزن) ومن ذلك الزَرَابى: الوسائد تبسط للجلوس عليها \" [الوسيط] (حشايا أي أنها حشيت بالقطن أو نحوه أي حُبِس فيها) {وَزَرَابِيُّ مَبْثُوثَةٌ}.",
+      "sesler": ""
+    },
     "kaikki_vikisozluk": [
       {
         "w": "زربية",
@@ -854,9 +855,15 @@
     "ince": "whole.n.02",
     "orta": "noun.artifact",
     "ust": "cisim ve eşya",
-    "dayanak_synset": "pen.n.02",
-    "dayanak_tanim": "an enclosure for confining livestock",
+    "dayanak_synset": "yard.n.09",
+    "dayanak_tanim": "an enclosure for animals (as chicken or livestock)",
     "synset_sayisi": 2
+  },
+  "ses_mana_tasnif": {
+    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+    "fasil": "الزاي والراء",
+    "mihveri": "مكمن ضيق يحتبس فيه الشيء أو يتخزن ليُحْفَظ. كالماء والغنم والسبع في أماكنها المذكورة. ومنه \"زَرَبْتُ الغنم فانزربت: أدخلتُها الزِرْب فدخلت. وانزرب الصائد في حفرته \". ومن ذلك \"زُرْبِىّ النبات - بالضم: ما بدا فيه اليبس فاحمرّ أو اصفرّ وفيه خضرة (كأن سر هذه التسمية قربه من أن يحصد ويختزن) ومن ذلك الزَرَابى: الوسائد تبسط للجلوس عليها \" [الوسيط] (حشايا أي أنها حشيت بالقطن أو نحوه أي حُبِس فيها) {وَزَرَابِيُّ مَبْثُوثَةٌ}.",
+    "sesler": ""
   },
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
@@ -868,22 +875,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 6,
-      "merkez_kok": "حدق",
-      "merkez_mana": "Hadak: göz bebeği; hadaka: bakmak",
-      "boy": 578
+      "kume": 9,
+      "merkez_kok": "غرق",
+      "merkez_mana": "Garak: batmak; ğarık: batan",
+      "boy": 1144
     },
     "orta": {
-      "kume": 22,
-      "merkez_kok": "جرز",
-      "merkez_mana": "Cerz: kuraklık, kurumuş toprak",
-      "boy": 44
+      "kume": 45,
+      "merkez_kok": "حسك",
+      "merkez_mana": "puncture-vine, caltrop (Tribulus terrestris)",
+      "boy": 146
     },
     "ince": {
-      "kume": 156,
+      "kume": 298,
       "merkez_kok": "حدق",
       "merkez_mana": "Hadak: göz bebeği; hadaka: bakmak",
-      "boy": 14
+      "boy": 23
     }
   },
   "kaliplar": {
@@ -1411,6 +1418,14 @@
         "lemma": "halılar",
         "lemma_durum": "model-üretimi, doğrulanmadı",
         "eyupipler": ""
+      },
+      "jeffery": {
+        "kaynak": "Arthur Jeffery, The Foreign Vocabulary of the Qur'ān (Baroda 1938; Brill yeniden basımı, yazıya geçirilmiş metin; Arapça yazılar yazı tipi bozuk olduğundan alınmadı)",
+        "translit": "Zarābī",
+        "ayet_atiflari": "lxxxviii, 16",
+        "ilk_baslik_dilleri": [],
+        "metin": "lxxxviii, 16. Rich carpets. Plu. of ¤ oC > < or o¤ C> C , occuring only in an early description of Paradise. The word occurs not infrequently in the early literature and the exegetes have a clear idea that it means fine wide carpets, but their explanations of the form are confused2 (cf. Rāghib, Mufradāt, 211). Fraenkel, Fremdw, 92, thought that it was from the Syr. H] to check, stop, though it is difficult to see how this can explain its meaning. 1 Addai Sher, 77, would derive it from Pers. h ornamentation, but there seems nothing in favour of this. 2 The fact would seem to be that  is a later formation, and that the form that was borrowed was 9Sã, which as a matter of fact is the only form that occurs in the oldest texts. foreign vocabulary of the qurn 151 He notes, however, that Geo. Hoffmann would derive it from the Pers. under the foot,1 which looks more likely, and which Horovitz, Paradies, 15, thinks possible, though if it is Persian it would seem more likely that it is connected with some formation from Phlv. zarrēn, golden as in zarrēn-pēsīt (West, Glossary, 148).2 The most likely origin, however, is that suggested by Nöldeke, Neue Beiträge, 53, that it is from the Eth. K_- carpet. Nöldeke admits the possibility that the borrowing may have been the other way,3 and one is inclined to derive both the Ar. and Eth. words from an Iranian source, but at present there is not sufficient evidence to decide what this source is. Ãh",
+        "arapca": "زرابي"
       }
     }
   ]

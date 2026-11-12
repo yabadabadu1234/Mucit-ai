@@ -679,12 +679,20 @@
         "metin": "(بَلَعَ) الْبَاءُ وَاللَّامُ وَالْعَيْنُ أَصْلٌ وَاحِدٌ، وَهُوَ ازْدِرَادُ الشَّيْءِ. تَقُولُ: بَلَعْتُ الشَّيْءَ أَبْلَعُهُ. وَالْبَالُوعُ مِنْ هَذَا لِأَنَّهُ يَبْلَعُ الْمَاءَ. وَسَعْدُ بُلَعَ نَجْمٌ. وَالْبُلَعُ السَّمُّ فِي قَامَةِ الْبَكْرَةِ. وَالْقِيَاسُ وَاحِدٌ، لِأَنَّهُ يَبْلَعُ الْخَشَبَةَ الَّتِي تَسْلُكُهُ. فَأَمَّا قَوْلُهُمْ بَلَّعَ الشَّيْبُ فِي رَأْسِهِ فَقَرِيبُ الْقِيَاسِ مِنْ هَذَا ; لِأَنَّهُ إِذَا شَمِلَ رَأْسَهُ فَكَأَنَّهُ قَدْ بَلِعَهُ."
       }
     ],
-    "cebel_mihveri_ocr": [
-      {
-        "kokler": ["بلع"],
-        "mihveri": "المعنى المحوري هو: جذب الشيء إلى الجحوف بقوة: کا وصف: « وقي ينأرّض آبلعى ماك 4 [هود: .]٤٤‏ ومنه: البلَعّة - كهمزة: قب البَگرة (الذي بلع اللخْوّر). والب والبلعُم والبلْعوم - بالضم فيها: بجَرّى الطعام وموضع الابتلاع من الحلق."
-      }
-    ],
+    "cebel_mihveri": {
+      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
+      "fasil": "الباء واللام",
+      "baslik": "بلع",
+      "mihveri": "هو: جذب الشيء إلى الجوف بقوة: كما وُصِف: {وَقِيلَ يَاأَرْضُ ابْلَعِي مَاءَكِ} [هود: 44]. ومنه: البُلَعَة - كهمزة: ثُقْب البَكَرة (الذي يَبْلَع المِحْوَر). والمَبْلَعُ والبُلْعُم والبُلْعوم - بالضم فيهما: مَجْرَى الطعام وموضعُ الابتلاع من الحلق.",
+      "sesler": ""
+    },
+    "etymarab": {
+      "kaynak": "EtymArab, Oslo Üniversitesi (Bibliotheca Polyglotta)",
+      "latin": "BLʕ",
+      "dolu": true,
+      "kok_maddesi": "Back to library EtymArab BLʕ بلع BP – • HDAL • © SG | 3Mar2023 √BLʕ “root” ▪ BLʕ_1 ‘...’ ↗ ... ▪ BLʕ_2 ‘...’ ↗ ... ▪ BLʕ_3 ‘...’ ↗ ... ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘to swallow, swallow up; a glutton; a drain’ ▪ … – . . – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
+      "kelime_maddeleri": []
+    },
     "kaikki_vikisozluk": [
       {
         "w": "ابتلع",
@@ -1774,9 +1782,15 @@
     "ince": "organic_process.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "swallow.n.02",
-    "dayanak_tanim": "the act of swallowing",
+    "dayanak_synset": "consumption.n.01",
+    "dayanak_tanim": "the process of taking food into the body through the mouth (as by eating)",
     "synset_sayisi": 5
+  },
+  "ses_mana_tasnif": {
+    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+    "fasil": "الباء واللام",
+    "mihveri": "هو: جذب الشيء إلى الجوف بقوة: كما وُصِف: {وَقِيلَ يَاأَرْضُ ابْلَعِي مَاءَكِ} [هود: 44]. ومنه: البُلَعَة - كهمزة: ثُقْب البَكَرة (الذي يَبْلَع المِحْوَر). والمَبْلَعُ والبُلْعُم والبُلْعوم - بالضم فيهما: مَجْرَى الطعام وموضعُ الابتلاع من الحلق.",
+    "sesler": ""
   },
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
@@ -1788,22 +1802,22 @@
   },
   "mana_tasnif_gomme": {
     "ust": {
-      "kume": 5,
-      "merkez_kok": "سفك",
-      "merkez_mana": "Safk: dökmek, akıtmak (kan)",
-      "boy": 479
+      "kume": 6,
+      "merkez_kok": "قبب",
+      "merkez_mana": "canopy, pavilion; dome, cupola",
+      "boy": 802
     },
     "orta": {
-      "kume": 16,
-      "merkez_kok": "بلع",
-      "merkez_mana": "Bel': yutmak; bel'a: yutkunma",
-      "boy": 111
-    },
-    "ince": {
-      "kume": 116,
+      "kume": 18,
       "merkez_kok": "بزق",
       "merkez_mana": "spit, spittle, saliva",
-      "boy": 16
+      "boy": 82
+    },
+    "ince": {
+      "kume": 136,
+      "merkez_kok": "بزق",
+      "merkez_mana": "spit, spittle, saliva",
+      "boy": 18
     }
   },
   "kaliplar": {
